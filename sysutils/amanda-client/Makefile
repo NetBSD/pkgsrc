@@ -1,22 +1,22 @@
-# $NetBSD: Makefile,v 1.44 2007/11/08 19:39:42 joerg Exp $
+# $NetBSD: Makefile,v 1.45 2008/02/15 16:23:09 gdt Exp $
 #
 
 PKGNAME=		amanda-client-${VERS}
-PKGREVISION=		5
 SVR4_PKGNAME=		amacl
 
 COMMENT=		Client part of Amanda, a network backup system
 
 GNU_CONFIGURE=		yes
+USE_TOOLS+=		awk:run perl:run
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../sysutils/amanda-common/Makefile.common"
 .include "../../sysutils/amanda-common/buildlink3.mk"
 #.include "../../devel/readline/buildlink3.mk"
 
-CONFIGURE_ARGS+=	--without-server --without-restore
+CONFIGURE_ARGS+=	--without-server
 
-BUILD_DEFS+=	AMANDA_DUMP_SNAP
+BUILD_DEFS+=		AMANDA_SMB AMANDA_DUMP_SNAP
 
 # Prevent configure script from finding unnecessary libraries.  We'll patch
 # the amrecover Makefile to add the readline libraries as it's the only
