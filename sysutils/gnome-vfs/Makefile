@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2007/10/31 19:58:13 drochner Exp $
+# $NetBSD: Makefile,v 1.66 2008/02/15 23:08:08 tnn Exp $
 
 PKGCONFIG_OVERRIDE=	gnome-vfs-2.0.pc.in
 PKGCONFIG_OVERRIDE+=	gnome-vfs-module-2.0.pc.in
@@ -19,6 +19,7 @@ LDFLAGS.Darwin+=	-lresolv
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.9.3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 .include "Makefile.common"
 
