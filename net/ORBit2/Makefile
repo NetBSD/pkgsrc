@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2008/02/13 19:36:48 drochner Exp $
+# $NetBSD: Makefile,v 1.62 2008/02/15 07:40:39 wiz Exp $
 #
 
 DISTNAME=		ORBit2-2.14.12
@@ -21,6 +21,7 @@ MAKE_JOBS_SAFE=		no
 USE_TOOLS+=		gmake pkg-config
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
+# needs interaction
 #TEST_TARGET=		check
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
@@ -48,9 +49,6 @@ PRINT_PLIST_AWK+=	/^@dirrm share\/idl$$/ \
 				  " 2>/dev/null || $${TRUE}"; next; }
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
-
-# needs interaction
-#TEST_TARGRT=	check
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../net/libIDL/buildlink3.mk"
