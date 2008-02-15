@@ -1,11 +1,11 @@
-$NetBSD: patch-ag,v 1.4 2006/03/16 19:13:57 bouyer Exp $
+$NetBSD: patch-ag,v 1.5 2008/02/15 16:23:09 gdt Exp $
 
---- client-src/sendbackup-dump.c.orig	2006-02-17 18:07:17.000000000 +0100
-+++ client-src/sendbackup-dump.c	2006-02-17 18:08:53.000000000 +0100
-@@ -310,6 +310,9 @@
- #ifdef HAVE_HONOR_NODUMP
- 			     "h",
- #endif
+--- client-src/sendbackup-dump.c.orig	2007-05-04 07:39:05.000000000 -0400
++++ client-src/sendbackup-dump.c
+@@ -388,6 +388,9 @@ start_backup(
+ 			     options->no_record ? "" : "u",
+ 			     "s",
+ 			     PARAM_HONOR_NODUMP,
 +#ifdef HAVE_DUMP_SNAPSHOT
 +			     "X",
 +#endif
