@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2008/02/15 13:25:53 obache Exp $
+# $NetBSD: Makefile,v 1.10 2008/02/15 13:33:20 obache Exp $
 #
 
 DISTNAME=		vnc2swf-0.5.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		graphics
 MASTER_SITES=		http://www.unixuser.org/~euske/vnc2swf/
 
@@ -12,7 +12,12 @@ COMMENT=		Record vnc session as flash movie
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+.include "../../mk/bsd.fast.prefs.mk"
+
 DEPENDS+=		x11vnc-[0-9]*:../../x11/x11vnc
+.if !exists(${X11BASE}/bin/xwininfo)
+DEPENDS+=		xwininfo-[0-9]*:../../x11/xwininfo
+.endif
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
