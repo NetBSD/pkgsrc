@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2008/02/13 14:16:43 kefren Exp $
+@comment $NetBSD: PLIST,v 1.23 2008/02/15 15:57:14 kefren Exp $
 bin/al
 bin/al2
 bin/caspol
@@ -686,6 +686,7 @@ share/examples/mono/2.0/machine.config
 share/examples/mono/2.0/web.config
 share/examples/mono/browscap.ini
 share/examples/mono/config
+share/examples/mono/mconfig/config.xml
 share/jay/ACKNOWLEDGEMENTS
 share/jay/NEW_FEATURES
 share/jay/NOTES
@@ -731,6 +732,7 @@ share/mono-1.0/mono/cil/cil-opcodes.xml
 @dirrm share/mono-1.0
 @dirrm share/libgc-mono
 @dirrm share/jay
+@dirrm share/examples/mono/mconfig
 @dirrm share/examples/mono/2.0
 @dirrm share/examples/mono/1.0
 @dirrm share/examples/mono
