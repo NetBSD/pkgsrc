@@ -1,12 +1,12 @@
-Step One: Suggested Filesystem Layout
+Step One: Suggested File System Layout
 
 For the DragonFly builds I'm using:
 - /bulklog for the bulk meta data and log files of each package
 - /scratch as WRKOBJDIR
 - /distfiles as DISTDIR
 - /packages as PACKAGES
-- separate physical filesystems for /var and /usr/pkg
-All filesystems but those are read-only, /tmp and /dev need platform
+- separate physical file systems for /var and /usr/pkg
+All file systems but those are read-only, /tmp and /dev need platform
 specific handling either as tmpfs or link. ptyfs helps for /dev.
 
 For parallel builds, /bulklog, /packages and /usr/pkgsrc are supposed to
@@ -17,7 +17,7 @@ Step Two: Preparing pbulk prefix
 
 Install pkgtools/pbulk and possibly helper programs like screen into
 LOCALBASE=/usr/pkg_bulk, PKG_DBDIR=/usr/pkg_bulk/.pkgdb. A full
-bootstrap is the recommented approach. Copy /usr/pkg_bulk to the client
+bootstrap is the recommended approach. Copy /usr/pkg_bulk to the client
 nodes for parallel builds.
 
 Step Three: Configure pbulk
@@ -26,7 +26,7 @@ Step Three: Configure pbulk
 Setup general build parameters in mk.conf. Below is an example
 fragment to add.
 
-(b) [not for netbsd]
+(b) [not for NetBSD]
 Build a binary bootstrap kit and override the included mk.conf with the
 file created in (a). Compress the tarball with gzip.
 
