@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/10/12 23:14:43 reed Exp $
+# $NetBSD: Makefile,v 1.27 2008/02/15 15:48:46 gdt Exp $
 #
 
 DISTNAME=		rcs-5.7
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_GNU:=rcs/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.cs.purdue.edu/homes/trinkle/RCS/
 COMMENT=		GNU Revision Control System - version control software
+
+MAKE_JOBS_SAFE=		no
 
 .include "../../mk/bsd.prefs.mk"
 .if ${OPSYS} == "SunOS" || ${OPSYS} == "OSF1" || ${OPSYS} == "AIX"
