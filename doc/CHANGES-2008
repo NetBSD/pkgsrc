@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.283 2008/02/15 06:36:25 martti Exp $
+$NetBSD: CHANGES-2008,v 1.284 2008/02/15 12:26:13 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -491,3 +491,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-Pod-Coverage to 0.19 [rhaen 2008-02-14]
 	Updated mail/imapsync to 1.241 [tv 2008-02-14]
 	Updated editors/vim-share to 7.1.252 [martti 2008-02-15]
+	Updated multimedia/RealPlayerGold to 10.0.9.809.20070726 [obache 2008-02-15]
