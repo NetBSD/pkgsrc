@@ -1,0 +1,22 @@
+$NetBSD: patch-cx,v 1.1 2008/02/15 20:34:35 bouyer Exp $
+
+--- xen/arch/x86/mm.c.orig	2008-02-15 20:42:07.000000000 +0100
++++ xen/arch/x86/mm.c	2008-02-15 20:43:18.000000000 +0100
+@@ -1478,8 +1478,6 @@
+             return 0;
+         }
+ 
+-        adjust_guest_l3e(nl3e, d);
+-
+         /* Fast path for identical mapping and presence. */
+         if (!l3e_has_changed(ol3e, nl3e, _PAGE_PRESENT))
+             return UPDATE_ENTRY(l3, pl3e, ol3e, nl3e, pfn, current);
+@@ -1487,6 +1485,8 @@
+         if ( unlikely(!get_page_from_l3e(nl3e, pfn, d)) )
+             return 0;
+ 
++        adjust_guest_l3e(nl3e, d);
++
+         if ( unlikely(!UPDATE_ENTRY(l3, pl3e, ol3e, nl3e, pfn, current)) )
+         {
+             put_page_from_l3e(nl3e, pfn);
