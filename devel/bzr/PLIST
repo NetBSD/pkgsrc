@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/01/22 00:49:16 gdt Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/02/15 16:46:20 gdt Exp $
 bin/bzr
 ${PYSITELIB}/bzrlib/__init__.py
 ${PYSITELIB}/bzrlib/__init__.pyc
@@ -245,10 +245,10 @@ ${PYSITELIB}/bzrlib/help.pyo
 ${PYSITELIB}/bzrlib/help_topics/__init__.py
 ${PYSITELIB}/bzrlib/help_topics/__init__.pyc
 ${PYSITELIB}/bzrlib/help_topics/__init__.pyo
+${PYSITELIB}/bzrlib/help_topics/en/authentication.txt
+${PYSITELIB}/bzrlib/help_topics/en/configuration.txt
 ${PYSITELIB}/bzrlib/help_topics/en/conflicts.txt
 ${PYSITELIB}/bzrlib/help_topics/en/hooks.txt
-${PYSITELIB}/bzrlib/help_topics/en/configuration.txt
-${PYSITELIB}/bzrlib/help_topics/en/authentication.txt
 ${PYSITELIB}/bzrlib/hooks.py
 ${PYSITELIB}/bzrlib/hooks.pyc
 ${PYSITELIB}/bzrlib/hooks.pyo
@@ -375,12 +375,12 @@ ${PYSITELIB}/bzrlib/plugins/launchpad/test_account.pyo
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_indirect.py
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_indirect.pyc
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_indirect.pyo
+${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_service.py
+${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_service.pyc
+${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_service.pyo
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_register.py
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_register.pyc
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_register.pyo
-${PYSITELIB}/bzrlib/plugins/multiparent.py
-${PYSITELIB}/bzrlib/plugins/multiparent.pyc
-${PYSITELIB}/bzrlib/plugins/multiparent.pyo
 ${PYSITELIB}/bzrlib/progress.py
 ${PYSITELIB}/bzrlib/progress.pyc
 ${PYSITELIB}/bzrlib/progress.pyo
@@ -909,6 +909,9 @@ ${PYSITELIB}/bzrlib/tests/repository_implementations/test_fileid_involved.pyo
 ${PYSITELIB}/bzrlib/tests/repository_implementations/test_find_text_key_references.py
 ${PYSITELIB}/bzrlib/tests/repository_implementations/test_find_text_key_references.pyc
 ${PYSITELIB}/bzrlib/tests/repository_implementations/test_find_text_key_references.pyo
+${PYSITELIB}/bzrlib/tests/repository_implementations/test_has_revisions.py
+${PYSITELIB}/bzrlib/tests/repository_implementations/test_has_revisions.pyc
+${PYSITELIB}/bzrlib/tests/repository_implementations/test_has_revisions.pyo
 ${PYSITELIB}/bzrlib/tests/repository_implementations/test_has_same_location.py
 ${PYSITELIB}/bzrlib/tests/repository_implementations/test_has_same_location.pyc
 ${PYSITELIB}/bzrlib/tests/repository_implementations/test_has_same_location.pyo
@@ -1670,7 +1673,6 @@ ${PYSITELIB}/bzrlib/version_info_formats/format_rio.pyo
 ${PYSITELIB}/bzrlib/versionedfile.py
 ${PYSITELIB}/bzrlib/versionedfile.pyc
 ${PYSITELIB}/bzrlib/versionedfile.pyo
-${PYSITELIB}/bzrlib/weave.py
 ${PYSITELIB}/bzrlib/weave.py
 ${PYSITELIB}/bzrlib/weave.pyc
 ${PYSITELIB}/bzrlib/weave.pyo
