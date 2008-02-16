@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.28 2007/12/02 13:04:07 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2008/02/16 05:25:57 obache Exp $
 
 DISTNAME=	db-2.7.7
 PKGREVISION=	2
 CATEGORIES=	databases
-MASTER_SITES=	ftp://ftp.gwdg.de/pub/languages/perl/CPAN/src/misc/
+MASTER_SITES=	http://download.oracle.com/berkeley-db/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.oracle.com/database/berkeley-db.html
