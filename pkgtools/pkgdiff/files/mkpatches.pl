@@ -1,6 +1,6 @@
 #!@PERL5@
 #
-# $NetBSD: mkpatches.pl,v 1.12 2005/12/13 12:05:08 wiz Exp $
+# $NetBSD: mkpatches.pl,v 1.13 2008/02/16 22:21:35 apb Exp $
 #
 # mkpatches: creates a set of patches patch-aa, patch-ab, ...
 #   in work/.newpatches by looking for *.orig files in and below
@@ -138,6 +138,7 @@ sub analyze_old_patches
 	    next;
 	}
 	$name = $1;
+	$name =~ s/^\.\///; # ignore leading "./", if any.
 	$patch =~ s/\n--- .*/\n/s;
 	$old_header{$name} = $patch;
 	$filename =~ s!.*/!!;
