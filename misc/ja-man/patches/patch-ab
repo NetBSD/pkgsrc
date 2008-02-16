@@ -1,7 +1,9 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:01:23 seb Exp $
---- jman/jman.conf.orig	Thu Jan 28 07:16:18 1999
-+++ jman/jman.conf	Tue Nov  2 18:30:01 1999
-@@ -6,7 +6,7 @@
+$NetBSD: patch-ab,v 1.2 2008/02/16 10:14:53 obache Exp $
+
+--- jman/jman.conf.orig	1999-01-27 22:16:18.000000000 +0000
++++ jman/jman.conf
+@@ -5,9 +5,9 @@ _version	BSD.2
+ 
  # The whatis/apropos database.
  _whatdb		/usr/share/man/whatis.db
 -_whatdb		/usr/X11R6/man/whatis.db
@@ -11,7 +13,9 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:01:23 seb Exp $
 +_whatdb		${LOCALBASE}/man/whatis.db
  _whatdb		/usr/local/man/whatis.db
  
-@@ -19,12 +19,12 @@
+ # Subdirectories for paths ending in '/', IN SEARCH ORDER.
+@@ -18,41 +18,41 @@ _subdir		cat1 man1 cat8 man8 cat6 man6 c
+ _suffix		.0
  _build		.0.Z		/usr/bin/zcat %s
  _build		.0.gz		/usr/bin/gunzip -c %s
 -_build		.[1-9ln]	/usr/local/bin/nroff -Tnippon -man %s
@@ -32,7 +36,8 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:01:23 seb Exp $
 +_build		.me		${PREFIX}/bin/jgnroff -Tnippon -me %s 2>/dev/null | cat -s
  
  # Sections and their directories.
-@@ -33,10 +33,10 @@
+ # All paths ending in '/' are the equivalent of entries specifying that
+ # directory with all of the subdirectories listed for the keyword _subdir.
  
  # default
 -_default	/usr/local/jman/ /usr/{share,X11R6,X11,pkg,local}/man/
@@ -46,7 +51,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/05/31 13:01:23 seb Exp $
 +packages	${LOCALBASE}/man/
  local		/usr/local/man/
  
-@@ -44,15 +44,15 @@
+ doc		/usr/{pkg,share}/doc/{sendmail/op,sendmail/intro}
  
  # Specific section/directory combinations.
 -1		/usr/{local,share,X11R6,X11,pkg}/{jman/,man/}{cat,man}1
