@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.69 2007/12/17 18:21:31 tron Exp $
+# $NetBSD: Makefile.common,v 1.70 2008/02/16 22:41:31 tnn Exp $
 
 DISTNAME=	qt-x11-free-${QTVERSION}
 CATEGORIES=	x11
@@ -51,6 +51,12 @@ CONFIGURE_ARGS+=	-platform solaris-g++
 CONFIGURE_ARGS+=	-platform solaris-cc
 .  endif
 SYS_LIBS=		-lresolv -lsocket -lnsl -lrt
+.elif ${OPSYS} == "HPUX"
+.  if !empty(CC_VERSION:Mgcc*)
+CONFIGURE_ARGS+=	-platform hpux-g++
+.  else
+CONFIGURE_ARGS+=	-platform hpux-acc
+.  endif
 .elif ${OPSYS} == "Interix"
 CONFIGURE_ARGS+=	-platform interix-g++
 CFLAGS+=		-I/usr/local/include/bind
