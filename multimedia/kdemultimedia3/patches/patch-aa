@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.13 2007/10/20 10:41:20 markd Exp $
+$NetBSD: patch-aa,v 1.14 2008/02/16 14:26:37 wiz Exp $
 
---- configure.orig	2007-10-09 03:27:15.000000000 +1300
+--- configure.orig	2007-10-08 14:27:15.000000000 +0000
 +++ configure
-@@ -34934,7 +34910,7 @@ if test "${ac_cv_lib_ossaudio__oss_ioctl
+@@ -34934,7 +34934,7 @@ if test "${ac_cv_lib_ossaudio__oss_ioctl
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.13 2007/10/20 10:41:20 markd Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -34998,7 +34974,7 @@ fi
+@@ -34998,7 +34998,7 @@ fi
  
    if test "x$have_ossaudio" = xyes; then
      # for kmix/ and akode/
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.13 2007/10/20 10:41:20 markd Exp $
    fi
  
  
-@@ -35571,7 +35547,7 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -35571,7 +35571,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  $ac_includes_default
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.13 2007/10/20 10:41:20 markd Exp $
  _ACEOF
  rm -f conftest.$ac_objext
  if { (ac_try="$ac_compile"
-@@ -35611,7 +35587,7 @@ _ACEOF
+@@ -35611,7 +35611,7 @@ _ACEOF
  cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.13 2007/10/20 10:41:20 markd Exp $
  _ACEOF
  if { (ac_try="$ac_cpp conftest.$ac_ext"
  case "(($ac_try" in
-@@ -35712,7 +35688,7 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -35712,7 +35712,7 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  
@@ -47,7 +47,7 @@ $NetBSD: patch-aa,v 1.13 2007/10/20 10:41:20 markd Exp $
  
  int
  main ()
-@@ -37701,7 +37677,7 @@ if test "${ac_cv_lib_tunepimp_tp_SetTRMC
+@@ -37701,7 +37701,7 @@ if test "${ac_cv_lib_tunepimp_tp_SetTRMC
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
@@ -56,7 +56,7 @@ $NetBSD: patch-aa,v 1.13 2007/10/20 10:41:20 markd Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -38572,13 +38548,13 @@ if test $ac_cv_header_FLAC_metadata_h = 
+@@ -38572,13 +38572,13 @@ if test $ac_cv_header_FLAC_metadata_h = 
  	test "$GCC" = yes && LDFLAGS="-Wl,$LDFLAGS"
  	;;
       esac
@@ -74,7 +74,7 @@ $NetBSD: patch-aa,v 1.13 2007/10/20 10:41:20 markd Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -38592,11 +38568,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -38592,11 +38592,11 @@ cat >>conftest.$ac_ext <<_ACEOF
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -88,7 +88,7 @@ $NetBSD: patch-aa,v 1.13 2007/10/20 10:41:20 markd Exp $
    ;
    return 0;
  }
-@@ -38619,21 +38595,21 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+@@ -38619,21 +38619,21 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
  	 test ! -s conftest.err
         } && test -s conftest$ac_exeext &&
         $as_test_x conftest$ac_exeext; then
@@ -115,7 +115,7 @@ $NetBSD: patch-aa,v 1.13 2007/10/20 10:41:20 markd Exp $
    have_libFLAC=yes
  fi
  
-@@ -38827,9 +38803,9 @@ if test $ac_cv_header_OggFLAC_seekable_s
+@@ -38827,9 +38827,9 @@ if test $ac_cv_header_OggFLAC_seekable_s
  	test "$GCC" = yes && LDFLAGS="-Wl,$LDFLAGS"
  	;;
       esac
@@ -128,7 +128,7 @@ $NetBSD: patch-aa,v 1.13 2007/10/20 10:41:20 markd Exp $
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
-@@ -38847,11 +38823,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -38847,11 +38847,11 @@ cat >>conftest.$ac_ext <<_ACEOF
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -142,7 +142,7 @@ $NetBSD: patch-aa,v 1.13 2007/10/20 10:41:20 markd Exp $
    ;
    return 0;
  }
-@@ -38874,21 +38850,21 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+@@ -38874,21 +38874,21 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
  	 test ! -s conftest.err
         } && test -s conftest$ac_exeext &&
         $as_test_x conftest$ac_exeext; then
@@ -169,7 +169,7 @@ $NetBSD: patch-aa,v 1.13 2007/10/20 10:41:20 markd Exp $
    have_libOggFLAC=yes
  fi
  
-@@ -40652,7 +40628,22 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+@@ -40652,7 +40652,22 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
  	 test ! -s conftest.err
         } && test -s conftest.$ac_objext; then
  
@@ -192,7 +192,7 @@ $NetBSD: patch-aa,v 1.13 2007/10/20 10:41:20 markd Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -40713,7 +40704,22 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+@@ -40713,7 +40728,22 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
  	 test ! -s conftest.err
         } && test -s conftest.$ac_objext; then
  
@@ -215,7 +215,7 @@ $NetBSD: patch-aa,v 1.13 2007/10/20 10:41:20 markd Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -40774,7 +40780,22 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+@@ -40774,7 +40804,22 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
  	 test ! -s conftest.err
         } && test -s conftest.$ac_objext; then
  
@@ -238,7 +238,22 @@ $NetBSD: patch-aa,v 1.13 2007/10/20 10:41:20 markd Exp $
  
  else
    echo "$as_me: failed program was:" >&5
-@@ -45675,11 +45668,6 @@ done # for ac_tag
+@@ -42602,11 +42647,11 @@ echo $ECHO_N "checking for XINE-LIB vers
+       XINE_CFLAGS=`$XINE_CONFIG $xine_config_args --cflags`
+       XINE_LIBS=`$XINE_CONFIG $xine_config_args --libs`
+       xine_config_major_version=`$XINE_CONFIG $xine_config_args --version | \
+-             sed 's/\([0-9]*\).\([0-9]*\).\([0-9]*\)/\1/'`
++             sed 's/\([0-9]*\).\([0-9]*\).\([0-9]*\).*/\1/'`
+       xine_config_minor_version=`$XINE_CONFIG $xine_config_args --version | \
+-             sed 's/\([0-9]*\).\([0-9]*\).\([0-9]*\)/\2/'`
++             sed 's/\([0-9]*\).\([0-9]*\).\([0-9]*\).*/\2/'`
+       xine_config_sub_version=`$XINE_CONFIG $xine_config_args --version | \
+-             sed 's/\([0-9]*\).\([0-9]*\).\([0-9]*\)/\3/'`
++             sed 's/\([0-9]*\).\([0-9]*\).\([0-9]*\).*/\3/'`
+       xine_script_dir=`$XINE_CONFIG $xine_config_args --scriptdir`
+       xine_plugin_dir=`$XINE_CONFIG $xine_config_args --plugindir`
+       xine_locale_dir=`$XINE_CONFIG $xine_config_args --localedir`
+@@ -45675,11 +45720,6 @@ done # for ac_tag
  
  { (exit 0); exit 0; }
  _ACEOF
