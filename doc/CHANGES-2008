@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.293 2008/02/16 05:02:56 obache Exp $
+$NetBSD: CHANGES-2008,v 1.294 2008/02/16 07:19:23 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -507,3 +507,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated geography/geos to 3.0.0 [gdt 2008-02-16]
 	Updated filesystems/fuse-wdfs to 1.4.2nb1 [bjs 2008-02-16]
 	Added www/p5-I18N-AcceptLanguage version 1.04 [obache 2008-02-16]
+	Updated x11/xcompmgr to 1.1.3nb2 [bjs 2008-02-16]
