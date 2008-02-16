@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.289 2008/02/15 20:36:52 bouyer Exp $
+$NetBSD: CHANGES-2008,v 1.290 2008/02/16 00:58:41 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -503,3 +503,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/xenkernel3 to 3.1.3 [bouyer 2008-02-15]
 	Updated sysutils/xentools3 to 3.1.3 [bouyer 2008-02-15]
 	Updated sysutils/xentools3-hvm to 3.1.3 [bouyer 2008-02-15]
+	Updated databases/guile-pg to 0.35 [gdt 2008-02-16]
