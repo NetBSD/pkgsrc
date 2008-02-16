@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2008/02/16 10:29:26 obache Exp $
+
+--- man/man18/Makefile.orig	1999-03-06 15:39:51.000000000 +0000
++++ man/man18/Makefile
+@@ -14,7 +14,7 @@ MLINKS= csh.1 limit.1 csh.1 alias.1 csh.
+         csh.1 foreach.1 csh.1 history.1 csh.1 jobs.1 csh.1 popd.1 \
+         csh.1 pushd.1 csh.1 rehash.1 csh.1 repeat.1 csh.1 suspend.1 \
+         csh.1 stop.1 csh.1 source.1 \
+-	test.1 '[.1' \
++	test.1 [.1 \
+ 	ln.1 symlink.7
+ 
+ 
