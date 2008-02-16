@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/09/28 20:52:24 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/16 15:45:10 heinz Exp $
 #
 
 DISTNAME=		mb2md-3.20.pl
@@ -11,6 +11,8 @@ MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://batleth.sapienti-sat.org/projects/mb2md/
 COMMENT=		Converts one or more mboxes to maildirs
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=		p5-TimeDate-[0-9]*:../../time/p5-TimeDate
 
 WRKSRC=			${WRKDIR}
@@ -22,6 +24,6 @@ NO_BUILD=		yes
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin/${PKGBASE}
+	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${DESTDIR}${PREFIX}/bin/${PKGBASE}
 
 .include "../../mk/bsd.pkg.mk"
