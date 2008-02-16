@@ -1,6 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2006/10/24 07:25:45 rillig Exp $
---- ./man/Makefile.inc.orig	Tue Jul 28 01:25:43 1998
-+++ ./man/Makefile.inc	Mon May 31 16:18:47 1999
+$NetBSD: patch-ac,v 1.3 2008/02/16 10:14:53 obache Exp $
+
+--- man/Makefile.inc.orig	1998-07-27 16:25:43.000000000 +0000
++++ man/Makefile.inc
 @@ -1,9 +1,9 @@
 -NROFF=		nroff -Tnippon
 -MANDIR=		${DESTDIR}/usr/local/jman

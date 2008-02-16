@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.3 2006/10/24 07:25:45 rillig Exp $
+$NetBSD: distinfo,v 1.4 2008/02/16 10:14:53 obache Exp $
 
 SHA1 (NetBSD1.3I-jman-19990531.tar.gz) = 354a23fd50c03de1acc42117d0fa1a6091c67cf0
 RMD160 (NetBSD1.3I-jman-19990531.tar.gz) = 03d2781b62bce2f9d9425d9dbc6b5fe0e40479a6
 Size (NetBSD1.3I-jman-19990531.tar.gz) = 1645123 bytes
-SHA1 (patch-aa) = d7888279176becb0e4e100cca7873fabb9344643
-SHA1 (patch-ab) = 7765340d1e596cfdec4d180c0956a980f42f3a72
-SHA1 (patch-ac) = 1a61567a1c05b36ef2ed1950012d9c262f38ba3a
-SHA1 (patch-ad) = b608d193a471c8694247fc3650ab1b1a1e75428f
-SHA1 (patch-ae) = 0ddbcea34c2deddff32e8148c8ee23cff6ab7d53
-SHA1 (patch-af) = 41806023d8844395df25b9fb2b53a4cf767a5ffd
+SHA1 (patch-aa) = b98752158f934afa0452871ec10d184fab53cb1c
+SHA1 (patch-ab) = b2431235d2233089418048e0ea1025ec3fa4e60e
+SHA1 (patch-ac) = afcf5a4ff1f4933614c95f64b165344a9aa442c9
+SHA1 (patch-ad) = 2c9f05ca25f9ec227aec7d63f7414946ab568a96
+SHA1 (patch-ae) = 7fa53ffbbe7f15e93a949c5904a82e06c62d80b7
+SHA1 (patch-af) = 15a66ef2cea468948da17fe4873ebe763f3fc1c4
