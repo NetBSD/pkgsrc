@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.295 2008/02/16 13:24:45 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.296 2008/02/16 15:31:39 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -509,3 +509,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/p5-I18N-AcceptLanguage version 1.04 [obache 2008-02-16]
 	Updated x11/xcompmgr to 1.1.3nb2 [bjs 2008-02-16]
 	Updated devel/fromcvs to 0.0.0.108 [wiz 2008-02-16]
+	Updated devel/guile-www to 2.21 [gdt 2008-02-16]
