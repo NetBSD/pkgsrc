@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/10/24 07:25:45 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2008/02/16 10:14:53 obache Exp $
 
 DISTNAME=	NetBSD1.3I-jman-19990531
 PKGNAME=	ja-man-19990531
@@ -37,7 +37,7 @@ post-extract:
 	&& pax -wr tmac.andoc tmac.doc mdoc/doc-common mdoc/doc-ditroff mdoc/doc-nroff mdoc/doc-syms ${WRKSRC}
 
 post-patch:
-	patch -s -p2 -d ${WRKSRC}/mdoc < \
+	patch -s -p2 -d ${WRKSRC}/mdoc ${PATCH_DIST_ARGS} < \
 		${WRKSRC}/jgroff-for-netbsd-jman.dif
 
 do-build:
