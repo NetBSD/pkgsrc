@@ -1,4 +1,7 @@
 #if !defined(@have_res_proto@) && defined(__hpux)
+@ifdef __cplusplus
+extern "C" {
+@endif
 ssize_t res_query(char*, int, int, u_char*, int);
 ssize_t res_search(char*, int, int, u_char*, int);
 ssize_t res_mkquery(int, const char*, int, int, const char*, int,\
@@ -7,4 +10,7 @@ ssize_t res_send(const char*, ssize_t, char*, int);
 int res_init();
 ssize_t dn_comp(const char*, u_char*, ssize_t, u_char**, u_char**);
 ssize_t dn_expand(const u_char*, const u_char*, const u_char*, u_char*, int);
+@ifdef __cplusplus
+}
+@endif
 #endif
