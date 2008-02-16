@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.294 2008/02/16 07:19:23 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.295 2008/02/16 13:24:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -508,3 +508,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated filesystems/fuse-wdfs to 1.4.2nb1 [bjs 2008-02-16]
 	Added www/p5-I18N-AcceptLanguage version 1.04 [obache 2008-02-16]
 	Updated x11/xcompmgr to 1.1.3nb2 [bjs 2008-02-16]
+	Updated devel/fromcvs to 0.0.0.108 [wiz 2008-02-16]
