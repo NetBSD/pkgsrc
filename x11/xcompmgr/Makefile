@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2007/12/19 05:43:30 bjs Exp $
+# $NetBSD: Makefile,v 1.22 2008/02/16 07:18:45 bjs Exp $
 #
 
 DISTNAME=	xcompmgr-1.1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	http://xapps.freedesktop.org/release/
 
@@ -19,12 +19,12 @@ USE_FEATURES=	getopt_long
 ### XXX You may play around with these if you like; they're simply
 ###	the #defines from xcompmgr.c placed here for your convenience.
 #
-XCOMPMGR_DEFS+=	-DREPAINT_MONITOR=0	# default: 0 (?)
-XCOMPMGR_DEFS+= -DCAN_DO_USABLE=1	# default: 0 (damage notification)
-XCOMPMGR_DEFS+=	-DDEBUG_REPAINT=0	# default: 0 (debugging)
-XCOMPMGR_DEFS+=	-DDEBUG_REPAINT=0	# default: 0 (debugging)
-XCOMPMGR_DEFS+=	-DSHADOWS=1		# default: 1 (shadow support)
-XCOMPMGR_DEFS+=	-DSHARP_SHADOW=0	# default  0 (?)
+#XCOMPMGR_DEFS+=	-DCAN_DO_USABLE=0	# default: 0 (damage notification)
+#XCOMPMGR_DEFS+=	-DMONITOR_REPAINT=0	# default: 0 (?)
+#XCOMPMGR_DEFS+=	-DDEBUG_REPAINT=0	# default: 0 (debugging)
+#XCOMPMGR_DEFS+=	-DDEBUG_EVENTS=0	# default: 0 (debugging)
+#XCOMPMGR_DEFS+=	-DSHADOWS=1		# default: 1 (shadow support)
+#XCOMPMGR_DEFS+=	-DSHARP_SHADOW=0	# default  0 (?)
 
 CPPFLAGS+=	${XCOMPMGR_DEFS}
 
