@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2008/02/15 15:57:14 kefren Exp $
+# $NetBSD: Makefile,v 1.62 2008/02/16 15:53:14 kefren Exp $
 
 DISTNAME=	mono-${MONO_VERSION}
 CATEGORIES=	lang
@@ -54,10 +54,22 @@ REPLACE_PERL+=	mono/metadata/make-bundle.pl
 REPLACE_PERL+=	mono/mini/genmdesc.pl
 REPLACE_PERL+=	mono/tests/stress-runner.pl
 
+REPLACE_BASH+=	mono/arch/arm/dpiops.sh
+REPLACE_BASH+=	mono/arch/arm/fpaops.sh
+REPLACE_BASH+=	mono/arch/arm/vfpops.sh
+REPLACE_BASH+=	mono/tests/make_imt_test.sh
 REPLACE_BASH+=	scripts/mono-find-provides.in
 REPLACE_BASH+=	scripts/mono-find-requires.in
+REPLACE_BASH+=	scripts/mono-nunit.pc.in
+REPLACE_BASH+=	scripts/mono-test-install
 REPLACE_BASH+=	mcs/class/Managed.Windows.Forms/build-csproj
 REPLACE_BASH+=	mcs/class/Managed.Windows.Forms/build-csproj2k5
+REPLACE_BASH+=	mcs/class/Mono.Cairo/Samples/gtk/compile.sh
+REPLACE_BASH+=	mcs/class/Mono.Cairo/Samples/png/compile.sh
+REPLACE_BASH+=	mcs/class/Mono.Cairo/Samples/win32/compile.sh
+REPLACE_BASH+=	mcs/class/Mono.Cairo/Samples/x11/compile.sh
+REPLACE_BASH+=	mcs/tools/tinderbox/tinderbox.sh
+REPLACE_BASH+=	web/mono-build-w32.sh
 
 EGDIR=		${PREFIX}/share/examples/mono
 CONF_FILES=	${EGDIR}/config ${PKG_SYSCONFDIR}/mono/config
