@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.537 2008/02/13 19:58:48 kefren Exp $
+# $NetBSD: Makefile,v 1.538 2008/02/16 05:03:58 obache Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -241,6 +241,7 @@ SUBDIR+=	p5-HTTP-Server-Simple-Kwiki
 SUBDIR+=	p5-HTTP-Server-Simple-Mason
 SUBDIR+=	p5-HTTP-Server-Simple-Static
 SUBDIR+=	p5-HTTPD-User-Manage
+SUBDIR+=	p5-I18N-AcceptLanguage
 SUBDIR+=	p5-Jemplate
 SUBDIR+=	p5-Kwiki
 SUBDIR+=	p5-Kwiki-Archive-Cvs
