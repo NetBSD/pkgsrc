@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/02/16 10:14:53 obache Exp $
+# $NetBSD: Makefile,v 1.13 2008/02/16 11:13:44 obache Exp $
 
 DISTNAME=	NetBSD1.3I-jman-19990531
 PKGNAME=	ja-man-19990531
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# ftp://ftp.spa.is.uec.ac.jp/pub/NetBSD/jman/index.html
 COMMENT=	Japanese on-line manual pages of NetBSD
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	ja-less>=332:../../misc/ja-less
 DEPENDS+=	ja-groff-0.99{,nb*}:../../textproc/ja-groff
 
@@ -17,18 +19,20 @@ JAMANDIR=	ja_JP.EUC
 PLIST_SUBST+=	JAMANDIR=${JAMANDIR:Q}
 MAKE_ENV+=	JAMANDIR=${JAMANDIR:Q}
 MAKE_ENV+=	PKGMANDIR=${PKGMANDIR}
-MAKE_ENV+=	${BSD_MAKE_ENV}
 MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}/${JAMANDIR}
 
 PLIST_SRC=	${WRKDIR}/PLIST
 
 USE_TOOLS+=		patch
+USE_BSD_MAKE=		yes
 MANCOMPRESSED_IF_MANZ=	yes
-INSTALLATION_DIRS=	bin etc share/groff/tmac
+INSTALLATION_DIRS=	bin etc share/groff/tmac/mdoc
 .for c in 1 2 3 4 5 6 7 8 9
 INSTALLATION_DIRS+=	${PKGMANDIR}/${JAMANDIR}/cat${c}
 INSTALLATION_DIRS+=	${PKGMANDIR}/${JAMANDIR}/man${c}
 .endfor
+
+INSTALL_DIRS+=	man
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -66,16 +70,15 @@ pre-install:
 .endif
 .endif
 
-do-install:
+post-install:
 	for f in tmac.andoc tmac.doc \
 	    mdoc/doc-common mdoc/doc-ditroff mdoc/doc-nroff mdoc/doc-syms; do \
 		${INSTALL_DATA} ${WRKSRC}/$${f} \
-			${PREFIX}/share/groff/tmac/$${f}j; \
+			${DESTDIR}${PREFIX}/share/groff/tmac/$${f}j; \
 	 done
-	${INSTALL_SCRIPT} ${WRKSRC}/jman/jman ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/jman/jman.conf.t ${PREFIX}/etc/jman.conf
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/jman
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/jman
-	cd ${WRKSRC}/man && ${MAKE} ${MAKE_ENV} install
+	${INSTALL_SCRIPT} ${WRKSRC}/jman/jman ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/jman/jman.conf.t ${DESTDIR}${PREFIX}/etc/jman.conf
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/jman
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/jman
 
 .include "../../mk/bsd.pkg.mk"
