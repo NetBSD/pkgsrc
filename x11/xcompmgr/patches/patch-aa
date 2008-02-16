@@ -1,5 +1,5 @@
-$NetBSD: patch-aa,v 1.1 2007/12/19 05:43:30 bjs Exp $
-
+--- xcompmgr.c.orig	2005-10-06 20:08:02.000000000 -0400
++++ xcompmgr.c	2008-02-16 02:10:37.000000000 -0500
 --- xcompmgr.c.orig	2005-10-06 20:08:02.000000000 -0400
 +++ xcompmgr.c
 @@ -36,6 +36,13 @@
@@ -66,7 +66,7 @@ $NetBSD: patch-aa,v 1.1 2007/12/19 05:43:30 bjs Exp $
 +
 +    while (next)
      {
-+	fade *f = next;
++        fade *f = next;
  	win *w = f->w;
  	next = f->next;
  	f->cur += f->step * steps;
@@ -147,11 +147,23 @@ $NetBSD: patch-aa,v 1.1 2007/12/19 05:43:30 bjs Exp $
  	if (w->id == id)
  	{
 -	    if (!gone)
-+	    if (gone)
++            if (gone)
  		finish_unmap_win (dpy, w);
  	    *prev = w->next;
  	    if (w->picture)
-@@ -1734,7 +1754,7 @@ static int
+@@ -1618,6 +1638,11 @@ finish_destroy_win (Display *dpy, Window
+ 		XRenderFreePicture (dpy, w->shadowPict);
+ 		w->shadowPict = None;
+ 	    }
++            if (w->shadow)
++            {
++                XRenderFreePicture (dpy, w->shadow);
++                w->shadow = None;
++            }
+ 	    if (w->damage != None)
+ 	    {
+ 		set_ignore (dpy, NextRequest (dpy));
+@@ -1734,7 +1759,7 @@ static int
  error (Display *dpy, XErrorEvent *ev)
  {
      int	    o;
@@ -160,7 +172,7 @@ $NetBSD: patch-aa,v 1.1 2007/12/19 05:43:30 bjs Exp $
      
      if (should_ignore (dpy, ev->serial))
  	return 0;
-@@ -1766,7 +1786,7 @@ error (Display *dpy, XErrorEvent *ev)
+@@ -1766,7 +1791,7 @@ error (Display *dpy, XErrorEvent *ev)
      default: break;
      }
  	
@@ -169,7 +181,7 @@ $NetBSD: patch-aa,v 1.1 2007/12/19 05:43:30 bjs Exp $
  	    ev->error_code, ev->request_code, ev->minor_code, ev->serial);
  
  /*    abort ();	    this is just annoying to most people */
-@@ -1781,7 +1801,7 @@ expose_root (Display *dpy, Window root, 
+@@ -1781,7 +1806,7 @@ expose_root (Display *dpy, Window root, 
      add_damage (dpy, region);
  }
  
@@ -178,7 +190,7 @@ $NetBSD: patch-aa,v 1.1 2007/12/19 05:43:30 bjs Exp $
  static int
  ev_serial (XEvent *ev)
  {
-@@ -1790,7 +1810,6 @@ ev_serial (XEvent *ev)
+@@ -1790,7 +1815,6 @@ ev_serial (XEvent *ev)
      return NextRequest (ev->xany.display);
  }
  
@@ -186,7 +198,7 @@ $NetBSD: patch-aa,v 1.1 2007/12/19 05:43:30 bjs Exp $
  static char *
  ev_name (XEvent *ev)
  {
-@@ -1834,11 +1853,12 @@ ev_window (XEvent *ev)
+@@ -1834,11 +1858,12 @@ ev_window (XEvent *ev)
  	return 0;
      }
  }
@@ -200,7 +212,7 @@ $NetBSD: patch-aa,v 1.1 2007/12/19 05:43:30 bjs Exp $
      fprintf (stderr, "usage: %s [options]\n", program);
      fprintf (stderr, "Options\n");
      fprintf (stderr, "   -d display\n      Specifies which display should be managed.\n");
-@@ -1861,15 +1881,21 @@ usage (char *program)
+@@ -1861,15 +1886,21 @@ usage (char *program)
  }
  
  static void
@@ -223,7 +235,7 @@ $NetBSD: patch-aa,v 1.1 2007/12/19 05:43:30 bjs Exp $
  }
  
  int
-@@ -1878,19 +1904,13 @@ main (int argc, char **argv)
+@@ -1878,19 +1909,13 @@ main (int argc, char **argv)
      XEvent	    ev;
      Window	    root_return, parent_return;
      Window	    *children;
@@ -243,7 +255,7 @@ $NetBSD: patch-aa,v 1.1 2007/12/19 05:43:30 bjs Exp $
      int		    p;
      int		    composite_major, composite_minor;
      char	    *display = 0;
-@@ -1999,7 +2019,7 @@ main (int argc, char **argv)
+@@ -1999,7 +2024,7 @@ main (int argc, char **argv)
  	exit (1);
      }
  
@@ -252,12 +264,12 @@ $NetBSD: patch-aa,v 1.1 2007/12/19 05:43:30 bjs Exp $
  
      /* get atoms */
      opacityAtom = XInternAtom (dpy, OPACITY_PROP, False);
-@@ -2071,7 +2091,7 @@ main (int argc, char **argv)
+@@ -2071,7 +2096,7 @@ main (int argc, char **argv)
  	    }
  
  	    XNextEvent (dpy, &ev);
 -	    if (ev.type & 0x7f != KeymapNotify)
-+	    if ((ev.type & 0x7f) != KeymapNotify)
++            if ((ev.type & 0x7f) != KeymapNotify)
  		discard_ignore (dpy, ev.xany.serial);
  #if DEBUG_EVENTS
  	    printf ("event %10.10s serial 0x%08x window 0x%08x\n",
