@@ -1,6 +1,17 @@
-# $NetBSD: Darwin.mk,v 1.29 2008/01/30 22:57:42 tron Exp $
+# $NetBSD: Darwin.mk,v 1.30 2008/02/17 11:45:14 yyamano Exp $
 #
 # Variable definitions for the Darwin operating system.
+
+# OS, Kernel, Xcode Version
+#
+# Codename	OS	Kernel	Xcode
+# Cheetah	10.0.x	1.3.1
+# Puma		10.1	1.4.1
+#		10.1.x	5.x.y
+# Jaguar	10.2.x	6.x.y
+# Panther	10.3.x	7.x.y
+# Tiger		10.4.x	8.x.y	2.x (gcc 4.0, 4.0.1 from 2.2)
+# Leopard	10.5.x	9.x.y	3.0
 
 .if !defined(CPP) || ${CPP} == "cpp"
 CPP=		${CC} -E ${CPP_PRECOMP_FLAGS}
