@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.300 2008/02/17 16:30:03 bouyer Exp $
+$NetBSD: CHANGES-2008,v 1.301 2008/02/17 17:59:23 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -519,3 +519,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/mldonkey-gui to 2.9.3 [wiz 2008-02-17]
 	Updated sysutils/xentools3 to 3.1.3nb1 [bouyer 2008-02-17]
 	Updated sysutils/xentools3-hvm to 3.1.3nb1 [bouyer 2008-02-17]
+	Updated sysutils/psftools to 1.0.6 [bjs 2008-02-17]
