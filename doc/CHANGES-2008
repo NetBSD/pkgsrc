@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.299 2008/02/17 08:59:19 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.300 2008/02/17 16:30:03 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -517,3 +517,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/ja-man to 19990531nb3 [obache 2008-02-17]
 	Updated net/mldonkey to 2.9.3 [wiz 2008-02-17]
 	Updated net/mldonkey-gui to 2.9.3 [wiz 2008-02-17]
+	Updated sysutils/xentools3 to 3.1.3nb1 [bouyer 2008-02-17]
+	Updated sysutils/xentools3-hvm to 3.1.3nb1 [bouyer 2008-02-17]
