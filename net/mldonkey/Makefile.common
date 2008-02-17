@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.29 2007/10/29 16:08:44 wiz Exp $
+# $NetBSD: Makefile.common,v 1.30 2008/02/17 08:58:39 wiz Exp $
 #
 
-DISTNAME=	mldonkey-2.9.2
+DISTNAME=	mldonkey-2.9.3
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mldonkey/}
 EXTRACT_SUFX=	.tar.bz2
@@ -29,6 +29,9 @@ UNLIMIT_RESOURCES=	stacksize
 PRINT_PLIST_AWK+=	/^@dirrm libexec\/mldonkey$$/ \
 				{ print "@unexec $${RMDIR} %D/libexec/mldonkey"\
 				  " >/dev/null 2>&1 || $${TRUE}"; next }
+
+# needs 3.10.1 or newer to work correctly on NetBSD/amd64
+BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.10.1
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
