@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.296 2008/02/16 15:31:39 gdt Exp $
+$NetBSD: CHANGES-2008,v 1.297 2008/02/17 01:15:38 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -510,3 +510,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xcompmgr to 1.1.3nb2 [bjs 2008-02-16]
 	Updated devel/fromcvs to 0.0.0.108 [wiz 2008-02-16]
 	Updated devel/guile-www to 2.21 [gdt 2008-02-16]
+	Updated pkgtools/posix_headers to 0.6 [tnn 2008-02-16]
+	Updated net/Transmission to 1.05 [tnn 2008-02-16]
+	Updated devel/libgetopt to 1.4.2 [tnn 2008-02-16]
+	Updated pkgtools/pkg_chk to 1.89 [tnn 2008-02-17]
