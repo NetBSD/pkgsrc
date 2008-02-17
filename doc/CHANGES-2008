@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.298 2008/02/17 02:24:12 obache Exp $
+$NetBSD: CHANGES-2008,v 1.299 2008/02/17 08:59:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -515,3 +515,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libgetopt to 1.4.2 [tnn 2008-02-16]
 	Updated pkgtools/pkg_chk to 1.89 [tnn 2008-02-17]
 	Updated misc/ja-man to 19990531nb3 [obache 2008-02-17]
+	Updated net/mldonkey to 2.9.3 [wiz 2008-02-17]
+	Updated net/mldonkey-gui to 2.9.3 [wiz 2008-02-17]
