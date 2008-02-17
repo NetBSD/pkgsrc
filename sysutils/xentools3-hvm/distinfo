@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2008/02/15 20:34:35 bouyer Exp $
+$NetBSD: distinfo,v 1.4 2008/02/17 16:29:03 bouyer Exp $
 
 SHA1 (xen-3.1.3-src.tgz) = 87b370df928feda599bbc7076e7a4589f67355c8
 RMD160 (xen-3.1.3-src.tgz) = b26b71e0422db7aece60aa4dd9f9c8d34affd0c7
@@ -10,7 +10,7 @@ SHA1 (patch-ap) = 33f2bdbef6df3f2105d4502b8066abb6c952fc6c
 SHA1 (patch-ar) = c8748761267dd82c75deab79d13b71d56bcf2223
 SHA1 (patch-as) = 8850108d0c8f101642f4855184253824f9c214b5
 SHA1 (patch-at) = 2311289176c83fcd3ff18b90bab9c2e5e05a52f1
-SHA1 (patch-au) = beb2eaa8bf832e179e69b1758cfe0fafafdc496b
+SHA1 (patch-au) = b2357fdaff2895a5e4da4371d72ccc3041c78a83
 SHA1 (patch-av) = be2a1440126908996410f92a04ad479f8a2ca373
 SHA1 (patch-aw) = 2776799b391983ad79af0f28367287a4a865260a
 SHA1 (patch-ax) = 93411fbeff95f76d723fdda993d55a2740d3a713

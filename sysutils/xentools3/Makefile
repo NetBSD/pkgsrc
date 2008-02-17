@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/02/15 20:34:35 bouyer Exp $
+# $NetBSD: Makefile,v 1.7 2008/02/17 16:29:03 bouyer Exp $
 #
 
 VERSION=		3.1.3
@@ -137,11 +137,13 @@ CONF_FILES_PERMS+=	${EGDIR}/${s} ${PKG_SYSCONFDIR}/scripts/${s}	\
 OWN_DIRS=		${PKG_SYSCONFDIR}/scripts /var/log/xen
 
 pre-build:
-	${MKDIR} ${WRKSRC}/libxc/xen/NetBSD
-	${TEST} -f ${WRKSRC}/libxc/xen/NetBSD/xenio.h || \
-		${CP} ${FILESDIR}/xenio.h ${WRKSRC}/libxc/xen/NetBSD
-	${TEST} -f ${WRKSRC}/libxc/xen/NetBSD/xenio3.h || \
-		${CP} ${FILESDIR}/xenio3.h ${WRKSRC}/libxc/xen/NetBSD
+.if !exists(/usr/include/xen/xenio.h)
+	${MKDIR} ${WRKSRC}/libxc/xen
+	${TEST} -f ${WRKSRC}/libxc/xen/xenio.h || \
+		${CP} ${FILESDIR}/xenio.h ${WRKSRC}/libxc/xen
+	${TEST} -f ${WRKSRC}/libxc/xen/xenio3.h || \
+		${CP} ${FILESDIR}/xenio3.h ${WRKSRC}/libxc/xen
+.endif
 	${CP} ${FILESDIR}/NetBSD.mk ${WRKSRC}/../config/
 	pod2man ${WRKSRC}/../docs/man/xend-config.sxp.pod.5  |\
 	    sed -e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g" \
