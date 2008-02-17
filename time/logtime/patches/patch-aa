@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2008/02/17 20:30:36 tnn Exp $
+
+--- Makefile.orig	2004-01-11 22:30:21.000000000 +0100
++++ Makefile
+@@ -17,7 +17,7 @@ ${CMD}: ${CMD}.sh
+ 
+ install: ${CMD}
+ 	install -c -m 755 ${CMD} ${PREFIX}/${BIN}/${CMD}
+-	install -c -m 444 ${CMD}.man ${PREFIX}/man/man${MAN}/${CMD}.${MAN}
++	install -c -m 444 ${CMD}.man ${PREFIX}/${PKGMANDIR}/man${MAN}/${CMD}.${MAN}
+ 
+ clean:
+ 	rm -f ${CMD}
