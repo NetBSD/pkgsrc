@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/09/14 00:25:27 simonb Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/17 21:15:33 tnn Exp $
 #
 
 DISTNAME=		xlsclients-1.0.1
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
+
+CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
