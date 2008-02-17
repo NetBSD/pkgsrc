@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2008/02/15 20:34:35 bouyer Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/17 16:29:03 bouyer Exp $
 #
 
 VERSION=		3.1.3
 DISTNAME=		xen-${VERSION}-src
 PKGNAME=		xentools3-hvm-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=		.tgz
@@ -77,11 +78,13 @@ CONF_FILES_PERMS+=	${EGDIR}/qemu-ifup ${PKG_SYSCONFDIR}/scripts/qemu-ifup \
 OWN_DIRS=		${PKG_SYSCONFDIR}/scripts
 
 pre-build:
-	${MKDIR} ${WRKSRC}/libxc/xen/NetBSD
-	${TEST} -f ${WRKSRC}/libxc/xen/NetBSD/xenio.h || \
-	    ${CP} ${FILESDIR}/xenio.h ${WRKSRC}/libxc/xen/NetBSD
-	${TEST} -f ${WRKSRC}/libxc/xen/NetBSD/xenio3.h || \
-	    ${CP} ${FILESDIR}/xenio3.h ${WRKSRC}/libxc/xen/NetBSD
+.if !exists(/usr/include/xen/xenio.h)
+	${MKDIR} ${WRKSRC}/libxc/xen
+	${TEST} -f ${WRKSRC}/libxc/xen/xenio.h || \
+		${CP} ${FILESDIR}/xenio.h ${WRKSRC}/libxc/xen
+	${TEST} -f ${WRKSRC}/libxc/xen/xenio3.h || \
+		${CP} ${FILESDIR}/xenio3.h ${WRKSRC}/libxc/xen
+.endif
 	${CP} ${FILESDIR}/NetBSD.mk ${WRKSRC}/../config/
 .if ${MACHINE_ARCH} == "x86_64"
 	${MKDIR} ${WRKSRC}/libxc/machine
