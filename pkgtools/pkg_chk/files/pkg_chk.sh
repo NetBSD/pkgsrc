@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.52 2008/01/18 07:50:03 tnn Exp $
+# $Id: pkg_chk.sh,v 1.53 2008/02/17 00:55:21 tnn Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -29,6 +29,12 @@ is_binary_available()
 	    return 1;
 	fi
     fi
+    }
+
+bin_pkg_info2pkgdb()
+    {
+    ${AWK} '/^PKGNAME=/ {sub("^PKGNAME=", ""); PKGNAME=$0} \
+            /^PKGPATH=/ {sub("^PKGPATH=", ""); printf("%s:%s ", $0, PKGNAME)}'
     }
 
 check_packages_installed()
@@ -161,7 +167,9 @@ extract_variables()
     # as well as AWK, GREP, SED, PKGCHK_TAGS and PKGCHK_NOTAGS
     #
 
-    if [ -z "$opt_b" -o -n "$opt_s" -o -d $PKGSRCDIR/pkgtools/pkg_chk ] ; then
+    if [ -n "$opt_g" ]; then
+        :
+    elif [ -z "$opt_b" -o -n "$opt_s" -o -d $PKGSRCDIR/pkgtools/pkg_chk ] ; then
 	cd $PKGSRCDIR/pkgtools/pkg_chk
 	extract_make_vars Makefile \
 		AWK GREP GZIP_CMD ID PACKAGES PKGCHK_CONF PKGCHK_NOTAGS \
@@ -231,6 +239,11 @@ generate_conf_from_installed()
     echo $(pkgdirs_from_installed) | tr ' ' '\n' >> $FILE
     }
 
+get_bin_pkg_info()
+    {
+    list_bin_pkgs | ${XARGS} ${PKG_INFO} -X
+    }
+
 get_build_ver()
     {
     if [ -n "$opt_b" -a -z "$opt_s" ] ; then
@@ -242,6 +255,11 @@ get_build_ver()
     rm -f $MY_TMPFILE
     ${MAKE} _BUILD_VERSION_FILE=$MY_TMPFILE $MY_TMPFILE
     cat $MY_TMPFILE
+    }
+
+list_bin_pkgs ()
+    {
+    ls -t $PACKAGES | grep "$PKG_SUFX_RE"'$' | sed "s|^|$PACKAGES/|"
     }
 
 # Given a binary package filename as the first argumennt, return a list
@@ -718,8 +736,10 @@ test -n "$PKG_INFO"   || PKG_INFO="@PKG_INFO@"
 test -n "$SED"        || SED="@SED@"
 test -n "$SORT"	      || SORT="@SORT@"
 test -n "$TSORT"      || TSORT="@TSORT@"
+test -n "$XARGS"      || XARGS="@XARGS@"
 
 MY_TMPDIR=`${MKTEMP} -d ${TMPDIR-/tmp}/${0##*/}.XXXXXX`
+test -n "$MY_TMPDIR" || fatal "Couldn't create temporary directory."
 MY_TMPFILE=$MY_TMPDIR/tmp
 
 if [ -z "$MAKECONF" -o ! -f "$MAKECONF" ] ; then
@@ -747,7 +767,7 @@ else
 fi
 
 if [ -n "$opt_L" ] ; then
-    rm -f $opt_L
+    printf '' > $opt_L
 fi
 
 basedir=$(pwd)
@@ -796,12 +816,7 @@ if [ -n "$opt_b" -a -z "$opt_s" ] ; then
 	*)
 	    if [ -d "$PACKAGES" ] ; then
 		msg_progress Scan $PACKAGES
-		cd $PACKAGES
-		for f in `ls -t | grep "$PKG_SUFX_RE"'$'` ; do # Sort by time to pick up newest first
-		    PKGDIR=`${PKG_INFO} -. -B $PACKAGES/$f|${AWK} -F= '$1=="PKGPATH"{print $2}'`
-		    PKGNAME=`echo $f | ${SED} "s/$PKG_SUFX"'$//'`
-		    PKGDB="${PKGDB} $PKGDIR:$PKGNAME"
-		done
+		PKGDB=$(get_bin_pkg_info | bin_pkg_info2pkgdb)
 		PKGSRCDIR=NONE
 	    fi;;
     esac
