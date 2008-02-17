@@ -1,5 +1,5 @@
-.\" $NetBSD: pkg_rolling-replace.8,v 1.8 2007/08/08 22:00:40 wiz Exp $
-.Dd August 8, 2007
+.\" $NetBSD: pkg_rolling-replace.8,v 1.9 2008/02/17 10:47:47 apb Exp $
+.Dd February 17, 2008
 .Dt PKG_ROLLING-REPLACE 8
 .Os
 .Sh NAME
@@ -9,6 +9,7 @@
 .Nm
 .Op Fl hnrsuv
 .Op Fl x Ar pkgs
+.Op Fl X Ar pkgs
 .Sh DESCRIPTION
 .Nm
 runs
@@ -91,10 +92,24 @@ to check for outdated packages, and replace those too.
 .It Fl v
 Verbose output.
 .It Fl x Ar pkgs
-Exclude the comma-separated list of packages from the update check
-when
+Exclude the comma-separated list of package base names
+from the check for outdated packages.
+This has no effect if the
 .Fl u
-is given (does not exclude unsafe or rebuild-requested packages).
+flag is not given,
+and does not prevent packages from being rebuilt for any other reason
+(such as being a dependency of another package that is also rebuilt,
+or having any of the
+.Xr pkg_admin 8
+.Dq unsafe_depends ,
+.Dq unsafe_depends_strict ,
+or
+.Dq rebuild
+variables set to
+.Dq YES ) .
+.It Fl X Ar pkgs
+Exclude the comma-separated list of package base names
+from being rebuilt for any reason.
 .El
 .Sh ENVIRONMENT
 .Nm

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.16 2008/01/11 13:29:37 gdt Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.17 2008/02/17 10:47:47 apb Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -82,9 +82,10 @@ usage()
         -n         Don't actually do make replace
         -r         Just replace, don't create binary packages
         -s         Replace even if the ABIs are still compatible ("strict")
-        -u         Update mismatched packages
+        -u         Update outdated packages
         -v         Verbose
-        -x <pkg>   exclude <pkg> from update check
+        -x <pkg>   exclude <pkg> from outdated check
+        -X <pkg>   exclude <pkg> from being rebuilt
 
 pkg_rolling-replace does 'make replace' on one package at a time,
 tsorting the packages being replaced according to their
@@ -252,7 +253,7 @@ abort()
 
 EXCLUDE=
 
-args=$(getopt hnursvx: $*)
+args=$(getopt hnursvx:X: $*)
 if [ $? -ne 0 ]; then
     opt_h=1
 fi
@@ -266,6 +267,7 @@ while [ $# -gt 0 ]; do
         -u) opt_u=1 ;;
         -v) opt_v=1 ;;
         -x) EXCLUDE="$EXCLUDE $(echo $2 | sed 's/,/ /g')" ; shift ;;
+        -X) REALLYEXCLUDE="$REALLYEXCLUDE $(echo $2 | sed 's/,/ /g')" ; shift ;;
         --) shift; break ;;
     esac
     shift
@@ -312,6 +314,7 @@ verbose "${OPC} UNSAFE_TODO=[$(echo $UNSAFE_TODO)]"
 vsleep 2
 
 REPLACE_TODO=$(uniqify $MISMATCH_TODO $REBUILD_TODO $UNSAFE_TODO)
+REPLACE_TODO=$(exclude $REALLYEXCLUDE --from $REPLACE_TODO)
 depgraph_built=0
 
 while [ -n "$REPLACE_TODO" ]; do
@@ -433,6 +436,7 @@ while [ -n "$REPLACE_TODO" ]; do
     vsleep 4
 
     REPLACE_TODO=$(uniqify $MISMATCH_TODO $REBUILD_TODO $UNSAFE_TODO)
+    REPLACE_TODO=$(exclude $REALLYEXCLUDE --from $REPLACE_TODO)
     depgraph_built=0
 done
 
