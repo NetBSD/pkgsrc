@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.53 2008/02/17 00:55:21 tnn Exp $
+# $Id: pkg_chk.sh,v 1.54 2008/02/17 01:05:39 tnn Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -187,7 +187,7 @@ extract_variables()
     fi
 
     # .tgz/.tbz to regexp
-    PKG_SUFX_RE=`echo $PKG_SUFX | sed 's/[.]/[.]/'`
+    PKG_SUFX_RE=`echo $PKG_SUFX | ${SED} 's/[.]/[.]/'`
 
     if [ ! -d $PKG_DBDIR ] ; then
 	fatal "Unable to access PKG_DBDIR ($PKG_DBDIR)"
@@ -259,7 +259,7 @@ get_build_ver()
 
 list_bin_pkgs ()
     {
-    ls -t $PACKAGES | grep "$PKG_SUFX_RE"'$' | sed "s|^|$PACKAGES/|"
+    ls -t $PACKAGES | grep "$PKG_SUFX_RE"'$' | ${SED} "s|^|$PACKAGES/|"
     }
 
 # Given a binary package filename as the first argumennt, return a list
@@ -794,7 +794,7 @@ if [ -n "$opt_N" ]; then
 		while read a
 		do
 			b=$(grep "o $a-[0-9]" $PKGSRCDIR/doc/TODO | \
-				sed -e "s/[ 	]*o //")
+				${SED} -e "s/[ 	]*o //")
 		if [ "$b" ]
 		then
 			echo $a: $b
