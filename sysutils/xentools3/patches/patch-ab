@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2007/12/03 21:54:30 bouyer Exp $
+$NetBSD: patch-ab,v 1.3 2008/02/17 16:29:03 bouyer Exp $
 
---- libxc/xc_netbsd.c.orig	2007-12-03 12:46:01.000000000 +0100
-+++ libxc/xc_netbsd.c	2007-12-03 12:48:59.000000000 +0100
-@@ -0,0 +1,268 @@
+--- libxc/xc_netbsd.c.orig	2008-02-17 15:12:36.000000000 +0100
++++ libxc/xc_netbsd.c	2008-02-17 15:20:03.000000000 +0100
+@@ -0,0 +1,279 @@
 +/******************************************************************************
 + *
 + * Copyright 2006 Sun Microsystems, Inc.  All rights reserved.
@@ -17,7 +17,7 @@ $NetBSD: patch-ab,v 1.2 2007/12/03 21:54:30 bouyer Exp $
 +#include "xc_private.h"
 +
 +#include <xen/memory.h>
-+#include <xen/NetBSD/xenio3.h>
++#include <xen/xenio3.h>
 +#include <unistd.h>
 +#include <fcntl.h>
 +
@@ -142,9 +142,20 @@ $NetBSD: patch-ab,v 1.2 2007/12/03 21:54:30 bouyer Exp $
 +
 +int do_xen_hypercall(int xc_handle, privcmd_hypercall_t *hypercall)
 +{
++#ifdef __PKGSRC_PRIVCMD_H__
++    /* old IOCTL */
 +    return do_privcmd(xc_handle,
 +                      IOCTL_PRIVCMD_HYPERCALL,
 +                      (unsigned long)hypercall);
++#else
++    int error = do_privcmd(xc_handle,
++                      IOCTL_PRIVCMD_HYPERCALL,
++                      (unsigned long)hypercall);
++    if (error)
++	return error;
++    else
++	return (hypercall->retval);
++#endif
 +}
 +
 +#define EVTCHN_DEV_NAME  "/dev/xenevt"

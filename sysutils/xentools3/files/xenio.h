@@ -27,8 +27,8 @@
  * IN THE SOFTWARE.
  */
 
-#ifndef __NetBSD_PRIVCMD_H__
-#define __NetBSD_PRIVCMD_H__
+#ifndef __PKGSRC_PRIVCMD_H__
+#define __PKGSRC_PRIVCMD_H__
 
 /* Interface to /proc/xen/privcmd */
 
@@ -102,4 +102,4 @@ typedef struct privcmd_blkmsg
 /* EVTCHN_UNBIND: Unbind from the specified event-channel port. */
 #define EVTCHN_UNBIND _IOW('E', 3, unsigned long)
 
-#endif /* __NetBSD_PRIVCMD_H__ */
+#endif /* __PKGSRC_PRIVCMD_H__ */
