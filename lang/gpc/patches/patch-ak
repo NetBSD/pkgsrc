@@ -1,0 +1,33 @@
+$NetBSD: patch-ak,v 1.1 2008/02/17 10:07:59 rillig Exp $
+
+bitfields cannot be updated via an lvalue cast assigment.
+
+--- gcc/p/module.c.orig	2002-04-26 20:25:38.000000000 +0000
++++ gcc/p/module.c	2007-12-01 12:37:20.000000000 +0000
+@@ -2548,7 +2548,7 @@ itab_check_gpi_checksum (interface_name,
+   itab->gpi_checksum = gpi_checksum;
+   /* @@ misuse of TREE_LIST and TREE_TYPE(1) */
+   t = build_tree_list (itab->module_name, itab->interface_name);
+-  TREE_CODE (t) = INTERFACE_NAME_NODE;
++  TREE_SET_CODE (t, INTERFACE_NAME_NODE);
+   TREE_TYPE (t) = (tree) itab;
+   itab->interface_name_node = t;
+   return 1;
+@@ -2636,7 +2636,7 @@ load_node ()
+           free (id);
+           /* @@ misuse of TREE_LIST */
+           t = build_tree_list (m, i);
+-          TREE_CODE (t) = INTERFACE_NAME_NODE;
++          TREE_SET_CODE (t, INTERFACE_NAME_NODE);
+           assert (mark_node_loaded (t, uid) == t);
+           LOAD_ANY (gpi_checksum);
+           get_interface_table (i, m, 1);
+@@ -3718,7 +3718,7 @@ gpi_open (interface_name, name, source, 
+                         {
+                           tree new_import = build_tree_list (NULL_TREE, interface);
+                           /* @@ misuse of TREE_LIST and TREE_TYPE(2) */
+-                          TREE_CODE (new_import) = INTERFACE_NAME_NODE;
++                          TREE_SET_CODE (new_import, INTERFACE_NAME_NODE);
+                           TREE_TYPE (new_import) = (tree) checksum;
+                           import_list = chainon (import_list, new_import);
+                         }
