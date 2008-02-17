@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.538 2008/02/16 05:03:58 obache Exp $
+# $NetBSD: Makefile,v 1.539 2008/02/17 18:19:14 minskim Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -319,7 +319,6 @@ SUBDIR+=	qDecoder
 SUBDIR+=	raggle
 SUBDIR+=	rails
 SUBDIR+=	ruby-actionpack
-SUBDIR+=	ruby-actionwebservice
 SUBDIR+=	ruby-activeresource
 SUBDIR+=	ruby-borges
 SUBDIR+=	ruby-clearsilver
