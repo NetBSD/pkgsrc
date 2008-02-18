@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.309 2008/02/18 16:41:46 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.310 2008/02/18 16:48:35 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -530,3 +530,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/treecc to 0.3.10 [xtraeme 2008-02-18]
 	Updated lang/pnet to 0.8.0 [xtraeme 2008-02-18]
 	Updated lang/pnetlib to 0.8.0 [xtraeme 2008-02-18]
+	Updated security/openpam to 20071221 [jlam 2008-02-18]
