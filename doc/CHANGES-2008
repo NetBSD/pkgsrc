@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.302 2008/02/17 18:19:33 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.303 2008/02/18 00:00:59 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -521,3 +521,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/xentools3-hvm to 3.1.3nb1 [bouyer 2008-02-17]
 	Updated sysutils/psftools to 1.0.6 [bjs 2008-02-17]
 	Removed www/ruby-actionwebservice [minskim 2008-02-17]
+	Updated net/aria2 to 0.12.1.1 [bjs 2008-02-18]
