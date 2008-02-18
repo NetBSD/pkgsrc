@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.307 2008/02/18 15:52:32 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.308 2008/02/18 15:56:52 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -527,3 +527,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/pixman to 0.9.6nb5 [bjs 2008-02-18]
 	Updated databases/p5-BerkeleyDB to 0.33 [obache 2008-02-18]
 	Updated devel/libjit to 0.1.0 [xtraeme 2008-02-18]
+	Updated devel/treecc to 0.3.10 [xtraeme 2008-02-18]
