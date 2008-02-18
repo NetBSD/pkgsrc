@@ -1,8 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2006/03/31 05:37:08 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/02/18 16:45:21 xtraeme Exp $
 include/jit/jit-apply.h
+include/jit/jit-arch.h
 include/jit/jit-block.h
 include/jit/jit-common.h
 include/jit/jit-context.h
+include/jit/jit-debugger.h
 include/jit/jit-defs.h
 include/jit/jit-dump.h
 include/jit/jit-dynamic.h
