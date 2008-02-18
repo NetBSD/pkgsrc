@@ -1,11 +1,5 @@
-$NetBSD: distinfo,v 1.6 2007/12/14 12:46:22 bjs Exp $
+$NetBSD: distinfo,v 1.7 2008/02/18 00:00:18 bjs Exp $
 
-SHA1 (aria2-0.12.0.tar.bz2) = 138380000be0e5df2e3ee4cbb39c0f872cdb195b
-RMD160 (aria2-0.12.0.tar.bz2) = 4dc96ca15836a6da640940fbb3ad4f8e1c067fa3
-Size (aria2-0.12.0.tar.bz2) = 627019 bytes
-SHA1 (patch-aa) = 6d99c0a8a089bb827cdbb72e3df159d826b29db5
-SHA1 (patch-ab) = 306c87e3ad274ed020689796c30dc0925631f371
-SHA1 (patch-ac) = 83360f9d2d17ac2898a4aa2a07213afea13a5f4c
-SHA1 (patch-ad) = e0d91e27a16674d5ab8c1d37e3f1cdb6564c6584
-SHA1 (patch-ae) = 1395f44ed49c48e7314345469d19a49bc7aaf1ec
-SHA1 (patch-af) = b1c120b3d8a284a2fa5b9483a89a6b4a830eb051
+SHA1 (aria2-0.12.1+1.tar.bz2) = f8a6acc1f720aaee1d55a46aa99ddd5341d28679
+RMD160 (aria2-0.12.1+1.tar.bz2) = 4eeddc52c51461d0c162ec33acfc144962ae6c6a
+Size (aria2-0.12.1+1.tar.bz2) = 720951 bytes
