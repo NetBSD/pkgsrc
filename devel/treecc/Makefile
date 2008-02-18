@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2007/11/17 12:04:12 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2008/02/18 15:56:35 xtraeme Exp $
 #
 
-DISTNAME=	treecc-0.3.6
-PKGREVISION=	1
+DISTNAME=	treecc-0.3.10
+#PKGREVISION=	1
 CATEGORIES=	devel
-MASTER_SITES=	http://www.southern-storm.com.au/download/
+MASTER_SITES=	http://download.savannah.gnu.org/releases/dotgnu-pnet/
 
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.gnu.org/projects/dotgnu/
