@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2008/02/07 06:40:27 bjs Exp $
+# $NetBSD: Makefile,v 1.6 2008/02/18 05:36:51 bjs Exp $
 #
 
 DISTNAME=	pixman-0.9.6
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
