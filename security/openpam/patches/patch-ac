@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.2 2005/02/10 02:55:39 jlam Exp $
+$NetBSD: patch-ac,v 1.3 2008/02/18 16:48:12 jlam Exp $
 
---- lib/Makefile.in.orig	2005-01-31 18:00:00.000000000 -0500
+--- lib/Makefile.in.orig	2007-12-21 06:44:28.000000000 -0500
 +++ lib/Makefile.in
-@@ -137,7 +137,7 @@ CC = @CC@
+@@ -116,7 +116,7 @@ CC = @CC@
  CCDEPMODE = @CCDEPMODE@
  CFLAGS = @CFLAGS@
  CPP = @CPP@
@@ -11,3 +11,11 @@ $NetBSD: patch-ac,v 1.2 2005/02/10 02:55:39 jlam Exp $
  CRYPT_LIBS = @CRYPT_LIBS@
  CXX = @CXX@
  CXXCPP = @CXXCPP@
+@@ -267,7 +267,6 @@ libpam_la_SOURCES = \
+ 	pam_vprompt.c \
+ 	$(NULL)
+ 
+-libpam_la_CFLAGS = -DOPENPAM_MODULES_DIR='"@OPENPAM_MODULES_DIR@/"'
+ libpam_la_LDFLAGS = -no-undefined -version-info @LIB_MAJ@ @DL_LIBS@
+ EXTRA_DIST = \
+ 	pam_authenticate_secondary.c \

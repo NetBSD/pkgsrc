@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2007/09/06 18:54:44 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/02/18 16:48:12 jlam Exp $
 include/security/openpam.h
+include/security/openpam_attr.h
 include/security/openpam_version.h
 include/security/pam_appl.h
 include/security/pam_constants.h
