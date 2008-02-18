@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: authdaemond.sh,v 1.4 2008/02/18 20:35:48 jlam Exp $
+# $NetBSD: authdaemond.sh,v 1.5 2008/02/18 20:37:22 jlam Exp $
 #
 # Courier user authentication daemon
 #
@@ -16,9 +16,9 @@ ctl_command="@PREFIX@/sbin/authdaemond"
 pidfile="@AUTHDAEMONVAR@/pid"
 required_files="@PKG_SYSCONFDIR@/authdaemonrc"
 
-start_precmd="authdaemond_prestart"
-start_cmd="authdaemond_doit start"
-stop_cmd="authdaemond_doit stop"
+start_precmd="${name}_prestart"
+start_cmd="${name}_doit start"
+stop_cmd="${name}_doit stop"
 
 mkdir_perms()
 {
