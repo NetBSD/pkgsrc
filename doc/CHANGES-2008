@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.303 2008/02/18 00:00:59 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.304 2008/02/18 05:37:09 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -522,3 +522,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/psftools to 1.0.6 [bjs 2008-02-17]
 	Removed www/ruby-actionwebservice [minskim 2008-02-17]
 	Updated net/aria2 to 0.12.1.1 [bjs 2008-02-18]
+	Updated x11/pixman to 0.9.6nb5 [bjs 2008-02-18]
