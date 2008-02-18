@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.27 2007/10/31 14:22:55 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2008/02/18 20:26:33 jlam Exp $
 
 .include "Makefile.common"
 
 DISTNAME=	courier-authlib-0.60.2
+PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -17,6 +18,8 @@ CONFLICTS+=	courier-authmysql-[0-9]*
 CONFLICTS+=	courier-authpgsql-[0-9]*
 
 #LICENSE=	gnu-gpl-v3
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 PKG_SYSCONFSUBDIR=	authlib
@@ -78,7 +81,8 @@ CONF_FILES_PERMS+=	${EGDIR}/${_file_}.dist ${PKG_SYSCONFDIR}/${_file_} \
 .endfor
 
 .for _file_ in ${AUTHLIB_PLIST}
-GENERATE_PLIST+=	${TEST} -f ${PREFIX}/${_file_} && ${ECHO} "${_file_}";
+GENERATE_PLIST+=	${TEST} -f ${DESTDIR}${PREFIX}/${_file_} &&	\
+			${ECHO} "${_file_}";
 .endfor
 .if !empty(AUTHLIB_PLIST:M${AUTHEXAMPLEDIR}/*)
 GENERATE_PLIST+=	${ECHO} "@dirrm ${AUTHEXAMPLEDIR}";
@@ -92,16 +96,16 @@ INSTALLATION_DIRS=	bin sbin
 post-install: ${POST_INSTALL_TARGETS}
 
 post-install-common:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/sysconftool ${PREFIX}/sbin
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/INSTALL.html ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.authdebug.html ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.html ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README_authlib.html ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/sysconftool ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/INSTALL.html ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.authdebug.html ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.html ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README_authlib.html ${DESTDIR}${DOCDIR}
 
 post-install-authdaemon:
-	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${EGDIR}/authdaemonrc.dist
-	${CHMOD} ${SHAREMODE} ${EGDIR}/authdaemonrc.dist
+	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${EGDIR}/authdaemonrc.dist
+	${CHMOD} ${SHAREMODE} ${DESTDIR}${EGDIR}/authdaemonrc.dist
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2006/05/31 18:22:25 ghen Exp $
+# $NetBSD: options.mk,v 1.11 2008/02/18 20:26:33 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.courier-authlib
 PKG_SUPPORTED_OPTIONS=	pam bdb ldap mysql pgsql
@@ -24,7 +24,7 @@ AUTHLIB_PLIST+=		${AUTHEXAMPLEDIR}/samplepipe.pl
 POST_INSTALL_TARGETS+=	post-install-pipe
 
 post-install-pipe:
-	${INSTALL_SCRIPT} ${WRKSRC}/samplepipe.pl ${EGDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/samplepipe.pl ${DESTDIR}${EGDIR}
 
 ###
 ### PAM authentication
@@ -72,10 +72,10 @@ GEN_FILES+=		authldaprc
 POST_INSTALL_TARGETS+=	post-install-ldap
 
 post-install-ldap:
-	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${EGDIR}/authldaprc.dist
-	${CHMOD} ${SHAREMODE} ${EGDIR}/authldaprc.dist
-	${INSTALL_DATA} ${WRKSRC}/README.ldap ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/authldap.schema ${EGDIR}
+	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${EGDIR}/authldaprc.dist
+	${CHMOD} ${SHAREMODE} ${DESTDIR}${EGDIR}/authldaprc.dist
+	${INSTALL_DATA} ${WRKSRC}/README.ldap ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/authldap.schema ${DESTDIR}${EGDIR}
 .else
 CONFIGURE_ARGS+=	--without-authldap
 .endif
@@ -93,9 +93,9 @@ GEN_FILES+=		authmysqlrc
 POST_INSTALL_TARGETS+=	post-install-mysql
 
 post-install-mysql:
-	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${EGDIR}/authmysqlrc.dist
-	${CHMOD} ${SHAREMODE} ${EGDIR}/authmysqlrc.dist
-	${INSTALL_DATA} ${WRKSRC}/README.authmysql.html ${DOCDIR}
+	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${EGDIR}/authmysqlrc.dist
+	${CHMOD} ${SHAREMODE} ${DESTDIR}${EGDIR}/authmysqlrc.dist
+	${INSTALL_DATA} ${WRKSRC}/README.authmysql.html ${DESTDIR}${DOCDIR}
 .else
 CONFIGURE_ARGS+=	--without-authmysql
 .endif
@@ -118,9 +118,9 @@ GEN_FILES+=		authpgsqlrc
 POST_INSTALL_TARGETS+=	post-install-pgsql
 
 post-install-pgsql:
-	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${EGDIR}/authpgsqlrc.dist
-	${CHMOD} ${SHAREMODE} ${EGDIR}/authpgsqlrc.dist
-	${INSTALL_DATA} ${WRKSRC}/README.authpostgres.html ${DOCDIR}
+	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${EGDIR}/authpgsqlrc.dist
+	${CHMOD} ${SHAREMODE} ${DESTDIR}${EGDIR}/authpgsqlrc.dist
+	${INSTALL_DATA} ${WRKSRC}/README.authpostgres.html ${DESTDIR}${DOCDIR}
 .else
 CONFIGURE_ARGS+=	--without-authpgsql
 .endif
