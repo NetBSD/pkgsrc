@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/03/31 23:56:28 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/02/18 16:39:43 xtraeme Exp $
 bin/al
 bin/cli-unknown-ar
 bin/cli-unknown-cpp
@@ -29,31 +29,31 @@ bin/ilsize
 bin/ilstrip
 bin/ilverify
 bin/resgen
-include/pnet/ffi.h
-include/pnet/ffi_mips.h
-include/pnet/fficonfig.h
-include/pnet/gc.h
-include/pnet/gc/gc.h
-include/pnet/gc/gc_alloc.h
-include/pnet/gc/gc_allocator.h
-include/pnet/gc/gc_amiga_redirects.h
-include/pnet/gc/gc_backptr.h
-include/pnet/gc/gc_config_macros.h
-include/pnet/gc/gc_cpp.h
-include/pnet/gc/gc_gcj.h
-include/pnet/gc/gc_inl.h
-include/pnet/gc/gc_inline.h
-include/pnet/gc/gc_local_alloc.h
-include/pnet/gc/gc_mark.h
-include/pnet/gc/gc_pthread_redirects.h
-include/pnet/gc/gc_typed.h
-include/pnet/gc/leak_detector.h
-include/pnet/gc/new_gc_alloc.h
-include/pnet/gc/weakpointer.h
-include/pnet/gc_config_macros.h
-include/pnet/gc_local_alloc.h
-include/pnet/gc_pthread_redirects.h
-include/pnet/gc_typed.h
+include/ffi.h
+include/ffitarget.h
+include/gc.h
+include/gc/gc.h
+include/gc/gc_alloc.h
+include/gc/gc_allocator.h
+include/gc/gc_amiga_redirects.h
+include/gc/gc_backptr.h
+include/gc/gc_config_macros.h
+include/gc/gc_cpp.h
+include/gc/gc_gcj.h
+include/gc/gc_inl.h
+include/gc/gc_inline.h
+include/gc/gc_local_alloc.h
+include/gc/gc_mark.h
+include/gc/gc_pthread_redirects.h
+include/gc/gc_typed.h
+include/gc/leak_detector.h
+include/gc/new_gc_alloc.h
+include/gc/weakpointer.h
+include/gc_config_macros.h
+include/gc_local_alloc.h
+include/gc_pthread_redirects.h
+include/gc_typed.h
+include/leak_detector.h
 include/pnet/il_align.h
 include/pnet/il_bignum.h
 include/pnet/il_coder.h
@@ -61,6 +61,7 @@ include/pnet/il_config.h
 include/pnet/il_console.h
 include/pnet/il_crypt.h
 include/pnet/il_debug.h
+include/pnet/il_debugger.h
 include/pnet/il_decimal.h
 include/pnet/il_dumpasm.h
 include/pnet/il_engine.h
@@ -84,7 +85,6 @@ include/pnet/il_utils.h
 include/pnet/il_values.h
 include/pnet/il_writer.h
 include/pnet/il_xml.h
-include/pnet/leak_detector.h
 info/pnettools.info
 lib/cscc/plugins/cscc-b
 lib/cscc/plugins/cscc-bf
@@ -100,8 +100,15 @@ lib/libILEngine.a
 lib/libILImage.a
 lib/libILLink.a
 lib/libILSupport.a
-lib/pnet/libffi.la
-lib/pnet/libgc.la
+lib/libffi.la
+lib/libgc.la
+man/man1/al.1.gz
+man/man1/cli-unknown-ar.1.gz
+man/man1/cli-unknown-cpp.1.gz
+man/man1/cli-unknown-gcc.1.gz
+man/man1/cli-unknown-ranlib.1.gz
+man/man1/cli-unknown-size.1.gz
+man/man1/cli-unknown-strip.1.gz
 man/man1/clrwrap.1
 man/man1/csant.1
 man/man1/cscc-cpp.1
@@ -158,8 +165,7 @@ share/gc/scale.html
 share/gc/simple_example.html
 share/gc/tree.html
 @dirrm share/gc
-@dirrm lib/pnet
 @dirrm lib/cscc/plugins
 @dirrm lib/cscc
-@dirrm include/pnet/gc
 @dirrm include/pnet
+@dirrm include/gc
