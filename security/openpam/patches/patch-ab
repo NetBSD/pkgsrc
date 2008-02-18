@@ -1,7 +1,34 @@
-$NetBSD: patch-ab,v 1.2 2008/02/18 16:48:12 jlam Exp $
+$NetBSD: patch-ab,v 1.3 2008/02/18 18:22:18 jlam Exp $
 
 --- lib/openpam_configure.c.orig	2007-12-21 06:36:24.000000000 -0500
 +++ lib/openpam_configure.c
+@@ -70,7 +70,7 @@ static int
+ match_word(const char *str, const char *word)
+ {
+ 
+-	while (*str && tolower(*str) == tolower(*word))
++	while (*str && tolower((unsigned char)*str) == tolower((unsigned char)*word))
+ 		++str, ++word;
+ 	return (*str == ' ' && *word == '\0');
+ }
+@@ -194,7 +194,7 @@ openpam_read_chain(pam_handle_t *pamh,
+ 		}
+ 
+ 		/* allocate new entry */
+-		if ((this = calloc(1, sizeof *this)) == NULL)
++		if ((this = calloc((size_t)1, sizeof *this)) == NULL)
+ 			goto syserr;
+ 
+ 		/* control flag */
+@@ -230,7 +230,7 @@ openpam_read_chain(pam_handle_t *pamh,
+ 			++this->optc;
+ 			q = next_word(q);
+ 		}
+-		this->optv = calloc(this->optc + 1, sizeof(char *));
++		this->optv = calloc((size_t)(this->optc + 1), sizeof(char *));
+ 		if (this->optv == NULL)
+ 			goto syserr;
+ 		for (i = 0; i < this->optc; ++i) {
 @@ -263,11 +263,13 @@ openpam_read_chain(pam_handle_t *pamh,
  	return (-1);
  }

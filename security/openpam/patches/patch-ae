@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2008/02/18 18:22:18 jlam Exp $
+
+--- lib/openpam_borrow_cred.c.orig	2007-12-21 06:36:24.000000000 -0500
++++ lib/openpam_borrow_cred.c
+@@ -73,7 +73,7 @@ openpam_borrow_cred(pam_handle_t *pamh,
+ 		    (int)geteuid());
+ 		RETURNC(PAM_PERM_DENIED);
+ 	}
+-	scred = calloc(1, sizeof *scred);
++	scred = calloc((size_t)1, sizeof *scred);
+ 	if (scred == NULL)
+ 		RETURNC(PAM_BUF_ERR);
+ 	scred->euid = geteuid();
