@@ -1,11 +1,5 @@
-$NetBSD: distinfo,v 1.6 2006/02/26 20:38:51 joerg Exp $
+$NetBSD: distinfo,v 1.7 2008/02/18 16:39:43 xtraeme Exp $
 
-SHA1 (pnet-0.6.6.tar.gz) = cc0b59074f9a905b31cf5778cfee3476adb2b098
-RMD160 (pnet-0.6.6.tar.gz) = e66d4c878cbd008b13926a96884afe8836f05b55
-Size (pnet-0.6.6.tar.gz) = 3471669 bytes
-SHA1 (patch-aa) = d458a548d7b1d3c868d988d4f5e359fe57099d4f
-SHA1 (patch-ab) = ead1b5307c8429bdad3ec37a310dc4bed562181e
-SHA1 (patch-ac) = 2a3c06ed1a98bdd2f5abf6130ce1dd5b0f4deffb
-SHA1 (patch-ad) = bd18444a728e285b722ca6143a892a0cbbf0d71c
-SHA1 (patch-ae) = f4d1ab5388e49bb570011bf7559211ff5a05e42e
-SHA1 (patch-af) = c04532778ebd627571b68c4d0ff52fc9be2c21af
+SHA1 (pnet-0.8.0.tar.gz) = 3d048cbef0476f21cbdd86f81c1706f52b7a7218
+RMD160 (pnet-0.8.0.tar.gz) = 232f96fb92be2cab4109ab03845bafa84c3d0259
+Size (pnet-0.8.0.tar.gz) = 4510420 bytes
