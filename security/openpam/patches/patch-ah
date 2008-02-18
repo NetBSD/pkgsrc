@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2008/02/18 18:22:18 jlam Exp $
+
+--- lib/pam_putenv.c.orig	2007-12-21 06:36:24.000000000 -0500
++++ lib/pam_putenv.c
+@@ -65,7 +65,7 @@ pam_putenv(pam_handle_t *pamh,
+ 		RETURNC(PAM_SYSTEM_ERR);
+ 
+ 	/* see if the variable is already in the environment */
+-	if ((i = openpam_findenv(pamh, namevalue, p - namevalue)) >= 0) {
++	if ((i = openpam_findenv(pamh, namevalue, (size_t)(p - namevalue))) >= 0) {
+ 		if ((p = strdup(namevalue)) == NULL)
+ 			RETURNC(PAM_BUF_ERR);
+ 		FREE(pamh->env[i]);
