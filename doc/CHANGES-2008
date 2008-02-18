@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.308 2008/02/18 15:56:52 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.309 2008/02/18 16:41:46 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -528,3 +528,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/p5-BerkeleyDB to 0.33 [obache 2008-02-18]
 	Updated devel/libjit to 0.1.0 [xtraeme 2008-02-18]
 	Updated devel/treecc to 0.3.10 [xtraeme 2008-02-18]
+	Updated lang/pnet to 0.8.0 [xtraeme 2008-02-18]
+	Updated lang/pnetlib to 0.8.0 [xtraeme 2008-02-18]
