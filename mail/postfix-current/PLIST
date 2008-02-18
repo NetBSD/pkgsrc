@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2008/01/16 17:39:01 ghen Exp $
+@comment $NetBSD: PLIST,v 1.16 2008/02/18 17:46:22 ghen Exp $
 bin/mailq
 bin/newaliases
 libexec/postfix/anvil
@@ -14,6 +14,9 @@ libexec/postfix/nqmgr
 libexec/postfix/oqmgr
 libexec/postfix/pickup
 libexec/postfix/pipe
+libexec/postfix/post-install
+libexec/postfix/postfix-files
+libexec/postfix/postfix-script
 libexec/postfix/proxymap
 libexec/postfix/qmgr
 libexec/postfix/qmqpd
@@ -162,7 +165,6 @@ share/examples/postfix/main.cf.default
 share/examples/postfix/makedefs.out
 share/examples/postfix/master.cf
 share/examples/postfix/post-install
-share/examples/postfix/postfix-files
 share/examples/postfix/postfix-script
 share/examples/postfix/relocated
 ${SASL}share/examples/postfix/smtpd.conf
