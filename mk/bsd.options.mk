@@ -1,4 +1,4 @@
-# $NetBSD: bsd.options.mk,v 1.65 2007/10/28 11:29:06 tron Exp $
+# $NetBSD: bsd.options.mk,v 1.66 2008/02/18 12:38:35 obache Exp $
 #
 # This Makefile fragment provides boilerplate code for standard naming
 # conventions for handling per-package build options.
@@ -437,5 +437,15 @@ supported-options-message:
 	@${ECHO} "=========================================================================="
 .  endif
 .endif
+
+.PHONY: show-depends-options
+show-depends-options:
+	${RUN}								\
+	${_DEPENDS_WALK_CMD} ${PKGPATH} |				\
+	while read dir; do						\
+		${ECHO} "===> Options for $${dir}" &&			\
+		cd ${.CURDIR}/../../$$dir &&				\
+		${RECURSIVE_MAKE} ${MAKEFLAGS} show-options;		\
+	done
 
 .endif	# BSD_OPTIONS_MK
