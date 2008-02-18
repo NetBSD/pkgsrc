@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.8 2006/04/12 20:50:56 joerg Exp $
+# $NetBSD: Makefile.common,v 1.9 2008/02/18 16:39:43 xtraeme Exp $
 #
 
-DISTNAME=	pnetlib-0.6.6
+DISTNAME=	pnetlib-0.8.0
 CATEGORIES=	lang
-MASTER_SITES=	http://www.southern-storm.com.au/download/
+MASTER_SITES=	http://download.savannah.gnu.org/releases/dotgnu-pnet/
 
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://www.dotgnu.org/
