@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.313 2008/02/19 02:54:41 rh Exp $
+$NetBSD: CHANGES-2008,v 1.314 2008/02/19 09:12:37 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -535,3 +535,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/postfix-current to 20080216 [ghen 2008-02-18]
 	Added textproc/highlight version 2.6.8 [rh 2008-02-19]
 	Updated games/cgoban-java to 3.3.22 [rh 2008-02-19]
+	Updated multimedia/avidemux to 2.4.1 [xtraeme 2008-02-19]

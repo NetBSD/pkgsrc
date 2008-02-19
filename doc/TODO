@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7057 2008/02/18 16:41:46 xtraeme Exp $
+$NetBSD: TODO,v 1.7058 2008/02/19 09:12:37 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -446,7 +446,6 @@ Suggested package updates
 	o autoconvert-0.3.16
 	o automake-1.10.1
 	o avcheck-0.91
-	o avidemux-2.4.0
 	o avl-2.0.2a
 	o avr-binutils-2.17
 	o avr-libc-1.4.5
