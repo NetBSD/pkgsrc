@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2005/05/01 17:29:13 schmonz Exp $
+$NetBSD: patch-aa,v 1.6 2008/02/19 10:34:07 schmonz Exp $
 
---- setup.py.orig	2005-03-14 14:17:17.000000000 -0500
+--- setup.py.orig	2007-11-23 11:26:55.000000000 -0500
 +++ setup.py
 @@ -39,12 +39,11 @@ GETMAILDOCDIR = os.path.join(
      datadir or prefix,
@@ -16,3 +16,11 @@ $NetBSD: patch-aa,v 1.5 2005/05/01 17:29:13 schmonz Exp $
      'man',
      'man1'
  )
+@@ -100,7 +99,6 @@ setup(
+     data_files=[
+         (GETMAILDOCDIR, [
+             './README',
+-            './getmail.spec',
+             'docs/BUGS',
+             'docs/COPYING',
+             'docs/CHANGELOG',
