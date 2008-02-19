@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.323 2008/02/19 18:46:19 jlam Exp $
+$NetBSD: CHANGES-2008,v 1.324 2008/02/19 21:45:59 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -553,3 +553,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/courier-mta to 0.58.0 [jlam 2008-02-19]
 	Updated meta-pkgs/courier to 0.58.0 [jlam 2008-02-19]
 	Updated net/couriertcpd to 0.58.0 [jlam 2008-02-19]
+	Updated mail/turba to 2.1.7 [adrianp 2008-02-19]
