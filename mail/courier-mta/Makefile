@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2007/10/17 13:50:30 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2008/02/19 18:45:23 jlam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/-mta-/}
-PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,9 +14,10 @@ HOMEPAGE=	http://www.courier-mta.org/
 
 DEPENDS+=	courier-maildir>=${COURIER_VERSION}:../../mail/courier-maildir
 DEPENDS+=	couriertcpd>=${COURIER_VERSION}:../../net/couriertcpd
-DEPENDS+=	maildrop>=2.0.4nb2:../../mail/maildrop
+DEPENDS+=	maildrop>=2.0.4nb3:../../mail/maildrop
 
-USE_TOOLS+=		gmake openssl:run perl:run
+PKG_DESTDIR_SUPPORT=	user-destdir
+USE_TOOLS+=		gmake perl:run
 USE_LANGUAGES=		c c++
 GCC_REQD+=		3.0	# need Standard C++ Library
 
@@ -30,8 +30,9 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 
 USERGROUP_PHASE=	configure
 
-CONFIGURE_ENV+=		OPENSSL=${TOOLS_OPENSSL:Q}
-CONFIGURE_ENV+=		PROCMAIL=${LOCALBASE:Q}/bin/procmail
+CONFIGURE_ENV+=		CERTTOOL=${COURIER_CERTTOOL:Q}
+CONFIGURE_ENV+=		OPENSSL=${COURIER_OPENSSL:Q}
+CONFIGURE_ENV+=		PROCMAIL=${PREFIX:Q}/bin/procmail
 
 CONFIGURE_ARGS+=	--datadir=${DATADIR:Q}
 CONFIGURE_ARGS+=	--with-mailuid=${PKG_UID.${COURIER_USER}}
@@ -59,11 +60,12 @@ SUBST_FILES.courier=	courier/doc/mkesmtpdcert.8.in			\
 			courier/filters/courierfilter.html.in		\
 			courier/module.esmtp/esmtpd-msa.dist.in		\
 			courier/module.esmtp/esmtpd-ssl.dist.in		\
-			courier/module.esmtp/esmtpd.cnf.in		\
+			courier/module.esmtp/esmtpd.cnf.openssl.in	\
 			courier/module.esmtp/esmtpd.dist.in		\
 			courier/module.esmtp/mkesmtpdcert.in
 SUBST_SED.courier=	-e "s|^ESMTPDSTART=.*|ESMTPDSTART=YES|g"	\
 			-e "s|^ESMTPDSSLSTART=.*|ESMTPDSSLSTART=YES|g"	\
+			-e "s|@mydatadir@|@sysconfdir@|g"		\
 			-e "s|@datadir@/esmtpd.pem|@sysconfdir@/esmtpd.pem|g" \
 			-e "s|@datadir@/esmtpd.rand|@sysconfdir@/esmtpd.rand|g" \
 			-e "s|@libexecdir@/filters|@libexecdir@/courier/filters|g"
@@ -78,7 +80,7 @@ SUBST_STAGE.perms=	pre-configure
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKDIR}/mailer.conf
-SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.paths+=	-e "s,@PREFIX@,${PREFIX:Q},g"
 SUBST_STAGE.paths=	post-patch
 
 REPLACE_PERL+=	courier/webadmin/*.pl courier/webadmin/*.pl.in webadmin/*.pl
@@ -96,9 +98,12 @@ post-install:
 	cd ${WRKSRC}/courier && \
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} install-permissions
 	${CHOWN} ${COURIER_USER}:${COURIER_GROUP} \
-		${DATADIR}/filterctl ${PREFIX}/sbin/courierfilter
-	${CHMOD} 0500 ${DATADIR}/filterctl ${PREFIX}/sbin/courierfilter
-	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${EGDIR}
-	${INSTALL_DATA} ${WRKDIR}/locallowercase ${EGDIR}/locallowercase
+		${DESTDIR}${DATADIR}/filterctl \
+		${DESTDIR}${PREFIX}/sbin/courierfilter
+	${CHMOD} 0500 ${DESTDIR}${DATADIR}/filterctl \
+		${DESTDIR}${PREFIX}/sbin/courierfilter
+	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKDIR}/locallowercase \
+		${DESTDIR}${EGDIR}/locallowercase
 
 .include "../../mk/bsd.pkg.mk"

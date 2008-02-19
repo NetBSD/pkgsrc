@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: webmlm.sh,v 1.3 2007/09/22 05:07:49 jlam Exp $
+# $NetBSD: webmlm.sh,v 1.4 2008/02/19 18:45:24 jlam Exp $
 #
 # Courier mailing list management daemon
 #
@@ -18,8 +18,14 @@ pidfile="@COURIER_STATEDIR@/webmlm.pid"
 required_files="@PKG_SYSCONFDIR@/webmlmrc"
 
 restart_cmd="${name}_doit restart"
+start_precmd="${name}_prestart"
 start_cmd="${name}_doit start"
 stop_cmd="${name}_doit stop"
+
+webmlm_prestart()
+{
+	@TEST@ -d @COURIER_STATEDIR@ || @MKDIR@ @COURIER_STATEDIR@
+}
 
 webmlm_doit()
 {

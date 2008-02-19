@@ -1,0 +1,22 @@
+$NetBSD: patch-ax,v 1.1 2008/02/19 18:45:24 jlam Exp $
+
+--- courier/module.esmtp/Makefile.in.orig	2007-11-17 19:49:38.000000000 -0500
++++ courier/module.esmtp/Makefile.in
+@@ -870,17 +870,11 @@ install-data-local:
+ 	test -f $(DESTDIR)$(sbindir)/courieresmtpd && exit 0; $(mkinstalldirs) $(DESTDIR)$(sbindir) || :; rm -f $(DESTDIR)$(sbindir)/courieresmtpd && $(LN_S) $(moduledir)/courieresmtpd $(DESTDIR)$(sbindir)/courieresmtpd
+ 	-$(mkinstalldirs) $(DESTDIR)$(bindir)
+ 	test -f $(DESTDIR)$(bindir)/addcr && exit 0; rm -f $(DESTDIR)$(bindir)/addcr && $(LN_S) $(moduledir)/addcr $(DESTDIR)$(bindir)/addcr
+-	-$(mkinstalldirs) $(DESTDIR)$(sysconfdir)/esmtpacceptmailfor.dir
+-	-$(mkinstalldirs) $(DESTDIR)$(sysconfdir)/esmtppercentrelay.dir
+ 	-$(mkinstalldirs) $(DESTDIR)$(sbindir)
+ 	for f in $(databin_SCRIPTS) ; do \
+ 		rm -f $(DESTDIR)$(sbindir)/$$f ; \
+ 		$(LN_S) $(datadir)/$$f $(DESTDIR)$(sbindir)/$$f ; done
+ 	cat </dev/null >>$(DESTDIR)$(sysconfdir)/esmtpauthclient
+-	chmod 600 $(DESTDIR)$(sysconfdir)/esmtpauthclient
+-	test -w /etc || exit 0; \
+-		chown @mailuser@ $(DESTDIR)$(sysconfdir)/esmtpauthclient ; \
+-		chgrp @mailgroup@ $(DESTDIR)$(sysconfdir)/esmtpauthclient
+ 	rm -f $(DESTDIR)$(sbindir)/esmtpd-msa $(DESTDIR)$(sbindir)/makesmtpaccess-msa
+ 	$(LN_S) esmtpd $(DESTDIR)$(sbindir)/esmtpd-msa
+ 	$(LN_S) makesmtpaccess $(DESTDIR)$(sbindir)/makesmtpaccess-msa

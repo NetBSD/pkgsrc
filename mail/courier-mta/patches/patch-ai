@@ -1,35 +1,8 @@
-$NetBSD: patch-ai,v 1.3 2007/10/17 13:50:30 jlam Exp $
+$NetBSD: patch-ai,v 1.4 2008/02/19 18:45:24 jlam Exp $
 
---- courier/module.local/local.c.orig	Sun Oct  7 16:37:52 2007
+--- courier/module.local/local.c.orig	2007-10-16 22:04:01.000000000 -0400
 +++ courier/module.local/local.c
-@@ -391,8 +391,6 @@ toalias:
- 	}
- 
- not_found:
--	if (hostdomain)	free(hostdomain);
--
- 	/*
- 	** When submit is being called by the sendmail command line,
- 	** don't reject unknown addresses, instead accept them (and bounce
-@@ -407,6 +405,8 @@ not_found:
- 	{
- 		free(addr);
- 		(*delfunc)(rwi, rwi->ptr, rwi->ptr);
-+		if (hostdomain)	free(hostdomain);
-+
- 		return;
- 	}
- 
-@@ -420,6 +420,8 @@ not_found:
- 		snprintf(buf, 255, "User <%s> unknown",
- 			 orig_addr ? orig_addr:"");
- 		free(addr);
-+		if (hostdomain)	free(hostdomain);
-+
- 		if (orig_addr)
- 			free(orig_addr);
- 		(*rwi->err_func)(550, buf, rwi);
-@@ -745,6 +747,8 @@ const char *quota;
+@@ -747,6 +747,8 @@ const char *quota;
  					strlen(argv[7])), "SENDER="),
  					argv[7]));
  
