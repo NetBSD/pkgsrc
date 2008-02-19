@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.47 2007/10/24 07:46:37 joerg Exp $
+# $NetBSD: Makefile,v 1.48 2008/02/19 18:45:28 jlam Exp $
 
 DISTNAME=	maildrop-2.0.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.courier-mta.org/maildrop/
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	courier-maildir>=0.53.1:../../mail/courier-maildir
+DEPENDS+=	courier-maildir>=0.58.0:../../mail/courier-maildir
 
 USE_TOOLS+=		gmake perl
 USE_TOOLS+=		cat:run		# used by makedat(1)
@@ -35,12 +35,15 @@ CONFIGURE_ARGS+=	--libexecdir=${LIBEXECDIR:Q}
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-makedatprog=${LIBEXECDIR:Q}/makedatprog
 CONFIGURE_ARGS+=	--enable-maildirquota
-CONFIGURE_ARGS+=	--enable-maildrop-uid=${ROOT_USER:Q}
+CONFIGURE_ARGS+=	--enable-maildrop-uid=${REAL_ROOT_USER:Q}
 CONFIGURE_ARGS+=	--enable-maildrop-gid=${COURIER_GROUP:Q}
 CONFIGURE_ARGS+=	--enable-trusted-users=${MAILDROP_TRUSTED_USERS:Q}
 CONFIGURE_ARGS+=	--enable-trusted-groups=${COURIER_GROUP:Q}
 CONFIGURE_ARGS+=	--enable-syslog=1
 
+###
+### Support using courier-authlib to look up mail account information.
+###
 .if !empty(PKG_OPTIONS:Mauthlib)
 CONFIGURE_ARGS+=	--enable-authlib
 .  include "../../security/courier-authlib/buildlink3.mk"
