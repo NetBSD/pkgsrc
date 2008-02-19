@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2008/02/19 13:53:04 xtraeme Exp $
+
+--- src/addins/MonoDevelop.SourceEditor/MonoDevelop.SourceEditor.Gui/SourceEditorWidget.cs.orig	2008-02-19 13:55:36.000000000 +0100
++++ src/addins/MonoDevelop.SourceEditor/MonoDevelop.SourceEditor.Gui/SourceEditorWidget.cs	2008-02-19 13:55:51.000000000 +0100
+@@ -205,7 +205,6 @@
+ 			{
+ 				PrintConfig config = PrintConfig.Default ();
+ 				SourcePrintJob sourcePrintJob = new SourcePrintJob (config, Buffer);
+-				sourcePrintJob.upFromView = View;
+ 				sourcePrintJob.PrintHeader = true;
+ 				sourcePrintJob.PrintFooter = true;
+ 				sourcePrintJob.SetHeaderFormat (GettextCatalog.GetString ("File:") +  " " +
