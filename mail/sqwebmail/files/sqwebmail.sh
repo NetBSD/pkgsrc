@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: sqwebmail.sh,v 1.10 2007/09/22 04:42:04 jlam Exp $
+# $NetBSD: sqwebmail.sh,v 1.11 2008/02/19 18:45:32 jlam Exp $
 #
 # Courier SqWebMail services daemon
 #
@@ -43,6 +43,8 @@ sqwebmail_prestart()
 			@ROOT_USER@ @COURIER_GROUP@ 0750
 	mkdir_perms @SQWEBMAIL_CALENDARDIR@/localcache \
 			@ROOT_USER@ @COURIER_GROUP@ 0750
+	mkdir_perms @COURIER_STATEDIR@/tmp \
+			@COURIER_USER@ @COURIER_GROUP@ 0770
 }
 
 sqwebmail_doit()
