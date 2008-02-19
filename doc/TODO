@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7063 2008/02/19 15:57:55 obache Exp $
+$NetBSD: TODO,v 1.7064 2008/02/19 18:46:37 jlam Exp $
 
 Suggested new packages
 ======================
@@ -508,7 +508,6 @@ Suggested package updates
 	o control-center-2.20.1
 	o cook-2.30
 	o colorize-0.3.4
-	o courier-0.58.0
 	o cpio-2.9
 	o cpmtools-2.6
 	o cppunit-1.12.0
