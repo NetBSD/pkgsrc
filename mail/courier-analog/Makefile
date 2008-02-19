@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/10/31 14:22:55 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/19 18:45:09 jlam Exp $
 
 DISTNAME=	courier-analog-0.15
 CATEGORIES=	mail
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jlam@pkgsrc.org
 HOMEPAGE=	http://www.courier-mta.org/
 COMMENT=	Courier log analyzer
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 
