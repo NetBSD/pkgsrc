@@ -1,0 +1,13 @@
+$NetBSD: patch-au,v 1.1 2008/02/19 09:11:43 xtraeme Exp $
+
+--- avidemux/ADM_osSupport/ADM_crashdump.cpp.orig	2008-02-19 09:47:11.000000000 +0100
++++ avidemux/ADM_osSupport/ADM_crashdump.cpp	2008-02-19 09:48:44.000000000 +0100
+@@ -45,7 +45,7 @@
+ extern char *ADM_getBaseDir(void);
+ extern void A_parseECMAScript(const char *name);
+ 
+-#ifdef __APPLE__
++#if defined(__APPLE__) || defined(__NetBSD__)
+ void installSigHandler() {}
+ 
+ void ADM_backTrack(int lineno,const char *file)

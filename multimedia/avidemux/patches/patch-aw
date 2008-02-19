@@ -1,0 +1,13 @@
+$NetBSD: patch-aw,v 1.1 2008/02/19 09:11:43 xtraeme Exp $
+
+--- avidemux/ADM_audiodevice/ADM_deviceSDL.cpp.orig	2008-02-19 09:23:10.000000000 +0100
++++ avidemux/ADM_audiodevice/ADM_deviceSDL.cpp	2008-02-19 09:23:28.000000000 +0100
+@@ -23,7 +23,7 @@
+ #include "fourcc.h" 
+  
+ #ifdef USE_SDL
+-#include "SDL.h"
++#include <SDL/SDL.h>
+ 
+ 
+ #include "ADM_toolkit/toolkit.hxx"
