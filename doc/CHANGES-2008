@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.319 2008/02/19 13:51:03 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.320 2008/02/19 13:54:21 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -544,3 +544,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/mono-addins to 0.3.1 [xtraeme 2008-02-19]
 	Updated x11/gtk2-sharp to 2.10.3 [xtraeme 2008-02-19]
 	Added x11/gnome-sharp version 2.16.1 [xtraeme 2008-02-19]
+	Updated x11/gtksourceview-sharp to 2.0-0.11 [xtraeme 2008-02-19]
+	Updated devel/monodevelop to 0.19 [xtraeme 2008-02-09]
