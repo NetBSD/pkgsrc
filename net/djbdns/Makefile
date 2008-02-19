@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2008/02/19 13:59:05 schmonz Exp $
+# $NetBSD: Makefile,v 1.55 2008/02/19 21:12:06 schmonz Exp $
 
 DISTNAME=		djbdns-1.05
 PKGREVISION=		7
@@ -9,6 +9,7 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${MANPAGES}
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://cr.yp.to/djbdns.html
 COMMENT=		Collection of secure and reliable DNS tools
+#LICENSE=		public-domain
 
 MANPAGES=		${DISTNAME}-man-20031023.tar.gz
 SITES.${MANPAGES}=	http://smarden.org/pape/djb/manpages/
