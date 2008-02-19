@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2007/10/09 13:11:28 rillig Exp $
+# $NetBSD: Makefile,v 1.19.4.1 2008/02/19 11:30:41 ghen Exp $
 #
 
 DISTNAME=		RealPlayer10GOLD
 # Exact version obtained from  the output of
 #   file RealPlayer10GOLD.rpm
-PKGNAME=		RealPlayerGold-10.0.8.805.20060718
-PKGREVISION=		2
+PKGNAME=		RealPlayerGold-10.0.9.809.20070726
 CATEGORIES=		multimedia
 MASTER_SITES=		http://forms.real.com/real/player/download.html?f=unix/
 EXTRACT_SUFX=		.rpm
