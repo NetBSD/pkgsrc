@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2008/01/20 20:11:09 jschauma Exp $
+# $NetBSD: Makefile,v 1.52 2008/02/19 13:45:18 obache Exp $
 #
 
 DISTNAME=		tor-0.1.2.19
@@ -40,9 +40,7 @@ USER_GROUP=		${TOR_USER} ${TOR_GROUP}
 OWN_DIRS_PERMS+=	${PKG_HOME} ${USER_GROUP} 0700
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-.if !empty(BUILDLINK_PREFIX.libevent)
 CONFIGURE_ARGS+=	--with-libevent-dir=${BUILDLINK_PREFIX.libevent:Q}
-.endif
 
 CONF_FILES+=		${PREFIX}/share/examples/tor/tor-tsocks.conf 	\
 				${PKG_SYSCONFDIR}/tor-tsocks.conf
