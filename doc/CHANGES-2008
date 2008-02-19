@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.325 2008/02/19 22:15:48 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.326 2008/02/19 23:33:45 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -555,3 +555,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/couriertcpd to 0.58.0 [jlam 2008-02-19]
 	Updated mail/turba to 2.1.7 [adrianp 2008-02-19]
 	Updated mail/getmail to 4.8.0 [schmonz 2008-02-19]
+	Updated lang/guile to 1.8.4 [gdt 2008-02-19]
