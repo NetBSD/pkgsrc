@@ -1,12 +1,28 @@
-$NetBSD: patch-ak,v 1.2 2007/10/15 15:37:21 jlam Exp $
+$NetBSD: patch-ak,v 1.3 2008/02/19 18:45:14 jlam Exp $
 
---- imap/mkimapdcert.in.orig	Sun Jul  1 15:54:59 2007
+--- imap/mkimapdcert.in.orig	2007-11-04 15:50:15.000000000 -0500
 +++ imap/mkimapdcert.in
-@@ -30,7 +30,6 @@ cleanup() {
- 	exit 1
- }
+@@ -9,7 +9,13 @@
+ # IMAP over SSL.  Normally this script would get called by an automatic
+ # package installation routine.
  
--cd @mydatadir@
- dd if=@RANDOMV@ of=@mydatadir@/imapd.rand count=1 2>/dev/null
- @OPENSSL@ req -new -x509 -days 365 -nodes \
- 	-config @sysconfdir@/imapd.cnf -out @mydatadir@/imapd.pem -keyout @mydatadir@/imapd.pem || cleanup
+-if test "@ssllib@" = "openssl"
++case "$1" in
++gnutls)		ssllib=gnutls ;;
++openssl)	ssllib=openssl ;;
++*)		ssllib="@ssllib@" ;;
++esac
++
++if test "$ssllib" = "openssl"
+ then
+ 	test -x @OPENSSL@ || exit 0
+ else
+@@ -36,7 +42,7 @@ cleanup() {
+ 
+ cd @mydatadir@
+ 
+-if test "@ssllib@" = "openssl"
++if test "$ssllib" = "openssl"
+ then
+ 	cp /dev/null @mydatadir@/imapd.pem
+ 	chmod 600 @mydatadir@/imapd.pem
