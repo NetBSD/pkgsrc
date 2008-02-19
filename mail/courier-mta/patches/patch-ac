@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.4 2007/10/15 15:37:14 jlam Exp $
+$NetBSD: patch-ac,v 1.5 2008/02/19 18:45:24 jlam Exp $
 
---- courier/doc/Makefile.in.orig	Sun Jul 22 01:32:34 2007
+--- courier/doc/Makefile.in.orig	2007-11-17 19:48:53.000000000 -0500
 +++ courier/doc/Makefile.in
 @@ -151,7 +151,7 @@ top_srcdir = @top_srcdir@
  version = @version@
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.4 2007/10/15 15:37:14 jlam Exp $
  		draft-varshavchik-exdata-smtpext.txt \
  		draft-varshavchik-verp-smtpext.txt \
  		draft-varshavchik-security-smtpext.txt \
-@@ -189,66 +189,39 @@ htmlin = \
+@@ -189,66 +189,38 @@ htmlin = \
  		courier.html \
  		courierldapaliasd.html \
  		couriermlm.html \
@@ -74,11 +74,11 @@ $NetBSD: patch-ac,v 1.4 2007/10/15 15:37:14 jlam Exp $
 +	dot-forward.1 webmlmd.1
  
 -man8 = aliaslookup.8 courier.8 courierldapaliasd.8 courierpop3d.8 \
+-	deliverquota.8 \
 +man5 = dot-courier.5
 +man7 = localmailfilter.7
 +
 +man8 = aliaslookup.8 courier.8 courierldapaliasd.8 \
- 	deliverquota.8 \
  	esmtpd.8 makeacceptmailfor.8 makehosteddomains.8\
 -	mkesmtpdcert.8 mkimapdcert.8 mkpop3dcert.8 \
 +	mkesmtpdcert.8 \
@@ -88,7 +88,7 @@ $NetBSD: patch-ac,v 1.4 2007/10/15 15:37:14 jlam Exp $
  
  BUILT_SOURCES = \
  	aliaslookup.html aliaslookup.8 \
-@@ -275,7 +248,7 @@ BUILT_SOURCES = \
+@@ -275,7 +247,7 @@ BUILT_SOURCES = \
  	webmlmd.html.in webmlmd.1.in
  
  EXTRA_DIST = $(nohtmlin) $(BUILT_SOURCES)
@@ -97,7 +97,7 @@ $NetBSD: patch-ac,v 1.4 2007/10/15 15:37:14 jlam Exp $
  	$(man1dir)/rmail.1 $(man1dir)/dotforward.1 \
  	$(man8dir)/makesmtpaccess-msa.8 \
  	$(man8dir)/esmtpd-msa.8
-@@ -1156,8 +1129,7 @@ preline.1: preline.1.in
+@@ -1156,8 +1128,7 @@ preline.1: preline.1.in
  
  install-man-extra:
  	cd $(DESTDIR)$(man8dir) ; \
