@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/02/19 13:53:04 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/02/19 14:09:12 xtraeme Exp $
 bin/mdtool
 bin/monodevelop
 lib/monodevelop/AddIns/AspNetAddIn/MonoDevelop.AspNet.dll
@@ -108,7 +108,6 @@ share/locale/tr/LC_MESSAGES/monodevelop.mo
 share/locale/zh_CN/LC_MESSAGES/monodevelop.mo
 share/locale/zh_TW/LC_MESSAGES/monodevelop.mo
 share/mime/packages/monodevelop.xml
-@dirrm share/mime/packages
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/monodevelop/data/resources/css
 @dirrm lib/monodevelop/data/resources
