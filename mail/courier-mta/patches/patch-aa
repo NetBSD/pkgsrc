@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2007/10/15 15:37:14 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2008/02/19 18:45:24 jlam Exp $
 
---- courier/Makefile.in.orig	Sat Sep 29 14:57:58 2007
+--- courier/Makefile.in.orig	2007-11-23 22:26:43.000000000 -0500
 +++ courier/Makefile.in
 @@ -46,16 +46,16 @@ build_triplet = @build@
  host_triplet = @host@
@@ -84,7 +84,13 @@ $NetBSD: patch-aa,v 1.4 2007/10/15 15:37:14 jlam Exp $
  sort.h:
  	echo '#define SORT "$(SORT)"' >sort.h
  
-@@ -1834,33 +1837,16 @@ install-exec-hook:
+@@ -1828,39 +1831,21 @@ dist-hook:
+ 
+ install-exec-hook:
+ 	for d in $(bindir) $(sbindir) $(libexecdir) $(libexecdir)/courier \
+-		$(sysconfdir)/filters \
+ 		$(localstatedir) $(localstatedir)/tmp\
+ 		$(webmaildir)\
  		$(localstatedir)/track\
  		$(localstatedir)/msgs $(localstatedir)/msgq ; do \
  			$(mkinstalldirs) $(DESTDIR)$$d || :; done
@@ -120,7 +126,7 @@ $NetBSD: patch-aa,v 1.4 2007/10/15 15:37:14 jlam Exp $
  	test -f $(DESTDIR)$(sysconfdir)/enablefiltering && exit 0; \
  		echo esmtp >$(DESTDIR)$(sysconfdir)/enablefiltering
  	test -f $(DESTDIR)$(sysconfdir)/aliases/system && exit 0; \
-@@ -1872,10 +1858,6 @@ install-data-hook:
+@@ -1872,10 +1857,6 @@ install-data-hook:
  	rm -f $(DESTDIR)$(bindir)/rmail
  	$(LN_S) sendmail $(DESTDIR)$(bindir)/rmail
  	-$(mkinstalldirs) $(DESTDIR)@mandir@/man8
