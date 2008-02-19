@@ -1,4 +1,4 @@
-# $NetBSD: bsd.wrapper.mk,v 1.75 2007/11/28 14:45:22 rillig Exp $
+# $NetBSD: bsd.wrapper.mk,v 1.76 2008/02/19 17:36:51 tnn Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -347,6 +347,10 @@ _WRAP_CACHE_BODY.CC=	${WRAPPER_TMPDIR}/cache-body-aix-cc
 _WRAP_TRANSFORM.CC=	${WRAPPER_TMPDIR}/transform-aix-cc
 _WRAP_CACHE_BODY.CXX=	${_WRAP_CACHE_BODY.CC}
 _WRAP_TRANSFORM.CXX=	${_WRAP_TRANSFORM.CC}
+.elif ${OPSYS} == "IRIX"
+_WRAP_CMD_SINK.CC=	${WRAPPER_TMPDIR}/cmd-sink-irix-cc
+_WRAP_CMD_SINK.CXX=	${_WRAP_CMD_SINK.CC}
+_WRAP_CMD_SINK.LD=	${WRAPPER_TMPDIR}/cmd-sink-irix-ld
 .endif
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
@@ -497,6 +501,8 @@ generate-wrappers: ${_target_}
 	cmd-sink-darwin-xlc \
 	cmd-sink-icc-cc \
 	cmd-sink-icc81-cc \
+	cmd-sink-irix-cc \
+	cmd-sink-irix-ld \
 	cmd-sink-interix-gcc \
 	cmd-sink-ld \
 	cmd-sink-osf1-cc \
