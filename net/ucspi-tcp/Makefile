@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/02/19 13:59:05 schmonz Exp $
+# $NetBSD: Makefile,v 1.34 2008/02/19 21:12:06 schmonz Exp $
 
 DISTNAME=		ucspi-tcp-0.88
 PKGREVISION=		2
@@ -9,6 +9,7 @@ DISTFILES=		${DISTNAME}.tar.gz ${MANPAGES}
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://cr.yp.to/ucspi-tcp.html
 COMMENT=		Command-line tools for building TCP client-server applications
+#LICENSE=		public-domain
 
 MANPAGES=		${DISTNAME}-man-20020317.tar.gz
 SITES.${MANPAGES}=	http://smarden.org/pape/djb/manpages/
