@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7058 2008/02/19 09:12:37 xtraeme Exp $
+$NetBSD: TODO,v 1.7059 2008/02/19 10:35:15 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -643,7 +643,6 @@ Suggested package updates
 	o gdsreader-0.3.2
 	o geany-0.13
 	o generator-cbiere-0.35r3
-	o getmail-4.7.8
 	o gettext-0.17
 	o gfract-0.33
 	o ggiterm-0.7.1
@@ -1163,7 +1162,6 @@ Suggested package updates
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
-	o py-html2text-2.29
 	o py-imagingtk-1.1.6
 	o py-kenosis-0.96
 	o py-libxml2-2.6.31
@@ -1229,7 +1227,6 @@ Suggested package updates
 	o roxirc-2.0
 	o rp-l2tp-0.4
 	o rpm-5.0.2
-	o rss2email-2.61
 	o rt3-3.6.6
 	o rtcw-1.41.3
 	o rtorrent-0.8.0
