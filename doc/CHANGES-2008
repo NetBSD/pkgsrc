@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.314 2008/02/19 09:12:37 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.315 2008/02/19 10:35:15 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -536,3 +536,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/highlight version 2.6.8 [rh 2008-02-19]
 	Updated games/cgoban-java to 3.3.22 [rh 2008-02-19]
 	Updated multimedia/avidemux to 2.4.1 [xtraeme 2008-02-19]
+	Updated textproc/py-html2text to 2.29 [schmonz 2008-02-19]
+	Updated mail/rss2email to 2.62 [schmonz 2008-02-19]
+	Updated mail/getmail to 4.7.8 [schmonz 2008-02-19]
