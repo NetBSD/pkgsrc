@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2007/11/08 19:39:43 joerg Exp $
+# $NetBSD: Makefile,v 1.63 2008/02/19 18:45:32 jlam Exp $
 
 DISTNAME=	sqwebmail-5.2.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	mail www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -10,8 +10,10 @@ MAINTAINER=	jlam@pkgsrc.org
 COMMENT=	Webmail CGI for access to maildir-style mailboxes
 HOMEPAGE=	http://www.courier-mta.org/sqwebmail/
 
-DEPENDS+=	courier-maildir>=0.57.1:../../mail/courier-maildir
-DEPENDS+=	maildrop>=2.0.4nb2:../../mail/maildrop
+DEPENDS+=	courier-maildir>=0.58.0:../../mail/courier-maildir
+DEPENDS+=	maildrop>=2.0.4nb3:../../mail/maildrop
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		env gmake gzip:run perl:run
 USE_LANGUAGES=		c c++
@@ -40,7 +42,7 @@ BUILD_DEFS+=		SQWEBMAIL_IMAGEURL
 FILES_SUBST+=		SQWEBMAIL_STATEDIR=${SQWEBMAIL_STATEDIR:Q}
 FILES_SUBST+=		SQWEBMAIL_CACHEDIR=${SQWEBMAIL_CACHEDIR:Q}
 FILES_SUBST+=		SQWEBMAIL_CALENDARDIR=${SQWEBMAIL_CALENDARDIR:Q}
-FILES_SUBST+=		ROOT_USER=${ROOT_USER:Q}
+FILES_SUBST+=		ROOT_USER=${REAL_ROOT_USER:Q}
 MESSAGE_SUBST+=		IMAGEDIR=${SQWEBMAIL_IMAGEDIR}
 MESSAGE_SUBST+=		IMAGEURL=${SQWEBMAIL_IMAGEURL}
 
@@ -61,7 +63,7 @@ CONFIGURE_ARGS+=	--enable-imagedir=${SQWEBMAIL_IMAGEDIR:Q}
 CONFIGURE_ARGS+=	--enable-imageurl=${SQWEBMAIL_IMAGEURL:Q}
 CONFIGURE_ARGS+=	--enable-mimetypes=${MIME_TYPES:Q}
 CONFIGURE_ARGS+=	--with-cachedir=${SQWEBMAIL_CACHEDIR:Q}
-CONFIGURE_ARGS+=	--with-cacheowner=${ROOT_USER:Q}
+CONFIGURE_ARGS+=	--with-cacheowner=${REAL_ROOT_USER:Q}
 CONFIGURE_ARGS+=	--with-calendardir=${SQWEBMAIL_CALENDARDIR:Q}
 CONFIGURE_ARGS+=	--with-ispell="${PREFIX}/bin/ispell"
 CONFIGURE_ARGS+=	--with-mailer="${SENDMAIL} -oi -t"
@@ -116,26 +118,35 @@ post-build:
 # the webmail directory, so fix it back to the right value.
 #
 fix-perms:
-	${CHMOD} 0700 ${LIBEXECDIR}/webmail
+	${CHMOD} 0700 ${DESTDIR}${LIBEXECDIR}/webmail
 
 post-install: fix-perms
-	${LN} -s ${PREFIX}/share/courier/sqwebmail/webgpg ${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC}/gpglib/mimegpg ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/gpglib/mimegpg.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/gpglib/mimegpg.html ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKDIR}/calendarmode ${EGDIR}
+	${LN} -fs ${PREFIX}/share/courier/sqwebmail/webgpg		\
+		${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/gpglib/mimegpg			\
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/gpglib/mimegpg.1			\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/gpglib/mimegpg.html			\
+		${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKDIR}/calendarmode				\
+		${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/sqwebmail/sqwebmail.pamconf		\
-		${EGDIR}/webmail.authpam
-	${INSTALL_DATA_DIR} ${DOCDIR}/sqwebmail
+		${DESTDIR}${EGDIR}/webmail.authpam
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}/sqwebmail
 	${INSTALL_DATA} ${WRKSRC}/README.logindomainlist.html		\
-		${DOCDIR}/sqwebmail
-	${INSTALL_DATA} ${WRKSRC}/INSTALL.html ${DOCDIR}/sqwebmail
+		${DESTDIR}${DOCDIR}/sqwebmail
+	${INSTALL_DATA} ${WRKSRC}/INSTALL.html				\
+		${DESTDIR}${DOCDIR}/sqwebmail
 	${INSTALL_DATA} ${WRKSRC}/gpglib/README.html			\
-		${DOCDIR}/sqwebmail/README.gpg.html
+		${DESTDIR}${DOCDIR}/sqwebmail/README.gpg.html
 	${INSTALL_DATA} ${WRKSRC}/pcp/README.html			\
-		${DOCDIR}/pcp_README.html
-	${INSTALL_DATA} ${WRKSRC}/sqwebmail/BUGS.html ${DOCDIR}/sqwebmail
-	${INSTALL_DATA} ${WRKSRC}/sqwebmail/SECURITY.html ${DOCDIR}/sqwebmail
+		${DESTDIR}${DOCDIR}/pcp_README.html
+	${INSTALL_DATA} ${WRKSRC}/sqwebmail/BUGS.html			\
+		${DESTDIR}${DOCDIR}/sqwebmail
+	${INSTALL_DATA} ${WRKSRC}/sqwebmail/SECURITY.html		\
+		${DESTDIR}${DOCDIR}/sqwebmail
 
 .include "../../mk/bsd.pkg.mk"
