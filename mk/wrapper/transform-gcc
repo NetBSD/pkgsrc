@@ -1,4 +1,4 @@
-# $NetBSD: transform-gcc,v 1.18 2007/10/17 07:30:10 is Exp $
+# $NetBSD: transform-gcc,v 1.19 2008/02/19 16:50:11 tnn Exp $
 #
 # This file handles the transformations needed for gcc that can be done
 # looking at only one argument at a time.
@@ -47,6 +47,7 @@ case $arg in
 -M[DFMPT]		|\
 -m64			|\
 -MMD			|\
+-mabi=*			|\
 -march=*		|\
 -mcpu=*			|\
 -mieee-fp		|\
