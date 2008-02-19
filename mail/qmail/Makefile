@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2007/06/15 18:15:19 jlam Exp $
+# $NetBSD: Makefile,v 1.56 2008/02/19 13:59:05 schmonz Exp $
 #
 
 DISTNAME=		netqmail-1.05
@@ -30,8 +30,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS+=		nroff
 
 DJB_BUILD_TARGETS=	man
-
-DJB_RESTRICTED=		YES
+DJB_RESTRICTED=		no
 
 MAKE_DIRS+=		${PKG_SYSCONFDIR} ${PKG_SYSCONFDIR}/alias
 MAKE_DIRS+=		${PKG_SYSCONFDIR}/control ${PKG_SYSCONFDIR}/users
