@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2008/01/09 22:13:12 taca Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/19 14:12:47 taca Exp $
 # FreeBSD: ports/www/plone/Makefile,v 1.25 2007/02/17 08:32:54 rafan Exp
 #
 
 DISTNAME=	Plone-${PLONE3_VERSION}
 PKGNAME=	${PLONE_PKG_PREFIX}-${PLONE3_VERSION}
 CATEGORIES=	www python
-MASTER_SITES=	http://launchpad.net/plone/3.0/3.0.5/+download/
+MASTER_SITES=	http://launchpad.net/plone/3.0/3.0.6/+download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://plone.org/
@@ -40,8 +40,8 @@ post-build:
 	cd ${WRKSRC}/Products; \
 		${FIND} ${PLONE_PODIRS} -xdev -type f -name '*.po' -print | \
 		while read f; do \
-			mo=`${ECHO} $$f | ${SED} -e 's|\.po$$|.mo|'`; \
-			msgfmt -o $$mo $$f; \
+			mo=`${ECHO} $$f | ${SED} -e 's|\\.po$$|.mo|'`; \
+			${TEST} -f $$mo || msgfmt -o $$mo $$f; \
 			${ECHO} "${PLONE_BASE}/$$mo" >> ${WRKDIR}/PLIST; \
 		done
 	${CAT} ${PKGDIR}/PLIST.common_end >> ${WRKDIR}/PLIST
