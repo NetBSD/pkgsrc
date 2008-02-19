@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/08/03 18:22:17 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/02/19 13:47:37 xtraeme Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GTK_SHARP_BUILDLINK3_MK:=	${GTK_SHARP_BUILDLINK3_MK}+
@@ -12,8 +12,8 @@ BUILDLINK_PACKAGES+=	gtk-sharp
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gtk-sharp
 
 .if ${GTK_SHARP_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.gtk-sharp+=	gtk-sharp>=2.8.2
-BUILDLINK_PKGSRCDIR.gtk-sharp?=	../../x11/gtk2-sharp
+BUILDLINK_API_DEPENDS.gtk-sharp+=	gtk-sharp>=2.10.3
+BUILDLINK_PKGSRCDIR.gtk-sharp?=		../../x11/gtk2-sharp
 .endif	# GTK_SHARP_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
