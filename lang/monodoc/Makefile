@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2008/02/13 14:41:30 kefren Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/19 09:59:33 xtraeme Exp $
 
 DISTNAME=	monodoc-${MONO_VERSION}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://go-mono.com/sources/monodoc/
 EXTRACT_SUFX=	.zip
@@ -17,6 +18,5 @@ GNU_CONFIGURE=		yes
 
 MAKE_JOBS_SAFE=		no
 
-.include "../../x11/gtk2-sharp/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
