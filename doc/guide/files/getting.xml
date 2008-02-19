@@ -1,4 +1,4 @@
-<!-- $NetBSD: getting.xml,v 1.22 2008/02/18 23:57:53 weinem Exp $ -->
+<!-- $NetBSD: getting.xml,v 1.23 2008/02/19 00:58:07 weinem Exp $ -->
 
 <chapter id="getting">
 <title>Where to get pkgsrc and how to keep it up-to-date</title>
@@ -85,8 +85,9 @@ release=pkgsrc
 	in it, see the examples in
 	<filename>/usr/share/examples/supfiles</filename>, and that the
 	<filename>/usr/pkgsrc</filename> directory exists. Then, simply
-	run <command>sup -v
-	<replaceable>/path/to/your/supfile</replaceable></command>.</para>
+	run:</para>
+
+<screen>&uprompt; <userinput>sup -v <replaceable>/path/to/your/supfile</replaceable></userinput>.</screen>
 
 </sect2>
 <sect2 id="getting-via-cvs">
@@ -96,21 +97,19 @@ release=pkgsrc
 	have to set some environment variables. For the C-Shell,
 	type:</para>
 
-<screen>
-    &cprompt; <userinput>setenv CVSROOT anoncvs@anoncvs.NetBSD.org:/cvsroot</userinput>
-    &cprompt; <userinput>setenv CVS_RSH ssh</userinput>
+<screen>&cprompt; <userinput>setenv CVSROOT anoncvs@anoncvs.NetBSD.org:/cvsroot</userinput>
+&cprompt; <userinput>setenv CVS_RSH ssh</userinput>
 </screen>
 
 	<para>Or, the same for the bourne shell:</para>
 
-<screen>
-    &uprompt; <userinput>export CVSROOT="anoncvs@anoncvs.NetBSD.org:/cvsroot"</userinput>
-    &uprompt; <userinput>export CVS_RSH="ssh"</userinput>
+<screen>&uprompt; <userinput>export CVSROOT="anoncvs@anoncvs.NetBSD.org:/cvsroot"</userinput>
+&uprompt; <userinput>export CVS_RSH="ssh"</userinput>
 </screen>
 
-	<para>By default, cvs doesn't do things like most people would
+	<para>By default, CVS doesn't do things like most people would
 	expect it to do. But there is a
-	way to convince cvs, by creating a file called
+	way to convince CVS, by creating a file called
 	<filename>.cvsrc</filename> in your home directory and saving
 	the following lines to it. This file will save you lots of
 	headache and some bug reports, so we strongly recommend it. You
@@ -131,7 +130,7 @@ rdiff -u
 <para>To fetch a specific pkgsrc stable branch from scratch, run:</para>
 
 <screen>&uprompt; <userinput>cd /usr</userinput>
-	&uprompt; <userinput>cvs checkout -r <replaceable>pkgsrc-200xQy</replaceable> -P pkgsrc</userinput></screen>
+&uprompt; <userinput>cvs checkout -r <replaceable>pkgsrc-200xQy</replaceable> -P pkgsrc</userinput></screen>
 
 	<para>Where <replaceable>pkgsrc-200xQy</replaceable> is the stable 
 	branch to be checked out, for example, <quote>pkgsrc-2007Q4</quote></para>
@@ -143,7 +142,7 @@ rdiff -u
 <para>To fetch the pkgsrc current branch, run:</para>
 
 <screen>&uprompt; <userinput>cd /usr</userinput>
-&uprompt; <userinput>cvs checkout -r -P pkgsrc</userinput></screen>
+&uprompt; <userinput>cvs checkout -P pkgsrc</userinput></screen>
 
 </sect2>
 </sect1>
@@ -185,9 +184,10 @@ rdiff -u
 
 	<para>To update pkgsrc via CVS, make sure the environment
 	variable <varname>CVS_RSH</varname> is set as above. Then,
-	change to the pkgsrc directory and run:</para>
+	change to the <filename>pkgsrc</filename> directory and run cvs:</para>
 
-<screen>&uprompt; <userinput>cvs update -dP</userinput></screen>
+<screen>&uprompt; <userinput>cd /usr/pkgsrc</userinput>
+&uprompt; <userinput>cvs update -dP</userinput></screen>
 
 <sect3 id="uptodate-cvs-switch">
 <title>Switching between different pkgsrc branches</title>
@@ -198,7 +198,7 @@ rdiff -u
 	by adding the option <quote>-A</quote> after the
 	<quote>update</quote> keyword. To switch from the current branch
 	back to the stable branch, add the
-	<quote>-rpkgsrc-2007Q1</quote> option.</para>
+	<quote>-rpkgsrc-2007Q4</quote> option.</para>
 
 </sect3>
 <sect3 id="uptodate-cvs-changes">
