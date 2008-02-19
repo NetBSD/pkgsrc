@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2008/01/18 05:08:40 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2008/02/19 18:45:41 jlam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/tcpd-/}
-PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -11,22 +10,14 @@ MAINTAINER=	jlam@pkgsrc.org
 COMMENT=	Courier TCP socket and TLS servers
 HOMEPAGE=	http://www.courier-mta.org/
 
-CONFLICTS=	courier-imap<4.11
+CONFLICTS=	courier-imap<4.1.1
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.couriertcpd
-PKG_SUPPORTED_OPTIONS=	inet6
-PKG_SUGGESTED_OPTIONS=	inet6
-
-.include "../../mk/bsd.options.mk"
-
-.if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--with-ipv6
-.else
-CONFIGURE_ARGS+=	--without-ipv6
-.endif
+.include "options.mk"
 
 .include "../../mail/courier-mta/Makefile.common"
 
@@ -60,17 +51,17 @@ MAKE_DIRS+=		${COURIER_STATEDIR}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tcpd/couriertcpd			\
-		${PREFIX}/sbin/couriertcpd
+		${DESTDIR}${PREFIX}/sbin/couriertcpd
 	${INSTALL_MAN} ${WRKSRC}/tcpd/couriertcpd.1			\
-		${PREFIX}/${PKGMANDIR}/man1/couriertcpd.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/couriertcpd.1
 	${INSTALL_DATA} ${WRKSRC}/tcpd/couriertcpd.html			\
-		${DOCDIR}/couriertcpd.html
+		${DESTDIR}${DOCDIR}/couriertcpd.html
 
 	${INSTALL_PROGRAM} ${WRKSRC}/tcpd/couriertls			\
-		${PREFIX}/bin/couriertls
+		${DESTDIR}${PREFIX}/bin/couriertls
 	${INSTALL_MAN} ${WRKSRC}/tcpd/couriertls.1			\
-		${PREFIX}/${PKGMANDIR}/man1/couriertls.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/couriertls.1
 	${INSTALL_DATA} ${WRKSRC}/tcpd/couriertls.html			\
-		${DOCDIR}/couriertls.html
+		${DESTDIR}${DOCDIR}/couriertls.html
 
 .include "../../mk/bsd.pkg.mk"
