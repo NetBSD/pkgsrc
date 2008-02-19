@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2007/01/19 00:57:03 schmonz Exp $
+# $NetBSD: Makefile,v 1.17 2008/02/19 10:33:05 schmonz Exp $
 #
 
-DISTNAME=		rss2email-2.60
+DISTNAME=		rss2email-2.62
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 EXTRACT_SUFX=		.py
@@ -14,6 +14,8 @@ DEPENDS+=		${PYPKGPREFIX}-feedparser-[0-9]*:../../textproc/py-feedparser
 DEPENDS+=		${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text
 
 WRKSRC=			${WRKDIR}
+
+USE_TOOLS+=		tr
 NO_BUILD=		yes
 PYTHON_PATCH_SCRIPTS=	*.py
 PYTHON_VERSIONS_ACCEPTED?=	24 23 22
@@ -31,7 +33,8 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-extract:
 	${_PKG_SILENT}${_PKG_DEBUG}					\
-	${CP} ${DISTDIR}/${DISTFILES:Q} ${WRKSRC}/rss2email.py;		\
+	${TR} -d '\r' < ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}		\
+		> ${WRKSRC}/rss2email.py;				\
 	cd ${FILESDIR} && cp config.py r2e r2e.1 ${WRKSRC}
 
 do-install:
