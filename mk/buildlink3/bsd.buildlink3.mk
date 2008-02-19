@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.200 2008/02/07 21:36:13 rillig Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.201 2008/02/19 11:12:51 xtraeme Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -354,7 +354,8 @@ BUILDLINK_LIBS=		# empty
 BUILDLINK_CFLAGS=	# empty
 
 .for _pkg_ in ${_BLNK_PACKAGES}
-.  if !empty(BUILDLINK_AUTO_VARS.${_pkg_}:M[yY][eE][sS])
+.  if defined(BUILDLINK_AUTO_VARS.${_pkg_}) && \
+      !empty(BUILDLINK_AUTO_VARS.${_pkg_}:M[yY][eE][sS])
 .    for _flag_ in ${BUILDLINK_CPPFLAGS.${_pkg_}}
 .      if empty(BUILDLINK_CPPFLAGS:M${_flag_:S/:/\\:/g})
 BUILDLINK_CPPFLAGS+=	${_flag_}
