@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.59 2007/12/21 17:32:24 drochner Exp $
+$NetBSD: distinfo,v 1.60 2008/02/19 10:28:12 taca Exp $
 
 SHA1 (samba-3.0.26a-CVE-2007-4572.patch) = 32b4f45558a0765b9cd96e67ac57a83cc62678ea
 RMD160 (samba-3.0.26a-CVE-2007-4572.patch) = 81afb6ce0a58cd688fc3c25c1c8a878ca1a4b7fc
@@ -12,6 +12,7 @@ Size (samba-3.0.26a.tar.gz) = 18180031 bytes
 SHA1 (samba-3.0.27a-CVE-2007-6015.patch) = 962f9b0fee584a01324c4811e223b9e978dc76a1
 RMD160 (samba-3.0.27a-CVE-2007-6015.patch) = eafff2cd721fed64098bf6eaaf47d7501d58ba21
 Size (samba-3.0.27a-CVE-2007-6015.patch) = 1739 bytes
+SHA1 (patch-aa) = 7d5de1fde89747df328c1e213d50893dffcc57bf
 SHA1 (patch-ab) = 9597f88f6e7f97da446968562b4d3ab8e9644f0f
 SHA1 (patch-ac) = 47529dfe904768e6a3076131978c89fe2d1e3619
 SHA1 (patch-ae) = a220568afcb6ae97e1000296795f852f8e92f624
