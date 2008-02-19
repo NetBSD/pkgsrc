@@ -1,0 +1,13 @@
+$NetBSD: patch-as,v 1.1 2008/02/19 09:11:43 xtraeme Exp $
+
+--- avidemux/main.cpp.orig	2008-02-19 09:54:01.000000000 +0100
++++ avidemux/main.cpp	2008-02-19 09:54:14.000000000 +0100
+@@ -53,7 +53,7 @@
+ 
+ #ifdef USE_SDL
+ extern "C" {
+-	#include "SDL.h"
++	#include <SDL/SDL.h>
+ }
+ 
+ #include "ADM_userInterfaces/ADM_commonUI/GUI_sdlRender.h"

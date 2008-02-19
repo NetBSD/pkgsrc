@@ -1,0 +1,46 @@
+$NetBSD: patch-ax,v 1.1 2008/02/19 09:11:43 xtraeme Exp $
+
+--- avidemux/ADM_videoFilter/ADM_vidParticle.cpp.orig	2008-02-19 09:16:00.000000000 +0100
++++ avidemux/ADM_videoFilter/ADM_vidParticle.cpp	2008-02-19 09:21:40.000000000 +0100
+@@ -797,8 +797,13 @@
+ 
+     if (my_outImage)
+     {
++#ifdef __NetBSD__
++	uint32_t px = static_cast <uint32_t> (rintf (my_particle.centroidX));
++	uint32_t py = static_cast <uint32_t> (rintf (my_particle.centroidY));
++#else
+         uint32_t px = static_cast <uint32_t> (nearbyintf (my_particle.centroidX));
+         uint32_t py = static_cast <uint32_t> (nearbyintf (my_particle.centroidY));
++#endif
+         if (validPixel (px, py))
+             outPixel (px, py) = 255;
+         else
+@@ -1157,8 +1162,13 @@
+ char & pixel_char (vector <string> & grid, int16_t xbase, int16_t ybase,
+                    float cX, float cY, float dX, float dY)
+ {
++#ifdef __NetBSD__
++    uint16_t x = static_cast <uint16_t> (rintf (cX + dX));
++    uint16_t y = static_cast <uint16_t> (rintf (cY + dY));
++#else
+     uint16_t x = static_cast <uint16_t> (nearbyintf (cX + dX));
+     uint16_t y = static_cast <uint16_t> (nearbyintf (cY + dY));
++#endif
+     return grid [y - ybase][x - xbase];
+ }
+ 
+@@ -1319,8 +1329,13 @@
+             ++plit;
+         }
+ 
++#ifdef __NetBSD__
++	uint32_t px = static_cast <uint32_t> (rintf (my_particle.centroidX));
++	uint32_t py = static_cast <uint32_t> (rintf (my_particle.centroidY));
++#else
+         uint32_t px = static_cast <uint32_t> (nearbyintf (my_particle.centroidX));
+         uint32_t py = static_cast <uint32_t> (nearbyintf (my_particle.centroidY));
++#endif
+         char & ch = grid [py - ybase][px - xbase];
+         if (ch == 'x')
+             ch = 'X';
