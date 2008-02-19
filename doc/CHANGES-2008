@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.320 2008/02/19 13:54:21 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.321 2008/02/19 14:13:45 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -546,3 +546,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added x11/gnome-sharp version 2.16.1 [xtraeme 2008-02-19]
 	Updated x11/gtksourceview-sharp to 2.0-0.11 [xtraeme 2008-02-19]
 	Updated devel/monodevelop to 0.19 [xtraeme 2008-02-09]
+	Updated www/plone3 to 3.0.6 [taca 2008-02-19]
