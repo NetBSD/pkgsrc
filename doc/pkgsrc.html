@@ -970,8 +970,8 @@ release=pkgsrc
 	in it, see the examples in
 	<code class="filename">/usr/share/examples/supfiles</code>, and that the
 	<code class="filename">/usr/pkgsrc</code> directory exists. Then, simply
-	run <span class="command"><strong>sup -v
-	<em class="replaceable"><code>/path/to/your/supfile</code></em></strong></span>.</p>
+	run:</p>
+<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>sup -v <em class="replaceable"><code>/path/to/your/supfile</code></em></code></strong>.</pre>
 </div>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
@@ -979,18 +979,16 @@ release=pkgsrc
 <p>To do an initial (full) checkout of pkgsrc, you first
 	have to set some environment variables. For the C-Shell,
 	type:</p>
-<pre class="screen">
-    <code class="prompt">%</code> <strong class="userinput"><code>setenv CVSROOT anoncvs@anoncvs.NetBSD.org:/cvsroot</code></strong>
-    <code class="prompt">%</code> <strong class="userinput"><code>setenv CVS_RSH ssh</code></strong>
+<pre class="screen"><code class="prompt">%</code> <strong class="userinput"><code>setenv CVSROOT anoncvs@anoncvs.NetBSD.org:/cvsroot</code></strong>
+<code class="prompt">%</code> <strong class="userinput"><code>setenv CVS_RSH ssh</code></strong>
 </pre>
 <p>Or, the same for the bourne shell:</p>
-<pre class="screen">
-    <code class="prompt">$</code> <strong class="userinput"><code>export CVSROOT="anoncvs@anoncvs.NetBSD.org:/cvsroot"</code></strong>
-    <code class="prompt">$</code> <strong class="userinput"><code>export CVS_RSH="ssh"</code></strong>
+<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>export CVSROOT="anoncvs@anoncvs.NetBSD.org:/cvsroot"</code></strong>
+<code class="prompt">$</code> <strong class="userinput"><code>export CVS_RSH="ssh"</code></strong>
 </pre>
-<p>By default, cvs doesn't do things like most people would
+<p>By default, CVS doesn't do things like most people would
 	expect it to do. But there is a
-	way to convince cvs, by creating a file called
+	way to convince CVS, by creating a file called
 	<code class="filename">.cvsrc</code> in your home directory and saving
 	the following lines to it. This file will save you lots of
 	headache and some bug reports, so we strongly recommend it. You
@@ -1007,7 +1005,7 @@ rdiff -u
 </pre>
 <p>To fetch a specific pkgsrc stable branch from scratch, run:</p>
 <pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>cd /usr</code></strong>
-	<code class="prompt">$</code> <strong class="userinput"><code>cvs checkout -r <em class="replaceable"><code>pkgsrc-200xQy</code></em> -P pkgsrc</code></strong></pre>
+<code class="prompt">$</code> <strong class="userinput"><code>cvs checkout -r <em class="replaceable"><code>pkgsrc-200xQy</code></em> -P pkgsrc</code></strong></pre>
 <p>Where <em class="replaceable"><code>pkgsrc-200xQy</code></em> is the stable 
 	branch to be checked out, for example, &#8220;<span class="quote">pkgsrc-2007Q4</span>&#8221;</p>
 <p>This will create the directory <code class="filename">pkgsrc/</code> 
@@ -1015,7 +1013,7 @@ rdiff -u
 	will be stored under <code class="filename">/usr/pkgsrc/</code>.</p>
 <p>To fetch the pkgsrc current branch, run:</p>
 <pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>cd /usr</code></strong>
-<code class="prompt">$</code> <strong class="userinput"><code>cvs checkout -r -P pkgsrc</code></strong></pre>
+<code class="prompt">$</code> <strong class="userinput"><code>cvs checkout -P pkgsrc</code></strong></pre>
 </div>
 </div>
 <div class="sect1" lang="en">
@@ -1054,8 +1052,9 @@ rdiff -u
 <a name="uptodate-cvs"></a>2.2.2. Via CVS</h3></div></div></div>
 <p>To update pkgsrc via CVS, make sure the environment
 	variable <code class="varname">CVS_RSH</code> is set as above. Then,
-	change to the pkgsrc directory and run:</p>
-<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>cvs update -dP</code></strong></pre>
+	change to the <code class="filename">pkgsrc</code> directory and run cvs:</p>
+<pre class="screen"><code class="prompt">$</code> <strong class="userinput"><code>cd /usr/pkgsrc</code></strong>
+<code class="prompt">$</code> <strong class="userinput"><code>cvs update -dP</code></strong></pre>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
 <a name="uptodate-cvs-switch"></a>2.2.2.1. Switching between different pkgsrc branches</h4></div></div></div>
@@ -1065,7 +1064,7 @@ rdiff -u
 	by adding the option &#8220;<span class="quote">-A</span>&#8221; after the
 	&#8220;<span class="quote">update</span>&#8221; keyword. To switch from the current branch
 	back to the stable branch, add the
-	&#8220;<span class="quote">-rpkgsrc-2007Q1</span>&#8221; option.</p>
+	&#8220;<span class="quote">-rpkgsrc-2007Q4</span>&#8221; option.</p>
 </div>
 <div class="sect3" lang="en">
 <div class="titlepage"><div><div><h4 class="title">
@@ -7474,7 +7473,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id2727789"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="id2727813"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7484,7 +7483,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id2727799"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="id2727822"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7495,7 +7494,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id2727810"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="id2727833"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -9497,7 +9496,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id2733553"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="id2733644"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9513,7 +9512,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id2733591"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="id2733683"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9531,7 +9530,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id2733632"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="id2733723"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9549,7 +9548,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id2733671"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="id2733831"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9562,7 +9561,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id2733691"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="id2733851"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9578,7 +9577,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id2733721"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="id2733881"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9602,7 +9601,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id2733866"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="id2733958"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9627,7 +9626,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id2733905"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="id2733996"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9675,7 +9674,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id2734035"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="id2734058"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
