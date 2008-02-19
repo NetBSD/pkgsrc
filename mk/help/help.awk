@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.22 2008/02/12 07:16:40 rillig Exp $
+# $NetBSD: help.awk,v 1.23 2008/02/19 22:12:00 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -43,7 +43,7 @@ function end_of_topic() {
 	for (k in keywords)
 		all_keywords[k]++;
 
-	relevant = (topic in keywords || lctopic in keywords || uctopic in keywords);
+	relevant = (topic in keywords || lctopic in keywords || uctopic in keywords || topic == ":all");
 	if (relevant && !print_index) {
 
 		if (found_anything)
@@ -132,11 +132,19 @@ NF >= 1 && !/^[\t.]/ && !/^#*$/ {
 	if (w ~ /\+=$/) {
 		# Appending to a variable is usually not a definition.
 
-	} else if (!(w == toupper(w)) || (w == tolower(w) && w ~ /:$/)) {
-		# Automatic keywords must be either upper- or lower-case.
-		# Lower-case keywords (make targets) must end with a colon.
+	} else if (w != toupper(w) && w != tolower(w)) {
+		# Words in mixed case are not taken as keywords. If you
+		# want them anyway, list them in a "Keywords:" line.
 
-	} else if (w !~ /^[A-Za-z].*[0-9A-Za-z]:?$/) {
+	} else if (w == tolower(w) && !(w ~ /:$/)) {
+		# Lower-case words (often make targets) must be followed
+		# by a colon to be recognized as keywords.
+
+	} else if (w == toupper(w) && w ~ /:$/) {
+		# Upper-case words ending with a colon are probably not
+		# make targets, so ignore them.
+
+	} else if (w !~ /^[A-Za-z].*[0-9A-Za-z](:|\?=|=)?$/) {
 		# Keywords must start with a letter and end with a letter
 		# or digit.
 
@@ -145,7 +153,7 @@ NF >= 1 && !/^[\t.]/ && !/^#*$/ {
 
 	} else {
 		sub(/^#[ \t]*/, "", w);
-		sub(/\??=.*$/, "", w);
+		sub(/(:|\?=|=)$/, "", w);
 		sub(/:$/, "", w);
 		if (w != "") {
 			keywords[w] = yes;
