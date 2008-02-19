@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/02/19 02:23:44 rh Exp $
+
+--- src/makefile.orig	2008-02-19 09:38:29.000000000 +1000
++++ src/makefile
+@@ -13,9 +13,7 @@
+ # Add -DUSE_FN_MATCH to enable better wildcard support with the --batch-recursive option.
+ # See "man 3 fnmatch" for details.
+ 
+-CXX=c++
+ 
+-CFLAGS:=-O2 ${CFLAGS}
+ 
+ # Do not strip by default (Mac OS X lazy pointer issues)
+ # Add -static to avoid linking with shared libs (can cause trouble when highlight
