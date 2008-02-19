@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/01/09 22:13:12 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/02/19 14:12:47 taca Exp $
 ${PLONE_BASE}/ATContentTypes/AUTHORS.txt
 ${PLONE_BASE}/ATContentTypes/CHANGELOG.txt
 ${PLONE_BASE}/ATContentTypes/HISTORY.txt
@@ -840,10 +840,8 @@ ${PLONE_BASE}/Archetypes/tests/test_templatemixin.py
 ${PLONE_BASE}/Archetypes/tests/test_templatemixin.pyc
 ${PLONE_BASE}/Archetypes/tests/test_unicode.py
 ${PLONE_BASE}/Archetypes/tests/test_unicode.pyc
-${PLONE_BASE}/Archetypes/tests/test_update_schema1.py
-${PLONE_BASE}/Archetypes/tests/test_update_schema1.pyc
-${PLONE_BASE}/Archetypes/tests/test_update_schema2.py
-${PLONE_BASE}/Archetypes/tests/test_update_schema2.pyc
+${PLONE_BASE}/Archetypes/tests/test_update_schema.py
+${PLONE_BASE}/Archetypes/tests/test_update_schema.pyc
 ${PLONE_BASE}/Archetypes/tests/test_utils.py
 ${PLONE_BASE}/Archetypes/tests/test_utils.pyc
 ${PLONE_BASE}/Archetypes/tests/test_utils2.py
@@ -1015,6 +1013,7 @@ ${PLONE_BASE}/CMFCore/ActionProviderBase.py
 ${PLONE_BASE}/CMFCore/ActionProviderBase.pyc
 ${PLONE_BASE}/CMFCore/ActionsTool.py
 ${PLONE_BASE}/CMFCore/ActionsTool.pyc
+${PLONE_BASE}/CMFCore/CHANGES.txt
 ${PLONE_BASE}/CMFCore/CMFBTreeFolder.py
 ${PLONE_BASE}/CMFCore/CMFBTreeFolder.pyc
 ${PLONE_BASE}/CMFCore/CMFCatalogAware.py
@@ -5514,6 +5513,7 @@ ${PLONE_BASE}/PloneTranslations/i18n/plone-ka.po
 ${PLONE_BASE}/PloneTranslations/i18n/plone-kn.po
 ${PLONE_BASE}/PloneTranslations/i18n/plone-ko.po
 ${PLONE_BASE}/PloneTranslations/i18n/plone-lt.po
+${PLONE_BASE}/PloneTranslations/i18n/plone-lv.po
 ${PLONE_BASE}/PloneTranslations/i18n/plone-manual.pot
 ${PLONE_BASE}/PloneTranslations/i18n/plone-mi.po
 ${PLONE_BASE}/PloneTranslations/i18n/plone-my.po
@@ -5644,6 +5644,7 @@ ${PLONE_BASE}/PloneTranslations/locales/ka/LC_MESSAGES/plonelocales.po
 ${PLONE_BASE}/PloneTranslations/locales/kn/LC_MESSAGES/plonelocales.po
 ${PLONE_BASE}/PloneTranslations/locales/ko/LC_MESSAGES/plonelocales.po
 ${PLONE_BASE}/PloneTranslations/locales/lt/LC_MESSAGES/plonelocales.po
+${PLONE_BASE}/PloneTranslations/locales/lv/LC_MESSAGES/plonelocales.po
 ${PLONE_BASE}/PloneTranslations/locales/mi/LC_MESSAGES/plonelocales.po
 ${PLONE_BASE}/PloneTranslations/locales/my/LC_MESSAGES/plonelocales.po
 ${PLONE_BASE}/PloneTranslations/locales/nl/LC_MESSAGES/plonefrontpage.po
@@ -7831,6 +7832,8 @@ ${ZOPE_BASE}/lib/python/plone/app/i18n/locales/browser/configure.zcml
 ${ZOPE_BASE}/lib/python/plone/app/i18n/locales/browser/languageselector.pt
 ${ZOPE_BASE}/lib/python/plone/app/i18n/locales/browser/selector.py
 ${ZOPE_BASE}/lib/python/plone/app/i18n/locales/browser/selector.pyc
+${ZOPE_BASE}/lib/python/plone/app/i18n/locales/browser/tests.py
+${ZOPE_BASE}/lib/python/plone/app/i18n/locales/browser/tests.pyc
 ${ZOPE_BASE}/lib/python/plone/app/i18n/locales/configure.zcml
 ${ZOPE_BASE}/lib/python/plone/app/i18n/locales/countries.py
 ${ZOPE_BASE}/lib/python/plone/app/i18n/locales/countries.pyc
@@ -8474,8 +8477,10 @@ ${ZOPE_BASE}/lib/python/plone/app/vocabularies/terms.py
 ${ZOPE_BASE}/lib/python/plone/app/vocabularies/terms.pyc
 ${ZOPE_BASE}/lib/python/plone/app/vocabularies/tests/__init__.py
 ${ZOPE_BASE}/lib/python/plone/app/vocabularies/tests/__init__.pyc
-${ZOPE_BASE}/lib/python/plone/app/vocabularies/tests/test_catalog.py
-${ZOPE_BASE}/lib/python/plone/app/vocabularies/tests/test_catalog.pyc
+${ZOPE_BASE}/lib/python/plone/app/vocabularies/tests/base.py
+${ZOPE_BASE}/lib/python/plone/app/vocabularies/tests/base.pyc
+${ZOPE_BASE}/lib/python/plone/app/vocabularies/tests/test_vocabularies.py
+${ZOPE_BASE}/lib/python/plone/app/vocabularies/tests/test_vocabularies.pyc
 ${ZOPE_BASE}/lib/python/plone/app/vocabularies/types.py
 ${ZOPE_BASE}/lib/python/plone/app/vocabularies/types.pyc
 ${ZOPE_BASE}/lib/python/plone/app/vocabularies/users.py
@@ -8814,6 +8819,7 @@ ${ZOPE_BASE}/lib/python/plone/i18n/locales/browser/country-flags/yt.gif
 ${ZOPE_BASE}/lib/python/plone/i18n/locales/browser/country-flags/za.gif
 ${ZOPE_BASE}/lib/python/plone/i18n/locales/browser/country-flags/zm.gif
 ${ZOPE_BASE}/lib/python/plone/i18n/locales/browser/country-flags/zw.gif
+${ZOPE_BASE}/lib/python/plone/i18n/locales/browser/language-flags/ar.gif
 ${ZOPE_BASE}/lib/python/plone/i18n/locales/browser/language-flags/cy.gif
 ${ZOPE_BASE}/lib/python/plone/i18n/locales/browser/language-flags/eo.gif
 ${ZOPE_BASE}/lib/python/plone/i18n/locales/browser/language-flags/eu.gif
@@ -8888,6 +8894,8 @@ ${ZOPE_BASE}/lib/python/plone/i18n/normalizer/ru.py
 ${ZOPE_BASE}/lib/python/plone/i18n/normalizer/ru.pyc
 ${ZOPE_BASE}/lib/python/plone/i18n/normalizer/tests/__init__.py
 ${ZOPE_BASE}/lib/python/plone/i18n/normalizer/tests/__init__.pyc
+${ZOPE_BASE}/lib/python/plone/i18n/normalizer/tests/test_adapters.py
+${ZOPE_BASE}/lib/python/plone/i18n/normalizer/tests/test_adapters.pyc
 ${ZOPE_BASE}/lib/python/plone/i18n/normalizer/tests/test_normalizer.py
 ${ZOPE_BASE}/lib/python/plone/i18n/normalizer/tests/test_normalizer.pyc
 ${ZOPE_BASE}/lib/python/plone/i18n/normalizer/tr.py
