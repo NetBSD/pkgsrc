@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7060 2008/02/19 12:09:11 xtraeme Exp $
+$NetBSD: TODO,v 1.7061 2008/02/19 13:44:09 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -911,7 +911,6 @@ Suggested package updates
 	o mmg-2.0.2
 	o moc-2.4.3
 	o modular-xorg-server-1.4
-	o mono-1.2.6
 	o moon-buggy-1.0.51
 	o moscow_ml-2.01
 	o most-4.10.2
