@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: courierfilter.sh,v 1.5 2007/09/22 04:42:03 jlam Exp $
+# $NetBSD: courierfilter.sh,v 1.6 2008/02/19 18:45:24 jlam Exp $
 #
 # Courier mail filter daemon
 #
@@ -40,6 +40,8 @@ courierfilter_prestart()
 			@COURIER_USER@ @COURIER_GROUP@ 0750
 	mkdir_perms @PKG_SYSCONFDIR@/filters/active \
 			@COURIER_USER@ @COURIER_GROUP@ 0750
+	mkdir_perms @COURIER_STATEDIR@/tmp \
+			@COURIER_USER@ @COURIER_GROUP@ 0770
 }
 
 courierfilter_doit()
