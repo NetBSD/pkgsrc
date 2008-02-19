@@ -1,4 +1,4 @@
-# $NetBSD: bin-install.mk,v 1.16 2007/11/03 10:25:33 rillig Exp $
+# $NetBSD: bin-install.mk,v 1.17 2008/02/19 22:53:34 rillig Exp $
 #
 
 # This file provides the following targets:
@@ -7,7 +7,7 @@
 #	Tries to install a package from a prebuilt binary package, and
 #	if that doesn't work, builds the package from source.
 #
-# The following variables can be set by the pkgsrc user in mk.conf:
+# === User-settable variables ===
 #
 # PACKAGES
 #	This directory is searched before BINPKG_SITES when trying to
@@ -17,6 +17,15 @@
 #	A list of URLs where binary packages can be found.
 #	See mk/defaults/mk.conf for details.
 #
+# === Command line variables ===
+#
+# PKGNAME_REQD
+#	The package pattern that is required to be installed. By default,
+#	any version of this package will do, but when installing
+#	dependencies, a special version may be needed.
+
+# XXX: This file contains implementation details from the "pkg" flavor,
+# for example the All/ directory and the @cwd.
 
 # List of sites carrying binary pkgs. Variables "rel" and "arch" are
 # replaced with OS release ("1.5", ...) and architecture ("mipsel", ...)
@@ -26,6 +35,8 @@ BINPKG_SITES?= \
 .else
 BINPKG_SITES?=
 .endif
+
+PKGNAME_REQD?=	${PKGNAME}
 
 .PHONY: bin-install
 .PHONY: do-bin-install do-bin-install-from-source
@@ -41,7 +52,7 @@ do-bin-install: su-do-bin-install
 .  else
 do-bin-install: su-target
 .  endif
-	@${PHASE_MSG} "Binary install for "${PKGNAME_REQD:U${PKGNAME}:Q}
+	@${PHASE_MSG} "Binary install for "${PKGNAME_REQD:Q}
 
 su-do-bin-install: \
 	acquire-bin-install-lock \
@@ -54,6 +65,7 @@ acquire-bin-install-lock: \
 release-bin-install-lock: \
 	release-localbase-lock
 
+# Note: PKGREPOSITORY is usually ${PACKAGES}/All
 _BIN_INSTALL_PREPARE_CMD= \
 	found=`${PKG_BEST_EXISTS} "${PKGWILDCARD}" || ${TRUE}`;		\
 	if [ "$$found" != "" ]; then					\
@@ -74,15 +86,15 @@ locked-su-do-bin-install:
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 	${RUN} ${_BIN_INSTALL_PREPARE_CMD}				\
 	${STEP_MSG} "Installing ${PKGNAME} from $$pkg_path";		\
-	if ${SETENV} PKG_PATH="$$pkg_path" ${PKG_ADD} -m ${MACHINE_ARCH} -I -p ${_CROSS_DESTDIR}${PREFIX} ${_BIN_INSTALL_FLAGS} ${PKGNAME_REQD:U${PKGNAME}:Q}${PKG_SUFX}; then \
+	if ${SETENV} PKG_PATH="$$pkg_path" ${PKG_ADD} -m ${MACHINE_ARCH} -I -p ${_CROSS_DESTDIR}${PREFIX} ${_BIN_INSTALL_FLAGS} ${PKGNAME_REQD:Q}${PKG_SUFX}; then \
 		${ECHO} "Fixing recorded cwd...";			\
 		${SED} -e 's|@cwd ${_CROSS_DESTDIR}|@cwd |' ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS > ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp; \
 		${MV} ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS.tmp ${_PKG_DBDIR}/${PKGNAME:Q}/+CONTENTS; \
-		${ECHO} "`${PKG_INFO} -e ${PKGNAME_REQD:U${PKGNAME}:Q}` successfully installed."; \
+		${ECHO} "`${PKG_INFO} -e ${PKGNAME_REQD:Q}` successfully installed."; \
 	fi
 .else
 	${RUN} ${_BIN_INSTALL_PREPARE_CMD}				\
-	pkgpattern=${PKGNAME_REQD:U${PKGNAME}:Q};			\
+	pkgpattern=${PKGNAME_REQD:Q};					\
 	${STEP_MSG} "Installing $$pkgpattern from $$pkg_path";		\
 	if ${SETENV} PKG_PATH="$$pkg_path" ${PKG_ADD} ${_BIN_INSTALL_FLAGS} "$$pkgpattern"; then \
 		installed=`${PKG_INFO} -e "$$pkgpattern"`;		\
@@ -91,7 +103,7 @@ locked-su-do-bin-install:
 .endif
 
 do-bin-install-from-source:
-	${RUN} pkgpattern=${PKGNAME_REQD:U${PKGNAME}:Q};		\
+	${RUN} pkgpattern=${PKGNAME_REQD:Q};				\
 	${PKG_INFO} -qe "$$pkgpattern" || {				\
 		${STEP_MSG} "No binary package found for $$pkgpattern; installing from source."; \
 		${RECURSIVE_MAKE} ${MAKEFLAGS} DEPENDS_TARGET=${DEPENDS_TARGET:Q} package-install \
