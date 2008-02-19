@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common_end,v 1.1.1.1 2007/12/18 15:47:05 taca Exp $
+@comment $NetBSD: PLIST.common_end,v 1.2 2008/02/19 14:12:47 taca Exp $
 @dirrm ${ZOPE_BASE}/lib/python/wicked/testing
 @dirrm ${ZOPE_BASE}/lib/python/wicked/plone
 @dirrm ${ZOPE_BASE}/lib/python/wicked/fieldevent
@@ -324,6 +324,8 @@
 @dirrm ${PLONE_BASE}/PloneTranslations/locales/my
 @dirrm ${PLONE_BASE}/PloneTranslations/locales/mi/LC_MESSAGES
 @dirrm ${PLONE_BASE}/PloneTranslations/locales/mi
+@dirrm ${PLONE_BASE}/PloneTranslations/locales/lv/LC_MESSAGES
+@dirrm ${PLONE_BASE}/PloneTranslations/locales/lv
 @dirrm ${PLONE_BASE}/PloneTranslations/locales/lt/LC_MESSAGES
 @dirrm ${PLONE_BASE}/PloneTranslations/locales/lt
 @dirrm ${PLONE_BASE}/PloneTranslations/locales/ko/LC_MESSAGES
