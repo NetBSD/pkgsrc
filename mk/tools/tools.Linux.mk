@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.41 2007/06/19 14:21:19 joerg Exp $
+# $NetBSD: tools.Linux.mk,v 1.42 2008/02/19 03:03:08 epg Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -147,6 +147,8 @@ TOOLS_PLATFORM.makeinfo?=	/usr/bin/makeinfo
 TOOLS_PLATFORM.mkdir?=		/bin/mkdir -p
 .if exists(/usr/bin/mktemp)
 TOOLS_PLATFORM.mktemp?=		/usr/bin/mktemp
+.elif exists(/bin/mktemp)
+TOOLS_PLATFORM.mktemp?=		/bin/mktemp
 .endif
 .if exists(/usr/bin/msgfmt)
 TOOLS_PLATFORM.msgfmt?=		/usr/bin/msgfmt
