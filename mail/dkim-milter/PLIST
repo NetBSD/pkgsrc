@@ -1,10 +1,20 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/27 19:49:07 minskim Exp $
-man/man8/dkim-milter.8
-sbin/dkim-milter
+@comment $NetBSD: PLIST,v 1.2 2008/02/19 13:23:06 adrianp Exp $
+bin/dkim-filter
+bin/dkim-genkey
+bin/dkim-testkey
+bin/dkim-testssp
+man/man5/dkim-filter.conf.5
+man/man8/dkim-filter.8
+man/man8/dkim-genkey.8
+man/man8/dkim-stats.8
+man/man8/dkim-testkey.8
+man/man8/dkim-testssp.8
 share/doc/dkim-milter/FEATURES
 share/doc/dkim-milter/INSTALL
 share/doc/dkim-milter/KNOWNBUGS
 share/doc/dkim-milter/README
 share/doc/dkim-milter/RELEASE_NOTES
-share/examples/rc.d/dkim-milter
+share/examples/dkim-milter/dkim-filter.conf.sample
+share/examples/rc.d/dkim-filter
 @dirrm share/doc/dkim-milter
+@dirrm share/examples/dkim-milter

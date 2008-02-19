@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2008/02/19 13:23:06 adrianp Exp $
+
+Note that there is a difference between "dkim-filter" and "dkim-milter".
+"dkim-milter" is a package containing a library, a filter and some tools to
+be used in testing your DKIM installation.  "dkim-filter" is the filter
+program contained in the "dkim-milter" package.
+
+===========================================================================
