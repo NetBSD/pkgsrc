@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2007/07/09 17:32:35 cube Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/02/19 16:18:18 reed Exp $
 ${MILTER}sbin/amavis
 ${MILTER}sbin/amavis-milter
 sbin/amavisd
@@ -28,16 +28,16 @@ share/doc/amavisd-new/README.old.scanners
 share/doc/amavisd-new/README.performance
 share/doc/amavisd-new/README.policy-on-notifications
 share/doc/amavisd-new/README.postfix
+share/doc/amavisd-new/README.postfix.html
 share/doc/amavisd-new/README.protocol
 share/doc/amavisd-new/README.sendmail
 share/doc/amavisd-new/README.sendmail-dual
 share/doc/amavisd-new/README.sendmail-dual.old
 share/doc/amavisd-new/README.sql
-share/doc/amavisd-new/RELEASE_NOTES
-share/doc/amavisd-new/amavisd-new-docs.html
-share/doc/amavisd-new/README.postfix.html
 share/doc/amavisd-new/README.sql-mysql
 share/doc/amavisd-new/README.sql-pg
+share/doc/amavisd-new/RELEASE_NOTES
+share/doc/amavisd-new/amavisd-new-docs.html
 share/examples/amavisd-new/amavisd.conf-default
 share/examples/amavisd-new/amavisd.conf-minimal
 share/examples/amavisd-new/amavisd.conf-sample
