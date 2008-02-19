@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2007/06/08 11:39:02 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2008/02/19 10:31:53 schmonz Exp $
 #
 
-DISTNAME=		html2text-2.28
+DISTNAME=		html2text-2.29
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		textproc python
 MASTER_SITES=		${HOMEPAGE}
