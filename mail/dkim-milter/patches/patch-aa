@@ -1,37 +1,54 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/10/27 19:49:07 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2008/02/19 13:23:06 adrianp Exp $
 
---- dkim-filter/Makefile.m4.orig	2005-09-28 13:27:11.000000000 +0200
-+++ dkim-filter/Makefile.m4
-@@ -4,10 +4,10 @@ include(confBUILDTOOLSDIR`/M4/switch.m4'
- define(`confMT', `TRUE')
- define(`confREQUIRE_LIBSM', `true')
+--- devtools/Site/site.config.m4.orig	2008-02-16 12:17:49.000000000 +0000
++++ devtools/Site/site.config.m4
+@@ -87,6 +87,14 @@ dnl have v0.9.8 or later for SHA256 supp
+ dnl lines by deleting "dnl" from the front of them and edit paths as needed.
+ dnl APPENDDEF(`confINCDIRS', `-I/usr/local/ssl/include ')
+ dnl APPENDDEF(`confLIBDIRS', `-L/usr/local/ssl/lib ')
++APPENDDEF(`confINCDIRS', `-I@SSLBASE@/include ')
++APPENDDEF(`confLIBDIRS', `-L@SSLBASE@/lib ')
++
++dnl pthread support
++dnl
++APPENDDEF(`confLIBS', `@PTHREAD_LDFLAGS@ ')
++APPENDDEF(`confINCDIRS', `-I@PTHREAD@/include ')
++APPENDDEF(`confLIBDIRS', `-L@PTHREAD@/lib ')
  
--APPENDDEF(`confLIBS', `-lssl -lcrypto')
-+APPENDDEF(`confLIBS', `-lssl -lcrypto @PTHREAD_LDFLAGS@ ')
- dnl Enable and edit these paths as needed:
--dnl APPENDDEF(`confINCDIRS', `-I/usr/local/ssl/include ')
--dnl APPENDDEF(`confLIBDIRS', `-L/usr/local/ssl/lib ')
-+APPENDDEF(`confINCDIRS', `-I@SSLBASE@/include -I@PTHREAD@/include ')
-+APPENDDEF(`confLIBDIRS', `-L@SSLBASE@/lib -L@PTHREAD@/lib ')
- 
- dnl To use the asynchronous resolver library provided, enable this line:
- dnl bldPUSH_SMLIB(`ar')
-@@ -19,15 +19,15 @@ bldPUSH_SMLIB(`sm')
- 
- dnl Enable these next line if needed to specify the locations of libmilter.a
- dnl and the libmilter include files:
--dnl APPENDDEF(`confINCDIRS', `-I/usr/local/sendmail/include')
--dnl APPENDDEF(`confLIBDIRS', `-L/usr/local/sendmail/lib')
-+APPENDDEF(`confINCDIRS', `-I@LMBASE@/include ')
-+APPENDDEF(`confLIBDIRS', `-L@LMBASE@/lib')
- 
- 
- dnl Enable for IPv6 support:
- dnl APPENDDEF(`confENVDEF', `-DNETINET6 ')
- 
- dnl Compile time options, especially FFRs:
--dnl APPENDDEF(`confENVDEF', `-DNO_SMFI_INSHEADER ')
+ dnl TRE -- Approximate regular expression matching
+ dnl
+@@ -117,6 +125,7 @@ dnl APPENDDEF(`confENVDEF', `-D_FFR_SELE
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_STATS ')
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_VBR ')
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_ZTAGS ')
 +@INET6@ APPENDDEF(`confENVDEF', `-DNETINET6 ')
  
- dnl APPENDDEF(`confENVDEF', `-D_FFR_EXTERNAL_IGNORE_LIST ')
- dnl APPENDDEF(`confENVDEF', `-D_FFR_FLUSH_HEADERS ')
+ dnl DomainKeys -- Yahoo DomainKeys verification support
+ dnl 
+@@ -130,8 +139,8 @@ dnl
+ dnl This must be in the search rules for your compile.  If necessary,
+ dnl adjust the paths below and enable the lines by deleting "dnl" from the
+ dnl front of them.
+-dnl APPENDDEF(`bld_dkim_filter_INCDIRS', `-I/usr/local/sendmail/include')
+-dnl APPENDDEF(`bld_dkim_filter_LIBDIRS', `-L/usr/local/sendmail/lib')
++APPENDDEF(`bld_dkim_filter_INCDIRS', `-I@LMBASE@/include')
++APPENDDEF(`bld_dkim_filter_LIBDIRS', `-L@LMBASE@/lib')
+ 
+ dnl smfi_addheader() -- older versions of libmilter
+ dnl
+@@ -140,3 +149,15 @@ dnl primitive, you can enable this to ha
+ dnl instead.  It will still work, but it breaks the DKIM specification.
+ dnl To enable this, remove the "dnl" from the front of the line.
+ dnl APPENDDEF(`conf_dkim_filter_ENVDEF', `-DNO_SMFI_INSHEADER ')
++
++dnl path fixes for pkgsrc
++dnl
++define(`confSBINDIR', `@PREFIX@/sbin')
++define(`confUBINDIR', `@PREFIX@/bin')
++define(`confMANROOT', `@PREFIX@/@PKGMANDIR@/man')
++define(`confMANROOTMAN', `@PREFIX@/@PKGMANDIR@/man')
++define(`confMAN4EXT', `3')
++define(`confMAN5EXT', `5')
++define(`confMAN8EXT', `8')
++define(`confINSTALL_RAWMAN', 'yes')
++define(`confDONT_INSTALL_CATMAN', 'yes')
