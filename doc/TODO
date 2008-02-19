@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7061 2008/02/19 13:44:09 xtraeme Exp $
+$NetBSD: TODO,v 1.7062 2008/02/19 13:51:03 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -715,7 +715,6 @@ Suggested package updates
 	o gtk-systrace-20030623
 	o gtk2-2.12.7
 	o gtk2-engines-2.12.2
-	o gtk2-sharp-2.10.2
 	o gtklife-5.1
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
