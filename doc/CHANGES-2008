@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.315 2008/02/19 10:35:15 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.316 2008/02/19 12:09:11 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -539,3 +539,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/py-html2text to 2.29 [schmonz 2008-02-19]
 	Updated mail/rss2email to 2.62 [schmonz 2008-02-19]
 	Updated mail/getmail to 4.7.8 [schmonz 2008-02-19]
+	Updated x11/gtksourceview to 2.1.2 [xtraeme 2008-02-19]
