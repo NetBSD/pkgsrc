@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/02/02 13:00:36 schmonz Exp $
+# $NetBSD: Makefile,v 1.33 2008/02/19 13:59:05 schmonz Exp $
 
 DISTNAME=		ucspi-tcp-0.88
 PKGREVISION=		2
@@ -13,7 +13,7 @@ COMMENT=		Command-line tools for building TCP client-server applications
 MANPAGES=		${DISTNAME}-man-20020317.tar.gz
 SITES.${MANPAGES}=	http://smarden.org/pape/djb/manpages/
 
-DJB_RESTRICTED=		YES
+DJB_RESTRICTED=		no
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
