@@ -1,22 +1,10 @@
-$NetBSD: patch-ae,v 1.13 2007/07/20 00:09:22 gdt Exp $
+$NetBSD: patch-ae,v 1.14 2008/02/19 23:33:35 gdt Exp $
 
 support for NetBSD/alpha, NetBSD/sparc64, and NetBSD/x86_64
 
---- libguile/gc_os_dep.c.orig	2007-05-09 16:22:03.000000000 -0400
+--- libguile/gc_os_dep.c.orig	2008-02-16 13:50:24.000000000 -0500
 +++ libguile/gc_os_dep.c
-@@ -110,6 +110,11 @@ typedef int GC_bool;
- #    define OPENBSD
- #    define mach_type_known
- # endif
-+# if defined(__NetBSD__) && defined(__alpha__)
-+#    define ALPHA
-+#    define NETBSD
-+#    define mach_type_known
-+# endif
- # if defined(__NetBSD__) && defined(__powerpc__)
- #    define POWERPC
- #    define NETBSD
-@@ -127,7 +132,7 @@ typedef int GC_bool;
+@@ -132,7 +132,7 @@ typedef int GC_bool;
  #    define NETBSD
  #    define mach_type_known
  # endif
@@ -25,16 +13,7 @@ support for NetBSD/alpha, NetBSD/sparc64, and NetBSD/x86_64
  #    define SPARC
  #    define NETBSD
  #    define mach_type_known
-@@ -246,7 +251,7 @@ typedef int GC_bool;
- # endif
- # if defined(__alpha) || defined(__alpha__)
- #   define ALPHA
--#   if !defined(LINUX)
-+#   if !defined(LINUX) && !defined(NETBSD)
- #     define OSF1	/* a.k.a Digital Unix */
- #   endif
- #   define mach_type_known
-@@ -299,6 +304,11 @@ typedef int GC_bool;
+@@ -304,6 +304,11 @@ typedef int GC_bool;
  #   define NETBSD
  #   define mach_type_known
  # endif
@@ -46,7 +25,7 @@ support for NetBSD/alpha, NetBSD/sparc64, and NetBSD/x86_64
  # if defined(bsdi) && defined(i386)
  #    define I386
  #    define BSDI
-@@ -439,12 +449,12 @@ scm_get_stack_base ()
+@@ -444,12 +449,12 @@ scm_get_stack_base ()
  /*
   * For each architecture and OS, the following need to be defined:
   *
@@ -62,7 +41,7 @@ support for NetBSD/alpha, NetBSD/sparc64, and NetBSD/x86_64
   *
   * MACH_TYPE is a string representation of the machine type.
   * OS_TYPE is analogous for the OS.
-@@ -989,6 +999,21 @@ scm_get_stack_base ()
+@@ -994,6 +999,21 @@ scm_get_stack_base ()
  #    endif
  # endif
  
