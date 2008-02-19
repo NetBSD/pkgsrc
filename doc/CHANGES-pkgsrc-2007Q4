@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2007Q4,v 1.1.2.7 2008/02/11 12:04:34 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2007Q4,v 1.1.2.8 2008/02/19 11:31:15 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2007Q4 branch:
@@ -31,3 +31,7 @@ Pullup ticket 2282 - requested by tron
 security update for apache22
 Pullup ticket 2287 - requested by drochner
 security fixes for mplayer and mencoder
+Pullup ticket 2288 - requested by martti
+latest update for clamav
+Pullup ticket 2290 - requested by obache
+security update for RealPlayerGold
