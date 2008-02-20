@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.334 2008/02/20 10:58:10 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.335 2008/02/20 11:02:19 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -650,3 +650,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/kdevelop to 3.5.1 [markd 2008-02-20]
 	Updated devel/p5-glib2 to 1.164 [xtraeme 2008-02-20]
 	Updated devel/p5-AnyEvent to 2.9 [xtraeme 2008-02-20]
+	Updated graphics/p5-cairo to 1.045 [xtraeme 2008-02-20]
