@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2007/10/20 10:44:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.30 2008/02/20 10:13:03 markd Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -7352,6 +7352,7 @@ share/kde/applnk/System/ScreenSavers/glhanoi.desktop
 share/kde/applnk/System/ScreenSavers/glknots.desktop
 share/kde/applnk/System/ScreenSavers/glmatrix.desktop
 share/kde/applnk/System/ScreenSavers/glplanet.desktop
+share/kde/applnk/System/ScreenSavers/glschool.desktop
 share/kde/applnk/System/ScreenSavers/glslideshow.desktop
 share/kde/applnk/System/ScreenSavers/glsnake.desktop
 share/kde/applnk/System/ScreenSavers/gltext.desktop
@@ -7455,6 +7456,7 @@ share/kde/applnk/System/ScreenSavers/t3d.desktop
 share/kde/applnk/System/ScreenSavers/tangram.desktop
 share/kde/applnk/System/ScreenSavers/thornbird.desktop
 share/kde/applnk/System/ScreenSavers/timetunnel.desktop
+share/kde/applnk/System/ScreenSavers/topblock.desktop
 share/kde/applnk/System/ScreenSavers/triangle.desktop
 share/kde/applnk/System/ScreenSavers/truchet.desktop
 share/kde/applnk/System/ScreenSavers/twang.desktop
