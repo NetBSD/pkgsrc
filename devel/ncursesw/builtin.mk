@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2008/02/20 17:17:46 jlam Exp $
+# $NetBSD: builtin.mk,v 1.2 2008/02/20 20:07:25 jlam Exp $
 
 BUILTIN_PKG:=	ncursesw
 
@@ -114,8 +114,15 @@ BUILDLINK_CPPFLAGS.ncursesw+=	-DHAVE_WCHAR=1
 .  endif
 BUILDLINK_TARGETS+=		buildlink-ncursesw-curses-h
 
-# Most packages expect <ncursesw/curses.h> to provide declarations for
-# ncursesw.
+# Packages will expect the following includes to provide declarations
+# for ncursesw if wide curses are supported:
+#
+#	<ncursesw/curses.h>
+#	<ncurses.h>
+#	<curses.h>
+#
+# We must explicitly force the symlinks to be created as we have to
+# overwrite any that ncurses/buildlink3.mk might create ahead of us.
 #
 .  if !target(buildlink-ncursesw-curses-h)
 .PHONY: buildlink-ncursesw-curses-h
@@ -124,12 +131,15 @@ buildlink-ncursesw-curses-h:
 	curses_h="ncursesw/ncurses.h curses.h";				\
 	for f in $$curses_h; do						\
 		src=${BUILDLINK_PREFIX.ncursesw:Q}"/include/$$f";	\
-		dest=${BUILDLINK_DIR:Q}"/include/ncursesw/curses.h";	\
-		if ${TEST} ! -f "$$dest" -a -f "$$src"; then		\
-			${ECHO_BUILDLINK_MSG} "Linking ncursesw/curses.h -> $$f."; \
-			${MKDIR} `${DIRNAME} "$$dest"`;			\
-			${LN} -s "$$src" "$$dest";			\
-		fi;							\
+		dests="ncursesw/curses.h ncurses.h curses.h";		\
+		for dest in $$dests; do					\
+			dest=${BUILDLINK_DIR:Q}"/include/$$dest";	\
+			if ${TEST} -f "$$src"; then			\
+				${ECHO_BUILDLINK_MSG} "Linking $$dest -> $$f."; \
+				${MKDIR} `${DIRNAME} "$$dest"`;		\
+				${LN} -fs "$$src" "$$dest";		\
+			fi;						\
+		done;							\
 	done
 .  endif
 
