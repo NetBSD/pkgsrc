@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2008/02/20 20:07:25 jlam Exp $
+# $NetBSD: builtin.mk,v 1.3 2008/02/20 22:29:48 jlam Exp $
 
 BUILTIN_PKG:=	ncursesw
 
@@ -8,11 +8,12 @@ BUILTIN_PKG:=	ncursesw
 # XXX Need to deal with Solaris <curses.h>
 #
 BUILTIN_FIND_LIBS:=			ncursesw
-BUILTIN_FIND_FILES_VAR:=		H_NB_CURSESW H_NCURSESW_CURSES
-BUILTIN_FIND_FILES.H_NB_CURSESW=		/usr/include/curses.h
+BUILTIN_FIND_FILES_VAR:=		H_NB_CURSESW H_NCURSESW
+BUILTIN_FIND_FILES.H_NB_CURSESW=	/usr/include/curses.h
 BUILTIN_FIND_GREP.H_NB_CURSESW=		\#ifdef[ 	]*HAVE_WCHAR
-BUILTIN_FIND_FILES.H_NCURSESW_CURSES=	/usr/include/ncursesw/curses.h
-BUILTIN_FIND_GREP.H_NCURSESW_CURSES=	\#define[ 	]*NCURSES_VERSION
+BUILTIN_FIND_FILES.H_NCURSESW=		/usr/include/ncursesw/curses.h	\
+					/usr/include/curses.h
+BUILTIN_FIND_GREP.H_NCURSESW=		\Id: curses.wide,v
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -22,8 +23,8 @@ BUILTIN_FIND_GREP.H_NCURSESW_CURSES=	\#define[ 	]*NCURSES_VERSION
 ###
 .if !defined(IS_BUILTIN.ncursesw)
 IS_BUILTIN.ncursesw=	no
-.  if empty(H_NCURSESW_CURSES:M__nonexistent__) && \
-      empty(H_NCURSESW_CURSES:M${LOCALBASE}/*) && \
+.  if empty(H_NCURSESW:M__nonexistent__) && \
+      empty(H_NCURSESW:M${LOCALBASE}/*) && \
       !empty(BUILTIN_LIB_FOUND.ncursesw:M[yY][eE][sS])
 IS_BUILTIN.ncursesw=	yes
 .  endif
@@ -111,6 +112,15 @@ BUILDLINK_TRANSFORM+=		l:ncursesw:curses
 	empty(H_NB_CURSESW:M${LOCALBASE}/*)
 BUILDLINK_CPPFLAGS.ncursesw+=	-DHAVE_WCHAR=1
 .    endif
+.  endif
+
+# According to the ncurses(3) manual page, applications that want to use
+# the wide curses definitions need to define _XOPEN_SOURCE_EXTENDED.
+#
+.  if !empty(USE_BUILTIN.ncursesw:M[nN][oO]) || \
+      (!empty(USE_BUILTIN.ncursesw:M[yY][eE][sS]) && 
+       !empty(IS_BUILTIN.ncursesw:M[yY][eE][sS]))
+BUILDLINK_CPPFLAGS.ncursesw+=	-D_XOPEN_SOURCE_EXTENDED=1
 .  endif
 BUILDLINK_TARGETS+=		buildlink-ncursesw-curses-h
 
