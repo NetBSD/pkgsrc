@@ -1,4 +1,4 @@
-# $NetBSD: check-wrkref.mk,v 1.17 2008/02/10 11:43:20 tnn Exp $
+# $NetBSD: check-wrkref.mk,v 1.18 2008/02/20 10:23:26 rillig Exp $
 #
 # This file checks that the installed files don't contain any strings
 # that point to the directory where the package had been built, to make
@@ -7,7 +7,7 @@
 #
 # User-settable variables:
 #
-# CHECK_WRKREF:
+# CHECK_WRKREF
 #	The list of directory names that must not appear in installed files.
 #
 #	* "tools" for the tool wrapper directory
@@ -28,7 +28,7 @@
 #
 # Package-settable variables:
 #
-# CHECK_WRKREF_SKIP:
+# CHECK_WRKREF_SKIP
 #	The list of filename patterns that should be excluded from this
 #	test, either absolute or relative to PREFIX.
 #
