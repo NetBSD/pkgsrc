@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.9 2007/07/19 09:39:57 mjl Exp $
+@comment $NetBSD: PLIST.common,v 1.10 2008/02/20 10:14:19 wiz Exp $
 include/asterisk/acl.h
 include/asterisk/adsi.h
 include/asterisk/aes.h
@@ -198,6 +198,7 @@ ${ZAPTEL}lib/asterisk/modules/app_zapbarge.so
 ${ZAPTEL}lib/asterisk/modules/app_zapras.so
 ${ZAPTEL}lib/asterisk/modules/app_zapscan.so
 ${ZAPTEL}lib/asterisk/modules/chan_zap.so
+lib/pkgconfig/asterisk.pc
 libdata/asterisk/agi-bin/agi-test.agi
 libdata/asterisk/agi-bin/eagi-sphinx-test
 libdata/asterisk/agi-bin/eagi-test
