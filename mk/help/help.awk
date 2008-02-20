@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.23 2008/02/19 22:12:00 rillig Exp $
+# $NetBSD: help.awk,v 1.24 2008/02/20 10:40:42 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -136,6 +136,10 @@ NF >= 1 && !/^[\t.]/ && !/^#*$/ {
 		# Words in mixed case are not taken as keywords. If you
 		# want them anyway, list them in a "Keywords:" line.
 
+	} else if (w !~ /^[A-Za-z][-0-9A-Z_a-z]*[0-9A-Za-z](:|\?=|=)?$/) {
+		# Keywords must consist only of letters, digits, hyphens
+		# and underscores; except for some trailing type specifier.
+
 	} else if (w == tolower(w) && !(w ~ /:$/)) {
 		# Lower-case words (often make targets) must be followed
 		# by a colon to be recognized as keywords.
@@ -143,10 +147,6 @@ NF >= 1 && !/^[\t.]/ && !/^#*$/ {
 	} else if (w == toupper(w) && w ~ /:$/) {
 		# Upper-case words ending with a colon are probably not
 		# make targets, so ignore them.
-
-	} else if (w !~ /^[A-Za-z].*[0-9A-Za-z](:|\?=|=)?$/) {
-		# Keywords must start with a letter and end with a letter
-		# or digit.
 
 	} else if (w ~ /^(FIXME|TODO|XXX):?$/) {
 		# These are not keywords.
