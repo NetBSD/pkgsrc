@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2008/02/20 10:20:04 xtraeme Exp $
+# $NetBSD: Makefile,v 1.43 2008/02/20 12:06:16 xtraeme Exp $
 #
 
 DISTNAME=	transcode-1.0.5
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://fromani.exit1.org/
 EXTRACT_SUFX=	.tar.bz2
@@ -27,9 +27,6 @@ PTHREAD_AUTO_VARS=	yes
 PTHREAD_OPTS=		require
 LIBS+=			${LIBOSSAUDIO}
 
-post-install:
-	rm -f ${PREFIX}/lib/transcode/export_xvid.so
-
 .include "options.mk"
 .include "../../audio/faac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
@@ -43,7 +40,6 @@ post-install:
 .include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/libtheora/buildlink3.mk"
-.include "../../multimedia/x264-devel/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
