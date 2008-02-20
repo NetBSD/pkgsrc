@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2008/02/20 12:06:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.44 2008/02/20 12:16:40 xtraeme Exp $
 #
 
 DISTNAME=	transcode-1.0.5
@@ -22,6 +22,9 @@ CONFIGURE_ARGS+=	\
 	--with-libavcodec-prefix=${BUILDLINK_PREFIX.ffmpeg-devel}
 CONFIGURE_ARGS+=	--enable-oss
 CONFIGURE_ARGS+=	--disable-xio
+CONFIGURE_ARGS+=	--enable-ogg
+CONFIGURE_ARGS+=	--enable-theora
+CONFIGURE_ARGS+=	--enable-vorbis
 
 PTHREAD_AUTO_VARS=	yes
 PTHREAD_OPTS=		require
