@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7066 2008/02/20 10:20:55 xtraeme Exp $
+$NetBSD: TODO,v 1.7067 2008/02/20 10:38:23 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -550,7 +550,6 @@ Suggested package updates
 	o doxygen-1.5.5
 	o dpkg-1.13.25
 	o drscheme-371
-	o dvdrip-0.98.8
 	o dvipng-1.9
 	o eagle-4.16
 	o easymenu-0.7.2p1
