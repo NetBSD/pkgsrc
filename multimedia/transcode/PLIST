@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/08/24 16:06:25 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/02/20 10:20:04 xtraeme Exp $
 bin/avifix
 bin/aviindex
 bin/avimerge
@@ -44,7 +44,6 @@ lib/transcode/export_pvn.la
 lib/transcode/export_raw.la
 lib/transcode/export_toolame.la
 lib/transcode/export_wav.la
-lib/transcode/export_xvid.so
 lib/transcode/export_xvid2.la
 lib/transcode/export_xvid3.la
 lib/transcode/export_xvid4.la
@@ -90,6 +89,7 @@ lib/transcode/filter_nored.la
 lib/transcode/filter_normalize.la
 lib/transcode/filter_null.la
 ${DV}lib/transcode/filter_preview.la
+lib/transcode/filter_pp.la
 lib/transcode/filter_pv.la
 lib/transcode/filter_resample.la
 lib/transcode/filter_skip.la
@@ -104,7 +104,7 @@ lib/transcode/filter_tc_video.la
 lib/transcode/filter_test.la
 lib/transcode/filter_testframe.la
 ${FREETYPE2}lib/transcode/filter_text.la
-${TOMSMOCOMP}lib/transcode/filter_tomsmocomp.la
+lib/transcode/filter_tomsmocomp.la
 lib/transcode/filter_unsharp.la
 lib/transcode/filter_videocore.la
 lib/transcode/filter_whitebalance.la
