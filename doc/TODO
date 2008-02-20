@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7071 2008/02/20 13:12:00 xtraeme Exp $
+$NetBSD: TODO,v 1.7072 2008/02/20 13:53:38 obache Exp $
 
 Suggested new packages
 ======================
@@ -323,6 +323,18 @@ Suggested new packages
 	Ruby RSS Parser [pkg/37766]
 	http://www.cozmixng.org/~rwiki/?cmd=view;name=RSS+Parser
 	Newer version of included in ruby18
+
+	tkimg [pkg/38026]
+	http://tkimg.sourceforge.net/
+	Add support for several image formats to Tk
+
+	tktable [pkg/38027]
+	http://tktable.sourceforge.net/
+	Grid/table/spreadsheet like widget for Tk
+
+	tDOM [pkg/38028]
+	http://www.tdom.org/
+	C based XML extension for Tcl
 
 Suggested package updates
 =========================
