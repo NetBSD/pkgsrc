@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/01/18 05:08:21 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/20 13:18:24 wiz Exp $
 
 DISTNAME=	cone-0.73
 PKGREVISION=	3
@@ -8,10 +8,11 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jlam@pkgsrc.org
 HOMEPAGE=	http://www.courier-mta.org/cone/
-COMMENT=	console newsreader and emailer
+COMMENT=	Console newsreader and emailer
 
 USE_TOOLS+=		gmake perl true
 USE_LANGUAGES=		c c++
+USE_NCURSES=		yes # termattrs
 GCC_REQD+=		3.0	# need Standard C++ Library
 
 .include "options.mk"
@@ -38,5 +39,5 @@ CONF_FILES=		${EGDIR}/cone.dist ${PKG_SYSCONFDIR}/cone
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
+.include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
