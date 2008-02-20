@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2007/10/20 10:45:26 markd Exp $
+@comment $NetBSD: PLIST,v 1.22 2008/02/20 10:11:28 markd Exp $
 bin/apmount
 bin/blinken
 bin/celestrongps
@@ -2269,6 +2269,10 @@ share/kde/apps/ktouch/sl.keyboard
 share/kde/apps/ktouch/slovenian.ktouch.xml
 share/kde/apps/ktouch/spanish.ktouch.xml
 share/kde/apps/ktouch/splash.png
+share/kde/apps/ktouch/sv.keyboard
+share/kde/apps/ktouch/tr.f.keyboard
+share/kde/apps/ktouch/tr.q.keyboard
+share/kde/apps/ktouch/turkish.ktouch.xml
 share/kde/apps/ktouch/typewriter.wav
 share/kde/apps/ktouch/up.wav
 share/kde/apps/kturtle/data/logokeywords.en_US.xml
