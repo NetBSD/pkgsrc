@@ -1,47 +1,54 @@
-$NetBSD: patch-aa,v 1.3 2006/04/19 17:03:26 wiz Exp $
+$NetBSD: patch-aa,v 1.4 2008/02/20 09:56:44 xtraeme Exp $
 
---- Makefile.orig	2001-05-20 05:05:26.000000000 +0200
-+++ Makefile
-@@ -2,12 +2,7 @@ include global_config
+--- Makefile.orig	2006-02-15 06:09:31.000000000 +0100
++++ Makefile	2008-02-19 19:35:28.000000000 +0100
+@@ -1,7 +1,7 @@
+ CC = gcc
+ NASM = nasm
+-USE_MMX = 0
+-USE_CSS = 1
++#USE_MMX = 0
++#USE_CSS = 1
+ A52DIR := $(shell expr a52dec* )
  
- CFLAGS += 
  
--OBJDIR = $(shell uname --machine)
--
--$(shell sh -c 'if ! test -d $(OBJDIR)\; then \
--	mkdir $(OBJDIR)\; \
--	mkdir $(OBJDIR)/audio\; \
--	mkdir $(OBJDIR)/video\; fi' )
+@@ -16,7 +16,7 @@
+ endif
+ 
+ 
+-OBJDIR := $(shell uname --machine)
 +OBJDIR = work
  
- ifeq ($(OBJDIR), alpha)
-   USE_MMX = 0
-@@ -69,11 +64,16 @@ OBJS = \
  
- OUTPUT = $(OBJDIR)/libmpeg3.a
- UTILS = $(OBJDIR)/dump $(OBJDIR)/mpeg3cat $(OBJDIR)/mpeg3toc $(OBJDIR)/mpeg3split
+ 
+@@ -147,19 +147,19 @@
+ #$(OBJDIR)/mpeg3split
+ 
+ 
 -LIBS = -lm -lpthread
 +LIBS = -L${LOCALBASE}/lib -Wl,-R${LOCALBASE}/lib -lm ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
-+
-+all: prepare $(OUTPUT) util
++all: prepare $(OUTPUT) $(UTILS)
  
--all: $(OUTPUT) util
+-$(shell if ! test -d $(OBJDIR) \; then mkdir -p $(OBJDIR) \; fi )
 +prepare:
 +	mkdir -p $(OBJDIR)
 +	mkdir -p $(OBJDIR)/audio
 +	mkdir -p $(OBJDIR)/video
++	echo $(CFLAGS) > $(OBJDIR)/c_flags
++	echo $(A52CFLAGS) > $(OBJDIR)/a52_flags
++	echo $(OBJS) $(ASMOBJS) $(A52OBJS) $(NASMOBJS) > $(OBJDIR)/objs
++	mkdir -p $(DIRS)
  
--$(OUTPUT): $(OBJS) $(ASMOBJS) $(NASMOBJS)
-+$(OUTPUT): $(OBJS) $(ASMOBJS) $(NASMOBJS) prepare
- 	ar rcs $(OUTPUT) $(OBJS) $(ASMOBJS) $(NASMOBJS)
+-$(shell echo $(CFLAGS) > $(OBJDIR)/c_flags)
+-$(shell echo $(A52CFLAGS) > $(OBJDIR)/a52_flags)
+-$(shell echo $(OBJS) $(ASMOBJS) $(A52OBJS) $(NASMOBJS) > $(OBJDIR)/objs)
+-$(shell mkdir -p $(DIRS) )
+-
+-all: $(OUTPUT) $(UTILS)
+-
+-
+-$(OUTPUT): $(OBJS) $(ASMOBJS) $(NASMOBJS) $(A52OBJS)
++$(OUTPUT): $(OBJS) $(ASMOBJS) $(NASMOBJS) $(A52OBJS) prepare
+ 	ar rcs $(OUTPUT) `cat $(OBJDIR)/objs`
  
- $(OBJDIR)/dump: $(OBJDIR)/dump.o $(OUTPUT)
-@@ -88,7 +88,7 @@ $(OBJDIR)/mpeg3toc: $(OBJDIR)/mpeg3toc.o
- $(OBJDIR)/mpeg3split: $(OBJDIR)/mpeg3split.o $(OUTPUT)
- 	$(CC) -o $(OBJDIR)/mpeg3split $(OBJDIR)/mpeg3split.o $(OUTPUT) $(LIBS)
  
--util: $(UTILS)
-+util: $(UTILS) prepare
- 
- clean:
- 	find \( -name core \

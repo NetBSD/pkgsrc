@@ -1,19 +1,13 @@
-$NetBSD: patch-ai,v 1.1 2006/08/09 17:55:51 mrg Exp $
+$NetBSD: patch-ai,v 1.2 2008/02/20 09:56:44 xtraeme Exp $
 
---- video/slice.c.orig	2001-05-19 20:05:26.000000000 -0700
-+++ video/slice.c	2006-08-09 10:42:13.000000000 -0700
-@@ -8,7 +8,13 @@
+--- a52dec-0.7.3/liba52/parse.c.orig	2008-02-19 19:41:19.000000000 +0100
++++ a52dec-0.7.3/liba52/parse.c	2008-02-19 19:41:32.000000000 +0100
+@@ -32,7 +32,7 @@
+ #include "bitstream.h"
+ #include "tables.h"
  
- #define CLIP(x)  ((x) >= 0 ? ((x) < 255 ? (x) : 255) : 0)
- 
--static unsigned long long MMX_128 = 0x80008000800080LL;
-+#if defined(__GNUC__) && __GNUC__ > 3
-+#define LMUSED	__attribute__((__used__))
-+#else
-+#define LMUSED
-+#endif
-+
-+static unsigned long long MMX_128 LMUSED = 0x80008000800080LL;
- 
- int mpeg3_new_slice_buffer(mpeg3_slice_buffer_t *slice_buffer)
- {
+-#ifdef HAVE_MEMALIGN
++#if 0
+ /* some systems have memalign() but no declaration for it */
+ void * memalign (size_t align, size_t size);
+ #else

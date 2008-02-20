@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2005/07/13 13:17:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/02/20 09:56:44 xtraeme Exp $
 bin/mpeg3cat
 bin/mpeg3dump
-bin/mpeg3split
+bin/mpeg3peek
 bin/mpeg3toc
 include/mpeg3/audio/ac3.h
 include/mpeg3/audio/mpeg3audio.h
