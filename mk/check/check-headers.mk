@@ -1,4 +1,4 @@
-# $NetBSD: check-headers.mk,v 1.4 2007/03/16 10:29:22 rillig Exp $
+# $NetBSD: check-headers.mk,v 1.5 2008/02/20 10:43:55 rillig Exp $
 #
 # This file checks the C and C++ header files for possible problems.
 #
@@ -11,7 +11,7 @@
 #
 # Package-settable-variables:
 #
-# CHECK_HEADERS_SKIP:
+# CHECK_HEADERS_SKIP
 #	A list of filename patterns that should be skipped for this test.
 #
 

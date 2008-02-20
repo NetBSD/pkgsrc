@@ -1,18 +1,18 @@
-# $NetBSD: check-shlibs.mk,v 1.14 2008/02/07 21:36:13 rillig Exp $
+# $NetBSD: check-shlibs.mk,v 1.15 2008/02/20 10:43:55 rillig Exp $
 #
 # This file verifies that all libraries used by the package can be found
 # at run-time.
 #
 # User-settable variables:
 #
-# CHECK_SHLIBS:
+# CHECK_SHLIBS
 #	Whether the check should be enabled or not.
 #
 #	Default value: "yes" for PKG_DEVELOPERs, "no" otherwise.
 #
 # Package-settable variables:
 #
-# CHECK_LIBS_SUPPORTED:
+# CHECK_LIBS_SUPPORTED
 #	Whether the check should be enabled for this package or not.
 #
 #	Default value: yes
