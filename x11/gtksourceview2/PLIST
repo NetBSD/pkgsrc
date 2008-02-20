@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/03 17:24:41 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/02/20 11:23:41 xtraeme Exp $
 include/gtksourceview-2.0/gtksourceview/gtksourcebuffer.h
 include/gtksourceview-2.0/gtksourceview/gtksourceiter.h
 include/gtksourceview-2.0/gtksourceview/gtksourcelanguage.h
