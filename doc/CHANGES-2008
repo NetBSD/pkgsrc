@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.326 2008/02/19 23:33:45 gdt Exp $
+$NetBSD: CHANGES-2008,v 1.327 2008/02/20 09:57:36 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -556,3 +556,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/turba to 2.1.7 [adrianp 2008-02-19]
 	Updated mail/getmail to 4.8.0 [schmonz 2008-02-19]
 	Updated lang/guile to 1.8.4 [gdt 2008-02-19]
+	Updated multimedia/libmpeg3 to 1.7 [xtraeme 2008-02-19]
