@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/05/26 11:50:12 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/02/20 14:33:04 xtraeme Exp $
 bin/c2s
 bin/jabberd
 bin/migrate.pl
@@ -33,6 +33,7 @@ lib/jabberd/mod_offline.la
 lib/jabberd/mod_presence.la
 lib/jabberd/mod_privacy.la
 lib/jabberd/mod_roster.la
+lib/jabberd/mod_roster-publish.la
 lib/jabberd/mod_session.la
 lib/jabberd/mod_status.la
 lib/jabberd/mod_template-roster.la
@@ -49,8 +50,12 @@ man/man8/resolver.8
 man/man8/router.8
 man/man8/s2s.8
 man/man8/sm.8
+share/doc/jabberd/README
+share/doc/jabberd/README.protocol
+share/doc/jabberd/UPGRADE
+share/doc/jabberd/ChangeLog
 share/examples/jabberd/c2s.xml
-share/examples/jabberd/db-setup-status.mysql
+share/examples/jabberd/db-jd14-2-jd2.sql
 share/examples/jabberd/db-setup.mysql
 share/examples/jabberd/db-setup.pgsql
 share/examples/jabberd/db-setup.sqlite
@@ -63,7 +68,6 @@ share/examples/jabberd/router-users.xml
 share/examples/jabberd/router.xml
 share/examples/jabberd/s2s.xml
 share/examples/jabberd/sm.xml
-share/examples/jabberd/storage.xml
 share/examples/rc.d/c2s
 share/examples/rc.d/jabberd
 share/examples/rc.d/resolver

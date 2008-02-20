@@ -1,17 +1,17 @@
-$NetBSD: patch-ad,v 1.2 2007/05/26 11:50:13 xtraeme Exp $
+$NetBSD: patch-ad,v 1.3 2008/02/20 14:33:04 xtraeme Exp $
 
---- etc/s2s.xml.in.orig	2007-05-26 12:04:13.000000000 +0200
-+++ etc/s2s.xml.in	2007-05-26 12:05:01.000000000 +0200
-@@ -6,7 +6,7 @@
-   <!-- The process ID file. comment this out if you don't need to know
-        to know the process ID from outside the process (eg for control
-        scripts) -->
+--- etc/s2s.xml.in.orig	2008-01-08 04:23:48.000000000 -0600
++++ etc/s2s.xml.in
+@@ -5,7 +5,7 @@
+ 
+   <!-- The process ID file. Comment this out if you don't need to know
+        the process ID from outside the process (eg for control scripts) -->
 -  <pidfile>@localstatedir@/jabberd/pid/s2s.pid</pidfile>
 +  <pidfile>@PIDDIR@/s2s.pid</pidfile>
  
    <!-- Router connection configuration -->
    <router>
-@@ -38,7 +38,7 @@
+@@ -37,7 +37,7 @@
           If this is commented out, or the file can't be read, no attempt
           will be made to establish an encrypted channel with the router. -->
      <!--
@@ -20,7 +20,7 @@ $NetBSD: patch-ad,v 1.2 2007/05/26 11:50:13 xtraeme Exp $
      -->
  
      <!-- Router connection retry -->
-@@ -71,7 +71,7 @@
+@@ -70,7 +70,7 @@
  
      <!-- if logging to file, this is the filename of the logfile -->
      <!--
@@ -29,7 +29,7 @@ $NetBSD: patch-ad,v 1.2 2007/05/26 11:50:13 xtraeme Exp $
      -->
    </log>
  
-@@ -105,7 +105,7 @@
+@@ -104,7 +104,7 @@
           If this is commented out, or the file can't be read, no attempt will be
           made to establish encrypted connections with other servers. -->
      <!--
@@ -38,8 +38,8 @@ $NetBSD: patch-ad,v 1.2 2007/05/26 11:50:13 xtraeme Exp $
      -->
  
      <!-- SSL verify mode - see SSL_CTX_set_verify(3), mode parameter -->
-@@ -116,7 +116,7 @@
-     <!-- File containing an optional SSL certificate chain file for SSL 
+@@ -115,7 +115,7 @@
+     <!-- File containing an optional SSL certificate chain file for SSL
           connections. -->
      <!--
 -    <cachain>@sysconfdir@/cachain.pem</cachain>
@@ -47,3 +47,12 @@ $NetBSD: patch-ad,v 1.2 2007/05/26 11:50:13 xtraeme Exp $
      -->
  
    </local>
+@@ -190,7 +190,7 @@
+   <stats>
+     <!-- file containing count of packets that went through -->
+     <!--
+-    <packet>@localstatedir@/jabberd/stats/s2s.packets</packet>
++    <packet>@LOGDIR@/jabberd.s2s.packets</packet>
+     -->
+   </stats>
+ 

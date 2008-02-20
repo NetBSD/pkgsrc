@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2008/01/18 05:06:24 tnn Exp $
+# $NetBSD: Makefile,v 1.44 2008/02/20 14:33:04 xtraeme Exp $
 #
 
-DISTNAME=		jabberd-2.1.14
-PKGREVISION=		3
+DISTNAME=		jabberd-2.1.23
 CATEGORIES=		chat
 MASTER_SITES=		http://ftp.xiaoka.com/jabberd2/releases/
 EXTRACT_SUFX=		.tar.bz2
@@ -32,6 +31,7 @@ CONFIGURE_ARGS+=	--enable-pipe
 CONFIGURE_ARGS+=	--enable-anon
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ARGS+=	--enable-fs
+CONFIGURE_ARGS+=	--with-sasl=gsasl
 
 USE_TOOLS+=		perl:run
 REPLACE_PERL+=		tools/*.pl
@@ -58,13 +58,16 @@ PKG_USERS=		${JABBERD_USER}:${JABBERD_GROUP}
 
 BINDIR=			${PREFIX}/bin
 EGDIR=			${PREFIX}/share/examples/jabberd
-CONF_FILES=		${EGDIR}/jabberd.cfg ${PKG_SYSCONFDIR}/jabberd.cfg
+DOCDIR=			${PREFIX}/share/doc/jabberd
 
-FILES=			c2s.xml resolver.xml router.xml			\
+FILES=			jabberd.cfg c2s.xml resolver.xml router.xml	\
 			router-users.xml router-filter.xml s2s.xml	\
-			sm.xml storage.xml
-DBFILES=		db-setup.mysql db-setup.pgsql db-update.mysql	\
-			db-setup-status.mysql db-setup.sqlite
+			sm.xml
+DBFILES=		db-jd14-2-jd2.sql db-setup.mysql db-setup.pgsql \
+			db-update.mysql	db-setup.sqlite
+DOCFILES=		README.protocol README UPGRADE ChangeLog
+
+INSTALLATION_DIRS=      bin share/examples/jabberd share/doc/jabberd
 
 .for f in ${FILES}
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
@@ -81,10 +84,9 @@ post-extract:
 .for f in ${FILES}
 	mv ${WRKSRC}/etc/${f}.dist.in ${WRKSRC}/etc/${f}.in
 .endfor
-	mv ${WRKSRC}/etc/jabberd.cfg.dist.in ${WRKSRC}/etc/jabberd.cfg.in
 
 pre-configure:
-.for f in ${FILES} jabberd.cfg
+.for f in ${FILES}
 	sed								\
 		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"		\
 		-e "s|@PIDDIR@|${JABBERD_PIDDIR}|g"			\
@@ -105,12 +107,16 @@ post-install:
 .for f in ${DBFILES}
 	${INSTALL_DATA} ${WRKSRC}/tools/${f} ${EGDIR}
 .endfor
-.for f in jabberd.cfg ${FILES}
+.for f in ${FILES}
 	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${EGDIR}
+.endfor
+.for f in ${DOCFILES}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}
 .endfor
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libidn/buildlink3.mk"
+.include "../../security/gsasl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
