@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.4 2007/05/26 11:50:12 xtraeme Exp $
+$NetBSD: patch-aa,v 1.5 2008/02/20 14:33:04 xtraeme Exp $
 
---- Makefile.in.orig	2007-05-26 12:01:18.000000000 +0200
-+++ Makefile.in	2007-05-26 12:01:22.000000000 +0200
-@@ -191,7 +191,7 @@
- top_builddir = @top_builddir@
- top_srcdir = @top_srcdir@
- EXTRA_DIST = PROTOCOL Doxyfile.in README.win32 contrib UPGRADE
+--- Makefile.in.orig	2008-02-03 08:23:47.000000000 -0600
++++ Makefile.in
+@@ -223,7 +223,7 @@ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ EXTRA_DIST = Doxyfile.in README.win32 README.protocol contrib UPGRADE
 -SUBDIRS = etc tools man mio subst sx util c2s resolver router s2s sm storage
 +SUBDIRS = tools man mio subst sx util c2s resolver router s2s sm storage
  all: config.h
