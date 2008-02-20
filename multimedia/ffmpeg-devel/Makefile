@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/02/20 10:15:30 xtraeme Exp $
+# $NetBSD: Makefile,v 1.6 2008/02/20 12:04:56 xtraeme Exp $
 
 DISTNAME=	ffmpeg-${DISTVERSION}
 PKGNAME=	ffmpeg-devel-${DISTVERSION:S/-//g}
@@ -19,11 +19,15 @@ USE_TOOLS+=	gmake texi2html pod2man
 
 REPLACE_PERL+=	doc/texi2pod.pl
 
-SUBST_CLASSES+=		conf
+SUBST_CLASSES+=		conf pc
 SUBST_STAGE.conf=	post-patch
 SUBST_FILES.conf=	ffserver.c
 SUBST_SED.conf=		-e 's,/etc/ffserver.conf,${PKG_SYSCONFDIR}/ffserver.conf,g'
 SUBST_MESSAGE.conf=	Fixing configuration path.
+SUBST_STAGE.pc=		pre-install
+SUBST_FILES.pc=		*.pc
+SUBST_SED.pc=		-e 's|-lx264||g'
+SUBST_MESSAGE.pc=	Fixing hardcoded libs.
 
 PLIST_SRC+=	${PKGDIR}/PLIST
 
