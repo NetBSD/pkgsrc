@@ -1,13 +1,13 @@
-# $NetBSD: Makefile.kde3,v 1.41 2007/10/20 10:34:50 markd Exp $
+# $NetBSD: Makefile.kde3,v 1.42 2008/02/20 09:45:55 markd Exp $
 #
 # This Makefile fragment is included at the top of package Makefiles for
 # KDE3-distributed packages (they all share common configure and build
 # settings).
 
 CATEGORIES+=	kde
-_KDE_VERSION=	3.5.8
-MASTER_SITE_KDE_I18N=	${MASTER_SITE_KDE:=3.5.8/src/kde-i18n/}
-MASTER_SITES?=	${MASTER_SITE_KDE:=3.5.8/src/}
+_KDE_VERSION=	3.5.9
+MASTER_SITE_KDE_I18N=	${MASTER_SITE_KDE:=3.5.9/src/kde-i18n/}
+MASTER_SITES?=	${MASTER_SITE_KDE:=3.5.9/src/}
 EXTRACT_SUFX?=	.tar.bz2
 
 MAINTAINER?=	markd@NetBSD.org
