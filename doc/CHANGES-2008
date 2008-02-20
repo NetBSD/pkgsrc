@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.336 2008/02/20 11:08:14 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.337 2008/02/20 11:31:14 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -652,3 +652,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-AnyEvent to 2.9 [xtraeme 2008-02-20]
 	Updated graphics/p5-cairo to 1.045 [xtraeme 2008-02-20]
 	Updated x11/p5-gtk2 to 1.164 [xtraeme 2008-02-20]
+	Downgraded x11/gtksourceview to 1.8.5 [xtraeme 2008-02-20]
+	Added x11/gtksourceview2 version 2.0.2 [xtraeme 2008-02-20]
