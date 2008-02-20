@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.332 2008/02/20 10:43:56 markd Exp $
+$NetBSD: CHANGES-2008,v 1.333 2008/02/20 10:54:30 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -556,11 +556,11 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/turba to 2.1.7 [adrianp 2008-02-19]
 	Updated mail/getmail to 4.8.0 [schmonz 2008-02-19]
 	Updated lang/guile to 1.8.4 [gdt 2008-02-19]
-	Updated multimedia/libmpeg3 to 1.7 [xtraeme 2008-02-19]
-	Added multimedia/ffmpeg-devel version 20071004 [xtraeme 2008-02-19]
+	Updated multimedia/libmpeg3 to 1.7 [xtraeme 2008-02-20]
+	Added multimedia/ffmpeg-devel version 20071004 [xtraeme 2008-02-20]
 	Updated comms/asterisk to 1.2.24nb2 [wiz 2008-02-20]
-	Updated multimedia/transcode to 1.0.5 [xtraeme 2008-02-19]
-	Updated multimedia/dvdrip to 0.98.8 [xtraeme 2008-02-19]
+	Updated multimedia/transcode to 1.0.5 [xtraeme 2008-02-20]
+	Updated multimedia/dvdrip to 0.98.8 [xtraeme 2008-02-20]
 	Updated meta-pkgs/kde3 to 3.5.9 [markd 2008-02-20]
 	Updated audio/arts to 1.5.9 [markd 2008-02-20]
 	Updated devel/kdesdk3 to 3.5.9 [markd 2008-02-20]
@@ -648,3 +648,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/kde3-i18n-zh_TW to 3.5.9 [markd 2008-02-20]
 	Updated devel/kdevelop-base to 3.5.1 [markd 2008-02-20]
 	Updated devel/kdevelop to 3.5.1 [markd 2008-02-20]
+	Updated devel/p5-glib2 to 1.164 [xtraeme 2008-02-20]
