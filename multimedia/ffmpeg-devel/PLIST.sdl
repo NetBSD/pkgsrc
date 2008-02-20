@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.sdl,v 1.1.1.1 2008/02/20 10:08:41 xtraeme Exp $
+bin/ffplay
