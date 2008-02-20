@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.339 2008/02/20 14:34:07 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.340 2008/02/20 19:32:06 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -656,3 +656,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added x11/gtksourceview2 version 2.0.2 [xtraeme 2008-02-20]
 	Updated multimedia/vlc to 0.8.6d [xtraeme 2008-02-20]
 	Updated chat/jabberd2 to 2.1.23 [xtraeme 2008-02-20]
+	Updated www/opera to 9.26 [xtraeme 2008-02-20]
