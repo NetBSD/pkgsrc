@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2006/09/27 06:02:00 martti Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2008/02/20 13:11:00 xtraeme Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 VLC_BUILDLINK3_MK:=	${VLC_BUILDLINK3_MK}+
@@ -12,11 +12,12 @@ BUILDLINK_PACKAGES+=	vlc
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}vlc
 
 .if ${VLC_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.vlc+=	vlc>=0.8.5nb4
-BUILDLINK_PKGSRCDIR.vlc?=	../../multimedia/vlc
+BUILDLINK_API_DEPENDS.vlc+=	vlc>=0.8.6d
+BUILDLINK_PKGSRCDIR.vlc?=	../../wip/vlc
 .endif	# VLC_BUILDLINK3_MK
 
 .include "../../audio/faad2/buildlink3.mk"
+.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/liba52/buildlink3.mk"
 .include "../../audio/libcddb/buildlink3.mk"
@@ -29,14 +30,16 @@ BUILDLINK_PKGSRCDIR.vlc?=	../../multimedia/vlc
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../wip/ffmpeg-devel/buildlink3.mk"
 .include "../../multimedia/libdvdplay/buildlink3.mk"
+.include "../../multimedia/libdvbpsi/buildlink3.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
 .include "../../multimedia/libdvdread/buildlink3.mk"
 .include "../../multimedia/libmatroska/buildlink3.mk"
 .include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../x11/wxGTK/buildlink3.mk"
+.include "../../x11/libXv/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
