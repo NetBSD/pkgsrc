@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.80 2008/01/18 05:08:36 tnn Exp $
+# $NetBSD: Makefile,v 1.81 2008/02/20 10:09:20 markd Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
-PKGREVISION=	2
 CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
 
@@ -26,6 +25,7 @@ REPLACE_PERL+=	kmail/kmail-3.1-update-new-mail-notification-settings.pl \
 		kmail/kmail-3.5-trigger-flag-migration.pl \
 		kmail/upgrade-signature.pl \
 		kmail/upgrade-transport.pl \
+		kresources/kolab/upgrade-resourcetype.pl \
 		libkpgp/kpgp-3.1-upgrade-address-data.pl
 
 CHECK_PORTABILITY_SKIP+=karm/test/booktime-baddate.sh \
