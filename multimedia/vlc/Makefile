@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2007/10/31 15:35:30 sborrill Exp $
+# $NetBSD: Makefile,v 1.47 2008/02/20 13:11:00 xtraeme Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
-PKGREVISION=		7
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VER}/
 EXTRACT_SUFX=		.tar.bz2
@@ -17,56 +16,55 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 USE_LANGUAGES=		c c++
+USE_DIRS+=		xdg-1.4
 
-VLC_VER=		0.8.5
+VLC_VER=		0.8.6d
 
 .include "../../mk/bsd.prefs.mk"
-
 .include "options.mk"
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--disable-vcd
 .endif
-BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2.0
+
+BUILDLINK_API_DEPENDS.zlib+=		zlib>=1.2.0
 BUILDLINK_API_DEPENDS.vcdimager+=	vcdimager>=0.7.20nb1
-BUILDLINK_API_DEPENDS.ffmpeg+=	ffmpeg>=0.4.8nb1 # Postprocess fix
 
 CONFIGURE_ARGS+=	--disable-speex # needs unstable 1.1.x branch
 CONFIGURE_ARGS+=	--disable-gtk
+CONFIGURE_ARGS+=	--enable-release
 CONFIGURE_ARGS+=	--disable-gnomevfs
 CONFIGURE_ARGS+=	--disable-gnutls
+CONFIGURE_ARGS+=	--with-ffmpeg-zlib
 CONFIGURE_ARGS+=	--disable-smb
-CONFIGURE_ARGS+=	--disable-mod
 CONFIGURE_ARGS+=	--disable-mpc
 CONFIGURE_ARGS+=	--disable-dts
-
-CONFIGURE_ARGS+=	--with-ffmpeg-tree=${BUILDLINK_PREFIX.ffmpeg}/lib
-CONFIGURE_ARGS+=	--with-ffmpeg-zlib
 CONFIGURE_ARGS+=	--enable-cddax
 CONFIGURE_ARGS+=	--enable-dvdread
 CONFIGURE_ARGS+=	--enable-faad
 CONFIGURE_ARGS+=	--enable-flac
 
+INSTALLATION_DIRS+=	${PREFIX}/share/vlc/http/dialogs \
+			${PREFIX}/share/vlc/http/images \
+			${PREFIX}/share/vlc/http/js \
+			${PREFIX}/share/vlc/http/old \
+			${PREFIX}/share/vlc/http/old/admin \
+			${PREFIX}/share/vlc/http/old/vlm \
+			${PREFIX}/share/vlc/http/requests \
+			${PREFIX}/share/vlc/osdmenu/default \
+			${PREFIX}/share/vlc/osdmenu/default/selected \
+			${PREFIX}/share/vlc/osdmenu/default/selection \
+			${PREFIX}/share/vlc/osdmenu/default/volume \
+			${PREFIX}/share/vlc/osdmenu/dvd/selected \
+			${PREFIX}/share/vlc/osdmenu/dvd/volume \
+			${PREFIX}/share/vlc/osdmenu/dvd/unselect \
+			${PREFIX}/share/vlc/osdmenu/dvd/selection \
+			${PREFIX}/share/vlc/skins2 \
+			${PREFIX}/share/vlc/skins2/fonts
+
 pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/dialogs
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/images
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/js
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/old
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/old/admin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/old/vlm
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/http/requests
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/default
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/default/selected
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/default/selection
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/default/volume
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/dvd/selected
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/dvd/volume
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/dvd/unselect
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/osdmenu/dvd/selection
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/skins2
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vlc/skins2/fonts
-	${INSTALL_DATA} ${WRKSRC}/doc/vlc.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/doc/vlc-config.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/doc/vlc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/doc/vlc-config.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 ORIGFNT=		/usr/share/fonts/truetype/freefont/FreeSerifBold.ttf
 DEFAULT_FONT?=		${X11BASE}/lib/X11/fonts/TTF/luximb.ttf
@@ -85,8 +83,6 @@ SUBST_STAGE.fnt=	post-patch
 SUBST_SED.fnt=		-e "s,${ORIGFNT},${DEFAULT_FONT},"
 SUBST_FILES.fnt=	modules/misc/freetype.c
 SUBST_MESSAGE.fnt=	Fixing hardcoded paths.
-
-BUILDLINK_FNAME_TRANSFORM.ffmpeg+=	-e "s,include/ffmpeg,include/,g"
 
 .if ${OPSYS} == "NetBSD"
 PLIST_SUBST+=		COND_CDDA="@comment "
@@ -114,7 +110,7 @@ CONFIGURE_ARGS+=	x_libraries=${PREFIX}/lib
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
-.include "../../multimedia/ffmpeg/buildlink3.mk"
+.include "../../multimedia/ffmpeg-devel/buildlink3.mk"
 .include "../../multimedia/libdvdplay/buildlink3.mk"
 .include "../../multimedia/libdvbpsi/buildlink3.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
@@ -125,6 +121,8 @@ CONFIGURE_ARGS+=	x_libraries=${PREFIX}/lib
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
+.include "../../x11/libXdamage/buildlink3.mk"
+.include "../../x11/libdrm/buildlink3.mk"
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

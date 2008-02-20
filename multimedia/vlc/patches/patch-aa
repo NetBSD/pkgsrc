@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.4 2006/09/26 07:27:19 martti Exp $
+$NetBSD: patch-aa,v 1.5 2008/02/20 13:11:00 xtraeme Exp $
 
---- include/vlc_common.h.orig	2006-05-19 19:46:18.000000000 +0000
-+++ include/vlc_common.h
-@@ -873,7 +873,7 @@ static inline void _SetQWBE( uint8_t *p,
- #   define vlc_strtoll NULL
- #endif
+--- configure.orig	2007-11-27 20:22:58.000000000 +0100
++++ configure
+@@ -64116,7 +64116,7 @@ fi
  
--#if defined(SYS_BEOS)
-+#if defined(SYS_BEOS) || defined(__DragonFly__)
-     typedef struct {
-         long long quot; /* Quotient. */
-         long long rem;  /* Remainder. */
+ if test "${enable_java_bindings}" = "yes"
+ then
+-  if test "x${JAVA_HOME}" == "x"; then
++  if test "x${JAVA_HOME}" = "x"; then
+   { { echo "$as_me:$LINENO: error: Please set the JAVA_HOME variable to your JDK environment" >&5
+ echo "$as_me: error: Please set the JAVA_HOME variable to your JDK environment" >&2;}
+    { (exit 1); exit 1; }; }
