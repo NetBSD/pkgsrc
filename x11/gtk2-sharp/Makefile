@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/02/19 13:47:37 xtraeme Exp $
+# $NetBSD: Makefile,v 1.11 2008/02/20 18:44:27 drochner Exp $
 #
 
 DISTNAME=		gtk-sharp-2.10.3
@@ -11,7 +11,7 @@ COMMENT=		C\# bindings for GTK
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		pkg-config gmake
+USE_TOOLS+=		pkg-config gmake perl:run
 GNU_CONFIGURE=		yes
 
 REPLACE_PERL+=		parser/*.pl
