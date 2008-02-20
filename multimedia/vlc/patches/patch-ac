@@ -1,0 +1,40 @@
+$NetBSD: patch-ac,v 1.3 2008/02/20 13:11:00 xtraeme Exp $
+
+--- include/vlc_threads_funcs.h.orig	2007-11-26 14:08:12.000000000 +0100
++++ include/vlc_threads_funcs.h
+@@ -111,7 +111,7 @@ static inline int __vlc_mutex_lock( cons
+     i_result = pthread_mutex_lock( &p_mutex->mutex );
+     if ( i_result )
+     {
+-        i_thread = (int)pthread_self();
++        i_thread = (intptr_t)pthread_self();
+         psz_error = strerror(i_result);
+     }
+ 
+@@ -184,7 +184,7 @@ static inline int __vlc_mutex_unlock( co
+     i_result = pthread_mutex_unlock( &p_mutex->mutex );
+     if ( i_result )
+     {
+-        i_thread = (int)pthread_self();
++        i_thread = (intptr_t)pthread_self();
+         psz_error = strerror(i_result);
+     }
+ 
+@@ -322,7 +322,7 @@ static inline int __vlc_cond_signal( con
+     i_result = pthread_cond_signal( &p_condvar->cond );
+     if ( i_result )
+     {
+-        i_thread = (int)pthread_self();
++        i_thread = (intptr_t)pthread_self();
+         psz_error = strerror(i_result);
+     }
+ 
+@@ -512,7 +512,7 @@ static inline int __vlc_cond_wait( const
+ 
+     if ( i_result )
+     {
+-        i_thread = (int)pthread_self();
++        i_thread = (intptr_t)pthread_self();
+         psz_error = strerror(i_result);
+     }
+ 
