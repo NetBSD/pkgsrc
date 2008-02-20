@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/02/20 11:23:41 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/20 11:30:20 xtraeme Exp $
 #
 
 DISTNAME=	gtksourceview-${DISTVER}
@@ -17,7 +17,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 
-PKGCONFIG_OVERRIDE=	gtksourceview-1.0.pc.in
+PKGCONFIG_OVERRIDE=	gtksourceview-2.0.pc.in
 
 CONFIGURE_ARGS+=	--disable-build-tests
 
