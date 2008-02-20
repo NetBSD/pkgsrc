@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7067 2008/02/20 10:38:23 xtraeme Exp $
+$NetBSD: TODO,v 1.7068 2008/02/20 10:54:30 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1058,7 +1058,6 @@ Suggested package updates
 	o p5-XML-LibXSLT-1.66
 	o p5-XML-RAI-1.04
 	o p5-XML-Stream-1.22
-	o p5-glib2-1.160
 	o p5-gtk2-1.160
 	o p5-ispman-1.2
 	o p5-prefork-1.02
