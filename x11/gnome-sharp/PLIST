@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/19 13:48:13 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/02/20 18:46:27 drochner Exp $
 bin/gconfsharp2-schemagen
 lib/gtk-sharp-2.0/gconfsharp-schemagen.exe
 lib/libgnomesharpglue-2.la
@@ -112,8 +112,6 @@ share/gapi-2.0/gnome-vfs-api.xml
 share/gapi-2.0/gtkhtml-api.xml
 share/gapi-2.0/rsvg-api.xml
 share/gapi-2.0/vte-api.xml
-@dirrm share/gapi-2.0
-@dirrm lib/mono/gtk-sharp-2.0
 @dirrm lib/mono/gac/vte-sharp/2.16.0.0__35e10195dab3c99f
 @dirrm lib/mono/gac/vte-sharp
 @dirrm lib/mono/gac/rsvg-sharp/2.16.0.0__35e10195dab3c99f
