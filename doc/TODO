@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7065 2008/02/20 09:57:36 xtraeme Exp $
+$NetBSD: TODO,v 1.7066 2008/02/20 10:20:55 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1338,7 +1338,6 @@ Suggested package updates
 	o tob-0.26
 	o tpasm-1.2
 	o tpb-0.6.4
-	o transcode-1.0.5
 	o transfig-3.2.5
 	o trio-1.12
 	o tripwire-2.3.1 [see also pkg/22362]
