@@ -1,11 +1,10 @@
-# $NetBSD: options.mk,v 1.5 2008/02/20 22:31:06 jlam Exp $
+# $NetBSD: options.mk,v 1.6 2008/02/20 22:53:49 jlam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cone
-PKG_SUPPORTED_OPTIONS=		aspell ldap
-PKG_OPTIONS_REQUIRED_GROUPS=	display tls
-PKG_OPTIONS_GROUP.display=	curses wide-curses
+PKG_SUPPORTED_OPTIONS=		aspell ldap wide-curses
+PKG_OPTIONS_REQUIRED_GROUPS=	tls
 PKG_OPTIONS_GROUP.tls=		gnutls ssl
-PKG_SUGGESTED_OPTIONS=		aspell curses ldap ssl
+PKG_SUGGESTED_OPTIONS=		aspell ldap ssl
 
 .include "../../mk/bsd.options.mk"
 
@@ -17,14 +16,6 @@ PKG_SUGGESTED_OPTIONS=		aspell curses ldap ssl
 .if !empty(PKG_OPTIONS:Maspell)
 .  include "../../textproc/aspell/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-spellcheck=aspell
-.endif
-
-###
-### Curses display
-###
-.if !empty(PKG_OPTIONS:Mcurses)
-USE_NCURSES=	yes	# termattrs()
-.  include "../../devel/ncurses/buildlink3.mk"
 .endif
 
 ###
@@ -62,4 +53,7 @@ CONFIGURE_ARGS+=	--with-gnutls
 .if !empty(PKG_OPTIONS:Mwide-curses)
 USE_NCURSESW=	yes	# termattrs()
 .  include "../../devel/ncursesw/buildlink3.mk"
+.else
+USE_NCURSES=	yes	# termattrs()
+.  include "../../devel/ncurses/buildlink3.mk"
 .endif
