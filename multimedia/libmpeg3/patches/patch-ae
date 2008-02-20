@@ -1,18 +1,25 @@
-$NetBSD: patch-ae,v 1.6 2005/12/06 17:47:56 joerg Exp $
+$NetBSD: patch-ae,v 1.7 2008/02/20 09:56:44 xtraeme Exp $
 
---- mpeg3io.c.orig	2001-05-20 13:05:26.000000000 +1000
-+++ mpeg3io.c
-@@ -1,8 +1,21 @@
+--- mpeg3io.c.orig	2005-05-01 07:57:56.000000000 +0200
++++ mpeg3io.c	2008-02-19 19:25:09.000000000 +0100
+@@ -1,11 +1,27 @@
  #include "mpeg3private.h"
  #include "mpeg3protos.h"
  
 -#include <mntent.h>
+ #include <stdint.h>
+ #include <stdlib.h>
+ #include <string.h>
 -#include <sys/stat.h>
++
 +#if defined(__NetBSD__) || defined(__DragonFly__)
 +# include <sys/param.h>
 +# include <sys/mount.h>
 +
 +# if defined(__NetBSD__) && __NetBSD_Version__ >= 299000900   /* 2.99.9 */
++#  define fopen64 fopen
++#  define fseeko64 fseek
++#  define stat64 stat
 +#  define statfs statvfs
 +# endif
 +
@@ -22,11 +29,10 @@ $NetBSD: patch-ae,v 1.6 2005/12/06 17:47:56 joerg Exp $
 +# include <mntent.h>
 +# include <sys/stat.h>
 +#endif
-+
- #include <stdlib.h>
- #include <string.h>
  
-@@ -88,16 +101,25 @@ int mpeg3io_read_data(unsigned char *buf
+ mpeg3_fs_t* mpeg3_new_fs(char *path)
+ {
+@@ -215,16 +231,26 @@
  
  int mpeg3io_device(char *path, char *device)
  {
@@ -35,11 +41,12 @@ $NetBSD: patch-ae,v 1.6 2005/12/06 17:47:56 joerg Exp $
 +
 +	if (statfs(path, &file_st) < 0)
 +#else
- 	struct stat file_st, device_st;
++
+ 	struct stat64 file_st, device_st;
      struct mntent *mnt;
  	FILE *fp;
  
- 	if(stat(path, &file_st) < 0)
+ 	if(stat64(path, &file_st) < 0)
 +#endif
  	{
  		perror("mpeg3io_device");
@@ -52,7 +59,7 @@ $NetBSD: patch-ae,v 1.6 2005/12/06 17:47:56 joerg Exp $
  	fp = setmntent(MOUNTED, "r");
      while(fp && (mnt = getmntent(fp)))
  	{
-@@ -109,6 +131,7 @@ int mpeg3io_device(char *path, char *dev
+@@ -236,6 +262,7 @@
  		}
  	}
  	endmntent(fp);
