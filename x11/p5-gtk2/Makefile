@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/05/13 22:57:57 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2008/02/20 11:07:29 xtraeme Exp $
 
 DISTNAME=	Gtk2-${DIST_VER}
 PKGNAME=	p5-gtk2-${DIST_VER}
@@ -14,7 +14,7 @@ DEPENDS+=	p5-ExtUtils-PkgConfig>=1.03:../../devel/p5-ExtUtils-PkgConfig
 
 USE_TOOLS+=	pkg-config
 
-DIST_VER=	1.144
+DIST_VER=	1.164
 
 PERL5_PACKLIST=	auto/Gtk2/.packlist
 
