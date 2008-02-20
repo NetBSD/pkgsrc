@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/02/20 11:30:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/20 12:26:07 drochner Exp $
 #
 
 DISTNAME=	gtksourceview-${DISTVER}
@@ -26,7 +26,6 @@ DISTVER=		2.0.2
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
