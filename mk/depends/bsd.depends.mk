@@ -1,4 +1,4 @@
-# $NetBSD: bsd.depends.mk,v 1.16 2008/02/07 21:36:13 rillig Exp $
+# $NetBSD: bsd.depends.mk,v 1.17 2008/02/20 10:43:55 rillig Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and provides all
 # variables and targets related to dependencies.
@@ -9,7 +9,7 @@
 #
 # The following variables may be set by the pkgsrc user:
 #
-# SKIP_DEPENDS: YesNo
+# SKIP_DEPENDS
 #	Whether to run the ``depends'' phase.  This is probably only
 #	useful for pkgsrc developers.
 #
