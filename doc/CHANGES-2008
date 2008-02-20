@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.327 2008/02/20 09:57:36 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.328 2008/02/20 10:13:29 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -557,3 +557,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/getmail to 4.8.0 [schmonz 2008-02-19]
 	Updated lang/guile to 1.8.4 [gdt 2008-02-19]
 	Updated multimedia/libmpeg3 to 1.7 [xtraeme 2008-02-19]
+	Added multimedia/ffmpeg-devel version 20071004 [xtraeme 2008-02-19]
