@@ -1,18 +1,16 @@
-# $NetBSD: options.mk,v 1.18 2007/08/26 09:10:54 xtraeme Exp $
+# $NetBSD: options.mk,v 1.19 2008/02/20 14:33:04 xtraeme Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jabberd2
-PKG_OPTIONS_REQUIRED_GROUPS=	auth storage sasl
+PKG_OPTIONS_REQUIRED_GROUPS=	auth storage
 # Authentication backend
 PKG_OPTIONS_GROUP.auth=		auth-mysql auth-pgsql auth-sqlite
 PKG_OPTIONS_GROUP.auth+=	auth-db auth-ldap auth-pam
 # Storage backend
 PKG_OPTIONS_GROUP.storage=	storage-mysql storage-pgsql
 PKG_OPTIONS_GROUP.storage+=	storage-sqlite storage-db
-# SASL implementation
-PKG_OPTIONS_GROUP.sasl=		cyrus-sasl gnusasl
 PKG_SUPPORTED_OPTIONS+=		debug
-PKG_SUGGESTED_OPTIONS=		auth-sqlite storage-sqlite gnusasl
+PKG_SUGGESTED_OPTIONS=		auth-sqlite storage-sqlite
 
 .include "../../mk/bsd.options.mk"
 
@@ -66,16 +64,6 @@ CONFIGURE_ARGS+=	--enable-ldap
 .else
 PLIST_SUBST+=		LDAP_OPT='@comment '
 CONFIGURE_ARGS+=	--disable-ldap
-.endif
-
-.if !empty(PKG_OPTIONS:Mcyrus-sasl)
-CONFIGURE_ARGS+=	--enable-sasl=cyrus
-.  include "../../security/cyrus-sasl/buildlink3.mk"
-.endif
-
-.if !empty(PKG_OPTIONS:Mgnusasl)
-CONFIGURE_ARGS+=	--enable-sasl=gsasl
-.  include "../../security/gsasl/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mauth-pam)
