@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.mk,v 1.4 2007/03/16 10:29:22 rillig Exp $
+# $NetBSD: check-portability.mk,v 1.5 2008/02/20 10:27:35 rillig Exp $
 #
 # This file contains some checks that are applied to the configure
 # scripts to check for certain constructs that are known to cause
@@ -20,6 +20,7 @@
 #
 #	Default value: no
 #	Deprecated: Use CHECK_PORTABILITY_SKIP instead.
+#	Obsolete since 2008-02-20.
 #
 # CHECK_PORTABILITY_SKIP: List of Pathmask
 #	The list of files that should be skipped in the portability
@@ -30,17 +31,18 @@
 
 _VARGROUPS+=			check-portability
 _USER_VARS.check-portability=	CHECK_PORTABILITY
-_PKG_VARS.check-portability=	SKIP_PORTABILITY_CHECK CHECK_PORTABILITY_SKIP
+_PKG_VARS.check-portability=	CHECK_PORTABILITY_SKIP
 
 .if defined(PKG_DEVELOPER)
 CHECK_PORTABILITY?=		yes
 .endif
 CHECK_PORTABILITY?=		no
-SKIP_PORTABILITY_CHECK?=	no
+.if defined(SKIP_PORTABILITY_CHECK)
+PKG_FAIL_REASON+=		"[check-portability.mk] SKIP_PORTABILITY_CHECK is obsolete."
+.endif
 CHECK_PORTABILITY_SKIP?=	# none
 
-.if ${CHECK_PORTABILITY:M[Yy][Ee][Ss]} != "" && \
-    ${SKIP_PORTABILITY_CHECK:M[Yy][Ee][Ss]} == ""
+.if ${CHECK_PORTABILITY:M[Yy][Ee][Ss]} != ""
 pre-configure-checks-hook: _check-portability
 .endif
 .PHONY: _check-portability
