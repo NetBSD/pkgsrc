@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/07/04 20:54:38 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2008/02/20 10:16:52 rillig Exp $
 
 PKGNAME=		${DISTNAME}
 PKGREVISION=		2
@@ -9,7 +9,7 @@ COMMENT=		Tool for distributed C/C++ compiling
 PKG_SYSCONFSUBDIR=	distcc
 RCD_SCRIPTS=		distccd
 
-SKIP_PORTABILITY_CHECK=	yes
+CHECK_PORTABILITY_SKIP+=	contrib/redhat/init
 
 .include "../../mk/bsd.prefs.mk"
 
