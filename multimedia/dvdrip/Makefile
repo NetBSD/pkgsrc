@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.38 2008/02/20 10:37:36 xtraeme Exp $
+# $NetBSD: Makefile,v 1.39 2008/02/20 12:17:59 xtraeme Exp $
 #
 
 DISTNAME=	dvdrip-0.98.8
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	multimedia x11 sysutils
 MASTER_SITES=	http://www.exit1.org/dvdrip/dist/
 
@@ -16,7 +16,7 @@ DEPENDS+=	p5-Event-RPC>=0.90:../../devel/p5-Event-RPC
 DEPENDS+=	lsdvd>=0.16nb3:../../multimedia/lsdvd
 DEPENDS+=	mplayer>=0.90:../../multimedia/mplayer
 DEPENDS+=	ogmtools-[0-9]*:../../multimedia/ogmtools
-DEPENDS+=	transcode>=1.0.2:../../multimedia/transcode
+DEPENDS+=	transcode>=1.0.5nb1:../../multimedia/transcode
 DEPENDS+=	xine-ui>=0.9.15:../../multimedia/xine-ui
 DEPENDS+=	xvid4conf>=1.12:../../multimedia/xvid4conf
 DEPENDS+=	fping>=2.2:../../net/fping
