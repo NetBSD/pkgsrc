@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2008/02/13 12:07:24 martti Exp $
+# $NetBSD: Makefile,v 1.25 2008/02/20 04:24:17 jlam Exp $
 #
 
 DISTNAME=	openvpn-2.1_rc7
 PKGNAME=	openvpn-2.1rc7
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://openvpn.net/release/ \
 		http://openvpn.net/release/old/
@@ -12,6 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openvpn.net/
 COMMENT=	Easy-to-use SSL VPN daemon
 #LICENSE=	gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		grep:run
@@ -54,6 +56,7 @@ DL_AUTO_VARS=		yes
 .include "../../net/solaris-tap/buildlink3.mk"
 .endif
 
+REPLACE_SH=		easy-rsa/2.0/*
 SUBST_CLASSES+=		pkitool
 SUBST_STAGE.pkitool=	post-build
 SUBST_MESSAGE.pkitool=	Fixing up default paths to grep & openssl in pkitool.
@@ -67,19 +70,20 @@ post-install:
 		case $$file in						\
 		*.orig)	;;						\
 		[A-Z]*|*.cnf|vars)					\
-			${INSTALL_DATA} $$file ${EASYRSADIR:Q} ;;	\
-		*)	${INSTALL_SCRIPT} $$file ${EASYRSADIR:Q} ;;	\
+			${INSTALL_DATA} $$file ${DESTDIR}${EASYRSADIR:Q} ;;	\
+		*)	${INSTALL_SCRIPT} $$file ${DESTDIR}${EASYRSADIR:Q} ;;	\
 		esac;							\
 	done
-	${INSTALL_DATA} ${WRKSRC:Q}/management/management-notes.txt ${DOCDIR:Q}
+	${INSTALL_DATA} ${WRKSRC:Q}/management/management-notes.txt	\
+		${DESTDIR}${DOCDIR:Q}
 	cd ${WRKSRC:Q}/sample-config-files; for file in *; do		\
-		${INSTALL_DATA} $$file ${EGDIR:Q}/config;		\
+		${INSTALL_DATA} $$file ${DESTDIR}${EGDIR:Q}/config;	\
 	done
 	cd ${WRKSRC:Q}/sample-scripts; for file in *; do		\
-		${INSTALL_DATA} $$file ${EGDIR:Q}/scripts;		\
+		${INSTALL_DATA} $$file ${DESTDIR}${EGDIR:Q}/scripts;	\
 	done
 	cd ${WRKSRC:Q}/sample-keys; for file in *; do			\
-		${INSTALL_DATA} $$file ${EGDIR:Q}/keys;			\
+		${INSTALL_DATA} $$file ${DESTDIR}${EGDIR:Q}/keys;	\
 	done
 
 .include "../../mk/bsd.pkg.mk"
