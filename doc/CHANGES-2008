@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.330 2008/02/20 10:20:55 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.331 2008/02/20 10:38:23 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -560,3 +560,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added multimedia/ffmpeg-devel version 20071004 [xtraeme 2008-02-19]
 	Updated comms/asterisk to 1.2.24nb2 [wiz 2008-02-20]
 	Updated multimedia/transcode to 1.0.5 [xtraeme 2008-02-19]
+	Updated multimedia/dvdrip to 0.98.8 [xtraeme 2008-02-19]
