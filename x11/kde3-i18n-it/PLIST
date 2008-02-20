@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2007/10/20 10:53:11 markd Exp $
+@comment $NetBSD: PLIST,v 1.29 2008/02/20 10:36:05 markd Exp $
 share/doc/kde/HTML/it/KRegExpEditor/common
 share/doc/kde/HTML/it/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/it/KRegExpEditor/index.docbook
@@ -28,11 +28,66 @@ share/doc/kde/HTML/it/atlantik/man-atlantik.6.docbook
 share/doc/kde/HTML/it/blinken/common
 share/doc/kde/HTML/it/blinken/index.cache.bz2
 share/doc/kde/HTML/it/blinken/index.docbook
+share/doc/kde/HTML/it/common/1.png
+share/doc/kde/HTML/it/common/10.png
+share/doc/kde/HTML/it/common/2.png
+share/doc/kde/HTML/it/common/3.png
+share/doc/kde/HTML/it/common/4.png
+share/doc/kde/HTML/it/common/5.png
+share/doc/kde/HTML/it/common/6.png
+share/doc/kde/HTML/it/common/7.png
+share/doc/kde/HTML/it/common/8.png
+share/doc/kde/HTML/it/common/9.png
+share/doc/kde/HTML/it/common/appheader.html
+share/doc/kde/HTML/it/common/artistic-license.html
+share/doc/kde/HTML/it/common/bottom-left.png
+share/doc/kde/HTML/it/common/bottom-middle.png
+share/doc/kde/HTML/it/common/bottom-right.png
+share/doc/kde/HTML/it/common/bottom1.png
+share/doc/kde/HTML/it/common/bottom2.png
+share/doc/kde/HTML/it/common/bsd-license.html
+share/doc/kde/HTML/it/common/docheadergears.png
+share/doc/kde/HTML/it/common/doctop1.png
+share/doc/kde/HTML/it/common/doctop1a.png
+share/doc/kde/HTML/it/common/doctop1b.png
+share/doc/kde/HTML/it/common/doctop2.png
+share/doc/kde/HTML/it/common/doxygen.css
+share/doc/kde/HTML/it/common/favicon.ico
+share/doc/kde/HTML/it/common/fdl-license
+share/doc/kde/HTML/it/common/fdl-license.html
+share/doc/kde/HTML/it/common/fdl-notice.html
 share/doc/kde/HTML/it/common/fdl-translated.html
+share/doc/kde/HTML/it/common/footer.html
+share/doc/kde/HTML/it/common/gpl-license
+share/doc/kde/HTML/it/common/gpl-license.html
 share/doc/kde/HTML/it/common/gpl-translated.html
+share/doc/kde/HTML/it/common/grad.png
+share/doc/kde/HTML/it/common/header.html
+share/doc/kde/HTML/it/common/headerbg.png
+share/doc/kde/HTML/it/common/kde-common.css
+share/doc/kde/HTML/it/common/kde-default.css
 share/doc/kde/HTML/it/common/kde-localised.css
+share/doc/kde/HTML/it/common/kde-localised.css.template
+share/doc/kde/HTML/it/common/kde-web.css
+share/doc/kde/HTML/it/common/kde_gear_64.png
+share/doc/kde/HTML/it/common/kde_logo.png
+share/doc/kde/HTML/it/common/kde_logo_bg.png
+share/doc/kde/HTML/it/common/kmenu.png
+share/doc/kde/HTML/it/common/lgpl-license
+share/doc/kde/HTML/it/common/lgpl-license.html
 share/doc/kde/HTML/it/common/lgpl-translated.html
 share/doc/kde/HTML/it/common/logotp3.png
+share/doc/kde/HTML/it/common/mainfooter.html
+share/doc/kde/HTML/it/common/mainheader.html
+share/doc/kde/HTML/it/common/qpl-license.html
+share/doc/kde/HTML/it/common/shadow.png
+share/doc/kde/HTML/it/common/top-left.png
+share/doc/kde/HTML/it/common/top-middle.png
+share/doc/kde/HTML/it/common/top-right-konqueror.png
+share/doc/kde/HTML/it/common/web-docbottom.png
+share/doc/kde/HTML/it/common/web-doctop.png
+share/doc/kde/HTML/it/common/x11-license.html
+share/doc/kde/HTML/it/common/xml.dcl
 share/doc/kde/HTML/it/irkick/common
 share/doc/kde/HTML/it/irkick/index.cache.bz2
 share/doc/kde/HTML/it/irkick/index.docbook
@@ -45,6 +100,9 @@ share/doc/kde/HTML/it/kaboodle/index.docbook
 share/doc/kde/HTML/it/kaddressbook/common
 share/doc/kde/HTML/it/kaddressbook/index.cache.bz2
 share/doc/kde/HTML/it/kaddressbook/index.docbook
+share/doc/kde/HTML/it/kalarm/common
+share/doc/kde/HTML/it/kalarm/index.cache.bz2
+share/doc/kde/HTML/it/kalarm/index.docbook
 share/doc/kde/HTML/it/kalzium/common
 share/doc/kde/HTML/it/kalzium/gradient.png
 share/doc/kde/HTML/it/kalzium/index.cache.bz2
@@ -1959,6 +2017,7 @@ share/locale/it/LC_MESSAGES/kio_nntp.mo
 share/locale/it/LC_MESSAGES/kio_pop3.mo
 share/locale/it/LC_MESSAGES/kio_print.mo
 share/locale/it/LC_MESSAGES/kio_remote.mo
+share/locale/it/LC_MESSAGES/kio_scalix.mo
 share/locale/it/LC_MESSAGES/kio_settings.mo
 share/locale/it/LC_MESSAGES/kio_sftp.mo
 share/locale/it/LC_MESSAGES/kio_sieve.mo
@@ -2066,6 +2125,7 @@ share/locale/it/LC_MESSAGES/kres_groupware.mo
 share/locale/it/LC_MESSAGES/kres_groupwise.mo
 share/locale/it/LC_MESSAGES/kres_kolab.mo
 share/locale/it/LC_MESSAGES/kres_remote.mo
+share/locale/it/LC_MESSAGES/kres_scalix.mo
 share/locale/it/LC_MESSAGES/kres_tvanytime.mo
 share/locale/it/LC_MESSAGES/kres_xmlrpc.mo
 share/locale/it/LC_MESSAGES/kreversi.mo
@@ -2196,6 +2256,7 @@ share/locale/it/LC_MESSAGES/privacy.mo
 share/locale/it/LC_MESSAGES/quanta.mo
 share/locale/it/LC_MESSAGES/quicklauncher.mo
 share/locale/it/LC_MESSAGES/rellinks.mo
+share/locale/it/LC_MESSAGES/scalixadmin.mo
 share/locale/it/LC_MESSAGES/searchbarplugin.mo
 share/locale/it/LC_MESSAGES/secpolicy.mo
 share/locale/it/LC_MESSAGES/spy.mo
@@ -2225,7 +2286,6 @@ share/locale/it/flag.png
 @dirrm share/kde/apps/klettres/it
 @comment in kde: @dirrm share/kde/apps/klettres
 @dirrm share/kde/apps/klatin/data/vocabs/it
-@dirrm share/kde/apps/klatin/data/vocabs
 @dirrm share/kde/apps/khangman/data/it
 @comment in kde: @dirrm share/kde/apps/khangman/data
 @comment in kde: @dirrm share/kde/apps/katepart/syntax
@@ -2487,6 +2547,7 @@ share/locale/it/flag.png
 @dirrm share/doc/kde/HTML/it/kanagram
 @dirrm share/doc/kde/HTML/it/kamera
 @dirrm share/doc/kde/HTML/it/kalzium
+@dirrm share/doc/kde/HTML/it/kalarm
 @dirrm share/doc/kde/HTML/it/kaddressbook
 @dirrm share/doc/kde/HTML/it/kaboodle
 @dirrm share/doc/kde/HTML/it/juk
