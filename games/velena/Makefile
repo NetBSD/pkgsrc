@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2008/02/02 17:05:00 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2008/02/20 10:49:16 rillig Exp $
 #
 
 DISTNAME=	veleng10
 PKGNAME=	velena-1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games
 MASTER_SITES=	http://www.ce.unipr.it/~gbe/
 EXTRACT_SUFX=	.zip
@@ -12,7 +12,7 @@ MAINTAINER=	rillig@NetBSD.org
 HOMEPAGE=	http://www.ce.unipr.it/~gbe/
 COMMENT=	Perfect-play engine for connect four
 
-LICENSE=		public-domain
+LICENSE=		velena-license
 RESTRICTED=		You must not charge a fee for this software nor for any derived work in which this software is included.
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
