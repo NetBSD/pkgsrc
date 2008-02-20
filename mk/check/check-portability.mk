@@ -1,4 +1,4 @@
-# $NetBSD: check-portability.mk,v 1.5 2008/02/20 10:27:35 rillig Exp $
+# $NetBSD: check-portability.mk,v 1.6 2008/02/20 10:43:55 rillig Exp $
 #
 # This file contains some checks that are applied to the configure
 # scripts to check for certain constructs that are known to cause
@@ -6,7 +6,7 @@
 #
 # The following variables may be set by the pkgsrc user in mk.conf:
 #
-# CHECK_PORTABILITY: YesNo
+# CHECK_PORTABILITY
 #	Whether to enable some portability checks for the configure
 #	scripts before they are run.
 #
@@ -14,7 +14,7 @@
 #
 # The following variables may be set by the package:
 #
-# SKIP_PORTABILITY_CHECK: YesNo
+# SKIP_PORTABILITY_CHECK
 #	Whether the above checks should be skipped for the current
 #	package.
 #
@@ -22,12 +22,12 @@
 #	Deprecated: Use CHECK_PORTABILITY_SKIP instead.
 #	Obsolete since 2008-02-20.
 #
-# CHECK_PORTABILITY_SKIP: List of Pathmask
+# CHECK_PORTABILITY_SKIP
 #	The list of files that should be skipped in the portability
 #	check.
 #
 #	Default value: empty.
-#
+#	Example: debian/*
 
 _VARGROUPS+=			check-portability
 _USER_VARS.check-portability=	CHECK_PORTABILITY
