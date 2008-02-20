@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.337 2008/02/20 11:31:14 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.338 2008/02/20 13:12:00 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -654,3 +654,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/p5-gtk2 to 1.164 [xtraeme 2008-02-20]
 	Downgraded x11/gtksourceview to 1.8.5 [xtraeme 2008-02-20]
 	Added x11/gtksourceview2 version 2.0.2 [xtraeme 2008-02-20]
+	Updated multimedia/vlc to 0.8.6d [xtraeme 2008-02-20]
