@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/02/20 10:12:04 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/20 10:15:30 xtraeme Exp $
 
 DISTNAME=	ffmpeg-${DISTVERSION}
 PKGNAME=	ffmpeg-devel-${DISTVERSION:S/-//g}
@@ -16,8 +16,6 @@ DISTVERSION=	2007-10-04
 HAS_CONFIGURE=	YES
 USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake texi2html pod2man
-
-CONFLICTS+=	ffmpeg-devel-[0-9]*
 
 REPLACE_PERL+=	doc/texi2pod.pl
 
