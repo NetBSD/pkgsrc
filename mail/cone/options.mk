@@ -1,3 +1,5 @@
+# $NetBSD: options.mk,v 1.4 2008/02/20 13:18:24 wiz Exp $
+
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cone
 PKG_SUPPORTED_OPTIONS=		aspell ldap
 PKG_SUGGESTED_OPTIONS=		aspell ldap
