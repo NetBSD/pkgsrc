@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7072 2008/02/20 13:53:38 obache Exp $
+$NetBSD: TODO,v 1.7073 2008/02/20 14:34:07 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -771,7 +771,6 @@ Suggested package updates
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
 	o jabberd-1.4.4
-	o jabberd2-2.1.22
 	o jam-2.5.2 [pkg/37285]
 	o java-lang-spec-3.0
 	o jcabc2ps-20070110
