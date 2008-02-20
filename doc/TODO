@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7073 2008/02/20 14:34:07 xtraeme Exp $
+$NetBSD: TODO,v 1.7074 2008/02/20 22:32:07 jlam Exp $
 
 Suggested new packages
 ======================
@@ -508,7 +508,6 @@ Suggested package updates
 	o cmus-2.2.0 [pkg/37856]
 	o cocoon-2.1.10
 	o compiz-0.6.2
-	o cone-0.74
 	o connect-1.96
 	o control-center-2.20.1
 	o cook-2.30
