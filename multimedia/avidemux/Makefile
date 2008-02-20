@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.45 2008/02/19 09:11:43 xtraeme Exp $
+# $NetBSD: Makefile,v 1.46 2008/02/20 15:46:53 xtraeme Exp $
 #
 
 DISTNAME=	avidemux_2.4.1
 PKGNAME=	${DISTNAME:S/_/-/}
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://download.berlios.de/avidemux/
 
@@ -17,11 +17,16 @@ GCC_REQD+=		3.0
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		cmake pkg-config msgfmt
+USE_TOOLS+=		msgfmt pkg-config
 USE_CMAKE=		yes
 
-CPPFLAGS+=		-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\""
 LIBS+=			${LIBOSSAUDIO}
+
+SUBST_CLASSES=		audio
+SUBST_STAGE.audio=	post-patch
+SUBST_FILES.audio=	avidemux/ADM_audiodevice/ADM_deviceoss.cpp
+SUBST_SED.audio=	-e "s|\\/dev\\/dsp|${DEVOSSAUDIO}|g"
+SUBST_MESSAGE.audio=	Fixing hardcoded audio device.
 
 .include "../../audio/faac/buildlink3.mk"
 .include "../../audio/faad2/buildlink3.mk"
