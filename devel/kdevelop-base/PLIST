@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2007/10/20 10:51:40 markd Exp $
+@comment $NetBSD: PLIST,v 1.23 2008/02/20 10:24:09 markd Exp $
 bin/kdevassistant
 bin/kdevdesigner
 bin/kdevelop
@@ -601,6 +601,8 @@ share/kde/apps/kdevappwizard/qtopiaapp.png
 share/kde/apps/kdevappwizard/qtopiaapp.tar.gz
 share/kde/apps/kdevappwizard/qtruby.png
 share/kde/apps/kdevappwizard/qtruby.tar.gz
+share/kde/apps/kdevappwizard/qtruby4app.png
+share/kde/apps/kdevappwizard/qtruby4app.tar.gz
 share/kde/apps/kdevappwizard/qtrubyapp.png
 share/kde/apps/kdevappwizard/qtrubyapp.tar.gz
 share/kde/apps/kdevappwizard/rails.png
@@ -720,6 +722,7 @@ share/kde/apps/kdevappwizard/templates/qt4makeapp.kdevtemplate
 share/kde/apps/kdevappwizard/templates/qtopia4app.kdevtemplate
 share/kde/apps/kdevappwizard/templates/qtopiaapp.kdevtemplate
 share/kde/apps/kdevappwizard/templates/qtruby.kdevtemplate
+share/kde/apps/kdevappwizard/templates/qtruby4app.kdevtemplate
 share/kde/apps/kdevappwizard/templates/qtrubyapp.kdevtemplate
 share/kde/apps/kdevappwizard/templates/rails.kdevtemplate
 share/kde/apps/kdevappwizard/templates/rubyhello.kdevtemplate
@@ -1190,8 +1193,10 @@ share/kde/apps/kdevfilecreate/file-templates/for
 share/kde/apps/kdevfilecreate/file-templates/fpp
 share/kde/apps/kdevfilecreate/file-templates/ftn
 share/kde/apps/kdevfilecreate/file-templates/h
+share/kde/apps/kdevfilecreate/file-templates/html.erb
 share/kde/apps/kdevfilecreate/file-templates/java
 share/kde/apps/kdevfilecreate/file-templates/js
+share/kde/apps/kdevfilecreate/file-templates/js.rjs
 share/kde/apps/kdevfilecreate/file-templates/l
 share/kde/apps/kdevfilecreate/file-templates/ll
 share/kde/apps/kdevfilecreate/file-templates/pas-program
@@ -1222,6 +1227,7 @@ share/kde/apps/kdevfilecreate/file-templates/ui-tabdialog
 share/kde/apps/kdevfilecreate/file-templates/ui-widget
 share/kde/apps/kdevfilecreate/file-templates/ui-widget-qt4
 share/kde/apps/kdevfilecreate/file-templates/ui-wizard
+share/kde/apps/kdevfilecreate/file-templates/xml.builder
 share/kde/apps/kdevfilecreate/file-templates/y
 share/kde/apps/kdevfilecreate/file-templates/yy
 share/kde/apps/kdevfilecreate/kdevpart_filecreate.rc
