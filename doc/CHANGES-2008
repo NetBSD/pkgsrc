@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.328 2008/02/20 10:13:29 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.329 2008/02/20 10:14:40 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -558,3 +558,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/guile to 1.8.4 [gdt 2008-02-19]
 	Updated multimedia/libmpeg3 to 1.7 [xtraeme 2008-02-19]
 	Added multimedia/ffmpeg-devel version 20071004 [xtraeme 2008-02-19]
+	Updated comms/asterisk to 1.2.24nb2 [wiz 2008-02-20]
