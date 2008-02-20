@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/11/29 22:45:22 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2008/02/20 10:04:24 rillig Exp $
 
 DISTNAME=	allegro-4.2.2
 CATEGORIES=	devel
@@ -21,10 +21,14 @@ CONFIGURE_ARGS+=	--disable-ossmidi
 
 .include "options.mk"
 
+.if !empty(INSTALL_UNSTRIPPED:Uno:M[Yy][Ee][Ss])
+CONFIGURE_ARGS+=	allegro_cv_prog_ld_s=no
+.endif
+
 SUBST_CLASSES+=		oss
 SUBST_STAGE.oss=	post-patch
 SUBST_FILES.oss=	src/unix/uoss.c setup/setup.c
-SUBST_SED.oss=		-e "s,/dev/dsp,"${DEVOSSAUDIO:Q}",g"
+SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSAUDIO},g"
 SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
 
 SUBST_CLASSES+=		path
