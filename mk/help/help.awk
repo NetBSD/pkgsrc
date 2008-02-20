@@ -1,4 +1,4 @@
-# $NetBSD: help.awk,v 1.24 2008/02/20 10:40:42 rillig Exp $
+# $NetBSD: help.awk,v 1.25 2008/02/20 10:42:21 rillig Exp $
 #
 
 # This program extracts the inline documentation from *.mk files.
@@ -146,10 +146,8 @@ NF >= 1 && !/^[\t.]/ && !/^#*$/ {
 
 	} else if (w == toupper(w) && w ~ /:$/) {
 		# Upper-case words ending with a colon are probably not
-		# make targets, so ignore them.
-
-	} else if (w ~ /^(FIXME|TODO|XXX):?$/) {
-		# These are not keywords.
+		# make targets, so ignore them. Common cases are tags
+		# like FIXME and TODO.
 
 	} else {
 		sub(/^#[ \t]*/, "", w);
