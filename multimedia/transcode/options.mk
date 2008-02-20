@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2008/02/20 10:20:04 xtraeme Exp $
+# $NetBSD: options.mk,v 1.4 2008/02/20 12:14:53 xtraeme Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.transcode
@@ -53,7 +53,7 @@ CONFIGURE_ARGS+=	--disable-libmpeg3
 PLIST_SUBST+=		LZO=
 .  include "../../archivers/lzo/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-lzo
-CONFIGURE_ARGS+=	--with-lzo-prefix==${BUILDLINK_PREFIX.lzo}
+CONFIGURE_ARGS+=	--with-lzo-prefix=${BUILDLINK_PREFIX.lzo}
 .else
 PLIST_SUBST+=		LZO='@comment '
 CONFIGURE_ARGS+=	--disable-lzo
