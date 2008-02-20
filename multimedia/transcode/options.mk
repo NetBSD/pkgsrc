@@ -1,11 +1,12 @@
-# $NetBSD: options.mk,v 1.2 2006/01/25 08:53:34 xtraeme Exp $
+# $NetBSD: options.mk,v 1.3 2008/02/20 10:20:04 xtraeme Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.transcode
 PKG_SUPPORTED_OPTIONS=	a52 freetype2 mjpegtools mpeg3 lzo libxml2
-PKG_SUPPORTED_OPTIONS+=	dv gtk imagemagick
+PKG_SUPPORTED_OPTIONS+=	dv imagemagick
 
-PKG_SUGGESTED_OPTIONS=	a52 freetype2 mjpegtools mpeg3 libxml2 imagemagick
+PKG_SUGGESTED_OPTIONS=	a52 freetype2 mjpegtools mpeg3 libxml2
+PKG_SUGGESTED_OPTIONS+=	imagemagick
 
 .include "../../mk/bsd.options.mk"
 
@@ -38,8 +39,10 @@ CONFIGURE_ARGS+=	--disable-mjpegtools
 .endif
 
 .if !empty(PKG_OPTIONS:Mmpeg3)
+BUILDLINK_API_DEPENDS.libmpeg3+=	libmpeg3>=1.7
 PLIST_SUBST+=		MPEG3=
 .  include "../../multimedia/libmpeg3/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-libmpeg3-prefix=${BUILDLINK_PREFIX.libmpeg3}
 CONFIGURE_ARGS+=	--enable-libmpeg3
 .else
 PLIST_SUBST+=		MPEG3='@comment '
@@ -50,7 +53,7 @@ CONFIGURE_ARGS+=	--disable-libmpeg3
 PLIST_SUBST+=		LZO=
 .  include "../../archivers/lzo/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-lzo
-CONFIGURE_ARGS+=	--with-lzo-includes=${BUILDLINK_PREFIX.lzo}/include/lzo
+CONFIGURE_ARGS+=	--with-lzo-prefix==${BUILDLINK_PREFIX.lzo}
 .else
 PLIST_SUBST+=		LZO='@comment '
 CONFIGURE_ARGS+=	--disable-lzo
@@ -72,15 +75,6 @@ CONFIGURE_ARGS+=	--enable-libdv
 .else
 PLIST_SUBST+=	DV='@comment '
 CONFIGURE_ARGS+=	--disable-libdv
-.endif
-
-.if !empty(PKG_OPTIONS:Mgtk)
-PLIST_SUBST+=		GTK=
-.  include "../../x11/gtk/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-gtk
-.else
-PLIST_SUBST+=		GTK='@comment '
-CONFIGURE_ARGS+=	--disable-gtk
 .endif
 
 .if !empty(PKG_OPTIONS:Mimagemagick)
