@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.25 2008/01/18 05:09:50 tnn Exp $
+# $NetBSD: Makefile,v 1.26 2008/02/20 09:57:47 markd Exp $
 
 DISTNAME=	kdewebdev-${_KDE_VERSION}
-PKGREVISION=	2
 CATEGORIES=	www
 COMMENT=	HTML editor and tools suitable for experienced web developers
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 
 USE_TOOLS+=		perl
-REPLACE_PERL+=		quanta/scripts/TemplateMagic.pl \
+REPLACE_PERL+=		kommander/working/extractkmdr \
+			quanta/scripts/TemplateMagic.pl \
 			quanta/scripts/dwt.pl
 
 SUBST_CLASSES+=		xmlpath
