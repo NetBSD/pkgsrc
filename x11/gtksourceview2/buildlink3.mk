@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/02/20 11:23:41 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/02/20 12:26:07 drochner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GTKSOURCEVIEW2_BUILDLINK3_MK:=	${GTKSOURCEVIEW2_BUILDLINK3_MK}+
@@ -19,7 +19,6 @@ BUILDLINK_PKGSRCDIR.gtksourceview2?=	../../x11/gtksourceview
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
-.include "../../print/libgnomeprint/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
