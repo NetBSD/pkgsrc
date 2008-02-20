@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2007/10/20 10:53:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.24 2008/02/20 10:36:07 markd Exp $
 share/doc/kde/HTML/ru/KRegExpEditor/common
 share/doc/kde/HTML/ru/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/ru/KRegExpEditor/index.docbook
@@ -33,10 +33,65 @@ share/doc/kde/HTML/ru/atlantik/index.docbook
 share/doc/kde/HTML/ru/cervisia/common
 share/doc/kde/HTML/ru/cervisia/index.cache.bz2
 share/doc/kde/HTML/ru/cervisia/index.docbook
+share/doc/kde/HTML/ru/common/1.png
+share/doc/kde/HTML/ru/common/10.png
+share/doc/kde/HTML/ru/common/2.png
+share/doc/kde/HTML/ru/common/3.png
+share/doc/kde/HTML/ru/common/4.png
+share/doc/kde/HTML/ru/common/5.png
+share/doc/kde/HTML/ru/common/6.png
+share/doc/kde/HTML/ru/common/7.png
+share/doc/kde/HTML/ru/common/8.png
+share/doc/kde/HTML/ru/common/9.png
+share/doc/kde/HTML/ru/common/appheader.html
+share/doc/kde/HTML/ru/common/artistic-license.html
+share/doc/kde/HTML/ru/common/bottom-left.png
+share/doc/kde/HTML/ru/common/bottom-middle.png
+share/doc/kde/HTML/ru/common/bottom-right.png
+share/doc/kde/HTML/ru/common/bottom1.png
+share/doc/kde/HTML/ru/common/bottom2.png
+share/doc/kde/HTML/ru/common/bsd-license.html
+share/doc/kde/HTML/ru/common/docheadergears.png
+share/doc/kde/HTML/ru/common/doctop1.png
+share/doc/kde/HTML/ru/common/doctop1a.png
+share/doc/kde/HTML/ru/common/doctop1b.png
+share/doc/kde/HTML/ru/common/doctop2.png
+share/doc/kde/HTML/ru/common/doxygen.css
+share/doc/kde/HTML/ru/common/favicon.ico
+share/doc/kde/HTML/ru/common/fdl-license
+share/doc/kde/HTML/ru/common/fdl-license.html
+share/doc/kde/HTML/ru/common/fdl-notice.html
 share/doc/kde/HTML/ru/common/fdl-translated.html
+share/doc/kde/HTML/ru/common/footer.html
+share/doc/kde/HTML/ru/common/gpl-license
+share/doc/kde/HTML/ru/common/gpl-license.html
 share/doc/kde/HTML/ru/common/gpl-translated.html
+share/doc/kde/HTML/ru/common/grad.png
+share/doc/kde/HTML/ru/common/header.html
+share/doc/kde/HTML/ru/common/headerbg.png
+share/doc/kde/HTML/ru/common/kde-common.css
+share/doc/kde/HTML/ru/common/kde-default.css
 share/doc/kde/HTML/ru/common/kde-localised.css
+share/doc/kde/HTML/ru/common/kde-localised.css.template
+share/doc/kde/HTML/ru/common/kde-web.css
+share/doc/kde/HTML/ru/common/kde_gear_64.png
+share/doc/kde/HTML/ru/common/kde_logo.png
+share/doc/kde/HTML/ru/common/kde_logo_bg.png
+share/doc/kde/HTML/ru/common/kmenu.png
+share/doc/kde/HTML/ru/common/lgpl-license
+share/doc/kde/HTML/ru/common/lgpl-license.html
 share/doc/kde/HTML/ru/common/logotp3.png
+share/doc/kde/HTML/ru/common/mainfooter.html
+share/doc/kde/HTML/ru/common/mainheader.html
+share/doc/kde/HTML/ru/common/qpl-license.html
+share/doc/kde/HTML/ru/common/shadow.png
+share/doc/kde/HTML/ru/common/top-left.png
+share/doc/kde/HTML/ru/common/top-middle.png
+share/doc/kde/HTML/ru/common/top-right-konqueror.png
+share/doc/kde/HTML/ru/common/web-docbottom.png
+share/doc/kde/HTML/ru/common/web-doctop.png
+share/doc/kde/HTML/ru/common/x11-license.html
+share/doc/kde/HTML/ru/common/xml.dcl
 share/doc/kde/HTML/ru/irkick/common
 share/doc/kde/HTML/ru/irkick/index.cache.bz2
 share/doc/kde/HTML/ru/irkick/index.docbook
@@ -1219,19 +1274,29 @@ share/doc/kde/HTML/ru/xsldbg/index.cache.bz2
 share/doc/kde/HTML/ru/xsldbg/index.docbook
 share/doc/kde/HTML/ru/xsldbg/introduction.docbook
 share/doc/kde/HTML/ru/xsldbg/usage.docbook
+share/kde/apps/kanagram/data/ru/computers.kvtml
+share/kde/apps/kanagram/data/ru/currencies.kvtml
+share/kde/apps/kanagram/data/ru/people.kvtml
+share/kde/apps/kanagram/data/ru/space.kvtml
+share/kde/apps/kanagram/data/ru/worldcapitals.kvtml
 share/kde/apps/katepart/syntax/logohighlightstyle.ru.xml
 share/kde/apps/khangman/data/ru/animals.kvtml
 share/kde/apps/khangman/data/ru/easy.kvtml
 share/kde/apps/khangman/data/ru/hard.kvtml
 share/kde/apps/khangman/data/ru/medium.kvtml
 share/kde/apps/kturtle/data/logokeywords.ru.xml
+share/kde/apps/kturtle/examples/ru/ad.logo
 share/kde/apps/kturtle/examples/ru/arrow.logo
+share/kde/apps/kturtle/examples/ru/canvascolors.logo
 share/kde/apps/kturtle/examples/ru/curly.logo
-share/kde/apps/kturtle/examples/ru/example2.logo
-share/kde/apps/kturtle/examples/ru/example3.logo
 share/kde/apps/kturtle/examples/ru/flower.logo
+share/kde/apps/kturtle/examples/ru/kde.logo
+share/kde/apps/kturtle/examples/ru/randomname.logo
 share/kde/apps/kturtle/examples/ru/square.logo
+share/kde/apps/kturtle/examples/ru/squaresss.logo
+share/kde/apps/kturtle/examples/ru/timestables.logo
 share/kde/apps/kturtle/examples/ru/triangle.logo
+share/kde/apps/kturtle/examples/ru/trianglesss.logo
 share/locale/ru/LC_MESSAGES/akregator.mo
 share/locale/ru/LC_MESSAGES/akregator_konqplugin.mo
 share/locale/ru/LC_MESSAGES/alsaplayerui.mo
@@ -1795,6 +1860,8 @@ share/locale/ru/flag.png
 @dirrm share/kde/apps/khangman/data/ru
 @comment in kde: @dirrm share/kde/apps/khangman/data
 @comment in kde: @dirrm share/kde/apps/katepart/syntax
+@dirrm share/kde/apps/kanagram/data/ru
+@comment in kde: @dirrm share/kde/apps/kanagram/data
 @dirrm share/doc/kde/HTML/ru/xsldbg
 @dirrm share/doc/kde/HTML/ru/umbrello
 @dirrm share/doc/kde/HTML/ru/superkaramba
