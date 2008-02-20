@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2007/10/20 10:38:10 markd Exp $
+$NetBSD: distinfo,v 1.5 2008/02/20 10:26:49 markd Exp $
 
-SHA1 (kdebindings-3.5.8.tar.bz2) = 9e84a47cb5ce7b16f485f51996b12d8dd50898ad
-RMD160 (kdebindings-3.5.8.tar.bz2) = 2a8b335f4a70b35550e214607e62d7adfbec45ed
-Size (kdebindings-3.5.8.tar.bz2) = 5724504 bytes
+SHA1 (kdebindings-3.5.9.tar.bz2) = 14fcec6c93bffa94b10201dd03d87ffcd6fb5281
+RMD160 (kdebindings-3.5.9.tar.bz2) = c2c906a61c72eb8edfb6f9b82d74b7cc2d0c222c
+Size (kdebindings-3.5.9.tar.bz2) = 5737416 bytes
