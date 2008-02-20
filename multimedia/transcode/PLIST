@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/02/20 10:20:04 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/02/20 12:06:16 xtraeme Exp $
 bin/avifix
 bin/aviindex
 bin/avimerge
@@ -44,6 +44,7 @@ lib/transcode/export_pvn.la
 lib/transcode/export_raw.la
 lib/transcode/export_toolame.la
 lib/transcode/export_wav.la
+lib/transcode/export_xvid.so
 lib/transcode/export_xvid2.la
 lib/transcode/export_xvid3.la
 lib/transcode/export_xvid4.la
