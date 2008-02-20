@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.11 2006/08/18 11:32:51 adam Exp $
+$NetBSD: patch-aa,v 1.12 2008/02/20 10:14:19 wiz Exp $
 
---- Makefile.orig	2006-06-29 21:23:18.000000000 +0200
+--- Makefile.orig	2007-07-16 18:33:02.000000000 +0000
 +++ Makefile
 @@ -47,7 +47,6 @@ ifneq ($(findstring dont-optimize,$(MAKE
  #K6OPT  = -DK6OPT
@@ -151,7 +151,16 @@ $NetBSD: patch-aa,v 1.11 2006/08/18 11:32:51 adam Exp $
  endif
  
  ifeq ($(OSARCH),OpenBSD)
-@@ -642,7 +651,7 @@ bininstall: all
+@@ -551,7 +560,7 @@ clean:
+ 	$(MAKE) -C stdtime clean
+ 
+ datafiles: all
+-	if [ x`$(ID) -un` = xroot ]; then sh mkpkgconfig $(DESTDIR)/usr/lib/pkgconfig; fi
++	if [ x`$(ID) -un` = xroot ]; then sh mkpkgconfig $(DESTDIR)${PREFIX}/lib/pkgconfig; fi
+ 	mkdir -p $(DESTDIR)$(ASTVARLIBDIR)/sounds/digits
+ 	mkdir -p $(DESTDIR)$(ASTVARLIBDIR)/sounds/silence
+ 	mkdir -p $(DESTDIR)$(ASTVARLIBDIR)/sounds/priv-callerintros
+@@ -651,7 +660,7 @@ bininstall: all
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/tmp
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/meetme
  	mkdir -p $(DESTDIR)$(ASTSPOOLDIR)/monitor
@@ -160,7 +169,7 @@ $NetBSD: patch-aa,v 1.11 2006/08/18 11:32:51 adam Exp $
  	if [ -f cygwin/asterisk.exe ]; then $(INSTALL) -m 755 cygwin/asterisk.exe $(DESTDIR)$(ASTSBINDIR)/; fi
  	if [ -f asterisk.dll ]; then $(INSTALL) -m 755 asterisk.dll $(DESTDIR)$(ASTSBINDIR)/; fi
  	$(LN) -sf asterisk $(DESTDIR)$(ASTSBINDIR)/rasterisk
-@@ -731,31 +740,31 @@ install: all datafiles bininstall instal
+@@ -740,31 +749,31 @@ install: all datafiles bininstall instal
  upgrade: all bininstall
  
  adsi:
@@ -201,7 +210,7 @@ $NetBSD: patch-aa,v 1.11 2006/08/18 11:32:51 adam Exp $
  		( \
  		echo "[directories]" ; \
  		echo "astetcdir => $(ASTETCDIR)" ; \
-@@ -772,7 +781,7 @@ samples: adsi
+@@ -781,7 +790,7 @@ samples: adsi
  		echo ";astctlowner = root" ; \
  		echo ";astctlgroup = apache" ; \
  		echo ";astctl = asterisk.ctl" ; \
