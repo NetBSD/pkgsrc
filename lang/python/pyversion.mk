@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.51 2008/02/04 23:27:50 joerg Exp $
+# $NetBSD: pyversion.mk,v 1.52 2008/02/20 10:43:55 rillig Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -35,6 +35,20 @@
 #
 #	Possible values: (defined) (undefined)
 #	Default: (undefined)
+#
+# === Defined variables ===
+#
+# PYPKGPREFIX
+#	The prefix to use in PKGNAME for extensions which are meant
+#	to be installed for multiple Python versions.
+#
+#	Example: py24
+#
+# PYVERSSUFFIX
+#	The suffix to executables and in the library path, equal to
+#	sys.version[0:3].
+#
+#	Example: 2.4
 #
 # Keywords: python
 #
@@ -101,13 +115,6 @@ _PYTHON_VERSION?=	${pv}
 _PYTHON_VERSION=	none
 .endif
 
-#
-# set variables for the version we decided to use:
-#  PYVERSSUFFIX: suffix to executables and in library path,
-#                equal to sys.version[0:3]
-#  PYPKGPREFIX: prefix to use in PKGNAME for extensions which can install
-#               to multiple Python versions
-#
 .if ${_PYTHON_VERSION} == "25"
 PYPKGSRCDIR=	../../wip/python25
 PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python25}:${PYPKGSRCDIR}
