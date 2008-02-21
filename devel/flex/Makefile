@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2007/09/25 10:03:52 hira Exp $
+# $NetBSD: Makefile,v 1.27 2008/02/21 18:26:05 tnn Exp $
 
-DISTNAME=		flex-2.5.33
-PKGREVISION=		2
+DISTNAME=		flex-2.5.34
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=flex/}
 
@@ -16,7 +15,6 @@ USE_TOOLS+=		bison gm4:run makeinfo
 MAKE_JOBS_SAFE=		no
 TEST_TARGET=		check
 INFO_FILES=		yes
-CPPFLAGS.IRIX+=		-DHAVE_ALLOCA_H		# bug #1675899
 LIBS.SunOS+=		-lm
 USE_PKGLOCALEDIR=	YES
 
