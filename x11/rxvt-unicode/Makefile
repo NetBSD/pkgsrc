@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2007/10/20 06:11:25 obache Exp $
+# $NetBSD: Makefile,v 1.21 2008/02/21 02:41:56 tnn Exp $
 #
 
 DISTNAME=		rxvt-unicode-8.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		x11
 MASTER_SITES=		http://dist.schmorp.de/rxvt-unicode/ \
 			http://dist.schmorp.de/rxvt-unicode/Attic/
@@ -15,6 +15,7 @@ COMMENT=		rxvt clone supporting Xft fonts and Unicode
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
+USE_FEATURES+=		snprintf
 
 CONFIGURE_ARGS+=	--enable-transparency	\
 			--enable-menubar	\
