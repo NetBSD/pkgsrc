@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.51 2008/01/05 14:58:42 agc Exp $
+# $NetBSD: Makefile,v 1.52 2008/02/21 21:40:44 jlam Exp $
 
 DISTNAME=		vile-9.6
+PKGREVISION=		1
 CATEGORIES=		editors
 MASTER_SITES=		ftp://invisible-island.net/vile/ \
 			ftp://ftp.phred.org/pub/vile/
@@ -9,6 +10,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://invisible-island.net/vile/
 COMMENT=		VI Like Emacs.  a vi "workalike", with many additional features
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "options.mk"
 
@@ -30,13 +33,14 @@ FILTERDIR=		${PREFIX}/libexec/vile
 EGDIR=			${PREFIX}/share/examples/vile
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/perl/vileget ${PREFIX}/bin/vileget
-	${INSTALL_DATA_DIR} ${EGDIR}
-	set -e;							\
-	for f in filters/spell.rc filters/filters.rc		\
-		macros/digraphs.rc macros/pictmode.rc		\
-		macros/manpage.rc visvile/visvile.rc; do	\
-		${INSTALL_DATA} ${WRKSRC}/$$f ${EGDIR};		\
+	${INSTALL_SCRIPT} ${WRKSRC}/perl/vileget			\
+		${DESTDIR}${PREFIX}/bin/vileget
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	set -e;								\
+	for f in filters/spell.rc filters/filters.rc			\
+		macros/digraphs.rc macros/pictmode.rc			\
+		macros/manpage.rc visvile/visvile.rc; do		\
+		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${EGDIR};	\
 	done
 
 .include "../../lang/perl5/buildlink3.mk"
