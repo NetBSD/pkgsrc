@@ -1,9 +1,12 @@
-$NetBSD: patch-af,v 1.1 2006/09/05 01:11:04 gdt Exp $
+$NetBSD: patch-af,v 1.2 2008/02/21 00:16:53 gdt Exp $
 
---- data/Makefile.in.orig	2006-06-14 03:46:13.000000000 -0400
+Place xdg files in pkgsrc standard location.
+Not to be submitted upstream.
+
+--- data/Makefile.in.orig	2008-01-04 11:03:27.000000000 -0500
 +++ data/Makefile.in
-@@ -282,7 +282,7 @@ target_vendor = @target_vendor@
- # gnome_cappletdir is defined by configure
+@@ -250,7 +250,7 @@ top_srcdir = @top_srcdir@
+ gnome_cappletdir = $(datadir)/applications
  gnome_capplet_in_files = mail-notification-properties.desktop.in
  gnome_capplet_DATA = mail-notification-properties.desktop
 -autostartdir = $(sysconfdir)/xdg/autostart

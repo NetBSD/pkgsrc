@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2007/05/03 19:13:35 gdt Exp $
+$NetBSD: patch-aa,v 1.6 2008/02/21 00:16:53 gdt Exp $
+
+Add patch from upstream that is needed if SSL is not compiled with
+thread support.  If it is, this is merely extra.
 
 --- src/mn-client-session.c.orig	Wed Jan 17 15:07:49 2007
 +++ src/mn-client-session.c	Fri Apr 20 19:05:51 2007
