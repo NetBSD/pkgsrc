@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.153 2008/01/18 05:08:27 tnn Exp $
+# $NetBSD: Makefile,v 1.154 2008/02/21 17:55:56 gdt Exp $
 
 DISTNAME=		mutt-1.4.2.3
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		mail
 MASTER_SITES=		ftp://ftp.mutt.org/mutt/ \
 			ftp://gd.tuwien.ac.at/infosys/mail/mutt/ \
@@ -27,6 +27,13 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}			\
 			--enable-pop					\
 			--enable-imap
 MAKE_ENV+=		CHGRP=${CHGRP:Q}
+
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD"
+# Force sendmail to /usr/sbin to avoid postfix's
+# ${LOCALBASE}/sbin/sendmail.  Should be enabled on all platforms which
+# support mailwrapper.
+CONFIGURE_ENV+=		SENDMAIL=/usr/sbin/sendmail
+.endif
 
 .if ${OPSYS} == "SunOS"
 CONFIGURE_ARGS+=	--without-wc-funcs
