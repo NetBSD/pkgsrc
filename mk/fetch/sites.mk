@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.39 2008/02/03 22:23:30 tnn Exp $
+# $NetBSD: sites.mk,v 1.40 2008/02/21 11:52:21 xtraeme Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -94,7 +94,9 @@ MASTER_SITE_KDE+=	\
 	ftp://ftp.solnet.ch/mirror/KDE/stable/ \
 	ftp://ftp-stud.fht-esslingen.de/pub/Mirrors/ftp.kde.org/pub/kde/stable/ \
 	ftp://mirrors.dotsrc.org/kde/stable/ \
-	ftp://ftp.fi.muni.cz/pub/kde/stable/
+	ftp://ftp.fi.muni.cz/pub/kde/stable/ \
+	ftp://ftp.rediris.es/mirror/kde/ftp.kde.org/pub/kde/stable/ \
+	http://sunsite.rediris.es/mirror/kde/ftp.kde.org/pub/kde/stable/
 
 # see http://sourceforge.net/project/mirror_picker.php
 MASTER_SITE_SOURCEFORGE+=	\
