@@ -34,6 +34,11 @@ clamav			Enable ClamAV support.
 claws-mail-jpilot	Add jpilot support
 clisp			Common/C Lisp
 coqide			Enable ide support for coq.
+courier-dsn		Delivery Status Notification (DNS) mail delivery.
+courier-esmtp		ESMTP mail delivery.
+courier-gnutls		Support using GNU TLS instead of OpenSSL.
+courier-local		Local mail delivery.
+courier-uucp		UUCP mail delivery.
 cups			Enable cups (Common UNIX Printing System) support.
 curl			Enable curl support.
 curses			Enable curses support.
@@ -83,6 +88,7 @@ exim-old-demime		Use deprecated "demime" condition in the DATA ACL.
 expat			Use the expat library for XML parsing.
 ezmlm-althash		Patch to hash subscriber list case-insensitively.
 faad			Enable AAC decoding support using faad2.
+fam			Support using File Alteration Monitor (FAM).
 fastcgi			Use FastCGI as the CGI manager.
 fd-small		Build smaller misc/fd package.
 finger			Enable finger support.
