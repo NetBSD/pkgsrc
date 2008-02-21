@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2008/02/19 18:45:41 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2008/02/21 15:50:29 jlam Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 PKGNAME=	${DISTNAME:S/-/tcpd-/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -46,8 +47,6 @@ INSTALLATION_DIRS=	bin sbin ${PKGMANDIR}/man1 ${DOCDIR}
 
 REQD_DIRS=		${DOCDIR}
 MAKE_DIRS+=		${COURIER_STATEDIR}
-
-.include "../../security/openssl/buildlink3.mk"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tcpd/couriertcpd			\
