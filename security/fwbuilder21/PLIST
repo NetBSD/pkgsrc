@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/01/28 20:34:54 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/02/21 17:34:08 adam Exp $
 bin/fwb_ipf
 bin/fwb_ipfw
 bin/fwb_ipt
@@ -42,6 +42,8 @@ share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.15.html
 share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.15.txt
 share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.16.html
 share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.16.txt
+share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.17.html
+share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.17.txt
 share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.7.txt
 share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.7.html
 share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.8.html
