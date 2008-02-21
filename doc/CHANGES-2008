@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.342 2008/02/20 22:49:38 bouyer Exp $
+$NetBSD: CHANGES-2008,v 1.343 2008/02/21 00:17:49 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -659,3 +659,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/opera to 9.26 [xtraeme 2008-02-20]
 	Updated mail/cone to 0.74 [jlam 2008-02-20]
 	Updated sysutils/xenkernel3 to 3.1.3nb1 [bouyer 2008-02-20]
+	Updated mail/mail-notification to 5.0 [gdt 2008-02-21]
