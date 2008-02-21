@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2004/05/26 15:45:14 jschauma Exp $
+$NetBSD: patch-aa,v 1.6 2008/02/21 19:32:23 jlam Exp $
 
---- ../dist/Makefile.in.orig	Mon Dec  7 14:05:59 1998
-+++ ../dist/Makefile.in	Mon Apr 19 16:30:04 1999
+--- ../dist/Makefile.in.orig	1998-12-07 14:05:59.000000000 -0500
++++ ../dist/Makefile.in
 @@ -3,7 +3,7 @@
  srcdir=	@srcdir@/..
  CPPFLAGS=-I. -I$(srcdir)/include @CPPFLAGS@
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.5 2004/05/26 15:45:14 jschauma Exp $
  CXXFLAGS=-c @CXXFLAGS@ $(CPPFLAGS)
  CXX=	@CXX@
  LDFLAGS=@LDFLAGS@
-@@ -43,13 +43,11 @@
+@@ -43,13 +43,11 @@ PROGS=	@build_additional@ db_archive db_
  LOBJS=	@LIBOBJS@
  POBJS=	err.o getlong.o
  
@@ -27,7 +27,7 @@ $NetBSD: patch-aa,v 1.5 2004/05/26 15:45:14 jschauma Exp $
  
  DBA=	db_archive.o $(POBJS)
  db_archive: $(DBA) $(libdb)
-@@ -141,11 +139,11 @@
+@@ -141,11 +139,11 @@ realclean distclean: clean
  	$(rm) -f confdefs.h db.h db_int.h db_185.h include.tcl
  
  prefix=	@prefix@
@@ -37,28 +37,35 @@ $NetBSD: patch-aa,v 1.5 2004/05/26 15:45:14 jschauma Exp $
 -libdir=	$(prefix)/BerkeleyDB/lib
 -mandir=	$(prefix)/BerkeleyDB/docs
 +bindir=	$(prefix)/bin
-+datadir=$(prefix)/share/db
++datadir=$(prefix)/share/db2
 +includedir=$(prefix)/include/db2
 +libdir=	$(prefix)/lib
-+mandir=	$(prefix)/share/doc/html/db
++mandir=	$(prefix)/share/doc/db2
  
  dmode=	755
  emode=	555
-@@ -161,22 +159,12 @@
+@@ -159,28 +157,25 @@ install: all
+ 	@test -f $(mkdir) || (echo 'mkdir not found.'; exit 1)
+ 	@test -f $(rm) || (echo 'rm not found.'; exit 1)
  	@echo "Installing DB include files: $(includedir) ..."
- 	@test -d $(includedir) || \
- 	    ($(mkdir) -p $(includedir) && $(chmod) $(dmode) $(includedir))
+-	@test -d $(includedir) || \
+-	    ($(mkdir) -p $(includedir) && $(chmod) $(dmode) $(includedir))
 -	@cd $(includedir) && $(rm) -f db.h db_185.h db_cxx.h
 -	@$(cp) -p db.h db_185.h $(srcdir)/include/db_cxx.h $(includedir)
-+	@$(BSD_INSTALL_DATA) db.h db_185.h $(srcdir)/include/db_cxx.h $(includedir)
- 	@cd $(includedir) && $(chmod) $(fmode) db.h db_185.h db_cxx.h
+-	@cd $(includedir) && $(chmod) $(fmode) db.h db_185.h db_cxx.h
++	@test -d $(DESTDIR)$(includedir) || \
++	    ($(mkdir) -p $(DESTDIR)$(includedir) && $(chmod) $(dmode) $(DESTDIR)$(includedir))
++	@$(BSD_INSTALL_DATA) db.h db_185.h $(srcdir)/include/db_cxx.h $(DESTDIR)$(includedir)
++	@cd $(DESTDIR)$(includedir) && $(chmod) $(fmode) db.h db_185.h db_cxx.h
  	@echo "Installing DB library: $(libdir) ..."
 -	@test -d $(libdir) || \
 -	    ($(mkdir) -p $(libdir) && $(chmod) $(dmode) $(libdir))
 -	@cd $(libdir) && $(rm) -f $(libdb)
 -	@$(cp) -p $(libdb) $(libdir)
 -	@cd $(libdir) && $(chmod) $(fmode) $(libdb)
-+	@$(LIBTOOL) $(BSD_INSTALL_DATA) $(libdb) $(libdir)
++	@test -d $(DESTDIR)$(libdir) || \
++	    ($(mkdir) -p $(DESTDIR)$(libdir) && $(chmod) $(dmode) $(DESTDIR)$(libdir))
++	@$(LIBTOOL) $(BSD_INSTALL_DATA) $(libdb) $(DESTDIR)$(libdir)
  	@echo "Installing DB utilities: $(bindir) ..."
 -	@test -d $(bindir) || \
 -	    ($(mkdir) -p $(bindir) && $(chmod) $(dmode) $(bindir))
@@ -66,7 +73,19 @@ $NetBSD: patch-aa,v 1.5 2004/05/26 15:45:14 jschauma Exp $
 -	@$(cp) -p $(PROGS) $(bindir)
 -	@cd $(bindir) && (test ! -f $(strip) || $(strip) $(PROGS))
 -	@cd $(bindir) && $(chmod) $(emode) $(PROGS)
-+	@$(LIBTOOL) $(BSD_INSTALL_PROGRAM) $(PROGS) $(bindir)
++	@test -d $(DESTDIR)$(bindir) || \
++	    ($(mkdir) -p $(DESTDIR)$(bindir) && $(chmod) $(dmode) $(DESTDIR)$(bindir))
++	@for prog in $(PROGS); do \
++		db2prog=`echo $$prog | sed $(transform)`; \
++		$(LIBTOOL) $(BSD_INSTALL_PROGRAM) $$prog $(DESTDIR)$(bindir)/$$db2prog; \
++	done
  	@echo "Installing documentation: $(mandir) ..."
- 	@test -d $(mandir) || \
- 	    ($(mkdir) -p $(mandir) && $(chmod) $(dmode) $(mandir))
+-	@test -d $(mandir) || \
+-	    ($(mkdir) -p $(mandir) && $(chmod) $(dmode) $(mandir))
+-	@cd $(srcdir)/docs && $(cp) -pr * $(mandir)/
++	@test -d $(DESTDIR)$(mandir) || \
++	    ($(mkdir) -p $(DESTDIR)$(mandir) && $(chmod) $(dmode) $(DESTDIR)$(mandir))
++	@cd $(srcdir)/docs && $(cp) -pr * $(DESTDIR)$(mandir)/
+ 
+ uninstall:
+ 	-cd $(bindir) && $(rm) -f $(PROGS)
