@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/02/21 10:07:43 xtraeme Exp $
+
+SHA1 (lyx-1.5.3.tar.bz2) = 828c7e03329cf65dcc9331fdf00b73cc8367e4f9
+RMD160 (lyx-1.5.3.tar.bz2) = 562f64d73081855c8a64b09e050854d7bca47b91
+Size (lyx-1.5.3.tar.bz2) = 8743035 bytes
+SHA1 (patch-af) = 465db886c07a51caf0f071d63008c2d2c5d4f37e
+SHA1 (patch-ag) = f80fc55ab280ef69c5d843ddcb3ad9a2a870e028
