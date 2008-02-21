@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2008/01/17 23:27:13 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2008/02/21 02:41:57 tnn Exp $
 #
 
 DISTNAME=	mrxvt-0.5.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=materm/}
 PATCH_SITES=	${MASTER_SITES}
@@ -17,6 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake
+USE_FEATURES+=		snprintf
 
 CONFIGURE_ARGS+=	--enable-xft
 CONFIGURE_ARGS+=	--enable-text-shadow
