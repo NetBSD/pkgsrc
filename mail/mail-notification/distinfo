@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.10 2007/05/03 19:13:34 gdt Exp $
+$NetBSD: distinfo,v 1.11 2008/02/21 00:16:53 gdt Exp $
 
-SHA1 (mail-notification-4.0.tar.gz) = 9cc832ff75913a80198e5b3d6a51c282e422a20f
-RMD160 (mail-notification-4.0.tar.gz) = 67804814f82a8048c5887dcf4e3c2d827790dc80
-Size (mail-notification-4.0.tar.gz) = 956007 bytes
-SHA1 (patch-aa) = 55bee84c73a1581e193ffaba278033f820e91e4c
-SHA1 (patch-af) = 29d4281671ef64d99e9367464137d50ebb9daee7
+SHA1 (mail-notification-5.0.tar.bz2) = d43c070957c60d0ffd975475ae1c27c29dd83764
+RMD160 (mail-notification-5.0.tar.bz2) = a24c6a02844ef01c8a8be026a78e4c061c2275f5
+Size (mail-notification-5.0.tar.bz2) = 774039 bytes
+SHA1 (patch-aa) = 648bea57e01de4dc36d6c4715aa47de9fb53d3cd
+SHA1 (patch-af) = 0d3f3931e574ff97b48bc3cc725b4bc00cb9ded4
