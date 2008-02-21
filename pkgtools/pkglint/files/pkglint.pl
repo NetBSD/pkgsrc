@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.764 2008/02/14 00:27:19 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.765 2008/02/21 12:16:09 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3525,7 +3525,7 @@ sub parseline_mk($) {
 		# This line is useless
 
 	} else {
-		assert(false, "Unknown line format: " . $line->to_string());
+		$line->log_fatal("Unknown line format: " . $line->to_string());
 	}
 }
 
