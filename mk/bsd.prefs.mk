@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.279 2008/02/07 16:43:18 tnn Exp $
+# $NetBSD: bsd.prefs.mk,v 1.280 2008/02/21 04:23:58 tnn Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -485,9 +485,6 @@ CROSSBASE?=	${LOCALBASE}/cross
 .if exists(${LOCALBASE}/lib/X11/config/xpkgwedge.def) || \
     exists(${X11BASE}/lib/X11/config/xpkgwedge.def)
 USE_XPKGWEDGE=  yes
-.elif defined(_OPSYS_NEEDS_XPKGWEDGE) && \
-    !empty(_OPSYS_NEEDS_XPKGWEDGE:M[yY][eE][sS])
-USE_XPKGWEDGE=	yes
 .elif ${PKG_INSTALLATION_TYPE} == "pkgviews"
 USE_XPKGWEDGE=		yes
 .elif ${X11_TYPE} == "modular"
