@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2008/01/12 06:31:17 obache Exp $
+# $NetBSD: Makefile,v 1.36 2008/02/21 19:32:23 jlam Exp $
 
 DISTNAME=	db-3.3.11
 PKGNAME=	db3-3.11.2
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	databases
 MASTER_SITES=	http://download.oracle.com/berkeley-db/
 
@@ -15,6 +15,7 @@ PATCHFILES=	patch.3.3.11.1 patch.3.3.11.2
 PATCH_DIST_ARGS=-d ${WRKSRC}/.. --forward --quiet -p0
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/build_unix
 USE_LIBTOOL=		yes
@@ -38,7 +39,7 @@ CONFIGURE_ENV+=		ac_cv_header_inttypes_h=no
 .endif
 
 post-install:
-	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/doc/html/db3
+	${CHOWN} -R ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/share/doc/db3
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
