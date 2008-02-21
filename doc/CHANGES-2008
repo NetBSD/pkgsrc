@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.348 2008/02/21 19:13:03 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.349 2008/02/21 19:44:40 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -666,3 +666,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/libfwbuilder21 to 2.1.17 [adam 2008-02-21]
 	Updated security/fwbuilder21 to 2.1.17 [adam 2008-02-21]
 	Updated devel/flex to 2.5.34 [tnn 2008-02-21]
+	Updated chat/inspircd to 1.1.17 [adrianp 2008-02-21]
