@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.58 2007/09/21 19:51:58 joerg Exp $
+dnl $NetBSD: configure.ac,v 1.59 2008/02/21 16:50:08 tnn Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -215,6 +215,7 @@ AC_CHECK_SIZEOF(off_t, 0)
 # Checks for library functions.
 AC_FUNC_MALLOC
 AC_FUNC_STRERROR_R
+AC_FUNC_VFORK
 AC_FUNC_VPRINTF
 
 AC_REPLACE_FUNCS([asprintf err fgetln fnmatch fparseln getenv isblank \
