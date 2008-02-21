@@ -74,6 +74,7 @@ elinks-fastmem		Allow direct use of system memory allocation functions.
 elinks-html-highlight	Enable HTML highlighting using DOM engine.
 elinks-root-exec	Allow elinks to run as root.
 emacs-xaw3d		Emacs should use Xaw3D for the scrollbar.
+epoll			Enable support for epoll I/O event notification facility
 esound			Enable support for the Enlightment Sound Daemon.
 exim-build-eximon	Also build the X based exim queue monitoring tool.
 exim-content-scan	Call virus and spam scanning direct from ACLs.
@@ -149,6 +150,7 @@ kerberos		Enable Kerberos support.
 kerberos4		Enable Kerberos4 support.
 kermit-suid-uucp	Install kermit setuid uucp.
 klash			Install Konqueror flash plugin.
+kqueue			Enable support for kernel event notification mechanism
 lablgtk			Use lablgtk.
 lablgtk1		Use lablgtk1 (GTK1).
 lame			Use the lame encoder to create MP3 files.
