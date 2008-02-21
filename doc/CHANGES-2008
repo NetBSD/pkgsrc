@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.345 2008/02/21 12:24:56 rillig Exp $
+$NetBSD: CHANGES-2008,v 1.346 2008/02/21 16:50:50 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -662,3 +662,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/mail-notification to 5.0 [gdt 2008-02-21]
 	Added editors/lyx15 version 1.5.3 [xtraeme 2008-02-21]
 	Updated pkgtools/pkglint to 4.84 [rillig 2008-02-21]
+	Updated pkgtools/libnbcompat to 20080221 [tnn 2008-02-21]
