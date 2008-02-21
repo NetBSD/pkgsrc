@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.346 2008/02/21 16:50:50 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.347 2008/02/21 17:35:37 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -663,3 +663,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added editors/lyx15 version 1.5.3 [xtraeme 2008-02-21]
 	Updated pkgtools/pkglint to 4.84 [rillig 2008-02-21]
 	Updated pkgtools/libnbcompat to 20080221 [tnn 2008-02-21]
+	Updated security/libfwbuilder21 to 2.1.17 [adam 2008-02-21]
+	Updated security/fwbuilder21 to 2.1.17 [adam 2008-02-21]
