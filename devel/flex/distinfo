@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.7 2008/02/21 18:26:05 tnn Exp $
+$NetBSD: distinfo,v 1.8 2008/02/21 18:57:46 tnn Exp $
 
 SHA1 (flex-2.5.34.tar.gz) = b82c6baaeebf0ec84504e5b16751930ae06583e6
 RMD160 (flex-2.5.34.tar.gz) = eecc06d453fc450c400beb4e72b50b3251e80b68
 Size (flex-2.5.34.tar.gz) = 1453805 bytes
+SHA1 (patch-aa) = 938335a9071be62f534bad8e785003318816fd38
+SHA1 (patch-ab) = 84e8f679973ffa298391bfe20215f5c6878ed65e
