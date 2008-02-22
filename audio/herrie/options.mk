@@ -1,18 +1,18 @@
-# $NetBSD: options.mk,v 1.4 2007/11/23 05:40:02 bjs Exp $
+# $NetBSD: options.mk,v 1.5 2008/02/22 16:59:56 jlam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.herrie
-PKG_OPTIONS_GROUP.curses=	ncurses ncursesw
-PKG_OPTIONS_OPTIONAL_GROUPS=	curses
-PKG_SUPPORTED_OPTIONS=		curl libao modplug libspiff sndfile vorbis
-PKG_SUGGESTED_OPTIONS=		ncurses curl
+PKG_SUPPORTED_OPTIONS=		curl libao modplug libspiff sndfile	\
+				vorbis wide-curses
+PKG_SUGGESTED_OPTIONS=		curl
+PKG_LEGACY_OPTS+=		ncursesw:wide-curses
 
 .include "../../mk/oss.buildlink3.mk"
 
 .if ${OSS_TYPE} == "native"
-PKG_SUPPORTED_OPTIONS+=	oss
-PKG_SUGGESTED_OPTIONS+=	oss
+PKG_SUPPORTED_OPTIONS+=		oss
+PKG_SUGGESTED_OPTIONS+=		oss
 .elif ${OSS_TYPE} == "none"
-PKG_SUGGESTED_OPTIONS+=	libao
+PKG_SUGGESTED_OPTIONS+=		libao
 .endif
 
 .include "../../mk/bsd.fast.prefs.mk"
@@ -23,14 +23,6 @@ PKG_SUGGESTED_OPTIONS+=	libao
 .else
 CONFIGURE_ARGS+=	no_http
 CONFIGURE_ARGS+=	no_scrobbler
-.endif
-
-.if !empty(PKG_OPTIONS:Mncurses)
-CONFIGURE_ARGS+=	ncurses
-.  include "../../devel/ncurses/buildlink3.mk"
-.elif !empty(PKG_OPTIONS:Mncursesw)
-CONFIGURE_ARGS+=	ncursesw
-.  include "../../devel/ncursesw/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mlibao)
@@ -72,4 +64,12 @@ CONFIGURE_ARGS+=	no_strip strict
 .  include "../../audio/libvorbis/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	no_vorbis
+.endif
+
+.if !empty(PKG_OPTIONS:Mwide-curses)
+CONFIGURE_ARGS+=	ncursesw
+.  include "../../devel/ncursesw/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	ncurses
+.  include "../../devel/ncurses/buildlink3.mk"
 .endif
