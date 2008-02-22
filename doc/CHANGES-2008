@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.350 2008/02/22 02:47:08 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.351 2008/02/22 08:13:48 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -668,3 +668,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/flex to 2.5.34 [tnn 2008-02-21]
 	Updated chat/inspircd to 1.1.17 [adrianp 2008-02-21]
 	Updated devel/libgetopt to 1.4.3 [tnn 2008-02-22]
+	Updated devel/libarena to 20080221 [bjs 2008-02-22]
