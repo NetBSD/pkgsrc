@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.42 2008/02/05 18:57:09 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.43 2008/02/22 15:53:52 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -17,7 +17,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.42 2008/02/05 18:57:09 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.43 2008/02/22 15:53:52 joerg Exp $");
 #endif
 #endif
 
@@ -234,6 +234,8 @@ read_meta_data_from_fd(int fd)
 		(*target)[size] = '\0';
 	}
 
+	archive_read_finish(archive);
+
 	return meta;
 #endif
 }
@@ -358,6 +360,14 @@ pkg_do(const char *pkg)
 			}
 		}
 		meta = read_meta_data_from_pkgdb(pkg);
+	}
+
+	if (meta->meta_contents == NULL ||
+	    meta->meta_comment == NULL ||
+	    meta->meta_desc == NULL) {
+		warnx("invalid package `%s' skipped", pkg);
+		free_pkg_meta(meta);
+		return 1;	
 	}
 
 	/*
