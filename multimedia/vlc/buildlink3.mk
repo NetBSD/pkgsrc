@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2008/02/22 16:53:20 sborrill Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2008/02/22 19:46:11 sborrill Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 VLC_BUILDLINK3_MK:=	${VLC_BUILDLINK3_MK}+
@@ -16,6 +16,7 @@ BUILDLINK_API_DEPENDS.vlc+=	vlc>=0.8.6d
 BUILDLINK_PKGSRCDIR.vlc?=	../../multimedia/vlc
 .endif	# VLC_BUILDLINK3_MK
 
+pkgbase := vlc
 .include "../../mk/pkg-build-options.mk"
 
 .if !empty(PKG_OPTIONS:Mfaad)
