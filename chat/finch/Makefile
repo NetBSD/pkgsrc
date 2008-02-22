@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/02/02 21:43:27 gdt Exp $
+# $NetBSD: Makefile,v 1.11 2008/02/22 19:10:38 jlam Exp $
 #
 
 PKGNAME=	finch-${PIDGIN_VERSION}
@@ -26,13 +26,16 @@ CONFIGURE_ARGS+=	--disable-gnutls
 CONFIGURE_ARGS+=	--disable-nss
 #CONFIGURE_ARGS+=	--disable-plugins
 
-CONFIGURE_ARGS+=	--with-ncurses-headers=${PREFIX}/include/ncursesw
-CONFIGURE_ENV+=		ac_cv_lib_ncursesw_initscr=yes
-CONFIGURE_ENV+=		ac_cv_lib_panelw_update_panels=yes
+# The configure script uses an incredibly stupid way to detect if the
+# ncurses header is present.  As such, it needs the exact path to the
+# ncurses header it will use, so provide the path to the one in
+# ${BUILDLINK_DIR}.
+#
+CONFIGURE_ARGS+=	--with-ncurses-headers=${BUILDLINK_DIR}/include
 
 USE_NCURSES=		yes # force ncurses, for libpanel
 
-BUILD_DIRS=finch
+BUILD_DIRS=		finch
 
 .include "options.mk"
 
@@ -42,8 +45,9 @@ pre-build:
 	  ln -s ${BUILDLINK_DIR}/lib/libpurple.la ${WRKSRC}/libpurple/.
 
 post-install:
-	${INSTALL_MAN_DIR} ${DESTDIR:Q}${PREFIX:Q}/man/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/finch.1 ${DESTDIR:Q}${PREFIX:Q}/man/man1
+	${INSTALL_MAN_DIR} ${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR:Q}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/finch.1 \
+		${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR:Q}/man1
 
 .include "../../chat/libpurple/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
