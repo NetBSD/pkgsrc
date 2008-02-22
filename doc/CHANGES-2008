@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.352 2008/02/22 13:24:32 obache Exp $
+$NetBSD: CHANGES-2008,v 1.353 2008/02/22 13:32:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -670,3 +670,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libgetopt to 1.4.3 [tnn 2008-02-22]
 	Updated devel/libarena to 20080221 [bjs 2008-02-22]
 	Added emulators/suse100_krb5 version 10.0 [obache 2008-02-22]
+	Added emulators/suse100_32_krb5 version 10.0 [obache 2008-02-22]
