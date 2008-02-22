@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2008/02/16 23:38:42 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2008/02/22 01:27:55 tnn Exp $
 #
 
-DISTNAME=	libgetopt-1.4.2
+DISTNAME=	libgetopt-1.4.3
 CATEGORIES=	pkgtools sysutils
 MASTER_SITES=	# empty
 DISTFILES=	# empty
