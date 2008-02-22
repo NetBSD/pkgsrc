@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7076 2008/02/21 10:08:48 xtraeme Exp $
+$NetBSD: TODO,v 1.7077 2008/02/22 13:44:30 obache Exp $
 
 Suggested new packages
 ======================
@@ -282,10 +282,6 @@ Suggested new packages
 	*BSD Usage Statistics [pkg/35365]
 	http://www.bsdstats.org/
 	Report machine statistics to the BSDstats Project
-
-	SuSE100_krb5 [pkg/35543]
-	(MIT) kerberos libraries for our Linux emulation.
-	firefox2-bin can do the GSSAPI/Kerberos HTTP Negotiate protocol.
 
 	Skins for XMMS [pkg/35666]
 	http://www.xmms.org/skins.php
