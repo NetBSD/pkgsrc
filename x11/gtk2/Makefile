@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2008/02/13 19:45:41 drochner Exp $
+# $NetBSD: Makefile,v 1.157 2008/02/22 13:11:33 tnn Exp $
 
 DISTNAME=		gtk+-2.12.8
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -59,12 +59,6 @@ SUBST_SED.pthread=	-e 's,__PTHREAD_FLAGS__,${BUILDLINK_LDFLAGS.pthread},g'
 SUBST_FILES.pthread=	gdk-pixbuf/Makefile.in
 
 .include "options.mk"
-
-.include "../../mk/compiler.mk"
-
-.if ${OPSYS} == "IRIX" && !empty(CC_VERSION:Mgcc*)
-USE_TOOLS+=		gawk
-.endif
 
 # We remove the module databases during post-install since we create them
 # anew in the +INSTALL script as part of the POST-INSTALL action.
