@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2008/02/20 13:11:00 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2008/02/22 15:46:51 obache Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 VLC_BUILDLINK3_MK:=	${VLC_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}vlc
 
 .if ${VLC_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.vlc+=	vlc>=0.8.6d
-BUILDLINK_PKGSRCDIR.vlc?=	../../wip/vlc
+BUILDLINK_PKGSRCDIR.vlc?=	../../multimedia/vlc
 .endif	# VLC_BUILDLINK3_MK
 
 .include "../../audio/faad2/buildlink3.mk"
@@ -30,7 +30,7 @@ BUILDLINK_PKGSRCDIR.vlc?=	../../wip/vlc
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
-.include "../../wip/ffmpeg-devel/buildlink3.mk"
+.include "../../multimedia/ffmpeg-devel/buildlink3.mk"
 .include "../../multimedia/libdvdplay/buildlink3.mk"
 .include "../../multimedia/libdvbpsi/buildlink3.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
