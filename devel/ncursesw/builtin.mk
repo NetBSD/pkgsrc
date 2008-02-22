@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2008/02/21 21:55:18 jlam Exp $
+# $NetBSD: builtin.mk,v 1.6 2008/02/22 13:48:21 tron Exp $
 
 BUILTIN_PKG:=	ncursesw
 
@@ -115,7 +115,7 @@ BUILDLINK_CPPFLAGS.ncursesw+=	-DHAVE_WCHAR=1
 # the wide curses definitions need to define _XOPEN_SOURCE_EXTENDED.
 #
 .  if !empty(USE_BUILTIN.ncursesw:M[nN][oO]) || \
-      (!empty(USE_BUILTIN.ncursesw:M[yY][eE][sS]) && 
+      (!empty(USE_BUILTIN.ncursesw:M[yY][eE][sS]) && \
        !empty(IS_BUILTIN.ncursesw:M[yY][eE][sS]))
 USE_NCURSES=			yes
 BUILDLINK_CPPFLAGS.ncursesw+=	-D_XOPEN_SOURCE_EXTENDED=1
