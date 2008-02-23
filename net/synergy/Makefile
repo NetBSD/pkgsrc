@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/09/22 18:22:18 minskim Exp $
+# $NetBSD: Makefile,v 1.10 2008/02/23 18:04:57 heinz Exp $
 #
 
 DISTNAME=		synergy-1.3.1
@@ -8,7 +8,9 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=synergy2/}
 
 MAINTAINER=		yui@yui.pe.kr
 HOMEPAGE=		http://synergy2.sourceforge.net/
-COMMENT=		Let an user share a mouse and keyboard among computers
+COMMENT=		Let a user share a mouse and keyboard among computers
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
@@ -27,13 +29,13 @@ DOCS=			*.html *.css images/*.gif
 .endif
 
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}/images
-	cd ${WRKSRC}/doc; \
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}/images
+	set -e; cd ${WRKSRC}/doc; \
 	for f in ${DOCS}; do \
-		${INSTALL_DATA} $$f ${DOCDIR}/$$f; \
+		${INSTALL_DATA} "$$f" "${DESTDIR}${DOCDIR}/$$f"; \
 	done
-	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/examples/synergy.conf ${EXAMPLESDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/synergy.conf ${DESTDIR}${EXAMPLESDIR}
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
