@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.197 2008/02/23 05:16:33 obache Exp $
+# $NetBSD: Makefile,v 1.198 2008/02/23 05:26:01 obache Exp $
 #
 # This pkg does not compile in mod_ssl, only the `mod_ssl EAPI' (a set of
 # code hooks that allow mod_ssl to be compiled separately later, if desired).
@@ -13,6 +13,8 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} ${NETBSD_LOGO} ${MODSSL_DIST}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://httpd.apache.org/
 COMMENT=		Apache HTTP (Web) server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NETBSD_LOGO=		sitedrivenby.gif
 SITES.${NETBSD_LOGO}=	http://www.NetBSD.org/images/logos/
@@ -46,6 +48,7 @@ CONFIGURE_ARGS+=	--with-port=80
 CONFIGURE_ENV+=		OPTIM=${APACHE_CUSTOM_CFLAGS:Q}
 CONFIGURE_ENV+=		EAPI_MM="${BUILDLINK_PREFIX.libmm}"
 CONFIGURE_ENV+=		BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q}
+INSTALL_MAKE_FLAGS+=	root=${DESTDIR:Q}
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -223,16 +226,16 @@ pre-install:
 
 post-install:
 .if !defined(NOPIC)
-	cd ${PREFIX}/lib/httpd; ${MV} libproxy.so mod_proxy.so
+	cd ${DESTDIR}${PREFIX}/lib/httpd; ${MV} libproxy.so mod_proxy.so
 .endif
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/httpd
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/httpd
 	for file in httpd.conf magic mime.types; do			\
-		${INSTALL_DATA} ${PKG_SYSCONFDIR}/$${file}.default	\
-			${PREFIX}/share/examples/httpd;			\
-		${RM} -f ${PKG_SYSCONFDIR}/$${file}.default;		\
+		${INSTALL_DATA} ${DESTDIR}${PKG_SYSCONFDIR}/$${file}.default	\
+			${DESTDIR}${PREFIX}/share/examples/httpd;	\
+		${RM} -f ${DESTDIR}${PKG_SYSCONFDIR}/$${file}.default;	\
 	done
-	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${PREFIX}/share/httpd/htdocs
-	${CHMOD} ${NONBINMODE} ${PREFIX}/libexec/cgi-bin/printenv \
-	  ${PREFIX}/libexec/cgi-bin/test-cgi
+	${INSTALL_DATA} ${DISTDIR}/sitedrivenby.gif ${DESTDIR}${PREFIX}/share/httpd/htdocs
+	${CHMOD} ${NONBINMODE} ${DESTDIR}${PREFIX}/libexec/cgi-bin/printenv \
+	  ${DESTDIR}${PREFIX}/libexec/cgi-bin/test-cgi
 
 .include "../../mk/bsd.pkg.mk"
