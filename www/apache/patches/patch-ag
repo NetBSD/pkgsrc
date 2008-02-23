@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.8 2004/10/29 13:48:31 abs Exp $
+$NetBSD: patch-ag,v 1.9 2008/02/23 05:16:34 obache Exp $
 
---- src/os/unix/os.c.orig	2004-02-20 21:01:04.000000000 +0000
+--- src/os/unix/os.c.orig	2006-07-12 08:16:05.000000000 +0000
 +++ src/os/unix/os.c
-@@ -153,7 +153,12 @@ void ap_os_dso_unload(void *handle)
+@@ -154,7 +154,12 @@ void ap_os_dso_unload(void *handle)
  #elif defined(HAVE_DYLD)
      NSUnLinkModule(handle,FALSE);
  

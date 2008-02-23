@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.25 2006/02/21 22:44:17 wiz Exp $
+$NetBSD: patch-aa,v 1.26 2008/02/23 05:16:34 obache Exp $
 
---- Makefile.tmpl.orig	2006-02-21 12:27:34.000000000 +0000
+--- Makefile.tmpl.orig	2008-02-23 04:22:56.000000000 +0000
 +++ Makefile.tmpl
-@@ -56,6 +56,8 @@ INSTALL_DATA    = $(INSTALL) $(IFLAGS_DA
+@@ -57,6 +57,8 @@ INSTALL_DATA    = $(INSTALL) $(IFLAGS_DA
  PERL            = @PERL@
  TAR		= @TAR@
  TAROPT		= @TAROPT@
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.25 2006/02/21 22:44:17 wiz Exp $
  
  #   installation name of Apache webserver
  TARGET          = @TARGET@
-@@ -280,11 +282,6 @@ install-mktree:
+@@ -281,11 +283,6 @@ install-mktree:
  	$(MKDIR) $(root)$(mandir)/man1
  	$(MKDIR) $(root)$(mandir)/man8
  	$(MKDIR) $(root)$(sysconfdir)
@@ -23,7 +23,7 @@ $NetBSD: patch-aa,v 1.25 2006/02/21 22:44:17 wiz Exp $
  	$(MKDIR) $(root)$(htdocsdir)
  	$(MKDIR) $(root)$(manualdir)
  	$(MKDIR) $(root)$(iconsdir)
-@@ -296,9 +293,9 @@ install-mktree:
+@@ -297,9 +294,9 @@ install-mktree:
  	$(MKDIR) $(root)$(proxycachedir)
  	-@if [ "x`$(AUX)/getuid.sh`" = "x0" ]; then \
  		echo "chown $(conf_user) $(root)$(proxycachedir)"; \
@@ -35,7 +35,7 @@ $NetBSD: patch-aa,v 1.25 2006/02/21 22:44:17 wiz Exp $
  	fi
  	@echo "<=== [mktree]"
  
-@@ -343,34 +340,6 @@ install-programs:
+@@ -344,34 +341,6 @@ install-programs:
  			file=`echo $${mod} | sed -e 's;^.*/\([^/]*\);\1;'`; \
  			echo "$(INSTALL_DSO) $(TOP)/$(SRC)/$${mod} $(root)$(libexecdir)/$${file}"; \
  			$(INSTALL_DSO) $(TOP)/$(SRC)/$${mod} $(root)$(libexecdir)/$${file}; \
@@ -70,7 +70,7 @@ $NetBSD: patch-aa,v 1.25 2006/02/21 22:44:17 wiz Exp $
  		done; \
  	fi
  	@echo "<=== [programs]"
-@@ -420,9 +389,9 @@ install-support:
+@@ -421,9 +390,9 @@ install-support:
  	    echo "$(INSTALL_PROGRAM) $(TOP)/$(SRC)/support/suexec $(root)$(sbindir)/suexec"; \
  	    $(INSTALL_PROGRAM) $(TOP)/$(SRC)/support/suexec $(root)$(sbindir)/suexec; \
  	    echo "chown root $(root)$(sbindir)/suexec"; \
@@ -82,7 +82,7 @@ $NetBSD: patch-aa,v 1.25 2006/02/21 22:44:17 wiz Exp $
  	    echo "$(INSTALL_DATA) $(TOP)/$(SRC)/support/suexec.8 $(root)$(mandir)/man8/suexec.8"; \
  	    $(INSTALL_DATA) $(TOP)/$(SRC)/support/suexec.8 $(root)$(mandir)/man8/suexec.8; \
  	fi
-@@ -464,9 +433,9 @@ install-binsupport:
+@@ -465,9 +434,9 @@ install-binsupport:
  	    echo "$(INSTALL_PROGRAM) $(TOP)/$(SRC)/support/suexec $(root)$(sbindir)/suexec"; \
  	    $(INSTALL_PROGRAM) $(TOP)/$(SRC)/support/suexec $(root)$(sbindir)/suexec; \
  	    echo "chown root $(root)$(sbindir)/suexec"; \
@@ -94,7 +94,7 @@ $NetBSD: patch-aa,v 1.25 2006/02/21 22:44:17 wiz Exp $
  	    echo "$(INSTALL_DATA) $(TOP)/$(SRC)/support/suexec.8 $(root)$(mandir)/man8/suexec.8"; \
  	    $(INSTALL_DATA) $(TOP)/$(SRC)/support/suexec.8 $(root)$(mandir)/man8/suexec.8; \
  	fi
-@@ -489,21 +458,25 @@ install-include:
+@@ -490,21 +459,25 @@ install-include:
  #   icons and distributed CGI scripts.
  install-data:
  	@echo "===> [data: Installing initial data files]"
@@ -125,7 +125,7 @@ $NetBSD: patch-aa,v 1.25 2006/02/21 22:44:17 wiz Exp $
  	fi
  	-@if [ -f $(root)$(cgidir)/printenv ]; then \
  		echo "[PRESERVING EXISTING CGI SUBDIR: $(root)$(cgidir)/]"; \
-@@ -511,23 +484,25 @@ install-data:
+@@ -512,23 +485,25 @@ install-data:
  		for script in printenv test-cgi; do \
  			cat $(TOP)/cgi-bin/$${script} |\
  			sed -e 's;^#!/.*perl;#!$(PERL);' \
@@ -156,7 +156,7 @@ $NetBSD: patch-aa,v 1.25 2006/02/21 22:44:17 wiz Exp $
  		if [ .$$conf = .httpd.conf ]; then \
  			target_conf="$(TARGET).conf"; \
  		else \
-@@ -583,22 +558,10 @@ install-config:
+@@ -584,22 +559,10 @@ install-config:
          	> $(TOP)/$(SRC)/.apaci.install.tmp && \
  		echo "$(INSTALL_DATA) $(TOP)/conf/$${conf}-dist[*] $(root)$(sysconfdir)/$${target_conf}.default"; \
  		$(INSTALL_DATA) $(TOP)/$(SRC)/.apaci.install.tmp $(root)$(sysconfdir)/$${target_conf}.default; \

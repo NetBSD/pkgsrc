@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2005/10/19 21:42:59 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/02/23 05:16:33 obache Exp $
 bin/checkgid
 bin/dbmmanage
 bin/htdigest
@@ -398,6 +398,7 @@ share/httpd/htdocs/manual/windows.html.html
 share/httpd/htdocs/manual/windows.html.ja.jis
 share/httpd/htdocs/sitedrivenby.gif
 share/httpd/icons/README
+share/httpd/icons/README.html
 share/httpd/icons/a.gif
 share/httpd/icons/a.png
 share/httpd/icons/alert.black.gif
@@ -522,7 +523,6 @@ share/httpd/icons/screw2.gif
 share/httpd/icons/screw2.png
 share/httpd/icons/script.gif
 share/httpd/icons/script.png
-share/httpd/icons/small/README.txt
 share/httpd/icons/small/back.gif
 share/httpd/icons/small/back.png
 share/httpd/icons/small/binary.gif
