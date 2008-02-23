@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.354 2008/02/22 17:15:28 sborrill Exp $
+$NetBSD: CHANGES-2008,v 1.355 2008/02/23 02:04:13 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -672,3 +672,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added emulators/suse100_krb5 version 10.0 [obache 2008-02-22]
 	Added emulators/suse100_32_krb5 version 10.0 [obache 2008-02-22]
 	Added www/dansguardian version 2.8.0.6 [sborrill 2008-02-22]
+	Updated cad/gerbv to 2.0.1 [dmcmahill 2008-02-22]
