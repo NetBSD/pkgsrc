@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.71 2008/02/20 10:24:09 markd Exp $
+# $NetBSD: Makefile,v 1.72 2008/02/23 11:38:36 wiz Exp $
 
 DISTNAME=	kdevelop-3.5.1
 PKGNAME=	kdevelop-base-3.5.1
@@ -55,6 +55,9 @@ CONFIGURE_ARGS+= \
 
 .include "../../meta-pkgs/kde3/kde3.mk"
 
+# XXX: need to include compiler.mk before including db4/buildlink3.mk,
+# otherwise f2c is not added as a dependency correctly
+.include "../../mk/compiler.mk"
 .include "../../databases/db4/buildlink3.mk"
 .include "../../devel/kdesdk3/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
