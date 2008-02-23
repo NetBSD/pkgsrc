@@ -10,6 +10,7 @@ ao			Enable the platform-independent 'ao' audio library.
 ares			Use the ares library for asynchronous name resolution.
 aria2-metalink		Enable Metalink support.
 arts			Use the aRts audio daemon.
+aspell			Add spell checking support using aspell.
 aterm-big5		Enable Chinese support.
 aterm-greek		Enable Greek keyboard support.
 aterm-kanji		Enable kanji support.
