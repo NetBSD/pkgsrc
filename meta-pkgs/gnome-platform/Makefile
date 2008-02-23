@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/01/12 15:26:03 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/23 20:44:50 tnn Exp $
 
 DISTNAME=	gnome-platform-2.20.3
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
-DISTFILES=	# empty
 
 MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
@@ -39,12 +38,6 @@ DEPENDS+=	pango>=1.18.4:../../devel/pango
 # by libgnomeui. List it here to avoid circular dependency.
 DEPENDS+=	gnome-keyring>=2.20.3:../../security/gnome-keyring
 
-EXTRACT_ONLY=	# empty
-NO_CHECKSUM=	yes
-NO_CONFIGURE=	yes
-NO_BUILD=	yes
-NO_MTREE=	yes
-
-do-install:	# empty
+META_PACKAGE=	yes
 
 .include "../../mk/bsd.pkg.mk"
