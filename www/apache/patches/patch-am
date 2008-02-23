@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.8 2005/08/22 16:19:00 reed Exp $
+$NetBSD: patch-am,v 1.9 2008/02/23 05:16:34 obache Exp $
 
---- src/include/ap_config.h.orig	2004-09-15 16:45:17.000000000 -0700
-+++ src/include/ap_config.h	2005-08-22 09:09:03.000000000 -0700
-@@ -699,8 +699,8 @@
+--- src/include/ap_config.h.orig	2006-07-12 08:16:05.000000000 +0000
++++ src/include/ap_config.h
+@@ -700,8 +700,8 @@ extern char *crypt();
  #undef NO_SETSID
  #define HAVE_SYSLOG 1
  
@@ -13,7 +13,7 @@ $NetBSD: patch-am,v 1.8 2005/08/22 16:19:00 reed Exp $
  #include <osreldate.h>
  #endif
  #define HAVE_GMTOFF 1
-@@ -1304,7 +1304,7 @@
+@@ -1305,7 +1305,7 @@ extern int ap_execve(const char *filenam
   * so we don't have to.  Sigh...
   */
  

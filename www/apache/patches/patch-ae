@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.7 2004/10/29 13:48:31 abs Exp $
+$NetBSD: patch-ae,v 1.8 2008/02/23 05:16:34 obache Exp $
 
---- src/modules/standard/mod_include.c.orig	2004-10-25 16:44:04.000000000 +0100
+--- src/modules/standard/mod_include.c.orig	2006-07-12 08:16:05.000000000 +0000
 +++ src/modules/standard/mod_include.c
-@@ -50,7 +50,10 @@
+@@ -51,7 +51,10 @@
  #include "http_log.h"
  #include "http_main.h"
  #include "util_script.h"
@@ -13,7 +13,7 @@ $NetBSD: patch-ae,v 1.7 2004/10/29 13:48:31 abs Exp $
  
  #define STARTING_SEQUENCE "<!--#"
  #define ENDING_SEQUENCE "-->"
-@@ -447,7 +450,8 @@ static int get_directive(FILE *in, char 
+@@ -448,7 +451,8 @@ static int get_directive(FILE *in, char 
  /*
   * Do variable substitution on strings
   */
@@ -23,7 +23,7 @@ $NetBSD: patch-ae,v 1.7 2004/10/29 13:48:31 abs Exp $
  			size_t length, int leave_name)
  {
      char ch;
-@@ -645,7 +649,8 @@ static int handle_include(FILE *in, requ
+@@ -646,7 +650,8 @@ static int handle_include(FILE *in, requ
              parse_string(r, tag_val, parsed_string, sizeof(parsed_string), 0);
              if (tag[0] == 'f') {
                  /* be safe; only files in this directory or below allowed */
@@ -33,7 +33,7 @@ $NetBSD: patch-ae,v 1.7 2004/10/29 13:48:31 abs Exp $
                      error_fmt = "unable to include file \"%s\" "
                          "in parsed file %s";
                  }
-@@ -1057,7 +1062,8 @@ static int find_file(request_rec *r, con
+@@ -1058,7 +1063,8 @@ static int find_file(request_rec *r, con
                          "in parsed file %s";
          }
          else {
@@ -43,7 +43,7 @@ $NetBSD: patch-ae,v 1.7 2004/10/29 13:48:31 abs Exp $
              rr = ap_sub_req_lookup_file(tag_val, r);
  
              if (rr->status == HTTP_OK && rr->finfo.st_mode != 0) {
-@@ -2140,6 +2146,16 @@ static int handle_printenv(FILE *in, req
+@@ -2141,6 +2147,16 @@ static int handle_printenv(FILE *in, req
      }
  }
  
@@ -60,7 +60,7 @@ $NetBSD: patch-ae,v 1.7 2004/10/29 13:48:31 abs Exp $
  
  
  /* -------------------------- The main function --------------------------- */
-@@ -2275,6 +2291,13 @@ static void send_parsed_content(FILE *f,
+@@ -2276,6 +2292,13 @@ static void send_parsed_content(FILE *f,
              }
  #endif
              else {
