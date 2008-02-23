@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/02/23 02:24:05 obache Exp $
+# $NetBSD: Makefile,v 1.9 2008/02/23 03:52:30 obache Exp $
 #
 
 DISTNAME=	mlvwm091
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www2u.biglobe.ne.jp/~y-miyata/mlvwm.html
 COMMENT=	Macintosh Like Virtual Window Manager
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_IMAKE=	yes
 
 EGDIR=			${PREFIX}/share/examples/mlvwm
@@ -18,12 +20,12 @@ INSTALLATION_DIRS=	share/doc/mlvwm share/examples/mlvwm share/mlvwm
 
 post-install:
 .for f in README CONFIGURATION
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/mlvwm
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/mlvwm
 .endfor
 .for f in Mlvwmrc Mlvwmrc-Xterm
-	${INSTALL_DATA} ${WRKSRC}/sample_rc/${f} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/sample_rc/${f} ${DESTDIR}${EGDIR}
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/pixmap/*.xpm ${PREFIX}/share/mlvwm
+	${INSTALL_DATA} ${WRKSRC}/pixmap/*.xpm ${DESTDIR}${PREFIX}/share/mlvwm
 
 SUBST_CLASSES+=		xpm
 SUBST_STAGE.xpm=	post-configure
