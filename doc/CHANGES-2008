@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.363 2008/02/24 20:40:07 seb Exp $
+$NetBSD: CHANGES-2008,v 1.364 2008/02/24 21:59:34 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -683,3 +683,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/openldap-doc to 2.4.8 [ghen 2008-02-24]
 	Updated databases/openldap-server to 2.4.8 [ghen 2008-02-24]
 	Updated net/nfdump to 1.5.7 [seb 2008-02-24]
+	Updated pkgtools/pkg_chk to 1.90 [abs 2008-02-24]
