@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.360 2008/02/24 04:58:49 jlam Exp $
+$NetBSD: CHANGES-2008,v 1.361 2008/02/24 05:29:35 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -677,3 +677,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/GraphicsMagick to 1.1.11 [obache 2008-02-24]
 	Updated sysutils/ipa to 2.0.5 [obache 2008-02-24]
 	Added devel/pdcurses version 3.3 [jlam 2008-02-24]
+	Updated www/ap-ssl to 2.8.31 [obache 2008-02-24]
