@@ -1,4 +1,4 @@
-/* $NetBSD: jobs.c,v 1.7 2007/11/30 17:31:38 rillig Exp $ */
+/* $NetBSD: jobs.c,v 1.8 2008/02/24 15:35:42 tnn Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -71,6 +71,7 @@ ts_printf(const char *fmt, ...)
 	time_t now;
 	va_list ap;
 	char buf[512];
+	struct build_stat st;
 
 	if (verbosity >= 2) {
 		now = time(NULL);
@@ -79,6 +80,12 @@ ts_printf(const char *fmt, ...)
 			errx(1, "Formatted time doesn't fit into buffer");
 
 		(void)printf("%s ", buf);
+	}
+
+	if (verbosity >= 1) {
+		build_stats(&st);
+		printf("[%lu/%lu] ", (unsigned long)len_jobs - st.open_jobs,
+		    (unsigned long)len_jobs);
 	}
 
 	va_start(ap, fmt);
@@ -432,7 +439,7 @@ process_job(struct build_job *job, enum job_state state, int log_state)
 			free(buf);
 		}
 		if (verbosity >= 1)
-			ts_printf("Failed to build %s\n", job->pkgname);
+			ts_printf("Failed to build    %s\n", job->pkgname);
 		/* FALLTHROUGH */
 	case JOB_INDIRECT_FAILED:
 		recursive_mark_broken(job, JOB_INDIRECT_FAILED);
@@ -444,7 +451,7 @@ process_job(struct build_job *job, enum job_state state, int log_state)
 		break;
 	case JOB_IN_PROCESSING:
 		if (verbosity >= 1)
-			ts_printf("Starting build of %s\n", job->pkgname);
+			ts_printf("Starting build of  %s\n", job->pkgname);
 		break;
 	case JOB_OPEN:
 		if (job->open_depends == 0)
