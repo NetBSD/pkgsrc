@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.361 2008/02/24 05:29:35 obache Exp $
+$NetBSD: CHANGES-2008,v 1.362 2008/02/24 20:21:11 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -678,3 +678,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/ipa to 2.0.5 [obache 2008-02-24]
 	Added devel/pdcurses version 3.3 [jlam 2008-02-24]
 	Updated www/ap-ssl to 2.8.31 [obache 2008-02-24]
+	Updated databases/openldap to 2.4.8 [ghen 2008-02-24]
+	Updated databases/openldap-client to 2.4.8 [ghen 2008-02-24]
+	Updated databases/openldap-doc to 2.4.8 [ghen 2008-02-24]
+	Updated databases/openldap-server to 2.4.8 [ghen 2008-02-24]
