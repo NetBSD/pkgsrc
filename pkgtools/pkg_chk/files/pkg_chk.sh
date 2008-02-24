@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.54 2008/02/17 01:05:39 tnn Exp $
+# $Id: pkg_chk.sh,v 1.55 2008/02/24 21:58:13 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -299,7 +299,7 @@ list_packages()
 	for pkg in $pkglist ; do
 	    set -o noglob
 	    deplist="$(list_dependencies $PACKAGES/$pkg)"
-	    verbose "$pkg: dependencies - `echo $deplist`" 
+	    verbose "$pkg: dependencies - `echo $deplist`"
 	    if [ -n "$deplist" ] ; then
 		for depmatch in $deplist ; do
 		    dep=`${PKG_ADMIN} -b -d $PACKAGES lsbest "$depmatch"`
@@ -307,7 +307,7 @@ list_packages()
 			fatal_later "$depmatch: dependency missing for $pkg"
 		    else
 			pairlist="$pairlist$dep $pkg\n"
-			case $dep_cache in 
+			case $dep_cache in
 			    *" $dep "*)
 				# depmatch_cache is a quick cache of already
 				verbose "$pkg: $deplist - cached"
@@ -509,7 +509,7 @@ pkg_fetchlist()
     {
     PKGLIST=$@
     msg_progress Fetch
-    while [ $# != 0 ]; do 
+    while [ $# != 0 ]; do
 	pkg_fetch $1 $2
 	shift ; shift;
     done
@@ -613,7 +613,7 @@ usage()
 	echo
     fi
     echo 'Usage: pkg_chk [opts]
-	-a      Add all missing packages (implies -c)
+	-a      Add all missing packages
 	-B      Check the "Build version" of packages
 	-b      Use binary packages
 	-C conf Use pkgchk.conf file 'conf'
@@ -623,16 +623,16 @@ usage()
 	-h      This help
 	-k	Continue with further packages if errors are encountered
 	-L file Redirect output from commands run into file (should be fullpath)
-	-l	List binary packages including dependencies (implies -c)
+	-l	List binary packages including dependencies
 	-N	List installed packages for which a newer version is in TODO
 	-n	Display actions that would be taken, but do not perform them
 	-p	Display the list of pkgdirs that match the current tags
 	-P dir  Set PACKAGES dir (overrides any other setting)
 	-q	Do not display actions or take any action; only list packages
-	-r	Recursively remove mismatches (use with care) (implies -i)
+	-r	Recursively remove mismatches (use with care)
 	-s      Use source for building packages
 	-U tags Comma separated list of pkgchk.conf tags to unset ('*' for all)
-	-u      Update all mismatched packages (implies -i)
+	-u      Update all mismatched packages
 	-v      Verbose
 
 pkg_chk verifies installed packages against pkgsrc.
