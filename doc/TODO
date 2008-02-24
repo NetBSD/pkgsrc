@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7078 2008/02/22 18:27:35 wiz Exp $
+$NetBSD: TODO,v 1.7079 2008/02/24 04:53:50 obache Exp $
 
 Suggested new packages
 ======================
@@ -751,7 +751,6 @@ Suggested package updates
 	o intercal-0.24
 	o intltool-0.37.0
 	o iozone-3.283
-	o ipa-2.0.5 [pkg/37630]
 	o ircservices-5.1.11
 	o irrd-2.3.4 [pkg/36813|38002]
 	o irrtoolset-nox11-4.8.4
