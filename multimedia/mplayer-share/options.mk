@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.26 2008/02/13 00:55:55 rillig Exp $
+# $NetBSD: options.mk,v 1.27 2008/02/24 22:24:34 jdc Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -47,7 +47,7 @@ PKG_SUPPORTED_OPTIONS+=	vidix
 # Platform-specific options.
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
     ${MACHINE_ARCH} == "powerpc"
-PKG_SUPPORTED_OPTIONS+= mplayer-runtime-cpudetection xvid
+PKG_SUPPORTED_OPTIONS+= mplayer-runtime-cpudetection
 .endif
 .if ${MACHINE_ARCH} == "i386"
 PKG_SUPPORTED_OPTIONS+= mplayer-default-cflags mplayer-win32
@@ -58,6 +58,10 @@ PKG_SUPPORTED_OPTIONS+=	mplayer-real
 .endif
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 PKG_SUPPORTED_OPTIONS+=	mplayer-ssse3
+.endif
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
+    ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "sparc64"
+PKG_SUPPORTED_OPTIONS+= xvid
 .endif
 
 # -------------------------------------------------------------------------
