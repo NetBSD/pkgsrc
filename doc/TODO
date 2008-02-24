@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7079 2008/02/24 04:53:50 obache Exp $
+$NetBSD: TODO,v 1.7080 2008/02/24 20:40:07 seb Exp $
 
 Suggested new packages
 ======================
@@ -929,7 +929,6 @@ Suggested package updates
 	o newmail-1.0.2
 	o newmat-11
 	o newt-1.08
-	o nfdump-1.5.6 [pkg/37705]
 	o ng-1.4.4
 	o nikto-2.0.1
 	o nmap-4.53
