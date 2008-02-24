@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/01/13 17:15:17 ghen Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/02/24 20:15:05 ghen Exp $
 bin/ldapadd
 bin/ldapcompare
 bin/ldapdelete
@@ -220,6 +220,7 @@ man/man5/slapd-passwd.5
 man/man5/slapd-perl.5
 man/man5/slapd-relay.5
 man/man5/slapd-shell.5
+man/man5/slapd-sock.5
 man/man5/slapd-sql.5
 man/man5/slapd.access.5
 man/man5/slapd.backends.5
