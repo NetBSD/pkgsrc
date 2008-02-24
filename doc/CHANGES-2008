@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.357 2008/02/24 02:58:55 obache Exp $
+$NetBSD: CHANGES-2008,v 1.358 2008/02/24 04:52:33 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -675,3 +675,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated cad/gerbv to 2.0.1 [dmcmahill 2008-02-22]
 	Updated www/apache to 1.3.41 [obache 2008-02-23]
 	Updated graphics/GraphicsMagick to 1.1.11 [obache 2008-02-24]
+	Updated sysutils/ipa to 2.0.5 [obache 2008-02-24]
