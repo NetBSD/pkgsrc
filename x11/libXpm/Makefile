@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/02/06 14:03:41 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2008/02/24 02:26:33 jlam Exp $
 #
 
 DISTNAME=		libXpm-3.5.7
+PKGREVISION=		1
 CATEGORIES=		graphics x11
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=		.tar.bz2
@@ -16,10 +17,17 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config xgettext
-BROKEN_GETTEXT_DETECTION=yes
 PKGCONFIG_OVERRIDE+=	xpm.pc.in
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
+
+# Don't allow the configure script to find libintl.so or else the resulting
+# libXpm will be linked against it, which is not necessary.  Instead, just
+# pass down INTLLIBS in the build environment for use by the [cs]xpm
+# Makefiles.
+#
+CONFIGURE_ENV+=		ac_cv_search_gettext=no
+MAKE_ENV+=		INTLLIBS=${BUILDLINK_LDADD.gettext:Q}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
