@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/24 04:57:07 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/25 16:45:44 jlam Exp $
 
 DISTNAME=	PDCurses-3.3
 PKGNAME=	${DISTNAME:tl}
@@ -16,6 +16,7 @@ USE_LIBTOOL=		yes
 MAKE_JOBS_SAFE=		no
 
 CONFIGURE_ARGS+=	--with-x
+CONFIGURE_ENV+=		X11BASE=${X11BASE:Q}
 
 # PDCURSES_XAW is the name of the Xaw library.
 #
