@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.366 2008/02/25 15:39:49 joerg Exp $
+$NetBSD: CHANGES-2008,v 1.367 2008/02/25 23:15:06 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -686,3 +686,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/pkg_chk to 1.90 [abs 2008-02-24]
 	Updated mail/spamdyke to 3.1.6 [schmonz 2008-02-25]
 	Updated x11/modular-xorg-server to 1.3.0.0nb5 [joerg 2008-02-25]
+	Updated lang/gauche to 0.8.13 [tnn 2008-02-25]
