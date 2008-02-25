@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2008/02/23 00:14:51 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2008/02/25 16:38:00 sborrill Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 VLC_BUILDLINK3_MK:=	${VLC_BUILDLINK3_MK}+
@@ -23,10 +23,7 @@ pkgbase:= vlc
 .include "../../audio/faad2/buildlink3.mk"
 .endif
 
-.if !empty(PKG_BUILD_OPTIONS.vlc:Mflac)
 .include "../../audio/flac/buildlink3.mk"
-.endif
-
 .include "../../audio/lame/buildlink3.mk"
 .include "../../audio/liba52/buildlink3.mk"
 .include "../../audio/libcddb/buildlink3.mk"
@@ -36,6 +33,8 @@ pkgbase:= vlc
 .include "../../converters/fribidi/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
