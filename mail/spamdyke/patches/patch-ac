@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.5 2007/07/03 13:54:46 joerg Exp $
+$NetBSD: patch-ac,v 1.6 2008/02/25 07:38:00 schmonz Exp $
 
---- utils/Makefile.orig	2007-06-06 02:51:35.000000000 +0000
-+++ utils/Makefile
-@@ -1,6 +1,6 @@
- #CFLAGS := -Wall -g -funsigned-char -I../spamdyke
--CFLAGS := -Wall -O2 -funsigned-char -I../spamdyke
--LFLAGS := -lresolv
-+CFLAGS += -Wall -O2 -funsigned-char -I../spamdyke
-+LFLAGS := ${RESOLV_LDFLAGS}
+--- configure.orig	2008-02-10 14:36:07.000000000 -0500
++++ configure
+@@ -2630,7 +2630,7 @@ echo $ECHO_N "checking for OpenSSL libra
+ echo "${ECHO_T}yes" >&6; }
  
- all: domain2path domainsplit dnstxt dnsptr dnsmx passwordcheck
- 
+ else
+-   if  test "x$enable_tls" == "xcheck" ; then
++   if  test "x$enable_tls" = "xcheck" ; then
+    { echo "$as_me:$LINENO: checking for OpenSSL libraries (for TLS support)" >&5
+ echo $ECHO_N "checking for OpenSSL libraries (for TLS support)... $ECHO_C" >&6; }
+                                { echo "$as_me:$LINENO: result: no, TLS disabled" >&5
