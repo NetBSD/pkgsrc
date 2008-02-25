@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2007/05/30 05:58:10 schmonz Exp $
+# $NetBSD: options.mk,v 1.2 2008/02/25 07:38:00 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.spamdyke
 PKG_SUPPORTED_OPTIONS=	tls
@@ -7,9 +7,7 @@ PKG_SUPPORTED_OPTIONS=	tls
 
 .if !empty(PKG_OPTIONS:Mtls)
 .  include "../../security/openssl/buildlink3.mk"
-MAKE_ENV+=	CFLAGS_TLS="-DTLS"
-MAKE_ENV+=	LFLAGS_TLS="-lssl -lcrypto"
+CONFIGURE_ARGS+=	--enable-tls
 .else
-MAKE_ENV+=	CFLAGS_TLS=""
-MAKE_ENV+=	LFLAGS_TLS=""
+CONFIGURE_ARGS+=	--disable-tls
 .endif
