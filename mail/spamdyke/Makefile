@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2007/07/03 13:54:45 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/02/25 07:38:00 schmonz Exp $
 #
 
-DISTNAME=	spamdyke-2.6.3
+DISTNAME=	spamdyke-3.1.6
 CATEGORIES=	mail
 MASTER_SITES=	${HOMEPAGE}releases/
 EXTRACT_SUFX=	.tgz
@@ -10,11 +10,14 @@ MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://www.spamdyke.org/
 COMMENT=	Monitors and intercept incoming SMTP connections to qmail
 
-BUILD_DIRS=	${PKGBASE} utils
+WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/${PKGBASE}
+
+GNU_CONFIGURE=	yes
+BUILD_TARGET=	${PKGBASE}
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	${PKGBASE}/spamdyke.h
-SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX:Q},g'
+SUBST_FILES.paths=	spamdyke.h
+SUBST_SED.paths=	-e 's,@LOCALBASE@,${LOCALBASE:Q},g'
 SUBST_SED.paths+=	-e 's,@QMAILDIR@,${QMAILDIR:Q},g'
 SUBST_STAGE.paths=	do-configure
 
@@ -25,19 +28,12 @@ INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
 .include "options.mk"
 
 do-install:
-	cd ${WRKSRC}/${PKGBASE};					\
+	cd ${WRKSRC};							\
 	for f in spamdyke; do						\
 		${INSTALL_PROGRAM} $${f} ${PREFIX}/bin;			\
-	done
-	cd ${WRKSRC}/utils;						\
-	for f in dnsmx dnsptr dnstxt passwordcheck; do			\
-		${INSTALL_PROGRAM} $${f} ${PREFIX}/bin/spamdyke-$${f};	\
 	done;								\
-	for f in domain2path domainsplit; do				\
-		${INSTALL_PROGRAM} $${f} ${PREFIX}/bin;			\
-	done
-	cd ${WRKSRC}/documentation;					\
-	for f in *.txt; do						\
+	cd ../documentation;						\
+	for f in *.txt *.html; do					\
 		${INSTALL_DATA} $${f} ${PREFIX}/share/doc/${PKGBASE};	\
 	done
 
