@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7080 2008/02/24 20:40:07 seb Exp $
+$NetBSD: TODO,v 1.7081 2008/02/25 07:38:51 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1265,7 +1265,6 @@ Suggested package updates
 	o sound-juicer-2.16.4 [needs nautilus-cd-burner>=2.15.3]
 	o sound-juicer-2.20.1
 	o source-highlight-2.8
-	o spamdyke-3.1.6
 	o spcaview-20060501
 	o spim-7.3
 	o sqlite3-3.5.6
