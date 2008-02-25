@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2008/02/02 09:46:49 dsainty Exp $
+# $NetBSD: Makefile,v 1.42 2008/02/25 18:34:59 tnn Exp $
 
 DISTNAME=	fontforge_full-${VERSION}
 PKGNAME=	fontforge-${VERSION}
@@ -13,6 +13,8 @@ COMMENT=	Postscript font editor
 
 VERSION=	20080109
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 MAKE_ENV+=	PKGLOCALEDIR=${PKGLOCALEDIR}
 
 USE_LIBTOOL=		yes
@@ -21,6 +23,10 @@ USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-freetype-src
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+
+# checks for X11/Intrinsic.h
+BUILDLINK_DEPMETHOD.libXt?=	build
+.include "../../x11/libXt/buildlink3.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
