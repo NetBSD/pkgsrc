@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2008/02/14 12:26:56 drochner Exp $
+# $NetBSD: Makefile,v 1.73 2008/02/25 07:23:03 obache Exp $
 
 DISTNAME=	mc-4.6.1
 PKGREVISION=	4
@@ -48,9 +48,9 @@ post-install:
 # remove dir if no extensions were installed there
 	rmdir ${DESTDIR}${PREFIX:Q}/lib/mc 2>/dev/null || ${TRUE}
 .if !empty(PKG_OPTIONS:Mvfs)
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/vfs/extfs/extfs.ini ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/vfs/extfs/sfs.ini ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/vfs/extfs/extfs.ini ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/vfs/extfs/sfs.ini ${DESTDIR}${EGDIR}
 .endif
 
 .include "../../devel/gettext-lib/buildlink3.mk"
