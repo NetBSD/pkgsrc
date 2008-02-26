@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$FreeBSD$");
+__FBSDID("$FreeBSD: src/lib/libarchive/test/test_tar_large.c,v 1.1 2008/01/01 22:28:04 kientzle Exp $");
 
 #include <errno.h>
 #include <stdlib.h>
@@ -91,10 +91,11 @@ memory_write(struct archive *a, void *_private, const void *buff, size_t size)
 	(void)a;
 
 	/*
-	 * Since libarchive has zero-copy behavior, if you give a pointer
-	 * to filedata to the library, a pointer into that data will
-	 * pop out here.  This way, we can tell the difference between
-	 * filedata and library header and metadata.
+	 * Since libarchive tries to behave in a zero-copy manner, if
+	 * you give a pointer to filedata to the library, a pointer
+	 * into that data will (usually) pop out here.  This way, we
+	 * can tell the difference between filedata and library header
+	 * and metadata.
 	 */
 	if ((const char *)filedata <= (const char *)buff
 	    && (const char *)buff < (const char *)filedata + filedatasize) {
@@ -303,5 +304,6 @@ DEFINE_TEST(test_tar_large)
 	archive_read_finish(a);
 #endif
 
+	free(memdata.buff);
 	free(filedata);
 }

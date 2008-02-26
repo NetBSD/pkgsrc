@@ -33,12 +33,12 @@ DEFINE_TEST(test_option_t)
 	/* List reference archive, make sure the TOC is correct. */
 	r = systemf("%s -it < %s/test_option_t.cpio >t.out 2>t.err", testprog, refdir);
 	assertEqualInt(r, 0);
-	assertEmptyFile("t.err");
+	assertFileContents("1 block\n", 8, "t.err");
 	assertEqualFile("t.out", "%s/test_option_t.stdout", refdir);
 
 	/* List reference archive verbosely, make sure the TOC is correct. */
 	r = systemf("%s -itv < %s/test_option_t.cpio >tv.out 2>tv.err", testprog, refdir);
 	assertEqualInt(r, 0);
-	assertEmptyFile("tv.err");
+	assertFileContents("1 block\n", 8, "tv.err");
 	assertEqualFile("tv.out", "%s/test_option_tv.stdout", refdir);
 }
