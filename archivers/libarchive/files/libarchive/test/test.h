@@ -22,7 +22,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: src/lib/libarchive/test/test.h,v 1.6 2007/07/14 17:52:01 kientzle Exp $
+ * $FreeBSD: src/lib/libarchive/test/test.h,v 1.8 2008/02/19 05:52:30 kientzle Exp $
  */
 
 /* Every test program should #include "test.h" as the first thing. */
@@ -31,8 +31,9 @@
  * The goal of this file (and the matching test.c) is to
  * simplify the very repetitive test-*.c test programs.
  */
-
+#ifndef _FILE_OFFSET_BITS
 #define _FILE_OFFSET_BITS 64
+#endif
 
 #include <errno.h>
 #include <fcntl.h>
@@ -40,7 +41,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/stat.h>
+#ifndef _WIN32
 #include <unistd.h>
+#endif
 #include <wchar.h>
 
 #ifdef USE_DMALLOC
@@ -90,6 +93,14 @@
 /* As above, but raw blocks of bytes. */
 #define assertEqualMem(v1, v2, l)	\
   test_assert_equal_mem(__FILE__, __LINE__, (v1), #v1, (v2), #v2, (l), #l, NULL)
+/* Assert two files are the same; allow printf-style expansion of second name.
+ * See below for comments about variable arguments here...
+ */
+#define assertEqualFile		\
+  test_setup(__FILE__, __LINE__);test_assert_equal_file
+/* Assert that a file is empty; supports printf-style arguments. */
+#define assertEmptyFile		\
+  test_setup(__FILE__, __LINE__);test_assert_empty_file
 
 /*
  * This would be simple with C99 variadic macros, but I don't want to
@@ -98,13 +109,15 @@
  * but effective.
  */
 #define skipping	\
-  skipping_setup(__FILE__, __LINE__);test_skipping
+  test_setup(__FILE__, __LINE__);test_skipping
 
 /* Function declarations.  These are defined in test_utility.c. */
 void failure(const char *fmt, ...);
-void skipping_setup(const char *, int);
+void test_setup(const char *, int);
 void test_skipping(const char *fmt, ...);
-void test_assert(const char *, int, int, const char *, void *);
+int test_assert(const char *, int, int, const char *, void *);
+void test_assert_empty_file(const char *, ...);
+void test_assert_equal_file(const char *, const char *, ...);
 void test_assert_equal_int(const char *, int, int, const char *, int, const char *, void *);
 void test_assert_equal_string(const char *, int, const char *v1, const char *, const char *v2, const char *, void *);
 void test_assert_equal_wstring(const char *, int, const wchar_t *v1, const char *, const wchar_t *v2, const char *, void *);

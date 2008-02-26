@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$FreeBSD: src/lib/libarchive/test/test_read_pax_truncated.c,v 1.1 2007/07/13 15:14:35 kientzle Exp $");
+__FBSDID("$FreeBSD: src/lib/libarchive/test/test_read_pax_truncated.c,v 1.2 2008/01/01 22:28:04 kientzle Exp $");
 
 DEFINE_TEST(test_read_pax_truncated)
 {

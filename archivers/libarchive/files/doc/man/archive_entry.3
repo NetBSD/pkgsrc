@@ -1,298 +1,567 @@
-.\" Copyright (c) 2003-2007 Tim Kientzle
-.\" All rights reserved.
-.\"
-.\" Redistribution and use in source and binary forms, with or without
-.\" modification, are permitted provided that the following conditions
-.\" are met:
-.\" 1. Redistributions of source code must retain the above copyright
-.\"    notice, this list of conditions and the following disclaimer.
-.\" 2. Redistributions in binary form must reproduce the above copyright
-.\"    notice, this list of conditions and the following disclaimer in the
-.\"    documentation and/or other materials provided with the distribution.
-.\"
-.\" THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
-.\" ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-.\" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-.\" ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
-.\" FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
-.\" OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-.\" HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-.\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
-.\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
-.\" SUCH DAMAGE.
-.\"
-.\" $FreeBSD: src/lib/libarchive/archive_entry.3,v 1.15 2007/07/15 19:10:34 kientzle Exp $
-.\"
-.Dd December 15, 2003
-.Dt archive_entry 3
-.Os
-.Sh NAME
-.Nm archive_entry_acl_add_entry ,
-.Nm archive_entry_acl_add_entry_w ,
-.Nm archive_entry_acl_clear ,
-.Nm archive_entry_acl_count ,
-.Nm archive_entry_acl_next ,
-.Nm archive_entry_acl_next_w ,
-.Nm archive_entry_acl_reset ,
-.Nm archive_entry_acl_text_w ,
-.Nm archive_entry_atime ,
-.Nm archive_entry_atime_nsec ,
-.Nm archive_entry_clear ,
-.Nm archive_entry_clone ,
-.Nm archive_entry_copy_fflags_text_w ,
-.Nm archive_entry_copy_gname ,
-.Nm archive_entry_copy_gname_w ,
-.Nm archive_entry_copy_hardlink ,
-.Nm archive_entry_copy_hardlink_w ,
-.Nm archive_entry_copy_pathname_w ,
-.Nm archive_entry_copy_stat ,
-.Nm archive_entry_copy_symlink ,
-.Nm archive_entry_copy_symlink_w ,
-.Nm archive_entry_copy_uname ,
-.Nm archive_entry_copy_uname_w ,
-.Nm archive_entry_dev ,
-.Nm archive_entry_devmajor ,
-.Nm archive_entry_devminor ,
-.Nm archive_entry_filetype ,
-.Nm archive_entry_fflags ,
-.Nm archive_entry_fflags_text ,
-.Nm archive_entry_free ,
-.Nm archive_entry_gid ,
-.Nm archive_entry_gname ,
-.Nm archive_entry_hardlink ,
-.Nm archive_entry_ino ,
-.Nm archive_entry_mode ,
-.Nm archive_entry_mtime ,
-.Nm archive_entry_mtime_nsec ,
-.Nm archive_entry_nlink ,
-.Nm archive_entry_new ,
-.Nm archive_entry_pathname ,
-.Nm archive_entry_pathname_w ,
-.Nm archive_entry_rdev ,
-.Nm archive_entry_rdevmajor ,
-.Nm archive_entry_rdevminor ,
-.Nm archive_entry_set_atime ,
-.Nm archive_entry_set_ctime ,
-.Nm archive_entry_set_dev ,
-.Nm archive_entry_set_devmajor ,
-.Nm archive_entry_set_devminor ,
-.Nm archive_entry_set_filetype ,
-.Nm archive_entry_set_fflags ,
-.Nm archive_entry_set_gid ,
-.Nm archive_entry_set_gname ,
-.Nm archive_entry_set_hardlink ,
-.Nm archive_entry_set_link ,
-.Nm archive_entry_set_mode ,
-.Nm archive_entry_set_mtime ,
-.Nm archive_entry_set_pathname ,
-.Nm archive_entry_set_rdevmajor ,
-.Nm archive_entry_set_rdevminor ,
-.Nm archive_entry_set_size ,
-.Nm archive_entry_set_symlink ,
-.Nm archive_entry_set_uid ,
-.Nm archive_entry_set_uname ,
-.Nm archive_entry_size ,
-.Nm archive_entry_stat ,
-.Nm archive_entry_symlink ,
-.Nm archive_entry_uid ,
-.Nm archive_entry_uname
-.Nd functions for manipulating archive entry descriptions
-.Sh SYNOPSIS
-.In archive_entry.h
-.Ft void
-.Fn archive_entry_acl_add_entry "struct archive_entry *" "int type" "int permset" "int tag" "int qual" "const char *name"
-.Ft void
-.Fn archive_entry_acl_add_entry_w "struct archive_entry *" "int type" "int permset" "int tag" "int qual" "const wchar_t *name"
-.Ft void
-.Fn archive_entry_acl_clear "struct archive_entry *"
-.Ft int
-.Fn archive_entry_acl_count "struct archive_entry *" "int type"
-.Ft int
-.Fn archive_entry_acl_next "struct archive_entry *" "int want_type" "int *type" "int *permset" "int *tag" "int *qual" "const char **name"
-.Ft int
-.Fn archive_entry_acl_next_w "struct archive_entry *" "int want_type" "int *type" "int *permset" "int *tag" "int *qual" "const wchar_t **name"
-.Ft int
-.Fn archive_entry_acl_reset "struct archive_entry *" "int want_type"
-.Ft const wchar_t *
-.Fn archive_entry_acl_text_w "struct archive_entry *" "int flags"
-.Ft time_t
-.Fn archive_entry_atime "struct archive_entry *"
-.Ft long
-.Fn archive_entry_atime_nsec "struct archive_entry *"
-.Ft "struct archive_entry *"
-.Fn archive_entry_clear "struct archive_entry *"
-.Ft struct archive_entry *
-.Fn archive_entry_clone "struct archive_entry *"
-.Ft const wchar_t *
-.Fn archive_entry_copy_fflags_text_w "struct archive_entry *" "const wchar_t *"
-.Ft void
-.Fn archive_entry_copy_gname "struct archive_entry *" "const char *"
-.Ft void
-.Fn archive_entry_copy_gname_w "struct archive_entry *" "const wchar_t *"
-.Ft void
-.Fn archive_entry_copy_hardlink "struct archive_entry *" "const char *"
-.Ft void
-.Fn archive_entry_copy_hardlink_w "struct archive_entry *" "const wchar_t *"
-.Ft void
-.Fn archive_entry_copy_pathname_w "struct archive_entry *" "const wchar_t *"
-.Ft void
-.Fn archive_entry_copy_stat "struct archive_entry *" "const struct stat *"
-.Ft void
-.Fn archive_entry_copy_symlink "struct archive_entry *" "const char *"
-.Ft void
-.Fn archive_entry_copy_symlink_w "struct archive_entry *" "const wchar_t *"
-.Ft void
-.Fn archive_entry_copy_uname "struct archive_entry *" "const char *"
-.Ft void
-.Fn archive_entry_copy_uname_w "struct archive_entry *" "const wchar_t *"
-.Ft dev_t
-.Fn archive_entry_dev "struct archive_entry *"
-.Ft dev_t
-.Fn archive_entry_devmajor "struct archive_entry *"
-.Ft dev_t
-.Fn archive_entry_devminor "struct archive_entry *"
-.Ft mode_t
-.Fn archive_entry_filetype "struct archive_entry *"
-.Ft void
-.Fn archive_entry_fflags "struct archive_entry *" "unsigned long *set" "unsigned long *clear"
-.Ft const char *
-.Fn archive_entry_fflags_text "struct archive_entry *"
-.Ft void
-.Fn archive_entry_free "struct archive_entry *"
-.Ft const char *
-.Fn archive_entry_gname "struct archive_entry *"
-.Ft const char *
-.Fn archive_entry_hardlink "struct archive_entry *"
-.Ft ino_t
-.Fn archive_entry_ino "struct archive_entry *"
-.Ft mode_t
-.Fn archive_entry_mode "struct archive_entry *"
-.Ft time_t
-.Fn archive_entry_mtime "struct archive_entry *"
-.Ft long
-.Fn archive_entry_mtime_nsec "struct archive_entry *"
-.Ft unsigned int
-.Fn archive_entry_nlink "struct archive_entry *"
-.Ft struct archive_entry *
-.Fn archive_entry_new "void"
-.Ft const char *
-.Fn archive_entry_pathname "struct archive_entry *"
-.Ft const wchar_t *
-.Fn archive_entry_pathname_w "struct archive_entry *"
-.Ft dev_t
-.Fn archive_entry_rdev "struct archive_entry *"
-.Ft dev_t
-.Fn archive_entry_rdevmajor "struct archive_entry *"
-.Ft dev_t
-.Fn archive_entry_rdevminor "struct archive_entry *"
-.Ft void
-.Fn archive_entry_set_dev "struct archive_entry *" "dev_t"
-.Ft void
-.Fn archive_entry_set_devmajor "struct archive_entry *" "dev_t"
-.Ft void
-.Fn archive_entry_set_devminor "struct archive_entry *" "dev_t"
-.Ft void
-.Fn archive_entry_set_filetype "struct archive_entry *" "unsigned int"
-.Ft void
-.Fn archive_entry_set_fflags "struct archive_entry *" "unsigned long set" "unsigned long clear"
-.Ft void
-.Fn archive_entry_set_gid "struct archive_entry *" "gid_t"
-.Ft void
-.Fn archive_entry_set_gname "struct archive_entry *" "const char *"
-.Ft void
-.Fn archive_entry_set_hardlink "struct archive_entry *" "const char *"
-.Ft void
-.Fn archive_entry_set_ino "struct archive_entry *" "unsigned long"
-.Ft void
-.Fn archive_entry_set_link "struct archive_entry *" "const char *"
-.Ft void
-.Fn archive_entry_set_mode "struct archive_entry *" "mode_t"
-.Ft void
-.Fn archive_entry_set_mtime "struct archive_entry *" "time_t" "long nanos"
-.Ft void
-.Fn archive_entry_set_nlink "struct archive_entry *" "unsigned int"
-.Ft void
-.Fn archive_entry_set_pathname "struct archive_entry *" "const char *"
-.Ft void
-.Fn archive_entry_set_rdev "struct archive_entry *" "dev_t"
-.Ft void
-.Fn archive_entry_set_rdevmajor "struct archive_entry *" "dev_t"
-.Ft void
-.Fn archive_entry_set_rdevminor "struct archive_entry *" "dev_t"
-.Ft void
-.Fn archive_entry_set_size "struct archive_entry *" "int64_t"
-.Ft void
-.Fn archive_entry_set_symlink "struct archive_entry *" "const char *"
-.Ft void
-.Fn archive_entry_set_uid "struct archive_entry *" "uid_t"
-.Ft void
-.Fn archive_entry_set_uname "struct archive_entry *" "const char *"
-.Ft int64_t
-.Fn archive_entry_size "struct archive_entry *"
-.Ft const struct stat *
-.Fn archive_entry_stat "struct archive_entry *"
-.Ft const char *
-.Fn archive_entry_symlink "struct archive_entry *"
-.Ft const char *
-.Fn archive_entry_uname "struct archive_entry *"
-.Sh DESCRIPTION
+.TH archive_entry 3 "December 15, 2003" ""
+.SH NAME
+\fBarchive_entry_acl_add_entry\fP,
+\fBarchive_entry_acl_add_entry_w\fP,
+\fBarchive_entry_acl_clear\fP,
+\fBarchive_entry_acl_count\fP,
+\fBarchive_entry_acl_next\fP,
+\fBarchive_entry_acl_next_w\fP,
+\fBarchive_entry_acl_reset\fP,
+\fBarchive_entry_acl_text_w\fP,
+\fBarchive_entry_atime\fP,
+\fBarchive_entry_atime_nsec\fP,
+\fBarchive_entry_clear\fP,
+\fBarchive_entry_clone\fP,
+\fBarchive_entry_copy_fflags_text_w\fP,
+\fBarchive_entry_copy_gname\fP,
+\fBarchive_entry_copy_gname_w\fP,
+\fBarchive_entry_copy_hardlink\fP,
+\fBarchive_entry_copy_hardlink_w\fP,
+\fBarchive_entry_copy_pathname_w\fP,
+\fBarchive_entry_copy_stat\fP,
+\fBarchive_entry_copy_symlink\fP,
+\fBarchive_entry_copy_symlink_w\fP,
+\fBarchive_entry_copy_uname\fP,
+\fBarchive_entry_copy_uname_w\fP,
+\fBarchive_entry_dev\fP,
+\fBarchive_entry_devmajor\fP,
+\fBarchive_entry_devminor\fP,
+\fBarchive_entry_filetype\fP,
+\fBarchive_entry_fflags\fP,
+\fBarchive_entry_fflags_text\fP,
+\fBarchive_entry_free\fP,
+\fBarchive_entry_gid\fP,
+\fBarchive_entry_gname\fP,
+\fBarchive_entry_hardlink\fP,
+\fBarchive_entry_ino\fP,
+\fBarchive_entry_mode\fP,
+\fBarchive_entry_mtime\fP,
+\fBarchive_entry_mtime_nsec\fP,
+\fBarchive_entry_nlink\fP,
+\fBarchive_entry_new\fP,
+\fBarchive_entry_pathname\fP,
+\fBarchive_entry_pathname_w\fP,
+\fBarchive_entry_rdev\fP,
+\fBarchive_entry_rdevmajor\fP,
+\fBarchive_entry_rdevminor\fP,
+\fBarchive_entry_set_atime\fP,
+\fBarchive_entry_set_ctime\fP,
+\fBarchive_entry_set_dev\fP,
+\fBarchive_entry_set_devmajor\fP,
+\fBarchive_entry_set_devminor\fP,
+\fBarchive_entry_set_filetype\fP,
+\fBarchive_entry_set_fflags\fP,
+\fBarchive_entry_set_gid\fP,
+\fBarchive_entry_set_gname\fP,
+\fBarchive_entry_set_hardlink\fP,
+\fBarchive_entry_set_link\fP,
+\fBarchive_entry_set_mode\fP,
+\fBarchive_entry_set_mtime\fP,
+\fBarchive_entry_set_pathname\fP,
+\fBarchive_entry_set_rdevmajor\fP,
+\fBarchive_entry_set_rdevminor\fP,
+\fBarchive_entry_set_size\fP,
+\fBarchive_entry_set_symlink\fP,
+\fBarchive_entry_set_uid\fP,
+\fBarchive_entry_set_uname\fP,
+\fBarchive_entry_size\fP,
+\fBarchive_entry_stat\fP,
+\fBarchive_entry_symlink\fP,
+\fBarchive_entry_uid\fP,
+\fBarchive_entry_uname\fP
+\- functions for manipulating archive entry descriptions
+.SH SYNOPSIS
+\fB#include <archive_entry.h>\fP
+.br
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_acl_add_entry\fP
+.hy
+("struct archive_entry *" "int type" "int permset" "int tag" "int qual" "const char *name");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_acl_add_entry_w\fP
+.hy
+("struct archive_entry *" "int type" "int permset" "int tag" "int qual" "const wchar_t *name");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_acl_clear\fP
+.hy
+("struct archive_entry *");
+\fIint\fP
+.RE
+.nh
+\fBarchive_entry_acl_count\fP
+.hy
+("struct archive_entry *" "int type");
+\fIint\fP
+.RE
+.nh
+\fBarchive_entry_acl_next\fP
+.hy
+("struct archive_entry *" "int want_type" "int *type" "int *permset" "int *tag" "int *qual" "const char **name");
+\fIint\fP
+.RE
+.nh
+\fBarchive_entry_acl_next_w\fP
+.hy
+("struct archive_entry *" "int want_type" "int *type" "int *permset" "int *tag" "int *qual" "const wchar_t **name");
+\fIint\fP
+.RE
+.nh
+\fBarchive_entry_acl_reset\fP
+.hy
+("struct archive_entry *" "int want_type");
+\fIconst wchar_t *\fP
+.RE
+.nh
+\fBarchive_entry_acl_text_w\fP
+.hy
+("struct archive_entry *" "int flags");
+\fItime_t\fP
+.RE
+.nh
+\fBarchive_entry_atime\fP
+.hy
+("struct archive_entry *");
+\fIlong\fP
+.RE
+.nh
+\fBarchive_entry_atime_nsec\fP
+.hy
+("struct archive_entry *");
+\fI"struct archive_entry *"\fP
+.RE
+.nh
+\fBarchive_entry_clear\fP
+.hy
+("struct archive_entry *");
+\fIstruct archive_entry *\fP
+.RE
+.nh
+\fBarchive_entry_clone\fP
+.hy
+("struct archive_entry *");
+\fIconst wchar_t *\fP
+.RE
+.nh
+\fBarchive_entry_copy_fflags_text_w\fP
+.hy
+("struct archive_entry *" "const wchar_t *");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_copy_gname\fP
+.hy
+("struct archive_entry *" "const char *");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_copy_gname_w\fP
+.hy
+("struct archive_entry *" "const wchar_t *");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_copy_hardlink\fP
+.hy
+("struct archive_entry *" "const char *");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_copy_hardlink_w\fP
+.hy
+("struct archive_entry *" "const wchar_t *");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_copy_pathname_w\fP
+.hy
+("struct archive_entry *" "const wchar_t *");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_copy_stat\fP
+.hy
+("struct archive_entry *" "const struct stat *");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_copy_symlink\fP
+.hy
+("struct archive_entry *" "const char *");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_copy_symlink_w\fP
+.hy
+("struct archive_entry *" "const wchar_t *");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_copy_uname\fP
+.hy
+("struct archive_entry *" "const char *");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_copy_uname_w\fP
+.hy
+("struct archive_entry *" "const wchar_t *");
+\fIdev_t\fP
+.RE
+.nh
+\fBarchive_entry_dev\fP
+.hy
+("struct archive_entry *");
+\fIdev_t\fP
+.RE
+.nh
+\fBarchive_entry_devmajor\fP
+.hy
+("struct archive_entry *");
+\fIdev_t\fP
+.RE
+.nh
+\fBarchive_entry_devminor\fP
+.hy
+("struct archive_entry *");
+\fImode_t\fP
+.RE
+.nh
+\fBarchive_entry_filetype\fP
+.hy
+("struct archive_entry *");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_fflags\fP
+.hy
+("struct archive_entry *" "unsigned long *set" "unsigned long *clear");
+\fIconst char *\fP
+.RE
+.nh
+\fBarchive_entry_fflags_text\fP
+.hy
+("struct archive_entry *");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_free\fP
+.hy
+("struct archive_entry *");
+\fIconst char *\fP
+.RE
+.nh
+\fBarchive_entry_gname\fP
+.hy
+("struct archive_entry *");
+\fIconst char *\fP
+.RE
+.nh
+\fBarchive_entry_hardlink\fP
+.hy
+("struct archive_entry *");
+\fIino_t\fP
+.RE
+.nh
+\fBarchive_entry_ino\fP
+.hy
+("struct archive_entry *");
+\fImode_t\fP
+.RE
+.nh
+\fBarchive_entry_mode\fP
+.hy
+("struct archive_entry *");
+\fItime_t\fP
+.RE
+.nh
+\fBarchive_entry_mtime\fP
+.hy
+("struct archive_entry *");
+\fIlong\fP
+.RE
+.nh
+\fBarchive_entry_mtime_nsec\fP
+.hy
+("struct archive_entry *");
+\fIunsigned int\fP
+.RE
+.nh
+\fBarchive_entry_nlink\fP
+.hy
+("struct archive_entry *");
+\fIstruct archive_entry *\fP
+.RE
+.nh
+\fBarchive_entry_new\fP
+.hy
+("void");
+\fIconst char *\fP
+.RE
+.nh
+\fBarchive_entry_pathname\fP
+.hy
+("struct archive_entry *");
+\fIconst wchar_t *\fP
+.RE
+.nh
+\fBarchive_entry_pathname_w\fP
+.hy
+("struct archive_entry *");
+\fIdev_t\fP
+.RE
+.nh
+\fBarchive_entry_rdev\fP
+.hy
+("struct archive_entry *");
+\fIdev_t\fP
+.RE
+.nh
+\fBarchive_entry_rdevmajor\fP
+.hy
+("struct archive_entry *");
+\fIdev_t\fP
+.RE
+.nh
+\fBarchive_entry_rdevminor\fP
+.hy
+("struct archive_entry *");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_dev\fP
+.hy
+("struct archive_entry *" "dev_t");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_devmajor\fP
+.hy
+("struct archive_entry *" "dev_t");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_devminor\fP
+.hy
+("struct archive_entry *" "dev_t");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_filetype\fP
+.hy
+("struct archive_entry *" "unsigned int");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_fflags\fP
+.hy
+("struct archive_entry *" "unsigned long set" "unsigned long clear");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_gid\fP
+.hy
+("struct archive_entry *" "gid_t");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_gname\fP
+.hy
+("struct archive_entry *" "const char *");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_hardlink\fP
+.hy
+("struct archive_entry *" "const char *");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_ino\fP
+.hy
+("struct archive_entry *" "unsigned long");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_link\fP
+.hy
+("struct archive_entry *" "const char *");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_mode\fP
+.hy
+("struct archive_entry *" "mode_t");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_mtime\fP
+.hy
+("struct archive_entry *" "time_t" "long nanos");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_nlink\fP
+.hy
+("struct archive_entry *" "unsigned int");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_pathname\fP
+.hy
+("struct archive_entry *" "const char *");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_rdev\fP
+.hy
+("struct archive_entry *" "dev_t");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_rdevmajor\fP
+.hy
+("struct archive_entry *" "dev_t");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_rdevminor\fP
+.hy
+("struct archive_entry *" "dev_t");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_size\fP
+.hy
+("struct archive_entry *" "int64_t");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_symlink\fP
+.hy
+("struct archive_entry *" "const char *");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_uid\fP
+.hy
+("struct archive_entry *" "uid_t");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_set_uname\fP
+.hy
+("struct archive_entry *" "const char *");
+\fIint64_t\fP
+.RE
+.nh
+\fBarchive_entry_size\fP
+.hy
+("struct archive_entry *");
+\fIconst struct stat *\fP
+.RE
+.nh
+\fBarchive_entry_stat\fP
+.hy
+("struct archive_entry *");
+\fIconst char *\fP
+.RE
+.nh
+\fBarchive_entry_symlink\fP
+.hy
+("struct archive_entry *");
+\fIconst char *\fP
+.RE
+.nh
+\fBarchive_entry_uname\fP
+.hy
+("struct archive_entry *");
+.SH DESCRIPTION
 These functions create and manipulate data objects that
 represent entries within an archive.
 You can think of a
-.Tn struct archive_entry
+Tn struct archive_entry
 as a heavy-duty version of
-.Tn struct stat :
+Tn struct stat:
 it includes everything from
-.Tn struct stat
+Tn struct stat
 plus associated pathname, textual group and user names, etc.
 These objects are used by
-.Xr libarchive 3
+\fBlibarchive\fP(3)
 to represent the metadata associated with a particular
 entry in an archive.
-.Ss Create and Destroy
+.SS Create and Destroy
 There are functions to allocate, destroy, clear, and copy
-.Va archive_entry
+\fIarchive_entry\fP
 objects:
-.Bl -tag -compact -width indent
-.It Fn archive_entry_clear
+.TP
+.nh
+\fBarchive_entry_clear\fP
+.hy
+();
 Erases the object, resetting all internal fields to the
 same state as a newly-created object.
 This is provided to allow you to quickly recycle objects
 without thrashing the heap.
-.It Fn archive_entry_clone
+.TP
+.nh
+\fBarchive_entry_clone\fP
+.hy
+();
 A deep copy operation; all text fields are duplicated.
-.It Fn archive_entry_free
+.TP
+.nh
+\fBarchive_entry_free\fP
+.hy
+();
 Releases the
-.Tn struct archive_entry
+Tn struct archive_entry
 object.
-.It Fn archive_entry_new
+.TP
+.nh
+\fBarchive_entry_new\fP
+.hy
+();
 Allocate and return a blank
-.Tn struct archive_entry
+Tn struct archive_entry
 object.
-.El
-.Ss Set and Get Functions
+.SS Set and Get Functions
 Most of the functions here set or read entries in an object.
 Such functions have one of the following forms:
-.Bl -tag -compact -width indent
-.It Fn archive_entry_set_XXXX
+.TP
+.nh
+\fBarchive_entry_set_XXXX\fP
+.hy
+();
 Stores the provided data in the object.
 In particular, for strings, the pointer is stored,
 not the referenced string.
-.It Fn archive_entry_copy_XXXX
+.TP
+.nh
+\fBarchive_entry_copy_XXXX\fP
+.hy
+();
 As above, except that the referenced data is copied
 into the object.
-.It Fn archive_entry_XXXX
+.TP
+.nh
+\fBarchive_entry_XXXX\fP
+.hy
+();
 Returns the specified data.
 In the case of strings, a const-qualified pointer to
 the string is returned.
-.El
 String data can be set or accessed as wide character strings
 or normal
-.Va char
+\fIchar\fP
 strings.
 The functions that use wide character strings are suffixed with
-.Cm _w .
+\fB_w\fP.
 Note that these are different representations of the same data:
 For example, if you store a narrow string and read the corresponding
 wide string, the object will transparently convert formats
@@ -300,14 +569,15 @@ using the current locale.
 Similarly, if you store a wide string and then store a
 narrow string for the same data, the previously-set wide string will
 be discarded in favor of the new data.
-.Pp
 There are a few set/get functions that merit additional description:
-.Bl -tag -compact -width indent
-.It Fn archive_entry_set_link
+.TP
+.nh
+\fBarchive_entry_set_link\fP
+.hy
+();
 This function sets the symlink field if it is already set.
 Otherwise, it sets the hardlink field.
-.El
-.Ss File Flags
+.SS File Flags
 File flags are transparently converted between a bitmap
 representation and a textual format.
 For example, if you set the bitmap and ask for text, the library
@@ -318,7 +588,6 @@ If you need to canonicalize a textual flags string, you should first set the
 text form, then request the bitmap form, then use that to set the bitmap form.
 Setting the bitmap format will clear the internal text representation
 and force it to be reconstructed when you next request the text form.
-.Pp
 The bitmap format consists of two integers, one containing bits
 that should be set, the other specifying bits that should be
 cleared.
@@ -328,15 +597,17 @@ In unusual circumstances, you can force a fully-specified set
 of file flags by setting the bitmap of flags to clear to the complement
 of the bitmap of flags to set.
 (This differs from
-.Xr fflagstostr 3 ,
+\fBfflagstostr\fP(3),
 which only includes names for set bits.)
 Converting a bitmap to a textual string is a platform-specific
 operation; bits that are not meaningful on the current platform
 will be ignored.
-.Pp
 The canonical text format is a comma-separated list of flag names.
 The
-.Fn archive_entry_copy_fflags_text_w
+.nh
+\fBarchive_entry_copy_fflags_text_w\fP
+.hy
+();
 function parses the provided text and sets the internal bitmap values.
 This is a platform-specific operation; names that are not meaningful
 on the current platform will be ignored.
@@ -346,14 +617,13 @@ Note that every name--including names that follow an unrecognized name--will
 be evaluated, and the bitmaps will be set to reflect every name that is
 recognized.
 (In particular, this differs from
-.Xr strtofflags 3 ,
+\fBstrtofflags\fP(3),
 which stops parsing at the first unrecognized name.)
-.Ss ACL Handling
+.SS ACL Handling
 XXX This needs serious help.
 XXX
-.Pp
 An
-.Dq Access Control List
+``Access Control List''
 (ACL) is a list of permissions that grant access to particular users or
 groups beyond what would normally be provided by standard POSIX mode bits.
 The ACL handling here addresses some deficiencies in the POSIX.1e draft 17 ACL
@@ -361,22 +631,17 @@ specification.
 In particular, POSIX.1e draft 17 specifies several different formats, but
 none of those formats include both textual user/group names and numeric
 UIDs/GIDs.
-.Pp
 XXX explain ACL stuff XXX
-.\" .Sh EXAMPLE
-.\" .Sh RETURN VALUES
-.\" .Sh ERRORS
-.Sh SEE ALSO
-.Xr archive 3
-.Sh HISTORY
+.SH SEE ALSO
+\fBarchive\fP(3)
+.SH HISTORY
 The
-.Nm libarchive
+\fBlibarchive\fP
 library first appeared in
-.Fx 5.3 .
-.Sh AUTHORS
-.An -nosplit
+FreeBSD 5.3.
+.SH AUTHORS
+-nosplit
 The
-.Nm libarchive
+\fBlibarchive\fP
 library was written by
-.An Tim Kientzle Aq kientzle@acm.org .
-.\" .Sh BUGS
+Tim Kientzle <kientzle@acm.org.>

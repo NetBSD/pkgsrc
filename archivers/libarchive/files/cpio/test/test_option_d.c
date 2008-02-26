@@ -40,7 +40,7 @@ DEFINE_TEST(test_option_d)
 	close(fd);
 
 	/* Create an archive. */
-	r = systemf("echo dir/file | %s -o > archive.cpio 2>archive.err", testprog);
+	r = systemf("echo dir/file | %s -o --quiet > archive.cpio 2>archive.err", testprog);
 	assertEqualInt(r, 0);
 	assertEmptyFile("archive.err");
 	assertEqualInt(0, stat("archive.cpio", &st));
@@ -59,7 +59,7 @@ DEFINE_TEST(test_option_d)
 	assertEqualInt(0, chdir(".."));
 	assertEqualInt(0, mkdir("with-d", 0755));
 	assertEqualInt(0, chdir("with-d"));
-	r = systemf("%s -id < ../archive.cpio >out 2>err", testprog);
+	r = systemf("%s -id --quiet < ../archive.cpio >out 2>err", testprog);
 	assertEqualInt(r, 0);
 	assertEmptyFile("out");
 	assertEmptyFile("err");

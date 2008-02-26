@@ -40,9 +40,10 @@ unpack_test(const char *from, const char *options)
 	/*
 	 * Use cpio to unpack the sample archive
 	 */
-	r = systemf("%s -i %s < %s/%s >unpack.out 2>unpack.err",
+	r = systemf("%s -i --quiet %s < %s/%s >unpack.out 2>unpack.err",
 	    testprog, options, refdir, from);
-	failure("Error invoking %s -i %s < %s/%s", testprog, options, refdir, from);
+	failure("Error invoking %s -i --quiet %s < %s/%s",
+	    testprog, options, refdir, from);
 	assertEqualInt(r, 0);
 
 	/* Verify that nothing went to stderr. */
@@ -76,7 +77,7 @@ unpack_test(const char *from, const char *options)
 		assertEqualInt(10, st2.st_size);
 		failure("file %s/file", from);
 		assertEqualInt(2, st2.st_nlink);
-		/* Verify that the two are really hardlinked. */
+		failure("file and linkfile should be hardlinked");
 		assertEqualInt(st.st_dev, st2.st_dev);
 		failure("file %s/file", from);
 		assertEqualInt(st.st_ino, st2.st_ino);
@@ -117,9 +118,8 @@ DEFINE_TEST(test_gcpio_compat)
 
 	/* Dearchive sample files with a variety of options. */
 	unpack_test("test_gcpio_compat_ref.bin", "");
-	/* TODO: Fix the next two. */
-	/* unpack_test("test_gcpio_compat_ref.crc", ""); */
-	/* unpack_test("test_gcpio_compat_ref.newc", ""); */
+	unpack_test("test_gcpio_compat_ref.crc", "");
+	unpack_test("test_gcpio_compat_ref.newc", "");
 	unpack_test("test_gcpio_compat_ref.ustar", "");
 
 	umask(oldumask);

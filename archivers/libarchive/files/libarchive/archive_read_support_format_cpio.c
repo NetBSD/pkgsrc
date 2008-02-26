@@ -24,7 +24,7 @@
  */
 
 #include "archive_platform.h"
-__FBSDID("$FreeBSD: src/lib/libarchive/archive_read_support_format_cpio.c,v 1.24 2007/05/29 01:00:19 kientzle Exp $");
+__FBSDID("$FreeBSD: src/lib/libarchive/archive_read_support_format_cpio.c,v 1.26 2008/01/15 04:56:48 kientzle Exp $");
 
 #ifdef HAVE_ERRNO_H
 #include <errno.h>
@@ -321,10 +321,12 @@ static int
 is_hex(const char *p, size_t len)
 {
 	while (len-- > 0) {
-		if (*p < '0' || (*p > '9' && *p < 'a') || *p > 'f') {
+		if ((*p >= '0' && *p <= '9')
+		    || (*p >= 'a' && *p <= 'f')
+		    || (*p >= 'A' && *p <= 'F'))
+			++p;
+		else
 			return (0);
-		}
-	        ++p;
 	}
 	return (1);
 }
@@ -741,7 +743,7 @@ record_hardlink(struct cpio *cpio, struct archive_entry *entry)
          */
         for (le = cpio->links_head; le; le = le->next) {
                 if (le->dev == dev && le->ino == ino) {
-                        archive_entry_set_hardlink(entry, le->name);
+                        archive_entry_copy_hardlink(entry, le->name);
 
                         if (--le->links <= 0) {
                                 if (le->previous != NULL)
@@ -750,6 +752,7 @@ record_hardlink(struct cpio *cpio, struct archive_entry *entry)
                                         le->next->previous = le->previous;
                                 if (cpio->links_head == le)
                                         cpio->links_head = le->next;
+				free(le->name);
                                 free(le);
                         }
 

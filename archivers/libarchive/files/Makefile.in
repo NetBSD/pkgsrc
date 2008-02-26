@@ -35,8 +35,9 @@ POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
 bin_PROGRAMS = $(am__EXEEXT_1) $(am__EXEEXT_2)
-check_PROGRAMS = libarchive_test$(EXEEXT) $(am__EXEEXT_3)
-TESTS = libarchive_test$(EXEEXT) $(am__EXEEXT_3)
+check_PROGRAMS = libarchive_test$(EXEEXT) $(am__EXEEXT_3) \
+	$(am__EXEEXT_4)
+TESTS = libarchive_test$(EXEEXT) $(am__EXEEXT_3) $(am__EXEEXT_4)
 subdir = .
 DIST_COMMON = README $(am__configure_deps) $(include_HEADERS) \
 	$(srcdir)/Makefile.am $(srcdir)/Makefile.in \
@@ -128,30 +129,40 @@ libarchive_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
 @BUILD_BSDTAR_TRUE@am__EXEEXT_1 = bsdtar$(EXEEXT)
 @BUILD_BSDCPIO_TRUE@am__EXEEXT_2 = bsdcpio$(EXEEXT)
 binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
-@BUILD_BSDCPIO_TRUE@am__EXEEXT_3 = bsdcpio_test$(EXEEXT)
+@BUILD_BSDTAR_TRUE@am__EXEEXT_3 = bsdtar_test$(EXEEXT)
+@BUILD_BSDCPIO_TRUE@am__EXEEXT_4 = bsdcpio_test$(EXEEXT)
 PROGRAMS = $(bin_PROGRAMS)
 am_bsdcpio_OBJECTS = cpio/bsdcpio-cmdline.$(OBJEXT) \
 	cpio/bsdcpio-cpio.$(OBJEXT) cpio/bsdcpio-err.$(OBJEXT) \
-	cpio/bsdcpio-match.$(OBJEXT)
+	cpio/bsdcpio-matching.$(OBJEXT) \
+	cpio/bsdcpio-pathmatch.$(OBJEXT)
 bsdcpio_OBJECTS = $(am_bsdcpio_OBJECTS)
 bsdcpio_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(bsdcpio_LDFLAGS) \
 	$(LDFLAGS) -o $@
 am_bsdcpio_test_OBJECTS = cpio/bsdcpio_test-cmdline.$(OBJEXT) \
 	cpio/bsdcpio_test-err.$(OBJEXT) \
-	cpio/bsdcpio_test-match.$(OBJEXT) \
+	cpio/bsdcpio_test-pathmatch.$(OBJEXT) \
 	cpio/test/bsdcpio_test-main.$(OBJEXT) \
 	cpio/test/bsdcpio_test-test_basic.$(OBJEXT) \
+	cpio/test/bsdcpio_test-test_format_newc.$(OBJEXT) \
 	cpio/test/bsdcpio_test-test_gcpio_compat.$(OBJEXT) \
-	cpio/test/bsdcpio_test-test_help.$(OBJEXT) \
+	cpio/test/bsdcpio_test-test_option_a.$(OBJEXT) \
 	cpio/test/bsdcpio_test-test_option_B.$(OBJEXT) \
+	cpio/test/bsdcpio_test-test_option_c.$(OBJEXT) \
 	cpio/test/bsdcpio_test-test_option_d.$(OBJEXT) \
+	cpio/test/bsdcpio_test-test_option_f.$(OBJEXT) \
+	cpio/test/bsdcpio_test-test_option_help.$(OBJEXT) \
+	cpio/test/bsdcpio_test-test_option_L.$(OBJEXT) \
+	cpio/test/bsdcpio_test-test_option_ell.$(OBJEXT) \
 	cpio/test/bsdcpio_test-test_option_m.$(OBJEXT) \
 	cpio/test/bsdcpio_test-test_option_t.$(OBJEXT) \
+	cpio/test/bsdcpio_test-test_option_u.$(OBJEXT) \
+	cpio/test/bsdcpio_test-test_option_version.$(OBJEXT) \
+	cpio/test/bsdcpio_test-test_option_y.$(OBJEXT) \
+	cpio/test/bsdcpio_test-test_option_z.$(OBJEXT) \
 	cpio/test/bsdcpio_test-test_owner_parse.$(OBJEXT) \
-	cpio/test/bsdcpio_test-test_pathmatch.$(OBJEXT) \
-	cpio/test/bsdcpio_test-test_version.$(OBJEXT) \
-	cpio/test/bsdcpio_test-test_write_odc.$(OBJEXT)
+	cpio/test/bsdcpio_test-test_pathmatch.$(OBJEXT)
 bsdcpio_test_OBJECTS = $(am_bsdcpio_test_OBJECTS)
 bsdcpio_test_LDADD = $(LDADD)
 am_bsdtar_OBJECTS = tar/bsdtar-bsdtar.$(OBJEXT) \
@@ -162,6 +173,16 @@ bsdtar_OBJECTS = $(am_bsdtar_OBJECTS)
 bsdtar_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(bsdtar_LDFLAGS) \
 	$(LDFLAGS) -o $@
+am_bsdtar_test_OBJECTS = tar/bsdtar_test-getdate.$(OBJEXT) \
+	tar/test/bsdtar_test-main.$(OBJEXT) \
+	tar/test/bsdtar_test-test_basic.$(OBJEXT) \
+	tar/test/bsdtar_test-test_copy.$(OBJEXT) \
+	tar/test/bsdtar_test-test_getdate.$(OBJEXT) \
+	tar/test/bsdtar_test-test_help.$(OBJEXT) \
+	tar/test/bsdtar_test-test_stdio.$(OBJEXT) \
+	tar/test/bsdtar_test-test_version.$(OBJEXT)
+bsdtar_test_OBJECTS = $(am_bsdtar_test_OBJECTS)
+bsdtar_test_LDADD = $(LDADD)
 am__objects_1 =  \
 	libarchive/libarchive_test-archive_check_magic.$(OBJEXT) \
 	libarchive/libarchive_test-archive_entry.$(OBJEXT) \
@@ -221,8 +242,14 @@ am_libarchive_test_OBJECTS = $(am__objects_1) \
 	libarchive/test/libarchive_test-test_acl_pax.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_archive_api_feature.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_bad_fd.$(OBJEXT) \
+	libarchive/test/libarchive_test-test_compat_gtar.$(OBJEXT) \
+	libarchive/test/libarchive_test-test_compat_tar_hardlink.$(OBJEXT) \
+	libarchive/test/libarchive_test-test_compat_zip.$(OBJEXT) \
+	libarchive/test/libarchive_test-test_empty_write.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_entry.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_entry_strmode.$(OBJEXT) \
+	libarchive/test/libarchive_test-test_link_resolver.$(OBJEXT) \
+	libarchive/test/libarchive_test-test_pax_filename_encoding.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_read_compress_program.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_read_data_large.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_read_extract.$(OBJEXT) \
@@ -254,6 +281,7 @@ am_libarchive_test_OBJECTS = $(am__objects_1) \
 	libarchive/test/libarchive_test-test_tar_large.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_write_compress_program.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_write_disk.$(OBJEXT) \
+	libarchive/test/libarchive_test-test_write_disk_hardlink.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_write_disk_perms.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_write_disk_secure.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_write_format_ar.$(OBJEXT) \
@@ -285,10 +313,10 @@ LTYACCCOMPILE = $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
 YLWRAP = $(top_srcdir)/config.aux/ylwrap
 SOURCES = $(libarchive_la_SOURCES) $(bsdcpio_SOURCES) \
 	$(bsdcpio_test_SOURCES) $(bsdtar_SOURCES) \
-	$(libarchive_test_SOURCES)
+	$(bsdtar_test_SOURCES) $(libarchive_test_SOURCES)
 DIST_SOURCES = $(libarchive_la_SOURCES) $(bsdcpio_SOURCES) \
 	$(bsdcpio_test_SOURCES) $(bsdtar_SOURCES) \
-	$(libarchive_test_SOURCES)
+	$(bsdtar_test_SOURCES) $(libarchive_test_SOURCES)
 man1dir = $(mandir)/man1
 man3dir = $(mandir)/man3
 man5dir = $(mandir)/man5
@@ -430,10 +458,10 @@ AUTOMAKE_OPTIONS = foreign subdir-objects
 #
 lib_LTLIBRARIES = libarchive.la
 man_MANS = $(libarchive_man_MANS) $(bsdtar_man_MANS) $(bsdcpio_man_MANS)
-BUILT_SOURCES = libarchive/test/list.h cpio/test/list.h
-TESTS_ENVIRONMENT = $(bsdcpio_TESTS_ENVIRONMENT)
-# Always build and test bsdcpio as part of 'distcheck'
-DISTCHECK_CONFIGURE_FLAGS = --enable-bsdcpio
+BUILT_SOURCES = libarchive/test/list.h tar/test/list.h cpio/test/list.h $(libarchive_test_REFFILES) $(bsdcpio_test_REFFILES)
+TESTS_ENVIRONMENT = $(libarchive_TESTS_ENVIRONMENT) $(bsdtar_TESTS_ENVIRONMENT) $(bsdcpio_TESTS_ENVIRONMENT)
+# Always build and test both bsdtar and bsdcpio as part of 'distcheck'
+DISTCHECK_CONFIGURE_FLAGS = --enable-bsdtar --enable-bsdcpio
 
 #
 # What to include in the distribution
@@ -441,10 +469,23 @@ DISTCHECK_CONFIGURE_FLAGS = --enable-bsdcpio
 EXTRA_DIST = version			\
 	contrib				\
 	examples			\
+        doc				\
 	$(libarchive_EXTRA_DIST)	\
+	$(libarchive_test_EXTRA_DIST)	\
 	$(bsdtar_EXTRA_DIST)		\
+	$(bsdtar_test_EXTRA_DIST)	\
 	$(bsdcpio_EXTRA_DIST)		\
 	$(bsdcpio_test_EXTRA_DIST)
+
+
+#
+# Extra rules for cleanup
+#
+CLEANFILES = $(libarchive_test_REFFILES) $(bsdcpio_test_REFFILES)
+DISTCLEANFILES = tar/getdate.c tar/getdate.h	\
+	libarchive/test/list.h			\
+	tar/test/list.h				\
+	cpio/test/list.h
 
 
 #
@@ -457,6 +498,7 @@ include_HEADERS = libarchive/archive_entry.h
 nodist_include_HEADERS = libarchive/archive.h
 libarchive_la_SOURCES = \
 	libarchive/archive_check_magic.c			\
+	libarchive/archive_endian.h				\
 	libarchive/archive_entry.c				\
 	libarchive/archive_entry.h				\
 	libarchive/archive_entry_copy_stat.c			\
@@ -559,8 +601,14 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_acl_pax.c				\
 	libarchive/test/test_archive_api_feature.c		\
 	libarchive/test/test_bad_fd.c				\
+	libarchive/test/test_compat_gtar.c			\
+	libarchive/test/test_compat_tar_hardlink.c		\
+	libarchive/test/test_compat_zip.c			\
+	libarchive/test/test_empty_write.c			\
 	libarchive/test/test_entry.c				\
 	libarchive/test/test_entry_strmode.c			\
+	libarchive/test/test_link_resolver.c			\
+	libarchive/test/test_pax_filename_encoding.c		\
 	libarchive/test/test_read_compress_program.c		\
 	libarchive/test/test_read_data_large.c			\
 	libarchive/test/test_read_extract.c			\
@@ -592,6 +640,7 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_tar_large.c			\
 	libarchive/test/test_write_compress_program.c		\
 	libarchive/test/test_write_disk.c			\
+	libarchive/test/test_write_disk_hardlink.c		\
 	libarchive/test/test_write_disk_perms.c			\
 	libarchive/test/test_write_disk_secure.c		\
 	libarchive/test/test_write_format_ar.c			\
@@ -605,6 +654,29 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_write_open_memory.c
 
 libarchive_test_CPPFLAGS = -I$(top_builddir)/libarchive -I$(top_builddir)/libarchive/test
+libarchive_TESTS_ENVIRONMENT = LIBARCHIVE_TEST_FILES=`cd $(top_builddir);/bin/pwd`
+libarchive_test_EXTRA_DIST = \
+	libarchive/test/test_compat_gtar_1.tgz.uu			\
+	libarchive/test/test_compat_tar_hardlink_1.tar.uu		\
+	libarchive/test/test_compat_zip_1.zip.uu			\
+	libarchive/test/test_read_format_gtar_sparse_1_13.tgz.uu	\
+	libarchive/test/test_read_format_gtar_sparse_1_17.tgz.uu	\
+	libarchive/test/test_read_format_gtar_sparse_1_17_posix00.tgz.uu \
+	libarchive/test/test_read_format_gtar_sparse_1_17_posix01.tgz.uu \
+	libarchive/test/test_read_format_gtar_sparse_1_17_posix10.tgz.uu \
+	libarchive/test/test_read_format_gtar_sparse_1_17_posix10_modified.tar.uu
+
+libarchive_test_REFFILES = \
+	test_compat_gtar_1.tgz			\
+	test_compat_tar_hardlink_1.tar		\
+	test_compat_zip_1.zip			\
+	test_read_format_gtar_sparse_1_13.tgz	\
+	test_read_format_gtar_sparse_1_17.tgz	\
+	test_read_format_gtar_sparse_1_17_posix00.tgz \
+	test_read_format_gtar_sparse_1_17_posix01.tgz \
+	test_read_format_gtar_sparse_1_17_posix10.tgz \
+	test_read_format_gtar_sparse_1_17_posix10_modified.tar
+
 
 #
 #
@@ -633,13 +705,35 @@ bsdtar_LDADD = libarchive.la
 bsdtar_CPPFLAGS = -I$(top_builddir)/libarchive -I$(top_srcdir)/libarchive
 bsdtar_LDFLAGS = $(bsdtar_static)
 bsdtar_EXTRA_DIST = \
-	tar/test		\
 	tar/bsdtar.1
 
 @BUILD_BSDTAR_FALSE@bsdtar_man_MANS = 
 @BUILD_BSDTAR_TRUE@bsdtar_man_MANS = tar/bsdtar.1
 @BUILD_BSDTAR_FALSE@bsdtar_programs = 
 @BUILD_BSDTAR_TRUE@bsdtar_programs = bsdtar
+
+#
+# bsdtar_test
+#
+bsdtar_test_SOURCES = \
+	tar/getdate.c						\
+	tar/test/main.c						\
+	tar/test/test.h						\
+	tar/test/test_basic.c					\
+	tar/test/test_copy.c					\
+	tar/test/test_getdate.c					\
+	tar/test/test_help.c					\
+	tar/test/test_stdio.c					\
+	tar/test/test_version.c
+
+bsdtar_test_EXTRA_DIST = \
+	tar/test/old
+
+bsdtar_test_CPPFLAGS = -I$(top_srcdir)/libarchive -I$(top_builddir)/tar/test
+@BUILD_BSDTAR_FALSE@bsdtar_test_programs = 
+@BUILD_BSDTAR_TRUE@bsdtar_test_programs = bsdtar_test
+@BUILD_BSDTAR_FALSE@bsdtar_TESTS_ENVIRONMENT = 
+@BUILD_BSDTAR_TRUE@bsdtar_TESTS_ENVIRONMENT = BSDTAR=`cd $(top_builddir);/bin/pwd`/bsdtar BSDTAR_TEST_FILES=`cd $(top_builddir);/bin/pwd`
 
 #
 #
@@ -652,7 +746,10 @@ bsdcpio_SOURCES = \
 		cpio/cpio.h		\
 		cpio/cpio_platform.h	\
 		cpio/err.c		\
-		cpio/match.c
+		cpio/matching.c		\
+		cpio/matching.h		\
+		cpio/pathmatch.c	\
+		cpio/pathmatch.h
 
 bsdcpio_DEPENDENCIES = libarchive.la		\
 		libarchive/archive_entry.h	\
@@ -680,36 +777,56 @@ bsdcpio_EXTRA_DIST = \
 bsdcpio_test_SOURCES = \
 	cpio/cmdline.c						\
 	cpio/err.c						\
-	cpio/match.c						\
+	cpio/pathmatch.c					\
 	cpio/test/main.c					\
 	cpio/test/test.h					\
 	cpio/test/test_basic.c					\
+	cpio/test/test_format_newc.c				\
 	cpio/test/test_gcpio_compat.c				\
-	cpio/test/test_help.c					\
+	cpio/test/test_option_a.c				\
 	cpio/test/test_option_B.c				\
+	cpio/test/test_option_c.c				\
 	cpio/test/test_option_d.c				\
+	cpio/test/test_option_f.c				\
+	cpio/test/test_option_help.c				\
+	cpio/test/test_option_L.c				\
+	cpio/test/test_option_ell.c				\
 	cpio/test/test_option_m.c				\
 	cpio/test/test_option_t.c				\
+	cpio/test/test_option_u.c				\
+	cpio/test/test_option_version.c				\
+	cpio/test/test_option_y.c				\
+	cpio/test/test_option_z.c				\
 	cpio/test/test_owner_parse.c				\
-	cpio/test/test_pathmatch.c				\
-	cpio/test/test_version.c				\
-	cpio/test/test_write_odc.c
+	cpio/test/test_pathmatch.c
 
-bsdcpio_test_EXTRA_DIST = \
-	cpio/test/test_gcpio_compat_ref.bin	\
-	cpio/test/test_gcpio_compat_ref.crc	\
-	cpio/test/test_gcpio_compat_ref.newc	\
-	cpio/test/test_gcpio_compat_ref.ustar	\
-	cpio/test/test_option_m.cpio		\
-	cpio/test/test_option_t.cpio		\
-	cpio/test/test_option_t.stdout		\
-	cpio/test/test_option_tv.stdout
-
-bsdcpio_test_CPPFLAGS = -I$(top_builddir)/cpio/test
+bsdcpio_test_CPPFLAGS = -I$(top_srcdir)/libarchive -I$(top_builddir)/cpio/test
 @BUILD_BSDCPIO_FALSE@bsdcpio_test_programs = 
 @BUILD_BSDCPIO_TRUE@bsdcpio_test_programs = bsdcpio_test
 @BUILD_BSDCPIO_FALSE@bsdcpio_TESTS_ENVIRONMENT = 
-@BUILD_BSDCPIO_TRUE@bsdcpio_TESTS_ENVIRONMENT = BSDCPIO=`cd $(top_builddir);/bin/pwd`/bsdcpio BSDCPIO_TEST_FILES=`cd $(top_srcdir);/bin/pwd`/cpio/test
+@BUILD_BSDCPIO_TRUE@bsdcpio_TESTS_ENVIRONMENT = BSDCPIO=`cd $(top_builddir);/bin/pwd`/bsdcpio BSDCPIO_TEST_FILES=`cd $(top_builddir);/bin/pwd`
+bsdcpio_test_REFFILES = \
+	test_gcpio_compat_ref.bin	\
+	test_gcpio_compat_ref.crc	\
+	test_gcpio_compat_ref.newc	\
+	test_gcpio_compat_ref.ustar	\
+	test_option_f.cpio		\
+	test_option_m.cpio		\
+	test_option_t.cpio		\
+	test_option_t.stdout		\
+	test_option_tv.stdout
+
+bsdcpio_test_EXTRA_DIST = \
+	cpio/test/test_gcpio_compat_ref.bin.uu	\
+	cpio/test/test_gcpio_compat_ref.crc.uu	\
+	cpio/test/test_gcpio_compat_ref.newc.uu	\
+	cpio/test/test_gcpio_compat_ref.ustar.uu \
+	cpio/test/test_option_f.cpio.uu		\
+	cpio/test/test_option_m.cpio.uu		\
+	cpio/test/test_option_t.cpio.uu		\
+	cpio/test/test_option_t.stdout.uu	\
+	cpio/test/test_option_tv.stdout.uu
+
 all: $(BUILT_SOURCES) config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
@@ -997,7 +1114,9 @@ cpio/bsdcpio-cpio.$(OBJEXT): cpio/$(am__dirstamp) \
 	cpio/$(DEPDIR)/$(am__dirstamp)
 cpio/bsdcpio-err.$(OBJEXT): cpio/$(am__dirstamp) \
 	cpio/$(DEPDIR)/$(am__dirstamp)
-cpio/bsdcpio-match.$(OBJEXT): cpio/$(am__dirstamp) \
+cpio/bsdcpio-matching.$(OBJEXT): cpio/$(am__dirstamp) \
+	cpio/$(DEPDIR)/$(am__dirstamp)
+cpio/bsdcpio-pathmatch.$(OBJEXT): cpio/$(am__dirstamp) \
 	cpio/$(DEPDIR)/$(am__dirstamp)
 bsdcpio$(EXEEXT): $(bsdcpio_OBJECTS) $(bsdcpio_DEPENDENCIES) 
 	@rm -f bsdcpio$(EXEEXT)
@@ -1006,7 +1125,7 @@ cpio/bsdcpio_test-cmdline.$(OBJEXT): cpio/$(am__dirstamp) \
 	cpio/$(DEPDIR)/$(am__dirstamp)
 cpio/bsdcpio_test-err.$(OBJEXT): cpio/$(am__dirstamp) \
 	cpio/$(DEPDIR)/$(am__dirstamp)
-cpio/bsdcpio_test-match.$(OBJEXT): cpio/$(am__dirstamp) \
+cpio/bsdcpio_test-pathmatch.$(OBJEXT): cpio/$(am__dirstamp) \
 	cpio/$(DEPDIR)/$(am__dirstamp)
 cpio/test/$(am__dirstamp):
 	@$(MKDIR_P) cpio/test
@@ -1018,25 +1137,41 @@ cpio/test/bsdcpio_test-main.$(OBJEXT): cpio/test/$(am__dirstamp) \
 	cpio/test/$(DEPDIR)/$(am__dirstamp)
 cpio/test/bsdcpio_test-test_basic.$(OBJEXT):  \
 	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
+cpio/test/bsdcpio_test-test_format_newc.$(OBJEXT):  \
+	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
 cpio/test/bsdcpio_test-test_gcpio_compat.$(OBJEXT):  \
 	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
-cpio/test/bsdcpio_test-test_help.$(OBJEXT): cpio/test/$(am__dirstamp) \
-	cpio/test/$(DEPDIR)/$(am__dirstamp)
+cpio/test/bsdcpio_test-test_option_a.$(OBJEXT):  \
+	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
 cpio/test/bsdcpio_test-test_option_B.$(OBJEXT):  \
 	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
+cpio/test/bsdcpio_test-test_option_c.$(OBJEXT):  \
+	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
 cpio/test/bsdcpio_test-test_option_d.$(OBJEXT):  \
+	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
+cpio/test/bsdcpio_test-test_option_f.$(OBJEXT):  \
+	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
+cpio/test/bsdcpio_test-test_option_help.$(OBJEXT):  \
+	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
+cpio/test/bsdcpio_test-test_option_L.$(OBJEXT):  \
+	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
+cpio/test/bsdcpio_test-test_option_ell.$(OBJEXT):  \
 	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
 cpio/test/bsdcpio_test-test_option_m.$(OBJEXT):  \
 	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
 cpio/test/bsdcpio_test-test_option_t.$(OBJEXT):  \
 	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
+cpio/test/bsdcpio_test-test_option_u.$(OBJEXT):  \
+	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
+cpio/test/bsdcpio_test-test_option_version.$(OBJEXT):  \
+	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
+cpio/test/bsdcpio_test-test_option_y.$(OBJEXT):  \
+	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
+cpio/test/bsdcpio_test-test_option_z.$(OBJEXT):  \
+	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
 cpio/test/bsdcpio_test-test_owner_parse.$(OBJEXT):  \
 	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
 cpio/test/bsdcpio_test-test_pathmatch.$(OBJEXT):  \
-	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
-cpio/test/bsdcpio_test-test_version.$(OBJEXT):  \
-	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
-cpio/test/bsdcpio_test-test_write_odc.$(OBJEXT):  \
 	cpio/test/$(am__dirstamp) cpio/test/$(DEPDIR)/$(am__dirstamp)
 bsdcpio_test$(EXEEXT): $(bsdcpio_test_OBJECTS) $(bsdcpio_test_DEPENDENCIES) 
 	@rm -f bsdcpio_test$(EXEEXT)
@@ -1064,6 +1199,31 @@ tar/bsdtar-write.$(OBJEXT): tar/$(am__dirstamp) \
 bsdtar$(EXEEXT): $(bsdtar_OBJECTS) $(bsdtar_DEPENDENCIES) 
 	@rm -f bsdtar$(EXEEXT)
 	$(bsdtar_LINK) $(bsdtar_OBJECTS) $(bsdtar_LDADD) $(LIBS)
+tar/bsdtar_test-getdate.$(OBJEXT): tar/$(am__dirstamp) \
+	tar/$(DEPDIR)/$(am__dirstamp)
+tar/test/$(am__dirstamp):
+	@$(MKDIR_P) tar/test
+	@: > tar/test/$(am__dirstamp)
+tar/test/$(DEPDIR)/$(am__dirstamp):
+	@$(MKDIR_P) tar/test/$(DEPDIR)
+	@: > tar/test/$(DEPDIR)/$(am__dirstamp)
+tar/test/bsdtar_test-main.$(OBJEXT): tar/test/$(am__dirstamp) \
+	tar/test/$(DEPDIR)/$(am__dirstamp)
+tar/test/bsdtar_test-test_basic.$(OBJEXT): tar/test/$(am__dirstamp) \
+	tar/test/$(DEPDIR)/$(am__dirstamp)
+tar/test/bsdtar_test-test_copy.$(OBJEXT): tar/test/$(am__dirstamp) \
+	tar/test/$(DEPDIR)/$(am__dirstamp)
+tar/test/bsdtar_test-test_getdate.$(OBJEXT): tar/test/$(am__dirstamp) \
+	tar/test/$(DEPDIR)/$(am__dirstamp)
+tar/test/bsdtar_test-test_help.$(OBJEXT): tar/test/$(am__dirstamp) \
+	tar/test/$(DEPDIR)/$(am__dirstamp)
+tar/test/bsdtar_test-test_stdio.$(OBJEXT): tar/test/$(am__dirstamp) \
+	tar/test/$(DEPDIR)/$(am__dirstamp)
+tar/test/bsdtar_test-test_version.$(OBJEXT): tar/test/$(am__dirstamp) \
+	tar/test/$(DEPDIR)/$(am__dirstamp)
+bsdtar_test$(EXEEXT): $(bsdtar_test_OBJECTS) $(bsdtar_test_DEPENDENCIES) 
+	@rm -f bsdtar_test$(EXEEXT)
+	$(LINK) $(bsdtar_test_OBJECTS) $(bsdtar_test_LDADD) $(LIBS)
 libarchive/libarchive_test-archive_check_magic.$(OBJEXT):  \
 	libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
@@ -1241,10 +1401,28 @@ libarchive/test/libarchive_test-test_archive_api_feature.$(OBJEXT):  \
 libarchive/test/libarchive_test-test_bad_fd.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/libarchive_test-test_compat_gtar.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/libarchive_test-test_compat_tar_hardlink.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/libarchive_test-test_compat_zip.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/libarchive_test-test_empty_write.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/libarchive_test-test_entry.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/libarchive_test-test_entry_strmode.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/libarchive_test-test_link_resolver.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/libarchive_test-test_pax_filename_encoding.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/libarchive_test-test_read_compress_program.$(OBJEXT):  \
@@ -1340,6 +1518,9 @@ libarchive/test/libarchive_test-test_write_compress_program.$(OBJEXT):  \
 libarchive/test/libarchive_test-test_write_disk.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/libarchive_test-test_write_disk_hardlink.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/libarchive_test-test_write_disk_perms.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
@@ -1382,22 +1563,31 @@ mostlyclean-compile:
 	-rm -f cpio/bsdcpio-cmdline.$(OBJEXT)
 	-rm -f cpio/bsdcpio-cpio.$(OBJEXT)
 	-rm -f cpio/bsdcpio-err.$(OBJEXT)
-	-rm -f cpio/bsdcpio-match.$(OBJEXT)
+	-rm -f cpio/bsdcpio-matching.$(OBJEXT)
+	-rm -f cpio/bsdcpio-pathmatch.$(OBJEXT)
 	-rm -f cpio/bsdcpio_test-cmdline.$(OBJEXT)
 	-rm -f cpio/bsdcpio_test-err.$(OBJEXT)
-	-rm -f cpio/bsdcpio_test-match.$(OBJEXT)
+	-rm -f cpio/bsdcpio_test-pathmatch.$(OBJEXT)
 	-rm -f cpio/test/bsdcpio_test-main.$(OBJEXT)
 	-rm -f cpio/test/bsdcpio_test-test_basic.$(OBJEXT)
+	-rm -f cpio/test/bsdcpio_test-test_format_newc.$(OBJEXT)
 	-rm -f cpio/test/bsdcpio_test-test_gcpio_compat.$(OBJEXT)
-	-rm -f cpio/test/bsdcpio_test-test_help.$(OBJEXT)
 	-rm -f cpio/test/bsdcpio_test-test_option_B.$(OBJEXT)
+	-rm -f cpio/test/bsdcpio_test-test_option_L.$(OBJEXT)
+	-rm -f cpio/test/bsdcpio_test-test_option_a.$(OBJEXT)
+	-rm -f cpio/test/bsdcpio_test-test_option_c.$(OBJEXT)
 	-rm -f cpio/test/bsdcpio_test-test_option_d.$(OBJEXT)
+	-rm -f cpio/test/bsdcpio_test-test_option_ell.$(OBJEXT)
+	-rm -f cpio/test/bsdcpio_test-test_option_f.$(OBJEXT)
+	-rm -f cpio/test/bsdcpio_test-test_option_help.$(OBJEXT)
 	-rm -f cpio/test/bsdcpio_test-test_option_m.$(OBJEXT)
 	-rm -f cpio/test/bsdcpio_test-test_option_t.$(OBJEXT)
+	-rm -f cpio/test/bsdcpio_test-test_option_u.$(OBJEXT)
+	-rm -f cpio/test/bsdcpio_test-test_option_version.$(OBJEXT)
+	-rm -f cpio/test/bsdcpio_test-test_option_y.$(OBJEXT)
+	-rm -f cpio/test/bsdcpio_test-test_option_z.$(OBJEXT)
 	-rm -f cpio/test/bsdcpio_test-test_owner_parse.$(OBJEXT)
 	-rm -f cpio/test/bsdcpio_test-test_pathmatch.$(OBJEXT)
-	-rm -f cpio/test/bsdcpio_test-test_version.$(OBJEXT)
-	-rm -f cpio/test/bsdcpio_test-test_write_odc.$(OBJEXT)
 	-rm -f libarchive/libarchive_la-archive_check_magic.$(OBJEXT)
 	-rm -f libarchive/libarchive_la-archive_check_magic.lo
 	-rm -f libarchive/libarchive_la-archive_entry.$(OBJEXT)
@@ -1557,8 +1747,14 @@ mostlyclean-compile:
 	-rm -f libarchive/test/libarchive_test-test_acl_pax.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_archive_api_feature.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_bad_fd.$(OBJEXT)
+	-rm -f libarchive/test/libarchive_test-test_compat_gtar.$(OBJEXT)
+	-rm -f libarchive/test/libarchive_test-test_compat_tar_hardlink.$(OBJEXT)
+	-rm -f libarchive/test/libarchive_test-test_compat_zip.$(OBJEXT)
+	-rm -f libarchive/test/libarchive_test-test_empty_write.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_entry.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_entry_strmode.$(OBJEXT)
+	-rm -f libarchive/test/libarchive_test-test_link_resolver.$(OBJEXT)
+	-rm -f libarchive/test/libarchive_test-test_pax_filename_encoding.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_read_compress_program.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_read_data_large.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_read_extract.$(OBJEXT)
@@ -1590,6 +1786,7 @@ mostlyclean-compile:
 	-rm -f libarchive/test/libarchive_test-test_tar_large.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_write_compress_program.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_write_disk.$(OBJEXT)
+	-rm -f libarchive/test/libarchive_test-test_write_disk_hardlink.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_write_disk_perms.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_write_disk_secure.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_write_format_ar.$(OBJEXT)
@@ -1608,6 +1805,14 @@ mostlyclean-compile:
 	-rm -f tar/bsdtar-tree.$(OBJEXT)
 	-rm -f tar/bsdtar-util.$(OBJEXT)
 	-rm -f tar/bsdtar-write.$(OBJEXT)
+	-rm -f tar/bsdtar_test-getdate.$(OBJEXT)
+	-rm -f tar/test/bsdtar_test-main.$(OBJEXT)
+	-rm -f tar/test/bsdtar_test-test_basic.$(OBJEXT)
+	-rm -f tar/test/bsdtar_test-test_copy.$(OBJEXT)
+	-rm -f tar/test/bsdtar_test-test_getdate.$(OBJEXT)
+	-rm -f tar/test/bsdtar_test-test_help.$(OBJEXT)
+	-rm -f tar/test/bsdtar_test-test_stdio.$(OBJEXT)
+	-rm -f tar/test/bsdtar_test-test_version.$(OBJEXT)
 
 distclean-compile:
 	-rm -f *.tab.c
@@ -1615,22 +1820,31 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@cpio/$(DEPDIR)/bsdcpio-cmdline.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@cpio/$(DEPDIR)/bsdcpio-cpio.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@cpio/$(DEPDIR)/bsdcpio-err.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@cpio/$(DEPDIR)/bsdcpio-match.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@cpio/$(DEPDIR)/bsdcpio-matching.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@cpio/$(DEPDIR)/bsdcpio-pathmatch.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@cpio/$(DEPDIR)/bsdcpio_test-cmdline.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@cpio/$(DEPDIR)/bsdcpio_test-err.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@cpio/$(DEPDIR)/bsdcpio_test-match.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@cpio/$(DEPDIR)/bsdcpio_test-pathmatch.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-main.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_basic.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_format_newc.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_gcpio_compat.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_help.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_option_B.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_option_L.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_option_a.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_option_c.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_option_d.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_option_ell.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_option_f.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_option_help.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_option_m.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_option_t.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_option_u.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_option_version.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_option_y.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_option_z.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_owner_parse.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_pathmatch.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_version.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@cpio/test/$(DEPDIR)/bsdcpio_test-test_write_odc.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_la-archive_check_magic.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_la-archive_entry.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_la-archive_entry_copy_stat.Plo@am__quote@
@@ -1739,8 +1953,14 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_acl_pax.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_archive_api_feature.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_bad_fd.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_compat_gtar.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_compat_tar_hardlink.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_compat_zip.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_empty_write.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_entry.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_entry_strmode.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_link_resolver.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_pax_filename_encoding.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_read_compress_program.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_read_data_large.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_read_extract.Po@am__quote@
@@ -1772,6 +1992,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_tar_large.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_write_compress_program.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_write_disk.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_write_disk_hardlink.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_write_disk_perms.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_write_disk_secure.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_write_format_ar.Po@am__quote@
@@ -1790,6 +2011,14 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@tar/$(DEPDIR)/bsdtar-tree.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@tar/$(DEPDIR)/bsdtar-util.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@tar/$(DEPDIR)/bsdtar-write.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@tar/$(DEPDIR)/bsdtar_test-getdate.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-main.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_basic.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_copy.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_getdate.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_help.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_stdio.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@tar/test/$(DEPDIR)/bsdtar_test-test_version.Po@am__quote@
 
 .c.o:
 @am__fastdepCC_TRUE@	depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -2214,19 +2443,33 @@ cpio/bsdcpio-err.obj: cpio/err.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/bsdcpio-err.obj `if test -f 'cpio/err.c'; then $(CYGPATH_W) 'cpio/err.c'; else $(CYGPATH_W) '$(srcdir)/cpio/err.c'; fi`
 
-cpio/bsdcpio-match.o: cpio/match.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/bsdcpio-match.o -MD -MP -MF cpio/$(DEPDIR)/bsdcpio-match.Tpo -c -o cpio/bsdcpio-match.o `test -f 'cpio/match.c' || echo '$(srcdir)/'`cpio/match.c
-@am__fastdepCC_TRUE@	mv -f cpio/$(DEPDIR)/bsdcpio-match.Tpo cpio/$(DEPDIR)/bsdcpio-match.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/match.c' object='cpio/bsdcpio-match.o' libtool=no @AMDEPBACKSLASH@
+cpio/bsdcpio-matching.o: cpio/matching.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/bsdcpio-matching.o -MD -MP -MF cpio/$(DEPDIR)/bsdcpio-matching.Tpo -c -o cpio/bsdcpio-matching.o `test -f 'cpio/matching.c' || echo '$(srcdir)/'`cpio/matching.c
+@am__fastdepCC_TRUE@	mv -f cpio/$(DEPDIR)/bsdcpio-matching.Tpo cpio/$(DEPDIR)/bsdcpio-matching.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/matching.c' object='cpio/bsdcpio-matching.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/bsdcpio-match.o `test -f 'cpio/match.c' || echo '$(srcdir)/'`cpio/match.c
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/bsdcpio-matching.o `test -f 'cpio/matching.c' || echo '$(srcdir)/'`cpio/matching.c
 
-cpio/bsdcpio-match.obj: cpio/match.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/bsdcpio-match.obj -MD -MP -MF cpio/$(DEPDIR)/bsdcpio-match.Tpo -c -o cpio/bsdcpio-match.obj `if test -f 'cpio/match.c'; then $(CYGPATH_W) 'cpio/match.c'; else $(CYGPATH_W) '$(srcdir)/cpio/match.c'; fi`
-@am__fastdepCC_TRUE@	mv -f cpio/$(DEPDIR)/bsdcpio-match.Tpo cpio/$(DEPDIR)/bsdcpio-match.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/match.c' object='cpio/bsdcpio-match.obj' libtool=no @AMDEPBACKSLASH@
+cpio/bsdcpio-matching.obj: cpio/matching.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/bsdcpio-matching.obj -MD -MP -MF cpio/$(DEPDIR)/bsdcpio-matching.Tpo -c -o cpio/bsdcpio-matching.obj `if test -f 'cpio/matching.c'; then $(CYGPATH_W) 'cpio/matching.c'; else $(CYGPATH_W) '$(srcdir)/cpio/matching.c'; fi`
+@am__fastdepCC_TRUE@	mv -f cpio/$(DEPDIR)/bsdcpio-matching.Tpo cpio/$(DEPDIR)/bsdcpio-matching.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/matching.c' object='cpio/bsdcpio-matching.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/bsdcpio-match.obj `if test -f 'cpio/match.c'; then $(CYGPATH_W) 'cpio/match.c'; else $(CYGPATH_W) '$(srcdir)/cpio/match.c'; fi`
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/bsdcpio-matching.obj `if test -f 'cpio/matching.c'; then $(CYGPATH_W) 'cpio/matching.c'; else $(CYGPATH_W) '$(srcdir)/cpio/matching.c'; fi`
+
+cpio/bsdcpio-pathmatch.o: cpio/pathmatch.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/bsdcpio-pathmatch.o -MD -MP -MF cpio/$(DEPDIR)/bsdcpio-pathmatch.Tpo -c -o cpio/bsdcpio-pathmatch.o `test -f 'cpio/pathmatch.c' || echo '$(srcdir)/'`cpio/pathmatch.c
+@am__fastdepCC_TRUE@	mv -f cpio/$(DEPDIR)/bsdcpio-pathmatch.Tpo cpio/$(DEPDIR)/bsdcpio-pathmatch.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/pathmatch.c' object='cpio/bsdcpio-pathmatch.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/bsdcpio-pathmatch.o `test -f 'cpio/pathmatch.c' || echo '$(srcdir)/'`cpio/pathmatch.c
+
+cpio/bsdcpio-pathmatch.obj: cpio/pathmatch.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/bsdcpio-pathmatch.obj -MD -MP -MF cpio/$(DEPDIR)/bsdcpio-pathmatch.Tpo -c -o cpio/bsdcpio-pathmatch.obj `if test -f 'cpio/pathmatch.c'; then $(CYGPATH_W) 'cpio/pathmatch.c'; else $(CYGPATH_W) '$(srcdir)/cpio/pathmatch.c'; fi`
+@am__fastdepCC_TRUE@	mv -f cpio/$(DEPDIR)/bsdcpio-pathmatch.Tpo cpio/$(DEPDIR)/bsdcpio-pathmatch.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/pathmatch.c' object='cpio/bsdcpio-pathmatch.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/bsdcpio-pathmatch.obj `if test -f 'cpio/pathmatch.c'; then $(CYGPATH_W) 'cpio/pathmatch.c'; else $(CYGPATH_W) '$(srcdir)/cpio/pathmatch.c'; fi`
 
 cpio/bsdcpio_test-cmdline.o: cpio/cmdline.c
 @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/bsdcpio_test-cmdline.o -MD -MP -MF cpio/$(DEPDIR)/bsdcpio_test-cmdline.Tpo -c -o cpio/bsdcpio_test-cmdline.o `test -f 'cpio/cmdline.c' || echo '$(srcdir)/'`cpio/cmdline.c
@@ -2256,19 +2499,19 @@ cpio/bsdcpio_test-err.obj: cpio/err.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/bsdcpio_test-err.obj `if test -f 'cpio/err.c'; then $(CYGPATH_W) 'cpio/err.c'; else $(CYGPATH_W) '$(srcdir)/cpio/err.c'; fi`
 
-cpio/bsdcpio_test-match.o: cpio/match.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/bsdcpio_test-match.o -MD -MP -MF cpio/$(DEPDIR)/bsdcpio_test-match.Tpo -c -o cpio/bsdcpio_test-match.o `test -f 'cpio/match.c' || echo '$(srcdir)/'`cpio/match.c
-@am__fastdepCC_TRUE@	mv -f cpio/$(DEPDIR)/bsdcpio_test-match.Tpo cpio/$(DEPDIR)/bsdcpio_test-match.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/match.c' object='cpio/bsdcpio_test-match.o' libtool=no @AMDEPBACKSLASH@
+cpio/bsdcpio_test-pathmatch.o: cpio/pathmatch.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/bsdcpio_test-pathmatch.o -MD -MP -MF cpio/$(DEPDIR)/bsdcpio_test-pathmatch.Tpo -c -o cpio/bsdcpio_test-pathmatch.o `test -f 'cpio/pathmatch.c' || echo '$(srcdir)/'`cpio/pathmatch.c
+@am__fastdepCC_TRUE@	mv -f cpio/$(DEPDIR)/bsdcpio_test-pathmatch.Tpo cpio/$(DEPDIR)/bsdcpio_test-pathmatch.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/pathmatch.c' object='cpio/bsdcpio_test-pathmatch.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/bsdcpio_test-match.o `test -f 'cpio/match.c' || echo '$(srcdir)/'`cpio/match.c
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/bsdcpio_test-pathmatch.o `test -f 'cpio/pathmatch.c' || echo '$(srcdir)/'`cpio/pathmatch.c
 
-cpio/bsdcpio_test-match.obj: cpio/match.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/bsdcpio_test-match.obj -MD -MP -MF cpio/$(DEPDIR)/bsdcpio_test-match.Tpo -c -o cpio/bsdcpio_test-match.obj `if test -f 'cpio/match.c'; then $(CYGPATH_W) 'cpio/match.c'; else $(CYGPATH_W) '$(srcdir)/cpio/match.c'; fi`
-@am__fastdepCC_TRUE@	mv -f cpio/$(DEPDIR)/bsdcpio_test-match.Tpo cpio/$(DEPDIR)/bsdcpio_test-match.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/match.c' object='cpio/bsdcpio_test-match.obj' libtool=no @AMDEPBACKSLASH@
+cpio/bsdcpio_test-pathmatch.obj: cpio/pathmatch.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/bsdcpio_test-pathmatch.obj -MD -MP -MF cpio/$(DEPDIR)/bsdcpio_test-pathmatch.Tpo -c -o cpio/bsdcpio_test-pathmatch.obj `if test -f 'cpio/pathmatch.c'; then $(CYGPATH_W) 'cpio/pathmatch.c'; else $(CYGPATH_W) '$(srcdir)/cpio/pathmatch.c'; fi`
+@am__fastdepCC_TRUE@	mv -f cpio/$(DEPDIR)/bsdcpio_test-pathmatch.Tpo cpio/$(DEPDIR)/bsdcpio_test-pathmatch.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/pathmatch.c' object='cpio/bsdcpio_test-pathmatch.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/bsdcpio_test-match.obj `if test -f 'cpio/match.c'; then $(CYGPATH_W) 'cpio/match.c'; else $(CYGPATH_W) '$(srcdir)/cpio/match.c'; fi`
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/bsdcpio_test-pathmatch.obj `if test -f 'cpio/pathmatch.c'; then $(CYGPATH_W) 'cpio/pathmatch.c'; else $(CYGPATH_W) '$(srcdir)/cpio/pathmatch.c'; fi`
 
 cpio/test/bsdcpio_test-main.o: cpio/test/main.c
 @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-main.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-main.Tpo -c -o cpio/test/bsdcpio_test-main.o `test -f 'cpio/test/main.c' || echo '$(srcdir)/'`cpio/test/main.c
@@ -2298,6 +2541,20 @@ cpio/test/bsdcpio_test-test_basic.obj: cpio/test/test_basic.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_basic.obj `if test -f 'cpio/test/test_basic.c'; then $(CYGPATH_W) 'cpio/test/test_basic.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_basic.c'; fi`
 
+cpio/test/bsdcpio_test-test_format_newc.o: cpio/test/test_format_newc.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_format_newc.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_format_newc.Tpo -c -o cpio/test/bsdcpio_test-test_format_newc.o `test -f 'cpio/test/test_format_newc.c' || echo '$(srcdir)/'`cpio/test/test_format_newc.c
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_format_newc.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_format_newc.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_format_newc.c' object='cpio/test/bsdcpio_test-test_format_newc.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_format_newc.o `test -f 'cpio/test/test_format_newc.c' || echo '$(srcdir)/'`cpio/test/test_format_newc.c
+
+cpio/test/bsdcpio_test-test_format_newc.obj: cpio/test/test_format_newc.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_format_newc.obj -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_format_newc.Tpo -c -o cpio/test/bsdcpio_test-test_format_newc.obj `if test -f 'cpio/test/test_format_newc.c'; then $(CYGPATH_W) 'cpio/test/test_format_newc.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_format_newc.c'; fi`
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_format_newc.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_format_newc.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_format_newc.c' object='cpio/test/bsdcpio_test-test_format_newc.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_format_newc.obj `if test -f 'cpio/test/test_format_newc.c'; then $(CYGPATH_W) 'cpio/test/test_format_newc.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_format_newc.c'; fi`
+
 cpio/test/bsdcpio_test-test_gcpio_compat.o: cpio/test/test_gcpio_compat.c
 @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_gcpio_compat.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_gcpio_compat.Tpo -c -o cpio/test/bsdcpio_test-test_gcpio_compat.o `test -f 'cpio/test/test_gcpio_compat.c' || echo '$(srcdir)/'`cpio/test/test_gcpio_compat.c
 @am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_gcpio_compat.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_gcpio_compat.Po
@@ -2312,19 +2569,19 @@ cpio/test/bsdcpio_test-test_gcpio_compat.obj: cpio/test/test_gcpio_compat.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_gcpio_compat.obj `if test -f 'cpio/test/test_gcpio_compat.c'; then $(CYGPATH_W) 'cpio/test/test_gcpio_compat.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_gcpio_compat.c'; fi`
 
-cpio/test/bsdcpio_test-test_help.o: cpio/test/test_help.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_help.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_help.Tpo -c -o cpio/test/bsdcpio_test-test_help.o `test -f 'cpio/test/test_help.c' || echo '$(srcdir)/'`cpio/test/test_help.c
-@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_help.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_help.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_help.c' object='cpio/test/bsdcpio_test-test_help.o' libtool=no @AMDEPBACKSLASH@
+cpio/test/bsdcpio_test-test_option_a.o: cpio/test/test_option_a.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_a.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_a.Tpo -c -o cpio/test/bsdcpio_test-test_option_a.o `test -f 'cpio/test/test_option_a.c' || echo '$(srcdir)/'`cpio/test/test_option_a.c
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_a.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_a.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_a.c' object='cpio/test/bsdcpio_test-test_option_a.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_help.o `test -f 'cpio/test/test_help.c' || echo '$(srcdir)/'`cpio/test/test_help.c
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_a.o `test -f 'cpio/test/test_option_a.c' || echo '$(srcdir)/'`cpio/test/test_option_a.c
 
-cpio/test/bsdcpio_test-test_help.obj: cpio/test/test_help.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_help.obj -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_help.Tpo -c -o cpio/test/bsdcpio_test-test_help.obj `if test -f 'cpio/test/test_help.c'; then $(CYGPATH_W) 'cpio/test/test_help.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_help.c'; fi`
-@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_help.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_help.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_help.c' object='cpio/test/bsdcpio_test-test_help.obj' libtool=no @AMDEPBACKSLASH@
+cpio/test/bsdcpio_test-test_option_a.obj: cpio/test/test_option_a.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_a.obj -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_a.Tpo -c -o cpio/test/bsdcpio_test-test_option_a.obj `if test -f 'cpio/test/test_option_a.c'; then $(CYGPATH_W) 'cpio/test/test_option_a.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_a.c'; fi`
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_a.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_a.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_a.c' object='cpio/test/bsdcpio_test-test_option_a.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_help.obj `if test -f 'cpio/test/test_help.c'; then $(CYGPATH_W) 'cpio/test/test_help.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_help.c'; fi`
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_a.obj `if test -f 'cpio/test/test_option_a.c'; then $(CYGPATH_W) 'cpio/test/test_option_a.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_a.c'; fi`
 
 cpio/test/bsdcpio_test-test_option_B.o: cpio/test/test_option_B.c
 @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_B.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_B.Tpo -c -o cpio/test/bsdcpio_test-test_option_B.o `test -f 'cpio/test/test_option_B.c' || echo '$(srcdir)/'`cpio/test/test_option_B.c
@@ -2340,6 +2597,20 @@ cpio/test/bsdcpio_test-test_option_B.obj: cpio/test/test_option_B.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_B.obj `if test -f 'cpio/test/test_option_B.c'; then $(CYGPATH_W) 'cpio/test/test_option_B.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_B.c'; fi`
 
+cpio/test/bsdcpio_test-test_option_c.o: cpio/test/test_option_c.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_c.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_c.Tpo -c -o cpio/test/bsdcpio_test-test_option_c.o `test -f 'cpio/test/test_option_c.c' || echo '$(srcdir)/'`cpio/test/test_option_c.c
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_c.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_c.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_c.c' object='cpio/test/bsdcpio_test-test_option_c.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_c.o `test -f 'cpio/test/test_option_c.c' || echo '$(srcdir)/'`cpio/test/test_option_c.c
+
+cpio/test/bsdcpio_test-test_option_c.obj: cpio/test/test_option_c.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_c.obj -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_c.Tpo -c -o cpio/test/bsdcpio_test-test_option_c.obj `if test -f 'cpio/test/test_option_c.c'; then $(CYGPATH_W) 'cpio/test/test_option_c.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_c.c'; fi`
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_c.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_c.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_c.c' object='cpio/test/bsdcpio_test-test_option_c.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_c.obj `if test -f 'cpio/test/test_option_c.c'; then $(CYGPATH_W) 'cpio/test/test_option_c.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_c.c'; fi`
+
 cpio/test/bsdcpio_test-test_option_d.o: cpio/test/test_option_d.c
 @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_d.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_d.Tpo -c -o cpio/test/bsdcpio_test-test_option_d.o `test -f 'cpio/test/test_option_d.c' || echo '$(srcdir)/'`cpio/test/test_option_d.c
 @am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_d.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_d.Po
@@ -2353,6 +2624,62 @@ cpio/test/bsdcpio_test-test_option_d.obj: cpio/test/test_option_d.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_d.c' object='cpio/test/bsdcpio_test-test_option_d.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_d.obj `if test -f 'cpio/test/test_option_d.c'; then $(CYGPATH_W) 'cpio/test/test_option_d.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_d.c'; fi`
+
+cpio/test/bsdcpio_test-test_option_f.o: cpio/test/test_option_f.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_f.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_f.Tpo -c -o cpio/test/bsdcpio_test-test_option_f.o `test -f 'cpio/test/test_option_f.c' || echo '$(srcdir)/'`cpio/test/test_option_f.c
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_f.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_f.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_f.c' object='cpio/test/bsdcpio_test-test_option_f.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_f.o `test -f 'cpio/test/test_option_f.c' || echo '$(srcdir)/'`cpio/test/test_option_f.c
+
+cpio/test/bsdcpio_test-test_option_f.obj: cpio/test/test_option_f.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_f.obj -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_f.Tpo -c -o cpio/test/bsdcpio_test-test_option_f.obj `if test -f 'cpio/test/test_option_f.c'; then $(CYGPATH_W) 'cpio/test/test_option_f.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_f.c'; fi`
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_f.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_f.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_f.c' object='cpio/test/bsdcpio_test-test_option_f.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_f.obj `if test -f 'cpio/test/test_option_f.c'; then $(CYGPATH_W) 'cpio/test/test_option_f.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_f.c'; fi`
+
+cpio/test/bsdcpio_test-test_option_help.o: cpio/test/test_option_help.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_help.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_help.Tpo -c -o cpio/test/bsdcpio_test-test_option_help.o `test -f 'cpio/test/test_option_help.c' || echo '$(srcdir)/'`cpio/test/test_option_help.c
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_help.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_help.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_help.c' object='cpio/test/bsdcpio_test-test_option_help.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_help.o `test -f 'cpio/test/test_option_help.c' || echo '$(srcdir)/'`cpio/test/test_option_help.c
+
+cpio/test/bsdcpio_test-test_option_help.obj: cpio/test/test_option_help.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_help.obj -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_help.Tpo -c -o cpio/test/bsdcpio_test-test_option_help.obj `if test -f 'cpio/test/test_option_help.c'; then $(CYGPATH_W) 'cpio/test/test_option_help.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_help.c'; fi`
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_help.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_help.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_help.c' object='cpio/test/bsdcpio_test-test_option_help.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_help.obj `if test -f 'cpio/test/test_option_help.c'; then $(CYGPATH_W) 'cpio/test/test_option_help.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_help.c'; fi`
+
+cpio/test/bsdcpio_test-test_option_L.o: cpio/test/test_option_L.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_L.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_L.Tpo -c -o cpio/test/bsdcpio_test-test_option_L.o `test -f 'cpio/test/test_option_L.c' || echo '$(srcdir)/'`cpio/test/test_option_L.c
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_L.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_L.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_L.c' object='cpio/test/bsdcpio_test-test_option_L.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_L.o `test -f 'cpio/test/test_option_L.c' || echo '$(srcdir)/'`cpio/test/test_option_L.c
+
+cpio/test/bsdcpio_test-test_option_L.obj: cpio/test/test_option_L.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_L.obj -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_L.Tpo -c -o cpio/test/bsdcpio_test-test_option_L.obj `if test -f 'cpio/test/test_option_L.c'; then $(CYGPATH_W) 'cpio/test/test_option_L.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_L.c'; fi`
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_L.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_L.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_L.c' object='cpio/test/bsdcpio_test-test_option_L.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_L.obj `if test -f 'cpio/test/test_option_L.c'; then $(CYGPATH_W) 'cpio/test/test_option_L.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_L.c'; fi`
+
+cpio/test/bsdcpio_test-test_option_ell.o: cpio/test/test_option_ell.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_ell.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_ell.Tpo -c -o cpio/test/bsdcpio_test-test_option_ell.o `test -f 'cpio/test/test_option_ell.c' || echo '$(srcdir)/'`cpio/test/test_option_ell.c
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_ell.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_ell.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_ell.c' object='cpio/test/bsdcpio_test-test_option_ell.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_ell.o `test -f 'cpio/test/test_option_ell.c' || echo '$(srcdir)/'`cpio/test/test_option_ell.c
+
+cpio/test/bsdcpio_test-test_option_ell.obj: cpio/test/test_option_ell.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_ell.obj -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_ell.Tpo -c -o cpio/test/bsdcpio_test-test_option_ell.obj `if test -f 'cpio/test/test_option_ell.c'; then $(CYGPATH_W) 'cpio/test/test_option_ell.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_ell.c'; fi`
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_ell.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_ell.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_ell.c' object='cpio/test/bsdcpio_test-test_option_ell.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_ell.obj `if test -f 'cpio/test/test_option_ell.c'; then $(CYGPATH_W) 'cpio/test/test_option_ell.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_ell.c'; fi`
 
 cpio/test/bsdcpio_test-test_option_m.o: cpio/test/test_option_m.c
 @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_m.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_m.Tpo -c -o cpio/test/bsdcpio_test-test_option_m.o `test -f 'cpio/test/test_option_m.c' || echo '$(srcdir)/'`cpio/test/test_option_m.c
@@ -2382,6 +2709,62 @@ cpio/test/bsdcpio_test-test_option_t.obj: cpio/test/test_option_t.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_t.obj `if test -f 'cpio/test/test_option_t.c'; then $(CYGPATH_W) 'cpio/test/test_option_t.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_t.c'; fi`
 
+cpio/test/bsdcpio_test-test_option_u.o: cpio/test/test_option_u.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_u.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_u.Tpo -c -o cpio/test/bsdcpio_test-test_option_u.o `test -f 'cpio/test/test_option_u.c' || echo '$(srcdir)/'`cpio/test/test_option_u.c
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_u.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_u.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_u.c' object='cpio/test/bsdcpio_test-test_option_u.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_u.o `test -f 'cpio/test/test_option_u.c' || echo '$(srcdir)/'`cpio/test/test_option_u.c
+
+cpio/test/bsdcpio_test-test_option_u.obj: cpio/test/test_option_u.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_u.obj -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_u.Tpo -c -o cpio/test/bsdcpio_test-test_option_u.obj `if test -f 'cpio/test/test_option_u.c'; then $(CYGPATH_W) 'cpio/test/test_option_u.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_u.c'; fi`
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_u.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_u.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_u.c' object='cpio/test/bsdcpio_test-test_option_u.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_u.obj `if test -f 'cpio/test/test_option_u.c'; then $(CYGPATH_W) 'cpio/test/test_option_u.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_u.c'; fi`
+
+cpio/test/bsdcpio_test-test_option_version.o: cpio/test/test_option_version.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_version.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_version.Tpo -c -o cpio/test/bsdcpio_test-test_option_version.o `test -f 'cpio/test/test_option_version.c' || echo '$(srcdir)/'`cpio/test/test_option_version.c
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_version.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_version.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_version.c' object='cpio/test/bsdcpio_test-test_option_version.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_version.o `test -f 'cpio/test/test_option_version.c' || echo '$(srcdir)/'`cpio/test/test_option_version.c
+
+cpio/test/bsdcpio_test-test_option_version.obj: cpio/test/test_option_version.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_version.obj -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_version.Tpo -c -o cpio/test/bsdcpio_test-test_option_version.obj `if test -f 'cpio/test/test_option_version.c'; then $(CYGPATH_W) 'cpio/test/test_option_version.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_version.c'; fi`
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_version.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_version.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_version.c' object='cpio/test/bsdcpio_test-test_option_version.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_version.obj `if test -f 'cpio/test/test_option_version.c'; then $(CYGPATH_W) 'cpio/test/test_option_version.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_version.c'; fi`
+
+cpio/test/bsdcpio_test-test_option_y.o: cpio/test/test_option_y.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_y.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_y.Tpo -c -o cpio/test/bsdcpio_test-test_option_y.o `test -f 'cpio/test/test_option_y.c' || echo '$(srcdir)/'`cpio/test/test_option_y.c
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_y.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_y.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_y.c' object='cpio/test/bsdcpio_test-test_option_y.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_y.o `test -f 'cpio/test/test_option_y.c' || echo '$(srcdir)/'`cpio/test/test_option_y.c
+
+cpio/test/bsdcpio_test-test_option_y.obj: cpio/test/test_option_y.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_y.obj -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_y.Tpo -c -o cpio/test/bsdcpio_test-test_option_y.obj `if test -f 'cpio/test/test_option_y.c'; then $(CYGPATH_W) 'cpio/test/test_option_y.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_y.c'; fi`
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_y.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_y.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_y.c' object='cpio/test/bsdcpio_test-test_option_y.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_y.obj `if test -f 'cpio/test/test_option_y.c'; then $(CYGPATH_W) 'cpio/test/test_option_y.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_y.c'; fi`
+
+cpio/test/bsdcpio_test-test_option_z.o: cpio/test/test_option_z.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_z.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_z.Tpo -c -o cpio/test/bsdcpio_test-test_option_z.o `test -f 'cpio/test/test_option_z.c' || echo '$(srcdir)/'`cpio/test/test_option_z.c
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_z.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_z.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_z.c' object='cpio/test/bsdcpio_test-test_option_z.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_z.o `test -f 'cpio/test/test_option_z.c' || echo '$(srcdir)/'`cpio/test/test_option_z.c
+
+cpio/test/bsdcpio_test-test_option_z.obj: cpio/test/test_option_z.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_option_z.obj -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_option_z.Tpo -c -o cpio/test/bsdcpio_test-test_option_z.obj `if test -f 'cpio/test/test_option_z.c'; then $(CYGPATH_W) 'cpio/test/test_option_z.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_z.c'; fi`
+@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_option_z.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_option_z.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_option_z.c' object='cpio/test/bsdcpio_test-test_option_z.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_option_z.obj `if test -f 'cpio/test/test_option_z.c'; then $(CYGPATH_W) 'cpio/test/test_option_z.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_option_z.c'; fi`
+
 cpio/test/bsdcpio_test-test_owner_parse.o: cpio/test/test_owner_parse.c
 @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_owner_parse.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_owner_parse.Tpo -c -o cpio/test/bsdcpio_test-test_owner_parse.o `test -f 'cpio/test/test_owner_parse.c' || echo '$(srcdir)/'`cpio/test/test_owner_parse.c
 @am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_owner_parse.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_owner_parse.Po
@@ -2409,34 +2792,6 @@ cpio/test/bsdcpio_test-test_pathmatch.obj: cpio/test/test_pathmatch.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_pathmatch.c' object='cpio/test/bsdcpio_test-test_pathmatch.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_pathmatch.obj `if test -f 'cpio/test/test_pathmatch.c'; then $(CYGPATH_W) 'cpio/test/test_pathmatch.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_pathmatch.c'; fi`
-
-cpio/test/bsdcpio_test-test_version.o: cpio/test/test_version.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_version.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_version.Tpo -c -o cpio/test/bsdcpio_test-test_version.o `test -f 'cpio/test/test_version.c' || echo '$(srcdir)/'`cpio/test/test_version.c
-@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_version.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_version.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_version.c' object='cpio/test/bsdcpio_test-test_version.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_version.o `test -f 'cpio/test/test_version.c' || echo '$(srcdir)/'`cpio/test/test_version.c
-
-cpio/test/bsdcpio_test-test_version.obj: cpio/test/test_version.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_version.obj -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_version.Tpo -c -o cpio/test/bsdcpio_test-test_version.obj `if test -f 'cpio/test/test_version.c'; then $(CYGPATH_W) 'cpio/test/test_version.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_version.c'; fi`
-@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_version.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_version.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_version.c' object='cpio/test/bsdcpio_test-test_version.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_version.obj `if test -f 'cpio/test/test_version.c'; then $(CYGPATH_W) 'cpio/test/test_version.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_version.c'; fi`
-
-cpio/test/bsdcpio_test-test_write_odc.o: cpio/test/test_write_odc.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_write_odc.o -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_write_odc.Tpo -c -o cpio/test/bsdcpio_test-test_write_odc.o `test -f 'cpio/test/test_write_odc.c' || echo '$(srcdir)/'`cpio/test/test_write_odc.c
-@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_write_odc.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_write_odc.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_write_odc.c' object='cpio/test/bsdcpio_test-test_write_odc.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_write_odc.o `test -f 'cpio/test/test_write_odc.c' || echo '$(srcdir)/'`cpio/test/test_write_odc.c
-
-cpio/test/bsdcpio_test-test_write_odc.obj: cpio/test/test_write_odc.c
-@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT cpio/test/bsdcpio_test-test_write_odc.obj -MD -MP -MF cpio/test/$(DEPDIR)/bsdcpio_test-test_write_odc.Tpo -c -o cpio/test/bsdcpio_test-test_write_odc.obj `if test -f 'cpio/test/test_write_odc.c'; then $(CYGPATH_W) 'cpio/test/test_write_odc.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_write_odc.c'; fi`
-@am__fastdepCC_TRUE@	mv -f cpio/test/$(DEPDIR)/bsdcpio_test-test_write_odc.Tpo cpio/test/$(DEPDIR)/bsdcpio_test-test_write_odc.Po
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='cpio/test/test_write_odc.c' object='cpio/test/bsdcpio_test-test_write_odc.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdcpio_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o cpio/test/bsdcpio_test-test_write_odc.obj `if test -f 'cpio/test/test_write_odc.c'; then $(CYGPATH_W) 'cpio/test/test_write_odc.c'; else $(CYGPATH_W) '$(srcdir)/cpio/test/test_write_odc.c'; fi`
 
 tar/bsdtar-bsdtar.o: tar/bsdtar.c
 @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/bsdtar-bsdtar.o -MD -MP -MF tar/$(DEPDIR)/bsdtar-bsdtar.Tpo -c -o tar/bsdtar-bsdtar.o `test -f 'tar/bsdtar.c' || echo '$(srcdir)/'`tar/bsdtar.c
@@ -2535,6 +2890,118 @@ tar/bsdtar-write.obj: tar/write.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='tar/write.c' object='tar/bsdtar-write.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/bsdtar-write.obj `if test -f 'tar/write.c'; then $(CYGPATH_W) 'tar/write.c'; else $(CYGPATH_W) '$(srcdir)/tar/write.c'; fi`
+
+tar/bsdtar_test-getdate.o: tar/getdate.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/bsdtar_test-getdate.o -MD -MP -MF tar/$(DEPDIR)/bsdtar_test-getdate.Tpo -c -o tar/bsdtar_test-getdate.o `test -f 'tar/getdate.c' || echo '$(srcdir)/'`tar/getdate.c
+@am__fastdepCC_TRUE@	mv -f tar/$(DEPDIR)/bsdtar_test-getdate.Tpo tar/$(DEPDIR)/bsdtar_test-getdate.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='tar/getdate.c' object='tar/bsdtar_test-getdate.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/bsdtar_test-getdate.o `test -f 'tar/getdate.c' || echo '$(srcdir)/'`tar/getdate.c
+
+tar/bsdtar_test-getdate.obj: tar/getdate.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/bsdtar_test-getdate.obj -MD -MP -MF tar/$(DEPDIR)/bsdtar_test-getdate.Tpo -c -o tar/bsdtar_test-getdate.obj `if test -f 'tar/getdate.c'; then $(CYGPATH_W) 'tar/getdate.c'; else $(CYGPATH_W) '$(srcdir)/tar/getdate.c'; fi`
+@am__fastdepCC_TRUE@	mv -f tar/$(DEPDIR)/bsdtar_test-getdate.Tpo tar/$(DEPDIR)/bsdtar_test-getdate.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='tar/getdate.c' object='tar/bsdtar_test-getdate.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/bsdtar_test-getdate.obj `if test -f 'tar/getdate.c'; then $(CYGPATH_W) 'tar/getdate.c'; else $(CYGPATH_W) '$(srcdir)/tar/getdate.c'; fi`
+
+tar/test/bsdtar_test-main.o: tar/test/main.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-main.o -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-main.Tpo -c -o tar/test/bsdtar_test-main.o `test -f 'tar/test/main.c' || echo '$(srcdir)/'`tar/test/main.c
+@am__fastdepCC_TRUE@	mv -f tar/test/$(DEPDIR)/bsdtar_test-main.Tpo tar/test/$(DEPDIR)/bsdtar_test-main.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='tar/test/main.c' object='tar/test/bsdtar_test-main.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-main.o `test -f 'tar/test/main.c' || echo '$(srcdir)/'`tar/test/main.c
+
+tar/test/bsdtar_test-main.obj: tar/test/main.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-main.obj -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-main.Tpo -c -o tar/test/bsdtar_test-main.obj `if test -f 'tar/test/main.c'; then $(CYGPATH_W) 'tar/test/main.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/main.c'; fi`
+@am__fastdepCC_TRUE@	mv -f tar/test/$(DEPDIR)/bsdtar_test-main.Tpo tar/test/$(DEPDIR)/bsdtar_test-main.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='tar/test/main.c' object='tar/test/bsdtar_test-main.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-main.obj `if test -f 'tar/test/main.c'; then $(CYGPATH_W) 'tar/test/main.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/main.c'; fi`
+
+tar/test/bsdtar_test-test_basic.o: tar/test/test_basic.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_basic.o -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_basic.Tpo -c -o tar/test/bsdtar_test-test_basic.o `test -f 'tar/test/test_basic.c' || echo '$(srcdir)/'`tar/test/test_basic.c
+@am__fastdepCC_TRUE@	mv -f tar/test/$(DEPDIR)/bsdtar_test-test_basic.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_basic.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='tar/test/test_basic.c' object='tar/test/bsdtar_test-test_basic.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_basic.o `test -f 'tar/test/test_basic.c' || echo '$(srcdir)/'`tar/test/test_basic.c
+
+tar/test/bsdtar_test-test_basic.obj: tar/test/test_basic.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_basic.obj -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_basic.Tpo -c -o tar/test/bsdtar_test-test_basic.obj `if test -f 'tar/test/test_basic.c'; then $(CYGPATH_W) 'tar/test/test_basic.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_basic.c'; fi`
+@am__fastdepCC_TRUE@	mv -f tar/test/$(DEPDIR)/bsdtar_test-test_basic.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_basic.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='tar/test/test_basic.c' object='tar/test/bsdtar_test-test_basic.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_basic.obj `if test -f 'tar/test/test_basic.c'; then $(CYGPATH_W) 'tar/test/test_basic.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_basic.c'; fi`
+
+tar/test/bsdtar_test-test_copy.o: tar/test/test_copy.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_copy.o -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_copy.Tpo -c -o tar/test/bsdtar_test-test_copy.o `test -f 'tar/test/test_copy.c' || echo '$(srcdir)/'`tar/test/test_copy.c
+@am__fastdepCC_TRUE@	mv -f tar/test/$(DEPDIR)/bsdtar_test-test_copy.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_copy.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='tar/test/test_copy.c' object='tar/test/bsdtar_test-test_copy.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_copy.o `test -f 'tar/test/test_copy.c' || echo '$(srcdir)/'`tar/test/test_copy.c
+
+tar/test/bsdtar_test-test_copy.obj: tar/test/test_copy.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_copy.obj -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_copy.Tpo -c -o tar/test/bsdtar_test-test_copy.obj `if test -f 'tar/test/test_copy.c'; then $(CYGPATH_W) 'tar/test/test_copy.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_copy.c'; fi`
+@am__fastdepCC_TRUE@	mv -f tar/test/$(DEPDIR)/bsdtar_test-test_copy.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_copy.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='tar/test/test_copy.c' object='tar/test/bsdtar_test-test_copy.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_copy.obj `if test -f 'tar/test/test_copy.c'; then $(CYGPATH_W) 'tar/test/test_copy.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_copy.c'; fi`
+
+tar/test/bsdtar_test-test_getdate.o: tar/test/test_getdate.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_getdate.o -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_getdate.Tpo -c -o tar/test/bsdtar_test-test_getdate.o `test -f 'tar/test/test_getdate.c' || echo '$(srcdir)/'`tar/test/test_getdate.c
+@am__fastdepCC_TRUE@	mv -f tar/test/$(DEPDIR)/bsdtar_test-test_getdate.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_getdate.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='tar/test/test_getdate.c' object='tar/test/bsdtar_test-test_getdate.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_getdate.o `test -f 'tar/test/test_getdate.c' || echo '$(srcdir)/'`tar/test/test_getdate.c
+
+tar/test/bsdtar_test-test_getdate.obj: tar/test/test_getdate.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_getdate.obj -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_getdate.Tpo -c -o tar/test/bsdtar_test-test_getdate.obj `if test -f 'tar/test/test_getdate.c'; then $(CYGPATH_W) 'tar/test/test_getdate.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_getdate.c'; fi`
+@am__fastdepCC_TRUE@	mv -f tar/test/$(DEPDIR)/bsdtar_test-test_getdate.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_getdate.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='tar/test/test_getdate.c' object='tar/test/bsdtar_test-test_getdate.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_getdate.obj `if test -f 'tar/test/test_getdate.c'; then $(CYGPATH_W) 'tar/test/test_getdate.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_getdate.c'; fi`
+
+tar/test/bsdtar_test-test_help.o: tar/test/test_help.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_help.o -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_help.Tpo -c -o tar/test/bsdtar_test-test_help.o `test -f 'tar/test/test_help.c' || echo '$(srcdir)/'`tar/test/test_help.c
+@am__fastdepCC_TRUE@	mv -f tar/test/$(DEPDIR)/bsdtar_test-test_help.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_help.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='tar/test/test_help.c' object='tar/test/bsdtar_test-test_help.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_help.o `test -f 'tar/test/test_help.c' || echo '$(srcdir)/'`tar/test/test_help.c
+
+tar/test/bsdtar_test-test_help.obj: tar/test/test_help.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_help.obj -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_help.Tpo -c -o tar/test/bsdtar_test-test_help.obj `if test -f 'tar/test/test_help.c'; then $(CYGPATH_W) 'tar/test/test_help.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_help.c'; fi`
+@am__fastdepCC_TRUE@	mv -f tar/test/$(DEPDIR)/bsdtar_test-test_help.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_help.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='tar/test/test_help.c' object='tar/test/bsdtar_test-test_help.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_help.obj `if test -f 'tar/test/test_help.c'; then $(CYGPATH_W) 'tar/test/test_help.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_help.c'; fi`
+
+tar/test/bsdtar_test-test_stdio.o: tar/test/test_stdio.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_stdio.o -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_stdio.Tpo -c -o tar/test/bsdtar_test-test_stdio.o `test -f 'tar/test/test_stdio.c' || echo '$(srcdir)/'`tar/test/test_stdio.c
+@am__fastdepCC_TRUE@	mv -f tar/test/$(DEPDIR)/bsdtar_test-test_stdio.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_stdio.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='tar/test/test_stdio.c' object='tar/test/bsdtar_test-test_stdio.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_stdio.o `test -f 'tar/test/test_stdio.c' || echo '$(srcdir)/'`tar/test/test_stdio.c
+
+tar/test/bsdtar_test-test_stdio.obj: tar/test/test_stdio.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_stdio.obj -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_stdio.Tpo -c -o tar/test/bsdtar_test-test_stdio.obj `if test -f 'tar/test/test_stdio.c'; then $(CYGPATH_W) 'tar/test/test_stdio.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_stdio.c'; fi`
+@am__fastdepCC_TRUE@	mv -f tar/test/$(DEPDIR)/bsdtar_test-test_stdio.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_stdio.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='tar/test/test_stdio.c' object='tar/test/bsdtar_test-test_stdio.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_stdio.obj `if test -f 'tar/test/test_stdio.c'; then $(CYGPATH_W) 'tar/test/test_stdio.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_stdio.c'; fi`
+
+tar/test/bsdtar_test-test_version.o: tar/test/test_version.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_version.o -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_version.Tpo -c -o tar/test/bsdtar_test-test_version.o `test -f 'tar/test/test_version.c' || echo '$(srcdir)/'`tar/test/test_version.c
+@am__fastdepCC_TRUE@	mv -f tar/test/$(DEPDIR)/bsdtar_test-test_version.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_version.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='tar/test/test_version.c' object='tar/test/bsdtar_test-test_version.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_version.o `test -f 'tar/test/test_version.c' || echo '$(srcdir)/'`tar/test/test_version.c
+
+tar/test/bsdtar_test-test_version.obj: tar/test/test_version.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT tar/test/bsdtar_test-test_version.obj -MD -MP -MF tar/test/$(DEPDIR)/bsdtar_test-test_version.Tpo -c -o tar/test/bsdtar_test-test_version.obj `if test -f 'tar/test/test_version.c'; then $(CYGPATH_W) 'tar/test/test_version.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_version.c'; fi`
+@am__fastdepCC_TRUE@	mv -f tar/test/$(DEPDIR)/bsdtar_test-test_version.Tpo tar/test/$(DEPDIR)/bsdtar_test-test_version.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='tar/test/test_version.c' object='tar/test/bsdtar_test-test_version.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(bsdtar_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o tar/test/bsdtar_test-test_version.obj `if test -f 'tar/test/test_version.c'; then $(CYGPATH_W) 'tar/test/test_version.c'; else $(CYGPATH_W) '$(srcdir)/tar/test/test_version.c'; fi`
 
 libarchive/libarchive_test-archive_check_magic.o: libarchive/archive_check_magic.c
 @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/libarchive_test-archive_check_magic.o -MD -MP -MF libarchive/$(DEPDIR)/libarchive_test-archive_check_magic.Tpo -c -o libarchive/libarchive_test-archive_check_magic.o `test -f 'libarchive/archive_check_magic.c' || echo '$(srcdir)/'`libarchive/archive_check_magic.c
@@ -3334,6 +3801,62 @@ libarchive/test/libarchive_test-test_bad_fd.obj: libarchive/test/test_bad_fd.c
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_bad_fd.obj `if test -f 'libarchive/test/test_bad_fd.c'; then $(CYGPATH_W) 'libarchive/test/test_bad_fd.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_bad_fd.c'; fi`
 
+libarchive/test/libarchive_test-test_compat_gtar.o: libarchive/test/test_compat_gtar.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_compat_gtar.o -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_compat_gtar.Tpo -c -o libarchive/test/libarchive_test-test_compat_gtar.o `test -f 'libarchive/test/test_compat_gtar.c' || echo '$(srcdir)/'`libarchive/test/test_compat_gtar.c
+@am__fastdepCC_TRUE@	mv -f libarchive/test/$(DEPDIR)/libarchive_test-test_compat_gtar.Tpo libarchive/test/$(DEPDIR)/libarchive_test-test_compat_gtar.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_compat_gtar.c' object='libarchive/test/libarchive_test-test_compat_gtar.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_compat_gtar.o `test -f 'libarchive/test/test_compat_gtar.c' || echo '$(srcdir)/'`libarchive/test/test_compat_gtar.c
+
+libarchive/test/libarchive_test-test_compat_gtar.obj: libarchive/test/test_compat_gtar.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_compat_gtar.obj -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_compat_gtar.Tpo -c -o libarchive/test/libarchive_test-test_compat_gtar.obj `if test -f 'libarchive/test/test_compat_gtar.c'; then $(CYGPATH_W) 'libarchive/test/test_compat_gtar.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_compat_gtar.c'; fi`
+@am__fastdepCC_TRUE@	mv -f libarchive/test/$(DEPDIR)/libarchive_test-test_compat_gtar.Tpo libarchive/test/$(DEPDIR)/libarchive_test-test_compat_gtar.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_compat_gtar.c' object='libarchive/test/libarchive_test-test_compat_gtar.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_compat_gtar.obj `if test -f 'libarchive/test/test_compat_gtar.c'; then $(CYGPATH_W) 'libarchive/test/test_compat_gtar.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_compat_gtar.c'; fi`
+
+libarchive/test/libarchive_test-test_compat_tar_hardlink.o: libarchive/test/test_compat_tar_hardlink.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_compat_tar_hardlink.o -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_compat_tar_hardlink.Tpo -c -o libarchive/test/libarchive_test-test_compat_tar_hardlink.o `test -f 'libarchive/test/test_compat_tar_hardlink.c' || echo '$(srcdir)/'`libarchive/test/test_compat_tar_hardlink.c
+@am__fastdepCC_TRUE@	mv -f libarchive/test/$(DEPDIR)/libarchive_test-test_compat_tar_hardlink.Tpo libarchive/test/$(DEPDIR)/libarchive_test-test_compat_tar_hardlink.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_compat_tar_hardlink.c' object='libarchive/test/libarchive_test-test_compat_tar_hardlink.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_compat_tar_hardlink.o `test -f 'libarchive/test/test_compat_tar_hardlink.c' || echo '$(srcdir)/'`libarchive/test/test_compat_tar_hardlink.c
+
+libarchive/test/libarchive_test-test_compat_tar_hardlink.obj: libarchive/test/test_compat_tar_hardlink.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_compat_tar_hardlink.obj -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_compat_tar_hardlink.Tpo -c -o libarchive/test/libarchive_test-test_compat_tar_hardlink.obj `if test -f 'libarchive/test/test_compat_tar_hardlink.c'; then $(CYGPATH_W) 'libarchive/test/test_compat_tar_hardlink.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_compat_tar_hardlink.c'; fi`
+@am__fastdepCC_TRUE@	mv -f libarchive/test/$(DEPDIR)/libarchive_test-test_compat_tar_hardlink.Tpo libarchive/test/$(DEPDIR)/libarchive_test-test_compat_tar_hardlink.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_compat_tar_hardlink.c' object='libarchive/test/libarchive_test-test_compat_tar_hardlink.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_compat_tar_hardlink.obj `if test -f 'libarchive/test/test_compat_tar_hardlink.c'; then $(CYGPATH_W) 'libarchive/test/test_compat_tar_hardlink.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_compat_tar_hardlink.c'; fi`
+
+libarchive/test/libarchive_test-test_compat_zip.o: libarchive/test/test_compat_zip.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_compat_zip.o -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_compat_zip.Tpo -c -o libarchive/test/libarchive_test-test_compat_zip.o `test -f 'libarchive/test/test_compat_zip.c' || echo '$(srcdir)/'`libarchive/test/test_compat_zip.c
+@am__fastdepCC_TRUE@	mv -f libarchive/test/$(DEPDIR)/libarchive_test-test_compat_zip.Tpo libarchive/test/$(DEPDIR)/libarchive_test-test_compat_zip.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_compat_zip.c' object='libarchive/test/libarchive_test-test_compat_zip.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_compat_zip.o `test -f 'libarchive/test/test_compat_zip.c' || echo '$(srcdir)/'`libarchive/test/test_compat_zip.c
+
+libarchive/test/libarchive_test-test_compat_zip.obj: libarchive/test/test_compat_zip.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_compat_zip.obj -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_compat_zip.Tpo -c -o libarchive/test/libarchive_test-test_compat_zip.obj `if test -f 'libarchive/test/test_compat_zip.c'; then $(CYGPATH_W) 'libarchive/test/test_compat_zip.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_compat_zip.c'; fi`
+@am__fastdepCC_TRUE@	mv -f libarchive/test/$(DEPDIR)/libarchive_test-test_compat_zip.Tpo libarchive/test/$(DEPDIR)/libarchive_test-test_compat_zip.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_compat_zip.c' object='libarchive/test/libarchive_test-test_compat_zip.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_compat_zip.obj `if test -f 'libarchive/test/test_compat_zip.c'; then $(CYGPATH_W) 'libarchive/test/test_compat_zip.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_compat_zip.c'; fi`
+
+libarchive/test/libarchive_test-test_empty_write.o: libarchive/test/test_empty_write.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_empty_write.o -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_empty_write.Tpo -c -o libarchive/test/libarchive_test-test_empty_write.o `test -f 'libarchive/test/test_empty_write.c' || echo '$(srcdir)/'`libarchive/test/test_empty_write.c
+@am__fastdepCC_TRUE@	mv -f libarchive/test/$(DEPDIR)/libarchive_test-test_empty_write.Tpo libarchive/test/$(DEPDIR)/libarchive_test-test_empty_write.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_empty_write.c' object='libarchive/test/libarchive_test-test_empty_write.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_empty_write.o `test -f 'libarchive/test/test_empty_write.c' || echo '$(srcdir)/'`libarchive/test/test_empty_write.c
+
+libarchive/test/libarchive_test-test_empty_write.obj: libarchive/test/test_empty_write.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_empty_write.obj -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_empty_write.Tpo -c -o libarchive/test/libarchive_test-test_empty_write.obj `if test -f 'libarchive/test/test_empty_write.c'; then $(CYGPATH_W) 'libarchive/test/test_empty_write.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_empty_write.c'; fi`
+@am__fastdepCC_TRUE@	mv -f libarchive/test/$(DEPDIR)/libarchive_test-test_empty_write.Tpo libarchive/test/$(DEPDIR)/libarchive_test-test_empty_write.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_empty_write.c' object='libarchive/test/libarchive_test-test_empty_write.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_empty_write.obj `if test -f 'libarchive/test/test_empty_write.c'; then $(CYGPATH_W) 'libarchive/test/test_empty_write.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_empty_write.c'; fi`
+
 libarchive/test/libarchive_test-test_entry.o: libarchive/test/test_entry.c
 @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_entry.o -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_entry.Tpo -c -o libarchive/test/libarchive_test-test_entry.o `test -f 'libarchive/test/test_entry.c' || echo '$(srcdir)/'`libarchive/test/test_entry.c
 @am__fastdepCC_TRUE@	mv -f libarchive/test/$(DEPDIR)/libarchive_test-test_entry.Tpo libarchive/test/$(DEPDIR)/libarchive_test-test_entry.Po
@@ -3361,6 +3884,34 @@ libarchive/test/libarchive_test-test_entry_strmode.obj: libarchive/test/test_ent
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_entry_strmode.c' object='libarchive/test/libarchive_test-test_entry_strmode.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_entry_strmode.obj `if test -f 'libarchive/test/test_entry_strmode.c'; then $(CYGPATH_W) 'libarchive/test/test_entry_strmode.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_entry_strmode.c'; fi`
+
+libarchive/test/libarchive_test-test_link_resolver.o: libarchive/test/test_link_resolver.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_link_resolver.o -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_link_resolver.Tpo -c -o libarchive/test/libarchive_test-test_link_resolver.o `test -f 'libarchive/test/test_link_resolver.c' || echo '$(srcdir)/'`libarchive/test/test_link_resolver.c
+@am__fastdepCC_TRUE@	mv -f libarchive/test/$(DEPDIR)/libarchive_test-test_link_resolver.Tpo libarchive/test/$(DEPDIR)/libarchive_test-test_link_resolver.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_link_resolver.c' object='libarchive/test/libarchive_test-test_link_resolver.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_link_resolver.o `test -f 'libarchive/test/test_link_resolver.c' || echo '$(srcdir)/'`libarchive/test/test_link_resolver.c
+
+libarchive/test/libarchive_test-test_link_resolver.obj: libarchive/test/test_link_resolver.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_link_resolver.obj -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_link_resolver.Tpo -c -o libarchive/test/libarchive_test-test_link_resolver.obj `if test -f 'libarchive/test/test_link_resolver.c'; then $(CYGPATH_W) 'libarchive/test/test_link_resolver.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_link_resolver.c'; fi`
+@am__fastdepCC_TRUE@	mv -f libarchive/test/$(DEPDIR)/libarchive_test-test_link_resolver.Tpo libarchive/test/$(DEPDIR)/libarchive_test-test_link_resolver.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_link_resolver.c' object='libarchive/test/libarchive_test-test_link_resolver.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_link_resolver.obj `if test -f 'libarchive/test/test_link_resolver.c'; then $(CYGPATH_W) 'libarchive/test/test_link_resolver.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_link_resolver.c'; fi`
+
+libarchive/test/libarchive_test-test_pax_filename_encoding.o: libarchive/test/test_pax_filename_encoding.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_pax_filename_encoding.o -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_pax_filename_encoding.Tpo -c -o libarchive/test/libarchive_test-test_pax_filename_encoding.o `test -f 'libarchive/test/test_pax_filename_encoding.c' || echo '$(srcdir)/'`libarchive/test/test_pax_filename_encoding.c
+@am__fastdepCC_TRUE@	mv -f libarchive/test/$(DEPDIR)/libarchive_test-test_pax_filename_encoding.Tpo libarchive/test/$(DEPDIR)/libarchive_test-test_pax_filename_encoding.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_pax_filename_encoding.c' object='libarchive/test/libarchive_test-test_pax_filename_encoding.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_pax_filename_encoding.o `test -f 'libarchive/test/test_pax_filename_encoding.c' || echo '$(srcdir)/'`libarchive/test/test_pax_filename_encoding.c
+
+libarchive/test/libarchive_test-test_pax_filename_encoding.obj: libarchive/test/test_pax_filename_encoding.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_pax_filename_encoding.obj -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_pax_filename_encoding.Tpo -c -o libarchive/test/libarchive_test-test_pax_filename_encoding.obj `if test -f 'libarchive/test/test_pax_filename_encoding.c'; then $(CYGPATH_W) 'libarchive/test/test_pax_filename_encoding.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_pax_filename_encoding.c'; fi`
+@am__fastdepCC_TRUE@	mv -f libarchive/test/$(DEPDIR)/libarchive_test-test_pax_filename_encoding.Tpo libarchive/test/$(DEPDIR)/libarchive_test-test_pax_filename_encoding.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_pax_filename_encoding.c' object='libarchive/test/libarchive_test-test_pax_filename_encoding.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_pax_filename_encoding.obj `if test -f 'libarchive/test/test_pax_filename_encoding.c'; then $(CYGPATH_W) 'libarchive/test/test_pax_filename_encoding.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_pax_filename_encoding.c'; fi`
 
 libarchive/test/libarchive_test-test_read_compress_program.o: libarchive/test/test_read_compress_program.c
 @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_read_compress_program.o -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_read_compress_program.Tpo -c -o libarchive/test/libarchive_test-test_read_compress_program.o `test -f 'libarchive/test/test_read_compress_program.c' || echo '$(srcdir)/'`libarchive/test/test_read_compress_program.c
@@ -3795,6 +4346,20 @@ libarchive/test/libarchive_test-test_write_disk.obj: libarchive/test/test_write_
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_write_disk.c' object='libarchive/test/libarchive_test-test_write_disk.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_write_disk.obj `if test -f 'libarchive/test/test_write_disk.c'; then $(CYGPATH_W) 'libarchive/test/test_write_disk.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_write_disk.c'; fi`
+
+libarchive/test/libarchive_test-test_write_disk_hardlink.o: libarchive/test/test_write_disk_hardlink.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_write_disk_hardlink.o -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_write_disk_hardlink.Tpo -c -o libarchive/test/libarchive_test-test_write_disk_hardlink.o `test -f 'libarchive/test/test_write_disk_hardlink.c' || echo '$(srcdir)/'`libarchive/test/test_write_disk_hardlink.c
+@am__fastdepCC_TRUE@	mv -f libarchive/test/$(DEPDIR)/libarchive_test-test_write_disk_hardlink.Tpo libarchive/test/$(DEPDIR)/libarchive_test-test_write_disk_hardlink.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_write_disk_hardlink.c' object='libarchive/test/libarchive_test-test_write_disk_hardlink.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_write_disk_hardlink.o `test -f 'libarchive/test/test_write_disk_hardlink.c' || echo '$(srcdir)/'`libarchive/test/test_write_disk_hardlink.c
+
+libarchive/test/libarchive_test-test_write_disk_hardlink.obj: libarchive/test/test_write_disk_hardlink.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_write_disk_hardlink.obj -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_write_disk_hardlink.Tpo -c -o libarchive/test/libarchive_test-test_write_disk_hardlink.obj `if test -f 'libarchive/test/test_write_disk_hardlink.c'; then $(CYGPATH_W) 'libarchive/test/test_write_disk_hardlink.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_write_disk_hardlink.c'; fi`
+@am__fastdepCC_TRUE@	mv -f libarchive/test/$(DEPDIR)/libarchive_test-test_write_disk_hardlink.Tpo libarchive/test/$(DEPDIR)/libarchive_test-test_write_disk_hardlink.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_write_disk_hardlink.c' object='libarchive/test/libarchive_test-test_write_disk_hardlink.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_write_disk_hardlink.obj `if test -f 'libarchive/test/test_write_disk_hardlink.c'; then $(CYGPATH_W) 'libarchive/test/test_write_disk_hardlink.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_write_disk_hardlink.c'; fi`
 
 libarchive/test/libarchive_test-test_write_disk_perms.o: libarchive/test/test_write_disk_perms.c
 @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_write_disk_perms.o -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_write_disk_perms.Tpo -c -o libarchive/test/libarchive_test-test_write_disk_perms.o `test -f 'libarchive/test/test_write_disk_perms.c' || echo '$(srcdir)/'`libarchive/test/test_write_disk_perms.c
@@ -4412,6 +4977,7 @@ install-strip:
 mostlyclean-generic:
 
 clean-generic:
+	-test -z "$(CLEANFILES)" || rm -f $(CLEANFILES)
 
 distclean-generic:
 	-test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)
@@ -4425,6 +4991,9 @@ distclean-generic:
 	-rm -f libarchive/test/$(am__dirstamp)
 	-rm -f tar/$(DEPDIR)/$(am__dirstamp)
 	-rm -f tar/$(am__dirstamp)
+	-rm -f tar/test/$(DEPDIR)/$(am__dirstamp)
+	-rm -f tar/test/$(am__dirstamp)
+	-test -z "$(DISTCLEANFILES)" || rm -f $(DISTCLEANFILES)
 
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
@@ -4438,7 +5007,7 @@ clean-am: clean-binPROGRAMS clean-checkPROGRAMS clean-generic \
 
 distclean: distclean-am
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
-	-rm -rf cpio/$(DEPDIR) cpio/test/$(DEPDIR) libarchive/$(DEPDIR) libarchive/test/$(DEPDIR) tar/$(DEPDIR)
+	-rm -rf cpio/$(DEPDIR) cpio/test/$(DEPDIR) libarchive/$(DEPDIR) libarchive/test/$(DEPDIR) tar/$(DEPDIR) tar/test/$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-hdr distclean-libtool distclean-local distclean-tags
@@ -4475,7 +5044,7 @@ installcheck-am:
 maintainer-clean: maintainer-clean-am
 	-rm -f $(am__CONFIG_DISTCLEAN_FILES)
 	-rm -rf $(top_srcdir)/autom4te.cache
-	-rm -rf cpio/$(DEPDIR) cpio/test/$(DEPDIR) libarchive/$(DEPDIR) libarchive/test/$(DEPDIR) tar/$(DEPDIR)
+	-rm -rf cpio/$(DEPDIR) cpio/test/$(DEPDIR) libarchive/$(DEPDIR) libarchive/test/$(DEPDIR) tar/$(DEPDIR) tar/test/$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 
@@ -4531,18 +5100,10 @@ dist-hook:
 	rm -f `find $(distdir) -name '*~'`
 	rm -f `find $(distdir) -name '*.out'`
 	rm -f `find $(distdir) -name '*.core'`
-	rm -f $(distdir)/*/Makefile
-	mkdir -p $(distdir)/doc/man
-	cp $(distdir)/libarchive/*.[135] $(distdir)/doc/man
-	cp $(distdir)/tar/*.[135] $(distdir)/doc/man
-	cp $(distdir)/cpio/*.[135] $(distdir)/doc/man
-	mkdir -p $(distdir)/doc/text
-	cd $(distdir)/doc/man; for f in *.[135]; do nroff -mdoc $$f | col -b > ../text/`basename $$f`.txt; done
+	-rm -f $(distdir)/*/Makefile $(distdir)/*/*/Makefile
+	cd $(distdir)/doc && ./update.sh
 
 distclean-local:
-	-rm -f tar/getdate.c tar/getdate.h
-	-rm -f libarchive/test/list.h
-	-rm -f cpio/test/list.h
 	-rm -rf autom4te.cache/
 	-rm -f *~
 
@@ -4552,8 +5113,66 @@ distclean-local:
 libarchive/test/list.h: Makefile
 	cat $(top_srcdir)/libarchive/test/test_*.c | grep DEFINE_TEST > libarchive/test/list.h
 
+# BSD make prefers $> here, GNU make prefers $<; $? works for both.
+test_compat_gtar_1.tgz: libarchive/test/test_compat_gtar_1.tgz.uu
+	cat $? | uudecode
+
+test_compat_tar_hardlink_1.tar: libarchive/test/test_compat_tar_hardlink_1.tar.uu
+	cat $? | uudecode
+
+test_compat_zip_1.zip: libarchive/test/test_compat_zip_1.zip.uu
+	cat $? | uudecode
+
+test_read_format_gtar_sparse_1_13.tgz: libarchive/test/test_read_format_gtar_sparse_1_13.tgz.uu
+	cat $? | uudecode
+
+test_read_format_gtar_sparse_1_17.tgz: libarchive/test/test_read_format_gtar_sparse_1_17.tgz.uu
+	cat $? | uudecode
+
+test_read_format_gtar_sparse_1_17_posix00.tgz: libarchive/test/test_read_format_gtar_sparse_1_17_posix00.tgz.uu
+	cat $? | uudecode
+
+test_read_format_gtar_sparse_1_17_posix01.tgz: libarchive/test/test_read_format_gtar_sparse_1_17_posix01.tgz.uu
+	cat $? | uudecode
+
+test_read_format_gtar_sparse_1_17_posix10.tgz: libarchive/test/test_read_format_gtar_sparse_1_17_posix10.tgz.uu
+	cat $? | uudecode
+
+test_read_format_gtar_sparse_1_17_posix10_modified.tar: libarchive/test/test_read_format_gtar_sparse_1_17_posix10_modified.tar.uu
+	cat $? | uudecode
+
+tar/test/list.h: Makefile
+	cat $(top_srcdir)/tar/test/test_*.c | grep DEFINE_TEST > tar/test/list.h
+
 cpio/test/list.h: Makefile
 	cat $(top_srcdir)/cpio/test/test_*.c | grep DEFINE_TEST > cpio/test/list.h
+
+test_gcpio_compat_ref.bin: cpio/test/test_gcpio_compat_ref.bin.uu
+	cat $? | uudecode
+
+test_gcpio_compat_ref.crc: cpio/test/test_gcpio_compat_ref.crc.uu
+	cat $? | uudecode
+
+test_gcpio_compat_ref.newc: cpio/test/test_gcpio_compat_ref.newc.uu
+	cat $? | uudecode
+
+test_gcpio_compat_ref.ustar: cpio/test/test_gcpio_compat_ref.ustar.uu
+	cat $? | uudecode
+
+test_option_f.cpio: cpio/test/test_option_f.cpio.uu
+	cat $? | uudecode
+
+test_option_m.cpio: cpio/test/test_option_m.cpio.uu
+	cat $? | uudecode
+
+test_option_t.cpio: cpio/test/test_option_t.cpio.uu
+	cat $? | uudecode
+
+test_option_t.stdout: cpio/test/test_option_t.stdout.uu
+	cat $? | uudecode
+
+test_option_tv.stdout: cpio/test/test_option_tv.stdout.uu
+	cat $? | uudecode
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:

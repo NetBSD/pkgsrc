@@ -1,51 +1,18 @@
-.\" Copyright (c) 1989, 1990, 1993
-.\"     The Regents of the University of California.  All rights reserved.
-.\"
-.\" Redistribution and use in source and binary forms, with or without
-.\" modification, are permitted provided that the following conditions
-.\" are met:
-.\" 1. Redistributions of source code must retain the above copyright
-.\"    notice, this list of conditions and the following disclaimer.
-.\" 2. Redistributions in binary form must reproduce the above copyright
-.\"    notice, this list of conditions and the following disclaimer in the
-.\"    documentation and/or other materials provided with the distribution.
-.\" 4. Neither the name of the University nor the names of its contributors
-.\"    may be used to endorse or promote products derived from this software
-.\"    without specific prior written permission.
-.\"
-.\" THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND
-.\" ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-.\" IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-.\" ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE
-.\" FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-.\" DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
-.\" OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-.\" HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
-.\" LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
-.\" OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
-.\" SUCH DAMAGE.
-.\"
-.\"     From: @(#)mtree.8       8.2 (Berkeley) 12/11/93
-.\" $FreeBSD$
-.\"
-.Dd August 20, 2007
-.Dt MTREE 5
-.Os
-.Sh NAME
-.Nm mtree
-.Nd format of mtree dir heirarchy files
-.Sh DESCRIPTION
+.TH MTREE 5 "August 20, 2007" ""
+.SH NAME
+\fBmtree\fP
+\- format of mtree dir heirarchy files
+.SH DESCRIPTION
 The
-.Nm
+\fBmtree\fP
 format is a textual format that describes a collection of filesystem objects.
 Such files are typically used to create or verify directory heirarchies.
-.Ss General Format
+.SS General Format
 An
-.Nm
+\fBmtree\fP
 file consists of a series of lines, each providing information
 about a single filesystem object.
 Leading whitespace is always ignored.
-.Pp
 When encoding file or pathnames, any backslash character or
 character outside of the 95 printable ASCII characters must be
 encoded as a a backslash followed by three
@@ -53,72 +20,75 @@ octal digits.
 When reading mtree files, any appearance of a backslash
 followed by three octal digits should be converted into the
 corresponding character.
-.Pp
 Each line is interpreted independently as one of the following types:
-.Bl -tag -width Cm
-.It Signature
+.TP
+Signature
 The first line of any mtree file must begin with
-.Dq #mtree .
+``#mtree''.
 If a file contains any full path entries, the first line should
 begin with
-.Dq #mtree v2.0 ,
+``#mtree v2.0'',
 otherwise, the first line should begin with
-.Dq #mtree v1.0 .
-.It Blank
+``#mtree v1.0''.
+.TP
+Blank
 Blank lines are ignored.
-.It Comment
+.TP
+Comment
 Lines beginning with
-.Cm #
+\fB#\fP
 are ignored.
-.It Special
+.TP
+Special
 Lines beginning with
-.Cm /
+\fB/\fP
 are special commands that influence
 the interpretation of later lines.
-.It Relative
+.TP
+Relative
 If the first whitespace-delimited word has no
-.Cm /
+\fB/\fP
 characters,
 it is the name of a file in the current directory.
 Any relative entry that describes a directory changes the
 current directory.
-.It dot-dot
+.TP
+dot-dot
 As a special case, a relative entry with the filename
-.Pa ..
+\fI\& ..\fP
 changes the current directory to the parent directory.
 Options on dot-dot entries are always ignored.
-.It Full
+.TP
+Full
 If the first whitespace-delimited word has a
-.Cm /
+\fB/\fP
 character after
 the first character, it is the pathname of a file relative to the
 starting directory.
 There can be multiple full entries describing the same file.
-.El
-.Pp
 Some tools that process
-.Nm
+\fBmtree\fP
 files may require that multiple lines describing the same file
 occur consecutively.
 It is not permitted for the same file to be mentioned using
 both a relative and a full file specification.
-.Ss Special commands
+.SS Special commands
 Two special commands are currently defined:
-.Bl -tag -width Cm
-.It Cm /set
+.TP
+\fB/set\fP
 This command defines default values for one or more keywords.
 It is followed on the same line by one or more whitespace-separated
 keyword definitions.
 These definitions apply to all following files that do not specify
 a value for that keyword.
-.It Cm /unset
+.TP
+\fB/unset\fP
 This command removes any default value set by a previous
-.Cm /set
+\fB/set\fP
 command.
 It is followed on the same line by one or more keywords
 separated by whitespace.
-.El
-.Ss Keywords
+.SS Keywords
 After the filename, a full or relative entry consists of zero
 or more whitespace-separated keyword definitions.
 Each such definitions consists of a key from the following
@@ -126,145 +96,169 @@ list immediately followed by an '=' sign
 and a value.
 Software programs reading mtree files should warn about
 unrecognized keywords.
-.Pp
 Currently supported keywords are as follows:
-.Bl -tag -width Cm
-.It Cm cksum
+.TP
+\fBcksum\fP
 The checksum of the file using the default algorithm specified by
 the
-.Xr cksum 1
+\fBcksum\fP(1)
 utility.
-.It Cm contents
+.TP
+\fBcontents\fP
 The full pathname of a file whose contents should be
 compared to the contents of this file.
-.It Cm flags
+.TP
+\fBflags\fP
 The file flags as a symbolic name.
 See
-.Xr chflags 1
+\fBchflags\fP(1)
 for information on these names.
 If no flags are to be set the string
-.Dq none
+``none''
 may be used to override the current default.
-.It Cm ignore
+.TP
+\fBignore\fP
 Ignore any file hierarchy below this file.
-.It Cm gid
+.TP
+\fBgid\fP
 The file group as a numeric value.
-.It Cm gname
+.TP
+\fBgname\fP
 The file group as a symbolic name.
-.It Cm md5
+.TP
+\fBmd5\fP
 The MD5 message digest of the file.
-.It Cm md5digest
+.TP
+\fBmd5digest\fP
 A synonym for
-.Cm md5 .
-.It Cm sha1
+\fBmd5\fP.
+.TP
+\fBsha1\fP
 The
-.Tn FIPS
+Tn FIPS
 160-1
-.Pq Dq Tn SHA-1
+(``Tn SHA-1'')
 message digest of the file.
-.It Cm sha1digest
+.TP
+\fBsha1digest\fP
 A synonym for
-.Cm sha1 .
-.It Cm sha256
+\fBsha1\fP.
+.TP
+\fBsha256\fP
 The
-.Tn FIPS
+Tn FIPS
 180-2
-.Pq Dq Tn SHA-256
+(``Tn SHA-256'')
 message digest of the file.
-.It Cm sha256digest
+.TP
+\fBsha256digest\fP
 A synonym for
-.Cm sha256 .
-.It Cm ripemd160digest
+\fBsha256\fP.
+.TP
+\fBripemd160digest\fP
 The
-.Tn RIPEMD160
+Tn RIPEMD160
 message digest of the file.
-.It Cm rmd160
+.TP
+\fBrmd160\fP
 A synonym for
-.Cm ripemd160digest .
-.It Cm rmd160digest
+\fBripemd160digest\fP.
+.TP
+\fBrmd160digest\fP
 A synonym for
-.Cm ripemd160digest .
-.It Cm mode
+\fBripemd160digest\fP.
+.TP
+\fBmode\fP
 The current file's permissions as a numeric (octal) or symbolic
 value.
-.It Cm nlink
+.TP
+\fBnlink\fP
 The number of hard links the file is expected to have.
-.It Cm nochange
+.TP
+\fBnochange\fP
 Make sure this file or directory exists but otherwise ignore all attributes.
-.It Cm uid
+.TP
+\fBuid\fP
 The file owner as a numeric value.
-.It Cm uname
+.TP
+\fBuname\fP
 The file owner as a symbolic name.
-.It Cm size
+.TP
+\fBsize\fP
 The size, in bytes, of the file.
-.It Cm link
+.TP
+\fBlink\fP
 The file the symbolic link is expected to reference.
-.It Cm time
+.TP
+\fBtime\fP
 The last modification time of the file.
-.It Cm type
+.TP
+\fBtype\fP
 The type of the file; may be set to any one of the following:
-.Pp
-.Bl -tag -width Cm -compact
-.It Cm block
+.TP
+\fBblock\fP
 block special device
-.It Cm char
+.TP
+\fBchar\fP
 character special device
-.It Cm dir
+.TP
+\fBdir\fP
 directory
-.It Cm fifo
+.TP
+\fBfifo\fP
 fifo
-.It Cm file
+.TP
+\fBfile\fP
 regular file
-.It Cm link
+.TP
+\fBlink\fP
 symbolic link
-.It Cm socket
+.TP
+\fBsocket\fP
 socket
-.El
-.El
-.Pp
-.Sh SEE ALSO
-.Xr cksum 1 ,
-.Xr find 1 ,
-.Xr mtree 8
-.Sh BUGS
+.SH SEE ALSO
+\fBcksum\fP(1),
+\fBfind\fP(1),
+\fBmtree\fP(8)
+.SH BUGS
 The
-.Fx
+FreeBSD
 implementation of mtree does not currently support
 the
-.Nm
+\fBmtree\fP
 2.0
 format.
 The requirement for a
-.Dq #mtree
+``#mtree''
 signature line is new and not yet widely implemented.
-.Sh HISTORY
+.SH HISTORY
 The
-.Nm
+\fBmtree\fP
 utility appeared in
-.Bx 4.3 Reno .
+Bx 4.3 Reno.
 The
-.Tn MD5
+Tn MD5
 digest capability was added in
-.Fx 2.1 ,
+FreeBSD 2.1,
 in response to the widespread use of programs which can spoof
-.Xr cksum 1 .
+\fBcksum\fP(1).
 The
-.Tn SHA-1
+Tn SHA-1
 and
-.Tn RIPEMD160
+Tn RIPEMD160
 digests were added in
-.Fx 4.0 ,
+FreeBSD 4.0,
 as new attacks have demonstrated weaknesses in
-.Tn MD5 .
+Tn MD5.
 The
-.Tn SHA-256
+Tn SHA-256
 digest was added in
-.Fx 6.0 .
+FreeBSD 6.0.
 Support for file flags was added in
-.Fx 4.0 ,
+FreeBSD 4.0,
 and mostly comes from
-.Nx .
+NetBSD.
 The
-.Dq full
+``full''
 entry format was added by
-.Nx .
+NetBSD.
