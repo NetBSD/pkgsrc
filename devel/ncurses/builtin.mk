@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.15 2008/02/26 17:02:30 jlam Exp $
+# $NetBSD: builtin.mk,v 1.16 2008/02/26 17:21:13 jlam Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -127,7 +127,6 @@ BUILDLINK_TRANSFORM+=		l:ncurses:curses
 BUILDLINK_TARGETS+=		buildlink-curses-ncurses-h
 BUILDLINK_TARGETS+=		buildlink-ncurses-extra-includes
 .  endif
-BUILDLINK_TARGETS+=		buildlink-ncurses-curses-h
 
 # A full ncurses implementation provides more headers than some curses
 # implementations.  Touch empty replacements for those headers so that
