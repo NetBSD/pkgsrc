@@ -19,7 +19,7 @@ AC_CONFIG_COMMANDS_PRE([
 LIBARCHIVE_VERSION_STRING=$PACKAGE_VERSION
 BSDTAR_VERSION_STRING=$PACKAGE_VERSION
 # For a little while longer, cpio is considered immature
-BSDCPIO_VERSION_STRING=0.3.0
+BSDCPIO_VERSION_STRING=0.9.0
 
 # Peel off first three numbers major.minor.revision
 ARCHIVE_MAJOR=`echo $LIBARCHIVE_VERSION_STRING | sed -e 's/[[^0-9]]/./g' -e 's/\..*//'`
@@ -158,7 +158,6 @@ AM_CONDITIONAL([STATIC_BSDCPIO], [ test "$static_bsdcpio" = yes ])
 AC_HEADER_STDC
 AC_HEADER_DIRENT
 AC_HEADER_SYS_WAIT
-AC_CHECK_HEADERS([attr/xattr.h])
 AC_CHECK_HEADERS([bzlib.h errno.h ext2fs/ext2_fs.h fcntl.h  grp.h])
 AC_CHECK_HEADERS([inttypes.h langinfo.h limits.h linux/ext2_fs.h linux/fs.h])
 # Include inttypes.h into archive.h only if appropriate.
@@ -172,12 +171,10 @@ AC_CHECK_HEADER(inttypes.h,
 	 [AC_SUBST(ARCHIVE_H_INCLUDE_INTTYPES_H,[''])])
 AC_CHECK_HEADERS([locale.h paths.h poll.h pwd.h stdarg.h])
 AC_CHECK_HEADERS([stdint.h stdlib.h string.h sys/acl.h sys/ioctl.h])
-AC_CHECK_HEADERS([sys/param.h sys/poll.h sys/select.h sys/time.h])
+AC_CHECK_HEADERS([sys/param.h sys/poll.h sys/select.h sys/time.h sys/utime.h])
 AC_CHECK_HEADERS([time.h unistd.h utime.h wchar.h zlib.h])
 
 # Checks for libraries.
-AC_CHECK_LIB(acl,acl_set_file)
-AC_CHECK_LIB(attr,setxattr)
 AC_CHECK_LIB(bz2,BZ2_bzDecompressInit)
 AC_CHECK_LIB(z,inflate)
 
@@ -238,13 +235,13 @@ AC_FUNC_STAT
 AC_FUNC_STRERROR_R
 AC_FUNC_STRFTIME
 AC_FUNC_VPRINTF
-AC_CHECK_FUNCS([chflags fchdir fchflags fchmod fchown futimes])
-AC_CHECK_FUNCS([ftruncate getopt_long getxattr])
+AC_CHECK_FUNCS([chflags chown fchdir fchflags fchmod fchown futimes])
+AC_CHECK_FUNCS([ftruncate geteuid getopt_long])
 AC_CHECK_FUNCS([lchflags lchmod lchown])
-AC_CHECK_FUNCS([lgetxattr listxattr llistxattr fsetxattr lsetxattr])
-AC_CHECK_FUNCS([lutimes memmove memset mkdir mkfifo])
-AC_CHECK_FUNCS([nl_langinfo poll select setlocale])
-AC_CHECK_FUNCS([strchr strdup strerror strrchr timegm utime utimes])
+AC_CHECK_FUNCS([lutimes memmove memset mkdir mkfifo mknod])
+AC_CHECK_FUNCS([nl_langinfo poll select setenv setlocale])
+AC_CHECK_FUNCS([strchr strdup strerror strrchr timegm])
+AC_CHECK_FUNCS([tzset unsetenv utime utimes])
 AC_CHECK_FUNCS([wcscpy wcslen wmemcmp wmemcpy])
 
 # FreeBSD's nl_langinfo supports an option to specify whether the
@@ -280,6 +277,17 @@ AC_CHECK_MEMBER(struct dirent.d_namlen,,,
 #endif
 ])
 
+# Check for Extended Attributes support
+AC_ARG_ENABLE([xattr],
+		AS_HELP_STRING([--disable-xattr],
+		[Enable Extended Attributes support (default: check)]))
+
+if test "x$enable_xattr" != "xno"; then
+	AC_CHECK_HEADERS([attr/xattr.h])
+	AC_CHECK_LIB(attr,setxattr)
+	AC_CHECK_FUNCS([getxattr lgetxattr listxattr llistxattr fsetxattr lsetxattr])
+fi
+
 # Check for ACL support
 #
 # The ACL support in libarchive is written against the POSIX1e draft,
@@ -287,39 +295,45 @@ AC_CHECK_MEMBER(struct dirent.d_namlen,,,
 # platforms.  Worse, some systems have completely non-POSIX acl functions,
 # which makes the following checks rather more complex than I would like.
 #
-AC_CHECK_HEADERS([sys/acl.h])
-AC_CHECK_LIB([acl],[acl_get_file])
-AC_CHECK_FUNCS([acl_create_entry acl_init acl_set_fd acl_set_fd_np acl_set_file])
+AC_ARG_ENABLE([acl],
+		AS_HELP_STRING([--disable-acl],
+		[Enable ACL support (default: check)]))
 
-AC_CHECK_TYPES(acl_permset_t,,,
-[#if HAVE_SYS_TYPES_H
-#include <sys/types.h>
-#endif
-#if HAVE_SYS_ACL_H
-#include <sys/acl.h>
-#endif
-])
+if test "x$enable_acl" != "xno"; then
+   AC_CHECK_HEADERS([sys/acl.h])
+   AC_CHECK_LIB([acl],[acl_get_file])
+   AC_CHECK_FUNCS([acl_create_entry acl_init acl_set_fd acl_set_fd_np acl_set_file])
 
-# The "acl_get_perm()" function was omitted from the POSIX draft.
-# (It's a pretty obvious oversight; otherwise, there's no way to
-# test for specific permissions in a permset.)  Linux uses the obvious
-# name, FreeBSD adds _np to mark it as "non-Posix extension."
-# Test for both as a double-check that we really have POSIX-style ACL support.
-AC_CHECK_FUNCS(acl_get_perm_np acl_get_perm,,,
-[#if HAVE_SYS_TYPES_H
-#include <sys/types.h>
-#endif
-#if HAVE_SYS_ACL_H
-#include <sys/acl.h>
-#endif
-])
+   AC_CHECK_TYPES(acl_permset_t,,,
+	[#if HAVE_SYS_TYPES_H
+	#include <sys/types.h>
+	#endif
+	#if HAVE_SYS_ACL_H
+	#include <sys/acl.h>
+	#endif
+	])
 
-# MacOS has an acl.h that isn't POSIX.  It can be detected by
-# checking for ACL_USER
-AC_CHECK_DECL([ACL_USER],
+    # The "acl_get_perm()" function was omitted from the POSIX draft.
+    # (It's a pretty obvious oversight; otherwise, there's no way to
+    # test for specific permissions in a permset.)  Linux uses the obvious
+    # name, FreeBSD adds _np to mark it as "non-Posix extension."
+    # Test for both as a double-check that we really have POSIX-style ACL support.
+    AC_CHECK_FUNCS(acl_get_perm_np acl_get_perm,,,
+	[#if HAVE_SYS_TYPES_H
+	#include <sys/types.h>
+	#endif
+	#if HAVE_SYS_ACL_H
+	#include <sys/acl.h>
+	#endif
+	])
+
+    # MacOS has an acl.h that isn't POSIX.  It can be detected by
+    # checking for ACL_USER
+    AC_CHECK_DECL([ACL_USER],
 		[AC_DEFINE(HAVE_ACL_USER, 1, [True for systems with POSIX ACL support])],
 		[],
 		[#include <sys/acl.h>])
+fi
 
 # Additional requirements
 AC_SYS_LARGEFILE

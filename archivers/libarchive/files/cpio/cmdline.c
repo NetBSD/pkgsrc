@@ -66,7 +66,7 @@ struct option {
  */
 
 
-static const char *cpio_opts = "aBcdf:H:hijlmopR:rtuvW:yz";
+static const char *cpio_opts = "aBcdf:H:hijLlmopR:rtuvW:yz";
 
 /*
  * On systems that lack getopt_long, long options can be specified

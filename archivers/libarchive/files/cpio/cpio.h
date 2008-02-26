@@ -25,6 +25,9 @@
  * $FreeBSD$
  */
 
+#ifndef CPIO_H_INCLUDED
+#define CPIO_H_INCLUDED
+
 #include "cpio_platform.h"
 #include <stdio.h>
 
@@ -51,9 +54,10 @@ struct cpio {
 	char		  symlink_mode; /* H or L, per BSD conventions */
 	const char	 *compress_program;
 	int		  option_atime_restore; /* -a */
-	int		  option_null; /* -0 --null */
-	int		  option_list; /* -t */
+	int		  option_follow_links; /* -L */
 	int		  option_link; /* -l */
+	int		  option_list; /* -t */
+	int		  option_null; /* -0 --null */
 	int		  option_rename; /* -r */
 	char		 *pass_destdir;
 	size_t		  pass_destpath_alloc;
@@ -70,6 +74,8 @@ struct cpio {
 	char		**argv;
 	int		  return_value; /* Value returned by main() */
 	struct archive_entry_linkresolver *linkresolver;
+
+	struct matching  *matching;
 };
 
 /* Name of this program; used in error reporting, initialized in main(). */
@@ -88,4 +94,5 @@ enum {
 };
 
 int	cpio_getopt(struct cpio *cpio);
-int	pathmatch(const char *pattern, const char *s);
+
+#endif

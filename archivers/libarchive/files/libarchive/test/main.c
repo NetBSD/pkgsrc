@@ -24,15 +24,23 @@
  */
 
 /*
- * Various utility routines useful for test programs.
- * Each test program is linked against this file.
+ * This same file is used pretty much verbatim for all test harnesses.
+ *
+ * The next line is used to define various environment variables, etc.
+ *
+ * The tar and cpio test harnesses are identical except for this line;
+ * the libarchive test harness omits some code that is needed only for
+ * testing standalone executables.
  */
+#define PROGRAM "LIBARCHIVE"
+
 #include <errno.h>
+#include <locale.h>
 #include <stdarg.h>
 #include <time.h>
 
 #include "test.h"
-__FBSDID("$FreeBSD: src/lib/libarchive/test/main.c,v 1.8 2007/07/31 05:03:27 kientzle Exp $");
+__FBSDID("$FreeBSD: src/lib/libarchive/test/main.c,v 1.10 2008/02/19 05:52:30 kientzle Exp $");
 
 /*
  * "list.h" is simply created by "grep DEFINE_TEST"; it has
@@ -60,6 +68,8 @@ static int quiet_flag = 0;
 static int failures = 0;
 /* Cumulative count of skipped component tests. */
 static int skips = 0;
+/* Cumulative count of assertions. */
+static int assertions = 0;
 
 /*
  * My own implementation of the standard assert() macro emits the
@@ -85,7 +95,6 @@ static struct line {
 	int line;
 	int count;
 }  failed_lines[1000];
-
 
 /*
  * Count this failure; return the number of previous failures.
@@ -116,21 +125,26 @@ previous_failures(const char *filename, int line)
 }
 
 /*
+ * Copy arguments into file-local variables.
+ */
+static const char *test_filename;
+static int test_line;
+static void *test_extra;
+void test_setup(const char *filename, int line)
+{
+	test_filename = filename;
+	test_line = line;
+}
+
+/*
  * Inform user that we're skipping a test.
  */
-static const char *skipped_filename;
-static int skipped_line;
-void skipping_setup(const char *filename, int line)
-{
-	skipped_filename = filename;
-	skipped_line = line;
-}
 void
 test_skipping(const char *fmt, ...)
 {
 	va_list ap;
 
-	if (previous_failures(skipped_filename, skipped_line))
+	if (previous_failures(test_filename, test_line))
 		return;
 
 	va_start(ap, fmt);
@@ -209,19 +223,21 @@ failure(const char *fmt, ...)
 }
 
 /* Generic assert() just displays the failed condition. */
-void
+int
 test_assert(const char *file, int line, int value, const char *condition, void *extra)
 {
+	++assertions;
 	if (value) {
 		msg[0] = '\0';
-		return;
+		return (value);
 	}
 	failures ++;
 	if (previous_failures(file, line))
-		return;
+		return (value);
 	fprintf(stderr, "%s:%d: Assertion failed\n", file, line);
 	fprintf(stderr, "   Condition: %s\n", condition);
 	report_failure(extra);
+	return (value);
 }
 
 /* assertEqualInt() displays the values of the two integers. */
@@ -229,6 +245,7 @@ void
 test_assert_equal_int(const char *file, int line,
     int v1, const char *e1, int v2, const char *e2, void *extra)
 {
+	++assertions;
 	if (v1 == v2) {
 		msg[0] = '\0';
 		return;
@@ -250,6 +267,7 @@ test_assert_equal_string(const char *file, int line,
     const char *v2, const char *e2,
     void *extra)
 {
+	++assertions;
 	if (v1 == NULL || v2 == NULL) {
 		if (v1 == v2) {
 			msg[0] = '\0';
@@ -276,6 +294,7 @@ test_assert_equal_wstring(const char *file, int line,
     const wchar_t *v2, const char *e2,
     void *extra)
 {
+	++assertions;
 	if (wcscmp(v1, v2) == 0) {
 		msg[0] = '\0';
 		return;
@@ -290,15 +309,52 @@ test_assert_equal_wstring(const char *file, int line,
 	report_failure(extra);
 }
 
-/* assertEqualMem() displays the values of the two strings. */
+/*
+ * Pretty standard hexdump routine.  As a bonus, if ref != NULL, then
+ * any bytes in p that differ from ref will be highlighted with '_'
+ * before and after the hex value.
+ */
+static void
+hexdump(const char *p, const char *ref, size_t l, size_t offset)
+{
+	size_t i, j;
+	char sep;
+
+	for(i=0; i < l; i+=16) {
+		fprintf(stderr, "%04x", i + offset);
+		sep = ' ';
+		for (j = 0; j < 16 && i + j < l; j++) {
+			if (ref != NULL && p[i + j] != ref[i + j])
+				sep = '_';
+			fprintf(stderr, "%c%02x", sep, p[i+j]);
+			if (ref != NULL && p[i + j] == ref[i + j])
+				sep = ' ';
+		}
+		for (; j < 16; j++) {
+			fprintf(stderr, "%c  ", sep);
+			sep = ' ';
+		}
+		fprintf(stderr, "%c", sep);
+		for (j=0; j < 16 && i + j < l; j++) {
+			int c = p[i + j];
+			if (c >= ' ' && c <= 126)
+				fprintf(stderr, "%c", c);
+			else
+				fprintf(stderr, ".");
+		}
+		fprintf(stderr, "\n");
+	}
+}
+
+/* assertEqualMem() displays the values of the two memory blocks. */
+/* TODO: For long blocks, hexdump the first bytes that actually differ. */
 void
 test_assert_equal_mem(const char *file, int line,
     const char *v1, const char *e1,
     const char *v2, const char *e2,
     size_t l, const char *ld, void *extra)
 {
-	unsigned int i;
-
+	++assertions;
 	if (v1 == NULL || v2 == NULL) {
 		if (v1 == v2) {
 			msg[0] = '\0';
@@ -314,29 +370,67 @@ test_assert_equal_mem(const char *file, int line,
 	fprintf(stderr, "%s:%d: Assertion failed: memory not equal\n",
 	    file, line);
 	fprintf(stderr, "      size %s = %d\n", ld, (int)l);
-	fprintf(stderr, "      %s = ", e1);
-	for(i=0; i < 32 && i < l; i++) {
-		int c = v1[i];
-		if (c >= ' ' && c <= 126)
-			fprintf(stderr, "'%c'", c);
-		else
-			fprintf(stderr, "0x%02x", c);
-		if (i < l)
-			fprintf(stderr, ", ");
-	}
-	fprintf(stderr, "\n");
-	fprintf(stderr, "      %s = ", e2);
-	for(i=0; i < 32 && i < l; i++) {
-		int c = v2[i];
-		if (c >= ' ' && c <= 126)
-			fprintf(stderr, "'%c'", c);
-		else
-			fprintf(stderr, "0x%02x", c);
-		if (i < l)
-			fprintf(stderr, ", ");
-	}
+	fprintf(stderr, "      Dump of %s\n", e1);
+	hexdump(v1, v2, l < 32 ? l : 32, 0);
+	fprintf(stderr, "      Dump of %s\n", e2);
+	hexdump(v2, v1, l < 32 ? l : 32, 0);
 	fprintf(stderr, "\n");
 	report_failure(extra);
+}
+
+void
+test_assert_empty_file(const char *f1fmt, ...)
+{
+	char f1[1024];
+	struct stat st;
+	va_list ap;
+
+	va_start(ap, f1fmt);
+	vsprintf(f1, f1fmt, ap);
+	va_end(ap);
+
+	if (stat(f1, &st) != 0) {
+		fprintf(stderr, "%s:%d: Could not stat: %s\n", test_filename, test_line, f1);
+		report_failure(NULL);
+	} else if (st.st_size > 0) {
+		fprintf(stderr, "%s:%d: File not empty: %s\n", test_filename, test_line, f1);
+		fprintf(stderr, "    File size: %d\n", (int)st.st_size);
+		report_failure(NULL);
+	}
+}
+
+/* assertEqualFile() asserts that two files have the same contents. */
+/* TODO: hexdump the first bytes that actually differ. */
+void
+test_assert_equal_file(const char *f1, const char *f2pattern, ...)
+{
+	char f2[1024];
+	va_list ap;
+	char buff1[1024];
+	char buff2[1024];
+	int fd1, fd2;
+	int n1, n2;
+
+	va_start(ap, f2pattern);
+	vsprintf(f2, f2pattern, ap);
+	va_end(ap);
+
+	fd1 = open(f1, O_RDONLY);
+	fd2 = open(f2, O_RDONLY);
+	for (;;) {
+		n1 = read(fd1, buff1, sizeof(buff1));
+		n2 = read(fd2, buff2, sizeof(buff2));
+		if (n1 != n2)
+			break;
+		if (n1 == 0 && n2 == 0)
+			return;
+		if (memcmp(buff1, buff2, n1) != 0)
+			break;
+	}
+	fprintf(stderr, "%s:%d: Files are not identical\n", test_filename, test_line);
+	fprintf(stderr, "  file1=\"%s\"\n", f1);
+	fprintf(stderr, "  file2=\"%s\"\n", f2);
+	report_failure(test_extra);
 }
 
 
@@ -412,8 +506,8 @@ slurpfile(size_t * sizep, const char *fmt, ...)
 /*
  * "list.h" is automatically generated; it just has a lot of lines like:
  * 	DEFINE_TEST(function_name)
- * The common "test.h" includes it to declare all of the test functions.
- * We reuse it here to define a list of all tests to run.
+ * It's used above to declare all of the test functions.
+ * We reuse it here to define a list of all tests (functions and names).
  */
 #undef DEFINE_TEST
 #define DEFINE_TEST(n) { n, #n },
@@ -457,6 +551,8 @@ static int test_run(int i, const char *tmpdir)
 		    tests[i].name);
 		exit(1);
 	}
+	/* Explicitly reset the locale before each test. */
+	setlocale(LC_ALL, "C");
 	/* Run the actual test. */
 	(*tests[i].func)();
 	/* Summarize the results of this test. */
@@ -490,6 +586,7 @@ int main(int argc, char **argv)
 	static const int limit = sizeof(tests) / sizeof(tests[0]);
 	int i, tests_run = 0, tests_failed = 0, opt;
 	time_t now;
+	char *refdir_alloc = NULL;
 	char *progname, *p;
 	char tmpdir[256];
 	char tmpdir_timestamp[256];
@@ -506,7 +603,7 @@ int main(int argc, char **argv)
 	}
 
 	/* Get the directory holding test files from environment. */
-	refdir = getenv("LIBARCHIVE_TEST_FILES");
+	refdir = getenv(PROGRAM "_TEST_FILES");
 
 	/*
 	 * Parse options.
@@ -556,7 +653,7 @@ int main(int argc, char **argv)
 	 */
 	if (refdir == NULL) {
 		systemf("/bin/pwd > %s/refdir", tmpdir);
-		refdir = slurpfile(NULL, "%s/refdir", tmpdir);
+		refdir = refdir_alloc = slurpfile(NULL, "%s/refdir", tmpdir);
 		p = refdir + strlen(refdir);
 		while (p[-1] == '\n') {
 			--p;
@@ -603,10 +700,14 @@ int main(int argc, char **argv)
 	 */
 	if (!quiet_flag) {
 		printf("\n");
-		printf("%d of %d test groups reported failures\n",
+		printf("%d of %d tests reported failures\n",
 		    tests_failed, tests_run);
-		printf(" Total of %d individual tests failed.\n", failures);
-		printf(" Total of %d individual tests were skipped.\n", skips);
+		printf(" Total of %d assertions checked.\n", assertions);
+		printf(" Total of %d assertions failed.\n", failures);
+		printf(" Total of %d assertions skipped.\n", skips);
 	}
+
+	free(refdir_alloc);
+
 	return (tests_failed);
 }

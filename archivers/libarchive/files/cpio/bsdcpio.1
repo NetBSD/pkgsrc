@@ -24,7 +24,7 @@
 .\"
 .\" $FreeBSD$
 .\"
-.Dd August 05, 2007
+.Dd December 21, 2007
 .Dt BSDCPIO 1
 .Os
 .Sh NAME
@@ -64,12 +64,12 @@ Read an archive from standard input and extract the contents to disk or
 .Fl t
 option is specified)
 list the contents to standard output.
+If one or more file patterns are specified, only files matching
+one of the patterns will be extracted.
 .It Fl o
 Output.
 Read a list of filenames from standard input and produce a new archive
 on standard output containing the specified items.
-If one or more file patterns are specified, only files matching
-one of the patterns will be extracted.
 .It Fl p
 Pass-through.
 Read a list of filenames from standard input and copy the files to the
@@ -83,7 +83,6 @@ all operating modes.
 .It Fl a
 (o and p modes)
 Reset access times on files after they are read.
-(Not yet implemented)
 .It Fl B
 (o mode only)
 Block output to records of 5120 bytes.
@@ -99,7 +98,6 @@ Create directories as necessary.
 (i mode only)
 Ignore files that match
 .Ar pattern .
-(Not yet implemented.)
 .It Fl -format Ar format
 (o mode only)
 Produce the output archive in the specified format.
@@ -135,7 +133,6 @@ See above for description.
 All symbolic links will be followed.
 Normally, symbolic links are archived and copied as symbolic links.
 With this option, the target of the link will be archived or copied instead.
-(Not yet implemented.)
 .It Fl l
 (p mode only)
 Create links from the target directory to the original files,
@@ -151,7 +148,7 @@ See above for description.
 Pass-through mode.
 See above for description.
 .It Fl -quiet
-(Not yet implemented.)
+Suppress unnecessary messages.
 .It Fl R Oo user Oc Ns Oo : Oc Ns Oo group Oc
 Set the owner and/or group on files in the output.
 If group is specified with no user
@@ -312,19 +309,15 @@ and
 .Nm find
 utilities were written by Dick Haight
 while working in AT&T's Unix Support Group.
-They first appeared in PWB/UNIX 1.0, the
+They first appeared in 1977 in PWB/UNIX 1.0, the
 .Dq Programmer's Work Bench
-system developed for use within AT&T and released in 1977.
-XXX  It was first released outside of AT&T
-as part of System III Unix in 1981. XXX
-XXX Need to verify the previous statement. XXX
+system developed for use within AT&T.
+They were first released outside of AT&T as part of System III Unix in 1981.
 As a result,
 .Nm cpio
 actually predates
 .Nm tar ,
-even though it was not well-known outside of AT&T
-until some time later.
-XXX When did cpio first appear in BSD? XXX
+even though it was not well-known outside of AT&T until some time later.
 .Pp
 This is a complete re-implementation based on the
 .Xr libarchive 3
@@ -340,23 +333,3 @@ The cpio archive formats cannot support files over 4 gigabytes,
 except for the
 .Dq odc
 variant, which can support files up to 8 gigabytes.
-.Pp
-This is an early alpha version of
-.Nm .
-The underlying
-.Nm libarchive
-library is quite mature, so the archive format support
-and creation of objects on disk should be robust.
-However, the cpio-specific options and features
-are still very new.
-Known issues that will be fixed soon:
-.Bl -bullet -offset indent -compact
-.It
-Options documented above as
-.Do Not yet implemented Dc .
-.It
-Filter arguments to
-.Fl i ,
-and
-.Fl it .
-.El

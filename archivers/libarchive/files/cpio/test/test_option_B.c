@@ -39,14 +39,14 @@ DEFINE_TEST(test_option_B)
 	close(fd);
 
 	/* Create an archive without -B; this should be 512 bytes. */
-	r = systemf("echo file | %s -o > small.cpio 2>small.err", testprog);
+	r = systemf("echo file | %s -o --quiet > small.cpio 2>small.err", testprog);
 	assertEqualInt(r, 0);
 	assertEmptyFile("small.err");
 	assertEqualInt(0, stat("small.cpio", &st));
 	assertEqualInt(512, st.st_size);
 
 	/* Create an archive with -B; this should be 5120 bytes. */
-	r = systemf("echo file | %s -oB > large.cpio 2>large.err", testprog);
+	r = systemf("echo file | %s -oB --quiet > large.cpio 2>large.err", testprog);
 	assertEqualInt(r, 0);
 	assertEmptyFile("large.err");
 	assertEqualInt(0, stat("large.cpio", &st));

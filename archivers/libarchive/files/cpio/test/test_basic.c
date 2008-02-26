@@ -36,8 +36,8 @@ basic_cpio(const char *target, const char *pack_options, const char *unpack_opti
 	assertEqualInt(0, mkdir(target, 0775));
 
 	/* Use the cpio program to create an archive. */
-	r = systemf("%s -o %s < filelist >%s/archive 2>%s/pack.err", testprog, pack_options, target, target);
-	failure("Error invoking %s -o %s", testprog, pack_options);
+	r = systemf("%s -o --quiet %s < filelist >%s/archive 2>%s/pack.err", testprog, pack_options, target, target);
+	failure("Error invoking %s -o --quiet %s", testprog, pack_options);
 	assertEqualInt(r, 0);
 
 	chdir(target);
@@ -48,11 +48,11 @@ basic_cpio(const char *target, const char *pack_options, const char *unpack_opti
 	/*
 	 * Use cpio to unpack the archive into another directory.
 	 */
-	r = systemf("%s -i %s< archive >unpack.out 2>unpack.err", testprog, unpack_options);
+	r = systemf("%s -i --quiet %s< archive >unpack.out 2>unpack.err", testprog, unpack_options);
 	failure("Error invoking %s -i %s", testprog, unpack_options);
 	assertEqualInt(r, 0);
 
-	/* Verify that nothing went to stderr. */
+	/* Verify stderr. */
 	assertEmptyFile("unpack.err");
 
 	/*
@@ -152,7 +152,7 @@ DEFINE_TEST(test_basic)
 	basic_cpio("copy", "", "");
 	basic_cpio("copy_odc", "--format=odc", "");
 	basic_cpio("copy_newc", "-H newc", "");
-	basic_cpio("copy_cpio", "-H cpio", "");
+	basic_cpio("copy_cpio", "-H odc", "");
 	basic_cpio("copy_ustar", "-H ustar", "");
 
 	umask(oldumask);
