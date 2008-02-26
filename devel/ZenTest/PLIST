@@ -1,14 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/11 07:59:55 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/02/26 08:00:39 seb Exp $
 bin/autotest
 bin/multiruby
 bin/rails_test_audit
-bin/ruby_fork
-bin/ruby_fork_client
 bin/unit_diff
 bin/zentest
 ${RUBY_SITELIBDIR}/autotest.rb
 ${RUBY_SITELIBDIR}/autotest/autoupdate.rb
 ${RUBY_SITELIBDIR}/autotest/camping.rb
+${RUBY_SITELIBDIR}/autotest/cctray.rb
 ${RUBY_SITELIBDIR}/autotest/discover.rb
 ${RUBY_SITELIBDIR}/autotest/emacs.rb
 ${RUBY_SITELIBDIR}/autotest/fixtures.rb
@@ -27,7 +26,6 @@ ${RUBY_SITELIBDIR}/autotest/shame.rb
 ${RUBY_SITELIBDIR}/autotest/snarl.rb
 ${RUBY_SITELIBDIR}/autotest/timestamp.rb
 ${RUBY_SITELIBDIR}/functional_test_matrix.rb
-${RUBY_SITELIBDIR}/ruby_fork.rb
 ${RUBY_SITELIBDIR}/test/rails.rb
 ${RUBY_SITELIBDIR}/test/rails/controller_test_case.rb
 ${RUBY_SITELIBDIR}/test/rails/functional_test_case.rb
@@ -42,13 +40,16 @@ ${RUBY_SITELIBDIR}/test/zentest_assertions.rb
 ${RUBY_SITELIBDIR}/unit_diff.rb
 ${RUBY_SITELIBDIR}/zentest.rb
 ${RUBY_SITELIBDIR}/zentest_mapping.rb
-${RUBY_DOCDIR}/ZenTest/LinuxJournalArticle.txt
 ${RUBY_DOCDIR}/ZenTest/README.txt
+${RUBY_DOCDIR}/ZenTest/articles/Article.css
+${RUBY_DOCDIR}/ZenTest/articles/getting_started_with_autotest.html
+${RUBY_DOCDIR}/ZenTest/articles/how_to_use_zentest.txt
 ${RUBY_EXAMPLESDIR}/ZenTest/example.txt
 ${RUBY_EXAMPLESDIR}/ZenTest/example1.rb
 ${RUBY_EXAMPLESDIR}/ZenTest/example2.rb
 ${RUBY_EXAMPLESDIR}/ZenTest/example_dot_autotest.rb
 @dirrm ${RUBY_EXAMPLESDIR}/ZenTest
+@dirrm ${RUBY_DOCDIR}/ZenTest/articles
 @dirrm ${RUBY_DOCDIR}/ZenTest
 @dirrm ${RUBY_SITELIBDIR}/test/rails
 @dirrm ${RUBY_SITELIBDIR}/test

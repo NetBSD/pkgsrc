@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2007/08/08 16:13:46 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/26 08:00:39 seb Exp $
 
-DISTNAME=	ZenTest-3.6.0
+DISTNAME=	ZenTest-3.9.1
 CATEGORIES=	devel ruby
-PKGREVISION=	1
-MASTER_SITES=	http://rubyforge.org/frs/download.php/21081/
+#PKGREVISION=	1
+MASTER_SITES=	http://rubyforge.org/frs/download.php/31587/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -24,8 +24,8 @@ do-install:
 	cd ${WRKSRC}/lib && pax -rwppm . ${RUBY_SITELIBDIR}
 	chmod ${SHAREMODE} ${RUBY_SITELIBDIR}/autotest.rb
 	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/${PKGBASE}
-.for f in LinuxJournalArticle.txt README.txt
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/${PKGBASE}
+.for f in articles README.txt
+	cd ${WRKSRC} && pax -rwppm ${f} ${RUBY_DOCDIR}/${PKGBASE}
 .endfor
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/example* ${RUBY_EXAMPLESDIR}/${PKGBASE}
