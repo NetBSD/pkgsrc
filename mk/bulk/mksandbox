@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.47 2008/01/04 15:49:07 rillig Exp $
+# $NetBSD: mksandbox,v 1.48 2008/02/26 05:06:32 jlam Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -34,7 +34,7 @@
 # SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-# Usage: mksandbox [--pkgsrc=dir] [--src=srcdir] [--xsrc=xsrcdir] [--verbose] sandbox-dir
+# Usage: mksandbox [--pkgsrc=dir] [--src=srcdir] [--xsrc=xsrcdir] [--without-x] [--verbose] sandbox-dir
 #
 # A small shell script to set up a sandbox (usually for a pkgsrc bulk
 # build), using null mounts.
@@ -42,6 +42,7 @@
 pkgsrc=/usr/pkgsrc
 src=/usr/src
 xsrc=/usr/xsrc
+with_x=yes
 
 kernel=""
 sandboxMountDirs="/bin /sbin /lib /libexec /usr/X11R6 /usr/bin /usr/games /usr/include /usr/lib /usr/libdata /usr/libexec /usr/lkm /usr/share /usr/sbin /var/mail"
@@ -50,7 +51,7 @@ sandboxEmptyFiles="/var/run/utmp /var/run/utmpx /var/log/wtmp /var/log/wtmpx /va
 
 usage()
 {
-	echo "Usage: mksandbox [--pkgsrc=dir] [--src=srcdir] [--xsrc=xsrcdir] [--verbose] sandbox-dir"
+	echo "Usage: mksandbox [--pkgsrc=dir] [--src=srcdir] [--xsrc=xsrcdir] [--without-x] [--verbose] sandbox-dir"
 	exit 1
 }
 
@@ -154,6 +155,7 @@ while [ $# -gt 0 ]; do
 	--pkgsrc=*)	pkgsrc=`echo $1 | $sedprog -e 's|^--pkgsrc=||'` ;;
 	--src=*)	src=`echo $1 | $sedprog -e 's|^--src=||'` ;;
 	--xsrc=*)	xsrc=`echo $1 | $sedprog -e 's|^--xsrc=||'` ;;
+	--without-x)	with_x=no ;;
 	--verbose)	set -x ;;
 	-*)		usage ;;
 	*)		break ;;
@@ -163,6 +165,10 @@ done
 
 if [ $# -ne 1 ]; then
 	usage
+fi
+
+if [ "$with_x" = "no"; then
+	need_xsrc=no
 fi
 
 if [ `$idprog -u` -ne 0 ]; then
