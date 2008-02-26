@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1938 2008/02/13 09:28:41 rillig Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1939 2008/02/26 13:46:21 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -117,8 +117,9 @@ _INSTALL_UNSTRIPPED=	# set (flag used by platform/*.mk)
 ##### Non-overridable constants
 
 # Latest versions of tools required for correct pkgsrc operation.
-PKGTOOLS_REQD=	20070802
-
+PKGTOOLS_REQD=		20070802
+# Versions of tools that are good enough to handle dependencies
+PKGTOOLS_BASE_REQD=	20051103
 
 ##### Transform USE_* into dependencies
 
@@ -146,12 +147,14 @@ PKG_FAIL_REASON+=	"This package doesn't support PKG_INSTALLATION_TYPE=${PKG_INST
 
 # Check that we are using up-to-date pkg_* tools with this file.
 .if !defined(NO_PKGTOOLS_REQD_CHECK)
-.  if ${PKGTOOLS_VERSION} < ${PKGTOOLS_REQD}
+.  if ${PKGTOOLS_VERSION} < ${PKGTOOLS_BASE_REQD}
 PKG_FAIL_REASON+='The package tools installed on this system are out of date.'
 PKG_FAIL_REASON+='The installed package tools are dated ${PKGTOOLS_VERSION:C|(....)(..)(..)|\1/\2/\3|} and you must'
 PKG_FAIL_REASON+='update them to at least ${PKGTOOLS_REQD:C|(....)(..)(..)|\1/\2/\3|} using the following command:'
 PKG_FAIL_REASON+=' '
 PKG_FAIL_REASON+='    (cd ${PKGSRCDIR}/pkgtools/pkg_install && ${MAKE} clean && ${MAKE} update)'
+.  elif ${PKGTOOLS_VERSION} < ${PKGTOOLS_REQD}
+BOOTSTRAP_DEPENDS+=	pkg_install>=${PKGTOOLS_REQD}:../../pkgtools/pkg_install
 .  endif
 .endif # !NO_PKGTOOLS_REQD_CHECK
 
