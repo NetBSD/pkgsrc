@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/22 17:13:29 sborrill Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/26 12:39:52 sborrill Exp $
 
 DISTNAME=	dansguardian-2.8.0.6.source
 PKGNAME=	dansguardian-2.8.0.6
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://dansguardian.org/downloads/2/Stable/
 
@@ -13,6 +14,8 @@ WRKSRC=		${WRKDIR}/dansguardian-2.8.0.6
 HAS_CONFIGURE=	yes
 MANCOMPRESSED=	yes
 RCD_SCRIPTS+=	dansguardian
+
+PKG_SYSCONFSUBDIR=	dansguardian
 
 EGDIR=		${PREFIX}/share/examples/dansguardian
 
@@ -160,18 +163,17 @@ DEPENDS+=	squid>=2.5:../../www/squid
 	languages/turkish/template.html	\
 	languages/ukenglish/messages	\
 	languages/ukenglish/template.html
-CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/dansguardian/${f}
+CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 pre-install:
-	${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/dansguardian; \
 	for dir in badwords chat drugadvocacy gambling games \
 		goodphrases googlesearches gore illegaldrugs \
 		intolerance legaldrugs malware news nudism \
 		peer2peer personals pornography proxies sport \
 		violence warezhacking weapons webmail; \
 	do \
-		${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/dansguardian/phraselists/$${dir}; \
+		${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/phraselists/$${dir}; \
 	done; \
 	for dir in arspanish bulgarian chinesebig5 chinesegb2312 \
 		czech danish dutch french german hebrew \
@@ -179,7 +181,7 @@ pre-install:
 		portuguese russian-1251 slovak spanish \
 		swedish turkish ukenglish; \
 	do \
-		${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/dansguardian/languages/$${dir}; \
+		${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/languages/$${dir}; \
 	done
 
 show-conffiles:
