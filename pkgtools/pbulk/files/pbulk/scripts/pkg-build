@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-build,v 1.13 2008/01/29 08:14:44 tnn Exp $
+# $NetBSD: pkg-build,v 1.14 2008/02/26 13:57:51 joerg Exp $
 #
 # Copyright (c) 2007, 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -162,8 +162,9 @@ fi
 ${make} clean > ${bulklog}/${pkgname}/clean.log 2>&1
 
 # Test uninstall rules. This is not for cross-compiling as the install script
-# is not run in that case anyway.
-if [ "$cross_compile" = "no" ]; then
+# is not run in that case anyway. This is also not done for packages marked as
+# uninstallable. The most important example for this is pkg_install itself.
+if [ "$cross_compile" = "no" ] && [ ! -f "${cur_pkgdb}/${pkgname}/+PRESERVE" ]; then
 	${pkg_delete} -K ${cur_pkgdb} ${pkgname} > ${bulklog}/${pkgname}/deinstall.log 2>&1
 fi
 
