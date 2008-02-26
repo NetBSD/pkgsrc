@@ -56,6 +56,7 @@ __FBSDID("$FreeBSD$");
 #endif
 
 #include "cpio.h"
+#include "matching.h"
 
 static int	copy_data(struct archive *, struct archive *);
 static const char *cpio_rename(const char *name);
@@ -68,6 +69,8 @@ static void	mode_pass(struct cpio *, const char *);
 static int	out_file(struct cpio *, const char *pathname);
 static int	process_lines(struct cpio *cpio, const char *pathname,
 		    int (*process)(struct cpio *, const char *));
+static void	restore_time(struct cpio *, struct archive_entry *,
+		    const char *, int fd);
 static void	usage(void);
 static void	version(FILE *);
 
@@ -77,14 +80,14 @@ main(int argc, char *argv[])
 	struct cpio _cpio; /* Allocated on stack. */
 	struct cpio *cpio;
 	int uid, gid;
-	char opt;
+	int opt;
 
 	cpio = &_cpio;
 	memset(cpio, 0, sizeof(*cpio));
 
 	/* Need cpio_progname before calling cpio_warnc. */
 	if (*argv == NULL)
-		cpio_progname = "cpio";
+		cpio_progname = "bsdcpio";
 	else {
 		cpio_progname = strrchr(*argv, '/');
 		if (cpio_progname != NULL)
@@ -123,7 +126,7 @@ main(int argc, char *argv[])
 			cpio->extract_flags &= ~ARCHIVE_EXTRACT_NO_AUTODIR;
 			break;
 		case 'f': /* POSIX 1997 */
-			/* TODO */
+			exclude(cpio, optarg);
 			break;
 		case 'H': /* GNU cpio, also --format */
 			cpio->format = optarg;
@@ -135,7 +138,7 @@ main(int argc, char *argv[])
 			cpio->mode = opt;
 			break;
 		case 'L': /* GNU cpio, BSD convention */
-			/* TODO: Implement this */
+			cpio->option_follow_links = 1;
 			break;
 		case 'l': /* POSIX 1997 */
 			cpio->option_link = 1;
@@ -174,7 +177,7 @@ main(int argc, char *argv[])
 			cpio->verbose++;
 			break;
 		case OPTION_VERSION: /* GNU convention */
-			version(stderr);
+			version(stdout);
 			break;
 #if 0
 	        /*
@@ -205,7 +208,11 @@ main(int argc, char *argv[])
 		mode_out(cpio);
 		break;
 	case 'i':
-		/* TODO: parse patterns on command line. */
+		while (*cpio->argv != NULL) {
+			include(cpio, *cpio->argv);
+			--cpio->argc;
+			++cpio->argv;
+		}
 		if (cpio->option_list)
 			mode_list(cpio);
 		else
@@ -304,6 +311,7 @@ version(FILE *out)
 static void
 mode_out(struct cpio *cpio)
 {
+	unsigned long blocks;
 	int r;
 
 	cpio->archive = archive_write_new();
@@ -334,6 +342,13 @@ mode_out(struct cpio *cpio)
 	r = archive_write_close(cpio->archive);
 	if (r != ARCHIVE_OK)
 		cpio_errc(1, 0, archive_error_string(cpio->archive));
+
+	if (!cpio->quiet) {
+		blocks = (archive_position_uncompressed(cpio->archive) + 511)
+			      / 512;
+		fprintf(stderr, "%lu %s\n", blocks,
+		    blocks == 1 ? "block" : "blocks");
+	}
 	archive_write_finish(cpio->archive);
 }
 
@@ -377,8 +392,12 @@ file_to_archive(struct cpio *cpio, const char *srcpath, const char *destpath)
 
 	/* TODO: pathname editing. */
 
-	if (lstat(srcpath, &st) != 0) {
-		cpio_warnc(errno, "Couldn't stat");
+	if (cpio->option_follow_links)
+		r = stat(srcpath, &st);
+	else
+		r = lstat(srcpath, &st);
+	if (r != 0) {
+		cpio_warnc(errno, "Couldn't stat \"%s\"", srcpath);
 		goto cleanup;
 	}
 
@@ -466,9 +485,7 @@ file_to_archive(struct cpio *cpio, const char *srcpath, const char *destpath)
 		}
 	}
 
-	if (cpio->option_atime_restore) {
-		/* TODO: invoke utimes() ?? */
-	}
+	restore_time(cpio, entry, srcpath, fd);
 
 cleanup:
 	if (cpio->verbose)
@@ -481,6 +498,48 @@ cleanup:
 	return (0);
 }
 
+static void
+restore_time(struct cpio *cpio, struct archive_entry *entry,
+    const char *name, int fd)
+{
+#ifndef HAVE_UTIMES
+	static int warned = 0;
+
+	(void)cpio; /* UNUSED */
+	(void)entry; /* UNUSED */
+	(void)name; /* UNUSED */
+	(void)fd; /* UNUSED */
+
+	if (!warned)
+		cpio_warnc(0, "Can't restore access times on this platform");
+	warned = 1;
+	return;
+#else
+	struct timeval times[2];
+
+	if (!cpio->option_atime_restore)
+		return;
+
+        times[1].tv_sec = archive_entry_mtime(entry);
+        times[1].tv_usec = archive_entry_mtime_nsec(entry) / 1000;
+
+        times[0].tv_sec = archive_entry_atime(entry);
+        times[0].tv_usec = archive_entry_atime_nsec(entry) / 1000;
+
+#ifdef HAVE_FUTIMES
+        if (fd >= 0 && futimes(fd, times) == 0)
+		return;
+#endif
+
+#ifdef HAVE_LUTIMES
+        if (lutimes(name, times) != 0)
+#else
+        if (!S_ISLNK(archive_entry_mode(entry)) && utimes(name, times) != 0)
+#endif
+                cpio_warnc(errno, "Can't update time for %s", name);
+#endif
+}
+
 
 static void
 mode_in(struct cpio *cpio)
@@ -489,6 +548,7 @@ mode_in(struct cpio *cpio)
 	struct archive_entry *entry;
 	struct archive *ext;
 	const char *destpath;
+	unsigned long blocks;
 	int r;
 
 	ext = archive_write_disk_new();
@@ -514,6 +574,8 @@ mode_in(struct cpio *cpio)
 			cpio_errc(1, archive_errno(a),
 			    archive_error_string(a));
 		}
+		if (excluded(cpio, archive_entry_pathname(entry)))
+			continue;
 		if (cpio->option_rename) {
 			destpath = cpio_rename(archive_entry_pathname(entry));
 			archive_entry_set_pathname(entry, destpath);
@@ -539,10 +601,16 @@ mode_in(struct cpio *cpio)
 	r = archive_read_close(a);
 	if (r != ARCHIVE_OK)
 		cpio_errc(1, 0, archive_error_string(a));
-	archive_read_finish(a);
 	r = archive_write_close(ext);
 	if (r != ARCHIVE_OK)
 		cpio_errc(1, 0, archive_error_string(ext));
+	if (!cpio->quiet) {
+		blocks = (archive_position_uncompressed(a) + 511)
+			      / 512;
+		fprintf(stderr, "%lu %s\n", blocks,
+		    blocks == 1 ? "block" : "blocks");
+	}
+	archive_read_finish(a);
 	archive_write_finish(ext);
 	exit(0);
 }
@@ -578,6 +646,7 @@ mode_list(struct cpio *cpio)
 {
 	struct archive *a;
 	struct archive_entry *entry;
+	unsigned long blocks;
 	int r;
 
 	a = archive_read_new();
@@ -597,6 +666,8 @@ mode_list(struct cpio *cpio)
 			cpio_errc(1, archive_errno(a),
 			    archive_error_string(a));
 		}
+		if (excluded(cpio, archive_entry_pathname(entry)))
+			continue;
 		if (cpio->verbose) {
 			/* TODO: uname/gname lookups */
 			/* TODO: Clean this up. */
@@ -614,6 +685,12 @@ mode_list(struct cpio *cpio)
 	r = archive_read_close(a);
 	if (r != ARCHIVE_OK)
 		cpio_errc(1, 0, archive_error_string(a));
+	if (!cpio->quiet) {
+		blocks = (archive_position_uncompressed(a) + 511)
+			      / 512;
+		fprintf(stderr, "%lu %s\n", blocks,
+		    blocks == 1 ? "block" : "blocks");
+	}
 	archive_read_finish(a);
 	exit(0);
 }
@@ -717,9 +794,6 @@ cpio_rename(const char *name)
 	/* Trim the final newline. */
 	while (*p != '\0' && *p != '\n')
 		++p;
-	if (*p == '\0') {
-		/* TODO: Handle this error somehow. */
-	}
 	/* Overwrite the final \n with a null character. */
 	*p = '\0';
 	return (ret);
