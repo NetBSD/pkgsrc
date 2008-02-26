@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.146 2008/02/09 14:08:05 joerg Exp $
+# $NetBSD: Makefile,v 1.147 2008/02/26 13:38:57 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -47,12 +47,13 @@ CHECK_PERMS=		no
 # compiler to avoid problems with depending on pkgsrc GCC for building
 # pkg_install.
 #
-# We also use the newly built pkg_delete since upgrading from an older
-# pkg_install might required features of the new program.
+# We also use the newly built pkg_{add,create,delete} since upgrading
+# from an older pkg_install might required features of the new program. 
 #
 USE_NATIVE_GCC=		yes
-PKG_CREATE=		${WRKSRC}/create/pkg_create
-PKG_DELETE=		${WRKSRC}/delete/pkg_delete
+PKG_ADD_CMD=		${WRKSRC}/add/pkg_add
+PKG_CREATE_CMD=		${WRKSRC}/create/pkg_create
+PKG_DELETE_CMD=		${WRKSRC}/delete/pkg_delete
 
 CPPFLAGS+=		-D_LARGEFILE_SOURCE -D_LARGE_FILES
 CPPFLAGS+=		-D_FILE_OFFSET_BITS=64
@@ -63,8 +64,6 @@ MAKE_ENV+=		MACHINE_ARCH=${MACHINE_ARCH:Q}
 MAKE_ENV+=		OPSYS=${OPSYS:Q}
 
 PKG_DBDIR?=		/var/db/pkg
-PKG_INFO=		${PKG_INFO_CMD} -K ${PKG_DBDIR:Q}
-PKG_ADMIN=		${PKG_ADMIN_CMD} -K ${PKG_DBDIR:Q}
 EGDIR=			${PREFIX}/share/examples/pkg_install
 
 PLIST_SUBST+=		PKG_DBDIR=${PKG_DBDIR:Q}
