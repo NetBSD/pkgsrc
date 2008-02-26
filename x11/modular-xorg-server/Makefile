@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2008/02/25 15:39:16 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2008/02/26 18:24:27 jlam Exp $
 
 DISTNAME=	xorg-server-1.3.0.0
 PKGNAME=	modular-${DISTNAME}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/xserver/
 EXTRACT_SUFX=	.tar.bz2
@@ -38,7 +38,8 @@ post-extract: dri-post-extract
 
 .include "options.mk"
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
+
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/libfontenc/buildlink3.mk"
 .include "../../x11/bigreqsproto/buildlink3.mk"
