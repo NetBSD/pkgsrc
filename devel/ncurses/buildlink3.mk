@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2008/02/25 04:19:34 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2008/02/26 17:21:13 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NCURSES_BUILDLINK3_MK:=	${NCURSES_BUILDLINK3_MK}+
@@ -17,13 +17,11 @@ BUILDLINK_ABI_DEPENDS.ncurses+=	ncurses>=5.4nb1
 BUILDLINK_PKGSRCDIR.ncurses?=	../../devel/ncurses
 BUILDLINK_LDADD.ncurses?=	-lncurses
 
-# _PKG_USE_CURSES is defined by curses.buildlink3.mk to indicate that
-# the headers and libraries should be usable as <curses.h> and -lcurses.
+# Many packages expect the ncurses headers and libraries to be usable as
+# <curses.h> and -lcurses.
 #
-.  if defined(_PKG_USE_CURSES)
 BUILDLINK_TARGETS+=	buildlink-ncurses-curses-h
 BUILDLINK_TRANSFORM+=	l:curses:ncurses
-.  endif
 
 .PHONY: buildlink-ncurses-curses-h
 buildlink-ncurses-curses-h:
