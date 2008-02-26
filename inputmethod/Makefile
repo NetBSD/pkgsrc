@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/08/13 08:12:47 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2008/02/26 11:41:01 obache Exp $
 #
 
 COMMENT=	Input method tools and libraries
@@ -14,6 +14,7 @@ SUBDIR+=	canna-lib
 SUBDIR+=	canna-server
 SUBDIR+=	fcitx
 SUBDIR+=	gcin
+SUBDIR+=	gtk-im-libthai
 SUBDIR+=	iiimecf
 SUBDIR+=	imhangul
 SUBDIR+=	imhangul_status_applet
