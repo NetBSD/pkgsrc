@@ -1,8 +1,8 @@
-# $NetBSD: builtin.mk,v 1.15 2006/12/29 15:11:20 joerg Exp $
+# $NetBSD: builtin.mk,v 1.16 2008/02/27 18:16:37 jlam Exp $
 
 BUILTIN_PKG:=	readline
 
-BUILTIN_FIND_LIBS:=		edit readline
+BUILTIN_FIND_LIBS:=		edit readline history
 BUILTIN_FIND_FILES_VAR:=	H_READLINE _BLTN_H_READLINE
 BUILTIN_FIND_FILES.H_READLINE=	/usr/include/readline/readline.h	\
 				/usr/include/readline.h
@@ -107,12 +107,17 @@ CHECK_BUILTIN.readline?=	no
 .if !empty(CHECK_BUILTIN.readline:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.readline:M[yY][eE][sS])
-.    if !empty(BUILTIN_LIB_FOUND.readline:M[Yy][Ee][Ss]) && ${OPSYS} == "OpenBSD"
-BUILDLINK_TRANSFORM+=	l:history:readline:termcap
-.    elif !empty(BUILTIN_LIB_FOUND.readline:M[nN][oO]) && \
-        !empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS])
-BUILDLINK_TRANSFORM+=	l:history:edit:termcap
-BUILDLINK_TRANSFORM+=	l:readline:edit:termcap
+.    if !empty(BUILTIN_LIB_FOUND.history:M[Nn][Oo]) && \
+	!empty(BUILTIN_LIB_FOUND.readline:M[Yy][Ee][Ss])
+BUILDLINK_TRANSFORM+=	l:history:readline:${BUILTIN_LIBNAME.termlib}
+.    endif
+.    if !empty(BUILTIN_LIB_FOUND.history:M[nN][oO]) && \
+	!empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS])
+BUILDLINK_TRANSFORM+=	l:history:edit:${BUILTIN_LIBNAME.termlib}
+.    endif
+.    if !empty(BUILTIN_LIB_FOUND.readline:M[nN][oO]) && \
+	!empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS])
+BUILDLINK_TRANSFORM+=	l:readline:edit:${BUILTIN_LIBNAME.termlib}
 .    endif
 .  endif
 
