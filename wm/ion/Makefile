@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/02/01 22:52:41 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2008/02/27 22:31:52 jlam Exp $
 #
 
 DISTNAME=	ion-2-20040729
@@ -12,10 +12,12 @@ HOMEPAGE=	http://modeemi.fi/~tuomov/ion/
 COMMENT=	Keyboard friendly tiling window manager
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_LIBTOOL=	yes
-USE_TOOLS+=	gmake
-GNU_CONFIGURE=	YES
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gmake
+GNU_CONFIGURE=		yes
+INSTALL_MAKE_FLAGS=	INST_ETCDIR=${EGDIR:Q}
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
