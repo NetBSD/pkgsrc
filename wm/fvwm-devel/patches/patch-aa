@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2007/11/09 12:07:06 martti Exp $
+$NetBSD: patch-aa,v 1.7 2008/02/27 16:58:18 martti Exp $
+
+We have a separate package for xpmroot
 
 --- bin/Makefile.in.orig	2007-09-01 10:30:54.000000000 +0000
 +++ bin/Makefile.in	2007-11-07 08:14:22.000000000 +0000
