@@ -1,4 +1,4 @@
-# $NetBSD: termlib.buildlink3.mk,v 1.2 2008/02/27 06:10:25 jlam Exp $
+# $NetBSD: termlib.buildlink3.mk,v 1.3 2008/02/27 17:36:34 jlam Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # a basic termlib implementation.
@@ -34,11 +34,12 @@ BUILD_DEFS+=	TERMLIB_TYPE
 
 .if ${TERMLIB_TYPE} == "none"
 PKG_FAIL_REASON=	"No usable terminal library found on the system."
-.elif (${TERMLIB_TYPE} == "termcap")
+.elif (${TERMLIB_TYPE} == "termcap") || \
+      (${TERMLIB_TYPE} == "tinfo")
 BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Ntermlib}
 BUILDLINK_PACKAGES+=		termlib
 BUILDLINK_ORDER:=		${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}termlib
-BUILDLINK_LIBNAME.termlib?=	termcap
+BUILDLINK_LIBNAME.termlib?=	${BUILTIN_LIBNAME.termlib}
 BUILDLINK_LDADD.termlib?=	${BUILDLINK_LIBNAME.termlib:S/^/-l/}
 BUILDLINK_BUILTIN_MK.termlib=	../../mk/termlib.builtin.mk
 .elif ${TERMLIB_TYPE} == "curses"

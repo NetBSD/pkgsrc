@@ -1,8 +1,8 @@
-# $NetBSD: termlib.builtin.mk,v 1.2 2008/02/27 15:26:34 jlam Exp $
+# $NetBSD: termlib.builtin.mk,v 1.3 2008/02/27 17:36:34 jlam Exp $
 
 BUILTIN_PKG:=	termlib
 
-BUILTIN_FIND_LIBS:=	termcap curses
+BUILTIN_FIND_LIBS:=	termcap tinfo curses
 
 .include "buildlink3/bsd.builtin.mk"
 
@@ -13,6 +13,7 @@ BUILTIN_FIND_LIBS:=	termcap curses
 .if !defined(IS_BUILTIN.termlib)
 IS_BUILTIN.termlib=	no
 .  if !empty(BUILTIN_LIB_FOUND.termcap:M[yY][eE][sS]) || \
+      !empty(BUILTIN_LIB_FOUND.tinfo:M[yY][eE][sS]) || \
       !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
 IS_BUILTIN.termlib=	yes
 .  endif
@@ -37,6 +38,8 @@ MAKEVARS+=	USE_BUILTIN.termlib
 #
 .if !empty(BUILTIN_LIB_FOUND.termcap:M[yY][eE][sS])
 BUILTIN_LIBNAME.termlib=	termcap
+.elif !empty(BUILTIN_LIB_FOUND.tinfo:M[yY][eE][sS])
+BUILTIN_LIBNAME.termlib=	tinfo
 .elif !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
 BUILTIN_LIBNAME.termlib=	curses
 .endif
