@@ -1,4 +1,4 @@
-# $NetBSD: curses.builtin.mk,v 1.3 2008/02/27 04:47:02 jlam Exp $
+# $NetBSD: curses.builtin.mk,v 1.4 2008/02/27 06:14:23 jlam Exp $
 
 BUILTIN_PKG:=	curses
 
@@ -46,6 +46,15 @@ USE_BUILTIN.curses!=							\
 .endif
 MAKEVARS+=	USE_BUILTIN.curses
 
+# Define BUILTIN_LIBNAME.curses to be the built-in curses library only if
+# we're using the built-in curses.
+#
+.if !empty(USE_BUILTIN.curses:M[yY][eE][sS])
+.  if !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
+BUILTIN_LIBNAME.curses=		curses
+.  endif
+.endif
+
 ###
 ### The section below only applies if we are not including this file
 ### solely to determine whether a built-in implementation exists.
@@ -56,10 +65,6 @@ CHECK_BUILTIN.curses?=	no
 .  if !empty(USE_BUILTIN.curses:M[yY][eE][sS])
 .    if exists(${H_CURSES})
 BUILDLINK_INCDIRS.curses?=	${H_CURSES:H:S/^${BUILDLINK_PREFIX.curses}\///}
-.    endif
-.    if !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
-BUILDLINK_LIBNAME.curses=	curses
-BUILDLINK_LDADD.curses?=	-l${BUILDLINK_LIBNAME.curses}
 .    endif
 .  endif
 
