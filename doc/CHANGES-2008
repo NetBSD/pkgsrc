@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.375 2008/02/27 14:22:10 jmmv Exp $
+$NetBSD: CHANGES-2008,v 1.376 2008/02/27 16:15:30 apb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -702,3 +702,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added inputmethod/m17n-im-config version 0.9.0 [obache 2008-02-27]
 	Updated devel/monotone to 0.39 [jmmv 2008-02-27]
 	Updated devel/monotone-server to 0.39 [jmmv 2008-02-27]
+	Added net/3proxy version 0.5.3.11 [apb 2008-02-27]
