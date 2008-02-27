@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.31 2008/02/27 06:10:25 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.32 2008/02/27 21:32:45 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NCURSES_BUILDLINK3_MK:=	${NCURSES_BUILDLINK3_MK}+
@@ -15,8 +15,9 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ncurses
 BUILDLINK_API_DEPENDS.ncurses+=	ncurses>=5.3nb1
 BUILDLINK_ABI_DEPENDS.ncurses+=	ncurses>=5.4nb1
 BUILDLINK_PKGSRCDIR.ncurses?=	../../devel/ncurses
+
 BUILDLINK_LIBNAME.ncurses=	ncurses
-BUILDLINK_LDADD.ncurses?=	${BUILDLINK_LIBNAME.ncurses:S/^/-l/}
+BUILDLINK_LDADD.ncurses?=	${BUILDLINK_LIBNAME.ncurses:S/^/-l/:S/^-l$//}
 
 # Many packages expect the ncurses headers and libraries to be usable as
 # <curses.h> and -lcurses.
