@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.17 2007/11/07 17:24:28 minskim Exp $
+# $NetBSD: builtin.mk,v 1.18 2008/02/27 19:32:55 jlam Exp $
 
 BUILTIN_PKG:=	iconv
 
@@ -15,7 +15,8 @@ BUILTIN_FIND_GREP.H_ICONV=	GNU LIBICONV Library
 ###
 .if !defined(IS_BUILTIN.iconv)
 IS_BUILTIN.iconv=	no
-.  if empty(H_ICONV:M__nonexistent__) && empty(H_ICONV:M${LOCALBASE}/*) && \
+.  if empty(H_ICONV:M__nonexistent__) && \
+      empty(H_ICONV:M${LOCALBASE}/*) && \
       !empty(BUILTIN_LIB_FOUND.iconv:M[yY][eE][sS])
 IS_BUILTIN.iconv=	yes
 .  endif
@@ -32,10 +33,10 @@ MAKEVARS+=	IS_BUILTIN.iconv
 BUILTIN_VERSION.iconv!=							\
 	${AWK} 'BEGIN { hex="0123456789abcdef" }			\
 		/\#define[ 	]*_LIBICONV_VERSION[ 	]/ {		\
-			M = 16 * (index(hex, tolower(substr($$3, 3, 1))) - 1);	\
-			M += index(hex, tolower(substr($$3, 4, 1))) - 1;		\
-			m = 16 * (index(hex, tolower(substr($$3, 5, 1))) - 1);	\
-			m += index(hex, tolower(substr($$3, 6, 1))) - 1;		\
+			M = 16 * (index(hex, tolower(substr($$3, 3, 1))) - 1); \
+			M += index(hex, tolower(substr($$3, 4, 1))) - 1;\
+			m = 16 * (index(hex, tolower(substr($$3, 5, 1))) - 1); \
+			m += index(hex, tolower(substr($$3, 6, 1))) - 1;\
 			printf "%d.%d\n", M, m;				\
 			exit 0;						\
 		}							\
