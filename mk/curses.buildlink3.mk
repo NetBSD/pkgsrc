@@ -1,4 +1,4 @@
-# $NetBSD: curses.buildlink3.mk,v 1.6 2008/02/25 04:19:34 jlam Exp $
+# $NetBSD: curses.buildlink3.mk,v 1.7 2008/02/27 02:26:07 jlam Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # any curses implementation instead of one particular one.  The available
@@ -49,14 +49,14 @@ CHECK_BUILTIN.curses:=	no
 .if ${OPSYS} == "Interix"
 CURSES_DEFAULT?=	ncurses
 .endif
-.if defined(IS_BUILTIN.curses) && !empty(IS_BUILTIN.curses:M[yY][eE][sS])
+.if defined(USE_BUILTIN.curses) && !empty(USE_BUILTIN.curses:M[yY][eE][sS])
 CURSES_DEFAULT?=	curses
 .else
 CURSES_DEFAULT?=	ncurses
 .endif
 
 _CURSES_ACCEPTED=	# empty
-.if defined(IS_BUILTIN.curses) && !empty(IS_BUILTIN.curses:M[yY][eE][sS])
+.if defined(USE_BUILTIN.curses) && !empty(USE_BUILTIN.curses:M[yY][eE][sS])
 _CURSES_ACCEPTED+=	curses		# system curses exists
 .endif
 _CURSES_ACCEPTED+=	ncurses		# pkgsrc ncurses
