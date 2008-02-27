@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.914 2008/02/24 04:59:19 jlam Exp $
+# $NetBSD: Makefile,v 1.915 2008/02/27 14:14:44 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -323,6 +323,7 @@ SUBDIR+=	libwnck
 SUBDIR+=	lincvs
 SUBDIR+=	ltsa
 SUBDIR+=	lwp
+SUBDIR+=	m17n-lib
 SUBDIR+=	m4
 SUBDIR+=	makedepend
 SUBDIR+=	makedepf90
