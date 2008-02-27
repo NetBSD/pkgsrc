@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.42 2007/11/11 11:35:49 martti Exp $
+# $NetBSD: Makefile,v 1.43 2008/02/27 18:16:37 jlam Exp $
 #
 
 DISTNAME=	readline-5.2
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNU:=readline/}
 
@@ -22,5 +23,11 @@ INFO_FILES=		# PLIST
 
 BUILD_TARGET=		all-libtool
 INSTALL_TARGET=		install-libtool
+
+.include "../../mk/termlib.buildlink3.mk"
+
+.if ${TERMLIB_TYPE} == "curses"
+CONFIGURE_ARGS+=	--with-curses
+.endif
 
 .include "../../mk/bsd.pkg.mk"
