@@ -1,11 +1,15 @@
-# $NetBSD: builtin.mk,v 1.18 2008/02/27 19:32:55 jlam Exp $
+# $NetBSD: builtin.mk,v 1.19 2008/02/27 22:10:34 jlam Exp $
 
 BUILTIN_PKG:=	iconv
 
-BUILTIN_FIND_LIBS:=		iconv
-BUILTIN_FIND_FILES_VAR:=	H_ICONV
-BUILTIN_FIND_FILES.H_ICONV=	/usr/include/iconv.h
-BUILTIN_FIND_GREP.H_ICONV=	GNU LIBICONV Library
+BUILTIN_FIND_LIBS:=			iconv
+BUILTIN_FIND_FILES_VAR:=		H_ICONV H_GLIBC_ICONV H_CITRUS_ICONV
+BUILTIN_FIND_FILES.H_ICONV=		/usr/include/iconv.h
+BUILTIN_FIND_GREP.H_ICONV=		GNU LIBICONV Library
+BUILTIN_FIND_FILES.H_GLIBC_ICONV=	/usr/include/iconv.h
+BUILTIN_FIND_GREP.H_GLIBC_ICONV=	This file is part of the GNU C Library
+BUILTIN_FIND_FILES.H_CITRUS_ICONV=	/usr/include/iconv.h
+BUILTIN_FIND_GREP.H_CITRUS_ICONV=	Copyright.*Citrus Project
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -75,35 +79,26 @@ USE_BUILTIN.iconv!=							\
 .        endif
 .      endfor
 .    endif
-.    if !defined(_BLTN_REPLACE.iconv)
-_BLTN_REPLACE.iconv=	no
 # XXX
 # XXX By default, assume that the native iconv implementation is good
 # XXX enough to replace GNU libiconv if it is part of glibc (the GNU C
 # XXX Library).
 # XXX
-.      if exists(/usr/include/iconv.h)
-H_ICONV=	/usr/include/iconv.h
-_BLTN_REPLACE.iconv!=							\
-	if ${GREP} -q "This file is part of the GNU C Library" ${H_ICONV}; then \
-		${ECHO} yes;						\
-	else								\
-		${ECHO} no;						\
-	fi
-.      endif
-# XXX
-# XXX By default, assume that on NetBSD and DragonFly the native iconv
-# XXX implementation (if it exists) is good enough to replace GNU libiconv.
-# XXX
-.      if (${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly") && \
-          exists(/usr/include/iconv.h)
-H_ICONV=	/usr/include/iconv.h
-_BLTN_REPLACE.iconv=	yes
-.      endif
-.    endif
-MAKEVARS+=	_BLTN_REPLACE.iconv
-.    if !empty(_BLTN_REPLACE.iconv:M[yY][eE][sS])
+.    if empty(H_GLIBC_ICONV:M__nonexistent__) && \
+	empty(H_GLIBC_ICONV:M${LOCALBASE}/*) && \
+	!empty(BUILTIN_LIB_FOUND.iconv:M[nN][oO])
 USE_BUILTIN.iconv=	yes
+H_ICONV=		${H_GLIBC_ICONV}
+.    endif
+# XXX
+# XXX By default, assume that the Citrus project iconv implementation
+# XXX (if it exists) is good enough to replace GNU libiconv.
+# XXX
+.    if empty(H_CITRUS_ICONV:M__nonexistent__) && \
+	empty(H_CITRUS_ICONV:M${LOCALBASE}/*) && \
+	!empty(BUILTIN_LIB_FOUND.iconv:M[nN][oO])
+USE_BUILTIN.iconv=	yes
+H_ICONV=		${H_CITRUS_ICONV}
 .    endif
 #
 # Some platforms don't have an iconv implementation that can replace
@@ -128,6 +123,15 @@ USE_BUILTIN.iconv=	no
 .  endif
 .endif
 
+# Define BUILTIN_LIBNAME.iconv to be the base name of the built-in
+# iconv library.
+#
+.if !empty(BUILTIN_LIB_FOUND.iconv:M[yY][eE][sS])
+BUILTIN_LIBNAME.iconv=	iconv
+.else
+BUILTIN_LIBNAME.iconv=	# empty (part of the C library)
+.endif
+
 # ICONV_TYPE is either "gnu" or "native" depending on which iconv
 # implementation is used.
 #
@@ -146,17 +150,12 @@ ICONV_TYPE=	native
 CHECK_BUILTIN.iconv?=	no
 .if !empty(CHECK_BUILTIN.iconv:M[nN][oO])
 
-.  if !empty(USE_BUILTIN.iconv:M[nN][oO])
-_BLTN_LIBICONV=		-liconv
-.  else
-.    if !empty(BUILTIN_LIB_FOUND.iconv:M[yY][eE][sS])
-_BLTN_LIBICONV=		-liconv
-.    else
-_BLTN_LIBICONV=		# empty
-BUILDLINK_TRANSFORM+=	rm:-liconv
+.  if !empty(USE_BUILTIN.iconv:M[yY][eE][sS])
+BUILDLINK_LIBNAME.iconv=	${BUILTIN_LIBNAME.iconv}
+.    if empty(BUILTIN_LIBNAME.iconv)
+BUILDLINK_TRANSFORM+=		rm:-liconv
 .    endif
 .  endif
-BUILDLINK_LDADD.iconv?=	${_BLTN_LIBICONV}
 
 .  if defined(GNU_CONFIGURE)
 .    if !empty(USE_BUILTIN.iconv:M[nN][oO])
