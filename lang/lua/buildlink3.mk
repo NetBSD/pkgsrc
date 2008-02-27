@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/08/14 22:31:39 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2008/02/27 18:59:38 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 LUA_BUILDLINK3_MK:=	${LUA_BUILDLINK3_MK}+
@@ -15,5 +15,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}lua
 BUILDLINK_API_DEPENDS.lua+=	lua>=5.1.1
 BUILDLINK_PKGSRCDIR.lua?=	../../lang/lua
 .endif	# LUA_BUILDLINK3_MK
+
+.include "../../devel/readline/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
