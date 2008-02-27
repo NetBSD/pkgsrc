@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.17 2008/02/27 04:47:02 jlam Exp $
+# $NetBSD: builtin.mk,v 1.18 2008/02/27 06:14:23 jlam Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -100,6 +100,25 @@ USE_BUILTIN.ncurses=	no
 .  endif
 .endif
 
+# Define BUILTIN_LIBNAME.ncurses to be the built-in ncurses library
+# only if we're using the built-in ncurses.
+#
+.if !empty(USE_BUILTIN.ncurses:M[yY][eE][sS])
+.  if !empty(BUILTIN_LIB_FOUND.ncurses:M[nN][oO]) && \
+      !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
+BUILTIN_LIBNAME.ncurses=	curses
+.  endif
+#
+# On Interix, there is a libncurses.a and a libcurses.so but strangely,
+# no libncurses.so.  We want to link against the shared library, so
+# turn "-lncurses" into "-lcurses".
+#
+.  if (${OPSYS} == "Interix") && \
+      !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
+BUILTIN_LIBNAME.ncurses=	curses
+.  endif
+.endif
+
 ###
 ### The section below only applies if we are not including this file
 ### solely to determine whether a built-in implementation exists.
@@ -109,19 +128,6 @@ CHECK_BUILTIN.ncurses?=	no
 
 BUILDLINK_TRANSFORM+=		l:ncurses:${BUILDLINK_LIBNAME.ncurses}
 .  if !empty(USE_BUILTIN.ncurses:M[yY][eE][sS])
-.    if !empty(BUILTIN_LIB_FOUND.ncurses:M[nN][oO]) && \
-	!empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
-BUILDLINK_LIBNAME.ncurses=	curses
-.    endif
-#
-# On Interix, there is a libncurses.a and a libcurses.so but strangely,
-# no libncurses.so.  We want to link against the shared library, so
-# turn "-lncurses" into "-lcurses".
-#
-.    if (${OPSYS} == "Interix") && \
-	!empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
-BUILDLINK_LIBNAME.ncurses=	curses
-.    endif
 BUILDLINK_TARGETS+=		buildlink-curses-ncurses-h
 BUILDLINK_TARGETS+=		buildlink-ncurses-extra-includes
 .  endif
