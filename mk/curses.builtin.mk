@@ -1,4 +1,4 @@
-# $NetBSD: curses.builtin.mk,v 1.1 2008/02/25 04:19:34 jlam Exp $
+# $NetBSD: curses.builtin.mk,v 1.2 2008/02/27 02:26:07 jlam Exp $
 
 BUILTIN_PKG:=	curses
 
@@ -25,12 +25,6 @@ MAKEVARS+=	IS_BUILTIN.curses
 ### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
 ###
 .if !defined(USE_BUILTIN.curses)
-#
-# There will probably never be a devel/curses package because ncurses is
-# the recommended curses on many platforms, so we should always prefer the
-# native curses package.
-#
-PREFER.curses=		native
 .  if ${PREFER.curses} == "pkgsrc"
 USE_BUILTIN.curses=	no
 .  else
