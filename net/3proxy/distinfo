@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1 2008/02/27 16:14:25 apb Exp $
+
+SHA1 (3proxy-0.5.3k.tgz) = 71befdaa94867e4b54a5b24e2a3b3b33debd5e67
+RMD160 (3proxy-0.5.3k.tgz) = 416d3c0d870a6aa450472f4ab060ce90e3362dea
+Size (3proxy-0.5.3k.tgz) = 190797 bytes
+SHA1 (patch-aa) = e84a56ce0ce1fc82c982fb0e78ea14986035e0a0
+SHA1 (patch-ab) = 681c7b0b29ad6fb652b3fa8bcecc2af563589c4f
+SHA1 (patch-ac) = caff37ccb6018152d11f6ce5c682f8cec4feff9b
