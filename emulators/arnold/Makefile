@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/06/12 16:28:06 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2008/02/27 12:52:41 rillig Exp $
 #
 
 DISTNAME=		arnsrc27012002
@@ -20,27 +20,16 @@ GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		src
 BUILD_DIRS=		${CONFIGURE_DIRS}
 BUILD_TARGET=		arnold
+MAKE_FLAGS+=		LFLAGS2=#none, especially not -s
 
 SHAREDIR=		${PREFIX}/share/arnold
-DOCDIR=			${PREFIX}/share/doc/arnold
-MAKE_ENV+=		SHAREDIR=${SHAREDIR:Q}
-INSTALLATION_DIRS=	bin
+MAKE_ENV+=		SHAREDIR=${SHAREDIR}
+AUTO_MKDIRS=		yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/arnold ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${SHAREDIR}
-	${INSTALL_DATA_DIR} ${SHAREDIR}/roms
-	for dir in amsdose cpc464e cpc6128e cpc664e cpcplus kcc; \
-	do \
-		${INSTALL_DATA_DIR} ${SHAREDIR}/roms/$$dir; \
-		for f in ${WRKSRC}/roms/$$dir/*; \
-		do \
-			${INSTALL_DATA} $$f ${SHAREDIR}/roms/$$dir; \
-		done \
-	done
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/readme.txt ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/readme.linux ${DOCDIR}
+	cd ${WRKSRC}/roms && pax -wr * ${SHAREDIR}/roms/
+	cd ${WRKSRC} && ${INSTALL_DATA} readme.* ${PREFIX}/share/doc/arnold
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
