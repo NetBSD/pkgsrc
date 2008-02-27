@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.16 2008/02/26 17:21:13 jlam Exp $
+# $NetBSD: builtin.mk,v 1.17 2008/02/27 04:47:02 jlam Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -107,12 +107,11 @@ USE_BUILTIN.ncurses=	no
 CHECK_BUILTIN.ncurses?=	no
 .if !empty(CHECK_BUILTIN.ncurses:M[nN][oO])
 
-BUILDLINK_LDADD.ncurses=	-lncurses
+BUILDLINK_TRANSFORM+=		l:ncurses:${BUILDLINK_LIBNAME.ncurses}
 .  if !empty(USE_BUILTIN.ncurses:M[yY][eE][sS])
 .    if !empty(BUILTIN_LIB_FOUND.ncurses:M[nN][oO]) && \
 	!empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
-BUILDLINK_LDADD.ncurses=	-lcurses
-BUILDLINK_TRANSFORM+=		l:ncurses:curses
+BUILDLINK_LIBNAME.ncurses=	curses
 .    endif
 #
 # On Interix, there is a libncurses.a and a libcurses.so but strangely,
@@ -121,8 +120,7 @@ BUILDLINK_TRANSFORM+=		l:ncurses:curses
 #
 .    if (${OPSYS} == "Interix") && \
 	!empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
-BUILDLINK_LDADD.ncurses=	-lcurses
-BUILDLINK_TRANSFORM+=		l:ncurses:curses
+BUILDLINK_LIBNAME.ncurses=	curses
 .    endif
 BUILDLINK_TARGETS+=		buildlink-curses-ncurses-h
 BUILDLINK_TARGETS+=		buildlink-ncurses-extra-includes
