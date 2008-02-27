@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2008/01/04 20:05:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.50 2008/02/27 14:16:50 jmmv Exp $
 #
 
-DISTNAME=	monotone-0.38
-PKGREVISION=	2
+DISTNAME=	monotone-0.39
 CATEGORIES=	devel scm
-MASTER_SITES=	http://monotone.ca/downloads/0.38/
+MASTER_SITES=	http://monotone.ca/downloads/0.39/
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://monotone.ca/
@@ -44,7 +43,7 @@ post-install:
 	cd ${WRKSRC} && pax -rw -pp -pm figures/*.png \
 	    ${DESTDIR}${PREFIX}/share/doc/monotone
 
-BUILDLINK_API_DEPENDS.pcre+=	pcre>=6.7
+BUILDLINK_API_DEPENDS.pcre+=	pcre>=7.6
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/boost-headers/buildlink3.mk"
