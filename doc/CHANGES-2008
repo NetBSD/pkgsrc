@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.373 2008/02/27 10:01:34 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.374 2008/02/27 14:09:10 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -695,3 +695,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated archivers/bsdtar to 2.4.13 [joerg 2008-02-26]
 	Updated mail/thunderbird to 2.0.0.12 [ghen 2008-02-27]
 	Updated mail/thunderbird-gtk1 to 2.0.0.12nb2 [ghen 2008-02-27]
+	Added misc/m17n-db version 1.5.1 [obache 2008-02-27]
+	Added devel/m17n-lib version 1.5.1 [obache 2008-02-27]
+	Added misc/m17n-docs version 1.5.0 [obache 2008-02-27]
+	Added misc/m17n-contrib version 1.1.6 [obache 2008-02-27]
+	Added inputmethod/m17n-im-config version 0.9.0 [obache 2008-02-27]
