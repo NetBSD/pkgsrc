@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2008/02/27 06:10:25 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2008/02/27 21:32:45 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 PDCURSES_BUILDLINK3_MK:=	${PDCURSES_BUILDLINK3_MK}+
@@ -14,8 +14,9 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}pdcurses
 .if !empty(PDCURSES_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.pdcurses+=	pdcurses>=3.3
 BUILDLINK_PKGSRCDIR.pdcurses?=		../../devel/pdcurses
-BUILDLINK_LIBNAME.pdcurses=		XCurses
-BUILDLINK_LDADD.pdcurses?=		${BUILDLINK_LIBNAME.pdcurses:S/^/-l/}
+
+BUILDLINK_LIBNAME.pdcurses=	XCurses
+BUILDLINK_LDADD.pdcurses?=	${BUILDLINK_LIBNAME.pdcurses:S/^/-l/:S/^-l$//}
 
 # _PKG_USE_CURSES is defined by curses.buildlink3.mk to indicate that
 # the headers and libraries should be usable as <curses.h> and -lcurses.
