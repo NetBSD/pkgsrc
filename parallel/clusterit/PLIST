@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2005/06/02 20:48:12 garbled Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/02/27 21:52:16 garbled Exp $
 bin/barrier
 bin/barrierd
 bin/rseq
 bin/run
 bin/dsh
+bin/dtop
 bin/pcp
 bin/pdf
 bin/prm
@@ -18,6 +19,7 @@ man/man1/barrierd.1
 man/man1/rseq.1
 man/man1/run.1
 man/man1/dsh.1
+man/man1/dtop.1
 man/man1/pcp.1
 man/man1/pdf.1
 man/man1/prm.1
