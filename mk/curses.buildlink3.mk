@@ -1,4 +1,4 @@
-# $NetBSD: curses.buildlink3.mk,v 1.9 2008/02/27 06:15:04 jlam Exp $
+# $NetBSD: curses.buildlink3.mk,v 1.10 2008/02/27 15:26:34 jlam Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # any curses implementation instead of one particular one.  The available
@@ -87,7 +87,6 @@ PKG_FAIL_REASON=	\
 BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Ncurses}
 BUILDLINK_PACKAGES+=		curses
 BUILDLINK_ORDER:=		${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}curses
-BUILDLINK_LIBNAME.curses?=	${BUILTIN_LIBNAME.curses}
 BUILDLINK_LDADD.curses?=	${BUILDLINK_LIBNAME.curses:S/^/-l/}
 BUILDLINK_BUILTIN_MK.curses=	../../mk/curses.builtin.mk
 .elif ${CURSES_TYPE} == "ncurses"
