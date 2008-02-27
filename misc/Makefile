@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.294 2008/01/09 21:20:35 wiz Exp $
+# $NetBSD: Makefile,v 1.295 2008/02/27 14:14:44 obache Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -121,6 +121,9 @@ SUBDIR+=	loco
 SUBDIR+=	logsurfer
 SUBDIR+=	lookup
 SUBDIR+=	lv
+SUBDIR+=	m17n-contrib
+SUBDIR+=	m17n-db
+SUBDIR+=	m17n-docs
 SUBDIR+=	mirmon
 SUBDIR+=	mmv
 SUBDIR+=	molden
