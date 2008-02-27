@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/02/19 13:53:04 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/27 11:04:29 kefren Exp $
 
 DISTNAME=	monodevelop-0.19
 CATEGORIES=	devel
@@ -22,6 +22,7 @@ REPLACE_BASH+=	contrib/extract_makefile_variable.sh
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/mono-addins/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
 .include "../../lang/monodoc/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/buildlink3.mk"
