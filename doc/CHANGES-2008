@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.374 2008/02/27 14:09:10 obache Exp $
+$NetBSD: CHANGES-2008,v 1.375 2008/02/27 14:22:10 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -700,3 +700,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added misc/m17n-docs version 1.5.0 [obache 2008-02-27]
 	Added misc/m17n-contrib version 1.1.6 [obache 2008-02-27]
 	Added inputmethod/m17n-im-config version 0.9.0 [obache 2008-02-27]
+	Updated devel/monotone to 0.39 [jmmv 2008-02-27]
+	Updated devel/monotone-server to 0.39 [jmmv 2008-02-27]
