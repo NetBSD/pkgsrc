@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1 2008/02/27 16:14:25 apb Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/27 23:50:29 apb Exp $
 #
 
 DISTNAME=	3proxy-0.5.3k
 PKGNAME=	${DISTNAME:C/k$/.11/}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://3proxy.ru/${DISTNAME:S/3proxy-//}/
 EXTRACT_SUFX=	.tgz
