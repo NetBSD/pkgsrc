@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/02/27 11:04:29 kefren Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/27 20:43:14 kefren Exp $
 
 DISTNAME=	monodevelop-0.19
 CATEGORIES=	devel
@@ -19,6 +19,7 @@ USE_DIRS+=	xdg-1.4
 REPLACE_BASH+=	monodevelop.in
 REPLACE_BASH+=	src/addins/MonoDevelop.Autotools/templates/configure.template
 REPLACE_BASH+=	contrib/extract_makefile_variable.sh
+REPLACE_BASH+=	theme-icons/icon-theme-installer
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/mono-addins/buildlink3.mk"
