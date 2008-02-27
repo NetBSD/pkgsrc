@@ -1,4 +1,4 @@
-# $NetBSD: curses.builtin.mk,v 1.2 2008/02/27 02:26:07 jlam Exp $
+# $NetBSD: curses.builtin.mk,v 1.3 2008/02/27 04:47:02 jlam Exp $
 
 BUILTIN_PKG:=	curses
 
@@ -58,7 +58,8 @@ CHECK_BUILTIN.curses?=	no
 BUILDLINK_INCDIRS.curses?=	${H_CURSES:H:S/^${BUILDLINK_PREFIX.curses}\///}
 .    endif
 .    if !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
-BUILDLINK_LDADD.curses?=	-lcurses
+BUILDLINK_LIBNAME.curses=	curses
+BUILDLINK_LDADD.curses?=	-l${BUILDLINK_LIBNAME.curses}
 .    endif
 .  endif
 
