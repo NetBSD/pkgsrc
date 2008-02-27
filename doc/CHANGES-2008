@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.376 2008/02/27 16:15:30 apb Exp $
+$NetBSD: CHANGES-2008,v 1.377 2008/02/27 17:05:55 martti Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -703,3 +703,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/monotone to 0.39 [jmmv 2008-02-27]
 	Updated devel/monotone-server to 0.39 [jmmv 2008-02-27]
 	Added net/3proxy version 0.5.3.11 [apb 2008-02-27]
+	Updated wm/fvwm-devel to 2.5.25 [martti 2008-02-27]
