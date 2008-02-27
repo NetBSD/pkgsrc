@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.372 2008/02/26 13:54:31 joerg Exp $
+$NetBSD: CHANGES-2008,v 1.373 2008/02/27 10:01:34 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -693,3 +693,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added graphics/libotf version 0.9.7 [obache 2008-02-26]
 	Updated archivers/libarchive to 2.4.13 [joerg 2008-02-26]
 	Updated archivers/bsdtar to 2.4.13 [joerg 2008-02-26]
+	Updated mail/thunderbird to 2.0.0.12 [ghen 2008-02-27]
+	Updated mail/thunderbird-gtk1 to 2.0.0.12nb2 [ghen 2008-02-27]
