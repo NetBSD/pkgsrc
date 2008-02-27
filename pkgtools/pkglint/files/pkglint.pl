@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.765 2008/02/21 12:16:09 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.766 2008/02/27 00:24:19 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6566,7 +6566,7 @@ sub checkfile_buildlink3_mk($) {
 		lines_log_warning($lines, $lineno, "Expected BUILDLINK_DEPTH:= \${BUILDLINK_DEPTH}+.");
 		return;
 	}
-	if (($m = expect($lines, \$lineno, qr"^(.*)_BUILDLINK3_MK:=\t+\$\{\1_BUILDLINK3_MK\}\+$"))) {
+	if (($m = expect($lines, \$lineno, qr"^(.*)_BUILDLINK3_MK:=\t*\$\{\1_BUILDLINK3_MK\}\+$"))) {
 		$bl_PKGBASE_line = $lines->[$lineno - 1];
 		$bl_PKGBASE = $m->text(1);
 		$opt_debug_misc and $bl_PKGBASE_line->log_debug("bl_PKGBASE=${bl_PKGBASE}");
