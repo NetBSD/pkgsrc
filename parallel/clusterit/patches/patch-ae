@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2006/01/02 22:51:45 joerg Exp $
+$NetBSD: patch-ae,v 1.2 2008/02/27 21:52:16 garbled Exp $
 
---- rvt/command.c.orig	2006-01-02 22:47:41.000000000 +0000
-+++ rvt/command.c
-@@ -453,7 +453,6 @@ int flags;
+--- rvt/command.c.orig	2008-02-27 14:35:55.000000000 -0700
++++ rvt/command.c	2008-02-27 14:37:56.000000000 -0700
+@@ -453,7 +453,6 @@
  	unsigned char *s;
  	int count, sv;
  	unsigned char mask = is_eightbit() ? 0xff : 0x7f;
