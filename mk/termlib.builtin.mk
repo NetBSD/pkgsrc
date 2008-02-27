@@ -1,4 +1,4 @@
-# $NetBSD: termlib.builtin.mk,v 1.1 2008/02/27 04:47:02 jlam Exp $
+# $NetBSD: termlib.builtin.mk,v 1.2 2008/02/27 15:26:34 jlam Exp $
 
 BUILTIN_PKG:=	termlib
 
@@ -32,13 +32,24 @@ USE_BUILTIN.termlib=	${IS_BUILTIN.termlib}
 .endif
 MAKEVARS+=	USE_BUILTIN.termlib
 
-# Define BUILTIN_LIBNAME.termlib to be the built-in terminal library
-# only if we're using the built-in termlib.
+# Define BUILTIN_LIBNAME.termlib to be the base name of the built-in
+# terminal library.
 #
-.if !empty(USE_BUILTIN.termlib:M[yY][eE][sS])
-.  if !empty(BUILTIN_LIB_FOUND.termcap:M[yY][eE][sS])
+.if !empty(BUILTIN_LIB_FOUND.termcap:M[yY][eE][sS])
 BUILTIN_LIBNAME.termlib=	termcap
-.  elif !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
+.elif !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
 BUILTIN_LIBNAME.termlib=	curses
-.  endif
 .endif
+
+###
+### The section below only applies if we are not including this file
+### solely to determine whether a built-in implementation exists.
+###
+CHECK_BUILTIN.termlib?=	no
+.if !empty(CHECK_BUILTIN.termlib:M[nN][oO])
+
+.  if !empty(USE_BUILTIN.termlib:M[yY][eE][sS])
+BUILDLINK_LIBNAME.termlib=	${BUILTIN_LIBNAME.termlib}
+.  endif
+
+.endif	# CHECK_BUILTIN.termlib
