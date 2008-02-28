@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.380 2008/02/28 14:57:12 tron Exp $
+$NetBSD: CHANGES-2008,v 1.381 2008/02/28 15:15:24 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -707,3 +707,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/heimdal to 1.1 [jlam 2008-02-28]
 	Updated converters/p5-JSON-Any to 1.16 [abs 2008-02-28]
 	Updated net/wireshark to 0.99.8 [tron 2008-02-28]
+	Updated devel/scmgit to 1.5.4.3 [bjs 2008-02-28]
+	Updated devel/scmgit-base to 1.5.4.3 [bjs 2008-02-28]
+	Updated devel/scmgit-docs to 1.5.4.3 [bjs 2008-02-28]
