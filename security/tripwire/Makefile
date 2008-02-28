@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/11/16 00:16:29 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2008/02/28 11:58:49 rillig Exp $
 #
 
 DISTNAME=	tripwire-1.2
@@ -17,7 +17,7 @@ OWN_DIRS=		${PKG_SYSCONFDIR}/databases
 EGDIR=			${PREFIX}/share/examples/tripwire
 CONF_FILES=		${EGDIR}/tripwire.conf ${PKG_SYSCONFDIR}/tripwire.conf
 
-INSTALLATION_DIRS_FROM_PLIST=	yes
+AUTO_MKDIRS=			yes
 
 post-extract:
 	cd ${WRKDIR} && ${PAX} -O -rf T1.2.tar

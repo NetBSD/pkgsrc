@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/12/01 12:49:05 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2008/02/28 11:58:48 rillig Exp $
 #
 
 DISTNAME=		sr233
@@ -14,7 +14,7 @@ COMMENT=		The SR language compiler and run time system
 
 WRKSRC= ${WRKDIR}
 TEST_TARGET=		verify
-INSTALLATION_DIRS_FROM_PLIST=yes
+AUTO_MKDIRS=		yes
 
 SUBST_CLASSES+=		sr
 SUBST_STAGE.sr=		pre-configure
