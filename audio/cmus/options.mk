@@ -1,19 +1,16 @@
-# $NetBSD: options.mk,v 1.2 2007/12/16 21:45:30 rillig Exp $
+# $NetBSD: options.mk,v 1.3 2008/02/28 17:15:48 jlam Exp $
 
-PKG_OPTIONS_VAR=				PKG_OPTIONS.cmus
-PKG_SUPPORTED_OPTIONS=			flac mad vorbis arts ao mpcdec #faad alsa
+PKG_OPTIONS_VAR=		PKG_OPTIONS.cmus
+PKG_SUPPORTED_OPTIONS=		flac mad vorbis arts ao mpcdec	#faad alsa
 PKG_OPTIONS_OPTIONAL_GROUPS=	mod
-PKG_OPTIONS_GROUP.mod=			modplug mikmod
-PKG_SUGGESTED_OPTIONS=			flac mad ao vorbis modplug
-
-.include "../../mk/bsd.prefs.mk"
+PKG_OPTIONS_GROUP.mod=		modplug mikmod
+PKG_SUGGESTED_OPTIONS=		flac mad ao vorbis modplug
 
 .include "../../mk/bsd.options.mk"
 
-# Package-specific option-handling
-
-# Backends:
-#
+###
+### Backends
+###
 
 # AO support
 #
@@ -41,8 +38,9 @@ CONFIGURE_ARGS+=	CONFIG_ARTS=n
 #CONFIGURE_ARGS+=	CONFIG_ALSA=y
 #.endif
 
-# Codecs:
-#
+###
+### Codecs
+###
 
 # MAD support
 #
@@ -80,9 +78,8 @@ CONFIGURE_ARGS+=	CONFIG_MPC=y
 CONFIGURE_ARGS+=	CONFIG_MPC=n
 .endif
 
-###
-### modplay support
-###
+# modplay support
+#
 .if !empty(PKG_OPTIONS:Mmikmod)
 .include "../../audio/libmikmod/buildlink3.mk"
 CONFIGURE_ARGS+=	CONFIG_MODPLUG=n
@@ -93,7 +90,6 @@ CONFIGURE_ARGS+=	CONFIG_MIKMOD=y
 CONFIGURE_ARGS+=	CONFIG_MODPLUG=y
 CONFIGURE_ARGS+=	CONFIG_MIKMOD=n
 .endif
-
 
 # FAAD support
 #
