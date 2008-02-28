@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2007/11/03 13:04:40 adam Exp $
+# $NetBSD: Makefile,v 1.3 2008/02/28 19:43:00 agc Exp $
 
-DISTNAME=	afpfs-ng-0.4.3a
+DISTNAME=	afpfs-ng-0.8
 PKGNAME=	fuse-${DISTNAME}
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=afpfs-ng/}
@@ -17,6 +17,7 @@ USE_LANGUAGES=	c c++
 
 .include "../../devel/gmp/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../security/libgpg-error/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
 
