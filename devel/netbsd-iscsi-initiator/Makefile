@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/02/07 19:31:51 agc Exp $
+# $NetBSD: Makefile,v 1.9 2008/02/28 11:58:48 rillig Exp $
 
 DISTNAME=	netbsd-iscsi-20080207
 PKGNAME=	${DISTNAME:C/-iscsi/-iscsi-initiator/}
@@ -13,7 +13,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_DIRS=	src
 BUILD_TARGET=	all-initiator
 
-INSTALLATION_DIRS_FROM_PLIST=	yes
+AUTO_MKDIRS=			yes
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 

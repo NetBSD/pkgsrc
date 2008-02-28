@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/02/20 10:49:16 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2008/02/28 11:58:48 rillig Exp $
 #
 
 DISTNAME=	veleng10
@@ -20,7 +20,7 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 EXTRACT_OPTS_ZIP=	-LLaqo
 WRKSRC=			${WRKDIR}
 MAKE_FILE=		makefile
-INSTALLATION_DIRS_FROM_PLIST=	yes
+AUTO_MKDIRS=			yes
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure
