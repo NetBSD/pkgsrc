@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2008/02/13 20:10:20 tron Exp $
+# $NetBSD: Makefile,v 1.17 2008/02/28 14:55:17 tron Exp $
 
-DISTNAME=		wireshark-0.99.7
-PKGREVISION=		1
+DISTNAME=		wireshark-0.99.8
 CATEGORIES=		net
 MASTER_SITES=		http://www.wireshark.org/download/src/ \
 			${MASTER_SITE_SOURCEFORGE:=wireshark/}
@@ -39,12 +38,6 @@ USE_BUILTIN.libpcap=	no
 
 # wireshark no longer builds with NetBSD 3.x provided zlib
 BUILDLINK_API_DEPENDS.zlib=zlib>=1.2.1
-
-SUBST_CLASSES+=		shell
-SUBST_STAGE.shell=	post-build
-SUBST_MESSAGE.shell=	Replacing @SHELL@ with a proper shell.
-SUBST_FILES.shell=	idl2wrs
-SUBST_SED.shell=	-e 's,@SHELL@,${SHELL},g'
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
