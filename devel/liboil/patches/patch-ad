@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2008/02/28 19:28:24 drochner Exp $
+
+--- examples/Makefile.in.orig	2008-02-25 22:51:20.000000000 +0100
++++ examples/Makefile.in
+@@ -287,7 +287,7 @@ sbindir = @sbindir@
+ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+-SUBDIRS = jpeg md5 uberopt work huffman taylor videoscale audioresample jit
++SUBDIRS = jpeg md5 uberopt work huffman taylor videoscale audioresample
+ example1_SOURCES = example1.c
+ example1_CFLAGS = $(LIBOIL_CFLAGS)
+ example1_LDADD = $(LIBOIL_LIBS)
