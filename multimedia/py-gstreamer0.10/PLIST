@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/02/08 21:33:33 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/02/28 19:43:08 drochner Exp $
 lib/pkgconfig/gst-python-0.10.pc
 ${PYSITELIB}/gst-0.10/gst/__init__.py
 ${PYSITELIB}/gst-0.10/gst/__init__.pyc
@@ -26,12 +26,14 @@ ${PYSITELIB}/gst-0.10/gst/extend/utils.py
 ${PYSITELIB}/gst-0.10/gst/extend/utils.pyc
 ${PYSITELIB}/gst-0.10/gst/extend/utils.pyo
 ${PYSITELIB}/gst-0.10/gst/interfaces.la
+${PYSITELIB}/gst-0.10/gst/pbutils.la
 ${PYSITELIB}/pygst.pth
 ${PYSITELIB}/pygst.py
 share/gst-python/0.10/defs/base.defs
 share/gst-python/0.10/defs/gst-extrafuncs.defs
 share/gst-python/0.10/defs/gst-types.defs
 share/gst-python/0.10/defs/libs.defs
+share/gst-python/0.10/defs/pbutils.defs
 share/gst-python/0.10/examples/audio-controller.py
 share/gst-python/0.10/examples/audioconcat.py
 share/gst-python/0.10/examples/bps.py
