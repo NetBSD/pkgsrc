@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.10 2007/09/21 13:04:06 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2008/02/28 19:32:21 drochner Exp $
 #
 
 .include "Makefile.common"
 
 COMMENT+=		good plugins
 
-# libgstqtdemux.la and libgstvideocrop.la were moved from bad to good
-CONFLICTS+=		gst-plugins0.10-bad<0.10.5
+# some plugins were moved from bad to good
+CONFLICTS+=		gst-plugins0.10-bad<0.10.7
 
 CONFIGURE_ARGS+=	--enable-gconf
 CONFIGURE_ARGS+=	--enable-gconftool
