@@ -1,18 +1,18 @@
-# $NetBSD: builtin.mk,v 1.38 2008/02/27 22:10:34 jlam Exp $
+# $NetBSD: builtin.mk,v 1.39 2008/02/28 20:30:18 jlam Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
 BUILTIN_PKG:=	gettext
 
 BUILTIN_FIND_LIBS:=			intl
-BUILTIN_FIND_FILES_VAR:=		H_GETTEXT H_NGETTEXT_GETTEXT	\
-					H_GLIBC_GETTEXT
+BUILTIN_FIND_FILES_VAR:=		H_GETTEXT H_GENTOO_GETTEXT	\
+					H_NGETTEXT_GETTEXT
 BUILTIN_FIND_FILES.H_GETTEXT=		/usr/include/libintl.h
 BUILTIN_FIND_GREP.H_GETTEXT=		\#define[ 	]*__USE_GNU_GETTEXT
+BUILTIN_FIND_FILES.H_GENTOO_GETTEXT=	/usr/include/libintl.h
+BUILTIN_FIND_GREP.H_GENTOO_GETTEXT=	gentoo-multilib/.*/libintl.h
 BUILTIN_FIND_FILES.H_NGETTEXT_GETTEXT=	/usr/include/libintl.h
 BUILTIN_FIND_GREP.H_NGETTEXT_GETTEXT=	char.*ngettext
-BUILTIN_FIND_FILES.H_GLIBC_GETTEXT=	/usr/include/libintl.h
-BUILTIN_FIND_GREP.H_GLIBC_GETTEXT=	This file is part of the GNU C Library
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -20,11 +20,18 @@ BUILTIN_FIND_GREP.H_GLIBC_GETTEXT=	This file is part of the GNU C Library
 ### Determine if there is a built-in implementation of the package and
 ### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
 ###
+#
+# Gentoo Linux has an unusual scheme where /usr/include/libintl.h
+# pulls in gentoo-multilib/$ARCH/libintl.h, where the latter is the
+# real libintl.h file.  We can safely assume that this is GNU gettext
+# (in glibc).
+#
 .if !defined(IS_BUILTIN.gettext)
 IS_BUILTIN.gettext=	no
-.  if empty(H_GETTEXT:M__nonexistent__) && \
-      empty(H_GETTEXT:M${LOCALBASE}/*) && \
-      (!empty(BUILTIN_LIB_FOUND.intl:M[yY][eE][sS]) || ${OPSYS} == "Linux")
+.  if (empty(H_GETTEXT:M__nonexistent__) && \
+       empty(H_GETTEXT:M${LOCALBASE}/*)) || \
+      (empty(H_GENTOO_GETTEXT:M__nonexistent__) && \
+       empty(H_GENTOO_GETTEXT:M${LOCALBASE}/*))
 IS_BUILTIN.gettext=	yes
 .  endif
 .endif
@@ -55,23 +62,11 @@ USE_BUILTIN.gettext!=							\
 .    endif
 # XXX
 # XXX By default, assume that the native gettext implementation is good
-# XXX enough to replace GNU gettext if it is part of glibc (the GNU C
-# XXX Library).
-# XXX
-.    if empty(H_GLIBC_GETTEXT:M__nonexistent__) && \
-	empty(H_GLIBC_GETTEXT:M${LOCALBASE}/*) && \
-	!empty(BUILTIN_LIB_FOUND.intl:M[nN][oO])
-USE_BUILTIN.gettext=	yes
-H_GETTEXT=		${H_GLIBC_GETTEXT}
-.    endif
-# XXX
-# XXX By default, assume that the native gettext implementation is good
 # XXX enough to replace GNU gettext if it supplies ngettext().
 # XXX
 .    if empty(H_NGETTEXT_GETTEXT:M__nonexistent__) && \
 	empty(H_NGETTEXT_GETTEXT:M${LOCALBASE}/*)
 USE_BUILTIN.gettext=	yes
-H_GETTEXT=		${H_NGETTEXT_GETTEXT}
 .    endif
 #
 # Some platforms don't have a gettext implementation that can replace
