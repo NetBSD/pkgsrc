@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.2 2006/10/19 14:27:33 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/02/28 19:28:24 drochner Exp $
 bin/oil-bugreport
 include/liboil-0.3/liboil/liboil-stdint.h
 include/liboil-0.3/liboil/liboil.h
 include/liboil-0.3/liboil/liboilclasses.h
 include/liboil-0.3/liboil/liboilcpu.h
 include/liboil-0.3/liboil/liboildebug.h
+include/liboil-0.3/liboil/liboilfault.h
 include/liboil-0.3/liboil/liboilfuncs.h
 include/liboil-0.3/liboil/liboilfunction.h
 include/liboil-0.3/liboil/liboilgcc.h
@@ -15,6 +16,7 @@ include/liboil-0.3/liboil/liboilprototype.h
 include/liboil-0.3/liboil/liboilrandom.h
 include/liboil-0.3/liboil/liboiltest.h
 include/liboil-0.3/liboil/liboiltypes.h
+include/liboil-0.3/liboil/liboilutils.h
 lib/liboil-0.3.la
 lib/pkgconfig/liboil-0.3.pc
 share/gtk-doc/html/liboil/ch01.html
