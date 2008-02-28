@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/06/04 07:37:58 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2008/02/28 11:58:48 rillig Exp $
 #
 
 DISTNAME=	lsqlite_src
@@ -17,7 +17,7 @@ WRKSRC=		${WRKDIR}
 CFLAGS+=	-fPIC
 LIBS+=		-llua -lsqlite
 
-INSTALLATION_DIRS_FROM_PLIST=	yes
+AUTO_MKDIRS=			yes
 
 do-build:
 	cd ${WRKSRC}; ${CC} -shared ${CFLAGS} ${LDFLAGS} lsqlite.c	\

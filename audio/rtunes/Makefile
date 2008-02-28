@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/01/18 05:06:21 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2008/02/28 11:58:47 rillig Exp $
 #
 
 DISTNAME=	rtunes-snap-20071122
@@ -26,7 +26,7 @@ CONF_FILES=		${EGDIR}/${RTUNES_CONF:T} \
 				${PKG_SYSCONFDIR}/${RTUNES_CONF:T}
 RTUNES_CONF=		${WRKDIR}/rtunes.conf
 
-INSTALLATION_DIRS_FROM_PLIST=	yes
+AUTO_MKDIRS=			yes
 
 SUBST_CLASSES+=		doc
 SUBST_FILES.doc=	librtunes/README

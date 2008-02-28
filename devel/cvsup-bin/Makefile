@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/10/10 10:33:39 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2008/02/28 11:58:48 rillig Exp $
 
 DISTNAME=	cvsup-static-16.1.h
 PKGNAME=	${DISTNAME:C/static/bin/}
@@ -22,7 +22,7 @@ WRKSRC=			${WRKDIR}
 NO_CONFIGURE=		yes
 BUILD_DIRS=		# empty
 
-INSTALLATION_DIRS_FROM_PLIST=	yes
+AUTO_MKDIRS=			yes
 
 do-install:
 	cd ${WRKSRC} && for i in cvpasswd cvsup ; do \

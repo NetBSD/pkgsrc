@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/11/28 07:28:27 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/28 11:58:49 rillig Exp $
 
 DISTNAME=	same-1.8
 CATEGORIES=	sysutils
@@ -10,7 +10,7 @@ COMMENT=	Find identical files and link(2) them to save disk space
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-INSTALLATION_DIRS_FROM_PLIST=	yes
+AUTO_MKDIRS=			yes
 USE_BSD_MAKEFILE=	yes
 
 post-extract:

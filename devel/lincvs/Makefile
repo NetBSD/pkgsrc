@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/03/17 15:59:12 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2008/02/28 11:58:48 rillig Exp $
 
 DISTNAME=		lincvs-1.4.4-0-generic-src
 PKGNAME=		${DISTNAME:S/-0-generic-src//}
@@ -24,7 +24,7 @@ SUBST_FILES.appdir=	src/lincvs.cpp src/main.cpp src/cvscontrol.cpp
 SUBST_SED.appdir=	-e 's,%%PREFIX%%,${PREFIX},'
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
-INSTALLATION_DIRS_FROM_PLIST=	yes
+AUTO_MKDIRS=			yes
 
 do-configure:
 	cd ${WRKSRC} && qmake -o Makefile lincvs.pro

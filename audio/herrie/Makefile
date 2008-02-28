@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/02/22 16:59:56 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2008/02/28 11:58:47 rillig Exp $
 #
 
 DISTNAME=	herrie-1.9.1
@@ -30,7 +30,7 @@ RESOLV_AUTO_VARS=	yes
 USE_FEATURES=		snprintf regcomp
 USE_NCURSES=		yes
 
-INSTALLATION_DIRS_FROM_PLIST=	yes
+AUTO_MKDIRS=			yes
 
 .include "options.mk"
 
