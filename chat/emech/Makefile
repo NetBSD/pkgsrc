@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/03/17 14:13:23 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2008/02/28 11:58:47 rillig Exp $
 #
 
 DISTNAME=	emech-3.0.2
@@ -14,7 +14,7 @@ HAS_CONFIGURE=			YES
 # when given no input.
 CONFIGURE_ARGS+=		< /dev/null
 BUILD_TARGET=			mech
-INSTALLATION_DIRS_FROM_PLIST=	yes
+AUTO_MKDIRS=			yes
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/energymech ${PREFIX}/bin/mech

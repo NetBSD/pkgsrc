@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/10/29 23:12:47 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2008/02/28 11:58:47 rillig Exp $
 #
 
 DISTNAME=	exaile_0.2.10
@@ -15,7 +15,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		pkg-config gmake intltool msgfmt
 USE_DIRS+=		xdg-1.1
 
-INSTALLATION_DIRS_FROM_PLIST=	yes
+AUTO_MKDIRS=			yes
 
 PYTHON_PATCH_SCRIPTS=	exaile.py
 MAKE_ENV+=	PYTHONBIN=${PYTHONBIN}

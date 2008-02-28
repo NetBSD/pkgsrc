@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/12/20 20:29:36 christos Exp $
+# $NetBSD: Makefile,v 1.5 2008/02/28 11:58:48 rillig Exp $
 #
 
 DISTNAME=	sup-0.2
@@ -8,6 +8,6 @@ MASTER_SITES=	ftp://ftp.astron.com/pub/sup/
 MAINTAINER=	christos@NetBSD.org
 COMMENT=	Network file distribution/synchronisation utility
 
-INSTALLATION_DIRS_FROM_PLIST=yes
+AUTO_MKDIRS=		yes
 
 .include "../../mk/bsd.pkg.mk"

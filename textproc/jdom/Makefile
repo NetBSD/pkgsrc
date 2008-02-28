@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/10/19 11:07:34 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/28 11:58:49 rillig Exp $
 #
 
 DISTNAME=	jdom-1.0
@@ -13,7 +13,7 @@ COMMENT=	Simple API for processing XML documents in Java
 BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
 USE_LANGUAGES=	# only Java
-INSTALLATION_DIRS_FROM_PLIST=	yes
+AUTO_MKDIRS=			yes
 
 do-build:
 	cd ${WRKSRC}/src/java && ${LOCALBASE}/bin/zip -r ${WRKSRC}/jdom-src.zip org

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/19 12:47:47 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2008/02/28 11:58:48 rillig Exp $
 #
 
 DISTNAME=		dia2code-0.8.1
@@ -16,7 +16,7 @@ SUBST_STAGE.inc=	post-configure
 SUBST_FILES.inc=	Makefile */Makefile */*/Makefile */*/*/Makefile
 SUBST_SED.inc=		-e 's:INCLUDES =:INCLUDES = -I${PREFIX}/include/libxml2/libxml :'
 
-INSTALLATION_DIRS_FROM_PLIST=	yes
+AUTO_MKDIRS=			yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dia2code/dia2code ${PREFIX}/bin

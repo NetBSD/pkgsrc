@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/01/04 14:40:15 ghen Exp $
+# $NetBSD: Makefile,v 1.17 2008/02/28 11:58:48 rillig Exp $
 
 DISTNAME=		tspc-2.1.1-src
 PKGNAME=		${DISTNAME:S/-src//}
@@ -20,7 +20,7 @@ ONLY_FOR_PLATFORM+=	Linux-*-*
 ONLY_FOR_PLATFORM+=	Darwin-*-*
 ONLY_FOR_PLATFORM+=	SunOS-*-*
 
-INSTALLATION_DIRS_FROM_PLIST=yes
+AUTO_MKDIRS=		yes
 
 .include "../../mk/bsd.prefs.mk"
 
