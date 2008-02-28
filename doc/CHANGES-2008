@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.384 2008/02/28 19:44:29 agc Exp $
+$NetBSD: CHANGES-2008,v 1.385 2008/02/28 23:42:09 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -713,3 +713,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/stgit to 20080220 [bjs 2008-02-28]
 	Updated devel/binutils to 2.17nb1 [tnn 2008-02-28]
 	Updated filesystems/fuse-afpfs-ng to 0.8 [agc 2008-02-28]
+	Added devel/chrpath version 0.13 [tnn 2008-02-28]
