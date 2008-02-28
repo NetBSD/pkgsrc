@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.6 2007/07/06 19:13:13 drochner Exp $
+$NetBSD: patch-ab,v 1.7 2008/02/28 19:32:21 drochner Exp $
 
---- configure.orig	2007-06-18 18:54:07.000000000 +0200
+--- configure.orig	2008-02-20 23:09:56.000000000 +0100
 +++ configure
-@@ -29520,7 +29520,7 @@ rm -f conftest.mmap
+@@ -30309,7 +30309,7 @@ rm -f conftest.mmap
  
  
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.6 2007/07/06 19:13:13 drochner Exp $
    GST_HAVE_MMAP_TRUE=
    GST_HAVE_MMAP_FALSE='#'
  else
-@@ -31352,7 +31352,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -31522,7 +31522,7 @@ rm -f core conftest.err conftest.$ac_obj
  echo "${ECHO_T}$flag_ok" >&6; }
  
  
@@ -19,8 +19,8 @@ $NetBSD: patch-ab,v 1.6 2007/07/06 19:13:13 drochner Exp $
 +        if test "x$ERROR_CFLAGS" = "x"
      then
  
-   { echo "$as_me:$LINENO: checking to see if compiler understands -errwarn=%all,no%E_EMPTY_DECLARATION,no%E_STATEMENT_NOT_REACHED" >&5
-@@ -31415,7 +31415,7 @@ rm -f core conftest.err conftest.$ac_obj
+   { echo "$as_me:$LINENO: checking to see if compiler understands -errwarn=%all,no%E_EMPTY_DECLARATION,no%E_STATEMENT_NOT_REACHED,no%E_ARGUEMENT_MISMATCH,no%E_MACRO_REDEFINED" >&5
+@@ -31585,7 +31585,7 @@ rm -f core conftest.err conftest.$ac_obj
  echo "${ECHO_T}$flag_ok" >&6; }
  
  
@@ -29,7 +29,7 @@ $NetBSD: patch-ab,v 1.6 2007/07/06 19:13:13 drochner Exp $
        then
  
    { echo "$as_me:$LINENO: checking to see if compiler understands -errwarn=%all" >&5
-@@ -37189,9 +37189,9 @@ if test x$USE_FLAC = xyes; then
+@@ -37539,9 +37539,9 @@ if test x$USE_FLAC = xyes; then
    HAVE_FLAC=no
  
  
@@ -42,7 +42,7 @@ $NetBSD: patch-ab,v 1.6 2007/07/06 19:13:13 drochner Exp $
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
-@@ -37209,11 +37209,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -37559,11 +37559,11 @@ cat >>conftest.$ac_ext <<_ACEOF
  #ifdef __cplusplus
  extern "C"
  #endif
