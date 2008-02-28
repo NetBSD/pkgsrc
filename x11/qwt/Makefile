@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/11/05 12:56:44 rillig Exp $
+# $NetBSD: Makefile,v 1.34 2008/02/28 11:58:49 rillig Exp $
 
 DISTNAME=	qwt-5.0.2
 CATEGORIES=	x11
@@ -16,7 +16,7 @@ USE_LIBTOOL=	yes
 
 CONFLICTS=	qwtlib-[0-9]*
 
-INSTALLATION_DIRS_FROM_PLIST=	yes
+AUTO_MKDIRS=			yes
 
 do-configure:
 	cd ${WRKSRC} && env ${CONFIGURE_ENV} qmake
