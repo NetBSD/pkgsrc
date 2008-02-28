@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2008/02/27 12:31:12 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2008/02/28 08:53:31 wiz Exp $
 
 DISTNAME=	asterisk-1.2.24
 PKGREVISION=	2
@@ -13,6 +13,7 @@ COMMENT=	The Asterisk Software PBX
 .include "../../mk/bsd.prefs.mk"
 
 USE_TOOLS+=		bash bison gmake perl:run
+REPLACE_BASH=		mkpkgconfig
 REPLACE_PERL+=		agi/agi-test.agi
 
 INSTALL_TARGET=		install samples
