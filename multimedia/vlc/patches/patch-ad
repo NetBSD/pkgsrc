@@ -1,0 +1,18 @@
+$NetBSD: patch-ad,v 1.5 2008/02/28 16:18:53 kefren Exp $
+Index: modules/demux/mp4/mp4.c
+===================================================================
+--- modules/demux/mp4/mp4.c	(revision 24943)
++++ modules/demux/mp4/mp4.c	(revision 24944)
+@@ -1151,6 +1151,12 @@
+         for( i_chunk = p_stsc->data.p_stsc->i_first_chunk[i_index] - 1;
+              i_chunk < i_last; i_chunk++ )
+         {
++            if( i_chunk >= p_demux_track->i_chunk_count )
++            {
++                msg_Warn( p_demux, "corrupted chunk table" );
++                return VLC_EGENERIC;
++            }
++
+             p_demux_track->chunk[i_chunk].i_sample_description_index =
+                     p_stsc->data.p_stsc->i_sample_description_index[i_index];
+             p_demux_track->chunk[i_chunk].i_sample_count =
