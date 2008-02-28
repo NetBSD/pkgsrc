@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.1.1.1 2007/11/22 20:50:09 drochner Exp $
+$NetBSD: patch-ae,v 1.2 2008/02/28 20:59:03 drochner Exp $
 
---- src/lib/FilePath.cpp.orig	2007-07-31 07:47:28.000000000 +0200
+--- src/lib/FilePath.cpp.orig	2008-02-25 11:38:32.000000000 +0100
 +++ src/lib/FilePath.cpp
 @@ -23,6 +23,8 @@
   #include <unistd.h>
@@ -10,8 +10,8 @@ $NetBSD: patch-ae,v 1.1.1.1 2007/11/22 20:50:09 drochner Exp $
 +
  #define PATH_DELIMITERS "\\/"
  
- std::string GetHomeDir()
-@@ -95,31 +97,7 @@ std::string GetAppPath()
+ std::string GetTempDirectory()
+@@ -106,31 +108,7 @@ std::string GetAppPath()
          ::GetModuleFileName(NULL, buf, 511);
          path = buf;
  #else
