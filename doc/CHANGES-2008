@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.379 2008/02/28 09:16:29 abs Exp $
+$NetBSD: CHANGES-2008,v 1.380 2008/02/28 14:57:12 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -706,3 +706,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated wm/fvwm-devel to 2.5.25 [martti 2008-02-27]
 	Updated security/heimdal to 1.1 [jlam 2008-02-28]
 	Updated converters/p5-JSON-Any to 1.16 [abs 2008-02-28]
+	Updated net/wireshark to 0.99.8 [tron 2008-02-28]
