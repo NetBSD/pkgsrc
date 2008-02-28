@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/10/12 16:53:55 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/02/28 18:07:54 drochner Exp $
 bin/stellarium
 share/locale/ar/LC_MESSAGES/stellarium.mo
 share/locale/az/LC_MESSAGES/stellarium.mo
@@ -9,13 +9,17 @@ share/locale/da/LC_MESSAGES/stellarium.mo
 share/locale/de/LC_MESSAGES/stellarium.mo
 share/locale/el/LC_MESSAGES/stellarium.mo
 share/locale/en/LC_MESSAGES/stellarium.mo
+share/locale/en_AU/LC_MESSAGES/stellarium.mo
 share/locale/en_GB/LC_MESSAGES/stellarium.mo
+share/locale/eo/LC_MESSAGES/stellarium.mo
 share/locale/es/LC_MESSAGES/stellarium.mo
 share/locale/et/LC_MESSAGES/stellarium.mo
 share/locale/fa/LC_MESSAGES/stellarium.mo
 share/locale/fi/LC_MESSAGES/stellarium.mo
+share/locale/fil/LC_MESSAGES/stellarium.mo
 share/locale/fr/LC_MESSAGES/stellarium.mo
 share/locale/ga/LC_MESSAGES/stellarium.mo
+share/locale/he/LC_MESSAGES/stellarium.mo
 share/locale/hr/LC_MESSAGES/stellarium.mo
 share/locale/hu/LC_MESSAGES/stellarium.mo
 share/locale/hw/LC_MESSAGES/stellarium.mo
@@ -24,7 +28,10 @@ share/locale/it/LC_MESSAGES/stellarium.mo
 share/locale/ja/LC_MESSAGES/stellarium.mo
 share/locale/kn/LC_MESSAGES/stellarium.mo
 share/locale/ko/LC_MESSAGES/stellarium.mo
+share/locale/lt/LC_MESSAGES/stellarium.mo
 share/locale/lv/LC_MESSAGES/stellarium.mo
+share/locale/mk/LC_MESSAGES/stellarium.mo
+share/locale/ml/LC_MESSAGES/stellarium.mo
 share/locale/mt/LC_MESSAGES/stellarium.mo
 share/locale/nb/LC_MESSAGES/stellarium.mo
 share/locale/nl/LC_MESSAGES/stellarium.mo
@@ -38,6 +45,8 @@ share/locale/sk/LC_MESSAGES/stellarium.mo
 share/locale/sl/LC_MESSAGES/stellarium.mo
 share/locale/sr/LC_MESSAGES/stellarium.mo
 share/locale/sv/LC_MESSAGES/stellarium.mo
+share/locale/th/LC_MESSAGES/stellarium.mo
+share/locale/tl/LC_MESSAGES/stellarium.mo
 share/locale/tr/LC_MESSAGES/stellarium.mo
 share/locale/uk/LC_MESSAGES/stellarium.mo
 share/locale/vi/LC_MESSAGES/stellarium.mo
@@ -47,14 +56,15 @@ share/locale/zh_TW/LC_MESSAGES/stellarium.mo
 share/stellarium/data/DejaVuSans.ttf
 share/stellarium/data/DejaVuSansMono.ttf
 share/stellarium/data/cities_Earth.fab
+share/stellarium/data/cities_Mars.fab
 share/stellarium/data/cities_Moon.fab
+share/stellarium/data/cities_Venus.fab
 share/stellarium/data/constellations_boundaries.dat
 share/stellarium/data/default_config.ini
 share/stellarium/data/double_txt.dat
 share/stellarium/data/fontmap.dat
 share/stellarium/data/icon.bmp
 share/stellarium/data/iso639-1.utf8
-share/stellarium/data/landscapes.ini
 share/stellarium/data/ssystem.ini
 share/stellarium/data/stellarium.ico
 share/stellarium/data/variable_txt.dat
@@ -253,11 +263,19 @@ share/stellarium/skycultures/navajo/constellation_names.eng.fab
 share/stellarium/skycultures/navajo/constellationship.fab
 share/stellarium/skycultures/navajo/info.ini
 share/stellarium/skycultures/navajo/star_names.fab
+share/stellarium/skycultures/norse/constellation_names.eng.fab
+share/stellarium/skycultures/norse/constellationship.fab
+share/stellarium/skycultures/norse/info.ini
+share/stellarium/skycultures/norse/star_names.fab
 share/stellarium/skycultures/polynesian/constellation_names.eng.fab
 share/stellarium/skycultures/polynesian/constellationsart.fab
 share/stellarium/skycultures/polynesian/constellationship.fab
 share/stellarium/skycultures/polynesian/info.ini
 share/stellarium/skycultures/polynesian/star_names.fab
+share/stellarium/skycultures/tupi/constellation_names.eng.fab
+share/stellarium/skycultures/tupi/constellationship.fab
+share/stellarium/skycultures/tupi/info.ini
+share/stellarium/skycultures/tupi/star_names.fab
 share/stellarium/skycultures/western/andromeda.png
 share/stellarium/skycultures/western/antlia.png
 share/stellarium/skycultures/western/apus.png
@@ -350,10 +368,10 @@ share/stellarium/skycultures/western/volans.png
 share/stellarium/skycultures/western/vulpecula.png
 share/stellarium/stars/default/name.fab
 share/stellarium/stars/default/stars.ini
-share/stellarium/stars/default/stars_0_0v0_0.cat
-share/stellarium/stars/default/stars_1_0v0_0.cat
-share/stellarium/stars/default/stars_2_0v0_0.cat
-share/stellarium/stars/default/stars_3_0v0_0.cat
+share/stellarium/stars/default/stars_0_0v0_1.cat
+share/stellarium/stars/default/stars_1_0v0_1.cat
+share/stellarium/stars/default/stars_2_0v0_1.cat
+share/stellarium/stars/default/stars_3_1v0_0.cat
 share/stellarium/stars/default/stars_hip_cids_0v0_0.cat
 share/stellarium/stars/default/stars_hip_sp_0v0_0.cat
 share/stellarium/textures/ariel.png
@@ -444,7 +462,9 @@ share/stellarium/textures/zenith.png
 @dirrm share/stellarium/stars/default
 @dirrm share/stellarium/stars
 @dirrm share/stellarium/skycultures/western
+@dirrm share/stellarium/skycultures/tupi
 @dirrm share/stellarium/skycultures/polynesian
+@dirrm share/stellarium/skycultures/norse
 @dirrm share/stellarium/skycultures/navajo
 @dirrm share/stellarium/skycultures/lakota
 @dirrm share/stellarium/skycultures/korean
