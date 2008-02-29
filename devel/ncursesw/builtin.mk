@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2008/02/22 13:48:21 tron Exp $
+# $NetBSD: builtin.mk,v 1.7 2008/02/29 19:23:07 jlam Exp $
 
 BUILTIN_PKG:=	ncursesw
 
@@ -7,7 +7,7 @@ BUILTIN_PKG:=	ncursesw
 #
 # XXX Need to deal with Solaris <curses.h>
 #
-BUILTIN_FIND_LIBS:=			ncursesw
+BUILTIN_FIND_LIBS:=			ncursesw curses
 BUILTIN_FIND_FILES_VAR:=		H_NB_CURSESW H_NCURSESW
 BUILTIN_FIND_FILES.H_NB_CURSESW=	/usr/include/curses.h
 BUILTIN_FIND_GREP.H_NB_CURSESW=		\#ifdef[ 	]*HAVE_WCHAR
@@ -94,6 +94,15 @@ MAKEVARS+=	USE_BUILTIN.ncursesw
 USE_BUILTIN.ncursesw=	no
 .endif
 
+# Define BUILTIN_LIBNAME.ncursesw to be the base name of the built-in
+# ncursesw library.
+#
+.if !empty(BUILTIN_LIB_FOUND.ncursesw:M[yY][eE][sS])
+BUILTIN_LIBNAME.ncursesw=	ncursesw
+.elif !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
+BUILTIN_LIBNAME.ncursesw=	curses
+.endif
+
 ###
 ### The section below only applies if we are not including this file
 ### solely to determine whether a built-in implementation exists.
@@ -102,9 +111,8 @@ CHECK_BUILTIN.ncursesw?=	no
 .if !empty(CHECK_BUILTIN.ncursesw:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.ncursesw:M[yY][eE][sS])
-.    if !empty(BUILTIN_LIB_FOUND.ncursesw:M[nN][oO])
-BUILDLINK_TRANSFORM+=		l:ncursesw:curses
-.    endif
+BUILDLINK_LIBNAME.ncursesw=	${BUILTIN_LIBNAME.ncursesw}
+BUILDLINK_TRANSFORM+=		l:ncursesw:${BUILTIN_LIBNAME.ncursesw}
 .    if empty(H_NB_CURSESW:M__nonexistent__) && \
 	empty(H_NB_CURSESW:M${LOCALBASE}/*)
 BUILDLINK_CPPFLAGS.ncursesw+=	-DHAVE_WCHAR=1
