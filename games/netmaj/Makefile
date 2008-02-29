@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2008/02/02 21:04:00 heinz Exp $
+# $NetBSD: Makefile,v 1.14 2008/02/29 20:53:02 jlam Exp $
 #
 
 DISTNAME=		netmaj-2.0.7
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		games
 MASTER_SITES=		http://www.sfc.wide.ad.jp/~kusune/netmaj/files/
 
@@ -14,16 +14,20 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/netmaj
 USE_TOOLS+=		perl:run
+HAS_CONFIGURE=		yes
+CONFIGURE_ENV+=		OPSYS=${OPSYS:Q}
+CONFIGURE_ENV+=		CURSES_LIBS=${BUILDLINK_LDADD.ncursesw:Q}
 
 INSTALL_TARGET=		install install-pf
-HTMLDIR=		${PREFIX}/share/doc/html/netmaj
+DOCDIR=			${PREFIX}/share/doc/netmaj
 
-do-build:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} libs
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM}
+pre-configure:
+	cp ${FILESDIR}/configure.sh ${WRKSRC}/configure
+	chmod +x ${WRKSRC}/configure
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}
-	${INSTALL_DATA} ${WRKSRC}/html/* ${DESTDIR}${HTMLDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/html/* ${DESTDIR}${DOCDIR}
 
+.include "../../devel/ncursesw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
