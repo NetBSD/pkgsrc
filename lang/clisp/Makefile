@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.66 2008/01/30 14:20:54 is Exp $
+# $NetBSD: Makefile,v 1.67 2008/02/29 19:34:44 tnn Exp $
+#
 
-DISTNAME=	clisp-2.41
+DISTNAME=	clisp-2.44.1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clisp/}
-EXTRACT_SUFX=	.tar.bz2
+#EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://clisp.cons.org/
 COMMENT=	CLISP, a Common Lisp implementation
 
@@ -16,51 +17,36 @@ NOT_FOR_PLATFORM+=	*-*-arm
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
 
-.include "../../mk/bsd.prefs.mk"
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-.if ${OPSYS} == "NetBSD"
-# CLISP doesn't work with jemalloc, which is default in current
-MODULES+=		--with-gmalloc
-.endif
-
-.if ${MACHINE_ARCH:Malpha} || ${MACHINE_ARCH:Mamd64} || ${MACHINE_ARCH:Mx86_64} || ${OPSYS} == "DragonFly"
-MODULES+=		--disable-mmap
-.endif
-
-USE_TOOLS+=		dvipdf
+USE_TOOLS+=		dvipdf gmake
 USE_PKGLOCALEDIR=	YES
 BUILD_DIRS=		src
-CONFIGURE_DIRS=		. modules/i18n modules/syscalls modules/pcre modules/rawsock \
-			modules/readline modules/regexp modules/wildcard modules/zlib
-CONFIGURE_ENV+=		CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q} CPPFLAGS=${CPPFLAGS:M*:Q}
 GNU_CONFIGURE=		YES
 UNLIMIT_RESOURCES=	stacksize
 USE_LIBTOOL=		YES
-USE_GNU_READLINE=	YES
-MODULES+=		--with-module=pcre --with-module=rawsock
-MODULES+=		--with-module=wildcard --with-module=zlib
-CONFIGURE_ARGS+=	${MODULES}
+CONFIGURE_ARGS+=	--fsstnd=netbsd
+CONFIGURE_ARGS+=	--without-included-regex
+CONFIGURE_ARGS+=	--with-gettext
 TEST_TARGET=		check
-MAKE_ENV+=		TOOLS_PLATFORM.install=${TOOLS_PLATFORM.install:Q}
+MAKE_FLAGS+=		docdir=${PREFIX}/share/doc/${PKGNAME}
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
+MAKE_FLAGS+=		elispdir="${PREFIX}/share/${PKGNAME}/emacs"
+MAKE_FLAGS+=		vimdir="${PREFIX}/share/${PKGNAME}/vim"
 MAKE_JOBS_SAFE=		no
 
-post-configure:
-	cd ${WRKSRC}/src && \
-	./makemake --prefix=${PREFIX} --with-readline --with-gettext \
-		--with-dynamic-ffi --fsstnd=netbsd ${MODULES} >Makefile
+.include "../../mk/bsd.prefs.mk"
 
-pre-build:
-	cd ${WRKSRC}/src/avcall && ${MAKE}
-	cd ${WRKSRC}/src/callback && ${MAKE}
+.if ${MACHINE_ARCH:Malpha} || ${MACHINE_ARCH:Mamd64} || ${MACHINE_ARCH:Mx86_64} || ${OPSYS} == "DragonFly"
+CONFIGURE_ARGS+=	--disable-mmap
+.endif
+
+.include "options.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libsigsegv+=	libsigsegv>=2.4
 .include "../../devel/libsigsegv/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
-BUILDLINK_API_DEPENDS.zlib+=	zlib>=1.2
-.include "../../devel/zlib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,26 +1,23 @@
-$NetBSD: patch-aa,v 1.15 2007/06/09 06:10:31 obache Exp $
+$NetBSD: patch-aa,v 1.16 2008/02/29 19:34:44 tnn Exp $
 
---- src/makemake.in.orig	2006-10-01 17:54:24.000000000 +0000
+Don't use cache file to avoid trailing space problem.
+
+--- src/makemake.in.orig	2008-01-03 20:28:49.000000000 +0100
 +++ src/makemake.in
-@@ -841,10 +841,10 @@ else
+@@ -1881,6 +1881,7 @@ echol "psdir   = ${PSDIR}"
+ echol "pdfdir  = ${PDFDIR}"
+ echol "libdir  = ${LIBDIR}"
+ echol "lisplibdir = \$(libdir)${NEXT_}\$(TOPDIR)"
++echol "lisplibdir = \$(libdir)${NEXT_}clisp"
+ if [ -n "$USE_GETTEXT" ] ; then
+   echol "localedir = ${LOCALEDIR}"
  fi
- if [ $HOS = unix ] ; then
-   test -n "$mandir" ||
--    mandir='${datadir}/man' # with autoconf-2.60: mandir='@mandir@' # usually '${datadir}/man'
-+    mandir='${prefix}/man' # with autoconf-2.60: mandir='@mandir@' # usually '${datadir}/man'
-   MANDIR=`echo "$mandir" | sed -e "$brace_to_paren"`
- else
--  mandir="\$(datadir)${NEXT_}man"
-+  mandir="\$(prefix)${NEXT_}man"
-   MANDIR="$mandir"
- fi
- if [ $HOS = unix ] ; then
-@@ -1361,7 +1361,7 @@ if [ "${with_dynamic_modules}" != no ]; 
-     freebsd2* | netbsd* | openbsd*)
-       XCC_CREATESHARED='ld -Bshareable -o $lib $libs'
-       ;;
--    freebsd3* | gnu* | linux* | cygwin* | k*bsd*)
-+    freebsd3* | gnu* | linux* | cygwin* | k*bsd* | dragonfly*)
-       XCC_CREATESHARED='$CC $CFLAGS $CLFLAGS -shared -o $lib $libs'
-       ;;
-     hpux9* | hpux10*)
+@@ -3342,7 +3343,7 @@ echotab "      if test \"\$\${ac_cv_env_
+ echotab "      if test \"\$\${ac_cv_env_CFLAGS_set}\" = set; then CFLAGS=\"\$\${ac_cv_env_CFLAGS_value}\"; export CFLAGS; fi; \\"
+ # we must use $(SHELL) for sub-configures because when the top CONFIG_SHELL
+ # is bash, config.cache may be unparsable with sh on Solaris
+-echotab "      \$(SHELL) ./configure --cache-file=\$\${cache} --srcdir=\$\$m \$(MODULE_CONFIGURE_FLAGS);\\"
++echotab "      \$(SHELL) ./configure --srcdir=\$\$m \$(MODULE_CONFIGURE_FLAGS);\\"
+ echotab "    else \$(SHELL) ./configure --srcdir=\$\$m \$(MODULE_CONFIGURE_FLAGS); \\"
+ echotab "    fi ) ;\\"
+ echotab "fi"
