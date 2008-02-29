@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.22 2008/02/29 16:14:09 jlam Exp $
+# $NetBSD: builtin.mk,v 1.23 2008/02/29 16:19:21 jlam Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -103,9 +103,9 @@ USE_BUILTIN.ncurses=	no
 # Define BUILTIN_LIBNAME.ncurses to be the base name of the built-in
 # ncurses library.
 #
+.if !empty(BUILTIN_LIB_FOUND.ncurses:M[yY][eE][sS])
 BUILTIN_LIBNAME.ncurses=	ncurses
-.if !empty(BUILTIN_LIB_FOUND.ncurses:M[nN][oO]) && \
-    !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
+.elif !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
 BUILTIN_LIBNAME.ncurses=	curses
 .endif
 #
