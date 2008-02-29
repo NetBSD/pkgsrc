@@ -1,15 +1,22 @@
-$NetBSD: patch-ab,v 1.12 2007/04/01 12:45:39 tron Exp $
+$NetBSD: patch-ab,v 1.13 2008/02/29 19:34:44 tnn Exp $
 
---- libcharset/Makefile.in.orig	2005-03-23 21:27:45.000000000 +0200
-+++ libcharset/Makefile.in
-@@ -45,8 +45,8 @@ include/localcharset.h :
- install-lib : all force
- 	cd lib && $(MAKE) install-lib libdir='$(libdir)' includedir='$(includedir)'
- 	$(mkinstalldirs) $(includedir)
--	$(INSTALL_DATA) include/libcharset.h $(includedir)/libcharset.h
--	$(INSTALL_DATA) include/localcharset.h $(includedir)/localcharset.h
-+	$(TOOLS_PLATFORM.install) -c -m 644 include/libcharset.h $(includedir)/libcharset.h
-+	$(TOOLS_PLATFORM.install) -c -m 644 include/localcharset.h $(includedir)/localcharset.h
- 
- install : include/libcharset.h include/localcharset.h force
- 	cd lib && $(MAKE) install prefix='$(prefix)' exec_prefix='$(exec_prefix)' libdir='$(libdir)'
+--- src/po/Makefile.in.in.orig	2007-10-28 01:52:28.000000000 +0200
++++ src/po/Makefile.in.in
+@@ -80,7 +80,7 @@ install-data-yes: all force
+ 	@catalogs='$(CATALOGS)'; \
+ 	for cat in $$catalogs; do \
+ 	  cat=`basename $$cat`; \
+-	  destdir=$(localedir); \
++	  destdir=$(DESTDIR)$(localedir); \
+ 	  lang=`echo $$cat | sed 's/\.gmo$$//'`; \
+ 	  dir="$$destdir/$$lang/LC_MESSAGES"; \
+ 	  datarootdir=`echo "$$destdir" | sed -e 's,/[^/]*$$,,'`; \
+@@ -108,7 +108,7 @@ installdirs: force
+ 	@catalogs='$(CATALOGS)'; \
+ 	for cat in $$catalogs; do \
+ 	  cat=`basename $$cat`; \
+-	  destdir=$(localedir); \
++	  destdir=$(DESTDIR)$(localedir); \
+ 	  lang=`echo $$cat | sed 's/\.gmo$$//'`; \
+ 	  dir="$$destdir/$$lang/LC_MESSAGES"; \
+ 	  datarootdir=`echo "$$destdir" | sed -e 's,/[^/]*,,'`; \
