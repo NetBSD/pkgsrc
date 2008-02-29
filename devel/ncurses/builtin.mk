@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.19 2008/02/27 15:26:34 jlam Exp $
+# $NetBSD: builtin.mk,v 1.20 2008/02/29 15:28:12 tron Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -105,7 +105,7 @@ USE_BUILTIN.ncurses=	no
 #
 .if !empty(BUILTIN_LIB_FOUND.ncurses:M[nN][oO]) && \
     !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
-BUILTIN_LIBNAME.ncurses=	curses
+#BUILTIN_LIBNAME.ncurses=	curses
 .endif
 #
 # On Interix, there is a libncurses.a and a libcurses.so but strangely,
@@ -124,7 +124,9 @@ BUILTIN_LIBNAME.ncurses=	curses
 CHECK_BUILTIN.ncurses?=	no
 .if !empty(CHECK_BUILTIN.ncurses:M[nN][oO])
 
+.  if !empty(${BUILDLINK_LIBNAME.ncurses})
 BUILDLINK_TRANSFORM+=		l:ncurses:${BUILDLINK_LIBNAME.ncurses}
+.  endif
 .  if !empty(USE_BUILTIN.ncurses:M[yY][eE][sS])
 BUILDLINK_LIBNAME.ncurses=	${BUILTIN_LIBNAME.ncurses}
 BUILDLINK_TARGETS+=		buildlink-curses-ncurses-h
