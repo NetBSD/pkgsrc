@@ -1,0 +1,20 @@
+$NetBSD: patch-af,v 1.1 2008/02/29 16:58:14 tnn Exp $
+
+--- liboil/i386_amd64/mas.c.orig	2008-02-22 20:59:17.000000000 +0100
++++ liboil/i386_amd64/mas.c
+@@ -735,6 +735,7 @@ mas8_u8_sym_mmx_5 (uint8_t *d, const uin
+ }
+ OIL_DEFINE_IMPL_FULL (mas8_u8_sym_mmx_5, mas8_u8_sym_l15, OIL_IMPL_FLAG_MMX|OIL_IMPL_FLAG_MMXEXT);
+ 
++#ifdef HAVE_SSSE3_ASM
+ void
+ mas8_u8_sym_mmx_6 (uint8_t *d, const uint8_t *s1_np7, const int16_t *s2_8,
+         const int16_t *s3_2, int n)
+@@ -798,6 +799,7 @@ mas8_u8_sym_mmx_6 (uint8_t *d, const uin
+       : "ecx");
+ }
+ OIL_DEFINE_IMPL_FULL (mas8_u8_sym_mmx_6, mas8_u8_sym_l15, OIL_IMPL_FLAG_MMX|OIL_IMPL_FLAG_MMXEXT|OIL_IMPL_FLAG_SSSE3);
++#endif
+ 
+ #ifdef ENABLE_BROKEN_IMPLS
+ /* This only works for the taps array: -1, 3, -7, 21, 21, -7, 3, -1 */
