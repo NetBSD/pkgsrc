@@ -1,4 +1,4 @@
-# $NetBSD: termlib.buildlink3.mk,v 1.4 2008/02/27 21:32:45 jlam Exp $
+# $NetBSD: termlib.buildlink3.mk,v 1.5 2008/02/29 16:28:51 jlam Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # a basic termlib implementation.
@@ -44,6 +44,7 @@ BUILDLINK_LDADD.termlib?=	${BUILDLINK_LIBNAME.termlib:S/^/-l/:S/^-l$//}
 BUILDLINK_BUILTIN_MK.termlib=	../../mk/termlib.builtin.mk
 .elif ${TERMLIB_TYPE} == "curses"
 .  include "../../mk/curses.buildlink3.mk"
+BUILDLINK_PREFIX.termlib?=	${BUILDLINK_PREFIX.curses}
 BUILDLINK_LIBNAME.termlib?=	${BUILDLINK_LIBNAME.curses}
 BUILDLINK_LDADD.termlib?=	${BUILDLINK_LDADD.curses}
 .endif
