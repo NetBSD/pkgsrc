@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2007/10/14 22:49:43 tron Exp $
+# $NetBSD: Makefile,v 1.42 2008/02/29 00:38:12 heinz Exp $
 
 DISTNAME=	libpcap-0.9.8
 SVR4_PKGNAME=	lpcap
@@ -11,6 +11,7 @@ COMMENT=	System-independent interface for user-level packet capture
 
 NOT_FOR_PLATFORM+=	Interix-*-* # no raw interface access
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_TOOLS+=		bison gm4 lex
@@ -24,6 +25,6 @@ CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/pcap-int.h ${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/pcap-int.h ${DESTDIR}${PREFIX}/include
 
 .include "../../mk/bsd.pkg.mk"
