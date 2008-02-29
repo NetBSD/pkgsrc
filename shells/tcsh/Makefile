@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2008/01/03 23:21:41 heinz Exp $
+# $NetBSD: Makefile,v 1.60 2008/02/29 22:23:50 jlam Exp $
 #
 
 DISTNAME=	tcsh-6.15.00
+PKGREVISION=	1
 CATEGORIES=	shells
 MASTER_SITES=	ftp://ftp.astron.com/pub/tcsh/ \
 		ftp://ftp.gw.com/pub/unix/tcsh/ \
@@ -28,6 +29,8 @@ PLIST_SRC=	${WRKDIR}/PLIST-src
 OS_VER_cmd=	${ECHO} ${OS_VERSION} | ${SED} -e 's|5\.|2.|'
 LOWER_OPSYS=	solaris${OS_VER_cmd:sh}
 .endif
+
+CONFIGURE_ENV+=	ac_cv_search_tgetent=${BUILDLINK_LDADD.termlib:Q}
 
 PKG_SHELL?=	bin/tcsh
 
@@ -86,4 +89,5 @@ post-install:
 	    done;							\
 	fi
 
+.include "../../mk/termlib.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
