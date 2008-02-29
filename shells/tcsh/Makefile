@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2008/02/29 22:23:50 jlam Exp $
+# $NetBSD: Makefile,v 1.61 2008/02/29 22:42:02 jlam Exp $
 #
 
 DISTNAME=	tcsh-6.15.00
@@ -30,7 +30,7 @@ OS_VER_cmd=	${ECHO} ${OS_VERSION} | ${SED} -e 's|5\.|2.|'
 LOWER_OPSYS=	solaris${OS_VER_cmd:sh}
 .endif
 
-CONFIGURE_ENV+=	ac_cv_search_tgetent=${BUILDLINK_LDADD.termlib:Q}
+CONFIGURE_ENV+=	ac_cv_search_tgetent=${BUILDLINK_LDADD.termcap:Q}
 
 PKG_SHELL?=	bin/tcsh
 
@@ -89,5 +89,5 @@ post-install:
 	    done;							\
 	fi
 
-.include "../../mk/termlib.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
