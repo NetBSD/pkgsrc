@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:28 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/02/29 16:44:55 jlam Exp $
 include/slcurses.h
 include/slang.h
 lib/libslang.la
-share/doc/html/slang/slangdoc.html
 share/doc/slang/COPYING
 share/doc/slang/COPYING.ART
 share/doc/slang/COPYING.GPL
@@ -11,6 +10,6 @@ share/doc/slang/changes.txt
 share/doc/slang/cref.txt
 share/doc/slang/cslang.txt
 share/doc/slang/slang.txt
+share/doc/slang/slangdoc.html
 share/doc/slang/slangfun.txt
 @dirrm share/doc/slang
-@dirrm share/doc/html/slang
