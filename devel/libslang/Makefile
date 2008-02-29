@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2008/02/29 16:44:55 jlam Exp $
+# $NetBSD: Makefile,v 1.63 2008/02/29 22:41:13 jlam Exp $
 #
 
 DISTNAME=	slang-1.4.9
@@ -24,14 +24,14 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 DLOPEN_REQUIRE_PTHREADS=no
 
-.include "../../mk/termlib.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 
-.if ${TERMLIB_TYPE} == "termcap"
-CONFIGURE_ENV+=		TERMCAP=${BUILDLINK_LDADD.termlib:Q}
+.if ${TERMCAP_TYPE} == "termcap"
+CONFIGURE_ENV+=		TERMCAP=${BUILDLINK_LDADD.termcap:Q}
 CONFIGURE_ENV+=		MISC_TERMINFO_DIRS=${PREFIX:Q}/share/terminfo
 .else
 CONFIGURE_ENV+=		TERMCAP=
-CONFIGURE_ENV+=		MISC_TERMINFO_DIRS=${BUILDLINK_PREFIX.termlib:Q}/share/terminfo
+CONFIGURE_ENV+=		MISC_TERMINFO_DIRS=${BUILDLINK_PREFIX.termcap:Q}/share/terminfo
 .endif
 
 .include "../../mk/dlopen.buildlink3.mk"

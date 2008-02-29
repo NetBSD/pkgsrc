@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2008/02/28 08:14:41 jlam Exp $
+# $NetBSD: Makefile,v 1.66 2008/02/29 22:41:13 jlam Exp $
 
 DISTNAME=	heimdal-1.1
 CATEGORIES=	security
@@ -50,7 +50,7 @@ CONFIGURE_ENV.SunOS+=	ac_cv_header_vis_h=no
 # <readline.h>.  Also force the configure script to use the terminal
 # library needed by the readline library.
 #
-CONFIGURE_ENV+=		ac_cv_funclib_tgetent=${BUILDLINK_LDADD.termlib:Q}
+CONFIGURE_ENV+=		ac_cv_funclib_tgetent=${BUILDLINK_LDADD.termcap:Q}
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.readline}/include/readline
 

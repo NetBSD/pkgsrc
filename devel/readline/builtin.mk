@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.16 2008/02/27 18:16:37 jlam Exp $
+# $NetBSD: builtin.mk,v 1.17 2008/02/29 22:41:13 jlam Exp $
 
 BUILTIN_PKG:=	readline
 
@@ -109,15 +109,15 @@ CHECK_BUILTIN.readline?=	no
 .  if !empty(USE_BUILTIN.readline:M[yY][eE][sS])
 .    if !empty(BUILTIN_LIB_FOUND.history:M[Nn][Oo]) && \
 	!empty(BUILTIN_LIB_FOUND.readline:M[Yy][Ee][Ss])
-BUILDLINK_TRANSFORM+=	l:history:readline:${BUILTIN_LIBNAME.termlib}
+BUILDLINK_TRANSFORM+=	l:history:readline:${BUILTIN_LIBNAME.termcap}
 .    endif
 .    if !empty(BUILTIN_LIB_FOUND.history:M[nN][oO]) && \
 	!empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS])
-BUILDLINK_TRANSFORM+=	l:history:edit:${BUILTIN_LIBNAME.termlib}
+BUILDLINK_TRANSFORM+=	l:history:edit:${BUILTIN_LIBNAME.termcap}
 .    endif
 .    if !empty(BUILTIN_LIB_FOUND.readline:M[nN][oO]) && \
 	!empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS])
-BUILDLINK_TRANSFORM+=	l:readline:edit:${BUILTIN_LIBNAME.termlib}
+BUILDLINK_TRANSFORM+=	l:readline:edit:${BUILTIN_LIBNAME.termcap}
 .    endif
 .  endif
 
