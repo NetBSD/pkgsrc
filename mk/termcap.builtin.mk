@@ -1,6 +1,6 @@
-# $NetBSD: termlib.builtin.mk,v 1.3 2008/02/27 17:36:34 jlam Exp $
+# $NetBSD: termcap.builtin.mk,v 1.1 2008/02/29 22:41:13 jlam Exp $
 
-BUILTIN_PKG:=	termlib
+BUILTIN_PKG:=	termcap
 
 BUILTIN_FIND_LIBS:=	termcap tinfo curses
 
@@ -10,49 +10,49 @@ BUILTIN_FIND_LIBS:=	termcap tinfo curses
 ### Determine if there is a built-in implementation of the package and
 ### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
 ###
-.if !defined(IS_BUILTIN.termlib)
-IS_BUILTIN.termlib=	no
+.if !defined(IS_BUILTIN.termcap)
+IS_BUILTIN.termcap=	no
 .  if !empty(BUILTIN_LIB_FOUND.termcap:M[yY][eE][sS]) || \
       !empty(BUILTIN_LIB_FOUND.tinfo:M[yY][eE][sS]) || \
       !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
-IS_BUILTIN.termlib=	yes
+IS_BUILTIN.termcap=	yes
 .  endif
 .endif
-MAKEVARS+=	IS_BUILTIN.termlib
+MAKEVARS+=	IS_BUILTIN.termcap
 
 ###
 ### Determine whether we should use the built-in implementation if it
 ### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
 ###
-.if !defined(USE_BUILTIN.termlib)
-.  if ${PREFER.termlib} == "pkgsrc"
-USE_BUILTIN.termlib=	no
+.if !defined(USE_BUILTIN.termcap)
+.  if ${PREFER.termcap} == "pkgsrc"
+USE_BUILTIN.termcap=	no
 .  else
-USE_BUILTIN.termlib=	${IS_BUILTIN.termlib}
-.  endif  # PREFER.termlib
+USE_BUILTIN.termcap=	${IS_BUILTIN.termcap}
+.  endif  # PREFER.termcap
 .endif
-MAKEVARS+=	USE_BUILTIN.termlib
+MAKEVARS+=	USE_BUILTIN.termcap
 
-# Define BUILTIN_LIBNAME.termlib to be the base name of the built-in
-# terminal library.
+# Define BUILTIN_LIBNAME.termcap to be the base name of the built-in
+# termcap library.
 #
 .if !empty(BUILTIN_LIB_FOUND.termcap:M[yY][eE][sS])
-BUILTIN_LIBNAME.termlib=	termcap
+BUILTIN_LIBNAME.termcap=	termcap
 .elif !empty(BUILTIN_LIB_FOUND.tinfo:M[yY][eE][sS])
-BUILTIN_LIBNAME.termlib=	tinfo
+BUILTIN_LIBNAME.termcap=	tinfo
 .elif !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
-BUILTIN_LIBNAME.termlib=	curses
+BUILTIN_LIBNAME.termcap=	curses
 .endif
 
 ###
 ### The section below only applies if we are not including this file
 ### solely to determine whether a built-in implementation exists.
 ###
-CHECK_BUILTIN.termlib?=	no
-.if !empty(CHECK_BUILTIN.termlib:M[nN][oO])
+CHECK_BUILTIN.termcap?=	no
+.if !empty(CHECK_BUILTIN.termcap:M[nN][oO])
 
-.  if !empty(USE_BUILTIN.termlib:M[yY][eE][sS])
-BUILDLINK_LIBNAME.termlib=	${BUILTIN_LIBNAME.termlib}
+.  if !empty(USE_BUILTIN.termcap:M[yY][eE][sS])
+BUILDLINK_LIBNAME.termcap=	${BUILTIN_LIBNAME.termcap}
 .  endif
 
-.endif	# CHECK_BUILTIN.termlib
+.endif	# CHECK_BUILTIN.termcap

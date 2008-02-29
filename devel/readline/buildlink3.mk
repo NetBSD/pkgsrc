@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2008/02/27 18:16:37 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2008/02/29 22:41:13 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 READLINE_BUILDLINK3_MK:=	${READLINE_BUILDLINK3_MK}+
@@ -30,7 +30,7 @@ BUILDLINK_FNAME_TRANSFORM.readline+= \
 .  include "../../mk/bsd.fast.prefs.mk"
 BROKEN_READLINE_DETECTION?=	no
 .  if !empty(BROKEN_READLINE_DETECTION:M[yY][eE][sS])
-BUILDLINK_TRANSFORM+=		l:readline:readline:${BUILDLINK_LIBNAME.termlib}
+BUILDLINK_TRANSFORM+=		l:readline:readline:${BUILDLINK_LIBNAME.termcap}
 .  endif
 .endif	# READLINE_BUILDLINK3_MK
 
@@ -38,11 +38,11 @@ CHECK_BUILTIN.readline:=	yes
 .include "../../devel/readline/builtin.mk"
 CHECK_BUILTIN.readline:=	no
 
-# A built-in readline is always going to use a built-in termlib.
+# A built-in readline is always going to use a built-in termcap.
 .if !empty(USE_BUILTIN.readline:M[yY][eE][sS])
-USE_BUILTIN.termlib=	yes
+USE_BUILTIN.termcap=	yes
 .endif
 
-.include "../../mk/termlib.buildlink3.mk"
+.include "../../mk/termcap.buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
