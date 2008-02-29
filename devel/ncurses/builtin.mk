@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.21 2008/02/29 16:04:55 tron Exp $
+# $NetBSD: builtin.mk,v 1.22 2008/02/29 16:14:09 jlam Exp $
 
 BUILTIN_PKG:=	ncurses
 
@@ -103,6 +103,7 @@ USE_BUILTIN.ncurses=	no
 # Define BUILTIN_LIBNAME.ncurses to be the base name of the built-in
 # ncurses library.
 #
+BUILTIN_LIBNAME.ncurses=	ncurses
 .if !empty(BUILTIN_LIB_FOUND.ncurses:M[nN][oO]) && \
     !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
 BUILTIN_LIBNAME.ncurses=	curses
@@ -124,9 +125,9 @@ BUILTIN_LIBNAME.ncurses=	curses
 CHECK_BUILTIN.ncurses?=	no
 .if !empty(CHECK_BUILTIN.ncurses:M[nN][oO])
 
-BUILDLINK_TRANSFORM+=		l:ncurses:${BUILDLINK_LIBNAME.ncurses}
 .  if !empty(USE_BUILTIN.ncurses:M[yY][eE][sS])
 BUILDLINK_LIBNAME.ncurses=	${BUILTIN_LIBNAME.ncurses}
+BUILDLINK_TRANSFORM+=		l:ncurses:${BUILTIN_LIBNAME.ncurses}
 BUILDLINK_TARGETS+=		buildlink-curses-ncurses-h
 BUILDLINK_TARGETS+=		buildlink-ncurses-extra-includes
 .  endif
