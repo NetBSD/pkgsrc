@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.208 2008/02/13 18:33:39 tnn Exp $
+# $NetBSD: replace.mk,v 1.209 2008/02/29 00:23:09 tnn Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -282,6 +282,17 @@ TOOLS_PATH.bzcat=		${TOOLS_PREFIX.${_t_}}/bin/${_t_}
 .    endif
 .  endif
 .endfor
+
+.if !defined(TOOLS_IGNORE.chrpath) && !empty(_USE_TOOLS:Mchrpath)
+.  if !empty(PKGPATH:Mdevel/chrpath)
+MAKEFLAGS+=			TOOLS_IGNORE.chrpath=
+.  elif !empty(_TOOLS_USE_PKGSRC.chrpath:M[yY][eE][sS])
+TOOLS_DEPENDS.chrpath?=		chrpath>=0.13:../../devel/chrpath
+TOOLS_CREATE+=			chrpath
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.chrpath=chrpath
+TOOLS_PATH.chrpath=		${TOOLS_PREFIX.chrpath}/bin/chrpath
+.  endif
+.endif
 
 .for _t_ in cmake cpack
 .  if !defined(TOOLS_IGNORE.${_t_}) && !empty(_USE_TOOLS:M${_t_})
