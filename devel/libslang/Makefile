@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.61 2007/06/08 18:39:23 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2008/02/29 16:44:55 jlam Exp $
 #
 
 DISTNAME=	slang-1.4.9
 PKGNAME=	lib${DISTNAME}
 SVR4_PKGNAME=	lslan
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	devel
 MASTER_SITES=	ftp://space.mit.edu/pub/davis/slang/v1.4/ \
 		http://gd.tuwien.ac.at/editors/davis/slang/v1.4/ \
@@ -22,20 +22,16 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-
 DLOPEN_REQUIRE_PTHREADS=no
 
-post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/html/slang
-	${MV} ${DESTDIR}${PREFIX}/share/doc/slang/slangdoc.html \
-		${DESTDIR}${PREFIX}/share/doc/html/slang
+.include "../../mk/termlib.buildlink3.mk"
 
-.include "../../mk/bsd.prefs.mk"
-
-# Debian doesn't have -ltermcap, use -lncurses instead
-.if (${OPSYS} == "Linux") && (${LOWER_VENDOR} == "debian")
-BUILDLINK_TRANSFORM+=	rm:-ltermcap
-.  include "../../devel/ncurses/buildlink3.mk"
+.if ${TERMLIB_TYPE} == "termcap"
+CONFIGURE_ENV+=		TERMCAP=${BUILDLINK_LDADD.termlib:Q}
+CONFIGURE_ENV+=		MISC_TERMINFO_DIRS=${PREFIX:Q}/share/terminfo
+.else
+CONFIGURE_ENV+=		TERMCAP=
+CONFIGURE_ENV+=		MISC_TERMINFO_DIRS=${BUILDLINK_PREFIX.termlib:Q}/share/terminfo
 .endif
 
 .include "../../mk/dlopen.buildlink3.mk"
