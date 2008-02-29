@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.386 2008/02/29 13:06:56 obache Exp $
+$NetBSD: CHANGES-2008,v 1.387 2008/02/29 13:11:31 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -715,3 +715,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated filesystems/fuse-afpfs-ng to 0.8 [agc 2008-02-28]
 	Added devel/chrpath version 0.13 [tnn 2008-02-28]
 	Added devel/libgcroots version 0.2.1 [obache 2008-02-29]
+	Added lang/sigscheme version 0.8.0 [obache 2008-02-29]
