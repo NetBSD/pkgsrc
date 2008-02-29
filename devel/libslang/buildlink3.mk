@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2006/12/12 21:52:35 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2008/02/29 16:44:55 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBSLANG_BUILDLINK3_MK:=	${LIBSLANG_BUILDLINK3_MK}+
@@ -19,9 +19,6 @@ BUILDLINK_ABI_DEPENDS.libslang+=	libslang>=1.4.9nb4
 BUILDLINK_PKGSRCDIR.libslang?=	../../devel/libslang
 .endif	# LIBSLANG_BUILDLINK3_MK
 
-# Debian adds a dependency on ncurses.
-.if (${OPSYS} == "Linux") && (${LOWER_VENDOR} == "debian")
-.  include "../../devel/ncurses/buildlink3.mk"
-.endif
+.include "../../mk/termlib.buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
