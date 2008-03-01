@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2008/02/25 23:14:19 tnn Exp $
+@comment $NetBSD: PLIST,v 1.17 2008/03/01 19:57:44 tnn Exp $
 bin/gauche-cesconv
 bin/gauche-config
 bin/gauche-install
@@ -263,6 +263,7 @@ share/gauche/${PKGVERSION}/template.test.scm
 @exec ${MKDIR} %D/lib/gauche/site/${PKGVERSION}/${MACHINE_GNU_PLATFORM} 2>/dev/null || ${TRUE}
 @exec ${MKDIR} %D/share/gauche/site 2>/dev/null || ${TRUE}
 @exec ${MKDIR} %D/share/gauche/site/lib 2>/dev/null || ${TRUE}
+@dirrm share/gauche/${PKGVERSION}/lib/www/cgi
 @dirrm share/gauche/${PKGVERSION}/lib/www
 @dirrm share/gauche/${PKGVERSION}/lib/util
 @dirrm share/gauche/${PKGVERSION}/lib/text
