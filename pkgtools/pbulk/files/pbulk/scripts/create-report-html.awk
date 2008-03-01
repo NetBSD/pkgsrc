@@ -1,5 +1,5 @@
 #!@AWK@ -f
-# $NetBSD: create-report-html.awk,v 1.8 2008/01/17 19:25:34 joerg Exp $
+# $NetBSD: create-report-html.awk,v 1.9 2008/03/01 19:04:37 rillig Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -72,7 +72,7 @@ function print_failed(PKGNAME, cmd, has_pre_clean, has_depends,
 			else if ($0 == "install.log")
 				has_install = 1
 			else if ($0 == "package.log")
-				has_package = 1			
+				has_package = 1
 			else if ($0 == "clean.log")
 				has_clean = 1
 			else if ($0 == "deinstall.log")
@@ -187,7 +187,7 @@ BEGIN {
 	}
 	if (has_top_count) {
 		sort(top_count, sorted_top_count, "-rn")
-		print "    <h2>Packages causing the most breakage</h2>" > html_report	
+		print "    <h2>Packages causing the most breakage</h2>" > html_report
 		print "    <table>" > html_report
 		print "      <tr>" > html_report
 		print "        <th> Location </th>" > html_report
@@ -207,7 +207,7 @@ BEGIN {
 		print "    <hr />" > html_report
 	}
 
-	print "    <h2> All unsuccessful builds </h2>" > html_report	
+	print "    <h2> All unsuccessful builds </h2>" > html_report
 
 	print "    <table>" > html_report
 	print "      <tr>" > html_report
