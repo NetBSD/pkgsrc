@@ -1,5 +1,5 @@
 #!@AWK@ -f
-# $NetBSD: create-report-txt.awk,v 1.7 2008/01/17 19:25:34 joerg Exp $
+# $NetBSD: create-report-txt.awk,v 1.8 2008/03/01 19:04:37 rillig Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -123,7 +123,7 @@ BEGIN {
 	print "" > txt_report
 	print pkgsrc_platform > txt_report
 	print "Compiler: " pkgsrc_compiler > txt_report
-	print "" > txt_report	
+	print "" > txt_report
 	print "Build start: " pkgsrc_build_start_iso > txt_report
 	print "Build end:   " pkgsrc_build_end_iso > txt_report
 	print "" > txt_report
