@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.392 2008/03/01 08:29:28 obache Exp $
+$NetBSD: CHANGES-2008,v 1.393 2008/03/01 08:31:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -721,3 +721,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/firefox3-bin version 3.0b3 [xtraeme 2008-02-29]
 	Added misc/ruby-progressbar version 0.9 [obache 2008-03-01]
 	Added textproc/sary version 1.2.0 [obache 2008-03-01]
+	Added textproc/ruby-sary version 1.2.0 [obache 2008-03-01]
