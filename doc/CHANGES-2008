@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.390 2008/02/29 23:01:57 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.391 2008/03/01 07:17:45 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -719,3 +719,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/clisp to 2.44.1 [tnn 2008-02-29]
 	Added textproc/hunspell-hu_HU version 1.2.2 [jlam 2008-02-29]
 	Added www/firefox3-bin version 3.0b3 [xtraeme 2008-02-29]
+	Added misc/ruby-progressbar version 0.9 [obache 2008-03-01]
