@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2005/12/02 17:01:35 wiz Exp $
+# $NetBSD: options.mk,v 1.2 2008/03/01 05:04:58 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.kermit
 PKG_SUPPORTED_OPTIONS=	kermit-suid-uucp
@@ -18,6 +18,6 @@ LIBS+=		-L${BUILDLINK_PREFIX.socks4}/lib -lsocks4
 .include "../../net/socks4/buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Msocks5)
 KFLAGS+=	-DSOCKS -DCK_SOCKS5
-LIBS+=		-L${BUILDLINK_PREFIX.socks4}slib -lsocks5
+LIBS+=		-L${BUILDLINK_PREFIX.socks5}/lib -lsocks5
 .include "../../net/socks5/buildlink3.mk"
 .endif
