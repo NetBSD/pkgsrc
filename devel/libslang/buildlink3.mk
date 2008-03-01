@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2008/02/29 22:41:13 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2008/03/01 03:09:35 jlam Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBSLANG_BUILDLINK3_MK:=	${LIBSLANG_BUILDLINK3_MK}+
@@ -18,7 +18,5 @@ BUILDLINK_API_DEPENDS.libslang+=	libslang>=1.4.9nb1
 BUILDLINK_ABI_DEPENDS.libslang+=	libslang>=1.4.9nb4
 BUILDLINK_PKGSRCDIR.libslang?=	../../devel/libslang
 .endif	# LIBSLANG_BUILDLINK3_MK
-
-.include "../../mk/termcap.buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
