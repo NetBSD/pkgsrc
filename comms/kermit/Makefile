@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2008/01/18 05:06:26 tnn Exp $
+# $NetBSD: Makefile,v 1.71 2008/03/01 05:03:25 jlam Exp $
 
 DISTNAME=	cku211
 PKGNAME=	kermit-8.0.211
@@ -45,19 +45,19 @@ PLIST_SUBST+=	HAVE_MANPAGE="@comment "
 INSTALLATION_DIRS=	bin share/doc/kermit
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/wermit ${PREFIX}/bin/kermit
-	${INSTALL_DATA} ${WRKSRC}/*.txt ${PREFIX}/share/doc/kermit
+	${INSTALL_PROGRAM} ${WRKSRC}/wermit ${DESTDIR}${PREFIX}/bin/kermit
+	${INSTALL_DATA} ${WRKSRC}/*.txt ${DESTDIR}${PREFIX}/share/doc/kermit
 	set -e; \
 	for OPT in ${MANINSTALL} broken-solaris-needs-this; do \
 	  case $$OPT in \
 	    catinstall) \
 		nroff -man ${WRKSRC}/ckuker.nr > ${WRKSRC}/kermit.0; \
-		${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/cat1; \
-		${INSTALL_MAN} ${WRKSRC}/kermit.0 ${PREFIX}/${PKGMANDIR}/cat1/kermit.0; \
+		${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1; \
+		${INSTALL_MAN} ${WRKSRC}/kermit.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/kermit.0; \
 		;; \
 	    maninstall) \
-		${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man1; \
-		${INSTALL_MAN} ${WRKSRC}/ckuker.nr ${PREFIX}/${PKGMANDIR}/man1/kermit.1; \
+		${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1; \
+		${INSTALL_MAN} ${WRKSRC}/ckuker.nr ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/kermit.1; \
 		;; \
 	  esac; \
 	done
