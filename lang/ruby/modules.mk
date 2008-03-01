@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.18 2008/02/08 15:10:41 obache Exp $
+# $NetBSD: modules.mk,v 1.19 2008/03/01 02:31:56 obache Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
@@ -141,6 +141,7 @@ ruby-simple-install:
 .include "replace.mk"
 
 PRINT_PLIST_AWK+=	/^@dirrm lib\/ruby$$/ { next; }
+PRINT_PLIST_AWK+=	/^@dirrm lib\/ruby\/site_ruby$$/ { next; }
 PRINT_PLIST_AWK+=	/\.${RUBY_DLEXT}$$/ \
 			{ gsub(/${RUBY_DLEXT}$$/, "$${RUBY_DLEXT}") }
 PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_SITEARCHLIBDIR:S|${PREFIX}/||:S|/|\\/|g}$$/ \
