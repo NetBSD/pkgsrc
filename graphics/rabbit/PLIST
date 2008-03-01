@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2007/12/15 14:10:29 obache Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/03/01 12:08:44 obache Exp $
 bin/rabbit
 bin/rabbit-theme-manager
-bin/rabbit.bat
 bin/rabrick
 ${RUBY_SITELIBDIR}/rabbit/action.rb
 ${RUBY_SITELIBDIR}/rabbit/action/basic.rb
@@ -12,6 +11,7 @@ ${RUBY_SITELIBDIR}/rabbit/comment-canvas.rb
 ${RUBY_SITELIBDIR}/rabbit/comment/log.rb
 ${RUBY_SITELIBDIR}/rabbit/config.rb
 ${RUBY_SITELIBDIR}/rabbit/console.rb
+${RUBY_SITELIBDIR}/rabbit/console/roff.rb
 ${RUBY_SITELIBDIR}/rabbit/cursor-manager.rb
 ${RUBY_SITELIBDIR}/rabbit/default-config.rb
 ${RUBY_SITELIBDIR}/rabbit/dependency-canvas.rb
@@ -336,7 +336,6 @@ ${RUBY_SITELIBDIR}/rabbit/theme/title-logo/property.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/title-logo/title-logo.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/title-shadow/property.rb
 ${RUBY_SITELIBDIR}/rabbit/theme/title-shadow/title-shadow.rb
-${RUBY_SITELIBDIR}/rabbit/theme/windows-adjust/windows-adjust.rb
 ${RUBY_SITELIBDIR}/rabbit/trackball.rb
 ${RUBY_SITELIBDIR}/rabbit/utils.rb
 ${RUBY_SITELIBDIR}/rabbit/xmlrpc/base.rb
@@ -407,7 +406,6 @@ share/rabbit/image/ruby-images/ruby-pink-polygon.png
 @dirrm ${RUBY_SITELIBDIR}/rwiki
 @dirrm ${RUBY_SITELIBDIR}/rt
 @dirrm ${RUBY_SITELIBDIR}/rabbit/xmlrpc
-@dirrm ${RUBY_SITELIBDIR}/rabbit/theme/windows-adjust
 @dirrm ${RUBY_SITELIBDIR}/rabbit/theme/title-shadow
 @dirrm ${RUBY_SITELIBDIR}/rabbit/theme/title-logo
 @dirrm ${RUBY_SITELIBDIR}/rabbit/theme/title-background-image
@@ -514,6 +512,7 @@ share/rabbit/image/ruby-images/ruby-pink-polygon.png
 @dirrm ${RUBY_SITELIBDIR}/rabbit/element/base
 @dirrm ${RUBY_SITELIBDIR}/rabbit/element
 @dirrm ${RUBY_SITELIBDIR}/rabbit/div
+@dirrm ${RUBY_SITELIBDIR}/rabbit/console
 @dirrm ${RUBY_SITELIBDIR}/rabbit/comment
 @dirrm ${RUBY_SITELIBDIR}/rabbit/action
 @dirrm ${RUBY_SITELIBDIR}/rabbit
