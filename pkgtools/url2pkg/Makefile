@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2007/10/07 12:59:15 kano Exp $
+# $NetBSD: Makefile,v 1.53 2008/03/01 19:07:27 rillig Exp $
 #
 
 DISTNAME=	url2pkg-2.7
@@ -17,8 +17,7 @@ NO_CHECKSUM=	yes
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
 USE_TOOLS+=	perl:run
-
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8 lib/url2pkg/ExtUtils
+AUTO_MKDIRS=	yes
 
 do-extract:
 	cd ${FILESDIR} && cp *.pl *.pm ${WRKSRC}/
