@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.399 2008/02/29 22:10:58 jlam Exp $
+# $NetBSD: Makefile,v 1.400 2008/03/01 08:33:21 obache Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -343,12 +343,14 @@ SUBDIR+=	ruby-pure-hyperestraier
 SUBDIR+=	ruby-rdtool
 SUBDIR+=	ruby-redcloth
 SUBDIR+=	ruby-rttool
+SUBDIR+=	ruby-sary
 SUBDIR+=	ruby-simple-rss
 SUBDIR+=	ruby-syntax
 SUBDIR+=	ruby-xmlparser
 SUBDIR+=	ruby-xmlscan
 SUBDIR+=	ruby18-libxml
 SUBDIR+=	sablotron
+SUBDIR+=	sary
 SUBDIR+=	saxon
 SUBDIR+=	scew
 #SUBDIR+=	scrollkeeper	# incomplete package (only provides omf.mk)
