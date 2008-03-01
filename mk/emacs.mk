@@ -1,4 +1,4 @@
-# $NetBSD: emacs.mk,v 1.48 2008/01/18 13:50:44 obache Exp $
+# $NetBSD: emacs.mk,v 1.49 2008/03/01 05:11:10 obache Exp $
 #
 # This Makefile fragment handles Emacs Lisp Packages (== ELPs).
 #
@@ -359,6 +359,10 @@ PLIST_SUBST+=	EMACS_VERSION=${_EMACS_VERSION_NOREV:Q}
 PLIST_SUBST+=	EMACS_ETCPREFIX=${EMACS_ETCPREFIX:C|^${PREFIX}/||}
 PLIST_SUBST+=	EMACS_INFOPREFIX=${EMACS_INFOPREFIX:C|^${PREFIX}/||}
 PLIST_SUBST+=	EMACS_LISPPREFIX=${EMACS_LISPPREFIX:C|^${PREFIX}/||}
+
+PRINT_PLIST_AWK+=	{ gsub(/${EMACS_LISPPREFIX:S|${PREFIX}/||:S|/|\\/|g}/, \
+			"$${EMACS_LISPPREFIX}"); \
+			print; next; }
 
 #
 # ELP dependencies
