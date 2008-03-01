@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/01/18 05:08:47 tnn Exp $
+# $NetBSD: Makefile,v 1.23 2008/03/01 18:58:52 rillig Exp $
 
 DISTNAME=		openntpd-3.9p1
 PKGREVISION=		1
@@ -27,16 +27,15 @@ PKG_GROUPS=		_ntp
 PKG_USERS=		_ntp:_ntp
 PKG_HOME._ntp=		${VARBASE}/chroot/ntpd
 
+BUILD_DEFS+=		VARBASE
+
 OWN_DIRS=		${VARBASE}/chroot/ntpd
-INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin
+AUTO_MKDIRS=		yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ntpd ${PREFIX}/sbin/ntpd
 	${INSTALL_MAN} ${WRKSRC}/ntpd.8 ${PREFIX}/${PKGMANDIR}/man8/ntpd.8
 	${INSTALL_MAN} ${WRKSRC}/ntpd.conf.5 ${PREFIX}/${PKGMANDIR}/man5/ntpd.conf.5
-
-post-install:
-	@${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/ntpd.conf ${EGDIR}/ntpd.conf
 
 .include "../../security/openssl/buildlink3.mk"
