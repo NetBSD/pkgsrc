@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.16 2005/05/21 14:39:44 minskim Exp $
+$NetBSD: patch-aa,v 1.17 2008/03/01 03:09:35 jlam Exp $
 
 --- src/Makefile.in.orig	Sun Feb 10 18:39:19 2002
 +++ src/Makefile.in	Mon Mar 25 11:59:49 2002
@@ -65,7 +65,7 @@ $NetBSD: patch-aa,v 1.16 2005/05/21 14:39:44 minskim Exp $
 -	cd $(OBJDIR); $(AR_CR) $(NORMAL_LIB) $(OFILES)
 -	$(RANLIB) $(OBJDIR_NORMAL_LIB)
 +	cd $(OBJDIR); $(LIBTOOL) --mode=link $(CC) -o $(NORMAL_LIB) $(OFILES:.o=.lo) \
-+		-rpath $(PREFIX)/lib $(DL_LIB) -lm -ltermcap -version-info 1:4
++		-rpath $(PREFIX)/lib $(DL_LIB) -lm $(TCAPLIB) -version-info 1:4
  	@echo ""
  	@echo $(NORMAL_LIB) created in $(OBJDIR)
  
