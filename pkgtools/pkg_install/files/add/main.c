@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.13 2007/08/14 22:47:52 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.14 2008/03/01 19:06:10 rillig Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.16 1997/10/08 07:45:43 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.13 2007/08/14 22:47:52 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.14 2008/03/01 19:06:10 rillig Exp $");
 #endif
 #endif
 
@@ -186,6 +186,7 @@ main(int argc, char **argv)
 	}
 	
 	/* Increase # of max. open file descriptors as high as possible */
+	/* XXX: Why is this necessary? */
 	rc = getrlimit(RLIMIT_NOFILE, &rlim);
 	if (rc == -1) {
 	  	warn("cannot retrieve max. number of open files resource limit");
