@@ -1,4 +1,4 @@
-# $NetBSD: termcap.buildlink3.mk,v 1.1 2008/02/29 22:41:13 jlam Exp $
+# $NetBSD: termcap.buildlink3.mk,v 1.2 2008/03/02 07:05:28 jlam Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # a termcap implementation that supports the basic termcap functions:
@@ -16,6 +16,11 @@ TERMCAP_BUILDLINK3_MK:=	${TERMCAP_BUILDLINK3_MK}+
 
 .if !empty(TERMCAP_BUILDLINK3_MK:M+)
 
+# _TERMCAP_TYPES is an exhaustive list of all of the termcap implementations
+#	that may be found.
+#
+_TERMCAP_TYPES?=	curses termcap termlib tinfo
+
 CHECK_BUILTIN.termcap:=	yes
 .  include "termcap.builtin.mk"
 CHECK_BUILTIN.termcap:=	no
@@ -29,14 +34,24 @@ TERMCAP_TYPE=	none
 .  else
 TERMCAP_TYPE=	curses
 .  endif
-
 BUILD_DEFS+=	TERMCAP_TYPE
+
+# Most GNU configure scripts will try finding every termcap implementation,
+# so prevent them from finding any except for the one we decide upon.
+#
+.for _tcap_ in ${_TERMCAP_TYPES:Ntermcap}
+.  if empty(TERMCAP_TYPE:M${_tcap_})
+BUILDLINK_TRANSFORM+=		rm:-l${_tcap_}
+.  endif
+.endfor
+BUILDLINK_TRANSFORM+=		l:termcap:${BUILDLINK_LIBNAME.termcap}
 
 .endif	# TERMCAP_BUILDLINK3_MK
 
 .if ${TERMCAP_TYPE} == "none"
 PKG_FAIL_REASON=	"No usable termcap library found on the system."
-.elif (${TERMCAP_TYPE} == "termcap") || \
+.elif (${TERMCAP_TYPE} == "termlib") || \
+      (${TERMCAP_TYPE} == "termcap") || \
       (${TERMCAP_TYPE} == "tinfo")
 BUILDLINK_PACKAGES:=		${BUILDLINK_PACKAGES:Ntermcap}
 BUILDLINK_PACKAGES+=		termcap
