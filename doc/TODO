@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7082 2008/02/25 09:01:53 wiz Exp $
+$NetBSD: TODO,v 1.7083 2008/03/02 01:59:01 obache Exp $
 
 Suggested new packages
 ======================
@@ -1346,7 +1346,6 @@ Suggested package updates
 	o ubs-0.20
 	o ucarp-1.4
 	o ucblogo-5.5
-	o uim-1.4.2
 	o ups-nut-2.2.1 [pkgsrc-wip]
 	o upx-2.90
 	o userppp-030706
