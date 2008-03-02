@@ -1,14 +1,19 @@
-# $NetBSD: Makefile,v 1.35 2008/03/02 12:33:09 drochner Exp $
+# $NetBSD: Makefile,v 1.1 2008/03/02 12:33:09 drochner Exp $
 
 DISTNAME=	kipi-plugins-0.1.4
-PKGREVISION=	7
+PKGNAME=	kipi-plugins-calendar-0.1.4
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=kipi/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kipi-plugins.org/drupal/
-COMMENT=	Kipi (KDE Image Plugin Interface) plugins
+COMMENT=	Kipi calendar plugin
+
+CONFLICTS+=	kipi-plugins<0.1.4nb7
+
+PATCHDIR=	${.CURDIR}/../../graphics/kipi-plugins/patches
+DISTINFO_FILE=	${.CURDIR}/../../graphics/kipi-plugins/distinfo
 
 USE_TOOLS+=		gmake perl pkg-config msgfmt bash:run
 USE_LANGUAGES=		c c++
@@ -18,14 +23,13 @@ SHLIBTOOL_OVERRIDE=	# empty
 
 REPLACE_BASH=		kipi-plugins/mpegencoder/images2mpg
 
+BUILD_DIRS=	kipi-plugins/calendar
+INSTALL_DIRS=	kipi-plugins/calendar
+
 .include "../../meta-pkgs/kde3/kde3.mk"
 .include "../../audio/libgpod/buildlink3.mk"
-.include "../../devel/libgphoto2/buildlink3.mk"
-.include "../../graphics/ImageMagick/buildlink3.mk"
-.include "../../graphics/libkdcraw/buildlink3.mk"
-.include "../../graphics/libkexiv2/buildlink3.mk"
-.include "../../graphics/imlib2/buildlink3.mk"
 .include "../../graphics/libkipi/buildlink3.mk"
-.include "../../multimedia/mjpegtools/buildlink3.mk"
+.include "../../graphics/kipi-plugins/buildlink3.mk"
+.include "../../misc/kdepim3/buildlink3.mk"
 .include "../../x11/kdelibs3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
