@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.409 2008/03/02 15:36:17 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.410 2008/03/02 15:51:42 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -744,3 +744,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/curl to 7.18.0 [bjs 2008-03-02]
 	Updated x11/libXext to 1.0.4 [bjs 2008-03-02]
 	Updated misc/less to 418 [bjs 2008-03-02]
+	Updated graphics/gimp to 2.4.5 [adam 2008-03-02]
+	Updated x11/gtkmm to 2.12.5 [adam 2008-03-02]
