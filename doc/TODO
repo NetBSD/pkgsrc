@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7088 2008/03/02 15:36:37 bjs Exp $
+$NetBSD: TODO,v 1.7089 2008/03/02 15:38:42 bjs Exp $
 
 Suggested new packages
 ======================
@@ -730,7 +730,6 @@ Suggested package updates
 	o hanzim-1.8
 	o haskell-mode-1.45
 	o hdf-4.2r2
-	o heimdal-1.0.1 [pkg/37010]
 	o hercules-3.04.1
 	o hesiod-3.1.0
 	o hexedit-1.2.12
