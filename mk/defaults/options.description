@@ -157,6 +157,7 @@ kqueue			Enable support for kernel event notification mechanism
 lablgtk			Use lablgtk.
 lablgtk1		Use lablgtk1 (GTK1).
 lame			Use the lame encoder to create MP3 files.
+lcms			Enable Light Color Management System support.
 ldap			Enable LDAP support.
 libao			Enable libao support.
 libgpod			Enable libgpod support.
