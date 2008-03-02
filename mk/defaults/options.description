@@ -164,6 +164,7 @@ libgpod			Enable libgpod support.
 libmodplug		Use libmodplug for MOD and MOD-like music formats.
 libiconv-cp932		Add supplemental support for CP932
 libofx			Enable OFX support.
+libssh2 	 	Use libssh2 for SSHv2 protocol support.
 libspiff		Use libspiff for XML shareable playlist support.
 libwww-aliases		Install aliases for p5-libwww (e.g. HEAD, GET etc.)
 liferea-gtkhtml		Use libgtkhtml2 to render HTML.
