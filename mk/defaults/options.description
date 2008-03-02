@@ -106,6 +106,7 @@ gif			Enable GIF support.
 gimp			Enable GIMP support.
 gimp1-helpbrowser	Link against gnome1 to get a help browser.
 gmp-fat			Build-in all x86 assembler code, detecting CPU at run-time.
+gnome			Enable GNOME support.
 gnutls			Enable GNU TLS support.
 gopher			Enable support for the Gopher information system.
 gpgme			Enable gpg support, by using the gpgme library.
@@ -147,6 +148,7 @@ irssi-perl		Enable Perl support in irssi.
 jasper			Enable JPEG 2000 support using the jasper library.
 jpeg			Enable JPEG support.
 jwhois-enable-cache	Enable cache support.
+kde			Enable KDE support.
 kerberos		Enable Kerberos support.
 kerberos4		Enable Kerberos4 support.
 kermit-suid-uucp	Install kermit setuid uucp.
@@ -236,6 +238,7 @@ qmail-qregex		Patch to SMTP-reject customizable patterns.
 qmail-realrcptto	Patch to SMTP-reject nonexistent recipients.
 qmail-viruscan		Patch to SMTP-reject certain types of MIME attachments.
 qpopper-servermode	Enable server mode.
+qt			Enable support for QT.
 quartz			Enable Quartz support on Mac OS X.	
 rsaref			Use RSAREF library.
 ruby-build-ri-db	Build and install database for Ruby's ri utility.
