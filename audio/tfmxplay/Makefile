@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/09 21:04:41 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/02 06:10:34 jlam Exp $
 #
 
 DISTNAME=	tfmxplay-0.6
@@ -13,13 +13,14 @@ COMMENT=	Console TFMX (amiga games sound file format) player
 NOT_FOR_PLATFORM=	Interix-*-*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tfmx-play ${PREFIX}/bin/tfmxplay
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tfmxplay
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/tfmxplay/
+	${INSTALL_PROGRAM} ${WRKSRC}/tfmx-play ${DESTDIR}${PREFIX}/bin/tfmxplay
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/tfmxplay
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/tfmxplay
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

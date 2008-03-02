@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/05/28 11:56:04 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/02 06:10:33 jlam Exp $
 
 DISTNAME=	qsynth-0.2.4
 PKGREVISION=	4
@@ -10,6 +10,7 @@ HOMEPAGE=	http://qsynth.sourceforge.net/
 COMMENT=	Qt GUI Interface to FluidSynth
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
@@ -24,10 +25,13 @@ SUBST_MESSAGE.hints=	Fix includehints.
 SUBST_FILES.hints=	src/*.ui
 SUBST_FILTER_CMD.hints=	${GREP} -v includehint
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/qsynth ${PREFIX}/bin/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/icons/
-	${INSTALL_DATA} ${WRKSRC}/icons/qsynth.png ${PREFIX}/share/icons/
+	${INSTALL_PROGRAM} ${WRKSRC}/qsynth ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/icons
+	${INSTALL_DATA} ${WRKSRC}/icons/qsynth.png \
+		${DESTDIR}${PREFIX}/share/icons
 
 .include "../../audio/fluidsynth/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
