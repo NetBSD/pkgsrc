@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/06/08 18:33:09 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2008/03/02 06:10:32 jlam Exp $
 
 DISTNAME=	festvox_rablpc8k
 PKGNAME=	festvox-rab8-1.4.0
@@ -16,6 +16,8 @@ DEPENDS+=	festlex-oald>=1.4.0:../../audio/festlex-oald
 
 CONFLICTS=	festvox-rab16-[0-9]*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/festival
 NO_BUILD=	yes
 
@@ -26,7 +28,7 @@ post-extract:
 	@ ${FIND} ${WRKSRC} -type d -print | ${XARGS} ${CHMOD} 755
 
 do-install:
-	${INSTALL_DATA_DIR} ${FHOME}
-	cd ${WRKSRC} && ${PAX} -rw * ${FHOME}
+	${INSTALL_DATA_DIR} ${DESTDIR}${FHOME}
+	cd ${WRKSRC} && ${PAX} -rw * ${DESTDIR}${FHOME}
 
 .include "../../mk/bsd.pkg.mk"

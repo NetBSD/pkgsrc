@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/05/28 07:38:26 gson Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/02 06:10:34 jlam Exp $
 
 DISTNAME=	wavesurfer-1.8.5
 CATEGORIES=	audio
@@ -10,6 +10,8 @@ COMMENT=	Tool for sound visualization and manipulation
 
 DEPENDS+=	tcl-snack-[0-9]*:../../audio/tcl-snack
 DEPENDS+=	tk-[0-9]*:../../x11/tk
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
@@ -24,7 +26,8 @@ SUBST_SED.wish=		-e 's,wish8.4,wish,g'
 INSTALLATION_DIRS=	bin lib
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/wavesurfer.tcl ${PREFIX}/bin/wavesurfer
-	cd ${WRKSRC} && pax -wr -pm wsurf1.8 ${PREFIX}/lib/
+	${INSTALL_SCRIPT} ${WRKSRC}/wavesurfer.tcl \
+		${DESTDIR}${PREFIX}/bin/wavesurfer
+	cd ${WRKSRC} && pax -wr -pm wsurf1.8 ${DESTDIR}${PREFIX}/lib
 
 .include "../../mk/bsd.pkg.mk"

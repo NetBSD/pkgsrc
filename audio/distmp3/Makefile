@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/10/25 18:54:08 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/02 06:10:31 jlam Exp $
 #
 
 DISTNAME=		distmp3-0.1.9
@@ -8,6 +8,8 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		grant@NetBSD.org
 COMMENT=		Distributed mp3 encoding across multiple hosts
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 USE_TOOLS+=		perl:run
@@ -33,11 +35,13 @@ SUBST_SED.config+=	-e 's,/usr/local,${PREFIX},'
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/distmp3 ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/distmp3host ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/distmp3.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/distmp3host.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/distmp3.conf ${EGDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/distmp3 ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/distmp3host ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/distmp3.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/distmp3host.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/distmp3.conf ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/12/02 13:04:06 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2008/03/02 06:10:31 jlam Exp $
 #
 
 DISTNAME=	darkice-0.17.1
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=darkice/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://darkice.tyrell.hu/
 COMMENT=	IceCast, IceCast2 and ShoutCast live audio streamer
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
@@ -29,14 +31,17 @@ CONF_FILES=	${EGDIR}/darkice.conf ${PKG_SYSCONFDIR}/darkice.conf
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 do-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${HTMLDIR}
-	${INSTALL_DATA} ${WRKSRC}/darkice.cfg ${EGDIR}/darkice.conf
-	${INSTALL_PROGRAM} ${WRKSRC}/src/darkice ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man/darkice.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}
+	${INSTALL_DATA} ${WRKSRC}/darkice.cfg \
+		${DESTDIR}${EGDIR}/darkice.conf
+	${INSTALL_PROGRAM} ${WRKSRC}/src/darkice ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/man/darkice.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/man/darkice.cfg.5 \
-		${PREFIX}/${PKGMANDIR}/man5/darkice.conf.5
-	cd ${WRKSRC}/doc/doxygen/html && ${INSTALL_DATA} *.html ${HTMLDIR}
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/darkice.conf.5
+	cd ${WRKSRC}/doc/doxygen/html && ${INSTALL_DATA} *.html \
+		${DESTDIR}${HTMLDIR}
 
 .include "../../audio/faac/buildlink3.mk"
 .include "../../audio/lame/buildlink3.mk"

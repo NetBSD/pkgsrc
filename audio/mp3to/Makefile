@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/05/19 16:18:53 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/02 06:10:33 jlam Exp $
 
 DISTNAME=	mp3to
 PKGNAME=	${DISTNAME}-1.0.1
@@ -16,6 +16,8 @@ DEPENDS+=	mpg123-[0-9]*:../../audio/mpg123
 DEPENDS+=	gmp3info>=0.8.2:../../audio/gmp3info
 DEPENDS+=	sox>=12.17.1:../../audio/sox
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_BUILD=	YES
 
 INSTALLATION_DIRS=	bin
@@ -25,6 +27,6 @@ do-extract:
 	${GZCAT} ${DISTDIR}/${DISTFILES} >${WRKSRC}/${DISTFILES:S/.gz//}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/mp3to ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/mp3to ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

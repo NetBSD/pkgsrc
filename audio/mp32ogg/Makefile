@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/10/04 20:44:19 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/02 06:10:33 jlam Exp $
 
 DISTNAME=	mp32ogg-0.11
 PKGREVISION=	3
@@ -15,6 +15,8 @@ DEPENDS+=	vorbis-tools>=1.0.0.7:../../audio/vorbis-tools
 DEPENDS+=	p5-MP3-Info>=1.00:../../audio/p5-MP3-Info
 DEPENDS+=	p5-String-ShellQuote>=1.00:../../textproc/p5-String-ShellQuote
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
@@ -28,6 +30,6 @@ do-extract:
 	${CP} ${_DISTDIR}/${DISTNAME} ${WRKSRC}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin/mp32ogg
+	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${DESTDIR}${PREFIX}/bin/mp32ogg
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/01/07 09:13:47 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2008/03/02 06:10:31 jlam Exp $
 #
 
 DISTNAME=	disc-cover-1.5.6
@@ -11,10 +11,12 @@ COMMENT=	Generation of CD covers
 
 DEPENDS+=	p5-Audio-CD>=0.05:../../audio/p5-Audio-CD
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		perl:run pod2man
 REPLACE_PERL=		disc-cover
 
-DCTMPL=	${PREFIX}/share/disc-cover/templates
+DCTMPL=			${PREFIX}/share/disc-cover/templates
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
@@ -24,9 +26,10 @@ do-build:
 		>${WRKDIR}/disc-cover
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/disc-cover ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/disc-cover.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${DCTMPL}
-	${INSTALL_DATA} ${WRKSRC}/templates/* ${DCTMPL}
+	${INSTALL_SCRIPT} ${WRKDIR}/disc-cover ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/disc-cover.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA_DIR} ${DESTDIR}${DCTMPL}
+	${INSTALL_DATA} ${WRKSRC}/templates/* ${DESTDIR}${DCTMPL}
 
 .include "../../mk/bsd.pkg.mk"

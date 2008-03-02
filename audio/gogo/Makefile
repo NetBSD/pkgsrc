@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/05/19 16:18:52 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/02 06:10:32 jlam Exp $
 #
 
 DISTNAME=		gogo239b
@@ -15,6 +15,8 @@ COMMENT=		Very fast lame-based mp3 encoder, i386 only
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
 ONLY_FOR_PLATFORM=	*-*-i386
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 
@@ -34,8 +36,8 @@ MAKE_FLAGS+=	ASFLAGS="-f elf -D__unix__ ${E3DN}"
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/gogo ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gogo
-	${INSTALL_DATA} ${WRKSRC}/readme.txt ${PREFIX}/share/doc/gogo
+	${INSTALL_PROGRAM} ${WRKSRC}/gogo ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/gogo
+	${INSTALL_DATA} ${WRKSRC}/readme.txt ${DESTDIR}${PREFIX}/share/doc/gogo
 
 .include "../../mk/bsd.pkg.mk"

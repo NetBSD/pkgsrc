@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/05/13 13:13:41 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/02 06:10:33 jlam Exp $
 #
 
 DISTNAME=	qtplay1.3.1
@@ -12,6 +12,8 @@ COMMENT=	QuickTime command-line player
 
 ONLY_FOR_PLATFORM=	Darwin-*-*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
@@ -24,7 +26,7 @@ do-build:
 	cc -o ${PKGBASE} -framework Carbon -framework QuickTime ${CFLAGS} ${CPPFLAGS} qtplay.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/qtplay ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/qtplay.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/qtplay ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/qtplay.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

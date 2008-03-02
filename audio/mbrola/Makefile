@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/08/23 19:28:56 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/02 06:10:33 jlam Exp $
 
 DISTNAME=		mbr301h
 PKGNAME=		mbrola-301h
@@ -13,6 +13,8 @@ COMMENT=		MBROLA diphone synthesizer executable
 
 LICENSE=		no-commercial-use
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		mbrola-20010717
 BUILD_DIRS=		# empty
@@ -24,8 +26,10 @@ EMUL_MODULES.netbsd=	base
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mbrola-netbsd-i386 ${PREFIX}/bin/mbrola
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mbrola
-	${INSTALL_DATA} ${WRKSRC}/readme.txt ${PREFIX}/share/doc/mbrola
+	${INSTALL_PROGRAM} ${WRKSRC}/mbrola-netbsd-i386 \
+		${DESTDIR}${PREFIX}/bin/mbrola
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/mbrola
+	${INSTALL_DATA} ${WRKSRC}/readme.txt \
+		${DESTDIR}${PREFIX}/share/doc/mbrola
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2007/11/03 22:33:57 rillig Exp $
+# $NetBSD: Makefile,v 1.58 2008/03/02 06:10:31 jlam Exp $
 
 DISTNAME=	festival-1.95-beta
 PKGNAME=	festival-1.95beta
@@ -11,6 +11,8 @@ DISTFILES=	${DISTNAME}.tar.gz \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cstr.ed.ac.uk/projects/festival/
 COMMENT=	Advanced multi-lingual speech synthesis system
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	c c++
@@ -86,25 +88,36 @@ post-patch:
 .endif
 
 do-install:
-	${INSTALL_DATA_DIR} ${FHOME}
+	${INSTALL_DATA_DIR} ${DESTDIR}${FHOME}
 	${CHMOD} -R u+w,a+r,og-w ${FESTIVAL}/lib
 	${FIND} ${FESTIVAL}/lib -type d -print | ${XARGS} ${CHMOD} 755
-	-@${MV} ${FESTIVAL}/lib/etc/unknown_${OPSYS} ${FESTIVAL}/lib/etc/pkgsrc
-	cd ${FESTIVAL} && ${PAX} -rw lib examples ${FHOME}
-	${RM} ${FHOME}/examples/Makefile.orig
-	${RM} -f ${FHOME}/lib/etc/unknown_${OPSYS}/audsp ${FHOME}/lib/etc/pkgsrc/audsp
-	${INSTALL_PROGRAM} ${FESTIVAL}/lib/etc/pkgsrc/audsp ${PREFIX}/libexec
-	${INSTALL_PROGRAM} ${FESTIVAL}/src/main/festival ${PREFIX}/libexec/festival.naked
-	${INSTALL_PROGRAM} ${FESTIVAL}/src/main/festival_client ${PREFIX}/libexec/festival_client.naked
+	-@${MV} ${FESTIVAL}/lib/etc/unknown_${OPSYS}			\
+		${FESTIVAL}/lib/etc/pkgsrc
+	cd ${FESTIVAL} && ${PAX} -rw lib examples ${DESTDIR}${FHOME}
+	${RM} ${DESTDIR}${FHOME}/examples/Makefile.orig
+	${RM} -f ${DESTDIR}${FHOME}/lib/etc/unknown_${OPSYS}/audsp	\
+		${DESTDIR}${FHOME}/lib/etc/pkgsrc/audsp
+	${INSTALL_PROGRAM} ${FESTIVAL}/lib/etc/pkgsrc/audsp		\
+		${DESTDIR}${PREFIX}/libexec
+	${INSTALL_PROGRAM} ${FESTIVAL}/src/main/festival		\
+		${DESTDIR}${PREFIX}/libexec/festival.naked
+	${INSTALL_PROGRAM} ${FESTIVAL}/src/main/festival_client		\
+		${DESTDIR}${PREFIX}/libexec/festival_client.naked
 	for n in festival.sh festival_client.sh sitevars.scm; do	\
 		${SED} "s%@PKG_FESTIVAL_LOCATION@%${FHOME}%;		\
-			s%@PKG_PREFIX@%${PREFIX}%" <${FILESDIR}/$$n > ${WRKDIR}/$$n ; \
+			s%@PKG_PREFIX@%${PREFIX}%" < ${FILESDIR}/$$n	\
+			> ${WRKDIR}/$$n ;				\
 	done
-	${INSTALL_SCRIPT} ${WRKDIR}/festival.sh ${PREFIX}/bin/festival
-	${INSTALL_SCRIPT} ${WRKDIR}/festival_client.sh ${PREFIX}/bin/festival_client
-	${INSTALL_DATA} ${WRKDIR}/sitevars.scm ${FHOME}/lib/sitevars.scm
-	${INSTALL_MAN} ${FESTIVAL}/doc/festival.1 ${PREFIX}/${PKGMANDIR}/man1/festival.1
-	${INSTALL_MAN} ${FESTIVAL}/doc/festival_client.1 ${PREFIX}/${PKGMANDIR}/man1/festival_client.1
+	${INSTALL_SCRIPT} ${WRKDIR}/festival.sh				\
+		${DESTDIR}${PREFIX}/bin/festival
+	${INSTALL_SCRIPT} ${WRKDIR}/festival_client.sh			\
+		${DESTDIR}${PREFIX}/bin/festival_client
+	${INSTALL_DATA} ${WRKDIR}/sitevars.scm				\
+		${DESTDIR}${FHOME}/lib/sitevars.scm
+	${INSTALL_MAN} ${FESTIVAL}/doc/festival.1			\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/festival.1
+	${INSTALL_MAN} ${FESTIVAL}/doc/festival_client.1		\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/festival_client.1
 
 .include "../../audio/nas/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

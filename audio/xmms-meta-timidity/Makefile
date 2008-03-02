@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/12/15 14:34:19 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2008/03/02 06:10:34 jlam Exp $
 #
 
 DISTNAME=		xmms-meta-timidity-0.2
@@ -15,6 +15,8 @@ DEPENDS+=		timidity-[0-9]*:../../audio/timidity
 DEPENDS+=		freepats-[0-9]*:../../audio/freepats
 DEPENDS+=		xmms-meta-input-[0-9]*:../../audio/xmms-meta-input
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		# empty
 NO_CHECKSUM=		yes
@@ -26,6 +28,7 @@ do-build:
 		-e "s,XXXPKG_SYSCONFDIRXXX,${PKG_SYSCONFDIR},g"
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/timidity.sh ${PREFIX}/lib/xmms/Input/Meta
+	${INSTALL_SCRIPT} ${WRKSRC}/timidity.sh \
+		${DESTDIR}${PREFIX}/lib/xmms/Input/Meta
 
 .include "../../mk/bsd.pkg.mk"
