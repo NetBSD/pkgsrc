@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/08/23 21:08:20 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2008/03/02 06:10:33 jlam Exp $
 
 DISTNAME=	en1-980910
 PKGNAME=	mbrolavox-en1-980910
@@ -16,6 +16,8 @@ DEPENDS+=	mbrola-301h{,nb[0-9]*}:../../audio/mbrola
 
 LICENSE=	no-commercial-use
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 NO_BUILD=	yes
 
@@ -26,7 +28,7 @@ post-extract:
 	${FIND} ${WRKSRC} -type d -print | ${XARGS} ${CHMOD} 755
 
 do-install:
-	${INSTALL_DATA_DIR} ${MHOME}
-	cd ${WRKSRC} && ${PAX} -rw en1 ${MHOME}
+	${INSTALL_DATA_DIR} ${DESTDIR}${MHOME}
+	cd ${WRKSRC} && ${PAX} -rw en1 ${DESTDIR}${MHOME}
 
 .include "../../mk/bsd.pkg.mk"

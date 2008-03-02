@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2007/01/11 09:41:04 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2008/03/02 06:10:34 jlam Exp $
 #
 
 DISTNAME=	xsidplay-1.6.5.1a
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pooka@NetBSD.org
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/
 COMMENT=	Commodore 64 music player and SID chip emulator for X11
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
@@ -27,7 +29,7 @@ pre-configure:
 	rm ${WRKSRC}/scripts/ltmain.sh && ${LN} -s ${PREFIX}/share/libtool/ltmain.sh ${WRKSRC}/scripts/ltmain.sh
 
 do-install:
-	@${INSTALL_PROGRAM} ${WRKSRC}/src/xsidplay ${PREFIX}/bin
+	@${INSTALL_PROGRAM} ${WRKSRC}/src/xsidplay ${DESTDIR}${PREFIX}/bin
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

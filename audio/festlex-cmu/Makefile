@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/06/08 18:33:06 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2008/03/02 06:10:31 jlam Exp $
 
 DISTNAME=	festlex_CMU
 PKGNAME=	festlex-cmu-1.4.0
@@ -12,6 +12,8 @@ COMMENT=	CMU American English pronunciation dictionary for Festival
 
 DEPENDS+=	festival>=1.4.0:../../audio/festival
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/festival
 NO_BUILD=	yes
 
@@ -22,7 +24,7 @@ post-extract:
 	${FIND} ${WRKSRC} -type d -print | ${XARGS} ${CHMOD} 755
 
 do-install:
-	${INSTALL_DATA_DIR} ${FHOME}
-	cd ${WRKSRC} && ${PAX} -rw * ${FHOME}
+	${INSTALL_DATA_DIR} ${DESTDIR}${FHOME}
+	cd ${WRKSRC} && ${PAX} -rw * ${DESTDIR}${FHOME}
 
 .include "../../mk/bsd.pkg.mk"
