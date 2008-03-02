@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.9 2007/07/08 09:57:45 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/03/02 12:33:09 drochner Exp $
 bin/images2mpg
 lib/kde3/kipiplugin_acquireimages.la
 lib/kde3/kipiplugin_batchprocessimages.la
-lib/kde3/kipiplugin_calendar.la
 lib/kde3/kipiplugin_cdarchiving.la
 lib/kde3/kipiplugin_findimages.la
 lib/kde3/kipiplugin_flickrexport.la
@@ -431,7 +430,6 @@ share/kde/apps/kipiplugin_viewer/icons/hicolor/32x32/actions/ogl.png
 share/kde/config.kcfg/htmlexportconfig.kcfg
 share/kde/services/kipiplugin_acquireimages.desktop
 share/kde/services/kipiplugin_batchprocessimages.desktop
-share/kde/services/kipiplugin_calendar.desktop
 share/kde/services/kipiplugin_cdarchiving.desktop
 share/kde/services/kipiplugin_findimages.desktop
 share/kde/services/kipiplugin_flickrexport.desktop
