@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:28:58 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/02 06:10:34 jlam Exp $
 #
 
 DISTNAME=	rip-1.07
@@ -12,6 +12,8 @@ COMMENT=	Command-line based audio CD ripper and encoder
 DEPENDS+=	p5-CDDB_get>=2.23:../../audio/p5-CDDB_get
 DEPENDS+=	p5-MP3-Info>=1.00:../../audio/p5-MP3-Info
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_BUILD=	yes
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	rip
@@ -22,10 +24,10 @@ DOCDIR=		${PREFIX}/share/doc/rip
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/rip ${PREFIX}/bin/rip
-	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/rip ${DESTDIR}${PREFIX}/bin/rip
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	for i in ${DOCFILES}; do \
-	    ${INSTALL_DATA} ${WRKSRC}/$$i ${DOCDIR}; \
+	    ${INSTALL_DATA} ${WRKSRC}/$$i ${DESTDIR}${DOCDIR}; \
 	done
 
 .include "../../mk/bsd.pkg.mk"

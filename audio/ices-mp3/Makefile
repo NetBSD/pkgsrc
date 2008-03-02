@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/01/13 09:34:59 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/02 06:10:33 jlam Exp $
 #
 
 DISTNAME=		ices-${ICES_VERSION}
@@ -11,6 +11,8 @@ MASTER_SITES=		http://svn.xiph.org/releases/ices/
 MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://www.icecast.org/ices.php
 COMMENT=		Source client for a streaming server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		automake
 USE_LIBTOOL=		yes
@@ -38,20 +40,22 @@ pre-configure:
 	cd ${WRKSRC} && autoreconf --force
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/ices ${PREFIX}/bin/${PKGBASE}
-	${INSTALL_MAN} ${WRKSRC}/doc/ices.1 ${PREFIX}/${PKGMANDIR}/man1/${PKGBASE}.1
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/icesmanual.html ${DOCDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/src/ices \
+		${DESTDIR}${PREFIX}/bin/${PKGBASE}
+	${INSTALL_MAN} ${WRKSRC}/doc/ices.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${PKGBASE}.1
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/icesmanual.html ${DESTDIR}${DOCDIR}
 	for i in AUTHORS BUGS COPYING NEWS README README.playlist TODO ; \
 	do \
-	    ${INSTALL_DATA} ${WRKSRC}/$$i ${DOCDIR}/$$i ; \
+	    ${INSTALL_DATA} ${WRKSRC}/$$i ${DESTDIR}${DOCDIR}/$$i ; \
 	done
-	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	for i in ices.conf.dist ices.pm.dist ices.py.dist ; \
 	do \
-	    ${INSTALL_DATA} ${WRKSRC}/conf/$$i ${EGDIR}/$$i ; \
+	    ${INSTALL_DATA} ${WRKSRC}/conf/$$i ${DESTDIR}${EGDIR}/$$i ; \
 	done
-	${INSTALL_DATA_DIR} ${MODDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${MODDIR}
 
 # does not support flac-1.1.3 API
 #.include "../../audio/flac/buildlink3.mk"

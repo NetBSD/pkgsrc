@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/06/03 22:04:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/02 06:10:31 jlam Exp $
 #
 
 DISTNAME=		manual-html-4.23
@@ -10,6 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.csounds.com/
 COMMENT=		Csound4 Reference Manual
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_BUILD=		yes
 WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		${PKGNAME_NOREV}
@@ -17,11 +19,12 @@ DIST_SUBDIR=		${PKGNAME_NOREV}
 INSTALLATION_DIRS=	share/doc/csound4  share/examples
 
 do-install:
-	cd ${WRKSRC}/csound-4.23/manual \
-	&& ${PAX} -rw -s '|.*/CVS/.*||' -s ',.*/CVS$$,,' * ${PREFIX}/share/doc/csound4
+	cd ${WRKSRC}/csound-4.23/manual && \
+	${PAX} -rw -s '|.*/CVS/.*||' -s ',.*/CVS$$,,' * \
+		${DESTDIR}${PREFIX}/share/doc/csound4
 	cd ${FILESDIR} && ${INSTALL_DATA} rt-midi-input.* \
-		${PREFIX}/share/doc/csound4/examples
+		${DESTDIR}${PREFIX}/share/doc/csound4/examples
 	${LN} -s ../../share/doc/csound4/examples \
-		${PREFIX}/share/examples/csound4
+		${DESTDIR}${PREFIX}/share/examples/csound4
 
 .include "../../mk/bsd.pkg.mk"

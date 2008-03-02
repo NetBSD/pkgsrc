@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/01/07 09:13:47 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2008/03/02 06:10:34 jlam Exp $
 
 DISTNAME=	xamp-0.8-10
 PKGNAME=	xamp-0.8.10
@@ -11,6 +11,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${SKIN_DATA}
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	# http://andrej.co.ru/~andrej/programs/xamp/
 COMMENT=	Version of amp (stands for `Audio Mpeg Player') plus a Qt GUI
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/xamp-0.8/xamp-0.8g
 DIST_SUBDIR=	xamp
@@ -37,14 +39,17 @@ post-patch:
 	done
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xamp ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/xamp.1 ${PREFIX}/${PKGMANDIR}/man1
-	@${INSTALL_DATA_DIR} ${SKIN_DIR}/bfamp-xamp
-	${INSTALL_DATA} ${WRKDIR}/bfamp-xamp/*.bmp ${SKIN_DIR}/bfamp-xamp
-	@${INSTALL_DATA_DIR} ${SKIN_DIR}/chrome-xamp
-	${INSTALL_DATA} ${WRKDIR}/chrome-xamp/*.bmp ${SKIN_DIR}/chrome-xamp
-	@${INSTALL_DATA_DIR} ${SKIN_DIR}/mmxxamp-xamp
-	${INSTALL_DATA} ${WRKDIR}/mmxxamp-xamp/*.bmp ${SKIN_DIR}/mmxxamp-xamp
+	${INSTALL_PROGRAM} ${WRKSRC}/xamp ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/xamp.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	@${INSTALL_DATA_DIR} ${DESTDIR}${SKIN_DIR}/bfamp-xamp
+	${INSTALL_DATA} ${WRKDIR}/bfamp-xamp/*.bmp \
+		${DESTDIR}${SKIN_DIR}/bfamp-xamp
+	@${INSTALL_DATA_DIR} ${DESTDIR}${SKIN_DIR}/chrome-xamp
+	${INSTALL_DATA} ${WRKDIR}/chrome-xamp/*.bmp \
+		${DESTDIR}${SKIN_DIR}/chrome-xamp
+	@${INSTALL_DATA_DIR} ${DESTDIR}${SKIN_DIR}/mmxxamp-xamp
+	${INSTALL_DATA} ${WRKDIR}/mmxxamp-xamp/*.bmp \
+		${DESTDIR}${SKIN_DIR}/mmxxamp-xamp
 
 .include "../../x11/qt1/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

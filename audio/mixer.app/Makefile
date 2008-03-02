@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/12/27 13:37:35 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/02 06:10:33 jlam Exp $
 #
 
 DISTNAME=	Mixer.app-1.8.0
@@ -15,15 +15,16 @@ COMMENT=	Another mixer intended for the windowmaker dockapp
 NOT_FOR_PLATFORM=	Interix-*-*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c++
 
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/Mixer.app ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/Mixer.app
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/Mixer.app
+	${INSTALL_PROGRAM} ${WRKSRC}/Mixer.app ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/Mixer.app
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/Mixer.app
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/09/19 20:59:30 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2008/03/02 06:10:33 jlam Exp $
 
 DISTNAME=	madman-0.93
 PKGREVISION=	7
@@ -10,6 +10,8 @@ HOMEPAGE=	http://madman.sourceforge.net/
 COMMENT=	Powerful audio manager for large collections
 
 BUILD_DEPENDS+=		scons>=0.96:../../devel/scons
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 GCC_REQD+=		3.0
@@ -30,11 +32,11 @@ do-build:
 	qt_directory=${QTDIR} add_c_include_dirs=${LOCALBASE}/include add_c_lib_dirs=${WRKDIR}/lib
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/main/madman ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/madman
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/madman/plugins
+	${INSTALL_PROGRAM} ${WRKSRC}/main/madman ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/madman
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/madman/plugins
 	for plugin in burn_to_audio_cd burn_to_data_cd export_m3u move_to_trash; do \
-		${INSTALL_DATA} -m0755 ${WRKSRC}/plugins/$$plugin ${PREFIX}/lib/madman/plugins; \
+		${INSTALL_DATA} -m0755 ${WRKSRC}/plugins/$$plugin ${DESTDIR}${PREFIX}/lib/madman/plugins; \
 	done
 
 .include "../../x11/qt3-libs/buildlink3.mk"
