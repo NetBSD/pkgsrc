@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/11/06 20:13:33 reed Exp $
+# $NetBSD: Makefile,v 1.21 2008/03/02 03:48:37 jlam Exp $
 
 DISTNAME=	unlzx.c
 PKGNAME=	unlzx-1.1
@@ -11,6 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Extracts .lzx archives from Amiga systems
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 
@@ -20,6 +21,6 @@ do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} -o unlzx unlzx.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/unlzx ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/unlzx ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

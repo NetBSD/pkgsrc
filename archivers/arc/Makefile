@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2006/10/04 20:45:46 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2008/03/02 03:48:36 jlam Exp $
 
 DISTNAME=	arc-5.21o
 CATEGORIES=	archivers
@@ -10,12 +10,13 @@ HOMEPAGE=	http://sourceforge.net/projects/arc/
 COMMENT=	Create & extract files from DOS .ARC files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/arc ${PREFIX}/bin/
-	${INSTALL_PROGRAM} ${WRKSRC}/marc ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/arc.1 ${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_PROGRAM} ${WRKSRC}/arc ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/marc ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/arc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

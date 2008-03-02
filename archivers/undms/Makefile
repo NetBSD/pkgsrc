@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/11/06 20:12:38 reed Exp $
+# $NetBSD: Makefile,v 1.20 2008/03/02 03:48:37 jlam Exp $
 
 DISTNAME=	undms-1.3.c
 PKGNAME=	undms-1.3
@@ -11,6 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Converts .dms Amiga disk images to uncompressed .adf images
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 
@@ -20,6 +21,6 @@ do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} -o undms undms-1.3.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/undms ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/undms ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

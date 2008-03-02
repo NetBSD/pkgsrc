@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/11/03 14:10:32 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2008/03/02 03:48:37 jlam Exp $
 #
 
 DISTNAME=	unace-1.2b
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.winace.com/
 COMMENT=	Extract, list and test files in ACE archives
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 LICENSE=		unace-source-license
 RESTRICTED=		Only original file distribution.
@@ -25,8 +26,9 @@ BUILD_TARGET=	clean unace
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/unace ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/unace
-	${INSTALL_MAN} ${WRKSRC}/readme.txt ${PREFIX}/share/doc/unace
+	${INSTALL_PROGRAM} ${WRKSRC}/unace ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/unace
+	${INSTALL_MAN} ${WRKSRC}/readme.txt \
+		${DESTDIR}${PREFIX}/share/doc/unace
 
 .include "../../mk/bsd.pkg.mk"

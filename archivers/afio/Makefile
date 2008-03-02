@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/07/23 13:57:28 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/02 03:48:36 jlam Exp $
 
 DISTNAME=	afio-2.5
 PKGREVISION=	1
@@ -11,6 +11,7 @@ HOMEPAGE=	http://freshmeat.net/projects/afio/
 COMMENT=	cpio-format archive creator with data corruption handling
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=	afio
 
@@ -23,7 +24,8 @@ MAKE_FLAGS+=	e2=
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/afio ${PREFIX}/bin/afio
-	${INSTALL_MAN} ${WRKSRC}/afio.1 ${PREFIX}/${PKGMANDIR}/man1/afio.1
+	${INSTALL_PROGRAM} ${WRKSRC}/afio ${DESTDIR}${PREFIX}/bin/afio
+	${INSTALL_MAN} ${WRKSRC}/afio.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/afio.1
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/05/17 06:12:27 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/02 03:48:36 jlam Exp $
 
 DISTNAME=	makeself-2.1.4
 CATEGORIES=	archivers
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.megastep.org/makeself/
 COMMENT=	Neat script to make self-extracting archives
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 
@@ -21,6 +22,7 @@ pre-patch:
 	cd ${WRKDIR} && ${SETENV} DISPLAY="" ${SH} ${DISTFILES}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/makeself.sh ${PREFIX}/bin/makeself
+	${INSTALL_SCRIPT} ${WRKSRC}/makeself.sh \
+		${DESTDIR}${PREFIX}/bin/makeself
 
 .include "../../mk/bsd.pkg.mk"

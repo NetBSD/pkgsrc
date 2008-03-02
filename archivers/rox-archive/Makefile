@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:08:04 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/02 03:48:36 jlam Exp $
 #
 
 DISTNAME=	archive-2.0
@@ -14,6 +14,8 @@ COMMENT=	Simple archiver
 
 # no real libraries there
 DEPENDS+=	rox-lib>=2.0.2nb2:../../devel/rox-lib
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/Archive
 DIST_SUBDIR=	rox
@@ -31,7 +33,7 @@ SUBST_FILES.lib=	findrox.py
 SUBST_SED.lib=		-e 's,/usr/local/lib,${PREFIX}/share/rox,g'
 
 do-install:
-	cd ${WRKSRC} && ${PAX} -rw . ${PREFIX}/share/rox/Archive
+	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/share/rox/Archive
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

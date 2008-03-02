@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/12/15 14:34:18 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/02 03:48:36 jlam Exp $
 #
 
 DISTNAME=		mscompress-0.3
@@ -11,15 +11,18 @@ HOMEPAGE=		ftp://ftp.penguin.cz/pub/users/mhi/mscompress/
 COMMENT=		Microsoft "compress.exe/expand.exe" compatible (de)compressor
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mscompress ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/msexpand ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/mscompress.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/msexpand.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/mscompress ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/msexpand ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/mscompress.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/msexpand.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
