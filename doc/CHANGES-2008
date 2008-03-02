@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.401 2008/03/02 09:49:04 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.402 2008/03/02 11:33:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -736,3 +736,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xf86-video-intel to 2.2.1 [tnn 2008-03-02]
 	Updated games/crack-attack to 1.1.14nb4 [dsainty 2008-03-02]
 	Updated graphics/dcraw to 8.82 [wiz 2008-03-02]
+	Updated devel/automake to 1.10.1 [wiz 2008-03-02]
