@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7084 2008/03/02 03:08:02 tnn Exp $
+$NetBSD: TODO,v 1.7085 2008/03/02 10:01:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -500,14 +500,12 @@ Suggested package updates
 	o claws-mail-3.3.1
 	o clearsilver-0.10.4
 	o clearsilver-base-0.10.4
-	o clisp-2.44 [pkgsrc-wip]
-	o clisp-2.44.1
 	o cmus-2.2.0 [pkg/37856]
 	o cocoon-2.1.10
 	o compiz-0.6.2
 	o connect-1.96
 	o control-center-2.20.1
-	o cook-2.30
+	o cook-2.31
 	o colorize-0.3.4
 	o cpio-2.9
 	o cpmtools-2.6
@@ -562,7 +560,7 @@ Suggested package updates
 	o easytag-current-2.1.5
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
-	o ed-0.8
+	o ed-0.9
 	o ede-1.2
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o egtk-0.3.6.2
@@ -640,6 +638,7 @@ Suggested package updates
 	o gdb-6.7.1
 	o gdb6-6.7.1
 	o gdeskcal-1.01
+	o gdl-0.7.10
 	o gdsreader-0.3.2
 	o geany-0.13
 	o generator-cbiere-0.35r3
@@ -665,10 +664,11 @@ Suggested package updates
 	o gnet-2.0.8
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-build-0.2.2
+	o gnome-build-0.2.3
 	o gnome-common-2.20.0
 	o gnome-doc-utils-0.12.1
 	o gnome-mag-0.15.0
+	o gnome-pilot-2.0.16
 	o gnome-speech-0.4.18
 	o gnome-spell-1.0.8
 	o gnomeicu-0.99.14
@@ -715,6 +715,7 @@ Suggested package updates
 	o gtick-0.4.1
 	o gtk-systrace-20030623
 	o gtk2-engines-2.12.2
+	o gtk2-sharp-2.10.4
 	o gtklife-5.1
 	o gtkmm-2.12.5
 	o gtksee-0.6.0b
@@ -759,8 +760,8 @@ Suggested package updates
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o instiki-0.11pl1
 	o intercal-0.24
-	o intltool-0.37.0
-	o iozone-3.283
+	o intltool-0.37.1
+	o iozone-3.287
 	o ircservices-5.1.11
 	o irrd-2.3.4 [pkg/36813|38002]
 	o irrtoolset-nox11-4.8.4
@@ -812,6 +813,7 @@ Suggested package updates
 	o lftp-3.6.3
 	o libFoundation-1.1.3
 	o libIDL-0.8.10
+	o libXext-1.0.4
 	o libarchive-2.4.8
 	o libast-0.7
 	o libbonobo-2.20.4
@@ -856,7 +858,7 @@ Suggested package updates
 	o libpreludedb-0.9.14
 	o librsvg-2.22.1
 	o libshout-2.2.2
-	o libsigc++-2.2.0
+	o libsigc++-2.2.1
 	o libsoup-2.2.102
 	o libssh-0.2
 	o libstatgrab-0.15
@@ -891,7 +893,7 @@ Suggested package updates
 	o mapserver-5.0.0
 	o maradns-1.2.12.09
 	o matchbox-panel-0.9.3
-	o mathomatic-12.8.6
+	o mathomatic-12.8.8
 	o mcrypt-2.6.6
 	o mergeant-0.67
 	o mesure-0.7.2
@@ -926,6 +928,7 @@ Suggested package updates
 	o naim-0.11.8.3.1
 	o nap-1.5.3
 	o nas-1.9.1
+	o nasm-2.02
 	o nautilus-cd-burner-2.18.2 [needs hal]
 	o ncftp3-3.2.1 [pkg/37859]
 	o ncview-1.93b
@@ -967,7 +970,7 @@ Suggested package updates
 	o olvwm-4.5
 	o onyx-5.1.2
 	o oo2c-2.1.7
-	o openafs-1.5.32
+	o openafs-1.5.33
 	o openh323-1.19.1
 	o openldap-2.4.8
 	o openmortal-0.7.1
@@ -1068,7 +1071,8 @@ Suggested package updates
 	o p5-xmltv-0.5.51
 	o pam-smbpass-3.0.13
 	o pan-0.14.2.91 [pkg/33948]
-	o pari-2.1.7
+	o pari-2.3.3 [pkg/38116]
+	o pari-galdata-2.2 [pkg/38117]
 	o parrot-0.5.2
 	o pcal-4.8
 	o pciids-20071004
@@ -1278,7 +1282,7 @@ Suggested package updates
 	o sope-4.5.9
 	o sound-juicer-2.16.4 [needs nautilus-cd-burner>=2.15.3]
 	o sound-juicer-2.20.1
-	o source-highlight-2.8
+	o source-highlight-2.9
 	o spcaview-20060501
 	o spim-7.3
 	o sqlite3-3.5.6
@@ -1355,6 +1359,7 @@ Suggested package updates
 	o vera-1.17
 	o vfu-4.03
 	o vicq-0.4.2
+	o viewvc-1.0.5
 	o vifm-0.3a
 	o vino-2.20.1
 	o visual-regexp-3.1
@@ -1463,7 +1468,7 @@ Suggested package updates
 	o yudit-2.9.0
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zile-2.2.54
+	o zile-2.2.56
 	o zircon-1.18.256
 	o zoom-1.0.5
 	o zope25-AbracadabraObject-2.0.0
