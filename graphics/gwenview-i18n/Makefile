@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2008/01/18 05:06:40 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/02 12:55:06 drochner Exp $
 #
 
-DISTNAME=	gwenview-i18n-1.4.1
-PKGREVISION=	4
+DISTNAME=	gwenview-i18n-1.4.2
 CATEGORIES=	kde graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gwenview/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +15,7 @@ USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
 
-DEPENDS+=	gwenview-1.4.1{,nb[0-9]*}:../../graphics/gwenview
+DEPENDS+=	gwenview-1.4.2{,nb[0-9]*}:../../graphics/gwenview
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
