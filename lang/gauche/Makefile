@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2008/03/01 19:50:13 tnn Exp $
+# $NetBSD: Makefile,v 1.46 2008/03/02 00:55:15 jlam Exp $
 #
 
 DISTNAME=	Gauche-0.8.13
@@ -18,16 +18,21 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 EVAL_PREFIX+=		SLIB_PREFIX=slib
 
+MAKE_JOBS_SAFE=		no
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-slib=${SLIB_PREFIX}/share/slib
 CONFIGURE_ARGS+=	--enable-threads=pthreads
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
+
+CHECK_BUILTIN.iconv:=	no
 .include "../../converters/libiconv/builtin.mk"
+CHECK_BUILTIN.iconv:=	yes
+
 .if !empty(USE_BUILTIN.iconv:M[nN][oO])
 CONFIGURE_ARGS+=	--with-iconv-lib=${BUILDLINK_LIBNAME.iconv}
-ALL_ENV+=		ICONV_LDFLAGS="${COMPILER_RPATH_FLAG}${PREFIX}/lib"
+ALL_ENV+=		\
+	ICONV_LDFLAGS="${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.iconv}/lib"
 .endif
-MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gzip makeinfo
