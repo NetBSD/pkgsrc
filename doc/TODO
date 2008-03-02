@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7087 2008/03/02 14:46:02 bjs Exp $
+$NetBSD: TODO,v 1.7088 2008/03/02 15:36:37 bjs Exp $
 
 Suggested new packages
 ======================
@@ -807,7 +807,6 @@ Suggested package updates
 	o ldapsdk-6.0.2
 	o leafnode-1.11.6
 	o leafpad-0.8.13
-	o less-418
 	o lft-2.5 [at http://pwhois.org/]
 	o lftp-3.6.3
 	o libFoundation-1.1.3
