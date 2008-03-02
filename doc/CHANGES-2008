@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.397 2008/03/02 02:44:02 obache Exp $
+$NetBSD: CHANGES-2008,v 1.398 2008/03/02 02:54:04 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -730,3 +730,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/suikyo-docs version 2.1.0 [obache 2008-03-02]
 	Added textproc/suikyo-elisp version 2.1.0 [obache 2008-03-02]
 	Added textproc/ruby-suikyo version 2.1.0 [obache 2008-03-02]
+	Added inputmethod/prime version 1.0.0.1 [obache 2008-03-02]
+	Added inputmethod/prime-dict version 1.0.0 [obache 2008-03-02]
+	Added inputmethod/prime-el version 1.5.1.3 [obache 2008-03-02]
