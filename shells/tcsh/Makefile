@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2008/02/29 22:42:02 jlam Exp $
+# $NetBSD: Makefile,v 1.62 2008/03/02 07:08:39 jlam Exp $
 #
 
 DISTNAME=	tcsh-6.15.00
@@ -29,8 +29,6 @@ PLIST_SRC=	${WRKDIR}/PLIST-src
 OS_VER_cmd=	${ECHO} ${OS_VERSION} | ${SED} -e 's|5\.|2.|'
 LOWER_OPSYS=	solaris${OS_VER_cmd:sh}
 .endif
-
-CONFIGURE_ENV+=	ac_cv_search_tgetent=${BUILDLINK_LDADD.termcap:Q}
 
 PKG_SHELL?=	bin/tcsh
 
