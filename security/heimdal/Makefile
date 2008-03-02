@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2008/02/29 22:41:13 jlam Exp $
+# $NetBSD: Makefile,v 1.67 2008/03/02 06:41:32 jlam Exp $
 
 DISTNAME=	heimdal-1.1
 CATEGORIES=	security
@@ -71,7 +71,7 @@ INFO_FILES=		# PLIST
 #
 GENERATE_PLIST+=	\
 	( cd ${WRKSRC}/lib/roken && ${BUILD_MAKE_CMD} print-xheaders |	\
-	  ${XARGS} -n 1 | ${SED} -e "s,^,include/krb5/," );		\
+	  ${XARGS} -n 1 | ${SED} -e "s,^,include/krb5/roken/," );	\
 	${ECHO} "@dirrm include/krb5";
 
 .include "../../devel/readline/buildlink3.mk"
