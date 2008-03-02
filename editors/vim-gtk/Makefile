@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2008/01/09 13:47:43 martti Exp $
+# $NetBSD: Makefile,v 1.58 2008/03/02 16:01:32 jlam Exp $
 
 PKGNAME=		vim-gtk-${VIM_VERSION}.${VIM_PATCHLEVEL}
-#PKGREVISION=		1
+PKGREVISION=		1
 
 COMMENT=		Vim editor (vi clone) with X11 GTK+ GUI
 
@@ -14,7 +14,7 @@ CONFLICTS+=		vim-[0-9]* vim-gtk2-[0-9]* vim-motif-[0-9]*
 CONFLICTS+=		vim-xaw-[0-9]* vim-kde-[0-9]*
 
 CONFIGURE_ARGS+=	--enable-gui=gtk
-CONFIGURE_ARGS+=	--with-tlib=ncurses
+CONFIGURE_ARGS+=	--with-tlib=${BUILDLINK_LIBNAME.termcap}
 
 BUILD_TARGET=		vim
 INSTALL_TARGET=		installvimbin
@@ -34,8 +34,10 @@ post-install:
 	${LN} -s vim ${DESTDIR}${PREFIX}/bin/${f}
 .endfor
 
-.include "../../devel/ncurses/buildlink3.mk"
+.include "../../converters/libiconv/buildlink3.mk"
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
