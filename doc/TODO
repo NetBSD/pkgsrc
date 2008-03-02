@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7090 2008/03/02 15:51:42 adam Exp $
+$NetBSD: TODO,v 1.7091 2008/03/02 22:13:37 wiz Exp $
 
 Suggested new packages
 ======================
@@ -445,7 +445,6 @@ Suggested package updates
 	o aterm-1.0.1
 	o auctex-11.85
 	o autoconvert-0.3.16
-	o automake-1.10.1
 	o avcheck-0.91
 	o avl-2.0.2a
 	o avr-binutils-2.17
