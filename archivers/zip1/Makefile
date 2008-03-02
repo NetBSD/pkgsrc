@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2007/01/11 19:08:50 gdt Exp $
+# $NetBSD: Makefile,v 1.43 2008/03/02 03:48:37 jlam Exp $
 #
 
 DISTNAME=	zip1-1.1
@@ -18,6 +18,7 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 MAKE_FILE=	makefile
@@ -36,9 +37,13 @@ MAKE_FLAGS+=	LFLAGS2=-lcompat
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	cd ${WRKSRC} && ${INSTALL_PROGRAM} zip ${PREFIX}/bin/zip1
-	cd ${WRKSRC} && ${INSTALL_MAN} zip.1 ${PREFIX}/${PKGMANDIR}/man1/zip1.1
-	cd ${WRKSRC} && ${INSTALL_PROGRAM} zipcloak ${PREFIX}/bin/zipcloak1
-	${LN} -fs zip1.1 ${PREFIX}/${PKGMANDIR}/man1/zipcloak1.1
+	cd ${WRKSRC} && ${INSTALL_PROGRAM} zip \
+		${DESTDIR}${PREFIX}/bin/zip1
+	cd ${WRKSRC} && ${INSTALL_MAN} zip.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/zip1.1
+	cd ${WRKSRC} && ${INSTALL_PROGRAM} zipcloak \
+		${DESTDIR}${PREFIX}/bin/zipcloak1
+	${LN} -fs zip1.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/zipcloak1.1
 
 .include "../../mk/bsd.pkg.mk"

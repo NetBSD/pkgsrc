@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/06/18 07:04:16 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2008/03/02 03:48:37 jlam Exp $
 
 DISTNAME=	unarj-2.65
 PKGREVISION=	1
@@ -15,6 +15,8 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	bin
@@ -23,9 +25,11 @@ post-extract:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/unarj
-	${INSTALL_PROGRAM} ${WRKSRC}/unarj ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/unarj.txt ${PREFIX}/share/doc/unarj
-	${INSTALL_MAN} ${WRKSRC}/technote.txt ${PREFIX}/share/doc/unarj
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/unarj
+	${INSTALL_PROGRAM} ${WRKSRC}/unarj ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/unarj.txt \
+		${DESTDIR}${PREFIX}/share/doc/unarj
+	${INSTALL_MAN} ${WRKSRC}/technote.txt \
+		${DESTDIR}${PREFIX}/share/doc/unarj
 
 .include "../../mk/bsd.pkg.mk"
