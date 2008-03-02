@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.14 2006/01/17 08:07:38 adam Exp $
+$NetBSD: patch-ab,v 1.15 2008/03/02 13:13:48 drochner Exp $
 
 --- src/af/util/xp/ut_iconv.cpp.orig	2005-10-08 12:53:33.000000000 +0200
 +++ src/af/util/xp/ut_iconv.cpp
@@ -12,3 +12,16 @@ $NetBSD: patch-ab,v 1.14 2006/01/17 08:07:38 adam Exp $
  
  #define ICONV_CONST const
  #else
+@@ -290,9 +291,11 @@ const char * ucs4Internal ()
+ #elif defined(_LIBICONV_H)
+   // libiconv seems to prefer UCS-4-INTERNAL to UCS-4BE and UCS-4LE
+   return "UCS-4-INTERNAL";
+-#elif defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__)
++#elif defined(__FreeBSD__) || defined(__OpenBSD__)
+   // we special case the BSDs since spelling just doesn't work
+   return "UCS4";
++#elif defined(__NetBSD__)
++  return "UCS-4";
+ #else
+   // general case, found by hub and dom
+ 	if (s_ucs4_internal == 0) 
