@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/07/17 19:32:42 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/03/02 12:59:41 drochner Exp $
 bin/kphotoalbum
 share/applications/kde/kphotoalbum-import.desktop
 share/applications/kde/kphotoalbum.desktop
@@ -290,7 +290,6 @@ share/kde/apps/kphotoalbum/demo/spiff.jpg
 share/kde/apps/kphotoalbum/demo/spiff_2.jpg
 share/kde/apps/kphotoalbum/demo/sunset.jpg
 share/kde/apps/kphotoalbum/demo/wayne.jpg
-share/kde/apps/kphotoalbum/exif-sqlite.db
 share/kde/apps/kphotoalbum/icons/hicolor/16x16/actions/ellipsetool.png
 share/kde/apps/kphotoalbum/icons/hicolor/16x16/actions/linetool.png
 share/kde/apps/kphotoalbum/icons/hicolor/16x16/actions/recttool.png
@@ -368,6 +367,7 @@ share/locale/ru/LC_MESSAGES/kphotoalbum.mo
 share/locale/rw/LC_MESSAGES/kphotoalbum.mo
 share/locale/sk/LC_MESSAGES/kphotoalbum.mo
 share/locale/sr/LC_MESSAGES/kphotoalbum.mo
+share/locale/sr@Latn/LC_MESSAGES/kphotoalbum.mo
 share/locale/sv/LC_MESSAGES/kphotoalbum.mo
 share/locale/ta/LC_MESSAGES/kphotoalbum.mo
 share/locale/tr/LC_MESSAGES/kphotoalbum.mo
