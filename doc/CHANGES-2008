@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.405 2008/03/02 13:31:46 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.406 2008/03/02 14:13:09 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -740,3 +740,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added lang/pcc-current version 0.9.9.20080223 [he 2008-03-02]
 	Added devel/mell version 1.0.0 [obache 2008-03-02]
 	Updated devel/libidn to 1.5 [bjs 2008-03-02]
+	Added security/libssh2 version 0.18 [bjs 2008-03-02]
