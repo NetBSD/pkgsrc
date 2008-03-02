@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/12/28 11:47:51 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/02 06:10:31 jlam Exp $
 
 DISTNAME=	OGIspanish-2.0.1
 PKGNAME=	festogi-spanish-2.0.1
@@ -14,6 +14,8 @@ DEPENDS+=	festival>=1.4.0:../../audio/festival
 
 LICENSE=	no-commercial-use
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/festival
 NO_BUILD=	yes
 
@@ -25,7 +27,7 @@ post-extract:
 	${RM} -r ${WRKSRC}/lib/ogi_spanish/CVS
 
 do-install:
-	${INSTALL_DATA_DIR} ${FHOME}
-	cd ${WRKSRC} && ${PAX} -rw * ${FHOME}
+	${INSTALL_DATA_DIR} ${DESTDIR}${FHOME}
+	cd ${WRKSRC} && ${PAX} -rw * ${DESTDIR}${FHOME}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/01/15 16:36:47 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/02 06:10:34 jlam Exp $
 
 DISTNAME=	wmusic-1.5.0
 PKGREVISION=	2
@@ -9,16 +9,18 @@ MAINTAINER=	joel@carnat.net
 HOMEPAGE=	http://home.jtan.com/~john/wmusic/
 COMMENT=	WindowMaker dockable remote for XMMS
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/wmusic ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/wmusic
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/wmusic
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/wmusic
+	${INSTALL_PROGRAM} ${WRKSRC}/src/wmusic ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/wmusic
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/wmusic
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/wmusic
 
 .include "../../audio/xmms/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"

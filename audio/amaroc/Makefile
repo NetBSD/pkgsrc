@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/20 19:08:45 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/02 06:10:31 jlam Exp $
 #
 
 DISTNAME=		amaroc-0.3
@@ -12,12 +12,15 @@ COMMENT=		Command line interface to amarok
 
 DEPENDS+=		${PYPKGPREFIX}-curses-[0-9]*:../../devel/py-curses
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS=	bin share/doc/amaroc
+
 do-build:
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/amaroc.py ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/amaroc
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/amaroc
+	${INSTALL_SCRIPT} ${WRKSRC}/amaroc.py ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/amaroc
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/amaroc
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
