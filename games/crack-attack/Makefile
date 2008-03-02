@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2008/01/06 21:33:12 snj Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/02 05:31:00 dsainty Exp $
 
 DISTNAME=	crack-attack-1.1.14
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES=	http://savannah.nongnu.org/download/crack-attack/
 
@@ -9,9 +9,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://savannah.nongnu.org/projects/crack-attack
 COMMENT=	Tetris Attack inspired game
 
-GNU_CONFIGURE=	YES
-USE_LANGUAGES=	c c++
-USE_TOOLS+=	pkg-config
+GNU_CONFIGURE=		YES
+CONFIGURE_ARGS+=	--disable-binreloc
+USE_LANGUAGES=		c c++
+USE_TOOLS+=		pkg-config
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/${PKGBASE}
