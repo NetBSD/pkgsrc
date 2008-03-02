@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/11/27 14:24:01 dsainty Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/02 03:48:36 jlam Exp $
 
 DISTNAME=	sarab-0.2.2
 PKGREVISION=	1
@@ -12,6 +12,8 @@ COMMENT=	Schedule And Rotate Automatic Backups
 
 DEPENDS+=	dar-[0-9]*:../../archivers/dar
 WRKSRC=		${WRKDIR}/sarab
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		bash:run
 PKG_SYSCONFSUBDIR=	sarab
@@ -53,18 +55,19 @@ SUBST_MESSAGE.prune=	Prune /kern instead of /sys
 SUBST_FILES.prune=	etc/sarab.dcf
 SUBST_SED.prune=	-e "s|--prune sys|--prune kern|"
 
+INSTALLATION_DIRS=	bin ${EGDIR}
+
 do-build: # do nothing
 
 do-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
 	for example in \
 			${WRKSRC}/etc/rotation.schedule.README \
 			${WRKSRC}/etc/rotation.schedule \
 			${WRKSRC}/etc/sarab.conf \
 			${WRKSRC}/etc/sarab.dcf \
 			${WRKSRC}/etc/examples/*; do \
-		${INSTALL_DATA} $${example} ${EGDIR}/; \
+		${INSTALL_DATA} $${example} ${DESTDIR}${EGDIR}; \
 	done
-	${INSTALL_SCRIPT} ${WRKSRC}/sarab.sh ${PREFIX}/bin/sarab
+	${INSTALL_SCRIPT} ${WRKSRC}/sarab.sh ${DESTDIR}${PREFIX}/bin/sarab
 
 .include "../../mk/bsd.pkg.mk"

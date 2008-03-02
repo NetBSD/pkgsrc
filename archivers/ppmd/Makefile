@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/12/15 14:34:18 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/02 03:48:36 jlam Exp $
 #
 
 DISTNAME=	ppmdi1
@@ -12,6 +12,7 @@ HOMEPAGE=	http://compression.ru/ds/
 COMMENT=	PPM file compressor
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=	makefile.gmk
 BUILD_TARGET=	ppmd
@@ -28,8 +29,9 @@ SUBST_FILES.d2u=	*
 SUBST_FILTER_CMD.d2u=	${TR} -d '\015'
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/ppmd ${PREFIX:Q}/bin
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/ppmd
-	${INSTALL_DATA} ${WRKSRC:Q}/read_me.txt ${PREFIX:Q}/share/doc/ppmd/
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/ppmd ${DESTDIR}${PREFIX:Q}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/share/doc/ppmd
+	${INSTALL_DATA} ${WRKSRC:Q}/read_me.txt \
+		${DESTDIR}${PREFIX:Q}/share/doc/ppmd/
 
 .include "../../mk/bsd.pkg.mk"
