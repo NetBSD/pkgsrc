@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/03/04 11:29:57 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/02 06:10:31 jlam Exp $
 #
 
 DISTNAME=		applerecords-0.5
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.jar
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://web.archive.org/web/20060501054520/http://www.cdavies.org/applerecords.html
 COMMENT=		Java DAAP client
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=		yes
 WRKSRC=			${WRKDIR}
@@ -24,8 +26,9 @@ do-extract:
 	${SED} -e 's|@SH@|${SH}|g' -e 's|@PREFIX@|${PREFIX}|g' ${FILESDIR}/applerecords > ${WRKSRC}/applerecords
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/applerecords
-	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.jar ${PREFIX}/lib/applerecords/applerecords.jar
-	${INSTALL_SCRIPT} ${WRKSRC}/applerecords ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/applerecords
+	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.jar \
+		${DESTDIR}${PREFIX}/lib/applerecords/applerecords.jar
+	${INSTALL_SCRIPT} ${WRKSRC}/applerecords ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
