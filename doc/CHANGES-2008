@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.395 2008/03/01 21:15:07 mjl Exp $
+$NetBSD: CHANGES-2008,v 1.396 2008/03/02 01:58:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -724,3 +724,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/ruby-sary version 1.2.0 [obache 2008-03-01]
 	Updated graphics/rabbit to 0.5.5 [obache 2008-03-01]
 	Updated chat/climm to 0.6.2 [mjl 2008-03-01]
+	Updated inputmethod/uim to 1.4.2 [obache 2008-03-02]
