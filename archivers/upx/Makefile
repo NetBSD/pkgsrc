@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/09/29 10:23:08 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/02 03:48:37 jlam Exp $
 
 DISTNAME=	upx-1.25-src
 PKGNAME=	${DISTNAME:S/-src//}
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=upx/}
 MAINTAINER=	fab@gnux.info
 HOMEPAGE=	http://upx.sourceforge.net/
 COMMENT=	Ultimate packer for executables
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
@@ -26,10 +28,12 @@ do-build:
 	cd ${WRKSRC:Q}/doc && ${MAKE_PROGRAM}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/src/upx ${PREFIX:Q}/bin
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/upx/
-	${INSTALL_DATA} ${WRKSRC:Q}/doc/upx.doc ${PREFIX:Q}/share/doc/upx
-	${INSTALL_DATA} ${WRKSRC:Q}/doc/upx.html ${PREFIX:Q}/share/doc/upx
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/src/upx ${DESTDIR}${PREFIX:Q}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/share/doc/upx/
+	${INSTALL_DATA} ${WRKSRC:Q}/doc/upx.doc \
+		${DESTDIR}${PREFIX:Q}/share/doc/upx
+	${INSTALL_DATA} ${WRKSRC:Q}/doc/upx.html \
+		${DESTDIR}${PREFIX:Q}/share/doc/upx
 
 .include "../../devel/ucl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

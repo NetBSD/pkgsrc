@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/09/09 02:41:54 obache Exp $
+# $NetBSD: Makefile,v 1.28 2008/03/02 03:48:36 jlam Exp $
 
 DISTNAME=	ha0999
 PKGNAME=	ha-0.999b
@@ -11,6 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	The HA archiver using the HSC compression method
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 
@@ -21,6 +22,6 @@ USE_TOOLS+=	gmake
 INSTALLATION_DIRS=	bin
 
 do-install:
-	cd ${WRKSRC}; ${INSTALL_PROGRAM} ha ${PREFIX}/bin
+	cd ${WRKSRC}; ${INSTALL_PROGRAM} ha ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

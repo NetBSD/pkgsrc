@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/03/04 21:28:52 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/02 03:48:36 jlam Exp $
 
 DISTNAME=	bunzip021.c
 PKGNAME=	bunzip-0.21
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.muraroa.demon.co.uk/
 COMMENT=	Decompressor for bzip .bz files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 
@@ -20,6 +21,6 @@ do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} -o bunzip ${DISTNAME}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bunzip ${PREFIX}/bin/bunzip
+	${INSTALL_PROGRAM} ${WRKSRC}/bunzip ${DESTDIR}${PREFIX}/bin/bunzip
 
 .include "../../mk/bsd.pkg.mk"
