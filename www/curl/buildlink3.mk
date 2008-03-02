@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2008/01/18 05:09:48 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2008/03/02 14:40:26 bjs Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CURL_BUILDLINK3_MK:=	${CURL_BUILDLINK3_MK}+
@@ -15,6 +15,12 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}curl
 BUILDLINK_API_DEPENDS.curl+=	curl>=7.12.3
 BUILDLINK_ABI_DEPENDS.curl+=	curl>=7.17.1nb1
 BUILDLINK_PKGSRCDIR.curl?=	../../www/curl
+
+pkgbase:= curl
+.  include "../../mk/pkg-build-options.mk"
+.  if !empty(PKG_BUILD_OPTIONS.curl:Mlibssh2)
+.    include "../../security/libssh2/buildlink3.mk"
+.  endif
 .endif	# CURL_BUILDLINK3_MK
 
 .include "../../devel/libidn/buildlink3.mk"
