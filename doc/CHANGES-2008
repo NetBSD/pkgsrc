@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.403 2008/03/02 12:16:07 he Exp $
+$NetBSD: CHANGES-2008,v 1.404 2008/03/02 12:26:30 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -738,3 +738,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/dcraw to 8.82 [wiz 2008-03-02]
 	Updated devel/automake to 1.10.1 [wiz 2008-03-02]
 	Added lang/pcc-current version 0.9.9.20080223 [he 2008-03-02]
+	Added devel/mell version 1.0.0 [obache 2008-03-02]
