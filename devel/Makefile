@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.917 2008/02/29 13:08:34 obache Exp $
+# $NetBSD: Makefile,v 1.918 2008/03/02 12:27:40 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -332,6 +332,7 @@ SUBDIR+=	makedepf90
 SUBDIR+=	maketool
 SUBDIR+=	mantis
 SUBDIR+=	meld
+SUBDIR+=	mell
 SUBDIR+=	memcached
 SUBDIR+=	mercurial
 SUBDIR+=	mk-files
