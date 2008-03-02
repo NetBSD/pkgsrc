@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7083 2008/03/02 01:59:01 obache Exp $
+$NetBSD: TODO,v 1.7084 2008/03/02 03:08:02 tnn Exp $
 
 Suggested new packages
 ======================
@@ -531,6 +531,7 @@ Suggested package updates
 	o dap-3.7
 	o dar-2.3.7
 	o dbench-3.04
+	o dbus-1.1.20
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
