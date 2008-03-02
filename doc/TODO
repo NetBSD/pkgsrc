@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7089 2008/03/02 15:38:42 bjs Exp $
+$NetBSD: TODO,v 1.7090 2008/03/02 15:51:42 adam Exp $
 
 Suggested new packages
 ======================
@@ -716,7 +716,6 @@ Suggested package updates
 	o gtk2-engines-2.12.2
 	o gtk2-sharp-2.10.4
 	o gtklife-5.1
-	o gtkmm-2.12.5
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
