@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2007/09/15 09:29:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2008/03/02 14:40:26 bjs Exp $
 bin/curl
 bin/curl-config
 include/curl/curl.h
@@ -17,6 +17,7 @@ man/man3/curl_easy_duphandle.3
 man/man3/curl_easy_escape.3
 man/man3/curl_easy_getinfo.3
 man/man3/curl_easy_init.3
+man/man3/curl_easy_pause.3
 man/man3/curl_easy_perform.3
 man/man3/curl_easy_reset.3
 man/man3/curl_easy_setopt.3
