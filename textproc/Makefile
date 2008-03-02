@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.400 2008/03/01 08:33:21 obache Exp $
+# $NetBSD: Makefile,v 1.401 2008/03/02 02:46:35 obache Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -345,6 +345,7 @@ SUBDIR+=	ruby-redcloth
 SUBDIR+=	ruby-rttool
 SUBDIR+=	ruby-sary
 SUBDIR+=	ruby-simple-rss
+SUBDIR+=	ruby-suikyo
 SUBDIR+=	ruby-syntax
 SUBDIR+=	ruby-xmlparser
 SUBDIR+=	ruby-xmlscan
@@ -357,6 +358,10 @@ SUBDIR+=	scew
 SUBDIR+=	source-highlight
 SUBDIR+=	stardic
 SUBDIR+=	subtitleripper
+SUBDIR+=	suikyo
+SUBDIR+=	suikyo-conv-table
+SUBDIR+=	suikyo-docs
+SUBDIR+=	suikyo-elisp
 SUBDIR+=	tcl-dom
 SUBDIR+=	tcl-expat
 SUBDIR+=	tcl-xml
