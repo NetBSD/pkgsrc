@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.407 2008/03/02 14:42:51 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.408 2008/03/02 14:45:34 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -742,3 +742,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libidn to 1.5 [bjs 2008-03-02]
 	Added security/libssh2 version 0.18 [bjs 2008-03-02]
 	Updated www/curl to 7.18.0 [bjs 2008-03-02]
+	Updated x11/libXext to 1.0.4 [bjs 2008-03-02]
