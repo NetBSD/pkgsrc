@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2007/05/28 21:21:09 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2008/03/02 03:48:36 jlam Exp $
 
 DISTNAME=	lha-114i
 PKGNAME=	lha-114.9
@@ -18,6 +18,7 @@ NO_BIN_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -32,7 +33,8 @@ MAKE_FLAGS+=	MACHINE=${LHA_CPPFLAGS:Q}
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/ja_JP.EUC/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/lha ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/man/lha.n ${PREFIX}/${PKGMANDIR}/ja_JP.EUC/man1/lha.1
+	${INSTALL_PROGRAM} ${WRKSRC}/src/lha ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/man/lha.n \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/ja_JP.EUC/man1/lha.1
 
 .include "../../mk/bsd.pkg.mk"

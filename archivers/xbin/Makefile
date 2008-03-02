@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/10/31 21:50:49 gdt Exp $
+# $NetBSD: Makefile,v 1.25 2008/03/02 03:48:37 jlam Exp $
 #
 
 DISTNAME=	${PRGNAME}unix
@@ -16,6 +16,7 @@ NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 
@@ -43,7 +44,9 @@ do-build:
 	${CC} ${CFLAGS} -o ${PRGNAME:Q} ${DISTNAME:Q}.c ${LDFLAGS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/${PRGNAME:Q} ${PREFIX:Q}/bin
-	${INSTALL_MAN} ${WRKSRC:Q}/${PRGNAME:Q}.man ${PREFIX:Q}/${PKGMANDIR}/cat1/${PRGNAME:Q}.0
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/${PRGNAME:Q} \
+		${DESTDIR}${PREFIX:Q}/bin
+	${INSTALL_MAN} ${WRKSRC:Q}/${PRGNAME:Q}.man \
+		${DESTDIR}${PREFIX:Q}/${PKGMANDIR}/cat1/${PRGNAME:Q}.0
 
 .include "../../mk/bsd.pkg.mk"

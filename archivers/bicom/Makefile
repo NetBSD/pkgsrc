@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/12/15 14:34:18 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2008/03/02 03:48:36 jlam Exp $
 #
 
 DISTNAME=		bicom101
@@ -20,6 +20,7 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		c++
@@ -40,9 +41,9 @@ do-build:
 			-o bicom *.o ../bialib/*.o
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bicom/bicom ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bicom
+	${INSTALL_PROGRAM} ${WRKSRC}/bicom/bicom ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/bicom
 	${INSTALL_DATA} ${WRKSRC}/README.TXT \
-		${PREFIX}/share/doc/bicom/readme.txt
+		${DESTDIR}${PREFIX}/share/doc/bicom/readme.txt
 
 .include "../../mk/bsd.pkg.mk"
