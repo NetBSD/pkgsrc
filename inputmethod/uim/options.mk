@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.10 2007/01/20 16:56:43 wiz Exp $
+# $NetBSD: options.mk,v 1.11 2008/03/02 01:57:37 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
-PKG_SUPPORTED_OPTIONS=	anthy canna eb gtk qt
+PKG_SUPPORTED_OPTIONS=	anthy canna eb gtk qt kde
 PKG_SUGGESTED_OPTIONS=	anthy canna gtk
 
 .include "../../mk/bsd.options.mk"
@@ -45,15 +45,23 @@ CONFIGURE_ARGS+=	--without-gtk2
 PLIST_SUBST+=		GTK="@comment "
 .endif
 
-.if !empty(PKG_OPTIONS:Mqt)
-.  include "../../x11/kdelibs3/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mqt) || !empty(PKG_OPTIONS:Mkde)
 .  include "../../x11/qt3-libs/buildlink3.mk"
 BUILD_DEPENDS+=		qt3-tools-3.*:../../x11/qt3-tools
 CONFIGURE_ARGS+=	--with-qt CXXFLAGS=-lc
-# Not worked this option.  need immodule patch for Qt3
+# This option don't work.  Need immodule patch for Qt3(uim-1.4.x not support Qt4)
 #CONFIGURE_ARGS+=	--with-qt-immodule
 PLIST_SUBST+=		HELPERDATA=
 PLIST_SUBST+=		QT=
 .else
 PLIST_SUBST+=		QT="@comment "
+.endif
+
+.if !empty(PKG_OPTIONS:Mkde)
+.  include "../../x11/kdelibs3/buildlink3.mk"
+.  include "../../x11/qt3-libs/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-kde-applet=yes
+PLIST_SUBST+=		KDE=
+.else
+PLIST_SUBST+=		KDE="@comment "
 .endif
