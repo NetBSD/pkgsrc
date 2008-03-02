@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.311 2008/02/12 23:13:58 adrianp Exp $
+# $NetBSD: Makefile,v 1.312 2008/03/02 16:14:34 bjs Exp $
 #
 
 COMMENT=	Security tools
@@ -106,6 +106,7 @@ SUBDIR+=	libnasl
 SUBDIR+=	libprelude
 SUBDIR+=	libpreludedb
 SUBDIR+=	libssh
+SUBDIR+= 	libssh2
 SUBDIR+=	libtasn1
 SUBDIR+=	libtcpa
 SUBDIR+=	logcheck
