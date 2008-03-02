@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/06/05 05:52:11 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/02 03:48:36 jlam Exp $
 #
 
 DISTNAME=	mousetar-20021217
@@ -11,6 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	der Mouse's version of tar program
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM+=	Interix-*-* # no sys/mtio.h tape support
 
@@ -37,7 +38,8 @@ do-build:
 	cd ${WRKSRC}; ${CC} ${CPPFLAGS} ${CFLAGS} tar.c -o mousetar
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mousetar ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/tar.man ${PREFIX}/${PKGMANDIR}/man1/mousetar.1
+	${INSTALL_PROGRAM} ${WRKSRC}/mousetar ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/tar.man \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/mousetar.1
 
 .include "../../mk/bsd.pkg.mk"
