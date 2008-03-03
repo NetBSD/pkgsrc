@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2006/10/24 17:33:59 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/03 17:45:34 jlam Exp $
 
 PKGNAME=	${DISTNAME:S/-/-gtk-/}
 PKGREVISION=	3
 COMMENT=	Graphical monitor for distcc, the distributed C/C++ compiler
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../devel/distcc/Makefile.common"
 
@@ -22,12 +24,12 @@ CHECK_PORTABILITY_SKIP+=	contrib/redhat/*
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/distccmon-gnome \
-		${PREFIX:Q}/bin/distccmon-gtk
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/distcc
+		${DESTDIR}${PREFIX:Q}/bin/distccmon-gtk
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/share/distcc
 	${INSTALL_DATA} ${WRKSRC:Q}/gnome/distccmon-gnome-icon.png \
-		${PREFIX:Q}/share/distcc/distccmon-gtk-icon.png
+		${DESTDIR}${PREFIX:Q}/share/distcc/distccmon-gtk-icon.png
 	${INSTALL_DATA} ${WRKSRC:Q}/gnome/distccmon-gnome.desktop \
-		${PREFIX:Q}/share/distcc/distccmon-gtk.desktop
+		${DESTDIR}${PREFIX:Q}/share/distcc/distccmon-gtk.desktop
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

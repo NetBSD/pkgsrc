@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/02/21 04:19:24 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/03 17:45:35 jlam Exp $
 #
 
 DISTNAME=		jgrasp170
@@ -16,6 +16,8 @@ WRKSRC=			${WRKDIR}/jgrasp
 USE_JAVA=		run
 PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 jdk14
 INSTALLATION_DIRS=	bin
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -38,20 +40,20 @@ pre-install:
 	${RM} -f ${WRKSRC}/src/linux_exec.c.orig
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/${PKGNAME_NOREV}
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/${PKGNAME_NOREV}/bin
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/${PKGNAME_NOREV}/bin/${LOWER_OPSYS}
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/${PKGNAME_NOREV}/jbin
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/bin
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/bin/${LOWER_OPSYS}
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/jbin
 	cd ${WRKSRC} && ${PAX} -s ,^./.*bin/.*,, 			\
-		-rw . ${PREFIX}/${PKGNAME_NOREV}/
+		-rw . ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/
 	${INSTALL_DATA} ${WRKSRC}/jbin/JGRASP__829J_6h.class		\
-		${PREFIX}/${PKGNAME_NOREV}/jbin/
+		${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/jbin/
 	${INSTALL_PROGRAM} ${WRKSRC}/jbin/${LOWER_OPSYS}_run		\
-		${PREFIX}/${PKGNAME_NOREV}/jbin/
+		${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/jbin/
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${LOWER_OPSYS}/jgrasp 		\
-		${PREFIX}/${PKGNAME_NOREV}/bin/${LOWER_OPSYS}/
+		${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/bin/${LOWER_OPSYS}/
 	${LN} -s ${PREFIX}/${PKGNAME_NOREV}/bin/${LOWER_OPSYS}/jgrasp	\
-		${PREFIX}/bin/jgrasp
+		${DESTDIR}${PREFIX}/bin/jgrasp
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

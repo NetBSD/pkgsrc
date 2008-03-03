@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2008/02/05 15:37:18 tnn Exp $
+# $NetBSD: Makefile,v 1.40 2008/03/03 17:45:34 jlam Exp $
 #
 
 DISTNAME=	bmake-20051105
@@ -15,6 +15,8 @@ HOMEPAGE=	http://www.crufty.net/help/sjg/bmake.html
 COMMENT=	Portable (autoconf) version of NetBSD 'make' utility
 
 DEPENDS+=	bootstrap-mk-files-[0-9]*:../../pkgtools/bootstrap-mk-files
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/bmake
 NO_CHECKSUM=	yes
@@ -46,7 +48,7 @@ do-build:
 		${SETENV} ${MAKE_ENV} ${SH} ./bmake/boot-strap ${BOOTSTRAP_ARGS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/${OPSYS}/bmake ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/bmake.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKDIR}/${OPSYS}/bmake ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/bmake.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

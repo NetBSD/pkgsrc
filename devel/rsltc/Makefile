@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/11/17 12:04:12 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/03 17:45:37 jlam Exp $
 #
 
 DISTNAME=		rsltcsrc
@@ -15,18 +15,20 @@ COMMENT=		RAISE Specification Language Type Checker
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 DEPENDS+=		gentle>=97:../../devel/gentle
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 MAKE_FILE=		make_sunos
 USE_TOOLS+=		gmake lex
 WRKSRC=			${WRKDIR}/rsl.2.4
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/rsltc ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp/rsl
+	${INSTALL_PROGRAM} ${WRKSRC}/rsltc ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/emacs/site-lisp/rsl
 	(cd ${WRKSRC} ; for i in rsltc.el tokenise.el rslconvert.el rsl-mode.el ; do\
 		${EMACS_BIN} -batch -f batch-byte-compile $$i ;\
-		${INSTALL_DATA} $$i ${PREFIX}/share/emacs/site-lisp/rsl ;\
-		${INSTALL_DATA} $${i}c ${PREFIX}/share/emacs/site-lisp/rsl ;\
+		${INSTALL_DATA} $$i ${DESTDIR}${PREFIX}/share/emacs/site-lisp/rsl ;\
+		${INSTALL_DATA} $${i}c ${DESTDIR}${PREFIX}/share/emacs/site-lisp/rsl ;\
 	done)
 
 .include "../../mk/emacs.mk"

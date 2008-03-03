@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/01/07 17:56:08 hubertf Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/03 17:45:36 jlam Exp $
 #
 
 DISTNAME=	NetBeansIDE-release351
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	drue@users.sourceforge.net
 HOMEPAGE=	http://www.netbeans.org/
 COMMENT=	NetBeans Java IDE
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_JAVA=	run
 PKG_JVMS_ACCEPTED=  sun-jdk13 sun-jdk14 jdk14 sun-jdk15 jdk15 sun-jdk6 jdk6
@@ -28,16 +30,16 @@ pre-install:
 	    runide_exe_defaults unsupported
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${SHAREDIR}
-	cd ${WRKSRC}/docs && ${PAX} -rwpm . ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}
+	cd ${WRKSRC}/docs && ${PAX} -rwpm . ${DESTDIR}${DOCDIR}
 	for f in CHANGES.html CREDITS.html README.html netbeans.css; \
 	do \
-		${INSTALL_DATA} ${WRKSRC}/$${f} ${DOCDIR}; \
+		${INSTALL_DATA} ${WRKSRC}/$${f} ${DESTDIR}${DOCDIR}; \
 	done
 	cd ${WRKSRC} && ${PAX} -rwpm beans bin lib modules system \
-	    tomcat406 update_tracking ${SHAREDIR}
-	${LN} -sf ${SHAREDIR}/bin/runide.sh  ${PREFIX}/bin/netbeans
+	    tomcat406 update_tracking ${DESTDIR}${SHAREDIR}
+	${LN} -sf ${SHAREDIR}/bin/runide.sh ${DESTDIR}${PREFIX}/bin/netbeans
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

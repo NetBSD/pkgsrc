@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/07/29 05:23:35 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/03 17:45:34 jlam Exp $
 #
 
 DISTNAME=	acunia-jam-1.0
@@ -13,6 +13,7 @@ COMMENT=	Acunia version of the program construction tool, like make(1)
 CONFLICTS=	jam-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/jam
 USE_TOOLS+=	yacc
@@ -24,15 +25,17 @@ INSTALLATION_DIRS=	bin
 
 do-install:
 	for file in jam mkjambase; do \
-		${INSTALL_PROGRAM} ${WRKSRC}/bin.*/$${file} ${PREFIX}/bin; \
+		${INSTALL_PROGRAM} ${WRKSRC}/bin.*/$${file} \
+			${DESTDIR}${PREFIX}/bin; \
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${DOCDIR}
 	for file in Porting README RELNOTES; do \
-		${INSTALL_DATA} ${WRKSRC}/$${file} ${PREFIX}/${DOCDIR}; \
+		${INSTALL_DATA} ${WRKSRC}/$${file} \
+			${DESTDIR}${PREFIX}/${DOCDIR}; \
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${HTMLDIR}
 	for file in ${WRKSRC}/*.html; do \
-		${INSTALL_DATA} $${file} ${PREFIX}/${HTMLDIR}; \
+		${INSTALL_DATA} $${file} ${DESTDIR}${PREFIX}/${HTMLDIR}; \
 	done
 
 .include "../../mk/bsd.pkg.mk"

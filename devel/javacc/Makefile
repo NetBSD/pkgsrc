@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/05/11 03:50:02 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/03 17:45:35 jlam Exp $
 
 DISTNAME=	javacc-4.0
 CATEGORIES=	devel
@@ -7,6 +7,8 @@ MASTER_SITES=	https://javacc.dev.java.net/files/documents/17/26776/
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	https://javacc.dev.java.net/
 COMMENT=	Java Compiler Compiler [tm]
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 USE_JAVA=	run
@@ -24,18 +26,18 @@ INSTALLATION_DIRS+=	bin
 
 do-install:
 .for f in javacc jjdoc jjtree
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/${f} ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/${f} ${DESTDIR}${PREFIX}/bin
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
-	${INSTALL_DATA} ${WRKSRC}/bin/lib/javacc.jar ${PREFIX}/lib/java
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/javacc
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${PREFIX}/share/doc/javacc
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/javacc
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/java
+	${INSTALL_DATA} ${WRKSRC}/bin/lib/javacc.jar ${DESTDIR}${PREFIX}/lib/java
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/javacc
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/javacc
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${DESTDIR}${PREFIX}/share/doc/javacc
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/javacc
-	${CP} -R ${WRKSRC}/examples/* ${PREFIX}/share/examples/javacc
-	${FIND} ${PREFIX}/share/examples/javacc -type d -print \
+	${CP} -R ${WRKSRC}/examples/* ${DESTDIR}${PREFIX}/share/examples/javacc
+	${FIND} ${DESTDIR}${PREFIX}/share/examples/javacc -type d -print \
 		| ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${PREFIX}/share/examples/javacc -type f -print \
+	${FIND} ${DESTDIR}${PREFIX}/share/examples/javacc -type f -print \
 		| ${XARGS} ${CHMOD} ${SHAREMODE}
 
 .include "../../mk/bsd.pkg.mk"

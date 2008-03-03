@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/02/05 23:08:53 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/03 17:45:37 jlam Exp $
 #
 
 DISTNAME=	st-1.5.1
@@ -10,7 +10,9 @@ MAINTAINER=	gson@NetBSD.org
 HOMEPAGE=	http://state-threads.sourceforge.net/
 COMMENT=	Non-preemptive thread library for Internet applications
 
-ONLY_FOR_PLATFORM=     NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-vax
+ONLY_FOR_PLATFORM=	NetBSD-*-i386 NetBSD-*-sparc NetBSD-*-vax
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
@@ -22,16 +24,16 @@ INSTALLATION_DIRS=	bin lib
 
 do-install:
 	${LIBTOOL} --mode=install ${INSTALL_DATA} \
-		${WRKSRC}/libst.la ${PREFIX}/lib
+		${WRKSRC}/libst.la ${DESTDIR}${PREFIX}/lib
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
-		${WRKSRC}/examples/lookupdns ${PREFIX}/bin/st-lookupdns
+		${WRKSRC}/examples/lookupdns ${DESTDIR}${PREFIX}/bin/st-lookupdns
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
-		${WRKSRC}/examples/proxy ${PREFIX}/bin/st-proxy
+		${WRKSRC}/examples/proxy ${DESTDIR}${PREFIX}/bin/st-proxy
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
-		${WRKSRC}/examples/server ${PREFIX}/bin/st-server
+		${WRKSRC}/examples/server ${DESTDIR}${PREFIX}/bin/st-server
 	${INSTALL_DATA_DIR} ${PREFIX}/include/st
-	${INSTALL_DATA} ${WRKSRC}/public.h ${PREFIX}/include/st.h
-	${INSTALL_DATA_DIR} ${HTMLDIR}
-	cd ${WRKSRC}/docs; ${INSTALL_DATA} *.html *.gif ${HTMLDIR}
+	${INSTALL_DATA} ${WRKSRC}/public.h ${DESTDIR}${PREFIX}/include/st.h
+	${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}
+	cd ${WRKSRC}/docs; ${INSTALL_DATA} *.html *.gif ${DESTDIR}${HTMLDIR}
 
 .include "../../mk/bsd.pkg.mk"

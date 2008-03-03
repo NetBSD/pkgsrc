@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/06/30 07:11:00 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/03 17:45:33 jlam Exp $
 #
 
 DISTNAME=	acme085_linux
@@ -11,6 +11,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} ${LIBDIST}
 MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.esw-heim.tu-clausthal.de/~marco/smorbrod/acme/acme.html
 COMMENT=	Cross assembler for 6502, 65c02, and 65816
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 USE_TOOLS+=	unzip
 
@@ -28,11 +30,11 @@ post-extract:
 	cd ${WRKDIR} && unzip -qa ${_DISTDIR}/${LIBDIST}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/acme ${PREFIX}/bin/acme
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/acme
-	${INSTALL_DATA} ${WRKTOP}/docs/* ${PREFIX}/share/doc/acme
-	${INSTALL_DATA_DIR} ${ACME_LIB}
-	cd ${WRKDIR}/ACME_Lib && ${PAX} -rw . ${ACME_LIB}
-	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${ACME_LIB}
+	${INSTALL_PROGRAM} ${WRKSRC}/acme ${DESTDIR}${PREFIX}/bin/acme
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/acme
+	${INSTALL_DATA} ${WRKTOP}/docs/* ${DESTDIR}${PREFIX}/share/doc/acme
+	${INSTALL_DATA_DIR} ${DESTDIR}${ACME_LIB}
+	cd ${WRKDIR}/ACME_Lib && ${PAX} -rw . ${DESTDIR}${ACME_LIB}
+	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${DESTDIR}${ACME_LIB}
 
 .include "../../mk/bsd.pkg.mk"

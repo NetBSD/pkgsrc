@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/12/02 08:32:24 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/03 17:45:35 jlam Exp $
 
 DISTNAME=	lcc-4.1
 CATEGORIES=	devel lang
@@ -14,6 +14,8 @@ MAKE_ENV+=	BUILDDIR=${WRKSRC}/bin HOSTFILE=etc/netbsd.c
 # it builds and runs on others (like alpha) but still
 # seems to emit i386 assembler
 ONLY_FOR_PLATFORM=	*-*-i386
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -34,18 +36,20 @@ pre-build:
 		-e 's|@PREFIX@|${PREFIX}|g' < netbsd.c.bak > netbsd.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/bprint ${PREFIX}/libexec
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/cpp ${PREFIX}/libexec
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/lburg ${PREFIX}/libexec
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/lcc ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/rcc ${PREFIX}/libexec
-	${INSTALL_DATA_DIR} ${PREFIX}/share/lcc/include
-	${INSTALL_DATA_DIR} ${PREFIX}/share/lcc/include/sys
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/bprint ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/cpp ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/lburg ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/lcc ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/rcc ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/lcc/include
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/lcc/include/sys
 	${INSTALL_DATA} ${WRKSRC}/include/x86/linux/stdarg.h \
-		${PREFIX}/share/lcc/include
+		${DESTDIR}${PREFIX}/share/lcc/include
 	${INSTALL_DATA} ${FILESDIR}/cdefs.h \
-		${PREFIX}/share/lcc/include/sys
-	${INSTALL_MAN} ${WRKSRC}/doc/lcc.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/bprint.1 ${PREFIX}/${PKGMANDIR}/man1
+		${DESTDIR}${PREFIX}/share/lcc/include/sys
+	${INSTALL_MAN} ${WRKSRC}/doc/lcc.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/bprint.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

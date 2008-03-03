@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/01/19 09:16:19 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/03 17:45:35 jlam Exp $
 
 DISTNAME=		ElectricFence-2.1
 PKGREVISION=		1
@@ -8,6 +8,8 @@ MASTER_SITES=		ftp://ftp.perens.com/pub/ElectricFence/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.perens.com/FreeSoftware/
 COMMENT=		Different kind of malloc() debugger
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -20,7 +22,8 @@ CFLAGS+=		-g
 INSTALLATION_DIRS=	lib ${PKGMANDIR}/man3
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/libefence.a ${PREFIX}/lib
-	${INSTALL_MAN} ${WRKSRC}/libefence.3 ${PREFIX}/${PKGMANDIR}/man3
+	${INSTALL_DATA} ${WRKSRC}/libefence.a ${DESTDIR}${PREFIX}/lib
+	${INSTALL_MAN} ${WRKSRC}/libefence.3 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
 
 .include "../../mk/bsd.pkg.mk"

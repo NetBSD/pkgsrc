@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/10/04 21:35:59 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/03 17:45:36 jlam Exp $
 #
 
 DISTNAME=	ltsa2.2
@@ -13,6 +13,8 @@ HOMEPAGE=	http://www.doc.ic.ac.uk/~jnm/book/ltsa-v2/
 # ~jnm exists, /book/ does not
 COMMENT=	Labelled Transition System Analyser
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_CONFIGURE=		YES
 USE_JAVA2=		YES
 
@@ -26,14 +28,14 @@ do-build:
 		'$$*' >>${WRKSRC}/ltsa.sh
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/ltsa.sh ${PREFIX}/bin/ltsa
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/ltsa
-	cd ${WRKSRC}/lib && ${PAX} -rwpppm . ${PREFIX}/lib/ltsa
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ltsa
-	${INSTALL_DATA} ${WRKSRC}/fspv2.pdf ${PREFIX}/share/doc/ltsa
-	${INSTALL_DATA} ${WRKSRC}/readme.txt ${PREFIX}/share/doc/ltsa
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ltsa
-	cd ${WRKSRC}/examples && ${PAX} -rwpppm . ${PREFIX}/share/examples/ltsa
+	${INSTALL_SCRIPT} ${WRKSRC}/ltsa.sh ${DESTDIR}${PREFIX}/bin/ltsa
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/ltsa
+	cd ${WRKSRC}/lib && ${PAX} -rwpppm . ${DESTDIR}${PREFIX}/lib/ltsa
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/ltsa
+	${INSTALL_DATA} ${WRKSRC}/fspv2.pdf ${DESTDIR}${PREFIX}/share/doc/ltsa
+	${INSTALL_DATA} ${WRKSRC}/readme.txt ${DESTDIR}${PREFIX}/share/doc/ltsa
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/ltsa
+	cd ${WRKSRC}/examples && ${PAX} -rwpppm . ${DESTDIR}${PREFIX}/share/examples/ltsa
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

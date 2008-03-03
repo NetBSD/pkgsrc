@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/11/11 22:05:49 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/03 17:45:36 jlam Exp $
 #
 
 DISTNAME=	opengrok-0.5
@@ -14,6 +14,8 @@ DEPENDS+=	apache-tomcat>=5.5:../../www/apache-tomcat55
 DEPENDS+=	jflex-[0-9]*:../../devel/jflex
 DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 DEPENDS+=	zip-[0-9]*:../../archivers/zip
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	YES
 USE_JAVA=	run
@@ -33,20 +35,20 @@ SUBST_MESSAGE.run=	Fixing hardcoded paths.
 .include "options.mk"
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/opengrok
-	${INSTALL_DATA_DIR} ${PREFIX}/share/opengrok/lib
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/opengrok
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/opengrok/conf
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/opengrok
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/opengrok/lib
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/opengrok
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/opengrok/conf
 
-	${INSTALL_DATA} ${WRKSRC}/README.txt ${PREFIX}/share/opengrok
-	${INSTALL_DATA} ${WRKSRC}/opengrok.jar ${PREFIX}/share/opengrok
-	${INSTALL_DATA} ${WRKSRC}/source.war ${PREFIX}/share/opengrok
-	${INSTALL_DATA} ${WRKSRC}/lib/*.jar ${PREFIX}/share/opengrok/lib
-	${INSTALL_DATA} ${WRKSRC}/paths.tsv ${PREFIX}/share/examples/opengrok
-	${INSTALL_SCRIPT} ${WRKSRC}/run.sh ${PREFIX}/share/opengrok
-	${INSTALL_SCRIPT} ${WRKSRC}/run-quiet.sh ${PREFIX}/share/opengrok
+	${INSTALL_DATA} ${WRKSRC}/README.txt ${DESTDIR}${PREFIX}/share/opengrok
+	${INSTALL_DATA} ${WRKSRC}/opengrok.jar ${DESTDIR}${PREFIX}/share/opengrok
+	${INSTALL_DATA} ${WRKSRC}/source.war ${DESTDIR}${PREFIX}/share/opengrok
+	${INSTALL_DATA} ${WRKSRC}/lib/*.jar ${DESTDIR}${PREFIX}/share/opengrok/lib
+	${INSTALL_DATA} ${WRKSRC}/paths.tsv ${DESTDIR}${PREFIX}/share/examples/opengrok
+	${INSTALL_SCRIPT} ${WRKSRC}/run.sh ${DESTDIR}${PREFIX}/share/opengrok
+	${INSTALL_SCRIPT} ${WRKSRC}/run-quiet.sh ${DESTDIR}${PREFIX}/share/opengrok
 
-	cd ${WRKSRC}/conf && ${PAX} -rw . ${PREFIX}/share/examples/opengrok/conf
+	cd ${WRKSRC}/conf && ${PAX} -rw . ${DESTDIR}${PREFIX}/share/examples/opengrok/conf
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

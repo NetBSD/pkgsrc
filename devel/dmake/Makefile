@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/01/07 09:13:50 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/03 17:45:34 jlam Exp $
 #
 
 DISTNAME=	dmake-v4.1-src-export.all-unknown-all
@@ -11,6 +11,8 @@ MASTER_SITES=	http://dmake.wticorp.com/SourceDistribution/ \
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://dmake.wticorp.com/
 COMMENT=	Portable make supported by many platforms
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=	makefile
 BUILD_TARGET=	linux
@@ -25,9 +27,10 @@ do-configure:
 		<unix/startup.h.orig >unix/startup.h
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/dmake ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man/dmake.tf ${PREFIX}/${PKGMANDIR}/man1/dmake.1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/dmake
-	${CP} -pR ${WRKSRC}/startup ${PREFIX}/share/dmake
+	${INSTALL_PROGRAM} ${WRKSRC}/dmake ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/man/dmake.tf \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/dmake.1
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/dmake
+	${CP} -pR ${WRKSRC}/startup ${DESTDIR}${PREFIX}/share/dmake
 
 .include "../../mk/bsd.pkg.mk"

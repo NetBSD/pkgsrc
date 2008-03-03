@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/08/23 18:20:30 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/03 17:45:34 jlam Exp $
 
 DISTNAME=	cvsup-gui-static-16.1.h
 PKGNAME=	${DISTNAME:C/static/bin/}
@@ -18,6 +18,8 @@ DEPENDS+=	cvsup-bin>=${CVSUP_VERSION}:../../devel/cvsup-bin
 EMUL_PLATFORMS=		netbsd-i386
 EMUL_REQD=		netbsd>=1.5
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 # XXX Remove the following line on next update; see PR 25255 for details
 DIST_SUBDIR=		cvsup-i386-1.6
 
@@ -28,6 +30,6 @@ BUILD_DIRS=		# empty
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/cvsup ${PREFIX}/bin/cvsup-gui
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/cvsup ${DESTDIR}${PREFIX}/bin/cvsup-gui
 
 .include "../../mk/bsd.pkg.mk"

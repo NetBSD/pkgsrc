@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/04/17 13:46:20 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/03 17:45:34 jlam Exp $
 #
 
 VERSION=		0.4.4
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://boa-constructor.sourceforge.net/
 COMMENT=		Python IDE
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_OPTS_ZIP=	-aqo
 PYTHON_VERSIONS_ACCEPTED=	23 24
@@ -29,10 +31,10 @@ do-build:
 	${SED} ${SEDSUBST} <${FILESDIR}/Boa.sh >${WRKDIR}/Boa
 
 do-install:
-	${MKDIR} ${BOADIR}
-	cd ${WRKSRC} && ${PAX} -rw . ${BOADIR}
-	${CHMOD} -R go-w ${BOADIR}
-	${INSTALL_SCRIPT} ${WRKDIR}/Boa ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${BOADIR}
+	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${BOADIR}
+	${CHMOD} -R go-w ${DESTDIR}${BOADIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/Boa ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/python/application.mk"
 .include "../../x11/py-wxWidgets/buildlink3.mk"

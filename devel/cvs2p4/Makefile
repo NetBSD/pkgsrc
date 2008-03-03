@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/02/17 20:59:47 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/03 17:45:34 jlam Exp $
 #
 
 DISTNAME=	cvs2p4-2.3.3
@@ -15,6 +15,8 @@ DEPENDS+=	p4d-[0-9]*:../../devel/p4d
 .if !exists(/usr/bin/co) && !exists(${LOCALBASE}/bin/co)
 DEPENDS+=	rcs-[0-9]*:../../devel/rcs
 .endif
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 NO_BUILD=	yes
@@ -46,14 +48,15 @@ do-configure:
 	done
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/lib/util.pl ${PREFIX}/${CVS2P4_OUTLIB}
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/* ${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/lib/util.pl \
+		${DESTDIR}${PREFIX}/${CVS2P4_OUTLIB}
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/* ${DESTDIR}${PREFIX}/bin
 
-	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/NEWS ${PREFIX}/${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/NEWS ${DESTDIR}${PREFIX}/${DOCDIR}
 
-	${INSTALL_DATA_DIR} ${PREFIX}/${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/test/config ${PREFIX}/${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/test/config ${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"

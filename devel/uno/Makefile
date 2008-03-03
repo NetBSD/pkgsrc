@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/09/10 15:19:16 xtraeme Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/03 17:45:38 jlam Exp $
 #
 
 DISTNAME=		uno_v212
@@ -14,7 +14,9 @@ COMMENT=		Tool for source code analysis
 WRKSRC=			${WRKDIR}/uno/src
 MAKE_FILE=		makefile
 
-USE_TOOLS+=		bison
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=		bison gmake flex
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -22,23 +24,21 @@ USE_TOOLS+=		bison
 BUILDLINK_TRANSFORM+=	rm:-m32
 .endif
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/uno ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/uno_local ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/uno_global ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/uno
-	${INSTALL_DATA} ${WRKDIR}/uno/doc/uno_long.pdf ${PREFIX}/share/doc/uno
-	${INSTALL_DATA} ${WRKDIR}/uno/doc/uno_man.pdf ${PREFIX}/share/doc/uno
-	${INSTALL_DATA} ${WRKDIR}/uno/doc/uno_manpage.pdf ${PREFIX}/share/doc/uno
-	${INSTALL_DATA} ${WRKDIR}/uno/doc/uno_short.pdf ${PREFIX}/share/doc/uno
-	${INSTALL_MAN} ${WRKDIR}/uno/doc/uno.1 ${PREFIX}/${PKGMANDIR}/man1
-
-USE_TOOLS+=	bison gmake flex
-
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-patch
 SUBST_FILES.prefix=	makefile
 SUBST_SED.prefix=	-e "s,/usr/bin,${PREFIX}/bin,g"
 SUBST_MESSAGE.prefix=	Fixing hardcoded paths.
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/uno ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/uno_local ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/uno_global ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/uno
+	${INSTALL_DATA} ${WRKDIR}/uno/doc/uno_long.pdf ${DESTDIR}${PREFIX}/share/doc/uno
+	${INSTALL_DATA} ${WRKDIR}/uno/doc/uno_man.pdf ${DESTDIR}${PREFIX}/share/doc/uno
+	${INSTALL_DATA} ${WRKDIR}/uno/doc/uno_manpage.pdf ${DESTDIR}${PREFIX}/share/doc/uno
+	${INSTALL_DATA} ${WRKDIR}/uno/doc/uno_short.pdf ${DESTDIR}${PREFIX}/share/doc/uno
+	${INSTALL_MAN} ${WRKDIR}/uno/doc/uno.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

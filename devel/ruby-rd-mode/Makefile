@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/06/10 13:07:47 taca Exp $
+# $NetBSD: Makefile,v 1.20 2008/03/03 17:45:37 jlam Exp $
 #
 
 DISTNAME=	rdtool-${RUBY_RD_VERSION}
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.moonwolf.com/ruby/archive/
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www2.pos.to/~tosh/ruby/rdtool/
 COMMENT=	Editing mode for RD (Ruby Document Format)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/utils
 EXTRACT_ELEMENTS=	${DISTNAME}/utils/rd-mode.el
@@ -22,9 +24,9 @@ do-build:
 		-f batch-byte-compile rd-mode.el
 
 do-install:
-	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/rd-mode
-	${INSTALL_DATA} ${WRKSRC}/rd-mode.el ${EMACS_LISPPREFIX}/rd-mode
-	${INSTALL_DATA} ${WRKSRC}/rd-mode.elc ${EMACS_LISPPREFIX}/rd-mode
+	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/rd-mode
+	${INSTALL_DATA} ${WRKSRC}/rd-mode.el ${DESTDIR}${EMACS_LISPPREFIX}/rd-mode
+	${INSTALL_DATA} ${WRKSRC}/rd-mode.elc ${DESTDIR}${EMACS_LISPPREFIX}/rd-mode
 
 .include "../../lang/ruby/rubyversion.mk"
 .include "../../mk/emacs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/10/29 04:40:11 uebayasi Exp $
+# $NetBSD: Makefile,v 1.19 2008/03/03 17:45:37 jlam Exp $
 #
 
 DISTNAME=	python-mode-4.54
@@ -11,6 +11,8 @@ DISTFILES=	python-mode.el
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/python-mode/
 COMMENT=	Emacs mode for editing python files
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Note that XEmacs >=21.4.4 includes a python-mode in the prog-modes
 # package. Also, python-mode does not appear to work as is with XEmacs 21.1
@@ -31,7 +33,7 @@ do-build:
 	-f batch-byte-compile ${WRKDIR}/python-mode.el
 
 do-install:
-	${INSTALL_DATA} ${WRKDIR}/python-mode.el ${EMACS_LISPPREFIX}
-	${INSTALL_DATA} ${WRKDIR}/python-mode.elc ${EMACS_LISPPREFIX}
+	${INSTALL_DATA} ${WRKDIR}/python-mode.el ${DESTDIR}${EMACS_LISPPREFIX}
+	${INSTALL_DATA} ${WRKDIR}/python-mode.elc ${DESTDIR}${EMACS_LISPPREFIX}
 
 .include "../../mk/bsd.pkg.mk"

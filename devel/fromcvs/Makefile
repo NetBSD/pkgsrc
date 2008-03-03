@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/02/16 13:23:09 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/03 17:45:35 jlam Exp $
 
 DISTNAME=	d2883bf3ced6
 # Last part of PKGNAME is changeset number
@@ -17,6 +17,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-sqlite3>=1.2.1:../../databases/ruby-sqlite3
 
 LICENSE=        corecode-license
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/fromcvs-${DISTNAME}
 DIST_SUBDIR=	fromcvs
 
@@ -26,6 +28,8 @@ SUBST_MESSAGE.python+=	Fixing path to Python interpreter.
 SUBST_SED.python+=	-e "s!'python'!'${PYTHONBIN}'!"
 SUBST_STAGE.python+=	pre-build
 
+INSTALLATION_DIRS=	bin
+
 do-build:
 	${ECHO} "#!/bin/sh" > ${WRKSRC}/togit
 	${ECHO} "${RUBY} -I${PREFIX}/share/fromcvs ${PREFIX}/share/fromcvs/togit.rb \"\$$@\"" >> ${WRKSRC}/togit
@@ -33,16 +37,16 @@ do-build:
 	${ECHO} "${RUBY} -I${PREFIX}/share/fromcvs ${PREFIX}/share/fromcvs/tohg.rb \"\$$@\"" >> ${WRKSRC}/tohg
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fromcvs
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/fromcvs
-	${INSTALL_DATA_DIR} ${PREFIX}/share/fromcvs
-	${INSTALL_DATA_DIR} ${PREFIX}/share/fromcvs/commitset
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/fromcvs
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/fromcvs
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/fromcvs
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/fromcvs/commitset
 	${INSTALL_DATA} ${WRKSRC}/commitset/* \
-		${PREFIX}/share/fromcvs/commitset
-	${INSTALL_DATA} ${WRKSRC}/*.rb ${PREFIX}/share/fromcvs
-	${INSTALL_DATA} ${WRKSRC}/*.py ${PREFIX}/share/fromcvs
-	${INSTALL_SCRIPT} ${WRKSRC}/togit ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/tohg ${PREFIX}/bin
+		${DESTDIR}${PREFIX}/share/fromcvs/commitset
+	${INSTALL_DATA} ${WRKSRC}/*.rb ${DESTDIR}${PREFIX}/share/fromcvs
+	${INSTALL_DATA} ${WRKSRC}/*.py ${DESTDIR}${PREFIX}/share/fromcvs
+	${INSTALL_SCRIPT} ${WRKSRC}/togit ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/tohg ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/ruby/modules.mk"
 .include "../../lang/python/application.mk"

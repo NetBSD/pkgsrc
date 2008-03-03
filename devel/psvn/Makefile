@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/06/16 10:36:24 taca Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/03 17:45:36 jlam Exp $
 #
 
 DISTNAME=	psvn.el
@@ -12,6 +12,8 @@ FETCH_BEFORE_ARGS+=  -o ${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xsteve.at/prg/emacs/
 COMMENT=	Subversion interface for Emacs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 VER=		25241
 WRKSRC=		${WRKDIR}
@@ -28,7 +30,7 @@ do-build:
 		${WRKDIR}/psvn.el
 
 do-install:
-	${INSTALL_DATA} ${WRKDIR}/psvn.el ${EMACS_LISPPREFIX}
-	${INSTALL_DATA} ${WRKDIR}/psvn.elc ${EMACS_LISPPREFIX}
+	${INSTALL_DATA} ${WRKDIR}/psvn.el ${DESTDIR}${EMACS_LISPPREFIX}
+	${INSTALL_DATA} ${WRKDIR}/psvn.elc ${DESTDIR}${EMACS_LISPPREFIX}
 
 .include "../../mk/bsd.pkg.mk"

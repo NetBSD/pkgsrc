@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/09/09 02:41:58 obache Exp $
+# $NetBSD: Makefile,v 1.31 2008/03/03 17:45:37 jlam Exp $
 
 DISTNAME=	STLport-4.6
 PKGNAME=	stlport-4.6
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.stlport.com/archive/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.stlport.org/
 COMMENT=	Complete C++ standard library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
@@ -37,23 +39,23 @@ do-install:
 	cd ${WRKSRC:Q};							\
 	${FIND} stlport -type d -print					\
 	| while read d; do						\
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/include/"$$d";			\
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/include/"$$d";	\
 	done;								\
 	${FIND} stlport -type f ! -name "*.orig" -print			\
 	| while read f; do						\
-	${INSTALL_DATA} "$$f" ${PREFIX:Q}/include/"$$f";		\
+	${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX:Q}/include/"$$f";	\
 	done
 	set -e;								\
 	for lib in							\
 		libstlport_gcc.la					\
 		libstlport_gcc_stldebug.la;				\
 	do								\
-		${LIBTOOL} ${INSTALL_LIB} ${WRKSRC:Q}/lib/"$$lib" ${LIBDIR:Q}; \
+		${LIBTOOL} ${INSTALL_LIB} ${WRKSRC:Q}/lib/"$$lib" ${DESTDIR}${LIBDIR:Q}; \
 	done
-	${INSTALL_DATA_DIR} ${HTMLDIR:Q}
-	${INSTALL_DATA_DIR} ${HTMLDIR:Q}/images
-	cd ${WRKSRC:Q}/doc && ${INSTALL_DATA} *.css *.html ${HTMLDIR:Q}
-	cd ${WRKSRC:Q}/doc && ${INSTALL_DATA} images/* ${HTMLDIR:Q}/images
+	${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR:Q}
+	${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR:Q}/images
+	cd ${WRKSRC:Q}/doc && ${INSTALL_DATA} *.css *.html ${DESTDIR}${HTMLDIR:Q}
+	cd ${WRKSRC:Q}/doc && ${INSTALL_DATA} images/* ${DESTDIR}${HTMLDIR:Q}/images
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/03/15 16:45:13 taca Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/03 17:45:37 jlam Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_RUBY}
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RUBY_HOMEPAGE}
 COMMENT=	Ruby editing mode for Emacs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${RUBY_WRKSRC}/misc
 EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/misc
@@ -27,10 +29,10 @@ do-build:
 	done
 
 do-install:
-	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/ruby-mode
+	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/ruby-mode
 	cd ${WRKSRC}; \
 		${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} \
-			${EMACS_LISPPREFIX}/ruby-mode
+			${DESTDIR}${EMACS_LISPPREFIX}/ruby-mode
 
 .include "../../lang/ruby/rubyversion.mk"
 .include "../../lang/ruby/Makefile.common"
