@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/01/07 09:13:47 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2008/03/03 00:51:44 jlam Exp $
 
 DISTNAME=	hint_unix_serial
 PKGNAME=	hint.serial-98.06.12
@@ -11,6 +11,7 @@ HOMEPAGE=	http://hint.byu.edu/
 COMMENT=	Scalable benchmark for testing CPU and memory performance
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=	DOUBLE INT
 
@@ -22,9 +23,9 @@ post-extract:
 	${CP} ${FILESDIR}/hint.1 ${WRKSRC}/hint.1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/DOUBLE ${PREFIX}/bin/hint-double
-	${INSTALL_PROGRAM} ${WRKSRC}/INT ${PREFIX}/bin/hint-int
-	${INSTALL_MAN} ${WRKSRC}/hint.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/DOUBLE ${DESTDIR}${PREFIX}/bin/hint-double
+	${INSTALL_PROGRAM} ${WRKSRC}/INT ${DESTDIR}${PREFIX}/bin/hint-int
+	${INSTALL_MAN} ${WRKSRC}/hint.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 benchmark:
 	cd ${WRKSRC} ; ${MKDIR} data ; ./DOUBLE | tee hint.out

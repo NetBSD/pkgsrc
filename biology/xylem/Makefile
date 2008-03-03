@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/02/22 19:26:09 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/03 01:10:06 jlam Exp $
 #
 
 DISTNAME=		xylem.1.8.7
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.Z
 MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		http://home.cc.umanitoba.ca/~psgendb/XYLEM.html
 COMMENT=		Tools for manipulation of genetic databases
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/xylem
 BUILD_DIRS=		src.c # yes, it's a directory
@@ -27,12 +29,14 @@ post-build:
 do-install:
 .for PROGRAM in dbstat getloc getob xyl-identify prot2nuc reform ribosome \
 	splitdb xyl-shuffle flat2phyl phyl2flat
-	${INSTALL_PROGRAM} ${WRKSRC}/src.c/${PROGRAM} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src.c/${PROGRAM} ${DESTDIR}${PREFIX}/bin
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xylem
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/xylem/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xylem
-	${INSTALL_DATA} ${WRKSRC}/test/sample.* ${PREFIX}/share/examples/xylem
-	${INSTALL_SCRIPT} ${WRKSRC}/test/testxylem.csh ${PREFIX}/share/examples/xylem
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/xylem
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${DESTDIR}${PREFIX}/share/doc/xylem/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/xylem
+	${INSTALL_DATA} ${WRKSRC}/test/sample.* \
+		${DESTDIR}${PREFIX}/share/examples/xylem
+	${INSTALL_SCRIPT} ${WRKSRC}/test/testxylem.csh \
+		${DESTDIR}${PREFIX}/share/examples/xylem
 
 .include "../../mk/bsd.pkg.mk"
