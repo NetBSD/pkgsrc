@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/11/29 13:04:04 sketch Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/03 02:19:51 jlam Exp $
 
 DISTNAME=	icbirc-1.8
 CATEGORIES=	chat
@@ -10,6 +10,8 @@ COMMENT=	Proxy IRC client and ICB server
 
 # uses strlcpy
 NOT_FOR_PLATFORM=	Linux-*-*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGBASE}
 MAKE_ENV+=	BINDIR="${PREFIX}/bin" MANDIR="${PREFIX}/man"
@@ -28,7 +30,7 @@ do-build:
 	cd ${WRKSRC} && ${LINK.c} -o icbirc ${SRCS:.c=.o}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/icbirc ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/icbirc.8 ${PREFIX}/${PKGMANDIR}/man8/
+	${INSTALL_PROGRAM} ${WRKSRC}/icbirc ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/icbirc.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2008/01/18 05:06:24 tnn Exp $
+# $NetBSD: Makefile,v 1.30 2008/03/03 02:19:52 jlam Exp $
 #
 
 DISTNAME=		jabber-1.4.2
@@ -14,6 +14,7 @@ COMMENT=		Instant messaging server
 CONFLICTS=		jabberd2-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # A self-made configure script, and GNU ones in subdirectories.
 HAS_CONFIGURE=			yes
@@ -73,18 +74,19 @@ pre-configure:
 	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/jabberd/pth-1.4.0
 
 do-install:
-	${INSTALL_DATA_DIR} ${EGDIR} ${LIBDIR} ${INCDIR} ${INCDIR}/lib
-	${INSTALL_DATA} ${WRKSRC}/jabber.xml ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/platform-settings ${EGDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/jabberd/jabberd ${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC}/jsm/jsm.so ${LIBDIR}
-	${INSTALL_DATA} ${WRKSRC}/xdb_file/xdb_file.so ${LIBDIR}
-	${INSTALL_DATA} ${WRKSRC}/pthsock/pthsock_client.so ${LIBDIR}
-	${INSTALL_DATA} ${WRKSRC}/dnsrv/dnsrv.so ${LIBDIR}
-	${INSTALL_DATA} ${WRKSRC}/dialback/dialback.so ${LIBDIR}
-	${INSTALL_DATA} ${WRKSRC}/jabberd/jabberd.h ${INCDIR}
-	${INSTALL_DATA} ${WRKSRC}/jabberd/lib/lib.h ${INCDIR}/lib
-	${INSTALL_DATA} ${WRKSRC}/jabberd/lib/xmlparse.h ${INCDIR}/lib
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR} ${DESTDIR}${LIBDIR} \
+		${DESTDIR}${INCDIR} ${DESTDIR}${INCDIR}/lib
+	${INSTALL_DATA} ${WRKSRC}/jabber.xml ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/platform-settings ${DESTDIR}${EGDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/jabberd/jabberd ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_DATA} ${WRKSRC}/jsm/jsm.so ${DESTDIR}${LIBDIR}
+	${INSTALL_DATA} ${WRKSRC}/xdb_file/xdb_file.so ${DESTDIR}${LIBDIR}
+	${INSTALL_DATA} ${WRKSRC}/pthsock/pthsock_client.so ${DESTDIR}${LIBDIR}
+	${INSTALL_DATA} ${WRKSRC}/dnsrv/dnsrv.so ${DESTDIR}${LIBDIR}
+	${INSTALL_DATA} ${WRKSRC}/dialback/dialback.so ${DESTDIR}${LIBDIR}
+	${INSTALL_DATA} ${WRKSRC}/jabberd/jabberd.h ${DESTDIR}${INCDIR}
+	${INSTALL_DATA} ${WRKSRC}/jabberd/lib/lib.h ${DESTDIR}${INCDIR}/lib
+	${INSTALL_DATA} ${WRKSRC}/jabberd/lib/xmlparse.h ${DESTDIR}${INCDIR}/lib
 
 #.include "../../devel/pth/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

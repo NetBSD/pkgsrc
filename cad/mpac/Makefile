@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:08:22 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/03 01:50:27 jlam Exp $
 #
 
 DISTNAME=	mpac-0.2.2
@@ -11,14 +11,16 @@ COMMENT=	Microstrip Patch Antenna Calculator
 
 DEPENDS+=	tk>=8.1:../../x11/tk
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 INSTALLATION_DIRS=	bin
 
 do-build:
 	${SED} 's;patch.gif;${PREFIX}/share/mpac/patch.gif;g' ${WRKSRC}/mpac.tcl > ${WRKSRC}/mpac
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/mpac ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/mpac
-	${INSTALL_DATA} ${WRKSRC}/patch.gif ${PREFIX}/share/mpac
+	${INSTALL_SCRIPT} ${WRKSRC}/mpac ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/mpac
+	${INSTALL_DATA} ${WRKSRC}/patch.gif ${DESTDIR}${PREFIX}/share/mpac
 
 .include "../../mk/bsd.pkg.mk"

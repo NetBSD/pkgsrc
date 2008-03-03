@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/03/21 19:44:10 jwise Exp $
+# $NetBSD: Makefile,v 1.19 2008/03/03 02:19:52 jlam Exp $
 #
 
 DISTNAME=	icb.2.1.4
@@ -20,6 +20,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	YES
@@ -34,14 +35,16 @@ do-build:
 		> ${WRKSRC}/bin/tkicb
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/tkicb ${PREFIX}/bin/tkicb
-	${INSTALL_DATA_DIR} ${PREFIX}/libdata/tkicb
-	${INSTALL_DATA_DIR} ${PREFIX}/libdata/tkicb/tcl
-	${INSTALL_DATA_DIR} ${PREFIX}/libdata/tkicb/lib
-	${INSTALL_SCRIPT} ${WRKSRC}/icb.tcl ${PREFIX}/libdata/tkicb/icb.tcl
-	${INSTALL_SCRIPT} ${WRKSRC}/tcl/*.tcl ${PREFIX}/libdata/tkicb/tcl
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/tkicb ${DESTDIR}${PREFIX}/bin/tkicb
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/libdata/tkicb
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/libdata/tkicb/tcl
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/libdata/tkicb/lib
+	${INSTALL_SCRIPT} ${WRKSRC}/icb.tcl \
+		${DESTDIR}${PREFIX}/libdata/tkicb/icb.tcl
+	${INSTALL_SCRIPT} ${WRKSRC}/tcl/*.tcl \
+		${DESTDIR}${PREFIX}/libdata/tkicb/tcl
 	${INSTALL_SCRIPT} ${WRKSRC}/lib/confuse ${WRKSRC}/lib/flirt \
-		${WRKSRC}/lib/servers ${PREFIX}/libdata/tkicb/lib
-	${INSTALL_SCRIPT} ${WRKSRC}/lib/* ${PREFIX}/libdata/tkicb/lib
+		${WRKSRC}/lib/servers ${DESTDIR}${PREFIX}/libdata/tkicb/lib
+	${INSTALL_SCRIPT} ${WRKSRC}/lib/* ${DESTDIR}${PREFIX}/libdata/tkicb/lib
 
 .include "../../mk/bsd.pkg.mk"

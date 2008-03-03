@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/03/02 02:46:15 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/03 01:50:26 jlam Exp $
 #
 
 DISTNAME=	dinotrace-9.3c
@@ -13,8 +13,9 @@ COMMENT=	Emacs major mode for dinotrace
 
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}verilog-mode>=3.13:../../cad/verilog-mode
 
-.include "../../mk/bsd.prefs.mk"
+PKG_DESTDIR_SUPPORT=	user-destdir
 
+.include "../../mk/bsd.prefs.mk"
 .include "../../mk/emacs.mk"
 
 .if ${EMACS_FLAVOR} == "emacs"
@@ -28,11 +29,12 @@ SRCS=	dinotrace.el sim-log.el
 do-build:
 	for f in ${SRCS}; do						\
 		${EMACS} --no-init-file --no-site-file -batch		\
-		-f batch-byte-compile ${WRKSRC}/lisp/$$f;			\
+		-f batch-byte-compile ${WRKSRC}/lisp/$$f;		\
 	done
 
 do-install:
-	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/${PKGBASE}
-	cd ${WRKSRC}/lisp && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} ${EMACS_LISPPREFIX}/${PKGBASE}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE}
+	cd ${WRKSRC}/lisp && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc}	\
+		${DESTDIR}${EMACS_LISPPREFIX}/${PKGBASE}
 
 .include "../../mk/bsd.pkg.mk"

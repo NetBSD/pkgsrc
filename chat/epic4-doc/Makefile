@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/12/01 23:46:04 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/03 02:19:51 jlam Exp $
 #
 
 DISTNAME=	epic4-help-20050315
@@ -20,15 +20,17 @@ COMMENT=	Additional documentation for epic4 package
 
 DEPENDS+=	epic4>=2.0:../../chat/epic4
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_BUILD=	YES
 
 INSTALLATION_DIRS=	share/epic/help
 
 do-install:
-	${CP} -R ${WRKDIR}/help/* ${PREFIX}/share/epic/help
-	${RM} -r ${PREFIX}/share/epic/help/Makefile
-	${RM} -r ${PREFIX}/share/epic/help/CVS
-	${RM} -r ${PREFIX}/share/epic/help/*/CVS
-	${RM} -r ${PREFIX}/share/epic/help/*/*/CVS
+	${CP} -R ${WRKDIR}/help/* ${DESTDIR}${PREFIX}/share/epic/help
+	${RM} -r ${DESTDIR}${PREFIX}/share/epic/help/Makefile
+	${RM} -r ${DESTDIR}${PREFIX}/share/epic/help/CVS
+	${RM} -r ${DESTDIR}${PREFIX}/share/epic/help/*/CVS
+	${RM} -r ${DESTDIR}${PREFIX}/share/epic/help/*/*/CVS
 
 .include "../../mk/bsd.pkg.mk"

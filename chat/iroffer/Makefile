@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/02/22 19:26:11 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/03 02:19:51 jlam Exp $
 #
 
 DISTNAME=	iroffer1.3.b11
@@ -11,24 +11,26 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://iroffer.org/
 COMMENT=	IRC (Internet Relay Chat) DCC OfferBot
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 INSTALLATION_DIRS=	bin
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/iroffer ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/iroffer
+	${INSTALL_PROGRAM} ${WRKSRC}/iroffer ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/iroffer
 	${INSTALL_DATA} ${WRKSRC}/COPYING \
-		${PREFIX}/share/doc/iroffer/COPYING
+		${DESTDIR}${PREFIX}/share/doc/iroffer/COPYING
 	${INSTALL_DATA} ${WRKSRC}/README \
-		${PREFIX}/share/doc/iroffer/README
+		${DESTDIR}${PREFIX}/share/doc/iroffer/README
 	${INSTALL_DATA} ${WRKSRC}/WHATSNEW \
-		${PREFIX}/share/doc/iroffer/WHATSNEW
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/iroffer
+		${DESTDIR}${PREFIX}/share/doc/iroffer/WHATSNEW
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/iroffer
 	${INSTALL_DATA} ${WRKSRC}/sample.config \
-		${PREFIX}/share/examples/iroffer/sample.config
+		${DESTDIR}${PREFIX}/share/examples/iroffer/sample.config
 	${INSTALL_DATA} ${WRKSRC}/iroffer.cron \
-		${PREFIX}/share/examples/iroffer/iroffer.cron
+		${DESTDIR}${PREFIX}/share/examples/iroffer/iroffer.cron
 
 .include "../../mk/bsd.pkg.mk"
