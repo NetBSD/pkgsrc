@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.415 2008/03/03 15:53:18 jlam Exp $
+$NetBSD: CHANGES-2008,v 1.416 2008/03/03 16:50:09 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -752,3 +752,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Update security/libprelude to 0.9.16.2 [shannonjr 2008-03-03]
 	Update security/prelude-manager to 0.9.11 [shannonjr 2008-03-03]
 	Updated www/bozohttpd to 20080303 [jlam 2008-03-03]
+	Updated databases/phpmyadmin to 2.11.5 [tron 2008-03-03]
