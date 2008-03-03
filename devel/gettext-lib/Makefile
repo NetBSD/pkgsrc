@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2006/07/26 06:53:02 adam Exp $
+# $NetBSD: Makefile,v 1.46 2008/03/03 18:02:22 drochner Exp $
 
 DISTNAME=	gettext-0.14.6
 PKGNAME=	gettext-lib-0.14.6
@@ -19,6 +19,7 @@ WRKSRC=			${WRKDIR}/${DISTNAME}/gettext-runtime
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-included-gettext
+CONFIGURE_ARGS+=	--disable-csharp
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 MAKE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 
