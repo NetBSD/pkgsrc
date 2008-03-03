@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/16 06:57:50 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/03 18:25:53 jlam Exp $
 
 DISTNAME=	ve-1.0
 CATEGORIES=	editors
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	rxg@NetBSD.org
 COMMENT=	NTHU-CS Maple BBS 2.36 BBS-like editor
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 INSTALLATION_DIRS=	bin
 
 post-patch:
@@ -16,8 +18,8 @@ post-patch:
 	${MV} ${WRKSRC}/edit.c.done ${WRKSRC}/edit.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ve ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/ve
-	${INSTALL_DATA} ${WRKSRC}/ve.hlp ${PREFIX}/share/ve
+	${INSTALL_PROGRAM} ${WRKSRC}/ve ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/ve
+	${INSTALL_DATA} ${WRKSRC}/ve.hlp ${DESTDIR}${PREFIX}/share/ve
 
 .include "../../mk/bsd.pkg.mk"
