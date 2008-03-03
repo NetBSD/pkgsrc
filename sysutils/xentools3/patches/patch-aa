@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/06/14 19:39:45 bouyer Exp $
+$NetBSD: patch-aa,v 1.2 2008/03/03 16:45:27 hannken Exp $
 
---- Makefile.orig	2007-05-18 16:45:21.000000000 +0200
-+++ Makefile	2007-05-27 13:32:39.000000000 +0200
-@@ -5,27 +5,18 @@
+--- Makefile.orig	2008-01-31 11:06:54.000000000 +0100
++++ Makefile	2008-02-29 16:58:47.000000000 +0100
+@@ -5,19 +5,12 @@ SUBDIRS-y :=
  SUBDIRS-y += libxc
  SUBDIRS-y += xenstore
  SUBDIRS-y += misc
@@ -19,18 +19,10 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/06/14 19:39:45 bouyer Exp $
  SUBDIRS-y += xenstat
 -SUBDIRS-y += libaio
 -SUBDIRS-y += blktap
--SUBDIRS-y += libfsimage
+ SUBDIRS-y += libfsimage
  SUBDIRS-$(XENFB_TOOLS) += xenfb
  SUBDIRS-$(LIBXENAPI_BINDINGS) += libxen
- 
- # These don't cross-compile
- ifeq ($(XEN_COMPILE_ARCH),$(XEN_TARGET_ARCH))
- SUBDIRS-$(PYTHON_TOOLS) += python
--SUBDIRS-$(PYTHON_TOOLS) += pygrub
- endif
- 
- .PHONY: all
-@@ -33,34 +24,27 @@
+@@ -33,34 +26,27 @@ all: check
  	@set -e; for subdir in $(SUBDIRS-y); do \
  		$(MAKE) -C $$subdir $@; \
  	done

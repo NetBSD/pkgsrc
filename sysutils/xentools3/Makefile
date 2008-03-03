@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/02/17 16:29:03 bouyer Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/03 16:45:27 hannken Exp $
 #
 
 VERSION=		3.1.3
@@ -104,6 +104,7 @@ SUBST_SED.conf=		-e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g"
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-configure
 SUBST_FILES.prefix=	python/xen/util/auxbin.py
+SUBST_FILES.prefix+=	python/xen/xend/osdep.py
 SUBST_FILES.prefix+=	misc/xen-python-path
 SUBST_SED.prefix=	-e "s,@PREFIX@,${PREFIX},g"
 
@@ -194,6 +195,7 @@ post-install:
 .include "../../textproc/py-xml/buildlink3.mk"
 #.include "../../devel/zlib/buildlink3.mk"
 #.include "../../www/curl/buildlink3.mk"
+.include "../../devel/py-curses/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
