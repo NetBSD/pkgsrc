@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.414 2008/03/03 15:18:42 shannonjr Exp $
+$NetBSD: CHANGES-2008,v 1.415 2008/03/03 15:53:18 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -751,3 +751,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added x11/xinput version 1.3.0 [bjs 2008-03-03]
 	Update security/libprelude to 0.9.16.2 [shannonjr 2008-03-03]
 	Update security/prelude-manager to 0.9.11 [shannonjr 2008-03-03]
+	Updated www/bozohttpd to 20080303 [jlam 2008-03-03]
