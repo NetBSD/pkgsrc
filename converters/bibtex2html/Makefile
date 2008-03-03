@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/01/10 18:15:29 tonio Exp $
+# $NetBSD: Makefile,v 1.25 2008/03/03 05:51:07 jlam Exp $
 
 DISTNAME=	bibtex2html-1.89
 CATEGORIES=	converters
@@ -9,6 +9,8 @@ HOMEPAGE=	http://www.lri.fr/~filliatr/bibtex2html/
 COMMENT=	Collection of tools for translating from BibTeX to HTML
 
 BUILD_DEPENDS+=	hevea-[0-9]*:../../textproc/hevea
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	perl:run
@@ -28,14 +30,19 @@ post-build:
 	cd ${WRKSRC}; ${MAKE} doc
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/aux2bib ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/bibtex2html ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/bib2bib ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/bibtex2html.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/bibtex2html.1 ${PREFIX}/${PKGMANDIR}/man1/bib2bib.1
-	${INSTALL_MAN} ${WRKSRC}/aux2bib.1 ${PREFIX}/${PKGMANDIR}/man1/aux2bib.1
-	${INSTALL_DATA} ${WRKSRC}/manual.html ${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/manual.ps ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_SCRIPT} ${WRKSRC}/aux2bib ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bibtex2html ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bib2bib ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/bibtex2html.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/bibtex2html.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/bib2bib.1
+	${INSTALL_MAN} ${WRKSRC}/aux2bib.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/aux2bib.1
+	${INSTALL_DATA} ${WRKSRC}/manual.html \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/manual.ps \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/tex.buildlink3.mk"
