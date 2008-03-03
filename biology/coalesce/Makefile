@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:40 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/03 01:10:05 jlam Exp $
 #
 
 DISTNAME=	coalesce1.5b
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://evolution.genetics.washington.edu/pub/lamarc/coalesce/
 MAINTAINER=	brook@nmsu.edu
 HOMEPAGE=	http://evolution.genetics.washington.edu/lamarc/coalesce.html
 COMMENT=	Estimates effective population size and mutation rate
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/coalesce1.5beta
 BUILD_TARGET=	coalesce
@@ -21,14 +23,14 @@ EXFILES=	bestree infile intree outfile parmfile seedfile
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EXDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/coalesce ${PREFIX}/bin/
-	for f in ${DOCFILES}; do 				\
-		${INSTALL_DATA} ${WRKSRC}/$$f ${DOCDIR}/$$f; 	\
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EXDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/coalesce ${DESTDIR}${PREFIX}/bin
+	for f in ${DOCFILES}; do 					\
+		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${DOCDIR}/$$f; 	\
 	done
-	for f in ${EXFILES}; do 				\
-		${INSTALL_DATA} ${WRKSRC}/$$f ${EXDIR}/$$f; 	\
+	for f in ${EXFILES}; do 					\
+		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${EXDIR}/$$f; 	\
 	done
 
 .include "../../mk/bsd.pkg.mk"

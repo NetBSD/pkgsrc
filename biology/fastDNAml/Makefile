@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2005/06/16 06:57:40 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/03 01:10:05 jlam Exp $
 
 DISTNAME=	fastDNAml_1.2.2
 PKGNAME=	fastDNAml-1.2.2
@@ -9,12 +9,14 @@ MAINTAINER=	babafou@babafou.eu.org
 HOMEPAGE=	http://geta.life.uiuc.edu/~gary/programs/fastDNAml.html
 COMMENT=	Program derived from Joseph Felsenstein's version 3.3 DNAML
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/${DISTNAME}/source
 
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/fastDNAml ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/fastDNAml ${DESTDIR}${PREFIX}/bin
 .for SCRIPT in ae2dnaml bootstrap categories categories_file		\
 		checkpoint_summary clean_checkpoints clean_jumbles	\
 		dnaml_progress fastDNAml_boot fastDNAml_loop		\
@@ -23,11 +25,13 @@ do-install:
 		quickadd restart scores transition treefile		\
 		treefile2prolog trees2NEXUS trees2prolog userlengths	\
 		usertree usertrees weights weights_categories
-	${INSTALL_SCRIPT} ${WRKDIR}/${DISTNAME}/scripts/${SCRIPT} ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/${DISTNAME}/scripts/${SCRIPT}	\
+		${DESTDIR}${PREFIX}/bin
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fastDNAml
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/fastDNAml
 .for DOC in fastDNAml_doc_1.2.txt fastDNAml_scripts.txt
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/docs/${DOC} ${PREFIX}/share/doc/fastDNAml
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/docs/${DOC}		\
+		${DESTDIR}${PREFIX}/share/doc/fastDNAml
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

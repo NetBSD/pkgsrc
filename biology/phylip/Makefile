@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/01/26 22:06:38 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/03 01:10:06 jlam Exp $
 
 DISTNAME=	phylip-3.61
 PKGREVISION=	2
@@ -14,6 +14,8 @@ RESTRICTED=		No commercial distribution without a royalty agreement with the aut
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
 INSTALLATION_DIRS=	bin
@@ -25,14 +27,14 @@ do-install:
 		mix move neighbor pars penny proml promlk protdist	\
 		protpars restdist restml retree seqboot treedist	\
 		drawgram drawtree
-	${INSTALL_PROGRAM} ${WRKSRC}/${PROGRAM} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${PROGRAM} ${DESTDIR}${PREFIX}/bin
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/fonts/phylip
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/fonts/phylip
 .for FONT in font1 font2 font3 font4 font5 font6
-	${INSTALL_DATA} ${WRKSRC}/${FONT} ${PREFIX}/share/fonts/phylip
+	${INSTALL_DATA} ${WRKSRC}/${FONT} ${DESTDIR}${PREFIX}/share/fonts/phylip
 .endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/phylip
-.for HTML in clique.html consense.html contchar.html contml.html		\
+.for HTML in clique.html consense.html contchar.html contml.html	\
 		contrast.html discrete.html distance.html dnacomp.html	\
 		dnadist.html dnainvar.html dnaml.html dnamlk.html	\
 		dnamove.html dnapars.html dnapenny.html dollop.html	\
@@ -43,7 +45,8 @@ do-install:
 		promlk.html protdist.html protpars.html restdist.html	\
 		restml.html retree.html seqboot.html sequence.html	\
 		treedist.html
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/doc/${HTML} ${PREFIX}/share/doc/html/phylip
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/doc/${HTML}		\
+		${DESTDIR}${PREFIX}/share/doc/html/phylip
 .endfor
 
 MAKE_ENV+=	X11_LDFLAGS=${X11_LDFLAGS:Q}

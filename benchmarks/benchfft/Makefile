@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2008/01/19 09:16:17 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2008/03/03 00:51:43 jlam Exp $
 
 DISTNAME=		benchfft-2.0
-PKGREVISION=	2
+PKGREVISION=		2
 CATEGORIES=		benchmarks math
 MASTER_SITES=		ftp://ftp.fftw.org/pub/fftw/ \
 			ftp://ftp.fftw.org/pub/fftw/old/benchfft/
@@ -12,6 +12,7 @@ HOMEPAGE=		http://www.fftw.org/benchfft/
 COMMENT=		Benchmark your machine with a number of FFT algorithms
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
@@ -28,8 +29,10 @@ INSTALLATION_DIRS=	bin
 CONFIGURE_DIRS=		${WRKDIR}/fftw-2.0.1 ${WRKSRC}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bench ${PREFIX}/bin/bench-fft
-	${INSTALL_SCRIPT} ${WRKSRC}/submit-script ${PREFIX}/bin/run-fftbench
+	${INSTALL_PROGRAM} ${WRKSRC}/bench \
+		${DESTDIR}${PREFIX}/bin/bench-fft
+	${INSTALL_SCRIPT} ${WRKSRC}/submit-script \
+		${DESTDIR}${PREFIX}/bin/run-fftbench
 
 .include "../../mk/bsd.prefs.mk"
 

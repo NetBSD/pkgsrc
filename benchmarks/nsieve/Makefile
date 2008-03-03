@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/01/19 09:16:18 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/03 00:51:44 jlam Exp $
 
 DISTNAME=		nsieve.c
 PKGNAME=		nsieve-1.2b
@@ -10,6 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Sieve of Eratosthenes benchmark
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 
@@ -23,7 +24,7 @@ do-build:
 	(cd ${WRKSRC} ; ${CC} ${CFLAGS} -DUNIX -o nsieve nsieve.c -lm)
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/nsieve ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/nsieve ${DESTDIR}${PREFIX}/bin
 
 benchmark:
 	-@${WRKSRC}/nsieve | tee ${WRKSRC}/nsieve.out

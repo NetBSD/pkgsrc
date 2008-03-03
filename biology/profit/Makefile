@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/11/03 19:45:20 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/03 01:10:06 jlam Exp $
 #
 
 DISTNAME=		ProFitV2.2
@@ -10,18 +10,21 @@ MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		http://acrmwww.biochem.ucl.ac.uk/programs/profit/index.html
 COMMENT=		Performs least squares fits of two protein structures
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 BUILD_TARGET=		profit
 BUILD_DIRS=		src
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/profit ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/profit
+	${INSTALL_PROGRAM} ${WRKSRC}/src/profit ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/profit
 .for sufx in dvi ps tex
-	${INSTALL_DATA} ${WRKSRC}/doc/ProFit.${sufx} ${PREFIX}/share/doc/profit
+	${INSTALL_DATA} ${WRKSRC}/doc/ProFit.${sufx}			\
+		${DESTDIR}${PREFIX}/share/doc/profit
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/profit
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/html/profit
 	cd ${WRKSRC}/doc/ProFit/ && 					\
-		${PAX} -rw . ${PREFIX}/share/doc/html/profit/
+		${PAX} -rw . ${DESTDIR}${PREFIX}/share/doc/html/profit/
 
 .include "../../mk/bsd.pkg.mk"

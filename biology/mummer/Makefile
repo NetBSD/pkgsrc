@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/01/18 19:13:10 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/03 01:10:06 jlam Exp $
 #
 
 DISTNAME=		MUMmer3.19
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mummer/}
 MAINTAINER=		hdp@cs.nmsu.edu
 HOMEPAGE=		http://mummer.sourceforge.net/
 COMMENT=		System for aligning whole genome sequences
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_TOOLS+=		csh:run gmake perl:run
@@ -22,15 +24,16 @@ INSTALLATION_DIRS=	bin share/doc/mummer share/mummer
 do-install:
 .for p in annotate combineMUMs delta-filter gaps mgaps mummer \
 	repeat-match show-aligns show-coords show-snps show-tiling
-	${INSTALL_PROGRAM} ${WRKSRC}/${p} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${p} ${DESTDIR}${PREFIX}/bin
 .endfor
 .for p in postnuc postpro prenuc prepro
-	${INSTALL_PROGRAM} ${WRKSRC}/aux_bin/${p} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/aux_bin/${p} ${DESTDIR}${PREFIX}/bin
 .endfor
 .for f in run-mummer1 run-mummer3 nucmer promer exact-tandems 	  \
 	mapview mummerplot nucmer2xfig
-	${INSTALL_SCRIPT} ${WRKSRC}/${f} ${PREFIX}/share/mummer
+	${INSTALL_SCRIPT} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/mummer
 .endfor
-	cd ${WRKSRC}/docs && pax -wr -s ',^Makefile$$,,' * ${PREFIX}/share/doc/mummer
+	cd ${WRKSRC}/docs && pax -wr -s ',^Makefile$$,,' * \
+		${DESTDIR}${PREFIX}/share/doc/mummer
 
 .include "../../mk/bsd.pkg.mk"
