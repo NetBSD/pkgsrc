@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2008/03/02 15:50:20 adam Exp $
+@comment $NetBSD: PLIST,v 1.29 2008/03/03 11:49:55 drochner Exp $
 bin/gtkmm-demo
 include/atkmm-1.6/atkmm.h
 include/atkmm-1.6/atkmm/action.h
@@ -2466,6 +2466,8 @@ share/gtkmm-2.4/demo/gnome-gmush.png
 share/gtkmm-2.4/demo/gnome-gsame.png
 share/gtkmm-2.4/demo/gnu-keys.png
 share/gtkmm-2.4/demo/gtk-logo-rgb.gif
+@dirrm share/gtkmm-2.4/demo
+@dirrm share/gtkmm-2.4
 @dirrm share/doc/gtkmm-2.4/tests/main_with_options
 @dirrm share/doc/gtkmm-2.4/tests/child_widget_managed
 @dirrm share/doc/gtkmm-2.4/tests/child_widget
