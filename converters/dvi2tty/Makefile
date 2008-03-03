@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/12/12 20:42:30 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2008/03/03 05:51:08 jlam Exp $
 #
 
 DISTNAME=	dvi2tty
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Program for previewing DVI files
 
 LICENSE=	no-commercial-use
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FLAGS+=	CFLAGS=${CFLAGS:M*:Q}
 
@@ -25,7 +27,7 @@ pre-patch:
 
 do-install:
 	${INSTALL_PROGRAM} \
-		${WRKSRC}/disdvi ${WRKSRC}/dvi2tty ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/dvi2tty.1 ${PREFIX}/${PKGMANDIR}/man1
+		${WRKSRC}/disdvi ${WRKSRC}/dvi2tty ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/dvi2tty.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
