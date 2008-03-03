@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/09/10 12:19:04 obache Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/03 20:17:13 jlam Exp $
 #
 
 DISTNAME=	watanabe-vf
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.kuis.kyoto-u.ac.jp/TeX/watanabe-jfonts/
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 COMMENT=	Watanabe-vector Japanese font
 
+PKG_DESTDIR_SUPPORT=	destdir
+
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
@@ -16,10 +18,11 @@ NO_BUILD=	yes
 USE_TOOLS+=	tar
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/fonts/watanabe_font
-	cd ${PREFIX}/share/fonts/watanabe_font \
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/fonts/watanabe_font
+	cd ${DESTDIR}${PREFIX}/share/fonts/watanabe_font \
 		&& ${TAR} xzf ${_DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
-	${CHMOD} ${SHAREMODE} ${PREFIX}/share/fonts/watanabe_font/*
-	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/fonts/watanabe_font/*
+	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/share/fonts/watanabe_font/*
+	${CHOWN} ${SHAREOWN}:${SHAREGRP} \
+		${DESTDIR}${PREFIX}/share/fonts/watanabe_font/*
 
 .include "../../mk/bsd.pkg.mk"
