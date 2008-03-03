@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/07/05 18:21:20 jnemeth Exp $
+# $NetBSD: Makefile,v 1.23 2008/03/03 18:25:52 jlam Exp $
 #
 
 DISTNAME=	jde-2.3.2
@@ -17,6 +17,8 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}speedbar>=0.14rc2:../../editors/speedbar
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}eieio>=0.17:../../lang/eieio
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}semantic>=1.4rc13:../../devel/semantic
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}elib>=1.0:../../devel/elib
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/lisp
 
@@ -38,17 +40,19 @@ post-extract:
 	@${RMDIR} ${WRKDIR}/${DISTNAME}/java/classes
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/jde
-	${INSTALL_DATA_DIR} ${PREFIX}/share/jde
-	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/jde
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/jde
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/jde
+	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/jde
 	cd ${WRKDIR}/${DISTNAME}/doc &&					\
 		${PAX} -s',^src.*,,' -s',.*\.nosearch.*,,'		\
-			-rw * ${PREFIX}/share/doc/jde
+			-rw * ${DESTDIR}${PREFIX}/share/doc/jde
 	cd ${WRKDIR}/${DISTNAME} &&					\
 		${PAX} -s',^java/classes.*,,' -s',^java/src.*,,'	\
-			-s',.*\.nosearch.*,,' -rw java ${PREFIX}/share/jde
+			-s',.*\.nosearch.*,,' -rw java			\
+			${DESTDIR}${PREFIX}/share/jde
 	cd ${WRKDIR}/${DISTNAME} &&					\
-		${PAX} -rw -s ',.*\.orig$$,,' lisp ${EMACS_LISPPREFIX}/jde
+		${PAX} -rw -s ',.*\.orig$$,,' lisp			\
+			${DESTDIR}${EMACS_LISPPREFIX}/jde
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
