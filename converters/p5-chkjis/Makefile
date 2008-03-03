@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/01/21 18:57:40 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/03 05:51:08 jlam Exp $
 #
 
 DISTNAME=	chkjis
@@ -12,6 +12,8 @@ MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www2d.biglobe.ne.jp/~msyk/software/chkjis.html
 COMMENT=	Filter library substituting vendor's own characters
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 
 VERSION=	0.18
@@ -24,8 +26,9 @@ NO_CONFIGURE=		yes
 PERL5_CONFIGURE=	no
 
 do-install:
-	${INSTALL_DATA_DIR} ${PERL5_INSTALLVENDORLIB}
-	${INSTALL_SCRIPT} ${WRKSRC}/chkjis.pl ${PERL5_INSTALLVENDORLIB}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PERL5_INSTALLVENDORLIB}
+	${INSTALL_SCRIPT} ${WRKSRC}/chkjis.pl \
+		${DESTDIR}${PERL5_INSTALLVENDORLIB}
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

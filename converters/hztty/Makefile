@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/12/02 11:54:49 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/03 05:51:08 jlam Exp $
 
 DISTNAME=	hztty-2.0
 CATEGORIES=	converters
@@ -9,6 +9,7 @@ MAINTAINER=	rxg@NetBSD.org
 COMMENT=	Turns a tty session between Big5/GB/HZ/Unicode
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -21,7 +22,7 @@ BUILD_TARGET=	bsd
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/hztty ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/hztty.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/hztty ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/hztty.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

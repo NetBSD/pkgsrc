@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/01/18 11:51:33 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/03 05:51:08 jlam Exp $
 #
 
 DISTNAME=	chef-19920415
@@ -11,6 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Convert from English to (mock) Swedish - Bork Bork Bork!
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 USE_TOOLS+=	lex
@@ -28,6 +29,6 @@ do-build:
 	${LINK.c} -o ${WRKSRC}/chef ${WRKSRC}/lex.yy.c -ll
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/chef ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/chef ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
