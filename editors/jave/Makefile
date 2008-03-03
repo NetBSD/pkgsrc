@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/10 23:39:24 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/03 18:25:52 jlam Exp $
 
 DISTNAME=		jave_6.0_M7
 PKGNAME=		jave-6.0m7
@@ -11,6 +11,8 @@ DISTFILES=		jave_6.0_M7${EXTRACT_SUFX} figletfonts37${EXTRACT_SUFX}
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.jave.de/
 COMMENT=		Java ASCII Versatile Editor
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_JAVA=		run
 PKG_JVMS_ACCEPTED=	sun-jdk14 sun-jdk15
@@ -27,9 +29,9 @@ do-build:
 		< ${FILESDIR:Q}/jave > ${WRKDIR:Q}/jave
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR:Q}/jave ${PREFIX:Q}/bin
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/jave
-	(cd ${WRKDIR:Q}/.workdir && ${PAX} -rw * ${PREFIX:Q}/share/jave)
+	${INSTALL_SCRIPT} ${WRKDIR:Q}/jave ${DESTDIR}${PREFIX:Q}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/share/jave
+	(cd ${WRKDIR:Q}/.workdir && ${PAX} -rw * ${DESTDIR}${PREFIX:Q}/share/jave)
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

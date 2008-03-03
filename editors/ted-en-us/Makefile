@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/06/08 18:41:21 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/03 18:25:53 jlam Exp $
 
 DISTNAME=	ted-2.16.src
 PKGNAME=	ted-en-us-2.16
@@ -12,6 +12,8 @@ COMMENT=	US English spelling dictionary for the Ted word processor
 
 DEPENDS+=	ted>=2.6:../../editors/ted
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/Ted-2.16
 USE_X11BASE=	YES
 NO_BUILD=	YES
@@ -23,6 +25,7 @@ post-extract:
 	@cd ${WRKSRC} ; ${GTAR} xf tedPackage/TedBindist.tar
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/ind/US_English.ind ${PREFIX}/share/Ted/ind
+	${INSTALL_DATA} ${WRKSRC}/ind/US_English.ind \
+		${DESTDIR}${PREFIX}/share/Ted/ind
 
 .include "../../mk/bsd.pkg.mk"

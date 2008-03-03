@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/02/22 19:01:18 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/03 18:25:52 jlam Exp $
 #
 
 PKGNAME=		mflteco-19920331
@@ -10,25 +10,26 @@ MAINTAINER=		is@NetBSD.org
 HOMEPAGE=		http://www.catb.org/~esr/retro/
 COMMENT=		MFL clone of Tape Editor and COrrector
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 BUILD_TARGET=		te
 
 DOCS=			${LOCALBASE}/share/doc/mflteco
 XMPL=			${LOCALBASE}/share/examples/mflteco
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/te ${LOCALBASE}/bin
-	${INSTALL_DATA_DIR} ${DOCS}
-	${INSTALL_DATA_DIR} ${XMPL}
-	${INSTALL_DATA} ${WRKSRC}/00README ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/teco.doc ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/teco.doc.1 ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/.tecorc ${XMPL}
-	${INSTALL_DATA} ${WRKSRC}/pi.tec ${XMPL}
-	${INSTALL_DATA} ${WRKSRC}/sample_tecorc.old ${XMPL}
-	${INSTALL_DATA} ${WRKSRC}/tecorc.mch ${XMPL}
-
-
 pre-patch:
 	cp ${WRKSRC}/Makefile.sun4 ${WRKSRC}/Makefile
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/te ${DESTDIR}${LOCALBASE}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCS}
+	${INSTALL_DATA_DIR} ${DESTDIR}${XMPL}
+	${INSTALL_DATA} ${WRKSRC}/00README ${DESTDIR}${DOCS}
+	${INSTALL_DATA} ${WRKSRC}/teco.doc ${DESTDIR}${DOCS}
+	${INSTALL_DATA} ${WRKSRC}/teco.doc.1 ${DESTDIR}${DOCS}
+	${INSTALL_DATA} ${WRKSRC}/.tecorc ${DESTDIR}${XMPL}
+	${INSTALL_DATA} ${WRKSRC}/pi.tec ${DESTDIR}${XMPL}
+	${INSTALL_DATA} ${WRKSRC}/sample_tecorc.old ${DESTDIR}${XMPL}
+	${INSTALL_DATA} ${WRKSRC}/tecorc.mch ${DESTDIR}${XMPL}
 
 .include "../../mk/bsd.pkg.mk"

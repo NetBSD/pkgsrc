@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/01/07 09:13:52 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/03 18:25:52 jlam Exp $
 #
 
 DISTNAME=		heme-0.4
@@ -11,6 +11,7 @@ HOMEPAGE=		http://sourceforge.net/projects/heme/
 COMMENT=		Fast and portable console hex editor
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		heme
 USE_NCURSES=		# mvwchgat
@@ -21,7 +22,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 .include "../../devel/ncurses/buildlink3.mk"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/heme ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/heme.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/heme ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/heme.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

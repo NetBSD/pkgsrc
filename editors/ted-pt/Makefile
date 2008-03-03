@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/06/08 18:41:22 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/03 18:25:53 jlam Exp $
 
 DISTNAME=	Ted_pt_PT
 PKGNAME=	ted-pt-2.16
@@ -12,6 +12,8 @@ COMMENT=	Portuguese spelling dictionary for the Ted word processor
 
 DEPENDS+=	ted>=2.6:../../editors/ted
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 USE_X11BASE=	YES
 
@@ -21,6 +23,7 @@ NO_BUILD=	YES
 INSTALLATION_DIRS=	share/Ted/ind
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/ind/Portuguese.ind ${PREFIX}/share/Ted/ind
+	${INSTALL_DATA} ${WRKSRC}/ind/Portuguese.ind \
+		${DESTDIR}${PREFIX}/share/Ted/ind
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2007/03/21 19:39:08 jwise Exp $
+# $NetBSD: Makefile,v 1.71 2008/03/03 18:25:53 jlam Exp $
 #
 # NOTE:
 # When updating, it is necessary to change the shlib version, located in
@@ -19,6 +19,8 @@ HOMEPAGE=	http://www.washington.edu/pine/
 COMMENT=	Text editor (ships with Pine), and Pine's text editing lib
 
 LICENSE=	pine-license
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 
@@ -65,13 +67,13 @@ do-build:
 
 do-install:
 	${LIBTOOL} --mode=install ${INSTALL_LIB} \
-		${WRKSRC}/pico/libpico.la ${PREFIX}/lib
+		${WRKSRC}/pico/libpico.la ${DESTDIR}${PREFIX}/lib
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
-		${WRKSRC}/pico/pico ${WRKSRC}/pico/pilot ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doc/pico.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/pilot.1 ${PREFIX}/${PKGMANDIR}/man1
+		${WRKSRC}/pico/pico ${WRKSRC}/pico/pilot ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/doc/pico.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/pilot.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${PREFIX}/include/pico
-	cd ${WRKSRC}/pico && ${INSTALL_DATA} *.h ${PREFIX}/include/pico
+	cd ${WRKSRC}/pico && ${INSTALL_DATA} *.h ${DESTDIR}${PREFIX}/include/pico
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
