@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/10/25 21:04:21 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/03 20:17:11 jlam Exp $
 
 DISTNAME=	adobe-cidfonts-20000901
 CATEGORIES=	fonts
@@ -26,6 +26,8 @@ DISTFILES+=	WadaMin-Bold WadaMin-Bold.afm
 DISTFILES+=	WadaMin-Regular WadaMin-Regular.afm
 DISTFILES+=	WadaMin-RegularH WadaMin-RegularH.afm
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
@@ -41,10 +43,10 @@ GENERATE_PLIST=								\
 	${ECHO} "@unexec ${RMDIR} -p %D/${RESOURCESUBDIR} 2>/dev/null || ${TRUE}";
 
 do-install:
-	${INSTALL_DATA_DIR} ${RESOURCEDIR}/CIDFont
+	${INSTALL_DATA_DIR} ${DESTDIR}${RESOURCEDIR}/CIDFont
 	for file in ${DISTFILES}; do					\
 		${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/$${file}	\
-			${RESOURCEDIR}/CIDFont;				\
+			${DESTDIR}${RESOURCEDIR}/CIDFont;		\
 	done
 
 .include "../../mk/bsd.pkg.mk"

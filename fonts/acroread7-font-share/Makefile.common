@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2006/10/04 21:39:31 wiz Exp $
+# $NetBSD: Makefile.common,v 1.3 2008/03/03 20:17:11 jlam Exp $
 #
 
 PKGNAME=	acroread7-${DISTNAME}-7.0
@@ -17,12 +17,16 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 NO_SRC_ON_FTP=	${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 USE_TOOLS+=	tar
 
+INSTALLATION_DIRS=	Acrobat7/Resource
+
 do-install:
-	@${TAR} xf ${TAR_FILE} -C ${PREFIX}/Acrobat7/Resource
+	@${TAR} xf ${TAR_FILE} -C ${DESTDIR}${PREFIX}/Acrobat7/Resource
 
 .include "../../mk/bsd.pkg.mk"
