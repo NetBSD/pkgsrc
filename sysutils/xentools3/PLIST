@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/14 19:39:45 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/03/03 16:45:27 hannken Exp $
+bin/pygrub
 bin/readnotes
 bin/xc_restore
 bin/xc_save
@@ -14,10 +15,21 @@ bin/xenstore-read
 bin/xenstore-rm
 bin/xenstore-write
 bin/xen-detect
+include/fsimage.h
+include/fsimage_plugin.h
+include/fsimage_grub.h
 include/xenctrl.h
 include/xenguest.h
 include/xs.h
 include/xs_lib.h
+lib/fs/ext2fs/fsimage.so
+lib/fs/fat/fsimage.so
+lib/fs/iso9660/fsimage.so
+lib/fs/reiserfs/fsimage.so
+lib/fs/ufs/fsimage.so
+lib/libfsimage.so
+lib/libfsimage.so.1.0
+lib/libfsimage.so.1.0.0
 lib/libxenctrl.a
 lib/libxenctrl.so
 lib/libxenctrl.so.3.0
@@ -34,6 +46,13 @@ man/man1/xentop.1
 man/man1/xm.1
 man/man5/xend-config.sxp.5
 man/man5/xmdomain.cfg.5
+${PYSITELIB}/fsimage.so
+${PYSITELIB}/grub/GrubConf.py
+${PYSITELIB}/grub/GrubConf.pyc
+${PYSITELIB}/grub/LiloConf.py
+${PYSITELIB}/grub/LiloConf.pyc
+${PYSITELIB}/grub/__init__.py
+${PYSITELIB}/grub/__init__.pyc
 ${PYSITELIB}/xen/__init__.py
 ${PYSITELIB}/xen/__init__.pyc
 ${PYSITELIB}/xen/lowlevel/__init__.py
@@ -352,8 +371,15 @@ share/examples/xen/xmexample1
 share/examples/xen/xmexample2
 share/examples/xen/xmexample3
 share/xen/create.dtd
+@dirrm lib/fs/ext2fs
+@dirrm lib/fs/fat
+@dirrm lib/fs/iso9660
+@dirrm lib/fs/reiserfs
+@dirrm lib/fs/ufs
+@dirrm lib/fs
 @dirrm share/xen
 @dirrm share/examples/xen
+@dirrm ${PYSITELIB}/grub
 @dirrm ${PYSITELIB}/xen/xm/tests
 @dirrm ${PYSITELIB}/xen/xm
 @dirrm ${PYSITELIB}/xen/xend/xenstore/tests
