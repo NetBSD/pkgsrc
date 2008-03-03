@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/05 23:08:39 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/03 17:45:34 jlam Exp $
 #
 # NOTE: if you are depending on ant from another package, please be aware that
 # the ant team has CHANGED the version numbering scheme.  A previous version
@@ -21,6 +21,8 @@ DEPENDS+=	crimson>=1.1.3:../../textproc/crimson
 # Up to version 1.5.1 inclusive this was known as "jakarta-ant".
 CONFLICTS=	jakarta-ant*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_JAVA=	run
 
@@ -33,16 +35,16 @@ do-build:
 		< ${FILESDIR}/ant > ${WRKDIR}/ant
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/ant ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/antRun ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/java/ant
-	${INSTALL_DATA} ${WRKSRC}/lib/ant.jar ${PREFIX}/lib/java/ant
-	${INSTALL_DATA} ${WRKSRC}/lib/optional.jar ${PREFIX}/lib/java/ant
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/ant
-	cd ${WRKSRC}/docs && ${PAX} -rw -pmp * ${PREFIX}/share/doc/java/ant
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/java/ant
-	${INSTALL_DATA} ${WRKSRC}/WHATSNEW ${PREFIX}/share/doc/java/ant
+	${INSTALL_SCRIPT} ${WRKDIR}/ant ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/antRun ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/java
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/java/ant
+	${INSTALL_DATA} ${WRKSRC}/lib/ant.jar ${DESTDIR}${PREFIX}/lib/java/ant
+	${INSTALL_DATA} ${WRKSRC}/lib/optional.jar ${DESTDIR}${PREFIX}/lib/java/ant
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/java/ant
+	cd ${WRKSRC}/docs && ${PAX} -rw -pmp * ${DESTDIR}${PREFIX}/share/doc/java/ant
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/java/ant
+	${INSTALL_DATA} ${WRKSRC}/WHATSNEW ${DESTDIR}${PREFIX}/share/doc/java/ant
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

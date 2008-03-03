@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/10/29 12:56:30 uebayasi Exp $
+# $NetBSD: Makefile,v 1.24 2008/03/03 17:45:37 jlam Exp $
 #
 
 DISTNAME=	semantic-1.4.4
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cedet/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cedet.sourceforge.net/semantic.shtml
 COMMENT=	Lexer, parser-generator, and parser written for Emacs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKGSRC_MAKE_ENV+=	EMACS=${EMACS_FLAVOR}
 
@@ -38,14 +40,15 @@ AUXFILES+=	c.bnf make.bnf java.bnf scheme.bnf
 INSTALLATION_DIRS=	${EMACS_INFOPREFIX}
 
 do-install:
-	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/semantic
+	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/semantic
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} 	\
-			${EMACS_LISPPREFIX}/semantic
-	cd ${WRKSRC} && ${INSTALL_DATA} ${AUXFILES} ${EMACS_LISPPREFIX}/semantic
+			${DESTDIR}${EMACS_LISPPREFIX}/semantic
+	cd ${WRKSRC} && ${INSTALL_DATA} ${AUXFILES}			\
+			${DESTDIR}${EMACS_LISPPREFIX}/semantic
 	set -e;								\
 	cd ${WRKSRC}; for f in semantic.info semantic.info-[0-9]*; do	\
 		${TEST} ! -f "$$f" ||					\
-		${INSTALL_DATA} "$$f" ${EMACS_INFOPREFIX};		\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${EMACS_INFOPREFIX};	\
 	done
 
 .include "../../mk/emacs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/03/26 09:31:10 dsainty Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/03 17:45:36 jlam Exp $
 #
 
 PKGNAME=		picprg-2.3d
@@ -14,15 +14,20 @@ COMMENT=		Parallel port PIC programmer
 # The programmer makes direct I/O bus accesses via the i386 in/out
 # instructions.  The program has been patches to work on NetBSD only,
 # via the i386_set_ioperm() interface.
+#
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 
+INSTALLATION_DIRS=	bin
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/picprg ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/picprg
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/picprg
-	${INSTALL_DATA} ${WRKSRC}/README.BAJ ${PREFIX}/share/doc/picprg
+	${INSTALL_PROGRAM} ${WRKSRC}/picprg ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/picprg
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/picprg
+	${INSTALL_DATA} ${WRKSRC}/README.BAJ ${DESTDIR}${PREFIX}/share/doc/picprg
 
 .include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
