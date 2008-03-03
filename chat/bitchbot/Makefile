@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/02/22 19:26:10 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/03 02:19:51 jlam Exp $
 
 DISTNAME=	bitchbot-1.0.2
 CATEGORIES=	chat
@@ -9,6 +9,7 @@ HOMEPAGE=	http://www.r1ch.net/projects/bitchbot/
 COMMENT=	Bitchbot is a perl-based IRC bot
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 
@@ -24,11 +25,10 @@ do-build:
 		< ${WRKSRC}/bitch.pl > ${WRKSRC}/bitch;
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bitch
-
-	${INSTALL_SCRIPT} ${WRKSRC}/bitch ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/genstats.pl ${PREFIX}/bin/genstats
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/bitch
+	${INSTALL_SCRIPT} ${WRKSRC}/bitch ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/genstats.pl ${DESTDIR}${PREFIX}/bin/genstats
 	${INSTALL_DATA}	${WRKSRC}/bitch.conf.template \
-		${PREFIX}/share/examples/bitch
+		${DESTDIR}${PREFIX}/share/examples/bitch
 
 .include "../../mk/bsd.pkg.mk"

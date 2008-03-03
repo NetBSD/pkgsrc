@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/09/19 06:46:51 tron Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/03 02:19:52 jlam Exp $
 
 DISTNAME=	tkirc2.46
 PKGNAME=	tkirc2-2.46
@@ -14,6 +14,7 @@ DEPENDS+=	ircII-[0-9]*:../../chat/ircII
 DEPENDS+=	tk>=8.3.2:../../x11/tk
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/tkirc2
 NO_CONFIGURE=	yes
@@ -28,17 +29,17 @@ SUBST_SED.paths=	-e 's,wish8.3,wish,g'
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/tkirc2 ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tkirc2
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/tkirc2/scripts
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/tkirc2
-	${INSTALL_DATA} ${WRKSRC}/CHANGES ${PREFIX}/share/doc/tkirc2
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/tkirc2
+	${INSTALL_SCRIPT} ${WRKSRC}/tkirc2 ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/tkirc2
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/tkirc2/scripts
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/tkirc2
+	${INSTALL_DATA} ${WRKSRC}/CHANGES ${DESTDIR}${PREFIX}/share/doc/tkirc2
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/tkirc2
 	${INSTALL_SCRIPT} ${WRKSRC}/.tkirc2/scripts/* \
-	  ${PREFIX}/share/examples/tkirc2/scripts
+	  ${DESTDIR}${PREFIX}/share/examples/tkirc2/scripts
 	${INSTALL_DATA} ${WRKSRC}/.tkirc2/netscape.sh \
-	  ${PREFIX}/share/examples/tkirc2
+	  ${DESTDIR}${PREFIX}/share/examples/tkirc2
 	${INSTALL_DATA} ${WRKSRC}/.tkirc2/tkircrc-example \
-	   ${PREFIX}/share/examples/tkirc2
+	  ${DESTDIR}${PREFIX}/share/examples/tkirc2
 
 .include "../../mk/bsd.pkg.mk"
