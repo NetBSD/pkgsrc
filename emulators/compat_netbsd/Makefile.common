@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2008/01/15 15:43:49 jlam Exp $
+# $NetBSD: Makefile.common,v 1.10 2008/03/03 19:21:37 jlam Exp $
 #
 # Common infrastructure for NetBSD compat* packages.
 #
@@ -11,6 +11,8 @@ MASTER_SITES=		${MASTER_SITE_LOCAL:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
 
@@ -127,9 +129,10 @@ ${ELF_SYMLINKS_DATA}: plist
 .PHONY: compat-install
 do-install: compat-install
 compat-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${EMULSUBDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${EMULSUBDIR}
 	cd ${WRKSRC} && for dir in lib libexec usr; do			\
 		if ${TEST} -d "$$dir"; then				\
-			${PAX} -rw "$$dir" ${PREFIX}/${EMULSUBDIR};	\
+			${PAX} -rw "$$dir"				\
+				${DESTDIR}${PREFIX}/${EMULSUBDIR};	\
 		fi;							\
 	done
