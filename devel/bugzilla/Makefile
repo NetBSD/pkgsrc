@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/12/22 07:22:06 obache Exp $
+# $NetBSD: Makefile,v 1.28 2008/03/03 17:45:34 jlam Exp $
 #
 
 DISTNAME=	bugzilla-2.22.3
@@ -20,6 +20,8 @@ DEPENDS+=	p5-TimeDate>=1.16:../../time/p5-TimeDate
 DEPENDS+=	p5-MailTools>=1.74:../../mail/p5-MailTools
 DEPENDS+=	p5-MIME-Base64>=3.01:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-MIME-tools>=5.406:../../mail/p5-MIME-tools
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -66,48 +68,48 @@ post-extract:
 	${CP} ${FILESDIR}/localconfig ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${BZDIR}
-	${INSTALL_DATA_DIR} ${BZDIR}/Bugzilla
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/Bugzilla
 
-	${INSTALL_DATA_DIR} ${BZDIR}/js
-	${INSTALL_DATA_DIR} ${BZDIR}/template
-	${INSTALL_DATA_DIR} ${BZDIR}/skins
-	${INSTALL_DATA_DIR} ${BZDIR}/docs
-	${INSTALL_DATA_DIR} ${BZDIR}/docs/html
-	${INSTALL_DATA_DIR} ${BZDIR}/images
+	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/js
+	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/template
+	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/skins
+	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/docs
+	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/docs/html
+	${INSTALL_DATA_DIR} ${DESTDIR}${BZDIR}/images
 
-	${INSTALL_DATA} ${WRKSRC}/docs/txt/Bugzilla-Guide.txt ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/rel_notes.txt ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/QUICKSTART ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/UPGRADING ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/UPGRADING-pre-2.8 ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/txt/Bugzilla-Guide.txt ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/rel_notes.txt ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/QUICKSTART ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/UPGRADING ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/UPGRADING-pre-2.8 ${DESTDIR}${DOCDIR}
 
-	${INSTALL_SCRIPT} ${WRKSRC}/*.cgi ${BZDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/*.pl ${BZDIR}
-	${INSTALL_DATA} ${WRKSRC}/*.js ${BZDIR}
-	${INSTALL_DATA} ${WRKSRC}/robots.txt ${BZDIR}
-	${INSTALL_DATA} ${WRKSRC}/bugzilla.dtd ${BZDIR}
-	${INSTALL_DATA} ${WRKSRC}/duplicates.xul ${BZDIR}
-	${INSTALL_DATA} ${WRKSRC}/Bugzilla.pm ${BZDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/*.cgi ${DESTDIR}${BZDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/*.pl ${DESTDIR}${BZDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.js ${DESTDIR}${BZDIR}
+	${INSTALL_DATA} ${WRKSRC}/robots.txt ${DESTDIR}${BZDIR}
+	${INSTALL_DATA} ${WRKSRC}/bugzilla.dtd ${DESTDIR}${BZDIR}
+	${INSTALL_DATA} ${WRKSRC}/duplicates.xul ${DESTDIR}${BZDIR}
+	${INSTALL_DATA} ${WRKSRC}/Bugzilla.pm ${DESTDIR}${BZDIR}
 
-	${INSTALL_DATA} ${WRKSRC}/bugzilla.conf ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/localconfig ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/bugzilla.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/localconfig ${DESTDIR}${EGDIR}
 
-	${INSTALL_DATA} ${WRKSRC}/images/*.png ${BZDIR}/images
-	${INSTALL_DATA} ${WRKSRC}/js/*.js ${BZDIR}/js
-	${INSTALL_DATA} ${WRKSRC}/docs/html/*.html ${BZDIR}/docs/html
+	${INSTALL_DATA} ${WRKSRC}/images/*.png ${DESTDIR}${BZDIR}/images
+	${INSTALL_DATA} ${WRKSRC}/js/*.js ${DESTDIR}${BZDIR}/js
+	${INSTALL_DATA} ${WRKSRC}/docs/html/*.html ${DESTDIR}${BZDIR}/docs/html
 
 .for i in ${PAX_DIRS}
-	cd ${WRKSRC}/${i} && ${PAX} -rw . ${BZDIR}/${i}
-	${FIND} ${BZDIR}/${i} -type f | ${XARGS} ${CHMOD} ${SHAREMODE}
-	${FIND} ${BZDIR}/${i} -type d | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${BZDIR}/${i}
+	cd ${WRKSRC}/${i} && ${PAX} -rw . ${DESTDIR}${BZDIR}/${i}
+	${FIND} ${DESTDIR}${BZDIR}/${i} -type f | ${XARGS} ${CHMOD} ${SHAREMODE}
+	${FIND} ${DESTDIR}${BZDIR}/${i} -type d | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${BZDIR}/${i}
 .endfor
 
-	${CHMOD} ${SHAREMODE} ${BZDIR}/globals.pl
+	${CHMOD} ${SHAREMODE} ${DESTDIR}${BZDIR}/globals.pl
 
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"

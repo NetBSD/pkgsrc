@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/02/24 20:47:25 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/03 17:45:34 jlam Exp $
 #
 
 DISTNAME=	cmake-mode
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cmake.org/
 COMMENT=	Emacs mode for CMake syntax highlighting and indentation
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DIST_SUBDIR=	${PKGNAME_NOREV}
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	# none
@@ -20,7 +22,8 @@ do-build:
 	cd ${WRKSRC} && ${EMACS_BIN} -batch -f batch-byte-compile cmake-mode.el
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/cmake-mode.* ${EMACS_LISPPREFIX}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}
+	${INSTALL_DATA} ${WRKSRC}/cmake-mode.* ${DESTDIR}${EMACS_LISPPREFIX}
 
 .include "../../mk/emacs.mk"
 .include "../../mk/bsd.pkg.mk"

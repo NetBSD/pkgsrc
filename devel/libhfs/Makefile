@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2005/12/15 22:14:15 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/03 17:45:35 jlam Exp $
 #
 
 DISTNAME=	hfsutils-3.2.6
@@ -11,13 +11,13 @@ MAINTAINER=	wrstuden@NetBSD.org
 HOMEPAGE=	http://www.mars.org/home/rob/proj/hfs/
 COMMENT=	Library for accessing HFS (Apple Macintosh) volumes
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+BUILD_TARGET=	all_lib
 
 CPPFLAGS=	-I.
-
-USE_LIBTOOL=	yes
-
-BUILD_TARGET=	all_lib
 
 INSTALLATION_DIRS=	lib
 
@@ -28,15 +28,18 @@ pre-patch:
 	done
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/libhfs
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/libhfs
 	cd ${WRKSRC}/libhfs; \
-	  ${LIBTOOL} --mode=install ${INSTALL_PROGRAM} libhfs.la ${PREFIX}/lib; \
-	  ${INSTALL_DATA} apple.h data.h hfs.h libhfs.h ${PREFIX}/include/libhfs
+	  ${LIBTOOL} --mode=install ${INSTALL_PROGRAM} libhfs.la \
+		${DESTDIR}${PREFIX}/lib; \
+	  ${INSTALL_DATA} apple.h data.h hfs.h libhfs.h \
+		${DESTDIR}${PREFIX}/include/libhfs
 	cd ${WRKSRC}/librsrc; \
-	  ${LIBTOOL} --mode=install ${INSTALL_PROGRAM} librsrc.la ${PREFIX}/lib; \
-	  ${INSTALL_DATA} librsrc.h rsrc.h ${PREFIX}/include/libhfs
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/libhfs
+	  ${LIBTOOL} --mode=install ${INSTALL_PROGRAM} librsrc.la \
+		${DESTDIR}${PREFIX}/lib; \
+	  ${INSTALL_DATA} librsrc.h rsrc.h ${DESTDIR}${PREFIX}/include/libhfs
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/libhfs
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} charset.txt libhfs.txt librsrc.txt \
-	  ${PREFIX}/share/doc/libhfs
+	  ${DESTDIR}${PREFIX}/share/doc/libhfs
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/16 22:46:30 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/03 17:45:35 jlam Exp $
 #
 
 DISTNAME=	javadeps-1.1
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.vet.com.au/java/javadeps/
 COMMENT=	Automatic dependency tracking for Java
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 WRKSRC=		${WRKDIR}/JavaDeps-1.1
 USE_JAVA=	run
@@ -25,12 +27,13 @@ do-build:
 	done
 
 do-install:
-	${CP} ${WRKSRC}/jdeps ${PREFIX}/bin
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/share/jdeps
-	${CP} ${WRKSRC}/jdeps.jar ${PREFIX}/share/jdeps/jdeps.jar
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/share/doc/jdeps
-	cd ${WRKSRC}/doc && ${PAX} -rw -pe . ${PREFIX}/share/doc/jdeps
-	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/jdeps ${PREFIX}/share/doc/jdeps
+	${CP} ${WRKSRC}/jdeps ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/share/jdeps
+	${CP} ${WRKSRC}/jdeps.jar ${DESTDIR}${PREFIX}/share/jdeps/jdeps.jar
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/share/doc/jdeps
+	cd ${WRKSRC}/doc && ${PAX} -rw -pe . ${DESTDIR}${PREFIX}/share/doc/jdeps
+	${CHOWN} -R ${BINOWN}:${BINGRP} \
+		${DESTDIR}${PREFIX}/share/jdeps ${PREFIX}/share/doc/jdeps
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

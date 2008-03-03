@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/02/17 20:59:49 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/03 17:45:36 jlam Exp $
 #
 
 DISTNAME=	p4pr
@@ -12,6 +12,8 @@ COMMENT=	Perforce file annotation with change, revision, and branch
 
 DEPENDS+=	p4-[0-9]*:../../devel/p4
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# none
 NO_BUILD=	yes
@@ -24,6 +26,7 @@ post-extract:
 	${CP} ${DISTDIR}/${DISTFILES} ${WRKSRC}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${DISTFILES} ${PREFIX}/bin/${DISTNAME}
+	${INSTALL_SCRIPT} ${WRKSRC}/${DISTFILES} \
+		${DESTDIR}${PREFIX}/bin/${DISTNAME}
 
 .include "../../mk/bsd.pkg.mk"

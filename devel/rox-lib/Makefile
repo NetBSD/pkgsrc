@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/09/21 13:03:39 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/03 17:45:37 jlam Exp $
 #
 
 DISTNAME=	rox-lib-2.0.2
@@ -13,6 +13,8 @@ COMMENT=	Shared code for ROX applications
 
 DEPENDS+=	rox>=2.2.0:../../sysutils/rox
 DEPENDS+=	${PYPKGPREFIX}-expat>=0nb2:../../textproc/py-expat
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/ROX-Lib2
 DIST_SUBDIR=	rox
@@ -41,7 +43,7 @@ SUBST_FILES.lib=	Help/findrox.py
 SUBST_SED.lib=		-e 's,/usr/local/lib,${PREFIX}/share/rox,g'
 
 do-install:
-	cd ${WRKSRC} && ${PAX} -rw . ${PREFIX}/share/rox/ROX-Lib2
+	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/share/rox/ROX-Lib2
 
 .include "../../lang/python/application.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/08/22 17:28:09 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2008/03/03 17:45:36 jlam Exp $
 #
 
 DISTNAME=		pvs-${VERSION}
@@ -29,6 +29,8 @@ DEPENDS+=		tk>=8.0:../../x11/tk
 
 EMUL_PLATFORMS+=	linux-i386 solaris-sparc
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}
 VERSION=		3.2
 INFO_FILES=		# PLIST
@@ -46,10 +48,10 @@ do-build:
 	${RM} -f ${WRKSRC}/doc/release-notes/pvs-release-notes.info.orig
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pvs ${PREFIX}/bin/pvs
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/pvs
-	cd ${WRKSRC} && ${PAX} -s ,^./[.].*,, -rw . ${PREFIX}/pvs
-	${CHMOD} 755 ${PREFIX}/pvs/pvs
+	${INSTALL_SCRIPT} ${WRKSRC}/pvs ${DESTDIR}${PREFIX}/bin/pvs
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/pvs
+	cd ${WRKSRC} && ${PAX} -s ,^./[.].*,, -rw . ${DESTDIR}${PREFIX}/pvs
+	${CHMOD} 755 ${DESTDIR}${PREFIX}/pvs/pvs
 
 .include "../../mk/tex.buildlink3.mk"
 .include "../../mk/emacs.mk"

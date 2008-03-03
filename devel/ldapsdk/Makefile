@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/02/28 11:58:48 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2008/03/03 17:45:35 jlam Exp $
 
 DISTNAME=	ldapsdk_12311998
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.mozilla.org/directory/
 COMMENT=	LDAP C-SDK from the Mozilla project
 
 CONFLICTS+=	openldap-client-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/mozilla
 USE_TOOLS+=	gmake perl
@@ -35,22 +37,22 @@ do-configure:
 
 do-install:
 	cd ${WRKSRC}/dist/public/ldap \
-	&& ${INSTALL_DATA} disptmpl.h lber.h ldap.h srchpref.h ${PREFIX}/include
+	&& ${INSTALL_DATA} disptmpl.h lber.h ldap.h srchpref.h ${DESTDIR}${PREFIX}/include
 	#
 	# XXX kludge
 	#
-	${INSTALL_DATA} ${WRKSRC}/dist/${OPSYS}*/lib/libldap.a ${PREFIX}/lib/libldap.a
-	${INSTALL_DATA} ${WRKSRC}/dist/${OPSYS}*/lib/liblber.a ${PREFIX}/lib/liblber.a
-	${INSTALL_LIB} ${WRKSRC}/dist/${OPSYS}*/bin/libldap.so.1.0 ${PREFIX}/lib/libldap.so.1.0
-	${LN} -sf libldap.so.1.0 ${PREFIX}/lib/libldap.so.1
-	${LN} -sf libldap.so.1.0 ${PREFIX}/lib/libldap.so
-	${INSTALL_LIB} ${WRKSRC}/dist/${OPSYS}*/bin/liblber.so.1.0 ${PREFIX}/lib/liblber.so.1.0
-	${LN} -sf liblber.so.1.0 ${PREFIX}/lib/liblber.so.1
-	${LN} -sf liblber.so.1.0 ${PREFIX}/lib/liblber.so
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/dist/${OPSYS}*/etc/ldapfilter.conf      ${EGDIR}/ldapfilter.conf
-	${INSTALL_DATA} ${WRKSRC}/dist/${OPSYS}*/etc/ldapsearchprefs.conf ${EGDIR}/ldapsearchprefs.conf
-	${INSTALL_DATA} ${WRKSRC}/dist/${OPSYS}*/etc/ldapfriendly         ${EGDIR}/ldapfriendly
-	${INSTALL_DATA} ${WRKSRC}/dist/${OPSYS}*/etc/ldaptemplates.conf   ${EGDIR}/ldaptemplates.conf
+	${INSTALL_DATA} ${WRKSRC}/dist/${OPSYS}*/lib/libldap.a ${DESTDIR}${PREFIX}/lib/libldap.a
+	${INSTALL_DATA} ${WRKSRC}/dist/${OPSYS}*/lib/liblber.a ${DESTDIR}${PREFIX}/lib/liblber.a
+	${INSTALL_LIB} ${WRKSRC}/dist/${OPSYS}*/bin/libldap.so.1.0 ${DESTDIR}${PREFIX}/lib/libldap.so.1.0
+	${LN} -sf libldap.so.1.0 ${DESTDIR}${PREFIX}/lib/libldap.so.1
+	${LN} -sf libldap.so.1.0 ${DESTDIR}${PREFIX}/lib/libldap.so
+	${INSTALL_LIB} ${WRKSRC}/dist/${OPSYS}*/bin/liblber.so.1.0 ${DESTDIR}${PREFIX}/lib/liblber.so.1.0
+	${LN} -sf liblber.so.1.0 ${DESTDIR}${PREFIX}/lib/liblber.so.1
+	${LN} -sf liblber.so.1.0 ${DESTDIR}${PREFIX}/lib/liblber.so
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/dist/${OPSYS}*/etc/ldapfilter.conf      ${DESTDIR}${EGDIR}/ldapfilter.conf
+	${INSTALL_DATA} ${WRKSRC}/dist/${OPSYS}*/etc/ldapsearchprefs.conf ${DESTDIR}${EGDIR}/ldapsearchprefs.conf
+	${INSTALL_DATA} ${WRKSRC}/dist/${OPSYS}*/etc/ldapfriendly         ${DESTDIR}${EGDIR}/ldapfriendly
+	${INSTALL_DATA} ${WRKSRC}/dist/${OPSYS}*/etc/ldaptemplates.conf   ${DESTDIR}${EGDIR}/ldaptemplates.conf
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:29:29 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/03 17:45:37 jlam Exp $
 
 DISTNAME=		stl
 PKGNAME=		sgi-stl-3.3
@@ -9,6 +9,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.sgi.com/tech/stl/
 COMMENT=		SGI Standard Template Library
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
@@ -16,10 +18,10 @@ NO_CONFIGURE=		yes
 NO_BUILD=		yes
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/sgi-stl
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/sgi-stl
 	cd ${WRKSRC}; for file in `${GREP} "^include/sgi-stl/" ${PLIST_SRC} \
 	    | ${SED} "s,^include/sgi-stl/,,g"`; do \
-		${INSTALL_DATA} $${file} ${PREFIX}/include/sgi-stl/$${file}; \
+		${INSTALL_DATA} $${file} ${DESTDIR}${PREFIX}/include/sgi-stl/$${file}; \
 	done
 
 .include "../../mk/bsd.pkg.mk"

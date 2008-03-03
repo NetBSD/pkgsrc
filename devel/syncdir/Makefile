@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/09/28 20:52:20 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/03 17:45:37 jlam Exp $
 #
 
 DISTNAME=		syncdir-1.0
@@ -11,6 +11,7 @@ HOMEPAGE=		http://untroubled.org/syncdir/
 COMMENT=		Implementation of open, link, rename, and unlink
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 
@@ -24,6 +25,6 @@ do-build:
 
 do-install:
 	cd ${WRKSRC} && ${LIBTOOL} --mode=install ${INSTALL_LIB}	\
-		-c libsyncdir.la ${PREFIX}/lib/libsyncdir.la
+		-c libsyncdir.la ${DESTDIR}${PREFIX}/lib/libsyncdir.la
 
 .include "../../mk/bsd.pkg.mk"

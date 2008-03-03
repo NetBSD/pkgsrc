@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/02/05 23:08:49 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/03 17:45:36 jlam Exp $
 
 DISTNAME=	${PKGNAME_NOREV}-5.src.rpm
 PKGNAME=	newt-0.51.6
@@ -12,6 +12,8 @@ HOMEPAGE=	# empty
 COMMENT=	Windowing toolkit based on libslang
 
 BUILD_DEPENDS+=	rpm2pkg>=2.0:../../pkgtools/rpm2pkg
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake gzcat tar
 
@@ -28,9 +30,9 @@ do-extract:
 
 do-install:
 	cd ${WRKSRC}; \
-	 ${LIBTOOL} --mode=install ${INSTALL_PROGRAM} libnewt.la ${PREFIX}/lib;\
-	 ${INSTALL_DATA} newt.h ${PREFIX}/include; \
-	 ${LIBTOOL} --mode=install ${INSTALL} whiptail ${PREFIX}/bin
+	 ${LIBTOOL} --mode=install ${INSTALL_PROGRAM} libnewt.la ${DESTDIR}${PREFIX}/lib;\
+	 ${INSTALL_DATA} newt.h ${DESTDIR}${PREFIX}/include; \
+	 ${LIBTOOL} --mode=install ${INSTALL} whiptail ${DESTDIR}${PREFIX}/bin
 
 .include "../../devel/libslang/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"

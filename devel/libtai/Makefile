@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/03/15 05:30:45 schmonz Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/03 17:45:36 jlam Exp $
 #
 
 DISTNAME=	libtai-0.60
@@ -11,6 +11,8 @@ COMMENT=	Library for storing and manipulating dates and times
 
 DJB_RESTRICTED=	NO
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	nroff
 
 EGDIR=		share/examples/${PKGBASE}
@@ -22,22 +24,22 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/man3 ${PKGMANDIR}/cat3
 do-install:
 	cd ${WRKSRC};							\
 	for f in *.3; do						\
-		${INSTALL_MAN} $${f} ${PREFIX}/${PKGMANDIR}/man3;	\
+		${INSTALL_MAN} $${f} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3; \
 	done;								\
 	for f in *.0; do						\
-		${INSTALL_MAN} $${f} ${PREFIX}/${PKGMANDIR}/cat3;	\
+		${INSTALL_MAN} $${f} ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat3; \
 	done;								\
 	for f in easter nowutc leapsecs yearcal; do			\
-		${INSTALL_PROGRAM} $${f} ${PREFIX}/bin;			\
+		${INSTALL_PROGRAM} $${f} ${DESTDIR}${PREFIX}/bin;	\
 	done;								\
 	for f in *.h; do						\
-		${INSTALL_DATA} $${f} ${PREFIX}/include;		\
+		${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/include;	\
 	done;								\
 	for f in libtai.a; do						\
-		${INSTALL_LIB} $${f} ${PREFIX}/lib;			\
+		${INSTALL_LIB} $${f} ${DESTDIR}${PREFIX}/lib;		\
 	done;								\
 	for f in leapsecs.dat leapsecs.txt; do				\
-		${INSTALL_DATA} $${f} ${PREFIX}/${EGDIR};		\
+		${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/${EGDIR};	\
 	done;								\
 
 .include "../../mk/djbware.mk"

@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2007/03/15 07:14:27 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/03 17:45:36 jlam Exp $
 #
 
 DISTNAME=	p4-docs
 COMMENT=	Perforce SCM documentation
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../devel/p4/Makefile.common"
 
@@ -39,11 +41,12 @@ PLIST_SUBST+=	DOCDIR=${DOCDIR:Q}
 INSTALLATION_DIRS=	${DOCDIR} ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_MAN} ${DISTDIR}/${DIST_SUBDIR}/*.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${DISTDIR}/${DIST_SUBDIR}/*.1			\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 	cd ${WRKSRC};							\
 	for f in *.html *.pdf *.txt; do					\
-		${INSTALL_DATA} $${f} ${PREFIX}/${DOCDIR};		\
+		${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/${DOCDIR};	\
 	done
 
 .include "../../mk/bsd.pkg.mk"

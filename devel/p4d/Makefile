@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2007/07/04 20:54:38 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/03 17:45:36 jlam Exp $
 #
 
 DISTNAME=	p4d
 HOMEPAGE=	http://www.perforce.com/perforce/products/p4d.html
 PKGREVISION=	1
 COMMENT=	Perforce SCM server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 P4BINONLY=	# defined
 
@@ -39,6 +41,7 @@ P4JOURNAL?=	journal
 INSTALLATION_DIRS=	sbin
 
 do-install:
-	${INSTALL_PROGRAM} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME} ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${DISTDIR}/${DIST_SUBDIR}/${DISTNAME} \
+		${DESTDIR}${PREFIX}/sbin
 
 .include "../../mk/bsd.pkg.mk"
