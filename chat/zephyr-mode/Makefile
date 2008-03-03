@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/20 19:04:10 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2008/03/03 02:19:52 jlam Exp $
 #
 
 DISTNAME=	zephyr-mode-2.5.20
@@ -13,14 +13,16 @@ COMMENT=	CMU Emacs-based Zephyr client
 
 DEPENDS+=	tzc>=2.6.15:../../chat/tzc
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_BUILD=	yes
 
 .include "../../mk/emacs.mk"
 
 do-install:
-	@${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/zephyr-mode
+	@${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/zephyr-mode
 	@for f in ${WRKSRC}/elisp/*.el; do \
-		j="${INSTALL_DATA} $$f ${EMACS_LISPPREFIX}/zephyr-mode"; \
+		j="${INSTALL_DATA} $$f ${DESTDIR}${EMACS_LISPPREFIX}/zephyr-mode"; \
 		${ECHO} $$j; $$j; \
 	done
 
