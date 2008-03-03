@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/02/01 02:34:24 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/03 01:40:21 jlam Exp $
 #
 
 DISTNAME=	geda-examples-${PKGVERSION}
@@ -9,6 +9,8 @@ HOMEPAGE=	http://www.geda.seul.org/
 COMMENT=	Examples for gEDA
 
 CONFLICTS+=	gEDA<19991011
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../cad/geda/Makefile.common"
 
@@ -22,13 +24,12 @@ pre-install:
 	${RM} -f ${WRKSRC}/configure.lineno
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/geda
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/geda
 	cd ${WRKSRC} && ${TAR} cf - . | \
-		(cd ${PREFIX}/share/examples/geda && ${TAR} xvf -)
+		(${DESTDIR}cd ${PREFIX}/share/examples/geda && ${TAR} xvf -)
 	${FIND} ${PREFIX}/share/examples/geda \
 		\( -name \*Makefile\* -o -name config.log -o -name config.status \) \
 		-exec ${RM} {} \;
-	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/examples/geda
-	${CHGRP} -R ${SHAREGRP} ${PREFIX}/share/examples/geda
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/examples/geda
 
 .include "../../mk/bsd.pkg.mk"

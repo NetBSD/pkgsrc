@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/08/23 18:20:30 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/03 01:43:01 jlam Exp $
 
 DISTNAME=	lc	# overridden below
 PKGNAME=	lc-2.10
@@ -18,6 +18,8 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 LICENSE=		lc-license
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 WRKSRC=			${WRKDIR}/lc2.10
 BUILD_DIRS=		# empty
@@ -53,12 +55,11 @@ PLIST_SUBST+=		HAVE_LCSPICE=""
 INSTALLATION_DIRS=	bin share
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/lc ${PREFIX}/bin/lc
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/lcplot ${PREFIX}/bin/lcplot
-	if test -f ${WRKSRC}/bin/spice ; then ${INSTALL_PROGRAM} ${WRKSRC}/bin/spice ${PREFIX}/bin/lcspice ; fi
-	cd ${PREFIX}/share && ${TAR} -zxf ${DISTDIR}/${DIST_SUBDIR}/lc_doc.tar.gz
-	${CHMOD} -R ugo+rX ${PREFIX}/share/lc2.10
-	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/lc2.10
-	${CHGRP} -R ${SHAREGRP} ${PREFIX}/share/lc2.10
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/lc ${DESTDIR}${PREFIX}/bin/lc
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/lcplot ${DESTDIR}${PREFIX}/bin/lcplot
+	if test -f ${WRKSRC}/bin/spice ; then ${INSTALL_PROGRAM} ${WRKSRC}/bin/spice ${DESTDIR}${PREFIX}/bin/lcspice ; fi
+	cd ${DESTDIR}${PREFIX}/share && ${TAR} -zxf ${DISTDIR}/${DIST_SUBDIR}/lc_doc.tar.gz
+	${CHMOD} -R ugo+rX ${DESTDIR}${PREFIX}/share/lc2.10
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/lc2.10
 
 .include "../../mk/bsd.pkg.mk"
