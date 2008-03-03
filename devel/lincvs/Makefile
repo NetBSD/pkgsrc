@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/02/28 11:58:48 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/03 17:45:36 jlam Exp $
 
 DISTNAME=		lincvs-1.4.4-0-generic-src
 PKGNAME=		${DISTNAME:S/-0-generic-src//}
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://lincvs.org/
 COMMENT=		Nice GUI front-end to CVS (using Qt)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 
@@ -30,13 +32,13 @@ do-configure:
 	cd ${WRKSRC} && qmake -o Makefile lincvs.pro
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/lincvs.bin ${PREFIX}/bin/lincvs
-	${INSTALL_PROGRAM} ${WRKSRC}/contrib/rshwrapper/rshwrapper ${PREFIX}/libexec/rshwrapper
-	cd ${WRKSRC}/doc && ${INSTALL_DATA} FAM-HOWTO.txt FAQ.txt INFO.txt INSTALL INSTALL.html PROXY-HOWTO.txt README README.html SSH-HOWTO.txt ${PREFIX}/share/doc/lincvs/
+	${INSTALL_PROGRAM} ${WRKSRC}/lincvs.bin ${DESTDIR}${PREFIX}/bin/lincvs
+	${INSTALL_PROGRAM} ${WRKSRC}/contrib/rshwrapper/rshwrapper ${DESTDIR}${PREFIX}/libexec/rshwrapper
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} FAM-HOWTO.txt FAQ.txt INFO.txt INSTALL INSTALL.html PROXY-HOWTO.txt README README.html SSH-HOWTO.txt ${DESTDIR}${PREFIX}/share/doc/lincvs/
 .for lang in de it ru
-	cd ${WRKSRC}/doc/translations/${lang} && ${INSTALL_DATA} * ${PREFIX}/share/doc/lincvs/${lang}/
+	cd ${WRKSRC}/doc/translations/${lang} && ${INSTALL_DATA} * ${DESTDIR}${PREFIX}/share/doc/lincvs/${lang}/
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/ts/*.qm ${PREFIX}/share/lincvs/messages/
+	${INSTALL_DATA} ${WRKSRC}/ts/*.qm ${DESTDIR}${PREFIX}/share/lincvs/messages/
 
 .include "../../x11/qt3/application.mk"
 .include "../../mk/bsd.pkg.mk"

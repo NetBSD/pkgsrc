@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/05/22 22:22:02 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2008/03/03 17:45:35 jlam Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV}
@@ -15,6 +15,8 @@ COMMENT=	Java IDE
 LICENSE=	eclipse-license
 
 DEPENDS+=	apache-ant>=1.4.1:../../devel/apache-ant
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_JVMS_ACCEPTED= sun-jdk15 sun-jdk14
 
@@ -51,10 +53,11 @@ post-build:
 	${RM} -fr ${WRKDIR}/tmp
 
 do-install:
-	cd  ${PREFIX} && unzip ${WRKDIR}/result/linux-motif-x86-sdk.zip
+	cd ${DESTDIR}${PREFIX} && \
+		unzip ${WRKDIR}/result/linux-motif-x86-sdk.zip
 	${SED} -e "s,@PREFIX@,${PREFIX}," ${FILESDIR}/eclipse > 	\
-			${WRKDIR}/.eclipse
-	${INSTALL_SCRIPT} ${WRKDIR}/.eclipse ${PREFIX}/bin/eclipse
+		${WRKDIR}/.eclipse
+	${INSTALL_SCRIPT} ${WRKDIR}/.eclipse ${DESTDIR}${PREFIX}/bin/eclipse
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

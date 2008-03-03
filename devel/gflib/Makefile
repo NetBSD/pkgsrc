@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/15 21:35:06 agc Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/03 17:45:35 jlam Exp $
 #
 
 DISTNAME=	gflib
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cs.utk.edu/~plank/plank/gdlib/
 COMMENT=	Reed Solomon and Galois Field error correction library
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 MAKE_FILE=	makefile
 
 BUILD_TARGET=	w16
@@ -18,7 +20,8 @@ BUILD_TARGET=	w16
 do-install:
 	for f in gf_div gf_mult parity_test rs_decode_file		\
 			rs_encode_file xor; do				\
-		${INSTALL_PROGRAM} ${WRKSRC}/$$f ${PREFIX}/bin/$$f;	\
+		${INSTALL_PROGRAM} ${WRKSRC}/$$f			\
+			${DESTDIR}${PREFIX}/bin/$$f;			\
 	done
 
 .include "../../mk/bsd.pkg.mk"

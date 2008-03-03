@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/04/09 09:34:57 adrianp Exp $
+# $NetBSD: Makefile,v 1.31 2008/03/03 17:45:34 jlam Exp $
 #
 
 DISTNAME=	cvsgraph-1.6.1
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.akhphd.au.dk/~bertho/cvsgraph/release/
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.akhphd.au.dk/~bertho/cvsgraph/
 COMMENT=	Graphically represents CVS/RCS branches and file revisions
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		bison lex
 GNU_CONFIGURE=		YES
@@ -29,16 +31,18 @@ SUBST_MESSAGE.man=	Fixing man page paths.
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/cvsgraph ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/cvsgraph.1 ${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_MAN} ${WRKSRC}/cvsgraph.conf.5 ${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_PROGRAM} ${WRKSRC}/cvsgraph ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/cvsgraph.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_MAN} ${WRKSRC}/cvsgraph.conf.5 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${DOCDIR}
 
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/cvsgraph.conf ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/cvsgraph.conf ${DESTDIR}${EGDIR}
 
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

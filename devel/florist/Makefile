@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2006/10/04 21:35:58 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/03 17:45:35 jlam Exp $
 #
 
 DISTNAME=		florist-3.15p-src
 PKGNAME=		florist-3.15p
-PKGREVISION=	2
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		http://www.cs.fsu.edu/~baker/ftp/
 EXTRACT_SUFX=		.tgz
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		shannonjr@NetBSD.org
 HOMEPAGE=		http://www.cs.fsu.edu/~baker/florist.html
 COMMENT=		FSU implementation of POSIX.5 (Ada binding)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -38,11 +40,12 @@ pre-configure:
 	cd ${WRKSRC}; autoconf
 
 do-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/lib/florist
-	@${INSTALL_DATA} ${WRKSRC}/floristlib/*.ad[sb] \
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/florist
+	${INSTALL_DATA} ${WRKSRC}/floristlib/*.ad[sb] \
 		${WRKSRC}/floristlib/*.ali \
-		${PREFIX}/lib/florist
-	@${INSTALL_DATA} ${WRKSRC}/floristlib/libflorist.a ${PREFIX}/lib
+		${DESTDIR}${PREFIX}/lib/florist
+	${INSTALL_DATA} ${WRKSRC}/floristlib/libflorist.a \
+		${DESTDIR}${PREFIX}/lib
 
 .if !empty(USE_GCC_34:M[Yy][Ee][Ss])
 .  include "../../lang/gcc34/buildlink3.mk"
