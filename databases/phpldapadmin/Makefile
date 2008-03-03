@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/10/03 14:45:42 heinz Exp $
+# $NetBSD: Makefile,v 1.28 2008/03/03 15:21:07 jlam Exp $
 
 DISTNAME=	phpldapadmin-${VERSION}
 CATEGORIES=	databases www
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=phpldapadmin/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://phpldapadmin.sourceforge.net/
 COMMENT=	Set of PHP-scripts to administer an LDAP directory over the WWW
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/php/phpversion.mk"
@@ -32,31 +34,35 @@ do-configure:
 		${FILESDIR}/phpldapadmin.conf > ${WRKDIR}/phpldapadmin.conf
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/phpldapadmin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/phpldapadmin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/phpldapadmin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/phpldapadmin/config
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/phpldapadmin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/phpldapadmin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/phpldapadmin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/phpldapadmin/config
 
 	${INSTALL_DATA} ${WRKSRC}/config/config.php.example \
-		${PREFIX}/share/examples/phpldapadmin/config.php.example
+		${DESTDIR}${PREFIX}/share/examples/phpldapadmin/config.php.example
 	${INSTALL_DATA} ${WRKDIR}/phpldapadmin.conf \
-		${PREFIX}/share/examples/phpldapadmin/phpldapadmin.conf
+		${DESTDIR}${PREFIX}/share/examples/phpldapadmin/phpldapadmin.conf
 
 	${RM} ${WRKSRC}/.cvsignore
 	${RM} ${WRKSRC}/config/.cvsignore
 
-	${INSTALL_DATA} ${WRKSRC}/index.php ${PREFIX}/share/phpldapadmin
+	${INSTALL_DATA} ${WRKSRC}/index.php \
+		${DESTDIR}${PREFIX}/share/phpldapadmin
 
 .for i in ${PAX_DIRS}
 	cd ${WRKSRC}/${i:Q} && ${PAX} \
-		-rwppm . ${PREFIX}/share/phpldapadmin/${i:Q}
+		-rwppm . ${DESTDIR}${PREFIX}/share/phpldapadmin/${i:Q}
 .endfor
 
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/phpldapadmin
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${PREFIX}/share/doc/phpldapadmin
-	${INSTALL_DATA} ${WRKSRC}/VERSION ${PREFIX}/share/phpldapadmin
+	${INSTALL_DATA} ${WRKSRC}/INSTALL \
+		${DESTDIR}${PREFIX}/share/doc/phpldapadmin
+	${INSTALL_DATA} ${WRKSRC}/LICENSE \
+		${DESTDIR}${PREFIX}/share/doc/phpldapadmin
+	${INSTALL_DATA} ${WRKSRC}/VERSION \
+		${DESTDIR}${PREFIX}/share/phpldapadmin
 
-	${FIND} ${PREFIX}/share/phpldapadmin -type d | \
+	${FIND} ${DESTDIR}${PREFIX}/share/phpldapadmin -type d | \
 		${XARGS} ${CHMOD} ${PKGDIRMODE}
 
 .include "../../mk/bsd.pkg.mk"
