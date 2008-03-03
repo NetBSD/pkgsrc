@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/01/26 22:05:14 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/03 01:10:05 jlam Exp $
 #
 
 DISTNAME=		azara-2.7-src
@@ -11,9 +11,12 @@ MAINTAINER=		mchittur@cs.nmsu.edu
 HOMEPAGE=		http://www.bio.cam.ac.uk/azara/
 COMMENT=		Programs to process and view NMR data
 
-WRKSRC=			${WRKDIR}/azara-2.7
+PKG_DESTDIR_SUPPORT=	user-destdir
 
+WRKSRC=			${WRKDIR}/azara-2.7
 MAKE_FILE=		makefile
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 .for PROG in azara \
@@ -29,7 +32,7 @@ do-install:
 		reflate \
 		slides swap \
 		unblock viewer
-		${CP} ${WRKSRC}/bin/${PROG} ${PREFIX}/bin
+		${CP} ${WRKSRC}/bin/${PROG} ${DESTDIR}${PREFIX}/bin
 .endfor
 
 .include "../../graphics/glu/buildlink3.mk"

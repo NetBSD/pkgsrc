@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/01/19 09:16:18 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/03 00:51:44 jlam Exp $
 
 DISTNAME=		linpackc
 PKGNAME=		linpack-bench-940225
@@ -10,6 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Collection of benchmarks for floating point
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 
@@ -24,8 +25,8 @@ do-build:
 	(cd ${WRKSRC} ; ${CC} ${CFLAGS} -DROLL -DSP -o linpacks linpack.c -lm)
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/linpackd ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/linpacks ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/linpackd ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/linpacks ${DESTDIR}${PREFIX}/bin
 
 benchmark:
 	-@${WRKSRC}/linpacks | tee ${WRKSRC}/linpacks.out
