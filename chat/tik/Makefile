@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/08/26 13:58:17 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2008/03/03 02:19:52 jlam Exp $
 #
 
 DISTNAME=		tik-0.90
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=tik/}
 MAINTAINER=		grant@NetBSD.org
 HOMEPAGE=		http://tik.sourceforge.net/
 COMMENT=		Tcl/Tk AOL Instant Messenger client
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/tik
 NO_BUILD=		yes
@@ -23,9 +25,9 @@ TIKDIR=			${PREFIX}/libexec/tik
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_DATA_DIR} ${TIKDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/tik.tcl ${TIKDIR}
-	${LN} -s ${TIKDIR}/tik.tcl ${PREFIX}/bin/tik
+	${INSTALL_DATA_DIR} ${DESTDIR}${TIKDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/tik.tcl ${DESTDIR}${TIKDIR}
+	${LN} -s ${TIKDIR}/tik.tcl ${DESTDIR}${PREFIX}/bin/tik
 	${INSTALL_DATA} \
 		${WRKSRC}/balloonhelp.tcl \
 		${WRKSRC}/buddylist.tcl \
@@ -49,21 +51,21 @@ do-install:
 		${WRKSRC}/version.tcl \
 		${WRKSRC}/example.awayrc \
 		${WRKSRC}/example.pkgrc \
-		${TIKDIR}
+		${DESTDIR}${TIKDIR}
 	cd ${WRKSRC} && \
-		${PAX} -rw components ${TIKDIR} && \
-		${PAX} -rw media ${TIKDIR} && \
-		${PAX} -rw packages ${TIKDIR} && \
-		${PAX} -rw strs ${TIKDIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tik
-	cd ${WRKSRC}/doc && ${PAX} -rw . ${PREFIX}/share/doc/tik
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/tik
+		${PAX} -rw components ${DESTDIR}${TIKDIR} && \
+		${PAX} -rw media ${DESTDIR}${TIKDIR} && \
+		${PAX} -rw packages ${DESTDIR}${TIKDIR} && \
+		${PAX} -rw strs ${DESTDIR}${TIKDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/tik
+	cd ${WRKSRC}/doc && ${PAX} -rw . ${DESTDIR}${PREFIX}/share/doc/tik
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/tik
 	${INSTALL_DATA} \
 		${WRKSRC}/example.awayrc \
 		${WRKSRC}/example.pkgrc \
 		${WRKSRC}/example.tikpre \
 		${WRKSRC}/example.tikrc \
 		${WRKSRC}/example.tikstrs \
-		${PREFIX}/share/examples/tik
+		${DESTDIR}${PREFIX}/share/examples/tik
 
 .include "../../mk/bsd.pkg.mk"
