@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/03/03 05:22:19 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/03 05:33:32 jlam Exp $
 #
 
 PKGNAME=		asterisk-sounds-de-x9media-20060714
@@ -11,6 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.x9media.com/
 COMMENT=		German voice prompt files for asterisk
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		tar
 
 FETCH_BEFORE_ARGS+=	-o ${DISTNAME}${EXTRACT_SUFX}
@@ -18,8 +20,8 @@ FETCH_BEFORE_ARGS+=	-o ${DISTNAME}${EXTRACT_SUFX}
 do-build:	# EMPTY
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/libdata/asterisk/sounds
-	( cd ${WRKSRC}; tar -cf - de digits ) | ( cd ${PREFIX}/libdata/asterisk/sounds; tar -xf - )
-	( cd ${WRKSRC}/x9media; tar -cf - . ) | ( cd ${PREFIX}/libdata/asterisk/sounds/de; tar -xf - )
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/libdata/asterisk/sounds
+	( cd ${WRKSRC}; tar -cf - de digits ) | ( cd ${DESTDIR}${PREFIX}/libdata/asterisk/sounds; tar -xf - )
+	( cd ${WRKSRC}/x9media; tar -cf - . ) | ( cd ${DESTDIR}${PREFIX}/libdata/asterisk/sounds/de; tar -xf - )
 
 .include "../../mk/bsd.pkg.mk"

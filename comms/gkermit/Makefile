@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/12/12 20:42:31 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2008/03/03 05:33:32 jlam Exp $
 #
 
 DISTNAME=	gku100
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.columbia.edu/kermit/gkermit.html
 COMMENT=	Minimal implementation of the ``kermit'' protocol (GPL'd)
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 BUILD_TARGET=	posix
@@ -25,9 +26,10 @@ CFLAGS+=	-DERRNO_H
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/gkermit ${PREFIX}/bin/gkermit; \
-	${INSTALL_MAN} ${WRKSRC}/gkermit.nr ${PREFIX}/${PKGMANDIR}/man1/gkermit.1; \
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gkermit
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/gkermit
+	${INSTALL_PROGRAM} ${WRKSRC}/gkermit ${DESTDIR}${PREFIX}/bin/gkermit
+	${INSTALL_MAN} ${WRKSRC}/gkermit.nr \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/gkermit.1
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/gkermit
+	${INSTALL_DATA} ${DESTDIR}${WRKSRC}/README ${PREFIX}/share/doc/gkermit
 
 .include "../../mk/bsd.pkg.mk"

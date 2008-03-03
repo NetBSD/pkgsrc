@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/01/06 18:39:38 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2008/03/03 05:33:32 jlam Exp $
 
 DISTNAME=	estic-1.61
 PKGREVISION=	1
@@ -21,6 +21,8 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV:C/-.*//}
 
 USE_LANGUAGES=	c c++
@@ -41,13 +43,13 @@ pre-build:
 	cd ${WRKDIR}/spunk && ${BUILD_MAKE_CMD} depend lib
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xestic ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/estic.res ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/estic
-	${INSTALL_DATA} ${WRKSRC}/estic.doc ${PREFIX}/share/doc/estic
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/estic
+	${INSTALL_PROGRAM} ${WRKSRC}/xestic ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/estic.res ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/estic
+	${INSTALL_DATA} ${WRKSRC}/estic.doc ${DESTDIR}${PREFIX}/share/doc/estic
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/estic
 	cd ${WRKSRC}/samples && \
-	${INSTALL_DATA} * ${PREFIX}/share/examples/estic
+	${INSTALL_DATA} * ${DESTDIR}${PREFIX}/share/examples/estic
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
