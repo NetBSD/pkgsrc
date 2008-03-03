@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/06/04 10:41:56 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/03 17:45:34 jlam Exp $
 
 DISTNAME=	cfitsio2500
 PKGNAME=	cfitsio-2.500
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://heasarc.gsfc.nasa.gov/software/fitsio/c/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://heasarc.gsfc.nasa.gov/docs/software/fitsio/fitsio.html
 COMMENT=	FITS (flexible image transport system) file input and output
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV:C/-.*//}
 GNU_CONFIGURE=	YES
@@ -25,10 +27,10 @@ post-build:
 	${CMP} testprog.fit testprog.std
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cfitsio
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/cfitsio
 	cd ${WRKSRC}; \
-	${LIBTOOL} ${INSTALL_DATA} libcfitsio.la ${PREFIX}/lib; \
-	${INSTALL_DATA} *.h ${PREFIX}/include; \
-	${INSTALL_DATA} fitsio.doc ${PREFIX}/share/doc/cfitsio
+	${LIBTOOL} ${INSTALL_DATA} libcfitsio.la ${DESTDIR}${PREFIX}/lib; \
+	${INSTALL_DATA} *.h ${DESTDIR}${PREFIX}/include; \
+	${INSTALL_DATA} fitsio.doc ${DESTDIR}${PREFIX}/share/doc/cfitsio
 
 .include "../../mk/bsd.pkg.mk"

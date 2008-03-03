@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/02/28 11:58:48 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/03 17:45:34 jlam Exp $
 
 DISTNAME=	cvsup-static-16.1.h
 PKGNAME=	${DISTNAME:C/static/bin/}
@@ -15,6 +15,8 @@ CONFLICTS=	cvsup-[0-9]* cvsup-gui-[0-9]*
 EMUL_PLATFORMS=		netbsd-i386
 EMUL_REQD=		netbsd>=1.5
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 # XXX Remove the following line on the next update; see PR 25255 for details
 DIST_SUBDIR=		cvsup-i386-1.6
 
@@ -26,22 +28,24 @@ AUTO_MKDIRS=			yes
 
 do-install:
 	cd ${WRKSRC} && for i in cvpasswd cvsup ; do \
-		${INSTALL_PROGRAM} bin/$$i ${PREFIX}/bin; \
+		${INSTALL_PROGRAM} bin/$$i ${DESTDIR}${PREFIX}/bin; \
 	done
 	cd ${WRKSRC} && for i in cvsupd; do \
-		${INSTALL_PROGRAM} sbin/$$i ${PREFIX}/sbin; \
+		${INSTALL_PROGRAM} sbin/$$i ${DESTDIR}${PREFIX}/sbin; \
 	done
 	cd ${WRKSRC} && for i in cvpasswd.1 cvsup.1; do \
-		${INSTALL_MAN} man/man1/$$i ${PREFIX}/${PKGMANDIR}/man1; \
+		${INSTALL_MAN} man/man1/$$i \
+			${DESTDIR}${PREFIX}/${PKGMANDIR}/man1; \
 	done
 	cd ${WRKSRC} && for i in cvsupd.8; do \
-		${INSTALL_MAN} man/man8/$$i ${PREFIX}/${PKGMANDIR}/man8; \
+		${INSTALL_MAN} man/man8/$$i \
+			${DESTDIR}${PREFIX}/${PKGMANDIR}/man8; \
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cvsup
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/cvsup
 	${INSTALL_DATA} ${WRKSRC}/share/doc/cvsup/License \
-		${PREFIX}/share/doc/cvsup
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/cvsup
+		${DESTDIR}${PREFIX}/share/doc/cvsup
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/cvsup
 	${INSTALL_DATA} ${FILESDIR}/supfile* \
-		${PREFIX}/share/examples/cvsup
+		${DESTDIR}${PREFIX}/share/examples/cvsup
 
 .include "../../mk/bsd.pkg.mk"
