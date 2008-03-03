@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/04 21:29:38 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/03 20:17:11 jlam Exp $
 #
 
 DISTNAME=	bakoma-20010719
@@ -15,6 +15,9 @@ COMMENT=	BaKoMa Fonts for TeX
 LICENSE+=		no-commercial-use
 NO_SRC_ON_CDROM=	#defined
 NO_BIN_ON_CDROM=	#defined
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 BAKOMA_DIR=		${PREFIX}/share/tex-contrib/BaKoMa
 WRKSRC=			${WRKDIR}/bakoma
 
@@ -25,11 +28,11 @@ do-build:
 
 do-install:
 .for d in afm etc pfb pfm tfm ttf
-	${INSTALL_DATA_DIR} ${BAKOMA_DIR}/${d}
-	${INSTALL_DATA} ${WRKSRC}/${d}/* ${BAKOMA_DIR}/${d}
+	${INSTALL_DATA_DIR} ${DESTDIR}${BAKOMA_DIR}/${d}
+	${INSTALL_DATA} ${WRKSRC}/${d}/* ${DESTDIR}${BAKOMA_DIR}/${d}
 .endfor
 .for f in fontmap.map BaKoMa-AMS.Fonts BaKoMa-CM.Fonts README.news
-	${INSTALL_DATA} ${WRKSRC}/${f} ${BAKOMA_DIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${BAKOMA_DIR}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"
