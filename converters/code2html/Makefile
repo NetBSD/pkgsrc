@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/01/07 09:13:49 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/03 05:51:08 jlam Exp $
 #
 
 DISTNAME=	code2html-0.9.1
@@ -9,6 +9,8 @@ MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://www.palfrader.org/code2html/
 COMMENT=	Convert a program source code to syntax highlighted HTML
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_BUILD=	yes
 REPLACE_PERL=	code2html
 USE_TOOLS+=	perl:run
@@ -16,7 +18,8 @@ USE_TOOLS+=	perl:run
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/code2html ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/code2html.1 ${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_SCRIPT} ${WRKSRC}/code2html ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/code2html.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
