@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/07/29 05:18:36 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2008/03/03 01:50:27 jlam Exp $
 #
 
 DISTNAME=		eagle-lin-eng-4.14
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.cadsoft.de/
 COMMENT=		Easy to use printed circuit board editor
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=		Redistribution not permitted
 LICENSE=		fee-based-commercial-use
@@ -29,8 +31,8 @@ do-configure:
 	${SED} -e "s:@@PREFIX@@:${PREFIX}:g" <${FILESDIR}/eagle >${WRKDIR}/eagle
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/eagle
-	cd ${WRKSRC} && ${CP} -R ${WRKSRC}/* ${PREFIX}/eagle
-	${INSTALL_SCRIPT} ${WRKDIR}/eagle ${PREFIX}/bin
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/eagle
+	cd ${WRKSRC} && ${CP} -R ${WRKSRC}/* ${DESTDIR}${PREFIX}/eagle
+	${INSTALL_SCRIPT} ${WRKDIR}/eagle ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

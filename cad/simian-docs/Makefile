@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/02/22 19:01:15 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/03 01:50:27 jlam Exp $
 #
 
 DISTNAME=	simian_man_12_98
@@ -18,13 +18,16 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/simian
-	${INSTALL_DATA} ${DISTDIR}/${DISTFILES:Q} ${PREFIX}/share/doc/simian
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/simian
+	${INSTALL_DATA} ${DISTDIR}/${DISTFILES:Q} \
+		${DESTDIR}${PREFIX}/share/doc/simian
 
 .include "../../mk/bsd.pkg.mk"

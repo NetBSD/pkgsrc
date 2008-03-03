@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/02/05 23:08:24 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/03 02:19:51 jlam Exp $
 
 DISTNAME=	gaim-icb-20050918
 PKGREVISION=	2
@@ -8,6 +8,8 @@ MASTER_SITES=	http://nic.com.pl/~alek/gaim-icb/
 MAINTAINER=	nathanw@NetBSD.org
 HOMEPAGE=	http://nic.com.pl/~alek/gaim-icb/
 COMMENT=	ICB plugin for GAIM
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 
@@ -29,11 +31,11 @@ do-build:
 	cd ${WRKSRC} && ${LTLINK} ${LDFLAGS} -o libicb.la icb.lo
 
 do-install:
-	${INSTALL_LIB_DIR} ${GAIM_PLUGIN_DIR}
-	cd ${WRKSRC} && ${LTINSTALL} libicb.la ${GAIM_PLUGIN_DIR}
-	${INSTALL_DATA_DIR} ${GAIM_PIXMAPS_DIR}/status/default
+	${INSTALL_LIB_DIR} ${DESTDIR}${GAIM_PLUGIN_DIR}
+	cd ${WRKSRC} && ${LTINSTALL} libicb.la ${DESTDIR}${GAIM_PLUGIN_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${GAIM_PIXMAPS_DIR}/status/default
 	cd ${WRKSRC} && ${INSTALL_DATA} icb.png				\
-		${GAIM_PIXMAPS_DIR}/status/default
+		${DESTDIR}${GAIM_PIXMAPS_DIR}/status/default
 
 .include "../../chat/gaim/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
