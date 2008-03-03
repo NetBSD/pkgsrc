@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/01/19 09:16:19 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/03 00:51:44 jlam Exp $
 
 DISTNAME=		whetstone
 PKGNAME=		whetstone-1.2
@@ -10,6 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Benchmark for processors that gives you a MIPS rating
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 
@@ -19,7 +20,7 @@ do-build:
 	(cd ${WRKSRC} ; ${CC} ${CFLAGS} -o whetstone whetstone.c -lm)
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/whetstone ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/whetstone ${DESTDIR}${PREFIX}/bin
 
 benchmark:
 	@${WRKSRC}/whetstone 80000 | tee ${WRKSRC}/whetstone.out
