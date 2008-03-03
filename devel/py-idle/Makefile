@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/04 21:29:27 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2008/03/03 17:45:36 jlam Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-idle-0
@@ -8,6 +8,8 @@ CATEGORIES=	devel python
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.python.org/idle/
 COMMENT=	IDLE - The Integrated DeveLopment Environment for Python
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 PY_PATCHPLIST=	yes
@@ -37,14 +39,14 @@ do-build:
 	${PYTHONBIN} ${LOCALBASE}/${PYLIB}/compileall.py ${WRKSRC}/Tools/idle
 
 do-install:
-	${CP} -r ${WRKSRC}/Tools/idle ${PREFIX}/${PYSITELIB}
-	${CHMOD} +x ${PREFIX}/${PYSITELIB}/idle/idle.py
+	${CP} -r ${WRKSRC}/Tools/idle ${DESTDIR}${PREFIX}/${PYSITELIB}
+	${CHMOD} +x ${DESTDIR}${PREFIX}/${PYSITELIB}/idle/idle.py
 	${LN} -sf ${PREFIX}/${PYSITELIB}/idle/idle.py \
-		${PREFIX}/bin/idle${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/idle${PYVERSSUFFIX}
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	(cd ${PREFIX}; ${FIND} ${PYSITELIB}/idle -type f -print \
+	(cd ${DESTDIR}${PREFIX}; ${FIND} ${PYSITELIB}/idle -type f -print \
 		>>${PLIST_SRC})
-	(cd ${PREFIX}; ${FIND} -d ${PYSITELIB}/idle -type d -print | \
+	(cd ${DESTDIR}${PREFIX}; ${FIND} -d ${PYSITELIB}/idle -type d -print | \
 		${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 
 .else # py23 and up
@@ -56,7 +58,7 @@ INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/Tools/scripts/idle \
-		${PREFIX}/bin/idle${PYVERSSUFFIX}
+		${DESTDIR}${PREFIX}/bin/idle${PYVERSSUFFIX}
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
 
 .endif # py23 and up

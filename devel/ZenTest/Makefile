@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/02/26 08:00:39 seb Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/03 17:45:33 jlam Exp $
 
 DISTNAME=	ZenTest-3.9.1
 CATEGORIES=	devel ruby
@@ -10,6 +10,8 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://zentest.rubyforge.org/
 COMMENT=	Testing utilities for Ruby
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
 
@@ -20,14 +22,16 @@ INSTALLATION_DIRS=	bin
 .include "../../lang/ruby/modules.mk"
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/* ${PREFIX}/bin
-	cd ${WRKSRC}/lib && pax -rwppm . ${RUBY_SITELIBDIR}
-	chmod ${SHAREMODE} ${RUBY_SITELIBDIR}/autotest.rb
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/${PKGBASE}
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/* ${DESTDIR}${PREFIX}/bin
+	${INSTALL_LIB_DIR} ${DESTDIR}${RUBY_SITELIBDIR}
+	cd ${WRKSRC}/lib && pax -rwppm . ${DESTDIR}${RUBY_SITELIBDIR}
+	chmod ${SHAREMODE} ${DESTDIR}${RUBY_SITELIBDIR}/autotest.rb
+	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_DOCDIR}/${PKGBASE}
 .for f in articles README.txt
-	cd ${WRKSRC} && pax -rwppm ${f} ${RUBY_DOCDIR}/${PKGBASE}
+	cd ${WRKSRC} && pax -rwppm ${f} ${DESTDIR}${RUBY_DOCDIR}/${PKGBASE}
 .endfor
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/example* ${RUBY_EXAMPLESDIR}/${PKGBASE}
+	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_EXAMPLESDIR}/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/example* \
+		${DESTDIR}${RUBY_EXAMPLESDIR}/${PKGBASE}
 
 .include "../../mk/bsd.pkg.mk"

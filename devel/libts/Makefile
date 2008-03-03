@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/12/15 14:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/03 17:45:36 jlam Exp $
 #
 
 DISTNAME=		TS-1.08
@@ -10,6 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Library of simple token-scanning routines
 
+PKG_DESTDIR_SUPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}/tokenscan
 INSTALLATION_DIRS=	include lib
 USE_TOOLS+=		nroff
@@ -20,10 +22,10 @@ post-patch:
 		-e "s|/usr/local|${PREFIX}|"
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/libtokenscan.a ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/tokenscan.h ${PREFIX}/include
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/libts
+	${INSTALL_DATA} ${WRKSRC}/libtokenscan.a ${DESTDIR}${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/tokenscan.h ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/libts
 	${NROFF} -ms ${WRKSRC}/tokenscan.ms \
-		>${PREFIX}/share/doc/libts/tokenscan.txt
+		>${DESTDIR}${PREFIX}/share/doc/libts/tokenscan.txt
 
 .include "../../mk/bsd.pkg.mk"
