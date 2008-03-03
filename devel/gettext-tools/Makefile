@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/12/21 20:35:31 jnemeth Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/03 18:02:22 drochner Exp $
 
 DISTNAME=	gettext-0.14.6
 PKGNAME=	gettext-tools-0.14.6
@@ -19,6 +19,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-included-gettext
+CONFIGURE_ARGS+=	--disable-csharp
 CONFIGURE_ENV+=		GCJ= ac_cv_prog_GCJ= ac_cv_prog_JAR=
 CONFIGURE_ENV+=		HAVE_GCJ_IN_PATH=
 CONFIGURE_ENV+=		HAVE_JAVAC_IN_PATH=
