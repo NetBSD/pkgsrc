@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2007/11/27 15:20:47 tron Exp $
+# $NetBSD: Makefile,v 1.64 2008/03/03 15:21:07 jlam Exp $
 
 DISTNAME=	phpMyAdmin-${DIST_VERSION}-all-languages
 PKGNAME=	phpmyadmin-${DIST_VERSION:S/-//}
@@ -13,6 +13,8 @@ COMMENT=	Set of PHP-scripts to adminstrate MySQL over the WWW
 
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=4.3.3:../../misc/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql{,i}>=4.3.3:../../databases/php-mysql
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 FILES_SUBST+=	CONF_INC_PHP=${CONF_INC_PHP:Q} PMCONFFILE=${PMCONFFILE:Q}
 PLIST_SUBST+=	DIST_VERSION=${DIST_VERSION:Q}
@@ -59,22 +61,22 @@ do-configure:
 
 do-install:
 	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/phpmyadmin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/phpmyadmin
-	${INSTALL_DATA_DIR} ${PMDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/phpmyadmin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/phpmyadmin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PMDIR}
 	for dir in ${INSTALL_DIRS}; do \
-		${INSTALL_DATA_DIR} ${PMDIR}/$$dir; \
+		${INSTALL_DATA_DIR} ${DESTDIR}${PMDIR}/$$dir; \
 	done
-	${INSTALL_DATA_DIR} ${PMDIR}/scripts
+	${INSTALL_DATA_DIR} ${DESTDIR}${PMDIR}/scripts
 
-	${INSTALL_DATA} ${WRKSRC}/*.php ${PMDIR}
-	${INSTALL_DATA} ${WRKSRC}/*.css ${PMDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.php ${DESTDIR}${PMDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.css ${DESTDIR}${PMDIR}
 	${MV} ${PREFIX}/share/phpmyadmin/config.sample.inc.php \
-	  ${EXDIR}/config.inc.php
+	  ${DESTDIR}${EXDIR}/config.inc.php
 
-	${INSTALL_DATA} ${WRKSRC}/Documentation.html ${PMDIR}
-	${INSTALL_DATA} ${WRKSRC}/translators.html ${PMDIR}
-	${INSTALL_DATA}	${WRKSRC}/ChangeLog ${PMDIR}
+	${INSTALL_DATA} ${WRKSRC}/Documentation.html ${DESTDIR}${PMDIR}
+	${INSTALL_DATA} ${WRKSRC}/translators.html ${DESTDIR}${PMDIR}
+	${INSTALL_DATA}	${WRKSRC}/ChangeLog ${DESTDIR}${PMDIR}
 
 	for dir in ${INSTALL_DIRS}; do					\
 		for file in ${WRKSRC}/$$dir/*; do			\
@@ -84,21 +86,22 @@ do-install:
 			*)						\
 				if [ -f "$$file" ]; then		\
 					${INSTALL_DATA} "$$file"	\
-					  ${PMDIR}/$$dir;		\
+					  ${DESTDIR}${PMDIR}/$$dir;	\
 				fi					\
 				;;					\
 			esac;						\
 		done							\
 	done
 
-	${INSTALL_DATA} ${WRKSRC}/scripts/*.sql ${PMDIR}/scripts
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/convertcfg.pl ${PMDIR}/scripts
+	${INSTALL_DATA} ${WRKSRC}/scripts/*.sql ${DESTDIR}${PMDIR}/scripts
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/convertcfg.pl \
+	  ${DESTDIR}${PMDIR}/scripts
 
 	cd ${WRKSRC} && \
-	${INSTALL_DATA} ${DOC_FILES} ${PREFIX}/share/doc/phpmyadmin
-	${INSTALL_DATA} ${WRKDIR}/phpmyadmin.conf ${EXDIR}/apache.conf
+	${INSTALL_DATA} ${DOC_FILES} ${DESTDIR}${PREFIX}/share/doc/phpmyadmin
+	${INSTALL_DATA} ${WRKDIR}/phpmyadmin.conf ${DESTDIR}${EXDIR}/apache.conf
 
-	${RM} -f ${PREFIX}/share/phpmyadmin/libraries/footer.inc.php.orig
+	${RM} -f ${DESTDIR}${PREFIX}/share/phpmyadmin/libraries/footer.inc.php.orig
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"

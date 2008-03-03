@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/02/28 11:58:48 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/03 15:21:07 jlam Exp $
 #
 
 DISTNAME=	lsqlite_src
@@ -12,21 +12,25 @@ MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://lua-users.org/wiki/LuaSqlite
 COMMENT=	SQLite binding for LUA
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 
 CFLAGS+=	-fPIC
 LIBS+=		-llua -lsqlite
 
-AUTO_MKDIRS=			yes
+AUTO_MKDIRS=	yes
 
 do-build:
 	cd ${WRKSRC}; ${CC} -shared ${CFLAGS} ${LDFLAGS} lsqlite.c	\
 		-o libluasqlite.so ${LIBS}
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/libluasqlite.so ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/readme.txt ${PREFIX}/share/doc/lua-sqlite
-	${INSTALL_DATA} ${WRKSRC}/test.lua ${PREFIX}/share/examples/lua-sqlite
+	${INSTALL_DATA} ${WRKSRC}/libluasqlite.so ${DESTDIR}${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/readme.txt \
+		${DESTDIR}${PREFIX}/share/doc/lua-sqlite
+	${INSTALL_DATA} ${WRKSRC}/test.lua \
+		${DESTDIR}${PREFIX}/share/examples/lua-sqlite
 
 .include "../../databases/sqlite/buildlink3.mk"
 .include "../../lang/lua/buildlink3.mk"

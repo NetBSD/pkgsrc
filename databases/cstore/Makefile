@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/02/28 11:58:47 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/03 15:21:07 jlam Exp $
 
 DISTNAME=	cstore0.2
 PKGNAME=	cstore-0.2
@@ -11,6 +11,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} data4.tar.gz D6.data.ros.gz
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	http://db.lcs.mit.edu/projects/cstore/
 COMMENT=	Read-optimised column store relational DBMS
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake perl
 USE_LANGUAGES+=	c c++
@@ -62,11 +64,12 @@ do-build:
 	cd ${WRKSRC}/src &&  ./cstoreqptest 0 createData.cnf global.cnf
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/cstoreqptest ${PREFIX}/bin/cstoreqp
-	${INSTALL_DATA_DIR} ${PREFIX}/cstore/data
-	cd ${WRKSRC}/data && pax -rwpe . ${PREFIX}/cstore/data
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cstore
-	cd ${WRKSRC}/doc && pax -rwpe . ${PREFIX}/share/doc/cstore
+	${INSTALL_PROGRAM} ${WRKSRC}/src/cstoreqptest \
+		${DESTDIR}${PREFIX}/bin/cstoreqp
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/cstore/data
+	cd ${WRKSRC}/data && pax -rwpe . ${DESTDIR}${PREFIX}/cstore/data
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/cstore
+	cd ${WRKSRC}/doc && pax -rwpe . ${DESTDIR}${PREFIX}/share/doc/cstore
 
 .include "../../archivers/lzo/buildlink3.mk"
 .include "../../databases/db4/buildlink3.mk"
