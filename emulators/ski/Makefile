@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.8 2007/07/29 05:18:37 jlam Exp $
+#	$NetBSD: Makefile,v 1.9 2008/03/03 19:21:38 jlam Exp $
 
 DISTNAME=		ski-0.9.81-l6-i686
 PKGNAME=		ski-0.9.81.6
@@ -18,6 +18,8 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	x11
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}
 INTERACTIVE_STAGE=	fetch
 BUILD_DIRS=		# none
@@ -34,10 +36,10 @@ FETCH_MESSAGE=								\
 	"    ${DOWNLOAD}"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/nue/usr/bin/*ski* ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKDIR}/nue/usr/bin/*ski* ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKDIR}/nue/usr/man/man1/*ski*.1		\
-		${PREFIX}/${PKGMANDIR}/man1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA} ${WRKDIR}/nue/usr/X11R6/lib/X11/app-defaults/XSki \
-		${PREFIX}/lib/X11/app-defaults/XSki
+		${DESTDIR}${PREFIX}/lib/X11/app-defaults/XSki
 
 .include "../../mk/bsd.pkg.mk"
