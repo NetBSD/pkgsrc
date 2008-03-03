@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7093 2008/03/03 22:54:51 wiz Exp $
+$NetBSD: TODO,v 1.7094 2008/03/03 23:22:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -413,14 +413,12 @@ Suggested package updates
 	o ap-layout-3.4
 	o ap-mp3-0.40
 	o ap-python-3.3.1
-	o ap-ssl-2.8.30
 	o ap-xslt-1.3.8
 	o ap2-auth-ldap-3.11
 	o ap2-chroot-0.5
 	o ap2-python-3.3.1
 	o ap2-suphp-0.6.2
 	o ap2-transform-0.6.0
-	o apache-1.3.41
 	o apache-ant15-1.7.0
 	o apache-tomcat-5.5.25
 	o apache-tomcat55-6.0.14
@@ -625,13 +623,11 @@ Suggested package updates
 	o fvwm2-themes-0.7.0
 	o gap-4r4p9
 	o gated-3.6
-	o gauche-0.8.13
 	o gcalctool-5.21.91
 	o gcc-4.2.2
 	o gcc-ssp-3.4.4
 	o gcin-1.3.7.1
 	o gcombust-0.1.55
-	o gcompris-8.4.4
 	o gconf-editor-2.18.2
 	o gcpio-2.7
 	o gdal-lib-1.4.4
@@ -653,7 +649,6 @@ Suggested package updates
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
-	o glabels-2.2.2
 	o glchess-1.0.5
 	o glib2-2.14.6
 	o global-5.6
@@ -669,7 +664,6 @@ Suggested package updates
 	o gnome-doc-utils-0.12.1
 	o gnome-mag-0.15.0
 	o gnome-pilot-2.0.16
-	o gnome-speech-0.4.18
 	o gnome-spell-1.0.8
 	o gnomeicu-0.99.14
 	o gnu-crypto-2.1.0
@@ -703,13 +697,6 @@ Suggested package updates
 	o gsl-1.10
 	o gsm-1.0.12
 	o gss-0.0.22
-	o gst-plugins0.10-bad-0.10.6
-	o gst-plugins0.10-good-0.10.7
-	o gst-plugins0.10-mad-0.10.7
-	o gst-plugins0.10-musepack-0.10.6
-	o gst-plugins0.10-oss-0.10.7
-	o gst-plugins0.10-sid-0.10.7
-	o gst-plugins0.10-ugly-0.10.7
 	o gtar-1.19
 	o gtar-base-1.19
 	o gthumb-2.10.8
@@ -724,7 +711,6 @@ Suggested package updates
 	o gtodo-applet-0.16.2
 	o gtranscript-0.2.0
 	o guile-gtk-2.0
-	o gwenview-1.4.2
 	o gworkspace-0.8.6
 	o gzrecover-0.5
 	o hackbot-2.21
@@ -812,7 +798,6 @@ Suggested package updates
 	o lftp-3.6.3
 	o libFoundation-1.1.3
 	o libIDL-0.8.10
-	o libarchive-2.4.8
 	o libast-0.7
 	o libbonobo-2.20.4
 	o libcares-1.5.1
@@ -841,7 +826,6 @@ Suggested package updates
 	o libgnomeprint-2.18.4
 	o libgnomeuimm-2.20.2
 	o libhydrogen-0.9.2
-	o libidn-1.5
 	o liblive-2007.02.20
 	o libltdl-2.2
 	o liblzo-2.02
@@ -849,7 +833,6 @@ Suggested package updates
 	o libmusicbrainz-3.0.1
 	o libnasl-2.3.1
 	o libnids-1.21
-	o liboil-0.3.13
 	o libole2-2.2.8
 	o libopensync-0.35
 	o libpreludedb-0.9.14
@@ -971,7 +954,6 @@ Suggested package updates
 	o oo2c-2.1.7
 	o openafs-1.5.33
 	o openh323-1.19.1
-	o openldap-2.4.8
 	o openmortal-0.7.1
 	o openmotif-2.3
 	o oregano-0.60.0
@@ -1024,7 +1006,6 @@ Suggested package updates
 	o p5-Locale-Codes-2.07
 	o p5-Locale-Maketext-Fuzzy-0.10
 	o p5-Locale-Maketext-Lexicon-0.66
-	o p5-Log-Dispatch-2.21
 	o p5-MARC-1.38
 	o p5-Math-Random-0.69
 	o p5-Net-Amazon-S3-0.38
@@ -1092,7 +1073,6 @@ Suggested package updates
 	o pear-Numbers_Words-0.15.0
 	o pear-SOAP-0.10.1
 	o perl5-5.10.0
-	o pen-0.17.1
 	o pfqueue-0.5.6
 	o pfstat-1.8
 	o pgadmin3-1.6.0
@@ -1118,7 +1098,6 @@ Suggested package updates
 	o plptools-0.13 [pkg/30244]
 	o plptools-0.20
 	o pmccabe-2.3.1
-	o png-1.2.25
 	o pngcheck-2.3.0
 	o po4a-0.29
 	o poedit-1.3.9
@@ -1290,7 +1269,6 @@ Suggested package updates
 	o ssh-askpass-1.2.4.1
 	o statist-1.3.0
 	o stella-2.4.2
-	o stellarium-0.9.1
 	o stlport-4.6.2
 	o stratagus-2.2.2
 	o stunnel-4.21
@@ -1342,7 +1320,6 @@ Suggested package updates
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
 	o ttf2pk-1.5.20050518
-	o turba-2.1.7
 	o tuxpaint-0.9.18
 	o twelf-1.5r1
 	o twolame-0.3.12
@@ -1411,7 +1388,6 @@ Suggested package updates
 	o xerces-j-2.9.0
 	o xeukleides-1.0.1
 	o xf86-video-ati-6.8.0
-	o xf86-video-intel-2.2.1
 	o xf86-video-nv-2.1.7
 	o xfstt-1.7
 	o xhippo-3.5
