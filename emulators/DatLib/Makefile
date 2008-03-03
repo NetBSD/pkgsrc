@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/07/30 18:55:23 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2008/03/03 19:21:37 jlam Exp $
 #
 
 DISTNAME=		datlib221
@@ -11,6 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.logiqx.com/Tools/DatLib/DatLib.php
 COMMENT=		Data file library for some emulation tools
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}
 MAKE_FILE=		makefile
@@ -21,17 +23,17 @@ MAKE_ENV+=		RANLIB=${RANLIB:Q}
 INSTALLATION_DIRS=	lib
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/DatLib
-	${INSTALL_DATA_DIR} ${PREFIX}/include/DatLib/hash
-	${INSTALL_DATA_DIR} ${PREFIX}/include/DatLib/mame
-	${INSTALL_DATA_DIR} ${PREFIX}/include/DatLib/misc
-	${INSTALL_DATA} ${WRKSRC}/src/*.h ${PREFIX}/include/DatLib
-	${INSTALL_DATA} ${WRKSRC}/src/hash/*.h ${PREFIX}/include/DatLib/hash
-	${INSTALL_DATA} ${WRKSRC}/src/mame/*.h ${PREFIX}/include/DatLib/mame
-	${INSTALL_DATA} ${WRKSRC}/src/misc/*.h ${PREFIX}/include/DatLib/misc
-	${INSTALL_LIB} ${WRKSRC}/obj/libdatlib.a ${PREFIX}/lib/libdatlib.a
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/DatLib
-	${INSTALL_DATA} ${WRKSRC}/*.txt ${PREFIX}/share/doc/DatLib
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/DatLib
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/DatLib/hash
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/DatLib/mame
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/DatLib/misc
+	${INSTALL_DATA} ${WRKSRC}/src/*.h ${DESTDIR}${PREFIX}/include/DatLib
+	${INSTALL_DATA} ${WRKSRC}/src/hash/*.h ${DESTDIR}${PREFIX}/include/DatLib/hash
+	${INSTALL_DATA} ${WRKSRC}/src/mame/*.h ${DESTDIR}${PREFIX}/include/DatLib/mame
+	${INSTALL_DATA} ${WRKSRC}/src/misc/*.h ${DESTDIR}${PREFIX}/include/DatLib/misc
+	${INSTALL_LIB} ${WRKSRC}/obj/libdatlib.a ${DESTDIR}${PREFIX}/lib/libdatlib.a
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/DatLib
+	${INSTALL_DATA} ${WRKSRC}/*.txt ${DESTDIR}${PREFIX}/share/doc/DatLib
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

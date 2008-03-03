@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/06/16 06:57:51 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/03 19:21:38 jlam Exp $
 #
 
 DISTNAME=		uips
@@ -11,6 +11,8 @@ MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.neillcorlett.com/uips/
 COMMENT=		IPS patcher with v2 support
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DIST_SUBDIR=		${PKGNAME_NOREV}
 
 WRKSRC=			${WRKDIR}
@@ -22,8 +24,8 @@ do-extract:
 	${CP} ${FILESDIR}/Makefile ${WRKSRC}/
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/uips ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/uips
-	${INSTALL_DATA} ${WRKSRC}/uips.txt ${PREFIX}/share/doc/uips
+	${INSTALL_PROGRAM} ${WRKSRC}/uips ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/uips
+	${INSTALL_DATA} ${WRKSRC}/uips.txt ${DESTDIR}${PREFIX}/share/doc/uips
 
 .include "../../mk/bsd.pkg.mk"
