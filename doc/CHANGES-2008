@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.416 2008/03/03 16:50:09 tron Exp $
+$NetBSD: CHANGES-2008,v 1.417 2008/03/03 17:56:11 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -753,3 +753,18 @@ Changes to the packages collection and infrastructure in 2008:
 	Update security/prelude-manager to 0.9.11 [shannonjr 2008-03-03]
 	Updated www/bozohttpd to 20080303 [jlam 2008-03-03]
 	Updated databases/phpmyadmin to 2.11.5 [tron 2008-03-03]
+	Updated graphics/kphotoalbum to 3.1.0 [drochner 2008-03-03]
+	Updated graphics/gwenview to 1.4.2 [drochner 2008-03-03]
+	Updated games/gcompris to 8.4.4 [drochner 2008-03-03]
+	Updated editors/notecase to 1.8.1 [drochner 2008-03-03]
+	Updated audio/gnome-speech to 0.4.18 [drochner 2008-03-03]
+	Updated audio/espeak to 1.31 [drochner 2008-03-03]
+	Updated math/gnumeric-current to 1.8.1 [drochner 2008-03-03]
+	Updated graphics/png to 1.2.25 [drochner 2008-03-03]
+	Updated multimedia/py-gstreamer0.10 to 0.10.10 [drochner 2008-03-03]
+	Updated multimedia/gst-plugins0.10-ugly to 0.10.7 [drochner 2008-03-03]
+	Updated multimedia/gst-plugins0.10-bad to 0.10.6 [drochner 2008-03-03]
+	Updated multimedia/gst-plugins0.10-good to 0.10.7 [drochner 2008-03-03]
+	Updated devel/liboil to 0.3.13 [drochner 2008-03-03]
+	Updated print/glabels to 2.2.2 [drochner 2008-03-03]
+	Updated misc/stellarium to 0.9.1 [drochner 2008-03-03]
