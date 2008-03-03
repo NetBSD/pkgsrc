@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/07/29 05:19:24 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2008/03/03 19:21:38 jlam Exp $
 
 DISTNAME=	VMware-2.0.4-1142
 PKGNAME=	vmware-2.0.4
@@ -24,6 +24,8 @@ LICENSE=	vmware-license
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	vmware
 
+PKG_DESTDIR_SUPPORT=	destdir
+
 WRKSRC=			${WRKDIR}/vmware-distrib
 
 # We could install it into /etc/vmware, but that would mean we install
@@ -43,32 +45,32 @@ do-install: do-install-dirs do-install-binaries do-install-docs \
 		do-install-share
 
 do-install-dirs:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vmware
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/vmware
 	for dirs in configurator doc floppies help smb xkeymap; do \
-		${INSTALL_DATA_DIR} ${PREFIX}/share/vmware/$$dirs; \
+		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/vmware/$$dirs; \
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vmware/smb/codepages
-	${INSTALL_DATA_DIR} ${VMWARE_CFG_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/vmware/smb/codepages
+	${INSTALL_DATA_DIR} ${DESTDIR}${VMWARE_CFG_DIR}
 
 do-install-binaries:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/* ${PREFIX}/bin
-	${CHMOD} u+s ${PREFIX}/bin/vmware
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/* ${DESTDIR}${PREFIX}/bin
+	${CHMOD} u+s ${DESTDIR}${PREFIX}/bin/vmware
 
 do-install-docs:
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/vmware/doc
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${DESTDIR}${PREFIX}/share/vmware/doc
 
 do-install-share:
-	${INSTALL_DATA} ${WRKSRC}/lib/help/* ${PREFIX}/share/vmware/help
-	${INSTALL_DATA} ${WRKSRC}/lib/xkeymap/* ${PREFIX}/share/vmware/xkeymap
-	${INSTALL_DATA} ${WRKSRC}/lib/floppies/* ${PREFIX}/share/vmware/floppies
-	${INSTALL_DATA} ${WRKSRC}/lib/smb/codepages/* ${PREFIX}/share/vmware/smb/codepages
-	${INSTALL_DATA} ${WRKSRC}/lib/configurator/* ${PREFIX}/share/vmware/configurator
-	${INSTALL_DATA} ${WRKSRC}/lib/config ${PREFIX}/share/vmware
-	${INSTALL_DATA} ${WRKSRC}/lib/floppy.nvr ${PREFIX}/share/vmware
-	${INSTALL_MAN} ${WRKDIR}/vmware.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/lib/help/* ${DESTDIR}${PREFIX}/share/vmware/help
+	${INSTALL_DATA} ${WRKSRC}/lib/xkeymap/* ${DESTDIR}${PREFIX}/share/vmware/xkeymap
+	${INSTALL_DATA} ${WRKSRC}/lib/floppies/* ${DESTDIR}${PREFIX}/share/vmware/floppies
+	${INSTALL_DATA} ${WRKSRC}/lib/smb/codepages/* ${DESTDIR}${PREFIX}/share/vmware/smb/codepages
+	${INSTALL_DATA} ${WRKSRC}/lib/configurator/* ${DESTDIR}${PREFIX}/share/vmware/configurator
+	${INSTALL_DATA} ${WRKSRC}/lib/config ${DESTDIR}${PREFIX}/share/vmware
+	${INSTALL_DATA} ${WRKSRC}/lib/floppy.nvr ${DESTDIR}${PREFIX}/share/vmware
+	${INSTALL_MAN} ${WRKDIR}/vmware.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 post-install:
-	@${RM} -f ${VMWARE_CFG_DIR}/config
+	@${RM} -f ${DESTDIR}${VMWARE_CFG_DIR}/config
 	@(								\
 	${ECHO} "vmware.fullpath = \"${PREFIX}/bin/vmware\"";		\
 	${ECHO} "wizard.fullpath = \"${PREFIX}/bin/vmware-wizard\"";	\
@@ -78,6 +80,6 @@ post-install:
 	${ECHO} "libdir = \"${PREFIX}/share/vmware\"";			\
 	${ECHO} "vmnet1.HostOnlyAddress = \"172.16.212.1\"";		\
 	${ECHO} "vmnet1.HostOnlyNetMask = \"255.255.255.0\"";		\
-	) > ${VMWARE_CFG_DIR}/config
+	) > ${DESTDIR}${VMWARE_CFG_DIR}/config
 
 .include "../../mk/bsd.pkg.mk"
