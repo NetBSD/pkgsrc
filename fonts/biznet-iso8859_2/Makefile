@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/03/04 11:29:58 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/03 20:17:11 jlam Exp $
 #
 
 DISTNAME=	ISO8859-2-pcf
@@ -10,6 +10,8 @@ MASTER_SITES=	http://ultra.cto.us.edu.pl/pub/Unix/Fonts/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://web.archive.org/web/20041204153923/http://www.biz.net.pl/english/x-fonts/index.html
 COMMENT=	Full set of ISO 8859-2 fonts for X Window System
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	YES
 NO_CONFIGURE=	YES
@@ -23,12 +25,12 @@ FONTS_DIRS.x11=	${FONTDIR}/75dpi ${FONTDIR}/100dpi ${FONTDIR}/misc
 
 do-install:
 	@for d in 75dpi 100dpi misc; do \
-		${INSTALL_DATA_DIR} ${FONTDIR}/$${d}; \
+		${INSTALL_DATA_DIR} ${DESTDIR}${FONTDIR}/$${d}; \
 		cd ${WRKDIR}/$${d}; \
-		${INSTALL_DATA} fonts.alias ${FONTDIR}/$${d}/; \
+		${INSTALL_DATA} fonts.alias ${DESTDIR}${FONTDIR}/$${d}/; \
 		for f in *.pcf; do \
 			${ECHO} "Compressing $${f}"; \
-			${GZIP_CMD} -c $${f} > ${FONTDIR}/$${d}/$${f}.gz; \
+			${GZIP_CMD} -c $${f} > ${DESTDIR}${FONTDIR}/$${d}/$${f}.gz; \
 		done; \
 	done
 

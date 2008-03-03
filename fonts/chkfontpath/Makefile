@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/01/07 09:13:54 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/03 20:17:11 jlam Exp $
 #
 
 DISTNAME=	chkfontpath-1.9.7
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Command line tool to manage X server's font path
 
 BUILD_DEPENDS+=	rpm2cpio>=1.1:../../converters/rpm2cpio
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_ENV+=	VERSION=${PKGVERSION:Q}
 USE_TOOLS+=	gmake gtar
@@ -25,8 +27,8 @@ do-extract:
 		${GTAR} zxf ${DISTNAME}.tar.gz
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/chkfontpath ${PREFIX}/bin
-		${INSTALL_MAN} ${WRKSRC}/man/en/chkfontpath.8 ${PREFIX}/${PKGMANDIR}/man8
+		${INSTALL_PROGRAM} ${WRKSRC}/chkfontpath ${DESTDIR}${PREFIX}/bin
+		${INSTALL_MAN} ${WRKSRC}/man/en/chkfontpath.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../devel/popt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

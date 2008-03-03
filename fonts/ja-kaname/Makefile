@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:09:09 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/03 20:17:12 jlam Exp $
 
 DISTNAME=		kaname_k12_bdf
 PKGNAME=		ja-kaname-0.0.0.20030112
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_LOCAL} # original site was closed.
 
 MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
 COMMENT=		12x12 dots X11 bitmap font for JIS X 0208
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 USE_X11BASE=		YES
@@ -27,10 +29,10 @@ do-build:
 	done
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}; \
-	${INSTALL_DATA} ${WRKSRC}/readme.kaname_bdf ${DOCDIR}; \
-	${INSTALL_DATA} ${WRKSRC}/doc.orig/* ${DOCDIR}; \
-	${INSTALL_DATA_DIR} ${FONTDIR}; \
-	${INSTALL_DATA} ${WRKSRC}/*.pcf.gz ${FONTDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/readme.kaname_bdf ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc.orig/* ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${FONTDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.pcf.gz ${DESTDIR}${FONTDIR}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/22 19:26:29 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2008/03/03 20:17:11 jlam Exp $
 #
 
 DISTNAME=	artwiz-aleczapka-1.3
@@ -12,6 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.vastwaters.com/
 COMMENT=	Set of free fonts for X11 desktops
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/artwiz-aleczapka
 USE_X11BASE=	yes
 
@@ -22,6 +24,8 @@ FONTS_DIRS.x11=	${PREFIX}/lib/X11/fonts/artwiz
 REQD_DIRS=	${PREFIX}/lib/X11/fonts/artwiz
 
 do-install:
-	for i in ${WRKSRC}/*.pcf; do ${INSTALL_DATA} $$i ${FONTS_DIRS.x11}; done
+	for i in ${WRKSRC}/*.pcf; do \
+		${INSTALL_DATA} $$i ${DESTDIR}${FONTS_DIRS.x11}; \
+	done
 
 .include "../../mk/bsd.pkg.mk"

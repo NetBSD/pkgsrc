@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/02/05 23:09:10 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2008/03/03 20:17:12 jlam Exp $
 
 DISTNAME=	kochi-substitute-${KOCHI_VERSION}
 PKGNAME=	kochi-ttf-${KOCHI_VERSION}
@@ -13,15 +13,17 @@ COMMENT=	Free Japanese TrueType font by Yasuyuki Furukawa
 
 KOCHI_VERSION=	20030809
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_BUILD=	yes
 
 FONTS_DIRS.ttf=	${PREFIX}/lib/X11/fonts/TTF
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/X11/fonts/TTF
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/X11/fonts/TTF
 	${INSTALL_DATA} ${WRKSRC}/kochi-gothic-subst.ttf \
-	    ${PREFIX}/lib/X11/fonts/TTF/kochi-gothic.ttf
+	    ${DESTDIR}${PREFIX}/lib/X11/fonts/TTF/kochi-gothic.ttf
 	${INSTALL_DATA} ${WRKSRC}/kochi-mincho-subst.ttf \
-	    ${PREFIX}/lib/X11/fonts/TTF/kochi-mincho.ttf
+	    ${DESTDIR}${PREFIX}/lib/X11/fonts/TTF/kochi-mincho.ttf
 
 .include "../../mk/bsd.pkg.mk"

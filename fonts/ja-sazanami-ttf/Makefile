@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/02/05 23:09:09 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/03 20:17:12 jlam Exp $
 
 DISTNAME=		sazanami-${SAZANAMI_VERS}
 PKGNAME=		ja-sazanami-ttf-${SAZANAMI_VERS}
@@ -11,6 +11,8 @@ MAINTAINER=		yamajun@ofug.net
 HOMEPAGE=		http://wiki.fdiary.net/font/?sazanami
 COMMENT=		Truly free Japanese TrueType font
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 SAZANAMI_VERS=		20040629
 FONTS_DIRS.ttf=		${PREFIX}/lib/X11/fonts/TTF
 
@@ -18,8 +20,10 @@ NO_BUILD=		YES
 NO_CONFIGURE=		YES
 
 do-install:
-	${INSTALL_DATA_DIR} ${FONTS_DIRS.ttf}
-	${INSTALL_DATA}	${WRKSRC}/sazanami-gothic.ttf ${FONTS_DIRS.ttf}
-	${INSTALL_DATA}	${WRKSRC}/sazanami-mincho.ttf ${FONTS_DIRS.ttf}
+	${INSTALL_DATA_DIR} ${DESTDIR}${FONTS_DIRS.ttf}
+	${INSTALL_DATA}	${WRKSRC}/sazanami-gothic.ttf \
+		${DESTDIR}${FONTS_DIRS.ttf}
+	${INSTALL_DATA}	${WRKSRC}/sazanami-mincho.ttf \
+		${DESTDIR}${FONTS_DIRS.ttf}
 
 .include "../../mk/bsd.pkg.mk"

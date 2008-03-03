@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/06/15 22:04:15 minskim Exp $
+# $NetBSD: Makefile,v 1.20 2008/03/03 20:17:11 jlam Exp $
 
 DISTNAME=	adobe-cmaps-20060615
 CATEGORIES=	fonts print
@@ -24,6 +24,8 @@ MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://partners.adobe.com/public/developer/opentype/
 COMMENT=	Adobe CMap files for CJK
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DIST_SUBDIR=	${PKGNAME_NOREV}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
@@ -32,39 +34,39 @@ USE_TOOLS+=	unzip
 RESOURCEDIR=	${PREFIX}/share/Adobe/Resource
 
 do-install:
-	${INSTALL_DATA_DIR} ${RESOURCEDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${RESOURCEDIR}
 	set -e; \
 	for file in ${CMAP_DISTFILES}; do				\
 		extract_file="${_DISTDIR}/$${file}"; export extract_file; \
-		cd ${RESOURCEDIR}; ${EXTRACT_CMD};			\
+		cd ${DESTDIR}${RESOURCEDIR}; ${EXTRACT_CMD};		\
 	done
 	set -e; \
 	for file in ${PDFCORE}; do					\
-		${MKDIR} ${RESOURCEDIR}/pdfcorefonts/$${file};		\
-		cd ${RESOURCEDIR}/pdfcorefonts/$${file};		\
+		${MKDIR} ${DESTDIR}${RESOURCEDIR}/pdfcorefonts/$${file}; \
+		cd ${DESTDIR}${RESOURCEDIR}/pdfcorefonts/$${file};	\
 		${UNZIP_CMD} -aaoq ${_DISTDIR}/$${file}.zip;		\
 	done
-	${INSTALL_DATA_DIR} ${RESOURCEDIR}/CMap
+	${INSTALL_DATA_DIR} ${DESTDIR}${RESOURCEDIR}/CMap
 	set -e; \
-	cd ${RESOURCEDIR}; for dir in ${CMAP_FILES}; do			\
+	cd ${DESTDIR}${RESOURCEDIR}; for dir in ${CMAP_FILES}; do	\
 		for file in $${dir}/CMap/*; do				\
-			${LN} -sf ../$${file} ${RESOURCEDIR}/CMap;	\
+			${LN} -sf ../$${file} ${DESTDIR}${RESOURCEDIR}/CMap; \
 		done;							\
 	done
 	set -e; \
-	cd ${RESOURCEDIR}; for dir in ${RKSJ_FILES}; do			\
+	cd ${DESTDIR}${RESOURCEDIR}; for dir in ${RKSJ_FILES}; do	\
 		for file in $${dir}/*; do				\
-			${LN} -sf ../$${file} ${RESOURCEDIR}/CMap;	\
+			${LN} -sf ../$${file} ${DESTDIR}${RESOURCEDIR}/CMap; \
 		done;							\
 	done
 	set -e; \
-	cd ${RESOURCEDIR}; for dir in ${PDFCORE}; do			\
+	cd ${DESTDIR}${RESOURCEDIR}; for dir in ${PDFCORE}; do		\
 		for file in pdfcorefonts/$${dir}/*; do			\
 			case $${file} in				\
 			*.pdf)	;;					\
 			*)						\
-				${RM} -f ${RESOURCEDIR}/CMap/`${BASENAME} $${file}`; \
-				${LN} -sf ../$${file} ${RESOURCEDIR}/CMap; \
+				${RM} -f ${DESTDIR}${RESOURCEDIR}/CMap/`${BASENAME} $${file}`; \
+				${LN} -sf ../$${file} ${DESTDIR}${RESOURCEDIR}/CMap; \
 				;;					\
 			esac;						\
 		done;							\

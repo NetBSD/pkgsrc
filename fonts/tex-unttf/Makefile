@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/06/06 22:30:34 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/03 20:17:12 jlam Exp $
 #
 
 DISTNAME=	fonts-unttf-20070507
@@ -13,6 +13,8 @@ COMMENT=	TeX fonts based on Un fonts
 DEPENDS+=	ttf2pk>=1.5:../../fonts/ttf2pk
 DEPENDS+=	un-core-ttf>=1.0:../../fonts/un-core-ttf
 DEPENDS+=	un-extra-ttf>=1.0.1:../../fonts/un-extra-ttf
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/fonts-unttf
 USE_DIRS+=	texmf-1.0
@@ -31,40 +33,41 @@ do-build:
 	${FIND} ${WRKSRC} -name CVS | ${XARGS} ${RM} -rf
 
 do-install:
-	cd ${WRKSRC}/fonts; ${PAX} -rw . ${PKG_LOCALTEXMFPREFIX}/fonts/
-	${INSTALL_DATA_DIR} ${TEXTTFDIR}/unbt
-	${LN} -sf ${SYSTTFDIR}/UnBatang.ttf ${TEXTTFDIR}/unbt/
-	${LN} -sf ${SYSTTFDIR}/UnBatangBold.ttf ${TEXTTFDIR}/unbt/
-	${INSTALL_DATA_DIR} ${TEXTTFDIR}/ungt
-	${LN} -sf ${SYSTTFDIR}/UnDotum.ttf ${TEXTTFDIR}/ungt/
-	${LN} -sf ${SYSTTFDIR}/UnDotumBold.ttf ${TEXTTFDIR}/ungt/
-	${INSTALL_DATA_DIR} ${TEXTTFDIR}/ungr
-	${LN} -sf ${SYSTTFDIR}/UnGraphic.ttf ${TEXTTFDIR}/ungr/
-	${LN} -sf ${SYSTTFDIR}/UnGraphicBold.ttf ${TEXTTFDIR}/ungr/
-	${INSTALL_DATA_DIR} ${TEXTTFDIR}/ungs
-	${LN} -sf ${SYSTTFDIR}/UnGungseo.ttf ${TEXTTFDIR}/ungs/
-	${INSTALL_DATA_DIR} ${TEXTTFDIR}/unbm
-	${LN} -sf ${SYSTTFDIR}/UnBom.ttf ${TEXTTFDIR}/unbm/
-	${INSTALL_DATA_DIR} ${TEXTTFDIR}/unpn
-	${LN} -sf ${SYSTTFDIR}/UnPen.ttf ${TEXTTFDIR}/unpn/
-	${INSTALL_DATA_DIR} ${TEXTTFDIR}/unph
-	${LN} -sf ${SYSTTFDIR}/UnPenheulim.ttf ${TEXTTFDIR}/unph/
-	${INSTALL_DATA_DIR} ${TEXTTFDIR}/unpg
-	${LN} -sf ${SYSTTFDIR}/UnPilgi.ttf ${TEXTTFDIR}/unpg/
-	${LN} -sf ${SYSTTFDIR}/UnPilgiBold.ttf ${TEXTTFDIR}/unpg/
-	${INSTALL_DATA_DIR} ${TEXTTFDIR}/unsh
-	${LN} -sf ${SYSTTFDIR}/UnShinmun.ttf ${TEXTTFDIR}/unsh/
-	${INSTALL_DATA_DIR} ${TEXTTFDIR}/untz
-	${LN} -sf ${SYSTTFDIR}/UnTaza.ttf ${TEXTTFDIR}/untz/
-	${INSTALL_DATA_DIR} ${TEXTTFDIR}/unyt
-	${LN} -sf ${SYSTTFDIR}/UnYetgul.ttf ${TEXTTFDIR}/unyt/
-	${INSTALL_DATA_DIR} ${TEXTTFDIR}/unjbt
-	${LN} -sf ${SYSTTFDIR}/UnJamoBatang.ttf ${TEXTTFDIR}/unjbt/
-	${INSTALL_DATA_DIR} ${TEXTTFDIR}/unjgt
-	${LN} -sf ${SYSTTFDIR}/UnJamoDotum.ttf ${TEXTTFDIR}/unjgt/
-	${INSTALL_DATA_DIR} ${TEXTTFDIR}/unjnv
-	${LN} -sf ${SYSTTFDIR}/UnJamoNovel.ttf ${TEXTTFDIR}/unjnv/
-	${INSTALL_DATA_DIR} ${TEXTTFDIR}/unjsr
-	${LN} -sf ${SYSTTFDIR}/UnJamoSora.ttf ${TEXTTFDIR}/unjsr/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/fonts/
+	cd ${WRKSRC}/fonts; ${PAX} -rw . ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/fonts/
+	${INSTALL_DATA_DIR} ${DESTDIR}${TEXTTFDIR}/unbt
+	${LN} -sf ${SYSTTFDIR}/UnBatang.ttf ${DESTDIR}${TEXTTFDIR}/unbt/
+	${LN} -sf ${SYSTTFDIR}/UnBatangBold.ttf ${DESTDIR}${TEXTTFDIR}/unbt/
+	${INSTALL_DATA_DIR} ${DESTDIR}${TEXTTFDIR}/ungt
+	${LN} -sf ${SYSTTFDIR}/UnDotum.ttf ${DESTDIR}${TEXTTFDIR}/ungt/
+	${LN} -sf ${SYSTTFDIR}/UnDotumBold.ttf ${DESTDIR}${TEXTTFDIR}/ungt/
+	${INSTALL_DATA_DIR} ${DESTDIR}${TEXTTFDIR}/ungr
+	${LN} -sf ${SYSTTFDIR}/UnGraphic.ttf ${DESTDIR}${TEXTTFDIR}/ungr/
+	${LN} -sf ${SYSTTFDIR}/UnGraphicBold.ttf ${DESTDIR}${TEXTTFDIR}/ungr/
+	${INSTALL_DATA_DIR} ${DESTDIR}${TEXTTFDIR}/ungs
+	${LN} -sf ${SYSTTFDIR}/UnGungseo.ttf ${DESTDIR}${TEXTTFDIR}/ungs/
+	${INSTALL_DATA_DIR} ${DESTDIR}${TEXTTFDIR}/unbm
+	${LN} -sf ${SYSTTFDIR}/UnBom.ttf ${DESTDIR}${TEXTTFDIR}/unbm/
+	${INSTALL_DATA_DIR} ${DESTDIR}${TEXTTFDIR}/unpn
+	${LN} -sf ${SYSTTFDIR}/UnPen.ttf ${DESTDIR}${TEXTTFDIR}/unpn/
+	${INSTALL_DATA_DIR} ${DESTDIR}${TEXTTFDIR}/unph
+	${LN} -sf ${SYSTTFDIR}/UnPenheulim.ttf ${DESTDIR}${TEXTTFDIR}/unph/
+	${INSTALL_DATA_DIR} ${DESTDIR}${TEXTTFDIR}/unpg
+	${LN} -sf ${SYSTTFDIR}/UnPilgi.ttf ${DESTDIR}${TEXTTFDIR}/unpg/
+	${LN} -sf ${SYSTTFDIR}/UnPilgiBold.ttf ${DESTDIR}${TEXTTFDIR}/unpg/
+	${INSTALL_DATA_DIR} ${DESTDIR}${TEXTTFDIR}/unsh
+	${LN} -sf ${SYSTTFDIR}/UnShinmun.ttf ${DESTDIR}${TEXTTFDIR}/unsh/
+	${INSTALL_DATA_DIR} ${DESTDIR}${TEXTTFDIR}/untz
+	${LN} -sf ${SYSTTFDIR}/UnTaza.ttf ${DESTDIR}${TEXTTFDIR}/untz/
+	${INSTALL_DATA_DIR} ${DESTDIR}${TEXTTFDIR}/unyt
+	${LN} -sf ${SYSTTFDIR}/UnYetgul.ttf ${DESTDIR}${TEXTTFDIR}/unyt/
+	${INSTALL_DATA_DIR} ${DESTDIR}${TEXTTFDIR}/unjbt
+	${LN} -sf ${SYSTTFDIR}/UnJamoBatang.ttf ${DESTDIR}${TEXTTFDIR}/unjbt/
+	${INSTALL_DATA_DIR} ${DESTDIR}${TEXTTFDIR}/unjgt
+	${LN} -sf ${SYSTTFDIR}/UnJamoDotum.ttf ${DESTDIR}${TEXTTFDIR}/unjgt/
+	${INSTALL_DATA_DIR} ${DESTDIR}${TEXTTFDIR}/unjnv
+	${LN} -sf ${SYSTTFDIR}/UnJamoNovel.ttf ${DESTDIR}${TEXTTFDIR}/unjnv/
+	${INSTALL_DATA_DIR} ${DESTDIR}${TEXTTFDIR}/unjsr
+	${LN} -sf ${SYSTTFDIR}/UnJamoSora.ttf ${DESTDIR}${TEXTTFDIR}/unjsr/
 
 .include "../../mk/bsd.pkg.mk"

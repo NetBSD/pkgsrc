@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2006/10/22 16:06:32 rillig Exp $
+# $NetBSD: Makefile.common,v 1.10 2008/03/03 20:17:11 jlam Exp $
 #
 
 PKGNAME=	acroread-${DISTNAME}-4.0
@@ -14,6 +14,8 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
@@ -21,6 +23,6 @@ USE_TOOLS+=		gtar
 INSTALLATION_DIRS=	Acrobat4/Resource
 
 do-install:
-	${GTAR} xf ${TAR_FILE} -C ${PREFIX}/Acrobat4/Resource
+	${GTAR} xf ${TAR_FILE} -C ${DESTDIR}${PREFIX}/Acrobat4/Resource
 
 .include "../../mk/bsd.pkg.mk"
