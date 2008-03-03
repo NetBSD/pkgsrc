@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.4 2007/12/16 20:19:11 tron Exp $
+# $NetBSD: buildlink3.mk,v 1.5 2008/03/03 12:31:09 drochner Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -24,6 +24,7 @@ BUILDLINK_PKGSRCDIR.libXrandr?=	../../x11/libXrandr
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
