@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2008/01/22 13:33:35 obache Exp $
+# $NetBSD: Makefile.common,v 1.10 2008/03/03 20:17:11 jlam Exp $
 
 DISTNAME=	cyr-rfx-${CYR_RFX_ENCODING}-1.1
 CATEGORIES=	fonts x11
@@ -11,6 +11,8 @@ MAINTAINER=	shattered@users.sourceforge.net
 HOMEPAGE=	http://www.inp.nsk.su/~bolkhov/files/fonts/cyr-rfx/00index.en.html
 COMMENT=	Cyrillic X11 fonts in ${CYR_RFX_ENCODING} encoding
 DIST_SUBDIR=	cyr-rfx
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	yes
 
@@ -26,6 +28,8 @@ REQD_DIRS+=		${PREFIX}/lib/X11/fonts/local/${CYR_RFX_ENCODING}/75dpi
 REQD_DIRS+=		${PREFIX}/lib/X11/fonts/local/${CYR_RFX_ENCODING}/misc
 
 do-install:
-	@cd ${PREFIX}/lib/X11/fonts/local && ${GTAR} xzf ${_DISTDIR}/${DISTFILES} ${CYR_RFX_ENCODING}/misc ${CYR_RFX_ENCODING}/75dpi
+	cd ${DESTDIR}${PREFIX}/lib/X11/fonts/local && \
+	${GTAR} xzf ${_DISTDIR}/${DISTFILES} \
+		${CYR_RFX_ENCODING}/misc ${CYR_RFX_ENCODING}/75dpi
 
 .include "../../mk/bsd.pkg.mk"

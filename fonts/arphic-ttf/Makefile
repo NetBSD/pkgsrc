@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/10/09 11:40:30 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/03 20:17:11 jlam Exp $
 #
 
 DISTNAME=	arphic-ttf-2.11
@@ -15,6 +15,8 @@ CONFLICTS=	arphicttf-[0-9]*
 FONT_FILES=	bkai00mp.ttf bsmi00lp.ttf gbsn00lp.ttf gkai00mp.ttf
 MISC_FILES=	ARPHICPL.TXT logo.gif release.txt
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DIST_SUBDIR=	arphic-ttf
 WRKSRC=		${WRKDIR}
 
@@ -26,9 +28,10 @@ FONTS_DIRS.ttf=	${PREFIX}/lib/X11/fonts/TTF
 DOCDIR=		${PREFIX}/share/doc/arphic-ttf
 
 do-install:
-	${INSTALL_DATA_DIR} ${FONTS_DIRS.ttf}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${FONT_FILES} ${FONTS_DIRS.ttf}
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${MISC_FILES} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${FONTS_DIRS.ttf}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${FONT_FILES} \
+		${DESTDIR}${FONTS_DIRS.ttf}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${MISC_FILES} ${DESTDIR}${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"

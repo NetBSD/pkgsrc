@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/11/29 22:51:06 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/03 20:17:12 jlam Exp $
 #
 
 DISTNAME=	dejavu-ttf-2.21
@@ -10,6 +10,8 @@ MAINTAINER=	jakllsch@kollasch.net
 HOMEPAGE=	http://dejavu.sourceforge.net/
 COMMENT=	DejaVu family of TrueType fonts
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_X11BASE=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
@@ -19,8 +21,9 @@ FONTS_DIRS.ttf+=	${PREFIX}/lib/X11/fonts/TTF
 INSTALLATION_DIRS=	lib/X11/fonts/TTF share/doc/dejavu-ttf
 
 do-install:
-	cd ${WRKSRC} && ${PAX} -rw -pm *.ttf ${PREFIX}/lib/X11/fonts/TTF/
+	cd ${WRKSRC} && ${PAX} -rw -pm *.ttf \
+		${DESTDIR}${PREFIX}/lib/X11/fonts/TTF/
 	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS BUGS LICENSE NEWS README \
-		${PREFIX}/share/doc/dejavu-ttf
+		${DESTDIR}${PREFIX}/share/doc/dejavu-ttf
 
 .include "../../mk/bsd.pkg.mk"

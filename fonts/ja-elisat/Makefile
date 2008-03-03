@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/02/05 23:09:09 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/03 20:17:12 jlam Exp $
 
 DISTNAME=		elisat10
 PKGNAME=		ja-elisat-1.0
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.tea.forus.or.jp/toshi/exhibition/
 MAINTAINER=		tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=		${MASTER_SITES}/elisat10.html
 COMMENT=		8x8 dots X11 bitmap font for JIS X 0208
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 USE_X11BASE=		YES
@@ -28,9 +30,9 @@ do-build:
 	done
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}; \
-	${INSTALL_DATA} ${WRKSRC}/*.doc ${WRKSRC}/*.html ${DOCDIR}; \
-	${INSTALL_DATA_DIR} ${FONTDIR}; \
-	${INSTALL_DATA} ${WRKSRC}/*.pcf.gz ${FONTDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.doc ${WRKSRC}/*.html ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${FONTDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.pcf.gz ${DESTDIR}${FONTDIR}
 
 .include "../../mk/bsd.pkg.mk"

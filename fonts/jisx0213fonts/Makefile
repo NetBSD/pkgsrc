@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/11/12 00:10:09 uebayasi Exp $
+# $NetBSD: Makefile,v 1.14 2008/03/03 20:17:12 jlam Exp $
 #
 
 DISTNAME=	jisx0213fonts-0.0
@@ -10,6 +10,8 @@ DISTFILES=	${FONTS:C/$/.bdf.gz/}
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	ftp://ftp.m17n.org/pub/character/fonts/imamura/jisx0213/
 COMMENT=	X11 bitmap fonts for JIS X 0213
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	yes
 USE_TOOLS+=	gzip
@@ -33,9 +35,9 @@ do-build:
 	done
 
 do-install:
-	@${INSTALL_DATA_DIR} ${FONTDIR}
+	@${INSTALL_DATA_DIR} ${DESTDIR}${FONTDIR}
 	@for f in ${FONTS}; do \
-		${INSTALL_DATA} ${WRKSRC}/$${f}.pcf.gz ${FONTDIR}; \
+		${INSTALL_DATA} ${WRKSRC}/$${f}.pcf.gz ${DESTDIR}${FONTDIR}; \
 	done
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/02/22 19:26:30 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/03 20:17:12 jlam Exp $
 #
 
 DISTNAME=	profontlinux
@@ -12,6 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tobias-jung.de/seekingprofont/
 COMMENT=	Monospaced bitmap font readable in very small sizes
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_BUILD=		yes
 NO_CONFIGURE=		yes
 USE_X11BASE=		yes
@@ -20,6 +22,8 @@ FONTS_DIRS.x11=		${PREFIX}/lib/X11/fonts/misc
 INSTALLATION_DIRS=	lib/X11/fonts/misc
 
 do-install:
-	for i in ${WRKDIR}/*.pcf; do ${INSTALL_DATA} $$i ${FONTS_DIRS.x11}; done
+	for i in ${WRKDIR}/*.pcf; do \
+		${INSTALL_DATA} $$i ${DESTDIR}${FONTS_DIRS.x11}; \
+	done
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/07/27 18:48:02 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2008/03/03 20:17:12 jlam Exp $
 
 DISTNAME=		elisau10
 PKGNAME=		ja-elisau-1.0
@@ -17,6 +17,8 @@ EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
 SITES.elisau10${EXTRACT_SUFX}=	\
 			http://hp.vector.co.jp/authors/VA004814/freesoft/
 SITES.clR5x8.bdf=	ftp://ftp.jp.NetBSD.org/pub/NetBSD-jp/tut-jp/fonts/
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 USE_TOOLS+=		bdftopcf gzip patch
@@ -42,9 +44,9 @@ do-build:
 	done
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}; \
-	${INSTALL_DATA} ${WRKSRC}/*.doc ${WRKSRC}/*.txt ${DOCDIR}; \
-	${INSTALL_DATA_DIR} ${FONTDIR}; \
-	${INSTALL_DATA} ${WRKSRC}/*.pcf.gz ${FONTDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.doc ${WRKSRC}/*.txt ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${FONTDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.pcf.gz ${DESTDIR}${FONTDIR}
 
 .include "../../mk/bsd.pkg.mk"

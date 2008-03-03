@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/04 21:29:39 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/03 20:17:12 jlam Exp $
 #
 
 DISTNAME=	geoslab703-ttf-20010522
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.will-harris.com/fonts/freefonts.htm
 COMMENT=	Free TrueType fonts from Bitstream, useful for web viewing
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DIST_SUBDIR=	geoslab703-ttf
 EXTRACT_ONLY=	# empty
 
@@ -21,7 +23,7 @@ NO_BUILD=	YES
 FONTS_DIRS.ttf=	${PREFIX}/lib/X11/fonts/TTF
 
 do-install:
-	${INSTALL_DATA_DIR} ${FONTS_DIRS.ttf}
-	${INSTALL_DATA} ${_DISTDIR}/*.ttf ${FONTS_DIRS.ttf}
+	${INSTALL_DATA_DIR} ${DESTDIR}${FONTS_DIRS.ttf}
+	${INSTALL_DATA} ${_DISTDIR}/*.ttf ${DESTDIR}${FONTS_DIRS.ttf}
 
 .include "../../mk/bsd.pkg.mk"

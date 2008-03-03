@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/11/12 00:10:09 uebayasi Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/03 20:17:12 jlam Exp $
 
 DISTNAME=	jisx0212fonts-0.0
 PKGREVISION=	2
@@ -10,6 +10,8 @@ DISTFILES=	jisksp14.bdf.gz jisksp16-1990.bdf.Z min-1-24.bdf.gz \
 
 MAINTAINER=	uebayasi@NetBSD.org
 COMMENT=	X11 bitmap fonts for JIS X 0212
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	yes
 
@@ -37,10 +39,10 @@ do-build:
 	done
 
 do-install:
-	${INSTALL_DATA_DIR} ${FONTDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${FONTDIR}
 	set -e; \
 	for f in ${FONTS}; do \
-		${INSTALL_DATA} ${WRKSRC}/$${f}.pcf.gz ${FONTDIR}; \
+		${INSTALL_DATA} ${WRKSRC}/$${f}.pcf.gz ${DESTDIR}${FONTDIR}; \
 	done
 
 .include "../../mk/bsd.pkg.mk"

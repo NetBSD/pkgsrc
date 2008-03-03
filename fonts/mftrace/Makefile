@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/02/24 18:03:03 darcy Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/03 20:17:12 jlam Exp $
 
 DISTNAME=	mftrace-1.2.14
 CATEGORIES=	fonts
@@ -12,6 +12,8 @@ DEPENDS+=	autotrace>=0.31:../../graphics/autotrace
 DEPENDS+=	potrace>=1.5:../../graphics/potrace
 DEPENDS+=	fontforge>=20041115:../../fonts/fontforge
 DEPENDS+=	t1utils>=1.27:../../fonts/t1utils
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
@@ -28,13 +30,13 @@ post-build:
 	cd ${WRKSRC} && ${PYTHONBIN} ${PREFIX}/${PYLIB}/py_compile.py tfm.py
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/gf2pbm ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/mftrace ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/mftrace.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/afm.py ${PREFIX}/${PYSITELIB}
-	${INSTALL_DATA} ${WRKSRC}/afm.pyc ${PREFIX}/${PYSITELIB}
-	${INSTALL_DATA} ${WRKSRC}/tfm.py ${PREFIX}/${PYSITELIB}
-	${INSTALL_DATA} ${WRKSRC}/tfm.pyc ${PREFIX}/${PYSITELIB}
+	${INSTALL_PROGRAM} ${WRKSRC}/gf2pbm ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/mftrace ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/mftrace.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/afm.py ${DESTDIR}${PREFIX}/${PYSITELIB}
+	${INSTALL_DATA} ${WRKSRC}/afm.pyc ${DESTDIR}${PREFIX}/${PYSITELIB}
+	${INSTALL_DATA} ${WRKSRC}/tfm.py ${DESTDIR}${PREFIX}/${PYSITELIB}
+	${INSTALL_DATA} ${WRKSRC}/tfm.pyc ${DESTDIR}${PREFIX}/${PYSITELIB}
 
 .include "../../lang/python/application.mk"
 .include "../../mk/tex.buildlink3.mk"

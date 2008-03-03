@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/01/07 09:13:54 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/03 20:17:12 jlam Exp $
 #
 
 DISTNAME=	pcf2bdf-1.04
@@ -11,6 +11,8 @@ MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://www.tsg.ne.jp/GANA/S/pcf2bdf/
 COMMENT=	Convert X font from PCF to BDF
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c++
@@ -19,7 +21,8 @@ MAKE_FILE=	Makefile.gcc
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pcf2bdf ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/pcf2bdf.man ${PREFIX}/${PKGMANDIR}/man1/pcf2bdf.1
+	${INSTALL_PROGRAM} ${WRKSRC}/pcf2bdf ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/pcf2bdf.man \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/pcf2bdf.1
 
 .include "../../mk/bsd.pkg.mk"

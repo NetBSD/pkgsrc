@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/03 15:33:12 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/03 20:17:12 jlam Exp $
 #
 
 DISTNAME=	thaixfonts-1.1-3.noarch
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.fedu.uec.ac.jp/ZzzThai/fonts.html
 COMMENT=	Various X11 Thai fonts in tis-620 encoding
 
 BUILD_DEPENDS+=	rpm-[0-9]*:../../misc/rpm
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	yes
 
@@ -28,10 +30,8 @@ do-extract:
 	cd ${WRKDIR} && rpm2cpio ${_DISTDIR}/${DISTFILES} | \
 		cpio -i --make-directories \*
 
-pre-install:
-	${INSTALL_DATA_DIR} ${FONTDIR}
-
 do-install:
-	cd ${WRKSRC} && ${INSTALL_DATA} *.gz fonts.* ${FONTDIR}
+	${INSTALL_DATA_DIR} ${FONTDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} *.gz fonts.* ${DESTDIR}${FONTDIR}
 
 .include "../../mk/bsd.pkg.mk"
