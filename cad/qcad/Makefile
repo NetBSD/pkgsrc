@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2007/02/15 14:10:52 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2008/03/03 01:50:27 jlam Exp $
 #
 
 DISTNAME=		qcad-2.0.5.0-1-community.src
@@ -6,6 +6,8 @@ DISTNAME=		qcad-2.0.5.0-1-community.src
 # (there's a 2.0.4.7 for some platforms), though I don't know about the
 # thing after the hyphen, which always seems to be 1. Can I use four digits?
 PKGNAME=		qcad-2.0.5.0
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "./Makefile.common"
 
@@ -54,10 +56,10 @@ pre-build:
 	done
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/qcad/qcad ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/qcad
+	${INSTALL_PROGRAM} ${WRKSRC}/qcad/qcad ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/qcad
 	cd ${WRKSRC}/qcad && umask 022 && \
-	pax -rwpm data fonts patterns qm ${PREFIX}/share/qcad
+	pax -rwpm data fonts patterns qm ${DESTDIR}${PREFIX}/share/qcad
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 BUILDLINK_API_DEPENDS.qt3-libs+=	qt3-libs>=3.3.4

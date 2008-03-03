@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/09/09 02:41:55 obache Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/03 01:50:27 jlam Exp $
 #
 
 DISTNAME=		gplcver-2.11a.src
@@ -11,6 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pragmatic-c.com/gpl-cver/
 COMMENT=		Verilog simulator
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 BUILD_DIRS=		src
 MAKE_FILE=		makefile.freebsd
 BUILDLINK_LIBS.dl=	${BUILDLINK_LDADD.dl}
@@ -18,8 +20,9 @@ BUILDLINK_LIBS.dl=	${BUILDLINK_LDADD.dl}
 .include "../../mk/dlopen.buildlink3.mk"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/cver ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/gplcver/pli_incs
-	${INSTALL_DATA} ${WRKSRC}/pli_incs/*.h ${PREFIX}/lib/gplcver/pli_incs
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/cver ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/gplcver/pli_incs
+	${INSTALL_DATA} ${WRKSRC}/pli_incs/*.h \
+		${DESTDIR}${PREFIX}/lib/gplcver/pli_incs
 
 .include "../../mk/bsd.pkg.mk"

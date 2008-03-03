@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/01/02 13:44:23 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/03 01:50:27 jlam Exp $
 #
 
 DISTNAME=		partlibrary-2.0.1.2-1
@@ -12,6 +12,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ribbonsoft.com/qcad/
 COMMENT=	About 4500 mech, elec, etc. parts for the QCad 2D CAD system
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
@@ -22,7 +24,7 @@ post-extract:
 	cd ${WRKSRC}/electrical/denzuq && chmod -x */*/*.dxf
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/qcad/library
-	cd ${WRKSRC} && pax -rwpm . ${PREFIX}/share/qcad/library
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/qcad/library
+	cd ${WRKSRC} && pax -rwpm . ${DESTDIR}${PREFIX}/share/qcad/library
 
 .include "../../mk/bsd.pkg.mk"

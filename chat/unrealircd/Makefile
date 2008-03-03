@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/09/13 19:24:13 adrianp Exp $
+# $NetBSD: Makefile,v 1.22 2008/03/03 02:19:52 jlam Exp $
 
 DISTNAME=	Unreal3.2.7
 PKGNAME=	unrealircd-3.2.7
@@ -13,6 +13,8 @@ HOMEPAGE=	http://www.unrealircd.com/
 COMMENT=	Advanced IRC server with IPv6 and SSL support
 
 CONFLICTS+=	ircu-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	pkg-config gmake
@@ -119,29 +121,33 @@ post-build:
 .endif
 
 do-install:
-	${INSTALL_DATA_DIR} ${IRCD_SHARE}
-	${INSTALL_DATA_DIR} ${IRCD_SHARE:Q}/networks
-	${INSTALL_DATA_DIR} ${IRCD_SHARE:Q}/aliases
-	${INSTALL_DATA_DIR} ${IRCD_SHARE:Q}/modules
-	${INSTALL_DATA_DIR} ${IRCD_DOCS:Q}
-	${INSTALL_DATA_DIR} ${IRCD_EG:Q}
+	${INSTALL_DATA_DIR} ${DESTDIR}${IRCD_SHARE}
+	${INSTALL_DATA_DIR} ${DESTDIR}${IRCD_SHARE:Q}/networks
+	${INSTALL_DATA_DIR} ${DESTDIR}${IRCD_SHARE:Q}/aliases
+	${INSTALL_DATA_DIR} ${DESTDIR}${IRCD_SHARE:Q}/modules
+	${INSTALL_DATA_DIR} ${DESTDIR}${IRCD_DOCS:Q}
+	${INSTALL_DATA_DIR} ${DESTDIR}${IRCD_EG:Q}
 
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/src/ircd ${PREFIX:Q}/sbin
-	${INSTALL_DATA} ${WRKSRC:Q}/networks/*.network ${IRCD_SHARE:Q}/networks
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/src/ircd ${DESTDIR}${PREFIX:Q}/sbin
+	${INSTALL_DATA} ${WRKSRC:Q}/networks/*.network \
+		${DESTDIR}${IRCD_SHARE:Q}/networks
 	${INSTALL_DATA} ${WRKSRC:Q}/networks/networks.ndx \
-		${IRCD_SHARE:Q}/networks
-	${INSTALL_SCRIPT} ${WRKSRC:Q}/networks/makenet ${IRCD_SHARE:Q}/networks
-	${INSTALL_DATA} ${WRKSRC:Q}/aliases/*.conf ${IRCD_SHARE:Q}/aliases
-	${INSTALL_DATA} ${WRKSRC:Q}/badwords*.conf ${IRCD_SHARE:Q}
-	${INSTALL_DATA} ${WRKSRC:Q}/help.* ${IRCD_SHARE:Q}
-	${INSTALL_DATA} ${WRKSRC:Q}/doc/help.* ${IRCD_SHARE:Q}
-	${INSTALL_DATA} ${WRKSRC:Q}/spamfilter.conf ${IRCD_SHARE:Q}
-	${INSTALL_DATA} ${WRKSRC:Q}/src/modules/*.so ${IRCD_SHARE:Q}/modules
-	${INSTALL_DATA} ${WRKSRC:Q}/doc/unreal32docs.* ${IRCD_DOCS:Q}
-	${INSTALL_DATA} ${WRKSRC:Q}/doc/example.* ${IRCD_EG:Q}
+		${DESTDIR}${IRCD_SHARE:Q}/networks
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/networks/makenet \
+		${DESTDIR}${IRCD_SHARE:Q}/networks
+	${INSTALL_DATA} ${WRKSRC:Q}/aliases/*.conf \
+		${DESTDIR}${IRCD_SHARE:Q}/aliases
+	${INSTALL_DATA} ${WRKSRC:Q}/badwords*.conf ${DESTDIR}${IRCD_SHARE:Q}
+	${INSTALL_DATA} ${WRKSRC:Q}/help.* ${DESTDIR}${IRCD_SHARE:Q}
+	${INSTALL_DATA} ${WRKSRC:Q}/doc/help.* ${DESTDIR}${IRCD_SHARE:Q}
+	${INSTALL_DATA} ${WRKSRC:Q}/spamfilter.conf ${DESTDIR}${IRCD_SHARE:Q}
+	${INSTALL_DATA} ${WRKSRC:Q}/src/modules/*.so \
+		${DESTDIR}${IRCD_SHARE:Q}/modules
+	${INSTALL_DATA} ${WRKSRC:Q}/doc/unreal32docs.* ${DESTDIR}${IRCD_DOCS:Q}
+	${INSTALL_DATA} ${WRKSRC:Q}/doc/example.* ${DESTDIR}${IRCD_EG:Q}
 
 .	for f in ${DOC_FILES}
-		${INSTALL_DATA} ${WRKSRC:Q}/${f:Q} ${IRCD_DOCS:Q}
+		${INSTALL_DATA} ${WRKSRC:Q}/${f:Q} ${DESTDIR}${IRCD_DOCS:Q}
 .	endfor
 
 .include "../../mk/bsd.pkg.mk"

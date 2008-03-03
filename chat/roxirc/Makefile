@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/22 09:22:07 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/03 02:19:52 jlam Exp $
 #
 
 DISTNAME=	roxirc-1.8
@@ -13,6 +13,7 @@ COMMENT=	Graphical IRC client written in tcl/tk
 DEPENDS+=	tk-[0-9]*:../../x11/tk
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	YES
 NO_CONFIGURE=	YES
@@ -28,14 +29,14 @@ SUBST_SED.paths=	-e 's,wish8.3,wish,g'
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/roxirc ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/roxirc
-	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
-	${INSTALL_DATA} ${WRKSRC}/config ${EXAMPLESDIR}/config
-	${INSTALL_DATA} ${WRKSRC}/menus ${EXAMPLESDIR}/menus
-	${INSTALL_DATA} ${WRKSRC}/bindings ${EXAMPLESDIR}/bindings
-	${INSTALL_DATA} ${WRKSRC}/prefs ${EXAMPLESDIR}/prefs-initial
-	${INSTALL_DATA} ${WRKSRC}/startup ${EXAMPLESDIR}/startup
-	${INSTALL_DATA} ${WRKSRC}/help ${PREFIX}/share/doc/roxirc/help
+	${INSTALL_SCRIPT} ${WRKSRC}/roxirc ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/roxirc
+	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/config ${DESTDIR}${EXAMPLESDIR}/config
+	${INSTALL_DATA} ${WRKSRC}/menus ${DESTDIR}${EXAMPLESDIR}/menus
+	${INSTALL_DATA} ${WRKSRC}/bindings ${DESTDIR}${EXAMPLESDIR}/bindings
+	${INSTALL_DATA} ${WRKSRC}/prefs ${DESTDIR}${EXAMPLESDIR}/prefs-initial
+	${INSTALL_DATA} ${WRKSRC}/startup ${DESTDIR}${EXAMPLESDIR}/startup
+	${INSTALL_DATA} ${WRKSRC}/help ${DESTDIR}${PREFIX}/share/doc/roxirc/help
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/08/10 03:21:39 minskim Exp $
+# $NetBSD: Makefile,v 1.31 2008/03/03 01:50:27 jlam Exp $
 #
 
 DISTNAME=	fastcap-2.0-18Sep92
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.rle.mit.edu/cpg/research_codes.htm
 COMMENT=	Fast 3-D capacitance solver
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_USING=	gtar	# cannot be extracted with pax as tar
 
@@ -37,52 +39,52 @@ post-build:
 .endfor
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/fastcap ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/cubegen ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/capgen ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/busgen ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/pipedgen ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/pyragen ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/1x1bus.lst ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/1x1coarse.neu ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/1x1fine.neu ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/1x1nonuni.neu ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/README ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/big_sphere1.neu ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/coated_sph.lst ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/cond_air_1x1.qui ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/cond_dielec_1x1.qui ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/connector2.sh ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/connector3.sh ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/connector4.sh ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/cubeeg.fig ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/dielec_face.neu ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/dielec_sides.neu ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/dielec_sides_2x2.neu ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/dielec_topbot.neu ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/pin ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/pipeeg.fig ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/ramcell.lst ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/ramcell.out ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/ramcell_bitl.neu ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/ramcell_botd.neu ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/ramcell_cond.neu ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/ramcell_gnd.neu ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/ramcell_test.neu ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/ramcell_topd.neu ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/ramgen.sh ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/sphere1.neu ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/sphere2.neu ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/sphere3.neu ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/testgen.sh ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/testrun.sh ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA} ${WRKSRC}/examples/via.neu ${PREFIX}/share/examples/fastcap
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fastcap
-	${INSTALL_DATA} ${WRKSRC}/doc/mtt.ps  ${PREFIX}/share/doc/fastcap
-	${INSTALL_DATA} ${WRKSRC}/doc/tcad.ps  ${PREFIX}/share/doc/fastcap
-	${INSTALL_DATA} ${WRKSRC}/doc/ug.ps  ${PREFIX}/share/doc/fastcap
-	${INSTALL_DATA} ${WRKSRC}/README.docs ${PREFIX}/share/doc/fastcap
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/fastcap ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/cubegen ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/capgen ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/busgen ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/pipedgen ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/pyragen ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/1x1bus.lst ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/1x1coarse.neu ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/1x1fine.neu ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/1x1nonuni.neu ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/README ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/big_sphere1.neu ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/coated_sph.lst ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/cond_air_1x1.qui ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/cond_dielec_1x1.qui ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/connector2.sh ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/connector3.sh ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/connector4.sh ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/cubeeg.fig ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/dielec_face.neu ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/dielec_sides.neu ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/dielec_sides_2x2.neu ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/dielec_topbot.neu ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/pin ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/pipeeg.fig ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/ramcell.lst ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/ramcell.out ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/ramcell_bitl.neu ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/ramcell_botd.neu ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/ramcell_cond.neu ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/ramcell_gnd.neu ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/ramcell_test.neu ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/ramcell_topd.neu ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/ramgen.sh ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/sphere1.neu ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/sphere2.neu ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/sphere3.neu ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/testgen.sh ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/testrun.sh ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA} ${WRKSRC}/examples/via.neu ${DESTDIR}${PREFIX}/share/examples/fastcap
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/fastcap
+	${INSTALL_DATA} ${WRKSRC}/doc/mtt.ps  ${DESTDIR}${PREFIX}/share/doc/fastcap
+	${INSTALL_DATA} ${WRKSRC}/doc/tcad.ps  ${DESTDIR}${PREFIX}/share/doc/fastcap
+	${INSTALL_DATA} ${WRKSRC}/doc/ug.ps  ${DESTDIR}${PREFIX}/share/doc/fastcap
+	${INSTALL_DATA} ${WRKSRC}/README.docs ${DESTDIR}${PREFIX}/share/doc/fastcap
 
 .include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

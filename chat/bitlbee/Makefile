@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2008/01/18 05:06:22 tnn Exp $
+# $NetBSD: Makefile,v 1.39 2008/03/03 02:19:51 jlam Exp $
 #
 
 DISTNAME=		bitlbee-1.0.4
@@ -9,6 +9,8 @@ MASTER_SITES=		http://get.bitlbee.org/src/
 MAINTAINER=		tonio@NetBSD.org
 HOMEPAGE=		http://www.bitlbee.org/
 COMMENT=		IRC to other chat networks gateway
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
@@ -38,17 +40,19 @@ PKG_HOME.bitlbee=	${VARBASE}/db/bitlbee
 INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin
 
 do-install:
-	${INSTALL_DATA_DIR} ${DATADIR}
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/bitlbee.conf ${EGDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/bitlbee ${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC}/doc/user-guide/help.txt ${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/motd.txt ${DATADIR}
-	${INSTALL_MAN} ${WRKSRC}/doc/bitlbee.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/doc/bitlbee.conf.5 ${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_DATA_DIR} ${DESTDIR}${DATADIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/bitlbee.conf ${DESTDIR}${EGDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/bitlbee ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_DATA} ${WRKSRC}/doc/user-guide/help.txt ${DESTDIR}${DATADIR}
+	${INSTALL_DATA} ${WRKSRC}/motd.txt ${DESTDIR}${DATADIR}
+	${INSTALL_MAN} ${WRKSRC}/doc/bitlbee.8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/doc/bitlbee.conf.5 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 .for f in AUTHORS FAQ README CREDITS user-guide/user-guide.txt user-guide/user-guide.html
-	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DESTDIR}${DOCDIR}
 .endfor
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.bitlbee

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/01/18 05:06:22 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/03 02:19:51 jlam Exp $
 
 DISTNAME=	bnc2.9.4
 PKGNAME=	${DISTNAME:S/bnc/&-/}
@@ -13,6 +13,8 @@ COMMENT=	Simple IRC relay proxy with support for virtual hosting
 
 DEPENDS+=	dialog-[0-9]*:../../misc/dialog
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl
 
@@ -25,15 +27,15 @@ post-patch:
 		${WRKSRC}/bncsetup.orig > ${WRKSRC}/bncsetup
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bnc ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/mkpasswd ${PREFIX}/bin/bncmkpasswd
-	${INSTALL_SCRIPT} ${WRKSRC}/bncchk ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/bncsetup ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/bnc
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bnc
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/bnc
+	${INSTALL_PROGRAM} ${WRKSRC}/bnc ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/mkpasswd ${DESTDIR}${PREFIX}/bin/bncmkpasswd
+	${INSTALL_SCRIPT} ${WRKSRC}/bncchk ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/bncsetup ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/bnc
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/bnc
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/bnc
 	${INSTALL_DATA} ${WRKSRC}/example.conf				\
-		${PREFIX}/share/examples/bnc/bnc.conf
+		${DESTDIR}${PREFIX}/share/examples/bnc/bnc.conf
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
