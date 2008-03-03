@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/10/04 21:36:00 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/03 17:45:37 jlam Exp $
 
 DISTNAME=	ruby-bsearch-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-bsearch-${VERSION}
@@ -9,6 +9,8 @@ MASTER_SITES=	http://0xcc.net/ruby-bsearch/
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://0xcc.net/ruby-bsearch/
 COMMENT=	Binary search library for Ruby
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 VERSION=	1.5
 NO_CONFIGURE=	yes
@@ -24,10 +26,11 @@ do-build:
 .endfor
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/bsearch.rb ${RUBY_SITELIBDIR}/bsearch.rb
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/bsearch
+	${INSTALL_LIB_DIR} ${DESTDIR}${RUBY_SITELIBDIR}
+	${INSTALL_DATA} ${WRKSRC}/bsearch.rb ${DESTDIR}${RUBY_SITELIBDIR}/bsearch.rb
+	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_DOCDIR}/bsearch
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/bsearch
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${RUBY_DOCDIR}/bsearch
 .endfor
 
 .include "../../lang/ruby/modules.mk"

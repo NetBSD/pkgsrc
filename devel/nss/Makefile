@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/02/08 10:34:19 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2008/03/03 17:45:36 jlam Exp $
 
 DISTNAME=		nss-3.11.5
 CATEGORIES=		security
@@ -9,6 +9,8 @@ HOMEPAGE=		http://www.mozilla.org/projects/security/pki/nss/
 COMMENT=		Libraries to support development of security-enabled applications
 
 BUILD_DEPENDS+=		zip>=2.3:../../archivers/zip
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DIRS=		mozilla/security/nss
 
@@ -40,11 +42,11 @@ pre-configure:
 		${WRKSRC}/mozilla/security/coreconf/
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/nss
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/nss
-	(cd ${DIST}/public && ${PAX} -Lrwpe . ${PREFIX}/include/nss/ )
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/nss
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/nss
+	(cd ${DIST}/public && ${PAX} -Lrwpe . ${DESTDIR}${PREFIX}/include/nss/ )
 	(cd ${DIST}/*_OPT.OBJ/lib && \
-		${PAX} -Lrwpe *.${SO_SUFFIX} ${PREFIX}/lib/nss/ )
+		${PAX} -Lrwpe *.${SO_SUFFIX} ${DESTDIR}${PREFIX}/lib/nss/ )
 	set -e; \
 	{ ${ECHO} "Name: NSS"; \
 	  ${ECHO} "Description: Mozilla Network Security Services"; \
@@ -53,7 +55,7 @@ do-install:
 	  ${ECHO} "Libs: -L${PREFIX}/lib/nss" \
 	      "${COMPILER_RPATH_FLAG}${PREFIX}/lib/nss" \
 	      "-lnss3 -lsmime3 -lssl3 -lsoftokn3 "${BUILDLINK_LIBS.pthread:Q}; \
-	} >${PREFIX}/lib/pkgconfig/nss.pc
+	} >${DESTDIR}${PREFIX}/lib/pkgconfig/nss.pc
 
 # The exact set of libfreebl* libs built and installed depends on the
 # operating system and platform.  For example, on solaris/sparc you might
@@ -72,7 +74,8 @@ post-install:
 	ls ${PREFIX}/lib/nss/libfreebl*.${SO_SUFFIX} | ${SORT} | \
 		${SED} 's;${PREFIX}/;;g' >> ${PLIST_SRC}
 	${AWK} 'ok == 1 {print} /@comment libfreebl/ {ok=1}' ${.CURDIR}/PLIST >> ${PLIST_SRC}
-	cd ${PREFIX}/include/nss && ${CHMOD} ${SHAREMODE} nss/*.h dbm/*.h nss/*.api
+	cd ${DESTDIR}${PREFIX}/include/nss && \
+		${CHMOD} ${SHAREMODE} nss/*.h dbm/*.h nss/*.api
 
 BUILDLINK_API_DEPENDS.nspr+=	nspr>=4.4.1nb2
 

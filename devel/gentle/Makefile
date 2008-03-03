@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/04 21:35:58 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/03 17:45:35 jlam Exp $
 #
 
 DISTNAME=		gentle-97
@@ -9,6 +9,8 @@ MAINTAINER=		MarkoSchuetz@web.de
 HOMEPAGE=		http://gentle.compilertools.net/
 COMMENT=		Gentle Compiler Construction System
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LIBTOOL=		yes
 INSTALLATION_DIRS=	bin lib
 
@@ -18,25 +20,29 @@ do-build:
 	(cd ${WRKSRC}/reflex ; LIBTOOL=${LOCALBASE}/bin/libtool ./build)
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/gentle/gentle ${PREFIX}/bin
-	${INSTALL_LIB} ${WRKSRC}/gentle/grts.o ${PREFIX}/lib
-	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/libgentle.la ${PREFIX}/lib
-	${LIBTOOL} --mode=finish ${PREFIX}/lib
-	${INSTALL_PROGRAM} ${WRKSRC}/reflex/reflex ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/gentle/html
+	${INSTALL_PROGRAM} ${WRKSRC}/gentle/gentle ${DESTDIR}${PREFIX}/bin
+	${INSTALL_LIB} ${WRKSRC}/gentle/grts.o ${DESTDIR}${PREFIX}/lib
+	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/libgentle.la \
+		${DESTDIR}${PREFIX}/lib
+	${LIBTOOL} --mode=finish ${DESTDIR}${PREFIX}/lib
+	${INSTALL_PROGRAM} ${WRKSRC}/reflex/reflex ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/html/gentle/html
 	(for i in ${WRKSRC}/html/* ; do \
-		${INSTALL_DATA} $$i ${PREFIX}/share/doc/html/gentle/html ; \
+		${INSTALL_DATA} $$i \
+			${DESTDIR}${PREFIX}/share/doc/html/gentle/html ; \
 	done)
-	${INSTALL_DATA} ${WRKSRC}/BOOK.html ${PREFIX}/share/doc/html/gentle
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gentle
-	${INSTALL_DATA} ${WRKSRC}/BOOK.ps ${PREFIX}/share/doc/gentle
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gentle
+	${INSTALL_DATA} ${WRKSRC}/BOOK.html \
+		${DESTDIR}${PREFIX}/share/doc/html/gentle
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/gentle
+	${INSTALL_DATA} ${WRKSRC}/BOOK.ps ${DESTDIR}${PREFIX}/share/doc/gentle
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/gentle
 	(for i in calc flat micro nested polish virtual ; do \
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gentle/$$i ; \
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/gentle/$$i ; \
 	for j in ${WRKSRC}/examples/$$i/* ; do \
-	${INSTALL_DATA} $$j ${PREFIX}/share/examples/gentle/$$i ; \
+	${INSTALL_DATA} $$j ${DESTDIR}${PREFIX}/share/examples/gentle/$$i ; \
 	done ; \
 	done)
-	${INSTALL_DATA} ${WRKSRC}/examples/README ${PREFIX}/share/examples/gentle
+	${INSTALL_DATA} ${WRKSRC}/examples/README \
+		${DESTDIR}${PREFIX}/share/examples/gentle
 
 .include "../../mk/bsd.pkg.mk"
