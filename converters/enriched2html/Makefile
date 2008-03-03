@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/03/04 21:29:06 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/03 05:51:08 jlam Exp $
 #
 
 DISTNAME=	enriched2html-1.0
@@ -9,6 +9,8 @@ DISTFILES=	enriched2html.c
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# none
 COMMENT=	Converts from text/enriched to HTML
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 
@@ -21,6 +23,6 @@ do-build:
 	cd ${WRKSRC} && ${CC} ${CFLAGS} enriched2html.c -o enriched2html
 
 do-install:
-	cd ${WRKSRC} && ${INSTALL_PROGRAM} enriched2html ${PREFIX}/bin
+	cd ${WRKSRC} && ${INSTALL_PROGRAM} enriched2html ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"
