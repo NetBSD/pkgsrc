@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/10/04 20:51:40 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2008/03/03 05:33:32 jlam Exp $
 
 DISTNAME=	plp_1_8
 PKGNAME=	plp-1.8
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://web.archive.org/web/20031214215022/http://www.proudman51.freeserve.co.uk/psion/
 COMMENT=	Tools to talk to the PSION organiser
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	gmake
 USE_LIBTOOL=	yes
@@ -17,10 +19,10 @@ USE_LIBTOOL=	yes
 INSTALLATION_DIRS=	bin lib
 
 do-install:
-	${LIBTOOL} --mode=install ${INSTALL_DATA} ${WRKSRC}/utils/libplputils.la ${PREFIX}/lib
-	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/ncp/ncp ${PREFIX}/bin
-	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/rfsv/rfsv ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/plp
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/plp
+	${LIBTOOL} --mode=install ${INSTALL_DATA} ${WRKSRC}/utils/libplputils.la ${DESTDIR}${PREFIX}/lib
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/ncp/ncp ${DESTDIR}${PREFIX}/bin
+	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/rfsv/rfsv ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/plp
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/plp
 
 .include "../../mk/bsd.pkg.mk"
