@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2007/03/17 20:43:24 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2008/03/03 05:33:32 jlam Exp $
 
 DISTNAME=	pilotmgr-1.109
 CATEGORIES=	comms
@@ -12,6 +12,8 @@ COMMENT=	Synchronize databases on any 3Com Palm device
 DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=	p5-Tk-[0-9]*:../../x11/p5-Tk
 DEPENDS+=	p5-pilot-link-[0-9]*:../../comms/p5-pilot-link
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=		YES
 NO_BUILD=		YES
@@ -35,24 +37,24 @@ pre-install:
 	${FIND} ${WRKSRC} -name '*.orig' -print | ${XARGS} ${RM} -f
 
 do-install:
-	${INSTALL_DATA_DIR} ${PM_PERL_DIR}
-	${INSTALL_DATA_DIR} ${PM_DOC_DIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/PilotManager ${PM_PERL_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PM_PERL_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PM_DOC_DIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/PilotManager ${DESTDIR}${PM_PERL_DIR}
 	for FILE in ${WRKSRC}/*.pm; do \
-		${INSTALL_DATA} $$FILE ${PM_PERL_DIR}; \
+		${INSTALL_DATA} $$FILE ${DESTDIR}${PM_PERL_DIR}; \
 	done
-	${LN} -fs ${PM_PERL_DIR}/PilotManager ${PREFIX}/bin/PilotManager
+	${LN} -fs ${PM_PERL_DIR}/PilotManager ${DESTDIR}${PREFIX}/bin/PilotManager
 	cd ${WRKSRC} && \
 		for DIR in lib/*; do \
-			${INSTALL_DATA_DIR} ${PM_PERL_DIR}/$$DIR; \
+			${INSTALL_DATA_DIR} ${DESTDIR}${PM_PERL_DIR}/$$DIR; \
 			for FILE in $$DIR/*; do \
-				${INSTALL_DATA} $$FILE ${PM_PERL_DIR}/$$DIR; \
+				${INSTALL_DATA} $$FILE ${DESTDIR}${PM_PERL_DIR}/$$DIR; \
 			done; \
 		done
 	for FILE in ${WRKSRC}/docs/*; do \
-		${INSTALL_DATA} $$FILE ${PM_DOC_DIR}; \
+		${INSTALL_DATA} $$FILE ${DESTDIR}${PM_DOC_DIR}; \
 	done
-	${LN} -fs ${PM_DOC_DIR} ${PM_PERL_DIR}/docs
+	${LN} -fs ${PM_DOC_DIR} ${DESTDIR}${PM_PERL_DIR}/docs
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
