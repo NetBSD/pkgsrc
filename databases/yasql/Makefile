@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/07/07 22:10:07 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/03 15:21:07 jlam Exp $
 
 DISTNAME=	yasql-1.81
 PKGREVISION=	1
@@ -12,6 +12,8 @@ COMMENT=	Yet another SQLPlus replacement for Oracle
 DEPENDS+=	p5-DBD-Oracle-[0-9]*:../../databases/p5-DBD-Oracle
 DEPENDS+=	p5-Term-ReadLine-[0-9]*:../../devel/p5-Term-ReadLine
 DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 GNU_CONFIGURE=	yes
@@ -28,10 +30,11 @@ post-configure:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${MAKE} default
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/yasql ${PREFIX}/bin/yasql
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/yasql
+	${INSTALL_SCRIPT} ${WRKSRC}/yasql ${DESTDIR}${PREFIX}/bin/yasql
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/yasql
 	${INSTALL_DATA} ${WRKSRC}/yasql.conf \
-		${PREFIX}/share/examples/yasql/yasql.conf
-	${INSTALL_MAN} ${WRKSRC}/yasql.1 ${PREFIX}/${PKGMANDIR}/man1/yasql.1
+		${DESTDIR}${PREFIX}/share/examples/yasql/yasql.conf
+	${INSTALL_MAN} ${WRKSRC}/yasql.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/yasql.1
 
 .include "../../mk/bsd.pkg.mk"
