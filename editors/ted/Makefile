@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/06/08 18:41:22 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2008/03/03 18:25:53 jlam Exp $
 
 DISTNAME=	ted-2.16.src
 PKGNAME=	ted-2.16
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.nllgg.nl/Ted/
 COMMENT=	X11 based WordPad-like word processor
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gtar
 
@@ -56,8 +57,8 @@ post-patch:
 		Ted.ad.sample > Ted.ad
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/Ted/Ted ${PREFIX}/bin/Ted
-	${INSTALL_DATA_DIR} ${AFMDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/Ted/Ted ${DESTDIR}${PREFIX}/bin/Ted
+	${INSTALL_DATA_DIR} ${DESTDIR}${AFMDIR}
 	${INSTALL_DATA} \
 		${WRKSRC}/afm/Courier-Bold.afm \
 		${WRKSRC}/afm/Courier-BoldOblique.afm \
@@ -72,12 +73,13 @@ do-install:
 		${WRKSRC}/afm/Times-BoldItalic.afm \
 		${WRKSRC}/afm/Times-Italic.afm \
 		${WRKSRC}/afm/Times-Roman.afm \
-		${AFMDIR}
-	${INSTALL_DATA_DIR} ${INDDIR}
-	${INSTALL_DATA} ${FILESDIR}/README.ind ${INDDIR}
-	${INSTALL_DATA_DIR} ${INFODIR}
-	${INSTALL_DATA} ${WRKSRC}/Ted/TedDocument-en_US.rtf ${INFODIR}
-	${INSTALL_DATA}	${WRKSRC}/Ted/Ted.ad ${PREFIX}/lib/X11/app-defaults/Ted
+		${DESTDIR}${AFMDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${INDDIR}
+	${INSTALL_DATA} ${FILESDIR}/README.ind ${DESTDIR}${INDDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${INFODIR}
+	${INSTALL_DATA} ${WRKSRC}/Ted/TedDocument-en_US.rtf ${DESTDIR}${INFODIR}
+	${INSTALL_DATA}	${WRKSRC}/Ted/Ted.ad \
+		${DESTDIR}${PREFIX}/lib/X11/app-defaults/Ted
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"

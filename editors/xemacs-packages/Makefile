@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2008/01/01 20:22:36 agc Exp $
+# $NetBSD: Makefile,v 1.54 2008/03/03 18:25:53 jlam Exp $
 
 DISTNAME=	xemacs-packages
 PKGNAME=	xemacs-packages-1.16
@@ -132,6 +132,8 @@ COMMENT=	Common elisp packages for xemacs 21
 
 DEPENDS+=	xemacs{,-nox11}>=21.1.14:../../editors/xemacs
 
+PKG_DESTDIR_SUPPORT=	destdir
+
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGBASE}
 EXTRACT_ONLY=	# empty
@@ -206,27 +208,29 @@ xemacs-update-package: xemacs-fetch-package-list xemacs-merge-package-list
 .endif	# PKG_DEVELOPER && OPSYS == "NetBSD"
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/xemacs/xemacs-packages
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/xemacs/xemacs-packages
 .for DISTFILE in ${DISTFILES}
 	@${ECHO_MSG} -n "Extracting ${DISTFILE} ... "
-	@${GTAR} xCzf ${PREFIX}/lib/xemacs/xemacs-packages \
+	@${GTAR} xCzf ${DESTDIR}${PREFIX}/lib/xemacs/xemacs-packages \
 		${DISTDIR}/${DIST_SUBDIR}/${DISTFILE}
 	@${ECHO_MSG} "done"
 .endfor
 	@${ECHO_MSG} -n "Fixing file ownerships ... "
-	@${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/lib/xemacs/xemacs-packages
+	@${CHOWN} -R ${BINOWN}:${BINGRP} \
+		${DESTDIR}${PREFIX}/lib/xemacs/xemacs-packages
 	@${ECHO_MSG} "done"
 .for PROG in ${REPLACEMENT_PROGS}
 	@${ECHO_MSG} "Fixing ${PROG} paths"
 	for f in ${REPLACEMENTS.${PROG}}; do 			\
-		cp $$f $$f.pre;					\
-		sed -e 's|#!.*${PROG}|${PREFIX}/bin/${PROG}|' $$f.pre > $$f;\
-		rm $$f.pre;					\
+		cp ${DESTDIR}$$f ${DESTDIR}$$f.pre;		\
+		sed -e 's|#!.*${PROG}|${PREFIX}/bin/${PROG}|'	\
+			${DESTDIR}$$f.pre > ${DESTDIR}$$f;	\
+		rm ${DESTDIR}$$f.pre;				\
 	done
 .endfor
 .if defined(MANZ)
 	@${ECHO_MSG} -n "Compressing \".el\" files ... "
-	@cd ${PREFIX} && \
+	@cd ${DESTDIR}${PREFIX} && \
 		${GREP} '\$${ELSUFX}$$' ${PLIST_SRC} | \
 		${SED} -e 's#\$${ELSUFX}$$##' | \
 		${XARGS} ${GZIP_CMD}

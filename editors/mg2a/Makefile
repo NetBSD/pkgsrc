@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/01/07 00:41:29 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/03 18:25:52 jlam Exp $
 
 DISTNAME=	mg2a
 PKGNAME=	mg2a-1.11
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	tron@NetBSD.org
 COMMENT=	Small, fast, public domain EMACS style editor
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		mg
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
@@ -20,8 +22,8 @@ pre-configure:
 	esac
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mg ${PREFIX}/bin/mg
-	${INSTALL_MAN} ${WRKSRC}/mg.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/mg.rc ${PREFIX}/bin/mg.rc
+	${INSTALL_PROGRAM} ${WRKSRC}/mg ${DESTDIR}${PREFIX}/bin/mg
+	${INSTALL_MAN} ${WRKSRC}/mg.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/mg.rc ${DESTDIR}${PREFIX}/bin/mg.rc
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/04/17 13:46:22 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2008/03/03 18:25:52 jlam Exp $
 #
 
 DISTNAME=		gice-0.6.2
@@ -11,6 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gice.sourceforge.net/
 COMMENT=		Powerful C text editor with advanced features
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}/gice
 USE_TOOLS+=		gmake pkg-config
 GNU_CONFIGURE=		YES
@@ -21,6 +23,6 @@ INSTALLATION_DIRS=	bin
 .include "../../x11/gtk2/buildlink3.mk"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/gice ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/gice ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/07/05 18:21:20 jnemeth Exp $
+# $NetBSD: Makefile,v 1.19 2008/03/03 18:25:53 jlam Exp $
 #
 
 DISTNAME=	speedbar-0.14beta4
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cedet/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cedet.sourceforge.net/speedbar.shtml
 COMMENT=	Directory and code browser for emacs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/emacs.mk"
 
@@ -31,13 +33,14 @@ IMAGES=	sb-dir-plus.xpm sb-dir-minus.xpm sb-dir.xpm sb-pg-plus.xpm 	\
 INSTALLATION_DIRS=	${EMACS_INFOPREFIX}
 
 do-install:
-	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/speedbar
+	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/speedbar
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} 	\
-			${EMACS_LISPPREFIX}/speedbar
-	cd ${WRKSRC} && ${INSTALL_DATA} ${IMAGES} ${EMACS_LISPPREFIX}/speedbar
+			${DESTDIR}${EMACS_LISPPREFIX}/speedbar
+	cd ${WRKSRC} && ${INSTALL_DATA} ${IMAGES}			\
+			${DESTDIR}${EMACS_LISPPREFIX}/speedbar
 	cd ${WRKSRC}; for file in *.info *.info-[0-9]*; do		\
 		${TEST} ! -f "$$file" ||				\
-		${INSTALL_DATA} "$$file" ${EMACS_INFOPREFIX};		\
+		${INSTALL_DATA} "$$file" ${DESTDIR}${EMACS_INFOPREFIX};	\
 	done
 
 .include "../../mk/bsd.pkg.mk"
