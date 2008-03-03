@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/08/10 03:21:39 minskim Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/03 00:51:44 jlam Exp $
 #
 
 DISTNAME=	skampi4
@@ -16,6 +16,8 @@ COMMENT=	MPI (Message Passing Interface) benchmarks
 DEPENDS+=	gnuplot>=3.7.1:../../graphics/gnuplot
 TEX_ACCEPTED=	teTeX3
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
 USE_TOOLS+=	perl:run
@@ -31,26 +33,26 @@ do-build:
 		${PREFIX}/bin/mpicc -o skosfile skosfile.c -lm)
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/skosfile ${PREFIX}/bin/skosfile
+	${INSTALL_PROGRAM} ${WRKSRC}/skosfile ${DESTDIR}${PREFIX}/bin/skosfile
 	${INSTALL_SCRIPT} ${WRKSRC}/report_generator/dorep4.pl 	\
-		${PREFIX}/bin/dorep4.pl
-	${INSTALL_DATA_DIR} ${PREFIX}/share/skampi/dri
+		${DESTDIR}${PREFIX}/bin/dorep4.pl
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/skampi/dri
 	(cd ${WRKSRC}/report_generator/dri && 			\
-		${PAX} -rw . ${PREFIX}/share/skampi/dri)
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/skampi
+		${PAX} -rw . ${DESTDIR}${PREFIX}/share/skampi/dri)
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/skampi
 	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}_userman.ps 	\
-		${PREFIX}/share/doc/skampi/
+		${DESTDIR}${PREFIX}/share/doc/skampi/
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/skampili.ps 	\
-		${PREFIX}/share/doc/skampi/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/skampi
+		${DESTDIR}${PREFIX}/share/doc/skampi/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/skampi
 	${INSTALL_DATA} ${WRKSRC}/.skampi 			\
-		${PREFIX}/share/examples/skampi/dot.skampi
+		${DESTDIR}${PREFIX}/share/examples/skampi/dot.skampi
 	${INSTALL_DATA} ${WRKSRC}/.skampi-all-collectives 	\
-		${PREFIX}/share/examples/skampi/dot.skampi-all-collectives
+		${DESTDIR}${PREFIX}/share/examples/skampi/dot.skampi-all-collectives
 	${INSTALL_DATA} ${WRKSRC}/.skampi-dt-long 		\
-		${PREFIX}/share/examples/skampi/dot.skampi-dt-long
+		${DESTDIR}${PREFIX}/share/examples/skampi/dot.skampi-dt-long
 	${INSTALL_DATA} ${WRKSRC}/.skampi-dt-short 		\
-		${PREFIX}/share/examples/skampi/dot.skampi-dt-short
+		${DESTDIR}${PREFIX}/share/examples/skampi/dot.skampi-dt-short
 
 .include "../../parallel/mpi-ch/buildlink3.mk"
 .include "../../mk/tex.buildlink3.mk"
