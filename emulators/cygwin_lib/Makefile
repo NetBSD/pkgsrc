@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/04/04 14:37:52 tv Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/03 19:21:37 jlam Exp $
 #
 
 DISTNAME=		cygwin-1.5.13-1
@@ -13,6 +13,8 @@ COMMENT=		Basic Cygwin library and executables for emulation
 
 ONLY_FOR_PLATFORM=	Interix-*-*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DIST_SUBDIR=		cygwin
 WRKSRC=			${WRKDIR}
 
@@ -22,13 +24,15 @@ INSTALLATION_DIRS=	bin emul/cygwin/bin
 do-build: # nothing
 
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/usr/bin/cygwin1.dll ${PREFIX}/bin/
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/emul/cygwin ${PREFIX}/emul/cygwin/bin
+	${INSTALL_LIB} ${WRKSRC}/usr/bin/cygwin1.dll ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM_DIR} ${PREFIX}/emul/cygwin \
+		${DESTDIR}${PREFIX}/emul/cygwin/bin
 	@for f in ${WRKSRC}/usr/bin/*.exe; do \
-		${INSTALL_LIB} $$f ${PREFIX}/emul/cygwin/bin/$$(basename $${f%.exe}); \
+		${INSTALL_LIB} $$f \
+		${DESTDIR}${PREFIX}/emul/cygwin/bin/$$(basename $${f%.exe}); \
 	done
 .for f in ${SYMLINKS}
-	${LN} -sf ../emul/cygwin/bin/${f} ${PREFIX}/bin/cygwin-${f}
+	${LN} -sf ../emul/cygwin/bin/${f} ${DESTDIR}${PREFIX}/bin/cygwin-${f}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

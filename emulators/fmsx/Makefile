@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/02/22 19:26:27 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2008/03/03 19:21:38 jlam Exp $
 
 DISTNAME=	fMSX24.tar
 PKGNAME=	fmsx-2.4
@@ -16,6 +16,8 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}/MSX
 
@@ -46,11 +48,11 @@ pre-install:
 
 # Makefile of fMSX doesn't have install target.
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/fmsx ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/rddsk ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/wrdsk ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/*.ROM ${PREFIX}/share/fmsx
-	${INSTALL_DATA} ${WRKSRC}/fMSX.html ${PREFIX}/share/doc/html
+	${INSTALL_PROGRAM} ${WRKSRC}/fmsx ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/rddsk ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/wrdsk ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/*.ROM ${DESTDIR}${PREFIX}/share/fmsx
+	${INSTALL_DATA} ${WRKSRC}/fMSX.html ${DESTDIR}${PREFIX}/share/doc/html
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/10/11 10:22:56 jnemeth Exp $
+# $NetBSD: Makefile,v 1.24 2008/03/03 19:21:38 jlam Exp $
 
 DISTNAME=	vmware-netbsd-3.2.1.8
 PKGNAME=	vmware-module-3.2.1.8
@@ -13,6 +13,8 @@ COMMENT=	Kernel modules for the VMware 3.2.1 PC emulator
 CONFLICTS=	vmware-module-1.*
 
 ONLY_FOR_PLATFORM=	NetBSD-*-i386
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 
@@ -42,24 +44,34 @@ do-build:
 .endfor
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/linuxrtc ${PREFIX}/etc/rc.conf.d
-	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/vmmon ${PREFIX}/etc/rc.conf.d
-	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/vmnet ${PREFIX}/etc/rc.conf.d
-	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/vmnetif ${PREFIX}/etc/rc.conf.d
-	${INSTALL_DATA} ${WRKSRC}/source/linuxrtc/linuxrtc.o ${PREFIX}/lkm
-	${INSTALL_DATA} ${WRKSRC}/source/vmmon/vmmon.o ${PREFIX}/lkm
-	${INSTALL_DATA} ${WRKSRC}/source/vmnet/vmnet.o ${PREFIX}/lkm
-	${INSTALL_SCRIPT} ${WRKSRC}/share/lkm/vmnet_post.sh ${PREFIX}/lkm
-	${INSTALL_SCRIPT} ${WRKSRC}/share/lkm/linuxrtc_post.sh ${PREFIX}/lkm
-	${INSTALL_SCRIPT} ${WRKSRC}/share/lkm/vmmon_post.sh ${PREFIX}/lkm
+	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/linuxrtc \
+		${DESTDIR}${PREFIX}/etc/rc.conf.d
+	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/vmmon \
+		${DESTDIR}${PREFIX}/etc/rc.conf.d
+	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/vmnet \
+		${DESTDIR}${PREFIX}/etc/rc.conf.d
+	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/vmnetif \
+		${DESTDIR}${PREFIX}/etc/rc.conf.d
+	${INSTALL_DATA} ${WRKSRC}/source/linuxrtc/linuxrtc.o \
+		${DESTDIR}${PREFIX}/lkm
+	${INSTALL_DATA} ${WRKSRC}/source/vmmon/vmmon.o \
+		${DESTDIR}${PREFIX}/lkm
+	${INSTALL_DATA} ${WRKSRC}/source/vmnet/vmnet.o \
+		${DESTDIR}${PREFIX}/lkm
+	${INSTALL_SCRIPT} ${WRKSRC}/share/lkm/vmnet_post.sh \
+		${DESTDIR}${PREFIX}/lkm
+	${INSTALL_SCRIPT} ${WRKSRC}/share/lkm/linuxrtc_post.sh \
+		${DESTDIR}${PREFIX}/lkm
+	${INSTALL_SCRIPT} ${WRKSRC}/share/lkm/vmmon_post.sh \
+		${DESTDIR}${PREFIX}/lkm
 	@cd ${WRKSRC}/rc.d && for f in linuxrtc vmmon vmnet vmnetif; do \
 		${SED}  -e 's,@PREFIX@,${PREFIX},' < $$f > $$f.patched; \
-		${INSTALL_SCRIPT} $$f.patched ${PREFIX}/etc/rc.d/$$f; \
+		${INSTALL_SCRIPT} $$f.patched ${DESTDIR}${PREFIX}/etc/rc.d/$$f; \
 	done
 	${SED} -e 's,@VMWARE_PREFIX@,${PREFIX},' \
 		< ${WRKSRC}/rc.conf.d/vmware > ${WRKSRC}/rc.conf.d/vmware.patched
 	${INSTALL_DATA} ${WRKSRC}/rc.conf.d/vmware.patched \
-		${PREFIX}/etc/rc.conf.d/vmware
+		${DESTDIR}${PREFIX}/etc/rc.conf.d/vmware
 
 .include "../../mk/bsd.pkg.mk"
 

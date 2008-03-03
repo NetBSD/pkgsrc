@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/07/30 18:55:51 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2008/03/03 19:21:37 jlam Exp $
 #
 
 DISTNAME=		dutil232
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.logiqx.com/Tools/DatUtil/DatUtil.php
 COMMENT=		Create and convert emulator rom checksum files
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}
@@ -23,9 +25,9 @@ post-extract:
 	${MKDIR} ${WRKSRC}/obj
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/datutil ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/DatUtil
-	${INSTALL_DATA} ${WRKSRC}/*.txt ${PREFIX}/share/doc/DatUtil
+	${INSTALL_PROGRAM} ${WRKSRC}/datutil ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/DatUtil
+	${INSTALL_DATA} ${WRKSRC}/*.txt ${DESTDIR}${PREFIX}/share/doc/DatUtil
 
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.DatLib+=	DatLib>=2.21

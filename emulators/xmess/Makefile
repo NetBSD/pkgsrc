@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2007/02/07 19:20:12 joerg Exp $
+# $NetBSD: Makefile,v 1.90 2008/03/03 19:21:39 jlam Exp $
 #
 
 DISTNAME=		xmame-0.106
@@ -14,6 +14,8 @@ COMMENT=		X11 emulator for old computers and console machines
 RESTRICTED=		selling is not allowed
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 MAKE_FILE=		makefile.unix
@@ -105,12 +107,13 @@ post-configure:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${TARGET}.${MAME_DISP_METHOD}	\
-		${PREFIX}/bin/${TARGET}
-	${INSTALL_PROGRAM} ${WRKSRC}/imgtool ${PREFIX}/bin/imgtool
+		${DESTDIR}${PREFIX}/bin/${TARGET}
+	${INSTALL_PROGRAM} ${WRKSRC}/imgtool ${DESTDIR}${PREFIX}/bin/imgtool
 	${INSTALL_MAN} ${WRKSRC}/doc/${TARGET}.6			\
-		${PREFIX}/${PKGMANDIR}/man6/${TARGET}.6
-	${INSTALL_DATA_DIR} ${ROMPATH}
-	${INSTALL_DATA} ${WRKSRC}/doc/${TARGET}rc ${ROMPATH}/${TARGET}rc
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/${TARGET}.6
+	${INSTALL_DATA_DIR} ${DESTDIR}${ROMPATH}
+	${INSTALL_DATA} ${WRKSRC}/doc/${TARGET}rc			\
+		${DESTDIR}${ROMPATH}/${TARGET}rc
 
 # Pragma once is not needed, and case warnings/errors on gcc
 SUBST_CLASSES+=		pragma
