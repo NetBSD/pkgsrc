@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2006/04/06 06:21:41 reed Exp $
+# $NetBSD: Makefile,v 1.31 2008/03/03 15:21:07 jlam Exp $
 #
 
 DISTNAME=	geneweb-4.10
@@ -11,6 +11,9 @@ HOMEPAGE=	http://cristal.inria.fr/~ddr/GeneWeb/
 COMMENT=	GeneWeb is a comprehensive genealogy database application
 
 DIST_SUBDIR=	${PKGNAME_NOREV}nb1
+
+PKG_DESTDIR_SUPPORT=	destdir
+
 USE_TOOLS+=	gmake
 
 RCD_SCRIPTS=	geneweb
@@ -49,35 +52,35 @@ post-build:
 		cd ${WRKSRC} && ${GMAKE} distrib
 
 do-install:
-		${INSTALL_DATA_DIR} ${PREFIX}/share/examples/geneweb
-		${INSTALL_DATA_DIR} ${PREFIX}/share/doc/geneweb
-		${INSTALL_DATA_DIR} ${PREFIX}/share/geneweb/etc
-		${INSTALL_DATA_DIR} ${PREFIX}/share/geneweb/gwtp_tmp
-		${INSTALL_DATA_DIR} ${PREFIX}/share/geneweb/images
-		${INSTALL_DATA_DIR} ${PREFIX}/share/geneweb/lang
-		${INSTALL_DATA_DIR} ${PREFIX}/share/geneweb/setup
+		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/geneweb
+		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/geneweb
+		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/geneweb/etc
+		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/geneweb/gwtp_tmp
+		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/geneweb/images
+		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/geneweb/lang
+		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/geneweb/setup
 		cd ${WRKSRC}/distribution/gw && \
-		${INSTALL_PROGRAM} gwd ${PREFIX}/libexec && \
-		${INSTALL_PROGRAM} consang ${PREFIX}/bin && \
-		${INSTALL_PROGRAM} gwc ${PREFIX}/bin && \
-		${INSTALL_PROGRAM} gwtp_tmp/gwtp ${PREFIX}/bin && \
-		${INSTALL_PROGRAM} ged2gwb ${PREFIX}/bin && \
-		${INSTALL_PROGRAM} gwb2ged ${PREFIX}/bin && \
-		${INSTALL_PROGRAM} gwsetup ${PREFIX}/sbin && \
-		${INSTALL_PROGRAM} gwu ${PREFIX}/bin && \
-		${CP} -Rp doc/* ${PREFIX}/share/doc/geneweb && \
-		${CP} -Rp etc ${PREFIX}/share/geneweb && \
-		${CP} -Rp gwtp_tmp ${PREFIX}/share/geneweb && \
-		${CP} -Rp images ${PREFIX}/share/geneweb && \
-		${CP} -Rp lang ${PREFIX}/share/geneweb && \
-		${CP} -Rp setup ${PREFIX}/share/geneweb && \
-		${INSTALL_DATA} a.gwf ${PREFIX}/share/examples/geneweb && \
-		${INSTALL_DATA} only.txt ${PREFIX}/share/examples/geneweb
-		${TOUCH} ${PREFIX}/share/geneweb/gwtp_tmp/passwd
-		${TOUCH} ${PREFIX}/share/geneweb/gwtp_tmp/gwtp.log
-		${CHMOD} 600 ${PREFIX}/share/geneweb/gwtp_tmp/passwd
-		${CHMOD} 600 ${PREFIX}/share/geneweb/gwtp_tmp/gwtp.log
-		${CHOWN} -R nobody.${ROOT_GROUP} ${PREFIX}/share/geneweb
+		${INSTALL_PROGRAM} gwd ${DESTDIR}${PREFIX}/libexec && \
+		${INSTALL_PROGRAM} consang ${DESTDIR}${PREFIX}/bin && \
+		${INSTALL_PROGRAM} gwc ${DESTDIR}${PREFIX}/bin && \
+		${INSTALL_PROGRAM} gwtp_tmp/gwtp ${DESTDIR}${PREFIX}/bin && \
+		${INSTALL_PROGRAM} ged2gwb ${DESTDIR}${PREFIX}/bin && \
+		${INSTALL_PROGRAM} gwb2ged ${DESTDIR}${PREFIX}/bin && \
+		${INSTALL_PROGRAM} gwsetup ${DESTDIR}${PREFIX}/sbin && \
+		${INSTALL_PROGRAM} gwu ${DESTDIR}${PREFIX}/bin && \
+		${CP} -Rp doc/* ${DESTDIR}${PREFIX}/share/doc/geneweb && \
+		${CP} -Rp etc ${DESTDIR}${PREFIX}/share/geneweb && \
+		${CP} -Rp gwtp_tmp ${DESTDIR}${PREFIX}/share/geneweb && \
+		${CP} -Rp images ${DESTDIR}${PREFIX}/share/geneweb && \
+		${CP} -Rp lang ${DESTDIR}${PREFIX}/share/geneweb && \
+		${CP} -Rp setup ${DESTDIR}${PREFIX}/share/geneweb && \
+		${INSTALL_DATA} a.gwf ${DESTDIR}${PREFIX}/share/examples/geneweb && \
+		${INSTALL_DATA} only.txt ${DESTDIR}${PREFIX}/share/examples/geneweb
+		${TOUCH} ${DESTDIR}${PREFIX}/share/geneweb/gwtp_tmp/passwd
+		${TOUCH} ${DESTDIR}${PREFIX}/share/geneweb/gwtp_tmp/gwtp.log
+		${CHMOD} 600 ${DESTDIR}${PREFIX}/share/geneweb/gwtp_tmp/passwd
+		${CHMOD} 600 ${DESTDIR}${PREFIX}/share/geneweb/gwtp_tmp/gwtp.log
+		${CHOWN} -R nobody.${ROOT_GROUP} ${DESTDIR}${PREFIX}/share/geneweb
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
