@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.151 2007/10/09 19:19:09 martti Exp $
+# $NetBSD: Makefile,v 1.152 2008/03/03 19:21:39 jlam Exp $
 #
 
 DISTNAME=		xmame-0.106
@@ -14,6 +14,8 @@ LICENSE=		mame-license
 RESTRICTED=		selling is not allowed
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 MAKE_FILE=		makefile.unix
@@ -101,18 +103,21 @@ post-configure:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${TARGET}.${MAME_DISP_METHOD}	\
-		${PREFIX}/bin/${TARGET}
-	${INSTALL_PROGRAM} ${WRKSRC}/romcmp ${PREFIX}/bin/romcmp
-	${INSTALL_PROGRAM} ${WRKSRC}/chdman ${PREFIX}/bin/chdman
-	${INSTALL_PROGRAM} ${WRKSRC}/xml2info ${PREFIX}/bin/xml2info
+		${DESTDIR}${PREFIX}/bin/${TARGET}
+	${INSTALL_PROGRAM} ${WRKSRC}/romcmp ${DESTDIR}${PREFIX}/bin/romcmp
+	${INSTALL_PROGRAM} ${WRKSRC}/chdman ${DESTDIR}${PREFIX}/bin/chdman
+	${INSTALL_PROGRAM} ${WRKSRC}/xml2info ${DESTDIR}${PREFIX}/bin/xml2info
 	${INSTALL_MAN} ${WRKSRC}/doc/${TARGET}.6			\
-		${PREFIX}/${PKGMANDIR}/man6/${TARGET}.6
-	${INSTALL_DATA_DIR} ${ROMPATH}
-	${INSTALL_DATA} ${WRKSRC}/doc/${TARGET}rc ${ROMPATH}/${TARGET}rc
-	${INSTALL_DATA_DIR}  ${PREFIX}/share/doc/html/xmame/
-	${INSTALL_DATA} ${WRKSRC}/doc/*.html ${PREFIX}/share/doc/html/xmame/
-	${INSTALL_DATA_DIR}  ${PREFIX}/share/doc/xmame
-	${INSTALL_DATA} ${WRKSRC}/doc/xmame-doc.txt ${PREFIX}/share/doc/xmame
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/${TARGET}.6
+	${INSTALL_DATA_DIR} ${DESTDIR}${ROMPATH}
+	${INSTALL_DATA} ${WRKSRC}/doc/${TARGET}rc			\
+		${DESTDIR}${ROMPATH}/${TARGET}rc
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/html/xmame/
+	${INSTALL_DATA} ${WRKSRC}/doc/*.html				\
+		${DESTDIR}${PREFIX}/share/doc/html/xmame/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/xmame
+	${INSTALL_DATA} ${WRKSRC}/doc/xmame-doc.txt			\
+		${DESTDIR}${PREFIX}/share/doc/xmame
 
 # Pragma once is not needed, and case warnings/errors on gcc
 SUBST_CLASSES+=		pragma

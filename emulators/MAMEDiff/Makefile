@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/07/08 09:42:33 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2008/03/03 19:21:37 jlam Exp $
 #
 
 DISTNAME=		mdiff226
@@ -11,6 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.logiqx.com/Tools/MAMEDiff/MAMEDiff.php
 COMMENT=		Compare MAME rom sets of different releases
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}
 MAKE_FILE=		makefile
@@ -22,9 +24,10 @@ post-extract:
 	${MKDIR} ${WRKSRC}/obj
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mamediff ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/MAMEDiff
-	${INSTALL_DATA} ${WRKSRC}/readme.txt ${PREFIX}/share/doc/MAMEDiff
+	${INSTALL_PROGRAM} ${WRKSRC}/mamediff ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/MAMEDiff
+	${INSTALL_DATA} ${WRKSRC}/readme.txt \
+		${DESTDIR}${PREFIX}/share/doc/MAMEDiff
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../emulators/DatLib/buildlink3.mk"

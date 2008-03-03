@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2007/04/06 06:03:08 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2008/03/03 19:21:38 jlam Exp $
 
 DISTNAME=	uae-0.8.25
 PKGREVISION=	3
@@ -11,6 +11,8 @@ HOMEPAGE=	http://uae.coresystems.de/
 COMMENT=	The UAE Amiga Emulator
 
 DEPENDS+=	unzip>=5.40:../../archivers/unzip
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	yes
@@ -26,10 +28,10 @@ CONFIGURE_ENV+=	cv_func_getmntinfo=yes fu_cv_sys_mounted_getmntinfo=yes
 INSTALLATION_DIRS=	bin
 
 do-install:
-	cd ${WRKSRC} && ${INSTALL_PROGRAM} readdisk uae ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/uae
+	cd ${WRKSRC} && ${INSTALL_PROGRAM} readdisk uae ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/uae
 	cd ${WRKSRC}/docs && ${INSTALL_DATA} FAQ README \
-		${PREFIX}/share/doc/uae
+		${DESTDIR}${PREFIX}/share/doc/uae
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

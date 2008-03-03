@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/06/12 16:28:06 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/03 19:21:38 jlam Exp $
 #
 
 DISTNAME=	generator-0.35-cbiere-r2
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ghostwhitecrab.de/generator/
 COMMENT=	Sega Mega drive genesis emulator (Improved)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 
@@ -29,9 +31,11 @@ CONFIGURE_ARGS+=	--with-sdl-audio
 CFLAGS+=	-DBYTES_HIGHFIRST
 .endif
 
+INSTALLATION_DIRS=	bin
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/main/generator-gtk \
-		${PREFIX}/bin/generator-cbiere-gtk
+		${DESTDIR}${PREFIX}/bin/generator-cbiere-gtk
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"

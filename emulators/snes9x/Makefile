@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2007/12/04 11:38:55 obache Exp $
+# $NetBSD: Makefile,v 1.44 2008/03/03 19:21:38 jlam Exp $
 
 SNESVER=		1.43
 DISTNAME=		snes9x-${SNESVER}-src
@@ -11,6 +11,8 @@ MASTER_SITES=		http://www.lysator.liu.se/snes9x/${SNESVER}/ \
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.snes9x.com/
 COMMENT=		Super Nintendo Entertainment System (SNES) emulator
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/snes9x
 USE_LANGUAGES=		c c++
@@ -31,16 +33,21 @@ SUBST_FILES.paircpp=	65c816.h sa1.h
 SUBST_SED.paircpp=	-e 's|pair|snes9x_pair|g'
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/snes9x ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/offsets ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snes9x
-	${INSTALL_MAN} ${WRKSRC}/doc/porting.txt ${PREFIX}/share/doc/snes9x
-	${INSTALL_MAN} ${WRKSRC}/changes.txt ${PREFIX}/share/doc/snes9x
-	${INSTALL_MAN} ${WRKSRC}/hardware.txt ${PREFIX}/share/doc/snes9x
-	${INSTALL_MAN} ${WRKSRC}/problems.txt ${PREFIX}/share/doc/snes9x
-	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/readme.txt ${PREFIX}/share/doc/snes9x
+	${INSTALL_PROGRAM} ${WRKSRC}/snes9x ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/offsets ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/snes9x
+	${INSTALL_MAN} ${WRKSRC}/doc/porting.txt \
+		${DESTDIR}${PREFIX}/share/doc/snes9x
+	${INSTALL_MAN} ${WRKSRC}/changes.txt \
+		${DESTDIR}${PREFIX}/share/doc/snes9x
+	${INSTALL_MAN} ${WRKSRC}/hardware.txt \
+		${DESTDIR}${PREFIX}/share/doc/snes9x
+	${INSTALL_MAN} ${WRKSRC}/problems.txt \
+		${DESTDIR}${PREFIX}/share/doc/snes9x
+	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/readme.txt \
+		${DESTDIR}${PREFIX}/share/doc/snes9x
 	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/readme.unix \
-		${PREFIX}/share/doc/snes9x
+		${DESTDIR}${PREFIX}/share/doc/snes9x
 
 .include "../../mk/bsd.prefs.mk"
 

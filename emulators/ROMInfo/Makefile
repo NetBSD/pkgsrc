@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/07/08 09:42:33 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/03 19:21:37 jlam Exp $
 #
 
 DISTNAME=		rinfo27
@@ -18,13 +18,16 @@ BUILD_TARGET=		rominfo
 EXTRACT_OPTS_ZIP=	-Laaqo
 INSTALLATION_DIRS=	bin
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 post-extract:
 	${MKDIR} ${WRKSRC}/obj
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/rominfo ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ROMInfo
-	${INSTALL_DATA} ${WRKSRC}/readme.txt ${PREFIX}/share/doc/ROMInfo
+	${INSTALL_PROGRAM} ${WRKSRC}/rominfo ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/ROMInfo
+	${INSTALL_DATA} ${WRKSRC}/readme.txt \
+		${DESTDIR}${PREFIX}/share/doc/ROMInfo
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../emulators/DatLib/buildlink3.mk"

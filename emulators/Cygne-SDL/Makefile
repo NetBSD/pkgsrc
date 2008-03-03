@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/12/18 01:34:54 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2008/03/03 19:21:37 jlam Exp $
 #
 
 DISTNAME=		Cygne-SDL-0.1-src
@@ -13,6 +13,8 @@ COMMENT=		Bandai Wonderswan Color handheld emulator
 
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 BUILD_DEPENDS+=		zip>=2.0:../../archivers/zip
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/Cygne-SDL-0.1
 MAKE_FILE=		Makefiles/Makefile.unix
@@ -30,14 +32,14 @@ post-build:
 		${LOCALBASE}/bin/zip Wondersnake.zip Wondersnake.wsc
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/cygne ${PREFIX}/bin/Cygne-SDL
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/Cygne-SDL
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/Cygne-SDL
-	${INSTALL_DATA_DIR} ${PREFIX}/share/Cygne-SDL
+	${INSTALL_PROGRAM} ${WRKSRC}/src/cygne ${DESTDIR}${PREFIX}/bin/Cygne-SDL
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/Cygne-SDL
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/Cygne-SDL
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/Cygne-SDL
 	${INSTALL_DATA} ${WRKSRC}/WonderSnake/Wondersnake.txt \
-		${PREFIX}/share/Cygne-SDL
+		${DESTDIR}${PREFIX}/share/Cygne-SDL
 	${INSTALL_DATA} ${WRKSRC}/WonderSnake/Wondersnake.zip \
-		${PREFIX}/share/Cygne-SDL
+		${DESTDIR}${PREFIX}/share/Cygne-SDL
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

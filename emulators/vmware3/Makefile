@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/11/25 11:52:45 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2008/03/03 19:21:39 jlam Exp $
 
 DISTNAME=	VMware-workstation-3.2.1-2242
 PKGNAME=	vmware-3.2.1pl1
@@ -25,6 +25,8 @@ LICENSE=	vmware-license
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	vmware
 EMUL_REQD=		suse>=6.4nb1
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 WRKSRC=			${WRKDIR}/vmware-distrib
 
@@ -56,41 +58,41 @@ do-install: do-install-dirs do-install-binaries do-install-docs \
 		do-install-share
 
 do-install-dirs:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vmware
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/vmware
 	for dirs in bin configurator doc isoimages help licenses messages smb xkeymap; do \
-		${INSTALL_DATA_DIR} ${PREFIX}/share/vmware/$$dirs; \
+		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/vmware/$$dirs; \
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vmware/licenses/site
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vmware/licenses/user
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vmware/messages/chef
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vmware/messages/ja
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vmware/messages/jive
-	${INSTALL_DATA_DIR} ${PREFIX}/share/vmware/smb/codepages
-	${INSTALL_DATA_DIR} ${VMWARE_CFG_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/vmware/licenses/site
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/vmware/licenses/user
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/vmware/messages/chef
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/vmware/messages/ja
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/vmware/messages/jive
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/vmware/smb/codepages
+	${INSTALL_DATA_DIR} ${DESTDIR}${VMWARE_CFG_DIR}
 
 do-install-binaries:
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/* ${PREFIX}/bin
-	${CHMOD} u+s ${PREFIX}/bin/vmware
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/* ${DESTDIR}${PREFIX}/bin
+	${CHMOD} u+s ${DESTDIR}${PREFIX}/bin/vmware
 
 do-install-docs:
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/vmware/doc
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${DESTDIR}${PREFIX}/share/vmware/doc
 
 do-install-share:
-	${INSTALL_SCRIPT} ${WRKSRC}/lib/bin/* ${PREFIX}/share/vmware/bin
-	${INSTALL_DATA} ${WRKSRC}/lib/help/* ${PREFIX}/share/vmware/help
-	${INSTALL_DATA} ${WRKSRC}/lib/xkeymap/* ${PREFIX}/share/vmware/xkeymap
-	${INSTALL_DATA} ${WRKSRC}/lib/isoimages/* ${PREFIX}/share/vmware/isoimages
-	${INSTALL_DATA} ${WRKSRC}/lib/licenses/user/* ${PREFIX}/share/vmware/licenses/user
-	${INSTALL_DATA} ${WRKSRC}/lib/messages/chef/* ${PREFIX}/share/vmware/messages/chef
-	${INSTALL_DATA} ${WRKSRC}/lib/messages/ja/* ${PREFIX}/share/vmware/messages/ja
-	${INSTALL_DATA} ${WRKSRC}/lib/messages/jive/* ${PREFIX}/share/vmware/messages/jive
-	${INSTALL_DATA} ${WRKSRC}/lib/smb/codepages/* ${PREFIX}/share/vmware/smb/codepages
-	${INSTALL_DATA} ${WRKSRC}/lib/configurator/* ${PREFIX}/share/vmware/configurator
-	${INSTALL_DATA} ${WRKSRC}/lib/config ${PREFIX}/share/vmware
-	${INSTALL_MAN} ${WRKDIR}/vmware.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/lib/bin/* ${DESTDIR}${PREFIX}/share/vmware/bin
+	${INSTALL_DATA} ${WRKSRC}/lib/help/* ${DESTDIR}${PREFIX}/share/vmware/help
+	${INSTALL_DATA} ${WRKSRC}/lib/xkeymap/* ${DESTDIR}${PREFIX}/share/vmware/xkeymap
+	${INSTALL_DATA} ${WRKSRC}/lib/isoimages/* ${DESTDIR}${PREFIX}/share/vmware/isoimages
+	${INSTALL_DATA} ${WRKSRC}/lib/licenses/user/* ${DESTDIR}${PREFIX}/share/vmware/licenses/user
+	${INSTALL_DATA} ${WRKSRC}/lib/messages/chef/* ${DESTDIR}${PREFIX}/share/vmware/messages/chef
+	${INSTALL_DATA} ${WRKSRC}/lib/messages/ja/* ${DESTDIR}${PREFIX}/share/vmware/messages/ja
+	${INSTALL_DATA} ${WRKSRC}/lib/messages/jive/* ${DESTDIR}${PREFIX}/share/vmware/messages/jive
+	${INSTALL_DATA} ${WRKSRC}/lib/smb/codepages/* ${DESTDIR}${PREFIX}/share/vmware/smb/codepages
+	${INSTALL_DATA} ${WRKSRC}/lib/configurator/* ${DESTDIR}${PREFIX}/share/vmware/configurator
+	${INSTALL_DATA} ${WRKSRC}/lib/config ${DESTDIR}${PREFIX}/share/vmware
+	${INSTALL_MAN} ${WRKDIR}/vmware.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 post-install:
-	@${RM} -f ${VMWARE_CFG_DIR}/config
+	@${RM} -f ${DESTDIR}${VMWARE_CFG_DIR}/config
 	@(								\
 	${ECHO} "vmware.fullpath = \"${PREFIX}/bin/vmware\"";		\
 	${ECHO} "wizard.fullpath = \"${PREFIX}/bin/vmware-wizard\"";	\
@@ -102,6 +104,6 @@ post-install:
 	${ECHO} "vmnet1.HostOnlyNetMask = \"255.255.255.0\"";		\
 	${ECHO} "host.FSSupportLocking1 = 0x1";				\
 	${ECHO} "xkeymap.usekeycodeMapIfXFree86 = true";		\
-	) > ${VMWARE_CFG_DIR}/config
+	) > ${DESTDIR}${VMWARE_CFG_DIR}/config
 
 .include "../../mk/bsd.pkg.mk"

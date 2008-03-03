@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/04 22:55:10 agc Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/03 19:31:31 jlam Exp $
 #
 
 DISTNAME=	gmailfs-0.7.2
@@ -9,6 +9,8 @@ MASTER_SITES=	http://richard.jones.name/google-hacks/gmail-filesystem/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://richard.jones.name/google-hacks/gmail-filesystem/gmail-filesystem.html
 COMMENT=	FUSE filesystem which uses Google mail for free space
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=			yes
 PYTHON_VERSIONS_ACCEPTED=	24
@@ -27,11 +29,16 @@ SUBST_MESSAGE.config=   Fixing paths.
 
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB:Q}
 
+INSTALLATION_DIRS=	sbin ${PYSITELIB}
+
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/gmailfs.py ${PREFIX}/${PYSITELIB}/
-	${INSTALL_SCRIPT} ${WRKSRC}/mount.gmailfs ${PREFIX}/sbin/mount_gmailfs
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gmailfs
-	${INSTALL_DATA} ${WRKSRC}/gmailfs.conf ${PREFIX}/share/examples/gmailfs/
+	${INSTALL_SCRIPT} ${WRKSRC}/gmailfs.py \
+		${DESTDIR}${PREFIX}/${PYSITELIB}/
+	${INSTALL_SCRIPT} ${WRKSRC}/mount.gmailfs \
+		${DESTDIR}${PREFIX}/sbin/mount_gmailfs
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/gmailfs
+	${INSTALL_DATA} ${WRKSRC}/gmailfs.conf \
+		${DESTDIR}${PREFIX}/share/examples/gmailfs/
 
 .include "../../filesystems/py-fuse-bindings/buildlink3.mk"
 

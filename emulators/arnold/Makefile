@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/02/27 12:52:41 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/03 19:21:37 jlam Exp $
 #
 
 DISTNAME=		arnsrc27012002
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		dillo@NetBSD.org
 HOMEPAGE=		http://arnold.emuunlim.com/
 COMMENT=		Amstrad CPC, Amstrad CPC+ and KC Compact emulator
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # we want case sensitive file names.
 EXTRACT_OPTS_ZIP=	-aqo
@@ -27,9 +29,10 @@ MAKE_ENV+=		SHAREDIR=${SHAREDIR}
 AUTO_MKDIRS=		yes
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/arnold ${PREFIX}/bin
-	cd ${WRKSRC}/roms && pax -wr * ${SHAREDIR}/roms/
-	cd ${WRKSRC} && ${INSTALL_DATA} readme.* ${PREFIX}/share/doc/arnold
+	${INSTALL_PROGRAM} ${WRKSRC}/arnold ${DESTDIR}${PREFIX}/bin
+	cd ${WRKSRC}/roms && pax -wr * ${DESTDIR}${SHAREDIR}/roms/
+	cd ${WRKSRC} && ${INSTALL_DATA} readme.* \
+		${DESTDIR}${PREFIX}/share/doc/arnold
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

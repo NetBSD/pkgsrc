@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/04/04 14:37:52 tv Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/03 19:21:37 jlam Exp $
 #
 
 DISTNAME=		esound-0.2.35-1
@@ -18,6 +18,8 @@ COMMENT=		Enlightened sound daemon (daemon only) for Cygwin/Interix
 
 ONLY_FOR_PLATFORM=	Interix-*-*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DIST_SUBDIR=		cygwin
 WRKSRC=			${WRKDIR}
 
@@ -27,9 +29,12 @@ INSTALLATION_DIRS=	bin emul/cygwin/bin
 do-build: # nothing
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/usr/bin/cygaudiofile-0.dll ${PREFIX}/bin/
-	${INSTALL_SCRIPT} ${WRKSRC}/usr/bin/cygesd-0.dll ${PREFIX}/bin/
-	${INSTALL_SCRIPT} ${WRKSRC}/usr/bin/esd.exe ${PREFIX}/emul/cygwin/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/usr/bin/cygaudiofile-0.dll \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/usr/bin/cygesd-0.dll \
+		${DESTDIR}${PREFIX}/bin/
+	${INSTALL_SCRIPT} ${WRKSRC}/usr/bin/esd.exe \
+		${DESTDIR}${PREFIX}/emul/cygwin/bin/
 
 .include "../../emulators/cygwin_lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
