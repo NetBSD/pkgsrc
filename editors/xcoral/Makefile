@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/01/30 23:06:18 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/03 18:25:53 jlam Exp $
 
 DISTNAME=		xcoral-3.2
 PKGREVISION=		1
@@ -7,6 +7,8 @@ MASTER_SITES=		${MASTER_SITE_XCONTRIB:=editors/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Multiwindow mouse-based text editor for X
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	yes
 GNU_CONFIGURE=	yes
@@ -22,13 +24,13 @@ LIBFILES=	DEPEND README cmd.sc color.sc comments.sc compare-win.sc \
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/xcoral
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xcoral/HTML/icons
-	${INSTALL_PROGRAM} ${WRKSRC}/xcoral ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/xcoral
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/xcoral/HTML/icons
+	${INSTALL_PROGRAM} ${WRKSRC}/xcoral ${DESTDIR}${PREFIX}/bin
 .for FILE in ${LIBFILES}
-	${INSTALL_DATA} ${WRKSRC}/SmacLib/${FILE} ${PREFIX}/lib/xcoral
+	${INSTALL_DATA} ${WRKSRC}/SmacLib/${FILE} ${DESTDIR}${PREFIX}/lib/xcoral
 .endfor
-	${CP} -r ${WRKSRC}/Doc/* ${PREFIX}/share/doc/xcoral
+	${CP} -r ${WRKSRC}/Doc/* ${DESTDIR}${PREFIX}/share/doc/xcoral
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
