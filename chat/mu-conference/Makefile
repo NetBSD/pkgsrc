@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/08/21 15:30:31 abs Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/03 02:19:52 jlam Exp $
 #
 
 DISTNAME=		mu-conference-0.6.0
@@ -12,6 +12,8 @@ HOMEPAGE=		http://jabber.terrapin.com/JCR/
 COMMENT=		Implementation of the JEP-0045 Multi-User Chat protocol
 
 DEPENDS+=		jabberd-[0-9]*:../../chat/jabberd2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/jcr-0.1.2
 SUBWRKSRC=		${WRKSRC}/${DISTNAME}/src
@@ -53,8 +55,8 @@ post-build:
 	cd ${SUBWRKSRC:Q} && ${SETENV} ${MAKE_ENV} ${GMAKE} -f jcomp.mk
 
 do-install:
-	${INSTALL_PROGRAM} ${SUBWRKSRC:Q}/mu-conference ${PREFIX:Q}/bin
-	${INSTALL_DATA} ${WRKSRC:Q}/${DISTNAME:Q}/muc-jcr.xml ${EGDIR:Q}
+	${INSTALL_PROGRAM} ${SUBWRKSRC:Q}/mu-conference ${DESTDIR}${PREFIX:Q}/bin
+	${INSTALL_DATA} ${WRKSRC:Q}/${DISTNAME:Q}/muc-jcr.xml ${DESTDIR}${EGDIR:Q}
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
