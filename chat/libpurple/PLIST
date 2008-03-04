@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/12/02 04:17:54 tnn Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/03/04 17:22:40 tnn Exp $
 include/libpurple/account.h
 include/libpurple/accountopt.h
 include/libpurple/blist.h
@@ -132,6 +132,7 @@ share/locale/pt/LC_MESSAGES/pidgin.mo
 share/locale/pt_BR/LC_MESSAGES/pidgin.mo
 share/locale/ro/LC_MESSAGES/pidgin.mo
 share/locale/ru/LC_MESSAGES/pidgin.mo
+share/locale/si/LC_MESSAGES/pidgin.mo
 share/locale/sk/LC_MESSAGES/pidgin.mo
 share/locale/sl/LC_MESSAGES/pidgin.mo
 share/locale/sq/LC_MESSAGES/pidgin.mo
@@ -152,6 +153,7 @@ share/locale/zh_TW/LC_MESSAGES/pidgin.mo
 share/purple/ca-certs/Equifax_Secure_CA.pem
 share/purple/ca-certs/GTE_CyberTrust_Global_Root.pem
 share/purple/ca-certs/Microsoft_Secure_Server_Authority.pem
+share/purple/ca-certs/StartCom_Free_SSL_CA.pem
 share/purple/ca-certs/Verisign_Class3_Primary_CA.pem
 share/purple/ca-certs/Verisign_RSA_Secure_Server_CA.pem
 share/sounds/purple/alert.wav
