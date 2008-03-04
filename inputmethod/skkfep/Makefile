@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/09/07 22:12:12 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/04 15:55:14 jlam Exp $
 
 DISTNAME=	skkfep0.86c
 PKGNAME=	skkfep-0.86c
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ei5nazha.yz.yamagata-u.ac.jp/skkfep/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ei5nazha.yz.yamagata-u.ac.jp/~aito/aito-soft.html
 COMMENT=	Terminal based SKK-like Kana-to-Kanji FrontEnd Processor
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEFS+=	IPV6_READY
 
@@ -21,9 +23,11 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 CONF_FILES+=	${PREFIX}/share/examples/skk/skk.conf ${PKG_SYSCONFDIR}/skk.conf
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/skkfep ${PREFIX}/bin/skkfep
-	${INSTALL_MAN} ${WRKSRC}/skkfep.1 ${PREFIX}/${PKGMANDIR}/man1/skkfep.1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/skk
-	${INSTALL_DATA} ${FILESDIR}/skk.conf ${PREFIX}/share/examples/skk/skk.conf
+	${INSTALL_PROGRAM} ${WRKSRC}/skkfep ${DESTDIR}${PREFIX}/bin/skkfep
+	${INSTALL_MAN} ${WRKSRC}/skkfep.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/skkfep.1
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/skk
+	${INSTALL_DATA} ${FILESDIR}/skk.conf \
+		${DESTDIR}${PREFIX}/share/examples/skk/skk.conf
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/07/05 04:55:23 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2008/03/04 15:55:14 jlam Exp $
 #
 
 DISTNAME=	sj3-2.0.1.20
@@ -16,6 +16,8 @@ BUILD_DEPENDS+=	sj3-server-bin>=2.0.1.20nb1:../../inputmethod/sj3-server-bin
 FILESDIR=	${.CURDIR}/../sj3-lib/files
 DISTINFO_FILE=	${.CURDIR}/../sj3-lib/distinfo
 PATCHDIR=	${.CURDIR}/../sj3-lib/patches
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -41,6 +43,7 @@ pre-configure:
 			> ${WRKSRC}/dict/dict/Imakefile
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/dict/dict/sj3main.dic ${PREFIX}/libdata
+	${INSTALL_DATA} ${WRKSRC}/dict/dict/sj3main.dic \
+		${DESTDIR}${PREFIX}/libdata
 
 .include "../../mk/bsd.pkg.mk"

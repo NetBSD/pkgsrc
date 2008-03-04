@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/15 14:38:28 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2008/03/04 15:55:13 jlam Exp $
 
 DISTNAME=	Chinput-3.0
 PKGREVISION=	3
@@ -8,6 +8,8 @@ MASTER_SITES=	http://download.linuxbyte.net/Chinese/Input/
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://www.opencjk.org/~yumj/project-chinput.html
 COMMENT=	Chinese input server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	yes
 
@@ -26,12 +28,10 @@ post-patch:
 		${WRKSRC}/resource/Chinput.ad
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/chinput ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/resource/Chinput.ad ${PREFIX}/etc
-
-post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/Chinput
-	${INSTALL_DATA} ${WRKSRC}/doc/* ${PREFIX}/share/doc/Chinput
+	${INSTALL_PROGRAM} ${WRKSRC}/src/chinput ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/resource/Chinput.ad ${DESTDIR}${PREFIX}/etc
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/Chinput
+	${INSTALL_DATA} ${WRKSRC}/doc/* ${DESTDIR}${PREFIX}/share/doc/Chinput
 
 .include "../../inputmethod/unicon-im/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
