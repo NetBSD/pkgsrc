@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/01/07 09:13:57 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/04 16:38:13 jlam Exp $
 
 DISTNAME=		umb-scheme-3.2
 CATEGORIES=		lang
@@ -7,6 +7,8 @@ EXTRACT_SUFX=		.tar.Z
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		UMB Scheme interpreter
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/scheme-3.2
 BUILD_TARGET=		default
@@ -30,13 +32,16 @@ post-patch:
 		>${WRKSRC}/SLIB-for-umb-scheme.init
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/umb-scheme ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/umb-scheme
-	${INSTALL_DATA} ${WRKSRC}/prelude.scheme ${PREFIX}/share/umb-scheme
+	${INSTALL_PROGRAM} ${WRKSRC}/umb-scheme ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/umb-scheme
+	${INSTALL_DATA} ${WRKSRC}/prelude.scheme \
+		${DESTDIR}${PREFIX}/share/umb-scheme
 	${INSTALL_DATA} ${WRKSRC}/SLIB-for-umb-scheme.init \
-		${PREFIX}/share/umb-scheme
-	${INSTALL_MAN} ${WRKSRC}/scheme.1 ${PREFIX}/${PKGMANDIR}/man1/umb-scheme.1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/umb-scheme/slib
-	${INSTALL_DATA} ${WRKSRC}/slib/*.scm ${PREFIX}/share/umb-scheme/slib
+		${DESTDIR}${PREFIX}/share/umb-scheme
+	${INSTALL_MAN} ${WRKSRC}/scheme.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/umb-scheme.1
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/umb-scheme/slib
+	${INSTALL_DATA} ${WRKSRC}/slib/*.scm \
+		${DESTDIR}${PREFIX}/share/umb-scheme/slib
 
 .include "../../mk/bsd.pkg.mk"

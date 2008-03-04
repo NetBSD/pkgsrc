@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2007/10/25 21:04:22 jlam Exp $
+# $NetBSD: Makefile,v 1.46 2008/03/04 16:38:13 jlam Exp $
 
 DISTNAME=	# empty
 PKGNAME=	ruby-${RUBY_VERSION_SUFFIX}
@@ -11,6 +11,9 @@ HOMEPAGE=	http://www.ruby-lang.org/en/
 COMMENT=	Wrapper package for Ruby programming language
 
 CONFLICTS=	pkg_alternatives-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
@@ -38,9 +41,9 @@ GENERATE_PLIST+=	${ECHO} man/man1/ruby.1;
 do-install:
 .if ${RUBY_NAME} != "ruby"
 .  for f in ${RUBY_COMMANDS}
-	${LN} -sf ${f}${RUBY_VER} ${PREFIX}/bin/${f}
+	${LN} -sf ${f}${RUBY_VER} ${DESTDIR}${PREFIX}/bin/${f}
 .  endfor
-	${LN} -sf ${RUBY_NAME}.1 ${PREFIX}/${PKGMANDIR}/man1/ruby.1
+	${LN} -sf ${RUBY_NAME}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/ruby.1
 .endif
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2007/03/21 19:44:10 jwise Exp $
+# $NetBSD: Makefile,v 1.51 2008/03/04 16:38:12 jlam Exp $
 #
 
 VERSION=	1.1.8
@@ -13,6 +13,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Sun's Java(tm) Development Kit
 
 LICENSE=	jdk-license
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -88,8 +90,8 @@ do-build: # empty, but cannot use NO_BUILD with java-env.mk
 
 do-install:
 	${RM} -f ${WRKSRC}/*.orig
-	${INSTALL_PROGRAM_DIR} ${JAVA_HOME}
-	cd ${WRKSRC} && ${PAX} -rw . ${JAVA_HOME}
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${JAVA_HOME}
+	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${JAVA_HOME}
 	${RM} -f ${JAVA_HOME}/bin/i386/green_threads/javac.orig
 
 .include "../../mk/java-env.mk"

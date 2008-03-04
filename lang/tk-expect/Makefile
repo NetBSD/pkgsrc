@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2007/02/22 19:26:40 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2008/03/04 16:38:13 jlam Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/tcl-expect/Makefile.common"
 
@@ -20,8 +22,9 @@ CONFIGURE_ARGS+=	--with-tkinclude=${PREFIX}/include/tk
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/expectk ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/expectk.man ${PREFIX}/${PKGMANDIR}/man1/expectk.1
+	${INSTALL_PROGRAM} ${WRKSRC}/expectk ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/expectk.man \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/expectk.1
 
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

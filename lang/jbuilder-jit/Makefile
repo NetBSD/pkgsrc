@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/12/02 12:11:09 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2008/03/04 16:38:12 jlam Exp $
 #
 
 DISTNAME=	unix_jb35foundation
@@ -24,24 +24,28 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
-USE_TOOLS+=		gtar
-
-NO_BUILD=		yes
 
 # this package is only for Sun 1.3 JVMs built for x86 Linux
 ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386 DragonFly-*-i386
 PKG_JVMS_ACCEPTED=	blackdown-jdk13
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=		gtar
+NO_BUILD=		yes
+
 post-extract:
 	@cd ${WRKDIR} && ${GTAR} -xzf ${EXTRACT_ELEMENTS}
 
 do-install:
-	${INSTALL_LIB_DIR} ${PKG_JAVA_HOME}/lib/i386
+	${INSTALL_LIB_DIR} ${DESTDIR}${PKG_JAVA_HOME}/lib/i386
 	${INSTALL_PROGRAM} ${WRKSRC}/libjavacomp.so ${WRKSRC}/libjavacomp_g.so \
-		${PKG_JAVA_HOME}/lib/i386/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/jbuilder-jit
-	${INSTALL_DATA} ${WRKSRC}/readme.txt ${PREFIX}/share/doc/jbuilder-jit/README.javacomp
-	${INSTALL_DATA} ${WRKSRC}/LICENSE.TXT ${PREFIX}/share/doc/jbuilder-jit/LICENSE.javacomp
+		${DESTDIR}${PKG_JAVA_HOME}/lib/i386/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/jbuilder-jit
+	${INSTALL_DATA} ${WRKSRC}/readme.txt \
+		${DESTDIR}${PREFIX}/share/doc/jbuilder-jit/README.javacomp
+	${INSTALL_DATA} ${WRKSRC}/LICENSE.TXT \
+		${DESTDIR}${PREFIX}/share/doc/jbuilder-jit/LICENSE.javacomp
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

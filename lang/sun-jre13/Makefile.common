@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.34 2007/08/22 14:03:48 jlam Exp $
+# $NetBSD: Makefile.common,v 1.35 2008/03/04 16:38:13 jlam Exp $
 
 # MASTER_SITES is very special, and must end in "=":
 CATEGORIES=	lang java
@@ -17,6 +17,8 @@ NO_BIN_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_FTP=	${RESTRICTED}
 
 EMUL_PLATFORMS=		linux-i386
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -57,7 +59,7 @@ post-build:
 	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${JAVA_HOME}
-	cd ${WRKSRC} && ${PAX} -rwp ma . ${JAVA_HOME}
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${JAVA_HOME}
+	cd ${WRKSRC} && ${PAX} -rwp ma . ${DESTDIR}${JAVA_HOME}
 
 .include "../../mk/java-env.mk"
