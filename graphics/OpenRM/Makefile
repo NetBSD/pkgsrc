@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/01/19 09:16:24 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/04 15:39:09 jlam Exp $
 #
 
 DISTNAME=		openrm-devel-1.5.2
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=openrm/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.openrm.org/
 COMMENT=		The OpenRM Scene Graph API
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/rm152
 CFLAGS+=		-I${X11BASE}/include
@@ -28,18 +30,18 @@ do-install:
 	# install libraries
 	for name in rm rmaux rmi rmv; do				\
 		${LIBTOOL} --mode=install ${INSTALL_LIB}		\
-			${WRKSRC}/$$name/lib$$name.la ${PREFIX}/lib;	\
+		 ${WRKSRC}/$$name/lib$$name.la ${DESTDIR}${PREFIX}/lib;	\
 	done
 	# install includes
-	${INSTALL_DATA_DIR} ${PREFIX}/include/rm
-	${INSTALL_DATA} ${WRKSRC}/include/rm/*.h ${PREFIX}/include/rm
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/FUTUREPLANS ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/RELEASENOTES ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/HTML/*.html ${DOCDIR}
-	${INSTALL_DATA_DIR} ${DOCDIR}/images
-	${INSTALL_DATA} ${WRKSRC}/doc/HTML/images/* ${DOCDIR}/images
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/rm
+	${INSTALL_DATA} ${WRKSRC}/include/rm/*.h ${DESTDIR}${PREFIX}/include/rm
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/FUTUREPLANS ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/RELEASENOTES ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/HTML/*.html ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}/images
+	${INSTALL_DATA} ${WRKSRC}/doc/HTML/images/* ${DESTDIR}${DOCDIR}/images
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"

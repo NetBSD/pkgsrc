@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/12/15 20:32:57 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2008/03/04 15:39:09 jlam Exp $
 
 DISTNAME=	fly-1.6.5
 PKGREVISION=	8
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.unimelb.edu.au/fly/fly.html
 COMMENT=	Command-file interface for creating and modifying PNG images
 
 BUILD_DEPENDS+=	gif2png>=2.4.2:../../graphics/gif2png
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	examples/cgi-perl-example.pl \
@@ -27,13 +29,15 @@ pre-configure:
 		${WRKSRC}/examples/cgi-perl-example.pl
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/fly ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fly
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/fly
+	${INSTALL_PROGRAM} ${WRKSRC}/fly ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/fly
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/fly
 	cd ${WRKSRC}/doc; ${LOCALBASE}/bin/gif2png *.gif
-	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.png ${PREFIX}/share/doc/fly
+	cd ${WRKSRC}/doc; ${INSTALL_DATA} *.html *.png \
+		${DESTDIR}${PREFIX}/share/doc/fly
 	${RM} -f ${WRKSRC}/examples/*.orig
-	cd ${WRKSRC}/examples; ${INSTALL_DATA} * ${PREFIX}/share/examples/fly
+	cd ${WRKSRC}/examples; ${INSTALL_DATA} * \
+		${DESTDIR}${PREFIX}/share/examples/fly
 
 .include "../../graphics/freetype-lib/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"

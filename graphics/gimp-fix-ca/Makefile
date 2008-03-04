@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/01/18 05:06:39 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/04 15:39:09 jlam Exp $
 #
 
 DISTNAME=		gimp-fix-ca-3.0.1
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.c
 MAINTAINER=		dsainty@NetBSD.org
 HOMEPAGE=		http://kcd.sourceforge.net/fix-ca.php
 COMMENT=		GIMP plugin to correct chromatic aberration (CA)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 FETCH_BEFORE_ARGS+=	-o ${DISTNAME}${EXTRACT_SUFX}
 WRKSRC=			${WRKDIR}
@@ -30,7 +32,7 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/${DISTNAME} \
-		${PREFIX}/lib/gimp/2.0/plug-ins/fix-ca
+		${DESTDIR}${PREFIX}/lib/gimp/2.0/plug-ins/fix-ca
 
 .include "../../graphics/gimp/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

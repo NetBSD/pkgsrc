@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/01/07 09:13:56 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/04 15:39:11 jlam Exp $
 #
 
 DISTNAME=	xdvipresent-0.6p14
@@ -13,6 +13,8 @@ COMMENT=	Slide Presentations Using LaTeX/xdvi
 
 DEPENDS+=	latex2html>=2002.2:../../textproc/latex2html
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/xdvipresent
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
@@ -25,16 +27,17 @@ HTML_DIR=	${PREFIX}/share/doc/xdvipresent
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_DATA_DIR} ${STYDIR}
-	${INSTALL_DATA} ${WRKSRC}/*.cls ${STYDIR}
-	${INSTALL_DATA_DIR} ${STYDIR}/images
-	${INSTALL_DATA} ${WRKSRC}/images/* ${STYDIR}/images
-	${INSTALL_SCRIPT} ${WRKSRC}/xdvipresent ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/xdvipresent
-	${INSTALL_DATA} ${WRKSRC}/example.tex ${EXAMPLES_DIR}
-	${INSTALL_MAN} ${WRKSRC}/doc/xdvipresent.manl ${PREFIX}/${PKGMANDIR}/man1/xdvipresent.1
-	${INSTALL_DATA_DIR} ${HTML_DIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/xdvipresent_html/* ${HTML_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${STYDIR}
+	${INSTALL_DATA} ${WRKSRC}/*.cls ${DESTDIR}${STYDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${STYDIR}/images
+	${INSTALL_DATA} ${WRKSRC}/images/* ${DESTDIR}${STYDIR}/images
+	${INSTALL_SCRIPT} ${WRKSRC}/xdvipresent ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/xdvipresent
+	${INSTALL_DATA} ${WRKSRC}/example.tex ${DESTDIR}${EXAMPLES_DIR}
+	${INSTALL_MAN} ${WRKSRC}/doc/xdvipresent.manl \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xdvipresent.1
+	${INSTALL_DATA_DIR} ${DESTDIR}${HTML_DIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/xdvipresent_html/* ${DESTDIR}${HTML_DIR}
 
 .include "../../print/teTeX/module.mk"
 .include "../../mk/bsd.pkg.mk"

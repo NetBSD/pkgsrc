@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2006/12/15 14:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2008/03/04 15:39:09 jlam Exp $
 #
 
 DISTNAME=		gfract-0.32
@@ -11,11 +11,12 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.oskusoft.com/osku/gfract/index.html
 COMMENT=		Gtk-based fractal program
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES=		c++
 USE_TOOLS+=		gmake pkg-config
 BUILD_TARGET=		gfract
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 SUBST_CLASSES+=		prefix
 SUBST_MESSAGE.prefix=	Fixing prefix.
@@ -32,10 +33,11 @@ post-extract:
 	${MV} ${WRKDIR}/monk2\'.map ${WRKDIR}/monk2.map
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/gfract
-	${INSTALL_DATA_DIR} ${PREFIX}/share/gfract/palettes
-	${INSTALL_DATA} ${WRKDIR}/*.map ${PREFIX}/share/gfract/palettes/
-	${INSTALL_DATA} ${WRKSRC}/gfract.xpm ${PREFIX}/share/gfract/
-	${INSTALL_PROGRAM} ${WRKSRC}/gfract ${PREFIX}/bin/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/gfract
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/gfract/palettes
+	${INSTALL_DATA} ${WRKDIR}/*.map \
+		${DESTDIR}${PREFIX}/share/gfract/palettes/
+	${INSTALL_DATA} ${WRKSRC}/gfract.xpm ${DESTDIR}${PREFIX}/share/gfract/
+	${INSTALL_PROGRAM} ${WRKSRC}/gfract ${DESTDIR}${PREFIX}/bin/
 
 .include "../../mk/bsd.pkg.mk"
