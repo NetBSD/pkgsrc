@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.44 2008/03/04 05:55:42 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.45 2008/03/04 06:45:33 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -50,7 +50,7 @@ _PKG_VARS.pkginstall+= \
 	FONTS_DIRS.ttf FONTS_DIRS.type1 FONTS_DIRS.x11 \
 _SYS_VARS.pkginstall= \
 	SETUID_ROOT_PERMS \
-	SETGID_GAME_PERMS \
+	SETGID_GAMES_PERMS \
 	SHLIB_TYPE \
 	LDCONFIG_ADD_CMD \
 	LDCONFIG_REMOVE_CMD
@@ -363,16 +363,16 @@ su-create-usergroup: ${_INSTALL_USERGROUP_UNPACKER}
 #
 #	SPECIAL_PERMS+=	/path/to/suidroot ${SETUID_ROOT_PERMS}
 #
-# SETGID_GAME_PERMS is a convenience definition to note an executable is
+# SETGID_GAMES_PERMS is a convenience definition to note an executable is
 # meant to be setgid-game, and should be used as follows:
 #
-#	SPECIAL_PERMS+=	/path/to/sgidgame ${SETGID_GAME_PERMS}
+#	SPECIAL_PERMS+=	/path/to/sgidgame ${SETGID_GAMES_PERMS}
 #
 # Keywords: setuid setgid st_mode perms
 #
 SPECIAL_PERMS?=		# empty
 SETUID_ROOT_PERMS?=	${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 4511
-SETGID_GAME_PERMS?=	${GAMEOWN} ${GAMEGRP} ${GAMEMODE}
+SETGID_GAMES_PERMS?=	${GAMES_USER} ${GAMES_GROUP} ${GAMEMODE}
 
 _INSTALL_PERMS_FILE=		${_PKGINSTALL_DIR}/perms
 _INSTALL_PERMS_DATAFILE=	${_PKGINSTALL_DIR}/perms-data
