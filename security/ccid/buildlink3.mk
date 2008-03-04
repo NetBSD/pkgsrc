@@ -1,0 +1,21 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/03/04 11:30:08 shannonjr Exp $
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+CCID_BUILDLINK3_MK:=	${CCID_BUILDLINK3_MK}+
+
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	ccid
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nccid}
+BUILDLINK_PACKAGES+=	ccid
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ccid
+
+.if ${CCID_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.ccid+=	ccid>=1.3.2
+BUILDLINK_PKGSRCDIR.ccid?=	../../local/ccid
+.endif	# CCID_BUILDLINK3_MK
+
+.include "../../local/pcsc-lite/buildlink3.mk"
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
