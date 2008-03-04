@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/28 11:09:48 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/04 14:44:05 jlam Exp $
 #
 
 DISTNAME=		G7-1
@@ -15,6 +15,8 @@ COMMENT=		EPSG geodetic parameters database documentation
 
 LICENSE=		epsg-license
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 # Docs were included in geography/epsg up to 6.11.2, but are released
 # separately and hence now packaged separately.
 CONFLICTS+=		epsg<6.13
@@ -24,8 +26,8 @@ NO_BUILD=		yes
 DOCDIR=                 ${PREFIX}/share/doc/epsg
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/G7-1.pdf ${DOCDIR:Q}
-	${INSTALL_DATA} ${WRKSRC}/G7-2.pdf ${DOCDIR:Q}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/G7-1.pdf ${DESTDIR}${DOCDIR:Q}
+	${INSTALL_DATA} ${WRKSRC}/G7-2.pdf ${DESTDIR}${DOCDIR:Q}
 
 .include "../../mk/bsd.pkg.mk"
