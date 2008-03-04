@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/09/23 15:30:23 obache Exp $
+# $NetBSD: Makefile,v 1.32 2008/03/04 16:38:13 jlam Exp $
 
 DISTNAME=		stalin-0.9
 PKGREVISION=		5
@@ -12,6 +12,8 @@ COMMENT=		Aggressively optimizing Scheme compiler
 
 # Only ported to these 4 archs
 ONLY_FOR_PLATFORM=	*-*-i386 *-*-sparc *-*-alpha *-*-mips
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 UNLIMIT_RESOURCES=	stacksize datasize
 
@@ -31,15 +33,15 @@ post-patch:
 	${FILESDIR}/stalin.sh > ${WRKSRC}/stalin.sh
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/lib/stalin
-	${INSTALL_PROGRAM} ${WRKSRC}/stalin ${PREFIX}/lib/stalin
-	${INSTALL_SCRIPT} ${WRKSRC}/stalin.sh ${PREFIX}/bin/stalin
-	${INSTALL_DATA} ${WRKSRC}/include/*.sc ${PREFIX}/lib/stalin
-	${INSTALL_DATA} ${WRKSRC}/libstalin.a ${PREFIX}/lib/stalin
-	${INSTALL_MAN} ${WRKSRC}/stalin.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/stalin
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/lib/stalin
+	${INSTALL_PROGRAM} ${WRKSRC}/stalin ${DESTDIR}${PREFIX}/lib/stalin
+	${INSTALL_SCRIPT} ${WRKSRC}/stalin.sh ${DESTDIR}${PREFIX}/bin/stalin
+	${INSTALL_DATA} ${WRKSRC}/include/*.sc ${DESTDIR}${PREFIX}/lib/stalin
+	${INSTALL_DATA} ${WRKSRC}/libstalin.a ${DESTDIR}${PREFIX}/lib/stalin
+	${INSTALL_MAN} ${WRKSRC}/stalin.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/stalin
 	cd ${WRKSRC} && ${INSTALL_DATA} ANNOUNCEMENT COPYING README	\
-		stalin.el ${PREFIX}/share/doc/stalin/
+		stalin.el ${DESTDIR}${PREFIX}/share/doc/stalin/
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../graphics/Mesa/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2007/11/28 07:37:46 rillig Exp $
+# $NetBSD: Makefile,v 1.38 2008/03/04 16:38:13 jlam Exp $
 
 DISTNAME=		sather-1.2.1
 PKGREVISION=		7
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_GNU:=sather/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/sather/
 COMMENT=		Compiler for the Sather object oriented programming language
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake makeinfo
 
@@ -59,14 +61,16 @@ post-build:
 	${RM} -fr ${WRKSRC}/System/Platforms/dualgui/dual_gui_server.code
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/sather
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/lib/sather/Bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/sather
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/lib/sather/Bin
 	cd ${WRKSRC}/Bin;						\
-	${INSTALL_PROGRAM} sacomp sabrowse ${PREFIX}/lib/sather/Bin;	\
-	${INSTALL_SCRIPT} PP gen_html saprep ${PREFIX}/lib/sather/Bin
+	${INSTALL_PROGRAM} sacomp sabrowse				\
+		${DESTDIR}${PREFIX}/lib/sather/Bin;			\
+	${INSTALL_SCRIPT} PP gen_html saprep				\
+		${DESTDIR}${PREFIX}/lib/sather/Bin
 	${INSTALL_SCRIPT} ${WRKSRC}/debian/bin-wrapper			\
-		${PREFIX}/lib/sather/Bin
-	cd ${PREFIX}/bin;						\
+		${DESTDIR}${PREFIX}/lib/sather/Bin
+	cd ${DESTDIR}${PREFIX}/bin;					\
 		 ${LN} -sf ../lib/sather/Bin/bin-wrapper sacomp;	\
 		 ${LN} -sf ../lib/sather/Bin/bin-wrapper sabrowse;	\
 	cd ${WRKSRC} && ${PAX} -s ',.*\.sav,,' -rw Library		\
@@ -77,22 +81,24 @@ do-install:
 		System/Platforms/f77 System/Platforms/${LOWER_OPSYS}	\
 		System/Platforms/X System/Platforms/dualgui		\
 		System/Platforms/gui System/Platforms/tcltk		\
-		Browser	${PREFIX}/lib/sather
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/lib/sather/Library \
-		${PREFIX}/lib/sather/System
-	${FIND} ${PREFIX}/lib/sather -name \*.config -o -name Makefile 	\
+		Browser	${DESTDIR}${PREFIX}/lib/sather
+	${FIND} ${DESTDIR}${PREFIX}/lib/sather				\
+		-name \*.config -o -name Makefile 			\
 		-o -name \*.orig -print | ${XARGS} ${RM} -f
 	cd ${WRKSRC}/Emacs; for f in *.info *.info-[0-9]*; do		\
 		${TEST} ! -f "$$f" ||					\
-		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};\
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/sather
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/sather
 	cd ${WRKSRC}/Doc && ${PAX} -rw -s ',.*/man.*,,' .		\
-		${PREFIX}/share/doc/sather
-	${INSTALL_MAN} ${WRKSRC}/Doc/man/man1/sacomp.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/Doc/man/man1/sabrowse.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/emacs/site-lisp
-	${INSTALL_DATA} ${WRKSRC}/Emacs/*.el ${PREFIX}/share/emacs/site-lisp
+		${DESTDIR}${PREFIX}/share/doc/sather
+	${INSTALL_MAN} ${WRKSRC}/Doc/man/man1/sacomp.1			\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/Doc/man/man1/sabrowse.1		\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/emacs/site-lisp
+	${INSTALL_DATA} ${WRKSRC}/Emacs/*.el				\
+		${DESTDIR}${PREFIX}/share/emacs/site-lisp
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../x11/tk83/buildlink3.mk"

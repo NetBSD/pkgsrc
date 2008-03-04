@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/02/20 19:04:13 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2008/03/04 16:38:12 jlam Exp $
 
 DISTNAME=		mercury-compiler-0.11.0
 PKGNAME=		mercury-0.11.0
@@ -10,6 +10,8 @@ MASTER_SITES=		ftp://ftp.mercury.cs.mu.oz.au/pub/mercury/ \
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.cs.mu.oz.au/research/mercury/
 COMMENT=		Modern logic/functional programming language
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
@@ -46,10 +48,11 @@ do-build:
 	cd ${WRKSRC} && ${BUILD_MAKE_CMD} install
 
 do-install:
-	cd ${WRKSRC}/tmp && ${PAX} -rw . ${PREFIX}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mercury
+	cd ${WRKSRC}/tmp && ${PAX} -rw . ${DESTDIR}${PREFIX}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/mercury
 	${FIND} ${WRKSRC} -type d -name "CVS" -print | ${XARGS} ${RM} -fr
 	${FIND} ${WRKSRC} -type f -name ".cvsignore" -print | ${XARGS} ${RM} -f
-	cd ${WRKSRC}/samples && ${PAX} -rw . ${PREFIX}/share/examples/mercury
+	cd ${WRKSRC}/samples && \
+	${PAX} -rw . ${DESTDIR}${PREFIX}/share/examples/mercury
 
 .include "../../mk/bsd.pkg.mk"
