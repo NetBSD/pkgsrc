@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.430 2008/03/04 13:25:43 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.431 2008/03/04 13:27:50 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -806,3 +806,10 @@ Changes to the packages collection and infrastructure in 2008:
 	Added security/CoolKey version 1.1.0 [shannonjr 2008-03-04]
 	Updated www/p5-HTML-Tagset to 3.20 [wiz 2008-03-04]
 	Updated sysutils/desktop-file-utils to 0.15 [wiz 2008-03-04]
+	Added databases/postgresql83 version 8.3.0 [adam 2008-03-04]
+	Added databases/postgresql83-adminpack version 8.3.0 [adam 2008-03-04]
+	Added databases/postgresql83-client version 8.3.0 [adam 2008-03-04]
+	Added databases/postgresql83-server version 8.3.0 [adam 2008-03-04]
+	Added databases/postgresql83-plperl version 8.3.0 [adam 2008-03-04]
+	Added databases/postgresql83-plpython version 8.3.0 [adam 2008-03-04]
+	Added databases/postgresql83-pltcl version 8.3.0 [adam 2008-03-04]
