@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/02/22 19:26:49 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/04 19:21:11 jlam Exp $
 #
 
 DISTNAME=	dvorakng-0.6.0rc1
@@ -12,6 +12,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	US English Dvorak keyboard tutor
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_NCURSES=		# strange keyboard handling
 
@@ -20,7 +21,7 @@ INSTALLATION_DIRS=	bin
 USE_LANGUAGES=	c++
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/dvorakng ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/dvorakng ${DESTDIR}${PREFIX}/bin
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

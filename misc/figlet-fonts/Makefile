@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/02/22 19:26:49 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/04 19:21:11 jlam Exp $
 #
 
 DISTNAME=	figlet-fonts-20021023
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.figlet.org/
 COMMENT=	Additional fonts for figlet
 
 DEPENDS+=	figlet-[0-9]*:../../misc/figlet
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	${DISTNAME}
 NO_CONFIGURE=	yes
@@ -29,14 +31,16 @@ post-extract:
 
 do-install:
 	cd ${WRKDIR}/contributed && \
-		${INSTALL_DATA} *.fl* *.txt ${PREFIX}/share/figlet
+		${INSTALL_DATA} *.fl* *.txt ${DESTDIR}${PREFIX}/share/figlet
 	cd ${WRKDIR}/contributed/bdffonts && \
-		${INSTALL_DATA} *.* ${PREFIX}/share/figlet
+		${INSTALL_DATA} *.* ${DESTDIR}${PREFIX}/share/figlet
 	cd ${WRKDIR}/contributed/C64-fonts && \
-		${INSTALL_DATA} *.* ${PREFIX}/share/figlet
+		${INSTALL_DATA} *.* ${DESTDIR}${PREFIX}/share/figlet
 	cd ${WRKDIR}/international && \
-		${INSTALL_DATA} *.* ${PREFIX}/share/figlet
-	${INSTALL_SCRIPT} ${WRKDIR}/international/febrew ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKDIR}/ms-dos/dosrebel.flf ${PREFIX}/share/figlet
+		${INSTALL_DATA} *.* ${DESTDIR}${PREFIX}/share/figlet
+	${INSTALL_SCRIPT} ${WRKDIR}/international/febrew \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKDIR}/ms-dos/dosrebel.flf \
+		${DESTDIR}${PREFIX}/share/figlet
 
 .include "../../mk/bsd.pkg.mk"

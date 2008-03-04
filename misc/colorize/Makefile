@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/01/04 06:04:42 obache Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/04 19:21:11 jlam Exp $
 #
 
 DISTNAME=	colorize_0.3.0
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	# http://colorize.raszi.hu/
 COMMENT=	Log colorize perl script
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 NO_BUILD=	yes
@@ -32,16 +34,20 @@ post-extract:
 	${GUNZIP_CMD} ${WRKSRC}/examples/colorize-tail.sh.gz
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/colorize.pl ${PREFIX}/bin/colorize
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/colorize
-	${INSTALL_DATA} ${WRKSRC}/colorizerc ${PREFIX}/share/examples/colorize
-	${INSTALL_MAN} ${WRKSRC}/colorize.pl.1 ${PREFIX}/${PKGMANDIR}/man1/colorize.1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/colorize
-	cd ${WRKSRC} && ${INSTALL_DATA} README TIPS ${PREFIX}/share/doc/colorize
+	${INSTALL_SCRIPT} ${WRKSRC}/colorize.pl ${DESTDIR}${PREFIX}/bin/colorize
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/colorize
+	${INSTALL_DATA} ${WRKSRC}/colorizerc				\
+		${DESTDIR}${PREFIX}/share/examples/colorize
+	${INSTALL_MAN} ${WRKSRC}/colorize.pl.1				\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/colorize.1
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/colorize
+	cd ${WRKSRC} && ${INSTALL_DATA} README TIPS			\
+		${DESTDIR}${PREFIX}/share/doc/colorize
 	${INSTALL_SCRIPT} ${WRKSRC}/examples/colorize-fifo.sh		\
-		${PREFIX}/share/examples/colorize
+		${DESTDIR}${PREFIX}/share/examples/colorize
 	${INSTALL_SCRIPT} ${WRKSRC}/examples/colorize-tail.sh		\
-		${PREFIX}/share/examples/colorize
-	${INSTALL_DATA} ${WRKSRC}/examples/Xlog.tar.gz ${PREFIX}/share/examples/colorize
+		${DESTDIR}${PREFIX}/share/examples/colorize
+	${INSTALL_DATA} ${WRKSRC}/examples/Xlog.tar.gz			\
+		${DESTDIR}${PREFIX}/share/examples/colorize
 
 .include "../../mk/bsd.pkg.mk"

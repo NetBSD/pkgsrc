@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/12/02 13:04:11 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/04 19:21:11 jlam Exp $
 #
 
 DISTNAME=		mirmon-1.36
@@ -10,6 +10,7 @@ HOMEPAGE=		http://people.cs.uu.nl/henkp/mirmon/
 COMMENT=		Monitor the state of mirror servers
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_PERL+=		mirmon
 USE_TOOLS+=		perl:run pod2man
@@ -36,13 +37,13 @@ do-build:
 	cd ${WRKSRC} && ${POD2MAN} mirmon > ${WRKDIR}/mirmon.1
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/mirmon ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKDIR}/mirmon.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${EG_DIR}
-	${INSTALL_DATA} ${WRKDIR}/mirmon.conf ${EG_DIR}
-	${INSTALL_DATA_DIR} ${MIRMONDIR}
-	${INSTALL_DATA} ${WRKSRC}/countries.list ${MIRMONDIR}
-	${INSTALL_DATA_DIR} ${MIRMONDIR}/icons
-	cd ${WRKSRC}/icons && ${INSTALL_DATA} * ${MIRMONDIR}/icons
+	${INSTALL_SCRIPT} ${WRKSRC}/mirmon ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKDIR}/mirmon.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA_DIR} ${DESTDIR}${EG_DIR}
+	${INSTALL_DATA} ${WRKDIR}/mirmon.conf ${DESTDIR}${EG_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${MIRMONDIR}
+	${INSTALL_DATA} ${WRKSRC}/countries.list ${DESTDIR}${MIRMONDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${MIRMONDIR}/icons
+	cd ${WRKSRC}/icons && ${INSTALL_DATA} * ${DESTDIR}${MIRMONDIR}/icons
 
 .include "../../mk/bsd.pkg.mk"

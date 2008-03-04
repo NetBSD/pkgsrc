@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/09/06 20:38:57 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2008/03/04 19:21:11 jlam Exp $
 
 DISTNAME=	${DISTNAME_${OPSYS}_${MACHINE_ARCH}}
 PKGNAME=	dnetc-2.${DISTVER_${OPSYS}_${MACHINE_ARCH}}
@@ -15,9 +15,11 @@ ONLY_FOR_PLATFORM=	Darwin-*-powerpc NetBSD-*-alpha NetBSD-*-arm	\
 			NetBSD-*-mipsel NetBSD-*-powerpc NetBSD-*-sparc \
 			NetBSD-*-sparc64 NetBSD-*-vax SunOS-*-sparc	\
 			SunOS-*-sparc64
-NO_BUILD=	YES
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gtar
+NO_BUILD=	YES
 
 DISTNAME_Darwin_powerpc=	dnetc-macosx-ppc
 DISTNAME_NetBSD_m68k=		dnetc-netbsd-m68k-elf
@@ -60,16 +62,16 @@ do-extract:
 .endif
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/dnetc/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/dnetc/
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32" \
     || ${MACHINE_ARCH} == "sparc"
-	${INSTALL_DATA} ${WRKSRC}/readme.* ${PREFIX}/share/doc/dnetc/
-	${INSTALL_DATA} ${WRKSRC}/*.txt ${PREFIX}/share/doc/dnetc/
+	${INSTALL_DATA} ${WRKSRC}/readme.* ${DESTDIR}${PREFIX}/share/doc/dnetc/
+	${INSTALL_DATA} ${WRKSRC}/*.txt ${DESTDIR}${PREFIX}/share/doc/dnetc/
 .else
-	${INSTALL_DATA} ${WRKSRC}/docs/* ${PREFIX}/share/doc/dnetc/
+	${INSTALL_DATA} ${WRKSRC}/docs/* ${DESTDIR}${PREFIX}/share/doc/dnetc/
 .endif
-	${INSTALL_MAN} ${WRKSRC}/dnetc.1 ${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_PROGRAM} ${WRKSRC}/dnetc ${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/dnetc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_PROGRAM} ${WRKSRC}/dnetc ${DESTDIR}${PREFIX}/bin/
 
 .if defined(PKG_DEVELOPER) && defined(ALL_DISTFILES)
 all-distfiles:
