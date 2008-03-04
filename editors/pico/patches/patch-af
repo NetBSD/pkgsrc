@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.6 2006/01/12 21:00:52 adam Exp $
+$NetBSD: patch-af,v 1.7 2008/03/04 22:00:30 jlam Exp $
 
---- pico/makefile.osx.orig	Fri Sep 20 14:23:15 2002
+--- pico/makefile.osx.orig	2002-09-20 14:23:11.000000000 -0400
 +++ pico/makefile.osx
-@@ -38,11 +38,7 @@ STDCFLAGS=	-Dbsd -DJOB_CONTROL
+@@ -38,10 +38,6 @@ STDCFLAGS=	-Dbsd -DJOB_CONTROL
  CFLAGS=         $(OPTIMIZE) $(PROFILE) $(DEBUG) $(EXTRACFLAGS) $(STDCFLAGS)
  
  # switches for library building
@@ -10,11 +10,9 @@ $NetBSD: patch-af,v 1.6 2006/01/12 21:00:52 adam Exp $
 -LIBARGS=	ru
 -RANLIB=		ranlib
 -
--LIBS=		$(EXTRALDFLAGS) -lncurses
-+LIBS=		$(EXTRALDFLAGS)
+ LIBS=		$(EXTRALDFLAGS) -lncurses
  
  OFILES=		attach.o basic.o bind.o browse.o buffer.o \
- 		composer.o display.o file.o fileio.o line.o pico_os.o \
 @@ -55,17 +51,17 @@ HFILES=		headers.h estruct.h edef.h efun
  # dependencies for the Unix versions of pico and libpico.a
  #
