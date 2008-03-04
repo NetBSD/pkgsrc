@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/01/08 17:33:42 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2008/03/04 18:15:08 jlam Exp $
 #
 
 DISTNAME=	rat-3.0.28
@@ -10,7 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/rat/
 COMMENT=	Robust Audio Tool - multicast audioconferencing
 
-NO_MTREE=	yes
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CRYPTO=		yes
 USE_TOOLS+=	gmake
 USE_X11BASE=	yes
@@ -29,10 +30,11 @@ do-build:
 	cd ${WRKSRC} && USER=${USER} PREFIX=${PREFIX} MAKE=${MAKE_PROGRAM} LDFLAGS="${LDFLAGS}" X11BASE=${X11BASE} LOCALBASE=${LOCALBASE} TCLCONFIG=${BUILDLINK_PREFIX.tcl}/lib/tclConfig.sh ./Build rat
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/rat ${PREFIX}/bin/rat
-	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/man/man1/rat.1 ${PREFIX}/${PKGMANDIR}/man1/rat.1
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/rat ${DESTDIR}${PREFIX}/bin/rat
+	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/man/man1/rat.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/rat.1
 
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
