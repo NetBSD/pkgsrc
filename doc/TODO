@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7096 2008/03/04 10:41:56 wiz Exp $
+$NetBSD: TODO,v 1.7097 2008/03/04 13:11:11 obache Exp $
 
 Suggested new packages
 ======================
@@ -331,6 +331,22 @@ Suggested new packages
 	tDOM [pkg/38028]
 	http://www.tdom.org/
 	C based XML extension for Tcl
+
+	fricas [pkg/38155]
+	http://fricas.sourceforge.net/
+	Fricas is a fork of the Axiom computer algebra system
+
+	xbacklight [pkg/38156]
+	http://xorg.freedesktop.org/
+	Adjust backlight brightness using RandR extension
+
+	xdriinfo [pkg/38157]
+	http://xorg.freedesktop.org/
+	Query configuration information of DRI drivers
+
+	xine-plugin [pkg/38159]
+	http://xinehq.de/
+	Plugin for www/firefox for using multimedia/xine-lib
 
 Suggested package updates
 =========================
