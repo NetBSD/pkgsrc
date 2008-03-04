@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/01/10 20:52:59 adam Exp $
+# $NetBSD: Makefile,v 1.23 2008/03/04 17:57:20 jlam Exp $
 
 DISTNAME=	all_locales-${VER}-20071220
 PKGNAME=	squirrelmail-locales-${VER}
@@ -13,6 +13,8 @@ COMMENT=	Locale package for SquirrelMail
 
 VER=		1.4.13
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_CONFIGURE=		yes
 USE_TOOLS+=		tar
 INSTALLATION_DIRS=	share/squirrelmail
@@ -24,7 +26,8 @@ do-build:
 
 do-install:
 	cd ${WRKDIR} && \
-		pax -rw -pp help images locale ${PREFIX}/share/squirrelmail
+		pax -rw -pp help images locale \
+			${DESTDIR}${PREFIX}/share/squirrelmail
 
 .include "../../mail/squirrelmail/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
