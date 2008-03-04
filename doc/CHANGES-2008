@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.421 2008/03/04 09:43:58 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.422 2008/03/04 09:56:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -772,3 +772,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/pkg-config to 0.23 [wiz 2008-03-04]
 	Updated devel/slib to 3.2.1 [wiz 2008-03-04]
 	Updated devel/guile-slib to 3.2.1 [wiz 2008-03-04]
+	Updated www/links to 2.1.0.33 [wiz 2008-03-04]
+	Updated www/links-gui to 2.1.0.33 [wiz 2008-03-04]
