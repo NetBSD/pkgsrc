@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/09/23 14:59:34 adrianp Exp $
+# $NetBSD: Makefile,v 1.36 2008/03/04 15:39:11 jlam Exp $
 
 DISTNAME=	xzgv-0.8
 PKGNAME=	xzgv-0.8.0.1
@@ -14,18 +14,21 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rus.members.beeb.net/xzgv.html
 COMMENT=	Image viewer
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_X11BASE=		yes
 USE_TOOLS+=		gmake makeinfo
 INFO_FILES=		# PLIST
 INSTALLATION_DIRS=	bin ${PKGINFODIR} ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/xzgv ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/doc/xzgv.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/src/xzgv ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/doc/xzgv.1				\
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	@(cd ${WRKSRC}/doc && ${MAKEINFO} xzgv.texi)
 	cd ${WRKSRC}/doc; for f in xzgv xzgv-[0-9]*; do			\
 		${TEST} ! -f "$$f" ||					\
-		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};\
 	done
 
 .include "../../graphics/imlib/buildlink3.mk"

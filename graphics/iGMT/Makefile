@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/09/02 13:33:44 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2008/03/04 15:39:10 jlam Exp $
 
 DISTNAME=		igmt_v1.2
 PKGNAME=		iGMT-1.2
@@ -15,6 +15,8 @@ DEPENDS+=		tcl>=8.0:../../lang/tcl
 DEPENDS+=		tk>=8.0:../../x11/tk
 DEPENDS+=		gv-[0-9]*:../../print/gv
 DEPENDS+=		ImageMagick>=5.3.9nb1:../../graphics/ImageMagick
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/igmt_1.2
 NO_BUILD=		yes
@@ -37,22 +39,24 @@ do-configure:
 	done
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/igmt ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/igmt
+	${INSTALL_SCRIPT} ${WRKSRC}/igmt ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/igmt
 	cd ${WRKSRC} && ${INSTALL_DATA} manual.ps README.TXT NOTES.TXT 	\
-		COPYING COPYRIGHT ${PREFIX}/share/igmt/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/igmt/colormaps
-	${INSTALL_DATA} ${WRKSRC}/colormaps/* ${PREFIX}/share/igmt/colormaps/
+		COPYING COPYRIGHT ${DESTDIR}${PREFIX}/share/igmt/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/igmt/colormaps
+	${INSTALL_DATA} ${WRKSRC}/colormaps/*				\
+		${DESTDIR}${PREFIX}/share/igmt/colormaps/
 	cd ${WRKSRC} && ${INSTALL_SCRIPT} igmt*.tcl *.awk 		\
-		igmt_helper* *.batch ${PREFIX}/share/igmt/
+		igmt_helper* *.batch ${DESTDIR}${PREFIX}/share/igmt/
 	cd ${WRKSRC} && ${INSTALL_DATA} 01_02-98.cmt			\
 		gps.vel hotspots.dat nuvel.yx igmt_def.gif		\
 		allslabs_rum.gmt volcanoes.dat wcity.dat		\
 		wcity_major.dat	igmt_gmtdefaults_3.0			\
 		igmt_gmtdefaults_3.1 igmt_gmtdefaults_3.2		\
-		igmt_gmtdefaults_3.3 ${PREFIX}/share/igmt/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/igmt
+		igmt_gmtdefaults_3.3 ${DESTDIR}${PREFIX}/share/igmt/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/igmt
 	cd ${WRKSRC} && ${INSTALL_DATA} example*.ps.gz			\
-		${WRKSRC}/example*.dat ${PREFIX}/share/examples/igmt/
+		${WRKSRC}/example*.dat					\
+		${DESTDIR}${PREFIX}/share/examples/igmt/
 
 .include "../../mk/bsd.pkg.mk"
