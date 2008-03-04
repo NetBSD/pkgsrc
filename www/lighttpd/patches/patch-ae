@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.3 2008/03/04 11:17:57 kefren Exp $
+--- src/server.c.orig	2008-03-04 13:13:12.000000000 +0200
++++ src/server.c	2008-03-04 13:13:56.000000000 +0200
+@@ -697,9 +697,6 @@ int main (int argc, char **argv) {
+ 			}
+ 		}
+ 
+-		/* #372: solaris need some fds extra for devpoll */
+-		if (rlim.rlim_cur > 10) rlim.rlim_cur -= 10;
+-
+ 		if (srv->event_handler == FDEVENT_HANDLER_SELECT) {
+ 			srv->max_fds = rlim.rlim_cur < FD_SETSIZE - 200 ? rlim.rlim_cur : FD_SETSIZE - 200;
+ 		} else {

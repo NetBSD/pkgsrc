@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.3 2008/03/04 11:17:57 kefren Exp $
+--- src/fdevent_solaris_devpoll.c.orig	2008-03-04 13:12:51.000000000 +0200
++++ src/fdevent_solaris_devpoll.c	2008-03-04 13:13:02.000000000 +0200
+@@ -67,7 +67,7 @@ static int fdevent_solaris_devpoll_poll(
+ 	int ret;
+ 
+ 	dopoll.dp_timeout = timeout_ms;
+-	dopoll.dp_nfds = ev->maxfds;
++	dopoll.dp_nfds = ev->maxfds - 1;
+ 	dopoll.dp_fds = ev->devpollfds;
+ 
+ 	ret = ioctl(ev->devpoll_fd, DP_POLL, &dopoll);
