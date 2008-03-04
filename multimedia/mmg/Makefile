@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2007/02/22 19:26:51 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2008/03/04 19:32:30 jlam Exp $
 #
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../multimedia/mkvtoolnix/Makefile.dist"
 PKGNAME=	${DISTNAME:S/mkvtoolnix/mmg/}
@@ -27,13 +29,14 @@ SUBST_MESSAGE.man=	Fixing paths in manual page.
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/mmg/mmg ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/doc/mmg.1 ${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mmg/images/
+	${INSTALL_PROGRAM} ${WRKSRC}/src/mmg/mmg ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/doc/mmg.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/mmg/images/
 	${INSTALL_DATA} ${WRKSRC}/doc/images/*.gif \
-		${PREFIX}/share/doc/mmg/images/
+		${DESTDIR}${PREFIX}/share/doc/mmg/images/
 	${INSTALL_DATA} ${WRKSRC}/doc/mkvmerge-gui.* \
-		${PREFIX}/share/doc/mmg/
+		${DESTDIR}${PREFIX}/share/doc/mmg/
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/libebml/buildlink3.mk"

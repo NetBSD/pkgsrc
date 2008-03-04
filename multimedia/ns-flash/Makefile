@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/12/23 22:27:15 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2008/03/04 19:32:30 jlam Exp $
 
 CATEGORIES=		multimedia www
 MASTER_SITES=		http://fpdownload.macromedia.com/get/flashplayer/current/
@@ -17,6 +17,8 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${WRKNAME}
 BUILD_DIRS=		# empty
@@ -52,7 +54,7 @@ NS_PLUGINS_DIR=		${PREFIX}/lib/netscape/plugins
 .include "options.mk"
 
 do-install:
-	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
-	${INSTALL_DATA} ${WRKSRC}/libflashplayer.so ${NS_PLUGINS_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${NS_PLUGINS_DIR}
+	${INSTALL_DATA} ${WRKSRC}/libflashplayer.so ${DESTDIR}${NS_PLUGINS_DIR}
 
 .include "../../mk/bsd.pkg.mk"
