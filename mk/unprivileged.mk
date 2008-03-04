@@ -1,4 +1,4 @@
-# $NetBSD: unprivileged.mk,v 1.15 2008/02/01 08:54:53 rillig Exp $
+# $NetBSD: unprivileged.mk,v 1.16 2008/03/04 06:45:33 jlam Exp $
 #
 # This file collects definitions that are useful when using pkgsrc as an
 # unprivileged (non-root) user. It is included automatically by the
@@ -169,6 +169,15 @@ NONBINMODE=		644
 PKG_USERS_VARS?=	# empty
 PKG_GROUPS_VARS?=	# empty
 BUILD_DEFS+=		${PKG_USERS_VARS} ${PKG_GROUPS_VARS}
+
+.if defined(SETGIDGAME) && !empty(SETGIDGAME:M[yY][eE][sS])
+.  if defined(GAMES_USER)
+PKG_USERS_VARS+=	GAMES_USER
+.  endif
+.  if defined(GAMES_GROUP)
+PKG_GROUPS_VARS+=	GAMES_GROUP
+.  endif
+.endif
 
 # Override per-package custom users and groups, except for groups listed
 # in UNPRIVILEGED_GROUPS.
