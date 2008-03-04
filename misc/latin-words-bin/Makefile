@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/07/29 05:19:35 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/04 19:21:11 jlam Exp $
 #
 
 DISTNAME=		words-1.97-linux
@@ -14,6 +14,8 @@ COMMENT=		Latin-to-English dictionary program (Linux binary)
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}/words-1.97
 INSTALLATION_DIRS=	bin libexec
 
@@ -22,16 +24,17 @@ do-build:
 		> ${WRKSRC}/latin-words
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/latin-words ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/words ${PREFIX}/libexec/latin-words
-	${INSTALL_DATA_DIR} ${PREFIX}/libdata/latin-words
+	${INSTALL_SCRIPT} ${WRKSRC}/latin-words ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/words \
+		${DESTDIR}${PREFIX}/libexec/latin-words
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/libdata/latin-words
 .for f in ADDONS.LAT DICTFILE.GEN INDXFILE.GEN INFLECTS.SEC \
 	STEMFILE.GEN UNIQUES.LAT
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/libdata/latin-words
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/libdata/latin-words
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/latin-words
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/latin-words
 .for f in README wordsdoc.html wordsdoc.txt
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/latin-words
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/latin-words
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

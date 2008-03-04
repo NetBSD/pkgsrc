@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/07/08 09:43:48 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/04 19:21:10 jlam Exp $
 #
 # Update instructions:
 # . bump PKGNAME to today's date
@@ -18,6 +18,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.csse.monash.edu.au/~jwb/edict.html
 COMMENT=	Japanese-Multilingual electronic dictionary
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_ONLY=	JMdict.gz
@@ -25,14 +27,14 @@ EXTRACT_ONLY=	JMdict.gz
 NO_BUILD=	yes
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/JMdict
-	${INSTALL_DATA} ${WRKSRC}/JMdict ${PREFIX}/share/JMdict
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/JMdict
+	${INSTALL_DATA} ${WRKSRC}/JMdict ${DESTDIR}${PREFIX}/share/JMdict
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/JMdict.dtd \
-		${PREFIX}/share/JMdict
+		${DESTDIR}${PREFIX}/share/JMdict
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/JMdict.gz \
-		${PREFIX}/share/JMdict
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/JMdict
+		${DESTDIR}${PREFIX}/share/JMdict
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/JMdict
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/jmdict_proj_desc.html \
-		${PREFIX}/share/doc/JMdict
+		${DESTDIR}${PREFIX}/share/doc/JMdict
 
 .include "../../mk/bsd.pkg.mk"

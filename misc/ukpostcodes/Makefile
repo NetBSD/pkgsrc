@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/03/04 21:30:13 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/04 19:21:12 jlam Exp $
 
 DISTNAME=	postcodes
 PKGNAME=	postcodes-20040515
@@ -11,12 +11,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.jibble.org/
 COMMENT=	UK national postcode information
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/ukpostcodes
-	${INSTALL_DATA} ${WRKSRC}/jibble-postcodes.csv ${PREFIX}/share/ukpostcodes/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/ukpostcodes
+	${INSTALL_DATA} ${WRKSRC}/jibble-postcodes.csv \
+		${DESTDIR}${PREFIX}/share/ukpostcodes/
 
 .include "../../mk/bsd.pkg.mk"
