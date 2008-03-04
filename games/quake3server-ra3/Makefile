@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:09:22 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/04 06:59:05 jlam Exp $
 
 DISTNAME=	ra3-1.65
 PKGNAME=	quake3server-ra3-1.65
@@ -12,6 +12,8 @@ DISTFILES=	ra3165cl.zip \
 MAINTAINER=	david@silicium.ath.cx
 COMMENT=	Quake III Arena Mod: Rocket Arena 3 for Linux
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 .include "../../games/quake3server/Makefile.common"
 
 DEPENDS+=	quake3server>=1.32:../../games/quake3server
@@ -22,14 +24,14 @@ Q3MODDIR=	${Q3ROOTDIR}/arena
 DOCDIR=		${PREFIX}/share/doc/lokigames/quake3server/arena
 
 do-install:
-	${INSTALL_DATA_DIR} ${Q3MODDIR}
-	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR]${Q3MODDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR]${DOCDIR}
 .for datafile in *.pk3 qagame* *.cfg
-	${INSTALL_DATA} ${WRKSRC}/${datafile} ${Q3MODDIR}
+	${INSTALL_DATA} ${WRKSRC}/${datafile} ${DESTDIR]${Q3MODDIR}
 .endfor
 
 .for docfile in readme.txt readsrv.txt
-	${INSTALL_DATA} ${WRKSRC}/${docfile} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/${docfile} ${DESTDIR]${DOCDIR}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/04 21:29:41 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2008/03/04 06:59:04 jlam Exp $
 
 DISTNAME=		small
 PKGNAME=		${CHESS_ENGINE}-book-${DISTNAME}-20000511
@@ -13,6 +13,8 @@ COMMENT=		Chess opening book for EXchess (small)
 DEPENDS+=		exchess-[0-9]*:../../games/exchess
 
 CONFLICTS=		${CHESS_ENGINE}-book-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 CHESS_ENGINE=		exchess
@@ -39,7 +41,7 @@ do-build:
 	cd ${WRKSRC} && exchess < ${CMDFILE}
 
 do-install:
-	${INSTALL_DATA_DIR} ${BOOKDIR}
-	${INSTALL_DATA} ${WRKSRC}/${BOOK_FILE} ${BOOKDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${BOOKDIR}
+	${INSTALL_DATA} ${WRKSRC}/${BOOK_FILE} ${DESTDIR}${BOOKDIR}
 
 .include "../../mk/bsd.pkg.mk"

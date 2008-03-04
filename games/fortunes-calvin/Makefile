@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/11/09 08:36:46 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/04 06:59:04 jlam Exp $
 #
 
 DISTNAME=	fortunes-calvin-0.2
@@ -12,6 +12,8 @@ COMMENT=	Fortunes from the famous Calvin & Hobbes comic strips
 
 BUILD_DEPENDS+=	fortune-strfile-[0-9]*:../../games/fortune-strfile
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 STRFILE=	${LOCALBASE}/bin/strfile
 WRKSRC=		${WRKDIR}
 
@@ -19,8 +21,10 @@ do-build:
 	${STRFILE} ${WRKDIR}/${DISTNAME}
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/games/fortune/
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME} ${PREFIX}/share/games/fortune/calvin
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}.dat ${PREFIX}/share/games/fortune/calvin.dat
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/games/fortune/
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME} \
+		${DESTDIR}${PREFIX}/share/games/fortune/calvin
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}.dat \
+		${DESTDIR}${PREFIX}/share/games/fortune/calvin.dat
 
 .include "../../mk/bsd.pkg.mk"
