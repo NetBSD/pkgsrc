@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2008/03/03 17:45:35 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/04 11:02:24 rillig Exp $
 #
 
 DISTNAME=	jflex-1.4.1
 CATEGORIES=	devel
 MASTER_SITES=	http://jflex.de/
 
-MAINTAINER=	rillig@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jflex.de/
 COMMENT=	Fast lexical analyzer generator for Java
 

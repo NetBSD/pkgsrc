@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/07/10 12:47:26 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/04 11:02:25 rillig Exp $
 #
 
 DISTNAME=	barrier-1.0
@@ -6,7 +6,7 @@ CATEGORIES=	regress
 MASTER_SITES=	# none
 DISTFILES=	# none
 
-MAINTAINER=	rillig@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Tests whether pkgsrc barriers work as expected
 
 NO_CHECKSUM=	yes

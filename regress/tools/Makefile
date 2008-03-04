@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/09/09 08:01:45 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/04 11:02:25 rillig Exp $
 #
 
 DISTNAME=	# not applicable
@@ -7,7 +7,7 @@ CATEGORIES=	regress
 MASTER_SITES=	# none
 DISTFILES=	# none
 
-MAINTAINER=	rillig@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Test whether the TOOLS do what I expect
 
 NO_CHECKSUM=	yes

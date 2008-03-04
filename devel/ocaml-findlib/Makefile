@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/12/21 16:48:30 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/04 11:02:24 rillig Exp $
 #
 
 DISTNAME=		findlib-1.1.2pl1
@@ -7,7 +7,7 @@ PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://www.ocaml-programming.de/packages/
 
-MAINTAINER=		rillig@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ocaml-programming.de/packages/
 COMMENT=		Library finder for OCaml
 

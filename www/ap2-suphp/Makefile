@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/11/17 12:04:15 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/04 11:02:26 rillig Exp $
 #
 
 DISTNAME=		suphp-0.6.0
@@ -7,7 +7,7 @@ PKGREVISION=		3
 CATEGORIES=		www
 MASTER_SITES=		http://www.suphp.org/download/
 
-MAINTAINER=		rillig@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.suphp.org/
 COMMENT=		SuEXEC-like wrapper for PHP scripts
 
