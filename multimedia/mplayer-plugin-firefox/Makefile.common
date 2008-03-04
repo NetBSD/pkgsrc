@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.18 2007/12/11 21:46:51 xtraeme Exp $
+# $NetBSD: Makefile.common,v 1.19 2008/03/04 19:32:30 jlam Exp $
 #
 
 DISTNAME=		mplayerplug-in-${DIST_VER}
@@ -11,6 +11,8 @@ HOMEPAGE=		http://mplayerplug-in.sourceforge.net/
 COMMENT=		Mplayer plug-in for ${BROWSER}
 
 DEPENDS+=		mplayer>=0.92:../../multimedia/mplayer
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/mplayerplug-in
 GNU_CONFIGURE=		yes
@@ -56,14 +58,12 @@ CONF_FILES+=	${EGDIR}/mplayerplug-in.${f} \
 .endfor
 
 do-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/mplayerplug-in.conf ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/mplayerplug-in.types ${EGDIR}
-.if !exists(${PREFIX}/lib/${BROWSER}/plugins)
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/${BROWSER}/plugins
-.endif
-	${INSTALL_LIB} ${WRKSRC}/*.so	${PREFIX}/lib/${BROWSER}/plugins
-	${INSTALL_DATA} ${WRKSRC}/*.xpt	${PREFIX}/lib/${BROWSER}/plugins
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/mplayerplug-in.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/mplayerplug-in.types ${DESTDIR}${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/${BROWSER}/plugins
+	${INSTALL_LIB} ${WRKSRC}/*.so	${DESTDIR}${PREFIX}/lib/${BROWSER}/plugins
+	${INSTALL_DATA} ${WRKSRC}/*.xpt	${DESTDIR}${PREFIX}/lib/${BROWSER}/plugins
 
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"

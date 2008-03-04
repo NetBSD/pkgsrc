@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/07/29 05:19:45 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/04 19:32:30 jlam Exp $
 
 DISTNAME=	divx-player-installer
 PKGNAME=	divxplayer-0.2.0
@@ -15,6 +15,8 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	x11
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/divx-player-installer
 BUILD_DIRS=	# empty
 
@@ -28,11 +30,11 @@ post-patch:
 		> ${WRKDIR}/frontend.sh
 
 do-install:
-	${MKDIR} ${DATADIR}
-	${MKDIR} ${DATADIR}/Skins
-	${INSTALL_DATA} ${WRKSRC}/Skins/* ${DATADIR}/Skins
-	${INSTALL_PROGRAM} ${WRKSRC}/${BINARY} ${PREFIX}/bin
+	${MKDIR} ${DESTDIR}${DATADIR}
+	${MKDIR} ${DESTDIR}${DATADIR}/Skins
+	${INSTALL_DATA} ${WRKSRC}/Skins/* ${DESTDIR}${DATADIR}/Skins
+	${INSTALL_PROGRAM} ${WRKSRC}/${BINARY} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKDIR}/frontend.sh \
-		${PREFIX}/bin/${BINARY:S/.bin$//}
+		${DESTDIR}${PREFIX}/bin/${BINARY:S/.bin$//}
 
 .include "../../mk/bsd.pkg.mk"
