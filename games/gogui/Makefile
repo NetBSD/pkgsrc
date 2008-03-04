@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/04 06:59:04 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/04 11:02:24 rillig Exp $
 #
 
 DISTNAME=		gogui-0.9.3
@@ -6,7 +6,7 @@ CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gogui/}
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		rillig@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gogui.sourceforge.net/
 COMMENT=		GUI for Go-playing programs
 

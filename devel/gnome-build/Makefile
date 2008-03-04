@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/12/16 14:19:00 drochner Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/04 11:02:24 rillig Exp $
 #
 
 DISTNAME=	gnome-build-0.2.0
@@ -6,7 +6,7 @@ CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-build/0.2/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	rillig@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/devtools/
 COMMENT=	Project management components for GNOME development
 

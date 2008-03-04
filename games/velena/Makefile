@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/04 06:59:06 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/04 11:02:24 rillig Exp $
 #
 
 DISTNAME=	veleng10
@@ -8,7 +8,7 @@ CATEGORIES=	games
 MASTER_SITES=	http://www.ce.unipr.it/~gbe/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	rillig@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ce.unipr.it/~gbe/
 COMMENT=	Perfect-play engine for connect four
 
