@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.425 2008/03/04 10:41:56 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.426 2008/03/04 10:48:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -796,3 +796,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/links to 2.1.0.33 [wiz 2008-03-04]
 	Updated www/links-gui to 2.1.0.33 [wiz 2008-03-04]
 	Updated audio/taglib to 1.5 [wiz 2008-03-04]
+	Updated databases/sqlite3 to 3.5.6 [wiz 2008-03-04]
+	Updated databases/sqlite3-tcl to 3.5.6 [wiz 2008-03-04]
