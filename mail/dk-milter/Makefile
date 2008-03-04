@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/01/18 05:08:22 tnn Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/04 17:57:18 jlam Exp $
 
 DISTNAME=	dk-milter-0.3.0
 PKGREVISION=	2
@@ -12,6 +12,8 @@ COMMENT=	Open source implementation of DomainKeys for sendmail
 BUILDLINK_API_DEPENDS.libmilter+=	libmilter>=8.13.0
 
 LICENSE=		sendmail-open-source-license
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_ENV+=		M4=${M4:Q}
 RCD_SCRIPTS=		dk-milter
@@ -42,13 +44,20 @@ post-build:
 
 do-install:
 	cd ${WRKSRC}/obj.`${UNAME} -srm | ${TR} \  . | ${TR} \/ -` && \
-		${INSTALL_PROGRAM} dk-filter/dk-filter ${PREFIX}/sbin/dk-milter
-	${INSTALL_MAN} ${WRKSRC}/dk-filter/dk-milter.8 ${PREFIX}/${PKGMANDIR}/man8/
-	${INSTALL_DATA} ${WRKSRC}/FEATURES ${PREFIX}/share/doc/dk-milter
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/dk-milter
-	${INSTALL_DATA} ${WRKSRC}/KNOWNBUGS ${PREFIX}/share/doc/dk-milter
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/dk-milter
-	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${PREFIX}/share/doc/dk-milter
+		${INSTALL_PROGRAM} dk-filter/dk-filter \
+			${DESTDIR}${PREFIX}/sbin/dk-milter
+	${INSTALL_MAN} ${WRKSRC}/dk-filter/dk-milter.8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
+	${INSTALL_DATA} ${WRKSRC}/FEATURES \
+		${DESTDIR}${PREFIX}/share/doc/dk-milter
+	${INSTALL_DATA} ${WRKSRC}/INSTALL \
+		${DESTDIR}${PREFIX}/share/doc/dk-milter
+	${INSTALL_DATA} ${WRKSRC}/KNOWNBUGS \
+		${DESTDIR}${PREFIX}/share/doc/dk-milter
+	${INSTALL_DATA} ${WRKSRC}/README \
+		${DESTDIR}${PREFIX}/share/doc/dk-milter
+	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES \
+		${DESTDIR}${PREFIX}/share/doc/dk-milter
 
 .include "options.mk"
 .include "../../security/openssl/buildlink3.mk"

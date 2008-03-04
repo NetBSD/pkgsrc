@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/03/24 07:08:35 schmonz Exp $
+# $NetBSD: Makefile,v 1.22 2008/03/04 17:57:19 jlam Exp $
 #
 
 DISTNAME=		qmail-run-20060604
@@ -15,6 +15,7 @@ DEPENDS+=		${DEPENDS_QMAIL}
 CONFLICTS+=		qmail-qfilter-1.5nb1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 NO_CHECKSUM=		yes
@@ -65,10 +66,12 @@ post-extract:
 	done
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/qmail-procmail ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKDIR}/qmail-qfilter-queue ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKDIR}/qmail-qread-client ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKDIR}/README.pkgsrc ${PREFIX}/share/doc/qmail-run
-	${INSTALL_DATA} ${WRKDIR}/mailer.conf ${PREFIX}/share/examples/qmail-run
+	${INSTALL_SCRIPT} ${WRKDIR}/qmail-procmail ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/qmail-qfilter-queue ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/qmail-qread-client ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKDIR}/README.pkgsrc \
+		${DESTDIR}${PREFIX}/share/doc/qmail-run
+	${INSTALL_DATA} ${WRKDIR}/mailer.conf \
+		${DESTDIR}${PREFIX}/share/examples/qmail-run
 
 .include "../../mk/bsd.pkg.mk"

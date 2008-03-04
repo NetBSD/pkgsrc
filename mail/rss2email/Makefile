@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/02/28 12:12:20 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2008/03/04 17:57:19 jlam Exp $
 #
 
 DISTNAME=		rss2email-2.62
@@ -12,6 +12,8 @@ COMMENT=		Get RSS feeds emailed to you
 
 DEPENDS+=		${PYPKGPREFIX}-feedparser-[0-9]*:../../textproc/py-feedparser
 DEPENDS+=		${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 
@@ -38,12 +40,12 @@ do-extract:
 
 do-install:
 	set -e; cd ${WRKSRC};						\
-	${INSTALL_SCRIPT_DIR} ${SHAREDIR};				\
-	${INSTALL_SCRIPT} rss2email.py ${SHAREDIR};			\
-	${INSTALL_DATA_DIR} ${EGDIR};					\
-	${INSTALL_DATA} config.py ${EGDIR};				\
-	${INSTALL_MAN} r2e.1 ${PREFIX}/${PKGMANDIR}/man1;			\
-	${INSTALL_SCRIPT} r2e ${PREFIX}/bin
+	${INSTALL_SCRIPT_DIR} ${DESTDIR}${SHAREDIR};			\
+	${INSTALL_SCRIPT} rss2email.py ${DESTDIR}${SHAREDIR};		\
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR};				\
+	${INSTALL_DATA} config.py ${DESTDIR}${EGDIR};			\
+	${INSTALL_MAN} r2e.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1;	\
+	${INSTALL_SCRIPT} r2e ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

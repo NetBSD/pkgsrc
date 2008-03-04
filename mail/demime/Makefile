@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/03/24 19:21:26 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2008/03/04 17:57:18 jlam Exp $
 #
 
 DISTNAME=	demime-1.1d
@@ -17,6 +17,8 @@ DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-HTML-Format-[0-9]*:../../www/p5-HTML-Format
 DEPENDS+=	p5-HTML-Tree-[0-9]*:../../www/p5-HTML-Tree
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 USE_TOOLS+=	perl:run pod2man
@@ -37,8 +39,10 @@ do-build:
 	${POD2MAN} ${WRKSRC}/demime > ${WRKSRC}/demime.1
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/demime ${PREFIX}/bin/demime
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/demime_junkmail.cf ${EGDIR}
-	${INSTALL_MAN} ${WRKSRC}/demime.1 ${PREFIX}/${PKGMANDIR}/man1/demime.1
+	${INSTALL_SCRIPT} ${WRKSRC}/demime ${DESTDIR}${PREFIX}/bin/demime
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/demime_junkmail.cf \
+		${DESTDIR}${EGDIR}
+	${INSTALL_MAN} ${WRKSRC}/demime.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/demime.1
 
 .include "../../mk/bsd.pkg.mk"

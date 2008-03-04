@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/06 13:49:46 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/04 17:57:19 jlam Exp $
 #
 
 DISTNAME=		policyd-weight-0.1.14.5
@@ -10,6 +10,8 @@ HOMEPAGE=		http://www.policyd-weight.org/
 COMMENT=		Weighted policy daemon for postfix
 
 DEPENDS+=		p5-Net-DNS>=0.58:../../net/p5-Net-DNS
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		perl:run
 USE_LANGUAGES=		# none
@@ -44,12 +46,12 @@ SUBST_SED.fix-paths+=	-e 's,"polw";,"${POLICYD_WEIGHT_USER}";,g'
 do-build:		replace-interpreter
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/policyd-weight ${PREFIX}/sbin
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/changes.txt ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/documentation.txt ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/policyd-weight ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/changes.txt ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/documentation.txt ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/policyd-weight.conf.sample \
-		${EGDIR}/policyd-weight.conf
+		${DESTDIR}${EGDIR}/policyd-weight.conf
 
 .include "../../mk/bsd.pkg.mk"

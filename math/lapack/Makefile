@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/12/10 17:50:31 adam Exp $
+# $NetBSD: Makefile,v 1.24 2008/03/04 18:12:59 jlam Exp $
 
 DISTNAME=	lapack-lite-3.1.1
 PKGNAME=	lapack-3.1.1
@@ -13,6 +13,7 @@ HOMEPAGE=	http://www.netlib.org/lapack/index.html
 COMMENT=	Linear Algebra PACKage
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c fortran
 USE_LIBTOOL=		YES
@@ -22,6 +23,6 @@ INSTALLATION_DIRS=	lib
 
 do-install:
 	${LIBTOOL} --mode=install ${INSTALL_DATA} ${WRKSRC}/liblapack.la \
-		${PREFIX}/lib
+		${DESTDIR}${PREFIX}/lib
 
 .include "../../mk/bsd.pkg.mk"

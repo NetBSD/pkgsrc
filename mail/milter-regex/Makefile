@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/12/21 22:54:57 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/04 17:57:18 jlam Exp $
 
 DISTNAME=	milter-regex-1.6
 PKGREVISION=	1
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.benzedrine.cx/
 MAINTAINER=	jdarrow@NetBSD.org
 HOMEPAGE=	http://www.benzedrine.cx/milter-regex.html
 COMMENT=	Milter enabling regular expression filtering
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		yacc
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
@@ -34,8 +36,9 @@ post-extract:
 	${MV} ${WRKDIR}/${PKGBASE} ${WRKSRC}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/milter-regex ${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC}/milter-regex.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_PROGRAM} ${WRKSRC}/milter-regex ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_DATA} ${WRKSRC}/milter-regex.8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mail/libmilter/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

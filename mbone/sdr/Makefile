@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2007/09/07 22:12:14 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2008/03/04 18:15:08 jlam Exp $
 #
 
 DISTNAME=	sdr-3.0
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www-mice.cs.ucl.ac.uk/multimedia/software/sdr/3.0/
 MAINTAINER=	is@NetBSD.org
 HOMEPAGE=	http://www-mice.cs.ucl.ac.uk/multimedia/software/sdr/
 COMMENT=	MBone Session Directory
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/sdr/${SYSDIR}
 CRYPTO=		yes
@@ -51,7 +53,7 @@ post-configure:
 .endif
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/sdr ${PREFIX}/bin/sdr
+	${INSTALL_PROGRAM} ${WRKSRC}/sdr ${DESTDIR}${PREFIX}/bin/sdr
 
 .include "../../mbone/common-mml/buildlink3.mk"
 .include "../../x11/tk83/buildlink3.mk"

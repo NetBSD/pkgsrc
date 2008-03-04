@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/10/04 21:47:16 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/04 17:57:18 jlam Exp $
 #
 
 DISTNAME=	mailserv
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.barelyfitz.com/projects/mailserv/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.barelyfitz.com/projects/mailserv/
 COMMENT=	WWW interface to several types of mailing list servers
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
@@ -39,19 +41,19 @@ do-configure:
 .endfor
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/libexec/cgi-bin/mailserv
-	${INSTALL_SCRIPT} ${WRKSRC}/mailserv ${PREFIX}/libexec/cgi-bin/mailserv
-	${INSTALL_SCRIPT} ${WRKSRC}/cgi-lib.pl ${PREFIX}/libexec/cgi-bin/mailserv
-	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/libexec/cgi-bin/mailserv
+	${INSTALL_SCRIPT} ${WRKSRC}/mailserv ${DESTDIR}${PREFIX}/libexec/cgi-bin/mailserv
+	${INSTALL_SCRIPT} ${WRKSRC}/cgi-lib.pl ${DESTDIR}${PREFIX}/libexec/cgi-bin/mailserv
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 .for cf in listproc listserv mail-list maiser majordomo-admin		\
 	majordomo-share majordomo mlp pmdf smartlist subscribe
-	${INSTALL_DATA} ${WRKSRC}/${cf}.cf ${EGDIR}
-	cd ${PREFIX}/libexec/cgi-bin/mailserv &&			\
+	${INSTALL_DATA} ${WRKSRC}/${cf}.cf ${DESTDIR}${EGDIR}
+	cd ${DESTDIR}${PREFIX}/libexec/cgi-bin/mailserv &&		\
 	${LN} -s mailserv ${cf}
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mailserv
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/mailserv
 .for doc in ChangeLog LICENSE README
-	${INSTALL_DATA} ${WRKSRC}/${doc} ${PREFIX}/share/doc/mailserv
+	${INSTALL_DATA} ${WRKSRC}/${doc} ${DESTDIR}${PREFIX}/share/doc/mailserv
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

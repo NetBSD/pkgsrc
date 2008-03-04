@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2007/12/02 12:13:31 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2008/03/04 17:57:19 jlam Exp $
 #
 
 DISTNAME=	popa3d-1.0.2
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.openwall.com/popa3d/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openwall.com/popa3d/
 COMMENT=	Secure, reliable, performant, and small pop3 server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 POPA3D_USER?=	popa3d
 POPA3D_GROUP?=	popa3d
@@ -34,12 +36,13 @@ SUBST_SED.params=	-e 's,/var/empty,${PREFIX}/share/empty,'	\
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
 do-install:
-	${INSTALL_PROGRAM} -m 500 ${WRKSRC}/popa3d ${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC}/popa3d.8 ${PREFIX}/${PKGMANDIR}/man8/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/popa3d
+	${INSTALL_PROGRAM} -m 500 ${WRKSRC}/popa3d ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_DATA} ${WRKSRC}/popa3d.8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/popa3d
 	cd ${WRKSRC} && ${INSTALL_DATA} DESIGN INSTALL LICENSE \
-		${PREFIX}/share/doc/popa3d
-	${INSTALL_DATA_DIR} ${PREFIX}/share/empty
+		${DESTDIR}${PREFIX}/share/doc/popa3d
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/empty
 
 .include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

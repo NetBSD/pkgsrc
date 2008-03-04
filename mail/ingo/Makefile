@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/01/09 21:48:51 adrianp Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/04 17:57:18 jlam Exp $
 
 DISTNAME=	ingo-h3-${INGOVER}
 PKGNAME=	ingo-${INGOVER}
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.horde.org/ingo/
 COMMENT=	Horde based generic and complete mail filter rule frontend
 
 DEPENDS+=	horde>=3.0.0:../../www/horde
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -58,31 +60,33 @@ do-build:
 	${FIND} ${WRKSRC} -name .htaccess -print | ${XARGS} ${RM} -f
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${INGODIR}
-	${INSTALL_DATA_DIR} ${INGODIR}/config
-	${INSTALL_DATA} ${WRKSRC}/ingo.conf.dist ${EGDIR}/ingo.conf
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/INSTALL ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/RELEASE_NOTES ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/UPGRADING ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${INGODIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${INGODIR}/config
+	${INSTALL_DATA} ${WRKSRC}/ingo.conf.dist ${DESTDIR}${EGDIR}/ingo.conf
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/INSTALL ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/RELEASE_NOTES ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/UPGRADING ${DESTDIR}${DOCDIR}
 
 .	for d in ${PAXDIRS}
-		${INSTALL_DATA_DIR} ${INGODIR}/${d:Q}
+		${INSTALL_DATA_DIR} ${DESTDIR}${INGODIR}/${d:Q}
 .	endfor
 
 .	for d in ${PAXDIRS}
-		cd ${WRKSRC}/${d:Q} && ${PAX} -rwpma . ${INGODIR}/${d:Q}
+		cd ${WRKSRC}/${d:Q} && ${PAX} -rwpma . ${DESTDIR}${INGODIR}/${d:Q}
 .	endfor
 
-	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${INGODIR}/config
-	${INSTALL_DATA} ${WRKSRC}/*.php ${INGODIR}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INGODIR}
-	${FIND} ${INGODIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${INGODIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
-	${CHOWN} ${APACHE_USER}:${SHAREGRP} ${INGODIR}/config
-	${CHMOD} 0750 ${INGODIR}/config
+	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${DESTDIR}${INGODIR}/config
+	${INSTALL_DATA} ${WRKSRC}/*.php ${DESTDIR}${INGODIR}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${INGODIR}
+	${FIND} ${DESTDIR}${INGODIR} -type d -print | \
+	${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${DESTDIR}${INGODIR} -type f -print | \
+	${XARGS} ${CHMOD} ${SHAREMODE}
+	${CHOWN} ${APACHE_USER}:${SHAREGRP} ${DESTDIR}${INGODIR}/config
+	${CHMOD} 0750 ${DESTDIR}${INGODIR}/config
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"

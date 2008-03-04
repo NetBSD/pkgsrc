@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/04 21:30:08 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/04 18:12:59 jlam Exp $
 
 DISTNAME=	ScientificPython-2.4.5
 PKGNAME=	py-${DISTNAME:S/Python/-doc/}
@@ -12,6 +12,8 @@ COMMENT=	Python modules for scientific computing
 
 CONFLICTS+=	py-Scientific-*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_BUILD=	yes
 
 EGDIR=		${PREFIX}/share/examples/py-Scientific
@@ -19,12 +21,12 @@ DOCDIR=		${PREFIX}/share/doc/py-Scientific
 HTMLDIR=	${PREFIX}/share/doc/html/py-Scientific
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} README LICENSE 			\
-		Doc/PDF/manual.pdf ${DOCDIR}
-	${INSTALL_DATA_DIR} ${HTMLDIR}
-	cd ${WRKSRC}/Doc/HTML && ${PAX} -rw -pp -pm . ${HTMLDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC}/Examples && ${PAX} -rw -pp -pm . ${EGDIR}
+		Doc/PDF/manual.pdf ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${HTMLDIR}
+	cd ${WRKSRC}/Doc/HTML && ${PAX} -rw -pp -pm . ${DESTDIR}${HTMLDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	cd ${WRKSRC}/Examples && ${PAX} -rw -pp -pm . ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"

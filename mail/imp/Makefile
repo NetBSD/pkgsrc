@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2008/01/09 21:49:48 adrianp Exp $
+# $NetBSD: Makefile,v 1.46 2008/03/04 17:57:18 jlam Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
@@ -15,6 +15,8 @@ CONFLICTS+=	imp-3.*
 DEPENDS+=	horde>=3.0.2:../../www/horde
 DEPENDS+=	${PHP_PKG_PREFIX}-imap>4.3.3:../../mail/php-imap
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail-[0-9]*:../../mail/pear-Mail
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -75,30 +77,32 @@ do-build:
 	${FIND} ${WRKSRC} -name .htaccess -print | ${XARGS} ${RM} -f
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${IMPDIR}
-	${INSTALL_DATA_DIR} ${IMPDIR}/config
-	${INSTALL_DATA} ${WRKSRC}/imp.conf.dist ${EGDIR}/imp.conf
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/* ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${IMPDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${IMPDIR}/config
+	${INSTALL_DATA} ${WRKSRC}/imp.conf.dist ${DESTDIR}${EGDIR}/imp.conf
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/* ${DESTDIR}${DOCDIR}
 
 .	for d in ${PAXDIRS}
-		${INSTALL_DATA_DIR} ${IMPDIR}/${d}
+		${INSTALL_DATA_DIR} ${DESTDIR}${IMPDIR}/${d}
 .	endfor
 
 .	for d in ${PAXDIRS}
-		cd ${WRKSRC}/${d} && ${PAX} -rwpam . ${IMPDIR}/${d}
+		cd ${WRKSRC}/${d} && ${PAX} -rwpam . ${DESTDIR}${IMPDIR}/${d}
 .	endfor
 
-	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${IMPDIR}/config
-	${INSTALL_DATA} ${WRKSRC}/*.php ${IMPDIR}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${IMPDIR}
-	${FIND} ${IMPDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${IMPDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
-	${CHOWN} ${APACHE_USER}:${ROOT_GROUP} ${IMPDIR}/config
-	${CHMOD} 0750 ${IMPDIR}/config
+	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${DESTDIR}${IMPDIR}/config
+	${INSTALL_DATA} ${WRKSRC}/*.php ${DESTDIR}${IMPDIR}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${IMPDIR}
+	${FIND} ${DESTDIR}${IMPDIR} -type d -print | \
+	${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${DESTDIR}${IMPDIR} -type f -print | \
+	${XARGS} ${CHMOD} ${SHAREMODE}
+	${CHOWN} ${APACHE_USER}:${ROOT_GROUP} ${DESTDIR}${IMPDIR}/config
+	${CHMOD} 0750 ${DESTDIR}${IMPDIR}/config
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"

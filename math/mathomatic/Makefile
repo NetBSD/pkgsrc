@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2007/11/21 23:36:23 minskim Exp $
+# $NetBSD: Makefile,v 1.85 2008/03/04 18:12:59 jlam Exp $
 #
 
 DISTNAME=		mathomatic-12.8.0
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.mathomatic.org/
 COMMENT=		Small portable symbolic math program
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 MAKE_FILE=		makefile
@@ -23,10 +24,11 @@ BUILDLINK_API_DEPENDS.readline+=	readline>=5.1pl1nb1
 .include "../../devel/readline/buildlink3.mk"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mathomatic ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/mathomatic.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_PROGRAM} ${WRKSRC}/mathomatic ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/mathomatic.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_DATA} ${WRKSRC}/doc/* ${WRKSRC}/README.txt \
-		${PREFIX}/share/doc/${PKGBASE}
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../mk/bsd.pkg.mk"

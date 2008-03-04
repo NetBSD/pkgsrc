@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/09/09 02:43:10 obache Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/04 18:12:59 jlam Exp $
 #
 
 DISTNAME=	newmat10 # actually newmat10B, but no such distfile
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.robertnz.net/ftp/
 MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://www.robertnz.net/ol_doc.htm
 COMMENT=	Newmat C++ Matrix Library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	newmat10B
@@ -25,12 +27,12 @@ DOCDIR=		${PREFIX}/share/doc/html/newmat
 INSTALLATION_DIRS=	lib
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/newmat
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/newmat
 .for header in ${HEADERS}
-	${INSTALL_DATA} ${WRKSRC}/${header} ${PREFIX}/include/newmat
+	${INSTALL_DATA} ${WRKSRC}/${header} ${DESTDIR}${PREFIX}/include/newmat
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/libnewmat.a ${PREFIX}/lib
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/nm10.htm ${DOCDIR}/index.html
+	${INSTALL_DATA} ${WRKSRC}/libnewmat.a ${DESTDIR}${PREFIX}/lib
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/nm10.htm ${DESTDIR}${DOCDIR}/index.html
 
 .include "../../mk/bsd.pkg.mk"

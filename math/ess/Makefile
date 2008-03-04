@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/10/09 12:24:04 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/04 18:12:59 jlam Exp $
 
 DISTNAME=	ess-5.3.4
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	markd@NetBSD.org
 HOMEPAGE=	http://ess.r-project.org/
 COMMENT=	Emacs Speaks Statistics
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	makeinfo perl
 EMACS_MODULES=	base
@@ -30,14 +32,18 @@ post-extract:
 	cd ${WRKSRC} && chmod u+w doc/*/
 
 do-install:
-	cd ${WRKSRC}/lisp && ${INSTALL_DATA} *.el* ${EMACS_LISPPREFIX}/ess
+	cd ${WRKSRC}/lisp && ${INSTALL_DATA} *.el*			\
+		${DESTDIR}${EMACS_LISPPREFIX}/ess
 	cd ${WRKSRC}/doc/info; for f in ess.info ess.info-[0-9]*; do	\
 		${TEST} ! -f "$$f" ||					\
-		${INSTALL_DATA} "$$f" ${EMACS_INFOPREFIX};		\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${EMACS_INFOPREFIX};	\
         done
-	cd ${WRKSRC}/etc && ${INSTALL_DATA} icons/*.xpm ${EMACS_ETCPREFIX}/ess/icons
-	cd ${WRKSRC}/etc && ${INSTALL_DATA} *.S ${EMACS_ETCPREFIX}/ess
-	cd ${WRKSRC}/etc && ${INSTALL_SCRIPT} ess-sas-sh-command ${EMACS_ETCPREFIX}/ess
+	cd ${WRKSRC}/etc && ${INSTALL_DATA} icons/*.xpm			\
+		${DESTDIR}${EMACS_ETCPREFIX}/ess/icons
+	cd ${WRKSRC}/etc && ${INSTALL_DATA} *.S				\
+		${DESTDIR}${EMACS_ETCPREFIX}/ess
+	cd ${WRKSRC}/etc && ${INSTALL_SCRIPT} ess-sas-sh-command	\
+		${DESTDIR}${EMACS_ETCPREFIX}/ess
 
 .include "../../mk/emacs.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/01/18 05:08:26 tnn Exp $
+# $NetBSD: Makefile,v 1.29 2008/03/04 17:57:18 jlam Exp $
 #
 
 DISTNAME=	mailsync_5.2.1.orig
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mailsync/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mailsync.sourceforge.net/
 COMMENT=	Mailsync is a way of synchronizing a collection of mailboxes
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=	gmake
@@ -33,14 +35,15 @@ DOCS=	COPYING NEWS README THANKS TODO doc/ABSTRACT doc/HACKING
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mailsync
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mailsync
-	${INSTALL_PROGRAM} ${WRKSRC}/src/mailsync ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/mailsync
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/mailsync
+	${INSTALL_PROGRAM} ${WRKSRC}/src/mailsync ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/doc/examples/mailsync \
-		${PREFIX}/share/examples/mailsync/dot.mailsync
-	${INSTALL_MAN} ${WRKSRC}/doc/mailsync.1 ${PREFIX}/${PKGMANDIR}/man1
+		${DESTDIR}${PREFIX}/share/examples/mailsync/dot.mailsync
+	${INSTALL_MAN} ${WRKSRC}/doc/mailsync.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .for d in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${d} ${PREFIX}/share/doc/mailsync
+	${INSTALL_DATA} ${WRKSRC}/${d} ${DESTDIR}${PREFIX}/share/doc/mailsync
 .endfor
 
 .include "../../security/openssl/buildlink3.mk"

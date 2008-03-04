@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2007/08/15 04:50:39 markd Exp $
+# $NetBSD: Makefile,v 1.39 2008/03/04 17:57:18 jlam Exp $
 
 DISTNAME=		mimedefang-2.63
 CATEGORIES=		mail
@@ -16,6 +16,8 @@ DEPENDS+=		p5-MailTools>=1.44:../../mail/p5-MailTools
 DEPENDS+=		p5-MIME-Base64>=2.11:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-MIME-tools>=5.411.1:../../mail/p5-MIME-tools
 DEPENDS+=		spamassassin>=2.31:../../mail/spamassassin
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -70,23 +72,23 @@ PTHREAD_OPTS+=		require native
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man5 ${PKGMANDIR}/man7 ${PKGMANDIR}/man8
 do-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${SHAREDIR}
-	${INSTALL_DATA} ${WRKSRC}/gen-ip-validator.pl ${SHAREDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/md-mx-ctrl ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/mimedefang-multiplexor ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/mimedefang ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/watch-mimedefang ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/mimedefang.pl ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/md-mx-ctrl.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKSRC}/mimedefang.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKSRC}/mimedefang.pl.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKSRC}/mimedefang-multiplexor.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKSRC}/watch-mimedefang.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKSRC}/mimedefang-filter.5 ${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_DATA} ${WRKSRC}/mimedefang-protocol.7 ${PREFIX}/${PKGMANDIR}/man7
-	${INSTALL_DATA} ${WRKSRC}/examples/suggested-minimum-filter-for-windows-clients ${EGDIR}/mimedefang-filter
-	${INSTALL_DATA} ${WRKSRC}/SpamAssassin/spamassassin.cf ${EGDIR}/sa-mimedefang.cf
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}
+	${INSTALL_DATA} ${WRKSRC}/gen-ip-validator.pl ${DESTDIR}${SHAREDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/md-mx-ctrl ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/mimedefang-multiplexor ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/mimedefang ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/watch-mimedefang ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/mimedefang.pl ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/md-mx-ctrl.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/mimedefang.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/mimedefang.pl.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/mimedefang-multiplexor.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/watch-mimedefang.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/mimedefang-filter.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_DATA} ${WRKSRC}/mimedefang-protocol.7 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man7
+	${INSTALL_DATA} ${WRKSRC}/examples/suggested-minimum-filter-for-windows-clients ${DESTDIR}${EGDIR}/mimedefang-filter
+	${INSTALL_DATA} ${WRKSRC}/SpamAssassin/spamassassin.cf ${DESTDIR}${EGDIR}/sa-mimedefang.cf
 
 .include "../../mail/libmilter/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/05/18 10:03:30 peter Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/04 17:57:19 jlam Exp $
 
 DISTNAME=		spamd-20060330
 CATEGORIES=		mail
@@ -9,6 +9,8 @@ HOMEPAGE=		http://www.benzedrine.cx/relaydb.html
 COMMENT=		OpenBSD spam deferral daemon
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* OpenBSD-*-* FreeBSD-*-* DragonFly-*-*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		yes
 
@@ -41,22 +43,36 @@ INSTALLATION_DIRS+=	libexec sbin ${PKGMANDIR}/cat5 ${PKGMANDIR}/man5
 INSTALLATION_DIRS+=	${PKGMANDIR}/cat8 ${PKGMANDIR}/man8 share/examples/spamd
 
 do-install:
-	${INSTALL_MAN} ${WRKSRC}/man/spamd.conf.5 ${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_MAN} ${WRKSRC}/man/spamd.conf.cat5 ${PREFIX}/${PKGMANDIR}/cat5/spamd.conf.0
-	${INSTALL_MAN} ${WRKSRC}/spamd/spamd.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/spamd/spamd.cat8 ${PREFIX}/${PKGMANDIR}/cat8/spamd.0
-	${INSTALL_MAN} ${WRKSRC}/spamd-setup/spamd-setup.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/spamd-setup/spamd-setup.cat8 ${PREFIX}/${PKGMANDIR}/cat8/spamd-setup.0
-	${INSTALL_MAN} ${WRKSRC}/spamdb/spamdb.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/spamdb/spamdb.cat8 ${PREFIX}/${PKGMANDIR}/cat8/spamdb.0
-	${INSTALL_MAN} ${WRKSRC}/spamlogd/spamlogd.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/spamlogd/spamlogd.cat8 ${PREFIX}/${PKGMANDIR}/cat8/spamlogd.0
+	${INSTALL_MAN} ${WRKSRC}/man/spamd.conf.5 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_MAN} ${WRKSRC}/man/spamd.conf.cat5 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat5/spamd.conf.0
+	${INSTALL_MAN} ${WRKSRC}/spamd/spamd.8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/spamd/spamd.cat8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/spamd.0
+	${INSTALL_MAN} ${WRKSRC}/spamd-setup/spamd-setup.8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/spamd-setup/spamd-setup.cat8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/spamd-setup.0
+	${INSTALL_MAN} ${WRKSRC}/spamdb/spamdb.8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/spamdb/spamdb.cat8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/spamdb.0
+	${INSTALL_MAN} ${WRKSRC}/spamlogd/spamlogd.8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/spamlogd/spamlogd.cat8 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat8/spamlogd.0
 
-	${INSTALL_PROGRAM} ${WRKSRC}/spamd-setup/spamd-setup ${PREFIX}/libexec
-	${INSTALL_PROGRAM} ${WRKSRC}/spamd/spamd ${PREFIX}/libexec
-	${INSTALL_PROGRAM} ${WRKSRC}/spamdb/spamdb ${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC}/spamlogd/spamlogd ${PREFIX}/libexec
-	${INSTALL_DATA} ${WRKSRC}/etc/spamd.conf ${PREFIX}/share/examples/spamd
+	${INSTALL_PROGRAM} ${WRKSRC}/spamd-setup/spamd-setup \
+		${DESTDIR}${PREFIX}/libexec
+	${INSTALL_PROGRAM} ${WRKSRC}/spamd/spamd \
+		${DESTDIR}${PREFIX}/libexec
+	${INSTALL_PROGRAM} ${WRKSRC}/spamdb/spamdb \
+		${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/spamlogd/spamlogd \
+		${DESTDIR}${PREFIX}/libexec
+	${INSTALL_DATA} ${WRKSRC}/etc/spamd.conf ${DESTDIR}${PREFIX}/share/examples/spamd
 
 .include "../../security/pflkm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

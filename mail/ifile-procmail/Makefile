@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/09/04 20:22:50 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/04 17:57:18 jlam Exp $
 #
 
 DISTNAME=	ifile.procmail-0.3
@@ -15,6 +15,8 @@ COMMENT=	Set of scripts for ifile used in procmail environment
 DEPENDS+=	ifile>=1.2.1:../../mail/ifile
 DEPENDS+=	procmail>=3.22:../../mail/procmail
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 USE_TOOLS+=	ksh:run mktemp:run
@@ -24,12 +26,14 @@ REPLACE_KSH+=	bin/ifile.*
 NO_BUILD=	YES
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ifile
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/ifile
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/ifile
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/ifile
 	for f in `${LS} ${WRKSRC}/bin` ; do \
-		${INSTALL_SCRIPT} ${WRKSRC}/bin/$$f ${PREFIX}/bin ; \
+		${INSTALL_SCRIPT} ${WRKSRC}/bin/$$f ${DESTDIR}${PREFIX}/bin ; \
 	done
-	${INSTALL_DATA} ${WRKSRC}/README.new ${PREFIX}/share/doc/ifile/README
-	${INSTALL_DATA} ${WRKSRC}/sample.procmailrc ${PREFIX}/share/examples/ifile
+	${INSTALL_DATA} ${WRKSRC}/README.new \
+		${DESTDIR}${PREFIX}/share/doc/ifile/README
+	${INSTALL_DATA} ${WRKSRC}/sample.procmailrc \
+		${DESTDIR}${PREFIX}/share/examples/ifile
 
 .include "../../mk/bsd.pkg.mk"
