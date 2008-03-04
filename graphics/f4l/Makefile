@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/05/22 19:06:28 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/04 15:39:09 jlam Exp $
 
 DISTNAME=	f4l-0.2.1
 CATEGORIES=	graphics
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://f4l.sourceforge.net/
 COMMENT=	Development environment for Macromedia Flash
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_CONFIGURE=		yes
 USE_LANGUAGES=		c++
 USE_LIBTOOL=		yes
@@ -17,7 +19,7 @@ USE_TOOLS+=		gmake
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/f4l ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/f4l ${DESTDIR}${PREFIX}/bin
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"

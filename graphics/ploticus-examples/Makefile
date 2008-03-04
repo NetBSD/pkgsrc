@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/02/15 14:58:22 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/04 15:39:10 jlam Exp $
 #
 
 DISTNAME=	plnode141
@@ -12,6 +12,8 @@ MAINTAINER=	rh@NetBSD.org
 # domain squatted
 COMMENT=	Examples for the ploticus data plotting suite
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
@@ -19,8 +21,8 @@ DIST_SUBDIR=	${PKGNAME_NOREV:S/-examples//}
 EXDIR=		${PREFIX}/share/examples/ploticus
 
 do-install:
-	${INSTALL_DATA_DIR} ${EXDIR}
-	cd ${WRKSRC} && ${PAX} -rw -pp doc gallery tabgallery thumbnails thumbpng ${EXDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EXDIR}
+	cd ${WRKSRC} && ${PAX} -rw -pp doc gallery tabgallery thumbnails thumbpng ${DESTDIR}${EXDIR}
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/04/22 09:22:09 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/04 15:39:11 jlam Exp $
 
 DISTNAME=	tkpiechart-5.4
 PKGREVISION=	1
@@ -13,6 +13,7 @@ DEPENDS+=	tk>=8.3.2:../../x11/tk
 DEPENDS+=	stooop>=3.7:../../devel/stooop
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
@@ -28,7 +29,7 @@ post-patch:
 	${CHMOD} a+x ${WRKSRC}/instapkg.tcl
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/tcl/tkpiechart
-	cd ${WRKSRC}; ./instapkg.tcl ${PREFIX}/lib/tcl/tkpiechart
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/tcl/tkpiechart
+	cd ${WRKSRC}; ./instapkg.tcl ${DESTDIR}${PREFIX}/lib/tcl/tkpiechart
 
 .include "../../mk/bsd.pkg.mk"

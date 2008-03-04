@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/11/17 13:40:15 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/04 15:39:10 jlam Exp $
 
 DISTNAME=	prag-1.0pl2
 PKGNAME=	prag-1.0.2
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.shar
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Replacement to "grap" graph generator backend to pic
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/prag-1.0
 NO_BUILD=	yes
@@ -19,7 +21,7 @@ post-patch:
 	(cd ${WRKSRC}; ${SED} -e "1s,/bin/nawk,${AWK}," < prag.orig >prag)
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/prag ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/prag.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/prag ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/prag.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

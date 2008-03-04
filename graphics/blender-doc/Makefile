@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/04/12 21:02:35 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/04 15:39:09 jlam Exp $
 
 DISTNAME=	BlenderManual.html
 PKGNAME=	blender-doc-20030922
@@ -12,14 +12,17 @@ COMMENT=	Documentation for Blender
 
 CONFLICTS=	blender<=2.31
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/doc
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/blender
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/blender
 	cd ${WRKDIR}/html && ${PAX} -s,.*/CVS.*,, -s,.*/.xvpics.*,, \
-		-rw . ${PREFIX}/share/doc/blender
-	cd ${PREFIX}/share/doc/blender && ${LN} -s book1.html index.html
+		-rw . ${DESTDIR}${PREFIX}/share/doc/blender
+	cd ${DESTDIR}${PREFIX}/share/doc/blender && \
+		${LN} -s book1.html index.html
 
 .include "../../mk/bsd.pkg.mk"

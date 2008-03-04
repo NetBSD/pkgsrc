@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/02/22 19:26:34 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/04 15:39:10 jlam Exp $
 #
 
 DISTNAME=	Cult3D_NS4_5.2b1
@@ -13,6 +13,8 @@ COMMENT=	Netscape plugin for cult 3d files
 NOT_FOR_PLATFORM=	Interix-*-*
 ONLY_FOR_PLATFORM=	*-*-i386
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}/cult3d-5.2-b1-linux-x86
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
@@ -26,7 +28,9 @@ post-extract:
 	chmod -R go-w ${WRKSRC}
 
 do-install:
-	cd ${WRKSRC} && pax -wr cult3d ${PREFIX}/lib/netscape/plugins
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/ns-cult3d.txt
+	cd ${WRKSRC} && pax -wr cult3d \
+		${DESTDIR}${PREFIX}/lib/netscape/plugins
+	${INSTALL_DATA} ${WRKSRC}/README \
+		${DESTDIR}${PREFIX}/share/doc/ns-cult3d.txt
 
 .include "../../mk/bsd.pkg.mk"

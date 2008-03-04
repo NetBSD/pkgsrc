@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/04/17 13:46:35 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2008/03/04 15:39:10 jlam Exp $
 #
 
 DISTNAME=	gdchart-py-0.6
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.nullcube.com/software/pygdchart.html
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://athani.pair.com/msteed/software/gdchart/
 COMMENT=	Python interface to GDChart
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 MAKE_ENV+=	GD_INCLUDE=${LOCALBASE}/include \
@@ -28,11 +30,11 @@ INSTALLATION_DIRS=	${PYSITELIB:S/^${PREFIX}\///}
 
 do-install:
 .for f in ${MODULE_FILES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/${PYSITELIB}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${PYSITELIB}
 .endfor
-	${INSTALL_DATA_DIR} ${EXAMPLE_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLE_DIR}
 .for f in ${EXAMPLE_FILES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${EXAMPLE_DIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${EXAMPLE_DIR}
 .endfor
 
 .include "../../graphics/gdchart/buildlink3.mk"

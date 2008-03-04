@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/04 21:29:47 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/04 15:39:09 jlam Exp $
 #
 
 DISTNAME=	get_ds7_1.2.4
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tar
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.yk.rim.or.jp/~mamo/Computer/DS-7/index-e.html
 COMMENT=	Read pictures from a FUJIFILM DS-7(DS series) digital camera
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	perl:run
 
@@ -28,12 +30,12 @@ post-patch:
 		<${WRKSRC}/get_ds7 >${WRKSRC}/get_ds7.exe
 
 do-install:
-	${INSTALL_DATA_DIR} ${PERL5_INSTALLVENDORLIB}
-	${INSTALL_DATA} ${WRKSRC}/ds7_lib.pm ${PERL5_INSTALLVENDORLIB}
-	${INSTALL_SCRIPT} ${WRKSRC}/get_ds7.exe ${PREFIX}/bin/get_ds7
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_MAN} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_MAN} ${WRKSRC}/README.english ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PERL5_INSTALLVENDORLIB}
+	${INSTALL_DATA} ${WRKSRC}/ds7_lib.pm ${DESTDIR}${PERL5_INSTALLVENDORLIB}
+	${INSTALL_SCRIPT} ${WRKSRC}/get_ds7.exe ${DESTDIR}${PREFIX}/bin/get_ds7
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_MAN} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${INSTALL_MAN} ${WRKSRC}/README.english ${DESTDIR}${DOCDIR}
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

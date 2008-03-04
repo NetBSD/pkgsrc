@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/02/15 14:58:21 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2008/03/04 15:39:10 jlam Exp $
 
 DISTNAME=	pl231src
 PKGNAME=	ploticus-2.31pl4
@@ -9,6 +9,8 @@ MASTER_SITES=	http://ploticus.sourceforge.net/download/
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://ploticus.sourceforge.net/
 COMMENT=	Versatile data visualization engine
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 NO_CONFIGURE=		yes
@@ -26,8 +28,8 @@ MAKE_ENV+=	XINCLUDEDIR="-I${X11BASE}/include"
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pl ${PREFIX}/bin/pl
-	${INSTALL_DATA_DIR} ${PREFABDST}
+	${INSTALL_PROGRAM} ${WRKSRC}/pl ${DESTDIR}${PREFIX}/bin/pl
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFABDST}
 .for file in \
 	README chron.pl chunk_area chunk_chronfilter chunk_doheatmap \
 	chunk_heatmapfilter chunk_logstubs chunk_logtics chunk_read \
@@ -35,7 +37,7 @@ do-install:
 	chunk_xaxis chunk_yaxis compare.pl cumufrac.pl dist.pl draw.pl \
 	heatmap.pl lines.pl multidist.pl pie.pl processdata.pl scat.pl \
 	stack.pl vbars.pl vdist.pl
-	${INSTALL_DATA} ${PREFABSRC}/${file} ${PREFABDST}/${file}
+	${INSTALL_DATA} ${PREFABSRC}/${file} ${DESTDIR}${PREFABDST}/${file}
 .endfor
 
 .include "../../devel/zlib/buildlink3.mk"
