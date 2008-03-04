@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.55 2008/02/21 04:23:58 tnn Exp $
+# $NetBSD: Interix.mk,v 1.56 2008/03/04 06:45:34 jlam Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -170,8 +170,10 @@ _OPSYS_MAX_CMDLEN_CMD=	${ECHO} 262144
 # BINOWN, BINGRP and BINMODE as per defaults/mk.conf).
 # FIXME: Adjust to work on this system and enable the lines below.
 #.if !(empty(SETGIDGAME:M[yY][eE][sS]))
-#GAMEOWN=		games
-#GAMEGRP=		games
+#GAMES_USER=		games
+#GAMES_GROUP=		games
+#GAMEOWN=		${GAMES_USER}
+#GAMEGRP=		${GAMES_GROUP}
 #GAMEMODE=		2555
 #GAMEDIRMODE=		0775
 #.endif
