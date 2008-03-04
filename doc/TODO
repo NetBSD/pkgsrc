@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7095 2008/03/04 10:11:06 wiz Exp $
+$NetBSD: TODO,v 1.7096 2008/03/04 10:41:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -377,7 +377,6 @@ Suggested package updates
 	o REminiscence-0.1.9
 	o RTx-Shredder-0.05
 	o SmartEiffel-2.3
-	o TeXmacs-1.0.6.12
 	o TiffIO-130e
 	o YoSucker-81
 	o ZIPIdent-2.9
@@ -575,7 +574,6 @@ Suggested package updates
 	o enlightenment-0.16.8.11
 	o enscript-1.6.4
 	o epic4-2.6
-	o epiphany-extensions-2.20.3
 	o epsg-6.14
 	o epstool-3.08
 	o eric3-4.1.1 [now called eric4]
@@ -658,14 +656,12 @@ Suggested package updates
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-build-0.2.3
-	o gnome-common-2.20.0
 	o gnome-mag-0.15.0
 	o gnome-pilot-2.0.16
 	o gnome-spell-1.0.8
 	o gnomeicu-0.99.14
 	o gnu-crypto-2.1.0
 	o gnucash-2.2.4
-	o gnumeric-1.8.1
 	o gnupg2-2.0.8
 	o gnustep-1.14.0
 	o gnustep-examples-1.2.0
@@ -674,7 +670,6 @@ Suggested package updates
 	o gob2-2.0.15
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
-	o goffice-0.6.1
 	o gogo-3.11p1
 	o gossip-0.28
 	o gourmet-0.13.3
