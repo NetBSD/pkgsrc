@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkginstall.mk,v 1.45 2008/03/04 06:45:33 jlam Exp $
+# $NetBSD: bsd.pkginstall.mk,v 1.46 2008/03/04 06:51:41 jlam Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and implements the
 # common INSTALL/DEINSTALL scripts framework.  To use the pkginstall
@@ -202,6 +202,12 @@ _PKG_USER_HOME?=	/nonexistent
 _PKG_USER_SHELL?=	${NOLOGIN}
 FILES_SUBST+=		PKG_USER_HOME=${_PKG_USER_HOME:Q}
 FILES_SUBST+=		PKG_USER_SHELL=${_PKG_USER_SHELL:Q}
+
+# If SETGIDGAME == yes, then we need the "games" user and group.
+.if defined(SETGIDGAME) && !empty(SETGIDGAME:M[yY][eE][sS])
+PKG_GROUPS+=	${GAMES_USER}
+PKG_USERS+=	${GAMES_USER}:${GAMES_GROUP}
+.endif
 
 # Interix is very special in that users and groups cannot have the
 # same name.  Interix.mk tries to work around this by overriding
