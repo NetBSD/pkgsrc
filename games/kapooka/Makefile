@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/06/12 16:28:09 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/04 06:59:04 jlam Exp $
 #
 
 DISTNAME=		kapooka_0.2
@@ -12,6 +12,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://kapooka.sourceforge.net/
 COMMENT=		Puzzle game
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}/kapooka
 USE_TOOLS+=		gmake
 
@@ -24,19 +26,25 @@ SUBST_SED.kapooka=	"s!data/!${PREFIX}/share/kapooka/!"
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/kapooka ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/kapooka
-	${INSTALL_DATA_DIR} ${PREFIX}/share/kapooka/interface
-	${INSTALL_DATA_DIR} ${PREFIX}/share/kapooka/levelDummy
-	${INSTALL_DATA_DIR} ${PREFIX}/share/kapooka/music
-	${INSTALL_DATA_DIR} ${PREFIX}/share/kapooka/sound
-	${INSTALL_DATA_DIR} ${PREFIX}/share/kapooka/sprites
-	${INSTALL_DATA} ${WRKSRC}/data/level.dat ${PREFIX}/share/kapooka
-	${INSTALL_DATA} ${WRKSRC}/data/interface/* ${PREFIX}/share/kapooka/interface
-	${INSTALL_DATA} ${WRKSRC}/data/levelDummy/* ${PREFIX}/share/kapooka/levelDummy
-	${INSTALL_DATA} ${WRKSRC}/data/music/* ${PREFIX}/share/kapooka/music
-	${INSTALL_DATA} ${WRKSRC}/data/sound/* ${PREFIX}/share/kapooka/sound
-	${INSTALL_DATA} ${WRKSRC}/data/sprites/*.png ${PREFIX}/share/kapooka/sprites
+	${INSTALL_PROGRAM} ${WRKSRC}/kapooka ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/kapooka
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/kapooka/interface
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/kapooka/levelDummy
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/kapooka/music
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/kapooka/sound
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/kapooka/sprites
+	${INSTALL_DATA} ${WRKSRC}/data/level.dat \
+		${DESTDIR}${PREFIX}/share/kapooka
+	${INSTALL_DATA} ${WRKSRC}/data/interface/* \
+		${DESTDIR}${PREFIX}/share/kapooka/interface
+	${INSTALL_DATA} ${WRKSRC}/data/levelDummy/* \
+		${DESTDIR}${PREFIX}/share/kapooka/levelDummy
+	${INSTALL_DATA} ${WRKSRC}/data/music/* \
+		${DESTDIR}${PREFIX}/share/kapooka/music
+	${INSTALL_DATA} ${WRKSRC}/data/sound/* \
+		${DESTDIR}${PREFIX}/share/kapooka/sound
+	${INSTALL_DATA} ${WRKSRC}/data/sprites/*.png \
+		${DESTDIR}${PREFIX}/share/kapooka/sprites
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../audio/libmikmod/buildlink3.mk"

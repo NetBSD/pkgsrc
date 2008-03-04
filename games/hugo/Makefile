@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/07/27 18:48:02 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/04 06:59:04 jlam Exp $
 #
 
 DISTNAME=	hugov31_unix_source
@@ -14,11 +14,13 @@ COMMENT=	Interactive fiction design system and interpreter
 
 SITES.hugolib.zip=${MASTER_SITE_IFARCHIVE:=programming/hugo/library/}
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DIST_SUBDIR=	${PKGNAME_NOREV}
 USE_TOOLS+=	gmake
 # uses halfkey (present since 1.6M)
-INCOMPAT_CURSES+=	NetBSD-1.4[Y-Z]*-* NetBSD-1.5*-* NetBSD-1.6-* NetBSD-1.6.*-*
-INCOMPAT_CURSES+=	NetBSD-1.6[A-L]*-*
+INCOMPAT_CURSES+=	NetBSD-1.4[Y-Z]*-* NetBSD-1.5*-* NetBSD-1.6-*
+INCOMPAT_CURSES+=	NetBSD-1.6.*-* NetBSD-1.6[A-L]*-*
 WRKSRC=		${WRKDIR}/hugov3.1.02
 
 LIBDIR=		${PREFIX}/share/hugo
@@ -26,14 +28,14 @@ LIBDIR=		${PREFIX}/share/hugo
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/hc ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/hd ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/he ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${LIBDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/hc ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/hd ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/he ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${LIBDIR}
 	for f in hugofix.g hugofix.h hugolib.h objlib.h resource.h \
 		system.h verblib.g verblib.h verbstub.g verbstub.h window.h; \
 	do \
-		${INSTALL_DATA} ${WRKDIR}/$$f ${LIBDIR}; \
+		${INSTALL_DATA} ${WRKDIR}/$$f ${DESTDIR}${LIBDIR}; \
 	done
 
 .include "../../devel/ncurses/buildlink3.mk"
