@@ -1,8 +1,8 @@
-$NetBSD: patch-cb,v 1.2 2008/01/31 21:46:43 joerg Exp $
+$NetBSD: patch-cb,v 1.3 2008/03/04 09:22:27 wiz Exp $
 
---- glib-1.2.8/configure.in.orig	2007-06-18 23:35:54.000000000 +0200
-+++ glib-1.2.8/configure.in
-@@ -157,26 +157,6 @@ if test "x$GCC" = "xyes"; then
+--- glib-1.2.10/configure.in.orig	2008-01-16 22:52:24.000000000 +0000
++++ glib-1.2.10/configure.in
+@@ -178,26 +178,6 @@ if test "x$GCC" = "xyes"; then
  fi
  changequote([,])dnl
  
@@ -29,7 +29,7 @@ $NetBSD: patch-cb,v 1.2 2008/01/31 21:46:43 joerg Exp $
  dnl NeXTStep cc seems to need this
  AC_MSG_CHECKING([for extra flags for POSIX compliance])
  AC_TRY_COMPILE([#include <dirent.h>], [DIR *dir;],
-@@ -213,14 +193,13 @@ dnl truely know which ones of `inline', 
+@@ -234,14 +214,13 @@ dnl truely know which ones of `inline', 
  dnl actually supported.
  AC_MSG_CHECKING(for __inline)
  AC_CACHE_VAL(glib_cv_has__inline,[
@@ -49,7 +49,7 @@ $NetBSD: patch-cb,v 1.2 2008/01/31 21:46:43 joerg Exp $
  ])
  AC_MSG_RESULT($glib_cv_has__inline)
  case x$glib_cv_has__inline in
-@@ -228,14 +207,13 @@ xyes) AC_DEFINE(G_HAVE___INLINE)
+@@ -249,14 +228,13 @@ xyes) AC_DEFINE(G_HAVE___INLINE)
  esac
  AC_MSG_CHECKING(for __inline__)
  AC_CACHE_VAL(glib_cv_has__inline__,[
@@ -69,7 +69,7 @@ $NetBSD: patch-cb,v 1.2 2008/01/31 21:46:43 joerg Exp $
  ])
  AC_MSG_RESULT($glib_cv_has__inline__)
  case x$glib_cv_has__inline__ in
-@@ -243,14 +221,13 @@ xyes) AC_DEFINE(G_HAVE___INLINE__)
+@@ -264,14 +242,13 @@ xyes) AC_DEFINE(G_HAVE___INLINE__)
  esac
  AC_MSG_CHECKING(for inline)
  AC_CACHE_VAL(glib_cv_hasinline,[
@@ -89,7 +89,7 @@ $NetBSD: patch-cb,v 1.2 2008/01/31 21:46:43 joerg Exp $
  ])
  AC_MSG_RESULT($glib_cv_hasinline)
  case x$glib_cv_hasinline in
-@@ -401,7 +378,8 @@ dnl we currently check for all three va_
+@@ -422,7 +399,8 @@ dnl we currently check for all three va_
  dnl all results in config.log for bug reports.
  AC_MSG_CHECKING(for an implementation of va_copy())
  AC_CACHE_VAL(glib_cv_va_copy,[
@@ -99,7 +99,7 @@ $NetBSD: patch-cb,v 1.2 2008/01/31 21:46:43 joerg Exp $
  	#include <stdarg.h>
  	void f (int i, ...) {
  	va_list args1, args2;
-@@ -411,19 +389,15 @@ AC_CACHE_VAL(glib_cv_va_copy,[
+@@ -432,19 +410,15 @@ AC_CACHE_VAL(glib_cv_va_copy,[
  	  exit (1);
  	va_end (args1); va_end (args2);
  	}
@@ -124,7 +124,7 @@ $NetBSD: patch-cb,v 1.2 2008/01/31 21:46:43 joerg Exp $
  	#include <stdarg.h>
  	void f (int i, ...) {
  	va_list args1, args2;
-@@ -433,19 +407,15 @@ AC_CACHE_VAL(glib_cv___va_copy,[
+@@ -454,19 +428,15 @@ AC_CACHE_VAL(glib_cv___va_copy,[
  	  exit (1);
  	va_end (args1); va_end (args2);
  	}
@@ -149,7 +149,7 @@ $NetBSD: patch-cb,v 1.2 2008/01/31 21:46:43 joerg Exp $
  	#include <stdarg.h>
  	void f (int i, ...) {
  	va_list args1, args2;
-@@ -455,14 +425,9 @@ AC_CACHE_VAL(glib_cv_va_val_copy,[
+@@ -476,14 +446,9 @@ AC_CACHE_VAL(glib_cv_va_val_copy,[
  	  exit (1);
  	va_end (args1); va_end (args2);
  	}
@@ -167,7 +167,7 @@ $NetBSD: patch-cb,v 1.2 2008/01/31 21:46:43 joerg Exp $
  ])
  if test "x$glib_cv_va_copy" = "xyes"; then
    AC_DEFINE(G_VA_COPY, va_copy)
-@@ -893,13 +858,22 @@ GLIB_IF_VAR_EQ(mutex_has_default, yes,
+@@ -946,13 +911,22 @@ GLIB_IF_VAR_EQ(mutex_has_default, yes,
  dnl ****************************************
  dnl *** GLib POLL* compatibility defines ***
  dnl ****************************************
