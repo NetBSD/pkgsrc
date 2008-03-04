@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2007/12/19 12:27:29 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/04 20:16:34 tnn Exp $
 
 DISTNAME=	# empty
-PKGNAME=	modular-xorg-apps-1.4
+PKGNAME=	modular-xorg-apps-1.5
 CATEGORIES=	meta-pkgs x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
 DISTFILES=	# empty
@@ -25,6 +25,7 @@ DEPENDS+=	luit-[0-9]*:../../x11/luit
 DEPENDS+=	setxkbmap-[0-9]*:../../x11/setxkbmap
 DEPENDS+=	x11perf-[0-9]*:../../x11/x11perf
 DEPENDS+=	xauth-[0-9]*:../../x11/xauth
+DEPENDS+=	xbacklight-[0-9]*:../../x11/xbacklight
 DEPENDS+=	xcalc-[0-9]*:../../x11/xcalc
 DEPENDS+=	xclock-[0-9]*:../../x11/xclock
 DEPENDS+=	xconsole-[0-9]*:../../x11/xconsole
