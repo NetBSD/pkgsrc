@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/07/20 12:41:29 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2008/03/04 19:21:11 jlam Exp $
 #
 
 DISTNAME=	coreutils-6.9
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.gnu.org/software/coreutils/
 COMMENT=	GNU ls utility with color support
 
 CONFLICTS=	coreutils-[0-9]* linuxls-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 
@@ -33,13 +35,13 @@ CONFIGURE_ENV+=		MKDIR_P=${MKDIR:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/dircolors \
-		${PREFIX}/bin/${GNU_PROGRAM_PREFIX}dircolors
+		${DESTDIR}${PREFIX}/bin/${GNU_PROGRAM_PREFIX}dircolors
 	${INSTALL_PROGRAM} ${WRKSRC}/src/ls \
-		${PREFIX}/bin/${GNU_PROGRAM_PREFIX}ls
+		${DESTDIR}${PREFIX}/bin/${GNU_PROGRAM_PREFIX}ls
 	${INSTALL_DATA} ${WRKSRC}/man/dircolors.1 \
-		${PREFIX}/${PKGMANDIR}/man1/${GNU_PROGRAM_PREFIX}dircolors.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${GNU_PROGRAM_PREFIX}dircolors.1
 	${INSTALL_DATA} ${WRKSRC}/man/ls.1 \
-		${PREFIX}/${PKGMANDIR}/man1/${GNU_PROGRAM_PREFIX}ls.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/${GNU_PROGRAM_PREFIX}ls.1
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
