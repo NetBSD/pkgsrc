@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.423 2008/03/04 10:11:06 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.424 2008/03/04 10:31:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -783,3 +783,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/guile-slib to 3.2.1 [wiz 2008-03-04]
 	Updated www/links to 2.1.0.33 [wiz 2008-03-04]
 	Updated www/links-gui to 2.1.0.33 [wiz 2008-03-04]
+	Updated audio/taglib to 1.5 [wiz 2008-03-04]
