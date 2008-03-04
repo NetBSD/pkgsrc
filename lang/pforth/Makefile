@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/09/09 02:43:09 obache Exp $
+# $NetBSD: Makefile,v 1.20 2008/03/04 16:38:12 jlam Exp $
 
 DISTNAME=		pfthpc21
 PKGNAME=		pforth-21
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.softsynth.com/pforth/
 COMMENT=		Portable ANS-like Forth
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 USE_LANGUAGES=		c++
@@ -29,15 +31,16 @@ post-patch:
 	> ${WRKSRC}/csrc/pf_main.c
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pforth ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/pforth
-	${INSTALL_DATA} ${WRKSRC}/pforth.dic ${PREFIX}/lib/pforth
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pforth
+	${INSTALL_PROGRAM} ${WRKSRC}/pforth ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/pforth
+	${INSTALL_DATA} ${WRKSRC}/pforth.dic ${DESTDIR}${PREFIX}/lib/pforth
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/pforth
 	${INSTALL_DATA} ${WRKSRC}/readme.txt ${WRKSRC}/docs/* 		\
-		${PREFIX}/share/doc/pforth/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/pforth
-	${INSTALL_DATA} ${WRKSRC}/*.fth ${PREFIX}/share/pforth/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/pforth/utils
-	${INSTALL_DATA}  ${WRKSRC}/utils/*.fth ${PREFIX}/share/pforth/utils/
+		${DESTDIR}${PREFIX}/share/doc/pforth/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/pforth
+	${INSTALL_DATA} ${WRKSRC}/*.fth ${DESTDIR}${PREFIX}/share/pforth/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/pforth/utils
+	${INSTALL_DATA}  ${WRKSRC}/utils/*.fth				\
+		${DESTDIR}${PREFIX}/share/pforth/utils/
 
 .include "../../mk/bsd.pkg.mk"
