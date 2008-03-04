@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.312 2008/03/02 16:14:34 bjs Exp $
+# $NetBSD: Makefile,v 1.313 2008/03/04 11:37:32 shannonjr Exp $
 #
 
 COMMENT=	Security tools
@@ -6,6 +6,7 @@ COMMENT=	Security tools
 SUBDIR+=	AiCA
 SUBDIR+=	AiSSLtelnet
 SUBDIR+=	Bastille
+SUBDIR+=	CoolKey
 SUBDIR+=	CSP
 SUBDIR+=	EasyPG
 SUBDIR+=	MyPasswordSafe
@@ -27,6 +28,7 @@ SUBDIR+=	beecrypt
 SUBDIR+=	bitstir
 SUBDIR+=	botan
 SUBDIR+=	caff
+SUBDIR+=	ccid
 SUBDIR+=	cfs
 SUBDIR+=	chkrootkit
 SUBDIR+=	courier-authlib
@@ -184,6 +186,7 @@ SUBDIR+=	p5-Module-Signature
 SUBDIR+=	p5-Net-DNS-SEC
 SUBDIR+=	p5-Net-SSH
 SUBDIR+=	p5-Net-SSLeay
+SUBDIR+=	p5-pcsc
 SUBDIR+=	p5-SHA
 SUBDIR+=	p5-String-Random
 SUBDIR+=	p5-Tie-EncryptedHash
@@ -194,6 +197,8 @@ SUBDIR+=	pam-ldap
 SUBDIR+=	pam-mysql
 SUBDIR+=	pam-pwauth_suid
 SUBDIR+=	pam-radius
+SUBDIR+=	pcsc-lite
+SUBDIR+=	pcsc-tools
 SUBDIR+=	pflkm
 SUBDIR+=	pgp2
 SUBDIR+=	pgp5
