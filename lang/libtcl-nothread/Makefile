@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/04 21:29:54 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/04 16:38:12 jlam Exp $
 #
 
 DISTNAME=		tcl8.4.6-src
@@ -12,6 +12,8 @@ HOMEPAGE=		http://www.tcl.tk/
 COMMENT=		TCL library for embedding
 
 DEPENDS+=		tcl>=8.4.6nb5:../../lang/tcl
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME:C/-src//}/unix
 GNU_CONFIGURE=		yes
@@ -43,7 +45,8 @@ post-configure:
 
 do-install:
 	cd ${WRKSRC} && \
-	${LIBTOOL} --mode=install ${INSTALL_DATA} ${TCLLIB} ${PREFIX}/lib; \
-	${INSTALL_DATA} tclConfig-nothread.sh ${PREFIX}/lib
+	${LIBTOOL} --mode=install ${INSTALL_DATA} ${TCLLIB} \
+		${DESTDIR}${PREFIX}/lib; \
+	${INSTALL_DATA} tclConfig-nothread.sh ${DESTDIR}${PREFIX}/lib
 
 .include "../../mk/bsd.pkg.mk"

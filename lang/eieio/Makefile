@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/07/05 18:22:29 jnemeth Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/04 16:38:12 jlam Exp $
 #
 
 DISTNAME=	eieio-0.17
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cedet/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cedet.sourceforge.net/eieio.shtml
 COMMENT=	Enhanced Integration of Emacs Interpreted Objects
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EMACS_MODULES+=	base
 MAKEFLAGS+=	EMACS=${EMACS_BIN:Q}
@@ -27,12 +29,12 @@ SRCS+=	tree.el call-tree.el chart.el eieio-speedbar.el linemark.el
 INSTALLATION_DIRS=	${EMACS_INFOPREFIX}
 
 do-install:
-	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/eieio
+	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/eieio
 	cd ${WRKSRC} && ${INSTALL_DATA} ${SRCS} ${SRCS:.el=.elc} 	\
-			${EMACS_LISPPREFIX}/eieio
+			${DESTDIR}${EMACS_LISPPREFIX}/eieio
 	cd ${WRKSRC}; for f in *.info *.info-[0-9]*; do			\
 		${TEST} ! -f "$$f" ||					\
-		${INSTALL_DATA} "$$f" ${EMACS_INFOPREFIX};		\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${EMACS_INFOPREFIX};	\
 	done
 
 .include "../../mk/emacs.mk"
