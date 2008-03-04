@@ -1,4 +1,4 @@
-<!-- $NetBSD: using.xml,v 1.34 2008/01/04 15:53:41 rillig Exp $ -->
+<!-- $NetBSD: using.xml,v 1.35 2008/03/04 02:39:37 jschauma Exp $ -->
 
 <chapter id="using"> <?dbhtml filename="using.html"?>
 <title>Using pkgsrc</title>
@@ -99,10 +99,9 @@ and you can still use binary packages from someone else.</para>
     other packages depend on it. Instead, they are moved to the
     <filename>vulnerable</filename> subdirectory. So you may need to add
     this directory to the <varname>PKG_PATH</varname> variable. 
-    However, you should run <filename
-    role="pkg">security/audit-packages</filename> regularly, especially
-    after installing new packages, and verify that the vulnerabilities
-    are acceptable for your configuration.</para>
+    However, you should run <command>audit-packages</command>
+    regularly, especially after installing new packages, and verify
+    that the vulnerabilities are acceptable for your configuration.</para>
 
     <para>After you've installed packages, be sure to have
     <filename>/usr/pkg/bin</filename> and <filename>/usr/pkg/sbin</filename> in your

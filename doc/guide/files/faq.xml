@@ -1,4 +1,4 @@
-<!-- $NetBSD: faq.xml,v 1.39 2008/01/04 15:53:41 rillig Exp $ -->
+<!-- $NetBSD: faq.xml,v 1.40 2008/03/04 02:39:37 jschauma Exp $ -->
 
 <chapter id="faq"> <?dbhtml filename="faq.html"?>
 <title>Frequently Asked Questions</title>
@@ -509,9 +509,8 @@ attackers.  In an effort to lessen the exposure, the NetBSD packages team
 maintains a database of known-exploits to packages which have at one time
 been included in pkgsrc.  The database can be downloaded automatically, and
 a security audit of all packages installed on a system can take place.  To
-do this, install the <filename
-  role="pkg">security/audit-packages</filename> package.  It has two
-components:</para>
+do this, refer to the following two tools (installed as part of the
+<filename role="pkg">pkgtools/pkg_install</filename> package):</para>
 
 <orderedlist>
 
@@ -535,11 +534,10 @@ components:</para>
 
 </orderedlist>
 
-<para>Use of the <filename role="pkg">security/audit-packages</filename>
-package is strongly recommended!  After
-<quote>audit-packages</quote> is installed, please read
+<para>Use of these tools is strongly recommended!  After
+<quote>pkg_install</quote> is installed, please read
 the package's message, which you can get by running <userinput>pkg_info -D
-audit-packages</userinput>.</para>
+pkg_install</userinput>.</para>
 
 <para>If this package is installed, pkgsrc builds will use it to
 perform a security check before building any package.  See <xref
