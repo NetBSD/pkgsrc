@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2007/12/02 12:22:45 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2008/03/04 15:06:42 wiz Exp $
 
-DISTNAME=	libtasn1-0.3.9
+DISTNAME=	libtasn1-1.3
 CATEGORIES=	security devel
 MASTER_SITES=	http://josefsson.org/gnutls/releases/libtasn1/ \
 		ftp://ftp.gnutls.org/pub/gnutls/libtasn1/ \
@@ -18,6 +18,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 INFO_FILES=		# PLIST
+#LICENSE=		gnu-lgpl-v2.1 and gnu-gpl-3.0
 
 .include "../../mk/bsd.prefs.mk"
 
