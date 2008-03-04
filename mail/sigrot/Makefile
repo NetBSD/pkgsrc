@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/01/07 09:13:59 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/04 17:57:19 jlam Exp $
 
 DISTNAME=	sigrot_1.2-1
 PKGNAME=	sigrot-1.2
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/s/sigrot/}
 MAINTAINER=	drue@users.sourceforge.net
 HOMEPAGE=	http://packages.debian.org/oldstable/mail/sigrot
 COMMENT=	Signature file rotation program
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_TOOLS+=	gmake
@@ -22,14 +24,14 @@ do-build:
 	cd ${WRKSRC} && ${CC} sigrot.c -o sigrot
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/sigrot ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/sigrot.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/copyright ${DOCDIR}/COPYRIGHT
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DOCDIR}/INSTALL
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/examples/prefix ${EGDIR}/prefix
-	${INSTALL_DATA} ${WRKSRC}/examples/sig_archive ${EGDIR}/sig_archive
-	${INSTALL_DATA} ${WRKSRC}/examples/suffix ${EGDIR}/suffix
+	${INSTALL_PROGRAM} ${WRKSRC}/sigrot ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/sigrot.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/copyright ${DESTDIR}${DOCDIR}/COPYRIGHT
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${DOCDIR}/INSTALL
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/examples/prefix ${DESTDIR}${EGDIR}/prefix
+	${INSTALL_DATA} ${WRKSRC}/examples/sig_archive ${DESTDIR}${EGDIR}/sig_archive
+	${INSTALL_DATA} ${WRKSRC}/examples/suffix ${DESTDIR}${EGDIR}/suffix
 
 .include "../../mk/bsd.pkg.mk"

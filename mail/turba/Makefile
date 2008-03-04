@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/02/19 21:45:39 adrianp Exp $
+# $NetBSD: Makefile,v 1.25 2008/03/04 17:57:20 jlam Exp $
 
 DISTNAME=	turba-h3-${TURBAVER}
 PKGNAME=	turba-${TURBAVER}
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.horde.org/turba/
 COMMENT=	Horde contact management application
 
 DEPENDS+=	horde>=3.0.0:../../www/horde
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -69,30 +71,33 @@ do-build:
 	${CHMOD} 0750 ${WRKSRC}/scripts/ldap/addou.pl
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${TURBADIR}
-	${INSTALL_DATA_DIR} ${TURBADIR}/config
-	${INSTALL_DATA} ${WRKSRC}/turba.conf.dist ${EGDIR}/turba.conf
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/INSTALL ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/LDAP ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/RELEASE_NOTES ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/UPGRADING ${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${TURBADIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${TURBADIR}/config
+	${INSTALL_DATA} ${WRKSRC}/turba.conf.dist ${DESTDIR}${EGDIR}/turba.conf
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/INSTALL ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/LDAP ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/RELEASE_NOTES ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/UPGRADING ${DESTDIR}${DOCDIR}
 
 .	for d in ${PAXDIRS}
-		${INSTALL_DATA_DIR} ${TURBADIR}/${d:Q}
+		${INSTALL_DATA_DIR} ${DESTDIR}${TURBADIR}/${d:Q}
 .	endfor
 
 .	for d in ${PAXDIRS}
-		cd ${WRKSRC}/${d:Q} && ${PAX} -rwpma . ${TURBADIR}/${d:Q}
+		cd ${WRKSRC}/${d:Q} && ${PAX} -rwpma . \
+			${DESTDIR}${TURBADIR}/${d:Q}
 .	endfor
 
-	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${TURBADIR}/config
-	${INSTALL_DATA} ${WRKSRC}/*.php ${TURBADIR}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${TURBADIR}
-	${FIND} ${TURBADIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${TURBADIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
+	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${DESTDIR}${TURBADIR}/config
+	${INSTALL_DATA} ${WRKSRC}/*.php ${DESTDIR}${TURBADIR}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${TURBADIR}
+	${FIND} ${DESTDIR}${TURBADIR} -type d -print | \
+	${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${DESTDIR}${TURBADIR} -type f -print | \
+	${XARGS} ${CHMOD} ${SHAREMODE}
 	${CHOWN} ${APACHE_USER}:${SHAREGRP} ${TURBADIR}/config
 	${CHMOD} 0750 ${TURBADIR}/config
 
