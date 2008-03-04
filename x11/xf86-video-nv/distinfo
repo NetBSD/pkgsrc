@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2007/12/03 16:20:50 joerg Exp $
+$NetBSD: distinfo,v 1.7 2008/03/04 14:41:00 wiz Exp $
 
-SHA1 (xf86-video-nv-2.1.6.tar.bz2) = ad8864adffd73529d1a8588a255b53503d050743
-RMD160 (xf86-video-nv-2.1.6.tar.bz2) = 8708563285b397f62e84e21705709561a352e788
-Size (xf86-video-nv-2.1.6.tar.bz2) = 372044 bytes
+SHA1 (xf86-video-nv-2.1.7.tar.bz2) = cfca8a16b1c43b24513ae38a1f6b09ada99f3d14
+RMD160 (xf86-video-nv-2.1.7.tar.bz2) = 226e2a341165bac735a4abebd91f00b1e3cda3ea
+Size (xf86-video-nv-2.1.7.tar.bz2) = 374223 bytes
