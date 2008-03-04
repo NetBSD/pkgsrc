@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2006/05/22 06:47:44 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2008/03/04 06:59:05 jlam Exp $
 
 DISTNAME=	rocksndiamonds-levels-1.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games x11
 MASTER_SITES=	http://www.artsoft.org/RELEASES/unix/rocksndiamonds/levels/
 DISTFILES=	rockslevels-dx-1.0.tar.gz \
@@ -14,12 +14,14 @@ COMMENT=	DX, Emerald Mine, and Sokoban levels for Rocks'N'Diamonds
 
 DEPENDS+=	rocksndiamonds{,-sdl}>=1.4.0:../../games/rocksndiamonds
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
 WRKSRC=		${WRKDIR}/levels
 
-PLIST_SRC=	${WRKDIR}/PLIST PLIST
+PLIST_SRC=	${WRKDIR}/PLIST ${PKGDIR}/PLIST
 
 # if you change SCORE_PATH, don't forget to change patch-aa, too
 SCORE_PATH=	${VARBASE}/games/rocksndiamonds
@@ -29,8 +31,10 @@ CPIO?=		cpio
 post-extract:
 	${CHMOD} -R o-w ${WRKSRC}
 
-# XXX: how are these directories cleaned up?
-do-install:
+SETGIDGAME=		yes
+MAKE_DIRS_PERMS=	${SCORE_PATH} ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
+MAKE_DIRS_PERMS+=	${SCORE_PATH}/scores ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
+
 .for directory in dx_abd dx_achim_haertel \
 	dx_bd4 dx_blunderdash dx_boulderdash5 dx_dc2classic dx_firefox1 \
 	dx_forgottenmine1 dx_manfred_tausch dx_martin_brentnall \
@@ -71,16 +75,18 @@ do-install:
 	supaplex_01 supaplex_02 supaplex_03 supaplex_04 supaplex_05 \
 	supaplex_06 supaplex_07 supaplex_08 supaplex_95 supaplex_96 \
 	supaplex_97 supaplex_98 supaplex_99
-		${INSTALL_DATA_DIR} ${SCORE_PATH}/scores/${directory} \
-		&& ${CHMOD} 775 ${SCORE_PATH}/scores/${directory}
+OWN_DIRS_PERMS+=	${SCORE_PATH}/scores/${directory} \
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 .endfor
+
+do-install:
 	cd ${WRKSRC} && ${FIND} DX_Boulderdash Emerald_Mine_Club Supaplex | \
-		${CPIO} -p ${PREFIX}/share/rocksndiamonds/levels
+		${CPIO} -p ${DESTDIR}${PREFIX}/share/rocksndiamonds/levels
 	${RM} -f ${WRKDIR}/PLIST
 .for levdir in DX_Boulderdash Emerald_Mine_Club Supaplex
-	cd ${PREFIX} && \
-	${FIND} share/rocksndiamonds/levels/${levdir} -type f -print >>${WRKDIR}/PLIST
+	cd ${DESTDIR}${PREFIX} && \
+	${FIND} share/rocksndiamonds/levels/${levdir} -type f -print \
+		>>${WRKDIR}/PLIST
 .endfor
-	${CHOWN} -R games:games ${SCORE_PATH}
 
 .include "../../mk/bsd.pkg.mk"

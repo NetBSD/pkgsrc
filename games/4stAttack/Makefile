@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/06/12 16:28:07 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/04 06:59:03 jlam Exp $
 #
 
 DISTNAME=		4stAttack-2.1.4
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=forcedattack/}
 MAINTAINER=		recht@NetBSD.org
 HOMEPAGE=		http://forcedattack.sourceforge.net/
 COMMENT=		Game in which you have to try to out-smart your opponent
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_PATCH_SCRIPTS=	4stattack.py
 
@@ -23,10 +25,10 @@ do-build:
 	${PYTHONBIN} -O ${PREFIX}/${PYLIB}/compileall.py ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/${PKGBASE}
-	${INSTALL_SCRIPT} ${WRKSRC}/4stattack ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/${PKGBASE}
+	${INSTALL_SCRIPT} ${WRKSRC}/4stattack ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC} && ${FIND} . -type f -and \! ${FIND_EXCLUDE} \
-		-print | ${PAX} -rw -pp -pm ${PREFIX}/share/${PKGBASE}
+		-print | ${PAX} -rw -pp -pm ${DESTDIR}${PREFIX}/share/${PKGBASE}
 
 .include "../../devel/py-game/buildlink3.mk"
 .include "../../lang/python/application.mk"

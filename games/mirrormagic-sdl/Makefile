@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.22 2008/01/19 09:16:22 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2008/03/04 06:59:05 jlam Exp $
 #
 
 DISTNAME=		mirrormagic-2.0.2
 PKGNAME=		${DISTNAME:S/-/-sdl-/}
-PKGREVISION=		12
+PKGREVISION=		13
 CATEGORIES=		games x11
 MASTER_SITES=		http://www.artsoft.org/RELEASES/unix/mirrormagic/
 
@@ -13,38 +13,44 @@ COMMENT=		Nice little puzzle game with color graphics and sound
 
 CONFLICTS=		mirrormagic-[1-9]*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		gmake
 PLIST_SRC=		${WRKDIR}/PLIST PLIST
 
 # if you change SCORE_PATH, don't forget to change patch-aa, too
 SCORE_PATH=		/var/games/mirrormagic
 
+SETGIDGAME=		yes
+OWN_DIRS_PERMS=		${SCORE_PATH} ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
+OWN_DIRS_PERMS+=	${SCORE_PATH}/scores				\
+				${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
+OWN_DIRS_PERMS+=	${SCORE_PATH}/scores/classic_deflektor		\
+				${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
+OWN_DIRS_PERMS+=	${SCORE_PATH}/scores/classic_mindbender		\
+				${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
+
+SPECIAL_PERMS=		bin/mirrormagic ${SETGID_GAMES_PERMS}
+
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} -o bin -g games -m 2755 \
-		${WRKSRC}/mirrormagic ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/mirrormagic
+	${INSTALL_PROGRAM} ${WRKSRC}/mirrormagic ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/mirrormagic
 	cd ${WRKSRC} && ${PAX} -rw graphics levels music sounds \
-		${PREFIX}/share/mirrormagic/
-	${CHOWN} -R games:games ${PREFIX}/share/mirrormagic
-	${INSTALL_DATA_DIR} ${SCORE_PATH}/scores
-	${CHMOD} 755 ${SCORE_PATH}
-	${CHMOD} 775 ${SCORE_PATH}/scores
-.for directory in classic_deflektor classic_mindbender
-		${INSTALL_DATA_DIR} ${SCORE_PATH}/scores/${directory} \
-		&& ${CHMOD} 775 ${SCORE_PATH}/scores/${directory}
-.endfor
+		${DESTDIR}${PREFIX}/share/mirrormagic/
+
 	${RM} -f ${WRKDIR}/PLIST
 .for levdir in Classic_Games
-	cd ${PREFIX} && \
-	${FIND} share/mirrormagic/levels/${levdir} -type f -print >>${WRKDIR}/PLIST
+	cd ${DESTDIR}${PREFIX} && \
+	${FIND} share/mirrormagic/levels/${levdir} -type f -print \
+		>>${WRKDIR}/PLIST
 .endfor
 .for directory in graphics music sounds
-	cd ${PREFIX} && \
-	${FIND} share/mirrormagic/${directory} -type f -print >>${WRKDIR}/PLIST
+	cd ${DESTDIR}${PREFIX} && \
+	${FIND} share/mirrormagic/${directory} -type f -print \
+		>>${WRKDIR}/PLIST
 .endfor
-	${CHOWN} -R games:games ${SCORE_PATH}
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"

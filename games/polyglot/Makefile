@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/06/17 15:24:32 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/04 06:59:05 jlam Exp $
 #
 
 DISTNAME=		polyglot_14
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		rillig@NetBSD.org
 HOMEPAGE=		http://wbec-ridderkerk.nl/html/details/PolyGlot.html
 COMMENT=		UCI to WB adapter (for chess engines)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/polyglot_14
 BUILD_DIRS=		src
@@ -39,8 +41,10 @@ do-build:
 		${CXX} ${CXXFLAGS} ${LDFLAGS} -lm -o polyglot ${SRCS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/polyglot ${PREFIX}/bin/
-	${INSTALL_DATA} ${WRKSRC}/readme.txt ${PREFIX}/share/doc/polyglot/
-	${INSTALL_DATA} ${WRKSRC}/fruit.ini ${PREFIX}/share/examples/polyglot/
+	${INSTALL_PROGRAM} ${WRKSRC}/src/polyglot ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_DATA} ${WRKSRC}/readme.txt \
+		${DESTDIR}${PREFIX}/share/doc/polyglot/
+	${INSTALL_DATA} ${WRKSRC}/fruit.ini \
+		${DESTDIR}${PREFIX}/share/examples/polyglot/
 
 .include "../../mk/bsd.pkg.mk"
