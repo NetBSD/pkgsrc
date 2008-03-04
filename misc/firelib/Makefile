@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/10/04 21:49:19 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/04 19:21:11 jlam Exp $
 #
 
 DISTNAME=		firelib-1.0.1
@@ -10,6 +10,7 @@ HOMEPAGE=		http://fire.org/
 COMMENT=		Library for predicting fire spread rate, intensity, and more
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 
@@ -23,11 +24,11 @@ post-build:
 	cd  ${WRKSRC} && ${RANLIB} libfire.a
 
 do-install:
-	${INSTALL_LIB} ${WRKSRC}/libfire.a ${PREFIX}/lib
-	${INSTALL_DATA} ${WRKSRC}/fireLib.h ${PREFIX}/include
-	${INSTALL_PROGRAM} ${WRKSRC}/fireSim ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/firelib
-	${INSTALL_DATA} ${WRKSRC}/firelib.ps ${PREFIX}/share/doc/firelib
-	${INSTALL_DATA} ${WRKSRC}/license.txt ${PREFIX}/share/doc/firelib
+	${INSTALL_LIB} ${WRKSRC}/libfire.a ${DESTDIR}${PREFIX}/lib
+	${INSTALL_DATA} ${WRKSRC}/fireLib.h ${DESTDIR}${PREFIX}/include
+	${INSTALL_PROGRAM} ${WRKSRC}/fireSim ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/firelib
+	${INSTALL_DATA} ${WRKSRC}/firelib.ps ${DESTDIR}${PREFIX}/share/doc/firelib
+	${INSTALL_DATA} ${WRKSRC}/license.txt ${DESTDIR}${PREFIX}/share/doc/firelib
 
 .include "../../mk/bsd.pkg.mk"

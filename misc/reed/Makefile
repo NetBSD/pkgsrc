@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/01/07 09:14:01 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2008/03/04 19:21:12 jlam Exp $
 
 DISTNAME=	reed-5.4
 PKGREVISION=	2
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.sacredchao.net/software/reed/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sacredchao.net/software/reed/index.shtml
 COMMENT=	Auto-scrolling file viewer
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_SCRIPT=	./configures
 CONFIGURE_ARGS+=	-p ${PREFIX}
@@ -21,14 +23,14 @@ INCOMPAT_CURSES=	NetBSD-1.5-* NetBSD-1.5.*-* NetBSD-1.5[A-U]-*
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/reed ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/breed ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/wrap ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/breed.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/reed.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/wrap.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/reed
-	${INSTALL_DATA} ${WRKSRC}/help ${PREFIX}/share/reed/
+	${INSTALL_PROGRAM} ${WRKSRC}/reed ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/breed ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/wrap ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/breed.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/reed.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/wrap.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/reed
+	${INSTALL_DATA} ${WRKSRC}/help ${DESTDIR}${PREFIX}/share/reed/
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

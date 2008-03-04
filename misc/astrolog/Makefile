@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/02/22 19:26:48 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2008/03/04 19:21:11 jlam Exp $
 
 DISTNAME=	ast54unx
 PKGNAME=	astrolog-5.40
@@ -18,6 +18,8 @@ RESTRICTED=	Do not sell or profit from this software in any way
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 EPHEM=		LRZ5_24 CHI_24 CPJV_24
 EXTRACT_ONLY=	${DISTNAME}.shr
@@ -30,23 +32,23 @@ BUILD_TARGET=	astrolog
 INSTALLATION_DIRS=	bin
 
 do-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/lib/astrolog
+	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/astrolog
 	cd ${DISTDIR}/${DIST_SUBDIR} && \
-		${INSTALL_DATA} ${EPHEM} ${PREFIX}/lib/astrolog
+		${INSTALL_DATA} ${EPHEM} ${DESTDIR}${PREFIX}/lib/astrolog
 	cd ${WRKSRC} && \
-		if [ -f ${PREFIX}/lib/astrolog/astrolog.dat ] ; then \
-			${INSTALL_DATA} astrolog.dat ${PREFIX}/lib/astrolog/astrolog.dat-dist; \
+		if [ -f ${DESTDIR}${PREFIX}/lib/astrolog/astrolog.dat ] ; then \
+			${INSTALL_DATA} astrolog.dat ${DESTDIR}${PREFIX}/lib/astrolog/astrolog.dat-dist; \
 		else \
-			${INSTALL_DATA} astrolog.dat ${PREFIX}/lib/astrolog; \
+			${INSTALL_DATA} astrolog.dat ${DESTDIR}${PREFIX}/lib/astrolog; \
 		fi
-	cd ${WRKSRC} && ${INSTALL_PROGRAM} astrolog ${PREFIX}/bin
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/doc/astrolog
+	cd ${WRKSRC} && ${INSTALL_PROGRAM} astrolog ${DESTDIR}${PREFIX}/bin
+	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/astrolog
 	cd ${WRKSRC} && \
-		${INSTALL_DATA} Helpfile.540 ${PREFIX}/share/doc/astrolog
+		${INSTALL_DATA} Helpfile.540 ${DESTDIR}${PREFIX}/share/doc/astrolog
 	cd ${WRKSRC} && \
-		${INSTALL_DATA} Update.540 ${PREFIX}/share/doc/astrolog
+		${INSTALL_DATA} Update.540 ${DESTDIR}${PREFIX}/share/doc/astrolog
 	cd ${WRKSRC} && \
-		${INSTALL_DATA} README.540 ${PREFIX}/share/doc/astrolog
+		${INSTALL_DATA} README.540 ${DESTDIR}${PREFIX}/share/doc/astrolog
 	@${ECHO}
 	@${ECHO} "See the file ${PREFIX}/share/doc/astrolog/Helpfile.540 for"
 	@${ECHO} "help and tune ${PREFIX}/lib/astrolog/astrolog.dat"

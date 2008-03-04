@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/05/30 14:09:08 uebayasi Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/04 19:21:11 jlam Exp $
 #
 
 DISTNAME=		bbdb-2.34
@@ -14,6 +14,8 @@ COMMENT=		Insidious Big Brother DataBase, a rolodex-like database Emacs program
 # bbdb is included in xemacs-packages
 EMACS_VERSIONS_ACCEPTED=	emacs22 emacs22nox emacs21 emacs21nox emacs20 emacs20nox
 CONFLICTS+=		xemacs-packages-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
@@ -31,12 +33,12 @@ CONFIGURE_ARGS+=	--with-package-dir=${PREFIX}/lib/xemacs/site-packages
 INSTALL_TARGET=		install-pkg
 .else
 do-install:
-	${MKDIR} ${LISPDIR}
-	${INSTALL_DATA} ${WRKSRC}/lisp/*.el ${LISPDIR}
-	${INSTALL_DATA} ${WRKSRC}/lisp/*.elc ${LISPDIR}
+	${MKDIR} ${DESTDIR}${LISPDIR}
+	${INSTALL_DATA} ${WRKSRC}/lisp/*.el ${DESTDIR}${LISPDIR}
+	${INSTALL_DATA} ${WRKSRC}/lisp/*.elc ${DESTDIR}${LISPDIR}
 	cd ${WRKSRC}/texinfo; for f in bbdb.info bbdb.info-[0-9]*; do	\
 		${TEST} ! -f "$$f" ||					\
-		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};\
 	done
 .endif
 
