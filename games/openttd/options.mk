@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2008/03/04 04:05:30 tnn Exp $
+# $NetBSD: options.mk,v 1.2 2008/03/04 12:02:11 tnn Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -10,8 +10,8 @@ PKG_SUGGESTED_OPTIONS=	# empty
 
 .if !empty(PKG_OPTIONS:Mttd-data)
 PLIST_SUBST+=		TTD_DATA=""
-LICENSE=		commercial-software
-RESTRICTED=		commercial-software
+LICENSE=		ttd-pseudolicense
+RESTRICTED=		No redistribution allowed
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
