@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2006/07/11 00:19:20 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/04 12:17:48 wiz Exp $
 
 DISTNAME=		mtl-2.1.2-21
+PKGNAME=		mtl-2.1.2.21
 CATEGORIES=		math devel
 MASTER_SITES=		http://www.osl.iu.edu/download/research/mtl/
 
