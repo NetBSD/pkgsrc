@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7098 2008/03/04 18:35:03 tnn Exp $
+$NetBSD: TODO,v 1.7099 2008/03/04 19:41:47 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -599,7 +599,7 @@ Suggested package updates
 	o etach-1.4.1
 	o eukleides-1.0.3
 	o ex-20050325
-	o ezmlm-idx-6.0.1 [schmonz]
+	o ezmlm-idx-5.1.2 [schmonz]
 	o ezxml-0.8.6
 	o f2c-20061008
 	o faces-1.7.7
@@ -924,7 +924,7 @@ Suggested package updates
 	o netcdf-3.6.2
 	o netperf-2.4.4
 	o netpipe-3.6.2
-	o netqmail-1.06
+	o netqmail-1.06 [schmonz]
 	o netramet-50
 	o newmail-1.0.2
 	o newmat-11
@@ -1257,7 +1257,7 @@ Suggested package updates
 	o snobol-1.1
 	o snownews-1.5.9
 	o socat-1.6.0.1
-	o solfege-3.8.2
+	o solfege-3.10.2 [schmonz]
 	o sope-4.5.9
 	o sound-juicer-2.16.4 [needs nautilus-cd-burner>=2.15.3]
 	o sound-juicer-2.20.1
