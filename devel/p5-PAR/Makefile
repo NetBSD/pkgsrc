@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/02/05 23:08:49 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/04 11:02:24 rillig Exp $
 #
 
 DISTNAME=		PAR-0.89
@@ -6,7 +6,7 @@ PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		http://search.cpan.org/CPAN/authors/id/A/AU/AUTRIJUS/
 
-MAINTAINER=		rillig@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/CPAN/authors/id/A/AU/AUTRIJUS/
 COMMENT=		Cross-Platform Packaging and Debugging Tool
 

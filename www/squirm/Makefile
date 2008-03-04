@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2007/07/04 20:55:06 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/04 11:02:26 rillig Exp $
 #
 
 DISTNAME=		squirm-1.0betaB
 CATEGORIES=		www
 MASTER_SITES=		http://squirm.foote.com.au/
 
-MAINTAINER=		rillig@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://squirm.foote.com.au/
 COMMENT=		Redirector for the Squid Internet Object Cache
 
