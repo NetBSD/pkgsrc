@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/06/02 13:32:35 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/04 06:59:04 jlam Exp $
 #
 
 DISTNAME=	heretic2-demo-x86
@@ -13,6 +13,8 @@ EXTRACT_SUFX=	.run
 MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.lokigames.com/products/heretic2/
 COMMENT=	Heretic2 - first person Quake 3D engine based (linux demo)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} | \
@@ -46,12 +48,17 @@ do-build:
 
 # The executable must be in the same directory as the data.
 do-install:
-	${INSTALL_PROGRAM_DIR} ${LIBDIR}
-	${INSTALL_DATA_DIR} ${SHAREDIR}
-	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${BINNAME}
-	${INSTALL_PROGRAM} ${WRKSRC}/${DISTBINNAME} ${LIBDIR}/${BINNAME}
-	${INSTALL_DATA} ${WRKSRC}/README ${SHAREDIR}/${BINNAME}-QuickStart.txt
-	${INSTALL_DATA} ${WRKSRC}/README ${SHAREDIR}/${BINNAME}-README
-	cd ${WRKSRC} && ${PAX} -rw base gl_drivers icon.xpm ref_glx.so ${LIBDIR}
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${LIBDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh \
+		${DESTDIR}${PREFIX}/bin/${BINNAME}
+	${INSTALL_PROGRAM} ${WRKSRC}/${DISTBINNAME} \
+		${DESTDIR}${LIBDIR}/${BINNAME}
+	${INSTALL_DATA} ${WRKSRC}/README \
+		${DESTDIR}${SHAREDIR}/${BINNAME}-QuickStart.txt
+	${INSTALL_DATA} ${WRKSRC}/README \
+		${DESTDIR}${SHAREDIR}/${BINNAME}-README
+	cd ${WRKSRC} && ${PAX} -rw base gl_drivers icon.xpm ref_glx.so \
+		${DESTDIR}${LIBDIR}
 
 .include "../../mk/bsd.pkg.mk"
