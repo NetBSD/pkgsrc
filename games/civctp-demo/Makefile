@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/07/29 05:19:25 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/04 06:59:03 jlam Exp $
 
 DISTNAME=	civctp-demo-10251999
 PKGNAME=	civctp-demo-19991025
@@ -15,6 +15,8 @@ COMMENT=	Civilization: Call to Power - graphical strategy (linux demo)
 # Someone needs to look at alpha, powerpc and sparc compat_linux
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	x11
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${WRKNAME}
 BUILD_DIRS=	# empty
@@ -43,11 +45,15 @@ do-build:
 
 # The executable must be in the same directory as the data.
 do-install:
-	${INSTALL_DATA_DIR} ${LIBDIR}
-	${INSTALL_DATA_DIR} ${SHAREDIR}
-	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${BINNAME}
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/${BINTYPE}/${DISTBINNAME} ${LIBDIR}/${BINNAME}
-	${INSTALL_DATA} ${WRKSRC}/README ${SHAREDIR}/${BINNAME}-README
-	cd ${WRKSRC} && ${PAX} -rw appstr.txt civpaths.txt ctp_data ${LIBDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${LIBDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh \
+		${DESTDIR}${PREFIX}/bin/${BINNAME}
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/${BINTYPE}/${DISTBINNAME} \
+		${DESTDIR}${LIBDIR}/${BINNAME}
+	${INSTALL_DATA} ${WRKSRC}/README \
+		${DESTDIR}${SHAREDIR}/${BINNAME}-README
+	cd ${WRKSRC} && ${PAX} -rw appstr.txt civpaths.txt ctp_data \
+		${DESTDIR}${LIBDIR}
 
 .include "../../mk/bsd.pkg.mk"

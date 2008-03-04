@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/02/22 19:26:30 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2008/03/04 06:59:04 jlam Exp $
 #
 
 DISTNAME=		fkiss-0.33
@@ -17,6 +17,8 @@ PATCH_DIST_STRIP=	-p1
 
 DEPENDS+=		lha-[0-9]*:../../archivers/lha
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
 CFLAGS+=		-DUSE_STDARG -DHAVE_STDARG_H
@@ -33,16 +35,18 @@ post-patch:
 		<${WRKSRC}/fkiss.man.bak >${WRKSRC}/fkiss.man
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/fkiss ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/fkiss.man ${PREFIX}/${PKGMANDIR}/man6/fkiss.6
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/fkiss
+	${INSTALL_PROGRAM} ${WRKSRC}/fkiss ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/fkiss.man \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/fkiss.6
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/fkiss
 	${INSTALL_DATA} ${WRKSRC}/fkissrc.smp \
-		${PREFIX}/share/examples/fkiss/fkissrc
-	${INSTALL_DATA} ${WRKSRC}/frkismi4.lzh ${PREFIX}/share/examples/fkiss
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/fkiss
+		${DESTDIR}${PREFIX}/share/examples/fkiss/fkissrc
+	${INSTALL_DATA} ${WRKSRC}/frkismi4.lzh \
+		${DESTDIR}${PREFIX}/share/examples/fkiss
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/fkiss
 	for i in ${WRKSRC}/*.doc; do \
 		${SED} -f ${WRKSRC}/english.sed <$$i \
-			>${PREFIX}/share/doc/fkiss/`${BASENAME} $$i`; \
+		    >${DESTDIR}${PREFIX}/share/doc/fkiss/`${BASENAME} $$i`; \
 	done
 
 .include "../../x11/libX11/buildlink3.mk"

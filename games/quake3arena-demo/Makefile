@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/07/29 05:19:25 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2008/03/04 06:59:05 jlam Exp $
 
 DISTNAME=	linuxq3ademo-1_11-6_x86_gz
 PKGREVISION=	3
@@ -16,6 +16,8 @@ CONFLICTS=	quake3arena-[0-9]*
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base x11 glx
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gtar
 EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} |	\
@@ -39,20 +41,20 @@ do-build:
 
 # The executable must be in the same directory as the data.
 do-install:
-	${INSTALL_PROGRAM_DIR} ${LIBDIR}
-	${INSTALL_DATA_DIR} ${SHAREDIR}
-	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${BINNAME}
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${LIBDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${DESTDIR}${PREFIX}/bin/${BINNAME}
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/x86/glibc-2.1/${DISTBINNAME} \
-		${LIBDIR}/${BINNAME}
+		${DESTDIR}${LIBDIR}/${BINNAME}
 	${INSTALL_DATA} ${WRKSRC}/bin/x86/glibc-2.1/libMesaVoodooGL.so.3.2 \
-		${LIBDIR}
+		${DESTDIR}${LIBDIR}
 	${LN} -s ${LIBDIR}/libMesaVoodooGL.so.3.2 \
-		${LIBDIR}/libMesaVoodooGL.so.3
+		${DESTDIR}${LIBDIR}/libMesaVoodooGL.so.3
 	${LN} -s ${LIBDIR}/libMesaVoodooGL.so.3.2 \
-		${LIBDIR}/libMesaVoodooGL.so
-	${INSTALL_DATA} ${WRKSRC}/README ${SHAREDIR}/${BINNAME}-README
-	cd ${WRKSRC} && ${PAX} -rw demoq3 icon.bmp icon.xpm ${LIBDIR}
-	cd ${WRKSRC} && ${PAX} -rw Help ${SHAREDIR}
-	${MV} ${SHAREDIR}/Help ${SHAREDIR}/quake3arena-Help
+		${DESTDIR}${LIBDIR}/libMesaVoodooGL.so
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${SHAREDIR}/${BINNAME}-README
+	cd ${WRKSRC} && ${PAX} -rw demoq3 icon.bmp icon.xpm ${DESTDIR}${LIBDIR}
+	cd ${WRKSRC} && ${PAX} -rw Help ${DESTDIR}${SHAREDIR}
+	${MV} ${SHAREDIR}/Help ${DESTDIR}${SHAREDIR}/quake3arena-Help
 
 .include "../../mk/bsd.pkg.mk"

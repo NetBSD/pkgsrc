@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/03/26 06:15:27 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/04 06:59:06 jlam Exp $
 #
 
 DISTNAME=	tscp181
@@ -12,21 +12,21 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://home.comcast.net/~tckerrigan/
 COMMENT=	Tom Kerrigan's Simple Chess Program
 
-
-RESTRICTED= No distribution without authorisation from Tom Kerrigan
+RESTRICTED=	No distribution without authorisation from Tom Kerrigan
 
 NO_BIN_ON_CDROM= ${RESTRICTED}
 NO_SRC_ON_CDROM= ${RESTRICTED}
 NO_BIN_ON_FTP= ${RESTRICTED}
 NO_SRC_ON_FTP= ${RESTRICTED}
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin
 
 do-build:
 	cd ${WRKSRC} ; ${CC} ${CFLAGS} ${LDFLAGS} -o tscp *.c -lcompat
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/tscp ${PREFIX}/bin/tscp
-	${INSTALL_DATA} ${WRKSRC}/readme.txt ${PREFIX}/share/doc/tscp.txt
+	${INSTALL_PROGRAM} ${WRKSRC}/tscp ${DESTDIR}${PREFIX}/bin/tscp
+	${INSTALL_DATA} ${WRKSRC}/readme.txt ${DESTDIR}${PREFIX}/share/doc/tscp.txt
 
 .include "../../mk/bsd.pkg.mk"

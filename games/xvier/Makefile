@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/12/27 13:37:37 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/04 06:59:06 jlam Exp $
 
 DISTNAME=	xvier
 PKGNAME=	xvier-1.0
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=
 COMMENT=	Four-in-a-row game
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_IMAKE=	YES
 CPPFLAGS.SunOS+=	-D__EXTENSIONS__
@@ -18,9 +20,11 @@ CPPFLAGS.SunOS+=	-D__EXTENSIONS__
 INSTALLATION_DIRS+=	bin libexec ${PKGMANDIR}/man6
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xvier ${PREFIX}/bin/xvier
-	${INSTALL_PROGRAM} ${WRKSRC}/xvier_prog ${PREFIX}/libexec/xvier_prog
-	${INSTALL_MAN} ${WRKSRC}/xvier.man ${PREFIX}/${PKGMANDIR}/man6/xvier.6
+	${INSTALL_PROGRAM} ${WRKSRC}/xvier ${DESTDIR}${PREFIX}/bin/xvier
+	${INSTALL_PROGRAM} ${WRKSRC}/xvier_prog \
+		${DESTDIR}${PREFIX}/libexec/xvier_prog
+	${INSTALL_MAN} ${WRKSRC}/xvier.man \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/xvier.6
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/01/06 17:44:52 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/04 06:59:04 jlam Exp $
 #
 
 DISTNAME=		gogui-0.9.3
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		rillig@NetBSD.org
 HOMEPAGE=		http://gogui.sourceforge.net/
 COMMENT=		GUI for Go-playing programs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_BASH+=		bin/*
 USE_TOOLS+=		bash:run
@@ -35,10 +37,12 @@ do-build:
 .endfor
 
 do-install:
-	cd ${WRKSRC}/bin && ${INSTALL_SCRIPT} * ${PREFIX}/bin/.
-	cd ${WRKSRC}/lib && ${INSTALL_DATA} *.jar ${LIBDIR}/.
-	cd ${WRKSRC}/doc/manual/html && ${INSTALL_DATA} *.html *.png ${DOCDIR}/.
-	cd ${WRKSRC}/doc/manual/man && ${INSTALL_MAN} *.1 ${MY_MANDIR}/man1/.
+	cd ${WRKSRC}/bin && ${INSTALL_SCRIPT} * ${DESTDIR}${PREFIX}/bin/.
+	cd ${WRKSRC}/lib && ${INSTALL_DATA} *.jar ${DESTDIR}${LIBDIR}/.
+	cd ${WRKSRC}/doc/manual/html && ${INSTALL_DATA} *.html *.png \
+		${DESTDIR}${DOCDIR}/.
+	cd ${WRKSRC}/doc/manual/man && ${INSTALL_MAN} *.1 \
+		${DESTDIR}${MY_MANDIR}/man1/.
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

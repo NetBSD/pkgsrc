@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2007/02/02 18:59:15 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2008/03/04 06:59:05 jlam Exp $
 
 DISTNAME=	q1source
 PKGNAME=	quake-2.30
@@ -15,6 +15,8 @@ COMMENT=	Legendary first person shoot'em up game
 DEPENDS+=	quakedata-[0-9]*:../../games/quakedata
 
 ONLY_FOR_PLATFORM=	*-*-i386
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	gmake
@@ -41,15 +43,15 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/qw/release_version/qwsv \
-	    ${PREFIX}/bin
+	    ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/qw/release_version/qwcl.x11 \
-	    ${PREFIX}/bin
+	    ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/qw/release_version/glqwcl.glx \
-	    ${PREFIX}/bin
+	    ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/winquake/release_version/bin/glquake.glx \
-	    ${PREFIX}/bin
+	    ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/winquake/release_version/bin/quake.x11 \
-	    ${PREFIX}/bin
+	    ${DESTDIR}${PREFIX}/bin
 
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/07/29 05:19:26 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/04 06:59:05 jlam Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
 PKGNAME=	quake3server-1.32b
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.run
 MAINTAINER=	david@silicium.ath.cx
 COMMENT=	Quake III Arena Dedicated Server for Linux
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 .include "../../games/quake3server/Makefile.common"
 
 USE_TOOLS+=	gtar
@@ -20,36 +22,38 @@ WRKSRC=		${WRKDIR}
 BASEDOCDIR=	${PREFIX}/share/doc/lokigames/quake3server
 RCD_SCRIPTS=	quake3server
 
+SPECIAL_PERMS+=	${Q3ROOTDIR}/q3ded nobody nogroup 0500
+
 do-install:
-	${INSTALL_DATA_DIR} ${Q3ROOTDIR}/pb ${Q3ROOTDIR}/baseq3 \
-		${Q3ROOTDIR}/missionpack
+	${INSTALL_DATA_DIR} ${DESTDIR}${Q3ROOTDIR}/pb \
+		${DESTDIR}${Q3ROOTDIR}/baseq3 \
+		${DESTDIR}${Q3ROOTDIR}/missionpack
 .for bpak in 1 2 3 4 5 6 7 8
 	${INSTALL_DATA} ${WRKSRC}/baseq3/pak${bpak}.pk3 \
-		${Q3ROOTDIR}/baseq3
+		${DESTDIR}${Q3ROOTDIR}/baseq3
 .endfor
 .for mpak in 1 2 3
 	${INSTALL_DATA} ${WRKSRC}/missionpack/pak${mpak}.pk3 \
-		${Q3ROOTDIR}/missionpack
+		${DESTDIR}${Q3ROOTDIR}/missionpack
 .endfor
-	${INSTALL} -c -o nobody -g nogroup -m 500 ${WRKSRC}/bin/x86/q3ded \
-		${Q3ROOTDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/x86/q3ded ${DESTDIR}${Q3ROOTDIR}
 
 .for pb in pbag.so pbcl.so pbsv.so
-	${INSTALL_DATA} ${WRKSRC}/pb/${pb} ${Q3ROOTDIR}/pb
+	${INSTALL_DATA} ${WRKSRC}/pb/${pb} ${DESTDIR}${Q3ROOTDIR}/pb
 .endfor
 
 post-install:
-	${INSTALL_DATA_DIR} ${BASEDOCDIR}/Docs/LinuxFAQ \
-		${BASEDOCDIR}/Docs/PunkBuster/admins \
-		${BASEDOCDIR}/Docs/PunkBuster/players \
-		${BASEDOCDIR}/pb/htm
+	${INSTALL_DATA_DIR} ${DESTDIR}${BASEDOCDIR}/Docs/LinuxFAQ \
+		${DESTDIR}${BASEDOCDIR}/Docs/PunkBuster/admins \
+		${DESTDIR}${BASEDOCDIR}/Docs/PunkBuster/players \
+		${DESTDIR}${BASEDOCDIR}/pb/htm
 .for docs in CHANGES-1.32.txt INSTALL Q3A_EULA.txt README-Id-7-26-01.html \
 	README-linux.txt quake3.xpm
-	${INSTALL_DATA} ${WRKSRC}/${docs} ${BASEDOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/${docs} ${DESTDIR}${BASEDOCDIR}
 .endfor
 .for faq in INSTALL index.html udp_wide_README.txt udp_wide_broadcast.patch
 	${INSTALL_DATA} ${WRKSRC}/Docs/LinuxFAQ/${faq} \
-		${BASEDOCDIR}/Docs/LinuxFAQ
+		${DESTDIR}${BASEDOCDIR}/Docs/LinuxFAQ
 .endfor
 .for admins in index.htm tabout1.gif tadvanced1.gif tbasics1.gif \
 	tcommands1.gif tcommands2.gif tenabling1.gif tfaq1.gif tgame1.gif \
@@ -57,7 +61,7 @@ post-install:
 	tplayer1.gif tquick1.gif tremote1.gif tscreen1.gif tsettings1.gif \
 	ttitle1.gif ttoc1.gif tupdating1.gif
 	${INSTALL_DATA} ${WRKSRC}/Docs/PunkBuster/admins/${admins} \
-		${BASEDOCDIR}/Docs/PunkBuster/admins
+		${DESTDIR}${BASEDOCDIR}/Docs/PunkBuster/admins
 .endfor
 .for players in index.htm sbrowser1.jpg skeyboard1.gif stilde1.gif tabout1.gif \
 	tbasics1.gif tbutton1.gif tbutton2.gif tcommands1.gif tcommands2.gif \
@@ -66,12 +70,12 @@ post-install:
 	tquick1.gif tremote1.gif tscreen1.gif tsettings1.gif ttaking1.gif \
 	ttitle1.gif ttoc1.gif tupdating1.gif tusing1.gif
 	${INSTALL_DATA} ${WRKSRC}/Docs/PunkBuster/players/${players} \
-		${BASEDOCDIR}/Docs/PunkBuster/players
+		${DESTDIR}${BASEDOCDIR}/Docs/PunkBuster/players
 .endfor
 .for pbhtm in la001293.htm lc000993.htm ls000993.htm ma001293.htm mc000993.htm \
 	ms000993.htm wa001293.htm wc000993.htm ws000993.htm
-	${INSTALL_DATA} ${WRKSRC}/pb/htm/${pbhtm} ${BASEDOCDIR}/pb/htm
+	${INSTALL_DATA} ${WRKSRC}/pb/htm/${pbhtm} ${DESTDIR}${BASEDOCDIR}/pb/htm
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/pb/PB_EULA.txt ${BASEDOCDIR}/pb
+	${INSTALL_DATA} ${WRKSRC}/pb/PB_EULA.txt ${DESTDIR}${BASEDOCDIR}/pb
 
 .include "../../mk/bsd.pkg.mk"

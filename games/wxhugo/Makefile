@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/05/15 21:05:49 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/04 06:59:06 jlam Exp $
 #
 
 DISTNAME=	hugov31_unix_source
@@ -14,6 +14,8 @@ COMMENT=	Interactive fiction interpreter with sound and graphics support
 
 DISTFILE_WX=	hugov31_wxwin_source${EXTRACT_SUFX}
 #EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	hugo-3.1.02
 USE_LANGUAGES=	c c++
@@ -33,6 +35,6 @@ INSTALLATION_DIRS=	bin
 .include "../../x11/wxGTK24/buildlink3.mk"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/hewx ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/hewx ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

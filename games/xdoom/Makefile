@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2008/01/19 09:16:23 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2008/03/04 06:59:06 jlam Exp $
 
 DISTNAME=	linuxdoom-1.10
 PKGNAME=	xdoom-1.10
@@ -14,6 +14,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	3D shoot-em-up for 8-bit X11 displays
 
 LICENSE=	xdoom-license
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_ONLY=		doomsrc.zip
 EXTRACT_OPTX_ZIP=	-qo
@@ -46,10 +48,13 @@ do-build:
 	cd ${WRKSRC}/sndserv && ${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/${DISTNAME}/linux/linuxxdoom ${PREFIX}/bin/xdoom
-	${INSTALL_PROGRAM} ${WRKSRC}/sndserv/linux/sndserver ${PREFIX}/bin/sndserver
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doom
-	${GUNZIP_CMD} -c ${DISTDIR}/doom-1.8.wad.gz > ${PREFIX}/share/doom/doom1.wad
+	${INSTALL_PROGRAM} ${WRKSRC}/${DISTNAME}/linux/linuxxdoom \
+		${DESTDIR}${PREFIX}/bin/xdoom
+	${INSTALL_PROGRAM} ${WRKSRC}/sndserv/linux/sndserver \
+		${DESTDIR}${PREFIX}/bin/sndserver
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doom
+	${GUNZIP_CMD} -c ${DISTDIR}/doom-1.8.wad.gz \
+		> ${DESTDIR}${PREFIX}/share/doom/doom1.wad
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"

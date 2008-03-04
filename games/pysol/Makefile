@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/01/07 09:13:54 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2008/03/04 06:59:05 jlam Exp $
 #
 
 DISTNAME=	pysol-4.81
@@ -12,6 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pysol.org/
 COMMENT=	Solitaire game, written in Python
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_BUILD=	yes
 PLIST_SRC=	${WRKDIR}/PLIST.src
 
@@ -24,18 +26,18 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 do-install:
 	${SED} -e "s|@pkgdatadir@|${PREFIX}/share/pysol|" \
 		-e "s|python|${PYTHONBIN}|" \
-		< ${WRKSRC}/pysol > ${PREFIX}/bin/pysol
-	${CHMOD} +x ${PREFIX}/bin/pysol
-	${INSTALL_DATA} ${WRKSRC}/pysol.6 ${PREFIX}/${PKGMANDIR}/man6
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/pysol
+		< ${WRKSRC}/pysol > ${DESTDIR}${PREFIX}/bin/pysol
+	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/pysol
+	${INSTALL_DATA} ${WRKSRC}/pysol.6 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
+	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/pysol
 	(cd ${WRKSRC}/data; tar cf - *) | \
-		(cd ${PREFIX}/share/pysol; tar xf -)
+		(cd ${DESTDIR}${PREFIX}/share/pysol; tar xf -)
 	(cd ${WRKDIR}/${CARDSETS}/data; tar cf - *) | \
-		(cd ${PREFIX}/share/pysol; tar xf -)
+		(cd ${DESTDIR}${PREFIX}/share/pysol; tar xf -)
 
 post-install:
 	@${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	@(cd ${PREFIX}; \
+	@(cd ${DESTDIR}${PREFIX}; \
 	  ${FIND} share/pysol \( -type f -or -type l \) -print | \
 	    ${SORT} >> ${PLIST_SRC}; \
 	  for DIR in `${FIND} share/pysol -type d -print | ${SORT} -r`; do \

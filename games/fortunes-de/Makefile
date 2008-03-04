@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/01/07 13:24:33 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2008/03/04 06:59:04 jlam Exp $
 #
 
 DISTNAME=	fortunes-de-0.20
@@ -12,7 +12,9 @@ COMMENT=	German data files for fortune
 
 BUILD_DEPENDS+=	fortune-strfile-[0-9]*:../../games/fortune-strfile
 
-STRFILE=	${LOCALBASE}/bin/strfile
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+STRFILE=		${LOCALBASE}/bin/strfile
 INSTALLATION_DIRS=	share/games/fortune/de
 CHECK_PORTABILITY_SKIP=	install.sh
 
@@ -20,6 +22,7 @@ do-build:
 	find ${WRKSRC}/data -type f ! -name "*.dat" -exec ${STRFILE} {} \;
 
 do-install:
-	cd ${WRKSRC}/data && pax -rw . ${PREFIX}/share/games/fortune/de
+	cd ${WRKSRC}/data && pax -rw . \
+		${DESTDIR}${PREFIX}/share/games/fortune/de
 
 .include "../../mk/bsd.pkg.mk"

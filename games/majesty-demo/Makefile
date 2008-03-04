@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/07/29 05:19:25 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2008/03/04 06:59:05 jlam Exp $
 #
 
 DISTNAME=	majesty_demo
@@ -19,6 +19,8 @@ USE_TOOLS+=	gzcat pax
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	x11
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 BUILD_DIRS=	# empty
 
@@ -35,12 +37,13 @@ do-build:
 	    <${FILESDIR}/wrapper.sh >${WRKDIR}/${BINNAME}.sh
 
 do-install:
-	${INSTALL_DATA_DIR} ${LGP_PATH}
-	${INSTALL_DATA_DIR} ${MAJ_PATH}
+	${INSTALL_DATA_DIR} ${DESTDIR}${LGP_PATH}
+	${INSTALL_DATA_DIR} ${DESTDIR}${MAJ_PATH}
 	${INSTALL_PROGRAM} ${WRKDIR}/bin/Linux/x86/glibc-2.1/maj_demo \
-		${MAJ_PATH}
+		${DESTDIR}${MAJ_PATH}
 	cd ${WRKDIR} && ${PAX} -rw README README.licenses data majesty* \
-		quests ${MAJ_PATH}
-	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${BINNAME}
+		quests ${DESTDIR}${MAJ_PATH}
+	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh \
+		${DESTDIR}${PREFIX}/bin/${BINNAME}
 
 .include "../../mk/bsd.pkg.mk"

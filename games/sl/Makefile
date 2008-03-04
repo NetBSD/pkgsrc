@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/01/07 09:13:54 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/04 06:59:06 jlam Exp $
 #
 
 DISTNAME=	sl
@@ -19,13 +19,15 @@ DIST_SUBDIR=	${PKGNAME_NOREV}
 
 BUILD_DEPENDS+=	nkf-[0-9]*:../../converters/nkf
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/ja_JP.EUC/man1
 
 post-build:
 	nkf -e ${WRKSRC}/sl.1 > ${WRKSRC}/sl.1.euc
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/sl ${PREFIX}/bin/sl
-	${INSTALL_DATA} ${WRKSRC}/sl.1.euc ${PREFIX}/${PKGMANDIR}/ja_JP.EUC/man1/sl.1
+	${INSTALL_PROGRAM} ${WRKSRC}/sl ${DESTDIR}${PREFIX}/bin/sl
+	${INSTALL_DATA} ${WRKSRC}/sl.1.euc \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/ja_JP.EUC/man1/sl.1
 
 .include "../../mk/bsd.pkg.mk"

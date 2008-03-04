@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/02/22 19:26:31 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2008/03/04 06:59:06 jlam Exp $
 #
 
 DISTNAME=	xrick-021212
@@ -17,6 +17,8 @@ NO_SRC_ON_CDROM=    ${RESTRICTED}
 NO_BIN_ON_FTP=	    ${RESTRICTED}
 NO_SRC_ON_FTP=	    ${RESTRICTED}
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		gmake gunzip
 
 SUBST_CLASSES+=		data
@@ -31,10 +33,10 @@ post-extract:
 	cd ${WRKSRC} && ${GUNZIP_CMD} xrick.6.gz
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xrick ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/xrick.6 ${PREFIX}/${PKGMANDIR}/man6
-	${INSTALL_DATA_DIR} ${PREFIX}/share/xrick
-	${INSTALL_DATA} ${WRKSRC}/data.zip ${PREFIX}/share/xrick
+	${INSTALL_PROGRAM} ${WRKSRC}/xrick ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/xrick.6 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/xrick
+	${INSTALL_DATA} ${WRKSRC}/data.zip ${DESTDIR}${PREFIX}/share/xrick
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

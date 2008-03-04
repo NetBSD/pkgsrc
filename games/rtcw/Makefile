@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/07/29 05:19:26 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/04 06:59:05 jlam Exp $
 
 DISTNAME=	wolf-linux-1.33.x86
 PKGNAME=	rtcw-1.33
@@ -23,6 +23,8 @@ EMUL_MODULES.linux=	base
 # This package needs DRI support.
 NOT_FOR_PLATFORM=	NetBSD-*-*
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 BUILD_DIRS=	# empty
 RTCWDIR=	${PREFIX}/lib/lokigames/rtcw
 USE_TOOLS+=	gtar
@@ -33,7 +35,7 @@ pre-extract:
 	${MKDIR} ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA_DIR} ${RTCWDIR}
-	cd ${WRKSRC} && ${PAX} -rw -p am . ${RTCWDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${RTCWDIR}
+	cd ${WRKSRC} && ${PAX} -rw -p am . ${DESTDIR}${RTCWDIR}
 
 .include "../../mk/bsd.pkg.mk"

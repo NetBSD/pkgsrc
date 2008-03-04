@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/10/25 21:06:14 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2008/03/04 06:59:04 jlam Exp $
 #
 
 DISTNAME=	ketm-0.0.6
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://home.t-online.de/home/haslbeck/ketm/
 COMMENT=	Old-school 2d-scrolling shooter
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 BUILD_TARGET=	ketm
 
 USE_TOOLS+=	gmake
@@ -20,13 +22,13 @@ INSTALLATION_DIRS=	bin share/ketm/data
 SUBST_CLASSES+=		ketm
 SUBST_STAGE.ketm=	pre-configure
 SUBST_FILES.ketm=	*.c font.h
-SUBST_SED.ketm=		-e "s,data/,${LOCALBASE}/share/ketm/data/,g"
+SUBST_SED.ketm=		-e "s,data/,${PREFIX}/share/ketm/data/,g"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ketm ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/ketm
+	${INSTALL_PROGRAM} ${WRKSRC}/ketm ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/ketm
 	cd ${WRKSRC}/data && 						\
-		${INSTALL_DATA} *.bmp *.dat ${PREFIX}/share/ketm/data
+		${INSTALL_DATA} *.bmp *.dat ${DESTDIR}${PREFIX}/share/ketm/data
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

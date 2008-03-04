@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/09/09 02:42:00 obache Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/04 06:59:03 jlam Exp $
 #
 
 DISTNAME=		digger-20020314
@@ -10,6 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.digger.org/
 COMMENT=		Digger Remastered
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -24,7 +25,7 @@ MAKE_FLAGS+=		-DSDL
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/digger ${PREFIX}/bin/digger
+	${INSTALL_PROGRAM} ${WRKSRC}/digger ${DESTDIR}${PREFIX}/bin/digger
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
