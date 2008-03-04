@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/04 06:59:05 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/04 11:02:24 rillig Exp $
 #
 
 DISTNAME=		polyglot_14
@@ -7,7 +7,7 @@ CATEGORIES=		games
 MASTER_SITES=		http://wbec-ridderkerk.nl/html/download/fruit/
 EXTRACT_SUFX=		.zip
 
-MAINTAINER=		rillig@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://wbec-ridderkerk.nl/html/details/PolyGlot.html
 COMMENT=		UCI to WB adapter (for chess engines)
 

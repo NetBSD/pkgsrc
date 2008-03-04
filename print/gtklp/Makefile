@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/01/18 05:08:54 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/04 11:02:25 rillig Exp $
 #
 
 DISTNAME=	gtklp-1.2.3
@@ -7,7 +7,7 @@ CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtklp/}
 EXTRACT_SUFX=	.src.tar.gz
 
-MAINTAINER=	rillig@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gtklp.sourceforge.net/
 COMMENT=	CUPS frontend using GTK
 

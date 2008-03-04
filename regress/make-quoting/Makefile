@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2006/06/29 14:01:58 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/04 11:02:25 rillig Exp $
 #
 
 DISTNAME=	regress-make-1.0
 CATEGORIES=	regress
 DISTFILES=	# empty
 
-MAINTAINER=	rillig@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Test Makefile quoting and make(1) bugs
 
 NUM_MAKE_VERSION=	${MAKE_VERSION:C/[^0-9]//g}

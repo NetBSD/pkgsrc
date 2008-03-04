@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/02/28 11:58:49 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/04 11:02:25 rillig Exp $
 #
 
 DISTNAME=	jdom-1.0
@@ -6,7 +6,7 @@ CATEGORIES=	textproc
 MASTER_SITES=	http://www.jdom.org/dist/binary/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	rillig@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.jdom.org/
 COMMENT=	Simple API for processing XML documents in Java
 

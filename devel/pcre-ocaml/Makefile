@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/06/09 11:05:00 rillig Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/04 11:02:24 rillig Exp $
 #
 
 DISTNAME=		pcre-ocaml-5.11.2
@@ -6,7 +6,7 @@ CATEGORIES=		devel
 MASTER_SITES=		http://www.ocaml.info/ocaml_sources/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		rillig@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ocaml.info/ocaml_sources/
 COMMENT=		Perl compatible regular expressions for OCaml
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/12/02 12:11:59 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/04 11:02:25 rillig Exp $
 #
 
 DISTNAME=		js-0.2.5
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		lang
 MASTER_SITES=		http://www.njs-javascript.org/
 
-MAINTAINER=		rillig@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.njs-javascript.org/
 COMMENT=		JavaScript virtual machine
 

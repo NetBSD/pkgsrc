@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/10/09 19:19:09 martti Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/04 11:02:24 rillig Exp $
 #
 
 DISTNAME=		cogito-0.18.2
@@ -7,7 +7,7 @@ CATEGORIES=		devel
 MASTER_SITES=		http://www.kernel.org/pub/software/scm/cogito/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		rillig@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.kernel.org/pub/software/scm/cogito/
 COMMENT=		Version control system of the Linux kernel
 

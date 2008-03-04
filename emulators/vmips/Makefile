@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2007/01/07 09:13:53 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/04 11:02:24 rillig Exp $
 #
 
 DISTNAME=		vmips-1.3.1
 CATEGORIES=		emulators
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=vmips/}
 
-MAINTAINER=		rillig@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://vmips.sourceforge.net/
 COMMENT=		MIPS R3000 emulator
 

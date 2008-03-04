@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/09/25 10:03:53 hira Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/04 11:02:25 rillig Exp $
 #
 
 DISTNAME=	compiler-1.1
@@ -6,7 +6,7 @@ CATEGORIES=	regress
 MASTER_SITES=	# none
 DISTFILES=	# none
 
-MAINTAINER=	rillig@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Tests whether the pkgsrc compilers work as expected
 
 NO_CHECKSUM=	yes
