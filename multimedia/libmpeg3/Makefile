@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/02/20 09:56:44 xtraeme Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/04 19:32:30 jlam Exp $
 #
 
 DISTNAME=	libmpeg3-1.7-src
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://heroines.sourceforge.net/libmpeg3.php3
 COMMENT=	MPEG decoding library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -49,26 +51,26 @@ INSTALLATION_DIRS=	bin lib
 
 do-install:
 	for f in ${INSTBINS}; do \
-		${INSTALL_PROGRAM} ${WRKSRC}/work/$$f ${PREFIX}/bin; \
+		${INSTALL_PROGRAM} ${WRKSRC}/work/$$f ${DESTDIR}${PREFIX}/bin; \
 	done
 	${INSTALL_DATA_DIR} ${PREFIX}/include/mpeg3
 	for f in ${INSTHDRS}; do \
-		${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/include/mpeg3; \
+		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/include/mpeg3; \
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/include/mpeg3/audio
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/mpeg3/audio
 	for f in ${AINSTHDRS}; do \
 		${INSTALL_DATA} ${WRKSRC}/audio/$$f \
-			${PREFIX}/include/mpeg3/audio; \
+			${DESTDIR}${PREFIX}/include/mpeg3/audio; \
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/include/mpeg3/video
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/mpeg3/video
 	for f in ${VINSTHDRS}; do \
 		${INSTALL_DATA} ${WRKSRC}/video/$$f \
-			${PREFIX}/include/mpeg3/video; \
+			${DESTDIR}${PREFIX}/include/mpeg3/video; \
 	done
-	${INSTALL_LIB} ${WRKSRC}/work/libmpeg3.a ${PREFIX}/lib
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/libmpeg3
+	${INSTALL_LIB} ${WRKSRC}/work/libmpeg3.a ${DESTDIR}${PREFIX}/lib
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/html/libmpeg3
 	${INSTALL_DATA} ${WRKSRC}/docs/index.html \
-		${PREFIX}/share/doc/html/libmpeg3
+		${DESTDIR}${PREFIX}/share/doc/html/libmpeg3
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
