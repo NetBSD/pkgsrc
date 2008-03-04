@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/10 23:58:15 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/04 06:59:04 jlam Exp $
 
 DISTNAME=		new_brain
 PKGNAME=		knightcap-brain-19980616
@@ -11,6 +11,8 @@ HOMEPAGE=		http://anu.samba.org/KnightCap/
 COMMENT=		Book of losing moves for KnightCap
 
 ONLY_FOR_PLATFORM=	*-*-i386
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		${PKGNAME_NOREV}
@@ -26,9 +28,10 @@ do-build:
 		> ${WRKSRC:Q}/newbrain.sh
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC:Q}/newbrain.sh ${PREFIX:Q}/bin/newbrain
-	${INSTALL_DATA_DIR} ${EGDIR:Q}
+	${INSTALL_SCRIPT} ${WRKSRC:Q}/newbrain.sh \
+		${DESTDIR}${PREFIX:Q}/bin/newbrain
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR:Q}
 	${INSTALL_DATA} ${DISTDIR:Q}/${DIST_SUBDIR:Q}/new_brain.dat \
-		${EGDIR:Q}/brain.dat
+		${DESTDIR}${EGDIR:Q}/brain.dat
 
 .include "../../mk/bsd.pkg.mk"

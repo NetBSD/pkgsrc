@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/07/29 05:19:26 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2008/03/04 06:59:05 jlam Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
 PKGREVISION=	3
@@ -19,6 +19,8 @@ EMUL_MODULES.linux=	base x11 glx
 
 NO_SRC_ON_FTP=	no
 NO_BIN_ON_FTP=	no
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gtar gunzip tail
 
@@ -44,19 +46,19 @@ do-build:
 
 # The executable must be in the same directory as the data.
 do-install:
-	${INSTALL_PROGRAM_DIR} ${LIBDIR}
-	${INSTALL_DATA_DIR} ${SHAREDIR}
-	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${PREFIX}/bin/${BINNAME}
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${LIBDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh ${DESTDIR}${PREFIX}/bin/${BINNAME}
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/x86/${DISTBINNAME} \
-		${LIBDIR}/${BINNAME}
-	${INSTALL_DATA} ${WRKSRC}/README-linux.txt ${SHAREDIR}/${BINNAME}-README
+		${DESTDIR}${LIBDIR}/${BINNAME}
+	${INSTALL_DATA} ${WRKSRC}/README-linux.txt ${DESTDIR}${SHAREDIR}/${BINNAME}-README
 
-	cd ${WRKSRC} && ${PAX} -rw baseq3 ${LIBDIR}
+	cd ${WRKSRC} && ${PAX} -rw baseq3 ${DESTDIR}${LIBDIR}
 
 # Some platforms, e.g. FreeBSD, need to "brand" the ELF binaries to
 # the correct type.
 #
 post-install:
-	${BRANDELF:D${BRANDELF} -t Linux ${PREFIX}/bin/${BINNAME}:U${TRUE}}
+	${BRANDELF:D${BRANDELF} -t Linux ${DESTDIR}${PREFIX}/bin/${BINNAME}:U${TRUE}}
 
 .include "../../mk/bsd.pkg.mk"

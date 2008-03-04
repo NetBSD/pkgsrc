@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2008/02/12 08:01:26 rillig Exp $
+# $NetBSD: Makefile,v 1.36 2008/03/04 06:59:05 jlam Exp $
 
 DISTNAME=	Rollemup
 PKGNAME=	rollemup-1.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://savor.gulic.org/demos/
 # was http://usa.lostboys.nl/medialab/rollemup/Linux/
@@ -20,6 +20,8 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+PKG_DESTDIR_SUPPORT=	destdir
+
 USE_TOOLS+=		gtar
 
 EMUL_PLATFORMS=		linux-i386
@@ -28,6 +30,11 @@ EMUL_MODULES.linux=	compat x11
 PLIST_SRC=		${WRKDIR}/PLIST.src
 GAMES_DIR=		share/games
 MESSAGE_SUBST+=		GAMES_DIR=${GAMES_DIR}
+
+SETGIDGAME=		yes
+CONF_FILES_PERMS+=	/dev/null ${GAMES_DIR}/Rollemup/Rollemup.ini	\
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
+SPECIAL_PERMS=		bin/Rollemup ${SETGID_GAMES_PERMS}
 
 INSTALLATION_DIRS=	bin
 
@@ -39,24 +46,22 @@ do-build:
 		> ${WRKDIR}/README.Rollemup
 
 do-install:
-	${MKDIR} ${PREFIX}/${GAMES_DIR}
-	${GTAR} xCzf ${PREFIX}/${GAMES_DIR} ${_DISTDIR}/${DISTFILES}
-	${TOUCH} ${PREFIX}/${GAMES_DIR}/Rollemup/Rollemup.ini
-	${MV} ${PREFIX}/${GAMES_DIR}/Rollemup/Rollemup ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKDIR}/rollemup ${PREFIX}/bin
+	${MKDIR} ${DESTDIR}${PREFIX}/${GAMES_DIR}
+	${GTAR} xCzf ${DESTDIR}${PREFIX}/${GAMES_DIR} ${_DISTDIR}/${DISTFILES}
+	${TOUCH} ${DESTDIR}${PREFIX}/${GAMES_DIR}/Rollemup/Rollemup.ini
+	${MV} ${PREFIX}/${GAMES_DIR}/Rollemup/Rollemup ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/rollemup ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKDIR}/README.Rollemup \
-		${PREFIX}/${GAMES_DIR}/Rollemup
+		${DESTDIR}${PREFIX}/${GAMES_DIR}/Rollemup
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	(cd ${PREFIX}; \
+	(cd ${DESTDIR}${PREFIX}; \
 	  ${FIND} ${GAMES_DIR}/Rollemup -type f -print >> ${PLIST_SRC}; \
 	  for DIR in `${FIND} ${GAMES_DIR}/Rollemup -type d -print | ${SORT} -r`; do \
 	    ${ECHO} "@dirrm $$DIR" >> ${PLIST_SRC}; \
 	  done)
-	${CHOWN} ${ROOT_USER}:games ${PREFIX}/bin/Rollemup
-	${CHMOD} 2755 ${PREFIX}/bin/Rollemup
-	${CHOWN} -R ${ROOT_USER}:games ${PREFIX}/${GAMES_DIR}/Rollemup
-	${CHMOD} 775 ${PREFIX}/${GAMES_DIR}/Rollemup/Games
-	${CHMOD} 775 ${PREFIX}/${GAMES_DIR}/Rollemup/Upload
-	${CHMOD} 664 ${PREFIX}/${GAMES_DIR}/Rollemup/Rollemup.ini
+	${CHOWN} -R ${ROOT_USER}:${GAMEGRP} \
+		${DESTDIR}${PREFIX}/${GAMES_DIR}/Rollemup
+	${CHMOD} ${GAMEDIRMODE} ${DESTDIR}${PREFIX}/${GAMES_DIR}/Rollemup/Games
+	${CHMOD} ${GAMEDIRMODE} ${DESTDIR}${PREFIX}/${GAMES_DIR}/Rollemup/Upload
 
 .include "../../mk/bsd.pkg.mk"

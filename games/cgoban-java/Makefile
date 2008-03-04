@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2008/02/19 02:53:50 rh Exp $
+# $NetBSD: Makefile,v 1.47 2008/03/04 06:59:03 jlam Exp $
 #
 
 DISTNAME=	cgoban-java-3.3.22
@@ -11,6 +11,8 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gokgs.com/
 COMMENT=	Client for the KGS Go Server and SGF viewer/editor
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 USE_JAVA=	run
 USE_JAVA2=	yes
@@ -22,8 +24,10 @@ do-build:
 	printf "#! ${SH}\\nexec ${JAVA_BINPREFIX}-java -jar ${PREFIX}/lib/java/${DISTNAME}.jar \"\$$@\"\\n" > ${WRKSRC}/cgoban-java.sh
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/cgoban-java.sh ${PREFIX}/bin/cgoban-java
-	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.jar ${PREFIX}/lib/java/${DISTNAME}.jar
+	${INSTALL_SCRIPT} ${WRKSRC}/cgoban-java.sh \
+		${DESTDIR}${PREFIX}/bin/cgoban-java
+	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.jar \
+		${DESTDIR}${PREFIX}/lib/java/${DISTNAME}.jar
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

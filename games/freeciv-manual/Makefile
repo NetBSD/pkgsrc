@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:29:41 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/04 06:59:04 jlam Exp $
 #
 
 DISTNAME=	manual-1.8.1-2
@@ -10,14 +10,16 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freeciv.org/
 COMMENT=	Manuals for freeciv (game, client, and server)
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/manual
 NO_BUILD=	YES
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/freeciv/img
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/html/freeciv/img
 	cd ${WRKSRC} && \
-	${INSTALL_DATA} *.html ${PREFIX}/share/doc/html/freeciv
+	${INSTALL_DATA} *.html ${DESTDIR}${PREFIX}/share/doc/html/freeciv
 	cd ${WRKSRC}/img && \
-	${INSTALL_DATA} *.jpg ${PREFIX}/share/doc/html/freeciv/img
+	${INSTALL_DATA} *.jpg ${DESTDIR}${PREFIX}/share/doc/html/freeciv/img
 
 .include "../../mk/bsd.pkg.mk"

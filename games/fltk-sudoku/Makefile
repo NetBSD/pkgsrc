@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2007/03/23 22:10:50 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/04 06:59:04 jlam Exp $
 
 DISTNAME=	fltk-1.1.7-source
 PKGNAME=	fltk-sudoku-1.1.7
+PKGREVISION=	1
 VERS=		${DISTNAME:S/fltk-//:S/-source//}
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fltk/} \
@@ -16,6 +17,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.easysw.com/~mike/sudoku/index.html
 COMMENT=	FLTK example Sudoku game creator and solver
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-source//}
 USE_LANGUAGES=		c c++
@@ -42,8 +45,11 @@ SUBST_SED.config2=	-e "s|../lib/||g"
 BUILD_DIRS=		test
 BUILD_TARGET=		sudoku
 
+SETGIDGAME=		yes
+SPECIAL_PERMS=		bin/fltk-sudoku ${SETGID_GAMES_PERMS}
+
 do-install:
-	${INSTALL_GAME} ${WRKSRC}/test/sudoku ${PREFIX}/bin/fltk-sudoku
+	${INSTALL_PROGRAM} ${WRKSRC}/test/sudoku ${DESTDIR}${PREFIX}/bin/fltk-sudoku
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/10/04 21:43:00 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/04 06:59:03 jlam Exp $
 #
 
 DISTNAME=		REminiscence-0.1.6
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		dillo@NetBSD.org
 HOMEPAGE=		http://cyxdown.free.fr/reminiscence/
 COMMENT=		Engine to play Flashback by Delphine Software
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c++
 
@@ -28,8 +30,9 @@ PKG_FAIL_REASON+=	"Unknown endianness."
 .include "../../devel/SDL/buildlink3.mk"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/rs ${LOCALBASE}/bin
-	${INSTALL_DATA_DIR} ${LOCALBASE}/share/doc/REminiscence
-	${INSTALL_DATA} ${WRKSRC}/README ${LOCALBASE}/share/doc/REminiscence
+	${INSTALL_PROGRAM} ${WRKSRC}/rs ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/REminiscence
+	${INSTALL_DATA} ${WRKSRC}/README \
+		${DESTDIR}${PREFIX}/share/doc/REminiscence
 
 .include "../../mk/bsd.pkg.mk"

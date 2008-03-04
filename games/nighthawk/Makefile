@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2008/02/12 07:59:04 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2008/03/04 06:59:05 jlam Exp $
 #
 
 DISTNAME=		nighthawk-2.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		x11 games
 MASTER_SITES=		${MASTER_SITE_BACKUP}
 EXTRACT_SUFX=		.tgz
@@ -15,6 +15,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://jsno.arafuraconnect.com.au/proj_linux/nighthawk.html
 COMMENT=		C64 Paradroid clone
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}/nighthawk
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c c++
@@ -23,6 +25,11 @@ MAKE_ENV+=		OSTYPE=${OPSYS:Q}
 CPPFLAGS+=		-DPREFIX="\"${PREFIX}\"" \
 			-DDEVOSSAUDIO="\"${DEVOSSAUDIO}\"" \
 			-DVARBASE="\"${VARBASE}\""
+
+SETGIDGAME=		yes
+CONF_FILES_PERMS=	/dev/null ${VARBASE}/games/nighthawk.scores	\
+			${GAMES_USER} ${GAMES_GROUP} ${GAMEDATAMODE}
+SPECIAL_PERMS=		bin/nighthawk ${SETGID_GAMES_PERMS}
 
 INSTALLATION_DIRS=	bin
 MAKE_DIRS=		${VARBASE}/games
@@ -35,18 +42,14 @@ post-build:
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} nighthawk_sound
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/nighthawk
-	${INSTALL_DATA_DIR} ${PREFIX}/share/nighthawk
-	${INSTALL_DATA_DIR} ${PREFIX}/share/nighthawk/data
-	cd ${WRKSRC}/data && ${PAX} -rw . ${PREFIX}/share/nighthawk/data
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/nighthawk
-	${FIND} ${PREFIX}/share/nighthawk -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
-	${FIND} ${PREFIX}/share/nighthawk -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${INSTALL_PROGRAM} ${WRKSRC}/src/nighthawk ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/src_sound/nighthawk_sound ${PREFIX}/bin
-	${CHGRP} ${GAMEGRP} ${PREFIX}/bin/nighthawk
-	${CHMOD} g+s ${PREFIX}/bin/nighthawk
-	${INSTALL_MAN} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/nighthawk/README
-	${INSTALL} -o ${ROOT_USER} -g ${GAMEGRP} -m 664 /dev/null ${VARBASE}/games/nighthawk.scores
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/nighthawk
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/nighthawk
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/nighthawk/data
+	cd ${WRKSRC}/data && ${PAX} -rw . ${DESTDIR}${PREFIX}/share/nighthawk/data
+	${FIND} ${DESTDIR}${PREFIX}/share/nighthawk -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
+	${FIND} ${DESTDIR}${PREFIX}/share/nighthawk -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${INSTALL_PROGRAM} ${WRKSRC}/src/nighthawk ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src_sound/nighthawk_sound ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/INSTALL ${DESTDIR}${PREFIX}/share/doc/nighthawk/README
 
 .include "../../mk/bsd.pkg.mk"

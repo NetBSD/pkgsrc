@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/07/29 05:19:25 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/04 06:59:03 jlam Exp $
 #
 
 DISTNAME=	et-linux-2.56-2.x86
@@ -14,6 +14,8 @@ COMMENT=	Wolfenstein: Enemy Territory for Linux
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gtar
 EXTRACT_CMD=	${TAIL} +356 ${DOWNLOADED_DISTFILE} | ${GTAR} xzf - \
@@ -38,21 +40,21 @@ post-extract:
 	${CP} ${FILESDIR}/etded.sh ${WRKDIR}/etded
 
 do-install:
-	${INSTALL_DATA_DIR} ${ETDIR}
-	${INSTALL_DATA} ${WRKSRC}/CHANGES ${ETDIR}/
-	${INSTALL_DATA} ${WRKSRC}/README ${ETDIR}/
-	${INSTALL_DATA} ${WRKSRC}/ET.xpm ${ETDIR}/
-	${INSTALL_DATA} ${WRKSRC}/openurl.sh ${ETDIR}/
-	${INSTALL_DATA} ${WRKSRC}/v1.02_Readme.htm ${ETDIR}/
-	${INSTALL_DATA_DIR} ${ETDIR}/Docs
-	cd ${WRKSRC}/Docs && ${PAX} -rw -p am . ${ETDIR}/Docs
-	${INSTALL_DATA_DIR} ${ETDIR}/etmain
-	cd ${WRKSRC}/etmain && ${PAX} -rw -p am . ${ETDIR}/etmain
-	${INSTALL_DATA_DIR} ${ETDIR}/pb
-	cd ${WRKSRC}/pb && ${PAX} -rw -p am . ${ETDIR}/pb
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/Linux/x86/et.x86 ${ETDIR}/
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/Linux/x86/etded.x86 ${ETDIR}/
-	${INSTALL_SCRIPT} ${WRKDIR}/et ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKDIR}/etded ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${ETDIR}
+	${INSTALL_DATA} ${WRKSRC}/CHANGES ${DESTDIR}${ETDIR}/
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${ETDIR}/
+	${INSTALL_DATA} ${WRKSRC}/ET.xpm ${DESTDIR}${ETDIR}/
+	${INSTALL_DATA} ${WRKSRC}/openurl.sh ${DESTDIR}${ETDIR}/
+	${INSTALL_DATA} ${WRKSRC}/v1.02_Readme.htm ${DESTDIR}${ETDIR}/
+	${INSTALL_DATA_DIR} ${DESTDIR}${ETDIR}/Docs
+	cd ${WRKSRC}/Docs && ${PAX} -rw -p am . ${DESTDIR}${ETDIR}/Docs
+	${INSTALL_DATA_DIR} ${DESTDIR}${ETDIR}/etmain
+	cd ${WRKSRC}/etmain && ${PAX} -rw -p am . ${DESTDIR}${ETDIR}/etmain
+	${INSTALL_DATA_DIR} ${DESTDIR}${ETDIR}/pb
+	cd ${WRKSRC}/pb && ${PAX} -rw -p am . ${DESTDIR}${ETDIR}/pb
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/Linux/x86/et.x86 ${DESTDIR}${ETDIR}/
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/Linux/x86/etded.x86 ${DESTDIR}${ETDIR}/
+	${INSTALL_SCRIPT} ${WRKDIR}/et ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/etded ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

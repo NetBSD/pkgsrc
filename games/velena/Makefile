@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/02/28 11:58:48 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/04 06:59:06 jlam Exp $
 #
 
 DISTNAME=	veleng10
@@ -17,10 +17,12 @@ RESTRICTED=		You must not charge a fee for this software nor for any derived wor
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 EXTRACT_OPTS_ZIP=	-LLaqo
 WRKSRC=			${WRKDIR}
 MAKE_FILE=		makefile
-AUTO_MKDIRS=			yes
+AUTO_MKDIRS=		yes
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	pre-configure

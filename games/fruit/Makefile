@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/02 20:05:20 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/04 06:59:04 jlam Exp $
 #
 
 DISTNAME=		fruit_21_linux
@@ -11,10 +11,12 @@ MAINTAINER=		rillig@NetBSD.org
 HOMEPAGE=		http://arctrix.com/nas/fruit/
 COMMENT=		Chess playing engine
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 BUILD_DIRS=		src
 USE_LANGUAGES=		c++
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/fruit ${PREFIX}/bin/fruit
+	${INSTALL_PROGRAM} ${WRKSRC}/src/fruit ${DESTDIR}${PREFIX}/bin/fruit
 
 .include "../../mk/bsd.pkg.mk"

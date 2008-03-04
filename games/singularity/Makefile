@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/09/09 17:04:32 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/04 06:59:06 jlam Exp $
 #
 
 DISTNAME=		singularity_0.26a
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.emhsoft.com/singularity/
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://www.emhsoft.com/singularity/
 COMMENT=		Endgame: Singularity game
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
@@ -23,12 +25,15 @@ do-build:
 	${ECHO} "${PYTHONBIN} singularity.py" >> ${WRKSRC}/singularity
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/singularity ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/code/*.py ${PREFIX}/share/singularity/code
-	${INSTALL_DATA} ${WRKSRC}/data/*.* ${PREFIX}/share/singularity/data
+	${INSTALL_SCRIPT} ${WRKSRC}/singularity ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/code/*.py \
+		${DESTDIR}${PREFIX}/share/singularity/code
+	${INSTALL_DATA} ${WRKSRC}/data/*.* \
+		${DESTDIR}${PREFIX}/share/singularity/data
 	${INSTALL_DATA} ${WRKSRC}/data/music-src/* \
-		${PREFIX}/share/singularity/data/music-src
-	${INSTALL_DATA} ${WRKSRC}/README.txt ${PREFIX}/share/doc/singularity
+		${DESTDIR}${PREFIX}/share/singularity/data/music-src
+	${INSTALL_DATA} ${WRKSRC}/README.txt \
+		${DESTDIR}${PREFIX}/share/doc/singularity
 
 .include "../../devel/py-game/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"

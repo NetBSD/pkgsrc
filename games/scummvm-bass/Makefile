@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/04 21:29:43 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/04 06:59:06 jlam Exp $
 #
 
 DISTNAME=		BASS-Floppy
@@ -12,6 +12,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://scummvm.sourceforge.net/
 COMMENT=		Beneath a Steel Sky
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}/sky-floppy
 
 BASSDIR=	${PREFIX}/share/games/bass
@@ -23,8 +25,8 @@ do-build:
 		>${WRKDIR}/bass.sh
 
 do-install:
-	${INSTALL_DATA_DIR} ${BASSDIR}
-	${INSTALL_DATA} ${WRKSRC}/sky.dnr ${WRKSRC}/sky.dsk ${BASSDIR}
-	${INSTALL_SCRIPT} ${WRKDIR}/bass.sh ${PREFIX}/bin/bass
+	${INSTALL_DATA_DIR} ${DESTDIR}${BASSDIR}
+	${INSTALL_DATA} ${WRKSRC}/sky.dnr ${WRKSRC}/sky.dsk ${DESTDIR}${BASSDIR}
+	${INSTALL_SCRIPT} ${WRKDIR}/bass.sh ${DESTDIR}${PREFIX}/bin/bass
 
 .include "../../mk/bsd.pkg.mk"
