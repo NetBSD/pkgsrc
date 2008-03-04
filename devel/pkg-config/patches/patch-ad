@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2007/11/30 22:12:07 wiz Exp $
+$NetBSD: patch-ad,v 1.3 2008/03/04 09:22:27 wiz Exp $
 
 see patch-ac.
 
---- configure.in.orig	2007-06-18 21:35:05.000000000 +0000
+--- configure.in.orig	2008-01-16 22:48:07.000000000 +0000
 +++ configure.in
 @@ -41,7 +41,7 @@ echo use_indirect_deps=$use_indirect_dep
  AC_MSG_CHECKING([whether to list both direct and indirect dependencies])
