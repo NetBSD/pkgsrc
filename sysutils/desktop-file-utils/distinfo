@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.8 2007/09/07 16:11:19 wiz Exp $
+$NetBSD: distinfo,v 1.9 2008/03/04 13:25:18 wiz Exp $
 
-SHA1 (desktop-file-utils-0.14.tar.gz) = 2329e2329649f8010e07de0b1181177d7031b23e
-RMD160 (desktop-file-utils-0.14.tar.gz) = 932ac0439188efe6b84ea61561b17f07f0f2a0d6
-Size (desktop-file-utils-0.14.tar.gz) = 348743 bytes
+SHA1 (desktop-file-utils-0.15.tar.gz) = 10e9a3d2033fd676d7bb44ca7ba376f815ca0821
+RMD160 (desktop-file-utils-0.15.tar.gz) = ab6fc0bc116d6ec338ef2699b96d57698d4a1d03
+Size (desktop-file-utils-0.15.tar.gz) = 348871 bytes
 SHA1 (patch-ab) = 404e5a8320493d4902d7d19e9b82f2f1189a309a
