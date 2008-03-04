@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:29:51 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/04 15:39:10 jlam Exp $
 #
 
 DISTNAME=	resize_image-0.6
@@ -10,13 +10,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lab.erasme.org/resize_image/
 COMMENT=	Fast image resizing tool
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	gmake
 CFLAGS+=	-DUNIX
 
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/resize_image ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/resize_image ${DESTDIR}${PREFIX}/bin
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
