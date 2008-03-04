@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/02/14 21:05:15 tv Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/04 17:57:18 jlam Exp $
 #
 
 DISTNAME=	imapsync-1.241
@@ -16,6 +16,8 @@ DEPENDS+=	p5-IO-Socket-SSL-[0-9]*:../../security/p5-IO-Socket-SSL
 DEPENDS+=	p5-Mail-IMAPClient>=2.2.9:../../mail/p5-Mail-IMAPClient
 DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_BUILD=	YES
 USE_TOOLS+=	perl:run
 REPLACE_PERL+=	imapsync
@@ -23,7 +25,7 @@ REPLACE_PERL+=	imapsync
 INSTALLATION_DIRS=	bin share/doc
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/imapsync ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/imapsync
+	${INSTALL_SCRIPT} ${WRKSRC}/imapsync ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/imapsync
 
 .include "../../mk/bsd.pkg.mk"
