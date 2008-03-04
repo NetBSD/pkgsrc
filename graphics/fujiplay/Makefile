@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/05/04 16:39:53 tv Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/04 15:39:09 jlam Exp $
 #
 
 DISTNAME=	fujiplay
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://topo.math.u-psud.fr/~bousch/fujiplay.html
 COMMENT=	Download pictures from some Fujifilm digital cameras
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	fujiplay-1.33
 WRKSRC=		${WRKDIR}
@@ -25,11 +27,13 @@ SUBST_FILES.cvsid=	fujiplay.c
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/fujiplay	${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/yycc2ppm	${PREFIX}/bin
-	${INSTALL_MAN_DIR} ${PREFIX}/share/doc/fujiplay
-	${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/doc/fujiplay
-	${INSTALL_MAN} ${WRKSRC}/fujiplay.lsm ${PREFIX}/share/doc/fujiplay
-	${INSTALL_MAN} ${WRKSRC}/mx700-commands.html ${PREFIX}/share/doc/fujiplay
+	${INSTALL_PROGRAM} ${WRKSRC}/fujiplay	${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/yycc2ppm	${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/share/doc/fujiplay
+	${INSTALL_MAN} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/fujiplay
+	${INSTALL_MAN} ${WRKSRC}/fujiplay.lsm \
+		${DESTDIR}${PREFIX}/share/doc/fujiplay
+	${INSTALL_MAN} ${WRKSRC}/mx700-commands.html \
+		${DESTDIR}${PREFIX}/share/doc/fujiplay
 
 .include "../../mk/bsd.pkg.mk"
