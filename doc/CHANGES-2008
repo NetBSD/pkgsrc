@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.422 2008/03/04 09:56:43 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.423 2008/03/04 10:11:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -370,6 +370,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/metauml version 0.2.5 [tonio 2008-02-01]
 	Updated cad/pcb to 20080202 [dmcmahill 2008-02-01]
 	Updated x11/gtkmm to 2.12.4 [adam 2008-02-01]
+	Updated multimedia/xine-lib to 1.1.10 [drochner 2008-02-01]
 	Added print/rtf2latex2e version 1.0fc2 [reed 2008-02-03]
 	Updated net/libupnp to 1.6.5 [obache 2008-02-03]
 	Updated textproc/mecab to 0.97 [obache 2008-02-04]
@@ -484,6 +485,13 @@ Changes to the packages collection and infrastructure in 2008:
 	Added net/isc-dhclient4 version 4.0.0 [adrianp 2008-02-13]
 	Added net/isc-dhcpd4 version 4.0.0 [adrianp 2008-02-13]
 	Added net/isc-dhcrelay4 version 4.0.0 [adrianp 2008-02-13]
+	Updated devel/pcre to 7.6 [drochner 2008-02-13]
+	Updated devel/glib2 to 2.14.6 [drochner 2008-02-13]
+	Updated net/libIDL to 0.8.10 [drochner 2008-02-13]
+	Updated net/ORBit2 to 2.14.12 [drochner 2008-02-13]
+	Updated print/libgnomeprint to 2.18.4 [drochner 2008-02-13]
+	Updated x11/gtk2 to 2.12.8 [drochner 2008-02-13]
+	Updated textproc/gnome-doc-utils to 0.12.1 [drochner 2008-02-13]
 	Updated devel/libmm to 1.4.2nb1 [bjs 2008-02-14]
 	Updated devel/p5-Log-Dispatch to 2.21 [rhaen 2008-02-14]
 	Added emulators/dynamips version 0.2.7 [kefren 2008-02-14]
@@ -659,6 +667,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/opera to 9.26 [xtraeme 2008-02-20]
 	Updated mail/cone to 0.74 [jlam 2008-02-20]
 	Updated sysutils/xenkernel3 to 3.1.3nb1 [bouyer 2008-02-20]
+	Added comms/libopensync-plugin-evolution2 version 0.22 [drochner 2008-02-21]
 	Updated mail/mail-notification to 5.0 [gdt 2008-02-21]
 	Added editors/lyx15 version 1.5.3 [xtraeme 2008-02-21]
 	Updated pkgtools/pkglint to 4.84 [rillig 2008-02-21]
