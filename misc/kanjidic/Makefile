@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/07/08 09:43:49 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/04 19:21:11 jlam Exp $
 #
 # Update instructions:
 # . bump PKGNAME to today's date
@@ -18,6 +18,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.csse.monash.edu.au/~jwb/kanjidic.html
 COMMENT=	Japanese Kanji information
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_ONLY=	kanjidic.gz
@@ -25,12 +27,12 @@ EXTRACT_ONLY=	kanjidic.gz
 NO_BUILD=	yes
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/kanjidic
-	${INSTALL_DATA} ${WRKSRC}/kanjidic ${PREFIX}/share/kanjidic
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/kanjidic
+	${INSTALL_DATA} ${WRKSRC}/kanjidic ${DESTDIR}${PREFIX}/share/kanjidic
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/kanjidic.gz \
-		${PREFIX}/share/kanjidic
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/kanjidic
+		${DESTDIR}${PREFIX}/share/kanjidic
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/kanjidic
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/kanjidic.doc \
-		${PREFIX}/share/doc/kanjidic
+		${DESTDIR}${PREFIX}/share/doc/kanjidic
 
 .include "../../mk/bsd.pkg.mk"
