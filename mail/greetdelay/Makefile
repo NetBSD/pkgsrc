@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/04 17:57:18 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/04 19:08:06 schmonz Exp $
 #
 
 DISTNAME=	greetdelay-0.03
@@ -20,6 +20,8 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/greetdelay ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/greetdelay.0 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1
 	${INSTALL_MAN} ${WRKSRC}/greetdelay.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
