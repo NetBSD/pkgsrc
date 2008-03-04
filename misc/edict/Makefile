@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/12/08 16:59:56 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/04 19:21:11 jlam Exp $
 #
 # Update instructions:
 # . bump PKGNAME to today's date
@@ -18,6 +18,8 @@ MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.csse.monash.edu.au/~jwb/edict.html
 COMMENT=	Japanese-English dictionary file
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_ONLY=	edict.gz
@@ -25,12 +27,12 @@ EXTRACT_ONLY=	edict.gz
 NO_BUILD=	yes
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/edict
-	${INSTALL_DATA} ${WRKSRC}/edict ${PREFIX}/share/edict/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/edict
+	${INSTALL_DATA} ${WRKSRC}/edict ${DESTDIR}${PREFIX}/share/edict/
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/edict.gz \
-		${PREFIX}/share/edict
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/edict
+		${DESTDIR}${PREFIX}/share/edict
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/edict
 	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/edict_doc.html \
-		${PREFIX}/share/doc/edict
+		${DESTDIR}${PREFIX}/share/doc/edict
 
 .include "../../mk/bsd.pkg.mk"
