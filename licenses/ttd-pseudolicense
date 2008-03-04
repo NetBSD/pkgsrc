@@ -1,6 +1,6 @@
-# $NetBSD: ttd-pseudolicense,v 1.1 2008/03/04 12:02:11 tnn Exp $
+# $NetBSD: ttd-pseudolicense,v 1.2 2008/03/04 17:15:37 tnn Exp $
 
 The "Transport Tycoon Deluxe" datafiles are (c) 1995 MicroProse, inc.
 
 You must own a copy of the original game called "Transport Tycoon Deluxe"
-use the datafiles with games/openttd.
+to use the datafiles with games/openttd.
