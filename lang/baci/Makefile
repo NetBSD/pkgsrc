@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/02/22 19:26:37 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/04 16:38:11 jlam Exp $
 #
 
 DISTNAME=	bacisrc
@@ -14,25 +14,24 @@ COMMENT=	Ben-Ari Concurrent Interpreter
 
 DEPENDS+=	bison-[0-9]*:../../devel/bison
 
-USE_TOOLS+=	flex
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-PLIST_SRC=	${WRKDIR}/PLIST
+USE_TOOLS+=	flex
 
 INSTALLATION_DIRS=	bin
 
 do-build:
-		cd ${WRKSRC}/ccomp && ${MAKE}
-		cd ${WRKSRC}/disasm && ${MAKE}
-		cd ${WRKSRC}/interp && ${MAKE}
-		cd ${WRKSRC}/pascomp && ${MAKE}
+	cd ${WRKSRC}/ccomp && ${MAKE}
+	cd ${WRKSRC}/disasm && ${MAKE}
+	cd ${WRKSRC}/interp && ${MAKE}
+	cd ${WRKSRC}/pascomp && ${MAKE}
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/ccomp/bacc ${PREFIX}/bin
-		${INSTALL_PROGRAM} ${WRKSRC}/disasm/badis ${PREFIX}/bin
-		${INSTALL_PROGRAM} ${WRKSRC}/interp/bainterp ${PREFIX}/bin
-		${INSTALL_PROGRAM} ${WRKSRC}/pascomp/bapas ${PREFIX}/bin
-		${INSTALL_DATA_DIR} ${PREFIX}/share/doc/baci
-		${INSTALL_DATA} ${WRKDIR}/bacidoc/* ${PREFIX}/share/doc/baci
-		${CP} ${PKGDIR}/PLIST ${WRKDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/ccomp/bacc ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/disasm/badis ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/interp/bainterp ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/pascomp/bapas ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/baci
+	${INSTALL_DATA} ${WRKDIR}/bacidoc/* ${DESTDIR}${PREFIX}/share/doc/baci
 
 .include "../../mk/bsd.pkg.mk"

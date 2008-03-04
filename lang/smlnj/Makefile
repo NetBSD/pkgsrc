@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/01/23 06:08:31 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/04 16:38:13 jlam Exp $
 #
 
 DISTNAME=	boot.${BOX}-unix
@@ -30,6 +30,8 @@ HOMEPAGE=	http://www.smlnj.org/index.html
 COMMENT=	Popular functional language from Bell Labs
 
 SML_VERSION=	110.42
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Other mirror sites that generally carry only released versions of SML
 # 	ftp://rodin.stanford.edu/pub/smlnj/release/
@@ -100,8 +102,8 @@ post-build:
 # 2. copy the ./bin and ./lib directories across
 # 3. install links to executables in $PREFIX/bin
 do-install:
-	${INSTALL_DATA_DIR} ${SML_BASE}
-	cd ${WRKDIR} && ${PAX} -rw -pam bin lib ${SML_BASE}
-	cd ${PREFIX}/bin && ${LN} -sf ../lib/smlnj/bin/* .
+	${INSTALL_DATA_DIR} ${DESTDIR}${SML_BASE}
+	cd ${WRKDIR} && ${PAX} -rw -pam bin lib ${DESTDIR}${SML_BASE}
+	cd ${DESTDIR}${PREFIX}/bin && ${LN} -sf ../lib/smlnj/bin/* .
 
 .include "../../mk/bsd.pkg.mk"

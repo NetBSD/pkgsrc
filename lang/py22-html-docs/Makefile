@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2004/07/22 09:16:03 recht Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/04 16:38:12 jlam Exp $
 #
 
 DISTNAME=	html-2.2.2
@@ -11,6 +11,8 @@ MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.python.org/doc/
 COMMENT=	HTML Documentation for Python
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 DIST_SUBDIR=	python
 
@@ -21,11 +23,11 @@ HTMLDIR=	share/doc/html/python2.2
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${HTMLDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${HTMLDIR}
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	cd ${WRKSRC} && ${PAX} -rw -pe [a-z]* ${PREFIX}/${HTMLDIR}
-	cd ${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
-	cd ${PREFIX} && ${FIND} -d ${HTMLDIR} -type d -print | \
+	cd ${WRKSRC} && ${PAX} -rw -pe [a-z]* ${DESTDIR}${PREFIX}/${HTMLDIR}
+	cd ${DESTDIR}${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
+	cd ${DESTDIR}${PREFIX} && ${FIND} -d ${HTMLDIR} -type d -print | \
 	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}
 
 .include "../../mk/bsd.pkg.mk"

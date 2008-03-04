@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/08/23 18:20:31 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/04 16:38:11 jlam Exp $
 #
 
 DISTNAME=	CgLinux-1.3.0408-0400
@@ -15,6 +15,8 @@ EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base
 EMUL_REQD=		suse>=7.3
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}
 BUILD_DIRS=		# empty
 RUN_LDCONFIG=		yes
@@ -22,15 +24,19 @@ RUN_LDCONFIG=		yes
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man3 share
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/Cg
-	${INSTALL_DATA_DIR} ${PREFIX}/include/CgFX
-	${INSTALL_DATA_DIR} ${PREFIX}/share/NVIDIA-Cg-linux
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/NVIDIA-Cg-linux
-	${INSTALL_PROGRAM} ${WRKSRC}/usr/bin/cgc ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/usr/include/Cg/* ${PREFIX}/include/Cg
-	${INSTALL_DATA} ${WRKSRC}/usr/include/CgFX/* ${PREFIX}/include/CgFX
-	${INSTALL_DATA} ${WRKSRC}/usr/lib/* ${EMULDIR}/lib
-	${INSTALL_MAN} ${WRKSRC}/usr/share/man/man3/* ${PREFIX}/${PKGMANDIR}/man3
-	cd ${WRKSRC}/usr/local && ${PAX} -rwppm . ${PREFIX}/share/NVIDIA-Cg-linux
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/Cg
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/CgFX
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/NVIDIA-Cg-linux
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/NVIDIA-Cg-linux
+	${INSTALL_PROGRAM} ${WRKSRC}/usr/bin/cgc ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/usr/include/Cg/* \
+		${DESTDIR}${PREFIX}/include/Cg
+	${INSTALL_DATA} ${WRKSRC}/usr/include/CgFX/* \
+		${DESTDIR}${PREFIX}/include/CgFX
+	${INSTALL_DATA} ${WRKSRC}/usr/lib/* ${DESTDIR}${EMULDIR}/lib
+	${INSTALL_MAN} ${WRKSRC}/usr/share/man/man3/* \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
+	cd ${WRKSRC}/usr/local && ${PAX} -rwppm . \
+		${DESTDIR}${PREFIX}/share/NVIDIA-Cg-linux
 
 .include "../../mk/bsd.pkg.mk"
