@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2005/07/26 09:00:42 dillo Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/04 11:02:25 rillig Exp $
 #
 
 DISTNAME=	regress-pkg-options-1.0
 CATEGORIES=	regress
 DISTFILES=	# empty
 
-MAINTAINER=	rillig@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Test bsd.options.mk framework
 
 REGRESS_TESTS=	all group-required groups legacy-opt order sets
