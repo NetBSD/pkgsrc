@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2005/06/16 06:57:59 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/04 15:51:59 jlam Exp $
 #
 
 DISTNAME=	wwl-1.2
@@ -9,12 +9,14 @@ MAINTAINER=	dawszy@arhea.net
 #HOMEPAGE=	not known
 COMMENT=	Calculates distance (qrb)
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/wwl
 NO_CONFIGURE=	yes
 
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/wwl ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/wwl ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

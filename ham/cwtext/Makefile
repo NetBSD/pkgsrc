@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/09/09 02:43:09 obache Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/04 15:51:59 jlam Exp $
 
 DISTNAME=	cwtext-0.95
 PKGREVISION=	1
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cwtext/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cwtext.sourceforge.net/
 COMMENT=	Morse Code Generator
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_FILE=	makefile
 USE_TOOLS+=	gmake
@@ -23,9 +25,9 @@ post-patch:
 	${MV} ${WRKSRC}/${MAKE_FILE}.done ${WRKSRC}/${MAKE_FILE}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/cwpcm ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/cwtext ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/cwmm ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/cwpcm ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/cwtext ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/cwmm ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
