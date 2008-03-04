@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.8 2008/01/07 20:14:35 adam Exp $
+# $NetBSD: Makefile.common,v 1.9 2008/03/04 13:31:29 adam Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -89,9 +89,9 @@ CONFIGURE_ARGS+=	--without-perl
 CONFIGURE_ARGS+=	--without-python
 CONFIGURE_ARGS+=	--without-tcl
 
-# Enable Rendezvous on Mac OS X
+# Enable Bonjour on Mac OS X
 .if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--with-rendezvous
+CONFIGURE_ARGS+=	--with-bonjour
 .endif
 
 # PostgreSQL explicitly forbids any use of -ffast-math
