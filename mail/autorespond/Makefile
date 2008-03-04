@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/03/24 06:28:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/04 17:57:17 jlam Exp $
 #
 
 DISTNAME=	autorespond-2.0.5
@@ -11,6 +11,8 @@ COMMENT=	Simple autoresponder add-on package for qmail
 
 DEPENDS+=	qmail>=1.03:../../mail/qmail
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 SUBST_CLASSES+=		qmaildir
 SUBST_STAGE.qmaildir=	do-configure
 SUBST_FILES.qmaildir=	autorespond.c
@@ -20,10 +22,13 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 BUILD_DEFS+=		QMAILDIR
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/autorespond ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/autorespond.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/autorespond
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/autorespond
-	${INSTALL_DATA} ${WRKSRC}/qmail-auto ${PREFIX}/share/doc/autorespond
+	${INSTALL_PROGRAM} ${WRKSRC}/autorespond ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/autorespond.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/autorespond
+	${INSTALL_DATA} ${WRKSRC}/README \
+		${DESTDIR}${PREFIX}/share/doc/autorespond
+	${INSTALL_DATA} ${WRKSRC}/qmail-auto \
+		${DESTDIR}${PREFIX}/share/doc/autorespond
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/02/22 19:26:47 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/04 18:12:59 jlam Exp $
 #
 
 DISTNAME=	xgap4r16
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.zoo
 MAINTAINER=	cjep@NetBSD.org
 HOMEPAGE=	http://www.gap-system.org/Share/xgap.html
 COMMENT=	GUI for GAP
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${GAP_PKG_NAME}
 GNU_CONFIGURE=	YES
@@ -26,15 +28,17 @@ pre-configure:
 	(cd ${WRKDIR} && ${LN} -s ${GAP_DIRECTORY}/cnf cnf)
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${GAP_PKG_DIRECTORY}/bin/${GAP_PLATFORM}
+	${INSTALL_PROGRAM_DIR}						\
+		${DESTDIR}${GAP_PKG_DIRECTORY}/bin/${GAP_PLATFORM}
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${GAP_PLATFORM}/xgap		\
-				${GAP_PKG_DIRECTORY}/bin/${GAP_PLATFORM}
+		${DESTDIR}${GAP_PKG_DIRECTORY}/bin/${GAP_PLATFORM}
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/xgap.sh				\
-				${PREFIX}/bin/xgap
-	${INSTALL_DATA} ${WRKSRC}/init.g ${GAP_PKG_DIRECTORY}
+		${DESTDIR}${PREFIX}/bin/xgap
+	${INSTALL_DATA} ${WRKSRC}/init.g ${DESTDIR}${GAP_PKG_DIRECTORY}
 	for I in doc examples htm lib; do				\
-		cd ${WRKSRC} && ${PAX} -rw $$I ${GAP_PKG_DIRECTORY};	\
-		done
+		cd ${WRKSRC} &&						\
+		${PAX} -rw $$I ${DESTDIR}${GAP_PKG_DIRECTORY};		\
+	done
 
 .include "../../math/gap/gap.package.mk"
 .include "../../x11/libXaw/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/07/27 18:48:02 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2008/03/04 18:12:59 jlam Exp $
 #
 
 DISTNAME=	gap4r3
@@ -21,6 +21,8 @@ SITES.fix4r3n5.tar.gz=	${MASTER_SITES:=bugfixes/}
 
 LICENSE=	no-commercial-use
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	gtar
 
 GNU_CONFIGURE=	yes
@@ -38,22 +40,22 @@ post-extract:
 	( cd ${WRKSRC} && ${GTAR} zxf ${DISTDIR}/fix4r3n5.tar.gz )
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${GAP_DIRECTORY}
-	${INSTALL_PROGRAM_DIR} ${GAP_DIRECTORY}/bin
-	${INSTALL_PROGRAM_DIR} ${GAP_DIRECTORY}/bin/${GAP_PLATFORM}
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${GAP_DIRECTORY}
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${GAP_DIRECTORY}/bin
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${GAP_DIRECTORY}/bin/${GAP_PLATFORM}
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${GAP_PLATFORM}/gap		\
-				${GAP_DIRECTORY}/bin/${GAP_PLATFORM}
+				${DESTDIR}${GAP_DIRECTORY}/bin/${GAP_PLATFORM}
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/${GAP_PLATFORM}/gac		\
-				${GAP_DIRECTORY}/bin/${GAP_PLATFORM}
+				${DESTDIR}${GAP_DIRECTORY}/bin/${GAP_PLATFORM}
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/gap.sh 				\
-				${PREFIX}/bin/gap
+				${DESTDIR}${PREFIX}/bin/gap
 	${INSTALL_DATA} ${WRKSRC}/description5 				\
-				${GAP_DIRECTORY}
+				${DESTDIR}${GAP_DIRECTORY}
 	${INSTALL_DATA} ${WRKSRC}/sysinfo.gap				\
-				${GAP_DIRECTORY}
+				${DESTDIR}${GAP_DIRECTORY}
 
 	for I in cnf doc etc grp lib pkg prim small trans tst; do	\
-		${CP} -R ${WRKSRC}/$$I ${GAP_DIRECTORY};		\
+		${CP} -R ${WRKSRC}/$$I ${DESTDIR}${GAP_DIRECTORY};	\
 	done
 
 .include "../../mk/bsd.pkg.mk"

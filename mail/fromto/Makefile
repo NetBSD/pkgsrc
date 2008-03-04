@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/10/31 21:47:51 gdt Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/04 17:57:18 jlam Exp $
 #
 
 DISTNAME=	fromto-1.5
@@ -14,6 +14,8 @@ RESTRICTED=	Redistribution allowed for non-commercial purposes only
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	perl:run
 
@@ -27,6 +29,6 @@ do-build:
 	(cd ${WRKSRC} ; ${SED} -e "1s,/usr/local,${PREFIX}," fromto.in >fromto)
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/fromto ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/fromto ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

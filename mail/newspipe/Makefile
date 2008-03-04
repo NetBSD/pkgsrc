@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/02/22 19:26:42 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/04 17:57:19 jlam Exp $
 #
 
 DISTNAME=		newspipe.1.1.9
@@ -18,6 +18,8 @@ DEPENDS+=		${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+=		${PYPKGPREFIX}-feedparser-[0-9]*:../../textproc/py-feedparser
 DEPENDS+=		${PYPKGPREFIX}-html2text-[0-9]*:../../textproc/py-html2text
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_BUILD=		yes
 PYTHON_PATCH_SCRIPTS=	*.py
 
@@ -33,15 +35,15 @@ INSTALLATION_DIRS+=	share/examples/newspipe
 
 do-install:
 	cd ${WRKSRC};							\
-	${INSTALL_SCRIPT} newspipe ${PREFIX}/bin;			\
+	${INSTALL_SCRIPT} newspipe ${DESTDIR}${PREFIX}/bin;		\
 	for f in cache.py newspipe.py opml.py; do			\
-	${INSTALL_SCRIPT} $${f} ${PREFIX}/share/newspipe;		\
+	${INSTALL_SCRIPT} $${f} ${DESTDIR}${PREFIX}/share/newspipe;	\
 	done;								\
 	for f in manual.html readme; do					\
-	${INSTALL_DATA} $${f} ${PREFIX}/share/doc/newspipe;		\
+	${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/share/doc/newspipe;	\
 	done;								\
 	for f in newspipe.ini test.opml; do				\
-	${INSTALL_DATA} $${f} ${PREFIX}/share/examples/newspipe;	\
+	${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/share/examples/newspipe; \
 	done
 
 .include "../../lang/python/application.mk"

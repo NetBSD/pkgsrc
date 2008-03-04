@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/02/15 14:46:27 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/04 17:57:18 jlam Exp $
 #
 
 DISTNAME=	bbmail-0.8.3
@@ -10,16 +10,19 @@ MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://bbtools.windsofstorm.net/
 COMMENT=	Mailbox monitor (not only) for the blackbox windowmanager
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bbmail ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/bbmail.1 ${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/bbtools/
-	${INSTALL_DATA} ${WRKSRC}/data/bbmail.bb ${PREFIX}/share/bbtools/
+	${INSTALL_PROGRAM} ${WRKSRC}/bbmail ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/bbmail.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/bbtools/
+	${INSTALL_DATA} ${WRKSRC}/data/bbmail.bb \
+		${DESTDIR}${PREFIX}/share/bbtools/
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

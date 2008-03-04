@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/03/15 04:41:39 schmonz Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/04 17:57:19 jlam Exp $
 #
 
 DISTNAME=	qcheck
@@ -12,12 +12,15 @@ COMMENT=	Text-only biff with Maildir support
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_CONFIGURE=	YES
 
 INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/qcheck ${PREFIX}/bin/qcheck
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/${PKGBASE}/README
+	${INSTALL_PROGRAM} ${WRKSRC}/qcheck ${DESTDIR}${PREFIX}/bin/qcheck
+	${INSTALL_DATA} ${WRKSRC}/README \
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}/README
 
 .include "../../mk/bsd.pkg.mk"

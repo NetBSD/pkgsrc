@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/02/22 19:26:41 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/04 17:57:18 jlam Exp $
 #
 
 DISTNAME=	mdfrm.pl
@@ -11,6 +11,8 @@ MAINTAINER=	zuntum@NetBSD.org
 COMMENT=	Print a summary of mail in a Maildir waiting to be read
 
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	perl:run
@@ -25,6 +27,6 @@ post-patch:
 	${MV} ${WRKSRC}/mdfrm.pl.done ${WRKSRC}/mdfrm.pl
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/mdfrm.pl ${PREFIX}/bin/mdfrm
+	${INSTALL_SCRIPT} ${WRKSRC}/mdfrm.pl ${DESTDIR}${PREFIX}/bin/mdfrm
 
 .include "../../mk/bsd.pkg.mk"

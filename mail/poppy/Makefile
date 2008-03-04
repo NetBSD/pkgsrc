@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/01/07 09:13:59 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/04 17:57:19 jlam Exp $
 #
 
 DISTNAME=	poppy-3.1
@@ -9,6 +9,8 @@ MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.cnpbagwell.com/projects.html
 COMMENT=	Client to perform simple tasks with a POP3/IMAP server
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_BUILD=	YES
 USE_TOOLS+=	perl:run
 REPLACE_PERL=	poppy
@@ -16,7 +18,7 @@ REPLACE_PERL=	poppy
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/poppy ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/poppy.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/poppy ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/poppy.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

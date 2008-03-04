@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/01/14 18:57:39 adam Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/04 17:57:18 jlam Exp $
 
 DISTNAME=	exim-html-4.69
 CATEGORIES=	mail net
@@ -11,10 +11,13 @@ MAINTAINER=	abs@NetBSD.org
 HOMEPAGE=	http://www.exim.org/
 COMMENT=	HTML documentation for the Exim mail transfer agent
 
-NO_BUILD=	yes
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+NO_BUILD=		yes
 INSTALLATION_DIRS=	share/doc/exim/html
 
 do-install:
-	cd ${WRKSRC}/doc/html && pax -wr * ${PREFIX}/share/doc/exim/html
+	cd ${WRKSRC}/doc/html && pax -wr * \
+		${DESTDIR}${PREFIX}/share/doc/exim/html
 
 .include "../../mk/bsd.pkg.mk"

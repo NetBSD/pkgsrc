@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/03/24 07:05:26 schmonz Exp $
+# $NetBSD: Makefile,v 1.13 2008/03/04 17:57:19 jlam Exp $
 #
 
 DISTNAME=	qmail-lint-0.55
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	#
 MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://www.qmail.org/
 COMMENT=	Examine the qmail configuration for common errors
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	perl:run
@@ -25,6 +27,7 @@ INSTALLATION_DIRS=	bin
 BUILD_DEFS+=		QMAILDIR
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin/qmail-lint
+	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} \
+		${DESTDIR}${PREFIX}/bin/qmail-lint
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/02/22 19:26:40 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/04 17:57:18 jlam Exp $
 #
 
 DISTNAME=	columba-unix-1.0_M2-bin
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://columba.sourceforge.net/
 COMMENT=	Graphical Email Client written in JAVA (TM)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=		yes
 USE_JAVA2=		yes
@@ -25,14 +27,14 @@ SUBST_SED.columba=	-e 's,columba.jar,${PREFIX}/share/${PKGBASE}/columba.jar,'
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/${PKGBASE}/lib
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/lib/* ${PREFIX}/share/${PKGBASE}/lib
-	${INSTALL_DATA} ${WRKSRC}/columba.jar ${PREFIX}/share/${PKGBASE}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/${PKGBASE}/lib
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/lib/* ${DESTDIR}${PREFIX}/share/${PKGBASE}/lib
+	${INSTALL_DATA} ${WRKSRC}/columba.jar ${DESTDIR}${PREFIX}/share/${PKGBASE}
 .for f in AUTHORS LICENSE CHANGES README
-	${INSTALL_DATA} ${WRKSRC}/${f} ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 .endfor
-	${INSTALL_SCRIPT} ${WRKSRC}/run.sh ${PREFIX}/bin/columba
+	${INSTALL_SCRIPT} ${WRKSRC}/run.sh ${DESTDIR}${PREFIX}/bin/columba
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

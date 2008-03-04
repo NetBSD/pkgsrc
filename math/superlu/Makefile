@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/10/04 21:47:58 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/04 18:12:59 jlam Exp $
 
 DISTNAME=		superlu_3.0
 PKGNAME=		superlu-3.0.1
@@ -11,6 +11,8 @@ COMMENT=		ANSI C routine library for the solution of sparse linear systems
 
 DEPENDS+=		blas-[0-9]*:../../math/blas
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 BLAS_PREFIX_DEFAULT=	${LOCALBASE}
 EVAL_PREFIX+=		BLAS_PREFIX=blas
 
@@ -22,10 +24,10 @@ TEST_TARGET=		all
 INSTALLATION_DIRS=	lib
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/libsuperlu.a ${PREFIX}/lib
-	${INSTALL_DATA_DIR} ${PREFIX}/include/superlu
-	${INSTALL_DATA} ${WRKSRC}/SRC/*.h ${PREFIX}/include/superlu
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/superlu
-	${INSTALL_DATA} ${WRKSRC}/INSTALL/ug.ps ${PREFIX}/share/doc/superlu
+	${INSTALL_DATA} ${WRKSRC}/libsuperlu.a ${DESTDIR}${PREFIX}/lib
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/superlu
+	${INSTALL_DATA} ${WRKSRC}/SRC/*.h ${DESTDIR}${PREFIX}/include/superlu
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/superlu
+	${INSTALL_DATA} ${WRKSRC}/INSTALL/ug.ps ${DESTDIR}${PREFIX}/share/doc/superlu
 
 .include "../../mk/bsd.pkg.mk"

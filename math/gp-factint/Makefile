@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:10:02 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/04 18:12:59 jlam Exp $
 #
 
 DISTNAME=	factint-1.3
@@ -13,12 +13,15 @@ MAINTAINER=	cjep@NetBSD.org
 HOMEPAGE=	http://www.gap-system.org/Share/factint.html
 COMMENT=	Integer factorization routines for GAP
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/factint
 NO_BUILD=	YES
 GAP_PKG_NAME=	factint
 
 do-install:
-	cd ${WRKDIR} && ${PAX} -rw ${GAP_PKG_NAME} ${GAP_PKG_ROOT}
+	${INSTALL_DATA_DIR} ${DESTDIR}${GAP_PKG_ROOT}
+	cd ${WRKDIR} && ${PAX} -rw ${GAP_PKG_NAME} ${DESTDIR}${GAP_PKG_ROOT}
 
 .include "../../math/gap/gap.package.mk"
 .include "../../mk/bsd.pkg.mk"

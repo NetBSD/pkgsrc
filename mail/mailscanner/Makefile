@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/09/04 20:54:29 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/04 17:57:18 jlam Exp $
 #
 
 DISTNAME=		MailScanner-4.30.3-2
@@ -10,6 +10,8 @@ MASTER_SITES=		http://www.sng.ecs.soton.ac.uk/mailscanner/files/4/tar/
 MAINTAINER=		grant@NetBSD.org
 HOMEPAGE=		http://www.mailscanner.info/
 COMMENT=		Powerful spam/virus filter with many options
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/MailScanner-4.30.3
 
@@ -97,36 +99,36 @@ post-extract:
 	cd ${WRKSRC} && ${RM} -f */.#*
 
 do-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}/rules
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/MailScanner ${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}/rules
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/MailScanner ${DESTDIR}${PREFIX}/bin
 
-	${INSTALL_LIB_DIR} ${LIBEXECDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/update_virus_scanners ${LIBEXECDIR}
-	cd ${WRKSRC}/lib && ${FIND} . -name "*-autoupdate" -exec ${INSTALL_SCRIPT} '{}' ${LIBEXECDIR} \;
-	cd ${WRKSRC}/lib && ${FIND} . -name "*-wrapper" -exec ${INSTALL_SCRIPT} '{}' ${LIBEXECDIR} \;
+	${INSTALL_LIB_DIR} ${DESTDIR}${LIBEXECDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/update_virus_scanners ${DESTDIR}${LIBEXECDIR}
+	cd ${WRKSRC}/lib && ${FIND} . -name "*-autoupdate" -exec ${INSTALL_SCRIPT} '{}' ${DESTDIR}${LIBEXECDIR} \;
+	cd ${WRKSRC}/lib && ${FIND} . -name "*-wrapper" -exec ${INSTALL_SCRIPT} '{}' ${DESTDIR}${LIBEXECDIR} \;
 
-	${INSTALL_DATA} ${WRKSRC}/etc/MailScanner.conf ${EGDIR}/MailScanner.conf
+	${INSTALL_DATA} ${WRKSRC}/etc/MailScanner.conf ${DESTDIR}${EGDIR}/MailScanner.conf
 .for _f_ in ${MS_CONFIG_FILES}
-	${INSTALL_DATA} ${WRKSRC}/etc/${_f_} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/${_f_} ${DESTDIR}${EGDIR}
 .endfor
 	cd ${WRKSRC}/etc/rules && ${INSTALL_DATA} \
 		EXAMPLES README spam.whitelist.rules bounce.rules \
-		${EGDIR}/rules
-	cd ${WRKSRC}/etc && ${FIND} reports -type d -exec ${INSTALL_DATA_DIR} ${EGDIR}/'{}' \;
-	cd ${WRKSRC}/etc && ${FIND} reports -type f ! -name "*.orig" -exec ${INSTALL_DATA} '{}' ${EGDIR}/'{}' \;
+		${DESTDIR}${EGDIR}/rules
+	cd ${WRKSRC}/etc && ${FIND} reports -type d -exec ${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}/'{}' \;
+	cd ${WRKSRC}/etc && ${FIND} reports -type f ! -name "*.orig" -exec ${INSTALL_DATA} '{}' ${DESTDIR}${EGDIR}/'{}' \;
 
-	${INSTALL_LIB_DIR} ${LIBDIR}
-	${INSTALL_LIB_DIR} ${LIBDIR}/MailScanner
-	${INSTALL_SCRIPT} ${WRKSRC}/lib/MailScanner.pm ${LIBDIR}
-	cd ${WRKSRC}/lib/MailScanner && ${FIND} . -name "*.pm" -exec ${INSTALL_DATA} '{}' ${LIBDIR}/MailScanner \;
-	cd ${WRKSRC}/lib/MailScanner && ${FIND} . -name "*.pl" -exec ${INSTALL_DATA} '{}' ${LIBDIR}/MailScanner \;
+	${INSTALL_LIB_DIR} ${DESTDIR}${LIBDIR}
+	${INSTALL_LIB_DIR} ${DESTDIR}${LIBDIR}/MailScanner
+	${INSTALL_SCRIPT} ${WRKSRC}/lib/MailScanner.pm ${DESTDIR}${LIBDIR}
+	cd ${WRKSRC}/lib/MailScanner && ${FIND} . -name "*.pm" -exec ${INSTALL_DATA} '{}' ${DESTDIR}${LIBDIR}/MailScanner \;
+	cd ${WRKSRC}/lib/MailScanner && ${FIND} . -name "*.pl" -exec ${INSTALL_DATA} '{}' ${DESTDIR}${LIBDIR}/MailScanner \;
 
-	${INSTALL_DATA_DIR} ${DOCSDIR}
-	cd ${WRKSRC}/docs && ${FIND} * -type d -exec ${INSTALL_DATA_DIR} ${DOCSDIR}'/{}' \;
-	cd ${WRKSRC}/docs && ${FIND} * -type f -exec ${INSTALL_DATA} '{}' ${DOCSDIR} \;
-	cd ${WRKSRC}/docs/man && ${INSTALL_MAN} MailScanner.conf.5 ${PREFIX}/${PKGMANDIR}/man5
-	cd ${WRKSRC}/docs/man && ${INSTALL_MAN} MailScanner.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCSDIR}
+	cd ${WRKSRC}/docs && ${FIND} * -type d -exec ${INSTALL_DATA_DIR} ${DESTDIR}${DOCSDIR}'/{}' \;
+	cd ${WRKSRC}/docs && ${FIND} * -type f -exec ${INSTALL_DATA} '{}' ${DESTDIR}${DOCSDIR} \;
+	cd ${WRKSRC}/docs/man && ${INSTALL_MAN} MailScanner.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	cd ${WRKSRC}/docs/man && ${INSTALL_MAN} MailScanner.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 post-install:
 	${CP} -f ${PKGDIR}/PLIST ${PLIST_SRC}
@@ -134,13 +136,13 @@ post-install:
 	${ECHO} man/man5/MailScanner.conf.5 >> ${PLIST_SRC}
 	${ECHO} man/man8/MailScanner.8 >> ${PLIST_SRC}
 .for _dir_ in ${DOCSDIR} ${EGDIR} ${LIBDIR} ${LIBEXECDIR}
-	${FIND} ${_dir_} \( -type f -o -type l \) -print \
-		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g" \
+	${FIND} ${DESTDIR}${_dir_} \( -type f -o -type l \) -print \
+		| ${SORT} | ${SED} -e "s,${DESTDIR}${PREFIX}/,,g" \
 		>> ${PLIST_SRC}
 .endfor
 .for _dir_ in ${DOCSDIR} ${EGDIR} ${LIBDIR} ${LIBEXECDIR}
-	${FIND} ${_dir_} -type d -print \
-		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g" \
+	${FIND} ${DESTDIR}${_dir_} -type d -print \
+		| ${SORT} -r | ${SED} -e "s,${DESTDIR}${PREFIX}/,@dirrm ,g" \
 		>> ${PLIST_SRC}
 .endfor
 

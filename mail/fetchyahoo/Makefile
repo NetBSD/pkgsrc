@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/08/30 08:05:26 obache Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/04 17:57:18 jlam Exp $
 #
 
 DISTNAME=		fetchyahoo-2.11.0
@@ -22,6 +22,8 @@ DEPENDS+=		p5-IO-stringy-[0-9]*:../../devel/p5-IO-stringy
 DEPENDS+=		p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		perl:run
 REPLACE_PERL=		fetchyahoo
 
@@ -39,13 +41,13 @@ SUBST_SED.sa2=		-e s!/etc/fetchyahoorc!${PKG_SYSCONFDIR}/fetchyahoorc!g
 SUBST_SED.sa2+=		-e s!/usr/share/doc/fetchyahoo!${DOCDIR}!g
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/fetchyahoo ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/fetchyahoo.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/fetchyahoo ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/fetchyahoo.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 .for i in COPYING ChangeLog Credits INSTALL TODO index.html
-	${INSTALL_DATA} ${WRKSRC}/${i} ${PREFIX}/share/doc/fetchyahoo
+	${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${PREFIX}/share/doc/fetchyahoo
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/fetchyahoorc ${PREFIX}/share/examples/fetchyahoo
+	${INSTALL_DATA} ${WRKSRC}/fetchyahoorc ${DESTDIR}${PREFIX}/share/examples/fetchyahoo
 
 .include "../../mk/bsd.pkg.mk"

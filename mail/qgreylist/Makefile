@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/03/24 06:53:16 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/04 17:57:19 jlam Exp $
 #
 
 DISTNAME=		qgreylist-0.3
@@ -11,6 +11,8 @@ COMMENT=		Simple greylisting for qmail
 
 DEPENDS_QMAIL=		qmail>=1.03nb8:../../mail/qmail
 DEPENDS+=		${DEPENDS_QMAIL}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/qgreylist
 
@@ -47,7 +49,7 @@ INSTALLATION_DIRS=	bin share/doc/qgreylist
 BUILD_DEFS+=		QMAILDIR
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/greylist ${PREFIX}/bin/qgreylist
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/qgreylist
+	${INSTALL_SCRIPT} ${WRKSRC}/greylist ${DESTDIR}${PREFIX}/bin/qgreylist
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/qgreylist
 
 .include "../../mk/bsd.pkg.mk"

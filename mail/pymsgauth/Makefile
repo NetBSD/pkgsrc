@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/14 01:14:30 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/04 17:57:19 jlam Exp $
 #
 
 DISTNAME=		pymsgauth-2.1.0
@@ -9,6 +9,8 @@ MASTER_SITES=		${HOMEPAGE}
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://pyropus.ca/software/pymsgauth/
 COMMENT=		Automatically process qsecretary confirmation requests
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYMSGAUTH_PROGRAMS=	pymsgauth-*
 DOCS=			BUGS CHANGELOG COPYING pymsgauth.txt
@@ -29,19 +31,19 @@ INSTALLATION_DIRS=	${SHAREDIR} ${DOCDIR} ${HTMLDOCDIR} ${EGDIR} bin
 
 do-install:
 	for f in ${PYTHON_PATCH_SCRIPTS}; do \
-		${INSTALL_SCRIPT} ${WRKSRC}/$${f} ${PREFIX}/${SHAREDIR}; \
+		${INSTALL_SCRIPT} ${WRKSRC}/$${f} ${DESTDIR}${PREFIX}/${SHAREDIR}; \
 	done
 
 	for f in ${DOCS}; do \
-		${INSTALL_DATA} ${WRKSRC}/$${f} ${PREFIX}/${DOCDIR}; \
+		${INSTALL_DATA} ${WRKSRC}/$${f} ${DESTDIR}${PREFIX}/${DOCDIR}; \
 	done
 
 	for f in ${HTMLDOCS}; do \
-		${INSTALL_DATA} ${WRKSRC}/$${f} ${PREFIX}/${HTMLDOCDIR}; \
+		${INSTALL_DATA} ${WRKSRC}/$${f} ${DESTDIR}${PREFIX}/${HTMLDOCDIR}; \
 	done
 
 	for f in ${EXAMPLES}; do \
-		${INSTALL_DATA} ${WRKSRC}/$${f} ${PREFIX}/${EGDIR}; \
+		${INSTALL_DATA} ${WRKSRC}/$${f} ${DESTDIR}${PREFIX}/${EGDIR}; \
 	done
 
 .include "../../lang/python/application.mk"
