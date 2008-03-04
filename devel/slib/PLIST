@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.11 2007/11/29 18:01:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/03/04 09:41:51 wiz Exp $
 info/slib.info
 share/doc/slib/FAQ
 share/doc/slib/README
 share/slib/Bev2slib.scm
-share/slib/DrScheme.init
 share/slib/RScheme.init
 share/slib/STk.init
 share/slib/Template.scm
@@ -84,12 +83,14 @@ share/slib/minimize.scm
 share/slib/mitscheme.init
 share/slib/mkclrnam.scm
 share/slib/mklibcat.scm
+share/slib/mkpltcat.scm
 share/slib/modular.scm
 share/slib/mulapply.scm
 share/slib/mularg.scm
 share/slib/mwdenote.scm
 share/slib/mwexpand.scm
 share/slib/mwsynrul.scm
+share/slib/mzscheme.init
 share/slib/ncbi-dna.scm
 share/slib/null.scm
 share/slib/obj2str.scm
