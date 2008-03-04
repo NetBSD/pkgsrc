@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2008/02/05 17:00:37 drochner Exp $
+# $NetBSD: Makefile,v 1.68 2008/03/04 19:32:30 jlam Exp $
 
 #
 # NOTE: if you are updating both mplayer and gmplayer, you must ensure
@@ -21,6 +21,8 @@ SKIN_SITES=	http://www1.mplayerhq.hu/MPlayer/skins/		\
 		ftp://ftp5.mplayerhq.hu/MPlayer/skins/		\
 		ftp://ftp.freebsd.org/pub/FreeBSD/ports/distfiles/mplayer/ \
 		${MASTER_SITE_LOCAL:=mplayer/}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../multimedia/mplayer-share/Makefile.common"
 
@@ -65,19 +67,19 @@ CONFIGURE_ARGS+=	--enable-gui --disable-mencoder \
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${PREFIX}/bin/gmplayer
-	${INSTALL_DATA_DIR} ${PREFIX}/share/mplayer/Skin
+	${INSTALL_PROGRAM} ${WRKSRC}/mplayer ${DESTDIR}${PREFIX}/bin/gmplayer
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/mplayer/Skin
 .for skin in ${SKINS}
 	@${ECHO_MSG} "Installing skin ${skin}..."
 	${BZCAT} ${DISTDIR}/${DIST_SUBDIR}/${skin} |	\
-	  ${GTAR} xCmf ${PREFIX}/share/mplayer/Skin -
+	  ${GTAR} xCmf ${DESTDIR}${PREFIX}/share/mplayer/Skin -
 .endfor
-	${CHMOD} -R a+r ${PREFIX}/share/mplayer/Skin
-	${CHMOD} a+rx ${PREFIX}/share/mplayer/Skin/*
-	${RM} -f ${PREFIX}/share/mplayer/Skin/default
-	${LN} -s Blue ${PREFIX}/share/mplayer/Skin/default
-	${RM} -rf ${PREFIX}/share/mplayer/Skin/Blue/.svn
-	${RM} -rf ${PREFIX}/share/mplayer/Skin/Blue/icons/.svn
+	${CHMOD} -R a+r ${DESTDIR}${PREFIX}/share/mplayer/Skin
+	${CHMOD} a+rx ${DESTDIR}${PREFIX}/share/mplayer/Skin/*
+	${RM} -f ${DESTDIR}${PREFIX}/share/mplayer/Skin/default
+	${LN} -s Blue ${DESTDIR}${PREFIX}/share/mplayer/Skin/default
+	${RM} -rf ${DESTDIR}${PREFIX}/share/mplayer/Skin/Blue/.svn
+	${RM} -rf ${DESTDIR}${PREFIX}/share/mplayer/Skin/Blue/icons/.svn
 
 .include "../../multimedia/libdvdnav/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
