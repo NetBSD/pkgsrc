@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.434 2008/03/04 14:41:09 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.435 2008/03/04 14:47:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -816,3 +816,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/intltool to 0.37.1 [wiz 2008-03-04]
 	Updated devel/libbonobo to 2.20.4 [wiz 2008-03-04]
 	Updated x11/xf86-video-nv to 2.1.7 [wiz 2008-03-04]
+	Updated x11/lablgtk to 2.10.1 [wiz 2008-03-04]
