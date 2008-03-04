@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.431 2008/03/04 13:27:50 adam Exp $
+$NetBSD: CHANGES-2008,v 1.432 2008/03/04 13:28:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -813,3 +813,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added databases/postgresql83-plperl version 8.3.0 [adam 2008-03-04]
 	Added databases/postgresql83-plpython version 8.3.0 [adam 2008-03-04]
 	Added databases/postgresql83-pltcl version 8.3.0 [adam 2008-03-04]
+	Updated textproc/intltool to 0.37.1 [wiz 2008-03-04]
