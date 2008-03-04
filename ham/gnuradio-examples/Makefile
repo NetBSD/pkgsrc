@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2007/08/08 03:10:17 wulf Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/04 15:51:59 jlam Exp $
 
 PKGNAME=	gnuradio-examples-${VERSION}
 COMMENT=	GUI framework for GNU Radio based on wxPython
 COMMENT=	Examples for GNU Radio
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"
 
@@ -94,11 +96,11 @@ do-install:
 	cd ${WRKSRC}/gnuradio-examples/python;				\
 	for d in `find * -type d`;					\
 	do								\
-		${INSTALL_SCRIPT_DIR} ${EXAMPLE_DIR}/"$$d";		\
+		${INSTALL_SCRIPT_DIR} ${DESTDIR}${EXAMPLE_DIR}/"$$d";	\
 	done;								\
 	for f in `find . \! -name "Makefile*" -type f`;			\
 	do								\
-		${INSTALL_SCRIPT} "$$f" ${EXAMPLE_DIR}/"$$f";		\
+		${INSTALL_SCRIPT} "$$f" ${DESTDIR}${EXAMPLE_DIR}/"$$f";	\
 	done
 
 .include "../../ham/gnuradio-wxgui/buildlink3.mk"
