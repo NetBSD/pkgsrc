@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.439 2008/03/04 20:19:22 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.440 2008/03/05 08:25:52 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -790,6 +790,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated print/glabels to 2.2.2 [drochner 2008-03-03]
 	Updated misc/stellarium to 0.9.1 [drochner 2008-03-03]
 	Updated security/ocaml-ssl to 0.4.2 [tonio 2008-03-03]
+	Updated mail/dovecot to 1.0.11 [ghen 2008-03-04]
 	Updated devel/pkg-config to 0.23 [wiz 2008-03-04]
 	Updated devel/slib to 3.2.1 [wiz 2008-03-04]
 	Updated devel/guile-slib to 3.2.1 [wiz 2008-03-04]
@@ -826,3 +827,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/finch to 2.4.0 [tnn 2008-03-04]
 	Added x11/xbacklight version 1.1 [tnn 2008-03-04]
 	Updated meta-pkgs/modular-xorg-apps to 1.5 [tnn 2008-03-04]
+	Updated mail/dovecot to 1.0.12 [ghen 2008-03-05]
