@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2008/01/25 18:21:18 bjs Exp $
+# $NetBSD: Makefile,v 1.40 2008/03/05 20:04:42 jlam Exp $
 
 DISTNAME=	xterm-231
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	ftp://invisible-island.net/xterm/
 EXTRACT_SUFX=	.tgz
@@ -40,4 +41,5 @@ CONFIGURE_ARGS+= --with-setuid
 BUILDLINK_DEPMETHOD.libxkbfile?=	build
 .include "../../x11/libxkbfile/buildlink3.mk"
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
