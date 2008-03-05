@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7101 2008/03/05 15:49:52 obache Exp $
+$NetBSD: TODO,v 1.7102 2008/03/05 15:58:14 obache Exp $
 
 Suggested new packages
 ======================
@@ -610,7 +610,7 @@ Suggested package updates
 	o findutils-4.2.33
 	o fisg-0.3.12
 	o flashplayer-0.4.13
-	o flightgear-1.0.0
+	o flightgear-1.0.0 [pkg/38160]
 	o flpsed-0.4.4
 	o fmsx-3.0
 	o fondu-040927
