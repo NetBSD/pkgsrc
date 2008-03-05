@@ -1,8 +1,13 @@
-# $NetBSD: termcap.builtin.mk,v 1.2 2008/03/02 07:05:28 jlam Exp $
+# $NetBSD: termcap.builtin.mk,v 1.3 2008/03/05 07:10:26 jlam Exp $
 
 BUILTIN_PKG:=	termcap
 
-BUILTIN_FIND_LIBS:=	curses termcap termlib tinfo
+# _TERMCAP_TYPES is an exhaustive list of all of the termcap implementations
+#	that may be found.
+#
+_TERMCAP_TYPES?=	curses termcap termlib tinfo
+
+BUILTIN_FIND_LIBS:=	${_TERMCAP_TYPES}
 
 .include "buildlink3/bsd.builtin.mk"
 
@@ -53,6 +58,17 @@ BUILTIN_LIBNAME.termcap=	curses
 BUILTIN_LIBNAME.termcap=	termlib
 .endif
 
+.if !empty(USE_BUILTIN.termcap:M[yY][eE][sS])
+.  if defined(BUILTIN_LIBNAME.termcap)
+TERMCAP_TYPE=	${BUILTIN_LIBNAME.termcap}
+.  else
+TERMCAP_TYPE=	none
+.  endif
+.else
+TERMCAP_TYPE=	curses		# pkgsrc termcap is curses
+.endif
+BUILD_DEFS+=	TERMCAP_TYPE
+
 ###
 ### The section below only applies if we are not including this file
 ### solely to determine whether a built-in implementation exists.
@@ -63,5 +79,24 @@ CHECK_BUILTIN.termcap?=	no
 .  if !empty(USE_BUILTIN.termcap:M[yY][eE][sS])
 BUILDLINK_LIBNAME.termcap=	${BUILTIN_LIBNAME.termcap}
 .  endif
+
+# Most GNU configure scripts will try finding every termcap implementation,
+# so prevent them from finding any except for the one we decide upon.
+#
+# There is special handling here for packages that can be provided by
+# pkgsrc, e.g. curses.  In case we need both that package as well as
+# termcap, we must not remove the -l options for that package's libraries.
+#
+.  for _tcap_ in ${_TERMCAP_TYPES:Ntermcap:Ncurses}
+.    if empty(TERMCAP_TYPE:M${_tcap_})
+BUILDLINK_TRANSFORM+=		rm:-l${_tcap_}
+.    endif
+.  endfor
+.  if empty(TERMCAP_TYPE:Mcurses) && \
+      empty(BUILDLINK_PACKAGES:Mcurses) && empty(BUILDLINK_PACKAGES:Mncurses)
+BUILDLINK_TRANSFORM+=		rm:-lcurses
+BUILDLINK_TRANSFORM+=		rm:-lncurses
+.  endif
+BUILDLINK_TRANSFORM+=		l:termcap:${BUILDLINK_LIBNAME.termcap}
 
 .endif	# CHECK_BUILTIN.termcap

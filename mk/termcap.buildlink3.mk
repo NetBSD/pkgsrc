@@ -1,4 +1,4 @@
-# $NetBSD: termcap.buildlink3.mk,v 1.3 2008/03/05 03:58:20 jlam Exp $
+# $NetBSD: termcap.buildlink3.mk,v 1.4 2008/03/05 07:10:26 jlam Exp $
 #
 # This Makefile fragment is meant to be included by packages that require
 # a termcap implementation that supports the basic termcap functions:
@@ -8,7 +8,8 @@
 # === Variables set by this file ===
 #
 # TERMCAP_TYPE
-#	The name of the selected termcap implementation.
+#	The name of the selected termcap implementation.  This is actually
+#	indirectly set by termcap.builtin.mk but is exported by this file.
 
 TERMCAP_BUILDLINK3_MK:=	${TERMCAP_BUILDLINK3_MK}+
 
@@ -16,38 +17,9 @@ TERMCAP_BUILDLINK3_MK:=	${TERMCAP_BUILDLINK3_MK}+
 
 .if !empty(TERMCAP_BUILDLINK3_MK:M+)
 
-# _TERMCAP_TYPES is an exhaustive list of all of the termcap implementations
-#	that may be found.
-#
-_TERMCAP_TYPES?=	curses termcap termlib tinfo
-
 CHECK_BUILTIN.termcap:=	yes
 .  include "termcap.builtin.mk"
 CHECK_BUILTIN.termcap:=	no
-
-.  if !empty(USE_BUILTIN.termcap:M[yY][eE][sS])
-.    if defined(BUILTIN_LIBNAME.termcap)
-TERMCAP_TYPE=	${BUILTIN_LIBNAME.termcap}
-.    else
-TERMCAP_TYPE=	none
-.    endif
-.  else
-TERMCAP_TYPE=	curses
-.  endif
-BUILD_DEFS+=	TERMCAP_TYPE
-
-# Most GNU configure scripts will try finding every termcap implementation,
-# so prevent them from finding any except for the one we decide upon.
-#
-.for _tcap_ in ${_TERMCAP_TYPES:Ntermcap}
-.  if empty(TERMCAP_TYPE:M${_tcap_})
-BUILDLINK_TRANSFORM+=		rm:-l${_tcap_}
-.  endif
-.endfor
-.if empty(TERMCAP_TYPE:Mcurses)
-BUILDLINK_TRANSFORM+=		rm:-lncurses
-.endif
-BUILDLINK_TRANSFORM+=		l:termcap:${BUILDLINK_LIBNAME.termcap}
 
 .endif	# TERMCAP_BUILDLINK3_MK
 
