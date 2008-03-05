@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.26 2007/12/01 16:52:09 rillig Exp $
+# $NetBSD: Makefile,v 1.27 2008/03/05 16:51:40 jlam Exp $
 
 DISTNAME=	devtodo-0.1.20
+PKGREVISION=	1
 CATEGORIES=	time
 MASTER_SITES=	http://swapoff.org/files/devtodo/
 
@@ -8,17 +9,18 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://swapoff.org/DevTodo
 COMMENT=	Display and manage a list of items that are outstanding
 
-USE_LANGUAGES=	c c++
-USE_LIBTOOL=	YES
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=	YES
-
-# We don't need curses, just termcap.
-CONFIGURE_ENV+=		ac_cv_lib_curses_tputs=no
-
+USE_LANGUAGES=		c c++
+USE_LIBTOOL=		yes
 USE_GNU_READLINE=	# uses rl_startup_hook()
+GNU_CONFIGURE=		yes
 
-CONTRIBFILES=	changelog2html						\
+EGDIR=			${PREFIX}/share/examples/devtodo
+INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
+
+post-install:
+.for CFILE in	changelog2html						\
 		changelog2todo						\
 		tdrec							\
 		todo-nodone-html.xslt					\
@@ -27,11 +29,7 @@ CONTRIBFILES=	changelog2html						\
 		todo2pdf.README						\
 		todo2pdf.sh						\
 		todo2pdf.xslt
-
-post-install:
-.for CFILE in ${CONTRIBFILES}
-	${INSTALL_DATA} ${WRKSRC}/contrib/${CFILE} 			\
-		${PREFIX}/share/examples/devtodo
+	${INSTALL_DATA} ${WRKSRC}/contrib/${CFILE} ${DESTDIR}${EGDIR}
 .endfor
 
 .include "../../devel/readline/buildlink3.mk"
