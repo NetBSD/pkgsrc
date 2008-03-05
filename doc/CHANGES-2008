@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.442 2008/03/05 21:36:05 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.443 2008/03/05 22:32:34 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -833,3 +833,10 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed chat/gaim-icb [tnn 2008-03-05]
 	Removed chat/gaim-otr [tnn 2008-03-05]
 	Updated www/drupal to 5.7 [adrianp 2008-03-05]
+	Updated lang/sun-jre14 to 2.17 [tnn 2008-03-05]
+	Updated lang/sun-jdk14 to 2.17 [tnn 2008-03-05]
+	Updated lang/sun-jre15 to 5.0.15 [tnn 2008-03-05]
+	Updated lang/sun-jdk15 to 5.0.15 [tnn 2008-03-05]
+	Updated lang/sun-jre6 to 6.0.5 [tnn 2008-03-05]
+	Updated lang/sun-jre6 to 6.0.5 [tnn 2008-03-05]
+	Updated lang/sun-jdk6 to 6.0.5 [tnn 2008-03-05]
