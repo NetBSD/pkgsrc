@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2007/06/02 02:35:42 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.48 2008/03/05 18:01:50 jlam Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -28,15 +28,6 @@ _W3M_USE_IMAGE?=	NO
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "Darwin"
-CONFIGURE_ARGS+=	--with-termlib=curses
-.elif ${OPSYS} == "Linux"
-.include "../../mk/curses.buildlink3.mk"
-CONFIGURE_ARGS+=	--with-termlib=ncurses
-.else
-CONFIGURE_ARGS+=	--with-termlib=termcap
-.endif
-
 # Configurable by environment variables at run-time.
 CONFIGURE_ARGS+=	--with-charset=US-ASCII
 
@@ -48,8 +39,9 @@ CONFIGURE_ARGS+=	--enable-color
 CONFIGURE_ARGS+=	--enable-cookie
 CONFIGURE_ARGS+=	--enable-mouse
 CONFIGURE_ARGS+=	--with-browser=
+CONFIGURE_ARGS+=	--with-termlib
 CONFIGURE_ARGS+=	--with-editor=vi
-CONFIGURE_ARGS+=	--with-gc=${BUILDLINK_PREFIX.boehm-gc}
+CONFIGURE_ARGS+=	--with-gc=${BUILDLINK_PREFIX.boehm-gc:Q}
 CONFIGURE_ARGS+=	--with-mailer=${MAIL_CMD:Q}
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
@@ -80,5 +72,5 @@ post-install:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
