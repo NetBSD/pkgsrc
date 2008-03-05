@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2008/03/04 22:00:30 jlam Exp $
+# $NetBSD: Makefile,v 1.73 2008/03/05 19:02:13 jlam Exp $
 #
 # NOTE:
 # When updating, it is necessary to change the shlib version, located in
@@ -42,10 +42,6 @@ BUILDNAME.NetBSD=	neb
 BUILDNAME.*=		neb
 
 # Let termcap.buildlink3.mk handle using the right termcap library.
-SUBST_CLASSES+=		tcap
-SUBST_STAGE.tcap=	pre-configure
-SUBST_FILES.tcap=	pico/makefile.*
-SUBST_SED.tcap=		-e "s/-lncurses//"
 LIBS+=			${BUILDLINK_LDADD.termcap}
 
 MAKE_ENV+=	_STRIPFLAG_INSTALL=	# debug...
