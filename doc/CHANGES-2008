@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.440 2008/03/05 08:25:52 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.441 2008/03/05 15:41:23 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -828,3 +828,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Added x11/xbacklight version 1.1 [tnn 2008-03-04]
 	Updated meta-pkgs/modular-xorg-apps to 1.5 [tnn 2008-03-04]
 	Updated mail/dovecot to 1.0.12 [ghen 2008-03-05]
+	Removed chat/gaim [tnn 2008-03-05]
+	Removed chat/gaim-encryption [tnn 2008-03-05]
+	Removed chat/gaim-icb [tnn 2008-03-05]
+	Removed chat/gaim-otr [tnn 2008-03-05]
