@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7099 2008/03/04 19:41:47 schmonz Exp $
+$NetBSD: TODO,v 1.7100 2008/03/05 13:00:15 obache Exp $
 
 Suggested new packages
 ======================
@@ -335,10 +335,6 @@ Suggested new packages
 	fricas [pkg/38155]
 	http://fricas.sourceforge.net/
 	Fricas is a fork of the Axiom computer algebra system
-
-	xbacklight [pkg/38156]
-	http://xorg.freedesktop.org/
-	Adjust backlight brightness using RandR extension
 
 	xdriinfo [pkg/38157]
 	http://xorg.freedesktop.org/
