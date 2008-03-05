@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2006/05/31 13:44:14 salo Exp $
+# $NetBSD: options.mk,v 1.9 2008/03/05 21:17:32 jlam Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lftp
@@ -37,7 +37,7 @@ PLIST_SRC+=		${PKGDIR}/PLIST.perl
 
 post-install-perl:
 	${INSTALL_SCRIPT} ${WRKSRC}/src/convert-netscape-cookies \
-		${WRKSRC}/src/verify-file ${PREFIX}/share/lftp
+		${WRKSRC}/src/verify-file ${DESTDIR}${PREFIX}/share/lftp
 .else
 post-install-perl:
 .endif
