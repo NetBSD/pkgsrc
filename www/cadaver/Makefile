@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.37 2008/01/18 05:09:48 tnn Exp $
+# $NetBSD: Makefile,v 1.38 2008/03/05 17:12:44 jlam Exp $
 
 DISTNAME=		cadaver-0.22.2
-PKGREVISION=	4
+PKGREVISION=		5
 CATEGORIES=		www
 MASTER_SITES=		http://www.webdav.org/cadaver/
 
@@ -9,6 +9,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.webdav.org/cadaver/
 COMMENT=		Command-line WebDAV client
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		cadaver
 GNU_CONFIGURE=		YES
@@ -16,10 +17,10 @@ CONFIGURE_ARGS+=	--enable-netrc
 CONFIGURE_ARGS+=	--with-expat
 CONFIGURE_ARGS+=	--with-included-neon
 CONFIGURE_ARGS+=	--with-ssl=yes
+LIBS+=			${BUILDLINK_LDADD.termcap}
 
-# We don't need curses, just termcap.
-CONFIGURE_ENV+=		ac_cv_lib_curses_tputs=no
-LIBS+=			-ltermcap
+INSTALL_MAKE_FLAGS+=	bindir=${DESTDIR:Q}${PREFIX:Q}/bin		\
+			mandir=${DESTDIR:Q}${PREFIX:Q}/${PKGMANDIR:Q}
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
