@@ -1,16 +1,16 @@
-# $NetBSD: Makefile,v 1.46 2008/01/21 01:39:01 tnn Exp $
+# $NetBSD: Makefile,v 1.47 2008/03/05 21:50:22 tnn Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
-DISTNAME=	j2re-1_4_2_16-linux-${DIST_ARCH}
-PKGNAME=	sun-jre14-2.16
+DISTNAME=	j2re-1_4_2_17-linux-${DIST_ARCH}
+PKGNAME=	sun-jre14-2.17
 MASTER_SITES=	# empty
 
 COMMENT=	Sun's Java(tm) 2 Runtime Environment 1.4.2
 
 SHORT=		JRE
 
-WRKSRC=		${WRKDIR}/j2re1.4.2_16
+WRKSRC=		${WRKDIR}/j2re1.4.2_17
 JAVA_WRAPPERS=	java keytool orbd policytool rmid rmiregistry \
 		servertool tnameserv
 
