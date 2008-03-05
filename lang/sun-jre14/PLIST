@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2008/01/21 10:34:20 tnn Exp $
+@comment $NetBSD: PLIST,v 1.23 2008/03/05 21:50:22 tnn Exp $
 bin/sun14-java
 bin/sun14-keytool
 bin/sun14-orbd
@@ -29,7 +29,6 @@ java/sun-1.4/bin/rmid
 java/sun-1.4/bin/rmiregistry
 java/sun-1.4/bin/servertool
 java/sun-1.4/bin/tnameserv
-java/sun-1.4/javaws/cacerts
 java/sun-1.4/javaws/javalogo52x88.gif
 java/sun-1.4/javaws/javaws
 java/sun-1.4/javaws/javaws-l10n.jar
@@ -310,6 +309,7 @@ java/sun-1.4/lib/zi/America/Indiana/Indianapolis
 java/sun-1.4/lib/zi/America/Indiana/Knox
 java/sun-1.4/lib/zi/America/Indiana/Marengo
 java/sun-1.4/lib/zi/America/Indiana/Petersburg
+java/sun-1.4/lib/zi/America/Indiana/Tell_City
 java/sun-1.4/lib/zi/America/Indiana/Vevay
 java/sun-1.4/lib/zi/America/Indiana/Vincennes
 java/sun-1.4/lib/zi/America/Indiana/Winamac
