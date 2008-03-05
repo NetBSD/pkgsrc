@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.5 2008/01/20 09:21:35 tnn Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.6 2008/03/05 22:32:09 tnn Exp $
 bin/sun6-java
 bin/sun6-javaws
 bin/sun6-keytool
@@ -247,6 +247,7 @@ java/sun-6/lib/security/java.policy
 java/sun-6/lib/security/java.security.default
 java/sun-6/lib/security/javaws.policy
 java/sun-6/lib/security/local_policy.jar
+java/sun-6/lib/servicetag/jdk_header.png
 java/sun-6/lib/sound.properties.default
 java/sun-6/lib/zi/Africa/Abidjan
 java/sun-6/lib/zi/Africa/Accra
@@ -739,6 +740,7 @@ java/sun-6/plugin/i386/ns7/libjavaplugin_oji.so
 @dirrm java/sun-6/lib/zi/America
 @dirrm java/sun-6/lib/zi/Africa
 @dirrm java/sun-6/lib/zi
+@dirrm java/sun-6/lib/servicetag
 @dirrm java/sun-6/lib/security
 @dirrm java/sun-6/lib/oblique-fonts
 @dirrm java/sun-6/lib/management
