@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7100 2008/03/05 13:00:15 obache Exp $
+$NetBSD: TODO,v 1.7101 2008/03/05 15:49:52 obache Exp $
 
 Suggested new packages
 ======================
@@ -807,6 +807,7 @@ Suggested package updates
 	o libcdio-0.79
 	o libchewing-0.3.0
 	o libconfig-1.2.1
+	o libdca-0.0.5 [pkg/38167]
 	o libdiscid-0.1.1
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.6
