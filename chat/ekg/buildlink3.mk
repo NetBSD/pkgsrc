@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.18 2008/01/18 05:06:23 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.19 2008/03/05 15:03:18 jlam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 EKG_BUILDLINK3_MK:=	${EKG_BUILDLINK3_MK}+
@@ -17,8 +17,6 @@ BUILDLINK_ABI_DEPENDS.ekg+=	ekg>=1.7nb1
 BUILDLINK_PKGSRCDIR.ekg?=	../../chat/ekg
 .endif	# EKG_BUILDLINK3_MK
 
-.include "../../devel/ncurses/buildlink3.mk"
-.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
