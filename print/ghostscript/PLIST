@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/01/29 16:04:13 gdt Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/03/05 11:01:12 drochner Exp $
 bin/bdftops
 bin/dumphint
 bin/dvipdf
@@ -327,6 +327,41 @@ share/ghostscript/${PKGVERSION}/Resource/Decoding/Latin1
 share/ghostscript/${PKGVERSION}/Resource/Decoding/StandardEncoding
 share/ghostscript/${PKGVERSION}/Resource/Decoding/Unicode
 share/ghostscript/${PKGVERSION}/Resource/Encoding/Wingdings
+share/ghostscript/${PKGVERSION}/Resource/Font/CenturySchL-Bold
+share/ghostscript/${PKGVERSION}/Resource/Font/CenturySchL-BoldItal
+share/ghostscript/${PKGVERSION}/Resource/Font/CenturySchL-Ital
+share/ghostscript/${PKGVERSION}/Resource/Font/CenturySchL-Roma
+share/ghostscript/${PKGVERSION}/Resource/Font/Dingbats
+share/ghostscript/${PKGVERSION}/Resource/Font/NimbusMonL-Bold
+share/ghostscript/${PKGVERSION}/Resource/Font/NimbusMonL-BoldObli
+share/ghostscript/${PKGVERSION}/Resource/Font/NimbusMonL-Regu
+share/ghostscript/${PKGVERSION}/Resource/Font/NimbusMonL-ReguObli
+share/ghostscript/${PKGVERSION}/Resource/Font/NimbusRomNo9L-Medi
+share/ghostscript/${PKGVERSION}/Resource/Font/NimbusRomNo9L-MediItal
+share/ghostscript/${PKGVERSION}/Resource/Font/NimbusRomNo9L-Regu
+share/ghostscript/${PKGVERSION}/Resource/Font/NimbusRomNo9L-ReguItal
+share/ghostscript/${PKGVERSION}/Resource/Font/NimbusSanL-Bold
+share/ghostscript/${PKGVERSION}/Resource/Font/NimbusSanL-BoldCond
+share/ghostscript/${PKGVERSION}/Resource/Font/NimbusSanL-BoldCondItal
+share/ghostscript/${PKGVERSION}/Resource/Font/NimbusSanL-BoldItal
+share/ghostscript/${PKGVERSION}/Resource/Font/NimbusSanL-Regu
+share/ghostscript/${PKGVERSION}/Resource/Font/NimbusSanL-ReguCond
+share/ghostscript/${PKGVERSION}/Resource/Font/NimbusSanL-ReguCondItal
+share/ghostscript/${PKGVERSION}/Resource/Font/NimbusSanL-ReguItal
+share/ghostscript/${PKGVERSION}/Resource/Font/StandardSymL
+share/ghostscript/${PKGVERSION}/Resource/Font/URWBookmanL-DemiBold
+share/ghostscript/${PKGVERSION}/Resource/Font/URWBookmanL-DemiBoldItal
+share/ghostscript/${PKGVERSION}/Resource/Font/URWBookmanL-Ligh
+share/ghostscript/${PKGVERSION}/Resource/Font/URWBookmanL-LighItal
+share/ghostscript/${PKGVERSION}/Resource/Font/URWChanceryL-MediItal
+share/ghostscript/${PKGVERSION}/Resource/Font/URWGothicL-Book
+share/ghostscript/${PKGVERSION}/Resource/Font/URWGothicL-BookObli
+share/ghostscript/${PKGVERSION}/Resource/Font/URWGothicL-Demi
+share/ghostscript/${PKGVERSION}/Resource/Font/URWGothicL-DemiObli
+share/ghostscript/${PKGVERSION}/Resource/Font/URWPalladioL-Bold
+share/ghostscript/${PKGVERSION}/Resource/Font/URWPalladioL-BoldItal
+share/ghostscript/${PKGVERSION}/Resource/Font/URWPalladioL-Ital
+share/ghostscript/${PKGVERSION}/Resource/Font/URWPalladioL-Roma
 share/ghostscript/${PKGVERSION}/doc/API.htm
 share/ghostscript/${PKGVERSION}/doc/C-style.htm
 share/ghostscript/${PKGVERSION}/doc/Changes.htm
@@ -645,6 +680,7 @@ share/ghostscript/${PKGVERSION}/lib/zeroline.ps
 @dirrm share/ghostscript/${PKGVERSION}/lib
 @dirrm share/ghostscript/${PKGVERSION}/examples
 @dirrm share/ghostscript/${PKGVERSION}/doc
+@dirrm share/ghostscript/${PKGVERSION}/Resource/Font
 @dirrm share/ghostscript/${PKGVERSION}/Resource/Encoding
 @dirrm share/ghostscript/${PKGVERSION}/Resource/Decoding
 @dirrm share/ghostscript/${PKGVERSION}/Resource/ColorSpace
