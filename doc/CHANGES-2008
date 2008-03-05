@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.441 2008/03/05 15:41:23 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.442 2008/03/05 21:36:05 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -832,3 +832,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed chat/gaim-encryption [tnn 2008-03-05]
 	Removed chat/gaim-icb [tnn 2008-03-05]
 	Removed chat/gaim-otr [tnn 2008-03-05]
+	Updated www/drupal to 5.7 [adrianp 2008-03-05]
