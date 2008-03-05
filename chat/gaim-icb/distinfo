@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/02 08:34:47 jlam Exp $
-
-SHA1 (gaim-icb-20050918.tar.gz) = 275e622e63bc3211abb752057c5cb3cb44a7e6e7
-RMD160 (gaim-icb-20050918.tar.gz) = 00685ff20707989eaf130ee6a1a8574ccd58c1c4
-Size (gaim-icb-20050918.tar.gz) = 12971 bytes
-SHA1 (patch-aa) = a69f78f91b49e632a40cb4072854cbab190ee4fd

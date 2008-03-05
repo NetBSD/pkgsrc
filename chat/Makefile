@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2008/01/12 05:59:26 bjs Exp $
+# $NetBSD: Makefile,v 1.135 2008/03/05 15:41:23 tnn Exp $
 #
 
 COMMENT=	Communication programs
@@ -27,10 +27,6 @@ SUBDIR+=	epic4-doc
 SUBDIR+=	finch
 SUBDIR+=	fisg
 SUBDIR+=	fugu
-SUBDIR+=	gaim
-SUBDIR+=	gaim-encryption
-SUBDIR+=	gaim-icb
-SUBDIR+=	gaim-otr
 SUBDIR+=	gale
 SUBDIR+=	gg2
 SUBDIR+=	gnomeicu
