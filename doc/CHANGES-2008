@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.444 2008/03/06 04:46:20 jlam Exp $
+$NetBSD: CHANGES-2008,v 1.445 2008/03/06 05:58:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -842,3 +842,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/sun-jdk6 to 6.0.5 [tnn 2008-03-05]
 	Removed pkgtools/pax [jlam 2008-03-05]
 	Removed pkgtools/tnftp [jlam 2008-03-05]
+	Updated x11/xflame to 1.1.1nb2 [obache 2008-03-06]
