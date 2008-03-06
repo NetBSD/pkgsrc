@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2008/01/18 05:09:47 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2008/03/06 14:53:55 wiz Exp $
 #
 
 DISTNAME=	compiz-0.4.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	wm x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=	.tar.bz2

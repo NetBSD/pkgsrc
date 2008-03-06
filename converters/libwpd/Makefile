@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2007/09/21 13:03:29 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/06 14:53:48 wiz Exp $
 
 DISTNAME=	libwpd-0.8.9
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	converters
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libwpd/}
 
