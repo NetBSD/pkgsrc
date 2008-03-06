@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2008/01/18 05:09:41 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/06 14:53:54 wiz Exp $
 
 DISTNAME=	seahorse-2.20.3
 PKGNAME=	seahorse-gedit-2.20.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/2.20/}
 EXTRACT_SUFX=	.tar.bz2
