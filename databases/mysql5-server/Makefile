@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/01/18 05:06:28 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2008/03/06 16:50:38 jlam Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
 PKGREVISION=		1
@@ -6,6 +6,8 @@ SVR4_PKGNAME=		mysqs
 COMMENT=		MySQL 5, a free SQL database (server)
 
 CONFLICTS=		{mysql-server-[0-9]*,mysql3-server-[0-9]*}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../databases/mysql5-client/Makefile.common"
 
@@ -43,6 +45,8 @@ REPLACE_PERL+=		mysql-test/mysql-test-run.pl \
 			mysql-test/suite/funcs_2/lib/gen_charset_utf8.pl \
 			mysql-test/mysql-stress-test.pl
 
+INSTALLATION_DIRS=	bin
+
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(PKGSRC_COMPILER:Msunpro)
@@ -51,24 +55,34 @@ CXXFLAGS+=		-D_POSIX_C_SOURCE=199506L -D__EXTENSIONS__
 .endif
 
 .include "../../databases/mysql5-client/buildlink3.mk"
-BUILDLINK_DEPMETHOD.readline=build
-.include "../../devel/readline/buildlink3.mk"
 .include "../../security/tcp_wrappers/buildlink3.mk"
+
+# We only need readline to placate the configure script.  None of the
+# binaries are actually linked against -lreadline, so make this only
+# a build-time dependency.
+#
+BUILDLINK_DEPMETHOD.readline=	build
+.include "../../devel/readline/buildlink3.mk"
 
 post-configure:
 	cd ${WRKSRC}/include && cp -f config.h my_config.h
 
 post-build:
-	cd ${WRKSRC}/scripts && env ${MAKE_ENV} ${MAKE_PROGRAM}	\
-		${MAKE_FLAGS} mysqld_safe mysql_install_db
+	cd ${WRKSRC}/scripts && \
+	${BUILD_MAKE_CMD} mysqld_safe mysql_install_db
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/mysqld_safe ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/mysql_install_db ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/support-files/mysql.server ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/man/mysqld_multi.1 ${PREFIX}/${PKGMANDIR}/man1
-	#${INSTALL_MAN} ${WRKSRC}/man/mysqld_safe.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/mysqld_safe \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/mysql_install_db \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/support-files/mysql.server \
+		${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/man/mysqld_multi.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	#${INSTALL_MAN} ${WRKSRC}/man/mysqld_safe.1 \
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/mysql_secure_installation.sh \
-		${PREFIX}/bin/mysql_secure_installation
+		${DESTDIR}${PREFIX}/bin/mysql_secure_installation
 
 .include "../../mk/bsd.pkg.mk"
