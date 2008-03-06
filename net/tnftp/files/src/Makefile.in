@@ -1,10 +1,11 @@
-#	$NetBSD: Makefile.in,v 1.5 2007/08/07 02:07:01 lukem Exp $
+#	$NetBSD: Makefile.in,v 1.6 2008/03/06 04:45:58 jlam Exp $
 #
 
 srcdir	= @srcdir@
 VPATH	= @srcdir@
 SHELL	= /bin/sh
 
+DESTDIR	=
 prefix	= @prefix@
 exec_prefix = @exec_prefix@
 bindir	= @bindir@
@@ -39,10 +40,10 @@ ${OBJS}: ${srcdir}/../tnftp.h ../config.h
 	${CC} ${CFLAGS} ${CPPFLAGS} -c $<
 
 install: all
-	-mkdir -p ${bindir}
-	${INSTALL} -m 555 ${PROG} ${bindir}/`echo ${PROG}|sed '$(transform)'`
-	-mkdir -p ${mandircat1}
-	${INSTALL} -m 444 ${srcdir}/${PROG}.cat1 ${mandircat1}/`echo ${PROG}|sed '$(transform)'`.0
+	-mkdir -p ${DESTDIR}${bindir}
+	${INSTALL} -m 555 ${PROG} ${DESTDIR}${bindir}/`echo ${PROG}|sed '$(transform)'`
+	-mkdir -p ${DESTDIR}${mandircat1}
+	${INSTALL} -m 444 ${srcdir}/${PROG}.cat1 ${DESTDIR}${mandircat1}/`echo ${PROG}|sed '$(transform)'`.0
 
 clean:
 	rm -f core ${PROG} ${OBJS}
