@@ -1,7 +1,8 @@
-#	$NetBSD: Makefile.in,v 1.9 2005/12/01 03:00:01 minskim Exp $
+#	$NetBSD: Makefile.in,v 1.10 2008/03/06 04:45:58 jlam Exp $
 
 srcdir=		@srcdir@
 
+DESTDIR=	
 prefix=		@prefix@
 exec_prefix=	@exec_prefix@
 bindir=		@bindir@
@@ -43,15 +44,15 @@ distclean: clean
 	rm -f configure.lineno config.log
 
 install:
-	$(INSTALL) -m 755 -d $(bindir)
-	$(INSTALL) -m 755 -d $(man1dir)
-	$(INSTALL) -m 755 -d $(cat1dir)
-	$(INSTALL) $(PROG) $(bindir)
-	ln -f $(bindir)/$(PROG) $(bindir)/cpio
-	ln -f $(bindir)/$(PROG) $(bindir)/tar
-	$(INSTALL) -m 444 $(PROG).1 $(man1dir)/$(PROG).1
-	$(INSTALL) -m 444 $(PROG).cat1 $(cat1dir)/$(PROG).0
-	$(INSTALL) -m 444 cpio.1 $(man1dir)/cpio.1
-	$(INSTALL) -m 444 cpio.cat1 $(cat1dir)/cpio.0
-	$(INSTALL) -m 444 tar.1 $(man1dir)/tar.1
-	$(INSTALL) -m 444 tar.cat1 $(cat1dir)/tar.0
+	$(INSTALL) -m 755 -d $(DESTDIR)$(bindir)
+	$(INSTALL) -m 755 -d $(DESTDIR)$(man1dir)
+	$(INSTALL) -m 755 -d $(DESTDIR)$(cat1dir)
+	$(INSTALL) $(PROG) $(DESTDIR)$(bindir)
+	ln -f $(DESTDIR)$(bindir)/$(PROG) $(DESTDIR)$(bindir)/cpio
+	ln -f $(DESTDIR)$(bindir)/$(PROG) $(DESTDIR)$(bindir)/tar
+	$(INSTALL) -m 444 $(PROG).1 $(DESTDIR)$(man1dir)/$(PROG).1
+	$(INSTALL) -m 444 $(PROG).cat1 $(DESTDIR)$(cat1dir)/$(PROG).0
+	$(INSTALL) -m 444 cpio.1 $(DESTDIR)$(man1dir)/cpio.1
+	$(INSTALL) -m 444 cpio.cat1 $(DESTDIR)$(cat1dir)/cpio.0
+	$(INSTALL) -m 444 tar.1 $(DESTDIR)$(man1dir)/tar.1
+	$(INSTALL) -m 444 tar.cat1 $(DESTDIR)$(cat1dir)/tar.0
