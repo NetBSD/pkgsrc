@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.767 2008/03/06 08:37:26 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.768 2008/03/06 08:51:36 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4119,6 +4119,37 @@ sub checkline_mk_varuse($$$$) {
 		if ($perms !~ qr"p" && $perms !~ qr"u") {
 			$line->log_warning("${varname} may not be used in this file.");
 		}
+	}
+
+	if ($varname eq "LOCALBASE" && !$is_internal) {
+		$line->log_warning("The LOCALBASE variable should not be used by packages.");
+		$line->explain_warning(
+# from jlam via private mail.
+"Currently, LOCALBASE is typically used in these cases:",
+"",
+"(1) To locate a file or directory from another package.",
+"(2) To refer to own files after installation.",
+"",
+"In the first case, the example is:",
+"",
+"	STRLIST=        \${LOCALBASE}/bin/strlist",
+"	do-build:",
+"		cd \${WRKSRC} && \${STRLIST} *.str",
+"",
+"This should really be:",
+"",
+"	EVAL_PREFIX=    STRLIST_PREFIX=strlist",
+"	STRLIST=        \${STRLIST_PREFIX}/bin/strlist",
+"	do-build:",
+"		cd \${WRKSRC} && \${STRLIST} *.str",
+"",
+"In the second case, the example is:",
+"",
+"	CONFIGURE_ENV+= --with-datafiles=\${LOCALBASE}/share/battalion",
+"",
+"This should really be:",
+"",
+"	CONFIGURE_ENV+= --with-datafiles=\${PREFIX}/share/battalion");
 	}
 
 	my $needs_quoting = variable_needs_quoting($line, $varname, $context);
