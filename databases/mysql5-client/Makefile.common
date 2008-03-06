@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.29 2008/01/22 00:41:59 rillig Exp $
+# $NetBSD: Makefile.common,v 1.30 2008/03/06 16:50:38 jlam Exp $
 
 DISTNAME=		mysql-5.0.51
 CATEGORIES=		databases
@@ -35,7 +35,6 @@ MYSQL_EXTRA_CHARSET?=	all
 CONFIGURE_ARGS+=	--localstatedir=${MYSQL_DATADIR:Q}
 CONFIGURE_ARGS+=	--with-named-z-libs=z
 CONFIGURE_ARGS+=	--without-libwrap
-CONFIGURE_ARGS+=	--with-named-curses-libs="-lcurses -ltermcap"
 
 .if ${OPSYS} == "IRIX"
 CFLAGS+=		-DIRIX5 -DNEEDS_BSTRING_H
@@ -43,7 +42,10 @@ CFLAGS+=		-DIRIX5 -DNEEDS_BSTRING_H
 CONFIGURE_ENV+=		ac_cv_lib_gen_p2open="no"
 .endif
 
-# We always use our own readline, either system- or pkgsrc-supplied.
+# We always use our own readline.  Note that these --without-* settings
+# are confusing, but they just mean "don't use the included readline
+# or libedit".
+#
 CONFIGURE_ARGS+=	--without-readline
 CONFIGURE_ARGS+=	--without-libedit
 
@@ -109,7 +111,7 @@ SUBST_SED.scr+=		-e "s,/bin/sh,${RCD_SCRIPTS_SHELL},g"
 SUBST_MESSAGE.scr=	Fixing scripts.
 
 # Fix broken shared library detection under Mac OS X
-.if ${OPSYS} == Darwin
+.if ${OPSYS} == "Darwin"
 SUBST_CLASSES+=		dylib
 SUBST_STAGE.dylib=	post-patch
 SUBST_FILES.dylib=	configure
