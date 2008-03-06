@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/01/18 05:08:40 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/06 02:56:04 obache Exp $
 
 DISTNAME=	btpd-0.12
 PKGREVISION=	1
@@ -10,14 +10,14 @@ MAINTAINER=	rnyberg@murmeldjur.se
 HOMEPAGE=	http://www.murmeldjur.se/btpd/
 COMMENT=	Daemon for file sharing over bittorrent
 
-PKG_DESTDIR_SUPPORT= 	user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_API_DEPENDS.libevent+=	libevent>=0.9
 
-GNU_CONFIGURE= 	 	YES
+GNU_CONFIGURE=		YES
 
-DOCSDIR=	 	${PREFIX}/share/doc/btpd
-USE_FEATURES.openssl= 	threads
+DOCSDIR=		${PREFIX}/share/doc/btpd
+USE_FEATURES.openssl=	threads
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCSDIR}
