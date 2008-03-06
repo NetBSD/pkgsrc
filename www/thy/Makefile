@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2007/09/07 22:12:27 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/06 14:53:56 wiz Exp $
 
 DISTNAME=	thy-0.9.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	ftp://bonehunter.rulez.org/pub/thy/stable/
 

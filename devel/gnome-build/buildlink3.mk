@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.5 2007/06/05 05:37:10 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.6 2008/03/06 14:53:49 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_BUILD_BUILDLINK3_MK:=	${GNOME_BUILD_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gnome-build
 
 .if ${GNOME_BUILD_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.gnome-build+=	gnome-build>=0.1.3
-BUILDLINK_ABI_DEPENDS.gnome-build?=	gnome-build>=0.1.3nb3
+BUILDLINK_ABI_DEPENDS.gnome-build?=	gnome-build>=0.2.0nb1
 BUILDLINK_PKGSRCDIR.gnome-build?=	../../devel/gnome-build
 .endif	# GNOME_BUILD_BUILDLINK3_MK
 

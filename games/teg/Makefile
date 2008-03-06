@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2007/09/21 13:03:45 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/06 14:53:50 wiz Exp $
 
 DISTNAME=		teg-0.11.1
-PKGREVISION=		11
+PKGREVISION=		12
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=teg/}
 

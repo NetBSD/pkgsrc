@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/11/04 10:06:06 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/03/06 14:53:50 wiz Exp $
 #
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
@@ -14,6 +14,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}obby
 
 .if ${OBBY_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.obby+=	obby>=0.4.4
+BUILDLINK_ABI_DEPENDS.obby?=	obby>=0.4.4nb1
 BUILDLINK_PKGSRCDIR.obby?=	../../editors/obby
 .endif	# OBBY_BUILDLINK3_MK
 

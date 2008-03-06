@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2007/07/09 17:17:54 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2008/03/06 14:53:53 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBSOUP_DEVEL_BUILDLINK3_MK:=	${LIBSOUP_DEVEL_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libsoup-devel
 
 .if !empty(LIBSOUP_DEVEL_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.libsoup-devel+=	libsoup-devel>=2.2.0
-BUILDLINK_ABI_DEPENDS.libsoup-devel?=	libsoup-devel>=2.2.100nb1
+BUILDLINK_ABI_DEPENDS.libsoup-devel?=	libsoup-devel>=2.2.104nb1
 BUILDLINK_PKGSRCDIR.libsoup-devel?=	../../net/libsoup-devel
 .endif	# LIBSOUP_DEVEL_BUILDLINK3_MK
 

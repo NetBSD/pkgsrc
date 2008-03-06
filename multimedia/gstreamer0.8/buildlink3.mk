@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.11 2007/06/05 05:37:12 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.12 2008/03/06 14:53:52 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GSTREAMER0.8_BUILDLINK3_MK:=	${GSTREAMER0.8_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gstreamer0.8
 
 .if !empty(GSTREAMER0.8_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gstreamer0.8+=	gstreamer0.8>=0.8.11
-BUILDLINK_ABI_DEPENDS.gstreamer0.8?=	gstreamer0.8>=0.8.11nb8
+BUILDLINK_ABI_DEPENDS.gstreamer0.8?=	gstreamer0.8>=0.8.11nb11
 BUILDLINK_PKGSRCDIR.gstreamer0.8?=	../../multimedia/gstreamer0.8
 
 PRINT_PLIST_AWK+=	/^@dirrm (include|lib)\/gstreamer-0.8(\/gst)?$$/ \
