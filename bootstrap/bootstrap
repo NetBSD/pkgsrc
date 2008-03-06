@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.120 2008/01/30 22:57:31 tron Exp $
+# $NetBSD: bootstrap,v 1.121 2008/03/06 04:45:58 jlam Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -1026,10 +1026,10 @@ case "$need_extras" in
 yes)	build_package "pkgtools/bootstrap-extras";;
 esac
 case "$need_ftp" in
-yes)	build_package "pkgtools/tnftp";;
+yes)	build_package "net/tnftp";;
 esac
 case "$need_pax" in
-yes)	build_package "pkgtools/pax";;
+yes)	build_package "archivers/pax";;
 esac
 build_package "pkgtools/pkg_install"
 
