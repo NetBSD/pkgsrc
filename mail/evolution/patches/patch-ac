@@ -1,7 +1,16 @@
-$NetBSD: patch-ac,v 1.15 2008/03/05 19:08:05 drochner Exp $
+$NetBSD: patch-ac,v 1.16 2008/03/06 14:20:30 drochner Exp $
 
 --- mail/em-format.c.orig	2007-10-12 08:56:01.000000000 +0200
 +++ mail/em-format.c
+@@ -1193,7 +1193,7 @@ emf_application_xpkcs7mime(EMFormat *emf
+ 	opart = camel_mime_part_new();
+ 	valid = camel_cipher_decrypt(context, part, opart, ex);
+ 	if (valid == NULL) {
+-		em_format_format_error(emf, stream, ex->desc?ex->desc:_("Could not parse S/MIME message: Unknown error"));
++		em_format_format_error(emf, stream, "%s", ex->desc?ex->desc:_("Could not parse S/MIME message: Unknown error"));
+ 		em_format_part_as(emf, stream, part, NULL);
+ 	} else {
+ 		if (emfc == NULL)
 @@ -1350,7 +1350,7 @@ emf_multipart_encrypted(EMFormat *emf, C
  	if (valid == NULL) {
  		em_format_format_error(emf, stream, ex->desc?_("Could not parse PGP/MIME message"):_("Could not parse PGP/MIME message: Unknown error"));
