@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.12 2007/09/21 13:04:07 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.13 2008/03/06 14:53:52 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GST_PLUGINS0.8_BUILDLINK3_MK:=	${GST_PLUGINS0.8_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gst-plugins0.8
 
 .if !empty(GST_PLUGINS0.8_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gst-plugins0.8+=	gst-plugins0.8>=0.8.11
-BUILDLINK_ABI_DEPENDS.gst-plugins0.8?=	gst-plugins0.8>=0.8.11nb7
+BUILDLINK_ABI_DEPENDS.gst-plugins0.8?=	gst-plugins0.8>=0.8.11nb10
 BUILDLINK_PKGSRCDIR.gst-plugins0.8?=	../../multimedia/gst-plugins0.8
 .endif	# GST_PLUGINS0.8_BUILDLINK3_MK
 
