@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.63 2008/03/05 21:14:05 tnn Exp $
+$NetBSD: TODO,v 1.64 2008/03/06 09:34:41 rillig Exp $
 
 Please add your own entries at the bottom of this file. If possible,
 include the name of an example package where a warning should occur.
@@ -32,3 +32,16 @@ include the name of an example package where a warning should occur.
   !empty(PKGSRC_COMPILER:Msunpro).
 * If USE_TOOLS has autoconf213, and the package does stuff like
   cd ${WRKSRC} && autoconf, then an incorrect warning is issued.
+
+%
+
+mail/mail-notification failed for Thomas, apparently because of an
+unexpressed dependency on hicolor-icon-theme.  I don't know if it's
+possible to add a way to notice that the PLIST contains hicolor files
+but that there's no dependency, or perhaps a list of mappings of sets of
+PLIST regexes to sets of required packages, or something.
+
+%
+
+* don't complain about "procedure calls", like for pkg-build-options in
+  the various buildlink3.mk files.
