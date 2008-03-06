@@ -1,11 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2008/01/18 05:06:27 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/06 16:50:38 jlam Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
-PKGREVISION=		2
+PKGREVISION=		3
 SVR4_PKGNAME=		mysqc
 COMMENT=		MySQL 5, a free SQL database (client)
 
 CONFLICTS=		{mysql-client-[0-9]*,mysql3-client-[0-9]*}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
@@ -20,13 +22,14 @@ AUTO_MKDIRS=	yes
 post-install:
 	cd ${WRKSRC}; for f in mysql.info mysql.info-[0-9]*; do		\
 		${TEST} ! -f "$$f" ||					\
-		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};\
 	done
 .for f in huge large innodb-heavy-4G small medium
 	${INSTALL_DATA} ${WRKSRC}/support-files/my-${f}.cnf.sh \
-		${PREFIX}/share/examples/mysql/my-${f}.cnf
+		${DESTDIR}${PREFIX}/share/examples/mysql/my-${f}.cnf
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/Docs/manual.chm ${DESTDIR}${PREFIX}/share/doc/mysql/
+	${INSTALL_DATA} ${WRKSRC}/Docs/manual.chm \
+		${DESTDIR}${PREFIX}/share/doc/mysql/
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
