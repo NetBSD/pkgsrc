@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/02/17 10:16:33 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/06 16:15:18 gdt Exp $
 #
 
 DISTNAME=	coda-6.9.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	http://www.coda.cs.cmu.edu/pub/coda/src/
 
@@ -22,5 +22,6 @@ REPLACE_PERL=	coda-src/scripts/tape.pl coda-src/scripts/volmunge
 .include "../../devel/rpc2/buildlink3.mk"
 .include "../../devel/rvm/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
+.include "../../mk/curses.buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
