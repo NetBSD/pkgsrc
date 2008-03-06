@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/21 09:05:44 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/03/06 21:21:10 adrianp Exp $
 share/examples/viewvc/viewvc.conf
 share/examples/viewvc/cvsgraph.conf
 ${VIEWVCDIR}/bin/cgi/query.cgi
@@ -121,6 +121,72 @@ ${VIEWVCDIR}/templates/query_results.ezt
 ${VIEWVCDIR}/templates/revision.ezt
 ${VIEWVCDIR}/templates/roots.ezt
 ${VIEWVCDIR}/templates/rss.ezt
+${VIEWVCDIR}/templates-contrib/README
+${VIEWVCDIR}/templates-contrib/viewsvn/INSTALL
+${VIEWVCDIR}/templates-contrib/viewsvn/README
+${VIEWVCDIR}/templates-contrib/viewsvn/extras/fix-blame-output.diff
+${VIEWVCDIR}/templates-contrib/viewsvn/extras/svnindex.css
+${VIEWVCDIR}/templates-contrib/viewsvn/extras/svnindex.xsl
+${VIEWVCDIR}/templates-contrib/viewsvn/screenshots/diff.png
+${VIEWVCDIR}/templates-contrib/viewsvn/screenshots/dir.png
+${VIEWVCDIR}/templates-contrib/viewsvn/screenshots/log.png
+${VIEWVCDIR}/templates-contrib/viewsvn/screenshots/markup.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/annotate.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/diff.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/directory.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/broken.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/dir.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/down.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/download.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/favicon-svn.ico
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/feed-icon-16x16.jpg
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/logo-svn.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/logo-viewvc.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/svn.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/text.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/tortoisesvn/back.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/tortoisesvn/back_small.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/tortoisesvn/blame.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/tortoisesvn/checkout.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/tortoisesvn/diff.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/tortoisesvn/forward.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/tortoisesvn/license.txt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/tortoisesvn/log.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/tortoisesvn/patch.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/tortoisesvn/repos.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/tortoisesvn/tsvn.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/up.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/viewvc.png
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/styles.css
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/error.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/graph.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/include/diff_form.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/include/dir_footer.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/include/dir_header.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/include/file_header.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/include/footer.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/include/header.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/include/log_footer.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/include/log_header.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/include/paging.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/include/pathrev_form.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/log.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/markup.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/query.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/query_form.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/query_results.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/revision.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/roots.ezt
+${VIEWVCDIR}/templates-contrib/viewsvn/templates/rss.ezt
+@dirrm ${VIEWVCDIR}/templates-contrib/viewsvn/screenshots
+@dirrm ${VIEWVCDIR}/templates-contrib/viewsvn/extras
+@dirrm ${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images/tortoisesvn
+@dirrm ${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot/images
+@dirrm ${VIEWVCDIR}/templates-contrib/viewsvn/templates/docroot
+@dirrm ${VIEWVCDIR}/templates-contrib/viewsvn/templates/include
+@dirrm ${VIEWVCDIR}/templates-contrib/viewsvn/templates
+@dirrm ${VIEWVCDIR}/templates-contrib/viewsvn
+@dirrm ${VIEWVCDIR}/templates-contrib
 @dirrm ${VIEWVCDIR}/templates/include
 @dirrm ${VIEWVCDIR}/templates/docroot/images
 @dirrm ${VIEWVCDIR}/templates/docroot
