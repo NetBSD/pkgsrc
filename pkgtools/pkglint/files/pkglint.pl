@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.766 2008/02/27 00:24:19 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.767 2008/03/06 08:37:26 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1759,7 +1759,7 @@ use constant regex_mk_dependency=> qr"^([^\s:]+(?:\s*[^\s:]+)*):\s*([^#]*?)(?:\s
 use constant regex_mk_include	=> qr"^\.\s*(s?include)\s+\"([^\"]+)\"\s*(?:#.*)?$";
 use constant regex_mk_sysinclude=> qr"^\.\s*s?include\s+<([^>]+)>\s*(?:#.*)?$";
 use constant regex_mk_shellvaruse => qr"(?:^|[^\$])\$\$\{?(\w+)\}?"; # XXX: not perfect
-use constant regex_pkgname	=> qr"^((?:[\w.+]|-[^\d])+)-(\d(?:\w|\.\d)*)$";
+use constant regex_pkgname	=> qr"^([\w\-.+]+)-(\d(?:\w|\.\d)*)$";
 use constant regex_mk_shellcmd	=> qr"^\t(.*)$";
 use constant regex_rcs_conflict	=> qr"^(<<<<<<<|=======|>>>>>>>)";
 use constant regex_unresolved	=> qr"\$\{";
