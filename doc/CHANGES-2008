@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.446 2008/03/06 08:54:24 rillig Exp $
+$NetBSD: CHANGES-2008,v 1.447 2008/03/06 14:52:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -844,3 +844,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed pkgtools/tnftp [jlam 2008-03-05]
 	Updated x11/xflame to 1.1.1nb2 [obache 2008-03-06]
 	Updated pkgtools/pkglint to 4.85 [rillig 2008-03-06]
+	Updated security/gnutls to 2.2.2 [wiz 2008-03-06]
