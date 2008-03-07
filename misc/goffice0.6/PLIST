@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/06 15:43:45 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/03/07 21:32:26 wiz Exp $
 include/libgoffice-0.6/goffice/app/error-info.h
 include/libgoffice-0.6/goffice/app/file.h
 include/libgoffice-0.6/goffice/app/go-cmd-context-impl.h
@@ -292,6 +292,7 @@ share/gtk-doc/html/goffice/goffice-GogEditor.html
 share/gtk-doc/html/goffice/goffice-GogGuru.html
 share/gtk-doc/html/goffice/goffice-GogPlotEngine.html
 share/gtk-doc/html/goffice/goffice-GogTool.html
+share/gtk-doc/html/goffice/goffice-Ranges.html
 share/gtk-doc/html/goffice/goffice-Units.html
 share/gtk-doc/html/goffice/goffice-go-plugin.html
 share/gtk-doc/html/goffice/goffice.devhelp
@@ -307,6 +308,7 @@ share/gtk-doc/html/goffice/right.png
 share/gtk-doc/html/goffice/style.css
 share/gtk-doc/html/goffice/up.png
 share/locale/am/LC_MESSAGES/goffice-${PKGVERSION}.mo
+share/locale/ar/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/az/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/bg/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/ca/LC_MESSAGES/goffice-${PKGVERSION}.mo
@@ -328,6 +330,7 @@ share/locale/hu/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/it/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/ja/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/ko/LC_MESSAGES/goffice-${PKGVERSION}.mo
+share/locale/lt/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/lv/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/ml/LC_MESSAGES/goffice-${PKGVERSION}.mo
 share/locale/mr/LC_MESSAGES/goffice-${PKGVERSION}.mo
