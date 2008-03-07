@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2008/02/11 13:05:14 bjs Exp $
+# $NetBSD: Makefile,v 1.32 2008/03/07 19:38:58 wiz Exp $
 
-DISTNAME=	cdrtools-2.01.01a37
-PKGNAME=	cdrtools-2.01.01.37
-PKGREVISION=	1
+DISTNAME=	cdrtools-2.01.01a38
+PKGNAME=	cdrtools-2.01.01.38
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/
 EXTRACT_SUFX=	.tar.bz2
@@ -83,7 +82,6 @@ do-configure:
 		fi;							\
 	done
 	cd ${WRKSRC} && ${SETENV} ${CONFIGURE_ENV} ${MAKE_PROGRAM} config
-	
 
 post-build:
 	cd ${WRKSRC};							\
