@@ -5,3 +5,5 @@ matrix-vector operations, and Level 3 BLAS do matrix-matrix
 operations. Because the BLAS are efficient, portable, and widely
 available, they're commonly used in the development of high quality
 linear algebra software, LINPACK and LAPACK for example.
+
+This package contains the Fortran 77 reference implementation of BLAS.
