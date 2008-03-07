@@ -1,25 +1,29 @@
-# $NetBSD: pkg-index.tmpl,v 1.1 2007/03/14 11:50:34 markd Exp $
+# $NetBSD: pkg-index.tmpl,v 1.2 2008/03/07 16:11:39 jlam Exp $
 #
-# Rebuild R package indexes
+# Rebuild R package indices upon installation or deinstallation of an
+# R extension.
 #
+
+rebuild_R_pkg_indices()
+{
+	${ECHO} "${PKGNAME}: rebuilding R package indices and help files"
+	R CMD ${PERL5} ${PKG_PREFIX}/lib/R/share/perl/build-help.pl \
+		--htmllists 2>/dev/null
+	${CAT} ${PKG_PREFIX}/lib/R/library/*/CONTENTS \
+		> ${PKG_PREFIX}/lib/R/doc/html/search/index.txt 2>/dev/null
+}
 
 case ${STAGE} in
 POST-INSTALL)
-	R CMD ${PERL5} @PREFIX@/lib/R/share/perl/build-help.pl --htmllists 2>/dev/null
-	${CAT} @PREFIX@/lib/R/library/*/CONTENTS > @PREFIX@/lib/R/doc/html/search/index.txt 2>/dev/null
+	rebuild_R_pkg_indices
 	;;
 DEINSTALL)
 	if [ "${PKGBASE}" = "R" ] ; then
-		${RM} -f @PREFIX@/lib/R/doc/html/packages.html
-		${RM} -f @PREFIX@/lib/R/doc/html/search/index.txt
+		${RM} -f ${PKG_PREFIX}/lib/R/doc/html/packages.html
+		${RM} -f ${PKG_PREFIX}/lib/R/doc/html/search/index.txt
 	fi
 	;;
 POST-DEINSTALL)
-	if [ "${PKGBASE}" != "R" ] ; then
-		R CMD ${PERL5} @PREFIX@/lib/R/share/perl/build-help.pl --htmllists 2>/dev/null
-		${CAT} @PREFIX@/lib/R/library/*/CONTENTS > @PREFIX@/lib/R/doc/html/search/index.txt 2>/dev/null
-	fi
-	;;
-*)
+	[ "${PKGBASE}" = "R" ] || rebuild_R_pkg_indices
 	;;
 esac
