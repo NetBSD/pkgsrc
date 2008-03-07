@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7108 2008/03/07 16:18:06 wiz Exp $
+$NetBSD: TODO,v 1.7109 2008/03/07 16:51:39 jlam Exp $
 
 Suggested new packages
 ======================
@@ -1397,7 +1397,6 @@ Suggested package updates
 	o xisp-2.7p4
 	o xkbset-0.5
 	o xli-2006.11.10
-	o xlispstat-3.52.20
 	o xlog-1.7
 	o xm7-1020s
 	o xmahjongg-3.70
