@@ -1,6 +1,4 @@
-
- $NetBSD: Makefile,v 1.163 2008/03/07 21:34:28 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.164 2008/03/07 21:35:54 wiz Exp $
 
 COMMENT=	Mathematics
 
