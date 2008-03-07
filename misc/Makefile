@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.296 2008/03/01 07:18:59 obache Exp $
+# $NetBSD: Makefile,v 1.297 2008/03/07 21:40:33 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -68,7 +68,6 @@ SUBDIR+=	gnome1-dirs
 SUBDIR+=	gnome2-dirs
 SUBDIR+=	gnuls
 SUBDIR+=	goffice
-SUBDIR+=	goffice0.2
 SUBDIR+=	goffice0.6
 SUBDIR+=	gok
 SUBDIR+=	gone
