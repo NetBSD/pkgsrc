@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7106 2008/03/07 10:51:39 wiz Exp $
+$NetBSD: TODO,v 1.7107 2008/03/07 15:26:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -793,7 +793,6 @@ Suggested package updates
 	o kodos-2.4.5
 	o kphotobook-0.0.7
 	o ksi-3.4.2
-	o lablgtk-2.10.1
 	o lapack-20070226
 	o latd-1.21
 	o latex2rtf-1.9.19
@@ -858,7 +857,6 @@ Suggested package updates
 	o libtcl-nothread-8.5.1
 	o libtool-2.2
 	o libtool-base-2.2
-	o libtorrent-0.12.0
 	o libxklavier-3.4
 	o libxml++2-2.20.0
 	o lilypond-2.10.33
@@ -1211,7 +1209,6 @@ Suggested package updates
 	o rsync-3.0.0
 	o rt3-3.6.6
 	o rtcw-1.41.3
-	o rtorrent-0.8.0
 	o ruby-clearsilver-0.10.4
 	o rudiments-0.30
 	o rxvt-unicode-9.0
