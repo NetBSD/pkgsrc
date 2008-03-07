@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2007/08/29 23:11:37 wiz Exp $
+# $NetBSD: Makefile,v 1.40 2008/03/07 16:16:22 wiz Exp $
 
-DISTNAME=	libgcrypt-1.2.4
+DISTNAME=	libgcrypt-1.4.0
 CATEGORIES=	security
 MASTER_SITES=	ftp://ftp.gnupg.org/gcrypt/libgcrypt/ \
 		http://gd.tuwien.ac.at/privacy/gnupg/libgcrypt/
@@ -19,6 +19,8 @@ TEST_TARGET=		check
 
 TEXINFO_REQD=		4.0
 INFO_FILES=		yes # PLIST
+
+#LICENSE=		gnu-gpl-v2 gnu-lgpl-v21
 
 .include "../../mk/bsd.prefs.mk"
 
