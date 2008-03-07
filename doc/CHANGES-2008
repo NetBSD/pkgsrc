@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.461 2008/03/07 21:48:05 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.462 2008/03/07 22:40:46 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -861,3 +861,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed math/gnumeric-current successor math/gnumeric [wiz 2008-03-07]
 	Removed misc/goffice0.2 successor misc/goffice0.6 [wiz 2008-03-07]
 	Updated audio/easytag-current to 2.1.5 [wiz 2008-03-07]
+	Updated sysutils/e2fsprogs to 1.40.7 [tron 2008-03-07]
