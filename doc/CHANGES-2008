@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.453 2008/03/07 20:01:00 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.454 2008/03/07 20:03:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -851,3 +851,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated math/xlispstat to 3.52.20 [jlam 2008-03-07]
 	Updated www/bozohttpd to 20080303nb1 [jlam 2008-03-07]
 	Updated sysutils/cdrtools to 2.01.01.38 [wiz 2008-03-07]
+	Updated x11/xproto to 7.0.12 [wiz 2008-03-07]
