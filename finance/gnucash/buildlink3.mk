@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2008/03/06 14:53:50 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2008/03/07 22:53:24 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GNUCASH_BUILDLINK3_MK:=	${GNUCASH_BUILDLINK3_MK}+
@@ -29,7 +29,7 @@ BUILDLINK_PKGSRCDIR.gnucash?=	../../finance/gnucash
 #.include "../../finance/libofx/buildlink3.mk"
 #.include "../../lang/guile/buildlink3.mk"
 #.include "../../lang/perl5/buildlink3.mk"
-#.include "../../misc/goffice0.2/buildlink3.mk"
+#.include "../../misc/goffice0.6/buildlink3.mk"
 #.include "../../print/libgnomeprint/buildlink3.mk"
 #.include "../../print/libgnomeprintui/buildlink3.mk"
 #.include "../../textproc/libxml2/buildlink3.mk"
