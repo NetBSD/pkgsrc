@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.448 2008/03/06 21:21:32 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.449 2008/03/07 07:14:44 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -846,3 +846,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/pkglint to 4.85 [rillig 2008-03-06]
 	Updated security/gnutls to 2.2.2 [wiz 2008-03-06]
 	Updated www/viewvc to 1.0.5 [adrianp 2008-03-06]
+	Updated math/blas to 1.1 [jlam 2008-03-07]
