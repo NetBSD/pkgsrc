@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.451 2008/03/07 16:48:12 jlam Exp $
+$NetBSD: CHANGES-2008,v 1.452 2008/03/07 18:19:05 mrg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -849,3 +849,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated math/blas to 1.1 [jlam 2008-03-07]
 	Updated security/libgcrypt to 1.4.0 [wiz 2008-03-07]
 	Updated math/xlispstat to 3.52.20 [jlam 2008-03-07]
+	Updated www/bozohttpd to 20080303nb1 [jlam 2008-03-07]
