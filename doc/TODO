@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7110 2008/03/07 18:02:30 obache Exp $
+$NetBSD: TODO,v 1.7111 2008/03/07 19:30:30 jlam Exp $
 
 Suggested new packages
 ======================
@@ -131,13 +131,6 @@ Suggested new packages
 	Suite of software components for developing object-oriented,
 	web-based applications.
 
-	Mail Avenger
-	http://www.mailavenger.org/
-	Mail Avenger is a highly-configurable, MTA-independent SMTP
-	server daemon. It lets users run messages through filters like
-	ClamAV and SpamAssassin during SMTP transactions, so the server
-	can reject mail before assuming responsibility for its delivery.
-
 	TROPHY
 	http://trophy.sourceforge.net/
 	A 2D car racing action game with untypical racing game features
@@ -179,11 +172,6 @@ Suggested new packages
 	LabelNation
 	http://www.red-bean.com/labelnation/
 	Command-line label, business card printing program.
-
-	PostScript::MailLabels perl module
-	http://oplink.net/~ajackson/software/maillabels
-	Perl module (at CPAN) for printing mailing labels on
-	standard label stock. Also has postal barcodes support.
 
 	GnomeMeeting
 	http://www.gnomemeeting.org/
