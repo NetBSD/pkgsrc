@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.457 2008/03/07 20:18:25 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.458 2008/03/07 20:23:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -855,3 +855,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xf86-video-nv to 2.1.8 [wiz 2008-03-07]
 	Updated x11/libXfont to 1.3.2 [wiz 2008-03-07]
 	Updated x11/inputproto to 1.4.3 [wiz 2008-03-07]
+	Updated devel/libgsf to 1.14.8 [wiz 2008-03-07]
