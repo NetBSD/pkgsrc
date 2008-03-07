@@ -1,6 +1,6 @@
-$NetBSD: patch-ae,v 1.3 2005/10/06 12:20:41 wiz Exp $
+$NetBSD: patch-ae,v 1.4 2008/03/07 16:16:22 wiz Exp $
 
---- src/ath.h.orig	2005-07-29 15:45:42.000000000 +0200
+--- src/ath.h.orig	2007-02-22 11:15:20.000000000 +0000
 +++ src/ath.h
 @@ -31,6 +31,12 @@
  
@@ -16,7 +16,7 @@ $NetBSD: patch-ae,v 1.3 2005/10/06 12:20:41 wiz Exp $
  /* Define _ATH_EXT_SYM_PREFIX if you want to give all external symbols
     a prefix.  */
 @@ -83,6 +89,14 @@ struct ath_ops
-   int (*connect) (int s, void *addr, socklen_t length);
+   int (*connect) (int s, void *addr, int length);
    int (*sendmsg) (int s, const void *msg, int flags);
    int (*recvmsg) (int s, void *msg, int flags);
 +#elif defined(__INTERIX)
