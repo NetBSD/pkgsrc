@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7107 2008/03/07 15:26:46 wiz Exp $
+$NetBSD: TODO,v 1.7108 2008/03/07 16:18:06 wiz Exp $
 
 Suggested new packages
 ======================
@@ -679,6 +679,7 @@ Suggested package updates
 	o gnomeicu-0.99.14
 	o gnu-crypto-2.1.0
 	o gnucash-2.2.4
+	o gnumeric-1.8.2
 	o gnupg2-2.0.8
 	o gnustep-1.14.0
 	o gnustep-examples-1.2.0
@@ -686,6 +687,7 @@ Suggested package updates
 	o gob2-2.0.15
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
+	o goffice0.6-0.6.2
 	o gogo-3.11p1
 	o gossip-0.28
 	o gourmet-0.13.3
@@ -818,7 +820,6 @@ Suggested package updates
 	o libevent-1.4.0beta
 	o libextractor-0.5.19a
 	o libflash-0.4.13
-	o libgcrypt-1.4.0
 	o libgda-3.1.2
 	o libggi-2.2.2
 	o libggigcp-1.0.2
