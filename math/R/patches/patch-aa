@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.18 2007/11/03 20:14:40 markd Exp $
+$NetBSD: patch-aa,v 1.19 2008/03/07 16:11:39 jlam Exp $
 
 --- configure.ac.orig	2007-09-21 14:05:04.000000000 +1200
 +++ configure.ac
@@ -11,19 +11,6 @@ $NetBSD: patch-aa,v 1.18 2007/11/03 20:14:40 markd Exp $
  else
    LIBR=
  fi
-@@ -672,9 +672,9 @@ if test "${use_readline}" = yes; then
-   if test "${use_readline}" = no; then
-     ## only need ncurses if libreadline is not statically linked against it
-     unset ac_cv_lib_readline_rl_callback_read_char
--    AC_CHECK_LIB(ncurses, main, [],
--                 AC_CHECK_LIB(termcap, main, [],
--                              AC_CHECK_LIB(termlib, main)))
-+    AC_CHECK_LIB(termcap, main, [],
-+                 AC_CHECK_LIB(termlib, main, [],
-+                              AC_CHECK_LIB(ncurses, main)))
-     AC_CHECK_LIB(readline, rl_callback_read_char)
-     use_readline="${ac_cv_lib_readline_rl_callback_read_char}"
-   fi
 @@ -817,13 +817,6 @@ case "${host_cpu}" in
        R_PROG_CC_FLAG([-ieee_with_inexact],
                       R_SH_VAR_ADD(R_XTRA_CFLAGS, [-ieee_with_inexact]))
