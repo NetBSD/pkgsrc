@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.459 2008/03/07 21:39:01 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.460 2008/03/07 21:41:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -859,3 +859,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/goffice0.6 to 0.6.2 [wiz 2008-03-07]
 	Updated math/gnumeric to 1.8.2 [wiz 2008-03-07]
 	Removed math/gnumeric-current successor math/gnumeric [wiz 2008-03-07]
+	Removed misc/goffice0.2 successor misc/goffice0.6 [wiz 2008-03-07]
