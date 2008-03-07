@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2007/09/21 19:54:17 bjs Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/07 20:18:07 wiz Exp $
 #
 
-DISTNAME=		inputproto-1.4.2.1
+DISTNAME=		inputproto-1.4.3
 CATEGORIES=		x11
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/proto/
 EXTRACT_SUFX=		.tar.bz2
