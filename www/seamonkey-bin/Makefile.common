@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.12 2008/02/13 14:43:00 obache Exp $
+# $NetBSD: Makefile.common,v 1.13 2008/03/07 05:06:16 jlam Exp $
 
 DISTNAME=		${MOZILLA}${MOX_EXTRA}-bin	# overridden below
 PKGNAME=		${MOZILLA}${MOZ_EXTRA}-bin-${MOZ_VER}
@@ -66,14 +66,15 @@ post-extract:
 	${CP} ${MOZILLA_SCRIPT} ${WRKDIR}/${MOZILLA}.sh
 
 do-install:
-	${INSTALL_DATA_DIR} ${MOZILLA_LIB}
-	cd ${WRKSRC} && ${PAX} -rw -pm . ${MOZILLA_LIB}
-	${INSTALL_SCRIPT} ${WRKDIR}/${MOZILLA}.sh ${PREFIX}/bin/${MOZILLA}${MOZ_EXTRA}-${MOZ_PLATFORM}
-	@${FIND} ${MOZILLA_LIB} -type f -print \
+	${INSTALL_DATA_DIR} ${DESTDIR}${MOZILLA_LIB}
+	cd ${WRKSRC} && ${PAX} -rw -pm . ${DESTDIR}${MOZILLA_LIB}
+	${INSTALL_SCRIPT} ${WRKDIR}/${MOZILLA}.sh \
+		${DESTDIR}${PREFIX}/bin/${MOZILLA}${MOZ_EXTRA}-${MOZ_PLATFORM}
+	@${FIND} ${DESTDIR}${MOZILLA_LIB} -type f -print \
 		| ${XARGS} ${CHMOD} a+r
-	@${FIND} ${MOZILLA_LIB} \( -type f -o -perm -u+x \) -print \
+	@${FIND} ${DESTDIR}${MOZILLA_LIB} \( -type f -o -perm -u+x \) -print \
 		| ${XARGS} ${CHMOD} a+rx
-	@${FIND} ${MOZILLA_LIB} -type d -print \
+	@${FIND} ${DESTDIR}${MOZILLA_LIB} -type d -print \
 		| ${XARGS} ${CHMOD} a+rx
 
 # builds typically want exactly 'libgtk-1.2.so.0', etc. symlink them
@@ -81,7 +82,7 @@ do-install:
 post-install:
 .if defined(EMUL_IS_NATIVE)
 .  if defined(MOZ_GTK2) && !empty(MOZ_GTK2:M[Yy][Ee][Ss])
-	@cd ${MOZILLA_LIB} && \
+	@cd ${DESTDIR}${MOZILLA_LIB} &&					\
 	${LN} -s ${PREFIX}/lib/libatk-1.0.*so* .;			\
 	${LN} -s ${X11PREFIX}/lib/libgdk-x11-2.0.*so* .;		\
 	${LN} -s ${PREFIX}/lib/libgdk_pixbuf-2.0.*so* .;		\
@@ -104,7 +105,7 @@ post-install:
 	${LN} -s libpangox-1.0.so libpangox-1.0.so.0;			\
 	${LN} -s libpangoxft-1.0.so libpangoxft-1.0.so.0
 .  else
-	@cd ${MOZILLA_LIB} && \
+	@cd ${DESTDIR}${MOZILLA_LIB} &&					\
 	${LN} -s ${PREFIX}/lib/libglib.*so* .;				\
 	${LN} -s ${PREFIX}/lib/libgmodule.*so* .;			\
 	${LN} -s ${X11PREFIX}/lib/libgdk.*so* .;			\
@@ -115,14 +116,14 @@ post-install:
 	${LN} -s libgmodule.so libgmodule-1.2.so.0
 .  endif
 .endif
-	@${INSTALL_DATA_DIR} ${PREFIX}/lib/mozilla-linux/plugins
+	@${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/mozilla-linux/plugins
 
 GENERATE_PLIST+=							\
 	${ECHO} bin/${MOZILLA}${MOZ_EXTRA}-${MOZ_PLATFORM};		\
-	${FIND} ${MOZILLA_LIB} \( -type f -o -type l \) -print		\
-		| ${SORT} | ${SED} -e "s,${PREFIX}/,,g";		\
-	${FIND} ${MOZILLA_LIB} -type d -print				\
-		| ${SORT} -r | ${SED} -e "s,${PREFIX}/,@dirrm ,g";	\
+	${FIND} ${DESTDIR}${MOZILLA_LIB} \( -type f -o -type l \) -print\
+		| ${SORT} | ${SED} -e "s,${DESTDIR}${PREFIX}/,,g";	\
+	${FIND} ${DESTDIR}${MOZILLA_LIB} -type d -print			\
+		| ${SORT} -r | ${SED} -e "s,${DESTDIR}${PREFIX}/,@dirrm ,g"; \
 	${ECHO} "@exec ${MKDIR} %D/lib/mozilla-linux/plugins";
 
 .include "../../mk/bsd.pkg.mk"
