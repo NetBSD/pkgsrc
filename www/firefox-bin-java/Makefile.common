@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2007/07/30 16:00:35 jlam Exp $
+# $NetBSD: Makefile.common,v 1.7 2008/03/07 05:16:48 jlam Exp $
 
 DISTNAME=		${MOZ_BIN}-java-1.2
 CATEGORIES=		www lang
@@ -32,5 +32,5 @@ NS_PLUGINS_DIR=	${PREFIX}/lib/${MOZ_NAME}/plugins
 PLUGIN=		${PREFIX}/java/sun-1.5/plugin/i386/ns7/libjavaplugin_oji.so
 
 do-install:
-	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
-	${LN} -s ${PLUGIN} ${NS_PLUGINS_DIR}/libjavaplugin_oji.so
+	${INSTALL_DATA_DIR} ${DESTDIR}${NS_PLUGINS_DIR}
+	${LN} -s ${PLUGIN} ${DESTDIR}${NS_PLUGINS_DIR}/libjavaplugin_oji.so
