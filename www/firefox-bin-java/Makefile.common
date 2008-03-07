@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2008/03/07 05:16:48 jlam Exp $
+# $NetBSD: Makefile.common,v 1.8 2008/03/07 05:43:42 jlam Exp $
 
 DISTNAME=		${MOZ_BIN}-java-1.2
 CATEGORIES=		www lang
@@ -11,6 +11,8 @@ COMMENT?=		Java Run Time Environment (JRE) 1.5 plugin for firefox-bin
 DEPENDS+=		sun-jre15-[0-9]*:../../lang/sun-jre15
 
 EMUL_PLATFORMS=		linux-i386
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # XXX
 # XXX There is a bug where we depend on sun-jre15 and get the x86_64
