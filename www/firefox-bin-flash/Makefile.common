@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.20 2007/12/23 22:27:15 tnn Exp $
+# $NetBSD: Makefile.common,v 1.21 2008/03/07 05:16:48 jlam Exp $
 
 DISTNAME=		install_flash_player_9_${DISTUNAME}
 PKGNAME=		${MOZ_BIN}-flash-${FLASH_VERS:S/r/./}
@@ -40,5 +40,5 @@ NS_PLUGINS_DIR=		${PREFIX}/lib/${MOZ_NAME}/plugins
 PLIST_SUBST+=		MOZ_NAME=${MOZ_NAME:Q}
 
 do-install:
-	${INSTALL_DATA_DIR} ${NS_PLUGINS_DIR}
-	${INSTALL_DATA} ${WRKSRC}/libflashplayer.so ${NS_PLUGINS_DIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${NS_PLUGINS_DIR}
+	${INSTALL_DATA} ${WRKSRC}/libflashplayer.so ${DESTDIR}${NS_PLUGINS_DIR}
