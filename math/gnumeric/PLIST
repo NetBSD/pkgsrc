@@ -1,8 +1,125 @@
-@comment $NetBSD: PLIST,v 1.31 2007/09/25 10:54:15 hira Exp $
+@comment $NetBSD: PLIST,v 1.32 2008/03/07 21:33:33 wiz Exp $
 bin/gnumeric
 bin/${PKGNAME}
 bin/ssconvert
-lib/bonobo/servers/GNOME_Gnumeric.server
+bin/ssindex
+include/libspreadsheet-1.8/spreadsheet/application.h
+include/libspreadsheet-1.8/spreadsheet/auto-format.h
+include/libspreadsheet-1.8/spreadsheet/cell-draw.h
+include/libspreadsheet-1.8/spreadsheet/cell.h
+include/libspreadsheet-1.8/spreadsheet/cellspan.h
+include/libspreadsheet-1.8/spreadsheet/clipboard.h
+include/libspreadsheet-1.8/spreadsheet/cmd-edit.h
+include/libspreadsheet-1.8/spreadsheet/collect.h
+include/libspreadsheet-1.8/spreadsheet/colrow.h
+include/libspreadsheet-1.8/spreadsheet/command-context-stderr.h
+include/libspreadsheet-1.8/spreadsheet/command-context.h
+include/libspreadsheet-1.8/spreadsheet/commands.h
+include/libspreadsheet-1.8/spreadsheet/complete-sheet.h
+include/libspreadsheet-1.8/spreadsheet/complete.h
+include/libspreadsheet-1.8/spreadsheet/complex.h
+include/libspreadsheet-1.8/spreadsheet/consolidate.h
+include/libspreadsheet-1.8/spreadsheet/dependent.h
+include/libspreadsheet-1.8/spreadsheet/expr-impl.h
+include/libspreadsheet-1.8/spreadsheet/expr-name.h
+include/libspreadsheet-1.8/spreadsheet/expr.h
+include/libspreadsheet-1.8/spreadsheet/file-autoft.h
+include/libspreadsheet-1.8/spreadsheet/format-template.h
+include/libspreadsheet-1.8/spreadsheet/func-builtin.h
+include/libspreadsheet-1.8/spreadsheet/func.h
+include/libspreadsheet-1.8/spreadsheet/gnm-datetime.h
+include/libspreadsheet-1.8/spreadsheet/gnm-format.h
+include/libspreadsheet-1.8/spreadsheet/gnm-graph-window.h
+include/libspreadsheet-1.8/spreadsheet/gnm-pane.h
+include/libspreadsheet-1.8/spreadsheet/gnm-plugin.h
+include/libspreadsheet-1.8/spreadsheet/gnm-so-filled.h
+include/libspreadsheet-1.8/spreadsheet/gnm-so-line.h
+include/libspreadsheet-1.8/spreadsheet/gnm-so-polygon.h
+include/libspreadsheet-1.8/spreadsheet/gnm-style-impl.h
+include/libspreadsheet-1.8/spreadsheet/gnumeric-gconf.h
+include/libspreadsheet-1.8/spreadsheet/gnumeric-simple-canvas.h
+include/libspreadsheet-1.8/spreadsheet/gnumeric.h
+include/libspreadsheet-1.8/spreadsheet/graph.h
+include/libspreadsheet-1.8/spreadsheet/gui-clipboard.h
+include/libspreadsheet-1.8/spreadsheet/gui-file.h
+include/libspreadsheet-1.8/spreadsheet/gui-gnumeric.h
+include/libspreadsheet-1.8/spreadsheet/gui-util.h
+include/libspreadsheet-1.8/spreadsheet/gutils.h
+include/libspreadsheet-1.8/spreadsheet/history.h
+include/libspreadsheet-1.8/spreadsheet/hlink-impl.h
+include/libspreadsheet-1.8/spreadsheet/hlink.h
+include/libspreadsheet-1.8/spreadsheet/input-msg.h
+include/libspreadsheet-1.8/spreadsheet/item-acetate.h
+include/libspreadsheet-1.8/spreadsheet/item-bar.h
+include/libspreadsheet-1.8/spreadsheet/item-cursor.h
+include/libspreadsheet-1.8/spreadsheet/item-debug.h
+include/libspreadsheet-1.8/spreadsheet/item-edit.h
+include/libspreadsheet-1.8/spreadsheet/item-grid.h
+include/libspreadsheet-1.8/spreadsheet/libgnumeric.h
+include/libspreadsheet-1.8/spreadsheet/mathfunc.h
+include/libspreadsheet-1.8/spreadsheet/mstyle.h
+include/libspreadsheet-1.8/spreadsheet/number-match.h
+include/libspreadsheet-1.8/spreadsheet/numbers.h
+include/libspreadsheet-1.8/spreadsheet/parse-util.h
+include/libspreadsheet-1.8/spreadsheet/pattern.h
+include/libspreadsheet-1.8/spreadsheet/position.h
+include/libspreadsheet-1.8/spreadsheet/preview-grid.h
+include/libspreadsheet-1.8/spreadsheet/print-cell.h
+include/libspreadsheet-1.8/spreadsheet/print-info.h
+include/libspreadsheet-1.8/spreadsheet/print.h
+include/libspreadsheet-1.8/spreadsheet/rangefunc-strings.h
+include/libspreadsheet-1.8/spreadsheet/rangefunc.h
+include/libspreadsheet-1.8/spreadsheet/ranges.h
+include/libspreadsheet-1.8/spreadsheet/regression.h
+include/libspreadsheet-1.8/spreadsheet/rendered-value.h
+include/libspreadsheet-1.8/spreadsheet/search.h
+include/libspreadsheet-1.8/spreadsheet/selection.h
+include/libspreadsheet-1.8/spreadsheet/session.h
+include/libspreadsheet-1.8/spreadsheet/sheet-autofill.h
+include/libspreadsheet-1.8/spreadsheet/sheet-control-gui-priv.h
+include/libspreadsheet-1.8/spreadsheet/sheet-control-gui.h
+include/libspreadsheet-1.8/spreadsheet/sheet-control-priv.h
+include/libspreadsheet-1.8/spreadsheet/sheet-control.h
+include/libspreadsheet-1.8/spreadsheet/sheet-filter-combo.h
+include/libspreadsheet-1.8/spreadsheet/sheet-filter.h
+include/libspreadsheet-1.8/spreadsheet/sheet-merge.h
+include/libspreadsheet-1.8/spreadsheet/sheet-object-cell-comment.h
+include/libspreadsheet-1.8/spreadsheet/sheet-object-graph.h
+include/libspreadsheet-1.8/spreadsheet/sheet-object-image.h
+include/libspreadsheet-1.8/spreadsheet/sheet-object-impl.h
+include/libspreadsheet-1.8/spreadsheet/sheet-object-widget.h
+include/libspreadsheet-1.8/spreadsheet/sheet-object.h
+include/libspreadsheet-1.8/spreadsheet/sheet-private.h
+include/libspreadsheet-1.8/spreadsheet/sheet-style.h
+include/libspreadsheet-1.8/spreadsheet/sheet-view.h
+include/libspreadsheet-1.8/spreadsheet/sheet.h
+include/libspreadsheet-1.8/spreadsheet/solver.h
+include/libspreadsheet-1.8/spreadsheet/sort.h
+include/libspreadsheet-1.8/spreadsheet/stf-export.h
+include/libspreadsheet-1.8/spreadsheet/stf-parse.h
+include/libspreadsheet-1.8/spreadsheet/stf.h
+include/libspreadsheet-1.8/spreadsheet/str.h
+include/libspreadsheet-1.8/spreadsheet/style-border.h
+include/libspreadsheet-1.8/spreadsheet/style-color.h
+include/libspreadsheet-1.8/spreadsheet/style-conditions.h
+include/libspreadsheet-1.8/spreadsheet/style-font.h
+include/libspreadsheet-1.8/spreadsheet/style.h
+include/libspreadsheet-1.8/spreadsheet/symbol.h
+include/libspreadsheet-1.8/spreadsheet/validation-combo.h
+include/libspreadsheet-1.8/spreadsheet/validation.h
+include/libspreadsheet-1.8/spreadsheet/value.h
+include/libspreadsheet-1.8/spreadsheet/wbc-gtk-impl.h
+include/libspreadsheet-1.8/spreadsheet/wbc-gtk.h
+include/libspreadsheet-1.8/spreadsheet/workbook-cmd-format.h
+include/libspreadsheet-1.8/spreadsheet/workbook-control-priv.h
+include/libspreadsheet-1.8/spreadsheet/workbook-control.h
+include/libspreadsheet-1.8/spreadsheet/workbook-priv.h
+include/libspreadsheet-1.8/spreadsheet/workbook-view.h
+include/libspreadsheet-1.8/spreadsheet/workbook.h
+include/libspreadsheet-1.8/spreadsheet/xml-io-version.h
+include/libspreadsheet-1.8/spreadsheet/xml-io.h
+include/libspreadsheet-1.8/spreadsheet/xml-sax.h
+lib/gnumeric/${PKGVERSION}/include/gnumeric-features.h
 lib/gnumeric/${PKGVERSION}/plugins/applix/applix.la
 lib/gnumeric/${PKGVERSION}/plugins/applix/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/corba/corba.la
@@ -41,6 +158,11 @@ lib/gnumeric/${PKGVERSION}/plugins/fn-stat/plugin.la
 lib/gnumeric/${PKGVERSION}/plugins/fn-stat/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/fn-string/plugin.la
 lib/gnumeric/${PKGVERSION}/plugins/fn-string/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/fn-tsa/plugin.la
+lib/gnumeric/${PKGVERSION}/plugins/fn-tsa/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/gnome-glossary/glossary-po-header
+lib/gnumeric/${PKGVERSION}/plugins/gnome-glossary/gnome_glossary.py
+lib/gnumeric/${PKGVERSION}/plugins/gnome-glossary/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/html/html.la
 lib/gnumeric/${PKGVERSION}/plugins/html/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/lotus/lotus.la
@@ -53,12 +175,17 @@ lib/gnumeric/${PKGVERSION}/plugins/oleo/oleo.la
 lib/gnumeric/${PKGVERSION}/plugins/oleo/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/openoffice/openoffice.la
 lib/gnumeric/${PKGVERSION}/plugins/openoffice/plugin.xml
-${PERL}lib/gnumeric/${PKGVERSION}/plugins/perl-func/perl_func.pl
-${PERL}lib/gnumeric/${PKGVERSION}/plugins/perl-func/plugin.xml
-${PERL}lib/gnumeric/${PKGVERSION}/plugins/perl-loader/perl_loader.la
-${PERL}lib/gnumeric/${PKGVERSION}/plugins/perl-loader/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/perl-func/perl_func.pl
+lib/gnumeric/${PKGVERSION}/plugins/perl-func/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/perl-loader/perl_loader.la
+lib/gnumeric/${PKGVERSION}/plugins/perl-loader/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/plan_perfect/plan_perfect.la
 lib/gnumeric/${PKGVERSION}/plugins/plan_perfect/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/py-func/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/py-func/py_func.py
+lib/gnumeric/${PKGVERSION}/plugins/python-loader/plugin.xml
+lib/gnumeric/${PKGVERSION}/plugins/python-loader/python_loader.la
+lib/gnumeric/${PKGVERSION}/plugins/python-loader/ui-console-menu.xml
 lib/gnumeric/${PKGVERSION}/plugins/qpro/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/qpro/qpro.la
 lib/gnumeric/${PKGVERSION}/plugins/sample_datasource/plugin.xml
@@ -73,6 +200,7 @@ lib/gnumeric/${PKGVERSION}/plugins/uihello/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/xbase/plugin.xml
 lib/gnumeric/${PKGVERSION}/plugins/xbase/xbase.la
 lib/libspreadsheet.la
+lib/pkgconfig/libspreadsheet-1.8.pc
 man/man1/gnumeric.1
 man/man1/ssconvert.1
 man/man1/ssindex.1
@@ -104,6 +232,7 @@ share/gnome/help/gnumeric/C/data-delete.xml
 share/gnome/help/gnumeric/C/data-entry-advanced.xml
 share/gnome/help/gnumeric/C/data-entry-external.xml
 share/gnome/help/gnumeric/C/data-entry.xml
+share/gnome/help/gnumeric/C/data-filter.xml
 share/gnome/help/gnumeric/C/data-format.xml
 share/gnome/help/gnumeric/C/data-generate.xml
 share/gnome/help/gnumeric/C/data-insert.xml
@@ -293,7 +422,6 @@ share/gnome/help/gnumeric/C/figures/example-data.png
 share/gnome/help/gnumeric/C/figures/files-html-example.png
 share/gnome/help/gnumeric/C/figures/files-html32-example.png
 share/gnome/help/gnumeric/C/figures/files-html40-example.png
-share/gnome/help/gnumeric/C/figures/gnumeric-empty.510.png
 share/gnome/help/gnumeric/C/figures/gnumeric-icon-24.png
 share/gnome/help/gnumeric/C/figures/gnumeric-labelled.png
 share/gnome/help/gnumeric/C/figures/gnumeric-power-example.png
@@ -430,10 +558,7 @@ share/gnome/help/gnumeric/C/figures/textguru-import-panel1-withTags.png
 share/gnome/help/gnumeric/C/figures/textguru-import-panel2a-withTags.png
 share/gnome/help/gnumeric/C/figures/textguru-import-panel2b-withTags.png
 share/gnome/help/gnumeric/C/figures/textguru-import-panel3-withTags.png
-share/gnome/help/gnumeric/C/figures/toolbar-format.510.png
 share/gnome/help/gnumeric/C/figures/toolbar-object.png
-share/gnome/help/gnumeric/C/figures/toolbar-standard.510.png
-share/gnome/help/gnumeric/C/figures/toolbars.510.png
 share/gnome/help/gnumeric/C/figures/widget-checkbox.png
 share/gnome/help/gnumeric/C/figures/widget-combobox.png
 share/gnome/help/gnumeric/C/figures/widget-entryBox-outlined.png
@@ -527,6 +652,7 @@ share/gnumeric/${PKGVERSION}/glade/consolidate.glade
 share/gnumeric/${PKGVERSION}/glade/correlation.glade
 share/gnumeric/${PKGVERSION}/glade/covariance.glade
 share/gnumeric/${PKGVERSION}/glade/dao.glade
+share/gnumeric/${PKGVERSION}/glade/data-table.glade
 share/gnumeric/${PKGVERSION}/glade/define-name.glade
 share/gnumeric/${PKGVERSION}/glade/delete-cells.glade
 share/gnumeric/${PKGVERSION}/glade/descriptive-stats.glade
@@ -543,6 +669,7 @@ share/gnumeric/${PKGVERSION}/glade/function-select.glade
 share/gnumeric/${PKGVERSION}/glade/goalseek.glade
 share/gnumeric/${PKGVERSION}/glade/goto.glade
 share/gnumeric/${PKGVERSION}/glade/hf-config.glade
+share/gnumeric/${PKGVERSION}/glade/hf-dt-format.glade
 share/gnumeric/${PKGVERSION}/glade/histogram.glade
 share/gnumeric/${PKGVERSION}/glade/hyperlink.glade
 share/gnumeric/${PKGVERSION}/glade/insert-cells.glade
@@ -550,7 +677,6 @@ share/gnumeric/${PKGVERSION}/glade/mean-tests.glade
 share/gnumeric/${PKGVERSION}/glade/merge.glade
 share/gnumeric/${PKGVERSION}/glade/moving-averages.glade
 share/gnumeric/${PKGVERSION}/glade/paste-names.glade
-share/gnumeric/${PKGVERSION}/glade/pivottable.glade
 share/gnumeric/${PKGVERSION}/glade/plugin-manager.glade
 share/gnumeric/${PKGVERSION}/glade/preferences.glade
 share/gnumeric/${PKGVERSION}/glade/print.glade
@@ -568,9 +694,9 @@ share/gnumeric/${PKGVERSION}/glade/shuffle.glade
 share/gnumeric/${PKGVERSION}/glade/simulation.glade
 share/gnumeric/${PKGVERSION}/glade/so-checkbox.glade
 share/gnumeric/${PKGVERSION}/glade/so-frame.glade
+share/gnumeric/${PKGVERSION}/glade/so-list.glade
 share/gnumeric/${PKGVERSION}/glade/so-scrollbar.glade
 share/gnumeric/${PKGVERSION}/glade/solver.glade
-share/gnumeric/${PKGVERSION}/glade/summary.glade
 share/gnumeric/${PKGVERSION}/glade/tabulate.glade
 share/gnumeric/${PKGVERSION}/glade/variance-tests.glade
 share/gnumeric/${PKGVERSION}/glade/view.glade
@@ -582,6 +708,8 @@ share/gnumeric/${PKGVERSION}/templates/mileage.gnumeric
 share/gnumeric/${PKGVERSION}/templates/purchase_order.gnumeric
 share/locale/am/LC_MESSAGES/gnumeric-functions.mo
 share/locale/am/LC_MESSAGES/gnumeric.mo
+share/locale/ar/LC_MESSAGES/gnumeric-functions.mo
+share/locale/ar/LC_MESSAGES/gnumeric.mo
 share/locale/az/LC_MESSAGES/gnumeric-functions.mo
 share/locale/az/LC_MESSAGES/gnumeric.mo
 share/locale/bg/LC_MESSAGES/gnumeric-functions.mo
@@ -594,6 +722,8 @@ share/locale/da/LC_MESSAGES/gnumeric-functions.mo
 share/locale/da/LC_MESSAGES/gnumeric.mo
 share/locale/de/LC_MESSAGES/gnumeric-functions.mo
 share/locale/de/LC_MESSAGES/gnumeric.mo
+share/locale/dz/LC_MESSAGES/gnumeric-functions.mo
+share/locale/dz/LC_MESSAGES/gnumeric.mo
 share/locale/el/LC_MESSAGES/gnumeric-functions.mo
 share/locale/el/LC_MESSAGES/gnumeric.mo
 share/locale/en_CA/LC_MESSAGES/gnumeric-functions.mo
@@ -628,6 +758,8 @@ share/locale/lt/LC_MESSAGES/gnumeric-functions.mo
 share/locale/lt/LC_MESSAGES/gnumeric.mo
 share/locale/lv/LC_MESSAGES/gnumeric-functions.mo
 share/locale/lv/LC_MESSAGES/gnumeric.mo
+share/locale/mk/LC_MESSAGES/gnumeric-functions.mo
+share/locale/mk/LC_MESSAGES/gnumeric.mo
 share/locale/ml/LC_MESSAGES/gnumeric-functions.mo
 share/locale/ml/LC_MESSAGES/gnumeric.mo
 share/locale/mr/LC_MESSAGES/gnumeric-functions.mo
@@ -636,12 +768,14 @@ share/locale/ms/LC_MESSAGES/gnumeric-functions.mo
 share/locale/ms/LC_MESSAGES/gnumeric.mo
 share/locale/nb/LC_MESSAGES/gnumeric-functions.mo
 share/locale/nb/LC_MESSAGES/gnumeric.mo
+share/locale/ne/LC_MESSAGES/gnumeric-functions.mo
+share/locale/ne/LC_MESSAGES/gnumeric.mo
 share/locale/nl/LC_MESSAGES/gnumeric-functions.mo
 share/locale/nl/LC_MESSAGES/gnumeric.mo
 share/locale/nn/LC_MESSAGES/gnumeric-functions.mo
 share/locale/nn/LC_MESSAGES/gnumeric.mo
-share/locale/no/LC_MESSAGES/gnumeric-functions.mo
-share/locale/no/LC_MESSAGES/gnumeric.mo
+share/locale/oc/LC_MESSAGES/gnumeric-functions.mo
+share/locale/oc/LC_MESSAGES/gnumeric.mo
 share/locale/pl/LC_MESSAGES/gnumeric-functions.mo
 share/locale/pl/LC_MESSAGES/gnumeric.mo
 share/locale/pt/LC_MESSAGES/gnumeric-functions.mo
@@ -674,9 +808,6 @@ share/locale/zh_CN/LC_MESSAGES/gnumeric-functions.mo
 share/locale/zh_CN/LC_MESSAGES/gnumeric.mo
 share/locale/zh_TW/LC_MESSAGES/gnumeric-functions.mo
 share/locale/zh_TW/LC_MESSAGES/gnumeric.mo
-share/mc/templates/gnumeric.desktop
-share/mime-info/gnumeric.keys
-share/mime-info/gnumeric.mime
 share/omf/gnumeric/gnumeric-C.omf
 share/pixmaps/gnome-application-vnd.lotus-1-2-3.png
 share/pixmaps/gnome-application-x-applix-spreadsheet.png
@@ -701,10 +832,7 @@ share/pixmaps/win32-gnumeric.ico
 @dirrm share/pixmaps/gnumeric
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/gnumeric
-@comment in scrollkeeper: @dirrm share/omf
-@comment in xdg-dirs: @dirrm share/mime-info
-@dirrm share/mc/templates
-@unexec ${RMDIR} %D/share/mc 2>/dev/null || ${TRUE}
+@comment in rarian: @dirrm share/omf
 @dirrm share/gnumeric/${PKGVERSION}/templates
 @dirrm share/gnumeric/${PKGVERSION}/idl
 @dirrm share/gnumeric/${PKGVERSION}/glade
@@ -728,15 +856,19 @@ share/pixmaps/win32-gnumeric.ico
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/sc
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/sample_datasource
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/qpro
+@dirrm lib/gnumeric/${PKGVERSION}/plugins/python-loader
+@dirrm lib/gnumeric/${PKGVERSION}/plugins/py-func
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/plan_perfect
-${PERL}@dirrm lib/gnumeric/${PKGVERSION}/plugins/perl-loader
-${PERL}@dirrm lib/gnumeric/${PKGVERSION}/plugins/perl-func
+@dirrm lib/gnumeric/${PKGVERSION}/plugins/perl-loader
+@dirrm lib/gnumeric/${PKGVERSION}/plugins/perl-func
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/openoffice
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/oleo
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/numtheory
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/mps
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/lotus
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/html
+@dirrm lib/gnumeric/${PKGVERSION}/plugins/gnome-glossary
+@dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-tsa
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-string
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-stat
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/fn-random
@@ -757,6 +889,8 @@ ${PERL}@dirrm lib/gnumeric/${PKGVERSION}/plugins/perl-func
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/corba
 @dirrm lib/gnumeric/${PKGVERSION}/plugins/applix
 @dirrm lib/gnumeric/${PKGVERSION}/plugins
+@dirrm lib/gnumeric/${PKGVERSION}/include
 @dirrm lib/gnumeric/${PKGVERSION}
 @dirrm lib/gnumeric
-@comment in libbonobo: @dirrm lib/bonobo/servers
+@dirrm include/libspreadsheet-1.8/spreadsheet
+@dirrm include/libspreadsheet-1.8
