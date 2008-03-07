@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.15 2007/07/29 16:17:12 joerg Exp $
-#
+# $NetBSD: Makefile,v 1.16 2008/03/07 22:40:29 tron Exp $
 
-DISTNAME=	e2fsprogs-1.39
-PKGREVISION=	1
+DISTNAME=	e2fsprogs-1.40.7
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=e2fsprogs/}
 
