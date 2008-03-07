@@ -1,13 +1,14 @@
-$NetBSD: patch-al,v 1.1 2007/06/20 19:51:09 jlam Exp $
+$NetBSD: patch-al,v 1.2 2008/03/07 22:40:29 tron Exp $
 
---- MCONFIG.in.orig	2006-03-22 20:19:19.000000000 -0500
-+++ MCONFIG.in
-@@ -33,7 +33,7 @@ datadir = @datadir@
+--- debugfs/util.c.orig	2008-02-28 23:03:53.000000000 +0000
++++ debugfs/util.c	2008-03-07 21:11:18.000000000 +0000
+@@ -6,7 +6,8 @@
+  *
+  */
  
- CC = @CC@
- BUILD_CC = @BUILD_CC@
--DEFS = -DLOCALEDIR=\"$(localedir)\" @DEFS@
-+DEFS = -DLOCALEDIR=\"$(localedir)\" -DETC_DIR=\"$(root_sysconfdir)\" @DEFS@
- CFLAGS = @CFLAGS@
- CPPFLAGS =  -I$(top_builddir)/lib -I$(top_srcdir)/lib @CPPFLAGS@
- INTL_FLAGS = @INTL_FLAGS@
+-#define _XOPEN_SOURCE /* needed for strptime */
++
++#define _XOPEN_SOURCE 500 /* needed for strptime */
+ 
+ #include <stdio.h>
+ #include <unistd.h>

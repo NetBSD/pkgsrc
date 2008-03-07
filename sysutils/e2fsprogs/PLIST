@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/06/20 19:51:08 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/03/07 22:40:29 tron Exp $
 bin/chattr
 bin/lsattr
 bin/uuidgen
@@ -28,6 +28,7 @@ man/man8/mkfs.ext3.8
 man/man8/mklost+found.8
 man/man8/resize2fs.8
 man/man8/tune2fs.8
+man/man8/uuidd.8
 sbin/badblocks
 sbin/blkid
 sbin/debugfs
@@ -47,7 +48,9 @@ sbin/mkfs.ext3
 sbin/mklost+found
 sbin/resize2fs
 sbin/tune2fs
+sbin/uuidd
 share/examples/ext2fs/mke2fs.conf
+share/locale/ca/LC_MESSAGES/e2fsprogs.mo
 share/locale/cs/LC_MESSAGES/e2fsprogs.mo
 share/locale/de/LC_MESSAGES/e2fsprogs.mo
 share/locale/es/LC_MESSAGES/e2fsprogs.mo
@@ -55,6 +58,6 @@ share/locale/fr/LC_MESSAGES/e2fsprogs.mo
 share/locale/it/LC_MESSAGES/e2fsprogs.mo
 share/locale/nl/LC_MESSAGES/e2fsprogs.mo
 share/locale/pl/LC_MESSAGES/e2fsprogs.mo
-share/locale/rw/LC_MESSAGES/e2fsprogs.mo
 share/locale/sv/LC_MESSAGES/e2fsprogs.mo
 share/locale/tr/LC_MESSAGES/e2fsprogs.mo
+share/locale/vi/LC_MESSAGES/e2fsprogs.mo
