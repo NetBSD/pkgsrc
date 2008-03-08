@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/08 00:46:23 reed Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/08 00:49:26 reed Exp $
 
 DISTNAME=		lilo-22.8.src
 PKGNAME=		${DISTNAME:S/.src//}
@@ -14,7 +14,7 @@ COMMENT=		Generic boot loader for Linux
 # Build untested on other operating systems.
 ONLY_FOR_PLATFORM=	Linux-*-*
 
-WRKSRC=			${WRKDIR}/${PKGNAME}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 # Don't force perl for extra tool -- maybe a MESSAGE?
 #USE_PERL5=		YES
