@@ -1,0 +1,20 @@
+$NetBSD: patch-ac,v 1.1 2008/03/08 00:43:55 jlam Exp $
+
+Patch by Marcus Rueckert for staged installation of gems.
+
+--- lib/rubygems/install_update_options.rb.orig	2007-12-12 18:36:15.000000000 -0500
++++ lib/rubygems/install_update_options.rb
+@@ -25,6 +25,13 @@ module Gem::InstallUpdateOptions
+       options[:install_dir] = File.expand_path(value)
+     end
+ 
++    add_option(:"Install", '-B', '--build-root DIR',
++               'Temporary installation root. Useful for',
++               'building packages. Do not use when installing',
++               'remote gems.') do |value, options|
++      options[:build_root] = File.expand_path(value)
++    end
++
+     add_option(:"Install/Update", '-d', '--[no-]rdoc',
+                'Generate RDoc documentation for the gem on',
+                'install') do |value, options|
