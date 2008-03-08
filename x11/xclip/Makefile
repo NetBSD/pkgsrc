@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.11 2007/06/08 17:49:54 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/08 20:42:02 tnn Exp $
 #
 
-DISTNAME=	xclip-0.08
-PKGREVISION=	3
+DISTNAME=	xclip-0.10
 CATEGORIES=	x11
-MASTER_SITES=	http://people.debian.org/~kims/xclip/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xclip/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://people.debian.org/~kims/xclip/
+HOMEPAGE=	http://sourceforge.net/projects/xclip/
 COMMENT=	Command line interface to the X windows clipboard
 
-WRKSRC=		${WRKDIR}/xclip
-USE_IMAKE=	YES
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+GNU_CONFIGURE=	YES
+USE_TOOLS+=	gmake
 
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
