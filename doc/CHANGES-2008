@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.471 2008/03/08 14:10:43 bouyer Exp $
+$NetBSD: CHANGES-2008,v 1.472 2008/03/08 14:21:12 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -877,3 +877,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/grep to 2.5.3 [tnn 2008-03-08]
 	Updated devel/noweb to 2.11b [tnn 2008-03-08]
 	Updated sysutils/xentools3 to 3.1.3nb2 [bouyer 2008-03-08]
+	Updated print/libpaper to 1.1.23 [tnn 2008-03-08]
