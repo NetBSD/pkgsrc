@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/11/18 10:39:56 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2008/03/08 13:49:10 joerg Exp $
 
 DISTNAME=	ccache-2.4
 CATEGORIES=	devel
@@ -9,6 +9,7 @@ HOMEPAGE=	http://ccache.samba.org/
 COMMENT=	Cache for C/C++ compilers
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 
