@@ -1,0 +1,30 @@
+$NetBSD: patch-ad,v 1.1 2008/03/08 00:43:55 jlam Exp $
+
+Patch by Marcus Rueckert for staged installation of gems.
+
+--- lib/rubygems/installer.rb.orig	2007-12-20 19:43:06.000000000 -0500
++++ lib/rubygems/installer.rb
+@@ -73,6 +73,14 @@ class Gem::Installer
+     @format_executable = options[:format_executable]
+     @security_policy = options[:security_policy]
+     @wrappers = options[:wrappers]
++    @build_root = options[:build_root]
++    @bin_dir = Gem.bindir @gem_home
++    unless @build_root.nil? or @build_root == ""
++      @build_root = Pathname.new(@build_root).expand_path
++      @gem_home = File.join(@build_root, @gem_home)
++      @bin_dir = File.join(@build_root, @bin_dir)
++    end
++
+ 
+     begin
+       @format = Gem::Format.from_file_by_path @gem, @security_policy
+@@ -224,7 +232,7 @@ class Gem::Installer
+     # If the user has asked for the gem to be installed in a directory that is
+     # the system gem directory, then use the system bin directory, else create
+     # (or use) a new bin dir under the gem_home.
+-    bindir = Gem.bindir @gem_home
++    bindir = @bin_dir
+ 
+     Dir.mkdir bindir unless File.exist? bindir
+     raise Gem::FilePermissionError.new(bindir) unless File.writable? bindir
