@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/02/28 12:37:29 spz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/03/08 11:00:35 spz Exp $
 bin/RtConfig
 bin/peval
 bin/rpslcheck
 man/man1/CIDRAdvisor.1
-man/man1/Errors.1
+man/man1/IRRToolSet-Errors.1
 man/man1/RtConfig.1
 man/man1/aoe.1
 man/man1/peval.1
