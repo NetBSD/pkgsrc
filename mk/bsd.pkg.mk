@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1939 2008/02/26 13:46:21 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1940 2008/03/08 14:28:05 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -61,6 +61,7 @@ ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
 
 PKGBASE?=		${PKGNAME:C/-[^-]*$//}
 PKGVERSION?=		${PKGNAME:C/^.*-//}
+PKGVERSION?=		${PKGNAME:C/^.*-//}
 .if defined(PKGREVISION) && !empty(PKGREVISION) && (${PKGREVISION} != "0")
 .  if defined(PKGNAME)
 PKGNAME_NOREV:=		${PKGNAME}
@@ -73,6 +74,7 @@ PKGNAME_NOREV=		${DISTNAME}
 PKGNAME?=		${DISTNAME}
 PKGNAME_NOREV=		${PKGNAME}
 .endif
+PKGVERSION_NOREV=	${PKGNAME_NOREV:C/^.*-//}
 
 # A meta-package is a package that does not have any files and whose
 # only purpose is to depend on other packages, giving that collection
