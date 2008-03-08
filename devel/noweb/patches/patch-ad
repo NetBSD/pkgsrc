@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.1 2006/05/23 16:07:04 joerg Exp $
+$NetBSD: patch-ad,v 1.2 2008/03/08 13:02:40 tnn Exp $
 
---- shell/cpif.orig	1993-03-01 23:22:02.000000000 +0100
-+++ shell/cpif
+--- src/shell/cpif.orig	1993-03-01 23:22:02.000000000 +0100
++++ src/shell/cpif
 @@ -17,7 +17,7 @@ case $# in
  0)		echo 'Usage: '`basename $0`' [ -eq -ne ] file...' 1>&2; exit 2
  esac
