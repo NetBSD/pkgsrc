@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2008/03/08 20:56:37 gdt Exp $
+# $NetBSD: options.mk,v 1.5 2008/03/08 21:00:53 gdt Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.subversion
 PKG_SUPPORTED_OPTIONS=	apache22 apr1 serf
@@ -13,9 +13,4 @@ PKG_SUGGESTED_OPTIONS=	apr1
 
 .if !empty(PKG_OPTIONS:Mapache22) || !empty(PKG_OPTIONS:Mserf)
 PKG_OPTIONS+=		apr1
-.endif
-
-# Why is this here?  apache22 is not used
-.if !empty(PKG_OPTIONS:Mapr1) && empty(PKG_OPTIONS:Mapache22)
-PKG_OPTIONS+=		apache22
 .endif
