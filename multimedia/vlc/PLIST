@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/02/25 16:38:00 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/03/08 05:19:57 kefren Exp $
 ${COND_SKINS}bin/svlc
 bin/vlc
 bin/vlc-config
@@ -68,6 +68,7 @@ lib/vlc/audio_mixer/libspdif_mixer_plugin.so
 lib/vlc/audio_mixer/libtrivial_mixer_plugin.so
 lib/vlc/audio_output/libaout_file_plugin.so
 lib/vlc/audio_output/libaout_sdl_plugin.so
+${COND_ARTS}lib/vlc/audio_output/libarts_plugin.so
 lib/vlc/audio_output/liboss_plugin.so
 lib/vlc/codec/liba52_plugin.so
 lib/vlc/codec/libadpcm_plugin.so
