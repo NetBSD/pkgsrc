@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/01/18 05:09:47 tnn Exp $
+# $NetBSD: Makefile,v 1.32 2008/03/08 21:00:06 gdt Exp $
 
 PKGNAME=	${APACHE_PKG_PREFIX}-subversion-${SVNVER}
 PKGREVISION=	1
@@ -18,12 +18,7 @@ post-patch:
 	${RM} ${WRKSRC}/build-outputs.mk
 	${CP} ${FILESDIR}/build-outputs.mk ${WRKSRC}/build-outputs.mk
 
-.if !empty(PKG_OPTIONS:Mapache22)
-BUILDLINK_API_DEPENDS.apache?=	apache>=2.0.48
-PKG_APACHE_ACCEPTED=	apache22
-.else
-PKG_APACHE_ACCEPTED=	apache2
-.endif
+PKG_APACHE_ACCEPTED=	apache2 apache22
 
 .include "../../devel/subversion-base/buildlink3.mk"
 .include "../../mk/apache.mk"
