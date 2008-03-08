@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/01/24 02:17:00 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/08 11:14:11 obache Exp $
 
 DISTNAME=	dvdrtools-${VERSION}
 PKGNAME=	${DISTNAME:S/dvdrtools/dvdrecord/}
@@ -18,6 +18,12 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 LIBS.SunOS+=		-lsocket
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/pset.h)
+LIBS.NetBSD+=		-lrt
+.endif
 
 do-install:
 	cd ${WRKSRC}/cdrecord;						\
