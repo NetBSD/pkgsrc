@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.470 2008/03/08 13:07:01 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.471 2008/03/08 14:10:43 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -876,3 +876,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/findutils to 4.2.33 [tnn 2008-03-08]
 	Updated textproc/grep to 2.5.3 [tnn 2008-03-08]
 	Updated devel/noweb to 2.11b [tnn 2008-03-08]
+	Updated sysutils/xentools3 to 3.1.3nb2 [bouyer 2008-03-08]
