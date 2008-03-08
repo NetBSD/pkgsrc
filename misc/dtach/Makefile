@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2008/03/04 19:21:11 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/08 01:06:50 obache Exp $
 
-DISTNAME=	dtach-0.7
+DISTNAME=	dtach-0.8
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dtach/}
 
