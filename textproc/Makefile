@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.401 2008/03/02 02:46:35 obache Exp $
+# $NetBSD: Makefile,v 1.402 2008/03/08 00:19:36 mjl Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -295,6 +295,7 @@ SUBDIR+=	po4a
 SUBDIR+=	postgresql-autodoc
 SUBDIR+=	psgml-mode
 SUBDIR+=	pxp
+SUBDIR+=	py-Excelerator
 SUBDIR+=	py-FourSuite
 SUBDIR+=	py-HappyDoc
 SUBDIR+=	py-Reverend
