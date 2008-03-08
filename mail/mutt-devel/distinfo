@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.45 2007/12/06 08:51:51 cjs Exp $
+$NetBSD: distinfo,v 1.46 2008/03/08 14:28:32 joerg Exp $
 
 SHA1 (mutt-1.5.17.tar.gz) = 6b51745fc4baf463adde53e91efb2a6c7eec8492
 RMD160 (mutt-1.5.17.tar.gz) = e5c84a27ad25730afe64879e91bed89a021e0580
 Size (mutt-1.5.17.tar.gz) = 3572651 bytes
+SHA1 (patch-1.5.17.rr.compressed.1.gz) = 1f28b1a270871332a0c4dbaf11dd7132431b98db
+RMD160 (patch-1.5.17.rr.compressed.1.gz) = 39e244d2bf9e6db5f9c9d88f2b64d8aa7ea6b87b
+Size (patch-1.5.17.rr.compressed.1.gz) = 10589 bytes
 SHA1 (patch-aa) = 59d89dce24110be2927c8a1ea1fa5b780d644372
 SHA1 (patch-ab) = 4f9e8cbcec719263998d61fcc9a707548d804477
 SHA1 (patch-ac) = 48cae7543eeb3980dfdea8573ea2ec2192aca091
