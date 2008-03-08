@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/08 00:18:25 mjl Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/08 00:32:21 mjl Exp $
 #
 
 DISTNAME=	pyexcelerator-${VERSION}
@@ -21,13 +21,13 @@ EXTRACT_OPTS_ZIP=-aqo
 WRKSRC=${WRKDIR}/pyExcelerator-${VERSION}
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/docs/py-Excelerator
+	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/py-Excelerator
 	for f in CHANGES.txt LICENSE.txt README.txt THANKS.txt TODO.txt ; do \
-		${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/docs/py-Excelerator/ ; \
+		${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/doc/py-Excelerator/ ; \
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/examples/py-Excelerator
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/py-Excelerator
 	for f in ${WRKSRC}/examples/*.py ${WRKSRC}/tools/*.py ; do \
-		${INSTALL_DATA} $$f ${PREFIX}/examples/py-Excelerator/ ; \
+		${INSTALL_DATA} $$f ${PREFIX}/share/examples/py-Excelerator/ ; \
 	done
 
 .include "../../lang/python/extension.mk"
