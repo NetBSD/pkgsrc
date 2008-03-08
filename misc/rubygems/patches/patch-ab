@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.4 2008/03/08 00:43:55 jlam Exp $
+
+Patch by Marcus Rueckert for staged installation of gems.
+
+--- lib/rubygems/dependency_installer.rb.orig	2007-12-17 22:45:04.000000000 -0500
++++ lib/rubygems/dependency_installer.rb
+@@ -44,6 +44,7 @@ class Gem::DependencyInstaller
+     @format_executable = options[:format_executable]
+     @ignore_dependencies = options[:ignore_dependencies]
+     @install_dir = options[:install_dir] || Gem.dir
++    @build_root = options[:build_root]
+     @security_policy = options[:security_policy]
+     @wrappers = options[:wrappers]
+ 
+@@ -230,6 +231,7 @@ class Gem::DependencyInstaller
+                                 :format_executable => @format_executable,
+                                 :ignore_dependencies => @ignore_dependencies,
+                                 :install_dir => @install_dir,
++                                :build_root => @build_root,
+                                 :security_policy => @security_policy,
+                                 :wrappers => @wrappers
+ 
