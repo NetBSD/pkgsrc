@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.466 2008/03/08 00:57:58 reed Exp $
+$NetBSD: CHANGES-2008,v 1.467 2008/03/08 01:07:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -869,3 +869,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/py-Excelerator version 0.6.3a [mjl 2008-03-08]
 	Added devel/bin86 version 0.16.17nb1 [reed 2008-03-08]
 	Added sysutils/lilo version 22.8 [reed 2008-03-08]
+	Updated misc/dtach to 0.8 [obache 2008-03-08]
