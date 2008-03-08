@@ -1,25 +1,31 @@
-$NetBSD: patch-co,v 1.1 2007/05/22 12:17:56 spz Exp $
+$NetBSD: patch-co,v 1.2 2008/03/08 11:00:35 spz Exp $
 
 --- ./src/gnug++/int.defs.h.orig	2007-02-09 22:30:25.000000000 +0100
 +++ ./src/gnug++/int.defs.h
-@@ -56,10 +56,15 @@ Foundation, 675 Mass Ave, Cambridge, MA 
+@@ -16,7 +16,13 @@ License along with this library; if not,
+ Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
+ */
+ 
++#if defined( HAVE_STDINT_H )
+ #include <stdint.h>
++#elif defined( HAVE_INTTYPES_H )
++#include <inttypes.h>
++#else
++#include <sys/types.h>
++#endif
+ 
+ #ifndef _intdefs_h
+ #define _intdefs_h 1
+@@ -55,11 +61,6 @@ Foundation, 675 Mass Ave, Cambridge, MA 
+ 
  #define HASHTABLE_TOO_CROWDED(COUNT, SIZE) ((SIZE) - ((SIZE) >> 3) <= (COUNT))
  
- // Allow portable address arithmetic
+-// Allow portable address arithmetic
 -#if __WORDSIZE == 64
 -typedef uint64_t addr_t;
 -#else
 -typedef uint32_t addr_t;
 -#endif
-+//#if __WORDSIZE == 64
-+//typedef uint64_t addr_t;
-+//#else
-+//typedef uint32_t addr_t;
-+//#endif
-+
-+// the previous might work if __WORDSIZE was portably defined. It's not.
-+// also, since all it ever gets used to is pointer arithmetic, char* is
-+// what is ought to be (and its name ought to be caddr_t really)
 +typedef char* addr_t;
  
  #endif

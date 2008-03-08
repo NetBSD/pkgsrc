@@ -5,9 +5,9 @@ to make routing information more convenient and useful for
 network engineers, by providing tools for automated router configuration,
 routing policies analysis, and maintenance.
 
-This package contains the programs RtConfig, CIDRAdvisor, peval, prtraceroute,
-prpath and rpslcheck (aka prcheck). It doesn't try to build aoe and roe,
-which want TCL/TK (and X).
+This package contains the programs RtConfig, peval and rpslcheck.
+It doesn't try to build aoe and roe, which want TCL/TK (and X), nor
+CIDRAdvisor, prpath and prtraceroute, which are currently broken.
 
 IRRToolSet started life as RAToolSet from ISI.edu, was then kept by RIPE NCC
-for a while, and lately transferred to ISC.
+for a while, and is currently maintained at ISC.
