@@ -1,11 +1,15 @@
-# $NetBSD: Makefile,v 1.20 2008/02/07 13:24:36 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2008/03/08 00:13:43 reed Exp $
 
 DISTNAME=		bcc
+PKGREVISION=		1
 PKGNAME=		bcc-95.3.12
 CATEGORIES=		devel lang
 
 MAINTAINER=		tsarna@NetBSD.org
 COMMENT=		Bruce Evans' C compiler (with as and ld); can do 16-bit code
+
+CONFLICTS=		bin86-[0-9]*
+CONFLICTS+=		dev86-[0-9]*
 
 NOT_FOR_PLATFORM=	*-*-alpha *-*-x86_64	# Severe LP64 problems
 NOT_FOR_PLATFORM+=	Interix-*-*		# no <a.out.h>
