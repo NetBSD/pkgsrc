@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/03/08 00:43:54 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2008/03/08 03:37:55 jlam Exp $
 
 DISTNAME=	rubygems-1.0.1
 PKGREVISION=	1
@@ -21,7 +21,7 @@ RUBY_REQD=	1.8.3
 REPLACE_RUBY_DIRS=	${WRKSRC}/bin
 REPLACE_RUBY_PAT=	[a-z]*
 
-GEMS_SUBDIR=	lib/ruby/gems/1.8
+GEMS_SUBDIR=	lib/ruby/gems/${RUBY_VER_DIR}
 REQD_DIRS=	${GEMS_SUBDIR:H}
 REQD_DIRS+=	${GEMS_SUBDIR}
 REQD_DIRS+=	${GEMS_SUBDIR}/cache
