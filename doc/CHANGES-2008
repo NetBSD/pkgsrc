@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.468 2008/03/08 01:12:03 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.469 2008/03/08 08:58:00 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -872,3 +872,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/dtach to 0.8 [obache 2008-03-08]
 	Updated devel/flex to 2.5.35 [tnn 2008-03-08]
 	Updated sysutils/coreutils to 6.10 [tnn 2008-03-08]
+	Updated sysutils/ntfsprogs to 2.0.0 [adam 2008-03-08]
