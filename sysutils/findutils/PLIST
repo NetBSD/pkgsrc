@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/10/16 00:45:52 tnn Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/03/08 11:15:03 tnn Exp $
 bin/${GNU_PROGRAM_PREFIX}find
 bin/${GNU_PROGRAM_PREFIX}locate
 bin/${GNU_PROGRAM_PREFIX}updatedb
@@ -45,6 +45,7 @@ share/locale/sl/LC_MESSAGES/findutils.mo
 share/locale/sr/LC_MESSAGES/findutils.mo
 share/locale/sv/LC_MESSAGES/findutils.mo
 share/locale/tr/LC_MESSAGES/findutils.mo
+share/locale/uk/LC_MESSAGES/findutils.mo
 share/locale/vi/LC_MESSAGES/findutils.mo
 share/locale/zh_CN/LC_MESSAGES/findutils.mo
 share/locale/zh_TW/LC_MESSAGES/findutils.mo
