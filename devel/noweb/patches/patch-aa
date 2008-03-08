@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.2 2001/04/13 17:58:52 jtb Exp $
+$NetBSD: patch-aa,v 1.3 2008/03/08 13:02:40 tnn Exp $
 
---- Makefile.orig	Mon Aug 17 00:54:11 1998
-+++ Makefile
+--- src/Makefile.orig	2006-06-12 22:14:20.000000000 +0200
++++ src/Makefile
 @@ -2,13 +2,13 @@
  # See file COPYRIGHT for more information.
  #
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.2 2001/04/13 17:58:52 jtb Exp $
  ICONT=icont
  
  # BIN is where the commands (notangle, noweave, nountangle, noroots) land
-@@ -18,13 +18,13 @@
+@@ -18,13 +18,13 @@ ICONT=icont
  # MAN7EXT is the extension for the nowebstyle man page (usually 7)
  # TEXINPUTS is the directory for TeX macro files
  # ELISP is the directory for emacs lisp files, or /dev/null not to install
@@ -39,115 +39,61 @@ $NetBSD: patch-aa,v 1.2 2001/04/13 17:58:52 jtb Exp $
  
  # change WEAVE if you want a different version of noweave to be installed
  WEAVE=noweave		
-@@ -41,14 +41,14 @@
+@@ -40,10 +40,10 @@ CAT7DIR=$(MAN)/cat$(MAN7EXT)
+ LIBNAME=$(LIB)
  TEXNAME=$(TEXINPUTS)
  
- all:
+-all: 
 -	cd c; make "CC=$(CC)" "CFLAGS=$(CFLAGS)" all 
-+	cd c; $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" all 
++all:
++	cd c; $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" all
  	for i in shell lib xdoc tex; do (cd $$i; make all); done
 -	cd $(LIBSRC); make "ICONT=$(ICONT)" "ICONC=$(ICONC)" all
 +	cd $(LIBSRC); make ICONT="$(ICONT)" ICONC="$(ICONC)" all
  
- install: install-code install-man install-tex install-elisp
- 
- install-shell:
--	-mkdir $(BIN) $(LIB) 2>/dev/null
-+	-mkdir -p $(BIN) $(LIB) 2>/dev/null
- 	sed "s@|LIBDIR|@$(LIBNAME)@" shell/noweb > $(BIN)/noweb
- 	chmod +x $(BIN)/noweb
- 	sed "s@|LIBDIR|@$(LIBNAME)@" shell/notangle > $(BIN)/notangle
-@@ -74,13 +74,13 @@
- 	cp shell/tmac.w $(LIB)
+ FAQ: FAQ.html
+ 	sleep 1; html2ascii FAQ.html > FAQ
+@@ -98,7 +98,6 @@ uninstall-shell:
+ 	rm $(LIB)/tmac.w
  
  install-code: install-shell
 -	-mkdir $(BIN) $(LIB) 2>/dev/null
-+	-mkdir -p $(BIN) $(LIB) 2>/dev/null
  	strip c/nt c/markup c/mnt c/finduses
  	cp c/nt c/markup c/mnt c/finduses $(LIB)
  	cd $(LIBSRC); make ICONT=$(ICONT) ICONC=$(ICONC) LIB=$(LIB) BIN=$(BIN) install
- 	cd lib; make LIB=$(LIB) install
+@@ -109,7 +108,7 @@ uninstall-code: uninstall-shell
+ 	cd $(LIBSRC); make ICONT=$(ICONT) ICONC=$(ICONC) LIB=$(LIB) BIN=$(BIN) uninstall
+ 	cd lib; make LIB=$(LIB) uninstall
  install-man:
 -	-mkdir $(MAN) $(MANDIR) $(MAN7DIR) 2>/dev/null
 +	-mkdir -p $(MAN) $(MANDIR) $(MAN7DIR) 2>/dev/null
  	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/cpif.1 > $(MANDIR)/cpif.$(MANEXT)
  	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/nodefs.1 > $(MANDIR)/nodefs.$(MANEXT)
  	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/noroots.1 > $(MANDIR)/noroots.$(MANEXT)
-@@ -98,49 +98,49 @@
+@@ -142,6 +141,8 @@ uninstall-man:
+ 	rm -f $(MANDIR)/noweave.$(MANEXT)
  	rm -f $(MANDIR)/nountangle.$(MANEXT)
- 	(cd $(MANDIR); ln notangle.$(MANEXT) nountangle.$(MANEXT))
  install-gzipped-man:
--	-mkdir $(MAN) $(MANDIR) $(MAN7DIR) 2>/dev/null
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/cpif.1  | gzip -9 > $(MANDIR)/cpif.$(MANEXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/nodefs.1  | gzip -9 > $(MANDIR)/nodefs.$(MANEXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/noroots.1  | gzip -9 > $(MANDIR)/noroots.$(MANEXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/noweb.1  | gzip -9 > $(MANDIR)/noweb.$(MANEXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/noindex.1  | gzip -9 > $(MANDIR)/noindex.$(MANEXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/nuweb2noweb.1  | gzip -9 > $(MANDIR)/nuweb2noweb.$(MANEXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/notangle.1  | gzip -9 > $(MANDIR)/notangle.$(MANEXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/noroff.1  | gzip -9 > $(MANDIR)/noroff.$(MANEXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/sl2h.1  | gzip -9 > $(MANDIR)/sl2h.$(MANEXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/htmltoc.1  | gzip -9 > $(MANDIR)/htmltoc.$(MANEXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/nowebstyle.7  | gzip -9 > $(MAN7DIR)/nowebstyle.$(MAN7EXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/nowebfilters.7  | gzip -9 > $(MAN7DIR)/nowebfilters.$(MAN7EXT).gz
-+	-mkdir -p $(MAN) $(MANDIR) $(MAN7DIR) 2>/dev/null
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/cpif.1  > $(MANDIR)/cpif.$(MANEXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/nodefs.1  > $(MANDIR)/nodefs.$(MANEXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/noroots.1 > $(MANDIR)/noroots.$(MANEXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/noweb.1  > $(MANDIR)/noweb.$(MANEXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/noindex.1 > $(MANDIR)/noindex.$(MANEXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/nuweb2noweb.1  > $(MANDIR)/nuweb2noweb.$(MANEXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/notangle.1 > $(MANDIR)/notangle.$(MANEXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/noroff.1 > $(MANDIR)/noroff.$(MANEXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/sl2h.1  > $(MANDIR)/sl2h.$(MANEXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/htmltoc.1 > $(MANDIR)/htmltoc.$(MANEXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/nowebstyle.7  > $(MAN7DIR)/nowebstyle.$(MAN7EXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/nowebfilters.7  > $(MAN7DIR)/nowebfilters.$(MAN7EXT)
- 	rm -f $(MANDIR)/noweave.$(MANEXT).gz
- 	(cd $(MANDIR); ln notangle.$(MANEXT).gz noweave.$(MANEXT).gz)
- 	rm -f $(MANDIR)/nountangle.$(MANEXT).gz
- 	(cd $(MANDIR); ln notangle.$(MANEXT).gz nountangle.$(MANEXT).gz)
- install-preformat-man:
- 	-echo "Warning: install-preformat-man is obsolete, even on Slackware systems" 1>&2
--	-mkdir $(MAN) $(CATDIR) $(CAT7DIR) 2>/dev/null
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/cpif.txt  | gzip > $(CATDIR)/cpif.$(MANEXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/nodefs.txt  | gzip > $(CATDIR)/nodefs.$(MANEXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/noroots.txt  | gzip > $(CATDIR)/noroots.$(MANEXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/noweb.txt  | gzip > $(CATDIR)/noweb.$(MANEXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/noindex.txt  | gzip > $(CATDIR)/noindex.$(MANEXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/nuweb2noweb.txt  | gzip > $(CATDIR)/nuweb2noweb.$(MANEXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/notangle.txt  | gzip > $(CATDIR)/notangle.$(MANEXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/noroff.txt  | gzip > $(CATDIR)/noroff.$(MANEXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/sl2h.txt  | gzip > $(CATDIR)/sl2h.$(MANEXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/htmltoc.txt  | gzip > $(CATDIR)/htmltoc.$(MANEXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/nowebstyle.txt  | gzip > $(CAT7DIR)/nowebstyle.$(MAN7EXT).gz
--	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/nowebfilters.txt  | gzip > $(CAT7DIR)/nowebfilters.$(MAN7EXT).gz
-+	-mkdir -p $(MAN) $(CATDIR) $(CAT7DIR) 2>/dev/null
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/cpif.txt > $(CATDIR)/cpif.$(MANEXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/nodefs.txt > $(CATDIR)/nodefs.$(MANEXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/noroots.txt  > $(CATDIR)/noroots.$(MANEXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/noweb.txt  > $(CATDIR)/noweb.$(MANEXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/noindex.txt > $(CATDIR)/noindex.$(MANEXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/nuweb2noweb.txt  > $(CATDIR)/nuweb2noweb.$(MANEXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/notangle.txt  > $(CATDIR)/notangle.$(MANEXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/noroff.txt > $(CATDIR)/noroff.$(MANEXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/sl2h.txt > $(CATDIR)/sl2h.$(MANEXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/htmltoc.txt  > $(CATDIR)/htmltoc.$(MANEXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/nowebstyle.txt  > $(CAT7DIR)/nowebstyle.$(MAN7EXT)
-+	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/nowebfilters.txt > $(CAT7DIR)/nowebfilters.$(MAN7EXT)
- 	rm -f $(CATDIR)/noweave.$(MANEXT).gz
- 	(cd $(CATDIR); ln notangle.$(MANEXT).gz noweave.$(MANEXT).gz)
++	# nothing
++dont-install-gzipped-man:
+ 	-mkdir $(MAN) $(MANDIR) $(MAN7DIR) 2>/dev/null
+ 	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/cpif.1  | gzip -9 > $(MANDIR)/cpif.$(MANEXT).gz
+ 	sed -e "s@|LIBDIR|@$(LIBNAME)@" -e "s@|TEXINPUTS|@$(TEXNAME)@" xdoc/nodefs.1  | gzip -9 > $(MANDIR)/nodefs.$(MANEXT).gz
+@@ -179,7 +180,7 @@ install-preformat-man:
  	rm -f $(CATDIR)/nountangle.$(MANEXT).gz
  	(cd $(CATDIR); ln notangle.$(MANEXT).gz nountangle.$(MANEXT).gz)
  install-tex:
 -	-mkdir $(TEXINPUTS) 2>/dev/null
 +	-mkdir -p $(TEXINPUTS) 2>/dev/null
  	cp tex/nwmac.tex tex/noweb.sty $(TEXINPUTS)
- 	-texhash
+ 	-texhash || echo "Program texhash not found or failed"
+ 
+@@ -187,7 +188,7 @@ uninstall-tex:
+ 	rm -f $(TEXINPUTS)/nwmac.tex $(TEXINPUTS)/noweb.sty
  
  install-elisp:
 -	-mkdir $(ELISP) 2>/dev/null
 +	-mkdir -p $(ELISP) 2>/dev/null
  	cp elisp/noweb-mode.el $(ELISP)
  
- checkin:
+ uninstall-elisp:
