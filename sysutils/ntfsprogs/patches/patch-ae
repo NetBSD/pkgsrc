@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.4 2006/03/03 10:15:46 adam Exp $
+$NetBSD: patch-ae,v 1.5 2008/03/08 08:56:47 adam Exp $
 
---- libntfs/device.c.orig	2006-02-24 16:48:40.000000000 +0100
+--- libntfs/device.c.orig	2007-09-26 20:28:34.000000000 +0200
 +++ libntfs/device.c
-@@ -85,6 +87,10 @@
+@@ -85,6 +85,10 @@
  #	define BLKBSZSET _IOW(0x12,113,size_t) /* Set device block size in bytes. */
  #endif
  
@@ -13,7 +13,7 @@ $NetBSD: patch-ae,v 1.4 2006/03/03 10:15:46 adam Exp $
  /**
   * ntfs_device_alloc - allocate an ntfs device structure and pre-initialize it
   * @name:	name of the device (must be present)
-@@ -531,6 +537,23 @@ s64 ntfs_device_size_get(struct ntfs_dev
+@@ -599,6 +603,23 @@ s64 ntfs_device_size_get(struct ntfs_dev
  		}
  	}
  #endif
