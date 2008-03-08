@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.474 2008/03/08 18:45:03 reed Exp $
+$NetBSD: CHANGES-2008,v 1.475 2008/03/08 19:01:19 reed Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -880,3 +880,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated print/libpaper to 1.1.23 [tnn 2008-03-08]
 	Updated www/horde to 3.1.7 [adrianp 2008-03-08]
 	Added time/vixie-cron version 4.1nb1 [reed 2008-03-08]
+	Added chat/tkabber version 0.10.0 [reed 2008-03-08]
