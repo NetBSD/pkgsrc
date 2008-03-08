@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/07/20 08:22:02 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/03/08 08:56:47 adam Exp $
 bin/ntfscat
 bin/ntfscluster
 bin/ntfscmp
@@ -12,6 +12,7 @@ include/ntfs/bootsect.h
 include/ntfs/collate.h
 include/ntfs/compat.h
 include/ntfs/compress.h
+include/ntfs/crypto.h
 include/ntfs/debug.h
 include/ntfs/device.h
 include/ntfs/device_io.h
@@ -29,17 +30,16 @@ include/ntfs/logging.h
 include/ntfs/mft.h
 include/ntfs/mst.h
 include/ntfs/ntfstime.h
-include/ntfs/rich.h
 include/ntfs/runlist.h
 include/ntfs/security.h
 include/ntfs/support.h
-include/ntfs/tree.h
 include/ntfs/types.h
 include/ntfs/unistr.h
 include/ntfs/version.h
 include/ntfs/volume.h
 lib/libntfs.la
 man/man8/libntfs-gnomevfs.8
+man/man8/libntfs.8
 man/man8/mkfs.ntfs.8
 man/man8/mkntfs.8
 man/man8/ntfscat.8
