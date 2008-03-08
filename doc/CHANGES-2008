@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.464 2008/03/07 22:54:32 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.465 2008/03/08 00:21:19 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -864,3 +864,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/e2fsprogs to 1.40.7 [tron 2008-03-07]
 	Updated finance/gnucash to 2.2.4 [wiz 2008-03-07]
 	Removed misc/goffice successor misc/goffice0.6 [wiz 2008-03-07]
+	Added textproc/py-Excelerator version 0.6.3a [mjl 2008-03-08]
