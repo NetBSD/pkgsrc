@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.469 2008/03/08 08:58:00 adam Exp $
+$NetBSD: CHANGES-2008,v 1.470 2008/03/08 13:07:01 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -873,3 +873,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/flex to 2.5.35 [tnn 2008-03-08]
 	Updated sysutils/coreutils to 6.10 [tnn 2008-03-08]
 	Updated sysutils/ntfsprogs to 2.0.0 [adam 2008-03-08]
+	Updated sysutils/findutils to 4.2.33 [tnn 2008-03-08]
+	Updated textproc/grep to 2.5.3 [tnn 2008-03-08]
+	Updated devel/noweb to 2.11b [tnn 2008-03-08]
