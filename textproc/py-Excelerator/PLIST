@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/08 00:18:25 mjl Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/03/08 00:32:21 mjl Exp $
 ${PYSITELIB}/pyExcelerator/BIFFRecords.py
 ${PYSITELIB}/pyExcelerator/BIFFRecords.pyc
 ${PYSITELIB}/pyExcelerator/BIFFRecords.pyo
@@ -59,45 +59,45 @@ ${PYSITELIB}/pyExcelerator/__init__.pyo
 ${PYSITELIB}/pyExcelerator/antlr.py
 ${PYSITELIB}/pyExcelerator/antlr.pyc
 ${PYSITELIB}/pyExcelerator/antlr.pyo
-docs/py-Excelerator/CHANGES.txt
-docs/py-Excelerator/LICENSE.txt
-docs/py-Excelerator/README.txt
-docs/py-Excelerator/THANKS.txt
-docs/py-Excelerator/TODO.txt
-examples/py-Excelerator/big-16Mb.py
-examples/py-Excelerator/big-35Mb.py
-examples/py-Excelerator/blanks.py
-examples/py-Excelerator/col_width.py
-examples/py-Excelerator/dates.py
-examples/py-Excelerator/format.py
-examples/py-Excelerator/formula_names.py
-examples/py-Excelerator/formulas.py
-examples/py-Excelerator/hyperlinks.py
-examples/py-Excelerator/image.py
-examples/py-Excelerator/merged.py
-examples/py-Excelerator/merged0.py
-examples/py-Excelerator/merged1.py
-examples/py-Excelerator/mini.py
-examples/py-Excelerator/num_formats.py
-examples/py-Excelerator/numbers.py
-examples/py-Excelerator/outline.py
-examples/py-Excelerator/panes.py
-examples/py-Excelerator/parse-fmla.py
-examples/py-Excelerator/protection.py
-examples/py-Excelerator/row_styles.py
-examples/py-Excelerator/row_styles_empty.py
-examples/py-Excelerator/sst.py
-examples/py-Excelerator/unicode0.py
-examples/py-Excelerator/unicode1.py
-examples/py-Excelerator/unicode2.py
-examples/py-Excelerator/wsprops.py
-examples/py-Excelerator/Analyzer.py
-examples/py-Excelerator/biff-dumper.py
-examples/py-Excelerator/compdoc-dumper.py
-examples/py-Excelerator/xls2csv-gerry.py
-examples/py-Excelerator/xls2csv.py
-examples/py-Excelerator/xls2html.py
-examples/py-Excelerator/xls2txt.py
-@dirrm examples/py-Excelerator
-@dirrm docs/py-Excelerator
+share/doc/py-Excelerator/CHANGES.txt
+share/doc/py-Excelerator/LICENSE.txt
+share/doc/py-Excelerator/README.txt
+share/doc/py-Excelerator/THANKS.txt
+share/doc/py-Excelerator/TODO.txt
+share/examples/py-Excelerator/big-16Mb.py
+share/examples/py-Excelerator/big-35Mb.py
+share/examples/py-Excelerator/blanks.py
+share/examples/py-Excelerator/col_width.py
+share/examples/py-Excelerator/dates.py
+share/examples/py-Excelerator/format.py
+share/examples/py-Excelerator/formula_names.py
+share/examples/py-Excelerator/formulas.py
+share/examples/py-Excelerator/hyperlinks.py
+share/examples/py-Excelerator/image.py
+share/examples/py-Excelerator/merged.py
+share/examples/py-Excelerator/merged0.py
+share/examples/py-Excelerator/merged1.py
+share/examples/py-Excelerator/mini.py
+share/examples/py-Excelerator/num_formats.py
+share/examples/py-Excelerator/numbers.py
+share/examples/py-Excelerator/outline.py
+share/examples/py-Excelerator/panes.py
+share/examples/py-Excelerator/parse-fmla.py
+share/examples/py-Excelerator/protection.py
+share/examples/py-Excelerator/row_styles.py
+share/examples/py-Excelerator/row_styles_empty.py
+share/examples/py-Excelerator/sst.py
+share/examples/py-Excelerator/unicode0.py
+share/examples/py-Excelerator/unicode1.py
+share/examples/py-Excelerator/unicode2.py
+share/examples/py-Excelerator/wsprops.py
+share/examples/py-Excelerator/Analyzer.py
+share/examples/py-Excelerator/biff-dumper.py
+share/examples/py-Excelerator/compdoc-dumper.py
+share/examples/py-Excelerator/xls2csv-gerry.py
+share/examples/py-Excelerator/xls2csv.py
+share/examples/py-Excelerator/xls2html.py
+share/examples/py-Excelerator/xls2txt.py
+@dirrm share/examples/py-Excelerator
+@dirrm share/doc/py-Excelerator
 @dirrm ${PYSITELIB}/pyExcelerator
