@@ -1,7 +1,7 @@
-$NetBSD: patch-aj,v 1.1 2006/05/23 16:07:04 joerg Exp $
+$NetBSD: patch-aj,v 1.2 2008/03/08 13:02:40 tnn Exp $
 
---- ../contrib/norman/htmlgif/pstopbm.orig	1998-08-07 20:29:32.000000000 +0200
-+++ ../contrib/norman/htmlgif/pstopbm
+--- contrib/norman/htmlgif/pstopbm.orig	1998-08-07 20:29:32.000000000 +0200
++++ contrib/norman/htmlgif/pstopbm
 @@ -36,8 +36,8 @@ while [ $# -gt 0 ]; do
    shift
  done
