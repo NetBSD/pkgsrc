@@ -1,18 +1,18 @@
-# $NetBSD: Makefile,v 1.42 2007/11/26 15:40:45 tron Exp $
+# $NetBSD: Makefile,v 1.43 2008/03/08 01:06:52 tnn Exp $
 
-DISTNAME=	coreutils-6.9
-PKGREVISION=	1
+DISTNAME=	coreutils-6.10
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_GNU:=coreutils/}
-EXTRACT_SUFX=	.tar.bz2
+#EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	tech-pkg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/coreutils/
 COMMENT=	GNU basic file, shell and text manipulation utilities
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 NOT_FOR_PLATFORM=	NetBSD-2.0[D-H]-*
 
-CONFLICTS=	fileutils-[0-9]* linuxls-[0-9]* sh-utils-[0-9]* textutils-[0-9]*
+CONFLICTS=	fileutils-[0-9]* linuxls-[0-9]* sh-utils-[0-9]* textutils-[0-9]* mktemp-[0-9]*
 
 CFLAGS+=		-g
 LDFLAGS+=		-g
@@ -67,12 +67,13 @@ CONFLICTS+=		teTeX-bin<3
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
-.if ${OPSYS} == "NetBSD" ||  ${OPSYS} == "FreeBSD" || \
-  ${OPSYS} == "OpenBSD"
-MAKE_FLAGS+=	setuid_root_mode=a=rx
-MESSAGE_SRC=	${.CURDIR}/MESSAGE.gsu
-MESSAGE_SUBST+=	OPSYS=${OPSYS:Q}
-.endif
+#CONFIGURE_ARGS+=	--enable-install-program=su
+#.if ${OPSYS} == "NetBSD" ||  ${OPSYS} == "FreeBSD" || \
+#  ${OPSYS} == "OpenBSD"
+#MAKE_FLAGS+=	setuid_root_mode=a=rx
+#MESSAGE_SRC=	${.CURDIR}/MESSAGE.gsu
+#MESSAGE_SUBST+=	OPSYS=${OPSYS:Q}
+#.endif
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

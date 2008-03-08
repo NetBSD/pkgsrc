@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.gsu,v 1.2 2005/12/05 20:50:59 rillig Exp $
-
-The GNU ${PKGNAME} version of su doesn't support the wheel group.
-Because of that it is installed without the setuid bit on ${OPSYS}.
-
-===========================================================================

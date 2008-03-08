@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.8 2007/07/18 11:25:19 tnn Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/03/08 01:06:52 tnn Exp $
 bin/${GNU_PROGRAM_PREFIX}[
 bin/${GNU_PROGRAM_PREFIX}base64
 bin/${GNU_PROGRAM_PREFIX}basename
 bin/${GNU_PROGRAM_PREFIX}cat
+bin/${GNU_PROGRAM_PREFIX}chcon
 bin/${GNU_PROGRAM_PREFIX}chgrp
 bin/${GNU_PROGRAM_PREFIX}chmod
 bin/${GNU_PROGRAM_PREFIX}chown
@@ -30,7 +31,6 @@ bin/${GNU_PROGRAM_PREFIX}fold
 bin/${GNU_PROGRAM_PREFIX}groups
 bin/${GNU_PROGRAM_PREFIX}head
 ${COREUTILS_HAVE_HOSTID}bin/${GNU_PROGRAM_PREFIX}hostid
-bin/${GNU_PROGRAM_PREFIX}hostname
 bin/${GNU_PROGRAM_PREFIX}id
 bin/${GNU_PROGRAM_PREFIX}install
 bin/${GNU_PROGRAM_PREFIX}join
@@ -43,6 +43,7 @@ bin/${GNU_PROGRAM_PREFIX}md5sum
 bin/${GNU_PROGRAM_PREFIX}mkdir
 bin/${GNU_PROGRAM_PREFIX}mkfifo
 bin/${GNU_PROGRAM_PREFIX}mknod
+bin/${GNU_PROGRAM_PREFIX}mktemp
 bin/${GNU_PROGRAM_PREFIX}mv
 bin/${GNU_PROGRAM_PREFIX}nice
 bin/${GNU_PROGRAM_PREFIX}nl
@@ -59,6 +60,7 @@ bin/${GNU_PROGRAM_PREFIX}pwd
 bin/${GNU_PROGRAM_PREFIX}readlink
 bin/${GNU_PROGRAM_PREFIX}rm
 bin/${GNU_PROGRAM_PREFIX}rmdir
+bin/${GNU_PROGRAM_PREFIX}runcon
 bin/${GNU_PROGRAM_PREFIX}seq
 bin/${GNU_PROGRAM_PREFIX}sha1sum
 bin/${GNU_PROGRAM_PREFIX}sha224sum
@@ -72,7 +74,6 @@ bin/${GNU_PROGRAM_PREFIX}sort
 bin/${GNU_PROGRAM_PREFIX}split
 bin/${GNU_PROGRAM_PREFIX}stat
 bin/${GNU_PROGRAM_PREFIX}stty
-bin/${GNU_PROGRAM_PREFIX}su
 bin/${GNU_PROGRAM_PREFIX}sum
 bin/${GNU_PROGRAM_PREFIX}sync
 bin/${GNU_PROGRAM_PREFIX}tac
@@ -99,6 +100,7 @@ info/coreutils.info
 man/man1/${GNU_PROGRAM_PREFIX}base64.1
 man/man1/${GNU_PROGRAM_PREFIX}basename.1
 man/man1/${GNU_PROGRAM_PREFIX}cat.1
+man/man1/${GNU_PROGRAM_PREFIX}chcon.1
 man/man1/${GNU_PROGRAM_PREFIX}chgrp.1
 man/man1/${GNU_PROGRAM_PREFIX}chmod.1
 man/man1/${GNU_PROGRAM_PREFIX}chown.1
@@ -126,7 +128,6 @@ man/man1/${GNU_PROGRAM_PREFIX}fold.1
 man/man1/${GNU_PROGRAM_PREFIX}groups.1
 man/man1/${GNU_PROGRAM_PREFIX}head.1
 man/man1/${GNU_PROGRAM_PREFIX}hostid.1
-man/man1/${GNU_PROGRAM_PREFIX}hostname.1
 man/man1/${GNU_PROGRAM_PREFIX}id.1
 man/man1/${GNU_PROGRAM_PREFIX}install.1
 man/man1/${GNU_PROGRAM_PREFIX}join.1
@@ -139,6 +140,7 @@ man/man1/${GNU_PROGRAM_PREFIX}md5sum.1
 man/man1/${GNU_PROGRAM_PREFIX}mkdir.1
 man/man1/${GNU_PROGRAM_PREFIX}mkfifo.1
 man/man1/${GNU_PROGRAM_PREFIX}mknod.1
+man/man1/${GNU_PROGRAM_PREFIX}mktemp.1
 man/man1/${GNU_PROGRAM_PREFIX}mv.1
 man/man1/${GNU_PROGRAM_PREFIX}nice.1
 man/man1/${GNU_PROGRAM_PREFIX}nl.1
@@ -155,6 +157,7 @@ man/man1/${GNU_PROGRAM_PREFIX}pwd.1
 man/man1/${GNU_PROGRAM_PREFIX}readlink.1
 man/man1/${GNU_PROGRAM_PREFIX}rm.1
 man/man1/${GNU_PROGRAM_PREFIX}rmdir.1
+man/man1/${GNU_PROGRAM_PREFIX}runcon.1
 man/man1/${GNU_PROGRAM_PREFIX}seq.1
 man/man1/${GNU_PROGRAM_PREFIX}sha1sum.1
 man/man1/${GNU_PROGRAM_PREFIX}sha224sum.1
@@ -168,7 +171,6 @@ man/man1/${GNU_PROGRAM_PREFIX}sort.1
 man/man1/${GNU_PROGRAM_PREFIX}split.1
 man/man1/${GNU_PROGRAM_PREFIX}stat.1
 man/man1/${GNU_PROGRAM_PREFIX}stty.1
-man/man1/${GNU_PROGRAM_PREFIX}su.1
 man/man1/${GNU_PROGRAM_PREFIX}sum.1
 man/man1/${GNU_PROGRAM_PREFIX}sync.1
 man/man1/${GNU_PROGRAM_PREFIX}tac.1
@@ -213,7 +215,6 @@ share/locale/ko/LC_MESSAGES/coreutils.mo
 share/locale/ms/LC_MESSAGES/coreutils.mo
 share/locale/nb/LC_MESSAGES/coreutils.mo
 share/locale/nl/LC_MESSAGES/coreutils.mo
-share/locale/no/LC_MESSAGES/coreutils.mo
 share/locale/pl/LC_MESSAGES/coreutils.mo
 share/locale/pt/LC_MESSAGES/coreutils.mo
 share/locale/pt_BR/LC_MESSAGES/coreutils.mo
@@ -223,6 +224,8 @@ share/locale/sk/LC_MESSAGES/coreutils.mo
 share/locale/sl/LC_MESSAGES/coreutils.mo
 share/locale/sv/LC_MESSAGES/coreutils.mo
 share/locale/tr/LC_MESSAGES/coreutils.mo
+share/locale/uk/LC_MESSAGES/coreutils.mo
+share/locale/vi/LC_MESSAGES/coreutils.mo
 share/locale/zh_CN/LC_MESSAGES/coreutils.mo
 share/locale/zh_TW/LC_MESSAGES/coreutils.mo
 share/locale/af/LC_TIME/coreutils.mo
@@ -247,7 +250,6 @@ share/locale/ko/LC_TIME/coreutils.mo
 share/locale/ms/LC_TIME/coreutils.mo
 share/locale/nb/LC_TIME/coreutils.mo
 share/locale/nl/LC_TIME/coreutils.mo
-share/locale/no/LC_TIME/coreutils.mo
 share/locale/pl/LC_TIME/coreutils.mo
 share/locale/pt/LC_TIME/coreutils.mo
 share/locale/pt_BR/LC_TIME/coreutils.mo
@@ -257,5 +259,7 @@ share/locale/sk/LC_TIME/coreutils.mo
 share/locale/sl/LC_TIME/coreutils.mo
 share/locale/sv/LC_TIME/coreutils.mo
 share/locale/tr/LC_TIME/coreutils.mo
+share/locale/uk/LC_TIME/coreutils.mo
+share/locale/vi/LC_TIME/coreutils.mo
 share/locale/zh_CN/LC_TIME/coreutils.mo
 share/locale/zh_TW/LC_TIME/coreutils.mo
