@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2008/03/08 01:06:52 tnn Exp $
+# $NetBSD: Makefile,v 1.44 2008/03/08 01:09:50 tnn Exp $
 
 DISTNAME=	coreutils-6.10
 CATEGORIES=	sysutils
@@ -12,7 +12,7 @@ COMMENT=	GNU basic file, shell and text manipulation utilities
 PKG_DESTDIR_SUPPORT=	user-destdir
 NOT_FOR_PLATFORM=	NetBSD-2.0[D-H]-*
 
-CONFLICTS=	fileutils-[0-9]* linuxls-[0-9]* sh-utils-[0-9]* textutils-[0-9]* mktemp-[0-9]*
+CONFLICTS=	fileutils-[0-9]* linuxls-[0-9]* sh-utils-[0-9]* textutils-[0-9]*
 
 CFLAGS+=		-g
 LDFLAGS+=		-g
@@ -62,6 +62,7 @@ CONFLICTS+=		graphviz<1.12
 # conflict with it if GNU_PROGRAM_PREFIX == '' (no problem in teTeX3-bin)
 .if ${GNU_PROGRAM_PREFIX} == ""
 CONFLICTS+=		teTeX-bin<3
+CONFLICTS+=		mktemp-[0-9]*
 .endif
 
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
