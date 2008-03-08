@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.467 2008/03/08 01:07:38 obache Exp $
+$NetBSD: CHANGES-2008,v 1.468 2008/03/08 01:12:03 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -870,3 +870,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/bin86 version 0.16.17nb1 [reed 2008-03-08]
 	Added sysutils/lilo version 22.8 [reed 2008-03-08]
 	Updated misc/dtach to 0.8 [obache 2008-03-08]
+	Updated devel/flex to 2.5.35 [tnn 2008-03-08]
+	Updated sysutils/coreutils to 6.10 [tnn 2008-03-08]
