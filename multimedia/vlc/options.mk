@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2008/02/25 16:38:00 sborrill Exp $
+# $NetBSD: options.mk,v 1.5 2008/03/08 05:19:57 kefren Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
-PKG_SUPPORTED_OPTIONS=		skins wxwidgets faad
+PKG_SUPPORTED_OPTIONS=		skins wxwidgets faad arts
 PKG_SUGGESTED_OPTIONS=		wxwidgets faad
 
 .include "../../mk/bsd.options.mk"
@@ -30,4 +30,13 @@ PLIST_SUBST+=		COND_FAAD=
 .else
 CONFIGURE_ARGS+=	--disable-faad
 PLIST_SUBST+=		COND_FAAD="@comment "
+.endif
+
+.if !empty(PKG_OPTIONS:Marts)
+CONFIGURE_ARGS+=	--enable-arts
+PLIST_SUBST+=		COND_ARTS=
+.include "../../audio/arts/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-arts
+PLIST_SUBST+=		COND_ARTS="@comment "
 .endif
