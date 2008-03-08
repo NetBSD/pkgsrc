@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2008/02/15 16:23:09 gdt Exp $
+# $NetBSD: Makefile,v 1.45 2008/03/08 01:10:27 gdt Exp $
 
 PKGNAME=		amanda-common-${VERS}
 SVR4_PKGNAME=		amaco
+PKGREVISION=		1
 
 COMMENT=		Common libraries and binaries for Amanda
 
