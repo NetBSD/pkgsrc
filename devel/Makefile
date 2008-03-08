@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.918 2008/03/02 12:27:40 obache Exp $
+# $NetBSD: Makefile,v 1.919 2008/03/08 00:57:58 reed Exp $
 #
 
 COMMENT=	Development utilities
@@ -55,6 +55,7 @@ SUBDIR+=	avl
 SUBDIR+=	avltree
 SUBDIR+=	bcc
 SUBDIR+=	bglibs
+SUBDIR+=	bin86
 SUBDIR+=	binutils
 SUBDIR+=	bison
 SUBDIR+=	blib

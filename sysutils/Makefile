@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.419 2008/02/08 21:22:06 drochner Exp $
+# $NetBSD: Makefile,v 1.420 2008/03/08 00:57:58 reed Exp $
 #
 
 COMMENT=	System utilities
@@ -144,6 +144,7 @@ SUBDIR+=	libgtop
 SUBDIR+=	libirman
 SUBDIR+=	libnotify
 SUBDIR+=	libol
+SUBDIR+=	lilo
 SUBDIR+=	logfinder
 SUBDIR+=	logrot
 SUBDIR+=	lsof

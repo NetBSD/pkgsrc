@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.298 2008/03/07 22:54:07 wiz Exp $
+# $NetBSD: Makefile,v 1.299 2008/03/08 00:57:58 reed Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -114,6 +114,7 @@ SUBDIR+=	less
 SUBDIR+=	libcdio
 SUBDIR+=	libquantum
 SUBDIR+=	libutf
+SUBDIR+=	linux-words
 SUBDIR+=	lile
 SUBDIR+=	loco
 SUBDIR+=	logsurfer
