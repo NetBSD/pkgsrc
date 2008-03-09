@@ -89,6 +89,9 @@
 # include "config.h"
 #endif
 #include <signal.h>
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>
+#endif
 
 #if defined(sun) && !(defined(__svr4__) || defined(__SVR4))
 # define NO_SIGCOMPAT
@@ -98,7 +101,7 @@
 
 #if defined(LIBC_SCCS) && !defined(lint)
 /*static char *sccsid = "from: @(#)sigcompat.c	5.3 (Berkeley) 2/24/91";*/
-static char *rcsid = "$Id: sigcompat.c,v 1.2 2007/04/15 11:23:07 tnn Exp $";
+static char *rcsid = "$Id: sigcompat.c,v 1.3 2008/03/09 19:54:29 joerg Exp $";
 #endif				/* LIBC_SCCS and not lint */
 
 #undef signal
@@ -126,14 +129,14 @@ static char *rcsid = "$Id: sigcompat.c,v 1.2 2007/04/15 11:23:07 tnn Exp $";
 #endif
 
 #ifndef MASK_T
-# ifdef __hpux
+# if defined(__hpux__) || defined(__hpux)
 #   define MASK_T long
 # else
 #   define MASK_T int
 # endif
 #endif
 /* I just hate HPsUX */
-#if defined(__hpux) && !defined(__HPUX_VERSION)
+#if (defined(__HPUX_VERSION) && __HPUX_VERSION > 9) || defined(__hpux)
 # define  PAUSE_MASK_T int
 #else
 # define PAUSE_MASK_T MASK_T

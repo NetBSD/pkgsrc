@@ -1,7 +1,7 @@
-#	$NetBSD: Makefile.in,v 1.5 2007/09/06 19:23:25 joerg Exp $
+#	$NetBSD: Makefile.in,v 1.6 2008/03/09 19:54:29 joerg Exp $
 #	@(#)Makefile	5.2 (Berkeley) 12/28/90
 
-#	$Id: Makefile.in,v 1.5 2007/09/06 19:23:25 joerg Exp $
+#	$Id: Makefile.in,v 1.6 2008/03/09 19:54:29 joerg Exp $
 
 PROG=	bmake
 SRCS=	arch.c buf.c compat.c cond.c dir.c for.c hash.c job.c main.c \
@@ -11,6 +11,7 @@ SRCS+=	lstAppend.c lstAtEnd.c lstAtFront.c lstClose.c lstConcat.c \
 	lstFind.c lstFindFrom.c lstFirst.c lstForEach.c lstForEachFrom.c \
 	lstInit.c lstInsert.c lstIsAtEnd.c lstIsEmpty.c lstLast.c \
 	lstMember.c lstNext.c lstOpen.c lstRemove.c lstReplace.c lstSucc.c
+SRCS += lstPrev.c
 
 .if !empty(LIBOBJS)
 SRCS+= ${LIBOBJS:.o=.c}
@@ -22,21 +23,15 @@ srcdir= @srcdir@
 CC?= @CC@
 
 # Base version on src date
-BMAKE_VERSION= 20051105
+BMAKE_VERSION= 20080215
 # knowing when it was built is also handy
 BUILD_DATE!= date +%Y%m%d
 MAKE_VERSION:= bmake-${BMAKE_VERSION} build-${BUILD_DATE}
 MACHINE=@machine@
 MACHINE_ARCH=@machine_arch@
+DEFAULT_SYS_PATH = @default_sys_path@
 
-DEFAULT_CSH = @DEFAULT_CSH@
-DEFAULT_KSH = @DEFAULT_KSH@
-DEFAULT_SH = @DEFAULT_SH@
-DEFAULT_SYS_PATH = @DEFAULT_SYS_PATH@
-
-CFLAGS+= @CFLAGS@ -DDEFAULT_CSH=\"${DEFAULT_CSH}\"
-CFLAGS+= -DDEFAULT_KSH=\"${DEFAULT_KSH}\" -DDEFAULT_SH=\"${DEFAULT_SH}\"
-CFLAGS+= -DDEFAULT_SYS_PATH=\"${DEFAULT_SYS_PATH}\"
+CFLAGS+= -D_PATH_DEFSYSPATH=\"${DEFAULT_SYS_PATH}\"
 CFLAGS+= -I. -I${srcdir} @DEFS@ @CPPFLAGS@ ${XDEFS} -DMAKE_NATIVE
 CFLAGS+= ${CFLAGS_${.TARGET:T}} 
 CFLAGS_main.o= "-DMAKE_VERSION=\"${MAKE_VERSION}\""
@@ -57,7 +52,7 @@ isBSD44= NetBSD FreeBSD OpenBSD DragonFly
 # Don't set these for anyone else since we don't know what the effect may be.
 # On FreeBSD WARNS=2 sets a bunch of -W flags that make does not handle.
 WFORMAT= 1
-WARNS=3
+WARNS=4
 .NOPATH: bmake.cat1
 .if make(install) && exists(${DESTDIR}/usr/share/doc)
 SUBDIR=	PSD.doc
@@ -68,7 +63,7 @@ SUBDIR=	PSD.doc
 # XXX not sure if we still want this given that configure
 # lets us force or not the definition of MACHINE.
 CFLAGS_main.o+= "-DFORCE_MACHINE=\"${MACHINE}\""
-NOMAN=no
+MANTARGET=cat
 SRCS+=  getenv.c
 INSTALL?=${srcdir}/install-sh
 .if (${MACHINE} == "sun386")
@@ -103,6 +98,20 @@ ${MAN}:	make.1
 
 .endif
 
+.if !empty(isBSD44:M${OS})
+.if "${OS}" != "NetBSD" 
+MAN1=${MAN}
+.endif
+MANTARGET?=man
+.endif
+
+MANTARGET?= cat
+MANDEST?= ${MANDIR}/${MANTARGET}1
+
+.if ${MANTARGET} == "cat"
+_mfromdir=${srcdir}
+.endif
+
 .if exists(${srcdir}/../Makefile.inc)
 .include "${srcdir}/../Makefile.inc"
 .endif
@@ -117,15 +126,6 @@ ${MAN}:	make.1
 # Force these
 BINDIR= ${prefix}/bin
 MANDIR= ${prefix}/man
-
-.if "${OS}" != "NetBSD" && !empty(isBSD44:M${OS})
-# freebsd's bsd.man.mk works differently
-MAN1=${MAN}
-MANDIR= ${prefix}/man/man
-MANDEST= ${MANDIR}1
-.NOPATH: bmake.cat1
-.endif
-MANDEST?= ${MANDIR}
 
 arch.o:	config.h
 # make sure that MAKE_VERSION gets updated.
@@ -147,6 +147,14 @@ install-mk:
 	${MKSRC}/install-mk -v -m 644 ${DESTDIR}${MK} ${USE_OS}
 .else
 	@echo need to unpack mk.tar.gz under ${srcdir} or set MKSRC; false
+.endif
+
+.ifdef TOOLDIR
+# this is a native netbsd build, 
+# use libutil rather than the local emalloc etc.
+CPPFLAGS+= -DHAVE_EMALLOC
+LDADD+=-lutil
+DPADD+=${LIBUTIL}
 .endif
 
 # A simple unit-test driver to help catch regressions
