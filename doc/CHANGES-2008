@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.476 2008/03/08 21:02:05 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.477 2008/03/09 10:04:10 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -883,3 +883,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added chat/tkabber version 0.10.0 [reed 2008-03-08]
 	Updated x11/xclip to 0.10 [tnn 2008-03-08]
 	Updated net/Transmission to 1.06 [tnn 2008-03-08]
+	Updated fonts/fontforge to 20080302 [adam 2008-03-08]
