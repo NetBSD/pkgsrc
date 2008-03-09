@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2008/03/06 14:53:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/09 01:23:54 gdt Exp $
 
-VERSION=	5.1.6
+VERSION=	5.1.7
 DISTNAME=	gutenprint-${VERSION}
 EXTRACT_SUFX=	.tar.bz2
 PKGNAME=	gutenprint-lib-${VERSION}
@@ -19,7 +19,10 @@ USE_TOOLS+=		gmake lex pkg-config
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 
-USE_LANGUAGES+=		c99 c++
+USE_LANGUAGES+=		c99
+# gcc 3.3.3 either can't compile this, or needs huge amounts of RAM (0.5G+).
+# Observed on NetBSD/i386 3 and confirmed with upstream.  Apparently it's
+# just 3.3.3 - there are no known issues with 2.95.
 
 # gutenprint has many options, and really should be split into
 # multiple packages.  Splitting is difficult because of the structure
@@ -81,8 +84,7 @@ CONFIGURE_ARGS+=	--without-readline
 #CONFIGURE_ARGS+=	--disable-test
 #CONFIGURE_ARGS+=	--disable-testpattern
 
-# iconv?
-
+# A libintl is optional in gutenprint.
 .include "../../devel/gettext-lib/buildlink3.mk"
 
 # gutenprint-gimp: gimp plugin
