@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dkim-filter.sh,v 1.1 2008/02/19 13:23:06 adrianp Exp $
+# $NetBSD: dkim-filter.sh,v 1.2 2008/03/09 15:09:26 adrianp Exp $
 #
 # PROVIDE: dkimfilter
 # REQUIRE: DAEMON
@@ -12,9 +12,9 @@ fi
 
 name="dkimfilter"
 rcvar=$name
-command="@PREFIX@/bin/dkim-filter"
+command="@PREFIX@/libexec/dkim-filter"
 pidfile="@VARBASE@/run/dkim-filter/${name}.pid"
-command_args="-P ${pidfile} -l -p @VARBASE@/run/dkim-filter/${name}.sock -x @PKG_SYSCONFDIR@/dkim-filter.conf -u @DKIM_USER@:@DKIM_GROUP@"
+command_args="-p local:@VARBASE@/run/dkim-filter/${name}.sock -P ${pidfile} -l -x @PKG_SYSCONFDIR@/dkim-filter.conf -u @DKIM_USER@:@DKIM_GROUP@"
 required_files="@PKG_SYSCONFDIR@/dkim-filter.conf"
 start_precmd="dkimfilter_precmd"
 
