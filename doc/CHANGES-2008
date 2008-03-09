@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.477 2008/03/09 10:04:10 adam Exp $
+$NetBSD: CHANGES-2008,v 1.478 2008/03/09 11:58:57 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -884,3 +884,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xclip to 0.10 [tnn 2008-03-08]
 	Updated net/Transmission to 1.06 [tnn 2008-03-08]
 	Updated fonts/fontforge to 20080302 [adam 2008-03-08]
+	Updated mail/dovecot to 1.0.13 [ghen 2008-03-09]
