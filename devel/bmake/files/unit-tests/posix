@@ -1,4 +1,4 @@
-# $Id: posix,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $
+# $Id: posix,v 1.2 2008/03/09 19:54:29 joerg Exp $
 
 all:	x plus subs err
 
