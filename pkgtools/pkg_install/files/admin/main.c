@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.34 2008/01/29 15:39:30 hubertf Exp $	*/
+/*	$NetBSD: main.c,v 1.35 2008/03/09 19:02:27 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.34 2008/01/29 15:39:30 hubertf Exp $");
+__RCSID("$NetBSD: main.c,v 1.35 2008/03/09 19:02:27 joerg Exp $");
 #endif
 
 /*-
@@ -78,6 +78,7 @@ __RCSID("$NetBSD: main.c,v 1.34 2008/01/29 15:39:30 hubertf Exp $");
 #include <string.h>
 #endif
 
+#include "admin.h"
 #include "lib.h"
 
 #define DEFAULT_SFX	".t[bg]z"	/* default suffix for ls{all,best} */
@@ -87,9 +88,8 @@ static const char Options[] = "K:SVbd:qs:";
 int     filecnt;
 int     pkgcnt;
 
-static int	quiet;
+int	quiet;
 
-static int checkpattern_fn(const char *, void *);
 static void set_unset_variable(char **, Boolean);
 
 /* print usage message and exit */
@@ -115,115 +115,6 @@ usage(void)
 	    " pmatch pattern pkg          - returns true if pkg matches pattern, otherwise false\n",
 	    getprogname());
 	exit(EXIT_FAILURE);
-}
-
-/*
- * Assumes CWD is in /var/db/pkg/<pkg>!
- */
-static void 
-check1pkg(const char *pkgdir)
-{
-	FILE   *f;
-	plist_t *p;
-	package_t Plist;
-	char   *PkgName, *dirp = NULL, *md5file;
-	char    file[MaxPathSize];
-	char    dir[MaxPathSize];
-
-	f = fopen(CONTENTS_FNAME, "r");
-	if (f == NULL)
-		err(EXIT_FAILURE, "can't open %s/%s/%s", _pkgdb_getPKGDB_DIR(), pkgdir, CONTENTS_FNAME);
-
-	Plist.head = Plist.tail = NULL;
-	read_plist(&Plist, f);
-	p = find_plist(&Plist, PLIST_NAME);
-	if (p == NULL)
-		errx(EXIT_FAILURE, "Package %s has no @name, aborting.",
-		    pkgdir);
-	PkgName = p->name;
-	for (p = Plist.head; p; p = p->next) {
-		switch (p->type) {
-		case PLIST_FILE:
-			if (dirp == NULL) {
-				warnx("dirp not initialized, please send-pr!");
-				abort();
-			}
-			
-			(void) snprintf(file, sizeof(file), "%s/%s", dirp, p->name);
-
-			if (isfile(file) || islinktodir(file)) {
-				if (p->next && p->next->type == PLIST_COMMENT) {
-					if (strncmp(p->next->name, CHECKSUM_HEADER, ChecksumHeaderLen) == 0) {
-						if ((md5file = MD5File(file, NULL)) != NULL) {
-							/* Mismatch? */
-#ifdef PKGDB_DEBUG
-							printf("%s: md5 should=<%s>, is=<%s>\n",
-							    file, p->next->name + ChecksumHeaderLen, md5file);
-#endif
-							if (strcmp(md5file, p->next->name + ChecksumHeaderLen) != 0)
-								printf("%s fails MD5 checksum\n", file);
-
-							free(md5file);
-						}
-					} else if (strncmp(p->next->name, SYMLINK_HEADER, SymlinkHeaderLen) == 0) {
-						char	buf[MaxPathSize + SymlinkHeaderLen];
-						int	cc;
-
-						(void) strlcpy(buf, SYMLINK_HEADER, sizeof(buf));
-						if ((cc = readlink(file, &buf[SymlinkHeaderLen],
-							  sizeof(buf) - SymlinkHeaderLen - 1)) < 0) {
-							warnx("can't readlink `%s'", file);
-						} else {
-							buf[SymlinkHeaderLen + cc] = 0x0;
-							if (strcmp(buf, p->next->name) != 0) {
-								printf("symlink (%s) is not same as recorded value, %s: %s\n",
-								    file, buf, p->next->name);
-							}
-						}
-					}
-				}
-				
-				filecnt++;
-			} else if (isbrokenlink(file)) {
-				warnx("%s: Symlink `%s' exists and is in %s but target does not exist!", PkgName, file, CONTENTS_FNAME);
-			} else {
-				warnx("%s: File `%s' is in %s but not on filesystem!", PkgName, file, CONTENTS_FNAME);
-			}
-			break;
-		case PLIST_CWD:
-			if (strcmp(p->name, ".") != 0)
-				dirp = p->name;
-			else {
-				(void) snprintf(dir, sizeof(dir), "%s/%s", _pkgdb_getPKGDB_DIR(), pkgdir);
-				dirp = dir;
-			}
-			break;
-		case PLIST_IGNORE:
-			p = p->next;
-			break;
-		case PLIST_SHOW_ALL:
-		case PLIST_SRC:
-		case PLIST_CMD:
-		case PLIST_CHMOD:
-		case PLIST_CHOWN:
-		case PLIST_CHGRP:
-		case PLIST_COMMENT:
-		case PLIST_NAME:
-		case PLIST_UNEXEC:
-		case PLIST_DISPLAY:
-		case PLIST_PKGDEP:
-		case PLIST_MTREE:
-		case PLIST_DIR_RM:
-		case PLIST_IGNORE_INST:
-		case PLIST_OPTION:
-		case PLIST_PKGCFL:
-		case PLIST_BLDDEP:
-			break;
-		}
-	}
-	free_plist(&Plist);
-	fclose(f);
-	pkgcnt++;
 }
 
 /*
@@ -380,70 +271,6 @@ rebuild(void)
 	    filecnt, filecnt == 1 ? "" : "s",
 	    pkgcnt, pkgcnt == 1 ? "" : "s",
 	    cachename);
-}
-
-static void 
-checkall(void)
-{
-	DIR    *dp;
-	struct dirent *de;
-
-	pkgcnt = 0;
-	filecnt = 0;
-
-	setbuf(stdout, NULL);
-	chdir(_pkgdb_getPKGDB_DIR());
-
-	dp = opendir(".");
-	if (dp == NULL)
-		err(EXIT_FAILURE, "opendir failed");
-	while ((de = readdir(dp))) {
-		if (!(isdir(de->d_name) || islinktodir(de->d_name)))
-			continue;
-
-		if (strcmp(de->d_name, ".") == 0 ||
-		    strcmp(de->d_name, "..") == 0)
-			continue;
-
-		chdir(de->d_name);
-
-		check1pkg(de->d_name);
-		if (!quiet) {
-			printf(".");
-		}
-
-		chdir("..");
-	}
-	closedir(dp);
-	pkgdb_close();
-
-
-	printf("\n");
-	printf("Checked %d file%s from %d package%s.\n",
-	    filecnt, (filecnt == 1) ? "" : "s",
-	    pkgcnt, (pkgcnt == 1) ? "" : "s");
-}
-
-static int
-checkpattern_fn(const char *pkg, void *vp)
-{
-	int *got_match, rc;
-
-	rc = chdir(pkg);
-	if (rc == -1)
-		err(EXIT_FAILURE, "Cannot chdir to %s/%s", _pkgdb_getPKGDB_DIR(), pkg);
-
-	check1pkg(pkg);
-	if (!quiet) {
-		printf(".");
-	}
-
-	chdir("..");
-
-	got_match = vp;
-	*got_match = 1;
-
-	return 0;
 }
 
 static int
@@ -633,54 +460,10 @@ main(int argc, char *argv[])
 		printf("Done.\n");
 
 	} else if (strcasecmp(argv[0], "check") == 0) {
-
 		argv++;		/* "check" */
 
-		if (*argv != NULL) {
-			/* args specified */
-			int     rc;
+		check(argv);
 
-			filecnt = 0;
-
-			setbuf(stdout, NULL);
-
-			rc = chdir(_pkgdb_getPKGDB_DIR());
-			if (rc == -1)
-				err(EXIT_FAILURE, "Cannot chdir to %s", _pkgdb_getPKGDB_DIR());
-
-			while (*argv != NULL) {
-				int got_match;
-
-				got_match = 0;
-				if (match_installed_pkgs(*argv, checkpattern_fn, &got_match) == -1)
-					errx(EXIT_FAILURE, "Cannot process pkdbdb");
-				if (got_match == 0) {
-					char *pattern;
-
-					if (ispkgpattern(*argv))
-						errx(EXIT_FAILURE, "No matching pkg for %s.", *argv);
-
-					if (asprintf(&pattern, "%s-[0-9]*", *argv) == -1)
-						errx(EXIT_FAILURE, "asprintf failed");
-
-					if (match_installed_pkgs(pattern, checkpattern_fn, &got_match) == -1)
-						errx(EXIT_FAILURE, "Cannot process pkdbdb");
-
-					if (got_match == 0)
-						errx(EXIT_FAILURE, "cannot find package %s", *argv);
-					free(pattern);
-				}
-
-				argv++;
-			}
-
-			printf("\n");
-			printf("Checked %d file%s from %d package%s.\n",
-			    filecnt, (filecnt == 1) ? "" : "s",
-			    pkgcnt, (pkgcnt == 1) ? "" : "s");
-		} else {
-			checkall();
-		}
 		if (!quiet) {
 			printf("Done.\n");
 		}
