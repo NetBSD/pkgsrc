@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.482 2008/03/09 18:28:54 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.483 2008/03/09 20:57:42 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -896,3 +896,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added misc/dvtm version 0.4 [tnn 2008-03-09]
 	Added biology/mopac version 7.0 [tnn 2008-03-09]
 	Added emulators/yabause version 0.9.3 [tnn 2008-03-09]
+	Updated net/rsync to 3.0.0 [bjs 2008-03-09]
