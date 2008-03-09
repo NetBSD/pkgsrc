@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2008/02/27 13:48:28 obache Exp $
+# $NetBSD: options.mk,v 1.2 2008/03/09 11:17:27 hira Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.m17n-lib
 PKG_SUPPORTED_OPTIONS=	anthy x11 libthai
@@ -11,11 +11,11 @@ PKG_SUGGESTED_OPTIONS=	x11
 .endif
 
 .if !empty(PKG_OPTIONS:Mx11)
-.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/libotf/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
 PLIST_SUBST+=	X11=""
 .else

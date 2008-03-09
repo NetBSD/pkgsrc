@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/02/27 13:48:28 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/03/09 11:17:27 hira Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 M17N_LIB_BUILDLINK3_MK:=	${M17N_LIB_BUILDLINK3_MK}+
@@ -24,7 +24,6 @@ pkgbase := m17n-lib
 .endif
 
 .if !empty(PKG_BUILD_OPTIONS.m17n-lib:Mx11)
-.include "../../fonts/Xft2/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
@@ -32,6 +31,7 @@ pkgbase := m17n-lib
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .endif
 
