@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.36 2008/03/09 20:36:22 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.37 2008/03/09 20:55:25 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.36 2008/03/09 20:36:22 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.37 2008/03/09 20:55:25 joerg Exp $");
 #endif
 
 /*-
@@ -439,85 +439,50 @@ main(int argc, char *argv[])
 		}
 
 	} else if (strcasecmp(argv[0], "lsall") == 0) {
-		int saved_wd;
-
 		argv++;		/* "lsall" */
-
-		/* preserve cwd */
-		saved_wd=open(".", O_RDONLY);
-		if (saved_wd == -1)
-			err(EXIT_FAILURE, "Cannot save working dir");
 
 		while (*argv != NULL) {
 			/* args specified */
 			int     rc;
 			const char *basep, *dir;
-			char cwd[MaxPathSize];
 
 			dir = lsdirp ? lsdirp : dirname_of(*argv);
 			basep = basename_of(*argv);
 
-			fchdir(saved_wd);
-			rc = chdir(dir);
-			if (rc == -1)
-				err(EXIT_FAILURE, "Cannot chdir to %s", dir);
-
-			if (getcwd(cwd, sizeof(cwd)) == NULL)
-				err(EXIT_FAILURE, "getcwd");
-
 			if (show_basename_only)
-				rc = match_local_files(cwd, use_default_sfx, 1, basep, lsbasepattern, NULL);
+				rc = match_local_files(dir, use_default_sfx, 1, basep, lsbasepattern, NULL);
 			else
-				rc = match_local_files(cwd, use_default_sfx, 1, basep, lspattern, cwd);
+				rc = match_local_files(dir, use_default_sfx, 1, basep, lspattern, (void *)dir);
 			if (rc == -1)
 				errx(EXIT_FAILURE, "Error from match_local_files(\"%s\", \"%s\", ...)",
-				     cwd, basep);
+				     dir, basep);
 
 			argv++;
 		}
 
-		close(saved_wd);
-
 	} else if (strcasecmp(argv[0], "lsbest") == 0) {
-		int saved_wd;
-
 		argv++;		/* "lsbest" */
-
-		/* preserve cwd */
-		saved_wd=open(".", O_RDONLY);
-		if (saved_wd == -1)
-			err(EXIT_FAILURE, "Cannot save working dir");
 
 		while (*argv != NULL) {
 			/* args specified */
 			const char *basep, *dir;
-			char cwd[MaxPathSize];
 			char *p;
 
 			dir = lsdirp ? lsdirp : dirname_of(*argv);
 			basep = basename_of(*argv);
 
-			fchdir(saved_wd);
-			if (chdir(dir) == -1)
-				err(EXIT_FAILURE, "Cannot chdir to %s", dir);
-
-			if (getcwd(cwd, sizeof(cwd)) == NULL)
-				err(EXIT_FAILURE, "getcwd");
-
-			p = find_best_matching_file(cwd, basep, use_default_sfx, 1);
+			p = find_best_matching_file(dir, basep, use_default_sfx, 1);
 
 			if (p) {
 				if (show_basename_only)
 					printf("%s\n", p);
 				else
-					printf("%s/%s\n", cwd, p);
+					printf("%s/%s\n", dir, p);
 				free(p);
 			}
 			
 			argv++;
 		}
-
-		close(saved_wd);
 
 	} else if (strcasecmp(argv[0], "list") == 0 ||
 	    strcasecmp(argv[0], "dump") == 0) {
