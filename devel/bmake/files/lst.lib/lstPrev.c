@@ -1,4 +1,4 @@
-/*	$NetBSD: lstDatum.c,v 1.1.1.2 2008/03/09 19:39:35 joerg Exp $	*/
+/*	$NetBSD: lstPrev.c,v 1.1.1.1 2008/03/09 19:39:35 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -33,45 +33,47 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: lstDatum.c,v 1.1.1.2 2008/03/09 19:39:35 joerg Exp $";
+static char rcsid[] = "$NetBSD: lstPrev.c,v 1.1.1.1 2008/03/09 19:39:35 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
-static char sccsid[] = "@(#)lstDatum.c	8.1 (Berkeley) 6/6/93";
+static char sccsid[] = "@(#)lstSucc.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: lstDatum.c,v 1.1.1.2 2008/03/09 19:39:35 joerg Exp $");
+__RCSID("$NetBSD: lstPrev.c,v 1.1.1.1 2008/03/09 19:39:35 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
 
 /*-
- * LstDatum.c --
- *	Return the datum associated with a list node.
+ * LstPrev.c --
+ *	return the predecessor to a given node
  */
 
 #include	"lstInt.h"
 
 /*-
  *-----------------------------------------------------------------------
- * Lst_Datum --
- *	Return the datum stored in the given node.
+ * Lst_Prev --
+ *	Return the predecessor to the given node on its list.
  *
  * Results:
- *	The datum or (ick!) NIL if the node is invalid.
+ *	The predecessor of the node, if it exists (note that on a circular
+ *	list, if the node is the only one in the list, it is its own
+ *	predecessor).
  *
  * Side Effects:
  *	None.
  *
  *-----------------------------------------------------------------------
  */
-ClientData
-Lst_Datum(LstNode ln)
+LstNode
+Lst_Prev(LstNode ln)
 {
-    if (ln != NILLNODE) {
-	return ((ln)->datum);
+    if (ln == NILLNODE) {
+	return (NILLNODE);
     } else {
-	return ((ClientData) NIL);
+	return (ln->prevPtr);
     }
 }
 

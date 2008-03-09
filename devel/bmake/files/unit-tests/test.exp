@@ -20,6 +20,64 @@ Passed:
 4 is not prime
 5 is  prime
 
+UT_DOLLAR=This is $UT_FU
+UT_FOO=foobar is fubar
+UT_FU=fubar
+UT_TEST=export
+UT_ZOO=hoopie
+UT_ALL=even this gets exported
+UT_DOLLAR=This is $UT_FU
+UT_F=fine
+UT_FOO=foobar is fubar
+UT_FU=fubar
+UT_NO=all
+UT_OK=good
+UT_TEST=export-all
+UT_ZOO=hoopie
+simple.1
+simple.1
+simple.2
+simple.2
+recursive.1.1.*
+recursive.1.1.*
+recursive.1.1.*
+recursive.1.1.*
+recursive.1.99
+recursive.1.99
+recursive.2.1.*
+recursive.2.1.*
+recursive.2.1.*
+recursive.2.1.*
+recursive.2.99
+recursive.2.99
+shared.0
+shared.0
+shared.1.99
+shared.1.99
+shared.2.1
+shared.2.1
+shared.2.99
+shared.2.99
+make: Graph cycles through `cycle.2.99'
+make: Graph cycles through `cycle.2.98'
+make: Graph cycles through `cycle.2.97'
+cycle.1.99
+cycle.1.99
+Expect: Unknown modifier 'Z'
+make: Unknown modifier 'Z'
+VAR:Z=
+Expect: Unknown modifier 'Z'
+make: Unknown modifier 'Z'
+VAR:Z=
+Expect: Unclosed variable specification for VAR
+make: Unclosed variable specification for VAR
+VAR:S,V,v,=Thevariable
+Expect: Unclosed variable specification for VAR
+make: Unclosed variable specification for VAR
+VAR:S,V,v,=Thevariable
+Expect: Unclosed substitution for VAR (, missing)
+make: Unclosed substitution for VAR (, missing)
+VAR:S,V,v=
 LIB=a X_LIBS:M${LIB${LIB:tu}} is "/tmp/liba.a"
 LIB=a X_LIBS:M*/lib${LIB}.a is "/tmp/liba.a"
 LIB=a X_LIBS:M*/lib${LIB}.a:tu is "/TMP/LIBA.A"
@@ -35,12 +93,16 @@ LIB=d X_LIBS:M*/lib${LIB}.a:tu is "/TMP/LIBD.A"
 LIB=e X_LIBS:M${LIB${LIB:tu}} is "/tmp/libe.a"
 LIB=e X_LIBS:M*/lib${LIB}.a is "/tmp/libe.a"
 LIB=e X_LIBS:M*/lib${LIB}.a:tu is "/TMP/LIBE.A"
-LIST      = one two three four five six seven eigth nine ten
-LIST:O    = eigth five four nine one seven six ten three two
-# Note that 1 in every 10! trials two independently generated
-# randomized orderings will be the same.  The test framework doesn't
-# support checking probabilistic output, so we accept that the test
-# will incorrectly fail with probability 2.8E-7.
+path=':/bin:/usr/bin::/sbin:/usr/sbin:.:/home/user/bin:.'
+path='/bin:/usr/bin:/sbin:/usr/sbin:/home/user/bin'
+path='/bin:/usr/bin:/sbin:/usr/sbin:/homes/user/bin'
+path='/bin':'/usr/bin':'/sbin':'/usr/sbin':'/home/user/bin'
+path='/bin':'/usr/bin':'/sbin':'/usr/sbin':'/homes/user/bin'
+path_/usr/xbin=/opt/xbin/
+paths=/bin /usr/bin /sbin /usr/sbin /homes/user/bin /opt/xbin
+PATHS=/BIN /USR/BIN /SBIN /USR/SBIN /HOMES/USER/BIN /OPT/XBIN
+LIST      = one two three four five six seven eight nine ten
+LIST:O    = eight five four nine one seven six ten three two
 LIST:Ox   = Ok
 LIST:O:Ox = Ok
 LISTX     = Ok

@@ -1,4 +1,4 @@
-/*	$NetBSD: trace.c,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $	*/
+/*	$NetBSD: trace.c,v 1.1.1.2 2008/03/09 19:39:33 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.
@@ -38,11 +38,11 @@
 
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: trace.c,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $";
+static char rcsid[] = "$NetBSD: trace.c,v 1.1.1.2 2008/03/09 19:39:33 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
-__RCSID("$NetBSD: trace.c,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $");
+__RCSID("$NetBSD: trace.c,v 1.1.1.2 2008/03/09 19:39:33 joerg Exp $");
 #endif /* not lint */
 #endif
 
@@ -103,9 +103,9 @@ Trace_Log(TrEvent event, Job *job)
 
 	gettimeofday(&rightnow, NULL);
 
-	fprintf(trfile, "%ld.%06d %d %d %s %d %s",
+	fprintf(trfile, "%ld.%06d %d %s %d %s",
 	    rightnow.tv_sec, (int)rightnow.tv_usec,
-	    jobTokensRunning, jobTokensFree,
+	    jobTokensRunning,
 	    evname[event], trpid, trwd);
 	if (job != NULL) {
 		fprintf(trfile, " %s %d %x %x", job->node->name,

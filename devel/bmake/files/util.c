@@ -1,18 +1,18 @@
-/*	$NetBSD: util.c,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $	*/
+/*	$NetBSD: util.c,v 1.1.1.2 2008/03/09 19:39:34 joerg Exp $	*/
 
 /*
  * Missing stuff from OS's
  *
- *	$Id: util.c,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $
+ *	$Id: util.c,v 1.1.1.2 2008/03/09 19:39:34 joerg Exp $
  */
 
 #include "make.h"
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: util.c,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $";
+static char rcsid[] = "$NetBSD: util.c,v 1.1.1.2 2008/03/09 19:39:34 joerg Exp $";
 #else
 #ifndef lint
-__RCSID("$NetBSD: util.c,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $");
+__RCSID("$NetBSD: util.c,v 1.1.1.2 2008/03/09 19:39:34 joerg Exp $");
 #endif
 #endif
 
@@ -59,6 +59,33 @@ strdup(const char *str)
 }
 #endif
 
+#if !defined(HAVE_EMALLOC) && !defined(HAVE_STRNDUP)
+#include <string.h>
+
+/* strndup
+ *
+ * Make a duplicate of a string, up to a maximum length.
+ * For systems which lack this function.
+ */
+char *
+strndup(const char *str, size_t maxlen)
+{
+    size_t len;
+    char *p;
+
+    if (str == NULL)
+	return NULL;
+    len = strlen(str);
+    if (len > maxlen)
+	len = maxlen;
+    p = emalloc(len + 1);
+
+    memcpy(p, str, len);
+    p[len] = '\0';
+    return p;
+}
+#endif
+
 #if !defined(HAVE_SETENV)
 int
 setenv(const char *name, const char *value, int dum)
@@ -87,6 +114,14 @@ setenv(const char *name, const char *value, int dum)
     len = putenv(ptr);
 /*    free(ptr); */
     return len;
+}
+#endif
+
+#if !defined(HAVE_UNSETENV)
+int
+unsetenv(const char *name)
+{
+	return -1;			/* XXX not worth it? */
 }
 #endif
 
@@ -145,14 +180,11 @@ char    *sys_siglist[] = {
 
 #if defined(__hpux__) || defined(__hpux)
 #include <sys/types.h>
-#include <sys/param.h>
 #include <sys/syscall.h>
 #include <sys/signal.h>
 #include <sys/stat.h>
-#include <stdio.h>
 #include <dirent.h>
 #include <sys/time.h>
-#include <time.h>
 #include <unistd.h>
 
 int
@@ -509,4 +541,14 @@ strftime(char *buf, size_t len, const char *fmt, const struct tm *tm)
 		len -= s;
 	}
 }
+#endif
+
+#if !defined(HAVE_KILLPG)
+#if !defined(__hpux__) && !defined(__hpux)
+int
+killpg(int pid, int sig)
+{
+    return kill(-pid, sig);
+}
+#endif
 #endif
