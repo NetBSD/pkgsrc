@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2008/02/06 16:41:07 hira Exp $
+# $NetBSD: Makefile,v 1.39 2008/03/09 12:57:27 joerg Exp $
 #
 
 OO_VER=			2.3.1
@@ -18,6 +18,8 @@ DISTFILES+=		OOo_${OO_VER}_src_system.tar.bz2
 MAINTAINER=		hira@NetBSD.org
 HOMEPAGE=		http://www.openoffice.org/
 COMMENT=		Integrated office productivity suite (version 2)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
@@ -109,7 +111,7 @@ UNLIMIT_RESOURCES+=	datasize
 OO_RELEASE=		OpenOffice.org${OO_VER}
 PLIST_SRC+=		${WRKDIR}/.PLIST_SRC
 MESSAGE_SUBST+=		OO_RELEASE=${OO_RELEASE}
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${OO_RELEASE}
 
 OO_UNXNAME=	openoffice.org2.3
 OO_PKGPATH=	${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install
@@ -141,19 +143,18 @@ post-build:
 		>> ${WRKDIR}/${OO_UNXNAME}-printeradmin
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${OO_RELEASE}
 	cd ${WRKDIR}${OO_PKGROOT} &&				\
-	tar cf - . | tar Cxpf ${PREFIX}/${OO_RELEASE} -
+	tar cf - . | tar Cxpf ${DESTDIR}${PREFIX}/${OO_RELEASE} -
 	for f in ${OO_PROGRAMS}; do				\
-		ln -sf ${PREFIX}/${OO_RELEASE}/program/$$f	\
-			${PREFIX}/bin/$$f;			\
+		ln -sf ${DESTDIR}${PREFIX}/${OO_RELEASE}/program/$$f	\
+			${DESTDIR}${PREFIX}/bin/$$f;			\
 	done
-	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME} ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME}-printeradmin	\
-		${PREFIX}/bin
+		${DESTDIR}${PREFIX}/bin
 
 post-install:
-	cd ${PREFIX} &&						\
+	cd ${DESTDIR}${PREFIX} &&				\
 	find ${OO_RELEASE} \! -type d -print |			\
 	sort > ${PLIST_SRC} &&					\
 	find ${OO_RELEASE} -type d -print | sort -r |		\
