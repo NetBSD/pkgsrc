@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.299 2008/03/08 00:57:58 reed Exp $
+# $NetBSD: Makefile,v 1.300 2008/03/09 18:28:54 tnn Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -41,6 +41,7 @@ SUBDIR+=	dpkg
 SUBDIR+=	dt
 SUBDIR+=	dtach
 SUBDIR+=	dvorakng
+SUBDIR+=	dvtm
 SUBDIR+=	dync
 SUBDIR+=	easymenu
 SUBDIR+=	edict

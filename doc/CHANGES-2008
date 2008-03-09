@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.481 2008/03/09 15:09:49 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.482 2008/03/09 18:28:54 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -893,3 +893,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/ruby to 1.8.6.114 [taca 2008-03-09]
 	Updated mail/dkim-milter to 2.4.4nb1 [adrianp 2008-03-09]
 	Updated mail/dkim-milter to 2.5.0 [adrianp 2008-03-09]
+	Added misc/dvtm version 0.4 [tnn 2008-03-09]
+	Added biology/mopac version 7.0 [tnn 2008-03-09]
+	Added emulators/yabause version 0.9.3 [tnn 2008-03-09]
