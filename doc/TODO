@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7117 2008/03/09 14:40:47 taca Exp $
+$NetBSD: TODO,v 1.7118 2008/03/09 21:41:47 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1186,6 +1186,7 @@ Suggested package updates
 	o root-5.14.0
 	o root-tail-1.2
 	o rosegarden4-1.6.1 [replacing audio/rosegarden|pkgsrc-wip]
+	o roundcube-0.1
 	o roundup-1.3.3
 	o rox-2.7.1
 	o rox-session-0.29
