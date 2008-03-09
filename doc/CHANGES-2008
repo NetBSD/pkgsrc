@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.479 2008/03/09 13:35:10 taca Exp $
+$NetBSD: CHANGES-2008,v 1.480 2008/03/09 14:02:25 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -891,3 +891,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/ruby-tk to 1.8.6.114 [taca 2008-03-09]
 	Updated lang/ruby18 to 1.8.6.114 [taca 2008-03-09]
 	Updated lang/ruby to 1.8.6.114 [taca 2008-03-09]
+	Updated mail/dkim-milter to 2.4.4nb1 [adrianp 2008-03-09]
