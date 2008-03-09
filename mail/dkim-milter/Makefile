@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2008/02/19 13:23:06 adrianp Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/09 14:02:08 adrianp Exp $
 
 DISTNAME=	dkim-milter-2.4.4
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dkim-milter/}
 
@@ -17,8 +18,6 @@ MAKE_ENV+=		M4=${M4:Q}
 RCD_SCRIPTS=		dkim-filter
 USE_BUILTIN.libmilter=	no
 USE_TOOLS+=		gm4
-PKG_OPTIONS_VAR=	PKG_OPTIONS.dkim-milter
-PKG_SUPPORTED_OPTIONS=	inet6
 EGDIR=			${PREFIX}/share/examples/dkim-milter
 FILES_SUBST+=		DKIM_USER=${DKIM_USER:Q} DKIM_GROUP=${DKIM_GROUP:Q}
 BUILD_DEFS+=		VARBASE DKIM_USER DKIM_GROUP
@@ -32,13 +31,13 @@ PKG_USERS_VARS+=	DKIM_USER
 OWN_DIRS_PERMS+=	${VARBASE}/run/dkim-filter \
 			${DKIM_USER} ${DKIM_GROUP} 0750
 
-.include "../../mk/bsd.options.mk"
+.include "options.mk"
 
 SUBST_CLASSES+=		libs
 SUBST_STAGE.libs=	pre-configure
 SUBST_FILES.libs=	${WRKSRC}/devtools/Site/site.config.m4
 SUBST_FILES.libs+=	dkim-filter/dkim-filter.conf.5 dkim-filter/dkim-stats.8
-SUBST_SED.libs=		-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g'
+SUBST_SED.libs+=	-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g'
 SUBST_SED.libs+=	-e 's|@LMBASE@|${BUILDLINK_PREFIX.libmilter}|g'
 SUBST_SED.libs+=	-e 's|@PTHREAD@|${BUILDLINK_PREFIX.pthread}|g'
 SUBST_SED.libs+=	-e 's|@PTHREAD_LDFLAGS@|${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}|g'
@@ -46,17 +45,13 @@ SUBST_SED.libs+=	-e 's|@PREFIX@|${PREFIX}|g'
 SUBST_SED.libs+=	-e 's|@PKGMANDIR@|${PKGMANDIR}|g'
 SUBST_SED.libs+=	-e 's|/etc/mail|${PKG_SYSCONFDIR}|g'
 SUBST_SED.libs+=	-e 's|.I /etc/dkim-filter.conf|.I ${PKG_SYSCONFDIR}/dkim-filter.conf|g'
-.if !empty(PKG_OPTIONS:Minet6)
-SUBST_SED.libs+=	-e 's|@INET6@||'
-.else
-SUBST_SED.libs+=	-e 's|@INET6@|dnl|'
-.endif
 SUBST_MESSAGE.libs=	Fixing Makefile references and man pages.
 
 CONF_FILES=		${EGDIR}/dkim-filter.conf.sample \
 			${PKG_SYSCONFDIR}/dkim-filter.conf
 
-INSTALLATION_DIRS=	share/doc/dkim-milter ${EGDIR}
+INSTALLATION_DIRS=	share/doc/dkim-milter ${EGDIR} \
+			share/doc/dkim-milter/libdkim
 
 post-extract:
 	${CP} ${WRKSRC}/site.config.m4.dist \
@@ -75,6 +70,29 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/KNOWNBUGS ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/dkim-milter
 	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${PREFIX}/share/doc/dkim-milter
+
+	cd ${WRKSRC} && for f in draft-*.txt; do \
+		${INSTALL_DATA} $${f} \
+			${PREFIX}/share/doc/dkim-milter; \
+	done
+
+	cd ${WRKSRC} && for f in rfc*.txt; do \
+		${INSTALL_DATA} $${f} \
+			${PREFIX}/share/doc/dkim-milter; \
+	done
+
+	cd ${WRKSRC}/libdkim/docs/ && for f in *.html; do \
+		${INSTALL_DATA} $${f} \
+			${PREFIX}/share/doc/dkim-milter/libdkim; \
+	done
+
+	${CHMOD} ${SHAREMODE} ${PREFIX}/include/dkim.h
+
+.	if !empty(PKG_OPTIONS:Mdkim-milter-arlib)
+	cd ${WRKSRC}/obj.`uname -s`.`uname -r`.`uname -m`/libar && \
+		${INSTALL_LIB} libar.a ${PREFIX}/lib && \
+		${INSTALL_MAN} ar.3 ${PREFIX}/${PKGMANDIR}/man3
+.	endif
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mail/libmilter/buildlink3.mk"
