@@ -1,4 +1,4 @@
-/*	$NetBSD: str.c,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $	*/
+/*	$NetBSD: str.c,v 1.1.1.2 2008/03/09 19:39:34 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -69,14 +69,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: str.c,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $";
+static char rcsid[] = "$NetBSD: str.c,v 1.1.1.2 2008/03/09 19:39:34 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char     sccsid[] = "@(#)str.c	5.8 (Berkeley) 6/1/90";
 #else
-__RCSID("$NetBSD: str.c,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $");
+__RCSID("$NetBSD: str.c,v 1.1.1.2 2008/03/09 19:39:34 joerg Exp $");
 #endif
 #endif				/* not lint */
 #endif
@@ -128,8 +128,14 @@ str_concat(const char *s1, const char *s2, int flags)
  *	spaces) taking quotation marks into account.  Leading tabs/spaces
  *	are ignored.
  *
+ * If expand is TRUE, quotes are removed and escape sequences
+ *  such as \r, \t, etc... are expanded.
+ *
  * returns --
  *	Pointer to the array of pointers to the words.
+ *      Memory containing the actual words in *buffer.
+ *		Both of these must be free'd by the caller.
+ *      Number of words in *store_argc.
  */
 char **
 brk_string(const char *str, int *store_argc, Boolean expand, char **buffer)
@@ -170,6 +176,8 @@ brk_string(const char *str, int *store_argc, Boolean expand, char **buffer)
 				/* Don't miss "" or '' */
 				if (start == NULL && p[1] == inquote) {
 					start = t + 1;
+					p++;
+					inquote = '\0';
 					break;
 				}
 			}
@@ -211,6 +219,8 @@ brk_string(const char *str, int *store_argc, Boolean expand, char **buffer)
 				if (!start)
 					start = t;
 				*t++ = '\\';
+				if (*(p+1) == '\0') // catch '\' at end of line
+					continue;
 				ch = *++p;
 				break;
 			}
