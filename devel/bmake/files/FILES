@@ -56,6 +56,7 @@ lst.lib/lstLast.c
 lst.lib/lstMember.c
 lst.lib/lstNext.c
 lst.lib/lstOpen.c
+lst.lib/lstPrev.c
 lst.lib/lstRemove.c
 lst.lib/lstReplace.c
 lst.lib/lstSucc.c
@@ -84,6 +85,9 @@ wait.h
 unit-tests/Makefile.in
 unit-tests/cond1
 unit-tests/comment
+unit-tests/export
+unit-tests/export-all
+unit-tests/moderrs
 unit-tests/modmatch
 unit-tests/modorder
 unit-tests/modts
@@ -92,3 +96,5 @@ unit-tests/posix
 unit-tests/ternary
 unit-tests/test.exp
 unit-tests/varcmd
+unit-tests/modmisc
+unit-tests/dotwait
