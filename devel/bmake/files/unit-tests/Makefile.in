@@ -1,6 +1,6 @@
-# $Id: Makefile.in,v 1.1.1.2 2008/03/09 19:39:35 joerg Exp $
+# $Id: Makefile.in,v 1.2 2008/03/09 19:54:29 joerg Exp $
 #
-# $NetBSD: Makefile.in,v 1.1.1.2 2008/03/09 19:39:35 joerg Exp $
+# $NetBSD: Makefile.in,v 1.2 2008/03/09 19:54:29 joerg Exp $
 #
 # Unit tests for make(1)
 # The main targets are:
