@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.3 2008/03/09 14:02:08 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/03/09 15:09:26 adrianp Exp $
 ${WITH_ARLIB}lib/libar.a
 ${WITH_ARLIB}man/man3/ar.3
 lib/libdkim.a
 include/dkim.h
-bin/dkim-filter
+libexec/dkim-filter
 bin/dkim-genkey
 bin/dkim-testkey
 bin/dkim-testssp
@@ -20,10 +20,10 @@ share/doc/dkim-milter/README
 share/doc/dkim-milter/RELEASE_NOTES
 share/examples/dkim-milter/dkim-filter.conf.sample
 share/doc/dkim-milter/draft-hoffman-dac-vbr-02.txt
-share/doc/dkim-milter/draft-ietf-dkim-deployment-00.txt
-share/doc/dkim-milter/draft-ietf-dkim-overview-07.txt
-share/doc/dkim-milter/draft-ietf-dkim-ssp-01.txt
-share/doc/dkim-milter/draft-kucherawy-sender-auth-header-10.txt
+share/doc/dkim-milter/draft-ietf-dkim-deployment-01.txt
+share/doc/dkim-milter/draft-ietf-dkim-overview-09.txt
+share/doc/dkim-milter/draft-ietf-dkim-ssp-03.txt
+share/doc/dkim-milter/draft-kucherawy-sender-auth-header-12.txt
 share/doc/dkim-milter/libdkim/dkim.html
 share/doc/dkim-milter/libdkim/dkim_alg_t.html
 share/doc/dkim-milter/libdkim/dkim_body.html
@@ -38,7 +38,6 @@ share/doc/dkim-milter/libdkim/dkim_get_user_context.html
 share/doc/dkim-milter/libdkim/dkim_getcachestats.html
 share/doc/dkim-milter/libdkim/dkim_getdomain.html
 share/doc/dkim-milter/libdkim/dkim_geterror.html
-share/doc/dkim-milter/libdkim/dkim_gethandlingstr.html
 share/doc/dkim-milter/libdkim/dkim_getmode.html
 share/doc/dkim-milter/libdkim/dkim_getpolicystr.html
 share/doc/dkim-milter/libdkim/dkim_getpresult.html
@@ -47,7 +46,6 @@ share/doc/dkim-milter/libdkim/dkim_getresultstr.html
 share/doc/dkim-milter/libdkim/dkim_getsighdr.html
 share/doc/dkim-milter/libdkim/dkim_getsiglist.html
 share/doc/dkim-milter/libdkim/dkim_getsignature.html
-share/doc/dkim-milter/libdkim/dkim_handling_t.html
 share/doc/dkim-milter/libdkim/dkim_header.html
 share/doc/dkim-milter/libdkim/dkim_init.html
 share/doc/dkim-milter/libdkim/dkim_lib.html
@@ -92,6 +90,10 @@ share/doc/dkim-milter/libdkim/dkim_ssl_version.html
 share/doc/dkim-milter/libdkim/dkim_stat.html
 share/doc/dkim-milter/libdkim/dkim_verify.html
 share/doc/dkim-milter/libdkim/index.html
+share/doc/dkim-milter/libdkim/dkim_chunk.html
+share/doc/dkim-milter/libdkim/dkim_key_syntax.html
+share/doc/dkim-milter/libdkim/dkim_policy_syntax.html
+share/doc/dkim-milter/libdkim/dkim_sig_syntax.html
 share/doc/dkim-milter/libdkim/overview.html
 share/doc/dkim-milter/libdkim/rfc2822_mailbox_split.html
 share/doc/dkim-milter/rfc4686.txt
