@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/01/25 04:31:55 dsainty Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/09 22:38:19 tnn Exp $
 #
 
 DISTNAME=	youtube-dl
-PKGNAME=	youtube-dl-20080124
+PKGNAME=	youtube-dl-20080308
 CATEGORIES=	net
 MASTER_SITES=	http://www.arrakis.es/~rggi3/youtube-dl/
 EXTRACT_SUFX=	# none
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.arrakis.es/~rggi3/youtube-dl/
 COMMENT=	Download videos from youtube.com
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=			# none
 PYTHON_VERSIONS_ACCEPTED=	24
@@ -28,7 +29,7 @@ SUBST_SED.path=         -e 's,/usr/bin/env python,${PYTHONBIN},g'
 do-build:
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/youtube-dl ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/youtube-dl ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
