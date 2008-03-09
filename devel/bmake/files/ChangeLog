@@ -1,3 +1,130 @@
+2008-02-15  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* merge some patches from NetBSD pkgsrc.
+	
+	* makefile.boot.in (BOOTSTRAP_SYS_PATH): Allow better control of
+	the MAKSYSPATH used during bootstrap. 
+
+	* Makefile.in (BMAKE_VERSION): bump version to 20080215
+	* Merge with NetBSD make, pick up:
+	  o warn if non-space chars follow 'empty' in a conditional.
+
+2008-01-18  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION): bump version to 20080118
+	* Merge with NetBSD make, pick up:
+	  o consider dependencies read from .depend as optional - dsl
+	  o remember when buffer for reading makefile grows - dsl
+	  o add -dl (aka LOUD) - David O'Brien
+
+2007-10-22  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION): bump version to 20071022
+	* Merge with NetBSD make, pick up:
+	  o Allow .PATH<suffix> to be used for .include ""
+
+	* boot-strap: source default settings from .bmake-boot-strap.rc
+
+2007-10-16  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in: fix maninstall on various systems 
+	  provided that our man.mk is used.
+	  For non-BSD systems we install the preformatted page
+	  into $MANDIR/cat1
+
+2007-10-15  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* boot-strap: make bmake.1 too, so maninstall works.
+
+2007-10-14  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION): bump version to 20071014
+	* Merge with NetBSD make, pick up:
+	  o revamped handling of defshell - configure no longer needs to
+	    know the content of the shells array - apb
+	  o stop Var_Subst modifying its input - apb
+	  o avoid calling ParseTrackInput too often - dsl
+
+2007-10-11  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION): bump version to 20071011
+	* Merge with NetBSD make, pick up:
+	  o fix Shell_Init for case that _BASENAME_DEFSHELL is absolute path.
+
+	* sigcompat.c: some tweaks for HP-UX 11.x based on 
+	  patch from Tobias Nygren
+
+	* configure.in: update handling of --with-defshell to match
+	  new make behavior.  --with-defshell=/usr/xpg4/bin/sh
+	  will now do what one might hope - provided the chosen shell
+	  behaves enough like sh.
+
+2007-10-08  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION): bump to 20071008
+	* Merge with NetBSD make, pick up:
+	  o .MAKE.JOB.PREFIX - control the token output before jobs - sjg
+	  o .export/.MAKE.EXPORTED - export of variables - sjg
+	  o .MAKE.MAKEFILES - track all makefiles read - sjg
+	  o performance improvements - dsl
+	  o revamp parallel job scheduling - dsl
+	
+2006-07-28  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION): bump to 20060728
+	* Merge with NetBSD make, pick up:
+	  o extra debug info during variable and cond processing - sjg
+	  o shell definition now covers newline - rillig
+	  o minor mem leak in PrintOnError - sjg
+
+2006-05-11  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION):  bump to 20060511
+	* Merge with NetBSD make, pick up:
+	  o more memory leaks - coverity
+	  o possible overflow in ArchFindMember - coverity
+	  o extract variable modifier code out of Var_Parse()
+	    so it can be called recursively - sjg
+	  o unit-tests/moderrs - sjg
+
+2006-04-12  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION): bump to 20060412
+	* Merge with NetBSD make, pick up:
+	  o fixes for some memory leaks - coverity
+	  o only read first sys.mk etc when searching sysIncPath - sjg
+
+	* main.c (ReadMakefile): remove hack for __INTERIX that prevented
+	setting ${MAKEFILE} - OBATA Akio
+
+2006-03-18  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION): bump to 20060318
+	* Merge with NetBSD make, pick up:
+	  o cleanup of job.c to remove remote handling, distcc is more
+	    useful and this code was likely bit-rotting - dsl
+	  o fix for :P modifier - sjg
+	* boot-strap: set default prefix to something reasonable 
+	  (for me anyway). 
+
+2006-03-01  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION): bump to 20060301
+	* Merge with NetBSD make, pick up:
+	  o make .WAIT apply recursively, document and test case - apb
+	  o allow variable modifiers in a variable appear anywhere in
+	    modifier list, document and test case - sjg
+
+2006-02-22  Simon J. Gerraty  <sjg@void.crufty.net>
+
+	* Makefile.in (BMAKE_VERSION): bump to 20060222
+	* Merge with NetBSD make, pick up:
+	  o improved job token handling - dsl
+	  o SIG_DFL the correct signal before exec - dsl
+	  o more debug info during parsing - dsl
+	  o allow variable modifiers to be specified via variable - sjg
+	* boot-strap: explain why we died if no mksrc
+
 2005-11-05  Simon J. Gerraty  <sjg@void.crufty.net>
 
 	* Makefile.in (BMAKE_VERSION): bump to 20051105
