@@ -1,18 +1,18 @@
-/*	$NetBSD: util.c,v 1.1.1.2 2008/03/09 19:39:34 joerg Exp $	*/
+/*	$NetBSD: util.c,v 1.2 2008/03/09 19:54:29 joerg Exp $	*/
 
 /*
  * Missing stuff from OS's
  *
- *	$Id: util.c,v 1.1.1.2 2008/03/09 19:39:34 joerg Exp $
+ *	$Id: util.c,v 1.2 2008/03/09 19:54:29 joerg Exp $
  */
 
 #include "make.h"
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: util.c,v 1.1.1.2 2008/03/09 19:39:34 joerg Exp $";
+static char rcsid[] = "$NetBSD: util.c,v 1.2 2008/03/09 19:54:29 joerg Exp $";
 #else
 #ifndef lint
-__RCSID("$NetBSD: util.c,v 1.1.1.2 2008/03/09 19:39:34 joerg Exp $");
+__RCSID("$NetBSD: util.c,v 1.2 2008/03/09 19:54:29 joerg Exp $");
 #endif
 #endif
 

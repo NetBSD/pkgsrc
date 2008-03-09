@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2008/03/03 17:45:34 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2008/03/09 19:54:28 joerg Exp $
 #
 
-DISTNAME=	bmake-20051105
-PKGREVISION=	4
+DISTNAME=	bmake-20080215
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,7 +9,7 @@ DISTFILES=	# empty
 # distfile obtained from ftp://ftp.NetBSD.org/pub/NetBSD/misc/sjg/
 # source is kept in files/ for bootstrap purposes
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.crufty.net/help/sjg/bmake.html
 COMMENT=	Portable (autoconf) version of NetBSD 'make' utility
 
@@ -20,7 +19,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/bmake
 NO_CHECKSUM=	yes
-NO_MTREE=	yes
 
 USE_FEATURES=	nbcompat
 

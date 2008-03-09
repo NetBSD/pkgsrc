@@ -1,4 +1,4 @@
-/*	$NetBSD: compat.c,v 1.3 2007/03/16 00:51:12 rillig Exp $	*/
+/*	$NetBSD: compat.c,v 1.4 2008/03/09 19:54:29 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -70,14 +70,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: compat.c,v 1.3 2007/03/16 00:51:12 rillig Exp $";
+static char rcsid[] = "$NetBSD: compat.c,v 1.4 2008/03/09 19:54:29 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)compat.c	8.2 (Berkeley) 3/19/94";
 #else
-__RCSID("$NetBSD: compat.c,v 1.3 2007/03/16 00:51:12 rillig Exp $");
+__RCSID("$NetBSD: compat.c,v 1.4 2008/03/09 19:54:29 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -210,35 +210,29 @@ CompatRunCommand(ClientData cmdp, ClientData gnp)
     char    	  *cmdStart;	/* Start of expanded command */
     char 	  *cp, *bp;
     Boolean 	  silent,   	/* Don't print command */
-	    	  doIt,		/* Execute even if -n */
-		  errCheck; 	/* Check errors */
+	    	  doIt;		/* Execute even if -n */
+    volatile Boolean errCheck; 	/* Check errors */
     WAIT_T 	  reason;   	/* Reason for child's death */
-    int    	  status;   	/* Description of child's death */
+    int	    	  status;   	/* Description of child's death */
     int	    	  cpid;	    	/* Child actually found */
     ReturnStatus  retstat;    	/* Status of fork */
     LstNode 	  cmdNode;  	/* Node where current command is located */
-    const char  **av;	    	/* Argument vector for thing to exec */
+    const char  ** volatile av;	/* Argument vector for thing to exec */
+    char	** volatile mav;/* Copy of the argument vector for freeing */
     int	    	  argc;	    	/* Number of arguments in av or 0 if not
 				 * dynamically allocated */
     Boolean 	  local;    	/* TRUE if command should be executed
 				 * locally */
-    char	  *cmd = (char *)cmdp;
+    Boolean 	  useShell;    	/* TRUE if command should be executed
+				 * using a shell */
+    char	  * volatile cmd = (char *)cmdp;
     GNode	  *gn = (GNode *)gnp;
 
-    /*
-     * Avoid clobbered variable warnings by forcing the compiler
-     * to ``unregister'' variables
-     */
-#if __GNUC__
-    (void) &av;
-    (void) &errCheck;
-    (void) &cmd;
-#endif
     silent = gn->type & OP_SILENT;
     errCheck = !(gn->type & OP_IGNORE);
     doIt = FALSE;
     
-    cmdNode = Lst_Member(gn->commands, (ClientData)cmd);
+    cmdNode = Lst_Member(gn->commands, cmd);
     cmdStart = Var_Subst(NULL, cmd, gn, FALSE);
 
     /*
@@ -255,10 +249,10 @@ CompatRunCommand(ClientData cmdp, ClientData gnp)
     } else {
 	cmd = cmdStart;
     }
-    Lst_Replace(cmdNode, (ClientData)cmdStart);
+    Lst_Replace(cmdNode, cmdStart);
 
     if ((gn->type & OP_SAVE_CMDS) && (gn != ENDNode)) {
-	(void)Lst_AtEnd(ENDNode->commands, (ClientData)cmdStart);
+	(void)Lst_AtEnd(ENDNode->commands, cmdStart);
 	return(0);
     } else if (strcmp(cmdStart, "...") == 0) {
 	gn->type |= OP_SAVE_CMDS;
@@ -268,7 +262,7 @@ CompatRunCommand(ClientData cmdp, ClientData gnp)
     while ((*cmd == '@') || (*cmd == '-') || (*cmd == '+')) {
 	switch (*cmd) {
 	case '@':
-	    silent = TRUE;
+	    silent = DEBUG(LOUD) ? FALSE : TRUE;
 	    break;
 	case '-':
 	    errCheck = FALSE;
@@ -285,6 +279,15 @@ CompatRunCommand(ClientData cmdp, ClientData gnp)
     while (isspace((unsigned char)*cmd))
 	cmd++;
 
+#if !defined(MAKE_NATIVE)
+    /*
+     * In a non-native build, the host environment might be weird enough
+     * that it's necessary to go through a shell to get the correct
+     * behaviour.  Or perhaps the shell has been replaced with something
+     * that does extra logging, and that should not be bypassed.
+     */
+    useShell = TRUE;
+#else
     /*
      * Search for meta characters in the command. If there are no meta
      * characters, there's no need to execute a shell to execute the
@@ -293,6 +296,8 @@ CompatRunCommand(ClientData cmdp, ClientData gnp)
     for (cp = cmd; !meta[(unsigned char)*cp]; cp++) {
 	continue;
     }
+    useShell = (*cp != '\0');
+#endif
 
     /*
      * Print the command before echoing if we're not supposed to be quiet for
@@ -311,10 +316,10 @@ CompatRunCommand(ClientData cmdp, ClientData gnp)
 	return (0);
     }
 
-    if (*cp != '\0') {
+    if (useShell) {
 	/*
-	 * If *cp isn't the null character, we hit a "meta" character and
-	 * need to pass the command off to the shell. 
+	 * We need to pass the command off to the shell, typically
+	 * because the command contains a "meta" character.
 	 */
 	static const char *shargv[4];
 
@@ -331,12 +336,14 @@ CompatRunCommand(ClientData cmdp, ClientData gnp)
 	av = shargv;
 	argc = 0;
 	bp = NULL;
+	mav = NULL;
     } else {
 	/*
 	 * No meta-characters, so no need to exec a shell. Break the command
 	 * into words to form an argument vector we can execute.
 	 */
-	av = (const char **)brk_string(cmd, &argc, TRUE, &bp);
+	mav =  brk_string(cmd, &argc, TRUE, &bp);
+	av = (const char **)mav;
     }
 
     local = TRUE;
@@ -350,6 +357,7 @@ CompatRunCommand(ClientData cmdp, ClientData gnp)
     }
     if (cpid == 0) {
 	Check_Cwd(av);
+	Var_ExportVars();
 	if (local)
 	    (void)execvp(av[0], (char *const *)UNCONST(av));
 	else
@@ -357,11 +365,11 @@ CompatRunCommand(ClientData cmdp, ClientData gnp)
 	execError("exec", av[0]);
 	_exit(1);
     }
-    if (bp) {
-	free(av);
+    if (mav)
+	free(mav);
+    if (bp)
 	free(bp);
-    }
-    Lst_Replace(cmdNode, (ClientData) NULL);
+    Lst_Replace(cmdNode, NULL);
 
     /*
      * The child is off and running. Now all we can do is wait...
@@ -381,21 +389,21 @@ CompatRunCommand(ClientData cmdp, ClientData gnp)
 		status = WEXITSTATUS(reason);		/* exited */
 		if (status != 0) {
 		    if (DEBUG(ERROR)) {
-		        printf("\n*** Failed target:  %s\n*** Failed command: ",
+		        fprintf(debug_file, "\n*** Failed target:  %s\n*** Failed command: ",
 			    gn->name);
 		        for (cp = cmd; *cp; ) {
     			    if (isspace((unsigned char)*cp)) {
-			        putchar(' ');
+				fprintf(debug_file, " ");
 			        while (isspace((unsigned char)*cp))
 				    cp++;
 			    } else {
-			        putchar(*cp);
+				fprintf(debug_file, "%c", *cp);
 			        cp++;
 			    }
 		        }
-			printf("\n");
+			fprintf(debug_file, "\n");
 		    }
-		    printf("*** Error code %d", status);
+		    fprintf(debug_file, "*** Error code %d", status);
 		}
 	    } else {
 		status = WTERMSIG(reason);		/* signaled */
@@ -471,7 +479,7 @@ Compat_Make(ClientData gnp, ClientData pgnp)
 	gn->made = BEINGMADE;
 	if ((gn->type & OP_MADE) == 0)
 	    Suff_FindDeps(gn);
-	Lst_ForEach(gn->children, Compat_Make, (ClientData)gn);
+	Lst_ForEach(gn->children, Compat_Make, gn);
 	if ((gn->flags & REMAKE) == 0) {
 	    gn->made = ABORTED;
 	    pgn->flags &= ~REMAKE;
@@ -492,16 +500,16 @@ Compat_Make(ClientData gnp, ClientData pgnp)
 	 * Make_OODate function.
 	 */
 	if (DEBUG(MAKE)) {
-	    printf("Examining %s...", gn->name);
+	    fprintf(debug_file, "Examining %s...", gn->name);
 	}
 	if (! Make_OODate(gn)) {
 	    gn->made = UPTODATE;
 	    if (DEBUG(MAKE)) {
-		printf("up-to-date.\n");
+		fprintf(debug_file, "up-to-date.\n");
 	    }
 	    goto cohorts;
 	} else if (DEBUG(MAKE)) {
-	    printf("out-of-date.\n");
+	    fprintf(debug_file, "out-of-date.\n");
 	}
 
 	/*
@@ -537,7 +545,7 @@ Compat_Make(ClientData gnp, ClientData pgnp)
 	     */
 	    if (!touchFlag || (gn->type & OP_MAKE)) {
 		curTarg = gn;
-		Lst_ForEach(gn->commands, CompatRunCommand, (ClientData)gn);
+		Lst_ForEach(gn->commands, CompatRunCommand, gn);
 		curTarg = NILGNODE;
 	    } else {
 		Job_Touch(gn, gn->type & OP_SILENT);
@@ -663,7 +671,7 @@ Compat_Run(Lst targs)
      * Expand .USE nodes right now, because they can modify the structure
      * of the tree.
      */
-    Lst_Destroy(Make_ExpandUse(targs), NOFREE);
+    Make_ExpandUse(targs);
 
     /*
      * For each entry in the list of targets to create, call Compat_Make on

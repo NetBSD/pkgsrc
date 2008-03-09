@@ -1,4 +1,4 @@
-# $Id: varcmd,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $
+# $Id: varcmd,v 1.2 2008/03/09 19:54:29 joerg Exp $
 #
 # Test behaviour of recursive make and vars set on command line.
 

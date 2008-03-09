@@ -1,19 +1,10 @@
 /* config.h.in.  Generated from configure.in by autoheader.  */
 
-/* Path to csh */
-#undef DEFAULT_CSH
-
-/* Path to ksh */
-#undef DEFAULT_KSH
-
-/* Path to sh */
-#undef DEFAULT_SH
-
-/* Default path for sys.mk */
-#undef DEFAULT_SYS_PATH
+/* Path of default shell */
+#undef DEFSHELL_CUSTOM
 
 /* Shell spec to use by default */
-#undef DEFSHELL
+#undef DEFSHELL_INDEX
 
 /* Define to 1 if you have the <ar.h> header file. */
 #undef HAVE_AR_H
@@ -31,6 +22,12 @@
 
 /* Define to 1 if you don't have `vprintf' but do have `_doprnt.' */
 #undef HAVE_DOPRNT
+
+/* Define to 1 if you have the `emalloc' function. */
+#undef HAVE_EMALLOC
+
+/* Define to 1 if you have the `estrndup' function. */
+#undef HAVE_ESTRNDUP
 
 /* Define to 1 if you have the <fcntl.h> header file. */
 #undef HAVE_FCNTL_H
@@ -110,6 +107,9 @@
 /* Define to 1 if you have the <string.h> header file. */
 #undef HAVE_STRING_H
 
+/* Define to 1 if you have the `strndup' function. */
+#undef HAVE_STRNDUP
+
 /* Define to 1 if you have the `strtod' function. */
 #undef HAVE_STRTOD
 
@@ -154,6 +154,9 @@
 
 /* Define to 1 if you have the <unistd.h> header file. */
 #undef HAVE_UNISTD_H
+
+/* Define to 1 if you have the `unsetenv' function. */
+#undef HAVE_UNSETENV
 
 /* Define to 1 if you have the <utime.h> header file. */
 #undef HAVE_UTIME_H
@@ -245,13 +248,13 @@
 /* Define to empty if `const' does not conform to ANSI C. */
 #undef const
 
-/* Define to `long int' if <sys/types.h> does not define. */
+/* Define to `long' if <sys/types.h> does not define. */
 #undef off_t
 
 /* Define to `int' if <sys/types.h> does not define. */
 #undef pid_t
 
-/* Define to `unsigned int' if <sys/types.h> does not define. */
+/* Define to `unsigned' if <sys/types.h> does not define. */
 #undef size_t
 
 /* Define as `fork' if `vfork' does not work. */

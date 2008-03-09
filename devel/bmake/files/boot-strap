@@ -14,6 +14,19 @@
 #	(http://www.crufty.net/FreeWare/configs.html), $prefix/bin
 #	and a suitable ~/*bin directory.
 #
+#	Options:
+#
+#	-c "rc"
+#		Pick up settings from "rc".  
+#		We look for '.bmake-boot-strap.rc' before processing
+#		options.
+#
+#	-m "mksrc"
+#		Indicate where the mk files can be found.
+#		Default is ./mk or ../mk, set to 'none' to force
+#		building without "mksrc" but in that case a sys.mk
+#		needs to exist in the default syspath ($prefix/share/mk)
+#
 #	Possibly useful configure_args:
 #
 #	--with-machine="machine"
@@ -38,7 +51,7 @@
 #	Simon J. Gerraty <sjg@crufty.net>
 
 # RCSid:
-#	$Id: boot-strap,v 1.2 2005/11/10 00:09:34 reed Exp $
+#	$Id: boot-strap,v 1.3 2008/03/09 19:54:29 joerg Exp $
 #
 #	@(#) Copyright (c) 2001 Simon J. Gerraty
 #
@@ -73,13 +86,30 @@ Error() {
 	exit 1
 }
 
+source_rc() {
+	rc=$1; shift
+	for d in ${*:-""}
+	do
+		r=${d:+$d/}$rc
+		[ -f $r -a -s $r ] || continue
+		echo "NOTE: reading $r"
+		. $r
+		break
+	done
+}
 
 CONFIGURE_ARGS=
-prefix=
+# pick a useful default prefix (for me at least ;-)
+for prefix in /opt/$HOST_TARGET $HOME/$HOST_TARGET /usr/pkg /usr/local ""
+do
+	[ -d ${prefix:-.} ] && break
+done
 srcdir=
 mksrc=
 objdir=
 quiet=:
+
+source_rc .bmake-boot-strap.rc . $Mydir/.. $HOME
 
 while :
 do
@@ -93,6 +123,7 @@ do
 	-m|--mksrc) mksrc=$2; shift 2;;
 	-o|--objdir) objdir=$2; shift 2;;
 	-q) quiet=; shift;;
+	-c) source_rc $2; shift 2;;
 	--*) CONFIGURE_ARGS="$CONFIGURE_ARGS $1"; shift;;
 	*=*) eval "$1"; export `IFS="="; set -- $1; echo $1`; shift;;
 	*) break;;
@@ -133,7 +164,7 @@ none|-) # we don't want it
 	;;
 *)	# guess we want mksrc...
 	mksrc=`GetDir /mk $mksrc $3 ./mk* $srcdir/mk* $srcdir/../mk*`
-	[ -d ${mksrc:-/dev/null} ] || Usage
+	[ -d ${mksrc:-/dev/null} ] || Usage "Use '-m none' to build without mksrc"
 	;;
 esac
 
@@ -148,7 +179,12 @@ case "$CONFIGURE_ARGS" in
 *--with-prefix-sys-path*) ;;	# skip
 *) AddConfigure --with-default-sys-path= $prefix/share/mk;;
 esac
-[ "$mksrc" ] && AddConfigure --with-mksrc= $mksrc
+if [ "$mksrc" ]; then
+        AddConfigure --with-mksrc= $mksrc
+        # not all cc's support this
+        export CFLAGS_MF=
+fi
+
 $srcdir/configure $CONFIGURE_ARGS || exit 1
 ${MAKE:-make} -f makefile.boot clean
 ${MAKE:-make} -f makefile.boot bootstrap || exit 1
@@ -159,15 +195,24 @@ $quiet exit 0
 make_version=`./bmake -m ./mk -m /usr/share/mk -f ./Makefile -V MAKE_VERSION | ( read one two; echo $one )`
 
 install_prefix() {
-       bdir=$1/bin
+       bindir=$1/bin
+       mandir=$1/share/man
+       mkdir=${2:-$1}/share/mk
        echo
        echo Commands to install into $1/
        echo
-       echo mkdir -p $bdir
-       echo cp $objdir/bmake $bdir/$make_version
-       echo rm -f $bdir/bmake
-       echo ln -s $make_version $bdir/bmake
-       [ "$mksrc" ] && echo $mksrc/install-mk $1/share/mk
+       echo mkdir -p $bindir
+       echo cp $objdir/bmake $bindir/$make_version
+       echo rm -f $bindir/bmake
+       echo ln -s $make_version $bindir/bmake
+       if [ -s bmake.cat1 ]; then
+	       echo mkdir -p $mandir/man1
+	       echo cp $srcdir/bmake.1 $mandir/man1
+       else
+	       echo mkdir -p $mandir/cat1
+	       echo cp $srcdir/bmake.cat1 $mandir/cat1/bmake.1
+       fi
+       [ "$mksrc" ] && echo $mksrc/install-mk $mkdir
 }
 
 case $prefix/ in
