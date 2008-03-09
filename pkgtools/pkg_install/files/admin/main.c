@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.35 2008/03/09 19:02:27 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.36 2008/03/09 20:36:22 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.35 2008/03/09 19:02:27 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.36 2008/03/09 20:36:22 joerg Exp $");
 #endif
 
 /*-
@@ -85,9 +85,6 @@ __RCSID("$NetBSD: main.c,v 1.35 2008/03/09 19:02:27 joerg Exp $");
 
 static const char Options[] = "K:SVbd:qs:";
 
-int     filecnt;
-int     pkgcnt;
-
 int	quiet;
 
 static void set_unset_variable(char **, Boolean);
@@ -124,7 +121,7 @@ usage(void)
  *	returns the number of files added to the database file.
  */
 static int
-add1pkg(const char *pkgdir)
+add_pkg(const char *pkgdir, void *vp)
 {
 	FILE	       *f;
 	plist_t	       *p;
@@ -134,10 +131,12 @@ add1pkg(const char *pkgdir)
 	char *PkgName, *dirp;
 	char 		file[MaxPathSize];
 	char		dir[MaxPathSize];
-	int		cnt = 0;
+	int		tmp, *cnt;
 
 	if (!pkgdb_open(ReadWrite))
 		err(EXIT_FAILURE, "cannot open pkgdb");
+
+	cnt = vp != NULL ? vp : &tmp;
 
 	PkgDBDir = _pkgdb_getPKGDB_DIR();
 	contents = pkgdb_pkg_file(pkgdir, CONTENTS_FNAME);
@@ -170,7 +169,7 @@ add1pkg(const char *pkgdir)
 				}
 			} else {
 				pkgdb_store(file, PkgName);
-				cnt++;
+				(*cnt)++;
 			}
 			break;
 		case PLIST_CWD:
@@ -208,7 +207,7 @@ add1pkg(const char *pkgdir)
 	fclose(f);
 	pkgdb_close();
 
-	return cnt;
+	return 0;
 }
 
 static void
@@ -223,10 +222,8 @@ delete1pkg(const char *pkgdir)
 static void 
 rebuild(void)
 {
-	DIR	       *dp;
-	struct dirent  *de;
-	const char     *PkgDBDir;
 	char		cachename[MaxPathSize];
+	int		pkgcnt, filecnt;
 
 	pkgcnt = 0;
 	filecnt = 0;
@@ -236,35 +233,8 @@ rebuild(void)
 		err(EXIT_FAILURE, "unlink %s", cachename);
 
 	setbuf(stdout, NULL);
-	PkgDBDir = _pkgdb_getPKGDB_DIR();
-	chdir(PkgDBDir);
-#ifdef PKGDB_DEBUG
-	printf("PkgDBDir='%s'\n", PkgDBDir);
-#endif
-	dp = opendir(".");
-	if (dp == NULL)
-		err(EXIT_FAILURE, "opendir failed");
-	while ((de = readdir(dp))) {
-		if (!(isdir(de->d_name) || islinktodir(de->d_name)))
-			continue;
 
-		if (strcmp(de->d_name, ".") == 0 ||
-		    strcmp(de->d_name, "..") == 0)
-			continue;
-
-#ifdef PKGDB_DEBUG
-		printf("%s\n", de->d_name);
-#else
-		if (!quiet) {
-			printf(".");
-		}
-#endif
-
-		filecnt += add1pkg(de->d_name);
-		pkgcnt++;
-	}
-	chdir("..");
-	closedir(dp);
+	iterate_pkg_db(add_pkg, &filecnt);
 
 	printf("\n");
 	printf("Stored %d file%s from %d package%s in %s.\n",
@@ -555,11 +525,8 @@ main(int argc, char *argv[])
 		pkgdb_dump();
 
 	} else if (strcasecmp(argv[0], "add") == 0) {
-		argv++;		/* "add" */
-		while (*argv != NULL) {
-			add1pkg(*argv);
-			argv++;
-		}
+		for (++argv; *argv != NULL; ++argv)
+			add_pkg(*argv, NULL);
 	} else if (strcasecmp(argv[0], "delete") == 0) {
 		argv++;		/* "delete" */
 		while (*argv != NULL) {
