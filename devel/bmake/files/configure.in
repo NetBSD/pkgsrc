@@ -1,6 +1,6 @@
 dnl
 dnl RCSid:
-dnl	$Id: configure.in,v 1.6 2007/09/21 13:12:30 rillig Exp $
+dnl	$Id: configure.in,v 1.7 2008/03/09 19:54:29 joerg Exp $
 dnl
 dnl Process this file with autoconf to produce a configure script
 dnl
@@ -8,26 +8,20 @@ AC_INIT(makefile.boot.in)
 AC_CONFIG_HEADER(config.h)
 
 dnl
-DEFAULT_CSH=/bin/csh
-DEFAULT_KSH=/bin/ksh
-DEFAULT_SH=/bin/sh
-DEFSHELL=1
 AC_ARG_WITH(defshell,
-[  --with-defshell=SHELL  explicitly set DEFSHELL to either /bin/sh or /bin/ksh],
+[  --with-defshell=SHELL  use SHELL by default - must be sh compatible, use sh or ksh to pick the internal definitions],
 [case "${withval}" in
 yes)   AC_MSG_ERROR(bad value ${withval} given for bmake DEFSHELL) ;;
 no)    ;;
-*)	case "$with_defshell" in
-	*/csh)	DEFSHELL=0; DEFAULT_CSH=$with_defshell;; # kidding right?
-	*/sh)  DEFSHELL=1; DEFAULT_SH=$with_defshell;;
-	*/ksh) DEFSHELL=2; DEFAULT_KSH=$with_defshell;;
-	esac
+*)     case "$with_defshell" in
+       sh)  DEFSHELL_INDEX=DEFSHELL_INDEX_SH;;	# it's the default anyway
+       ksh) DEFSHELL_INDEX=DEFSHELL_INDEX_KSH;;
+       csh) DEFSHELL_INDEX=DEFSHELL_INDEX_CSH;;	# kidding right?
+       *)   defshell_path=$with_defshell;;	# better be sh compatible!
+       esac
        ;;
-esac])
-AC_DEFINE_UNQUOTED(DEFSHELL, ${DEFSHELL}, Shell spec to use by default)
-AC_SUBST(DEFAULT_CSH)
-AC_SUBST(DEFAULT_KSH)
-AC_SUBST(DEFAULT_SH)
+       esac])
+dnl
 dnl
 dnl Checks for programs.
 AC_PROG_CC
@@ -99,6 +93,7 @@ AC_FUNC_WAIT3
 dnl Keep this list sorted
 AC_CHECK_FUNCS( \
 	asprintf \
+	emalloc \
 	getcwd \
 	getenv \
 	getopt \
@@ -111,10 +106,13 @@ AC_CHECK_FUNCS( \
 	sigvec \
 	snprintf \
 	strdup \
+	estrndup \
+	strndup \
 	strerror \
 	strftime \
 	strtod \
 	strtol \
+	unsetenv \
 	vasprintf \
 	vsnprintf \
 	wait3 \
@@ -215,20 +213,18 @@ echo "Using: ${force_machine}MACHINE=$machine, MACHINE_ARCH=$machine_arch" 1>&6
 dnl
 dnl Allow folk to control _PATH_DEFSYSPATH
 dnl
-DEFAULT_SYS_PATH=\${prefix}/share/mk
+default_sys_path=\${prefix}/share/mk
 AC_ARG_WITH(default-sys-path,
-[  --with-default-sys-path=PATH:DIR:LIST  use an explicit DEFAULT_SYS_PATH
+[  --with-default-sys-path=PATH:DIR:LIST  use an explicit _PATH_DEFSYSPATH
 	MAKESYSPATH is a ':' separated list of directories 
 	that bmake will search for system .mk files. 
-	DEFAULT_SYS_PATH is its default value.],
+	_PATH_DEFSYSPATH is its default value.],
 [case "${withval}" in
-yes)	AC_MSG_ERROR(bad value ${withval} given for bmake DEFAULT_SYS_PATH) ;;
+yes)	AC_MSG_ERROR(bad value ${withval} given for bmake _PATH_DEFSYSPATH) ;;
 no)	;;
-*)	DEFAULT_SYS_PATH="$with_default_sys_path"
+*)	default_sys_path="$with_default_sys_path"
 	;;
 esac])
-AC_SUBST(DEFAULT_SYS_PATH)
-
 dnl
 dnl Some folk don't like this one
 dnl
@@ -281,11 +277,23 @@ do
 done
 mksrc=`echo $mksrc | sed "s,$srcdir,\\\${srcdir},"`
 echo "Using: MKSRC=$mksrc" 1>&6
+dnl On some systems we want a different default shell by default
+if test -x /usr/xpg4/bin/sh; then
+        defshell_path=${defshell_path:-/usr/xpg4/bin/sh}
+fi
+if test -n "$defshell_path"; then
+	echo "Using: SHELL=$defshell_path"  >&6
+	AC_DEFINE_UNQUOTED(DEFSHELL_CUSTOM, "$defshell_path", Path of default shell)
+fi
+if test -n "$DEFSHELL_INDEX"; then
+       AC_DEFINE_UNQUOTED(DEFSHELL_INDEX, $DEFSHELL_INDEX, Shell spec to use by default)
+fi        
 dnl
 AC_SUBST(machine)
 AC_SUBST(force_machine)
 AC_SUBST(machine_arch)
 AC_SUBST(mksrc)
+AC_SUBST(default_sys_path)
 AC_SUBST(INSTALL)
 AC_SUBST(GCC)
 AC_SUBST(diff_u)

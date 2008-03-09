@@ -1,5 +1,5 @@
 /*	@(#)ranlib.h 1.6 88/08/19 SMI; from UCB 4.1 83/05/03	*/
-/*	$Id: ranlib.h,v 1.2 2005/11/02 18:41:37 reed Exp $	*/
+/*	$Id: ranlib.h,v 1.3 2008/03/09 19:54:29 joerg Exp $	*/
 
 /*
  * Structure of the __.SYMDEF table of contents for an archive.

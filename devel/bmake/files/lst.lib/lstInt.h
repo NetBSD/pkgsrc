@@ -1,4 +1,4 @@
-/*	$NetBSD: lstInt.h,v 1.3 2007/07/31 13:28:57 joerg Exp $	*/
+/*	$NetBSD: lstInt.h,v 1.4 2008/03/09 19:54:29 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -47,7 +47,7 @@
 typedef struct ListNode {
 	struct ListNode	*prevPtr;   /* previous element in list */
 	struct ListNode	*nextPtr;   /* next in list */
-	unsigned int	 useCount:8, /* Count of functions using the node.
+	unsigned int	useCount:8, /* Count of functions using the node.
 				     * node may not be deleted until count
 				     * goes to 0 */
  	    	    	flags:8;    /* Node status flags */
@@ -64,7 +64,7 @@ typedef enum {
     Head, Middle, Tail, Unknown
 } Where;
 
-typedef struct	{
+typedef struct	List {
 	ListNode  	firstPtr; /* first node in list */
 	ListNode  	lastPtr;  /* last node in list */
 	Boolean	  	isCirc;	  /* true if the list should be considered
@@ -86,24 +86,24 @@ typedef struct	{
  * PAlloc (var, ptype) --
  *	Allocate a pointer-typedef structure 'ptype' into the variable 'var'
  */
-#define	PAlloc(var,ptype)	var = (ptype) emalloc(sizeof (*var))
+#define	PAlloc(var,ptype)	var = (ptype) emalloc(sizeof *(var))
 
 /*
  * LstValid (l) --
  *	Return TRUE if the list l is valid
  */
-#define LstValid(l)	(((Lst)l == NILLST) ? FALSE : TRUE)
+#define LstValid(l)	((Lst)(l) != NILLST)
 
 /*
  * LstNodeValid (ln, l) --
  *	Return TRUE if the LstNode ln is valid with respect to l
  */
-#define LstNodeValid(ln, l)	((((LstNode)ln) == NILLNODE) ? FALSE : TRUE)
+#define LstNodeValid(ln, l)	((ln) != NILLNODE)
 
 /*
  * LstIsEmpty (l) --
  *	TRUE if the list l is empty.
  */
-#define LstIsEmpty(l)	(((List)l)->firstPtr == NilListNode)
+#define LstIsEmpty(l)	(((List)(l))->firstPtr == NilListNode)
 
 #endif /* _LSTINT_H_ */

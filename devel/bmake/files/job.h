@@ -1,4 +1,4 @@
-/*	$NetBSD: job.h,v 1.4 2007/09/06 19:23:26 joerg Exp $	*/
+/*	$NetBSD: job.h,v 1.5 2008/03/09 19:54:29 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -76,7 +76,6 @@
 /*-
  * job.h --
  *	Definitions pertaining to the running of jobs in parallel mode.
- *	Exported from job.c for the use of remote-execution modules.
  */
 #ifndef _JOB_H_
 #define _JOB_H_
@@ -123,30 +122,18 @@ emul_poll(struct pollfd *fd, int nfd, int timeout);
  *	   commands.
  *	4) An FILE* for writing out the commands. This is only
  *	   used before the job is actually started.
- *	5) A union of things used for handling the shell's output. Different
- *	   parts of the union are used based on the value of the usePipes
- *	   flag. If it is true, the output is being caught via a pipe and
+ *	5) The output is being caught via a pipe and
  *	   the descriptors of our pipe, an array in which output is line
  *	   buffered and the current position in that buffer are all
- *	   maintained for each job. If, on the other hand, usePipes is false,
- *	   the output is routed to a temporary file and all that is kept
- *	   is the name of the file and the descriptor open to the file.
- *	6) An identifier provided by and for the exclusive use of the
- *	   Rmt module.
- *	7) A word of flags which determine how the module handles errors,
+ *	   maintained for each job.
+ *	6) A word of flags which determine how the module handles errors,
  *	   echoing, etc. for the job
- *
- * The job "table" is kept as a linked Lst in 'jobs', with the number of
- * active jobs maintained in the 'nJobs' variable. At no time will this
- * exceed the value of 'maxJobs', initialized by the Job_Init function.
  *
  * When a job is finished, the Make_Update function is called on each of the
  * parents of the node which was just remade. This takes care of the upward
  * traversal of the dependency graph.
  */
-#ifndef RMT_WILL_WATCH
 struct pollfd;
-#endif
 
 #define JOB_BUFSIZE	1024
 typedef struct Job {
@@ -156,7 +143,13 @@ typedef struct Job {
 			     * saved when the job has been run */
     FILE 	*cmdFILE;   /* When creating the shell script, this is
 			     * where the commands go */
-    int    	rmtID;     /* ID returned from Rmt module */
+    int		exit_status; /* from wait4() in signal handler */
+    char        job_state;  /* status of the job entry */
+#define JOB_ST_FREE	0	/* Job is available */
+#define JOB_ST_SETUP	1	/* Job is allocated but otherwise invalid */
+#define JOB_ST_RUNNING	3	/* Job is running, pid valid */
+#define JOB_ST_FINISHED	4	/* Job is done (ie after SIGCHILD) */
+    char        job_suspended;
     short      	flags;	    /* Flags to control treatment of job */
 #define	JOB_IGNERR	0x001	/* Ignore non-zero exits */
 #define	JOB_SILENT	0x002	/* no output */
@@ -164,53 +157,18 @@ typedef struct Job {
 				 * if we can't export it and maxLocal is 0 */
 #define JOB_IGNDOTS	0x008  	/* Ignore "..." lines when processing
 				 * commands */
-#define JOB_REMOTE	0x010	/* Job is running remotely */
-#define JOB_FIRST	0x020	/* Job is first job for the node */
-#define JOB_REMIGRATE	0x040	/* Job needs to be remigrated */
-#define JOB_RESTART	0x080	/* Job needs to be completely restarted */
-#define JOB_RESUME	0x100	/* Job needs to be resumed b/c it stopped,
-				 * for some reason */
-#define JOB_CONTINUING	0x200	/* We are in the process of resuming this job.
-				 * Used to avoid infinite recursion between
-				 * JobFinish and JobRestart */
 #define JOB_TRACED	0x400	/* we've sent 'set -x' */
 
-    union {
-	struct {
-	    int	  	op_inPipe;	/* Input side of pipe associated
-					 * with job's output channel */
-#ifndef RMT_WILL_WATCH
-	    struct pollfd *op_inPollfd;	/* pollfd associated with inPipe */
-#endif
-	    int   	op_outPipe;	/* Output side of pipe associated with
-					 * job's output channel */
-	    char  	op_outBuf[JOB_BUFSIZE + 1];
-	    	  	    	    	/* Buffer for storing the output of the
-					 * job, line by line */
-	    int   	op_curPos;	/* Current position in op_outBuf */
-	}   	    o_pipe;	    /* data used when catching the output via
-				     * a pipe */
-	struct {
-	    char  	of_outFile[sizeof(TMPPAT)+2];
-	    	  	    	    	/* Name of file to which shell output
-					 * was rerouted */
-	    int	    	of_outFd;	/* Stream open to the output
-					 * file. Used to funnel all
-					 * from a single job to one file
-					 * while still allowing
-					 * multiple shell invocations */
-	}   	    o_file;	    /* Data used when catching the output in
-				     * a temporary file */
-    }       	output;	    /* Data for tracking a shell's output */
+    int	  	 jobPipe[2];	/* Pipe for readind output from job */
+    struct pollfd *inPollfd;	/* pollfd associated with inPipe */
+    char  	outBuf[JOB_BUFSIZE + 1];
+				/* Buffer for storing the output of the
+				 * job, line by line */
+    int   	curPos;	/* Current position in op_outBuf */
 } Job;
 
-#define outPipe	  	output.o_pipe.op_outPipe
-#define inPipe	  	output.o_pipe.op_inPipe
-#define inPollfd	output.o_pipe.op_inPollfd
-#define outBuf		output.o_pipe.op_outBuf
-#define curPos		output.o_pipe.op_curPos
-#define outFile		output.o_file.of_outFile
-#define outFd	  	output.o_file.of_outFd
+#define inPipe jobPipe[0]
+#define outPipe jobPipe[1]
 
 
 /*-
@@ -244,7 +202,6 @@ typedef struct Job {
  * echo "%s\n" as a template.
  */
 typedef struct Shell {
-    const char	 *path;
     const char	 *name;		/* the name of the shell. For Bourne and C
 				 * shells, this is used only to find the
 				 * shell description when used as the single
@@ -263,6 +220,9 @@ typedef struct Shell {
     const char	 *errCheck;	/* string to turn error checking on */
     const char	 *ignErr;	/* string to turn off error checking */
     const char	 *errOut;	/* string to use for testing exit code */
+    const char	 *newline;	/* string literal that results in a newline
+				 * character when it appears outside of any
+				 * 'quote' or "quote" characters */
     char   commentChar;		/* character used by shell for comment lines */
 
     /*
@@ -275,33 +235,18 @@ typedef struct Shell {
 extern const char *shellPath;
 extern const char *shellName;
 
-extern int	job_pipe[2];	/* token pipe for jobs. */
 extern int	jobTokensRunning; /* tokens currently "out" */
-extern int	jobTokensFree;	/* tokens free but not yet released to pipe */
-
-#ifdef REMOTE
-extern char 	*targFmt;   	/* Format string for banner that separates
-				 * output from multiple jobs. Contains a
-				 * single %s where the name of the node being
-				 * made should be put. */
-extern GNode	*lastNode;  	/* Last node for which a banner was printed.
-				 * If Rmt module finds it necessary to print
-				 * a banner, it should set this to the node
-				 * for which the banner was printed */
-extern int  	nJobs;	    	/* Number of jobs running (local and remote) */
-extern int  	nLocal;	    	/* Number of jobs running locally */
-extern Lst  	jobs;	    	/* List of active job descriptors */
-extern Lst  	stoppedJobs;	/* List of jobs that are stopped or didn't
-				 * quite get started */
-#endif
+extern int	maxJobs;	/* Max jobs we can run */
 
 void Shell_Init(void);
+const char *Shell_GetNewline(void);
 void Job_Touch(GNode *, Boolean);
 Boolean Job_CheckCommands(GNode *, void (*abortProc )(const char *, ...));
-void Job_CatchChildren(Boolean);
+#define CATCH_BLOCK	1
+void Job_CatchChildren(void);
 void Job_CatchOutput(void);
 void Job_Make(GNode *);
-void Job_Init(int, int);
+void Job_Init(void);
 Boolean Job_Full(void);
 Boolean Job_Empty(void);
 ReturnStatus Job_ParseShell(char *);
@@ -311,8 +256,8 @@ void Job_Wait(void);
 void Job_AbortAll(void);
 void JobFlagForMigration(int);
 void Job_TokenReturn(void);
-void Job_TokenFlush(void);
 Boolean Job_TokenWithdraw(void);
-void Job_ServerStart(int);
+void Job_ServerStart(int, int, int);
+void Job_SetPrefix(void);
 
 #endif /* _JOB_H_ */
