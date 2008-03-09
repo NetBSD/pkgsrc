@@ -1,4 +1,4 @@
-/*	$NetBSD: pathnames.h,v 1.2 2007/09/06 19:23:26 joerg Exp $	*/
+/*	$NetBSD: pathnames.h,v 1.3 2008/03/09 19:54:29 joerg Exp $	*/
 
 /*
  * Copyright (c) 1990, 1993
@@ -29,7 +29,7 @@
  * SUCH DAMAGE.
  *
  *	from: @(#)pathnames.h	5.2 (Berkeley) 6/1/90
- *	$Id: pathnames.h,v 1.2 2007/09/06 19:23:26 joerg Exp $
+ *	$Id: pathnames.h,v 1.3 2008/03/09 19:54:29 joerg Exp $
  */
 
 #if HAVE_CONFIG_H
@@ -43,18 +43,17 @@
 #ifdef HAVE_PATHS_H
 #include <paths.h>
 #endif
-
-#ifndef	DEFAULT_CSH
-#define	DEFAULT_CSH		"/bin/csh"
-#endif
-#ifndef	DEFAULT_KSH
-#define	DEFAULT_KSH		"/bin/ksh"
-#endif
-#ifndef	DEFAULT_SH
-#define	DEFAULT_SH		"/bin/sh"
-#endif
-
 #define	_PATH_OBJDIR		"obj"
 #define	_PATH_OBJDIRPREFIX	"/usr/obj"
+#ifndef _PATH_DEFSHELLDIR
+#define	_PATH_DEFSHELLDIR	"/bin"
+#endif
 #define	_PATH_DEFSYSMK		"sys.mk"
 #define _path_defsyspath	"/usr/share/mk:/usr/local/share/mk:/opt/share/mk"
+#ifndef _PATH_DEFSYSPATH
+# ifdef _PATH_PREFIX_SYSPATH
+#   define  _PATH_DEFSYSPATH	_PATH_PREFIX_SYSPATH ":" _path_defsyspath
+# else
+#   define  _PATH_DEFSYSPATH	_path_defsyspath
+# endif
+#endif
