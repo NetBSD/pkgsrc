@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.44 2008/02/22 21:58:16 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.45 2008/03/09 18:03:46 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -17,7 +17,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.44 2008/02/22 21:58:16 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.45 2008/03/09 18:03:46 joerg Exp $");
 #endif
 #endif
 
@@ -278,11 +278,11 @@ read_meta_data_from_pkgdb(const char *pkg)
 		fd = open(fname, O_RDONLY, 0);
 		free(fname);
 		if (fd == -1) {
-			if (errno == ENOENT)
+			if (errno == ENOENT && descr->required_file == 0)
 				continue;
-			err(2, "cannot read meta data file %s",
-			    descr->entry_filename);
-		}	
+			err(2, "cannot read meta data file %s of package %s",
+			    descr->entry_filename, pkg);
+		}
 		target = (char **)((char *)meta + descr->entry_offset);
 
 		if (fstat(fd, &st) == -1)
