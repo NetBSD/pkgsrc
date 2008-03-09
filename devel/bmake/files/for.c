@@ -1,4 +1,4 @@
-/*	$NetBSD: for.c,v 1.1.1.1 2005/12/02 00:02:59 sjg Exp $	*/
+/*	$NetBSD: for.c,v 1.1.1.2 2008/03/09 19:39:33 joerg Exp $	*/
 
 /*
  * Copyright (c) 1992, The Regents of the University of California.
@@ -30,14 +30,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: for.c,v 1.1.1.1 2005/12/02 00:02:59 sjg Exp $";
+static char rcsid[] = "$NetBSD: for.c,v 1.1.1.2 2008/03/09 19:39:33 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)for.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: for.c,v 1.1.1.1 2005/12/02 00:02:59 sjg Exp $");
+__RCSID("$NetBSD: for.c,v 1.1.1.2 2008/03/09 19:39:33 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -164,7 +164,7 @@ For_Eval(char *line)
 	 * a for.
 	 */
 	if (ptr[0] != 'f' || ptr[1] != 'o' || ptr[2] != 'r' ||
-	    !isspace((unsigned char) ptr[3]))
+		!isspace((unsigned char) ptr[3]))
 	    return FALSE;
 	ptr += 3;
 
@@ -228,7 +228,7 @@ For_Eval(char *line)
 #define ADDWORD() \
 	Buf_AddBytes(buf, ptr - wrd, (Byte *)wrd), \
 	Buf_AddByte(buf, (Byte)'\0'), \
-	Lst_AtFront(accumFor.lst, (ClientData)Buf_GetAll(buf, &varlen)), \
+	Lst_AtFront(accumFor.lst, Buf_GetAll(buf, &varlen)), \
 	Buf_Destroy(buf, FALSE)
 
 	for (ptr = sub; *ptr && isspace((unsigned char) *ptr); ptr++)
@@ -245,9 +245,9 @@ For_Eval(char *line)
 	if (DEBUG(FOR)) {
 	    int i;
 	    for (i = 0; i < accumFor.nvars; i++) {
-		(void)fprintf(stderr, "For: variable %s\n", accumFor.vars[i]);
+		(void)fprintf(debug_file, "For: variable %s\n", accumFor.vars[i]);
 	    }
-	    (void)fprintf(stderr, "For: list %s\n", sub);
+	    (void)fprintf(debug_file, "For: list %s\n", sub);
 	}
 	if (ptr - wrd > 0)
 	    ADDWORD();
@@ -259,25 +259,25 @@ For_Eval(char *line)
 	forLevel++;
 	return 1;
     }
-    else if (*ptr == '.') {
+
+    if (*ptr == '.') {
 
 	for (ptr++; *ptr && isspace((unsigned char) *ptr); ptr++)
 	    continue;
 
 	if (strncmp(ptr, "endfor", 6) == 0 &&
-	    (isspace((unsigned char) ptr[6]) || !ptr[6])) {
+		(isspace((unsigned char) ptr[6]) || !ptr[6])) {
 	    if (DEBUG(FOR))
-		(void)fprintf(stderr, "For: end for %d\n", forLevel);
+		(void)fprintf(debug_file, "For: end for %d\n", forLevel);
 	    if (--forLevel < 0) {
 		Parse_Error(level, "for-less endfor");
 		return 0;
 	    }
-	}
-	else if (strncmp(ptr, "for", 3) == 0 &&
+	} else if (strncmp(ptr, "for", 3) == 0 &&
 		 isspace((unsigned char) ptr[3])) {
 	    forLevel++;
 	    if (DEBUG(FOR))
-		(void)fprintf(stderr, "For: new loop %d\n", forLevel);
+		(void)fprintf(debug_file, "For: new loop %d\n", forLevel);
 	}
     }
 
@@ -286,9 +286,8 @@ For_Eval(char *line)
 	Buf_AddByte(accumFor.buf, (Byte)'\n');
 	return 1;
     }
-    else {
-	return 0;
-    }
+
+    return 0;
 }
 
 
@@ -351,7 +350,7 @@ For_Run(int lineno)
 	for (i = 0; i < arg.nvars; i++) {
 	    Var_Set(arg.vars[i], values[i], VAR_GLOBAL, 0);
 	    if (DEBUG(FOR))
-		(void)fprintf(stderr, "--- %s = %s\n", arg.vars[i], 
+		(void)fprintf(debug_file, "--- %s = %s\n", arg.vars[i], 
 		    values[i]);
 	}
 
@@ -372,7 +371,7 @@ For_Run(int lineno)
 	    if (old_guy != orig_guy)
 		free(old_guy);
 	}
-	Parse_FromString(guy, lineno);
+	Parse_SetInput(NULL, lineno, -1, guy);
 
 	for (i = 0; i < arg.nvars; i++)
 	    Var_Delete(arg.vars[i], VAR_GLOBAL);

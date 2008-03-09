@@ -1,4 +1,4 @@
-/*	$NetBSD: lstDatum.c,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $	*/
+/*	$NetBSD: lstDatum.c,v 1.1.1.2 2008/03/09 19:39:35 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990, 1993
@@ -33,14 +33,14 @@
  */
 
 #ifndef MAKE_NATIVE
-static char rcsid[] = "$NetBSD: lstDatum.c,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $";
+static char rcsid[] = "$NetBSD: lstDatum.c,v 1.1.1.2 2008/03/09 19:39:35 joerg Exp $";
 #else
 #include <sys/cdefs.h>
 #ifndef lint
 #if 0
 static char sccsid[] = "@(#)lstDatum.c	8.1 (Berkeley) 6/6/93";
 #else
-__RCSID("$NetBSD: lstDatum.c,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $");
+__RCSID("$NetBSD: lstDatum.c,v 1.1.1.2 2008/03/09 19:39:35 joerg Exp $");
 #endif
 #endif /* not lint */
 #endif
@@ -69,7 +69,7 @@ ClientData
 Lst_Datum(LstNode ln)
 {
     if (ln != NILLNODE) {
-	return (((ListNode)ln)->datum);
+	return ((ln)->datum);
     } else {
 	return ((ClientData) NIL);
     }

@@ -1,4 +1,4 @@
-/*	$NetBSD: trace.h,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $	*/
+/*	$NetBSD: trace.h,v 1.1.1.2 2008/03/09 19:39:33 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2000 The NetBSD Foundation, Inc.

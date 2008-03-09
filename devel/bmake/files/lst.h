@@ -1,4 +1,4 @@
-/*	$NetBSD: lst.h,v 1.1.1.1 2005/12/02 00:03:00 sjg Exp $	*/
+/*	$NetBSD: lst.h,v 1.1.1.2 2008/03/09 19:39:33 joerg Exp $	*/
 
 /*
  * Copyright (c) 1988, 1989, 1990 The Regents of the University of California.
@@ -89,8 +89,8 @@
  * basic typedef. This is what the Lst_ functions handle
  */
 
-typedef	struct	Lst	*Lst;
-typedef	struct	LstNode	*LstNode;
+typedef	struct List	*Lst;
+typedef	struct ListNode	*LstNode;
 
 typedef ClientData	DuplicateProc(ClientData);
 typedef void		FreeProc(ClientData);
@@ -125,9 +125,9 @@ Boolean		Lst_IsEmpty(Lst);
  * Functions to modify a list
  */
 /* Insert an element before another */
-ReturnStatus	Lst_Insert(Lst, LstNode, ClientData);
+ReturnStatus	Lst_InsertBefore(Lst, LstNode, ClientData);
 /* Insert an element after another */
-ReturnStatus	Lst_Append(Lst, LstNode, ClientData);
+ReturnStatus	Lst_InsertAfter(Lst, LstNode, ClientData);
 /* Place an element at the front of a lst. */
 ReturnStatus	Lst_AtFront(Lst, ClientData);
 /* Place an element at the end of a lst. */
@@ -148,6 +148,8 @@ LstNode		Lst_First(Lst);
 LstNode		Lst_Last(Lst);
 /* Return successor to given element */
 LstNode		Lst_Succ(LstNode);
+/* Return predecessor to given element */
+LstNode		Lst_Prev(LstNode);
 /* Get datum from LstNode */
 ClientData	Lst_Datum(LstNode);
 
@@ -165,13 +167,13 @@ LstNode		Lst_FindFrom(Lst, LstNode, ClientData,
  */
 LstNode		Lst_Member(Lst, ClientData);
 /* Apply a function to all elements of a lst */
-void		Lst_ForEach(Lst, int (*)(ClientData, ClientData), ClientData);
+int		Lst_ForEach(Lst, int (*)(ClientData, ClientData), ClientData);
 /*
  * Apply a function to all elements of a lst starting from a certain point.
  * If the list is circular, the application will wrap around to the
  * beginning of the list again.
  */
-void		Lst_ForEachFrom(Lst, LstNode, int (*)(ClientData, ClientData),
+int		Lst_ForEachFrom(Lst, LstNode, int (*)(ClientData, ClientData),
 				ClientData);
 /*
  * these functions are for dealing with a list as a table, of sorts.
