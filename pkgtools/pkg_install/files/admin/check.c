@@ -1,4 +1,4 @@
-/*	$NetBSD: check.c,v 1.1 2008/03/09 19:02:27 joerg Exp $	*/
+/*	$NetBSD: check.c,v 1.2 2008/03/09 19:25:16 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: check.c,v 1.1 2008/03/09 19:02:27 joerg Exp $");
+__RCSID("$NetBSD: check.c,v 1.2 2008/03/09 19:25:16 joerg Exp $");
 #endif
 
 /*-
@@ -95,10 +95,13 @@ check1pkg(const char *pkgdir, int *filecnt, int *pkgcnt)
 	char   *PkgName, *dirp = NULL, *md5file;
 	char    file[MaxPathSize];
 	char    dir[MaxPathSize];
+	char   *content;
 
-	f = fopen(CONTENTS_FNAME, "r");
+	content = pkgdb_pkg_file(pkgdir, CONTENTS_FNAME);
+	f = fopen(content, "r");
 	if (f == NULL)
-		err(EXIT_FAILURE, "can't open %s/%s/%s", _pkgdb_getPKGDB_DIR(), pkgdir, CONTENTS_FNAME);
+		err(EXIT_FAILURE, "can't open %s", content);
+	free(content);
 
 	Plist.head = Plist.tail = NULL;
 	read_plist(&Plist, f);
@@ -202,19 +205,11 @@ static int
 checkpattern_fn(const char *pkg, void *vp)
 {
 	struct checkpattern_arg *arg = vp;
-	int rc;
-
-	rc = chdir(pkg);
-	if (rc == -1)
-		err(EXIT_FAILURE, "Cannot chdir to %s/%s", _pkgdb_getPKGDB_DIR(), pkg);
 
 	check1pkg(pkg, &arg->filecnt, &arg->pkgcnt);
-	if (!quiet) {
+	if (!quiet)
 		printf(".");
-	}
 
-	chdir("..");
-	
 	arg->got_match = 1;
 
 	return 0;
@@ -261,15 +256,11 @@ check_pkg(const char *pkg, int *filecnt, int *pkgcnt, int allow_unmatched)
 void
 check(char **argv)
 {
-	int filecnt, pkgcnt, rc;
+	int filecnt, pkgcnt;
 
 	filecnt = 0;
 	pkgcnt = 0;
 	setbuf(stdout, NULL);
-
-	rc = chdir(_pkgdb_getPKGDB_DIR());
-	if (rc == -1)
-		err(EXIT_FAILURE, "Cannot chdir to %s", _pkgdb_getPKGDB_DIR());
 
 	if (*argv == NULL) {
 		check_pkg("*", &filecnt, &pkgcnt, 1);
