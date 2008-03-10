@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.19 2008/03/02 14:40:26 bjs Exp $
+# $NetBSD: buildlink3.mk,v 1.20 2008/03/10 18:35:54 drochner Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CURL_BUILDLINK3_MK:=	${CURL_BUILDLINK3_MK}+
@@ -20,6 +20,9 @@ pkgbase:= curl
 .  include "../../mk/pkg-build-options.mk"
 .  if !empty(PKG_BUILD_OPTIONS.curl:Mlibssh2)
 .    include "../../security/libssh2/buildlink3.mk"
+.  endif
+.  if !empty(PKG_BUILD_OPTIONS.curl:Mgssapi)
+.    include "../../mk/krb5.buildlink3.mk"
 .  endif
 .endif	# CURL_BUILDLINK3_MK
 
