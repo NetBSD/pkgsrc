@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2007,v 1.2726 2008/02/12 23:25:07 wiz Exp $
+$NetBSD: CHANGES-2007,v 1.2727 2008/03/10 13:00:48 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2007:
 
@@ -3960,6 +3960,7 @@ Changes to the packages collection and infrastructure in 2007:
 	Updated wm/wmx to 6.0nb3 [adam 2007-10-11]
 	Updated filesystems/fuse-ntfs-3g to 1.1004 [xtraeme 2007-10-11]
 	Updated net/libpcap to 0.9.8 [adam 2007-10-11]
+	Added textproc/rarian to 0.6.0 [drochner 2007-10-11]
 	Updated sysutils/checkperms to 1.10 [rillig 2007-10-12]
 	Updated net/proftpd to 1.3.1 [martti 2007-10-12]
 	Updated www/trac to 0.10.4 [gdt 2007-10-12]
