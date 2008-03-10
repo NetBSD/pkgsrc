@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2008/03/07 22:52:12 wiz Exp $
+@comment $NetBSD: PLIST,v 1.30 2008/03/10 11:33:11 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -685,10 +685,6 @@ share/gnucash/guile-modules/gnucash/report/view-column.scm
 share/gnucash/guile-modules/gnucash/report/welcome-to-gnucash.scm
 share/gnucash/guile-modules/gnucash/tax/de_DE.scm
 share/gnucash/guile-modules/gnucash/tax/us.scm
-share/gnucash/guile-modules/www/cgi.scm
-share/gnucash/guile-modules/www/http.scm
-share/gnucash/guile-modules/www/main.scm
-share/gnucash/guile-modules/www/url.scm
 share/gnucash/pixmaps/gnc-account-16.png
 share/gnucash/pixmaps/gnc-account-delete-16.png
 share/gnucash/pixmaps/gnc-account-delete.png
@@ -852,7 +848,6 @@ share/xml/gnucash/xsl/vcard-gnccustomer.pl
 @dirrm share/gnucash/scm/gnumeric
 @dirrm share/gnucash/scm
 @dirrm share/gnucash/pixmaps
-@dirrm share/gnucash/guile-modules/www
 @exec ${MKDIR} %D/share/gnucash/guile-modules/srfi
 @dirrm share/gnucash/guile-modules/srfi
 @dirrm share/gnucash/guile-modules/gnucash/tax
