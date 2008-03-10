@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/01 08:30:48 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/10 03:00:18 obache Exp $
 #
 
 DISTNAME=	sary-ruby-1.2.0
@@ -12,6 +12,7 @@ COMMENT=	Ruby Binding of Sary
 
 RUBY_HAS_ARCHLIB=	yes
 USE_RUBY_EXTCONF=	yes
+USE_TOOLS+=		pkg-config
 
 DOCS=			Reference.en.rd Reference.ja.rd
 
