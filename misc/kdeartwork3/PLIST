@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2008/02/20 10:13:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.31 2008/03/10 12:37:12 drochner Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -7273,6 +7273,7 @@ share/kde/applnk/System/ScreenSavers/KSpace.desktop
 share/kde/applnk/System/ScreenSavers/KSwarm.desktop
 share/kde/applnk/System/ScreenSavers/KVm.desktop
 share/kde/applnk/System/ScreenSavers/KWave.desktop
+share/kde/applnk/System/ScreenSavers/abstractile.desktop
 share/kde/applnk/System/ScreenSavers/anemone.desktop
 share/kde/applnk/System/ScreenSavers/anemotaxis.desktop
 share/kde/applnk/System/ScreenSavers/antinspect.desktop
@@ -7312,6 +7313,7 @@ share/kde/applnk/System/ScreenSavers/crystal.desktop
 share/kde/applnk/System/ScreenSavers/cube21.desktop
 share/kde/applnk/System/ScreenSavers/cubenetic.desktop
 share/kde/applnk/System/ScreenSavers/cubestorm.desktop
+share/kde/applnk/System/ScreenSavers/cwaves.desktop
 share/kde/applnk/System/ScreenSavers/cynosure.desktop
 share/kde/applnk/System/ScreenSavers/dangerball.desktop
 share/kde/applnk/System/ScreenSavers/decayscreen.desktop
@@ -7346,6 +7348,7 @@ share/kde/applnk/System/ScreenSavers/galaxy.desktop
 share/kde/applnk/System/ScreenSavers/gears.desktop
 share/kde/applnk/System/ScreenSavers/gflux.desktop
 share/kde/applnk/System/ScreenSavers/glblur.desktop
+share/kde/applnk/System/ScreenSavers/glcells.desktop
 share/kde/applnk/System/ScreenSavers/gleidescope.desktop
 share/kde/applnk/System/ScreenSavers/glforestfire.desktop
 share/kde/applnk/System/ScreenSavers/glhanoi.desktop
@@ -7387,7 +7390,9 @@ share/kde/applnk/System/ScreenSavers/lightning.desktop
 share/kde/applnk/System/ScreenSavers/lisa.desktop
 share/kde/applnk/System/ScreenSavers/lissie.desktop
 share/kde/applnk/System/ScreenSavers/lmorph.desktop
+share/kde/applnk/System/ScreenSavers/lockward.desktop
 share/kde/applnk/System/ScreenSavers/loop.desktop
+share/kde/applnk/System/ScreenSavers/m6502.desktop
 share/kde/applnk/System/ScreenSavers/maze.desktop
 share/kde/applnk/System/ScreenSavers/memscroller.desktop
 share/kde/applnk/System/ScreenSavers/menger.desktop
@@ -7395,6 +7400,7 @@ share/kde/applnk/System/ScreenSavers/metaballs.desktop
 share/kde/applnk/System/ScreenSavers/mirrorblob.desktop
 share/kde/applnk/System/ScreenSavers/mismunch.desktop
 share/kde/applnk/System/ScreenSavers/moebius.desktop
+share/kde/applnk/System/ScreenSavers/moebiusgears.desktop
 share/kde/applnk/System/ScreenSavers/moire.desktop
 share/kde/applnk/System/ScreenSavers/moire2.desktop
 share/kde/applnk/System/ScreenSavers/molecule.desktop
@@ -7463,6 +7469,7 @@ share/kde/applnk/System/ScreenSavers/twang.desktop
 share/kde/applnk/System/ScreenSavers/vermiculate.desktop
 share/kde/applnk/System/ScreenSavers/vidwhacker.desktop
 share/kde/applnk/System/ScreenSavers/vines.desktop
+share/kde/applnk/System/ScreenSavers/voronoi.desktop
 share/kde/applnk/System/ScreenSavers/wander.desktop
 share/kde/applnk/System/ScreenSavers/whirlwindwarp.desktop
 share/kde/applnk/System/ScreenSavers/whirlygig.desktop
