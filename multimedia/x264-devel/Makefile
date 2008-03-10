@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2008/03/07 21:50:41 kefren Exp $
+# $NetBSD: Makefile,v 1.8 2008/03/10 11:59:26 drochner Exp $
 #
 
 SNAPSHOT_DATE=		20071218
 
 DISTNAME=		x264-snapshot-${SNAPSHOT_DATE}-2245
 PKGNAME=		x264-devel-${SNAPSHOT_DATE}
+PKGREVISION=		1
 CATEGORIES=		multimedia
 MASTER_SITES=		ftp://ftp.videolan.org/pub/videolan/x264/snapshots/
 EXTRACT_SUFX=		.tar.bz2
@@ -22,11 +23,12 @@ BUILD_DEPENDS+=	yasm>=0.4.0:../../devel/yasm
 .endif
 
 USE_TOOLS+=		gmake
+USE_LIBTOOL=		yes
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
-CONFIGURE_ARGS+=	--enable-pic
 
 BUILD_TARGET=		default
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
