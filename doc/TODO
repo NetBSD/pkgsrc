@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7119 2008/03/09 21:50:40 bjs Exp $
+$NetBSD: TODO,v 1.7120 2008/03/10 13:57:44 wiz Exp $
 
 Suggested new packages
 ======================
@@ -550,6 +550,7 @@ Suggested package updates
 	o dpkg-1.13.25
 	o drscheme-371
 	o drupal-6.0
+	o dvd+rw-tools-7.1
 	o dvipng-1.9
 	o eagle-4.16
 	o easymenu-0.7.2p1
@@ -572,6 +573,7 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.11
 	o enscript-1.6.4
+	o eog-2.22.0
 	o epic4-2.6
 	o epsg-6.14
 	o epstool-3.08
@@ -587,6 +589,7 @@ Suggested package updates
 	o f2c-20061008
 	o faces-1.7.7
 	o fakeroot-1.6.5
+	o fast-user-switch-applet-2.22.0
 	o fd-2.09c
 	o fdgw-20040609
 	o festival-1.96
@@ -631,7 +634,7 @@ Suggested package updates
 	o gdb-6.7.1
 	o gdb6-6.7.1
 	o gdeskcal-1.01
-	o gdl-0.7.10
+	o gdl-0.7.11
 	o gdsreader-0.3.2
 	o geany-0.13
 	o generator-cbiere-0.35r3
@@ -646,6 +649,7 @@ Suggested package updates
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
+	o glade3-3.4.2
 	o glchess-1.0.5
 	o global-5.6
 	o glpk-4.27
@@ -656,7 +660,10 @@ Suggested package updates
 	o gnet-2.0.8
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-build-0.2.3
+	o gnome-applets-2.22.0
+	o gnome-build-0.2.4
+	o gnome-doc-utils-0.12.2
+	o gnome-keyring-2.22.0
 	o gnome-mag-0.15.0
 	o gnome-pilot-2.0.16
 	o gnome-sharp-2.20.0
@@ -744,6 +751,7 @@ Suggested package updates
 	o irrd-2.3.4 [pkg/36813|38002]
 	o irrtoolset-nox11-4.8.4
 	o iselect-1.4.0
+	o iso-codes-2.0
 	o ispell-gaeilge-4.1
 	o ispell-german-20071211
 	o ispell-slovak-0.3.2
@@ -800,6 +808,7 @@ Suggested package updates
 	o libdiscid-0.1.1
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.6
+	o libebml-0.7.8
 	o libevent-1.4.0beta
 	o libextractor-0.5.19a
 	o libflash-0.4.13
@@ -817,6 +826,7 @@ Suggested package updates
 	o libgnomekbd-2.20.0
 	o libgnomemm-2.22.0
 	o libgnomeuimm-2.22.0
+	o libgtop-2.20.2
 	o libhydrogen-0.9.2
 	o liblive-2007.01.17 [pkg/38038]
 	o liblive-2007.02.20
@@ -841,6 +851,7 @@ Suggested package updates
 	o libtool-2.2
 	o libtool-base-2.2
 	o libxklavier-3.4
+	o libxml++-2.22.0
 	o libxml++2-2.20.0
 	o lilypond-2.10.33
 	o lincvs-2.0.0 [now called CrossVC]
@@ -867,6 +878,7 @@ Suggested package updates
 	o mcrypt-2.6.6
 	o mergeant-0.67
 	o mesure-0.7.2
+	o metacity-2.22.0
 	o metakit-lib-2.4.9.6
 	o mgetty+sendfax-1.1.35
 	o mimedefang-2.64
@@ -1123,6 +1135,7 @@ Suggested package updates
 	o py-checker-0.8.17
 	o py-clearsilver-0.10.5
 	o py-curl-7.16.4
+	o py-gnome2-2.22.0
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
@@ -1170,6 +1183,7 @@ Suggested package updates
 	o randread-0.2
 	o rapidsvn-0.9.6
 	o raptor-1.4.16
+	o rarian-0.8.0
 	o rat-4.2.25
 	o ratpoison-1.4.3
 	o rayshade-4.0.6
@@ -1214,6 +1228,7 @@ Suggested package updates
 	o scons-0.97
 	o scrollz-1.9.99
 	o scsh-1.3.0
+	o seahorse-2.22.0
 	o sendfile-20010424
 	o ser-0.9.6
 	o sge-6.1.2
@@ -1238,7 +1253,7 @@ Suggested package updates
 	o skkinput-2.06.4
 	o skype-2.0.0.43
 	o smalleiffel-0.90
-	o smalltalk-3.0.1
+	o smalltalk-3.0.2
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.65
 	o smokeping-2.3.1
@@ -1335,6 +1350,7 @@ Suggested package updates
 	o vmware-module-3.2.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vobcopy-1.1.1
+	o vorbis-tools-1.2.0
 	o vp-1.6
 	o vsftpd-2.0.6
 	o vttest-20071216
@@ -1351,6 +1367,7 @@ Suggested package updates
 	o windowlab-1.34
 	o wine-0.9.54
 	o wml-2.0.11
+	o wmnd-0.4.13
 	o wmweather-2.4.4
 	o worker-2.16.2
 	o wpa_gui-0.5.7
@@ -1435,12 +1452,13 @@ Suggested package updates
 	o xzip-182
 	o yacas-1.2.0
 	o yafc-1.1
-	o yelp-2.20.0
+	o yelp-2.22.0
 	o yodl-2.01.02
 	o ysm-2.9.9.1
 	o yudit-2.9.0
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
+	o zenity-2.22.0
 	o zile-2.2.56
 	o zircon-1.18.256
 	o zoom-1.0.5
