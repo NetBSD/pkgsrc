@@ -30,7 +30,7 @@ error_msg() {
 }
 
 find_best() {
-	${PKG_ADMIN} -b -d ${_PKG_DBDIR} -S lsbest $1 || ${TRUE}
+	${PKG_INFO} -E $1 || ${TRUE}
 }
 
 ${CAT} ${DEPENDS_FILE} | while read type pattern dir; do
