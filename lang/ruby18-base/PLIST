@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2007/09/24 21:58:27 taca Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/03/10 02:50:38 jlam Exp $
 bin/erb${RUBY_VER}
 bin/h2rb${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -300,6 +300,7 @@ ${RUBY_LIBDIR}/rexml/source.rb
 ${RUBY_LIBDIR}/rexml/streamlistener.rb
 ${RUBY_LIBDIR}/rexml/syncenumerator.rb
 ${RUBY_LIBDIR}/rexml/text.rb
+${RUBY_LIBDIR}/rexml/undefinednamespaceexception.rb
 ${RUBY_LIBDIR}/rexml/validation/relaxng.rb
 ${RUBY_LIBDIR}/rexml/validation/validation.rb
 ${RUBY_LIBDIR}/rexml/validation/validationexception.rb
