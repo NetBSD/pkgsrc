@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7122 2008/03/10 15:10:42 obache Exp $
+$NetBSD: TODO,v 1.7123 2008/03/10 16:11:38 wiz Exp $
 
 Suggested new packages
 ======================
@@ -440,7 +440,9 @@ Suggested package updates
 	o ast-ksh-20080202 [pkg/37854]
 	o asterisk-1.4.18
 	o astyle-1.15.3
+	o at-spi-1.22.0
 	o aterm-1.0.1
+	o atk-1.22.0
 	o auctex-11.85
 	o autoconvert-0.3.16
 	o avcheck-0.91
@@ -576,6 +578,7 @@ Suggested package updates
 	o enscript-1.6.4
 	o eog-2.22.0
 	o epic4-2.6
+	o epiphany-2.22.0
 	o epsg-6.14
 	o epstool-3.08
 	o eric3-4.1.1 [now called eric4]
@@ -584,6 +587,8 @@ Suggested package updates
 	o et-2.60
 	o etach-1.4.1
 	o eukleides-1.0.3
+	o evolution-2.22.0
+	o evolution-exchange-2.22.0
 	o ex-20050325
 	o ezmlm-idx-5.1.2 [schmonz]
 	o ezxml-0.8.6
@@ -621,9 +626,10 @@ Suggested package updates
 	o fugu-1.2.3
 	o fuse-ntfs-3g-1.2216
 	o fvwm2-themes-0.7.0
+	o gail-1.22.0
 	o gap-4r4p9
 	o gated-3.6
-	o gcalctool-5.21.91
+	o gcalctool-5.22.0
 	o gcc-4.2.2
 	o gcc-ssp-3.4.4
 	o gcin-1.3.7.1
@@ -650,7 +656,7 @@ Suggested package updates
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
-	o glade3-3.4.2
+	o glade3-3.4.3
 	o glchess-1.0.5
 	o global-5.6
 	o glpk-4.27
@@ -708,6 +714,7 @@ Suggested package updates
 	o gtk2-sharp-2.12.0
 	o gtklife-5.1
 	o gtksee-0.6.0b
+	o gtksourceview-2.2.0
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
@@ -844,7 +851,7 @@ Suggested package updates
 	o libpreludedb-0.9.14
 	o librsvg-2.22.2
 	o libshout-2.2.2
-	o libsigc++-2.2.1
+	o libsigc++-2.2.2
 	o libsoup-2.2.102
 	o libssh-0.2
 	o libstatgrab-0.15
@@ -963,6 +970,7 @@ Suggested package updates
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openmotif-2.3.0 [pkg/38038]
+	o orca-2.22.0
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o oto-0.5
@@ -1267,7 +1275,7 @@ Suggested package updates
 	o solfege-3.10.2 [schmonz]
 	o sope-4.5.9
 	o sound-juicer-2.16.4 [needs nautilus-cd-burner>=2.15.3]
-	o sound-juicer-2.20.1
+	o sound-juicer-2.22.0
 	o source-highlight-2.9
 	o spcaview-20060501
 	o spim-7.3
@@ -1319,6 +1327,7 @@ Suggested package updates
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
+	o totem-2.22.0
 	o tpasm-1.2
 	o tpb-0.6.4
 	o transfig-3.2.5
