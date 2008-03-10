@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.486 2008/03/10 01:58:08 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.487 2008/03/10 04:15:03 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -901,3 +901,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/jam to 2.5.2 [tnn 2008-03-10]
 	Updated devel/bmake to 20080215 [joerg 2008-03-10]
 	Updated www/elinks to 0.11.4rc1 [bjs 2008-03-10]
+	Updated devel/ruby-mode to 1.8.6.114 [taca 2008-03-10]
