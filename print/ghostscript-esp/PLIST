@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/01/24 15:28:30 ben Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/03/10 12:34:10 wiz Exp $
 bin/bdftops
 bin/dvipdf
 bin/eps2eps
@@ -524,5 +524,6 @@ share/ghostscript/${GS_VERS}/lib/zeroline.ps
 @dirrm share/ghostscript/${GS_VERS}/Resource/CMap
 @dirrm share/ghostscript/${GS_VERS}/Resource
 @dirrm share/ghostscript/${GS_VERS}
+@unexec ${RMDIR} %D/share/ghostscript 2>/dev/null || ${TRUE}
 @dirrm share/examples/ghostscript
 @dirrm share/doc/ghostscript
