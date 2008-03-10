@@ -1,4 +1,4 @@
-# $NetBSD: flavor-vars.mk,v 1.6 2008/01/03 20:51:21 adrianp Exp $
+# $NetBSD: flavor-vars.mk,v 1.7 2008/03/10 20:05:59 joerg Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -86,7 +86,7 @@ LINKFARM?=	${LINKFARM_CMD}
 # "${PKG_INFO} -e pkgpattern" if the latter would return more than one
 # package name.
 #
-_PKG_BEST_EXISTS?=	${PKG_ADMIN} -b -d ${_PKG_DBDIR} -S lsbest
+_PKG_BEST_EXISTS?=	${PKG_INFO} -E
 
 # XXX Leave this here until all uses of this have been purged from the
 # XXX public parts of pkgsrc.
