@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7121 2008/03/10 14:06:33 obache Exp $
+$NetBSD: TODO,v 1.7122 2008/03/10 15:10:42 obache Exp $
 
 Suggested new packages
 ======================
@@ -533,6 +533,7 @@ Suggested package updates
 	o ddclient-3.7.3
 	o defendguin-0.0.11
 	o delegate-9.7.5
+	o dejavu-ttf-2.24 [pkg/38212]
 	o devIL-1.6.7
 	o devhelp-0.19
 	o dhid-5.3
