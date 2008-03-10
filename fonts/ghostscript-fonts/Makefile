@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2006/12/27 18:08:17 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/10 12:34:10 wiz Exp $
 
 DISTNAME=		ghostscript-fonts-8.11
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		fonts
 MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=ghostscript/} \
 			ftp://mirror.cs.wisc.edu/pub/mirrors/ghost/fonts/
