@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/03/05 23:10:28 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/10 10:33:38 wiz Exp $
 #
 
 DISTNAME=	vbetool_0.7-1
@@ -14,6 +14,8 @@ COMMENT=	Run real-mode video BIOS code to alter hardware state
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM+=	Linux-*-i386 NetBSD-*-i386 NetBSD-*-x86_64
+
+CONFLICTS+=	vbetool-0.7-[0-9]*
 
 WRKSRC=		${WRKDIR}/vbetool-0.7
 USE_TOOLS+=	gmake

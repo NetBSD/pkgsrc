@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/03/04 12:17:48 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2008/03/10 10:33:38 wiz Exp $
 #
 
 DISTNAME=	subtitleripper-0.3-1
@@ -17,6 +17,8 @@ DEPENDS+=	gocr-[0-9]*:../../graphics/gocr
 USE_TOOLS+=		gmake
 WRKSRC=			${WRKDIR}/subtitleripper
 INSTALLATION_DIRS=	bin
+
+CONFLICTS+=	subtitleripper-0.3-[0-9]*
 
 do-install:
 	${SED} -e "s,@PREFIX@,${PREFIX}," <${WRKSRC}/pgm2txt >${WRKDIR}/pgm2txt

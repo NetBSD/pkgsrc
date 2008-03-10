@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/04 12:17:48 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/10 10:33:38 wiz Exp $
 
 DISTNAME=		mtl-2.1.2-21
 PKGNAME=		mtl-2.1.2.21
@@ -12,6 +12,7 @@ COMMENT=		Matrix Template Library
 GNU_CONFIGURE=		yes
 NO_BUILD=		yes
 
+CONFLICTS+=		mtl-2.1.2-[0-9]*
 USE_LANGUAGES=		c c++
 
 post-install:
