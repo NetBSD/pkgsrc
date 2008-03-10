@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/03/04 12:17:48 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2008/03/10 10:33:38 wiz Exp $
 #
 
 DISTNAME=	gnucap-2006-07-08
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.gnucap.org/
 COMMENT=	General purpose circuit simulator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+CONFLICTS+=	gnucap-2006-07-[0-9]*
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake

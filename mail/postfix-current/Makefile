@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2008/03/06 10:44:46 wiz Exp $
+# $NetBSD: Makefile,v 1.96 2008/03/10 10:33:38 wiz Exp $
 
 DISTNAME=	postfix-2.6-20080216
 PKGNAME=	postfix-2.6.20080216
@@ -12,6 +12,7 @@ COMMENT=	Postfix SMTP server and tools
 #LICENSE=	postfix-license
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 sendmail-[0-9]*
+CONFLICTS+=	postfix-2.6-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
