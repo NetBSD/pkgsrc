@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.12 2008/02/02 16:21:45 joerg Exp $
+# $NetBSD: Makefile.in,v 1.13 2008/03/10 12:14:32 wiz Exp $
 
 srcdir=		@srcdir@
 
@@ -6,6 +6,7 @@ prefix=		@prefix@
 exec_prefix=	@exec_prefix@
 sbindir=	@sbindir@
 mandir=		@mandir@
+datarootdir=	@datarootdir@
 
 man1dir=	$(mandir)/man1
 cat1dir=	$(mandir)/cat1

@@ -1,9 +1,10 @@
-# $NetBSD: Makefile.in,v 1.18 2008/02/19 15:16:24 joerg Exp $
+# $NetBSD: Makefile.in,v 1.19 2008/03/10 12:14:32 wiz Exp $
 
 srcdir=		@srcdir@
 
 pkgdbdir=	@pkgdbdir@
 mandir=		@mandir@
+datarootdir=	@datarootdir@
 
 cat5dir=	$(mandir)/cat5
 cat7dir=	$(mandir)/cat7
