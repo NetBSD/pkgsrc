@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2008/03/10 11:59:26 drochner Exp $
+
+--- strip_fPIC.sh.orig	2008-01-11 20:38:05.000000000 +0100
++++ strip_fPIC.sh
+@@ -0,0 +1,17 @@
++#!/bin/sh
++#
++# libtool assumes that the compiler can handle the -fPIC flag
++# This isn't always true (for example, nasm can't handle it)
++command=""
++while [ $1 ]; do
++	if [ "$1" != "-fPIC" ]; then
++		if [ "$1" = "-DPIC" ]; then
++			command="$command -D__PIC__"
++		else
++			command="$command $1"
++		fi
++	fi
++	shift
++done
++echo $command
++exec $command
