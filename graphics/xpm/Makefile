@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2007/10/16 23:49:00 tnn Exp $
+# $NetBSD: Makefile,v 1.60 2008/03/11 18:47:40 tnn Exp $
 
 DISTNAME=	xpm-3.4k
 PKGREVISION=	7
@@ -19,7 +19,7 @@ USE_IMAKE=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS" || ${OPSYS} == "IRIX"
+.if ${OPSYS} == "SunOS" || !empty(MACHINE_PLATFORM:MIRIX-5*)
 post-install:
 	cd ${PREFIX}/lib && \
 	rm -f libXpm.so.4 && \
