@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.7 2008/01/12 11:36:29 adam Exp $
+# $NetBSD: buildlink3.mk,v 1.8 2008/03/11 18:32:28 joerg Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 APR_BUILDLINK3_MK:=	${APR_BUILDLINK3_MK}+
@@ -23,12 +23,12 @@ BUILDLINK_FILES.apr+=	bin/apr-config
 BUILDLINK_FILES.apr+=	bin/apu-config
 BUILDLINK_FILES.apr+=	lib/*.exp
 
+.endif	# APR_BUILDLINK3_MK
+
 .include "../../mk/bsd.fast.prefs.mk"
 
 pkgbase := apr
 .include "../../mk/pkg-build-options.mk"
-
-.endif	# APR_BUILDLINK3_MK
 
 .if !empty(PKG_BUILD_OPTIONS.apr:Mdb4)
 .  include "../../databases/db4/buildlink3.mk"
