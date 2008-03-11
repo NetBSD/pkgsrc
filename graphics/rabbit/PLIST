@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/03/01 12:08:44 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/03/11 15:56:10 taca Exp $
 bin/rabbit
 bin/rabbit-theme-manager
 bin/rabrick
@@ -341,9 +341,6 @@ ${RUBY_SITELIBDIR}/rabbit/utils.rb
 ${RUBY_SITELIBDIR}/rabbit/xmlrpc/base.rb
 ${RUBY_SITELIBDIR}/rabbit/xmlrpc/client.rb
 ${RUBY_SITELIBDIR}/rabbit/xmlrpc/server.rb
-${RUBY_SITELIBDIR}/rt/rt2html-lib.rb
-${RUBY_SITELIBDIR}/rt/rtparser.rb
-${RUBY_SITELIBDIR}/rt/rtvisitor.rb
 ${RUBY_SITELIBDIR}/rwiki/soap/common.rb
 ${RUBY_SITELIBDIR}/rwiki/soap/driver.rb
 ${RUBY_SITELIBDIR}/rwiki/soap/servant.rb
@@ -404,7 +401,6 @@ share/rabbit/image/ruby-images/ruby-pink-polygon.png
 @dirrm share/rabbit
 @dirrm ${RUBY_SITELIBDIR}/rwiki/soap
 @dirrm ${RUBY_SITELIBDIR}/rwiki
-@dirrm ${RUBY_SITELIBDIR}/rt
 @dirrm ${RUBY_SITELIBDIR}/rabbit/xmlrpc
 @dirrm ${RUBY_SITELIBDIR}/rabbit/theme/title-shadow
 @dirrm ${RUBY_SITELIBDIR}/rabbit/theme/title-logo
