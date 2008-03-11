@@ -1,8 +1,15 @@
-# $NetBSD: termcap.builtin.mk,v 1.4 2008/03/05 16:23:52 jlam Exp $
+# $NetBSD: termcap.builtin.mk,v 1.5 2008/03/11 15:39:16 jlam Exp $
 
 BUILTIN_PKG:=	termcap
 
-BUILTIN_FIND_LIBS:=	curses termcap termlib tinfo
+BUILTIN_FIND_LIBS:=		curses termcap termlib tinfo
+BUILTIN_FIND_FILES_VAR:=	H_TERM H_TERMCAP H_TERMLIB
+BUILTIN_FIND_FILES.H_TERM:=	/usr/include/term.h
+BUILTIN_FIND_GREP.H_TERM:=	tgetent
+BUILTIN_FIND_FILES.H_TERMCAP:=	/usr/include/termcap.h
+BUILTIN_FIND_GREP.H_TERMCAP:=	tgetent
+BUILTIN_FIND_FILES.H_TERMLIB:=	/usr/include/termlib.h
+BUILTIN_FIND_GREP.H_TERMLIB:=	tgetent
 
 .include "buildlink3/bsd.builtin.mk"
 
@@ -37,18 +44,37 @@ MAKEVARS+=	USE_BUILTIN.termcap
 # Define BUILTIN_LIBNAME.termcap to be the base name of the built-in
 # termcap library.
 #
-# XXX This needs to be more sophisticated.  We will want to do what
-# XXX most packages do: test for tgetent() in the following libraries
-# XXX in order: c, curses, termcap, termlib.  Since we can't test for
-# XXX symbols in libraries, we'll need to be clever with looking at
-# XXX headers.
+# The way this is determined is:
 #
-.if !empty(BUILTIN_LIB_FOUND.termcap:M[yY][eE][sS])
-BUILTIN_LIBNAME.termcap=	termcap
-.elif !empty(BUILTIN_LIB_FOUND.tinfo:M[yY][eE][sS])
+# (1) If <term.h> exists and libtinfo exists, then it's "tinfo".
+# (2) If <term.h> exists and libcurses exists, then it's "curses".
+# (3) If <term.h> exists and lib{curses,tinfo} don't, then it's "c".
+# (4) If <termcap.h> exists and libtermcap exists, then it's "termcap".
+# (5) If <termcap.h> exists and libtermcap doesn't, then it's "c".
+# (6) If <termlib.h> exists and libtermlib exists, then it's "termlib".
+# (7) If <termlib.h> exists and libtermlib doesn't, then it's "c".
+# (8) If libtermlib exists by itself, then it's "termlib".
+#
+.if empty(H_TERM:M__nonexistent__) && empty(H_TERM:M${LOCALBASE}/*)
+.  if !empty(BUILTIN_LIB_FOUND.tinfo:M[yY][eE][sS])
 BUILTIN_LIBNAME.termcap=	tinfo
-.elif !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
+.  elif !empty(BUILTIN_LIB_FOUND.curses:M[yY][eE][sS])
 BUILTIN_LIBNAME.termcap=	curses
+.  else
+BUILTIN_LIBNAME.termcap=	c
+.  endif
+.elif empty(H_TERMCAP:M__nonexistent__) && empty(H_TERMCAP:M${LOCALBASE}/*)
+.  if !empty(BUILTIN_LIB_FOUND.termcap:M[yY][eE][sS])
+BUILTIN_LIBNAME.termcap=	termcap
+.  else
+BUILTIN_LIBNAME.termcap=	c
+.  endif
+.elif empty(H_TERMLIB:M__nonexistent__) && empty(H_TERMLIB:M${LOCALBASE}/*)
+.  if !empty(BUILTIN_LIB_FOUND.termlib:M[yY][eE][sS])
+BUILTIN_LIBNAME.termcap=	termlib
+.  else
+BUILTIN_LIBNAME.termcap=	c
+.  endif
 .elif !empty(BUILTIN_LIB_FOUND.termlib:M[yY][eE][sS])
 BUILTIN_LIBNAME.termcap=	termlib
 .endif
