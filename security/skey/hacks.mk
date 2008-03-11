@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.2 2007/10/16 23:49:02 tnn Exp $
+# $NetBSD: hacks.mk,v 1.3 2008/03/11 18:47:41 tnn Exp $
 
 .if !defined(SKEY_HACKS_MK)
 SKEY_HACKS_MK=	# defined
@@ -18,7 +18,7 @@ SUBST_SED.tsmp=		-e 's,$$(CATMAN),$$(TROFFMAN),g'
 ### [Sun Jul  9 13:20:30 CDT 2006 : schwarz]
 ### IRIX 5 does not have usleep()
 ###
-.if ${OPSYS} == "IRIX"
+.if !empty(MACHINE_PLATFORM:MIRIX-5*)
 PKG_HACKS+=		use-sginap-instead-of-usleep
 SUBST_CLASSES+=		sginap
 SUBST_MESSAGE.sginap=	use sginap() instead of usleep()
@@ -30,7 +30,7 @@ SUBST_SED.sginap=	-e 's,usleep(100000),sginap(CLK_TCK/10),g'
 ### [Sun Jul  9 14:11:23 CDT 2006 : schwarz]
 ### IRIX 5 does not define 64 bit types in sys/types.h
 ###
-.if ${OPSYS} == "IRIX"
+.if !empty(MACHINE_PLATFORM:MIRIX-5*)
 PKG_HACKS+=		missing-u_int64_t
 CPPFLAGS+=		-DMISSING-U_INT64_T
 .endif
