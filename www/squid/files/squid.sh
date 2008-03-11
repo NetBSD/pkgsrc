@@ -1,26 +1,31 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: squid.sh,v 1.20 2008/01/31 20:01:13 adam Exp $
+# $NetBSD: squid.sh,v 1.21 2008/03/11 15:46:41 taca Exp $
 #
 
 # PROVIDE: squid
 # REQUIRE: DAEMON
 # KEYWORD: shutdown
 
-conf_file="@PKG_SYSCONFDIR@/squid.conf"
+if [ -f /etc/rc.subr ]; then
+	. /etc/rc.subr
+fi
+
+: ${squid_conf:=@PKG_SYSCONFDIR@/squid.conf}
 
 name="squid"
 rcvar=$name
 command="@PREFIX@/sbin/${name}"
 pidfile="@VARBASE@/run/${name}.pid"
-required_files="${conf_file} @PKG_SYSCONFDIR@/mime.conf"
-command_args="-Y -f $conf_file"
+required_files="${squid_conf} @PKG_SYSCONFDIR@/mime.conf"
+command_args="-Y -f ${squid_conf}"
 
 stop_cmd="stop_nicely"
-kill_command="${command} -k shutdown"
-reload_cmd="${command} -k reconfigure"
-rotate_cmd="${command} -k rotate"
-createdirs_cmd="squid_createdirs"
+kill_command="${command} ${squid_flags} ${command_args} -k shutdown"
+reload_cmd="${command} ${squid_flags} ${command_args} -k reconfigure"
+rotate_cmd="${command} ${squid_flags} ${command_args} -k rotate"
+createdirs_cmd="${command} ${squid_flags} ${command_args} -z"
+extra_commands="createdirs reload rotate"
 
 #### end of configuration section ####
 
@@ -51,25 +56,17 @@ stop_nicely ()
 	fi
 }
 
-# create the squid cache directories
-squid_createdirs()
-{
-	${command} -z
-}
-
-if [ -f /etc/rc.subr -a -d /etc/rc.d -a -f /etc/rc.d/DAEMON ]; then
-	. /etc/rc.subr
-	. /etc/rc.conf
-
-	extra_commands="createdirs reload rotate"
+if [ -f /etc/rc.subr -a -f /etc/rc.conf -a -f /etc/rc.d/DAEMON ]; then
 	load_rc_config $name
 	run_rc_command "$1"
-
 else				# old NetBSD, Solaris, Linux, etc...
-
+	if [ -f /etc/rc.conf ]; then
+		. /etc/rc.conf
+	fi
 	case $1 in
 	start)
-		if [ -x ${command} -a -f ${conf_file} ] ; then
+		start_cmd="${command} ${squid_flags} ${command_args}"
+		if [ -x ${command} -a -f ${squid_conf} ] ; then
 			eval ${start_cmd} && @ECHO@ -n " ${name}"
 		fi
 		;;
@@ -77,7 +74,7 @@ else				# old NetBSD, Solaris, Linux, etc...
 		${stop_cmd}
 		;;
 	createdirs)
-		squid_createdirs
+		${createdirs_cmd}
 		;;
 	reload)
 		if [ -f ${pidfile} ] ; then
@@ -94,5 +91,4 @@ else				# old NetBSD, Solaris, Linux, etc...
 		exit 64
 		;;
 	esac
-
 fi
