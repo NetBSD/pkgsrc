@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.497 2008/03/11 16:08:24 taca Exp $
+$NetBSD: CHANGES-2008,v 1.498 2008/03/11 16:10:20 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -910,3 +910,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/sudo to 1.6.9p14 [taca 2008-03-11]
 	Updated graphics/rabbit to 0.5.5nb1 [taca 2008-03-11]
 	Removed math/ruby-gsl successor math/ruby-rb-gsl [taca 2008-03-11]
+	Updated time/p5-Time-TAI64 to 2.11 [kleink 2008-03-11]
