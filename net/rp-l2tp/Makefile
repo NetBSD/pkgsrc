@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10.2.1 2008/03/11 08:53:34 rtr Exp $
+# $NetBSD: Makefile,v 1.10.2.2 2008/03/11 09:08:34 rtr Exp $
 #
 
 DISTNAME=	rp-l2tp-0.3
@@ -15,9 +15,6 @@ NOT_FOR_PLATFORM+=	Interix-*-* # no userland protocol stack support
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 USE_TOOLS+=		gmake
-
-LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
-LDFLAGS.NetBSD+=	-lutil
 
 INSTALL_MAKE_FLAGS+=	RPM_INSTALL_ROOT=${DESTDIR:Q}
 
