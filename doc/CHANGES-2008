@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.490 2008/03/11 02:03:13 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.491 2008/03/11 10:18:32 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -896,7 +896,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Added misc/dvtm version 0.4 [tnn 2008-03-09]
 	Added biology/mopac version 7.0 [tnn 2008-03-09]
 	Added emulators/yabause version 0.9.3 [tnn 2008-03-09]
-	Updated net/rsync to 3.0.0 [bjs 2008-03-09]
 	Updated net/youtube-dl to 20080308 [tnn 2008-03-09]
 	Updated devel/jam to 2.5.2 [tnn 2008-03-10]
 	Updated devel/bmake to 20080215 [joerg 2008-03-10]
