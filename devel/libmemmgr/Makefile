@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/03/03 17:45:35 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/11 18:40:18 joerg Exp $
 #
 
 DISTNAME=		MemMgr-1.04
@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Simple memory manager library
 
-PKG_DESTDIR_SUPPORT=	user-destir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/memmgr-1.04
 INSTALLATION_DIRS=	include lib
