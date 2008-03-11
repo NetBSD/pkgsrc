@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.491 2008/03/11 10:18:32 tron Exp $
+$NetBSD: CHANGES-2008,v 1.492 2008/03/11 10:51:16 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -904,3 +904,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added chat/ejabberd version 2.0.0 [martti 2008-03-10]
 	Updated inputmethod/skk to 20080309 [uebayasi 2008-03-11]
 	Updated lang/chicken to 3.0.0 [tnn 2008-03-10]
+	Updated audio/gqmpeg-skins to 20030712nb5 [tron 2008-03-11]
