@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.488 2008/03/10 09:00:40 martti Exp $
+$NetBSD: CHANGES-2008,v 1.489 2008/03/11 01:28:55 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -903,3 +903,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/elinks to 0.11.4rc1 [bjs 2008-03-10]
 	Updated devel/ruby-mode to 1.8.6.114 [taca 2008-03-10]
 	Added chat/ejabberd version 2.0.0 [martti 2008-03-10]
+	Updated inputmethod/skk to 20080309 [uebayasi 2008-03-11]
