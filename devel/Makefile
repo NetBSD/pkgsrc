@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.919 2008/03/08 00:57:58 reed Exp $
+# $NetBSD: Makefile,v 1.920 2008/03/11 18:40:58 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -242,6 +242,7 @@ SUBDIR+=	kscope
 SUBDIR+=	lcc
 SUBDIR+=	ldapsdk
 SUBDIR+=	libFoundation
+SUBDIR+=	libarena
 SUBDIR+=	libargparse
 SUBDIR+=	libast
 SUBDIR+=	libaura
