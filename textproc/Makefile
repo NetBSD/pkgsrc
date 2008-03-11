@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.402 2008/03/08 00:19:36 mjl Exp $
+# $NetBSD: Makefile,v 1.403 2008/03/11 16:42:08 taca Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -336,6 +336,7 @@ SUBDIR+=	ruby-hpricot
 SUBDIR+=	ruby-html-parser
 SUBDIR+=	ruby-htree
 SUBDIR+=	ruby-itex2MML
+SUBDIR+=	ruby-libxml
 SUBDIR+=	ruby-maruku
 SUBDIR+=	ruby-mecab
 SUBDIR+=	ruby-native-hyperestraier
@@ -350,7 +351,6 @@ SUBDIR+=	ruby-suikyo
 SUBDIR+=	ruby-syntax
 SUBDIR+=	ruby-xmlparser
 SUBDIR+=	ruby-xmlscan
-SUBDIR+=	ruby18-libxml
 SUBDIR+=	sablotron
 SUBDIR+=	sary
 SUBDIR+=	saxon
