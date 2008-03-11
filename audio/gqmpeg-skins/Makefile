@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2008/03/02 06:10:32 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/11 10:50:56 tron Exp $
 
 DISTNAME=	gqmpeg-skins-20030712
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio
 MASTER_SITES=	http://gqmpeg.sourceforge.net/skins/
 DISTFILES+=	\
@@ -102,5 +102,6 @@ do-install:
 		${XARGS} ${CHMOD} 644
 		${FIND} ${DESTDIR}${PREFIX}/share/gqmpeg/skins -name "*~" -print | \
 		${XARGS} ${RM}
+		${CHOWN} -R ${BINOWN}:${BINGRP}  ${DESTDIR}${PREFIX}/share/gqmpeg/skins
 
 .include "../../mk/bsd.pkg.mk"
