@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.489 2008/03/11 01:28:55 uebayasi Exp $
+$NetBSD: CHANGES-2008,v 1.490 2008/03/11 02:03:13 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -904,3 +904,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/ruby-mode to 1.8.6.114 [taca 2008-03-10]
 	Added chat/ejabberd version 2.0.0 [martti 2008-03-10]
 	Updated inputmethod/skk to 20080309 [uebayasi 2008-03-11]
+	Updated lang/chicken to 3.0.0 [tnn 2008-03-10]
