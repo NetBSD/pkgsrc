@@ -36,6 +36,9 @@
 #if HAVE_ERR_H
 #include <err.h>
 #endif
+#if HAVE_ERRNO_H
+#include <errno.h>
+#endif
 
 #include "lib.h"
 
@@ -153,8 +156,11 @@ iterate_pkg_db(int (*matchiter)(const char *, void *), void *cookie)
 	DIR *dirp;
 	int retval;
 
-	if ((dirp = opendir(_pkgdb_getPKGDB_DIR())) == NULL)
+	if ((dirp = opendir(_pkgdb_getPKGDB_DIR())) == NULL) {
+		if (errno == ENOENT)
+			return 0; /* No pkgdb directory == empty pkgdb */
 		return -1;
+	}
 
 	retval = iterate_pkg_generic_src(matchiter, cookie, pkg_db_iter, dirp);
 
