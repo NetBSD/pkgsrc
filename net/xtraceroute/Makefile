@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2007/10/16 23:49:01 tnn Exp $
+# $NetBSD: Makefile,v 1.50 2008/03/11 18:47:41 tnn Exp $
 #
 
 DISTNAME=	xtraceroute-0.8.14
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+= --with-lib-MesaGL
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "IRIX"
+.if !empty(MACHINE_PLATFORM:MIRIX-5*)
 CONFIGURE_ARGS+=	--with-traceroute=/usr/etc/traceroute
 .endif
 
