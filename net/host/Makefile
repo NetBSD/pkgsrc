@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/12/21 11:20:40 obache Exp $
+# $NetBSD: Makefile,v 1.19 2008/03/11 18:47:41 tnn Exp $
 
 DISTNAME=	host-20040812
 CATEGORIES=	net
@@ -26,7 +26,7 @@ CPPFLAGS+=	-DBIND_8_COMPAT
 BUILDLINK_TRANSFORM+=	rm:-Wl,--warn-common
 BUILDLINK_TRANSFORM+=	rm:-static
 .endif
-.if ${OPSYS} == "IRIX"
+.if !empty(MACHINE_PLATFORM:MIRIX-5*)
 CPPFLAGS+=	-DIRIX5
 .endif
 

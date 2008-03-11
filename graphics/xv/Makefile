@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2007/10/16 23:49:00 tnn Exp $
+# $NetBSD: Makefile,v 1.73 2008/03/11 18:47:40 tnn Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	13
@@ -51,7 +51,7 @@ SUBST_STAGE.ccflags=	post-configure
 SUBST_MESSAGE.ccflags=	Fixing compiler flags for Solaris.
 .endif
 
-.if ${OPSYS} == "IRIX" || ${OPSYS} == "SunOS"
+.if ${OPSYS} == "SunOS" || !empty(MACHINE_PLATFORM:MIRIX-5*)
 CPPFLAGS+=	-DNEED_ALLOCA_H
 .endif
 
