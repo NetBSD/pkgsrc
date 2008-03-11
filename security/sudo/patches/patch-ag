@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.11 2007/11/12 11:12:16 taca Exp $
+$NetBSD: patch-ag,v 1.12 2008/03/11 15:52:51 taca Exp $
 
---- configure.orig	2007-10-24 02:19:18.000000000 +0900
+--- configure.orig	2008-02-20 03:27:07.000000000 +0900
 +++ configure
-@@ -1436,7 +1436,7 @@ Fine tuning of the installation director
+@@ -1441,7 +1441,7 @@ Fine tuning of the installation director
    --bindir=DIR           user executables [EPREFIX/bin]
    --sbindir=DIR          system admin executables [EPREFIX/sbin]
    --libexecdir=DIR       program executables [EPREFIX/libexec]
@@ -11,7 +11,7 @@ $NetBSD: patch-ag,v 1.11 2007/11/12 11:12:16 taca Exp $
    --sharedstatedir=DIR   modifiable architecture-independent data [PREFIX/com]
    --localstatedir=DIR    modifiable single-machine data [PREFIX/var]
    --libdir=DIR           object code libraries [EPREFIX/lib]
-@@ -1506,6 +1506,7 @@ Optional Packages:
+@@ -1511,6 +1511,7 @@ Optional Packages:
    --with-devel            add development options
    --with-efence           link with -lefence for malloc() debugging
    --with-csops            add CSOps standard options
@@ -19,15 +19,15 @@ $NetBSD: patch-ag,v 1.11 2007/11/12 11:12:16 taca Exp $
    --without-passwd        don't use passwd/shadow file for authentication
    --with-skey=DIR         enable S/Key support
    --with-opie=DIR         enable OPIE support
-@@ -2119,7 +2120,6 @@ shadow_libs_optional=
- test "$mandir" = '${prefix}/man' && mandir='$(prefix)/man'
+@@ -2138,7 +2139,6 @@ else
+ fi
  test "$bindir" = '${exec_prefix}/bin' && bindir='$(exec_prefix)/bin'
  test "$sbindir" = '${exec_prefix}/sbin' && sbindir='$(exec_prefix)/sbin'
 -test "$sysconfdir" = '${prefix}/etc' -a X"$with_stow" != X"yes" && sysconfdir='/etc'
  
  
  
-@@ -2311,6 +2311,23 @@ fi
+@@ -2330,6 +2330,23 @@ fi
  
  
  
@@ -51,9 +51,9 @@ $NetBSD: patch-ag,v 1.11 2007/11/12 11:12:16 taca Exp $
  # Check whether --with-passwd was given.
  if test "${with_passwd+set}" = set; then
    withval=$with_passwd; case $with_passwd in
-@@ -13675,7 +13692,7 @@ if test `eval echo '${'$as_ac_Header'}'`
+@@ -13717,7 +13734,7 @@ if test `eval echo '${'$as_ac_Header'}'`
  _ACEOF
- 
+  LCMAN=""
  	case "$OS" in
 -	    freebsd|netbsd)	SUDO_LIBS="${SUDO_LIBS} -lutil"
 +	    dragonfly*|freebsd*|netbsd*)	SUDO_LIBS="${SUDO_LIBS} -lutil"

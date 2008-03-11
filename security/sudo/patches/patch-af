@@ -1,16 +1,16 @@
-$NetBSD: patch-af,v 1.19 2007/11/12 11:12:16 taca Exp $
+$NetBSD: patch-af,v 1.20 2008/03/11 15:52:51 taca Exp $
 
---- configure.in.orig	2007-10-25 01:43:25.000000000 +0900
+--- configure.in.orig	2008-02-20 03:27:32.000000000 +0900
 +++ configure.in
-@@ -129,7 +129,6 @@ dnl
- test "$mandir" = '${prefix}/man' && mandir='$(prefix)/man'
+@@ -142,7 +142,6 @@ else
+ fi
  test "$bindir" = '${exec_prefix}/bin' && bindir='$(exec_prefix)/bin'
  test "$sbindir" = '${exec_prefix}/sbin' && sbindir='$(exec_prefix)/sbin'
 -test "$sysconfdir" = '${prefix}/etc' -a X"$with_stow" != X"yes" && sysconfdir='/etc'
  
  dnl
  dnl Deprecated --with options (these all warn or generate an error)
-@@ -252,6 +251,19 @@ AC_ARG_WITH(csops, [  --with-csops      
+@@ -265,6 +264,19 @@ AC_ARG_WITH(csops, [  --with-csops      
  		;;
  esac])
  
@@ -30,9 +30,9 @@ $NetBSD: patch-af,v 1.19 2007/11/12 11:12:16 taca Exp $
  AC_ARG_WITH(passwd, [  --without-passwd        don't use passwd/shadow file for authentication],
  [case $with_passwd in
      yes|no)	AC_MSG_CHECKING(whether to use shadow/passwd file authentication)
-@@ -1634,7 +1646,7 @@ fi
+@@ -1661,7 +1673,7 @@ fi
  if test ${with_logincap-'no'} != "no"; then
-     AC_CHECK_HEADERS(login_cap.h, [
+     AC_CHECK_HEADERS(login_cap.h, [LCMAN=""
  	case "$OS" in
 -	    freebsd|netbsd)	SUDO_LIBS="${SUDO_LIBS} -lutil"
 +	    dragonfly*|freebsd*|netbsd*)	SUDO_LIBS="${SUDO_LIBS} -lutil"
