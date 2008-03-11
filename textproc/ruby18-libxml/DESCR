@@ -1,3 +1,0 @@
-The Libxml-Ruby provides Ruby language bindings for the GNOME Libxml2
-XML toolkit. Its primary advantage over REXML is performance - if speed
-is your need, these are good libraries to consider.
