@@ -1,4 +1,4 @@
-# $NetBSD: tools.HPUX.mk,v 1.4 2008/03/11 17:01:07 tnn Exp $
+# $NetBSD: tools.HPUX.mk,v 1.5 2008/03/11 17:50:14 tnn Exp $
 #
 # System-supplied tools for the HP-UX operating system.
 
@@ -44,7 +44,7 @@ TOOLS_PLATFORM.pwd?=		/bin/pwd
 TOOLS_PLATFORM.rm?=		/bin/rm
 TOOLS_PLATFORM.rmdir?=		/bin/rmdir
 TOOLS_PLATFORM.sed?=		/usr/bin/sed
-TOOLS_PLATFORM.sh?=		/bin/ksh
+TOOLS_PLATFORM.sh?=		/bin/sh
 TOOLS_PLATFORM.sort?=		/usr/bin/sort
 TOOLS_PLATFORM.strip?=		/usr/ccs/bin/strip
 TOOLS_PLATFORM.tail?=		/usr/bin/tail
