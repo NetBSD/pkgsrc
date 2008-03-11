@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.1 2008/03/11 20:12:17 seb Exp $
+# $NetBSD: rubygem.mk,v 1.2 2008/03/11 22:11:32 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -30,41 +30,12 @@
 .include "../../lang/ruby/modules.mk"
 
 # Build and run-time dependency on rubygem
-BUILD_DEPENDS+=	rubygems-[0-9]*:../../misc/rubygems
-DEPENDS+=	rubygems-[0-9]*:../../misc/rubygems
-
-EXTRACT_SUFX?=	.gem
-EXTRACT_ONLY?=	# empty
-
-# Base directory for Gems
-GEMS_BASEDIR=	lib/ruby/gems/${RUBY_VER_DIR}
-
-# Directory for the Gem to install
-GEM_NAME?=	${DISTNAME}
-GEM_LIB_DIR=	${GEMS_BASEDIR}/gems/${GEM_NAME}
-GEM_DOC_DIR=	${GEMS_BASEDIR}/doc/${GEM_NAME}
-
-RUBYGEM_PKGPREFIX=	rubygem
-
-# RUBYGEM holds the path to RubyGems' gem command
-FIND_PREFIX:=	RUBYGEM_PREFIX=rubygems
-.include "../../mk/find-prefix.mk"
-RUBYGEM=	${RUBYGEM_PREFIX}/bin/gem
-
-# PLIST support
-PLIST_SUBST+=		GEM_LIB_DIR=${GEM_LIB_DIR}
-PLIST_SUBST+=		GEM_DOC_DIR=${GEM_DOC_DIR}
-PLIST_SUBST+=		GEMS_BASEDIR=${GEMS_BASEDIR}
-
-# print-PLIST support
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GEM_LIB_DIR:S|${PREFIX}/||:S|/|\\/|g}/ \
-			{ gsub(/${GEM_LIB_DIR:S|${PREFIX}/||:S|/|\\/|g}/, "$${GEM_LIB_DIR}"); print; next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GEM_DOC_DIR:S|${PREFIX}/||:S|/|\\/|g}/ \
-			{ gsub(/${GEM_DOC_DIR:S|${PREFIX}/||:S|/|\\/|g}/, "$${GEM_DOC_DIR}"); print; next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${GEMS_BASEDIR:S|${PREFIX}/||:S|/|\\/|g}(\/(gems|cache|doc|specifications))?$$/ \
-			{ next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${GEMS_BASEDIR:S|${PREFIX}/||:S|/|\\/|g}/ \
-			{ gsub(/${GEMS_BASEDIR:S|${PREFIX}/||:S|/|\\/|g}/, "$${GEMS_BASEDIR}"); print; next; }
+#
+# We need rubygems>=1.0.1nb1 to actually build the package, but the
+# resulting installed gem can run with older versions of rubygems.
+#
+BUILD_DEPENDS+=	rubygems>=1.0.1nb1:../../misc/rubygems
+DEPENDS+=	rubygems>=0.8.7:../../misc/rubygems
 
 # GEMFILE holds the filename of the Gem to install
 .if defined(DISTFILES)
@@ -72,6 +43,38 @@ GEMFILE?=	${DISTFILES}
 .else
 GEMFILE?=	${DISTNAME}${EXTRACT_SUFX}
 .endif
+
+EXTRACT_SUFX?=	.gem
+EXTRACT_ONLY?=	# empty
+
+# Base directory for Gems
+GEM_HOME=	${PREFIX}/lib/ruby/gems/${RUBY_VER_DIR}
+
+# Directory for the Gem to install
+GEM_NAME?=	${DISTNAME}
+GEM_LIBDIR=	${GEM_HOME}/gems/${GEM_NAME}
+GEM_DOCDIR=	${GEM_HOME}/doc/${GEM_NAME}
+
+RUBYGEM_PKGPREFIX=	${RUBY_PKGPREFIX}-gem
+
+# RUBYGEM holds the path to RubyGems' gem command
+EVAL_PREFIX+=	RUBYGEM_PREFIX=rubygems
+RUBYGEM=	${RUBYGEM_PREFIX}/bin/gem
+
+# PLIST support
+PLIST_SUBST+=		GEM_HOME=${GEM_HOME:S|^${PREFIX}/||}
+PLIST_SUBST+=		GEM_LIBDIR=${GEM_LIBDIR:S|^${PREFIX}/||}
+PLIST_SUBST+=		GEM_DOCDIR=${GEM_DOCDIR:S|^${PREFIX}/||}
+
+# print-PLIST support
+PRINT_PLIST_AWK+=	/^(@dirrm )?${GEM_LIBDIR:S|${PREFIX}/||:S|/|\\/|g}/ \
+			{ gsub(/${GEM_LIBDIR:S|${PREFIX}/||:S|/|\\/|g}/, "$${GEM_LIBDIR}"); print; next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${GEM_DOCDIR:S|${PREFIX}/||:S|/|\\/|g}/ \
+			{ gsub(/${GEM_DOCDIR:S|${PREFIX}/||:S|/|\\/|g}/, "$${GEM_DOCDIR}"); print; next; }
+PRINT_PLIST_AWK+=	/^@dirrm ${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}(\/(gems|cache|doc|specifications))?$$/ \
+			{ next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}/ \
+			{ gsub(/${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}/, "$${GEM_HOME}"); print; next; }
 
 # Define a build target so that tools, buildink, etc... frameworks are setup
 # in case the Gem contains sources to build
@@ -82,6 +85,6 @@ do-build:
 
 # Installation target
 do-gem-install:
-	${RUN}${SETENV} ${GEM_ENV} ${RUBYGEM} install --local --no-update-sources --no-ri --install-dir ${PREFIX}/${GEMS_BASEDIR} ${_DISTDIR}/${GEMFILE} -- --build-args ${CONFIGURE_ARGS}
+	${RUN}${SETENV} ${GEM_ENV} ${RUBYGEM} install --local --no-update-sources --no-ri --install-dir ${PREFIX}/${GEM_HOME} ${_DISTDIR}/${GEMFILE} -- --build-args ${CONFIGURE_ARGS}
 
 do-install: do-gem-install
