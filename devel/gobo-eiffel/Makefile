@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2007/08/30 16:58:19 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2008/03/11 20:10:19 joerg Exp $
 #
 
 DISTNAME=	gobo15
 PKGNAME=	gobo-eiffel-1.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	ftp://ftp.eiffel.com/pub/shelf/bezault/
 EXTRACT_SUFX=	.zip
@@ -14,7 +14,7 @@ COMMENT=	Portable Eiffel structure libraries and tools
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BUILD_DEPENDS+=	smalleiffel-0.77:../../lang/smalleiffel
+BUILD_DEPENDS+=	SmartEiffel-[0-9]*:../../lang/SmartEiffel
 
 EXTRACT_OPTS_ZIP=	-uLa
 
