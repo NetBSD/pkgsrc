@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2008/03/10 11:59:26 drochner Exp $
+$NetBSD: patch-ab,v 1.4 2008/03/11 13:20:29 tron Exp $
 
 --- Makefile.orig	2007-12-18 22:45:04.000000000 +0100
 +++ Makefile
@@ -55,7 +55,7 @@ $NetBSD: patch-ab,v 1.3 2008/03/10 11:59:26 drochner Exp $
 +	${LIBTOOL} --mode=compile ${CC} -c ${CFLAGS} -o $@ $<
 +
 +libx264.la: .depend $(OBJS) $(OBJASM)
-+	${LIBTOOL} --mode=link ${CC} -o libx264.la $(OBJS) $(OBJASM) ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} -rpath ${PREFIX}/lib -version-info 0
++	${LIBTOOL} --mode=link ${CC} -o libx264.la $(OBJS) $(OBJASM) ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} ${DARWIN_PPC_LDFLAGS} -rpath ${PREFIX}/lib -version-info 0
  
  $(SONAME): .depend $(OBJS) $(OBJASM)
  	$(CC) -shared -o $@ $(OBJS) $(OBJASM) -Wl,-soname,$(SONAME) $(LDFLAGS)
