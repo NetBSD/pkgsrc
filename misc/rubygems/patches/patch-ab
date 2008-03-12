@@ -1,6 +1,8 @@
-$NetBSD: patch-ab,v 1.4 2008/03/08 00:43:55 jlam Exp $
+$NetBSD: patch-ab,v 1.5 2008/03/12 15:07:47 jlam Exp $
 
 Patch by Marcus Rueckert for staged installation of gems.
+Additional changes by Johnny C. Lam to download remote gems
+into the cache directory in @build_root if specified.
 
 --- lib/rubygems/dependency_installer.rb.orig	2007-12-17 22:45:04.000000000 -0500
 +++ lib/rubygems/dependency_installer.rb
@@ -12,7 +14,24 @@ Patch by Marcus Rueckert for staged installation of gems.
      @security_policy = options[:security_policy]
      @wrappers = options[:wrappers]
  
-@@ -230,6 +231,7 @@ class Gem::DependencyInstaller
+@@ -121,9 +122,14 @@ class Gem::DependencyInstaller
+   # always replaced.
+   def download(spec, source_uri)
+     gem_file_name = "#{spec.full_name}.gem"
+-    local_gem_path = File.join @install_dir, 'cache', gem_file_name
++    installdir = @install_dir
++    unless @build_root.nil? or @build_root == ""
++      installdir = File.join(@build_root, @install_dir)
++    end
++
++    local_gem_path = File.join installdir, 'cache', gem_file_name
+ 
+-    Gem.ensure_gem_subdirectories @install_dir
++    Gem.ensure_gem_subdirectories installdir
+ 
+     source_uri = URI.parse source_uri unless URI::Generic === source_uri
+     scheme = source_uri.scheme
+@@ -230,6 +236,7 @@ class Gem::DependencyInstaller
                                  :format_executable => @format_executable,
                                  :ignore_dependencies => @ignore_dependencies,
                                  :install_dir => @install_dir,
