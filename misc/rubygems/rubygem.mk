@@ -1,39 +1,49 @@
-# $NetBSD: rubygem.mk,v 1.2 2008/03/11 22:11:32 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.3 2008/03/12 04:06:15 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
 #
-# The following target is provided by this file:
+# Package-settable variables:
 #
-# do-gem-install	installed as a dependency of the do-install target
-# 			it install the Ruby Gem ${GEMFILE}.
+# GEM_NAME
+#	The name of the gem to install.  The default value is ${DISTNAME}.
 #
-# do-build		Mostly phony target, but necessary for various
-# 			pkgsrc framework to work, in case the Gem to install
-# 			contains sources to compile.
+# GEMFILE
+#	The complete filename of the gem to install.  It defaults to
+#	${DISTNAME}.gem.
 #
-# The following variables may be set prior to including this file:
+# Variables defined in this file:
 #
-# GEM_NAME		The name of the Gem to install, it defaults
-# 			to ${DISTNAME}.
+# GEM_DOCDIR
+#	The path to the directory in the local gem repository that holds
+#	the documentation for the installed gem.
 #
-# GEMFILE		The filename, in ${_DISTDIR}, of the Gem to install.
+# GEM_HOME
+#	The path to the local gem repository.
 #
-# If the Gem to install does not contain sources to compile NO_BUILD
-# should be defined.
+# GEM_LIBDIR
+#	The path to the directory in the local gem repository that holds
+#	the contents of the installed gem.
 #
-# The name, PKGNAME, of the package installing the Gem should probably
-# use '${RUBYGEM_PKGPREFIX}-' as a prefix.
+# RAKE
+#	The path to the ``rake'' binary.
+#
+# RUBYGEM_PKGPREFIX
+#	The recommended prefix for the PKGNAME.
+#
+# RUBYGEM
+#	The path to the rubygems ``gem'' script.
 #
 
 # Include this early in case some of its target are needed
 .include "../../lang/ruby/modules.mk"
 
-# Build and run-time dependency on rubygem
+# Build and run-time dependencies.
 #
 # We need rubygems>=1.0.1nb1 to actually build the package, but the
 # resulting installed gem can run with older versions of rubygems.
 #
+BUILD_DEPENDS+=	rake-[0-9]*:../../devel/rake
 BUILD_DEPENDS+=	rubygems>=1.0.1nb1:../../misc/rubygems
 DEPENDS+=	rubygems>=0.8.7:../../misc/rubygems
 
@@ -43,6 +53,9 @@ GEMFILE?=	${DISTFILES}
 .else
 GEMFILE?=	${DISTNAME}${EXTRACT_SUFX}
 .endif
+
+CATEGORIES+=	ruby
+MASTER_SITES?=	http://gems.rubyforge.org/gems/
 
 EXTRACT_SUFX?=	.gem
 EXTRACT_ONLY?=	# empty
@@ -59,6 +72,8 @@ RUBYGEM_PKGPREFIX=	${RUBY_PKGPREFIX}-gem
 
 # RUBYGEM holds the path to RubyGems' gem command
 EVAL_PREFIX+=	RUBYGEM_PREFIX=rubygems
+EVAL_PREFIX+=	RAKE_PREFIX=rake
+RAKE=		${RAKE_PREFIX}/bin/rake
 RUBYGEM=	${RUBYGEM_PREFIX}/bin/gem
 
 # PLIST support
@@ -76,15 +91,47 @@ PRINT_PLIST_AWK+=	/^@dirrm ${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}(\/(gems|cache|do
 PRINT_PLIST_AWK+=	/^(@dirrm )?${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}/ \
 			{ gsub(/${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}/, "$${GEM_HOME}"); print; next; }
 
-# Define a build target so that tools, buildink, etc... frameworks are setup
-# in case the Gem contains sources to build
-.if !target(do-build)
-do-build:
-	${RUN}mkdir ${WRKSRC}
-.endif
+###
+### do-gem-extract
+###
+### The do-gem-extract target extracts a standard gem file.  A standard
+### gem file contains:
+###
+###	data.tar.gz	contains the actual files to build, install, etc.
+###	metadata.gz	YAML specification file
+###
 
-# Installation target
-do-gem-install:
-	${RUN}${SETENV} ${GEM_ENV} ${RUBYGEM} install --local --no-update-sources --no-ri --install-dir ${PREFIX}/${GEM_HOME} ${_DISTDIR}/${GEMFILE} -- --build-args ${CONFIGURE_ARGS}
+USE_TOOLS+=	gzip tar
 
+.PHONY: do-gem-extract
+do-extract: do-gem-extract
+do-gem-extract:
+	${RUN} mkdir ${WRKSRC}
+	${RUN} cd ${WRKDIR} && tar xf ${_DISTDIR}/${GEMFILE} data.tar.gz
+	${RUN} cd ${WRKSRC} && gzip -d < ${WRKDIR}/data.tar.gz | tar xf -
+	${RUN} rm -f ${WRKDIR}/data.tar.gz
+
+###
+### do-gem-build
+###
+### The do-gem-build target builds a new local gem from the extracted
+### gem's contents.  The new gem as created as ${WRKSRC}/pkg/${GEMFILE}.
+###
+.PHONY: do-gem-build
+do-build: do-gem-build
+do-gem-build:
+	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${RAKE} gem
+
+###
+### do-gem-install
+###
+### The do-gem-install target installs the local gem in ${WRKDIR} into
+### the gem repository.
+###
+.PHONY: do-gem-install
 do-install: do-gem-install
+do-gem-install:
+	${RUN} ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${RUBYGEM} install	\
+		--local --no-update-sources				\
+		--install-dir ${GEM_HOME} ${WRKSRC}/pkg/${GEMFILE} --	\
+		--build-args ${CONFIGURE_ARGS}
