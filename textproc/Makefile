@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.403 2008/03/11 16:42:08 taca Exp $
+# $NetBSD: Makefile,v 1.404 2008/03/12 09:22:43 wiz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -6,6 +6,7 @@ COMMENT=	Text processing utilities (does not include desktop publishing)
 SUBDIR+=	GutenMark
 SUBDIR+=	GutenMark-words
 SUBDIR+=	Markdown
+SUBDIR+=	WordNet
 SUBDIR+=	aiksaurus
 SUBDIR+=	antiword
 SUBDIR+=	asciidoc
