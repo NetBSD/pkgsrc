@@ -1,4 +1,4 @@
-# $NetBSD: extract.mk,v 1.25 2008/03/12 15:48:21 jlam Exp $
+# $NetBSD: extract.mk,v 1.26 2008/03/12 15:51:39 jlam Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
@@ -7,6 +7,9 @@
 #	The directory into which the files are extracted.
 #
 #	Default value: ${WRKDIR}
+#
+#    EXTRACTOR is the the the environment and path used to execute the
+#	all-purpose extract script.
 #
 #    EXTRACT_CMD is a shell command list that extracts the contents of
 #	an archive named by the variable ${DOWNLOADED_DISTFILE} to the
@@ -188,11 +191,10 @@ _EXTRACT_TAR=
 EXTRACT_OPTS+=	-t ${_EXTRACT_TAR}
 .endif
 
-EXTRACT_CMD_DEFAULT=							\
-	${SETENV} ${_EXTRACT_ENV}					\
-	${SH} ${PKGSRCDIR}/mk/extract/extract				\
-		${EXTRACT_OPTS}						\
-		${DOWNLOADED_DISTFILE} ${EXTRACT_ELEMENTS}
+EXTRACTOR=		\
+	${SETENV} ${_EXTRACT_ENV} ${SH} ${PKGSRCDIR}/mk/extract/extract
+EXTRACT_CMD_DEFAULT=	\
+	${EXTRACTOR} ${EXTRACT_OPTS} ${DOWNLOADED_DISTFILE} ${EXTRACT_ELEMENTS}
 
 EXTRACT_CMD?=	${EXTRACT_CMD_DEFAULT}
 
