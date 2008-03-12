@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.420 2008/03/08 00:57:58 reed Exp $
+# $NetBSD: Makefile,v 1.421 2008/03/12 23:53:36 tonnerre Exp $
 #
 
 COMMENT=	System utilities
@@ -218,6 +218,7 @@ SUBDIR+=	roller
 SUBDIR+=	rox
 SUBDIR+=	rsnapshot
 SUBDIR+=	rtty
+SUBDIR+=	ruby-facter
 SUBDIR+=	ruby-quota
 SUBDIR+=	safetynet
 SUBDIR+=	same
