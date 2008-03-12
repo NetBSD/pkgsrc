@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.500 2008/03/11 18:41:31 kleink Exp $
+$NetBSD: CHANGES-2008,v 1.501 2008/03/12 09:23:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -913,3 +913,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated time/p5-Time-TAI64 to 2.11 [kleink 2008-03-11]
 	Updated textproc/p5-Text-vCard to 2.01 [kleink 2008-03-11]
 	Updated textproc/p5-XML-Atom-Stream to 0.11 [kleink 2008-03-11]
+	Added textproc/WordNet version 3.0 [wiz 2008-03-12]
