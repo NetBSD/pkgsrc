@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2008/03/08 03:37:55 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/12 15:07:47 jlam Exp $
 
 DISTNAME=	rubygems-1.0.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc ruby
 MASTER_SITES=	http://rubyforge.org/frs/download.php/29548/
 EXTRACT_SUFX=	.tgz
