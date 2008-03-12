@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.4 2008/03/12 16:59:13 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.5 2008/03/12 18:53:35 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -88,7 +88,7 @@ PLIST_SUBST+=		GEM_DOCDIR=${GEM_DOCDIR:S|^${PREFIX}/||}
 PRINT_PLIST_AWK+=	/^(@dirrm )?${GEM_LIBDIR:S|${PREFIX}/||:S|/|\\/|g}/ \
 			{ gsub(/${GEM_LIBDIR:S|${PREFIX}/||:S|/|\\/|g}/, "$${GEM_LIBDIR}"); print; next; }
 PRINT_PLIST_AWK+=	/^(@dirrm )?${GEM_DOCDIR:S|${PREFIX}/||:S|/|\\/|g}/ \
-			{ gsub(/${GEM_DOCDIR:S|${PREFIX}/||:S|/|\\/|g}/, "$${GEM_DOCDIR}"); print; next; }
+			{ next; }
 PRINT_PLIST_AWK+=	/^@dirrm ${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}(\/(gems|cache|doc|specifications))?$$/ \
 			{ next; }
 PRINT_PLIST_AWK+=	/^(@dirrm )?${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}/ \
@@ -155,6 +155,14 @@ do-gem-install:
 	@${STEP_MSG} "Installing gem into buildroot"
 	${RUN} ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
 		${RUBYGEM} install ${_RUBYGEM_OPTIONS}
+	@${STEP_MSG} "Cleaning up intermediate gem build files"
+	${RUN} cd ${_RUBYGEM_BUILDROOT}${GEM_LIBDIR}/ext && ls | \
+	while read file; do \
+		if [ ! -f ${WRKSRC}/ext/$$file ]; then \
+			echo "rm "${GEM_LIBDIR:T}"/ext/$$file"; \
+			rm -f $$file; \
+		fi; \
+	done
 	@${STEP_MSG} "Copying files into installation directory"
 	${RUN} cd ${_RUBYGEM_BUILDROOT}${PREFIX} && \
 		pax -rwpe . ${DESTDIR}${PREFIX}
