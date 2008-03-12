@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.503 2008/03/12 10:16:52 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.504 2008/03/12 20:42:09 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -916,3 +916,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/WordNet version 3.0 [wiz 2008-03-12]
 	Added shells/bash-completion version 20060301 [wiz 2008-03-12]
 	Added devel/cvsclone version 0.00 [wiz 2008-03-12]
+	Updated www/apache-tomcat55 to 5.5.26 [adrianp 2008-03-12]
