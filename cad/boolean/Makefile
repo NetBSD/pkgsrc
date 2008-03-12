@@ -1,15 +1,15 @@
-# $NetBSD: Makefile,v 1.37 2008/01/04 20:34:13 markd Exp $
+# $NetBSD: Makefile,v 1.38 2008/03/12 09:50:28 wiz Exp $
 #
 
 DISTNAME=	boolean_6_92
 PKGNAME=	boolean-6.92
 PKGREVISION=	1
 CATEGORIES=	cad graphics
-MASTER_SITES=	http://www.xs4all.nl/~kholwerd/download/boolzip/
+MASTER_SITES=	http://boolean.klaasholwerda.nl/download/boolzip/
 EXTRACT_SUFX=	.zip
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.xs4all.nl/~kholwerd/bool.html
+HOMEPAGE=	http://boolean.klaasholwerda.nl/bool.html
 COMMENT=	GDSII viewer/editor + (boolean) operations on sets of 2d polygons
 
 PKG_DESTDIR_SUPPORT=	destdir
