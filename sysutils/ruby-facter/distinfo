@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/03/12 23:47:05 tonnerre Exp $
+
+SHA1 (facter-1.3.8.tgz) = c59edc74df09599e8c723121c65826c4a6ecbc67
+RMD160 (facter-1.3.8.tgz) = 12e578271dd44e9eed33465fde4aec94d645d994
+Size (facter-1.3.8.tgz) = 29336 bytes
