@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.3 2008/03/12 04:06:15 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.4 2008/03/12 16:59:13 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -34,6 +34,9 @@
 # RUBYGEM
 #	The path to the rubygems ``gem'' script.
 #
+
+# By default, assume that gems are capable of user-destdir installation.
+PKG_DESTDIR_SUPPORT?=	user-destdir
 
 # Include this early in case some of its target are needed
 .include "../../lang/ruby/modules.mk"
@@ -100,16 +103,15 @@ PRINT_PLIST_AWK+=	/^(@dirrm )?${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}/ \
 ###	data.tar.gz	contains the actual files to build, install, etc.
 ###	metadata.gz	YAML specification file
 ###
-
-USE_TOOLS+=	gzip tar
-
 .PHONY: do-gem-extract
 do-extract: do-gem-extract
 do-gem-extract:
+	${RUN} cd ${WRKDIR} && \
+		${EXTRACTOR} -f tar ${_DISTDIR:Q}/${GEMFILE:Q} data.tar.gz
 	${RUN} mkdir ${WRKSRC}
-	${RUN} cd ${WRKDIR} && tar xf ${_DISTDIR}/${GEMFILE} data.tar.gz
-	${RUN} cd ${WRKSRC} && gzip -d < ${WRKDIR}/data.tar.gz | tar xf -
-	${RUN} rm -f ${WRKDIR}/data.tar.gz
+	${RUN} cd ${WRKSRC} && \
+		${EXTRACTOR} -f tar ${WRKDIR:Q}/data.tar.gz
+	${RUN} rm -f ${WRKDIR:Q}/data.tar.gz
 
 ###
 ### do-gem-build
@@ -126,12 +128,33 @@ do-gem-build:
 ### do-gem-install
 ###
 ### The do-gem-install target installs the local gem in ${WRKDIR} into
-### the gem repository.
+### the gem repository.  We this this as a staged installation
+### (independent of PKG_DESTDIR_SUPPORT) because it can potentially
+### build software and we want that to happen within ${WRKDIR}.
 ###
+_RUBYGEM_BUILDROOT=	${WRKDIR}/.inst
+_RUBYGEM_OPTIONS=	--no-update-sources	# don't cache the gem index
+_RUBYGEM_OPTIONS+=	--install-dir ${GEM_HOME}
+_RUBYGEM_OPTIONS+=	--build-root ${_RUBYGEM_BUILDROOT}
+_RUBYGEM_OPTIONS+=	--local ${WRKSRC}/pkg/${GEMFILE}
+_RUBYGEM_OPTIONS+=	-- --build-args ${CONFIGURE_ARGS}
+
+GENERATE_PLIST+=	${RUBYGEM_GENERATE_PLIST}
+RUBYGEM_GENERATE_PLIST=	\
+	${ECHO} "@comment The following lines are automatically generated." && \
+	( cd ${_RUBYGEM_BUILDROOT}${PREFIX} && \
+	  ${FIND} ${GEM_DOCDIR:S|${PREFIX}/||} \! -type d -print | \
+		${SORT} && \
+	  ${FIND} ${GEM_DOCDIR:S|${PREFIX}/||} -type d -print | \
+		${SORT} -r | ${SED} -e "s,^,@dirrm ," );
+	
+
 .PHONY: do-gem-install
 do-install: do-gem-install
 do-gem-install:
-	${RUN} ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} ${RUBYGEM} install	\
-		--local --no-update-sources				\
-		--install-dir ${GEM_HOME} ${WRKSRC}/pkg/${GEMFILE} --	\
-		--build-args ${CONFIGURE_ARGS}
+	@${STEP_MSG} "Installing gem into buildroot"
+	${RUN} ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
+		${RUBYGEM} install ${_RUBYGEM_OPTIONS}
+	@${STEP_MSG} "Copying files into installation directory"
+	${RUN} cd ${_RUBYGEM_BUILDROOT}${PREFIX} && \
+		pax -rwpe . ${DESTDIR}${PREFIX}
