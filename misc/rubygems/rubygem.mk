@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.6 2008/03/12 20:08:22 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.7 2008/03/12 20:27:08 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -91,6 +91,7 @@ PRINT_PLIST_AWK+=	/^(@dirrm )?${GEM_DOCDIR:S|${PREFIX}/||:S|/|\\/|g}/ \
 			{ next; }
 PRINT_PLIST_AWK+=	/^@dirrm ${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}(\/(gems|cache|doc|specifications))?$$/ \
 			{ next; }
+PRINT_PLIST_AWK+=	/^@dirrm lib\/ruby\/gems$$/ { next; }
 PRINT_PLIST_AWK+=	/^(@dirrm )?${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}/ \
 			{ gsub(/${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}/, "$${GEM_HOME}"); print; next; }
 
