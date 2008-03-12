@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.8 2008/03/12 22:04:07 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.9 2008/03/12 22:04:40 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -71,7 +71,7 @@ GEM_NAME?=	${DISTNAME}
 GEM_LIBDIR=	${GEM_HOME}/gems/${GEM_NAME}
 GEM_DOCDIR=	${GEM_HOME}/doc/${GEM_NAME}
 
-RUBYGEM_PKGPREFIX=	${RUBY_PKGPREFIX}-gem
+RUBYGEM_PKGPREFIX=	${RUBY_PKGPREFIX}
 
 # RUBYGEM holds the path to RubyGems' gem command
 EVAL_PREFIX+=	RUBYGEM_PREFIX=rubygems
