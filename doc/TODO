@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7128 2008/03/12 15:37:56 wiz Exp $
+$NetBSD: TODO,v 1.7129 2008/03/12 21:33:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -484,7 +484,6 @@ Suggested package updates
 	o bug-buddy-2.22.0
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
-	o cairo-1.4.14
 	o cairomm-1.4.8
 	o cal3d-0.11.0
 	o calamaris-2.59
@@ -684,7 +683,6 @@ Suggested package updates
 	o gnome-applets-2.22.0
 	o gnome-build-0.2.4
 	o gnome-control-center-2.22.0
-	o gnome-doc-utils-0.12.2
 	o gnome-games-2.22.0
 	o gnome-icon-theme-2.22.0
 	o gnome-keyring-2.22.0
@@ -731,7 +729,6 @@ Suggested package updates
 	o gthumb-2.10.8
 	o gtick-0.4.1
 	o gtk-systrace-20030623
-	o gtk2-2.12.9
 	o gtk2-engines-2.12.2
 	o gtk2-sharp-2.12.0
 	o gtkhtml-3.18.0
@@ -947,7 +944,6 @@ Suggested package updates
 	o naim-0.11.8.3.1
 	o nap-1.5.3
 	o nas-1.9.1
-	o nasm-2.02
 	o nautilus-2.22.0
 	o nautilus-cd-burner-2.18.2 [needs hal]
 	o nautilus-cd-burner-2.22.0
@@ -1170,7 +1166,6 @@ Suggested package updates
 	o py-ZODB-3.2.10
 	o py-ZopeInterface-3.3.0
 	o py-bdb-xml-2.1.8
-	o py-cairo-1.4.12
 	o py-checker-0.8.17
 	o py-clearsilver-0.10.5
 	o py-curl-7.16.4
