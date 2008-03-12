@@ -1,9 +1,9 @@
-# $NetBSD: extract.mk,v 1.24 2008/01/23 14:59:35 rillig Exp $
+# $NetBSD: extract.mk,v 1.25 2008/03/12 15:48:21 jlam Exp $
 #
 # The following variables may be set by the package Makefile and
 # specify how extraction happens:
 #
-# EXTRACT_DIR
+#    EXTRACT_DIR
 #	The directory into which the files are extracted.
 #
 #	Default value: ${WRKDIR}
