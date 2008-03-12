@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.502 2008/03/12 09:48:37 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.503 2008/03/12 10:16:52 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -915,3 +915,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-XML-Atom-Stream to 0.11 [kleink 2008-03-11]
 	Added textproc/WordNet version 3.0 [wiz 2008-03-12]
 	Added shells/bash-completion version 20060301 [wiz 2008-03-12]
+	Added devel/cvsclone version 0.00 [wiz 2008-03-12]
