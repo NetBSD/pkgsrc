@@ -1,9 +1,9 @@
-$NetBSD: patch-ao,v 1.1 2007/11/30 20:08:39 drochner Exp $
+$NetBSD: patch-ao,v 1.2 2008/03/12 21:41:21 drochner Exp $
 
---- ./daemon/slave.c.orig	2007-09-17 16:45:50.000000000 +0200
+--- ./daemon/slave.c.orig	2008-03-10 23:23:00.000000000 +0100
 +++ ./daemon/slave.c
 @@ -3694,7 +3694,7 @@ session_child_run (struct passwd *pwent,
- 				       "/usr/local/share/:/usr/share/";
+ 		char *new_system_data_dirs;
  
  		new_system_data_dirs = g_build_path (":",
 -			 old_system_data_dirs, DATADIR "/gdm/", NULL);
