@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/03/12 15:07:47 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/13 18:45:05 jlam Exp $
 
 DISTNAME=	rubygems-1.0.1
 PKGREVISION=	2
@@ -21,23 +21,31 @@ RUBY_REQD=	1.8.3
 REPLACE_RUBY_DIRS=	${WRKSRC}/bin
 REPLACE_RUBY_PAT=	[a-z]*
 
-GEMS_SUBDIR=	lib/ruby/gems/${RUBY_VER_DIR}
-REQD_DIRS=	${GEMS_SUBDIR:H}
-REQD_DIRS+=	${GEMS_SUBDIR}
-REQD_DIRS+=	${GEMS_SUBDIR}/cache
-REQD_DIRS+=	${GEMS_SUBDIR}/doc
-REQD_DIRS+=	${GEMS_SUBDIR}/gems
-REQD_DIRS+=	${GEMS_SUBDIR}/specifications
+GEM_HOME=	${PREFIX}/lib/ruby/gems/${RUBY_VER_DIR}
+GEM_DOCDIR=	${GEM_HOME}/doc/${DISTNAME}
 
-PLIST_SRC=      ${PKGDIR}/PLIST.common
-PLIST_SRC+=     ${WRKDIR}/PLIST_DYNAMIC
+REQD_DIRS=	${GEM_HOME:H}
+REQD_DIRS+=	${GEM_HOME}
+REQD_DIRS+=	${GEM_HOME}/cache
+REQD_DIRS+=	${GEM_HOME}/doc
+REQD_DIRS+=	${GEM_HOME}/gems
+REQD_DIRS+=	${GEM_HOME}/specifications
+
+# Generate a dynamic PLIST for the rubygems documentation directory.
+GENERATE_PLIST+=	\
+	${ECHO} "@comment The following lines are automatically generated." && \
+	( cd ${DESTDIR}${PREFIX} && \
+	  ${FIND} ${GEM_DOCDIR:S|${PREFIX}/||} \! -type d -print | \
+		${SORT} && \
+	  ${FIND} ${GEM_DOCDIR:S|${PREFIX}/||} -type d -print | \
+		${SORT} -r | ${SED} -e "s,^,@dirrm ," );
 
 .include "../../lang/ruby/modules.mk"
 
 # Force the Gem repository to be under ${DESTDIR}.  This is harmless
 # because this packages depends on no other gems.
 #
-MAKE_ENV+=	GEM_HOME=${DESTDIR}${PREFIX}/${GEMS_SUBDIR}
+INSTALL_ENV+=		GEM_HOME=${DESTDIR}${GEM_HOME}
 
 INSTALL_TARGET=		install
 INSTALL_TARGET+=	--format-executable
@@ -49,19 +57,7 @@ INSTALL_TARGET+=	--buildroot=${DESTDIR:Q}
 # command to install.
 #
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${RUBY} setup.rb		\
-		${INSTALL_TARGET}
-
-post-install:
-	${RM} -f ${WRKDIR}/PLIST_DYNAMIC
-	cd ${DESTDIR}${PREFIX} &&					\
-	${FIND} ${GEMS_SUBDIR}/doc/${DISTNAME} \! -type d -print	\
-		| ${SORT}						\
-		>> ${WRKDIR}/PLIST_DYNAMIC
-	cd ${DESTDIR}${PREFIX} &&					\
-	${FIND} ${GEMS_SUBDIR}/doc/${DISTNAME} -type d -print		\
-		| ${SORT} -r						\
-		| ${SED} -e "s/^/@dirrm /"				\
-		>> ${WRKDIR}/PLIST_DYNAMIC
+	cd ${WRKSRC} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
+		${RUBY} setup.rb ${INSTALL_TARGET}
 
 .include "../../mk/bsd.pkg.mk"
