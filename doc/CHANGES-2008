@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.512 2008/03/13 17:30:25 joerg Exp $
+$NetBSD: CHANGES-2008,v 1.513 2008/03/13 17:45:25 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -927,3 +927,10 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed databases/pgadmin3 [joerg 2008-03-13]
 	Updated pkgtools/pkg_install to 20080313 [joerg 2008-03-13]
 	Updated pkgtools/bootstrap-mk-files to 20080211 [joerg 2008-03-13]
+	Removed databases/postgresql80 [joerg 2008-03-13]
+	Removed databases/postgresql80-client [joerg 2008-03-13]
+	Removed databases/postgresql80-plperl [joerg 2008-03-13]
+	Removed databases/postgresql80-plpython [joerg 2008-03-13]
+	Removed databases/postgresql80-pltcl [joerg 2008-03-13]
+	Removed databases/postgresql80-server [joerg 2008-03-13]
+	Removed databases/jdbc-postgresql80 [joerg 2008-03-13]
