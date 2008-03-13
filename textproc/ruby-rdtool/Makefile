@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/09/08 02:38:08 taca Exp $
+# $NetBSD: Makefile,v 1.26 2008/03/13 19:40:51 jlam Exp $
 
 DISTNAME=	rdtool-0.6.20
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.moonwolf.com/ruby/archive/
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://trac.moonwolf.com/rdtool/wiki/
 COMMENT=	RD (Ruby Document) converter to HTML/man/etc
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Since rd2 commands depends its name and it can't rename, we cannot
 # install multiple ruby??-rd2 package (unless supported by pkgview.
@@ -38,14 +40,14 @@ post-build:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/lib/rd/dot.rd2rc \
-		${RUBY_SITELIBDIR}/rd/dot.rd2rc
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/rd
+		${DESTDIR}${RUBY_SITELIBDIR}/rd/dot.rd2rc
+	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_DOCDIR}/rd
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/rd
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${RUBY_DOCDIR}/rd
 .endfor
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/rd
+	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_EXAMPLESDIR}/rd
 	${INSTALL_DATA} ${WRKSRC}/lib/rd/dot.rd2rc \
-		${RUBY_EXAMPLESDIR}/rd/dot.rd2rc
+		${DESTDIR}${RUBY_EXAMPLESDIR}/rd/dot.rd2rc
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
