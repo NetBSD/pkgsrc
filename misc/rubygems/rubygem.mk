@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.12 2008/03/13 15:48:32 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.13 2008/03/13 15:57:25 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -192,10 +192,15 @@ _gem-install-buildroot:
 _gem-install-cleanbuild:
 	@${STEP_MSG} "Cleaning intermediate gem build files"
 	${RUN} if [ -d ${_RUBYGEM_BUILDROOT}${GEM_LIBDIR}/ext ]; then \
-		cd ${_RUBYGEM_BUILDROOT}${GEM_LIBDIR}/ext && ls | \
+		cd ${_RUBYGEM_BUILDROOT}${GEM_LIBDIR} && \
+		find ext -print | sort -r | \
 		while read file; do \
-			if [ ! -f ${WRKSRC}/ext/$$file ]; then \
-				echo "rm "${GEM_LIBDIR:T}"/ext/$$file"; \
+			[ ! -e ${WRKSRC:Q}"/$$file" ] || continue; \
+			if [ -d ${WRKSRC:Q}"/$$file" ]; then \
+				echo "rmdir "${GEM_LIBDIR:T}"/$$file"; \
+				rmdir $$file; \
+			else \
+				echo "rm "${GEM_LIBDIR:T}"/$$file"; \
 				rm -f $$file; \
 			fi; \
 		done; \
