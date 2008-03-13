@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2007/05/08 11:30:50 adrianp Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/13 17:38:48 joerg Exp $
 
 PDO_DRIVER=		pgsql
 PDO_COMMENT=		PostgreSQL
 PDO_VERSION=		1.0.1
+PKGREVISION=	1
 
 .include "../../databases/php-pdo/module.mk"
 
