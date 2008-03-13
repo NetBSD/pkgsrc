@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/02/05 14:07:05 reed Exp $
+# $NetBSD: Makefile,v 1.23 2008/03/13 17:59:27 joerg Exp $
 #
 
 DISTNAME=	pstree-2.32
@@ -15,16 +15,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/proctree
 
 do-build:
-		cd ${WRKSRC}; ${CC} ${CFLAGS} -o pstree pstree.c
+	cd ${WRKSRC}; ${CC} ${CFLAGS} -o pstree pstree.c
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/pstree \
-			${DESTDIR}${PREFIX}/bin/proctree
-		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/proctree
-		${INSTALL_DATA} ${WRKSRC}/README \
-			${DESTDIR}${PREFIX}/share/doc/proctree
+	${INSTALL_PROGRAM} ${WRKSRC}/pstree ${DESTDIR}${PREFIX}/bin/proctree
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/proctree
 
 .include "../../mk/bsd.pkg.mk"
