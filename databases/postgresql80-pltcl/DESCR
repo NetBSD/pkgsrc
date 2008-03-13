@@ -1,4 +1,0 @@
-PL/Tcl is a dynamic loadable extension for the PostgreSQL database system
-that enables the Tcl language to be used to create functions and
-trigger-procedures.  It offers most of the capabilities a function
-writer has in the C language.
