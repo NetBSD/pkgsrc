@@ -1,20 +1,14 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/11/27 14:35:15 taca Exp $
+$NetBSD: patch-aa,v 1.2 2008/03/13 21:55:48 jlam Exp $
 
---- extconf.rb.orig	2003-12-16 16:47:58.000000000 +0900
+--- extconf.rb.orig	2007-02-12 18:01:19.000000000 -0500
 +++ extconf.rb
-@@ -7,14 +7,7 @@ dir_config('termcap')
- make=false
- have_library("mytinfo", "tgetent") if /bow/ =~ RUBY_PLATFORM
- have_library("tinfo", "tgetent") or have_library("termcap", "tgetent")
--if have_header(*curses=%w"ncurses.h") and have_library("ncurses", "initscr")
--  make=true
--elsif have_header(*curses=%w"ncurses/curses.h") and have_library("ncurses", "initscr")
--  make=true
+@@ -11,9 +11,6 @@ if have_header(*curses=%w"ncurses.h") an
+   make=true
+ elsif have_header(*curses=%w"ncurses/curses.h") and have_library("ncurses", "initscr")
+   make=true
 -elsif have_header(*curses=%w"curses_colr/curses.h") and have_library("cur_colr", "initscr")
 -  curses.unshift("varargs.h")
 -  make=true
--elsif have_header(*curses=%w"curses.h") and have_library("curses", "initscr")
-+if have_header(*curses=%w"curses.h") and have_library("curses", "initscr")
+ elsif have_header(*curses=%w"curses.h") and have_library("curses", "initscr")
    make=true
  end
- 
