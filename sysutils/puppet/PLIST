@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/13 14:17:05 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/03/13 20:05:09 tonnerre Exp $
 bin/puppet
 bin/puppetca
 bin/puppetd
@@ -294,47 +294,47 @@ ${RUBY_SITELIBDIR}/puppet/provider/package/blastwave.rb
 @dirrm ${RUBY_SITELIBDIR}/puppet/external/event-loop
 @dirrm ${RUBY_SITELIBDIR}/puppet/external
 @dirrm ${RUBY_SITELIBDIR}/puppet
-${DOCSDIR}/CHANGELOG
-${DOCSDIR}/TODO
-${DOCSDIR}/README
-${DOCSDIR}/LICENSE
-${DOCSDIR}/COPYING
-@dirrm ${DOCSDIR}
-${EXAMPLESDIR}/root/bin/sleeper
-${EXAMPLESDIR}/root/etc/init.d/sleeper
-${EXAMPLESDIR}/root/etc/puppet/puppetd.conf
-${EXAMPLESDIR}/root/etc/puppet/fileserver.conf
-${EXAMPLESDIR}/root/etc/puppet/puppetmasterd.conf
-${EXAMPLESDIR}/root/etc/puppet/namespaceauth.conf
-${EXAMPLESDIR}/root/etc/puppet/tagmail.conf
-${EXAMPLESDIR}/root/etc/otherfile
-${EXAMPLESDIR}/root/etc/configfile
-${EXAMPLESDIR}/root/etc/debian-passwd
-${EXAMPLESDIR}/root/etc/debian-syslog.conf
-${EXAMPLESDIR}/code/allatonce
-${EXAMPLESDIR}/code/head
-${EXAMPLESDIR}/code/selectors
-${EXAMPLESDIR}/code/execs
-${EXAMPLESDIR}/code/nodes
-${EXAMPLESDIR}/code/mac_automount.pp
-${EXAMPLESDIR}/code/filerecursion
-${EXAMPLESDIR}/code/components
-${EXAMPLESDIR}/code/file.bl
-${EXAMPLESDIR}/code/groups
-${EXAMPLESDIR}/code/functions
-${EXAMPLESDIR}/code/fileparsing
-${EXAMPLESDIR}/code/svncommit
-${EXAMPLESDIR}/code/filedefaults
-${EXAMPLESDIR}/code/simpletests
-${EXAMPLESDIR}/code/assignments
-${EXAMPLESDIR}/code/relationships
-${EXAMPLESDIR}/code/importing
-${EXAMPLESDIR}/code/one
-${EXAMPLESDIR}/puppetmasterd.conf.sample
-@dirrm ${EXAMPLESDIR}/root/bin
-@dirrm ${EXAMPLESDIR}/root/etc/init.d
-@dirrm ${EXAMPLESDIR}/root/etc/puppet
-@dirrm ${EXAMPLESDIR}/root/etc
-@dirrm ${EXAMPLESDIR}/root
-@dirrm ${EXAMPLESDIR}/code
-@dirrm ${EXAMPLESDIR}
+share/doc/puppet/CHANGELOG
+share/doc/puppet/TODO
+share/doc/puppet/README
+share/doc/puppet/LICENSE
+share/doc/puppet/COPYING
+@dirrm share/doc/puppet
+share/examples/puppet/root/bin/sleeper
+share/examples/puppet/root/etc/init.d/sleeper
+share/examples/puppet/root/etc/puppet/puppetd.conf
+share/examples/puppet/root/etc/puppet/fileserver.conf
+share/examples/puppet/root/etc/puppet/puppetmasterd.conf
+share/examples/puppet/root/etc/puppet/namespaceauth.conf
+share/examples/puppet/root/etc/puppet/tagmail.conf
+share/examples/puppet/root/etc/otherfile
+share/examples/puppet/root/etc/configfile
+share/examples/puppet/root/etc/debian-passwd
+share/examples/puppet/root/etc/debian-syslog.conf
+share/examples/puppet/code/allatonce
+share/examples/puppet/code/head
+share/examples/puppet/code/selectors
+share/examples/puppet/code/execs
+share/examples/puppet/code/nodes
+share/examples/puppet/code/mac_automount.pp
+share/examples/puppet/code/filerecursion
+share/examples/puppet/code/components
+share/examples/puppet/code/file.bl
+share/examples/puppet/code/groups
+share/examples/puppet/code/functions
+share/examples/puppet/code/fileparsing
+share/examples/puppet/code/svncommit
+share/examples/puppet/code/filedefaults
+share/examples/puppet/code/simpletests
+share/examples/puppet/code/assignments
+share/examples/puppet/code/relationships
+share/examples/puppet/code/importing
+share/examples/puppet/code/one
+share/examples/puppet/puppetmasterd.conf.sample
+@dirrm share/examples/puppet/root/bin
+@dirrm share/examples/puppet/root/etc/init.d
+@dirrm share/examples/puppet/root/etc/puppet
+@dirrm share/examples/puppet/root/etc
+@dirrm share/examples/puppet/root
+@dirrm share/examples/puppet/code
+@dirrm share/examples/puppet
