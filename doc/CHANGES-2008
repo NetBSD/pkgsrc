@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.508 2008/03/13 14:21:13 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.509 2008/03/13 16:07:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -921,3 +921,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added sysutils/ruby-facter version 1.3.8 [tonnerre 2008-03-12]
 	Updated databases/p5-DBD-postgresql to 2.2.2 [tonnerre 2008-03-13]
 	Added sysutils/puppet version 0.22.4 [tonnerre 2008-03-13]
+	Added games/quarry version 0.2.0 [wiz 2008-03-13]
