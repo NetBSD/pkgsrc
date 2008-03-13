@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.510 2008/03/13 16:45:55 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.511 2008/03/13 16:51:24 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -923,3 +923,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added sysutils/puppet version 0.22.4 [tonnerre 2008-03-13]
 	Added games/quarry version 0.2.0 [wiz 2008-03-13]
 	Updated textproc/source-highlight to 2.9 [wiz 2008-03-13]
+	Updated textproc/namazu to 2.0.18 [taca 2008-03-13]
