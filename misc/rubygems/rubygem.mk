@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.11 2008/03/13 15:45:59 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.12 2008/03/13 15:48:32 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -114,17 +114,17 @@ PRINT_PLIST_AWK+=	/^(@dirrm )?${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}/ \
 			{ gsub(/${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}/, "$${GEM_HOME}"); print; next; }
 
 ###
-### do-gem-extract
+### gem-extract
 ###
-### The do-gem-extract target extracts a standard gem file.  A standard
+### The gem-extract target extracts a standard gem file.  A standard
 ### gem file contains:
 ###
 ###	data.tar.gz	contains the actual files to build, install, etc.
 ###	metadata.gz	YAML specification file
 ###
-.PHONY: do-gem-extract
-do-extract: do-gem-extract
-do-gem-extract:
+.PHONY: gem-extract
+do-extract: gem-extract
+gem-extract:
 	${RUN} cd ${WRKDIR} && ${EXTRACTOR} -f tar ${_DISTDIR:Q}/${GEMFILE:Q}
 	${RUN} mkdir ${WRKSRC}
 	${RUN} cd ${WRKSRC} && ${EXTRACTOR} -f tar ${WRKDIR:Q}/data.tar.gz
@@ -132,27 +132,27 @@ do-gem-extract:
 	${RUN} rm -f ${WRKDIR:Q}/data.tar.gz ${WRKDIR:Q}/metadata.gz
 
 ###
-### do-gem-build
+### gem-build
 ###
-### The do-gem-build target builds a new local gem from the extracted
+### The gem-build target builds a new local gem from the extracted
 ### gem's contents.  The new gem as created as ${WRKSRC}/${GEMFILE}.
 ###
-.PHONY: do-gem-build do-gem-gemspec-build do-gem-rake-build
-do-build: do-gem-build
+.PHONY: gem-build gem-gemspec-build gem-rake-build
+do-build: gem-build
 
-do-gem-build: do-gem-${GEM_BUILD}-build
+gem-build: gem-${GEM_BUILD}-build
 
-do-gem-gemspec-build:
+gem-gemspec-build:
 	${RUN} cd ${WRKSRC} && ${RUBYGEM} build metadata
 
-do-gem-rake-build:
+gem-rake-build:
 	${RUN} cd ${WRKSRC} && ${RAKE} gem
 	${RUN} cd ${WRKSRC} && ln -fs pkg/${GEMFILE} .
 
 ###
-### do-gem-install
+### gem-install
 ###
-### The do-gem-install target installs the local gem in ${WRKDIR} into
+### The gem-install target installs the local gem in ${WRKDIR} into
 ### the gem repository.  We this this as a staged installation
 ### (independent of PKG_DESTDIR_SUPPORT) because it can potentially
 ### build software and we want that to happen within ${WRKDIR}.
@@ -178,11 +178,11 @@ _GEM_INSTALL_TARGETS=	_gem-install-buildroot
 _GEM_INSTALL_TARGETS+=	_gem-install-cleanbuild
 _GEM_INSTALL_TARGETS+=	_gem-install-copy
 
-.PHONY: do-gem-install ${_GEM_INSTALL_TARGETS}
+.PHONY: gem-install ${_GEM_INSTALL_TARGETS}
 .ORDER: ${_GEM_INSTALL_TARGETS}
 
-do-install: do-gem-install
-do-gem-install: ${_GEM_INSTALL_TARGETS}
+do-install: gem-install
+gem-install: ${_GEM_INSTALL_TARGETS}
 
 _gem-install-buildroot:
 	@${STEP_MSG} "Installing gem into buildroot"
