@@ -4,8 +4,8 @@ NNAAMMEE
      ppkkgg__aaddmmiinn -- perform various administrative tasks to the pkg system
 
 SSYYNNOOPPSSIISS
-     ppkkgg__aaddmmiinn [--bbqqSSVV] [--dd _l_s_d_i_r] [--KK _p_k_g___d_b_d_i_r] [--ss _s_f_x___p_a_t_t_e_r_n] _c_o_m_m_a_n_d
-               [args ...]
+     ppkkgg__aaddmmiinn [--bbqqSSvvVV] [--CC _c_o_n_f_i_g] [--dd _l_s_d_i_r] [--KK _p_k_g___d_b_d_i_r] [--ss _s_f_x___p_a_t_t_e_r_n]
+               _c_o_m_m_a_n_d [args ...]
 
 DDEESSCCRRIIPPTTIIOONN
      This command performs various administrative tasks around the NetBSD
@@ -16,6 +16,10 @@ OOPPTTIIOONNSS
 
      --bb      Print only the basenames when matching package names for llssaallll
              and llssbbeesstt.
+
+     --CC _c_o_n_f_i_g
+             Read the configuration file from _c_o_n_f_i_g instead of the system
+             default.
 
      --dd _l_s_d_i_r
              Set _l_s_d_i_r as the path to the directory in which to find matching
@@ -41,6 +45,8 @@ OOPPTTIIOONNSS
 
      --VV      Print version number and exit.
 
+     --vv      Be more verbose.
+
      The following commands are supported:
 
      aadddd _p_k_g _._._.
@@ -48,6 +54,20 @@ OOPPTTIIOONNSS
              files listed in its _+_C_O_N_T_E_N_T_S file together with the package they
              belong to into the package database.  This should be used only by
              pkg_view(1).
+
+     aauuddiitt [--eess] [--tt _t_y_p_e] [_p_k_g] ...
+             Check the listed installed packages for vulnerabilities.  If no
+             package is given, check all installed packages.  If --ee is given,
+             also include end-of-life information.  If --ss is given, check the
+             signature of the pkg-vulnerabilities file before using it.  --tt
+             restricts the reported vulnerabilities to type _t_y_p_e.
+
+     aauuddiitt--ppkkgg [--eess] [--tt _t_y_p_e] [_p_k_g] ...
+             Like aauuddiitt, but check only the given package names or patterns.
+
+     aauuddiitt--bbaattcchh [--eess] [--tt _t_y_p_e] [_p_k_g_-_l_i_s_t] ...
+             Like aauuddiitt--ppkkgg, but read the package names or patterns one per
+             line from the given files.
 
      cchheecckk [_p_k_g _._._.]
              Use this command to check the files belonging to some or all of
@@ -66,6 +86,10 @@ OOPPTTIIOONNSS
              targets on disk are the same as the contents recorded at package
              installation time.
 
+     cchheecckk--ppkkgg--vvuullnneerraabbiilliittiieess [--ss] _f_i_l_e
+             Check format and hashes in the pkg-vulnerabilties file _f_i_l_e.  If
+             --ss is given, also check the embedded signature.
+
      ddeelleettee _p_k_g _._._.
              For each listed package, remove all file entries in the package
              database that belong to the package.  This should be used only by
@@ -74,6 +98,11 @@ OOPPTTIIOONNSS
      dduummpp    Dump the contents of the package database, similar to ppkkgg__iinnffoo
              --FF.  Columns are printed for the keyfield used in the pkgdb - the
              filename -, and the data field - the package the file belongs to.
+
+     ffeettcchh--ppkkgg--vvuullnneerraabbiilliittiieess [--ss]
+             Fetch a new pkg-vulnerabilities file, check the format and if --ss
+             is given the signature.  If all checks are passed, write it to
+             pkgdb.
 
      llssaallll _/_d_i_r_/_p_k_g_p_a_t_t_e_r_n
 
