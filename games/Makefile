@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.296 2008/01/06 16:40:40 adam Exp $
+# $NetBSD: Makefile,v 1.297 2008/03/13 16:06:44 wiz Exp $
 #
 
 COMMENT=	Games
@@ -195,6 +195,7 @@ SUBDIR+=	quake3server-ut
 SUBDIR+=	quake6
 SUBDIR+=	quakedata
 SUBDIR+=	quakeforge
+SUBDIR+=	quarry
 SUBDIR+=	rocksndiamonds
 SUBDIR+=	rocksndiamonds-levels
 SUBDIR+=	rollemup
