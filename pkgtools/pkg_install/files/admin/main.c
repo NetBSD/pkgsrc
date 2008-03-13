@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.37 2008/03/09 20:55:25 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.38 2008/03/13 16:35:30 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.37 2008/03/09 20:55:25 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.38 2008/03/13 16:35:30 joerg Exp $");
 #endif
 
 /*-
@@ -16,7 +16,8 @@ __RCSID("$NetBSD: main.c,v 1.37 2008/03/09 20:55:25 joerg Exp $");
  * All rights reserved.
  *
  * This code is derived from software contributed to The NetBSD Foundation
- * by Hubert Feyrer <hubert@feyrer.de>.
+ * by Hubert Feyrer <hubert@feyrer.de> and
+ * by Joerg Sonnenberger <joerg@NetBSD.org>.
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions
@@ -83,17 +84,17 @@ __RCSID("$NetBSD: main.c,v 1.37 2008/03/09 20:55:25 joerg Exp $");
 
 #define DEFAULT_SFX	".t[bg]z"	/* default suffix for ls{all,best} */
 
-static const char Options[] = "K:SVbd:qs:";
+static const char Options[] = "C:K:SVbd:qs:v";
 
-int	quiet;
+int	quiet, verbose;
 
 static void set_unset_variable(char **, Boolean);
 
 /* print usage message and exit */
-static void 
+void 
 usage(void)
 {
-	(void) fprintf(stderr, "usage: %s [-bqSV] [-d lsdir] [-K pkg_dbdir] [-s sfx] command args ...\n"
+	(void) fprintf(stderr, "usage: %s [-bqSvV] [-C config] [-d lsdir] [-K pkg_dbdir] [-s sfx] command args ...\n"
 	    "Where 'commands' and 'args' are:\n"
 	    " rebuild                     - rebuild pkgdb from +CONTENTS files\n"
 	    " rebuild-tree                - rebuild +REQUIRED_BY files from forward deps\n"
@@ -109,7 +110,12 @@ usage(void)
 	    " lsall /path/to/pkgpattern   - list all pkgs matching the pattern\n"
 	    " lsbest /path/to/pkgpattern  - list pkgs matching the pattern best\n"
 	    " dump                        - dump database\n"
-	    " pmatch pattern pkg          - returns true if pkg matches pattern, otherwise false\n",
+	    " pmatch pattern pkg          - returns true if pkg matches pattern, otherwise false\n"
+	    " fetch-pkg-vulnerabilities [-s] - fetch new vulnerability file\n"
+	    " check-pkg-vulneraiblities [-s] <file> - check syntax and checksums of the vulnerability file\n"
+	    " audit [-es] [-t type] ...\n"
+	    " audit-pkg [-es] [-t type] ...\n"
+	    " audit-batch [-es] [-t type] ...\n",
 	    getprogname());
 	exit(EXIT_FAILURE);
 }
@@ -127,7 +133,7 @@ add_pkg(const char *pkgdir, void *vp)
 	plist_t	       *p;
 	package_t	Plist;
 	char 	       *contents;
-	const char	*PkgDBDir;
+	const char     *PkgDBDir;
 	char *PkgName, *dirp;
 	char 		file[MaxPathSize];
 	char		dir[MaxPathSize];
@@ -339,6 +345,7 @@ rebuild_tree(void)
 int 
 main(int argc, char *argv[])
 {
+	const char     *config_file = SYSCONFDIR"/pkg_install.conf";
 	Boolean		 use_default_sfx = TRUE;
 	Boolean 	 show_basename_only = FALSE;
 	char		 lsdir[MaxPathSize];
@@ -353,6 +360,10 @@ main(int argc, char *argv[])
 
 	while ((ch = getopt(argc, argv, Options)) != -1)
 		switch (ch) {
+		case 'C':
+			config_file = optarg;
+			break;
+
 		case 'K':
 			_pkgdb_setPKGDB_DIR(optarg);
 			break;
@@ -384,6 +395,10 @@ main(int argc, char *argv[])
 			use_default_sfx = FALSE;
 			break;
 
+		case 'v':
+			++verbose;
+			break;
+
 		default:
 			usage();
 			/* NOTREACHED */
@@ -395,6 +410,8 @@ main(int argc, char *argv[])
 	if (argc <= 0) {
 		usage();
 	}
+
+	pkg_install_config(config_file);
 
 	if (use_default_sfx)
 		(void) snprintf(sfx, sizeof(sfx), "%s", DEFAULT_SFX);
@@ -504,7 +521,20 @@ main(int argc, char *argv[])
 	} else if (strcasecmp(argv[0], "unset") == 0) {
 		argv++;		/* "unset" */
 		set_unset_variable(argv, TRUE);
+	} else if (strcasecmp(argv[0], "fetch-pkg-vulnerabilities") == 0) {
+		fetch_pkg_vulnerabilities(--argc, ++argv);
+	} else if (strcasecmp(argv[0], "check-pkg-vulnerabilities") == 0) {
+		check_pkg_vulnerabilities(--argc, ++argv);
 	}
+#ifndef BOOTSTRAP
+	else if (strcasecmp(argv[0], "audit") == 0) {
+		audit_pkgdb(--argc, ++argv);
+	} else if (strcasecmp(argv[0], "audit-pkg") == 0) {
+		audit_pkg(--argc, ++argv);
+	} else if (strcasecmp(argv[0], "audit-batch") == 0) {
+		audit_batch(--argc, ++argv);
+	}
+#endif
 #ifdef PKGDB_DEBUG
 	else if (strcasecmp(argv[0], "delkey") == 0) {
 		int     rc;
