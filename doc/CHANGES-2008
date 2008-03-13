@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.506 2008/03/13 00:00:10 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.507 2008/03/13 00:38:36 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -919,3 +919,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/apache-tomcat55 to 5.5.26 [adrianp 2008-03-12]
 	Added multimedia/goggles version 0.9.1 [wiz 2008-03-12]
 	Added sysutils/ruby-facter version 1.3.8 [tonnerre 2008-03-12]
+	Updated databases/p5-DBD-postgresql to 2.2.2 [tonnerre 2008-03-13]
