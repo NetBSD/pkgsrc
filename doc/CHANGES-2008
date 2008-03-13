@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.513 2008/03/13 17:45:25 joerg Exp $
+$NetBSD: CHANGES-2008,v 1.514 2008/03/13 19:59:03 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -934,3 +934,16 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed databases/postgresql80-pltcl [joerg 2008-03-13]
 	Removed databases/postgresql80-server [joerg 2008-03-13]
 	Removed databases/jdbc-postgresql80 [joerg 2008-03-13]
+	Updated sysutils/libgtop to 2.20.2 [drochner 2008-03-13]
+	Updated x11/gdm to 2.20.4 [drochner 2008-03-13]
+	Updated x11/alacarte to 0.11.5 [drochner 2008-03-13]
+	Updated www/privoxy to 3.0.8 [drochner 2008-03-13]
+	Updated textproc/gnome-doc-utils to 0.12.2 [drochner 2008-03-13]
+	Updated devel/nasm to 2.02 [drochner 2008-03-13]
+	Updated x11/gtk2 to 2.12.9 [drochner 2008-03-13]
+	Updated graphics/py-cairo to 1.4.12 [drochner 2008-03-13]
+	Updated graphics/cairo to 1.4.14 [drochner 2008-03-13]
+	Updated www/liferea to 1.4.14 [drochner 2008-03-13]
+	Updated www/galeon to 2.0.5 [drochner 2008-03-13]
+	Updated multimedia/gst-plugins0.10-gnonlin to 0.10.9 [drochner 2008-03-13]
+	Added multimedia/gst-plugins0.10-x264 version 0.10.6 [drochner 2008-03-13]
