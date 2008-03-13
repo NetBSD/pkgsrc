@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2006/12/28 12:12:57 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2008/03/13 17:38:48 joerg Exp $
 
 DISTNAME=	pgsql_perl5-1.9.0
 PKGNAME=	p5-postgresql-1.9.0
-PKGREVISION=	6
+PKGREVISION=	7
 SVR4_PKGNAME=	p5pgs
 CATEGORIES=	databases devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pg/}
