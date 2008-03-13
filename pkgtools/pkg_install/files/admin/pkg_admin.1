@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_admin.1,v 1.15 2008/01/29 15:39:30 hubertf Exp $
+.\"	$NetBSD: pkg_admin.1,v 1.16 2008/03/13 16:35:30 joerg Exp $
 .\"
 .\" Copyright (c) 1999-2008 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -42,7 +42,8 @@
 .Nd perform various administrative tasks to the pkg system
 .Sh SYNOPSIS
 .Nm
-.Op Fl bqSV
+.Op Fl bqSvV
+.Op Fl C Ar config
 .Op Fl d Ar lsdir
 .Op Fl K Ar pkg_dbdir
 .Op Fl s Ar sfx_pattern
@@ -59,6 +60,10 @@ Print only the basenames when matching package names for
 .Cm lsall
 and
 .Cm lsbest .
+.It Fl C Ar config
+Read the configuration file from
+.Ar config
+instead of the system default.
 .It Fl d Ar lsdir
 Set
 .Ar lsdir
@@ -99,6 +104,8 @@ and
 The default pattern is ".t[bg]z".
 .It Fl V
 Print version number and exit.
+.It Fl v
+Be more verbose.
 .El
 .Pp
 The following commands are supported:
@@ -110,6 +117,26 @@ its
 file together with the package they belong to into the package database.
 This should be used only by
 .Xr pkg_view 1 .
+.It Cm audit Oo Fl es Oc Oo Fl t Ar type Oc Oo Ar pkg Oc ...
+Check the listed installed packages for vulnerabilities.
+If no package is given, check all installed packages.
+If
+.Fl e
+is given, also include end-of-life information.
+If
+.Fl s
+is given, check the signature of the pkg-vulnerabilities file before using it.
+.Fl t
+restricts the reported vulnerabilities to type
+.Ar type .
+.It Cm audit-pkg Oo Fl es Oc Oo Fl t Ar type Oc Oo Ar pkg Oc ...
+Like
+.Cm audit ,
+but check only the given package names or patterns.
+.It Cm audit-batch Oo Fl es Oc Oo Fl t Ar type Oc Oo Ar pkg-list Oc ...
+Like
+.Cm audit-pkg ,
+but read the package names or patterns one per line from the given files.
 .It Cm check Op Ar pkg ...
 Use this command to check the files belonging to some or all of the
 packages installed on the local machine against the checksum
@@ -131,6 +158,12 @@ A warning message is printed if the expected checksum differs from the
 checksum of the file on disk.
 Symbolic links are also checked, ensuring that the targets on disk are
 the same as the contents recorded at package installation time.
+.It Cm check-pkg-vulnerabilities Oo Fl s Oc Ar file
+Check format and hashes in the pkg-vulnerabilties file
+.Ar file .
+If
+.Fl s
+is given, also check the embedded signature.
 .It Cm delete Ar pkg ...
 For each listed package, remove all file entries in the package database that
 belong to the package.
@@ -141,6 +174,11 @@ Dump the contents of the package database, similar to
 .Cm pkg_info -F .
 Columns are printed for the keyfield used in the pkgdb - the filename -,
 and the data field - the package the file belongs to.
+.It Cm fetch-pkg-vulnerabilities Op Fl s
+Fetch a new pkg-vulnerabilities file, check the format and if
+.Fl s
+is given the signature.
+If all checks are passed, write it to pkgdb.
 .It Cm lsall Ar /dir/pkgpattern
 .It Cm lsbest Ar /dir/pkgpattern
 List all/best package matching pattern in the given directory
