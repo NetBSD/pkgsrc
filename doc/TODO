@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7129 2008/03/12 21:33:25 wiz Exp $
+$NetBSD: TODO,v 1.7130 2008/03/13 11:12:15 obache Exp $
 
 Suggested new packages
 ======================
@@ -1201,7 +1201,9 @@ Suggested package updates
 	o py-zconfig-2.3.1
 	o pygopherd-2.0.13
 	o pysol-4.82
-	o python-2.5.1
+	o python-2.5.2
+	o python-2.4.5
+	o python-2.3.7
 	o python-mode-1.0 (Revision 4.75)
 	o qDecoder-8.0
 	o qbrew-0.3.9
