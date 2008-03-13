@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.10 2008/03/13 14:38:46 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.11 2008/03/13 15:45:59 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -174,12 +174,23 @@ RUBYGEM_GENERATE_PLIST=	\
 		${SORT} -r | ${SED} -e "s,^,@dirrm ," );
 	
 
-.PHONY: do-gem-install
+_GEM_INSTALL_TARGETS=	_gem-install-buildroot
+_GEM_INSTALL_TARGETS+=	_gem-install-cleanbuild
+_GEM_INSTALL_TARGETS+=	_gem-install-copy
+
+.PHONY: do-gem-install ${_GEM_INSTALL_TARGETS}
+.ORDER: ${_GEM_INSTALL_TARGETS}
+
 do-install: do-gem-install
-do-gem-install:
+do-gem-install: ${_GEM_INSTALL_TARGETS}
+
+_gem-install-buildroot:
 	@${STEP_MSG} "Installing gem into buildroot"
 	${RUN} ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
 		${RUBYGEM} install ${_RUBYGEM_OPTIONS}
+
+_gem-install-cleanbuild:
+	@${STEP_MSG} "Cleaning intermediate gem build files"
 	${RUN} if [ -d ${_RUBYGEM_BUILDROOT}${GEM_LIBDIR}/ext ]; then \
 		cd ${_RUBYGEM_BUILDROOT}${GEM_LIBDIR}/ext && ls | \
 		while read file; do \
@@ -189,6 +200,8 @@ do-gem-install:
 			fi; \
 		done; \
 	fi
-	@${STEP_MSG} "Copying files into installation directory"
+
+_gem-install-copy:
+	@${STEP_MSG} "Copying gem into installation directory"
 	${RUN} cd ${_RUBYGEM_BUILDROOT}${PREFIX} && \
 		pax -rwpe . ${DESTDIR}${PREFIX}
