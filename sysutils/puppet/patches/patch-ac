@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1.1.1 2008/03/13 14:17:05 tonnerre Exp $
+$NetBSD: patch-ac,v 1.2 2008/03/13 20:05:09 tonnerre Exp $
 
-support package that contains '-' in its name, like syslog-ng
+Support package that contains '-' in its name, like syslog-ng
 http://reductivelabs.com/trac/puppet/ticket/628
 
 --- lib/puppet/provider/package/ports.rb.orig       Wed May  9 17:12:39 2007

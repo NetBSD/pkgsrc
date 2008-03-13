@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/03/13 14:17:05 tonnerre Exp $
+$NetBSD: patch-aa,v 1.2 2008/03/13 20:05:09 tonnerre Exp $
 
-always define PATCH. without it, puppetd hangs when upgrading INTERACTIVE port.
+Always define PATCH. Without it, puppetd hangs when upgrading INTERACTIVE port.
 http://reductivelabs.com/trac/puppet/ticket/624
 
 --- lib/puppet/provider/package/ports.rb.orig	Tue May  8 14:55:34 2007
