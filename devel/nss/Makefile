@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/03/03 17:45:36 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2008/03/13 16:56:52 joerg Exp $
 
 DISTNAME=		nss-3.11.5
 CATEGORIES=		security
@@ -19,6 +19,8 @@ DIST=			${WRKSRC}/mozilla/dist
 BUILD_TARGET=		nss_build_all
 MAKE_ENV+=		LD_LIBS="-L${BUILDLINK_PREFIX.nspr}/lib/nspr ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.nspr}/lib/nspr ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib/nss"
 MAKE_ENV+=		LIBRUNPATH=${PREFIX}/lib BUILD_OPT=1
+
+INSTALLATION_DIRS=	include/nss lib/nss lib/pkgconfig
 
 MAKE_JOBS_SAFE=		no
 
@@ -42,8 +44,6 @@ pre-configure:
 		${WRKSRC}/mozilla/security/coreconf/
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/nss
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/nss
 	(cd ${DIST}/public && ${PAX} -Lrwpe . ${DESTDIR}${PREFIX}/include/nss/ )
 	(cd ${DIST}/*_OPT.OBJ/lib && \
 		${PAX} -Lrwpe *.${SO_SUFFIX} ${DESTDIR}${PREFIX}/lib/nss/ )
