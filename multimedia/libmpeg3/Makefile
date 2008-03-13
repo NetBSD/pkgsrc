@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/03/04 19:32:30 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/13 17:02:56 joerg Exp $
 #
 
 DISTNAME=	libmpeg3-1.7-src
@@ -47,28 +47,25 @@ AINSTHDRS=	ac3.h mpeg3audio.h
 VINSTHDRS=	idct.h mpeg3video.h slice.h
 INSTBINS=	mpeg3cat mpeg3peek mpeg3toc mpeg3dump
 
-INSTALLATION_DIRS=	bin lib
+INSTALLATION_DIRS=	bin include/mpeg3/audio include/mpeg3/video lib \
+			shared/doc/html/libmpeg3
 
 do-install:
 	for f in ${INSTBINS}; do \
 		${INSTALL_PROGRAM} ${WRKSRC}/work/$$f ${DESTDIR}${PREFIX}/bin; \
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/include/mpeg3
 	for f in ${INSTHDRS}; do \
 		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/include/mpeg3; \
 	done
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/mpeg3/audio
 	for f in ${AINSTHDRS}; do \
 		${INSTALL_DATA} ${WRKSRC}/audio/$$f \
 			${DESTDIR}${PREFIX}/include/mpeg3/audio; \
 	done
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/mpeg3/video
 	for f in ${VINSTHDRS}; do \
 		${INSTALL_DATA} ${WRKSRC}/video/$$f \
 			${DESTDIR}${PREFIX}/include/mpeg3/video; \
 	done
 	${INSTALL_LIB} ${WRKSRC}/work/libmpeg3.a ${DESTDIR}${PREFIX}/lib
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/html/libmpeg3
 	${INSTALL_DATA} ${WRKSRC}/docs/index.html \
 		${DESTDIR}${PREFIX}/share/doc/html/libmpeg3
 
