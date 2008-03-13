@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.15 2008/03/13 18:29:20 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.16 2008/03/13 22:20:04 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -10,6 +10,10 @@
 #
 #	Possible: gemspec, rake
 #	Default: rake
+#
+# GEM_CLEANBUILD
+#	A list of shell globs representing files to remove from the
+#	gem installed in the buildroot.
 #
 # GEM_NAME
 #	The name of the gem to install.  The default value is ${DISTNAME}.
@@ -147,7 +151,12 @@ gem-gemspec-build:
 
 gem-rake-build:
 	${RUN} cd ${WRKSRC} && ${RAKE} gem
-	${RUN} cd ${WRKSRC} && ln -fs pkg/${GEMFILE} .
+	${RUN} cd ${WRKSRC} && rm -f ${GEMFILE}
+	${RUN} cd ${WRKSRC} && find . -name ${GEMFILE} -print | \
+	while read file; do \
+		ln -fs "$$file" ${GEMFILE}; \
+		exit 0; \
+	done
 
 ###
 ### gem-install
@@ -189,8 +198,26 @@ _gem-install-buildroot:
 	${RUN} ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
 		${RUBYGEM} install ${_RUBYGEM_OPTIONS}
 
+GEM_CLEANBUILD?=	# empty
+.if !empty(GEM_CLEANBUILD:M/*) || !empty(GEM_CLEANBUILD:M*../*)
+PKG_FAIL_REASON=	"GEM_CLEANBUILD must be relative to "${GEM_LIBDIR:Q}"."
+.endif
+
 _gem-install-cleanbuild:
 	@${STEP_MSG} "Cleaning intermediate gem build files"
+.if !empty(GEM_CLEANBUILD)
+	${RUN} cd ${_RUBYGEM_BUILDROOT}${GEM_LIBDIR} &&			\
+	ls ${GEM_CLEANBUILD} |						\
+	while read file; do						\
+		if [ -d "$$file" ]; then				\
+			echo "rmdir "${GEM_LIBDIR:T}"/$$file";		\
+			rmdir $$file;					\
+		else							\
+			echo "rm "${GEM_LIBDIR:T}"/$$file";		\
+			rm -f $$file;					\
+		fi;							\
+	done
+.endif
 	${RUN} if [ -d ${_RUBYGEM_BUILDROOT}${GEM_LIBDIR}/ext ]; then	\
 		cd ${_RUBYGEM_BUILDROOT}${GEM_LIBDIR} &&		\
 		find ext -print | sort -r |				\
