@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2007/03/15 16:43:26 taca Exp $
+# $NetBSD: Makefile,v 1.29 2008/03/13 22:07:05 jlam Exp $
 
 DISTNAME=		${RUBY_DISTNAME}
 PKGNAME=		${RUBY_PKGPREFIX}-tk-${RUBY_VERSION_SUFFIX}
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_RUBY}
 MAINTAINER=		taca@NetBSD.org
 HOMEPAGE=		${RUBY_HOMEPAGE}
 COMMENT=		Ruby interface to the Tk widget set
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 RUBY_HAS_ARCHLIB=	yes
 USE_RUBY_EXTCONF=	yes
@@ -27,8 +29,8 @@ pre-install:
 			-name '*.orig_dist' \) -exec ${RM} -f {} \;
 
 post-install:
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/tk
-	${CP} -r ${WRKSRC}/sample/* ${RUBY_EXAMPLESDIR}/tk
+	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_EXAMPLESDIR}/tk
+	${CP} -r ${WRKSRC}/sample/* ${DESTDIR}${RUBY_EXAMPLESDIR}/tk
 
 .include "../../lang/ruby/modules.mk"
 .include "../../lang/ruby/Makefile.common"
