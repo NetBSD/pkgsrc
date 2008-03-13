@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2008/03/11 17:17:10 tnn Exp $
+# $NetBSD: Makefile,v 1.32 2008/03/13 17:30:31 tnn Exp $
 #
 
 DISTNAME=	chicken-3.0.0
 CATEGORIES=	lang
-MASTER_SITES=	http://chicken.wiki.br/releases/
+MASTER_SITES=	http://chicken.wiki.br/releases/${PKGVERSION_NOREV}/
 
 MAINTAINER=	asau@inbox.ru #, airhead@users.sourceforge.net
 HOMEPAGE=	http://www.call-with-current-continuation.org/chicken.html
