@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 18:49:19 agc Exp $
+$NetBSD: distinfo,v 1.3 2008/03/14 20:17:48 wiz Exp $
 
-SHA1 (m1074b2-lnx.tar.bz2) = 842ec3a3f5b56fe3352d06e169af58d2ab9b3690
-RMD160 (m1074b2-lnx.tar.bz2) = 4247a7f4db7eafb7331e82335502c2ab43b7742d
-Size (m1074b2-lnx.tar.bz2) = 705948 bytes
+SHA1 (m1077b-lnx.tar.bz2) = 471b002e883986e884c6854b3794f26da66fb7fb
+RMD160 (m1077b-lnx.tar.bz2) = cfa96aa606fb87ca5b6698cc293a7622b87f4c24
+Size (m1077b-lnx.tar.bz2) = 825802 bytes
