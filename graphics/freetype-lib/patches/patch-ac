@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2000/07/22 08:12:40 jlam Exp $
+$NetBSD: patch-ac,v 1.2 2008/03/14 17:22:49 jlam Exp $
 
---- lib/arch/unix/Makefile.in.orig	Sat Jul 31 02:48:17 1999
-+++ lib/arch/unix/Makefile.in	Sat Jul 22 03:30:08 2000
-@@ -195,7 +195,7 @@
+--- lib/arch/unix/Makefile.in.orig	2001-10-29 04:44:12.000000000 -0500
++++ lib/arch/unix/Makefile.in
+@@ -205,15 +205,15 @@ freetype.lo: $(SRC_S) $(SRC_M)
                                          $(SRC_S)
  
  libttf.la: $(LIB_FILES)
@@ -11,3 +11,14 @@ $NetBSD: patch-ac,v 1.1 2000/07/22 08:12:40 jlam Exp $
                                 -rpath $(libdir) \
                                 -version-info $(version_info) $(FT_LIBS)
  
+ install: libttf.la
+-	$(MKINSTALLDIRS) $(libdir) $(includedir)/freetype
+-	$(LIBTOOL) --mode=install $(INSTALL) libttf.la $(libdir)
++	$(MKINSTALLDIRS) $(DESTDIR)$(libdir) $(DESTDIR)$(includedir)/freetype
++	$(LIBTOOL) --mode=install $(INSTALL) libttf.la $(DESTDIR)$(libdir)
+ 	-for P in $(HEADERS) ; do \
+-          $(INSTALL_DATA) $$P $(includedir)/freetype ; \
++          $(INSTALL_DATA) $$P $(DESTDIR)$(includedir)/freetype ; \
+         done
+ 
+ uninstall: 
