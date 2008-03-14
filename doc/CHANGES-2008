@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.519 2008/03/14 18:56:23 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.520 2008/03/14 20:01:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -953,3 +953,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added net/clive version 0.4.6 [wiz 2008-03-14]
 	Update mail/libmilter to 8.14.2nb1 [jnemeth 2008-03-14]
 	Updated audio/vorbis-tools to 1.2.0 [wiz 2008-03-14]
+	Updated textproc/iso-codes to 2.0 [wiz 2008-03-14]
