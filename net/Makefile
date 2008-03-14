@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.700 2008/03/08 00:57:58 reed Exp $
+# $NetBSD: Makefile,v 1.701 2008/03/14 01:33:55 wiz Exp $
 #
 
 COMMENT=	Networking tools
 
+SUBDIR+=	3proxy
 SUBDIR+=	6tunnel
 SUBDIR+=	DarwinStreamingServer
 SUBDIR+=	GeoIP
@@ -58,6 +59,7 @@ SUBDIR+=	cia
 SUBDIR+=	cidr
 SUBDIR+=	cisco-mibs
 SUBDIR+=	citrix_ica
+SUBDIR+=	clive
 SUBDIR+=	cmu-dhcpd
 SUBDIR+=	coda
 SUBDIR+=	connect
@@ -184,6 +186,7 @@ SUBDIR+=	libIDL
 SUBDIR+=	libares
 SUBDIR+=	libcares
 SUBDIR+=	libdnet
+SUBDIR+=	libfetch
 SUBDIR+=	liblive
 SUBDIR+=	libmms
 SUBDIR+=	libnids
