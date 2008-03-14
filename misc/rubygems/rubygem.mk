@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.17 2008/03/14 14:18:21 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.18 2008/03/14 15:25:28 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -13,14 +13,14 @@
 #
 # GEM_CLEANBUILD
 #	A list of shell globs representing files to remove from the
-#	gem installed in the buildroot.
+#	gem installed in the buildroot.  The default is an empty list.
 #
 # GEM_NAME
 #	The name of the gem to install.  The default value is ${DISTNAME}.
 #
 # GEMFILE
-#	The complete filename of the gem to install.  It defaults to
-#	${DISTNAME}.gem.
+#	The complete filename of the gem to install.  The default value
+#	is ${DISTNAME}.gem.
 #
 # Variables defined in this file:
 #
@@ -141,8 +141,8 @@ gem-extract:
 ###
 ### gem-build
 ###
-### The gem-build target builds a new local gem from the extracted
-### gem's contents.  The new gem as created as ${WRKSRC}/${GEMFILE}.
+### The gem-build target builds a new local gem from the extracted gem's
+### contents.  The new gem as created as ${WRKSRC}/${GEM_NAME}.gem.
 ###
 .PHONY: gem-build gem-gemspec-build gem-rake-build
 do-build: gem-build
@@ -154,10 +154,10 @@ gem-gemspec-build:
 
 gem-rake-build:
 	${RUN} cd ${WRKSRC} && ${RAKE} gem
-	${RUN} cd ${WRKSRC} && rm -f ${GEMFILE}
-	${RUN} cd ${WRKSRC} && find . -name ${GEMFILE} -print | \
+	${RUN} cd ${WRKSRC} && rm -f ${GEM_NAME}.gem
+	${RUN} cd ${WRKSRC} && find . -name ${GEM_NAME}.gem -print | \
 	while read file; do \
-		ln -fs "$$file" ${GEMFILE}; \
+		ln -fs "$$file" ${GEM_NAME}.gem; \
 		exit 0; \
 	done
 
@@ -173,7 +173,7 @@ _RUBYGEM_BUILDROOT=	${WRKDIR}/.inst
 _RUBYGEM_OPTIONS=	--no-update-sources	# don't cache the gem index
 _RUBYGEM_OPTIONS+=	--install-dir ${GEM_HOME}
 _RUBYGEM_OPTIONS+=	--build-root ${_RUBYGEM_BUILDROOT}
-_RUBYGEM_OPTIONS+=	--local ${WRKSRC}/${GEMFILE}
+_RUBYGEM_OPTIONS+=	--local ${WRKSRC}/${GEM_NAME}.gem
 _RUBYGEM_OPTIONS+=	-- --build-args ${CONFIGURE_ARGS}
 
 GENERATE_PLIST+=	${RUBYGEM_GENERATE_PLIST}
