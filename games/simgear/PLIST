@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/12 19:56:14 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/03/14 14:49:53 drochner Exp $
 include/simgear/bucket/newbucket.hxx
 include/simgear/compiler.h
 include/simgear/constants.h
@@ -26,17 +26,18 @@ include/simgear/io/sg_serial.hxx
 include/simgear/io/sg_socket.hxx
 include/simgear/io/sg_socket_udp.hxx
 include/simgear/magvar/magvar.hxx
+include/simgear/math/SGCMath.hxx
 include/simgear/math/SGGeoc.hxx
 include/simgear/math/SGGeod.hxx
 include/simgear/math/SGGeodesy.hxx
 include/simgear/math/SGLimits.hxx
 include/simgear/math/SGMath.hxx
+include/simgear/math/SGMathFwd.hxx
 include/simgear/math/SGMatrix.hxx
 include/simgear/math/SGMisc.hxx
 include/simgear/math/SGQuat.hxx
 include/simgear/math/SGVec3.hxx
 include/simgear/math/SGVec4.hxx
-include/simgear/math/fastmath.hxx
 include/simgear/math/interpolater.hxx
 include/simgear/math/leastsqs.hxx
 include/simgear/math/point3d.hxx
@@ -55,6 +56,7 @@ include/simgear/misc/strutils.hxx
 include/simgear/misc/tabbed_values.hxx
 include/simgear/misc/texcoord.hxx
 include/simgear/misc/zfstream.hxx
+include/simgear/nasal/naref.h
 include/simgear/nasal/nasal.h
 include/simgear/props/condition.hxx
 include/simgear/props/props.hxx
@@ -70,6 +72,7 @@ include/simgear/scene/model/location.hxx
 include/simgear/scene/model/model.hxx
 include/simgear/scene/model/modellib.hxx
 include/simgear/scene/model/personality.hxx
+include/simgear/scene/model/persparam.hxx
 include/simgear/scene/model/placement.hxx
 include/simgear/scene/model/placementtrans.hxx
 include/simgear/scene/model/shadowvolume.hxx
@@ -104,6 +107,8 @@ include/simgear/sound/soundmgr_openal.hxx
 include/simgear/sound/xmlsound.hxx
 include/simgear/structure/SGReferenced.hxx
 include/simgear/structure/SGSharedPtr.hxx
+include/simgear/structure/SGSmplhist.hxx
+include/simgear/structure/SGSmplstat.hxx
 include/simgear/structure/callback.hxx
 include/simgear/structure/commands.hxx
 include/simgear/structure/event_mgr.hxx
