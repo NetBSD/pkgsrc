@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/08 00:49:26 reed Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/14 16:16:12 reed Exp $
 
 DISTNAME=		lilo-22.8.src
 PKGNAME=		${DISTNAME:S/.src//}
@@ -46,6 +46,10 @@ post-patch:
 		-e "s:@@PKG_SYSCONFDIR@@:${PKG_SYSCONFDIR}:" \
 		< ${WRKSRC}/config.h.orig > ${WRKSRC}/config.h
 
+# TODO: later handle boot directory too?
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8	\
+			share/lilo share/doc/lilo
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/lilo ${PREFIX}/sbin/lilo
 	${INSTALL_SCRIPT} ${WRKSRC}/mkrescue ${PREFIX}/sbin/mkrescue
@@ -53,9 +57,7 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/manPages/lilo.8 ${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_MAN} ${WRKSRC}/manPages/lilo.conf.5 ${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_MAN} ${WRKSRC}/manPages/mkrescue.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/lilo
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/lilo
-	${INSTALL_DATA_DIR} ${PREFIX}/share/lilo
 	${INSTALL_DATA} ${WRKSRC}/sample/lilo.sample.conf ${PREFIX}/share/lilo
 	${INSTALL_DATA} ${FILESDIR}/lilo.conf.example ${PREFIX}/share/lilo
 
