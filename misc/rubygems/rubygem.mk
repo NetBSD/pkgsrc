@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.16 2008/03/13 22:20:04 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.17 2008/03/14 14:18:21 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -126,14 +126,17 @@ PRINT_PLIST_AWK+=	/^(@dirrm )?${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}/ \
 ###	data.tar.gz	contains the actual files to build, install, etc.
 ###	metadata.gz	YAML specification file
 ###
+_GEMSPEC_FILE=	${WRKDIR}/${PKGBASE:S|^${RUBY_PKGPREFIX}-||}.gemspec
+
 .PHONY: gem-extract
 do-extract: gem-extract
 gem-extract:
 	${RUN} cd ${WRKDIR} && ${EXTRACTOR} -f tar ${_DISTDIR:Q}/${GEMFILE:Q}
 	${RUN} mkdir ${WRKSRC}
 	${RUN} cd ${WRKSRC} && ${EXTRACTOR} -f tar ${WRKDIR:Q}/data.tar.gz
-	${RUN} cd ${WRKSRC} && ${EXTRACTOR} ${WRKDIR:Q}/metadata.gz
-	${RUN} rm -f ${WRKDIR:Q}/data.tar.gz ${WRKDIR:Q}/metadata.gz
+	${RUN} cd ${WRKDIR} && ${EXTRACTOR} metadata.gz && \
+		mv metadata ${_GEMSPEC_FILE}
+	${RUN} cd ${WRKDIR} && rm -f data.tar.gz* metadata.gz*
 
 ###
 ### gem-build
@@ -147,7 +150,7 @@ do-build: gem-build
 gem-build: gem-${GEM_BUILD}-build
 
 gem-gemspec-build:
-	${RUN} cd ${WRKSRC} && ${RUBYGEM} build metadata
+	${RUN} cd ${WRKSRC} && ${RUBYGEM} build ${_GEMSPEC_FILE}
 
 gem-rake-build:
 	${RUN} cd ${WRKSRC} && ${RAKE} gem
@@ -209,6 +212,7 @@ _gem-install-cleanbuild:
 	${RUN} cd ${_RUBYGEM_BUILDROOT}${GEM_LIBDIR} &&			\
 	ls ${GEM_CLEANBUILD} |						\
 	while read file; do						\
+		[ ! -e ${WRKSRC:Q}"/$$file" ] || continue;		\
 		if [ -d "$$file" ]; then				\
 			echo "rmdir "${GEM_LIBDIR:T}"/$$file";		\
 			rmdir $$file;					\
@@ -223,7 +227,7 @@ _gem-install-cleanbuild:
 		find ext -print | sort -r |				\
 		while read file; do					\
 			[ ! -e ${WRKSRC:Q}"/$$file" ] || continue;	\
-			if [ -d ${WRKSRC:Q}"/$$file" ]; then		\
+			if [ -d "$$file" ]; then			\
 				echo "rmdir "${GEM_LIBDIR:T}"/$$file";	\
 				rmdir $$file;				\
 			else						\
