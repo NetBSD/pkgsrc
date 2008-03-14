@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.516 2008/03/14 01:14:48 taca Exp $
+$NetBSD: CHANGES-2008,v 1.517 2008/03/14 01:37:11 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -949,3 +949,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added multimedia/gst-plugins0.10-x264 version 0.10.6 [drochner 2008-03-13]
 	Added games/gate88 version 20050319 [wiz 2008-03-14]
 	Updated mail/postfix to 2.5.1nb1 [taca 2008-03-14]
+	Added www/urlgrabber version 3.0.0 [wiz 2008-03-14]
+	Added net/clive version 0.4.6 [wiz 2008-03-14]
