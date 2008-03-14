@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2008/03/04 10:57:51 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/03/14 20:01:14 wiz Exp $
 #
 
-DISTNAME=	iso-codes-1.9
+DISTNAME=	iso-codes-2.0
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://pkg-isocodes.alioth.debian.org/pub/pkg-isocodes/
 
