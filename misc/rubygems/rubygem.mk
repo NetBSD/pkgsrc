@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.18 2008/03/14 15:25:28 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.19 2008/03/14 15:30:10 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -14,6 +14,10 @@
 # GEM_CLEANBUILD
 #	A list of shell globs representing files to remove from the
 #	gem installed in the buildroot.  The default is an empty list.
+#
+#	Example:
+#
+#	    GEM_CLEANBUILD=	*.o *.${RUBY_DLEXT} mkmf.log	
 #
 # GEM_NAME
 #	The name of the gem to install.  The default value is ${DISTNAME}.
