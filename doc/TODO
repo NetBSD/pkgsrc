@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7133 2008/03/14 17:11:31 wiz Exp $
+$NetBSD: TODO,v 1.7134 2008/03/14 20:20:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -782,7 +782,6 @@ Suggested package updates
 	o irrd-2.3.4 [pkg/36813|38002]
 	o irrtoolset-nox11-4.8.4
 	o iselect-1.4.0
-	o iso-codes-2.0
 	o ispell-gaeilge-4.1
 	o ispell-german-20071211
 	o ispell-slovak-0.3.2
@@ -895,7 +894,6 @@ Suggested package updates
 	o lsh-2.0.3
 	o ltm-0.40
 	o lucy-1.19p
-	o m1-0.7.7 [needs libasound.so.2 emulation library, i.e. alsa]
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.13a
@@ -926,6 +924,7 @@ Suggested package updates
 	o mmg-2.0.2
 	o moc-2.4.3
 	o modular-xorg-server-1.4
+	o monodevelop-1.0
 	o moon-buggy-1.0.51
 	o moscow_ml-2.01
 	o most-4.10.2
@@ -1322,7 +1321,6 @@ Suggested package updates
 	o subtitleripper-0.3.4
 	o sudo-1.6.9p13
 	o sunbird-0.5 [ghen]
-	o surfraw-2.2.1
 	o suse_base-10.3
 	o swfdec-0.6.0
 	o swi-prolog-5.6.31
@@ -1395,7 +1393,6 @@ Suggested package updates
 	o vmware-module-3.2.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vobcopy-1.1.1
-	o vorbis-tools-1.2.0
 	o vp-1.6
 	o vsftpd-2.0.6
 	o vttest-20071216
