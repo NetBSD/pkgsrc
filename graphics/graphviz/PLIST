@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2008/03/11 15:46:57 joerg Exp $
+@comment $NetBSD: PLIST,v 1.23 2008/03/14 12:56:01 gdt Exp $
 bin/acyclic
 bin/bcomps
 bin/ccomps
@@ -61,7 +61,7 @@ lib/graphviz/libgvplugin_neato_layout.la
 lib/graphviz/libgvplugin_pango.la
 lib/graphviz/libgvplugin_xlib.la
 lib/graphviz/lua/gv.so
-${TCL}${LUA}lib/graphviz/lua/libgv_lua.la
+${LUA}lib/graphviz/lua/libgv_lua.la
 lib/graphviz/perl/gv.so
 lib/graphviz/pkgIndex.tcl
 lib/graphviz/python/_gv.so
@@ -123,7 +123,7 @@ man/man3/pathplan.3
 man/man7/graphviz.7
 ${TCL}man/mann/gdtclft.n
 ${TCL}${GUILE}man/mann/gv_guile.n
-${TCL}${LUA}man/mann/gv_lua.n
+${LUA}man/mann/gv_lua.n
 ${TCL}${LUA}man/mann/gv_tcl.n
 ${TCL}man/mann/tcldot.n
 ${TCL}man/mann/tkspline.n
