@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/12 20:01:40 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/14 14:49:53 drochner Exp $
 #
 
-DISTNAME=		FlightGear-0.9.10
+DISTNAME=		FlightGear-1.0.0
 PKGNAME=		${DISTNAME:S/FlightGear/flightgear/}
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.flightgear.org/pub/fgfs/Source/ \
@@ -20,9 +20,12 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c c++
 
 CONFIGURE_ARGS+=	--with-threads
+CONFIGURE_ARGS+=	--enable-sdl
+CFLAGS!=	sdl-config --cflags
 
 .include "../../audio/openal/buildlink3.mk"
 .include "../../audio/freealut/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
 .include "../../games/plib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../games/simgear/buildlink3.mk"
