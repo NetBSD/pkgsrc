@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.297 2008/03/13 16:06:44 wiz Exp $
+# $NetBSD: Makefile,v 1.298 2008/03/14 01:02:30 wiz Exp $
 #
 
 COMMENT=	Games
@@ -95,6 +95,7 @@ SUBDIR+=	frozen-bubble
 SUBDIR+=	fruit
 SUBDIR+=	galaxa
 SUBDIR+=	gamazons
+SUBDIR+=	gate88
 SUBDIR+=	gcompris
 SUBDIR+=	gemdropx
 SUBDIR+=	genecys-client
