@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.19 2008/03/14 15:30:10 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.20 2008/03/14 16:41:21 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -134,6 +134,7 @@ _GEMSPEC_FILE=	${WRKDIR}/${PKGBASE:S|^${RUBY_PKGPREFIX}-||}.gemspec
 
 .PHONY: gem-extract
 do-extract: gem-extract
+.if !target(gem-extract)
 gem-extract:
 	${RUN} cd ${WRKDIR} && ${EXTRACTOR} -f tar ${_DISTDIR:Q}/${GEMFILE:Q}
 	${RUN} mkdir ${WRKSRC}
@@ -141,6 +142,7 @@ gem-extract:
 	${RUN} cd ${WRKDIR} && ${EXTRACTOR} metadata.gz && \
 		mv metadata ${_GEMSPEC_FILE}
 	${RUN} cd ${WRKDIR} && rm -f data.tar.gz* metadata.gz*
+.endif
 
 ###
 ### gem-build
