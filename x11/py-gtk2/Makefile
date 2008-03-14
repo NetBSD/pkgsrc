@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.46 2008/01/09 18:56:01 drochner Exp $
+# $NetBSD: Makefile,v 1.47 2008/03/14 14:20:22 drochner Exp $
 #
 
 DISTNAME=	pygtk-2.12.1
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/pygtk/gtk2/}
 CATEGORIES=	x11 python
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/pygtk/2.12/}
