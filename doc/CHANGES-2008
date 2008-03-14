@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.517 2008/03/14 01:37:11 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.518 2008/03/14 03:04:31 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -951,3 +951,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/postfix to 2.5.1nb1 [taca 2008-03-14]
 	Added www/urlgrabber version 3.0.0 [wiz 2008-03-14]
 	Added net/clive version 0.4.6 [wiz 2008-03-14]
+	Update mail/libmilter to 8.14.2nb1 [jnemeth 2008-03-14]
