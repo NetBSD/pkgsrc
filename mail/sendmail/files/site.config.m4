@@ -1,4 +1,4 @@
-# $NetBSD: site.config.m4,v 1.8 2007/01/20 20:08:32 tv Exp $
+# $NetBSD: site.config.m4,v 1.9 2008/03/14 03:02:45 jnemeth Exp $
 
 # pathnames specific to pkgsrc
 #
@@ -23,3 +23,9 @@ APPENDDEF(`confMAPDEF', `-DSOCKETMAP')
 # the following are handled by pkgsrc
 define(`confINST_DEP',`')
 define(`confNO_STATISTICS_INSTALL')
+
+# set file ownership to pkgsrc default
+define(`confLIBOWN', `${BINOWN}')
+define(`confLIBGRP', `${BINGRP}')
+define(`confINCOWN', `${SHAREOWN}')
+define(`confINCGRP', `${SHAREGRP}')
