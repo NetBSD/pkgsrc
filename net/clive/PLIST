@@ -1,0 +1,37 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/14 01:32:48 wiz Exp $
+bin/clive
+${PYSITELIB}/clive/__init__.py
+${PYSITELIB}/clive/__init__.pyc
+${PYSITELIB}/clive/__init__.pyo
+${PYSITELIB}/clive/configure.py
+${PYSITELIB}/clive/configure.pyc
+${PYSITELIB}/clive/configure.pyo
+${PYSITELIB}/clive/console.py
+${PYSITELIB}/clive/console.pyc
+${PYSITELIB}/clive/console.pyo
+${PYSITELIB}/clive/error.py
+${PYSITELIB}/clive/error.pyc
+${PYSITELIB}/clive/error.pyo
+${PYSITELIB}/clive/history.py
+${PYSITELIB}/clive/history.pyc
+${PYSITELIB}/clive/history.pyo
+${PYSITELIB}/clive/main.py
+${PYSITELIB}/clive/main.pyc
+${PYSITELIB}/clive/main.pyo
+${PYSITELIB}/clive/nomad.py
+${PYSITELIB}/clive/nomad.pyc
+${PYSITELIB}/clive/nomad.pyo
+${PYSITELIB}/clive/opts.py
+${PYSITELIB}/clive/opts.pyc
+${PYSITELIB}/clive/opts.pyo
+${PYSITELIB}/clive/parse.py
+${PYSITELIB}/clive/parse.pyc
+${PYSITELIB}/clive/parse.pyo
+${PYSITELIB}/clive/progress.py
+${PYSITELIB}/clive/progress.pyc
+${PYSITELIB}/clive/progress.pyo
+${PYSITELIB}/clive/update.py
+${PYSITELIB}/clive/update.pyc
+${PYSITELIB}/clive/update.pyo
+man/man1/clive.1
+@dirrm ${PYSITELIB}/clive
