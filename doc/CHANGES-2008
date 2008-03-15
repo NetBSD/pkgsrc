@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.529 2008/03/15 20:35:44 smb Exp $
+$NetBSD: CHANGES-2008,v 1.530 2008/03/15 22:20:01 markd Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -963,3 +963,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/m17n-db to 1.5.1nb1 [obache 2008-03-15]
 	Updated www/py-moin to 1.6.1 [joerg 2008-03-15]
 	Updated x11/stalonetray to 0.7.6 [smb 2008-03-16]
+	Updated math/R to 2.6.2 [markd 2008-03-16]
