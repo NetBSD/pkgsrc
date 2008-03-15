@@ -1,7 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2002/08/25 18:40:04 jlam Exp $
---- Makefile.prog.in.orig	Wed Aug 29 15:59:35 2001
-+++ Makefile.prog.in	Wed Aug 29 16:01:13 2001
-@@ -13,7 +13,7 @@
+$NetBSD: patch-ad,v 1.6 2008/03/15 20:29:35 joerg Exp $
+
+--- Makefile.prog.in.orig	1998-10-12 03:36:20.000000000 +0200
++++ Makefile.prog.in
+@@ -13,13 +13,13 @@ Makefile.lt:
  
  all: $(PROG)
  
@@ -10,3 +11,12 @@ $NetBSD: patch-ad,v 1.5 2002/08/25 18:40:04 jlam Exp $
  	$(LIBTOOL) --mode=link $(CXX) $(CXXFLAGS) $(LDFLAGS) -o $@ $(OBJS) $(COBJS) $(LT_LIBS)
  
  install: $(PROG)
+-	-test -d $(bindir) || (mkdir $(bindir); chmod 755 $(bindir))
+-	-rm -f $(bindir)/$(PROG)
+-	$(LIBTOOL) --mode=install $(INSTALL) $(PROG) $(bindir)
++	-test -d ${DESTDIR}$(bindir) || (mkdir ${DESTDIR}$(bindir); chmod 755 ${DESTDIR}$(bindir))
++	-rm -f ${DESTDIR}$(bindir)/$(PROG)
++	$(LIBTOOL) --mode=install $(INSTALL) $(PROG) ${DESTDIR}$(bindir)
+ 
+ depend: depend_src
+ depend.temp: $(GENSRCS)

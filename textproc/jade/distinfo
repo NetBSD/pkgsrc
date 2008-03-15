@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.13 2006/01/20 11:36:18 jmmv Exp $
+$NetBSD: distinfo,v 1.14 2008/03/15 20:29:35 joerg Exp $
 
 SHA1 (jade-1.2.1.tar.gz) = 4326e73b7f0b865515e1bb90c622a8b2aa6ecd06
 RMD160 (jade-1.2.1.tar.gz) = 615ebcc1b17a284d60a7976f13649a0ea78aa58d
@@ -9,11 +9,11 @@ Size (jade_1.2.1-18.diff.gz) = 121329 bytes
 SHA1 (patch-aa) = b24b6fba1e52428d0d93d0235d92f2397113fa78
 SHA1 (patch-ab) = 1742175ec89ea8e796b4e874a488225850cf78e1
 SHA1 (patch-ac) = c96ca44b40bbcc9c588dfe40045f4d386e32998d
-SHA1 (patch-ad) = 1afe17aeabda9f7f5c8531b09fb0af6085a8526f
+SHA1 (patch-ad) = 7d3ef2dfc7d0a2b0f7b040d1fa36c9f17143647d
 SHA1 (patch-ae) = a01bd39d4be17884f902a06c5c7324912935241f
 SHA1 (patch-af) = eb8c986dd4051cb183ccbb8d6aa97f1e801eab58
 SHA1 (patch-ag) = 593c1b6488fee22cd634fa10c90c89fd858c8981
-SHA1 (patch-ah) = d829ea273b99c06d83a6d7944ece12fbae513b6c
+SHA1 (patch-ah) = cd3e9d30e5fada5be5271f3277b1e0d5d0e83bb2
 SHA1 (patch-ai) = 09a1331aceeb7ec74c05b57746eb5b9be51f7bf1
 SHA1 (patch-aj) = 67f48f9c0beefa3bd0985e688cd28c808e9f5bc4
 SHA1 (patch-ak) = 76ef8712c056f96b10910e6b89db0b86bac2113a
