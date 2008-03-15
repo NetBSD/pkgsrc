@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.30 2008/01/03 20:51:22 adrianp Exp $
+# $NetBSD: genreadme.awk,v 1.31 2008/03/15 16:27:43 joerg Exp $
 #
 # Copyright (c) 2002, 2003, 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -372,45 +372,12 @@ END {
 			if (debug) printf("wrote = %d entries to \"%s\"\n",
 					  i-1, htmldeps_file);
 
-# XXX: The code for the pkg_install<20070714 vulnerability checks are
-# XXX: broken.  It will not find vulnerabilities in any packages that
-# XXX: have complex names in the pkg-vulnerabilties file.
-# XXX: e.g. php{4,5}-perl and sun-{jdk,jre}15
 # XXX: Post pkg_install-20070714 only currently known vulnerabilities are
 # XXX: shown in the generated README.html files for packages.
 
 			vul = "";
-			if (have_vfile && PKGTOOLS_VERSION < 20070714) {
-				i = 1;
-				pkgbase = pkgdir2name[toppkg];
-				gsub(/-[^-]*$/, "", pkgbase);
-				if (debug) {
-				  printf("Checking for %s (%s) vulnerabilities\n",
-					 toppkg, pkgbase);
-				}
-				while(i in vulpkg) {
-					if (vulpkg[i] ~ "^" pkgbase"[-<>=]+[0-9]") {
-						nm = vulpkg[i];
-						gsub(/&/, "\\\\\\&amp;", nm);
-						gsub(/</, "\\\\\\&lt;", nm);
-						gsub(/>/, "\\\\\\&gt;", nm);
-						url = vulref[i];
-						gsub(/&/, "\\\\\\&", url);
-						printurl = vulref[i];
-						gsub(/&/, "\\\\\\&amp;", printurl);
-						gsub(/</, "\\\\\\&lt;", printurl);
-						gsub(/>/, "\\\\\\&gt;", printurl);
-						vul =  sprintf("%s<LI><STRONG>%s has a <a href=\"%s\">%s</a> vulnerability</STRONG></LI>\n",
-							  vul, nm, url, vultype[i]);
-					}
-					i = i + 1;
-				}
-				if ( vul == "" ){
-					vul="<I>(no vulnerabilities known)</I>";
-				}
-			}
 
-			if (have_vfile && PKGTOOLS_VERSION >= 20070714) {
+			if (have_vfile) {
 				pkg = pkgdir2name[toppkg];
 
 				if (debug) {
