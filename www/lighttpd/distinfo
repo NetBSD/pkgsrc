@@ -1,10 +1,6 @@
-$NetBSD: distinfo,v 1.12 2008/03/04 11:17:57 kefren Exp $
+$NetBSD: distinfo,v 1.13 2008/03/15 10:53:50 joerg Exp $
 
-SHA1 (lighttpd-1.4.18.tar.gz) = 30eb24cdfcfeadf10fa16f187330bdc5deb25ed2
-RMD160 (lighttpd-1.4.18.tar.gz) = dfca15e4b02a405cc89dcdfb9a0f8137971cfb24
-Size (lighttpd-1.4.18.tar.gz) = 803361 bytes
-SHA1 (patch-aa) = d48beb6e526f31f9ea19657e6010c5165026b475
+SHA1 (lighttpd-1.4.19.tar.gz) = 79e2d61dd9017c3c50c0fe98b2289cae5c1255ee
+RMD160 (lighttpd-1.4.19.tar.gz) = 7dbe2a22051e18f4037b48ee4811e2c9738d20cf
+Size (lighttpd-1.4.19.tar.gz) = 815568 bytes
 SHA1 (patch-ab) = b02003db1b2ac978846eb0f7be178b91f59fc176
-SHA1 (patch-ac) = b2bc7bcbd151bf64ce085dad359077c5ffa2da1f
-SHA1 (patch-ad) = b862738a23fcc02a67bcef7339acd622f5c3a3e3
-SHA1 (patch-ae) = 95705fd9148d2538083442d1ec190299fddc6971
