@@ -223,7 +223,7 @@ libarchive_test_SOURCES=					\
 	libarchive/test/test_write_format_tar_empty.c		\
 	libarchive/test/test_write_open_memory.c
 
-libarchive_test_CPPFLAGS= -I$(top_builddir)/libarchive -I$(top_builddir)/libarchive/test
+libarchive_test_CPPFLAGS= -I$(top_srcdir)/libarchive -I$(top_builddir)/libarchive/test
 
 # The "list.h" file just lists all of the tests defined in all of the sources.
 # Building it automatically provides a sanity-check on libarchive_test_SOURCES
