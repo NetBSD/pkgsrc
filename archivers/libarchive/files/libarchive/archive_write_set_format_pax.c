@@ -470,7 +470,7 @@ archive_write_pax_header(struct archive_write *a,
 		hdrcharset = "BINARY";
 	}
 	gname = archive_entry_gname(entry_main);
-	gname_w = archive_entry_uname_w(entry_main);
+	gname_w = archive_entry_gname_w(entry_main);
 	if (gname != NULL && gname_w == NULL) {
 		archive_set_error(&a->archive, EILSEQ,
 		    "Can't translate gname '%s' to UTF-8", gname);

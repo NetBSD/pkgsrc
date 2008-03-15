@@ -653,7 +653,7 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_write_format_tar_empty.c		\
 	libarchive/test/test_write_open_memory.c
 
-libarchive_test_CPPFLAGS = -I$(top_builddir)/libarchive -I$(top_builddir)/libarchive/test
+libarchive_test_CPPFLAGS = -I$(top_srcdir)/libarchive -I$(top_builddir)/libarchive/test
 libarchive_TESTS_ENVIRONMENT = LIBARCHIVE_TEST_FILES=`cd $(top_builddir);/bin/pwd`
 libarchive_test_EXTRA_DIST = \
 	libarchive/test/test_compat_gtar_1.tgz.uu			\
