@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.readme.mk,v 1.17 2008/02/07 21:36:13 rillig Exp $
+# $NetBSD: bsd.pkg.readme.mk,v 1.18 2008/03/15 16:17:43 joerg Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and encapsulates the
 # code to produce README.html files in each package directory.
@@ -230,35 +230,19 @@ SED_HOMEPAGE_EXPR=	-e 's|%%HOMEPAGE%%|<p>This package has a home page at <a HREF
 SED_HOMEPAGE_EXPR=	-e 's|%%HOMEPAGE%%||'
 .endif
 
-# XXX: The code for the pkg_install<20070714 vulnerability checks are
-# XXX: broken.  It will not find vulnerabilities in any packages that
-# XXX: have complex names in the pkg-vulnerabilties file.
-# XXX: e.g. php{4,5}-perl and sun-{jdk,jre}15
-# XXX: Post pkg_install-20070714 only currently known vulnerabilities are
-# XXX: shown in the generated README.html files for packages.
-#
 .PHONY: show-vulnerabilities-html
 show-vulnerabilities-html:
 	${RUN}					\
-	if ${PKG_ADMIN} pmatch 'pkg_install<20070714' pkg_install-${PKGTOOLS_VERSION}; then \
-		if [ -f ${PKGVULNDIR}/pkg-vulnerabilities ]; then	\
-			${AWK} '/^${PKGBASE}[-<>=]+[0-9]/ { gsub("\<", "\\&lt;", $$1);	\
-				 gsub("\>", "\\&gt;", $$1);		\
-			 	printf("<LI><STRONG>%s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG></LI>\n", $$1, $$2, $$3, $$3) }' \
-				${PKGVULNDIR}/pkg-vulnerabilities;	\
-		fi; 							\
-	else								\
-		_PKGVULNDIR=`${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`; \
-		if [ -f $$_PKGVULNDIR/pkg-vulnerabilities ]; then	\
-			${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -n ${PKGNAME} 2>&1| ${AWK} \
-				'{ printurl = $$8;			\
+	_PKGVULNDIR=`${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`; \
+	if [ -f $$_PKGVULNDIR/pkg-vulnerabilities ]; then	\
+		${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -n ${PKGNAME} 2>&1| ${AWK} \
+			'{ printurl = $$8;			\
 				gsub("\<", "\\&lt;", $$2);		\
-				gsub("\>", "\\&gt;", $$2);		\
-				gsub("\<", "\\&lt;", printurl);		\
-				gsub("\>", "\\&gt;", printurl);		\
-				gsub("\&", "\\&amp;", printurl);	\
-				printf("<LI><STRONG>%s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG></LI>\n", $$2, $$5, $$8, printurl) }'; \
-		fi;							\
+			gsub("\>", "\\&gt;", $$2);		\
+			gsub("\<", "\\&lt;", printurl);		\
+			gsub("\>", "\\&gt;", printurl);		\
+			gsub("\&", "\\&amp;", printurl);	\
+			printf("<LI><STRONG>%s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG></LI>\n", $$2, $$5, $$8, printurl) }'; \
 	fi
 
 # If PACKAGES is set to the default (../../packages), the current
