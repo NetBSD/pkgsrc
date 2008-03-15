@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/02/27 11:04:29 kefren Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/03/15 10:39:50 kefren Exp $
 bin/mdtool
 bin/monodevelop
 lib/monodevelop/AddIns/AspNetAddIn/MonoDevelop.AspNet.dll
@@ -95,7 +95,6 @@ share/icons/hicolor/scalable/apps/monodevelop.svg
 share/locale/ca/LC_MESSAGES/monodevelop.mo
 share/locale/cs/LC_MESSAGES/monodevelop.mo
 share/locale/da/LC_MESSAGES/monodevelop.mo
-share/locale/de/LC_MESSAGES/monodevelop.mo
 share/locale/es/LC_MESSAGES/monodevelop.mo
 share/locale/fr/LC_MESSAGES/monodevelop.mo
 share/locale/gl/LC_MESSAGES/monodevelop.mo

@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2008/02/19 13:53:04 xtraeme Exp $
+$NetBSD: distinfo,v 1.3 2008/03/15 10:39:50 kefren Exp $
 
-SHA1 (monodevelop-0.19.tar.bz2) = b911ea5bf289ee3b52381f2409a08e3dc7d00a9a
-RMD160 (monodevelop-0.19.tar.bz2) = 3622ded25c22a56327d81293c33fd236f5f701bb
-Size (monodevelop-0.19.tar.bz2) = 3766224 bytes
+SHA1 (monodevelop-1.0.tar.bz2) = c2130407cc2597f8f752397ceeac95f735001e26
+RMD160 (monodevelop-1.0.tar.bz2) = d5cfa8536c105d7576af2fb5fe77661387036cc1
+Size (monodevelop-1.0.tar.bz2) = 3755718 bytes
 SHA1 (patch-aa) = 0f3fec08996b945ee95042f5d2222e1b3295792a
