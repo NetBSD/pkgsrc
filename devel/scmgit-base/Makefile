@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/02/28 15:11:29 bjs Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/15 05:09:07 bjs Exp $
 #
 
 .include "${.CURDIR}/../scmgit/Makefile.common"
@@ -19,7 +19,7 @@ CONFIGURE_ARGS+=	--with-curl=${BUILDLINK_PREFIX.curl:Q}
 CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat:Q}
 CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv:Q}
 CONFIGURE_ARGS+=	--with-openssl=${SSLBASE:Q}
-CONFIGURE_ARGS+=	--with-tcltk=${TOOLS_PREFIX.wish}
+CONFIGURE_ARGS+=	--with-tcltk=${WISH:Q}
 CONFIGURE_ARGS+=	--with-zlib=${BUILDLINK_PREFIX.zlib:Q}
 
 BUILD_TARGET=		all
