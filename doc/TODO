@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7136 2008/03/15 21:26:11 schmonz Exp $
+$NetBSD: TODO,v 1.7137 2008/03/15 22:20:01 markd Exp $
 
 Suggested new packages
 ======================
@@ -348,7 +348,6 @@ Suggested package updates
 	o GridSim-3.3
 	o MesaLib-7.0.2
 	o PAM-0.99.7.1
-	o R-2.6.2
 	o R-CGIwithR-0.72
 	o R-DAAG-0.91
 	o R-Matrix-0.9975.11
