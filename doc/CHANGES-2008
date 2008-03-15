@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.523 2008/03/15 05:10:10 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.524 2008/03/15 10:45:16 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -957,3 +957,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/m1 to 0.7.7 [wiz 2008-03-14]
 	Added games/gbrainy version 0.60 [wiz 2008-03-15]
 	Updated devel/scmgit to 1.5.4.4 [bjs 2008-03-15]
+	Updated devel/monodevelop to 1.0 [kefren 2008-03-15]
