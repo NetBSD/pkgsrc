@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.21 2008/03/07 16:11:39 jlam Exp $
+$NetBSD: patch-ac,v 1.22 2008/03/15 22:16:41 markd Exp $
 
---- configure.orig	2007-09-26 14:06:08.000000000 +1200
+--- configure.orig	2008-01-30 23:43:09.000000000 +1300
 +++ configure
-@@ -2659,7 +2659,7 @@ fi
+@@ -2672,7 +2672,7 @@ fi
  
  
  if test "${want_R_shlib}" = yes; then
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.21 2008/03/07 16:11:39 jlam Exp $
  else
    LIBR=
  fi
-@@ -8432,7 +8432,7 @@ darwin* | rhapsody*)
+@@ -8445,7 +8445,7 @@ darwin* | rhapsody*)
    lt_cv_deplibs_check_method=pass_all
    ;;
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.21 2008/03/07 16:11:39 jlam Exp $
    if echo __ELF__ | $CC -E - | grep __ELF__ > /dev/null; then
      case $host_cpu in
      i*86 )
-@@ -11104,7 +11104,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -11117,7 +11117,7 @@ if test -z "$aix_libpath"; then aix_libp
        ;;
  
      # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
@@ -29,7 +29,7 @@ $NetBSD: patch-ac,v 1.21 2008/03/07 16:11:39 jlam Exp $
        archive_cmds='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
        hardcode_libdir_flag_spec='-R$libdir'
        hardcode_direct=yes
-@@ -11682,7 +11682,7 @@ kfreebsd*-gnu)
+@@ -11695,7 +11695,7 @@ kfreebsd*-gnu)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -38,7 +38,7 @@ $NetBSD: patch-ac,v 1.21 2008/03/07 16:11:39 jlam Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -14170,7 +14170,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -14183,7 +14183,7 @@ if test -z "$aix_libpath"; then aix_libp
    freebsd-elf*)
      archive_cmds_need_lc_CXX=no
      ;;
@@ -47,7 +47,7 @@ $NetBSD: patch-ac,v 1.21 2008/03/07 16:11:39 jlam Exp $
      # FreeBSD 3 and later use GNU C++ and GNU ld with standard ELF
      # conventions
      ld_shlibs_CXX=yes
-@@ -14881,7 +14881,7 @@ echo $ECHO_N "checking for $compiler opt
+@@ -14894,7 +14894,7 @@ echo $ECHO_N "checking for $compiler opt
  	    ;;
  	esac
  	;;
@@ -56,7 +56,7 @@ $NetBSD: patch-ac,v 1.21 2008/03/07 16:11:39 jlam Exp $
  	# FreeBSD uses GNU C++
  	;;
        hpux9* | hpux10* | hpux11*)
-@@ -15492,7 +15492,7 @@ kfreebsd*-gnu)
+@@ -15505,7 +15505,7 @@ kfreebsd*-gnu)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -65,7 +65,7 @@ $NetBSD: patch-ac,v 1.21 2008/03/07 16:11:39 jlam Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -18170,7 +18170,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -18183,7 +18183,7 @@ if test -z "$aix_libpath"; then aix_libp
        ;;
  
      # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
@@ -74,7 +74,7 @@ $NetBSD: patch-ac,v 1.21 2008/03/07 16:11:39 jlam Exp $
        archive_cmds_F77='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
        hardcode_libdir_flag_spec_F77='-R$libdir'
        hardcode_direct_F77=yes
-@@ -18748,7 +18748,7 @@ kfreebsd*-gnu)
+@@ -18761,7 +18761,7 @@ kfreebsd*-gnu)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -83,7 +83,7 @@ $NetBSD: patch-ac,v 1.21 2008/03/07 16:11:39 jlam Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -20548,7 +20548,7 @@ if test -z "$aix_libpath"; then aix_libp
+@@ -20561,7 +20561,7 @@ if test -z "$aix_libpath"; then aix_libp
        ;;
  
      # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
@@ -92,7 +92,7 @@ $NetBSD: patch-ac,v 1.21 2008/03/07 16:11:39 jlam Exp $
        archive_cmds_GCJ='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
        hardcode_libdir_flag_spec_GCJ='-R$libdir'
        hardcode_direct_GCJ=yes
-@@ -21126,7 +21126,7 @@ kfreebsd*-gnu)
+@@ -21139,7 +21139,7 @@ kfreebsd*-gnu)
    dynamic_linker='GNU ld.so'
    ;;
  
@@ -101,7 +101,7 @@ $NetBSD: patch-ac,v 1.21 2008/03/07 16:11:39 jlam Exp $
    objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
    version_type=freebsd-$objformat
    case $version_type in
-@@ -32398,6 +32398,7 @@ cat > conftest.c <<EOF
+@@ -32411,6 +32411,7 @@ cat > conftest.c <<EOF
  #else
  # define F77_SYMBOL(x)   x
  #endif
@@ -109,7 +109,7 @@ $NetBSD: patch-ac,v 1.21 2008/03/07 16:11:39 jlam Exp $
  int main () {
    exit(0);
  }
-@@ -32475,6 +32476,9 @@ cat > conftest.c <<EOF
+@@ -32488,6 +32489,9 @@ cat > conftest.c <<EOF
  
  extern void F77_SYMBOL(cftest)(int *a, int *b, double *x, double *y);
  
@@ -119,7 +119,7 @@ $NetBSD: patch-ac,v 1.21 2008/03/07 16:11:39 jlam Exp $
  int main () {
    int a[3] = {17, 237, 2000000000}, b[2], res = 0;
    double x[3] = {3.14159265, 123.456789, 2.3e34}, z[3];
-@@ -32572,6 +32576,9 @@ typedef struct {
+@@ -32585,6 +32589,9 @@ typedef struct {
  
  extern void F77_SYMBOL(cftest)(Rcomplex *x);
  
@@ -129,7 +129,7 @@ $NetBSD: patch-ac,v 1.21 2008/03/07 16:11:39 jlam Exp $
  int main () {
      Rcomplex z[3];
  
-@@ -33739,183 +33746,6 @@ echo "${ECHO_T}no" >&6; }
+@@ -33752,183 +33759,6 @@ echo "${ECHO_T}no" >&6; }
  fi
  
      fi
@@ -313,7 +313,7 @@ $NetBSD: patch-ac,v 1.21 2008/03/07 16:11:39 jlam Exp $
      if test "${GXX}" = yes; then
        ac_safe=_mieee
  { echo "$as_me:$LINENO: checking whether ${CXX-c++} accepts -mieee" >&5
-@@ -34380,7 +34210,7 @@ _ACEOF
+@@ -34393,7 +34223,7 @@ _ACEOF
      if test "${GCC}" = yes; then
        ## only Apple build of gcc supports (and needs?) -no-cpp-precomp
        ${CC} --version|grep Apple >/dev/null 2>/dev/null
@@ -322,7 +322,7 @@ $NetBSD: patch-ac,v 1.21 2008/03/07 16:11:39 jlam Exp $
          separator=""
  test -z "${separator}" && separator=" "
  if test -z "${R_XTRA_CPPFLAGS}"; then
-@@ -35551,7 +35381,7 @@ echo "$as_me: WARNING: Use of flat names
+@@ -35564,7 +35394,7 @@ echo "$as_me: WARNING: Use of flat names
        SHLIB_LIBADD="-lcc_dynamic"
      fi
      ;;
@@ -331,15 +331,20 @@ $NetBSD: patch-ac,v 1.21 2008/03/07 16:11:39 jlam Exp $
      ## Only sure for FreeBSD 3 and above.
      main_ldflags="-export-dynamic"
      shlib_ldflags="-shared"
-@@ -35640,6 +35470,7 @@ echo "$as_me: WARNING: Use of flat names
+@@ -35653,6 +35483,12 @@ echo "$as_me: WARNING: Use of flat names
      fcpicflags=
      ;;
    netbsd*)
 +    fpicflags="-fPIC"
++    case "${host_cpu}" in
++      powerpc*)
++	cpicflags="-fPIC"
++	;;
++    esac
      if ${CPP} - -dM < /dev/null | grep __ELF__ >/dev/null ; then
        main_ldflags="-export-dynamic"
        shlib_ldflags="-shared"
-@@ -35739,7 +35570,7 @@ fi
+@@ -35752,7 +35588,7 @@ fi
  : ${FPICFLAGS="${fpicflags}"}
  if test -z "${FPICFLAGS}"; then
    case "${host_os}" in
@@ -348,7 +353,7 @@ $NetBSD: patch-ac,v 1.21 2008/03/07 16:11:39 jlam Exp $
        ;;
      *)
        { echo "$as_me:$LINENO: WARNING: I could not determine FPICFLAGS." >&5
-@@ -42894,6 +42725,15 @@ cat > conftest.c <<EOF
+@@ -42907,6 +42743,15 @@ cat > conftest.c <<EOF
  #endif
  extern void F77_SYMBOL(test1)(int *iflag);
  
@@ -364,7 +369,7 @@ $NetBSD: patch-ac,v 1.21 2008/03/07 16:11:39 jlam Exp $
  int main () {
    int iflag;
    F77_SYMBOL(test1)(&iflag);
-@@ -42958,6 +42798,14 @@ else
+@@ -42971,6 +42816,14 @@ else
  #else
  # define F77_SYMBOL(x)   x
  #endif
