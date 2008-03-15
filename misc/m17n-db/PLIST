@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/27 13:45:47 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/03/15 14:25:25 obache Exp $
 bin/m17n-db
+share/locale/ja/LC_MESSAGES/m17n-db.mo
+share/locale/vi/LC_MESSAGES/m17n-db.mo
 share/m17n/8859-10.map
 share/m17n/8859-11.map
 share/m17n/8859-13.map
