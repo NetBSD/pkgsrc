@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.21 2008/01/03 20:51:22 adrianp Exp $
+# $NetBSD: mkreadme,v 1.22 2008/03/15 16:27:43 joerg Exp $
 #
 # Script for README.html generation
 #
@@ -307,13 +307,9 @@ fi
 # populated until this stage (see above)
 #
 if [ "$pv" = "default" ]; then
-    if ${PKG_ADMIN} pmatch 'pkg_install<20070714' pkg_install-${PKGTOOLS_VERSION}; then
-	PVDIR=`${BMAKE} show-var VARNAME=PKGVULNDIR`
-    else
-	PVDIR=`${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`
-    fi
+    PVDIR=`${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`
 fi
-	echo "---->  PVDIR=\"${PVDIR}\""
+echo "---->  PVDIR=\"${PVDIR}\""
 
 
 ######################################################################

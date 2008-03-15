@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.readme.mk,v 1.18 2008/03/15 16:17:43 joerg Exp $
+# $NetBSD: bsd.pkg.readme.mk,v 1.19 2008/03/15 16:27:42 joerg Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and encapsulates the
 # code to produce README.html files in each package directory.
@@ -265,11 +265,7 @@ README.html: .PRECIOUS
 		esac;							\
 		cd ${.CURDIR} ;						\
 	fi;								\
-	if ${PKG_ADMIN} pmatch 'pkg_install<20070714' pkg_install-${PKGTOOLS_VERSION}; then \
-		_PVDIR=${PKGVULNDIR};					\
-	else								\
-		_PVDIR=`${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`; \
-	fi; \
+	_PVDIR=`${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`; \
 	${AWK} -f ../../mk/scripts/genreadme.awk \
 		builddependsfile=/dev/null \
 		dependsfile=/dev/null \
