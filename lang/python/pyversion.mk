@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.52 2008/02/20 10:43:55 rillig Exp $
+# $NetBSD: pyversion.mk,v 1.53 2008/03/15 16:43:25 joerg Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -115,7 +115,7 @@ _PYTHON_VERSION?=	${pv}
 _PYTHON_VERSION=	none
 .endif
 
-.if ${_PYTHON_VERSION} == "25"
+.if ${_PYTHON_VERSION} == "25" && exists(../../wip/python25/Makefile)
 PYPKGSRCDIR=	../../wip/python25
 PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python25}:${PYPKGSRCDIR}
 PYPACKAGE=	python25
