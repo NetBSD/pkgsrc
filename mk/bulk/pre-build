@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: pre-build,v 1.71 2008/01/04 15:49:08 rillig Exp $
+# $NetBSD: pre-build,v 1.72 2008/03/15 16:27:43 joerg Exp $
 #
 # Clean up system to be ready for bulk pkg build
 #
@@ -74,20 +74,14 @@ mkdir -p "${BULKFILESDIR}"
 _INFO_VER=`${PKG_INFO} -V`;
 echo "pre-build> Making sure vulnerability-list is upto date:"
 if [ -z "$UPDATE_VULNERABILITY_LIST" -o "$UPDATE_VULNERABILITY_LIST" = yes ]; then
-	if ${PKG_ADMIN} pmatch 'pkg_install<20070714' pkg_install-${_INFO_VER}; then
-       ( cd "${USR_PKGSRC}/security/audit-packages" \
-         && ${BMAKE} bulk-install \
-         && env PKGVULNDIR="${DISTDIR}" download-vulnerability-list )
-	else
-		_PKGVULNDIR=`audit-packages ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`
-		download-vulnerability-list ${DOWNLOAD_VULNERABILITY_LIST_FLAGS}
-		if [ "x${_PKGVULNDIR}" != "x${DISTDIR}" ]; then
-			cp ${_PKGVULNDIR}/pkg-vulnerabilities ${DISTDIR}
-		fi
+	_PKGVULNDIR=`audit-packages ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`
+	download-vulnerability-list ${DOWNLOAD_VULNERABILITY_LIST_FLAGS}
+	if [ "x${_PKGVULNDIR}" != "x${DISTDIR}" ]; then
+		cp ${_PKGVULNDIR}/pkg-vulnerabilities ${DISTDIR}
 	fi
-       echo 'pre-build> done.'
+	echo 'pre-build> done.'
 else
-       echo 'pre-build> (skipped)'
+	echo 'pre-build> (skipped)'
 fi
 
 # On non-NetBSD platforms we need to keep the bootstrap-files!
