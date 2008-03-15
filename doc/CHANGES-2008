@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.528 2008/03/15 18:17:41 joerg Exp $
+$NetBSD: CHANGES-2008,v 1.529 2008/03/15 20:35:44 smb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -962,3 +962,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/roundcube to 0.1 [adrianp 2008-03-15]
 	Updated misc/m17n-db to 1.5.1nb1 [obache 2008-03-15]
 	Updated www/py-moin to 1.6.1 [joerg 2008-03-15]
+	Updated x11/stalonetray to 0.7.6 [smb 2008-03-16]
