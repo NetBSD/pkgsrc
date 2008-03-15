@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7134 2008/03/14 20:20:35 wiz Exp $
+$NetBSD: TODO,v 1.7135 2008/03/15 12:10:45 tron Exp $
 
 Suggested new packages
 ======================
@@ -1049,7 +1049,6 @@ Suggested package updates
 	o p5-MARC-1.38
 	o p5-Math-Random-0.69
 	o p5-Net-Amazon-S3-0.38
-	o p5-Net-DNS-0.63
 	o p5-Net-Gnats-0.05
 	o p5-Net-Google-0.62
 	o p5-Net-ICQ2000-0.2.2
