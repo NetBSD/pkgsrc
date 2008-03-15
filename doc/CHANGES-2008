@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.522 2008/03/15 01:17:55 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.523 2008/03/15 05:10:10 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -956,3 +956,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/iso-codes to 2.0 [wiz 2008-03-14]
 	Updated emulators/m1 to 0.7.7 [wiz 2008-03-14]
 	Added games/gbrainy version 0.60 [wiz 2008-03-15]
+	Updated devel/scmgit to 1.5.4.4 [bjs 2008-03-15]
