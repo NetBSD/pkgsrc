@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/11/15 01:11:13 wulf Exp $
+# $NetBSD: Makefile,v 1.7 2008/03/15 14:18:39 joerg Exp $
 
 .if (${MACHINE_ARCH} == "powerpc")
 DISTNAME=		fftw-3.1.2-fma
@@ -13,6 +13,8 @@ MASTER_SITES=		ftp://ftp.fftw.org/pub/fftw/ \
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.fftw.org/
 COMMENT=		Collection of fast C routines to compute DFTs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	fftw.pc.in
@@ -32,12 +34,14 @@ USE_TOOLS+=		gmake
 TEST_TARGET=		check
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
+INSTALL_TARGET=		install-libLTLIBRARIES install-pkgconfigDATA
 
-do-install:
-	gmake -C ${WRKSRC} install-libLTLIBRARIES
-	gmake -C ${WRKSRC} install-pkgconfigDATA
-	gmake -C ${WRKSRC}/tools install-binPROGRAMS
+post-install:
+	cd ${WRKSRC}/tools &&						\
+	${SETENV} ${INSTALL_ENV} ${MAKE_ENV} 				\
+		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_MAKE_FLAGS}	\
+		install-binPROGRAMS
 	${INSTALL_MAN} ${WRKSRC}/tools/fftwf-wisdom.1 \
-		${PREFIX}/${PKGMANDIR}/man1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
