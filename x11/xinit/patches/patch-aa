@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2008/03/15 16:39:32 joerg Exp $
+
+--- startx.cpp.orig	2007-09-16 23:24:48.000000000 +0200
++++ startx.cpp
+@@ -188,7 +188,11 @@ authdisplay=${display:-:0}
+ #if defined(HAS_COOKIE_MAKER) && defined(MK_COOKIE)
+ mcookie=`MK_COOKIE`
+ #else
+-mcookie=`dd if=/dev/random bs=16 count=1 2>/dev/null | hexdump -e \\"%08x\\"`
++if [ -r /dev/urandom ]; then
++	mcookie=`dd if=/dev/urandom bs=16 count=1 2>/dev/null | hexdump -e \\"%08x\\"`
++else
++	mcookie=`dd if=/dev/random bs=16 count=1 2>/dev/null | hexdump -e \\"%08x\\"`
++fi
+ if test x"$mcookie" = x; then
+                 echo "Couldn't create cookie"
+                 exit 1
