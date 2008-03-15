@@ -1,6 +1,0 @@
-The Clam AntiVirus plugin provides anti-virus capabilities for Claws Mail.
-The Clam AntiVirus plugin features are:
-
-    * Filtering infected messages when mail is received, and moving them
-      to a specific folder or destroying them completely.
-    * Scanning the contents of attached archive files
