@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2008/01/04 20:05:11 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/15 15:09:54 joerg Exp $
 
 PKGNAME=        gnuradio-core-${VERSION}
 PKGREVISION=	1
 COMMENT=	Runtime system and DSP blocks for GNU Radio
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"
 
