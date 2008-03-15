@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.38 2008/03/13 16:35:30 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.39 2008/03/15 10:55:34 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.38 2008/03/13 16:35:30 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.39 2008/03/15 10:55:34 joerg Exp $");
 #endif
 
 /*-
@@ -521,13 +521,13 @@ main(int argc, char *argv[])
 	} else if (strcasecmp(argv[0], "unset") == 0) {
 		argv++;		/* "unset" */
 		set_unset_variable(argv, TRUE);
-	} else if (strcasecmp(argv[0], "fetch-pkg-vulnerabilities") == 0) {
+	}
+#ifndef BOOTSTRAP
+	else if (strcasecmp(argv[0], "fetch-pkg-vulnerabilities") == 0) {
 		fetch_pkg_vulnerabilities(--argc, ++argv);
 	} else if (strcasecmp(argv[0], "check-pkg-vulnerabilities") == 0) {
 		check_pkg_vulnerabilities(--argc, ++argv);
-	}
-#ifndef BOOTSTRAP
-	else if (strcasecmp(argv[0], "audit") == 0) {
+	} else if (strcasecmp(argv[0], "audit") == 0) {
 		audit_pkgdb(--argc, ++argv);
 	} else if (strcasecmp(argv[0], "audit-pkg") == 0) {
 		audit_pkg(--argc, ++argv);
