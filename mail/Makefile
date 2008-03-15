@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.344 2008/02/09 20:43:23 jnemeth Exp $
+# $NetBSD: Makefile,v 1.345 2008/03/15 22:51:46 smb Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -23,7 +23,6 @@ SUBDIR+=	claws-mail-attachwarner
 SUBDIR+=	claws-mail-attremover
 SUBDIR+=	claws-mail-bogofilter
 SUBDIR+=	claws-mail-cachesaver
-SUBDIR+=	claws-mail-clamav
 SUBDIR+=	claws-mail-dillo-viewer
 SUBDIR+=	claws-mail-fetchinfo
 SUBDIR+=	claws-mail-gtkhtml
