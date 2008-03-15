@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.526 2008/03/15 13:55:22 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.527 2008/03/15 14:25:40 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -960,3 +960,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/monodevelop to 1.0 [kefren 2008-03-15]
 	Updated net/p5-Net-DNS to 0.63 [tron 2008-03-15]
 	Updated mail/roundcube to 0.1 [adrianp 2008-03-15]
+	Updated misc/m17n-db to 1.5.1nb1 [obache 2008-03-15]
