@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: upload,v 1.42 2008/01/04 15:49:08 rillig Exp $
+# $NetBSD: upload,v 1.43 2008/03/15 16:27:43 joerg Exp $
 
 #
 # Upload non-restricted binary pkgs to ftp server
@@ -150,11 +150,7 @@ MD5="digest md5";
 SHA1="digest sha1";
 
 _INFO_VER=`${PKG_INFO} -V`;
-if ${PKG_ADMIN} pmatch 'pkg_install<20070714' pkg_install-${_INFO_VER}; then
-	REQUIRED_PACKAGES="pkgtools/lintpkgsrc net/rsync security/audit-packages"
-else
-	REQUIRED_PACKAGES="pkgtools/lintpkgsrc net/rsync"
-fi
+REQUIRED_PACKAGES="pkgtools/lintpkgsrc net/rsync"
 
 opsys=`uname -s`
 case "$opsys" in
@@ -243,15 +239,10 @@ done
 echo "upload> Making sure vulnerability-list is up-to-date:"
 if [ -z "$UPDATE_VULNERABILITY_LIST" -o "$UPDATE_VULNERABILITY_LIST" = "yes" ]
 then
-	if ${PKG_ADMIN} pmatch 'pkg_install<20070714' pkg_install-${_INFO_VER}
-	then
-		env PKGVULNDIR=${distdir} download-vulnerability-list
-	else
-		_PKGVULNDIR=`audit-packages ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`
-		download-vulnerability-list ${DOWNLOAD_VULNERABILITY_LIST_FLAGS}
-		if [ "x${_PKGVULNDIR}" != "x${distdir}" ]; then
-			cp ${_PKGVULNDIR}/pkg-vulnerabilities ${distdir}
-		fi
+	_PKGVULNDIR=`audit-packages ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`
+	download-vulnerability-list ${DOWNLOAD_VULNERABILITY_LIST_FLAGS}
+	if [ "x${_PKGVULNDIR}" != "x${distdir}" ]; then
+		cp ${_PKGVULNDIR}/pkg-vulnerabilities ${distdir}
 	fi
 	echo "        done."
 else
