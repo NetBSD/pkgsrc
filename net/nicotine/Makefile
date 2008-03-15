@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/09/21 13:04:13 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2008/03/15 16:52:34 joerg Exp $
 #
 
 DISTNAME=	nicotine-1.0.8
@@ -13,7 +13,7 @@ COMMENT=	Client for soulseek, a peer-to-peer network for music
 
 USE_PKGLOCALEDIR=	yes
 
-PYTHON_VERSIONS_ACCEPTED=	23
+PYTHON_VERSIONS_ACCEPTED=	24
 PY_PATCHPLIST=	yes
 PYDISTUTILSPKG=	yes
 
