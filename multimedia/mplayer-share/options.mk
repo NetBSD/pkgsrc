@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.27 2008/02/24 22:24:34 jdc Exp $
+# $NetBSD: options.mk,v 1.28 2008/03/16 11:56:49 wiz Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -14,7 +14,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 
 # Options supported by both mplayer* or mencoder*.
 
-PKG_SUPPORTED_OPTIONS=	gif jpeg mad dts dv dvdread png theora vorbis debug
+PKG_SUPPORTED_OPTIONS=	gif jpeg mad dts dv dvdread png theora vorbis x264 debug
 .if ${OSS_TYPE} != "none"
 PKG_SUPPORTED_OPTIONS+=	oss
 .endif
@@ -71,7 +71,7 @@ PKG_SUPPORTED_OPTIONS+= xvid
 .for _o_ in aalib arts cdparanoia dv dvdread esound gif jpeg \
 	    lame mad mplayer-menu mplayer-real \
 	    mplayer-default-cflags mplayer-runtime-cpudetection mplayer-win32 \
-	    nas oss png sdl theora vorbis xvid
+	    nas oss png sdl theora vorbis x264 xvid
 .  if !empty(PKG_SUPPORTED_OPTIONS:M${_o_})
 PKG_SUGGESTED_OPTIONS+=	${_o_}
 .  endif
@@ -270,6 +270,12 @@ CONFIGURE_ARGS+=	--disable-vidix-external
 CONFIGURE_ARGS+=	--enable-libvorbis
 .else
 CONFIGURE_ARGS+=	--disable-libvorbis
+.endif
+
+.if !empty(PKG_OPTIONS:Mx264)
+CONFIGURE_ARGS+=	--enable-x264
+.else
+CONFIGURE_ARGS+=	--disable-x264
 .endif
 
 .if !empty(PKG_OPTIONS:Mxvid)
