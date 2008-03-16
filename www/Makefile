@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.542 2008/03/14 01:31:48 wiz Exp $
+# $NetBSD: Makefile,v 1.543 2008/03/16 19:05:20 tonnerre Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -204,6 +204,7 @@ SUBDIR+=	p5-CGI-ProgressBar
 SUBDIR+=	p5-CGI-Session
 SUBDIR+=	p5-CGI_Lite
 SUBDIR+=	p5-CSS
+SUBDIR+=	p5-CSS-Squish
 SUBDIR+=	p5-Captcha-reCAPTCHA
 SUBDIR+=	p5-Captcha-reCAPTCHA-Mailhide
 SUBDIR+=	p5-FCGI
