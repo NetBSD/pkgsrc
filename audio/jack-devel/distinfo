@@ -1,0 +1,18 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/03/16 09:26:46 bjs Exp $
+
+SHA1 (jack-0.109.10.tar.bz2) = a82376dcb3610967eac82789dc543b64b9702e39
+RMD160 (jack-0.109.10.tar.bz2) = 20efa1e19cbe74718c07b262de9e8af5f2f72e58
+Size (jack-0.109.10.tar.bz2) = 577713 bytes
+SHA1 (patch-ab) = e7d7f7266afc5841ebf83ceb98fb7e4f0b821f05
+SHA1 (patch-ac) = 7052322d44700b0bf81642a5e68ae53a3da62df1
+SHA1 (patch-ad) = 9632ad3a03015688f02bc4b715d74e21ae293c8f
+SHA1 (patch-ae) = a18c44b803e340d2b1317a539ffb2123490badc3
+SHA1 (patch-af) = 6e7c16137434c601f09da982528f3f8c81bdd354
+SHA1 (patch-ag) = e7a5e878cdd47355f8d6213163b8560939708f32
+SHA1 (patch-ah) = b3445eea50978ff83b16fbe2cfe2f8d111fd67aa
+SHA1 (patch-ai) = aacea684a8d31cfb2e22087d425e5fd457ad215d
+SHA1 (patch-aj) = 46805c358c60a92d6d680a9ea847d32c15af1708
+SHA1 (patch-ak) = 7d1eaa5cecc5f1c3b725ff768089dfd4a133ea45
+SHA1 (patch-al) = fc7311171027b71cbd7572431f45d69ed81dcd92
+SHA1 (patch-am) = c4d1d5562dace10971ef7fba37ddfcf07ad2fdb5
+SHA1 (patch-an) = 90939c5e0a8a53bf701d93ba88a2900439866142
