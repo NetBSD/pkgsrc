@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2007/11/13 02:40:06 cube Exp $
+# $NetBSD: Makefile,v 1.27 2008/03/16 20:47:03 tonnerre Exp $
 
-DISTNAME=		rt-3.4.6
+DISTNAME=		rt-3.6.6
 CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
 
@@ -51,6 +51,8 @@ DEPENDS+=	p5-XML-RSS>=1.05:../../textproc/p5-XML-RSS
 DEPENDS+=	p5-HTTP-Server-Simple>=0.07:../../www/p5-HTTP-Server-Simple
 DEPENDS+=	p5-HTTP-Server-Simple-Mason>=0.09:../../www/p5-HTTP-Server-Simple-Mason
 DEPENDS+=	p5-Text-WikiFormat>=0.72:../../textproc/p5-Text-WikiFormat
+DEPENDS+=	p5-CSS-Squish>=0.07:../../www/p5-CSS-Squish
+DEPENDS+=	p5-Calendar-Simple>=1.00:../../time/p5-Calendar-Simple
 
 # Mailgate dependencies:
 DEPENDS+=	p5-HTML-Tree>=3.18:../../www/p5-HTML-Tree
