@@ -1,0 +1,50 @@
+$NetBSD: patch-ai,v 1.1.1.1 2008/03/16 09:26:46 bjs Exp $
+
+--- jackd/engine.c.orig	2008-03-14 03:08:35.000000000 -0400
++++ jackd/engine.c
+@@ -633,7 +633,8 @@ jack_process_external(jack_engine_t *eng
+ 	int status = 0;
+ 	char c = 0;
+ 	struct pollfd pfd[1];
+-	int poll_timeout;
++	struct timespec poll_timeout = { 0, 0 };
++
+ 	jack_client_internal_t *client;
+ 	jack_client_control_t *ctl;
+ 	jack_time_t now, then;
+@@ -666,11 +667,11 @@ jack_process_external(jack_engine_t *eng
+ 	then = jack_get_microseconds ();
+ 
+ 	if (engine->freewheeling) {
+-		poll_timeout = 10000; /* 10 seconds */
++		poll_timeout.tv_sec = 10;
+ 	} else {
+-		poll_timeout = (engine->client_timeout_msecs > 0 ?
+-				engine->client_timeout_msecs :
+-				1 + engine->driver->period_usecs/1000);
++		poll_timeout.tv_nsec = (engine->client_timeout_msecs > 0 ?
++				engine->client_timeout_msecs * 1e6 :
++				1000 + engine->driver->period_usecs);
+ 	}
+ 
+ 	pfd[0].fd = client->subgraph_wait_fd;
+@@ -679,8 +680,8 @@ jack_process_external(jack_engine_t *eng
+ 	DEBUG ("waiting on fd==%d for process() subgraph to finish",
+ 	       client->subgraph_wait_fd);
+ 
+-	if (poll (pfd, 1, poll_timeout) < 0) {
+-		jack_error ("poll on subgraph processing failed (%s)",
++	if (pollts (pfd, 1, &poll_timeout) < 0) {
++		jack_error ("pollts on subgraph processing failed (%s)",
+ 			    strerror (errno));
+ 		status = -1; 
+ 	}
+@@ -1468,7 +1469,7 @@ jack_server_thread (void *arg)
+ 				    (engine, pfd[i].fd)) {
+ 					jack_error ("could not handle external"
+ 						    " client request");
+-#ifdef JACK_USE_MACH_THREADS
++#if defined(JACK_USE_MACH_THREADS) || defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+                                     /* poll is implemented using
+ 				       select (see the macosx/fakepoll
+ 				       code). When the socket is closed

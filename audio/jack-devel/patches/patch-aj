@@ -1,0 +1,21 @@
+$NetBSD: patch-aj,v 1.1.1.1 2008/03/16 09:26:46 bjs Exp $
+
+--- libjack/client.c.orig	2008-03-12 10:36:07.000000000 -0400
++++ libjack/client.c
+@@ -1896,14 +1896,14 @@ jack_activate (jack_client_t *client)
+ 	 * pages are actually mapped (more important for mlockall(2)
+ 	 * usage in jack_start_thread())
+ 	 */
+-         
++#ifdef __gnu_linux__
+ 	char buf[JACK_THREAD_STACK_TOUCH];
+ 	int i;
+ 
+ 	for (i = 0; i < JACK_THREAD_STACK_TOUCH; i++) {
+ 		buf[i] = (char) (i & 0xff);
+ 	}
+-
++#endif
+ 	if (client->control->type == ClientInternal ||
+ 	    client->control->type == ClientDriver) {
+ 		goto startit;
