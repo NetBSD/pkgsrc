@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.369 2008/03/14 14:26:15 drochner Exp $
+# $NetBSD: Makefile,v 1.370 2008/03/16 09:27:37 bjs Exp $
 #
 
 COMMENT=	Audio tools
@@ -142,6 +142,7 @@ SUBDIR+=	id3lib
 SUBDIR+=	id3v2
 SUBDIR+=	ifp-line
 SUBDIR+=	jack
+SUBDIR+=	jack-devel
 SUBDIR+=	juke
 SUBDIR+=	kid3
 SUBDIR+=	kmp
