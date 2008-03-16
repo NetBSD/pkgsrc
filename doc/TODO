@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7137 2008/03/15 22:20:01 markd Exp $
+$NetBSD: TODO,v 1.7138 2008/03/16 11:58:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -428,7 +428,7 @@ Suggested package updates
 	o aqsis-1.2
 	o aranym-0.9.5
 	o argtable-2.3
-	o aria2-0.13.0
+	o aria2-0.13.1
 	o arla-0.90
 	o arnold-20040104
 	o arping-2.06
@@ -614,7 +614,7 @@ Suggested package updates
 	o file-4.23
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
-	o findutils-4.2.33
+	o findutils-4.4.0
 	o fisg-0.3.12
 	o flashplayer-0.4.13
 	o flightgear-1.0.0 [pkg/38160]
@@ -830,7 +830,7 @@ Suggested package updates
 	o libXinerama-1.0.3
 	o libast-0.7
 	o libcares-1.5.1
-	o libcdio-0.79
+	o libcdio-0.80
 	o libchewing-0.3.0
 	o libconfig-1.2.1
 	o libdca-0.0.5 [pkg/38167]
@@ -1277,7 +1277,7 @@ Suggested package updates
 	o shntool-3.0.5
 	o sign-1.0.7
 	o silc-client-1.1.2
-	o silc-server-1.1
+	o silc-server-1.1.1
 	o silc-toolkit-1.1.6
 	o simh-3.7.3
 	o simulavr-0.1.2.2
