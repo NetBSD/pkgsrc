@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.535 2008/03/16 19:12:41 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.536 2008/03/16 20:49:44 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -972,3 +972,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/xmms-nebulus to 0.8.0 [obache 2008-03-16]
 	Added www/p5-CSS-Squish version 0.07 [tonnerre 2008-03-16]
 	Added time/p5-Calendar-Simple version 1.17 [tonnerre 2008-03-16]
+	Updated devel/rt3 to 3.6.6 [tonnerre 2008-03-16]
