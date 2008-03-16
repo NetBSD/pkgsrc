@@ -1,0 +1,48 @@
+$NetBSD: patch-al,v 1.1.1.1 2008/03/16 09:26:46 bjs Exp $
+
+--- drivers/sun/sun_driver.h.orig	2008-03-13 05:05:16.000000000 -0400
++++ drivers/sun/sun_driver.h
+@@ -66,7 +66,7 @@ typedef struct _sun_driver
+ 	int outfd;
+ 	int format;
+ 	int ignorehwbuf;
+-	int trigger;
++	int verbose;
+ 
+ 	size_t indevbufsize;
+ 	size_t outdevbufsize;
+@@ -75,8 +75,8 @@ typedef struct _sun_driver
+ 	void *outdevbuf;
+ 
+ 	float iodelay;
+-	jack_time_t last_periodtime;
+-	jack_time_t next_periodtime;
++	jack_time_t poll_last;
++	jack_time_t poll_next;
+ 	jack_nframes_t sys_in_latency;
+ 	jack_nframes_t sys_out_latency;
+ 
+@@ -86,15 +86,15 @@ typedef struct _sun_driver
+ 	jack_engine_t *engine;
+ 	jack_client_t *client;
+ 
++	int playback_ready;
++	int capture_ready;
++
++	int playback_drops;
++	int capture_drops;
++
+ 	volatile int run;
+-	volatile int threads;
+-	pthread_t thread_in;
+-	pthread_t thread_out;
+-	pthread_mutex_t mutex_in;
+-	pthread_mutex_t mutex_out;
+-#	ifdef USE_BARRIER
+-	pthread_barrier_t barrier;
+-#	endif
++	pthread_t io_thread;
++	pthread_mutex_t io_mutex;
+ 	sem_t sem_start;
+ } sun_driver_t;
+ 
