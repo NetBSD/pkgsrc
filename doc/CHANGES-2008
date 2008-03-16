@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.532 2008/03/16 09:28:20 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.533 2008/03/16 11:57:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -966,3 +966,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated math/R to 2.6.2 [markd 2008-03-16]
 	Removed mail/claws-mail-clamav [smb 2008-03-15]
 	Updated audio/jack-devel to 0.109.10 [bjs 2008-03-16]
+	Updated multimedia/mplayer to 1.0rc10nb3 [wiz 2008-03-16]
+	Updated multimedia/gmplayer to 1.0rc10nb4 [wiz 2008-03-16]
+	Updated multimedia/mencoder to 1.0rc10nb2 [wiz 2008-03-16]
