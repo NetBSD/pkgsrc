@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.531 2008/03/15 22:53:54 smb Exp $
+$NetBSD: CHANGES-2008,v 1.532 2008/03/16 09:28:20 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -965,3 +965,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/stalonetray to 0.7.6 [smb 2008-03-16]
 	Updated math/R to 2.6.2 [markd 2008-03-16]
 	Removed mail/claws-mail-clamav [smb 2008-03-15]
+	Updated audio/jack-devel to 0.109.10 [bjs 2008-03-16]
