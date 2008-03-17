@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.542 2008/03/17 16:00:47 kristerw Exp $
+$NetBSD: CHANGES-2008,v 1.543 2008/03/17 22:44:53 agc Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -979,3 +979,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/p5-DBD-postgresql to 2.2.2nb2 [dsainty 2008-03-17]
 	Updated lang/ghc to 6.8.2 [kristerw 2008-03-17]
 	Updated devel/darcs to 1.0.9 [kristerw 2008-03-17]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2008Q1 branch [agc 2008-03-17]
