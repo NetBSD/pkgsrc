@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.544 2008/03/17 22:57:11 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.545 2008/03/17 23:05:39 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -979,6 +979,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/p5-DBD-postgresql to 2.2.2nb2 [dsainty 2008-03-17]
 	Updated lang/ghc to 6.8.2 [kristerw 2008-03-17]
 	Updated devel/darcs to 1.0.9 [kristerw 2008-03-17]
+	Updated devel/p5-ExtUtils-PkgConfig to 1.11 [heinz 2008-03-17]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-2008Q1 branch [agc 2008-03-17]
 	Moved x11/gtk2-sharp to x11/gtk-sharp [wiz 2008-03-17]
 	Renamed x11/gtksourceview-sharp to x11/gtksourceview-sharp2 [wiz 2008-03-17]
