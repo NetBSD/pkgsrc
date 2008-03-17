@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2008/02/13 14:46:50 kefren Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/03/17 22:54:02 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 MONO_ADDINS_BUILDLINK3_MK:=	${MONO_ADDINS_BUILDLINK3_MK}+
@@ -17,6 +17,6 @@ BUILDLINK_PKGSRCDIR.mono-addins?=	../../devel/mono-addins
 .endif	# MONO_ADDINS_BUILDLINK3_MK
 
 .include "../../lang/mono/buildlink3.mk"
-.include "../../x11/gtk2-sharp/buildlink3.mk"
+.include "../../x11/gtk-sharp/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

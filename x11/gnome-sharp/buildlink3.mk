@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/03/06 14:53:56 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/03/17 22:54:02 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_SHARP_BUILDLINK3_MK:=	${GNOME_SHARP_BUILDLINK3_MK}+
@@ -29,7 +29,7 @@ BUILDLINK_PKGSRCDIR.gnome-sharp?=	../../x11/gnome-sharp
 .include "../../www/gtkhtml38/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/gtk2-sharp/buildlink3.mk"
+.include "../../x11/gtk-sharp/buildlink3.mk"
 .include "../../x11/vte/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

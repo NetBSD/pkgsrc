@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/02/24 21:13:45 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/03/17 22:54:02 wiz Exp $
 
 DISTNAME=	mono-addins-0.3.1
 CATEGORIES=	devel
@@ -13,5 +13,5 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config
 
 .include "../../lang/mono/buildlink3.mk"
-.include "../../x11/gtk2-sharp/buildlink3.mk"
+.include "../../x11/gtk-sharp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

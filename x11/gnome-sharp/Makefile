@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/06 14:53:56 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/17 22:54:02 wiz Exp $
 #
 
 DISTNAME=	gnome-sharp-2.16.1
@@ -42,6 +42,6 @@ SUBST_MESSAGE.pc=	Fixing hardcoded paths.
 .include "../../www/gtkhtml38/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/gtk2-sharp/buildlink3.mk"
+.include "../../x11/gtk-sharp/buildlink3.mk"
 .include "../../x11/vte/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
