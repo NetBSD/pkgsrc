@@ -1,13 +1,29 @@
-$NetBSD: patch-aj,v 1.1.1.1 2008/03/16 09:26:46 bjs Exp $
+$NetBSD: patch-aj,v 1.2 2008/03/17 02:31:10 bjs Exp $
 
 --- libjack/client.c.orig	2008-03-12 10:36:07.000000000 -0400
 +++ libjack/client.c
-@@ -1896,14 +1896,14 @@ jack_activate (jack_client_t *client)
+@@ -1420,13 +1420,14 @@ static int
+ jack_client_core_wait (jack_client_t* client)
+ {
+ 	jack_client_control_t *control = client->control;
++	struct timespec poll_timeout = { 1, 0 };
+ 	
+ 	DEBUG ("client polling on %s", client->pollmax == 2 ? 
+ 	       "event_fd and graph_wait_fd..." :
+ 	       "event_fd only");
+ 	
+ 	while (1) {
+-		if (poll (client->pollfd, client->pollmax, 1000) < 0) {
++		if (pollts (client->pollfd, client->pollmax, &poll_timeout, NULL) < 0) {
+ 			if (errno == EINTR) {
+ 				continue;
+ 			}
+@@ -1896,14 +1897,14 @@ jack_activate (jack_client_t *client)
  	 * pages are actually mapped (more important for mlockall(2)
  	 * usage in jack_start_thread())
  	 */
 -         
-+#ifdef __gnu_linux__
++#if !defined(__NetBSD__)
  	char buf[JACK_THREAD_STACK_TOUCH];
  	int i;
  
