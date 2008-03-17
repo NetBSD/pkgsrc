@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2008/03/17 02:31:10 bjs Exp $
+
+--- config/sysdeps/atomicity.h.orig	2006-05-15 13:12:44.000000000 -0400
++++ config/sysdeps/atomicity.h
+@@ -1,7 +1,11 @@
+ #ifndef _jack_sysdep_atomicity_h_
+ #define _jack_sysdep_atomicity_h_
+ 
+-#if defined(__i386__)
++#if defined(HAVE_NETBSD_ATOMIC_OPS)
++
++#include <config/os/netbsd/atomicity.h>
++
++#elif defined(__i386__)
+ 
+ #include <config/cpu/i386/atomicity.h>
+ 
