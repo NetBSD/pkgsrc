@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.20 2008/03/14 16:41:21 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.21 2008/03/17 19:33:25 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -156,10 +156,11 @@ do-build: gem-build
 gem-build: gem-${GEM_BUILD}-build
 
 gem-gemspec-build:
-	${RUN} cd ${WRKSRC} && ${RUBYGEM} build ${_GEMSPEC_FILE}
+	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		${RUBYGEM} build ${_GEMSPEC_FILE}
 
 gem-rake-build:
-	${RUN} cd ${WRKSRC} && ${RAKE} gem
+	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${RAKE} gem
 	${RUN} cd ${WRKSRC} && rm -f ${GEM_NAME}.gem
 	${RUN} cd ${WRKSRC} && find . -name ${GEM_NAME}.gem -print | \
 	while read file; do \
