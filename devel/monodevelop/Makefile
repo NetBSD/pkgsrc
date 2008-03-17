@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/17 22:46:05 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/17 22:54:02 wiz Exp $
 
 DISTNAME=	monodevelop-1.0
 PKGREVISION=	1
@@ -29,6 +29,6 @@ REPLACE_BASH+=	theme-icons/icon-theme-installer
 .include "../../lang/monodoc/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/buildlink3.mk"
 .include "../../x11/gtksourceview-sharp2/buildlink3.mk"
-.include "../../x11/gtk2-sharp/buildlink3.mk"
+.include "../../x11/gtk-sharp/buildlink3.mk"
 .include "../../x11/gnome-sharp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
