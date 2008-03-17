@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7139 2008/03/16 12:36:46 obache Exp $
+$NetBSD: TODO,v 1.7140 2008/03/17 10:09:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -673,7 +673,7 @@ Suggested package updates
 	o glibmm-2.16.0
 	o global-5.6
 	o glpk-4.27
-	o gmime-2.2.17
+	o gmime-2.2.18
 	o gmpc-0.15.1
 	o gnash-0.8.1 [pkg/37639]
 	o gnash-0.8.2
@@ -716,6 +716,7 @@ Suggested package updates
 	o grace-5.1.21
 	o gramofile-1.6P
 	o granulate-0.2
+	o graphviz-2.18
 	o grep-2.5.1a
 	o grhino-0.16.0
 	o gri-2.12.8
@@ -732,6 +733,7 @@ Suggested package updates
 	o gtk2-engines-2.12.2
 	o gtk2-sharp-2.12.0
 	o gtkhtml-3.18.0
+	o gtkhtml314-3.18.0
 	o gtklife-5.1
 	o gtksee-0.6.0b
 	o gtksourceview-2.2.0
@@ -747,6 +749,7 @@ Suggested package updates
 	o haskell-mode-1.45
 	o hdf-4.2r2
 	o hercules-3.04.1
+	o herrie-2.0
 	o hesiod-3.1.0
 	o hexedit-1.2.12
 	o heyu-2.1.3
@@ -772,7 +775,7 @@ Suggested package updates
 	o ifp-line-0.3 [pkg/38038]
 	o ike-2.0.1 [pkg/37032]
 	o ikiwiki-2.40
-	o imap-uw-2007
+	o imap-uw-2007a1
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o instiki-0.11pl1
 	o intercal-0.24
@@ -804,6 +807,7 @@ Suggested package updates
 	o k3b-1.0.4
 	o kapooka-0.3
 	o kbarcode-2.0.6
+	o kbibtex-0.2.1
 	o kdbg-2.1.0
 	o kdrill-6.5
 	o kinput2-3.1
@@ -829,6 +833,7 @@ Suggested package updates
 	o libX11-1.1.4
 	o libXinerama-1.0.3
 	o libast-0.7
+	o libbonobo-2.22.0
 	o libcares-1.5.1
 	o libcdio-0.80
 	o libchewing-0.3.0
@@ -865,6 +870,7 @@ Suggested package updates
 	o libnasl-2.3.1
 	o libnids-1.21
 	o libntlm-0.4.2
+	o liboil-0.3.14
 	o libole2-2.2.8
 	o libopensync-0.35
 	o libpreludedb-0.9.14
@@ -903,7 +909,7 @@ Suggested package updates
 	o mapserver-5.0.0
 	o maradns-1.2.12.09
 	o matchbox-panel-0.9.3
-	o mathomatic-12.8.8
+	o mathomatic-12.9.0
 	o mcrypt-2.6.6
 	o mergeant-0.67
 	o mesure-0.7.2
@@ -939,9 +945,9 @@ Suggested package updates
 	o multitail-5.2.1
 	o munin-1.3.4
 	o muse-0.9.2
+	o mysql-5.0.51a
+	o mysql-5.1.6
 	o mysql-5.2
-	o mysql-5.0.51
-	o mysql5-client-5.0.51a
 	o nagios-3.0
 	o naim-0.11.8.3.1
 	o nap-1.5.3
@@ -965,7 +971,7 @@ Suggested package updates
 	o newt-1.08
 	o ng-1.4.4
 	o nikto-2.0.1
-	o nmap-4.53
+	o nmap-4.60
 	o nmh-1.2.1
 	o nomarch-1.4
 	o noweb-2.11b [pkg/38194]
@@ -1036,7 +1042,7 @@ Suggested package updates
 	o p5-HTML-Table-2.05
 	o p5-HTTP-Proxy-0.20
 	o p5-HTTP-Request-Form-0.952
-	o p5-HTTP-Server-Simple-0.29
+	o p5-HTTP-Server-Simple-0.30
 	o p5-HTTP-Server-Simple-Static-0.05
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IMAP-Admin-1.6.4
@@ -1072,7 +1078,7 @@ Suggested package updates
 	o p5-Test-Harness-2.64
 	o p5-Test-Simple-0.78
 	o p5-Test-Unit-0.25
-	o p5-Test-WWW-Mechanize-1.18
+	o p5-Test-WWW-Mechanize-1.20
 	o p5-Text-BibTeX-0.34
 	o p5-Text-Markdown-1.0.16
 	o p5-Text-Quoted-2.05
@@ -1082,6 +1088,7 @@ Suggested package updates
 	o p5-XML-LibXML-1.66
 	o p5-XML-LibXSLT-1.66
 	o p5-XML-RAI-1.04
+	o p5-XML-RSS-1.32
 	o p5-XML-Stream-1.22
 	o p5-glib2-1.180
 	o p5-gtk2-1.180
@@ -1231,7 +1238,7 @@ Suggested package updates
 	o remind-3.1.4
 	o replex-0.1.6.8
 	o resize_image-0.7
-	o rhythmbox-0.10.1
+	o rhythmbox-0.11.5
 	o rio500-0.8.1
 	o ripmime-1.4.0.7
 	o robodoc-4.99.6
@@ -1343,6 +1350,7 @@ Suggested package updates
 	o ted-en-us-2.17
 	o tex-musixtex-113 [pkg/34758]
 	o tfmxplay-1.1.6
+	o tig-0.10
 	o tile-0.7.4
 	o tinyproxy-1.7.0
 	o tk-8.5.1
@@ -1417,7 +1425,7 @@ Suggested package updates
 	o wxRemind-79
 	o wyrd-1.4.4
 	o x11perf-1.5
-	o x264-devel-20071229.2245
+	o x264-devel-20080315
 	o xanalyser-1.30
 	o xauth-1.0.3
 	o xbindkeys-1.8.2
