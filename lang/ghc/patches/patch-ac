@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.6 2007/03/24 17:57:20 kristerw Exp $
+$NetBSD: patch-ac,v 1.7 2008/03/17 15:33:10 kristerw Exp $
 
---- rts/package.conf.in.orig	2007-02-25 00:05:44.000000000 +0100
-+++ rts/package.conf.in	2007-02-25 00:06:23.000000000 +0100
-@@ -68,7 +68,7 @@
+--- rts/package.conf.in.orig	2007-12-10 16:11:32.000000000 -0200
++++ rts/package.conf.in
+@@ -73,7 +73,7 @@ depends:	 	
  hugs-options:
  cc-options:
  
