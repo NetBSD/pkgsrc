@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/16 09:26:46 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/03/17 02:31:10 bjs Exp $
 bin/jack_alias
 bin/jack_bufsize
 bin/jack_connect
@@ -31,8 +31,8 @@ lib/jack/inprocess.la
 lib/jack/intime.la
 lib/jack/jack_dummy.la
 lib/jack/jack_net.la
-lib/jack/jack_oss.la
-lib/jack/jack_sun.la
+${OSS}lib/jack/jack_oss.la
+${SUN}lib/jack/jack_sun.la
 lib/jack/netsource.la
 lib/libjack.la
 lib/libjackserver.la

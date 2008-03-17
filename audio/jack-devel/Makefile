@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/16 09:26:46 bjs Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/17 02:31:10 bjs Exp $
 #
 
 DISTNAME=	jack-0.109.10
 PKGNAME=	${DISTNAME:C/jack/&-devel/}
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -55,6 +56,7 @@ PKGCONFIG_OVERRIDE+=	jack.pc.in
 PTHREAD_OPTS+=		require native
 
 CFLAGS.NetBSD+=		-DJACKD_WATCHDOG_TIMEOUT=900
+CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 
 JACKD_PROCFS_PATH?=	/proc
 
@@ -63,6 +65,12 @@ SUBST_FILES.jacksrc=	libjack/unlock.c
 SUBST_MESSAGE.jacksrc=	Peforming substitutions in JACK sources.
 SUBST_STAGE.jacksrc=	pre-build
 SUBST_VARS.jacksrc=	PREFIX JACKD_PROCFS_PATH
+
+post-extract:
+	${RUN} \
+	    ${MKDIR} ${WRKSRC}/config/os/netbsd && \
+		${CP} ${FILESDIR}/atomicity.h \
+		    ${WRKSRC}/config/os/netbsd
 
 .include "../../audio/libsamplerate/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
