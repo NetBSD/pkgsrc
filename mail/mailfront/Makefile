@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2006/08/02 02:42:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/17 11:41:46 obache Exp $
 #
 
 DISTNAME=		mailfront-0.98.1
 PKGREVISION=		1
 CATEGORIES=		mail
-MASTER_SITES=		${HOMEPAGE}
+MASTER_SITES=		${HOMEPAGE}archive/
 
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://untroubled.org/mailfront/
