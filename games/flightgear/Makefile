@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/14 14:49:53 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/17 18:01:52 drochner Exp $
 #
 
 DISTNAME=		FlightGear-1.0.0
@@ -21,7 +21,7 @@ USE_LANGUAGES+=		c c++
 
 CONFIGURE_ARGS+=	--with-threads
 CONFIGURE_ARGS+=	--enable-sdl
-CFLAGS!=	sdl-config --cflags
+CFLAGS+=		-I${LOCALBASE}/include/SDL
 
 .include "../../audio/openal/buildlink3.mk"
 .include "../../audio/freealut/buildlink3.mk"
