@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.537 2008/03/17 02:35:17 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.538 2008/03/17 07:12:03 martti Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -974,3 +974,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added time/p5-Calendar-Simple version 1.17 [tonnerre 2008-03-16]
 	Updated devel/rt3 to 3.6.6 [tonnerre 2008-03-16]
 	Updated audio/jack-devel to 0.109.10nb1 [bjs 2008-03-17]
+	Updated editors/vim-share to 7.1.283 [martti 2008-03-17]
+	Updated postfix-current to 2.6.20080221 [martti 2008-03-17]
