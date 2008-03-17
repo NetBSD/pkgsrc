@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.8 2007/12/13 14:46:58 taca Exp $
+# $NetBSD: replace.mk,v 1.9 2008/03/17 20:57:04 jlam Exp $
 #
 
 .if !defined(_RUBY_REPLACE_MK)
@@ -20,7 +20,8 @@ REPLACE_FILES.${RUBY_NAME}=	${REPLACE_RUBY}
 .endif # defined(REPLACE_RUBY)
 
 # REPLACE_RUBY_DIRS	replace shebang line of files under specified
-#			directories.
+#			directories; relative paths are assumed to be
+#			under ${WRKSRC}.
 # REPLACE_RUBY_PAT	specify pattern to match target files under
 #			REPLACE_RUBY_DIRS directories.
 #
@@ -35,7 +36,7 @@ _REPLACE_RUBY_PAT+= -o -name "${f}"
 _REPLACE_RUBY_FIND_ARGS=\( ${_REPLACE_RUBY_PAT:S/-o//1} \)
 
 replace-ruby-dirs:
-	${_PKG_SILENT}${_PKG_DEBUG}${FIND} ${REPLACE_RUBY_DIRS} \
+	${RUN} cd ${WRKSRC} && ${FIND} ${REPLACE_RUBY_DIRS} \
 	    -type f ${_REPLACE_RUBY_FIND_ARGS} -print | \
 	    while read f; do \
 		${SED}	-e '1s| *[a-z0-9_/\.-][a-z0-9_/\.-]*/env *||g' \
