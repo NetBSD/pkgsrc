@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.73 2007/05/23 23:49:24 wiz Exp $
+# $NetBSD: Makefile,v 1.74 2008/03/17 19:03:35 jlam Exp $
 
 DISTNAME=	screen-4.0.3
+PKGREVISION=	1
 CATEGORIES=	misc shells
 MASTER_SITES=	ftp://ftp.uni-erlangen.de/pub/utilities/screen/ \
 		http://komquats.com/distfiles/ \
@@ -41,6 +42,10 @@ post-install: screen-terminfo
 PLIST_SUBST+=	SCREEN_TERMINFO="@comment "
 .endif
 
+.if empty(UNPRIVILEGED:M[Yy][Ee][Ss])
+SPECIAL_PERMS+=		bin/${DISTNAME} ${SETUID_ROOT_PERMS}
+.endif
+
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/screen
 	${INSTALL_DATA} ${WRKSRC}/etc/etcscreenrc			\
@@ -57,4 +62,5 @@ screen-terminfo:
 	${SETENV} TERMINFO=${PREFIX}/share/lib/terminfo			\
 		/usr/5bin/tic screeninfo.src
 
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
