@@ -1,13 +1,9 @@
-$NetBSD: patch-ad,v 1.8 2007/03/24 17:57:20 kristerw Exp $
+$NetBSD: patch-ad,v 1.9 2008/03/17 15:33:10 kristerw Exp $
 
---- libraries/readline/package.conf.in.orig	2007-02-25 00:07:25.000000000 +0100
-+++ libraries/readline/package.conf.in	2007-02-25 00:07:47.000000000 +0100
-@@ -27,7 +27,7 @@
- depends:	base
- hugs-options:
- cc-options:
--ld-options:
-+ld-options:	"-Wl","-R@PREFIX@/lib","-L","@PREFIX@/lib"
- framework-dirs:
- frameworks:
- haddock-interfaces:	HADDOCK_IFACE
+--- libraries/readline/readline.cabal.orig	2007-12-10 16:20:29.000000000 -0200
++++ libraries/readline/readline.cabal
+@@ -32,3 +32,4 @@ library
+   includes:	HsReadline.h
+   install-includes:	HsReadline.h HsReadlineConfig.h
+   c-sources:	HsReadline_cbits.c
++  ld-options:    "-Wl","-R@PREFIX@/lib","-L","@PREFIX@/lib"
