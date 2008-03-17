@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.538 2008/03/17 07:12:03 martti Exp $
+$NetBSD: CHANGES-2008,v 1.539 2008/03/17 08:43:53 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -975,4 +975,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/rt3 to 3.6.6 [tonnerre 2008-03-16]
 	Updated audio/jack-devel to 0.109.10nb1 [bjs 2008-03-17]
 	Updated editors/vim-share to 7.1.283 [martti 2008-03-17]
-	Updated postfix-current to 2.6.20080221 [martti 2008-03-17]
+	Updated mail/postfix-current to 2.6.20080221 [martti 2008-03-17]
