@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.539 2008/03/17 08:43:53 jnemeth Exp $
+$NetBSD: CHANGES-2008,v 1.540 2008/03/17 13:32:54 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -976,3 +976,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/jack-devel to 0.109.10nb1 [bjs 2008-03-17]
 	Updated editors/vim-share to 7.1.283 [martti 2008-03-17]
 	Updated mail/postfix-current to 2.6.20080221 [martti 2008-03-17]
+	Updated databases/p5-DBD-postgresql to 2.2.2nb2 [dsainty 2008-03-17]
