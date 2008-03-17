@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.74 2008/03/17 12:12:45 obache Exp $
+# $NetBSD: Makefile,v 1.75 2008/03/17 12:18:47 obache Exp $
 
 DISTNAME=	xv-3.10a
 PKGREVISION=	13
 CATEGORIES=	graphics x11
 MASTER_SITES=	ftp://ftp.cis.upenn.edu/pub/xv/
+DISTFILES=	${DEFAULT_DISTFILES} ${PATCHFILES}
 
 PATCHFILES=	xv-3.10a-jumbo-patches-20070520.tar.gz
 PATCH_SITES=	${MASTER_SITE_SOURCEFORGE:=png-mng/}
