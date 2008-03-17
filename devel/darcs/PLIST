@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2005/05/28 09:14:39 augustss Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/03/17 15:59:05 kristerw Exp $
 bin/darcs
 man/man1/darcs.1
-share/doc/darcs/darcs.ps
 share/doc/darcs/examples/darcs_completion
 share/doc/darcs/examples/zsh_completion_new
 share/doc/darcs/examples/zsh_completion_old
@@ -9,6 +8,7 @@ share/doc/darcs/manual/WARNINGS
 share/doc/darcs/manual/contents.png
 share/doc/darcs/manual/darcs.css
 share/doc/darcs/manual/darcs.html
+share/doc/darcs/manual/darcs.ps
 share/doc/darcs/manual/footnode.html
 share/doc/darcs/manual/images.aux
 share/doc/darcs/manual/images.log
