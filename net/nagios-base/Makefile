@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.16 2007/11/26 22:14:13 seb Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/18 21:53:41 tonnerre Exp $
 #
 
 DISTNAME=		nagios-2.5
 PKGNAME=		${DISTNAME:S/-/-base-/}
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		net sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nagios/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		tonnerre@NetBSD.org
 HOMEPAGE=		http://www.nagios.org/
 COMMENT=		Network monitor
 
