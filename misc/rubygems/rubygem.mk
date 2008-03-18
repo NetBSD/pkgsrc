@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.23 2008/03/18 03:50:35 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.24 2008/03/18 04:01:27 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -219,7 +219,7 @@ gem-install: ${_GEM_INSTALL_TARGETS}
 
 _gem-install-buildroot:
 	@${STEP_MSG} "Installing gem into buildroot"
-	${RUN} ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
+	${RUN} ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} DESTDIR= \
 		${RUBYGEM} install ${_RUBYGEM_OPTIONS}
 
 .if !empty(GEM_CLEANBUILD)
