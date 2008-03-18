@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2008/03/18 06:14:31 jlam Exp $
+
+--- commitset/commitset.rb.orig	2008-01-29 08:46:42.000000000 -0500
++++ commitset/commitset.rb
+@@ -1,6 +1,7 @@
+ require 'rcsfile'
+ require 'find'
+ require 'md5'
++require 'rubygems' rescue LoadError	# if using sqlite3 gem
+ require 'sqlite3'
+ 
+ # Fix up SQLite3
