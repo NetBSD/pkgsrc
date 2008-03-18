@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2008/03/11 13:20:29 tron Exp $
+$NetBSD: patch-ab,v 1.5 2008/03/18 15:05:04 tron Exp $
 
 --- Makefile.orig	2007-12-18 22:45:04.000000000 +0100
 +++ Makefile
@@ -78,7 +78,7 @@ $NetBSD: patch-ab,v 1.4 2008/03/11 13:20:29 tron Exp $
 +common/amd64/*.lo: common/amd64/amd64inc.asm
 +common/i386/*.lo: common/i386/i386inc.asm
 +%.lo: %.asm
-+	${LIBTOOL} --mode=compile --tag=ASM sh strip_fPIC.sh $(AS) $(ASFLAGS) -o $@ $<
++	${LIBTOOL} --mode=compile --tag=ASM ./strip_fopt.sh $(AS) $(ASFLAGS) -o $@ $<
  # delete local/anonymous symbols, so they don't show up in oprofile
  	-@ strip -x $@
  
