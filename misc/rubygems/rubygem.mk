@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.22 2008/03/18 01:40:48 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.23 2008/03/18 03:50:35 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -13,7 +13,9 @@
 #
 # GEM_CLEANBUILD
 #	A list of shell globs representing files to remove from the
-#	gem installed in the buildroot.  The default is an empty list.
+#	gem installed in the buildroot.  The file is removed if the
+#	path matches the glob and is not in ${WRKSRC}.  The default
+#	is "ext/*"
 #
 #	Example:
 #
@@ -197,10 +199,16 @@ RUBYGEM_GENERATE_PLIST=	\
 		${SORT} && \
 	  ${FIND} ${GEM_DOCDIR:S|${PREFIX}/||} -type d -print | \
 		${SORT} -r | ${SED} -e "s,^,@dirrm ," );
-	
+
+GEM_CLEANBUILD?=	ext/*
+.if !empty(GEM_CLEANBUILD:M/*) || !empty(GEM_CLEANBUILD:M*../*)
+PKG_FAIL_REASON=	"GEM_CLEANBUILD must be relative to "${GEM_LIBDIR:Q}"."
+.endif
 
 _GEM_INSTALL_TARGETS=	_gem-install-buildroot
+.if !empty(GEM_CLEANBUILD)
 _GEM_INSTALL_TARGETS+=	_gem-install-cleanbuild
+.endif
 _GEM_INSTALL_TARGETS+=	_gem-install-copy
 
 .PHONY: gem-install ${_GEM_INSTALL_TARGETS}
@@ -214,17 +222,16 @@ _gem-install-buildroot:
 	${RUN} ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
 		${RUBYGEM} install ${_RUBYGEM_OPTIONS}
 
-GEM_CLEANBUILD?=	# empty
-.if !empty(GEM_CLEANBUILD:M/*) || !empty(GEM_CLEANBUILD:M*../*)
-PKG_FAIL_REASON=	"GEM_CLEANBUILD must be relative to "${GEM_LIBDIR:Q}"."
-.endif
-
+.if !empty(GEM_CLEANBUILD)
 _gem-install-cleanbuild:
 	@${STEP_MSG} "Cleaning intermediate gem build files"
-.if !empty(GEM_CLEANBUILD)
 	${RUN} cd ${_RUBYGEM_BUILDROOT}${GEM_LIBDIR} &&			\
-	ls ${GEM_CLEANBUILD} |						\
+	find . -print | sort -r |					\
 	while read file; do						\
+		case $$file in						\
+		${GEM_CLEANBUILD:@.p.@./${.p.}) ;;@}			\
+		*)	continue ;;					\
+		esac;							\
 		[ ! -e ${WRKSRC:Q}"/$$file" ] || continue;		\
 		if [ -d "$$file" ]; then				\
 			echo "rmdir "${GEM_LIBDIR:T}"/$$file";		\
@@ -235,20 +242,6 @@ _gem-install-cleanbuild:
 		fi;							\
 	done
 .endif
-	${RUN} if [ -d ${_RUBYGEM_BUILDROOT}${GEM_LIBDIR}/ext ]; then	\
-		cd ${_RUBYGEM_BUILDROOT}${GEM_LIBDIR} &&		\
-		find ext -print | sort -r |				\
-		while read file; do					\
-			[ ! -e ${WRKSRC:Q}"/$$file" ] || continue;	\
-			if [ -d "$$file" ]; then			\
-				echo "rmdir "${GEM_LIBDIR:T}"/$$file";	\
-				rmdir $$file;				\
-			else						\
-				echo "rm "${GEM_LIBDIR:T}"/$$file";	\
-				rm -f $$file;				\
-			fi;						\
-		done;							\
-	fi
 
 _gem-install-copy:
 	@${STEP_MSG} "Copying gem into installation directory"
