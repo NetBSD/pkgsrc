@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2004/10/01 22:56:10 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/03/18 11:48:25 dmcmahill Exp $
 bin/bem
-bin/calcCAP
-bin/calcRL
+@comment bin/calcCAP
+@comment bin/calcRL
 bin/tnt-mmtl
 bin/tnt.tcl
 lib/bem1.0/bem.tcl
@@ -13,13 +13,13 @@ lib/bem1.0/bem_sweep.tcl
 lib/bem1.0/bem_view.tcl
 lib/bem1.0/bem_welement.itcl
 lib/bem1.0/pkgIndex.tcl
-lib/calccap/calcCAP.tcl
-lib/calccap/calcCAP_exe.tcl
-lib/calccap/epl.bit
-lib/calccap/pkgIndex.tcl
-lib/calcrl/calcRL.tcl
-lib/calcrl/calcRL_exe.tcl
-lib/calcrl/pkgIndex.tcl
+@comment lib/calccap/calcCAP.tcl
+@comment lib/calccap/calcCAP_exe.tcl
+@comment lib/calccap/epl.bit
+@comment lib/calccap/pkgIndex.tcl
+@comment lib/calcrl/calcRL.tcl
+@comment lib/calcrl/calcRL_exe.tcl
+@comment lib/calcrl/pkgIndex.tcl
 lib/csdl1.0.1/csdl.tcl
 lib/csdl1.0.1/csdl_hlcsdl.itcl
 lib/csdl1.0.1/csdl_llcsdl.itcl
@@ -131,6 +131,6 @@ share/tnt-mmtl/user-guide/user-guide.html
 @dirrm lib/sppdgTcllib1.0
 @dirrm lib/gui2.0
 @dirrm lib/csdl1.0.1
-@dirrm lib/calcrl
-@dirrm lib/calccap
+@comment @dirrm lib/calcrl
+@comment @dirrm lib/calccap
 @dirrm lib/bem1.0
