@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.21 2008/03/17 19:33:25 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.22 2008/03/18 01:40:48 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -92,6 +92,12 @@ GEM_HOME=	${PREFIX}/lib/ruby/gems/${RUBY_VER_DIR}
 GEM_NAME?=	${DISTNAME}
 GEM_LIBDIR=	${GEM_HOME}/gems/${GEM_NAME}
 GEM_DOCDIR=	${GEM_HOME}/doc/${GEM_NAME}
+
+# Installed gems have wrapper scripts that call the right interpreter,
+# regardless of the #! line at the head of a script, so we can skip
+# the interpreter path check for gems.
+#
+CHECK_INTERPRETER_SKIP=	${GEM_LIBDIR:S|^${PREFIX}/||}/*
 
 RUBYGEM_PKGPREFIX=	${RUBY_PKGPREFIX}
 
