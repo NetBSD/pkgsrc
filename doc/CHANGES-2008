@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.546 2008/03/18 11:50:27 dmcmahill Exp $
+$NetBSD: CHANGES-2008,v 1.547 2008/03/18 21:54:51 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -984,3 +984,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Moved x11/gtk2-sharp to x11/gtk-sharp [wiz 2008-03-17]
 	Renamed x11/gtksourceview-sharp to x11/gtksourceview-sharp2 [wiz 2008-03-17]
 	Updated cad/tnt to 1.2.2nb3 [dmcmahill 2008-03-18]
+	Updated net/nagios-base to 2.5nb5 [tonnerre 2008-03-18]
