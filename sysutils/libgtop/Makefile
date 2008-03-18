@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/03/12 21:43:30 drochner Exp $
+# $NetBSD: Makefile,v 1.17 2008/03/18 17:46:27 drochner Exp $
 
 DISTNAME=		libgtop-2.20.2
 CATEGORIES=		sysutils gnome
@@ -40,20 +40,7 @@ PRINT_PLIST_AWK+=	/^include\/libgtop-2.0\/glibtop_suid.h$$/ \
 .include "../../mk/bsd.prefs.mk"
 
 .if ${OPSYS} == NetBSD
-
 CONFIGURE_ENV+=	fu_cv_sys_mounted_getmntinfo=yes
-
-.  if (${MACHINE_ARCH} != alpha) && \
-	(${MACHINE_ARCH} != arm) && (${MACHINE_ARCH} != arm32) && \
-	(${MACHINE_ARCH} != i386) && (${MACHINE_ARCH} != m68k) && \
-	(${MACHINE_ARCH} != mipsel) && (${MACHINE_ARCH} != powerpc) && \
-	(${MACHINE_ARCH} != sparc) && (${MACHINE_ARCH} != sparc64) && \
-	(${MACHINE_ARCH} != x86_64)
-PKG_FAIL_REASON+=	"${PKGNAME} has not yet been ported to ${MACHINE_ARCH}."
-PKG_FAIL_REASON+=	"Please look at /usr/include/${MACHINE_ARCH}/pcb.h"
-PKG_FAIL_REASON+=	"and update ${WRKSRC}/sysdeps/freebsd/prockernel.c appropriately."
-PKG_FAIL_REASON+=	"(More information can be found in libgtop.info.)"
-.  endif
 .endif
 
 .if ${OPSYS} == "Linux"
