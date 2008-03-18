@@ -1,9 +1,15 @@
-# $NetBSD: rubygem.mk,v 1.24 2008/03/18 04:01:27 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.25 2008/03/18 16:35:52 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
 #
 # Package-settable variables:
+#
+# BUILD_TARGET
+#	The Rakefile target that creates a local gem if using the
+#	``rake'' GEM_BUILD method.
+#
+#	Default: gem
 #
 # GEM_BUILD
 #	The method used to build the local gem.
@@ -167,8 +173,10 @@ gem-gemspec-build:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${RUBYGEM} build ${_GEMSPEC_FILE}
 
+BUILD_TARGET?=	gem
+
 gem-rake-build:
-	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${RAKE} gem
+	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${RAKE} ${BUILD_TARGET}
 	${RUN} cd ${WRKSRC} && rm -f ${GEM_NAME}.gem
 	${RUN} cd ${WRKSRC} && find . -name ${GEM_NAME}.gem -print | \
 	while read file; do \
