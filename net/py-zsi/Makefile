@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/02/05 23:10:30 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2008/03/18 23:22:14 drochner Exp $
 #
 
-DISTNAME=	ZSI-1.5.0
+DISTNAME=	ZSI-2.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	3
 CATEGORIES=	net python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pywebsvcs/}
 
@@ -15,11 +14,11 @@ PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
-#DIST_SUBDIR=	py-ZSI
-
 post-extract:
 	${MV} ${WRKSRC}/scripts/wsdl2py \
-		${WRKSRC}/scripts/wsdl2py-${PYVERSSUFFIX}
+		${WRKSRC}/scripts/wsdl2py${PYVERSSUFFIX}
+	${MV} ${WRKSRC}/scripts/wsdl2dispatch \
+		${WRKSRC}/scripts/wsdl2dispatch${PYVERSSUFFIX}
 
 .include "../../lang/python/extension.mk"
 .include "../../textproc/py-xml/buildlink3.mk"

@@ -1,13 +1,20 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/12/24 10:30:34 recht Exp $
+$NetBSD: patch-aa,v 1.2 2008/03/18 23:22:14 drochner Exp $
 
---- setup.py.orig	2003-10-16 11:19:09.000000000 +0200
-+++ setup.py	2003-10-16 11:22:30.000000000 +0200
-@@ -24,7 +24,7 @@
-     version=_version,
-     license="Python",
-     packages=[ "ZSI", "ZSI.wstools" ],
--    scripts=["scripts/wsdl2py"],
-+    scripts=["scripts/wsdl2py-%s" % sys.version[0:3]],
-     description="Zolera SOAP Infrastructure",
-     author="Rich Salz",
-     author_email="rsalz@datapower.com",
+--- setup.py.orig	2006-09-28 00:55:49.000000000 +0200
++++ setup.py
+@@ -3,8 +3,4 @@
+ import sys
+-try:
+-    from setuptools import setup
+-    hasSetuptools = True
+-except ImportError:
+-    from distutils.core import setup
+-    hasSetuptools = False
++from distutils.core import setup
++hasSetuptools = False
+ 
+@@ -52,3 +48,3 @@ if hasSetuptools:
+ else:
+-    additional_params['scripts'] = ["scripts/wsdl2py", "scripts/wsdl2dispatch"]
++    additional_params['scripts'] = ["scripts/wsdl2py" + sys.version[0:3], "scripts/wsdl2dispatch" + sys.version[0:3]]
+ 
