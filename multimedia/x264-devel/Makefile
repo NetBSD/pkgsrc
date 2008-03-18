@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/03/11 13:20:29 tron Exp $
+# $NetBSD: Makefile,v 1.10 2008/03/18 15:05:03 tron Exp $
 #
 
 SNAPSHOT_DATE=		20071218
@@ -35,8 +35,14 @@ USE_LIBTOOL=		yes
 
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+MAKE_ENV+=		SH=${SH:Q}
 
 BUILD_TARGET=		default
+
+post-extract:
+	${SED} -e 's,@SH@,${SH},' ${FILESDIR}/strip_fopt.sh \
+	  >${WRKSRC}/strip_fopt.sh
+	${CHMOD} +x ${WRKSRC}/strip_fopt.sh
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
