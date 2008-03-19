@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.548 2008/03/19 10:32:54 mjl Exp $
+$NetBSD: CHANGES-2008,v 1.549 2008/03/19 11:57:00 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -986,3 +986,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated cad/tnt to 1.2.2nb3 [dmcmahill 2008-03-18]
 	Updated net/nagios-base to 2.5nb5 [tonnerre 2008-03-18]
 	Updated comms/asterisk to 1.2.27 [mjl 2008-03-19]
+	Updated devel/treecc to 0.3.10nb1 [obache 2008-03-19]
