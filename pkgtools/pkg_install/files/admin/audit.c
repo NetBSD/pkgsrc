@@ -1,4 +1,4 @@
-/*	$NetBSD: audit.c,v 1.2 2008/03/15 10:46:08 joerg Exp $	*/
+/*	$NetBSD: audit.c,v 1.3 2008/03/19 15:33:12 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: audit.c,v 1.2 2008/03/15 10:46:08 joerg Exp $");
+__RCSID("$NetBSD: audit.c,v 1.3 2008/03/19 15:33:12 joerg Exp $");
 #endif
 
 /*-
@@ -54,6 +54,9 @@ __RCSID("$NetBSD: audit.c,v 1.2 2008/03/15 10:46:08 joerg Exp $");
 #endif
 #if HAVE_ERRNO_H
 #include <errno.h>
+#endif
+#if HAVE_FCNTL_H
+#include <fcntl.h>
 #endif
 #if HAVE_SIGNAL_H
 #include <signal.h>
