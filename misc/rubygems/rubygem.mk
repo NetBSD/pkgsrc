@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.26 2008/03/18 20:01:20 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.27 2008/03/19 20:26:15 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -163,19 +163,35 @@ gem-extract:
 ###
 ### The gem-build target builds a new local gem from the extracted gem's
 ### contents.  The new gem as created as ${WRKSRC}/${GEM_NAME}.gem.
+### The local gem is then installed into a special build root under
+### ${WRKDIR} (${_RUBYGEM_BUILDROOT}), possibly compiling any extensions.
 ###
-.PHONY: gem-build gem-gemspec-build gem-rake-build
+GEM_CLEANBUILD?=	ext/*
+.if !empty(GEM_CLEANBUILD:M/*) || !empty(GEM_CLEANBUILD:M*../*)
+PKG_FAIL_REASON=	"GEM_CLEANBUILD must be relative to "${GEM_LIBDIR:Q}"."
+.endif
+
+_GEM_BUILD_TARGETS=	_gem-${GEM_BUILD}-build
+_GEM_BUILD_TARGETS+=	_gem-build-buildroot
+.if !empty(GEM_CLEANBUILD)
+_GEM_BUILD_TARGETS+=	_gem-build-cleanbuild
+.endif
+
+.ORDER: ${_GEM_BUILD_TARGETS}
+
+.PHONY: gem-build
 do-build: gem-build
+gem-build: ${_GEM_BUILD_TARGETS}
 
-gem-build: gem-${GEM_BUILD}-build
-
-gem-gemspec-build:
+.PHONY: _gem-gemspec-build
+_gem-gemspec-build:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${RUBYGEM} build ${_GEMSPEC_FILE}
 
 BUILD_TARGET?=	gem
 
-gem-rake-build:
+.PHONY: _gem-rake-build
+_gem-rake-build:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${RAKE} ${BUILD_TARGET}
 	${RUN} cd ${WRKSRC} && rm -f ${GEM_NAME}.gem
 	${RUN} cd ${WRKSRC} && find . -name ${GEM_NAME}.gem -print | \
@@ -184,14 +200,6 @@ gem-rake-build:
 		exit 0; \
 	done
 
-###
-### gem-install
-###
-### The gem-install target installs the local gem in ${WRKDIR} into
-### the gem repository.  We this this as a staged installation
-### (independent of PKG_DESTDIR_SUPPORT) because it can potentially
-### build software and we want that to happen within ${WRKDIR}.
-###
 _RUBYGEM_BUILDROOT=	${WRKDIR}/.inst
 _RUBYGEM_OPTIONS=	--no-update-sources	# don't cache the gem index
 _RUBYGEM_OPTIONS+=	--install-dir ${GEM_HOME}
@@ -199,39 +207,14 @@ _RUBYGEM_OPTIONS+=	--build-root ${_RUBYGEM_BUILDROOT}
 _RUBYGEM_OPTIONS+=	--local ${WRKSRC}/${GEM_NAME}.gem
 _RUBYGEM_OPTIONS+=	-- --build-args ${CONFIGURE_ARGS}
 
-GENERATE_PLIST+=	${RUBYGEM_GENERATE_PLIST}
-RUBYGEM_GENERATE_PLIST=	\
-	${ECHO} "@comment The following lines are automatically generated." && \
-	( cd ${_RUBYGEM_BUILDROOT}${PREFIX} && \
-	  ${FIND} ${GEM_DOCDIR:S|${PREFIX}/||} \! -type d -print | \
-		${SORT} && \
-	  ${FIND} ${GEM_DOCDIR:S|${PREFIX}/||} -type d -print | \
-		${SORT} -r | ${SED} -e "s,^,@dirrm ," );
-
-GEM_CLEANBUILD?=	ext/*
-.if !empty(GEM_CLEANBUILD:M/*) || !empty(GEM_CLEANBUILD:M*../*)
-PKG_FAIL_REASON=	"GEM_CLEANBUILD must be relative to "${GEM_LIBDIR:Q}"."
-.endif
-
-_GEM_INSTALL_TARGETS=	_gem-install-buildroot
-.if !empty(GEM_CLEANBUILD)
-_GEM_INSTALL_TARGETS+=	_gem-install-cleanbuild
-.endif
-_GEM_INSTALL_TARGETS+=	_gem-install-copy
-
-.PHONY: gem-install ${_GEM_INSTALL_TARGETS}
-.ORDER: ${_GEM_INSTALL_TARGETS}
-
-do-install: gem-install
-gem-install: ${_GEM_INSTALL_TARGETS}
-
-_gem-install-buildroot:
+.PHONY: _gem-build-buildroot
+_gem-build-buildroot:
 	@${STEP_MSG} "Installing gem into buildroot"
-	${RUN} ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} DESTDIR= \
-		${RUBYGEM} install ${_RUBYGEM_OPTIONS}
+	${RUN} ${SETENV} ${MAKE_ENV} ${RUBYGEM} install ${_RUBYGEM_OPTIONS}
 
 .if !empty(GEM_CLEANBUILD)
-_gem-install-cleanbuild:
+.PHONY: _gem-build-cleanbuild
+_gem-build-cleanbuild:
 	@${STEP_MSG} "Cleaning intermediate gem build files"
 	${RUN} cd ${_RUBYGEM_BUILDROOT}${GEM_LIBDIR} &&			\
 	find . -print | sort -r |					\
@@ -251,7 +234,23 @@ _gem-install-cleanbuild:
 	done
 .endif
 
-_gem-install-copy:
-	@${STEP_MSG} "Copying gem into installation directory"
+###
+### gem-install
+###
+### The gem-install target installs the gem in ${_RUBY_BUILDROOT} into
+### the actual gem repository.
+###
+GENERATE_PLIST+=	${RUBYGEM_GENERATE_PLIST}
+RUBYGEM_GENERATE_PLIST=	\
+	${ECHO} "@comment The following lines are automatically generated." && \
+	( cd ${_RUBYGEM_BUILDROOT}${PREFIX} && \
+	  ${FIND} ${GEM_DOCDIR:S|${PREFIX}/||} \! -type d -print | \
+		${SORT} && \
+	  ${FIND} ${GEM_DOCDIR:S|${PREFIX}/||} -type d -print | \
+		${SORT} -r | ${SED} -e "s,^,@dirrm ," );
+
+.PHONY: gem-install
+do-install: gem-install
+gem-install:
 	${RUN} cd ${_RUBYGEM_BUILDROOT}${PREFIX} && \
 		pax -rwpe . ${DESTDIR}${PREFIX}
