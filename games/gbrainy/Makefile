@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/15 01:14:32 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/19 06:43:42 wiz Exp $
 #
 
 DISTNAME=	gbrainy-0.60
@@ -23,5 +23,5 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../x11/gnome-sharp/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/gtk2-sharp/buildlink3.mk"
+.include "../../x11/gtk-sharp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
