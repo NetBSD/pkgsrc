@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.550 2008/03/19 12:13:23 obache Exp $
+$NetBSD: CHANGES-2008,v 1.551 2008/03/19 22:56:49 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -988,3 +988,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated comms/asterisk to 1.2.27 [mjl 2008-03-19]
 	Updated devel/treecc to 0.3.10nb1 [obache 2008-03-19]
 	Updated devel/emacs-ilisp to 20021222nb3 [obache 2008-03-19]
+	Updated net/maradns to 1.2.12.06nb1 [tonnerre 2008-03-19]
