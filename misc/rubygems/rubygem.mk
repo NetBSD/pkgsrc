@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.27 2008/03/19 20:26:15 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.28 2008/03/19 23:03:22 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -75,9 +75,9 @@ GEM_BUILD?=	rake
 # build tool.
 #
 BUILD_DEPENDS+=	rubygems>=1.0.1nb1:../../misc/rubygems
-DEPENDS+=	rubygems>=0.9.4:../../misc/rubygems
+DEPENDS+=	rubygems>=1.0.1:../../misc/rubygems
 .if ${GEM_BUILD} == "rake"
-BUILD_DEPENDS+=	rake-[0-9]*:../../devel/rake
+BUILD_DEPENDS+=	rake>=0.8.1:../../devel/rake
 .endif
 
 # GEMFILE holds the filename of the Gem to install
