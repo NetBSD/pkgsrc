@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7143 2008/03/19 22:47:56 wiz Exp $
+$NetBSD: TODO,v 1.7144 2008/03/20 02:43:11 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -332,6 +332,10 @@ Suggested new packages
 	xine-plugin [pkg/38159]
 	http://xinehq.de/
 	Plugin for www/firefox for using multimedia/xine-lib
+
+	flyback
+	http://code.google.com/p/flyback/
+	Backup software inspired by Apple's Time Machine
 
 Suggested package updates
 =========================
