@@ -1,8 +1,11 @@
-$NetBSD: distinfo,v 1.17 2007/04/12 03:42:21 schmonz Exp $
+$NetBSD: distinfo,v 1.18 2008/03/20 03:30:32 schmonz Exp $
 
-SHA1 (netqmail-1.05.tar.gz) = fe4cbe97bd2f18a5ca1b36e4fbbd6c524256a829
-RMD160 (netqmail-1.05.tar.gz) = e5bd8557c58a2686233449254b146e74389a7652
-Size (netqmail-1.05.tar.gz) = 252264 bytes
+SHA1 (qmail-1.03.tar.gz) = 18fb960481291a0503e93a94df3f6094edb7f27a
+RMD160 (qmail-1.03.tar.gz) = b851f273f1d365d38efd949b1efcf35768ffa30f
+Size (qmail-1.03.tar.gz) = 220668 bytes
+SHA1 (netqmail-1.06.tar.gz) = 9ee9a603e2ad3d8e1d34b900e19b7a5d275f538b
+RMD160 (netqmail-1.06.tar.gz) = d31598afa862abb35bc1feb8d038ab619b5a17a2
+Size (netqmail-1.06.tar.gz) = 260941 bytes
 SHA1 (badrcptto.patch) = 713875ab08239416b6d22ba0d846b14a6aa6912f
 RMD160 (badrcptto.patch) = 88e29eeb203f30ec9c9d01cc42f1b849ea08d509
 Size (badrcptto.patch) = 3033 bytes
