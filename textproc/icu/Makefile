@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.53 2007/03/31 15:36:57 obache Exp $
+# $NetBSD: Makefile,v 1.54 2008/03/20 17:07:54 drochner Exp $
 #
 
 DISTNAME=	icu4c-3_6-src
 PKGNAME=	icu-3.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://ftp.software.ibm.com/software/globalization/icu/${PKGVERSION}/
 EXTRACT_SUFX=	.tgz
