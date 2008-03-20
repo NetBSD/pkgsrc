@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.57 2008/02/19 21:12:06 schmonz Exp $
+# $NetBSD: Makefile,v 1.58 2008/03/20 03:30:32 schmonz Exp $
 #
 
-DISTNAME=		netqmail-1.05
+DISTNAME=		${PKGNAME_NOREV}
 PKGNAME=		qmail-1.03
 PKGREVISION=		13
 CATEGORIES=		mail
@@ -25,7 +25,7 @@ CONFLICTS+=		pulsar<=0.1.1
 
 NOT_FOR_UNPRIVILEGED=	yes
 
-WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+WRKSRC=			${WRKDIR}/${DISTNAME}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_TOOLS+=		nroff
@@ -101,11 +101,7 @@ PKG_HOME.alias=		${QMAILDIR}/alias
 
 SPECIAL_PERMS+=		${PREFIX}/bin/qmail-queue qmailq qmail 4555
 
-# extract the qmail tarball that was inside the netqmail distfile
 post-extract:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
-	extract_file=${WRKDIR}/${DISTNAME}/${PKGNAME_NOREV}.tar.gz;	\
-	cd ${WRKDIR} && ${EXTRACT_CMD}
 	${CP} ${FILESDIR}/README.pkgsrc ${WRKDIR}/README.pkgsrc
 
 post-install:

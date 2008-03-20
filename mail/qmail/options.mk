@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.28 2007/05/27 18:42:54 schmonz Exp $
+# $NetBSD: options.mk,v 1.29 2008/03/20 03:30:32 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_OPTIONS_OPTIONAL_GROUPS=	rcpt
@@ -36,11 +36,7 @@ PLIST_SUBST+=		DARWINSUFX=".doc"
 .endif
 
 .if !empty(PKG_OPTIONS:Mqmail-netqmail)
-NETQMAIL_PATCH=		netqmail-1.05.tar.gz
-PATCHFILES+=		${NETQMAIL_PATCH}
-PATCH_DIST_CAT.${NETQMAIL_PATCH}=	\
-			${CAT} ${WRKDIR}/${DISTNAME}/${DISTNAME}.patch
-PATCH_DIST_STRIP.${NETQMAIL_PATCH}=	-p1
+DISTNAME=		netqmail-1.06
 .endif
 
 .if !empty(PKG_OPTIONS:Mqmail-outgoingip)
