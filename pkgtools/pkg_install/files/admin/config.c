@@ -1,4 +1,4 @@
-/*	$NetBSD: config.c,v 1.2 2008/03/21 08:18:17 jklos Exp $	*/
+/*	$NetBSD: config.c,v 1.3 2008/03/21 14:47:53 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: config.c,v 1.2 2008/03/21 08:18:17 jklos Exp $");
+__RCSID("$NetBSD: config.c,v 1.3 2008/03/21 14:47:53 joerg Exp $");
 #endif
 
 /*-
@@ -50,7 +50,6 @@ __RCSID("$NetBSD: config.c,v 1.2 2008/03/21 08:18:17 jklos Exp $");
 #include "admin.h"
 #include "lib.h"
 
-const char *gpg_cmd;
 const char *pkg_vulnerabilities_dir;
 const char *pkg_vulnerabilities_file;
 const char *pkg_vulnerabilities_url;
