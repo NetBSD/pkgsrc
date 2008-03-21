@@ -1,4 +1,4 @@
-/*	$NetBSD: unistd.h,v 1.2 2004/08/23 03:32:13 jlam Exp $	*/
+/*	$NetBSD: unistd.h,v 1.3 2008/03/21 23:28:09 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -47,12 +47,16 @@
  * Declare functions and macros that may be missing in <unistd.h>.
  */
 
-#if !HAVE_OPTARG_D
+#if !HAVE_DECL_OPTARG
 extern char	*optarg;
 #endif
 
-#if !HAVE_OPTIND_D
+#if !HAVE_DECL_OPTIND
 extern int	optind;
+#endif
+
+#if !HAVE_DECL_OPTRESET
+extern int	optreset;
 #endif
 
 #if !HAVE_GETPASS_D
