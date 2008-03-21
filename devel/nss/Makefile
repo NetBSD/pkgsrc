@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2008/03/13 16:56:52 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2008/03/21 01:12:15 obache Exp $
 
 DISTNAME=		nss-3.11.5
 CATEGORIES=		security
@@ -71,8 +71,8 @@ do-install:
 PLIST_SRC=	${WRKDIR}/PLIST
 post-install:
 	${AWK} '/@comment libfreebl/ {exit} {print}' ${.CURDIR}/PLIST > ${PLIST_SRC}
-	ls ${PREFIX}/lib/nss/libfreebl*.${SO_SUFFIX} | ${SORT} | \
-		${SED} 's;${PREFIX}/;;g' >> ${PLIST_SRC}
+	ls ${DESTDIR}${PREFIX}/lib/nss/libfreebl*.${SO_SUFFIX} | ${SORT} | \
+		${SED} 's;${DESTDIR}${PREFIX}/;;g' >> ${PLIST_SRC}
 	${AWK} 'ok == 1 {print} /@comment libfreebl/ {ok=1}' ${.CURDIR}/PLIST >> ${PLIST_SRC}
 	cd ${DESTDIR}${PREFIX}/include/nss && \
 		${CHMOD} ${SHAREMODE} nss/*.h dbm/*.h nss/*.api
