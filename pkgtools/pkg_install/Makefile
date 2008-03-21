@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.147 2008/02/26 13:38:57 joerg Exp $
+# $NetBSD: Makefile,v 1.148 2008/03/21 23:28:33 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -33,6 +33,8 @@ USE_TOOLS+=		chmod cmp cp env find grep ln mkdir rm rmdir	\
 			sed sort touch
 
 USE_FEATURES=		nbcompat
+
+NBCOMPAT_CONFIGURE_ARGS+=	--enable-bsd-getopt
 
 SKIP_AUDIT_PACKAGES=	yes
 NO_PKGTOOLS_REQD_CHECK=	yes
