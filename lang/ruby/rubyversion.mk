@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.38 2008/03/09 13:31:18 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.39 2008/03/21 15:07:28 jlam Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -243,6 +243,7 @@ PLIST_SUBST+=		RUBY=${RUBY:Q} RUBY_VER=${RUBY_VER:Q} \
 			RUBY_VERSION=${RUBY_VERSION:Q} \
 			RUBY_VER_DIR=${RUBY_VER_DIR:Q} \
 			RUBY_DLEXT=${RUBY_DLEXT:Q} \
+			RUBY_ARCH=${RUBY_ARCH:Q} \
 			${PLIST_RUBY_DIRS:S,DIR="${PREFIX}/,DIR=",}
 
 #
