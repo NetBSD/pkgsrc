@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2007/09/04 22:45:56 jdolecek Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/21 00:09:11 jklos Exp $
 
 MODNAME=	apc
-PECL_VERSION=	3.0.14
+PECL_VERSION=	3.0.16
 CATEGORIES+=	sysutils
 COMMENT=	Alternative PHP Cache
 
