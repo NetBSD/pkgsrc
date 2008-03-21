@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.59 2008/02/21 16:50:08 tnn Exp $
+dnl $NetBSD: configure.ac,v 1.60 2008/03/21 23:28:08 joerg Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -135,6 +135,17 @@ AC_CHECK_FUNC(SHA512_File, [:], [
 	AC_LIBOBJ(sha2hl)
 ])
 
+AC_ARG_ENABLE([bsd-getopt],
+	[AS_HELP_STRING([--enable-bsd-getopt],
+			[force use of BSDish getopt implementation])])
+
+AC_CHECK_DECLS([optind, optreset], [:], [:], [
+	#include <stdio.h>
+	#include <stdlib.h>
+	#include <unistd.h>
+])
+
+
 pkg_use_nbcompat_getopt_long=yes
 AC_CHECK_HEADERS([getopt.h], [
 	AC_MSG_TRY_COMPILE([for struct option], pkg_cv_have_struct_option,
@@ -142,6 +153,12 @@ AC_CHECK_HEADERS([getopt.h], [
 		[pkg_use_nbcompat_getopt_long=no],
 		[pkg_use_nbcompat_getopt_long=yes])
 ])
+
+if test "$enable_bsd_getopt" = yes; then
+	if test "$ac_cv_have_decl_optreset" = no; then
+		pkg_use_nbcompat_getopt_long=yes
+	fi
+fi
 
 if test $pkg_use_nbcompat_getopt_long = yes; then
 	AC_DEFINE(HAVE_NBCOMPAT_GETOPT_LONG)
@@ -436,12 +453,6 @@ int main() {
 if test $have_std_vsnprintf = no; then
 	AC_LIBOBJ(snprintf)
 fi
-
-AC_CHECK_DECLS([optind, optreset], [:], [:], [
-	#include <stdio.h>
-	#include <stdlib.h>
-	#include <unistd.h>
-])
 
 AH_BOTTOM([
 /* NBCOMPAT template section follows. */
