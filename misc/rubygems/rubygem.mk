@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.29 2008/03/21 14:13:58 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.30 2008/03/21 22:22:01 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -27,12 +27,21 @@
 #
 #	    GEM_CLEANBUILD=	*.o *.${RUBY_DLEXT} mkmf.log	
 #
+# GEM_FORMAT
+#	The file format of the downloaded gem.  Some older gems are only
+#	available in the outdated ``packed'', shar-like format.
+#
+#	Possible: packed, tar
+#	Default: tar
+#
 # GEM_NAME
 #	The name of the gem to install.  The default value is ${DISTNAME}.
 #
-# GEMFILE
-#	The complete filename of the gem to install.  The default value
-#	is ${DISTNAME}.gem.
+# GEM_SPECFILE
+#	The path to the gemspec file to use when building a gem using
+#       the ``gemspec'' GEM_BUILD method.  It defaults to
+#	${WRKDIR}/${DISTNAME}.gemspec.
+#
 #
 # Variables defined in this file:
 #
@@ -77,18 +86,18 @@ DEPENDS+=	rubygems>=1.0.1:../../misc/rubygems
 BUILD_DEPENDS+=	rake>=0.8.1:../../devel/rake
 .endif
 
-# GEMFILE holds the filename of the Gem to install
-.if defined(DISTFILES)
-GEMFILE?=	${DISTFILES}
-.else
-GEMFILE?=	${DISTNAME}${EXTRACT_SUFX}
-.endif
-
 CATEGORIES+=	ruby
 MASTER_SITES?=	http://gems.rubyforge.org/gems/
 
 EXTRACT_SUFX?=	.gem
+DISTFILES?=	${DISTNAME}${EXTRACT_SUFX}
+
+# If any of the DISTFILES are gems, then skip the normal do-extract actions
+# and extract them ourselves in gem-extract.
+#
+.if !empty(DISTFILES:M*.gem)
 EXTRACT_ONLY?=	# empty
+.endif
 
 # Base directory for Gems
 GEM_HOME=	${PREFIX}/lib/ruby/gems/${RUBY_VER_DIR}
@@ -135,24 +144,38 @@ PRINT_PLIST_AWK+=	/^(@dirrm )?${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}/ \
 ###
 ### gem-extract
 ###
-### The gem-extract target extracts a standard gem file.  A standard
-### gem file contains:
+### The gem-extract target extracts a standard gem file.  It is an
+### automatic dependency for the post-extract target so it doesn't
+### disturb the usual do-extract actions.
 ###
-###	data.tar.gz	contains the actual files to build, install, etc.
-###	metadata.gz	YAML specification file
-###
-_GEMSPEC_FILE=	${WRKDIR}/${PKGBASE:S|^${RUBY_PKGPREFIX}-||}.gemspec
+GEM_SPECFILE?=	${WRKDIR}/${DISTNAME}.gemspec
+
+# This awk script prints the gemspec file embedded in a "packed" gem
+# archive to standard output.
+#
+_GEMSPEC_EXTRACT_AWK=	\
+	'BEGIN				{ do_print = 0 }		\
+	/^--- .*Gem::Specification/	{ do_print = 1; print; next }	\
+	/^---/				{ print; exit 0 }		\
+					{ if (do_print) print }'
 
 .PHONY: gem-extract
-do-extract: gem-extract
+post-extract: gem-extract
 .if !target(gem-extract)
 gem-extract:
-	${RUN} cd ${WRKDIR} && ${EXTRACTOR} -f tar ${_DISTDIR:Q}/${GEMFILE:Q}
-	${RUN} mkdir ${WRKSRC}
-	${RUN} cd ${WRKDIR} && ${EXTRACTOR} metadata.gz && \
-		mv metadata ${_GEMSPEC_FILE}
-	${RUN} cd ${WRKSRC} && ${EXTRACTOR} -f tar ${WRKDIR:Q}/data.tar.gz
-	${RUN} cd ${WRKDIR} && rm -f data.tar.gz* metadata.gz*
+.  for _gem_ in ${DISTFILES:M*.gem}
+	${RUN} cd ${WRKDIR} && ${RUBYGEM} unpack ${_DISTDIR:Q}/${_gem_:Q}
+.    if ${GEM_FORMAT} == "tar"
+	${RUN} cd ${WRKDIR} && \
+		${EXTRACTOR} -f tar ${_DISTDIR:Q}/${_gem_:Q} metadata.gz && \
+		${EXTRACTOR} metadata.gz && \
+		rm metadata.gz && mv metadata ${_gem_}spec
+.    endif
+.    if ${GEM_FORMAT} == "packed"
+	${RUN} cd ${WRKDIR} && awk ${_GEMSPEC_EXTRACT_AWK}		\
+		${_DISTDIR:Q}/${_gem_:Q} > ${_gem_}spec
+.    endif
+.  endfor
 .endif
 
 ###
@@ -183,7 +206,7 @@ gem-build: ${_GEM_BUILD_TARGETS}
 .PHONY: _gem-gemspec-build
 _gem-gemspec-build:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
-		${RUBYGEM} build ${_GEMSPEC_FILE}
+		${RUBYGEM} build ${GEM_SPECFILE}
 
 BUILD_TARGET?=	gem
 
