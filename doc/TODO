@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7144 2008/03/20 02:43:11 schmonz Exp $
+$NetBSD: TODO,v 1.7145 2008/03/22 09:01:54 obache Exp $
 
 Suggested new packages
 ======================
@@ -1270,6 +1270,7 @@ Suggested package updates
 	o rt3-3.6.6
 	o rtcw-1.41.3
 	o ruby-clearsilver-0.10.4
+	o ruby-rcairo-1.5.1
 	o rudiments-0.30
 	o rxvt-unicode-9.0
 	o sablecc-3.2
