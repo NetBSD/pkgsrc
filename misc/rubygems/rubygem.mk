@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.30 2008/03/21 22:22:01 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.31 2008/03/22 01:37:52 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -71,6 +71,9 @@
 
 # Default to using rake to build the local gem from the unpacked files.
 GEM_BUILD?=	rake
+
+# Default to assuming a "tar" gem archive format.
+GEM_FORMAT?=	tar
 
 # Build and run-time dependencies.
 #
