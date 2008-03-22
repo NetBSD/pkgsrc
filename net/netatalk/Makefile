@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.56 2008/01/18 05:08:45 tnn Exp $
+# $NetBSD: Makefile,v 1.57 2008/03/22 04:40:45 taca Exp $
 
 DISTNAME=	netatalk-2.0.3
-PKGREVISION=	8
+PKGREVISION=	9
 CATEGORIES=	net print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=netatalk/}
 EXTRACT_SUFX=	.tar.bz2
@@ -29,14 +29,16 @@ CONF_FILES=	${EG_DIR}/AppleVolumes.default ${PKG_SYSCONFDIR}/AppleVolumes.defaul
 
 CONFLICTS=	netatalk-asun-[0-9]* netatalk-umich-[0-9]*
 
-RCD_SCRIPTS=	atalkd afpd papd timelord
+RCD_SCRIPTS=	atalkd afpd cnid_metad papd timelord
 RCD_SCRIPT_SRC.atalkd=		# empty
 RCD_SCRIPT_SRC.afpd=		# empty
+RCD_SCRIPT_SRC.cnid_metad=	# empty
 RCD_SCRIPT_SRC.papd=		# empty
 RCD_SCRIPT_SRC.timelord=	# empty
 
 .include "../../mk/bsd.prefs.mk"
 
+BUILD_DEFS+=		VARBASE
 CONFIGURE_ARGS+=	--enable-netbsd \
 			--enable-overwrite \
 			--enable-timelord \
@@ -55,8 +57,8 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	etc/psf/etc2ps.sh distrib/initscripts/Makefile.in
-SUBST_SED.paths=	-e "s,^\(DVIPS=\)\(/usr/local/tex\)\(/bin\),\1${PREFIX}\3,"
-SUBST_SED.paths+=	-e "s,\(NETBSD.*\)/etc/rc.d,\1${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR},"
+SUBST_SED.paths=	-e "s,^\\(DVIPS=\\)\\(/usr/local/tex\\)\\(/bin\\),\\1${PREFIX}\\3,"
+SUBST_SED.paths+=	-e "s,\\(NETBSD.*\\)/etc/rc.d,\\1${PREFIX}/${RCD_SCRIPTS_EXAMPLEDIR},"
 
 SUBST_CLASSES+=		rc
 SUBST_FILES.rc=		${WRKSRC}/bin/afile/acleandir.rc
