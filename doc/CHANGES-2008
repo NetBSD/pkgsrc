@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.552 2008/03/21 09:23:24 hira Exp $
+$NetBSD: CHANGES-2008,v 1.553 2008/03/22 01:46:11 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -990,3 +990,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/emacs-ilisp to 20021222nb3 [obache 2008-03-19]
 	Updated net/maradns to 1.2.12.06nb1 [tonnerre 2008-03-19]
 	Updated misc/openoffice2 to 2.3.1nb5 [hira 2008-03-21]
+	Updated devel/libidn to 1.6 [bjs 2008-03-22]
