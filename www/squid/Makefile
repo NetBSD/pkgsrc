@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.203 2008/03/11 15:46:41 taca Exp $
+# $NetBSD: Makefile,v 1.204 2008/03/22 04:30:53 taca Exp $
 
 DISTNAME=	squid-2.6.STABLE18
 PKGNAME=	${DISTNAME:S/STABLE//}
@@ -42,7 +42,7 @@ EXAMPLES_FILES=	src/mime.conf.default src/squid.conf.default \
 .include "../../mk/bsd.prefs.mk"
 .include "Makefile.common"
 
-BUILD_DEFS+=	VARBASE
+BUILD_DEFS+=	LOGDIR VARBASE
 
 CONFIGURE_ARGS+=	--enable-auth=basic,digest,ntlm \
 			--enable-cachemgr-hostname=localhost \
@@ -62,7 +62,8 @@ OPTIONAL_FILES+= libexec/pinger libexec/unlinkd
 # basic auth helpers (except LDAP, multi-domain-NTLM and SASL)
 #
 OPTIONAL_FILES+= libexec/getpwname_auth libexec/msnt_auth libexec/ncsa_auth
-OPTIONAL_FILES+= libexec/pam_auth man/man8/ncsa_auth.8 man/man8/pam_auth.8
+OPTIONAL_FILES+= libexec/pam_auth ${PKGMANDIR}/man8/ncsa_auth.8
+OPTIONAL_FILES+= ${PKGMANDIR}/man8/pam_auth.8
 OPTIONAL_FILES+= libexec/smb_auth libexec/yp_auth libexec/wb_auth
 #
 # digest auth helpers
@@ -72,7 +73,7 @@ OPTIONAL_FILES+= libexec/digest_pw_auth
 # ntlm auth helpers (except no_check and winbind)
 #
 OPTIONAL_FILES+= libexec/fakeauth_auth libexec/ntlm_auth
-OPTIONAL_FILES+= libexec/wb_ntlmauth man/man8/squid_unix_group.8
+OPTIONAL_FILES+= libexec/wb_ntlmauth ${PKGMANDIR}/man8/squid_unix_group.8
 #
 # external acl helpers (except ldap_group, wbinfo_group and winbind_group)
 #
@@ -86,18 +87,14 @@ SUBST_MESSAGE.confs=	Fixing configuration files.
 
 CHECK_PORTABILITY_SKIP+=	icons/icons.shar
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/squid
-	${INSTALL_DATA_DIR} ${PREFIX}/share/squid/errors
-	${INSTALL_DATA_DIR} ${PREFIX}/share/squid/icons
+INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man8 sbin ${DOCDIR} \
+			${EXAMPLESDIR} share/squid/errors share/squid/icons
 
 post-install:
-	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
 .for f in ${EXAMPLES_FILES}
 	${INSTALL_DATA}	${WRKSRC}/${f} ${EXAMPLESDIR}/`basename ${f} .default`
 .endfor
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	${INSTALL_DATA_DIR} ${DOCDIR}
 	cd ${WRKSRC};						\
 	for i in ${DOCFILES}; do				\
 		${INSTALL_DATA} $$i ${DOCDIR};			\
