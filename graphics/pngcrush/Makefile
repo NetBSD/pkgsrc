@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/03/04 15:39:10 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2008/03/22 08:48:17 adam Exp $
 
 DISTNAME=	pngcrush-1.6.4-nolib
 PKGNAME=	pngcrush-1.6.4
@@ -18,7 +18,7 @@ INSTALLATION_DIRS=	bin
 do-build:
 	cd ${WRKSRC} && ${CC} -DPNG_USE_LOCAL_ARRAYS \
 		${CFLAGS} `libpng-config --cflags` -o pngcrush pngcrush.c \
-		`libpng-config --ldflags` -lz
+		${LDFLAGS} `libpng-config --ldflags` -lz
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/pngcrush ${DESTDIR}${PREFIX}/bin
