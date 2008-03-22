@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.install,v 1.7 2007/01/30 07:10:46 cube Exp $
+# $NetBSD: Makefile.install,v 1.8 2008/03/22 18:44:44 tonnerre Exp $
 
 .include "dirs.mk"
 
@@ -41,7 +41,7 @@ CONF_FILES_PERMS+=	${RT_EXAMPLE_DIR}/${_file_}	\
 RT_ETC_FILES=		acl.Oracle acl.Pg acl.mysql constraints.mysql	\
 			drop.Oracle initialdata schema.Oracle schema.Pg	\
 			schema.SQLite schema.mysql
-RT_UPGRADE_DIRS=	3.3.0 3.3.11
+RT_UPGRADE_DIRS=	3.3.0 3.3.11 3.5.1
 
 MESSAGE_SUBST+=		RTVARDIR=${RT_VAR_DIR:Q} RTSHAREDIR=${RT_SHARE_DIR:Q}
 
