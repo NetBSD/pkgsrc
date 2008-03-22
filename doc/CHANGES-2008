@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.554 2008/03/22 04:41:30 taca Exp $
+$NetBSD: CHANGES-2008,v 1.555 2008/03/22 14:54:20 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -992,3 +992,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/openoffice2 to 2.3.1nb5 [hira 2008-03-21]
 	Updated devel/libidn to 1.6 [bjs 2008-03-22]
 	Updated net/netatalk to 2.0.3nb9 [taca 2008-03-22]
+	Updated net/nagios-plugins to 1.4.3nb5 [tonnerre 2008-03-22]
