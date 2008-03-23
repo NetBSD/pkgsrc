@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7148 2008/03/23 12:59:57 jlam Exp $
+$NetBSD: TODO,v 1.7149 2008/03/23 13:11:16 obache Exp $
 
 Suggested new packages
 ======================
@@ -1230,7 +1230,6 @@ Suggested package updates
 	o python-mode-1.0 (Revision 4.75)
 	o qDecoder-8.0
 	o qbrew-0.3.9
-	o qdbm-1.8.77
 	o qt1-1.45
 	o qt2-designer-2.3.2
 	o qt2-docs-2.3.2
@@ -1275,7 +1274,6 @@ Suggested package updates
 	o ruby-daemons-1.0.10 [jlam]
 	o ruby-gem_plugin-0.2.3 [jlam]
 	o ruby-mysql-2.7.5
-	o ruby-qdbm-1.0.0.1.8.77
 	o ruby-rgl-0.3.1 [jlam]
 	o ruby-rb-gsl-1.10.3
 	o ruby-rcairo-1.5.1 [jlam]
