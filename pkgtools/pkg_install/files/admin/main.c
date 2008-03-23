@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.39 2008/03/15 10:55:34 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.40 2008/03/23 01:04:47 dsainty Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.39 2008/03/15 10:55:34 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.40 2008/03/23 01:04:47 dsainty Exp $");
 #endif
 
 /*-
@@ -112,7 +112,7 @@ usage(void)
 	    " dump                        - dump database\n"
 	    " pmatch pattern pkg          - returns true if pkg matches pattern, otherwise false\n"
 	    " fetch-pkg-vulnerabilities [-s] - fetch new vulnerability file\n"
-	    " check-pkg-vulneraiblities [-s] <file> - check syntax and checksums of the vulnerability file\n"
+	    " check-pkg-vulnerabilities [-s] <file> - check syntax and checksums of the vulnerability file\n"
 	    " audit [-es] [-t type] ...\n"
 	    " audit-pkg [-es] [-t type] ...\n"
 	    " audit-batch [-es] [-t type] ...\n",
