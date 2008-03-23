@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.559 2008/03/23 13:03:41 tron Exp $
+$NetBSD: CHANGES-2008,v 1.560 2008/03/23 13:06:18 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -996,4 +996,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/nagios-plugin-snmp to 1.4.3nb2 [tonnerre 2008-03-22]
 	Updated devel/rt3 to 3.6.6nb1 [tonnerre 2008-03-22]
 	Downgraded devel/libidn to 1.5 [agc 2008-03-22]
-	Updated archivers/unzip to 5.52nb3 [tron 2008-03-23]
+	Updated archivers/unzip to 5.52nb4 [tron 2008-03-23]
