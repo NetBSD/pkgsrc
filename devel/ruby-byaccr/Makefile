@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/03/03 17:45:37 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2008/03/23 11:08:52 taca Exp $
 
 DISTNAME=	byaccr-0.1
 PKGNAME=	ruby-${DISTNAME}
@@ -14,9 +14,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXAMPLES=	Makefile cal.y calfunc.rb main.rb
 
+INSTALLATION_DIRS=	bin share/examples/byaccr
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/byaccr ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/byaccr
 .for f in ${EXAMPLES}
 	${INSTALL_DATA} ${WRKSRC}/sample/${f} \
 		${DESTDIR}${PREFIX}/share/examples/byaccr
