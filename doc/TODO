@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7150 2008/03/23 13:18:05 jlam Exp $
+$NetBSD: TODO,v 1.7151 2008/03/23 13:20:43 taca Exp $
 
 Suggested new packages
 ======================
@@ -1336,7 +1336,6 @@ Suggested package updates
 	o ruby-pdf-writer-1.1.8 [jlam]
 	o ruby-postgres-pr-0.4.0 [jlam]
 	o ruby-postgresql-0.7.9.2008.01.28 [jlam]
-	o ruby-qdbm-1.0.0.1.8.77
 	o ruby-rack-0.3.0 [jlam]
 	o ruby-rb-gsl-1.10.3
 	o ruby-rcairo-1.5.1 [jlam]
