@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2007/06/19 09:39:13 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/24 11:51:58 xtraeme Exp $
 #
 
 DISTNAME=		xlogo-1.0.1
+PKGREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=		.tar.bz2
@@ -19,5 +20,6 @@ CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXprintUtil/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
