@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/04 12:42:53 adam Exp $
+# $NetBSD: Makefile,v 1.2 2008/03/24 18:48:35 rmind Exp $
 
 PKGNAME=	postgresql83-client-${BASE_VERS}
 COMMENT=	PostgreSQL database client programs
@@ -17,7 +17,8 @@ CONFIGURE_ARGS+=	--with-zlib
 # NetBSD earler than 4.0 or DragonFly.
 # 2. configure with --enable-thread-safety fails on OpenBSD.
 #
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "OpenBSD"
+.if (${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[0-3].*)) || \
+    ${OPSYS} == "DragonFly" || ${OPSYS} == "OpenBSD"
 PGSQL_THREAD_SAFETY?=	no
 .endif
 PGSQL_THREAD_SAFETY?=	yes
