@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.563 2008/03/24 21:56:00 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.564 2008/03/24 22:43:13 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1000,3 +1000,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/gimp1-base to 1.2.5nb7 [tonnerre 2008-03-23]
 	Updated chat/ircu to 2.10.12.12nb1 [adrianp 2008-03-24]
 	Updated devel/rt3 to 3.6.6nb2 [wiz 2008-03-24]
+	Updated lang/ghc to 6.8.2nb1 [kristerw 2008-03-24]
