@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.31 2008/03/22 01:37:52 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.32 2008/03/24 18:48:54 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -65,6 +65,9 @@
 # RUBYGEM
 #	The path to the rubygems ``gem'' script.
 #
+
+# By default, assume that gems are capable of user-destdir installation.
+PKG_DESTDIR_SUPPORT?=	user-destdir
 
 # Include this early in case some of its target are needed
 .include "../../lang/ruby/modules.mk"
