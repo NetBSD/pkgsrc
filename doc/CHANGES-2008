@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.561 2008/03/23 14:47:40 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.562 2008/03/24 18:40:32 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -998,3 +998,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Downgraded devel/libidn to 1.5 [agc 2008-03-22]
 	Updated archivers/unzip to 5.52nb4 [tron 2008-03-23]
 	Updated graphics/gimp1-base to 1.2.5nb7 [tonnerre 2008-03-23]
+	Updated chat/ircu to 2.10.12.12nb1 [adrianp 2008-03-24]
