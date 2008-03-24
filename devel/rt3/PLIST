@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/03/22 18:44:44 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/03/24 21:55:36 wiz Exp $
 bin/mason_handler.fcgi
 ${IF_SPEEDYCGI}bin/mason_handler.scgi
 bin/mason_handler.svc
@@ -716,7 +716,7 @@ share/rt3/html/l
 @dirrm share/rt3/html/Admin/CustomFields
 @dirrm share/rt3/html/Admin
 @dirrm share/rt3/html
-@dirrm share/rt3/etc/upgrade/3.5.11
+@dirrm share/rt3/etc/upgrade/3.5.1
 @dirrm share/rt3/etc/upgrade/3.3.11
 @dirrm share/rt3/etc/upgrade/3.3.0
 @dirrm share/rt3/etc/upgrade
