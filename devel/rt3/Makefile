@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2008/03/22 18:44:44 tonnerre Exp $
+# $NetBSD: Makefile,v 1.29 2008/03/24 21:55:36 wiz Exp $
 
 DISTNAME=		rt-3.6.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
 
