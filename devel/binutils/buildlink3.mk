@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2008/03/24 19:53:01 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2008/03/24 23:40:37 tnn Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BINUTILS_BUILDLINK3_MK:=	${BINUTILS_BUILDLINK3_MK}+
@@ -16,12 +16,5 @@ BUILDLINK_API_DEPENDS.binutils+=	binutils>=2.17
 BUILDLINK_PKGSRCDIR.binutils?=	../../devel/binutils
 BUILDLINK_DEPMETHOD.binutils?=	build
 .endif	# BINUTILS_BUILDLINK3_MK
-
-GNU_PREFIX_CMD=	\
-		${PKG_INFO} -Q GNU_PROGRAM_PREFIX binutils 2>/dev/null \
-		|| { cd ${BUILDLINK_PKGSRCDIR.binutils} \
-		&& ${MAKE} ${MAKEFLAGS} show-var VARNAME=GNU_PROGRAM_PREFIX; }
-
-PKG_AS=		${PREFIX}/bin/${:!${GNU_PREFIX_CMD}!}as
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
