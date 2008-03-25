@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.252 2008/03/04 16:23:05 jlam Exp $
+# $NetBSD: Makefile,v 1.253 2008/03/25 13:46:41 wiz Exp $
 #
 
 COMMENT=	Programming languages
@@ -9,8 +9,6 @@ SUBDIR+=	SmartEiffel
 SUBDIR+=	a60
 SUBDIR+=	awka
 SUBDIR+=	baci
-SUBDIR+=	blackdown-jdk13
-SUBDIR+=	blackdown-jre13
 SUBDIR+=	brandybasic
 SUBDIR+=	bwbasic
 SUBDIR+=	caml-light
@@ -157,11 +155,9 @@ SUBDIR+=	squeak
 SUBDIR+=	sr
 SUBDIR+=	sr-examples
 SUBDIR+=	stalin
-SUBDIR+=	sun-jdk13
 SUBDIR+=	sun-jdk14
 SUBDIR+=	sun-jdk15
 SUBDIR+=	sun-jdk6
-SUBDIR+=	sun-jre13
 SUBDIR+=	sun-jre14
 SUBDIR+=	sun-jre15
 SUBDIR+=	sun-jre6
