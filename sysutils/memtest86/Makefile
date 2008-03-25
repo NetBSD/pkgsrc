@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2007/12/30 18:16:16 mlelstv Exp $
+# $NetBSD: Makefile,v 1.20 2008/03/25 16:47:00 tnn Exp $
 #
 
 DISTNAME=		memtest86-3.4
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=		http://www.memtest86.com/
 
@@ -13,6 +14,8 @@ ONLY_FOR_PLATFORM=	NetBSD-*-i386 Linux-*-i386
 
 USE_TOOLS+=		gmake
 
+DIST_SUBDIR=		${PKGNAME}
+
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/mdec
 	${INSTALL_DATA} ${WRKSRC}/memtest ${PREFIX}/mdec
@@ -20,5 +23,4 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/memtest
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/memtest
 
-.include "../../devel/binutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
