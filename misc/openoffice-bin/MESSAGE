@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.4 2005/07/29 00:46:26 grant Exp $
-
-OpenOffice has now been installed in ${PREFIX}/OpenOffice.org${VER}.
-
-For (optional) Java support, please run
-${PREFIX}/OpenOffice.org${VER}/program/jvmsetup
-after having run the user setup program.
-===========================================================================
