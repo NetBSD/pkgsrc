@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.62 2008/01/19 05:04:00 tnn Exp $
+# $NetBSD: java-vm.mk,v 1.63 2008/03/25 13:41:44 wiz Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -9,7 +9,7 @@
 # PKG_JVM_DEFAULT
 #	The JVM that should be used if nothing particular is specified.
 #
-#	Possible values: jdk sun-jdk13 blackdown-jdk13 kaffe
+#	Possible values: jdk kaffe
 #		sun-jdk14 jdk14 sun-jdk15 sun-jdk6 jdk15
 #	Default value: (platform-dependent)
 #
@@ -71,7 +71,7 @@ PKG_JVMS_ACCEPTED?=	${_PKG_JVMS}
 _PKG_JVMS.6=		sun-jdk6
 _PKG_JVMS.1.5=		${_PKG_JVMS.6} sun-jdk15 jdk15
 _PKG_JVMS.1.4=		${_PKG_JVMS.1.5} sun-jdk14 jdk14
-_PKG_JVMS.yes=		${_PKG_JVMS.1.4} sun-jdk13 blackdown-jdk13 kaffe
+_PKG_JVMS.yes=		${_PKG_JVMS.1.4} kaffe
 _PKG_JVMS.no=		${_PKG_JVMS.yes} jdk
 _PKG_JVMS=		${_PKG_JVMS.${USE_JAVA2}}
 
@@ -93,8 +93,6 @@ _PKG_JVM_DEFAULT=	${PKG_JVM_DEFAULT}
 .  if !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
       !empty(MACHINE_PLATFORM:MLinux-*-i[3456]86)
 _PKG_JVM_DEFAULT?=	sun-jdk
-.  elif !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
-_PKG_JVM_DEFAULT?=	blackdown-jdk13
 .  elif !empty(MACHINE_PLATFORM:MDarwin-*-*)
 _PKG_JVM_DEFAULT?=	sun-jdk
 .  else
@@ -103,15 +101,6 @@ _PKG_JVM_DEFAULT?=	kaffe
 .endif
 
 # These lists are copied from the JVM package Makefiles.
-_ONLY_FOR_PLATFORMS.blackdown-jdk13= \
-	DragonFly-*-i386 \
-	Linux-*-i[3-6]86 Linux-*-powerpc Linux-*-sparc \
-	NetBSD-*-i386 NetBSD-*-powerpc NetBSD-*-sparc
-.if !empty(USE_JAVA:M[rR][uU][nN])
-_ONLY_FOR_PLATFORMS.blackdown-jdk13+= \
-	Linux-*-arm \
-	NetBSD-*-arm
-.endif
 _ONLY_FOR_PLATFORMS.jdk= \
 	DragonFly-*-i386 \
 	Linux-*-i[3-6]86 \
@@ -124,12 +113,6 @@ _ONLY_FOR_PLATFORMS.jdk15= \
 	NetBSD-[2-9].*-i386
 _ONLY_FOR_PLATFORMS.kaffe= \
 	*-*-alpha *-*-arm *-*-arm32 *-*-i386 *-*-m68k *-*-mips* *-*-sparc *-*-powerpc
-_ONLY_FOR_PLATFORMS.sun-jdk13= \
-	Darwin-*-* \
-	DragonFly-*-i386 \
-	FreeBSD-6.*-i386 \
-	Linux-*-i[3-6]86 \
-	NetBSD-*-i386
 _ONLY_FOR_PLATFORMS.sun-jdk14= \
 	Darwin-[678].*-* \
 	DragonFly-*-i386 \
@@ -157,22 +140,18 @@ _PKG_JVMS_ACCEPTED+=	${PKG_JVMS_ACCEPTED:M${_jvm_}}
 .  endfor
 .endfor
 
-_JAVA_PKGBASE.blackdown-jdk13=	blackdown-jdk13
 _JAVA_PKGBASE.jdk=		jdk
 _JAVA_PKGBASE.jdk14=		jdk14
 _JAVA_PKGBASE.jdk15=		jdk15
 _JAVA_PKGBASE.kaffe=		kaffe
-_JAVA_PKGBASE.sun-jdk13=	sun-jre13
 _JAVA_PKGBASE.sun-jdk14=	sun-jre14
 _JAVA_PKGBASE.sun-jdk15=	sun-jre15
 _JAVA_PKGBASE.sun-jdk6=		sun-jre6
 
 # The following is copied from the respective JVM Makefiles.
-_JAVA_NAME.blackdown-jdk13=	blackdown13
 _JAVA_NAME.jdk=			jdk11
 _JAVA_NAME.jdk14=		jdk14
 _JAVA_NAME.kaffe=		kaffe
-_JAVA_NAME.sun-jdk13=		sun13
 _JAVA_NAME.sun-jdk14=		sun14
 _JAVA_NAME.sun-jdk15=		sun15
 _JAVA_NAME.sun-jdk6=		sun6
@@ -188,8 +167,8 @@ _PKG_JVM_INSTALLED.${_jvm_}!= \
 	fi
 .endfor
 
-# Convert "sun-jdk" into "sun-jdk1[345]" depending on the
-# platform.  Recent versions of NetBSD and Linux can use the 1.3-1.5
+# Convert "sun-jdk" into "sun-jdk1[45]" depending on the
+# platform.  Recent versions of NetBSD and Linux can use the 1.4-1.5
 # versions of the Sun JDK, so default to the newer installed one.
 #
 .if ${_PKG_JVM_DEFAULT} == "sun-jdk"
@@ -206,15 +185,9 @@ _PKG_JVM_DEFAULT=	sun-jdk15
 .    elif defined(_PKG_JVM_INSTALLED.sun-jdk14) && \
 	(${_PKG_JVM_INSTALLED.sun-jdk14} == "yes")
 _PKG_JVM_DEFAULT=	sun-jdk14
-.    elif defined(_PKG_JVM_INSTALLED.sun-jdk13) && \
-	  (${_PKG_JVM_INSTALLED.sun-jdk13} == "yes")
-_PKG_JVM_DEFAULT=	sun-jdk13
 .    else
 _PKG_JVM_DEFAULT=	sun-jdk15
 .    endif
-.  elif !empty(MACHINE_PLATFORM:MNetBSD-*-i386) || \
-	!empty(MACHINE_PLATFORM:MDarwin-*-*)
-_PKG_JVM_DEFAULT=	sun-jdk13
 .  endif
 .endif
 
@@ -253,14 +226,10 @@ PKG_FAIL_REASON=	"no acceptable JVM found"
 _PKG_JVM=		"none"
 .endif
 
-BUILDLINK_API_DEPENDS.blackdown-jdk13?=	blackdown-jdk13-[0-9]*
-BUILDLINK_API_DEPENDS.blackdown-jre13?=	blackdown-jre13-[0-9]*
 BUILDLINK_API_DEPENDS.jdk?=			jdk-[0-9]*
 BUILDLINK_API_DEPENDS.jdk14?=		jdk14-[0-9]*
 BUILDLINK_API_DEPENDS.jdk15?=		jdk15-[0-9]*
 BUILDLINK_API_DEPENDS.kaffe?=		kaffe>=1.1.4
-BUILDLINK_API_DEPENDS.sun-jdk13?=		sun-jdk13-[0-9]*
-BUILDLINK_API_DEPENDS.sun-jre13?=		sun-jre13-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jdk14?=		sun-jdk14-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jre14?=		sun-jre14-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jdk15?=		sun-jdk15-[0-9]*
@@ -268,28 +237,17 @@ BUILDLINK_API_DEPENDS.sun-jre15?=		sun-jre15-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jdk6?=		sun-jdk6-[0-9]*
 BUILDLINK_API_DEPENDS.sun-jre6?=		sun-jre6-[0-9]*
 
-_JRE.blackdown-jdk13=	blackdown-jre13
 _JRE.jdk=		jdk
 _JRE.jdk14=		jdk14
 _JRE.jdk15=		jdk15
 _JRE.kaffe=		kaffe
-_JRE.sun-jdk13=		sun-jre13
 _JRE.sun-jdk14=		sun-jre14
 _JRE.sun-jdk15=		sun-jre15
 _JRE.sun-jdk6=		sun-jre6
 
 _JAVA_BASE_CLASSES=	classes.zip
 
-.if ${_PKG_JVM} == "blackdown-jdk13"
-_JDK_PKGSRCDIR=		../../lang/blackdown-jdk13
-_JRE_PKGSRCDIR=		../../lang/blackdown-jre13
-_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/blackdown-1.3.1
-. if !empty(MACHINE_PLATFORM:MNetBSD-*-powerpc)
-MAKE_ENV+=		THREADS_FLAG="green"
-CONFIGURE_ENV+=		THREADS_FLAG="green"
-SCRIPTS_ENV+=		THREADS_FLAG="green"
-. endif
-.elif ${_PKG_JVM} == "jdk"
+.if ${_PKG_JVM} == "jdk"
 _JDK_PKGSRCDIR=		../../lang/jdk
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.1.8
@@ -305,10 +263,6 @@ _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/jdk-1.5.0
 _JDK_PKGSRCDIR=		../../lang/kaffe
 _JRE_PKGSRCDIR=		${_JDK_PKGSRCDIR}
 _JAVA_HOME_DEFAULT=	${LOCALBASE}/java/kaffe
-.elif ${_PKG_JVM} == "sun-jdk13"
-_JDK_PKGSRCDIR=		../../lang/sun-jdk13
-_JRE_PKGSRCDIR=		../../lang/sun-jre13
-_JAVA_HOME_DEFAULT=	${LOCALBASE}/java/sun-1.3.1
 .elif ${_PKG_JVM} == "sun-jdk14"
 _JDK_PKGSRCDIR=		../../lang/sun-jdk14
 _JRE_PKGSRCDIR=		../../lang/sun-jre14
