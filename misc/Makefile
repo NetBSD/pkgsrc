@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.301 2008/03/16 00:14:01 wiz Exp $
+# $NetBSD: Makefile,v 1.302 2008/03/25 13:43:14 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -133,8 +133,6 @@ SUBDIR+=	multitail
 SUBDIR+=	nxtvepg
 SUBDIR+=	open2300
 SUBDIR+=	open2300-mysql
-SUBDIR+=	openoffice
-SUBDIR+=	openoffice-bin
 SUBDIR+=	openoffice2
 SUBDIR+=	openoffice2-bin
 SUBDIR+=	orca
