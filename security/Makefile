@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.314 2008/03/16 00:15:11 wiz Exp $
+# $NetBSD: Makefile,v 1.315 2008/03/25 13:44:00 wiz Exp $
 #
 
 COMMENT=	Security tools
@@ -134,7 +134,6 @@ SUBDIR+=	ocaml-ssl
 SUBDIR+=	opencdk
 SUBDIR+=	openpam
 SUBDIR+=	openssh
-SUBDIR+=	openssh+gssapi
 SUBDIR+=	openssl
 SUBDIR+=	otpCalc
 SUBDIR+=	p0f
