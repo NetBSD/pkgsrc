@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/01/08 16:53:21 salo Exp $
-
-SHA1 (suse91/i586/compat-2004.4.2-3.i586.rpm) = 837f2272da26f8efe242e33724370d45cc2c5a74
-RMD160 (suse91/i586/compat-2004.4.2-3.i586.rpm) = a18f61b6fd3c3eb63600b37d8324a3f2fe0b4043
-Size (suse91/i586/compat-2004.4.2-3.i586.rpm) = 1806417 bytes
-SHA1 (suse91/x86_64/compat-2004.4.2-2.x86_64.rpm) = 27d7075068b73ee2c915510c1f74a60d140af494
-RMD160 (suse91/x86_64/compat-2004.4.2-2.x86_64.rpm) = ddbe20362065fc0385a17a9148b80c1458a5ab0a
-Size (suse91/x86_64/compat-2004.4.2-2.x86_64.rpm) = 139427 bytes
