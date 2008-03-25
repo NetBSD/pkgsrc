@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/03/18 13:25:29 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2008/03/25 15:14:13 wiz Exp $
 
 DISTNAME=	d2883bf3ced6
 # Last part of PKGNAME is changeset number
@@ -42,7 +42,11 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/fromcvs
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/fromcvs
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/fromcvs/commitset
-	${INSTALL_DATA} ${WRKSRC}/commitset/* \
+	${INSTALL_DATA} ${WRKSRC}/commitset/commitset \
+		${DESTDIR}${PREFIX}/share/fromcvs/commitset
+	${INSTALL_DATA} ${WRKSRC}/commitset/commitset.cgi \
+		${DESTDIR}${PREFIX}/share/fromcvs/commitset
+	${INSTALL_DATA} ${WRKSRC}/commitset/commitset.rb \
 		${DESTDIR}${PREFIX}/share/fromcvs/commitset
 	${INSTALL_DATA} ${WRKSRC}/*.rb ${DESTDIR}${PREFIX}/share/fromcvs
 	${INSTALL_DATA} ${WRKSRC}/*.py ${DESTDIR}${PREFIX}/share/fromcvs
