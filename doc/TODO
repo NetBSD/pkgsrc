@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7152 2008/03/24 11:42:09 xtraeme Exp $
+$NetBSD: TODO,v 1.7153 2008/03/25 13:48:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -381,6 +381,7 @@ Suggested package updates
 	o REminiscence-0.1.9
 	o RTx-Shredder-0.05
 	o SmartEiffel-2.3
+	o TeXmacs-1.0.6.14
 	o TiffIO-130e
 	o YoSucker-81
 	o ZIPIdent-2.9
@@ -457,7 +458,7 @@ Suggested package updates
 	o avr-binutils-2.17
 	o avr-libc-1.4.5
 	o avrdude-5.3.1
-	o awesome-2.1
+	o awesome-2.2
 	o baci-20040415
 	o bacula-2.2.6 [pkg/37396]
 	o bacula-2.2.8
@@ -471,6 +472,7 @@ Suggested package updates
 	o bdb-xml-2.0.9
 	o beacon-1.3
 	o benchfft-3.1
+	o bftpd-2.2
 	o biew-5.6.4
 	o bind-8.4.7
 	o bind-9.4.2
@@ -487,6 +489,7 @@ Suggested package updates
 	o botan-1.6.4
 	o btpd-0.13 [pkg/38144]
 	o bug-buddy-2.22.0
+	o bzip2-1.0.5
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o cairomm-1.4.8
@@ -505,7 +508,8 @@ Suggested package updates
 	o cgdb-0.6.4
 	o cgicc-3.2.5
 	o chemtool-1.6.11
-	o cherokee-0.6.0
+	o cherokee-0.6.1
+	o chicken-3.1.0
 	o chrony-1.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
@@ -690,6 +694,7 @@ Suggested package updates
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-applets-2.22.0
+	o gnome-audio-2.22.0
 	o gnome-build-0.2.4
 	o gnome-control-center-2.22.0
 	o gnome-games-2.22.0
@@ -734,10 +739,13 @@ Suggested package updates
 	o gsl-1.10
 	o gsm-1.0.12
 	o gss-0.0.22
+	o gst-plugins0.10-base-0.10.18
+	o gstreamer0.10-0.10.18
 	o gtar-1.19
 	o gtar-base-1.19
 	o gthumb-2.10.8
 	o gtick-0.4.1
+	o gtk-doc-1.10
 	o gtk-systrace-20030623
 	o gtk2-engines-2.12.2
 	o gtk2-sharp-2.12.0
@@ -829,6 +837,7 @@ Suggested package updates
 	o kmymoney2-0.8.8
 	o kodos-2.4.5
 	o kphotobook-0.0.7
+	o krusader-1.90.0
 	o ksi-3.4.2
 	o lapack-20070226
 	o latd-1.21
@@ -858,7 +867,7 @@ Suggested package updates
 	o libdvbpsi-0.1.6
 	o libebml-0.7.8
 	o libevent-1.4.0beta
-	o libextractor-0.5.19a
+	o libextractor-0.5.20
 	o libflash-0.4.13
 	o libgda-3.1.2
 	o libggi-2.2.2
@@ -919,6 +928,7 @@ Suggested package updates
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.13a
+	o mail-notification-5.1
 	o mailfront-1.11 [pkg/34765]
 	o mailgraph-1.14
 	o mailscanner-4.54.6
@@ -933,6 +943,7 @@ Suggested package updates
 	o merb-0.5.3 [jlam]
 	o merb-activerecord-0.5 [jlam]
 	o merb-sequel-0.5 [jlam]
+	o mercurial-1.0
 	o mergeant-0.67
 	o mesure-0.7.2
 	o metacity-2.22.0
@@ -1169,7 +1180,7 @@ Suggested package updates
 	o ploticus-examples-230
 	o plotutils-2.5
 	o plptools-0.13 [pkg/30244]
-	o plptools-1.0.0
+	o plptools-1.0.1
 	o pmccabe-2.3.1
 	o pngcheck-2.3.0
 	o po4a-0.29
@@ -1238,10 +1249,10 @@ Suggested package updates
 	o py-zconfig-2.3.1
 	o pygopherd-2.0.13
 	o pysol-4.82
-	o python-2.3.7
-	o python-2.4.5
-	o python-2.5.2
 	o python-mode-1.0 (Revision 4.75)
+	o python23-2.3.7
+	o python24-2.4.5
+	o python25-2.5.2
 	o qDecoder-8.0
 	o qbrew-0.3.9
 	o qt1-1.45
@@ -1381,9 +1392,9 @@ Suggested package updates
 	o shmux-1.0.1
 	o shntool-3.0.5
 	o sign-1.0.7
-	o silc-client-1.1.2
-	o silc-server-1.1.1
-	o silc-toolkit-1.1.6
+	o silc-client-1.1.4
+	o silc-server-1.1.2
+	o silc-toolkit-1.1.7
 	o simh-3.7.3
 	o simulavr-0.1.2.2
 	o sipcalc-1.1.4
@@ -1414,6 +1425,7 @@ Suggested package updates
 	o spcaview-20060501
 	o spim-7.3
 	o sqlitemanager-1.1.3
+	o squid-2.6.19
 	o srp_client-1.7.5 [jlam]
 	o ssh-askpass-1.2.4.1
 	o statist-1.3.0
@@ -1550,6 +1562,8 @@ Suggested package updates
 	o xerces-j-2.9.0
 	o xeukleides-1.0.1
 	o xev-1.0.3
+	o xf86-input-keyboard-1.3.0
+	o xf86-input-mouse-1.3.0
 	o xf86-video-apm-1.2.0
 	o xf86-video-ark-0.7.0
 	o xf86-video-ast-0.85.0
@@ -1572,6 +1586,7 @@ Suggested package updates
 	o xf86-video-vmware-10.16.0
 	o xfstt-1.7
 	o xhippo-3.5
+	o xine-lib-1.1.11
 	o xinit-1.0.8
 	o xisp-2.7p4
 	o xkbcomp-1.0.4
@@ -1584,6 +1599,7 @@ Suggested package updates
 	o xmcd-3.3.0
 	o xmlsec1-1.2.11
 	o xmlto-0.0.20
+	o xmltoman-0.4
 	o xmms-crossfade-0.3.14
 	o xmms-dflowers-1.2.1
 	o xmms-dspectogram-1.2.1
@@ -1625,6 +1641,7 @@ Suggested package updates
 	o yafc-1.1
 	o yelp-2.22.0
 	o yodl-2.01.02
+	o youtube-dl-20080321
 	o ysm-2.9.9.1
 	o yudit-2.9.0
 	o zebra-0.95a
