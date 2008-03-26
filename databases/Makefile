@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.240 2008/03/25 13:42:51 wiz Exp $
+# $NetBSD: Makefile,v 1.241 2008/03/26 13:22:00 wiz Exp $
 #
 
 COMMENT=	Databases
@@ -47,6 +47,8 @@ SUBDIR+=	luma
 SUBDIR+=	mergeant
 SUBDIR+=	metakit-lib
 SUBDIR+=	myodbc
+SUBDIR+=	mysql4-client
+SUBDIR+=	mysql4-server
 SUBDIR+=	mysql5-client
 SUBDIR+=	mysql5-server
 SUBDIR+=	mysqlcc
