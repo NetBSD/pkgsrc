@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.46 2008/02/12 11:25:35 tnn Exp $
+# $NetBSD: Makefile,v 1.47 2008/03/26 19:06:06 adrianp Exp $
 #
 
-DISTNAME=	bzip2-1.0.4
+DISTNAME=	bzip2-1.0.5
 CATEGORIES=	archivers
-MASTER_SITES=	http://www.bzip.org/1.0.4/
+MASTER_SITES=	http://www.bzip.org/1.0.5/
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.bzip.org/
