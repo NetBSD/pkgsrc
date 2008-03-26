@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.569 2008/03/26 19:06:49 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.570 2008/03/26 21:20:52 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1058,3 +1058,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added databases/mysql4-server version 4.1.22nb2 [wiz 2008-03-26]
 	Updated print/tex-pgf to 1.10nb1 [is 2008-03-26]
 	Updated archivers/bzip2 to 1.0.5 [adrianp 2008-03-26]
+	Updated security/gnupg to 1.4.9 [adrianp 2008-03-26]
