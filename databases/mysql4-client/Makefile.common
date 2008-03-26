@@ -1,4 +1,6 @@
-# $NetBSD: Makefile.common,v 1.64 2008/03/26 13:22:00 wiz Exp $
+# $NetBSD: Makefile.common,v 1.65 2008/03/26 13:29:58 wiz Exp $
+#
+# used by databases/mysql4-server/Makefile
 
 DISTNAME=		mysql-4.1.22
 CATEGORIES=		databases
@@ -22,6 +24,8 @@ EXTRACT_USING=		pax
 MYSQL_USER?=		mysql
 MYSQL_GROUP?=		mysql
 MYSQL_DATADIR?=		${VARBASE}/mysql
+
+BUILD_DEFS+=		VARBASE
 
 PKG_USERS_VARS+=	MYSQL_USER
 PKG_GROUPS_VARS+=	MYSQL_GROUP
@@ -95,19 +99,21 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake perl:run
 LDFLAGS+=		${COMPILER_RPATH_FLAG}${PREFIX}/lib/mysql
 
-SUBST_CLASSES+=		mk scripts
+SUBST_CLASSES+=		mk
 SUBST_STAGE.mk=		post-extract
 SUBST_FILES.mk=		dbug/Makefile.in heap/Makefile.in isam/Makefile.in \
 			merge/Makefile.in mysys/Makefile.in \
 			strings/Makefile.in
 SUBST_SED.mk=		-e "/^install-exec:/s/install-pkglibLIBRARIES//"
 SUBST_MESSAGE.mk=	Fixing Makefiles.
+
+SUBST_CLASSES+=		scripts
 SUBST_STAGE.scripts=	post-extract
 SUBST_FILES.scripts=	scripts/mysql_install_db.sh scripts/mysqld_safe.sh \
 			scripts/mysql_secure_installation.sh \
 			support-files/mysql.server.sh
-SUBST_SED.scripts=	-e "s,chown,${CHOWN},g" \
-			-e "s,/bin/sh,${RCD_SCRIPTS_SHELL},g"
+SUBST_SED.scripts=	-e "s,chown,${CHOWN},g"
+SUBST_SED.scripts+=	-e "s,/bin/sh,${RCD_SCRIPTS_SHELL},g"
 SUBST_MESSAGE.scripts=	Fixing scripts.
 
 .include "../../devel/zlib/buildlink3.mk"
