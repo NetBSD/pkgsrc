@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.40 2008/02/21 11:52:21 xtraeme Exp $
+# $NetBSD: sites.mk,v 1.41 2008/03/26 06:43:14 wiz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -183,24 +183,18 @@ MASTER_SITE_APACHE+=    \
 	ftp://apache.secsup.org/pub/apache/dist/
 
 MASTER_SITE_MYSQL+=	\
-	ftp://ftp.easynet.be/mysql/Downloads/	\
 	ftp://ftp.fi.muni.cz/pub/mysql/Downloads/	\
 	http://mysql.mirrors.cybercity.dk/Downloads/	\
-	ftp://ftp.fh-wolfenbuettel.de/pub/database/mysql/Downloads/	\
 	ftp://ftp.gwdg.de/pub/misc/mysql/Downloads/	\
 	http://mirrors.ntua.gr/MySQL/Downloads/		\
 	ftp://ftp.ntua.gr/pub/databases/mysql/Downloads/	\
-	http://mysql.sote.hu/Downloads/	\
 	ftp://ftp.rhnet.is/pub/mysql/Downloads/	\
 	ftp://mirror.widexs.nl/pub/mysql/Downloads/	\
 	ftp://mirror.switch.ch/mirror/mysql/Downloads/	\
-	http://mysql.dp.ua/Downloads/	\
-	http://mysql.mirrored.ca/Downloads/	\
 	ftp://mirror.services.wisc.edu/mirrors/mysql/Downloads/	\
 	ftp://ftp.orst.edu/pub/mysql/Downloads/	\
 	http://mysql.mirrors.pair.com/Downloads/	\
 	ftp://ftp.linorg.usp.br/mysql/Downloads/	\
-	ftp://ftp.cbn.net.id/mirror/mysql/Downloads/	\
 	http://download.softagency.net/MySQL/Downloads/
 
 MASTER_SITE_DEBIAN+= \
