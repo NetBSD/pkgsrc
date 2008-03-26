@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2008/02/28 16:18:53 kefren Exp $
+$NetBSD: distinfo,v 1.15 2008/03/26 02:32:17 tnn Exp $
 
 SHA1 (vlc-0.8.6d.tar.bz2) = 63afd15cc782795c8d8f3de5edc614389465c577
 RMD160 (vlc-0.8.6d.tar.bz2) = 16c1998dbc30ad96bebdd8792d135b5f7899166e
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = 497a83bb0f1e2c095a81aa84115e66b56dd47e2c
 SHA1 (patch-ab) = c311b82c00f1eea164189a9759c9ca576faec671
 SHA1 (patch-ac) = 54526feb8f88cd1f61e40abd62ed5f68ce6b934b
 SHA1 (patch-ad) = dd92aeabc8d21ebf4113558b9d63f7737add2d91
+SHA1 (patch-ae) = 6282c601bb7c1f6c5b55f57a02e965216bd38cd3
