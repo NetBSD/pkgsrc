@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/03/26 13:22:00 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2008/03/26 13:29:58 wiz Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
 PKGREVISION=		3
@@ -15,7 +15,7 @@ CONFIGURE_ARGS+=	--without-extra-tools
 CONFIGURE_ARGS+=	--without-server
 CONFIGURE_ARGS+=	--enable-thread-safe-client
 UNWRAP_FILES=		scripts/mysql_config
-INFO_FILES=		# PLIST
+INFO_FILES=		yes
 
 INSTALLATION_DIRS=	${PKGINFODIR}
 
@@ -28,8 +28,6 @@ post-install:
 		${DESTDIR}${PREFIX}/share/examples/mysql/my-${f}.cnf
 .endfor
 
-# We need the full readline on NetBSD<2.0.
-INCOMPAT_READLINE+=	NetBSD-[0-1].*-*
 .include "../../devel/readline/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
