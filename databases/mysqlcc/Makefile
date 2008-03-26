@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/03/26 06:42:53 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2008/03/26 13:24:02 wiz Exp $
 #
 
 DISTNAME=		mysqlcc-0.9.4-src
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--with-openssl-includes=${SSLBASE}/include
 CONFIGURE_ARGS+=	--with-openssl-lib=${SSLBASE}/lib
 CONFIGURE_ENV+=		QMAKESPEC="${QTDIR}/mkspecs/netbsd-g++"
 
-MYSQL_VERSIONS_ACCEPTED=	50
+MYSQL_VERSIONS_ACCEPTED=	41
 
 INSTALLATION_DIRS=	bin
 
