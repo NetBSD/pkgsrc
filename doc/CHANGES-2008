@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.566 2008/03/26 06:36:17 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.567 2008/03/26 13:26:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1054,3 +1054,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed emulators/suse91_vmware [wiz 2008-03-25]
 	Removed emulators/suse91_x11 [wiz 2008-03-25]
 	Removed meta-pkgs/suse9 [wiz 2008-03-26]
+	Added databases/mysql4-client version 4.1.22nb3 [wiz 2008-03-26]
+	Added databases/mysql4-server version 4.1.22nb2 [wiz 2008-03-26]
