@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.22 2008/03/03 15:21:07 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2008/03/26 06:42:53 wiz Exp $
 #
 
 DISTNAME=		mysqlcc-0.9.4-src
 PKGNAME=		${DISTNAME:S/-src//}
 PKGREVISION=		9
 CATEGORIES=		databases
-MASTER_SITES=		${MASTER_SITE_MYSQL:=MySQLCC/}
+MASTER_SITES=		# ${MASTER_SITE_SOURCEFORGE:=mysqlcc/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.mysql.com/
+HOMEPAGE=		http://mysqlcc.sourceforge.net/
 COMMENT=		MySQL Control Center
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -25,7 +25,7 @@ CONFIGURE_ARGS+=	--with-openssl-includes=${SSLBASE}/include
 CONFIGURE_ARGS+=	--with-openssl-lib=${SSLBASE}/lib
 CONFIGURE_ENV+=		QMAKESPEC="${QTDIR}/mkspecs/netbsd-g++"
 
-MYSQL_VERSIONS_ACCEPTED=	41
+MYSQL_VERSIONS_ACCEPTED=	50
 
 INSTALLATION_DIRS=	bin
 
