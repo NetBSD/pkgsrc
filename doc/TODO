@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7156 2008/03/27 14:25:36 bjs Exp $
+$NetBSD: TODO,v 1.7157 2008/03/27 23:14:22 wiz Exp $
 
 Suggested new packages
 ======================
@@ -586,6 +586,7 @@ Suggested package updates
 	o ed-0.9
 	o ede-1.2
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
+	o efax-gtk-3.0.17
 	o egtk-0.3.6.2
 	o electric-8.06
 	o electricfence-2.4.16
@@ -607,7 +608,7 @@ Suggested package updates
 	o epsg-6.14
 	o epstool-3.08
 	o eric3-4.1.1 [now called eric4]
-	o erlang-12.2
+	o erlang-12b1
 	o erubis-2.5.0 [jlam]
 	o esh-0.8.5
 	o et-2.60
@@ -688,7 +689,7 @@ Suggested package updates
 	o glib2-2.16.1
 	o glibmm-2.16.0
 	o global-5.6
-	o glpk-4.27
+	o glpk-4.28
 	o gmime-2.2.18
 	o gmpc-0.15.1
 	o gnash-0.8.1 [pkg/37639]
@@ -697,7 +698,7 @@ Suggested package updates
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-applets-2.22.0
-	o gnome-audio-2.22.0
+	o gnome-audio-2.22.1
 	o gnome-build-0.2.4
 	o gnome-control-center-2.22.0
 	o gnome-games-2.22.0
@@ -714,7 +715,7 @@ Suggested package updates
 	o gnome-vfsmm-2.22.0
 	o gnomeicu-0.99.14
 	o gnu-crypto-2.1.0
-	o gnupg2-2.0.8
+	o gnupg2-2.0.9
 	o gnustep-1.14.0
 	o gnustep-examples-1.2.0
 	o gnustep-objc-1.4.0
@@ -774,6 +775,7 @@ Suggested package updates
 	o hesiod-3.1.0
 	o hexedit-1.2.12
 	o heyu-2.1.3
+	o highlight-2.6.9
 	o hobbitmon-4.0.4 [pkg/30484]
 	o hoe-1.5.1 [jlam]
 	o honeyd-1.5c
@@ -892,7 +894,7 @@ Suggested package updates
 	o liblive-2007.02.20
 	o libltdl-2.2
 	o liblzo-2.02
-	o libmatheval-1.1.5
+	o libmatheval-1.1.6
 	o libmusicbrainz-3.0.1
 	o libnasl-2.3.1
 	o libnids-1.21
@@ -1192,6 +1194,7 @@ Suggested package updates
 	o po4a-0.29
 	o poedit-1.4
 	o polsms-2.1.0
+	o poppler-0.8.0
 	o poppy-4.01
 	o poptop-1.3.0
 	o posh-0.5.5
@@ -1241,6 +1244,7 @@ Suggested package updates
 	o py-mutagen-1.11
 	o py-mysqldb-1.2.2 [pkg/38090]
 	o py-paramiko-1.7
+	o py-prewikka-0.9.14
 	o py-psyco-1.5.1
 	o py-pyrex-0.9.5.1a
 	o py-qt3-3.17.3
@@ -1253,7 +1257,7 @@ Suggested package updates
 	o py-sqlite-1.1.7
 	o py-sybase-0.37
 	o py-textile-2.0.11
-	o py-twisted-2.4.0
+	o py-twisted-8.0.1
 	o py-zconfig-2.3.1
 	o pygopherd-2.0.13
 	o pysol-4.82
@@ -1391,6 +1395,7 @@ Suggested package updates
 	o scrollz-1.9.99
 	o scsh-1.3.0
 	o seahorse-2.22.0
+	o seamonkey-1.1.9
 	o sendfile-20010424
 	o ser-0.9.6
 	o sge-6.1.2
