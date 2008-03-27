@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.33 2008/03/27 05:29:42 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.34 2008/03/27 05:34:31 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -248,8 +248,8 @@ _gem-build-buildroot:
 # 
 .PHONY: _gem-build-buildroot-check
 _gem-build-buildroot-check:
-	${RUN} test -f ${_RUBYGEM_BUILDROOT}${GEM_CACHE}/${GEM_NAME}.gem || \
-	${FAIL_MSG} "Installing ${GEM_NAME}.gem into buildroot failed."
+	${RUN} test -f ${_RUBYGEM_BUILDROOT}${GEM_CACHEDIR}/${GEM_NAME}.gem || \
+		${FAIL_MSG} "Installing ${GEM_NAME}.gem into buildroot failed."
 
 .if !empty(GEM_CLEANBUILD)
 .PHONY: _gem-build-cleanbuild
