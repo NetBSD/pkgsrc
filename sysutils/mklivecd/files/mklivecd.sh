@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: mklivecd.sh,v 1.47 2008/03/27 20:54:09 xtraeme Exp $
+# $NetBSD: mklivecd.sh,v 1.48 2008/03/27 21:08:26 xtraeme Exp $
 #
 # Copyright (c) 2004-2008 Juan Romero Pardines.
 # All rights reserved.
@@ -689,7 +689,7 @@ do_cdlive()
 	cat > $ISODIR/etc/rc.d/root <<_EOF_
 #!/bin/sh
 #
-# \$NetBSD: mklivecd.sh,v 1.47 2008/03/27 20:54:09 xtraeme Exp $
+# \$NetBSD: mklivecd.sh,v 1.48 2008/03/27 21:08:26 xtraeme Exp $
 # 
 
 # PROVIDE: root
@@ -1089,6 +1089,10 @@ _EOF_
                     > /dev/null 2>&1
 		showmsgstring
             fi
+
+            rm -f $kernel_stage_done
+            rm -f $base_stage_done
+            rm -f $chroot_stage_done
 	}
 	if [ -f $BASEDIR/$IMAGE_NAME.iso ]; then
 	    echo "* Found $IMAGE_NAME.iso."
