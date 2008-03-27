@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.32 2008/03/24 18:48:54 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.33 2008/03/27 05:29:42 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -112,6 +112,7 @@ GEM_HOME=	${PREFIX}/lib/ruby/gems/${RUBY_VER_DIR}
 GEM_NAME?=	${DISTNAME}
 GEM_LIBDIR=	${GEM_HOME}/gems/${GEM_NAME}
 GEM_DOCDIR=	${GEM_HOME}/doc/${GEM_NAME}
+GEM_CACHEDIR=	${GEM_HOME}/cache
 
 # Installed gems have wrapper scripts that call the right interpreter,
 # regardless of the #! line at the head of a script, so we can skip
@@ -199,6 +200,7 @@ PKG_FAIL_REASON=	"GEM_CLEANBUILD must be relative to "${GEM_LIBDIR:Q}"."
 
 _GEM_BUILD_TARGETS=	_gem-${GEM_BUILD}-build
 _GEM_BUILD_TARGETS+=	_gem-build-buildroot
+_GEM_BUILD_TARGETS+=	_gem-build-buildroot-check
 .if !empty(GEM_CLEANBUILD)
 _GEM_BUILD_TARGETS+=	_gem-build-cleanbuild
 .endif
@@ -213,6 +215,8 @@ gem-build: ${_GEM_BUILD_TARGETS}
 _gem-gemspec-build:
 	${RUN} cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${RUBYGEM} build ${GEM_SPECFILE}
+	${RUN} test -f ${WRKSRC}/${GEM_NAME}.gem || \
+		${FAIL_MSG} "Build of ${GEM_NAME}.gem failed."
 
 BUILD_TARGET?=	gem
 
@@ -237,6 +241,15 @@ _RUBYGEM_OPTIONS+=	-- --build-args ${CONFIGURE_ARGS}
 _gem-build-buildroot:
 	@${STEP_MSG} "Installing gem into buildroot"
 	${RUN} ${SETENV} ${MAKE_ENV} ${RUBYGEM} install ${_RUBYGEM_OPTIONS}
+
+# The ``gem'' command doesn't exit with a non-zero result even if the
+# install of the gem failed, so we do the check and return the proper exit
+# code ourselves.
+# 
+.PHONY: _gem-build-buildroot-check
+_gem-build-buildroot-check:
+	${RUN} test -f ${_RUBYGEM_BUILDROOT}${GEM_CACHE}/${GEM_NAME}.gem || \
+	${FAIL_MSG} "Installing ${GEM_NAME}.gem into buildroot failed."
 
 .if !empty(GEM_CLEANBUILD)
 .PHONY: _gem-build-cleanbuild
