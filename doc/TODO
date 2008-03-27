@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7155 2008/03/26 13:36:44 wiz Exp $
+$NetBSD: TODO,v 1.7156 2008/03/27 14:25:36 bjs Exp $
 
 Suggested new packages
 ======================
@@ -771,7 +771,6 @@ Suggested package updates
 	o hdf-4.2r2
 	o heel-0.6.0 [jlam]
 	o hercules-3.04.1
-	o herrie-2.0
 	o hesiod-3.1.0
 	o hexedit-1.2.12
 	o heyu-2.1.3
