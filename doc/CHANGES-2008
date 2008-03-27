@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.572 2008/03/27 13:17:40 tron Exp $
+$NetBSD: CHANGES-2008,v 1.573 2008/03/27 14:20:32 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1061,3 +1061,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/gnupg to 1.4.9 [adrianp 2008-03-26]
 	Updated mail/getmail to 4.8.1 [schmonz 2008-03-27]
 	Updated www/firefox-bin to 2.0.0.13 [tron 2008-03-27]
+	Updated filesystems/fuse-curlftpfs to 0.9.1 [bjs 2008-03-27]
