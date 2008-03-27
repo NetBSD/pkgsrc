@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2008/02/22 16:59:56 jlam Exp $
+# $NetBSD: options.mk,v 1.6 2008/03/27 14:24:36 bjs Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.herrie
 PKG_SUPPORTED_OPTIONS=		curl libao modplug libspiff sndfile	\
@@ -67,7 +67,6 @@ CONFIGURE_ARGS+=	no_vorbis
 .endif
 
 .if !empty(PKG_OPTIONS:Mwide-curses)
-CONFIGURE_ARGS+=	ncursesw
 .  include "../../devel/ncursesw/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	ncurses

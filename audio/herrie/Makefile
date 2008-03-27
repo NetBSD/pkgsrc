@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2008/02/28 11:58:47 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2008/03/27 14:24:36 bjs Exp $
 #
 
-DISTNAME=	herrie-1.9.1
-PKGREVISION=	1
+DISTNAME=	herrie-2.0
 CATEGORIES=	audio
 MASTER_SITES=	http://herrie.info/distfiles/
 EXTRACT_SUFX=	.tar.bz2
@@ -30,7 +29,7 @@ RESOLV_AUTO_VARS=	yes
 USE_FEATURES=		snprintf regcomp
 USE_NCURSES=		yes
 
-AUTO_MKDIRS=			yes
+AUTO_MKDIRS=		yes
 
 .include "options.mk"
 
@@ -52,5 +51,4 @@ post-install:
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/resolv.buildlink3.mk"
-
 .include "../../mk/bsd.pkg.mk"
