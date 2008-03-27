@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.574 2008/03/27 14:25:03 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.575 2008/03/27 20:56:38 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1063,3 +1063,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/firefox-bin to 2.0.0.13 [tron 2008-03-27]
 	Updated filesystems/fuse-curlftpfs to 0.9.1 [bjs 2008-03-27]
 	Updated audio/herrie to 2.0 [bjs 2008-03-27]
+	Updated sysutils/mklivecd to 0.16 [xtraeme 2008-03-27]
