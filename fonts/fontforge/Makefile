@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2008/03/09 10:02:43 adam Exp $
+# $NetBSD: Makefile,v 1.45 2008/03/28 05:56:35 schmonz Exp $
 
 DISTNAME=	fontforge_full-${VERSION}
 PKGNAME=	fontforge-${VERSION}
@@ -21,6 +21,7 @@ USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-freetype-src
+CONFIGURE_ARGS+=	--without-python
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 # checks for X11/Intrinsic.h
