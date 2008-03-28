@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.170 2008/03/09 18:28:54 tnn Exp $
+# $NetBSD: Makefile,v 1.171 2008/03/28 18:46:26 xtraeme Exp $
 #
 
 COMMENT=	Emulators for other operating systems
@@ -152,43 +152,6 @@ SUBDIR+=	suse100_resmgr
 SUBDIR+=	suse100_slang
 SUBDIR+=	suse100_vmware
 SUBDIR+=	suse100_x11
-SUBDIR+=	suse91_32_aspell
-SUBDIR+=	suse91_32_base
-SUBDIR+=	suse91_32_compat
-SUBDIR+=	suse91_32_expat
-SUBDIR+=	suse91_32_fontconfig
-SUBDIR+=	suse91_32_freetype2
-SUBDIR+=	suse91_32_gdk-pixbuf
-SUBDIR+=	suse91_32_glx
-SUBDIR+=	suse91_32_gtk
-SUBDIR+=	suse91_32_gtk2
-SUBDIR+=	suse91_32_libjpeg
-SUBDIR+=	suse91_32_libpng
-SUBDIR+=	suse91_32_libtiff
-SUBDIR+=	suse91_32_locale
-SUBDIR+=	suse91_32_openmotif
-SUBDIR+=	suse91_32_slang
-SUBDIR+=	suse91_32_vmware
-SUBDIR+=	suse91_32_x11
-SUBDIR+=	suse91_aspell
-SUBDIR+=	suse91_base
-SUBDIR+=	suse91_compat
-SUBDIR+=	suse91_expat
-SUBDIR+=	suse91_fontconfig
-SUBDIR+=	suse91_freetype2
-SUBDIR+=	suse91_gdk-pixbuf
-SUBDIR+=	suse91_glx
-SUBDIR+=	suse91_gtk
-SUBDIR+=	suse91_gtk2
-SUBDIR+=	suse91_libjpeg
-SUBDIR+=	suse91_libpng
-SUBDIR+=	suse91_libtiff
-#SUBDIR+=	suse91_linux		# only contains Makefile fragments
-SUBDIR+=	suse91_locale
-SUBDIR+=	suse91_openmotif
-SUBDIR+=	suse91_slang
-SUBDIR+=	suse91_vmware
-SUBDIR+=	suse91_x11
 SUBDIR+=	swarm
 SUBDIR+=	tme
 SUBDIR+=	tuxnes
