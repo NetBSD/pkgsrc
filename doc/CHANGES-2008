@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.575 2008/03/27 20:56:38 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.576 2008/03/28 14:24:21 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1064,3 +1064,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated filesystems/fuse-curlftpfs to 0.9.1 [bjs 2008-03-27]
 	Updated audio/herrie to 2.0 [bjs 2008-03-27]
 	Updated sysutils/mklivecd to 0.16 [xtraeme 2008-03-27]
+	Updated sysutils/acpi-iasl to 20061109 [xtraeme 2008-03-28]
