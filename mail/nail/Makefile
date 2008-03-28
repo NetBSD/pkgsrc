@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2008/03/28 12:06:10 obache Exp $
+# $NetBSD: Makefile,v 1.39 2008/03/28 13:26:00 joerg Exp $
 
 DISTNAME=	nail-11.25
 PKGREVISION=	1
@@ -31,12 +31,11 @@ EGDIR=		${PREFIX}/share/examples/nail
 
 CONF_FILES=	${EGDIR}/nail.rc ${PKG_SYSCONFDIR}/nail.rc
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${EGDIR}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/nail ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/nail.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/nail.rc ${DESTDIR}${EGDIR}
 
 .include "../../converters/libiconv/buildlink3.mk"
