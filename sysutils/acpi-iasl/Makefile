@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/08/17 20:14:55 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/03/28 14:22:15 xtraeme Exp $
 #
 
 DISTNAME=	acpica-unix-${ACPI_IASL_VERSION}
@@ -10,7 +10,7 @@ MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://www.intel.com/technology/iapc/acpi/downloads.htm
 COMMENT=	Compiler of Intel ACPI CA - Unix Build Environment
 
-ACPI_IASL_VERSION=	20060217
+ACPI_IASL_VERSION=	20061109
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
