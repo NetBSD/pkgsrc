@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2008/03/04 17:57:19 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2008/03/28 12:06:10 obache Exp $
 
 DISTNAME=	nail-11.25
 PKGREVISION=	1
@@ -34,7 +34,7 @@ CONF_FILES=	${EGDIR}/nail.rc ${PKG_SYSCONFDIR}/nail.rc
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/nail $${DESTDIR}{PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/nail ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/nail.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/nail.rc ${DESTDIR}${EGDIR}
