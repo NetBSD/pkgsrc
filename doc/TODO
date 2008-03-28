@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7157 2008/03/27 23:14:22 wiz Exp $
+$NetBSD: TODO,v 1.7158 2008/03/28 14:24:21 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -391,7 +391,6 @@ Suggested package updates
 	o abcm2ps-5.8.0
 	o abcmidi-20080104
 	o acme-091
-	o acpi-iasl-20060217 [pkg/38038]
 	o acr-0.5.2
 	o acroread-8.1.2
 	o adns-1.4
