@@ -1,10 +1,22 @@
-#Process this file with autoconf to produce a configure script.
+dnl Process this file with autoconf to produce a configure script.
 
-# M4 magic to pull in the version from a separate file
-# so we don't have to edit this file for routine version updates
-m4_define([ARCHIVE_VERS],m4_include([version]))
+dnl First, define all of the version numbers up front.
+dnl In particular, this allows the version macro to be used in AC_INIT
 
-AC_INIT([libarchive],ARCHIVE_VERS(),[kientzle@freebsd.org])
+dnl These first two version numbers are updated automatically on each release.
+m4_define([LIBARCHIVE_VERSION_S],[2.5.0b])
+m4_define([LIBARCHIVE_VERSION_N],[2005000])
+
+dnl bsdtar versioning tracks libarchive
+m4_define([BSDTAR_VERSION_S],LIBARCHIVE_VERSION_S())
+dnl bsdcpio is still versioning separately
+m4_define([BSDCPIO_VERSION_S],[0.9.9a])
+
+#
+# Now starts the "real" configure script.
+#
+
+AC_INIT([libarchive],LIBARCHIVE_VERSION_S(),[kientzle@freebsd.org])
 # Make sure the srcdir contains "libarchive" directory
 AC_CONFIG_SRCDIR([libarchive])
 # Use auxiliary subscripts from this subdirectory (cleans up root)
@@ -12,49 +24,42 @@ AC_CONFIG_AUX_DIR([config.aux])
 # Must follow AC_CONFIG macros above...
 AM_INIT_AUTOMAKE()
 
-# Shell magic to compute Major/minor/etc from full version stamp.
-# This gets a little hairy...
-AC_CONFIG_COMMANDS_PRE([
-# Autoconf assigns the version above to PACKAGE_VERSION
-LIBARCHIVE_VERSION_STRING=$PACKAGE_VERSION
-BSDTAR_VERSION_STRING=$PACKAGE_VERSION
-# For a little while longer, cpio is considered immature
-BSDCPIO_VERSION_STRING=0.9.0
-
-# Peel off first three numbers major.minor.revision
-ARCHIVE_MAJOR=`echo $LIBARCHIVE_VERSION_STRING | sed -e 's/[[^0-9]]/./g' -e 's/\..*//'`
-ARCHIVE_MINOR=`echo $LIBARCHIVE_VERSION_STRING | sed -e 's/[[^0-9]]/./g' -e 's/^[[0-9]]*\.//' -e 's/\..*//'`
-ARCHIVE_REVISION=`echo $LIBARCHIVE_VERSION_STRING | sed -e 's/[[^0-9]]/./g' -e 's/^[[0-9]]*\.[[0-9]]*\.//' -e 's/\..*//'`
-# Major/minor indicate the API version
-LIBARCHIVE_VERSION=`printf "%d%03d%03d" ${ARCHIVE_MAJOR} ${ARCHIVE_MINOR} ${ARCHIVE_REVISION}`
-# Libtool versioning uses different conventions on different platforms.
-# FreeBSD libtool still uses this old (and very dumb) convention,
-# which doesn't match FreeBSD system conventions, nor anything else
-# I'm familiar with.
+# Libtool versioning uses different conventions on different
+# platforms.  At least on FreeBSD, libtool uses an overly complex
+# convention that attempts to solve problems that most people just
+# don't have and which just causes confusion for most end users.
+ARCHIVE_MAJOR=$(( LIBARCHIVE_VERSION_N() / 1000000 ))
+ARCHIVE_MINOR=$(( (LIBARCHIVE_VERSION_N() / 1000) % 1000 ))
+ARCHIVE_REVISION=$(( LIBARCHIVE_VERSION_N() % 1000 ))
 ARCHIVE_LIBTOOL_MAJOR=`echo $((${ARCHIVE_MAJOR} + ${ARCHIVE_MINOR}))`
 ARCHIVE_LIBTOOL_VERSION=$ARCHIVE_LIBTOOL_MAJOR:$ARCHIVE_REVISION:$ARCHIVE_MINOR
 
-# Make sure the following get defined in config.h properly
-AC_DEFINE_UNQUOTED([LIBARCHIVE_VERSION_STRING],
-	"$LIBARCHIVE_VERSION_STRING",
+# Stick the version numbers into config.h
+AC_DEFINE([LIBARCHIVE_VERSION_STRING],"LIBARCHIVE_VERSION_S()",
 	[Version number of libarchive])
-AC_DEFINE_UNQUOTED([LIBARCHIVE_VERSION],
-	"$LIBARCHIVE_VERSION",
+AC_DEFINE_UNQUOTED([LIBARCHIVE_VERSION_NUMBER],"LIBARCHIVE_VERSION_N()",
 	[Version number of libarchive as a single integer])
-AC_DEFINE_UNQUOTED([BSDCPIO_VERSION_STRING],
-	"$BSDCPIO_VERSION_STRING",
+AC_DEFINE([BSDCPIO_VERSION_STRING],"BSDCPIO_VERSION_S()",
 	[Version number of bsdcpio])
-AC_DEFINE_UNQUOTED([BSDTAR_VERSION_STRING],
-	"$BSDTAR_VERSION_STRING",
+AC_DEFINE([BSDTAR_VERSION_STRING],"BSDTAR_VERSION_S()",
 	[Version number of bsdtar])
-])
+
+# The shell variables here must be the same as the AC_SUBST() variables
+# below, but the shell variable names apparently cannot be the same as
+# the m4 macro names above.  Why?  Ask autoconf.
+BSDCPIO_VERSION_STRING=BSDCPIO_VERSION_S()
+BSDTAR_VERSION_STRING=BSDTAR_VERSION_S()
+LIBARCHIVE_VERSION_STRING=LIBARCHIVE_VERSION_S()
+LIBARCHIVE_VERSION_NUMBER=LIBARCHIVE_VERSION_N()
 
 # Substitute the above version numbers into the various files below.
+# Yes, I believe this is the fourth time we define what are essentially
+# the same symbols.  Why? Ask autoconf.
 AC_SUBST(ARCHIVE_LIBTOOL_VERSION)
 AC_SUBST(BSDCPIO_VERSION_STRING)
 AC_SUBST(BSDTAR_VERSION_STRING)
 AC_SUBST(LIBARCHIVE_VERSION_STRING)
-AC_SUBST(LIBARCHIVE_VERSION)
+AC_SUBST(LIBARCHIVE_VERSION_NUMBER)
 
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_FILES([Makefile])
@@ -235,8 +240,8 @@ AC_FUNC_STAT
 AC_FUNC_STRERROR_R
 AC_FUNC_STRFTIME
 AC_FUNC_VPRINTF
-AC_CHECK_FUNCS([chflags chown fchdir fchflags fchmod fchown futimes])
-AC_CHECK_FUNCS([ftruncate geteuid getopt_long])
+AC_CHECK_FUNCS([chflags chown fchdir fchflags fchmod fchown fstat])
+AC_CHECK_FUNCS([ftruncate futimes geteuid getopt_long getpid])
 AC_CHECK_FUNCS([lchflags lchmod lchown])
 AC_CHECK_FUNCS([lutimes memmove memset mkdir mkfifo mknod])
 AC_CHECK_FUNCS([nl_langinfo poll select setenv setlocale])
