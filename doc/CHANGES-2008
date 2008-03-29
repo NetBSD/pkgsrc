@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.577 2008/03/28 20:40:13 kleink Exp $
+$NetBSD: CHANGES-2008,v 1.578 2008/03/29 03:01:15 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1066,3 +1066,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/mklivecd to 0.16 [xtraeme 2008-03-27]
 	Updated sysutils/acpi-iasl to 20061109 [xtraeme 2008-03-28]
 	Updated textproc/p5-XML-Atom-SimpleFeed to 0.8nb1 [kleink 2008-03-28]
+	Updated print/xpdf to 3.02pl2 [obache 2008-03-29]
