@@ -33,8 +33,8 @@ is a mode indicator from the following list:
 .TP
 \fB\-i\fP
 Input.
-Read an archive from standard input and extract the contents to disk or
-(if the
+Read an archive from standard input (unless overriden) and extract the
+contents to disk or (if the
 \fB\-t\fP
 option is specified)
 list the contents to standard output.
@@ -44,7 +44,7 @@ one of the patterns will be extracted.
 \fB\-o\fP
 Output.
 Read a list of filenames from standard input and produce a new archive
-on standard output containing the specified items.
+on standard output (unless overriden) containing the specified items.
 .TP
 \fB\-p\fP
 Pass-through.
@@ -54,6 +54,11 @@ specified directory.
 Unless specifically stated otherwise, options are applicable in
 all operating modes.
 .TP
+\fB\-A\fP
+(o mode only)
+Append to the specified archive.
+(Not yet implemented.)
+.TP
 \fB\-a\fP
 (o and p modes)
 Reset access times on files after they are read.
@@ -61,6 +66,12 @@ Reset access times on files after they are read.
 \fB\-B\fP
 (o mode only)
 Block output to records of 5120 bytes.
+.TP
+\fB\-C\fP \fIsize\fP
+(o mode only)
+Block output to records of
+\fIsize\fP
+bytes.
 .TP
 \fB\-c\fP
 (o mode only)
@@ -71,6 +82,16 @@ Equivalent to
 \fB\-d\fP
 (i and p modes)
 Create directories as necessary.
+.TP
+\fB\-E\fP \fIfile\fP
+(i mode only)
+Read list of file name patterns from
+\fIfile\fP
+to list and extract.
+.TP
+\fB\-F\fP \fIfile\fP
+Read archive from or write archive to
+\fIfile\fP.
 .TP
 \fB\-f\fP \fIpattern\fP
 (i mode only)
@@ -106,9 +127,20 @@ formats currently supported by the underlying
 \fBlibarchive\fP(3)
 library.
 .TP
+\fB\-I\fP \fIfile\fP
+Read archive from
+\fIfile\fP.
+.TP
 \fB\-i\fP
 Input mode.
 See above for description.
+.TP
+\fB\--insecure\fP
+(i and p mode only)
+Disable security checks during extraction or copying.
+This allows extraction via symbolic links and path names containing
+Sq ..
+in the name.
 .TP
 \fB\-L\fP
 (o and p modes)
@@ -125,6 +157,10 @@ instead of copying.
 (i and p modes)
 Set file modification time on created files to match
 those in the source.
+.TP
+\fB\-O\fP \fIfile\fP
+Write archive to
+\fIfile\fP.
 .TP
 \fB\-o\fP
 Output mode.
@@ -188,15 +224,19 @@ Print the program version information and exit.
 .TP
 \fB\-y\fP
 (o mode only)
-Compress the archive with bzip2-compatible compression before
-writing to stdout.
+Compress the archive with bzip2-compatible compression before writing it.
 In input mode, this option is ignored;
 bzip2 compression is recognized automatically on input.
 .TP
+\fB\-Z\fP
+(o mode only)
+Compress the archive with compress-compatible compression before writing it.
+In input mode, this option is ignored;
+compression is recognized automatically on input.
+.TP
 \fB\-z\fP
 (o mode only)
-Compress the archive with gzip-compatible compression before writing
-it to stdout.
+Compress the archive with gzip-compatible compression before writing it.
 In input mode, this option is ignored;
 gzip compression is recognized automatically on input.
 .SH ENVIRONMENT

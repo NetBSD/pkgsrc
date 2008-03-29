@@ -14,12 +14,14 @@ DESCRIPTION
      and can create tar, pax, cpio, ar, and shar archives.
 
      The first option to cpio is a mode indicator from the following list:
-     -i      Input.  Read an archive from standard input and extract the con-
-	     tents to disk or (if the -t option is specified) list the con-
-	     tents to standard output.	If one or more file patterns are spec-
-	     ified, only files matching one of the patterns will be extracted.
+     -i      Input.  Read an archive from standard input (unless overriden)
+	     and extract the contents to disk or (if the -t option is speci-
+	     fied) list the contents to standard output.  If one or more file
+	     patterns are specified, only files matching one of the patterns
+	     will be extracted.
      -o      Output.  Read a list of filenames from standard input and produce
-	     a new archive on standard output containing the specified items.
+	     a new archive on standard output (unless overriden) containing
+	     the specified items.
      -p      Pass-through.  Read a list of filenames from standard input and
 	     copy the files to the specified directory.
 
@@ -27,14 +29,27 @@ OPTIONS
      Unless specifically stated otherwise, options are applicable in all oper-
      ating modes.
 
+     -A      (o mode only) Append to the specified archive.  (Not yet imple-
+	     mented.)
+
      -a      (o and p modes) Reset access times on files after they are read.
 
      -B      (o mode only) Block output to records of 5120 bytes.
+
+     -C size
+	     (o mode only) Block output to records of size bytes.
 
      -c      (o mode only) Use the old POSIX portable character format.
 	     Equivalent to --format odc.
 
      -d      (i and p modes) Create directories as necessary.
+
+     -E file
+	     (i mode only) Read list of file name patterns from file to list
+	     and extract.
+
+     -F file
+	     Read archive from or write archive to file.
 
      -f pattern
 	     (i mode only) Ignore files that match pattern.
@@ -54,7 +69,15 @@ OPTIONS
 	     complete information about the formats currently supported by the
 	     underlying libarchive(3) library.
 
+     -I file
+	     Read archive from file.
+
      -i      Input mode.  See above for description.
+
+     --insecure
+	     (i and p mode only) Disable security checks during extraction or
+	     copying.  This allows extraction via symbolic links and path
+	     names containing `..' in the name.
 
      -L      (o and p modes) All symbolic links will be followed.  Normally,
 	     symbolic links are archived and copied as symbolic links.	With
@@ -66,6 +89,9 @@ OPTIONS
 
      -m      (i and p modes) Set file modification time on created files to
 	     match those in the source.
+
+     -O file
+	     Write archive to file.
 
      -o      Output mode.  See above for description.
 
@@ -105,12 +131,16 @@ OPTIONS
 	     Print the program version information and exit.
 
      -y      (o mode only) Compress the archive with bzip2-compatible compres-
-	     sion before writing to stdout.  In input mode, this option is
-	     ignored; bzip2 compression is recognized automatically on input.
+	     sion before writing it.  In input mode, this option is ignored;
+	     bzip2 compression is recognized automatically on input.
+
+     -Z      (o mode only) Compress the archive with compress-compatible com-
+	     pression before writing it.  In input mode, this option is
+	     ignored; compression is recognized automatically on input.
 
      -z      (o mode only) Compress the archive with gzip-compatible compres-
-	     sion before writing it to stdout.	In input mode, this option is
-	     ignored; gzip compression is recognized automatically on input.
+	     sion before writing it.  In input mode, this option is ignored;
+	     gzip compression is recognized automatically on input.
 
 ENVIRONMENT
      The following environment variables affect the execution of cpio:

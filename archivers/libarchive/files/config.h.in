@@ -129,6 +129,9 @@
 /* Define to 1 if you have the `fsetxattr' function. */
 #undef HAVE_FSETXATTR
 
+/* Define to 1 if you have the `fstat' function. */
+#undef HAVE_FSTAT
+
 /* Define to 1 if you have the `ftruncate' function. */
 #undef HAVE_FTRUNCATE
 
@@ -140,6 +143,9 @@
 
 /* Define to 1 if you have the `getopt_long' function. */
 #undef HAVE_GETOPT_LONG
+
+/* Define to 1 if you have the `getpid' function. */
+#undef HAVE_GETPID
 
 /* Define to 1 if you have the `getxattr' function. */
 #undef HAVE_GETXATTR
@@ -398,7 +404,7 @@
 #undef HAVE_ZLIB_H
 
 /* Version number of libarchive as a single integer */
-#undef LIBARCHIVE_VERSION
+#undef LIBARCHIVE_VERSION_NUMBER
 
 /* Version number of libarchive */
 #undef LIBARCHIVE_VERSION_STRING
