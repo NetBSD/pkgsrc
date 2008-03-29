@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.580 2008/03/29 13:55:49 obache Exp $
+$NetBSD: CHANGES-2008,v 1.581 2008/03/29 14:18:04 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1070,3 +1070,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/mongrel to 1.0.1nb1 [taca 2008-03-29]
 	Removed devel/ruby-fastthread [taca 2008-03-29]
 	Updated games/et to 2.56nb2 [obache 2008-03-29]
+	Updated security/sudo to 1.6.9p15 [taca 2008-03-29]
