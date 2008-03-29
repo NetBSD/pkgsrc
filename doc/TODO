@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7158 2008/03/28 14:24:21 xtraeme Exp $
+$NetBSD: TODO,v 1.7159 2008/03/29 14:19:22 taca Exp $
 
 Suggested new packages
 ======================
@@ -1446,7 +1446,6 @@ Suggested package updates
 	o stratagus-2.2.2
 	o stunnel-4.21
 	o subtitleripper-0.3.4
-	o sudo-1.6.9p13
 	o sunbird-0.5 [ghen]
 	o suse_base-10.3
 	o swfdec-0.6.0
