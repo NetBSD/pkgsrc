@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2008/03/04 06:59:03 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2008/03/29 13:55:34 obache Exp $
 #
 
 DISTNAME=	et-linux-2.56-2.x86
 PKGNAME=	et-2.56
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	ftp://ftp.idsoftware.com/idstuff/et/linux/
 EXTRACT_SUFX=	.run
@@ -13,7 +13,7 @@ HOMEPAGE=	http://games.activision.com/games/wolfenstein/
 COMMENT=	Wolfenstein: Enemy Territory for Linux
 
 EMUL_PLATFORMS=		linux-i386
-EMUL_MODULES.linux=	base
+EMUL_MODULES.linux=	base glx
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
