@@ -48,7 +48,7 @@ DIST_COMMON = README $(am__configure_deps) $(include_HEADERS) \
 	config.aux/ltmain.sh config.aux/missing config.aux/ylwrap \
 	tar/getdate.c
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
-am__aclocal_m4_deps = $(top_srcdir)/version $(top_srcdir)/configure.ac
+am__aclocal_m4_deps = $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 am__CONFIG_DISTCLEAN_FILES = config.status config.cache config.log \
@@ -110,6 +110,7 @@ am_libarchive_la_OBJECTS =  \
 	libarchive/libarchive_la-archive_write_open_filename.lo \
 	libarchive/libarchive_la-archive_write_open_memory.lo \
 	libarchive/libarchive_la-archive_write_set_compression_bzip2.lo \
+	libarchive/libarchive_la-archive_write_set_compression_compress.lo \
 	libarchive/libarchive_la-archive_write_set_compression_gzip.lo \
 	libarchive/libarchive_la-archive_write_set_compression_none.lo \
 	libarchive/libarchive_la-archive_write_set_compression_program.lo \
@@ -223,6 +224,7 @@ am__objects_1 =  \
 	libarchive/libarchive_test-archive_write_open_filename.$(OBJEXT) \
 	libarchive/libarchive_test-archive_write_open_memory.$(OBJEXT) \
 	libarchive/libarchive_test-archive_write_set_compression_bzip2.$(OBJEXT) \
+	libarchive/libarchive_test-archive_write_set_compression_compress.$(OBJEXT) \
 	libarchive/libarchive_test-archive_write_set_compression_gzip.$(OBJEXT) \
 	libarchive/libarchive_test-archive_write_set_compression_none.$(OBJEXT) \
 	libarchive/libarchive_test-archive_write_set_compression_program.$(OBJEXT) \
@@ -279,6 +281,7 @@ am_libarchive_test_OBJECTS = $(am__objects_1) \
 	libarchive/test/libarchive_test-test_read_truncated.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_tar_filenames.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_tar_large.$(OBJEXT) \
+	libarchive/test/libarchive_test-test_write_compress.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_write_compress_program.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_write_disk.$(OBJEXT) \
 	libarchive/test/libarchive_test-test_write_disk_hardlink.$(OBJEXT) \
@@ -376,7 +379,7 @@ INSTALL_PROGRAM = @INSTALL_PROGRAM@
 INSTALL_SCRIPT = @INSTALL_SCRIPT@
 INSTALL_STRIP_PROGRAM = @INSTALL_STRIP_PROGRAM@
 LDFLAGS = @LDFLAGS@
-LIBARCHIVE_VERSION = @LIBARCHIVE_VERSION@
+LIBARCHIVE_VERSION_NUMBER = @LIBARCHIVE_VERSION_NUMBER@
 LIBARCHIVE_VERSION_STRING = @LIBARCHIVE_VERSION_STRING@
 LIBOBJS = @LIBOBJS@
 LIBS = @LIBS@
@@ -458,7 +461,7 @@ AUTOMAKE_OPTIONS = foreign subdir-objects
 #
 lib_LTLIBRARIES = libarchive.la
 man_MANS = $(libarchive_man_MANS) $(bsdtar_man_MANS) $(bsdcpio_man_MANS)
-BUILT_SOURCES = libarchive/test/list.h tar/test/list.h cpio/test/list.h $(libarchive_test_REFFILES) $(bsdcpio_test_REFFILES)
+BUILT_SOURCES = libarchive/test/list.h tar/test/list.h cpio/test/list.h
 TESTS_ENVIRONMENT = $(libarchive_TESTS_ENVIRONMENT) $(bsdtar_TESTS_ENVIRONMENT) $(bsdcpio_TESTS_ENVIRONMENT)
 # Always build and test both bsdtar and bsdcpio as part of 'distcheck'
 DISTCHECK_CONFIGURE_FLAGS = --enable-bsdtar --enable-bsdcpio
@@ -481,7 +484,6 @@ EXTRA_DIST = version			\
 #
 # Extra rules for cleanup
 #
-CLEANFILES = $(libarchive_test_REFFILES) $(bsdcpio_test_REFFILES)
 DISTCLEANFILES = tar/getdate.c tar/getdate.h	\
 	libarchive/test/list.h			\
 	tar/test/list.h				\
@@ -545,6 +547,7 @@ libarchive_la_SOURCES = \
 	libarchive/archive_write_open_memory.c			\
 	libarchive/archive_write_private.h			\
 	libarchive/archive_write_set_compression_bzip2.c	\
+	libarchive/archive_write_set_compression_compress.c	\
 	libarchive/archive_write_set_compression_gzip.c		\
 	libarchive/archive_write_set_compression_none.c		\
 	libarchive/archive_write_set_compression_program.c	\
@@ -638,6 +641,7 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_read_truncated.c			\
 	libarchive/test/test_tar_filenames.c			\
 	libarchive/test/test_tar_large.c			\
+	libarchive/test/test_write_compress.c			\
 	libarchive/test/test_write_compress_program.c		\
 	libarchive/test/test_write_disk.c			\
 	libarchive/test/test_write_disk_hardlink.c		\
@@ -653,29 +657,19 @@ libarchive_test_SOURCES = \
 	libarchive/test/test_write_format_tar_empty.c		\
 	libarchive/test/test_write_open_memory.c
 
-libarchive_test_CPPFLAGS = -I$(top_srcdir)/libarchive -I$(top_builddir)/libarchive/test
-libarchive_TESTS_ENVIRONMENT = LIBARCHIVE_TEST_FILES=`cd $(top_builddir);/bin/pwd`
+libarchive_test_CPPFLAGS = -I$(top_builddir)/libarchive -I$(top_srcdir)/libarchive -I$(top_builddir)/libarchive/test
+libarchive_TESTS_ENVIRONMENT = LIBARCHIVE_TEST_FILES=`cd $(top_srcdir);/bin/pwd`/libarchive/test
 libarchive_test_EXTRA_DIST = \
 	libarchive/test/test_compat_gtar_1.tgz.uu			\
 	libarchive/test/test_compat_tar_hardlink_1.tar.uu		\
 	libarchive/test/test_compat_zip_1.zip.uu			\
+	libarchive/test/test_pax_filename_encoding.tar.gz.uu		\
 	libarchive/test/test_read_format_gtar_sparse_1_13.tgz.uu	\
 	libarchive/test/test_read_format_gtar_sparse_1_17.tgz.uu	\
 	libarchive/test/test_read_format_gtar_sparse_1_17_posix00.tgz.uu \
 	libarchive/test/test_read_format_gtar_sparse_1_17_posix01.tgz.uu \
 	libarchive/test/test_read_format_gtar_sparse_1_17_posix10.tgz.uu \
 	libarchive/test/test_read_format_gtar_sparse_1_17_posix10_modified.tar.uu
-
-libarchive_test_REFFILES = \
-	test_compat_gtar_1.tgz			\
-	test_compat_tar_hardlink_1.tar		\
-	test_compat_zip_1.zip			\
-	test_read_format_gtar_sparse_1_13.tgz	\
-	test_read_format_gtar_sparse_1_17.tgz	\
-	test_read_format_gtar_sparse_1_17_posix00.tgz \
-	test_read_format_gtar_sparse_1_17_posix01.tgz \
-	test_read_format_gtar_sparse_1_17_posix10.tgz \
-	test_read_format_gtar_sparse_1_17_posix10_modified.tar
 
 
 #
@@ -729,11 +723,11 @@ bsdtar_test_SOURCES = \
 bsdtar_test_EXTRA_DIST = \
 	tar/test/old
 
-bsdtar_test_CPPFLAGS = -I$(top_srcdir)/libarchive -I$(top_builddir)/tar/test
+bsdtar_test_CPPFLAGS = -I$(top_builddir)/tar/test
 @BUILD_BSDTAR_FALSE@bsdtar_test_programs = 
 @BUILD_BSDTAR_TRUE@bsdtar_test_programs = bsdtar_test
 @BUILD_BSDTAR_FALSE@bsdtar_TESTS_ENVIRONMENT = 
-@BUILD_BSDTAR_TRUE@bsdtar_TESTS_ENVIRONMENT = BSDTAR=`cd $(top_builddir);/bin/pwd`/bsdtar BSDTAR_TEST_FILES=`cd $(top_builddir);/bin/pwd`
+@BUILD_BSDTAR_TRUE@bsdtar_TESTS_ENVIRONMENT = BSDTAR=`cd $(top_builddir);/bin/pwd`/bsdtar BSDTAR_TEST_FILES=`cd $(top_srcdir);/bin/pwd`/tar/test
 
 #
 #
@@ -800,22 +794,11 @@ bsdcpio_test_SOURCES = \
 	cpio/test/test_owner_parse.c				\
 	cpio/test/test_pathmatch.c
 
-bsdcpio_test_CPPFLAGS = -I$(top_srcdir)/libarchive -I$(top_builddir)/cpio/test
+bsdcpio_test_CPPFLAGS = -I$(top_builddir)/libarchive -I$(top_srcdir)/libarchive -I$(top_builddir)/cpio/test
 @BUILD_BSDCPIO_FALSE@bsdcpio_test_programs = 
 @BUILD_BSDCPIO_TRUE@bsdcpio_test_programs = bsdcpio_test
 @BUILD_BSDCPIO_FALSE@bsdcpio_TESTS_ENVIRONMENT = 
-@BUILD_BSDCPIO_TRUE@bsdcpio_TESTS_ENVIRONMENT = BSDCPIO=`cd $(top_builddir);/bin/pwd`/bsdcpio BSDCPIO_TEST_FILES=`cd $(top_builddir);/bin/pwd`
-bsdcpio_test_REFFILES = \
-	test_gcpio_compat_ref.bin	\
-	test_gcpio_compat_ref.crc	\
-	test_gcpio_compat_ref.newc	\
-	test_gcpio_compat_ref.ustar	\
-	test_option_f.cpio		\
-	test_option_m.cpio		\
-	test_option_t.cpio		\
-	test_option_t.stdout		\
-	test_option_tv.stdout
-
+@BUILD_BSDCPIO_TRUE@bsdcpio_TESTS_ENVIRONMENT = BSDCPIO=`cd $(top_builddir);/bin/pwd`/bsdcpio BSDCPIO_TEST_FILES=`cd $(top_srcdir);/bin/pwd`/cpio/test
 bsdcpio_test_EXTRA_DIST = \
 	cpio/test/test_gcpio_compat_ref.bin.uu	\
 	cpio/test/test_gcpio_compat_ref.crc.uu	\
@@ -1028,6 +1011,9 @@ libarchive/libarchive_la-archive_write_open_memory.lo:  \
 	libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
 libarchive/libarchive_la-archive_write_set_compression_bzip2.lo:  \
+	libarchive/$(am__dirstamp) \
+	libarchive/$(DEPDIR)/$(am__dirstamp)
+libarchive/libarchive_la-archive_write_set_compression_compress.lo:  \
 	libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
 libarchive/libarchive_la-archive_write_set_compression_gzip.lo:  \
@@ -1341,6 +1327,9 @@ libarchive/libarchive_test-archive_write_open_memory.$(OBJEXT):  \
 libarchive/libarchive_test-archive_write_set_compression_bzip2.$(OBJEXT):  \
 	libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
+libarchive/libarchive_test-archive_write_set_compression_compress.$(OBJEXT):  \
+	libarchive/$(am__dirstamp) \
+	libarchive/$(DEPDIR)/$(am__dirstamp)
 libarchive/libarchive_test-archive_write_set_compression_gzip.$(OBJEXT):  \
 	libarchive/$(am__dirstamp) \
 	libarchive/$(DEPDIR)/$(am__dirstamp)
@@ -1512,6 +1501,9 @@ libarchive/test/libarchive_test-test_tar_filenames.$(OBJEXT):  \
 libarchive/test/libarchive_test-test_tar_large.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
+libarchive/test/libarchive_test-test_write_compress.$(OBJEXT):  \
+	libarchive/test/$(am__dirstamp) \
+	libarchive/test/$(DEPDIR)/$(am__dirstamp)
 libarchive/test/libarchive_test-test_write_compress_program.$(OBJEXT):  \
 	libarchive/test/$(am__dirstamp) \
 	libarchive/test/$(DEPDIR)/$(am__dirstamp)
@@ -1666,6 +1658,8 @@ mostlyclean-compile:
 	-rm -f libarchive/libarchive_la-archive_write_open_memory.lo
 	-rm -f libarchive/libarchive_la-archive_write_set_compression_bzip2.$(OBJEXT)
 	-rm -f libarchive/libarchive_la-archive_write_set_compression_bzip2.lo
+	-rm -f libarchive/libarchive_la-archive_write_set_compression_compress.$(OBJEXT)
+	-rm -f libarchive/libarchive_la-archive_write_set_compression_compress.lo
 	-rm -f libarchive/libarchive_la-archive_write_set_compression_gzip.$(OBJEXT)
 	-rm -f libarchive/libarchive_la-archive_write_set_compression_gzip.lo
 	-rm -f libarchive/libarchive_la-archive_write_set_compression_none.$(OBJEXT)
@@ -1729,6 +1723,7 @@ mostlyclean-compile:
 	-rm -f libarchive/libarchive_test-archive_write_open_filename.$(OBJEXT)
 	-rm -f libarchive/libarchive_test-archive_write_open_memory.$(OBJEXT)
 	-rm -f libarchive/libarchive_test-archive_write_set_compression_bzip2.$(OBJEXT)
+	-rm -f libarchive/libarchive_test-archive_write_set_compression_compress.$(OBJEXT)
 	-rm -f libarchive/libarchive_test-archive_write_set_compression_gzip.$(OBJEXT)
 	-rm -f libarchive/libarchive_test-archive_write_set_compression_none.$(OBJEXT)
 	-rm -f libarchive/libarchive_test-archive_write_set_compression_program.$(OBJEXT)
@@ -1784,6 +1779,7 @@ mostlyclean-compile:
 	-rm -f libarchive/test/libarchive_test-test_read_truncated.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_tar_filenames.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_tar_large.$(OBJEXT)
+	-rm -f libarchive/test/libarchive_test-test_write_compress.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_write_compress_program.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_write_disk.$(OBJEXT)
 	-rm -f libarchive/test/libarchive_test-test_write_disk_hardlink.$(OBJEXT)
@@ -1884,6 +1880,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_la-archive_write_open_filename.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_la-archive_write_open_memory.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_la-archive_write_set_compression_bzip2.Plo@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_la-archive_write_set_compression_compress.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_la-archive_write_set_compression_gzip.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_la-archive_write_set_compression_none.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_la-archive_write_set_compression_program.Plo@am__quote@
@@ -1935,6 +1932,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_test-archive_write_open_filename.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_test-archive_write_open_memory.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_test-archive_write_set_compression_bzip2.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_test-archive_write_set_compression_compress.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_test-archive_write_set_compression_gzip.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_test-archive_write_set_compression_none.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/$(DEPDIR)/libarchive_test-archive_write_set_compression_program.Po@am__quote@
@@ -1990,6 +1988,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_read_truncated.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_tar_filenames.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_tar_large.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_write_compress.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_write_compress_program.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_write_disk.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@libarchive/test/$(DEPDIR)/libarchive_test-test_write_disk_hardlink.Po@am__quote@
@@ -2316,6 +2315,13 @@ libarchive/libarchive_la-archive_write_set_compression_bzip2.lo: libarchive/arch
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/archive_write_set_compression_bzip2.c' object='libarchive/libarchive_la-archive_write_set_compression_bzip2.lo' libtool=yes @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/libarchive_la-archive_write_set_compression_bzip2.lo `test -f 'libarchive/archive_write_set_compression_bzip2.c' || echo '$(srcdir)/'`libarchive/archive_write_set_compression_bzip2.c
+
+libarchive/libarchive_la-archive_write_set_compression_compress.lo: libarchive/archive_write_set_compression_compress.c
+@am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/libarchive_la-archive_write_set_compression_compress.lo -MD -MP -MF libarchive/$(DEPDIR)/libarchive_la-archive_write_set_compression_compress.Tpo -c -o libarchive/libarchive_la-archive_write_set_compression_compress.lo `test -f 'libarchive/archive_write_set_compression_compress.c' || echo '$(srcdir)/'`libarchive/archive_write_set_compression_compress.c
+@am__fastdepCC_TRUE@	mv -f libarchive/$(DEPDIR)/libarchive_la-archive_write_set_compression_compress.Tpo libarchive/$(DEPDIR)/libarchive_la-archive_write_set_compression_compress.Plo
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/archive_write_set_compression_compress.c' object='libarchive/libarchive_la-archive_write_set_compression_compress.lo' libtool=yes @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/libarchive_la-archive_write_set_compression_compress.lo `test -f 'libarchive/archive_write_set_compression_compress.c' || echo '$(srcdir)/'`libarchive/archive_write_set_compression_compress.c
 
 libarchive/libarchive_la-archive_write_set_compression_gzip.lo: libarchive/archive_write_set_compression_gzip.c
 @am__fastdepCC_TRUE@	$(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_la_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/libarchive_la-archive_write_set_compression_gzip.lo -MD -MP -MF libarchive/$(DEPDIR)/libarchive_la-archive_write_set_compression_gzip.Tpo -c -o libarchive/libarchive_la-archive_write_set_compression_gzip.lo `test -f 'libarchive/archive_write_set_compression_gzip.c' || echo '$(srcdir)/'`libarchive/archive_write_set_compression_gzip.c
@@ -3549,6 +3555,20 @@ libarchive/libarchive_test-archive_write_set_compression_bzip2.obj: libarchive/a
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/libarchive_test-archive_write_set_compression_bzip2.obj `if test -f 'libarchive/archive_write_set_compression_bzip2.c'; then $(CYGPATH_W) 'libarchive/archive_write_set_compression_bzip2.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/archive_write_set_compression_bzip2.c'; fi`
 
+libarchive/libarchive_test-archive_write_set_compression_compress.o: libarchive/archive_write_set_compression_compress.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/libarchive_test-archive_write_set_compression_compress.o -MD -MP -MF libarchive/$(DEPDIR)/libarchive_test-archive_write_set_compression_compress.Tpo -c -o libarchive/libarchive_test-archive_write_set_compression_compress.o `test -f 'libarchive/archive_write_set_compression_compress.c' || echo '$(srcdir)/'`libarchive/archive_write_set_compression_compress.c
+@am__fastdepCC_TRUE@	mv -f libarchive/$(DEPDIR)/libarchive_test-archive_write_set_compression_compress.Tpo libarchive/$(DEPDIR)/libarchive_test-archive_write_set_compression_compress.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/archive_write_set_compression_compress.c' object='libarchive/libarchive_test-archive_write_set_compression_compress.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/libarchive_test-archive_write_set_compression_compress.o `test -f 'libarchive/archive_write_set_compression_compress.c' || echo '$(srcdir)/'`libarchive/archive_write_set_compression_compress.c
+
+libarchive/libarchive_test-archive_write_set_compression_compress.obj: libarchive/archive_write_set_compression_compress.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/libarchive_test-archive_write_set_compression_compress.obj -MD -MP -MF libarchive/$(DEPDIR)/libarchive_test-archive_write_set_compression_compress.Tpo -c -o libarchive/libarchive_test-archive_write_set_compression_compress.obj `if test -f 'libarchive/archive_write_set_compression_compress.c'; then $(CYGPATH_W) 'libarchive/archive_write_set_compression_compress.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/archive_write_set_compression_compress.c'; fi`
+@am__fastdepCC_TRUE@	mv -f libarchive/$(DEPDIR)/libarchive_test-archive_write_set_compression_compress.Tpo libarchive/$(DEPDIR)/libarchive_test-archive_write_set_compression_compress.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/archive_write_set_compression_compress.c' object='libarchive/libarchive_test-archive_write_set_compression_compress.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/libarchive_test-archive_write_set_compression_compress.obj `if test -f 'libarchive/archive_write_set_compression_compress.c'; then $(CYGPATH_W) 'libarchive/archive_write_set_compression_compress.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/archive_write_set_compression_compress.c'; fi`
+
 libarchive/libarchive_test-archive_write_set_compression_gzip.o: libarchive/archive_write_set_compression_gzip.c
 @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/libarchive_test-archive_write_set_compression_gzip.o -MD -MP -MF libarchive/$(DEPDIR)/libarchive_test-archive_write_set_compression_gzip.Tpo -c -o libarchive/libarchive_test-archive_write_set_compression_gzip.o `test -f 'libarchive/archive_write_set_compression_gzip.c' || echo '$(srcdir)/'`libarchive/archive_write_set_compression_gzip.c
 @am__fastdepCC_TRUE@	mv -f libarchive/$(DEPDIR)/libarchive_test-archive_write_set_compression_gzip.Tpo libarchive/$(DEPDIR)/libarchive_test-archive_write_set_compression_gzip.Po
@@ -4319,6 +4339,20 @@ libarchive/test/libarchive_test-test_tar_large.obj: libarchive/test/test_tar_lar
 @AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_tar_large.obj `if test -f 'libarchive/test/test_tar_large.c'; then $(CYGPATH_W) 'libarchive/test/test_tar_large.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_tar_large.c'; fi`
 
+libarchive/test/libarchive_test-test_write_compress.o: libarchive/test/test_write_compress.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_write_compress.o -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_write_compress.Tpo -c -o libarchive/test/libarchive_test-test_write_compress.o `test -f 'libarchive/test/test_write_compress.c' || echo '$(srcdir)/'`libarchive/test/test_write_compress.c
+@am__fastdepCC_TRUE@	mv -f libarchive/test/$(DEPDIR)/libarchive_test-test_write_compress.Tpo libarchive/test/$(DEPDIR)/libarchive_test-test_write_compress.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_write_compress.c' object='libarchive/test/libarchive_test-test_write_compress.o' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_write_compress.o `test -f 'libarchive/test/test_write_compress.c' || echo '$(srcdir)/'`libarchive/test/test_write_compress.c
+
+libarchive/test/libarchive_test-test_write_compress.obj: libarchive/test/test_write_compress.c
+@am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_write_compress.obj -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_write_compress.Tpo -c -o libarchive/test/libarchive_test-test_write_compress.obj `if test -f 'libarchive/test/test_write_compress.c'; then $(CYGPATH_W) 'libarchive/test/test_write_compress.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_write_compress.c'; fi`
+@am__fastdepCC_TRUE@	mv -f libarchive/test/$(DEPDIR)/libarchive_test-test_write_compress.Tpo libarchive/test/$(DEPDIR)/libarchive_test-test_write_compress.Po
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	source='libarchive/test/test_write_compress.c' object='libarchive/test/libarchive_test-test_write_compress.obj' libtool=no @AMDEPBACKSLASH@
+@AMDEP_TRUE@@am__fastdepCC_FALSE@	DEPDIR=$(DEPDIR) $(CCDEPMODE) $(depcomp) @AMDEPBACKSLASH@
+@am__fastdepCC_FALSE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -c -o libarchive/test/libarchive_test-test_write_compress.obj `if test -f 'libarchive/test/test_write_compress.c'; then $(CYGPATH_W) 'libarchive/test/test_write_compress.c'; else $(CYGPATH_W) '$(srcdir)/libarchive/test/test_write_compress.c'; fi`
+
 libarchive/test/libarchive_test-test_write_compress_program.o: libarchive/test/test_write_compress_program.c
 @am__fastdepCC_TRUE@	$(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(libarchive_test_CPPFLAGS) $(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS) -MT libarchive/test/libarchive_test-test_write_compress_program.o -MD -MP -MF libarchive/test/$(DEPDIR)/libarchive_test-test_write_compress_program.Tpo -c -o libarchive/test/libarchive_test-test_write_compress_program.o `test -f 'libarchive/test/test_write_compress_program.c' || echo '$(srcdir)/'`libarchive/test/test_write_compress_program.c
 @am__fastdepCC_TRUE@	mv -f libarchive/test/$(DEPDIR)/libarchive_test-test_write_compress_program.Tpo libarchive/test/$(DEPDIR)/libarchive_test-test_write_compress_program.Po
@@ -4977,7 +5011,6 @@ install-strip:
 mostlyclean-generic:
 
 clean-generic:
-	-test -z "$(CLEANFILES)" || rm -f $(CLEANFILES)
 
 distclean-generic:
 	-test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)
@@ -5104,6 +5137,7 @@ dist-hook:
 	cd $(distdir)/doc && ./update.sh
 
 distclean-local:
+	-rm -rf .ref
 	-rm -rf autom4te.cache/
 	-rm -f *~
 
@@ -5113,66 +5147,11 @@ distclean-local:
 libarchive/test/list.h: Makefile
 	cat $(top_srcdir)/libarchive/test/test_*.c | grep DEFINE_TEST > libarchive/test/list.h
 
-# BSD make prefers $> here, GNU make prefers $<; $? works for both.
-test_compat_gtar_1.tgz: libarchive/test/test_compat_gtar_1.tgz.uu
-	cat $? | uudecode
-
-test_compat_tar_hardlink_1.tar: libarchive/test/test_compat_tar_hardlink_1.tar.uu
-	cat $? | uudecode
-
-test_compat_zip_1.zip: libarchive/test/test_compat_zip_1.zip.uu
-	cat $? | uudecode
-
-test_read_format_gtar_sparse_1_13.tgz: libarchive/test/test_read_format_gtar_sparse_1_13.tgz.uu
-	cat $? | uudecode
-
-test_read_format_gtar_sparse_1_17.tgz: libarchive/test/test_read_format_gtar_sparse_1_17.tgz.uu
-	cat $? | uudecode
-
-test_read_format_gtar_sparse_1_17_posix00.tgz: libarchive/test/test_read_format_gtar_sparse_1_17_posix00.tgz.uu
-	cat $? | uudecode
-
-test_read_format_gtar_sparse_1_17_posix01.tgz: libarchive/test/test_read_format_gtar_sparse_1_17_posix01.tgz.uu
-	cat $? | uudecode
-
-test_read_format_gtar_sparse_1_17_posix10.tgz: libarchive/test/test_read_format_gtar_sparse_1_17_posix10.tgz.uu
-	cat $? | uudecode
-
-test_read_format_gtar_sparse_1_17_posix10_modified.tar: libarchive/test/test_read_format_gtar_sparse_1_17_posix10_modified.tar.uu
-	cat $? | uudecode
-
 tar/test/list.h: Makefile
 	cat $(top_srcdir)/tar/test/test_*.c | grep DEFINE_TEST > tar/test/list.h
 
 cpio/test/list.h: Makefile
 	cat $(top_srcdir)/cpio/test/test_*.c | grep DEFINE_TEST > cpio/test/list.h
-
-test_gcpio_compat_ref.bin: cpio/test/test_gcpio_compat_ref.bin.uu
-	cat $? | uudecode
-
-test_gcpio_compat_ref.crc: cpio/test/test_gcpio_compat_ref.crc.uu
-	cat $? | uudecode
-
-test_gcpio_compat_ref.newc: cpio/test/test_gcpio_compat_ref.newc.uu
-	cat $? | uudecode
-
-test_gcpio_compat_ref.ustar: cpio/test/test_gcpio_compat_ref.ustar.uu
-	cat $? | uudecode
-
-test_option_f.cpio: cpio/test/test_option_f.cpio.uu
-	cat $? | uudecode
-
-test_option_m.cpio: cpio/test/test_option_m.cpio.uu
-	cat $? | uudecode
-
-test_option_t.cpio: cpio/test/test_option_t.cpio.uu
-	cat $? | uudecode
-
-test_option_t.stdout: cpio/test/test_option_t.stdout.uu
-	cat $? | uudecode
-
-test_option_tv.stdout: cpio/test/test_option_tv.stdout.uu
-	cat $? | uudecode
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.
 .NOEXPORT:
