@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2008/01/18 05:08:28 tnn Exp $
+# $NetBSD: Makefile,v 1.118 2008/03/29 21:55:19 markd Exp $
 
 DISTNAME=	pine4.64
 PKGNAME=	pine-4.64
@@ -66,6 +66,8 @@ PATCH_DIST_STRIP=	-p1
 .if !empty(PKG_OPTIONS:Mpinepwd)
 CFLAGS+=		-DPASSFILE=\\\".pinepwd\\\"
 .endif
+
+REPLACE_PERL+=		contrib/utils/pwd2pine
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
