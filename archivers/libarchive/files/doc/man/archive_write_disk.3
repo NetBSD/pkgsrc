@@ -35,10 +35,12 @@
 ("struct archive *" "dev_t" "ino_t");
 \fIint\fP
 .RE
-.nh
-\fBarchive_write_disk_set_group_lookup\fP
-.hy
-("struct archive *" "void *" "gid_t (*)(void *, const char *gname, gid_t gid)" "void (*cleanup)(void *)");
+Fo archive_write_disk_set_group_lookup
+Fa "struct archive *"
+Fa "void *"
+Fa "gid_t (*)(void *, const char *gname, gid_t gid)"
+Fa "void (*cleanup)(void *)"
+Fc
 \fIint\fP
 .RE
 .nh
@@ -47,10 +49,12 @@
 ("struct archive *");
 \fIint\fP
 .RE
-.nh
-\fBarchive_write_disk_set_user_lookup\fP
-.hy
-("struct archive *" "void *" "uid_t (*)(void *, const char *uname, uid_t uid)" "void (*cleanup)(void *)");
+Fo archive_write_disk_set_user_lookup
+Fa "struct archive *"
+Fa "void *"
+Fa "uid_t (*)(void *, const char *uname, uid_t uid)"
+Fa "void (*cleanup)(void *)"
+Fc
 \fIint\fP
 .RE
 .nh
@@ -206,13 +210,16 @@ Note that paths ending in
 \fI\& ..\fP
 always cause an error, regardless of this flag.
 .TP
+Xo
 .nh
 \fBarchive_write_disk_set_group_lookup\fP
 .hy
-(, .nh);
+(,);
+.nh
 \fBarchive_write_disk_set_user_lookup\fP
 .hy
 ();
+Xc
 The
 Tn struct archive_entry
 objects contain both names and ids that can be used to identify users

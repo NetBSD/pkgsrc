@@ -145,7 +145,7 @@ DESCRIPTION
      archive_read_support_format_all(), archive_read_support_format_cpio(),
 	     archive_read_support_format_empty(),
 	     archive_read_support_format_iso9660(),
-	     archive_read_support_format_tar,()
+	     archive_read_support_format_tar(),
 	     archive_read_support_format_zip()
 	     Enables support---including auto-detection code---for the speci-
 	     fied archive format.  For example,
@@ -254,11 +254,11 @@ DESCRIPTION
 CLIENT CALLBACKS
      The callback functions must match the following prototypes:
 
-	   typedef ssize_t archive_read_callback(struct archive *, void
-	   *client_data, const void **buffer)
+	   typedef ssize_t archive_read_callback(struct archive *,
+	   void *client_data, const void **buffer)
 
-	   typedef int archive_skip_callback(struct archive *, void
-	   *client_data, size_t request)
+	   typedef int archive_skip_callback(struct archive *,
+	   void *client_data, size_t request)
 
 	   typedef int archive_open_callback(struct archive *, void
 	   *client_data)
