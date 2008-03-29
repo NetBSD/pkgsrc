@@ -17,6 +17,8 @@
 \fBarchive_entry_copy_gname_w\fP,
 \fBarchive_entry_copy_hardlink\fP,
 \fBarchive_entry_copy_hardlink_w\fP,
+\fBarchive_entry_copy_link\fP,
+\fBarchive_entry_copy_link_w\fP,
 \fBarchive_entry_copy_pathname_w\fP,
 \fBarchive_entry_copy_stat\fP,
 \fBarchive_entry_copy_symlink\fP,
@@ -75,16 +77,24 @@
 .br
 \fIvoid\fP
 .RE
-.nh
-\fBarchive_entry_acl_add_entry\fP
-.hy
-("struct archive_entry *" "int type" "int permset" "int tag" "int qual" "const char *name");
+Fo archive_entry_acl_add_entry
+Fa "struct archive_entry *"
+Fa "int type"
+Fa "int permset"
+Fa "int tag"
+Fa "int qual"
+Fa "const char *name"
+Fc
 \fIvoid\fP
 .RE
-.nh
-\fBarchive_entry_acl_add_entry_w\fP
-.hy
-("struct archive_entry *" "int type" "int permset" "int tag" "int qual" "const wchar_t *name");
+Fo archive_entry_acl_add_entry_w
+Fa "struct archive_entry *"
+Fa "int type"
+Fa "int permset"
+Fa "int tag"
+Fa "int qual"
+Fa "const wchar_t *name"
+Fc
 \fIvoid\fP
 .RE
 .nh
@@ -99,16 +109,26 @@
 ("struct archive_entry *" "int type");
 \fIint\fP
 .RE
-.nh
-\fBarchive_entry_acl_next\fP
-.hy
-("struct archive_entry *" "int want_type" "int *type" "int *permset" "int *tag" "int *qual" "const char **name");
+Fo archive_entry_acl_next
+Fa "struct archive_entry *"
+Fa "int want_type"
+Fa "int *type"
+Fa "int *permset"
+Fa "int *tag"
+Fa "int *qual"
+Fa "const char **name"
+Fc
 \fIint\fP
 .RE
-.nh
-\fBarchive_entry_acl_next_w\fP
-.hy
-("struct archive_entry *" "int want_type" "int *type" "int *permset" "int *tag" "int *qual" "const wchar_t **name");
+Fo archive_entry_acl_next_w
+Fa "struct archive_entry *"
+Fa "int want_type"
+Fa "int *type"
+Fa "int *permset"
+Fa "int *tag"
+Fa "int *qual"
+Fa "const wchar_t **name"
+Fc
 \fIint\fP
 .RE
 .nh
@@ -237,10 +257,11 @@
 ("struct archive_entry *");
 \fIvoid\fP
 .RE
-.nh
-\fBarchive_entry_fflags\fP
-.hy
-("struct archive_entry *" "unsigned long *set" "unsigned long *clear");
+Fo archive_entry_fflags
+Fa "struct archive_entry *"
+Fa "unsigned long *set"
+Fa "unsigned long *clear"
+Fc
 \fIconst char *\fP
 .RE
 .nh
@@ -357,10 +378,11 @@
 ("struct archive_entry *" "unsigned int");
 \fIvoid\fP
 .RE
-.nh
-\fBarchive_entry_set_fflags\fP
-.hy
-("struct archive_entry *" "unsigned long set" "unsigned long clear");
+Fo archive_entry_set_fflags
+Fa "struct archive_entry *"
+Fa "unsigned long set"
+Fa "unsigned long clear"
+Fc
 \fIvoid\fP
 .RE
 .nh

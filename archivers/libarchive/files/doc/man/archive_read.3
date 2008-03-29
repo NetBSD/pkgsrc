@@ -71,10 +71,10 @@
 ("struct archive *");
 \fIint\fP
 .RE
-.nh
-\fBarchive_read_support_compression_program\fP
-.hy
-("struct archive *" "const char *cmd");
+Fo archive_read_support_compression_program
+Fa "struct archive *"
+Fa "const char *cmd"
+Fc
 \fIint\fP
 .RE
 .nh
@@ -113,16 +113,23 @@
 ("struct archive *");
 \fIint\fP
 .RE
-.nh
-\fBarchive_read_open\fP
-.hy
-("struct archive *" "void *client_data" "archive_open_callback *" "archive_read_callback *" "archive_close_callback *");
+Fo archive_read_open
+Fa "struct archive *"
+Fa "void *client_data"
+Fa "archive_open_callback *"
+Fa "archive_read_callback *"
+Fa "archive_close_callback *"
+Fc
 \fIint\fP
 .RE
-.nh
-\fBarchive_read_open2\fP
-.hy
-("struct archive *" "void *client_data" "archive_open_callback *" "archive_read_callback *" "archive_skip_callback *" "archive_close_callback *");
+Fo archive_read_open2
+Fa "struct archive *"
+Fa "void *client_data"
+Fa "archive_open_callback *"
+Fa "archive_read_callback *"
+Fa "archive_skip_callback *"
+Fa "archive_close_callback *"
+Fc
 \fIint\fP
 .RE
 .nh
@@ -137,10 +144,11 @@
 ("struct archive *" "int fd" "size_t block_size");
 \fIint\fP
 .RE
-.nh
-\fBarchive_read_open_filename\fP
-.hy
-("struct archive *" "const char *filename" "size_t block_size");
+Fo archive_read_open_filename
+Fa "struct archive *"
+Fa "const char *filename"
+Fa "size_t block_size"
+Fc
 \fIint\fP
 .RE
 .nh
@@ -161,10 +169,12 @@
 ("struct archive *" "void *buff" "size_t len");
 \fIint\fP
 .RE
-.nh
-\fBarchive_read_data_block\fP
-.hy
-("struct archive *" "const void **buff" "size_t *len" "off_t *offset");
+Fo archive_read_data_block
+Fa "struct archive *"
+Fa "const void **buff"
+Fa "size_t *len"
+Fa "off_t *offset"
+Fc
 \fIint\fP
 .RE
 .nh
@@ -185,16 +195,18 @@
 ("struct archive *" "int fd");
 \fIint\fP
 .RE
-.nh
-\fBarchive_read_extract\fP
-.hy
-("struct archive *" "struct archive_entry *" "int flags");
+Fo archive_read_extract
+Fa "struct archive *"
+Fa "struct archive_entry *"
+Fa "int flags"
+Fc
 \fIvoid\fP
 .RE
-.nh
-\fBarchive_read_extract_set_progress_callback\fP
-.hy
-("struct archive *" "void (*func)(void *)" "void *user_data");
+Fo archive_read_extract_set_progress_callback
+Fa "struct archive *"
+Fa "void (*func)(void *)"
+Fa "void *user_data"
+Fc
 \fIint\fP
 .RE
 .nh
@@ -225,22 +237,28 @@ Allocates and initializes a
 Tn struct archive
 object suitable for reading from an archive.
 .TP
+Xo
 .nh
 \fBarchive_read_support_compression_all\fP
 .hy
-(, .nh);
+(,);
+.nh
 \fBarchive_read_support_compression_bzip2\fP
 .hy
-(, .nh);
+(,);
+.nh
 \fBarchive_read_support_compression_compress\fP
 .hy
-(, .nh);
+(,);
+.nh
 \fBarchive_read_support_compression_gzip\fP
 .hy
-(, .nh);
+(,);
+.nh
 \fBarchive_read_support_compression_none\fP
 .hy
 ();
+Xc
 Enables auto-detection code and decompression support for the
 specified compression.
 Note that
@@ -262,25 +280,32 @@ Note that this disables automatic detection of the compression format,
 so it makes no sense to specify this in conjunction with any other
 decompression option.
 .TP
+Xo
 .nh
 \fBarchive_read_support_format_all\fP
 .hy
-(, .nh);
+(,);
+.nh
 \fBarchive_read_support_format_cpio\fP
 .hy
-(, .nh);
+(,);
+.nh
 \fBarchive_read_support_format_empty\fP
 .hy
-(, .nh);
+(,);
+.nh
 \fBarchive_read_support_format_iso9660\fP
 .hy
-(, .nh);
-\fBarchive_read_support_format_tar,\fP
+(,);
+.nh
+\fBarchive_read_support_format_tar\fP
 .hy
-(.nh);
+(,);
+.nh
 \fBarchive_read_support_format_zip\fP
 .hy
 ();
+Xc
 Enables support---including auto-detection code---for the
 specified archive format.
 For example,
@@ -572,17 +597,19 @@ The callback functions must match the following prototypes:
 .IP
 \fItypedef ssize_t\fP
 .RE
-.nh
-\fBarchive_read_callback\fP
-.hy
-("struct archive *" "void *client_data" "const void **buffer");
+Fo archive_read_callback
+Fa "struct archive *"
+Fa "void *client_data"
+Fa "const void **buffer"
+Fc
 .IP
 \fItypedef int\fP
 .RE
-.nh
-\fBarchive_skip_callback\fP
-.hy
-("struct archive *" "void *client_data" "size_t request");
+Fo archive_skip_callback
+Fa "struct archive *"
+Fa "void *client_data"
+Fa "size_t request"
+Fc
 .IP
 \fItypedef int\fP
 .RE

@@ -91,7 +91,7 @@ separated by whitespace.
 .SS Keywords
 After the filename, a full or relative entry consists of zero
 or more whitespace-separated keyword definitions.
-Each such definitions consists of a key from the following
+Each such definition consists of a key from the following
 list immediately followed by an '=' sign
 and a value.
 Software programs reading mtree files should warn about
@@ -117,14 +117,17 @@ If no flags are to be set the string
 ``none''
 may be used to override the current default.
 .TP
-\fBignore\fP
-Ignore any file hierarchy below this file.
-.TP
 \fBgid\fP
 The file group as a numeric value.
 .TP
 \fBgname\fP
 The file group as a symbolic name.
+.TP
+\fBignore\fP
+Ignore any file hierarchy below this file.
+.TP
+\fBlink\fP
+The file the symbolic link is expected to reference.
 .TP
 \fBmd5\fP
 The MD5 message digest of the file.
@@ -132,6 +135,29 @@ The MD5 message digest of the file.
 \fBmd5digest\fP
 A synonym for
 \fBmd5\fP.
+.TP
+\fBmode\fP
+The current file's permissions as a numeric (octal) or symbolic
+value.
+.TP
+\fBnlink\fP
+The number of hard links the file is expected to have.
+.TP
+\fBnochange\fP
+Make sure this file or directory exists but otherwise ignore all attributes.
+.TP
+\fBripemd160digest\fP
+The
+Tn RIPEMD160
+message digest of the file.
+.TP
+\fBrmd160\fP
+A synonym for
+\fBripemd160digest\fP.
+.TP
+\fBrmd160digest\fP
+A synonym for
+\fBripemd160digest\fP.
 .TP
 \fBsha1\fP
 The
@@ -155,40 +181,8 @@ message digest of the file.
 A synonym for
 \fBsha256\fP.
 .TP
-\fBripemd160digest\fP
-The
-Tn RIPEMD160
-message digest of the file.
-.TP
-\fBrmd160\fP
-A synonym for
-\fBripemd160digest\fP.
-.TP
-\fBrmd160digest\fP
-A synonym for
-\fBripemd160digest\fP.
-.TP
-\fBmode\fP
-The current file's permissions as a numeric (octal) or symbolic
-value.
-.TP
-\fBnlink\fP
-The number of hard links the file is expected to have.
-.TP
-\fBnochange\fP
-Make sure this file or directory exists but otherwise ignore all attributes.
-.TP
-\fBuid\fP
-The file owner as a numeric value.
-.TP
-\fBuname\fP
-The file owner as a symbolic name.
-.TP
 \fBsize\fP
 The size, in bytes, of the file.
-.TP
-\fBlink\fP
-The file the symbolic link is expected to reference.
 .TP
 \fBtime\fP
 The last modification time of the file.
@@ -216,6 +210,12 @@ symbolic link
 .TP
 \fBsocket\fP
 socket
+.TP
+\fBuid\fP
+The file owner as a numeric value.
+.TP
+\fBuname\fP
+The file owner as a symbolic name.
 .SH SEE ALSO
 \fBcksum\fP(1),
 \fBfind\fP(1),

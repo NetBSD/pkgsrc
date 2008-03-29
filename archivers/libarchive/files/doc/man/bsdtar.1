@@ -132,6 +132,16 @@ but before extracting entries from the archive.
 (c and r modes only)
 Issue a warning message unless all links to each file are archived.
 .TP
+\fB\--chroot\fP (\fB\-W\fP \fBchroot\fP)
+(x mode only)
+.nh
+\fBchroot\fP
+.hy
+();
+to the current directory after processing any
+\fB\-C\fP
+options and before extracting any files.
+.TP
 \fB\--exclude\fP \fIpattern\fP (\fB\-W\fP \fBexclude\fP=\fIpattern\fP)
 Do not process files or directories that match the
 specified pattern.
@@ -161,16 +171,6 @@ If not specified, the default tape device will be used.
 FreeBSD,
 the default tape device is
 \fI/dev/sa0\fP.)
-.TP
-\fB\--fast-read\fP (\fB\-W\fP \fBfast-read\fP)
-(x and t mode only)
-Extract or list only the first archive entry that matches each pattern
-or filename operand.
-Exit as soon as each specified pattern or filename has been matched.
-By default, the archive is always read to the very end, since
-there can be multiple entries with the same name and, by convention,
-later entries overwrite earlier entries.
-This option is provided as a performance optimization.
 .TP
 \fB\-H\fP
 (c and r mode only)
@@ -331,6 +331,16 @@ is being run by root, the default is to restore the owner unless the
 \fB\-o\fP
 option is also specified.
 .TP
+\fB\-q\fP (\fB\--fast-read\fP)
+(x and t mode only)
+Extract or list only the first archive entry that matches each pattern
+or filename operand.
+Exit as soon as each specified pattern or filename has been matched.
+By default, the archive is always read to the very end, since
+there can be multiple entries with the same name and, by convention,
+later entries overwrite earlier entries.
+This option is provided as a performance optimization.
+.TP
 \fB\--strip-components\fP \fIcount\fP (\fB\-W\fP \fBstrip-components\fP=\fIcount\fP)
 (x and t mode only)
 Remove the specified number of leading path elements.
@@ -425,6 +435,16 @@ In extract or list modes, this option is ignored.
 Note that, unlike other
 \fBtar\fP
 implementations, this implementation recognizes gzip compression
+automatically when reading archives.
+.TP
+\fB\-Z\fP
+(c mode only)
+Compress the resulting archive with
+\fBcompress\fP(1).
+In extract or list modes, this option is ignored.
+Note that, unlike other
+\fBtar\fP
+implementations, this implementation recognizes compress compression
 automatically when reading archives.
 .SH ENVIRONMENT
 The following environment variables affect the execution of
@@ -655,6 +675,7 @@ an archive while preserving any absolute pathnames,
 components, or symlinks to other directories.
 .SH SEE ALSO
 \fBbzip2\fP(1),
+\fBcompress\fP(1),
 \fBcpio\fP(1),
 \fBgzip\fP(1),
 \fBmt\fP(1),

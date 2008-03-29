@@ -77,6 +77,10 @@ OPTIONS
 	     (c and r modes only) Issue a warning message unless all links to
 	     each file are archived.
 
+     --chroot (-W chroot)
+	     (x mode only) chroot() to the current directory after processing
+	     any -C options and before extracting any files.
+
      --exclude pattern (-W exclude=pattern)
 	     Do not process files or directories that match the specified pat-
 	     tern.  Note that exclusions take precedence over patterns or
@@ -94,15 +98,6 @@ OPTIONS
 	     The filename can be - for standard input or standard output.  If
 	     not specified, the default tape device will be used.  (On
 	     FreeBSD, the default tape device is /dev/sa0.)
-
-     --fast-read (-W fast-read)
-	     (x and t mode only) Extract or list only the first archive entry
-	     that matches each pattern or filename operand.  Exit as soon as
-	     each specified pattern or filename has been matched.  By default,
-	     the archive is always read to the very end, since there can be
-	     multiple entries with the same name and, by convention, later
-	     entries overwrite earlier entries.  This option is provided as a
-	     performance optimization.
 
      -H      (c and r mode only) Symbolic links named on the command line will
 	     be followed; the target of the link will be archived, not the
@@ -200,6 +195,15 @@ OPTIONS
 	     is being run by root, the default is to restore the owner unless
 	     the -o option is also specified.
 
+     -q (--fast-read)
+	     (x and t mode only) Extract or list only the first archive entry
+	     that matches each pattern or filename operand.  Exit as soon as
+	     each specified pattern or filename has been matched.  By default,
+	     the archive is always read to the very end, since there can be
+	     multiple entries with the same name and, by convention, later
+	     entries overwrite earlier entries.  This option is provided as a
+	     performance optimization.
+
      --strip-components count (-W strip-components=count)
 	     (x and t mode only) Remove the specified number of leading path
 	     elements.	Pathnames with fewer elements will be silently
@@ -251,6 +255,11 @@ OPTIONS
 	     extract or list modes, this option is ignored.  Note that, unlike
 	     other tar implementations, this implementation recognizes gzip
 	     compression automatically when reading archives.
+
+     -Z      (c mode only) Compress the resulting archive with compress(1).
+	     In extract or list modes, this option is ignored.	Note that,
+	     unlike other tar implementations, this implementation recognizes
+	     compress compression automatically when reading archives.
 
 ENVIRONMENT
      The following environment variables affect the execution of tar:
@@ -363,8 +372,8 @@ SECURITY
      ries.
 
 SEE ALSO
-     bzip2(1), cpio(1), gzip(1), mt(1), pax(1), shar(1), libarchive(3),
-     libarchive-formats(5), tar(5)
+     bzip2(1), compress(1), cpio(1), gzip(1), mt(1), pax(1), shar(1),
+     libarchive(3), libarchive-formats(5), tar(5)
 
 STANDARDS
      There is no current POSIX standard for the tar command; it appeared in
