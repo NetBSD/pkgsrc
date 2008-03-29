@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7159 2008/03/29 14:19:22 taca Exp $
+$NetBSD: TODO,v 1.7160 2008/03/29 16:11:19 obache Exp $
 
 Suggested new packages
 ======================
@@ -1308,6 +1308,7 @@ Suggested package updates
 	o rt3-3.6.6
 	o rtcw-1.41.3
 	o rubigen-1.2.4 [jlam]
+	o ruby-RMagick-2.3.0
 	o ruby-abstract-1.0.0 [jlam]
 	o ruby-activemerchant-1.3.2 [jlam]
 	o ruby-acts-as-versioned-0.2.3 [jlam]
