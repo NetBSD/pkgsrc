@@ -72,10 +72,10 @@
 ("struct archive *");
 \fIint\fP
 .RE
-.nh
-\fBarchive_write_set_compression_program\fP
-.hy
-("struct archive *" "const char * cmd");
+Fo archive_write_set_compression_program
+Fa "struct archive *"
+Fa "const char * cmd"
+Fc
 \fIint\fP
 .RE
 .nh
@@ -114,10 +114,13 @@
 ("struct archive *");
 \fIint\fP
 .RE
-.nh
-\fBarchive_write_open\fP
-.hy
-("struct archive *" "void *client_data" "archive_open_callback *" "archive_write_callback *" "archive_close_callback *");
+Fo archive_write_open
+Fa "struct archive *"
+Fa "void *client_data"
+Fa "archive_open_callback *"
+Fa "archive_write_callback *"
+Fa "archive_close_callback *"
+Fc
 \fIint\fP
 .RE
 .nh
@@ -138,10 +141,12 @@
 ("struct archive *" "const char *filename");
 \fIint\fP
 .RE
-.nh
-\fBarchive_write_open_memory\fP
-.hy
-("struct archive *" "void *buffer" "size_t bufferSize" "size_t *outUsed");
+Fo archive_write_open_memory
+Fa "struct archive *"
+Fa "void *buffer"
+Fa "size_t bufferSize"
+Fa "size_t *outUsed"
+Fc
 \fIint\fP
 .RE
 .nh
@@ -242,25 +247,32 @@ functions, this function can be called after the archive is opened.
 Retrieve the currently-set value for last block size.
 A value of -1 here indicates that the library should use default values.
 .TP
+Xo
 .nh
 \fBarchive_write_set_format_cpio\fP
 .hy
-(, .nh);
+(,);
+.nh
 \fBarchive_write_set_format_pax\fP
 .hy
-(, .nh);
+(,);
+.nh
 \fBarchive_write_set_format_pax_restricted\fP
 .hy
-(, .nh);
+(,);
+.nh
 \fBarchive_write_set_format_shar\fP
 .hy
-(, .nh);
+(,);
+.nh
 \fBarchive_write_set_format_shar_binary\fP
 .hy
-(, .nh);
+(,);
+.nh
 \fBarchive_write_set_format_ustar\fP
 .hy
 ();
+Xc
 Sets the format that will be used for the archive.
 The library can write
 POSIX octet-oriented cpio format archives,
@@ -285,16 +297,20 @@ is the library default; this is the same as pax format, but suppresses
 the pax extended header for most normal files.
 In most cases, this will result in ordinary ustar archives.
 .TP
+Xo
 .nh
 \fBarchive_write_set_compression_bzip2\fP
 .hy
-(, .nh);
+(,);
+.nh
 \fBarchive_write_set_compression_gzip\fP
 .hy
-(, .nh);
+(,);
+.nh
 \fBarchive_write_set_compression_none\fP
 .hy
 ();
+Xc
 The resulting archive will be compressed as specified.
 Note that the compressed output is always properly blocked.
 .TP
@@ -538,10 +554,12 @@ to register an error code and message and return
 .IP
 \fItypedef ssize_t\fP
 .RE
-.nh
-\fBarchive_write_callback\fP
-.hy
-("struct archive *" "void *client_data" "void *buffer" "size_t length");
+Fo archive_write_callback
+Fa "struct archive *"
+Fa "void *client_data"
+Fa "void *buffer"
+Fa "size_t length"
+Fc
 The write callback is invoked whenever the library
 needs to write raw bytes to the archive.
 For correct blocking, each call to the write callback function
