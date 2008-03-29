@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/29 13:07:45 taca Exp $
+# $NetBSD: Makefile,v 1.6 2008/03/29 14:02:08 taca Exp $
 
 DISTNAME=	mongrel-1.0.1
 PKGREVISION=	1
@@ -15,6 +15,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-daemons>=1.0.3:../../misc/ruby-daemons
 DEPENDS+=	${RUBY_PKGPREFIX}-gem_plugin>=0.2.2:../../misc/ruby-gem_plugin
 DEPENDS+=	rubygems-[0-9]*:../../misc/rubygems
 
+RUBY_REQD=		1.8.6.110
 REPLACE_RUBY_DIRS=	${WRKSRC}/examples
 RUBY_HAS_ARCHLIB=	yes
 
