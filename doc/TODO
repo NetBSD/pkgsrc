@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7161 2008/03/29 18:01:12 wiz Exp $
+$NetBSD: TODO,v 1.7162 2008/03/30 12:13:08 obache Exp $
 
 Suggested new packages
 ======================
@@ -331,6 +331,14 @@ Suggested new packages
 	flyback
 	http://code.google.com/p/flyback/
 	Backup software inspired by Apple's Time Machine
+
+	Geomyidae [pkg/38261]
+	http://www.r-36.net/
+	Gopher daemon
+
+	XSel [pkg/38314]
+	http://www.vergenet.net/~conrad/software/xsel/
+	Commandline utility for manipulating the X selection and clipboard
 
 Suggested package updates
 =========================
