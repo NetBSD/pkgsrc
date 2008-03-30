@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.584 2008/03/30 13:33:44 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.585 2008/03/30 15:05:13 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1076,3 +1076,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/modular-xorg-server to 1.3.0.0nb7 [wiz 2008-03-29]
 	Updated www/firefox to 2.0.0.13 [ghen 2008-03-30]
 	Updated www/firefox-gtk1 to 2.0.0.13 [ghen 2008-03-30]
+	Updated www/seamonkey to 1.1.9 [ghen 2008-03-30]
+	Updated www/seamonkey-bin to 1.1.9 [ghen 2008-03-30]
+	Updated www/seamonkey-gtk1 to 1.1.9 [ghen 2008-03-30]
