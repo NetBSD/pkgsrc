@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/06/17 19:07:10 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2008/03/30 05:01:31 jlam Exp $
 #
 
 DISTNAME=		libmemcache-1.4.0.b9
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://people.freebsd.org/~seanc/libmemcache/
 COMMENT=		C API for memcached
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
