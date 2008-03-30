@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.111 2008/01/18 05:08:30 tnn Exp $
+# $NetBSD: Makefile,v 1.112 2008/03/30 14:47:35 darcy Exp $
 
 DISTNAME=	sylpheed-2.4.8
 PKGREVISION=	1
@@ -14,7 +14,8 @@ CONFLICTS=		sylpheed-claws-[0-9]* sylpheed-gtk2-[0-9]*
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=			gmake msgfmt pkg-config
+USE_LANGUAGES+=		c c++
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-nls
