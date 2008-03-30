@@ -1,7 +1,7 @@
-# $NetBSD: Makefile-seamonkey.common,v 1.16 2008/02/08 18:04:33 ghen Exp $
+# $NetBSD: Makefile-seamonkey.common,v 1.17 2008/03/30 15:02:40 ghen Exp $
 
 MOZILLA_BIN=		seamonkey-bin
-MOZ_VER=		1.1.8
+MOZ_VER=		1.1.9
 EXTRACT_SUFX=		.tar.bz2
 DISTNAME=		seamonkey-${MOZ_DIST_VER}.source
 
