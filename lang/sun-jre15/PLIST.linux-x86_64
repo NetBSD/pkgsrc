@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-x86_64,v 1.4 2008/01/07 19:56:28 tron Exp $
+@comment $NetBSD: PLIST.linux-x86_64,v 1.5 2008/03/31 22:10:07 tnn Exp $
 bin/sun15-java
 bin/sun15-javaws
 bin/sun15-keytool
@@ -43,6 +43,7 @@ java/sun-1.5/lib/amd64/libfontmanager.so
 java/sun-1.5/lib/amd64/libhprof.so
 java/sun-1.5/lib/amd64/libinstrument.so
 java/sun-1.5/lib/amd64/libioser12.so
+java/sun-1.5/lib/amd64/libj2pkcs11.so
 java/sun-1.5/lib/amd64/libjaas_unix.so
 java/sun-1.5/lib/amd64/libjava.so
 java/sun-1.5/lib/amd64/libjava_crw_demo.so
@@ -79,6 +80,7 @@ java/sun-1.5/lib/content-types.properties.default
 java/sun-1.5/lib/ext/dnsns.jar
 java/sun-1.5/lib/ext/localedata.jar
 java/sun-1.5/lib/ext/sunjce_provider.jar
+java/sun-1.5/lib/ext/sunpkcs11.jar
 java/sun-1.5/lib/flavormap.properties.default
 java/sun-1.5/lib/fontconfig.RedHat.2.1.bfc.default
 java/sun-1.5/lib/fontconfig.RedHat.2.1.properties.src.default
