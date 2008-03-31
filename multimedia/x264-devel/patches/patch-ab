@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.5 2008/03/18 15:05:04 tron Exp $
+$NetBSD: patch-ab,v 1.6 2008/03/31 16:16:00 tron Exp $
 
---- Makefile.orig	2007-12-18 22:45:04.000000000 +0100
-+++ Makefile
-@@ -26,7 +26,7 @@ ASMSRC  = common/i386/dct-a.asm common/i
+--- Makefile.orig	2007-12-18 21:45:04.000000000 +0000
++++ Makefile	2008-03-31 17:09:28.000000000 +0100
+@@ -26,7 +26,7 @@
            common/i386/mc-a2.asm common/i386/predict-a.asm \
            common/i386/pixel-sse2.asm common/i386/quant-a.asm \
            common/i386/deblock-a.asm
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.5 2008/03/18 15:05:04 tron Exp $
  ASFLAGS += -Icommon/i386/
  endif
  endif
-@@ -40,7 +40,7 @@ ASMSRC  = common/amd64/dct-a.asm common/
+@@ -40,31 +40,33 @@
            common/amd64/mc-a2.asm common/amd64/predict-a.asm \
            common/amd64/pixel-sse2.asm common/amd64/quant-a.asm \
            common/amd64/deblock-a.asm
@@ -20,12 +20,17 @@ $NetBSD: patch-ab,v 1.5 2008/03/18 15:05:04 tron Exp $
  ASFLAGS += -Icommon/amd64
  endif
  endif
-@@ -51,20 +51,20 @@ ALTIVECSRC += common/ppc/mc.c common/ppc
+ 
+ # AltiVec optims
+ ifeq ($(ARCH),PPC)
++ifneq ($(SYS),MACOSX)
+ ALTIVECSRC += common/ppc/mc.c common/ppc/pixel.c common/ppc/dct.c \
                common/ppc/quant.c common/ppc/deblock.c \
                common/ppc/predict.c
  SRCS += $(ALTIVECSRC)
 -$(ALTIVECSRC:%.c=%.o): CFLAGS += $(ALTIVECFLAGS)
 +$(ALTIVECSRC:%.c=%.lo): CFLAGS += $(ALTIVECFLAGS)
++endif
  endif
  
  # VIS optims
@@ -44,7 +49,7 @@ $NetBSD: patch-ab,v 1.5 2008/03/18 15:05:04 tron Exp $
  OBJCLI = $(SRCCLI:%.c=%.o)
  DEP  = depend
  
-@@ -73,15 +73,17 @@ all: default
+@@ -73,15 +75,17 @@
  
  default: $(DEP) x264$(EXE)
  
@@ -55,7 +60,7 @@ $NetBSD: patch-ab,v 1.5 2008/03/18 15:05:04 tron Exp $
 +	${LIBTOOL} --mode=compile ${CC} -c ${CFLAGS} -o $@ $<
 +
 +libx264.la: .depend $(OBJS) $(OBJASM)
-+	${LIBTOOL} --mode=link ${CC} -o libx264.la $(OBJS) $(OBJASM) ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} ${DARWIN_PPC_LDFLAGS} -rpath ${PREFIX}/lib -version-info 0
++	${LIBTOOL} --mode=link ${CC} -o libx264.la $(OBJS) $(OBJASM) ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS} -rpath ${PREFIX}/lib -version-info 0
  
  $(SONAME): .depend $(OBJS) $(OBJASM)
  	$(CC) -shared -o $@ $(OBJS) $(OBJASM) -Wl,-soname,$(SONAME) $(LDFLAGS)
@@ -67,7 +72,7 @@ $NetBSD: patch-ab,v 1.5 2008/03/18 15:05:04 tron Exp $
  
  libx264gtk.a: muxers.o libx264.a
  	$(MAKE) -C gtk
-@@ -89,10 +91,10 @@ libx264gtk.a: muxers.o libx264.a
+@@ -89,10 +93,10 @@
  checkasm: tools/checkasm.o libx264.a
  	$(CC) -o $@ $+ $(LDFLAGS)
  
@@ -82,7 +87,7 @@ $NetBSD: patch-ab,v 1.5 2008/03/18 15:05:04 tron Exp $
  # delete local/anonymous symbols, so they don't show up in oprofile
  	-@ strip -x $@
  
-@@ -153,12 +155,9 @@ install: x264 $(SONAME)
+@@ -153,12 +157,9 @@
  	install -d $(DESTDIR)$(bindir) $(DESTDIR)$(includedir)
  	install -d $(DESTDIR)$(libdir) $(DESTDIR)$(libdir)/pkgconfig
  	install -m 644 x264.h $(DESTDIR)$(includedir)
