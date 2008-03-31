@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# $NetBSD: pkg_rolling-replace.sh,v 1.17 2008/02/17 10:47:47 apb Exp $
+# $NetBSD: pkg_rolling-replace.sh,v 1.18 2008/03/31 11:41:09 gdt Exp $
 #<license>
 # Copyright (c) 2006 BBN Technologies Corp.  All rights reserved.
 #
@@ -399,9 +399,10 @@ while [ -n "$REPLACE_TODO" ]; do
 	[ -z "$(${PKG_INFO} -Q rebuild $pkg)" ] || \
 	    abort "package $pkg is still requested to be rebuilt."
     fi
+    # If -r not given, make a binary package.
     if [ -z "$opt_r" ]; then
 	echo "${OPI} Packaging $(${PKG_INFO} -e $pkg)"
-	    cmd="${MAKE} package && ${MAKE} clean || fail=1"
+	    cmd="${MAKE} package || fail=1"
 	if [ -n "$opt_n" ]; then
 	    echo "${OPI} Would run: $cmd"
 	else
@@ -409,6 +410,11 @@ while [ -n "$REPLACE_TODO" ]; do
     	    [ -z "$fail" ] || abort "'make package' failed for package $pkg."
 	fi
     fi
+    # Clean
+    if [ -z "$opt_n" ]; then
+	${MAKE} clean || abort "'make clean' failed for package $pkg."
+    fi
+
     sleep 1
 
     # remove just-replaced package from all *_TODO lists
