@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/05/28 02:24:49 tv Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.1 2008/03/31 22:27:35 tnn Exp $
 bin/sun15-appletviewer
 bin/sun15-apt
 bin/sun15-extcheck
