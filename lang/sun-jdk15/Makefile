@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2008/03/05 22:14:07 tnn Exp $
+# $NetBSD: Makefile,v 1.31 2008/03/31 22:27:35 tnn Exp $
 
 DISTNAME=	jdk-1_5_0_15-linux-${DIST_ARCH}
 PKGNAME=	sun-jdk15-5.0.15
@@ -8,7 +8,7 @@ SHORT_NAME=	JDK
 
 DEPENDS+=	${PKGNAME_NOREV:S/jdk/jre/}*:../../lang/sun-jre15
 
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-//:S/_/./:S/_/./:S/-linux-i586//}
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-//:S/_/./:S/_/./:C/-linux-.*//}
 JAVA_WRAPPERS=	appletviewer apt extcheck idlj jar jarsigner \
 		javac javadoc javah javap jdb rmic serialver
 
