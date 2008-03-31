@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2008/03/04 17:57:19 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2008/03/31 20:50:11 tnn Exp $
 #
 
-DISTNAME=		policyd-weight-0.1.14.5
+DISTNAME=		policyd-weight-0.1.14.17
 CATEGORIES=		mail
 MASTER_SITES=		http://www.policyd-weight.org/releases/
 
-MAINTAINER=		bartosz@atom.eu.org
+MAINTAINER=		bartosz.kuzma@gmail.com
 HOMEPAGE=		http://www.policyd-weight.org/
 COMMENT=		Weighted policy daemon for postfix
 
@@ -46,6 +46,7 @@ SUBST_SED.fix-paths+=	-e 's,"polw";,"${POLICYD_WEIGHT_USER}";,g'
 do-build:		replace-interpreter
 
 do-install:
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/policyd-weight ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/changes.txt ${DESTDIR}${DOCDIR}
