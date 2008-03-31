@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7163 2008/03/30 12:21:46 obache Exp $
+$NetBSD: TODO,v 1.7164 2008/03/31 07:53:14 taca Exp $
 
 Suggested new packages
 ======================
@@ -1051,6 +1051,7 @@ Suggested package updates
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openmotif-2.3.0 [pkg/38038]
+	o openssh-4.9.1
 	o orca-2.22.0
 	o oregano-0.60.0
 	o oroborus-2.0.18
