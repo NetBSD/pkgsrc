@@ -36,7 +36,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: vulnerabilities-file.c,v 1.2 2008/03/09 22:26:56 joerg Exp $");
+__RCSID("$NetBSD: vulnerabilities-file.c,v 1.3 2008/03/31 16:52:13 tron Exp $");
 
 #if HAVE_SYS_STAT_H
 #include <sys/stat.h>
@@ -64,7 +64,11 @@ __RCSID("$NetBSD: vulnerabilities-file.c,v 1.2 2008/03/09 22:26:56 joerg Exp $")
 
 #include "lib.h"
 
-const char *gpg_cmd;
+/*
+ * We explicitely initialize this to NULL to stop Mac OS X Leopard's linker
+ * from turning this into a common symbol which causes a link failure.
+ */
+const char *gpg_cmd = NULL;
 
 static void
 verify_signature(const char *input, size_t input_len)
