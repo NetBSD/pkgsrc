@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.35 2008/03/31 15:40:43 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.36 2008/03/31 15:47:44 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -152,9 +152,10 @@ post-extract: gem-extract
 .if !target(gem-extract)
 gem-extract:
 .  for _gem_ in ${DISTFILES:M*.gem}
-	${RUN} cd ${WRKDIR} && ${RUBYGEM} unpack ${_DISTDIR:Q}/${_gem_:Q}
-	${RUN} cd ${WRKDIR} && ${RUBYGEM} spec ${_DISTDIR:Q}/${_gem_:Q}	\
-		> ${_gem_}spec
+	${RUN} cd ${WRKDIR} && ${SETENV} ${MAKE_ENV} \
+		${RUBYGEM} unpack ${_DISTDIR:Q}/${_gem_:Q}
+	${RUN} cd ${WRKDIR} && ${SETENV} ${MAKE_ENV} TZ= \
+		${RUBYGEM} spec ${_DISTDIR:Q}/${_gem_:Q} > ${_gem_}spec
 .  endfor
 .endif
 
