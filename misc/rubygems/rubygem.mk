@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.34 2008/03/27 05:34:31 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.35 2008/03/31 15:40:43 jlam Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -19,20 +19,13 @@
 #
 # GEM_CLEANBUILD
 #	A list of shell globs representing files to remove from the
-#	gem installed in the buildroot.  The file is removed if the
-#	path matches the glob and is not in ${WRKSRC}.  The default
-#	is "ext/*"
+#	gem installed in the installation root.  The file is removed
+#	if the path matches the glob and is not in ${WRKSRC}.  The
+#	default is "ext/*"
 #
 #	Example:
 #
 #	    GEM_CLEANBUILD=	*.o *.${RUBY_DLEXT} mkmf.log	
-#
-# GEM_FORMAT
-#	The file format of the downloaded gem.  Some older gems are only
-#	available in the outdated ``packed'', shar-like format.
-#
-#	Possible: packed, tar
-#	Default: tar
 #
 # GEM_NAME
 #	The name of the gem to install.  The default value is ${DISTNAME}.
@@ -75,18 +68,15 @@ PKG_DESTDIR_SUPPORT?=	user-destdir
 # Default to using rake to build the local gem from the unpacked files.
 GEM_BUILD?=	rake
 
-# Default to assuming a "tar" gem archive format.
-GEM_FORMAT?=	tar
-
 # Build and run-time dependencies.
 #
-# We need rubygems>=1.0.1nb1 to actually build the package, but the
+# We need rubygems>=1.1.0 to actually build the package, but the
 # resulting installed gem can run with older versions of rubygems.
 #
 # If we're using rake to build the local gem, then include it as a
 # build tool.
 #
-BUILD_DEPENDS+=	rubygems>=1.0.1nb1:../../misc/rubygems
+BUILD_DEPENDS+=	rubygems>=1.1.0:../../misc/rubygems
 DEPENDS+=	rubygems>=1.0.1:../../misc/rubygems
 .if ${GEM_BUILD} == "rake"
 BUILD_DEPENDS+=	rake>=0.8.1:../../devel/rake
@@ -157,31 +147,14 @@ PRINT_PLIST_AWK+=	/^(@dirrm )?${GEM_HOME:S|${PREFIX}/||:S|/|\\/|g}/ \
 ###
 GEM_SPECFILE?=	${WRKDIR}/${DISTNAME}.gemspec
 
-# This awk script prints the gemspec file embedded in a "packed" gem
-# archive to standard output.
-#
-_GEMSPEC_EXTRACT_AWK=	\
-	'BEGIN				{ do_print = 0 }		\
-	/^--- .*Gem::Specification/	{ do_print = 1; print; next }	\
-	/^---/				{ print; exit 0 }		\
-					{ if (do_print) print }'
-
 .PHONY: gem-extract
 post-extract: gem-extract
 .if !target(gem-extract)
 gem-extract:
 .  for _gem_ in ${DISTFILES:M*.gem}
 	${RUN} cd ${WRKDIR} && ${RUBYGEM} unpack ${_DISTDIR:Q}/${_gem_:Q}
-.    if ${GEM_FORMAT} == "tar"
-	${RUN} cd ${WRKDIR} && \
-		${EXTRACTOR} -f tar ${_DISTDIR:Q}/${_gem_:Q} metadata.gz && \
-		${EXTRACTOR} metadata.gz && \
-		rm metadata.gz && mv metadata ${_gem_}spec
-.    endif
-.    if ${GEM_FORMAT} == "packed"
-	${RUN} cd ${WRKDIR} && awk ${_GEMSPEC_EXTRACT_AWK}		\
-		${_DISTDIR:Q}/${_gem_:Q} > ${_gem_}spec
-.    endif
+	${RUN} cd ${WRKDIR} && ${RUBYGEM} spec ${_DISTDIR:Q}/${_gem_:Q}	\
+		> ${_gem_}spec
 .  endfor
 .endif
 
@@ -191,7 +164,7 @@ gem-extract:
 ### The gem-build target builds a new local gem from the extracted gem's
 ### contents.  The new gem as created as ${WRKSRC}/${GEM_NAME}.gem.
 ### The local gem is then installed into a special build root under
-### ${WRKDIR} (${_RUBYGEM_BUILDROOT}), possibly compiling any extensions.
+### ${WRKDIR} (${_RUBYGEM_INSTALL_ROOT}), possibly compiling any extensions.
 ###
 GEM_CLEANBUILD?=	ext/*
 .if !empty(GEM_CLEANBUILD:M/*) || !empty(GEM_CLEANBUILD:M*../*)
@@ -199,8 +172,8 @@ PKG_FAIL_REASON=	"GEM_CLEANBUILD must be relative to "${GEM_LIBDIR:Q}"."
 .endif
 
 _GEM_BUILD_TARGETS=	_gem-${GEM_BUILD}-build
-_GEM_BUILD_TARGETS+=	_gem-build-buildroot
-_GEM_BUILD_TARGETS+=	_gem-build-buildroot-check
+_GEM_BUILD_TARGETS+=	_gem-build-install-root
+_GEM_BUILD_TARGETS+=	_gem-build-install-root-check
 .if !empty(GEM_CLEANBUILD)
 _GEM_BUILD_TARGETS+=	_gem-build-cleanbuild
 .endif
@@ -230,32 +203,32 @@ _gem-rake-build:
 		exit 0; \
 	done
 
-_RUBYGEM_BUILDROOT=	${WRKDIR}/.inst
+_RUBYGEM_INSTALL_ROOT=	${WRKDIR}/.inst
 _RUBYGEM_OPTIONS=	--no-update-sources	# don't cache the gem index
 _RUBYGEM_OPTIONS+=	--install-dir ${GEM_HOME}
-_RUBYGEM_OPTIONS+=	--build-root ${_RUBYGEM_BUILDROOT}
+_RUBYGEM_OPTIONS+=	--install-root ${_RUBYGEM_INSTALL_ROOT}
 _RUBYGEM_OPTIONS+=	--local ${WRKSRC}/${GEM_NAME}.gem
 _RUBYGEM_OPTIONS+=	-- --build-args ${CONFIGURE_ARGS}
 
-.PHONY: _gem-build-buildroot
-_gem-build-buildroot:
-	@${STEP_MSG} "Installing gem into buildroot"
+.PHONY: _gem-build-install-root
+_gem-build-install-root:
+	@${STEP_MSG} "Installing gem into installation root"
 	${RUN} ${SETENV} ${MAKE_ENV} ${RUBYGEM} install ${_RUBYGEM_OPTIONS}
 
 # The ``gem'' command doesn't exit with a non-zero result even if the
 # install of the gem failed, so we do the check and return the proper exit
 # code ourselves.
 # 
-.PHONY: _gem-build-buildroot-check
-_gem-build-buildroot-check:
-	${RUN} test -f ${_RUBYGEM_BUILDROOT}${GEM_CACHEDIR}/${GEM_NAME}.gem || \
-		${FAIL_MSG} "Installing ${GEM_NAME}.gem into buildroot failed."
+.PHONY: _gem-build-install-root-check
+_gem-build-install-root-check:
+	${RUN} test -f ${_RUBYGEM_INSTALL_ROOT}${GEM_CACHEDIR}/${GEM_NAME}.gem || \
+		${FAIL_MSG} "Installing ${GEM_NAME}.gem into installation root failed."
 
 .if !empty(GEM_CLEANBUILD)
 .PHONY: _gem-build-cleanbuild
 _gem-build-cleanbuild:
 	@${STEP_MSG} "Cleaning intermediate gem build files"
-	${RUN} cd ${_RUBYGEM_BUILDROOT}${GEM_LIBDIR} &&			\
+	${RUN} cd ${_RUBYGEM_INSTALL_ROOT}${GEM_LIBDIR} &&			\
 	find . -print | sort -r |					\
 	while read file; do						\
 		case $$file in						\
@@ -276,13 +249,13 @@ _gem-build-cleanbuild:
 ###
 ### gem-install
 ###
-### The gem-install target installs the gem in ${_RUBY_BUILDROOT} into
+### The gem-install target installs the gem in ${_RUBY_INSTALL_ROOT} into
 ### the actual gem repository.
 ###
 GENERATE_PLIST+=	${RUBYGEM_GENERATE_PLIST}
 RUBYGEM_GENERATE_PLIST=	\
 	${ECHO} "@comment The following lines are automatically generated." && \
-	( cd ${_RUBYGEM_BUILDROOT}${PREFIX} && \
+	( cd ${_RUBYGEM_INSTALL_ROOT}${PREFIX} && \
 	  ${FIND} ${GEM_DOCDIR:S|${PREFIX}/||} \! -type d -print | \
 		${SORT} && \
 	  ${FIND} ${GEM_DOCDIR:S|${PREFIX}/||} -type d -print | \
@@ -291,5 +264,5 @@ RUBYGEM_GENERATE_PLIST=	\
 .PHONY: gem-install
 do-install: gem-install
 gem-install:
-	${RUN} cd ${_RUBYGEM_BUILDROOT}${PREFIX} && \
+	${RUN} cd ${_RUBYGEM_INSTALL_ROOT}${PREFIX} && \
 		pax -rwpe . ${DESTDIR}${PREFIX}

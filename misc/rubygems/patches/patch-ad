@@ -1,30 +1,54 @@
-$NetBSD: patch-ad,v 1.1 2008/03/08 00:43:55 jlam Exp $
+$NetBSD: patch-ad,v 1.2 2008/03/31 15:40:43 jlam Exp $
 
-Patch by Marcus Rueckert for staged installation of gems.
-
---- lib/rubygems/installer.rb.orig	2007-12-20 19:43:06.000000000 -0500
+--- lib/rubygems/installer.rb.orig	2008-03-28 21:10:33.000000000 -0400
 +++ lib/rubygems/installer.rb
-@@ -73,6 +73,14 @@ class Gem::Installer
+@@ -51,6 +51,9 @@ class Gem::Installer
+   #          for a signed-gems-only policy.
+   # :ignore_dependencies:: Don't raise if a dependency is missing.
+   # :install_dir:: The directory to install the gem into.
++  # :install_root:: The directory to use as a buildroot for "destdir"-style
++  #		  installation.  All paths during installation are relative
++  #               to the buildroot.
+   # :format_executable:: Format the executable the same as the ruby executable.
+   #                      If your ruby is ruby18, foo_exec will be installed as
+   #                      foo_exec18.
+@@ -62,6 +65,7 @@ class Gem::Installer
+     options = {
+       :force => false,
+       :install_dir => Gem.dir,
++      :install_root => nil,
+       :exec_format => false,
+       :env_shebang => false,
+       :bin_dir => nil
+@@ -70,12 +74,17 @@ class Gem::Installer
+     @env_shebang = options[:env_shebang]
+     @force = options[:force]
+     gem_home = options[:install_dir]
+-    @gem_home = Pathname.new(gem_home).expand_path
++    @gem_home = File.expand_path gem_home
+     @ignore_dependencies = options[:ignore_dependencies]
      @format_executable = options[:format_executable]
      @security_policy = options[:security_policy]
      @wrappers = options[:wrappers]
-+    @build_root = options[:build_root]
-+    @bin_dir = Gem.bindir @gem_home
-+    unless @build_root.nil? or @build_root == ""
-+      @build_root = Pathname.new(@build_root).expand_path
-+      @gem_home = File.join(@build_root, @gem_home)
-+      @bin_dir = File.join(@build_root, @bin_dir)
+     @bin_dir = options[:bin_dir]
++    install_root = options[:install_root]
++    unless install_root.nil? or install_root == ""
++      @install_root = File.expand_path install_root
++      @gem_home = File.join(@install_root, @gem_home)
 +    end
-+
  
      begin
        @format = Gem::Format.from_file_by_path @gem, @security_policy
-@@ -224,7 +232,7 @@ class Gem::Installer
+@@ -227,7 +236,11 @@ class Gem::Installer
      # If the user has asked for the gem to be installed in a directory that is
      # the system gem directory, then use the system bin directory, else create
      # (or use) a new bin dir under the gem_home.
--    bindir = Gem.bindir @gem_home
-+    bindir = @bin_dir
+-    bindir = @bin_dir ? @bin_dir : (Gem.bindir @gem_home)
++    bindir = @bin_dir ? @bin_dir : (Gem.bindir @gem_home, @install_root)
++
++    unless @install_root.nil? or @install_root == ""
++      bindir = File.join(@install_root, bindir)
++    end
  
      Dir.mkdir bindir unless File.exist? bindir
      raise Gem::FilePermissionError.new(bindir) unless File.writable? bindir

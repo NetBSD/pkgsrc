@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2008/03/13 18:46:20 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/03/31 15:40:43 jlam Exp $
 bin/gem
-bin/update_rubygems
 ${RUBY_SITELIBDIR}/rbconfig/datadir.rb
 ${RUBY_SITELIBDIR}/rubygems.rb
 ${RUBY_SITELIBDIR}/rubygems/builder.rb
@@ -50,12 +49,12 @@ ${RUBY_SITELIBDIR}/rubygems/ext/configure_builder.rb
 ${RUBY_SITELIBDIR}/rubygems/ext/ext_conf_builder.rb
 ${RUBY_SITELIBDIR}/rubygems/ext/rake_builder.rb
 ${RUBY_SITELIBDIR}/rubygems/format.rb
-${RUBY_SITELIBDIR}/rubygems/gem_open_uri.rb
 ${RUBY_SITELIBDIR}/rubygems/gem_openssl.rb
 ${RUBY_SITELIBDIR}/rubygems/gem_path_searcher.rb
 ${RUBY_SITELIBDIR}/rubygems/gem_runner.rb
 ${RUBY_SITELIBDIR}/rubygems/indexer.rb
 ${RUBY_SITELIBDIR}/rubygems/indexer/abstract_index_builder.rb
+${RUBY_SITELIBDIR}/rubygems/indexer/latest_index_builder.rb
 ${RUBY_SITELIBDIR}/rubygems/indexer/marshal_index_builder.rb
 ${RUBY_SITELIBDIR}/rubygems/indexer/master_index_builder.rb
 ${RUBY_SITELIBDIR}/rubygems/indexer/quick_index_builder.rb
@@ -63,8 +62,14 @@ ${RUBY_SITELIBDIR}/rubygems/install_update_options.rb
 ${RUBY_SITELIBDIR}/rubygems/installer.rb
 ${RUBY_SITELIBDIR}/rubygems/local_remote_options.rb
 ${RUBY_SITELIBDIR}/rubygems/old_format.rb
-${RUBY_SITELIBDIR}/rubygems/open-uri.rb
 ${RUBY_SITELIBDIR}/rubygems/package.rb
+${RUBY_SITELIBDIR}/rubygems/package/f_sync_dir.rb
+${RUBY_SITELIBDIR}/rubygems/package/tar_header.rb
+${RUBY_SITELIBDIR}/rubygems/package/tar_input.rb
+${RUBY_SITELIBDIR}/rubygems/package/tar_output.rb
+${RUBY_SITELIBDIR}/rubygems/package/tar_reader.rb
+${RUBY_SITELIBDIR}/rubygems/package/tar_reader/entry.rb
+${RUBY_SITELIBDIR}/rubygems/package/tar_writer.rb
 ${RUBY_SITELIBDIR}/rubygems/platform.rb
 ${RUBY_SITELIBDIR}/rubygems/remote_fetcher.rb
 ${RUBY_SITELIBDIR}/rubygems/require_paths_builder.rb
@@ -83,6 +88,8 @@ ${RUBY_SITELIBDIR}/rubygems/validator.rb
 ${RUBY_SITELIBDIR}/rubygems/version.rb
 ${RUBY_SITELIBDIR}/rubygems/version_option.rb
 ${RUBY_SITELIBDIR}/ubygems.rb
+@dirrm ${RUBY_SITELIBDIR}/rubygems/package/tar_reader
+@dirrm ${RUBY_SITELIBDIR}/rubygems/package
 @dirrm ${RUBY_SITELIBDIR}/rubygems/indexer
 @dirrm ${RUBY_SITELIBDIR}/rubygems/ext
 @dirrm ${RUBY_SITELIBDIR}/rubygems/digest
