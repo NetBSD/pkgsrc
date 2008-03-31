@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.586 2008/03/31 00:40:44 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.587 2008/03/31 13:13:54 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1080,3 +1080,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/seamonkey-bin to 1.1.9 [ghen 2008-03-30]
 	Updated www/seamonkey-gtk1 to 1.1.9 [ghen 2008-03-30]
 	Updated archivers/gtar-base to 1.15.1nb5 [tonnerre 2008-03-31]
+	Updated net/wireshark to 1.0.0 [tron 2008-03-31]
