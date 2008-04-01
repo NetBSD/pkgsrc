@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7165 2008/03/31 20:55:58 wiz Exp $
+$NetBSD: TODO,v 1.7166 2008/04/01 01:41:37 taca Exp $
 
 Suggested new packages
 ======================
@@ -1034,7 +1034,6 @@ Suggested package updates
 	o nslint-2.1a6 [pkg/33142]
 	o nslint-2.1a7
 	o nss-3.11.7
-	o nss_ldap-260 [pkg/38346]
 	o ntp4-4.2.4p3
 	o nulib2-220
 	o nullmailer-1.04
