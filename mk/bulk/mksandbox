@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.48 2008/02/26 05:06:32 jlam Exp $
+# $NetBSD: mksandbox,v 1.49 2008/04/01 16:06:35 jlam Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -167,7 +167,7 @@ if [ $# -ne 1 ]; then
 	usage
 fi
 
-if [ "$with_x" = "no"; then
+if [ "$with_x" = "no" ]; then
 	need_xsrc=no
 fi
 
