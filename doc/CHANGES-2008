@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.593 2008/04/01 15:52:52 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.594 2008/04/01 16:11:47 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1087,3 +1087,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/gmp to 4.2.2nb1 [bjs 2008-04-01]
 	Updated databases/nss_ldap to 260 [taca 2008-04-01]
 	Updated x11/p5-Tk to 804.027nb7 [tonnerre 2008-04-01]
+	Updated databases/phpmyadmin to 2.11.5.1 [tron 2008-04-01]
