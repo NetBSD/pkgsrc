@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.592 2008/04/01 01:40:05 taca Exp $
+$NetBSD: CHANGES-2008,v 1.593 2008/04/01 15:52:52 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1086,3 +1086,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/policyd-weight to 0.1.14.17 [tnn 2008-03-31]
 	Updated devel/gmp to 4.2.2nb1 [bjs 2008-04-01]
 	Updated databases/nss_ldap to 260 [taca 2008-04-01]
+	Updated x11/p5-Tk to 804.027nb7 [tonnerre 2008-04-01]
