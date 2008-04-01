@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7166 2008/04/01 01:41:37 taca Exp $
+$NetBSD: TODO,v 1.7167 2008/04/01 16:11:47 tron Exp $
 
 Suggested new packages
 ======================
@@ -1184,7 +1184,6 @@ Suggested package updates
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
-	o phpmyadmin-2.11.5.1
 	o phylip-3.65
 	o picp-0.6.8
 	o pim6dd-20040819a
