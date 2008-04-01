@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.590 2008/03/31 20:52:48 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.591 2008/04/01 00:57:53 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1084,3 +1084,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/pkg_rolling-replace to 0.15 [gdt 2008-03-31]
 	Updated misc/rubygems to 1.1.0 [jlam 2008-03-31]
 	Updated mail/policyd-weight to 0.1.14.17 [tnn 2008-03-31]
+	Updated devel/gmp to 4.2.2nb1 [bjs 2008-04-01]
