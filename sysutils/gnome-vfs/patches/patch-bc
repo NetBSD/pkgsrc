@@ -1,10 +1,15 @@
-$NetBSD: patch-bc,v 1.1 2007/09/19 22:22:42 wiz Exp $
+$NetBSD: patch-bc,v 1.2 2008/04/01 18:05:37 drochner Exp $
 
 Stick to the pkgsrc conventions of the locale directory.
 
---- libgnomevfs/Makefile.in.orig	2006-05-30 12:21:20.000000000 +0200
-+++ libgnomevfs/Makefile.in	2006-06-25 23:34:58.000000000 +0200
-@@ -459,7 +459,7 @@ INCLUDES = \
+--- libgnomevfs/Makefile.in.orig	2007-11-12 10:30:11.000000000 +0100
++++ libgnomevfs/Makefile.in
+@@ -425,12 +425,11 @@ INCLUDES = \
+ 	-D_LARGEFILE64_SOURCE                   \
+ 	-D_POSIX_PTHREAD_SEMANTICS		\
+ 	-D_REENTRANT				\
+-	-DG_DISABLE_DEPRECATED			\
+ 	-DGNOME_VFS_PREFIX=\"$(prefix)\"	\
  	-DGNOME_VFS_BINDIR=\"$(bindir)\"	\
  	-DGNOME_VFS_DATADIR=\"$(datadir)\"	\
  	-DGNOME_VFS_LIBDIR=\"$(libdir)\"	\
