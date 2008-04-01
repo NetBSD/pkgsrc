@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: mksandbox,v 1.49 2008/04/01 16:06:35 jlam Exp $
+# $NetBSD: mksandbox,v 1.50 2008/04/01 16:30:19 jlam Exp $
 #
 #
 # Copyright (c) 2002 Alistair G. Crooks.  All rights reserved.
@@ -266,6 +266,9 @@ esac
 echo "Make empty dirs upon which to mount the null mounts"
 for d in $sandboxMountDirs; do
 	test -d $d || continue;
+	case $d in
+	*X11*)	test "$with_x" = "yes" || continue ;;
+	esac
 	$mkdirprog $sandbox$d;
 	$mountprog $mountflags -r $d $sandbox$d;
 	echo "$d $d ro \\" >> $sandbox_script
@@ -351,6 +354,18 @@ case x\$1 in
 		dummy=\$1; shift
 		umount \$sandbox/\$mntpoint
 	done
+	;;
+	xchroot)
+	case x\$2 in
+	x)	rootshell=/bin/ksh ;;
+	*)	rootshell="\$2" ;;
+	esac
+	script="$sandbox/tmp/script.\$\$"
+	echo "#!/bin/sh" > \$script
+	echo "ENV=/etc/shrc \$rootshell" >> \$script
+	chmod +x \$script
+	ENV=/etc/shrc chroot \$sandbox /tmp/\`basename \$script\`
+	rm -f \$script
 	;;
 	*)
 	if [ \$# -eq 0 ]; then
