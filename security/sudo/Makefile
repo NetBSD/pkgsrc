@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2008/03/29 14:16:58 taca Exp $
+# $NetBSD: Makefile,v 1.111 2008/04/02 15:06:07 jlam Exp $
 #
 
 DISTNAME=		sudo-1.6.9p15
@@ -42,7 +42,8 @@ CONFIGURE_ARGS+=	--with-nbsdops --disable-path-info
 
 DOCDIR=			share/doc/${PKGBASE}
 EGDIR=			share/examples/${PKGBASE}
-CONF_FILES_PERMS=	${EGDIR}/sudoers ${PKG_SYSCONFDIR}/sudoers 0 0 0440
+CONF_FILES_PERMS=	${EGDIR}/sudoers ${PKG_SYSCONFDIR}/sudoers \
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0440
 SPECIAL_PERMS+=		bin/sudo ${SETUID_ROOT_PERMS}
 
 INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
