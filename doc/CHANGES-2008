@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.595 2008/04/01 19:25:00 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.596 2008/04/02 01:31:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1089,3 +1089,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/p5-Tk to 804.027nb7 [tonnerre 2008-04-01]
 	Updated databases/phpmyadmin to 2.11.5.1 [tron 2008-04-01]
 	Updated chat/inspircd to 1.1.18 [adrianp 2008-04-01]
+	Updated www/squid to 2.6.19 [taca 2008-04-02]
