@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.598 2008/04/02 21:26:27 heinz Exp $
+$NetBSD: CHANGES-2008,v 1.599 2008/04/02 22:03:54 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1092,3 +1092,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/squid to 2.6.19 [taca 2008-04-02]
 	Updated graphics/ruby-RMagick to 2.3.0 [obache 2008-04-02]
 	Updated misc/esniper to 2.18.0 [heinz 2008-04-02]
+	Updated archivers/gtar-base to 1.15.1nb6 [tonnerre 2008-04-02]
