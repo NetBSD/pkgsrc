@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.c,v 1.1.1.1 2008/02/07 01:48:22 joerg Exp $	*/
+/*	$NetBSD: fetch.c,v 1.2 2008/04/02 15:33:14 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -69,7 +69,7 @@ static struct fetcherr url_errlist[] = {
  * read-only stream connected to the document referenced by the URL.
  * Also fill out the struct url_stat.
  */
-FILE *
+fetchIO *
 fetchXGet(struct url *URL, struct url_stat *us, const char *flags)
 {
 	int direct;
@@ -95,7 +95,7 @@ fetchXGet(struct url *URL, struct url_stat *us, const char *flags)
  * Select the appropriate protocol for the URL scheme, and return a
  * read-only stream connected to the document referenced by the URL.
  */
-FILE *
+fetchIO *
 fetchGet(struct url *URL, const char *flags)
 {
 	return (fetchXGet(URL, NULL, flags));
@@ -105,7 +105,7 @@ fetchGet(struct url *URL, const char *flags)
  * Select the appropriate protocol for the URL scheme, and return a
  * write-only stream connected to the document referenced by the URL.
  */
-FILE *
+fetchIO *
 fetchPut(struct url *URL, const char *flags)
 {
 	int direct;
@@ -174,11 +174,11 @@ fetchList(struct url *URL, const char *flags)
 /*
  * Attempt to parse the given URL; if successful, call fetchXGet().
  */
-FILE *
+fetchIO *
 fetchXGetURL(const char *URL, struct url_stat *us, const char *flags)
 {
 	struct url *u;
-	FILE *f;
+	fetchIO *f;
 
 	if ((u = fetchParseURL(URL)) == NULL)
 		return (NULL);
@@ -192,7 +192,7 @@ fetchXGetURL(const char *URL, struct url_stat *us, const char *flags)
 /*
  * Attempt to parse the given URL; if successful, call fetchGet().
  */
-FILE *
+fetchIO *
 fetchGetURL(const char *URL, const char *flags)
 {
 	return (fetchXGetURL(URL, NULL, flags));
@@ -201,11 +201,11 @@ fetchGetURL(const char *URL, const char *flags)
 /*
  * Attempt to parse the given URL; if successful, call fetchPut().
  */
-FILE *
+fetchIO *
 fetchPutURL(const char *URL, const char *flags)
 {
 	struct url *u;
-	FILE *f;
+	fetchIO *f;
 
 	if ((u = fetchParseURL(URL)) == NULL)
 		return (NULL);
@@ -407,16 +407,6 @@ nohost:
 		fetch_syserr();
 		goto ouch;
 	}
-
-	DEBUG(fprintf(stderr,
-		  "scheme:   [%s]\n"
-		  "user:     [%s]\n"
-		  "password: [%s]\n"
-		  "host:     [%s]\n"
-		  "port:     [%d]\n"
-		  "document: [%s]\n",
-		  u->scheme, u->user, u->pwd,
-		  u->host, u->port, u->doc));
 
 	return (u);
 
