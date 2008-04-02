@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.9 2008/02/07 17:57:28 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.10 2008/04/02 15:33:14 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -258,9 +258,6 @@ ftp_pwd(conn_t *conn, char *pwd, size_t pwdlen)
 	if (!pwdlen)
 		return (FTP_PROTOCOL_ERROR);
 	*dst = '\0';
-#if 0
-	DEBUG(fprintf(stderr, "pwd: [%s]\n", pwd));
-#endif
 	return (FTP_OK);
 }
 
@@ -290,10 +287,6 @@ ftp_cwd(conn_t *conn, const char *file)
 		for (i = 0; i <= len && i <= end - file; ++i)
 			if (pwd[i] != file[i])
 				break;
-#if 0
-		DEBUG(fprintf(stderr, "have: [%.*s|%s]\n", i, pwd, pwd + i));
-		DEBUG(fprintf(stderr, "want: [%.*s|%s]\n", i, file, file + i));
-#endif
 		/* Keep going up a dir until we have a matching prefix. */
 		if (pwd[i] == '\0' && (file[i - 1] == '/' || file[i] == '/'))
 			break;
@@ -433,7 +426,6 @@ ftp_stat(conn_t *conn, const char *file, struct url_stat *us)
 	}
 	if (us->size == 0)
 		us->size = -1;
-	DEBUG(fprintf(stderr, "size: [%lld]\n", (long long)us->size));
 
 	e = ftp_cmd(conn, "MDTM %.*s", filenamelen, filename);
 	if (e != FTP_FILE_STATUS) {
@@ -468,10 +460,7 @@ ftp_stat(conn_t *conn, const char *file, struct url_stat *us)
 		t = time(NULL);
 	us->mtime = t;
 	us->atime = t;
-	DEBUG(fprintf(stderr,
-	    "last modified: [%04d-%02d-%02d %02d:%02d:%02d]\n",
-	    tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday,
-	    tm.tm_hour, tm.tm_min, tm.tm_sec));
+
 	return (0);
 }
 
@@ -486,13 +475,12 @@ struct ftpio {
 	int	 err;		/* Error code */
 };
 
-static int	 ftp_readfn(void *, char *, int);
-static int	 ftp_writefn(void *, const char *, int);
-static fpos_t	 ftp_seekfn(void *, fpos_t, int);
-static int	 ftp_closefn(void *);
+static ssize_t	 ftp_readfn(void *, void *, size_t);
+static ssize_t	 ftp_writefn(void *, const void *, size_t);
+static void	 ftp_closefn(void *);
 
-static int
-ftp_readfn(void *v, char *buf, int len)
+static ssize_t
+ftp_readfn(void *v, void *buf, size_t len)
 {
 	struct ftpio *io;
 	int r;
@@ -524,8 +512,8 @@ ftp_readfn(void *v, char *buf, int len)
 	return (-1);
 }
 
-static int
-ftp_writefn(void *v, const char *buf, int len)
+static ssize_t
+ftp_writefn(void *v, const void *buf, size_t len)
 {
 	struct ftpio *io;
 	int w;
@@ -551,21 +539,7 @@ ftp_writefn(void *v, const char *buf, int len)
 	return (-1);
 }
 
-static fpos_t
-ftp_seekfn(void *v, fpos_t pos, int whence)
-{
-	struct ftpio *io;
-
-	io = (struct ftpio *)v;
-	if (io == NULL) {
-		errno = EBADF;
-		return (-1);
-	}
-	errno = ESPIPE;
-	return (-1);
-}
-
-static int
+static void
 ftp_closefn(void *v)
 {
 	struct ftpio *io;
@@ -574,31 +548,30 @@ ftp_closefn(void *v)
 	io = (struct ftpio *)v;
 	if (io == NULL) {
 		errno = EBADF;
-		return (-1);
+		return;
 	}
 	if (io->dir == -1)
-		return (0);
+		return;
 	if (io->cconn == NULL || io->dconn == NULL) {
 		errno = EBADF;
-		return (-1);
+		return;
 	}
 	fetch_close(io->dconn);
 	io->dir = -1;
 	io->dconn = NULL;
-	DEBUG(fprintf(stderr, "Waiting for final status\n"));
 	r = ftp_chkerr(io->cconn);
 	if (io->cconn == cached_connection && io->cconn->ref == 1)
 		cached_connection = NULL;
 	fetch_close(io->cconn);
 	free(io);
-	return (r == FTP_TRANSFER_COMPLETE) ? 0 : -1;
+	return;
 }
 
-static FILE *
+static fetchIO *
 ftp_setup(conn_t *cconn, conn_t *dconn, int mode)
 {
 	struct ftpio *io;
-	FILE *f;
+	fetchIO *f;
 
 	if (cconn == NULL || dconn == NULL)
 		return (NULL);
@@ -608,7 +581,7 @@ ftp_setup(conn_t *cconn, conn_t *dconn, int mode)
 	io->dconn = dconn;
 	io->dir = mode;
 	io->eof = io->err = 0;
-	f = funopen(io, ftp_readfn, ftp_writefn, ftp_seekfn, ftp_closefn);
+	f = fetchIO_unopen(io, ftp_readfn, ftp_writefn, ftp_closefn);
 	if (f == NULL)
 		free(io);
 	return (f);
@@ -617,7 +590,7 @@ ftp_setup(conn_t *cconn, conn_t *dconn, int mode)
 /*
  * Transfer file
  */
-static FILE *
+static fetchIO *
 ftp_transfer(conn_t *conn, const char *oper, const char *file,
     int mode, off_t offset, const char *flags)
 {
@@ -631,7 +604,7 @@ ftp_transfer(conn_t *conn, const char *oper, const char *file,
 	int e, sd = -1;
 	socklen_t l;
 	char *s;
-	FILE *df;
+	fetchIO *df;
 
 	/* check flags */
 	low = CHECK_FLAG('l');
@@ -1103,7 +1076,7 @@ ftp_get_proxy(struct url * url, const char *flags)
 /*
  * Process an FTP request
  */
-FILE *
+fetchIO *
 ftp_request(struct url *url, const char *op, struct url_stat *us,
     struct url *purl, const char *flags)
 {
@@ -1141,7 +1114,7 @@ ftp_request(struct url *url, const char *op, struct url_stat *us,
 
 	/* just a stat */
 	if (strcmp(op, "STAT") == 0)
-		return (FILE *)1; /* bogus return value */
+		return fetchIO_unopen(NULL, NULL, NULL, NULL);
 	if (strcmp(op, "STOR") == 0 || strcmp(op, "APPE") == 0)
 		oflag = O_WRONLY;
 	else
@@ -1154,7 +1127,7 @@ ftp_request(struct url *url, const char *op, struct url_stat *us,
 /*
  * Get and stat file
  */
-FILE *
+fetchIO *
 fetchXGetFTP(struct url *url, struct url_stat *us, const char *flags)
 {
 	return (ftp_request(url, "RETR", us, ftp_get_proxy(url, flags), flags));
@@ -1163,7 +1136,7 @@ fetchXGetFTP(struct url *url, struct url_stat *us, const char *flags)
 /*
  * Get file
  */
-FILE *
+fetchIO *
 fetchGetFTP(struct url *url, const char *flags)
 {
 	return (fetchXGetFTP(url, NULL, flags));
@@ -1172,7 +1145,7 @@ fetchGetFTP(struct url *url, const char *flags)
 /*
  * Put file
  */
-FILE *
+fetchIO *
 fetchPutFTP(struct url *url, const char *flags)
 {
 	return (ftp_request(url, CHECK_FLAG('a') ? "APPE" : "STOR", NULL,
@@ -1185,16 +1158,12 @@ fetchPutFTP(struct url *url, const char *flags)
 int
 fetchStatFTP(struct url *url, struct url_stat *us, const char *flags)
 {
-	FILE *f;
+	fetchIO *f;
 
 	f = ftp_request(url, "STAT", us, ftp_get_proxy(url, flags), flags);
 	if (f == NULL)
 		return (-1);
-	/*
-	 * When op is "STAT", ftp_request() will return either NULL or
-	 * (FILE *)1, never a valid FILE *, so we mustn't fclose(f) before
-	 * returning, as it would cause a segfault.
-	 */
+	fetchIO_close(f);
 	return (0);
 }
 
