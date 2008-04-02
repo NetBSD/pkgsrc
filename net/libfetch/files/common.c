@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.4 2008/02/07 16:30:49 joerg Exp $	*/
+/*	$NetBSD: common.c,v 1.5 2008/04/02 15:33:14 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -271,8 +271,6 @@ fetch_connect(const char *host, int port, int af, int verbose)
 	struct addrinfo hints, *res, *res0;
 	int sd, err;
 
-	DEBUG(fprintf(stderr, "---> %s:%d\n", host, port));
-
 	if (verbose)
 		fetch_info("looking up %s", host);
 
@@ -485,7 +483,6 @@ fetch_getln(conn_t *conn)
 	} while (c != '\n');
 
 	conn->buf[conn->buflen] = '\0';
-	DEBUG(fprintf(stderr, "<<< %s", conn->buf));
 	return (0);
 }
 
@@ -588,7 +585,6 @@ fetch_putln(conn_t *conn, const char *str, size_t len)
 	struct iovec iov[2];
 	int ret;
 
-	DEBUG(fprintf(stderr, ">>> %s\n", str));
 	iov[0].iov_base = DECONST(char *, str);
 	iov[0].iov_len = len;
 	iov[1].iov_base = DECONST(char *, ENDL);
@@ -662,7 +658,7 @@ fetch_read_word(FILE *f)
 {
 	static char word[1024];
 
-	if (fscanf(f, " %1024s ", word) != 1)
+	if (fscanf(f, " %1023s ", word) != 1)
 		return (NULL);
 	return (word);
 }
@@ -699,14 +695,11 @@ fetch_netrc_auth(struct url *url)
 	if ((f = fopen(fn, "r")) == NULL)
 		return (-1);
 	while ((word = fetch_read_word(f)) != NULL) {
-		if (strcmp(word, "default") == 0) {
-			DEBUG(fetch_info("Using default .netrc settings"));
+		if (strcmp(word, "default") == 0)
 			break;
-		}
 		if (strcmp(word, "machine") == 0 &&
 		    (word = fetch_read_word(f)) != NULL &&
 		    strcasecmp(word, url->host) == 0) {
-			DEBUG(fetch_info("Using .netrc settings for %s", word));
 			break;
 		}
 	}
@@ -790,4 +783,55 @@ fetch_no_proxy_match(const char *host)
 	} while (*q);
 
 	return (0);
+}
+
+struct fetchIO {
+	void *io_cookie;
+	ssize_t (*io_read)(void *, void *, size_t);
+	ssize_t (*io_write)(void *, const void *, size_t);
+	void (*io_close)(void *);
+};
+
+void
+fetchIO_close(fetchIO *f)
+{
+	if (f->io_close != NULL)
+		(*f->io_close)(f->io_cookie);
+
+	free(f);
+}
+
+fetchIO *
+fetchIO_unopen(void *io_cookie, ssize_t (*io_read)(void *, void *, size_t),
+    ssize_t (*io_write)(void *, const void *, size_t),
+    void (*io_close)(void *))
+{
+	fetchIO *f;
+
+	f = malloc(sizeof(*f));
+	if (f == NULL)
+		return f;
+
+	f->io_cookie = io_cookie;
+	f->io_read = io_read;
+	f->io_write = io_write;
+	f->io_close = io_close;
+
+	return f;
+}
+
+ssize_t
+fetchIO_read(fetchIO *f, void *buf, size_t len)
+{
+	if (f->io_read == NULL)
+		return EBADF;
+	return (*f->io_read)(f->io_cookie, buf, len);
+}
+
+ssize_t
+fetchIO_write(fetchIO *f, const void *buf, size_t len)
+{
+	if (f->io_read == NULL)
+		return EBADF;
+	return (*f->io_write)(f->io_cookie, buf, len);
 }

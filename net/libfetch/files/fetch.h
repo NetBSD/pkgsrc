@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.h,v 1.3 2008/02/07 17:10:35 joerg Exp $	*/
+/*	$NetBSD: fetch.h,v 1.4 2008/04/02 15:33:14 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -42,6 +42,8 @@
 #define URL_SCHEMELEN 16
 #define URL_USERLEN 256
 #define URL_PWDLEN 256
+
+typedef struct fetchIO fetchIO;
 
 struct url {
 	char		 scheme[URL_SCHEMELEN + 1];
@@ -96,36 +98,40 @@ struct url_ent {
 extern "C" {
 #endif
 
-/* FILE-specific functions */
-FILE		*fetchXGetFile(struct url *, struct url_stat *, const char *);
-FILE		*fetchGetFile(struct url *, const char *);
-FILE		*fetchPutFile(struct url *, const char *);
+void		fetchIO_close(fetchIO *);
+ssize_t		fetchIO_read(fetchIO *, void *, size_t);
+ssize_t		fetchIO_write(fetchIO *, const void *, size_t);
+
+/* fetchIO-specific functions */
+fetchIO		*fetchXGetFile(struct url *, struct url_stat *, const char *);
+fetchIO		*fetchGetFile(struct url *, const char *);
+fetchIO		*fetchPutFile(struct url *, const char *);
 int		 fetchStatFile(struct url *, struct url_stat *, const char *);
 struct url_ent	*fetchListFile(struct url *, const char *);
 
 /* HTTP-specific functions */
-FILE		*fetchXGetHTTP(struct url *, struct url_stat *, const char *);
-FILE		*fetchGetHTTP(struct url *, const char *);
-FILE		*fetchPutHTTP(struct url *, const char *);
+fetchIO		*fetchXGetHTTP(struct url *, struct url_stat *, const char *);
+fetchIO		*fetchGetHTTP(struct url *, const char *);
+fetchIO		*fetchPutHTTP(struct url *, const char *);
 int		 fetchStatHTTP(struct url *, struct url_stat *, const char *);
 struct url_ent	*fetchListHTTP(struct url *, const char *);
 
 /* FTP-specific functions */
-FILE		*fetchXGetFTP(struct url *, struct url_stat *, const char *);
-FILE		*fetchGetFTP(struct url *, const char *);
-FILE		*fetchPutFTP(struct url *, const char *);
+fetchIO		*fetchXGetFTP(struct url *, struct url_stat *, const char *);
+fetchIO		*fetchGetFTP(struct url *, const char *);
+fetchIO		*fetchPutFTP(struct url *, const char *);
 int		 fetchStatFTP(struct url *, struct url_stat *, const char *);
 struct url_ent	*fetchListFTP(struct url *, const char *);
 
 /* Generic functions */
-FILE		*fetchXGetURL(const char *, struct url_stat *, const char *);
-FILE		*fetchGetURL(const char *, const char *);
-FILE		*fetchPutURL(const char *, const char *);
+fetchIO		*fetchXGetURL(const char *, struct url_stat *, const char *);
+fetchIO		*fetchGetURL(const char *, const char *);
+fetchIO		*fetchPutURL(const char *, const char *);
 int		 fetchStatURL(const char *, struct url_stat *, const char *);
 struct url_ent	*fetchListURL(const char *, const char *);
-FILE		*fetchXGet(struct url *, struct url_stat *, const char *);
-FILE		*fetchGet(struct url *, const char *);
-FILE		*fetchPut(struct url *, const char *);
+fetchIO		*fetchXGet(struct url *, struct url_stat *, const char *);
+fetchIO		*fetchGet(struct url *, const char *);
+fetchIO		*fetchPut(struct url *, const char *);
 int		 fetchStat(struct url *, struct url_stat *, const char *);
 struct url_ent	*fetchList(struct url *, const char *);
 

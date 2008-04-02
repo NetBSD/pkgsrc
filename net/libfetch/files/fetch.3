@@ -24,7 +24,7 @@
 .\" SUCH DAMAGE.
 .\"
 .\" $FreeBSD: fetch.3,v 1.64 2007/12/18 11:03:26 des Exp $
-.\" $NetBSD: fetch.3,v 1.2 2008/02/07 16:14:32 joerg Exp $
+.\" $NetBSD: fetch.3,v 1.3 2008/04/02 15:33:14 joerg Exp $
 .\"
 .Dd December 18, 2007
 .Dt FETCH 3
@@ -70,51 +70,51 @@
 .Fn fetchParseURL "const char *URL"
 .Ft void
 .Fn fetchFreeURL "struct url *u"
-.Ft FILE *
+.Ft fetchIO *
 .Fn fetchXGetURL "const char *URL" "struct url_stat *us" "const char *flags"
-.Ft FILE *
+.Ft fetchIO *
 .Fn fetchGetURL "const char *URL" "const char *flags"
-.Ft FILE *
+.Ft fetchIO *
 .Fn fetchPutURL "const char *URL" "const char *flags"
 .Ft int
 .Fn fetchStatURL "const char *URL" "struct url_stat *us" "const char *flags"
 .Ft struct url_ent *
 .Fn fetchListURL "const char *URL" "const char *flags"
-.Ft FILE *
+.Ft fetchIO *
 .Fn fetchXGet "struct url *u" "struct url_stat *us" "const char *flags"
-.Ft FILE *
+.Ft fetchIO *
 .Fn fetchGet "struct url *u" "const char *flags"
-.Ft FILE *
+.Ft fetchIO *
 .Fn fetchPut "struct url *u" "const char *flags"
 .Ft int
 .Fn fetchStat "struct url *u" "struct url_stat *us" "const char *flags"
 .Ft struct url_ent *
 .Fn fetchList "struct url *u" "const char *flags"
-.Ft FILE *
+.Ft fetchIO *
 .Fn fetchXGetFile "struct url *u" "struct url_stat *us" "const char *flags"
-.Ft FILE *
+.Ft fetchIO *
 .Fn fetchGetFile "struct url *u" "const char *flags"
-.Ft FILE *
+.Ft fetchIO *
 .Fn fetchPutFile "struct url *u" "const char *flags"
 .Ft int
 .Fn fetchStatFile "struct url *u" "struct url_stat *us" "const char *flags"
 .Ft struct url_ent *
 .Fn fetchListFile "struct url *u" "const char *flags"
-.Ft FILE *
+.Ft fetchIO *
 .Fn fetchXGetHTTP "struct url *u" "struct url_stat *us" "const char *flags"
-.Ft FILE *
+.Ft fetchIO *
 .Fn fetchGetHTTP "struct url *u" "const char *flags"
-.Ft FILE *
+.Ft fetchIO *
 .Fn fetchPutHTTP "struct url *u" "const char *flags"
 .Ft int
 .Fn fetchStatHTTP "struct url *u" "struct url_stat *us" "const char *flags"
 .Ft struct url_ent *
 .Fn fetchListHTTP "struct url *u" "const char *flags"
-.Ft FILE *
+.Ft fetchIO *
 .Fn fetchXGetFTP "struct url *u" "struct url_stat *us" "const char *flags"
-.Ft FILE *
+.Ft fetchIO *
 .Fn fetchGetFTP "struct url *u" "const char *flags"
-.Ft FILE *
+.Ft fetchIO *
 .Fn fetchPutFTP "struct url *u" "const char *flags"
 .Ft int
 .Fn fetchStatFTP "struct url *u" "struct url_stat *us" "const char *flags"
