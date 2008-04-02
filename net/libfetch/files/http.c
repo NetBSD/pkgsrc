@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.8 2008/02/07 18:02:01 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.9 2008/04/02 15:33:15 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -120,9 +120,6 @@ struct httpio
 	int		 eof;		/* end-of-file flag */
 	int		 error;		/* error flag */
 	size_t		 chunksize;	/* remaining size of current chunk */
-#ifndef NDEBUG
-	size_t		 total;
-#endif
 };
 
 /*
@@ -152,18 +149,6 @@ http_new_chunk(struct httpio *io)
 			    10 + tolower((unsigned char)*p) - 'a';
 		}
 	}
-
-#ifndef NDEBUG
-	if (fetchDebug) {
-		io->total += io->chunksize;
-		if (io->chunksize == 0)
-			fprintf(stderr, "http_new_chunk(): end of last chunk\n");
-		else
-			fprintf(stderr, "http_new_chunk(): new chunk: %lu (%lu)\n",
-			    (unsigned long)io->chunksize,
-			    (unsigned long)io->total);
-	}
-#endif
 
 	return (io->chunksize);
 }
@@ -245,11 +230,11 @@ http_fillbuf(struct httpio *io, size_t len)
 /*
  * Read function
  */
-static int
-http_readfn(void *v, char *buf, int len)
+static ssize_t
+http_readfn(void *v, void *buf, size_t len)
 {
 	struct httpio *io = (struct httpio *)v;
-	int l, pos;
+	size_t l, pos;
 
 	if (io->error)
 		return (-1);
@@ -264,7 +249,7 @@ http_readfn(void *v, char *buf, int len)
 		l = io->buflen - io->bufpos;
 		if (len < l)
 			l = len;
-		memcpy(buf + pos, io->buf + io->bufpos, l);
+		memcpy((char *)buf + pos, io->buf + io->bufpos, l);
 		io->bufpos += l;
 	}
 
@@ -276,8 +261,8 @@ http_readfn(void *v, char *buf, int len)
 /*
  * Write function
  */
-static int
-http_writefn(void *v, const char *buf, int len)
+static ssize_t
+http_writefn(void *v, const void *buf, size_t len)
 {
 	struct httpio *io = (struct httpio *)v;
 
@@ -287,27 +272,25 @@ http_writefn(void *v, const char *buf, int len)
 /*
  * Close function
  */
-static int
+static void
 http_closefn(void *v)
 {
 	struct httpio *io = (struct httpio *)v;
-	int r;
 
-	r = fetch_close(io->conn);
+	fetch_close(io->conn);
 	if (io->buf)
 		free(io->buf);
 	free(io);
-	return (r);
 }
 
 /*
  * Wrap a file descriptor up
  */
-static FILE *
+static fetchIO *
 http_funopen(conn_t *conn, int chunked)
 {
 	struct httpio *io;
-	FILE *f;
+	fetchIO *f;
 
 	if ((io = calloc(1, sizeof(*io))) == NULL) {
 		fetch_syserr();
@@ -315,7 +298,7 @@ http_funopen(conn_t *conn, int chunked)
 	}
 	io->conn = conn;
 	io->chunked = chunked;
-	f = funopen(io, http_readfn, http_writefn, NULL, http_closefn);
+	f = fetchIO_unopen(io, http_readfn, http_writefn, http_closefn);
 	if (f == NULL) {
 		fetch_syserr();
 		free(io);
@@ -486,10 +469,6 @@ http_parse_mtime(const char *p, time_t *mtime)
 	setlocale(LC_TIME, locale);
 	if (r == NULL)
 		return (-1);
-	DEBUG(fprintf(stderr, "last modified: [%04d-%02d-%02d "
-		  "%02d:%02d:%02d]\n",
-		  tm.tm_year + 1900, tm.tm_mon + 1, tm.tm_mday,
-		  tm.tm_hour, tm.tm_min, tm.tm_sec));
 	*mtime = timegm(&tm);
 	return (0);
 }
@@ -506,8 +485,6 @@ http_parse_length(const char *p, off_t *length)
 		len = len * 10 + (*p - '0');
 	if (*p)
 		return (-1);
-	DEBUG(fprintf(stderr, "content length: [%lld]\n",
-	    (long long)len));
 	*length = len;
 	return (0);
 }
@@ -540,15 +517,10 @@ http_parse_range(const char *p, off_t *offset, off_t *length, off_t *size)
 		len = len * 10 + *p - '0';
 	if (*p || len < last - first + 1)
 		return (-1);
-	if (first == -1) {
-		DEBUG(fprintf(stderr, "content range: [*/%lld]\n",
-		    (long long)len));
+	if (first == -1)
 		*length = 0;
-	} else {
-		DEBUG(fprintf(stderr, "content range: [%lld-%lld/%lld]\n",
-		    (long long)first, (long long)last, (long long)len));
+	else
 		*length = last - first + 1;
-	}
 	*offset = first;
 	*size = len;
 	return (0);
@@ -624,8 +596,6 @@ http_basic_auth(conn_t *conn, const char *hdr, const char *usr, const char *pwd)
 	char *upw, *auth;
 	int r;
 
-	DEBUG(fprintf(stderr, "usr: [%s]\n", usr));
-	DEBUG(fprintf(stderr, "pwd: [%s]\n", pwd));
 	if (asprintf(&upw, "%s:%s", usr, pwd) == -1)
 		return (-1);
 	auth = http_base64(upw);
@@ -751,45 +721,6 @@ http_get_proxy(struct url * url, const char *flags)
 	return (NULL);
 }
 
-static void
-http_print_html(FILE *out, FILE *in)
-{
-	size_t len;
-	char *line, *p, *q;
-	int comment, tag;
-
-	comment = tag = 0;
-	while ((line = fgetln(in, &len)) != NULL) {
-		while (len && isspace((unsigned char)line[len - 1]))
-			--len;
-		for (p = q = line; q < line + len; ++q) {
-			if (comment && *q == '-') {
-				if (q + 2 < line + len &&
-				    strcmp(q, "-->") == 0) {
-					tag = comment = 0;
-					q += 2;
-				}
-			} else if (tag && !comment && *q == '>') {
-				p = q + 1;
-				tag = 0;
-			} else if (!tag && *q == '<') {
-				if (q > p)
-					fwrite(p, q - p, 1, out);
-				tag = 1;
-				if (q + 3 < line + len &&
-				    strcmp(q, "<!--") == 0) {
-					comment = 1;
-					q += 3;
-				}
-			}
-		}
-		if (!tag && q > p)
-			fwrite(p, q - p, 1, out);
-		fputc('\n', out);
-	}
-}
-
-
 /*****************************************************************************
  * Core
  */
@@ -800,7 +731,7 @@ http_print_html(FILE *out, FILE *in)
  * XXX This function is way too long, the do..while loop should be split
  * XXX off into a separate function.
  */
-FILE *
+fetchIO *
 http_request(struct url *URL, const char *op, struct url_stat *us,
     struct url *purl, const char *flags)
 {
@@ -811,7 +742,7 @@ http_request(struct url *URL, const char *op, struct url_stat *us,
 	off_t offset, clength, length, size;
 	time_t mtime;
 	const char *p;
-	FILE *f;
+	fetchIO *f;
 	hdr_t h;
 	char hbuf[URL_HOSTLEN + 7], *host;
 
@@ -1032,7 +963,6 @@ http_request(struct url *URL, const char *op, struct url_stat *us,
 					new = fetchParseURL(p);
 				if (new == NULL) {
 					/* XXX should set an error code */
-					DEBUG(fprintf(stderr, "failed to parse new URL\n"));
 					goto ouch;
 				}
 				if (!*new->user && !*new->pwd) {
@@ -1090,10 +1020,8 @@ http_request(struct url *URL, const char *op, struct url_stat *us,
 		need_auth = 0;
 		fetch_close(conn);
 		conn = NULL;
-		if (!new) {
-			DEBUG(fprintf(stderr, "redirect with no new location\n"));
+		if (!new)
 			break;
-		}
 		if (url != URL)
 			fetchFreeURL(url);
 		url = new;
@@ -1104,11 +1032,6 @@ http_request(struct url *URL, const char *op, struct url_stat *us,
 		http_seterr(e);
 		goto ouch;
 	}
-
-	DEBUG(fprintf(stderr, "offset %lld, length %lld,"
-		  " size %lld, clength %lld\n",
-		  (long long)offset, (long long)length,
-		  (long long)size, (long long)clength));
 
 	/* check for inconsistencies */
 	if (clength != -1 && length != -1 && clength != length) {
@@ -1142,7 +1065,7 @@ http_request(struct url *URL, const char *op, struct url_stat *us,
 	URL->offset = offset;
 	URL->length = clength;
 
-	/* wrap it up in a FILE */
+	/* wrap it up in a fetchIO */
 	if ((f = http_funopen(conn, chunked)) == NULL) {
 		fetch_syserr();
 		goto ouch;
@@ -1154,8 +1077,7 @@ http_request(struct url *URL, const char *op, struct url_stat *us,
 		fetchFreeURL(purl);
 
 	if (HTTP_ERROR(conn->err)) {
-		http_print_html(stderr, f);
-		fclose(f);
+		fetchIO_close(f);
 		f = NULL;
 	}
 
@@ -1179,7 +1101,7 @@ ouch:
 /*
  * Retrieve and stat a file by HTTP
  */
-FILE *
+fetchIO *
 fetchXGetHTTP(struct url *URL, struct url_stat *us, const char *flags)
 {
 	return (http_request(URL, "GET", us, http_get_proxy(URL, flags), flags));
@@ -1188,7 +1110,7 @@ fetchXGetHTTP(struct url *URL, struct url_stat *us, const char *flags)
 /*
  * Retrieve a file by HTTP
  */
-FILE *
+fetchIO *
 fetchGetHTTP(struct url *URL, const char *flags)
 {
 	return (fetchXGetHTTP(URL, NULL, flags));
@@ -1197,7 +1119,7 @@ fetchGetHTTP(struct url *URL, const char *flags)
 /*
  * Store a file by HTTP
  */
-FILE *
+fetchIO *
 fetchPutHTTP(struct url *URL, const char *flags)
 {
 	fprintf(stderr, "fetchPutHTTP(): not implemented\n");
@@ -1210,12 +1132,12 @@ fetchPutHTTP(struct url *URL, const char *flags)
 int
 fetchStatHTTP(struct url *URL, struct url_stat *us, const char *flags)
 {
-	FILE *f;
+	fetchIO *f;
 
 	f = http_request(URL, "HEAD", us, http_get_proxy(URL, flags), flags);
 	if (f == NULL)
 		return (-1);
-	fclose(f);
+	fetchIO_close(f);
 	return (0);
 }
 

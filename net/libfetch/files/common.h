@@ -1,4 +1,4 @@
-/*	$NetBSD: common.h,v 1.3 2008/02/21 14:40:43 tnn Exp $	*/
+/*	$NetBSD: common.h,v 1.4 2008/04/02 15:33:14 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -103,11 +103,8 @@ int		 fetch_no_proxy_match(const char *);
 #define netdb_seterr(n)	 fetch_seterr(netdb_errlist, n)
 #define url_seterr(n)	 fetch_seterr(url_errlist, n)
 
-#ifndef NDEBUG
-#define DEBUG(x) do { if (fetchDebug) { x; } } while (0)
-#else
-#define DEBUG(x) do { } while (0)
-#endif
+fetchIO		*fetchIO_unopen(void *, ssize_t (*)(void *, void *, size_t),
+    ssize_t (*)(void *, const void *, size_t), void (*)(void *));
 
 /*
  * I don't really like exporting http_request() and ftp_request(),
@@ -118,10 +115,11 @@ int		 fetch_no_proxy_match(const char *);
  * Note that _*_request() free purl, which is way ugly but saves us a
  * whole lot of trouble.
  */
-FILE		*http_request(struct url *, const char *,
+fetchIO		*http_request(struct url *, const char *,
 		     struct url_stat *, struct url *, const char *);
-FILE		*ftp_request(struct url *, const char *,
+fetchIO		*ftp_request(struct url *, const char *,
 		     struct url_stat *, struct url *, const char *);
+
 
 /*
  * Check whether a particular flag is set
