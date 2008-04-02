@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.596 2008/04/02 01:31:30 taca Exp $
+$NetBSD: CHANGES-2008,v 1.597 2008/04/02 02:00:30 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1090,3 +1090,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/phpmyadmin to 2.11.5.1 [tron 2008-04-01]
 	Updated chat/inspircd to 1.1.18 [adrianp 2008-04-01]
 	Updated www/squid to 2.6.19 [taca 2008-04-02]
+	Updated graphics/ruby-RMagick to 2.3.0 [obache 2008-04-02]
