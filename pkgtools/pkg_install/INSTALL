@@ -1,12 +1,11 @@
 #!/bin/sh
 #
-# $NetBSD: INSTALL,v 1.2 2005/11/07 06:52:24 jlam Exp $
+# $NetBSD: INSTALL,v 1.3 2008/04/02 13:23:31 jlam Exp $
 
 PKGNAME="$1"
 STAGE="$2"
 
 PKG_DBDIR="@PKG_DBDIR@"
-PKG_TOOLS_BIN="@PKG_TOOLS_BIN@"
 MKDIR="@MKDIR@"
 
 case ${STAGE} in
@@ -15,6 +14,6 @@ PRE-INSTALL)
 	;;
 
 POST-INSTALL)
-	[ -f ${PKG_DBDIR}/pkgdb.byfile.db ] || ${PKG_TOOLS_BIN}/pkg_admin rebuild
+	[ -f ${PKG_DBDIR}/pkgdb.byfile.db ] || ${PKG_PREFIX}/sbin/pkg_admin rebuild
 	;;
 esac
