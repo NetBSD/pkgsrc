@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.48 2008/02/14 08:44:57 obache Exp $
+# $NetBSD: Makefile,v 1.49 2008/04/02 01:59:59 obache Exp $
 
-DISTNAME=	RMagick-2.2.2
+DISTNAME=	RMagick-2.3.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/32266/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/34654/
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://rmagick.rubyforge.org/
