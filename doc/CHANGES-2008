@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.601 2008/04/03 08:02:35 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.602 2008/04/03 09:46:16 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1095,3 +1095,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated archivers/gtar-base to 1.15.1nb6 [tonnerre 2008-04-02]
 	Updated print/cups to 1.3.7 [markd 2008-04-03]
 	Updated security/openssh to 4.7.1nb3 [tonnerre 2008-04-03]
+	Updated mail/alpine to 1.10 [abd 2008-04-03]
+
