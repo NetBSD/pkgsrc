@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2007/01/06 17:41:00 veego Exp $
+# $NetBSD: Makefile,v 1.57 2008/04/03 11:03:21 joerg Exp $
 #
 
 DISTNAME=	rplay-3.3.2
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rplay.doit.org/
 COMMENT=	Network audio player
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		makeinfo
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
@@ -20,6 +22,7 @@ CONFIGURE_ARGS+=	--build=BUILD
 INFO_FILES=	# PLIST
 RCD_SCRIPTS=	rplayd
 EGDIR=		${PREFIX}/share/examples/rplay
+INSTALLATION_DIRS=	${EGDIR}
 
 pre-configure:
 	cd ${WRKSRC}/doc; for manpage in *.[0-9]; do			\
@@ -31,9 +34,8 @@ pre-configure:
 	done
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
 .for f in rplay.conf rplay.helpers rplay.hosts rplay.servers
-	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${DESTDIR}${EGDIR}
 .endfor
 
 .include "../../audio/gsm/buildlink3.mk"
