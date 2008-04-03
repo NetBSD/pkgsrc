@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.52 2007/12/02 11:49:55 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2008/04/03 22:33:00 tonnerre Exp $
 
 DISTNAME=		rxvt-2.7.10
-PKGREVISION=		5
+PKGREVISION=		6
 CATEGORIES=		x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=rxvt/} \
 			ftp://mason.primenet.com.au/pub/rxvt/
