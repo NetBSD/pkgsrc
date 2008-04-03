@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.604 2008/04/03 22:33:47 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.605 2008/04/03 22:37:36 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1098,3 +1098,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/alpine to 1.10 [abd 2008-04-03]
 	Updated net/samba to 3.0.28a [jlam 2008-04-03]
 	Updated x11/rxvt to 2.7.10nb6 [tonnerre 2008-04-03]
+	Updated x11/rxvt-unicode to 8.3nb3 [tonnerre 2008-04-03]
