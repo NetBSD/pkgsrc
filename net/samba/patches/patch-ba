@@ -1,16 +1,7 @@
-$NetBSD: patch-ba,v 1.6 2007/11/06 00:47:51 rillig Exp $
+$NetBSD: patch-ba,v 1.7 2008/04/03 20:19:42 jlam Exp $
 
---- Makefile.in.orig	2007-06-20 02:11:39.000000000 +0900
+--- Makefile.in.orig	2008-03-08 10:56:26.000000000 -0500
 +++ Makefile.in
-@@ -81,7 +81,7 @@ AUTHLIBDIR = $(LIBDIR)/auth
- CONFIGLIBDIR = $(LIBDIR)/config
- CONFIGDIR = @configdir@
- VARDIR = @localstatedir@
--MANDIR = @mandir@
-+MANDIR = @mandir@
- DATADIR = @datadir@
- 
- # The permissions to give the executables
 @@ -106,6 +106,9 @@ SWATDIR = @swatdir@
  # the directory where lock files go
  LOCKDIR = @lockdir@
@@ -77,6 +68,15 @@ $NetBSD: patch-ba,v 1.6 2007/11/06 00:47:51 rillig Exp $
  
  bin/tdbbackup@EXEEXT@: proto_exists $(TDBBACKUP_OBJ) bin/.dummy
  	@echo Linking $@
+@@ -1566,7 +1569,7 @@ bin/timelimit@EXEEXT@: script/tests/time
+ 	@echo Linking $@
+ 	@$(CC) $(FLAGS) -o $@ $(DYNEXP) script/tests/timelimit.o
+ 
+-install: installservers installbin @INSTALL_CIFSMOUNT@ installman installscripts installdat installswat installmodules @INSTALL_LIBSMBCLIENT@ @INSTALL_LIBMSRPC@ @INSTALL_PAM_MODULES@ @INSTALL_LIBSMBSHAREMODES@
++install: installservers installbin @INSTALL_CIFSMOUNT@ installman installscripts installdat installswat installmodules @INSTALL_LIBSMBCLIENT@ @INSTALL_LIBMSRPC@ @INSTALL_PAM_MODULES@ @INSTALL_LIBSMBSHAREMODES@ @INSTALL_LIBADDNS@
+ 
+ 
+ install-everything: install installmodules
 @@ -1580,7 +1583,7 @@ install-everything: install installmodul
  # is not used
  
@@ -97,7 +97,7 @@ $NetBSD: patch-ba,v 1.6 2007/11/06 00:47:51 rillig Exp $
  	@$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS) $(DESTDIR) $(prefix) $(CHARSETLIBDIR) $(CHARSET_MODULES)
  	@$(SHELL) $(srcdir)/script/installmodules.sh $(INSTALLPERMS) $(DESTDIR) $(prefix) $(AUTHLIBDIR) $(AUTH_MODULES)
  	@$(SHELL) $(srcdir)/script/linkmodules.sh $(DESTDIR)$(PDBLIBDIR) ldapsam.@SHLIBEXT@ ldapsam_compat.@SHLIBEXT@
-@@ -1704,6 +1709,7 @@ showlayout:
+@@ -1705,6 +1710,7 @@ showlayout:
  	@echo "  privatedir:  $(PRIVATE_DIR)"
  	@echo "  configdir:   $(CONFIGDIR)"
  	@echo "  lockdir:     $(LOCKDIR)"

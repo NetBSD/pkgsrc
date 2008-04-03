@@ -1,6 +1,6 @@
-$NetBSD: patch-at,v 1.8 2007/12/21 17:32:25 drochner Exp $
+$NetBSD: patch-at,v 1.9 2008/04/03 20:19:42 jlam Exp $
 
---- configure.orig	2007-09-11 16:22:55.000000000 +0200
+--- configure.orig	2008-03-08 10:58:14.000000000 -0500
 +++ configure
 @@ -667,6 +667,7 @@ target_vendor
  target_os
@@ -18,7 +18,7 @@ $NetBSD: patch-at,v 1.8 2007/12/21 17:32:25 drochner Exp $
    --with-piddir=DIR       Where to put pid files ($ac_default_prefix/var/locks)
    --with-swatdir=DIR      Where to put SWAT files ($ac_default_prefix/swat)
    --with-configdir=DIR    Where to put configuration files ($libdir)
-@@ -2125,6 +2127,7 @@ fi
+@@ -2136,6 +2138,7 @@ fi
  
  rootsbindir="\${SBINDIR}"
  lockdir="\${VARDIR}/locks"
@@ -26,7 +26,7 @@ $NetBSD: patch-at,v 1.8 2007/12/21 17:32:25 drochner Exp $
  piddir="\${VARDIR}/locks"
  test "${mandir}" || mandir="\${prefix}/man"
  logfilebase="\${VARDIR}"
-@@ -2139,7 +2142,8 @@ swatdir="\${prefix}/swat"
+@@ -2150,7 +2153,8 @@ swatdir="\${prefix}/swat"
  if test "${with_fhs+set}" = set; then
    withval=$with_fhs;  case "$withval" in
    yes)
@@ -36,7 +36,7 @@ $NetBSD: patch-at,v 1.8 2007/12/21 17:32:25 drochner Exp $
      piddir="\${VARDIR}/run"
      mandir="\${prefix}/share/man"
      logfilebase="\${VARDIR}/log/samba"
-@@ -2213,6 +2217,26 @@ fi
+@@ -2224,6 +2228,26 @@ fi
  
  
  #################################################
@@ -63,7 +63,7 @@ $NetBSD: patch-at,v 1.8 2007/12/21 17:32:25 drochner Exp $
  # set pid directory location
  
  # Check whether --with-piddir was given.
-@@ -2450,6 +2474,7 @@ fi
+@@ -2461,6 +2485,7 @@ fi
  
  
  
@@ -71,7 +71,7 @@ $NetBSD: patch-at,v 1.8 2007/12/21 17:32:25 drochner Exp $
  ## check for --enable-debug first before checking CFLAGS before
  ## so that we don't mix -O and -g
  # Check whether --enable-debug was given.
-@@ -31006,7 +31031,8 @@ done
+@@ -31342,7 +31367,8 @@ done
  
  
  
@@ -81,7 +81,7 @@ $NetBSD: patch-at,v 1.8 2007/12/21 17:32:25 drochner Exp $
  do
  as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
  { echo "$as_me:$LINENO: checking for $ac_func" >&5
-@@ -46527,6 +46553,75 @@ _ACEOF
+@@ -46875,6 +46901,75 @@ _ACEOF
  fi
  
  if test $iface = no; then
@@ -157,7 +157,7 @@ $NetBSD: patch-at,v 1.8 2007/12/21 17:32:25 drochner Exp $
  { echo "$as_me:$LINENO: checking for iface ifconf" >&5
  echo $ECHO_N "checking for iface ifconf... $ECHO_C" >&6; }
  if test "${samba_cv_HAVE_IFACE_IFCONF+set}" = set; then
-@@ -49841,9 +49936,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
+@@ -50250,9 +50345,9 @@ LIBS="-lcrypto $KRB5_LIBS  $LIBS"
  
  
  
@@ -170,7 +170,7 @@ $NetBSD: patch-at,v 1.8 2007/12/21 17:32:25 drochner Exp $
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    cat >conftest.$ac_ext <<_ACEOF
-@@ -49859,11 +49954,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -50268,11 +50363,11 @@ cat >>conftest.$ac_ext <<_ACEOF
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -184,7 +184,7 @@ $NetBSD: patch-at,v 1.8 2007/12/21 17:32:25 drochner Exp $
    ;
    return 0;
  }
-@@ -49886,13 +49981,13 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+@@ -50295,13 +50390,13 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
  	 test ! -s conftest.err
         } && test -s conftest$ac_exeext &&
         $as_test_x conftest$ac_exeext; then
@@ -200,7 +200,7 @@ $NetBSD: patch-at,v 1.8 2007/12/21 17:32:25 drochner Exp $
  		  ac_cv_lib_ext_crypto=no
  fi
  
-@@ -49900,11 +49995,11 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -50309,11 +50404,11 @@ rm -f core conftest.err conftest.$ac_obj
        conftest$ac_exeext conftest.$ac_ext
  
  fi
@@ -216,7 +216,7 @@ $NetBSD: patch-at,v 1.8 2007/12/21 17:32:25 drochner Exp $
  _ACEOF
  
  fi
-@@ -62806,31 +62901,39 @@ case "$host_os" in
+@@ -63337,31 +63432,39 @@ case "$host_os" in
  		NSSSONAMEVERSIONSUFFIX=".2"
  		WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_linux.o"
  		;;
@@ -240,7 +240,7 @@ $NetBSD: patch-at,v 1.8 2007/12/21 17:32:25 drochner Exp $
 -			    nsswitch/winbind_nss_netbsd.o \
 +	*freebsd*)
 +		case "$UNAME_R" in
-+		5-9*)
++		[5-9]*)
 +			# FreeBSD winbind client is implemented as a wrapper
 +			# around the Linux version.
 +			NSSSONAMEVERSIONSUFFIX=".1"
@@ -256,9 +256,9 @@ $NetBSD: patch-at,v 1.8 2007/12/21 17:32:25 drochner Exp $
 +		esac
 +		;;
 +
-+	*netbsd*[3-9]*)
++	*netbsd*)
 +		case "$UNAME_R" in
-+		3-9*)
++		[3-9]*)
 +			# NetBSD winbind client is implemented as a wrapper
 +			# around the Linux version. It needs getpwent_r() to
 +			# indicate libc's use of the correct nsdispatch API.
@@ -278,7 +278,7 @@ $NetBSD: patch-at,v 1.8 2007/12/21 17:32:25 drochner Exp $
  		;;
  	*irix*)
  		# IRIX has differently named shared libraries
-@@ -67320,6 +67423,7 @@ target_vendor!$target_vendor$ac_delim
+@@ -67888,6 +67991,7 @@ target_vendor!$target_vendor$ac_delim
  target_os!$target_os$ac_delim
  configdir!$configdir$ac_delim
  lockdir!$lockdir$ac_delim
@@ -286,7 +286,7 @@ $NetBSD: patch-at,v 1.8 2007/12/21 17:32:25 drochner Exp $
  piddir!$piddir$ac_delim
  logfilebase!$logfilebase$ac_delim
  privatedir!$privatedir$ac_delim
-@@ -67363,7 +67467,6 @@ IDMAP_LIBS!$IDMAP_LIBS$ac_delim
+@@ -67931,7 +68035,6 @@ IDMAP_LIBS!$IDMAP_LIBS$ac_delim
  KRB5_LIBS!$KRB5_LIBS$ac_delim
  UUID_LIBS!$UUID_LIBS$ac_delim
  LDAP_LIBS!$LDAP_LIBS$ac_delim
@@ -294,7 +294,7 @@ $NetBSD: patch-at,v 1.8 2007/12/21 17:32:25 drochner Exp $
  _ACEOF
  
    if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 97; then
-@@ -67405,6 +67508,7 @@ _ACEOF
+@@ -67973,6 +68076,7 @@ _ACEOF
  ac_delim='%!_!# '
  for ac_last_try in false false false false false :; do
    cat >conf$$subs.sed <<_ACEOF
@@ -302,7 +302,7 @@ $NetBSD: patch-at,v 1.8 2007/12/21 17:32:25 drochner Exp $
  INSTALL_PAM_MODULES!$INSTALL_PAM_MODULES$ac_delim
  UNINSTALL_PAM_MODULES!$UNINSTALL_PAM_MODULES$ac_delim
  NSS_MODULES!$NSS_MODULES$ac_delim
-@@ -67488,7 +67592,7 @@ SMBD_LIBS!$SMBD_LIBS$ac_delim
+@@ -68056,7 +68160,7 @@ SMBD_LIBS!$SMBD_LIBS$ac_delim
  LTLIBOBJS!$LTLIBOBJS$ac_delim
  _ACEOF
  
