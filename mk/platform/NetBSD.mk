@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.29 2008/03/04 06:45:34 jlam Exp $
+# $NetBSD: NetBSD.mk,v 1.30 2008/04/03 14:07:51 joerg Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -31,11 +31,9 @@ EXPORT_SYMBOLS_LDFLAGS?=-Wl,--export-dynamic
 .endif
 MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 NOLOGIN?=		/sbin/nologin
-.if exists(${LOCALBASE}/sbin/pkg_info)
-PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
-.else
-PKG_TOOLS_BIN?=		/usr/sbin
-.endif
+# This must be lazy and using :? evaluation doesn't work due to a make bugs.
+PKG_TOOLS_BIN_cmd=	if [ -x ${LOCALBASE}/sbin/pkg_info ]; then echo ${LOCALBASE}/sbin; else echo /usr/sbin; fi
+PKG_TOOLS_BIN?=		${PKG_TOOLS_BIN_cmd:sh}
 ROOT_CMD?=		${SU} - root -c
 ROOT_USER?=		root
 ROOT_GROUP?=	wheel
