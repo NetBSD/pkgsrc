@@ -1,17 +1,23 @@
-$NetBSD: patch-aa,v 1.4 2006/03/20 03:53:27 jlam Exp $
+$NetBSD: patch-aa,v 1.5 2008/04/03 11:03:21 joerg Exp $
 
---- Makefile.config.in.orig	1998-08-13 02:12:59.000000000 -0400
+--- Makefile.config.in.orig	1998-08-13 08:12:59.000000000 +0200
 +++ Makefile.config.in
-@@ -11,10 +11,10 @@ exec_prefix=	@exec_prefix@
+@@ -6,15 +6,15 @@
+ SHELL=		/bin/sh
+ srcdir=		@srcdir@
+ VPATH=		@srcdir@
+-prefix=		@prefix@
++prefix=		${DESTDIR}@prefix@
+ exec_prefix=	@exec_prefix@
  bindir=		$(exec_prefix)/bin
  sbindir=	$(exec_prefix)/sbin
  libdir=		$(exec_prefix)/lib
 -mandir=		$(prefix)/man
-+mandir=		@mandir@
++mandir=		${DESTDIR}@mandir@
  etcdir=		$(prefix)/etc
  includedir=	$(prefix)/include
 -infodir=	$(prefix)/info
-+infodir=	@infodir@
++infodir=	${DESTDIR}@infodir@
  tmpdir=		/tmp
  debiandir=	@srcdir@/../debian
  
