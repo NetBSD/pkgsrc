@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2007/10/28 07:28:46 taca Exp $
+@comment $NetBSD: PLIST,v 1.38 2008/04/03 20:19:42 jlam Exp $
 bin/eventlogadm
 bin/findsmb
 bin/net
@@ -12,14 +12,11 @@ bin/smbclient
 bin/smbcontrol
 bin/smbcquotas
 bin/smbget
-${SMBMOUNT}bin/smbmnt
-${SMBMOUNT}bin/smbmount
 bin/smbpasswd
 bin/smbspool
 bin/smbstatus
 bin/smbtar
 bin/smbtree
-${SMBMOUNT}bin/smbumount
 bin/tdbbackup
 bin/tdbdump
 bin/tdbtool
@@ -38,13 +35,18 @@ lib/samba/fi.msg
 lib/samba/fr.msg
 lib/samba/it.msg
 lib/samba/ja.msg
-lib/samba/libsmbsharemodes.so
+lib/samba/libaddns.so
+lib/samba/libaddns.so.${LIBMAJOR.addns}
+lib/samba/libaddns.so.${LIBMAJOR.addns}.${LIBMINOR.addns}
 lib/samba/libmsrpc.so
-lib/samba/libmsrpc.so.${LIBMSRPC_MAJOR}
-lib/samba/libmsrpc.so.${LIBMSRPC_MAJOR}.${LIBMSRPC_MINOR}
+lib/samba/libmsrpc.so.${LIBMAJOR.msrpc}
+lib/samba/libmsrpc.so.${LIBMAJOR.msrpc}.${LIBMINOR.msrpc}
 lib/samba/libsmbclient.so
-lib/samba/libsmbclient.so.${LIBSMBCLIENT_MAJOR}
-lib/samba/libsmbclient.so.${LIBSMBCLIENT_MAJOR}.${LIBSMBCLIENT_MINOR}
+lib/samba/libsmbclient.so.${LIBMAJOR.smbclient}
+lib/samba/libsmbclient.so.${LIBMAJOR.smbclient}.${LIBMINOR.smbclient}
+lib/samba/libsmbsharemodes.so
+lib/samba/libsmbsharemodes.so.${LIBMAJOR.smbsharemodes}
+lib/samba/libsmbsharemodes.so.${LIBMAJOR.smbsharemodes}.${LIBMINOR.smbsharemodes}
 lib/samba/lowcase.dat
 lib/samba/nl.msg
 lib/samba/pl.msg
@@ -59,6 +61,7 @@ lib/samba/vfs/extd_audit.so
 lib/samba/vfs/fake_perms.so
 lib/samba/vfs/full_audit.so
 lib/samba/vfs/netatalk.so
+${FAM}lib/samba/vfs/notify_fam.so
 lib/samba/vfs/readahead.so
 lib/samba/vfs/readonly.so
 lib/samba/vfs/recycle.so
@@ -87,9 +90,9 @@ man/man5/lmhosts.5
 man/man5/smb.conf.5
 man/man5/smbgetrc.5
 man/man5/smbpasswd.5
-man/man7/samba.7
 man/man7/libsmbclient.7
 man/man7/pam_winbind.7
+man/man7/samba.7
 man/man8/eventlogadm.8
 man/man8/idmap_ad.8
 man/man8/idmap_ldap.8
@@ -101,11 +104,8 @@ man/man8/net.8
 man/man8/nmbd.8
 man/man8/pdbedit.8
 man/man8/smbd.8
-${SMBMOUNT}man/man8/smbmnt.8
-${SMBMOUNT}man/man8/smbmount.8
 man/man8/smbpasswd.8
 man/man8/smbspool.8
-${SMBMOUNT}man/man8/smbumount.8
 man/man8/swat.8
 man/man8/tdbbackup.8
 man/man8/tdbdump.8
@@ -129,11 +129,11 @@ man/man8/vfs_readonly.8
 man/man8/vfs_recycle.8
 man/man8/vfs_shadow_copy.8
 man/man8/winbindd.8
-${SMBMOUNT}sbin/mount.cifs
+${CIFSMOUNT}sbin/mount.cifs
 sbin/nmbd
 sbin/smbd
 sbin/swat
-${SMBMOUNT}sbin/umount.cifs
+${CIFSMOUNT}sbin/umount.cifs
 ${WINBIND}sbin/winbindd
 share/doc/samba/NT4-Locking.reg
 share/doc/samba/NT4_PlainPassword.reg
@@ -257,9 +257,9 @@ share/samba/swat/help/Samba3-HOWTO/AccessControls.html
 share/samba/swat/help/Samba3-HOWTO/AdvancedNetworkManagement.html
 share/samba/swat/help/Samba3-HOWTO/Appendix.html
 share/samba/swat/help/Samba3-HOWTO/Backup.html
+share/samba/swat/help/Samba3-HOWTO/CUPS-printing.html
 share/samba/swat/help/Samba3-HOWTO/ChangeNotes.html
 share/samba/swat/help/Samba3-HOWTO/ClientConfig.html
-share/samba/swat/help/Samba3-HOWTO/CUPS-printing.html
 share/samba/swat/help/Samba3-HOWTO/DNSDHCP.html
 share/samba/swat/help/Samba3-HOWTO/FastStart.html
 share/samba/swat/help/Samba3-HOWTO/InterdomainTrusts.html
@@ -414,7 +414,6 @@ share/samba/swat/help/manpages/tdbdump.8.html
 share/samba/swat/help/manpages/tdbtool.8.html
 share/samba/swat/help/manpages/testparm.1.html
 share/samba/swat/help/manpages/umount.cifs.8.html
-share/samba/swat/help/manpages/vfstest.1.html
 share/samba/swat/help/manpages/vfs_audit.8.html
 share/samba/swat/help/manpages/vfs_cacheprime.8.html
 share/samba/swat/help/manpages/vfs_cap.8.html
@@ -432,6 +431,7 @@ share/samba/swat/help/manpages/vfs_readahead.8.html
 share/samba/swat/help/manpages/vfs_readonly.8.html
 share/samba/swat/help/manpages/vfs_recycle.8.html
 share/samba/swat/help/manpages/vfs_shadow_copy.8.html
+share/samba/swat/help/manpages/vfstest.1.html
 share/samba/swat/help/manpages/wbinfo.1.html
 share/samba/swat/help/manpages/winbindd.8.html
 share/samba/swat/help/welcome-no-samba-doc.html
@@ -620,6 +620,8 @@ share/samba/swat/using_samba/inx.html
 share/samba/swat/using_samba/samba2_s.gif
 share/samba/swat/using_samba/samba2_xs.gif
 share/samba/swat/using_samba/toc.html
+@dirrm share/samba/swat/using_samba/figs
+@dirrm share/samba/swat/using_samba
 @dirrm share/samba/swat/lang/tr/images
 @dirrm share/samba/swat/lang/tr/help
 @dirrm share/samba/swat/lang/tr
@@ -628,8 +630,6 @@ share/samba/swat/using_samba/toc.html
 @dirrm share/samba/swat/lang
 @dirrm share/samba/swat/include
 @dirrm share/samba/swat/images
-@dirrm share/samba/swat/using_samba/figs
-@dirrm share/samba/swat/using_samba
 @dirrm share/samba/swat/help/manpages
 @dirrm share/samba/swat/help/Samba3-HOWTO/images
 @dirrm share/samba/swat/help/Samba3-HOWTO

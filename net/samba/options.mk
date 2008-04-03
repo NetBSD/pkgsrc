@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2007/10/28 07:28:46 taca Exp $
+# $NetBSD: options.mk,v 1.23 2008/04/03 20:19:42 jlam Exp $
 
 # Recommended package options for various setups:
 #
@@ -8,7 +8,14 @@
 #   Domain Controller			ldap winbind
 #
 PKG_OPTIONS_VAR=	PKG_OPTIONS.samba
-PKG_SUPPORTED_OPTIONS=	acl ads cups ldap pam winbind
+PKG_SUPPORTED_OPTIONS=	ads cups fam ldap pam winbind
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+SAMBA_ACL_OPSYS=	AIX FreeBSD HPUX IRIX Linux OSF1 SunOS
+.if !empty(SAMBA_ACL_OPSYS:M${OPSYS})
+PKG_SUPPORTED_OPTIONS+=	acl
+.endif
 
 .include "../../mk/bsd.options.mk"
 
@@ -58,6 +65,18 @@ samba-cups-install:
 .else
 CONFIGURE_ARGS+=	--disable-cups
 PLIST_SUBST+=		CUPS="@comment "
+.endif
+
+###
+### Access Control List support.
+###
+.if !empty(PKG_OPTIONS:Mfam)
+.  include "../../mk/fam.buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-fam
+PLIST_SUBST+=		FAM=
+.else
+CONFIGURE_ARGS+=	--disable-fam
+PLIST_SUBST+=		FAM="@comment "
 .endif
 
 ###

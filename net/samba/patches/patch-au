@@ -1,8 +1,8 @@
-$NetBSD: patch-au,v 1.8 2007/12/21 17:32:26 drochner Exp $
+$NetBSD: patch-au,v 1.9 2008/04/03 20:19:42 jlam Exp $
 
---- configure.in.orig	2007-08-20 15:04:51.000000000 +0200
+--- configure.in.orig	2008-03-08 10:56:26.000000000 -0500
 +++ configure.in
-@@ -27,6 +27,7 @@ AC_PREFIX_DEFAULT(/usr/local/samba)
+@@ -38,6 +38,7 @@ AC_PREFIX_DEFAULT(/usr/local/samba)
  
  rootsbindir="\${SBINDIR}"
  lockdir="\${VARDIR}/locks"
@@ -10,7 +10,7 @@ $NetBSD: patch-au,v 1.8 2007/12/21 17:32:26 drochner Exp $
  piddir="\${VARDIR}/locks"
  test "${mandir}" || mandir="\${prefix}/man"
  logfilebase="\${VARDIR}"
-@@ -40,7 +41,8 @@ AC_ARG_WITH(fhs,
+@@ -51,7 +52,8 @@ AC_ARG_WITH(fhs,
  [  --with-fhs              Use FHS-compliant paths (default=no)],
  [ case "$withval" in
    yes)
@@ -20,7 +20,7 @@ $NetBSD: patch-au,v 1.8 2007/12/21 17:32:26 drochner Exp $
      piddir="\${VARDIR}/run"
      mandir="\${prefix}/share/man"
      logfilebase="\${VARDIR}/log/samba"
-@@ -100,6 +102,22 @@ AC_ARG_WITH(lockdir,
+@@ -111,6 +113,22 @@ AC_ARG_WITH(lockdir,
    esac])
  
  #################################################
@@ -43,7 +43,7 @@ $NetBSD: patch-au,v 1.8 2007/12/21 17:32:26 drochner Exp $
  # set pid directory location
  AC_ARG_WITH(piddir,
  [  --with-piddir=DIR       Where to put pid files ($ac_default_prefix/var/locks)],
-@@ -246,6 +264,7 @@ fi
+@@ -257,6 +275,7 @@ fi
  
  AC_SUBST(configdir)
  AC_SUBST(lockdir)
@@ -51,7 +51,7 @@ $NetBSD: patch-au,v 1.8 2007/12/21 17:32:26 drochner Exp $
  AC_SUBST(piddir)
  AC_SUBST(logfilebase)
  AC_SUBST(privatedir)
-@@ -1231,7 +1250,7 @@ AC_CHECK_FUNCS(lstat64 fopen64 atexit gr
+@@ -1242,7 +1261,7 @@ AC_CHECK_FUNCS(lstat64 fopen64 atexit gr
  AC_CHECK_FUNCS(fseek64 fseeko64 ftell64 ftello64 setluid getpwanam setlinebuf)
  AC_CHECK_FUNCS(opendir64 readdir64 seekdir64 telldir64 rewinddir64 closedir64)
  AC_CHECK_FUNCS(getpwent_r)
@@ -60,7 +60,7 @@ $NetBSD: patch-au,v 1.8 2007/12/21 17:32:26 drochner Exp $
  AC_CHECK_FUNCS(srandom random srand rand setenv usleep strcasecmp fcvt fcvtl symlink readlink)
  AC_CHECK_FUNCS(syslog vsyslog timegm)
  AC_CHECK_FUNCS(setlocale nl_langinfo)
-@@ -2823,6 +2842,21 @@ if test x"$samba_cv_HAVE_IFACE_AIX" = x"
+@@ -2834,6 +2853,21 @@ if test x"$samba_cv_HAVE_IFACE_AIX" = x"
  fi
  
  if test $iface = no; then
@@ -82,7 +82,7 @@ $NetBSD: patch-au,v 1.8 2007/12/21 17:32:26 drochner Exp $
  AC_CACHE_CHECK([for iface ifconf],samba_cv_HAVE_IFACE_IFCONF,[
  SAVE_CPPFLAGS="$CPPFLAGS"
  CPPFLAGS="$CPPFLAGS ${SAMBA_CONFIGURE_CPPFLAGS}"
-@@ -3498,7 +3532,7 @@ if test x"$with_ads_support" != x"no"; t
+@@ -3524,7 +3558,7 @@ if test x"$with_ads_support" != x"no"; t
    AC_CHECK_LIB_EXT(k5crypto, KRB5_LIBS, krb5_encrypt_data)
  
    # Heimdal checks.
@@ -91,7 +91,7 @@ $NetBSD: patch-au,v 1.8 2007/12/21 17:32:26 drochner Exp $
    AC_CHECK_LIB_EXT(asn1, KRB5_LIBS, copy_Authenticator)
    AC_CHECK_LIB_EXT(roken, KRB5_LIBS, roken_getaddrinfo_hostspec)
  
-@@ -5719,31 +5753,39 @@ case "$host_os" in
+@@ -5769,31 +5803,39 @@ case "$host_os" in
  		NSSSONAMEVERSIONSUFFIX=".2"
  		WINBIND_NSS_EXTRA_OBJS="nsswitch/winbind_nss_linux.o"
  		;;
@@ -115,7 +115,7 @@ $NetBSD: patch-au,v 1.8 2007/12/21 17:32:26 drochner Exp $
 -			    nsswitch/winbind_nss_netbsd.o \
 +	*freebsd*)
 +		case "$UNAME_R" in
-+		[5-9]*)
++		[[5-9]]*)
 +			# FreeBSD winbind client is implemented as a wrapper
 +			# around the Linux version.
 +			NSSSONAMEVERSIONSUFFIX=".1"
@@ -131,9 +131,9 @@ $NetBSD: patch-au,v 1.8 2007/12/21 17:32:26 drochner Exp $
 +		esac
 +		;;
 +
-+	*netbsd*[[3-9]]*)
++	*netbsd*)
 +		case "$UNAME_R" in
-+		[3-9]*)
++		[[3-9]]*)
 +			# NetBSD winbind client is implemented as a wrapper
 +			# around the Linux version. It needs getpwent_r() to
 +			# indicate libc's use of the correct nsdispatch API.

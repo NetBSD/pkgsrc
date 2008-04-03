@@ -1,8 +1,8 @@
-$NetBSD: patch-bo,v 1.4 2007/10/28 07:28:49 taca Exp $
+$NetBSD: patch-bo,v 1.5 2008/04/03 20:19:42 jlam Exp $
 
---- nmbd/nmbd.c.orig	2007-03-01 13:54:45.000000000 +0900
+--- nmbd/nmbd.c.orig	2008-03-08 10:56:27.000000000 -0500
 +++ nmbd/nmbd.c
-@@ -743,6 +743,10 @@ static BOOL open_sockets(BOOL isdaemon, 
+@@ -757,6 +757,10 @@ static BOOL open_sockets(BOOL isdaemon, 
  		mkdir(lp_lockdir(), 0755);
  	}
  
