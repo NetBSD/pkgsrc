@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2008/03/03 01:50:27 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2008/04/03 10:53:46 joerg Exp $
 #
 
 DISTNAME=		qcad-2.0.5.0-1-community.src
@@ -55,9 +55,10 @@ pre-build:
 		${BUILD_MAKE_CMD} prepare;				\
 	done
 
+INSTALLATION_DIRS=	bin share/qcad
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/qcad/qcad ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/qcad
 	cd ${WRKSRC}/qcad && umask 022 && \
 	pax -rwpm data fonts patterns qm ${DESTDIR}${PREFIX}/share/qcad
 
