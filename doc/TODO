@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7169 2008/04/03 03:18:50 schmonz Exp $
+$NetBSD: TODO,v 1.7170 2008/04/03 04:08:22 markd Exp $
 
 Suggested new packages
 ======================
@@ -543,7 +543,6 @@ Suggested package updates
 	o crypto++-523
 	o cstream-2.7.3
 	o cuetools-1.3.1
-	o cups-1.3.6
 	o curl-7.18.1
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.14
