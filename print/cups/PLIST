@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2008/01/22 23:58:13 markd Exp $
+@comment $NetBSD: PLIST,v 1.23 2008/04/03 04:06:27 markd Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -17,7 +17,6 @@ include/cups/cups.h
 include/cups/dir.h
 include/cups/file.h
 include/cups/http.h
-include/cups/i18n.h
 include/cups/image.h
 include/cups/ipp.h
 include/cups/language.h
