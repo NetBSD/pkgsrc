@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7171 2008/04/03 13:12:07 obache Exp $
+$NetBSD: TODO,v 1.7172 2008/04/03 23:39:46 obache Exp $
 
 Suggested new packages
 ======================
@@ -1074,6 +1074,7 @@ Suggested package updates
 	o p5-Class-ReturnValue-0.55
 	o p5-Clone-0.28
 	o p5-Config-General-2.38
+	o p5-Convert-UUlib-1.09
 	o p5-Curses-1.15
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.004
