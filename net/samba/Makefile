@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.179 2007/12/21 17:32:24 drochner Exp $
+# $NetBSD: Makefile,v 1.180 2008/04/03 20:19:42 jlam Exp $
 
 .include "Makefile.mirrors"
 
 DISTNAME=		samba-${VERSION}
-PKGREVISION=		4
 CATEGORIES=		net
 MASTER_SITES=		${SAMBA_MIRRORS:=old-versions/}
 
@@ -13,12 +12,11 @@ MAINTAINER=		jlam@pkgsrc.org
 HOMEPAGE=		http://www.samba.org/
 COMMENT=		SMB/CIFS protocol server suite
 
-VERSION=		3.0.26a
+VERSION=		3.0.28a
 CONFLICTS+=		ja-samba-[0-9]* pam-smbpass-[0-9]* tdb-[0-9]*	\
 			winbind-[0-9]*
 MAKE_JOBS_SAFE=		NO
 
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/source
@@ -28,8 +26,6 @@ BUILD_DEFS+=		VARBASE
 .include "../../mk/bsd.prefs.mk"
 
 PKG_SYSCONFSUBDIR?=	samba
-PKG_SYSCONFVAR=		samba
-
 SAMBA_ETCDIR?=		${PKG_SYSCONFDIR}
 SAMBA_LIBDIR?=		${PREFIX}/lib/samba
 SAMBA_LOCKDIR?=		${SAMBA_VARDIR}/run/samba
@@ -58,8 +54,9 @@ CONFIGURE_ARGS+=	--with-privatedir=${SAMBA_PRIVATE:Q}
 CONFIGURE_ARGS+=	--with-statedir=${SAMBA_STATEDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${SAMBA_VARDIR:Q}
 
-CONFIGURE_ARGS+=	--with-swatdir=${PREFIX}/share/samba/swat
-CONFIGURE_ARGS+=	--with-libsmbclient
+CONFIGURE_ARGS+=	--with-mandir=${PREFIX:Q}/${PKGMANDIR:Q}
+CONFIGURE_ARGS+=	--with-swatdir=${PREFIX:Q}/share/samba/swat
+CONFIGURE_ARGS+=	--with-included-popt
 
 .include "../../converters/libiconv/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-libiconv=${BUILDLINK_PREFIX.iconv}
@@ -70,14 +67,14 @@ CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 
 .include "options.mk"
 
-# Only Linux supports smbmount for mounting a Samba share into the
+# Only Linux supports mount.cifs for mounting a CIFS share into the
 # filesystem.
 #
 .if ${OPSYS} == "Linux"
-CONFIGURE_ARGS+=	--with-smbmount
-PLIST_SUBST+=		SMBMOUNT=
+CONFIGURE_ARGS+=	--with-cifsmount
+PLIST_SUBST+=		CIFSMOUNT=
 .else
-PLIST_SUBST+=		SMBMOUNT="@comment "
+PLIST_SUBST+=		CIFSMOUNT="@comment "
 .endif
 
 # mktemp is useful for the replacement adduser script, but don't require
@@ -116,35 +113,31 @@ SUBST_SED.paths+=	-e 's,@MKTEMP@,${MKTEMP},g' -e 's,@RM@,${RM},g'
 SUBST_SED.paths+=	-e 's,@PWD_MKDB@,${PWD_MKDB},g' -e 's,@SH@,${SH},g'
 SUBST_STAGE.paths=	post-patch
 
-SUBST_CLASSES+=		mandir
-SUBST_STAGE.mandir=	pre-configure
-SUBST_FILES.mandir=	Makefile.in
-SUBST_SED.mandir=	-e 's,@mandir@,${PREFIX}/${PKGMANDIR},g'
-
 # Get the shared library major and minors for the installed shared
 # libraries.  We'll need these to create the versioned symlinks for
 # the shared libraries because samba Makefile doesn't do it on its
 # own.
 #
-.for LIB in LIBSMBCLIENT LIBMSRPC
-.  for NUM in MAJOR MINOR
-${LIB}_${NUM}_cmd=	${AWK} -F= '/^${LIB}_${NUM}/ { print $$2; }'	\
-				${WRKSRC}/Makefile.in
-${LIB}_${NUM}=		${${LIB}_${NUM}_cmd:sh}
-PLIST_SUBST+=		${LIB}_${NUM}=${${LIB}_${NUM}}
-.  endfor
-.endfor
-
-SMBLIBS=		msrpc smbclient
-SMBVERSION.msrpc=	${LIBMSRPC_MAJOR} ${LIBMSRPC_MAJOR}.${LIBMSRPC_MINOR}
-SMBVERSION.smbclient=	${LIBSMBCLIENT_MAJOR} ${LIBSMBCLIENT_MAJOR}.${LIBSMBCLIENT_MINOR}
+SAMBA_LIBS=		smbclient msrpc smbsharemodes addns
 
 .PHONY: install-samba-lib-symlinks
-install-samba-lib-symlinks:
-.for l in ${SMBLIBS}
-	for v in ${SMBVERSION.${l}}; do					\
-		(cd ${DESTDIR}${SAMBA_LIBDIR} && rm -f lib${l}.so.$$v && \
-			ln -s lib${l}.so lib${l}.so.$$v);		\
+.for l in ${SAMBA_LIBS}
+.  for NUM in MAJOR MINOR
+LIB${NUM}_cmd.${l}=	${AWK} -F= '/^LIB${l:tu}_${NUM}/ { print $$2; }' \
+				${WRKSRC:Q}/Makefile.in
+LIB${NUM}.${l}=		${LIB${NUM}_cmd.${l}:sh}
+PLIST_SUBST+=		LIB${NUM}.${l}=${LIB${NUM}.${l}}
+.  endfor
+
+SAMBA_VERSIONS.${l}=	${LIBMAJOR.${l}} ${LIBMAJOR.${l}}.${LIBMINOR.${l}}
+
+.PHONY: install-samba-lib-symlinks-${l}
+install-samba-lib-symlinks: install-samba-lib-symlinks-${l}
+install-samba-lib-symlinks-${l}:
+	for v in ${SAMBA_VERSIONS.${l}}; do				\
+		cd ${DESTDIR}${SAMBA_LIBDIR} &&				\
+			rm -f lib${l}.so.$$v &&				\
+			ln -s lib${l}.so lib${l}.so.$$v;		\
 	done
 .endfor
 
@@ -173,7 +166,7 @@ post-install: install-samba-lib-symlinks
 	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mknissmbpwdtbl.sh ${DESTDIR}${PREFIX}/${EGDIR}
 	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} mksmbpasswd.sh ${DESTDIR}${PREFIX}/${EGDIR}
 	cd ${WRKSRC}/script; ${INSTALL_SCRIPT} updatesmbpasswd.sh ${DESTDIR}${PREFIX}/${EGDIR}
-	${CHMOD} -x ${DESTDIR}${PREFIX}/include/libmsrpc.h \
-	  ${DESTDIR}${PREFIX}/include/libsmbclient.h
+	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/include/libmsrpc.h \
+		${DESTDIR}${PREFIX}/include/libsmbclient.h
 
 .include "../../mk/bsd.pkg.mk"
