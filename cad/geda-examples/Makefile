@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/03/03 01:40:21 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2008/04/03 13:22:06 joerg Exp $
 #
 
 DISTNAME=	geda-examples-${PKGVERSION}
@@ -26,8 +26,8 @@ pre-install:
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/geda
 	cd ${WRKSRC} && ${TAR} cf - . | \
-		(${DESTDIR}cd ${PREFIX}/share/examples/geda && ${TAR} xvf -)
-	${FIND} ${PREFIX}/share/examples/geda \
+		(cd ${DESTDIR}${PREFIX}/share/examples/geda && ${TAR} xvf -)
+	${FIND} ${DESTDIR}${PREFIX}/share/examples/geda \
 		\( -name \*Makefile\* -o -name config.log -o -name config.status \) \
 		-exec ${RM} {} \;
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/examples/geda
