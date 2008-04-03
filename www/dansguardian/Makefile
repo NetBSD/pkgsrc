@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/02/26 12:39:52 sborrill Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/03 10:19:17 sborrill Exp $
 
 DISTNAME=	dansguardian-2.8.0.6.source
 PKGNAME=	dansguardian-2.8.0.6
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://dansguardian.org/downloads/2/Stable/
 
@@ -33,13 +33,22 @@ SUBST_MESSAGE.perlpath=	Fixing path to perl executable
 SUBST_FILES.perlpath=	*.pl
 SUBST_SED.perlpath=	-e 's,/usr/bin,${PREFIX}/bin,g'
 
+DANSGUARDIAN_USER?=	nobody
+DANSGUARDIAN_GROUP?=	nobody
+
 CONFIGURE_ARGS=		--prefix=${PREFIX:Q} \
 			--cgidir=/libexec/cgi-bin/ \
 			--sysconfdir=/etc/dansguardian/ \
 			--bindir=/sbin/ \
 			--mandir=/man/ \
-			--logdir=/var/log/
+			--runas_usr=${DANSGUARDIAN_USER} \
+			--runas_grp=${DANSGUARDIAN_GROUP} \
+			--logdir=${VARBASE}/log/dansguardian/
 
+OWN_DIRS+=		${VARBASE}/log/dansguardian
+OWN_DIRS_PERMS+=	${VARBASE}/log/dansguardian \
+			${DANSGUARDIAN_USER} ${DANSGUARDIAN_GROUP} 0755
+			
 DEPENDS+=	squid>=2.5:../../www/squid
 
 .for f in logrotation pics transparent1x1.gif \
@@ -117,72 +126,33 @@ DEPENDS+=	squid>=2.5:../../www/squid
 	phraselists/weapons/weighted	\
 	phraselists/weapons/weighted_portuguese	\
 	phraselists/webmail/weighted	\
-	languages/ReadMe	\
-	languages/arspanish/messages	\
-	languages/arspanish/template.html	\
-	languages/bulgarian/messages	\
-	languages/bulgarian/template.html	\
-	languages/chinesebig5/messages	\
-	languages/chinesebig5/template.html	\
-	languages/chinesegb2312/messages	\
-	languages/chinesegb2312/template.html	\
-	languages/czech/messages	\
-	languages/czech/template.html	\
-	languages/danish/messages	\
-	languages/danish/template.html	\
-	languages/dutch/messages	\
-	languages/dutch/template.html	\
-	languages/french/messages	\
-	languages/french/template.html	\
-	languages/german/messages	\
-	languages/german/template.html	\
-	languages/hebrew/messages	\
-	languages/hebrew/template.html	\
-	languages/indonesian/messages	\
-	languages/indonesian/template.html	\
-	languages/italian/messages	\
-	languages/italian/template.html	\
-	languages/lithuanian/messages	\
-	languages/lithuanian/template.html	\
-	languages/mxspanish/messages	\
-	languages/mxspanish/template.html	\
-	languages/polish/messages	\
-	languages/polish/template.html	\
-	languages/portuguese/messages	\
-	languages/portuguese/messagesaccents	\
-	languages/portuguese/template.html	\
-	languages/russian-1251/messages	\
-	languages/russian-1251/template.html	\
-	languages/slovak/messages	\
-	languages/slovak/template.html	\
-	languages/spanish/messages	\
-	languages/spanish/template.html	\
-	languages/swedish/messages	\
-	languages/swedish/template.html	\
-	languages/turkish/messages	\
-	languages/turkish/template.html	\
-	languages/ukenglish/messages	\
-	languages/ukenglish/template.html
+	languages/ReadMe
 CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
-pre-install:
-	for dir in badwords chat drugadvocacy gambling games \
+PHRASEDIRS=	badwords chat drugadvocacy gambling games \
 		goodphrases googlesearches gore illegaldrugs \
 		intolerance legaldrugs malware news nudism \
 		peer2peer personals pornography proxies sport \
-		violence warezhacking weapons webmail; \
-	do \
-		${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/phraselists/$${dir}; \
-	done; \
-	for dir in arspanish bulgarian chinesebig5 chinesegb2312 \
+		violence warezhacking weapons webmail
+
+LANGUAGEDIRS=	arspanish bulgarian chinesebig5 chinesegb2312 \
 		czech danish dutch french german hebrew \
 		indonesian italian lithuanian mxspanish polish \
 		portuguese russian-1251 slovak spanish \
-		swedish turkish ukenglish; \
-	do \
-		${INSTALL_DATA_DIR} ${PKG_SYSCONFDIR}/languages/$${dir}; \
-	done
+		swedish turkish ukenglish
+
+.for d in ${PHRASEDIRS}
+OWN_DIRS+=	${PKG_SYSCONFDIR}/phraselists/${d}
+.endfor
+
+.for d in ${LANGUAGEDIRS}
+OWN_DIRS+=	${PKG_SYSCONFDIR}/languages/${d}
+CONF_FILES+=	${EGDIR}/languages/${d}/messages \
+		${PKG_SYSCONFDIR}/languages/${d}/messages
+CONF_FILES+=	${EGDIR}/languages/${d}/template.html \
+		${PKG_SYSCONFDIR}/languages/${d}/template.html
+.endfor
 
 show-conffiles:
 	cd ${WRKSRC}; 				\
