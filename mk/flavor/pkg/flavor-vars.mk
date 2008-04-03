@@ -1,4 +1,4 @@
-# $NetBSD: flavor-vars.mk,v 1.7 2008/03/10 20:05:59 joerg Exp $
+# $NetBSD: flavor-vars.mk,v 1.8 2008/04/03 14:07:51 joerg Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -35,9 +35,18 @@ PKG_INFO_CMD?=		${PKG_TOOLS_BIN}/pkg_info
 PKG_VIEW_CMD?=		${PKG_TOOLS_BIN}/pkg_view
 LINKFARM_CMD?=		${PKG_TOOLS_BIN}/linkfarm
 
+# Latest versions of tools required for correct pkgsrc operation.
+PKGTOOLS_REQD=		20070813
+
 .if !defined(PKGTOOLS_VERSION)
 PKGTOOLS_VERSION!=	${PKG_INFO_CMD} -V 2>/dev/null || echo 20010302
 MAKEFLAGS+=		PKGTOOLS_VERSION=${PKGTOOLS_VERSION}
+.endif
+
+# Check that we are using up-to-date pkg_* tools with this file.
+.if !defined(NO_PKGTOOLS_REQD_CHECK) && ${PKGTOOLS_VERSION} < ${PKGTOOLS_REQD}
+BOOTSTRAP_DEPENDS+=	pkg_install>=${PKGTOOLS_REQD}:../../pkgtools/pkg_install
+_PKG_INSTALL_DEPENDS=	yes
 .endif
 
 # audit-packages logic for its location depends on a variety of factors
