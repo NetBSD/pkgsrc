@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/03/13 17:02:56 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2008/04/03 09:41:25 joerg Exp $
 #
 
 DISTNAME=	libmpeg3-1.7-src
@@ -48,7 +48,7 @@ VINSTHDRS=	idct.h mpeg3video.h slice.h
 INSTBINS=	mpeg3cat mpeg3peek mpeg3toc mpeg3dump
 
 INSTALLATION_DIRS=	bin include/mpeg3/audio include/mpeg3/video lib \
-			shared/doc/html/libmpeg3
+			share/doc/html/libmpeg3
 
 do-install:
 	for f in ${INSTBINS}; do \
