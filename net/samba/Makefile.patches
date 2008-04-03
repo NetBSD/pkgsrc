@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.patches,v 1.7 2007/12/10 21:44:48 adrianp Exp $
+# $NetBSD: Makefile.patches,v 1.8 2008/04/03 20:19:42 jlam Exp $
 #
 # This Makefile fragment describes the recommended patches for the
 # currently packaged version of Samba.  All recommended patches for
@@ -6,17 +6,9 @@
 # of Samba, so upon updating to the latest release of Samba, the
 # PATCHFILES variable should be empty.
 #
-
-# Currently, no patch is needed.
-#
 # The PATCHFILES are listed in chronological order according to the time
 # they are added to ${PATCH_SITES}.
 #
 #PATCH_SITES=	http://www.samba.org/samba/patches/patches-${VERSION}/
 #PATCHFILES=
 PATCH_DIST_STRIP= -p2
-
-.for CVE_PATCH in samba-3.0.26a-CVE-2007-4572.patch samba-3.0.26a-CVE-2007-5398.patch samba-3.0.27a-CVE-2007-6015.patch
-PATCHFILES+=		${CVE_PATCH}
-SITES.${CVE_PATCH}=	http://www.samba.org/samba/ftp/patches/security/
-.endfor
