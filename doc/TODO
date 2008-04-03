@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7170 2008/04/03 04:08:22 markd Exp $
+$NetBSD: TODO,v 1.7171 2008/04/03 13:12:07 obache Exp $
 
 Suggested new packages
 ======================
@@ -566,7 +566,7 @@ Suggested package updates
 	o devhelp-0.19
 	o dhid-5.3
 	o dialog-1.1.20080316
-	o dictem-0.82
+	o dictem-0.82 [pkg/38339]
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dirac-0.9.1
