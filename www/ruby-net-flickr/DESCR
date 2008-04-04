@@ -1,0 +1,2 @@
+Net::Flickr provides an elegant, Ruby-fied implementation of Flickr's
+REST API.
