@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.4 2008/04/04 22:37:28 joerg Exp $	*/
+/*	$NetBSD: file.c,v 1.5 2008/04/04 23:19:16 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -211,7 +211,7 @@ fetchFilteredListFile(struct url *u, const char *pattern, const char *flags)
 	l = sizeof(fn) - strlen(fn) - 1;
 
 	while ((de = readdir(dir)) != NULL) {
-		if (fnmatch(pattern, de->d_name, FNM_PERIOD) != 0)
+		if (fnmatch(pattern, de->d_name, 0) != 0)
 			continue;
 		strncpy(p, de->d_name, l - 1);
 		p[l - 1] = 0;
