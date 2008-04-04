@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.2 2008/01/26 01:57:00 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/04/04 17:58:59 joerg Exp $
 bin/bulkbuild
 bin/bulkbuild-rebuild
+bin/bulkbuild-restart
 bin/pbulk-build
 bin/pbulk-resolve
 bin/pbulk-scan
