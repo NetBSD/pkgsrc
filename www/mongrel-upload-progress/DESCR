@@ -1,0 +1,2 @@
+This package is a Mongrel plugin to keep track of the status of all
+currently processing file uploads.
