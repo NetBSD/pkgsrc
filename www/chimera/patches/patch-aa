@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2006/01/10 18:07:04 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2008/04/04 13:45:02 obache Exp $
 
---- Common.tmpl.dist.orig	Sun May 30 22:43:52 1999
+--- Common.tmpl.dist.orig	1999-05-30 21:43:52.000000000 +0000
 +++ Common.tmpl.dist
 @@ -9,12 +9,12 @@
   * CHIMERA_LIBDIR  - configuration files.  someday.
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.3 2006/01/10 18:07:04 joerg Exp $
  
  #if !defined(__QNX__)
  LIBPRE=lib
-@@ -35,22 +35,22 @@
+@@ -35,22 +35,22 @@ IMGLEXT = _local
  */
  
  /* Uncomment and modify if you have the JPEG 6 library */
@@ -47,12 +47,12 @@ $NetBSD: patch-aa,v 1.3 2006/01/10 18:07:04 joerg Exp $
 -PNGDEPLIB = $(PNGDIR)/lib/libpng$(IMGLEXT).a $(PNGDIR)/lib/libz$(IMGLEXT).a
 -*/
 +PNGLIB = -L$(PNGDIR)/lib -lpng$(IMGLEXT) -lz$(IMGLEXT) -Wl,-R$(PNGDIR)/lib
-+PNGDEPLIB = $(PNGDIR)/lib/libpng$(IMGLEXT).a /usr/lib/libz$(IMGLEXT).a
++PNGDEPLIB = $(PNGDIR)/lib/libpng$(IMGLEXT).a
 +
  
  /* Tells Imakefile to set the flags for debugging.  Comment for -O. */
  #define CDebugging 1
-@@ -119,6 +119,7 @@
+@@ -119,6 +119,7 @@ OS_DEFINES = -DHAVE_STDLIB_H -DHAVE_STRI
               -DHAVE_UNAME -DHAVE_MKTIME -DHAVE_SIZE_T -DHAVE_SSIZE_T \
               -DHAVE_STDARG_H -DHAVE_SNPRINTF
  OS_LIBS =
