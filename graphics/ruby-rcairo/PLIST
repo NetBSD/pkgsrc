@@ -1,17 +1,66 @@
-@comment $NetBSD: PLIST,v 1.4 2007/05/27 04:10:52 obache Exp $
-${RUBY_SITEARCHLIBDIR}/cairo.${RUBY_DLEXT}
-${RUBY_SITEARCHLIBDIR}/rb_cairo.h
-${RUBY_SITELIBDIR}/cairo.rb
-${RUBY_SITELIBDIR}/cairo/color.rb
-${RUBY_SITELIBDIR}/cairo/colors.rb
-${RUBY_SITELIBDIR}/cairo/constants.rb
-${RUBY_SITELIBDIR}/cairo/context.rb
-${RUBY_SITELIBDIR}/cairo/context/blur.rb
-${RUBY_SITELIBDIR}/cairo/context/circle.rb
-${RUBY_SITELIBDIR}/cairo/context/color.rb
-${RUBY_SITELIBDIR}/cairo/context/path.rb
-${RUBY_SITELIBDIR}/cairo/context/rectangle.rb
-${RUBY_SITELIBDIR}/cairo/path.rb
-${RUBY_SITELIBDIR}/cairo/point.rb
-@dirrm ${RUBY_SITELIBDIR}/cairo/context
-@dirrm ${RUBY_SITELIBDIR}/cairo
+@comment $NetBSD: PLIST,v 1.5 2008/04/04 15:19:26 jlam Exp $
+${GEM_HOME}/cache/cairo-${PKGVERSION}.gem
+${GEM_LIBDIR}/.require_paths
+${GEM_LIBDIR}/AUTHORS
+${GEM_LIBDIR}/COPYING
+${GEM_LIBDIR}/ChangeLog
+${GEM_LIBDIR}/GPL
+${GEM_LIBDIR}/NEWS
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/extconf.rb
+${GEM_LIBDIR}/misc/update-colors.rb
+${GEM_LIBDIR}/pkg-config.rb
+${GEM_LIBDIR}/samples/.#blur.rb.1.1
+${GEM_LIBDIR}/samples/agg/README
+${GEM_LIBDIR}/samples/agg/aa_demo.rb
+${GEM_LIBDIR}/samples/agg/aa_test.rb
+${GEM_LIBDIR}/samples/blur.rb
+${GEM_LIBDIR}/samples/pac.rb
+${GEM_LIBDIR}/samples/pac2.rb
+${GEM_LIBDIR}/samples/png.rb
+${GEM_LIBDIR}/samples/scalable.rb
+${GEM_LIBDIR}/samples/text-on-path.rb
+${GEM_LIBDIR}/samples/text2.rb
+${GEM_LIBDIR}/src/cairo.def
+${GEM_LIBDIR}/src/lib/cairo.rb
+${GEM_LIBDIR}/src/lib/cairo.${RUBY_DLEXT}
+${GEM_LIBDIR}/src/lib/cairo/color.rb
+${GEM_LIBDIR}/src/lib/cairo/colors.rb
+${GEM_LIBDIR}/src/lib/cairo/constants.rb
+${GEM_LIBDIR}/src/lib/cairo/context.rb
+${GEM_LIBDIR}/src/lib/cairo/context/blur.rb
+${GEM_LIBDIR}/src/lib/cairo/context/circle.rb
+${GEM_LIBDIR}/src/lib/cairo/context/color.rb
+${GEM_LIBDIR}/src/lib/cairo/context/path.rb
+${GEM_LIBDIR}/src/lib/cairo/context/rectangle.rb
+${GEM_LIBDIR}/src/lib/cairo/context/triangle.rb
+${GEM_LIBDIR}/src/lib/cairo/path.rb
+${GEM_LIBDIR}/src/lib/cairo/point.rb
+${GEM_LIBDIR}/src/rb_cairo.c
+${GEM_LIBDIR}/src/rb_cairo.h
+${GEM_LIBDIR}/src/rb_cairo_constants.c
+${GEM_LIBDIR}/src/rb_cairo_context.c
+${GEM_LIBDIR}/src/rb_cairo_exception.c
+${GEM_LIBDIR}/src/rb_cairo_font_extents.c
+${GEM_LIBDIR}/src/rb_cairo_font_face.c
+${GEM_LIBDIR}/src/rb_cairo_font_options.c
+${GEM_LIBDIR}/src/rb_cairo_glyph.c
+${GEM_LIBDIR}/src/rb_cairo_matrix.c
+${GEM_LIBDIR}/src/rb_cairo_path.c
+${GEM_LIBDIR}/src/rb_cairo_pattern.c
+${GEM_LIBDIR}/src/rb_cairo_private.c
+${GEM_LIBDIR}/src/rb_cairo_private.h
+${GEM_LIBDIR}/src/rb_cairo_scaled_font.c
+${GEM_LIBDIR}/src/rb_cairo_surface.c
+${GEM_LIBDIR}/src/rb_cairo_text_extents.c
+${GEM_HOME}/specifications/cairo-${PKGVERSION}.gemspec
+@dirrm ${GEM_LIBDIR}/src/lib/cairo/context
+@dirrm ${GEM_LIBDIR}/src/lib/cairo
+@dirrm ${GEM_LIBDIR}/src/lib
+@dirrm ${GEM_LIBDIR}/src
+@dirrm ${GEM_LIBDIR}/samples/agg
+@dirrm ${GEM_LIBDIR}/samples
+@dirrm ${GEM_LIBDIR}/misc
+@dirrm ${GEM_LIBDIR}
+@exec ${MKDIR} %D/${GEM_DOCDIR}
