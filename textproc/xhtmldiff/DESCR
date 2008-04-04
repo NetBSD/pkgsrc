@@ -1,2 +1,4 @@
-xhtmldiff is a tool for generating valid XHTML redline documents from
-valid XHTML documents.
+XHTMLDiff is a tool and library for taking valid XHTML documents as
+input, and generating redlined, valid XHTML text highlighting the
+changes between them as output.
+
