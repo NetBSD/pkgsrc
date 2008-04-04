@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/11 04:55:33 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/04 15:22:47 jlam Exp $
 
-DISTNAME=	erubis_2.3.1
-PKGNAME=	${DISTNAME:S/_/-/}
-CATEGORIES=	www ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/21106/
-EXTRACT_SUFX=	.tar.bz2
+DISTNAME=	erubis-2.5.0
+CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.kuwata-lab.com/erubis/
 COMMENT=	Fast, secure, and extensible implementation of eRuby
 
-USE_LANGUAGES=	# none
-USE_RUBY_SETUP=	yes
+DEPENDS+=	${RUBY_PKGPREFIX}-abstract>=1.0.0:../../devel/ruby-abstract
 
-.include "../../lang/ruby/modules.mk"
+GEM_BUILD=	gemspec
+
+.include "../../misc/rubygems/rubygem.mk"
 .include "../../mk/bsd.pkg.mk"
