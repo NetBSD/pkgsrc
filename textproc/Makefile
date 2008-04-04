@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.404 2008/03/12 09:22:43 wiz Exp $
+# $NetBSD: Makefile,v 1.405 2008/04/04 15:33:06 jlam Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -330,14 +330,22 @@ SUBDIR+=	rtf-tools
 SUBDIR+=	rtfm
 SUBDIR+=	rubber
 SUBDIR+=	ruby-amrita
+SUBDIR+=	ruby-bluecloth
+SUBDIR+=	ruby-builder
+SUBDIR+=	ruby-coderay
+SUBDIR+=	ruby-diff-lcs
 SUBDIR+=	ruby-eruby
 SUBDIR+=	ruby-feed-normalizer
 SUBDIR+=	ruby-ferret
+SUBDIR+=	ruby-haml
 SUBDIR+=	ruby-hpricot
 SUBDIR+=	ruby-html-parser
 SUBDIR+=	ruby-htree
 SUBDIR+=	ruby-itex2MML
+SUBDIR+=	ruby-json
+SUBDIR+=	ruby-json-pure
 SUBDIR+=	ruby-libxml
+SUBDIR+=	ruby-markaby
 SUBDIR+=	ruby-maruku
 SUBDIR+=	ruby-mecab
 SUBDIR+=	ruby-native-hyperestraier
@@ -345,6 +353,7 @@ SUBDIR+=	ruby-nqxml
 SUBDIR+=	ruby-pure-hyperestraier
 SUBDIR+=	ruby-rdtool
 SUBDIR+=	ruby-redcloth
+SUBDIR+=	ruby-rison
 SUBDIR+=	ruby-rttool
 SUBDIR+=	ruby-sary
 SUBDIR+=	ruby-simple-rss
@@ -352,6 +361,7 @@ SUBDIR+=	ruby-suikyo
 SUBDIR+=	ruby-syntax
 SUBDIR+=	ruby-xmlparser
 SUBDIR+=	ruby-xmlscan
+SUBDIR+=	ruby-xslt
 SUBDIR+=	sablotron
 SUBDIR+=	sary
 SUBDIR+=	saxon
