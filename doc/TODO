@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7172 2008/04/03 23:39:46 obache Exp $
+$NetBSD: TODO,v 1.7173 2008/04/04 15:36:20 jlam Exp $
 
 Suggested new packages
 ======================
@@ -501,9 +501,7 @@ Suggested package updates
 	o cairomm-1.4.8
 	o cal3d-0.11.0
 	o calamaris-2.59
-	o camping-1.5 [jlam]
 	o capc-calc-2.12.3.0
-	o capistrano-2.2.0 [jlam]
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
 	o cdif-1.19
@@ -614,7 +612,6 @@ Suggested package updates
 	o epstool-3.08
 	o eric3-4.1.1 [now called eric4]
 	o erlang-12b1
-	o erubis-2.5.0 [jlam]
 	o esh-0.8.5
 	o et-2.60
 	o etach-1.4.1
@@ -776,14 +773,12 @@ Suggested package updates
 	o hanzim-1.8
 	o haskell-mode-1.45
 	o hdf-4.2r2
-	o heel-0.6.0 [jlam]
 	o hercules-3.04.1
 	o hesiod-3.1.0
 	o hexedit-1.2.12
 	o heyu-2.1.3
 	o highlight-2.6.9
 	o hobbitmon-4.0.4 [pkg/30484]
-	o hoe-1.5.1 [jlam]
 	o honeyd-1.5c
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
@@ -953,9 +948,6 @@ Suggested package updates
 	o matchbox-panel-0.9.3
 	o mathomatic-12.9.0
 	o mcrypt-2.6.6
-	o merb-0.5.3 [jlam]
-	o merb-activerecord-0.5 [jlam]
-	o merb-sequel-0.5 [jlam]
 	o mercurial-1.0
 	o mergeant-0.67
 	o mesure-0.7.2
@@ -975,11 +967,6 @@ Suggested package updates
 	o mmg-2.0.2
 	o moc-2.4.3
 	o modular-xorg-server-1.4
-	o mongrel-1.1.4 [jlam]
-	o mongrel-cluster-1.0.5 [jlam]
-	o mongrel-config-0.3.1 [jlam]
-	o mongrel-console-0.2.1 [jlam]
-	o mongrel-upload-progress-0.2.2 [jlam]
 	o monodevelop-1.0
 	o moon-buggy-1.0.51
 	o moscow_ml-2.01
@@ -1221,8 +1208,6 @@ Suggested package updates
 	o psmisc-21.9
 	o pstoedit-3.45
 	o puf-0.93.3
-	o puppet-0.24.3 [jlam]
-	o puppet-0.24.4
 	o puzzle-5.2
 	o pwlib-1.10.10
 	o py-FourSuite-1.0.2
@@ -1289,7 +1274,6 @@ Suggested package updates
 	o radiance-3.7.2
 	o radmind-1.11.0
 	o raine-0.50.6
-	o ramaze-0.3.9.1 [jlam]
 	o randread-0.2
 	o rapidsvn-0.9.6
 	o raptor-1.4.16
@@ -1320,75 +1304,7 @@ Suggested package updates
 	o rsync-3.0.0 (probably better to wait for at least 3.0.1)
 	o rt3-3.6.6
 	o rtcw-1.41.3
-	o rubigen-1.2.4 [jlam]
-	o ruby-abstract-1.0.0 [jlam]
-	o ruby-activemerchant-1.3.2 [jlam]
-	o ruby-acts-as-versioned-0.2.3 [jlam]
-	o ruby-archive-tar-minitar-0.5.2 [jlam]
-	o ruby-assistance-0.1.5 [jlam]
-	o ruby-bluecloth-1.0.0 [jlam]
-	o ruby-builder-2.1.2 [jlam]
-	o ruby-cgi-multipart-eof-fix-2.5.0 [jlam]
 	o ruby-clearsilver-0.10.5
-	o ruby-coderay-0.7.4.215 [jlam]
-	o ruby-color-1.4.0 [jlam]
-	o ruby-configuration-0.0.5 [jlam]
-	o ruby-cssmin-1.0.0 [jlam]
-	o ruby-daemons-1.0.10 [jlam]
-	o ruby-daemons-1.0.9 [jlam]
-	o ruby-diff-lcs-1.1.2 [jlam]
-	o ruby-directory-watcher-1.1.1 [jlam]
-	o ruby-eventmachine-0.10.0 [jlam]
-	o ruby-feed-normalizer-1.5.1 [jlam]
-	o ruby-ferret-0.11.6 [jlam]
-	o ruby-flexmock-0.8.0 [jlam]
-	o ruby-gem_plugin-0.2.3 [jlam]
-	o ruby-gettext-1.90.0 [jlam]
-	o ruby-haml-1.8.2 [jlam]
-	o ruby-highline-1.4.0 [jlam]
-	o ruby-hpricot-0.6 [jlam]
-	o ruby-inline-3.6.7 [jlam]
-	o ruby-jsmin-1.0.0 [jlam]
-	o ruby-json-1.1.2 [jlam]
-	o ruby-json-pure-1.1.2 [jlam]
-	o ruby-launchy-0.3.1 [jlam]
-	o ruby-libxml-0.5.3 [jlam]
-	o ruby-logging-0.7.1 [jlam]
-	o ruby-mailfactory-1.2.3 [jlam]
-	o ruby-markaby-0.5 [jlam]
-	o ruby-maruku-0.5.8 [jlam]
-	o ruby-mechanize-0.7.5 [jlam]
-	o ruby-metaid-1.0 [jlam]
-	o ruby-mime-types-1.15 [jlam]
-	o ruby-mkrf-0.2.3 [jlam]
-	o ruby-mysql-2.7.5
-	o ruby-needle-1.3.0 [jlam]
-	o ruby-net-flickr-0.0.1 [jlam]
-	o ruby-net-sftp-1.1.1 [jlam]
-	o ruby-net-ssh-1.1.2 [jlam]
-	o ruby-odbc-0.9995 [jlam]
-	o ruby-opengl-0.60.0 [jlam]
-	o ruby-parsetree-2.1.1 [jlam]
-	o ruby-pdf-writer-1.1.8 [jlam]
-	o ruby-postgres-pr-0.4.0 [jlam]
-	o ruby-postgresql-0.7.9.2008.01.28 [jlam]
-	o ruby-rack-0.3.0 [jlam]
-	o ruby-rb-gsl-1.10.3
-	o ruby-rcairo-1.5.1 [jlam]
-	o ruby-rdtool-0.6.22
-	o ruby-rgl-0.3.1 [jlam]
-	o ruby-rspec-1.1.3 [jlam]
-	o ruby-sequel-1.3 [jlam]
-	o ruby-sequel-core-1.3 [jlam]
-	o ruby-sequel-model-0.5.0.2 [jlam]
-	o ruby-test-spec-0.4.0 [jlam]
-	o ruby-tmail-1.2.2 [jlam]
-	o ruby-transaction-simple-1.4.0 [jlam]
-	o ruby-tzinfo-0.3.7 [jlam]
-	o ruby-xmlparser-0.6.81 [jlam]
-	o ruby-xslt-0.9.5 [jlam]
-	o ruby2ruby-1.1.8 [jlam]
-	o rubyforge-4.5.0 [jlam]
 	o rudiments-0.30
 	o rxvt-unicode-9.0
 	o sablecc-3.2
@@ -1485,10 +1401,6 @@ Suggested package updates
 	o ted-en-us-2.17
 	o tex-musixtex-113 [pkg/34758]
 	o tfmxplay-1.1.6
-	o thin-0.7.1 [jlam]
-	o thoth-0.1.2 [jlam]
-	o thoth-delicious-0.1.2 [jlam]
-	o thoth-flickr-0.1.2 [jlam]
 	o tig-0.10
 	o tile-0.7.4
 	o tinyproxy-1.7.0
@@ -1547,7 +1459,6 @@ Suggested package updates
 	o wcalc-2.3
 	o wcalc-2.3.1
 	o wdm-1.28
-	o webby-0.8.2 [jlam]
 	o webmin-1.400
 	o weewm-0.01
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
