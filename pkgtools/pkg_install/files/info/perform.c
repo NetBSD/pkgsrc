@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.45 2008/03/09 18:03:46 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.46 2008/04/04 15:21:32 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -17,7 +17,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.45 2008/03/09 18:03:46 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.46 2008/04/04 15:21:32 joerg Exp $");
 #endif
 #endif
 
@@ -172,14 +172,10 @@ free_pkg_meta(struct pkg_meta *meta)
 	free(meta);
 }
 
+#ifndef BOOTSTRAP
 static struct pkg_meta *
-read_meta_data_from_fd(int fd)
+read_meta_data_from_archive(struct archive *archive)
 {
-#ifdef BOOTSTRAP
-	err(2, "binary packages not supported during bootstrap");
-	return NULL;
-#else
-	struct archive *archive;
 	struct pkg_meta *meta;
 	struct archive_entry *entry;
 	const char *fname;
@@ -189,12 +185,6 @@ read_meta_data_from_fd(int fd)
 	int r, found_required;
 
 	found_required = 0;
-
-	archive = archive_read_new();
-	archive_read_support_compression_all(archive);
-	archive_read_support_format_all(archive);
-	if (archive_read_open_fd(archive, fd, 1024))
-		err(2, "cannot open archive: %s", archive_error_string(archive));
 
 	if ((meta = malloc(sizeof(*meta))) == NULL)
 		err(2, "cannot allocate meta data header");
@@ -252,8 +242,8 @@ read_meta_data_from_fd(int fd)
 	archive_read_finish(archive);
 
 	return meta;
-#endif
 }
+#endif
 
 static struct pkg_meta *
 read_meta_data_from_pkgdb(const char *pkg)
@@ -304,21 +294,6 @@ read_meta_data_from_pkgdb(const char *pkg)
 
 static lfile_head_t files;
 
-static void
-fetch_child(int fd, const char *url)
-{
-	close(STDOUT_FILENO);
-	if (dup2(fd, STDOUT_FILENO) == -1) {
-		static const char err_msg[] =
-		    "cannot redirect stdout of FTP process\n";
-		write(STDERR_FILENO, err_msg, sizeof(err_msg) - 1);
-		_exit(255);
-	}
-	close(fd);
-	execlp(FTP_CMD, FTP_CMD, "-V", "-o", "-", url, (char *)NULL);
-	_exit(255);
-}
-
 static int
 pkg_do(const char *pkg)
 {
@@ -328,33 +303,30 @@ pkg_do(const char *pkg)
 	const char   *binpkgfile = NULL;
 
 	if (IS_URL(pkg)) {
-		pid_t child;
-		int fd[2], status;
+#ifdef BOOTSTRAP
+		errx(2, "Remote access not supported during bootstrap");
+#else
+		struct archive *archive;
+		void *remote_archive_cookie;
 
-		if (pipe(fd) == -1)
-			err(EXIT_FAILURE, "cannot create input pipes");
-		if (Verbose)
-			fprintf(stderr, "ftp -V -o - %s\n", pkg);
-		child = vfork();
-		if (child == -1)
-			err(EXIT_FAILURE, "cannot fork FTP process");
-		if (child == 0) {
-			close(fd[0]);
-			fetch_child(fd[1], pkg);
-		}
-		close(fd[1]);
-		meta = read_meta_data_from_fd(fd[0]);
-		kill(child, SIGTERM);
-		close(fd[0]);
-		waitpid(child, &status, 0);
+		archive = open_remote_archive(pkg, &remote_archive_cookie);
+
+		meta = read_meta_data_from_archive(archive);
+		close_remote_archive(remote_archive_cookie);
+#endif
 	} else if (fexists(pkg) && isfile(pkg)) {
-		int	pkg_fd;
+#ifdef BOOTSTRAP
+		errx(2, "Binary packages not supported during bootstrap");
+#else
+		struct archive *archive;
+		void *remote_archive_cookie;
 
-		if ((pkg_fd = open(pkg, O_RDONLY, 0)) == -1)
-			err(EXIT_FAILURE, "cannot open package %s", pkg);
-		meta = read_meta_data_from_fd(pkg_fd);
-		close(pkg_fd);
+		archive = open_local_archive(pkg, &remote_archive_cookie);
+
+		meta = read_meta_data_from_archive(archive);
+		close_local_archive(remote_archive_cookie);
 		binpkgfile = pkg;
+#endif
 	} else {
 		/*
 	         * It's not an uninstalled package, try and find it among the
