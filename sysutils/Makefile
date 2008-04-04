@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.422 2008/03/13 14:19:37 tonnerre Exp $
+# $NetBSD: Makefile,v 1.423 2008/04/04 15:33:06 jlam Exp $
 #
 
 COMMENT=	System utilities
@@ -33,6 +33,7 @@ SUBDIR+=	bkpupsd
 SUBDIR+=	bsign
 SUBDIR+=	btpin-qt
 SUBDIR+=	burn
+SUBDIR+=	capistrano
 SUBDIR+=	ccd2iso
 SUBDIR+=	ccze
 SUBDIR+=	cdbkup
@@ -219,6 +220,7 @@ SUBDIR+=	roller
 SUBDIR+=	rox
 SUBDIR+=	rsnapshot
 SUBDIR+=	rtty
+SUBDIR+=	ruby-directory-watcher
 SUBDIR+=	ruby-facter
 SUBDIR+=	ruby-quota
 SUBDIR+=	safetynet

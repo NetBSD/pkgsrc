@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.346 2008/03/25 13:44:21 wiz Exp $
+# $NetBSD: Makefile,v 1.347 2008/04/04 15:33:06 jlam Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -247,6 +247,8 @@ SUBDIR+=	rmail-mime
 SUBDIR+=	roundcube
 SUBDIR+=	rss2email
 SUBDIR+=	ruby-actionmailer
+SUBDIR+=	ruby-mailfactory
+SUBDIR+=	ruby-mime-types
 SUBDIR+=	ruby-tmail
 SUBDIR+=	safecat
 SUBDIR+=	sendmail
