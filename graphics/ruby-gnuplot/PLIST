@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/07 21:41:18 minskim Exp $
-${RUBY_SITELIBDIR}/gnuplot.rb
-${RUBY_DOCDIR}/gnuplot/AUTHORS.txt
-${RUBY_DOCDIR}/gnuplot/LICENSE.txt
-${RUBY_DOCDIR}/gnuplot/howto.html
-@dirrm ${RUBY_DOCDIR}/gnuplot
+@comment $NetBSD: PLIST,v 1.2 2008/04/04 15:30:01 jlam Exp $
+${GEM_HOME}/cache/gnuplot-${PKGVERSION}.gem
+${GEM_LIBDIR}/lib/gnuplot.rb
+${GEM_HOME}/specifications/gnuplot-${PKGVERSION}.gemspec
+@dirrm ${GEM_LIBDIR}/lib
+@dirrm ${GEM_LIBDIR}
+@exec ${MKDIR} %D/${GEM_DOCDIR}

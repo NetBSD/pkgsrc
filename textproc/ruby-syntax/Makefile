@@ -1,17 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/24 10:48:11 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/04 15:30:01 jlam Exp $
 
 DISTNAME=	syntax-1.0.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-CATEGORIES=	textproc ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/4952/
-EXTRACT_SUFX=	.tar.bz2
+PKGREVISION=	1
+CATEGORIES=	textproc
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://syntax.rubyforge.org/
 COMMENT=	Ruby lexical analysis framework
 
-USE_LANGUAGES=	# none
-USE_RUBY_SETUP= yes
+GEM_BUILD=	gemspec
 
-.include "../../lang/ruby/modules.mk"
+.include "../../misc/rubygems/rubygem.mk"
 .include "../../mk/bsd.pkg.mk"
