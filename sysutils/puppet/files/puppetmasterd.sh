@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: puppetmasterd.sh,v 1.1.1.1 2008/03/13 14:17:05 tonnerre Exp $
+# $NetBSD: puppetmasterd.sh,v 1.2 2008/04/04 15:20:48 jlam Exp $
 #
 # PROVIDE: puppetmasterd
 # REQUIRE: DAEMON
@@ -9,7 +9,7 @@
 # Add the following lines to /etc/rc.conf to enable puppetmasterd:
 #
 # puppetmasterd="YES"
-# puppetmasterd_confdir:	Set to @PREFIX@/etc/puppet by default
+# puppetmasterd_confdir:	Set to @PKG_SYSCONFDIR@ by default
 # puppetmasterd_flags:		Set to --confdir $puppetmasterd_confdir --rundir /var/run" by default
 #
 
@@ -20,10 +20,10 @@ fi
 name="puppetmasterd"
 rcvar=$name
 command="@PREFIX@/bin/${name}"
-command_interpreter="@PREFIX@/bin/ruby18"
+command_interpreter="@RUBY@"
 start_precmd="puppetmasterd_checkconfig"
 restart_precmd="puppetmasterd_checkconfig"
-: ${puppetmasterd_confdir="@PREFIX@/etc/puppet"}
+: ${puppetmasterd_confdir="@PKG_SYSCONFDIR@"}
 : ${puppetmasterd_pid="/var/run/${name}.pid"}
 : ${puppetmasterd_flags="--confdir $puppetmasterd_confdir --rundir /var/run"}
 
