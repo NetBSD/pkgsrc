@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/03/30 03:44:43 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2008/04/04 15:24:56 joerg Exp $
 
 DISTNAME=	rx-1.5
 PKGREVISION=	1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/rx/rx.html
 COMMENT=	Fast replacement for the GNU regex library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
@@ -27,7 +29,7 @@ INSTALLATION_DIRS=	${PKGINFODIR}
 post-install:
 	cd ${WRKSRC}/doc; for f in rx.info rx.info-[0-9]*; do		\
 		${TEST} ! -f "$$f" ||					\
-		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};	\
 	done
 
 .include "../../mk/bsd.pkg.mk"
