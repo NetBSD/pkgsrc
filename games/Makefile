@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.299 2008/03/15 01:15:18 wiz Exp $
+# $NetBSD: Makefile,v 1.300 2008/04/04 19:13:49 dsainty Exp $
 #
 
 COMMENT=	Games
@@ -43,6 +43,7 @@ SUBDIR+=	colchess-book-colchess
 SUBDIR+=	colchess-book-large
 SUBDIR+=	corewars
 SUBDIR+=	crack-attack
+SUBDIR+=	crack-attack-sounds
 SUBDIR+=	craft
 SUBDIR+=	crafty
 SUBDIR+=	crafty-book-medium
