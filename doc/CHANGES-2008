@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.611 2008/04/04 16:23:47 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.612 2008/04/04 16:57:18 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1213,3 +1213,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/ruby-mechanize to 0.7.5 [jlam 2008-0404]
 	Updated mail/sylpheed-devel to 2.5.0beta1 [xtraeme 2008-04-04]
 	Updated devel/bglibs to 1.103 [schmonz 2008-04-04]
+	Updated fonts/vlgothic-ttf to 20080327 [obache 2008-04-04]
