@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/12/12 20:42:29 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2008/04/04 13:39:52 obache Exp $
 #
 
 DISTNAME=	chimera-2.0a19
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.chimera.org/
 COMMENT=	World Wide Web Browser for X Windows
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_IMAKE=	yes
 
 pre-configure:
@@ -20,9 +22,9 @@ pre-configure:
 	    Common.tmpl.dist > Common.tmpl
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/chimera
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/chimera
 	cd ${WRKSRC}/doc && ${INSTALL_DATA}			\
-	    HINTS INFO LICENSE ${PREFIX}/share/doc/chimera
+	    HINTS INFO LICENSE ${DESTDIR}${PREFIX}/share/doc/chimera
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
