@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/03/03 00:51:44 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2008/04/04 10:49:37 obache Exp $
 
 DISTNAME=		unixbench-4.1.0
 PKGNAME=		${DISTNAME:S/unix/byte/}
@@ -25,6 +25,8 @@ INSTALLATION_DIRS=	bin
 
 REPLACE_PERL+=		pgms/perlbench
 USE_TOOLS+=		perl:run
+
+MAKE_JOBS_SAFE=		no
 
 post-extract:
 	${RM} -f ${WRKSRC}/pgms/select
