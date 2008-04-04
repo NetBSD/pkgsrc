@@ -1,242 +1,244 @@
-@comment $NetBSD: PLIST,v 1.4 2008/02/09 06:31:59 minskim Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/04/04 15:30:01 jlam Exp $
 bin/rails
-${RUBY_SITELIBDIR}/code_statistics.rb
-${RUBY_SITELIBDIR}/commands.rb
-${RUBY_SITELIBDIR}/commands/about.rb
-${RUBY_SITELIBDIR}/commands/console.rb
-${RUBY_SITELIBDIR}/commands/destroy.rb
-${RUBY_SITELIBDIR}/commands/generate.rb
-${RUBY_SITELIBDIR}/commands/ncgi/listener
-${RUBY_SITELIBDIR}/commands/ncgi/tracker
-${RUBY_SITELIBDIR}/commands/performance/benchmarker.rb
-${RUBY_SITELIBDIR}/commands/performance/profiler.rb
-${RUBY_SITELIBDIR}/commands/performance/request.rb
-${RUBY_SITELIBDIR}/commands/plugin.rb
-${RUBY_SITELIBDIR}/commands/process/inspector.rb
-${RUBY_SITELIBDIR}/commands/process/reaper.rb
-${RUBY_SITELIBDIR}/commands/process/spawner.rb
-${RUBY_SITELIBDIR}/commands/process/spinner.rb
-${RUBY_SITELIBDIR}/commands/runner.rb
-${RUBY_SITELIBDIR}/commands/server.rb
-${RUBY_SITELIBDIR}/commands/servers/base.rb
-${RUBY_SITELIBDIR}/commands/servers/lighttpd.rb
-${RUBY_SITELIBDIR}/commands/servers/mongrel.rb
-${RUBY_SITELIBDIR}/commands/servers/webrick.rb
-${RUBY_SITELIBDIR}/commands/update.rb
-${RUBY_SITELIBDIR}/console_app.rb
-${RUBY_SITELIBDIR}/console_sandbox.rb
-${RUBY_SITELIBDIR}/console_with_helpers.rb
-${RUBY_SITELIBDIR}/dispatcher.rb
-${RUBY_SITELIBDIR}/fcgi_handler.rb
-${RUBY_SITELIBDIR}/initializer.rb
-${RUBY_SITELIBDIR}/rails/plugin.rb
-${RUBY_SITELIBDIR}/rails/plugin/loader.rb
-${RUBY_SITELIBDIR}/rails/plugin/locator.rb
-${RUBY_SITELIBDIR}/rails/version.rb
-${RUBY_SITELIBDIR}/rails_generator.rb
-${RUBY_SITELIBDIR}/rails_generator/base.rb
-${RUBY_SITELIBDIR}/rails_generator/commands.rb
-${RUBY_SITELIBDIR}/rails_generator/generated_attribute.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/applications/app/USAGE
-${RUBY_SITELIBDIR}/rails_generator/generators/applications/app/app_generator.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/controller/USAGE
-${RUBY_SITELIBDIR}/rails_generator/generators/components/controller/controller_generator.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/controller/templates/controller.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/controller/templates/functional_test.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/controller/templates/helper.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/controller/templates/view.html.erb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/integration_test/USAGE
-${RUBY_SITELIBDIR}/rails_generator/generators/components/integration_test/integration_test_generator.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/integration_test/templates/integration_test.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/mailer/USAGE
-${RUBY_SITELIBDIR}/rails_generator/generators/components/mailer/mailer_generator.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/mailer/templates/fixture.erb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/mailer/templates/fixture.rhtml
-${RUBY_SITELIBDIR}/rails_generator/generators/components/mailer/templates/mailer.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/mailer/templates/unit_test.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/mailer/templates/view.erb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/mailer/templates/view.rhtml
-${RUBY_SITELIBDIR}/rails_generator/generators/components/migration/USAGE
-${RUBY_SITELIBDIR}/rails_generator/generators/components/migration/migration_generator.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/migration/templates/migration.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/model/USAGE
-${RUBY_SITELIBDIR}/rails_generator/generators/components/model/model_generator.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/model/templates/fixtures.yml
-${RUBY_SITELIBDIR}/rails_generator/generators/components/model/templates/migration.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/model/templates/model.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/model/templates/unit_test.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/observer/USAGE
-${RUBY_SITELIBDIR}/rails_generator/generators/components/observer/observer_generator.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/observer/templates/observer.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/observer/templates/unit_test.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/USAGE
-${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/plugin_generator.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/templates/MIT-LICENSE
-${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/templates/README
-${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/templates/Rakefile
-${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/templates/USAGE
-${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/templates/generator.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/templates/init.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/templates/install.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/templates/plugin.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/templates/tasks.rake
-${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/templates/uninstall.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/templates/unit_test.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/resource/USAGE
-${RUBY_SITELIBDIR}/rails_generator/generators/components/resource/resource_generator.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/resource/templates/controller.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/resource/templates/functional_test.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/resource/templates/helper.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold/USAGE
-${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold/scaffold_generator.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold/templates/controller.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold/templates/functional_test.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold/templates/helper.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold/templates/layout.html.erb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold/templates/style.css
-${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold/templates/view_edit.html.erb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold/templates/view_index.html.erb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold/templates/view_new.html.erb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold/templates/view_show.html.erb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/session_migration/USAGE
-${RUBY_SITELIBDIR}/rails_generator/generators/components/session_migration/session_migration_generator.rb
-${RUBY_SITELIBDIR}/rails_generator/generators/components/session_migration/templates/migration.rb
-${RUBY_SITELIBDIR}/rails_generator/lookup.rb
-${RUBY_SITELIBDIR}/rails_generator/manifest.rb
-${RUBY_SITELIBDIR}/rails_generator/options.rb
-${RUBY_SITELIBDIR}/rails_generator/scripts.rb
-${RUBY_SITELIBDIR}/rails_generator/scripts/destroy.rb
-${RUBY_SITELIBDIR}/rails_generator/scripts/generate.rb
-${RUBY_SITELIBDIR}/rails_generator/scripts/update.rb
-${RUBY_SITELIBDIR}/rails_generator/secret_key_generator.rb
-${RUBY_SITELIBDIR}/rails_generator/simple_logger.rb
-${RUBY_SITELIBDIR}/rails_generator/spec.rb
-${RUBY_SITELIBDIR}/railties_path.rb
-${RUBY_SITELIBDIR}/ruby_version_check.rb
-${RUBY_SITELIBDIR}/rubyprof_ext.rb
-${RUBY_SITELIBDIR}/source_annotation_extractor.rb
-${RUBY_SITELIBDIR}/tasks/annotations.rake
-${RUBY_SITELIBDIR}/tasks/databases.rake
-${RUBY_SITELIBDIR}/tasks/documentation.rake
-${RUBY_SITELIBDIR}/tasks/framework.rake
-${RUBY_SITELIBDIR}/tasks/log.rake
-${RUBY_SITELIBDIR}/tasks/misc.rake
-${RUBY_SITELIBDIR}/tasks/rails.rb
-${RUBY_SITELIBDIR}/tasks/routes.rake
-${RUBY_SITELIBDIR}/tasks/statistics.rake
-${RUBY_SITELIBDIR}/tasks/testing.rake
-${RUBY_SITELIBDIR}/tasks/tmp.rake
-${RUBY_SITELIBDIR}/test_help.rb
-${RUBY_SITELIBDIR}/webrick_server.rb
-share/rails/CHANGELOG
-share/rails/MIT-LICENSE
-share/rails/README
-share/rails/bin/about
-share/rails/bin/console
-share/rails/bin/destroy
-share/rails/bin/generate
-share/rails/bin/performance/benchmarker
-share/rails/bin/performance/profiler
-share/rails/bin/performance/request
-share/rails/bin/plugin
-share/rails/bin/process/inspector
-share/rails/bin/process/reaper
-share/rails/bin/process/spawner
-share/rails/bin/rails
-share/rails/bin/runner
-share/rails/bin/server
-share/rails/builtin/rails_info/rails/info.rb
-share/rails/builtin/rails_info/rails/info_controller.rb
-share/rails/builtin/rails_info/rails/info_helper.rb
-share/rails/builtin/rails_info/rails_info_controller.rb
-share/rails/configs/apache.conf
-share/rails/configs/databases/frontbase.yml
-share/rails/configs/databases/mysql.yml
-share/rails/configs/databases/oracle.yml
-share/rails/configs/databases/postgresql.yml
-share/rails/configs/databases/sqlite2.yml
-share/rails/configs/databases/sqlite3.yml
-share/rails/configs/empty.log
-share/rails/configs/initializers/inflections.rb
-share/rails/configs/initializers/mime_types.rb
-share/rails/configs/lighttpd.conf
-share/rails/configs/routes.rb
-share/rails/dispatches/dispatch.fcgi
-share/rails/dispatches/dispatch.rb
-share/rails/dispatches/gateway.cgi
-share/rails/doc/README_FOR_APP
-share/rails/environments/boot.rb
-share/rails/environments/development.rb
-share/rails/environments/environment.rb
-share/rails/environments/production.rb
-share/rails/environments/test.rb
-share/rails/fresh_rakefile
-share/rails/helpers/application.rb
-share/rails/helpers/application_helper.rb
-share/rails/helpers/test_helper.rb
-share/rails/html/404.html
-share/rails/html/422.html
-share/rails/html/500.html
-share/rails/html/favicon.ico
-share/rails/html/images/rails.png
-share/rails/html/index.html
-share/rails/html/javascripts/application.js
-share/rails/html/javascripts/controls.js
-share/rails/html/javascripts/dragdrop.js
-share/rails/html/javascripts/effects.js
-share/rails/html/javascripts/prototype.js
-share/rails/html/robots.txt
-@dirrm share/rails/html/javascripts
-@dirrm share/rails/html/images
-@dirrm share/rails/html
-@dirrm share/rails/helpers
-@dirrm share/rails/environments
-@dirrm share/rails/doc
-@dirrm share/rails/dispatches
-@dirrm share/rails/configs/initializers
-@dirrm share/rails/configs/databases
-@dirrm share/rails/configs
-@dirrm share/rails/builtin/rails_info/rails
-@dirrm share/rails/builtin/rails_info
-@dirrm share/rails/builtin
-@dirrm share/rails/bin/process
-@dirrm share/rails/bin/performance
-@dirrm share/rails/bin
-@dirrm share/rails
-@dirrm ${RUBY_SITELIBDIR}/tasks
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/scripts
-@exec ${MKDIR} %D/lib/ruby/site_ruby/1.8/rails_generator/generators/components/web_service/templates
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/web_service/templates
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/web_service
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/session_migration/templates
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/session_migration
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold/templates
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/scaffold
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/resource/templates
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/resource
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin/templates
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/plugin
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/observer/templates
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/observer
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/model/templates
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/model
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/migration/templates
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/migration
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/mailer/templates
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/mailer
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/integration_test/templates
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/integration_test
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/controller/templates
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components/controller
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/components
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/applications/app
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators/applications
-@dirrm ${RUBY_SITELIBDIR}/rails_generator/generators
-@dirrm ${RUBY_SITELIBDIR}/rails_generator
-@dirrm ${RUBY_SITELIBDIR}/rails/plugin
-@dirrm ${RUBY_SITELIBDIR}/rails
-@dirrm ${RUBY_SITELIBDIR}/commands/servers
-@dirrm ${RUBY_SITELIBDIR}/commands/process
-@dirrm ${RUBY_SITELIBDIR}/commands/performance
-@dirrm ${RUBY_SITELIBDIR}/commands/ncgi
-@dirrm ${RUBY_SITELIBDIR}/commands
+${GEM_HOME}/cache/rails-${PKGVERSION}.gem
+${GEM_LIBDIR}/CHANGELOG
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bin/about
+${GEM_LIBDIR}/bin/console
+${GEM_LIBDIR}/bin/destroy
+${GEM_LIBDIR}/bin/generate
+${GEM_LIBDIR}/bin/performance/benchmarker
+${GEM_LIBDIR}/bin/performance/profiler
+${GEM_LIBDIR}/bin/performance/request
+${GEM_LIBDIR}/bin/plugin
+${GEM_LIBDIR}/bin/process/inspector
+${GEM_LIBDIR}/bin/process/reaper
+${GEM_LIBDIR}/bin/process/spawner
+${GEM_LIBDIR}/bin/rails
+${GEM_LIBDIR}/bin/runner
+${GEM_LIBDIR}/bin/server
+${GEM_LIBDIR}/builtin/rails_info/rails/info.rb
+${GEM_LIBDIR}/builtin/rails_info/rails/info_controller.rb
+${GEM_LIBDIR}/builtin/rails_info/rails/info_helper.rb
+${GEM_LIBDIR}/builtin/rails_info/rails_info_controller.rb
+${GEM_LIBDIR}/configs/apache.conf
+${GEM_LIBDIR}/configs/databases/frontbase.yml
+${GEM_LIBDIR}/configs/databases/mysql.yml
+${GEM_LIBDIR}/configs/databases/oracle.yml
+${GEM_LIBDIR}/configs/databases/postgresql.yml
+${GEM_LIBDIR}/configs/databases/sqlite2.yml
+${GEM_LIBDIR}/configs/databases/sqlite3.yml
+${GEM_LIBDIR}/configs/empty.log
+${GEM_LIBDIR}/configs/initializers/inflections.rb
+${GEM_LIBDIR}/configs/initializers/mime_types.rb
+${GEM_LIBDIR}/configs/lighttpd.conf
+${GEM_LIBDIR}/configs/routes.rb
+${GEM_LIBDIR}/dispatches/dispatch.fcgi
+${GEM_LIBDIR}/dispatches/dispatch.rb
+${GEM_LIBDIR}/dispatches/gateway.cgi
+${GEM_LIBDIR}/doc/README_FOR_APP
+${GEM_LIBDIR}/environments/boot.rb
+${GEM_LIBDIR}/environments/development.rb
+${GEM_LIBDIR}/environments/environment.rb
+${GEM_LIBDIR}/environments/production.rb
+${GEM_LIBDIR}/environments/test.rb
+${GEM_LIBDIR}/fresh_rakefile
+${GEM_LIBDIR}/helpers/application.rb
+${GEM_LIBDIR}/helpers/application_helper.rb
+${GEM_LIBDIR}/helpers/test_helper.rb
+${GEM_LIBDIR}/html/404.html
+${GEM_LIBDIR}/html/422.html
+${GEM_LIBDIR}/html/500.html
+${GEM_LIBDIR}/html/favicon.ico
+${GEM_LIBDIR}/html/images/rails.png
+${GEM_LIBDIR}/html/index.html
+${GEM_LIBDIR}/html/javascripts/application.js
+${GEM_LIBDIR}/html/javascripts/controls.js
+${GEM_LIBDIR}/html/javascripts/dragdrop.js
+${GEM_LIBDIR}/html/javascripts/effects.js
+${GEM_LIBDIR}/html/javascripts/prototype.js
+${GEM_LIBDIR}/html/robots.txt
+${GEM_LIBDIR}/lib/code_statistics.rb
+${GEM_LIBDIR}/lib/commands.rb
+${GEM_LIBDIR}/lib/commands/about.rb
+${GEM_LIBDIR}/lib/commands/console.rb
+${GEM_LIBDIR}/lib/commands/destroy.rb
+${GEM_LIBDIR}/lib/commands/generate.rb
+${GEM_LIBDIR}/lib/commands/ncgi/listener
+${GEM_LIBDIR}/lib/commands/ncgi/tracker
+${GEM_LIBDIR}/lib/commands/performance/benchmarker.rb
+${GEM_LIBDIR}/lib/commands/performance/profiler.rb
+${GEM_LIBDIR}/lib/commands/performance/request.rb
+${GEM_LIBDIR}/lib/commands/plugin.rb
+${GEM_LIBDIR}/lib/commands/process/inspector.rb
+${GEM_LIBDIR}/lib/commands/process/reaper.rb
+${GEM_LIBDIR}/lib/commands/process/spawner.rb
+${GEM_LIBDIR}/lib/commands/process/spinner.rb
+${GEM_LIBDIR}/lib/commands/runner.rb
+${GEM_LIBDIR}/lib/commands/server.rb
+${GEM_LIBDIR}/lib/commands/servers/base.rb
+${GEM_LIBDIR}/lib/commands/servers/lighttpd.rb
+${GEM_LIBDIR}/lib/commands/servers/mongrel.rb
+${GEM_LIBDIR}/lib/commands/servers/webrick.rb
+${GEM_LIBDIR}/lib/commands/update.rb
+${GEM_LIBDIR}/lib/console_app.rb
+${GEM_LIBDIR}/lib/console_sandbox.rb
+${GEM_LIBDIR}/lib/console_with_helpers.rb
+${GEM_LIBDIR}/lib/dispatcher.rb
+${GEM_LIBDIR}/lib/fcgi_handler.rb
+${GEM_LIBDIR}/lib/initializer.rb
+${GEM_LIBDIR}/lib/rails/plugin.rb
+${GEM_LIBDIR}/lib/rails/plugin/loader.rb
+${GEM_LIBDIR}/lib/rails/plugin/locator.rb
+${GEM_LIBDIR}/lib/rails/version.rb
+${GEM_LIBDIR}/lib/rails_generator.rb
+${GEM_LIBDIR}/lib/rails_generator/base.rb
+${GEM_LIBDIR}/lib/rails_generator/commands.rb
+${GEM_LIBDIR}/lib/rails_generator/generated_attribute.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/applications/app/USAGE
+${GEM_LIBDIR}/lib/rails_generator/generators/applications/app/app_generator.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/controller/USAGE
+${GEM_LIBDIR}/lib/rails_generator/generators/components/controller/controller_generator.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/controller/templates/controller.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/controller/templates/functional_test.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/controller/templates/helper.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/controller/templates/view.html.erb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/integration_test/USAGE
+${GEM_LIBDIR}/lib/rails_generator/generators/components/integration_test/integration_test_generator.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/integration_test/templates/integration_test.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/mailer/USAGE
+${GEM_LIBDIR}/lib/rails_generator/generators/components/mailer/mailer_generator.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/mailer/templates/fixture.erb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/mailer/templates/fixture.rhtml
+${GEM_LIBDIR}/lib/rails_generator/generators/components/mailer/templates/mailer.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/mailer/templates/unit_test.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/mailer/templates/view.erb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/mailer/templates/view.rhtml
+${GEM_LIBDIR}/lib/rails_generator/generators/components/migration/USAGE
+${GEM_LIBDIR}/lib/rails_generator/generators/components/migration/migration_generator.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/migration/templates/migration.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/model/USAGE
+${GEM_LIBDIR}/lib/rails_generator/generators/components/model/model_generator.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/model/templates/fixtures.yml
+${GEM_LIBDIR}/lib/rails_generator/generators/components/model/templates/migration.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/model/templates/model.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/model/templates/unit_test.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/observer/USAGE
+${GEM_LIBDIR}/lib/rails_generator/generators/components/observer/observer_generator.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/observer/templates/observer.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/observer/templates/unit_test.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/plugin/USAGE
+${GEM_LIBDIR}/lib/rails_generator/generators/components/plugin/plugin_generator.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/plugin/templates/MIT-LICENSE
+${GEM_LIBDIR}/lib/rails_generator/generators/components/plugin/templates/README
+${GEM_LIBDIR}/lib/rails_generator/generators/components/plugin/templates/Rakefile
+${GEM_LIBDIR}/lib/rails_generator/generators/components/plugin/templates/USAGE
+${GEM_LIBDIR}/lib/rails_generator/generators/components/plugin/templates/generator.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/plugin/templates/init.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/plugin/templates/install.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/plugin/templates/plugin.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/plugin/templates/tasks.rake
+${GEM_LIBDIR}/lib/rails_generator/generators/components/plugin/templates/uninstall.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/plugin/templates/unit_test.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/resource/USAGE
+${GEM_LIBDIR}/lib/rails_generator/generators/components/resource/resource_generator.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/resource/templates/controller.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/resource/templates/functional_test.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/resource/templates/helper.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/scaffold/USAGE
+${GEM_LIBDIR}/lib/rails_generator/generators/components/scaffold/scaffold_generator.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/scaffold/templates/controller.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/scaffold/templates/functional_test.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/scaffold/templates/helper.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/scaffold/templates/layout.html.erb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/scaffold/templates/style.css
+${GEM_LIBDIR}/lib/rails_generator/generators/components/scaffold/templates/view_edit.html.erb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/scaffold/templates/view_index.html.erb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/scaffold/templates/view_new.html.erb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/scaffold/templates/view_show.html.erb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/session_migration/USAGE
+${GEM_LIBDIR}/lib/rails_generator/generators/components/session_migration/session_migration_generator.rb
+${GEM_LIBDIR}/lib/rails_generator/generators/components/session_migration/templates/migration.rb
+${GEM_LIBDIR}/lib/rails_generator/lookup.rb
+${GEM_LIBDIR}/lib/rails_generator/manifest.rb
+${GEM_LIBDIR}/lib/rails_generator/options.rb
+${GEM_LIBDIR}/lib/rails_generator/scripts.rb
+${GEM_LIBDIR}/lib/rails_generator/scripts/destroy.rb
+${GEM_LIBDIR}/lib/rails_generator/scripts/generate.rb
+${GEM_LIBDIR}/lib/rails_generator/scripts/update.rb
+${GEM_LIBDIR}/lib/rails_generator/secret_key_generator.rb
+${GEM_LIBDIR}/lib/rails_generator/simple_logger.rb
+${GEM_LIBDIR}/lib/rails_generator/spec.rb
+${GEM_LIBDIR}/lib/railties_path.rb
+${GEM_LIBDIR}/lib/ruby_version_check.rb
+${GEM_LIBDIR}/lib/rubyprof_ext.rb
+${GEM_LIBDIR}/lib/source_annotation_extractor.rb
+${GEM_LIBDIR}/lib/tasks/annotations.rake
+${GEM_LIBDIR}/lib/tasks/databases.rake
+${GEM_LIBDIR}/lib/tasks/documentation.rake
+${GEM_LIBDIR}/lib/tasks/framework.rake
+${GEM_LIBDIR}/lib/tasks/log.rake
+${GEM_LIBDIR}/lib/tasks/misc.rake
+${GEM_LIBDIR}/lib/tasks/rails.rb
+${GEM_LIBDIR}/lib/tasks/routes.rake
+${GEM_LIBDIR}/lib/tasks/statistics.rake
+${GEM_LIBDIR}/lib/tasks/testing.rake
+${GEM_LIBDIR}/lib/tasks/tmp.rake
+${GEM_LIBDIR}/lib/test_help.rb
+${GEM_LIBDIR}/lib/webrick_server.rb
+${GEM_HOME}/specifications/rails-${PKGVERSION}.gemspec
+@dirrm ${GEM_LIBDIR}/lib/tasks
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/scripts
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/session_migration/templates
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/session_migration
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/scaffold/templates
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/scaffold
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/resource/templates
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/resource
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/plugin/templates
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/plugin
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/observer/templates
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/observer
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/model/templates
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/model
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/migration/templates
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/migration
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/mailer/templates
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/mailer
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/integration_test/templates
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/integration_test
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/controller/templates
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components/controller
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/components
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/applications/app
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators/applications
+@dirrm ${GEM_LIBDIR}/lib/rails_generator/generators
+@dirrm ${GEM_LIBDIR}/lib/rails_generator
+@dirrm ${GEM_LIBDIR}/lib/rails/plugin
+@dirrm ${GEM_LIBDIR}/lib/rails
+@dirrm ${GEM_LIBDIR}/lib/commands/servers
+@dirrm ${GEM_LIBDIR}/lib/commands/process
+@dirrm ${GEM_LIBDIR}/lib/commands/performance
+@dirrm ${GEM_LIBDIR}/lib/commands/ncgi
+@dirrm ${GEM_LIBDIR}/lib/commands
+@dirrm ${GEM_LIBDIR}/lib
+@dirrm ${GEM_LIBDIR}/html/javascripts
+@dirrm ${GEM_LIBDIR}/html/images
+@dirrm ${GEM_LIBDIR}/html
+@dirrm ${GEM_LIBDIR}/helpers
+@dirrm ${GEM_LIBDIR}/environments
+@dirrm ${GEM_LIBDIR}/doc
+@dirrm ${GEM_LIBDIR}/dispatches
+@dirrm ${GEM_LIBDIR}/configs/initializers
+@dirrm ${GEM_LIBDIR}/configs/databases
+@dirrm ${GEM_LIBDIR}/configs
+@dirrm ${GEM_LIBDIR}/builtin/rails_info/rails
+@dirrm ${GEM_LIBDIR}/builtin/rails_info
+@dirrm ${GEM_LIBDIR}/builtin
+@dirrm ${GEM_LIBDIR}/bin/process
+@dirrm ${GEM_LIBDIR}/bin/performance
+@dirrm ${GEM_LIBDIR}/bin
+@dirrm ${GEM_LIBDIR}
+@exec ${MKDIR} %D/${GEM_DOCDIR}

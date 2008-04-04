@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2007/10/03 14:45:42 heinz Exp $
+# $NetBSD: Makefile,v 1.7 2008/04/04 15:30:00 jlam Exp $
 
 DISTNAME=	ncurses-ruby-1.1
-PKGNAME=	${DISTNAME:S/ncurses-ruby/${RUBY_PKGPREFIX}-ncurses/}
+PKGNAME=	${RUBY_PKGPREFIX}-${GEM_NAME}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://download.berlios.de/ncurses-ruby/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,23 +11,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ncurses-ruby.berlios.de/
 COMMENT=	Ruby interface to ncurses
 
-USE_RUBY_EXTCONF=	yes
-USE_NCURSES=		yes	# mouse functions
+USE_NCURSES=	yes	# mouse functions
+GEM_NAME=	${DISTNAME:S/-ruby//}
+GEM_BUILD=	gemspec
+GEM_CLEANBUILD=	Makefile *.o ncurses_bin.${RUBY_DLEXT} mkmf.log
 
-EXAMPLES=		example.rb hello_ncurses.rb rain.rb read_line.rb \
-			tclock.rb test_scanw.rb
-.for f in ${EXAMPLES}
-REPLACE_RUBY+=		example/${f}
-.endfor
+post-extract:
+	${RUN} cp ${FILESDIR}/gemspec ${GEM_SPECFILE}
 
-post-install:
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/ncurses
-	${INSTALL_DATA} ${WRKSRC}/examples/LICENSES_for_examples \
-		${RUBY_EXAMPLESDIR}/ncurses
-.for f in ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/examples/${f} ${RUBY_EXAMPLESDIR}/ncurses
-.endfor
+.include "../../misc/rubygems/rubygem.mk"
 
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,31 +1,22 @@
-# $NetBSD: Makefile,v 1.17 2007/08/18 14:26:59 taca Exp $
-#
+# $NetBSD: Makefile,v 1.18 2008/04/04 15:30:00 jlam Exp $
 
 DISTNAME=	ruby-termios-0.9.5
-PKGNAME=	${RUBY_PKGPREFIX}-termios-0.9.5
-CATEGORIES=	comms ruby
+PKGNAME=	${RUBY_PKGPREFIX}-${GEM_NAME}
+PKGREVISION=	1
+CATEGORIES=	comms
 MASTER_SITES=	http://arika.org/archive/
+EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://arika.org/ruby/termios
 COMMENT=	Ruby extension to termios library
 
-RUBY_HAS_ARCHLIB=	yes
-USE_RUBY_EXTCONF=	yes
+GEM_NAME=	${DISTNAME:S/ruby-//}
+GEM_BUILD=	gemspec
+GEM_CLEANBUILD=	Makefile *.o termios.${RUBY_DLEXT} mkmf.log
 
-DOCS=			ChangeLog README TODO.ja
-EXAMPLES=		modem_check0.rb modem_check1.rb modem_check2.rb \
-			secret_input1.rb secret_input2.rb
+post-extract:
+	cp ${FILESDIR}/gemspec ${GEM_SPECFILE}
 
-post-install:
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/termios
-.for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/termios
-.endfor
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/termios
-.for f in ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/examples/${f} ${RUBY_EXAMPLESDIR}/termios
-.endfor
-
-.include "../../lang/ruby/modules.mk"
+.include "../../misc/rubygems/rubygem.mk"
 .include "../../mk/bsd.pkg.mk"

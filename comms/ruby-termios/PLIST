@@ -1,13 +1,22 @@
-@comment $NetBSD: PLIST,v 1.6 2007/08/18 14:26:59 taca Exp $
-${RUBY_SITEARCHLIBDIR}/termios.${RUBY_DLEXT}
-${RUBY_SITELIBDIR}/termios.rb
-${RUBY_DOCDIR}/termios/ChangeLog
-${RUBY_DOCDIR}/termios/README
-${RUBY_DOCDIR}/termios/TODO.ja
-${RUBY_EXAMPLESDIR}/termios/modem_check0.rb
-${RUBY_EXAMPLESDIR}/termios/modem_check1.rb
-${RUBY_EXAMPLESDIR}/termios/modem_check2.rb
-${RUBY_EXAMPLESDIR}/termios/secret_input1.rb
-${RUBY_EXAMPLESDIR}/termios/secret_input2.rb
-@dirrm ${RUBY_DOCDIR}/termios
-@dirrm ${RUBY_EXAMPLESDIR}/termios
+@comment $NetBSD: PLIST,v 1.7 2008/04/04 15:30:00 jlam Exp $
+${GEM_HOME}/cache/termios-${PKGVERSION}.gem
+${GEM_LIBDIR}/ChangeLog
+${GEM_LIBDIR}/MANIFEST
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/TODO.ja
+${GEM_LIBDIR}/examples/modem_check0.rb
+${GEM_LIBDIR}/examples/modem_check1.rb
+${GEM_LIBDIR}/examples/modem_check2.rb
+${GEM_LIBDIR}/examples/secret_input1.rb
+${GEM_LIBDIR}/examples/secret_input2.rb
+${GEM_LIBDIR}/extconf.rb
+${GEM_LIBDIR}/lib/termios.${RUBY_DLEXT}
+${GEM_LIBDIR}/termios.c
+${GEM_LIBDIR}/termios.rd
+${GEM_LIBDIR}/test/test0.rb
+${GEM_HOME}/specifications/termios-${PKGVERSION}.gemspec
+@dirrm ${GEM_LIBDIR}/test
+@dirrm ${GEM_LIBDIR}/lib
+@dirrm ${GEM_LIBDIR}/examples
+@dirrm ${GEM_LIBDIR}
+@exec ${MKDIR} %D/lib/ruby/gems/1.8/doc/termios-${PKGVERSION}

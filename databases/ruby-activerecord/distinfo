@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.11 2008/02/09 06:20:25 minskim Exp $
+$NetBSD: distinfo,v 1.12 2008/04/04 15:30:00 jlam Exp $
 
-SHA1 (activerecord-2.0.2.tgz) = f16bc4332814c2dbb1f58b736aecd2950acaeb4b
-RMD160 (activerecord-2.0.2.tgz) = 80d6678e773d0c0cfcf4ca5529152e8a441a1fe1
-Size (activerecord-2.0.2.tgz) = 422583 bytes
-SHA1 (patch-aa) = 72ffb3910a719ed02daf90c9b80c24d9ebee6696
-SHA1 (patch-ab) = 1c195d73f21452ffe5d7ed51e09707332e78d06e
+SHA1 (activerecord-2.0.2.gem) = 9a7a0356fd20e65dd61d2a2c8441ad336c2fba80
+RMD160 (activerecord-2.0.2.gem) = fe105181e94577fbd96619b703e888df5198707e
+Size (activerecord-2.0.2.gem) = 422400 bytes
