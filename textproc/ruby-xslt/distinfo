@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:22:29 jlam Exp $
+
+SHA1 (ruby-xslt-0.9.5.gem) = c191ac9c7a29fc0385da9b162744185d1832a582
+RMD160 (ruby-xslt-0.9.5.gem) = ade0ab06992e4d08a31dd588a5edbde695249a5f
+Size (ruby-xslt-0.9.5.gem) = 34304 bytes
