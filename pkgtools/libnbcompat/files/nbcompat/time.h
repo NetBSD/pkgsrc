@@ -1,4 +1,4 @@
-/*	$NetBSD: time.h,v 1.1 2004/08/10 18:47:55 jlam Exp $	*/
+/*	$NetBSD: time.h,v 1.2 2008/04/04 15:20:00 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -69,6 +69,10 @@
 
 #if !HAVE_UTIMES
 int utimes(const char *, const struct timeval *);
+#endif
+
+#if !HAVE_TIMEGM
+time_t timegm(struct tm *);
 #endif
 
 #endif	/* !_NBCOMPAT_TIME_H_ */
