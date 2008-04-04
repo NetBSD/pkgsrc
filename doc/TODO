@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7173 2008/04/04 15:36:20 jlam Exp $
+$NetBSD: TODO,v 1.7174 2008/04/04 16:26:09 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -476,7 +476,6 @@ Suggested package updates
 	o beacon-1.3
 	o benchfft-3.1
 	o bftpd-2.2
-	o bglibs-1.103
 	o biew-5.6.4
 	o bind-8.4.7
 	o bind-9.4.2
@@ -1003,7 +1002,6 @@ Suggested package updates
 	o netcdf-3.6.2
 	o netperf-2.4.4
 	o netpipe-3.6.2
-	o netqmail-1.06 [schmonz]
 	o netramet-50
 	o newmail-1.0.2
 	o newmat-11
