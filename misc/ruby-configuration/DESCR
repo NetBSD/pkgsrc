@@ -1,0 +1,2 @@
+configuration.rb provides a mechanism for configuring Ruby programs
+with Ruby configuration files.
