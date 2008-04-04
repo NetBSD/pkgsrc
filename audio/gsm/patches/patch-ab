@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2003/09/18 18:55:23 wiz Exp $
+$NetBSD: patch-ab,v 1.8 2008/04/04 15:24:20 joerg Exp $
 
 --- Makefile.orig	Tue Jul  2 10:36:06 1996
 +++ Makefile	Sun Jan 16 02:16:43 2000
@@ -120,7 +120,7 @@ $NetBSD: patch-ab,v 1.7 2003/09/18 18:55:23 wiz Exp $
 +		cd $(LIB) && \
 +			$(LIBTOOL) --mode=link $(CC) -o `$(BASENAME) $@` \
 +				$(GSM_OBJECTS:.o=.lo) \
-+				-rpath $(GSM_INSTALL_LIB) -version-info 1:10
++				-rpath $(PREFIX)/lib -version-info 1:10
  
  
  # Toast, Untoast and Tcat -- the compress-like frontends to gsm.
@@ -209,7 +209,7 @@ $NetBSD: patch-ab,v 1.7 2003/09/18 18:55:23 wiz Exp $
 +		${BSD_INSTALL_DATA} $? $(GSM_INSTALL_INC)
 +
 +$(GSM_INSTALL_LIB)/libgsm.la:	$(LIBGSM)
-+		${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} $? $(GSM_INSTALL_LIB)
++		${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} $? $(GSM_INSTALL_LIB)
  
  
  # Distribution
