@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.14 2008/03/13 16:35:30 joerg Exp $
+# $NetBSD: Makefile.in,v 1.15 2008/04/04 20:46:59 tnn Exp $
 
 srcdir=		@srcdir@
 
@@ -25,7 +25,7 @@ INSTALL=	@INSTALL@
 PROG=		pkg_admin
 
 .if empty(BOOTSTRAP)
-LIBS=		-linstall -lbz2 -lz @LIBS@
+LIBS=		-linstall -lbz2 -lfetch -lz @LIBS@
 OBJS=		audit.o check.o config.o main.o
 CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib \
 		-DSYSCONFDIR=\"$(sysconfdir)\"
