@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.149 2008/04/03 14:22:26 jlam Exp $
+# $NetBSD: Makefile,v 1.150 2008/04/04 15:21:32 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -105,6 +105,7 @@ USE_BUILTIN.libarchive=	no
 FILESDIR.bzip2?=	${.CURDIR}/../../archivers/bzip2/files
 FILESDIR.libarchive?=	${.CURDIR}/../../archivers/libarchive/files
 FILESDIR.zlib?=		${.CURDIR}/../../devel/zlib/files
+FILESDIR.libfetch?=	${.CURDIR}/../../net/libfetch/files
 
 .if empty(USE_BUILTIN.bzip2:M[yY][eE][sS])
 CPPFLAGS+=	-I${WRKDIR}/bzip2
@@ -118,6 +119,8 @@ LDFLAGS+=	-L${WRKDIR}/zlib
 CPPFLAGS+=	-I${WRKDIR}/libarchive/libarchive
 LDFLAGS+=	-L${WRKDIR}/libarchive/.libs
 .endif
+CPPFLAGS+=	-I${WRKDIR}/libfetch
+LDFLAGS+=	-L${WRKDIR}/libfetch
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
@@ -130,6 +133,7 @@ do-extract:
 .if empty(USE_BUILTIN.libarchive:M[yY][eE][sS])
 	@${CP} -R ${FILESDIR.libarchive} ${WRKDIR}/libarchive
 .endif
+	@${CP} -R ${FILESDIR.libfetch} ${WRKDIR}/libfetch
 
 pre-configure:
 .if empty(USE_BUILTIN.bzip2:M[yY][eE][sS])
@@ -146,6 +150,7 @@ pre-configure:
 		--disable-dependency-tracking
 	cd ${WRKDIR}/libarchive && ${BUILD_MAKE_CMD}
 .endif
+	cd ${WRKDIR}/libfetch && ${BUILD_MAKE_CMD}
 
 # XXX Reverse the order that update does things since
 # XXX we need pkg_delete built before we can deinstall.
