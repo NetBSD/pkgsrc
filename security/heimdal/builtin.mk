@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.11 2006/08/29 23:46:09 markd Exp $
+# $NetBSD: builtin.mk,v 1.12 2008/04/04 21:10:45 markd Exp $
 
 BUILTIN_PKG:=	heimdal
 
@@ -104,8 +104,8 @@ CONFIGURE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
 MAKE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
 .  endif
 
-.  if !empty(USE_BUILTIN.heimdal:M[yY][eE][sS]) && \
-      !empty(SH_KRB5_CONFIG:M__nonexistent__)
+.  if !empty(USE_BUILTIN.heimdal:M[yY][eE][sS])
+.    if !empty(SH_KRB5_CONFIG:M__nonexistent__)
 BUILDLINK_TARGETS+=	fake-krb5-config
 
 fake-krb5-config:
@@ -117,6 +117,9 @@ fake-krb5-config:
 	${CHMOD} a+x $${dst}
 
 KRB5_CONFIG?=	${BUILDLINK_DIR}/bin/krb5-config
+.    else
+KRB5_CONFIG?=	${SH_KRB5_CONFIG}
+.    endif
 CONFIGURE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
 MAKE_ENV+=	KRB5_CONFIG=${KRB5_CONFIG:Q}
 .  endif
