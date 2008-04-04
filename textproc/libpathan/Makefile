@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/07/22 04:46:18 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2008/04/04 15:27:25 joerg Exp $
 
 DISTNAME=	libpathan-1.2-2-src
 PKGNAME=	${DISTNAME:S/-2-src/.2/}
@@ -11,6 +11,7 @@ HOMEPAGE=	http://software.decisionsoft.com/
 COMMENT=	Library to parse and evaluate XPath expressions
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-2-src//}
 GNU_CONFIGURE=		YES
@@ -19,6 +20,8 @@ USE_LIBTOOL=		YES
 USE_LANGUAGES=		c c++
 
 CONFIGURE_ARGS+=	XERCESCROOT=${LOCALBASE:Q}
+
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
 
 .include "../../textproc/xerces-c/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
