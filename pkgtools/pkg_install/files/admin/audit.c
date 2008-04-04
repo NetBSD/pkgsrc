@@ -1,4 +1,4 @@
-/*	$NetBSD: audit.c,v 1.5 2008/04/04 15:47:01 joerg Exp $	*/
+/*	$NetBSD: audit.c,v 1.6 2008/04/04 21:45:33 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: audit.c,v 1.5 2008/04/04 15:47:01 joerg Exp $");
+__RCSID("$NetBSD: audit.c,v 1.6 2008/04/04 21:45:33 joerg Exp $");
 #endif
 
 /*-
@@ -89,7 +89,7 @@ parse_options(int argc, char **argv)
 	optreset = 1;
 	optind = 0;
 
-	while ((ch = getopt(argc, argv, "est")) != -1) {
+	while ((ch = getopt(argc, argv, "est:")) != -1) {
 		switch (ch) {
 		case 'e':
 			check_eol = 1;
