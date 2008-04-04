@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/03/03 01:10:06 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2008/04/04 23:45:57 joerg Exp $
 
 DISTNAME=	phylip-3.61
 PKGREVISION=	2
@@ -18,7 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/fonts/phylib share/doc/html/phylip
 
 do-install:
 .for PROGRAM in clique consense contml contrast dnacomp dnadist		\
@@ -29,11 +29,9 @@ do-install:
 		drawgram drawtree
 	${INSTALL_PROGRAM} ${WRKSRC}/${PROGRAM} ${DESTDIR}${PREFIX}/bin
 .endfor
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/fonts/phylip
 .for FONT in font1 font2 font3 font4 font5 font6
 	${INSTALL_DATA} ${WRKSRC}/${FONT} ${DESTDIR}${PREFIX}/share/fonts/phylip
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/phylip
 .for HTML in clique.html consense.html contchar.html contml.html	\
 		contrast.html discrete.html distance.html dnacomp.html	\
 		dnadist.html dnainvar.html dnaml.html dnamlk.html	\
