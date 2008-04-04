@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2006/04/15 09:54:20 bouyer Exp $
+$NetBSD: distinfo,v 1.11 2008/04/04 19:42:15 jwise Exp $
 
-SHA1 (arpwatch-2.1a13.tar.gz) = 03d98e239405529f97b742f04d2a9b837b5da43a
-RMD160 (arpwatch-2.1a13.tar.gz) = 80b89d36d9c20e9d0ac272ba7b66494d2888a557
-Size (arpwatch-2.1a13.tar.gz) = 152779 bytes
+SHA1 (arpwatch-2.1a15.tar.gz) = 9dffaec0f132e5bb7aedfc840c5c67068bfbce69
+RMD160 (arpwatch-2.1a15.tar.gz) = a27ee53275dcec3cafb85eb3df2451d42ec32b0c
+Size (arpwatch-2.1a15.tar.gz) = 202729 bytes
 SHA1 (patch-aa) = 01d72e1342cdcf2c566a2c761743d4b71af5985c
 SHA1 (patch-ab) = 73fb4cca476b58c3456f4d418779ae9aecfcf885
 SHA1 (patch-ac) = f6f139fb1413ac2c483f6c8ea965a9a7b4b9a268
