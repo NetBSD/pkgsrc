@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.615 2008/04/04 20:04:25 dsainty Exp $
+$NetBSD: CHANGES-2008,v 1.616 2008/04/04 20:28:37 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1216,3 +1216,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated fonts/vlgothic-ttf to 20080327 [obache 2008-04-04]
 	Updated games/crack-attack to 1.1.14nb5 [dsainty 2008-04-04]
 	Added games/crack-attack-sounds version 1.1.14 [dsainty 2008-04-04]
+	Updated x11/dmenu to 3.6 [ghen 2008-04-04]
