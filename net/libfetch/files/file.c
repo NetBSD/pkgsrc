@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.3 2008/04/02 15:33:14 joerg Exp $	*/
+/*	$NetBSD: file.c,v 1.4 2008/04/04 22:37:28 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -33,6 +33,7 @@
 
 #include <dirent.h>
 #include <fcntl.h>
+#include <fnmatch.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -187,7 +188,7 @@ fetchStatFile(struct url *u, struct url_stat *us, const char *flags)
 }
 
 struct url_ent *
-fetchListFile(struct url *u, const char *flags)
+fetchFilteredListFile(struct url *u, const char *pattern, const char *flags)
 {
 	struct dirent *de;
 	struct url_stat us;
@@ -210,6 +211,8 @@ fetchListFile(struct url *u, const char *flags)
 	l = sizeof(fn) - strlen(fn) - 1;
 
 	while ((de = readdir(dir)) != NULL) {
+		if (fnmatch(pattern, de->d_name, FNM_PERIOD) != 0)
+			continue;
 		strncpy(p, de->d_name, l - 1);
 		p[l - 1] = 0;
 		if (fetch_stat_file2(fn, &us) == -1) {
@@ -220,4 +223,10 @@ fetchListFile(struct url *u, const char *flags)
 	}
 
 	return (ue);
+}
+
+struct url_ent *
+fetchListFile(struct url *u, const char *flags)
+{
+	return fetchFilteredListFile(u, "*", flags);
 }

@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.h,v 1.4 2008/04/02 15:33:14 joerg Exp $	*/
+/*	$NetBSD: fetch.h,v 1.5 2008/04/04 22:37:28 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -107,6 +107,8 @@ fetchIO		*fetchXGetFile(struct url *, struct url_stat *, const char *);
 fetchIO		*fetchGetFile(struct url *, const char *);
 fetchIO		*fetchPutFile(struct url *, const char *);
 int		 fetchStatFile(struct url *, struct url_stat *, const char *);
+struct url_ent	*fetchFilteredListFile(struct url *, const char *,
+		    const char *);
 struct url_ent	*fetchListFile(struct url *, const char *);
 
 /* HTTP-specific functions */
@@ -114,6 +116,7 @@ fetchIO		*fetchXGetHTTP(struct url *, struct url_stat *, const char *);
 fetchIO		*fetchGetHTTP(struct url *, const char *);
 fetchIO		*fetchPutHTTP(struct url *, const char *);
 int		 fetchStatHTTP(struct url *, struct url_stat *, const char *);
+struct url_ent	*fetchFilteredListHTTP(struct url *,const char *, const char *);
 struct url_ent	*fetchListHTTP(struct url *, const char *);
 
 /* FTP-specific functions */
@@ -121,6 +124,7 @@ fetchIO		*fetchXGetFTP(struct url *, struct url_stat *, const char *);
 fetchIO		*fetchGetFTP(struct url *, const char *);
 fetchIO		*fetchPutFTP(struct url *, const char *);
 int		 fetchStatFTP(struct url *, struct url_stat *, const char *);
+struct url_ent	*fetchFilteredListFTP(struct url *, const char *, const char *);
 struct url_ent	*fetchListFTP(struct url *, const char *);
 
 /* Generic functions */
@@ -128,11 +132,13 @@ fetchIO		*fetchXGetURL(const char *, struct url_stat *, const char *);
 fetchIO		*fetchGetURL(const char *, const char *);
 fetchIO		*fetchPutURL(const char *, const char *);
 int		 fetchStatURL(const char *, struct url_stat *, const char *);
+struct url_ent	*fetchFilteredListURL(const char *, const char *, const char *);
 struct url_ent	*fetchListURL(const char *, const char *);
 fetchIO		*fetchXGet(struct url *, struct url_stat *, const char *);
 fetchIO		*fetchGet(struct url *, const char *);
 fetchIO		*fetchPut(struct url *, const char *);
 int		 fetchStat(struct url *, struct url_stat *, const char *);
+struct url_ent	*fetchFilteredList(struct url *, const char *, const char *);
 struct url_ent	*fetchList(struct url *, const char *);
 
 /* URL parsing */
