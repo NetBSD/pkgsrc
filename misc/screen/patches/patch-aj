@@ -1,10 +1,21 @@
-$NetBSD: patch-aj,v 1.4 2005/09/28 19:35:36 rillig Exp $
+$NetBSD: patch-aj,v 1.5 2008/04/04 21:09:16 tonnerre Exp $
 
 Detect getutent correctly on NetBSD with utmpx.
+Include curses header when testing tgetent in order to prevent
+crash on 64-bit architectures.
 
 --- configure.in.orig	2003-06-03 07:58:24.000000000 -0400
 +++ configure.in	2004-06-16 16:11:55.000000000 -0400
-@@ -815,9 +815,15 @@
+@@ -664,6 +664,8 @@
+ AC_MSG_ERROR(!!! no tgetent - no screen))))))
+ 
+ AC_TRY_RUN([
++#include <curses.h>
++
+ main()
+ {
+  exit(strcmp(tgoto("%p1%d", 0, 1), "1") ? 0 : 1);
+@@ -815,9 +817,15 @@
  AC_TRY_LINK([
  #include <time.h> /* to get time_t on SCO */
  #include <sys/types.h>
@@ -21,7 +32,7 @@ Detect getutent correctly on NetBSD with utmpx.
  #else
  #include <utmp.h>
  #endif
-@@ -1209,6 +1215,7 @@
+@@ -1209,6 +1217,7 @@
  AC_TRY_LINK(,[vsprintf(0,0,0);], AC_MSG_RESULT(yes);AC_DEFINE(USEVARARGS), AC_MSG_RESULT(no))
  
  AC_HEADER_DIRENT
