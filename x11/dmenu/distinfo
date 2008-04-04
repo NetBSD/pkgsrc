@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/01/06 21:45:07 ghen Exp $
+$NetBSD: distinfo,v 1.2 2008/04/04 20:28:05 ghen Exp $
 
-SHA1 (dmenu-3.4.tar.gz) = f9defb210da9fcce35982ba5a2ff5ad8fe8d6a63
-RMD160 (dmenu-3.4.tar.gz) = b5be8aa3bc0babc2f89092da0e89dfedb0d96da9
-Size (dmenu-3.4.tar.gz) = 8131 bytes
+SHA1 (dmenu-3.6.tar.gz) = 9570e160318075cfe6a6e967f9c73d1a2d097e15
+RMD160 (dmenu-3.6.tar.gz) = 7d2b660a1d563338a4597f23e48a9b1671ee7a29
+Size (dmenu-3.6.tar.gz) = 8508 bytes
 SHA1 (patch-aa) = 7e0f28441a2c6dca05d1afcf931763444bd2dc0d

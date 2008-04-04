@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/06 21:45:07 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/04 20:28:05 ghen Exp $
 
-DISTNAME=		dmenu-3.4
+DISTNAME=		dmenu-3.6
 CATEGORIES=		x11
 MASTER_SITES=		http://www.suckless.org/download/
 
