@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/01/26 01:57:00 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/04 17:58:59 joerg Exp $
 
 SCRIPTS=	build build-client-start bulkbuild bulkbuild-rebuild \
+		bulkbuild-restart \
 		client-clean pkg-build pkg-up-to-date pre-build report \
 		scan scan-client-start upload \
 		compute-packages.awk create-broken-graph.awk \
@@ -10,5 +11,6 @@ SCRIPTS=	build build-client-start bulkbuild bulkbuild-rebuild \
 SCRIPTSDIR=			${PREFIX}/libexec/pbulk
 SCRIPTSDIR_bulkbuild=		${PREFIX}/bin
 SCRIPTSDIR_bulkbuild-rebuild=	${PREFIX}/bin
+SCRIPTSDIR_bulkbuild-restart=	${PREFIX}/bin
 
 .include <bsd.prog.mk>
