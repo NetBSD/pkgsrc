@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2008/03/13 22:07:05 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2008/04/04 15:31:39 jlam Exp $
 
 DISTNAME=		${RUBY_DISTNAME}
 PKGNAME=		${RUBY_PKGPREFIX}-tk-${RUBY_VERSION_SUFFIX}
@@ -18,7 +18,7 @@ EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/tk
 WRKSRC=			${RUBY_WRKSRC}/ext/tk
 CONFIGURE_ARGS+=	--with-X11-dir=${X11BASE:Q}
 
-REPLACE_RUBY_DIRS=	${WRKSRC}/sample
+REPLACE_RUBY_DIRS=	sample
 
 post-extract:
 	${CHMOD} ${SHAREMODE} ${WRKSRC}/sample/tkextlib/tktable/tcllogo.gif
