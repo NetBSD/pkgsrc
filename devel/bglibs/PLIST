@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/07/29 00:58:51 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/04/04 16:23:27 schmonz Exp $
 bin/bg-installer
 bin/cli-generate
 bin/crc-gentab
@@ -25,8 +25,11 @@ include/bglibs/crypto/sha256.h
 include/bglibs/crypto/sha384.h
 include/bglibs/crypto/sha512.h
 include/bglibs/crypto/surf.h
+include/bglibs/crypto/surfrand.h
 include/bglibs/dict/dict.h
 include/bglibs/dict/load.h
+include/bglibs/fmt/misc.h
+include/bglibs/fmt/multi.h
 include/bglibs/fmt/number.h
 include/bglibs/installer.h
 include/bglibs/iobuf/common.h
@@ -59,6 +62,7 @@ include/bglibs/unix/fcntl.h
 include/bglibs/unix/nonblock.h
 include/bglibs/unix/selfpipe.h
 include/bglibs/unix/sig.h
+include/bglibs/unix/signalfd.h
 include/bglibs/unix/trigger.h
 include/bglibs/vmailmgr/client.h
 include/bglibs/vmailmgr/vpwentry.h
@@ -68,7 +72,7 @@ lib/bglibs/cdb/make.a
 lib/bglibs/cdb/str.a
 lib/bglibs/cli/cli.a
 lib/bglibs/crypt.lib
-lib/bglibs/crypto/md5
+lib/bglibs/crypto/md5.a
 lib/bglibs/crypto/sha1.a
 lib/bglibs/crypto/sha256.a
 lib/bglibs/crypto/sha512a.a
