@@ -1,28 +1,18 @@
-# $NetBSD: Makefile,v 1.4 2008/03/31 15:32:36 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2008/04/04 15:20:01 jlam Exp $
 
-DISTNAME=	gem_plugin-0.2.2
+DISTNAME=	gem_plugin-0.2.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc
-MASTER_SITES=	http://rubyforge.org/frs/download.php/16607/
-EXTRACT_SUFX=	.gem
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://mongrel.rubyforge.org/
 COMMENT=	Gem-based plugin system
 
 CONFLICTS+=	ruby[1-9]*-gem_plugin-[0-9]*
-BUILD_DEPENDS+=	rake>=0.7:../../devel/rake
-DEPENDS+=	rubygems-[0-9]*:../../misc/rubygems
 
-FIND_PREFIX:=	RAKE_PREFIX=rake
-.include "../../mk/find-prefix.mk"
+DEPENDS+=	rake>=0.7:../../devel/rake
 
-.include "../../lang/ruby/modules.mk"
+GEM_BUILD=	gemspec
 
-do-build:
-	cd ${WRKSRC} && ${RAKE_PREFIX}/bin/rake package
-
-do-install:
-	${GEM} install ${WRKSRC}/pkg/${DISTNAME}.gem -l
-
+.include "../../misc/rubygems/rubygem.mk"
 .include "../../mk/bsd.pkg.mk"
