@@ -1,21 +1,14 @@
-# $NetBSD: Makefile,v 1.2 2007/06/15 01:10:21 minskim Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/04 15:22:09 jlam Exp $
 
-DISTNAME=	maruku-0.5.6
+DISTNAME=	maruku-0.5.8
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-CATEGORIES=	textproc ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/21120/
-EXTRACT_SUFX=	.tgz
+CATEGORIES=	textproc
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://maruku.rubyforge.org/
 COMMENT=	Markdown-superset interpreter
 
-NO_BUILD=	yes
-USE_LANGUAGES=	# none
+DEPENDS+=	${RUBY_PKGPREFIX}-syntax>=1.0.0:../../textproc/ruby-syntax
 
-.include "../../lang/ruby/modules.mk"
-
-do-install:
-	cd ${WRKSRC}/lib && pax -rwppm . ${RUBY_SITELIBDIR}
-
+.include "../../misc/rubygems/rubygem.mk"
 .include "../../mk/bsd.pkg.mk"
