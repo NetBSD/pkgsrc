@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.616 2008/04/04 20:28:37 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.617 2008/04/04 21:10:24 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1217,3 +1217,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/crack-attack to 1.1.14nb5 [dsainty 2008-04-04]
 	Added games/crack-attack-sounds version 1.1.14 [dsainty 2008-04-04]
 	Updated x11/dmenu to 3.6 [ghen 2008-04-04]
+	Updated misc/screen to 4.0.3nb2 [tonnerre 2008-04-04]
