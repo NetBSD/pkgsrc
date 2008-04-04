@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.922 2008/03/29 13:08:48 taca Exp $
+# $NetBSD: Makefile,v 1.923 2008/04/04 15:33:06 jlam Exp $
 #
 
 COMMENT=	Development utilities
@@ -732,28 +732,49 @@ SUBDIR+=	rsltc
 SUBDIR+=	rt-mysql
 SUBDIR+=	rt-pgsql
 SUBDIR+=	rt3
+SUBDIR+=	rubigen
 SUBDIR+=	ruby-SDL
+SUBDIR+=	ruby-abstract
 SUBDIR+=	ruby-activesupport
 SUBDIR+=	ruby-amstd
+SUBDIR+=	ruby-assistance
 SUBDIR+=	ruby-bsearch
 SUBDIR+=	ruby-byaccr
 SUBDIR+=	ruby-cmd
 SUBDIR+=	ruby-curses
+SUBDIR+=	ruby-dhaka
+SUBDIR+=	ruby-eventmachine
+SUBDIR+=	ruby-flexmock
 SUBDIR+=	ruby-gettext
 SUBDIR+=	ruby-gnome2-atk
 SUBDIR+=	ruby-gnome2-glib
 SUBDIR+=	ruby-gnome2-pango
+SUBDIR+=	ruby-heckle
+SUBDIR+=	ruby-highline
+SUBDIR+=	ruby-inline
+SUBDIR+=	ruby-log4r
+SUBDIR+=	ruby-logging
+SUBDIR+=	ruby-memcache
+SUBDIR+=	ruby-metaid
+SUBDIR+=	ruby-mkrf
 SUBDIR+=	ruby-mode
 SUBDIR+=	ruby-ncurses
+SUBDIR+=	ruby-needle
+SUBDIR+=	ruby-parsetree
 SUBDIR+=	ruby-priority-queue
 SUBDIR+=	ruby-racc
 SUBDIR+=	ruby-rbtree
+SUBDIR+=	ruby-rcov
 SUBDIR+=	ruby-rcsparse
 SUBDIR+=	ruby-rd-mode
 SUBDIR+=	ruby-readline
 SUBDIR+=	ruby-rgl
+SUBDIR+=	ruby-rspec
 SUBDIR+=	ruby-stream
 SUBDIR+=	ruby-subversion
+SUBDIR+=	ruby-test-spec
+SUBDIR+=	ruby-validatable
+SUBDIR+=	ruby2ruby
 SUBDIR+=	rubyforge
 SUBDIR+=	rudiments
 SUBDIR+=	rvm

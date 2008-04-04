@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.315 2008/03/25 13:44:00 wiz Exp $
+# $NetBSD: Makefile,v 1.316 2008/04/04 15:33:06 jlam Exp $
 #
 
 COMMENT=	Security tools
@@ -242,6 +242,8 @@ SUBDIR+=	rc5des
 SUBDIR+=	rid
 SUBDIR+=	rsaref
 SUBDIR+=	ruby-password
+SUBDIR+=	ruby-net-sftp
+SUBDIR+=	ruby-net-ssh
 SUBDIR+=	ruby-tcpwrap
 SUBDIR+=	sbd
 SUBDIR+=	scanssh
