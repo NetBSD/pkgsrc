@@ -1,8 +1,17 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/04 01:29:57 minskim Exp $
-${RUBY_SITELIBDIR}/generator2stream.rb
-${RUBY_SITELIBDIR}/stream.rb
-${RUBY_DOCDIR}/stream/README
-${RUBY_EXAMPLESDIR}/stream/examples.rb
-${RUBY_EXAMPLESDIR}/stream/streamtester.rb
-@dirrm ${RUBY_EXAMPLESDIR}/stream
-@dirrm ${RUBY_DOCDIR}/stream
+@comment $NetBSD: PLIST,v 1.2 2008/04/04 15:30:01 jlam Exp $
+${GEM_HOME}/cache/stream-${PKGVERSION}.gem
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/examples/examples.rb
+${GEM_LIBDIR}/examples/streamtester.rb
+${GEM_LIBDIR}/install.rb
+${GEM_LIBDIR}/lib/generator2stream.rb
+${GEM_LIBDIR}/lib/stream.rb
+${GEM_LIBDIR}/test/bm.rb
+${GEM_LIBDIR}/test/testgenerator.rb
+${GEM_LIBDIR}/test/teststream.rb
+${GEM_HOME}/specifications/stream-${PKGVERSION}.gemspec
+@dirrm ${GEM_LIBDIR}/test
+@dirrm ${GEM_LIBDIR}/lib
+@dirrm ${GEM_LIBDIR}/examples
+@dirrm ${GEM_LIBDIR}
