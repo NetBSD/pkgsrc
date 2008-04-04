@@ -1,26 +1,18 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/11 04:40:37 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/04 15:21:25 jlam Exp $
 
-DISTNAME=	feed-normalizer-1.3.0
+DISTNAME=	feed-normalizer-1.5.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-CATEGORIES=	textproc ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/20927/
-EXTRACT_SUFX=	.zip
+CATEGORIES=	textproc
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://feed-normalizer.rubyforge.org/
 COMMENT=	Extensible Ruby wrapper for Atom and RSS parsers
 
+DEPENDS+=	hoe>=1.5.0:../../devel/hoe
 DEPENDS+=	${RUBY_PKGPREFIX}-simple-rss>=1.1:../../textproc/ruby-simple-rss
-DEPENDS+=	${RUBY_PKGPREFIX}-hpricot>=0.4:../../textproc/ruby-hpricot
+DEPENDS+=	${RUBY_PKGPREFIX}-hpricot>=0.6:../../textproc/ruby-hpricot
 
-NO_BUILD=	yes
-USE_LANGUAGES=	# none
+GEM_BUILD=	gemspec
 
-.include "../../lang/ruby/modules.mk"
-
-do-install:
-	cd ${WRKSRC}/lib && pax -rwppm . ${RUBY_SITELIBDIR}
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/feed-normalizer
-	${INSTALL_DATA} ${WRKSRC}/Readme.txt ${RUBY_DOCDIR}/feed-normalizer
-
+.include "../../misc/rubygems/rubygem.mk"
 .include "../../mk/bsd.pkg.mk"
