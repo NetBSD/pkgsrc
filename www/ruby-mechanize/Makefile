@@ -1,19 +1,15 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/26 01:46:51 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/04 15:26:25 jlam Exp $
 
-DISTNAME=	mechanize-0.6.8
+DISTNAME=	mechanize-0.7.5
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-CATEGORIES=	www ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/19657/
-EXTRACT_SUFX=	.tgz
+CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://mechanize.rubyforge.org/
 COMMENT=	Library to automate interaction with websites
 
-DEPENDS+=	${RUBY_PKGPREFIX}-hpricot-[0-9]*:../../textproc/ruby-hpricot
+DEPENDS+=	hoe>=1.5.1:../../devel/hoe
+DEPENDS+=	${RUBY_PKGPREFIX}-hpricot>=0.6:../../textproc/ruby-hpricot
 
-USE_LANGUAGES=	# none
-USE_RUBY_SETUP=	yes
-
-.include "../../lang/ruby/modules.mk"
+.include "../../misc/rubygems/rubygem.mk"
 .include "../../mk/bsd.pkg.mk"
