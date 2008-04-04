@@ -13,6 +13,10 @@ For parallel builds, /bulklog, /packages and /usr/pkgsrc are supposed to
 be shared (null mounts, NFS). /usr/pkg and /var/db/pkg needs to be
 per-node and /scratch should be per-node.
 
+The defaults scripts will remove /usr/pkg and /var/db/pkg on the master
+node as well. When using chroot sandboxes for the build, the master can
+share a sandbox with one of the build instances.
+
 Step Two: Preparing pbulk prefix
 
 Install pkgtools/pbulk and possibly helper programs like screen into
@@ -54,6 +58,10 @@ Step Four: Running pbulk
 /usr/pkg_bulk/libexec/pbulk/{pre-build,scan,build,report,upload} are the
 individual build phases. They depend on the execution of the phase
 before. Exceptions are report and upload which both depend on build.
+
+/usr/pkg_bulk/bin/bulkbuild-restart can be used to resume an aborted
+build. If it failed after the actual build phase, report and upload should
+be called individually though.
 
 --- sample mk.conf fragment ---
 
