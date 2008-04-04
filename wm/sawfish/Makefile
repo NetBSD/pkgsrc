@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.47 2008/01/21 12:05:52 tnn Exp $
+# $NetBSD: Makefile,v 1.48 2008/04/04 21:55:51 tnn Exp $
 #
 
 DISTNAME=		sawfish-${SF_VERS}
-SF_VERS=		1.3.2
+SF_VERS=		1.3.3
 CATEGORIES=		x11 wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sawmill/}
 
@@ -23,7 +23,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-themer
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-USE_TOOLS+=		gmake makeinfo msgfmt pkg-config
+USE_TOOLS+=		gmake makeinfo msgfmt pkg-config xgettext
 USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
