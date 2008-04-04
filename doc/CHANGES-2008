@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.606 2008/04/03 22:43:16 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.607 2008/04/04 01:56:55 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1100,3 +1100,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/rxvt to 2.7.10nb6 [tonnerre 2008-04-03]
 	Updated x11/rxvt-unicode to 8.3nb3 [tonnerre 2008-04-03]
 	Updated x11/eterm to 0.9.4nb1 [tonnerre 2008-04-03]
+	Updated lang/ossp-js to 1.6.20070208nb2 [bjs 2008-04-04]
