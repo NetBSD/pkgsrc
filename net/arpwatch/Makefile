@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2007/03/24 19:21:29 joerg Exp $
+# $NetBSD: Makefile,v 1.31 2008/04/04 19:42:15 jwise Exp $
 #
 
-DISTNAME=	arpwatch-2.1a13
+DISTNAME=	arpwatch-2.1a15
 PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.ee.lbl.gov/
@@ -41,6 +41,9 @@ post-install:
 	${TOUCH} ${VARBASE}/db/arpwatch/arp.dat
 	${INSTALL_DATA_DIR} ${PREFIX}/share/arpwatch
 	${INSTALL_DATA} ${WRKSRC}/ethercodes.dat ${PREFIX}/share/arpwatch
+	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/arpwatch
+	${INSTALL_DATA} ${WRKSRC}/bihourly.sh ${PREFIX}/share/examples/arpwatch/bihourly.sh
+	${INSTALL_DATA} ${WRKSRC}/arpfetch ${PREFIX}/share/examples/arpwatch/arpfetch
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
