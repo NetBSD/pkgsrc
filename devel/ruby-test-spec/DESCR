@@ -1,0 +1,2 @@
+test/spec layers an RSpec-inspired interface on top of Test::Unit, so
+you can mix TDD and BDD (Behavior-Driven Development).
