@@ -1,46 +1,18 @@
-# $NetBSD: Makefile,v 1.32 2007/12/02 11:58:26 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2008/04/04 15:16:02 jlam Exp $
 
-DISTNAME=		ruby-postgres-${VERSION}
-PKGNAME=		${RUBY_PKGPREFIX}-postgresql-${VERSION}
-PKGREVISION=		8
-CATEGORIES=		databases ruby
-MASTER_SITES=		http://raa.ruby-lang.org/cache/postgres/ \
-			http://ruby.scripting.ca/postgres/archive/
+DISTNAME=	postgres-0.7.9.2008.01.28
+PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:C/postgres/&ql/}
+CATEGORIES=	databases
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://ruby.scripting.ca/postgres/
-COMMENT=		Ruby extension for postgresql
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://ruby.scripting.ca/postgres/
+COMMENT=	Ruby extension for PostgreSQL
 
-RUBY_HAS_ARCHLIB=	yes
-USE_RUBY_EXTCONF=	yes
-VERSION=		0.7.1
-INSTALL_TARGET=		site-install
-CONFIGURE_ARGS+= --with-pgsql-include-dir=${PGSQL_PREFIX}/include/postgresql \
-		 --with-pgsql-lib-dir=${PGSQL_PREFIX}/lib
+GEM_BUILD=	gemspec
+CONFIGURE_ARGS=	--with-pgsql-include-dir=${PGSQL_PREFIX}/include/postgresql \
+		--with-pgsql-lib-dir=${PGSQL_PREFIX}/lib
 
-DOC=			README README.ja doc/postgres.html doc/postgres.ja.html
-EXAMPLE_LIBS=		losample.rb psqlHelp.rb
-EXAMPLE_SCRIPTS=	psql.rb test1.rb test2.rb test4.rb
-REPLACE_RUBY=		sample/psql.rb sample/test1.rb sample/test2.rb \
-			sample/test4.rb
+.include "../../misc/rubygems/rubygem.mk"
 
-pre-install:
-	@cd ${WRKSRC}; \
-		${CP} -p doc/postgres.jp.html doc/postgres.ja.html
-
-post-install:
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/postgresql
-.for f in ${DOC}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/postgresql
-.endfor
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/postgresql
-.for f in ${EXAMPLE_LIBS}
-	${INSTALL_DATA} ${WRKSRC}/sample/${f} ${RUBY_EXAMPLESDIR}/postgresql
-.endfor
-.for f in ${EXAMPLE_SCRIPTS}
-	${INSTALL_SCRIPT} ${WRKSRC}/sample/${f} ${RUBY_EXAMPLESDIR}/postgresql
-.endfor
-
-.include "../../lang/ruby/modules.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
