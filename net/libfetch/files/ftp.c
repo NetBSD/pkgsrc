@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.11 2008/04/04 15:17:51 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.12 2008/04/04 22:37:28 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -1165,6 +1165,16 @@ fetchStatFTP(struct url *url, struct url_stat *us, const char *flags)
 		return (-1);
 	fetchIO_close(f);
 	return (0);
+}
+
+/*
+ * List a directory
+ */
+struct url_ent *
+fetchFilteredListFTP(struct url *url, const char *pattern, const char *flags)
+{
+	fprintf(stderr, "fetchFilteredListFTP(): not implemented\n");
+	return (NULL);
 }
 
 /*
