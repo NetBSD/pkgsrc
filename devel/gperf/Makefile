@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/10/13 18:35:35 adam Exp $
+# $NetBSD: Makefile,v 1.24 2008/04/04 15:29:51 joerg Exp $
 
 DISTNAME=	gperf-3.0.3
 CATEGORIES=	devel
@@ -9,6 +9,7 @@ HOMEPAGE=	http://www.gnu.org/software/gperf/gperf.html
 COMMENT=	GNU perfect hash function generator
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		yes
