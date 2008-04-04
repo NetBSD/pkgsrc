@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2008/02/26 13:57:51 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2008/04/04 17:58:59 joerg Exp $
 
-DISTNAME=	pbulk-0.28
+DISTNAME=	pbulk-0.29
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -34,7 +34,8 @@ SUBST_CLASSES+=		tools
 SUBST_STAGE.tools=	post-patch
 SUBST_MESSAGE.tools=	Fixing references to tools
 SUBST_FILES.tools=	pbulk.conf scripts/build scripts/build-client-start \
-	scripts/bulkbuild scripts/bulkbuild-rebuild scripts/client-clean \
+	scripts/bulkbuild scripts/bulkbuild-rebuild scripts/bulkbuild-restart \
+	scripts/client-clean \
 	scripts/pkg-build scripts/pkg-up-to-date scripts/pre-build \
 	scripts/report scripts/scan scripts/scan-client-start scripts/upload \
 	scripts/compute-packages.awk scripts/create-broken-graph.awk \
