@@ -1,0 +1,3 @@
+CodeRay is fast syntax highlighter for Ruby and other languages.  It
+produces colorful, valid XHTML.  CodeRay's design goal: simple,
+beautiful code highlighting for your board/wiki/blog/doc/website.
