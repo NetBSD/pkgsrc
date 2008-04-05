@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.630 2008/04/05 21:31:09 kristerw Exp $
+$NetBSD: CHANGES-2008,v 1.631 2008/04/05 21:44:36 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1253,3 +1253,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/scummvm to 0.11.1 [adam 2008-04-05]
 	Updated devel/opengrok to 0.6 [adrianp 2008-04-05]
 	Updated editors/emacs20 to 20.7nb10 [kristerw 2008-04-05]
+	Updated editors/lyx15 to 1.5.4 [xtraeme 2008-04-05]
