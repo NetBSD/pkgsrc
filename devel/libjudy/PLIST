@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/13 13:28:10 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/04/05 04:26:31 obache Exp $
 include/Judy.h
 lib/libJudy.la
 man/man3/J1BC.3
@@ -94,7 +94,7 @@ man/man3/JudySLLast.3
 man/man3/JudySLNext.3
 man/man3/JudySLPrev.3
 man/man3/JudySL_funcs.3
-share/doc/${PKGBASE}/AUTHORS
-share/doc/${PKGBASE}/ChangeLog
-share/doc/${PKGBASE}/COPYING
-share/doc/${PKGBASE}/README
+share/doc/libjudy/AUTHORS
+share/doc/libjudy/ChangeLog
+share/doc/libjudy/COPYING
+share/doc/libjudy/README
