@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.10 2008/04/04 22:37:28 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.11 2008/04/05 02:42:13 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -780,9 +780,9 @@ http_request(struct url *URL, const char *op, struct url_stat *us,
 		/* were we redirected to an FTP URL? */
 		if (purl == NULL && strcmp(url->scheme, SCHEME_FTP) == 0) {
 			if (strcmp(op, "GET") == 0)
-				return (ftp_request(url, "RETR", us, purl, flags));
+				return (ftp_request(url, "RETR", NULL, us, purl, flags));
 			else if (strcmp(op, "HEAD") == 0)
-				return (ftp_request(url, "STAT", us, purl, flags));
+				return (ftp_request(url, "STAT", NULL, us, purl, flags));
 		}
 
 		/* connect to server or proxy */
