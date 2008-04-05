@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/04 12:42:56 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/04/05 16:39:27 adam Exp $
 ${PG_SUBPREFIX}bin/clusterdb
 ${PG_SUBPREFIX}bin/createdb
 ${PG_SUBPREFIX}bin/createlang
@@ -1238,7 +1238,9 @@ ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-2-3.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-2-4.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-2-5.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-2-6.html
+${PG_SUBPREFIX}share/doc/postgresql/html/release-8-2-7.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-2.html
+${PG_SUBPREFIX}share/doc/postgresql/html/release-8-3-1.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release-8-3.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/release.html
 ${PG_SUBPREFIX}share/doc/postgresql/html/resources.html
