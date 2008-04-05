@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.626 2008/04/05 15:46:00 obache Exp $
+$NetBSD: CHANGES-2008,v 1.627 2008/04/05 16:44:07 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1235,3 +1235,18 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated benchmarks/hbench to 1.0nb6 [chris 2008-04-05]
 	Updated fonts/ja-shinonome to 0.9.11 [obache 2008-04-05]
 	Added net/msdl version 1.1.1 [obache 2008-04-05]
+	Updated databases/postgresql82 to 8.2.7 [adam 2008-04-05]
+	Updated databases/postgresql82-adminpack to 8.2.7 [adam 2008-04-05]
+	Updated databases/postgresql82-client to 8.2.7 [adam 2008-04-05]
+	Updated databases/postgresql82-server to 8.2.7 [adam 2008-04-05]
+	Updated databases/postgresql82-plperl to 8.2.7 [adam 2008-04-05]
+	Updated databases/postgresql82-plpython to 8.2.7 [adam 2008-04-05]
+	Updated databases/postgresql82-pltcl to 8.2.7 [adam 2008-04-05]
+	Updated databases/postgresql82-tsearch2 to 8.2.7 [adam 2008-04-05]
+	Updated databases/postgresql83 to 8.3.1 [adam 2008-04-05]
+	Updated databases/postgresql83-adminpack to 8.3.1 [adam 2008-04-05]
+	Updated databases/postgresql83-client to 8.3.1 [adam 2008-04-05]
+	Updated databases/postgresql83-server to 8.3.1 [adam 2008-04-05]
+	Updated databases/postgresql83-plperl to 8.3.1 [adam 2008-04-05]
+	Updated databases/postgresql83-plpython to 8.3.1 [adam 2008-04-05]
+	Updated databases/postgresql83-pltcl to 8.3.1 [adam 2008-04-05]
