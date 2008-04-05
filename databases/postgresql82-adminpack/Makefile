@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2008/01/18 05:06:30 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2008/04/05 16:40:08 adam Exp $
 
 PKGNAME=	postgresql82-adminpack-${BASE_VERS}
-PKGREVISION=	1
 COMMENT=	Admin pack module for pgAdmin management
 
 DEPENDS+=	postgresql82-server>=${BASE_VERS}:../../databases/postgresql82-server
