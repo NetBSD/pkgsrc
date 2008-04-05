@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/04 12:43:46 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/04/05 16:39:27 adam Exp $
 ${PG_SUBPREFIX}bin/postgres
 ${PG_SUBPREFIX}bin/postmaster
 ${PG_SUBPREFIX}lib/postgresql/ascii_and_mic.la
@@ -41,6 +41,7 @@ ${PG_SUBPREFIX}share/locale/it/LC_MESSAGES/postgres.mo
 ${PG_SUBPREFIX}share/locale/ko/LC_MESSAGES/postgres.mo
 ${PG_SUBPREFIX}share/locale/nb/LC_MESSAGES/postgres.mo
 ${PG_SUBPREFIX}share/locale/nl/LC_MESSAGES/postgres.mo
+${PG_SUBPREFIX}share/locale/pl/LC_MESSAGES/postgres.mo
 ${PG_SUBPREFIX}share/locale/pt_BR/LC_MESSAGES/postgres.mo
 ${PG_SUBPREFIX}share/locale/ro/LC_MESSAGES/postgres.mo
 ${PG_SUBPREFIX}share/locale/ru/LC_MESSAGES/postgres.mo
