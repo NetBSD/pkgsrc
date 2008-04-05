@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/11/04 15:52:29 tnn Exp $
+$NetBSD: patch-aa,v 1.2 2008/04/05 02:11:48 tnn Exp $
 
---- Makefile.in.orig	2007-10-22 03:14:01.000000000 +0200
+--- Makefile.in.orig	2008-01-21 02:09:27.000000000 +0100
 +++ Makefile.in
 @@ -211,7 +211,7 @@ sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
@@ -8,6 +8,6 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/11/04 15:52:29 tnn Exp $
  target_alias = @target_alias@
 -SUBDIRS = po src help
 +SUBDIRS = po src
- EXTRA_DIST = m4/ChangeLog  \
+ EXTRA_DIST = \
  	BUGS			\
  	autogen.sh		\
