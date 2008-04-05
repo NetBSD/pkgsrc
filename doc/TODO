@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7179 2008/04/05 16:44:07 adam Exp $
+$NetBSD: TODO,v 1.7180 2008/04/05 21:44:36 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -924,7 +924,6 @@ Suggested package updates
 	o ltm-0.40
 	o ltris-1.0.12
 	o lucy-1.19p
-	o lyx-1.5.4 [xtraeme]
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.13a
