@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2006/01/23 18:07:51 joerg Exp $
+$NetBSD: distinfo,v 1.12 2008/04/05 14:09:18 chris Exp $
 
 SHA1 (hbench-1.0/hbench-OS-1.0.tar.gz) = b1a72287e2d04561141f296ba04d142f60152fe0
 RMD160 (hbench-1.0/hbench-OS-1.0.tar.gz) = 2e2702c035689e1dec39328e47dc9dc9ff558103
@@ -19,3 +19,4 @@ SHA1 (patch-an) = 4cb762c246cdde99a219b8a4de2d354f2b6abb85
 SHA1 (patch-ao) = 69c92f83d10f061f8f0aa05da860cfc5cf764859
 SHA1 (patch-ap) = 057465b9f89e76367781401d91b333679a651cb4
 SHA1 (patch-aq) = ecab68eae37cba0109225b82c4b18b48cd9f6498
+SHA1 (patch-ar) = 26c8cb68f6d5c8b878e5f600eba579e9cd2fce30
