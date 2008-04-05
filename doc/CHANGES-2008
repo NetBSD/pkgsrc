@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.629 2008/04/05 17:26:50 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.630 2008/04/05 21:31:09 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1252,3 +1252,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/postgresql83-pltcl to 8.3.1 [adam 2008-04-05]
 	Updated games/scummvm to 0.11.1 [adam 2008-04-05]
 	Updated devel/opengrok to 0.6 [adrianp 2008-04-05]
+	Updated editors/emacs20 to 20.7nb10 [kristerw 2008-04-05]
