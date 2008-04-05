@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.619 2008/04/05 02:51:26 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.620 2008/04/05 04:45:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1228,3 +1228,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/pidgin-sametime to 2.4.1 [tnn 2008-04-05]
 	Updated chat/pidgin-silc to 2.4.1 [tnn 2008-04-05]
 	Updated chat/finch to 2.4.1 [tnn 2008-04-05]
+	Updated textproc/dictem to 0.82 [obache 2008-04-05]
