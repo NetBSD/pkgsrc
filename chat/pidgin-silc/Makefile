@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/04 17:33:08 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2008/04/05 02:41:05 tnn Exp $
 #
 
 PKGNAME=		pidgin-silc-${PIDGIN_VERSION}
@@ -24,18 +24,18 @@ BUNDLE_SILC=yes
 .if defined(BUNDLE_SILC)
 
 DISTINFO_FILE=		${.CURDIR}/../../chat/pidgin-silc/distinfo
-SITES.silc-toolkit-1.1.6.tar.gz= \
+SITES.silc-toolkit-1.1.7.tar.gz= \
 			http://www.silcnet.org/download/toolkit/sources/
-DISTFILES+=		pidgin-${PIDGIN_VERSION}.tar.bz2 silc-toolkit-1.1.6.tar.gz
+DISTFILES+=		pidgin-${PIDGIN_VERSION}.tar.bz2 silc-toolkit-1.1.7.tar.gz
 CFLAGS+=		-fPIC
 pre-configure:
 	# Build libsilc statically and install it into the buildlink dir
-	cd ${WRKDIR}/silc-toolkit-1.1.6 && ${SETENV} ${CONFIGURE_ENV} \
+	cd ${WRKDIR}/silc-toolkit-1.1.7 && ${SETENV} ${CONFIGURE_ENV} \
 	./configure --disable-asm --enable-static --disable-shared \
 	--without-libtoolfix --prefix=${BUILDLINK_DIR} && \
 	${SETENV} ${MAKE_ENV} gmake && \
 	${SETENV} ${MAKE_ENV} gmake install && \
-	cp ${WRKDIR}/silc-toolkit-1.1.6/lib/.libs/*.a \
+	cp ${WRKDIR}/silc-toolkit-1.1.7/lib/.libs/*.a \
 	${WRKSRC}/libpurple/protocols/silc
 
 SUBST_CLASSES+=		linkage
