@@ -1,4 +1,4 @@
-/*	$NetBSD: common.h,v 1.4 2008/04/02 15:33:14 joerg Exp $	*/
+/*	$NetBSD: common.h,v 1.5 2008/04/05 02:42:13 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -117,7 +117,7 @@ fetchIO		*fetchIO_unopen(void *, ssize_t (*)(void *, void *, size_t),
  */
 fetchIO		*http_request(struct url *, const char *,
 		     struct url_stat *, struct url *, const char *);
-fetchIO		*ftp_request(struct url *, const char *,
+fetchIO		*ftp_request(struct url *, const char *, const char *,
 		     struct url_stat *, struct url *, const char *);
 
 
