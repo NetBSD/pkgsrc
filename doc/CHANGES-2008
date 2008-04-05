@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.618 2008/04/04 21:26:59 markd Exp $
+$NetBSD: CHANGES-2008,v 1.619 2008/04/05 02:51:26 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1219,3 +1219,12 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/dmenu to 3.6 [ghen 2008-04-04]
 	Updated misc/screen to 4.0.3nb2 [tonnerre 2008-04-04]
 	Updated lang/g95 to 0.91 [markd 2008-04-04]
+	Updated net/Transmission to 1.10 [tnn 2008-04-04]
+	Updated wm/sawfish to 1.3.3 [tnn 2008-04-04]
+	Added graphics/liblqr version 0.1.0.2 [tnn 2008-04-05]
+	Updated graphics/gimp-liquid-rescale to 0.4.0.4 [tnn 2008-04-05]
+	Updated chat/libpurple to 2.4.1 [tnn 2008-04-05]
+	Updated chat/pidgin to 2.4.1 [tnn 2008-04-05]
+	Updated chat/pidgin-sametime to 2.4.1 [tnn 2008-04-05]
+	Updated chat/pidgin-silc to 2.4.1 [tnn 2008-04-05]
+	Updated chat/finch to 2.4.1 [tnn 2008-04-05]
