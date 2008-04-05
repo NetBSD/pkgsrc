@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.628 2008/04/05 17:09:30 adam Exp $
+$NetBSD: CHANGES-2008,v 1.629 2008/04/05 17:26:50 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1251,3 +1251,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/postgresql83-plpython to 8.3.1 [adam 2008-04-05]
 	Updated databases/postgresql83-pltcl to 8.3.1 [adam 2008-04-05]
 	Updated games/scummvm to 0.11.1 [adam 2008-04-05]
+	Updated devel/opengrok to 0.6 [adrianp 2008-04-05]
