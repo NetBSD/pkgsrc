@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.13 2008/04/05 02:42:13 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.14 2008/04/05 02:51:14 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -1190,6 +1190,7 @@ fetchFilteredListFTP(struct url *url, const char *pattern, const char *flags)
 	char buf[2 * PATH_MAX], *eol, *eos;
 	ssize_t len;
 	size_t cur_off;
+	int list_size, list_len;
 
 	/* XXX What about proxies? */
 	f = ftp_request(url, "NLST", pattern, NULL, ftp_get_proxy(url, flags), flags);
@@ -1208,8 +1209,8 @@ fetchFilteredListFTP(struct url *url, const char *pattern, const char *flags)
 					eos = eol - 1;
 				else
 					eos = eol;
-				fwrite(buf, eos - buf, 1, stdout);
-				puts("");
+				*eos = '\0';
+				fetch_add_entry(&ue, &list_size, &list_len, buf, NULL);
 				cur_off -= eol - buf + 1;
 				memmove(buf, eol + 1, cur_off);
 			}
@@ -1222,7 +1223,7 @@ fetchFilteredListFTP(struct url *url, const char *pattern, const char *flags)
 		return NULL;
 	}
 	fetchIO_close(f);
-	return (NULL);
+	return ue;
 }
 
 /*
