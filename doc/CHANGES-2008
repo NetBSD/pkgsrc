@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.620 2008/04/05 04:45:48 obache Exp $
+$NetBSD: CHANGES-2008,v 1.621 2008/04/05 06:58:53 agc Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1101,6 +1101,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/rxvt-unicode to 8.3nb3 [tonnerre 2008-04-03]
 	Updated x11/eterm to 0.9.4nb1 [tonnerre 2008-04-03]
 	Updated lang/ossp-js to 1.6.20070208nb2 [bjs 2008-04-04]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2008Q1 branch [agc 2008-04-04]
 	Added archivers/ruby-archive-tar-minitar version 0.5.2 [jlam 2008-04-04]
 	Added databases/ruby-activerecord-odbc version 1.4 [jlam 2008-04-04]
 	Added databases/ruby-acts-as-versioned version 0.2.3 [jlam 2008-04-04]
