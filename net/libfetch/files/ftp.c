@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.12 2008/04/04 22:37:28 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.13 2008/04/05 02:42:13 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -210,11 +210,11 @@ ftp_cmd(conn_t *conn, const char *fmt, ...)
  * Return a pointer to the filename part of a path
  */
 static const char *
-ftp_filename(const char *file, int *len, int *type)
+ftp_filename(const char *file, int *len, int *type, int subdir)
 {
 	const char *s;
 
-	if ((s = strrchr(file, '/')) == NULL)
+	if ((s = strrchr(file, '/')) == NULL || subdir)
 		s = file;
 	else
 		s = s + 1;
@@ -266,14 +266,16 @@ ftp_pwd(conn_t *conn, char *pwd, size_t pwdlen)
  * file.
  */
 static int
-ftp_cwd(conn_t *conn, const char *file)
+ftp_cwd(conn_t *conn, const char *file, int subdir)
 {
 	const char *beg, *end;
 	char pwd[PATH_MAX];
 	int e, i, len;
 
 	/* If no slashes in name, no need to change dirs. */
-	if ((end = strrchr(file, '/')) == NULL)
+	if (subdir)
+		end = file + strlen(file);
+	else if ((end = strrchr(file, '/')) == NULL)
 		return (0);
 	if ((e = ftp_cmd(conn, "PWD")) != FTP_WORKING_DIRECTORY ||
 	    (e = ftp_pwd(conn, pwd, sizeof(pwd))) != FTP_OK) {
@@ -288,6 +290,8 @@ ftp_cwd(conn_t *conn, const char *file)
 			if (pwd[i] != file[i])
 				break;
 		/* Keep going up a dir until we have a matching prefix. */
+		if (strcmp(pwd, "/") == 0)
+			break;
 		if (pwd[i] == '\0' && (file[i - 1] == '/' || file[i] == '/'))
 			break;
 		if ((e = ftp_cmd(conn, "CDUP")) != FTP_FILE_ACTION_OK ||
@@ -403,7 +407,7 @@ ftp_stat(conn_t *conn, const char *file, struct url_stat *us)
 	us->size = -1;
 	us->atime = us->mtime = 0;
 
-	filename = ftp_filename(file, &filenamelen, &type);
+	filename = ftp_filename(file, &filenamelen, &type, 0);
 
 	if ((e = ftp_mode_type(conn, 0, type)) != FTP_OK) {
 		ftp_seterr(e);
@@ -591,7 +595,7 @@ ftp_setup(conn_t *cconn, conn_t *dconn, int mode)
  * Transfer file
  */
 static fetchIO *
-ftp_transfer(conn_t *conn, const char *oper, const char *file,
+ftp_transfer(conn_t *conn, const char *oper, const char *file, const char *op_arg,
     int mode, off_t offset, const char *flags)
 {
 	struct sockaddr_storage sa;
@@ -617,7 +621,7 @@ ftp_transfer(conn_t *conn, const char *oper, const char *file,
 		    strncasecmp(s, "no", 2) != 0);
 
 	/* isolate filename */
-	filename = ftp_filename(file, &filenamelen, &type);
+	filename = ftp_filename(file, &filenamelen, &type, op_arg != NULL);
 
 	/* set transfer mode and data type */
 	if ((e = ftp_mode_type(conn, 0, type)) != FTP_OK)
@@ -752,7 +756,11 @@ ftp_transfer(conn_t *conn, const char *oper, const char *file,
 		/* make the server initiate the transfer */
 		if (verbose)
 			fetch_info("initiating transfer");
-		e = ftp_cmd(conn, "%s %.*s", oper, filenamelen, filename);
+		if (op_arg)
+			e = ftp_cmd(conn, "%s%s%s", oper, *op_arg ? " " : "", op_arg);
+		else
+			e = ftp_cmd(conn, "%s %.*s", oper,
+			    filenamelen, filename);
 		if (e != FTP_CONNECTION_ALREADY_OPEN && e != FTP_OPEN_DATA_CONNECTION)
 			goto ouch;
 
@@ -848,7 +856,11 @@ ftp_transfer(conn_t *conn, const char *oper, const char *file,
 		/* make the server initiate the transfer */
 		if (verbose)
 			fetch_info("initiating transfer");
-		e = ftp_cmd(conn, "%s %.*s", oper, filenamelen, filename);
+		if (op_arg)
+			e = ftp_cmd(conn, "%s%s%s", oper, *op_arg ? " " : "", op_arg);
+		else
+			e = ftp_cmd(conn, "%s %.*s", oper,
+			    filenamelen, filename);
 		if (e != FTP_CONNECTION_ALREADY_OPEN && e != FTP_OPEN_DATA_CONNECTION)
 			goto ouch;
 
@@ -1077,8 +1089,8 @@ ftp_get_proxy(struct url * url, const char *flags)
  * Process an FTP request
  */
 fetchIO *
-ftp_request(struct url *url, const char *op, struct url_stat *us,
-    struct url *purl, const char *flags)
+ftp_request(struct url *url, const char *op, const char *op_arg,
+    struct url_stat *us, struct url *purl, const char *flags)
 {
 	conn_t *conn;
 	int oflag;
@@ -1103,7 +1115,7 @@ ftp_request(struct url *url, const char *op, struct url_stat *us,
 		return (NULL);
 
 	/* change directory */
-	if (ftp_cwd(conn, url->doc) == -1)
+	if (ftp_cwd(conn, url->doc, op_arg != NULL) == -1)
 		return (NULL);
 
 	/* stat file */
@@ -1121,7 +1133,7 @@ ftp_request(struct url *url, const char *op, struct url_stat *us,
 		oflag = O_RDONLY;
 
 	/* initiate the transfer */
-	return (ftp_transfer(conn, op, url->doc, oflag, url->offset, flags));
+	return (ftp_transfer(conn, op, url->doc, op_arg, oflag, url->offset, flags));
 }
 
 /*
@@ -1130,7 +1142,7 @@ ftp_request(struct url *url, const char *op, struct url_stat *us,
 fetchIO *
 fetchXGetFTP(struct url *url, struct url_stat *us, const char *flags)
 {
-	return (ftp_request(url, "RETR", us, ftp_get_proxy(url, flags), flags));
+	return (ftp_request(url, "RETR", NULL, us, ftp_get_proxy(url, flags), flags));
 }
 
 /*
@@ -1148,7 +1160,7 @@ fetchGetFTP(struct url *url, const char *flags)
 fetchIO *
 fetchPutFTP(struct url *url, const char *flags)
 {
-	return (ftp_request(url, CHECK_FLAG('a') ? "APPE" : "STOR", NULL,
+	return (ftp_request(url, CHECK_FLAG('a') ? "APPE" : "STOR", NULL, NULL,
 	    ftp_get_proxy(url, flags), flags));
 }
 
@@ -1160,7 +1172,7 @@ fetchStatFTP(struct url *url, struct url_stat *us, const char *flags)
 {
 	fetchIO *f;
 
-	f = ftp_request(url, "STAT", us, ftp_get_proxy(url, flags), flags);
+	f = ftp_request(url, "STAT", NULL, us, ftp_get_proxy(url, flags), flags);
 	if (f == NULL)
 		return (-1);
 	fetchIO_close(f);
@@ -1173,7 +1185,43 @@ fetchStatFTP(struct url *url, struct url_stat *us, const char *flags)
 struct url_ent *
 fetchFilteredListFTP(struct url *url, const char *pattern, const char *flags)
 {
-	fprintf(stderr, "fetchFilteredListFTP(): not implemented\n");
+	struct url_ent *ue;
+	fetchIO *f;
+	char buf[2 * PATH_MAX], *eol, *eos;
+	ssize_t len;
+	size_t cur_off;
+
+	/* XXX What about proxies? */
+	f = ftp_request(url, "NLST", pattern, NULL, ftp_get_proxy(url, flags), flags);
+	if (f == NULL)
+		return NULL;
+
+	ue = NULL;
+	cur_off = 0;
+	while ((len = fetchIO_read(f, buf + cur_off, sizeof(buf) - cur_off)) > 0) {
+		cur_off += len;
+		while ((eol = memchr(buf, '\n', cur_off)) != NULL) {
+			if (len == eol - buf)
+				break;
+			if (eol != buf) {
+				if (eol[-1] == '\r')
+					eos = eol - 1;
+				else
+					eos = eol;
+				fwrite(buf, eos - buf, 1, stdout);
+				puts("");
+				cur_off -= eol - buf + 1;
+				memmove(buf, eol + 1, cur_off);
+			}
+		}
+	}
+	if (cur_off != 0 || len < 0) {
+		/* Not RFC conform, bail out. */
+		fetchIO_close(f);
+		free(ue);
+		return NULL;
+	}
+	fetchIO_close(f);
 	return (NULL);
 }
 
@@ -1183,6 +1231,5 @@ fetchFilteredListFTP(struct url *url, const char *pattern, const char *flags)
 struct url_ent *
 fetchListFTP(struct url *url, const char *flags)
 {
-	fprintf(stderr, "fetchListFTP(): not implemented\n");
-	return (NULL);
+	return fetchFilteredList(url, "", flags);
 }
