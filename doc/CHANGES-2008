@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.624 2008/04/05 14:13:34 chris Exp $
+$NetBSD: CHANGES-2008,v 1.625 2008/04/05 14:56:24 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1233,3 +1233,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libidn to 1.6 [tron 2008-04-05]
 	Added x11/xsel version 1.2.0 [obache 2008-04-05]
 	Updated benchmarks/hbench to 1.0nb6 [chris 2008-04-05]
+	Updated fonts/ja-shinonome to 0.9.11 [obache 2008-04-05]
