@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1.1.1 2006/12/09 15:34:13 adam Exp $
+$NetBSD: patch-ad,v 1.2 2008/04/05 16:40:08 adam Exp $
 
---- src/backend/port/dynloader/netbsd.c.orig	2006-03-11 05:38:31.000000000 +0100
+--- src/backend/port/dynloader/netbsd.c.orig	2008-04-05 11:33:08.000000000 +0200
 +++ src/backend/port/dynloader/netbsd.c
-@@ -46,65 +46,30 @@ static char sccsid[] = "@(#)dl.c	5.4 (Be
+@@ -46,64 +46,30 @@ static char sccsid[] = "@(#)dl.c	5.4 (Be
  
  #include "dynloader.h"
  
@@ -25,7 +25,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2006/12/09 15:34:13 adam Exp $
 -BSD44_derived_dlopen(const char *file, int num)
 +pg_dlopen(const char *file, int num)
  {
--#if defined(__mips__)
+-#if !defined(HAVE_DLOPEN)
 -	snprintf(error_message, sizeof(error_message),
 -			 "dlopen (%s) not supported", file);
 +	elog(ERROR, "dynamic load not supported");
@@ -44,7 +44,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2006/12/09 15:34:13 adam Exp $
 -BSD44_derived_dlsym(void *handle, const char *name)
 +pg_dlsym(void *handle, const char *name)
  {
--#if defined(__mips__)
+-#if !defined(HAVE_DLOPEN)
 -	snprintf(error_message, sizeof(error_message),
 -			 "dlsym (%s) failed", name);
  	return NULL;
@@ -70,8 +70,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2006/12/09 15:34:13 adam Exp $
 -BSD44_derived_dlclose(void *handle)
 +pg_dlclose(void *handle)
  {
--#if defined(__mips__)
--#else
+-#if defined(HAVE_DLOPEN)
 -	dlclose(handle);
 -#endif
  }
