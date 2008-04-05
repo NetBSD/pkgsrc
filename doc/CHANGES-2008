@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.622 2008/04/05 12:54:54 tron Exp $
+$NetBSD: CHANGES-2008,v 1.623 2008/04/05 13:10:31 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1231,3 +1231,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/finch to 2.4.1 [tnn 2008-04-05]
 	Updated textproc/dictem to 0.82 [obache 2008-04-05]
 	Updated devel/libidn to 1.6 [tron 2008-04-05]
+	Added x11/xsel version 1.2.0 [obache 2008-04-05]

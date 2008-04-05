@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7177 2008/04/05 12:54:54 tron Exp $
+$NetBSD: TODO,v 1.7178 2008/04/05 13:10:31 obache Exp $
 
 Suggested new packages
 ======================
@@ -335,10 +335,6 @@ Suggested new packages
 	Geomyidae [pkg/38261]
 	http://www.r-36.net/
 	Gopher daemon
-
-	XSel [pkg/38314]
-	http://www.vergenet.net/~conrad/software/xsel/
-	Commandline utility for manipulating the X selection and clipboard
 
 Suggested package updates
 =========================
