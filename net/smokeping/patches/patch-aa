@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2007/11/22 20:25:54 adrianp Exp $
+$NetBSD: patch-aa,v 1.8 2008/04/06 21:47:00 adrianp Exp $
 
---- bin/smokeping.dist.orig	2007-11-05 21:59:38.000000000 +0000
+--- bin/smokeping.dist.orig	2008-03-29 07:47:19.000000000 +0000
 +++ bin/smokeping.dist
 @@ -1,12 +1,11 @@
  #!/usr/sepp/bin/perl-5.8.4 -w
@@ -10,14 +10,14 @@ $NetBSD: patch-aa,v 1.7 2007/11/22 20:25:54 adrianp Exp $
 -use lib qw(lib);
 +use lib qw(@PREFIX@/lib/smokeping);
  
- use Smokeping 2.002007;
+ use Smokeping 2.003005;
   
 -Smokeping::main("etc/config.dist");
-+Smokeping::main("@PKG_SYSCONFDIR@/config");
++Smokeping::main(""@PKG_SYSCONFDIR@/config");
  
  =head1 NAME
  
-@@ -128,17 +127,17 @@ local system. Three paths have to be ent
+@@ -131,17 +130,17 @@ local system. Three paths have to be ent
  
  One pointing to your B<rrdtool> installation
  

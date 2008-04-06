@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/11/22 20:25:54 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/04/06 21:47:00 adrianp Exp $
 bin/smokeping
 bin/tSmoke
 lib/smokeping/BER.pm
@@ -49,6 +49,7 @@ lib/smokeping/Smokeping/probes/LDAP.pm
 lib/smokeping/Smokeping/probes/Radius.pm
 lib/smokeping/Smokeping/probes/RemoteFPing.pm
 lib/smokeping/Smokeping/probes/SSH.pm
+lib/smokeping/Smokeping/probes/TCPPing.pm
 lib/smokeping/Smokeping/probes/TacacsPlus.pm
 lib/smokeping/Smokeping/probes/TelnetIOSPing.pm
 lib/smokeping/Smokeping/probes/TelnetJunOSPing.pm
@@ -112,7 +113,6 @@ share/examples/smokeping/tmail.dist
 @dirrm share/doc/smokeping
 @dirrm share/smokeping/cropper/lib
 @dirrm share/smokeping/cropper
-@dirrm share/smokeping/.simg
 @dirrm share/smokeping
 @dirrm lib/smokeping/Smokeping/probes
 @dirrm lib/smokeping/Smokeping/matchers
