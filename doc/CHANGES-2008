@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.645 2008/04/06 23:13:26 seb Exp $
+$NetBSD: CHANGES-2008,v 1.646 2008/04/06 23:42:07 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1276,3 +1276,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/ruby-debug-base version 0.10.0 [seb 2008-04-06]
 	Added devel/ruby-debug version 0.10.0 [seb 2008-04-06]
 	Added devel/ruby-debug-ide version 0.1.10 [seb 2008-04-06]
+	Added net/ruby-snmp version 1.0.2 [seb 2008-04-06]
