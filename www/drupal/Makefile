@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/03/05 21:35:40 adrianp Exp $
+# $NetBSD: Makefile,v 1.28 2008/04/06 10:12:35 adrianp Exp $
 
 DISTNAME=	drupal-5.7
 CATEGORIES=	www
@@ -7,6 +7,8 @@ MASTER_SITES=	http://drupal.org/files/projects/
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://drupal.org/
 COMMENT=	Open source content management system
+
+CONFLICTS+=	drupal-6.*{,nb*}
 
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.3.3:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.3.3:../../graphics/php-gd
