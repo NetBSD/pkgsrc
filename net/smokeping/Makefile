@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2007/11/22 20:25:54 adrianp Exp $
+# $NetBSD: Makefile,v 1.24 2008/04/06 21:47:00 adrianp Exp $
 
-DISTNAME=	smokeping-2.2.7
+DISTNAME=	smokeping-2.3.5
 CATEGORIES=	net
 MASTER_SITES=	http://oss.oetiker.ch/smokeping/pub/
 
@@ -21,15 +21,16 @@ SMOKEPING_HOME=		${VARBASE}/db/smokeping
 MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 BUILD_DEFS+=		VARBASE
 
-EGDIR=		${PREFIX}/share/examples/smokeping
-SPDIR=		${PREFIX}/share/smokeping
-CONF_FILES=	${EGDIR}/basepage.html.dist ${PKG_SYSCONFDIR}/basepage.html
-CONF_FILES+=	${EGDIR}/smokemail.dist ${PKG_SYSCONFDIR}/smokemail
-CONF_FILES+=	${EGDIR}/config.dist ${PKG_SYSCONFDIR}/config
-CONF_FILES+=	${EGDIR}/tmail.dist ${PKG_SYSCONFDIR}/tmail
-CONF_FILES+=	${EGDIR}/smokeping.conf ${PKG_SYSCONFDIR}/smokeping.conf
-RCD_SCRIPTS=	smokeping
-REPLACE_PERL=	bin/smokeping.dist bin/tSmoke.dist
+EGDIR=			${PREFIX}/share/examples/smokeping
+SPDIR=			${PREFIX}/share/smokeping
+CONF_FILES=		${EGDIR}/basepage.html.dist \
+			${PKG_SYSCONFDIR}/basepage.html
+CONF_FILES+=		${EGDIR}/smokemail.dist ${PKG_SYSCONFDIR}/smokemail
+CONF_FILES+=		${EGDIR}/config.dist ${PKG_SYSCONFDIR}/config
+CONF_FILES+=		${EGDIR}/tmail.dist ${PKG_SYSCONFDIR}/tmail
+CONF_FILES+=		${EGDIR}/smokeping.conf ${PKG_SYSCONFDIR}/smokeping.conf
+RCD_SCRIPTS=		smokeping
+REPLACE_PERL=		bin/smokeping.dist bin/tSmoke.dist
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -50,6 +51,7 @@ SUBST_SED.files+=	-e "s|= cache|= /smokeping/.simg|g"
 SUBST_MESSAGE.files=	Fixing configuration files.
 
 OWN_DIRS+=		${SMOKEPING_HOME}
+OWN_DIRS+=		${SPDIR}/.simg
 
 INSTALLATION_DIRS=	bin libexec/cgi-bin
 
@@ -69,19 +71,19 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/smokeping
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${SPDIR}
-	${INSTALL_DATA_DIR} ${SPDIR}/.simg
 	${INSTALL_DATA_DIR} ${SPDIR}/cropper
 
 	for FILE in CHANGES CONTRIBUTORS COPYING COPYRIGHT README TODO; do \
-	  ${INSTALL_DATA} ${WRKSRC}/$$FILE ${PREFIX}/share/doc/smokeping; \
+		${INSTALL_DATA} \
+			${WRKSRC}/$$FILE ${PREFIX}/share/doc/smokeping; \
 	done
 
 	for FILE in ${WRKSRC}/doc/*.txt; do \
-	  ${INSTALL_DATA} $$FILE ${PREFIX}/share/doc/smokeping; \
+		${INSTALL_DATA} $$FILE ${PREFIX}/share/doc/smokeping; \
 	done
 
 	for FILE in ${WRKSRC}/doc/examples/config.*; do \
-	  ${INSTALL_DATA} $$FILE ${EGDIR}; \
+		${INSTALL_DATA} $$FILE ${EGDIR}; \
 	done
 
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/smokeping.dist ${PREFIX}/bin/smokeping
@@ -91,42 +93,45 @@ do-install:
 		${PREFIX}/libexec/cgi-bin/smokeping.cgi
 
 	for FILE in ${WRKSRC}/lib/*.pm; do \
-	  ${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping; \
+		${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping; \
 	done
 
 	for FILE in ${WRKSRC}/lib/Config/*.pm; do \
-	  ${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/Config; \
+		${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/Config; \
 	done
 
 	for FILE in ${WRKSRC}/lib/Config/Grammar/*.pm; do \
-	  ${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/Config/Grammar; \
+		${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/Config/Grammar; \
 	done
 
 	for FILE in ${WRKSRC}/lib/Smokeping/*.pm; do \
-	  ${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/Smokeping; \
+		${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/Smokeping; \
 	done
 
 	for FILE in ${WRKSRC}/lib/Smokeping/matchers/*.pm; do \
-	  ${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/Smokeping/matchers; \
+		${INSTALL_DATA} \
+			$$FILE ${PREFIX}/lib/smokeping/Smokeping/matchers; \
 	done
 
 	for FILE in ${WRKSRC}/lib/Smokeping/probes/*.pm; do \
-	  ${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/Smokeping/probes; \
+		${INSTALL_DATA} \
+			$$FILE ${PREFIX}/lib/smokeping/Smokeping/probes; \
 	done
 
 	for FILE in ${WRKSRC}/lib/Smokeping/sorters/*.pm; do \
-	  ${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/Smokeping/sorters; \
+		${INSTALL_DATA} \
+			$$FILE ${PREFIX}/lib/smokeping/Smokeping/sorters; \
 	done
 
 	cd ${WRKSRC}/htdocs/cropper && ${PAX} -rw -pm . ${SPDIR}/cropper
 
 	for FILE in ${WRKSRC}/etc/config.dist \
-	    ${WRKSRC}/etc/basepage.html.dist \
-	    ${WRKSRC}/etc/tmail.dist \
-	    ${WRKSRC}/etc/config.dist \
-	    ${WRKSRC}/smokeping.conf \
-	    ${WRKSRC}/etc/smokemail.dist; do \
-	  ${INSTALL_DATA} $$FILE ${EGDIR}; \
+		${WRKSRC}/etc/basepage.html.dist \
+		${WRKSRC}/etc/tmail.dist \
+		${WRKSRC}/etc/config.dist \
+		${WRKSRC}/smokeping.conf \
+		${WRKSRC}/etc/smokemail.dist; do \
+		${INSTALL_DATA} $$FILE ${EGDIR}; \
 	done
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.8 2007/11/22 22:56:01 adrianp Exp $
+$NetBSD: patch-ab,v 1.9 2008/04/06 21:47:00 adrianp Exp $
 
---- htdocs/smokeping.cgi.dist.orig	2007-11-05 21:59:38.000000000 +0000
+--- htdocs/smokeping.cgi.dist.orig	2008-03-29 07:47:19.000000000 +0000
 +++ htdocs/smokeping.cgi.dist
 @@ -1,13 +1,12 @@
 -#!/usr/sepp/bin/speedy -w
@@ -12,7 +12,7 @@ $NetBSD: patch-ab,v 1.8 2007/11/22 22:56:01 adrianp Exp $
 +use lib qw(@PREFIX@/lib/smokeping);
  use CGI::Carp qw(fatalsToBrowser);
  
- use Smokeping 2.002007;
+ use Smokeping 2.003005;
  
 -Smokeping::cgi("/home/oetiker/data/projects/AADJ-smokeping/dist/etc/config");
 +Smokeping::cgi("@PKG_SYSCONFDIR@/config");
