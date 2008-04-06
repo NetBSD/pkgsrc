@@ -1,0 +1,2 @@
+Ruby-debug-ide provides an interface which glues ruby-debug to IDEs
+like Eclipse (RDT) and NetBeans.
