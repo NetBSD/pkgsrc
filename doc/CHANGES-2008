@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.642 2008/04/06 19:45:20 jwise Exp $
+$NetBSD: CHANGES-2008,v 1.643 2008/04/06 21:01:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1271,4 +1271,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Devel-StackTrace to 1.18 [heinz 2008-04-06]
 	Updated devel/p5-Class-Data-Inheritable to 0.08 [heinz 2008-04-06]
 	Updated devel/p5-Exception-Class to 1.24 [heinz 2008-04-06]
->>>>>>> 1.641
+	Updated print/kbibtex to 0.2.1 [wiz 2008-04-06]
