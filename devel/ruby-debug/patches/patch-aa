@@ -1,0 +1,47 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/04/06 23:03:58 seb Exp $
+
+Sync with current Rake and drop the ruby-debug-base gem build.
+Keep RUBY_DEBUG_VERSION value in sync with its ruby-debug-base package
+avatar!
+
+--- Rakefile.orig	1970-01-01 00:00:00.000000000 +0000
++++ Rakefile
+@@ -8,7 +8,7 @@ require 'rake/testtask'
+ SO_NAME = "ruby_debug.so"
+ 
+ # ------- Default Package ----------
+-RUBY_DEBUG_VERSION = open("ext/ruby_debug.c"){|f| f.grep(/^#define DEBUG_VERSION/).first[/"(.+)"/,1]}
++RUBY_DEBUG_VERSION = '0.10.0'
+ 
+ COMMON_FILES = FileList[
+   'AUTHORS',
+@@ -38,10 +38,6 @@ CLI_FILES = COMMON_FILES + FileList[
+ BASE_TEST_FILE_LIST = 'test/test-ruby-debug-base.rb'
+ BASE_FILES = COMMON_FILES + FileList[
+   'lib/**/*',
+-  'ext/ChangeLog',
+-  'ext/ruby_debug.c',
+-  'ext/extconf.rb',
+-  'ext/win32/*',
+   BASE_TEST_FILE_LIST,
+ ]
+ 
+@@ -147,9 +143,6 @@ EOF
+ end
+ 
+ # Rake task to build the default package
+-Rake::GemPackageTask.new(base_spec) do |pkg|
+-  pkg.need_tar = true
+-end
+ Rake::GemPackageTask.new(cli_spec) do |pkg|
+   pkg.need_tar = true
+ end
+@@ -159,7 +152,7 @@ task :default => [:package]
+ # Windows specification
+ win_spec = base_spec.clone
+ win_spec.extensions = []
+-win_spec.platform = Gem::Platform::WIN32
++win_spec.platform = Gem::Platform::CURRENT
+ win_spec.files += ["lib/#{SO_NAME}"]
+ 
+ desc "Create Windows Gem"
