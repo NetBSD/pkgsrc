@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/06/02 18:28:00 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2008/04/06 15:51:00 heinz Exp $
 
 DISTNAME=	libapreq-1.33
 PKGNAME=	p5-${DISTNAME}
@@ -11,8 +11,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://httpd.apache.org/apreq/
 COMMENT=	Lots of Apache specific httpd handling modules
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	p5-Apache-Test>=1.13:../../www/p5-Apache-Test
 
+USE_LANGUAGES=	c
 PERL5_PACKLIST=	auto/libapreq/.packlist
 
 LDFLAGS+=	${COMPILER_RPATH_FLAG}auto/libapreq
