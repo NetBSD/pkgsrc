@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.4 2006/01/08 20:55:46 joerg Exp $
+$NetBSD: distinfo,v 1.5 2008/04/06 00:14:28 christos Exp $
 
-SHA1 (rc-1.6.tar.gz) = e223c5f3a34aa836034cc033751c276ff05fcc8e
-RMD160 (rc-1.6.tar.gz) = 766453e1d55f44de94c690959aee1dc8d8a77365
-Size (rc-1.6.tar.gz) = 139914 bytes
-SHA1 (patch-aa) = ec47fa81ba6061318ddb1c2f59ba9495b7f906ae
-SHA1 (patch-ab) = 44d1f2e7addf8047ee37d1ac0c045e087c93e7c2
+SHA1 (rc-1.7.tar.gz) = 7a7511f7ef54f1883aa73e572b0a66e476421829
+RMD160 (rc-1.7.tar.gz) = e8a657db93136dfd40062b45b4e4ea73cbfe8fc3
+Size (rc-1.7.tar.gz) = 158449 bytes

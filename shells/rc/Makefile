@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2006/03/04 21:30:39 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2008/04/06 00:14:28 christos Exp $
 
-DISTNAME=       rc-1.6
-PKGREVISION=	1
+DISTNAME=       rc-1.7
 CATEGORIES=	shells plan9
-MASTER_SITES=   http://www.star.le.ac.uk/%7Etjg/rc/release/
+MASTER_SITES=   http://www-ftp.lip6.fr/pub/unix/shells/rc/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.star.le.ac.uk/%7Etjg/rc/
+HOMEPAGE=	http://plan9.bell-labs.com/sys/doc/rc.html
 COMMENT=	Unix incarnation of the plan9 shell
 
 GNU_CONFIGURE=		yes
