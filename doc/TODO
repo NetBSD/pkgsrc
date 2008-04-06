@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7181 2008/04/06 10:17:51 adrianp Exp $
+$NetBSD: TODO,v 1.7182 2008/04/06 11:53:36 obache Exp $
 
 Suggested new packages
 ======================
@@ -331,10 +331,6 @@ Suggested new packages
 	flyback
 	http://code.google.com/p/flyback/
 	Backup software inspired by Apple's Time Machine
-
-	Geomyidae [pkg/38261]
-	http://www.r-36.net/
-	Gopher daemon
 
 Suggested package updates
 =========================
