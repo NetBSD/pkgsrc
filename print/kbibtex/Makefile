@@ -1,15 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2008/01/18 05:08:55 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2008/04/06 20:59:34 wiz Exp $
 
-DISTNAME=		kbibtex-0.1.5
-PKGREVISION=		6
+DISTNAME=		kbibtex-0.2.1
 CATEGORIES=		print kde
 MASTER_SITES=		http://www.unix-ag.uni-kl.de/~fischer/kbibtex/download/
 EXTRACT_SUFX=		.tar.bz2
-
-PATCHFILES=		kbibtex-0.1.5-filteredselection.patch
-PATCHFILES+=		kbibtex-0.1.5-gcc4.2.patch
-PATCHFILES+=		kbibtex-0.1.5-viewdocument.patch
-PATCH_SITES=		${MASTER_SITES}
 
 MAINTAINER=		markd@NetBSD.org
 HOMEPAGE=		http://www.unix-ag.uni-kl.de/~fischer/kbibtex/
