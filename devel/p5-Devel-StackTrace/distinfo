@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2007/06/08 08:38:27 wiz Exp $
+$NetBSD: distinfo,v 1.8 2008/04/06 14:53:57 heinz Exp $
 
-SHA1 (Devel-StackTrace-1.15.tar.gz) = 936b3d76f6405698d5d861733dfbba7430ba7152
-RMD160 (Devel-StackTrace-1.15.tar.gz) = acc3619bcb07846a8af469ec5dac2b02f39ca762
-Size (Devel-StackTrace-1.15.tar.gz) = 17587 bytes
+SHA1 (Devel-StackTrace-1.18.tar.gz) = b4429f6f20b59d150558530046b4bc99af47f9e1
+RMD160 (Devel-StackTrace-1.18.tar.gz) = cf056125d9fb63686106f5b0336dc97f37251afa
+Size (Devel-StackTrace-1.18.tar.gz) = 18762 bytes
