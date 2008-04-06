@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.639 2008/04/06 12:37:57 adam Exp $
+$NetBSD: CHANGES-2008,v 1.640 2008/04/06 12:59:24 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1265,3 +1265,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/drupal6 version 6.1 [adrianp 2008-04-06]
 	Updated net/Geomyidae to 0.11 [obache 2008-04-06]
 	Updated x11/gtkmm to 2.12.7 [adam 2008-04-06]
+	Updated mail/dkim-milter to 2.5.2 [adrianp 2008-04-06]
