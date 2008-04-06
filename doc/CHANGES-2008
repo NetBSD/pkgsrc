@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.640 2008/04/06 12:59:24 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.641 2008/04/06 17:09:18 heinz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1266,3 +1266,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/Geomyidae to 0.11 [obache 2008-04-06]
 	Updated x11/gtkmm to 2.12.7 [adam 2008-04-06]
 	Updated mail/dkim-milter to 2.5.2 [adrianp 2008-04-06]
+	Updated devel/p5-IPC-ShareLite to 0.13 [heinz 2008-04-06]
+	Updated devel/p5-Devel-StackTrace to 1.18 [heinz 2008-04-06]
+	Updated devel/p5-Class-Data-Inheritable to 0.08 [heinz 2008-04-06]
+	Updated devel/p5-Exception-Class to 1.24 [heinz 2008-04-06]
