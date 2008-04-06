@@ -1,19 +1,22 @@
-$NetBSD: patch-ac,v 1.6 2007/11/22 20:25:54 adrianp Exp $
+$NetBSD: patch-ac,v 1.7 2008/04/06 21:47:00 adrianp Exp $
 
---- etc/config.dist.orig	2007-10-15 08:49:18.000000000 +0100
+--- etc/config.dist.orig	2008-02-04 17:00:46.000000000 +0000
 +++ etc/config.dist
-@@ -1,16 +1,16 @@
+@@ -1,19 +1,19 @@
  *** General ***
  
 -owner    = Peter Random
 -contact  = some@address.nowhere
 -mailhost = my.mail.host
 -sendmail = /usr/lib/sendmail
--imgcache = /home/oetiker/public_html/smokeping-ms/cache
 +owner    = Charlie Root
 +contact  = root@localhost
 +mailhost = smtp.mynet
 +sendmail = /usr/sbin/sendmail
+ # NOTE: do not put the Image Cache below cgi-bin
+ # since all files under cgi-bin will be executed ... this is not
+ # good for images.
+-imgcache = /home/oetiker/public_html/smokeping-ms/cache
 +imgcache = @SPDIR@/.simg
  imgurl   = cache
 -datadir  = /tmp/smokeping-ms/data
@@ -29,7 +32,7 @@ $NetBSD: patch-ac,v 1.6 2007/11/22 20:25:54 adrianp Exp $
  # specify this to get syslog logging
  syslogfacility = local0
  # each probe is now run in its own process
-@@ -44,7 +44,7 @@ AVERAGE  0.5 144   720
+@@ -47,7 +47,7 @@ AVERAGE  0.5 144   720
  
  *** Presentation ***
  
@@ -38,7 +41,7 @@ $NetBSD: patch-ac,v 1.6 2007/11/22 20:25:54 adrianp Exp $
  
  + charts
  
-@@ -96,7 +96,7 @@ unison_tolerance = 2
+@@ -105,7 +105,7 @@ unison_tolerance = 2
  
  + FPing
  
