@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7182 2008/04/06 11:53:36 obache Exp $
+$NetBSD: TODO,v 1.7183 2008/04/06 13:21:15 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -294,8 +294,6 @@ Suggested new packages
 	http://www.cypherpunks.ca/otr/
 	Off-the-Record Messaging Proxy
 
-	Adobe Reader 8 [pkg/37457]
-
 	M+ FONTS [pkg/37614]
 	http://mplus-fonts.sourceforge.jp/
 	Small and neat Japanese bitmap fonts
@@ -387,7 +385,6 @@ Suggested package updates
 	o abcmidi-20080104
 	o acme-091
 	o acr-0.5.2
-	o acroread-8.1.2
 	o adns-1.4
 	o adocman-0.13
 	o adtool-1.3
