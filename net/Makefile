@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.703 2008/04/05 15:47:24 obache Exp $
+# $NetBSD: Makefile,v 1.704 2008/04/06 11:52:43 obache Exp $
 #
 
 COMMENT=	Networking tools
@@ -7,6 +7,7 @@ SUBDIR+=	3proxy
 SUBDIR+=	6tunnel
 SUBDIR+=	DarwinStreamingServer
 SUBDIR+=	GeoIP
+SUBDIR+=	Geomyidae
 SUBDIR+=	IglooFTP
 SUBDIR+=	LaBrea
 SUBDIR+=	ORBit
