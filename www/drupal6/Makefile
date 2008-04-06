@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/06 10:15:27 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/06 10:19:12 adrianp Exp $
 
 DISTNAME=	drupal-6.1
 CATEGORIES=	www
@@ -71,11 +71,8 @@ post-extract:
 do-install:
 	${INSTALL_DATA_DIR} ${DRUPAL}
 	${INSTALL_DATA_DIR} ${DRUPAL}/files
-#	${INSTALL_DATA_DIR} ${DRUPAL}/profiles
-#	${INSTALL_DATA_DIR} ${DRUPAL}/profiles/default
 	${INSTALL_DATA_DIR} ${DRUPAL}/sites
 	${INSTALL_DATA_DIR} ${DRUPAL}/sites/all
-#	${INSTALL_DATA_DIR} ${DRUPAL}/sites/default
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/drupal
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/drupal
 
