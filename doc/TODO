@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7185 2008/04/06 18:56:22 wiz Exp $
+$NetBSD: TODO,v 1.7186 2008/04/06 21:01:23 wiz Exp $
 
 Suggested new packages
 ======================
@@ -820,7 +820,6 @@ Suggested package updates
 	o k3b-1.0.4
 	o kapooka-0.3
 	o kbarcode-2.0.6
-	o kbibtex-0.2.1
 	o kdbg-2.1.0
 	o kdrill-6.5
 	o kinput2-3.1
