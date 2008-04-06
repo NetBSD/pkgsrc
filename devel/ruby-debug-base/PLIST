@@ -1,0 +1,19 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/06 23:03:23 seb Exp $
+${GEM_HOME}/cache/ruby-debug-base-0.10.0.gem
+${GEM_LIBDIR}/AUTHORS
+${GEM_LIBDIR}/CHANGES
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/ext/ChangeLog
+${GEM_LIBDIR}/ext/extconf.rb
+${GEM_LIBDIR}/ext/ruby_debug.c
+${GEM_LIBDIR}/lib/ChangeLog
+${GEM_LIBDIR}/lib/ruby-debug-base.rb
+${GEM_LIBDIR}/lib/ruby_debug.${RUBY_DLEXT}
+${GEM_LIBDIR}/test/test-ruby-debug-base.rb
+${GEM_HOME}/specifications/ruby-debug-base-0.10.0.gemspec
+@dirrm ${GEM_LIBDIR}/test
+@dirrm ${GEM_LIBDIR}/lib
+@dirrm ${GEM_LIBDIR}/ext
+@dirrm ${GEM_LIBDIR}
