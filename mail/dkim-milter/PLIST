@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/03/09 15:09:26 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/04/06 12:59:11 adrianp Exp $
 ${WITH_ARLIB}lib/libar.a
 ${WITH_ARLIB}man/man3/ar.3
 lib/libdkim.a
@@ -23,7 +23,7 @@ share/doc/dkim-milter/draft-hoffman-dac-vbr-02.txt
 share/doc/dkim-milter/draft-ietf-dkim-deployment-01.txt
 share/doc/dkim-milter/draft-ietf-dkim-overview-09.txt
 share/doc/dkim-milter/draft-ietf-dkim-ssp-03.txt
-share/doc/dkim-milter/draft-kucherawy-sender-auth-header-12.txt
+share/doc/dkim-milter/draft-kucherawy-sender-auth-header-14.txt
 share/doc/dkim-milter/libdkim/dkim.html
 share/doc/dkim-milter/libdkim/dkim_alg_t.html
 share/doc/dkim-milter/libdkim/dkim_body.html
