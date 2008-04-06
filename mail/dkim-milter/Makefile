@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2008/03/09 15:09:26 adrianp Exp $
+# $NetBSD: Makefile,v 1.14 2008/04/06 12:59:11 adrianp Exp $
 
-DISTNAME=	dkim-milter-2.5.0
+DISTNAME=	dkim-milter-2.5.2
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dkim-milter/}
 
@@ -34,7 +34,7 @@ OWN_DIRS_PERMS+=	${VARBASE}/run/dkim-filter \
 
 SUBST_CLASSES+=		libs
 SUBST_STAGE.libs=	pre-configure
-SUBST_FILES.libs=	${WRKSRC}/devtools/Site/site.config.m4
+SUBST_FILES.libs=	devtools/Site/site.config.m4
 SUBST_FILES.libs+=	dkim-filter/dkim-filter.conf.5 dkim-filter/dkim-stats.8
 SUBST_SED.libs+=	-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g'
 SUBST_SED.libs+=	-e 's|@LMBASE@|${BUILDLINK_PREFIX.libmilter}|g'
