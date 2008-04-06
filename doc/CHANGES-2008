@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.634 2008/04/06 02:38:45 toshii Exp $
+$NetBSD: CHANGES-2008,v 1.635 2008/04/06 05:14:15 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1258,3 +1258,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/p5-Rose-DB to 0.741 [abs 2008-04-06]
 	Updated databases/p5-Rose-DB-Object to 0.768 [abs 2008-04-06]
 	Added print/acroread8 version 8.1.2 [toshii 2008-04-06]
+	Updated devel/tig to 0.10.1 [bjs 2008-04-06]
