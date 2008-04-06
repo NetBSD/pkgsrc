@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7183 2008/04/06 13:21:15 xtraeme Exp $
+$NetBSD: TODO,v 1.7184 2008/04/06 17:10:05 heinz Exp $
 
 Suggested new packages
 ======================
@@ -1039,7 +1039,6 @@ Suggested package updates
 	o p5-Authen-SASL-Cyrus-0.13
 	o p5-Class-DBI-3.0.16
 	o p5-Class-DBI-AbstractSearch-0.07
-	o p5-Class-Data-Inheritable-0.08
 	o p5-Class-Inspector-1.22
 	o p5-Class-ReturnValue-0.55
 	o p5-Clone-0.28
@@ -1051,7 +1050,6 @@ Suggested package updates
 	o p5-DBIx-DBSchema-0.36
 	o p5-DBIx-SearchBuilder-1.51
 	o p5-Data-FormValidator-4.50
-	o p5-Devel-StackTrace-1.16
 	o p5-ExtUtils-CBuilder-0.22
 	o p5-File-Flat-1.04
 	o p5-File-MimeInfo-0.15
