@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.923 2008/04/04 15:33:06 jlam Exp $
+# $NetBSD: Makefile,v 1.924 2008/04/06 23:08:15 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -742,6 +742,9 @@ SUBDIR+=	ruby-bsearch
 SUBDIR+=	ruby-byaccr
 SUBDIR+=	ruby-cmd
 SUBDIR+=	ruby-curses
+SUBDIR+=	ruby-debug
+SUBDIR+=	ruby-debug-base
+SUBDIR+=	ruby-debug-ide
 SUBDIR+=	ruby-dhaka
 SUBDIR+=	ruby-eventmachine
 SUBDIR+=	ruby-flexmock
