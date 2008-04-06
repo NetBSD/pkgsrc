@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.632 2008/04/06 00:15:19 christos Exp $
+$NetBSD: CHANGES-2008,v 1.633 2008/04/06 00:24:38 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1255,3 +1255,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated editors/emacs20 to 20.7nb10 [kristerw 2008-04-05]
 	Updated editors/lyx15 to 1.5.4 [xtraeme 2008-04-05]
 	Updated shells/rc to 1.7 [christos 2008-04-05]
+	Updated databases/p5-Rose-DB to 0.741 [abs 2008-04-06]
+	Updated databases/p5-Rose-DB-Object to 0.768 [abs 2008-04-06]
