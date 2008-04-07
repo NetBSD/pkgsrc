@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/03/04 15:39:10 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2008/04/07 17:49:55 joerg Exp $
 
 DISTNAME=	jpgraph-1.18
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -44,7 +44,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/src/*.inc ${DESTDIR}${PJDIR}
 	${INSTALL_DATA} ${WRKSRC}/src/*.dat ${DESTDIR}${PJDIR}
 
-	${MV} -f ${PJDIR}/jpg-config.inc ${DESTDIR}${EXDIR}
+	${MV} -f ${DESTDIR}${PJDIR}/jpg-config.inc ${DESTDIR}${EXDIR}
 	${LN} -sf ${PJCONFFILE} ${DESTDIR}${PJDIR}/jpg-config.inc
 
 	for f in README QPL.txt; do \
