@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.80 2008/02/20 19:31:22 xtraeme Exp $
+# $NetBSD: Makefile,v 1.81 2008/04/07 14:39:14 xtraeme Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
 #PKGREVISION=		1
 CATEGORIES=		www
-MASTER_SITES=		http://ftp.sunet.se/pub/www/clients/Opera/${OPERA_DIR}/
+MASTER_SITES+=		http://ftp.sunet.se/pub/www/clients/Opera/${OPERA_DIR}/
 MASTER_SITES+=		ftp://ftp.hu-berlin.de/pub/www/opera/${OPERA_DIR}/
 MASTER_SITES+=		ftp://ftp.task.gda.pl/pub/opera/${OPERA_DIR}/
 MASTER_SITES+=		ftp://ftp.tuwien.ac.at/infosys/browsers/opera/${OPERA_DIR}/
@@ -27,9 +27,9 @@ USE_LANGUAGES=		# empty
 BUILD_DIRS=		# empty
 
 OPERA_LANG=		en
-OPERA_VER_DATE=		20080215
-OPERA_PKG_VERSION=	9.26
-OPERA_PKG_VERSION_DIR=	926
+OPERA_VER_DATE=		20080331
+OPERA_PKG_VERSION=	9.27
+OPERA_PKG_VERSION_DIR=	927
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
