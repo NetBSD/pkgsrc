@@ -1,25 +1,20 @@
-# $NetBSD: Makefile,v 1.34 2008/01/03 12:37:06 adrianp Exp $
-#
+# $NetBSD: Makefile,v 1.35 2008/04/07 07:21:00 adam Exp $
 
-DISTNAME=	awstats-6.6
-PKGREVISION=	4
+DISTNAME=	awstats-6.7
 CATEGORIES=	www
-MASTER_SITES=	http://awstats.sourceforge.net/files/
-# awstats are in the habit of updating the tarball but not incrementing
-# the version or name of the tarball. DIST_SUBDIR must be set like this
-# to avoid checksum errors.
-#
-DIST_SUBDIR=	${PKGNAME}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=awstats/}
 
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://awstats.sourceforge.net/
 COMMENT=	Free real-time logfile analyzer to get advanced web statistics
 
-NO_BUILD=	YES
+NO_BUILD=		yes
 
-USE_TOOLS+=	perl:run
-REPLACE_PERL+=	tools/*.pl		\
-		wwwroot/cgi-bin/*.pl
+USE_TOOLS+=		perl:run
+REPLACE_PERL+=		tools/*.pl
+REPLACE_PERL+=		wwwroot/cgi-bin/*.pl
+REPLACE_PERL+=		wwwroot/cgi-bin/plugins/*.pm
+REPLACE_PERL+=		wwwroot/classes/src/*.pl
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -53,13 +48,17 @@ SUBST_MESSAGE.conf=	Fixing configuration files and scripts.
 CONF_FILES+=	${PREFIX}/share/examples/awstats/awstats.conf \
 		${PKG_SYSCONFDIR}/awstats.model.conf
 
+INSTALLATION_DIRS+=	awstats
+INSTALLATION_DIRS+=	awstats/bin
+INSTALLATION_DIRS+=	awstats/cgi-bin
+INSTALLATION_DIRS+=	awstats/cgi-bin/plugins
+INSTALLATION_DIRS+=	share/doc/awstats
+INSTALLATION_DIRS+=	share/examples/awstats
+
+post-extract:
+	find ${WRKSRC} -name .cvsignore -exec rm {} \;
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/awstats
-	${INSTALL_SCRIPT_DIR} ${PREFIX}/awstats/bin
-	${INSTALL_SCRIPT_DIR} ${PREFIX}/awstats/cgi-bin
-	${INSTALL_DATA_DIR} ${PREFIX}/awstats/cgi-bin/plugins
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/awstats
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/awstats
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/*.pl ${PREFIX}/awstats/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/wwwroot/cgi-bin/*.pl		\
 		${PREFIX}/awstats/cgi-bin
