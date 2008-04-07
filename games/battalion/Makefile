@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2008/03/04 06:59:03 jlam Exp $
+# $NetBSD: Makefile,v 1.40 2008/04/07 16:39:27 joerg Exp $
 
 DISTNAME=		battalion
 PKGNAME=		battalion-1.4
@@ -33,7 +33,7 @@ CONF_FILES_PERMS=	/dev/null /var/games/battalion_hiscore		\
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/battalion $${DESTDIR}{PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/battalion ${DESTDIR}${PREFIX}/bin
 	cd ${WRKDIR} && \
 	    ${GZCAT} ${DISTDIR}/battalionSUN4.tar.gz | ${GTAR} xmf -
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/battalion/HELP
