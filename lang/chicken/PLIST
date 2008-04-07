@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/03/10 23:41:05 tnn Exp $
+@comment $NetBSD: PLIST,v 1.18 2008/04/07 18:23:06 tnn Exp $
 bin/chicken
 bin/chicken-bug
 bin/chicken-profile
@@ -26,7 +26,6 @@ share/chicken/extras.exports
 share/chicken/library.exports
 share/chicken/lolevel.exports
 share/chicken/posix.exports
-share/chicken/regex-extras.exports
 share/chicken/regex.exports
 share/chicken/scheduler.exports
 share/chicken/srfi-1.exports
