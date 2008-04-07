@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/09/09 02:43:10 obache Exp $
+# $NetBSD: Makefile,v 1.15 2008/04/07 17:33:36 joerg Exp $
 
 DISTNAME=		mesch12b
 PKGNAME=		meschach-1.2b
@@ -14,6 +14,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-all
 MAKE_FILE=		makefile
 
+INSTALLATION_DIRS=	include/meschach lib share/meschach/tests
+
 pre-patch:
 	${CP} ${FILESDIR}/makefile.in ${WRKSRC}
 
@@ -22,12 +24,9 @@ post-patch:
 		> ${WRKSRC}/Makefile
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/include/meschach
 	cd ${WRKSRC} && ${INSTALL_DATA} err.h machine.h matlab.h 	\
 		matrix.h meminfo.h sparse.h zmatrix.h iter.h matrix2.h 	\
 		oldnames.h sparse2.h zmatrix2.h ${PREFIX}/include/meschach/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/meschach
-	${INSTALL_DATA_DIR} ${PREFIX}/share/meschach/tests
 	cd ${WRKSRC} && ${INSTALL_DATA} torture.c sptort.c ztorture.c 	\
 		memtort.c itertort.c mfuntort.c iotort.c 		\
 		${PREFIX}/share/meschach/tests/
