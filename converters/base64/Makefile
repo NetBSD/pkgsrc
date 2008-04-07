@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/03/03 05:51:07 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2008/04/07 16:35:18 joerg Exp $
 
 DISTNAME=	base64-1.5
 CATEGORIES=	converters
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 BUILD_TARGET=		prog
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/base64 ${DESTDIR}${PREFIX}/bin
