@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7191 2008/04/07 20:10:56 xtraeme Exp $
+$NetBSD: TODO,v 1.7192 2008/04/07 22:50:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -438,9 +438,9 @@ Suggested package updates
 	o aspell-norwegian-2.0.10
 	o aspell-ukrainian-1.3.3
 	o ast-ksh-20080202 [pkg/37854]
-	o asterisk-1.4.18.1
+	o asterisk-1.4.19
 	o astyle-1.15.3
-	o at-spi-1.22.0
+	o at-spi-1.22.1
 	o aterm-1.0.1
 	o atk-1.22.0
 	o auctex-11.85
@@ -500,8 +500,8 @@ Suggested package updates
 	o cgicc-3.2.5
 	o chemtool-1.6.11
 	o cherokee-0.6.1
-	o chicken-3.1.0
 	o chrony-1.23
+	o cinepaint-0.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
 	o classpath-0.97.1
@@ -587,12 +587,13 @@ Suggested package updates
 	o eltclsh-1.8 [pkg/37283]
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
+	o enchant-1.4.0
 	o enlightenment-0.16.8.11
 	o enscript-1.6.4
 	o eog-2.22.0
 	o epic4-2.6
-	o epiphany-2.22.0
-	o epiphany-extensions-2.22.0
+	o epiphany-2.22.1.1
+	o epiphany-extensions-2.22.1
 	o epsg-6.14
 	o epstool-3.08
 	o eric3-4.1.2 [now called eric4]
@@ -601,10 +602,10 @@ Suggested package updates
 	o et-2.60
 	o etach-1.4.1
 	o eukleides-1.0.3
-	o evince-2.22.0
-	o evolution-2.22.0
-	o evolution-data-server-2.22.0
-	o evolution-exchange-2.22.0
+	o evince-2.22.1
+	o evolution-2.22.1
+	o evolution-data-server-2.22.1
+	o evolution-exchange-2.22.1
 	o ex-20050325
 	o ezmlm-idx-5.1.2 [schmonz]
 	o ezxml-0.8.6
@@ -643,10 +644,10 @@ Suggested package updates
 	o fugu-1.2.3
 	o fuse-ntfs-3g-1.2310
 	o fvwm2-themes-0.7.0
-	o gail-1.22.0
+	o gail-1.22.1
 	o gap-4r4p9
 	o gated-3.6
-	o gcalctool-5.22.0
+	o gcalctool-5.22.1
 	o gcc-4.2.2
 	o gcc-ssp-3.4.4
 	o gcin-1.3.7.1
@@ -659,6 +660,7 @@ Suggested package updates
 	o gdb6-6.7.1
 	o gdeskcal-1.01
 	o gdl-0.7.11
+	o gdm-2.20.5
 	o gdsreader-0.3.2
 	o geany-0.13
 	o generator-cbiere-0.35r3
@@ -689,9 +691,9 @@ Suggested package updates
 	o gnome-audio-2.22.1
 	o gnome-build-0.2.4
 	o gnome-control-center-2.22.0
-	o gnome-games-2.22.0
+	o gnome-games-2.22.1
 	o gnome-icon-theme-2.22.0
-	o gnome-keyring-2.22.0
+	o gnome-keyring-2.22.1
 	o gnome-mag-0.15.0
 	o gnome-media-2.22.0
 	o gnome-panel-2.22.0
@@ -699,7 +701,7 @@ Suggested package updates
 	o gnome-screensaver-2.22.1
 	o gnome-sharp-2.20.0
 	o gnome-spell-1.0.8
-	o gnome-terminal-2.22.0
+	o gnome-terminal-2.22.1
 	o gnome-themes-extras-2.22.0
 	o gnome-vfsmm-2.22.0
 	o gnomeicu-0.99.14
@@ -744,7 +746,7 @@ Suggested package updates
 	o gtk2-engines-2.12.2
 	o gtk2-sharp-2.12.0
 	o gtkhtml-3.18.0
-	o gtkhtml314-3.18.0
+	o gtkhtml314-3.18.1
 	o gtklife-5.1
 	o gtksee-0.6.0b
 	o gtksourceview-2.2.0
@@ -752,6 +754,7 @@ Suggested package updates
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranscript-0.2.0
+	o gucharmap-2.22.1
 	o guile-gtk-2.0
 	o gworkspace-0.8.6
 	o gzrecover-0.5
@@ -761,6 +764,7 @@ Suggested package updates
 	o hatari-1.0.0
 	o hdf-4.2r2
 	o hercules-3.04.1
+	o herrie-2.0.1
 	o hesiod-3.1.0
 	o hexedit-1.2.12
 	o heyu-2.2.0
@@ -880,7 +884,7 @@ Suggested package updates
 	o libhydrogen-0.9.2
 	o liblive-2007.01.17 [pkg/38038]
 	o liblive-2007.02.20
-	o libltdl-2.2
+	o libltdl-2.2.2
 	o liblzo-2.02
 	o libmatheval-1.1.6
 	o libmusicbrainz-3.0.1
@@ -894,7 +898,7 @@ Suggested package updates
 	o librsvg-2.22.2
 	o libshout-2.2.2
 	o libsigc++-2.2.2
-	o libsoup-2.2.102
+	o libsoup-2.4.1
 	o libspiff-0.8.3
 	o libssh-0.2
 	o libstatgrab-0.16
@@ -959,7 +963,7 @@ Suggested package updates
 	o most-4.10.2
 	o mp3blaster-3.2.3
 	o mpeg4ip-1.6.1
-	o mpg123-1.3.1
+	o mpg123-1.4.0
 	o mpich-1.2.7p1
 	o mpop-1.0.13
 	o mrtg-2.16.1
@@ -1005,6 +1009,7 @@ Suggested package updates
 	o nsca-1.2.0
 	o nslint-2.1a6 [pkg/33142]
 	o nslint-2.1a7
+	o nspr-4.7
 	o nss-3.11.7
 	o ntp4-4.2.4p3
 	o nulib2-220
@@ -1026,7 +1031,7 @@ Suggested package updates
 	o openmortal-0.7.1
 	o openmotif-2.3.0 [pkg/38038]
 	o openssh-5.0p1
-	o orca-2.22.0
+	o orca-2.22.1
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o oto-0.5
@@ -1050,7 +1055,7 @@ Suggested package updates
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.004
 	o p5-DBIx-DBSchema-0.36
-	o p5-DBIx-SearchBuilder-1.51
+	o p5-DBIx-SearchBuilder-1.53
 	o p5-Data-FormValidator-4.50
 	o p5-ExtUtils-CBuilder-0.22
 	o p5-File-Flat-1.04
@@ -1110,6 +1115,7 @@ Suggested package updates
 	o p5-Text-Quoted-2.05
 	o p5-Text-Tabs+Wrap-2006.1117
 	o p5-Time-HiRes-1.9707
+	o p5-URI-1.36
 	o p5-WWW-Mechanize-1.34
 	o p5-XML-LibXML-1.66
 	o p5-XML-LibXSLT-1.66
@@ -1176,7 +1182,10 @@ Suggested package updates
 	o poedit-1.4.1
 	o polsms-2.1.0
 	o poppler-0.8.0
+	o poppler-glib-0.8.0
+	o poppler-qt-0.8.0
 	o poppy-4.01
+	o popt-1.14
 	o poptop-1.3.0
 	o posh-0.5.5
 	o postal-0.66
@@ -1248,6 +1257,7 @@ Suggested package updates
 	o python25-2.5.2
 	o qDecoder-8.0
 	o qbrew-0.3.9
+	o qnetwalk-1.3
 	o qt1-1.45
 	o qt2-designer-2.3.2
 	o qt2-docs-2.3.2
@@ -1286,12 +1296,14 @@ Suggested package updates
 	o rpm-5.0.3
 	o rrdtool-1.2.27
 	o rsync-3.0.0 (probably better to wait for at least 3.0.1)
+	o rsync-3.0.1
 	o rt3-3.6.6
 	o rtcw-1.41.3
 	o ruby-clearsilver-0.10.5
 	o rudiments-0.30
 	o rxvt-unicode-9.0
 	o sablecc-3.2
+	o sane-backends-1.0.19
 	o sane-frontends-1.0.19
 	o sarg-2.2.5
 	o sather-1.2.3
@@ -1303,7 +1315,7 @@ Suggested package updates
 	o scons-0.97
 	o scrollz-1.9.99
 	o scsh-1.3.0
-	o seahorse-2.22.0
+	o seahorse-2.22.1
 	o seamonkey-1.1.9
 	o sendfile-20010424
 	o ser-0.9.6
@@ -1364,6 +1376,7 @@ Suggested package updates
 	o systrace-1.6e
 	o t1utils-1.34
 	o tacacs-4.0.4.14
+	o tailor-0.9.31
 	o taskjuggler-2.4.0
 	o tcl-8.5.2
 	o tcl83-8.3.5
@@ -1381,6 +1394,7 @@ Suggested package updates
 	o ted-en-us-2.17
 	o tex-musixtex-113 [pkg/34758]
 	o tfmxplay-1.1.6
+	o tig-0.11
 	o tile-0.7.4
 	o tinyproxy-1.7.0
 	o tk-8.5.2
@@ -1411,7 +1425,7 @@ Suggested package updates
 	o ucblogo-5.5
 	o ups-nut-2.2.1 [pkgsrc-wip]
 	o upx-2.90
-	o uriparser-0.6.4
+	o uriparser-0.7.0
 	o userppp-030706
 	o valgrind-3.2.3
 	o varnish-1.1.1
@@ -1420,7 +1434,7 @@ Suggested package updates
 	o vicq-0.4.2
 	o viewvc-1.0.5
 	o vifm-0.3a
-	o vino-2.20.1
+	o vino-2.22.1
 	o visual-regexp-3.1
 	o vm-8.0.7.522 [pkg/37707]
 	o vmips-1.3.2
@@ -1456,7 +1470,7 @@ Suggested package updates
 	o wxRemind-79
 	o wyrd-1.4.4
 	o x11perf-1.5
-	o x264-devel-20080315
+	o x264-devel-20080405
 	o xanalyser-1.30
 	o xauth-1.0.3
 	o xbindkeys-1.8.2
@@ -1500,6 +1514,7 @@ Suggested package updates
 	o xf86-video-trident-1.3.0
 	o xf86-video-tseng-1.2.0
 	o xf86-video-vmware-10.16.0
+	o xf86driproto-2.0.4
 	o xfstt-1.7
 	o xhippo-3.5
 	o xine-lib-1.1.11.1
