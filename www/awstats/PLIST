@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2007/02/20 18:29:49 minskim Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/04/07 07:21:00 adam Exp $
 awstats/bin/awstats_buildstaticpages.pl
 awstats/bin/awstats_configure.pl
 awstats/bin/awstats_exportlib.pl
@@ -512,7 +512,6 @@ awstats/icon/flags/za.png
 awstats/icon/flags/ze.png
 awstats/icon/flags/zm.png
 awstats/icon/flags/zw.png
-awstats/icon/mime/.cvsignore
 awstats/icon/mime/ai.png
 awstats/icon/mime/archive.png
 awstats/icon/mime/audio.png
@@ -541,7 +540,6 @@ awstats/icon/mime/unknown.png
 awstats/icon/mime/video.png
 awstats/icon/mime/wmv.png
 awstats/icon/mime/xls.png
-awstats/icon/os/.cvsignore
 awstats/icon/os/aix.png
 awstats/icon/os/amigaos.png
 awstats/icon/os/apple.png
@@ -649,7 +647,6 @@ share/doc/awstats/awstats_tools.html
 share/doc/awstats/awstats_upgrade.html
 share/doc/awstats/awstats_webmin.html
 share/doc/awstats/awstats_what.html
-share/doc/awstats/images/.cvsignore
 share/doc/awstats/images/awstats.gif
 share/doc/awstats/images/awstats.ico
 share/doc/awstats/images/awstats.png

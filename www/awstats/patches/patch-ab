@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2006/05/16 18:13:55 minskim Exp $
+$NetBSD: patch-ab,v 1.5 2008/04/07 07:21:00 adam Exp $
 
---- tools/awstats_configure.pl.orig	2006-02-08 13:26:14.000000000 -0800
+--- tools/awstats_configure.pl.orig	2007-04-02 20:30:52.000000000 +0200
 +++ tools/awstats_configure.pl
 @@ -29,12 +29,12 @@ $AWSTATS_MODEL_CONFIG
  $AWSTATS_DIRDATA_PATH
@@ -21,17 +21,15 @@ $NetBSD: patch-ab,v 1.4 2006/05/16 18:13:55 minskim Exp $
  
  
  
-@@ -62,7 +62,8 @@ use vars qw/
- 'C:/Program Files/Apache Group/Apache/conf/httpd.conf',
+@@ -64,6 +64,7 @@ use vars qw/
  '/etc/httpd/httpd.conf',
  '/usr/local/apache/conf/httpd.conf',
--'/usr/local/apache2/conf/httpd.conf'
-+'/usr/local/apache2/conf/httpd.conf',
+ '/usr/local/apache2/conf/httpd.conf',
 +'@PREFIX@/etc/httpd/httpd.conf',
  );
  
  use vars qw/
-@@ -308,13 +309,13 @@ if ($OS eq 'linux') {
+@@ -309,13 +310,13 @@ if ($OS eq 'linux') {
  	$AWSTATS_PATH=`pwd`; $AWSTATS_PATH =~ s/[\r\n]//;
  	$AWSTATS_PATH=~s/tools[\\\/]?$//;
  	$AWSTATS_PATH=~s/[\\\/]$//;
@@ -48,7 +46,7 @@ $NetBSD: patch-ab,v 1.4 2006/05/16 18:13:55 minskim Exp $
  		print "And then, run configure.pl from this location.\n";
  		print "Do you want to continue setup from this NON standard directory [yN] ? ";
  		my $bidon='';
-@@ -323,23 +324,23 @@ if ($OS eq 'linux') {
+@@ -324,23 +325,23 @@ if ($OS eq 'linux') {
  			print "configure.pl aborted.\n";
  			exit 1;
  		}
@@ -79,7 +77,7 @@ $NetBSD: patch-ab,v 1.4 2006/05/16 18:13:55 minskim Exp $
  		print "And then, run configure.pl from this location.\n";
  		print "Do you want to continue setup from this NON standard directory [yN] ? ";
  		my $bidon='';
-@@ -348,10 +349,10 @@ elsif ($OS eq 'macosx') {
+@@ -349,10 +350,10 @@ elsif ($OS eq 'macosx') {
  			print "configure.pl aborted.\n";
  			exit 1;
  		}
@@ -94,7 +92,7 @@ $NetBSD: patch-ab,v 1.4 2006/05/16 18:13:55 minskim Exp $
  	}
  }
  elsif ($OS eq 'windows') {
-@@ -420,6 +421,7 @@ if (! scalar keys %ApacheConfPath) {
+@@ -421,6 +422,7 @@ if (! scalar keys %ApacheConfPath) {
  		print "\n".($bidon?"Now, enter":"Enter")." full config file path of your Web server.\n";
  		print "Example: /etc/httpd/httpd.conf\n";
  		print "Example: /usr/local/apache2/conf/httpd.conf\n";
@@ -102,7 +100,7 @@ $NetBSD: patch-ab,v 1.4 2006/05/16 18:13:55 minskim Exp $
  		print "Example: c:\\Program files\\apache group\\apache\\conf\\httpd.conf\n";
  		$bidon='';
  		while ($bidon ne 'none' && ! -f "$bidon") {
-@@ -542,8 +544,8 @@ EOF
+@@ -545,8 +547,8 @@ EOF
  # -----------------------------
  my $modelfile='';
  if ($OS eq 'linux') 		{ 
@@ -113,7 +111,7 @@ $NetBSD: patch-ab,v 1.4 2006/05/16 18:13:55 minskim Exp $
  	}
  	else {
  		$modelfile="$AWSTATS_MODEL_CONFIG";
-@@ -551,7 +553,7 @@ if ($OS eq 'linux') 		{ 
+@@ -554,7 +556,7 @@ if ($OS eq 'linux') 		{ 
  	}
  }
  elsif ($OS eq "macosx") 		{ 
@@ -122,7 +120,7 @@ $NetBSD: patch-ab,v 1.4 2006/05/16 18:13:55 minskim Exp $
  }
  elsif ($OS eq 'windows')	{ $modelfile="$AWSTATS_PATH\\wwwroot\\cgi-bin\\awstats.model.conf"; }
  else						{ $modelfile="$AWSTATS_PATH\\wwwroot\\cgi-bin\\awstats.model.conf"; }
-@@ -604,11 +606,11 @@ if ($bidon =~ /^y/i) {
+@@ -607,11 +609,11 @@ if ($bidon =~ /^y/i) {
  	if ($OS eq 'linux') 		{
  		print "\n-----> Define config file path\n";
  		print "In which directory do you plan to store your config file(s) ?\n";
