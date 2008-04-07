@@ -37,7 +37,6 @@ extern int verbose;
 extern const char *pkg_vulnerabilities_dir;
 extern const char *pkg_vulnerabilities_file;
 extern const char *pkg_vulnerabilities_url;
-extern const char *fetch_cmd;
 extern const char *ignore_advisories;
 extern const char tnf_vulnerability_base[];
 
@@ -50,5 +49,6 @@ void	check_pkg_vulnerabilities(int, char **);
 void	fetch_pkg_vulnerabilities(int, char **);
 
 void	pkg_install_config(const char *);
+void	pkg_install_show_variable(const char *);
 
 void 	usage(void);

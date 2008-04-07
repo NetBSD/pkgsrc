@@ -1,4 +1,4 @@
-/*	$NetBSD: config.c,v 1.3 2008/03/21 14:47:53 joerg Exp $	*/
+/*	$NetBSD: config.c,v 1.4 2008/04/07 13:07:14 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: config.c,v 1.3 2008/03/21 14:47:53 joerg Exp $");
+__RCSID("$NetBSD: config.c,v 1.4 2008/04/07 13:07:14 joerg Exp $");
 #endif
 
 /*-
@@ -53,7 +53,6 @@ __RCSID("$NetBSD: config.c,v 1.3 2008/03/21 14:47:53 joerg Exp $");
 const char *pkg_vulnerabilities_dir;
 const char *pkg_vulnerabilities_file;
 const char *pkg_vulnerabilities_url;
-const char *fetch_cmd = FTP_CMD;
 const char *ignore_advisories = NULL;
 const char tnf_vulnerability_base[] = "ftp://ftp.NetBSD.org/pub/NetBSD/packages/vulns";
 
@@ -65,7 +64,6 @@ static struct config_variable {
 	{ "PKGVULNDIR", &pkg_vulnerabilities_dir },
 	{ "PKGVULNURL", &pkg_vulnerabilities_url },
 	{ "IGNORE_URL", &ignore_advisories },
-	{ "FETCH_CMD", &fetch_cmd },
 	{ NULL, NULL }
 };
 
@@ -95,5 +93,18 @@ pkg_install_config(const char *config_file)
 		pkg_vulnerabilities_url = value;
 		if (ret == -1)
 			err(EXIT_FAILURE, "asprintf failed");
+	}
+}
+
+void
+pkg_install_show_variable(const char *var_name)
+{
+	struct config_variable *var;
+
+	for (var = config_variables; var->name != NULL; ++var) {
+		if (strcmp(var->name, var_name) != 0)
+			continue;
+		if (*var->var != NULL)
+			puts(*var->var);
 	}
 }
