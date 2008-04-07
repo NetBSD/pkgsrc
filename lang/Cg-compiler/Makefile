@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/03/04 16:38:11 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2008/04/07 16:23:01 joerg Exp $
 #
 
 DISTNAME=	CgLinux-1.3.0408-0400
@@ -21,13 +21,11 @@ WRKSRC=			${WRKDIR}
 BUILD_DIRS=		# empty
 RUN_LDCONFIG=		yes
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man3 share
+INSTALLATION_DIRS=	bin include/Cg include/CgFX ${PKGMANDIR}/man3 \
+			share/NVIDIA-Cg-linux share/doc/NVIDIA-Cg-linux \
+			${EMULDIR}/lib
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/Cg
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/CgFX
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/NVIDIA-Cg-linux
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/NVIDIA-Cg-linux
 	${INSTALL_PROGRAM} ${WRKSRC}/usr/bin/cgc ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/usr/include/Cg/* \
 		${DESTDIR}${PREFIX}/include/Cg
