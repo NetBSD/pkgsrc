@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7190 2008/04/07 17:10:14 adam Exp $
+$NetBSD: TODO,v 1.7191 2008/04/07 20:10:56 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -482,7 +482,6 @@ Suggested package updates
 	o btpd-0.13 [pkg/38144]
 	o bug-buddy-2.22.0
 	o bzip2-1.0.5
-	o bzr-1.3
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o caff-1.0
