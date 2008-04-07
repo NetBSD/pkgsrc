@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.update.mk,v 1.14 2008/02/07 21:36:13 rillig Exp $
+# $NetBSD: bsd.pkg.update.mk,v 1.15 2008/04/07 13:31:15 joerg Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and contains the targets
 # and variables for "make update".
@@ -16,7 +16,9 @@ REINSTALL?=	NO	# reinstall upon update
 #
 .if !defined(UPDATE_TARGET)
 .  if defined(DEPENDS_TARGET) && (${DEPENDS_TARGET} == "update")
-.    if make(package)
+.    if ${_USE_DESTDIR} != "no"
+UPDATE_TARGET=	package-install
+.    elif make(package)
 UPDATE_TARGET=	package
 .    else
 UPDATE_TARGET=	install
