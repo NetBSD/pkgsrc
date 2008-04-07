@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2008/03/04 06:59:06 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2008/04/07 18:28:11 joerg Exp $
 #
 
 DISTNAME=	xpipeman-1.5
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SUNSITE:=games/strategy/}
 
@@ -22,13 +22,12 @@ CONF_FILES_PERMS=	share/xpipeman/xpipescores /var/games/xpipescores \
 SPECIAL_PERMS=		bin/xpipeman ${SETGID_GAMES_PERMS}
 REQD_DIRS_PERMS=	share/xpipeman ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6 share/xpipeman
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/xpipeman ${DESTDIR}${PREFIX}/bin/xpipeman
 	${INSTALL_MAN} ${WRKSRC}/xpipeman.man \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man6/xpipeman.6
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/xpipeman
 	${INSTALL_DATA} ${WRKSRC}/xpipescores ${DESTDIR}${PREFIX}/share/xpipeman
 
 .include "../../x11/libXaw/buildlink3.mk"
