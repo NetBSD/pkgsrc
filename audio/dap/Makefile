@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/03/02 06:10:31 jlam Exp $
+# $NetBSD: Makefile,v 1.35 2008/04/07 16:54:53 joerg Exp $
 
 DISTNAME=	dap-2.1.5
 CATEGORIES=	audio
@@ -12,7 +12,7 @@ COMMENT=	Digital audio recording and processing package
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
-INSTALLATION_DIRS+=	share/doc/dap
+INSTALLATION_DIRS+=	bin share/doc/dap
 MAKE_FILE=		Makefile.netbsd
 MAKE_ENV+=		X11PREFIX=${X11PREFIX:Q}
 
