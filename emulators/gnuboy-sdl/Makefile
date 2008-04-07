@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/03/03 19:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2008/04/07 17:17:00 joerg Exp $
 
 DISTNAME=	gnuboy-1.0.3
 PKGNAME=	${DISTNAME:S/-/-sdl-/}
@@ -15,11 +15,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-sdl
 
+INSTALLATION_DIRS=	bin share/doc/gnuboy-sdl share/examples/gnuboy-sdl
+
 .include "../../devel/SDL/buildlink3.mk"
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/gnuboy-sdl
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/gnuboy-sdl
 	${INSTALL_PROGRAM} ${WRKSRC}/sdlgnuboy \
 		${DESTDIR}${PREFIX}/bin/gnuboy-sdl
 	${INSTALL_DATA} ${WRKSRC}/etc/sample.rc \
