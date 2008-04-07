@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2008/03/06 14:53:51 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2008/04/07 17:08:53 adam Exp $
 
-DISTNAME=	inkscape-0.45.1
-PKGREVISION=	4
+DISTNAME=	inkscape-0.46
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=inkscape/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://www.inkscape.org/
@@ -33,6 +33,7 @@ BUILDLINK_API_DEPENDS.boehm-gc+=	boehm-gc>=6.4
 UNLIMIT_RESOURCES=	datasize
 
 .include "../../devel/boehm-gc/buildlink3.mk"
+.include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
