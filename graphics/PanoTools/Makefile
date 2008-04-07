@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/03/04 15:39:09 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2008/04/07 16:25:37 joerg Exp $
 #
 
 DISTNAME=		PanoTools
@@ -23,19 +23,18 @@ USE_JAVA=		run
 PKG_JVM?=		sun-jdk
 PLIST_SUBST+=		JAVA_HOME="${PKG_JAVA_HOME:C/^${PREFIX}\///}"
 
-INSTALLATION_DIRS=	bin lib
+INSTALLATION_DIRS=	bin lib ${EMULDIR}/lib libexec/PanoTools \
+			${PKG_JAVA_HOME}/lib/${MACHINE_ARCH} \
+			share/PanoTools/Templates share/doc/PanoTools
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/libpano12.so ${DESTDIR}${EMULDIR}/lib
-	${INSTALL_LIB_DIR} ${DESTDIR}${PKG_JAVA_HOME}/lib/${MACHINE_ARCH}
 	${LN} -s ${EMULDIR}/lib/libpano12.so				\
 		${DESTDIR}${PKG_JAVA_HOME}/lib/${MACHINE_ARCH}/libpano12.lib.so
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/PanoTools
 .for jar in ptcrypt pteditor ptpicker
 	${INSTALL_DATA} ${WRKSRC}/${jar}.jar				\
 		${DESTDIR}${PREFIX}/share/PanoTools
 .endfor
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/PanoTools
 .for doc in Readme.html Readme.txt Copyright/COPYRIGHT_TIFF		\
 	Copyright/Copying.html Copyright/README_JPEG			\
 	Scripts/Optimizer_Script.txt Scripts/Stitcher_Script.txt
@@ -53,7 +52,6 @@ do-install:
 		-e 's|@@javahome@@|${PKG_JAVA_HOME}|g'			\
 		-e 's|@@ptfile@@|${bin}|g'
 	${INSTALL_SCRIPT} ${WRKDIR}/mkpthelpers ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/libexec/PanoTools
 .for bin in PTAverage PTInterpolate PTMorpher PTOptimizer PTStereo	\
 	PTStitcher PTStripe
 	${INSTALL_SCRIPT} ${WRKSRC}/Helpers/${bin}			\
@@ -62,7 +60,6 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/Helpers/${bin}.txt			\
 		${DESTDIR}${PREFIX}/share/doc/PanoTools
 .endfor
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/PanoTools/Templates
 .for hlp in 3DMF_HEADER 3DMF_TRIMESH INDEXED_FACE_FMT LP_ivr		\
 	LPjava_html LPjava_ivr VRML_HEADER vrml_wrl
 	${INSTALL_DATA} ${WRKSRC}/Helpers/Templates/${hlp}		\
