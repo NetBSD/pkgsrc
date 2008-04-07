@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7188 2008/04/07 14:40:11 xtraeme Exp $
+$NetBSD: TODO,v 1.7189 2008/04/07 16:17:53 bjs Exp $
 
 Suggested new packages
 ======================
@@ -954,7 +954,6 @@ Suggested package updates
 	o mkvtoolnix-2.2.0
 	o mlview-0.9.0
 	o mmg-2.0.2
-	o moc-2.4.3
 	o modular-xorg-server-1.4
 	o monodevelop-1.0
 	o moon-buggy-1.0.51
@@ -1166,7 +1165,6 @@ Suggested package updates
 	o pine-pgp-filters-1.6
 	o pinfo-0.6.9
 	o pircbot-1.4.4
-	o pixman-0.10.0
 	o pkg_select-20051209
 	o ploticus-2.40
 	o ploticus-examples-230
