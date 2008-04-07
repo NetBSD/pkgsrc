@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/04 06:59:06 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2008/04/07 18:13:27 joerg Exp $
 
 DISTNAME=	tetrinetx-1.13.16+qirc-1.40c
 PKGNAME=	tetrinetx-1.13.16
@@ -19,6 +19,8 @@ RCD_SCRIPTS=	tetrinetx
 
 LIBS.SunOS+=	-lsocket -lnsl -lresolv
 
+INSTALLATION_DIRS=	bin ${SHAREDIR}
+
 do-build:
 	cd ${WRKSRC:Q}/src && \
 	${CC} \
@@ -30,9 +32,8 @@ do-build:
 		main.c
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/bin/${BINARY:Q} \
-		${DESTDIR}${PREFIX:Q}/bin/tetrix
+		${DESTDIR}${PREFIX}/bin/tetrix
 	${INSTALL_DATA} ${WRKSRC:Q}/bin/game.conf ${DESTDIR}${SHAREDIR:Q}
 	${INSTALL_DATA} ${WRKSRC:Q}/bin/game.secure ${DESTDIR}${SHAREDIR:Q}
 	${INSTALL_DATA} ${WRKSRC:Q}/bin/game.motd ${DESTDIR}${SHAREDIR:Q}
