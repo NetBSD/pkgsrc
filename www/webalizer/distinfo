@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.10 2007/11/22 15:26:15 martti Exp $
+$NetBSD: distinfo,v 1.11 2008/04/07 09:43:52 martin Exp $
 
+SHA1 (geolizer_2.01-10-patch.20050520.tar.gz) = d297ff4ff42220e1aec648f1f1580111255c0366
+RMD160 (geolizer_2.01-10-patch.20050520.tar.gz) = 0a492c4268e4437569cf16ff2f5c88fdc04de0ca
+Size (geolizer_2.01-10-patch.20050520.tar.gz) = 39552 bytes
 SHA1 (webalizer-2.01-10-src.tar.bz2) = fbf6ad78fc2b0189d065e661dc02a781e858b31a
 RMD160 (webalizer-2.01-10-src.tar.bz2) = 4605ff9bd8ec1c74680b8fbfe703f2e81ae68e20
 Size (webalizer-2.01-10-src.tar.bz2) = 252664 bytes
