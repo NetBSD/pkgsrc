@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.657 2008/04/07 15:37:02 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.658 2008/04/07 16:16:37 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1289,3 +1289,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/tcl to 8.4.18 [bjs 2008-04-07]
 	Updated x11/tk to 8.4.18 [bjs 2008-04-07]
 	Updated audio/libsndfile to 1.0.17nb3 [bjs 2008-04-07]
+	Updated audio/moc to 2.4.3 [bjs 2008-04-07]
+	Added audio/moc-devel version 2.5.0.3 [bjs 2008-04-07]
