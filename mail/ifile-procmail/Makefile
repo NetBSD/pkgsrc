@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/04 17:57:18 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2008/04/07 17:21:39 joerg Exp $
 #
 
 DISTNAME=	ifile.procmail-0.3
@@ -25,9 +25,9 @@ REPLACE_KSH+=	bin/ifile.*
 
 NO_BUILD=	YES
 
+INSTALLATION_DIRS=	bin share/doc/ifile share/examples/ifile
+
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/ifile
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/ifile
 	for f in `${LS} ${WRKSRC}/bin` ; do \
 		${INSTALL_SCRIPT} ${WRKSRC}/bin/$$f ${DESTDIR}${PREFIX}/bin ; \
 	done
