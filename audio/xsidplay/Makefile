@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2008/03/02 06:10:34 jlam Exp $
+# $NetBSD: Makefile,v 1.42 2008/04/07 18:28:56 joerg Exp $
 #
 
 DISTNAME=	xsidplay-1.6.5.1a
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	audio x11
 MASTER_SITES=	http://www.geocities.com/SiliconValley/Lakes/5147/sidplay/packages/
 EXTRACT_SUFX=	.tgz
@@ -30,8 +30,6 @@ pre-configure:
 
 do-install:
 	@${INSTALL_PROGRAM} ${WRKSRC}/src/xsidplay ${DESTDIR}${PREFIX}/bin
-
-BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../audio/libsidplay/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
