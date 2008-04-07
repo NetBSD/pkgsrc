@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2006/02/12 18:35:55 xtraeme Exp $
+# $NetBSD: options.mk,v 1.3 2008/04/07 16:15:25 bjs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.moc
 PKG_SUPPORTED_OPTIONS=	sndfile flac vorbis speex curl samplerate
@@ -6,7 +6,15 @@ PKG_SUGGESTED_OPTIONS=	sndfile flac vorbis curl
 
 .include "../../mk/bsd.options.mk"
 
-.if !empty(PKG_OPTIONS:Msndfile)
+.if !empty(PKG_OPTIONS:Msamplerate)
+PKG_OPTIONS+=		sndfile
+CONFIGURE_ARGS+=	--with-samplerate
+.  include "../../audio/libsamplerate/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-samplerate
+.endif
+
+.if !empty(PKG_OPTIONS:Msndfile) || defined(PKG_OPTIONS:Msamplerate)
 PLIST_SUBST+=		SNDFILE=
 CONFIGURE_ARGS+=	--with-sndfile
 .  include "../../audio/libsndfile/buildlink3.mk"
@@ -47,11 +55,4 @@ CONFIGURE_ARGS+=	--with-curl
 .  include "../../www/curl/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--without-curl
-.endif
-
-.if !empty(PKG_OPTIONS:Msamplerate)
-CONFIGURE_ARGS+=	--with-samplerate
-.  include "../../audio/libsamplerate/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-samplerate
 .endif
