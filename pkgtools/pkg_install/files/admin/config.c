@@ -1,4 +1,4 @@
-/*	$NetBSD: config.c,v 1.4 2008/04/07 13:07:14 joerg Exp $	*/
+/*	$NetBSD: config.c,v 1.5 2008/04/07 13:25:32 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: config.c,v 1.4 2008/04/07 13:07:14 joerg Exp $");
+__RCSID("$NetBSD: config.c,v 1.5 2008/04/07 13:25:32 joerg Exp $");
 #endif
 
 /*-
@@ -80,10 +80,9 @@ pkg_install_config(const char *config_file)
 			*var->var = value;
 	}
 
-	if (pkg_vulnerabilities_dir != NULL)
-		ret = asprintf(&value, "%s/pkg-vulnerabilities", pkg_vulnerabilities_dir);
-	else
-		ret = asprintf(&value, "%s/pkg-vulnerabilities", _pkgdb_getPKGDB_DIR());
+	if (pkg_vulnerabilities_dir == NULL)
+		pkg_vulnerabilities_dir = _pkgdb_getPKGDB_DIR();
+	ret = asprintf(&value, "%s/pkg-vulnerabilities", pkg_vulnerabilities_dir);
 	pkg_vulnerabilities_file = value;
 	if (ret == -1)
 		err(EXIT_FAILURE, "asprintf failed");
