@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2008/03/04 12:02:11 tnn Exp $
+# $NetBSD: options.mk,v 1.3 2008/04/07 19:44:19 tnn Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -24,9 +24,19 @@ GMFILES:=	${GMFILES:C/^/gm_tt/g:C/$/.gm/g}
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
 		  ${DATAFILES:C/^/ttd\//g} ${GMFILES:C/^/ttd\//g}
 
-post-extract:
+DATA_DIR=	${DESTDIR}${PREFIX}/share/openttd
+
+post-extract: post-extract-ttd-data
+post-extract-ttd-data: .PHONY
 	${RUN} for f in ${DATAFILES} ${GMFILES}; do \
 	  cp ${DISTDIR}/ttd/$$f ${WRKDIR}; done
+
+post-install: post-install-ttd-data
+post-install-ttd-data: .PHONY
+	${RUN} for f in ${DATAFILES}; do \
+	  ${INSTALL_DATA} ${WRKDIR}/$$f ${DATA_DIR}/data; done
+	${RUN} for f in ${GMFILES}; do \
+	  ${INSTALL_DATA} ${WRKDIR}/$$f ${DATA_DIR}/gm; done
 .else
 PLIST_SUBST+=	TTD_DATA="@comment "
 .endif
