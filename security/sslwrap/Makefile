@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/01/18 05:09:42 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2008/04/07 18:06:07 joerg Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV:S/-//}
@@ -29,5 +29,7 @@ SUBST_MESSAGE.sslwrap=	Adjusting the path for include files
 SUBST_STAGE.sslwrap=	do-configure
 SUBST_FILES.sslwrap=	apps.h s_cb.c s_server.c s_socket.c
 SUBST_SED.sslwrap=	-e 's|OPENSSL"|"openssl/|'
+
+INSTALLATION_DIRS=	sbin
 
 .include "../../mk/bsd.pkg.mk"
