@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/02/27 23:50:29 apb Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/07 16:20:23 joerg Exp $
 #
 
 DISTNAME=	3proxy-0.5.3k
@@ -14,6 +14,8 @@ COMMENT=	Multi-protocol proxy
 
 WRKSRC=		${WRKDIR}
 MAKE_FILE=	Makefile.unix
+
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
 # 3proxy-0.5.* is dual-licenced under GPL or custom terms.  It's not
 # clear exactly which version of the GPL is intended; ${WRKSRC}/License
