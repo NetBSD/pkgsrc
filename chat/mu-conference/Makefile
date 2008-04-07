@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/03/03 02:19:52 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2008/04/07 17:45:40 joerg Exp $
 #
 
 DISTNAME=		mu-conference-0.6.0
@@ -34,9 +34,9 @@ FILES_SUBST+=		JABBERD_PIDDIR=${JABBERD_PIDDIR:Q}
 FILES_SUBST+=		JABBERD_USER=${JABBERD_USER:Q}
 
 EGDIR=			${PREFIX}/share/examples/jabberd
-CONF_FILES+=		${EGDIR:Q}/muc-jcr.xml ${PKG_SYSCONFDIR:Q}/muc-jcr.xml
+CONF_FILES+=		${EGDIR}/muc-jcr.xml ${PKG_SYSCONFDIR:Q}/muc-jcr.xml
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/examples/jabberd
 
 post-extract:
 	@${MV} ${XMLCONFIG:Q} ${XMLCONFIG:Q}.in
@@ -55,8 +55,8 @@ post-build:
 	cd ${SUBWRKSRC:Q} && ${SETENV} ${MAKE_ENV} ${GMAKE} -f jcomp.mk
 
 do-install:
-	${INSTALL_PROGRAM} ${SUBWRKSRC:Q}/mu-conference ${DESTDIR}${PREFIX:Q}/bin
-	${INSTALL_DATA} ${WRKSRC:Q}/${DISTNAME:Q}/muc-jcr.xml ${DESTDIR}${EGDIR:Q}
+	${INSTALL_PROGRAM} ${SUBWRKSRC:Q}/mu-conference ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC:Q}/${DISTNAME:Q}/muc-jcr.xml ${DESTDIR}${EGDIR}
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
