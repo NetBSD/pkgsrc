@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/03/04 15:39:10 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2008/04/07 17:50:46 joerg Exp $
 #
 
 DISTNAME=	pwc-9.0.2
@@ -28,7 +28,7 @@ do-build:
 do-install:
 	for f in phpsshot phpsview ; do				\
 		cd ${WRKSRC}/2.4 &&				\
-		${INSTALL_PROGRAM} $$f ${DESTDIR}${PREFIX}/bin 	\
+		${INSTALL_PROGRAM} $$f ${DESTDIR}${PREFIX}/bin;	\
 	done
 
 .include "../../graphics/imlib/buildlink3.mk"
