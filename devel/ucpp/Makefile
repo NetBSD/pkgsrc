@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/03 17:45:38 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/07 18:18:26 joerg Exp $
 #
 
 DISTNAME=	ucpp-1.3
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ucpp ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/ucpp.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/ucpp ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/ucpp.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

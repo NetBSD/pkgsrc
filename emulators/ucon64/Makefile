@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/03/03 19:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2008/04/07 18:18:01 joerg Exp $
 #
 
 DISTNAME=		ucon64-2.0.0-src
@@ -22,7 +22,7 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 CHECK_PORTABILITY_SKIP+=install_beos.sh
 
-INSTALLATION_DIRS=	share/examples/ucon64 share/doc/ucon64/images
+INSTALLATION_DIRS=	bin share/examples/ucon64 share/doc/ucon64/images
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ucon64 ${DESTDIR}${PREFIX}/bin
