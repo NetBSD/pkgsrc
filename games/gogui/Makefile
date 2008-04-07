@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/03/04 11:02:24 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2008/04/07 17:18:39 joerg Exp $
 #
 
 DISTNAME=		gogui-0.9.3
@@ -26,8 +26,7 @@ USE_TOOLS+=		printf
 
 LIBDIR=			${PREFIX}/share/gogui/lib
 DOCDIR=			${PREFIX}/share/doc/gogui
-MY_MANDIR=		${PREFIX}/${PKGMANDIR}
-INSTALLATION_DIRS=	bin ${LIBDIR} ${DOCDIR} ${MY_MANDIR}
+INSTALLATION_DIRS=	bin ${LIBDIR} ${DOCDIR} ${PKGMANDIR}/man1
 
 do-build:
 .for p in gmptogtp gogui gtpadapter gtpdisplay gtpdummy gtpregress	\
@@ -42,7 +41,7 @@ do-install:
 	cd ${WRKSRC}/doc/manual/html && ${INSTALL_DATA} *.html *.png \
 		${DESTDIR}${DOCDIR}/.
 	cd ${WRKSRC}/doc/manual/man && ${INSTALL_MAN} *.1 \
-		${DESTDIR}${MY_MANDIR}/man1/.
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
