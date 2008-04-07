@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.40 2008/03/23 01:04:47 dsainty Exp $	*/
+/*	$NetBSD: main.c,v 1.41 2008/04/07 13:07:14 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.40 2008/03/23 01:04:47 dsainty Exp $");
+__RCSID("$NetBSD: main.c,v 1.41 2008/04/07 13:07:14 joerg Exp $");
 #endif
 
 /*-
@@ -113,9 +113,10 @@ usage(void)
 	    " pmatch pattern pkg          - returns true if pkg matches pattern, otherwise false\n"
 	    " fetch-pkg-vulnerabilities [-s] - fetch new vulnerability file\n"
 	    " check-pkg-vulnerabilities [-s] <file> - check syntax and checksums of the vulnerability file\n"
-	    " audit [-es] [-t type] ...\n"
-	    " audit-pkg [-es] [-t type] ...\n"
-	    " audit-batch [-es] [-t type] ...\n",
+	    " audit [-es] [-t type] ...       - check installed packages for vulnerabilities\n"
+	    " audit-pkg [-es] [-t type] ...   - check listed packages for vulnerabilities\n"
+	    " audit-batch [-es] [-t type] ... - check packages in listed files for vulnerabilities\n"
+	    " config-var name                 - print current value of the configuration variable\n",
 	    getprogname());
 	exit(EXIT_FAILURE);
 }
@@ -521,6 +522,11 @@ main(int argc, char *argv[])
 	} else if (strcasecmp(argv[0], "unset") == 0) {
 		argv++;		/* "unset" */
 		set_unset_variable(argv, TRUE);
+	} else if (strcasecmp(argv[0], "config-var") == 0) {
+		argv++;
+		if (argv == NULL || argv[1] != NULL)
+			errx(EXIT_FAILURE, "config-var takes exactly one argument");
+		pkg_install_show_variable(argv[0]);
 	}
 #ifndef BOOTSTRAP
 	else if (strcasecmp(argv[0], "fetch-pkg-vulnerabilities") == 0) {

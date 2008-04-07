@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_admin.1,v 1.16 2008/03/13 16:35:30 joerg Exp $
+.\"	$NetBSD: pkg_admin.1,v 1.17 2008/04/07 13:07:14 joerg Exp $
 .\"
 .\" Copyright (c) 1999-2008 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -164,6 +164,10 @@ Check format and hashes in the pkg-vulnerabilties file
 If
 .Fl s
 is given, also check the embedded signature.
+.It Cm config-var Ar variable
+Print the current value of
+.Ar variable
+as used after parsing the configuration file.
 .It Cm delete Ar pkg ...
 For each listed package, remove all file entries in the package database that
 belong to the package.
