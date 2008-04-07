@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.5 2006/09/04 08:56:09 martti Exp $
+# $NetBSD: Makefile.common,v 1.6 2008/04/07 16:58:50 joerg Exp $
 #
 
 ### XXX: See the other 'XXX' comment below when updating this package.
@@ -34,5 +34,7 @@ DEPENDS+=		distcc>=${DISTCC_VERSION}nb1:../../devel/distcc
 PRINT_PLIST_AWK+=	/^@dirrm share\/distcc$$/ \
 				{ print "@comment in distcc: " $$0; next }
 .endif
+
+INSTALLATION_DIRS+=	bin
 
 .include "../../devel/popt/buildlink3.mk"

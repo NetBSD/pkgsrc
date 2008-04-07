@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/03/04 06:59:04 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2008/04/07 17:08:44 joerg Exp $
 
 DISTNAME=	fltk-1.1.7-source
 PKGNAME=	fltk-sudoku-1.1.7
@@ -44,6 +44,8 @@ SUBST_SED.config2=	-e "s|../lib/||g"
 
 BUILD_DIRS=		test
 BUILD_TARGET=		sudoku
+
+INSTALLATION_DIRS=	bin
 
 SETGIDGAME=		yes
 SPECIAL_PERMS=		bin/fltk-sudoku ${SETGID_GAMES_PERMS}

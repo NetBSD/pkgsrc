@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/04 19:32:30 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/07 16:59:48 joerg Exp $
 
 DISTNAME=	dvdbackup-0.1.1
 PKGREVISION=	4
@@ -13,7 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/dvdbackup/src
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-build:
 	cd ${WRKSRC}; \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/04 17:57:18 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/07 17:07:45 joerg Exp $
 #
 
 DISTNAME=		fetchyahoo-2.11.0
@@ -40,11 +40,12 @@ SUBST_FILES.sa2=	fetchyahoo fetchyahoo.1 INSTALL
 SUBST_SED.sa2=		-e s!/etc/fetchyahoorc!${PKG_SYSCONFDIR}/fetchyahoorc!g
 SUBST_SED.sa2+=		-e s!/usr/share/doc/fetchyahoo!${DOCDIR}!g
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/fetchyahoo \
+			share/examples/fetchyahoo
+
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/fetchyahoo ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/fetchyahoo.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 .for i in COPYING ChangeLog Credits INSTALL TODO index.html
 	${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${PREFIX}/share/doc/fetchyahoo
 .endfor
