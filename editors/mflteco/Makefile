@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/03/03 18:25:52 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2008/04/07 17:37:36 joerg Exp $
 #
 
 PKGNAME=		mflteco-19920331
@@ -14,22 +14,18 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		te
 
-DOCS=			${LOCALBASE}/share/doc/mflteco
-XMPL=			${LOCALBASE}/share/examples/mflteco
+INSTALLATION_DIRS=	bin share/doc/mflteco share/examples/mflteco
 
 pre-patch:
 	cp ${WRKSRC}/Makefile.sun4 ${WRKSRC}/Makefile
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/te ${DESTDIR}${LOCALBASE}/bin
-	${INSTALL_DATA_DIR} ${DESTDIR}${DOCS}
-	${INSTALL_DATA_DIR} ${DESTDIR}${XMPL}
-	${INSTALL_DATA} ${WRKSRC}/00README ${DESTDIR}${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/teco.doc ${DESTDIR}${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/teco.doc.1 ${DESTDIR}${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/.tecorc ${DESTDIR}${XMPL}
-	${INSTALL_DATA} ${WRKSRC}/pi.tec ${DESTDIR}${XMPL}
-	${INSTALL_DATA} ${WRKSRC}/sample_tecorc.old ${DESTDIR}${XMPL}
-	${INSTALL_DATA} ${WRKSRC}/tecorc.mch ${DESTDIR}${XMPL}
+	${INSTALL_PROGRAM} ${WRKSRC}/te ${DESTDIR}${PREFIX}/bin
+.for f in 00README teco.doc teco.doc.1
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/mflteco
+.endfor
+.for f in .tecorc pi.tec sample_tecorc.old tecorc.mch
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/examples/mflteco
+.endfor
 
 .include "../../mk/bsd.pkg.mk"
