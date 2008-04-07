@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.653 2008/04/07 14:40:11 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.654 2008/04/07 15:03:40 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1284,3 +1284,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added geography/p5-Geo-Distance version 0.11 [he 2008-04-07]
 	Added databases/p5-Class-DBI-Pg version 0.06 [he 2008-04-07]
 	Updated www/opera to 9.27 [xtraeme 2008-04-07]
+	Updated x11/pixman to 0.10.0 [bjs 2008-04-07]
