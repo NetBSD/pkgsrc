@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/03/03 05:51:08 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2008/04/07 18:04:21 joerg Exp $
 #
 
 DISTNAME=	smbchartool-2.3a
@@ -24,11 +24,12 @@ NO_BUILD=	yes
 WRKSRC=		${WRKDIR}/smbchartool
 REPLACE_PERL=	capecho hexecho smbfnconv
 
+INSTALLATION_DIRS=	bin share/doc/smbchartool
+
 do-install:
 .for f in ${REPLACE_PERL}
 	${INSTALL_SCRIPT} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/bin
 .endfor
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/smbchartool
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/smbchartool
 	${INSTALL_DATA} ${WRKSRC}/dot.bashrc.example \
 		${DESTDIR}${PREFIX}/share/doc/smbchartool/dot.profile
