@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.658 2008/04/07 16:16:37 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.659 2008/04/07 16:26:51 hira Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1291,3 +1291,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/libsndfile to 1.0.17nb3 [bjs 2008-04-07]
 	Updated audio/moc to 2.4.3 [bjs 2008-04-07]
 	Added audio/moc-devel version 2.5.0.3 [bjs 2008-04-07]
+	Updated misc/openoffice2 to 2.4.0 [hira 2008-04-07]
