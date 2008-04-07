@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/03/25 09:48:13 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/04/07 17:43:14 joerg Exp $
 #
 
 DISTNAME=		mpd.1.0.1
@@ -29,7 +29,8 @@ SUBST_SED.mpd+=		-e 's,_WRKSRC_,${WRKSRC},g'
 SUBST_SED.mpd+=		-e 's,_XINC_,${X11BASE}/include,g'
 SUBST_SED.mpd+=		-e 's,_XLIB_,${X11BASE}/lib,g'
 
-INSTALLATION_DIRS=	bin lib/mpd ${PKGMANDIR}/man1 ${PKGMANDIR}/man3 share/doc/mpd
+INSTALLATION_DIRS=	bin lib/mpd ${PKGMANDIR}/man1 ${PKGMANDIR}/man3 \
+			${PKGMANDIR}/man5 share/doc/mpd
 
 post-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/csw/cstest ${PREFIX}/bin/mpd-cstest
