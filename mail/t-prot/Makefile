@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/04 17:57:20 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/07 18:08:18 joerg Exp $
 #
 
 DISTNAME=	t-prot-2.5
@@ -15,13 +15,14 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_PERL+=	t-prot
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/t-prot
+
 do-configure do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/t-prot ${DESTDIR}${PREFIX}/bin/t-prot
 	${INSTALL_MAN} ${WRKSRC}/t-prot.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/t-prot.1
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/t-prot
 	${INSTALL_DATA} ${WRKSRC}/contrib/muttrc.t-prot \
 		${DESTDIR}${PREFIX}/share/doc/t-prot/
 
