@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2008/02/15 16:46:20 gdt Exp $
+# $NetBSD: Makefile,v 1.21 2008/04/07 20:10:10 xtraeme Exp $
 #
 
-DISTNAME=		bzr-1.2
+DISTNAME=		bzr-1.3
 CATEGORIES=		devel scm
 MASTER_SITES=		http://bazaar-vcs.org/releases/src/
 
