@@ -1,7 +1,7 @@
 #!@AWK@ -f
-# $NetBSD: create-report-html.awk,v 1.9 2008/03/01 19:04:37 rillig Exp $
+# $NetBSD: create-report-html.awk,v 1.10 2008/04/07 19:41:07 joerg Exp $
 #
-# Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
+# Copyright (c) 2007, 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
 #
 # This code was developed as part of Google's Summer of Code 2007 program.
@@ -53,6 +53,44 @@ function print_failed_log_line(PKGNAME, PHASE, VAR) {
 		print "<td>&nbsp;</td>" > html_report
 }
 
+function print_pre_fail_reason(PKGNAME, chars, in_quote, in_sep, i) {
+	split(pre_fail_reason[PKGNAME], chars, "")
+	in_quote = 0
+	in_sep = 0
+	for (i = 1; i < length(chars); ++i) {
+		if (chars[i] == "\"") {
+			in_quote = 1 - in_quote
+			continue
+		}
+		if (in_quote == 0 && chars[i] == " ") {
+			if (!in_sep)
+				printf "<br />" > html_report
+			in_sep = 1
+			continue
+		}
+		in_sep = 0
+
+		if (chars[i] == "\\") {
+			++i
+			if (chars[i] == "n")
+				printf " " > html_report
+			else if (chars[i] == "t")
+				printf " " > html_report
+			else if (chars[i] == "<")
+				printf "&lt;" > html_report
+			else if (chars[i] == ">")
+				printf "&gt;" > html_report
+			else if (chars[i] == "&")
+				printf "&amp;" > html_report
+			else
+				printf "%s", chars[i] > html_report
+			continue
+		}
+		printf "%s", chars[i] > html_report
+	}
+	printf "\n" > html_report
+}
+
 function print_failed(PKGNAME, cmd, has_pre_clean, has_depends,
     has_checksum,has_configure, has_build, has_install, has_package,
     has_clean, has_deinstall) {
@@ -99,6 +137,14 @@ function print_failed(PKGNAME, cmd, has_pre_clean, has_depends,
 	print_failed_log_line(PKGNAME, "clean", has_clean)
 	print_failed_log_line(PKGNAME, "deinstall", has_deinstall)
 	print "</tr>" > html_report
+	if (status[PKGNAME] == "prefailed") {
+		print "<tr class=\"" status[PKGNAME] "\">" > html_report
+		printf "<td>&nbsp;</td>" > html_report
+		printf "<td colspan=\"13\">" > html_report
+		print_pre_fail_reason(PKGNAME)
+		print "</td>" > html_report
+		print "</tr>" > html_report
+	}
 }
 
 BEGIN {
@@ -136,9 +182,10 @@ BEGIN {
 			location[cur] = substr($0, 14)
 		else if ($0 ~ "^PKG_DEPTH=")
 			depth[cur] = substr($0, 11) - 1
-		else if ($0 ~ "^BUILD_STATUS=") {
+		else if ($0 ~ "^BUILD_STATUS=")
 			status[cur] = substr($0, 14)
-		}
+		else if ($0 ~ "^PKG_FAIL_REASON=")
+			pre_fail_reason[cur] = substr($0, 17)
 	}
 	close(report_file)
 
