@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/03/24 18:40:18 adrianp Exp $
+# $NetBSD: Makefile,v 1.33 2008/04/07 17:22:48 joerg Exp $
 #
 
 DISTNAME=	ircu2.10.12.12
@@ -59,11 +59,9 @@ PKG_USERS=		${IRCD_USER}:${IRCD_GROUP}
 PKG_GECOS.${IRCD_USER}=	IRC server user
 PKG_SHELL.${IRCD_USER}=	${SH}
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8 sbin ${DOCDIR} ${EGDIR}
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/ircd/ircd ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_PROGRAM} ${WRKSRC}/ircd/umkpasswd ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/ircd/convert-conf \

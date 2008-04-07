@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/03 17:45:35 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/07 17:14:20 joerg Exp $
 #
 
 DISTNAME=	gflib
@@ -16,6 +16,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 MAKE_FILE=	makefile
 
 BUILD_TARGET=	w16
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	for f in gf_div gf_mult parity_test rs_decode_file		\
