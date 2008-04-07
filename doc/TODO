@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7186 2008/04/06 21:01:23 wiz Exp $
+$NetBSD: TODO,v 1.7187 2008/04/07 00:19:09 wiz Exp $
 
 Suggested new packages
 ======================
@@ -397,6 +397,7 @@ Suggested package updates
 	o alee-ttf-11.2
 	o algae-4.3.6
 	o aliados-0.2.0
+	o amanda-2.6.0
 	o amarok-1.80
 	o amavis-perl-0.3.12 [called just amavis]
 	o amavisd-new-2.5.4
@@ -430,7 +431,7 @@ Suggested package updates
 	o arnold-20040104
 	o arping-2.06
 	o asapm-3.1
-	o asc-2.0.0
+	o asc-2.1.0
 	o ascii-3.8
 	o aspell-danish-1.6.12
 	o aspell-faroese-0.2.31
@@ -508,7 +509,7 @@ Suggested package updates
 	o claws-mail-3.3.1
 	o clearsilver-0.10.5
 	o clearsilver-base-0.10.5
-	o clive-0.4.7
+	o clive-0.4.8
 	o cmus-2.2.0 [pkg/37856]
 	o cocoon-2.1.10
 	o colorize-0.3.4
@@ -565,7 +566,7 @@ Suggested package updates
 	o drscheme-371
 	o dvd+rw-tools-7.1
 	o dvipng-1.9
-	o dwm-4.8
+	o dwm-4.9
 	o eagle-4.16
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
@@ -595,7 +596,7 @@ Suggested package updates
 	o epiphany-extensions-2.22.0
 	o epsg-6.14
 	o epstool-3.08
-	o eric3-4.1.1 [now called eric4]
+	o eric3-4.1.2 [now called eric4]
 	o erlang-12b1
 	o esh-0.8.5
 	o et-2.60
@@ -758,11 +759,12 @@ Suggested package updates
 	o hackbot-2.21
 	o hanzim-1.8
 	o haskell-mode-1.45
+	o hatari-1.0.0
 	o hdf-4.2r2
 	o hercules-3.04.1
 	o hesiod-3.1.0
 	o hexedit-1.2.12
-	o heyu-2.1.3
+	o heyu-2.2.0
 	o highlight-2.6.9
 	o hobbitmon-4.0.4 [pkg/30484]
 	o honeyd-1.5c
@@ -775,7 +777,7 @@ Suggested package updates
 	o http_load-20060312
 	o httptunnel-3.3
 	o hydrogen-0.9.3 [pkg/37424]
-	o hylafax-5.2.2
+	o hylafax-5.2.3
 	o ical-2.3.2
 	o icdprog-0.5
 	o icecast-2.3.1
@@ -813,7 +815,7 @@ Suggested package updates
 	o jcabc2ps-20070110
 	o jdb-1.14
 	o jgrasp-183
-	o jhead-2.8
+	o jhead-2.82
 	o jools-1.0
 	o jwhois-4.0
 	o jwm-2.0.1
@@ -822,6 +824,7 @@ Suggested package updates
 	o kbarcode-2.0.6
 	o kdbg-2.1.0
 	o kdrill-6.5
+	o kid3-1.0
 	o kinput2-3.1
 	o kismet-2007.01.1b
 	o kmess-1.5
@@ -917,6 +920,7 @@ Suggested package updates
 	o ltm-0.40
 	o ltris-1.0.12
 	o lucy-1.19p
+	o m4-1.4.11
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.13a
@@ -946,7 +950,7 @@ Suggested package updates
 	o mkfontdir-1.0.4
 	o mkfontscale-1.0.4
 	o mknmz-wwwoffle-0.7.2
-	o mksh-33
+	o mksh-33c
 	o mkvtoolnix-2.2.0
 	o mlview-0.9.0
 	o mmg-2.0.2
@@ -972,7 +976,7 @@ Suggested package updates
 	o mysql-5.1.23
 	o mysql-5.2.3
 	o mysqlcc-0.9.8
-	o nagios-3.0
+	o nagios-3.0.1
 	o naim-0.11.8.3.1
 	o nap-1.5.3
 	o nas-1.9.1
@@ -983,7 +987,7 @@ Suggested package updates
 	o ncview-1.93b
 	o ne-2.01
 	o nelma-3.1
-	o neon-0.28.1
+	o neon-0.28.2
 	o nessus-3.2.0
 	o netcdf-3.6.2
 	o netperf-2.4.4
@@ -1008,7 +1012,7 @@ Suggested package updates
 	o ntp4-4.2.4p3
 	o nulib2-220
 	o nullmailer-1.04
-	o nut-13.4
+	o nut-13.5
 	o nvi-1.81.6
 	o nxtvepg-2.8.0
 	o objc-3.2.8
@@ -1024,7 +1028,8 @@ Suggested package updates
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openmotif-2.3.0 [pkg/38038]
-	o openssh-4.9.1
+	o openssh-5.0p1
+	o opera-9.27
 	o orca-2.22.0
 	o oregano-0.60.0
 	o oroborus-2.0.18
@@ -1154,6 +1159,7 @@ Suggested package updates
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
+	o phppgadmin-4.2
 	o phylip-3.65
 	o picp-0.6.8
 	o pim6dd-20040819a
@@ -1169,9 +1175,10 @@ Suggested package updates
 	o plptools-0.13 [pkg/30244]
 	o plptools-1.0.2
 	o pmccabe-2.3.1
+	o png-1.2.26
 	o pngcheck-2.3.0
 	o po4a-0.29
-	o poedit-1.4
+	o poedit-1.4.1
 	o polsms-2.1.0
 	o poppler-0.8.0
 	o poppy-4.01
@@ -1181,6 +1188,7 @@ Suggested package updates
 	o powermanga-0.90
 	o pptp-1.7.1 [pkg/38038]
 	o prelude-lml-0.9.11
+	o prelude-manager-0.9.12
 	o printproto-1.0.4
 	o profit-2.5.3
 	o projclock-0.9
@@ -1201,7 +1209,7 @@ Suggested package updates
 	o py-ZODB-3.2.10
 	o py-ZopeInterface-3.3.0
 	o py-bdb-xml-2.1.8
-	o py-bsddb3-4.6.2
+	o py-bsddb3-4.6.3
 	o py-checker-0.8.17
 	o py-clearsilver-0.10.5
 	o py-curl-7.16.4
@@ -1211,6 +1219,7 @@ Suggested package updates
 	o py-gnutls-0.2.1
 	o py-imagingtk-1.1.6
 	o py-kenosis-0.96
+	o py-ldap-2.3.4
 	o py-libxml2-2.6.31
 	o py-logging-0.4.9.6
 	o py-m2crypto-0.18.2
@@ -1256,7 +1265,7 @@ Suggested package updates
 	o raine-0.50.6
 	o randread-0.2
 	o rapidsvn-0.9.6
-	o raptor-1.4.16
+	o raptor-1.4.17
 	o rarian-0.8.0
 	o rat-4.2.25
 	o ratpoison-1.4.3
@@ -1328,7 +1337,6 @@ Suggested package updates
 	o smalltalk-3.0.2
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.65
-	o smokeping-2.3.1
 	o smtpfeed-1.20
 	o snd-9.7
 	o snes9x-1.51
@@ -1362,7 +1370,7 @@ Suggested package updates
 	o t1utils-1.34
 	o tacacs-4.0.4.14
 	o taskjuggler-2.4.0
-	o tcl-8.5.1
+	o tcl-8.5.2
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
@@ -1380,7 +1388,7 @@ Suggested package updates
 	o tfmxplay-1.1.6
 	o tile-0.7.4
 	o tinyproxy-1.7.0
-	o tk-8.5.1
+	o tk-8.5.2
 	o tk83-8.3.5
 	o tkcvs-8.1
 	o tkdiff-4.1.3 [pkg/34440]
@@ -1434,7 +1442,7 @@ Suggested package updates
 	o wcalc-2.3
 	o wcalc-2.3.1
 	o wdm-1.28
-	o webmin-1.400
+	o webmin-1.410
 	o weewm-0.01
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
 	o wesnoth-1.4.0
@@ -1499,7 +1507,7 @@ Suggested package updates
 	o xf86-video-vmware-10.16.0
 	o xfstt-1.7
 	o xhippo-3.5
-	o xine-lib-1.1.11
+	o xine-lib-1.1.11.1
 	o xinit-1.0.8
 	o xisp-2.7p4
 	o xkbcomp-1.0.4
@@ -1560,7 +1568,7 @@ Suggested package updates
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zenity-2.22.0
-	o zile-2.2.56
+	o zile-2.2.57
 	o zircon-1.18.256
 	o zoom-1.0.5
 	o zope25-AbracadabraObject-2.0.0
@@ -1575,7 +1583,7 @@ Suggested package updates
 	o zope25-XMLWidgets-0.10
 	o zope25-ZWiki-0.58.0
 	o zopeedit-0.8
-	o zsh-4.3.5
+	o zsh-4.3.6
 	o zziplib-0.13.38
 
 Infrastructure problems which need addressing
