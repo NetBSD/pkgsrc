@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2008/03/03 20:17:11 jlam Exp $
+# $NetBSD: Makefile.common,v 1.11 2008/04/07 16:54:26 joerg Exp $
 
 DISTNAME=	cyr-rfx-${CYR_RFX_ENCODING}-1.1
 CATEGORIES=	fonts x11
@@ -26,6 +26,8 @@ FONTS_DIRS.x11+=	${PREFIX}/lib/X11/fonts/local/${CYR_RFX_ENCODING}/misc
 REQD_DIRS+=		${PREFIX}/lib/X11/fonts/local/${CYR_RFX_ENCODING}
 REQD_DIRS+=		${PREFIX}/lib/X11/fonts/local/${CYR_RFX_ENCODING}/75dpi
 REQD_DIRS+=		${PREFIX}/lib/X11/fonts/local/${CYR_RFX_ENCODING}/misc
+
+INSTALLATION_DIRS=	lib/X11/fonts/local
 
 do-install:
 	cd ${DESTDIR}${PREFIX}/lib/X11/fonts/local && \
