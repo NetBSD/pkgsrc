@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/03/03 02:19:52 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2008/04/07 18:21:29 joerg Exp $
 
 DISTNAME=	Unreal3.2.7
 PKGNAME=	unrealircd-3.2.7
@@ -120,15 +120,11 @@ post-build:
 	${CP} ${PKGDIR:Q}/MESSAGE.inet6 ${WRKDIR:Q}/.MESSAGE_SRC.inet6
 .endif
 
-do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${IRCD_SHARE}
-	${INSTALL_DATA_DIR} ${DESTDIR}${IRCD_SHARE:Q}/networks
-	${INSTALL_DATA_DIR} ${DESTDIR}${IRCD_SHARE:Q}/aliases
-	${INSTALL_DATA_DIR} ${DESTDIR}${IRCD_SHARE:Q}/modules
-	${INSTALL_DATA_DIR} ${DESTDIR}${IRCD_DOCS:Q}
-	${INSTALL_DATA_DIR} ${DESTDIR}${IRCD_EG:Q}
+INSTALLATION_DIRS=	sbin ${IRCD_DOCS} ${IRCD_EG} ${IRCD_SHARE}/aliases \
+			${IRCD_SHARE}/modules ${IRCD_SHARE}/networks
 
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/src/ircd ${DESTDIR}${PREFIX:Q}/sbin
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/src/ircd ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC:Q}/networks/*.network \
 		${DESTDIR}${IRCD_SHARE:Q}/networks
 	${INSTALL_DATA} ${WRKSRC:Q}/networks/networks.ndx \
