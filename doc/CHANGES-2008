@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.655 2008/04/07 15:06:14 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.656 2008/04/07 15:17:22 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1286,3 +1286,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/opera to 9.27 [xtraeme 2008-04-07]
 	Updated x11/pixman to 0.10.0 [bjs 2008-04-07]
 	Updated devel/scmgit to 1.5.4.5 [bjs 2008-04-07]
+	Updated lang/tcl to 8.4.18 [bjs 2008-04-07]
+	Updated x11/tk to 8.4.18 [bjs 2008-04-07]
