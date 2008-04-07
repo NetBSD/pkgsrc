@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/03/03 02:19:51 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2008/04/07 17:22:11 joerg Exp $
 #
 
 DISTNAME=		iip-1.1.0
@@ -18,11 +18,10 @@ MAKE_FLAGS+=		LD=${CC:Q}
 MAKE_FLAGS+=		LDFLAGS=${LDFLAGS:M*:Q}
 MAKE_FLAGS+=		CFLAGS=${CFLAGS:M*:Q}\ ${CPPFLAGS:M*:Q}\ -I.
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/iip
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/isproxy ${DESTDIR}${PREFIX}/bin/
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/iip
 	${INSTALL_DATA} ${WRKSRC}/src/node.ref \
 		${DESTDIR}${PREFIX}/share/examples/iip/
 	${INSTALL_DATA} ${WRKSRC}/doc/isproxy.1 \
