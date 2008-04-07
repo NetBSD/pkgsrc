@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/01/14 16:00:59 ghen Exp $
+# $NetBSD: Makefile,v 1.15 2008/04/07 17:31:52 joerg Exp $
 #
 
 DISTNAME=	memcached-1.2.2
@@ -15,7 +15,7 @@ GNU_CONFIGURE=	yes
 
 CONFIGURE_ARGS+=	--with-libevent=${BUILDLINK_PREFIX.libevent}
 
-INSTALLATION_DIRS=	bin share/doc/${PKGBASE} ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin share/doc/${PKGBASE} ${PKGMANDIR}/man1 sbin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/memcached ${DESTDIR}${PREFIX}/sbin
