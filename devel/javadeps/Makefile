@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/03/03 17:45:35 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2008/04/07 17:26:42 joerg Exp $
 #
 
 DISTNAME=	javadeps-1.1
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	destdir
 WRKSRC=		${WRKDIR}/JavaDeps-1.1
 USE_JAVA=	run
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/jdeps share/jdeps
 
 do-build:
 	cd ${WRKSRC}; for file in jdeps; do				\
@@ -28,12 +28,10 @@ do-build:
 
 do-install:
 	${CP} ${WRKSRC}/jdeps ${DESTDIR}${PREFIX}/bin
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/share/jdeps
 	${CP} ${WRKSRC}/jdeps.jar ${DESTDIR}${PREFIX}/share/jdeps/jdeps.jar
-	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/share/doc/jdeps
 	cd ${WRKSRC}/doc && ${PAX} -rw -pe . ${DESTDIR}${PREFIX}/share/doc/jdeps
 	${CHOWN} -R ${BINOWN}:${BINGRP} \
-		${DESTDIR}${PREFIX}/share/jdeps ${PREFIX}/share/doc/jdeps
+		${DESTDIR}${PREFIX}/share/jdeps ${DESTDIR}${PREFIX}/share/doc/jdeps
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

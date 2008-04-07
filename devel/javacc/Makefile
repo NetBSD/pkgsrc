@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/03 17:45:35 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/07 17:25:56 joerg Exp $
 
 DISTNAME=	javacc-4.0
 CATEGORIES=	devel
@@ -22,7 +22,7 @@ SUBST_SED.paths=	-e 's,`dirname \$$0`/lib,${PREFIX}/lib/java,g'
 
 .include "../../mk/java-vm.mk"
 
-INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	bin share/examples/javacc
 
 do-install:
 .for f in javacc jjdoc jjtree
@@ -33,7 +33,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/javacc
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${PREFIX}/share/doc/javacc
 	${INSTALL_DATA} ${WRKSRC}/doc/* ${DESTDIR}${PREFIX}/share/doc/javacc
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/javacc
 	${CP} -R ${WRKSRC}/examples/* ${DESTDIR}${PREFIX}/share/examples/javacc
 	${FIND} ${DESTDIR}${PREFIX}/share/examples/javacc -type d -print \
 		| ${XARGS} ${CHMOD} ${PKGDIRMODE}
