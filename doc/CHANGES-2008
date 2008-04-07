@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.660 2008/04/07 17:10:14 adam Exp $
+$NetBSD: CHANGES-2008,v 1.661 2008/04/07 18:07:15 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1293,3 +1293,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added audio/moc-devel version 2.5.0.3 [bjs 2008-04-07]
 	Updated misc/openoffice2 to 2.4.0 [hira 2008-04-07]
 	Updated graphics/inkscape to 0.46 [adam 2008-04-07]
+	Added textproc/ruby-fastercsv version 1.2.3 [seb 2008-04-07]
