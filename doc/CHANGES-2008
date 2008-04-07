@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.649 2008/04/07 07:21:48 adam Exp $
+$NetBSD: CHANGES-2008,v 1.650 2008/04/07 13:09:37 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1280,3 +1280,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/ruby-mocha version 0.5.6 [seb 2008-04-07]
 	Updated fonts/jisx0208fonts to 200301316nb2 [taca 2008-04-07]
 	Updated www/awstats to 6.7 [adam 2008-04-07]
+	Added textproc/p5-String-Random version 0.22 [he 2008-04-07]
