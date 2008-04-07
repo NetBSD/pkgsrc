@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.10 2007/01/07 12:25:52 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2008/04/07 16:15:24 bjs Exp $
 
-DISTNAME=		moc-2.4.0
-PKGREVISION=		2
+DISTNAME=		moc-2.4.3
 CATEGORIES=		audio
 MASTER_SITES=		ftp://ftp.daper.net/pub/soft/moc/stable/
 EXTRACT_SUFX=		.tar.bz2
@@ -9,6 +8,10 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		peter.schuller@infidyne.com
 HOMEPAGE=		http://moc.daper.net/
 COMMENT=		Curses based console audio player
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFLICTS=		moc-devel-[0-9]*
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
@@ -26,6 +29,13 @@ SUBST_SED.oss=		-e s,/dev/dsp,${DEVOSSAUDIO},g
 SUBST_MESSAGE.oss=	Fixing hardcoded audio device.
 
 .include "options.mk"
+###
+### This target is [currently] for regenerating configure to add the 
+### sched_get_priority_max check of librt.
+###
+#USE_TOOLS+=		autoconf automake
+#pre-configure:
+#	cd ${WRKSRC} && autoreconf -v -i
 
 .include "../../audio/libid3tag/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
