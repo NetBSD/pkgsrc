@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/04 19:32:30 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/07 17:14:53 joerg Exp $
 #
 
 DISTNAME=		${PKGNAME}-linux
@@ -19,10 +19,11 @@ WRKSRC=			${WRKDIR}/ggrab-0.22a
 RCD_SCRIPTS=		sserver
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 
+INSTALLATION_DIRS=	bin ${DOCDIR}
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/ggrab ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/sserver ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}/
 
 .include "../../mk/pthread.buildlink3.mk"
