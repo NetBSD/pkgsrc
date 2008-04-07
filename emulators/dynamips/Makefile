@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/03 19:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/07 17:00:14 joerg Exp $
 
 DISTNAME=	dynamips-0.2.7
 CATEGORIES=	emulators
@@ -21,6 +21,8 @@ SUBST_STAGE.libelf=	post-patch
 SUBST_FILES.libelf=	dynamips.h rom2c.c
 SUBST_SED.libelf=	-e 's,<libelf.h>,<libelf/libelf.h>,'
 SUBST_MESSAGE.libelf=	Fix libelf header file path
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/dynamips ${DESTDIR}${PREFIX}/bin
