@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2008/03/04 16:38:13 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2008/04/07 17:58:55 joerg Exp $
 
 DISTNAME=		sather-1.2.1
 PKGREVISION=		7
@@ -48,7 +48,8 @@ SUBST_SED.sather-configure=					\
 	-e 's:@LINKER_RPATH_FLAG@:${LINKER_RPATH_FLAG}:g'	\
 	-e 's:@COMPILER_RPATH_FLAG@:${COMPILER_RPATH_FLAG}:g'
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGINFODIR} ${PKGMANDIR}/man1 lib/sather \
+			share/doc/sather share/emacs/site-lisp
 
 post-patch:
 	ln -s netbsd ${WRKSRC}/System/Platforms/dragonfly
@@ -61,18 +62,15 @@ post-build:
 	${RM} -fr ${WRKSRC}/System/Platforms/dualgui/dual_gui_server.code
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/sather
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/lib/sather/Bin
-	cd ${WRKSRC}/Bin;						\
-	${INSTALL_PROGRAM} sacomp sabrowse				\
-		${DESTDIR}${PREFIX}/lib/sather/Bin;			\
-	${INSTALL_SCRIPT} PP gen_html saprep				\
+	${INSTALL_PROGRAM} ${WRKSRC}/Bin/sacomp ${WRKSRC}/Bin/sabrowse	\
 		${DESTDIR}${PREFIX}/lib/sather/Bin
+	${INSTALL_SCRIPT} ${WRKSRC}/Bin/PP ${WRKSRC}/Bin/gen_html	\
+		${WRKSRC}/Bin/saprep ${DESTDIR}${PREFIX}/lib/sather/Bin
 	${INSTALL_SCRIPT} ${WRKSRC}/debian/bin-wrapper			\
 		${DESTDIR}${PREFIX}/lib/sather/Bin
-	cd ${DESTDIR}${PREFIX}/bin;					\
-		 ${LN} -sf ../lib/sather/Bin/bin-wrapper sacomp;	\
-		 ${LN} -sf ../lib/sather/Bin/bin-wrapper sabrowse;	\
+	 ${LN} -sf ../lib/sather/Bin/bin-wrapper ${DESTDIR}${PREFIX}/bin/sacomp
+	 ${LN} -sf ../lib/sather/Bin/bin-wrapper ${DESTDIR}${PREFIX}/bin/sabrowse
 	cd ${WRKSRC} && ${PAX} -s ',.*\.sav,,' -rw Library		\
 		System/FORBID						\
 		System/Debug						\
@@ -89,14 +87,12 @@ do-install:
 		${TEST} ! -f "$$f" ||					\
 		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};\
 	done
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/sather
 	cd ${WRKSRC}/Doc && ${PAX} -rw -s ',.*/man.*,,' .		\
 		${DESTDIR}${PREFIX}/share/doc/sather
 	${INSTALL_MAN} ${WRKSRC}/Doc/man/man1/sacomp.1			\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/Doc/man/man1/sabrowse.1		\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/emacs/site-lisp
 	${INSTALL_DATA} ${WRKSRC}/Emacs/*.el				\
 		${DESTDIR}${PREFIX}/share/emacs/site-lisp
 

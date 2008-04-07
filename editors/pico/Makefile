@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2008/03/05 19:02:13 jlam Exp $
+# $NetBSD: Makefile,v 1.74 2008/04/07 17:52:07 joerg Exp $
 #
 # NOTE:
 # When updating, it is necessary to change the shlib version, located in
@@ -46,7 +46,7 @@ LIBS+=			${BUILDLINK_LDADD.termcap}
 
 MAKE_ENV+=	_STRIPFLAG_INSTALL=	# debug...
 
-INSTALLATION_DIRS=	bin lib ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin include/pico lib ${PKGMANDIR}/man1
 
 # Create the OS-dependent files for Interix from the Solaris ones.
 post-extract:
@@ -69,7 +69,6 @@ do-install:
 		${WRKSRC}/pico/pico ${WRKSRC}/pico/pilot ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/doc/pico.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/doc/pilot.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${PREFIX}/include/pico
 	cd ${WRKSRC}/pico && ${INSTALL_DATA} *.h ${DESTDIR}${PREFIX}/include/pico
 
 .include "../../mk/termcap.buildlink3.mk"

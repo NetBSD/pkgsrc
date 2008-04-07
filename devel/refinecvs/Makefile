@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/03/03 17:45:37 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2008/04/07 17:55:16 joerg Exp $
 #
 
 DISTNAME=		refinecvs-0.86.1251
@@ -19,13 +19,13 @@ REPLACE_PERL=	refinecvs.pl
 
 LIBDIR=	${PREFIX}/${PERL5_SUB_INSTALLARCHLIB}/Cvs/Repository
 
+INSTALLATION_DIRS=	bin ${LIBDIR} share/doc/refinecvs
+
 do-install:
-	${INSTALL_LIB_DIR} ${DESTDIR}${LIBDIR}
 	for f in DeltaCache.pm Delta.pm Exception.pm File.pm Reader.pm Revision.pm ; do \
 		${INSTALL_DATA} ${WRKSRC}/Cvs/Repository/$$f ${DESTDIR}${LIBDIR}/$$f; \
 	done
 	${INSTALL_SCRIPT} ${WRKSRC}/refinecvs.pl ${DESTDIR}${PREFIX}/bin/refinecvs
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/refinecvs
 	for f in Changes LICENSE README TODO ; do \
 		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/share/doc/refinecvs/$$f; \
 	done
