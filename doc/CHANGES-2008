@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.652 2008/04/07 13:47:57 he Exp $
+$NetBSD: CHANGES-2008,v 1.653 2008/04/07 14:40:11 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1283,3 +1283,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/p5-String-Random version 0.22 [he 2008-04-07]
 	Added geography/p5-Geo-Distance version 0.11 [he 2008-04-07]
 	Added databases/p5-Class-DBI-Pg version 0.06 [he 2008-04-07]
+	Updated www/opera to 9.27 [xtraeme 2008-04-07]
