@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/03 19:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/07 17:31:25 joerg Exp $
 #
 
 DISTNAME=	makeppf3_src
@@ -14,6 +14,8 @@ COMMENT=	PPF (Playstation Patch File) v3.0 creation tool
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=	${WRKDIR}
+
+INSTALLATION_DIRS=	bin
 
 do-build:
 	cd ${BUILD_DIRS} && ${CC} ${CPPFLAGS} ${CFLAGS} \
