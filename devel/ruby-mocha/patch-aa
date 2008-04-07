@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/04/07 00:32:28 seb Exp $
+
+Drop the dependency on the gem 'rake' as Rake is not installed as a gem.
+
+--- Rakefile.orig	2008-03-25 21:15:48.000000000 +0000
++++ Rakefile
+@@ -110,7 +110,7 @@ specification = Gem::Specification.new d
+   s.rdoc_options << '--title' << 'Mocha' << '--main' << 'README' << '--line-numbers'
+                          
+   s.autorequire = 'mocha'
+-  s.add_dependency('rake')
++#  s.add_dependency('rake')
+   s.files = FileList['{lib,test,examples}/**/*.rb', '[A-Z]*'].exclude('TODO').to_a
+ end
+ 
