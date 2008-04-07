@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2008/04/05 00:34:07 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2008/04/07 17:48:14 joerg Exp $
 
 DISTNAME=	p7zip_4.57_src_all
 PKGNAME=	p7zip-4.57
@@ -32,7 +32,7 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV:S/-/_/}
 
 GCC_REQD+=		3.0
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 .if !empty(DYNAMIC_7Z:MYES)
 INSTALLATION_DIRS+=	lib/7z
 INSTALLATION_DIRS+=	lib/7z/Codecs
