@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.648 2008/04/07 03:40:02 taca Exp $
+$NetBSD: CHANGES-2008,v 1.649 2008/04/07 07:21:48 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1279,3 +1279,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added net/ruby-snmp version 1.0.2 [seb 2008-04-06]
 	Added devel/ruby-mocha version 0.5.6 [seb 2008-04-07]
 	Updated fonts/jisx0208fonts to 200301316nb2 [taca 2008-04-07]
+	Updated www/awstats to 6.7 [adam 2008-04-07]
