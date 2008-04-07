@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/04 11:02:24 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/07 17:11:51 joerg Exp $
 #
 
 DISTNAME=		fruit_21_linux
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DIRS=		src
 USE_LANGUAGES=		c++
+
+INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/fruit ${DESTDIR}${PREFIX}/bin/fruit
