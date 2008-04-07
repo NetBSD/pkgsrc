@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7187 2008/04/07 00:19:09 wiz Exp $
+$NetBSD: TODO,v 1.7188 2008/04/07 14:40:11 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1029,7 +1029,6 @@ Suggested package updates
 	o openmortal-0.7.1
 	o openmotif-2.3.0 [pkg/38038]
 	o openssh-5.0p1
-	o opera-9.27
 	o orca-2.22.0
 	o oregano-0.60.0
 	o oroborus-2.0.18
