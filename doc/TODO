@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7189 2008/04/07 16:17:53 bjs Exp $
+$NetBSD: TODO,v 1.7190 2008/04/07 17:10:14 adam Exp $
 
 Suggested new packages
 ======================
@@ -791,7 +791,6 @@ Suggested package updates
 	o imap-uw-2007a1
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imapsync-1.249
-	o inkscape-0.46
 	o instiki-0.13
 	o intercal-0.24
 	o iozone-3.287
