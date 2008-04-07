@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.661 2008/04/07 18:07:15 seb Exp $
+$NetBSD: CHANGES-2008,v 1.662 2008/04/07 19:57:47 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1294,3 +1294,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/openoffice2 to 2.4.0 [hira 2008-04-07]
 	Updated graphics/inkscape to 0.46 [adam 2008-04-07]
 	Added textproc/ruby-fastercsv version 1.2.3 [seb 2008-04-07]
+	Updated x11/xf86-input-void to 1.1.1 [tnn 2008-04-07]
+	Updated lang/chicken to 3.1.0 [tnn 2008-04-07]
+	Updated games/openttd to 0.6.0 [tnn 2008-04-07]
