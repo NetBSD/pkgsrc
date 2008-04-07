@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/03 17:45:36 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2008/04/07 17:44:00 joerg Exp $
 #
 
 DISTNAME=	mph-1.2
@@ -15,9 +15,9 @@ INSTALLATION_DIRS=	bin share/doc
 
 do-install:
 	for i in emitc mph mphm; do \
-		${INSTALL_PROGRAM} ${WRKSRC}/$$i ${DESTDIR]${PREFIX}/bin; \
+		${INSTALL_PROGRAM} ${WRKSRC}/$$i ${DESTDIR}${PREFIX}/bin; \
 	done
-	${INSTALL_SCRIPT} ${WRKSRC}/mphminm ${DESTDIR]${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/mph.doc ${DESTDIR]${PREFIX}/share/doc
+	${INSTALL_SCRIPT} ${WRKSRC}/mphminm ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/mph.doc ${DESTDIR}${PREFIX}/share/doc
 
 .include "../../mk/bsd.pkg.mk"
