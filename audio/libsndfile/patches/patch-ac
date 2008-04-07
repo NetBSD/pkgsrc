@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.8 2006/09/01 06:02:23 adam Exp $
+$NetBSD: patch-ac,v 1.9 2008/04/07 15:36:19 bjs Exp $
 
---- examples/sndfile-play.c.orig	2006-08-31 11:22:07.000000000 +0200
+--- examples/sndfile-play.c.orig	2006-08-31 05:22:07.000000000 -0400
 +++ examples/sndfile-play.c
 @@ -34,16 +34,21 @@
  	#include <sys/time.h>
@@ -22,7 +22,7 @@ $NetBSD: patch-ac,v 1.8 2006/09/01 06:02:23 adam Exp $
  
 -#elif (defined (sun) && defined (unix))
 +#elif (defined (sun) && defined (unix)) || \
-+      (defined (__NetBSD__) && !defined(USE_OSS))
++      defined (USE_SUN)
  	#include <fcntl.h>
  	#include <sys/ioctl.h>
  	#include <sys/audioio.h>
@@ -44,17 +44,42 @@ $NetBSD: patch-ac,v 1.8 2006/09/01 06:02:23 adam Exp $
  		(fd = open ("/dev/sound/dsp", O_WRONLY, 0)) == -1)
  	{	perror ("linux_open_dsp_device : open ") ;
  		exit (1) ;
-@@ -819,7 +824,8 @@ win32_play (int argc, char *argv [])
+@@ -819,7 +824,12 @@ win32_play (int argc, char *argv [])
  **	Solaris.
  */
  
 -#if (defined (sun) && defined (unix)) /* ie Solaris */
 +#if (defined (sun) && defined (unix)) || \
-+    (defined (__NetBSD__) && !defined(USE_OSS))
++    defined (USE_SUN)
++
++#ifndef SUN_DEV
++#define SUN_DEV "/dev/audio"
++#endif
  
  static void
  solaris_play (int argc, char *argv [])
-@@ -926,7 +932,7 @@ main (int argc, char *argv [])
+@@ -844,8 +854,8 @@ solaris_play (int argc, char *argv [])
+ 			} ;
+ 
+ 		/* open the audio device - write only, non-blocking */
+-		if ((audio_fd = open ("/dev/audio", O_WRONLY | O_NONBLOCK)) < 0)
+-		{	perror ("open (/dev/audio) failed") ;
++		if ((audio_fd = open (SUN_DEV, O_WRONLY | O_NONBLOCK)) < 0)
++		{	perror ("open ("SUN_DEV") failed") ;
+ 			return ;
+ 			} ;
+ 
+@@ -858,6 +868,9 @@ solaris_play (int argc, char *argv [])
+ 		audio_info.play.encoding = AUDIO_ENCODING_LINEAR ;
+ 		audio_info.play.gain = AUDIO_MAX_GAIN ;
+ 		audio_info.play.balance = AUDIO_MID_BALANCE ;
++#if defined(__NetBSD__) || defined(__OpenBSD__)
++		audio_info.mode = AUMODE_PLAY | AUMODE_PLAY_ALL;
++#endif
+ 
+ 		if ((error = ioctl (audio_fd, AUDIO_SETINFO, &audio_info)))
+ 		{	perror ("ioctl (AUDIO_SETINFO) failed") ;
+@@ -926,7 +939,7 @@ main (int argc, char *argv [])
  		return 1 ;
  		} ;
  
@@ -63,13 +88,13 @@ $NetBSD: patch-ac,v 1.8 2006/09/01 06:02:23 adam Exp $
  	#if HAVE_ALSA_ASOUNDLIB_H
  		if (access ("/proc/asound/cards", R_OK) == 0)
  			alsa_play (argc, argv) ;
-@@ -935,7 +941,8 @@ main (int argc, char *argv [])
+@@ -935,7 +948,8 @@ main (int argc, char *argv [])
  		linux_play (argc, argv) ;
  #elif (defined (__MACH__) && defined (__APPLE__))
  	macosx_play (argc, argv) ;
 -#elif (defined (sun) && defined (unix))
 +#elif (defined (sun) && defined (unix)) || \
-+      (defined (__NetBSD__) && !defined(USE_OSS))
++      defined (USE_SUN)
  	solaris_play (argc, argv) ;
  #elif (OS_IS_WIN32 == 1)
  	win32_play (argc, argv) ;
