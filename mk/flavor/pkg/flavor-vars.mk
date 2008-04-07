@@ -1,4 +1,4 @@
-# $NetBSD: flavor-vars.mk,v 1.8 2008/04/03 14:07:51 joerg Exp $
+# $NetBSD: flavor-vars.mk,v 1.9 2008/04/07 13:18:25 joerg Exp $
 #
 # This Makefile fragment is included indirectly by bsd.prefs.mk and
 # defines some variables which must be defined earlier than where
@@ -49,27 +49,8 @@ BOOTSTRAP_DEPENDS+=	pkg_install>=${PKGTOOLS_REQD}:../../pkgtools/pkg_install
 _PKG_INSTALL_DEPENDS=	yes
 .endif
 
-# audit-packages logic for its location depends on a variety of factors
-# including OS, pkg_install version and NetBSD version.  The following
-# should pick the correct version to run.
-#
-.if defined(OPSYS) && ${OPSYS} != "NetBSD"
 AUDIT_PACKAGES?=	${PKG_TOOLS_BIN}/audit-packages
 DOWNLOAD_VULN_LIST?=	${PKG_TOOLS_BIN}/download-vulnerability-list
-.else
-.	if exists(${LOCALBASE}/sbin/audit-packages)
-AUDIT_PACKAGES?=	${LOCALBASE}/sbin/audit-packages
-DOWNLOAD_VULN_LIST?=	${LOCALBASE}/sbin/download-vulnerability-list
-.	else
-.		if exists(/usr/sbin/audit-packages)
-AUDIT_PACKAGES?=	/usr/sbin/audit-packages
-DOWNLOAD_VULN_LIST?=	/usr/sbin/download-vulnerability-list
-.		else
-AUDIT_PACKAGES?=	audit-packages
-DOWNLOAD_VULN_LIST?=	download-vulnerability-list
-.		endif
-.	endif
-.endif
 
 # The binary pkg_install tools all need to consistently to refer to the
 # correct package database directory.
