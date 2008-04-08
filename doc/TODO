@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7193 2008/04/08 10:35:24 abs Exp $
+$NetBSD: TODO,v 1.7194 2008/04/08 11:37:25 obache Exp $
 
 Suggested new packages
 ======================
@@ -1454,7 +1454,6 @@ Suggested package updates
 	o weewm-0.01
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
 	o wesnoth-1.4.0
-	o wget-1.11.1
 	o win32-codecs-20071007
 	o windowlab-1.34
 	o wine-0.9.54
