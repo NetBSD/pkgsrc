@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7196 2008/04/08 14:52:30 rhaen Exp $
+$NetBSD: TODO,v 1.7197 2008/04/08 21:39:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -403,7 +403,7 @@ Suggested package updates
 	o amavisd-new-2.5.4
 	o amaya-9.54
 	o angband-3.0.9
-	o anjuta-2.4.0
+	o anjuta-2.4.1
 	o antiright-8.6
 	o ap-Embperl-1.3.6
 	o ap-auth-mysql-4.3.9
@@ -508,7 +508,7 @@ Suggested package updates
 	o claws-mail-3.3.1
 	o clearsilver-0.10.5
 	o clearsilver-base-0.10.5
-	o clive-0.4.8
+	o clive-0.4.9
 	o cmus-2.2.0 [pkg/37856]
 	o cocoon-2.1.10
 	o colorize-0.3.4
@@ -536,6 +536,7 @@ Suggested package updates
 	o cygwin_lib-1.5.24.2
 	o dap-3.7
 	o dar-2.3.7
+	o dasher-4.7.3
 	o dbench-3.04
 	o dbus-1.1.20
 	o dbxml-2.1.8
@@ -546,7 +547,7 @@ Suggested package updates
 	o dejavu-ttf-2.24
 	o dejavu-ttf-2.24 [pkg/38212]
 	o delegate-9.7.5
-	o deskbar-applet-2.22.0.1
+	o deskbar-applet-2.22.1
 	o devIL-1.6.7
 	o devhelp-0.19
 	o dhid-5.3
@@ -590,7 +591,7 @@ Suggested package updates
 	o enchant-1.4.0
 	o enlightenment-0.16.8.11
 	o enscript-1.6.4
-	o eog-2.22.0
+	o eog-2.22.1
 	o epic4-2.6
 	o epiphany-2.22.1.1
 	o epiphany-extensions-2.22.1
@@ -663,6 +664,7 @@ Suggested package updates
 	o gdm-2.20.5
 	o gdsreader-0.3.2
 	o geany-0.13
+	o gedit-2.22.1
 	o generator-cbiere-0.35r3
 	o gettext-0.17
 	o gfract-0.33
@@ -676,7 +678,7 @@ Suggested package updates
 	o gkrellm-xmms-2.1.22
 	o glade3-3.4.3
 	o glchess-1.0.5
-	o glib2-2.16.2
+	o glib2-2.16.3
 	o glibmm-2.16.1
 	o global-5.6
 	o glpk-4.28
@@ -687,18 +689,19 @@ Suggested package updates
 	o gnet-2.0.8
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-applets-2.22.0
+	o gnome-applets-2.22.1
 	o gnome-audio-2.22.1
 	o gnome-build-0.2.4
-	o gnome-control-center-2.22.0
+	o gnome-control-center-2.22.1
 	o gnome-games-2.22.1
 	o gnome-icon-theme-2.22.0
 	o gnome-keyring-2.22.1
 	o gnome-mag-0.15.0
 	o gnome-media-2.22.0
-	o gnome-panel-2.22.0
+	o gnome-panel-2.22.1.1
 	o gnome-pilot-2.0.16
-	o gnome-screensaver-2.22.1
+	o gnome-screensaver-2.22.2
+	o gnome-session-2.22.1
 	o gnome-sharp-2.20.0
 	o gnome-spell-1.0.8
 	o gnome-terminal-2.22.1
@@ -829,7 +832,7 @@ Suggested package updates
 	o kid3-1.0
 	o kinput2-3.1
 	o kismet-2007.01.1b
-	o kmess-1.5
+	o kmess-1.5.1
 	o kmp-0.5
 	o kmymoney2-0.8.8
 	o kodos-2.4.5
@@ -866,7 +869,7 @@ Suggested package updates
 	o libevent-1.4.0beta
 	o libextractor-0.5.20
 	o libflash-0.4.13
-	o libgda-3.1.2
+	o libgda-3.1.3
 	o libggi-2.2.2
 	o libggigcp-1.0.2
 	o libggimisc-2.2.2
@@ -963,7 +966,7 @@ Suggested package updates
 	o most-4.10.2
 	o mp3blaster-3.2.3
 	o mpeg4ip-1.6.1
-	o mpg123-1.4.0
+	o mpg123-1.4.1
 	o mpich-1.2.7p1
 	o mpop-1.0.13
 	o mrtg-2.16.1
@@ -983,7 +986,7 @@ Suggested package updates
 	o nas-1.9.1
 	o nautilus-2.22.1
 	o nautilus-cd-burner-2.18.2 [needs hal]
-	o nautilus-cd-burner-2.22.0
+	o nautilus-cd-burner-2.22.1
 	o ncftp3-3.2.1 [pkg/37859]
 	o ncview-1.93b
 	o ne-2.01
@@ -1403,7 +1406,7 @@ Suggested package updates
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
-	o totem-2.22.0
+	o totem-2.22.1
 	o tpasm-1.2
 	o tpb-0.6.4
 	o transfig-3.2.5
@@ -1567,12 +1570,12 @@ Suggested package updates
 	o yafc-1.1
 	o yelp-2.22.0
 	o yodl-2.01.02
-	o youtube-dl-20080321
+	o youtube-dl-20080407
 	o ysm-2.9.9.1
 	o yudit-2.9.0
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zenity-2.22.0
+	o zenity-2.22.1
 	o zile-2.2.57
 	o zircon-1.18.256
 	o zoom-1.0.5
