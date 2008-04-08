@@ -1,4 +1,8 @@
-$NetBSD: patch-ak,v 1.1.1.1 2008/03/16 09:26:46 bjs Exp $
+$NetBSD: patch-ak,v 1.2 2008/04/08 01:44:47 bjs Exp $
+
+Yuck.  At least let's attempt to make this somewhat sane.
+When I have the time and figure out the Right Thing(tm)
+to do, perhaps I'll rewrite some of the shm code.
 
 --- libjack/unlock.c.orig	2008-03-04 07:20:10.000000000 -0500
 +++ libjack/unlock.c

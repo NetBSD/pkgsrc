@@ -1,67 +1,14 @@
-$NetBSD: patch-ai,v 1.2 2008/03/17 02:31:10 bjs Exp $
+$NetBSD: patch-ai,v 1.3 2008/04/08 01:44:47 bjs Exp $
 
---- jackd/engine.c.orig	2008-03-14 03:08:35.000000000 -0400
-+++ jackd/engine.c
-@@ -633,7 +633,8 @@ jack_process_external(jack_engine_t *eng
- 	int status = 0;
- 	char c = 0;
- 	struct pollfd pfd[1];
--	int poll_timeout;
-+	struct timespec poll_timeout = { 0, 0 };
-+
- 	jack_client_internal_t *client;
- 	jack_client_control_t *ctl;
- 	jack_time_t now, then;
-@@ -666,11 +667,11 @@ jack_process_external(jack_engine_t *eng
- 	then = jack_get_microseconds ();
- 
- 	if (engine->freewheeling) {
--		poll_timeout = 10000; /* 10 seconds */
-+		poll_timeout.tv_sec = 10;
- 	} else {
--		poll_timeout = (engine->client_timeout_msecs > 0 ?
--				engine->client_timeout_msecs :
--				1 + engine->driver->period_usecs/1000);
-+		poll_timeout.tv_nsec = (engine->client_timeout_msecs > 0 ?
-+				engine->client_timeout_msecs * 1e6 :
-+				1000 + engine->driver->period_usecs);
+--- libjack/client.c.orig	2008-03-17 07:30:44.000000000 -0400
++++ libjack/client.c
+@@ -1533,7 +1533,9 @@ jack_wake_next_client (jack_client_t* cl
+ 		jack_error ("cannot complete execution of the "
+ 			    "processing graph (%s)",
+ 			    strerror(errno));
++#ifndef JACK_HOST_HAS_BSD_POLL
+ 		return -1;
++#endif
  	}
- 
- 	pfd[0].fd = client->subgraph_wait_fd;
-@@ -679,8 +680,8 @@ jack_process_external(jack_engine_t *eng
- 	DEBUG ("waiting on fd==%d for process() subgraph to finish",
- 	       client->subgraph_wait_fd);
- 
--	if (poll (pfd, 1, poll_timeout) < 0) {
--		jack_error ("poll on subgraph processing failed (%s)",
-+	if (pollts (pfd, 1, &poll_timeout, NULL) < 0) {
-+		jack_error ("pollts on subgraph processing failed (%s)",
- 			    strerror (errno));
- 		status = -1; 
- 	}
-@@ -1424,6 +1425,7 @@ jack_server_thread (void *arg)
- 	struct sockaddr_un client_addr;
- 	socklen_t client_addrlen;
- 	struct pollfd *pfd;
-+	struct timespec poll_timeout = { 10, 0 };
- 	int client_socket;
- 	int done = 0;
- 	int i;
-@@ -1441,7 +1443,7 @@ jack_server_thread (void *arg)
- 		DEBUG ("start while");
- 		
  	
--		if (poll (pfd, max, 10000) < 0) {
-+		if (pollts (pfd, max, &poll_timeout, NULL) < 0) {
- 			if (errno == EINTR) {
- 				continue;
- 			}
-@@ -1468,7 +1470,7 @@ jack_server_thread (void *arg)
- 				    (engine, pfd[i].fd)) {
- 					jack_error ("could not handle external"
- 						    " client request");
--#ifdef JACK_USE_MACH_THREADS
-+#if defined(JACK_USE_MACH_THREADS) || defined(__NetBSD__)
-                                     /* poll is implemented using
- 				       select (see the macosx/fakepoll
- 				       code). When the socket is closed
+ 	return 0;

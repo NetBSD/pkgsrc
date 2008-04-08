@@ -1,4 +1,4 @@
-$NetBSD: patch-ap,v 1.1 2008/03/17 02:31:10 bjs Exp $
+$NetBSD: patch-ap,v 1.2 2008/04/08 01:44:47 bjs Exp $
 
 --- jack/types.h.orig	2008-03-12 10:36:07.000000000 -0400
 +++ jack/types.h
@@ -11,12 +11,3 @@ $NetBSD: patch-ap,v 1.1 2008/03/17 02:31:10 bjs Exp $
  
  /**
   * Type used to represent sample frame counts.
-@@ -33,7 +33,7 @@ typedef uint32_t	     jack_nframes_t;
- /**
-  * Maximum value that can be stored in jack_nframes_t
-  */
--#define JACK_MAX_FRAMES (4294967295U)	/* This should be UINT32_MAX, but
-+#define JACK_MAX_FRAMES UINT32_MAX	/* This should be UINT32_MAX, but
- 					   C++ has a problem with that. */
- 
- /**

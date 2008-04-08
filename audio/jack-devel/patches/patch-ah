@@ -1,4 +1,6 @@
-$NetBSD: patch-ah,v 1.1.1.1 2008/03/16 09:26:46 bjs Exp $
+$NetBSD: patch-ah,v 1.2 2008/04/08 01:44:47 bjs Exp $
+
+Allow overriding the watchdog timeout.
 
 --- jack/engine.h.orig	2008-01-10 16:34:30.000000000 -0500
 +++ jack/engine.h
