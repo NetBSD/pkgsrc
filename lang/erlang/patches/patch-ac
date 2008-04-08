@@ -1,4 +1,6 @@
-$NetBSD: patch-ac,v 1.5 2008/02/13 11:09:01 tnn Exp $
+$NetBSD: patch-ac,v 1.6 2008/04/08 13:16:22 martti Exp $
+
+Added support for NetBSD.
 
 --- erts/emulator/sys/common/erl_mseg.c.orig	2007-11-26 19:59:24.000000000 +0100
 +++ erts/emulator/sys/common/erl_mseg.c
