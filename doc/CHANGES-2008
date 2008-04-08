@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.670 2008/04/08 10:35:24 abs Exp $
+$NetBSD: CHANGES-2008,v 1.671 2008/04/08 11:36:21 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1305,3 +1305,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-WWW-Mechanize to 1.34 [abs 2008-04-08]
 	Added www/p5-CGI-Ajax version 0.7.01 [abs 2008-04-08]
 
+	Updated net/wget to 1.11.1 [obache 2008-04-08]
