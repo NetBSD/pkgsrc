@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2008/01/18 05:06:44 tnn Exp $
+# $NetBSD: Makefile,v 1.37 2008/04/08 13:16:22 martti Exp $
 
 DISTNAME=		otp_src_${DIST_VERSION_MAJOR}-${DIST_VERSION_MINOR}
 PKGNAME=		erlang-${ERLANG_VERSION}
@@ -18,7 +18,7 @@ GNU_CONFIGURE=		yes
 OVERRIDE_DIRDEPTH=	4
 USE_TOOLS+=		gmake perl:run
 
-CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl:Q}
+CONFIGURE_ARGS+=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 
 SUBST_CLASSES+=		target
 SUBST_STAGE.target=	post-patch
