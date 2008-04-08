@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7192 2008/04/07 22:50:05 wiz Exp $
+$NetBSD: TODO,v 1.7193 2008/04/08 10:35:24 abs Exp $
 
 Suggested new packages
 ======================
@@ -1116,7 +1116,6 @@ Suggested package updates
 	o p5-Text-Tabs+Wrap-2006.1117
 	o p5-Time-HiRes-1.9707
 	o p5-URI-1.36
-	o p5-WWW-Mechanize-1.34
 	o p5-XML-LibXML-1.66
 	o p5-XML-LibXSLT-1.66
 	o p5-XML-RAI-1.04
