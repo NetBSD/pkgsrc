@@ -1,15 +1,17 @@
-$NetBSD: patch-ae,v 1.1.1.1 2008/03/16 09:26:46 bjs Exp $
+$NetBSD: patch-ae,v 1.2 2008/04/08 01:44:47 bjs Exp $
 
---- drivers/Makefile.in.orig	2008-03-15 02:20:34.000000000 -0400
-+++ drivers/Makefile.in
-@@ -219,7 +219,9 @@ MAINTAINERCLEANFILES = Makefile.in
- @HAVE_FREEBOB_TRUE@FREEBOB_DIR = freebob
- @HAVE_FIREWIRE_FALSE@FIREWIRE_DIR = 
- @HAVE_FIREWIRE_TRUE@FIREWIRE_DIR = firewire
--SUBDIRS = $(ALSA_MIDI_DIR) $(ALSA_DIR) dummy $(OSS_DIR) $(SUN_DIR) $(PA_DIR) $(CA_DIR) $(FREEBOB_DIR) $(FIREWIRE_DIR)
-+@HAVE_SAMPLERATE_TRUE@NETJACK_DIR = netjack
-+@HAVE_SAMPLERATE_FALSE@NETJACK_DIR = 
-+SUBDIRS = $(ALSA_MIDI_DIR) $(ALSA_DIR) dummy $(NETJACK_DIR) $(OSS_DIR) $(SUN_DIR) $(PA_DIR) $(CA_DIR) $(FREEBOB_DIR) $(FIREWIRE_DIR)
- DIST_SUBDIRS = alsa alsa-midi dummy oss sun portaudio coreaudio freebob firewire
- all: all-recursive
- 
+I'm not quite sure what's going on here, but I don't think res
+should be a pointer (quells a warning, has no ill effects that
+I can detect).
+
+--- libjack/intclient.c.orig	2008-03-13 05:05:16.000000000 -0400
++++ libjack/intclient.c
+@@ -167,7 +167,7 @@ jack_internal_client_load (jack_client_t
+ {
+ 	va_list ap;
+     va_start(ap, status);
+-    jack_intclient_t* res = jack_internal_client_load_aux(client, client_name, options, status, ap);
++    jack_intclient_t res = jack_internal_client_load_aux(client, client_name, options, status, ap);
+     va_end(ap);
+     return res;
+ }
