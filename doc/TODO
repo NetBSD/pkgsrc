@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7194 2008/04/08 11:37:25 obache Exp $
+$NetBSD: TODO,v 1.7195 2008/04/08 12:11:44 tron Exp $
 
 Suggested new packages
 ======================
@@ -1294,8 +1294,6 @@ Suggested package updates
 	o rp-l2tp-0.4
 	o rpm-5.0.3
 	o rrdtool-1.2.27
-	o rsync-3.0.0 (probably better to wait for at least 3.0.1)
-	o rsync-3.0.1
 	o rt3-3.6.6
 	o rtcw-1.41.3
 	o ruby-clearsilver-0.10.5
