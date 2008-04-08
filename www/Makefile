@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.546 2008/04/06 10:16:13 adrianp Exp $
+# $NetBSD: Makefile,v 1.547 2008/04/08 10:32:22 abs Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -217,6 +217,7 @@ SUBDIR+=	p5-Apache-Session
 SUBDIR+=	p5-Apache-Session-Wrapper
 SUBDIR+=	p5-Apache-Test
 SUBDIR+=	p5-CGI
+SUBDIR+=	p5-CGI-Ajax
 SUBDIR+=	p5-CGI-Application
 SUBDIR+=	p5-CGI-Application-Plugin-DBH
 SUBDIR+=	p5-CGI-Application-Plugin-ValidateRM
