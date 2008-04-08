@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/04/07 19:44:19 tnn Exp $
+# $NetBSD: Makefile,v 1.27 2008/04/08 23:11:21 tnn Exp $
 
 DISTNAME=	openttd-0.6.0-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -26,6 +26,9 @@ CFLAGS+=	-DNDEBUG=1
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 BUILD_TARGET=	bundle
+
+post-install:
+	rm -rf ${FAKEHOMEDIR}/.openttd
 
 .include "options.mk"
 
