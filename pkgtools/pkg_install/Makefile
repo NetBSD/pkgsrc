@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.150 2008/04/04 15:21:32 joerg Exp $
+# $NetBSD: Makefile,v 1.151 2008/04/08 11:50:46 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -150,7 +150,10 @@ pre-configure:
 		--disable-dependency-tracking
 	cd ${WRKDIR}/libarchive && ${BUILD_MAKE_CMD}
 .endif
-	cd ${WRKDIR}/libfetch && ${BUILD_MAKE_CMD}
+	cd ${WRKDIR}/libfetch && ${SETENV} ${MAKE_ENV}			\
+		${MAKE_PROGRAM} ${MAKE_FLAGS} ${BUILD_MAKE_FLAGS}	\
+			-f ${MAKE_FILE} depend all
+
 
 # XXX Reverse the order that update does things since
 # XXX we need pkg_delete built before we can deinstall.
