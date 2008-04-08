@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7195 2008/04/08 12:11:44 tron Exp $
+$NetBSD: TODO,v 1.7196 2008/04/08 14:52:30 rhaen Exp $
 
 Suggested new packages
 ======================
@@ -1107,7 +1107,6 @@ Suggested package updates
 	o p5-Term-Size-0.203
 	o p5-Test-Exception-0.27
 	o p5-Test-Harness-2.64
-	o p5-Test-Simple-0.78
 	o p5-Test-Unit-0.25
 	o p5-Test-WWW-Mechanize-1.20
 	o p5-Text-BibTeX-0.34
