@@ -1,37 +1,47 @@
-$NetBSD: patch-aj,v 1.2 2008/03/17 02:31:10 bjs Exp $
+$NetBSD: patch-aj,v 1.3 2008/04/08 01:44:47 bjs Exp $
 
---- libjack/client.c.orig	2008-03-12 10:36:07.000000000 -0400
-+++ libjack/client.c
-@@ -1420,13 +1420,14 @@ static int
- jack_client_core_wait (jack_client_t* client)
- {
- 	jack_client_control_t *control = client->control;
-+	struct timespec poll_timeout = { 1, 0 };
- 	
- 	DEBUG ("client polling on %s", client->pollmax == 2 ? 
- 	       "event_fd and graph_wait_fd..." :
- 	       "event_fd only");
- 	
- 	while (1) {
--		if (poll (client->pollfd, client->pollmax, 1000) < 0) {
-+		if (pollts (client->pollfd, client->pollmax, &poll_timeout, NULL) < 0) {
- 			if (errno == EINTR) {
- 				continue;
- 			}
-@@ -1896,14 +1897,14 @@ jack_activate (jack_client_t *client)
- 	 * pages are actually mapped (more important for mlockall(2)
- 	 * usage in jack_start_thread())
- 	 */
--         
-+#if !defined(__NetBSD__)
- 	char buf[JACK_THREAD_STACK_TOUCH];
- 	int i;
+Kill all of the overzealous optimization; if the user wants this,
+there is devel/cpuflags and mk.conf.
+
+--- configure.orig	2008-04-07 17:42:32.000000000 -0400
++++ configure
+@@ -22915,9 +22915,9 @@ fi
  
- 	for (i = 0; i < JACK_THREAD_STACK_TOUCH; i++) {
- 		buf[i] = (char) (i & 0xff);
- 	}
--
-+#endif
- 	if (client->control->type == ClientInternal ||
- 	    client->control->type == ClientDriver) {
- 		goto startit;
+ 
+ JACK_CORE_CFLAGS="-I\$(top_srcdir)/config -I\$(top_srcdir) \
+--I\$(top_srcdir) -D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS -Wall -g"
+-JACK_OPT_CFLAGS="$JACK_CORE_CFLAGS -march=pentium2 -mcpu=pentium4 -O3 \
+--ffast-math -funroll-loops -fprefetch-loop-arrays"
++-I\$(top_srcdir) -Wall -g"
++JACK_OPT_CFLAGS="$JACK_CORE_CFLAGS -ffast-math -funroll-loops \
++-fprefetch-loop-arrays"
+ JACK_CFLAGS="$JACK_CORE_CFLAGS $CFLAGS"
+ 
+ 
+@@ -22999,7 +22999,7 @@ rm -f core conftest.err conftest.$ac_obj
+     fi
+ 
+ 
+-    JACK_OPT_CFLAGS="-D_REENTRANT -O2 -mcpu=7400 $ALTIVEC_OPT_FLAGS_FLAGS -mhard-float -mpowerpc-gfxopt"
++    JACK_OPT_CFLAGS="$ALTIVEC_OPT_FLAGS_FLAGS -mhard-float -mpowerpc-gfxopt"
+ 
+ elif echo $target_cpu | egrep '(i.86|x86_64)' >/dev/null; then
+ 
+@@ -23171,7 +23171,7 @@ cat >>confdefs.h <<\_ACEOF
+ #define x86 1
+ _ACEOF
+ 
+-    COMMON_X86_OPT_FLAGS="-DREENTRANT -O3 -fomit-frame-pointer -ffast-math -funroll-loops"
++    COMMON_X86_OPT_FLAGS="-fomit-frame-pointer -ffast-math -funroll-loops"
+ 
+     if test "$target_cpu" = "i586"; then
+ 	JACK_OPT_CFLAGS="-march=i586 "
+@@ -25491,7 +25491,7 @@ else
+ fi
+ 
+ 
+-ac_config_files="$ac_config_files Makefile config/Makefile config/cpu/Makefile config/cpu/alpha/Makefile config/cpu/cris/Makefile config/cpu/generic/Makefile config/cpu/i386/Makefile config/cpu/i486/Makefile config/cpu/ia64/Makefile config/cpu/m68k/Makefile config/cpu/mips/Makefile config/cpu/powerpc/Makefile config/cpu/s390/Makefile config/os/Makefile config/os/generic/Makefile config/os/gnu-linux/Makefile config/os/macosx/Makefile config/sysdeps/Makefile doc/Makefile doc/reference.doxygen drivers/Makefile drivers/alsa/Makefile drivers/alsa-midi/Makefile drivers/dummy/Makefile drivers/oss/Makefile drivers/sun/Makefile drivers/portaudio/Makefile drivers/coreaudio/Makefile drivers/freebob/Makefile drivers/firewire/Makefile drivers/netjack/Makefile example-clients/Makefile tools/Makefile jack.pc jack.spec jack/Makefile jack/version.h jackd/Makefile jackd/jackd.1 libjack/Makefile"
++ac_config_files="$ac_config_files Makefile config/Makefile config/cpu/Makefile config/cpu/alpha/Makefile config/cpu/cris/Makefile config/cpu/generic/Makefile config/cpu/i386/Makefile config/cpu/i486/Makefile config/cpu/ia64/Makefile config/cpu/m68k/Makefile config/cpu/mips/Makefile config/cpu/powerpc/Makefile config/cpu/s390/Makefile config/os/Makefile config/os/generic/Makefile config/os/gnu-linux/Makefile config/os/macosx/Makefile config/sysdeps/Makefile drivers/Makefile drivers/alsa/Makefile drivers/alsa-midi/Makefile drivers/dummy/Makefile drivers/oss/Makefile drivers/sun/Makefile drivers/portaudio/Makefile drivers/coreaudio/Makefile drivers/freebob/Makefile drivers/firewire/Makefile drivers/netjack/Makefile example-clients/Makefile tools/Makefile jack.pc jack.spec jack/Makefile jack/version.h jackd/Makefile jackd/jackd.1 libjack/Makefile"
+ 
+ cat >confcache <<\_ACEOF
+ # This file is a shell script that caches the results of configure
