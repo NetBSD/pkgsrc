@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.668 2008/04/08 03:41:38 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.669 2008/04/08 05:18:47 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1301,3 +1301,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/jack-devel to 0.110.0 [bjs 2008-04-08]
 	Updated audio/moc-devel to 2.5.0.3nb1 [bjs 2008-04-08]
 	Updated x11/libXxf86vm to 1.0.1nb1 [bjs 2008-04-08]
+	Updated mail/spamdyke to 3.1.7 [schmonz 2008-04-08]
