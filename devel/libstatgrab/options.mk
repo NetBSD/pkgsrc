@@ -1,10 +1,12 @@
-# $NetBSD: options.mk,v 1.1 2008/04/09 16:18:39 jlam Exp $
+# $NetBSD: options.mk,v 1.2 2008/04/09 16:21:48 jlam Exp $
 
 PKG_OPTIONS_VAR=	libstatgrab
 PKG_SUPPORTED_OPTIONS=	saidar statgrab
 PKG_DEFAULT_OPTIONS=	saidar statgrab
 
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=		saidar statgrab
 
 .if defined(WITHOUT_SAIDAR)
 PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable WITHOUT_SAIDAR used; use \`\`-saidar'' instead."
