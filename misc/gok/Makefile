@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2008/03/06 14:53:52 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2008/04/09 22:40:19 wiz Exp $
 #
 
 DISTNAME=		gok-1.3.7
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gok/1.3/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.gnome.org/
+HOMEPAGE=		http://www.gok.ca/
 COMMENT=		GNOME On-Screen Keyboard
 
 USE_DIRS+=		gnome2-1.5
