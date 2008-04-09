@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7199 2008/04/09 19:31:41 wiz Exp $
+$NetBSD: TODO,v 1.7200 2008/04/09 22:52:31 wiz Exp $
 
 Suggested new packages
 ======================
@@ -444,6 +444,7 @@ Suggested package updates
 	o aterm-1.0.1
 	o atk-1.22.0
 	o auctex-11.85
+	o autoconf-2.62
 	o autoconvert-0.3.16
 	o avcheck-0.91
 	o avl-2.0.2a
@@ -689,6 +690,7 @@ Suggested package updates
 	o gnet-2.0.8
 	o gnet1-1.1.9
 	o gnetman-20050429
+	o gnome-2.22.1
 	o gnome-applets-2.22.1
 	o gnome-audio-2.22.1
 	o gnome-build-0.2.4
@@ -926,6 +928,7 @@ Suggested package updates
 	o ltm-0.40
 	o ltris-1.0.12
 	o lucy-1.19p
+	o lzma-4.57
 	o m4-1.4.11
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
