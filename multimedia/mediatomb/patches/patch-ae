@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1.1.1 2008/04/09 20:36:38 agc Exp $
+
+--- tombupnp/upnp/src/ssdp/ssdp_server.c	2008-03-01 22:48:51.000000000 +0000
++++ tombupnp/upnp/src/ssdp/ssdp_server.c	2008-03-21 20:17:43.000000000 +0000
+@@ -962,7 +962,7 @@
+         return UPNP_E_SOCKET_ERROR;
+     }
+     
+-    #ifdef __FreeBSD__
++    #if defined(__FreeBSD__) || defined(__NetBSD__)
+     if( setsockopt( ssdpSock, SOL_SOCKET, SO_REUSEPORT,
+                     ( char * )&onOff, sizeof( onOff ) ) != 0 ) {
+ 
+Only in jmediatomb-0.11.0/web: Makefile
