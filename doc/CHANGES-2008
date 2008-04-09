@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.678 2008/04/09 09:02:14 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.679 2008/04/09 18:54:02 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1311,3 +1311,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/rsync to 3.0.2 [dogcow 2008-04-09]
 	Updated www/firefox-bin-flash to 9.0.124 [tron 2008-04-09]
 	Updated www/tidy to 20080324 [wiz 2008-04-09]
+	Updated chat/bitlbee to 1.2 [tonio 2008-04-09]
