@@ -1,44 +1,51 @@
-# $NetBSD: Makefile,v 1.26 2006/07/27 18:48:04 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2008/04/09 09:01:52 wiz Exp $
 #
 
-DISTNAME=	tidy_src_051026
-PKGNAME=	tidy-20051026
+DISTNAME=	tidy-20080324
 CATEGORIES=	www
-MASTER_SITES=	http://tidy.sourceforge.net/src/ \
-		http://tidy.sourceforge.net/src/old/
-SITES.tidy_docs_050705.tgz=	http://tidy.sourceforge.net/docs/
-EXTRACT_SUFX=	.tgz
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX} tidy_docs_050705${EXTRACT_SUFX}
+MASTER_SITES=	# manually created tarballs on ftp.NetBSD.org only
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tidy.sourceforge.net/
 COMMENT=	Fixes and tidies up HTML files
 
 BUILD_DEPENDS+=	libxslt>=1.1.0:../../textproc/libxslt
+BUILD_DEPENDS+=	doxygen>=1.0:../../devel/doxygen
 
 WRKSRC=		${WRKDIR}/tidy
-NO_CONFIGURE=	yes
-USE_TOOLS+=	gmake
-BUILD_DIRS=	${WRKSRC}/build/gmake
+GNU_CONFIGURE=	yes
+USE_LIBTOOL=	yes
+USE_TOOLS+=	aclocal autoconf automake gmake
+CPPFLAGS+=	-DSUPPORT_ACCESSIBILITY_CHECKS=1 -DSUPPORT_UTF16_ENCODINGS=1
+CPPFLAGS+=	-DSUPPORT_ASIAN_ENCODINGS=1 -DSUPPORT_GETPWNAM=1
 
-OPSYSVARS+=	MAKEFLAGS
-MAKEFLAGS.Darwin+=	RANLIB=ranlib
+HTML_DOCFILES=	Overview.html doxygen.cfg grid.gif tidy.css faq.html \
+		license.html pending.html release-notes.html tidy.gif
+HTML_DOCDIR=	${PREFIX}/share/doc/tidy
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${HTML_DOCDIR} ${HTML_DOCDIR}/api
 
-HTML_DOCFILES=	Overview.html doxygen.cfg grid.gif quickref.html tidy.css \
-		faq.html license.html pending.html release-notes.html tidy.gif
-HTML_DOCDIR=	${PREFIX}/share/doc/html/tidy
+pre-configure:
+	cd ${WRKSRC}/build/gnuauto && cp -R -f * ${WRKSRC}
+	cd ${WRKSRC} && \
+		touch NEWS README AUTHORS ChangeLog; \
+		libtoolize --force --copy; \
+		aclocal; \
+		autoconf; \
+		automake -acf
 
 post-build:
-	cd ${BUILD_DIRS} && ${GMAKE} doc
+	cd ${WRKSRC}/htmldoc && \
+	${WRKSRC}/console/tidy -xml-help > tidy.xml && \
+	${WRKSRC}/console/tidy -xml-config > tidy-config.xml && \
+	xsltproc tidy1.xsl tidy.xml > tidy.1
+	cd ${WRKSRC} && \
+	doxygen htmldoc/doxygen.cfg
 
 post-install:
-	${INSTALL_DATA_DIR} ${HTML_DOCDIR}
+	${INSTALL_MAN} ${WRKSRC}/htmldoc/tidy.1 ${PREFIX}/${PKGMANDIR}/man1
 	for doc in ${HTML_DOCFILES}; do					\
 	    ${INSTALL_DATA} ${WRKSRC}/htmldoc/$$doc ${HTML_DOCDIR} ;	\
 	done
-	${INSTALL_DATA_DIR} ${HTML_DOCDIR}/api
-	for apifile in ${WRKSRC}/htmldoc/api/* ; do			\
-	    ${INSTALL_DATA} $$apifile ${HTML_DOCDIR}/api ;		\
-	done
+	${INSTALL_DATA} ${WRKSRC}/htmldoc/api/* ${HTML_DOCDIR}/api
 
 .include "../../mk/bsd.pkg.mk"
