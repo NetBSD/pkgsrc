@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.681 2008/04/09 20:38:53 agc Exp $
+$NetBSD: CHANGES-2008,v 1.682 2008/04/09 22:03:33 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1314,3 +1314,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/bitlbee to 1.2 [tonio 2008-04-09]
 	Updated multimedia/ns-flash to 9.0.124 [ghen 2008-04-09]
 	Added multimedia/mediatomb version 0.11.0 [agc 2008-04-09]
+	Updated www/drupal6 to 6.2 [adrianp 2008-04-09]
