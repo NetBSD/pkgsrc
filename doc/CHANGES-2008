@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.679 2008/04/09 18:54:02 tonio Exp $
+$NetBSD: CHANGES-2008,v 1.680 2008/04/09 19:14:40 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1312,3 +1312,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/firefox-bin-flash to 9.0.124 [tron 2008-04-09]
 	Updated www/tidy to 20080324 [wiz 2008-04-09]
 	Updated chat/bitlbee to 1.2 [tonio 2008-04-09]
+	Updated multimedia/ns-flash to 9.0.124 [ghen 2008-04-09]
