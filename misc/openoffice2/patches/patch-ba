@@ -1,7 +1,7 @@
-$NetBSD: patch-ba,v 1.11 2008/04/07 16:24:51 hira Exp $
+$NetBSD: patch-ba,v 1.12 2008/04/09 09:03:59 hira Exp $
 
 --- config_office/configure.orig	2008-01-31 20:47:17.000000000 +0900
-+++ config_office/configure	2008-04-07 18:20:56.000000000 +0900
++++ config_office/configure	2008-04-09 17:33:05.000000000 +0900
 @@ -3176,11 +3176,11 @@
  		test_cups=no
  		_os=OSF1
@@ -43,6 +43,15 @@ $NetBSD: patch-ba,v 1.11 2008/04/07 16:24:51 hira Exp $
        # somehow AC_MSG_WARN won't work...
         echo "to prevent incompatibilities between internal libxml2 and libxslt, the office will be build with system-libxml"
         echo "to prevent incompatibilities between internal libxml2 and libxslt, the office will be build with system-libxml" >> warn
+@@ -13108,7 +13108,7 @@
+ if test -n "$with_system_libxml" -o -n "$with_system_libs" && \
+    test "$with_system_libxml" != "no"; then
+     if test -z "$with_system_libxslt" -a -z "$with_system_libs" || \
+-      test "$with_system_libxslt" == "no"; then
++      test "$with_system_libxslt" = "no"; then
+       # somehow AC_MSG_WARN won't work...
+        echo "to prevent incompatibilities between internal libxslt and libxml2, the office will be build with system-libxslt"
+        echo "to prevent incompatibilities between internal libxslt and libxml2, the office will be build with system-libxslt" >> warn
 @@ -13591,13 +13591,14 @@
  
  
