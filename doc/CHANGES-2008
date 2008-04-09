@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.680 2008/04/09 19:14:40 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.681 2008/04/09 20:38:53 agc Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1313,3 +1313,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/tidy to 20080324 [wiz 2008-04-09]
 	Updated chat/bitlbee to 1.2 [tonio 2008-04-09]
 	Updated multimedia/ns-flash to 9.0.124 [ghen 2008-04-09]
+	Added multimedia/mediatomb version 0.11.0 [agc 2008-04-09]
