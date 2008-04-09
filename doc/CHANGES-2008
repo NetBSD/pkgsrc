@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.675 2008/04/09 00:40:13 reed Exp $
+$NetBSD: CHANGES-2008,v 1.676 2008/04/09 01:50:12 dogcow Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1308,3 +1308,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/rsync to 3.0.1 [tonnerre 2008-04-08]
 	Updated devel/p5-Test-Simple to 0.80 [rhaen 2008-04-08]
 	Updated editors/ed to 0.9 [reed 2008-04-09]
+	Updated net/rsync to 3.0.2 [dogcow 2008-04-09]
