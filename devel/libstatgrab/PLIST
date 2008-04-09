@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2005/11/08 21:43:03 reed Exp $
-${SAIDAR}bin/saidar
-${STATGRAB}bin/statgrab
-${STATGRAB}bin/statgrab-make-mrtg-config
-${STATGRAB}bin/statgrab-make-mrtg-index
+@comment $NetBSD: PLIST,v 1.5 2008/04/09 16:18:39 jlam Exp $
+${PLIST.saidar}bin/saidar
+${PLIST.statgrab}bin/statgrab
+${PLIST.statgrab}bin/statgrab-make-mrtg-config
+${PLIST.statgrab}bin/statgrab-make-mrtg-index
 include/statgrab.h
 include/statgrab_deprecated.h
 lib/libstatgrab.la
