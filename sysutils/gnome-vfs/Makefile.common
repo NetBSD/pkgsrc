@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.7 2007/11/22 20:16:27 drochner Exp $
+# $NetBSD: Makefile.common,v 1.8 2008/04/10 16:25:29 drochner Exp $
 #
 
-GNOME_VFS_VERSION=	2.20.1
+GNOME_VFS_VERSION=	2.22.0
 
 DISTNAME=		gnome-vfs-${GNOME_VFS_VERSION}
 CATEGORIES?=		sysutils
 CATEGORIES+=		gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/2.20/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/2.22/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		jmmv@NetBSD.org
@@ -45,15 +45,27 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-vfs
-PKG_SUPPORTED_OPTIONS+=	inet6
+PKG_SUPPORTED_OPTIONS+=	inet6 gssapi
 
 .include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == NetBSD
+# Kerberos is built in - no additional dependency
+PKG_SUGGESTED_OPTIONS+= gssapi
+.endif
+
 .include "../../mk/bsd.options.mk"
 
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
+.endif
+
+.if !empty(PKG_OPTIONS:Mgssapi)
+.include "../../mk/krb5.buildlink3.mk"
+CONFIGURE_ENV+=		KRB5_CONFIG=${SH_KRB5_CONFIG}
+.else
+CONFIGURE_ENV+=		ac_cv_path_KRB5_CONFIG=none
 .endif
 
 # XXX Work-around for a problem in the configure script which checks for
