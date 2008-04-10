@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2008/04/04 15:17:08 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2008/04/10 07:19:41 obache Exp $
 
 DISTNAME=	gettext-1.90.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 
-MAINTAINER=	obache@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gettext.rubyforge.org/
 COMMENT=	Ruby localization library like as GNU gettext
 
