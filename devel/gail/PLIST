@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2007/09/18 21:16:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2008/04/10 16:22:52 drochner Exp $
 include/gail-1.0/gail/gailwidget.h
 include/gail-1.0/libgail-util/gail-util.h
 include/gail-1.0/libgail-util/gailmisc.h
@@ -55,6 +55,7 @@ share/locale/is/LC_MESSAGES/gail.mo
 share/locale/it/LC_MESSAGES/gail.mo
 share/locale/ja/LC_MESSAGES/gail.mo
 share/locale/ka/LC_MESSAGES/gail.mo
+share/locale/kn/LC_MESSAGES/gail.mo
 share/locale/ko/LC_MESSAGES/gail.mo
 share/locale/ku/LC_MESSAGES/gail.mo
 share/locale/lt/LC_MESSAGES/gail.mo
@@ -64,6 +65,7 @@ share/locale/mi/LC_MESSAGES/gail.mo
 share/locale/mk/LC_MESSAGES/gail.mo
 share/locale/ml/LC_MESSAGES/gail.mo
 share/locale/mn/LC_MESSAGES/gail.mo
+share/locale/mr/LC_MESSAGES/gail.mo
 share/locale/ms/LC_MESSAGES/gail.mo
 share/locale/nb/LC_MESSAGES/gail.mo
 share/locale/ne/LC_MESSAGES/gail.mo
