@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2007/10/31 20:04:35 drochner Exp $
+@comment $NetBSD: PLIST,v 1.22 2008/04/10 16:46:53 drochner Exp $
 bin/bonobo-browser
 bin/test-moniker
 include/libbonoboui-2.0/bonobo.h
@@ -84,6 +84,7 @@ share/gtk-doc/html/libbonoboui/up.png
 share/locale/af/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/am/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/ar/LC_MESSAGES/libbonoboui-2.0.mo
+share/locale/as/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/az/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/be/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/bg/LC_MESSAGES/libbonoboui-2.0.mo
@@ -143,6 +144,7 @@ share/locale/pt_BR/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/ro/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/ru/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/rw/LC_MESSAGES/libbonoboui-2.0.mo
+share/locale/si/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/sk/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/sl/LC_MESSAGES/libbonoboui-2.0.mo
 share/locale/sq/LC_MESSAGES/libbonoboui-2.0.mo
