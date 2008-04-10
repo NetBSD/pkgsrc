@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2007/10/31 20:05:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.23 2008/04/10 16:40:49 drochner Exp $
 bin/gnome-open
 include/libgnome-2.0/libgnome/gnome-config.h
 include/libgnome-2.0/libgnome/gnome-exec.h
@@ -27,7 +27,7 @@ share/gconf/schemas/desktop_gnome_accessibility_startup.schemas
 share/gconf/schemas/desktop_gnome_applications_at_mobility.schemas
 share/gconf/schemas/desktop_gnome_applications_at_visual.schemas
 share/gconf/schemas/desktop_gnome_applications_browser.schemas
-share/gconf/schemas/desktop_gnome_applications_help_viewer.schemas
+share/gconf/schemas/desktop_gnome_applications_office.schemas
 share/gconf/schemas/desktop_gnome_applications_terminal.schemas
 share/gconf/schemas/desktop_gnome_applications_window_manager.schemas
 share/gconf/schemas/desktop_gnome_background.schemas
@@ -104,6 +104,7 @@ share/locale/eu/LC_MESSAGES/libgnome-2.0.mo
 share/locale/fa/LC_MESSAGES/libgnome-2.0.mo
 share/locale/fi/LC_MESSAGES/libgnome-2.0.mo
 share/locale/fr/LC_MESSAGES/libgnome-2.0.mo
+share/locale/fur/LC_MESSAGES/libgnome-2.0.mo
 share/locale/ga/LC_MESSAGES/libgnome-2.0.mo
 share/locale/gl/LC_MESSAGES/libgnome-2.0.mo
 share/locale/gu/LC_MESSAGES/libgnome-2.0.mo
@@ -124,6 +125,7 @@ share/locale/mg/LC_MESSAGES/libgnome-2.0.mo
 share/locale/mk/LC_MESSAGES/libgnome-2.0.mo
 share/locale/ml/LC_MESSAGES/libgnome-2.0.mo
 share/locale/mn/LC_MESSAGES/libgnome-2.0.mo
+share/locale/mr/LC_MESSAGES/libgnome-2.0.mo
 share/locale/ms/LC_MESSAGES/libgnome-2.0.mo
 share/locale/nb/LC_MESSAGES/libgnome-2.0.mo
 share/locale/ne/LC_MESSAGES/libgnome-2.0.mo
@@ -138,6 +140,7 @@ share/locale/pt_BR/LC_MESSAGES/libgnome-2.0.mo
 share/locale/ro/LC_MESSAGES/libgnome-2.0.mo
 share/locale/ru/LC_MESSAGES/libgnome-2.0.mo
 share/locale/rw/LC_MESSAGES/libgnome-2.0.mo
+share/locale/si/LC_MESSAGES/libgnome-2.0.mo
 share/locale/sk/LC_MESSAGES/libgnome-2.0.mo
 share/locale/sl/LC_MESSAGES/libgnome-2.0.mo
 share/locale/sq/LC_MESSAGES/libgnome-2.0.mo
