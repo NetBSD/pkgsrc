@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2007/10/26 14:42:23 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/04/10 23:34:51 bjs Exp $
 bin/hg
-bin/hgmerge
 ${PYSITELIB}/hgext/__init__.py
 ${PYSITELIB}/hgext/__init__.pyc
 ${PYSITELIB}/hgext/__init__.pyo
@@ -16,12 +15,21 @@ ${PYSITELIB}/hgext/bugzilla.pyo
 ${PYSITELIB}/hgext/children.py
 ${PYSITELIB}/hgext/children.pyc
 ${PYSITELIB}/hgext/children.pyo
+${PYSITELIB}/hgext/churn.py
+${PYSITELIB}/hgext/churn.pyc
+${PYSITELIB}/hgext/churn.pyo
+${PYSITELIB}/hgext/color.py
+${PYSITELIB}/hgext/color.pyc
+${PYSITELIB}/hgext/color.pyo
 ${PYSITELIB}/hgext/convert/__init__.py
 ${PYSITELIB}/hgext/convert/__init__.pyc
 ${PYSITELIB}/hgext/convert/__init__.pyo
 ${PYSITELIB}/hgext/convert/common.py
 ${PYSITELIB}/hgext/convert/common.pyc
 ${PYSITELIB}/hgext/convert/common.pyo
+${PYSITELIB}/hgext/convert/convcmd.py
+${PYSITELIB}/hgext/convert/convcmd.pyc
+${PYSITELIB}/hgext/convert/convcmd.pyo
 ${PYSITELIB}/hgext/convert/cvs.py
 ${PYSITELIB}/hgext/convert/cvs.pyc
 ${PYSITELIB}/hgext/convert/cvs.pyo
@@ -34,9 +42,15 @@ ${PYSITELIB}/hgext/convert/filemap.pyo
 ${PYSITELIB}/hgext/convert/git.py
 ${PYSITELIB}/hgext/convert/git.pyc
 ${PYSITELIB}/hgext/convert/git.pyo
+${PYSITELIB}/hgext/convert/gnuarch.py
+${PYSITELIB}/hgext/convert/gnuarch.pyc
+${PYSITELIB}/hgext/convert/gnuarch.pyo
 ${PYSITELIB}/hgext/convert/hg.py
 ${PYSITELIB}/hgext/convert/hg.pyc
 ${PYSITELIB}/hgext/convert/hg.pyo
+${PYSITELIB}/hgext/convert/monotone.py
+${PYSITELIB}/hgext/convert/monotone.pyc
+${PYSITELIB}/hgext/convert/monotone.pyo
 ${PYSITELIB}/hgext/convert/subversion.py
 ${PYSITELIB}/hgext/convert/subversion.pyc
 ${PYSITELIB}/hgext/convert/subversion.pyo
@@ -55,24 +69,30 @@ ${PYSITELIB}/hgext/gpg.pyo
 ${PYSITELIB}/hgext/graphlog.py
 ${PYSITELIB}/hgext/graphlog.pyc
 ${PYSITELIB}/hgext/graphlog.pyo
-${PYSITELIB}/hgext/hbisect.py
-${PYSITELIB}/hgext/hbisect.pyc
-${PYSITELIB}/hgext/hbisect.pyo
 ${PYSITELIB}/hgext/hgk.py
 ${PYSITELIB}/hgext/hgk.pyc
 ${PYSITELIB}/hgext/hgk.pyo
+${PYSITELIB}/hgext/highlight.py
+${PYSITELIB}/hgext/highlight.pyc
+${PYSITELIB}/hgext/highlight.pyo
 ${PYSITELIB}/hgext/imerge.py
 ${PYSITELIB}/hgext/imerge.pyc
 ${PYSITELIB}/hgext/imerge.pyo
 ${PYSITELIB}/hgext/interhg.py
 ${PYSITELIB}/hgext/interhg.pyc
 ${PYSITELIB}/hgext/interhg.pyo
+${PYSITELIB}/hgext/keyword.py
+${PYSITELIB}/hgext/keyword.pyc
+${PYSITELIB}/hgext/keyword.pyo
 ${PYSITELIB}/hgext/mq.py
 ${PYSITELIB}/hgext/mq.pyc
 ${PYSITELIB}/hgext/mq.pyo
 ${PYSITELIB}/hgext/notify.py
 ${PYSITELIB}/hgext/notify.pyc
 ${PYSITELIB}/hgext/notify.pyo
+${PYSITELIB}/hgext/pager.py
+${PYSITELIB}/hgext/pager.pyc
+${PYSITELIB}/hgext/pager.pyo
 ${PYSITELIB}/hgext/parentrevspec.py
 ${PYSITELIB}/hgext/parentrevspec.pyc
 ${PYSITELIB}/hgext/parentrevspec.pyo
@@ -88,6 +108,9 @@ ${PYSITELIB}/hgext/record.pyo
 ${PYSITELIB}/hgext/transplant.py
 ${PYSITELIB}/hgext/transplant.pyc
 ${PYSITELIB}/hgext/transplant.pyo
+${PYSITELIB}/hgext/win32mbcs.py
+${PYSITELIB}/hgext/win32mbcs.pyc
+${PYSITELIB}/hgext/win32mbcs.pyo
 ${PYSITELIB}/hgext/win32text.py
 ${PYSITELIB}/hgext/win32text.pyc
 ${PYSITELIB}/hgext/win32text.pyo
@@ -126,6 +149,9 @@ ${PYSITELIB}/mercurial/commands.pyo
 ${PYSITELIB}/mercurial/context.py
 ${PYSITELIB}/mercurial/context.pyc
 ${PYSITELIB}/mercurial/context.pyo
+${PYSITELIB}/mercurial/copies.py
+${PYSITELIB}/mercurial/copies.pyc
+${PYSITELIB}/mercurial/copies.pyo
 ${PYSITELIB}/mercurial/demandimport.py
 ${PYSITELIB}/mercurial/demandimport.pyc
 ${PYSITELIB}/mercurial/demandimport.pyo
@@ -145,6 +171,12 @@ ${PYSITELIB}/mercurial/fancyopts.pyo
 ${PYSITELIB}/mercurial/filelog.py
 ${PYSITELIB}/mercurial/filelog.pyc
 ${PYSITELIB}/mercurial/filelog.pyo
+${PYSITELIB}/mercurial/filemerge.py
+${PYSITELIB}/mercurial/filemerge.pyc
+${PYSITELIB}/mercurial/filemerge.pyo
+${PYSITELIB}/mercurial/hbisect.py
+${PYSITELIB}/mercurial/hbisect.pyc
+${PYSITELIB}/mercurial/hbisect.pyo
 ${PYSITELIB}/mercurial/help.py
 ${PYSITELIB}/mercurial/help.pyc
 ${PYSITELIB}/mercurial/help.pyo
@@ -163,12 +195,18 @@ ${PYSITELIB}/mercurial/hgweb/hgweb_mod.pyo
 ${PYSITELIB}/mercurial/hgweb/hgwebdir_mod.py
 ${PYSITELIB}/mercurial/hgweb/hgwebdir_mod.pyc
 ${PYSITELIB}/mercurial/hgweb/hgwebdir_mod.pyo
+${PYSITELIB}/mercurial/hgweb/protocol.py
+${PYSITELIB}/mercurial/hgweb/protocol.pyc
+${PYSITELIB}/mercurial/hgweb/protocol.pyo
 ${PYSITELIB}/mercurial/hgweb/request.py
 ${PYSITELIB}/mercurial/hgweb/request.pyc
 ${PYSITELIB}/mercurial/hgweb/request.pyo
 ${PYSITELIB}/mercurial/hgweb/server.py
 ${PYSITELIB}/mercurial/hgweb/server.pyc
 ${PYSITELIB}/mercurial/hgweb/server.pyo
+${PYSITELIB}/mercurial/hgweb/webcommands.py
+${PYSITELIB}/mercurial/hgweb/webcommands.pyc
+${PYSITELIB}/mercurial/hgweb/webcommands.pyo
 ${PYSITELIB}/mercurial/hgweb/wsgicgi.py
 ${PYSITELIB}/mercurial/hgweb/wsgicgi.pyc
 ${PYSITELIB}/mercurial/hgweb/wsgicgi.pyo
@@ -222,9 +260,6 @@ ${PYSITELIB}/mercurial/osutil.so
 ${PYSITELIB}/mercurial/patch.py
 ${PYSITELIB}/mercurial/patch.pyc
 ${PYSITELIB}/mercurial/patch.pyo
-${PYSITELIB}/mercurial/remoterepo.py
-${PYSITELIB}/mercurial/remoterepo.pyc
-${PYSITELIB}/mercurial/remoterepo.pyo
 ${PYSITELIB}/mercurial/repair.py
 ${PYSITELIB}/mercurial/repair.pyc
 ${PYSITELIB}/mercurial/repair.pyo
@@ -234,6 +269,9 @@ ${PYSITELIB}/mercurial/repo.pyo
 ${PYSITELIB}/mercurial/revlog.py
 ${PYSITELIB}/mercurial/revlog.pyc
 ${PYSITELIB}/mercurial/revlog.pyo
+${PYSITELIB}/mercurial/simplemerge.py
+${PYSITELIB}/mercurial/simplemerge.pyc
+${PYSITELIB}/mercurial/simplemerge.pyo
 ${PYSITELIB}/mercurial/sshrepo.py
 ${PYSITELIB}/mercurial/sshrepo.pyc
 ${PYSITELIB}/mercurial/sshrepo.pyo
@@ -249,6 +287,9 @@ ${PYSITELIB}/mercurial/streamclone.pyo
 ${PYSITELIB}/mercurial/strutil.py
 ${PYSITELIB}/mercurial/strutil.pyc
 ${PYSITELIB}/mercurial/strutil.pyo
+${PYSITELIB}/mercurial/templatefilters.py
+${PYSITELIB}/mercurial/templatefilters.pyc
+${PYSITELIB}/mercurial/templatefilters.pyo
 ${PYSITELIB}/mercurial/templater.py
 ${PYSITELIB}/mercurial/templater.pyc
 ${PYSITELIB}/mercurial/templater.pyo
@@ -295,29 +336,14 @@ ${PYSITELIB}/mercurial/templates/map-cmdline.changelog
 ${PYSITELIB}/mercurial/templates/map-cmdline.compact
 ${PYSITELIB}/mercurial/templates/map-cmdline.default
 ${PYSITELIB}/mercurial/templates/notfound.tmpl
-${PYSITELIB}/mercurial/templates/old/changelog.tmpl
-${PYSITELIB}/mercurial/templates/old/changelogentry.tmpl
-${PYSITELIB}/mercurial/templates/old/changeset.tmpl
-${PYSITELIB}/mercurial/templates/old/fileannotate.tmpl
-${PYSITELIB}/mercurial/templates/old/filediff.tmpl
-${PYSITELIB}/mercurial/templates/old/filelog.tmpl
-${PYSITELIB}/mercurial/templates/old/filelogentry.tmpl
-${PYSITELIB}/mercurial/templates/old/filerevision.tmpl
-${PYSITELIB}/mercurial/templates/old/footer.tmpl
-${PYSITELIB}/mercurial/templates/old/header.tmpl
-${PYSITELIB}/mercurial/templates/old/manifest.tmpl
-${PYSITELIB}/mercurial/templates/old/map
-${PYSITELIB}/mercurial/templates/old/search.tmpl
-${PYSITELIB}/mercurial/templates/old/shortlog.tmpl
-${PYSITELIB}/mercurial/templates/old/shortlogentry.tmpl
-${PYSITELIB}/mercurial/templates/old/tags.tmpl
 ${PYSITELIB}/mercurial/templates/raw/changeset.tmpl
+${PYSITELIB}/mercurial/templates/raw/error.tmpl
 ${PYSITELIB}/mercurial/templates/raw/fileannotate.tmpl
 ${PYSITELIB}/mercurial/templates/raw/filediff.tmpl
-${PYSITELIB}/mercurial/templates/raw/header.tmpl
 ${PYSITELIB}/mercurial/templates/raw/index.tmpl
 ${PYSITELIB}/mercurial/templates/raw/manifest.tmpl
 ${PYSITELIB}/mercurial/templates/raw/map
+${PYSITELIB}/mercurial/templates/raw/notfound.tmpl
 ${PYSITELIB}/mercurial/templates/rss/changelog.tmpl
 ${PYSITELIB}/mercurial/templates/rss/changelogentry.tmpl
 ${PYSITELIB}/mercurial/templates/rss/filelog.tmpl
@@ -330,6 +356,8 @@ ${PYSITELIB}/mercurial/templates/search.tmpl
 ${PYSITELIB}/mercurial/templates/shortlog.tmpl
 ${PYSITELIB}/mercurial/templates/shortlogentry.tmpl
 ${PYSITELIB}/mercurial/templates/static/hgicon.png
+${PYSITELIB}/mercurial/templates/static/hglogo.png
+${PYSITELIB}/mercurial/templates/static/highlight.css
 ${PYSITELIB}/mercurial/templates/static/style-gitweb.css
 ${PYSITELIB}/mercurial/templates/static/style.css
 ${PYSITELIB}/mercurial/templates/tags.tmpl
@@ -353,7 +381,6 @@ ${PYSITELIB}/mercurial/version.py
 ${PYSITELIB}/mercurial/version.pyc
 ${PYSITELIB}/mercurial/version.pyo
 man/man1/hg.1
-man/man1/hgmerge.1
 man/man5/hgignore.5
 man/man5/hgrc.5
 share/doc/mercurial/README
@@ -361,7 +388,6 @@ share/doc/mercurial/README
 @dirrm ${PYSITELIB}/mercurial/templates/static
 @dirrm ${PYSITELIB}/mercurial/templates/rss
 @dirrm ${PYSITELIB}/mercurial/templates/raw
-@dirrm ${PYSITELIB}/mercurial/templates/old
 @dirrm ${PYSITELIB}/mercurial/templates/gitweb
 @dirrm ${PYSITELIB}/mercurial/templates/atom
 @dirrm ${PYSITELIB}/mercurial/templates
