@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7200 2008/04/09 22:52:31 wiz Exp $
+$NetBSD: TODO,v 1.7201 2008/04/10 18:06:13 tonio Exp $
 
 Suggested new packages
 ======================
@@ -1278,7 +1278,6 @@ Suggested package updates
 	o raptor-1.4.17
 	o rarian-0.8.0
 	o rat-4.2.25
-	o ratpoison-1.4.3
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
 	o rdp-1.6
