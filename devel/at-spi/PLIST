@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2007/10/31 19:52:34 drochner Exp $
+@comment $NetBSD: PLIST,v 1.19 2008/04/10 16:56:22 drochner Exp $
 include/at-spi-1.0/cspi/spi-impl.h
 include/at-spi-1.0/cspi/spi-listener.h
 include/at-spi-1.0/cspi/spi-roletypes.h
@@ -93,7 +93,7 @@ share/doc/${PKGNAME}/reference/html/Accessibility__Text_8idl.html
 share/doc/${PKGNAME}/reference/html/Accessibility__Value_8idl-source.html
 share/doc/${PKGNAME}/reference/html/Accessibility__Value_8idl.html
 share/doc/${PKGNAME}/reference/html/annotated.html
-share/doc/${PKGNAME}/reference/html/dir_1921d1e21393553b2653f8c7c21bdc73.html
+share/doc/${PKGNAME}/reference/html/dir_d2b0dd4bd0d48c2c086883c3d194030d.html
 share/doc/${PKGNAME}/reference/html/dirs.html
 share/doc/${PKGNAME}/reference/html/doxygen.css
 share/doc/${PKGNAME}/reference/html/doxygen.png
@@ -179,7 +179,6 @@ share/doc/${PKGNAME}/reference/html/namespacemembers_enum.html
 share/doc/${PKGNAME}/reference/html/namespacemembers_eval.html
 share/doc/${PKGNAME}/reference/html/namespacemembers_type.html
 share/doc/${PKGNAME}/reference/html/namespaces.html
-share/doc/${PKGNAME}/reference/html/structAccessibility_1_1AccessibleSetEntry.html
 share/doc/${PKGNAME}/reference/html/structAccessibility_1_1BoundingBox.html
 share/doc/${PKGNAME}/reference/html/structAccessibility_1_1Command.html
 share/doc/${PKGNAME}/reference/html/structAccessibility_1_1DeviceEvent.html
@@ -250,6 +249,7 @@ share/idl/at-spi-1.0/Accessibility_Value.idl
 share/locale/ar/LC_MESSAGES/at-spi.mo
 share/locale/az/LC_MESSAGES/at-spi.mo
 share/locale/be/LC_MESSAGES/at-spi.mo
+share/locale/be@latin/LC_MESSAGES/at-spi.mo
 share/locale/bg/LC_MESSAGES/at-spi.mo
 share/locale/bn/LC_MESSAGES/at-spi.mo
 share/locale/bs/LC_MESSAGES/at-spi.mo
