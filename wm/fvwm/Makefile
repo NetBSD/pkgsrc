@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2007/12/20 18:04:04 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2008/04/10 21:30:44 jlam Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://ftp.fvwm.org/pub/fvwm/version-2/ \
 		http://www.fvwm.org/generated/icon_download/
@@ -62,19 +62,7 @@ post-install:
 			${PREFIX:Q}/lib/X11/fvwm2/system.fvwm2rc ; \
 	fi
 
-.include "../../mk/bsd.prefs.mk"
-
-.if defined(FVWM2_USE_GTK) && ${FVWM2_USE_GTK} == "YES"
-.include "../../x11/gtk/buildlink3.mk"
-PLIST_SUBST+=		GTK=""
-.else
-PLIST_SUBST+=		GTK="@comment "
-CONFIGURE_ARGS+=	--without-gtk-prefix
-.endif
-
-.if defined(FVWM2_USE_RPLAY) && ${FVWM2_USE_RPLAY} == "YES"
-.include "../../audio/rplay/buildlink3.mk"
-.endif
+.include "options.mk"
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
