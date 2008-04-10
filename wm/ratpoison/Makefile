@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.25 2007/12/01 21:22:15 tonio Exp $
+# $NetBSD: Makefile,v 1.26 2008/04/10 18:04:51 tonio Exp $
 #
 
-DISTNAME=	ratpoison-1.4.2
+DISTNAME=	ratpoison-1.4.3
 PKGNAME=	${DISTNAME:S/-beta/beta/}
 CATEGORIES=	wm
 MASTER_SITES=	http://savannah.nongnu.org/download/ratpoison/
