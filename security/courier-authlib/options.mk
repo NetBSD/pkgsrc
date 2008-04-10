@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2008/02/18 20:26:33 jlam Exp $
+# $NetBSD: options.mk,v 1.12 2008/04/10 20:56:33 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.courier-authlib
 PKG_SUPPORTED_OPTIONS=	pam bdb ldap mysql pgsql
@@ -55,7 +55,6 @@ AUTHLIB_PLIST+=		sbin/userdbpw
 AUTHLIB_PLIST+=		sbin/vchkpw2userdb
 .else
 CONFIGURE_ARGS+=	--without-authuserdb
-PLIST_SUBST+=		BDB="@comment "
 .endif
 
 ###
