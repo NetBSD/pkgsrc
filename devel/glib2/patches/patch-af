@@ -1,10 +1,10 @@
-$NetBSD: patch-af,v 1.9 2007/11/25 23:38:52 wiz Exp $
+$NetBSD: patch-af,v 1.10 2008/04/10 12:13:49 drochner Exp $
 
---- glib/libcharset/Makefile.in.orig	2007-11-24 06:41:56.000000000 +0000
+--- glib/libcharset/Makefile.in.orig	2008-03-11 01:41:07.000000000 +0100
 +++ glib/libcharset/Makefile.in
-@@ -556,18 +556,6 @@ uninstall-am: uninstall-info-am uninstal
- 	uninstall-am uninstall-info-am uninstall-local
- 
+@@ -598,18 +598,6 @@ test-report perf-report full-report:	${T
+ # run make test as part of make check
+ check-local: test
  install-exec-local: all-local
 -	$(mkinstalldirs) $(DESTDIR)$(libdir)
 -	if test -f $(charset_alias); then \
