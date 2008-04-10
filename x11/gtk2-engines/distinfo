@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.23 2007/11/03 16:15:18 drochner Exp $
+$NetBSD: distinfo,v 1.24 2008/04/10 16:30:03 drochner Exp $
 
-SHA1 (gtk-engines-2.12.2.tar.bz2) = 9bebc66b2543471c10ba9cb9059d59e070142e98
-RMD160 (gtk-engines-2.12.2.tar.bz2) = d6f577c2b6c1c55287647f2e17f7439bf2337425
-Size (gtk-engines-2.12.2.tar.bz2) = 653441 bytes
+SHA1 (gtk-engines-2.14.1.tar.bz2) = e4713d44df431c83b1640457b90abc3ddc71d9b1
+RMD160 (gtk-engines-2.14.1.tar.bz2) = b3595adb6f283a801b76942ed6cd058dbb12fbbb
+Size (gtk-engines-2.14.1.tar.bz2) = 669825 bytes
