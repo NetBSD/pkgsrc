@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/02/01 20:40:17 drochner Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/04/10 11:54:40 drochner Exp $
 bin/gst-feedback-0.10
 bin/gst-inspect-0.10
 bin/gst-launch-0.10
@@ -56,6 +56,7 @@ include/gstreamer-0.10/gst/gstparse.h
 include/gstreamer-0.10/gst/gstpipeline.h
 include/gstreamer-0.10/gst/gstplugin.h
 include/gstreamer-0.10/gst/gstpluginfeature.h
+include/gstreamer-0.10/gst/gstpoll.h
 include/gstreamer-0.10/gst/gstquery.h
 include/gstreamer-0.10/gst/gstregistry.h
 include/gstreamer-0.10/gst/gstsegment.h
@@ -135,6 +136,7 @@ share/gtk-doc/html/gstreamer-0.10/gstreamer-GstIterator.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-GstMessage.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-GstMiniObject.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-GstParse.html
+share/gtk-doc/html/gstreamer-0.10/gstreamer-GstPoll.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-GstQuery.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-GstSegment.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-GstStructure.html
@@ -200,6 +202,7 @@ share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-fdsrc.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-filesink.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-filesrc.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-identity.html
+share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-multiqueue.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-plugin-coreelements.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-plugin-coreindexers.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-queue.html
