@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/04 11:32:15 shannonjr Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/10 07:56:09 wiz Exp $
 #
 
 DISTNAME=	pcsc-tools-1.4.12
@@ -9,7 +9,7 @@ MAINTAINER=	shannonjr@NetBSD.org
 HOMEPAGE=	http://ludovic.rousseau.free.fr/softwares/pcsc-tools/
 COMMENT=	Some tools usefull for a PC/SC user.
 
-DEPENDS+=	p5-pcsc-perl>=1.4.6:../../local/p5-pcsc
+DEPENDS+=	p5-pcsc-perl>=1.4.6:../../security/p5-pcsc
 
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	gmake
