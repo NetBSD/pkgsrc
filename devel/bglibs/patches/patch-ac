@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2006/12/29 22:00:17 markd Exp $
+$NetBSD: patch-ac,v 1.2 2008/04/10 03:20:49 schmonz Exp $
 
---- selftests.sh.orig	2006-12-30 10:00:53.471026000 +1300
+--- selftests.sh.orig	2008-04-09 11:24:34.000000000 -0400
 +++ selftests.sh
 @@ -20,7 +20,7 @@ do_test() {
      return 1
