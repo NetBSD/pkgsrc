@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.46 2008/02/11 13:58:41 gdt Exp $
+# $NetBSD: Makefile.common,v 1.47 2008/04/10 11:48:58 drochner Exp $
 #
 
 # used by audio/xine-arts/Makefile
 # used by audio/xine-esound/Makefile
 
-DISTNAME=		xine-lib-1.1.10.1
-XINE_PKGNAME=		xine-lib-1.1.10.1
+DISTNAME=		xine-lib-1.1.11.1
+XINE_PKGNAME=		xine-lib-1.1.11.1
 PKGNAME?=		${XINE_PKGNAME}
 CATEGORIES?=		multimedia
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
@@ -14,7 +14,7 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xinehq.de/
 
-XINE_LIB_VER=		1.1.10
+XINE_LIB_VER=		1.1.11.1
 PLIST_SUBST+=		XINE_LIB_VER=${XINE_LIB_VER:Q}
 
 DISTINFO_FILE=		${.CURDIR}/../../multimedia/xine-lib/distinfo
