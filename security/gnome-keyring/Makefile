@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.34 2008/02/06 00:36:06 tnn Exp $
+# $NetBSD: Makefile,v 1.35 2008/04/10 16:53:44 drochner Exp $
 
-DISTNAME=	gnome-keyring-2.20.3
+DISTNAME=	gnome-keyring-2.22.1
 CATEGORIES=	security gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-keyring/2.20/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-keyring/2.22/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -16,16 +16,20 @@ GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 
-PKGCONFIG_OVERRIDE=	${WRKSRC}/gnome-keyring-1.pc.in
+PKGCONFIG_OVERRIDE=	${WRKSRC}/library/gnome-keyring-1.pc.in
+
+GCONF_SCHEMAS+=		gnome-keyring.schemas
 
 CFLAGS.HPUX+=		-DMAP_ANON=MAP_ANONYMOUS
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 
+.include "../../devel/GConf/schemas.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../security/libgcrypt/buildlink3.mk"
+.include "../../security/libtasn1/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pam.buildlink3.mk"
