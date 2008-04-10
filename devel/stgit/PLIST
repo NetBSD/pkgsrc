@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/02/11 20:18:56 bjs Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/04/10 12:11:34 bjs Exp $
 bin/stg
 bin/stg-cvs
 bin/stg-dispatch
@@ -20,6 +20,9 @@ ${PYSITELIB}/stgit/basedir.pyo
 ${PYSITELIB}/stgit/commands/__init__.py
 ${PYSITELIB}/stgit/commands/__init__.pyc
 ${PYSITELIB}/stgit/commands/__init__.pyo
+${PYSITELIB}/stgit/commands/add.py
+${PYSITELIB}/stgit/commands/add.pyc
+${PYSITELIB}/stgit/commands/add.pyo
 ${PYSITELIB}/stgit/commands/applied.py
 ${PYSITELIB}/stgit/commands/applied.pyc
 ${PYSITELIB}/stgit/commands/applied.pyo
@@ -32,15 +35,15 @@ ${PYSITELIB}/stgit/commands/clean.pyo
 ${PYSITELIB}/stgit/commands/clone.py
 ${PYSITELIB}/stgit/commands/clone.pyc
 ${PYSITELIB}/stgit/commands/clone.pyo
-${PYSITELIB}/stgit/commands/coalesce.py
-${PYSITELIB}/stgit/commands/coalesce.pyc
-${PYSITELIB}/stgit/commands/coalesce.pyo
 ${PYSITELIB}/stgit/commands/commit.py
 ${PYSITELIB}/stgit/commands/commit.pyc
 ${PYSITELIB}/stgit/commands/commit.pyo
 ${PYSITELIB}/stgit/commands/common.py
 ${PYSITELIB}/stgit/commands/common.pyc
 ${PYSITELIB}/stgit/commands/common.pyo
+${PYSITELIB}/stgit/commands/copy.py
+${PYSITELIB}/stgit/commands/copy.pyc
+${PYSITELIB}/stgit/commands/copy.pyo
 ${PYSITELIB}/stgit/commands/delete.py
 ${PYSITELIB}/stgit/commands/delete.pyc
 ${PYSITELIB}/stgit/commands/delete.pyo
@@ -116,6 +119,9 @@ ${PYSITELIB}/stgit/commands/repair.pyo
 ${PYSITELIB}/stgit/commands/resolved.py
 ${PYSITELIB}/stgit/commands/resolved.pyc
 ${PYSITELIB}/stgit/commands/resolved.pyo
+${PYSITELIB}/stgit/commands/rm.py
+${PYSITELIB}/stgit/commands/rm.pyc
+${PYSITELIB}/stgit/commands/rm.pyo
 ${PYSITELIB}/stgit/commands/series.py
 ${PYSITELIB}/stgit/commands/series.pyc
 ${PYSITELIB}/stgit/commands/series.pyo
@@ -155,21 +161,6 @@ ${PYSITELIB}/stgit/git.pyo
 ${PYSITELIB}/stgit/gitmergeonefile.py
 ${PYSITELIB}/stgit/gitmergeonefile.pyc
 ${PYSITELIB}/stgit/gitmergeonefile.pyo
-${PYSITELIB}/stgit/lib/__init__.py
-${PYSITELIB}/stgit/lib/__init__.pyc
-${PYSITELIB}/stgit/lib/__init__.pyo
-${PYSITELIB}/stgit/lib/git.py
-${PYSITELIB}/stgit/lib/git.pyc
-${PYSITELIB}/stgit/lib/git.pyo
-${PYSITELIB}/stgit/lib/stack.py
-${PYSITELIB}/stgit/lib/stack.pyc
-${PYSITELIB}/stgit/lib/stack.pyo
-${PYSITELIB}/stgit/lib/stackupgrade.py
-${PYSITELIB}/stgit/lib/stackupgrade.pyc
-${PYSITELIB}/stgit/lib/stackupgrade.pyo
-${PYSITELIB}/stgit/lib/transaction.py
-${PYSITELIB}/stgit/lib/transaction.pyc
-${PYSITELIB}/stgit/lib/transaction.pyo
 ${PYSITELIB}/stgit/main.py
 ${PYSITELIB}/stgit/main.pyc
 ${PYSITELIB}/stgit/main.pyo
@@ -193,12 +184,14 @@ ${PYSITELIB}/stgit/version.pyc
 ${PYSITELIB}/stgit/version.pyo
 man/man1/stg-branch.1
 man/man1/stg-clone.1
+man/man1/stg-cp.1
 man/man1/stg-init.1
 man/man1/stg-new.1
 man/man1/stg-sink.1
 man/man1/stg.1
 share/doc/stgit/html/stg-branch.html
 share/doc/stgit/html/stg-clone.html
+share/doc/stgit/html/stg-cp.html
 share/doc/stgit/html/stg-init.html
 share/doc/stgit/html/stg-new.html
 share/doc/stgit/html/stg-sink.html
@@ -215,7 +208,7 @@ share/stgit/templates/patchmail.tmpl
 @dirrm share/stgit/contrib
 @dirrm share/stgit
 @dirrm share/examples/stgit
+@dirrm share/doc/stgit/html
 @dirrm share/doc/stgit
-@dirrm ${PYSITELIB}/stgit/lib
 @dirrm ${PYSITELIB}/stgit/commands
 @dirrm ${PYSITELIB}/stgit
