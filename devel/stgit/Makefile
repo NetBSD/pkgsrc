@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.7 2008/04/10 12:11:34 bjs Exp $
+# $NetBSD: Makefile,v 1.8 2008/04/10 12:12:24 bjs Exp $
 
 DISTNAME=	stgit-0.14.2
 CATEGORIES=	devel
 MASTER_SITES=	http://homepage.ntlworld.com/cmarinas/stgit/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	bjs@NetBSD.org
 HOMEPAGE=	http://www.procode.org/stgit/
 COMMENT=	Stacked GIT
 
