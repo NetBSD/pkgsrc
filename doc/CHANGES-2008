@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.683 2008/04/10 03:21:37 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.684 2008/04/10 12:13:32 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1316,3 +1316,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added multimedia/mediatomb version 0.11.0 [agc 2008-04-09]
 	Updated www/drupal6 to 6.2 [adrianp 2008-04-09]
 	Updated devel/bglibs to 1.104 [schmonz 2008-04-10]
+	Updated devel/stgit to 0.14.2 [bjs 2008-04-10]
