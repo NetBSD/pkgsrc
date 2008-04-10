@@ -1,13 +1,17 @@
-$NetBSD: patch-ac,v 1.9 2007/09/21 12:58:14 wiz Exp $
+$NetBSD: patch-ac,v 1.10 2008/04/10 16:27:47 drochner Exp $
 
---- gconf/Makefile.in.orig	2006-10-05 12:54:51.000000000 +0000
+--- gconf/Makefile.in.orig	2008-03-10 15:54:18.000000000 +0100
 +++ gconf/Makefile.in
-@@ -818,8 +818,8 @@ default.path: $(srcdir)/default.path.in
+@@ -795,12 +795,8 @@ default.path: $(srcdir)/default.path.in
  		<$(srcdir)/default.path.in >default.path
  
  install-data-local: default.path
 -	$(mkinstalldirs) $(DESTDIR)$(sysgconfdir)/$(MAJOR_VERSION)
--	$(INSTALL_DATA) default.path $(DESTDIR)$(sysgconfdir)/$(MAJOR_VERSION)/path
+-	if test -f $(DESTDIR)$(sysgconfdir)/$(MAJOR_VERSION)/path; then				\
+-		echo "Existing path configuration file not changed";				\
+-	else 											\
+-		$(INSTALL_DATA) default.path $(DESTDIR)$(sysgconfdir)/$(MAJOR_VERSION)/path;	\
+-	fi
 +	$(mkinstalldirs) $(DESTDIR)$(datadir)/examples/GConf
 +	$(INSTALL_DATA) default.path $(DESTDIR)$(datadir)/examples/GConf/path
  
