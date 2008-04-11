@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.686 2008/04/10 23:35:42 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.687 2008/04/11 06:09:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1319,3 +1319,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/stgit to 0.14.2 [bjs 2008-04-10]
 	Updated wm/ratpoison to 1.4.3 [tonio 2008-04-10]
 	Updated devel/mercurial to 0.9.5 [bjs 2008-04-10]
+	Updated devel/m4 to 1.4.11 [wiz 2008-04-11]
