@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.690 2008/04/11 14:59:16 agc Exp $
+$NetBSD: CHANGES-2008,v 1.691 2008/04/11 20:16:23 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1322,3 +1322,30 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/m4 to 1.4.11 [wiz 2008-04-11]
 	Updated devel/pango to 1.20.2 [tron 2008-04-11]
 	Added filesystems/fuse-djmount version 0.71 [agc 2008-04-11]
+	Updated multimedia/py-gstreamer0.10 to 0.10.11 [drochner 2008-04-11]
+	Updated x11/vte to 0.16.13 [drochner 2008-04-11]
+	Updated x11/py-gnome2 to 2.22.0 [drochner 2008-04-11]
+	Added sysutils/gvfs version 0.2.3 [drochner 2008-04-11]
+	Added sysutils/gnome-settings-daemon version 2.22.1 [drochner 2008-04-11]
+	Added multimedia/totem-pl-parser version 2.22.2 [drochner 2008-04-11]
+	Added devel/libgweather version 2.22.1.1 [drochner 2008-04-11]
+	Updated textproc/rarian to 0.8.0 [drochner 2008-04-11]
+	Updated devel/liboil to 0.3.14 [drochner 2008-04-11]
+	Updated lang/python24 to 2.4.5 [drochner 2008-04-11]
+	Updated www/liferea to 1.4.14 [drochner 2008-04-11]
+	Updated devel/at-spi to 1.22.1 [drochner 2008-04-11]
+	Updated devel/libgnomeui to 2.22.1 [drochner 2008-04-11]
+	Updated security/gnome-keyring to 2.22.1 [drochner 2008-04-11]
+	Updated devel/libbonoboui to 2.22.0 [drochner 2008-04-11]
+	Updated devel/libgnome to 2.22.0 [drochner 2008-04-11]
+	Updated x11/gtk2-engines to 2.14.1 [drochner 2008-04-11]
+	Updated devel/GConf to 2.22.0 [drochner 2008-04-11]
+	Updated sysutils/gnome-vfs to 2.22.0 [drochner 2008-04-11]
+	Updated devel/gail to 1.22.1 [drochner 2008-04-11]
+	Updated devel/libbonobo to 2.22.0 [drochner 2008-04-11]
+	Added net/libsoup24 version 2.4.1 [drochner 2008-04-11]
+	Updated devel/atk to 1.22.0 [drochner 2008-04-11]
+	Updated devel/glib2 to 2.16.3 [drochner 2008-04-11]
+	Updated multimedia/gst-plugins0.10-base to 0.10.19 [drochner 2008-04-11]
+	Updated multimedia/gstreamer0.10 to 0.10.19 [drochner 2008-04-11]
+	Updated multimedia/xine-lib to 1.1.11.1 [drochner 2008-04-11]
