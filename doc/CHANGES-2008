@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.689 2008/04/11 12:23:09 tron Exp $
+$NetBSD: CHANGES-2008,v 1.690 2008/04/11 14:59:16 agc Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1321,3 +1321,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/mercurial to 0.9.5 [bjs 2008-04-10]
 	Updated devel/m4 to 1.4.11 [wiz 2008-04-11]
 	Updated devel/pango to 1.20.2 [tron 2008-04-11]
+	Added filesystems/fuse-djmount version 0.71 [agc 2008-04-11]
