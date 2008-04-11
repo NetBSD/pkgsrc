@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/10/11 18:43:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/04/11 18:41:53 drochner Exp $
 bin/rarian-example
 bin/rarian-sk-config
 bin/rarian-sk-extract
@@ -27,6 +27,7 @@ bin/scrollkeeper-rebuilddb
 bin/scrollkeeper-uninstall
 bin/scrollkeeper-update
 include/rarian/rarian-info.h
+include/rarian/rarian-main.h
 include/rarian/rarian-man.h
 include/rarian/rarian-reg-utils.h
 include/rarian/rarian.h
