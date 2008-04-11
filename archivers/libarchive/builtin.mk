@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2007/08/03 11:18:33 joerg Exp $
+# $NetBSD: builtin.mk,v 1.2 2008/04/11 20:37:06 joerg Exp $
 
 BUILTIN_PKG:=	libarchive
 
@@ -28,14 +28,23 @@ MAKEVARS+=	IS_BUILTIN.libarchive
     empty(H_ARCHIVE:M__nonexistent__)
 BUILTIN_VERSION.libarchive!=						\
 	${AWK} '/\#define[ 	]*ARCHIVE_LIBRARY_VERSION/ {		\
-			vers = $$4;					\
-			gsub("\"", "", vers);				\
-			print vers;					\
-			found=1;					\
+			lib_vers = $$4;					\
+			gsub("\"", "", lib_vers);			\
+			if (found == 0)					\
+			    found=1;					\
+		}							\
+		/\#define[ 	]*ARCHIVE_VERSION_STRING/ {		\
+			vers_str = $$4;					\
+			gsub("\"", "", vers_str);			\
+			found=2;					\
 		}							\
 		END {							\
 			if (!found)					\
 				print;					\
+			else if (found == 1)				\
+				print lib_vers;				\
+			else if (found == 2)				\
+				print vers_str;				\
 		}							\
 	' ${H_ARCHIVE:Q}
 .  if !empty(BUILTIN_VERSION.libarchive)
