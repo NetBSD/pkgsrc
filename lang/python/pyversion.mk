@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.54 2008/04/11 13:10:15 abs Exp $
+# $NetBSD: pyversion.mk,v 1.55 2008/04/11 15:37:30 abs Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -65,7 +65,11 @@ PYTHON_VERSION_DEFAULT?=		24
 .if ${OPSYS} == "Darwin"
 PYTHON_VERSIONS_INCOMPATIBLE+=		22 21 20 15
 .endif
+.if exists(../../wip/python25/Makefile)
 PYTHON_VERSIONS_ACCEPTED?=		25 24 23 22 21 20
+.else
+PYTHON_VERSIONS_ACCEPTED?=		24 23 22 21 20
+.endif
 PYTHON_VERSIONS_INCOMPATIBLE?=		# empty by default
 
 BUILDLINK_API_DEPENDS.python15?=		python15>=1.5
