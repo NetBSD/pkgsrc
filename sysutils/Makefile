@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.423 2008/04/04 15:33:06 jlam Exp $
+# $NetBSD: Makefile,v 1.424 2008/04/11 19:27:53 drochner Exp $
 #
 
 COMMENT=	System utilities
@@ -109,6 +109,7 @@ SUBDIR+=	gkrellm-server
 SUBDIR+=	gkrellm-share
 SUBDIR+=	gnome-menus
 SUBDIR+=	gnome-pkgview
+SUBDIR+=	gnome-settings-daemon
 SUBDIR+=	gnome-system-monitor
 SUBDIR+=	gnome-vfs
 SUBDIR+=	gnome-vfs-monikers
@@ -120,6 +121,7 @@ SUBDIR+=	grun
 SUBDIR+=	gst-plugins0.10-gnomevfs
 SUBDIR+=	gst-plugins0.8-gnomevfs
 SUBDIR+=	gtk-send-pr
+SUBDIR+=	gvfs
 SUBDIR+=	gworkspace
 SUBDIR+=	hcidump
 SUBDIR+=	hddtemp
