@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2008/03/04 11:02:25 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2008/04/11 23:15:48 gdt Exp $
 #
 
 DISTNAME=		asciidoc-8.2.5
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		textproc
 MASTER_SITES=		${HOMEPAGE}	\
 			${MASTER_SITE_SOURCEFORGE:=asciidoc/}
@@ -17,14 +17,15 @@ DEPENDS+=		getopt-[0-9]*:../../misc/getopt
 REPLACE_BASH+=		a2x
 USE_TOOLS+=		bash:run
 PYTHON_VERSIONS_INCOMPATIBLE=	15 20 21 22
-PYTHON_PATCH_SCRIPTS=	asciidoc.py
+PYTHON_PATCH_SCRIPTS=	asciidoc.py filters/code-filter.py filters/music2png.py
+
 NO_BUILD=		yes
 
 SUBST_CLASSES+=		ad
 SUBST_STAGE.ad=		pre-configure
 SUBST_MESSAGE.ad=	Fixing hard-coded config file paths.
 SUBST_FILES.ad=		a2x asciidoc.py
-SUBST_SED.ad=		-e 's,^\(CONF_DIR\).*=.*,\1 = "${PREFIX}/share/asciidoc",'
+SUBST_SED.ad=		-e 's,^\(CONF_DIR\).*=.*,\1="${PREFIX}/share/asciidoc",'
 
 INSTALLATION_DIRS=	bin share/asciidoc share/asciidoc/filters \
 			share/asciidoc/docbook-xsl share/asciidoc/stylesheets \
