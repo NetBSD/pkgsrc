@@ -1,7 +1,8 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.1 2008/04/05 07:02:00 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.2 2008/04/11 16:00:17 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
 
 Created pkgsrc-2008Q1 branch [agc 2008-04-04 15:00 GMT]
-
+Pullup ticket 2324 - requested by joerg
+fix stray 1 preventing package do-install
