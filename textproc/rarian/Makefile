@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2007/11/28 09:18:57 tron Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/11 18:41:53 drochner Exp $
 #
 
-DISTNAME=	rarian-0.6.0
+DISTNAME=	rarian-0.8.0
 CATEGORIES=	textproc
 MASTER_SITES=	http://rarian.freedesktop.org/Releases/
-MASTER_SITES+=	${MASTER_SITE_GNOME:=sources/rarian/0.6/}
+MASTER_SITES+=	${MASTER_SITE_GNOME:=sources/rarian/0.8/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
