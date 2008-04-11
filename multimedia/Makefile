@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2008/04/09 20:37:35 agc Exp $
+# $NetBSD: Makefile,v 1.118 2008/04/11 19:08:34 drochner Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -107,6 +107,7 @@ SUBDIR+=	subtitleeditor
 SUBDIR+=	swfdec
 SUBDIR+=	swfdec-gtk2
 SUBDIR+=	totem
+SUBDIR+=	totem-pl-parser
 SUBDIR+=	totem-xine
 SUBDIR+=	transcode
 SUBDIR+=	vlc
