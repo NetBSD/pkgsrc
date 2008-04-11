@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/04/11 09:29:19 agc Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/11 14:41:27 agc Exp $
 
 DISTNAME=	mediatomb-0.11.0
 CATEGORIES=	multimedia
@@ -14,6 +14,8 @@ USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config
 
 PREFER.bind=	pkgsrc	# we need the package for the lwres lib
+
+.include "options.mk"
 
 .include "../../audio/taglib/buildlink3.mk"
 .include "../../databases/sqlite3/buildlink3.mk"
