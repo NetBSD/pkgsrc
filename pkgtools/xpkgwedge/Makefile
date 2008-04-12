@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2007/12/16 12:43:50 tron Exp $
+# $NetBSD: Makefile,v 1.75 2008/04/12 22:43:09 jlam Exp $
 
 DISTNAME=	xpkgwedge-1.16
 CATEGORIES=	pkgtools devel x11
@@ -44,29 +44,24 @@ FILES_SUBST+=		FONT_PROGS=${FONT_PROGS:Q}
 FILES_SUBST+=		MAKE=${IMAKE_MAKE:Q}
 USE_TOOLS+=		${IMAKE_TOOLS}
 
+PLIST_VARS+=		Darwin IRIX IRIX5 IRIX6
+
 .if !empty(MACHINE_PLATFORM:MDarwin-[0-8].*-*)
 APPLY_DARWIN_PATCH=	${TRUE}
-PLIST_SUBST+=		IS_DARWIN=
+PLIST.Darwin=		yes
 USE_TOOLS+=		patch
 .else
 APPLY_DARWIN_PATCH=	${FALSE}
-PLIST_SUBST+=		IS_DARWIN="@comment "
 .endif
 
 .if ${OPSYS} == "IRIX"
-PLIST_SUBST+=		IS_IRIX=
+PLIST.IRIX=		yes
 USE_TOOLS+=		patch
 . if !empty(OS_VERSION:M6*)
-PLIST_SUBST+=		IS_IRIX5="@comment "
-PLIST_SUBST+=		IS_IRIX6=
+PLIST.IRIX6=		yes
 . else
-PLIST_SUBST+=		IS_IRIX5=
-PLIST_SUBST+=		IS_IRIX6="@comment "
+PLIST.IRIX5=		yes
 . endif
-.else
-PLIST_SUBST+=		IS_IRIX="@comment "
-PLIST_SUBST+=		IS_IRIX5="@comment "
-PLIST_SUBST+=		IS_IRIX6="@comment "
 .endif
 
 .include "../../mk/x11.buildlink3.mk"

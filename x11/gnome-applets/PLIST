@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.12 2008/01/11 13:34:16 drochner Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/04/12 22:43:14 jlam Exp $
 bin/invest-chart
 include/libgweather/gweather-gconf.h
 include/libgweather/gweather-prefs.h
 include/libgweather/weather.h
 lib/bonobo/servers/GNOME_AccessxStatusApplet.server
-${BATTSTAT}lib/bonobo/servers/GNOME_BattstatApplet.server
+${PLIST.battstat}lib/bonobo/servers/GNOME_BattstatApplet.server
 lib/bonobo/servers/GNOME_CDPlayerApplet.server
 lib/bonobo/servers/GNOME_CharpickerApplet.server
 lib/bonobo/servers/GNOME_DriveMountApplet.server
@@ -47,7 +47,7 @@ ${PYSITELIB}/invest/widgets.py
 ${PYSITELIB}/invest/widgets.pyc
 ${PYSITELIB}/invest/widgets.pyo
 libexec/accessx-status-applet
-${BATTSTAT}libexec/battstat-applet-2
+${PLIST.battstat}libexec/battstat-applet-2
 libexec/charpick_applet2
 libexec/drivemount_applet2
 libexec/geyes_applet2
@@ -58,8 +58,8 @@ libexec/multiload-applet-2
 libexec/null_applet
 libexec/stickynotes_applet
 libexec/trashapplet
-${BATTSTAT}share/examples/gnome-applets/sound/events/battstat_applet.soundlist
-${BATTSTAT}share/gconf/schemas/battstat.schemas
+${PLIST.battstat}share/examples/gnome-applets/sound/events/battstat_applet.soundlist
+${PLIST.battstat}share/gconf/schemas/battstat.schemas
 share/gconf/schemas/charpick.schemas
 share/gconf/schemas/drivemount.schemas
 share/gconf/schemas/geyes.schemas
@@ -68,7 +68,7 @@ share/gconf/schemas/mixer.schemas
 share/gconf/schemas/multiload.schemas
 share/gconf/schemas/stickynotes.schemas
 share/gnome-2.0/ui/GNOME_AccessxApplet.xml
-${BATTSTAT}share/gnome-2.0/ui/GNOME_BattstatApplet.xml
+${PLIST.battstat}share/gnome-2.0/ui/GNOME_BattstatApplet.xml
 share/gnome-2.0/ui/GNOME_CharpickerApplet.xml
 share/gnome-2.0/ui/GNOME_DriveMountApplet.xml
 share/gnome-2.0/ui/GNOME_GWeatherApplet.xml
@@ -96,7 +96,7 @@ share/gnome-applets/geyes/Horrid/horrid_pupil.png
 share/gnome-applets/geyes/Tango/config
 share/gnome-applets/geyes/Tango/tango-eye.png
 share/gnome-applets/geyes/Tango/tango-pupil.png
-${BATTSTAT}share/gnome-applets/glade/battstat_applet.glade
+${PLIST.battstat}share/gnome-applets/glade/battstat_applet.glade
 share/gnome-applets/glade/financialchart.glade
 share/gnome-applets/glade/prefs-dialog.glade
 share/gnome-applets/glade/stickynotes.glade
@@ -239,67 +239,67 @@ share/gnome/help/accessx-status/uk/figures/accessx_sticky-keys.png
 share/gnome/help/accessx-status/uk/figures/accessx_sticky-meta-key.png
 share/gnome/help/accessx-status/uk/figures/accessx_sticky-shift-key.png
 share/gnome/help/accessx-status/uk/figures/accessx_sticky-windows-key.png
-${BATTSTAT}share/gnome/help/battstat/C/battstat.xml
-${BATTSTAT}share/gnome/help/battstat/C/figures/battstat-applet-expanded.png
-${BATTSTAT}share/gnome/help/battstat/C/figures/battstat-applet.png
-${BATTSTAT}share/gnome/help/battstat/C/figures/battstat-credits-hal.png
-${BATTSTAT}share/gnome/help/battstat/C/figures/battstat-preferences.png
-${BATTSTAT}share/gnome/help/battstat/C/figures/context-menu.png
-${BATTSTAT}share/gnome/help/battstat/C/legal.xml
-${BATTSTAT}share/gnome/help/battstat/bg/battstat.xml
-${BATTSTAT}share/gnome/help/battstat/bg/figures/battstat-applet-expanded.png
-${BATTSTAT}share/gnome/help/battstat/bg/figures/battstat-applet.png
-${BATTSTAT}share/gnome/help/battstat/bg/figures/battstat-credits-hal.png
-${BATTSTAT}share/gnome/help/battstat/bg/figures/battstat-preferences.png
-${BATTSTAT}share/gnome/help/battstat/bg/figures/context-menu.png
-${BATTSTAT}share/gnome/help/battstat/en_GB/battstat.xml
-${BATTSTAT}share/gnome/help/battstat/en_GB/figures/battstat-applet-expanded.png
-${BATTSTAT}share/gnome/help/battstat/en_GB/figures/battstat-applet.png
-${BATTSTAT}share/gnome/help/battstat/en_GB/figures/battstat-credits-hal.png
-${BATTSTAT}share/gnome/help/battstat/en_GB/figures/battstat-preferences.png
-${BATTSTAT}share/gnome/help/battstat/en_GB/figures/context-menu.png
-${BATTSTAT}share/gnome/help/battstat/es/battstat.xml
-${BATTSTAT}share/gnome/help/battstat/es/figures/battstat-applet-expanded.png
-${BATTSTAT}share/gnome/help/battstat/es/figures/battstat-applet.png
-${BATTSTAT}share/gnome/help/battstat/es/figures/battstat-credits-hal.png
-${BATTSTAT}share/gnome/help/battstat/es/figures/battstat-preferences.png
-${BATTSTAT}share/gnome/help/battstat/es/figures/context-menu.png
-${BATTSTAT}share/gnome/help/battstat/fr/battstat.xml
-${BATTSTAT}share/gnome/help/battstat/fr/figures/battstat-applet-expanded.png
-${BATTSTAT}share/gnome/help/battstat/fr/figures/battstat-applet.png
-${BATTSTAT}share/gnome/help/battstat/fr/figures/battstat-credits-hal.png
-${BATTSTAT}share/gnome/help/battstat/fr/figures/battstat-preferences.png
-${BATTSTAT}share/gnome/help/battstat/fr/figures/context-menu.png
-${BATTSTAT}share/gnome/help/battstat/ko/battstat.xml
-${BATTSTAT}share/gnome/help/battstat/ko/figures/battstat-applet-expanded.png
-${BATTSTAT}share/gnome/help/battstat/ko/figures/battstat-applet.png
-${BATTSTAT}share/gnome/help/battstat/ko/figures/battstat-credits-hal.png
-${BATTSTAT}share/gnome/help/battstat/ko/figures/battstat-preferences.png
-${BATTSTAT}share/gnome/help/battstat/ko/figures/context-menu.png
-${BATTSTAT}share/gnome/help/battstat/oc/battstat.xml
-${BATTSTAT}share/gnome/help/battstat/oc/figures/battstat-applet-expanded.png
-${BATTSTAT}share/gnome/help/battstat/oc/figures/battstat-applet.png
-${BATTSTAT}share/gnome/help/battstat/oc/figures/battstat-credits-hal.png
-${BATTSTAT}share/gnome/help/battstat/oc/figures/battstat-preferences.png
-${BATTSTAT}share/gnome/help/battstat/oc/figures/context-menu.png
-${BATTSTAT}share/gnome/help/battstat/pa/battstat.xml
-${BATTSTAT}share/gnome/help/battstat/pa/figures/battstat-applet-expanded.png
-${BATTSTAT}share/gnome/help/battstat/pa/figures/battstat-applet.png
-${BATTSTAT}share/gnome/help/battstat/pa/figures/battstat-credits-hal.png
-${BATTSTAT}share/gnome/help/battstat/pa/figures/battstat-preferences.png
-${BATTSTAT}share/gnome/help/battstat/pa/figures/context-menu.png
-${BATTSTAT}share/gnome/help/battstat/sv/battstat.xml
-${BATTSTAT}share/gnome/help/battstat/sv/figures/battstat-applet-expanded.png
-${BATTSTAT}share/gnome/help/battstat/sv/figures/battstat-applet.png
-${BATTSTAT}share/gnome/help/battstat/sv/figures/battstat-credits-hal.png
-${BATTSTAT}share/gnome/help/battstat/sv/figures/battstat-preferences.png
-${BATTSTAT}share/gnome/help/battstat/sv/figures/context-menu.png
-${BATTSTAT}share/gnome/help/battstat/uk/battstat.xml
-${BATTSTAT}share/gnome/help/battstat/uk/figures/battstat-applet-expanded.png
-${BATTSTAT}share/gnome/help/battstat/uk/figures/battstat-applet.png
-${BATTSTAT}share/gnome/help/battstat/uk/figures/battstat-credits-hal.png
-${BATTSTAT}share/gnome/help/battstat/uk/figures/battstat-preferences.png
-${BATTSTAT}share/gnome/help/battstat/uk/figures/context-menu.png
+${PLIST.battstat}share/gnome/help/battstat/C/battstat.xml
+${PLIST.battstat}share/gnome/help/battstat/C/figures/battstat-applet-expanded.png
+${PLIST.battstat}share/gnome/help/battstat/C/figures/battstat-applet.png
+${PLIST.battstat}share/gnome/help/battstat/C/figures/battstat-credits-hal.png
+${PLIST.battstat}share/gnome/help/battstat/C/figures/battstat-preferences.png
+${PLIST.battstat}share/gnome/help/battstat/C/figures/context-menu.png
+${PLIST.battstat}share/gnome/help/battstat/C/legal.xml
+${PLIST.battstat}share/gnome/help/battstat/bg/battstat.xml
+${PLIST.battstat}share/gnome/help/battstat/bg/figures/battstat-applet-expanded.png
+${PLIST.battstat}share/gnome/help/battstat/bg/figures/battstat-applet.png
+${PLIST.battstat}share/gnome/help/battstat/bg/figures/battstat-credits-hal.png
+${PLIST.battstat}share/gnome/help/battstat/bg/figures/battstat-preferences.png
+${PLIST.battstat}share/gnome/help/battstat/bg/figures/context-menu.png
+${PLIST.battstat}share/gnome/help/battstat/en_GB/battstat.xml
+${PLIST.battstat}share/gnome/help/battstat/en_GB/figures/battstat-applet-expanded.png
+${PLIST.battstat}share/gnome/help/battstat/en_GB/figures/battstat-applet.png
+${PLIST.battstat}share/gnome/help/battstat/en_GB/figures/battstat-credits-hal.png
+${PLIST.battstat}share/gnome/help/battstat/en_GB/figures/battstat-preferences.png
+${PLIST.battstat}share/gnome/help/battstat/en_GB/figures/context-menu.png
+${PLIST.battstat}share/gnome/help/battstat/es/battstat.xml
+${PLIST.battstat}share/gnome/help/battstat/es/figures/battstat-applet-expanded.png
+${PLIST.battstat}share/gnome/help/battstat/es/figures/battstat-applet.png
+${PLIST.battstat}share/gnome/help/battstat/es/figures/battstat-credits-hal.png
+${PLIST.battstat}share/gnome/help/battstat/es/figures/battstat-preferences.png
+${PLIST.battstat}share/gnome/help/battstat/es/figures/context-menu.png
+${PLIST.battstat}share/gnome/help/battstat/fr/battstat.xml
+${PLIST.battstat}share/gnome/help/battstat/fr/figures/battstat-applet-expanded.png
+${PLIST.battstat}share/gnome/help/battstat/fr/figures/battstat-applet.png
+${PLIST.battstat}share/gnome/help/battstat/fr/figures/battstat-credits-hal.png
+${PLIST.battstat}share/gnome/help/battstat/fr/figures/battstat-preferences.png
+${PLIST.battstat}share/gnome/help/battstat/fr/figures/context-menu.png
+${PLIST.battstat}share/gnome/help/battstat/ko/battstat.xml
+${PLIST.battstat}share/gnome/help/battstat/ko/figures/battstat-applet-expanded.png
+${PLIST.battstat}share/gnome/help/battstat/ko/figures/battstat-applet.png
+${PLIST.battstat}share/gnome/help/battstat/ko/figures/battstat-credits-hal.png
+${PLIST.battstat}share/gnome/help/battstat/ko/figures/battstat-preferences.png
+${PLIST.battstat}share/gnome/help/battstat/ko/figures/context-menu.png
+${PLIST.battstat}share/gnome/help/battstat/oc/battstat.xml
+${PLIST.battstat}share/gnome/help/battstat/oc/figures/battstat-applet-expanded.png
+${PLIST.battstat}share/gnome/help/battstat/oc/figures/battstat-applet.png
+${PLIST.battstat}share/gnome/help/battstat/oc/figures/battstat-credits-hal.png
+${PLIST.battstat}share/gnome/help/battstat/oc/figures/battstat-preferences.png
+${PLIST.battstat}share/gnome/help/battstat/oc/figures/context-menu.png
+${PLIST.battstat}share/gnome/help/battstat/pa/battstat.xml
+${PLIST.battstat}share/gnome/help/battstat/pa/figures/battstat-applet-expanded.png
+${PLIST.battstat}share/gnome/help/battstat/pa/figures/battstat-applet.png
+${PLIST.battstat}share/gnome/help/battstat/pa/figures/battstat-credits-hal.png
+${PLIST.battstat}share/gnome/help/battstat/pa/figures/battstat-preferences.png
+${PLIST.battstat}share/gnome/help/battstat/pa/figures/context-menu.png
+${PLIST.battstat}share/gnome/help/battstat/sv/battstat.xml
+${PLIST.battstat}share/gnome/help/battstat/sv/figures/battstat-applet-expanded.png
+${PLIST.battstat}share/gnome/help/battstat/sv/figures/battstat-applet.png
+${PLIST.battstat}share/gnome/help/battstat/sv/figures/battstat-credits-hal.png
+${PLIST.battstat}share/gnome/help/battstat/sv/figures/battstat-preferences.png
+${PLIST.battstat}share/gnome/help/battstat/sv/figures/context-menu.png
+${PLIST.battstat}share/gnome/help/battstat/uk/battstat.xml
+${PLIST.battstat}share/gnome/help/battstat/uk/figures/battstat-applet-expanded.png
+${PLIST.battstat}share/gnome/help/battstat/uk/figures/battstat-applet.png
+${PLIST.battstat}share/gnome/help/battstat/uk/figures/battstat-credits-hal.png
+${PLIST.battstat}share/gnome/help/battstat/uk/figures/battstat-preferences.png
+${PLIST.battstat}share/gnome/help/battstat/uk/figures/context-menu.png
 share/gnome/help/char-palette/C/char-palette.xml
 share/gnome/help/char-palette/C/figures/charpalette_applet.png
 share/gnome/help/char-palette/C/figures/charpalette_chargroup.png
@@ -891,16 +891,16 @@ share/omf/accessx-status/accessx-status-nl.omf
 share/omf/accessx-status/accessx-status-oc.omf
 share/omf/accessx-status/accessx-status-sv.omf
 share/omf/accessx-status/accessx-status-uk.omf
-${BATTSTAT}share/omf/battstat/battstat-C.omf
-${BATTSTAT}share/omf/battstat/battstat-bg.omf
-${BATTSTAT}share/omf/battstat/battstat-en_GB.omf
-${BATTSTAT}share/omf/battstat/battstat-es.omf
-${BATTSTAT}share/omf/battstat/battstat-fr.omf
-${BATTSTAT}share/omf/battstat/battstat-ko.omf
-${BATTSTAT}share/omf/battstat/battstat-oc.omf
-${BATTSTAT}share/omf/battstat/battstat-pa.omf
-${BATTSTAT}share/omf/battstat/battstat-sv.omf
-${BATTSTAT}share/omf/battstat/battstat-uk.omf
+${PLIST.battstat}share/omf/battstat/battstat-C.omf
+${PLIST.battstat}share/omf/battstat/battstat-bg.omf
+${PLIST.battstat}share/omf/battstat/battstat-en_GB.omf
+${PLIST.battstat}share/omf/battstat/battstat-es.omf
+${PLIST.battstat}share/omf/battstat/battstat-fr.omf
+${PLIST.battstat}share/omf/battstat/battstat-ko.omf
+${PLIST.battstat}share/omf/battstat/battstat-oc.omf
+${PLIST.battstat}share/omf/battstat/battstat-pa.omf
+${PLIST.battstat}share/omf/battstat/battstat-sv.omf
+${PLIST.battstat}share/omf/battstat/battstat-uk.omf
 share/omf/char-palette/char-palette-C.omf
 share/omf/char-palette/char-palette-bg.omf
 share/omf/char-palette/char-palette-en_GB.omf
@@ -1134,7 +1134,7 @@ share/xmodmap/xmodmap.yu
 @dirrm share/omf/geyes
 @dirrm share/omf/drivemount
 @dirrm share/omf/char-palette
-${BATTSTAT}@dirrm share/omf/battstat
+${PLIST.battstat}@dirrm share/omf/battstat
 @dirrm share/omf/accessx-status
 @comment in rarian: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
@@ -1338,27 +1338,27 @@ ${BATTSTAT}@dirrm share/omf/battstat
 @dirrm share/gnome/help/char-palette/C/figures
 @dirrm share/gnome/help/char-palette/C
 @dirrm share/gnome/help/char-palette
-${BATTSTAT}@dirrm share/gnome/help/battstat/uk/figures
-${BATTSTAT}@dirrm share/gnome/help/battstat/uk
-${BATTSTAT}@dirrm share/gnome/help/battstat/sv/figures
-${BATTSTAT}@dirrm share/gnome/help/battstat/sv
-${BATTSTAT}@dirrm share/gnome/help/battstat/pa/figures
-${BATTSTAT}@dirrm share/gnome/help/battstat/pa
-${BATTSTAT}@dirrm share/gnome/help/battstat/oc/figures
-${BATTSTAT}@dirrm share/gnome/help/battstat/oc
-${BATTSTAT}@dirrm share/gnome/help/battstat/ko/figures
-${BATTSTAT}@dirrm share/gnome/help/battstat/ko
-${BATTSTAT}@dirrm share/gnome/help/battstat/fr/figures
-${BATTSTAT}@dirrm share/gnome/help/battstat/fr
-${BATTSTAT}@dirrm share/gnome/help/battstat/es/figures
-${BATTSTAT}@dirrm share/gnome/help/battstat/es
-${BATTSTAT}@dirrm share/gnome/help/battstat/en_GB/figures
-${BATTSTAT}@dirrm share/gnome/help/battstat/en_GB
-${BATTSTAT}@dirrm share/gnome/help/battstat/bg/figures
-${BATTSTAT}@dirrm share/gnome/help/battstat/bg
-${BATTSTAT}@dirrm share/gnome/help/battstat/C/figures
-${BATTSTAT}@dirrm share/gnome/help/battstat/C
-${BATTSTAT}@dirrm share/gnome/help/battstat
+${PLIST.battstat}@dirrm share/gnome/help/battstat/uk/figures
+${PLIST.battstat}@dirrm share/gnome/help/battstat/uk
+${PLIST.battstat}@dirrm share/gnome/help/battstat/sv/figures
+${PLIST.battstat}@dirrm share/gnome/help/battstat/sv
+${PLIST.battstat}@dirrm share/gnome/help/battstat/pa/figures
+${PLIST.battstat}@dirrm share/gnome/help/battstat/pa
+${PLIST.battstat}@dirrm share/gnome/help/battstat/oc/figures
+${PLIST.battstat}@dirrm share/gnome/help/battstat/oc
+${PLIST.battstat}@dirrm share/gnome/help/battstat/ko/figures
+${PLIST.battstat}@dirrm share/gnome/help/battstat/ko
+${PLIST.battstat}@dirrm share/gnome/help/battstat/fr/figures
+${PLIST.battstat}@dirrm share/gnome/help/battstat/fr
+${PLIST.battstat}@dirrm share/gnome/help/battstat/es/figures
+${PLIST.battstat}@dirrm share/gnome/help/battstat/es
+${PLIST.battstat}@dirrm share/gnome/help/battstat/en_GB/figures
+${PLIST.battstat}@dirrm share/gnome/help/battstat/en_GB
+${PLIST.battstat}@dirrm share/gnome/help/battstat/bg/figures
+${PLIST.battstat}@dirrm share/gnome/help/battstat/bg
+${PLIST.battstat}@dirrm share/gnome/help/battstat/C/figures
+${PLIST.battstat}@dirrm share/gnome/help/battstat/C
+${PLIST.battstat}@dirrm share/gnome/help/battstat
 @dirrm share/gnome/help/accessx-status/uk/figures
 @dirrm share/gnome/help/accessx-status/uk
 @dirrm share/gnome/help/accessx-status/sv/figures
@@ -1396,9 +1396,9 @@ ${BATTSTAT}@dirrm share/gnome/help/battstat
 @dirrm share/gnome-applets
 @comment in gnome2-dirs: @dirrm share/gnome-2.0/ui
 @comment in GConf: @dirrm share/gconf/schemas
-${BATTSTAT}@dirrm share/examples/gnome-applets/sound/events
-${BATTSTAT}@dirrm share/examples/gnome-applets/sound
-${BATTSTAT}@dirrm share/examples/gnome-applets
+${PLIST.battstat}@dirrm share/examples/gnome-applets/sound/events
+${PLIST.battstat}@dirrm share/examples/gnome-applets/sound
+${PLIST.battstat}@dirrm share/examples/gnome-applets
 @dirrm ${PYSITELIB}/invest
 @comment in libbonobo: @dirrm lib/bonobo/servers
 @dirrm include/libgweather

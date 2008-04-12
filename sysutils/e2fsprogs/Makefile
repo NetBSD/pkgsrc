@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/03/07 22:40:29 tron Exp $
+# $NetBSD: Makefile,v 1.17 2008/04/12 22:43:12 jlam Exp $
 
 DISTNAME=	e2fsprogs-1.40.7
 CATEGORIES=	sysutils
@@ -16,16 +16,13 @@ INFO_FILES=	# PLIST
 
 .include "../../mk/bsd.prefs.mk"
 
-# Only build fsck(8) on platforms that need it.
-.if (${OPSYS} != "Linux")
-FSCK=		"@comment "
-.else
-FSCK=		# empty
-.endif
-PLIST_SUBST+=	FSCK=${FSCK}
-
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-.if !empty(FSCK)
+
+# Only build fsck(8) on platforms that need it.
+PLIST_VARS+=		fsck
+.if ${OPSYS} == "Linux"
+PLIST.fsck=		yes
+.else
 CONFIGURE_ARGS+=	--disable-fsck
 .endif
 

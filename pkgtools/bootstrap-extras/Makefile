@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/07/02 13:34:14 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2008/04/12 22:43:09 jlam Exp $
 
 DISTNAME=	bootstrap-extra-files-20070702
 CATEGORIES=	pkgtools
@@ -15,49 +15,55 @@ NO_BUILD=	yes
 
 .include "../../mk/bsd.prefs.mk"
 
-OPSYSVARS+=		NEED_FAKELDD
-NEED_FAKELDD.IRIX=	# empty
-NEED_FAKELDD.*=		"@comment "
-PLIST_SUBST+=		NEED_FAKELDD=${NEED_FAKELDD}
+EXTRA_FILES=	fakeldd mkdir strip xargs
+PLIST_VARS+=	${EXTRA_FILES}
 
-OPSYSVARS+=		NEED_MKDIR
-NEED_MKDIR.UnixWare=	# empty
-NEED_MKDIR.*=		"@comment "
-PLIST_SUBST+=		NEED_MKDIR=${NEED_MKDIR}
+.PHONY: ${EXTRA_FILES:S/^/do-install-/}
 
-OPSYSVARS+=		NEED_STRIP
-NEED_STRIP.AIX=		# empty
-NEED_STRIP.*=		"@comment "
-PLIST_SUBST+=		NEED_STRIP=${NEED_STRIP}
+NEED_FAKELDD=		IRIX
+.if !empty(NEED_FAKELDD:M${OPSYS})
+PLIST.fakeldd=		yes
+do-install:		do-install-fakeldd
+.endif
 
-OPSYSVARS+=		NEED_XARGS
-NEED_XARGS.Interix=	# empty
-NEED_XARGS.*=		"@comment "
-PLIST_SUBST+=		NEED_XARGS=${NEED_XARGS}
+NEED_MKDIR=		UnixWare
+.if !empty(NEED_MKDIR:M${OPSYS})
+PLIST.mkdir=		yes
+do-install:		do-install-mkdir
+.endif
+
+NEED_STRIP=		AIX
+.if !empty(NEED_STRIP:M${OPSYS})
+PLIST.strip=		yes
+do-install:		do-install-strip
+.endif
+
+NEED_XARGS=		Interix
+.if !empty(NEED_XARGS:M${OPSYS})
+PLIST.xargs=		yes
+do-install:		do-install-xargs
+.endif
 
 do-extract:
 	${CP} -R ${FILESDIR} ${WRKSRC}
 
 do-install:
-	if ${TEST} -z ${NEED_FAKELDD:M*:Q}""; then			\
-		${INSTALL_SCRIPT_DIR} ${PREFIX}/sbin;			\
-		${INSTALL_SCRIPT} ${WRKSRC}/fakeldd			\
-			${PREFIX}/sbin/fakeldd;				\
-	fi
-	if ${TEST} -z ${NEED_MKDIR:M*:Q}""; then			\
-		${INSTALL_SCRIPT_DIR} ${PREFIX}/bin;			\
-		${INSTALL_SCRIPT} ${WRKSRC}/mkdir-sh			\
-			${PREFIX}/bin/mkdir-sh;				\
-	fi
-	if ${TEST} -z ${NEED_STRIP:M*:Q}""; then			\
-		${INSTALL_SCRIPT_DIR} ${PREFIX}/bin;			\
-		${INSTALL_SCRIPT} ${WRKSRC}/strip-sh			\
-			${PREFIX}/bin/strip;				\
-	fi
-	if ${TEST} -z ${NEED_XARGS:M*:Q}""; then			\
-		${INSTALL_SCRIPT_DIR} ${PREFIX}/bin;			\
-		${INSTALL_SCRIPT} ${WRKSRC}/xargs-sh			\
-			${PREFIX}/bin/xargs;				\
-	fi
+	@${ECHO} ${.ALLSRC}
+
+do-install-fakeldd:
+	${INSTALL_SCRIPT_DIR} ${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/fakeldd ${PREFIX}/sbin/fakeldd
+
+do-install-mkdir:
+	${INSTALL_SCRIPT_DIR} ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/mkdir-sh ${PREFIX}/bin/mkdir-sh
+
+do-install-strip:
+	${INSTALL_SCRIPT_DIR} ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/strip-sh ${PREFIX}/bin/strip
+
+do-install-xargs:
+	${INSTALL_SCRIPT_DIR} ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/xargs-sh ${PREFIX}/bin/xargs
 
 .include "../../mk/bsd.pkg.mk"

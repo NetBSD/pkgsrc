@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.21 2007/06/22 13:14:22 adrianp Exp $
+# $NetBSD: options.mk,v 1.22 2008/04/12 22:43:03 jlam Exp $
 
 .if defined(DSPAM_DELIVERY_AGENT) && !empty(DSPAM_DELIVERY_AGENT:Mcustom)
 DSPAM_DELIVERY_AGENT:=	${DSPAM_DELIVERY_AGENT_ARGS}
@@ -38,6 +38,8 @@ CONFIGURE_ARGS+=	--with-delivery-agent=${DSPAM_DELIVERY_AGENT_BIN:Q}
 PKG_FAIL_REASON+=	"${PKGBASE}: unknown delivery agent \`${DSPAM_DELIVERY_AGENT}'"
 .endif
 
+PLIST_VARS+=		hash mysql pgsql sqlite
+
 ###
 ### This is the backend database used to store the DSPAM signatures as
 ### well as other state information.  The recommended storage driver is
@@ -54,7 +56,7 @@ PKG_OPTIONS:=		${PKG_OPTIONS:Nldap}
 .endif
 .if !empty(DSPAM_STORAGE_DRIVER:Mhash)
 CONFIGURE_ARGS+=	--with-storage-driver=hash_drv
-HASH_PLIST_SUBST+=	HASH=
+PLIST.hash=		yes
 .elif !empty(DSPAM_STORAGE_DRIVER:Mmysql)
 .  include "../../mk/mysql.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-mysql4-initialization
@@ -62,22 +64,22 @@ CONFIGURE_ARGS+=	--with-storage-driver=mysql_drv
 CONFIGURE_ARGS+=	\
 	--with-mysql-includes=${BUILDLINK_PREFIX.mysql-client}/include/mysql \
 	--with-mysql-libraries=${BUILDLINK_PREFIX.mysql-client}/lib
-MYSQL_PLIST_SUBST=	MYSQL=
+PLIST.mysql=		yes
 .elif !empty(DSPAM_STORAGE_DRIVER:Mpgsql)
 .  include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-storage-driver=pgsql_drv
 CONFIGURE_ARGS+=	\
 	--with-pgsql-includes=${PGSQL_PREFIX}/include/postgresql	\
 	--with-pgsql-libraries=${PGSQL_PREFIX}/lib
-PGSQL_PLIST_SUBST=	PGSQL=
+PLIST.pgsql=		yes
 .elif !empty(DSPAM_STORAGE_DRIVER:Msqlite)
 .  include "../../databases/sqlite/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-storage-driver=sqlite_drv
-SQLITE_PLIST_SUBST=	SQLITE=
+PLIST.sqlite=		yes
 .elif !empty(DSPAM_STORAGE_DRIVER:Msqlite3)
 .  include "../../databases/sqlite3/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-storage-driver=sqlite3_drv
-SQLITE_PLIST_SUBST+=	SQLITE=
+PLIST.sqlite=		yes
 .else
 PKG_FAIL_REASON+=	"${PKGBASE}: unknown storage driver \\'${DSPAM_STORAGE_DRIVER}\\'"
 .endif
@@ -90,16 +92,6 @@ PKG_FAIL_REASON+=	"${PKGBASE}: unknown storage driver \\'${DSPAM_STORAGE_DRIVER}
 CONFIGURE_ARGS+=	--enable-daemon
 . endif
 .endif
-
-MYSQL_PLIST_SUBST?=	MYSQL="@comment "
-PGSQL_PLIST_SUBST?=	PGSQL="@comment "
-SQLITE_PLIST_SUBST?=	SQLITE="@comment "
-HASH_PLIST_SUBST?=	HASH="@comment "
-
-PLIST_SUBST+=		${MYSQL_PLIST_SUBST}
-PLIST_SUBST+=		${PGSQL_PLIST_SUBST}
-PLIST_SUBST+=		${SQLITE_PLIST_SUBST}
-PLIST_SUBST+=		${HASH_PLIST_SUBST}
 
 ###
 ### The following are only available for mysql and pgsql backends.

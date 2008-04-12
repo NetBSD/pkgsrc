@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.7 2007/12/13 07:43:20 obache Exp $
-${MYSQL}lib/dbmail/libmysql.la
-${PGSQL}lib/dbmail/libpgsql.la
-${SQLITE}lib/dbmail/libsqlite.la
-${LDAP}lib/dbmail/libauth_ldap.la
+@comment $NetBSD: PLIST,v 1.8 2008/04/12 22:43:03 jlam Exp $
+${PLIST.mysql}lib/dbmail/libmysql.la
+${PLIST.pgsql}lib/dbmail/libpgsql.la
+${PLIST.sqlite}lib/dbmail/libsqlite.la
+${PLIST.ldap}lib/dbmail/libauth_ldap.la
 lib/dbmail/libauth_sql.la
 lib/dbmail/libdbmail.la
-${SIEVE}lib/dbmail/libsort_sieve.la
+${PLIST.sieve}lib/dbmail/libsort_sieve.la
 man/man1/dbmail-smtp.1
 man/man1/dbmail.1
 man/man5/dbmail.conf.5
@@ -21,9 +21,9 @@ sbin/dbmail-export
 sbin/dbmail-imapd
 sbin/dbmail-lmtpd
 sbin/dbmail-pop3d
-${SIEVE}sbin/dbmail-sievecmd
+${PLIST.sieve}sbin/dbmail-sievecmd
 sbin/dbmail-smtp
-${SIEVE}sbin/dbmail-timsieved
+${PLIST.sieve}sbin/dbmail-timsieved
 sbin/dbmail-users
 sbin/dbmail-util
 share/doc/dbmail/AUTHORS
@@ -44,26 +44,26 @@ share/doc/dbmail/README.usermap
 share/doc/dbmail/THANKS
 share/doc/dbmail/UPGRADING
 share/examples/dbmail/dbmail.conf
-${MYSQL}share/dbmail/sql/mysql/2_1_7-2_2_0.mysql
-${MYSQL}share/dbmail/sql/mysql/create_tables.mysql
-${MYSQL}share/dbmail/sql/mysql/migrate_from_1.x_to_2.0_innodb.mysql
-${MYSQL}share/dbmail/sql/mysql/migrate_from_2.0_to_2.2.mysql
-${MYSQL}share/dbmail/sql/mysql/update_headervalue_01.mysql
-${PGSQL}share/dbmail/sql/postgresql/2_1_7-2_2_0.pgsql
-${PGSQL}share/dbmail/sql/postgresql/create_tables.pgsql
-${PGSQL}share/dbmail/sql/postgresql/migrate_from_1.x_to_2.0.pgsql
-${PGSQL}share/dbmail/sql/postgresql/migrate_from_2.0_to_2.2.pgsql
-${SQLITE}share/dbmail/sql/sqlite/2_1_7-2_2_0.sqlite
-${SQLITE}share/dbmail/sql/sqlite/create_tables.sqlite
+${PLIST.mysql}share/dbmail/sql/mysql/2_1_7-2_2_0.mysql
+${PLIST.mysql}share/dbmail/sql/mysql/create_tables.mysql
+${PLIST.mysql}share/dbmail/sql/mysql/migrate_from_1.x_to_2.0_innodb.mysql
+${PLIST.mysql}share/dbmail/sql/mysql/migrate_from_2.0_to_2.2.mysql
+${PLIST.mysql}share/dbmail/sql/mysql/update_headervalue_01.mysql
+${PLIST.pgsql}share/dbmail/sql/postgresql/2_1_7-2_2_0.pgsql
+${PLIST.pgsql}share/dbmail/sql/postgresql/create_tables.pgsql
+${PLIST.pgsql}share/dbmail/sql/postgresql/migrate_from_1.x_to_2.0.pgsql
+${PLIST.pgsql}share/dbmail/sql/postgresql/migrate_from_2.0_to_2.2.pgsql
+${PLIST.sqlite}share/dbmail/sql/sqlite/2_1_7-2_2_0.sqlite
+${PLIST.sqlite}share/dbmail/sql/sqlite/create_tables.sqlite
 share/examples/rc.d/dbmail
 share/examples/rc.d/dbmailimapd
 share/examples/rc.d/dbmaillmtpd
 share/examples/rc.d/dbmailpop3d
-${SIEVE}share/examples/rc.d/dbmailtimsieved
+${PLIST.sieve}share/examples/rc.d/dbmailtimsieved
 @dirrm share/examples/dbmail
-${SQLITE}@dirrm share/dbmail/sql/sqlite
-${PGSQL}@dirrm share/dbmail/sql/postgresql
-${MYSQL}@dirrm share/dbmail/sql/mysql
+${PLIST.sqlite}@dirrm share/dbmail/sql/sqlite
+${PLIST.pgsql}@dirrm share/dbmail/sql/postgresql
+${PLIST.mysql}@dirrm share/dbmail/sql/mysql
 @dirrm share/dbmail/sql
 @dirrm share/doc/dbmail
 @dirrm lib/dbmail

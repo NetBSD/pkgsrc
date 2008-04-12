@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2008/04/03 04:06:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.24 2008/04/12 22:43:09 jlam Exp $
 bin/cancel
 bin/cups-config
 bin/cupstestdsc
@@ -1567,7 +1567,7 @@ share/doc/cups/zh_TW/images/button-view-error-log.gif
 share/doc/cups/zh_TW/images/button-view-page-log.gif
 share/doc/cups/zh_TW/images/button-view-printable-version.gif
 share/doc/cups/zh_TW/index.html
-${PAM}share/examples/cups/cups.pam
+${PLIST.pam}share/examples/cups/cups.pam
 share/examples/cups/cupsd.conf
 share/examples/cups/mime.convs
 share/examples/cups/mime.types

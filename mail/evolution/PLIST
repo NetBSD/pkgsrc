@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.32 2007/11/03 21:55:00 drochner Exp $
+@comment $NetBSD: PLIST,v 1.33 2008/04/12 22:43:03 jlam Exp $
 bin/evolution
 include/evolution-2.12/addressbook/gui/widgets/eab-config.h
 include/evolution-2.12/addressbook/gui/widgets/eab-menu.h
@@ -226,7 +226,7 @@ lib/evolution/2.12/libecontactlisteditor.la
 lib/evolution/2.12/libefilterbar.la
 lib/evolution/2.12/libemiscwidgets.la
 lib/evolution/2.12/libeshell.la
-${HAVE_SMIME}lib/evolution/2.12/libessmime.la
+${PLIST.smime}lib/evolution/2.12/libessmime.la
 lib/evolution/2.12/libetable.la
 lib/evolution/2.12/libetext.la
 lib/evolution/2.12/libetimezonedialog.la
@@ -237,7 +237,7 @@ lib/evolution/2.12/libevolution-addressbook-importers.la
 lib/evolution/2.12/libevolution-calendar-a11y.la
 lib/evolution/2.12/libevolution-calendar-importers.la
 lib/evolution/2.12/libevolution-mail-importers.la
-${HAVE_SMIME}lib/evolution/2.12/libevolution-smime.la
+${PLIST.smime}lib/evolution/2.12/libevolution-smime.la
 lib/evolution/2.12/libevolution-widgets-a11y.la
 lib/evolution/2.12/libfilter.la
 lib/evolution/2.12/libmenus.la
@@ -431,7 +431,7 @@ share/evolution/2.12/glade/proxy-login-dialog.glade
 share/evolution/2.12/glade/publish-calendar.glade
 share/evolution/2.12/glade/recurrence-page.glade
 share/evolution/2.12/glade/schedule-page.glade
-${HAVE_SMIME}share/evolution/2.12/glade/smime-ui.glade
+${PLIST.smime}share/evolution/2.12/glade/smime-ui.glade
 share/evolution/2.12/glade/task-details-page.glade
 share/evolution/2.12/glade/task-page.glade
 share/evolution/2.12/help/quickref/C/quickref.pdf

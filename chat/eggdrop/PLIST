@@ -1,21 +1,21 @@
-@comment $NetBSD: PLIST,v 1.9 2007/10/18 09:15:33 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/04/12 22:42:58 jlam Exp $
 bin/eggdrop
-${NOPIC}lib/eggdrop/assoc.so
-${NOPIC}lib/eggdrop/blowfish.so
-${NOPIC}lib/eggdrop/channels.so
-${NOPIC}lib/eggdrop/compress.so
-${NOPIC}lib/eggdrop/console.so
-${NOPIC}lib/eggdrop/ctcp.so
-${NOPIC}lib/eggdrop/dns.so
-${NOPIC}lib/eggdrop/filesys.so
-${NOPIC}lib/eggdrop/irc.so
-${NOPIC}lib/eggdrop/notes.so
-${NOPIC}lib/eggdrop/seen.so
-${NOPIC}lib/eggdrop/server.so
-${NOPIC}lib/eggdrop/share.so
-${NOPIC}lib/eggdrop/transfer.so
-${NOPIC}lib/eggdrop/uptime.so
-${NOPIC}lib/eggdrop/wire.so
+${PLIST.dynamic}lib/eggdrop/assoc.so
+${PLIST.dynamic}lib/eggdrop/blowfish.so
+${PLIST.dynamic}lib/eggdrop/channels.so
+${PLIST.dynamic}lib/eggdrop/compress.so
+${PLIST.dynamic}lib/eggdrop/console.so
+${PLIST.dynamic}lib/eggdrop/ctcp.so
+${PLIST.dynamic}lib/eggdrop/dns.so
+${PLIST.dynamic}lib/eggdrop/filesys.so
+${PLIST.dynamic}lib/eggdrop/irc.so
+${PLIST.dynamic}lib/eggdrop/notes.so
+${PLIST.dynamic}lib/eggdrop/seen.so
+${PLIST.dynamic}lib/eggdrop/server.so
+${PLIST.dynamic}lib/eggdrop/share.so
+${PLIST.dynamic}lib/eggdrop/transfer.so
+${PLIST.dynamic}lib/eggdrop/uptime.so
+${PLIST.dynamic}lib/eggdrop/wire.so
 man/man1/eggdrop.1
 share/doc/eggdrop/BANS
 share/doc/eggdrop/BOTNET
@@ -127,4 +127,4 @@ share/examples/eggdrop/eggdrop.conf
 @dirrm share/eggdrop
 @dirrm share/doc/eggdrop/html
 @dirrm share/doc/eggdrop
-${NOPIC}@dirrm lib/eggdrop
+${PLIST.dynamic}@dirrm lib/eggdrop

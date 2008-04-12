@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2007/11/05 19:06:02 drochner Exp $
-${LIBGTOP_SERVER}bin/libgtop_daemon2
-${LIBGTOP_SERVER}bin/libgtop_server2
+@comment $NetBSD: PLIST,v 1.6 2008/04/12 22:43:12 jlam Exp $
+${PLIST.server}bin/libgtop_daemon2
+${PLIST.server}bin/libgtop_server2
 include/libgtop-2.0/glibtop.h
 include/libgtop-2.0/glibtop/close.h
 include/libgtop-2.0/glibtop/command.h
@@ -40,7 +40,7 @@ include/libgtop-2.0/glibtop/uptime.h
 include/libgtop-2.0/glibtop/version.h
 include/libgtop-2.0/glibtop_machine.h
 include/libgtop-2.0/glibtop_server.h
-${LIBGTOP_SUID_H}include/libgtop-2.0/glibtop_suid.h
+${PLIST.suid.h}include/libgtop-2.0/glibtop_suid.h
 include/libgtop-2.0/libgtopconfig.h
 info/libgtop2.info
 lib/libgtop-2.0.la

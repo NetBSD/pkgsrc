@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.svg,v 1.1 2007/09/21 13:00:53 wiz Exp $
+@comment $NetBSD: PLIST.svg,v 1.2 2008/04/12 22:43:14 jlam Exp $
 lib/ocaml/lablgtk2/gnoDruid.cmi
 lib/ocaml/lablgtk2/gnoDruid.cmx
 lib/ocaml/lablgtk2/gnoDruid.ml
@@ -17,5 +17,5 @@ lib/ocaml/lablgtk2/liblablrsvg.a
 lib/ocaml/lablgtk2/rsvg.cmi
 lib/ocaml/lablgtk2/rsvg.cmx
 lib/ocaml/lablgtk2/rsvg.ml
-${HAVE_STUBS}lib/ocaml/stublibs/dlllablgnomeui.so
-${HAVE_STUBS}lib/ocaml/stublibs/dlllablrsvg.so
+${PLIST.stubs}lib/ocaml/stublibs/dlllablgnomeui.so
+${PLIST.stubs}lib/ocaml/stublibs/dlllablrsvg.so

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/08/22 16:30:46 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/04/12 22:43:13 jlam Exp $
 include/xercesc/dom/DOM.hpp
 include/xercesc/dom/DOMAttr.hpp
 include/xercesc/dom/DOMBuilder.hpp
@@ -319,8 +319,8 @@ include/xercesc/util/SynchronizedStringPool.hpp
 include/xercesc/util/TransENameMap.c
 include/xercesc/util/TransENameMap.hpp
 include/xercesc/util/TransService.hpp
-${GNUICONV}include/xercesc/util/Transcoders/IconvGNU/IconvGNUTransService.hpp
-${NATIVEICONV}include/xercesc/util/Transcoders/Iconv/IconvTransService.hpp
+${PLIST.gnu-iconv}include/xercesc/util/Transcoders/IconvGNU/IconvGNUTransService.hpp
+${PLIST.native-iconv}include/xercesc/util/Transcoders/Iconv/IconvTransService.hpp
 include/xercesc/util/TranscodingException.hpp
 include/xercesc/util/UTFDataFormatException.hpp
 include/xercesc/util/UnexpectedEOFException.hpp
@@ -514,8 +514,8 @@ lib/libxerces-depdom.so.27.0
 @dirrm include/xercesc/validators/DTD
 @dirrm include/xercesc/validators
 @dirrm include/xercesc/util/regx
-${GNUICONV}@dirrm include/xercesc/util/Transcoders/IconvGNU
-${NATIVEICONV}@dirrm include/xercesc/util/Transcoders/Iconv
+${PLIST.gnu-iconv}@dirrm include/xercesc/util/Transcoders/IconvGNU
+${PLIST.native-iconv}@dirrm include/xercesc/util/Transcoders/Iconv
 @dirrm include/xercesc/util/Transcoders
 @dirrm include/xercesc/util/Platforms/${OPSYS}
 @dirrm include/xercesc/util/Platforms

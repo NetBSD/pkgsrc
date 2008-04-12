@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2006/06/17 20:53:09 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2008/04/12 22:43:00 jlam Exp $
 #
 
 DISTNAME=	patch-2.5.4
@@ -29,10 +29,10 @@ CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX:Q}
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
+PLIST_VARS+=		gpatch
+
 .if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
-PLIST_SUBST+=		PATCH_LINK=""
-.else
-PLIST_SUBST+=		PATCH_LINK="@comment "
+PLIST.gpatch=		yes
 .endif
 
 do-patch:

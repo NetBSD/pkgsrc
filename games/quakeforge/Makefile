@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/09/07 22:12:12 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2008/04/12 22:43:01 jlam Exp $
 
 DISTNAME=		quakeforge-0.5.5
 PKGREVISION=		7
@@ -34,10 +34,9 @@ CONFIGURE_ARGS+=	--with-ipv6
 CONFIGURE_ARGS+=	--without-ipv6
 .endif
 
+PLIST_VARS+=		sunaudio
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "SunOS"
-PLIST_SUBST+=		COND_SUN=""
-.else
-PLIST_SUBST+=		COND_SUN="@comment "
+PLIST.sunaudio=		yes
 .endif
 
 INSTALLATION_DIRS=	include/QF/GL include/QF/plugin include/QF/ruamoko/gui

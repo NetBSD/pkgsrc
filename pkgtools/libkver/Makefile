@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/07/26 12:24:52 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2008/04/12 22:43:09 jlam Exp $
 
 DISTNAME=		libkver-${VERSION}
 CATEGORIES=		pkgtools
@@ -26,13 +26,13 @@ ONLY_FOR_PLATFORM=	NetBSD-*-*
 BUILDLINK_PASSTHRU_DIRS=	${BSDSRCDIR}/sys
 
 
+PLIST_VARS=	sysctl
 LDD_SYSCTL!=	ldd /sbin/sysctl 2>&1 || ${TRUE}
 MAKE_ENV+=	LDD_SYSCTL=${LDD_SYSCTL:Q} # save another ldd run
 .if empty(LDD_SYSCTL:M*libc*)
-PLIST_SUBST+=		HAS_SYSCTL=
+PLIST.sysctl=		yes
 FILES_SUBST+=		HAS_SYSCTL=true
 .else
-PLIST_SUBST+=		HAS_SYSCTL="@comment "
 FILES_SUBST+=		HAS_SYSCTL=false
 .endif
 

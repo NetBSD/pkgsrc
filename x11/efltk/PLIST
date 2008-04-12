@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/04/12 22:43:14 jlam Exp $
 bin/efltk-config
 include/efltk/Enumerations.h
 include/efltk/Fl.h
@@ -208,9 +208,9 @@ lib/fltk/eblue.theme.la
 lib/fltk/essai.theme.la
 lib/fltk/motif.theme.la
 lib/libefltk.la
-${OPENGL}lib/libefltk_gl.la
+${PLIST.opengl}lib/libefltk_gl.la
 lib/libefltk_images.la
-${MYSQL}lib/libefltk_mysql.la
+${PLIST.mysql}lib/libefltk_mysql.la
 lib/libefltk_net.la
 lib/libefltk_xml.la
 share/locale/fi/LC_MESSAGES/efltk.mo

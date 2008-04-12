@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/02/29 19:34:44 tnn Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/04/12 22:43:02 jlam Exp $
 bin/clisp
 lib/clisp/base/calls.o
 lib/clisp/base/gettext.o
@@ -18,16 +18,16 @@ lib/clisp/base/width.o
 lib/clisp/clisp-link
 lib/clisp/data/Symbol-Table.text
 lib/clisp/data/UnicodeDataFull.txt
-${bdb}lib/clisp/full/bdb.o
+${PLIST.bdb}lib/clisp/full/bdb.o
 lib/clisp/full/calls.o
-${mit-clx}lib/clisp/full/clx.o
-${new-clx}lib/clisp/full/clx.o
-${pcre}lib/clisp/full/cpcre.o
-${fastcgi}lib/clisp/full/fastcgi.o
-${fastcgi}lib/clisp/full/fastcgi_wrappers.o
+${PLIST.mit-clx}lib/clisp/full/clx.o
+${PLIST.new-clx}lib/clisp/full/clx.o
+${PLIST.pcre}lib/clisp/full/cpcre.o
+${PLIST.fastcgi}lib/clisp/full/fastcgi.o
+${PLIST.fastcgi}lib/clisp/full/fastcgi_wrappers.o
 lib/clisp/full/gettext.o
-${gdbm}lib/clisp/full/gdbm.o
-${gtk2}lib/clisp/full/gtk.o
+${PLIST.gdbm}lib/clisp/full/gdbm.o
+${PLIST.gtk2}lib/clisp/full/gtk.o
 lib/clisp/full/libnoreadline.a
 lib/clisp/full/lisp.a
 lib/clisp/full/lisp.run
@@ -36,16 +36,16 @@ lib/clisp/full/localcharset.o
 lib/clisp/full/makevars
 lib/clisp/full/modules.h
 lib/clisp/full/modules.o
-${pgsql}lib/clisp/full/postgresql.o
-${rawsock}lib/clisp/full/rawsock.o
+${PLIST.pgsql}lib/clisp/full/postgresql.o
+${PLIST.rawsock}lib/clisp/full/rawsock.o
 lib/clisp/full/readline.o
 lib/clisp/full/regexi.o
 lib/clisp/full/regexp.dvi
 lib/clisp/full/uniname.o
 lib/clisp/full/width.o
-${wildcard}lib/clisp/full/wildcard.dvi
-${wildcard}lib/clisp/full/wildcard.o
-${zlib}lib/clisp/full/zlib.o
+${PLIST.wildcard}lib/clisp/full/wildcard.dvi
+${PLIST.wildcard}lib/clisp/full/wildcard.o
+${PLIST.zlib}lib/clisp/full/zlib.o
 lib/clisp/linkkit/clisp.h
 lib/clisp/linkkit/modprep.lisp
 lib/clisp/linkkit/modules.c
