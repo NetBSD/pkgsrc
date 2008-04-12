@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7201 2008/04/10 18:06:13 tonio Exp $
+$NetBSD: TODO,v 1.7202 2008/04/12 14:53:25 taca Exp $
 
 Suggested new packages
 ======================
@@ -1350,6 +1350,7 @@ Suggested package updates
 	o snd-9.7
 	o snes9x-1.51
 	o snobol-1.1
+	o snort-2.8.1
 	o snownews-1.5.9
 	o socat-1.6.0.1
 	o solfege-3.10.2 [schmonz]
