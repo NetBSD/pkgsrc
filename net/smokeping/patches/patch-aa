@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.8 2008/04/06 21:47:00 adrianp Exp $
+$NetBSD: patch-aa,v 1.9 2008/04/12 14:14:56 adrianp Exp $
 
 --- bin/smokeping.dist.orig	2008-03-29 07:47:19.000000000 +0000
 +++ bin/smokeping.dist
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.8 2008/04/06 21:47:00 adrianp Exp $
  use Smokeping 2.003005;
   
 -Smokeping::main("etc/config.dist");
-+Smokeping::main(""@PKG_SYSCONFDIR@/config");
++Smokeping::main("@PKG_SYSCONFDIR@/config");
  
  =head1 NAME
  
