@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.692 2008/04/12 10:17:49 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.693 2008/04/12 10:35:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1350,3 +1350,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/gstreamer0.10 to 0.10.19 [drochner 2008-04-11]
 	Updated multimedia/xine-lib to 1.1.11.1 [drochner 2008-04-11]	
 	Updated x11/xf86-video-radeonhd to 1.2.0 [xtraeme 2008-04-12]
+	Updated security/qca2 to 2.0.0nb3 [wiz 2008-04-12]
