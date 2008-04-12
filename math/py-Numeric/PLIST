@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/03/01 19:15:07 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/04/12 22:43:04 jlam Exp $
 ${PYINC}/Numeric/arrayobject.h
 ${PYINC}/Numeric/f2c.h
 ${PYINC}/Numeric/ranlib.h
@@ -54,12 +54,12 @@ ${PYSITELIB}/Numeric/RandomArray.pyo
 ${PYSITELIB}/Numeric/UserArray.py
 ${PYSITELIB}/Numeric/UserArray.pyc
 ${PYSITELIB}/Numeric/UserArray.pyo
-${DOTBLAS}${PYSITELIB}/Numeric/_dotblas.so
+${PLIST.blas}${PYSITELIB}/Numeric/_dotblas.so
 ${PYSITELIB}/Numeric/_numpy.so
 ${PYSITELIB}/Numeric/arrayfns.so
-${DOTBLAS}${PYSITELIB}/Numeric/dotblas/__init__.py
-${DOTBLAS}${PYSITELIB}/Numeric/dotblas/__init__.pyc
-${DOTBLAS}${PYSITELIB}/Numeric/dotblas/__init__.pyo
+${PLIST.blas}${PYSITELIB}/Numeric/dotblas/__init__.py
+${PLIST.blas}${PYSITELIB}/Numeric/dotblas/__init__.pyc
+${PLIST.blas}${PYSITELIB}/Numeric/dotblas/__init__.pyo
 ${PYSITELIB}/Numeric/lapack_lite.so
 ${PYSITELIB}/Numeric/multiarray.so
 ${PYSITELIB}/Numeric/numeric_version.py
@@ -67,7 +67,7 @@ ${PYSITELIB}/Numeric/numeric_version.pyc
 ${PYSITELIB}/Numeric/numeric_version.pyo
 ${PYSITELIB}/Numeric/ranlib.so
 ${PYSITELIB}/Numeric/umath.so
-${DOTBLAS}@dirrm ${PYSITELIB}/Numeric/dotblas
+${PLIST.blas}@dirrm ${PYSITELIB}/Numeric/dotblas
 @dirrm ${PYSITELIB}/Numeric/RNG
 @dirrm ${PYSITELIB}/Numeric/Numeric_headers
 @dirrm ${PYSITELIB}/Numeric/MA

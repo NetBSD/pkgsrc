@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2007/05/01 12:03:26 veego Exp $
+# $NetBSD: Makefile,v 1.39 2008/04/12 22:42:59 jlam Exp $
 
 DISTNAME=	libgphoto2-2.3.1
 PKGREVISION=	4
@@ -18,14 +18,13 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		ac_cv_path_DOXYGEN=false
 PKGCONFIG_OVERRIDE+=	libgphoto2/libgphoto2.pc.in
+PLIST_VARS+=		libusb
 
 .include "../../mk/bsd.prefs.mk"
-# Keep this in sync with buildlink3.mk!
-.if ${OPSYS} == "SunOS"
-PLIST_SUBST+=		HAVE_LIBUSB="@comment "
-.else
-.include "../../devel/libusb/buildlink3.mk"
-PLIST_SUBST+=		HAVE_LIBUSB=""
+# Keep this in sync with libusb/buildlink3.mk!
+.if ${OPSYS} != "SunOS"
+.  include "../../devel/libusb/buildlink3.mk"
+PLIST.libusb=		yes
 .endif
 
 # remove symbolic link

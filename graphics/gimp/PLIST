@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.33 2007/11/21 19:52:15 adam Exp $
+@comment $NetBSD: PLIST,v 1.34 2008/04/12 22:43:01 jlam Exp $
 bin/gimp
 bin/gimp-2.4
 bin/gimp-console
 bin/gimp-console-2.4
-${REMOTE}bin/gimp-remote
-${REMOTE}bin/gimp-remote-2.4
+${PLIST.remote}bin/gimp-remote
+${PLIST.remote}bin/gimp-remote-2.4
 bin/gimptool-2.0
 include/gimp-2.0/libgimp/gimp.h
 include/gimp-2.0/libgimp/gimp_pdb.h
@@ -226,7 +226,7 @@ lib/gimp/2.0/plug-ins/CML_explorer
 lib/gimp/2.0/plug-ins/FractalExplorer
 lib/gimp/2.0/plug-ins/Lighting
 lib/gimp/2.0/plug-ins/MapObject
-${AALIB}lib/gimp/2.0/plug-ins/aa
+${PLIST.aalib}lib/gimp/2.0/plug-ins/aa
 lib/gimp/2.0/plug-ins/align_layers
 lib/gimp/2.0/plug-ins/animationplay
 lib/gimp/2.0/plug-ins/animoptimize
@@ -295,7 +295,7 @@ lib/gimp/2.0/plug-ins/gtm
 lib/gimp/2.0/plug-ins/guillotine
 lib/gimp/2.0/plug-ins/header
 lib/gimp/2.0/plug-ins/help
-${GNOME}lib/gimp/2.0/plug-ins/helpbrowser
+${PLIST.gnome}lib/gimp/2.0/plug-ins/helpbrowser
 lib/gimp/2.0/plug-ins/hot
 lib/gimp/2.0/plug-ins/ifscompose
 lib/gimp/2.0/plug-ins/illusion
@@ -313,7 +313,7 @@ lib/gimp/2.0/plug-ins/max_rgb
 lib/gimp/2.0/plug-ins/maze
 lib/gimp/2.0/plug-ins/mblur
 lib/gimp/2.0/plug-ins/metadata
-${MNG}lib/gimp/2.0/plug-ins/mng
+${PLIST.mng}lib/gimp/2.0/plug-ins/mng
 lib/gimp/2.0/plug-ins/mosaic
 lib/gimp/2.0/plug-ins/neon
 lib/gimp/2.0/plug-ins/newsprint
@@ -367,7 +367,7 @@ lib/gimp/2.0/plug-ins/spheredesigner
 lib/gimp/2.0/plug-ins/spread
 lib/gimp/2.0/plug-ins/struc
 lib/gimp/2.0/plug-ins/sunras
-${SVG}lib/gimp/2.0/plug-ins/svg
+${PLIST.svg}lib/gimp/2.0/plug-ins/svg
 lib/gimp/2.0/plug-ins/tga
 lib/gimp/2.0/plug-ins/threshold_alpha
 lib/gimp/2.0/plug-ins/tiff-load
@@ -375,7 +375,7 @@ lib/gimp/2.0/plug-ins/tiff-save
 lib/gimp/2.0/plug-ins/tile
 lib/gimp/2.0/plug-ins/tileit
 lib/gimp/2.0/plug-ins/tiler
-${TWAIN}lib/gimp/2.0/plug-ins/twain
+${PLIST.twain}lib/gimp/2.0/plug-ins/twain
 lib/gimp/2.0/plug-ins/uniteditor
 lib/gimp/2.0/plug-ins/unsharp
 lib/gimp/2.0/plug-ins/uri
@@ -995,7 +995,7 @@ share/gimp/2.0/themes/Default/images/stock-question-64.png
 share/gimp/2.0/themes/Default/images/stock-warning-64.png
 share/gimp/2.0/themes/Small/gtkrc
 share/gimp/2.0/tips/gimp-tips.xml
-${TWAIN}share/gimp/2.0/twain/gimp-twain.png
+${PLIST.twain}share/gimp/2.0/twain/gimp-twain.png
 share/gtk-doc/html/libgimp/GimpAspectPreview.html
 share/gtk-doc/html/libgimp/GimpBrushSelectButton.html
 share/gtk-doc/html/libgimp/GimpDrawablePreview.html
@@ -1975,7 +1975,7 @@ share/mime-info/gimp.keys
 @dirrm share/gtk-doc/html/libgimpcolor
 @dirrm share/gtk-doc/html/libgimpbase
 @dirrm share/gtk-doc/html/libgimp
-${TWAIN}@dirrm share/gimp/2.0/twain
+${PLIST.twain}@dirrm share/gimp/2.0/twain
 @dirrm share/gimp/2.0/tips
 @dirrm share/gimp/2.0/themes/Small
 @dirrm share/gimp/2.0/themes/Default/images/preferences

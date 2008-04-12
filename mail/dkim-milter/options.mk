@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2008/03/09 14:02:08 adrianp Exp $
+# $NetBSD: options.mk,v 1.4 2008/04/12 22:43:03 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dkim-milter
 PKG_SUPPORTED_OPTIONS=	inet6 dkim-milter-arlib debug
@@ -26,12 +26,12 @@ SUBST_SED.libs+=	-e 's|@DEBUG@|dnl|g'
 ###
 ### Use asynchronous DNS resolver library shipping with dkim-milter.
 ###
+PLIST_VARS+=		arlib
 .if !empty(PKG_OPTIONS:Mdkim-milter-arlib)
-PLIST_SUBST+=		WITH_ARLIB=''
+PLIST.arlib=		yes
 SUBST_SED.libs+=	-e 's|@RESOLVLIB@||g'
 SUBST_SED.libs+=	-e 's|@ARLIB@||g'
 .else
-PLIST_SUBST+=		WITH_ARLIB='@comment '
 SUBST_SED.libs+=	-e 's|@RESOLVLIB@|resolv bind|g'
 SUBST_SED.libs+=	-e 's|@ARLIB@|dnl|g'
 .endif

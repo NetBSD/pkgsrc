@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2007/12/08 09:23:16 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2008/04/12 22:43:15 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	dri inet6
@@ -11,6 +11,7 @@ PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable PKG_OPTIONS.xorg-server us
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=		dri
 .if !empty(PKG_OPTIONS:Mdri)
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
 DISTFILES+=		MesaLib-6.5.2.tar.bz2
@@ -28,14 +29,13 @@ CONFIGURE_ENV+=		GLX_DEFINES=${GLX_DEFINES:M*:Q}
 # the newer ones.
 #BUILDLINK_API_DEPENDS.glproto+= glproto>=1.4.8nb1
 #BUILDLINK_API_DEPENDS.xf86driproto+= xf86driproto>=2.0.3nb1
-PLIST_SUBST+=		USE_DRI=""
+PLIST.dri=		yes
 
 dri-post-extract:
 	${LN} -s ${MESA_SRC:Q}/include/GL ${WRKSRC:Q}/GL/glx/GL
 
 .else
 CONFIGURE_ARGS+=	--disable-glx
-PLIST_SUBST+=		USE_DRI="@comment "
 
 dri-post-extract:
 	@${DO_NADA}

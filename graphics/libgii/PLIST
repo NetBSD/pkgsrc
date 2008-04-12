@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.9 2005/04/18 15:53:35 wiz Exp $
-${GGTICK}bin/ggtick
+@comment $NetBSD: PLIST,v 1.10 2008/04/12 22:43:01 jlam Exp $
+${PLIST.ggtick}bin/ggtick
 bin/mhub
 bin/xsendbut
 include/ggi/errors.h

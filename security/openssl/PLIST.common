@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.12 2008/01/17 06:42:47 tnn Exp $
+@comment $NetBSD: PLIST.common,v 1.13 2008/04/12 22:43:12 jlam Exp $
 bin/c_rehash
 bin/openssl
 include/openssl/aes.h
@@ -29,14 +29,14 @@ include/openssl/engine.h
 include/openssl/err.h
 include/openssl/evp.h
 include/openssl/hmac.h
-${IDEA}include/openssl/idea.h
+${PLIST.idea}include/openssl/idea.h
 include/openssl/krb5_asn.h
 include/openssl/kssl.h
 include/openssl/lhash.h
 include/openssl/md2.h
 include/openssl/md4.h
 include/openssl/md5.h
-${MDC2}include/openssl/mdc2.h
+${PLIST.mdc2}include/openssl/mdc2.h
 include/openssl/obj_mac.h
 include/openssl/objects.h
 include/openssl/ocsp.h
@@ -52,7 +52,7 @@ include/openssl/pqueue.h
 include/openssl/rand.h
 include/openssl/rc2.h
 include/openssl/rc4.h
-${RC5}include/openssl/rc5.h
+${PLIST.rc5}include/openssl/rc5.h
 include/openssl/ripemd.h
 include/openssl/rsa.h
 include/openssl/safestack.h

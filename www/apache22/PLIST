@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/01/21 15:07:10 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/04/12 22:43:13 jlam Exp $
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
 include/httpd/ap_config_auto.h
@@ -75,7 +75,7 @@ sbin/httxt2dbm
 sbin/logresolve
 sbin/mkcert
 sbin/rotatelogs
-${SUEXEC_COMMENT}sbin/suexec
+${PLIST.suexec}sbin/suexec
 share/examples/httpd/extra/httpd-autoindex.conf
 share/examples/httpd/extra/httpd-dav.conf
 share/examples/httpd/extra/httpd-default.conf

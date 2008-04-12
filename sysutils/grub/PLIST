@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/04/07 19:54:17 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/04/12 22:43:12 jlam Exp $
 bin/mbchk
 info/grub.info
 info/multiboot.info
@@ -13,8 +13,8 @@ lib/grub/${MACHINE_ARCH}-${LOWER_VENDOR}/ffs_stage1_5
 lib/grub/${MACHINE_ARCH}-${LOWER_VENDOR}/iso9660_stage1_5
 lib/grub/${MACHINE_ARCH}-${LOWER_VENDOR}/jfs_stage1_5
 lib/grub/${MACHINE_ARCH}-${LOWER_VENDOR}/minix_stage1_5
-${NETBOOT}lib/grub/${MACHINE_ARCH}-${LOWER_VENDOR}/nbgrub
-${NETBOOT}lib/grub/${MACHINE_ARCH}-${LOWER_VENDOR}/pxegrub
+${PLIST.netboot}lib/grub/${MACHINE_ARCH}-${LOWER_VENDOR}/nbgrub
+${PLIST.netboot}lib/grub/${MACHINE_ARCH}-${LOWER_VENDOR}/pxegrub
 lib/grub/${MACHINE_ARCH}-${LOWER_VENDOR}/reiserfs_stage1_5
 lib/grub/${MACHINE_ARCH}-${LOWER_VENDOR}/stage1
 lib/grub/${MACHINE_ARCH}-${LOWER_VENDOR}/stage2
@@ -27,7 +27,7 @@ sbin/grub-install
 sbin/grub-md5-crypt
 sbin/grub-set-default
 sbin/grub-terminfo
-${NETBOOT}share/doc/grub/README.netboot
+${PLIST.netboot}share/doc/grub/README.netboot
 @dirrm lib/grub/${MACHINE_ARCH}-${LOWER_VENDOR}
 @dirrm lib/grub
-${NETBOOT}@dirrm share/doc/grub
+${PLIST.netboot}@dirrm share/doc/grub

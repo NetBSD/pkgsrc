@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/10/29 13:11:11 uebayasi Exp $
+# $NetBSD: Makefile,v 1.22 2008/04/12 22:43:13 jlam Exp $
 
 DISTNAME=	emacs-w3m-1.4.4
 PKGREVISION=	1
@@ -30,11 +30,10 @@ SUBST_SED.fix-icondir=		-e 's|etc/images/w3m|etc/w3m|g' \
 .include "../../mk/emacs.mk"
 
 # GNU Emacs 21 or later and XEmacs have GUI support
+PLIST_VARS+=	gui
 .if (${EMACS_FLAVOR} == "emacs" && ${EMACS_VERSION_MAJOR} > 20) || \
     ${EMACS_FLAVOR} == "xemacs"
-PLIST_SUBST+=	FOR_gui=""
-.else
-PLIST_SUBST+=	FOR_gui="@comment "
+PLIST.gui=	yes
 .endif
 
 DOCUMENTS=	COPYING ChangeLog ChangeLog.1 README README.ja

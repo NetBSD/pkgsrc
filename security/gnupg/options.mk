@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2007/10/31 12:29:33 rillig Exp $
+# $NetBSD: options.mk,v 1.13 2008/04/12 22:43:09 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnupg
 PKG_SUPPORTED_OPTIONS=	curl idea ldap
@@ -43,16 +43,16 @@ pre-configure:
 	${GZCAT} ${DISTDIR}/idea.c.gz > ${WRKSRC}/cipher/idea.c
 .endif
 
+PLIST_VARS+=		ldap
 .if !empty(PKG_OPTIONS:Mldap)
 .include "../../databases/openldap-client/buildlink3.mk"
-PLIST_SUBST+=	OPENLDAP=""
+PLIST.ldap=		yes
 .else
-CONFIGURE_ARGS+=--disable-ldap
-PLIST_SUBST+=	OPENLDAP="@comment "
+CONFIGURE_ARGS+=	--disable-ldap
 .endif
 
 .if !empty(PKG_OPTIONS:Mm68060-optimized)
 # be more efficient on M68060 machines
-CONFIGURE_ENV+=                M68060=${M68060:Q}
-CFLAGS+=                       -m68060
+CONFIGURE_ENV+=		M68060=${M68060:Q}
+CFLAGS+=		-m68060
 .endif

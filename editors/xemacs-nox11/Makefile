@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/02/15 14:27:48 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2008/04/12 22:43:00 jlam Exp $
 
 .include "../../editors/xemacs/Makefile.common"
 
@@ -22,7 +22,5 @@ CONFIGURE_ARGS+=	--without-xpm	# XXX -nox
 CONFIGURE_ARGS+=	--site-includes=${BUILDLINK_DIR}/include
 CONFIGURE_ARGS+=	--site-libraries=${BUILDLINK_DIR}/lib
 CONFIGURE_ARGS+=	--site-runtime-libraries=${LOCALBASE}/lib
-
-PLIST_SUBST+=	X11ONLY="@comment "
 
 .include "../../mk/bsd.pkg.mk"

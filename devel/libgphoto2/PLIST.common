@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.10 2007/01/03 08:20:18 adam Exp $
+@comment $NetBSD: PLIST.common,v 1.11 2008/04/12 22:42:59 jlam Exp $
 bin/gphoto2-config
 bin/gphoto2-port-config
 include/gphoto2/gphoto2-abilities-list.h
@@ -82,7 +82,7 @@ lib/libgphoto2/${PKGVERSION}/toshiba_pdrm11.la
 lib/libgphoto2_port/0.7.1/disk.la
 lib/libgphoto2_port/0.7.1/ptpip.la
 lib/libgphoto2_port/0.7.1/serial.la
-lib/libgphoto2_port/0.7.1/usb.la
+${PLIST.libusb}lib/libgphoto2_port/0.7.1/usb.la
 lib/pkgconfig/libgphoto2.pc
 lib/pkgconfig/libgphoto2_port.pc
 lib/udev/check-ptp-camera

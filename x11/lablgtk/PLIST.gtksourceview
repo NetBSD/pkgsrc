@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.gtksourceview,v 1.1 2007/10/27 13:29:38 wiz Exp $
+@comment $NetBSD: PLIST.gtksourceview,v 1.2 2008/04/12 22:43:14 jlam Exp $
 lib/ocaml/lablgtk2/gSourceView.cmi
 lib/ocaml/lablgtk2/gSourceView.cmx
 lib/ocaml/lablgtk2/gSourceView.ml
@@ -13,4 +13,4 @@ lib/ocaml/lablgtk2/sourceViewEnums.cmi
 lib/ocaml/lablgtk2/sourceViewEnums.cmx
 lib/ocaml/lablgtk2/sourceViewEnums.ml
 lib/ocaml/lablgtk2/sourceView_tags.h
-${HAVE_STUBS}lib/ocaml/stublibs/dlllablgtksourceview.so
+${PLIST.stubs}lib/ocaml/stublibs/dlllablgtksourceview.so
