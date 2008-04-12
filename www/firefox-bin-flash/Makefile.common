@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.21 2008/03/07 05:16:48 jlam Exp $
+# $NetBSD: Makefile.common,v 1.21.2.1 2008/04/12 10:51:04 rtr Exp $
 
 DISTNAME=		install_flash_player_9_${DISTUNAME}
 PKGNAME=		${MOZ_BIN}-flash-${FLASH_VERS:S/r/./}
@@ -23,7 +23,7 @@ EMUL_PLATFORMS=		linux-i386
 
 SUB=			english/${DISTUNAME}/${FLASH_VERS}
 
-FLASH_VERS=		9.0r115
+FLASH_VERS=		9.0r124
 DISTUNAME=		linux
 WRKNAME=		install_flash_player_9_${DISTUNAME}
 
