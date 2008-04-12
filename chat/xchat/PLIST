@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.17 2007/09/25 10:54:10 hira Exp $
+@comment $NetBSD: PLIST,v 1.18 2008/04/12 22:42:58 jlam Exp $
 bin/xchat
 share/applications/xchat.desktop
-${GNOME}share/dbus-1/services/org.xchat.service.service
+${PLIST.dbus}share/dbus-1/services/org.xchat.service.service
 share/doc/xchat/README
 share/doc/xchat/faq.html
 share/doc/xchat/plugin20.html
-${GNOME}share/gconf/schemas/apps_xchat_url_handler.schemas
+${PLIST.dbus}share/gconf/schemas/apps_xchat_url_handler.schemas
 share/locale/be/LC_MESSAGES/xchat.mo
 share/locale/ca/LC_MESSAGES/xchat.mo
 share/locale/cs/LC_MESSAGES/xchat.mo

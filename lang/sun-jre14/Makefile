@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2008/03/05 21:50:22 tnn Exp $
+# $NetBSD: Makefile,v 1.48 2008/04/12 22:43:03 jlam Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
@@ -42,9 +42,10 @@ PKG_SUPPORTED_OPTIONS=	sun-jre-jce
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=	jce
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} jce_policy-1_4_2.zip
-PLIST_SUBST+=	SUN_JRE14_USE_JCE=""
+PLIST.jce=	yes
 
 END_MESSAGE=								\
 	""								\
@@ -53,8 +54,6 @@ END_MESSAGE=								\
 	""								\
 	"Under 'Other Downloads' / 'Java Cryptography Extension'"	\
 	"click 'Download' and choose the .zip file."
-.else
-PLIST_SUBST+=	SUN_JRE14_USE_JCE="@comment "
 .endif
 
 # Some of the binaries require libX11, so ensure that requirement is

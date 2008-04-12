@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/10/29 12:37:13 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/04/12 22:43:00 jlam Exp $
 bin/emacs
 bin/emacs-${EMACSVERSION}
 bin/emacs-b2m
@@ -12,7 +12,7 @@ libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/cvtmail
 libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/digest-doc
 libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/emacsserver
 libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/fakemail
-${FNS_EL}libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/fns-${EMACSVERSION}.1.el
+${PLIST.fns.el}libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/fns-${EMACSVERSION}.1.el
 libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/hexl
 libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/movemail
 libexec/emacs/${EMACSVERSION}/${MACHINE_GNU_PLATFORM}/profile

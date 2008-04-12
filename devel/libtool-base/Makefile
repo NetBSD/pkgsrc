@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2007/10/07 12:32:00 joerg Exp $
+# $NetBSD: Makefile,v 1.82 2008/04/12 22:42:59 jlam Exp $
 
 ###########################################################################
 ###########################################################################
@@ -34,6 +34,7 @@ COMMENT=	Generic shared library support script (the script itself)
 CONFLICTS+=	libtool<=1.3.5nb11
 
 TEST_TARGET=	check
+PLIST_VARS+=	shlibtool
 
 .if ${OPSYS} == "AIX"
 
@@ -83,10 +84,8 @@ fix-libtool:
 
 post-build: fix-libtool
 
-.if ${BUILD_SHLIBTOOL} == "NO"
-PLIST_SUBST+=		SHLIBTOOL="@comment "
-.else
-PLIST_SUBST+=		SHLIBTOOL=
+.if ${BUILD_SHLIBTOOL} != "NO"
+PLIST.shlibtool=	yes
 
 post-build:
 	@${SED}	-e "s|@PREFIX@|"${PREFIX:Q}"|g"				\

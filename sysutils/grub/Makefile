@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2007/10/07 18:00:55 xtraeme Exp $
+# $NetBSD: Makefile,v 1.49 2008/04/12 22:43:12 jlam Exp $
 
 DISTNAME=	grub-0.97
 PKGREVISION=	8
@@ -25,9 +25,10 @@ BUILD_DEFS+=		GRUB_SCAN_ARGS
 
 .include "../../mk/curses.buildlink3.mk"
 
+PLIST_VARS+=		netboot
 .if defined(GRUB_NETWORK_CARDS)
 CONFIGURE_ARGS+=	--enable-diskless
-PLIST_SUBST+=		NETBOOT=
+PLIST.netboot=		yes
 
 .for nic in ${GRUB_NETWORK_CARDS}
 CONFIGURE_ARGS+=	--enable-${nic}
@@ -38,8 +39,6 @@ grub-netboot-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/grub
 	${INSTALL_DATA} ${WRKSRC}/netboot/README.netboot \
 		${PREFIX}/share/doc/grub
-.else
-PLIST_SUBST+=		NETBOOT="@comment "
 .endif
 
 .if defined(GRUB_PRESET_COMMAND) && !empty(GRUB_PRESET_COMMAND)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.66 2008/02/22 01:16:58 gdt Exp $
+# $NetBSD: Makefile,v 1.67 2008/04/12 22:43:03 jlam Exp $
 
 DISTNAME=		mutt-1.5.17
 PKGREVISION=		5
@@ -60,10 +60,9 @@ INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
 
 # Define WRKSRC explicitly so we can use its value below.
 WRKSRC=			${WRKDIR}/${DISTNAME}
+PLIST_VARS+=		dotlock
 .if exists(${WRKSRC}/mutt_dotlock)
-PLIST_SUBST+=		MUTT_DOTLOCK=
-.else
-PLIST_SUBST+=		MUTT_DOTLOCK="@comment "
+PLIST.dotlock=		yes
 .endif
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 

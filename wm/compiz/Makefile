@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/03/06 14:53:55 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/04/12 22:43:13 jlam Exp $
 #
 
 DISTNAME=	compiz-0.4.0
@@ -29,6 +29,8 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.compiz
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
+
 # this is as much as needed for the basic window decorator
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
@@ -36,20 +38,16 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.compiz
 
 .if !empty(PKG_OPTIONS:Mgnome)
 CONFIGURE_ARGS+=	--enable-librsvg
-PLIST_SUBST+=		GNOME=""
+PLIST.gnome=		yes
 .include "../../x11/gnome-control-center/buildlink3.mk"
 .include "../../wm/metacity/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-.else
-PLIST_SUBST+=		GNOME="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mkde)
-PLIST_SUBST+=		KDE=""
+PLIST.kde=		yes
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../sysutils/dbus-qt3/buildlink3.mk"
-.else
-PLIST_SUBST+=		KDE="@comment "
 .endif
 
 # While we don't use threads, we link against libpthread because

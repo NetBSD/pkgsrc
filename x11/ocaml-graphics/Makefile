@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/01/30 20:56:13 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2008/04/12 22:43:15 jlam Exp $
 
 .include "../../lang/ocaml/Makefile.common"
 
@@ -14,13 +14,13 @@ CONFIGURE_ARGS+=	-no-tk
 BUILD_DIRS=		${WRKSRC}/otherlibs/graph
 BUILD_TARGET=		all
 INSTALL_TARGET=		install
+
+PLIST_VARS+=		opt
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
     (${MACHINE_ARCH} == "sparc")
 BUILD_TARGET+=		allopt
 INSTALL_TARGET+=	installopt
-PLIST_SUBST+=		OPT=
-.else
-PLIST_SUBST+=		OPT='@comment '
+PLIST.opt=		yes
 .endif
 
 PLIST_SRC=	${WRKDIR}/.PLIST_SRC

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/05/23 13:38:23 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/04/12 22:43:00 jlam Exp $
 bin/kmymoney
 bin/kmymoney2
 include/kmymoney/export.h
@@ -30,7 +30,7 @@ include/kmymoney/mymoneytransactionfilter.h
 include/kmymoney/mymoneyutils.h
 include/kmymoney/statementinterface.h
 include/kmymoney/viewinterface.h
-${HAS_LIBOFX}lib/kde3/kmm_ofximport.la
+${PLIST.libofx}lib/kde3/kmm_ofximport.la
 lib/libkmm_mymoney.la
 lib/libkmm_plugin.la
 man/man1/kmymoney2.1
@@ -330,7 +330,7 @@ share/kde/apps/kmymoney2/templates/pt_BR/default_accounts.kmt
 share/kde/apps/kmymoney2/templates/ru_SU/default_accounts.kmt
 share/kde/apps/kmymoney2/tips
 share/kde/mimelnk/application/x-kmymoney2.desktop
-${HAS_LIBOFX}share/kde/services/kmm_ofximport.desktop
+${PLIST.libofx}share/kde/services/kmm_ofximport.desktop
 share/kde/servicetypes/kmymoneyimporterplugin.desktop
 share/kde/servicetypes/kmymoneyplugin.desktop
 share/locale/ca/LC_MESSAGES/kmymoney2.mo

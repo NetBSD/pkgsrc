@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/10/09 19:19:17 martti Exp $
+# $NetBSD: Makefile,v 1.6 2008/04/12 22:43:15 jlam Exp $
 #
 
 DISTNAME=	xf86-video-via-0.2.2
@@ -19,10 +19,9 @@ USE_TOOLS+=     pkg-config
 
 .include "../../mk/bsd.prefs.mk"
 
+PLIST_VARS+=		XvMC
 .if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
-PLIST_SUBST+=		XVMC_SUPPORT=""
-.else
-PLIST_SUBST+=		XVMC_SUPPORT="@comment "
+PLIST.XvMC=		yes
 .endif
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2008/04/07 19:44:19 tnn Exp $
+# $NetBSD: options.mk,v 1.4 2008/04/12 22:43:01 jlam Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -8,8 +8,10 @@ PKG_SUGGESTED_OPTIONS=	# empty
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=		ttd-data
+
 .if !empty(PKG_OPTIONS:Mttd-data)
-PLIST_SUBST+=		TTD_DATA=""
+PLIST.ttd-data=		yes
 LICENSE=		ttd-pseudolicense
 RESTRICTED=		No redistribution allowed
 NO_BIN_ON_CDROM=	${RESTRICTED}
@@ -37,6 +39,4 @@ post-install-ttd-data: .PHONY
 	  ${INSTALL_DATA} ${WRKDIR}/$$f ${DATA_DIR}/data; done
 	${RUN} for f in ${GMFILES}; do \
 	  ${INSTALL_DATA} ${WRKDIR}/$$f ${DATA_DIR}/gm; done
-.else
-PLIST_SUBST+=	TTD_DATA="@comment "
 .endif

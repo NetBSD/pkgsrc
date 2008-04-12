@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2008/04/11 06:08:43 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2008/04/12 22:42:59 jlam Exp $
 
 DISTNAME=	m4-1.4.11
 CATEGORIES=	devel
@@ -25,10 +25,10 @@ CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX:Q}
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
+PLIST_VARS+=		gm4
+
 .if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
-PLIST_SUBST+=		GM4_LINK=""
-.else
-PLIST_SUBST+=		GM4_LINK="@comment "
+PLIST.gm4=		yes
 .endif
 
 .if ${OPSYS} == "DragonFly"

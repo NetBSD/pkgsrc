@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/01/29 11:37:35 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2008/04/12 22:43:00 jlam Exp $
 
 DISTNAME=		nspr-4.6.7
 PKGREVISION=		1
@@ -38,6 +38,7 @@ SO_SUFFIX=		so.1.0
 PLIST_SUBST+=		SO_SUFFIX=${SO_SUFFIX:Q}
 
 INSTALLATION_DIRS=	bin
+PLIST_VARS+=		sun4u_32
 
 # see ${WRKSRC}/nspr-4.6.1/mozilla/nsprpub/pr/src/md/unix/Makefile.in
 # for the bit about 32-bit sun4u machines installing an extra file.
@@ -48,13 +49,10 @@ CONFIGURE_ARGS+=	--enable-64bit
 .  else
 HW_CLASS!=	${UNAME} -m
 .    if ${HW_CLASS} == "sun4u"
-SUN4U_32=
+PLIST.sun4u_32=		yes
 .    endif
 .  endif
 .endif
-
-SUN4U_32?=		"@comment "
-PLIST_SUBST+=		SUN4U_32=${SUN4U_32}
 
 .if ${OPSYS} == "Darwin" && exists(/Developer/Headers/FlatCarbon)
 BUILDLINK_PASSTHRU_DIRS+=	/Developer/Headers/FlatCarbon

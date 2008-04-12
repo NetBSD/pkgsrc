@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/21 09:28:47 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/04/12 22:42:58 jlam Exp $
 bin/normalize
 bin/normalize-mp3
 bin/normalize-ogg
-${XMMS_PLUGIN}lib/xmms/Effect/librva.la
+${PLIST.xmms}lib/xmms/Effect/librva.la
 man/man1/normalize-mp3.1
 man/man1/normalize.1
 share/locale/en_GB/LC_MESSAGES/normalize.mo

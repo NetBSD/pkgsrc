@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/03/07 22:40:29 tron Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/04/12 22:43:12 jlam Exp $
 bin/chattr
 bin/lsattr
 bin/uuidgen
@@ -18,7 +18,7 @@ man/man8/e2image.8
 man/man8/e2label.8
 man/man8/filefrag.8
 man/man8/findfs.8
-${FSCK}man/man8/fsck.8
+${PLIST.fsck}man/man8/fsck.8
 man/man8/fsck.ext2.8
 man/man8/fsck.ext3.8
 man/man8/logsave.8
@@ -38,7 +38,7 @@ sbin/e2image
 sbin/e2label
 sbin/filefrag
 sbin/findfs
-${FSCK}sbin/fsck
+${PLIST.fsck}sbin/fsck
 sbin/fsck.ext2
 sbin/fsck.ext3
 sbin/logsave

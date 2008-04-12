@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2008/02/22 00:36:12 gdt Exp $
+# $NetBSD: Makefile,v 1.156 2008/04/12 22:43:04 jlam Exp $
 
 DISTNAME=		mutt-1.4.2.3
 PKGREVISION=		2
@@ -86,10 +86,9 @@ FILES_SUBST+=		DOCDIR=${DOCDIR:Q}
 
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS} sysconfdir=${EGDIR:Q}
 
+PLIST_VARS+=		dotlock
 .if exists(${WRKSRC}/mutt_dotlock)
-PLIST_SUBST+=		MUTT_DOTLOCK=
-.else
-PLIST_SUBST+=		MUTT_DOTLOCK="@comment "
+PLIST.dotlock=		yes
 .endif
 INSTALL_MAKE_FLAGS=	${MAKE_FLAGS} sysconfdir=${EGDIR}
 

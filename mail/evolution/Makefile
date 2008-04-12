@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.128 2008/03/05 19:08:05 drochner Exp $
+# $NetBSD: Makefile,v 1.129 2008/04/12 22:43:03 jlam Exp $
 
 DISTNAME=		evolution-2.12.3
 PKGREVISION=		2
@@ -67,9 +67,10 @@ CONFIGURE_ARGS+=	--with-krb5
 CONFIGURE_ARGS+=	--without-krb5
 .endif
 
+PLIST_VARS+=		smime
 .if !empty(PKG_OPTIONS:Mssl)
 CONFIGURE_ARGS+=	--enable-nss=yes
-PLIST_SUBST+=		HAVE_SMIME=
+PLIST.smime=		yes
 PRINT_PLIST_AWK+=	/smime/ { print "$${HAVE_SMIME}" $$0; next; }
 # XXX Workaround for the following problem: addressbook/util/libeabutil.la
 # is compiled as a static library only which uses the NSS stuff.  When other
@@ -89,7 +90,6 @@ post-wrapper:
 	cd ${BUILDLINK_DIR}/lib/pkgconfig && ${LN} -s nss.pc mozilla-nss.pc
 .else
 CONFIGURE_ARGS+=	--disable-nss
-PLIST_SUBST+=		HAVE_SMIME="@comment "
 .endif
 
 PKGCONFIG_OVERRIDE=	evolution-plugin.pc.in

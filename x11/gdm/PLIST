@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.36 2007/12/16 22:19:43 drochner Exp $
-${DMX}bin/gdm-dmx-reconnect-proxy
+@comment $NetBSD: PLIST,v 1.37 2008/04/12 22:43:14 jlam Exp $
+${PLIST.dmx}bin/gdm-dmx-reconnect-proxy
 bin/gdmXnest
 bin/gdmXnestchooser
 bin/gdmdynamic
@@ -8,11 +8,11 @@ bin/gdmphotosetup
 bin/gdmthemetester
 lib/gtk-2.0/modules/libdwellmouselistener.la
 lib/gtk-2.0/modules/libkeymouselistener.la
-${PAM_MISC}libexec/gdmaskpass
+${PLIST.pam}libexec/gdmaskpass
 libexec/gdmchooser
 libexec/gdmgreeter
 libexec/gdmlogin
-${GDMOPEN}libexec/gdmopen
+${PLIST.gdmopen}libexec/gdmopen
 libexec/gdmtranslate
 man/man1/gdm.1
 sbin/gdm

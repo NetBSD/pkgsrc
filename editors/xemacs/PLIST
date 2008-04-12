@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/02/15 14:27:48 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/04/12 22:43:00 jlam Exp $
 bin/${DISTNAME}
 bin/ellcc
 bin/gnuattach
@@ -1040,7 +1040,7 @@ lib/${DISTNAME}/lisp/mule/arabic.elc
 lib/${DISTNAME}/lisp/mule/auto-autoloads.el${ELSUFX}
 lib/${DISTNAME}/lisp/mule/auto-autoloads.elc
 lib/${DISTNAME}/lisp/mule/canna-leim.el${ELSUFX}
-${FOR_MULE}lib/${DISTNAME}/lisp/mule/canna-leim.elc
+${PLIST.mule}lib/${DISTNAME}/lisp/mule/canna-leim.elc
 lib/${DISTNAME}/lisp/mule/chinese.el${ELSUFX}
 lib/${DISTNAME}/lisp/mule/chinese.elc
 lib/${DISTNAME}/lisp/mule/custom-load.el${ELSUFX}
@@ -1086,7 +1086,7 @@ lib/${DISTNAME}/lisp/mule/mule-misc.elc
 lib/${DISTNAME}/lisp/mule/mule-tty-init.el${ELSUFX}
 lib/${DISTNAME}/lisp/mule/mule-tty-init.elc
 lib/${DISTNAME}/lisp/mule/mule-x-init.el${ELSUFX}
-${X11ONLY}lib/${DISTNAME}/lisp/mule/mule-x-init.elc
+${PLIST.x11}lib/${DISTNAME}/lisp/mule/mule-x-init.elc
 lib/${DISTNAME}/lisp/mule/thai-xtis-chars.el${ELSUFX}
 lib/${DISTNAME}/lisp/mule/thai-xtis-chars.elc
 lib/${DISTNAME}/lisp/mule/thai-xtis.el${ELSUFX}

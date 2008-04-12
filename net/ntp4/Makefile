@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2008/01/24 11:55:42 is Exp $
+# $NetBSD: Makefile,v 1.54 2008/04/12 22:43:08 jlam Exp $
 #
 
 DISTNAME=	ntp-4.2.0
@@ -37,8 +37,7 @@ post-install:
 
 .include "../../mk/bsd.prefs.mk"
 
-TIMETRIM=	""
-NO_TIMETRIM=	"@comment "
+PLIST_VARS+=	ntptime timetrim
 
 .if ${OPSYS} == "NetBSD"
 #
@@ -55,14 +54,10 @@ LOWER_OPSYS_VERSUFFIX=	2
 # Don't pick up libwww's -lmd5, until buildlink can be fixed.
 #
 CONFIGURE_ENV+=	ac_cv_lib_md5_MD5Init=no
+PLIST.ntptime=		yes
 .elif ${OPSYS} == "IRIX"
-TIMETRIM=	"@comment "
-NO_TIMETRIM=	""
-.elif ${OPSYS} == "SunOS" && ${LOWER_OPSYS} == "solaris"
-TIMETRIM=      "@comment "
+PLIST.timetrim=		yes
 .endif
-
-PLIST_SUBST+=	TIMETRIM=${TIMETRIM} NO_TIMETRIM=${NO_TIMETRIM}
 
 .include "../../security/openssl/buildlink3.mk"
 

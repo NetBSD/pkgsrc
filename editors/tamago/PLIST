@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/08/18 14:30:52 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/04/12 22:43:00 jlam Exp $
 ${EMACS_LISPPREFIX}/egg/egg-cnv.el
 ${EMACS_LISPPREFIX}/egg/egg-cnv.elc
 ${EMACS_LISPPREFIX}/egg/egg-com.el
@@ -34,8 +34,8 @@ ${EMACS_LISPPREFIX}/egg/its.el
 ${EMACS_LISPPREFIX}/egg/its.elc
 ${EMACS_LISPPREFIX}/egg/its/ascii.el
 ${EMACS_LISPPREFIX}/egg/its/ascii.elc
-${HAVE_JISX0213}${EMACS_LISPPREFIX}/egg/its/aynu.el
-${HAVE_JISX0213}${EMACS_LISPPREFIX}/egg/its/aynu.elc
+${PLIST.jisx0213}${EMACS_LISPPREFIX}/egg/its/aynu.el
+${PLIST.jisx0213}${EMACS_LISPPREFIX}/egg/its/aynu.elc
 ${EMACS_LISPPREFIX}/egg/its/bixing.el
 ${EMACS_LISPPREFIX}/egg/its/bixing.elc
 ${EMACS_LISPPREFIX}/egg/its/erpin.el

@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.15 2007/09/18 18:58:08 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2008/04/12 22:42:59 jlam Exp $
 bin/gif2h5
 bin/h52gif
-${CXX}bin/h5c++
+${PLIST.cxx}bin/h5c++
 bin/h5cc
 bin/h5debug
 bin/h5diff
@@ -51,40 +51,40 @@ include/H5api_adpt.h
 include/H5pubconf.h
 include/H5public.h
 include/hdf5.h
-${CXX}include/H5AbstractDs.h
-${CXX}include/H5ArrayType.h
-${CXX}include/H5AtomType.h
-${CXX}include/H5Attribute.h
-${CXX}include/H5Classes.h
-${CXX}include/H5CommonFG.h
-${CXX}include/H5CompType.h
-${CXX}include/H5Cpp.h
-${CXX}include/H5CppDoc.h
-${CXX}include/H5DataSet.h
-${CXX}include/H5DataSpace.h
-${CXX}include/H5DataType.h
-${CXX}include/H5DcreatProp.h
-${CXX}include/H5DxferProp.h
-${CXX}include/H5EnumType.h
-${CXX}include/H5Exception.h
-${CXX}include/H5FaccProp.h
-${CXX}include/H5FcreatProp.h
-${CXX}include/H5File.h
-${CXX}include/H5FloatType.h
-${CXX}include/H5Group.h
-${CXX}include/H5IdComponent.h
-${CXX}include/H5Include.h
-${CXX}include/H5IntType.h
-${CXX}include/H5Library.h
-${CXX}include/H5Object.h
-${CXX}include/H5PredType.h
-${CXX}include/H5PropList.h
-${CXX}include/H5StrType.h
-${CXX}include/H5VarLenType.h
-${CXX}include/H5cxx_pubconf.h
+${PLIST.cxx}include/H5AbstractDs.h
+${PLIST.cxx}include/H5ArrayType.h
+${PLIST.cxx}include/H5AtomType.h
+${PLIST.cxx}include/H5Attribute.h
+${PLIST.cxx}include/H5Classes.h
+${PLIST.cxx}include/H5CommonFG.h
+${PLIST.cxx}include/H5CompType.h
+${PLIST.cxx}include/H5Cpp.h
+${PLIST.cxx}include/H5CppDoc.h
+${PLIST.cxx}include/H5DataSet.h
+${PLIST.cxx}include/H5DataSpace.h
+${PLIST.cxx}include/H5DataType.h
+${PLIST.cxx}include/H5DcreatProp.h
+${PLIST.cxx}include/H5DxferProp.h
+${PLIST.cxx}include/H5EnumType.h
+${PLIST.cxx}include/H5Exception.h
+${PLIST.cxx}include/H5FaccProp.h
+${PLIST.cxx}include/H5FcreatProp.h
+${PLIST.cxx}include/H5File.h
+${PLIST.cxx}include/H5FloatType.h
+${PLIST.cxx}include/H5Group.h
+${PLIST.cxx}include/H5IdComponent.h
+${PLIST.cxx}include/H5Include.h
+${PLIST.cxx}include/H5IntType.h
+${PLIST.cxx}include/H5Library.h
+${PLIST.cxx}include/H5Object.h
+${PLIST.cxx}include/H5PredType.h
+${PLIST.cxx}include/H5PropList.h
+${PLIST.cxx}include/H5StrType.h
+${PLIST.cxx}include/H5VarLenType.h
+${PLIST.cxx}include/H5cxx_pubconf.h
 lib/libhdf5.la
 lib/libhdf5.settings
-${CXX}lib/libhdf5_cpp.la
+${PLIST.cxx}lib/libhdf5_cpp.la
 lib/libhdf5_hl.la
 share/doc/hdf5/COPYING
 share/doc/hdf5/HISTORY.txt
@@ -708,15 +708,15 @@ share/examples/hdf5/c/h5_reference.c
 share/examples/hdf5/c/h5_select.c
 share/examples/hdf5/c/h5_write.c
 share/examples/hdf5/c/ph5example.c
-${CXX}share/examples/hdf5/c++/chunks.cpp
-${CXX}share/examples/hdf5/c++/compound.cpp
-${CXX}share/examples/hdf5/c++/create.cpp
-${CXX}share/examples/hdf5/c++/extend_ds.cpp
-${CXX}share/examples/hdf5/c++/h5group.cpp
-${CXX}share/examples/hdf5/c++/readdata.cpp
-${CXX}share/examples/hdf5/c++/strtype.cpp
-${CXX}share/examples/hdf5/c++/writedata.cpp
-${CXX}@dirrm share/examples/hdf5/c++
+${PLIST.cxx}share/examples/hdf5/c++/chunks.cpp
+${PLIST.cxx}share/examples/hdf5/c++/compound.cpp
+${PLIST.cxx}share/examples/hdf5/c++/create.cpp
+${PLIST.cxx}share/examples/hdf5/c++/extend_ds.cpp
+${PLIST.cxx}share/examples/hdf5/c++/h5group.cpp
+${PLIST.cxx}share/examples/hdf5/c++/readdata.cpp
+${PLIST.cxx}share/examples/hdf5/c++/strtype.cpp
+${PLIST.cxx}share/examples/hdf5/c++/writedata.cpp
+${PLIST.cxx}@dirrm share/examples/hdf5/c++
 @dirrm share/examples/hdf5/c
 @dirrm share/examples/hdf5
 @dirrm share/doc/hdf5/html/fortran

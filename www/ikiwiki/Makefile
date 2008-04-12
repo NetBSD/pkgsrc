@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/01/02 15:39:57 reed Exp $
+# $NetBSD: Makefile,v 1.11 2008/04/12 22:43:13 jlam Exp $
 #
 
 DISTNAME=	ikiwiki_2.15
@@ -47,13 +47,13 @@ DEPENDS+=	p5-PerlMagick-[0-9]*:../../graphics/p5-PerlMagick
 DEPENDS+=	subversion-base-[0-9]*:../../devel/subversion-base
 .endif
 
+PLIST_VARS+=	w3m
 .if !empty(PKG_OPTIONS:Mw3m)
 DEPENDS+=	w3m-[0-9]*:../../www/w3m
-PLIST_SUBST+=	W3M=""
+PLIST.w3m=	yes
 SUBST_SED.makefile+=	-e 's,/lib/w3m/cgi-bin,/libexec/w3m/cgi-bin,'
 INSTALLATION_DIRS+=	share/doc/ikiwiki/w3mmode
 .else
-PLIST_SUBST+=	W3M="@comment "
 SUBST_SED.makefile+=	-e 's,^\(.*install .*/lib/w3m/cgi-bin\),\#\1,'
 .endif
 

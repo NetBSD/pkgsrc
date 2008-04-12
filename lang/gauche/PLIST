@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/03/01 19:57:44 tnn Exp $
+@comment $NetBSD: PLIST,v 1.18 2008/04/12 22:43:02 jlam Exp $
 bin/gauche-cesconv
 bin/gauche-config
 bin/gauche-install
@@ -18,7 +18,7 @@ lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/gauche-install
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/gauche-package
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/gauche-parameter-lib.so
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/gauche-sequence-lib.so
-${USE_GDBM}lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/gdbm.so
+${PLIST.gdbm}lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/gdbm.so
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/gosh
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/libcharconv.so
 lib/gauche/${PKGVERSION}/${MACHINE_GNU_PLATFORM}/libgauche-uvector.so
@@ -103,7 +103,7 @@ share/gauche/${PKGVERSION}/lib/dbd/null.scm
 share/gauche/${PKGVERSION}/lib/dbi.scm
 share/gauche/${PKGVERSION}/lib/dbm.scm
 share/gauche/${PKGVERSION}/lib/dbm/fsdbm.scm
-${USE_GDBM}share/gauche/${PKGVERSION}/lib/dbm/gdbm.scm
+${PLIST.gdbm}share/gauche/${PKGVERSION}/lib/dbm/gdbm.scm
 share/gauche/${PKGVERSION}/lib/dbm/ndbm.scm
 share/gauche/${PKGVERSION}/lib/file/filter.scm
 share/gauche/${PKGVERSION}/lib/file/util.scm

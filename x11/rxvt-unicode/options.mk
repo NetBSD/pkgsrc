@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2007/11/22 11:59:06 obache Exp $
+# $NetBSD: options.mk,v 1.6 2008/04/12 22:43:15 jlam Exp $
 
 PKG_OPTIONS_VAR=        PKG_OPTIONS.rxvt-unicode
 PKG_SUPPORTED_OPTIONS=  perl unicode3 xft2 rxvt-term
@@ -10,14 +10,14 @@ PKG_SUGGESTED_OPTIONS=  perl unicode3 xft2
 CONFIGURE_ARGS+=	--with-term=rxvt
 .endif
 
+PLIST_VARS+=		perl
 .if !empty(PKG_OPTIONS:Mperl)
 CONFIGURE_ARGS+=	--enable-perl
-PLIST_SUBST+=		PERL=
+PLIST.perl=		yes
 .include "../../lang/perl5/buildlink3.mk"
 USE_TOOLS+=		perl
 .else
 CONFIGURE_ARGS+=	--disable-perl
-PLIST_SUBST+=		PERL='@comment '
 .endif
 
 # use 21 instead of 16 bits to represent unicode characters

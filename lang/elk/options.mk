@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2007/08/17 22:27:15 joerg Exp $
+# $NetBSD: options.mk,v 1.3 2008/04/12 22:43:02 jlam Exp $
 
 # Global and legacy options
 
@@ -8,28 +8,24 @@ PKG_SUGGESTED_OPTIONS=
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=		x11 xaw motif
+
 ###
 ### x11 support
 ###
 .if !empty(PKG_OPTIONS:Mxaw) || !empty(PKG_OPTIONS:Mmotif)
-PLIST_SUBST+= WITHX11=""
+PLIST.x11=		yes
 .  if !empty(PKG_OPTIONS:Mxaw)
-PLIST_SUBST+= WITHXAW=""
-ELK_AWK="yes"
+PLIST.xaw=		yes
+CONFIGURE_ENV+=		WITH_XAW="yes"
 .    include "../../mk/xaw.buildlink3.mk"
 .  else
-PLIST_SUBST+= WITHXAW="@comment "
-ELK_AWK="no"
+CONFIGURE_ENV+=		WITH_XAW="no"
 .  endif
 .  if !empty(PKG_OPTIONS:Mmotif)
 .  include "../../mk/motif.buildlink3.mk"
-PLIST_SUBST+= WITHMOTIF=""
-.  else
-PLIST_SUBST+= WITHMOTIF="@comment "
+PLIST.motif=		yes
 .  endif
 .else
 CONFIGURE_ARGS+=	--without-x
-PLIST_SUBST+= WITHMOTIF="@comment "
-PLIST_SUBST+= WITHX11="@comment "
-PLIST_SUBST+= WITHXAW="@comment "
 .endif

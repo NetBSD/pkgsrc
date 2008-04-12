@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2007/08/30 00:01:35 wiz Exp $
+@comment $NetBSD: PLIST,v 1.27 2008/04/12 22:42:57 jlam Exp $
 bin/amarok
 bin/amarok_daapserver.rb
 bin/amarok_libvisual
@@ -8,7 +8,7 @@ bin/amarokcollectionscanner
 lib/kde3/konqsidebar_universalamarok.la
 lib/kde3/libamarok_daap-mediadevice.la
 lib/kde3/libamarok_generic-mediadevice.la
-${IPOD}lib/kde3/libamarok_ipod-mediadevice.la
+${PLIST.ipod}lib/kde3/libamarok_ipod-mediadevice.la
 lib/kde3/libamarok_massstorage-device.la
 lib/kde3/libamarok_nfs-device.la
 lib/kde3/libamarok_smb-device.la
@@ -952,7 +952,7 @@ share/kde/config.kcfg/xinecfg.kcfg
 share/kde/config/amarokrc
 share/kde/services/amarok_daap-mediadevice.desktop
 share/kde/services/amarok_generic-mediadevice.desktop
-${IPOD}share/kde/services/amarok_ipod-mediadevice.desktop
+${PLIST.ipod}share/kde/services/amarok_ipod-mediadevice.desktop
 share/kde/services/amarok_massstorage-device.desktop
 share/kde/services/amarok_nfs-device.desktop
 share/kde/services/amarok_smb-device.desktop

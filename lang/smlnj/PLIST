@@ -1,16 +1,16 @@
-@comment $NetBSD: PLIST,v 1.4 2004/06/06 04:38:29 snj Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/04/12 22:43:03 jlam Exp $
 bin/ml-build
 bin/ml-burg
 bin/ml-lex
 bin/ml-makedepend
-${NLFFI}bin/ml-nlffigen
+${PLIST.nlffi}bin/ml-nlffigen
 bin/ml-yacc
 bin/nowhere
 bin/sml
 lib/smlnj/bin/.arch-n-opsys
 lib/smlnj/bin/.heap/ml-burg.${BOX}-${OS}
 lib/smlnj/bin/.heap/ml-lex.${BOX}-${OS}
-${NLFFI}lib/smlnj/bin/.heap/ml-nlffigen.${BOX}-${OS}
+${PLIST.nlffi}lib/smlnj/bin/.heap/ml-nlffigen.${BOX}-${OS}
 lib/smlnj/bin/.heap/ml-yacc.${BOX}-${OS}
 lib/smlnj/bin/.heap/nowhere.${BOX}-${OS}
 lib/smlnj/bin/.heap/sml.${BOX}-${OS}
@@ -21,7 +21,7 @@ lib/smlnj/bin/ml-build
 lib/smlnj/bin/ml-burg
 lib/smlnj/bin/ml-lex
 lib/smlnj/bin/ml-makedepend
-${NLFFI}lib/smlnj/bin/ml-nlffigen
+${PLIST.nlffi}lib/smlnj/bin/ml-nlffigen
 lib/smlnj/bin/ml-yacc
 lib/smlnj/bin/nowhere
 lib/smlnj/bin/sml
@@ -38,9 +38,9 @@ lib/smlnj/lib/SMLNJ-MLRISC/CM/${BOX}-unix/SPARC.cm
 lib/smlnj/lib/SMLNJ-MLRISC/CM/${BOX}-unix/Visual.cm
 lib/smlnj/lib/basis.cm/CM/${BOX}-unix/basis.cm
 lib/smlnj/lib/burg-ext.cm/CM/${BOX}-unix/burg-ext.cm
-${NLFFI}lib/smlnj/lib/c/CM/${BOX}-unix/c.cm
-${NLFFI}lib/smlnj/lib/c/internals/CM/${BOX}-unix/c-int.cm
-${NLFFI}lib/smlnj/lib/c/memory/CM/${BOX}-unix/memory.cm
+${PLIST.nlffi}lib/smlnj/lib/c/CM/${BOX}-unix/c.cm
+${PLIST.nlffi}lib/smlnj/lib/c/internals/CM/${BOX}-unix/c-int.cm
+${PLIST.nlffi}lib/smlnj/lib/c/memory/CM/${BOX}-unix/memory.cm
 lib/smlnj/lib/ckit-lib.cm/CM/${BOX}-unix/ckit-lib.cm
 lib/smlnj/lib/cml-lib/CM/${BOX}-unix/smlnj-lib.cm
 lib/smlnj/lib/cml-lib/CM/${BOX}-unix/trace-cml.cm
@@ -239,15 +239,15 @@ lib/smlnj/lib/unix-lib.cm/CM/${BOX}-unix/unix-lib.cm
 @dirrm lib/smlnj/lib/ckit-lib.cm/CM/${BOX}-unix
 @dirrm lib/smlnj/lib/ckit-lib.cm/CM
 @dirrm lib/smlnj/lib/ckit-lib.cm
-${NLFFI}@dirrm lib/smlnj/lib/c/memory/CM/${BOX}-unix
-${NLFFI}@dirrm lib/smlnj/lib/c/memory/CM
-${NLFFI}@dirrm lib/smlnj/lib/c/memory
-${NLFFI}@dirrm lib/smlnj/lib/c/internals/CM/${BOX}-unix
-${NLFFI}@dirrm lib/smlnj/lib/c/internals/CM
-${NLFFI}@dirrm lib/smlnj/lib/c/internals
-${NLFFI}@dirrm lib/smlnj/lib/c/CM/${BOX}-unix
-${NLFFI}@dirrm lib/smlnj/lib/c/CM
-${NLFFI}@dirrm lib/smlnj/lib/c
+${PLIST.nlffi}@dirrm lib/smlnj/lib/c/memory/CM/${BOX}-unix
+${PLIST.nlffi}@dirrm lib/smlnj/lib/c/memory/CM
+${PLIST.nlffi}@dirrm lib/smlnj/lib/c/memory
+${PLIST.nlffi}@dirrm lib/smlnj/lib/c/internals/CM/${BOX}-unix
+${PLIST.nlffi}@dirrm lib/smlnj/lib/c/internals/CM
+${PLIST.nlffi}@dirrm lib/smlnj/lib/c/internals
+${PLIST.nlffi}@dirrm lib/smlnj/lib/c/CM/${BOX}-unix
+${PLIST.nlffi}@dirrm lib/smlnj/lib/c/CM
+${PLIST.nlffi}@dirrm lib/smlnj/lib/c
 @dirrm lib/smlnj/lib/burg-ext.cm/CM/${BOX}-unix
 @dirrm lib/smlnj/lib/burg-ext.cm/CM
 @dirrm lib/smlnj/lib/burg-ext.cm

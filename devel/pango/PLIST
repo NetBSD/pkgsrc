@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.37 2008/04/10 12:14:43 drochner Exp $
+@comment $NetBSD: PLIST,v 1.38 2008/04/12 22:43:00 jlam Exp $
 bin/pango-querymodules
-${X11}bin/pango-view
+${PLIST.x11}bin/pango-view
 include/pango-1.0/pango/pango-attributes.h
 include/pango-1.0/pango/pango-break.h
 include/pango-1.0/pango/pango-context.h
@@ -26,25 +26,25 @@ include/pango-1.0/pango/pango-tabs.h
 include/pango-1.0/pango/pango-types.h
 include/pango-1.0/pango/pango-utils.h
 include/pango-1.0/pango/pango.h
-${CARBON}include/pango-1.0/pango/pangoatsui.h
+${PLIST.carbon}include/pango-1.0/pango/pangoatsui.h
 include/pango-1.0/pango/pangocairo.h
 include/pango-1.0/pango/pangofc-decoder.h
 include/pango-1.0/pango/pangofc-font.h
 include/pango-1.0/pango/pangofc-fontmap.h
 include/pango-1.0/pango/pangoft2.h
-${X11}include/pango-1.0/pango/pangox.h
-${X11}include/pango-1.0/pango/pangoxft-render.h
-${X11}include/pango-1.0/pango/pangoxft.h
+${PLIST.x11}include/pango-1.0/pango/pangox.h
+${PLIST.x11}include/pango-1.0/pango/pangoxft-render.h
+${PLIST.x11}include/pango-1.0/pango/pangoxft.h
 lib/libpango-1.0.la
 lib/libpangocairo-1.0.la
 lib/libpangoft2-1.0.la
-${X11}lib/libpangox-1.0.la
-${X11}lib/libpangoxft-1.0.la
+${PLIST.x11}lib/libpangox-1.0.la
+${PLIST.x11}lib/libpangoxft-1.0.la
 lib/pango/1.6.0/modules/pango-arabic-fc.la
 lib/pango/1.6.0/modules/pango-arabic-lang.la
-${CARBON}lib/pango/1.6.0/modules/pango-basic-atsui.la
+${PLIST.carbon}lib/pango/1.6.0/modules/pango-basic-atsui.la
 lib/pango/1.6.0/modules/pango-basic-fc.la
-${X11}lib/pango/1.6.0/modules/pango-basic-x.la
+${PLIST.x11}lib/pango/1.6.0/modules/pango-basic-x.la
 lib/pango/1.6.0/modules/pango-hangul-fc.la
 lib/pango/1.6.0/modules/pango-hebrew-fc.la
 lib/pango/1.6.0/modules/pango-indic-fc.la
@@ -56,9 +56,9 @@ lib/pango/1.6.0/modules/pango-tibetan-fc.la
 lib/pkgconfig/pango.pc
 lib/pkgconfig/pangocairo.pc
 lib/pkgconfig/pangoft2.pc
-${X11}lib/pkgconfig/pangox.pc
-${X11}lib/pkgconfig/pangoxft.pc
-${X11}libdata/pango/pangox.aliases
+${PLIST.x11}lib/pkgconfig/pangox.pc
+${PLIST.x11}lib/pkgconfig/pangoxft.pc
+${PLIST.x11}libdata/pango/pangox.aliases
 man/man1/pango-querymodules.1
 share/gtk-doc/html/pango/PangoEngineLang.html
 share/gtk-doc/html/pango/PangoEngineShape.html

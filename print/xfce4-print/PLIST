@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.18 2007/12/07 19:43:22 martti Exp $
-${SOLARIS}lib/xfce4/xfprint-plugins/bsdlpr_plugin.la
+@comment $NetBSD: PLIST,v 1.19 2008/04/12 22:43:09 jlam Exp $
+${PLIST.bsdlpr}lib/xfce4/xfprint-plugins/bsdlpr_plugin.la
 bin/xfprint4
 bin/xfprint4-manager
 include/xfce4/libxfprint/common.h
@@ -12,7 +12,7 @@ include/xfce4/libxfprint/printing-system.h
 lib/libxfprint.la
 lib/pkgconfig/xfprint-1.0.pc
 lib/xfce4/mcs-plugins/xfprint_plugin.la
-${CUPS}lib/xfce4/xfprint-plugins/cups_plugin.la
+${PLIST.cups}lib/xfce4/xfprint-plugins/cups_plugin.la
 share/applications/xfce-xfprint-settings.desktop
 share/applications/xfprint-manager.desktop
 share/applications/xfprint.desktop

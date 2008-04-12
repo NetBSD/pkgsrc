@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.10 2007/12/06 10:30:53 martti Exp $
+@comment $NetBSD: PLIST.common,v 1.11 2008/04/12 22:42:58 jlam Exp $
 bin/wmxmms
 bin/xmms
 bin/xmms-config
@@ -16,13 +16,13 @@ lib/xmms/Effect/libstereo.la
 lib/xmms/Effect/libvoice.la
 lib/xmms/General/libir.la
 lib/xmms/General/libsong_change.la
-${CDAUDIO}lib/xmms/Input/libcdaudio.la
+${PLIST.cdaudio}lib/xmms/Input/libcdaudio.la
 lib/xmms/Input/libmikmod.la
 lib/xmms/Input/libmpg123.la
 lib/xmms/Input/libtonegen.la
 lib/xmms/Input/libvorbis.la
 lib/xmms/Input/libwav.la
-${OSS}lib/xmms/Output/libOSS.la
+${PLIST.oss}lib/xmms/Output/libOSS.la
 lib/xmms/Output/libdisk_writer.la
 lib/xmms/Visualization/libbscope.la
 lib/xmms/Visualization/libogl_spectrum.la

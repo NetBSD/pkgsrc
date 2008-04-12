@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.6 2007/12/01 13:05:36 tonio Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/04/12 22:43:02 jlam Exp $
 bin/coq-interface
 bin/coq-tex
 bin/coq_makefile
 bin/coqc
 bin/coqdep
 bin/coqdoc
-${WITH_IDE}bin/coqide
-${WITH_IDE}bin/coqide.byte
+${PLIST.coqide}bin/coqide
+${PLIST.coqide}bin/coqide.byte
 bin/coqmktop
 bin/coqtop
 bin/coqtop.byte

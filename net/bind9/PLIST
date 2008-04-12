@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.20 2007/04/15 18:56:49 cjs Exp $
+@comment $NetBSD: PLIST,v 1.21 2008/04/12 22:43:08 jlam Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
 bin/nslookup
 bin/nsupdate
-${IPV6H}include/isc/ipv6.h
+${PLIST.inet6}include/isc/ipv6.h
 include/bind9/check.h
 include/bind9/getaddresses.h
 include/bind9/version.h

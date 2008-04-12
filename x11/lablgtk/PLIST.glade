@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.glade,v 1.1 2007/09/21 13:00:51 wiz Exp $
+@comment $NetBSD: PLIST.glade,v 1.2 2008/04/12 22:43:14 jlam Exp $
 bin/lablgladecc2
 lib/ocaml/lablgtk2/glade.cmi
 lib/ocaml/lablgtk2/glade.cmx
@@ -7,4 +7,4 @@ lib/ocaml/lablgtk2/lablglade.a
 lib/ocaml/lablgtk2/lablglade.cma
 lib/ocaml/lablgtk2/lablglade.cmxa
 lib/ocaml/lablgtk2/liblablglade2.a
-${HAVE_STUBS}lib/ocaml/stublibs/dlllablglade2.so
+${PLIST.stubs}lib/ocaml/stublibs/dlllablglade2.so

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.37 2007/12/24 01:19:47 minskim Exp $
+# $NetBSD: Makefile.common,v 1.38 2008/04/12 22:43:02 jlam Exp $
 #
 
 DISTNAME=	Python-2.3.5
@@ -59,29 +59,26 @@ IS_64BIT_PLATFORM?=	no
 .endif
 
 # the dl module isn't built for 64 bit archs and Darwin
-.if !empty(IS_64BIT_PLATFORM:M[yY][eE][sS]) || \
-    (${OPSYS} == "Darwin") || (${OPSYS} == "Interix")
-PLIST_SUBST+=	DLMODULE="@comment "
-.else
-PLIST_SUBST+=	DLMODULE=
+PLIST_VARS+=		dl
+.if empty(IS_64BIT_PLATFORM:M[yY][eE][sS]) && \
+    (${OPSYS} != "Darwin") && (${OPSYS} != "Interix")
+PLIST.dl=		yes
 .endif
 
 # setup.py causes some modules to be built if the platform is *not* 64bit.
+PLIST_VARS+=		extra-so
 .if !empty(IS_64BIT_PLATFORM:M[nN][oO])
-PLIST_SUBST+=	EXTRA_SO=
-.else
-PLIST_SUBST+=	EXTRA_SO="@comment "
+PLIST.extra-so=		yes
 .endif
 
 # ossaudiodev is only available on x86 for the following platforms
+PLIST_VARS+=		oss
 .if (${MACHINE_ARCH} == "i386") && \
     (${PY_PLATNAME} == "linux2" || ${PY_PLATNAME} == "freebsd4" || \
      ${PY_PLATNAME} == "freebsd5")
-PLIST_SUBST+=	OSSAUDIODEV=
+PLIST.oss=		yes
 .elif (${MACHINE_ARCH} == "x86_64") && (${PY_PLATNAME} == "linux2")
-PLIST_SUBST+=	OSSAUDIODEV=
-.else
-PLIST_SUBST+=	OSSAUDIODEV="@comment "
+PLIST.oss=		yes
 .endif
 
 # Make sure python modules can link correctly
@@ -89,27 +86,23 @@ PLIST_SUBST+=	OSSAUDIODEV="@comment "
 INSTALL_UNSTRIPPED=	yes
 .endif
 
+PLIST_VARS+=	bsddb dll nis
 .if ${OPSYS} == "IRIX"
-.  if ${ABI} == "64"
-PLIST_SUBST+=	NISMODULE="@comment "
-.  else
-PLIST_SUBST+=	NISMODULE=
+.  if ${ABI} != "64"
+PLIST.nis=	yes
 .  endif
-PLIST_SUBST+=	BSDDBMODULE="@comment "
-PLIST_SUBST+=	NOSHLIB="@comment "
 .else
 .  include "../../mk/bdb.buildlink3.mk"
 MAKE_ENV+=	PY_BDB_TYPE=${BDB_TYPE:Q}
 MAKE_ENV+=	PY_BDB_INCDIRS=${BDBBASE}/${BUILDLINK_INCDIRS.${BDB_TYPE}}
 MAKE_ENV+=	PY_BDB_LIBDIRS=${BDBBASE}/lib
 MAKE_ENV+=	PY_BDB_LIBS=${BDB_LIBS:Q}
-PLIST_SUBST+=	BSDDBMODULE=
-PLIST_SUBST+=	NOSHLIB=
+PLIST.bsddb=	yes
+PLIST.dll=	yes
 .  if ${OPSYS} == "Interix"
-PLIST_SUBST+=	NISMODULE="@comment "
 CONFIGURE_ENV+=	ac_cv_header_stropts_h=no
 .  else
-PLIST_SUBST+=	NISMODULE=
+PLIST.nis=	yes
 .  endif
 .endif
 

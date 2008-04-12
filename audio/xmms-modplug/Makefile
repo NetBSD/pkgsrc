@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/02/22 19:26:08 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/04/12 22:42:58 jlam Exp $
 #
 
 DISTNAME=		modplugxmms-2.05
@@ -21,6 +21,7 @@ USE_TOOLS+=		pkg-config
 
 CFLAGS+=		-DDEVICE_NAME="\"${DEVOSSSOUND}\""
 USE_LANGUAGES=		c c++
+PLIST_VARS=		modplugplay
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -31,10 +32,8 @@ SUBST_MESSAGE.mpplay=	Skipping modplugplay
 SUBST_STAGE.mpplay=	pre-build
 SUBST_FILES.mpplay=	Makefile
 SUBST_SED.mpplay=	-e 's,^\(SUBDIRS = modplugxmms glade\) modplugplay,\1,'
-
-PLIST_SUBST+=		NOTFOROSX="@comment "
 .else
-PLIST_SUBST+=		NOTFOROSX=""
+PLIST.modplugplay=	yes
 .endif
 
 .include "../../audio/libmodplug/buildlink3.mk"

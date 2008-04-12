@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/01/05 19:35:46 rillig Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/04/12 22:43:07 jlam Exp $
 bin/avi2raw
 bin/avidump
 bin/h264_parse
@@ -54,7 +54,7 @@ lib/libmp4.la
 lib/libmp4av.la
 lib/libmp4util.la
 lib/libmp4v2.la
-${MPEG4IPSDL}lib/libmpeg4ipSDL.la
+${PLIST.mpeg4ipSDL}lib/libmpeg4ipSDL.la
 lib/libmpeg4ip_celp.la
 lib/libmpeg4ip_celpbs.la
 lib/libmpeg4ip_faad.la

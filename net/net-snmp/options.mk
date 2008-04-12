@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2007/11/20 07:51:35 dsainty Exp $
+# $NetBSD: options.mk,v 1.7 2008/04/12 22:43:08 jlam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.net-snmp
 PKG_SUPPORTED_OPTIONS=		ssl
@@ -12,12 +12,12 @@ PKG_SUPPORTED_OPTIONS+=	inet6
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=		inet6
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
-PLIST_SUBST+=		IPV6H=
+PLIST.inet6=		yes
 .else
 CONFIGURE_ARGS+=	--disable-ipv6
-PLIST_SUBST+=		IPV6H="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mssl)

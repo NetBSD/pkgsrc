@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/03/11 01:26:08 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/04/12 22:43:02 jlam Exp $
 ${EMACS_INFOPREFIX}/skk.info
 ${FOR_emacs20}${EMACS_LISPPREFIX}/skk/ccc.el
 ${FOR_emacs21}${EMACS_LISPPREFIX}/skk/ccc.el
@@ -75,8 +75,8 @@ ${EMACS_LISPPREFIX}/skk/skk-leim.el
 ${EMACS_LISPPREFIX}/skk/skk-leim.elc
 ${EMACS_LISPPREFIX}/skk/skk-look.el
 ${EMACS_LISPPREFIX}/skk/skk-look.elc
-${FOR_LOOKUP}${EMACS_LISPPREFIX}/skk/skk-lookup.el
-${FOR_LOOKUP}${EMACS_LISPPREFIX}/skk/skk-lookup.elc
+${PLIST.lookup}${EMACS_LISPPREFIX}/skk/skk-lookup.el
+${PLIST.lookup}${EMACS_LISPPREFIX}/skk/skk-lookup.elc
 ${EMACS_LISPPREFIX}/skk/skk-macs.el
 ${EMACS_LISPPREFIX}/skk/skk-macs.elc
 ${EMACS_LISPPREFIX}/skk/skk-num.el

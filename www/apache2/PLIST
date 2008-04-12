@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.35 2007/09/07 23:11:40 tron Exp $
+@comment $NetBSD: PLIST,v 1.36 2008/04/12 22:43:13 jlam Exp $
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
 include/httpd/ap_config_auto.h
@@ -9,7 +9,7 @@ include/httpd/ap_mpm.h
 include/httpd/ap_provider.h
 include/httpd/ap_regkey.h
 include/httpd/ap_release.h
-${MPM_COMMENT.worker}include/httpd/fdqueue.h
+${PLIST.mpm-worker}include/httpd/fdqueue.h
 include/httpd/http_config.h
 include/httpd/http_connection.h
 include/httpd/http_core.h
@@ -33,7 +33,7 @@ include/httpd/mpm_default.h
 include/httpd/os.h
 include/httpd/pcre.h
 include/httpd/pcreposix.h
-${MPM_COMMENT.worker}include/httpd/pod.h
+${PLIST.mpm-worker}include/httpd/pod.h
 include/httpd/rfc1413.h
 include/httpd/scoreboard.h
 include/httpd/ssl_expr.h
@@ -79,7 +79,7 @@ sbin/httxt2dbm
 sbin/logresolve
 sbin/mkcert
 sbin/rotatelogs
-${SUEXEC_COMMENT}sbin/suexec
+${PLIST.suexec}sbin/suexec
 share/examples/httpd/highperformance-std.conf
 share/examples/httpd/httpd-std.conf
 share/examples/httpd/magic

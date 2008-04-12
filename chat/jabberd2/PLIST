@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/02/20 14:33:04 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/04/12 22:42:58 jlam Exp $
 bin/c2s
 bin/jabberd
 bin/migrate.pl
@@ -8,12 +8,12 @@ bin/router
 bin/s2s
 bin/sm
 lib/jabberd/authreg_anon.la
-${DB_OPT}lib/jabberd/authreg_db.la
-${LDAP_OPT}lib/jabberd/authreg_ldap.la
-${MYSQL_OPT}lib/jabberd/authreg_mysql.la
-${PAM_OPT}lib/jabberd/authreg_pam.la
-${PGSQL_OPT}lib/jabberd/authreg_pgsql.la
-${SQLITE_OPT}lib/jabberd/authreg_sqlite.la
+${PLIST.db}lib/jabberd/authreg_db.la
+${PLIST.ldap}lib/jabberd/authreg_ldap.la
+${PLIST.mysql}lib/jabberd/authreg_mysql.la
+${PLIST.pam}lib/jabberd/authreg_pam.la
+${PLIST.pgsql}lib/jabberd/authreg_pgsql.la
+${PLIST.sqlite}lib/jabberd/authreg_sqlite.la
 lib/jabberd/authreg_pipe.la
 lib/jabberd/mod_active.la
 lib/jabberd/mod_amp.la
@@ -40,10 +40,10 @@ lib/jabberd/mod_template-roster.la
 lib/jabberd/mod_vacation.la
 lib/jabberd/mod_validate.la
 lib/jabberd/storage_fs.la
-${DB_OPT}lib/jabberd/storage_db.la
-${MYSQL_OPT}lib/jabberd/storage_mysql.la
-${PGSQL_OPT}lib/jabberd/storage_pgsql.la
-${SQLITE_OPT}lib/jabberd/storage_sqlite.la
+${PLIST.db}lib/jabberd/storage_db.la
+${PLIST.mysql}lib/jabberd/storage_mysql.la
+${PLIST.pgsql}lib/jabberd/storage_pgsql.la
+${PLIST.sqlite}lib/jabberd/storage_sqlite.la
 man/man8/c2s.8
 man/man8/jabberd.8
 man/man8/resolver.8

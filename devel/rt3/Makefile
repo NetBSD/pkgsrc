@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2008/03/24 21:55:36 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2008/04/12 22:43:00 jlam Exp $
 
 DISTNAME=		rt-3.6.6
 PKGREVISION=		2
@@ -70,12 +70,12 @@ DEPENDS+=	p5-Apache-DBI>=0.92:../../databases/p5-Apache-DBI
 .elif !empty(PKG_OPTIONS:Mfastcgi)
 DEPENDS+=	p5-FCGI>=0.67:../../www/p5-FCGI
 .endif
+PLIST_VARS+=	speedycgi
 .if !empty(PKG_OPTIONS:Mspeedycgi)
 DEPENDS+=	SpeedyCGI-[0-9]*:../../www/SpeedyCGI
-PLIST_SUBST+=	IF_SPEEDYCGI=""
+PLIST.speedycgi=yes
 .else
 MAKE_FLAGS+=	RT_SPEEDYCGI_HANDLER=""
-PLIST_SUBST+=	IF_SPEEDYCGI="@comment "
 
 .PHONY: rm-speedycgi
 post-install: rm-speedycgi

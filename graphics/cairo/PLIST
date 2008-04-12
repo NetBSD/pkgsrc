@@ -1,27 +1,27 @@
-@comment $NetBSD: PLIST,v 1.17 2007/06/15 17:47:59 drochner Exp $
-${CARBON}include/cairo/cairo-atsui.h
+@comment $NetBSD: PLIST,v 1.18 2008/04/12 22:43:01 jlam Exp $
+${PLIST.carbon}include/cairo/cairo-atsui.h
 include/cairo/cairo-deprecated.h
 include/cairo/cairo-features.h
 include/cairo/cairo-ft.h
 include/cairo/cairo-glitz.h
 include/cairo/cairo-pdf.h
 include/cairo/cairo-ps.h
-${CARBON}include/cairo/cairo-quartz.h
+${PLIST.carbon}include/cairo/cairo-quartz.h
 include/cairo/cairo-svg.h
-${X11}include/cairo/cairo-xlib-xrender.h
-${X11}include/cairo/cairo-xlib.h
+${PLIST.x11}include/cairo/cairo-xlib-xrender.h
+${PLIST.x11}include/cairo/cairo-xlib.h
 include/cairo/cairo.h
 lib/libcairo.la
-${CARBON}lib/pkgconfig/cairo-atsui.pc
+${PLIST.carbon}lib/pkgconfig/cairo-atsui.pc
 lib/pkgconfig/cairo-ft.pc
 lib/pkgconfig/cairo-glitz.pc
 lib/pkgconfig/cairo-pdf.pc
 lib/pkgconfig/cairo-png.pc
 lib/pkgconfig/cairo-ps.pc
-${CARBON}lib/pkgconfig/cairo-quartz.pc
+${PLIST.carbon}lib/pkgconfig/cairo-quartz.pc
 lib/pkgconfig/cairo-svg.pc
-${X11}lib/pkgconfig/cairo-xlib-xrender.pc
-${X11}lib/pkgconfig/cairo-xlib.pc
+${PLIST.x11}lib/pkgconfig/cairo-xlib-xrender.pc
+${PLIST.x11}lib/pkgconfig/cairo-xlib.pc
 lib/pkgconfig/cairo.pc
 share/gtk-doc/html/cairo/Drawing.html
 share/gtk-doc/html/cairo/Fonts.html

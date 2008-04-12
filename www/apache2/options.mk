@@ -1,10 +1,11 @@
-# $NetBSD: options.mk,v 1.7 2007/07/04 20:55:03 jlam Exp $
+# $NetBSD: options.mk,v 1.8 2008/04/12 22:43:13 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.apache
 PKG_SUPPORTED_OPTIONS=	suexec
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=		suexec
 .if !empty(PKG_OPTIONS:Msuexec)
 PKG_USERS_VARS+=	APACHE_USER
 BUILD_DEFS+=		VARBASE APACHE_SUEXEC_PATH
@@ -23,7 +24,5 @@ APACHE_SUEXEC_CONFIGURE_ARGS+=						\
 APACHE_MODULES+=	suexec
 CONFIGURE_ARGS+=	${APACHE_SUEXEC_CONFIGURE_ARGS:M--with-suexec-*}
 BUILD_DEFS+=		APACHE_SUEXEC_CONFIGURE_ARGS
-PLIST_SUBST+=		SUEXEC_COMMENT=
-.else
-PLIST_SUBST+=		SUEXEC_COMMENT="@comment "
+PLIST.suexec=		yes
 .endif

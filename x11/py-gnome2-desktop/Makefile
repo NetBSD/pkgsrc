@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/03/06 14:53:57 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2008/04/12 22:43:15 jlam Exp $
 #
 
 DISTNAME=	gnome-python-desktop-2.20.0
@@ -24,7 +24,7 @@ PKGCONFIG_OVERRIDE+=	gnome-python-desktop-2.0.pc.in
 PYTHON_VERSIONS_ACCEPTED=	24
 
 # XXX not yet, needs hal
-PLIST_SUBST+=	NAUTILUSBURN="@comment "
+PLIST_VARS+=	nautilusburn
 #.include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
 
 .include "../../graphics/py-cairo/buildlink3.mk"

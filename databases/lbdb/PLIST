@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2005/11/08 01:32:56 tv Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/04/12 22:42:59 jlam Exp $
 bin/lbdb-fetchaddr
 bin/lbdb_dotlock
 bin/lbdbq
@@ -11,8 +11,8 @@ libexec/lbdb/m_bbdb
 libexec/lbdb/m_fido
 libexec/lbdb/m_finger
 libexec/lbdb/m_gnomecard
-${WITHGPG}libexec/lbdb/m_gpg
-${WITHABOOK}libexec/lbdb/m_abook
+${PLIST.gnupg}libexec/lbdb/m_gpg
+${PLIST.abook}libexec/lbdb/m_abook
 libexec/lbdb/m_inmail
 libexec/lbdb/m_ldap
 libexec/lbdb/m_muttalias
@@ -20,15 +20,15 @@ libexec/lbdb/m_palm
 libexec/lbdb/m_passwd
 libexec/lbdb/m_pine
 libexec/lbdb/m_wanderlust
-${WITHYP}libexec/lbdb/m_yppasswd
+${PLIST.yp}libexec/lbdb/m_yppasswd
 libexec/lbdb/munge
 libexec/lbdb/munge-keeporder
 libexec/lbdb/mutt_ldap_query
 libexec/lbdb/palm_lsaddr
 libexec/lbdb/qpto8bit
 libexec/lbdb/tac
-${OSXADDRESSBOOK}libexec/lbdb/ABQuery
-${OSXADDRESSBOOK}libexec/lbdb/m_osx_addressbook
+${PLIST.osx-addressbook}libexec/lbdb/ABQuery
+${PLIST.osx-addressbook}libexec/lbdb/m_osx_addressbook
 man/man1/lbdb-fetchaddr.1
 man/man1/lbdb_dotlock.1
 man/man1/lbdbq.1

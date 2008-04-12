@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/04/08 01:44:47 bjs Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/12 22:42:58 jlam Exp $
 #
 
 DISTNAME=	jack-audio-connection-kit-${JACK_VERSION}
@@ -50,28 +50,29 @@ CONFIGURE_ARGS+=	--with-default-tmpdir=/dev/shm
 CONFIGURE_ARGS+=	--with-default-tmpdir=${JACKD_DEFAULT_TMPDIR:Q}
 .endif
 
+PLIST_VARS=		oss sunaudio
+
 ###
 ### XXX The sun driver is buggy on NetBSD right now.  I hope to remedy
 ###	this shortly.
 ###
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD" || ${OPSYS} == "Solaris"
 CONFIGURE_ARGS+=	--enable-sun
-PLIST_SUBST+=		SUN=""
+PLIST.sunaudio=		yes
 .else
 CONFIGURE_ARGS+=	--disable-sun
-PLIST_SUBST+=		SUN="@comment "
 .endif
 
 .include "../../mk/oss.buildlink3.mk"
 
 .if ${OSS_TYPE} != "none"
 CONFIGURE_ARGS+= 	--enable-oss
+PLIST.oss=		yes
 PLIST_SUBST+=		OSS=""
 MAKE_ENV+=		LIBOSSAUDIO=${LIBOSSAUDIO:Q}
 CFLAGS+=		-DDEVOSSAUDIO=\"${DEVOSSAUDIO:U/dev/dsp}\"
 .else
 CONFIGURE_ARGS+= 	--disable-oss
-PLIST_SUBST+=	 	OSS="@comment "
 .endif
 
 

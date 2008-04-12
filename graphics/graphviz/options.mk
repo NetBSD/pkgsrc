@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2008/03/11 15:46:57 joerg Exp $
+# $NetBSD: options.mk,v 1.3 2008/04/12 22:43:01 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.graphviz
 PKG_SUPPORTED_OPTIONS=	guile lua ocaml swig tcl gtk
@@ -6,21 +6,21 @@ PKG_SUGGESTED_OPTIONS=	lua swig tcl
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=		guile gtk lua tcl
+
 .if !empty(PKG_OPTIONS:Mguile)
 .include "../../lang/guile/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-guile
-PLIST_SUBST+=		GUILE=""
+PLIST.guile=		yes
 .else
 CONFIGURE_ARGS+=	--disable-guile
-PLIST_SUBST+=		GUILE="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mlua)
 .include "../../lang/lua/buildlink3.mk"
-PLIST_SUBST+=		LUA=
+PLIST.lua=		yes
 .else
 CONFIGURE_ARGS+=	--disable-lua
-PLIST_SUBST+=		LUA="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mocaml)
@@ -39,17 +39,15 @@ CONFIGURE_ARGS+=	--disable-swig
 .include "../../x11/tk/buildlink3.mk"
 CONFIGURE_ENV+=		TCLCONFIG=${TCLCONFIG_SH:Q}
 CONFIGURE_ENV+=		TKCONFIG=${TKCONFIG_SH:Q}
-PLIST_SUBST+=		TCL=
+PLIST.tcl=		yes
 .else
 CONFIGURE_ARGS+=	--disable-tcl
-PLIST_SUBST+=		TCL="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk)
 .include "../../x11/gtk2/buildlink3.mk"
-PLIST_SUBST+=		GTK=
+PLIST.gtk=		yes
 .else
 CONFIGURE_ARGS+=	--without-gdk-pixbuf
 CONFIGURE_ARGS+=	--without-gtk
-PLIST_SUBST+=		GTK="@comment "
 .endif

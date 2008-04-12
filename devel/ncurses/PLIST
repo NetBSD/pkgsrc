@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/01/23 22:55:32 wiz Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/04/12 22:43:00 jlam Exp $
 bin/captoinfo
 bin/clear
 bin/infocmp
@@ -2417,20 +2417,20 @@ ${TERMINFODIR}/s/scanset
 ${TERMINFODIR}/s/scoansi
 ${TERMINFODIR}/s/scoansi-new
 ${TERMINFODIR}/s/scoansi-old
-${NOT_SUNOS}${TERMINFODIR}/s/screen
-${NOT_SUNOS}${TERMINFODIR}/s/screen-16color
-${NOT_SUNOS}${TERMINFODIR}/s/screen-16color-bce
-${NOT_SUNOS}${TERMINFODIR}/s/screen-16color-bce-s
-${NOT_SUNOS}${TERMINFODIR}/s/screen-16color-s
-${NOT_SUNOS}${TERMINFODIR}/s/screen-256color
-${NOT_SUNOS}${TERMINFODIR}/s/screen-256color-bce
-${NOT_SUNOS}${TERMINFODIR}/s/screen-256color-bce-s
-${NOT_SUNOS}${TERMINFODIR}/s/screen-256color-s
-${NOT_SUNOS}${TERMINFODIR}/s/screen-bce
-${NOT_SUNOS}${TERMINFODIR}/s/screen-s
-${NOT_SUNOS}${TERMINFODIR}/s/screen-w
-${NOT_SUNOS}${TERMINFODIR}/s/screen.linux
-${NOT_SUNOS}${TERMINFODIR}/s/screen.teraterm
+${PLIST.not-sunos}${TERMINFODIR}/s/screen
+${PLIST.not-sunos}${TERMINFODIR}/s/screen-16color
+${PLIST.not-sunos}${TERMINFODIR}/s/screen-16color-bce
+${PLIST.not-sunos}${TERMINFODIR}/s/screen-16color-bce-s
+${PLIST.not-sunos}${TERMINFODIR}/s/screen-16color-s
+${PLIST.not-sunos}${TERMINFODIR}/s/screen-256color
+${PLIST.not-sunos}${TERMINFODIR}/s/screen-256color-bce
+${PLIST.not-sunos}${TERMINFODIR}/s/screen-256color-bce-s
+${PLIST.not-sunos}${TERMINFODIR}/s/screen-256color-s
+${PLIST.not-sunos}${TERMINFODIR}/s/screen-bce
+${PLIST.not-sunos}${TERMINFODIR}/s/screen-s
+${PLIST.not-sunos}${TERMINFODIR}/s/screen-w
+${PLIST.not-sunos}${TERMINFODIR}/s/screen.linux
+${PLIST.not-sunos}${TERMINFODIR}/s/screen.teraterm
 ${TERMINFODIR}/s/screen.xterm-new
 ${TERMINFODIR}/s/screen.xterm-r6
 ${TERMINFODIR}/s/screen.xterm-xfree86
@@ -3280,5 +3280,5 @@ ${TERMINFODIR}/z/ztx11
 @dirrm ${TERMINFODIR}/3
 @dirrm ${TERMINFODIR}/2
 @dirrm ${TERMINFODIR}/1
-${NOT_SUNOS}@dirrm ${TERMINFODIR}
+${PLIST.not-sunos}@dirrm ${TERMINFODIR}
 @dirrm share/tabset

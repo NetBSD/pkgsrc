@@ -1,13 +1,13 @@
-# $NetBSD: options.mk,v 1.4 2007/10/29 13:25:26 uebayasi Exp $
+# $NetBSD: options.mk,v 1.5 2008/04/12 22:43:02 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.skk
 PKG_SUPPORTED_OPTIONS=	lookup
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=		lookup
+
 .if !empty(PKG_OPTIONS:Mlookup)
 .include "../../misc/lookup/buildlink3.mk"
-PLIST_SUBST+=	FOR_LOOKUP=""
-.else
-PLIST_SUBST+=	FOR_LOOKUP="@comment "
+PLIST.lookup=		yes
 .endif

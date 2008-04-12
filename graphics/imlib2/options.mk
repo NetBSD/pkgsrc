@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2007/11/17 01:40:50 obache Exp $
+# $NetBSD: options.mk,v 1.8 2008/04/12 22:43:01 jlam Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -22,13 +22,14 @@ CONFIGURE_ARGS+=	--enable-mmx
 CONFIGURE_ARGS+=	--enable-amd64
 .endif
 
+PLIST_VARS+=		x11
+
 .if !empty(PKG_OPTIONS:Mx11)
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
-PLIST_SUBST+=		X11=""
+PLIST.x11=		yes
 .else
 CONFIGURE_ARGS+=	--without-x
-PLIST_SUBST+=		X11="@comment "
 .endif
 

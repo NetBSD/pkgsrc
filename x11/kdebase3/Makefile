@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2008/02/20 09:53:03 markd Exp $
+# $NetBSD: Makefile,v 1.144 2008/04/12 22:43:14 jlam Exp $
 
 DISTNAME=	kdebase-${_KDE_VERSION}
 CATEGORIES=	x11
@@ -93,16 +93,14 @@ DEPENDS+=		htdig>=3.2.0:../../www/htdig-devel
 CONFIGURE_ARGS+=       --without-libusb
 .endif
 
+PLIST_VARS+=		usbview
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Linux"
-PLIST_SUBST+=		HAVE_USBVIEW=""
-.else
-PLIST_SUBST+=		HAVE_USBVIEW="@comment "
+PLIST.usbview=		yes
 .endif
 
+PLIST_VARS+=		joystick
 .if ${OPSYS} == "Linux"
-PLIST_SUBST+=		HAVE_JOYSTICK=""
-.else
-PLIST_SUBST+=		HAVE_JOYSTICK="@comment "
+PLIST.joystick=		yes
 .endif
 
 ICONDIR=		share/icons

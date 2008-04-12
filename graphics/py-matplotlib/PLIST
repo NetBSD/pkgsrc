@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/30 22:30:43 joerg Exp $
-@comment $NetBSD: PLIST,v 1.7 2006/04/30 22:30:43 joerg Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/04/12 22:43:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/04/12 22:43:01 jlam Exp $
 ${PYSITELIB}/matplotlib/__init__.py
 ${PYSITELIB}/matplotlib/__init__.pyc
 ${PYSITELIB}/matplotlib/__init__.pyo
@@ -474,9 +474,9 @@ ${PYSITELIB}/matplotlib/widgets.pyo
 ${PYSITELIB}/matplotlib/windowing.py
 ${PYSITELIB}/matplotlib/windowing.pyc
 ${PYSITELIB}/matplotlib/windowing.pyo
-${COND_SUBPROCESS}${PYSITELIB}/subprocess/__init__.py
-${COND_SUBPROCESS}${PYSITELIB}/subprocess/__init__.pyc
-${COND_SUBPROCESS}${PYSITELIB}/subprocess/__init__.pyo
+${PLIST.subprocess}${PYSITELIB}/subprocess/__init__.py
+${PLIST.subprocess}${PYSITELIB}/subprocess/__init__.pyc
+${PLIST.subprocess}${PYSITELIB}/subprocess/__init__.pyo
 ${PYSITELIB}/pylab.py
 ${PYSITELIB}/pylab.pyc
 ${PYSITELIB}/pylab.pyo
@@ -497,4 +497,4 @@ ${PYSITELIB}/pylab.pyo
 @dirrm ${PYSITELIB}/matplotlib/enthought
 @dirrm ${PYSITELIB}/matplotlib/backends
 @dirrm ${PYSITELIB}/matplotlib
-${COND_SUBPROCESS}@dirrm ${PYSITELIB}/subprocess
+${PLIST.subprocess}@dirrm ${PYSITELIB}/subprocess

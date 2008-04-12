@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2008/03/31 22:10:07 tnn Exp $
+# $NetBSD: Makefile,v 1.53 2008/04/12 22:43:03 jlam Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
@@ -36,11 +36,10 @@ PKG_SUPPORTED_OPTIONS=	sun-jre-jce
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=	jce
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} jce_policy-1_5_0.zip
-PLIST_SUBST+=	SUN_JRE15_USE_JCE=""
-.else
-PLIST_SUBST+=	SUN_JRE15_USE_JCE="@comment "
+PLIST.jce=	yes
 .endif
 
 # Some of the binaries require libX11, so ensure that requirement is

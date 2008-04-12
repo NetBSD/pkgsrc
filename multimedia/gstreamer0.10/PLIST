@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/04/10 11:54:40 drochner Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/04/12 22:43:07 jlam Exp $
 bin/gst-feedback-0.10
 bin/gst-inspect-0.10
 bin/gst-launch-0.10
@@ -13,8 +13,8 @@ include/gstreamer-0.10/gst/base/gstcollectpads.h
 include/gstreamer-0.10/gst/base/gstdataqueue.h
 include/gstreamer-0.10/gst/base/gstpushsrc.h
 include/gstreamer-0.10/gst/base/gsttypefindhelper.h
-${GSTCHECK}include/gstreamer-0.10/gst/check/gstbufferstraw.h
-${GSTCHECK}include/gstreamer-0.10/gst/check/gstcheck.h
+${PLIST.gstcheck}include/gstreamer-0.10/gst/check/gstbufferstraw.h
+${PLIST.gstcheck}include/gstreamer-0.10/gst/check/gstcheck.h
 include/gstreamer-0.10/gst/controller/gstcontroller.h
 include/gstreamer-0.10/gst/controller/gstcontrolsource.h
 include/gstreamer-0.10/gst/controller/gstinterpolationcontrolsource.h
@@ -80,14 +80,14 @@ include/gstreamer-0.10/gst/net/gstnettimeprovider.h
 lib/gstreamer-0.10/libgstcoreelements.la
 lib/gstreamer-0.10/libgstcoreindexers.la
 lib/libgstbase-0.10.la
-${GSTCHECK}lib/libgstcheck-0.10.la
+${PLIST.gstcheck}lib/libgstcheck-0.10.la
 lib/libgstcontroller-0.10.la
 lib/libgstdataprotocol-0.10.la
 lib/libgstnet-0.10.la
 lib/libgstreamer-0.10.la
 lib/pkgconfig/gstreamer-0.10.pc
 lib/pkgconfig/gstreamer-base-0.10.pc
-${GSTCHECK}lib/pkgconfig/gstreamer-check-0.10.pc
+${PLIST.gstcheck}lib/pkgconfig/gstreamer-check-0.10.pc
 lib/pkgconfig/gstreamer-controller-0.10.pc
 lib/pkgconfig/gstreamer-dataprotocol-0.10.pc
 lib/pkgconfig/gstreamer-net-0.10.pc
@@ -246,7 +246,7 @@ share/locale/zh_TW/LC_MESSAGES/gstreamer-0.10.mo
 @dirrm include/gstreamer-0.10/gst/net
 @dirrm include/gstreamer-0.10/gst/dataprotocol
 @dirrm include/gstreamer-0.10/gst/controller
-${GSTCHECK}@dirrm include/gstreamer-0.10/gst/check
+${PLIST.gstcheck}@dirrm include/gstreamer-0.10/gst/check
 @dirrm include/gstreamer-0.10/gst/base
 @dirrm include/gstreamer-0.10/gst
 @dirrm include/gstreamer-0.10

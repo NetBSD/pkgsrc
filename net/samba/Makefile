@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.180 2008/04/03 20:19:42 jlam Exp $
+# $NetBSD: Makefile,v 1.181 2008/04/12 22:43:08 jlam Exp $
 
 .include "Makefile.mirrors"
 
@@ -70,11 +70,10 @@ CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 # Only Linux supports mount.cifs for mounting a CIFS share into the
 # filesystem.
 #
+PLIST_VARS+=		cifsmount
 .if ${OPSYS} == "Linux"
 CONFIGURE_ARGS+=	--with-cifsmount
-PLIST_SUBST+=		CIFSMOUNT=
-.else
-PLIST_SUBST+=		CIFSMOUNT="@comment "
+PLIST.cifsmount=	yes
 .endif
 
 # mktemp is useful for the replacement adduser script, but don't require

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2007/12/21 23:23:58 joerg Exp $
+# $NetBSD: Makefile,v 1.70 2008/04/12 22:42:58 jlam Exp $
 #
 
 .include "Makefile.common"
@@ -7,11 +7,12 @@ USE_TOOLS+=	msgfmt
 
 CONFIGURE_ARGS+=	--disable-esd
 
+PLIST_VARS+=		cdaudio
+
 .if ${OPSYS} == "Darwin"
-PLIST_SUBST+=	CDAUDIO="@comment "
 _INSTALL_UNSTRIPPED=	yes
 .else
-PLIST_SUBST+=	CDAUDIO=""
+PLIST.cdaudio=		yes
 .endif
 
 BUILDLINK_DEPMETHOD.libXt?=	build

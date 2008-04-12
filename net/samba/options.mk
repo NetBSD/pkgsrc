@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.23 2008/04/03 20:19:42 jlam Exp $
+# $NetBSD: options.mk,v 1.24 2008/04/12 22:43:08 jlam Exp $
 
 # Recommended package options for various setups:
 #
@@ -51,10 +51,11 @@ CONFIGURE_ARGS+=	--with-acl-support
 ###
 ### Native CUPS support for providing printing services.
 ###
+PLIST_VARS+=		cups
 .if !empty(PKG_OPTIONS:Mcups)
 .  include "../../print/cups/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-cups
-PLIST_SUBST+=		CUPS=
+PLIST.cups=		yes
 INSTALLATION_DIRS+=	libexec/cups/backend
 
 .PHONY: samba-cups-install
@@ -64,19 +65,18 @@ samba-cups-install:
 		${LN} -fs ../../../bin/smbspool smb
 .else
 CONFIGURE_ARGS+=	--disable-cups
-PLIST_SUBST+=		CUPS="@comment "
 .endif
 
 ###
 ### Access Control List support.
 ###
+PLIST_VARS+=		fam
 .if !empty(PKG_OPTIONS:Mfam)
 .  include "../../mk/fam.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-fam
-PLIST_SUBST+=		FAM=
+PLIST.fam=		yes
 .else
 CONFIGURE_ARGS+=	--disable-fam
-PLIST_SUBST+=		FAM="@comment "
 .endif
 
 ###
@@ -92,13 +92,13 @@ CONFIGURE_ARGS+=	--without-ldap
 ###
 ### Support PAM authentication and build smbpass and winbind PAM modules.
 ###
+PLIST_VARS+=		pam
 .if !empty(PKG_OPTIONS:Mpam)
 .  include "../../security/PAM/module.mk"
 CONFIGURE_ARGS+=	--with-pam
 CONFIGURE_ARGS+=	--with-pam_smbpass
 CONFIGURE_ARGS+=	--with-pammodulesdir=${PAM_INSTMODULEDIR}
-PLIST_SUBST+=		PAM_SMBPASS=lib/security/pam_smbpass.so
-PLIST_SUBST+=		PAM=
+PLIST.pam=		yes
 INSTALLATION_DIRS+=	${EGDIR}/pam_smbpass
 
 .PHONY: samba-pam-smbpass-install
@@ -110,15 +110,13 @@ samba-pam-smbpass-install:
 		${INSTALL_DATA} $${f} \
 			${DESTDIR}${PREFIX}/${EGDIR}/pam_smbpass/$${f};	\
 	done
-.else
-PLIST_SUBST+=		PAM_SMBPASS="@comment no PAM smbpass module"
-PLIST_SUBST+=		PAM="@comment "
 .endif
 
 ###
 ### Support querying a PDC for domain user and group information, e.g.,
 ### through NSS or PAM.
 ###
+PLIST_VARS+=		winbind
 .if !empty(PKG_OPTIONS:Mwinbind)
 CONFIGURE_ARGS+=	--with-winbind
 
@@ -128,14 +126,7 @@ SAMBA_STATIC_MODULES:=	${SAMBA_STATIC_MODULES},idmap_ad
 .  endif
 
 WINBINDD_RCD_SCRIPT=	winbindd
-PLIST_SUBST+=		WINBIND=
-
-# Install the PAM winbind module if we're also building with PAM support.
-.  if empty(PKG_OPTIONS:Mpam)
-PLIST_SUBST+=	PAM_WINBIND="@comment no PAM winbind module"
-.  else
-PLIST_SUBST+=	PAM_WINBIND=lib/security/pam_winbind.so
-.  endif
+PLIST.winbind=		yes
 
 # Install the NSS winbind module if it exists.
 PLIST_SUBST+=		NSS_WINBIND=${NSS_WINBIND:Q}
@@ -174,10 +165,8 @@ samba-nss-wins-install:
 	${TEST} ! -f $$lib || ${INSTALL_LIB} $$lib ${DESTDIR}${PREFIX:Q}/lib
 .else
 CONFIGURE_ARGS+=	--without-winbind
-PLIST_SUBST+=		WINBIND="@comment "
-PLIST_SUBST+=		PAM_WINBIND="@comment no PAM winbind module"
-PLIST_SUBST+=		NSS_WINBIND="@comment no NSS winbind module"
-PLIST_SUBST+=		NSS_WINS="@comment no NSS WINS module"
+PLIST_SUBST+=		NSS_WINBIND="no NSS winbind module"
+PLIST_SUBST+=		NSS_WINS="no NSS WINS module"
 .endif
 
 ###
