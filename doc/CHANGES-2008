@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.693 2008/04/12 10:35:33 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.694 2008/04/12 10:57:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1351,3 +1351,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/xine-lib to 1.1.11.1 [drochner 2008-04-11]	
 	Updated x11/xf86-video-radeonhd to 1.2.0 [xtraeme 2008-04-12]
 	Updated security/qca2 to 2.0.0nb3 [wiz 2008-04-12]
+	Added devel/exempi version 2.0.0 [wiz 2008-04-12]
