@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.3 2006/08/29 04:40:53 ben Exp $
-${NOTFOROSX}bin/modplugplay
+@comment $NetBSD: PLIST,v 1.4 2008/04/12 22:42:58 jlam Exp $
+${PLIST.modplugplay}bin/modplugplay
 lib/xmms/Input/libmodplugxmms.la

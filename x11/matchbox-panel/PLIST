@@ -1,12 +1,12 @@
-@comment $NetBSD: PLIST,v 1.3 2006/06/21 22:05:02 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/04/12 22:43:14 jlam Exp $
 bin/matchbox-panel
-${COND_APM}bin/mb-applet-battery
+${PLIST.apm}bin/mb-applet-battery
 bin/mb-applet-clock
 bin/mb-applet-launcher
 bin/mb-applet-menu-launcher
 bin/mb-applet-system-monitor
 bin/mb-applet-xterm-wrapper.sh
-${COND_APM}share/applications/mb-applet-battery.desktop
+${PLIST.apm}share/applications/mb-applet-battery.desktop
 share/applications/mb-applet-clock.desktop
 share/applications/mb-applet-menu-launcher.desktop
 share/applications/mb-applet-system-monitor.desktop

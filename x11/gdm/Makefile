@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2008/03/12 21:41:21 drochner Exp $
+# $NetBSD: Makefile,v 1.139 2008/04/12 22:43:14 jlam Exp $
 #
 
 DISTNAME=	gdm-2.20.4
@@ -112,33 +112,28 @@ CONFIGURE_ARGS+=	--disable-ipv6
 CONFIGURE_ARGS+=	X_SERVER_ARGS="vt05"
 .endif
 
+PLIST_VARS+=		pam
 .if !empty(PKG_OPTIONS:Mpam)
 .  include "../../mk/pam.buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-authentication-scheme=pam
 .  if ${PAM_TYPE} == "linux-pam"
-PLIST_SUBST+=		PAM_MISC=""
-.  else
-PLIST_SUBST+=		PAM_MISC="@comment "
+PLIST.pam=		yes
 .  endif
 .elif exists(/etc/shadow)
 CONFIGURE_ARGS+=	--enable-authentication-scheme=shadow
-PLIST_SUBST+=		PAM_MISC="@comment "
 .else
 CONFIGURE_ARGS+=	--enable-authentication-scheme=crypt
-PLIST_SUBST+=		PAM_MISC="@comment "
 .endif
 
+PLIST_VARS+=		dmx
 .if exists(${X11BASE}/include/X11/extensions/dmxext.h)
-PLIST_SUBST+=		DMX=""
-.else
-PLIST_SUBST+=		DMX="@comment "
+PLIST.dmx=		yes
 .endif
 PRINT_PLIST_AWK+=	/dmx/ { print "$${DMX}" $$0; next }
 
+PLIST_VARS+=		gdmopen
 .if exists(/usr/include/linux/vt.h)
-PLIST_SUBST+=		GDMOPEN=""
-.else
-PLIST_SUBST+=		GDMOPEN="@comment "
+PLIST.gdmopen=		yes
 .endif
 PRINT_PLIST_AWK+=	/gdmopen/ { print "$${GDMOPEN}" $$0; next }
 

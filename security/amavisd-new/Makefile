@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2008/02/19 16:20:15 reed Exp $
+# $NetBSD: Makefile,v 1.37 2008/04/12 22:43:09 jlam Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
@@ -69,6 +69,7 @@ PKG_SUPPORTED_OPTIONS=	milter
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=		milter
 .if !empty(PKG_OPTIONS:Mmilter)
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-runtime-dir=${AMAVIS_DIR:Q}
@@ -80,14 +81,13 @@ CONFIGURE_DIRS=		${WRKSRC}/helper-progs
 BUILD_DIRS=		${WRKSRC}/helper-progs
 RCD_SCRIPTS+=		amavismilter
 MESSAGE_SRC+=		${PKGDIR}/MESSAGE.milter
-PLIST_SUBST+=		MILTER=
+PLIST.milter=		yes
 
 PTHREAD_OPTS+=		require native	# doesn't work with pth
 .  include "../../mail/libmilter/buildlink3.mk"
 .  include "../../mk/pthread.buildlink3.mk"
 .else
 USE_LANGUAGES=		# none, not even C
-PLIST_SUBST+=		MILTER="@comment "
 
 do-build:	replace-interpreter
 .endif

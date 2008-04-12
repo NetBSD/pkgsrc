@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2008/02/15 16:23:09 gdt Exp $
+# $NetBSD: Makefile,v 1.44 2008/04/12 22:43:12 jlam Exp $
 
 PKGNAME=		amanda-server-${VERS}
 SVR4_PKGNAME=		amase
@@ -39,11 +39,9 @@ CONFIGURE_ENV+=		ac_cv_lib_readline_readline=no
 # 		${INSTALL_DATA} $$i ${PREFIX}/share/examples/amanda; \
 # 	done
 
-.if ${OPSYS} == "SunOS"
-PLIST_SRC=	${WRKDIR}/PLIST-src
-
-pre-install:
-	${SED} -e 's|^libexec/chg-scsi$$|@comment libexec/chg-scsi needs headers...|' ${PKGDIR}/PLIST > ${PLIST_SRC}
+PLIST_VARS+=	scsi
+.if ${OPSYS} != "SunOS"
+PLIST.scsi=	yes
 .endif
 
 .include "../../sysutils/amanda-common/buildlink3.mk"

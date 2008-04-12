@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2007/03/16 21:40:33 joerg Exp $
+# $NetBSD: Makefile,v 1.64 2008/04/12 22:43:14 jlam Exp $
 
 DISTNAME=	fltk-1.1.7-source
 PKGNAME=	${DISTNAME:S/-source//}
@@ -31,11 +31,11 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-libtool=${LIBTOOL:Q}
 CONFIGURE_ARGS+=	--enable-threads
 CONFIGURE_ARGS+=	ac_cv_have_overlay=yes
-.if exists(./descr)
-PLIST_SUBST+=		WITH_LINKS="@comment "
-.else
+
+PLIST_VARS+=		cs	# case-sensitive
+.if !exists(./descr)
 CONFIGURE_ARGS+=	--with-links
-PLIST_SUBST+=		WITH_LINKS=""
+PLIST.cs=		yes
 .endif
 
 BUILDLINK_DEPMETHOD.libXt?=	build

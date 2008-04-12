@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2007/02/22 19:26:49 wiz Exp $
+# $NetBSD: options.mk,v 1.5 2008/04/12 22:43:04 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.koffice
 PKG_SUPPORTED_OPTIONS=	mysql pgsql koffice-wv2 koffice-libwpd
@@ -6,12 +6,13 @@ PKG_SUGGESTED_OPTIONS=	koffice-wv2 koffice-libwpd
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=		libwpd mysql pgsql wv2
+
 .if !empty(PKG_OPTIONS:Mmysql)
 .include "../../mk/mysql.buildlink3.mk"
-PLIST_SUBST+=		HAVE_MYSQL=
+PLIST.mysql=		yes
 .else
 CONFIGURE_ARGS+=	--disable-mysql
-PLIST_SUBST+=		HAVE_MYSQL="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mpgsql)
@@ -21,23 +22,19 @@ CONFIGURE_ARGS+=	--with-pgsql-includes=${PGSQL_PREFIX}/include
 CONFIGURE_ARGS+=	--with-pgsql-libraries=${PGSQL_PREFIX}/lib
 CONFIGURE_ARGS+=	--with-pqxx-includes=${BUILDLINK_PREFIX.libpqxx}/include
 CONFIGURE_ARGS+=	--with-pqxx-libraries=${BUILDLINK_PREFIX.libpqxx}/lib
-PLIST_SUBST+=		HAVE_PGSQL=
+PLIST.pgsql=		yes
 .else
 CONFIGURE_ARGS+=	--disable-pgsql
-PLIST_SUBST+=		HAVE_PGSQL="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mkoffice-wv2)
 .include "../../converters/wv2/buildlink3.mk"
-PLIST_SUBST+=		HAVE_WV2=
+PLIST.wv2=		yes
 .else
 CONFIGURE_ARGS+=	--without-libwv2
-PLIST_SUBST+=		HAVE_WV2="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mkoffice-libwpd)
 .include "../../converters/libwpd/buildlink3.mk"
-PLIST_SUBST+=		HAVE_WPD=
-.else
-PLIST_SUBST+=		HAVE_WPD="@comment "
+PLIST.libwpd=		yes
 .endif

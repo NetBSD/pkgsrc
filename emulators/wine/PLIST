@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.67 2007/08/11 11:06:09 adam Exp $
+@comment $NetBSD: PLIST,v 1.68 2008/04/12 22:43:00 jlam Exp $
 bin/bin2res
 bin/fnt2bdf
 bin/function_grep.pl
@@ -562,7 +562,7 @@ lib/wine/faultrep.dll.so
 lib/wine/gdi.exe16
 lib/wine/gdi32.dll.so
 lib/wine/gdiplus.dll.so
-${WINE_OPENGL}lib/wine/glu32.dll.so
+${PLIST.opengl}lib/wine/glu32.dll.so
 lib/wine/gphoto2.ds.so
 lib/wine/hal.dll.so
 lib/wine/hh.exe.so
@@ -629,7 +629,7 @@ lib/wine/libdxerr9.a
 lib/wine/libdxguid.a
 lib/wine/libgdi32.def
 lib/wine/libgdiplus.def
-${WINE_OPENGL}lib/wine/libglu32.def
+${PLIST.opengl}lib/wine/libglu32.def
 lib/wine/libhid.def
 lib/wine/libhlink.def
 lib/wine/libicmp.def
@@ -669,7 +669,7 @@ lib/wine/libolecli32.def
 lib/wine/liboledlg.def
 lib/wine/libolepro32.def
 lib/wine/libolesvr32.def
-${WINE_OPENGL}lib/wine/libopengl32.def
+${PLIST.opengl}lib/wine/libopengl32.def
 lib/wine/libpdh.def
 lib/wine/libpowrprof.def
 lib/wine/libpsapi.def
@@ -704,7 +704,7 @@ lib/wine/libuxtheme.def
 lib/wine/libvdmdbg.def
 lib/wine/libversion.def
 lib/wine/libwinecrt0.a
-${WINE_OPENGL}lib/wine/libwined3d.def
+${PLIST.opengl}lib/wine/libwined3d.def
 lib/wine/libwinedos.def
 lib/wine/libwininet.def
 lib/wine/libwinmm.def
@@ -789,7 +789,7 @@ lib/wine/oledlg.dll.so
 lib/wine/olepro32.dll.so
 lib/wine/olesvr.dll16
 lib/wine/olesvr32.dll.so
-${WINE_OPENGL}lib/wine/opengl32.dll.so
+${PLIST.opengl}lib/wine/opengl32.dll.so
 lib/wine/oleview.exe.so
 lib/wine/pdh.dll.so
 lib/wine/powrprof.dll.so
@@ -878,7 +878,7 @@ lib/wine/winebrowser.exe.so
 lib/wine/winecfg.exe.so
 lib/wine/wineconsole.exe.so
 lib/wine/winecoreaudio.drv.so
-${WINE_OPENGL}lib/wine/wined3d.dll.so
+${PLIST.opengl}lib/wine/wined3d.dll.so
 lib/wine/winedbg.exe.so
 lib/wine/winedevice.exe.so
 lib/wine/winedos.dll.so

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2007/01/06 22:07:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/04/12 22:43:13 jlam Exp $
 bin/aspell
 bin/aspell-import
 bin/precat
@@ -14,19 +14,19 @@ info/aspell-dev.info
 info/aspell.info
 lib/aspell/ccpp.amf
 lib/aspell/comment.amf
-${FILTER}lib/aspell/context-filter.la
-${FILTER}lib/aspell/email-filter.la
+${PLIST.filters}lib/aspell/context-filter.la
+${PLIST.filters}lib/aspell/email-filter.la
 lib/aspell/email.amf
 lib/aspell/html.amf
 lib/aspell/none.amf
-${FILTER}lib/aspell/nroff-filter.la
+${PLIST.filters}lib/aspell/nroff-filter.la
 lib/aspell/nroff.amf
 lib/aspell/perl.amf
-${FILTER}lib/aspell/sgml-filter.la
+${PLIST.filters}lib/aspell/sgml-filter.la
 lib/aspell/sgml.amf
-${FILTER}lib/aspell/tex-filter.la
+${PLIST.filters}lib/aspell/tex-filter.la
 lib/aspell/tex.amf
-${FILTER}lib/aspell/texinfo-filter.la
+${PLIST.filters}lib/aspell/texinfo-filter.la
 lib/aspell/texinfo.amf
 lib/aspell/url.amf
 lib/libaspell.la
@@ -37,7 +37,7 @@ man/man1/prezip-bin.1
 man/man1/pspell-config.1
 man/man1/run-with-aspell.1
 man/man1/word-list-compress.1
-${FILTER}share/aspell/context-filter.info
+${PLIST.filters}share/aspell/context-filter.info
 share/aspell/cp1250.cmap
 share/aspell/cp1250.cset
 share/aspell/cp1251.cmap
@@ -57,8 +57,8 @@ share/aspell/cp1257.cset
 share/aspell/cp1258.cmap
 share/aspell/cp1258.cset
 share/aspell/dvorak.kbd
-${FILTER}share/aspell/email-filter.info
-${FILTER}share/aspell/html-filter.info
+${PLIST.filters}share/aspell/email-filter.info
+${PLIST.filters}share/aspell/html-filter.info
 share/aspell/iso-8859-1.cmap
 share/aspell/iso-8859-1.cset
 share/aspell/iso-8859-10.cmap
@@ -94,13 +94,13 @@ share/aspell/koi8-r.cmap
 share/aspell/koi8-r.cset
 share/aspell/koi8-u.cmap
 share/aspell/koi8-u.cset
-${FILTER}share/aspell/nroff-filter.info
-${FILTER}share/aspell/sgml-filter.info
+${PLIST.filters}share/aspell/nroff-filter.info
+${PLIST.filters}share/aspell/sgml-filter.info
 share/aspell/spell
 share/aspell/split.kbd
 share/aspell/standard.kbd
-${FILTER}share/aspell/tex-filter.info
-${FILTER}share/aspell/texinfo-filter.info
+${PLIST.filters}share/aspell/tex-filter.info
+${PLIST.filters}share/aspell/texinfo-filter.info
 share/locale/be/LC_MESSAGES/aspell.mo
 share/locale/ca/LC_MESSAGES/aspell.mo
 share/locale/cs/LC_MESSAGES/aspell.mo

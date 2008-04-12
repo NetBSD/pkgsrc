@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/05/28 20:35:38 heinz Exp $
+# $NetBSD: Makefile,v 1.18 2008/04/12 22:43:01 jlam Exp $
 #
 
 DISTNAME=	rad3R6P1
@@ -32,21 +32,19 @@ PATCHEES=	makeall ./src/rt/Rmakefile ./src/util/Rmakefile		\
 
 .include "../../mk/bsd.prefs.mk"
 
+PLIST_VARS+=	gl
+
 .if ${OPSYS} == "NetBSD"
 PKGSRC_ARCH=	9
-PLIST_SUBST+=	USE_GL="@comment "
 .elif ${OPSYS} == "FreeBSD"
 PKGSRC_ARCH=	8
-PLIST_SUBST+=	USE_GL="@comment "
 .elif ${OPSYS} == "DragonFly"
 PKGSRC_ARCH=	12
-PLIST_SUBST+=	USE_GL="@comment "
 .elif ${OPSYS} == "Linux"
-PLIST_SUBST+=	USE_GL="@comment "
 PKGSRC_ARCH=	6
 .elif ${OPSYS} == "IRIX"
 PKGSRC_ARCH=	3
-PLIST_SUBST+=	USE_GL=""
+PLIST.gl=	yes
 .endif
 
 MAKE_ENV+=	MV=${MV:Q} RM=${RM:Q} CP=${CP:Q}			\

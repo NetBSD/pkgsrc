@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2007/09/25 10:54:19 hira Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/04/12 22:43:13 jlam Exp $
 bin/compiz
 bin/gtk-window-decorator
-${KDE}bin/kde-window-decorator
+${PLIST.kde}bin/kde-window-decorator
 include/compiz/compiz.h
 include/compiz/decoration.h
 lib/compiz/libannotate.la
@@ -21,7 +21,7 @@ lib/compiz/libresize.la
 lib/compiz/librotate.la
 lib/compiz/libscale.la
 lib/compiz/libscreenshot.la
-${GNOME}lib/compiz/libsvg.la
+${PLIST.gnome}lib/compiz/libsvg.la
 lib/compiz/libswitcher.la
 lib/compiz/libwater.la
 lib/compiz/libwobbly.la
@@ -29,12 +29,12 @@ lib/compiz/libzoom.la
 lib/libdecoration.la
 lib/pkgconfig/compiz.pc
 lib/pkgconfig/libdecoration.pc
-${GNOME}lib/window-manager-settings/libcompiz.la
+${PLIST.gnome}lib/window-manager-settings/libcompiz.la
 share/compiz/freedesktop.png
 share/compiz/icon.png
 share/gconf/schemas/compiz.schemas
 share/gconf/schemas/gwd.schemas
-${GNOME}share/gnome/wm-properties/compiz.desktop
+${PLIST.gnome}share/gnome/wm-properties/compiz.desktop
 share/locale/af/LC_MESSAGES/compiz.mo
 share/locale/ar/LC_MESSAGES/compiz.mo
 share/locale/bg/LC_MESSAGES/compiz.mo

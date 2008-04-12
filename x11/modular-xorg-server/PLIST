@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/03/29 17:54:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/04/12 22:43:15 jlam Exp $
 bin/X
 bin/Xnest
 bin/Xorg
@@ -1084,11 +1084,11 @@ lib/X11/xserver/zh_TW.big5
 lib/X11/xserver/zh_TW.euctw
 lib/X11/xserver/zh_TW.utf8
 lib/pkgconfig/xorg-server.pc
-${USE_DRI}lib/xorg/modules/extensions/libGLcore.la
+${PLIST.dri}lib/xorg/modules/extensions/libGLcore.la
 lib/xorg/modules/extensions/libdbe.la
 lib/xorg/modules/extensions/libdri.la
 lib/xorg/modules/extensions/libextmod.la
-${USE_DRI}lib/xorg/modules/extensions/libglx.la
+${PLIST.dri}lib/xorg/modules/extensions/libglx.la
 lib/xorg/modules/extensions/librecord.la
 lib/xorg/modules/extensions/libxtrap.la
 lib/xorg/modules/fonts/libfreetype.la

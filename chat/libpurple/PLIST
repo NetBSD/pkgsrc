@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/03/04 17:22:40 tnn Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/04/12 22:42:58 jlam Exp $
 include/libpurple/account.h
 include/libpurple/accountopt.h
 include/libpurple/blist.h
@@ -161,18 +161,18 @@ share/sounds/purple/login.wav
 share/sounds/purple/logout.wav
 share/sounds/purple/receive.wav
 share/sounds/purple/send.wav
-${DBUS}bin/purple-client-example
-${DBUS}bin/purple-remote
-${DBUS}bin/purple-send
-${DBUS}bin/purple-send-async
-${DBUS}bin/purple-url-handler
-${DBUS}include/libpurple/dbus-bindings.h
-${DBUS}include/libpurple/dbus-define-api.h
-${DBUS}include/libpurple/dbus-purple.h
-${DBUS}include/libpurple/dbus-server.h
-${DBUS}include/libpurple/dbus-useful.h
-${DBUS}lib/libpurple-client.la
-${DBUS}lib/purple-2/dbus-example.la
+${PLIST.dbus}bin/purple-client-example
+${PLIST.dbus}bin/purple-remote
+${PLIST.dbus}bin/purple-send
+${PLIST.dbus}bin/purple-send-async
+${PLIST.dbus}bin/purple-url-handler
+${PLIST.dbus}include/libpurple/dbus-bindings.h
+${PLIST.dbus}include/libpurple/dbus-define-api.h
+${PLIST.dbus}include/libpurple/dbus-purple.h
+${PLIST.dbus}include/libpurple/dbus-server.h
+${PLIST.dbus}include/libpurple/dbus-useful.h
+${PLIST.dbus}lib/libpurple-client.la
+${PLIST.dbus}lib/purple-2/dbus-example.la
 @dirrm lib/purple-2
 @dirrm include/libpurple
 @dirrm share/purple/ca-certs

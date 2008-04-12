@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.9 2007/11/17 01:40:50 obache Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/04/12 22:43:01 jlam Exp $
 bin/imlib2-config
-${X11}bin/imlib2_bumpmap
-${X11}bin/imlib2_colorspace
+${PLIST.x11}bin/imlib2_bumpmap
+${PLIST.x11}bin/imlib2_colorspace
 bin/imlib2_conv
-${X11}bin/imlib2_grab
-${X11}bin/imlib2_poly
-${X11}bin/imlib2_show
-${X11}bin/imlib2_test
-${X11}bin/imlib2_view
+${PLIST.x11}bin/imlib2_grab
+${PLIST.x11}bin/imlib2_poly
+${PLIST.x11}bin/imlib2_show
+${PLIST.x11}bin/imlib2_test
+${PLIST.x11}bin/imlib2_view
 include/Imlib2.h
 lib/imlib2/filters/bumpmap.la
 lib/imlib2/filters/colormod.la

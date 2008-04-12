@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2007/11/03 16:12:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.18 2008/04/12 22:43:09 jlam Exp $
 bin/evince
 bin/evince-thumbnailer
 man/man1/evince.1
@@ -28,8 +28,8 @@ share/evince/icons/hicolor/32x32/actions/view-page-facing.png
 share/evince/icons/hicolor/48x48/actions/view-page-continuous.png
 share/evince/icons/hicolor/48x48/actions/view-page-facing.png
 share/gconf/schemas/evince-thumbnailer-comics.schemas
-${DJVU}share/gconf/schemas/evince-thumbnailer-djvu.schemas
-${DVI}share/gconf/schemas/evince-thumbnailer-dvi.schemas
+${PLIST.djvu}share/gconf/schemas/evince-thumbnailer-djvu.schemas
+${PLIST.dvi}share/gconf/schemas/evince-thumbnailer-dvi.schemas
 share/gconf/schemas/evince-thumbnailer-ps.schemas
 share/gconf/schemas/evince-thumbnailer.schemas
 share/gconf/schemas/evince.schemas

@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2006/05/31 18:22:25 ghen Exp $
+# $NetBSD: options.mk,v 1.11 2008/04/12 22:43:09 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.cyrus-saslauthd
 PKG_SUPPORTED_OPTIONS=	pam kerberos ldap gssapi
@@ -18,15 +18,15 @@ CONFIGURE_ARGS+=	--without-pam
 ###
 ### Authentication against information stored in an LDAP directory
 ###
+PLIST_VARS+=		ldap
 .if !empty(PKG_OPTIONS:Mldap)
 .  include "../../databases/openldap-client/buildlink3.mk"
 .  include "../../security/cyrus-sasl/buildlink3.mk"
 BUILDLINK_INCDIRS.cyrus-sasl=	include/sasl
 CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap-client}
-PLIST_SUBST+=		LDAP=
+PLIST.ldap=		yes
 .else
 CONFIGURE_ARGS+=	--without-ldap
-PLIST_SUBST+=		LDAP="@comment "
 .endif
 
 ###

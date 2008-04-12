@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2006/10/04 12:07:53 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/04/12 22:43:09 jlam Exp $
 bin/saslcache
 bin/testsaslauthd
 man/man8/saslauthd.8
 sbin/saslauthd
 sbin/testsaslauthd
-${LDAP}share/doc/cyrus-saslauthd/LDAP_SASLAUTHD
-${LDAP}@dirrm share/doc/cyrus-saslauthd
+${PLIST.ldap}share/doc/cyrus-saslauthd/PLIST.ldap_SASLAUTHD
+${PLIST.ldap}@dirrm share/doc/cyrus-saslauthd
 share/examples/rc.d/saslauthd

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/09/21 13:03:47 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2008/04/12 22:43:01 jlam Exp $
 
 DISTNAME=		camlimages-2.2.0
 PKGREVISION=		5
@@ -28,10 +28,10 @@ BUILD_TARGET+=	all
 PLIST_SRC+=	${PKGDIR}/PLIST.opt
 .endif
 
-.if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "Darwin" || ${OPSYS} == "NetBSD"
-PLIST_SUBST+=	COND_DLL=""
-.else
-PLIST_SUBST+=	COND_DLL="@comment "
+PLIST_VARS+=	dll
+.if ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD" || \
+    ${OPSYS} == "Darwin" || ${OPSYS} == "NetBSD"
+PLIST.dll=	yes
 .endif
 
 .include "../../lang/ocaml/buildlink3.mk"

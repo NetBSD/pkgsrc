@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2008/03/08 01:09:50 tnn Exp $
+# $NetBSD: Makefile,v 1.45 2008/04/12 22:43:12 jlam Exp $
 
 DISTNAME=	coreutils-6.10
 CATEGORIES=	sysutils
@@ -35,10 +35,9 @@ CONFIGURE_ENV+=		 ac_cv_header_sys_acl_h=no jm_cv_func_svid_putenv=yes
 .endif
 
 # Exclude programs from PLIST which aren't built on a platform.
-.if ${OPSYS} == "Interix"
-PLIST_SUBST+=		COREUTILS_HAVE_HOSTID="@comment "
-.else
-PLIST_SUBST+=		COREUTILS_HAVE_HOSTID=""
+PLIST_VARS+=		hostid
+.if ${OPSYS} != "Interix"
+PLIST.hostid=		yes
 .endif
 
 # XXX - this hack is bound to cause fallout on some platform at some point.

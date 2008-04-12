@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2008/03/06 14:53:52 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2008/04/12 22:43:04 jlam Exp $
 
 DISTNAME=	kdeaccessibility-${_KDE_VERSION}
 PKGREVISION=	1
@@ -15,14 +15,13 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.kdeaccessibility
 PKG_SUPPORTED_OPTIONS=	gstreamer
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=		gstreamer
 .if !empty(PKG_OPTIONS:Mgstreamer)
 CONFIGURE_ARGS+=	--enable-kttsd-gstreamer
 CONFIGURE_ARGS+=	--with-gstreamer
 .include "../../multimedia/gstreamer0.8/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.8/buildlink3.mk"
-PLIST_SUBST+=		HAVE_GST=""
-.else
-PLIST_SUBST+=		HAVE_GST="@comment "
+PLIST.gstreamer=	yes
 .endif
 
 .include "../../meta-pkgs/kde3/kde3.mk"

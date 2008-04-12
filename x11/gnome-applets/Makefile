@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2008/03/06 14:53:56 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2008/04/12 22:43:14 jlam Exp $
 #
 
 DISTNAME=		gnome-applets-2.20.1
@@ -48,25 +48,25 @@ CONFIGURE_ARGS+=	--enable-ipv6
 CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
+PLIST_VARS+=		battstat
 .if ${OPSYS} == "Linux" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || \
     (${OPSYS} == "NetBSD" && exists(/usr/include/machine/apmvar.h))
 GCONF_SCHEMAS+=	battstat.schemas
-PLIST_SUBST+=		BATTSTAT=
+PLIST.battstat=		yes
 CONF_FILES+=		${EGDIR}/sound/events/battstat_applet.soundlist \
 			${PKG_SYSCONFDIR}/sound/events/battstat_applet.soundlist
 .else
-PLIST_SUBST+=		BATTSTAT="@comment "
 CONFIGURE_ARGS+=	--disable-battstat
 .endif
 
 PRINT_PLIST_AWK+=	/[Bb]attstat/ { print "$${BATTSTAT}"$$0; next; }
 PRINT_PLIST_AWK+=	/examples/ { print "$${BATTSTAT}"$$0; next; }
 
+PLIST_VARS+=		cpufreq
 .if ${OPSYS} == "Linux" && exists(/usr/include/cpufreq.h)
 GCONF_SCHEMAS+=	cpufreq-applet.schemas
-PLIST_SUBST+=		CPUFREQ=
+PLIST.cpufreq=		yes
 .else
-PLIST_SUBST+=		CPUFREQ="@comment "
 CONFIGURE_ARGS+=	--disable-cpufreq
 .endif
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2007/10/29 13:06:05 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/04/12 22:43:04 jlam Exp $
 ${EMACS_INFOPREFIX}/wl-ja.info
 ${EMACS_INFOPREFIX}/wl.info
 ${EMACS_LISPPREFIX}/wl/acap.el
@@ -55,8 +55,8 @@ ${EMACS_LISPPREFIX}/wl/elmo-pop3.el
 ${EMACS_LISPPREFIX}/wl/elmo-pop3.elc
 ${EMACS_LISPPREFIX}/wl/elmo-sendlog.el
 ${EMACS_LISPPREFIX}/wl/elmo-sendlog.elc
-${FOR_emacs_w3m}${EMACS_LISPPREFIX}/wl/elmo-shimbun.el
-${FOR_emacs_w3m}${EMACS_LISPPREFIX}/wl/elmo-shimbun.elc
+${PLIST.emacs-w3m}${EMACS_LISPPREFIX}/wl/elmo-shimbun.el
+${PLIST.emacs-w3m}${EMACS_LISPPREFIX}/wl/elmo-shimbun.elc
 ${EMACS_LISPPREFIX}/wl/elmo-signal.el
 ${EMACS_LISPPREFIX}/wl/elmo-signal.elc
 ${EMACS_LISPPREFIX}/wl/elmo-spam.el
@@ -203,7 +203,7 @@ ${FOR_emacs_x}share/wl/pipe.xpm
 ${FOR_emacs_x}share/wl/plugged.xpm
 ${FOR_emacs_x}share/wl/pop.xpm
 ${FOR_emacs_x}share/wl/queue.xpm
-${FOR_emacs_x}${FOR_emacs_w3m}share/wl/shimbun.xpm
+${FOR_emacs_x}${PLIST.emacs-w3m}share/wl/shimbun.xpm
 ${FOR_emacs_x}share/wl/trash-e.xpm
 ${FOR_emacs_x}share/wl/trash.xpm
 ${FOR_emacs_x}share/wl/unplugged.xpm

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/06/01 00:26:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/04/12 22:43:08 jlam Exp $
 sbin/ser
 sbin/serctl
 sbin/ser_mysql.sh
@@ -18,7 +18,7 @@ lib/ser/modules/mangler.so
 lib/ser/modules/maxfwd.so
 lib/ser/modules/mediaproxy.so
 lib/ser/modules/msilo.so
-${WITH_MYSQL}lib/ser/modules/mysql.so
+${PLIST.mysql}lib/ser/modules/mysql.so
 lib/ser/modules/nathelper.so
 lib/ser/modules/pa.so
 lib/ser/modules/pdt.so

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.27 2007/11/29 18:36:35 wiz Exp $
+# $NetBSD: Makefile.common,v 1.28 2008/04/12 22:42:58 jlam Exp $
 #
 
 DISTNAME=	xmms-1.2.11
@@ -14,6 +14,7 @@ USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes
+PLIST_VARS=		oss
 
 DISTINFO_FILE=		${.CURDIR}/../../audio/xmms/distinfo
 FILESDIR=		${.CURDIR}/../../audio/xmms/files
@@ -65,9 +66,8 @@ post-patch:
 .if ${OPSYS} != "FreeBSD" && ${OPSYS} != "Linux" && ${OPSYS} != "NetBSD" && \
 	${OPSYS} != "OpenBSD" && ${OPSYS} != "DragonFly"
 CONFIGURE_ARGS+=	--disable-oss
-PLIST_SUBST+=		OSS="@comment "
 .else
-PLIST_SUBST+=		OSS=""
+PLIST.oss=		yes
 .endif
 
 .include "../../audio/libmikmod/buildlink3.mk"

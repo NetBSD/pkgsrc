@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2005/05/02 20:34:05 reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/04/12 22:43:12 jlam Exp $
 bin/scp
 bin/scp2
 bin/sftp
@@ -10,8 +10,8 @@ bin/ssh-add
 bin/ssh-add2
 bin/ssh-agent
 bin/ssh-agent2
-${X11_SUPPORT}bin/ssh-askpass
-${X11_SUPPORT}bin/ssh-askpass2
+${PLIST.x11}bin/ssh-askpass
+${PLIST.x11}bin/ssh-askpass2
 bin/ssh-dummy-shell
 bin/ssh-keygen
 bin/ssh-keygen2

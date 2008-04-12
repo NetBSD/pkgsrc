@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2008/03/24 21:55:36 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/04/12 22:43:00 jlam Exp $
 bin/mason_handler.fcgi
-${IF_SPEEDYCGI}bin/mason_handler.scgi
+${PLIST.speedycgi}bin/mason_handler.scgi
 bin/mason_handler.svc
 bin/rt
 bin/rt-crontool

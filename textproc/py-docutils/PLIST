@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/06/17 14:34:12 joerg Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/04/12 22:43:13 jlam Exp $
 bin/rst2html.py
 bin/rst2latex.py
 bin/rst2newlatex.py
@@ -335,12 +335,12 @@ ${PYSITELIB}/docutils/writers/s5_html/themes/small-white/pretty.css
 ${PYSITELIB}/roman.py
 ${PYSITELIB}/roman.pyc
 ${PYSITELIB}/roman.pyo
-${PYSTDMODULE}${PYSITELIB}/optparse.py
-${PYSTDMODULE}${PYSITELIB}/optparse.pyc
-${PYSTDMODULE}${PYSITELIB}/optparse.pyo
-${PYSTDMODULE}${PYSITELIB}/textwrap.py
-${PYSTDMODULE}${PYSITELIB}/textwrap.pyc
-${PYSTDMODULE}${PYSITELIB}/textwrap.pyo
+${PLIST.std}${PYSITELIB}/optparse.py
+${PLIST.std}${PYSITELIB}/optparse.pyc
+${PLIST.std}${PYSITELIB}/optparse.pyo
+${PLIST.std}${PYSITELIB}/textwrap.py
+${PLIST.std}${PYSITELIB}/textwrap.pyc
+${PLIST.std}${PYSITELIB}/textwrap.pyo
 @dirrm ${PYSITELIB}/docutils/writers/s5_html/themes/small-white
 @dirrm ${PYSITELIB}/docutils/writers/s5_html/themes/small-black
 @dirrm ${PYSITELIB}/docutils/writers/s5_html/themes/medium-white

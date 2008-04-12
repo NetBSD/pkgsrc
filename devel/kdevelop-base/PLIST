@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2008/02/20 10:24:09 markd Exp $
+@comment $NetBSD: PLIST,v 1.24 2008/04/12 22:42:59 jlam Exp $
 bin/kdevassistant
 bin/kdevdesigner
 bin/kdevelop
@@ -144,10 +144,10 @@ include/kdevelop/widgets/qcomboview.h
 include/kdevelop/widgets/resizablecombo.h
 include/kinterfacedesigner/designer.h
 lib/kconf_update_bin/kdev-gen-settings-kconf_update
-${HAVE_SVN}lib/kde3/kded_kdevsvnd.la
+${PLIST.svn}lib/kde3/kded_kdevsvnd.la
 lib/kde3/kio_chm.la
 lib/kde3/kio_csharpdoc.la
-${HAVE_SVN}lib/kde3/kio_kdevsvn.la
+${PLIST.svn}lib/kde3/kio_kdevsvn.la
 lib/kde3/kio_perldoc.la
 lib/kde3/kio_pydoc.la
 lib/kde3/libclearcaseintegrator.la
@@ -220,7 +220,7 @@ lib/kde3/libkdevscripting.la
 lib/kde3/libkdevscriptproject.la
 lib/kde3/libkdevsnippet.la
 lib/kde3/libkdevsqlsupport.la
-${HAVE_SVN}lib/kde3/libkdevsubversion.la
+${PLIST.svn}lib/kde3/libkdevsubversion.la
 lib/kde3/libkdevtexttools.la
 lib/kde3/libkdevtipofday.la
 lib/kde3/libkdevtools.la
@@ -229,7 +229,7 @@ lib/kde3/libkdevuichooser.la
 lib/kde3/libkdevvalgrind.la
 lib/kde3/libkdevvcsmanager.la
 lib/kde3/libperforceintegrator.la
-${HAVE_SVN}lib/kde3/libsubversionintegrator.la
+${PLIST.svn}lib/kde3/libsubversionintegrator.la
 lib/libd.la
 lib/libdesignerintegration.la
 lib/libdocumentation_interfaces.la
@@ -1285,7 +1285,7 @@ share/kde/services/docdoxygenplugin.desktop
 share/kde/services/dockdevtocplugin.desktop
 share/kde/services/docqtplugin.desktop
 share/kde/services/kchmpart.desktop
-${HAVE_SVN}share/kde/services/kded/kdevsvnd.desktop
+${PLIST.svn}share/kde/services/kded/kdevsvnd.desktop
 share/kde/services/kdevabbrev.desktop
 share/kde/services/kdevadaproject.desktop
 share/kde/services/kdevadasupport.desktop
@@ -1355,13 +1355,13 @@ share/kde/services/kdevscripting.desktop
 share/kde/services/kdevscriptproject.desktop
 share/kde/services/kdevsnippet.desktop
 share/kde/services/kdevsqlsupport.desktop
-${HAVE_SVN}share/kde/services/kdevsubversion.desktop
-${HAVE_SVN}share/kde/services/kdevsubversionintegrator.desktop
-${HAVE_SVN}share/kde/services/kdevsvn+file.protocol
-${HAVE_SVN}share/kde/services/kdevsvn+http.protocol
-${HAVE_SVN}share/kde/services/kdevsvn+https.protocol
-${HAVE_SVN}share/kde/services/kdevsvn+ssh.protocol
-${HAVE_SVN}share/kde/services/kdevsvn+svn.protocol
+${PLIST.svn}share/kde/services/kdevsubversion.desktop
+${PLIST.svn}share/kde/services/kdevsubversionintegrator.desktop
+${PLIST.svn}share/kde/services/kdevsvn+file.protocol
+${PLIST.svn}share/kde/services/kdevsvn+http.protocol
+${PLIST.svn}share/kde/services/kdevsvn+https.protocol
+${PLIST.svn}share/kde/services/kdevsvn+ssh.protocol
+${PLIST.svn}share/kde/services/kdevsvn+svn.protocol
 share/kde/services/kdevtexttools.desktop
 share/kde/services/kdevtipofday.desktop
 share/kde/services/kdevtmakeproject.desktop

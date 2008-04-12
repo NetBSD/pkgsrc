@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2008/01/24 15:17:30 gdt Exp $
+# $NetBSD: options.mk,v 1.7 2008/04/12 22:43:09 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ghostscript
 PKG_SUPPORTED_OPTIONS=	x11 cups fontconfig
@@ -15,9 +15,10 @@ CONFIGURE_ARGS+=	--with-x
 CONFIGURE_ARGS+=	--without-x
 .endif
 
+PLIST_VARS+=		cups
 .if !empty(PKG_OPTIONS:Mcups)
 CONFIGURE_ARGS+=	--enable-cups
-PLIST_SUBST+=		CUPS=
+PLIST.cups=		yes
 
 CUPS_CONFDIR?=	${PKG_SYSCONFBASEDIR}/cups
 CUPS_EGDIR=	${PREFIX}/share/examples/cups
@@ -32,7 +33,6 @@ SUBST_SED.cupsetc=	-e 's|$$(CUPSSERVERROOT)|${CUPS_EGDIR}|g'
 .include "../../print/cups/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-cups
-PLIST_SUBST+=		CUPS="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Mfontconfig)

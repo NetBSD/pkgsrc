@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/01/12 11:48:39 tonio Exp $
+# $NetBSD: Makefile,v 1.20 2008/04/12 22:43:02 jlam Exp $
 #
 
 DISTNAME=	coq-8.1pl3
@@ -33,15 +33,14 @@ _STRIPFLAG_CC=
 _STRIPFLAG_INSTALL=
 .endif
 
+PLIST_VARS=		coqide
 PKG_OPTIONS_VAR=	PKG_OPTIONS.coq
 PKG_SUPPORTED_OPTIONS=	coqide
 .include "../../mk/bsd.options.mk"
 .if !empty(PKG_OPTIONS:Mcoqide)
 .include "../../x11/lablgtk/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-PLIST_SUBST+=	WITH_IDE=''
-.else
-PLIST_SUBST+=	WITH_IDE='@comment '
+PLIST.coqide=		yes
 .endif
 
 .include "../../mk/pthread.buildlink3.mk"

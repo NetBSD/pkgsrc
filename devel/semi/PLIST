@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/10/29 12:59:00 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/04/12 22:43:00 jlam Exp $
 ${EMACS_INFOPREFIX}/mime-ui-en.info
 ${EMACS_INFOPREFIX}/mime-ui-ja.info
 ${FOR_xemacs}${EMACS_LISPPREFIX}/semi/auto-autoloads.el
@@ -8,7 +8,7 @@ ${FOR_xemacs}${EMACS_LISPPREFIX}/semi/custom-load.elc
 ${EMACS_LISPPREFIX}/semi/mail-mime-setup.el
 ${EMACS_LISPPREFIX}/semi/mail-mime-setup.elc
 ${EMACS_LISPPREFIX}/semi/mime-bbdb.el
-${FOR_bbdb}${EMACS_LISPPREFIX}/semi/mime-bbdb.elc
+${PLIST.bbdb}${EMACS_LISPPREFIX}/semi/mime-bbdb.elc
 ${EMACS_LISPPREFIX}/semi/mime-edit.el
 ${EMACS_LISPPREFIX}/semi/mime-edit.elc
 ${EMACS_LISPPREFIX}/semi/mime-image.el
@@ -24,7 +24,7 @@ ${EMACS_LISPPREFIX}/semi/mime-setup.elc
 ${EMACS_LISPPREFIX}/semi/mime-view.el
 ${EMACS_LISPPREFIX}/semi/mime-view.elc
 ${EMACS_LISPPREFIX}/semi/mime-w3.el
-${FOR_w3}${EMACS_LISPPREFIX}/semi/mime-w3.elc
+${PLIST.w3}${EMACS_LISPPREFIX}/semi/mime-w3.elc
 ${EMACS_LISPPREFIX}/semi/pgg-def.el
 ${EMACS_LISPPREFIX}/semi/pgg-def.elc
 ${EMACS_LISPPREFIX}/semi/pgg-gpg.el

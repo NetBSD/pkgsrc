@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/06/17 14:34:12 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2008/04/12 22:43:13 jlam Exp $
 
 DISTNAME=	docutils-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -17,10 +17,9 @@ PYDISTUTILSPKG=	YES
 
 .include "../../lang/python/extension.mk"
 
+PLIST_VARS+=	std
 .if !empty(PYVERSSUFFIX:M2*[12])
-PLIST_SUBST+=	PYSTDMODULE=""
-.else
-PLIST_SUBST+=	PYSTDMODULE="@comment "
+PLIST.std=	yes
 .endif
 
 .include "../../mk/bsd.pkg.mk"

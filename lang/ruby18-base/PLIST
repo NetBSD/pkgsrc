@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/03/10 02:50:38 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/04/12 22:43:02 jlam Exp $
 bin/erb${RUBY_VER}
 bin/h2rb${RUBY_VER}
 bin/irb${RUBY_VER}
@@ -83,7 +83,7 @@ ${RUBY_ARCHLIBDIR}/etc.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/fcntl.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/iconv.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/intern.h
-${HAS_IO}${RUBY_ARCHLIBDIR}/io/wait.${RUBY_DLEXT}
+${PLIST.io}${RUBY_ARCHLIBDIR}/io/wait.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/missing.h
 ${RUBY_ARCHLIBDIR}/nkf.${RUBY_DLEXT}
 ${RUBY_ARCHLIBDIR}/node.h
@@ -109,7 +109,7 @@ ${RUBY_ARCHLIBDIR}/version.h
 ${RUBY_ARCHLIBDIR}/zlib.${RUBY_DLEXT}
 @exec ${MKDIR} %D/${RUBY_SITEARCHLIBDIR}
 ${RUBY_LIBDIR}/importenv.rb
-${HAS_IO}${RUBY_LIBDIR}/io/nonblock.rb
+${PLIST.io}${RUBY_LIBDIR}/io/nonblock.rb
 ${RUBY_LIBDIR}/ipaddr.rb
 ${RUBY_LIBDIR}/irb/cmd/chws.rb
 ${RUBY_LIBDIR}/irb/cmd/fork.rb

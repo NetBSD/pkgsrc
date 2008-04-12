@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/03/08 01:06:52 tnn Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/04/12 22:43:12 jlam Exp $
 bin/${GNU_PROGRAM_PREFIX}[
 bin/${GNU_PROGRAM_PREFIX}base64
 bin/${GNU_PROGRAM_PREFIX}basename
@@ -30,7 +30,7 @@ bin/${GNU_PROGRAM_PREFIX}fmt
 bin/${GNU_PROGRAM_PREFIX}fold
 bin/${GNU_PROGRAM_PREFIX}groups
 bin/${GNU_PROGRAM_PREFIX}head
-${COREUTILS_HAVE_HOSTID}bin/${GNU_PROGRAM_PREFIX}hostid
+${PLIST.hostid}bin/${GNU_PROGRAM_PREFIX}hostid
 bin/${GNU_PROGRAM_PREFIX}id
 bin/${GNU_PROGRAM_PREFIX}install
 bin/${GNU_PROGRAM_PREFIX}join

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/01/07 09:14:02 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2008/04/12 22:43:08 jlam Exp $
 
 DISTNAME=	flow-tools-0.68
 PKGREVISION=	2
@@ -44,19 +44,18 @@ CONFIGURE_ARGS+=	--with-pgsql=${PGSQL_PREFIX:Q}
 .endif
 
 # Python scripts support.
+PLIST_VARS+=		python
 .if !empty(PKG_OPTIONS:Mpython)
 .  include "../../lang/python/application.mk"
 
 PYTHON_PATCH_SCRIPTS=	bin/flow-rpt2rrd bin/flow-log2rrd bin/flow-rptfmt
-PLIST_SUBST+=	PYTHON_OPT=""
+PLIST.python=		yes
 
 post-install:
 .   for s in flow-rpt2rrd flow-log2rrd flow-rptfmt
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/${s} ${PREFIX}/bin/${s}
 	${INSTALL_MAN} ${WRKSRC}/docs/${s}.1 ${PREFIX}/${PKGMANDIR}/man1/${s}.1
 .  endfor
-.else
-PLIST_SUBST+=	PYTHON_OPT="@comment "
 .endif
 
 # To avoid providing more patch files we do the following...

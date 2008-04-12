@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2008/04/07 17:48:14 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2008/04/12 22:42:57 jlam Exp $
 
 DISTNAME=	p7zip_4.57_src_all
 PKGNAME=	p7zip-4.57
@@ -18,14 +18,13 @@ MAKE_FILE=		makefile
 MAKE_JOBS_SAFE=		no # missing header when compiling sfx
 NO_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
+PLIST_VARS=		dll
 
 # compiles, but does not recognize any archives as supported
 DYNAMIC_7Z=		NO
 .if !empty(DYNAMIC_7Z:MYES)
 BUILD_TARGET=		all2
-PLIST_SUBST+=		DYNAMIC_7Z=""
-.else
-PLIST_SUBST+=		DYNAMIC_7Z="@comment "
+PLIST.dll=		yes
 .endif
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV:S/-/_/}

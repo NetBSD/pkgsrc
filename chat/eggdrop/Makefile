@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2008/03/03 02:19:51 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2008/04/12 22:42:58 jlam Exp $
 
 DISTNAME=	eggdrop1.6.18
 PKGNAME=	eggdrop-1.6.18
@@ -12,6 +12,7 @@ COMMENT=	IRC robot with TCL scripting and multi-channel ability
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+PLIST_VARS=		dynamic
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ENV+=		TCLLIB="${PREFIX}/lib" TCLINC="${PREFIX}/include"
@@ -64,10 +65,9 @@ do-install-program:
 
 .if defined(NOPIC)
 BUILD_TARGET=	static
-PLIST_SUBST+=	NOPIC="@comment "
 .else
 BUILD_TARGET=	eggdrop
-PLIST_SUBST+=	NOPIC=
+PLIST.dynamic=	yes
 do-install: do-install-modules
 do-install-modules:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/eggdrop

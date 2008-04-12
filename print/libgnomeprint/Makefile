@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2008/02/13 19:39:26 drochner Exp $
+# $NetBSD: Makefile,v 1.65 2008/04/12 22:43:09 jlam Exp $
 #
 
 DISTNAME=	libgnomeprint-2.18.4
@@ -27,13 +27,13 @@ PKG_SUPPORTED_OPTIONS=	cups
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=		cups
 .if !empty(PKG_OPTIONS:Mcups)
 .include "../../print/libgnomecups/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-cups
-PLIST_SUBST+=		USE_CUPS=
+PLIST.cups=		yes
 .else
 CONFIGURE_ARGS+=	--without-cups
-PLIST_SUBST+=		USE_CUPS="@comment "
 .endif
 
 CONFIGURE_ARGS+=	--without-papi

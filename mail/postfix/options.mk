@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.30 2008/02/18 17:45:34 ghen Exp $
+# $NetBSD: options.mk,v 1.31 2008/04/12 22:43:04 jlam Exp $
 
 # Global and legacy options
 
@@ -86,6 +86,7 @@ AUXLIBS+=	-L${PGSQL_PREFIX}/lib -lpq \
 ### Cyrus SASL support for SMTP authentication.
 ### (Dovecot SASL support is built in by default.)
 ###
+PLIST_VARS+=	csasl
 .if !empty(PKG_OPTIONS:Msasl)
 .  include "../../security/cyrus-sasl/buildlink3.mk"
 BUILDLINK_INCDIRS.cyrus-sasl=	include/sasl
@@ -95,13 +96,12 @@ CCARGS+=	-DUSE_CYRUS_SASL
 AUXLIBS+=	-L${BUILDLINK_PREFIX.cyrus-sasl}/lib			\
 		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.cyrus-sasl}/lib \
 		-lsasl2
-PLIST_SUBST+=	SASL=
+PLIST.csasl=	yes
 MESSAGE_SRC+=	${PKGDIR}/MESSAGE.sasl
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 MESSAGE_SUBST+=	SASLLIBDIR=${SASLLIBDIR}
 MAKE_DIRS+=	${SASLLIBDIR}
 CONF_FILES+=	${EXAMPLEDIR}/smtpd.conf ${SASLLIBDIR}/smtpd.conf
 .else
-PLIST_SUBST+=	SASL="@comment "
 CCARGS+=	-DDEF_SERVER_SASL_TYPE=\"dovecot\"
 .endif

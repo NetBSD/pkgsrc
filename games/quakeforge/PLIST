@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/01/31 17:39:49 tnn Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/04/12 22:43:01 jlam Exp $
 bin/bsp2img
 bin/hw-master
 bin/nq-glx
@@ -179,7 +179,7 @@ lib/quakeforge/console_server.la
 lib/quakeforge/snd_output_disk.la
 lib/quakeforge/snd_output_oss.la
 lib/quakeforge/snd_output_sdl.la
-${COND_SUN}lib/quakeforge/snd_output_sun.la
+${PLIST.sunaudio}lib/quakeforge/snd_output_sun.la
 lib/quakeforge/snd_render_default.la
 lib/ruamoko/libcsqc.a
 lib/ruamoko/libgui.a

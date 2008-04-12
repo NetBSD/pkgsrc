@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2007/02/16 15:47:39 obache Exp $
+# $NetBSD: options.mk,v 1.3 2008/04/12 22:43:03 jlam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.bogofilter
 PKG_OPTIONS_REQUIRED_GROUPS=	database
@@ -13,12 +13,11 @@ CONFIGURE_ARGS+=		--with-database=db
 BUILDLINK_TRANSFORM+=		l:db:db4
 .endif
 
+PLIST_VARS+=			qdbm
 .if !empty(PKG_OPTIONS:Mqdbm)
 CONFIGURE_ARGS+=		--with-database=qdbm
-PLIST_SUBST+=			QDBM=
+PLIST.qdbm=			yes
 .include "../../databases/qdbm/buildlink3.mk"
-.else
-PLIST_SUBST+=			QDBM="@comment "
 .endif
 
 .if !empty(PKG_OPTIONS:Msqlite)

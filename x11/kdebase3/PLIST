@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.49 2008/01/04 21:05:56 markd Exp $
+@comment $NetBSD: PLIST,v 1.50 2008/04/12 22:43:14 jlam Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -53,7 +53,7 @@ bin/klipper
 bin/klocaldomainurifilterhelper
 bin/kmenuedit
 bin/knetattach
-${HAVE_COMPOSITE}bin/kompmgr
+${PLIST.composite}bin/kompmgr
 bin/konqueror
 bin/konsole
 bin/kpager
@@ -181,7 +181,7 @@ lib/kde3/kcm_icons.la
 lib/kde3/kcm_info.la
 lib/kde3/kcm_input.la
 lib/kde3/kcm_ioslaveinfo.la
-${HAVE_JOYSTICK}lib/kde3/kcm_joystick.la
+${PLIST.joystick}lib/kde3/kcm_joystick.la
 lib/kde3/kcm_kded.la
 lib/kde3/kcm_kdm.la
 lib/kde3/kcm_kdnssd.la
@@ -216,7 +216,7 @@ lib/kde3/kcm_smserver.la
 lib/kde3/kcm_spellchecking.la
 lib/kde3/kcm_style.la
 lib/kde3/kcm_taskbar.la
-${HAVE_USBVIEW}lib/kde3/kcm_usb.la
+${PLIST.usbview}lib/kde3/kcm_usb.la
 lib/kde3/kcm_useraccount.la
 lib/kde3/kcm_xinerama.la
 lib/kde3/kcminit.la
@@ -273,7 +273,7 @@ lib/kde3/kio_print.la
 lib/kde3/kio_remote.la
 lib/kde3/kio_settings.la
 lib/kde3/kio_sftp.la
-${HAVE_SMB}lib/kde3/kio_smb.la
+${PLIST.smb}lib/kde3/kio_smb.la
 lib/kde3/kio_smtp.la
 lib/kde3/kio_system.la
 lib/kde3/kio_tar.la
@@ -414,7 +414,7 @@ share/applications/kde/installktheme.desktop
 share/applications/kde/interrupts.desktop
 share/applications/kde/ioports.desktop
 share/applications/kde/ioslaveinfo.desktop
-${HAVE_JOYSTICK}share/applications/kde/joystick.desktop
+${PLIST.joystick}share/applications/kde/joystick.desktop
 share/applications/kde/kappfinder.desktop
 share/applications/kde/kate.desktop
 share/applications/kde/kcm_kdnssd.desktop
@@ -431,7 +431,7 @@ share/applications/kde/kcmnotify.desktop
 share/applications/kde/kcmperformance.desktop
 share/applications/kde/kcmsmserver.desktop
 share/applications/kde/kcmtaskbar.desktop
-${HAVE_USBVIEW}share/applications/kde/kcmusb.desktop
+${PLIST.usbview}share/applications/kde/kcmusb.desktop
 share/applications/kde/kdepasswd.desktop
 share/applications/kde/kdeprintfax.desktop
 share/applications/kde/kdm.desktop
@@ -2257,7 +2257,7 @@ share/kde/apps/kcmkeys/win3.kksrc
 share/kde/apps/kcmkeys/win4.kksrc
 share/kde/apps/kcmkeys/wm3.kksrc
 share/kde/apps/kcmlocale/pics/background.png
-${HAVE_USBVIEW}share/kde/apps/kcmusb/usb.ids
+${PLIST.usbview}share/kde/apps/kcmusb/usb.ids
 share/kde/apps/kconf_update/convertShortcuts.pl
 share/kde/apps/kconf_update/favicons.upd
 share/kde/apps/kconf_update/kaccel.upd
@@ -2800,7 +2800,7 @@ share/kde/apps/konqueror/about/plugins_rtl.html
 share/kde/apps/konqueror/about/specs.html
 share/kde/apps/konqueror/about/tips.html
 share/kde/apps/konqueror/about/top-right-konqueror.png
-${HAVE_SMB}share/kde/apps/konqueror/dirtree/remote/smb-network.desktop
+${PLIST.smb}share/kde/apps/konqueror/dirtree/remote/smb-network.desktop
 share/kde/apps/konqueror/icons/crystalsvg/16x16/actions/kde1.png
 share/kde/apps/konqueror/icons/crystalsvg/16x16/actions/kde2.png
 share/kde/apps/konqueror/icons/crystalsvg/16x16/actions/kde3.png
@@ -3015,7 +3015,7 @@ share/kde/apps/kwrite/kwriteui.rc
 share/kde/apps/naughtyapplet/pics/naughty-happy.png
 share/kde/apps/naughtyapplet/pics/naughty-sad.png
 share/kde/apps/plugin/nspluginpart.rc
-${HAVE_SMB}share/kde/apps/remoteview/smb-network.desktop
+${PLIST.smb}share/kde/apps/remoteview/smb-network.desktop
 share/kde/apps/systemview/documents.desktop
 share/kde/apps/systemview/home.desktop
 share/kde/apps/systemview/media.desktop
@@ -3062,8 +3062,8 @@ share/kde/doc/kdm/README
 share/kde/mimelnk/application/x-konsole.desktop
 share/kde/mimelnk/application/x-ksysguard.desktop
 share/kde/mimelnk/application/x-ktheme.desktop
-${HAVE_SMB}share/kde/mimelnk/application/x-smb-server.desktop
-${HAVE_SMB}share/kde/mimelnk/application/x-smb-workgroup.desktop
+${PLIST.smb}share/kde/mimelnk/application/x-smb-server.desktop
+${PLIST.smb}share/kde/mimelnk/application/x-smb-workgroup.desktop
 share/kde/mimelnk/fonts/folder.desktop
 share/kde/mimelnk/fonts/package.desktop
 share/kde/mimelnk/fonts/system-folder.desktop
@@ -3266,7 +3266,7 @@ share/kde/services/searchproviders/wiktionary.desktop
 share/kde/services/searchproviders/wordref.desktop
 share/kde/services/settings.protocol
 share/kde/services/sftp.protocol
-${HAVE_SMB}share/kde/services/smb.protocol
+${PLIST.smb}share/kde/services/smb.protocol
 share/kde/services/smtp.protocol
 share/kde/services/smtps.protocol
 share/kde/services/system.protocol
@@ -4397,7 +4397,7 @@ share/locale/l10n/zw/flag.png
 @dirrm share/kde/apps/kcontrol/about
 @comment in kde: @dirrm share/kde/apps/kcontrol
 @comment in kde: @dirrm share/kde/apps/kconf_update
-${HAVE_USBVIEW}@dirrm share/kde/apps/kcmusb
+${PLIST.usbview}@dirrm share/kde/apps/kcmusb
 @dirrm share/kde/apps/kcmlocale/pics
 @dirrm share/kde/apps/kcmlocale
 @dirrm share/kde/apps/kcmkeys

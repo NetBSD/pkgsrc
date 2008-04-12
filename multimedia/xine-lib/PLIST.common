@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.23 2008/04/10 11:48:58 drochner Exp $
+@comment $NetBSD: PLIST.common,v 1.24 2008/04/12 22:43:08 jlam Exp $
 bin/xine-config
 include/xine.h
 include/xine/alphablend.h
@@ -51,8 +51,8 @@ lib/xine/plugins/1.20/post/xineplug_post_planar.a
 lib/xine/plugins/1.20/post/xineplug_post_planar.so
 lib/xine/plugins/1.20/post/xineplug_post_switch.a
 lib/xine/plugins/1.20/post/xineplug_post_switch.so
-${HAVE_XV}lib/xine/plugins/1.20/post/xineplug_post_tvtime.a
-${HAVE_XV}lib/xine/plugins/1.20/post/xineplug_post_tvtime.so
+${PLIST.xv}lib/xine/plugins/1.20/post/xineplug_post_tvtime.a
+${PLIST.xv}lib/xine/plugins/1.20/post/xineplug_post_tvtime.so
 lib/xine/plugins/1.20/post/xineplug_post_visualizations.a
 lib/xine/plugins/1.20/post/xineplug_post_visualizations.so
 lib/xine/plugins/1.20/xineplug_ao_out_file.a
@@ -193,8 +193,8 @@ lib/xine/plugins/1.20/xineplug_vo_out_none.so
 @comment lib/xine/plugins/1.20/xineplug_vo_out_sdl.so
 lib/xine/plugins/1.20/xineplug_vo_out_xshm.a
 lib/xine/plugins/1.20/xineplug_vo_out_xshm.so
-${HAVE_XV}lib/xine/plugins/1.20/xineplug_vo_out_xv.a
-${HAVE_XV}lib/xine/plugins/1.20/xineplug_vo_out_xv.so
+${PLIST.xv}lib/xine/plugins/1.20/xineplug_vo_out_xv.a
+${PLIST.xv}lib/xine/plugins/1.20/xineplug_vo_out_xv.so
 man/man1/xine-config.1
 man/man5/xine.5
 share/aclocal/xine.m4

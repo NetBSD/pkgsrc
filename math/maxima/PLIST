@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.9 2008/01/28 12:08:49 reinoud Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/04/12 22:43:04 jlam Exp $
 bin/maxima
 bin/rmaxima
 bin/xmaxima
 info/maxima-index.lisp
 info/maxima.info
 info/xmaxima.info
-${clisp}lib/maxima/${PKGVERSION}/binary-clisp/lisp.run
-${clisp}lib/maxima/${PKGVERSION}/binary-clisp/maxima.mem
-${sbcl}lib/maxima/${PKGVERSION}/binary-sbcl/maxima.core
+${PLIST.clisp}lib/maxima/${PKGVERSION}/binary-clisp/lisp.run
+${PLIST.clisp}lib/maxima/${PKGVERSION}/binary-clisp/maxima.mem
+${PLIST.sbcl}lib/maxima/${PKGVERSION}/binary-sbcl/maxima.core
 libexec/maxima/${PKGVERSION}/mgnuplot
 man/man1/maxima.1
 share/maxima/${PKGVERSION}/demo/array.dem
@@ -1646,7 +1646,7 @@ share/maxima/${PKGVERSION}/xmaxima/plotmaxima.html
 @dirrm share/maxima
 @dirrm libexec/maxima/${PKGVERSION}
 @dirrm libexec/maxima
-${clisp}@dirrm lib/maxima/${PKGVERSION}/binary-clisp
-${sbcl}@dirrm lib/maxima/${PKGVERSION}/binary-sbcl
+${PLIST.clisp}@dirrm lib/maxima/${PKGVERSION}/binary-clisp
+${PLIST.sbcl}@dirrm lib/maxima/${PKGVERSION}/binary-sbcl
 @dirrm lib/maxima/${PKGVERSION}
 @dirrm lib/maxima

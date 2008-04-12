@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.41 2007/11/13 11:19:18 markd Exp $
+@comment $NetBSD: PLIST,v 1.42 2008/04/12 22:43:14 jlam Exp $
 bin/artsmessage
 bin/checkXML
-${CUPS}bin/cupsdconf
-${CUPS}bin/cupsdoprint
+${PLIST.cups}bin/cupsdconf
+${PLIST.cups}bin/cupsdoprint
 bin/dcop
 bin/dcopclient
 bin/dcopfind
@@ -55,7 +55,7 @@ bin/ktradertest
 bin/kunittestmodrunner
 bin/kwrapper
 bin/lnusertemp
-${CUPS}bin/make_driver_db_cups
+${PLIST.cups}bin/make_driver_db_cups
 bin/make_driver_db_lpr
 bin/makekdewidgets
 bin/meinproc
@@ -757,7 +757,7 @@ include/renamedlgplugin.h
 include/scriptclientinterface.h
 include/scriptinterface.h
 include/scriptmanager.h
-${CUPS}lib/kde3/cupsdconf.la
+${PLIST.cups}lib/kde3/cupsdconf.la
 lib/kde3/dcopserver.la
 lib/kde3/kabc_dir.la
 lib/kde3/kabc_file.la
@@ -770,7 +770,7 @@ lib/kde3/kcm_kresources.la
 lib/kde3/kcmshell.la
 lib/kde3/kconf_update.la
 lib/kde3/kcookiejar.la
-${KDED_WORKAROUND}lib/kde3/kded.la
+${PLIST.kded}lib/kde3/kded.la
 lib/kde3/kded_kcookiejar.la
 lib/kde3/kded_kdeprintd.la
 lib/kde3/kded_kdetrayproxy.la
@@ -778,7 +778,7 @@ lib/kde3/kded_kpasswdserver.la
 lib/kde3/kded_kssld.la
 lib/kde3/kded_kwalletd.la
 lib/kde3/kded_proxyscout.la
-${CUPS}lib/kde3/kdeprint_cups.la
+${PLIST.cups}lib/kde3/kdeprint_cups.la
 lib/kde3/kdeprint_ext.la
 lib/kde3/kdeprint_lpdunix.la
 lib/kde3/kdeprint_lpr.la
@@ -843,7 +843,7 @@ lib/libkdecore.la
 lib/libkdefakes.la
 lib/libkdefakes_nonpic.a
 lib/libkdefx.la
-${CUPS}lib/libkdeinit_cupsdconf.la
+${PLIST.cups}lib/libkdeinit_cupsdconf.la
 lib/libkdeinit_dcopserver.la
 lib/libkdeinit_kaddprinterwizard.la
 lib/libkdeinit_kbuildsycoca.la
@@ -3057,8 +3057,8 @@ share/kde/apps/kconf_update/proxytype.pl
 share/kde/apps/kconf_update/useragent.pl
 share/kde/apps/kdeprint/apsdriver1
 share/kde/apps/kdeprint/apsdriver2
-${CUPS}share/kde/apps/kdeprint/cups_logo.png
-${CUPS}share/kde/apps/kdeprint/cupsd.conf.template
+${PLIST.cups}share/kde/apps/kdeprint/cups_logo.png
+${PLIST.cups}share/kde/apps/kdeprint/cupsd.conf.template
 share/kde/apps/kdeprint/filters/enscript.desktop
 share/kde/apps/kdeprint/filters/enscript.xml
 share/kde/apps/kdeprint/filters/imagetops.desktop
@@ -3136,7 +3136,7 @@ share/kde/apps/kdeprint/icons/crystalsvg/48x48/apps/kdeprint_printer.png
 share/kde/apps/kdeprint/icons/crystalsvg/48x48/apps/kdeprint_printer_class.png
 share/kde/apps/kdeprint/icons/crystalsvg/64x64/apps/kdeprint_printer.png
 share/kde/apps/kdeprint/icons/crystalsvg/64x64/apps/kdeprint_printer_class.png
-${CUPS}share/kde/apps/kdeprint/kde_logo.png
+${PLIST.cups}share/kde/apps/kdeprint/kde_logo.png
 share/kde/apps/kdeprint/lprngtooldriver1
 share/kde/apps/kdeprint/pics/kdeprint_collate.png
 share/kde/apps/kdeprint/pics/kdeprint_collate_reverse.png
@@ -3156,13 +3156,13 @@ share/kde/apps/kdeprint/pics/kdeprint_revlandscape.png
 share/kde/apps/kdeprint/pics/kdeprint_revportrait.png
 share/kde/apps/kdeprint/pics/kdeprint_uncollate.png
 share/kde/apps/kdeprint/pics/kdeprint_uncollate_reverse.png
-${CUPS}share/kde/apps/kdeprint/plugins/cups.print
+${PLIST.cups}share/kde/apps/kdeprint/plugins/cups.print
 share/kde/apps/kdeprint/plugins/ext.print
 share/kde/apps/kdeprint/plugins/lpdunix.print
 share/kde/apps/kdeprint/plugins/lpr.print
 share/kde/apps/kdeprint/plugins/rlpr.print
-${CUPS}share/kde/apps/kdeprint/preview-mini.png
-${CUPS}share/kde/apps/kdeprint/preview.png
+${PLIST.cups}share/kde/apps/kdeprint/preview-mini.png
+${PLIST.cups}share/kde/apps/kdeprint/preview.png
 share/kde/apps/kdeprint/side.png
 share/kde/apps/kdeprint/specials.desktop
 share/kde/apps/kdeprint/testprint.ps

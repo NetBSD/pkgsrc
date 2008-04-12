@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2007/09/25 15:38:54 hira Exp $
+# $NetBSD: options.mk,v 1.11 2008/04/12 22:42:58 jlam Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -10,6 +10,8 @@ PKG_OPTIONS_OPTIONAL_GROUPS=	spell
 PKG_SUGGESTED_OPTIONS=	ssl
 
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=		dbus
 
 ###
 ### Use OpenSSL libraries for connecting to ircs servers
@@ -49,7 +51,7 @@ CONFIGURE_ARGS+=	--disable-shm
 ###
 .if !empty(PKG_OPTIONS:Mgnome)
 CONFIGURE_ARGS+=	--enable-dbus
-PLIST_SUBST+=		GNOME=""
+PLIST.dbus=		yes
 SUBST_CLASSES+=		gconf
 SUBST_STAGE.gconf+=	pre-configure
 SUBST_MESSAGE.gconf+=	Disabling schema registration/installation.
@@ -61,7 +63,6 @@ USE_DIRS+=		gnome2-1.5
 .else
 # We set this to ${FALSE} to avoid detection.
 CONFIGURE_ARGS+=	--disable-dbus
-PLIST_SUBST=		GNOME="@comment "
 USE_DIRS+=		xdg-1.1
 .endif
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/11/19 00:10:31 hubertf Exp $
+# $NetBSD: Makefile,v 1.10 2008/04/12 22:42:58 jlam Exp $
 #
 
 DISTNAME=		cmus-2.1.0
@@ -18,11 +18,10 @@ CONFIGURE_ARGS+=	prefix=${PREFIX}
 CONFIGURE_ARGS+=	CONFIG_ALSA=n
 CONFIGURE_ARGS+=	CONFIG_OSS=y
 CONFIGURE_ARGS+=	mandir=${PREFIX}/${PKGMANDIR}/
+PLIST_VARS=		sunaudio
 
 .if exists(/usr/include/sys/audioio.h)
-PLIST_SUBST+=	SUN=""
-.else
-PLIST_SUBST+=	SUN="@comment "
+PLIST.sunaudio=		yes
 .endif
 
 .include "../../mk/bsd.prefs.mk"

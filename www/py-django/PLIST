@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/08/11 17:20:16 joerg Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/04/12 22:43:13 jlam Exp $
 bin/django-admin.py
 ${PYSITELIB}/django/__init__.py
 ${PYSITELIB}/django/__init__.pyc
@@ -691,21 +691,21 @@ ${PYSITELIB}/django/db/backends/dummy/creation.pyo
 ${PYSITELIB}/django/db/backends/dummy/introspection.py
 ${PYSITELIB}/django/db/backends/dummy/introspection.pyc
 ${PYSITELIB}/django/db/backends/dummy/introspection.pyo
-${COND_MYSQL}${PYSITELIB}/django/db/backends/mysql/__init__.py
-${COND_MYSQL}${PYSITELIB}/django/db/backends/mysql/__init__.pyc
-${COND_MYSQL}${PYSITELIB}/django/db/backends/mysql/__init__.pyo
-${COND_MYSQL}${PYSITELIB}/django/db/backends/mysql/base.py
-${COND_MYSQL}${PYSITELIB}/django/db/backends/mysql/base.pyc
-${COND_MYSQL}${PYSITELIB}/django/db/backends/mysql/base.pyo
-${COND_MYSQL}${PYSITELIB}/django/db/backends/mysql/client.py
-${COND_MYSQL}${PYSITELIB}/django/db/backends/mysql/client.pyc
-${COND_MYSQL}${PYSITELIB}/django/db/backends/mysql/client.pyo
-${COND_MYSQL}${PYSITELIB}/django/db/backends/mysql/creation.py
-${COND_MYSQL}${PYSITELIB}/django/db/backends/mysql/creation.pyc
-${COND_MYSQL}${PYSITELIB}/django/db/backends/mysql/creation.pyo
-${COND_MYSQL}${PYSITELIB}/django/db/backends/mysql/introspection.py
-${COND_MYSQL}${PYSITELIB}/django/db/backends/mysql/introspection.pyc
-${COND_MYSQL}${PYSITELIB}/django/db/backends/mysql/introspection.pyo
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/__init__.py
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/__init__.pyc
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/__init__.pyo
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/base.py
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/base.pyc
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/base.pyo
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/client.py
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/client.pyc
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/client.pyo
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/creation.py
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/creation.pyc
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/creation.pyo
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/introspection.py
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/introspection.pyc
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/introspection.pyo
 ${PYSITELIB}/django/db/backends/mysql_old/__init__.py
 ${PYSITELIB}/django/db/backends/mysql_old/__init__.pyc
 ${PYSITELIB}/django/db/backends/mysql_old/__init__.pyo
@@ -721,51 +721,51 @@ ${PYSITELIB}/django/db/backends/mysql_old/creation.pyo
 ${PYSITELIB}/django/db/backends/mysql_old/introspection.py
 ${PYSITELIB}/django/db/backends/mysql_old/introspection.pyc
 ${PYSITELIB}/django/db/backends/mysql_old/introspection.pyo
-${COND_PSYCOPG1}${PYSITELIB}/django/db/backends/postgresql/__init__.py
-${COND_PSYCOPG1}${PYSITELIB}/django/db/backends/postgresql/__init__.pyc
-${COND_PSYCOPG1}${PYSITELIB}/django/db/backends/postgresql/__init__.pyo
-${COND_PSYCOPG1}${PYSITELIB}/django/db/backends/postgresql/base.py
-${COND_PSYCOPG1}${PYSITELIB}/django/db/backends/postgresql/base.pyc
-${COND_PSYCOPG1}${PYSITELIB}/django/db/backends/postgresql/base.pyo
-${COND_PSYCOPG1}${PYSITELIB}/django/db/backends/postgresql/client.py
-${COND_PSYCOPG1}${PYSITELIB}/django/db/backends/postgresql/client.pyc
-${COND_PSYCOPG1}${PYSITELIB}/django/db/backends/postgresql/client.pyo
-${COND_PSYCOPG1}${PYSITELIB}/django/db/backends/postgresql/creation.py
-${COND_PSYCOPG1}${PYSITELIB}/django/db/backends/postgresql/creation.pyc
-${COND_PSYCOPG1}${PYSITELIB}/django/db/backends/postgresql/creation.pyo
-${COND_PSYCOPG1}${PYSITELIB}/django/db/backends/postgresql/introspection.py
-${COND_PSYCOPG1}${PYSITELIB}/django/db/backends/postgresql/introspection.pyc
-${COND_PSYCOPG1}${PYSITELIB}/django/db/backends/postgresql/introspection.pyo
-${COND_PSYCOPG2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/__init__.py
-${COND_PSYCOPG2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/__init__.pyc
-${COND_PSYCOPG2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/__init__.pyo
-${COND_PSYCOPG2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.py
-${COND_PSYCOPG2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.pyc
-${COND_PSYCOPG2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.pyo
-${COND_PSYCOPG2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.py
-${COND_PSYCOPG2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.pyc
-${COND_PSYCOPG2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.pyo
-${COND_PSYCOPG2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.py
-${COND_PSYCOPG2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.pyc
-${COND_PSYCOPG2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.pyo
-${COND_PSYCOPG2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.py
-${COND_PSYCOPG2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.pyc
-${COND_PSYCOPG2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.pyo
-${COND_SQLITE}${PYSITELIB}/django/db/backends/sqlite3/__init__.py
-${COND_SQLITE}${PYSITELIB}/django/db/backends/sqlite3/__init__.pyc
-${COND_SQLITE}${PYSITELIB}/django/db/backends/sqlite3/__init__.pyo
-${COND_SQLITE}${PYSITELIB}/django/db/backends/sqlite3/base.py
-${COND_SQLITE}${PYSITELIB}/django/db/backends/sqlite3/base.pyc
-${COND_SQLITE}${PYSITELIB}/django/db/backends/sqlite3/base.pyo
-${COND_SQLITE}${PYSITELIB}/django/db/backends/sqlite3/client.py
-${COND_SQLITE}${PYSITELIB}/django/db/backends/sqlite3/client.pyc
-${COND_SQLITE}${PYSITELIB}/django/db/backends/sqlite3/client.pyo
-${COND_SQLITE}${PYSITELIB}/django/db/backends/sqlite3/creation.py
-${COND_SQLITE}${PYSITELIB}/django/db/backends/sqlite3/creation.pyc
-${COND_SQLITE}${PYSITELIB}/django/db/backends/sqlite3/creation.pyo
-${COND_SQLITE}${PYSITELIB}/django/db/backends/sqlite3/introspection.py
-${COND_SQLITE}${PYSITELIB}/django/db/backends/sqlite3/introspection.pyc
-${COND_SQLITE}${PYSITELIB}/django/db/backends/sqlite3/introspection.pyo
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/__init__.py
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/__init__.pyc
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/__init__.pyo
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/base.py
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/base.pyc
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/base.pyo
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/client.py
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/client.pyc
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/client.pyo
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/creation.py
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/creation.pyc
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/creation.pyo
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/introspection.py
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/introspection.pyc
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/introspection.pyo
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/__init__.py
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/__init__.pyc
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/__init__.pyo
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.py
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.pyc
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.pyo
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.py
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.pyc
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.pyo
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.py
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.pyc
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.pyo
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.py
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.pyc
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.pyo
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/__init__.py
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/__init__.pyc
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/__init__.pyo
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/base.py
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/base.pyc
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/base.pyo
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/client.py
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/client.pyc
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/client.pyo
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/creation.py
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/creation.pyc
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/creation.pyo
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/introspection.py
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/introspection.pyc
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/introspection.pyo
 ${PYSITELIB}/django/db/backends/util.py
 ${PYSITELIB}/django/db/backends/util.pyc
 ${PYSITELIB}/django/db/backends/util.pyo
@@ -1095,11 +1095,11 @@ ${PYSITELIB}/django/views/static.pyo
 @dirrm ${PYSITELIB}/django/dispatch
 @dirrm ${PYSITELIB}/django/db/models/fields
 @dirrm ${PYSITELIB}/django/db/models
-${COND_SQLITE}@dirrm ${PYSITELIB}/django/db/backends/sqlite3
-${COND_PSYCOPG2}@dirrm ${PYSITELIB}/django/db/backends/postgresql_psycopg2
-${COND_PSYCOPG1}@dirrm ${PYSITELIB}/django/db/backends/postgresql
+${PLIST.sqlite}@dirrm ${PYSITELIB}/django/db/backends/sqlite3
+${PLIST.psycopg2}@dirrm ${PYSITELIB}/django/db/backends/postgresql_psycopg2
+${PLIST.psycopg1}@dirrm ${PYSITELIB}/django/db/backends/postgresql
 @dirrm ${PYSITELIB}/django/db/backends/mysql_old
-${COND_MYSQL}@dirrm ${PYSITELIB}/django/db/backends/mysql
+${PLIST.mysql}@dirrm ${PYSITELIB}/django/db/backends/mysql
 @dirrm ${PYSITELIB}/django/db/backends/dummy
 @dirrm ${PYSITELIB}/django/db/backends
 @dirrm ${PYSITELIB}/django/db

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/10/17 14:25:43 drochner Exp $
+# $NetBSD: Makefile,v 1.13 2008/04/12 22:43:04 jlam Exp $
 #
 
 DISTNAME=	numarray-1.5.2
@@ -13,11 +13,10 @@ COMMENT=	Array manipulation
 PYDISTUTILSPKG=		yes
 PYTHON_VERSIONS_ACCEPTED= 24 23 22
 
+PLIST_VARS+=	blas
 .if exists(/System/Library/Frameworks/vecLib.framework/Headers)
 BUILDLINK_PASSTHRU_DIRS+=	/System/Library/Frameworks/vecLib.framework/Headers
-PLIST_SUBST+=	DOTBLAS=""
-.else
-PLIST_SUBST+=	DOTBLAS="@comment "
+PLIST.blas=	yes
 .endif
 
 do-test:

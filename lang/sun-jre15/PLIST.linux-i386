@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.6 2008/01/07 19:56:27 tron Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.7 2008/04/12 22:43:03 jlam Exp $
 bin/sun15-java
 bin/sun15-javaws
 bin/sun15-keytool
@@ -185,8 +185,8 @@ java/sun-1.5/lib/plugin.jar
 java/sun-1.5/lib/psfont.properties.ja.default
 java/sun-1.5/lib/psfontj2d.properties.default
 java/sun-1.5/lib/rt.jar
-${SUN_JRE15_USE_JCE}java/sun-1.5/lib/security/COPYRIGHT.html
-${SUN_JRE15_USE_JCE}java/sun-1.5/lib/security/README.txt
+${PLIST.jce}java/sun-1.5/lib/security/COPYRIGHT.html
+${PLIST.jce}java/sun-1.5/lib/security/README.txt
 java/sun-1.5/lib/security/US_export_policy.jar
 java/sun-1.5/lib/security/cacerts
 java/sun-1.5/lib/security/java.policy

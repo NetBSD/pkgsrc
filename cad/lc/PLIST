@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2007/02/24 00:54:26 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/04/12 22:42:58 jlam Exp $
 bin/lc
 bin/lcplot
-${HAVE_LCSPICE}bin/lcspice
+${PLIST.lcspice}bin/lcspice
 share/lc2.10/README
 share/lc2.10/app-defaults/Lc
 share/lc2.10/app-defaults/Lcplot

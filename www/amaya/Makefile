@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2006/10/07 19:16:57 schwarz Exp $
+# $NetBSD: Makefile,v 1.50 2008/04/12 22:43:13 jlam Exp $
 
 DISTNAME=	amaya-fullsrc-9.2.1
 PKGNAME=	${DISTNAME:S/-fullsrc//}
@@ -30,10 +30,11 @@ FONTS_DIRS.ttf+=	${PREFIX}/share/Amaya/fonts
 REQD_DIRS+=		${PREFIX}/share/Amaya ${PREFIX}/share/Amaya/fonts
 
 .include "../../mk/bsd.prefs.mk"
+
+# GNOME/KDE integration (only for Linux)
+PLIST_VARS+=	desktop
 .if ${OPSYS} == "Linux"
-PLIST_SUBST+=	LINUX=
-.else
-PLIST_SUBST+=	LINUX="@comment "
+PLIST.desktop=	yes
 .endif
 
 post-extract:

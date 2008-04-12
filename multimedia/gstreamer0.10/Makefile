@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/04/10 11:54:40 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2008/04/12 22:43:07 jlam Exp $
 #
 
 DISTNAME=		gstreamer-0.10.19
@@ -47,12 +47,11 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.gstreamer
 PKG_SUPPORTED_OPTIONS=	gstcheck
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=	gstcheck
 .if !empty(PKG_OPTIONS:Mgstcheck)
 .include "../../devel/check/buildlink3.mk"
-PLIST_SUBST+=	GSTCHECK=""
+PLIST.gstcheck=	yes
 TEST_TARGET=	check-torture
-.else
-PLIST_SUBST+=	GSTCHECK="@comment "
 .endif
 
 .include "../../devel/glib2/buildlink3.mk"

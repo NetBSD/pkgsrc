@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.28 2008/03/08 14:28:32 joerg Exp $
+# $NetBSD: options.mk,v 1.29 2008/04/12 22:43:03 jlam Exp $
 
 # Global and legacy options
 
@@ -68,15 +68,15 @@ CONFIGURE_ARGS+=	--without-ssl
 ###
 ### S/MIME
 ###
+PLIST_VARS+=		smime
 .if !empty(PKG_OPTIONS:Msmime)
 USE_TOOLS+=		perl:run
 REPLACE_PERL+=		*.pl */*.pl
 .  include "../../security/openssl/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-smime
-PLIST_SUBST+=		WITHSMIME=''
+PLIST.smime=		yes
 .else
 CONFIGURE_ARGS+=	--disable-smime
-PLIST_SUBST+=		WITHSMIME='@comment '
 .endif
 
 ###

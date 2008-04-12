@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.8 2006/07/12 17:41:54 rillig Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/04/12 22:43:08 jlam Exp $
 bin/ntp-keygen
 bin/ntp-wait
 bin/ntpd
 bin/ntpdate
 bin/ntpdc
 bin/ntpq
-${TIMETRIM}bin/ntptime
+${PLIST.ntptime}bin/ntptime
 bin/ntptrace
-${TIMETRIM}bin/tickadj
-${NO_TIMETRIM}bin/timetrim
+${PLIST.ntptime}bin/tickadj
+${PLIST.timetrim}bin/timetrim
 share/doc/ntp4/accopt.html
 share/doc/ntp4/assoc.html
 share/doc/ntp4/audio.html

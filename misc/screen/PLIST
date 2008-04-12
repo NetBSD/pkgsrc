@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.10 2006/04/05 23:06:33 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/04/12 22:43:07 jlam Exp $
 bin/screen
 bin/${DISTNAME}
 info/screen.info
 man/man1/screen.1
 share/examples/screen/etcscreenrc
 share/examples/screen/screenrc
-${SCREEN_TERMINFO}share/lib/terminfo/s/screen
-${SCREEN_TERMINFO}share/lib/terminfo/s/screen-bce
-${SCREEN_TERMINFO}share/lib/terminfo/s/screen-s
+${PLIST.terminfo}share/lib/terminfo/s/screen
+${PLIST.terminfo}share/lib/terminfo/s/screen-bce
+${PLIST.terminfo}share/lib/terminfo/s/screen-s
 share/screen/utf8encodings/01
 share/screen/utf8encodings/02
 share/screen/utf8encodings/03
@@ -27,5 +27,5 @@ share/screen/utf8encodings/cd
 share/screen/utf8encodings/d6
 @dirrm share/screen/utf8encodings
 @dirrm share/screen
-${SCREEN_TERMINFO}@unexec ${RMDIR} -p %D/share/lib/terminfo/s 2>/dev/null || ${TRUE}
+${PLIST.terminfo}@unexec ${RMDIR} -p %D/share/lib/terminfo/s 2>/dev/null || ${TRUE}
 @dirrm share/examples/screen

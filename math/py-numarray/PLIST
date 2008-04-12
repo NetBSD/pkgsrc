@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/03/08 17:21:34 minskim Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/04/12 22:43:04 jlam Exp $
 ${PYINC}/numarray/arraybase.h
 ${PYINC}/numarray/arrayif.h
 ${PYINC}/numarray/arrayobject.h
@@ -20,7 +20,7 @@ ${PYSITELIB}/numarray/_bytes.so
 ${PYSITELIB}/numarray/_chararray.so
 ${PYSITELIB}/numarray/_conv.so
 ${PYSITELIB}/numarray/_converter.so
-${DOTBLAS}${PYSITELIB}/numarray/_dotblas.so
+${PLIST.blas}${PYSITELIB}/numarray/_dotblas.so
 ${PYSITELIB}/numarray/_ndarray.so
 ${PYSITELIB}/numarray/_numarray.so
 ${PYSITELIB}/numarray/_numerictype.so
