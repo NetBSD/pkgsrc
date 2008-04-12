@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2008/02/13 19:39:26 drochner Exp $
+@comment $NetBSD: PLIST,v 1.24 2008/04/12 22:43:09 jlam Exp $
 include/libgnomeprint-2.2/libgnomeprint/gnome-font-face.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-font.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-glyphlist.h
@@ -46,7 +46,7 @@ lib/libgnomeprint/${PKGVERSION}/modules/filters/libgnomeprint-reverse.la
 lib/libgnomeprint/${PKGVERSION}/modules/filters/libgnomeprint-rotate.la
 lib/libgnomeprint/${PKGVERSION}/modules/filters/libgnomeprint-select.la
 lib/libgnomeprint/${PKGVERSION}/modules/filters/libgnomeprint-zoom.la
-${USE_CUPS}lib/libgnomeprint/${PKGVERSION}/modules/libgnomeprintcups.la
+${PLIST.cups}lib/libgnomeprint/${PKGVERSION}/modules/libgnomeprintcups.la
 lib/libgnomeprint/${PKGVERSION}/modules/libgnomeprintlpd.la
 lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-custom.la
 lib/libgnomeprint/${PKGVERSION}/modules/transports/libgnomeprint-file.la

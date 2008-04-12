@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/05/28 20:35:38 heinz Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/04/12 22:43:01 jlam Exp $
 radiance/bin/arch2rad
 radiance/bin/bgraph
 radiance/bin/cnt
@@ -26,7 +26,7 @@ radiance/bin/getinfo
 radiance/bin/glare
 radiance/bin/glarendx
 radiance/bin/glaze
-${USE_GL}radiance/bin/glrad
+${PLIST.gl}radiance/bin/glrad
 radiance/bin/histo
 radiance/bin/icalc
 radiance/bin/ies2rad
@@ -123,16 +123,16 @@ radiance/bin/xglaresrc
 radiance/bin/ximage
 radiance/bin/xshowtrace
 radiance/bin/xyzimage
-${USE_GL}radiance/dev/glx1.hdi
-${USE_GL}radiance/dev/glx1h.hdi
-${USE_GL}radiance/dev/ogl.hdi
-${USE_GL}radiance/dev/oglh.hdi
-${USE_GL}radiance/dev/oglo.hdi
-${USE_GL}radiance/dev/ogloh.hdi
-${USE_GL}radiance/dev/ogls.hdi
-${USE_GL}radiance/dev/oglsh.hdi
-${USE_GL}radiance/dev/oglso.hdi
-${USE_GL}radiance/dev/oglsoh.hdi
+${PLIST.gl}radiance/dev/glx1.hdi
+${PLIST.gl}radiance/dev/glx1h.hdi
+${PLIST.gl}radiance/dev/ogl.hdi
+${PLIST.gl}radiance/dev/oglh.hdi
+${PLIST.gl}radiance/dev/oglo.hdi
+${PLIST.gl}radiance/dev/ogloh.hdi
+${PLIST.gl}radiance/dev/ogls.hdi
+${PLIST.gl}radiance/dev/oglsh.hdi
+${PLIST.gl}radiance/dev/oglso.hdi
+${PLIST.gl}radiance/dev/oglsoh.hdi
 radiance/dev/x11.hdi
 radiance/dev/x11h.hdi
 radiance/lib/Earth.cal

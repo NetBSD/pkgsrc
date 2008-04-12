@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/06/10 21:12:51 tonio Exp $
+# $NetBSD: Makefile,v 1.20 2008/04/12 22:42:59 jlam Exp $
 
 DISTNAME=		lbdb_0.35.1
 PKGNAME=		${DISTNAME:S/_/-/}
@@ -33,10 +33,9 @@ EGDIR=			${PREFIX}/share/examples/lbdb
 CONF_FILES+=		${EGDIR}/lbdb.rc ${PKG_SYSCONFDIR}/lbdb.rc
 CONF_FILES+=		${EGDIR}/lbdb_ldap.rc ${PKG_SYSCONFDIR}/lbdb_ldap.rc
 
-.if ${OPSYS} == "Interix"
-PLIST_SUBST+=		WITHYP='@comment '
-.else
-PLIST_SUBST+=		WITHYP=''
+PLIST_VARS+=		yp
+.if ${OPSYS} != "Interix"
+PLIST.yp=		yes
 .endif
 
 .include "../../mk/bsd.pkg.mk"

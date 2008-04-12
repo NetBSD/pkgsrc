@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.2 2005/05/29 11:18:35 minskim Exp $
+@comment $NetBSD: PLIST.common,v 1.3 2008/04/12 22:43:02 jlam Exp $
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
 include/python${PY_VER_SUFFIX}/Python.h
@@ -622,7 +622,7 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/_testcapi.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/_weakref.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/array.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/binascii.so
-${BSDDB}lib/python${PY_VER_SUFFIX}/lib-dynload/bsddb.so
+${PLIST.bsddb}lib/python${PY_VER_SUFFIX}/lib-dynload/bsddb.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/cPickle.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/cStringIO.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/cmath.so
@@ -832,12 +832,12 @@ lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/FCNTL.pyo
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/IN.py
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/IN.pyc
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/IN.pyo
-${PLAT_SOCKET}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SOCKET.py
-${PLAT_SOCKET}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SOCKET.pyc
-${PLAT_SOCKET}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SOCKET.pyo
-${PLAT_TERMIOS}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TERMIOS.py
-${PLAT_TERMIOS}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TERMIOS.pyc
-${PLAT_TERMIOS}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TERMIOS.pyo
+${PLIST.socket}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SOCKET.py
+${PLIST.socket}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SOCKET.pyc
+${PLIST.socket}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/SOCKET.pyo
+${PLIST.termios}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TERMIOS.py
+${PLIST.termios}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TERMIOS.pyc
+${PLIST.termios}lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/TERMIOS.pyo
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/regen
 lib/python${PY_VER_SUFFIX}/popen2.py
 lib/python${PY_VER_SUFFIX}/popen2.pyc

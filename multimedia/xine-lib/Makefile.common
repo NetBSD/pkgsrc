@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2008/04/10 11:48:58 drochner Exp $
+# $NetBSD: Makefile.common,v 1.48 2008/04/12 22:43:08 jlam Exp $
 #
 
 # used by audio/xine-arts/Makefile
@@ -36,12 +36,11 @@ PKGSRC_MAKE_ENV+=	"mkdir_p"="mkdir -p"
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${X11_TYPE} == "native" && !exists(${X11BASE}/lib/libXv.so)
-PLIST_SUBST+=		HAVE_XV="@comment "
-.else
-.include "../../x11/libXv/buildlink3.mk"
+PLIST_VARS+=		xv
+.if ${X11_TYPE} != "native"
+.  include "../../x11/libXv/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-xv-path='${X11BASE}/lib'
-PLIST_SUBST+=		HAVE_XV=
+PLIST.xv=		yes
 .endif
 
 pre-configure:

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2008/03/11 18:47:41 tnn Exp $
+# $NetBSD: Makefile,v 1.55 2008/04/12 22:43:13 jlam Exp $
 #
 
 DISTNAME=		aspell-0.60.5
@@ -46,12 +46,12 @@ PKG_SUPPORTED_OPTIONS=	# none
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=		filters
 .if !empty(PKG_OPTIONS:Maspell-loadable-filters)
 CONFIGURE_ARGS+=	--disable-compile-in-filters
-PLIST_SUBST+=		FILTER=""
+PLIST.filters=		yes
 .else
 CONFIGURE_ARGS+=	--enable-compile-in-filters
-PLIST_SUBST+=		FILTER="@comment "
 .endif
 
 REPLACE_PERL=		scripts/aspell-import

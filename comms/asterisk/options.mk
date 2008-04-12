@@ -1,22 +1,22 @@
-# $NetBSD: options.mk,v 1.2 2006/01/13 20:32:38 riz Exp $
+# $NetBSD: options.mk,v 1.3 2008/04/12 22:42:58 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.asterisk
 PKG_SUPPORTED_OPTIONS=	zaptel gtk
+
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=		zaptel gtk
 
 .if !empty(PKG_OPTIONS:Mzaptel)
 # zaptel only supported under NetBSD at the moment
 .  include "../../comms/zaptel-netbsd/buildlink3.mk"
-PLIST_SUBST+=		ZAPTEL=
+PLIST.zaptel=		yes
 .else
-MAKE_FLAGS+=	WITHOUT_ZAPTEL=1
-PLIST_SUBST+=		ZAPTEL="@comment "
+MAKE_FLAGS+=		WITHOUT_ZAPTEL=1
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk)
 .  include "../../x11/gtk/buildlink3.mk"
-MAKE_FLAGS+=	ASTERISK_USE_GTK=1
-PLIST_SUBST+=		GTK=
-.else
-PLIST_SUBST+=		GTK="@comment "
+MAKE_FLAGS+=		ASTERISK_USE_GTK=1
+PLIST.gtk=		yes
 .endif

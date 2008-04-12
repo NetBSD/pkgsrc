@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2007/12/11 05:27:05 bjs Exp $
+# $NetBSD: Makefile.common,v 1.8 2008/04/12 22:43:00 jlam Exp $
 
 DISTNAME=	ncurses-${NC_VERS}
 NC_VERS=	5.6
@@ -48,12 +48,13 @@ CONFIGURE_ARGS+=	--without-manpage-tbl
 . endif
 .endif
 
+PLIST_VARS+=	not-sunos
+
 .if ${OPSYS} == "SunOS"
-PLIST_SUBST+=	NOT_SUNOS="@comment "
 TERMINFO_SRC=	${WRKSRC}/misc/terminfo.src
 TERMINFODIR=	share/lib/terminfo
 .else
-PLIST_SUBST+=	NOT_SUNOS=""
+PLIST.not-sunos=yes
 TERMINFODIR=	share/terminfo
 .endif
 

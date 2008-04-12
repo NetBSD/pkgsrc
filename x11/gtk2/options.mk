@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2007/10/21 01:18:36 obache Exp $
+# $NetBSD: options.mk,v 1.8 2008/04/12 22:43:14 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gtk2
 PKG_SUPPORTED_OPTIONS=	cups debug
@@ -11,11 +11,11 @@ PKG_SUGGESTED_OPTIONS=		x11
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=		cups
 .if !empty(PKG_OPTIONS:Mcups)
 .include "../../print/cups/buildlink3.mk"
-PLIST_SUBST+=		CUPS=
+PLIST.cups=		yes
 .else
-PLIST_SUBST+=		CUPS="@comment "
 CONFIGURE_ENV+=		ac_cv_path_CUPS_CONFIG=no
 .endif
 
@@ -26,17 +26,16 @@ CONFIGURE_ARGS+=	--enable-debug=yes
 ###
 ### GDK target
 ###
+PLIST_VARS+=		quartz x11
 .if !empty(PKG_OPTIONS:Mquartz)
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--with-gdktarget=quartz
-PLIST_SUBST+=		QUARTZ=""
-PLIST_SUBST+=		X11="@comment "
+PLIST.quartz=		yes
 .else
 CONFIGURE_ARGS+=	--with-xinput=xfree
 CONFIGURE_ENV+=		ac_cv_header_X11_extensions_Xinerama_h=no
 CONFIGURE_ENV+=		ac_cv_lib_Xinerama_XineramaQueryExtension=no
-PLIST_SUBST+=		QUARTZ="@comment "
-PLIST_SUBST+=		X11=""
+PLIST.x11=		yes
 
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2nb2
 

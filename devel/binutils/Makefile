@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/02/28 19:06:34 tnn Exp $
+# $NetBSD: Makefile,v 1.35 2008/04/12 22:42:59 jlam Exp $
 
 DISTNAME=	binutils-2.17
 PKGREVISION=	1
@@ -36,11 +36,10 @@ INFO_FILES=	# PLIST
 
 # gprof (XXX: and others?) cannot be built on all platforms
 #
+PLIST_VARS+=	gprof
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "IRIX"
-PLIST_SUBST+=	NO_GPROF="@comment "
-.else
-PLIST_SUBST+=	NO_GPROF=""
+.if ${OPSYS} != "IRIX"
+PLIST.gprof=	yes
 .endif
 
 # Prevent the need to run texi2pod.pl and pod2man hence
