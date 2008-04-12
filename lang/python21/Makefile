@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/10/04 21:07:52 rillig Exp $
+# $NetBSD: Makefile,v 1.35 2008/04/12 22:43:02 jlam Exp $
 #
 
 DISTNAME=	Python-2.1.3
@@ -35,6 +35,8 @@ INSTALL_TARGET=		altinstall
 
 .include "../../mk/bsd.prefs.mk"
 
+PLIST_VARS=	bsddb socket termios
+
 PLIST_SRC=	${.CURDIR}/../../lang/python21/PLIST.common
 .if exists(${.CURDIR}/../../lang/python21/PLIST.${OPSYS})
 PLIST_SRC+=	${.CURDIR}/../../lang/python21/PLIST.${OPSYS}
@@ -52,29 +54,23 @@ PY_PLATNAME=	${LOWER_OPSYS}${OS_VERSION:C/\..*//}
 .endif
 PLIST_SUBST+=	PY_PLATNAME=${PY_PLATNAME:Q}
 
-PLAT_SOCKET=	"@comment "
-PLAT_TERMIOS=	"@comment "
 .if !empty(MACHINE_PLATFORM:MNetBSD-[2-9].*)
 .  if exists(/usr/include/sys/socket.h)
-PLAT_SOCKET=	""
+PLIST.socket=	yes
 .  endif
 .  if exists(/usr/include/termios.h)
-PLAT_TERMIOS=	""
+PLIST.termios=	yes
 .  endif
 .endif
-PLIST_SUBST+=	PLAT_SOCKET=${PLAT_SOCKET} PLAT_TERMIOS=${PLAT_TERMIOS}
 
 # bsddb.so is not built on Solaris (or IRIX?)
-BSDDB=
-.if ${OPSYS} == "SunOS" || ${OPSYS} == "IRIX"
-BSDDB=		"@comment "
-.else
-.include "../../mk/bdb.buildlink3.mk"
+.if ${OPSYS} != "SunOS" && ${OPSYS} != "IRIX"
+.  include "../../mk/bdb.buildlink3.mk"
+PLIST.bsddb=	yes
 MAKE_ENV+=	PY_BDB_TYPE=${BDB_TYPE:Q}
 MAKE_ENV+=	PY_BDB_INCDIRS=${BDBBASE}/${BUILDLINK_INCDIRS.${BDB_TYPE}}
 MAKE_ENV+=	PY_BDB_LIBDIRS=${BDBBASE}/lib
 .endif
-PLIST_SUBST+=	BSDDB=${BSDDB}
 
 PLIST_SUBST+=	PY_VER_SUFFIX=${PY_VER_SUFFIX:Q}
 

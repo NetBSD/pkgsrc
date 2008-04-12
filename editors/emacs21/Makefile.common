@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2007/10/29 12:38:02 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.3 2008/04/12 22:43:00 jlam Exp $
 
 DISTNAME=	emacs-${EMACSVERSION}a
 
@@ -49,11 +49,11 @@ LDFLAGS+=	-Wl,-z,nocombreloc
 CPPFLAGS+=	-DDFLY_PRE_17_CRT
 .endif
 
+PLIST_VARS+=	fns.el
 .if ${OPSYS} == "Darwin"
-PLIST_SUBST+=	FNS_EL="@comment "
 PLIST_SUBST+=	DOCTAIL=""
 .else
-PLIST_SUBST+=	FNS_EL=""
+PLIST.fns.el=	yes
 PLIST_SUBST+=	DOCTAIL="-${EMACSVERSION}.1"
 .endif
 

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2005/06/18 11:29:10 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/04/12 22:43:08 jlam Exp $
 share/examples/rc.d/adsl
 @exec ${MKDIR} ${PKG_SYSCONFDIR}/speedtouch
 bin/speedtouch-setup
@@ -14,7 +14,7 @@ man/man8/pppoa2.8
 man/man8/pppoa3.8
 sbin/modem_run
 sbin/pppoa2
-${PPPOA3}sbin/pppoa3
+${PLIST.pppoa3}sbin/pppoa3
 share/doc/speedtouch/FAQ
 share/doc/speedtouch/FAQ-fr
 share/doc/speedtouch/INSTALL

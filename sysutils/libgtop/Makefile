@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/03/18 17:46:27 drochner Exp $
+# $NetBSD: Makefile,v 1.18 2008/04/12 22:43:12 jlam Exp $
 
 DISTNAME=		libgtop-2.20.2
 CATEGORIES=		sysutils gnome
@@ -43,18 +43,17 @@ PRINT_PLIST_AWK+=	/^include\/libgtop-2.0\/glibtop_suid.h$$/ \
 CONFIGURE_ENV+=	fu_cv_sys_mounted_getmntinfo=yes
 .endif
 
+PLIST_VARS+=	server suid.h
 .if ${OPSYS} == "Linux"
-PLIST_SUBST+=	LIBGTOP_SERVER="@comment "
-PLIST_SUBST+=	LIBGTOP_SUID_H="@comment "
+#		nothing
 .elif ${OPSYS} == "SunOS"
-PLIST_SUBST+=	LIBGTOP_SERVER=""
-PLIST_SUBST+=	LIBGTOP_SUID_H="@comment "
+PLIST.server=	yes
 .else
-PLIST_SUBST+=	LIBGTOP_SERVER=""
-PLIST_SUBST+=	LIBGTOP_SUID_H=""
+PLIST.server=	yes
+PLIST.suid.h=	yes
 .endif
 
-.if ${OPSYS} != "Linux"
+.if defined(PLIST.server)
 post-install:
 	${CHMOD} g+s ${PREFIX}/bin/libgtop_server2
 .endif

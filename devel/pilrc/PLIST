@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/26 10:22:47 dillo Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/04/12 22:43:00 jlam Exp $
 bin/pilrc
-${PILRCUI}bin/pilrcui
+${PLIST.pilrcui}bin/pilrcui
 share/doc/html/pilrc/archive.html
 share/doc/html/pilrc/contrib.html
 share/doc/html/pilrc/download.html

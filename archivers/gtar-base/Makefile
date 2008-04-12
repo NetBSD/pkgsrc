@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2008/04/02 22:03:07 tonnerre Exp $
+# $NetBSD: Makefile,v 1.62 2008/04/12 22:42:57 jlam Exp $
 
 DISTNAME=	tar-1.15.1
 PKGNAME=	gtar-base-1.15.1
@@ -43,20 +43,17 @@ CONFIGURE_ENV+=		gt_cv_func_gnugettext2_libintl=yes
 PLIST_SUBST+=		GTAR_PROGRAM_PREFIX=${GTAR_PROGRAM_PREFIX:Q}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 BUILD_DEFS+=		GTAR_PROGRAM_PREFIX
+PLIST_VARS+=		gtar rmt
 
 TEST_TARGET=		check
 
 .if ${GTAR_PROGRAM_PREFIX} != "g"
-PLIST_SUBST+=		IF_BIN_GTAR=""
-.else
-PLIST_SUBST+=		IF_BIN_GTAR="@comment "
+PLIST.gtar=		yes
 .endif
 
 # don't include rmt if gtar won't build it
 .if ${OPSYS} != "Interix"
-PLIST_SUBST+=		IF_LIBEXEC_RMT=""
-.else
-PLIST_SUBST+=		IF_LIBEXEC_RMT="@comment "
+PLIST.rmt=		yes
 .endif
 
 post-install:

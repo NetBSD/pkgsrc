@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2007/12/13 07:43:20 obache Exp $
+# $NetBSD: options.mk,v 1.8 2008/04/12 22:43:03 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dbmail
 PKG_SUPPORTED_OPTIONS=	ldap sieve
@@ -8,16 +8,16 @@ PKG_SUGGESTED_OPTIONS=	mysql sieve
 
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=		ldap mysql pgsql sieve sqlite
+
 ###
 ### MySQL database support
 ###
 .if !empty(PKG_OPTIONS:Mmysql)
 .include "../../mk/mysql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-mysql
-PLIST_SUBST+=		MYSQL=""
+PLIST.mysql=		yes
 INSTALLATION_DIRS+=	${DATADIR}/sql/mysql
-.else
-PLIST_SUBST+=		MYSQL="@comment "
 .endif
 
 ###
@@ -26,10 +26,8 @@ PLIST_SUBST+=		MYSQL="@comment "
 .if !empty(PKG_OPTIONS:Mpgsql)
 .include "../../mk/pgsql.buildlink3.mk"
 CONFIGURE_ARGS+=	--with-pgsql
-PLIST_SUBST+=		PGSQL=""
+PLIST.pgsql=		yes
 INSTALLATION_DIRS+=	${DATADIR}/sql/pgsql
-.else
-PLIST_SUBST+=		PGSQL="@comment "
 .endif
 
 ###
@@ -38,10 +36,8 @@ PLIST_SUBST+=		PGSQL="@comment "
 .if !empty(PKG_OPTIONS:Msqlite)
 .include "../../databases/sqlite3/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-sqlite
-PLIST_SUBST+=		SQLITE=""
+PLIST.sqlite=		yes
 INSTALLATION_DIRS+=	${DATADIR}/sql/sqlite
-.else
-PLIST_SUBST+=		SQLITE="@comment "
 .endif
 
 ###
@@ -50,11 +46,10 @@ PLIST_SUBST+=		SQLITE="@comment "
 .if !empty(PKG_OPTIONS:Msieve)
 .include "../../mail/libsieve/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-sieve=${BUILDLINK_PREFIX.libsieve}
-PLIST_SUBST+=		SIEVE=""
+PLIST.sieve=		yes
 FILES_SUBST+=		TIMSIEVED="dbmailtimsieved"
 RCD_SCRIPTS+=		dbmailtimsieved
 .else
-PLIST_SUBST+=		SIEVE="@comment "
 FILES_SUBST+=		TIMSIEVED=""
 .endif
 
@@ -64,9 +59,7 @@ FILES_SUBST+=		TIMSIEVED=""
 .if !empty(PKG_OPTIONS:Mldap)
 .include "../../databases/openldap-client/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap-client}
-PLIST_SUBST+=		LDAP=""
-.else
-PLIST_SUBST+=		LDAP="@comment "
+PLIST.ldap=		yes
 .endif
 
 ###

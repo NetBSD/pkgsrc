@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.29 2008/03/20 03:30:32 schmonz Exp $
+# $NetBSD: options.mk,v 1.30 2008/04/12 22:43:04 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.qmail
 PKG_OPTIONS_OPTIONAL_GROUPS=	rcpt
@@ -45,13 +45,13 @@ PATCHFILES+=		${OUTGOINGIP_PATCH}
 SITES.${OUTGOINGIP_PATCH}=	http://www.qmail.org/
 .endif
 
-PLIST_SUBST+=		QMAIL_QREGEX="@comment "
+PLIST_VARS+=		qregex
 .if !empty(PKG_OPTIONS:Mqmail-qregex)
 QREGEX_PATCH=		qregex-20060423.patch
 PATCHFILES+=		${QREGEX_PATCH}
 SITES.${QREGEX_PATCH}=	http://www.arda.homeunix.net/store/qmail/
 PATCH_DIST_STRIP.${QREGEX_PATCH}=	-p3
-PLIST_SUBST+=		QMAIL_QREGEX=""
+PLIST.qregex=		yes
 .endif
 
 .if !empty(PKG_OPTIONS:Mqmail-realrcptto)
@@ -61,7 +61,7 @@ SITES.${REALRCPTTO_PATCH}=	http://code.dogmap.org/qmail/
 PATCH_DIST_STRIP.${REALRCPTTO_PATCH}=	-p1
 .endif
 
-PLIST_SUBST+=		QMAIL_TLS="@comment "
+PLIST_VARS+=		tls
 .if !empty(PKG_OPTIONS:Msasl) || !empty(PKG_OPTIONS:Mtls)
 .  if empty(PKG_OPTIONS:Msasl)
 PKG_OPTIONS+=		sasl
@@ -74,7 +74,7 @@ SITES.${TLSSASL_PATCH}=	http://shupp.org/patches/
 CFLAGS+=		-DTLS=20060104	# NOTE: update according to the patch
 DJB_INSTALL_TARGETS=	cert tmprsadh
 USE_TOOLS+=		gmake
-PLIST_SUBST+=		QMAIL_TLS=""
+PLIST.tls=		yes
 .  endif
 .endif
 

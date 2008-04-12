@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/01/29 23:05:09 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/04/12 22:43:14 jlam Exp $
 bin/w3m
 bin/w3mman
 man/man1/w3m.1
@@ -56,7 +56,7 @@ share/w3m/w3mhelp-w3m_en.html
 share/w3m/w3mhelp-w3m_ja.html
 share/w3m/w3mhelp.html
 libexec/w3m/inflate
-${USE_IMAGE}libexec/w3m/w3mimgdisplay
+${PLIST.image}libexec/w3m/w3mimgdisplay
 libexec/w3m/cgi-bin/dirlist.cgi
 libexec/w3m/cgi-bin/multipart.cgi
 libexec/w3m/cgi-bin/w3mbookmark

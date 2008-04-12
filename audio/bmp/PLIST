@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2006/07/31 21:43:55 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/04/12 22:42:58 jlam Exp $
 bin/beep-media-player
 include/bmp/beepctrl.h
 include/bmp/configdb.h
@@ -11,7 +11,7 @@ include/bmp/rcfile.h
 include/bmp/titlestring.h
 include/bmp/util.h
 include/bmp/vfs.h
-${CDAUDIO}lib/bmp/Input/libcdaudio.la
+${PLIST.cdaudio}lib/bmp/Input/libcdaudio.la
 lib/bmp/Input/libmpg123.la
 lib/bmp/Input/libvorbis.la
 lib/bmp/Input/libwav.la

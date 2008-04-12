@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2008/03/22 04:40:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.16 2008/04/12 22:43:08 jlam Exp $
 bin/achfile
 bin/acleandir.rc
 bin/adv1tov2
@@ -99,11 +99,11 @@ libexec/netatalk/tfwpaprev
 libexec/netatalk/timelord
 libexec/netatalk/uams/uams_clrtxt.so
 libexec/netatalk/uams/uams_dhx.so
-${PAM}libexec/netatalk/uams/uams_dhx_pam.la
+${PLIST.pam}libexec/netatalk/uams/uams_dhx_pam.la
 libexec/netatalk/uams/uams_dhx_passwd.la
-${GSSAPI}libexec/netatalk/uams/uams_gss.la
+${PLIST.gssapi}libexec/netatalk/uams/uams_gss.la
 libexec/netatalk/uams/uams_guest.la
-${PAM}libexec/netatalk/uams/uams_pam.la
+${PLIST.pam}libexec/netatalk/uams/uams_pam.la
 libexec/netatalk/uams/uams_passwd.la
 libexec/netatalk/uams/uams_randnum.la
 man/man1/achfile.1
@@ -157,7 +157,7 @@ share/examples/netatalk/afpd.conf
 share/examples/netatalk/atalkd.conf
 share/examples/netatalk/netatalk.conf
 share/examples/netatalk/papd.conf
-${PAM}share/examples/netatalk/netatalk.pamd
+${PLIST.pam}share/examples/netatalk/netatalk.pamd
 share/examples/rc.d/afpd
 share/examples/rc.d/atalkd
 share/examples/rc.d/cnid_metad
