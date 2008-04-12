@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.927 2008/04/12 10:57:14 wiz Exp $
+# $NetBSD: Makefile,v 1.928 2008/04/12 13:58:02 wiz Exp $
 #
 
 COMMENT=	Development utilities
@@ -234,6 +234,7 @@ SUBDIR+=	javacc
 SUBDIR+=	javadeps
 SUBDIR+=	jflex
 SUBDIR+=	jgrasp
+SUBDIR+=	js2-mode
 SUBDIR+=	kdbg
 SUBDIR+=	kdesdk3
 SUBDIR+=	kdevelop
