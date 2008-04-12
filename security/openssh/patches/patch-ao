@@ -1,16 +1,11 @@
-$NetBSD: patch-ao,v 1.10 2008/04/03 07:59:08 tonnerre Exp $
+$NetBSD: patch-ao,v 1.10.2.1 2008/04/12 08:56:09 rtr Exp $
+
+One more replacing 0 with ROOTUID is handled by using SUBST framework
+because patch can't handle it when hpn-patch option is enabled.
+So, don't simply update this file with mkpatch command.
 
 --- session.c.orig	2007-08-16 13:28:04.000000000 +0000
 +++ session.c
-@@ -347,7 +347,7 @@ do_authenticated1(Authctxt *authctxt)
- 				break;
- 			}
- 			debug("Received TCP/IP port forwarding request.");
--			if (channel_input_port_forward_request(s->pw->pw_uid == 0,
-+			if (channel_input_port_forward_request(s->pw->pw_uid == ROOTUID,
- 			    options.gateway_ports) < 0) {
- 				debug("Port forwarding failed.");
- 				break;
 @@ -954,7 +954,7 @@ read_etc_default_login(char ***env, u_in
  	if (tmpenv == NULL)
  		return;
