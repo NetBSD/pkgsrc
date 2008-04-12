@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2008/03/11 14:36:13 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2008/04/12 10:16:59 xtraeme Exp $
 
---- src/AtomBios/includes/CD_Common_Types.h.orig	2008-03-11 15:17:08.000000000 +0100
-+++ src/AtomBios/includes/CD_Common_Types.h
-@@ -37,32 +37,8 @@ Revision History:
+--- src/AtomBios/includes/CD_Common_Types.h.orig	2008-04-12 12:14:19.000000000 +0200
++++ src/AtomBios/includes/CD_Common_Types.h	2008-04-12 12:14:36.000000000 +0200
+@@ -37,34 +37,7 @@
  #ifndef _COMMON_TYPES_H_
  	#define _COMMON_TYPES_H_
  
@@ -16,7 +16,9 @@ $NetBSD: patch-aa,v 1.4 2008/03/11 14:36:13 joerg Exp $
 -	//    typedef __int64             int64_t;
 -		typedef unsigned __int32    uint32_t;
 -		typedef __int32             int32_t;
--#elif defined (__linux__) || defined (__NetBSD__) || defined(__sun) || defined(__OpenBSD__) || defined (__FreeBSD__)
+-#elif defined (__linux__) || defined (__NetBSD__) \
+-    || defined(__sun) || defined(__OpenBSD__) \
+-    || defined (__FreeBSD__) || defined(__DragonFly__)
 -		typedef unsigned int uint32_t;
 -		typedef int int32_t;
 -	#else
@@ -33,7 +35,6 @@ $NetBSD: patch-aa,v 1.4 2008/03/11 14:36:13 joerg Exp $
 -		typedef signed short        int16_t;
 -	#endif
 +#include <inttypes.h>
-+
  #ifndef	UEFI_BUILD
  		typedef signed int			intn_t;
  		typedef unsigned int		uintn_t;
