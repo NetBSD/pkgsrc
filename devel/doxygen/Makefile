@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2007/09/23 17:49:08 joerg Exp $
+# $NetBSD: Makefile,v 1.58 2008/04/12 22:42:59 jlam Exp $
 
 DISTNAME=	doxygen-1.5.1.src
 PKGNAME=	doxygen-1.5.1
@@ -27,10 +27,12 @@ CONFIGURE_ARGS+=	--docdir ${PREFIX}/share/doc
 MAKE_ENV+=		PKGSRC_CFLAGS=${CFLAGS:Q}
 MAKE_FLAGS+=		MAN1DIR=${PKGMANDIR}/man1
 
+PLIST_VARS+=		ci cs
+
 .if exists(./descr)
-PLIST_SUBST+=	CASESENSITIVE="@comment " CASEINSENSITIVE=""
+PLIST.ci=		yes	# case-insensitive
 .else
-PLIST_SUBST+=	CASESENSITIVE="" CASEINSENSITIVE="@comment "
+PLIST.cs=		yes	# case-sensitive
 .endif
 
 SUBST_CLASSES+=		pybin

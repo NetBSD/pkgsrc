@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/02/28 08:14:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/04/12 22:43:09 jlam Exp $
 bin/afslog
 bin/compile_et
 bin/gss
@@ -88,7 +88,7 @@ include/krb5/ss/ss.h
 include/krb5/xdbm.h
 info/heimdal.info
 info/hx509.info
-${IF_IRIX}lib/afskauthlib.so
+${PLIST.afskauth}lib/afskauthlib.so
 lib/libasn1.la
 lib/libcom_err.la
 lib/libeditline.la
@@ -825,11 +825,11 @@ sbin/iprop-log
 sbin/kadmin
 sbin/kstash
 sbin/ktutil
-${LDAP}share/examples/heimdal/hdb.schema
+${PLIST.ldap}share/examples/heimdal/hdb.schema
 share/examples/rc.d/kadmind
 share/examples/rc.d/kcm
 share/examples/rc.d/kdc
 share/examples/rc.d/kpasswdd
-${LDAP}@dirrm share/examples/heimdal
+${PLIST.ldap}@dirrm share/examples/heimdal
 @dirrm include/krb5/kadm5
 @dirrm include/krb5/ss

@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.17 2007/05/07 09:29:54 adrianp Exp $
-${HASH}bin/cssstat
-${HASH}bin/csscompress
-${HASH}bin/cssclean
-${HASH}bin/cssconvert
+@comment $NetBSD: PLIST,v 1.18 2008/04/12 22:43:03 jlam Exp $
+${PLIST.hash}bin/cssstat
+${PLIST.hash}bin/csscompress
+${PLIST.hash}bin/cssclean
+${PLIST.hash}bin/cssconvert
 bin/dspam
 bin/dspam_2sql
 bin/dspam_admin
@@ -14,7 +14,7 @@ bin/dspam_merge
 bin/dspam_stats
 bin/dspam_train
 bin/dspamc
-${PGSQL}bin/dspam_pg2int8
+${PLIST.pgsql}bin/dspam_pg2int8
 include/dspam/buffer.h
 include/dspam/config.h
 include/dspam/config_shared.h
@@ -84,27 +84,27 @@ share/dspam/webui/cgi-bin/templates/nav_quarantine.html
 share/dspam/webui/cgi-bin/templates/nav_viewmessage.html
 share/dspam/webui/htdocs/base.css
 share/dspam/webui/htdocs/dspam-logo-small.gif
-${MYSQL}share/dspam/mysql/mysql_objects-4.1.sql
-${MYSQL}share/dspam/mysql/mysql_objects-space.sql
-${MYSQL}share/dspam/mysql/mysql_objects-speed.sql
-${MYSQL}share/dspam/mysql/purge.sql
-${MYSQL}share/dspam/mysql/purge-4.1.sql
-${MYSQL}share/dspam/mysql/virtual_users.sql
-${MYSQL}share/dspam/mysql/virtual_user_aliases.sql
-${PGSQL}share/dspam/pgsql/pgsql_objects.sql
-${PGSQL}share/dspam/pgsql/purge.sql
-${PGSQL}share/dspam/pgsql/virtual_users.sql
-${SQLITE}share/dspam/sqlite/purge-2.sql
-${SQLITE}share/dspam/sqlite/purge-3.sql
+${PLIST.mysql}share/dspam/mysql/mysql_objects-4.1.sql
+${PLIST.mysql}share/dspam/mysql/mysql_objects-space.sql
+${PLIST.mysql}share/dspam/mysql/mysql_objects-speed.sql
+${PLIST.mysql}share/dspam/mysql/purge.sql
+${PLIST.mysql}share/dspam/mysql/purge-4.1.sql
+${PLIST.mysql}share/dspam/mysql/virtual_users.sql
+${PLIST.mysql}share/dspam/mysql/virtual_user_aliases.sql
+${PLIST.pgsql}share/dspam/pgsql/pgsql_objects.sql
+${PLIST.pgsql}share/dspam/pgsql/purge.sql
+${PLIST.pgsql}share/dspam/pgsql/virtual_users.sql
+${PLIST.sqlite}share/dspam/sqlite/purge-2.sql
+${PLIST.sqlite}share/dspam/sqlite/purge-3.sql
 share/examples/dspam/cgi-admins
 share/examples/dspam/cgi-default.prefs
 share/examples/dspam/configure.pl
 share/examples/dspam/dspam.conf
 share/examples/rc.d/dspam
 @dirrm share/examples/dspam
-${PGSQL}@dirrm share/dspam/pgsql
-${MYSQL}@dirrm share/dspam/mysql
-${SQLITE}@dirrm share/dspam/sqlite
+${PLIST.pgsql}@dirrm share/dspam/pgsql
+${PLIST.mysql}@dirrm share/dspam/mysql
+${PLIST.sqlite}@dirrm share/dspam/sqlite
 @dirrm share/dspam/webui/htdocs
 @dirrm share/dspam/webui/cgi-bin/templates
 @dirrm share/dspam/webui/cgi-bin

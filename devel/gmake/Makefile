@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2006/10/09 12:52:34 joerg Exp $
+# $NetBSD: Makefile,v 1.70 2008/04/12 22:42:59 jlam Exp $
 
 DISTNAME=	make-3.81
 PKGNAME=	g${DISTNAME}
@@ -29,10 +29,10 @@ CONFIGURE_ARGS+=	--program-prefix=${GNU_PROGRAM_PREFIX:Q}
 PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
 BUILD_DEFS+=		GNU_PROGRAM_PREFIX
 
+PLIST_VARS+=		gmake
+
 .if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
-PLIST_SUBST+=		GMAKE_LINK=""
-.else
-PLIST_SUBST+=		GMAKE_LINK="@comment "
+PLIST.gmake=		yes
 .endif
 
 PLIST_SRC=		${PKGDIR}/PLIST

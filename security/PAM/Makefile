@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2007/07/09 04:27:55 minskim Exp $
+# $NetBSD: Makefile,v 1.43 2008/04/12 22:43:09 jlam Exp $
 #
 
 DISTNAME=	Linux-PAM-0.77
@@ -47,12 +47,12 @@ PKG_SUPPORTED_OPTIONS=	libcrack
 ###
 ### Support using libcrack to protect against weak passwords.
 ###
+PLIST_VARS+=		libcrack
 .if !empty(PKG_OPTIONS:Mlibcrack)
 .  include "../../security/libcrack/buildlink3.mk"
-PLIST_SUBST+=		USE_LIBCRACK=
+PLIST.libcrack=		yes
 .else
 CONFIGURE_ARGS+=	--disable-crack
-PLIST_SUBST+=		USE_LIBCRACK="@comment "
 .endif
 
 .if !empty(OPSYS:M*BSD)
@@ -69,11 +69,10 @@ EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
 CFILES=			access.conf pam_env.conf group.conf time.conf
 
+PLIST_VARS+=		limits
 .if ${OPSYS} == "Linux"
 CFILES+=		limits.conf
-PLIST_SUBST+=		PAM_LIMITS=
-.else
-PLIST_SUBST+=		PAM_LIMITS="@comment "
+PLIST.limits=		yes
 .endif
 
 CONF_FILES=		${EGDIR}/pam.conf ${PKG_SYSCONFBASEDIR}/pam.conf

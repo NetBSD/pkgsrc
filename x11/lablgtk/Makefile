@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2008/03/04 14:47:29 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2008/04/12 22:43:14 jlam Exp $
 #
 
 DISTNAME=	lablgtk-2.10.1
@@ -21,12 +21,11 @@ CONFLICTS=	lablgtk2-2.*
 .include "../../mk/bsd.prefs.mk"
 
 # Stub libraries for functions missing from base system.
+PLIST_VARS+=	stubs
 .if !empty(MACHINE_PLATFORM:MDarwin-*-powerpc) || \
     ${OPSYS} == "DragonFly" || ${OPSYS} == "NetBSD" || \
     ${OPSYS} == "FreeBSD" || ${OPSYS} == "SunOS"
-PLIST_SUBST+=	HAVE_STUBS=""
-.else
-PLIST_SUBST+=	HAVE_STUBS="@comment "
+PLIST.stubs=	yes
 .endif
 
 .include "options.mk"

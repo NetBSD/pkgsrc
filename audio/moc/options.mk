@@ -1,10 +1,12 @@
-# $NetBSD: options.mk,v 1.3 2008/04/07 16:15:25 bjs Exp $
+# $NetBSD: options.mk,v 1.4 2008/04/12 22:42:58 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.moc
 PKG_SUPPORTED_OPTIONS=	sndfile flac vorbis speex curl samplerate
 PKG_SUGGESTED_OPTIONS=	sndfile flac vorbis curl
 
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=		fac sndfile speex vorbis
 
 .if !empty(PKG_OPTIONS:Msamplerate)
 PKG_OPTIONS+=		sndfile
@@ -15,38 +17,34 @@ CONFIGURE_ARGS+=	--without-samplerate
 .endif
 
 .if !empty(PKG_OPTIONS:Msndfile) || defined(PKG_OPTIONS:Msamplerate)
-PLIST_SUBST+=		SNDFILE=
+PLIST.sndfile=		yes
 CONFIGURE_ARGS+=	--with-sndfile
 .  include "../../audio/libsndfile/buildlink3.mk"
 .else
-PLIST_SUBST+=		SNDFILE='@comment '
 CONFIGURE_ARGS+=	--without-sndfile
 .endif
 
 .if !empty(PKG_OPTIONS:Mflac)
-PLIST_SUBST+=		FLAC=
+PLIST.flac=		yes
 CONFIGURE_ARGS+=	--with-flac
 .  include "../../audio/flac/buildlink3.mk"
 .else
-PLIST_SUBST+=		FLAC='@comment '
 CONFIGURE_ARGS+=	--without-flac
 .endif
 
 .if !empty(PKG_OPTIONS:Mvorbis)
-PLIST_SUBST+=		VORBIS=
+PLIST.vorbis=		yes
 CONFIGURE_ARGS+=	--with-vorbis
 .  include "../../audio/libvorbis/buildlink3.mk"
 .else
-PLIST_SUBST+=		VORBIS='@comment '
 CONFIGURE_ARGS+=	--without-vorbis
 .endif
 
 .if !empty(PKG_OPTIONS:Mspeex)
-PLIST_SUBST+=		SPEEX=
+PLIST.speex=		yes
 CONFIGURE_ARGS+=	--with-speex
 .  include "../../audio/speex/buildlink3.mk"
 .else
-PLIST_SUBST+=		SPEEX='@comment '
 CONFIGURE_ARGS+=	--without-speex
 .endif
 

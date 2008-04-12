@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/08/17 22:27:15 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2008/04/12 22:43:02 jlam Exp $
 
 DISTNAME=	elk-3.99.7
 CATEGORIES=	lang
@@ -14,7 +14,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ENV+=		WITH_XAW=${ELK_AWK:Q}
 
 .include "options.mk"
 

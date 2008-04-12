@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2006/10/11 18:53:38 shannonjr Exp $
+# $NetBSD: options.mk,v 1.5 2008/04/12 22:43:12 jlam Exp $
 #
 
 # XXX This usage of bsd.options.mk is incorrect.  The package should
@@ -11,22 +11,22 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.pinentry
 PKG_SUPPORTED_OPTIONS=	gtk gtk2 qt
 .include "../../mk/bsd.options.mk"
 
+PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
+
 .if !empty(PKG_OPTIONS:Mgtk)
 CONFIGURE_ARGS+=	--enable-pinentry-gtk
-PLIST_SUBST+=		USE_GTK=
+PLIST.gtk=		yes
 .  include "../../x11/gtk/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-pinentry-gtk
-PLIST_SUBST+=		USE_GTK='@comment '
 .endif
 
 .if !empty(PKG_OPTIONS:Mgtk2)
 CONFIGURE_ARGS+=	--enable-pinentry-gtk2
-PLIST_SUBST+=		USE_GTK2=
+PLIST.gtk2=		yes
 .  include "../../x11/gtk2/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-pinentry-gtk2
-PLIST_SUBST+=		USE_GTK2='@comment '
 .endif
 
 .if !empty(PKG_OPTIONS:Mqt)
@@ -36,9 +36,8 @@ CONFIGURE_ARGS+=	--enable-pinentry-qt
 CONFIGURE_ARGS+=	--with-qt-dir=${QTDIR:Q}
 CONFIGURE_ARGS+=	--with-qt-includes=${BUILDLINK_PREFIX.qt3-libs}/qt3/include
 CONFIGURE_ARGS+=	--with-qt-libraries=${BUILDLINK_PREFIX.qt3-libs}/qt3/lib
-PLIST_SUBST+=		USE_QT=
+PLIST.qt=		yes
 .  include "../../x11/qt3-libs/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-pinentry-qt
-PLIST_SUBST+=		USE_QT='@comment '
 .endif

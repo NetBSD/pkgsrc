@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2007/01/19 14:02:39 uebayasi Exp $
+# $NetBSD: options.mk,v 1.7 2008/04/12 22:43:02 jlam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gauche
 PKG_OPTIONS_OPTIONAL_GROUPS=	multibyte
@@ -16,12 +16,11 @@ PKG_OPTIONS_LEGACY_OPTS+=	multibyte:utf8
 ### GDBM extension.  Modules seem to be better tested with GDBM
 ### than NDBM.
 ###
+PLIST_VARS+=	gdbm
 .if !empty(PKG_OPTIONS:Mgdbm)
 .  include "../../databases/gdbm/buildlink3.mk"
-PLIST_SUBST+=	USE_GDBM=''
+PLIST.gdbm=	yes
 MAKE_ENV+=	GDBM_LDFLAGS=${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.gdbm}/lib
-.else
-PLIST_SUBST+=	USE_GDBM='@comment '
 .endif
 
 ###

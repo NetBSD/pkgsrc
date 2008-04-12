@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.173 2008/03/02 15:49:24 adam Exp $
+# $NetBSD: Makefile,v 1.174 2008/04/12 22:43:01 jlam Exp $
 
 DISTNAME=	gimp-2.4.5
 CATEGORIES=	graphics
@@ -48,10 +48,9 @@ CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 # Ensure we export symbols in the linked shared object.
 LDFLAGS+=		${EXPORT_SYMBOLS_LDFLAGS}
 
+PLIST_VARS+=		remote twain
 .if exists(/System/Library/Frameworks/TWAIN.framework)
-PLIST_SUBST+=	TWAIN=""
-.else
-PLIST_SUBST+=	TWAIN="@comment "
+PLIST.twain=		yes
 .endif
 
 .include "options.mk"
@@ -68,10 +67,8 @@ PLIST_SUBST+=	TWAIN="@comment "
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.if empty(PKG_BUILD_OPTIONS.gtk2:Mx11)
-PLIST_SUBST+=	REMOTE="@comment "
-.else
-PLIST_SUBST+=	REMOTE=""
+.if !empty(PKG_BUILD_OPTIONS.gtk2:Mx11)
+PLIST.remote=	yes
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"

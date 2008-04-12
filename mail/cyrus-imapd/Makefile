@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2008/01/18 05:08:22 tnn Exp $
+# $NetBSD: Makefile,v 1.76 2008/04/12 22:43:03 jlam Exp $
 
 DISTNAME=	cyrus-imapd-2.2.13
 PKGREVISION=	5
@@ -74,12 +74,11 @@ CONFIGURE_ARGS+=	--without-krb
 CONFIGURE_ARGS+=	--disable-gssapi
 .endif
 
+PLIST_VARS+=		ldap
 .if !empty(PKG_OPTIONS:Mldap)
 CONFIGURE_ARGS+=	--with-ldap=${BUILDLINK_PREFIX.openldap-client}
+PLIST.ldap=		yes
 .  include "../../databases/openldap-client/buildlink3.mk"
-PLIST_SUBST+=		LDAP=
-.else
-PLIST_SUBST+=		LDAP="@comment "
 .endif
 
 .if exists(/usr/bin/compile_et)
@@ -99,15 +98,14 @@ CONFIGURE_ARGS+=	--with-com-err=yes
 #
 CYRUS_IDLE?=		poll
 BUILD_DEFS+=		CYRUS_IDLE
+PLIST_VARS+=		idled
 .if (${CYRUS_IDLE} != "poll") && (${CYRUS_IDLE} != "idled") && \
     (${CYRUS_IDLE} != "no")
 PKG_FAIL_REASON+=	"CYRUS_IDLE must be poll, idled or no"
 .endif
 CONFIGURE_ARGS+=	--with-idle=${CYRUS_IDLE:Q}
 .if ${CYRUS_IDLE} == "idled"
-PLIST_SUBST+=		IDLED=
-.else
-PLIST_SUBST+=		IDLED="@comment "
+PLIST.idled=		yes
 .endif
 
 MAKE_ENV+=		PERL=${PERL5:Q}
