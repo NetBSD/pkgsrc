@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/04 15:26:51 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/13 06:58:03 jlam Exp $
 
 DISTNAME=	thoth-0.1.2
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -16,9 +17,8 @@ DEPENDS+=	${RUBY_PKGPREFIX}-hpricot>=0.6:../../textproc/ruby-hpricot
 DEPENDS+=	${RUBY_PKGPREFIX}-jsmin>=1.0.0:../../www/ruby-jsmin
 DEPENDS+=	${RUBY_PKGPREFIX}-json-pure>=1.1.2:../../textproc/ruby-json-pure
 DEPENDS+=	${RUBY_PKGPREFIX}-redcloth>=3.0.4:../../textproc/ruby-redcloth
-DEPENDS+=	${RUBY_PKGPREFIX}-sequel-core>=1.3:../../databases/ruby-sequel-core
-DEPENDS+=	${RUBY_PKGPREFIX}-sequel-model>=0.5.0.2:../../databases/ruby-sequel-model
-DEPENDS+=	${RUBY_PKGPREFIX}-sequel>=1.3:../../databases/ruby-sequel
+DEPENDS+=	${RUBY_PKGPREFIX}-sequel-core>=1.4.0:../../databases/ruby-sequel-core
+DEPENDS+=	${RUBY_PKGPREFIX}-sequel>=1.4.0:../../databases/ruby-sequel
 DEPENDS+=	thin>=0.7.1:../../www/thin
 
 GEM_BUILD=	gemspec
