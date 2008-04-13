@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.38 2007/05/28 07:57:46 obache Exp $
+# $NetBSD: Makefile,v 1.39 2008/04/13 23:17:52 wiz Exp $
 #
 
-DISTNAME=	popt-1.10.7
+DISTNAME=	popt-1.14
 CATEGORIES=	devel
-MASTER_SITES=	http://wraptastic.org/pub/rpm-4.4.x/		\
-		ftp://wraptastic.org/pub/rpm-4.4.x/
+MASTER_SITES=	http://rpm5.org/files/popt/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Command line option parsing library
@@ -20,18 +19,6 @@ USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 
 TEST_TARGET=		check
-
-# XXX: avoid to check GNU xgettext.
-post-extract:
-	touch ${WRKDIR}/rpm.c
-
-# XXX: avoid to install library into ${PREFIX}/lib64 on 64-bit
-SUBST_CLASSES+=		mark64
-SUBST_STAGE.mark64=	pre-configure
-SUBST_FILES.mark64=	Makefile.am Makefile.in
-SUBST_SED.mark64=	-e 's|@MARK64@||g'
-
-BROKEN_GETTEXT_DETECTION=	yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
