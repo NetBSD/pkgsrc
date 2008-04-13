@@ -1,4 +1,4 @@
-# $NetBSD: NEWS,v 1.4 2008/02/27 16:49:34 rillig Exp $
+# $NetBSD: NEWS,v 1.5 2008/04/13 13:24:16 tnn Exp $
 
 PKGSRC NEWS
 ===========
@@ -6,6 +6,13 @@ PKGSRC NEWS
   This file contains information about important infrastructural changes in
   pkgsrc. The intended readers are the pkgsrc developers as well as anyone
   tracking pkgsrc-current.
+
+PLIST_VARS introduced [jlam 20080413]
+	PLIST_VARS is a simpler way to do conditional PLIST entries.
+	The old method of doing e.g. PLIST_SUBST+= FOO="@comment " can
+	now be done by unconditionally setting PLIST_VARS+=foo and
+	conditionally setting PLIST.foo=yes. This will result in substitution
+	of ${PLIST.foo} in the PLIST with either "" or "@comment ".
 
 SKIP_PORTABILITY_CHECK is obsolete [rillig 20080220]
 	After being deprecated for about 16 months, this early misdesign
