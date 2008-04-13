@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.702 2008/04/13 06:53:32 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.703 2008/04/13 06:59:31 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1363,3 +1363,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Added inputmethod/tomoe-gtk version 0.6.0 [obache 2008-04-13]
 	Added inputmethod/uim-tomoe-gtk version 0.6.0 [obache 2008-04-13]
 	Updated security/cvm to 0.90 [schmonz 2008-04-13]
+	Removed databases/ruby-sequel-model [jlam 2008-04-13]
+	Updated databases/ruby-sequel-core to 1.4.0 [jlam 2008-04-13]
+	Updated databases/ruby-sequel to 1.4.0 [jlam 2008-04-13]
