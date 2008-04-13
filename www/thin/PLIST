@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:26:44 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/04/13 07:10:19 jlam Exp $
 bin/thin
 ${GEM_HOME}/cache/thin-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -10,13 +10,14 @@ ${GEM_LIBDIR}/benchmark/abc
 ${GEM_LIBDIR}/benchmark/benchmarker.rb
 ${GEM_LIBDIR}/benchmark/runner
 ${GEM_LIBDIR}/bin/thin
-${GEM_LIBDIR}/doc/benchmarks.txt
 ${GEM_LIBDIR}/example/adapter.rb
 ${GEM_LIBDIR}/example/config.ru
 ${GEM_LIBDIR}/example/monit_sockets
 ${GEM_LIBDIR}/example/monit_unixsock
 ${GEM_LIBDIR}/example/ramaze.ru
 ${GEM_LIBDIR}/example/thin.god
+${GEM_LIBDIR}/example/thin_solaris_smf.erb
+${GEM_LIBDIR}/example/thin_solaris_smf.readme.txt
 ${GEM_LIBDIR}/example/vlad.rake
 ${GEM_LIBDIR}/ext/thin_parser/common.rl
 ${GEM_LIBDIR}/ext/thin_parser/ext_help.h
@@ -25,6 +26,7 @@ ${GEM_LIBDIR}/ext/thin_parser/parser.c
 ${GEM_LIBDIR}/ext/thin_parser/parser.h
 ${GEM_LIBDIR}/ext/thin_parser/parser.rl
 ${GEM_LIBDIR}/ext/thin_parser/thin.c
+${GEM_LIBDIR}/lib/rack/adapter/loader.rb
 ${GEM_LIBDIR}/lib/rack/adapter/rails.rb
 ${GEM_LIBDIR}/lib/rack/handler/thin.rb
 ${GEM_LIBDIR}/lib/thin.rb
@@ -49,6 +51,8 @@ ${GEM_LIBDIR}/lib/thin/stats.html.erb
 ${GEM_LIBDIR}/lib/thin/stats.rb
 ${GEM_LIBDIR}/lib/thin/statuses.rb
 ${GEM_LIBDIR}/lib/thin/version.rb
+${GEM_LIBDIR}/lib/thin_backend.bundle
+${GEM_LIBDIR}/lib/thin_parser.bundle
 ${GEM_LIBDIR}/lib/thin_parser.${RUBY_DLEXT}
 ${GEM_LIBDIR}/spec/backends/swiftiply_client_spec.rb
 ${GEM_LIBDIR}/spec/backends/tcp_server_spec.rb
@@ -66,7 +70,8 @@ ${GEM_LIBDIR}/spec/logging_spec.rb
 ${GEM_LIBDIR}/spec/perf/request_perf_spec.rb
 ${GEM_LIBDIR}/spec/perf/response_perf_spec.rb
 ${GEM_LIBDIR}/spec/perf/server_perf_spec.rb
-${GEM_LIBDIR}/spec/rack_rails_spec.rb
+${GEM_LIBDIR}/spec/rack/loader_spec.rb
+${GEM_LIBDIR}/spec/rack/rails_adapter_spec.rb
 ${GEM_LIBDIR}/spec/rails_app/app/controllers/application.rb
 ${GEM_LIBDIR}/spec/rails_app/app/controllers/simple_controller.rb
 ${GEM_LIBDIR}/spec/rails_app/app/helpers/application_helper.rb
@@ -115,10 +120,12 @@ ${GEM_LIBDIR}/spec/response_spec.rb
 ${GEM_LIBDIR}/spec/runner_spec.rb
 ${GEM_LIBDIR}/spec/server/builder_spec.rb
 ${GEM_LIBDIR}/spec/server/pipelining_spec.rb
+${GEM_LIBDIR}/spec/server/robustness_spec.rb
 ${GEM_LIBDIR}/spec/server/stopping_spec.rb
 ${GEM_LIBDIR}/spec/server/swiftiply.yml
 ${GEM_LIBDIR}/spec/server/swiftiply_spec.rb
 ${GEM_LIBDIR}/spec/server/tcp_spec.rb
+${GEM_LIBDIR}/spec/server/threaded_spec.rb
 ${GEM_LIBDIR}/spec/server/unix_socket_spec.rb
 ${GEM_LIBDIR}/spec/server_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
@@ -150,6 +157,7 @@ ${GEM_HOME}/specifications/thin-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/spec/rails_app/app/controllers
 @dirrm ${GEM_LIBDIR}/spec/rails_app/app
 @dirrm ${GEM_LIBDIR}/spec/rails_app
+@dirrm ${GEM_LIBDIR}/spec/rack
 @dirrm ${GEM_LIBDIR}/spec/perf
 @dirrm ${GEM_LIBDIR}/spec/controllers
 @dirrm ${GEM_LIBDIR}/spec/configs
@@ -165,7 +173,6 @@ ${GEM_HOME}/specifications/thin-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/ext/thin_parser
 @dirrm ${GEM_LIBDIR}/ext
 @dirrm ${GEM_LIBDIR}/example
-@dirrm ${GEM_LIBDIR}/doc
 @dirrm ${GEM_LIBDIR}/bin
 @dirrm ${GEM_LIBDIR}/benchmark
 @dirrm ${GEM_LIBDIR}
