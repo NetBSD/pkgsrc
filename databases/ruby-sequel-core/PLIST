@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:16:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/04/13 06:56:27 jlam Exp $
 bin/sequel
 ${GEM_HOME}/cache/sequel_core-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -25,6 +25,7 @@ ${GEM_LIBDIR}/lib/sequel_core/core_ext.rb
 ${GEM_LIBDIR}/lib/sequel_core/core_sql.rb
 ${GEM_LIBDIR}/lib/sequel_core/database.rb
 ${GEM_LIBDIR}/lib/sequel_core/dataset.rb
+${GEM_LIBDIR}/lib/sequel_core/dataset/callback.rb
 ${GEM_LIBDIR}/lib/sequel_core/dataset/convenience.rb
 ${GEM_LIBDIR}/lib/sequel_core/dataset/sequelizer.rb
 ${GEM_LIBDIR}/lib/sequel_core/dataset/sql.rb
@@ -33,8 +34,8 @@ ${GEM_LIBDIR}/lib/sequel_core/migration.rb
 ${GEM_LIBDIR}/lib/sequel_core/model.rb
 ${GEM_LIBDIR}/lib/sequel_core/pretty_table.rb
 ${GEM_LIBDIR}/lib/sequel_core/schema.rb
-${GEM_LIBDIR}/lib/sequel_core/schema/schema_generator.rb
-${GEM_LIBDIR}/lib/sequel_core/schema/schema_sql.rb
+${GEM_LIBDIR}/lib/sequel_core/schema/generator.rb
+${GEM_LIBDIR}/lib/sequel_core/schema/sql.rb
 ${GEM_LIBDIR}/lib/sequel_core/worker.rb
 ${GEM_LIBDIR}/spec/adapters/informix_spec.rb
 ${GEM_LIBDIR}/spec/adapters/mysql_spec.rb
