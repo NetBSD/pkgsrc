@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.712 2008/04/13 20:28:30 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.713 2008/04/13 20:33:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1375,3 +1375,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/cftp to 0.12nb2 [dillo 2008-04-13]
 	Updated graphics/png to 1.2.26 [wiz 2008-04-13]
 	Updated misc/dialog to 1.1.20080316 [wiz 2008-04-13]
+	Updated www/p5-URI to 1.36 [wiz 2008-04-13]
