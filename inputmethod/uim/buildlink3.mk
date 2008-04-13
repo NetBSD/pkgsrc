@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.8 2008/03/02 01:57:37 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.9 2008/04/13 04:08:03 obache Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 UIM_BUILDLINK3_MK:=	${UIM_BUILDLINK3_MK}+
@@ -16,5 +16,7 @@ BUILDLINK_API_DEPENDS.uim+=	uim>=1.4.2
 BUILDLINK_ABI_DEPENDS.uim?=	uim>=1.4.2
 BUILDLINK_PKGSRCDIR.uim?=	../../inputmethod/uim
 .endif  # UIM_BUILDLINK3_MK
+
+.include "../../devel/libgcroots/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
