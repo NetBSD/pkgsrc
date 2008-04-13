@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.6 2008/04/12 23:52:00 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.7 2008/04/13 11:46:38 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -14,3 +14,6 @@ Pullup ticket 2330 - requested by tron
 update fixes security vulnerability CVE-2007-6019
 Pullup ticket 2326 - requested by joerg
 fixed PLIST and version bump
+Pullup ticket 2331 - requested by wiz
+security update for m4
+
