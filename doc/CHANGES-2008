@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.710 2008/04/13 12:22:10 dillo Exp $
+$NetBSD: CHANGES-2008,v 1.711 2008/04/13 20:25:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1373,3 +1373,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/py-newt version 0.51.6 [wiz 2008-04-13]
 	Updated net/clive to 0.4.9 [wiz 2008-04-13]
 	Updated net/cftp to 0.12nb2 [dillo 2008-04-13]
+	Updated graphics/png to 1.2.26 [wiz 2008-04-13]
