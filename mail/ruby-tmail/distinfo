@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2008/04/04 15:19:46 jlam Exp $
+$NetBSD: distinfo,v 1.8 2008/04/13 05:25:09 jlam Exp $
 
-SHA1 (tmail-1.2.2.gem) = d20da7f8457f5d88deaa0ecac3401d4ac42749b0
-RMD160 (tmail-1.2.2.gem) = c240b6687a582c487e665f38168e134dd09f0af3
-Size (tmail-1.2.2.gem) = 413184 bytes
-SHA1 (patch-ab) = a29faedac9e8dcd452cfd6cfbe992962530918a7
+SHA1 (tmail-1.2.3.gem) = 5d9b5555061f0f36db00a0f977b5ef4a8ce374cc
+RMD160 (tmail-1.2.3.gem) = 903c981dba968861e18cc9ead445da7b18d3ebde
+Size (tmail-1.2.3.gem) = 413696 bytes
