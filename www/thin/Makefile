@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/04 15:26:44 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/13 07:10:19 jlam Exp $
 
-DISTNAME=	thin-0.7.1
+DISTNAME=	thin-0.8.0
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
