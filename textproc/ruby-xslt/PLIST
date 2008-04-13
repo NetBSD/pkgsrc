@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:22:29 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/04/13 07:14:58 jlam Exp $
 ${GEM_HOME}/cache/ruby-xslt-${PKGVERSION}.gem
 ${GEM_LIBDIR}/AUTHORS
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/README
-${GEM_LIBDIR}/ext/xslt_lib/extconf.h
 ${GEM_LIBDIR}/ext/xslt_lib/extconf.rb
 ${GEM_LIBDIR}/ext/xslt_lib/extfunc.c
 ${GEM_LIBDIR}/ext/xslt_lib/extfunc.h
