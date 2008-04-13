@@ -1,32 +1,17 @@
-# $NetBSD: Makefile,v 1.8 2008/03/03 17:45:36 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2008/04/13 09:54:42 wiz Exp $
 
-DISTNAME=	${PKGNAME_NOREV}-5.src.rpm
-PKGNAME=	newt-0.51.6
-PKGREVISION=	2
-CATEGORIES=	devel
-MASTER_SITES=	http://download.fedora.redhat.com/pub/fedora/linux/core/3/SRPMS/
-EXTRACT_SUFX=	# empty
+.include "Makefile.common"
 
-MAINTAINER=	riz@NetBSD.org
-HOMEPAGE=	# empty
+PKGREVISION=	3
 COMMENT=	Windowing toolkit based on libslang
 
-BUILD_DEPENDS+=	rpm2pkg>=2.0:../../pkgtools/rpm2pkg
-
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-USE_TOOLS+=	gmake gzcat tar
 
 USE_LIBTOOL=	yes
 NO_EXPORT_CPP=	yes
 GNU_CONFIGURE=	yes
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
 INSTALLATION_DIRS=	bin include lib
-
-do-extract:
-	${LOCALBASE}/sbin/rpm2pkg -d ${WRKDIR} ${DISTDIR}/${DISTNAME}
-	cd ${WRKDIR} ; ${GZCAT} ${WRKSRC}.tar.gz | ${TAR} -xf -
 
 do-install:
 	cd ${WRKSRC}; \
