@@ -1,6 +1,6 @@
-$NetBSD: patch-ah,v 1.1 2008/03/31 15:40:43 jlam Exp $
+$NetBSD: patch-ah,v 1.2 2008/04/13 06:01:59 jlam Exp $
 
---- lib/rubygems.rb.orig	2008-03-28 21:05:55.000000000 -0400
+--- lib/rubygems.rb.orig	2008-04-09 17:18:31.000000000 -0400
 +++ lib/rubygems.rb
 @@ -213,7 +213,13 @@ module Gem
    ##
@@ -15,5 +15,5 @@ $NetBSD: patch-ah,v 1.1 2008/03/31 15:40:43 jlam Exp $
 +      install_dir = install_dir_path.expand_path File::SEPARATOR
 +    end
      return File.join(install_dir, 'bin') unless
-     install_dir.to_s == Gem.default_dir
+       install_dir.to_s == Gem.default_dir
      Gem.default_bindir
