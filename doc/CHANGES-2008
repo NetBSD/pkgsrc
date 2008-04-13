@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.707 2008/04/13 09:57:39 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.708 2008/04/13 09:57:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1370,3 +1370,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/ruby-xslt to 0.9.6 [jlam 2008-04-13]
 	Added devel/ruby-linecache version 0.4.2 [jlam 2008-04-13]
 	Updated devel/newt to 0.51.6nb3 [wiz 2008-04-13]
+	Added devel/py-newt version 0.51.6 [wiz 2008-04-13]
