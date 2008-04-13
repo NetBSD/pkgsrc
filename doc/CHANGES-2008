@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.705 2008/04/13 07:15:14 jlam Exp $
+$NetBSD: CHANGES-2008,v 1.706 2008/04/13 07:37:46 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1368,3 +1368,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/ruby-sequel to 1.4.0 [jlam 2008-04-13]
 	Updated www/thin to 0.8.0 [jlam 2008-04-13]
 	Updated textproc/ruby-xslt to 0.9.6 [jlam 2008-04-13]
+	Added devel/ruby-linecache version 0.4.2 [jlam 2008-04-13]
