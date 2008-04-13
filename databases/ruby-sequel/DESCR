@@ -4,3 +4,6 @@ and table schemas.
 
 Sequel makes it easy to deal with multiple records without having to
 break your teeth on SQL.
+
+This package contains model classes for Sequel that allow it to be used
+as an object-relational mapping (ORM).
