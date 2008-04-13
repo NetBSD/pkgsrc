@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.698 2008/04/13 00:52:27 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.699 2008/04/13 05:25:25 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1357,3 +1357,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/monotone to 0.40 [jmmv 2008-04-12]
 	Updated devel/monotone-server to 0.40 [jmmv 2008-04-12]
 	Updated devel/m4 to 1.4.11nb1 [wiz 2008-04-13]
+	Updated mail/ruby-tmail to 1.2.3 [jlam 2008-04-13]
