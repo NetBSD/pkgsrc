@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2008/04/13 05:31:16 tnn Exp $
+@comment $NetBSD: PLIST,v 1.41 2008/04/13 13:15:59 tnn Exp $
 bin/glib-genmarshal
 bin/glib-gettextize
 bin/glib-mkenums
@@ -128,7 +128,7 @@ include/glib/glib-2.0/gobject/gvalue.h
 include/glib/glib-2.0/gobject/gvaluearray.h
 include/glib/glib-2.0/gobject/gvaluecollector.h
 include/glib/glib-2.0/gobject/gvaluetypes.h
-${FAM}lib/gio/modules/libgiofam.la
+${PLIST.fam}lib/gio/modules/libgiofam.la
 lib/glib-2.0/include/glibconfig.h
 lib/libgio-2.0.la
 lib/libglib-2.0.la
