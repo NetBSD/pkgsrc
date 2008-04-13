@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.928 2008/04/12 13:58:02 wiz Exp $
+# $NetBSD: Makefile,v 1.929 2008/04/13 07:37:47 jlam Exp $
 #
 
 COMMENT=	Development utilities
@@ -758,6 +758,7 @@ SUBDIR+=	ruby-gnome2-pango
 SUBDIR+=	ruby-heckle
 SUBDIR+=	ruby-highline
 SUBDIR+=	ruby-inline
+SUBDIR+=	ruby-linecache
 SUBDIR+=	ruby-log4r
 SUBDIR+=	ruby-logging
 SUBDIR+=	ruby-memcache
