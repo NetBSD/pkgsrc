@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.714 2008/04/13 21:43:57 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.715 2008/04/13 22:13:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1377,3 +1377,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/dialog to 1.1.20080316 [wiz 2008-04-13]
 	Updated www/p5-URI to 1.36 [wiz 2008-04-13]
 	Updated graphics/sane-backends to 1.0.19 [wiz 2008-04-13]
+	Updated devel/python-mode to 1.0 [wiz 2008-04-13]
