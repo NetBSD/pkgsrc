@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.7 2008/04/07 16:24:51 hira Exp $
+$NetBSD: patch-ak,v 1.8 2008/04/13 20:32:43 hira Exp $
 
---- config_office/set_soenv.in.orig	2008-01-24 02:07:28.000000000 +0900
-+++ config_office/set_soenv.in	2008-04-07 17:46:40.000000000 +0900
+--- config_office/set_soenv.in.orig	2008-01-23 17:07:28.000000000 +0000
++++ config_office/set_soenv.in	2008-04-14 04:39:32.000000000 +0000
 @@ -40,7 +40,7 @@
  #
  my ( $outfile, $outfile_sh, $outfile_bat, $bootfile, $newline, $comment,
@@ -87,7 +87,15 @@ $NetBSD: patch-ak,v 1.7 2008/04/07 16:24:51 hira Exp $
  ToFile( "ENABLE_GTK",        "@ENABLE_GTK@",       "e" );
  ToFile( "GTK_CFLAGS",        "@GTK_CFLAGS@",       "e" );
  ToFile( "GTK_LIBS",          "@GTK_LIBS@",         "e" );
-@@ -1967,6 +1988,7 @@
+@@ -1942,6 +1963,7 @@
+ ToFile( "MOZ_LIB_XPCOM",     "@MOZ_LIB_XPCOM@",    "e" );
+ ToFile( "MOZ_NSPR_CFLAGS",   "@MOZ_NSPR_CFLAGS@",  "e" );
+ ToFile( "MOZ_NSS_CFLAGS",    "@MOZ_NSS_CFLAGS@",   "e" );
++ToFile( "MOZ_NSS_LIBS",      "@MOZ_NSS_LIBS@",     "e" );
+ ToFile( "MOZ_LDAP_CFLAGS",   "@MOZ_LDAP_CFLAGS@",  "e" );
+ ToFile( "WITH_WRITER2LATEX", "@WITH_WRITER2LATEX@", "e" );
+ ToFile( "WITH_FONTS",        "@WITH_FONTS@",       "e" );
+@@ -1967,6 +1989,7 @@
  ToFile( "OPENSSL_CFLAGS",    "@OPENSSL_CFLAGS@",   "e" );
  ToFile( "OPENSSL_LIBS",      "@OPENSSL_LIBS@",     "e" );
  ToFile( "SYSTEM_PYTHON",     "@SYSTEM_PYTHON@",    "e" );
