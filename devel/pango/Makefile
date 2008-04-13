@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.110 2008/04/11 12:22:46 tron Exp $
+# $NetBSD: Makefile,v 1.111 2008/04/13 13:00:55 tnn Exp $
 
 DISTNAME=		pango-1.20.2
 CATEGORIES=		devel fonts
@@ -38,10 +38,9 @@ CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 CHECK_FILES_SKIP+=	${PREFIX}/libdata/pango/pango.modules
 
+PLIST_VARS+=		carbon
 .if exists(/System/Library/Frameworks/Carbon.framework)
-PLIST_SUBST+=		CARBON=
-.else
-PLIST_SUBST+=		CARBON="@comment "
+PLIST.carbon=		yes
 .endif
 
 .include "options.mk"
