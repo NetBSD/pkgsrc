@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2008/04/12 22:43:02 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2008/04/13 21:43:39 wiz Exp $
 
 .include "Makefile.common"
 COMMENT=	API for access to scanners, digitals camera, frame grabbers etc.
@@ -35,9 +35,11 @@ OWN_DIRS+=	${PKG_SYSCONFDIR}/sane.d
 EGDIR=		${PREFIX}/share/examples/sane
 .for f in abaton.conf agfafocus.conf apple.conf artec.conf \
 artec_eplus48u.conf avision.conf bh.conf canon.conf canon630u.conf \
-coolscan.conf coolscan2.conf dc210.conf dc240.conf dc25.conf dll.conf \
-dmc.conf epson.conf fujitsu.conf genesys.conf gt68xx.conf hp.conf \
-hp4200.conf hp5400.conf ibm.conf leo.conf lexmark.conf \
+cardscan.conf coolscan.conf coolscan2.conf \
+dc210.conf dc240.conf dc25.conf dll.conf dmc.conf \
+epson.conf epjitsu.conf epson2.conf fujitsu.conf \
+genesys.conf gt68xx.conf hp.conf hp3900.conf \
+hp4200.conf hp5400.conf hs2p.conf ibm.conf leo.conf lexmark.conf \
 ma1509.conf matsushita.conf \
 microtek.conf microtek2.conf mustek.conf mustek_usb.conf nec.conf \
 net.conf pie.conf plustek.conf plustek_pp.conf ricoh.conf s9036.conf \
