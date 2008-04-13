@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2007/11/30 17:22:20 wiz Exp $
+$NetBSD: distinfo,v 1.9 2008/04/13 22:26:34 wiz Exp $
 
-SHA1 (signing-party_0.4.13.orig.tar.gz) = ddd01d6008ebbd24252f07e654926555e07e7b6f
-RMD160 (signing-party_0.4.13.orig.tar.gz) = 012e27a847711bbb128939c1c1d3c95aa0afff47
-Size (signing-party_0.4.13.orig.tar.gz) = 46886 bytes
+SHA1 (signing-party_1.0.orig.tar.gz) = caffdd9f48cf0b2d3c5651ed1f6845e5cac56c67
+RMD160 (signing-party_1.0.orig.tar.gz) = 35bb353c239447fac4974c0906e24667cf55f16e
+Size (signing-party_1.0.orig.tar.gz) = 63552 bytes
