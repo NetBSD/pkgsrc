@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.6 2008/03/31 15:40:43 jlam Exp $
+$NetBSD: patch-ab,v 1.7 2008/04/13 06:01:59 jlam Exp $
 
---- lib/rubygems/dependency_installer.rb.orig	2008-03-20 21:00:57.000000000 -0400
+--- lib/rubygems/dependency_installer.rb.orig	2008-04-04 21:10:11.000000000 -0400
 +++ lib/rubygems/dependency_installer.rb
 @@ -33,6 +33,7 @@ class Gem::DependencyInstaller
    # :format_executable:: See Gem::Installer#initialize.
@@ -32,17 +32,16 @@ $NetBSD: patch-ab,v 1.6 2008/03/31 15:40:43 jlam Exp $
      source_index = Gem::SourceIndex.from_gems_in spec_dir
  
      @gems_to_install.each do |spec|
-@@ -189,7 +196,8 @@ class Gem::DependencyInstaller
-       say "Installing gem #{spec.full_name}" if Gem.configuration.really_verbose
- 
+@@ -191,7 +198,7 @@ class Gem::DependencyInstaller
        _, source_uri = @specs_and_sources.assoc spec
--      local_gem_path = Gem::RemoteFetcher.fetcher.download spec, source_uri
-+      local_gem_path = Gem::RemoteFetcher.fetcher.download spec, source_uri,
-+                                                           install_dir
- 
-       inst = Gem::Installer.new local_gem_path,
-                                 :env_shebang => @env_shebang,
-@@ -197,6 +205,7 @@ class Gem::DependencyInstaller
+       begin
+         local_gem_path = Gem::RemoteFetcher.fetcher.download spec, source_uri,
+-                                                             @install_dir
++                                                             install_dir
+       rescue Gem::RemoteFetcher::FetchError
+         next if @force
+         raise
+@@ -203,6 +210,7 @@ class Gem::DependencyInstaller
                                  :format_executable => @format_executable,
                                  :ignore_dependencies => @ignore_dependencies,
                                  :install_dir => @install_dir,
