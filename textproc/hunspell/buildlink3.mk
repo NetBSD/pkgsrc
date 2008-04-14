@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2007/09/11 17:48:06 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/04/14 09:39:00 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 HUNSPELL_BUILDLINK3_MK:=	${HUNSPELL_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	hunspell
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}hunspell
 
 .if ${HUNSPELL_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.hunspell+=	hunspell>=1.1.12.2
+BUILDLINK_API_DEPENDS.hunspell+=	hunspell>=1.2.2
 BUILDLINK_PKGSRCDIR.hunspell?=		../../textproc/hunspell
 .endif	# HUNSPELL_BUILDLINK3_MK
 

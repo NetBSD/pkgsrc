@@ -1,9 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2008/02/22 17:04:34 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2008/04/14 09:39:00 wiz Exp $
 #
 
-DISTNAME=	hunspell-1.1.12-2
-PKGNAME=	${DISTNAME:C/-([0-9]+)$/.\1/}
-PKGREVISION=	2
+DISTNAME=	hunspell-1.2.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hunspell/}
 
