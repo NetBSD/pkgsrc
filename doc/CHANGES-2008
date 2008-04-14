@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.724 2008/04/14 16:06:20 he Exp $
+$NetBSD: CHANGES-2008,v 1.725 2008/04/14 18:13:19 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1387,3 +1387,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/mldonkey-gui to 2.9.4 [wiz 2008-04-14]
 	Updated converters/libwpd to 0.8.14 [wiz 2008-04-14]
 	Updated databases/rrdtool to 1.2.27 [he 2008-04-14]
+	Updated www/thoth to 0.1.3 [jlam 2008-04-14]
+	Updated mail/ruby-mailfactory to 1.3.0 [jlam 2008-04-14]
