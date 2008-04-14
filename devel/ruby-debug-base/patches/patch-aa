@@ -1,18 +1,16 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/04/06 23:03:23 seb Exp $
+$NetBSD: patch-aa,v 1.2 2008/04/14 21:33:01 jlam Exp $
 
-Sync with current Rake and drop the ruby-debug gem build.
-
---- Rakefile.orig	1970-01-01 00:00:00.000000000 +0000
+--- Rakefile.orig	2008-04-13 03:20:46.000000000 -0400
 +++ Rakefile
-@@ -23,7 +23,6 @@ CLI_FILES = COMMON_FILES + FileList[
+@@ -25,7 +25,6 @@ CLI_FILES = COMMON_FILES + FileList[
    "cli/**/*",
    'ChangeLog',
    'bin/*',
 -  'doc/rdebug.1',
-   'test/**/*.cmd',
-   'test/**/*.right',
-   'test/**/gcd.rb',
-@@ -150,16 +149,13 @@ end
+   'test/**/data/*.cmd',
+   'test/**/data/*.right',
+   'test/**/*.rb',
+@@ -161,9 +160,6 @@ end
  Rake::GemPackageTask.new(base_spec) do |pkg|
    pkg.need_tar = true
  end
@@ -22,11 +20,3 @@ Sync with current Rake and drop the ruby-debug gem build.
  
  task :default => [:package]
  
- # Windows specification
- win_spec = base_spec.clone
- win_spec.extensions = []
--win_spec.platform = Gem::Platform::WIN32
-+win_spec.platform = Gem::Platform::CURRENT
- win_spec.files += ["lib/#{SO_NAME}"]
- 
- desc "Create Windows Gem"
