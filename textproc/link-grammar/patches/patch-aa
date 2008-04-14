@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/04/14 22:24:17 wiz Exp $
+
+--- link-grammar/Makefile.am.orig	2008-02-22 00:11:41.000000000 +0000
++++ link-grammar/Makefile.am
+@@ -22,10 +22,10 @@ liblink_grammar_java_la_LDFLAGS = -versi
+ 
+ if WITH_BINRELOC
+ liblink_grammar_la_LIBADD  = -lpthread
+-liblink_grammar_java_la_LIBADD  = -lpthread -llink-grammar
++liblink_grammar_java_la_LIBADD  = -lpthread liblink-grammar.la
+ else
+ liblink_grammar_la_LIBADD  = 
+-liblink_grammar_java_la_LIBADD  = -llink-grammar
++liblink_grammar_java_la_LIBADD  = liblink-grammar.la
+ endif
+ 
+ liblink_grammar_la_SOURCES =		\
