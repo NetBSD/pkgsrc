@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/02/09 07:26:57 adam Exp $
+# $NetBSD: Makefile,v 1.16 2008/04/14 21:46:57 jlam Exp $
 
 DISTNAME=	libiodbc-3.52.6
 PKGNAME=	${DISTNAME:S/^lib//}
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.iodbc.org/
 COMMENT=	ODBC 3.x driver manager
 
 CONFLICTS+=	unixodbc-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
@@ -25,6 +27,7 @@ CONF_FILES=	${EGDIR}/odbc.ini ${PKG_SYSCONFDIR}/odbc.ini
 .include "../../mk/pthread.buildlink3.mk"
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/etc/odbc.ini.sample ${EGDIR}/odbc.ini
+	${INSTALL_DATA} ${WRKSRC}/etc/odbc.ini.sample \
+		${DESTDIR}${EGDIR}/odbc.ini
 
 .include "../../mk/bsd.pkg.mk"
