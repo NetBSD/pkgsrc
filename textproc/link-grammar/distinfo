@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/04/14 22:24:17 wiz Exp $
+
+SHA1 (link-grammar-4.3.4.tar.gz) = 74fb56cfc97fb9bf5e32ca4138982e2e7c9880f1
+RMD160 (link-grammar-4.3.4.tar.gz) = ae0943f096050b6ace69d56e24c3b062119dc35f
+Size (link-grammar-4.3.4.tar.gz) = 852362 bytes
+SHA1 (patch-aa) = 7c12aab1d326def073313a07247880f3947185e2
+SHA1 (patch-ab) = 17a44ff5afa61d1ec5f6c70ac51f438a420b7a0f
