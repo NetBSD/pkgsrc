@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2006/07/08 23:11:10 jlam Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2008/04/14 11:35:50 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 ENCHANT_BUILDLINK3_MK:=	${ENCHANT_BUILDLINK3_MK}+
@@ -17,7 +17,8 @@ BUILDLINK_ABI_DEPENDS.enchant+=	enchant>=1.1.6nb1
 BUILDLINK_PKGSRCDIR.enchant?=	../../textproc/enchant
 .endif	# ENCHANT_BUILDLINK3_MK
 
+# spelling libraries are loaded dynamically and do not need
+# to be included here
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../textproc/aspell/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
