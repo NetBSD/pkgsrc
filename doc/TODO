@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7206 2008/04/14 21:41:35 wiz Exp $
+$NetBSD: TODO,v 1.7207 2008/04/14 21:42:19 wiz Exp $
 
 Suggested new packages
 ======================
@@ -897,7 +897,6 @@ Suggested package updates
 	o libtcl-nothread-8.5.1
 	o libtool-2.2.2
 	o libtool-base-2.2
-	o libwpd-0.8.14
 	o libxkbfile-1.0.5
 	o libxklavier-3.5
 	o libxml++-2.22.0
