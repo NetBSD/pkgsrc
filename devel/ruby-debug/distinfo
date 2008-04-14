@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/06 23:03:58 seb Exp $
+$NetBSD: distinfo,v 1.2 2008/04/14 21:33:04 jlam Exp $
 
-SHA1 (ruby-debug-0.10.0.gem) = 60193b2c48f61cde07a3d66045207e5dbc8541d5
-RMD160 (ruby-debug-0.10.0.gem) = d2248563478256396b3eb6c61c58a8ca0cf7d8ca
-Size (ruby-debug-0.10.0.gem) = 44032 bytes
-SHA1 (patch-aa) = ee38c1c80fc8f4d85137f03459f236b4b1523978
+SHA1 (ruby-debug-0.10.1.gem) = fb682865733d81f00b4dc85cba155a6d38bf0407
+RMD160 (ruby-debug-0.10.1.gem) = 5a4be98009af72c9114cc14264651bd6cf3831c4
+Size (ruby-debug-0.10.1.gem) = 108032 bytes
+SHA1 (patch-aa) = 0c82eb81f280ff6859b7df0b03da40fcc95afb73
