@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.63 2008/03/06 14:53:48 wiz Exp $
+# $NetBSD: Makefile,v 1.64 2008/04/14 23:49:43 wiz Exp $
 
-DISTNAME=	wv-1.2.4
-PKGREVISION=	4
+DISTNAME=	wv-1.2.5
 CATEGORIES=	converters
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wvware/}
+MASTER_SITES=	http://www.abiword.com/downloads/wv/1.2.5/
 
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://wvware.sourceforge.net/
