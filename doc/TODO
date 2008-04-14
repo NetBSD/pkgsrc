@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7205 2008/04/14 11:38:08 wiz Exp $
+$NetBSD: TODO,v 1.7206 2008/04/14 21:41:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -482,7 +482,7 @@ Suggested package updates
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o cairo-1.6.4
-	o cairomm-1.4.8
+	o cairomm-1.6.0
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o capc-calc-2.12.3.0
@@ -731,7 +731,7 @@ Suggested package updates
 	o gsl-1.11
 	o gsm-1.0.12
 	o gss-0.0.22
-	o gtar-1.19
+	o gtar-1.20
 	o gtar-base-1.19
 	o gthumb-2.10.8
 	o gtick-0.4.1
@@ -946,7 +946,6 @@ Suggested package updates
 	o mknmz-wwwoffle-0.7.2
 	o mksh-33d
 	o mkvtoolnix-2.2.0
-	o mldonkey-2.9.4
 	o mlview-0.9.0
 	o mmg-2.0.2
 	o modular-xorg-server-1.4
