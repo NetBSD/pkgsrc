@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common_end,v 1.5 2007/09/24 21:58:27 taca Exp $
+@comment $NetBSD: PLIST.common_end,v 1.6 2008/04/14 08:25:31 tnn Exp $
 @dirrm ${RUBY_LIBDIR}/bigdecimal
 @dirrm ${RUBY_LIBDIR}/cgi/session
 @dirrm ${RUBY_LIBDIR}/cgi
@@ -7,13 +7,13 @@
 @dirrm ${RUBY_LIBDIR}/dl
 @dirrm ${RUBY_LIBDIR}/drb
 @dirrm ${RUBY_ARCHLIBDIR}/digest
-${HAS_IO}@dirrm ${RUBY_ARCHLIBDIR}/io
+${PLIST.io}@dirrm ${RUBY_ARCHLIBDIR}/io
 @dirrm ${RUBY_ARCHLIBDIR}/racc
 @dirrm ${RUBY_ARCHLIBDIR}
 @dirrm ${RUBY_SITEARCHLIBDIR}
 @dirrm ${RUBY_SITELIBDIR}
 @unexec ${RMDIR} %D/lib/ruby/site_ruby 2>/dev/null || ${TRUE}
-${HAS_IO}@dirrm ${RUBY_LIBDIR}/io
+${PLIST.io}@dirrm ${RUBY_LIBDIR}/io
 @dirrm ${RUBY_LIBDIR}/irb/cmd
 @dirrm ${RUBY_LIBDIR}/irb/ext
 @dirrm ${RUBY_LIBDIR}/irb/lc/ja
