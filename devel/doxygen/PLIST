@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2008/04/12 22:42:59 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2008/04/14 11:24:02 dsainty Exp $
 bin/doxygen
 bin/doxytag
 man/man1/doxygen.1
@@ -383,7 +383,7 @@ share/doc/doxygen/examples/pyexample/html/annotated.html
 ${PLIST.cs}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1PyClass-members.html
 ${PLIST.ci}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1_py_class-members.html
 ${PLIST.cs}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1PyClass.html
-${PILST.ci}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1_py_class.html
+${PLIST.ci}share/doc/doxygen/examples/pyexample/html/classpyexample_1_1_py_class.html
 share/doc/doxygen/examples/pyexample/html/doxygen.css
 share/doc/doxygen/examples/pyexample/html/doxygen.png
 share/doc/doxygen/examples/pyexample/html/functions.html
