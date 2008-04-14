@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/06/26 22:08:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/04/14 13:38:43 wiz Exp $
 bin/wpd2html
 bin/wpd2raw
 bin/wpd2text
@@ -9,6 +9,7 @@ include/libwpd-0.8/libwpd/WPXProperty.h
 include/libwpd-0.8/libwpd/WPXPropertyList.h
 include/libwpd-0.8/libwpd/WPXPropertyListVector.h
 include/libwpd-0.8/libwpd/WPXStream.h
+include/libwpd-0.8/libwpd/WPXStreamImplementation.h
 include/libwpd-0.8/libwpd/WPXString.h
 include/libwpd-0.8/libwpd/libwpd.h
 include/libwpd-0.8/libwpd/libwpd_types.h
