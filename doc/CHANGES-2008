@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.719 2008/04/14 09:39:12 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.720 2008/04/14 11:36:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1382,3 +1382,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/autoconf to 2.62 [wiz 2008-04-13]
 	Updated devel/popt to 1.14 [wiz 2008-04-13]
 	Updated textproc/hunspell to 1.2.2 [wiz 2008-04-14]
+	Updated textproc/enchant to 1.4.0 [wiz 2008-04-14]
