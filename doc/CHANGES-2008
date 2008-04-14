@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.726 2008/04/14 20:10:17 jlam Exp $
+$NetBSD: CHANGES-2008,v 1.727 2008/04/14 21:33:22 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1390,3 +1390,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/thoth to 0.1.3 [jlam 2008-04-14]
 	Updated mail/ruby-mailfactory to 1.3.0 [jlam 2008-04-14]
 	Updated graphics/ruby-rcairo to 1.6.0 [jlam 2008-04-14]
+	Added misc/ruby-columnize version 0.1 [jlam 2008-04-14]
+	Updated devel/ruby-debug-base to 0.10.1 [jlam 2008-04-14]
+	Updated devel/ruby-debug to 0.10.1 [jlam 2008-04-14]
