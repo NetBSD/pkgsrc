@@ -1,6 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/11 17:40:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/04/14 09:39:00 wiz Exp $
+bin/analyze
+bin/chmorph
 bin/example
 bin/hunspell
+bin/hunzip
+bin/hzip
 bin/munch
 bin/unmunch
 include/hunspell/affentry.hxx
@@ -9,16 +13,19 @@ include/hunspell/atypes.hxx
 include/hunspell/baseaffix.hxx
 include/hunspell/csutil.hxx
 include/hunspell/dictmgr.hxx
+include/hunspell/filemgr.hxx
 include/hunspell/hashmgr.hxx
 include/hunspell/htypes.hxx
 include/hunspell/hunspell.h
 include/hunspell/hunspell.hxx
+include/hunspell/hunzip.hxx
 include/hunspell/langnum.hxx
 include/hunspell/phonet.hxx
 include/hunspell/suggestmgr.hxx
+include/hunspell/w_char.hxx
 include/munch.h
 include/unmunch.h
-lib/libhunspell-1.1.la
+lib/libhunspell-1.2.la
 lib/libparsers.a
 lib/pkgconfig/hunspell.pc
 man/hu/man1/hunspell.1
