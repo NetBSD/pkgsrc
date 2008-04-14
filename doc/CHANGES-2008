@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.722 2008/04/14 13:30:49 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.723 2008/04/14 13:38:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1385,3 +1385,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/enchant to 1.4.0 [wiz 2008-04-14]
 	Updated net/mldonkey to 2.9.4 [wiz 2008-04-14]
 	Updated net/mldonkey-gui to 2.9.4 [wiz 2008-04-14]
+	Updated converters/libwpd to 0.8.14 [wiz 2008-04-14]
