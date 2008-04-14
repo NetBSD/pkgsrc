@@ -3,10 +3,15 @@ for dealing with different spell checking libraries.
 
 Enchant is meant to provide a generic interface into various existing
 spell checking libaries. These include, but are not limited to:
-        * Aspell/Pspell
-        * Ispell
-        * Hspell
-        * Uspell
+	* Aspell/Pspell (intends to replace Ispell)
+	* Ispell (old as sin, could be interpreted as a defacto standard)
+	* MySpell/Hunspell (an OOo project, also used by Mozilla)
+	* Uspell (primarily Yiddish, Hebrew, and Eastern European
+	  languages - hosted in AbiWord's CVS under the module "uspell")
+	* Hspell (Hebrew)
+	* Zemberek (Turkish)
+	* Voikko (Finnish)
+	* AppleSpell (Mac OSX)
 
 Enchant is also meant to be used in a cross-platform (XP) environment.
 Part of this means that Enchant wants to limit its number of external
@@ -15,9 +20,3 @@ enchant consumer (i.e. a Word Processor) should not need to know
 about what backend providers Enchant knows about. In fact, Enchant
 shouldn't even need to know this information itself. To accomplish
 this, all of Enchant's providers are DLLs.
-
-Enchant is also meant to be used in a multi-user environment, such
-as Unix.  It is preferable to have both a $USER and a $GLOBAL
-location for both provider DLLs and for dictionaries themselves,
-when possible. Enchant's DLL location algorithm takes this into
-account, and gives preference to the $USER DLLs, when found.
