@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7208 2008/04/14 23:37:50 wiz Exp $
+$NetBSD: TODO,v 1.7209 2008/04/14 23:52:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -896,7 +896,7 @@ Suggested package updates
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
 	o libtool-2.2.2
-	o libtool-base-2.2
+	o libtool-base-2.2.2
 	o libxkbfile-1.0.5
 	o libxklavier-3.5
 	o libxml++-2.22.0
@@ -1425,7 +1425,7 @@ Suggested package updates
 	o webmin-1.410
 	o weewm-0.01
 	o weex-2.6.1.5 [at http://weex.sourceforge.net/]
-	o wesnoth-1.4.0
+	o wesnoth-1.4.1
 	o win32-codecs-20071007
 	o windowlab-1.34
 	o wine-0.9.59
@@ -1435,7 +1435,6 @@ Suggested package updates
 	o worker-2.16.2
 	o wpa_gui-0.5.7
 	o wpi-firmware-1.14.2
-	o wv-1.2.5
 	o wwwoffle-2.9d
 	o wxGTK-2.8.6
 	o wxRemind-79
