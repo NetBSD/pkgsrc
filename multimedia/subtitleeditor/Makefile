@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2007/10/05 23:30:46 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/14 11:36:11 wiz Exp $
 #
 
 DISTNAME=		subtitleeditor-0.13.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		multimedia
 MASTER_SITES=		http://kitone.free.fr/subtitleeditor/files/
 
