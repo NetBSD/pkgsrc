@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/03/03 17:45:38 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2008/04/14 23:31:29 rh Exp $
 #
 
 DISTNAME=	xxgdb-1.12
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	devel x11
 MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
 
-MAINTAINER=	rh@trapdoor.vip.at
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Graphical X11 interface for gdb
 
 PKG_DESTDIR_SUPPORT=	user-destdir
