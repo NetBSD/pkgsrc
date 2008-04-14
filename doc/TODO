@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7204 2008/04/13 20:31:48 wiz Exp $
+$NetBSD: TODO,v 1.7205 2008/04/14 11:38:08 wiz Exp $
 
 Suggested new packages
 ======================
@@ -383,7 +383,7 @@ Suggested package updates
 	o aap-0.144
 	o abcm2ps-5.8.0
 	o abcmidi-20080104
-	o abiword-2.6.0
+	o abiword-2.6.2
 	o acme-091
 	o acr-0.5.2
 	o adns-1.4
@@ -443,7 +443,6 @@ Suggested package updates
 	o astyle-1.15.3
 	o aterm-1.0.1
 	o auctex-11.85
-	o autoconf-2.62
 	o autoconvert-0.3.16
 	o avcheck-0.91
 	o avl-2.0.2a
@@ -482,7 +481,6 @@ Suggested package updates
 	o bug-buddy-2.22.0
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
-	o caff-1.0
 	o cairo-1.6.4
 	o cairomm-1.4.8
 	o cal3d-0.11.0
@@ -536,7 +534,7 @@ Suggested package updates
 	o dar-2.3.7
 	o dasher-4.7.3
 	o dbench-3.04
-	o dbus-1.1.20
+	o dbus-1.2.1
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
@@ -584,7 +582,6 @@ Suggested package updates
 	o eltclsh-1.8 [pkg/37283]
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
-	o enchant-1.4.0
 	o enlightenment-0.16.8.12
 	o enscript-1.6.4
 	o eog-2.22.1
@@ -668,6 +665,7 @@ Suggested package updates
 	o ggiterm-0.7.1
 	o ghostscript-esp-8.15.3
 	o gifsicle-1.48
+	o gimp-docs-2.4.1
 	o gindent-2.2.9
 	o gkrellm-2.3.1
 	o gkrellm-multiping-2.0.13
@@ -884,7 +882,7 @@ Suggested package updates
 	o libmusicbrainz-3.0.1
 	o libnasl-2.3.1
 	o libnids-1.21
-	o libntlm-0.4.2
+	o libntlm-1.0
 	o libole2-2.2.8
 	o libopensync-0.35
 	o libpreludedb-0.9.14
@@ -899,6 +897,7 @@ Suggested package updates
 	o libtcl-nothread-8.5.1
 	o libtool-2.2.2
 	o libtool-base-2.2
+	o libwpd-0.8.14
 	o libxkbfile-1.0.5
 	o libxklavier-3.5
 	o libxml++-2.22.0
@@ -945,8 +944,9 @@ Suggested package updates
 	o mkfontdir-1.0.4
 	o mkfontscale-1.0.4
 	o mknmz-wwwoffle-0.7.2
-	o mksh-33c
+	o mksh-33d
 	o mkvtoolnix-2.2.0
+	o mldonkey-2.9.4
 	o mlview-0.9.0
 	o mmg-2.0.2
 	o modular-xorg-server-1.4
@@ -1172,7 +1172,6 @@ Suggested package updates
 	o poppler-glib-0.8.0
 	o poppler-qt-0.8.0
 	o poppy-4.01
-	o popt-1.14
 	o poptop-1.3.0
 	o posh-0.5.5
 	o postal-0.68
@@ -1236,7 +1235,6 @@ Suggested package updates
 	o py-zconfig-2.3.1
 	o pygopherd-2.0.13
 	o pysol-4.82
-	o python-mode-1.0 (Revision 4.75)
 	o python23-2.3.7
 	o python25-2.5.2
 	o qDecoder-8.0
@@ -1282,8 +1280,6 @@ Suggested package updates
 	o rudiments-0.30
 	o rxvt-unicode-9.0
 	o sablecc-3.2
-	o sane-backends-1.0.19
-	o sane-frontends-1.0.19
 	o sarg-2.2.5
 	o sather-1.2.3
 	o scamper-20070201
@@ -1305,7 +1301,7 @@ Suggested package updates
 	o shntool-3.0.5
 	o sign-1.0.7
 	o silc-client-1.1.4
-	o silc-server-1.1.2
+	o silc-server-1.1.3
 	o silc-toolkit-1.1.7
 	o simh-3.7.3
 	o simulavr-0.1.2.2
@@ -1441,6 +1437,7 @@ Suggested package updates
 	o worker-2.16.2
 	o wpa_gui-0.5.7
 	o wpi-firmware-1.14.2
+	o wv-1.2.5
 	o wwwoffle-2.9d
 	o wxGTK-2.8.6
 	o wxRemind-79
