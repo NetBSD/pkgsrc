@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.727 2008/04/14 21:33:22 jlam Exp $
+$NetBSD: CHANGES-2008,v 1.728 2008/04/14 22:25:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1393,3 +1393,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added misc/ruby-columnize version 0.1 [jlam 2008-04-14]
 	Updated devel/ruby-debug-base to 0.10.1 [jlam 2008-04-14]
 	Updated devel/ruby-debug to 0.10.1 [jlam 2008-04-14]
+	Added textproc/link-grammar version 4.3.4 [wiz 2008-04-14]
