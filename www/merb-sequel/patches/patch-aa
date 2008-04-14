@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2008/04/14 20:21:20 jlam Exp $
+
+--- Rakefile.orig	2008-04-14 16:13:27.000000000 -0400
++++ Rakefile
+@@ -25,8 +25,7 @@ specification = Gem::Specification.new d
+   # Dependencies
+   #spec.add_dependency("merb",         ">= 0.9")
+   spec.add_dependency("merb-core", ">= 0.9.2")    # This will probably only be temporary until there is an official merb gem greater than 0.9
+-  spec.add_dependency("sequel",       ">= 1.0.0")
+-  spec.add_dependency("sequel_model", ">= 0.3.3")
++  spec.add_dependency("sequel",       ">= 1.4.0")
+   spec.files = %w(LICENSE README Rakefile TODO) + Dir.glob("{lib,specs,sequel_generators}/**/*")
+ end
+ 
