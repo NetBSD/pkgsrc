@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2008/04/15 15:53:40 obache Exp $
+# $NetBSD: Makefile,v 1.13 2008/04/15 16:01:07 obache Exp $
 
 DISTNAME=	x2x-1.27
 PKGREVISION=	2
 CATEGORIES=	x11
-MASTER_SITES=	http://x2x.dottedmag.net/releases/
+MASTER_SITES=	ftp://gatekeeper.hpl.hp.com/pub/DEC/SRC/x2x/ \
+		http://gatekeeper.hpl.hp.com/pub/DEC/SRC/x2x/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://x2x.dottedmag.net/
