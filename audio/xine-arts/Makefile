@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/04/10 11:48:57 drochner Exp $
+# $NetBSD: Makefile,v 1.29 2008/04/15 19:25:28 drochner Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -15,13 +15,13 @@ BUILD_DIRS=	${WRKSRC}/src/audio_out
 CONFIGURE_ARGS+= --with-arts
 CONFIGURE_ARGS+= --without-x
 
-INSTALLATION_DIRS=	lib/xine/plugins/1.20
+INSTALLATION_DIRS=	lib/xine/plugins/1.21
 
 do-install:
 	cd ${WRKSRC}/src/audio_out && \
 		${LIBTOOL} --mode=install ${INSTALL_DATA} \
 		xineplug_ao_out_arts.la \
-		${DESTDIR}${PREFIX}/lib/xine/plugins/1.20
+		${DESTDIR}${PREFIX}/lib/xine/plugins/1.21
 
 .include "../../audio/arts/buildlink3.mk"
 .include "../../audio/libao/buildlink3.mk"
