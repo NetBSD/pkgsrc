@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2008/04/15 11:58:12 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2008/04/15 13:46:01 schmonz Exp $
 #
 
 DISTNAME=	nvi-1.81.6
+PKGREVISION=	1
 CATEGORIES=	editors
 MASTER_SITES=	${HOMEPAGE}
 EXTRACT_SUFX=	.tar.bz2
@@ -36,6 +37,7 @@ CONFIGURE_ENV+=		vi_cv_include_sys_select=no
 .elif ${OPSYS} == "Darwin"
 CONFIGURE_ENV+=		vi_cv_sys5_pty=no
 LDFLAGS+=		-flat_namespace
+INSTALL_UNSTRIPPED=	yes
 .endif
 
 # We need exactly the db3 API.
