@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2007/11/03 16:10:39 drochner Exp $
+$NetBSD: patch-ab,v 1.8 2008/04/15 19:57:00 drochner Exp $
 
---- utils/Makefile.in.orig	2007-08-15 01:30:09.000000000 +0200
+--- utils/Makefile.in.orig	2008-03-26 19:40:20.000000000 +0100
 +++ utils/Makefile.in
-@@ -52,7 +52,7 @@ mkinstalldirs = $(install_sh) -d
+@@ -48,7 +48,7 @@ mkinstalldirs = $(install_sh) -d
  CONFIG_HEADER = $(top_builddir)/config.h \
  	$(top_builddir)/poppler/poppler-config.h
  CONFIG_CLEAN_FILES =
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.7 2007/11/03 16:10:39 drochner Exp $
  @BUILD_ABIWORD_OUTPUT_TRUE@am__EXEEXT_2 = pdftoabw$(EXEEXT)
  am__installdirs = "$(DESTDIR)$(bindir)" "$(DESTDIR)$(man1dir)"
  binPROGRAMS_INSTALL = $(INSTALL_PROGRAM)
-@@ -62,18 +62,18 @@ am_pdffonts_OBJECTS = pdffonts.$(OBJEXT)
+@@ -58,18 +58,18 @@ am_pdffonts_OBJECTS = pdffonts.$(OBJEXT)
  pdffonts_OBJECTS = $(am_pdffonts_OBJECTS)
  pdffonts_LDADD = $(LDADD)
  am__DEPENDENCIES_1 =
@@ -33,7 +33,7 @@ $NetBSD: patch-ab,v 1.7 2007/11/03 16:10:39 drochner Exp $
  	$(am__DEPENDENCIES_1)
  am__pdftoabw_SOURCES_DIST = pdftoabw.cc parseargs.c parseargs.h
  @BUILD_ABIWORD_OUTPUT_TRUE@am_pdftoabw_OBJECTS = pdftoabw.$(OBJEXT) \
-@@ -86,24 +86,24 @@ am_pdftohtml_OBJECTS = pdftohtml.$(OBJEX
+@@ -82,24 +82,24 @@ am_pdftohtml_OBJECTS = pdftohtml.$(OBJEX
  	HtmlLinks.$(OBJEXT) HtmlOutputDev.$(OBJEXT) $(am__objects_1)
  pdftohtml_OBJECTS = $(am_pdftohtml_OBJECTS)
  pdftohtml_LDADD = $(LDADD)
@@ -62,11 +62,11 @@ $NetBSD: patch-ab,v 1.7 2007/11/03 16:10:39 drochner Exp $
 -pdftotext_DEPENDENCIES = $(top_builddir)/poppler/libpoppler.la \
 +pdftotext_DEPENDENCIES = $(prefix)/lib/libpoppler.la \
  	$(am__DEPENDENCIES_1)
- DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir) -I$(top_builddir)/poppler
+ DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir) -I$(top_builddir)/poppler
  depcomp = $(SHELL) $(top_srcdir)/depcomp
-@@ -301,12 +301,12 @@ sharedstatedir = @sharedstatedir@
- sysconfdir = @sysconfdir@
- target_alias = @target_alias@
+@@ -282,12 +282,12 @@ target_alias = @target_alias@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
  win32_libs = @win32_libs@
 -@BUILD_SPLASH_OUTPUT_TRUE@pdftoppm_SOURCES = \
 -@BUILD_SPLASH_OUTPUT_TRUE@	pdftoppm.cc				\
@@ -82,7 +82,7 @@ $NetBSD: patch-ab,v 1.7 2007/11/03 16:10:39 drochner Exp $
  @BUILD_ABIWORD_OUTPUT_TRUE@pdftoabw_SOURCES = \
  @BUILD_ABIWORD_OUTPUT_TRUE@	pdftoabw.cc				\
  @BUILD_ABIWORD_OUTPUT_TRUE@	$(common)
-@@ -321,9 +321,10 @@ INCLUDES = \
+@@ -302,9 +302,10 @@ INCLUDES = \
  	$(ABIWORD_CFLAGS)
  
  LDADD = \
