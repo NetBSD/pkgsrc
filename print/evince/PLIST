@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2008/04/15 18:30:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.20 2008/04/15 21:18:17 hira Exp $
 bin/evince
 bin/evince-thumbnailer
 include/evince-2.20/evince/ev-async-renderer.h
@@ -25,11 +25,11 @@ include/evince-2.20/evince/ev-render-context.h
 include/evince-2.20/evince/ev-selection.h
 include/evince-2.20/evince/ev-transition-effect.h
 lib/evince/backends/comicsdocument.evince-backend
-lib/evince/backends/djvudocument.evince-backend
-lib/evince/backends/dvidocument.evince-backend
+${PLIST.djvu}lib/evince/backends/djvudocument.evince-backend
+${PLIST.dvi}lib/evince/backends/dvidocument.evince-backend
 lib/evince/backends/libcomicsdocument.la
-lib/evince/backends/libdjvudocument.la
-lib/evince/backends/libdvidocument.la
+${PLIST.djvu}lib/evince/backends/libdjvudocument.la
+${PLIST.dvi}lib/evince/backends/libdvidocument.la
 lib/evince/backends/libpdfdocument.la
 lib/evince/backends/libpsdocument.la
 lib/evince/backends/libtiffdocument.la
