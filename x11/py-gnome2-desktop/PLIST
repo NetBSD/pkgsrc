@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/04/12 22:43:15 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/04/15 18:02:48 drochner Exp $
 lib/pkgconfig/gnome-python-desktop-2.0.pc
 ${PYSITELIB}/gtk-2.0/bugbuddy.py
 ${PYSITELIB}/gtk-2.0/bugbuddy.pyc
@@ -58,7 +58,7 @@ share/gtk-doc/html/pygtksourceview/class-gtksourcetag.html
 share/gtk-doc/html/pygtksourceview/class-gtksourcetagstyle.html
 share/gtk-doc/html/pygtksourceview/class-gtksourcetagtable.html
 share/gtk-doc/html/pygtksourceview/class-gtksourceview.html
-share/gtk-doc/html/pygtksourceview/gtksourcesview-class-reference.html
+share/gtk-doc/html/pygtksourceview/gtksourceview-class-reference.html
 share/gtk-doc/html/pygtksourceview/index.html
 share/gtk-doc/html/pygtksourceview/index.sgml
 share/gtk-doc/html/pygtksourceview/pygtksourceview.devhelp
