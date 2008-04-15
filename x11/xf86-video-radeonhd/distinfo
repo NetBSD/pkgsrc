@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2008/04/12 10:16:59 xtraeme Exp $
+$NetBSD: distinfo,v 1.6 2008/04/15 08:33:54 xtraeme Exp $
 
-SHA1 (xf86-video-radeonhd-1.2.0.tar.bz2) = 2c71361d4bf8d102b3ae350f6550cf606c77817e
-RMD160 (xf86-video-radeonhd-1.2.0.tar.bz2) = 3c0f512f22517ade1fcfb63403b36cc4cd0c4fc2
-Size (xf86-video-radeonhd-1.2.0.tar.bz2) = 511928 bytes
+SHA1 (xf86-video-radeonhd-1.2.1.tar.bz2) = 9784c0c3562b7076de72db4a11118e0660fe2272
+RMD160 (xf86-video-radeonhd-1.2.1.tar.bz2) = f35d3a9491c5f43e94dda391a8b292aa46590a84
+Size (xf86-video-radeonhd-1.2.1.tar.bz2) = 512608 bytes
 SHA1 (patch-aa) = c4b8a4e571820375099481f61a915e5c08b20cd1
