@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.75 2008/03/06 14:53:52 wiz Exp $
+# $NetBSD: Makefile,v 1.76 2008/04/15 18:27:48 drochner Exp $
 #
 
-DISTNAME=		yelp-2.20.0
-PKGREVISION=		2
+DISTNAME=		yelp-2.22.1
 CATEGORIES=		misc
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.20/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/yelp/2.22/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -47,14 +46,12 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-.include "../../print/libgnomeprint/buildlink3.mk"
-.include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../textproc/rarian/buildlink3.mk"
 .include "../../www/seamonkey/gecko-depends.mk"
 .include "../../x11/gtk2/buildlink3.mk"
