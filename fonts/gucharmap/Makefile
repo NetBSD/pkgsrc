@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.52 2008/03/06 14:53:50 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2008/04/15 18:00:48 drochner Exp $
 #
 
-DISTNAME=	gucharmap-1.10.2
-PKGREVISION=	1
+DISTNAME=	gucharmap-2.22.1
 CATEGORIES=	fonts gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gucharmap/1.10/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gucharmap/2.22/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -21,6 +20,8 @@ PKGCONFIG_OVERRIDE+=	gucharmap.pc.in
 
 GTK2_IMMODULES=		yes
 
+GCONF_SCHEMAS+=	gucharmap.schemas
+
 BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.6.0
 BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.13.7
 BUILDLINK_API_DEPENDS.libgnomeui+=	libgnomeui>=2.13.2
@@ -35,4 +36,5 @@ BUILDLINK_API_DEPENDS.libgnomeui+=	libgnomeui>=2.13.2
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/gtk2/modules.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../mk/bsd.pkg.mk"
