@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2007/11/29 20:44:31 drochner Exp $
+@comment $NetBSD: PLIST,v 1.37 2008/04/15 17:52:40 drochner Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/panel-test-applets
@@ -37,13 +37,24 @@ share/gnome-2.0/ui/GNOME_ShowDesktopApplet.xml
 share/gnome-2.0/ui/GNOME_WindowListApplet.xml
 share/gnome-2.0/ui/GNOME_WindowMenuApplet.xml
 share/gnome-2.0/ui/GNOME_WorkspaceSwitcherApplet.xml
+share/gnome-panel/glade/clock.glade
 share/gnome-panel/glade/fish.glade
 share/gnome-panel/glade/panel-properties-dialog.glade
 share/gnome-panel/glade/panel-run-dialog.glade
 share/gnome-panel/glade/panel-test-applets.glade
-share/gnome-panel/glade/timezone.glade
 share/gnome-panel/glade/window-list.glade
 share/gnome-panel/glade/workspace-switcher.glade
+share/gnome-panel/pixmaps/clock-calendar-icon.png
+share/gnome-panel/pixmaps/clock-face-large.svg
+share/gnome-panel/pixmaps/clock-face-small-day.svg
+share/gnome-panel/pixmaps/clock-face-small-evening.svg
+share/gnome-panel/pixmaps/clock-face-small-morning.svg
+share/gnome-panel/pixmaps/clock-face-small-night.svg
+share/gnome-panel/pixmaps/clock-face-small.svg
+share/gnome-panel/pixmaps/clock-map-location-current.png
+share/gnome-panel/pixmaps/clock-map-location-hilight.png
+share/gnome-panel/pixmaps/clock-map-location-marker.png
+share/gnome-panel/pixmaps/clock-map.png
 share/gnome-panel/pixmaps/fishanim.png
 share/gnome-panel/pixmaps/footguy.png
 share/gnome-panel/pixmaps/gnome-gegl2-2.png
@@ -157,6 +168,7 @@ share/gnome/help/fish/uk/fish.xml
 share/gnome/help/fish/uk/legal.xml
 share/gnome/help/window-list/C/window-list.xml
 share/gnome/help/window-list/ca/window-list.xml
+share/gnome/help/window-list/da/window-list.xml
 share/gnome/help/window-list/de/figures/window_list_applet.png
 share/gnome/help/window-list/de/figures/window_list_group.png
 share/gnome/help/window-list/de/figures/window_list_group_applet.png
@@ -184,6 +196,7 @@ share/gnome/help/window-list/zh_TW/legal.xml
 share/gnome/help/window-list/zh_TW/window-list.xml
 share/gnome/help/workspace-switcher/C/workspace-switcher.xml
 share/gnome/help/workspace-switcher/ca/workspace-switcher.xml
+share/gnome/help/workspace-switcher/da/workspace-switcher.xml
 share/gnome/help/workspace-switcher/de/figures/workspace_switcher_applet.png
 share/gnome/help/workspace-switcher/de/figures/workspacelist_applet.png
 share/gnome/help/workspace-switcher/de/legal.xml
@@ -274,6 +287,7 @@ share/icons/hicolor/32x32/apps/gnome-panel-window-list.png
 share/icons/hicolor/32x32/apps/gnome-panel-window-menu.png
 share/icons/hicolor/32x32/apps/gnome-panel-workspace-switcher.png
 share/icons/hicolor/32x32/apps/gnome-panel.png
+share/icons/hicolor/48x48/apps/gnome-panel.png
 share/icons/hicolor/scalable/apps/gnome-panel-clock.svg
 share/icons/hicolor/scalable/apps/gnome-panel-drawer.svg
 share/icons/hicolor/scalable/apps/gnome-panel-fish.svg
@@ -289,6 +303,7 @@ share/idl/gnome-panel-2.0/GNOME_Panel.idl
 share/locale/af/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/am/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/as/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/be/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/be@latin/LC_MESSAGES/gnome-panel-2.0.mo
@@ -313,6 +328,7 @@ share/locale/eu/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/fa/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/fi/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/fr/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/fur/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ga/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/gl/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/gu/LC_MESSAGES/gnome-panel-2.0.mo
@@ -348,6 +364,7 @@ share/locale/oc/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/or/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/pa/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/pl/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/ps/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/pt/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/pt_BR/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ro/LC_MESSAGES/gnome-panel-2.0.mo
@@ -418,6 +435,7 @@ share/omf/gnome-panel/workspace-switcher-zh_CN.omf
 share/omf/gnome-panel/workspace-switcher-zh_TW.omf
 share/omf/window-list/window-list-C.omf
 share/omf/window-list/window-list-ca.omf
+share/omf/window-list/window-list-da.omf
 share/omf/window-list/window-list-de.omf
 share/omf/window-list/window-list-el.omf
 share/omf/window-list/window-list-es.omf
@@ -432,6 +450,7 @@ share/omf/window-list/window-list-uk.omf
 share/omf/window-list/window-list-zh_CN.omf
 share/omf/workspace-switcher/workspace-switcher-C.omf
 share/omf/workspace-switcher/workspace-switcher-ca.omf
+share/omf/workspace-switcher/workspace-switcher-da.omf
 share/omf/workspace-switcher/workspace-switcher-de.omf
 share/omf/workspace-switcher/workspace-switcher-el.omf
 share/omf/workspace-switcher/workspace-switcher-es.omf
@@ -454,6 +473,7 @@ share/omf/workspace-switcher/workspace-switcher-vi.omf
 @dirrm share/idl/gnome-panel-2.0
 @comment in ORBit2: @dirrm share/idl
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
@@ -480,6 +500,7 @@ share/omf/workspace-switcher/workspace-switcher-vi.omf
 @dirrm share/gnome/help/workspace-switcher/el
 @dirrm share/gnome/help/workspace-switcher/de/figures
 @dirrm share/gnome/help/workspace-switcher/de
+@dirrm share/gnome/help/workspace-switcher/da
 @dirrm share/gnome/help/workspace-switcher/ca
 @dirrm share/gnome/help/workspace-switcher/C
 @dirrm share/gnome/help/workspace-switcher
@@ -500,6 +521,7 @@ share/omf/workspace-switcher/workspace-switcher-vi.omf
 @dirrm share/gnome/help/window-list/el
 @dirrm share/gnome/help/window-list/de/figures
 @dirrm share/gnome/help/window-list/de
+@dirrm share/gnome/help/window-list/da
 @dirrm share/gnome/help/window-list/ca
 @dirrm share/gnome/help/window-list/C
 @dirrm share/gnome/help/window-list
