@@ -1,41 +1,45 @@
-@comment $NetBSD: PLIST,v 1.28 2008/01/11 13:42:57 drochner Exp $
+@comment $NetBSD: PLIST,v 1.29 2008/04/15 18:16:16 drochner Exp $
 bin/epiphany
-include/epiphany/2.20/epiphany/ephy-adblock-manager.h
-include/epiphany/2.20/epiphany/ephy-adblock.h
-include/epiphany/2.20/epiphany/ephy-bookmarks-type-builtins.h
-include/epiphany/2.20/epiphany/ephy-bookmarks.h
-include/epiphany/2.20/epiphany/ephy-command-manager.h
-include/epiphany/2.20/epiphany/ephy-cookie-manager.h
-include/epiphany/2.20/epiphany/ephy-dbus.h
-include/epiphany/2.20/epiphany/ephy-dialog.h
-include/epiphany/2.20/epiphany/ephy-embed-event.h
-include/epiphany/2.20/epiphany/ephy-embed-factory.h
-include/epiphany/2.20/epiphany/ephy-embed-persist.h
-include/epiphany/2.20/epiphany/ephy-embed-prefs.h
-include/epiphany/2.20/epiphany/ephy-embed-shell.h
-include/epiphany/2.20/epiphany/ephy-embed-single.h
-include/epiphany/2.20/epiphany/ephy-embed-type-builtins.h
-include/epiphany/2.20/epiphany/ephy-embed.h
-include/epiphany/2.20/epiphany/ephy-extension.h
-include/epiphany/2.20/epiphany/ephy-extensions-manager.h
-include/epiphany/2.20/epiphany/ephy-history.h
-include/epiphany/2.20/epiphany/ephy-lib-type-builtins.h
-include/epiphany/2.20/epiphany/ephy-link.h
-include/epiphany/2.20/epiphany/ephy-loader.h
-include/epiphany/2.20/epiphany/ephy-node-db.h
-include/epiphany/2.20/epiphany/ephy-node.h
-include/epiphany/2.20/epiphany/ephy-notebook.h
-include/epiphany/2.20/epiphany/ephy-password-manager.h
-include/epiphany/2.20/epiphany/ephy-permission-manager.h
-include/epiphany/2.20/epiphany/ephy-session.h
-include/epiphany/2.20/epiphany/ephy-shell.h
-include/epiphany/2.20/epiphany/ephy-state.h
-include/epiphany/2.20/epiphany/ephy-statusbar.h
-include/epiphany/2.20/epiphany/ephy-tab.h
-include/epiphany/2.20/epiphany/ephy-type-builtins.h
-include/epiphany/2.20/epiphany/ephy-window.h
-lib/epiphany/2.20/plugins/libdesktopfileplugin.la
-lib/pkgconfig/epiphany-2.20.pc
+include/epiphany/2.22/epiphany/ephy-adblock-manager.h
+include/epiphany/2.22/epiphany/ephy-adblock.h
+include/epiphany/2.22/epiphany/ephy-base-embed.h
+include/epiphany/2.22/epiphany/ephy-bookmarks-type-builtins.h
+include/epiphany/2.22/epiphany/ephy-bookmarks.h
+include/epiphany/2.22/epiphany/ephy-command-manager.h
+include/epiphany/2.22/epiphany/ephy-cookie-manager.h
+include/epiphany/2.22/epiphany/ephy-dbus.h
+include/epiphany/2.22/epiphany/ephy-dialog.h
+include/epiphany/2.22/epiphany/ephy-embed-container.h
+include/epiphany/2.22/epiphany/ephy-embed-event.h
+include/epiphany/2.22/epiphany/ephy-embed-factory.h
+include/epiphany/2.22/epiphany/ephy-embed-persist.h
+include/epiphany/2.22/epiphany/ephy-embed-prefs.h
+include/epiphany/2.22/epiphany/ephy-embed-shell.h
+include/epiphany/2.22/epiphany/ephy-embed-single.h
+include/epiphany/2.22/epiphany/ephy-embed-type-builtins.h
+include/epiphany/2.22/epiphany/ephy-embed-utils.h
+include/epiphany/2.22/epiphany/ephy-embed.h
+include/epiphany/2.22/epiphany/ephy-extension.h
+include/epiphany/2.22/epiphany/ephy-extensions-manager.h
+include/epiphany/2.22/epiphany/ephy-history-item.h
+include/epiphany/2.22/epiphany/ephy-history.h
+include/epiphany/2.22/epiphany/ephy-lib-type-builtins.h
+include/epiphany/2.22/epiphany/ephy-link.h
+include/epiphany/2.22/epiphany/ephy-loader.h
+include/epiphany/2.22/epiphany/ephy-node-db.h
+include/epiphany/2.22/epiphany/ephy-node.h
+include/epiphany/2.22/epiphany/ephy-notebook.h
+include/epiphany/2.22/epiphany/ephy-password-manager.h
+include/epiphany/2.22/epiphany/ephy-permission-manager.h
+include/epiphany/2.22/epiphany/ephy-session.h
+include/epiphany/2.22/epiphany/ephy-shell.h
+include/epiphany/2.22/epiphany/ephy-state.h
+include/epiphany/2.22/epiphany/ephy-statusbar.h
+include/epiphany/2.22/epiphany/ephy-type-builtins.h
+include/epiphany/2.22/epiphany/ephy-version.h
+include/epiphany/2.22/epiphany/ephy-window.h
+lib/epiphany/2.22/plugins/libdesktopfileplugin.la
+lib/pkgconfig/epiphany-2.22.pc
 man/man1/epiphany.1
 share/aclocal/epiphany.m4
 share/applications/bme.desktop
@@ -44,7 +48,7 @@ share/dbus-1/services/org.gnome.Epiphany.service
 share/epiphany/about.ini
 share/epiphany/chrome/branding/brand.dtd
 share/epiphany/chrome/branding/brand.properties
-share/epiphany/chrome/epiphany.manifest
+share/epiphany/chrome/app-chrome.manifest
 share/epiphany/chrome/global/about.xhtml
 share/epiphany/default-prefs.js
 share/epiphany/ephy-xml2ini.xsl
@@ -191,7 +195,6 @@ share/gnome/help/epiphany/uk/figures/ephy-screenshot.png
 share/gtk-doc/html/epiphany/EphyCommandManager.html
 share/gtk-doc/html/epiphany/EphyEmbed.html
 share/gtk-doc/html/epiphany/EphyNodeDb.html
-share/gtk-doc/html/epiphany/EphyTab.html
 share/gtk-doc/html/epiphany/EphyWindow.html
 share/gtk-doc/html/epiphany/ch01.html
 share/gtk-doc/html/epiphany/ch02.html
@@ -225,6 +228,7 @@ share/icons/hicolor/48x48/apps/epiphany-bookmarks.png
 share/icons/hicolor/scalable/apps/gnome-web-browser.svg
 share/locale/am/LC_MESSAGES/epiphany.mo
 share/locale/ar/LC_MESSAGES/epiphany.mo
+share/locale/as/LC_MESSAGES/epiphany.mo
 share/locale/az/LC_MESSAGES/epiphany.mo
 share/locale/be/LC_MESSAGES/epiphany.mo
 share/locale/be@latin/LC_MESSAGES/epiphany.mo
@@ -259,6 +263,7 @@ share/locale/is/LC_MESSAGES/epiphany.mo
 share/locale/it/LC_MESSAGES/epiphany.mo
 share/locale/ja/LC_MESSAGES/epiphany.mo
 share/locale/ka/LC_MESSAGES/epiphany.mo
+share/locale/kn/LC_MESSAGES/epiphany.mo
 share/locale/ko/LC_MESSAGES/epiphany.mo
 share/locale/ku/LC_MESSAGES/epiphany.mo
 share/locale/li/LC_MESSAGES/epiphany.mo
@@ -297,8 +302,6 @@ share/locale/th/LC_MESSAGES/epiphany.mo
 share/locale/tk/LC_MESSAGES/epiphany.mo
 share/locale/tr/LC_MESSAGES/epiphany.mo
 share/locale/uk/LC_MESSAGES/epiphany.mo
-share/locale/uz/LC_MESSAGES/epiphany.mo
-share/locale/uz@cyrillic/LC_MESSAGES/epiphany.mo
 share/locale/vi/LC_MESSAGES/epiphany.mo
 share/locale/wa/LC_MESSAGES/epiphany.mo
 share/locale/zh_CN/LC_MESSAGES/epiphany.mo
@@ -399,9 +402,9 @@ share/omf/epiphany/epiphany-uk.omf
 @dirrm share/epiphany
 @comment in dbus: @dirrm share/dbus-1/services
 @comment in xdg-dirs: @dirrm share/applications
-@dirrm lib/epiphany/2.20/plugins
-@dirrm lib/epiphany/2.20
+@dirrm lib/epiphany/2.22/plugins
+@dirrm lib/epiphany/2.22
 @dirrm lib/epiphany
-@dirrm include/epiphany/2.20/epiphany
-@dirrm include/epiphany/2.20
+@dirrm include/epiphany/2.22/epiphany
+@dirrm include/epiphany/2.22
 @dirrm include/epiphany
