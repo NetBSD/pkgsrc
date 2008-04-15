@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/04/10 11:48:58 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2008/04/15 19:25:28 drochner Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -20,7 +20,7 @@ do-install:
 	cd ${WRKSRC}/src/audio_out && \
 		${LIBTOOL} --mode=install ${INSTALL_DATA} \
 		xineplug_ao_out_esd.la \
-		${DESTDIR}${PREFIX}/lib/xine/plugins/1.20/
+		${DESTDIR}${PREFIX}/lib/xine/plugins/1.21/
 
 .include "../../audio/esound/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
