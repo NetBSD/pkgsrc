@@ -1,16 +1,12 @@
-@comment $NetBSD: PLIST,v 1.14 2007/11/05 19:26:20 drochner Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/04/15 18:23:54 drochner Exp $
 bin/totem
+bin/totem-audio-preview
 bin/totem-video-indexer
 bin/totem-video-thumbnailer
-include/totem/1/plparser/totem-disc.h
-include/totem/1/plparser/totem-pl-parser-builtins.h
-include/totem/1/plparser/totem-pl-parser-features.h
-include/totem/1/plparser/totem-pl-parser.h
-lib/libtotem-plparser.la
-lib/nautilus/extensions-1.0/libtotem-properties-page.la
-lib/pkgconfig/totem-plparser.pc
 lib/totem/plugins/gromit/gromit.totem-plugin
 lib/totem/plugins/gromit/libgromit.la
+lib/totem/plugins/media-player-keys/libmedia_player_keys.la
+lib/totem/plugins/media-player-keys/media-player-keys.totem-plugin
 lib/totem/plugins/ontop/libontop.la
 lib/totem/plugins/ontop/ontop.totem-plugin
 lib/totem/plugins/properties/libmovie-properties.la
@@ -20,6 +16,13 @@ lib/totem/plugins/screensaver/screensaver.totem-plugin
 lib/totem/plugins/skipto/libskipto.la
 lib/totem/plugins/skipto/skipto.totem-plugin
 lib/totem/plugins/skipto/skipto.ui
+lib/totem/plugins/thumbnail/libthumbnail.la
+lib/totem/plugins/thumbnail/thumbnail.totem-plugin
+lib/totem/plugins/youtube/youtube.py
+lib/totem/plugins/youtube/youtube.pyc
+lib/totem/plugins/youtube/youtube.pyo
+lib/totem/plugins/youtube/youtube.totem-plugin
+lib/totem/plugins/youtube/youtube.ui
 man/man1/totem-video-thumbnailer.1
 man/man1/totem.1
 share/applications/totem.desktop
@@ -57,6 +60,15 @@ share/gnome/help/totem/de/figures/totem_start_window.png
 share/gnome/help/totem/de/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/de/figures/totem_volume_mute_button.png
 share/gnome/help/totem/de/totem.xml
+share/gnome/help/totem/el/figures/totem_next_button.png
+share/gnome/help/totem/el/figures/totem_pause_button.png
+share/gnome/help/totem/el/figures/totem_play_button.png
+share/gnome/help/totem/el/figures/totem_previous_button.png
+share/gnome/help/totem/el/figures/totem_show_playlist_button.png
+share/gnome/help/totem/el/figures/totem_start_window.png
+share/gnome/help/totem/el/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/el/figures/totem_volume_mute_button.png
+share/gnome/help/totem/el/totem.xml
 share/gnome/help/totem/en_GB/figures/totem_next_button.png
 share/gnome/help/totem/en_GB/figures/totem_pause_button.png
 share/gnome/help/totem/en_GB/figures/totem_play_button.png
@@ -84,6 +96,15 @@ share/gnome/help/totem/fr/figures/totem_start_window.png
 share/gnome/help/totem/fr/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/fr/figures/totem_volume_mute_button.png
 share/gnome/help/totem/fr/totem.xml
+share/gnome/help/totem/it/figures/totem_next_button.png
+share/gnome/help/totem/it/figures/totem_pause_button.png
+share/gnome/help/totem/it/figures/totem_play_button.png
+share/gnome/help/totem/it/figures/totem_previous_button.png
+share/gnome/help/totem/it/figures/totem_show_playlist_button.png
+share/gnome/help/totem/it/figures/totem_start_window.png
+share/gnome/help/totem/it/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/it/figures/totem_volume_mute_button.png
+share/gnome/help/totem/it/totem.xml
 share/gnome/help/totem/oc/figures/totem_next_button.png
 share/gnome/help/totem/oc/figures/totem_pause_button.png
 share/gnome/help/totem/oc/figures/totem_play_button.png
@@ -138,13 +159,33 @@ share/gnome/help/totem/uk/figures/totem_start_window.png
 share/gnome/help/totem/uk/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/uk/figures/totem_volume_mute_button.png
 share/gnome/help/totem/uk/totem.xml
+share/gnome/help/totem/zh_HK/figures/totem_next_button.png
+share/gnome/help/totem/zh_HK/figures/totem_pause_button.png
+share/gnome/help/totem/zh_HK/figures/totem_play_button.png
+share/gnome/help/totem/zh_HK/figures/totem_previous_button.png
+share/gnome/help/totem/zh_HK/figures/totem_show_playlist_button.png
+share/gnome/help/totem/zh_HK/figures/totem_start_window.png
+share/gnome/help/totem/zh_HK/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/zh_HK/figures/totem_volume_mute_button.png
+share/gnome/help/totem/zh_HK/totem.xml
+share/gnome/help/totem/zh_TW/figures/totem_next_button.png
+share/gnome/help/totem/zh_TW/figures/totem_pause_button.png
+share/gnome/help/totem/zh_TW/figures/totem_play_button.png
+share/gnome/help/totem/zh_TW/figures/totem_previous_button.png
+share/gnome/help/totem/zh_TW/figures/totem_show_playlist_button.png
+share/gnome/help/totem/zh_TW/figures/totem_start_window.png
+share/gnome/help/totem/zh_TW/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/zh_TW/figures/totem_volume_mute_button.png
+share/gnome/help/totem/zh_TW/totem.xml
 share/icons/hicolor/16x16/apps/totem.png
 share/icons/hicolor/22x22/apps/totem.png
 share/icons/hicolor/24x24/apps/totem.png
 share/icons/hicolor/32x32/apps/totem.png
+share/icons/hicolor/48x48/apps/totem.png
 share/icons/hicolor/scalable/apps/totem.svg
 share/locale/am/LC_MESSAGES/totem.mo
 share/locale/ar/LC_MESSAGES/totem.mo
+share/locale/as/LC_MESSAGES/totem.mo
 share/locale/az/LC_MESSAGES/totem.mo
 share/locale/be/LC_MESSAGES/totem.mo
 share/locale/be@latin/LC_MESSAGES/totem.mo
@@ -179,6 +220,7 @@ share/locale/is/LC_MESSAGES/totem.mo
 share/locale/it/LC_MESSAGES/totem.mo
 share/locale/ja/LC_MESSAGES/totem.mo
 share/locale/ka/LC_MESSAGES/totem.mo
+share/locale/kn/LC_MESSAGES/totem.mo
 share/locale/ko/LC_MESSAGES/totem.mo
 share/locale/ku/LC_MESSAGES/totem.mo
 share/locale/lt/LC_MESSAGES/totem.mo
@@ -201,6 +243,7 @@ share/locale/pt_BR/LC_MESSAGES/totem.mo
 share/locale/ro/LC_MESSAGES/totem.mo
 share/locale/ru/LC_MESSAGES/totem.mo
 share/locale/rw/LC_MESSAGES/totem.mo
+share/locale/si/LC_MESSAGES/totem.mo
 share/locale/sk/LC_MESSAGES/totem.mo
 share/locale/sl/LC_MESSAGES/totem.mo
 share/locale/sq/LC_MESSAGES/totem.mo
@@ -223,37 +266,45 @@ share/omf/totem/totem-C.omf
 share/omf/totem/totem-bg.omf
 share/omf/totem/totem-ca.omf
 share/omf/totem/totem-de.omf
+share/omf/totem/totem-el.omf
 share/omf/totem/totem-en_GB.omf
 share/omf/totem/totem-es.omf
 share/omf/totem/totem-fr.omf
+share/omf/totem/totem-it.omf
 share/omf/totem/totem-oc.omf
 share/omf/totem/totem-pa.omf
 share/omf/totem/totem-pt_BR.omf
 share/omf/totem/totem-ru.omf
 share/omf/totem/totem-sv.omf
 share/omf/totem/totem-uk.omf
+share/omf/totem/totem-zh_HK.omf
+share/omf/totem/totem-zh_TW.omf
 share/totem/filmholes-big-left.png
 share/totem/filmholes-big-right.png
 share/totem/filmholes.png
 share/totem/fullscreen.ui
 share/totem/mozilla-viewer.ui
-share/totem/playlist-ui.xml
 share/totem/playlist.ui
 share/totem/plugins.ui
 share/totem/properties.ui
-share/totem/totem-ui.xml
 share/totem/totem.ui
 share/totem/totem_logo.png
 share/totem/uri.ui
+share/totem/video-list.ui
 @dirrm share/totem
 @dirrm share/omf/totem
-@comment in scrollkeeper: @dirrm share/omf
+@comment in rarian: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/gnome/help/totem/zh_TW/figures
+@dirrm share/gnome/help/totem/zh_TW
+@dirrm share/gnome/help/totem/zh_HK/figures
+@dirrm share/gnome/help/totem/zh_HK
 @dirrm share/gnome/help/totem/uk/figures
 @dirrm share/gnome/help/totem/uk
 @dirrm share/gnome/help/totem/sv/figures
@@ -266,12 +317,16 @@ share/totem/uri.ui
 @dirrm share/gnome/help/totem/pa
 @dirrm share/gnome/help/totem/oc/figures
 @dirrm share/gnome/help/totem/oc
+@dirrm share/gnome/help/totem/it/figures
+@dirrm share/gnome/help/totem/it
 @dirrm share/gnome/help/totem/fr/figures
 @dirrm share/gnome/help/totem/fr
 @dirrm share/gnome/help/totem/es/figures
 @dirrm share/gnome/help/totem/es
 @dirrm share/gnome/help/totem/en_GB/figures
 @dirrm share/gnome/help/totem/en_GB
+@dirrm share/gnome/help/totem/el/figures
+@dirrm share/gnome/help/totem/el
 @dirrm share/gnome/help/totem/de/figures
 @dirrm share/gnome/help/totem/de
 @dirrm share/gnome/help/totem/ca/figures
@@ -284,14 +339,13 @@ share/totem/uri.ui
 @comment in gnome2-dirs: @dirrm share/gnome/help
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
+@dirrm lib/totem/plugins/youtube
+@dirrm lib/totem/plugins/thumbnail
 @dirrm lib/totem/plugins/skipto
 @dirrm lib/totem/plugins/screensaver
 @dirrm lib/totem/plugins/properties
 @dirrm lib/totem/plugins/ontop
+@dirrm lib/totem/plugins/media-player-keys
 @dirrm lib/totem/plugins/gromit
 @dirrm lib/totem/plugins
 @dirrm lib/totem
-@comment in nautilus: @dirrm lib/nautilus/extensions-1.0
-@dirrm include/totem/1/plparser
-@dirrm include/totem/1
-@dirrm include/totem
