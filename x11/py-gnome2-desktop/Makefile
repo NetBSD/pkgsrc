@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2008/04/12 22:43:15 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2008/04/15 18:02:48 drochner Exp $
 #
 
-DISTNAME=	gnome-python-desktop-2.20.0
+DISTNAME=	gnome-python-desktop-2.22.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python/2/}
-PKGREVISION=	2
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-desktop/2.20/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-python-desktop/2.22/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -15,7 +14,7 @@ COMMENT=	Python modules for the GNOME desktop
 GNU_CONFIGURE=	yes
 PY_PATCHPLIST=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config gmake
 
 DEPENDS+=	bug-buddy>=2.16:../../net/bug-buddy
 
@@ -27,9 +26,10 @@ PYTHON_VERSIONS_ACCEPTED=	24
 PLIST_VARS+=	nautilusburn
 #.include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
 
+CONFIGURE_ARGS+=	--disable-evolution
+
 .include "../../graphics/py-cairo/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
-.include "../../multimedia/totem/buildlink3.mk"
 .include "../../multimedia/gnome-media/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gnome-panel/buildlink3.mk"
@@ -45,4 +45,5 @@ PLIST_VARS+=	nautilusburn
 # CONFIGURE_ARGS+=	--enable-metacity
 #.include "../../wm/metacity/buildlink3.mk"
 .include "../../lang/python/extension.mk"
+.include "../../multimedia/totem-pl-parser/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
