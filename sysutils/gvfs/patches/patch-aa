@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/04/11 19:25:38 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2008/04/15 16:34:28 drochner Exp $
 
 --- configure.orig	2008-04-08 04:07:37.000000000 +0200
 +++ configure
@@ -85,3 +85,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/04/11 19:25:38 drochner Exp $
  
  pkg_failed=no
  { echo "$as_me:$LINENO: checking for KEYRING" >&5
+@@ -26600,7 +26600,7 @@ _ACEOF
+ 
+ 		msg_samba="yes"
+                 if test x$with_samba_libs != x/usr/lib; then
+-                        SAMBA_LIBS="-L$with_samba_libs -lsmbclient"
++                        SAMBA_LIBS="-L$with_samba_libs -lsmbclient -Wl,-R$with_samba_libs"
+                 else
+                 	SAMBA_LIBS="-lsmbclient"
+                 fi
