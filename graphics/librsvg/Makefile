@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2008/03/06 14:53:51 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2008/04/15 17:41:13 drochner Exp $
 
-DISTNAME=	librsvg-2.18.2
-PKGREVISION=	4
+DISTNAME=	librsvg-2.22.2
 CATEGORIES=	graphics gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.18/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.22/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -43,10 +42,7 @@ post-install:
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../print/libgnomeprint/buildlink3.mk"
-.include "../../print/libgnomeprintui/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libcroco+=	libcroco>=0.6.1
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libcroco/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/modules.mk"
