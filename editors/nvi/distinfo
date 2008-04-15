@@ -1,15 +1,5 @@
-$NetBSD: distinfo,v 1.8 2008/02/21 21:17:45 jlam Exp $
+$NetBSD: distinfo,v 1.9 2008/04/15 11:58:12 wiz Exp $
 
-SHA1 (nvi-1.81.5.tar.bz2) = 63a5837cf9e726c10a9927323b451390e267765e
-RMD160 (nvi-1.81.5.tar.bz2) = a3c37e0e2bb87353547af37d6f736d1dd1d3c6ad
-Size (nvi-1.81.5.tar.bz2) = 1274353 bytes
-SHA1 (patch-ab) = d5cb1cccb2799bb21822dcd0e11d7208c60f40b6
-SHA1 (patch-ac) = 239764397e64323edfba6fcf4ae99846cebbdbe1
-SHA1 (patch-ad) = 3cdd8ea5ad6c9c4e6a2d1f77d0b28f80fae44fd0
-SHA1 (patch-ae) = 28441e05bd1bbaa89a1df516decc583898eb1a23
-SHA1 (patch-af) = 63ad95807e1d0011f82df0bf602330aa0204cf9b
-SHA1 (patch-ag) = decdf31882e718441f59e024ca1a8dcc5e469a62
-SHA1 (patch-ah) = c0c0feaacab0b88afe0a101bc70e25b3e772b280
-SHA1 (patch-ai) = 01ec27bb9313e98503f650630cf868745098ea32
-SHA1 (patch-aj) = 4ef7015132c4b7d30548f6a37ec8e221e47d4ee8
-SHA1 (patch-ak) = a0cb43f9077a58538401d1ca25f03919168b950e
+SHA1 (nvi-1.81.6.tar.bz2) = d3445ed69166102735335a2ff60d092d9a9143c6
+RMD160 (nvi-1.81.6.tar.bz2) = 0db8568bea96392d9a027044177c60317c8ade36
+Size (nvi-1.81.6.tar.bz2) = 1758309 bytes
