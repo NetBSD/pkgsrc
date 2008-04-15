@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.730 2008/04/15 07:56:46 martti Exp $
+$NetBSD: CHANGES-2008,v 1.731 2008/04/15 08:35:04 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1396,3 +1396,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/link-grammar version 4.3.4 [wiz 2008-04-14]
 	Updated converters/wv to 1.2.5 [wiz 2008-04-14]
 	Updated mail/clamav to 0.93 [martti 2008-04-15]
+	Updated x11/xf86-video-radeonhd to 1.2.1 [xtraeme 2008-04-15]
