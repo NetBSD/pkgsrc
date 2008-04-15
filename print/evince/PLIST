@@ -1,6 +1,42 @@
-@comment $NetBSD: PLIST,v 1.18 2008/04/12 22:43:09 jlam Exp $
+@comment $NetBSD: PLIST,v 1.19 2008/04/15 18:30:23 drochner Exp $
 bin/evince
 bin/evince-thumbnailer
+include/evince-2.20/evince/ev-async-renderer.h
+include/evince-2.20/evince/ev-attachment.h
+include/evince-2.20/evince/ev-document-find.h
+include/evince-2.20/evince/ev-document-fonts.h
+include/evince-2.20/evince/ev-document-forms.h
+include/evince-2.20/evince/ev-document-images.h
+include/evince-2.20/evince/ev-document-info.h
+include/evince-2.20/evince/ev-document-links.h
+include/evince-2.20/evince/ev-document-misc.h
+include/evince-2.20/evince/ev-document-security.h
+include/evince-2.20/evince/ev-document-thumbnails.h
+include/evince-2.20/evince/ev-document-transition.h
+include/evince-2.20/evince/ev-document.h
+include/evince-2.20/evince/ev-file-exporter.h
+include/evince-2.20/evince/ev-file-helpers.h
+include/evince-2.20/evince/ev-form-field.h
+include/evince-2.20/evince/ev-image.h
+include/evince-2.20/evince/ev-link-action.h
+include/evince-2.20/evince/ev-link-dest.h
+include/evince-2.20/evince/ev-link.h
+include/evince-2.20/evince/ev-render-context.h
+include/evince-2.20/evince/ev-selection.h
+include/evince-2.20/evince/ev-transition-effect.h
+lib/evince/backends/comicsdocument.evince-backend
+lib/evince/backends/djvudocument.evince-backend
+lib/evince/backends/dvidocument.evince-backend
+lib/evince/backends/libcomicsdocument.la
+lib/evince/backends/libdjvudocument.la
+lib/evince/backends/libdvidocument.la
+lib/evince/backends/libpdfdocument.la
+lib/evince/backends/libpsdocument.la
+lib/evince/backends/libtiffdocument.la
+lib/evince/backends/pdfdocument.evince-backend
+lib/evince/backends/psdocument.evince-backend
+lib/evince/backends/tiffdocument.evince-backend
+lib/libevbackend.la
 man/man1/evince.1
 share/applications/evince.desktop
 share/evince/evince-password.glade
@@ -68,6 +104,8 @@ share/gnome/help/evince/sv/evince.xml
 share/gnome/help/evince/sv/figures/evince_start_window.png
 share/gnome/help/evince/uk/evince.xml
 share/gnome/help/evince/uk/figures/evince_start_window.png
+share/gnome/help/evince/zh_CN/evince.xml
+share/gnome/help/evince/zh_CN/figures/evince_start_window.png
 share/gtk-doc/html/evince/EvAttachment.html
 share/gtk-doc/html/evince/EvJobPrint.html
 share/gtk-doc/html/evince/EvNavigationAction.html
@@ -106,7 +144,6 @@ share/gtk-doc/html/evince/evince-ev-link.html
 share/gtk-doc/html/evince/evince-ev-metadata-manager.html
 share/gtk-doc/html/evince/evince-ev-page-cache.html
 share/gtk-doc/html/evince/evince-ev-pixbuf-cache.html
-share/gtk-doc/html/evince/evince-ev-print-job.html
 share/gtk-doc/html/evince/evince-ev-properties-dialog.html
 share/gtk-doc/html/evince/evince-ev-properties-fonts.html
 share/gtk-doc/html/evince/evince-ev-selection.html
@@ -136,6 +173,7 @@ share/icons/hicolor/24x24/apps/evince.png
 share/icons/hicolor/48x48/apps/evince.png
 share/icons/hicolor/scalable/apps/evince.svg
 share/locale/ar/LC_MESSAGES/evince.mo
+share/locale/as/LC_MESSAGES/evince.mo
 share/locale/be/LC_MESSAGES/evince.mo
 share/locale/be@latin/LC_MESSAGES/evince.mo
 share/locale/bg/LC_MESSAGES/evince.mo
@@ -157,6 +195,7 @@ share/locale/eu/LC_MESSAGES/evince.mo
 share/locale/fa/LC_MESSAGES/evince.mo
 share/locale/fi/LC_MESSAGES/evince.mo
 share/locale/fr/LC_MESSAGES/evince.mo
+share/locale/ga/LC_MESSAGES/evince.mo
 share/locale/gl/LC_MESSAGES/evince.mo
 share/locale/gu/LC_MESSAGES/evince.mo
 share/locale/he/LC_MESSAGES/evince.mo
@@ -166,6 +205,7 @@ share/locale/id/LC_MESSAGES/evince.mo
 share/locale/it/LC_MESSAGES/evince.mo
 share/locale/ja/LC_MESSAGES/evince.mo
 share/locale/ka/LC_MESSAGES/evince.mo
+share/locale/kn/LC_MESSAGES/evince.mo
 share/locale/ko/LC_MESSAGES/evince.mo
 share/locale/ku/LC_MESSAGES/evince.mo
 share/locale/lt/LC_MESSAGES/evince.mo
@@ -187,6 +227,7 @@ share/locale/pt_BR/LC_MESSAGES/evince.mo
 share/locale/ro/LC_MESSAGES/evince.mo
 share/locale/ru/LC_MESSAGES/evince.mo
 share/locale/rw/LC_MESSAGES/evince.mo
+share/locale/si/LC_MESSAGES/evince.mo
 share/locale/sk/LC_MESSAGES/evince.mo
 share/locale/sl/LC_MESSAGES/evince.mo
 share/locale/sq/LC_MESSAGES/evince.mo
@@ -220,8 +261,9 @@ share/omf/evince/evince-ru.omf
 share/omf/evince/evince-sr.omf
 share/omf/evince/evince-sv.omf
 share/omf/evince/evince-uk.omf
+share/omf/evince/evince-zh_CN.omf
 @dirrm share/omf/evince
-@comment in scrollkeeper: @dirrm share/omf
+@comment in rarian: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
@@ -229,6 +271,8 @@ share/omf/evince/evince-uk.omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @dirrm share/gtk-doc/html/evince
+@dirrm share/gnome/help/evince/zh_CN/figures
+@dirrm share/gnome/help/evince/zh_CN
 @dirrm share/gnome/help/evince/uk/figures
 @dirrm share/gnome/help/evince/uk
 @dirrm share/gnome/help/evince/sv/figures
@@ -280,3 +324,7 @@ share/omf/evince/evince-uk.omf
 @dirrm share/evince/icons
 @dirrm share/evince
 @comment in xdg-dirs: @dirrm share/applications
+@dirrm lib/evince/backends
+@dirrm lib/evince
+@dirrm include/evince-2.20/evince
+@dirrm include/evince-2.20
