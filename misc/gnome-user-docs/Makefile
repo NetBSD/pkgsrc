@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2007/11/05 19:50:03 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2008/04/15 18:50:17 drochner Exp $
 #
 
-DISTNAME=	gnome-user-docs-2.20.1
+DISTNAME=	gnome-user-docs-2.22.0
 CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-user-docs/2.20/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-user-docs/2.22/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -19,5 +19,5 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"
