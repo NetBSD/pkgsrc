@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2008/04/15 17:41:13 drochner Exp $
+# $NetBSD: Makefile,v 1.30 2008/04/15 21:24:27 wiz Exp $
 
 DISTNAME=	librsvg-2.22.2
 CATEGORIES=	graphics gnome
@@ -30,7 +30,7 @@ CONFIGURE_ARGS+=	--disable-mozilla-plugin
 GTK2_LOADERS=		yes
 
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
-BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.11.0
+BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.12.0
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 
 post-install:
