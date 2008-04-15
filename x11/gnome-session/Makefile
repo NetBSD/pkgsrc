@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.93 2008/03/06 14:53:56 wiz Exp $
+# $NetBSD: Makefile,v 1.94 2008/04/15 18:06:15 drochner Exp $
 #
 
-DISTNAME=		gnome-session-2.20.3
-PKGREVISION=		1
+DISTNAME=		gnome-session-2.22.1.1
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.20/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-session/2.22/}
 SITES.gnome-splash-2.16.0.png=	${MASTER_SITE_LOCAL:=gnome-splash/}
 EXTRACT_SUFX=		.tar.bz2
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gnome-splash-2.16.0.png
@@ -34,7 +33,6 @@ BUILDLINK_API_DEPENDS.gnome-keyring+=	gnome-keyring>=0.5.1
 # Make sure we do not use old packages that rely on XDG_{CONFIG,DATA}_DIRS
 # in the environment being set.
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.1
-BUILDLINK_API_DEPENDS.gnome-vfs2+=	gnome-vfs2>=2.8.3nb1
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
@@ -49,6 +47,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
+.include "../../sysutils/gnome-settings-daemon/buildlink3.mk"
 .include "../../x11/gnome-control-center/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
