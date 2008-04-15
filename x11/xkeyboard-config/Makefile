@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/02/07 06:31:23 bjs Exp $
+# $NetBSD: Makefile,v 1.7 2008/04/15 02:27:54 reed Exp $
 #
 
 DISTNAME=	xkeyboard-config-1.2
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS+=		xkbdata-[0-9]*
 
 GNU_CONFIGURE=		yes
-USE_LANGUAGES=		# none
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake intltool perl:build 
 USE_TOOLS+=		msgfmt xgettext
@@ -55,5 +54,8 @@ FILES_SUBST+=		XKBCOMPDIR=${XKBCOMPDIR:Q}
 FILES_SUBST+=		XKBCOMPDIR_SYMLINK=${XKBCOMPDIR_SYMLINK:Q}
 
 OWN_DIRS+=		${XKBCOMPDIR}
+
+BUILDLINK_DEPMETHOD.gettext=	build	# for the configure only
+.include "../../devel/gettext-lib/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
