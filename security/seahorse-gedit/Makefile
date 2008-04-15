@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2008/03/06 14:53:54 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2008/04/15 18:53:42 drochner Exp $
 
-DISTNAME=	seahorse-2.20.3
-PKGNAME=	seahorse-gedit-2.20.3
-PKGREVISION=	2
+DISTNAME=	seahorse-2.22.1
+PKGNAME=	seahorse-gedit-2.22.1
 CATEGORIES=	security
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/2.20/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/2.22/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -37,7 +36,7 @@ INSTALL_DIRS=	plugins/gedit
 .include "../../devel/libbonoboui/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../net/libsoup-devel/buildlink3.mk"
+.include "../../net/libsoup24/buildlink3.mk"
 .include "../../security/seahorse/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"

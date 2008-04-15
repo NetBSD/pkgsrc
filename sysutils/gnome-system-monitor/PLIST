@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/11/05 19:09:07 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/04/15 18:55:56 drochner Exp $
 bin/gnome-system-monitor
 share/applications/gnome-system-monitor.desktop
 share/gconf/schemas/gnome-system-monitor.schemas
@@ -119,6 +119,7 @@ share/locale/am/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/ar/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/az/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/be/LC_MESSAGES/gnome-system-monitor.mo
+share/locale/be@latin/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/bg/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/bn/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-system-monitor.mo
@@ -149,6 +150,7 @@ share/locale/id/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/it/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/ja/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/ka/LC_MESSAGES/gnome-system-monitor.mo
+share/locale/kn/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/ko/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/ku/LC_MESSAGES/gnome-system-monitor.mo
 share/locale/li/LC_MESSAGES/gnome-system-monitor.mo
@@ -198,7 +200,9 @@ share/omf/gnome-system-monitor/gnome-system-monitor-fr.omf
 share/omf/gnome-system-monitor/gnome-system-monitor-oc.omf
 share/omf/gnome-system-monitor/gnome-system-monitor-pa.omf
 share/omf/gnome-system-monitor/gnome-system-monitor-sv.omf
+share/pixmaps/gnome-system-monitor/download.svg
 share/pixmaps/gnome-system-monitor/side.png
+share/pixmaps/gnome-system-monitor/upload.svg
 @dirrm share/pixmaps/gnome-system-monitor
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/gnome-system-monitor
