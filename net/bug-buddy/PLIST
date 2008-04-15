@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2007/11/03 16:35:49 drochner Exp $
+@comment $NetBSD: PLIST,v 1.18 2008/04/15 19:07:43 drochner Exp $
 bin/bug-buddy
 lib/gtk-2.0/modules/libgnomebreakpad.la
 share/applications/bug-buddy.desktop
@@ -16,6 +16,7 @@ share/bug-buddy/bugzilla/ximian/products
 share/bug-buddy/gdb-cmd
 share/gconf/schemas/bug-buddy.schemas
 share/icons/hicolor/48x48/apps/bug-buddy.png
+share/locale/af/LC_MESSAGES/bug-buddy.mo
 share/locale/am/LC_MESSAGES/bug-buddy.mo
 share/locale/ar/LC_MESSAGES/bug-buddy.mo
 share/locale/as/LC_MESSAGES/bug-buddy.mo

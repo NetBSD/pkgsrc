@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2007/11/03 16:35:49 drochner Exp $
+$NetBSD: distinfo,v 1.16 2008/04/15 19:07:43 drochner Exp $
 
-SHA1 (bug-buddy-2.20.1.tar.bz2) = ef6f82b2444e3b72bd6ac4197086d9b1697ae928
-RMD160 (bug-buddy-2.20.1.tar.bz2) = a7b62bcaf15cd44404a351f286c4a2b90bb569b9
-Size (bug-buddy-2.20.1.tar.bz2) = 1070862 bytes
+SHA1 (bug-buddy-2.22.0.tar.bz2) = 1fd3bd2b0e6160d0e2d9dee93cd49a4c3fa2770e
+RMD160 (bug-buddy-2.22.0.tar.bz2) = 684457fa6394522994b8443bbf47ccbdd1b1a11e
+Size (bug-buddy-2.22.0.tar.bz2) = 1076752 bytes
