@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2007/11/05 19:40:42 drochner Exp $
+@comment $NetBSD: PLIST,v 1.27 2008/04/15 17:53:51 drochner Exp $
 bin/metacity
 bin/metacity-message
 bin/metacity-theme-viewer
@@ -22,6 +22,7 @@ share/gnome-control-center/keybindings/50-metacity-key.xml
 share/gnome/wm-properties/metacity.desktop
 share/locale/am/LC_MESSAGES/metacity.mo
 share/locale/ar/LC_MESSAGES/metacity.mo
+share/locale/as/LC_MESSAGES/metacity.mo
 share/locale/az/LC_MESSAGES/metacity.mo
 share/locale/be/LC_MESSAGES/metacity.mo
 share/locale/be@latin/LC_MESSAGES/metacity.mo
