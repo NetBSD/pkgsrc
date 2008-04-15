@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7211 2008/04/15 16:06:37 obache Exp $
+$NetBSD: TODO,v 1.7212 2008/04/15 16:13:26 tron Exp $
 
 Suggested new packages
 ======================
@@ -848,7 +848,6 @@ Suggested package updates
 	o libXv-1.0.4
 	o libast-0.7
 	o libcares-1.5.1
-	o libcdio-0.80
 	o libchewing-0.3.0
 	o libconfig-1.2.1
 	o libdca-0.0.5 [pkg/38167]
