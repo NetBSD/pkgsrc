@@ -1,4 +1,4 @@
-/* $NetBSD: _cdio_netbsd.c,v 1.4 2005/05/31 17:05:36 drochner Exp $ */
+/* $NetBSD: _cdio_netbsd.c,v 1.5 2008/04/15 16:13:12 tron Exp $ */
 
 /*
  * Copyright (c) 2003
@@ -75,7 +75,7 @@ typedef struct {
 static driver_return_code_t
 run_scsi_cmd_freebsd(void *p_user_data, unsigned int i_timeout_ms,
 		     unsigned int i_cdb, const mmc_cdb_t *p_cdb, 
-		     mmc_direction_t e_direction, 
+		     cdio_mmc_direction_t e_direction, 
 		     unsigned int i_buf, void *p_buf )
 {
 	const _img_private_t *_obj = p_user_data;
@@ -466,9 +466,9 @@ _cdio_get_track_msf(void *user_data, track_t track_num, msf_t *msf)
 	if (track_num > TOTAL_TRACKS + 1 || track_num == 0)
 		return false;
 
-	msf->m = to_bcd8(_obj->tocent[track_num - 1].addr.msf.minute);
-	msf->s = to_bcd8(_obj->tocent[track_num - 1].addr.msf.second);
-	msf->f = to_bcd8(_obj->tocent[track_num - 1].addr.msf.frame);
+	msf->m = cdio_to_bcd8(_obj->tocent[track_num - 1].addr.msf.minute);
+	msf->s = cdio_to_bcd8(_obj->tocent[track_num - 1].addr.msf.second);
+	msf->f = cdio_to_bcd8(_obj->tocent[track_num - 1].addr.msf.frame);
 
 	return true;
 }
