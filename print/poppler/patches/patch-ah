@@ -1,0 +1,50 @@
+$NetBSD: patch-ah,v 1.1 2008/04/15 19:57:00 drochner Exp $
+
+--- poppler/CairoFontEngine.cc.orig	2008-01-29 23:03:38.000000000 +0100
++++ poppler/CairoFontEngine.cc
+@@ -31,11 +31,10 @@ static void fileWrite(void *stream, char
+ // CairoFont
+ //------------------------------------------------------------------------
+ 
+-static void cairo_font_face_destroy (void *data)
++static void _ft_done_face (void *data)
+ {
+-  CairoFont *font = (CairoFont *) data;
+-
+-  delete font;
++  FT_Face face = (FT_Face) data;
++  FT_Done_Face (face);
+ }
+ 
+ CairoFont *CairoFont::create(GfxFont *gfxFont, XRef *xref, FT_Library lib, GBool useCIDs) {
+@@ -224,16 +223,16 @@ CairoFont *CairoFont::create(GfxFont *gf
+   cairo_font_face = cairo_ft_font_face_create_for_ft_face (face,
+ 							   FT_LOAD_NO_HINTING |
+ 							   FT_LOAD_NO_BITMAP);
+-  if (cairo_font_face == NULL) {
+-    error(-1, "could not create cairo font\n");
++  if (cairo_font_face_status (cairo_font_face)) {
++    error(-1, "could not create cairo font: %s\n", cairo_status_to_string (cairo_font_face_status (cairo_font_face)));
+     goto err2; /* this doesn't do anything, but it looks like we're
+ 		* handling the error */
+   } {
+   CairoFont *ret = new CairoFont(ref, cairo_font_face, face, codeToGID, codeToGIDLen, substitute);
+-  cairo_font_face_set_user_data (cairo_font_face, 
++  cairo_font_face_set_user_data (cairo_font_face,
+ 				 &cairo_font_face_key,
+-				 ret,
+-				 cairo_font_face_destroy);
++				 face,
++				 _ft_done_face);
+ 
+   return ret;
+   }
+@@ -249,7 +248,7 @@ CairoFont::CairoFont(Ref ref, cairo_font
+ 					    codeToGIDLen(codeToGIDLen), substitute(substitute) { }
+ 
+ CairoFont::~CairoFont() {
+-  FT_Done_Face (face);
++  cairo_font_face_destroy (cairo_font_face);
+   gfree(codeToGID);
+ }
+ 

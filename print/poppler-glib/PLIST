@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2007/11/03 16:10:40 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/04/15 19:57:00 drochner Exp $
 include/poppler/glib/poppler-action.h
+include/poppler/glib/poppler-annot.h
 include/poppler/glib/poppler-attachment.h
 include/poppler/glib/poppler-document.h
 include/poppler/glib/poppler-enums.h
