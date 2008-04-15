@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.735 2008/04/15 11:58:29 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.736 2008/04/15 13:26:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1401,3 +1401,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libidn to 1.7 [wiz 2008-04-15]
 	Updated net/mrtg to 2.16.1 [martti 2008-04-15]
 	Updated editors/nvi to 1.81.6 [wiz 2008-04-15]
+	Updated graphics/png to 1.2.27beta03 [wiz 2008-04-15]
