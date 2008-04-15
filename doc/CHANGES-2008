@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.739 2008/04/15 18:05:29 tron Exp $
+$NetBSD: CHANGES-2008,v 1.740 2008/04/15 22:02:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1405,3 +1405,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated editors/nvi to 1.81.6nb1 [schmonz 2008-04-15]
 	Updated misc/libcdio to 0.80 [tron 2008-04-15]
 	Updated misc/libcdio to 0.80nb1 [tron 2008-04-15]
+	Updated devel/fromcvs to 0.0.0.116 [wiz 2008-04-15]
