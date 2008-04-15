@@ -24,24 +24,54 @@ LOCALBASE=/usr/pkg_bulk, PKG_DBDIR=/usr/pkg_bulk/.pkgdb. A full
 bootstrap is the recommended approach. Copy /usr/pkg_bulk to the client
 nodes for parallel builds.
 
+The initial bootstrap and install may be performed with the following commands:
+
+    cd /usr/pkgsrc/bootstrap
+    ./bootstrap --prefix=/usr/pkg_bulk --pkgdbdir=/usr/pkg_bulk/.pkgdb 
+
+If you have already performed a bootstrap into /usr/pkg_bulk then you may need 
+to remove that directory (rm -fr /usr/pkg_bulk) prior to starting the new
+bootstrap.
+
+pbulk may be installed into /usr/pkg_bulk with the following:
+
+cd /usr/pkgsrc/pkgtools/pbulk
+env PATH=/usr/pkg_bulk/bin:/usr/pkg_bulk/sbin:${PATH} bmake package
+
+The mk.conf file in /usr/pkg_bulk/etc/mk.conf should already have the
+correct LOCALBASE and PKG_DBDIR settings.
+
 Step Three: Configure pbulk
 
 (a)
 Setup general build parameters in mk.conf. Below is an example
-fragment to add.
+fragment to add.  On NetBSD this is typically /etc/mk.conf.  For
+non-NetBSD systems we will create a mk.conf in a temporary location,
+/tmp/mk.conf for example, and include it in the bootstrap that will
+be built in step (b).
 
 (b) [not for NetBSD]
 Build a binary bootstrap kit and override the included mk.conf with the
-file created in (a). Compress the tarball with gzip.
+file created in (a). Compress the tarball with gzip.  This is a new
+bootstrap that is different from the one created in Step Two above.
+
+This bootstrap kit is created by the following:
+
+
+    cd /usr/pkgsrc/bootstrap
+    ./bootstrap --mk-fragment /tmp/mk.conf \
+        --gzip-binary-kit boostrap_kit.tar.gz
+
+Note that we have specified the make file fragment, /tmp/mk.conf, created
+in step (a) above.
 
 (c)
 Edit /usr/pkg_bulk/etc/pbulk.conf:
 - For NetBSD:
-  - pkg_install_prefix should be /usr.
   - bootstrapkit should be empty.
+  - make must be changed to /usr/bin/make.
+
 - For non-NetBSD:
-  - pkg_install_prefix should /usr/pkg_bulk.
-  - make must be changed to /usr/pkg/bin/bmake.
   - bootstrapkit should be changed to the tarball in (b). Both master
     and client nodes access this, so keep it in a shared location.
 
@@ -49,11 +79,14 @@ Edit /usr/pkg_bulk/etc/pbulk.conf:
 - base_url goes into the report mail, the rsync targets are used
   for uploads.
 - for limited bulk builds, set limited_list to a file with one
-  location per line
+  location per line ("x11/gtk2" for example).  Packages that are required
+  as dependencies will be added automatically.
 
 Step Four: Running pbulk
 
-/usr/pkg_bulk/bin/bulkbuild in screen runs the full build.
+/usr/pkg_bulk/bin/bulkbuild runs the full build.  You may wish to run
+this inside of screen (misc/screen) since a full bulk build may take
+a very long time.
 
 /usr/pkg_bulk/libexec/pbulk/{pre-build,scan,build,report,upload} are the
 individual build phases. They depend on the execution of the phase
