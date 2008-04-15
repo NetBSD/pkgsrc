@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2008/03/06 14:53:54 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2008/04/15 17:33:21 drochner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GNOME_MENUS_BUILDLINK3_MK:=	${GNOME_MENUS_BUILDLINK3_MK}+
@@ -18,6 +18,5 @@ BUILDLINK_PKGSRCDIR.gnome-menus?=	../../sysutils/gnome-menus
 .endif	# GNOME_MENUS_BUILDLINK3_MK
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
