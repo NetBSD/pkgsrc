@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.732 2008/04/15 08:56:23 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.733 2008/04/15 10:15:06 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1398,3 +1398,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/clamav to 0.93 [martti 2008-04-15]
 	Updated x11/xf86-video-radeonhd to 1.2.1 [xtraeme 2008-04-15]
 	Updated mail/p5-MIME-tools to 5.426 [wiz 2008-04-15]
+	Updated devel/libidn to 1.7 [wiz 2008-04-15]
