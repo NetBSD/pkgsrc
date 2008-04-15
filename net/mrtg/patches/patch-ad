@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.14 2008/02/13 12:05:26 martti Exp $
+$NetBSD: patch-ad,v 1.15 2008/04/15 11:02:04 martti Exp $
 
---- bin/mrtg.orig	2008-02-06 16:35:49.000000000 +0200
-+++ bin/mrtg	2008-02-13 13:57:31.000000000 +0200
-@@ -898,8 +898,8 @@
+--- bin/mrtg.orig	2008-02-17 12:27:36.000000000 +0200
++++ bin/mrtg	2008-04-15 13:56:27.000000000 +0300
+@@ -899,8 +899,8 @@
  
      ((($MRTG_lib::OS eq 'NT' or $MRTG_lib::OS eq 'OS2') and (-e "${FindBin::Bin}${MRTG_lib::SL}rateup.exe")) or
       (($MRTG_lib::OS eq 'NW') and (-e "SYS:/Mrtg/bin/rateup.nlm")) or
@@ -13,7 +13,7 @@ $NetBSD: patch-ad,v 1.14 2008/02/13 12:05:26 martti Exp $
  
      # rateup does not know about undef so we make inlast and outlast ready for rateup
      #warn "$NOW: ERROR: inlast is undefined. Skipping $router\n" unless defined $inlast;
-@@ -911,7 +911,7 @@
+@@ -912,7 +912,7 @@
      $outlast = -1 unless defined $outlast;
      
      if ($$rcfg{'options'}{'dorelpercent'}{$router}) {
@@ -22,7 +22,7 @@ $NetBSD: patch-ad,v 1.14 2008/02/13 12:05:26 martti Exp $
                   "$$cfg{'logdir'}$$rcfg{'directory'}{$router}","$router",
                   $time, $$rcfg{'options'}{'unknaszero'}{$router} ? '-z':'-Z',
                   "$up_abs"."p", $inlast, $outlast, $absmax,
-@@ -920,7 +920,7 @@
+@@ -921,7 +921,7 @@
                   $$rcfg{'rgb5'}{$router});
      } else { 
  
