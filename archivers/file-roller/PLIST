@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.26 2007/11/05 19:27:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.27 2008/04/15 18:49:00 drochner Exp $
 bin/file-roller
-lib/nautilus/extensions-1.0/libnautilus-fileroller.la
 libexec/file-roller/isoinfo.sh
 share/applications/file-roller.desktop
 share/file-roller/glade/add-options.glade
@@ -10,6 +9,7 @@ share/file-roller/glade/delete.glade
 share/file-roller/glade/open-with.glade
 share/file-roller/glade/password.glade
 share/file-roller/glade/properties.glade
+share/file-roller/glade/update.glade
 share/file-roller/icons/hicolor/16x16/actions/add-files-to-archive.png
 share/file-roller/icons/hicolor/16x16/actions/add-folder-to-archive.png
 share/file-roller/icons/hicolor/16x16/actions/extract-archive.png
@@ -91,6 +91,7 @@ share/icons/hicolor/32x32/apps/file-roller.png
 share/icons/hicolor/scalable/apps/file-roller.svg
 share/locale/am/LC_MESSAGES/file-roller.mo
 share/locale/ar/LC_MESSAGES/file-roller.mo
+share/locale/as/LC_MESSAGES/file-roller.mo
 share/locale/az/LC_MESSAGES/file-roller.mo
 share/locale/be/LC_MESSAGES/file-roller.mo
 share/locale/be@latin/LC_MESSAGES/file-roller.mo
@@ -165,6 +166,8 @@ share/locale/th/LC_MESSAGES/file-roller.mo
 share/locale/tk/LC_MESSAGES/file-roller.mo
 share/locale/tr/LC_MESSAGES/file-roller.mo
 share/locale/uk/LC_MESSAGES/file-roller.mo
+share/locale/ur/LC_MESSAGES/file-roller.mo
+share/locale/ur_PK/LC_MESSAGES/file-roller.mo
 share/locale/vi/LC_MESSAGES/file-roller.mo
 share/locale/xh/LC_MESSAGES/file-roller.mo
 share/locale/zh_CN/LC_MESSAGES/file-roller.mo
@@ -182,7 +185,7 @@ share/omf/file-roller/file-roller-ru.omf
 share/omf/file-roller/file-roller-sv.omf
 share/omf/file-roller/file-roller-uk.omf
 @dirrm share/omf/file-roller
-@comment in scrollkeeper: @dirrm share/omf
+@comment in rarian: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
@@ -223,4 +226,3 @@ share/omf/file-roller/file-roller-uk.omf
 @dirrm share/file-roller
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm libexec/file-roller
-@comment in nautilus: @dirrm lib/nautilus/extensions-1.0
