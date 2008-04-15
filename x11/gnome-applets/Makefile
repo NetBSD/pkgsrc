@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.56 2008/04/12 22:43:14 jlam Exp $
+# $NetBSD: Makefile,v 1.57 2008/04/15 18:04:08 drochner Exp $
 #
 
-DISTNAME=		gnome-applets-2.20.1
-PKGREVISION=		1
+DISTNAME=		gnome-applets-2.22.1
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.20/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.22/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -27,7 +26,6 @@ PKG_SUPPORTED_OPTIONS=	inet6
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 PKGCONFIG_OVERRIDE+=	libgswitchit/gswitchit.pc.in
-PKGCONFIG_OVERRIDE+=	libgweather/gweather.pc.in
 
 EGDIR=			${PREFIX}/share/examples/gnome-applets
 
@@ -35,7 +33,6 @@ GCONF_SCHEMAS=		charpick.schemas
 GCONF_SCHEMAS+=	drivemount.schemas
 GCONF_SCHEMAS+=	geyes.schemas
 #GCONF_SCHEMAS+=	gswitchit.schemas
-GCONF_SCHEMAS+=	gweather.schemas
 GCONF_SCHEMAS+=	mixer.schemas
 GCONF_SCHEMAS+=	multiload.schemas
 GCONF_SCHEMAS+=	stickynotes.schemas
@@ -59,8 +56,8 @@ CONF_FILES+=		${EGDIR}/sound/events/battstat_applet.soundlist \
 CONFIGURE_ARGS+=	--disable-battstat
 .endif
 
-PRINT_PLIST_AWK+=	/[Bb]attstat/ { print "$${BATTSTAT}"$$0; next; }
-PRINT_PLIST_AWK+=	/examples/ { print "$${BATTSTAT}"$$0; next; }
+PRINT_PLIST_AWK+=	/[Bb]attstat/ { print "$${PLIST.battstat}"$$0; next; }
+PRINT_PLIST_AWK+=	/examples/ { print "$${PLIST.battstat}"$$0; next; }
 
 PLIST_VARS+=		cpufreq
 .if ${OPSYS} == "Linux" && exists(/usr/include/cpufreq.h)
@@ -114,6 +111,7 @@ PYTHON_PATCH_SCRIPTS+=	invest-applet/invest/invest-chart
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-gnome2/buildlink3.mk"
 .include "../../x11/py-gnome2-desktop/buildlink3.mk"
+.include "../../devel/libgweather/buildlink3.mk"
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
