@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7210 2008/04/15 11:02:19 martti Exp $
+$NetBSD: TODO,v 1.7211 2008/04/15 16:06:37 obache Exp $
 
 Suggested new packages
 ======================
@@ -705,6 +705,8 @@ Suggested package updates
 	o gnu-crypto-2.1.0
 	o gnupg2-2.0.9
 	o gnustep-1.14.0
+	o gnustep-back-0.12.1
+	o gnustep-gui-0.12.1
 	o gnustep-examples-1.2.0
 	o gnustep-objc-1.4.0
 	o gob2-2.0.15
@@ -1488,12 +1490,14 @@ Suggested package updates
 	o xhippo-3.5
 	o xinit-1.0.8
 	o xisp-2.7p4
+	o xjman-0.7
 	o xkbcomp-1.0.4
 	o xkbset-0.5
 	o xli-2006.11.10
 	o xlog-1.7
 	o xm7-1020s
 	o xmahjongg-3.70
+	o xmascot-2.6a
 	o xmbdfed-4.6
 	o xmcd-3.3.0
 	o xmlsec1-1.2.11
