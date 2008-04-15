@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2008/04/15 16:13:12 tron Exp $
+# $NetBSD: Makefile,v 1.35 2008/04/15 18:04:50 tron Exp $
 
 DISTNAME=	libcdio-0.80
+PKGREVISION=	1
 CATEGORIES=	misc
 MASTER_SITES=	${MASTER_SITE_GNU:=libcdio/}
 
@@ -16,9 +17,12 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl:run pkg-config
 USE_LANGUAGES=		c c++
 PKGCONFIG_OVERRIDE+=	libcdio.pc.in
+PKGCONFIG_OVERRIDE+=	libcdio++.pc.in
 PKGCONFIG_OVERRIDE+=	libcdio_cdda.pc.in
 PKGCONFIG_OVERRIDE+=	libcdio_paranoia.pc.in
 PKGCONFIG_OVERRIDE+=	libiso9660.pc.in
+PKGCONFIG_OVERRIDE+=	libiso9660++.pc.in
+PKGCONFIG_OVERRIDE+=	libudf.pc.in
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-versioned-libs
 INFO_FILES=		# PLIST
