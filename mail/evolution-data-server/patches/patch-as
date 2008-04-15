@@ -1,8 +1,8 @@
-$NetBSD: patch-as,v 1.3 2007/11/03 21:51:29 drochner Exp $
+$NetBSD: patch-as,v 1.4 2008/04/15 17:45:38 drochner Exp $
 
---- calendar/libical/src/libical/icaltz-util.c.orig	2007-10-12 08:31:10.000000000 +0200
+--- calendar/libical/src/libical/icaltz-util.c.orig	2008-01-23 12:16:42.000000000 +0100
 +++ calendar/libical/src/libical/icaltz-util.c
-@@ -21,12 +21,14 @@
+@@ -21,6 +21,7 @@
   */
  
  #include <string.h>
@@ -10,14 +10,15 @@ $NetBSD: patch-as,v 1.3 2007/11/03 21:51:29 drochner Exp $
  #if defined(sun) && defined(__SVR4)
  #include <sys/byteorder.h>
  #else
- #include <byteswap.h>
+@@ -34,6 +35,7 @@
  #include <endian.h>
+ #endif
  #endif
 +#endif
  #include <limits.h>
  #include <time.h>
  #include <stdlib.h>
-@@ -78,6 +80,7 @@ typedef struct
+@@ -85,6 +87,7 @@ typedef struct
  static int
  decode (const void *ptr)
  {
@@ -25,7 +26,7 @@ $NetBSD: patch-as,v 1.3 2007/11/03 21:51:29 drochner Exp $
  #if defined(sun) && defined(__SVR4)
      if (sizeof (int) == 4)
  #ifdef _BIG_ENDIAN
-@@ -92,9 +95,10 @@ decode (const void *ptr)
+@@ -99,9 +102,10 @@ decode (const void *ptr)
          return bswap_32 (*(const int *) ptr);
  #endif
  	else
