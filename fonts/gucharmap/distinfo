@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.15 2008/01/11 13:51:41 drochner Exp $
+$NetBSD: distinfo,v 1.16 2008/04/15 18:00:48 drochner Exp $
 
-SHA1 (gucharmap-1.10.2.tar.bz2) = b9f1f1eddfce148e733f6a2b43f3108e8edbb26b
-RMD160 (gucharmap-1.10.2.tar.bz2) = de189901ea4f2e9eabfbd475cea402e2125f57db
-Size (gucharmap-1.10.2.tar.bz2) = 2514969 bytes
+SHA1 (gucharmap-2.22.1.tar.bz2) = 4663b36b725eed7c8e2f7025768993202def465c
+RMD160 (gucharmap-2.22.1.tar.bz2) = bcd60893e611d61022b18870b4ed19220680780a
+Size (gucharmap-2.22.1.tar.bz2) = 2632367 bytes

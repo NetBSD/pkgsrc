@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2008/04/12 22:43:14 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2008/04/15 17:59:15 drochner Exp $
 #
 
-DISTNAME=	gnome-control-center-2.20.3
-PKGREVISION=	2
+DISTNAME=	gnome-control-center-2.22.1
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-control-center/2.20/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-control-center/2.22/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -25,18 +24,14 @@ CONFIGURE_ARGS+=	--with-gstreamer=0.10
 
 CPPFLAGS+=		-DDBUS_API_SUBJECT_TO_CHANGE
 
-PKGCONFIG_OVERRIDE+=	gnome-settings-daemon/gnome-settings-daemon.pc.in
+#PKGCONFIG_OVERRIDE+=	gnome-settings-daemon/gnome-settings-daemon.pc.in
 PKGCONFIG_OVERRIDE+=	libwindow-settings/gnome-window-settings-2.0.pc.in
 
 INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
 INSTALL_MAKE_FLAGS+=	vfsmoduleconfdir=${PREFIX}/share/examples/${PKGBASE}
 INSTALL_MAKE_FLAGS+=	menudir=${PREFIX}/share/examples/${PKGBASE}
 
-GCONF_SCHEMAS=	apps_gnome_settings_daemon_default_editor.schemas
-GCONF_SCHEMAS+=	apps_gnome_settings_daemon_keybindings.schemas
-GCONF_SCHEMAS+=	apps_gnome_settings_daemon_screensaver.schemas
 GCONF_SCHEMAS+=	control-center.schemas
-GCONF_SCHEMAS+=	desktop_gnome_font_rendering.schemas
 GCONF_SCHEMAS+=	themus.schemas
 GCONF_SCHEMAS+=	fontilus.schemas
 
@@ -101,6 +96,7 @@ PLIST.evolution=	yes
 .include "../../x11/libxklavier/buildlink3.mk"
 .include "../../x11/libgnomekbd/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
+.include "../../sysutils/gnome-settings-daemon/buildlink3.mk"
 
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
