@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.129 2008/04/12 22:43:03 jlam Exp $
+# $NetBSD: Makefile,v 1.130 2008/04/15 18:42:53 drochner Exp $
 
-DISTNAME=		evolution-2.12.3
-PKGREVISION=		2
+DISTNAME=		evolution-2.22.1
 CATEGORIES=		mail time gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.12/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/evolution/2.22/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -130,12 +129,12 @@ LDFLAGS+=	-lsemaphore
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-.include "../../net/libsoup-devel/buildlink3.mk"
-.include "../../print/libgnomeprint/buildlink3.mk"
-.include "../../print/libgnomeprintui/buildlink3.mk"
+.include "../../net/libsoup24/buildlink3.mk"
+#.include "../../print/libgnomeprint/buildlink3.mk"
+#.include "../../print/libgnomeprintui/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
+#.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
