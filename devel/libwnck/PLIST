@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2007/11/03 15:45:15 drochner Exp $
+@comment $NetBSD: PLIST,v 1.21 2008/04/15 17:36:00 drochner Exp $
 bin/wnckprop
 include/libwnck-1.0/libwnck/application.h
 include/libwnck-1.0/libwnck/class-group.h
@@ -39,6 +39,7 @@ share/gtk-doc/html/libwnck/ix08.html
 share/gtk-doc/html/libwnck/ix09.html
 share/gtk-doc/html/libwnck/ix10.html
 share/gtk-doc/html/libwnck/ix11.html
+share/gtk-doc/html/libwnck/ix12.html
 share/gtk-doc/html/libwnck/left.png
 share/gtk-doc/html/libwnck/libwnck-Miscellaneous-Functions.html
 share/gtk-doc/html/libwnck/libwnck-Resource-Usage-of-X-Clients.html
