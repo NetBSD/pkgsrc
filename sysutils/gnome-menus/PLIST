@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2008/01/11 13:00:10 drochner Exp $
-bin/gnome-menu-spec-test
+@comment $NetBSD: PLIST,v 1.16 2008/04/15 17:33:21 drochner Exp $
 include/gnome-menus/gmenu-tree.h
 lib/libgnome-menu.la
 lib/pkgconfig/libgnome-menu.pc
@@ -53,6 +52,7 @@ share/locale/eu/LC_MESSAGES/gnome-menus.mo
 share/locale/fa/LC_MESSAGES/gnome-menus.mo
 share/locale/fi/LC_MESSAGES/gnome-menus.mo
 share/locale/fr/LC_MESSAGES/gnome-menus.mo
+share/locale/fur/LC_MESSAGES/gnome-menus.mo
 share/locale/ga/LC_MESSAGES/gnome-menus.mo
 share/locale/gl/LC_MESSAGES/gnome-menus.mo
 share/locale/gn/LC_MESSAGES/gnome-menus.mo
@@ -62,6 +62,7 @@ share/locale/hi/LC_MESSAGES/gnome-menus.mo
 share/locale/hu/LC_MESSAGES/gnome-menus.mo
 share/locale/hy/LC_MESSAGES/gnome-menus.mo
 share/locale/id/LC_MESSAGES/gnome-menus.mo
+share/locale/io/LC_MESSAGES/gnome-menus.mo
 share/locale/it/LC_MESSAGES/gnome-menus.mo
 share/locale/ja/LC_MESSAGES/gnome-menus.mo
 share/locale/ka/LC_MESSAGES/gnome-menus.mo
@@ -71,6 +72,7 @@ share/locale/ku/LC_MESSAGES/gnome-menus.mo
 share/locale/ky/LC_MESSAGES/gnome-menus.mo
 share/locale/lt/LC_MESSAGES/gnome-menus.mo
 share/locale/lv/LC_MESSAGES/gnome-menus.mo
+share/locale/mai/LC_MESSAGES/gnome-menus.mo
 share/locale/mg/LC_MESSAGES/gnome-menus.mo
 share/locale/mk/LC_MESSAGES/gnome-menus.mo
 share/locale/ml/LC_MESSAGES/gnome-menus.mo
