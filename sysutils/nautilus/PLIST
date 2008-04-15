@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.21 2007/11/05 19:10:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.22 2008/04/15 17:48:16 drochner Exp $
 bin/nautilus
+bin/nautilus-autorun-software
 bin/nautilus-connect-server
 bin/nautilus-file-management-properties
 include/nautilus/libnautilus-extension/nautilus-column-provider.h
@@ -16,6 +17,7 @@ include/nautilus/libnautilus-extension/nautilus-property-page.h
 lib/bonobo/servers/Nautilus_shell.server
 lib/libnautilus-extension.la
 lib/pkgconfig/libnautilus-extension.pc
+share/applications/nautilus-autorun-software.desktop
 share/applications/nautilus-computer.desktop
 share/applications/nautilus-file-management-properties.desktop
 share/applications/nautilus-folder-handler.desktop
@@ -81,6 +83,7 @@ share/locale/mi/LC_MESSAGES/nautilus.mo
 share/locale/mk/LC_MESSAGES/nautilus.mo
 share/locale/ml/LC_MESSAGES/nautilus.mo
 share/locale/mn/LC_MESSAGES/nautilus.mo
+share/locale/mr/LC_MESSAGES/nautilus.mo
 share/locale/ms/LC_MESSAGES/nautilus.mo
 share/locale/nb/LC_MESSAGES/nautilus.mo
 share/locale/ne/LC_MESSAGES/nautilus.mo

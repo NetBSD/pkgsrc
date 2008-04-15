@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.29 2008/03/06 14:53:54 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.30 2008/04/15 17:48:16 drochner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 NAUTILUS_BUILDLINK3_MK:=	${NAUTILUS_BUILDLINK3_MK}+
@@ -36,7 +36,6 @@ PRINT_PLIST_AWK+=	/^@dirrm lib\/nautilus\/extensions-1.0$$/ \
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gnome-desktop/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
