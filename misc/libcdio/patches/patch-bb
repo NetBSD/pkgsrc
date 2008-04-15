@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1 2008/04/15 12:35:10 drochner Exp $
+
+--- src/iso-info.c.orig	2005-03-18 13:56:00.000000000 +0100
++++ src/iso-info.c
+@@ -199,7 +199,7 @@ print_iso9660_recurse (iso9660_t *p_iso,
+       iso9660_stat_t *p_statbuf = _cdio_list_node_data (entnode);
+       char *psz_iso_name = p_statbuf->filename;
+       char _fullname[4096] = { 0, };
+-      char translated_name[MAX_ISONAME+1];
++      char *translated_name = (char *) alloca(strlen(psz_iso_name)+1);
+ 
+       if (yep != p_statbuf->rr.b3_rock || 1 == opts.no_rock_ridge) {
+ 	iso9660_name_translate_ext(psz_iso_name, translated_name, 
