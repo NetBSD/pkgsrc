@@ -1,4 +1,4 @@
-/*	$NetBSD: audit.c,v 1.6 2008/04/04 21:45:33 joerg Exp $	*/
+/*	$NetBSD: audit.c,v 1.7 2008/04/15 22:24:38 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: audit.c,v 1.6 2008/04/04 21:45:33 joerg Exp $");
+__RCSID("$NetBSD: audit.c,v 1.7 2008/04/15 22:24:38 joerg Exp $");
 #endif
 
 /*-
@@ -108,34 +108,42 @@ parse_options(int argc, char **argv)
 }
 
 static int
-check_exact_pkg(const char *pkg)
+check_ignored_entry(size_t i)
 {
 	const char *iter, *next;
+	size_t entry_len, url_len;
+
+	if (ignore_advisories == NULL)
+		return 0;
+
+	url_len = strlen(pv->advisory[i]);
+
+	for (iter = ignore_advisories; *iter; iter = next) {
+		if ((next = strchr(iter, '\n')) == NULL) {
+			entry_len = strlen(iter);
+			next = iter + entry_len;
+		} else {
+			entry_len = next - iter;
+			++next;
+		}
+		if (url_len != entry_len)
+			continue;
+		if (strncmp(pv->advisory[i], iter, entry_len) == 0)
+			return 1;
+	}
+	return 0;
+}
+
+static int
+check_exact_pkg(const char *pkg)
+{
 	int ret;
 	size_t i;
 
 	ret = 0;
 	for (i = 0; i < pv->entries; ++i) {
-		if (ignore_advisories != NULL) {
-			size_t url_len = strlen(pv->advisory[i]);
-			size_t entry_len;
-
-			for (iter = ignore_advisories; *iter; iter = next) {
-				if ((next = strchr(iter, '\n')) == NULL) {
-					entry_len = strlen(iter);
-					next = iter + entry_len;
-				} else {
-					entry_len = next - iter;
-					++next;
-				}
-				if (url_len != entry_len)
-					continue;
-				if (!strncmp(pv->advisory[i], iter, entry_len))
-					break;
-			}
-			if (*iter != '\0')
-				continue;
-		}
+		if (check_ignored_entry(i))
+			continue;
 		if (limit_vul_types != NULL &&
 		    strcmp(limit_vul_types, pv->classification[i]))
 			continue;
