@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2007/11/03 16:25:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.17 2008/04/15 18:27:48 drochner Exp $
 bin/gnome-help
 bin/yelp
 share/applications/yelp.desktop
@@ -7,6 +7,7 @@ share/icons/hicolor/192x192/apps/yelp-icon-big.png
 share/locale/af/LC_MESSAGES/yelp.mo
 share/locale/am/LC_MESSAGES/yelp.mo
 share/locale/ar/LC_MESSAGES/yelp.mo
+share/locale/as/LC_MESSAGES/yelp.mo
 share/locale/az/LC_MESSAGES/yelp.mo
 share/locale/be/LC_MESSAGES/yelp.mo
 share/locale/be@latin/LC_MESSAGES/yelp.mo
