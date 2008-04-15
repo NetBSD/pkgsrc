@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7209 2008/04/14 23:52:13 wiz Exp $
+$NetBSD: TODO,v 1.7210 2008/04/15 11:02:19 martti Exp $
 
 Suggested new packages
 ======================
@@ -956,7 +956,6 @@ Suggested package updates
 	o mpg123-1.4.1
 	o mpich-1.2.7p1
 	o mpop-1.0.13
-	o mrtg-2.16.1
 	o mserv-devel-0.41
 	o msf-2.7
 	o msmtp-1.4.14
