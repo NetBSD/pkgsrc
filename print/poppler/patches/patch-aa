@@ -1,40 +1,40 @@
-$NetBSD: patch-aa,v 1.8 2007/11/28 20:54:37 drochner Exp $
+$NetBSD: patch-aa,v 1.9 2008/04/15 19:57:00 drochner Exp $
 
---- glib/Makefile.in.orig	2007-11-10 13:04:33.000000000 +0100
+--- glib/Makefile.in.orig	2008-03-26 19:40:19.000000000 +0100
 +++ glib/Makefile.in
-@@ -66,7 +66,7 @@ am__DEPENDENCIES_1 =
+@@ -62,7 +62,7 @@ am__DEPENDENCIES_1 =
  @BUILD_CAIRO_OUTPUT_TRUE@am__DEPENDENCIES_2 = $(top_builddir)/poppler/libpoppler-cairo.la \
  @BUILD_CAIRO_OUTPUT_TRUE@	$(am__DEPENDENCIES_1)
  libpoppler_glib_la_DEPENDENCIES =  \
 -	$(top_builddir)/poppler/libpoppler.la $(am__DEPENDENCIES_1) \
 +	$(prefix)/lib/libpoppler.la $(am__DEPENDENCIES_1) \
  	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
- 	$(am__DEPENDENCIES_2)
+ 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_2)
  am__objects_1 = poppler-enums.lo
-@@ -78,7 +78,7 @@ PROGRAMS = $(noinst_PROGRAMS)
- am_test_poppler_glib_OBJECTS = test-poppler-glib.$(OBJEXT)
+@@ -79,7 +79,7 @@ am__test_poppler_glib_SOURCES_DIST = tes
+ @BUILD_WITH_GDK_TRUE@	test-poppler-glib.$(OBJEXT)
  test_poppler_glib_OBJECTS = $(am_test_poppler_glib_OBJECTS)
- test_poppler_glib_DEPENDENCIES =  \
--	$(top_builddir)/poppler/libpoppler.la libpoppler-glib.la \
-+	$(prefix)/lib/libpoppler.la libpoppler-glib.la \
- 	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1) \
- 	$(am__DEPENDENCIES_2)
- DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir) -I$(top_builddir)/poppler
-@@ -324,7 +324,7 @@ libpoppler_glib_la_SOURCES = \
+ @BUILD_WITH_GDK_TRUE@test_poppler_glib_DEPENDENCIES =  \
+-@BUILD_WITH_GDK_TRUE@	$(top_builddir)/poppler/libpoppler.la \
++@BUILD_WITH_GDK_TRUE@	$(prefix)/lib/libpoppler.la \
+ @BUILD_WITH_GDK_TRUE@	libpoppler-glib.la $(am__DEPENDENCIES_1) \
+ @BUILD_WITH_GDK_TRUE@	$(am__DEPENDENCIES_1) \
+ @BUILD_WITH_GDK_TRUE@	$(am__DEPENDENCIES_1) \
+@@ -318,7 +318,7 @@ libpoppler_glib_la_SOURCES = \
  	poppler-private.h
  
  libpoppler_glib_la_LIBADD = \
 -	$(top_builddir)/poppler/libpoppler.la		\
 +	$(prefix)/lib/libpoppler.la		\
  	$(POPPLER_GLIB_LIBS)				\
+ 	$(GDK_LIBS)					\
  	$(FREETYPE_LIBS)				\
- 	$(FONTCONFIG_LIBS)				\
-@@ -335,7 +335,7 @@ test_poppler_glib_SOURCES = \
-        test-poppler-glib.cc
+@@ -330,7 +330,7 @@ libpoppler_glib_la_LDFLAGS = -version-in
+ @BUILD_WITH_GDK_TRUE@       test-poppler-glib.cc
  
- test_poppler_glib_LDADD = \
--	$(top_builddir)/poppler/libpoppler.la	\
-+	$(prefix)/lib/libpoppler.la	\
- 	libpoppler-glib.la			\
- 	$(POPPLER_GLIB_LIBS)			\
- 	$(FREETYPE_LIBS)			\
+ @BUILD_WITH_GDK_TRUE@test_poppler_glib_LDADD = \
+-@BUILD_WITH_GDK_TRUE@	$(top_builddir)/poppler/libpoppler.la	\
++@BUILD_WITH_GDK_TRUE@	$(prefix)/lib/libpoppler.la	\
+ @BUILD_WITH_GDK_TRUE@	libpoppler-glib.la			\
+ @BUILD_WITH_GDK_TRUE@	$(POPPLER_GLIB_LIBS)			\
+ @BUILD_WITH_GDK_TRUE@	$(GDK_LIBS)				\
