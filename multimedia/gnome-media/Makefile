@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2008/03/06 14:53:52 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/04/15 18:45:41 drochner Exp $
 
-DISTNAME=		gnome-media-2.20.1
-PKGREVISION=		2
+DISTNAME=		gnome-media-2.22.0
 CATEGORIES=		multimedia gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.20/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-media/2.22/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		rh@NetBSD.org
@@ -67,7 +66,7 @@ BUILDLINK_API_DEPENDS.libgnomeui+=		libgnomeui>=2.13.2
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 #.include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"

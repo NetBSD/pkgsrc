@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/11/03 16:32:49 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/04/15 18:45:41 drochner Exp $
 bin/cddb-slave2-properties
 bin/gnome-audio-profiles-properties
 bin/gnome-sound-recorder
@@ -45,12 +45,18 @@ share/gnome-sound-recorder/ui/ui.xml
 share/gnome/help/gnome-sound-recorder/C/figures/grecord_window.png
 share/gnome/help/gnome-sound-recorder/C/gnome-sound-recorder.xml
 share/gnome/help/gnome-sound-recorder/C/legal.xml
+share/gnome/help/gnome-sound-recorder/ca/figures/grecord_window.png
+share/gnome/help/gnome-sound-recorder/ca/gnome-sound-recorder.xml
 share/gnome/help/gnome-sound-recorder/es/figures/grecord_window.png
 share/gnome/help/gnome-sound-recorder/es/gnome-sound-recorder.xml
 share/gnome/help/gnome-sound-recorder/fr/figures/grecord_window.png
 share/gnome/help/gnome-sound-recorder/fr/gnome-sound-recorder.xml
+share/gnome/help/gnome-sound-recorder/it/figures/grecord_window.png
+share/gnome/help/gnome-sound-recorder/it/gnome-sound-recorder.xml
 share/gnome/help/gnome-sound-recorder/oc/figures/grecord_window.png
 share/gnome/help/gnome-sound-recorder/oc/gnome-sound-recorder.xml
+share/gnome/help/gnome-sound-recorder/ru/figures/grecord_window.png
+share/gnome/help/gnome-sound-recorder/ru/gnome-sound-recorder.xml
 share/gnome/help/gnome-sound-recorder/sv/figures/grecord_window.png
 share/gnome/help/gnome-sound-recorder/sv/gnome-sound-recorder.xml
 share/gnome/help/gnome-sound-recorder/uk/figures/grecord_window.png
@@ -58,23 +64,35 @@ share/gnome/help/gnome-sound-recorder/uk/gnome-sound-recorder.xml
 share/gnome/help/gnome-volume-control/C/figures/gnome-volume-control_window.png
 share/gnome/help/gnome-volume-control/C/gnome-volume-control.xml
 share/gnome/help/gnome-volume-control/C/legal.xml
+share/gnome/help/gnome-volume-control/ca/figures/gnome-volume-control_window.png
+share/gnome/help/gnome-volume-control/ca/gnome-volume-control.xml
 share/gnome/help/gnome-volume-control/es/figures/gnome-volume-control_window.png
 share/gnome/help/gnome-volume-control/es/gnome-volume-control.xml
 share/gnome/help/gnome-volume-control/fr/figures/gnome-volume-control_window.png
 share/gnome/help/gnome-volume-control/fr/gnome-volume-control.xml
+share/gnome/help/gnome-volume-control/it/figures/gnome-volume-control_window.png
+share/gnome/help/gnome-volume-control/it/gnome-volume-control.xml
 share/gnome/help/gnome-volume-control/oc/figures/gnome-volume-control_window.png
 share/gnome/help/gnome-volume-control/oc/gnome-volume-control.xml
+share/gnome/help/gnome-volume-control/ru/figures/gnome-volume-control_window.png
+share/gnome/help/gnome-volume-control/ru/gnome-volume-control.xml
 share/gnome/help/gnome-volume-control/sv/figures/gnome-volume-control_window.png
 share/gnome/help/gnome-volume-control/sv/gnome-volume-control.xml
 share/gnome/help/gstreamer-properties/C/figures/gstreamer_properties_window.png
 share/gnome/help/gstreamer-properties/C/gstreamer-properties.xml
 share/gnome/help/gstreamer-properties/C/legal.xml
+share/gnome/help/gstreamer-properties/ca/figures/gstreamer_properties_window.png
+share/gnome/help/gstreamer-properties/ca/gstreamer-properties.xml
 share/gnome/help/gstreamer-properties/es/figures/gstreamer_properties_window.png
 share/gnome/help/gstreamer-properties/es/gstreamer-properties.xml
 share/gnome/help/gstreamer-properties/fr/figures/gstreamer_properties_window.png
 share/gnome/help/gstreamer-properties/fr/gstreamer-properties.xml
+share/gnome/help/gstreamer-properties/it/figures/gstreamer_properties_window.png
+share/gnome/help/gstreamer-properties/it/gstreamer-properties.xml
 share/gnome/help/gstreamer-properties/oc/figures/gstreamer_properties_window.png
 share/gnome/help/gstreamer-properties/oc/gstreamer-properties.xml
+share/gnome/help/gstreamer-properties/ru/figures/gstreamer_properties_window.png
+share/gnome/help/gstreamer-properties/ru/gstreamer-properties.xml
 share/gnome/help/gstreamer-properties/sv/figures/gstreamer_properties_window.png
 share/gnome/help/gstreamer-properties/sv/gstreamer-properties.xml
 share/gstreamer-properties/glade/gstreamer-properties.glade
@@ -86,8 +104,10 @@ share/icons/hicolor/48x48/apps/gstreamer-properties.png
 share/idl/GNOME_Media_CDDBSlave2.idl
 share/locale/am/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/ar/LC_MESSAGES/gnome-media-2.0.mo
+share/locale/as/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/az/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/be/LC_MESSAGES/gnome-media-2.0.mo
+share/locale/be@latin/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/bg/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/bn/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/bn_IN/LC_MESSAGES/gnome-media-2.0.mo
@@ -160,6 +180,35 @@ share/locale/xh/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-media-2.0.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-media-2.0.mo
+share/omf/gnome-sound-recorder/gnome-sound-recorder-C.omf
+share/omf/gnome-sound-recorder/gnome-sound-recorder-ca.omf
+share/omf/gnome-sound-recorder/gnome-sound-recorder-es.omf
+share/omf/gnome-sound-recorder/gnome-sound-recorder-fr.omf
+share/omf/gnome-sound-recorder/gnome-sound-recorder-it.omf
+share/omf/gnome-sound-recorder/gnome-sound-recorder-oc.omf
+share/omf/gnome-sound-recorder/gnome-sound-recorder-ru.omf
+share/omf/gnome-sound-recorder/gnome-sound-recorder-sv.omf
+share/omf/gnome-sound-recorder/gnome-sound-recorder-uk.omf
+share/omf/gnome-volume-control/gnome-volume-control-C.omf
+share/omf/gnome-volume-control/gnome-volume-control-ca.omf
+share/omf/gnome-volume-control/gnome-volume-control-es.omf
+share/omf/gnome-volume-control/gnome-volume-control-fr.omf
+share/omf/gnome-volume-control/gnome-volume-control-it.omf
+share/omf/gnome-volume-control/gnome-volume-control-oc.omf
+share/omf/gnome-volume-control/gnome-volume-control-ru.omf
+share/omf/gnome-volume-control/gnome-volume-control-sv.omf
+share/omf/gstreamer-properties/gstreamer-properties-C.omf
+share/omf/gstreamer-properties/gstreamer-properties-ca.omf
+share/omf/gstreamer-properties/gstreamer-properties-es.omf
+share/omf/gstreamer-properties/gstreamer-properties-fr.omf
+share/omf/gstreamer-properties/gstreamer-properties-it.omf
+share/omf/gstreamer-properties/gstreamer-properties-oc.omf
+share/omf/gstreamer-properties/gstreamer-properties-ru.omf
+share/omf/gstreamer-properties/gstreamer-properties-sv.omf
+@dirrm share/omf/gstreamer-properties
+@dirrm share/omf/gnome-volume-control
+@dirrm share/omf/gnome-sound-recorder
+@comment in rarian: @dirrm share/omf
 @comment in ORBit2: @dirrm share/idl
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
@@ -168,23 +217,35 @@ share/locale/zh_TW/LC_MESSAGES/gnome-media-2.0.mo
 @dirrm share/gstreamer-properties
 @dirrm share/gnome/help/gstreamer-properties/sv/figures
 @dirrm share/gnome/help/gstreamer-properties/sv
+@dirrm share/gnome/help/gstreamer-properties/ru/figures
+@dirrm share/gnome/help/gstreamer-properties/ru
 @dirrm share/gnome/help/gstreamer-properties/oc/figures
 @dirrm share/gnome/help/gstreamer-properties/oc
+@dirrm share/gnome/help/gstreamer-properties/it/figures
+@dirrm share/gnome/help/gstreamer-properties/it
 @dirrm share/gnome/help/gstreamer-properties/fr/figures
 @dirrm share/gnome/help/gstreamer-properties/fr
 @dirrm share/gnome/help/gstreamer-properties/es/figures
 @dirrm share/gnome/help/gstreamer-properties/es
+@dirrm share/gnome/help/gstreamer-properties/ca/figures
+@dirrm share/gnome/help/gstreamer-properties/ca
 @dirrm share/gnome/help/gstreamer-properties/C/figures
 @dirrm share/gnome/help/gstreamer-properties/C
 @dirrm share/gnome/help/gstreamer-properties
 @dirrm share/gnome/help/gnome-volume-control/sv/figures
 @dirrm share/gnome/help/gnome-volume-control/sv
+@dirrm share/gnome/help/gnome-volume-control/ru/figures
+@dirrm share/gnome/help/gnome-volume-control/ru
 @dirrm share/gnome/help/gnome-volume-control/oc/figures
 @dirrm share/gnome/help/gnome-volume-control/oc
+@dirrm share/gnome/help/gnome-volume-control/it/figures
+@dirrm share/gnome/help/gnome-volume-control/it
 @dirrm share/gnome/help/gnome-volume-control/fr/figures
 @dirrm share/gnome/help/gnome-volume-control/fr
 @dirrm share/gnome/help/gnome-volume-control/es/figures
 @dirrm share/gnome/help/gnome-volume-control/es
+@dirrm share/gnome/help/gnome-volume-control/ca/figures
+@dirrm share/gnome/help/gnome-volume-control/ca
 @dirrm share/gnome/help/gnome-volume-control/C/figures
 @dirrm share/gnome/help/gnome-volume-control/C
 @dirrm share/gnome/help/gnome-volume-control
@@ -192,12 +253,18 @@ share/locale/zh_TW/LC_MESSAGES/gnome-media-2.0.mo
 @dirrm share/gnome/help/gnome-sound-recorder/uk
 @dirrm share/gnome/help/gnome-sound-recorder/sv/figures
 @dirrm share/gnome/help/gnome-sound-recorder/sv
+@dirrm share/gnome/help/gnome-sound-recorder/ru/figures
+@dirrm share/gnome/help/gnome-sound-recorder/ru
 @dirrm share/gnome/help/gnome-sound-recorder/oc/figures
 @dirrm share/gnome/help/gnome-sound-recorder/oc
+@dirrm share/gnome/help/gnome-sound-recorder/it/figures
+@dirrm share/gnome/help/gnome-sound-recorder/it
 @dirrm share/gnome/help/gnome-sound-recorder/fr/figures
 @dirrm share/gnome/help/gnome-sound-recorder/fr
 @dirrm share/gnome/help/gnome-sound-recorder/es/figures
 @dirrm share/gnome/help/gnome-sound-recorder/es
+@dirrm share/gnome/help/gnome-sound-recorder/ca/figures
+@dirrm share/gnome/help/gnome-sound-recorder/ca
 @dirrm share/gnome/help/gnome-sound-recorder/C/figures
 @dirrm share/gnome/help/gnome-sound-recorder/C
 @dirrm share/gnome/help/gnome-sound-recorder
