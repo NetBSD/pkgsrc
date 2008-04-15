@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.738 2008/04/15 16:13:26 tron Exp $
+$NetBSD: CHANGES-2008,v 1.739 2008/04/15 18:05:29 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1404,3 +1404,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/png to 1.2.27beta03 [wiz 2008-04-15]
 	Updated editors/nvi to 1.81.6nb1 [schmonz 2008-04-15]
 	Updated misc/libcdio to 0.80 [tron 2008-04-15]
+	Updated misc/libcdio to 0.80nb1 [tron 2008-04-15]
