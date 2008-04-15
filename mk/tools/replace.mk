@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.209 2008/02/29 00:23:09 tnn Exp $
+# $NetBSD: replace.mk,v 1.210 2008/04/15 13:00:11 tron Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -396,7 +396,7 @@ TOOLS_ALIASES.gm4=		m4
 .  if !empty(PKGPATH:Mdevel/gmake)
 MAKEFLAGS+=			TOOLS_IGNORE.gmake=
 .  elif !empty(_TOOLS_USE_PKGSRC.gmake:M[yY][eE][sS])
-TOOLS_DEPENDS.gmake?=		gmake>=3.78:../../devel/gmake
+TOOLS_DEPENDS.gmake?=		gmake>=3.81:../../devel/gmake
 TOOLS_CREATE+=			gmake
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.gmake=gmake
 TOOLS_PATH.gmake=		${TOOLS_PREFIX.gmake}/bin/gmake
