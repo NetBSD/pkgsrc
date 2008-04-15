@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.37 2008/01/11 13:58:48 drochner Exp $
+# $NetBSD: Makefile.common,v 1.38 2008/04/15 18:23:54 drochner Exp $
 #
 
-DISTNAME=	totem-2.20.3
+DISTNAME=	totem-2.22.1
 CATEGORIES=	multimedia gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/2.20/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/2.22/}
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/totem/
@@ -19,8 +19,6 @@ USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
-
-PKGCONFIG_OVERRIDE=	totem-plparser.pc.in
 
 GCONF_SCHEMAS=		totem.schemas
 GCONF_SCHEMAS+=	totem-handlers.schemas
@@ -42,10 +40,11 @@ BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.6.0
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../sysutils/nautilus/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
-.include "../../x11/gnome-desktop/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
+.include "../../x11/libXtst/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../multimedia/totem-pl-parser/buildlink3.mk"
