@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7213 2008/04/15 21:57:33 wiz Exp $
+$NetBSD: TODO,v 1.7214 2008/04/15 21:58:14 wiz Exp $
 
 Suggested new packages
 ======================
@@ -478,7 +478,6 @@ Suggested package updates
 	o boson-0.13
 	o botan-1.6.4
 	o btpd-0.13 [pkg/38144]
-	o bug-buddy-2.22.0
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o cairo-1.6.4
@@ -510,7 +509,6 @@ Suggested package updates
 	o colorize-0.3.4
 	o compiz-0.6.2
 	o connect-1.96
-	o control-center-2.20.1
 	o cook-2.31
 	o cpio-2.9
 	o cpmtools-2.6
@@ -543,7 +541,6 @@ Suggested package updates
 	o dejavu-ttf-2.24
 	o dejavu-ttf-2.24 [pkg/38212]
 	o delegate-9.7.5
-	o deskbar-applet-2.22.1
 	o devIL-1.6.7
 	o devhelp-0.19
 	o dhid-5.3
@@ -568,7 +565,6 @@ Suggested package updates
 	o eclipse-3.2.0
 	o ede-1.2
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o eel-2.22.1
 	o efax-gtk-3.0.17
 	o egtk-0.3.6.2
 	o electric-8.06
@@ -584,10 +580,7 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.12
 	o enscript-1.6.4
-	o eog-2.22.1
 	o epic4-2.6
-	o epiphany-2.22.1.1
-	o epiphany-extensions-2.22.1
 	o epsg-6.14
 	o epstool-3.08
 	o eric3-4.1.2 [now called eric4]
@@ -596,9 +589,6 @@ Suggested package updates
 	o et-2.60
 	o etach-1.4.1
 	o eukleides-1.0.3
-	o evince-2.22.1.1
-	o evolution-2.22.1
-	o evolution-data-server-2.22.1
 	o evolution-exchange-2.22.1
 	o ex-20050325
 	o ezmlm-idx-5.1.2 [schmonz]
@@ -612,7 +602,6 @@ Suggested package updates
 	o festival-1.96
 	o fetchyahoo-2.11.2
 	o file-4.23
-	o file-roller-2.22.2
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.0
@@ -642,7 +631,6 @@ Suggested package updates
 	o fvwm2-themes-0.7.0
 	o gap-4r4p9
 	o gated-3.6
-	o gcalctool-5.22.1
 	o gcc-4.3.0
 	o gcc-ssp-3.4.4
 	o gcin-1.3.7.1
@@ -655,10 +643,8 @@ Suggested package updates
 	o gdb6-6.7.1
 	o gdeskcal-1.01
 	o gdl-0.7.11
-	o gdm-2.20.5
 	o gdsreader-0.3.2
 	o geany-0.13
-	o gedit-2.22.1
 	o generator-cbiere-0.35r3
 	o gettext-0.17
 	o gfract-0.33
@@ -684,18 +670,11 @@ Suggested package updates
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-2.22.1
-	o gnome-applets-2.22.1
 	o gnome-audio-2.22.1
 	o gnome-build-0.2.4
-	o gnome-control-center-2.22.1
 	o gnome-games-2.22.1.1
-	o gnome-icon-theme-2.22.0
 	o gnome-mag-0.15.0
-	o gnome-media-2.22.0
-	o gnome-panel-2.22.1.2
 	o gnome-pilot-2.0.16
-	o gnome-screensaver-2.22.2
-	o gnome-session-2.22.1.1
 	o gnome-sharp-2.20.0
 	o gnome-spell-1.0.8
 	o gnome-terminal-2.22.1
@@ -740,16 +719,12 @@ Suggested package updates
 	o gtk-doc-1.10
 	o gtk-systrace-20030623
 	o gtk2-sharp-2.12.0
-	o gtkhtml-3.18.0
-	o gtkhtml314-3.18.1
 	o gtklife-5.1
 	o gtksee-0.6.0b
-	o gtksourceview-2.2.0
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranscript-0.2.0
-	o gucharmap-2.22.1
 	o guile-gtk-2.0
 	o gworkspace-0.8.6
 	o gzrecover-0.5
@@ -869,7 +844,6 @@ Suggested package updates
 	o libgnomecanvasmm-2.22.0
 	o libgnomecups-0.2.3
 	o libgnomedb-3.1.2
-	o libgnomekbd-2.22.0
 	o libgnomemm-2.22.0
 	o libgnomeuimm-2.22.0
 	o libgtop-2.22.1
@@ -886,7 +860,6 @@ Suggested package updates
 	o libole2-2.2.8
 	o libopensync-0.35
 	o libpreludedb-0.9.14
-	o librsvg-2.22.2
 	o libshout-2.2.2
 	o libsigc++-2.2.2
 	o libsoup-2.4.1
@@ -932,7 +905,6 @@ Suggested package updates
 	o mcrypt-2.6.6
 	o mergeant-0.67
 	o mesure-0.7.2
-	o metacity-2.22.0
 	o metakit-lib-2.4.9.6
 	o mgetty+sendfax-1.1.35
 	o mimedefang-2.64
@@ -969,7 +941,6 @@ Suggested package updates
 	o naim-0.11.8.3.1
 	o nap-1.5.3
 	o nas-1.9.1
-	o nautilus-2.22.1
 	o nautilus-cd-burner-2.18.2 [needs hal]
 	o nautilus-cd-burner-2.22.1
 	o ncftp3-3.2.1 [pkg/37859]
@@ -1161,9 +1132,6 @@ Suggested package updates
 	o po4a-0.29
 	o poedit-1.4.1
 	o polsms-2.1.0
-	o poppler-0.8.0
-	o poppler-glib-0.8.0
-	o poppler-qt-0.8.0
 	o poppy-4.01
 	o poptop-1.3.0
 	o posh-0.5.5
@@ -1284,7 +1252,6 @@ Suggested package updates
 	o scons-0.97
 	o scrollz-1.9.99
 	o scsh-1.3.0
-	o seahorse-2.22.1
 	o sendfile-20010424
 	o ser-0.9.6
 	o sge-6.1.2
@@ -1376,7 +1343,6 @@ Suggested package updates
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
-	o totem-2.22.1
 	o tpasm-1.2
 	o tpb-0.6.4
 	o transfig-3.2.5
@@ -1537,14 +1503,12 @@ Suggested package updates
 	o yabause-0.9.4
 	o yacas-1.2.0
 	o yafc-1.1
-	o yelp-2.22.0
 	o yodl-2.01.02
 	o youtube-dl-20080407
 	o ysm-2.9.9.1
 	o yudit-2.9.0
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zenity-2.22.1
 	o zile-2.2.57
 	o zircon-1.18.256
 	o zoom-1.0.5
