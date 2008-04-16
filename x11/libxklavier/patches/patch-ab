@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2007/04/19 21:39:17 wiz Exp $
+$NetBSD: patch-ab,v 1.6 2008/04/16 16:41:38 drochner Exp $
 
---- Makefile.in.orig	2007-03-22 21:46:18.000000000 +0000
+--- Makefile.in.orig	2008-02-28 15:49:53.000000000 +0100
 +++ Makefile.in
-@@ -217,7 +217,7 @@ sbindir = @sbindir@
+@@ -219,7 +219,7 @@ sbindir = @sbindir@
  sharedstatedir = @sharedstatedir@
  sysconfdir = @sysconfdir@
  target_alias = @target_alias@
 -SUBDIRS = libxklavier doc tests
 +SUBDIRS = libxklavier doc
- config_xml_DATA = xfree86.xml
- config_xmldir = $(datadir)/$(PACKAGE)
  EXTRA_DIST = libxklavier.spec libxklavier.spec.in \
+              autogen.sh \
+              CREDITS libxklavier.pc.in gtk-doc.make \
