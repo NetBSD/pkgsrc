@@ -1,9 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/14 15:52:42 joerg Exp $
-include/GL/internal/dri_interface.h
+@comment $NetBSD: PLIST,v 1.2 2008/04/16 14:33:04 wiz Exp $
 include/X11/dri/xf86dri.h
 include/X11/dri/xf86dristr.h
 lib/pkgconfig/xf86driproto.pc
 @comment @dirrm include/X11/dri
 @comment @dirrm include/X11
-@comment @dirrm include/GL/internal
-@comment @dirrm include/GL
