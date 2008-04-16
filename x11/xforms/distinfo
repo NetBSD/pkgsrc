@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.17 2005/12/05 20:51:20 rillig Exp $
+$NetBSD: distinfo,v 1.18 2008/04/16 05:42:46 obache Exp $
 
-SHA1 (xforms-1.0-release.tgz) = e25a31351c52472de88352388cf879512b20fc62
-RMD160 (xforms-1.0-release.tgz) = 18ccbff4df5e0e3786341a5ab4f8af6e2fd4fd92
-Size (xforms-1.0-release.tgz) = 1013294 bytes
+SHA1 (xforms-1.0.tar.gz) = 865086d2885331ce30b05c7aa07cd8c3d02ce87b
+RMD160 (xforms-1.0.tar.gz) = 2972fb4534d3794b2027e81f4222f20a04cc81f8
+Size (xforms-1.0.tar.gz) = 1012878 bytes
 SHA1 (patch-aa) = a7d53b076197d36a6f2cf18e23b5f102fe0182ec
 SHA1 (patch-ab) = 5f0dedd0e35b952d0e4512c5e396ededcf85f994
 SHA1 (patch-ac) = 55c32e091b1da5441e4c652d3e4a002202a6d076
