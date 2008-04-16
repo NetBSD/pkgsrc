@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_admin.1,v 1.17 2008/04/07 13:07:14 joerg Exp $
+.\"	$NetBSD: pkg_admin.1,v 1.18 2008/04/16 00:53:06 joerg Exp $
 .\"
 .\" Copyright (c) 1999-2008 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -137,6 +137,8 @@ but check only the given package names or patterns.
 Like
 .Cm audit-pkg ,
 but read the package names or patterns one per line from the given files.
+.It Cm audit-history Oo Fl t Ar type Oc Oo Ar pkgbase Oc ...
+Print all vulnerabilities for the given base package names.
 .It Cm check Op Ar pkg ...
 Use this command to check the files belonging to some or all of the
 packages installed on the local machine against the checksum

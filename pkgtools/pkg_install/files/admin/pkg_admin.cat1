@@ -69,6 +69,9 @@ OOPPTTIIOONNSS
              Like aauuddiitt--ppkkgg, but read the package names or patterns one per
              line from the given files.
 
+     aauuddiitt--hhiissttoorryy [--tt _t_y_p_e] [_p_k_g_b_a_s_e] ...
+             Print all vulnerabilities for the given base package names.
+
      cchheecckk [_p_k_g _._._.]
              Use this command to check the files belonging to some or all of
              the packages installed on the local machine against the checksum
