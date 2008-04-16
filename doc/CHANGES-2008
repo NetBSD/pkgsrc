@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.755 2008/04/16 14:33:16 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.756 2008/04/16 14:37:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1460,3 +1460,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xauth to 1.0.3 [wiz 2008-04-16]
 	Updated x11/printproto to 1.0.4 [wiz 2008-04-16]
 	Updated x11/xf86driproto to 2.0.4 [wiz 2008-04-16]
+	Updated mail/gmime to 2.2.18 [wiz 2008-04-16]
