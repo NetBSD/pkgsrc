@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/03 19:53:21 joerg Exp $
+$NetBSD: distinfo,v 1.2 2008/04/16 14:27:45 wiz Exp $
 
-SHA1 (printproto-1.0.3.tar.bz2) = c9b62c20ed50ce44c4835d5fd2d1bb52af66f75f
-RMD160 (printproto-1.0.3.tar.bz2) = af2312cd43efc2d2d26dd161a4ef667f2a928155
-Size (printproto-1.0.3.tar.bz2) = 43560 bytes
+SHA1 (printproto-1.0.4.tar.bz2) = 8da2d19faca74f894d0e2b3e142283b725c0ef46
+RMD160 (printproto-1.0.4.tar.bz2) = ab23d31e5b13fd7260f2a10d789f5d8e89bf775f
+Size (printproto-1.0.4.tar.bz2) = 49579 bytes
