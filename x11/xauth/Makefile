@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/17 16:07:29 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/16 14:26:26 wiz Exp $
 #
 
-DISTNAME=		xauth-1.0.2
+DISTNAME=		xauth-1.0.3
 CATEGORIES=		x11
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=		.tar.bz2
