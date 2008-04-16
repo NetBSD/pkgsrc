@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.741 2008/04/16 00:10:24 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.742 2008/04/16 08:47:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1407,3 +1407,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/libcdio to 0.80nb1 [tron 2008-04-15]
 	Updated devel/fromcvs to 0.0.0.116 [wiz 2008-04-15]
 	Updated net/aria2 to 0.13.1.2 [bjs 2008-04-16]
+	Updated devel/tailor to 0.9.31 [wiz 2008-04-16]
