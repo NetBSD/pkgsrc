@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.754 2008/04/16 14:27:55 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.755 2008/04/16 14:33:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1459,3 +1459,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated fonts/t1utils to 1.34 [wiz 2008-04-16]
 	Updated x11/xauth to 1.0.3 [wiz 2008-04-16]
 	Updated x11/printproto to 1.0.4 [wiz 2008-04-16]
+	Updated x11/xf86driproto to 2.0.4 [wiz 2008-04-16]
