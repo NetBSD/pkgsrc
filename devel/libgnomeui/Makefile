@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2008/04/10 16:54:29 drochner Exp $
+# $NetBSD: Makefile,v 1.77 2008/04/16 14:03:18 reed Exp $
 #
 
 DISTNAME=	libgnomeui-2.22.1
@@ -23,7 +23,7 @@ USE_LIBTOOL=		yes
 PKGCONFIG_BASE=		${WRKSRC}/libgnomeui/libgnomeui-2.0.pc
 PKGCONFIG_OVERRIDE=	${PKGCONFIG_BASE}.in
 
-BUILDLINK_API_DEPENDS.glib2=		glib2>=2.8.0
+BUILDLINK_API_DEPENDS.glib2=		glib2>=2.15.0
 BUILDLINK_API_DEPENDS.gtk2=		gtk2+>=2.11.5
 BUILDLINK_API_DEPENDS.libbonoboui=	libbonoboui>=2.13.1
 BUILDLINK_API_DEPENDS.libgnome=		libgnome>=2.16.0
