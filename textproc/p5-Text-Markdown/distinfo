@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/09/21 00:05:34 wiz Exp $
+$NetBSD: distinfo,v 1.2 2008/04/16 09:28:04 wiz Exp $
 
-SHA1 (Text-Markdown-1.0.3.tar.gz) = 7195ce211101e773aebcd21387a75bff01a2c3cb
-RMD160 (Text-Markdown-1.0.3.tar.gz) = 2ee988d797346075db541bce34e88882f7b2ee89
-Size (Text-Markdown-1.0.3.tar.gz) = 17372 bytes
+SHA1 (Text-Markdown-1.0.17.tar.gz) = e358ba5cd52490ff33ae9ca0a20ba106f1220a96
+RMD160 (Text-Markdown-1.0.17.tar.gz) = e9f06081748d3222b3437ea7b495816f3cd30f94
+Size (Text-Markdown-1.0.17.tar.gz) = 134030 bytes
