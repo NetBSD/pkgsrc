@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2008/04/04 21:24:48 markd Exp $
+# $NetBSD: Makefile,v 1.5 2008/04/16 18:47:18 wennmach Exp $
 
 DISTNAME=		g95_source
 VERSION=		0.91
 PKGNAME=		g95-${VERSION}
-#PKGREVISION=		1
+PKGREVISION=		1
 CATEGORIES=		lang
 EXTRACT_SUFX.g95_source=	.tgz
 DIST_SUBDIR=		${PKGNAME_NOREV}
@@ -17,7 +17,7 @@ HOMEPAGE=		http://www.g95.org/
 COMMENT=		Fortran 95 compiler from g95.org
 
 GNU_CONFIGURE=		YES
-USE_TOOLS+=		gmake gzcat tar
+USE_TOOLS+=		gmake gtar
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 PLIST_SUBST+=		MACHINE_GNU_PLATFORM=${MACHINE_GNU_PLATFORM:Q}
 
@@ -31,17 +31,17 @@ CONFIGURE_ARGS+=	--with-gcc-dir=${GCC_DIR}
 
 post-extract:
 	${MKDIR} ${GCC_G95_DIR}
-	(cd ${WRKSRC}; ${GZCAT} libf95.a-${VERSION}.tar.gz | ${TAR} xpf -)
+	cd ${WRKSRC} && ${GTAR} -xzf libf95.a-${VERSION}.tar.gz
 
 pre-configure:
-	(cd ${GCC_G95_DIR}; ${GCC_CONFIGURE_SCRIPT} ${GCC_CONFIGURE_ARGS} && ${GMAKE})
+	cd ${GCC_G95_DIR} && ${GCC_CONFIGURE_SCRIPT} ${GCC_CONFIGURE_ARGS} && ${GMAKE}
 
 post-build:
-	(cd ${WRKSRC}/libf95.a-${VERSION}; ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} && ${GMAKE})
+	cd ${WRKSRC}/libf95.a-${VERSION} && ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} && ${GMAKE}
 
 post-install:
-	(cd ${WRKSRC}/libf95.a-${VERSION}; ${GMAKE} install)
-	(cd ${PREFIX}/bin; ${LN} -sf ${MACHINE_GNU_PLATFORM:Q}-g95 g95)
-	(cd ${PREFIX}/bin; ${LN} -sf ${MACHINE_GNU_PLATFORM:Q}-g95 f95)
+	cd ${WRKSRC}/libf95.a-${VERSION} && ${GMAKE} install
+	cd ${PREFIX}/bin && ${LN} -sf ${MACHINE_GNU_PLATFORM:Q}-g95 g95
+	cd ${PREFIX}/bin && ${LN} -sf ${MACHINE_GNU_PLATFORM:Q}-g95 f95
 
 .include "../../mk/bsd.pkg.mk"
