@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.746 2008/04/16 09:04:34 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.747 2008/04/16 09:28:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1412,3 +1412,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-ExtUtils-CBuilder to 0.22 [wiz 2008-04-16]
 	Updated devel/p5-File-MimeInfo to 0.15 [wiz 2008-04-16]
 	Updated devel/p5-Test-Exception to 0.27 [wiz 2008-04-16]
+	Updated textproc/p5-Text-Markdown to 1.0.17 [wiz 2008-04-16]
