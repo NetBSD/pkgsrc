@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.14 2008/04/05 02:51:14 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.15 2008/04/16 01:01:50 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -56,6 +56,11 @@
  *
  */
 
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#include <nbcompat.h>
+
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -66,7 +71,11 @@
 #include <inttypes.h>
 #include <netdb.h>
 #include <stdarg.h>
+#ifndef NETBSD
+#include <nbcompat/stdio.h>
+#else
 #include <stdio.h>
+#endif
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
