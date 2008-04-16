@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/11/03 13:22:43 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2008/04/16 12:34:13 abs Exp $
 #
 
 DISTNAME=		meld-1.1.5.1
@@ -14,7 +14,7 @@ MAINTAINER=		dieter.NetBSD@pandora.be
 HOMEPAGE=		http://meld.sourceforge.net/
 COMMENT=		Visual diff and merge tool
 
-PYTHON_VERSIONS_ACCEPTED=	24 23
+PYTHON_VERSIONS_ACCEPTED=	25 24 23
 USE_DIRS+=			xdg-1.3
 USE_DIRS+=			gnome2-1.6
 USE_PKGLOCALEDIR=		YES
