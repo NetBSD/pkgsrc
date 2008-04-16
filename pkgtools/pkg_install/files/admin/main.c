@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.41 2008/04/07 13:07:14 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.42 2008/04/16 00:53:06 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.41 2008/04/07 13:07:14 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.42 2008/04/16 00:53:06 joerg Exp $");
 #endif
 
 /*-
@@ -116,6 +116,7 @@ usage(void)
 	    " audit [-es] [-t type] ...       - check installed packages for vulnerabilities\n"
 	    " audit-pkg [-es] [-t type] ...   - check listed packages for vulnerabilities\n"
 	    " audit-batch [-es] [-t type] ... - check packages in listed files for vulnerabilities\n"
+	    " audit-history [-t type] ...     - print all advisories for package names\n"
 	    " config-var name                 - print current value of the configuration variable\n",
 	    getprogname());
 	exit(EXIT_FAILURE);
@@ -539,6 +540,8 @@ main(int argc, char *argv[])
 		audit_pkg(--argc, ++argv);
 	} else if (strcasecmp(argv[0], "audit-batch") == 0) {
 		audit_batch(--argc, ++argv);
+	} else if (strcasecmp(argv[0], "audit-history") == 0) {
+		audit_history(--argc, ++argv);
 	}
 #endif
 #ifdef PKGDB_DEBUG

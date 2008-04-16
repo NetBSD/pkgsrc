@@ -1,4 +1,4 @@
-/*	$NetBSD: audit.c,v 1.7 2008/04/15 22:24:38 joerg Exp $	*/
+/*	$NetBSD: audit.c,v 1.8 2008/04/16 00:53:06 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: audit.c,v 1.7 2008/04/15 22:24:38 joerg Exp $");
+__RCSID("$NetBSD: audit.c,v 1.8 2008/04/16 00:53:06 joerg Exp $");
 #endif
 
 /*-
@@ -384,5 +384,125 @@ fetch_pkg_vulnerabilities(int argc, char **argv)
 
 	free(buf);
 
+	exit(EXIT_SUCCESS);
+}
+
+static int
+check_pkg_history_pattern(const char *pkg, const char *pattern)
+{
+	const char *delim, *end_base;
+
+	if ((delim = strchr(pattern, '*')) != NULL) {
+		if ((end_base = strrchr(pattern, '-')) == NULL)
+			errx(EXIT_FAILURE, "Missing - in wildcard pattern %s",
+			    pattern);
+		if ((delim = strchr(pattern, '>')) != NULL ||
+		    (delim = strchr(pattern, '<')) != NULL)
+			errx(EXIT_FAILURE,
+			    "Mixed relational and wildcard patterns in %s",
+			    pattern);
+	} else if ((delim = strchr(pattern, '>')) != NULL) {
+		end_base = delim;
+		if ((delim = strchr(pattern, '<')) != NULL && delim < end_base)
+			errx(EXIT_FAILURE, "Inverted operators in %s",
+			    pattern);
+	} else if ((delim = strchr(pattern, '<')) != NULL) {
+		end_base = delim;
+	} else if ((end_base = strrchr(pattern, '-')) == NULL) {
+		errx(EXIT_FAILURE, "Missing - in absolute pattern %s",
+		    pattern);
+	}
+
+	if (strncmp(pkg, pattern, end_base - pattern) != 0)
+		return 0;
+	if (pkg[end_base - pattern] != '\0')
+		return 0;
+
+	return 1;
+}
+
+static int
+check_pkg_history1(const char *pkg, const char *pattern)
+{
+	const char *open_brace, *close_brace, *inner_brace, *suffix, *iter;
+	size_t prefix_len, suffix_len, middle_len;
+	char *expanded_pkg;
+
+	open_brace = strchr(pattern, '{');
+	if (open_brace == NULL) {
+		if ((close_brace = strchr(pattern, '}')) != NULL)
+			errx(EXIT_FAILURE, "Unbalanced {} in pattern %s",
+			    pattern);
+		return check_pkg_history_pattern(pkg, pattern);
+	}
+	close_brace = strchr(open_brace, '}');
+	if (strchr(pattern, '}') != close_brace)
+		errx(EXIT_FAILURE, "Unbalanced {} in pattern %s",
+		    pattern);
+
+	while ((inner_brace = strchr(open_brace + 1, '{')) != NULL) {
+		if (inner_brace >= close_brace)
+			break;
+		open_brace = inner_brace;
+	}
+
+	expanded_pkg = malloc(strlen(pattern)); /* {} are going away... */
+	if (expanded_pkg == NULL)
+		err(EXIT_FAILURE, "malloc failed");
+
+	prefix_len = open_brace - pattern;
+	suffix = close_brace + 1;
+	suffix_len = strlen(suffix) + 1;
+	memcpy(expanded_pkg, pattern, prefix_len);
+
+	++open_brace;
+
+	do {
+		iter = strchr(open_brace, ',');
+		if (iter == NULL || iter > close_brace)
+			iter = close_brace;
+
+		middle_len = iter - open_brace;
+		memcpy(expanded_pkg + prefix_len, open_brace, middle_len);
+		memcpy(expanded_pkg + prefix_len + middle_len, suffix,
+		    suffix_len);
+		if (check_pkg_history1(pkg, expanded_pkg)) {
+			free(expanded_pkg);
+			return 1;
+		}
+		open_brace = iter + 1;
+	} while (iter < close_brace);
+
+	free(expanded_pkg);
+	return 0;
+}
+
+static void
+check_pkg_history(const char *pkg)
+{
+	size_t i;
+
+	for (i = 0; i < pv->entries; ++i) {
+		if (strcmp("eol", pv->classification[i]) == 0)
+			continue;
+		if (check_pkg_history1(pkg, pv->vulnerability[i]) == 0)
+			continue;
+
+		printf("%s %s %s\n", pv->vulnerability[i],
+		    pv->classification[i], pv->advisory[i]);
+	}
+}
+
+void
+audit_history(int argc, char **argv)
+{
+	parse_options(argc, argv);
+	argv += optind;
+
+	check_and_read_pkg_vulnerabilities();
+	for (; *argv != NULL; ++argv)
+		check_pkg_history(*argv);
+
+	free_pkg_vulnerabilities(pv);
 	exit(EXIT_SUCCESS);
 }
