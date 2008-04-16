@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2008/01/09 18:53:49 drochner Exp $
+# $NetBSD: Makefile.common,v 1.7 2008/04/16 12:24:50 abs Exp $
 #
 
 DISTNAME=		pygobject-2.14.1
@@ -19,6 +19,6 @@ PATCHDIR=		${.CURDIR}/../../devel/py-gobject/patches
 DISTINFO_FILE=		${.CURDIR}/../../devel/py-gobject/distinfo
 
 PKGCONFIG_OVERRIDE+=	pygobject-2.0.pc.in
-PYTHON_VERSIONS_ACCEPTED= 24 23
+PYTHON_VERSIONS_ACCEPTED= 25 24 23
 PY_PATCHPLIST=		yes
 CONFLICTS+=		${PYPKGPREFIX}-gtk2<2.8.4
