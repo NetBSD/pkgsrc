@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.743 2008/04/16 08:54:39 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.744 2008/04/16 08:59:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1409,3 +1409,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/aria2 to 0.13.1.2 [bjs 2008-04-16]
 	Updated devel/tailor to 0.9.31 [wiz 2008-04-16]
 	Updated www/snownews to 1.5.9 [wiz 2008-04-16]
+	Updated devel/p5-ExtUtils-CBuilder to 0.22 [wiz 2008-04-16]
