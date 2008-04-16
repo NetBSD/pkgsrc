@@ -2,5 +2,5 @@ GtkHTML is a lightweight HTML rendering/printing/editing engine. It
 was originally based on KHTMLW, part of the KDE project, but is now
 being developed independently.
 
-This package contains the 3.8 branch. For the newer 3.14 branch,
-see gtkhtml314.
+This package contains the "3.8" API version of GtkHTML.  For the newer
+3.14 API, see gtkhtml314.
