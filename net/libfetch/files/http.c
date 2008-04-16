@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.11 2008/04/05 02:42:13 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.12 2008/04/16 01:01:50 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -61,6 +61,11 @@
  * SUCH DAMAGE.
  */
 
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#include <nbcompat.h>
+
 #include <sys/types.h>
 #include <sys/socket.h>
 
@@ -69,7 +74,11 @@
 #include <locale.h>
 #include <netdb.h>
 #include <stdarg.h>
+#ifndef NETBSD
+#include <nbcompat/stdio.h>
+#else
 #include <stdio.h>
+#endif
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
