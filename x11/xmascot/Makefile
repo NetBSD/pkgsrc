@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.19 2007/02/22 19:27:28 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2008/04/16 06:13:57 obache Exp $
 
 DISTNAME=	xmascot2.5p2
 PKGNAME=	xmascot-2.5p2
 PKGREVISION=	2
 CATEGORIES=	x11
-MASTER_SITES=	ftp://cclub.tutcc.tut.ac.jp/pub/xmascot/
+MASTER_SITES=	http://cclub-flying.dsl.gr.jp/products/xmascot/
 
 MAINTAINER=	Nakai@Mlab.t.u-tokyo.ac.jp
-HOMEPAGE=	http://cclub.cc.tut.ac.jp/xmascot/
+HOMEPAGE=	http://cclub-flying.dsl.gr.jp/products/xmascot/
 COMMENT=	Moving mascot on your X-Window screen
 
 USE_IMAKE=	yes
