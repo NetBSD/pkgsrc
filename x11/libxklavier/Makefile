@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2007/04/19 21:39:17 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2008/04/16 16:41:37 drochner Exp $
 #
 
-DISTNAME=	libxklavier-3.2
+DISTNAME=	libxklavier-3.5
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gswitchit/}
 
