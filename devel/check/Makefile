@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/02/01 19:07:23 drochner Exp $
+# $NetBSD: Makefile,v 1.15 2008/04/16 13:03:43 obache Exp $
 #
 
 DISTNAME=	check-0.9.5
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=check/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://check.sourceforge.net/
 COMMENT=	Unit test framework for C
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--enable-plain-docdir
