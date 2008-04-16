@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/11 19:12:09 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/16 18:11:26 drochner Exp $
 #
 
 DISTNAME=	gnome-settings-daemon-2.22.1
@@ -21,6 +21,8 @@ GCONF_SCHEMAS+=	desktop_gnome_font_rendering.schemas
 GCONF_SCHEMAS+=	apps_gnome_settings_daemon_keybindings.schemas
 GCONF_SCHEMAS+=	apps_gnome_settings_daemon_screensaver.schemas
 PKGCONFIG_OVERRIDE+=	data/gnome-settings-daemon.pc.in
+
+BUILDLINK_API_DEPENDS.libxklavier+=	libxklavier>=3.3
 
 .include "../../devel/GConf/schemas.mk"
 .include "../../x11/gtk2/buildlink3.mk"
