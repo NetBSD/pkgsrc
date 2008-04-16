@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7216 2008/04/16 21:41:55 wiz Exp $
+$NetBSD: TODO,v 1.7217 2008/04/16 21:42:18 wiz Exp $
 
 Suggested new packages
 ======================
@@ -673,7 +673,6 @@ Suggested package updates
 	o gnome-pilot-2.0.16
 	o gnome-sharp-2.20.0
 	o gnome-spell-1.0.8
-	o gnome-system-monitor-2.22.1
 	o gnome-terminal-2.22.1
 	o gnome-themes-extras-2.22.0
 	o gnome-vfsmm-2.22.0
