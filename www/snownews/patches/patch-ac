@@ -1,17 +1,21 @@
-$NetBSD: patch-ac,v 1.5 2005/10/22 22:06:21 tonio Exp $
+$NetBSD: patch-ac,v 1.6 2008/04/16 08:54:28 wiz Exp $
 
---- Makefile.orig	2005-06-05 11:50:22.000000000 +0200
+--- Makefile.orig	2008-02-17 13:43:58.000000000 +0000
 +++ Makefile
-@@ -1,7 +1,5 @@
+@@ -1,8 +1,8 @@
 -CC=         gcc
 -MAKE=       make
++CC?=         gcc
++MAKE?=       make
  INSTALL=    install
 -LOCALEPATH= $(PREFIX)/share/locale
+-MANPATH=    $(PREFIX)/share/man
 +LOCALEPATH= $(PREFIX)/${PKG_LOCALEDIR}/locale
++MANPATH=    $(PREFIX)/${PKGMANDIR}
  
  ### Compiler/linker flags   ###
  ### Generated via configure ###
-@@ -38,7 +36,7 @@ snownews-static: manpages locales
+@@ -39,7 +39,7 @@ snownews-static: manpages locales
  
  locales:
  	for L in $(LOCALES); do \
