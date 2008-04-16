@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.744 2008/04/16 08:59:04 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.745 2008/04/16 09:01:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1410,3 +1410,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/tailor to 0.9.31 [wiz 2008-04-16]
 	Updated www/snownews to 1.5.9 [wiz 2008-04-16]
 	Updated devel/p5-ExtUtils-CBuilder to 0.22 [wiz 2008-04-16]
+	Updated devel/p5-File-MimeInfo to 0.15 [wiz 2008-04-16]
