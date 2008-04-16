@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/04/03 10:19:17 sborrill Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/16 14:55:29 sborrill Exp $
 
 DISTNAME=	dansguardian-2.8.0.6.source
 PKGNAME=	dansguardian-2.8.0.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://dansguardian.org/downloads/2/Stable/
 
