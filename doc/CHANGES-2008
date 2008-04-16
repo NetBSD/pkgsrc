@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.748 2008/04/16 11:09:11 drochner Exp $
+$NetBSD: CHANGES-2008,v 1.749 2008/04/16 13:29:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1453,3 +1453,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/eel to 2.22.1 [drochner 2008-04-16]
 	Updated sysutils/gnome-menus to 2.22.1 [drochner 2008-04-16]
 	Updated x11/gnome-desktop to 2.22.1 [drochner 2008-04-16]
+	Updated textproc/p5-XML-LibXML to 1.66 [wiz 2008-04-16]
