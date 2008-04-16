@@ -45,6 +45,7 @@ void 	check(char **);
 void	audit_pkgdb(int, char **);
 void	audit_pkg(int, char **);
 void	audit_batch(int, char **);
+void	audit_history(int, char **);
 void	check_pkg_vulnerabilities(int, char **);
 void	fetch_pkg_vulnerabilities(int, char **);
 
