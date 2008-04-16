@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7215 2008/04/15 22:02:45 wiz Exp $
+$NetBSD: TODO,v 1.7216 2008/04/16 21:41:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -337,14 +337,14 @@ Suggested package updates
 	o CSP-0.34
 	o Chinput-3.0.1
 	o Coin-2.4.5
-	o DatLib-2.22
-	o DatUtil-2.33
+	o DatLib-2.26
+	o DatUtil-2.37
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
 	o GridSim-3.3
 	o Mesa-7.0.3
-	o MesaLib-7.0.2
+	o MesaLib-7.0.3
 	o PAM-0.99.7.1
 	o R-CGIwithR-0.72
 	o R-DAAG-0.91
@@ -373,6 +373,7 @@ Suggested package updates
 	o R-statmod-1.3.0
 	o R-wle-0.9.3
 	o REminiscence-0.1.9
+	o ROMBuild-2.10
 	o RTx-Shredder-0.05
 	o SmartEiffel-2.3
 	o TeXmacs-1.0.6.14
@@ -399,7 +400,6 @@ Suggested package updates
 	o algae-4.3.6
 	o aliados-0.2.0
 	o amanda-2.6.0
-	o amarok-1.80
 	o amavis-perl-0.3.12 [called just amavis]
 	o amavisd-new-2.5.4
 	o amaya-9.54
@@ -427,7 +427,6 @@ Suggested package updates
 	o aqsis-1.2
 	o aranym-0.9.5
 	o argtable-2.9
-	o aria2-0.13.1
 	o arla-0.90
 	o arnold-20040104
 	o arping-2.06
@@ -661,11 +660,9 @@ Suggested package updates
 	o glibmm-2.16.1
 	o global-5.6
 	o glpk-4.28
-	o gmime-2.2.18
 	o gmpc-0.15.1
 	o gnash-0.8.1 [pkg/37639]
 	o gnash-0.8.2
-	o gnet-2.0.8
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-2.22.1
@@ -676,6 +673,7 @@ Suggested package updates
 	o gnome-pilot-2.0.16
 	o gnome-sharp-2.20.0
 	o gnome-spell-1.0.8
+	o gnome-system-monitor-2.22.1
 	o gnome-terminal-2.22.1
 	o gnome-themes-extras-2.22.0
 	o gnome-vfsmm-2.22.0
@@ -712,7 +710,7 @@ Suggested package updates
 	o gsm-1.0.12
 	o gss-0.0.22
 	o gtar-1.20
-	o gtar-base-1.19
+	o gtar-base-1.20
 	o gthumb-2.10.8
 	o gtick-0.4.1
 	o gtk-doc-1.10
@@ -870,9 +868,7 @@ Suggested package updates
 	o libtool-2.2.2
 	o libtool-base-2.2.2
 	o libxkbfile-1.0.5
-	o libxklavier-3.5
 	o libxml++-2.22.0
-	o libxml++2-2.20.0
 	o lighttpd-1.4.19
 	o lilypond-2.10.33
 	o lincvs-2.0.0 [now called CrossVC]
@@ -971,7 +967,7 @@ Suggested package updates
 	o ntp4-4.2.4p3
 	o nulib2-220
 	o nullmailer-1.04
-	o nut-13.5
+	o nut-13.6
 	o nxtvepg-2.8.0
 	o objc-3.2.8
 	o ocaml-3.10.2
@@ -983,6 +979,7 @@ Suggested package updates
 	o onyx-5.1.2
 	o oo2c-2.1.7
 	o openafs-1.4.6
+	o openbox-3.4.7
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openmotif-2.3.0 [pkg/38038]
@@ -1013,9 +1010,7 @@ Suggested package updates
 	o p5-DBIx-DBSchema-0.36
 	o p5-DBIx-SearchBuilder-1.53
 	o p5-Data-FormValidator-4.50
-	o p5-ExtUtils-CBuilder-0.22
 	o p5-File-Flat-1.04
-	o p5-File-MimeInfo-0.15
 	o p5-File-Remove-1.40
 	o p5-File-Slurp-9999.13
 	o p5-Filter-1.33
@@ -1060,19 +1055,14 @@ Suggested package updates
 	o p5-Socket6-0.20
 	o p5-Spreadsheet-WriteExcel-2.21
 	o p5-Term-Size-0.203
-	o p5-Test-Exception-0.27
 	o p5-Test-Harness-2.64
 	o p5-Test-Unit-0.25
 	o p5-Test-WWW-Mechanize-1.20
 	o p5-Text-BibTeX-0.34
-	o p5-Text-Markdown-1.0.17
 	o p5-Text-Quoted-2.05
 	o p5-Text-Tabs+Wrap-2006.1117
 	o p5-Time-HiRes-1.9707
-	o p5-XML-LibXML-1.66
-	o p5-XML-LibXSLT-1.66
 	o p5-XML-RAI-1.04
-	o p5-XML-RSS-1.32
 	o p5-XML-Stream-1.22
 	o p5-glib2-1.180
 	o p5-gtk2-1.180
@@ -1140,7 +1130,6 @@ Suggested package updates
 	o pptp-1.7.1 [pkg/38038]
 	o prelude-lml-0.9.11
 	o prelude-manager-0.9.12
-	o printproto-1.0.4
 	o profit-2.5.3
 	o projclock-0.9
 	o proxsmtp-1.6
@@ -1283,7 +1272,6 @@ Suggested package updates
 	o snes9x-1.51
 	o snobol-1.1
 	o snort-2.8.1
-	o snownews-1.5.9
 	o socat-1.6.0.1
 	o solfege-3.10.2 [schmonz]
 	o sope-4.5.9
@@ -1297,7 +1285,7 @@ Suggested package updates
 	o ssh-askpass-1.2.4.1
 	o star-1.5
 	o statist-1.3.0
-	o stella-2.4.2
+	o stella-2.5.1
 	o stlport-4.6.2
 	o stratagus-2.2.2
 	o stunnel-4.22
@@ -1309,9 +1297,7 @@ Suggested package updates
 	o sympa-5.4
 	o sysinfo-4.2.2
 	o systrace-1.6e
-	o t1utils-1.34
 	o tacacs-4.0.4.14
-	o tailor-0.9.31
 	o taskjuggler-2.4.0
 	o tcl-8.5.2
 	o tcl83-8.3.5
@@ -1404,7 +1390,6 @@ Suggested package updates
 	o x11perf-1.5
 	o x264-devel-20080405
 	o xanalyser-1.30
-	o xauth-1.0.3
 	o xbindkeys-1.8.2
 	o xbindkeys-tk-1.8.0
 	o xblast-2.10.4
@@ -1446,7 +1431,6 @@ Suggested package updates
 	o xf86-video-trident-1.3.0
 	o xf86-video-tseng-1.2.0
 	o xf86-video-vmware-10.16.0
-	o xf86driproto-2.0.4
 	o xfstt-1.7
 	o xhippo-3.5
 	o xinit-1.0.8
