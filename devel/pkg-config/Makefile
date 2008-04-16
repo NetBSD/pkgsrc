@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/03/24 14:27:33 obache Exp $
+# $NetBSD: Makefile,v 1.14 2008/04/16 22:50:43 reed Exp $
 #
 
 DISTNAME=	pkg-config-0.23
@@ -20,6 +20,13 @@ CONFIGURE_ARGS+=	--disable-threads
 CONFLICTS=		pkgconfig-[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "FreeBSD"
+.  if ${OS_VERSION:R} < 5
+# configure checks but does not fail on warning
+CONFIGURE_ENV+=		glib_cv_va_copy=no
+.  endif
+.endif
 
 .if ${OPSYS} == "IRIX"
 # configure bails out in subdir after re-parsing the cache
