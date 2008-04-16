@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/04/08 11:45:49 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2008/04/16 01:01:50 joerg Exp $
 #
 
 DISTNAME=	libfetch-2.4
@@ -14,6 +14,8 @@ COMMENT=	Library to access HTTP/FTP server
 #LICENSE=	modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_FEATURES=		nbcompat
 
 USE_BSD_MAKEFILE=	yes
 
