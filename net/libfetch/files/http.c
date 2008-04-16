@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.12 2008/04/16 01:01:50 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.13 2008/04/16 15:10:18 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -165,7 +165,7 @@ http_new_chunk(struct httpio *io)
 /*
  * Grow the input buffer to at least len bytes
  */
-static inline int
+static int
 http_growbuf(struct httpio *io, size_t len)
 {
 	char *tmp;
