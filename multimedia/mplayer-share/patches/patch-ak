@@ -1,0 +1,17 @@
+$NetBSD: patch-ak,v 1.4.4.1 2008/04/16 19:15:26 ghen Exp $
+
+Fix crashes when rendering ASS and no TrueType font has been found.
+This crash can be hidden by large stack sizes. It is not known whether
+this issue is exploitable.
+
+--- libass/ass_font.c.orig	2007-10-07 21:49:31.000000000 +0200
++++ libass/ass_font.c
+@@ -294,6 +294,8 @@ FT_Glyph ass_font_get_glyph(void* fontco
+ 		mp_msg(MSGT_ASS, MSGL_INFO, MSGTR_LIBASS_GlyphNotFoundReselectingFont,
+ 		       ch, font->desc.family, font->desc.bold, font->desc.italic);
+ 		face_idx = add_face(fontconfig_priv, font, ch);
++		if (face_idx == -1)
++			return 0;
+ 		face = font->faces[face_idx];
+ 		index = FT_Get_Char_Index(face, ch);
+ 		if (index == 0) {
