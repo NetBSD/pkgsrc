@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.48 2008/02/26 18:14:30 tnn Exp $
+$NetBSD: distinfo,v 1.48.2.1 2008/04/16 19:15:26 ghen Exp $
 
 SHA1 (mplayer-1.0rc10/MPlayer-1.0rc2.tar.bz2) = e9b496f3527c552004ec6d01d6b43f196b43ce2d
 RMD160 (mplayer-1.0rc10/MPlayer-1.0rc2.tar.bz2) = 3b5cba1529856a177a5191e22f8dcc00b5a83c52
@@ -13,6 +13,7 @@ SHA1 (patch-ag) = b46d902d88e05d6f61a017e8a1be79fad5a1fa00
 SHA1 (patch-ah) = 7aeb9f04d622fcad8c40dc9edbb0a58277fc622b
 SHA1 (patch-ai) = ec79d6a1b0c2790ca826a91a48040c64632ac988
 SHA1 (patch-aj) = 772d083dfa5eac789abfd5e925eeeba400bbc527
+SHA1 (patch-ak) = 072b4391e5fde58f6b01bd43133f1d017fc14d58
 SHA1 (patch-ba) = 2683c414fed3a4a6d3b4d47287f43d822339bd4e
 SHA1 (patch-bb) = 26d000bcbc94b9139e6dbc79237fdb3a109c6057
 SHA1 (patch-bc) = fd46ce3cd6d5f7525e210cf6d475b89573ca988d
