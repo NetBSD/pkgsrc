@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/07 17:18:15 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/17 21:14:56 wiz Exp $
 #
 
-DISTNAME=		libxkbfile-1.0.4
+DISTNAME=		libxkbfile-1.0.5
 CATEGORIES=		x11
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=		.tar.bz2
