@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.771 2008/04/17 18:22:18 abs Exp $
+$NetBSD: CHANGES-2008,v 1.772 2008/04/17 20:41:15 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1478,3 +1478,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/enchant to 1.4.0nb1 [wiz 2008-04-17]
 	Updated www/ap2-fcgid to 2.2 [abs 2008-04-17]
 	Updated www/p5-CGI to 3.35 [abs 2008-04-17]
+	Updated misc/udfclient to 0.6.0 preinoud 2008-04-17]
+
