@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.766 2008/04/17 07:40:34 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.767 2008/04/17 12:34:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1473,3 +1473,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/firefox to 2.0.0.14 [ghen 2008-04-17]
 	Updated www/firefox-bin to 2.0.0.14 [ghen 2008-04-17]
 	Updated www/firefox-gtk1 to 2.0.0.14 [ghen 2008-04-17]
+	Updated x11/libX11 to 1.1.4 [wiz 2008-04-17]
