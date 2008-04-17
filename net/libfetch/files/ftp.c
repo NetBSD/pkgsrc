@@ -1,6 +1,7 @@
-/*	$NetBSD: ftp.c,v 1.16 2008/04/17 08:35:20 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.17 2008/04/17 19:04:12 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
+ * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
