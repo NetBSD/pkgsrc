@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.773 2008/04/17 21:07:31 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.774 2008/04/17 21:10:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1481,3 +1481,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/udfclient to 0.6.0 preinoud 2008-04-17]
 
 	Updated textproc/enchant to 1.4.0nb2 [wiz 2008-04-17]
+	Updated fonts/mkfontscale to 1.0.4 [wiz 2008-04-17]
