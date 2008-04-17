@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2008/03/11 18:47:41 tnn Exp $
+# $NetBSD: Makefile,v 1.39 2008/04/17 21:29:06 wiz Exp $
 
 DISTNAME=	bash-3.2
-PKGNAME=	bash-3.2.25
+PKGNAME=	bash-3.2.33
 CATEGORIES=	shells
 MASTER_SITES=	${MASTER_SITE_GNU:=bash/} \
 		ftp://ftp.cwru.edu/pub/bash/
@@ -12,6 +12,8 @@ PATCHFILES+=	bash32-006 bash32-007 bash32-008 bash32-009 bash32-010
 PATCHFILES+=	bash32-011 bash32-012 bash32-013 bash32-014 bash32-015
 PATCHFILES+=	bash32-016 bash32-017 bash32-018 bash32-019 bash32-020
 PATCHFILES+=	bash32-021 bash32-022 bash32-023 bash32-024 bash32-025
+PATCHFILES+=	bash32-026 bash32-027 bash32-028 bash32-029 bash32-030
+PATCHFILES+=	bash32-031 bash32-032 bash32-033
 
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/bash/bash.html
