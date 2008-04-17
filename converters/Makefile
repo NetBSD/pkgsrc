@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.92 2007/09/11 16:59:54 abs Exp $
+# $NetBSD: Makefile,v 1.93 2008/04/17 12:39:36 reed Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -31,6 +31,7 @@ SUBDIR+=	libwpd
 SUBDIR+=	macfork
 SUBDIR+=	mpack
 SUBDIR+=	nkf
+SUBDIR+=	odt2txt
 SUBDIR+=	p5-Convert-BinHex
 SUBDIR+=	p5-Convert-TNEF
 SUBDIR+=	p5-Convert-UUlib
