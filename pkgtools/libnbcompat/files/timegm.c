@@ -35,7 +35,7 @@
 
 /* Number of days per month (except for February in leap years). */
 static const int monoff[] = {
-	0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 324, 354
+	0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334
 };
 
 static int
