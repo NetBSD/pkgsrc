@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.770 2008/04/17 18:19:14 abs Exp $
+$NetBSD: CHANGES-2008,v 1.771 2008/04/17 18:22:18 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1477,3 +1477,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added converters/odt2txt version 0.3 [reed 2008-04-17]
 	Updated textproc/enchant to 1.4.0nb1 [wiz 2008-04-17]
 	Updated www/ap2-fcgid to 2.2 [abs 2008-04-17]
+	Updated www/p5-CGI to 3.35 [abs 2008-04-17]
