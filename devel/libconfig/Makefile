@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/11/26 00:00:33 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/17 21:19:22 wiz Exp $
 #
 
-DISTNAME=	libconfig-1.2
+DISTNAME=	libconfig-1.3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.hyperrealm.com/libconfig/
 
