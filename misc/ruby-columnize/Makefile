@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/14 20:30:18 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/17 17:23:24 jlam Exp $
 
 DISTNAME=	columnize-0.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
