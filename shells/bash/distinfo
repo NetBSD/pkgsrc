@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.11 2007/09/18 21:20:12 wiz Exp $
+$NetBSD: distinfo,v 1.12 2008/04/17 21:29:06 wiz Exp $
 
 SHA1 (bash-3.2.tar.gz) = fe6466c7ee98061e044dae0347ca5d1a8eab4a0d
 RMD160 (bash-3.2.tar.gz) = a73f790817d98be375a36def567737498e33aaf1
@@ -78,6 +78,30 @@ Size (bash32-024) = 3228 bytes
 SHA1 (bash32-025) = 2d4fcca9356ddb045e867850acfd2ad3e0a2167f
 RMD160 (bash32-025) = bfe8add1ba14429fcb56cc37168eee82120ea011
 Size (bash32-025) = 1935 bytes
+SHA1 (bash32-026) = 94d9b458b62e6d3eec6cece4fd0ef3e99ddcb129
+RMD160 (bash32-026) = 27c94811d9f97e224a8e2fb325ca4442fa5452a4
+Size (bash32-026) = 2438 bytes
+SHA1 (bash32-027) = d6cd2a3e7dd7d4acaf21bfd57d4f0d6e8e438212
+RMD160 (bash32-027) = b7ff1bb49a0a0a25aa8c7eec3572092fac17677c
+Size (bash32-027) = 2690 bytes
+SHA1 (bash32-028) = c461e59659f8f03899dffb3689c2b1879deb6568
+RMD160 (bash32-028) = bf8d39edbc31a04a6acdcc197ac625a7ad8b0f2b
+Size (bash32-028) = 1750 bytes
+SHA1 (bash32-029) = f89af147824cb9d5acde307d3245e91d4f6d8756
+RMD160 (bash32-029) = 20f8bef102213da3b64ae34b4b0b85728f85046e
+Size (bash32-029) = 1330 bytes
+SHA1 (bash32-030) = 70fa0d77bafc1c64db2b38a6465b977b05f36bc7
+RMD160 (bash32-030) = 4c3abf39bbdc57a8dd22e5fbf93061c358c7c86e
+Size (bash32-030) = 1558 bytes
+SHA1 (bash32-031) = 191dbbcc067be5fe372876b6601bbc643039fc4f
+RMD160 (bash32-031) = 9ab28d714da07f75617901ab11b7c5c4de8f23f5
+Size (bash32-031) = 1961 bytes
+SHA1 (bash32-032) = c827b9b639819942fcfe26a166e6778de78274c1
+RMD160 (bash32-032) = ab717c1d6d62557c9c4406a8138f038a1178c6ad
+Size (bash32-032) = 1304 bytes
+SHA1 (bash32-033) = c8098c7b078f62e87b4d273f289cc887c1231909
+RMD160 (bash32-033) = 85e68d386a74e8fa7527d2c377ec5b0cc0811d78
+Size (bash32-033) = 2181 bytes
 SHA1 (patch-af) = 34833c0628a60b5200a9559581c617d878eb62a8
 SHA1 (patch-ag) = 4da0a43f6b890482affff46b18eef4be67770e48
 SHA1 (patch-ah) = 6f88b33d9b56fabd319fa23cd1ff41594a01045b
