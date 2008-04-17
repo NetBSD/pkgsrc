@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.777 2008/04/17 21:19:32 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.778 2008/04/17 21:22:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1485,3 +1485,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated fonts/mkfontdir to 1.0.4 [wiz 2008-04-17]
 	Updated x11/libxkbfile to 1.0.5 [wiz 2008-04-17]
 	Updated devel/libconfig to 1.3 [wiz 2008-04-17]
+	Updated x11/libXScrnSaver to 1.1.3 [wiz 2008-04-17]
