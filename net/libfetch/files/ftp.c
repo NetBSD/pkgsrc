@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.15 2008/04/16 01:01:50 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.16 2008/04/17 08:35:20 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -859,7 +859,7 @@ ftp_transfer(conn_t *conn, const char *oper, const char *file, const char *op_ar
 
 		/* seek to required offset */
 		if (offset)
-			if (ftp_cmd(conn, "REST %ju", (uintmax_t)offset) != FTP_FILE_OK)
+			if (ftp_cmd(conn, "REST %llu", (unsigned long long)offset) != FTP_FILE_OK)
 				goto sysouch;
 
 		/* make the server initiate the transfer */
