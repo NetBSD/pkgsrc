@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.3 2008/04/17 14:29:58 wiz Exp $
+
+http://bugzilla.abisource.com/show_bug.cgi?id=11551
+
+--- configure.in.orig	2008-03-31 19:47:43.000000000 +0200
++++ configure.in
+@@ -75,18 +75,18 @@ AC_DEFUN([ENCHANT_CXX_TRY_FLAG], [
+   AC_MSG_CHECKING([whether $CXX supports $1])
+ 
+   AC_LANG_PUSH(C++)
+-  enchant_save_CFLAGS="$CFLAGS"
+-  CFLAGS="$CFLAGS $1"
++  enchant_save_CXXFLAGS="$CXXFLAGS"
++  CXXFLAGS="$CXXFLAGS $1"
+ 
+-  AC_COMPILE_IFELSE([ ], [enchant_cc_flag=yes], [enchant_cc_flag=no])
+-  CFLAGS="$enchant_save_CFLAGS"
++  AC_COMPILE_IFELSE([ ], [enchant_cxx_flag=yes], [enchant_cxx_flag=no])
++  CXXFLAGS="$enchant_save_CXXFLAGS"
+ 
+-  if test "x$enchant_cc_flag" = "xyes"; then
++  if test "x$enchant_cxx_flag" = "xyes"; then
+     ifelse([$2], , :, [$2])
+   else
+     ifelse([$3], , :, [$3])
+   fi
+-  AC_MSG_RESULT([$enchant_cc_flag])
++  AC_MSG_RESULT([$enchant_cxx_flag])
+   AC_LANG_POP(C++)
+ ])
+ 
+@@ -169,7 +169,7 @@ AC_CACHE_CHECK([for supported C++ warnin
+ 	done
+ 
+ 	enchant_cxx_cv_warn_cflags=$CXX_WARN_CFLAGS
+-	enchant_cxx_cv_warn_cflags=$CXX_MAYBE_WARN
++	enchant_cxx_cv_warn_maybe=$CXX_MAYBE_WARN
+ 
+ 	AC_MSG_CHECKING([which C++ warning flags were supported])])
+ CXX_WARN_CFLAGS="$enchant_cxx_cv_warn_cflags"
