@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/04/12 22:43:08 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2008/04/17 12:22:00 joerg Exp $
 #
 
 DISTNAME=	email-2.5
@@ -20,9 +20,7 @@ PYTHON_VERSIONS_ACCEPTED= 21 22 23
 
 # _compat22.py is not byte-compiled if built with 2.1(-)
 PLIST_VARS+=	compat22
-.if !empty(PYPKGPREFIX:Mpy21*)
-# nothing
-.else
+.if ${_PYTHON_VERSION} != "21"
 PLIST.compat22=	yes
 .endif
 
