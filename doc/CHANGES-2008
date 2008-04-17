@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.764 2008/04/17 06:00:57 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.765 2008/04/17 06:02:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1469,3 +1469,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xkbcomp to 1.0.4 [wiz 2008-04-16]
 	Updated shells/mksh to 33d [wiz 2008-04-17]
 	Updated x11/libXv to 1.0.4 [wiz 2008-04-17]
+	Updated x11/libXinerama to 1.0.3 [wiz 2008-04-17]
