@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/03/12 21:19:59 drochner Exp $
+# $NetBSD: Makefile,v 1.33 2008/04/17 08:41:38 abs Exp $
 #
 
 DISTNAME=	gnome-doc-utils-0.12.2
@@ -27,7 +27,7 @@ CONFIGURE_ARGS+=	PYTHON=${PYTHONBIN:Q}
 PKGCONFIG_OVERRIDE=	tools/gnome-doc-utils.pc.in
 PKGCONFIG_OVERRIDE+=	xml2po/xml2po.pc.in
 
-PYTHON_VERSIONS_ACCEPTED=	24 23
+PYTHON_VERSIONS_ACCEPTED=	25 24 23
 PYTHON_PATCH_SCRIPTS=	xml2po/modes/docbook.py
 PYTHON_PATCH_SCRIPTS+=	xml2po/modes/empty.py
 PYTHON_PATCH_SCRIPTS+=	xml2po/modes/gs.py
