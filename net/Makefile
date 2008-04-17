@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.705 2008/04/06 23:41:16 seb Exp $
+# $NetBSD: Makefile,v 1.706 2008/04/17 12:43:22 joerg Exp $
 #
 
 COMMENT=	Networking tools
@@ -194,6 +194,7 @@ SUBDIR+=	libnids
 SUBDIR+=	libpcap
 SUBDIR+=	libradius
 SUBDIR+=	libsoup-devel
+SUBDIR+=	libsoup24
 SUBDIR+=	libsscript
 SUBDIR+=	libtorrent
 SUBDIR+=	libtrace
