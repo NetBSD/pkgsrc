@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2008/04/17 14:29:58 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2008/04/17 21:07:18 wiz Exp $
 #
 
 DISTNAME=		enchant-1.4.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		textproc
 MASTER_SITES=		http://www.abisource.com/downloads/enchant/1.4.0/
 
@@ -19,6 +19,8 @@ USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE+=	enchant.pc.in
 GNU_CONFIGURE=		yes
 CFLAGS.SunOS+=		-D__EXTENSIONS__
+
+CONFIGURE_ARGS+=	--with-myspell-dir=${BUILDLINK_PREFIX.hunspell}/share/hunspell
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
