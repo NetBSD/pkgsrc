@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/04/14 20:30:18 jlam Exp $
+$NetBSD: patch-aa,v 1.2 2008/04/17 17:23:24 jlam Exp $
 
 --- Rakefile.orig	2008-04-14 16:26:02.000000000 -0400
 +++ Rakefile
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/04/14 20:30:18 jlam Exp $
    spec.description = <<-EOF
 -Columnize is a module for reading and caching lines. This may be useful for
 -example in a debugger where the same lines are shown many times.
-+LineCache is a module for printing an Array in column-sorted order.
++Columnize is a module for printing an Array in column-sorted order.
  EOF
  
    spec.version = PACKAGE_VERSION
