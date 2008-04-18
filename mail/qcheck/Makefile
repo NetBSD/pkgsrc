@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2008/03/04 17:57:19 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2008/04/18 04:02:58 schmonz Exp $
 #
 
 DISTNAME=	qcheck
 PKGNAME=	qcheck-1.0
 PKGREVISION=	1
 CATEGORIES=	mail
-MASTER_SITES=	http://zapek.com/software/qcheck/
+MASTER_SITES=	http://download.zapek.com/software/qcheck/
 
 MAINTAINER=	zuntum@NetBSD.org
 COMMENT=	Text-only biff with Maildir support
