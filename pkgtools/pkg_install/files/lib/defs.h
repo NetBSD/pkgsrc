@@ -1,4 +1,4 @@
-/* $NetBSD: defs.h,v 1.8 2007/09/16 19:03:52 joerg Exp $ */
+/* $NetBSD: defs.h,v 1.9 2008/04/18 12:01:46 joerg Exp $ */
 
 /*
  * Copyright (c) 1999-2000 Alistair G. Crooks.  All rights reserved.
@@ -54,15 +54,6 @@
 #ifndef MAX
 #define MAX(a,b)	(((a) > (b)) ? (a) : (b))
 #endif
-
-#ifndef ABS
-#define ABS(a)		(((a) < 0) ? -(a) : (a))
-#endif
-
-#define STRNCPY(to, from, size)	do {					\
-	(void) strncpy(to, from, size);					\
-	to[(size) - 1] = 0;						\
-} while( /* CONSTCOND */ 0)
 
 /*
  * Some systems such as OpenBSD-3.6 do not provide PRIu64.
