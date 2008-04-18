@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.16 2008/01/15 22:40:03 wiz Exp $
+@comment $NetBSD: PLIST,v 1.17 2008/04/18 08:12:53 wiz Exp $
+bin/gdm-control
 bin/gnome-panel-control
 bin/openbox
 bin/openbox-gnome-session
@@ -17,6 +18,7 @@ include/openbox/3.4/openbox/theme.h
 include/openbox/3.4/openbox/version.h
 lib/libobparser.la
 lib/libobrender.la
+lib/openbox/xdg-autostart
 lib/pkgconfig/obparser-3.0.pc
 lib/pkgconfig/obrender-3.0.pc
 man/man1/openbox-gnome-session.1
@@ -40,7 +42,6 @@ share/doc/openbox/xbm/max.xbm
 share/doc/openbox/xbm/max_toggled.xbm
 share/doc/openbox/xbm/shade.xbm
 share/doc/openbox/xbm/shade_toggled.xbm
-share/examples/openbox/autostart.sh
 share/examples/openbox/menu.xml
 share/examples/openbox/rc.xml
 share/gnome/wm-properties/openbox.desktop
@@ -53,6 +54,7 @@ share/locale/en@boldquot/LC_MESSAGES/openbox.mo
 share/locale/en@quot/LC_MESSAGES/openbox.mo
 share/locale/es/LC_MESSAGES/openbox.mo
 share/locale/et/LC_MESSAGES/openbox.mo
+share/locale/eu/LC_MESSAGES/openbox.mo
 share/locale/fi/LC_MESSAGES/openbox.mo
 share/locale/fr/LC_MESSAGES/openbox.mo
 share/locale/hu/LC_MESSAGES/openbox.mo
