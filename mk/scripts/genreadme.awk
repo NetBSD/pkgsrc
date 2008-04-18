@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.31 2008/03/15 16:27:43 joerg Exp $
+# $NetBSD: genreadme.awk,v 1.32 2008/04/18 14:26:37 joerg Exp $
 #
 # Copyright (c) 2002, 2003, 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -255,55 +255,11 @@ END {
 	}
 	close(builddependsfile);
 
-	vfile = PVDIR "/pkg-vulnerabilities";
-
 # extract date for vulnerabilities file
-	cmd = "ls -l " vfile;
-	if ((cmd | getline) > 0) {
-		vuldate = sprintf("at %s %s %s\n",$6,$7,$8);
-# read the vulnerabilities file
-		printf("Reading vulnerability file \"%s\"\n which was updated %s\n",
-		       vfile, vuldate);
-		i = 1;
-		vul_major = 0;
-		vul_minor = 0;
-		vul_teeny = 0;
-		while((getline < vfile) > 0) {
-			if( $0 ~ /#FORMAT/ ) {
-			  split($2, vul_format, ".");
-			  vul_major = vul_format[1];
-			  vul_minor = vul_format[2];
-			  vul_teeny = vul_format[3];
-			}
-			if ( $0 ~ /^-----BEGIN PGP SIGNATURE-----.*/ ) {
-				break;
-			}
-			if ( ( $0 !~ /^\#/ ) &&
-			     ( $0 !~ /^Hash:.*/ ) &&
-			     ( $0 !~ /^-----BEGIN PGP SIGNED.*/ ) &&
-			     ( $0 != "" ) ) {
-				vulpkg[i] = $1;
-				vultype[i] = $2;
-				vulref[i] = $3;
-				i = i + 1;
-			}
-		}
-		if( (vul_major > 1) ||
-		    (vul_minor > 1) ||
-		    (vul_teeny > 0) ) {
-			printf("Version %d.%d.%d of the vulnerability file is out of sync with",
-				vul_major, vul_minor, vul_teeny);
-			printf("the genreadme.awk script\n");
-		}
-		printf("   Loaded %d vulnerabilities\n", i - 1);
-		close(vfile);
-		have_vfile = 1;
-	} else {
+	if (SCAN_VULNERABILITIES == 0)
+		vuldate="<TR><TD><I>(no vulnerabilities list, update pkg_install)</I>";
+	else if (SCAN_VULNERABILITIES == 1)
 		vuldate="<TR><TD><I>(no vulnerabilities list available)</I>";
-		printf("No vulnerability file found (%s).\n", vfile);
-		have_vfile = 0;
-	}
-	close(cmd);
 
 	if (SINGLEPKG != "" ) {
 		printf("Only creating README for %s\n",SINGLEPKG);
@@ -372,28 +328,28 @@ END {
 			if (debug) printf("wrote = %d entries to \"%s\"\n",
 					  i-1, htmldeps_file);
 
-# XXX: Post pkg_install-20070714 only currently known vulnerabilities are
-# XXX: shown in the generated README.html files for packages.
-
 			vul = "";
 
-			if (have_vfile) {
-				pkg = pkgdir2name[toppkg];
-
-				if (debug) {
-				  printf("Checking for %s (%s) vulnerabilities\n",
-					 toppkg, pkg);
-				}
-
-				cmd = sprintf("%s -n %s", AUDIT_PACKAGES, pkg);
+			if (SCAN_VULNERABILITIES == 2) {
+				pkgbase = pkgdir2name[toppkg];
+				sub("-[^-]*$", "", pkgbase);
+				cmd = sprintf("%s audit-history %s", PKG_ADMIN, pkgbase);
 				while (cmd | getline vuln_entry) {
 					split(vuln_entry, entry, " ");
-					vul =  sprintf("%s<LI><STRONG>%s has a <a href=\"%s\">%s</a> vulnerability</STRONG></LI>\n",
-						  vul, pkg, entry[8], entry[5]);
+					status_cmd = sprintf("if %s pmatch '%s' %s; then echo open; else echo fixed; fi",
+					    PKG_ADMIN, entry[1], pkgdir2name[toppkg]);
+					status_cmd | getline status
+					close(status_cmd)
+					if (status == "open")
+						status = "an <STRONG>OPEN</STRONG>";
+					else
+						status = "a " status;
+					vul =  sprintf("%s<LI>%s <a href=\"%s\">%s</a> vulnerability</LI>\n",
+					  vul, status, entry[3], entry[2]);
 				}
 				close(cmd);
 
-				if ( vul == "" ){
+				if ( vul == "" ) {
 					vul="<I>(no vulnerabilities known)</I>";
 				}
 			}
