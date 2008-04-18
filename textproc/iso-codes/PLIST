@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.10 2008/03/04 10:57:51 wiz Exp $
-share/doc/${PKGNAME}/README
-share/doc/${PKGNAME}/TODO
+@comment $NetBSD: PLIST,v 1.11 2008/04/18 12:00:44 joerg Exp $
+share/doc/iso-codes/README
+share/doc/iso-codes/TODO
 share/iso-codes/iso_3166.tab
 share/iso-codes/iso_639.tab
 share/locale/af/LC_MESSAGES/iso_3166.mo
