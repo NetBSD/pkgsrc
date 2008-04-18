@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/04/12 22:43:01 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2008/04/18 13:51:53 joerg Exp $
 #
 
 DISTNAME=		matplotlib-0.87.2
@@ -16,9 +16,9 @@ USE_TOOLS+=		pkg-config
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
-.include "../../lang/python/extension.mk"
-
 PYTHON_VERSIONS_ACCEPTED=	24 23
+
+.include "../../lang/python/extension.mk"
 
 PLIST_VARS+=		subprocess
 .if ${PYPACKAGE} == "python22" || ${PYPACKAGE} == "python23"
