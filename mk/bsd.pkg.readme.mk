@@ -1,4 +1,4 @@
-# $NetBSD: bsd.pkg.readme.mk,v 1.19 2008/03/15 16:27:42 joerg Exp $
+# $NetBSD: bsd.pkg.readme.mk,v 1.20 2008/04/18 14:26:36 joerg Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and encapsulates the
 # code to produce README.html files in each package directory.
@@ -230,21 +230,6 @@ SED_HOMEPAGE_EXPR=	-e 's|%%HOMEPAGE%%|<p>This package has a home page at <a HREF
 SED_HOMEPAGE_EXPR=	-e 's|%%HOMEPAGE%%||'
 .endif
 
-.PHONY: show-vulnerabilities-html
-show-vulnerabilities-html:
-	${RUN}					\
-	_PKGVULNDIR=`${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`; \
-	if [ -f $$_PKGVULNDIR/pkg-vulnerabilities ]; then	\
-		${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -n ${PKGNAME} 2>&1| ${AWK} \
-			'{ printurl = $$8;			\
-				gsub("\<", "\\&lt;", $$2);		\
-			gsub("\>", "\\&gt;", $$2);		\
-			gsub("\<", "\\&lt;", printurl);		\
-			gsub("\>", "\\&gt;", printurl);		\
-			gsub("\&", "\\&amp;", printurl);	\
-			printf("<LI><STRONG>%s has a %s exploit (see <a href=\"%s\">%s</a> for more details)</STRONG></LI>\n", $$2, $$5, $$8, printurl) }'; \
-	fi
-
 # If PACKAGES is set to the default (../../packages), the current
 # ${MACHINE_ARCH} and "release" (uname -r) will be used. Otherwise a directory
 # structure of ...pkgsrc/packages/`uname -r`/${MACHINE_ARCH} is assumed.
@@ -265,22 +250,31 @@ README.html: .PRECIOUS
 		esac;							\
 		cd ${.CURDIR} ;						\
 	fi;								\
-	_PVDIR=`${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`; \
+	if [ `${PKG_ADMIN} -V` -lt 20080415 ]; then			\
+		SCAN_VULNERABILITIES=0;					\
+	else								\
+	_PVDIR=`${PKG_ADMIN} config-var PKGVULNDIR`;			\
+	if [ -e "$${_PVDIR}"/pkg-vulnerabilities ]; then		\
+		SCAN_VULNERABILITIES=2;					\
+	else								\
+		SCAN_VULNERABILITIES=1;					\
+	fi;								\
+	fi;								\
 	${AWK} -f ../../mk/scripts/genreadme.awk \
 		builddependsfile=/dev/null \
 		dependsfile=/dev/null \
-		AUDIT_PACKAGES=${AUDIT_PACKAGES:Q} \
 		AWK=${AWK:Q} \
 		CMP=${CMP:Q} \
 		DISTDIR=${DISTDIR:Q} \
 		GREP=${GREP:Q} \
 		PACKAGES=${PACKAGES:Q} \
+		PKG_ADMIN=${PKG_ADMIN:Q} \
 		PKG_INFO=${PKG_INFO:Q} \
 		PKG_SUFX=${PKG_SUFX:Q} \
 		PKG_URL=${PKG_URL:Q} \
 		PKGSRCDIR=${.CURDIR:C|/[^/]*/[^/]*$||:Q} \
-		PVDIR=$$_PVDIR \
 		PKGTOOLS_VERSION=${PKGTOOLS_VERSION} \
+		SCAN_VULNERABILITIES=$${SCAN_VULNERABILITIES} \
 		SED=${SED:Q} \
 		SETENV=${SETENV:Q} \
 		SORT=${SORT:Q} \
