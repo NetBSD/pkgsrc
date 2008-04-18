@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2008/04/07 19:41:07 joerg Exp $
+# $NetBSD: Makefile,v 1.39 2008/04/18 06:30:47 bjs Exp $
 
 DISTNAME=	pbulk-0.30
 CATEGORIES=	pkgtools
@@ -14,6 +14,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/pbulk
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	YES
+
+MAKE_JOBS_SAFE=	no
 
 USE_FEATURES=	nbcompat
 USE_TOOLS+=	awk:run bzip2:run digest:run gzip:run ident:run make:run \
