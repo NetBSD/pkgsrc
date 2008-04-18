@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.41 2008/04/04 15:21:32 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.42 2008/04/18 17:16:44 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -329,8 +329,6 @@ Boolean	is_automatic_installed(const char *);
 int	mark_as_automatic_installed(const char *, int);
 
 /* String */
-char   *get_dash_string(char **);
-void    str_lowercase(unsigned char *);
 const char *basename_of(const char *);
 const char *dirname_of(const char *);
 const char *suffix_of(const char *);

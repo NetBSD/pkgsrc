@@ -1,4 +1,4 @@
-/*	$NetBSD: str.c,v 1.21 2007/08/12 16:47:18 joerg Exp $	*/
+/*	$NetBSD: str.c,v 1.22 2008/04/18 17:16:44 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "Id: str.c,v 1.5 1997/10/08 07:48:21 charnier Exp";
 #else
-__RCSID("$NetBSD: str.c,v 1.21 2007/08/12 16:47:18 joerg Exp $");
+__RCSID("$NetBSD: str.c,v 1.22 2008/04/18 17:16:44 joerg Exp $");
 #endif
 #endif
 
@@ -95,26 +95,6 @@ dirname_of(const char *path)
 	(void) memcpy(buf, path, cc);
 	buf[cc] = 0;
 	return buf;
-}
-
-/*
- * Get a string parameter as a file spec or as a "contents follow -" spec
- */
-char   *
-get_dash_string(char **s)
-{
-	return *s = (**s == '-') ? strdup(*s + 1) : fileGetContents(*s);
-}
-
-/*
- * Lowercase a whole string
- */
-void
-str_lowercase(unsigned char *s)
-{
-	for (; *s; s++) {
-		*s = tolower(*s);
-	}
 }
 
 /*
