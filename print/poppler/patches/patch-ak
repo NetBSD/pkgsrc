@@ -1,0 +1,17 @@
+$NetBSD: patch-ak,v 1.1 2008/04/18 14:03:54 drochner Exp $
+
+--- poppler/GfxState.cc.orig	2008-02-09 12:46:17.000000000 +0100
++++ poppler/GfxState.cc
+@@ -3349,6 +3349,12 @@ GfxImageColorMap::GfxImageColorMap(int b
+   maxPixel = (1 << bits) - 1;
+   colorSpace = colorSpaceA;
+ 
++  // this is a hack to support 16 bits images, everywhere
++  // we assume a component fits in 8 bits, with this hack
++  // we treat 16 bit images as 8 bit ones until it's fixed correctly.
++  // The hack has another part on ImageStream::getLine
++  if (maxPixel > 255) maxPixel = 255;
++
+   // initialize
+   for (k = 0; k < gfxColorMaxComps; ++k) {
+     lookup[k] = NULL;
