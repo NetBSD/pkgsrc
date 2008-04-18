@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: mkreadme,v 1.22 2008/03/15 16:27:43 joerg Exp $
+# $NetBSD: mkreadme,v 1.23 2008/04/18 14:26:37 joerg Exp $
 #
 # Script for README.html generation
 #
@@ -63,7 +63,6 @@ usage(){
     echo "                  [-P|--packages directory] [-r|--restart] "
     echo "                  [-s|--summary]"
     echo "                  [-S|--save-database]"
-    echo "                  [-V|--pkg-vuln directory]"
     echo " "
     echo "            $prog -h|--help"
     echo " "
@@ -98,9 +97,6 @@ usage(){
     echo "  -S|--save-database  Does not delete the database file after the run."
     echo "                      This is useful for debugging or re-running this script"
     echo "                      with the -r option."
-    echo " "
-    echo "  -V|--pkg-vuln dir   Specify the pkg-vulnerability directory."
-    echo "                      Defaults to the value of the DISTDIR."
     echo " "
     echo "  -v|--version        Displays the version of this script and exits."
     echo " "
@@ -210,13 +206,6 @@ do
 	exit 0
         ;;
 
-    # Specify pkg-vulnerability directory
-    -V|--pkg-vuln)
-	PVDIR=$2
-	pv=custom
-	shift 2
-	;;
-
     -*) echo "$prog:  ERROR:  $1 is not a valid option"
 	usage
 	clean_and_exit
@@ -303,14 +292,19 @@ else
     exit 1
 fi
 
-# this needs to happen here as the variables referenced have not been
-# populated until this stage (see above)
-#
-if [ "$pv" = "default" ]; then
-    PVDIR=`${AUDIT_PACKAGES} ${AUDIT_PACKAGES_FLAGS} -Q PKGVULNDIR`
+if [ `${PKG_ADMIN} -V` -lt 20080415 ]; then
+	SCAN_VULNERABILITIES=0
+	echo "---->  NOT checking for vulnerabilities, pkg_install too old"
+else
+	_PVDIR=`${PKG_ADMIN} config-var PKGVULNDIR`;
+	if [ -e "${_PVDIR}"/pkg-vulnerabilities ]; then
+		SCAN_VULNERABILITIES=2
+		echo "---->  Checking for vulnerabilities"
+	else
+		SCAN_VULNERABILITIES=1
+		echo "---->  NOT checking for vulnerabilities"
+	fi
 fi
-echo "---->  PVDIR=\"${PVDIR}\""
-
 
 ######################################################################
 #
@@ -432,7 +426,6 @@ ${AWK} -f ${PKGSRCDIR}/mk/scripts/genreadme.awk  \
     debug=$debug \
     dependsfile=${TMPDIR}/pkgsrc.depends.debug \
     summary=${summary} \
-    AUDIT_PACKAGES=$AUDIT_PACKAGES \
     AWK=$AWK \
     CMP=$CMP \
     DISTDIR=$DISTDIR \
@@ -440,12 +433,13 @@ ${AWK} -f ${PKGSRCDIR}/mk/scripts/genreadme.awk  \
     GREP=$GREP \
     GZIP_CMD="$GZIP_CMD" \
     PACKAGES=$PACKAGES \
+    PKG_ADMIN="$PKG_ADMIN" \
     PKG_INFO="$PKG_INFO" \
     PKG_SUFX=$PKG_SUFX \
     PKG_URL=$PKG_URL \
     PKGSRCDIR=$PKGSRCDIR \
     PKGTOOLS_VERSION=$PKGTOOLS_VERSION \
-    PVDIR=$PVDIR \
+    SCAN_VULNERABILITIES=${SCAN_VULNERABILITIES} \
     SED=$SED \
     SETENV=$SETENV \
     SORT=$SORT \
