@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.18 2007/08/09 14:14:45 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.19 2008/04/18 17:16:44 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.38 1997/10/13 15:03:51 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.18 2007/08/09 14:14:45 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.19 2008/04/18 17:16:44 joerg Exp $");
 #endif
 #endif
 
@@ -88,6 +88,18 @@ register_depends(package_t *plist, char *deps, int build_only)
 	}
 	if (Verbose && !PlistOnly)
 		printf(".\n");
+}
+
+/*
+ * Get a string parameter as a file spec or as a "contents follow -" spec
+ */
+static void
+get_dash_string(char **s)
+{
+	if (**s == '-')
+		*s = strdup(*s + 1);
+	else
+		*s = fileGetContents(*s); 
 }
 
 int
