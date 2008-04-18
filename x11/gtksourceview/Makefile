@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2008/02/20 11:28:19 xtraeme Exp $
+# $NetBSD: Makefile,v 1.46 2008/04/18 11:58:59 joerg Exp $
 #
 
 DISTNAME=	gtksourceview-1.8.5
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://gtksourceview.sourceforge.net/
 COMMENT=	Text widget that extends GTK2's GtkTextView widget
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
