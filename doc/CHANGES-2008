@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.779 2008/04/17 21:29:18 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.780 2008/04/18 08:13:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1487,3 +1487,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libconfig to 1.3 [wiz 2008-04-17]
 	Updated x11/libXScrnSaver to 1.1.3 [wiz 2008-04-17]
 	Updated shells/bash to 3.2.33 [wiz 2008-04-17]
+	Updated wm/openbox to 3.4.7 [wiz 2008-04-18]
