@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7221 2008/04/17 21:30:23 wiz Exp $
+$NetBSD: TODO,v 1.7222 2008/04/18 17:39:19 bjs Exp $
 
 Suggested new packages
 ======================
@@ -1436,7 +1436,6 @@ Suggested package updates
 	o xmcd-3.3.0
 	o xmlsec1-1.2.11
 	o xmlto-0.0.20
-	o xmltoman-0.4
 	o xmms-crossfade-0.3.14
 	o xmms-dflowers-1.2.1
 	o xmms-dspectogram-1.2.1
