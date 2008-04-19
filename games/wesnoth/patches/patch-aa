@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.7 2007/01/15 22:26:26 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2008/04/19 09:35:24 wiz Exp $
 
 Don't insist on GNU gettext.
 
---- configure.orig	2007-01-12 20:13:56.000000000 +0000
+--- configure.orig	2008-04-05 20:51:52.000000000 +0000
 +++ configure
-@@ -5340,8 +5340,8 @@ fi
+@@ -5363,8 +5363,8 @@ fi
      done
    fi
  
@@ -15,7 +15,7 @@ Don't insist on GNU gettext.
  if test "${gt_cv_func_gnugettext1_libintl+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -5361,12 +5361,11 @@ extern
+@@ -5384,12 +5384,11 @@ extern
  #ifdef __cplusplus
  "C"
  #endif
@@ -29,3 +29,12 @@ Don't insist on GNU gettext.
    ;
    return 0;
  }
+@@ -5744,7 +5743,7 @@ fi
+ # Make tests default in svn version
+ svn_in_version=`expr match "$1.4.1" '.*svn'`
+ test_build=yes
+-if test $svn_in_version == 0
++if test $svn_in_version = 0
+ then
+ 	#disabling building tests for release version
+ 	test_build=no
