@@ -1,0 +1,61 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/19 18:46:43 kefren Exp $
+bin/create-native-map
+bin/gasnview
+bin/gendarme
+bin/gnunit
+bin/gnunit2
+bin/gui-compare
+bin/monodoc
+lib/create-native-map/MapAttribute.cs
+lib/create-native-map/create-native-map.exe
+lib/gendarme/Gendarme.Framework.dll
+lib/gendarme/Gendarme.Rules.BadPractice.dll
+lib/gendarme/Gendarme.Rules.BadPractice.xml
+lib/gendarme/Gendarme.Rules.Concurrency.dll
+lib/gendarme/Gendarme.Rules.Concurrency.xml
+lib/gendarme/Gendarme.Rules.Correctness.dll
+lib/gendarme/Gendarme.Rules.Correctness.xml
+lib/gendarme/Gendarme.Rules.Design.dll
+lib/gendarme/Gendarme.Rules.Design.xml
+lib/gendarme/Gendarme.Rules.Exceptions.dll
+lib/gendarme/Gendarme.Rules.Exceptions.xml
+lib/gendarme/Gendarme.Rules.Interoperability.dll
+lib/gendarme/Gendarme.Rules.Interoperability.xml
+lib/gendarme/Gendarme.Rules.Naming.dll
+lib/gendarme/Gendarme.Rules.Naming.xml
+lib/gendarme/Gendarme.Rules.Performance.dll
+lib/gendarme/Gendarme.Rules.Performance.xml
+lib/gendarme/Gendarme.Rules.Portability.dll
+lib/gendarme/Gendarme.Rules.Portability.xml
+lib/gendarme/Gendarme.Rules.Security.dll
+lib/gendarme/Gendarme.Rules.Security.xml
+lib/gendarme/Gendarme.Rules.Smells.dll
+lib/gendarme/Gendarme.Rules.Smells.xml
+lib/gendarme/Gendarme.Rules.Ui.dll
+lib/gendarme/Gendarme.Rules.Ui.xml
+lib/gendarme/Mono.Cecil.dll
+lib/gendarme/gendarme.exe
+lib/gendarme/rules.xml
+lib/gui-compare/Mono.Cecil.dll
+lib/gui-compare/gui-compare.exe
+lib/mono/1.0/gasnview.exe
+lib/mono/1.0/gnunit.exe
+lib/mono/2.0/gnunit2.exe
+lib/monodoc/GtkHtmlHtmlRender.dll
+lib/monodoc/browser.exe
+lib/pkgconfig/create-native-map.pc
+lib/pkgconfig/gendarme-framework.pc
+man/man1/create-native-map.1
+man/man1/gendarme.1
+share/applications/monodoc.desktop
+share/locale/ca/LC_MESSAGES/mono-tools.mo
+share/locale/da/LC_MESSAGES/mono-tools.mo
+share/locale/es/LC_MESSAGES/mono-tools.mo
+share/locale/fr/LC_MESSAGES/mono-tools.mo
+share/locale/pt_BR/LC_MESSAGES/mono-tools.mo
+share/pixmaps/monodoc.png
+@exec ${MKDIR} %D/lib/ilcontrast
+@dirrm lib/ilcontrast
+@dirrm lib/gui-compare
+@dirrm lib/gendarme
+@dirrm lib/create-native-map
