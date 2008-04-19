@@ -1,10 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/03/17 22:44:11 wiz Exp $
-
---- sample/Makefile.in.orig	2008-02-19 13:26:38.000000000 +0100
-+++ sample/Makefile.in	2008-02-19 13:26:49.000000000 +0100
-@@ -145,8 +145,8 @@
- target_os = @target_os@
- target_vendor = @target_vendor@
+--- sample/Makefile.in.orig	2008-04-19 22:06:43.000000000 +0300
++++ sample/Makefile.in	2008-04-19 22:06:55.000000000 +0300
+@@ -147,8 +147,8 @@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
  TEST = SourceViewTest.exe
 -PRINT = PrintSample.exe
 -EXTRA_DIST = SourceViewTest.cs PrintSample.cs
