@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.9 2005/10/05 13:38:13 salo Exp $
+# $NetBSD: Makefile,v 1.10 2008/04/19 05:38:16 obache Exp $
 
-DISTNAME=	weex-2.6.1
-PKGREVISION=	1
+DISTNAME=	weex-2.6.1.5
 CATEGORIES=	www
-MASTER_SITES=	http://www.enjoy.ne.jp/~gm/program/weex/arc/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=weex/}
 
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
-HOMEPAGE=	http://www.enjoy.ne.jp/~gm/program/weex/index.html
+HOMEPAGE=	http://weex.sourceforge.net/
 COMMENT=	Non-interactive ftp client
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		msgfmt
 
 WEEX_DOCS=	AUTHORS BUGS BUGS.ja COPYING COPYING.ja \
 		ChangeLog ChangeLog.ja FAQ FAQ.ja README README.ja \
@@ -19,12 +21,13 @@ WEEX_DOCS=	AUTHORS BUGS BUGS.ja COPYING COPYING.ja \
 WEEX_DOCDIR=	share/doc/weex
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/${WEEX_DOCDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${WEEX_DOCDIR}
 .for f in ${WEEX_DOCS}
-	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${PREFIX}/${WEEX_DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/${f} ${DESTDIR}${PREFIX}/${WEEX_DOCDIR}
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/weex
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/weex
 	${INSTALL_DATA} ${WRKSRC}/doc/sample.weexrc \
-				${PREFIX}/share/examples/weex
+				${DESTDIR}${PREFIX}/share/examples/weex
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
