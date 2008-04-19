@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.788 2008/04/19 14:30:54 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.789 2008/04/19 19:35:50 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1495,3 +1495,10 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/wesnoth to 1.4.1 [wiz 2008-04-19]
 	Updated net/nload to 0.7.0 [obache 2008-04-19]
 	Updated graphics/comix to 3.6.4nb2 [tonnerre 2008-04-19]
+	Updated lang/mono to 1.9 [kefren 2008-04-19]
+	Updated lang/monodoc to 1.9 [kefren 2008-04-19]
+	Updated graphics/libgdiplus to 1.9 [kefren 2008-04-19]
+	Added devel/mono-tools version 1.9 [kefren 2008-04-19]
+	Updated x11/gtk-sharp to 2.10.4 [kefren 2008-04-19]
+	Updated x11/gtksourceview-sharp2 to 0.12 [kefren 2008-04-19]
+	Updated www/mono-xsp to 1.9 [kefren 2008-04-19]
