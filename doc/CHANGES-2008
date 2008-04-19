@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.787 2008/04/19 10:57:54 obache Exp $
+$NetBSD: CHANGES-2008,v 1.788 2008/04/19 14:30:54 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1494,3 +1494,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/weex to 2.6.1.5 [obache 2008-04-19]
 	Updated games/wesnoth to 1.4.1 [wiz 2008-04-19]
 	Updated net/nload to 0.7.0 [obache 2008-04-19]
+	Updated graphics/comix to 3.6.4nb2 [tonnerre 2008-04-19]
