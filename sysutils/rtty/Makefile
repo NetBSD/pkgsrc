@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2006/12/17 20:09:26 minskim Exp $
+# $NetBSD: Makefile,v 1.26 2008/04/19 06:07:50 obache Exp $
 
 DISTNAME=	rtty-3.2
 PKGREVISION=	1
 CATEGORIES=	sysutils
-MASTER_SITES=	ftp://ftp.vix.com/pub/vixie/
+MASTER_SITES=	http://gatekeeper.hpl.hp.com/archive/pub/misc/vixie/ \
+		ftp://gatekeeper.hpl.hp.com/pub/misc/vixie/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Multiuser "tip"/"cu" replacement with logging
