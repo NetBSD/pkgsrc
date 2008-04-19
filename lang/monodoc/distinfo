@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1 2008/02/13 14:41:30 kefren Exp $
+$NetBSD: distinfo,v 1.2 2008/04/19 18:42:57 kefren Exp $
 
-SHA1 (monodoc-1.2.6.zip) = 653ad52a26e881ce056c38de4d070040c69ef969
-RMD160 (monodoc-1.2.6.zip) = 36be51dfdf55a1e1113d16429c72dc8875856093
-Size (monodoc-1.2.6.zip) = 14976182 bytes
+SHA1 (monodoc-1.9.zip) = 314766bb226e3e0c2f518bbc925e0eb4b9f0a380
+RMD160 (monodoc-1.9.zip) = 05d979deb91f52b6f7a72867dd8d503cd1268672
+Size (monodoc-1.9.zip) = 19416746 bytes
