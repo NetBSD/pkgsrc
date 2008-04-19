@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/11/13 08:31:05 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2008/04/19 10:57:35 obache Exp $
 
---- src/form_field.cpp.orig	2003-11-25 19:05:01.000000000 +0100
-+++ src/form_field.cpp	2005-11-07 21:50:38.000000000 +0100
-@@ -30,7 +30,7 @@
+--- src/form_field.cpp.orig	2008-02-02 17:14:34.000000000 +0100
++++ src/form_field.cpp
+@@ -36,7 +36,7 @@ Field::~Field()
  
- void Field::setBuffer( const char* new_buffer )
+ void Field::setText(const string& text)
  {
--	set_field_buffer( m_field, 0, new_buffer );
-+	set_field_buffer( m_field, 0, ( char* )new_buffer );
+-    set_field_buffer(m_field, 0, text.c_str());
++    set_field_buffer(m_field, 0, (char *)text.c_str());
  }
  
- const char* Field::buffer()
+ string Field::getText()
