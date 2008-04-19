@@ -1,0 +1,5 @@
+# $NetBSD: Makefile.common,v 1.1 2008/04/19 18:42:10 kefren Exp $
+
+MONO_VERSION=	1.9
+
+ALL_ENV+=	MONO_SHARED_DIR=${WRKDIR:Q}

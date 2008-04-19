@@ -1,7 +1,7 @@
-$NetBSD: patch-ar,v 1.2 2008/02/13 14:16:43 kefren Exp $
---- data/net_2_0/Makefile.in.orig	2008-02-05 14:09:06.000000000 +0200
-+++ data/net_2_0/Makefile.in	2008-02-05 14:09:24.000000000 +0200
-@@ -214,7 +214,7 @@
+$NetBSD: patch-ar,v 1.3 2008/04/19 18:42:10 kefren Exp $
+--- data/net_2_0/Makefile.in.orig	2008-03-11 01:37:54.000000000 +0200
++++ data/net_2_0/Makefile.in	2008-03-18 15:38:00.000000000 +0200
+@@ -217,7 +217,7 @@
  target_vendor = @target_vendor@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
@@ -9,4 +9,4 @@ $NetBSD: patch-ar,v 1.2 2008/02/13 14:16:43 kefren Exp $
 +monodir = $(datadir)/examples/mono/2.0
  EXTRA_DIST = machine.config \
  	      web.config \
- 	      DefaultWsdlHelpGenerator.aspx
+ 	      DefaultWsdlHelpGenerator.aspx \
