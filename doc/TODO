@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7223 2008/04/19 05:39:05 obache Exp $
+$NetBSD: TODO,v 1.7224 2008/04/19 05:56:49 obache Exp $
 
 Suggested new packages
 ======================
@@ -1218,6 +1218,7 @@ Suggested package updates
 	o rpm-5.1.0
 	o rrdtool-1.2.27
 	o rtcw-1.41.3
+	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o ruby-clearsilver-0.10.5
 	o rudiments-0.30
 	o rxvt-unicode-9.0
