@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.9 2008/04/19 09:35:24 wiz Exp $
+
+--- utils/mp-server/run_server.orig	2008-03-11 16:58:41.000000000 +0000
++++ utils/mp-server/run_server
+@@ -49,7 +49,7 @@ do
+ 		mv gmon.out gmon.$DATE.out > /dev/null 2>&1
+ 		# wait a bit so the server is likely up and listening
+ 		sleep 1
+-		if [ "$SERVER" == "1.2" ]; then
++		if [ "$SERVER" = "1.2" ]; then
+ 			cd $SOURCE/utils/
+ 			./mp-lobby-logger.pl -j -p $PORT -l $SERVERBASE/currentlobby.log >> $SERVERBASE/logs/lobby-chat.log 2>&1 &
+ 		fi
