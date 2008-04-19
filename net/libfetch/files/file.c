@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.5 2008/04/04 23:19:16 joerg Exp $	*/
+/*	$NetBSD: file.c,v 1.6 2008/04/19 14:49:23 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -187,20 +187,17 @@ fetchStatFile(struct url *u, struct url_stat *us, const char *flags)
 	return (fetch_stat_file2(u->doc, us));
 }
 
-struct url_ent *
-fetchFilteredListFile(struct url *u, const char *pattern, const char *flags)
+int
+fetchListFile(struct url_list *ue, struct url *u, const char *pattern, const char *flags)
 {
 	struct dirent *de;
-	struct url_stat us;
-	struct url_ent *ue;
-	int size, len;
 	char fn[PATH_MAX], *p;
 	DIR *dir;
 	int l;
 
 	if ((dir = opendir(u->doc)) == NULL) {
 		fetch_syserr();
-		return (NULL);
+		return -1;
 	}
 
 	ue = NULL;
@@ -215,18 +212,8 @@ fetchFilteredListFile(struct url *u, const char *pattern, const char *flags)
 			continue;
 		strncpy(p, de->d_name, l - 1);
 		p[l - 1] = 0;
-		if (fetch_stat_file2(fn, &us) == -1) {
-			/* should I return a partial result, or abort? */
-			break;
-		}
-		fetch_add_entry(&ue, &size, &len, de->d_name, &us);
+		fetch_add_entry(ue, u, de->d_name);
 	}
 
-	return (ue);
-}
-
-struct url_ent *
-fetchListFile(struct url *u, const char *flags)
-{
-	return fetchFilteredListFile(u, "*", flags);
+	return 0;
 }

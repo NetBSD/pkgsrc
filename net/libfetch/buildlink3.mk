@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/04/02 15:33:14 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/04/19 14:49:23 joerg Exp $
 
 BUILDLINK_DEPMETHOD.libfetch?=	build
 
@@ -14,7 +14,7 @@ BUILDLINK_PACKAGES+=	libfetch
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libfetch
 
 .if ${LIBFETCH_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.libfetch+=	libfetch>=2.1
+BUILDLINK_API_DEPENDS.libfetch+=	libfetch>=2.5
 BUILDLINK_PKGSRCDIR.libfetch?=	../../net/libfetch
 .endif	# LIBFETCH_BUILDLINK3_MK
 
