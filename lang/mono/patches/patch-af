@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.9 2008/02/13 14:16:43 kefren Exp $
---- mono/metadata/Makefile.in.orig	2008-02-05 13:38:26.000000000 +0200
-+++ mono/metadata/Makefile.in	2008-02-05 13:38:34.000000000 +0200
+$NetBSD: patch-af,v 1.10 2008/04/19 18:42:10 kefren Exp $
+--- mono/metadata/Makefile.in.orig	2008-03-11 01:37:56.000000000 +0200
++++ mono/metadata/Makefile.in	2008-03-18 15:35:22.000000000 +0200
 @@ -65,7 +65,7 @@
  libmonoruntime_static_la_LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) \
  	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
@@ -8,5 +8,5 @@ $NetBSD: patch-af,v 1.9 2008/02/13 14:16:43 kefren Exp $
 -libmonoruntime_la_LIBADD =
 +libmonoruntime_la_LIBADD = $(ICU_LIBS)
  am_libmonoruntime_la_OBJECTS = reflection.lo object.lo icall.lo \
- 	decimal.lo boehm-gc.lo null-gc.lo sgen-gc.lo gc.lo marshal.lo \
- 	mono-mlist.lo monitor.lo threads.lo threadpool.lo file-io.lo \
+ 	decimal.lo boehm-gc.lo null-gc.lo sgen-gc.lo gc.lo \
+ 	method-builder.lo marshal.lo mono-mlist.lo monitor.lo \
