@@ -1,0 +1,182 @@
+$NetBSD: patch-ab,v 1.1 2008/04/19 14:28:46 tonnerre Exp $
+
+Fix insecure temporary file handling in comic utility.
+Eliminate insufficient escaping on shell calls for rar archives/jpegtran.
+
+--- comix.orig
++++ comix
+@@ -44,6 +44,11 @@
+ import pwd
+ import cPickle
+ 
++import subprocess
++import string
++
++import tempfile
++
+ try:
+     import pygtk
+     pygtk.require('2.0')
+@@ -254,6 +259,8 @@
+     window_height = 0
+     colour_adjust_signal_kill = False
+     colour_adjust_dialog_displayed = False
++
++    _tmp_dir = None
+     
+     def close_application(self, widget, event=None):
+         
+@@ -267,8 +274,8 @@
+         self.prefs['page of last file'] = self.file_number
+         if os.path.exists(self.base_dir):
+             shutil.rmtree(self.base_dir)
+-            if len(os.listdir('/tmp/comix')) == 0:
+-                shutil.rmtree('/tmp/comix')
++            if len(os.listdir(self._tmp_dir)) == 0:
++                shutil.rmtree(self._tmp_dir)
+         self.exit = True
+ 
+         # =======================================================
+@@ -366,9 +373,9 @@
+         # =======================================================
+         if os.path.exists(self.base_dir):
+             shutil.rmtree(self.base_dir)
+-        if os.path.isdir('/tmp/comix'):
+-            if len(os.listdir('/tmp/comix')) == 0:
+-                shutil.rmtree('/tmp/comix')
++        if os.path.isdir(self._tmp_dir):
++            if len(os.listdir(self._tmp_dir)) == 0:
++                shutil.rmtree(self._tmp_dir)
+ 
+         
+         # =======================================================
+@@ -6277,9 +6284,12 @@
+                         archive = tarfile.open(path, 'r')
+                         files = archive.getnames()
+                     elif type == 'rar':
++                        #files = \
++                            #os.popen(self.rar + ' vb "' + path +
++                                #'"').readlines()
+                         files = \
+-                            os.popen(self.rar + ' vb "' + path +
+-                                '"').readlines()
++                             subprocess.Popen([self.rar, 'vb', path], 
++                             stdout=subprocess.PIPE).communicate()[0].splitlines()
+                         files = [file.rstrip('\n') for file in files]
+                     cover = None
+                     files.sort()
+@@ -6302,9 +6312,20 @@
+                                 break
+                     if cover != None:
+                         if type == 'rar':
+-                            os.popen(self.rar + ' p -inul -- "' + path + '" "' +
+-                                cover + '" > "' + thumb_dir +
+-                                '/temp" 2>/dev/null', "r").close()
++                            #os.popen(self.rar + ' p -inul -- "' + path + '" "' +
++                                #cover + '" > "' + thumb_dir +
++                                #'/temp" 2>/dev/null', "r").close()
++                            filen = thumb_dir + '/temp'
++                            try:
++                                os.remove(filen)
++                            except:
++                                pass
++                            fp = open(filen, 'w')
++                            fdp = fp.fileno()
++                            p = subprocess.Popen(
++                                [self.rar, 'p', '-inul', '--', path,
++                                 cover ],  stdout = fdp).wait()
++                            fp.close()
+                             image = Image.open(thumb_dir + '/temp')
+                             os.remove(thumb_dir + '/temp')
+                         elif type == 'zip':
+@@ -8010,7 +8031,7 @@
+             return False
+         
+         # We don't want to open files from our selves.
+-        if selection.data.startswith('file:///tmp/comix/'):
++        if selection.data.startswith('file://' + self._tmp_dir):
+             return
+         
+         uri = selection.data.strip()
+@@ -8733,8 +8754,10 @@
+             # =======================================================
+             elif archive_type == 'rar':
+                 if self.rar:
+-                    os.popen(
+-                        self.rar + ' x "' + src_path + '" "' + dst_path + '"')
++                    #os.popen(
++                        #self.rar + ' x "' + src_path + '" "' + dst_path + '"')
++                    subprocess.Popen(
++                        [self.rar, 'x', src_path, dst_path],stdout=sys.stdout).wait()
+                 else:
+                     self.statusbar.push(0,
+                         _('Could not find the unrar executable. Please install it if you wish to open RAR archives.'))
+@@ -9168,9 +9191,37 @@
+         self.are_you_sure_dialog.hide()
+         if response != -5:
+             return
+-        os.popen(self.jpegtran + ' -copy all -trim ' + operation +
+-            ' -outfile "' + self.file[self.file_number] + '" "' +
+-            self.file[self.file_number] + '"')
++        #os.popen(self.jpegtran + ' -copy all -trim ' + operation +
++            #' -outfile "' + self.file[self.file_number] + '" "' +
++            #self.file[self.file_number] + '"')
++        op = operation.split()
++        op_len = len(op)
++
++        i=1
++        filen = self.file[self.file_number]
++        while (1):
++            tmp_file = filen + '.tmp' + 'z' * i
++            if os.path.exists(tmp_file):
++                i += 1
++            else:
++                break
++        
++        # Ugly hack :(
++        if op_len == 2:
++            p = subprocess.Popen(
++              [self.jpegtran, '-copy', 'all', '-trim', op[0], op[1], 
++               '-outfile', tmp_file, filen], 
++               stdin=sys.stdin, stdout=sys.stdout)
++        else:
++            p = subprocess.Popen(
++              [self.jpegtran, '-copy', 'all', '-trim', op[0], 
++               '-outfile', tmp_file, filen], 
++               stdin=sys.stdin, stdout=sys.stdout)
++        p.wait()
++        if p.returncode == 0:
++            shutil.copymode(filen, tmp_file)
++            shutil.copy(tmp_file, filen)
++        os.remove(tmp_file)
+         try:
+             uri = 'file://' + urllib.pathname2url(self.file[self.file_number])
+             thumb_path = md5.new()
+@@ -10496,15 +10547,20 @@
+         # The dir is /tmp/comix/<num> where <num> is 1 or higher
+         # depending on the number of Comix sessions opened.
+         # =======================================================
+-        if not os.path.exists('/tmp/comix/'):
+-            os.makedirs('/tmp/comix/')
+-            os.chmod('/tmp/comix/', 0700)
++        #if not os.path.exists('/tmp/comix/'):
++        #    os.makedirs('/tmp/comix/')
++        #    os.chmod('/tmp/comix/', 0700)
++
++        self._tmp_dir = tempfile.mkdtemp(prefix='comix.', suffix=os.sep, 
++             dir = '/tmp')
++        self._tmp_dir += "/"
++
+         dir_number = 1
+         while 1:
+-            if not os.path.exists('/tmp/comix/' + str(dir_number)):
+-                os.mkdir('/tmp/comix/' + str(dir_number))
+-                os.chmod('/tmp/comix/' + str(dir_number), 0700)
+-                self.base_dir = '/tmp/comix/' + str(dir_number) + '/'
++            if not os.path.exists(self._tmp_dir + str(dir_number)):
++                os.mkdir(self._tmp_dir + str(dir_number))
++                os.chmod(self._tmp_dir + str(dir_number), 0700)
++                self.base_dir = self._tmp_dir + str(dir_number) + '/'
+                 break
+             dir_number += 1
+             
