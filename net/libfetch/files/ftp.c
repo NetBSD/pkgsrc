@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.17 2008/04/17 19:04:12 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.18 2008/04/19 14:49:23 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -1192,20 +1192,20 @@ fetchStatFTP(struct url *url, struct url_stat *us, const char *flags)
 /*
  * List a directory
  */
-struct url_ent *
-fetchFilteredListFTP(struct url *url, const char *pattern, const char *flags)
+int
+fetchListFTP(struct url_list *ue, struct url *url, const char *pattern, const char *flags)
 {
-	struct url_ent *ue;
 	fetchIO *f;
 	char buf[2 * PATH_MAX], *eol, *eos;
 	ssize_t len;
 	size_t cur_off;
-	int list_size, list_len;
 
 	/* XXX What about proxies? */
+	if (pattern == NULL || strcmp(pattern, "*") == 0)
+		pattern = "";
 	f = ftp_request(url, "NLST", pattern, NULL, ftp_get_proxy(url, flags), flags);
 	if (f == NULL)
-		return NULL;
+		return -1;
 
 	ue = NULL;
 	cur_off = 0;
@@ -1220,7 +1220,7 @@ fetchFilteredListFTP(struct url *url, const char *pattern, const char *flags)
 				else
 					eos = eol;
 				*eos = '\0';
-				fetch_add_entry(&ue, &list_size, &list_len, buf, NULL);
+				fetch_add_entry(ue, url, buf);
 				cur_off -= eol - buf + 1;
 				memmove(buf, eol + 1, cur_off);
 			}
@@ -1229,18 +1229,8 @@ fetchFilteredListFTP(struct url *url, const char *pattern, const char *flags)
 	if (cur_off != 0 || len < 0) {
 		/* Not RFC conform, bail out. */
 		fetchIO_close(f);
-		free(ue);
-		return NULL;
+		return -1;
 	}
 	fetchIO_close(f);
-	return ue;
-}
-
-/*
- * List a directory
- */
-struct url_ent *
-fetchListFTP(struct url *url, const char *flags)
-{
-	return fetchFilteredList(url, "", flags);
+	return 0;
 }
