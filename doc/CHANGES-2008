@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.784 2008/04/18 20:44:36 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.785 2008/04/19 05:38:31 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1491,3 +1491,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/libcdio to 0.80nb2 [tron 2008-04-18]
 	Updated textproc/xmltoman to 0.4 [bjs 2008-04-18]
 	Updated textproc/libxslt to 1.1.23 [bjs 2008-04-18]
+	Updated www/weex to 2.6.1.5 [obache 2008-04-19]
