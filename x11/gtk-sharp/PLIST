@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/17 22:50:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/04/19 19:02:36 kefren Exp $
 bin/gapi2-codegen
 bin/gapi2-fixup
 bin/gapi2-parser
@@ -107,9 +107,9 @@ lib/pkgconfig/gtk-sharp-2.0.pc
 share/gapi-2.0/atk-api.xml
 share/gapi-2.0/gdk-api.xml
 share/gapi-2.0/glade-api.xml
+share/gapi-2.0/glib-api.xml
 share/gapi-2.0/gtk-api.xml
 share/gapi-2.0/pango-api.xml
-share/gapi-2.0/glib-api.xml
 @dirrm share/gapi-2.0
 @dirrm lib/mono/gtk-sharp-2.0
 @dirrm lib/mono/gac/policy.2.8.pango-sharp/0.0.0.0__35e10195dab3c99f
