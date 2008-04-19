@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/02/19 09:59:33 xtraeme Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/04/19 18:42:57 kefren Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MONODOC_BUILDLINK3_MK:=	${MONODOC_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	monodoc
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}monodoc
 
 .if ${MONODOC_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.monodoc+=	monodoc>=0.13
+BUILDLINK_API_DEPENDS.monodoc+=	monodoc>=1.9
 BUILDLINK_PKGSRCDIR.monodoc?=	../../lang/monodoc
 .endif	# MONODOC_BUILDLINK3_MK
 
