@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/04/19 18:46:43 kefren Exp $
+
+SHA1 (mono-tools-1.9.tar.bz2) = 1530951261231af4b7cf788dec2646a951a620ee
+RMD160 (mono-tools-1.9.tar.bz2) = 843b30f5546829ce7063ec6f26bb5c09b1f81429
+Size (mono-tools-1.9.tar.bz2) = 523749 bytes
+SHA1 (patch-aa) = c421b09bf0912fbfc2b0a8972aa008ba95dc7133
