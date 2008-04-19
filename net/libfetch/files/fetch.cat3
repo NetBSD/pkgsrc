@@ -2,13 +2,11 @@ FETCH(3)                NetBSD Library Functions Manual               FETCH(3)
 
 NNAAMMEE
      ffeettcchhMMaakkeeUURRLL, ffeettcchhPPaarrsseeUURRLL, ffeettcchhFFrreeeeUURRLL, ffeettcchhXXGGeettUURRLL, ffeettcchhGGeettUURRLL,
-     ffeettcchhPPuuttUURRLL, ffeettcchhSSttaattUURRLL, ffeettcchhFFiilltteerreeddLLiissttUURRLL, ffeettcchhLLiissttUURRLL, ffeettcchhXXGGeett,
-     ffeettcchhGGeett, ffeettcchhPPuutt, ffeettcchhSSttaatt, ffeettcchhFFiilltteerreeddLLiisstt, ffeettcchhLLiisstt,
-     ffeettcchhXXGGeettFFiillee, ffeettcchhGGeettFFiillee, ffeettcchhPPuuttFFiillee, ffeettcchhSSttaattFFiillee,
-     ffeettcchhFFiilltteerreeddLLiissttFFiillee, ffeettcchhLLiissttFFiillee, ffeettcchhXXGGeettHHTTTTPP, ffeettcchhGGeettHHTTTTPP,
-     ffeettcchhPPuuttHHTTTTPP, ffeettcchhSSttaattHHTTTTPP, ffeettcchhFFiilltteerreeddLLiissttHHTTTTPP, ffeettcchhLLiissttHHTTTTPP,
-     ffeettcchhXXGGeettFFTTPP, ffeettcchhGGeettFFTTPP, ffeettcchhPPuuttFFTTPP, ffeettcchhSSttaattFFTTPP,
-     ffeettcchhFFiilltteerreeddLLiissttFFTTPP ffeettcchhLLiissttFFTTPP -- file transfer functions
+     ffeettcchhPPuuttUURRLL, ffeettcchhSSttaattUURRLL, ffeettcchhLLiissttUURRLL, ffeettcchhXXGGeett, ffeettcchhGGeett, ffeettcchhPPuutt,
+     ffeettcchhSSttaatt, ffeettcchhLLiisstt, ffeettcchhXXGGeettFFiillee, ffeettcchhGGeettFFiillee, ffeettcchhPPuuttFFiillee,
+     ffeettcchhSSttaattFFiillee, ffeettcchhLLiissttFFiillee, ffeettcchhXXGGeettHHTTTTPP, ffeettcchhGGeettHHTTTTPP, ffeettcchhPPuuttHHTTTTPP,
+     ffeettcchhSSttaattHHTTTTPP, ffeettcchhLLiissttHHTTTTPP, ffeettcchhXXGGeettFFTTPP, ffeettcchhGGeettFFTTPP, ffeettcchhPPuuttFFTTPP,
+     ffeettcchhSSttaattFFTTPP, ffeettcchhLLiissttFFTTPP -- file transfer functions
 
 LLIIBBRRAARRYY
      library ``libfetch''
@@ -39,12 +37,8 @@ SSYYNNOOPPSSIISS
      _i_n_t
      ffeettcchhSSttaattUURRLL(_c_o_n_s_t _c_h_a_r _*_U_R_L, _s_t_r_u_c_t _u_r_l___s_t_a_t _*_u_s, _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
 
-     _s_t_r_u_c_t _u_r_l___e_n_t _*
-     ffeettcchhFFiilltteerreeddLLiissttUURRLL(_c_o_n_s_t _c_h_a_r _*_U_R_L, _c_o_n_s_t _c_h_a_r _*_p_a_t_t_e_r_n,
-         _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
-
-     _s_t_r_u_c_t _u_r_l___e_n_t _*
-     ffeettcchhLLiissttUURRLL(_c_o_n_s_t _c_h_a_r _*_U_R_L, _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
+     _i_n_t
+     ffeettcchhLLiissttUURRLL(_s_t_r_u_c_t _u_r_l___l_i_s_t _*_l_i_s_t, _c_o_n_s_t _c_h_a_r _*_U_R_L, _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
 
      _f_e_t_c_h_I_O _*
      ffeettcchhXXGGeett(_s_t_r_u_c_t _u_r_l _*_u, _s_t_r_u_c_t _u_r_l___s_t_a_t _*_u_s, _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
@@ -58,11 +52,8 @@ SSYYNNOOPPSSIISS
      _i_n_t
      ffeettcchhSSttaatt(_s_t_r_u_c_t _u_r_l _*_u, _s_t_r_u_c_t _u_r_l___s_t_a_t _*_u_s, _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
 
-     _s_t_r_u_c_t _u_r_l___e_n_t _*
-     ffeettcchhFFiilltteerreeddLLiisstt(_s_t_r_u_c_t _u_r_l _*_u, _c_o_n_s_t _c_h_a_r _*_p_a_t_t_e_r_n, _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
-
-     _s_t_r_u_c_t _u_r_l___e_n_t _*
-     ffeettcchhLLiisstt(_s_t_r_u_c_t _u_r_l _*_u, _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
+     _i_n_t
+     ffeettcchhLLiisstt(_s_t_r_u_c_t _u_r_l___l_i_s_t _*_l_i_s_t, _s_t_r_u_c_t _u_r_l _*_u, _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
 
      _f_e_t_c_h_I_O _*
      ffeettcchhXXGGeettFFiillee(_s_t_r_u_c_t _u_r_l _*_u, _s_t_r_u_c_t _u_r_l___s_t_a_t _*_u_s, _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
@@ -76,12 +67,8 @@ SSYYNNOOPPSSIISS
      _i_n_t
      ffeettcchhSSttaattFFiillee(_s_t_r_u_c_t _u_r_l _*_u, _s_t_r_u_c_t _u_r_l___s_t_a_t _*_u_s, _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
 
-     _s_t_r_u_c_t _u_r_l___e_n_t _*
-     ffeettcchhFFiilltteerreeddLLiissttFFiillee(_s_t_r_u_c_t _u_r_l _*_u, _c_o_n_s_t _c_h_a_r _*_p_a_t_t_e_r_n,
-         _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
-
-     _s_t_r_u_c_t _u_r_l___e_n_t _*
-     ffeettcchhLLiissttFFiillee(_s_t_r_u_c_t _u_r_l _*_u, _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
+     _i_n_t
+     ffeettcchhLLiissttFFiillee(_s_t_r_u_c_t _u_r_l___l_i_s_t _*_l_i_s_t, _s_t_r_u_c_t _u_r_l _*_u, _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
 
      _f_e_t_c_h_I_O _*
      ffeettcchhXXGGeettHHTTTTPP(_s_t_r_u_c_t _u_r_l _*_u, _s_t_r_u_c_t _u_r_l___s_t_a_t _*_u_s, _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
@@ -95,12 +82,8 @@ SSYYNNOOPPSSIISS
      _i_n_t
      ffeettcchhSSttaattHHTTTTPP(_s_t_r_u_c_t _u_r_l _*_u, _s_t_r_u_c_t _u_r_l___s_t_a_t _*_u_s, _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
 
-     _s_t_r_u_c_t _u_r_l___e_n_t _*
-     ffeettcchhFFiilltteerreeddLLiissttHHTTTTPP(_s_t_r_u_c_t _u_r_l _*_u, _c_o_n_s_t _c_h_a_r _*_p_a_t_t_e_r_n,
-         _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
-
-     _s_t_r_u_c_t _u_r_l___e_n_t _*
-     ffeettcchhLLiissttHHTTTTPP(_s_t_r_u_c_t _u_r_l _*_u, _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
+     _i_n_t
+     ffeettcchhLLiissttHHTTTTPP(_s_t_r_u_c_t _u_r_l___l_i_s_t _*_l_i_s_t, _s_t_r_u_c_t _u_r_l _*_u, _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
 
      _f_e_t_c_h_I_O _*
      ffeettcchhXXGGeettFFTTPP(_s_t_r_u_c_t _u_r_l _*_u, _s_t_r_u_c_t _u_r_l___s_t_a_t _*_u_s, _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
@@ -114,12 +97,8 @@ SSYYNNOOPPSSIISS
      _i_n_t
      ffeettcchhSSttaattFFTTPP(_s_t_r_u_c_t _u_r_l _*_u, _s_t_r_u_c_t _u_r_l___s_t_a_t _*_u_s, _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
 
-     _s_t_r_u_c_t _u_r_l___e_n_t _*
-     ffeettcchhFFiilltteerreeddLLiissttFFTTPP(_s_t_r_u_c_t _u_r_l _*_u, _c_o_n_s_t _c_h_a_r _*_p_a_t_t_e_r_n,
-         _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
-
-     _s_t_r_u_c_t _u_r_l___e_n_t _*
-     ffeettcchhLLiissttFFTTPP(_s_t_r_u_c_t _u_r_l _*_u, _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
+     _i_n_t
+     ffeettcchhLLiissttFFTTPP(_s_t_r_u_c_t _u_r_l___l_i_s_t _*_l_i_s_t, _s_t_r_u_c_t _u_r_l _*_u, _c_o_n_s_t _c_h_a_r _*_f_l_a_g_s);
 
 DDEESSCCRRIIPPTTIIOONN
      These functions implement a high-level library for retrieving and upload-
@@ -191,22 +170,19 @@ DDEESSCCRRIIPPTTIIOONN
      time.
 
      ffeettcchhLLiissttUURRLL() attempts to list the contents of the directory pointed to
-     by the URL provided.  If successful, it returns a malloced array of
-     _u_r_l___e_n_t structures.  The _u_r_l___e_n_t structure is defined as follows in
-     <_f_e_t_c_h_._h>:
+     by the URL provided.  The pattern can be a simple glob-like expression as
+     hint.  Callers should not depend on the server to filter names.  If suc-
+     cessful, it appends the list of entries to the _u_r_l___l_i_s_t structure.  The
+     _u_r_l___l_i_s_t structure is defined as follows in <_f_e_t_c_h_._h>:
 
-     struct url_ent {
-         char         name[PATH_MAX];
-         struct url_stat stat;
+     struct url_list {
+         size_t      length;
+         size_t      alloc_size;
+         struct url  *urls;
      };
 
-     The list is terminated by an entry with an empty name.
-
-     The pointer returned by ffeettcchhLLiissttUURRLL() should be freed using ffrreeee().
-
-     ffeettcchhFFiilltteerreeddLLiissttUURRLL() works like ffeettcchhLLiissttUURRLL(), but filters the list
-     according to the given glob pattern.  Only * and ? should be used in the
-     pattern.
+     The list should be initialised by calling ffeettcchh__iinniitt__uurrll__lliisstt() and the
+     entries be freed by calling ffeettcchh__ffrreeee__uurrll__lliisstt().
 
      ffeettcchhXXGGeett(), ffeettcchhGGeett(), ffeettcchhPPuutt() and ffeettcchhSSttaatt() are similar to
      ffeettcchhXXGGeettUURRLL(), ffeettcchhGGeettUURRLL(), ffeettcchhPPuuttUURRLL() and ffeettcchhSSttaattUURRLL(), except
@@ -466,8 +442,7 @@ AAUUTTHHOORRSS
 
 BBUUGGSS
      Some parts of the library are not yet implemented.  The most notable
-     examples of this are ffeettcchhPPuuttHHTTTTPP(), ffeettcchhLLiissttHHTTTTPP(), ffeettcchhLLiissttFFTTPP() and
-     FTP proxy support.
+     examples of this are ffeettcchhPPuuttHHTTTTPP() and FTP proxy support.
 
      There is no way to select a proxy at run-time other than setting the
      HTTP_PROXY or FTP_PROXY environment variables as appropriate.
@@ -490,4 +465,4 @@ BBUUGGSS
 
      Some parts of the code are not fully reentrant.
 
-NetBSD 4.0                     December 18, 2007                    NetBSD 4.0
+NetBSD 4.0                      April 19, 2008                      NetBSD 4.0

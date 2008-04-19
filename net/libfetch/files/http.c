@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.14 2008/04/18 21:13:10 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.15 2008/04/19 14:49:24 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2003 Thomas Klausner <wiz@NetBSD.org>
@@ -1169,9 +1169,9 @@ enum http_states {
 };
 
 struct index_parser {
+	struct url_list *ue;
+	struct url *url;
 	enum http_states state;
-	struct url_ent *ue;
-	int list_size, list_len;
 };
 
 static size_t
@@ -1303,7 +1303,7 @@ parse_index(struct index_parser *parser, const char *buf, size_t len)
 			return 0;
 		*end_attr = '\0';
 		parser->state = ST_TAGA;
-		fetch_add_entry(&parser->ue, &parser->list_size, &parser->list_len, buf, NULL);
+		fetch_add_entry(parser->ue, parser->url, buf);
 		return end_attr + 1 - buf;
 	}
 	abort();
@@ -1312,8 +1312,8 @@ parse_index(struct index_parser *parser, const char *buf, size_t len)
 /*
  * List a directory
  */
-struct url_ent *
-fetchFilteredListHTTP(struct url *url, const char *pattern, const char *flags)
+int
+fetchListHTTP(struct url_list *ue, struct url *url, const char *pattern, const char *flags)
 {
 	fetchIO *f;
 	char buf[2 * PATH_MAX];
@@ -1321,13 +1321,13 @@ fetchFilteredListHTTP(struct url *url, const char *pattern, const char *flags)
 	ssize_t read_len;
 	struct index_parser state;
 
+	state.url = url;
 	state.state = ST_NONE;
-	state.ue = NULL;
-	state.list_size = state.list_len = 0;
+	state.ue = ue;
 
 	f = fetchGetHTTP(url, flags);
 	if (f == NULL)
-		return NULL;
+		return -1;
 
 	buf_len = 0;
 
@@ -1343,18 +1343,5 @@ fetchFilteredListHTTP(struct url *url, const char *pattern, const char *flags)
 	}
 
 	fetchIO_close(f);
-	if (read_len < 0) {
-		free(state.ue);
-		state.ue = NULL;
-	}
-	return state.ue;
-}
-
-/*
- * List a directory
- */
-struct url_ent *
-fetchListHTTP(struct url *url, const char *flags)
-{
-	return fetchFilteredList(url, "*", flags);
+	return read_len < 0 ? -1 : 0;
 }

@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.c,v 1.3 2008/04/04 22:37:28 joerg Exp $	*/
+/*	$NetBSD: fetch.c,v 1.4 2008/04/19 14:49:23 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -153,44 +153,23 @@ fetchStat(struct url *URL, struct url_stat *us, const char *flags)
  * Select the appropriate protocol for the URL scheme, and return a
  * list of files in the directory pointed to by the URL.
  */
-struct url_ent *
-fetchList(struct url *URL, const char *flags)
+int
+fetchList(struct url_list *ue, struct url *URL, const char *pattern,
+    const char *flags)
 {
 	int direct;
 
 	direct = CHECK_FLAG('d');
 	if (strcasecmp(URL->scheme, SCHEME_FILE) == 0)
-		return (fetchListFile(URL, flags));
+		return (fetchListFile(ue, URL, pattern, flags));
 	else if (strcasecmp(URL->scheme, SCHEME_FTP) == 0)
-		return (fetchListFTP(URL, flags));
+		return (fetchListFTP(ue, URL, pattern, flags));
 	else if (strcasecmp(URL->scheme, SCHEME_HTTP) == 0)
-		return (fetchListHTTP(URL, flags));
+		return (fetchListHTTP(ue, URL, pattern, flags));
 	else if (strcasecmp(URL->scheme, SCHEME_HTTPS) == 0)
-		return (fetchListHTTP(URL, flags));
+		return (fetchListHTTP(ue, URL, pattern, flags));
 	url_seterr(URL_BAD_SCHEME);
-	return (NULL);
-}
-
-/*
- * Select the appropriate protocol for the URL scheme, and return a
- * list of files in the directory pointed to by the URL.
- */
-struct url_ent *
-fetchFilteredList(struct url *URL, const char *pattern, const char *flags)
-{
-	int direct;
-
-	direct = CHECK_FLAG('d');
-	if (strcasecmp(URL->scheme, SCHEME_FILE) == 0)
-		return (fetchFilteredListFile(URL, pattern, flags));
-	else if (strcasecmp(URL->scheme, SCHEME_FTP) == 0)
-		return (fetchFilteredListFTP(URL, pattern, flags));
-	else if (strcasecmp(URL->scheme, SCHEME_HTTP) == 0)
-		return (fetchFilteredListHTTP(URL, pattern, flags));
-	else if (strcasecmp(URL->scheme, SCHEME_HTTPS) == 0)
-		return (fetchFilteredListHTTP(URL, pattern, flags));
-	url_seterr(URL_BAD_SCHEME);
-	return (NULL);
+	return -1;
 }
 
 /*
@@ -259,37 +238,20 @@ fetchStatURL(const char *URL, struct url_stat *us, const char *flags)
 /*
  * Attempt to parse the given URL; if successful, call fetchList().
  */
-struct url_ent *
-fetchListURL(const char *URL, const char *flags)
+int
+fetchListURL(struct url_list *ue, const char *URL, const char *pattern,
+    const char *flags)
 {
 	struct url *u;
-	struct url_ent *ue;
+	int rv;
 
 	if ((u = fetchParseURL(URL)) == NULL)
-		return (NULL);
+		return -1;
 
-	ue = fetchList(u, flags);
-
-	fetchFreeURL(u);
-	return (ue);
-}
-
-/*
- * Attempt to parse the given URL; if successful, call fetchList().
- */
-struct url_ent *
-fetchFilteredListURL(const char *URL, const char *pattern, const char *flags)
-{
-	struct url *u;
-	struct url_ent *ue;
-
-	if ((u = fetchParseURL(URL)) == NULL)
-		return (NULL);
-
-	ue = fetchFilteredList(u, pattern, flags);
+	rv = fetchList(ue, u, pattern, flags);
 
 	fetchFreeURL(u);
-	return (ue);
+	return rv;
 }
 
 /*

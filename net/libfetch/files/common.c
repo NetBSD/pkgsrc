@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.7 2008/04/17 19:04:12 joerg Exp $	*/
+/*	$NetBSD: common.c,v 1.8 2008/04/19 14:49:23 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -620,38 +620,73 @@ fetch_close(conn_t *conn)
 /*** Directory-related utility functions *************************************/
 
 int
-fetch_add_entry(struct url_ent **p, int *size, int *len,
-    const char *name, struct url_stat *us)
+fetch_add_entry(struct url_list *ue, struct url *base, const char *name)
 {
-	struct url_ent *tmp;
+	struct url *tmp;
+	char *tmp_name;
+	size_t base_doc_len, name_len;
 
-	if (*p == NULL) {
-		*size = 0;
-		*len = 0;
+	if (strchr(name, '/') != NULL ||
+	    strcmp(name, "..") == 0 ||
+	    strcmp(name, ".") == 0)
+		return 0;
+
+	base_doc_len = strlen(base->doc);
+	name_len = strlen(name);
+	tmp_name = malloc( base_doc_len + name_len + 2);
+	if (tmp_name == NULL) {
+		errno = ENOMEM;
+		fetch_syserr();
+		return (-1);
 	}
 
-	if (*len >= *size - 1) {
-		tmp = realloc(*p, (*size * 2 + 1) * sizeof(**p));
+	if (ue->length + 1 >= ue->alloc_size) {
+		tmp = realloc(ue->urls, (ue->alloc_size * 2 + 1) * sizeof(*tmp));
 		if (tmp == NULL) {
+			free(tmp_name);
 			errno = ENOMEM;
 			fetch_syserr();
 			return (-1);
 		}
-		*size = (*size * 2 + 1);
-		*p = tmp;
+		ue->alloc_size = ue->alloc_size * 2 + 1;
+		ue->urls = tmp;
 	}
 
-	tmp = *p + *len;
-	snprintf(tmp->name, PATH_MAX, "%s", name);
-	if (us)
-		memcpy(&tmp->stat, us, sizeof(*us));
-	else
-		memset(&tmp->stat, 0, sizeof(*us));
+	tmp = ue->urls + ue->length;
+	strcpy(tmp->scheme, base->scheme);
+	strcpy(tmp->user, base->user);
+	strcpy(tmp->pwd, base->pwd);
+	strcpy(tmp->host, base->host);
+	tmp->port = base->port;
+	memcpy(tmp_name, base->doc, base_doc_len);
+	tmp_name[base_doc_len] = '/';
+	memcpy(tmp_name + base_doc_len + 1, name, name_len);
+	tmp_name[base_doc_len + name_len + 1] = '/';
+	tmp->doc = tmp_name;
+	tmp->offset = 0;
+	tmp->length = 0;
 
-	(*len)++;
-	(++tmp)->name[0] = 0;
+	++ue->length;
 
 	return (0);
+}
+
+void
+fetch_init_url_list(struct url_list *ue)
+{
+	ue->length = ue->alloc_size = 0;
+	ue->urls = NULL;
+}
+
+void
+fetch_free_url_list(struct url_list *ue)
+{
+	size_t i;
+
+	for (i = 0; i < ue->length; ++i)
+		free(ue->urls[i].doc);
+	free(ue->urls);
+	ue->length = ue->alloc_size = 0;
 }
 
 

@@ -1,4 +1,4 @@
-/*	$NetBSD: common.h,v 1.5 2008/04/05 02:42:13 joerg Exp $	*/
+/*	$NetBSD: common.h,v 1.6 2008/04/19 14:49:23 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -93,8 +93,7 @@ ssize_t		 fetch_write(conn_t *, const char *, size_t);
 ssize_t		 fetch_writev(conn_t *, struct iovec *, int);
 int		 fetch_putln(conn_t *, const char *, size_t);
 int		 fetch_close(conn_t *);
-int		 fetch_add_entry(struct url_ent **, int *, int *,
-		     const char *, struct url_stat *);
+int		 fetch_add_entry(struct url_list *, struct url *, const char *);
 int		 fetch_netrc_auth(struct url *url);
 int		 fetch_no_proxy_match(const char *);
 
