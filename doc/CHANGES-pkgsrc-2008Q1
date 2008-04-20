@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.8 2008/04/16 19:33:53 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.9 2008/04/20 04:09:10 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -22,3 +22,5 @@ Pullup ticket 2333 - requested by martti
 security update for clamav
 Pullup ticket 2335 - requested by wiz
 security update for png
+pullup ticket 2329 - requested by tron
+fix package build on macosx/ppc machines
