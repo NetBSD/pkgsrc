@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST.common,v 1.8 2007/06/08 14:16:15 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.8.8.1 2008/04/20 15:56:44 spz Exp $
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
 bin/smtpd${PY_VER_SUFFIX}.py
 include/python${PY_VER_SUFFIX}/Python.h
-include/python${PY_VER_SUFFIX}/Python-ast.h
 include/python${PY_VER_SUFFIX}/abstract.h
 include/python${PY_VER_SUFFIX}/bitset.h
 include/python${PY_VER_SUFFIX}/boolobject.h
