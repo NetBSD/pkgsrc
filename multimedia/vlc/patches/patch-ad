@@ -1,18 +1,24 @@
-$NetBSD: patch-ad,v 1.5 2008/02/28 16:18:53 kefren Exp $
-Index: modules/demux/mp4/mp4.c
-===================================================================
---- modules/demux/mp4/mp4.c	(revision 24943)
-+++ modules/demux/mp4/mp4.c	(revision 24944)
-@@ -1151,6 +1151,12 @@
-         for( i_chunk = p_stsc->data.p_stsc->i_first_chunk[i_index] - 1;
-              i_chunk < i_last; i_chunk++ )
-         {
-+            if( i_chunk >= p_demux_track->i_chunk_count )
-+            {
-+                msg_Warn( p_demux, "corrupted chunk table" );
-+                return VLC_EGENERIC;
-+            }
-+
-             p_demux_track->chunk[i_chunk].i_sample_description_index =
-                     p_stsc->data.p_stsc->i_sample_description_index[i_index];
-             p_demux_track->chunk[i_chunk].i_sample_count =
+$NetBSD: patch-ad,v 1.6 2008/04/20 15:31:03 tonnerre Exp $
+
+Fix compilability of CDDA code with modern libcdio versions.
+
+--- modules/access/cdda/cdda.h.orig	2008-03-23 22:41:48.000000000 +0000
++++ modules/access/cdda/cdda.h
+@@ -75,7 +75,7 @@ typedef enum {
+   paranoia_none    = 0, /* Note: We make use of 0 as being the same as false */
+   paranoia_overlap = 1, 
+   paranoia_full    = 2
+-} paranoia_mode_t;
++} vlc_paranoia_mode_t;
+ 
+   
+ /*****************************************************************************
+@@ -107,7 +107,7 @@ typedef struct cdda_data_s
+ 
+ #if LIBCDIO_VERSION_NUM >= 72
+   /* Paranoia support */
+-  paranoia_mode_t e_paranoia;         /* Use cd paranoia for reads? */
++  vlc_paranoia_mode_t e_paranoia;     /* Use cd paranoia for reads? */
+   cdrom_drive_t *paranoia_cd;         /* Place to store drive
+ 					 handle given by paranoia. */
+   cdrom_paranoia_t *paranoia;
