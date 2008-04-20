@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.794 2008/04/20 16:08:34 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.795 2008/04/20 17:20:33 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1507,3 +1507,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/vlc to 0.8.6f [tonnerre 2008-04-20]
 	Updated print/xpdf to 3.02pl2nb1 [tonnerre 2008-04-20]
 	Updated devel/opengrok to 0.6.1 [adrianp 2008-04-20]
+	Updated mail/dkim-milter to 2.5.4 [adrianp 2008-04-20]
