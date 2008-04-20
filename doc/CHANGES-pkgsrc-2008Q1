@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.11 2008/04/20 08:52:09 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.12 2008/04/20 15:57:22 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -28,3 +28,5 @@ pullup ticket 2338 - requested by joerg
 LP64 platform fixes
 pullup ticket #2340 - requested by tonnerre
 fix temprorary file handling, shell escaping
+pullup ticket #2334 - requested by drochner
+security updates for python24
