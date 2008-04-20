@@ -1,0 +1,15 @@
+$NetBSD: patch-bh,v 1.1 2008/04/20 22:37:07 dbj Exp $
+
+--- src/osdep/unix/os_osx.h.orig	2006-12-07 17:08:07.000000000 -0800
++++ src/osdep/unix/os_osx.h	2008-04-20 13:00:37.000000000 -0700
+@@ -43,6 +43,10 @@
+ 
+ #define checkpw Checkpw
+ 
++#if __DARWIN_UNIX03
++#define setpgrp setpgid
++#endif
++
+ #include "env_unix.h"
+ #include "fs.h"
+ #include "ftl.h"
