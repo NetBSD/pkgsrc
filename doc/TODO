@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7225 2008/04/19 07:57:17 obache Exp $
+$NetBSD: TODO,v 1.7226 2008/04/20 17:48:03 adrianp Exp $
 
 Suggested new packages
 ======================
@@ -421,7 +421,6 @@ Suggested package updates
 	o ap2-suphp-0.6.2
 	o ap2-transform-0.6.0
 	o apache-ant15-1.7.0
-	o apache-tomcat-5.5.25
 	o apache-tomcat55-6.0.14
 	o apsfilter-7.2.8
 	o aqsis-1.2
@@ -464,7 +463,6 @@ Suggested package updates
 	o benchfft-3.1
 	o bftpd-2.2
 	o biew-5.6.4
-	o bind-8.4.7
 	o bind-9.4.2
 	o binutils-2.18
 	o bioperl-1.5.0
