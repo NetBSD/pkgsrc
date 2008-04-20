@@ -1,4 +1,4 @@
-# $NetBSD: pkg-config.mk,v 1.8 2007/03/05 23:35:59 rillig Exp $
+# $NetBSD: pkg-config.mk,v 1.9 2008/04/20 19:32:31 jmmv Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -43,14 +43,16 @@ _PKG_CONFIG_LIBDIR?=	${BUILDLINK_DIR}/lib/pkgconfig:${BUILDLINK_DIR}/share/pkgco
 _PKG_CONFIG_LOG?=	${WRKDIR}/.pkg-config.log
 
 TOOLS_SCRIPT.pkg-config=	\
-	PKG_CONFIG_LIBDIR=${_PKG_CONFIG_LIBDIR:Q} ${TOOLS_SCRIPT_DFLT.pkg-config}
+	PKG_CONFIG_LIBDIR=${_PKG_CONFIG_LIBDIR:Q} PKG_CONFIG_PATH= ${TOOLS_SCRIPT_DFLT.pkg-config}
 
 CONFIGURE_ENV+=	PKG_CONFIG=${TOOLS_CMD.pkg-config:Q}
 CONFIGURE_ENV+=	PKG_CONFIG_LIBDIR=${_PKG_CONFIG_LIBDIR:Q}
 CONFIGURE_ENV+=	PKG_CONFIG_LOG=${_PKG_CONFIG_LOG:Q}
+CONFIGURE_ENV+=	PKG_CONFIG_PATH=
 MAKE_ENV+=	PKG_CONFIG=${TOOLS_CMD.pkg-config:Q}
 MAKE_ENV+=	PKG_CONFIG_LIBDIR=${_PKG_CONFIG_LIBDIR:Q}
 MAKE_ENV+=	PKG_CONFIG_LOG=${_PKG_CONFIG_LOG:Q}
+MAKE_ENV+=	PKG_CONFIG_PATH=
 
 .if defined(PKG_DEVELOPER)
 post-build: pkgconfig-post-build
