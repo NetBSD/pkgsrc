@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.51 2008/04/12 22:43:08 jlam Exp $
+# $NetBSD: Makefile,v 1.52 2008/04/20 15:31:02 tonnerre Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
+VLC_VER=		0.8.6f
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VER}/
 EXTRACT_SUFX=		.tar.bz2
-PKGREVISION=		3
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.videolan.org/
@@ -18,8 +18,6 @@ GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 USE_LANGUAGES=		c c++
 USE_DIRS+=		xdg-1.4
-
-VLC_VER=		0.8.6d
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
