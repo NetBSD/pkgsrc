@@ -1,0 +1,20 @@
+Fix stalling issue with OpenSSL and Jabber
+From http://bugs.bitlbee.org/bitlbee/changeset/devel%2C359
+
+$NetBSD: patch-ac,v 1.1 2008/04/20 09:29:45 tonio Exp $
+
+--- lib/ssl_nss.c.orig	Sat Jun 30 23:18:42 2007
++++ lib/ssl_nss.c
+@@ -168,6 +168,12 @@ int ssl_write( void *conn, const char *b
+ 	return( PR_Write ( ((struct scd*)conn)->prfd, buf, len ) );
+ }
+ 
++/* See ssl_openssl.c for an explanation. */
++int ssl_pending( void *conn )
++{
++	return 0;
++}
++
+ void ssl_disconnect( void *conn_ )
+ {
+ 	struct scd *conn = conn_;
