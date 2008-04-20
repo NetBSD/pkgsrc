@@ -1,4 +1,4 @@
-$NetBSD: README.MacOSX,v 1.4 2004/10/24 11:17:45 grant Exp $
+$NetBSD: README.MacOSX,v 1.5 2008/04/20 02:58:51 rtr Exp $
 
 Please read "README.Darwin" as well, as everything there also applies
 to Mac OS X.
@@ -41,6 +41,10 @@ Tools package. Depending on the version of OS X you are running, you
 may have this on CD. If not, you can download it from Apple's
 Developer Connection. (You will need to register for a free ADC
 account.) See http://developer.apple.com/macosx/ for details.
+
+Note for MacOS X 1.4 (Tiger) you will need to download xcode 2.5
+if you intend to use gcc 4.  gcc 4.0.0 bundled with xcode 2.0 on
+the desktop installation dvds builds broken pkg_install tools.
 
 If you plan to build packages that use the X11 Window System, you will
 also need to make sure you have X11 installed. OS X 10.3 (Panther)
