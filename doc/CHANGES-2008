@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.790 2008/04/20 12:22:58 reinoud Exp $
+$NetBSD: CHANGES-2008,v 1.791 2008/04/20 13:18:12 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1503,3 +1503,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/gtksourceview-sharp2 to 0.12 [kefren 2008-04-19]
 	Updated www/mono-xsp to 1.9 [kefren 2008-04-19]
 	Updated misc/udfclient to 0.6.2 reinoud 2008-04-19]
+	Updated misc/openoffice2-bin to 2.4.0 [tron 2008-04-20]
