@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.791 2008/04/20 13:18:12 tron Exp $
+$NetBSD: CHANGES-2008,v 1.792 2008/04/20 15:32:02 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1504,3 +1504,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/mono-xsp to 1.9 [kefren 2008-04-19]
 	Updated misc/udfclient to 0.6.2 reinoud 2008-04-19]
 	Updated misc/openoffice2-bin to 2.4.0 [tron 2008-04-20]
+	Updated multimedia/vlc to 0.8.6f [tonnerre 2008-04-20]
