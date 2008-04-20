@@ -87,6 +87,16 @@ AC_CHECK_HEADERS([sys/cdefs.h sys/file.h sys/ioctl.h sys/param.h \
 AC_CHECK_FUNCS([chflags dbopen __db185_open tgetent vfork])
 AC_CHECK_FUNCS([getrlimit setrlimit])
 
+AC_SEARCH_LIBS([gethostbyname], [nsl])
+AC_SEARCH_LIBS([socket],
+               [socket],
+               [],
+               [AC_CHECK_LIB([socket],
+                             [socket],
+                             [LIBS="-lsocket -lnsl $LIBS"],
+                             [],
+                             [-lnsl])])
+
 dnl Check for types
 AC_TYPE_UINT8_T
 AC_TYPE_UINT16_T
