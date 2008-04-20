@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2007/08/03 17:03:29 obache Exp $
+$NetBSD: distinfo,v 1.33 2008/04/20 22:37:06 dbj Exp $
 
 SHA1 (imap-2006j2.tar.Z) = 41fc3f8cf11f1931a9c046240bc04ceb9f1416c0
 RMD160 (imap-2006j2.tar.Z) = 9192720a527e8977ef6e3eb6bcf8f3b26680e4fc
@@ -35,3 +35,4 @@ SHA1 (patch-bd) = 303a47372f9fdd6fd57fae9d3073e40620dc98f4
 SHA1 (patch-be) = 73afbc9f3c65d3adce37a3f1ee7f55e0ec665a54
 SHA1 (patch-bf) = 63c582e88bd6286295d5d9639bafec355278d537
 SHA1 (patch-bg) = c95483ed73d7c6015df99967c0509cf0ea67d28f
+SHA1 (patch-bh) = c43dc5df9fb61ea44b5195fc15c697e5f540dfae
