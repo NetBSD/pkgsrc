@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2008/03/09 15:09:26 adrianp Exp $
+$NetBSD: patch-aa,v 1.5 2008/04/20 17:20:20 adrianp Exp $
 
---- devtools/Site/site.config.m4.orig	2008-03-09 11:23:02.000000000 +0000
-+++ devtools/Site/site.config.m4	2008-03-09 12:49:32.000000000 +0000
-@@ -11,7 +11,7 @@
+--- devtools/Site/site.config.m4.orig	2008-04-20 17:49:29.000000000 +0100
++++ devtools/Site/site.config.m4
+@@ -11,7 +11,7 @@ dnl
  dnl If you are encountering coredumps and want to be able to analyze them
  dnl using something like "gdb", enable this next line by deleting the "dnl"
  dnl at the front of it.
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.4 2008/03/09 15:09:26 adrianp Exp $
  
  dnl Shared library for libdkim
  dnl
-@@ -26,7 +26,7 @@
+@@ -26,7 +26,7 @@ dnl If you want libdkim and dkim.h to be
  dnl the package, enable this next line by deleting the "dnl" at the front
  dnl of it.  This is done automatically if you've requested the shared
  dnl library.
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.4 2008/03/09 15:09:26 adrianp Exp $
  
  dnl Faster strtoul()/strtoull() implementations
  dnl
-@@ -40,7 +40,7 @@
+@@ -40,7 +40,7 @@ dnl libar -- asynchronous resolver libra
  dnl
  dnl If you want to use the asynchronous resolver library, enable this
  dnl next line by deleting the "dnl" at the front of it.
@@ -29,7 +29,7 @@ $NetBSD: patch-aa,v 1.4 2008/03/09 15:09:26 adrianp Exp $
  dnl 
  dnl libar normally uses res_init() or res_ninit() to load the contents
  dnl of resolv.conf for its use.  If neither of these work on your system
-@@ -49,7 +49,7 @@
+@@ -49,7 +49,7 @@ dnl may need to enable code that parses 
  dnl also be required if you've got any IPv6 addresses in /etc/resolv.conf.
  dnl In that case, enable this next line by deleting the "dnl" at the front
  dnl of it.
@@ -38,7 +38,7 @@ $NetBSD: patch-aa,v 1.4 2008/03/09 15:09:26 adrianp Exp $
  
  dnl POPAUTH -- POP-before-SMTP authentication
  dnl
-@@ -87,6 +87,14 @@
+@@ -87,6 +87,14 @@ dnl have v0.9.8 or later for SHA256 supp
  dnl lines by deleting "dnl" from the front of them and edit paths as needed.
  dnl APPENDDEF(`confINCDIRS', `-I/usr/local/ssl/include ')
  dnl APPENDDEF(`confLIBDIRS', `-L/usr/local/ssl/lib ')
@@ -53,15 +53,19 @@ $NetBSD: patch-aa,v 1.4 2008/03/09 15:09:26 adrianp Exp $
  
  dnl TRE -- Approximate regular expression matching
  dnl
-@@ -117,6 +125,7 @@
- dnl APPENDDEF(`confENVDEF', `-D_FFR_STATS ')
+@@ -116,9 +124,10 @@ dnl APPENDDEF(`confENVDEF', `-D_FFR_REPL
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_REQUIRED_HEADERS ')
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_SELECT_CANONICALIZATION ')
+ dnl APPENDDEF(`confENVDEF', `-D_FFR_SELECTOR_HEADER ')
+-dnl APPENDDEF(`confENVDEF', `-D_FFR_STATS ')
++@STATS@ APPENDDEF(`confENVDEF', `-D_FFR_STATS ')
  dnl APPENDDEF(`confENVDEF', `-D_FFR_VBR ')
  dnl APPENDDEF(`confENVDEF', `-D_FFR_ZTAGS ')
 +@INET6@ APPENDDEF(`confENVDEF', `-DNETINET6 ')
  
  dnl DomainKeys -- Yahoo DomainKeys verification support
  dnl 
-@@ -130,8 +139,8 @@
+@@ -132,8 +141,8 @@ dnl
  dnl This must be in the search rules for your compile.  If necessary,
  dnl adjust the paths below and enable the lines by deleting "dnl" from the
  dnl front of them.
@@ -72,7 +76,7 @@ $NetBSD: patch-aa,v 1.4 2008/03/09 15:09:26 adrianp Exp $
  
  dnl smfi_addheader() -- older versions of libmilter
  dnl
-@@ -140,3 +150,21 @@
+@@ -142,3 +151,22 @@ dnl primitive, you can enable this to ha
  dnl instead.  It will still work, but it breaks the DKIM specification.
  dnl To enable this, remove the "dnl" from the front of the line.
  dnl APPENDDEF(`conf_dkim_filter_ENVDEF', `-DNO_SMFI_INSHEADER ')
@@ -94,4 +98,4 @@ $NetBSD: patch-aa,v 1.4 2008/03/09 15:09:26 adrianp Exp $
 +
 +dnl option fixes for pkgsrc
 +dnl
-+define(`confLIBSEARCH', `db @RESOLVLIB@')
++define(`confLIBSEARCH', `@DBLIB@ @RESOLVLIB@')
