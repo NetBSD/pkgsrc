@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.101 2008/04/04 15:33:05 jlam Exp $
+# $NetBSD: Makefile,v 1.102 2008/04/20 02:48:38 jnemeth Exp $
 #
 
 COMMENT=	Archivers
@@ -59,8 +59,8 @@ SUBDIR+=	php-zlib
 SUBDIR+=	ppmd
 SUBDIR+=	ppunpack
 SUBDIR+=	rar
-SUBDIR+=	ruby-archive-tar-minitar
 SUBDIR+=	rox-archive
+SUBDIR+=	ruby-archive-tar-minitar
 SUBDIR+=	ruby-zip
 SUBDIR+=	rzip
 SUBDIR+=	sarab
