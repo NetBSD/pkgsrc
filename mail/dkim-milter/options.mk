@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2008/04/12 22:43:03 jlam Exp $
+# $NetBSD: options.mk,v 1.5 2008/04/20 17:20:20 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dkim-milter
-PKG_SUPPORTED_OPTIONS=	inet6 dkim-milter-arlib debug
+PKG_SUPPORTED_OPTIONS=	inet6 dkim-milter-arlib debug dkim-stats
 
 .include "../../mk/bsd.options.mk"
 
@@ -34,4 +34,20 @@ SUBST_SED.libs+=	-e 's|@ARLIB@||g'
 .else
 SUBST_SED.libs+=	-e 's|@RESOLVLIB@|resolv bind|g'
 SUBST_SED.libs+=	-e 's|@ARLIB@|dnl|g'
+.endif
+
+###
+### Install dkim-stats(8) which outputs dkim-milter statistics
+###
+.if !empty(PKG_OPTIONS:Mdkim-stats)
+.include "../../mk/db1.builtin.mk"
+PLIST_SUBST+=		WITH_STATS=''
+SUBST_SED.libs+=	-e 's|@STATS@||g'
+SUBST_SED.libs+=	-e 's|@MAN_STATS@|dkim-stats.8|g'
+SUBST_SED.libs+=	-e 's|@DBLIB@|db|g'
+.else
+PLIST_SUBST+=		WITH_STATS='@comment '
+SUBST_SED.libs+=	-e 's|@STATS@|dnl|g'
+SUBST_SED.libs+=	-e 's|@MAN_STATS@||g'
+SUBST_SED.libs+=	-e 's|@DBLIB@||g'
 .endif
