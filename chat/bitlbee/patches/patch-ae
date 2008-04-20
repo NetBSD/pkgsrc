@@ -1,7 +1,7 @@
+$NetBSD: patch-ae,v 1.2 2008/04/20 09:31:05 tonio Exp $
+
 Fix stalling issue with OpenSSL and Jabber
 From http://bugs.bitlbee.org/bitlbee/changeset/devel%2C359
-
-$NetBSD: patch-ae,v 1.1 2008/04/20 09:29:45 tonio Exp $
 
 --- protocols/jabber/io.c.orig	Sat Feb 16 23:39:47 2008
 +++ protocols/jabber/io.c
