@@ -58,6 +58,7 @@ djbfft-ppro		Optimize for Pentium{Pro,II,III} processors.
 djbfft-sparc		Optimize for UltraSPARC-{I,II} processors.
 djbware-errno-hack	Patch to #include <errno.h> for correctness.
 dkim-milter-arlib	ar(3) support for dkim-milter
+dkim-stats		dkim-stats(8) support for dkim-milter
 dnsrbl			Enable DNS Real-time Blackhole List support.
 doc			Include the documentation.
 drac			Enable DRAC support.
