@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 09:59:24 agc Exp $
+$NetBSD: distinfo,v 1.7 2008/04/20 22:47:15 dbj Exp $
 
 SHA1 (mailsync_5.2.1.orig.tar.gz) = ce32305c5d2d659ecc41d81036a78a346e97ebe0
 RMD160 (mailsync_5.2.1.orig.tar.gz) = b6aeecee769f67978632bf582ba4df3711fcca69
 Size (mailsync_5.2.1.orig.tar.gz) = 139967 bytes
-SHA1 (patch-ac) = 7805db2f99a0c06c19b30cec3bf3367cf445f717
+SHA1 (patch-ac) = 168e2342fd2a8018098bc96e66595b489d0b5a50
+SHA1 (patch-ad) = f2fb59051d63982ee9cf80bace545363dd510ee7
