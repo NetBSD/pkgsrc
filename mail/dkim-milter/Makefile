@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2008/04/06 12:59:11 adrianp Exp $
+# $NetBSD: Makefile,v 1.15 2008/04/20 17:20:20 adrianp Exp $
 
-DISTNAME=	dkim-milter-2.5.2
+DISTNAME=	dkim-milter-2.5.4
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dkim-milter/}
 
@@ -36,6 +36,7 @@ SUBST_CLASSES+=		libs
 SUBST_STAGE.libs=	pre-configure
 SUBST_FILES.libs=	devtools/Site/site.config.m4
 SUBST_FILES.libs+=	dkim-filter/dkim-filter.conf.5 dkim-filter/dkim-stats.8
+SUBST_FILES.libs+=	dkim-filter/Makefile.m4
 SUBST_SED.libs+=	-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g'
 SUBST_SED.libs+=	-e 's|@LMBASE@|${BUILDLINK_PREFIX.libmilter}|g'
 SUBST_SED.libs+=	-e 's|@PTHREAD@|${BUILDLINK_PREFIX.pthread}|g'
@@ -91,6 +92,13 @@ post-install:
 	cd ${WRKSRC}/obj.`uname -s`.`uname -r`.`uname -m`/libar && \
 		${INSTALL_LIB} libar.a ${PREFIX}/lib && \
 		${INSTALL_MAN} ar.3 ${PREFIX}/${PKGMANDIR}/man3
+.	endif
+
+.	if !empty(PKG_OPTIONS:Mdkim-stats)
+	cd ${WRKSRC}/obj.`uname -s`.`uname -r`.`uname -m`/dkim-filter && \
+		${INSTALL_PROGRAM} dkim-stats ${PREFIX}/bin && \
+		${INSTALL_MAN} ${WRKSRC}/dkim-filter/dkim-stats.8 \
+			${PREFIX}/${PKGMANDIR}/man8
 .	endif
 
 .include "../../security/openssl/buildlink3.mk"
