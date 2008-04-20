@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/02/20 12:04:56 xtraeme Exp $
+# $NetBSD: Makefile,v 1.7 2008/04/20 20:38:53 heinz Exp $
 
 DISTNAME=	ffmpeg-${DISTVERSION}
 PKGNAME=	ffmpeg-devel-${DISTVERSION:S/-//g}
@@ -11,7 +11,7 @@ HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
 COMMENT=	MPEG decoding, encoding and streaming software
 
 DISTVERSION=	2007-10-04
-#PKG_DESTDIR_SUPPORT=	user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	YES
 USE_LIBTOOL=	YES
