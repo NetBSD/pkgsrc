@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2008/01/07 13:33:28 joerg Exp $
+$NetBSD: patch-aa,v 1.4.2.1 2008/04/20 04:08:03 rtr Exp $
 
---- configure.orig	2007-12-18 22:45:04.000000000 +0100
-+++ configure
-@@ -193,6 +193,10 @@ case $host_os in
+--- configure.orig	2007-12-18 21:45:04.000000000 +0000
++++ configure	2008-04-09 19:10:28.000000000 +0100
+@@ -193,6 +193,10 @@
      SYS="FREEBSD"
      LDFLAGS="$LDFLAGS -lm"
      ;;
@@ -13,7 +13,7 @@ $NetBSD: patch-aa,v 1.4 2008/01/07 13:33:28 joerg Exp $
    kfreebsd*-gnu)
      SYS="FREEBSD"
      CFLAGS="$CFLAGS -DHAVE_MALLOC_H"
-@@ -245,14 +249,12 @@ case $host_cpu in
+@@ -245,14 +249,12 @@
        ASFLAGS="$ASFLAGS -f macho -DPREFIX"
      elif [ "$SYS" = CYGWIN -o "$SYS" = MINGW ]; then
        ASFLAGS="$ASFLAGS -f win32 -DPREFIX"
@@ -29,3 +29,17 @@ $NetBSD: patch-aa,v 1.4 2008/01/07 13:33:28 joerg Exp $
      ARCH="X86_64"
      AS="yasm"
      if [ "$SYS" = MACOSX ];then
+@@ -264,11 +266,11 @@
+     fi
+     ;;
+   powerpc|powerpc64)
+-    ARCH="PPC"
+     if [ $SYS = MACOSX ]
+     then
+-      ALTIVECFLAGS="$ALTIVECFLAGS -faltivec -fastf -mcpu=G4"
++      ARCH="POWERPC"
+     else
++      ARCH="PPC"
+       ALTIVECFLAGS="$ALTIVECFLAGS -maltivec -mabi=altivec"
+     fi
+     ;;
