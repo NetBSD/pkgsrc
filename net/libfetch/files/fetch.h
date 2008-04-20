@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.h,v 1.6 2008/04/19 14:49:23 joerg Exp $	*/
+/*	$NetBSD: fetch.h,v 1.7 2008/04/20 15:29:26 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -145,6 +145,7 @@ int		 fetchList(struct url_list *, struct url *, const char *,
 struct url	*fetchMakeURL(const char *, const char *, int,
 		     const char *, const char *, const char *);
 struct url	*fetchParseURL(const char *);
+struct url	*fetchCopyURL(const struct url *);
 void		 fetchFreeURL(struct url *);
 
 /* URL listening */

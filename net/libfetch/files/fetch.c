@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.c,v 1.4 2008/04/19 14:49:23 joerg Exp $	*/
+/*	$NetBSD: fetch.c,v 1.5 2008/04/20 15:29:26 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -294,6 +294,31 @@ fetchMakeURL(const char *scheme, const char *host, int port, const char *doc,
 	u->port = port;
 
 	return (u);
+}
+
+/*
+ * Copy an existing URL.
+ */
+struct url *
+fetchCopyURL(const struct url *src)
+{
+	struct url *dst;
+	char *doc;
+
+	/* allocate struct url */
+	if ((dst = malloc(sizeof(*dst))) == NULL) {
+		fetch_syserr();
+		return (NULL);
+	}
+	if ((doc = strdup(src->doc)) == NULL) {
+		fetch_syserr();
+		free(dst);
+		return (NULL);
+	}
+	*dst = *src;
+	dst->doc = doc;
+
+	return dst;
 }
 
 /*
