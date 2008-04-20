@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.32 2008/03/29 03:00:57 obache Exp $
+$NetBSD: distinfo,v 1.33 2008/04/20 15:48:12 tonnerre Exp $
 
 SHA1 (xpdf-3.02.tar.gz) = f9940698840c8a8045677e8be68ab8580903e20a
 RMD160 (xpdf-3.02.tar.gz) = e900cb8670b8c430beaa45895fb474411cb1958d
@@ -24,4 +24,6 @@ SHA1 (patch-al) = b6e958b0592ac285b3ade90079c83da30db8a8b6
 SHA1 (patch-am) = 794ff952c749c8dab6f575d55602cdc7e7157fef
 SHA1 (patch-an) = 94ea208c43f4df1ac3a9bf01cc874d488ae49a9a
 SHA1 (patch-ap) = 5961dfe22ac087a7df0311235b4fab27d7554c58
+SHA1 (patch-aq) = 1df0efb9fdde90df0597ba2a56c6030e7446e185
+SHA1 (patch-ar) = 5e4719a30a0412d9d731dbef8179c38bba67db94
 SHA1 (patch-bb) = d38757d5e4a331d49149acfff897cfe7bc0a5e3b
