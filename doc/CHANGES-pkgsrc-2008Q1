@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.9 2008/04/20 04:09:10 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.10 2008/04/20 04:20:05 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -24,3 +24,5 @@ Pullup ticket 2335 - requested by wiz
 security update for png
 pullup ticket 2329 - requested by tron
 fix package build on macosx/ppc machines
+pullup ticket 2338 - requested by joerg
+LP64 platform fixes
