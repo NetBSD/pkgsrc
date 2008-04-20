@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.7 2008/04/20 17:20:20 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/04/20 17:36:15 adrianp Exp $
 ${PLIST.arlib}lib/libar.a
 ${PLIST.arlib}man/man3/ar.3
 lib/libdkim.a
 include/dkim.h
 libexec/dkim-filter
 bin/dkim-genkey
-${WITH_STATS}bin/dkim-stats
+${PLIST.stats}bin/dkim-stats
 bin/dkim-testkey
 bin/dkim-testssp
 man/man5/dkim-filter.conf.5
 man/man8/dkim-filter.8
 man/man8/dkim-genkey.8
-${WITH_STATS}man/man8/dkim-stats.8
+${PLIST.stats}man/man8/dkim-stats.8
 man/man8/dkim-testkey.8
 man/man8/dkim-testssp.8
 share/doc/dkim-milter/FEATURES
