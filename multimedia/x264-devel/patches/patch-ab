@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.6 2008/03/31 16:16:00 tron Exp $
+$NetBSD: patch-ab,v 1.6.2.1 2008/04/20 04:08:03 rtr Exp $
 
 --- Makefile.orig	2007-12-18 21:45:04.000000000 +0000
 +++ Makefile	2008-03-31 17:09:28.000000000 +0100
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.6 2008/03/31 16:16:00 tron Exp $
  ASFLAGS += -Icommon/i386/
  endif
  endif
-@@ -40,31 +40,33 @@
+@@ -40,31 +40,31 @@
            common/amd64/mc-a2.asm common/amd64/predict-a.asm \
            common/amd64/pixel-sse2.asm common/amd64/quant-a.asm \
            common/amd64/deblock-a.asm
@@ -23,14 +23,12 @@ $NetBSD: patch-ab,v 1.6 2008/03/31 16:16:00 tron Exp $
  
  # AltiVec optims
  ifeq ($(ARCH),PPC)
-+ifneq ($(SYS),MACOSX)
  ALTIVECSRC += common/ppc/mc.c common/ppc/pixel.c common/ppc/dct.c \
                common/ppc/quant.c common/ppc/deblock.c \
                common/ppc/predict.c
  SRCS += $(ALTIVECSRC)
 -$(ALTIVECSRC:%.c=%.o): CFLAGS += $(ALTIVECFLAGS)
 +$(ALTIVECSRC:%.c=%.lo): CFLAGS += $(ALTIVECFLAGS)
-+endif
  endif
  
  # VIS optims
