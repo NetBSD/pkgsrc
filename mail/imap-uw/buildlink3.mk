@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.13 2008/01/18 05:08:25 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.14 2008/04/20 22:41:57 dbj Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 IMAP_UW_BUILDLINK3_MK:=	${IMAP_UW_BUILDLINK3_MK}+
@@ -15,10 +15,13 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}imap-uw
 
 .if !empty(IMAP_UW_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.imap-uw+=	imap-uw>=2004
-BUILDLINK_ABI_DEPENDS.imap-uw+=	imap-uw>=2006j2nb4
+BUILDLINK_ABI_DEPENDS.imap-uw+=	imap-uw>=2006j2nb5
 BUILDLINK_PKGSRCDIR.imap-uw?=	../../mail/imap-uw
 . if ${OPSYS} == "Darwin"
 BUILDLINK_LDFLAGS.imap-uw+=	-flat_namespace
+# install will strip the c-client library callback
+# function symbols from the executable unless we do this:
+INSTALL_UNSTRIPPED?=	yes
 . endif
 .endif	# IMAP_UW_BUILDLINK3_MK
 
