@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/02/20 11:01:37 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/21 14:43:20 xtraeme Exp $
 #
 
 DISTNAME=	Cairo-${DIST_VER}
@@ -13,7 +13,7 @@ COMMENT=	Perl bindings to the cairo graphics library
 
 USE_TOOLS+=	pkg-config
 
-DIST_VER=	1.045
+DIST_VER=	1.060
 
 DEPENDS+=	p5-ExtUtils-Depends>=0.2:../../devel/p5-ExtUtils-Depends
 DEPENDS+=	p5-ExtUtils-PkgConfig>=1:../../devel/p5-ExtUtils-PkgConfig
