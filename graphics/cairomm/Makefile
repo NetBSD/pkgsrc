@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.6 2007/11/18 08:44:49 adam Exp $
+# $NetBSD: Makefile,v 1.7 2008/04/21 15:00:18 adam Exp $
 
-DISTNAME=	cairomm-1.4.6
+DISTNAME=	cairomm-1.6.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
 
