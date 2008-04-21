@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7229 2008/04/21 15:01:22 adam Exp $
+$NetBSD: TODO,v 1.7230 2008/04/21 17:11:57 bjs Exp $
 
 Suggested new packages
 ======================
@@ -1455,7 +1455,6 @@ Suggested package updates
 	o xscreensaver-5.05
 	o xskat-4.0
 	o xsoldier-1.4
-	o xterm-234
 	o xtraceroute-0.9.1
 	o xtrans-1.1
 	o xtu-1.3
