@@ -1,5 +1,5 @@
-Heel is a mongrel based web server to quickly and easily serve up the
-contents of a directory as webpages.  Beyond just serving up webpages
-heel uses an ERB template and famfamfam icons to create useful index
-pages.  And to make things even easier it launches your browser for
-you so no cut and paste necessary.
+Heel is a small static web server for use when you need a quick web
+server for a directory.  Heel is built using Rack and Thin.  Beyond just
+serving up webpages, heel uses an ERB template and famfamfam icons to
+create useful index pages.  And to make things even easier it launches
+your browser for you so no cut and paste necessary.
