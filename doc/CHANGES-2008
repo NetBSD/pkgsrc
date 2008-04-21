@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.805 2008/04/21 15:01:22 adam Exp $
+$NetBSD: CHANGES-2008,v 1.806 2008/04/21 15:44:16 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1520,3 +1520,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated fonts/fontforge to 20080330 [adam 2008-04-21]
 	Updated x11/p5-gtk2 to 1.182 [xtraeme 2008-04-21]
 	Updated graphics/cairomm to 1.6.0 [adam 2008-04-21]
+	Updated security/libfwbuilder21 to 2.1.18 [adam 2008-04-21]
+	Updated security/fwbuilder21 to 2.1.18 [adam 2008-04-21]
