@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.8 2008/04/19 14:49:23 joerg Exp $	*/
+/*	$NetBSD: common.c,v 1.9 2008/04/21 21:15:53 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -661,7 +661,7 @@ fetch_add_entry(struct url_list *ue, struct url *base, const char *name)
 	memcpy(tmp_name, base->doc, base_doc_len);
 	tmp_name[base_doc_len] = '/';
 	memcpy(tmp_name + base_doc_len + 1, name, name_len);
-	tmp_name[base_doc_len + name_len + 1] = '/';
+	tmp_name[base_doc_len + name_len + 1] = '\0';
 	tmp->doc = tmp_name;
 	tmp->offset = 0;
 	tmp->length = 0;
