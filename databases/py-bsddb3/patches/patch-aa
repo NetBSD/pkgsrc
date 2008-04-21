@@ -1,8 +1,20 @@
-$NetBSD: patch-aa,v 1.4 2006/01/10 21:06:31 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2008/04/21 20:11:58 drochner Exp $
 
---- setup.py.orig	2005-06-03 09:27:21.000000000 +0200
+--- setup.py.orig	2008-03-25 14:50:51.000000000 +0100
 +++ setup.py
-@@ -194,11 +194,11 @@ if os.name == 'posix':
+@@ -7,10 +7,7 @@ import re
+ import sys
+ import glob
+ 
+-try :
+-  from setuptools import setup, Extension
+-except :
+-  from distutils.core import setup, Extension
++from distutils.core import setup, Extension
+ 
+ from distutils.dep_util import newer
+ import distutils.ccompiler
+@@ -201,11 +198,11 @@ if os.name == 'posix':
  
      # figure out from the base setting where the lib and .h are
      if not incdir:

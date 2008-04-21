@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.26 2008/04/11 15:19:07 abs Exp $
+# $NetBSD: Makefile,v 1.27 2008/04/21 20:11:58 drochner Exp $
 #
 
-DISTNAME=	bsddb3-4.5.0
+DISTNAME=	bsddb3-4.6.3
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	databases python
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pybsddb/}
+MASTER_SITES=	http://pypi.python.org/packages/source/b/bsddb3/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://pybsddb.sourceforge.net/
+HOMEPAGE=	http://pypi.python.org/pypi/bsddb3/
 COMMENT=	Python extension module for Berkeley DB 4
 
 PKG_DESTDIR_SUPPORT=	user-destdir
