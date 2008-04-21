@@ -1,4 +1,4 @@
-/*	$NetBSD: stdio.h,v 1.2 2007/06/25 21:35:06 joerg Exp $	*/
+/*	$NetBSD: stdio.h,v 1.3 2008/04/21 22:24:43 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -63,12 +63,12 @@ int	pclose(FILE *);
 char	*fgetln(FILE *, size_t *);
 #endif
 
-#if !HAVE_SNPRINTF
+#if !HAVE_DECL_SNPRINTF
 int	snprintf(char *, size_t, const char *, ...);
 int	vsnprintf(char *, size_t, const char *, va_list);
 #endif
 
-#if !HAVE_ASPRINTF
+#if !HAVE_DECL_ASPRINTF
 int	asprintf(char **, const char *, ...);
 int	vasprintf(char **, const char *, va_list);
 #endif
