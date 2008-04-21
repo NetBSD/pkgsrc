@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/01/25 18:21:18 bjs Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/04/21 17:10:40 bjs Exp $
 bin/koi8rxterm
 bin/resize
 bin/uxterm
@@ -11,10 +11,12 @@ man/man1/koi8rxterm.1
 man/man1/resize.1
 man/man1/uxterm.1
 man/man1/xterm.1
+share/applications/uxterm.desktop
+share/applications/xterm.desktop
 share/pixmaps/xterm-color_32x32.xpm
 share/pixmaps/xterm-color_48x48.xpm
 share/pixmaps/xterm_32x32.xpm
 share/pixmaps/xterm_48x48.xpm
 @comment in xdg-dirs: @dirrm share/pixmaps
-@comment @dirrm lib/X11/app-defaults
-@comment @dirrm lib/X11
+@comment in xdg-dirs: @dirrm share/applications
+@unexec ${RMDIR} %D/lib/X11/app-defaults 2>/dev/null || ${TRUE}

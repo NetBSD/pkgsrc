@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.40 2008/03/05 20:04:42 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2008/04/21 17:10:40 bjs Exp $
 
-DISTNAME=	xterm-231
-PKGREVISION=	1
+DISTNAME=	xterm-235
 CATEGORIES=	x11
 MASTER_SITES=	ftp://invisible-island.net/xterm/
 EXTRACT_SUFX=	.tgz
@@ -12,28 +11,36 @@ COMMENT=	Latest terminal emulator for the X Window System
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=	yes
-USE_DIRS+=	xdg-1.4
-WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
+GNU_CONFIGURE=		yes
+USE_DIRS+=		xdg-1.4
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+
+CONFIGURE_ARGS+=	--enable-88-color
+CONFIGURE_ARGS+=	--enable-256-color
+CONFIGURE_ARGS+=	--enable-luit
+CONFIGURE_ARGS+=	--enable-paste64
+CONFIGURE_ARGS+=	--enable-mini-luit
+CONFIGURE_ARGS+=	--enable-readline-mouse
+CONFIGURE_ARGS+=	--enable-toolbar	# Resource disabled by default
+
+CONFIGURE_ARGS.standard=# empty
+CONFIGURE_ARGS.3d=	--with-Xaw3d
+CONFIGURE_ARGS.xpm=	--with-Xaw3d
+CONFIGURE_ARGS.neXtaw=	--with-neXtaw
+CONFIGURE_ARGS+=	${${CONFIGURE_ARGS.${XAW_TYPE}}:L}
 
 .include "../../mk/bsd.prefs.mk"
 
 .if ${X11_TYPE} == "modular"
-CONFIGURE_ARGS+= --disable-imake --enable-narrowproto
+CONFIGURE_ARGS+=	--disable-imake
+CONFIGURE_ARGS+=	--enable-narrowproto
 .endif
 
 .if exists(/usr/include/wchar.h)
-CONFIGURE_ARGS+= --enable-wide-chars
-.endif
-
-.include "options.mk"
-
-.if ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+= --with-setuid
+CONFIGURE_ARGS+=	--enable-wide-chars
 .endif
 
 .include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 ###
 ### For detection of XKB bell extension.
@@ -41,5 +48,15 @@ CONFIGURE_ARGS+= --with-setuid
 BUILDLINK_DEPMETHOD.libxkbfile?=	build
 .include "../../x11/libxkbfile/buildlink3.mk"
 
+post-install:
+	 ${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/applications && \
+	 ${INSTALL_DATA} ${WRKSRC}/xterm.desktop \
+		${DESTDIR}${PREFIX}/share/applications && \
+	 ${INSTALL_DATA} ${WRKSRC}/uxterm.desktop \
+		${DESTDIR}${PREFIX}/share/applications
+
+.include "options.mk"
+
 .include "../../mk/termcap.buildlink3.mk"
+.include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
