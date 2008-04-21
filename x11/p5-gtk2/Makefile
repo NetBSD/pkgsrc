@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/02/20 11:07:29 xtraeme Exp $
+# $NetBSD: Makefile,v 1.24 2008/04/21 14:53:19 xtraeme Exp $
 
 DISTNAME=	Gtk2-${DIST_VER}
 PKGNAME=	p5-gtk2-${DIST_VER}
@@ -9,12 +9,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gtk2-perl.sourceforge.net/
 COMMENT=	Perl bindings for GTK+ 2.0
 
-DEPENDS+=	p5-ExtUtils-Depends>=0.2:../../devel/p5-ExtUtils-Depends
+DEPENDS+=	p5-ExtUtils-Depends>=0.300:../../devel/p5-ExtUtils-Depends
 DEPENDS+=	p5-ExtUtils-PkgConfig>=1.03:../../devel/p5-ExtUtils-PkgConfig
 
 USE_TOOLS+=	pkg-config
 
-DIST_VER=	1.164
+DIST_VER=	1.182
 
 PERL5_PACKLIST=	auto/Gtk2/.packlist
 
