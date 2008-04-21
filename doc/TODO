@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7230 2008/04/21 17:11:57 bjs Exp $
+$NetBSD: TODO,v 1.7231 2008/04/21 19:28:30 adam Exp $
 
 Suggested new packages
 ======================
@@ -654,9 +654,7 @@ Suggested package updates
 	o gkrellm-xmms-2.1.22
 	o glade3-3.4.3
 	o glchess-1.0.5
-	o glibmm-2.16.1
 	o global-5.6
-	o glpk-4.28
 	o gmpc-0.15.1
 	o gnash-0.8.1 [pkg/37639]
 	o gnash-0.8.2
