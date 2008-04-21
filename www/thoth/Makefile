@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2008/04/14 18:13:05 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/21 16:33:19 jlam Exp $
 
-DISTNAME=	thoth-0.1.3
+DISTNAME=	thoth-0.1.4
 CATEGORIES=	www
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
