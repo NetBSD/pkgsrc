@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.13 2008/04/20 19:02:03 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.14 2008/04/21 00:39:55 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -32,3 +32,5 @@ pullup ticket #2334 - requested by drochner
 security updates for python24
 Pullup ticket 2347 - requested by tonnerre
 security update for xpdf
+pullup ticket #2343 - requested by ghen
+update to latest firefox
