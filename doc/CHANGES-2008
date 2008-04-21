@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.808 2008/04/21 16:33:30 jlam Exp $
+$NetBSD: CHANGES-2008,v 1.809 2008/04/21 17:11:18 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1525,3 +1525,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/thin to 0.8.1 [jlam 2008-04-21]
 	Updated www/heel to 1.0.0 [jlam 2008-04-21]
 	Updated www/thoth to 0.1.4 [jlam 2008-04-21]
+	Updated x11/xterm to 235 [bjs 2008-04-21]
