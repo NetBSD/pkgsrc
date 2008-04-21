@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.c,v 1.5 2008/04/20 15:29:26 joerg Exp $	*/
+/*	$NetBSD: fetch.c,v 1.6 2008/04/21 17:15:31 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -450,4 +450,52 @@ fetchFreeURL(struct url *u)
 {
 	free(u->doc);
 	free(u);
+}
+
+static char
+xdigit2digit(char digit)
+{
+	digit = tolower((unsigned char)digit);
+	if (digit >= 'a' && digit <= 'f')
+		digit = digit - 'a' + 10;
+	else
+		digit = digit - '0';
+
+	return digit;
+}
+
+/*
+ * Extract the file name component of a URL.
+ */
+char *
+fetch_extract_filename(struct url *url)
+{
+	char *name, *name_iter;
+	const char *last_slash, *iter;
+
+	last_slash = url->doc;
+	if (*last_slash == '\0')
+		return strdup("");
+	for (iter = last_slash + 1; *iter; ++iter) {
+		if (*iter == '#' || *iter == '?')
+			break;
+		if (*iter == '/')
+			last_slash = iter;
+	}
+	if (last_slash + 1 == iter)
+		return strdup("");
+	name_iter = name = malloc(iter - last_slash);
+	while (++last_slash < iter) {
+		if (*last_slash != '%' ||
+		    !isxdigit((unsigned char)last_slash[1]) ||
+		    !isxdigit((unsigned char)last_slash[2])) {
+			*name_iter++ = *last_slash;
+			continue;
+		}
+		*name_iter++ = xdigit2digit(last_slash[1]) * 16 +
+		    xdigit2digit(last_slash[2]);
+		last_slash += 2;
+	}
+	*name_iter = '\0';
+	return name;
 }
