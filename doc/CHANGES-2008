@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.806 2008/04/21 15:44:16 adam Exp $
+$NetBSD: CHANGES-2008,v 1.807 2008/04/21 16:24:40 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1522,3 +1522,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/cairomm to 1.6.0 [adam 2008-04-21]
 	Updated security/libfwbuilder21 to 2.1.18 [adam 2008-04-21]
 	Updated security/fwbuilder21 to 2.1.18 [adam 2008-04-21]
+	Updated www/thin to 0.8.1 [jlam 2008-04-21]
+	Updated www/heel to 1.0.0 [jlam 2008-04-21]
