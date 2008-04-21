@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7227 2008/04/21 14:40:31 xtraeme Exp $
+$NetBSD: TODO,v 1.7228 2008/04/21 14:55:08 xtraeme Exp $
 
 Suggested new packages
 ======================
@@ -1053,7 +1053,6 @@ Suggested package updates
 	o p5-Time-HiRes-1.9707
 	o p5-XML-RAI-1.04
 	o p5-XML-Stream-1.22
-	o p5-gtk2-1.180
 	o p5-ispman-1.2
 	o p5-prefork-1.02
 	o p5-sybperl-2.18
