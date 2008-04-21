@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2008/04/21 16:33:19 jlam Exp $
+$NetBSD: distinfo,v 1.4 2008/04/21 16:35:05 jlam Exp $
 
 SHA1 (thoth-0.1.4.gem) = af5469d8b2932a133509cdd911f42767335e6755
 RMD160 (thoth-0.1.4.gem) = 94dc76bdc6ffeece6ed6c08afc073f7cc94ce264
 Size (thoth-0.1.4.gem) = 46592 bytes
-SHA1 (patch-aa) = d80c39b4e3b3ac93b356488cde65a6f0e0c723fe
+SHA1 (patch-aa) = 1b154c2f0ff7c6817211cc25b89c4dcff5f359e8
