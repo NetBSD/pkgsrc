@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.15 2008/04/19 14:49:24 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.16 2008/04/21 22:36:08 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2003 Thomas Klausner <wiz@NetBSD.org>
@@ -67,6 +67,11 @@
 #include "config.h"
 #endif
 #include <nbcompat.h>
+
+#ifdef __GLIBC__
+/* Keep this down to Linux, it can create surprises else where. */
+#define _XOPEN_SOURCE
+#endif
 
 #include <sys/types.h>
 #include <sys/socket.h>
