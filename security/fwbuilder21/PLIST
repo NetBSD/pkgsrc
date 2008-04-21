@@ -1,15 +1,19 @@
-@comment $NetBSD: PLIST,v 1.5 2008/02/21 17:34:08 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/04/21 15:43:15 adam Exp $
+bin/fwb_iosacl
 bin/fwb_ipf
 bin/fwb_ipfw
 bin/fwb_ipt
 bin/fwb_pf
+bin/fwb_pix
 bin/fwbedit
 bin/fwblookup
 bin/fwbuilder
+man/man1/fwb_iosacl.1
 man/man1/fwb_ipf.1
 man/man1/fwb_ipfw.1
 man/man1/fwb_ipt.1
 man/man1/fwb_pf.1
+man/man1/fwb_pix.1
 man/man1/fwbedit.1
 man/man1/fwblookup.1
 man/man1/fwbuilder.1
@@ -26,6 +30,7 @@ share/doc/fwbuilder-${PKGVERSION}/README.ipf
 share/doc/fwbuilder-${PKGVERSION}/README.ipfw
 share/doc/fwbuilder-${PKGVERSION}/README.ipt
 share/doc/fwbuilder-${PKGVERSION}/README.pf
+share/doc/fwbuilder-${PKGVERSION}/README.pix
 share/doc/fwbuilder-${PKGVERSION}/README.policy_import
 share/doc/fwbuilder-${PKGVERSION}/README.routing
 share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.10.html
@@ -44,6 +49,8 @@ share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.16.html
 share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.16.txt
 share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.17.html
 share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.17.txt
+share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.18.html
+share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.18.txt
 share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.7.txt
 share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.7.html
 share/doc/fwbuilder-${PKGVERSION}/ReleaseNotes_2.1.8.html
