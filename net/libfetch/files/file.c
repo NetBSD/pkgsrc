@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.6 2008/04/19 14:49:23 joerg Exp $	*/
+/*	$NetBSD: file.c,v 1.7 2008/04/21 13:09:57 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -200,7 +200,6 @@ fetchListFile(struct url_list *ue, struct url *u, const char *pattern, const cha
 		return -1;
 	}
 
-	ue = NULL;
 	strncpy(fn, u->doc, sizeof(fn) - 2);
 	fn[sizeof(fn) - 2] = 0;
 	strcat(fn, "/");
@@ -208,7 +207,7 @@ fetchListFile(struct url_list *ue, struct url *u, const char *pattern, const cha
 	l = sizeof(fn) - strlen(fn) - 1;
 
 	while ((de = readdir(dir)) != NULL) {
-		if (fnmatch(pattern, de->d_name, 0) != 0)
+		if (pattern && fnmatch(pattern, de->d_name, 0) != 0)
 			continue;
 		strncpy(p, de->d_name, l - 1);
 		p[l - 1] = 0;
