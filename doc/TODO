@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7228 2008/04/21 14:55:08 xtraeme Exp $
+$NetBSD: TODO,v 1.7229 2008/04/21 15:01:22 adam Exp $
 
 Suggested new packages
 ======================
@@ -477,8 +477,6 @@ Suggested package updates
 	o btpd-0.13 [pkg/38144]
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
-	o cairo-1.6.4
-	o cairomm-1.6.0
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o capc-calc-2.12.3.0
