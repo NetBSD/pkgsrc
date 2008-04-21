@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2008/04/07 16:24:51 hira Exp $
+# $NetBSD: Makefile,v 1.42 2008/04/21 08:17:25 abs Exp $
 #
 
 OO_VER=			2.4.0
@@ -171,7 +171,7 @@ post-install:
 
 .include "../../mk/compiler.mk"
 
-PYTHON_VERSIONS_ACCEPTED=	24 23 22
+PYTHON_VERSIONS_ACCEPTED=	25 24 23 22
 .include "../../lang/python/application.mk"
 
 .include "../../databases/db4/buildlink3.mk"
