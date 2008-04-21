@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.2 2007/08/12 12:24:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/04/21 15:00:18 adam Exp $
 include/cairomm-1.0/cairomm/cairomm.h
+include/cairomm-1.0/cairomm/cairommconfig.h
 include/cairomm-1.0/cairomm/context.h
 include/cairomm-1.0/cairomm/enums.h
 include/cairomm-1.0/cairomm/exception.h
