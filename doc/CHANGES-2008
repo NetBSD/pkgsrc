@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.809 2008/04/21 17:11:18 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.810 2008/04/21 19:28:30 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1526,3 +1526,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/heel to 1.0.0 [jlam 2008-04-21]
 	Updated www/thoth to 0.1.4 [jlam 2008-04-21]
 	Updated x11/xterm to 235 [bjs 2008-04-21]
+	Updated devel/glibmm to 2.16.2 [adam 2008-04-21]
+	Updated math/glpk to 4.28 [adam 2008-04-21]
