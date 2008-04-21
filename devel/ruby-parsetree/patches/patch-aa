@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2008/04/21 15:42:17 jlam Exp $
+
+--- Rakefile.orig	2008-04-21 11:39:20.000000000 -0400
++++ Rakefile
+@@ -8,6 +8,8 @@ require './lib/parse_tree.rb'
+ 
+ Hoe.new("ParseTree", ParseTree::VERSION) do |p|
+   p.rubyforge_name = "parsetree"
++  p.author = "Ryan Davis"
++  p.email = "support@zenspider.com"
+   p.summary = "Extract and enumerate ruby parse trees."
+   p.summary = p.paragraphs_of("README.txt", 2).join("\n\n")
+   p.description = p.paragraphs_of("README.txt", 2..6, 8).join("\n\n")

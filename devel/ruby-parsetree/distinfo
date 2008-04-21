@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:18:14 jlam Exp $
+$NetBSD: distinfo,v 1.2 2008/04/21 15:42:17 jlam Exp $
 
 SHA1 (ParseTree-2.1.1.gem) = 066a6c255192c88280ed5482f81bf2c7082727f3
 RMD160 (ParseTree-2.1.1.gem) = 0f448046aad37e859b4497b6d70b82d8a65dd972
 Size (ParseTree-2.1.1.gem) = 44544 bytes
+SHA1 (patch-aa) = d3ea4077ab7ae6e93eb0dca3094af4424798dbca
