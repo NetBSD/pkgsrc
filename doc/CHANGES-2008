@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.797 2008/04/21 08:12:03 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.798 2008/04/21 11:09:07 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1512,3 +1512,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/scmgit-base to 1.5.5 [bjs 2008-04-21]
 	Updated devel/scmgit-docs to 1.5.5 [bjs 2008-04-21]
 	Updated devel/patchutils to 0.2.31nb1 [bjs 2008-04-21]
+	Updated devel/p5-SVN-Notify to 2.70 [seb 2008-04-21]
