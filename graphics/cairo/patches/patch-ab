@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.8 2007/07/06 18:19:43 drochner Exp $
+$NetBSD: patch-ab,v 1.9 2008/04/21 11:29:33 tnn Exp $
 
---- test/Makefile.in.orig	2007-06-27 23:06:21.000000000 +0200
+--- test/Makefile.in.orig	2008-04-11 23:33:42.000000000 +0200
 +++ test/Makefile.in
-@@ -54,7 +54,7 @@ check_PROGRAMS = imagediff$(EXEEXT) png-
- 	$(am__EXEEXT_13) $(am__EXEEXT_14)
- EXTRA_PROGRAMS = $(am__EXEEXT_1) $(am__EXEEXT_2) $(am__EXEEXT_11) \
- 	$(am__EXEEXT_12)
--@HAVE_PTHREAD_TRUE@am__append_9 = -lpthread
-+@HAVE_PTHREAD_TRUE@am__append_9 = ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
- @CAIRO_CAN_TEST_PDF_SURFACE_TRUE@am__append_10 = pdf2png
- @CAIRO_CAN_TEST_PDF_SURFACE_TRUE@@CAIRO_HAS_SVG_SURFACE_TRUE@am__append_11 = pdf2svg$(EXEEXT)
- @CAIRO_CAN_TEST_SVG_SURFACE_TRUE@am__append_12 = svg2png
+@@ -59,7 +59,7 @@ host_triplet = @host@
+ @CAIRO_HAS_PDF_SURFACE_TRUE@@CAIRO_HAS_PS_SURFACE_TRUE@@CAIRO_HAS_SVG_SURFACE_TRUE@am__append_10 = fallback-resolution$(EXEEXT)
+ check_PROGRAMS = imagediff$(EXEEXT) png-flatten$(EXEEXT) \
+ 	$(am__EXEEXT_1) $(am__EXEEXT_2)
+-@HAVE_PTHREAD_TRUE@am__append_11 = -lpthread
++@HAVE_PTHREAD_TRUE@am__append_11 = ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+ @CAIRO_CAN_TEST_PDF_SURFACE_TRUE@am__append_12 = pdf2png
+ @CAIRO_CAN_TEST_SVG_SURFACE_TRUE@am__append_13 = svg2png
+ subdir = test
