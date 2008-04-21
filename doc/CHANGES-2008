@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.802 2008/04/21 14:44:00 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.803 2008/04/21 14:53:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1517,3 +1517,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-ExtUtils-Depends to 0.300 [xtraeme 2008-04-21]
 	Updated devel/p5-glib2 to 1.182 [xtraeme 2008-04-21]
 	Updated graphics/p5-cairo to 1.060 [xtraeme 2008-04-21]
+	Updated fonts/fontforge to 20080330 [adam 2008-04-21]
