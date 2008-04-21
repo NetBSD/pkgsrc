@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2008/03/17 22:13:35 heinz Exp $
+# $NetBSD: Makefile,v 1.13 2008/04/21 14:38:09 xtraeme Exp $
 #
 
-DISTNAME=	ExtUtils-Depends-0.205
+DISTNAME=	ExtUtils-Depends-0.300
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
