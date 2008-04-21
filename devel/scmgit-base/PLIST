@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.3 2008/04/21 01:09:51 bjs Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/04/21 16:34:45 xtraeme Exp $
 bin/git
-bin/gitk
+${PLIST.gui}bin/gitk
 libexec/git-core/git
 libexec/git-core/git-add
 libexec/git-core/git-add--interactive
@@ -20,7 +20,7 @@ libexec/git-core/git-checkout
 libexec/git-core/git-checkout-index
 libexec/git-core/git-cherry
 libexec/git-core/git-cherry-pick
-libexec/git-core/git-citool
+${PLIST.gui}libexec/git-core/git-citool
 libexec/git-core/git-clean
 libexec/git-core/git-clone
 libexec/git-core/git-commit
@@ -50,7 +50,7 @@ libexec/git-core/git-fsck-objects
 libexec/git-core/git-gc
 libexec/git-core/git-get-tar-commit-id
 libexec/git-core/git-grep
-libexec/git-core/git-gui
+${PLIST.gui}libexec/git-core/git-gui
 libexec/git-core/git-hash-object
 libexec/git-core/git-http-fetch
 libexec/git-core/git-http-push
@@ -152,56 +152,56 @@ share/git-core/templates/hooks/pre-rebase
 share/git-core/templates/hooks/prepare-commit-msg
 share/git-core/templates/hooks/update
 share/git-core/templates/info/exclude
-share/git-gui/lib/about.tcl
-share/git-gui/lib/blame.tcl
-share/git-gui/lib/branch.tcl
-share/git-gui/lib/branch_checkout.tcl
-share/git-gui/lib/branch_create.tcl
-share/git-gui/lib/branch_delete.tcl
-share/git-gui/lib/branch_rename.tcl
-share/git-gui/lib/browser.tcl
-share/git-gui/lib/checkout_op.tcl
-share/git-gui/lib/choose_font.tcl
-share/git-gui/lib/choose_repository.tcl
-share/git-gui/lib/choose_rev.tcl
-share/git-gui/lib/class.tcl
-share/git-gui/lib/commit.tcl
-share/git-gui/lib/console.tcl
-share/git-gui/lib/database.tcl
-share/git-gui/lib/date.tcl
-share/git-gui/lib/diff.tcl
-share/git-gui/lib/encoding.tcl
-share/git-gui/lib/error.tcl
-share/git-gui/lib/git-gui.ico
-share/git-gui/lib/index.tcl
-share/git-gui/lib/logo.tcl
-share/git-gui/lib/merge.tcl
-share/git-gui/lib/msgs/de.msg
-share/git-gui/lib/msgs/fr.msg
-share/git-gui/lib/msgs/hu.msg
-share/git-gui/lib/msgs/it.msg
-share/git-gui/lib/msgs/ja.msg
-share/git-gui/lib/msgs/ru.msg
-share/git-gui/lib/msgs/sv.msg
-share/git-gui/lib/msgs/zh_cn.msg
-share/git-gui/lib/option.tcl
-share/git-gui/lib/remote.tcl
-share/git-gui/lib/remote_branch_delete.tcl
-share/git-gui/lib/shortcut.tcl
-share/git-gui/lib/spellcheck.tcl
-share/git-gui/lib/status_bar.tcl
-share/git-gui/lib/tclIndex
-share/git-gui/lib/transport.tcl
-share/git-gui/lib/win32.tcl
-share/git-gui/lib/win32_shortcut.js
-share/gitk/lib/msgs/de.msg
-share/gitk/lib/msgs/it.msg
-@dirrm share/gitk/lib/msgs
-@dirrm share/gitk/lib
-@dirrm share/gitk
-@dirrm share/git-gui/lib/msgs
-@dirrm share/git-gui/lib
-@dirrm share/git-gui
+${PLIST.gui}share/git-gui/lib/about.tcl
+${PLIST.gui}share/git-gui/lib/blame.tcl
+${PLIST.gui}share/git-gui/lib/branch.tcl
+${PLIST.gui}share/git-gui/lib/branch_checkout.tcl
+${PLIST.gui}share/git-gui/lib/branch_create.tcl
+${PLIST.gui}share/git-gui/lib/branch_delete.tcl
+${PLIST.gui}share/git-gui/lib/branch_rename.tcl
+${PLIST.gui}share/git-gui/lib/browser.tcl
+${PLIST.gui}share/git-gui/lib/checkout_op.tcl
+${PLIST.gui}share/git-gui/lib/choose_font.tcl
+${PLIST.gui}share/git-gui/lib/choose_repository.tcl
+${PLIST.gui}share/git-gui/lib/choose_rev.tcl
+${PLIST.gui}share/git-gui/lib/class.tcl
+${PLIST.gui}share/git-gui/lib/commit.tcl
+${PLIST.gui}share/git-gui/lib/console.tcl
+${PLIST.gui}share/git-gui/lib/database.tcl
+${PLIST.gui}share/git-gui/lib/date.tcl
+${PLIST.gui}share/git-gui/lib/diff.tcl
+${PLIST.gui}share/git-gui/lib/encoding.tcl
+${PLIST.gui}share/git-gui/lib/error.tcl
+${PLIST.gui}share/git-gui/lib/git-gui.ico
+${PLIST.gui}share/git-gui/lib/index.tcl
+${PLIST.gui}share/git-gui/lib/logo.tcl
+${PLIST.gui}share/git-gui/lib/merge.tcl
+${PLIST.gui}share/git-gui/lib/msgs/de.msg
+${PLIST.gui}share/git-gui/lib/msgs/fr.msg
+${PLIST.gui}share/git-gui/lib/msgs/hu.msg
+${PLIST.gui}share/git-gui/lib/msgs/it.msg
+${PLIST.gui}share/git-gui/lib/msgs/ja.msg
+${PLIST.gui}share/git-gui/lib/msgs/ru.msg
+${PLIST.gui}share/git-gui/lib/msgs/sv.msg
+${PLIST.gui}share/git-gui/lib/msgs/zh_cn.msg
+${PLIST.gui}share/git-gui/lib/option.tcl
+${PLIST.gui}share/git-gui/lib/remote.tcl
+${PLIST.gui}share/git-gui/lib/remote_branch_delete.tcl
+${PLIST.gui}share/git-gui/lib/shortcut.tcl
+${PLIST.gui}share/git-gui/lib/spellcheck.tcl
+${PLIST.gui}share/git-gui/lib/status_bar.tcl
+${PLIST.gui}share/git-gui/lib/tclIndex
+${PLIST.gui}share/git-gui/lib/transport.tcl
+${PLIST.gui}share/git-gui/lib/win32.tcl
+${PLIST.gui}share/git-gui/lib/win32_shortcut.js
+${PLIST.gui}share/gitk/lib/msgs/de.msg
+${PLIST.gui}share/gitk/lib/msgs/it.msg
+${PLIST.gui}@dirrm share/gitk/lib/msgs
+${PLIST.gui}@dirrm share/gitk/lib
+${PLIST.gui}@dirrm share/gitk
+${PLIST.gui}@dirrm share/git-gui/lib/msgs
+${PLIST.gui}@dirrm share/git-gui/lib
+${PLIST.gui}@dirrm share/git-gui
 @dirrm share/git-core/templates/info
 @dirrm share/git-core/templates/hooks
 @exec ${MKDIR} %D/share/git-core/templates/branches
