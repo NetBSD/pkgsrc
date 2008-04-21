@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/13 07:10:19 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/04/21 16:09:42 jlam Exp $
 bin/thin
 ${GEM_HOME}/cache/thin-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -51,7 +51,6 @@ ${GEM_LIBDIR}/lib/thin/stats.html.erb
 ${GEM_LIBDIR}/lib/thin/stats.rb
 ${GEM_LIBDIR}/lib/thin/statuses.rb
 ${GEM_LIBDIR}/lib/thin/version.rb
-${GEM_LIBDIR}/lib/thin_backend.bundle
 ${GEM_LIBDIR}/lib/thin_parser.bundle
 ${GEM_LIBDIR}/lib/thin_parser.${RUBY_DLEXT}
 ${GEM_LIBDIR}/spec/backends/swiftiply_client_spec.rb
