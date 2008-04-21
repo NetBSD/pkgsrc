@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.800 2008/04/21 14:39:10 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.801 2008/04/21 14:40:31 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1515,3 +1515,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-SVN-Notify to 2.70 [seb 2008-04-21]
 	Updated graphics/cairo to 1.6.4 [tnn 2008-04-21]
 	Updated devel/p5-ExtUtils-Depends to 0.300 [xtraeme 2008-04-21]
+	Updated devel/p5-glib2 to 1.182 [xtraeme 2008-04-21]
