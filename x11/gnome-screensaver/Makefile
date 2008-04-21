@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/04/15 18:12:08 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2008/04/21 19:53:50 drochner Exp $
 #
 
 DISTNAME=	gnome-screensaver-2.22.2
@@ -70,6 +70,7 @@ post-install:
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../sysutils/gnome-menus/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
