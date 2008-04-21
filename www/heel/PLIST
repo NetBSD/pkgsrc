@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:22:53 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/04/21 16:24:14 jlam Exp $
 bin/heel
 ${GEM_HOME}/cache/heel-${PKGVERSION}.gem
-${GEM_LIBDIR}/CHANGES
+${GEM_LIBDIR}/HISTORY
 ${GEM_LIBDIR}/LICENSE
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/bin/heel
@@ -26,18 +26,31 @@ ${GEM_LIBDIR}/data/famfamfam/icons/xhtml.png
 ${GEM_LIBDIR}/data/famfamfam/readme.html
 ${GEM_LIBDIR}/data/famfamfam/readme.txt
 ${GEM_LIBDIR}/data/listing.rhtml
+${GEM_LIBDIR}/gemspec.rb
 ${GEM_LIBDIR}/lib/heel.rb
-${GEM_LIBDIR}/lib/heel/dir_handler.rb
-${GEM_LIBDIR}/lib/heel/error_handler.rb
-${GEM_LIBDIR}/lib/heel/gemspec.rb
+${GEM_LIBDIR}/lib/heel/configuration.rb
+${GEM_LIBDIR}/lib/heel/directory_indexer.rb
+${GEM_LIBDIR}/lib/heel/error_response.rb
+${GEM_LIBDIR}/lib/heel/logger.rb
+${GEM_LIBDIR}/lib/heel/mime_map.rb
+${GEM_LIBDIR}/lib/heel/rackapp.rb
+${GEM_LIBDIR}/lib/heel/request.rb
 ${GEM_LIBDIR}/lib/heel/server.rb
-${GEM_LIBDIR}/lib/heel/specification.rb
 ${GEM_LIBDIR}/lib/heel/version.rb
-${GEM_LIBDIR}/spec/dir_handler_spec.rb
-${GEM_LIBDIR}/spec/error_handler_spec.rb
+${GEM_LIBDIR}/spec/configuration_spec.rb
+${GEM_LIBDIR}/spec/directory_indexer_spec.rb
+${GEM_LIBDIR}/spec/rackapp_spec.rb
 ${GEM_LIBDIR}/spec/server_spec.rb
 ${GEM_LIBDIR}/spec/spec_helper.rb
+${GEM_LIBDIR}/tasks/announce.rake
+${GEM_LIBDIR}/tasks/config.rb
+${GEM_LIBDIR}/tasks/distribution.rake
+${GEM_LIBDIR}/tasks/documentation.rake
+${GEM_LIBDIR}/tasks/rspec.rb
+${GEM_LIBDIR}/tasks/rubyforge.rb
+${GEM_LIBDIR}/tasks/utils.rb
 ${GEM_HOME}/specifications/heel-${PKGVERSION}.gemspec
+@dirrm ${GEM_LIBDIR}/tasks
 @dirrm ${GEM_LIBDIR}/spec
 @dirrm ${GEM_LIBDIR}/lib/heel
 @dirrm ${GEM_LIBDIR}/lib
