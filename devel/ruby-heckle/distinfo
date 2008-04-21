@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:17:14 jlam Exp $
+$NetBSD: distinfo,v 1.2 2008/04/21 16:01:15 jlam Exp $
 
 SHA1 (heckle-1.4.1.gem) = 3108fa5626194d9fd56746f620246a0f8915ed9e
 RMD160 (heckle-1.4.1.gem) = 96f53d75c1b3cf816f8cec0af5997060f152a065
 Size (heckle-1.4.1.gem) = 15872 bytes
-SHA1 (patch-aa) = 8e14b6e51ee9ed58415a343ae9ea1f0077c8ca5f
+SHA1 (patch-aa) = a3655c09df36662ec5c6abd9648e2d8e7d39d70d

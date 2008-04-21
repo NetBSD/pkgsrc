@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2008/04/21 16:01:15 jlam Exp $
+
+--- Rakefile.orig	2008-04-21 11:57:49.000000000 -0400
++++ Rakefile
+@@ -8,6 +8,8 @@ require './lib/heckle.rb'
+ 
+ Hoe.new('heckle', Heckle::VERSION) do |p|
+   p.rubyforge_name = 'seattlerb'
++  p.author = 'Ryan Davis'
++  p.email = 'ryand-ruby@zenspider.com'
+   p.summary = 'Unit Test Sadism'
+   p.description = p.paragraphs_of('README.txt', 2).join("\n\n")
+   p.url = p.paragraphs_of('README.txt', 0).first.split(/\n/)[1..-1]
