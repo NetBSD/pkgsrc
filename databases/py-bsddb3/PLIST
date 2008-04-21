@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/06/09 05:58:06 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/04/21 20:11:58 drochner Exp $
 ${PYSITELIB}/bsddb3/__init__.py
 ${PYSITELIB}/bsddb3/__init__.pyc
 ${PYSITELIB}/bsddb3/__init__.pyo
@@ -21,12 +21,12 @@ ${PYSITELIB}/bsddb3/dbtables.pyo
 ${PYSITELIB}/bsddb3/dbutils.py
 ${PYSITELIB}/bsddb3/dbutils.pyc
 ${PYSITELIB}/bsddb3/dbutils.pyo
+${PYSITELIB}/bsddb3/test_support.py
+${PYSITELIB}/bsddb3/test_support.pyc
+${PYSITELIB}/bsddb3/test_support.pyo
 ${PYSITELIB}/bsddb3/tests/__init__.py
 ${PYSITELIB}/bsddb3/tests/__init__.pyc
 ${PYSITELIB}/bsddb3/tests/__init__.pyo
-${PYSITELIB}/bsddb3/tests/test_1413192.py
-${PYSITELIB}/bsddb3/tests/test_1413192.pyc
-${PYSITELIB}/bsddb3/tests/test_1413192.pyo
 ${PYSITELIB}/bsddb3/tests/test_all.py
 ${PYSITELIB}/bsddb3/tests/test_all.pyc
 ${PYSITELIB}/bsddb3/tests/test_all.pyo
@@ -54,9 +54,12 @@ ${PYSITELIB}/bsddb3/tests/test_dbshelve.pyo
 ${PYSITELIB}/bsddb3/tests/test_dbtables.py
 ${PYSITELIB}/bsddb3/tests/test_dbtables.pyc
 ${PYSITELIB}/bsddb3/tests/test_dbtables.pyo
-${PYSITELIB}/bsddb3/tests/test_env_close.py
-${PYSITELIB}/bsddb3/tests/test_env_close.pyc
-${PYSITELIB}/bsddb3/tests/test_env_close.pyo
+${PYSITELIB}/bsddb3/tests/test_distributed_transactions.py
+${PYSITELIB}/bsddb3/tests/test_distributed_transactions.pyc
+${PYSITELIB}/bsddb3/tests/test_distributed_transactions.pyo
+${PYSITELIB}/bsddb3/tests/test_early_close.py
+${PYSITELIB}/bsddb3/tests/test_early_close.pyc
+${PYSITELIB}/bsddb3/tests/test_early_close.pyo
 ${PYSITELIB}/bsddb3/tests/test_get_none.py
 ${PYSITELIB}/bsddb3/tests/test_get_none.pyc
 ${PYSITELIB}/bsddb3/tests/test_get_none.pyo
