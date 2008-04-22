@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2007/07/29 06:23:04 obache Exp $
+# $NetBSD: builtin.mk,v 1.7 2008/04/22 17:16:54 tnn Exp $
 
 BUILTIN_PKG:=	libevent
 
