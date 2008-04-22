@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7232 2008/04/21 22:08:20 wiz Exp $
+$NetBSD: TODO,v 1.7233 2008/04/22 14:19:22 ghen Exp $
 
 Suggested new packages
 ======================
@@ -606,7 +606,6 @@ Suggested package updates
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.0
-	o firefox-2.0.0.14
 	o fisg-0.3.12
 	o flashplayer-0.4.13
 	o flightgear-1.0.0 [pkg/38160]
