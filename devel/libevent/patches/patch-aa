@@ -1,14 +1,15 @@
-$NetBSD: patch-aa,v 1.3 2007/08/01 17:00:03 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2008/04/22 17:16:54 tnn Exp $
 
---- select.c.orig	2007-08-01 18:53:42.000000000 +0200
-+++ select.c
-@@ -47,6 +47,9 @@
- #ifdef CHECK_INVARIANTS
- #include <assert.h>
- #endif
-+#ifdef _AIX
-+#include <sys/select.h>
-+#endif
+--- event_rpcgen.py.orig	2008-03-03 04:37:12.000000000 +0100
++++ event_rpcgen.py
+@@ -1310,6 +1310,10 @@ def HeaderPreamble(name):
+         '#include <event-config.h>\n'
+         '#ifdef _EVENT_HAVE_STDINT_H\n'
+         '#include <stdint.h>\n'
++	'#elif defined(_EVENT_HAVE_INTTYPES_H)\n'
++	'#  include <inttypes.h>\n'
++	'#else\n'
++	'#  error No inttypes.h or stdint.h to give integer types\n'
+         '#endif\n' )
  
- #include "event.h"
- #include "event-internal.h"
+     for statement in headerdirect:
