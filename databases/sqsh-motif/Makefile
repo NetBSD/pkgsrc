@@ -1,18 +1,12 @@
-# $NetBSD: Makefile,v 1.6 2006/02/05 23:08:37 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2008/04/22 16:23:36 jlam Exp $
 
-PKGNAME=		sqsh-motif-2.1
-PKGREVISION=		4
+PKGNAME=	${PKGNAME_BASE:S/-/-motif-/}
+COMMENT=	SQL shell for Sybase and MS-SQL servers (Motif GUI)
 
-CONFLICTS+=		sqsh-[0-9]*
-CONFLICTS+=		sqsh-x11-[0-9]*
+FILESDIR=	${.CURDIR}/../../databases/sqsh/files
+PATCHDIR=	${.CURDIR}/../../databases/sqsh/patches
+PKGDIR=		${.CURDIR}/../../databases/sqsh
 
-CONFIGURE_ARGS+=	--with-motif
+PKG_OPTIONS.sqsh+=	sqsh-motif -sqsh-xaw
 
-PATCHDIR=		${.CURDIR}/../../databases/sqsh/patches
-DISTINFO_FILE=		${.CURDIR}/../../databases/sqsh/distinfo
-PLIST_SRC=		${.CURDIR}/../../databases/sqsh/PLIST
-DESCR_SRC=		${.CURDIR}/../../databases/sqsh/DESCR
-
-.include "../../mk/motif.buildlink3.mk"
-
-.include "../../databases/sqsh/Makefile.common"
+.include "../../databases/sqsh/Makefile"
