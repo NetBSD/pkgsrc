@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.821 2008/04/22 20:26:51 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.822 2008/04/22 20:27:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1540,3 +1540,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xcompmgr to 1.1.4 [wiz 2008-04-22]
 	Removed sysutils/acpi-iasl [xtraeme 2008-04-22]
 	Added sysutils/acpica-utils version 2008321 [xtrame 2008-04-22]
+	Updated multimedia/libtheora to 1.0beta3 [wiz 2008-04-22]
