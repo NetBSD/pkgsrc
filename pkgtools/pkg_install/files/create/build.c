@@ -1,4 +1,4 @@
-/*	$NetBSD: build.c,v 1.6 2008/04/22 13:47:08 joerg Exp $	*/
+/*	$NetBSD: build.c,v 1.7 2008/04/22 14:27:51 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.38 1997/10/13 15:03:51 jkh Exp";
 #else
-__RCSID("$NetBSD: build.c,v 1.6 2008/04/22 13:47:08 joerg Exp $");
+__RCSID("$NetBSD: build.c,v 1.7 2008/04/22 14:27:51 joerg Exp $");
 #endif
 #endif
 
@@ -171,6 +171,9 @@ write_normal_file(const char *name, struct archive *archive,
 			err(2, "cannot read symlink %s", name);
 		buf[buf_len] = '\0';
 		archive_entry_set_symlink(entry, buf);
+
+ 		if (archive_write_header(archive, entry))
+ 			errx(2, "cannot write to archive: %s", archive_error_string(archive));
 		break;
 
 	case S_IFREG:
