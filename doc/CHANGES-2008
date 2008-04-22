@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.827 2008/04/22 21:59:47 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.828 2008/04/22 23:06:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1546,3 +1546,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/libxml2 to 2.6.32 [wiz 2008-04-22]
 	Updated www/p5-libwww to 5.812nb3 [wiz 2008-04-22]
 	Updated emulators/mednafen to 0.8.8 [wiz 2008-04-22]
+	Updated net/clive to 0.4.10 [wiz 2008-04-22]
