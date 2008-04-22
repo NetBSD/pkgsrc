@@ -1,3 +1,0 @@
-acpi-iasl compiles ASL (ACPI Source Language) into AML (ACPI Machine
-Language).  This AML is suitable for inclusion as a DSDT in system
-firmware.  It also can disassemble AML, for debugging purposes.
