@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2007/12/17 20:49:34 tron Exp $
+# $NetBSD: Makefile,v 1.16 2008/04/22 20:27:04 wiz Exp $
 #
 
-DISTNAME=	libtheora-1.0beta2
+DISTNAME=	libtheora-1.0beta3
 CATEGORIES=	multimedia
 MASTER_SITES=	http://downloads.xiph.org/releases/theora/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +13,7 @@ COMMENT=	Video codec for Ogg multimedia streaming
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
-PKGCONFIG_OVERRIDE=	theora.pc.in
+PKGCONFIG_OVERRIDE=	theora.pc.in theoradec.pc.in theoraenc.pc.in
 USE_LIBTOOL=		YES
 TEST_TARGET=		check
 
