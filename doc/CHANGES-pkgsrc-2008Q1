@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.16 2008/04/22 14:30:56 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.17 2008/04/22 15:34:33 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -38,3 +38,5 @@ pullup ticket #2344 - requested by schmonz
 install nvi unstripped on Darwin
 pullup ticket #2345 - requested by tron
 fixes several security vulnerabilities
+pullup ticket #2336 - requested by wiz
+updated package fixes a security problem
