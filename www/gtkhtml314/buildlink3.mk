@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.6 2008/03/06 14:53:55 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.7 2008/04/22 05:59:12 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GTKHTML314_BUILDLINK3_MK:=	${GTKHTML314_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}gtkhtml314
 
 .if !empty(GTKHTML314_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.gtkhtml314+=	gtkhtml314>=3.14.0
-BUILDLINK_ABI_DEPENDS.gtkhtml314?=	gtkhtml314>=3.16.3nb2
+BUILDLINK_ABI_DEPENDS.gtkhtml314?=	gtkhtml314>=3.18
 BUILDLINK_PKGSRCDIR.gtkhtml314?=	../../www/gtkhtml314
 .endif	# GTKHTML314_BUILDLINK3_MK
 
@@ -23,6 +23,5 @@ BUILDLINK_PKGSRCDIR.gtkhtml314?=	../../www/gtkhtml314
 .include "../../devel/gail/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../print/libgnomeprintui/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
