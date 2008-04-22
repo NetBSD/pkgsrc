@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/03/04 06:59:06 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/22 20:55:37 wiz Exp $
 #
 
-DISTNAME=		singularity_0.26a
+DISTNAME=		singularity_0.27
 PKGNAME=		${DISTNAME:S/_/-/}
 CATEGORIES=		games
 MASTER_SITES=		http://www.emhsoft.com/singularity/
@@ -14,10 +14,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
-INSTALLATION_DIRS=	bin share/doc/singularity \
-			share/singularity/code \
-			share/singularity/data/music-src \
-			share/singularity/music
+INSTALLATION_DIRS=	bin share/doc/singularity
+INSTALLATION_DIRS+=	share/singularity/code
+INSTALLATION_DIRS+=	share/singularity/data/music-src
+INSTALLATION_DIRS+=	share/singularity/data/fonts
+INSTALLATION_DIRS+=	share/singularity/data/images
+INSTALLATION_DIRS+=	share/singularity/data/sounds
+INSTALLATION_DIRS+=	share/singularity/music
 
 do-build:
 	${ECHO} "#!/bin/sh" > ${WRKSRC}/singularity
@@ -30,6 +33,12 @@ do-install:
 		${DESTDIR}${PREFIX}/share/singularity/code
 	${INSTALL_DATA} ${WRKSRC}/data/*.* \
 		${DESTDIR}${PREFIX}/share/singularity/data
+	${INSTALL_DATA} ${WRKSRC}/data/fonts/*.* \
+		${DESTDIR}${PREFIX}/share/singularity/data/fonts
+	${INSTALL_DATA} ${WRKSRC}/data/images/*.* \
+		${DESTDIR}${PREFIX}/share/singularity/data/images
+	${INSTALL_DATA} ${WRKSRC}/data/sounds/*.* \
+		${DESTDIR}${PREFIX}/share/singularity/data/sounds
 	${INSTALL_DATA} ${WRKSRC}/data/music-src/* \
 		${DESTDIR}${PREFIX}/share/singularity/data/music-src
 	${INSTALL_DATA} ${WRKSRC}/README.txt \
