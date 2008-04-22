@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.818 2008/04/22 18:06:52 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.819 2008/04/22 19:32:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1536,3 +1536,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/pango to 1.20.2nb1 [tron 2008-04-22]
 	Updated sysutils/acpi-iasl to 20080321 [xtraeme 2008-04-22]
 	Updated devel/libevent to 1.4.3 [tnn 2008-04-22]
+	Updated textproc/enchant to 1.4.1 [wiz 2008-04-22]
