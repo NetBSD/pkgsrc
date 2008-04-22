@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.815 2008/04/22 11:31:18 martti Exp $
+$NetBSD: CHANGES-2008,v 1.816 2008/04/22 12:15:56 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1533,3 +1533,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/cairo to 1.6.4nb1 [tron 2008-04-22]
 	Updated math/maxima to 5.15.0 [tnn 2008-04-22]
 	Updated chat/ejabberd to 2.0.0nb1 [martti 2008-04-22]
+	Updated devel/pango to 1.20.2nb1 [tron 2008-04-22]
