@@ -1,8 +1,81 @@
-$NetBSD: patch-ab,v 1.2 2004/01/21 17:43:55 recht Exp $
+$NetBSD: patch-ab,v 1.3 2008/04/22 16:23:57 jlam Exp $
 
---- configure.orig	2003-10-21 04:32:25.000000000 +0200
-+++ configure	2004-01-21 18:22:46.000000000 +0100
-@@ -905,11 +905,8 @@
+--- configure.orig	2003-10-20 22:32:25.000000000 -0400
++++ configure
+@@ -27,6 +27,7 @@ GUI_GNOME=bug
+ #	 --bindir=DIR		where to install the executables
+ #	 --datadir=DIR		where to install the supporting data files
+ #	 --docdir=DIR		where to install the :help files & other docs
++#	 --sysconfdir=DIR	where to install the configuration files
+ #	 --prefix=DIR		like --bindir=DIR/bin --datadir=DIR/lib/elvis
+ #	 --ioctl=VARIETY	type of tty ioctl to use: termios, termio, sgtty
+ #	 --verbose		explain each decision
+@@ -66,6 +67,7 @@ PREFIX=/usr
+ BINDIR='$(PREFIX)/bin'
+ DATADIR='$(PREFIX)/share/elvis/'
+ DOCDIR='$(PREFIX)/share/elvis/doc/'
++SYSCONFDIR='/etc/elvis'
+ SYS=""
+ DEFAULT_CC="cc -O"
+ IOCTL=""
+@@ -130,6 +132,7 @@ usage()
+ 	echo "       --x-libraries=DIR  add DIR to path for X-windows libraries"
+ 	echo "       --bindir=DIR       where to install the executables"
+ 	echo "       --datadir=DIR      where to install the supporting data files"
++	echo "       --sysconfdir=DIR   where to install the configuration files"
+ 	echo "       --prefix=DIR       like --bindir=DIR/bin --datadir=DIR/share/elvis"
+ 	echo "       --libs=STRING      non-X11 part of the LIBS= string in Makefile"
+ 	echo "       --ioctl=VARIETY    type of tty ioctl to use: termios, termio, or sgtty"
+@@ -157,14 +160,6 @@ do
+ 		GUI_GNOME=define
+ 		args="$args --with-gnome"
+ 		;;
+-	  --with-x=no|--without-x)
+-		GUI_X11=undef
+-		args="$args --with-x=no"
+-		;;
+-	  --with-x*)
+-		GUI_X11=define
+-		args="$args --with-x"
+-		;;
+ 	  --with-xft=no|--without-xft)
+ 		FEATURE_XFT=undef
+ 		args="$args --with-xft=no"
+@@ -173,6 +168,14 @@ do
+ 		FEATURE_XFT=define
+ 		args="$args --with-xft"
+ 		;;
++	  --with-x=no|--without-x)
++		GUI_X11=undef
++		args="$args --with-x=no"
++		;;
++	  --with-x*)
++		GUI_X11=define
++		args="$args --with-x"
++		;;
+ 	  --with-gcc=no|--without-gcc)
+ 		gnu=n
+ 		forcegcc=n
+@@ -203,6 +206,10 @@ do
+ 		DOCDIR=`echo "$i"|sed 's/^--docdir=//'`
+ 		args="$args $i"
+ 		;;
++	  --sysconfdir=*)
++		SYSCONFDIR=`echo "$i"|sed 's/^--sysconfdir=//'`
++		args="$args $i"
++		;;
+ 	  --prefix=*)
+ 		PREFIX=`echo "$i"|sed 's/^--prefix=//'`
+ 		args="$args $i"
+@@ -886,6 +893,7 @@ echo "Compiler: $CC"
+ echo "Bin dir:  "`echo "$BINDIR" |sed s,'$(PREFIX)',"$PREFIX",`
+ echo "Data dir: "`echo "$DATADIR"|sed s,'$(PREFIX)',"$PREFIX",`
+ echo "Doc dir:  "`echo "$DOCDIR" |sed s,'$(PREFIX)',"$PREFIX",`
++echo "Conf dir: "`echo "$SYSCONFDIR"|sed s,'$(PREFIX)',"$PREFIX",`
+ echo "Man dir:  "`sh instman.sh -d -p"${PREFIX}"`
+ [ "$WHY" ] || echo "To see details, run \"configure --verbose\""
+ 
+@@ -905,11 +913,8 @@ if [ "$GUI_X11" = "define" ]
  then
  	case "$FEATURE_XFT" in
  	  define)
@@ -16,12 +89,20 @@ $NetBSD: patch-ab,v 1.2 2004/01/21 17:43:55 recht Exp $
  		;;
  	  *)	
  		xft=""
-@@ -950,7 +947,7 @@
+@@ -950,7 +955,7 @@ esac
  
  
  # Generate the "config.h" file
 -ELVISPATH=`echo "~/.elvis:/etc/elvis:$DATADIR:$DOCDIR" | sed s,'$(DATADIR)',"$DATADIR",g\;s,'$(PREFIX)',"$PREFIX",g`
-+ELVISPATH=`echo "~/.elvis:@PKG_SYSCONFDIR@:$DATADIR:$DOCDIR" | sed s,'$(DATADIR)',"$DATADIR",g\;s,'$(PREFIX)',"$PREFIX",g`
++ELVISPATH=`echo "~/.elvis:$SYSCONFDIR:$DATADIR:$DOCDIR" | sed s,'$(DATADIR)',"$DATADIR",g\;s,'$(PREFIX)',"$PREFIX",g`
  cat >config.h <<eof-config
  /* config.h */
  
+@@ -1200,6 +1205,7 @@ s!^PREFIX=.*!PREFIX=$PREFIX!
+ s!^BINDIR=.*!BINDIR=$BINDIR!
+ s!^DATADIR=.*!DATADIR=$DATADIR!
+ s!^DOCDIR=.*!DOCDIR=$DOCDIR!
++s!^SYSCONFDIR=.*!SYSCONFDIR=$SYSCONFDIR!
+ eof-all
+ if [ -d /usr/local/X11/include ]
+ then
