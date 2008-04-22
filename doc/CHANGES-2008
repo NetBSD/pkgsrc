@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.817 2008/04/22 16:09:58 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.818 2008/04/22 18:06:52 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1535,3 +1535,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/ejabberd to 2.0.0nb1 [martti 2008-04-22]
 	Updated devel/pango to 1.20.2nb1 [tron 2008-04-22]
 	Updated sysutils/acpi-iasl to 20080321 [xtraeme 2008-04-22]
+	Updated devel/libevent to 1.4.3 [tnn 2008-04-22]
