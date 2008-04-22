@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.822 2008/04/22 20:27:16 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.823 2008/04/22 20:55:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1541,3 +1541,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed sysutils/acpi-iasl [xtraeme 2008-04-22]
 	Added sysutils/acpica-utils version 2008321 [xtrame 2008-04-22]
 	Updated multimedia/libtheora to 1.0beta3 [wiz 2008-04-22]
+	Updated games/singularity to 0.27 [wiz 2008-04-22]
