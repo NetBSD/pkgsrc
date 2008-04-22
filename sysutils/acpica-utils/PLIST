@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/22 20:22:58 xtraeme Exp $
+bin/acpiexec
+bin/acpi-iasl
+bin/acpisrc
+bin/acpixtract
+share/doc/acpica-utils/LICENSE
+share/doc/acpica-utils/README
+@dirrm share/doc/acpica-utils
