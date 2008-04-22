@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.111 2008/04/13 13:00:55 tnn Exp $
+# $NetBSD: Makefile,v 1.112 2008/04/22 12:15:38 tron Exp $
 
 DISTNAME=		pango-1.20.2
+PKGREVISION=		1
 CATEGORIES=		devel fonts
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pango/1.20/}
 EXTRACT_SUFX=		.tar.bz2
@@ -37,11 +38,6 @@ CONFIGURE_ARGS+=	--with-qt=no
 CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 CHECK_FILES_SKIP+=	${PREFIX}/libdata/pango/pango.modules
-
-PLIST_VARS+=		carbon
-.if exists(/System/Library/Frameworks/Carbon.framework)
-PLIST.carbon=		yes
-.endif
 
 .include "options.mk"
 
