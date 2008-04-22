@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7233 2008/04/22 14:19:22 ghen Exp $
+$NetBSD: TODO,v 1.7234 2008/04/22 22:03:00 wiz Exp $
 
 Suggested new packages
 ======================
@@ -376,7 +376,6 @@ Suggested package updates
 	o ROMBuild-2.10
 	o RTx-Shredder-0.05
 	o RealPlayer-11
-	o SDL_sound-1.0.2
 	o SmartEiffel-2.3
 	o TiffIO-130e
 	o YoSucker-81
@@ -478,6 +477,7 @@ Suggested package updates
 	o boson-0.13
 	o botan-1.6.4
 	o btpd-0.13 [pkg/38144]
+	o bzflag-2.0.10
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o cal3d-0.11.0
@@ -502,6 +502,7 @@ Suggested package updates
 	o claws-mail-3.4.0
 	o clearsilver-0.10.5
 	o clearsilver-base-0.10.5
+	o clive-0.4.10
 	o cmus-2.2.0 [pkg/37856]
 	o cocoon-2.1.10
 	o colorize-0.3.4
@@ -528,7 +529,7 @@ Suggested package updates
 	o cygwin_lib-1.5.24.2
 	o dap-3.7
 	o dar-2.3.7
-	o dasher-4.7.3
+	o dasher-4.9.0
 	o dbench-3.04
 	o dbus-1.2.1
 	o dbxml-2.1.8
@@ -577,7 +578,6 @@ Suggested package updates
 	o eltclsh-1.8 [pkg/37283]
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
-	o enchant-1.4.1
 	o enlightenment-0.16.8.12
 	o enscript-1.6.4
 	o epic4-2.6
@@ -624,6 +624,7 @@ Suggested package updates
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
 	o freewais-sf-2.2.14
+	o fromcvs-117
 	o frozen-bubble-2.1.0
 	o ftplibpp-2.0.2
 	o fugu-1.2.3
@@ -763,7 +764,7 @@ Suggested package updates
 	o ikiwiki-2.43
 	o imap-uw-2007a1
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
-	o imapsync-1.249
+	o imapsync-1.250
 	o instiki-0.13
 	o intercal-0.24
 	o iozone-3.287
@@ -863,11 +864,9 @@ Suggested package updates
 	o libstatgrab-0.16
 	o libstree-0.4.2
 	o libtcl-nothread-8.5.1
-	o libtheora-1.0beta3
 	o libtool-2.2.2
 	o libtool-base-2.2.2
 	o libxml++-2.22.0
-	o libxml2-2.6.32
 	o lighttpd-1.4.19
 	o lilypond-2.10.33
 	o lincvs-2.0.0 [now called CrossVC]
@@ -897,7 +896,6 @@ Suggested package updates
 	o matchbox-panel-0.9.3
 	o mathomatic-12.9.0
 	o mcrypt-2.6.6
-	o mednafen-0.8.8
 	o mergeant-0.67
 	o mesure-0.7.2
 	o metakit-lib-2.4.9.6
@@ -1064,7 +1062,6 @@ Suggested package updates
 	o p5-XML-RAI-1.04
 	o p5-XML-Stream-1.22
 	o p5-ispman-1.2
-	o p5-libwww-5.812
 	o p5-prefork-1.02
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.51
@@ -1255,7 +1252,6 @@ Suggested package updates
 	o silc-toolkit-1.1.7
 	o simh-3.7.3 [pkg/38406]
 	o simulavr-0.1.2.2
-	o singularity-0.27
 	o sipcalc-1.1.4
 	o sitecopy-0.16.3
 	o sitescooper-3.1.2
@@ -1374,7 +1370,6 @@ Suggested package updates
 	o wdm-1.28
 	o webmin-1.410
 	o weewm-0.01
-	o wesnoth-1.4.1
 	o win32-codecs-20071007
 	o windowlab-1.34
 	o wine-0.9.60
@@ -1396,7 +1391,6 @@ Suggested package updates
 	o xblast-2.10.4
 	o xchm-1.14
 	o xcircuit-3.6.85
-	o xcompmgr-1.1.4
 	o xdaliclock-2.25
 	o xdesktopwaves-1.3
 	o xdialog-2.3.1
