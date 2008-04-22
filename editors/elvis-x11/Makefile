@@ -1,19 +1,12 @@
-# $NetBSD: Makefile,v 1.12 2007/02/22 19:26:25 wiz Exp $
-#
+# $NetBSD: Makefile,v 1.13 2008/04/22 16:23:57 jlam Exp $
 
-.include "../../editors/elvis/Makefile.common"
+PKGNAME=	${PKGNAME_BASE:S/-/-x11-/}
+COMMENT=	vi clone with regex-search, hex-edit, HTML/LaTeX preview (X11)
 
-PKGNAME=	elvis-x11-2.2.0
-PKGREVISION=	5
-COMMENT=	GUI for elvis, includes console elvis
+FILESDIR=	${.CURDIR}/../../editors/elvis/files
+PATCHDIR=	${.CURDIR}/../../editors/elvis/patches
+PKGDIR=		${.CURDIR}/../../editors/elvis
 
-CONFLICTS+=	elvis-[0-9]*
+PKG_OPTIONS.elvis+=	x11
 
-CONFIGURE_ARGS+=	--with-x=yes
-CONFIGURE_ARGS+=	--with-xft
-
-#MAKEFLAGS+=	CC="${CC} -I${LOCALBASE}/include/freetype2 ${CFLAGS}"
-
-.include "../../x11/libXft/buildlink3.mk"
-.include "../../x11/libXpm/buildlink3.mk"
-.include "../../mk/bsd.pkg.mk"
+.include "../../editors/elvis/Makefile"

@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.3 2006/05/15 16:29:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.1 2008/04/22 16:23:57 jlam Exp $
 bin/elvfmt
 bin/elvis
 bin/elvtags
@@ -7,8 +7,6 @@ man/man1/elvfmt.1
 man/man1/elvis.1
 man/man1/elvtags.1
 man/man1/ref.1
-share/elvis/README
-share/elvis/README.etc
 share/doc/elvis/bugs.txt
 share/doc/elvis/ctags.man
 share/doc/elvis/doexec.txt
@@ -38,6 +36,7 @@ share/doc/elvis/howto.html
 share/doc/elvis/license.html
 share/doc/elvis/printdoc.bat
 share/doc/elvis/ref.man
+share/elvis/README
 share/elvis/elvis.ali
 share/elvis/elvis.arf
 share/elvis/elvis.awf
