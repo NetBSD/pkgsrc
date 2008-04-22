@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/04/22 17:16:54 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2008/04/22 17:25:42 tnn Exp $
 #
 # WARNING: updating this package (as of the 1.1/1.2 releases) means
 # updating BUILDLINK_ABI_DEPENDS in buildlink3.mk and a PKGREVISION
@@ -25,5 +25,12 @@ LIBS.SunOS+=	-lnsl -lresolv
 
 # XXX helps build, but needs more testing
 #CFLAGS.Interix+=	-Dsockaddr_storage=sockaddr_in -DNI_MAXSERV=32
+
+.include "../../mk/bsd.prefs.mk"
+
+.if !empty(MACHINE_PLATFORM:MHPUX-11.11-*)
+CONFIGURE_ENV+=		ac_cv_func_strtoll=yes
+CPPFLAGS+=		-Dstrtoll=__strtoll
+.endif
 
 .include "../../mk/bsd.pkg.mk"
