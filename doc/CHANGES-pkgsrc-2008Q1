@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.14 2008/04/21 00:39:55 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.15 2008/04/22 12:48:44 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -34,3 +34,6 @@ Pullup ticket 2347 - requested by tonnerre
 security update for xpdf
 pullup ticket #2343 - requested by ghen
 update to latest firefox
+pullup ticket #2344 - requested by schmonz
+install nvi unstripped on Darwin
+
