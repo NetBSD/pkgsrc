@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.825 2008/04/22 21:42:20 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.826 2008/04/22 21:49:10 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1544,3 +1544,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/singularity to 0.27 [wiz 2008-04-22]
 	Updated audio/SDL_sound to 1.0.2 [wiz 2008-04-22]
 	Updated textproc/libxml2 to 2.6.32 [wiz 2008-04-22]
+	Updated www/p5-libwww to 5.812nb3 [wiz 2008-04-22]
