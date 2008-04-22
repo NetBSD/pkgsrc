@@ -1,5 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2008/04/21 11:29:33 tnn Exp $
-${PLIST.carbon}include/cairo/cairo-atsui.h
+@comment $NetBSD: PLIST,v 1.20 2008/04/22 10:23:09 tron Exp $
 include/cairo/cairo-deprecated.h
 include/cairo/cairo-features.h
 include/cairo/cairo-ft.h
@@ -12,7 +11,6 @@ ${PLIST.x11}include/cairo/cairo-xlib-xrender.h
 ${PLIST.x11}include/cairo/cairo-xlib.h
 include/cairo/cairo.h
 lib/libcairo.la
-${PLIST.carbon}lib/pkgconfig/cairo-atsui.pc
 lib/pkgconfig/cairo-ft.pc
 lib/pkgconfig/cairo-glitz.pc
 lib/pkgconfig/cairo-pdf.pc
