@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2007/11/23 07:58:57 bjs Exp $
+$NetBSD: distinfo,v 1.6.4.1 2008/04/22 15:34:00 rtr Exp $
 
-SHA1 (mksh-R32.cpio.gz) = 9a4156c213d7361d7481cdfca014aaa93c1cc37b
-RMD160 (mksh-R32.cpio.gz) = a70013888e19b64f58e33878a6481fd2508628d9
-Size (mksh-R32.cpio.gz) = 248989 bytes
+SHA1 (mksh-R33d.cpio.gz) = e1ab5c7897b7f91ab0dcd5be49ded8b441136291
+RMD160 (mksh-R33d.cpio.gz) = d810a705b01e146f9addd184c168798a22a36d38
+Size (mksh-R33d.cpio.gz) = 255911 bytes
