@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.851 2008/04/23 20:43:17 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.852 2008/04/23 20:47:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1569,3 +1569,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-Text-Quoted to 2.05 [wiz 2008-04-23]
 	Updated www/ap2-perl to 2.0.4 [wiz 2008-04-23]
 	Updated www/p5-Apache-Session to 1.86 [wiz 2008-04-23]
+	Updated www/p5-HTTP-Server-Simple to 0.31 [wiz 2008-04-23]
