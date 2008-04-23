@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2007/02/25 23:45:57 wiz Exp $
+$NetBSD: distinfo,v 1.6 2008/04/23 20:26:04 wiz Exp $
 
-SHA1 (Text-Quoted-2.02.tar.gz) = 5de58c0ff053314607236bbc9e97928efdcdafc5
-RMD160 (Text-Quoted-2.02.tar.gz) = dc3b904b36cfd240af2b0433ba5acd0bdb90d96e
-Size (Text-Quoted-2.02.tar.gz) = 14504 bytes
+SHA1 (Text-Quoted-2.05.tar.gz) = 53486e42a9a464a410763a6e0886b6bc18c273b7
+RMD160 (Text-Quoted-2.05.tar.gz) = b2c9f91839c935a16c62ac9b1f03283dcc0f64bd
+Size (Text-Quoted-2.05.tar.gz) = 17316 bytes
