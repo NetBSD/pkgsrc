@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.6 2007/02/18 03:25:51 wiz Exp $
+$NetBSD: distinfo,v 1.7 2008/04/23 21:25:59 wiz Exp $
 
-SHA1 (Apache-Test-1.29.tar.gz) = aec7577a5c6958f6dbce5fd22b7175743f7e7b1a
-RMD160 (Apache-Test-1.29.tar.gz) = 69b21ac4872ce5c154262bf95e650934bb4b6869
-Size (Apache-Test-1.29.tar.gz) = 151416 bytes
+SHA1 (Apache-Test-1.30.tar.gz) = b7dd016d2389fdfe3de7d44282bb06b65e705888
+RMD160 (Apache-Test-1.30.tar.gz) = 8fca3ec211851f7390ecc6c5f8371b407faa862e
+Size (Apache-Test-1.30.tar.gz) = 150711 bytes
