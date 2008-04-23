@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2007/06/02 07:49:18 schmonz Exp $
+# $NetBSD: Makefile,v 1.16 2008/04/23 11:54:53 joerg Exp $
 #
 
-DISTNAME=		rc.subr-20041011
-PKGREVISION=		1
+DISTNAME=		rc.subr-20080423
 CATEGORIES=		pkgtools
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -13,6 +12,7 @@ COMMENT=		Portable NetBSD rc.subr implementation for pkgsrc
 
 ONLY_FOR_PLATFORM=	Darwin-*-* FreeBSD-[0-4].*-* Interix-*-*
 ONLY_FOR_PLATFORM+=	Linux-*-* SunOS-*-*
+ONLY_FOR_PLATFORM+=	QNX-*-*
 
 NO_BUILD=		yes
 NO_CHECKSUM=		yes
