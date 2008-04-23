@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2008/01/07 20:14:23 adam Exp $
+# $NetBSD: Makefile.common,v 1.16 2008/04/23 12:40:40 ghen Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -24,6 +24,7 @@ CONFLICTS+=	postgresql73-*
 CONFLICTS+=	postgresql74-*
 CONFLICTS+=	postgresql80-*
 CONFLICTS+=	postgresql82-*
+CONFLICTS+=	postgresql83-*
 
 DISTINFO_FILE?=		${.CURDIR}/../postgresql81/distinfo
 COMMON_FILESDIR?=	${.CURDIR}/../postgresql81/files
