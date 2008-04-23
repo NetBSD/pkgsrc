@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7239 2008/04/23 19:02:30 tnn Exp $
+$NetBSD: TODO,v 1.7240 2008/04/23 19:38:52 wiz Exp $
 
 Suggested new packages
 ======================
@@ -400,7 +400,6 @@ Suggested package updates
 	o algae-4.3.6
 	o aliados-0.2.0
 	o amanda-2.6.0
-	o amarok-1.4.9.1
 	o amavis-perl-0.3.12 [called just amavis]
 	o amavisd-new-2.5.4
 	o amaya-9.54
@@ -553,7 +552,6 @@ Suggested package updates
 	o doxygen-1.5.5
 	o dpkg-1.13.25
 	o drscheme-371
-	o dvd+rw-tools-7.1
 	o dvipng-1.9
 	o dwm-4.9
 	o eagle-4.16
@@ -672,7 +670,7 @@ Suggested package updates
 	o gnome-games-2.22.1.1
 	o gnome-mag-0.15.0
 	o gnome-pilot-2.0.16
-	o gnome-sharp-2.20.0
+	o gnome-sharp-2.20.1
 	o gnome-speech-0.4.19
 	o gnome-spell-1.0.8
 	o gnome-terminal-2.22.1
@@ -716,6 +714,7 @@ Suggested package updates
 	o gthumb-2.10.8
 	o gtick-0.4.1
 	o gtk-doc-1.10
+	o gtk-sharp-2.12.1
 	o gtk-systrace-20030623
 	o gtk2-sharp-2.12.0
 	o gtklife-5.1
@@ -1027,7 +1026,6 @@ Suggested package updates
 	o p5-Locale-Maketext-Lexicon-0.66
 	o p5-MARC-1.38
 	o p5-Mail-IMAPClient-3.05
-	o p5-MailTools-2.03
 	o p5-Math-Random-0.69
 	o p5-Net-Amazon-S3-0.38
 	o p5-Net-Gnats-0.05
@@ -1289,7 +1287,7 @@ Suggested package updates
 	o subtitleripper-0.3.4
 	o sunbird-0.5 [ghen]
 	o suse_base-10.3
-	o swfdec-0.6.4
+	o swfdec-0.6.6
 	o swi-prolog-5.6.31
 	o sympa-5.4
 	o sysinfo-4.2.2
