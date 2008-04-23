@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.859 2008/04/23 21:37:26 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.860 2008/04/23 21:57:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1577,3 +1577,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-Apache-Test to 1.30 [wiz 2008-04-23]
 	Updated mail/p5-Mail-IMAPClient to 3.06 [wiz 2008-04-23]
 	Updated chat/naim to 0.11.8.3.1 [wiz 2008-04-23]
+	Updated devel/confuse to 2.6 [wiz 2008-04-23]
