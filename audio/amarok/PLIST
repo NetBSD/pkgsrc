@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2008/04/12 22:42:57 jlam Exp $
+@comment $NetBSD: PLIST,v 1.28 2008/04/23 18:23:33 wiz Exp $
 bin/amarok
 bin/amarok_daapserver.rb
 bin/amarok_libvisual
@@ -119,6 +119,7 @@ share/doc/kde/HTML/es/amarok/analyzer.png
 share/doc/kde/HTML/es/amarok/browser_choice.png
 share/doc/kde/HTML/es/amarok/buttons.png
 share/doc/kde/HTML/es/amarok/collection.png
+share/doc/kde/HTML/es/amarok/common
 share/doc/kde/HTML/es/amarok/config.docbook
 share/doc/kde/HTML/es/amarok/config_appearance.png
 share/doc/kde/HTML/es/amarok/config_collection.png
@@ -136,6 +137,8 @@ share/doc/kde/HTML/es/amarok/dynamic_settings.png
 share/doc/kde/HTML/es/amarok/equalizer.png
 share/doc/kde/HTML/es/amarok/faq.docbook
 share/doc/kde/HTML/es/amarok/file_browser.png
+share/doc/kde/HTML/es/amarok/index.cache.bz2
+share/doc/kde/HTML/es/amarok/index.docbook
 share/doc/kde/HTML/es/amarok/logo.png
 share/doc/kde/HTML/es/amarok/media_device.png
 share/doc/kde/HTML/es/amarok/menubar.png
