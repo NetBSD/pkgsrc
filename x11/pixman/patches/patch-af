@@ -1,0 +1,58 @@
+$NetBSD: patch-af,v 1.1 2008/04/23 09:44:05 tnn Exp $
+
+http://gitweb.freedesktop.org/?p=pixman.git;a=blobdiff;h=637f835221631b0f3d79d8f0f3b256883d34770b;hp=79997e15ea645ab74d2858b574b4e8b451fb8084;hb=0c33317f59b93f5cab348619b1c38a5dce97de94;f=configure.ac
+
+--- configure.orig	2008-04-23 11:18:48.000000000 +0200
++++ configure
+@@ -19762,7 +19762,11 @@ fi
+ echo "${ECHO_T}$have_gcc4" >&6; }
+ 
+ 
+-MMX_CFLAGS="-mmmx -Winline --param inline-unit-growth=10000 --param large-function-growth=10000"
++MMX_CFLAGS="-mmmx -Winline"
++
++if test "x$have_gcc4" = "xyes"; then
++    MMX_CFLAGS="$MMX_CFLAGS --param inline-unit-growth=10000 --param large-function-growth=10000"
++fi
+ 
+ have_mmx_intrinsics=no
+ { echo "$as_me:$LINENO: checking whether to use MMX intrinsics" >&5
+@@ -19839,6 +19843,9 @@ CFLAGS="$CFLAGS -msse $MMX_CFLAGS"
+ 
+ cat >conftest.$ac_ext <<_ACEOF
+ 
++#if defined(__GNUC__) && (__GNUC__ < 3 || (__GNUC__ == 3 && __GNUC_MINOR__ < 4))
++#error "Need GCC >= 3.4 for SSE intrinsics"
++#endif
+ #if !defined(__amd64__) && !defined(__x86_64__)
+ #error "Need x86-64 for SSE"
+ #endif
+@@ -19900,18 +19907,26 @@ fi
+ 
+ 
+ 
+-SSE_CFLAGS="-mmmx -msse2 -Winline --param inline-unit-growth=10000 --param large-function-growth=10000"
++SSE_CFLAGS="-mmmx -msse2 -Winline"
++
++if test "x$have_gcc4" = "xyes"; then
++    SSE_CFLAGS="$SSE_CFLAGS --param inline-unit-growth=10000 --param large-function-growth=10000 --param  max-inline-insns-single=6000"
++fi
+ 
+ have_sse2_intrinsics=no
+ { echo "$as_me:$LINENO: checking whether to use SSE2 intrinsics" >&5
+ echo $ECHO_N "checking whether to use SSE2 intrinsics... $ECHO_C" >&6; }
+ xserver_save_CFLAGS=$CFLAGS
+-CFLAGS="$CFLAGS -msse2 $MMX_CFLAGS"
++CFLAGS="$CFLAGS -msse2 $SSE_CFLAGS"
+ 
+ cat >conftest.$ac_ext <<_ACEOF
+ 
++#if defined(__GNUC__) && (__GNUC__ < 3 || (__GNUC__ == 3 && __GNUC_MINOR__ < 4))
++#error "Need GCC >= 3.4 for SSE2 intrinsics"
++#endif
+ #include <mmintrin.h>
+ #include <xmmintrin.h>
++#include <emmintrin.h>
+ int main () {
+     __m128i a, b, c;
+ 	c = _mm_xor_si128 (a, b);
