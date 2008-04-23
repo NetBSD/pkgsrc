@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.833 2008/04/23 17:04:02 jlam Exp $
+$NetBSD: CHANGES-2008,v 1.834 2008/04/23 18:18:37 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1551,3 +1551,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/fromcvs to 0.0.0.117 [wiz 2008-04-23]
 	Updated sysutils/dvd+rw-tools to 7.1 [wiz 2008-04-23]
 	Updated devel/ruby-SDL to 2.0.1 [jlam 2008-04-23]
+	Updated wm/compiz to 0.6.2 [xtraeme 2008-04-23]
