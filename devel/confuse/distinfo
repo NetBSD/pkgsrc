@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2007/12/21 20:32:45 joerg Exp $
+$NetBSD: distinfo,v 1.3 2008/04/23 21:57:05 wiz Exp $
 
-SHA1 (confuse-2.5.tar.gz) = 0ba87baeb0f6540414b24c4b2d47ae375d0b870d
-RMD160 (confuse-2.5.tar.gz) = 25314942e740bb4c7e90dc9860df4df73f8ffc07
-Size (confuse-2.5.tar.gz) = 502501 bytes
+SHA1 (confuse-2.6.tar.gz) = e9e5510abf1eb3159a6439fd52aa5cec94811aff
+RMD160 (confuse-2.6.tar.gz) = 11f987089c533573482a427c7ad2ae8e155389b7
+Size (confuse-2.6.tar.gz) = 504017 bytes
 SHA1 (patch-aa) = 35cf7140d9500bb602766500b8866017b2bdac55
