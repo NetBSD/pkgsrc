@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.151 2008/04/08 11:50:46 joerg Exp $
+# $NetBSD: Makefile,v 1.152 2008/04/23 14:37:10 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -92,6 +92,9 @@ SUBST_STAGE.paths=	pre-configure
 SUBST_MESSAGE.paths=	Fixing paths in scripts.
 SUBST_FILES.paths=	audit-packages/Makefile.in
 SUBST_SED.paths=	-e 's,_gzcat_,${GZCAT},g'
+
+# linkresolver interface appeared in libarchive 2.5.
+BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=2.5
 
 .include "../../archivers/bzip2/builtin.mk"
 .include "../../archivers/libarchive/builtin.mk"
