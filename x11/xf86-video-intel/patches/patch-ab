@@ -1,17 +1,8 @@
-$NetBSD: patch-ab,v 1.1 2007/08/15 19:09:51 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2008/04/23 19:00:46 tnn Exp $
 
---- configure.orig	2007-07-02 23:47:55.000000000 +0200
+--- configure.orig	2008-04-23 07:44:07.000000000 +0200
 +++ configure
-@@ -21062,7 +21062,7 @@ _ACEOF
- fi
- 
- 
--if test "$DRI" != no; then
-+if test "x$DRI" = xauto; then
-         as_ac_File=`echo "ac_cv_file_${sdkdir}/dri.h" | $as_tr_sh`
- { echo "$as_me:$LINENO: checking for ${sdkdir}/dri.h" >&5
- echo $ECHO_N "checking for ${sdkdir}/dri.h... $ECHO_C" >&6; }
-@@ -21733,16 +21733,8 @@ echo $ECHO_N "checking for $XORG_SGML_PA
+@@ -21849,16 +21849,8 @@ echo $ECHO_N "checking for ${sdkdir}/sar
  if { as_var=$as_ac_File; eval "test \"\${$as_var+set}\" = set"; }; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
@@ -19,7 +10,7 @@ $NetBSD: patch-ab,v 1.1 2007/08/15 19:09:51 joerg Exp $
 -  { { echo "$as_me:$LINENO: error: cannot check for file existence when cross compiling" >&5
 -echo "$as_me: error: cannot check for file existence when cross compiling" >&2;}
 -   { (exit 1); exit 1; }; }
--if test -r "$XORG_SGML_PATH/X11/defs.ent"; then
+-if test -r "${sdkdir}/sarea.h"; then
 -  eval "$as_ac_File=yes"
 -else
    eval "$as_ac_File=no"
