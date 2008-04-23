@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7240 2008/04/23 19:38:52 wiz Exp $
+$NetBSD: TODO,v 1.7241 2008/04/23 21:43:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -417,7 +417,6 @@ Suggested package updates
 	o ap-xslt-1.3.8
 	o ap2-auth-ldap-3.11
 	o ap2-chroot-0.5
-	o ap2-perl-2.0.4
 	o ap2-python-3.3.1
 	o ap2-suphp-0.6.2
 	o ap2-transform-0.6.0
@@ -926,7 +925,6 @@ Suggested package updates
 	o mysql-5.2.3
 	o mysqlcc-0.9.8
 	o nagios-3.0.1
-	o naim-0.11.8.3.1
 	o nap-1.5.3
 	o nas-1.9.1
 	o nautilus-cd-burner-2.18.2 [needs hal]
@@ -984,28 +982,17 @@ Suggested package updates
 	o p5-Apache-ASP-2.59
 	o p5-Apache-AuthCookieDBI-2.02
 	o p5-Apache-SSI-2.17
-	o p5-Apache-Session-1.86
-	o p5-Apache-Test-1.30
 	o p5-Asterisk-0.09
 	o p5-Authen-PAM-0.17
 	o p5-Authen-SASL-Cyrus-0.13
 	o p5-Class-DBI-3.0.16
 	o p5-Class-DBI-AbstractSearch-0.07
-	o p5-Class-Inspector-1.22
-	o p5-Class-ReturnValue-0.55
-	o p5-Clone-0.28
 	o p5-Config-General-2.38
 	o p5-Convert-UUlib-1.09
 	o p5-Curses-1.15
 	o p5-DBD-Sybase-1.07
-	o p5-DBD-mysql-4.004
-	o p5-DBIx-DBSchema-0.36
-	o p5-DBIx-SearchBuilder-1.53
 	o p5-Data-FormValidator-4.50
 	o p5-ExtUtils-CBuilder-0.23
-	o p5-File-Flat-1.04
-	o p5-File-Remove-1.40
-	o p5-File-Slurp-9999.13
 	o p5-Filter-1.33
 	o p5-Font-TTF-0.40
 	o p5-GMail-IMAPD-0.94
@@ -1015,17 +1002,11 @@ Suggested package updates
 	o p5-HTML-Table-2.05
 	o p5-HTTP-Proxy-0.20
 	o p5-HTTP-Request-Form-0.952
-	o p5-HTTP-Server-Simple-0.31
 	o p5-HTTP-Server-Simple-Static-0.05
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IMAP-Admin-1.6.4
-	o p5-INET6-2.54
-	o p5-Image-Info-1.28
 	o p5-Locale-Codes-2.07
-	o p5-Locale-Maketext-Fuzzy-0.10
-	o p5-Locale-Maketext-Lexicon-0.66
 	o p5-MARC-1.38
-	o p5-Mail-IMAPClient-3.05
 	o p5-Math-Random-0.69
 	o p5-Net-Amazon-S3-0.38
 	o p5-Net-Gnats-0.05
@@ -1036,7 +1017,6 @@ Suggested package updates
 	o p5-Net-Z3950-0.46
 	o p5-PAR-0.90
 	o p5-PV-1.5
-	o p5-Params-Util-0.31
 	o p5-Perl-Tidy-20071205
 	o p5-RRDTool-OO-0.17
 	o p5-SVN-Mirror-0.73
@@ -1045,20 +1025,16 @@ Suggested package updates
 	o p5-Sendmail-AccessDB-0.09
 	o p5-Set-IntSpan-1.10
 	o p5-Set-Scalar-1.20
-	o p5-Socket6-0.20
 	o p5-Spreadsheet-WriteExcel-2.21
 	o p5-Term-Size-0.203
 	o p5-Test-Harness-2.64
 	o p5-Test-Unit-0.25
-	o p5-Test-WWW-Mechanize-1.20
 	o p5-Text-BibTeX-0.34
-	o p5-Text-Quoted-2.05
 	o p5-Text-Tabs+Wrap-2006.1117
 	o p5-Time-HiRes-1.9707
 	o p5-XML-RAI-1.04
 	o p5-XML-Stream-1.22
 	o p5-ispman-1.2
-	o p5-prefork-1.02
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.51
 	o pam-smbpass-3.0.13
