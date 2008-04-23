@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.849 2008/04/23 20:26:15 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.850 2008/04/23 20:36:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1567,3 +1567,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/p5-Locale-Maketext-Lexicon to 0.66 [wiz 2008-04-23]
 	Updated misc/p5-Locale-Maketext-Fuzzy to 0.10 [wiz 2008-04-23]
 	Updated textproc/p5-Text-Quoted to 2.05 [wiz 2008-04-23]
+	Updated www/ap2-perl to 2.0.4 [wiz 2008-04-23]
