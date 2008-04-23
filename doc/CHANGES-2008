@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.843 2008/04/23 20:03:29 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.844 2008/04/23 20:13:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1561,3 +1561,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-prefork to 1.02 [wiz 2008-04-23]
 	Updated devel/p5-File-Slurp to 9999.13 [wiz 2008-04-23]
 	Updated devel/p5-File-Flat to 1.04 [wiz 2008-04-23]
+	Updated devel/p5-Class-ReturnValue to 0.55 [wiz 2008-04-23]
