@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/04/04 15:30:00 jlam Exp $
+$NetBSD: distinfo,v 1.3 2008/04/23 17:03:49 jlam Exp $
 
-SHA1 (rubysdl-1.3.1.gem) = 7c33c11d1f0860dd125c65f841947b3ab6e79f3b
-RMD160 (rubysdl-1.3.1.gem) = 665e188521e8a8f149bbbba52a01ff3d0cce8f24
-Size (rubysdl-1.3.1.gem) = 264704 bytes
+SHA1 (rubysdl-2.0.1.gem) = 7f0ad1cce7259de014c1d1b8527100719f7c7374
+RMD160 (rubysdl-2.0.1.gem) = b8096826ae5e1a13689a786eaf73f63ef7d8ab56
+Size (rubysdl-2.0.1.gem) = 419328 bytes
