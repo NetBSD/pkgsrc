@@ -1,4 +1,4 @@
-# $NetBSD: rc.subr,v 1.7 2008/04/23 11:54:54 joerg Exp $
+# $NetBSD: rc.subr,v 1.8 2008/04/23 18:04:03 joerg Exp $
 #
 # Copyright (c) 1997-2002 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -106,7 +106,7 @@ case $_osname in
 #		_RCCMD_ci="/usr/bin/ci"			# not in QNX
 #		_RCCMD_co="/usr/bin/co"			# not in QNX
 #		_RCCMD_systrace="/bin/systrace"		# not in QNX
-#		_RCCMD_whoami="/usr/ucb/whoami"		# not in QNX
+		_RCCMD_whoami="/usr/bin/id -un"
 		_RCARG_psformat="-o pid,comm"
 		_RCARG_ps="-ef"
 		_RCARG_su=""
