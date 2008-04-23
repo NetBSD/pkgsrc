@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.862 2008/04/23 22:11:40 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.863 2008/04/23 22:20:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1580,3 +1580,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/confuse to 2.6 [wiz 2008-04-23]
 	Updated pkgtools/pkg_chk to 1.91 [abs 2008-04-23]
 	Updated wm/awesome to 2.2 [wiz 2008-04-23]
+	Updated www/tidy to 20080423 [wiz 2008-04-23]
