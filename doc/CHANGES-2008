@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.853 2008/04/23 21:05:31 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.854 2008/04/23 21:10:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1571,3 +1571,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-Apache-Session to 1.86 [wiz 2008-04-23]
 	Updated www/p5-HTTP-Server-Simple to 0.31 [wiz 2008-04-23]
 	Updated databases/p5-DBD-mysql to 4.006 [wiz 2008-04-23]
+	Updated www/p5-Test-WWW-Mechanize to 1.20 [wiz 2008-04-23]
