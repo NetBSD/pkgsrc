@@ -1,17 +1,17 @@
-$NetBSD: patch-ac,v 1.6 2007/06/08 08:07:05 wiz Exp $
+$NetBSD: patch-ac,v 1.7 2008/04/23 15:35:50 wiz Exp $
 
---- growisofs.c.orig	2006-09-24 17:28:53.000000000 +0000
+--- growisofs.c.orig	2008-03-04 10:15:03.000000000 +0100
 +++ growisofs.c
-@@ -388,7 +388,7 @@
+@@ -409,7 +409,7 @@
  #  define _GNU_SOURCE
  # endif
  #elif defined(__OpenBSD__) || defined(__NetBSD__) || defined(__FreeBSD__) || \
 -      (defined(__APPLE__) && defined(__MACH__))
 +      (defined(__APPLE__) && defined(__MACH__)) || defined(__DragonFly__)
  # define off64_t	off_t
- # define stat64		stat
- # define fstat64	fstat
-@@ -895,7 +895,7 @@ char *setup_fds (char *device)
+ # if !defined(__ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__) || \
+               __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__<1050
+@@ -995,7 +995,7 @@ char *setup_fds (char *device)
      goto open_rw;
  }
  
@@ -20,7 +20,7 @@ $NetBSD: patch-ac,v 1.6 2007/06/08 08:07:05 wiz Exp $
  
  #include <sys/cdio.h>
  #include <camlib.h>
-@@ -2710,7 +2710,9 @@ int main (int argc, char *argv[])
+@@ -2940,7 +2940,9 @@ int main (int argc, char *argv[])
  # ifdef __FreeBSD__
  	syscall(SYS_mlockall,3);
  # else
@@ -29,4 +29,4 @@ $NetBSD: patch-ac,v 1.6 2007/06/08 08:07:05 wiz Exp $
 +#  endif
  # endif
      } while (0);
- #endif
+ 
