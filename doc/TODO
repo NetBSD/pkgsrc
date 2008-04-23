@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7241 2008/04/23 21:43:13 wiz Exp $
+$NetBSD: TODO,v 1.7242 2008/04/23 21:44:55 wiz Exp $
 
 Suggested new packages
 ======================
@@ -619,7 +619,6 @@ Suggested package updates
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
 	o freewais-sf-2.2.14
-	o fromcvs-117
 	o frozen-bubble-2.1.0
 	o ftplibpp-2.0.2
 	o fugu-1.2.3
