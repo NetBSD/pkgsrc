@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2007/02/18 02:23:55 wiz Exp $
+$NetBSD: distinfo,v 1.4 2008/04/23 20:03:17 wiz Exp $
 
-SHA1 (File-Flat-1.00.tar.gz) = af692fac9d9e7fb395e7f0fc1ce5b1a10c22d36e
-RMD160 (File-Flat-1.00.tar.gz) = 80fed28a6a9440ed6017c1aba1e9eb1925c23412
-Size (File-Flat-1.00.tar.gz) = 45820 bytes
+SHA1 (File-Flat-1.04.tar.gz) = 09d9bef3425ef9bec75b5fb7a664e2e33052707e
+RMD160 (File-Flat-1.04.tar.gz) = 36847040787880043b569b2fac86509eb094b7a0
+Size (File-Flat-1.04.tar.gz) = 47183 bytes
