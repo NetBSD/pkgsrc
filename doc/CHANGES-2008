@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.837 2008/04/23 19:48:02 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.838 2008/04/23 19:49:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1555,3 +1555,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/amarok to 1.4.9.1 [wiz 2008-04-23]
 	Updated x11/xf86-video-intel to 2.3.0 [tnn 2008-04-23]
 	Updated databases/p5-DBIx-DBSchema to 0.36 [wiz 2008-04-23]
+	Updated devel/p5-Class-Inspector to 1.22 [wiz 2008-04-23]
