@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.835 2008/04/23 18:23:51 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.836 2008/04/23 19:02:30 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1553,3 +1553,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/ruby-SDL to 2.0.1 [jlam 2008-04-23]
 	Updated wm/compiz to 0.6.2 [xtraeme 2008-04-23]
 	Updated audio/amarok to 1.4.9.1 [wiz 2008-04-23]
+	Updated x11/xf86-video-intel to 2.3.0 [tnn 2008-04-23]
