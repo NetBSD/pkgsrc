@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.22 2008/02/04 14:03:10 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.23 2008/04/23 20:54:39 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.15 1997/10/13 15:03:52 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.22 2008/02/04 14:03:10 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.23 2008/04/23 20:54:39 joerg Exp $");
 #endif
 #endif
 
@@ -531,11 +531,13 @@ require_find_recursive_down(lpkg_t *thislpp, package_t *plist)
 			fail = 1;
 			goto fail;
 		}
-		/* If we have a prefix, add it now */
-		if (Prefix)
-			add_plist(&rPlist, PLIST_CWD, Prefix);
 		read_plist(&rPlist, cfile);
 		fclose(cfile);
+		/* If we have a prefix, replace the first @cwd. */
+		if (Prefix) {
+			delete_plist(&Plist, FALSE, PLIST_CWD, NULL);
+			add_plist_top(&Plist, PLIST_CWD, Prefix);
+		}
 		p = find_plist(&rPlist, PLIST_CWD);
 		if (!p) {
 			warnx("package '%s' doesn't have a prefix", lpp->lp_name);
@@ -739,12 +741,14 @@ pkg_do(char *pkg)
 		warnx("unable to open '%s' file", CONTENTS_FNAME);
 		return 1;
 	}
-	/* If we have a prefix, add it now */
-	if (Prefix)
-		add_plist(&Plist, PLIST_CWD, Prefix);
 	read_plist(&Plist, cfile);
 	fclose(cfile);
 	p = find_plist(&Plist, PLIST_CWD);
+	/* If we have a prefix, replace the first @cwd. */
+	if (Prefix) {
+		delete_plist(&Plist, FALSE, PLIST_CWD, NULL);
+		add_plist_top(&Plist, PLIST_CWD, Prefix);
+	}
 	if (!p) {
 		warnx("package '%s' doesn't have a prefix", pkg);
 		return 1;
