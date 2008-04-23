@@ -1,24 +1,22 @@
-# $NetBSD: Makefile,v 1.15 2008/04/12 22:43:13 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2008/04/23 18:17:25 xtraeme Exp $
 #
 
-DISTNAME=	compiz-0.4.0
-PKGREVISION=	8
+DISTNAME=	compiz-0.6.2
+#PKGREVISION=	8
 CATEGORIES=	wm x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://compiz.org/
 COMMENT=	Compositing window manager
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		pkg-config msgfmt
+USE_TOOLS+=		intltool pkg-config msgfmt
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
-GCONF_SCHEMAS+=	gwd.schemas
-GCONF_SCHEMAS+=	compiz.schemas
+GCONF_SCHEMAS+=		gwd.schemas
 PKGCONFIG_OVERRIDE+=	compiz.pc.in
 PKGCONFIG_OVERRIDE+=	libdecoration/libdecoration.pc.in
 
@@ -55,9 +53,10 @@ PLIST.kde=		yes
 .include "../../mk/pthread.buildlink3.mk"
 
 .include "../../devel/GConf/schemas.mk"
+.include "../../graphics/png/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
-.include "../../graphics/png/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"
