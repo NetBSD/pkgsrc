@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/04/22 20:27:04 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2008/04/23 12:26:47 tron Exp $
 #
 
 DISTNAME=	libtheora-1.0beta3
@@ -21,6 +21,8 @@ CONFIGURE_ARGS+=	--disable-examples
 CONFIGURE_ARGS+=	HAVE_DOXYGEN=false
 # disable player
 CONFIGURE_ENV+=		ac_cv_path_SDL_CONFIG=no
+CONFIGURE_ENV+=		ac_cv_prog_HAVE_DOXYGEN=no
+CONFIGURE_ENV+=		ac_cv_prog_HAVE_PDFLATEX=no
 
 .include "../../mk/bsd.prefs.mk"
 
