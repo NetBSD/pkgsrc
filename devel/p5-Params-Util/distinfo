@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2007/06/09 23:43:15 abs Exp $
+$NetBSD: distinfo,v 1.4 2008/04/23 19:51:01 wiz Exp $
 
-SHA1 (Params-Util-0.25.tar.gz) = 9b42620a8c8a02f0cc3aa0e51f29cf5e37c808ec
-RMD160 (Params-Util-0.25.tar.gz) = 8f1d99c5eb0ea67e8a37fefaa33160ed7be10339
-Size (Params-Util-0.25.tar.gz) = 34853 bytes
+SHA1 (Params-Util-0.31.tar.gz) = a8b36dde634c6085da264f19f7e8dad3390bfda8
+RMD160 (Params-Util-0.31.tar.gz) = 236a5e080297308b02a2e82efee14cbcf6a650df
+Size (Params-Util-0.31.tar.gz) = 35665 bytes
