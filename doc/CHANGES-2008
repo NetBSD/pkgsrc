@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.845 2008/04/23 20:14:52 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.846 2008/04/23 20:20:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1563,3 +1563,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-File-Flat to 1.04 [wiz 2008-04-23]
 	Updated devel/p5-Class-ReturnValue to 0.55 [wiz 2008-04-23]
 	Updated devel/p5-Clone to 0.28 [wiz 2008-04-23]
+	Updated databases/p5-DBIx-SearchBuilder to 1.53 [wiz 2008-04-23]
