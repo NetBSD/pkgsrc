@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2008/04/12 22:43:13 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2008/04/23 20:23:47 abs Exp $
 #
 
 DISTNAME=	xerces-c-src_2_7_0
 PKGNAME=	${DISTNAME:S/-src_/-/:S/_/./g}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc
 MASTER_SITES=	http://apache.rmplc.co.uk/xml/xerces-c/source/
 
@@ -40,14 +40,11 @@ CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${ICONV_TYPE}-iconv}
 PLIST_VARS+=		gnu-iconv native-iconv
 
 CONFIGURE_ARGS.gnu-iconv+=	-t IconvGNU	# transcoder
-PLIST.gnu-iconv=		yes
 
 CONFIGURE_ARGS.native-iconv+=	-t native	# transcoder
-PLIST.native-iconv=		yes
 
 CONFIGURE_ENV+=		${XERCES_ENV}
 MAKE_ENV+=		${XERCES_ENV}
-PLIST_SUBST+=		${PLIST_SUBST.${ICONV_TYPE}-iconv}
 
 # On Darwin, we have to use native (not libiconv) converter. see MacOSPlatformUtils.cpp.
 .if ${OPSYS} == "Darwin"
@@ -70,3 +67,6 @@ post-install:
 		${DESTDIR}${PREFIX}/include/xercesc/dom/impl
 
 .include "../../mk/bsd.pkg.mk"
+
+# Must be after bsd.pkg.mk
+PLIST.${ICONV_TYPE}-iconv=	yes
