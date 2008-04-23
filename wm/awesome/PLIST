@@ -1,5 +1,34 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/03 17:27:55 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/04/23 22:11:27 wiz Exp $
 bin/awesome
+bin/awesome-client
+bin/awesome-message
+man/man1/awesome-client.1
+man/man1/awesome-message.1
 man/man1/awesome.1
+man/man5/awesomerc.5
+share/awesome/icons/layouts/dwindle.png
+share/awesome/icons/layouts/dwindlew.png
+share/awesome/icons/layouts/floating.png
+share/awesome/icons/layouts/floatingw.png
+share/awesome/icons/layouts/max.png
+share/awesome/icons/layouts/maxw.png
+share/awesome/icons/layouts/spiral.png
+share/awesome/icons/layouts/spiralw.png
+share/awesome/icons/layouts/tile.png
+share/awesome/icons/layouts/tilebottom.png
+share/awesome/icons/layouts/tilebottomw.png
+share/awesome/icons/layouts/tileleft.png
+share/awesome/icons/layouts/tileleftw.png
+share/awesome/icons/layouts/tiletop.png
+share/awesome/icons/layouts/tiletopw.png
+share/awesome/icons/layouts/tilew.png
+share/doc/awesome/README
+share/doc/awesome/STYLE
+share/doc/awesome/UPGRADE
+share/doc/awesome/awesomerc
 share/examples/awesome/awesomerc
 @dirrm share/examples/awesome
+@dirrm share/doc/awesome
+@dirrm share/awesome/icons/layouts
+@dirrm share/awesome/icons
+@dirrm share/awesome

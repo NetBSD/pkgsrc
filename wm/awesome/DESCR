@@ -1,2 +1,14 @@
-awesome is a tiling window manager initialy based on a dwm code rewriting.
-It's extremely fast, small, dynamic and awesome.
+awesome is a tiling window manager initialy based on a dwm code
+rewriting.  It's extremely fast, small, dynamic and awesome.
+
+Windows can be managed in several layouts: tiled, maximized, dwindle,
+spiral, floating. Each layout can be applied on the fly, optimizing
+the environment for the application in use and the task performed.
+
+Managing windows in tiled mode assures that no space will be wasted
+on your screen. No gaps, no overlap. Other layouts can be used for
+different purpose.
+
+If you do not want to use the tiling management, you can use the
+floating layout wich will let you organize your windows as you
+wish, like any other window manager.
