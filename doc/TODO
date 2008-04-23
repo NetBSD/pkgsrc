@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7242 2008/04/23 21:44:55 wiz Exp $
+$NetBSD: TODO,v 1.7243 2008/04/23 22:12:47 wiz Exp $
 
 Suggested new packages
 ======================
@@ -447,7 +447,6 @@ Suggested package updates
 	o avr-binutils-2.17
 	o avr-libc-1.4.5
 	o avrdude-5.3.1
-	o awesome-2.2
 	o baci-20040415
 	o bacula-2.2.6 [pkg/37396]
 	o bacula-2.2.8
