@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.839 2008/04/23 19:51:13 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.840 2008/04/23 19:52:44 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1557,3 +1557,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/p5-DBIx-DBSchema to 0.36 [wiz 2008-04-23]
 	Updated devel/p5-Class-Inspector to 1.22 [wiz 2008-04-23]
 	Updated devel/p5-Params-Util to 0.31 [wiz 2008-04-23]
+	Updated sysutils/p5-File-Remove to 1.40 [wiz 2008-04-23]
