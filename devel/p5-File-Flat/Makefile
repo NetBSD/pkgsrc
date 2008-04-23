@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2007/02/18 02:23:55 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2008/04/23 20:03:17 wiz Exp $
 #
 
-DISTNAME=	File-Flat-1.00
+DISTNAME=	File-Flat-1.04
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
@@ -15,7 +15,6 @@ DEPENDS+=	p5-File-Remove>=0.21:../../sysutils/p5-File-Remove
 DEPENDS+=	p5-File-Temp>=0.14:../../devel/p5-File-Temp
 DEPENDS+=	p5-File-Copy-Recursive>=0.28:../../sysutils/p5-File-Copy-Recursive
 DEPENDS+=	p5-prefork>=0.02:../../devel/p5-prefork
-DEPENDS+=	p5-File-Slurp>=9999.04:../../devel/p5-File-Slurp
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
