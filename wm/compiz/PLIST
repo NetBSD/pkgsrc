@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/04/23 18:17:25 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/04/23 22:48:35 xtraeme Exp $
 bin/compiz
 bin/gtk-window-decorator
 include/compiz/compiz.h
@@ -25,6 +25,7 @@ lib/compiz/libresize.la
 lib/compiz/librotate.la
 lib/compiz/libscale.la
 lib/compiz/libscreenshot.la
+${PLIST.gnome}lib/compiz/libsvg.la
 lib/compiz/libswitcher.la
 lib/compiz/libvideo.la
 lib/compiz/libwater.la
@@ -36,6 +37,7 @@ lib/pkgconfig/compiz-gconf.pc
 lib/pkgconfig/compiz-scale.pc
 lib/pkgconfig/compiz.pc
 lib/pkgconfig/libdecoration.pc
+${PLIST.gnome}window-manager-settings/libcompiz.la
 share/compiz/annotate.xml
 share/compiz/blur.xml
 share/compiz/clone.xml
@@ -69,6 +71,9 @@ share/compiz/water.xml
 share/compiz/wobbly.xml
 share/compiz/zoom.xml
 share/gconf/schemas/gwd.schemas
+${PLIST.gnome}share/gnome-control-center/keybindings/50-compiz-desktop-key.xml
+${PLIST.gnome}share/gnome-control-center/keybindings/50-compiz-key.xml
+${PLIST.gnome}share/gnome/wm-properties/compiz.desktop
 share/locale/af/LC_MESSAGES/compiz.mo
 share/locale/ar/LC_MESSAGES/compiz.mo
 share/locale/bg/LC_MESSAGES/compiz.mo
