@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.55 2008/02/24 21:58:13 abs Exp $
+# $Id: pkg_chk.sh,v 1.56 2008/04/23 21:55:29 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Variation of -g which only lists top level packages
@@ -241,6 +241,14 @@ generate_conf_from_installed()
 
 get_bin_pkg_info()
     {
+    summary_file=$PACKAGES/$SUMMARY_FILE
+    if [ -f $summary_file ] ; then
+	if [ -z "$(find $PACKAGES -type f -newer $summary_file)" ] ; then
+	    zcat $summary_file
+	    return;
+	fi
+	echo "*** Ignoring $SUMMARY_FILE as PACKAGES contains newer files" >&2
+    fi
     list_bin_pkgs | ${XARGS} ${PKG_INFO} -X
     }
 
