@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.831 2008/04/23 15:28:18 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.832 2008/04/23 15:36:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1549,3 +1549,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/clive to 0.4.10 [wiz 2008-04-22]
 	Updated mail/p5-MailTools to 2.03 [wiz 2008-04-23]
 	Updated devel/fromcvs to 0.0.0.117 [wiz 2008-04-23]
+	Updated sysutils/dvd+rw-tools to 7.1 [wiz 2008-04-23]
