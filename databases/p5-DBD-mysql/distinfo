@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2006/01/23 20:18:05 wiz Exp $
+$NetBSD: distinfo,v 1.9 2008/04/23 21:05:19 wiz Exp $
 
-SHA1 (DBD-mysql-3.0002.tar.gz) = 2be3348a20ad95b1761dd8fe399b5d0b8d82cb7c
-RMD160 (DBD-mysql-3.0002.tar.gz) = f566f1a968b9f4f1fd0210080456de5f31601b35
-Size (DBD-mysql-3.0002.tar.gz) = 130077 bytes
+SHA1 (DBD-mysql-4.006.tar.gz) = ac39cc1fca0dad0dd4a21e945e29f014edb77436
+RMD160 (DBD-mysql-4.006.tar.gz) = 526fcfed66a1910825d7c6798f31808fd2ee9ec0
+Size (DBD-mysql-4.006.tar.gz) = 129510 bytes
