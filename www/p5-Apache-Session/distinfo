@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.10 2007/02/25 23:48:29 wiz Exp $
+$NetBSD: distinfo,v 1.11 2008/04/23 20:43:06 wiz Exp $
 
-SHA1 (Apache-Session-1.82.tar.gz) = eea168bf51f1c7e04b019e2288ce0ec9486dc21f
-RMD160 (Apache-Session-1.82.tar.gz) = 8386b07ef9f04fe75eec6b06270b2566225e5309
-Size (Apache-Session-1.82.tar.gz) = 32535 bytes
+SHA1 (Apache-Session-1.86.tar.gz) = 791a6899112ac74f0b30aee02c1874c86f22759b
+RMD160 (Apache-Session-1.86.tar.gz) = 140468a3df8ef6cd2843493080f00d9b31fb4be9
+Size (Apache-Session-1.86.tar.gz) = 35220 bytes
