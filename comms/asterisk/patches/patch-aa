@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.12 2008/02/20 10:14:19 wiz Exp $
+$NetBSD: patch-aa,v 1.13 2008/04/24 09:04:56 wiz Exp $
 
---- Makefile.orig	2007-07-16 18:33:02.000000000 +0000
+--- Makefile.orig	2007-07-16 20:33:02.000000000 +0200
 +++ Makefile
 @@ -47,7 +47,6 @@ ifneq ($(findstring dont-optimize,$(MAKE
  #K6OPT  = -DK6OPT
@@ -156,7 +156,7 @@ $NetBSD: patch-aa,v 1.12 2008/02/20 10:14:19 wiz Exp $
  
  datafiles: all
 -	if [ x`$(ID) -un` = xroot ]; then sh mkpkgconfig $(DESTDIR)/usr/lib/pkgconfig; fi
-+	if [ x`$(ID) -un` = xroot ]; then sh mkpkgconfig $(DESTDIR)${PREFIX}/lib/pkgconfig; fi
++	sh mkpkgconfig $(DESTDIR)${PREFIX}/lib/pkgconfig
  	mkdir -p $(DESTDIR)$(ASTVARLIBDIR)/sounds/digits
  	mkdir -p $(DESTDIR)$(ASTVARLIBDIR)/sounds/silence
  	mkdir -p $(DESTDIR)$(ASTVARLIBDIR)/sounds/priv-callerintros
