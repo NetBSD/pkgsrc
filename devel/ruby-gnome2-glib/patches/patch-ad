@@ -1,0 +1,35 @@
+$NetBSD: patch-ad,v 1.1 2008/04/24 00:49:30 obache Exp $
+
+Fixes build problem with glib 2.16
+Taken from upstream SVN repository rev 2848.
+
+--- glib/src/lib/glib-mkenums.rb.orig	2006-12-29 13:17:28.000000000 +0000
++++ glib/src/lib/glib-mkenums.rb
+@@ -3,7 +3,7 @@
+ #
+ # C language enum description generation library like as glib-mkenums tool.
+ #
+-# Copyright(C) 2006 Ruby-GNOME2 Project.
++# Copyright(C) 2006-2008 Ruby-GNOME2 Project.
+ #
+ # This program is licenced under the same license of Ruby-GNOME2.
+ #
+@@ -33,16 +33,14 @@ module GLib
+       if const_lines.include? "<<"
+         @type = "flags"
+         @Type = "Flags"
+-        regexp = /^\s*([^\s]*)\s.*\n/
+       else
+         @type = "enum"
+         @Type = "Enum"
+-        regexp = /^\s*([^\s,]*).*\n/
+       end
+       consts = []
+-      const_lines.scan(regexp){|name|
++      const_lines.scan(/^\s*([^\s,]*).*\n/) do |name|
+         consts << name[0] unless name[0] =~ /(^[\/\*]|^$)/
+-      }
++      end
+       @prefix = extract_prefix(consts)
+       consts.each do |name|
+         # consts = [name, nick]
