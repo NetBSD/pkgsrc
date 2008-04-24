@@ -1,4 +1,4 @@
-# $NetBSD: extension.mk,v 1.17 2007/10/31 00:59:52 joerg Exp $
+# $NetBSD: extension.mk,v 1.18 2008/04/24 01:39:25 tnn Exp $
 
 # derive a python version from the package name if possible
 # optionally handled quoted package names
@@ -28,13 +28,19 @@ _PYSETUPINSTALLARGS+=	--root=${DESTDIR:Q}
 PY_PATCHPLIST?=		yes
 PYSETUPSUBDIR?=		#empty
 
+PY_NO_EGG?=		yes
+.if !empty(PY_NO_EGG:M[yY][eE][sS])
+# see python25/patches/patch-av
+INSTALL_ENV+=		PKGSRC_PYTHON_NO_EGG=defined
+.endif
+
 do-build:
 	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} \
 	 ${PYSETUP} build ${PYSETUPBUILDARGS})
 
 do-install:
-	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${MAKE_ENV} ${PYTHONBIN} \
-	 ${PYSETUP} "install" ${_PYSETUPINSTALLARGS})
+	(cd ${WRKSRC}/${PYSETUPSUBDIR} && ${SETENV} ${INSTALL_ENV} ${MAKE_ENV} \
+	 ${PYTHONBIN} ${PYSETUP} "install" ${_PYSETUPINSTALLARGS})
 .endif
 
 .if defined(PY_PATCHPLIST)
