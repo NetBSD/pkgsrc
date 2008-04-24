@@ -1,0 +1,47 @@
+ $NetBSD: TODO,v 1.1 2008/04/24 07:40:24 bjs Exp $
+
+ Here is a [possibly non-exhaustive] list of issues to resolve prior 
+ to the next quarterly freeze:
+
+ - Add/verify platform-specific values to use when restoring the FPU
+   control word.
+
+ - Make sure my modifications to src/mesa/main/execmem.c did not introduce
+   any regressions.
+
+ - Currently, enabling the mmap(2)-based allocator of anonymous executable
+   memory (versus simply using malloc()) is handled by the options 
+   framework.  This may not be appropriate.
+
+ - The Mesa master branch uses autoconf.  Unfortunately, last I checked, 
+   they do not use it to enable the heap allocator, nor use of floating-point 
+   functions in libm, etc.  Perhaps we should take a field trip to the 
+   autoconf archive and write some of the m4 code required to implement 
+   these tests.  After all, pkgsrc is uncommon in that we do not 
+   assume the entire world conforms to the behavior of (recent?) Linux 
+   "distros".
+
+ - Check to see if HZ is actually used anywhere.  Cursory grepping
+   of the code found nothing.
+
+ - Once we settle on which build-time configuration variables we will
+   use, document them and/or add them to mk/defaults/mk.conf.
+
+ - The xcb (X C Bindings, not X Cut Buffer, heh) support is currently 
+   disabled.
+
+ - The pkg-config files are not generated with any dependency information.
+   I'm not sure that anything in pkgsrc currently uses these, though.
+
+ - There are issues with an unresolved symbol for pthread_getspecific due
+   to libX11's thread stubs on NetBSD >= 2.0.  This should be fixed in 
+   pkgsrc soon; until then, you may apply this patch to fix the issue:
+
+	http://www.NetBSD.org/~bjs/libX11.diff
+
+   It also includes some recent bug fixes from freedesktop.org's GIT
+   repository.
+
+ - I have not packaged the new MesaDemos yet due to lack of time.
+
+   --bjs

@@ -1,0 +1,17 @@
+$NetBSD: patch-an,v 1.1 2008/04/24 07:40:24 bjs Exp $
+
+--- src/mesa/main/glheader.h.orig	2008-03-09 12:53:33.000000000 -0400
++++ src/mesa/main/glheader.h
+@@ -77,6 +77,12 @@
+ #  if _MSC_VER == 1200
+      typedef UINT_PTR uintptr_t;
+ #  endif 
++#elif defined(__INTERIX)
++/* Interix 3.x has a gcc that shadows this. */
++#  ifndef _UINTPTR_T_DEFINED
++     typedef unsigned long uintptr_t;
++#  define _UINTPTR_T_DEFINED
++#  endif
+ #else
+ #  include <inttypes.h>
+ #endif

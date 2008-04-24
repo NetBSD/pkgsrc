@@ -1,29 +1,45 @@
-$NetBSD: patch-ac,v 1.11 2007/08/13 11:18:44 seb Exp $
+$NetBSD: patch-ac,v 1.12 2008/04/24 07:40:24 bjs Exp $
 
---- Makefile.orig	2005-11-29 23:38:49.000000000 +0100
+--- Makefile.orig	2008-02-21 18:58:08.000000000 -0500
 +++ Makefile
-@@ -2,7 +2,7 @@
+@@ -1,8 +1,8 @@
+ # Top-level Mesa makefile
  
- TOP = .
+-TOP = .
++TOP= .
  
 -SUBDIRS = src progs
-+SUBDIRS = src
++SUBDIRS?= src
  
  
  default: $(TOP)/configs/current
-@@ -74,6 +74,7 @@ hpux11-64 \
- hpux11-64-static \
+@@ -90,6 +90,7 @@ hpux11-ia64 \
+ hpux11-ia64-static \
  hpux9 \
  hpux9-gcc \
 +interix3 \
  irix6-64 \
  irix6-64-static \
  irix6-n32 \
-@@ -117,6 +118,7 @@ linux-x86-xcb \
- linux-x86-glide \
- linux-x86-static \
- netbsd \
-+pkgsrc \
+@@ -140,6 +141,10 @@ netbsd \
  openbsd \
  osf1 \
+ osf1-static \
++pkgsrc \
++pkgsrc-dri \
++pkgsrc-dri-i386 \
++pkgsrc-dri-x86_64 \
  solaris-x86 \
+ solaris-x86-gcc \
+ solaris-x86-gcc-static \
+@@ -156,10 +161,6 @@ sunos5-v9 \
+ sunos5-v9-static \
+ sunos5-v9-cc-g++ \
+ ultrix-gcc:
+-	@ if test -f configs/current || test -L configs/current ; then \
+-		echo "Please run 'make realclean' before changing configs" ; \
+-		exit 1 ; \
+-	fi
+ 	(cd configs && rm -f current && ln -s $@ current)
+ 	$(MAKE) default
+ 

@@ -1,22 +1,26 @@
-$NetBSD: patch-aj,v 1.4 2007/08/13 11:18:47 seb Exp $
+$NetBSD: patch-aj,v 1.5 2008/04/24 07:40:24 bjs Exp $
 
---- src/mesa/drivers/x11/xmesaP.h.orig	2005-10-04 23:00:36.000000000 +0200
-+++ src/mesa/drivers/x11/xmesaP.h
-@@ -30,7 +30,7 @@
- #ifdef XFree86Server
- # include "GL/xf86glx.h"
- # include "xf86glx_util.h"
--#elif defined(USE_XSHM)
-+#elif defined(USE_XSHM) || defined(USE_XSHM_HDRONLY)
- # include <X11/extensions/XShm.h>
- #endif
- #include "GL/xmesa.h"
-@@ -218,7 +218,7 @@ struct xmesa_buffer {
- 				/*    0 = not available			*/
- 				/*    1 = XImage support available	*/
- 				/*    2 = Pixmap support available too	*/
--#ifdef USE_XSHM
-+#if defined(USE_XSHM) || defined(USE_XSHM_HDRONLY)
-    XShmSegmentInfo shminfo;
- #endif
- #endif
+--- src/mesa/x86/Makefile.orig	2007-06-21 18:10:55.000000000 -0400
++++ src/mesa/x86/Makefile
+@@ -21,11 +21,19 @@ clean:
+ 
+ 
+ gen_matypes: gen_matypes.c
+-	$(CC) $(INCLUDE_DIRS) $(CFLAGS) gen_matypes.c -o gen_matypes
++	$(LIBTOOL) --mode=link --tag=CC \
++		$(CC) $(INCLUDE_DIRS) $(CFLAGS) -no-install \
++		gen_matypes.c -o gen_matypes
+ 
+ # need some special rules here, unfortunately
++ifdef CROSS_COMPILING
++matypes.h: ../main/mtypes.h ../tnl/t_context.h gen_matypes.c
++	CFLAGS="${INCLUDE_DIRS} ${CFLAGS}" \
++	$(LIBTOOL) --mode=execute ./gen_matypes.sh > matypes.h
++else
+ matypes.h: ../main/mtypes.h ../tnl/t_context.h gen_matypes
+-	./gen_matypes > matypes.h
++	$(LIBTOOL) --mode=execute ./gen_matypes > matypes.h
++endif
+ 
+ common_x86_asm.o: matypes.h
+ 3dnow_normal.o: matypes.h
