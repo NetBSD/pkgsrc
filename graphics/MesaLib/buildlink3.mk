@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.43 2007/12/06 04:31:23 obache Exp $
+# $NetBSD: buildlink3.mk,v 1.44 2008/04/24 07:40:24 bjs Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MESALIB_BUILDLINK3_MK:=	${MESALIB_BUILDLINK3_MK}+
@@ -14,11 +14,8 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}MesaLib
 .if !empty(MESALIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=3.4.2
 BUILDLINK_ABI_DEPENDS.MesaLib+=	MesaLib>=6.4.1nb1
+BUILDLINK_ABI_DEPENDS.MesaLib+= MesaLib>=7.0.3
 BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
-
-.if !defined(BUILDING_MESA)
-BUILDLINK_CPPFLAGS.MesaLib=	-DGLX_GLXEXT_LEGACY
-.endif
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -27,7 +24,12 @@ BUILDLINK_CPPFLAGS.MesaLib=	-DGLX_GLXEXT_LEGACY
 BUILDLINK_LDFLAGS.MesaLib+=	-Wl,-dylib_file -Wl,/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib:/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib
 .endif
 
-BUILDLINK_TRANSFORM+=		l:MesaGL:GL
+pkgbase:= MesaLib
+.include "../../mk/pkg-build-options.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.MesaLib:Mdri)
+.  include "../../graphics/MesaLib/dri.mk"
+.endif
 
 .endif	# MESALIB_BUILDLINK3_MK
 
