@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.878 2008/04/24 21:24:06 markd Exp $
+$NetBSD: CHANGES-2008,v 1.879 2008/04/24 21:27:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1601,3 +1601,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated archivers/gzrecover to 0.5 [wiz 2008-04-24]
 	Updated textproc/btparse to 0.35 [markd 2008-04-24]
 	Updated textproc/p5-Text-BibTeX to 0.37 [markd 2008-04-24]
+	Updated games/crimsonfields to 0.5.2 [wiz 2008-04-24]
