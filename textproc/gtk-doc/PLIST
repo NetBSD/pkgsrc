@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.12 2007/10/31 20:00:54 drochner Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/04/24 21:32:01 wiz Exp $
 bin/gtkdoc-check
+bin/gtkdoc-depscan
 bin/gtkdoc-fixxref
 bin/gtkdoc-mkdb
 bin/gtkdoc-mkhtml
