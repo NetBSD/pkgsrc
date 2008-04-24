@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.c,v 1.6 2008/04/21 17:15:31 joerg Exp $	*/
+/*	$NetBSD: fetch.c,v 1.7 2008/04/24 07:55:00 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -296,6 +296,40 @@ fetchMakeURL(const char *scheme, const char *host, int port, const char *doc,
 	return (u);
 }
 
+int
+fetch_urlpath_safe(char x)
+{
+	switch (x) {
+	case 'a'...'z':
+	case 'A'...'Z':
+	case '0'...'9':
+	case '$':
+	case '-':
+	case '_':
+	case '.':
+	case '+':
+	case '!':
+	case '*':
+	case '\'':
+	case '(':
+	case ')':
+	case ',':
+	/* The following are allowed in segment and path components: */
+	case '?':
+	case ':':
+	case '@':
+	case '&':
+	case '=':
+	case '/':
+	case ';':
+	/* If something is already quoted... */
+	case '%':
+		return 1;
+	default:
+		return 0;
+	}
+}
+
 /*
  * Copy an existing URL.
  */
@@ -329,10 +363,9 @@ fetchCopyURL(const struct url *src)
 struct url *
 fetchParseURL(const char *URL)
 {
-	char *doc;
 	const char *p, *q;
 	struct url *u;
-	int i;
+	size_t i, count;
 
 	/* allocate struct url */
 	if ((u = calloc(1, sizeof(*u))) == NULL) {
@@ -340,43 +373,76 @@ fetchParseURL(const char *URL)
 		return (NULL);
 	}
 
-	/* scheme name */
-	if ((p = strstr(URL, ":/"))) {
-		snprintf(u->scheme, URL_SCHEMELEN+1,
-		    "%.*s", (int)(p - URL), URL);
-		URL = ++p;
-		/*
-		 * Only one slash: no host, leave slash as part of document
-		 * Two slashes: host follows, strip slashes
-		 */
-		if (URL[1] == '/')
-			URL = (p += 2);
-	} else {
+	if (*URL == '/') {
+		strcpy(u->scheme, SCHEME_FILE);
 		p = URL;
+		goto quote_doc;
 	}
-	if (!*URL || *URL == '/' || *URL == '.' ||
-	    (u->scheme[0] == '\0' &&
-		strchr(URL, '/') == NULL && strchr(URL, ':') == NULL))
-		goto nohost;
+	if (strncmp(URL, "file:", 5) == 0) {
+		strcpy(u->scheme, SCHEME_FILE);
+		URL += 5;
+		if (URL[0] != '/' || URL[1] != '/' || URL[2] != '/') {
+			url_seterr(URL_MALFORMED);
+			goto ouch;
+		}
+		p = URL + 2;
+		goto quote_doc;
+	}
+	if (strncmp(URL, "http:", 5) == 0 ||
+	    strncmp(URL, "https:", 6) == 0) {
+		if (URL[4] == ':') {
+			strcpy(u->scheme, SCHEME_HTTP);
+			URL += 5;
+		} else {
+			strcpy(u->scheme, SCHEME_HTTPS);
+			URL += 6;
+		}
 
+		if (URL[0] != '/' || URL[1] != '/') {
+			url_seterr(URL_MALFORMED);
+			goto ouch;
+		}
+		URL += 2;
+		p = URL;
+		goto find_hostname;
+	}
+	if (strncmp(URL, "ftp:", 4) == 0) {
+		strcpy(u->scheme, SCHEME_FTP);
+		URL += 4;
+		if (URL[0] != '/' || URL[1] != '/') {
+			url_seterr(URL_MALFORMED);
+			goto ouch;
+		}
+		URL += 2;
+		p = URL;
+		goto find_user;			
+	}
+
+	url_seterr(URL_BAD_SCHEME);
+	goto ouch;
+
+find_user:
 	p = strpbrk(URL, "/@");
-	if (p && *p == '@') {
+	if (p != NULL && *p == '@') {
 		/* username */
-		for (q = URL, i = 0; (*q != ':') && (*q != '@'); q++)
+		for (q = URL, i = 0; (*q != ':') && (*q != '@'); q++) {
 			if (i < URL_USERLEN)
 				u->user[i++] = *q;
+		}
 
 		/* password */
-		if (*q == ':')
+		if (*q == ':') {
 			for (q++, i = 0; (*q != ':') && (*q != '@'); q++)
 				if (i < URL_PWDLEN)
 					u->pwd[i++] = *q;
+		}
 
 		p++;
 	} else {
 		p = URL;
 	}
 
+find_hostname:
 	/* hostname */
 #ifdef INET6
 	if (*p == '[' && (q = strchr(p + 1, ']')) != NULL &&
@@ -404,36 +470,34 @@ fetchParseURL(const char *URL)
 		p = q;
 	}
 
-nohost:
 	/* document */
 	if (!*p)
 		p = "/";
 
-	if (strcasecmp(u->scheme, SCHEME_HTTP) == 0 ||
-	    strcasecmp(u->scheme, SCHEME_HTTPS) == 0) {
-		const char hexnums[] = "0123456789abcdef";
-
-		/* percent-escape whitespace. */
-		if ((doc = malloc(strlen(p) * 3 + 1)) == NULL) {
-			fetch_syserr();
-			goto ouch;
-		}
-		u->doc = doc;
-		while (*p != '\0') {
-			if (!isspace((unsigned char)*p)) {
-				*doc++ = *p++;
-			} else {
-				*doc++ = '%';
-				*doc++ = hexnums[((unsigned int)*p) >> 4];
-				*doc++ = hexnums[((unsigned int)*p) & 0xf];
-				p++;
-			}
-		}
-		*doc = '\0';
-	} else if ((u->doc = strdup(p)) == NULL) {
+quote_doc:
+	count = 1;
+	for (i = 0; p[i] != '\0'; ++i)
+		count += fetch_urlpath_safe(p[i]) ? 1 : 3;
+	if ((u->doc = malloc(count)) == NULL) {
 		fetch_syserr();
 		goto ouch;
 	}
+	for (i = 0; *p != '\0'; ++p) {
+		if (fetch_urlpath_safe(*p))
+			u->doc[i++] = *p;
+		else {
+			u->doc[i++] = '%';
+			if ((unsigned char)*p < 160)
+				u->doc[i++] = '0' + ((unsigned char)*p) / 16;
+			else
+				u->doc[i++] = 'a' - 10 + ((unsigned char)*p) / 16;
+			if ((unsigned char)*p % 16 < 16)
+				u->doc[i++] = '0' + ((unsigned char)*p) % 16;
+			else
+				u->doc[i++] = 'a' - 10 + ((unsigned char)*p) % 16;
+		}
+	}
+	u->doc[i] = '\0';
 
 	return (u);
 
