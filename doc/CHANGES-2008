@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.864 2008/04/24 01:53:22 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.865 2008/04/24 03:51:45 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1582,3 +1582,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated wm/awesome to 2.2 [wiz 2008-04-23]
 	Updated www/tidy to 20080423 [wiz 2008-04-23]
 	Added lang/python25 version 2.5.2 [tnn 2008-04-24]
+	Updated wm/twm to 1.0.4 [bjs 2008-04-24]
