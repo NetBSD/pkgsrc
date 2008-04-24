@@ -1,0 +1,17 @@
+$NetBSD: patch-ag,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
+
+--- Misc/setuid-prog.c.orig	1998-09-10 16:18:09.000000000 -0400
++++ Misc/setuid-prog.c
+@@ -70,6 +70,12 @@
+ #define environ _environ
+ #endif
+ 
++#if defined(__APPLE__)
++# include <sys/time.h>
++# include <crt_externs.h>
++# define environ (*_NSGetEnviron())
++#endif /* __APPLE__ */
++
+ /* don't change def_IFS */
+ char def_IFS[] = "IFS= \t\n";
+ /* you may want to change def_PATH, but you should really change it in */

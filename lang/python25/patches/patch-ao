@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
+
+--- Lib/distutils/util.py.orig	2006-05-23 17:54:23.000000000 -0400
++++ Lib/distutils/util.py
+@@ -115,6 +115,8 @@ def get_platform ():
+             elif machine in ('PowerPC', 'Power_Macintosh'):
+                 # Pick a sane name for the PPC architecture.
+                 machine = 'ppc'
++    elif osname[:9] == "dragonfly":
++        release = string.split(release, "-")[0]
+ 
+     return "%s-%s-%s" % (osname, release, machine)
+ 

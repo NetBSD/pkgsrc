@@ -1,0 +1,26 @@
+$NetBSD: patch-aq,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
+
+Fixed warnings from the portability checks:
+- test(1) doesn't need to know the == operator.
+- $RANDOM is not required by POSIX.
+
+--- Tools/faqwiz/move-faqwiz.sh.orig	2002-03-18 03:56:23.000000000 -0500
++++ Tools/faqwiz/move-faqwiz.sh
+@@ -9,7 +9,7 @@
+ #   blackjesus:~> ./move-faqwiz.sh 2\.1 3\.2
+ #   Moving FAQ question 02.001 to 03.002
+ 
+-if [ x$2 == x ]; then
++if [ $# -ne 2 ]; then
+     echo "Need 2 args: original_version final_version."
+     exit 2
+ fi
+@@ -28,7 +28,7 @@ cut_n_pad $1 1 prefix1
+ cut_n_pad $1 2 suffix1
+ cut_n_pad $2 1 prefix2
+ cut_n_pad $2 2 suffix2
+-tmpfile=tmp$RANDOM.tmp
++tmpfile=tmp-$$-$RANDOM.tmp
+ file1=faq$prefix1.$suffix1.htp
+ file2=faq$prefix2.$suffix2.htp
+ 
