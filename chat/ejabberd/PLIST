@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/10 08:58:32 martti Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/04/24 08:04:13 martti Exp $
 ${EJABBERD_EXDIR}/ejabberd.cfg
+${EJABBERD_EXDIR}/ejabberdctl.cfg
+${EJABBERD_EXDIR}/inetrc
 lib/erlang/lib/${DISTNAME}/ebin/ELDAPv3.beam
 lib/erlang/lib/${DISTNAME}/ebin/XmppAddr.beam
 lib/erlang/lib/${DISTNAME}/ebin/acl.beam
@@ -189,6 +191,7 @@ share/doc/${DISTNAME}/api/Makefile
 share/doc/${DISTNAME}/api/process-one.css
 share/doc/${DISTNAME}/api/overview.edoc
 share/examples/rc.d/ejabberd
+@dirrm share/examples/ejabberd
 @dirrm share/doc/${DISTNAME}/api
 @dirrm share/doc/${DISTNAME}
 @dirrm lib/erlang/lib/${DISTNAME}/priv/msgs
@@ -196,3 +199,4 @@ share/examples/rc.d/ejabberd
 @dirrm lib/erlang/lib/${DISTNAME}/priv
 @dirrm lib/erlang/lib/${DISTNAME}/ebin
 @dirrm lib/erlang/lib/${DISTNAME}
+@unexec ${RMDIR} %D/etc/ejabberd 2>/dev/null || ${TRUE}
