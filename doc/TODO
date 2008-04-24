@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7243 2008/04/23 22:12:47 wiz Exp $
+$NetBSD: TODO,v 1.7244 2008/04/24 02:17:26 tnn Exp $
 
 Suggested new packages
 ======================
@@ -1151,7 +1151,6 @@ Suggested package updates
 	o pygopherd-2.0.13
 	o pysol-4.82
 	o python23-2.3.7
-	o python25-2.5.2
 	o qDecoder-8.0
 	o qbrew-0.3.9
 	o qemu-0.9.1
