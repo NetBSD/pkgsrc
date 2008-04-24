@@ -1,26 +1,17 @@
-# $NetBSD: Makefile,v 1.19 2008/04/12 22:43:00 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2008/04/24 15:32:16 jlam Exp $
 
-.include "../../editors/xemacs/Makefile.common"
+PKGNAME=	${DISTNAME:S/-/-nox11-/}
 
-PKGNAME=	${DISTNAME:S/xemacs/xemacs-nox11/}
-PKGREVISION=	2
+FILESDIR=	${.CURDIR}/../../editors/xemacs/files
+PATCHDIR=	${.CURDIR}/../../editors/xemacs/patches
+PKGDIR=		${.CURDIR}/../../editors/xemacs
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+# Mirror PKG_DESTDIR_SUPPORT setting from xemacs/Makefile.
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-CONFLICTS=	xemacs-[0-9]*
+.include "../../mk/bsd.prefs.mk"
 
-PLIST_SRC=	${.CURDIR}/../xemacs/PLIST
-DISTINFO_FILE=	${.CURDIR}/../xemacs/distinfo
-FILESDIR=	${.CURDIR}/../xemacs/files
-PATCHDIR=	${.CURDIR}/../xemacs/patches
+PKG_OPTIONS.xemacs+=	-x11 -lucid
+#PKG_OPTIONS.xemacs+=	-gtk -motif -xaw
 
-CONFIGURE_ARGS+=	--without-x11	# XXX -nox
-CONFIGURE_ARGS+=	--without-jpeg	# XXX -nox
-CONFIGURE_ARGS+=	--without-png	# XXX -nox
-CONFIGURE_ARGS+=	--without-tiff	# XXX -nox
-CONFIGURE_ARGS+=	--without-xpm	# XXX -nox
-CONFIGURE_ARGS+=	--site-includes=${BUILDLINK_DIR}/include
-CONFIGURE_ARGS+=	--site-libraries=${BUILDLINK_DIR}/lib
-CONFIGURE_ARGS+=	--site-runtime-libraries=${LOCALBASE}/lib
-
-.include "../../mk/bsd.pkg.mk"
+.include "../../editors/xemacs/Makefile"
