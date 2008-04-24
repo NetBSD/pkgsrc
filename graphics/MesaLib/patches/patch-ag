@@ -1,27 +1,55 @@
-$NetBSD: patch-ag,v 1.10 2007/08/13 11:18:46 seb Exp $
+$NetBSD: patch-ag,v 1.11 2008/04/24 07:40:24 bjs Exp $
 
---- src/glut/glx/Makefile.orig	2005-07-26 07:55:56.000000000 +0200
+--- src/glut/glx/Makefile.orig	2007-11-20 16:12:22.000000000 +0100
 +++ src/glut/glx/Makefile
-@@ -79,6 +79,7 @@ OBJECTS = $(SOURCES:.c=.o)
+@@ -80,9 +80,8 @@ OBJECTS = $(SOURCES:.c=.o)
  ##### RULES #####
  
  .c.o:
-+	${LIBTOOL} --mode=compile \
- 	$(CC) -c -I$(TOP)/include $(CFLAGS) $(GLUT_CFLAGS) $<
+-	$(CC) -c -I$(TOP)/include $(X11_INCLUDES) $(CFLAGS) $(GLUT_CFLAGS) $<
+-
+-
++	$(LIBTOOL) --mode=compile --tag=CC $(CC) -c -I$(TOP)/include \
++	  $(X11_INCLUDES) $(CFLAGS) $(GLUT_CFLAGS) -o $(@:.o=.lo) $<
  
+ ##### TARGETS #####
  
-@@ -90,10 +91,10 @@ default: $(LIB_DIR)/$(GLUT_LIB_NAME)
+@@ -91,10 +90,11 @@ default: $(TOP)/$(LIB_DIR)/$(GLUT_LIB_NA
  
  # Make the library
- $(LIB_DIR)/$(GLUT_LIB_NAME): depend $(OBJECTS)
--	$(TOP)/bin/mklib -o $(GLUT_LIB) -linker '$(CC)' \
+ $(TOP)/$(LIB_DIR)/$(GLUT_LIB_NAME): depend $(OBJECTS)
+-	$(TOP)/bin/mklib -o $(GLUT_LIB) -linker '$(CC)' -ldflags '$(LDFLAGS)' \
 -		-major $(GLUT_MAJOR) -minor $(GLUT_MINOR) -patch $(GLUT_TINY) \
--		$(MKLIB_OPTIONS) -install $(LIB_DIR) \
+-		$(MKLIB_OPTIONS) -install $(TOP)/$(LIB_DIR) \
 -		$(GLUT_LIB_DEPS) $(OBJECTS)
-+	${LIBTOOL} --mode=link ${CC} -o ${GLUT_LIB_NAME:.so=.la} \
-+		${OBJECTS:.o=.lo} -rpath ${PREFIX}/lib \
-+		-version-info ${GLUT_MAJOR}:${GLUT_MINOR} \
-+		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib ${GLUT_LIB_DEPS}
++	$(LIBTOOL) --mode=link $(CC) \
++	  -o $(TOP)/$(LIB_DIR)/$(GLUT_LIB_NAME:.so=.la) $(LDFLAGS) \
++	  -rpath $(PREFIX)/lib $(GLUT_LIB_DEPS) \
++	  -version-info $(GLUT_MAJOR):$(GLUT_MINOR):$(GLUT_TINY) \
++		$(GLUT_LIB_DEPS) $(OBJECTS:.o=.lo)
  
+ 
+ # glut pkgconfig file
+@@ -106,13 +106,15 @@ glut.pc: glut.pc.in
+ 	$(pcedit) $< > $@
+ 
+ install: glut.pc
+-	$(INSTALL) -d $(DESTDIR)$(INSTALL_DIR)/include/GL
+-	$(INSTALL) -d $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
+-	$(INSTALL) -d $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
+-	$(INSTALL) -m 644 $(TOP)/include/GL/glut.h $(DESTDIR)$(INSTALL_DIR)/include/GL
+-	$(INSTALL) $(TOP)/$(LIB_DIR)/libglut* $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
+-	$(INSTALL) -m 644 glut.pc $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
+-
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INSTALL_DIR)/include/GL
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
++	$(BSD_INSTALL_DATA) $(TOP)/include/GL/glut.h $(DESTDIR)$(INSTALL_DIR)/include/GL
++	$(LIBTOOL) --mode=install \
++	  $(BSD_INSTALL_LIB) $(TOP)/$(LIB_DIR)/libglut.la \
++	  $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
++	$(BSD_INSTALL_DATA) glut.pc \
++	  $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
  
  clean:
+ 	-rm -f *.o *~
