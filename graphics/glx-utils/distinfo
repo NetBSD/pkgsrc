@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2007/08/13 11:18:49 seb Exp $
+$NetBSD: distinfo,v 1.4 2008/04/24 09:41:38 tnn Exp $
 
-SHA1 (Mesa-6.4.2/MesaDemos-6.4.2.tar.bz2) = 35b1ff78fc1bd1c303be754ad2ff4252ad6c0258
-RMD160 (Mesa-6.4.2/MesaDemos-6.4.2.tar.bz2) = 82e1dafd39abbe1c0e1de49adcff00dec19c6c1a
-Size (Mesa-6.4.2/MesaDemos-6.4.2.tar.bz2) = 814178 bytes
+SHA1 (Mesa-7.0.3/MesaDemos-7.0.3.tar.bz2) = c8dfef08f3b3f7abc70d99e16a35b0bbc1af4f8a
+RMD160 (Mesa-7.0.3/MesaDemos-7.0.3.tar.bz2) = 22917fbab3987e1d60d46321e1a77d5cbdd3800c
+Size (Mesa-7.0.3/MesaDemos-7.0.3.tar.bz2) = 1342158 bytes
