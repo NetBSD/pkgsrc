@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST.i386,v 1.7 2008/04/15 19:25:28 drochner Exp $
-lib/xine/plugins/1.21/xineplug_decode_qt.a
-lib/xine/plugins/1.21/xineplug_decode_qt.so
-lib/xine/plugins/1.21/xineplug_decode_w32dll.a
-lib/xine/plugins/1.21/xineplug_decode_w32dll.so
+@comment $NetBSD: PLIST.i386,v 1.8 2008/04/24 12:32:22 wiz Exp $
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_qt.a
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_qt.so
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_w32dll.a
+lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_decode_w32dll.so

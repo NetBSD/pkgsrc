@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST.common_end,v 1.10 2008/04/15 19:25:28 drochner Exp $
+@comment $NetBSD: PLIST.common_end,v 1.11 2008/04/24 12:32:22 wiz Exp $
 @dirrm share/xine/libxine1/fonts
 @dirrm share/xine/libxine1
 @dirrm share/xine
 @dirrm share/doc/xine-lib/hackersguide
 @dirrm share/doc/xine-lib
-@exec ${MKDIR} %D/lib/xine/plugins/1.21/vidix
-@dirrm lib/xine/plugins/1.21/vidix
-@dirrm lib/xine/plugins/1.21/post
-@dirrm lib/xine/plugins/1.21
+@exec ${MKDIR} %D/lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix
+@dirrm lib/xine/plugins/${XINE_MOD_DIR_VER}/vidix
+@dirrm lib/xine/plugins/${XINE_MOD_DIR_VER}/post
+@dirrm lib/xine/plugins/${XINE_MOD_DIR_VER}
 @dirrm lib/xine/plugins
 @dirrm lib/xine
 @dirrm include/xine
