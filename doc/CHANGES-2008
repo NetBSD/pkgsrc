@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.875 2008/04/24 20:47:17 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.876 2008/04/24 20:56:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1597,3 +1597,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/sylpheed-devel to 2.5.0beta2 [xtraeme 2008-04-24]
 	Updated wm/openbox to 3.4.7.2 [wiz 2008-04-24]
 	Updated devel/libsigc++ to 2.2.2 [wiz 2008-04-24]
+	Updated devel/libglademm to 2.6.6 [wiz 2008-04-24]
