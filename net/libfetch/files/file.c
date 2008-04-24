@@ -1,6 +1,7 @@
-/*	$NetBSD: file.c,v 1.9 2008/04/24 10:21:33 joerg Exp $	*/
+/*	$NetBSD: file.c,v 1.10 2008/04/24 10:24:04 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
+ * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
