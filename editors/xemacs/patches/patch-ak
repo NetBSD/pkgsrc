@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.4 2003/02/25 02:14:59 uebayasi Exp $
+$NetBSD: patch-ak,v 1.5 2008/04/24 15:32:15 jlam Exp $
 
---- src/Makefile.in.in.orig	Wed Jan 15 21:18:00 2003
+--- src/Makefile.in.in.orig	2005-01-30 21:55:02.000000000 -0500
 +++ src/Makefile.in.in
-@@ -72,8 +72,8 @@
+@@ -72,8 +72,8 @@ CPPFLAGS=@CPPFLAGS@
  LDFLAGS=@LDFLAGS@
  
  c_switch_all=@c_switch_all@
@@ -13,7 +13,7 @@ $NetBSD: patch-ak,v 1.4 2003/02/25 02:14:59 uebayasi Exp $
  ld_dynamic_link_flags=@ld_dynamic_link_flags@
  
  extra_objs=@extra_objs@
-@@ -162,9 +162,9 @@
+@@ -163,9 +163,9 @@ ldflags += -Wl,--script=s/cygwin.sc
  
  #ifdef SOLARIS2
  %.o : %.c
@@ -25,3 +25,21 @@ $NetBSD: patch-ak,v 1.4 2003/02/25 02:14:59 uebayasi Exp $
  	$(CC) -c $(cflags) $<
  
  ## Create preprocessor output (debugging purposes only)
+@@ -329,7 +329,7 @@ othersrcs = $(otherobjs:.o=.c)
+ LIBES = $(lwlib_libs) $(malloclib) $(ld_libs_all) $(lib_gcc)
+ 
+ #ifdef I18N3
+-mo_dir = ${etcdir}
++mo_dir = ../etc/
+ mo_file = ${mo_dir}emacs.mo
+ #endif
+ 
+@@ -658,7 +658,7 @@ libextcli_Xlib.so.1: ${external_client_x
+ #endif /* EXTERNAL_WIDGET */
+ 
+ config.h: ${srcdir}/config.h.in
+-Emacs.ad.h: ${srcdir}/${etcdir}Emacs.ad
++Emacs.ad.h: ${srcdir}/../etc/Emacs.ad
+ 
+ config.h sheap-adjust.h paths.h Emacs.ad.h :
+ 	@echo "The file $@ needs to be re-generated."
