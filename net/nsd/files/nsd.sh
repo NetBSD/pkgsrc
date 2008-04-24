@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: nsd.sh,v 1.2 2007/08/11 23:48:40 joerg Exp $
+# $NetBSD: nsd.sh,v 1.3 2008/04/24 09:38:30 joerg Exp $
 #
 # PROVIDE: nsd
 # REQUIRE: DAEMON
@@ -11,7 +11,7 @@
 name="nsd"
 rcvar=${name}
 
-command=/usr/pkg/sbin/${name}
+command=@PREFIX@/sbin/${name}
 pidfile=/var/run/${name}.pid
 
 nsd_flags=${nsd_flags:-""}
