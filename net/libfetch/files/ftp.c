@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.20 2008/04/24 07:55:00 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.21 2008/04/24 10:21:33 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -1102,6 +1102,8 @@ fetchIO *
 ftp_request(struct url *url, const char *op, const char *op_arg,
     struct url_stat *us, struct url *purl, const char *flags)
 {
+	fetchIO *f;
+	char *path;
 	conn_t *conn;
 	int oflag;
 
@@ -1124,15 +1126,24 @@ ftp_request(struct url *url, const char *op, const char *op_arg,
 	if (conn == NULL)
 		return (NULL);
 
+	if ((path = fetch_unquote_doc(url)) == NULL) {
+		fetch_syserr();
+		return NULL;
+	}
+
 	/* change directory */
-	if (ftp_cwd(conn, url->doc, op_arg != NULL) == -1)
+	if (ftp_cwd(conn, path, op_arg != NULL) == -1) {
+		free(path);
 		return (NULL);
+	}
 
 	/* stat file */
-	if (us && ftp_stat(conn, url->doc, us) == -1
+	if (us && ftp_stat(conn, path, us) == -1
 	    && fetchLastErrCode != FETCH_PROTO
-	    && fetchLastErrCode != FETCH_UNAVAIL)
+	    && fetchLastErrCode != FETCH_UNAVAIL) {
+		free(path);
 		return (NULL);
+	}
 
 	/* just a stat */
 	if (strcmp(op, "STAT") == 0)
@@ -1143,7 +1154,9 @@ ftp_request(struct url *url, const char *op, const char *op_arg,
 		oflag = O_RDONLY;
 
 	/* initiate the transfer */
-	return (ftp_transfer(conn, op, url->doc, op_arg, oflag, url->offset, flags));
+	f = (ftp_transfer(conn, op, path, op_arg, oflag, url->offset, flags));
+	free(path);
+	return f;
 }
 
 /*

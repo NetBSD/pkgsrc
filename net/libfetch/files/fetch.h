@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.h,v 1.8 2008/04/21 17:15:31 joerg Exp $	*/
+/*	$NetBSD: fetch.h,v 1.9 2008/04/24 10:21:33 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -151,6 +151,7 @@ void		 fetchFreeURL(struct url *);
 /* URL listening */
 void		 fetch_init_url_list(struct url_list *);
 void		 fetch_free_url_list(struct url_list *);
+char		*fetch_unquote_doc(struct url *);
 char		*fetch_extract_filename(struct url *);
 
 /* Authentication */
