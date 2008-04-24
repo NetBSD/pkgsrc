@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.58 2007/11/11 23:42:39 wiz Exp $
+# $NetBSD: Makefile,v 1.59 2008/04/24 08:30:49 wiz Exp $
 #
 
-DISTNAME=		silc-server-1.0.4
+DISTNAME=		silc-server-1.1.6
 CATEGORIES=		chat security
 MASTER_SITES=		http://www.silcnet.org/download/server/sources/ \
 			ftp://ftp.silcnet.org/silc/server/sources/ \
@@ -60,11 +60,8 @@ CONFIGURE_ARGS+=	--with-logsdir=${VARBASE}/log/silcd
 CONFIGURE_ARGS+=	--with-silcd-pid-file=${VARBASE}/run/silcd.pid
 CONFIGURE_ARGS+=	--without-iconv
 CONFIGURE_ARGS+=	--without-libtoolfix
-CONFIGURE_ARGS+=	--enable-shared
-
-# XXX: Avoid an ICE in gcc2 on sparc64
-#
-CONFIGURE_ENV+=		F77=${FALSE:Q}
+# Doesn't work -- shared libraries are not installed
+#CONFIGURE_ARGS+=	--enable-shared
 
 .if ${MACHINE_ARCH} != "i386"
 CONFIGURE_ARGS+=	--disable-asm
