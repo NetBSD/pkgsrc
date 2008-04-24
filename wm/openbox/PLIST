@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/04/18 08:12:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.18 2008/04/24 20:22:00 wiz Exp $
 bin/gdm-control
 bin/gnome-panel-control
 bin/openbox
@@ -145,6 +145,7 @@ share/xsessions/openbox.desktop
 @dirrm share/examples/openbox
 @dirrm share/doc/openbox/xbm
 @dirrm share/doc/openbox
+@dirrm lib/openbox
 @dirrm include/openbox/3.4/openbox
 @dirrm include/openbox/3.4
 @dirrm include/openbox
