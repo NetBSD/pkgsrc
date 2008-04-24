@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.44 2008/04/24 07:40:24 bjs Exp $
+# $NetBSD: buildlink3.mk,v 1.45 2008/04/24 11:55:22 tnn Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 MESALIB_BUILDLINK3_MK:=	${MESALIB_BUILDLINK3_MK}+
@@ -13,8 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}MesaLib
 
 .if !empty(MESALIB_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=3.4.2
-BUILDLINK_ABI_DEPENDS.MesaLib+=	MesaLib>=6.4.1nb1
-BUILDLINK_ABI_DEPENDS.MesaLib+= MesaLib>=7.0.3
+BUILDLINK_ABI_DEPENDS.MesaLib+=	MesaLib>=7.0.3
 BUILDLINK_PKGSRCDIR.MesaLib?=	../../graphics/MesaLib
 
 .include "../../mk/bsd.fast.prefs.mk"
