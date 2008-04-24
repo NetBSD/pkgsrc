@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2008/04/24 21:32:47 jlam Exp $
+
+--- modules/common/Makefile.common.orig	2005-11-22 02:14:54.000000000 -0500
++++ modules/common/Makefile.common
+@@ -98,7 +98,7 @@ extraclean: realclean
+ 	-$(RM) *~ \#*
+ 
+ install: $(OBJECT_TO_BUILD)
+-	$(INSTALL_PROGRAM) $< $(INSTALLPATH)
++	$(INSTALL_PROGRAM) $(OBJECT_TO_BUILD) $(INSTALLPATH)
+ 
+ ##
+ ## Local Variables:
