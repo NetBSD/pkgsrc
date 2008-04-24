@@ -1,0 +1,61 @@
+# $NetBSD: default,v 1.1 2008/04/24 07:40:24 bjs Exp $
+
+CONFIG_NAME = default
+
+# Version info
+MESA_MAJOR=	7
+MESA_MINOR=	0
+MESA_TINY=	3
+
+GLU_CFLAGS=	# defined
+
+MKLIB_OPTIONS=
+MKDEP=	makedepend
+MKDEP_OPTIONS=	-fdepend
+INSTALL?=	$(TOP)/bin/minstall
+
+# Python and flags (generally only needed by the developers)
+PYTHON2=	$(PYTHONBIN)
+PYTHON_FLAGS=	-t -O -O
+
+GL_LIB=		GL
+GLU_LIB=	GLU
+GLUT_LIB=	glut
+GLW_LIB=	GLw
+OSMESA_LIB=	OSMesa
+
+GL_LIB_NAME?=		lib$(GL_LIB).so
+GLU_LIB_NAME?=		lib$(GLU_LIB).so
+GLUT_LIB_NAME?=		lib$(GLUT_LIB).so
+GLW_LIB_NAME?=		lib$(GLW_LIB).so
+OSMESA_LIB_NAME?=	lib$(OSMESA_LIB).so
+
+ASM_SOURCES?=	# defined
+GLW_SOURCES?=	GLwDrawA.c
+
+LIB_DIR=	lib
+SRC_DIRS=	mesa glu glut/glx glw
+GLU_DIRS=	sgi
+DRIVER_DIRS=	x11 osmesa
+PROGRAM_DIRS=	demos redbook samples glsl xdemos
+
+EXTRA_LIB_PATH?=	# defined
+GL_LIB_DEPS=\
+	$(EXTRA_LIB_PATH) -lX11 -lXext -lm $(PTHREAD_STUBLIB)
+OSMESA_LIB_DEPS=\
+	-L$(TOP)/$(LIB_DIR) -l$(GL_LIB)
+GLU_LIB_DEPS=\
+	-L$(TOP)/$(LIB_DIR) -l$(GL_LIB) -lm
+GLUT_LIB_DEPS=\
+	-L$(TOP)/$(LIB_DIR) -l$(GLU_LIB) -l$(GL_LIB) \
+	$(EXTRA_LIB_PATH) -lX11 -lXmu -lXt -lXi -lm
+GLW_LIB_DEPS=\
+	-L$(TOP)/$(LIB_DIR) -l$(GL_LIB)  \
+	 $(EXTRA_LIB_PATH) -lXt -lX11
+APP_LIB_DEPS=\
+	 -lm
+
+INSTALL_DIR?= $(PREFIX)
+DRI_DRIVER_INSTALL_DIR?= $(PREFIX)/lib/dri
+
+DRI_DRIVER_SEARCH_DIR?=  $(LOCALBASE)/lib/dri
