@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.19 2008/04/21 13:09:57 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.20 2008/04/24 07:55:00 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -1219,7 +1219,7 @@ fetchListFTP(struct url_list *ue, struct url *url, const char *pattern, const ch
 				else
 					eos = eol;
 				*eos = '\0';
-				fetch_add_entry(ue, url, buf);
+				fetch_add_entry(ue, url, buf, 0);
 				cur_off -= eol - buf + 1;
 				memmove(buf, eol + 1, cur_off);
 			}
