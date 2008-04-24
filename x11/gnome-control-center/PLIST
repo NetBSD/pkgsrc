@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/04/15 17:59:15 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/04/24 15:58:31 bjs Exp $
 ${PLIST.evolution}bin/gnome-about-me
 bin/gnome-appearance-properties
 bin/gnome-at-mobility
@@ -32,6 +32,7 @@ share/applications/default-applications.desktop
 share/applications/display-properties.desktop
 ${PLIST.evolution}share/applications/gnome-about-me.desktop
 share/applications/gnome-appearance-properties.desktop
+share/applications/gnome-at-session.desktop
 share/applications/gnome-font-viewer.desktop
 share/applications/gnome-network-preferences.desktop
 share/applications/gnome-settings-mouse.desktop
