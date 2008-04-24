@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2008/03/10 08:58:32 martti Exp $
+$NetBSD: MESSAGE,v 1.2 2008/04/24 08:04:13 martti Exp $
 
 You will need to customize the following files to configure ejabberd for
 local use:
@@ -8,8 +8,5 @@ local use:
 
 Note: this package includes an unofficial patch to support multiples listeners
 on the same port number, which enables IPv4 and IPv6 concurrently.
-
-Quick start for ejabberd:
-	ejabberdctl start
 
 ===========================================================================
