@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.49 2008/04/15 19:25:28 drochner Exp $
+# $NetBSD: Makefile.common,v 1.50 2008/04/24 12:32:22 wiz Exp $
 #
 
 # used by audio/xine-arts/Makefile
@@ -15,7 +15,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xinehq.de/
 
 XINE_LIB_VER=		1.1.12
+XINE_MOD_DIR_VER=	1.21
 PLIST_SUBST+=		XINE_LIB_VER=${XINE_LIB_VER:Q}
+PLIST_SUBST+=		XINE_MOD_DIR_VER=${XINE_MOD_DIR_VER:Q}
 
 DISTINFO_FILE=		${.CURDIR}/../../multimedia/xine-lib/distinfo
 PATCHDIR=		${.CURDIR}/../../multimedia/xine-lib/patches
