@@ -1,0 +1,22 @@
+$NetBSD: patch-ak,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
+
+--- Modules/posixmodule.c.orig	2007-04-04 14:30:56.000000000 -0400
++++ Modules/posixmodule.c
+@@ -339,7 +339,7 @@ extern int lstat(const char *, struct st
+ #endif
+ 
+ /* Return a dictionary corresponding to the POSIX environment table */
+-#ifdef WITH_NEXT_FRAMEWORK
++#ifdef __APPLE__
+ /* On Darwin/MacOSX a shared library or framework has no access to
+ ** environ directly, we must obtain it with _NSGetEnviron().
+ */
+@@ -357,7 +357,7 @@ convertenviron(void)
+ 	d = PyDict_New();
+ 	if (d == NULL)
+ 		return NULL;
+-#ifdef WITH_NEXT_FRAMEWORK
++#ifdef __APPLE__
+ 	if (environ == NULL)
+ 		environ = *_NSGetEnviron();
+ #endif

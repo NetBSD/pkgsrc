@@ -1,0 +1,15 @@
+$NetBSD: patch-ai,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
+
+--- Modules/_ssl.c.orig	2006-07-10 22:04:09.000000000 -0400
++++ Modules/_ssl.c
+@@ -7,6 +7,10 @@
+ 
+ */
+ 
++#ifdef __sgi
++#include <sys/types.h>
++#endif
++
+ #include "Python.h"
+ enum py_ssl_error {
+ 	/* these mirror ssl.h */

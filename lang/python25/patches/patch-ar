@@ -1,0 +1,17 @@
+$NetBSD: patch-ar,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
+
+--- Mac/BuildScript/scripts/postflight.patch-profile.orig	2006-10-08 14:19:28.000000000 -0400
++++ Mac/BuildScript/scripts/postflight.patch-profile
+@@ -36,10 +36,10 @@ esac
+ # Now ensure that our bin directory is on $P and before /usr/bin at that
+ for elem in `echo $P | tr ':' ' '`
+ do
+-	if [ "${elem}" == "${PYTHON_ROOT}/bin" ]; then
++	if [ "${elem}" = "${PYTHON_ROOT}/bin" ]; then
+ 		echo "All right, you're a python lover already"
+ 		exit 0
+-	elif [ "${elem}" == "/usr/bin" ]; then
++	elif [ "${elem}" = "/usr/bin" ]; then
+ 		break
+ 	fi
+ done
