@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.7 2008/04/21 13:09:57 joerg Exp $	*/
+/*	$NetBSD: file.c,v 1.8 2008/04/24 07:55:00 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -191,27 +191,17 @@ int
 fetchListFile(struct url_list *ue, struct url *u, const char *pattern, const char *flags)
 {
 	struct dirent *de;
-	char fn[PATH_MAX], *p;
 	DIR *dir;
-	int l;
 
 	if ((dir = opendir(u->doc)) == NULL) {
 		fetch_syserr();
 		return -1;
 	}
 
-	strncpy(fn, u->doc, sizeof(fn) - 2);
-	fn[sizeof(fn) - 2] = 0;
-	strcat(fn, "/");
-	p = strchr(fn, 0);
-	l = sizeof(fn) - strlen(fn) - 1;
-
 	while ((de = readdir(dir)) != NULL) {
 		if (pattern && fnmatch(pattern, de->d_name, 0) != 0)
 			continue;
-		strncpy(p, de->d_name, l - 1);
-		p[l - 1] = 0;
-		fetch_add_entry(ue, u, de->d_name);
+		fetch_add_entry(ue, u, de->d_name, 0);
 	}
 
 	return 0;

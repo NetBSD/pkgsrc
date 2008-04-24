@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.9 2008/04/21 21:15:53 joerg Exp $	*/
+/*	$NetBSD: common.c,v 1.10 2008/04/24 07:55:00 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -620,18 +620,33 @@ fetch_close(conn_t *conn)
 /*** Directory-related utility functions *************************************/
 
 int
-fetch_add_entry(struct url_list *ue, struct url *base, const char *name)
+fetch_add_entry(struct url_list *ue, struct url *base, const char *name,
+    int pre_quoted)
 {
 	struct url *tmp;
 	char *tmp_name;
-	size_t base_doc_len, name_len;
+	size_t base_doc_len, name_len, i;
+	unsigned char c;
 
 	if (strchr(name, '/') != NULL ||
 	    strcmp(name, "..") == 0 ||
 	    strcmp(name, ".") == 0)
 		return 0;
 
-	base_doc_len = strlen(base->doc);
+	if (strcmp(base->doc, "/") == 0)
+		base_doc_len = 0;
+	else
+		base_doc_len = strlen(base->doc);
+
+	name_len = 1;
+	for (i = 0; name[i] != '\0'; ++i) {
+		if ((!pre_quoted && name[i] == '%') ||
+		    !fetch_urlpath_safe(name[i]))
+			name_len += 3;
+		else
+			++name_len;
+	}
+
 	name_len = strlen(name);
 	tmp_name = malloc( base_doc_len + name_len + 2);
 	if (tmp_name == NULL) {
@@ -658,11 +673,30 @@ fetch_add_entry(struct url_list *ue, struct url *base, const char *name)
 	strcpy(tmp->pwd, base->pwd);
 	strcpy(tmp->host, base->host);
 	tmp->port = base->port;
-	memcpy(tmp_name, base->doc, base_doc_len);
-	tmp_name[base_doc_len] = '/';
-	memcpy(tmp_name + base_doc_len + 1, name, name_len);
-	tmp_name[base_doc_len + name_len + 1] = '\0';
 	tmp->doc = tmp_name;
+	memcpy(tmp->doc, base->doc, base_doc_len);
+	tmp->doc[base_doc_len] = '/';
+
+	for (i = base_doc_len + 1; *name != '\0'; ++name) {
+		if ((!pre_quoted && *name == '%') ||
+		    !fetch_urlpath_safe(*name)) {
+			tmp->doc[i++] = '%';
+			c = (unsigned char)*name / 16;
+			if (c < 160)
+				tmp->doc[i++] = '0' + c;
+			else
+				tmp->doc[i++] = 'a' - 10 + c;
+			c = (unsigned char)*name % 16;
+			if (c < 16)
+				tmp->doc[i++] = '0' + c;
+			else
+				tmp->doc[i++] = 'a' - 10 + c;
+		} else {
+			tmp->doc[i++] = *name;
+		}
+	}
+	tmp->doc[i] = '\0';
+
 	tmp->offset = 0;
 	tmp->length = 0;
 

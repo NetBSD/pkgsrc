@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.17 2008/04/21 22:39:15 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.18 2008/04/24 07:55:00 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2003 Thomas Klausner <wiz@NetBSD.org>
@@ -1308,7 +1308,7 @@ parse_index(struct index_parser *parser, const char *buf, size_t len)
 			return 0;
 		*end_attr = '\0';
 		parser->state = ST_TAGA;
-		fetch_add_entry(parser->ue, parser->url, buf);
+		fetch_add_entry(parser->ue, parser->url, buf, 1);
 		return end_attr + 1 - buf;
 	}
 	abort();
