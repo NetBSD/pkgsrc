@@ -1,30 +1,13 @@
-@comment $NetBSD: PLIST,v 1.18 2005/06/19 01:22:17 salo Exp $
-lib/silc-server/libsilc.la
-lib/silc-server/modules/aes.sim.so
-lib/silc-server/modules/blowfish.sim.so
-lib/silc-server/modules/cast.sim.so
-lib/silc-server/modules/md5.sim.so
-lib/silc-server/modules/none.sim.so
-lib/silc-server/modules/rc5.sim.so
-lib/silc-server/modules/rsa.sim.so
-lib/silc-server/modules/sha1.sim.so
-lib/silc-server/modules/twofish.sim.so
+@comment $NetBSD: PLIST,v 1.19 2008/04/24 08:30:49 wiz Exp $
 man/man5/silcd.conf.5
 man/man8/silcd.8
 sbin/silcd
-share/doc/silc-server/CHANGES
 share/doc/silc-server/COPYING
 share/doc/silc-server/CREDITS
 share/doc/silc-server/FAQ
 share/doc/silc-server/INSTALL
 share/doc/silc-server/README
 share/doc/silc-server/TODO
-share/doc/silc-server/draft-riikonen-presence-attrs-03.txt
-share/doc/silc-server/draft-riikonen-silc-commands-06.txt
-share/doc/silc-server/draft-riikonen-silc-flags-payloads-04.txt
-share/doc/silc-server/draft-riikonen-silc-ke-auth-08.txt
-share/doc/silc-server/draft-riikonen-silc-pp-09.txt
-share/doc/silc-server/draft-riikonen-silc-spec-08.txt
 share/examples/rc.d/silcd
 share/examples/silc-server/README
 share/examples/silc-server/cell_backup.conf
@@ -38,5 +21,3 @@ share/examples/silc-server/silcd.prv
 share/examples/silc-server/silcd.pub
 @dirrm share/examples/silc-server
 @dirrm share/doc/silc-server
-@dirrm lib/silc-server/modules
-@dirrm lib/silc-server
