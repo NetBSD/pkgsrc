@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.874 2008/04/24 20:22:22 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.875 2008/04/24 20:47:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1596,3 +1596,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/gnome-control-center to 2.22.1nb1 [bjs 2008-04-24]
 	Updated mail/sylpheed-devel to 2.5.0beta2 [xtraeme 2008-04-24]
 	Updated wm/openbox to 3.4.7.2 [wiz 2008-04-24]
+	Updated devel/libsigc++ to 2.2.2 [wiz 2008-04-24]
