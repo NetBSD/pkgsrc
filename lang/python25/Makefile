@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/24 04:42:00 bjs Exp $
 
 DISTNAME=	Python-2.5.2
 PKGNAME=	python25-2.5.2
+PKGREVISION=	1
 CATEGORIES=	lang python
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.5.2/ \
 		http://www.python.org/ftp/python/2.5.2/
@@ -39,11 +40,11 @@ LIBS.SunOS+=		-lrt
 
 PY_VER_SUFFIX=		2.5
 
-PLIST_SRC=	${.CURDIR}/../../wip/python25/PLIST.common
-.if exists(${.CURDIR}/../../wip/python25/PLIST.${OPSYS})
-PLIST_SRC+=	${.CURDIR}/../../wip/python25/PLIST.${OPSYS}
+PLIST_SRC=	${.CURDIR}/../../lang/python25/PLIST.common
+.if exists(${.CURDIR}/../../lang/python25/PLIST.${OPSYS})
+PLIST_SRC+=	${.CURDIR}/../../lang/python25/PLIST.${OPSYS}
 .endif
-PLIST_SRC+=	${.CURDIR}/../../wip/python25/PLIST.common_end
+PLIST_SRC+=	${.CURDIR}/../../lang/python25/PLIST.common_end
 
 .if ${OPSYS} == "NetBSD"
 PRIVILEGED_STAGES+=	clean
