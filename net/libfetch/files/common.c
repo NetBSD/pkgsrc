@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.10 2008/04/24 07:55:00 joerg Exp $	*/
+/*	$NetBSD: common.c,v 1.11 2008/04/24 10:21:33 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -647,8 +647,7 @@ fetch_add_entry(struct url_list *ue, struct url *base, const char *name,
 			++name_len;
 	}
 
-	name_len = strlen(name);
-	tmp_name = malloc( base_doc_len + name_len + 2);
+	tmp_name = malloc( base_doc_len + name_len + 1);
 	if (tmp_name == NULL) {
 		errno = ENOMEM;
 		fetch_syserr();
