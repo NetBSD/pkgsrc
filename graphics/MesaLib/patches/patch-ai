@@ -1,15 +1,62 @@
-$NetBSD: patch-ai,v 1.1 2005/11/08 16:41:30 tv Exp $
+$NetBSD: patch-ai,v 1.2 2008/04/24 07:40:24 bjs Exp $
 
---- /dev/null	2004-10-25 16:57:21.000000000 +0000
-+++ configs/interix3
-@@ -0,0 +1,9 @@
-+# Configuration for Interix 3.x
-+
-+include $(TOP)/configs/default
-+
-+CONFIG_NAME = pkgsrc
-+
-+# Compiler and flags
-+CFLAGS+= -DUSE_XSHM_HDRONLY -DPTHREADS
-+APP_LIB_DEPS = -L$(LIB_DIR) -L${PREFIX}/lib -L${X11PREFIX}/lib -lXext -lXmu -lXi -lX11 -lm
-+
+--- src/mesa/drivers/dri/Makefile.template.orig	2007-12-18 19:05:46.000000000 -0500
++++ src/mesa/drivers/dri/Makefile.template
+@@ -1,6 +1,6 @@
+ # -*-makefile-*-
+ 
+-MESA_MODULES = $(TOP)/src/mesa/libmesa.a
++MESA_MODULES = $(TOP)/src/mesa/libmesa.la
+ 
+ COMMON_SOURCES = \
+         ../../common/driverfuncs.c \
+@@ -61,25 +61,22 @@ SHARED_INCLUDES = \
+ ##### RULES #####
+ 
+ .c.o:
+-	$(CC) -c $(INCLUDES) $(CFLAGS) $(DRIVER_DEFINES) $< -o $@
++	$(LIBTOOL) --mode=compile --tag=CC $(CC) -c -prefer-pic \
++		$(INCLUDES) $(CFLAGS) $(DRIVER_DEFINES) $< -o $(@:.o=.lo)
+ 
+ .S.o:
+-	$(CC) -c $(INCLUDES) $(CFLAGS) $(DRIVER_DEFINES)  $< -o $@
+-
++	$(LIBTOOL) --mode=compile --tag=CC $(CC) -c -prefer-pic \
++		$(INCLUDES) $(CFLAGS) $(DRIVER_DEFINES) $< -o $(@:.o=.lo)
+ 
+ ##### TARGETS #####
+ 
+-default: depend symlinks $(LIBNAME) $(TOP)/$(LIB_DIR)/$(LIBNAME)
+-
+-
+-$(LIBNAME): $(OBJECTS) $(MESA_MODULES) $(WINOBJ) Makefile $(TOP)/src/mesa/drivers/dri/Makefile.template
+-	$(TOP)/bin/mklib -ldflags '$(LDFLAGS)' -noprefix -o $@ \
+-		$(OBJECTS) $(MESA_MODULES) $(WINOBJ) $(DRI_LIB_DEPS)
+-
++default: depend symlinks $(TOP)/$(LIB_DIR)/$(LIBNAME)
+ 
+-$(TOP)/$(LIB_DIR)/$(LIBNAME): $(LIBNAME)
+-	$(INSTALL) $(LIBNAME) $(TOP)/$(LIB_DIR) 
+ 
++$(TOP)/$(LIB_DIR)/$(LIBNAME): $(OBJECTS) $(MESA_MODULES) $(WINOBJ) Makefile $(TOP)/src/mesa/drivers/dri/Makefile.template
++	$(LIBTOOL) --mode=link $(CC) -o $(TOP)/$(LIB_DIR)/$(LIBNAME:.so=.la) \
++	$(OBJECTS:.o=.lo) $(WINOBJ:.o=.lo) $(DRI_LIB_DEPS) \
++	$(MESA_MODULES:.a=.la) -rpath $(PREFIX)/lib -module -avoid-version
+ 
+ depend: $(C_SOURCES) $(ASM_SOURCES) $(SYMLINKS)
+ 	touch depend
+@@ -98,9 +95,11 @@ clean:
+ 	-rm -f depend depend.bak
+ 
+ 
+-install: $(LIBNAME)
+-	$(INSTALL) -d $(DESTDIR)$(DRI_DRIVER_INSTALL_DIR)
+-	$(INSTALL) -m 755 $(LIBNAME) $(DESTDIR)$(DRI_DRIVER_INSTALL_DIR)
++install: $(TOP)/$(LIB_DIR)/$(LIBNAME)
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(DRI_DRIVER_INSTALL_DIR)
++	$(LIBTOOL) --mode=install \
++		$(BSD_INSTALL_LIB) $(TOP)/$(LIB_DIR)/$(LIBNAME:.so=.la) \
++		$(DESTDIR)$(DRI_DRIVER_INSTALL_DIR)
+ 
+ 
+ include depend

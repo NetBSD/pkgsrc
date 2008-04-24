@@ -1,28 +1,54 @@
-$NetBSD: patch-ae,v 1.9 2007/08/13 11:18:45 seb Exp $
+$NetBSD: patch-ae,v 1.10 2008/04/24 07:40:24 bjs Exp $
 
---- src/glw/Makefile.orig	2005-07-26 07:55:56.000000000 +0200
+--- src/glw/Makefile.orig	2007-09-28 20:43:28.000000000 -0400
 +++ src/glw/Makefile
-@@ -17,7 +17,7 @@ OBJECTS = $(GLW_SOURCES:.c=.o)
+@@ -17,7 +17,8 @@ OBJECTS = $(GLW_SOURCES:.c=.o)
  ##### RULES #####
  
  .c.o:
 -	$(CC) -c $(INCDIRS) $(CFLAGS) $<
-+	${LIBTOOL} --mode=compile $(CC) -c $(INCDIRS) $(CFLAGS) $<
++	$(LIBTOOL) --mode=compile --tag=CC \
++		$(CC) -c $(INCDIRS) $(CFLAGS) $(COPTS) -o $(@:.o=.lo) $<
  
  
  
-@@ -33,10 +33,10 @@ clean:
+@@ -34,12 +35,16 @@ glw.pc: glw.pc.in
+ 	$(pcedit) $< > $@
+ 
+ install: glw.pc
+-	$(INSTALL) -d $(DESTDIR)$(INSTALL_DIR)/include/GL
+-	$(INSTALL) -d $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
+-	$(INSTALL) -d $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
+-	$(INSTALL) -m 644 *.h $(DESTDIR)$(INSTALL_DIR)/include/GL
+-	$(INSTALL) $(TOP)/$(LIB_DIR)/libGLw.* $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
+-	$(INSTALL) -m 644 glw.pc $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INSTALL_DIR)/include/GL
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
++	@for fn in *.h; do \
++		$(BSD_INSTALL_DATA) $$fn $(DESTDIR)$(INSTALL_DIR)/include/GL; \
++	done
++	$(LIBTOOL) --mode=install \
++		$(BSD_INSTALL_LIB) $(TOP)/$(LIB_DIR)/libGLw.la \
++			$(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
++	$(BSD_INSTALL_DATA) glw.pc $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
+ 
+ clean:
+ 	-rm depend depend.bak
+@@ -48,10 +53,12 @@ clean:
  
  # Make the library
- $(LIB_DIR)/$(GLW_LIB_NAME): $(OBJECTS)
--	$(TOP)/bin/mklib -o $(GLW_LIB) -linker '$(CC)' \
+ $(TOP)/$(LIB_DIR)/$(GLW_LIB_NAME): $(OBJECTS)
+-	$(TOP)/bin/mklib -o $(GLW_LIB) -linker '$(CC)' -ldflags '$(LDFLAGS)' \
 -		-major $(MAJOR) -minor $(MINOR) -patch $(TINY) \
--		$(MKLIB_OPTIONS) -install $(LIB_DIR) \
+-		$(MKLIB_OPTIONS) -install $(TOP)/$(LIB_DIR) \
 -		$(GLW_LIB_DEPS) $(OBJECTS)
-+	${LIBTOOL} --mode=link ${CC} -o ${GLW_LIB_NAME:.so=.la} \
-+		${OBJECTS:.o=.lo} -rpath ${PREFIX}/lib \
-+		-version-info ${MAJOR}:${MINOR} -L${X11BASE}/lib \
-+		${GLW_LIB_DEPS:S|-lGL|../mesa/libGL.la|} -Wl,-R${X11BASE}/lib
++	$(LIBTOOL) --mode=link $(CC) \
++		-o $(TOP)/$(LIB_DIR)/$(GLW_LIB_NAME:.so=.la) \
++		-rpath $(PREFIX)/lib $(LDFLAGS) \
++		-version-info $(MAJOR):$(MINOR):$(TINY) \
++		$(GLW_LIB_DEPS) $(OBJECTS:.o=.lo)
++
  
  
  #

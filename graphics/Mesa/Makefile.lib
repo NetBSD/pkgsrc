@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.6 2007/08/13 11:18:30 seb Exp $
+# $NetBSD: Makefile.lib,v 1.7 2008/04/24 07:40:23 bjs Exp $
 #
 # This Makefile fragment is included by all packages that build libraries
 # from the Mesa sources.
@@ -14,18 +14,43 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		makedepend
-MAKE_JOBS_SAFE=		no
+USE_TOOLS+=		gmake makedepend pkg-config
 
 PATCHDIR=		${.CURDIR}/../MesaLib/patches
 DISTINFO_FILE=		${.CURDIR}/../MesaLib/distinfo
 
-INSTALLATION_DIRS+=	lib
+COPTS?= 	 	# empty
+COPTS+= 	 	-prefer-pic 	# Make sure to build PIC libraries.
+
+MAKE_ENV+=		MAKE=${GMAKE:Q}
+MAKE_ENV+=		COPTS=${COPTS:M*:Q}
+
+#.if ${X11_TYPE} == "modular"
+#.  if defined(PKG_BUILD_OPTIONS.libX11) && \
+#	!empty(PKG_BUILD_OPTIONS.libX11:Mxcb)
+#MAKE_ENV+=		USE_XCB=yes
+#.  endif
+#.endif
+
+#.if empty(MAKE_ENV:MUSE_XCB=*)
+MAKE_ENV+=		USE_XCB=no
+#.endif
 
 .include "../../mk/compiler.mk"
-.include "../../mk/bsd.prefs.mk"
 
-# Mesa has proper support for Solaris and SunPro, use it.
+MESA_HZ?=	100
+MAKE_ENV+=	MESA_HZ=${MESA_HZ:Q}
+.if ${OPSYS} == "NetBSD" && exists(/sbin/sysctl)
+tmphz=\
+	${sysctl kern.clockrate || ${TRUE}\
+	:L:sh:ts,:S/,//gW:C/([^[0-9]]*)(=|[^ hz])*([^[0-9])//g:M[0-9]*}
+.  if !empty(tmphz) && (${tmphz} > 50) && (${tmphz} < 2001)
+MESA_HZ=	${tmphz}
+.  endif
+.endif
+###
+### XXX do we still want this?
+###
 .if ${OPSYS} == "SunOS"
 .  if ${MACHINE_ARCH} == "sparc"
 .    if !empty(PKGSRC_COMPILER:Msunpro)
@@ -33,22 +58,41 @@ BUILD_TARGET=		sunos5
 .    else
 BUILD_TARGET=		sunos5-gcc
 .    endif
-.  else	# i386
-BUILD_TARGET=		pkgsrc
+.  else
+BUILD_TARGET?=		pkgsrc
 .  endif
 .elif ${OPSYS} == "Interix"
 BUILD_TARGET=		interix3
 .else
-BUILD_TARGET=		pkgsrc
+BUILD_TARGET?=		pkgsrc
 .endif
 
-.PHONY: Mesa-install-libs
-pre-install: Mesa-install-libs
-Mesa-install-libs:
-	@${TEST} -z ${INSTLIBS:M*:Q}"" || ${ECHO_MSG} "Installing libraries."
-	@for lib in "" ${INSTLIBS}; do					\
-		${TEST} -n "$$lib" || continue;				\
-		${SETENV} ${MAKE_ENV}					\
-		${LIBTOOL} --mode=install ${INSTALL_LIB}		\
-			$$lib ${DESTDIR}${PREFIX}/lib;			\
-	done
+RM_PATCH_BACKUP_DIRS= 	docs src/mesa src/glut/glx \
+ 	 	 	progs/demos progs/xdemos progs/glsl
+pre-patch:
+	@ for fn in ${RM_PATCH_BACKUP_DIRS}; do \
+		${RM} -f ${WRKSRC}/$${fn}/*.orig; \
+	 done
+
+post-patch:
+	${CP} ${.CURDIR}/../MesaLib/files/configs/[a-z]* ${WRKSRC}/configs
+
+post-install: install-headers
+
+.PHONY: install-headers
+install-headers:
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/GL
+.for hdr in ${MESA_HEADERS}
+	if [ -f ${WRKSRC}/include/GL/${hdr:Q} ]; then \
+	    ${INSTALL_DATA} ${WRKSRC}/include/GL/${hdr:Q} \
+	    ${DESTDIR}${PREFIX}/include/GL; \
+	fi;
+.endfor
+
+SUBST_CLASSES+=                 fix-paths
+SUBST_STAGE.fix-paths=          pre-configure
+SUBST_MESSAGE.fix-paths=        Fixing absolute paths.
+SUBST_FILES.fix-paths=          src/*.c
+SUBST_FILES.fix-paths+=         scripts/*.sh
+SUBST_SED.fix-paths=            -e 's,"/usr/local,"${PREFIX},g'
+SUBST_SED.fix-paths+=           -e 's,"/var/log,"${VARBASE}/log,g'

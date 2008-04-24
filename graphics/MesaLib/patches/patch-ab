@@ -1,15 +1,22 @@
-$NetBSD: patch-ab,v 1.14 2005/06/17 15:54:07 jlam Exp $
+$NetBSD: patch-ab,v 1.15 2008/04/24 07:40:24 bjs Exp $
 
---- /dev/null	2004-10-25 16:57:21.000000000 +0000
-+++ configs/pkgsrc
-@@ -0,0 +1,9 @@
-+# Configuration for NetBSD
-+
-+include $(TOP)/configs/default
-+
-+CONFIG_NAME = pkgsrc
-+
-+# Compiler and flags
-+CFLAGS+= -DUSE_XSHM -DPTHREADS
-+APP_LIB_DEPS = -L$(LIB_DIR) -L${PREFIX}/lib -L${X11PREFIX}/lib -lXext -lXmu -lXi -lX11 -lm
-+
+--- src/glu/Makefile.orig	2007-09-12 12:03:23.000000000 -0400
++++ src/glu/Makefile
+@@ -22,10 +22,13 @@ glu.pc: glu.pc.in
+ 	$(pcedit) $< > $@
+ 
+ install: glu.pc
+-	$(INSTALL) -d $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
+-	$(INSTALL) -d $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
+-	$(INSTALL) $(TOP)/$(LIB_DIR)/libGLU.* $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
+-	$(INSTALL) -m 644 glu.pc $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
++	$(LIBTOOL) --mode=install \
++		$(BSD_INSTALL_LIB) $(TOP)/$(LIB_DIR)/libGLU.la \
++			$(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
++	$(BSD_INSTALL_DATA) glu.pc \
++		$(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
+ 
+ clean:
+ 	@for dir in $(SUBDIRS) ; do \

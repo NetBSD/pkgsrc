@@ -1,0 +1,40 @@
+# $NetBSD: pkgsrc,v 1.1 2008/04/24 07:40:24 bjs Exp $
+
+include $(TOP)/configs/default
+
+ifeq ($(USE_XCB), yes)
+include $(TOP)/configs/xcb-defs
+endif
+
+CONFIG_NAME=	pkgsrc
+
+DEFINES=	-DPTHREADS -DUSE_XSHM -DHZ=$(MESA_HZ) $(XCB_DEFS)
+X11_INCLUDES=	-I$(X11BASE)/include $(XCB_X11_INCLUDES)
+
+CFLAGS+=	$(WARN_FLAGS) $(OPT_FLAGS) $(PIC_FLAGS) \
+		$(DEFINES) $(X11_INCLUDES)
+CXXFLAGS+=	$(WARN_FLAGS) $(OPT_FLAGS) $(PIC_FLAGS) \
+		$(DEFINES) $(X11_INCLUDES)
+
+LIBTOOL?=	libtool
+
+GLUT_CFLAGS=	-fexceptions # XXX gcc
+GL_LIB_DEPS=\
+	$(EXTRA_LIB_PATH) -lX11 $(XCB_GL_LIB_DEPS) -lXext -lm $(PTHREAD_STUBLIB)
+OSMESA_LIB_DEPS=\
+	$(TOP)/$(LIB_DIR)/lib$(GL_LIB).la
+GLU_LIB_DEPS=\
+	-lGL -lm
+GLUT_LIB_DEPS=\
+	-lGLU -lGL -lX11 -lXmu -lXt -lXi -lm
+GLW_LIB_DEPS=\
+	$(TOP)/$(LIB_DIR)/lib$(GL_LIB).la -lXt -lX11
+
+# XXX this is wrong, revisit when doing MesaDemos
+APP_LIB_DEPS=	$(TOP)/$(LIB_DIR)/lib$(GLUT_LIB).la \
+		$(TOP)/$(LIB_DIR)/lib$(GLU_LIB).la \
+		$(TOP)/$(LIB_DIR)/lib$(GL_LIB).la \
+		-lXext -lXmu -lXi -lX11 -lm
+
+SRC_DIRS=	mesa glw glu glut/glx
+DRIVER_DIRS=	x11 osmesa

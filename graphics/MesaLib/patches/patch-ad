@@ -1,59 +1,177 @@
-$NetBSD: patch-ad,v 1.10 2007/08/13 11:18:44 seb Exp $
+$NetBSD: patch-ad,v 1.11 2008/04/24 07:40:24 bjs Exp $
 
---- src/mesa/Makefile.orig	2005-07-26 07:55:56.000000000 +0200
+--- src/mesa/Makefile.orig	2007-12-03 20:00:21.000000000 +0100
 +++ src/mesa/Makefile
-@@ -14,13 +14,13 @@ GL_TINY = 0$(MESA_MAJOR)0$(MESA_MINOR)0$
+@@ -8,19 +8,22 @@ include sources
+ 
+ GL_MAJOR = 1
+ GL_MINOR = 5
+-GL_TINY = 0$(MESA_MAJOR)0$(MESA_MINOR)0$(MESA_TINY)
++GL_TINY = 0
+ 
+ 
  .SUFFIXES : .cpp
  
  .c.o:
 -	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $@
-+	${LIBTOOL} --mode=compile $(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $@
++	$(LIBTOOL) --mode=compile --tag=CC \
++	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $(COPTS) $< -o $(@:.o=.lo)
  
  .cpp.o:
 -	$(CXX) -c $(INCLUDE_DIRS) $(CXXFLAGS) $< -o $@
-+	${LIBTOOL} --mode=compile $(CXX) -c $(INCLUDE_DIRS) $(CXXFLAGS) $< -o $@
++	$(LIBTOOL) --mode=compile --tag=CXX \
++	$(CXX) -c $(INCLUDE_DIRS) $(CXXFLAGS) $< -o $(@:.o=.lo)
  
  .S.o:
 -	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $@
-+	${LIBTOOL} --mode=compile $(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $< -o $@
++	$(LIBTOOL) --mode=compile --tag=CC \
++	$(CC) -c $(INCLUDE_DIRS) $(CFLAGS) $(COPTS) $< -o $(@:.o=.lo)
  
  
  # Figure out what to make here
-@@ -150,25 +150,23 @@ subdirs:
+@@ -51,13 +54,14 @@ beos: depend subdirs libmesa.a
+ # Linux DRI drivers
  
- # Make the GL library
- $(LIB_DIR)/$(GL_LIB_NAME): $(STAND_ALONE_OBJECTS)
--	@ $(TOP)/bin/mklib -o $(GL_LIB) -linker '$(CC)' \
--		-major $(GL_MAJOR) -minor $(GL_MINOR) -patch $(GL_TINY) \
--		-install $(LIB_DIR) \
--		$(MKLIB_OPTIONS) $(GL_LIB_DEPS) $(STAND_ALONE_OBJECTS)
-+	${LIBTOOL} --mode=link ${CC} -o ${GL_LIB_NAME:.so=.la} \
-+		${STAND_ALONE_OBJECTS:.o=.lo} \
-+		-rpath ${PREFIX}/lib -version-info ${GL_MAJOR}:${GL_MINOR} \
-+		-L${X11BASE}/lib -Wl,-R${X11BASE}/lib ${GL_LIB_DEPS}
- 
- # Make the OSMesa library
- $(LIB_DIR)/$(OSMESA_LIB_NAME): $(OSMESA_DRIVER_OBJECTS) $(OSMESA16_OBJECTS)
- 	@ if [ "${DRIVER_DIRS}" = "osmesa" ] ; then \
--		$(TOP)/bin/mklib -o $(OSMESA_LIB) -linker '$(CC)' \
--			-major $(MESA_MAJOR) \
--			-minor $(MESA_MINOR) -patch $(MESA_TINY) \
--			-install $(LIB_DIR) $(MKLIB_OPTIONS) \
--			$(OSMESA_LIB_DEPS) $(OSMESA16_OBJECTS) ; \
-+		${LIBTOOL} --mode=link ${CC} -o ${OSMESA_LIB_NAME:.so=.la} \
-+			${OSMESA16_OBJECTS:.o=.lo} -rpath ${PREFIX}/lib \
-+			-version-info ${MESA_MAJOR}:${MESA_MINOR} \
-+			${OSMESA_LIB_DEPS:S|-lGL|libGL.la|} ; \
- 	else \
--		$(TOP)/bin/mklib -o $(OSMESA_LIB) -linker '$(CC)' \
--			-major $(MESA_MAJOR) \
--			-minor $(MESA_MINOR) -patch $(GL_TINY) \
--			-install $(LIB_DIR) $(MKLIB_OPTIONS) \
--			$(OSMESA_LIB_DEPS) $(OSMESA_DRIVER_OBJECTS) ; \
-+		${LIBTOOL} --mode=link ${CC} -o ${OSMESA_LIB_NAME:.so=.la} \
-+			${OSMESA_DRIVER_OBJECTS:.o=.lo} -rpath ${PREFIX}/lib \
-+			-version-info ${MESA_MAJOR}:${MESA_MINOR} \
-+			${OSMESA_LIB_DEPS:S|-lGL|libGL.la|} ; \
+ # Make archive of core object files
+-libmesa.a: $(SOLO_OBJECTS)
+-	@ $(TOP)/bin/mklib -o mesa -static $(SOLO_OBJECTS);
++libmesa.la: $(SOLO_OBJECTS)
++	@ $(LIBTOOL) --mode=link $(CC) \
++		-o $@ $(SOLO_OBJECTS:.o=.lo) -static -avoid-version
+ 	@if [ "${CONFIG_NAME}" = "beos" ] ; then \
+ 		mimeset -f "$@" ; \
  	fi
  
+-linux-solo: depend subdirs libmesa.a
++linux-solo: depend subdirs libmesa.la
+ 	cd drivers/dri ; $(MAKE)
  
+ 
+@@ -65,10 +69,11 @@ linux-solo: depend subdirs libmesa.a
+ # Stand-alone Mesa libGL, no built-in drivers (DirectFB)
+ 
+ libgl-core: $(CORE_OBJECTS)
+-	@ $(TOP)/bin/mklib -o $(GL_LIB) -linker '$(CC)' -ldflags '$(LDFLAGS)' \
+-		-major $(MESA_MAJOR) -minor $(MESA_MINOR) -patch $(MESA_TINY) \
+-		-install $(TOP)/$(LIB_DIR) $(MKLIB_OPTIONS) $(CORE_OBJECTS) \
+-		$(GL_LIB_DEPS)
++	@ $(LIBTOOL) --mode=link $(CC) \
++		-o $(TOP)/$(LIB_DIR)/$(GL_LIB_NAME:.so=.la) \
++		$(LDFLAGS) -rpath $(PREFIX)/lib \
++	 	-version-info $(MESA_MAJOR):$(MESA_MINOR):$(MESA_TINY) \
++		$(CORE_OBJECTS:.o=.lo) $(GL_LIB_DEPS)
+ 
+ directfb: depend subdirs libgl-core
+ 	cd drivers/directfb ; $(MAKE)
+@@ -78,12 +83,12 @@ directfb: depend subdirs libgl-core
+ # fbdev Mesa driver (libGL.so)
+ 
+ fbdev: $(CORE_OBJECTS) $(FBDEV_DRIVER_OBJECTS) $(COMMON_DRIVER_OBJECTS)
+-	@ $(TOP)/bin/mklib -o $(GL_LIB) -linker '$(CC)' -ldflags '$(LDFLAGS)' \
+-		-major $(MESA_MAJOR) -minor $(MESA_MINOR) -patch $(MESA_TINY) \
+-		-install $(TOP)/$(LIB_DIR) $(MKLIB_OPTIONS) \
+-		$(CORE_OBJECTS) $(FBDEV_DRIVER_OBJECTS) \
+-		$(COMMON_DRIVER_OBJECTS) $(GL_LIB_DEPS)
+-
++	@ $(LIBTOOL) --mode=link $(CC) \
++		-o $(TOP)/$(LIB_DIR)/$(GL_LIB_NAME:.so=.la) $(LDFLAGS) \
++		-rpath $(PREFIX)/lib $(CORE_OBJECTS:.o=.lo) \
++		-version-info $(MESA_MAJOR):$(MESA_MINOR):$(MESA_TINY) \
++		$(FBDEV_DRIVER_OBJECTS:.o=.lo) \
++		$(COMMON_DRIVER_OBJECTS:.o=.lo) $(GL_LIB_DEPS)
+ 
+ ######################################################################
+ # Stand-alone Mesa libGL and libOSMesa
+@@ -111,29 +116,30 @@ osmesa-only: depend subdirs $(TOP)/$(LIB
+ 
+ # Make the GL library
+ $(TOP)/$(LIB_DIR)/$(GL_LIB_NAME): $(STAND_ALONE_OBJECTS)
+-	@ $(TOP)/bin/mklib -o $(GL_LIB) -linker '$(CC)' -ldflags '$(LDFLAGS)' \
+-		-major $(GL_MAJOR) -minor $(GL_MINOR) -patch $(GL_TINY) \
+-		-install $(TOP)/$(LIB_DIR) \
+-		$(MKLIB_OPTIONS) $(GL_LIB_DEPS) $(STAND_ALONE_OBJECTS)
++	@ $(LIBTOOL) --mode=link $(CC) \
++		-o $(TOP)/$(LIB_DIR)/$(GL_LIB_NAME:.so=.la) \
++		-version-info $(GL_MAJOR):$(GL_MINOR):$(GL_TINY) \
++		-rpath $(PREFIX)/lib $(LDFLAGS) $(GL_LIB_DEPS) \
++		$(STAND_ALONE_OBJECTS:.o=.lo)
++
+ 
+ # Make the OSMesa library
+ # Note: version is kept at 6.5.3 to simplify app/linking issues
+ $(TOP)/$(LIB_DIR)/$(OSMESA_LIB_NAME): $(OSMESA_DRIVER_OBJECTS) $(OSMESA16_OBJECTS)
+ 	@ if [ "${DRIVER_DIRS}" = "osmesa" ] ; then \
+-		$(TOP)/bin/mklib -o $(OSMESA_LIB) -linker '$(CC)' \
+-			-ldflags '$(LDFLAGS)' \
+-			-major 6 -minor 5 -patch 3 \
+-			-install $(TOP)/$(LIB_DIR) $(MKLIB_OPTIONS) \
+-			$(OSMESA_LIB_DEPS) $(OSMESA16_OBJECTS) ; \
++		$(LIBTOOL) --mode=link $(CC) \
++			-o $(TOP)/$(LIB_DIR)/$(OSMESA_LIB_NAME:.so=.la) \
++			$(LDFLAGS) -version-info 6:5:3 -rpath $(PREFIX)/lib \
++			$(OSMESA_LIB_DEPS) $(OSMESA16_OBJECTS:.o=.lo) ; \
+ 	else \
+-		$(TOP)/bin/mklib -o $(OSMESA_LIB) -linker '$(CC)' \
+-			-ldflags '$(LDFLAGS)' \
+-			-major 6 -minor 5 -patch 3 \
+-			-install $(TOP)/$(LIB_DIR) $(MKLIB_OPTIONS) \
+-			$(OSMESA_LIB_DEPS) $(OSMESA_DRIVER_OBJECTS) ; \
++		$(LIBTOOL) --mode=link $(CC) \
++			-o $(TOP)/$(LIB_DIR)/$(OSMESA_LIB_NAME:.so=.la) \
++			$(LDFLAGS) -version-info 6:5:3 \
++			-o $(TOP)/$(LIB_DIR)/$(OSMESA_LIB_NAME:.so=.la) \
++			-rpath $(PREFIX)/lib $(OSMESA_LIB_DEPS) \
++			$(OSMESA_DRIVER_OBJECTS:.o=.lo) ; \
+ 	fi
+ 
+-
+ ######################################################################
+ # libGL pkg-config file
+ pcedit = sed \
+@@ -164,20 +170,26 @@ subdirs:
+ 
+ 
+ install: default gl.pc
+-	$(INSTALL) -d $(DESTDIR)$(INSTALL_DIR)/include/GL
+-	$(INSTALL) -d $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
+-	$(INSTALL) -d $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
+-	$(INSTALL) -m 644 $(TOP)/include/GL/*.h $(DESTDIR)$(INSTALL_DIR)/include/GL
+-	@if [ -e $(TOP)/$(LIB_DIR)/$(GL_LIB_NAME) ]; then \
+-		$(INSTALL) $(TOP)/$(LIB_DIR)/libGL* $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR); \
+-	fi
+-	$(INSTALL) -m 644 gl.pc $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
+-	@if [ -e $(TOP)/$(LIB_DIR)/$(OSMESA_LIB_NAME) ]; then \
+-		$(INSTALL) $(TOP)/$(LIB_DIR)/libOSMesa* $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR); \
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INSTALL_DIR)/include/GL
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
++#	@for fn in $(TOP)/include/GL/*.h; do \
++#		$(BSD_INSTALL_DATA) $$fn $(DESTDIR)$(INSTALL_DIR)/include/GL; \
++#	done
++	@if [ -e "$(TOP)/$(LIB_DIR)/$(GL_LIB_NAME:.so=.la)" ]; then \
++		$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) \
++			$(TOP)/$(LIB_DIR)/$(GL_LIB_NAME:.so=.la) \
++			$(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR); \
++	fi
++	$(BSD_INSTALL_DATA) gl.pc $(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR)/pkgconfig
++	@if [ -e "$(TOP)/$(LIB_DIR)/$(OSMESA_LIB_NAME:.so=.la)" ]; then \
++		$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) \
++			$(TOP)/$(LIB_DIR)/$(OSMESA_LIB_NAME:.so=.la) \
++			$(DESTDIR)$(INSTALL_DIR)/$(LIB_DIR); \
+ 	fi
+ 	@if [ "${DRIVER_DIRS}" = "dri" ] ; then \
+ 		cd drivers/dri ; $(MAKE) install ; \
+-	fi
++	 fi
+ 
+ ## NOT INSTALLED YET:
+ ## $(INSTALL) -d $(DESTDIR)$(INSTALL_DIR)/include/GLES
+@@ -191,7 +203,7 @@ tags:
+ clean:
+ 	-rm -f */*.o
+ 	-rm -f */*/*.o
+-	-rm -f depend depend.bak libmesa.a
++	-rm -f depend depend.bak libmesa*
+ 	-rm -f drivers/*/*.o
+ 	(cd drivers/dri ; $(MAKE) clean)
+ 	(cd x86 ; $(MAKE) clean)

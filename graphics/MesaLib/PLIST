@@ -1,4 +1,8 @@
-@comment $NetBSD: PLIST,v 1.15 2006/01/19 12:53:17 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2008/04/24 07:40:24 bjs Exp $
+include/GL/GLwDrawA.h
+include/GL/GLwDrawAP.h
+include/GL/GLwMDrawA.h
+include/GL/GLwMDrawAP.h
 include/GL/gl.h
 include/GL/gl_mangle.h
 include/GL/glext.h
@@ -11,5 +15,22 @@ include/GL/xmesa_x.h
 include/GL/xmesa_xf86.h
 lib/libGL.la
 lib/libGLw.la
-lib/libOSMesa.la
-@unexec ${RMDIR} %D/include/GL >/dev/null 2>&1 || ${TRUE}
+${PLIST.nodri}lib/libOSMesa.la
+${PLIST.dri}lib/dri/i810_dri.la
+${PLIST.dri}lib/dri/i915_dri.la
+${PLIST.dri}lib/dri/i915tex_dri.la
+${PLIST.dri}lib/dri/i965_dri.la
+${PLIST.dri}lib/dri/mach64_dri.la
+${PLIST.dri}lib/dri/mga_dri.la
+${PLIST.dri}lib/dri/r128_dri.la
+${PLIST.dri}lib/dri/r200_dri.la
+${PLIST.dri}lib/dri/r300_dri.la
+${PLIST.dri}lib/dri/radeon_dri.la
+${PLIST.dri}lib/dri/savage_dri.la
+${PLIST.dri}lib/dri/sis_dri.la
+${PLIST.dri}lib/dri/tdfx_dri.la
+${PLIST.dri}lib/dri/unichrome_dri.la
+lib/pkgconfig/gl.pc
+lib/pkgconfig/glw.pc
+${PLIST.dri}@dirrm lib/dri
+@unexec ${RMDIR} %D/include/GL 2>/dev/null || ${TRUE}
