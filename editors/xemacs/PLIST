@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2008/04/12 22:43:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.16 2008/04/24 15:32:15 jlam Exp $
 bin/${DISTNAME}
 bin/ellcc
 bin/gnuattach
@@ -1040,7 +1040,7 @@ lib/${DISTNAME}/lisp/mule/arabic.elc
 lib/${DISTNAME}/lisp/mule/auto-autoloads.el${ELSUFX}
 lib/${DISTNAME}/lisp/mule/auto-autoloads.elc
 lib/${DISTNAME}/lisp/mule/canna-leim.el${ELSUFX}
-${PLIST.mule}lib/${DISTNAME}/lisp/mule/canna-leim.elc
+${PLIST.canna}lib/${DISTNAME}/lisp/mule/canna-leim.elc
 lib/${DISTNAME}/lisp/mule/chinese.el${ELSUFX}
 lib/${DISTNAME}/lisp/mule/chinese.elc
 lib/${DISTNAME}/lisp/mule/custom-load.el${ELSUFX}
