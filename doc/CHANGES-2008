@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.876 2008/04/24 20:56:46 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.877 2008/04/24 21:19:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1598,3 +1598,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated wm/openbox to 3.4.7.2 [wiz 2008-04-24]
 	Updated devel/libsigc++ to 2.2.2 [wiz 2008-04-24]
 	Updated devel/libglademm to 2.6.6 [wiz 2008-04-24]
+	Updated archivers/gzrecover to 0.5 [wiz 2008-04-24]
