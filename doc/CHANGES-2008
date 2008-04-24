@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.869 2008/04/24 08:31:04 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.870 2008/04/24 09:43:45 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1591,3 +1591,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/glx-utils to 7.0.3 [bjs 2008-04-24]
 	Updated chat/ejabberd to ejabberd-2.0.0nb2 [martti 2008-04-24]
 	Updated chat/silc-server to 1.1.6 [wiz 2008-04-24]
+	Updated graphics/glx-utils to 7.0.3 [tnn 2008-04-24]
