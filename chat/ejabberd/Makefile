@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2008/04/24 08:04:13 martti Exp $
+# $NetBSD: Makefile,v 1.5 2008/04/24 08:04:59 martti Exp $
 
 DISTNAME=	ejabberd-2.0.0
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/2.0.0/
 
