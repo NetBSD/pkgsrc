@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.c,v 1.7 2008/04/24 07:55:00 joerg Exp $	*/
+/*	$NetBSD: fetch.c,v 1.8 2008/04/24 10:21:33 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -366,6 +366,7 @@ fetchParseURL(const char *URL)
 	const char *p, *q;
 	struct url *u;
 	size_t i, count;
+	int pre_quoted;
 
 	/* allocate struct url */
 	if ((u = calloc(1, sizeof(*u))) == NULL) {
@@ -374,11 +375,13 @@ fetchParseURL(const char *URL)
 	}
 
 	if (*URL == '/') {
+		pre_quoted = 0;
 		strcpy(u->scheme, SCHEME_FILE);
 		p = URL;
 		goto quote_doc;
 	}
 	if (strncmp(URL, "file:", 5) == 0) {
+		pre_quoted = 1;
 		strcpy(u->scheme, SCHEME_FILE);
 		URL += 5;
 		if (URL[0] != '/' || URL[1] != '/' || URL[2] != '/') {
@@ -390,6 +393,7 @@ fetchParseURL(const char *URL)
 	}
 	if (strncmp(URL, "http:", 5) == 0 ||
 	    strncmp(URL, "https:", 6) == 0) {
+		pre_quoted = 1;
 		if (URL[4] == ':') {
 			strcpy(u->scheme, SCHEME_HTTP);
 			URL += 5;
@@ -407,6 +411,7 @@ fetchParseURL(const char *URL)
 		goto find_hostname;
 	}
 	if (strncmp(URL, "ftp:", 4) == 0) {
+		pre_quoted = 1;
 		strcpy(u->scheme, SCHEME_FTP);
 		URL += 4;
 		if (URL[0] != '/' || URL[1] != '/') {
@@ -476,16 +481,21 @@ find_hostname:
 
 quote_doc:
 	count = 1;
-	for (i = 0; p[i] != '\0'; ++i)
-		count += fetch_urlpath_safe(p[i]) ? 1 : 3;
+	for (i = 0; p[i] != '\0'; ++i) {
+		if ((!pre_quoted && p[i] == '%') ||
+		    !fetch_urlpath_safe(p[i]))
+			count += 3;
+		else
+			++count;
+	}
+
 	if ((u->doc = malloc(count)) == NULL) {
 		fetch_syserr();
 		goto ouch;
 	}
 	for (i = 0; *p != '\0'; ++p) {
-		if (fetch_urlpath_safe(*p))
-			u->doc[i++] = *p;
-		else {
+		if ((!pre_quoted && *p == '%') ||
+		    !fetch_urlpath_safe(*p)) {
 			u->doc[i++] = '%';
 			if ((unsigned char)*p < 160)
 				u->doc[i++] = '0' + ((unsigned char)*p) / 16;
@@ -495,7 +505,8 @@ quote_doc:
 				u->doc[i++] = '0' + ((unsigned char)*p) % 16;
 			else
 				u->doc[i++] = 'a' - 10 + ((unsigned char)*p) % 16;
-		}
+		} else
+			u->doc[i++] = *p;
 	}
 	u->doc[i] = '\0';
 
@@ -529,37 +540,52 @@ xdigit2digit(char digit)
 }
 
 /*
+ * Unquote whole URL.
+ * Skips optional parts like query or fragment identifier.
+ */ 
+char *
+fetch_unquote_doc(struct url *url)
+{
+	char *unquoted;
+	const char *iter;
+	size_t i;
+
+	if ((unquoted = malloc(strlen(url->doc) + 1)) == NULL)
+		return NULL;
+
+	for (i = 0, iter = url->doc; *iter != '\0'; ++iter) {
+		if (*iter == '#' || *iter == '?')
+			break;
+		if (iter[0] != '%' ||
+		    !isxdigit((unsigned char)iter[1]) ||
+		    !isxdigit((unsigned char)iter[2])) {
+			unquoted[i++] = *iter;
+			continue;
+		}
+		unquoted[i++] = xdigit2digit(iter[1]) * 16 +
+		    xdigit2digit(iter[2]);
+		iter += 2;
+	}
+	unquoted[i] = '\0';
+	return unquoted;
+}
+
+
+/*
  * Extract the file name component of a URL.
  */
 char *
 fetch_extract_filename(struct url *url)
 {
-	char *name, *name_iter;
-	const char *last_slash, *iter;
+	char *unquoted, *filename;
+	const char *last_slash;
 
-	last_slash = url->doc;
-	if (*last_slash == '\0')
-		return strdup("");
-	for (iter = last_slash + 1; *iter; ++iter) {
-		if (*iter == '#' || *iter == '?')
-			break;
-		if (*iter == '/')
-			last_slash = iter;
-	}
-	if (last_slash + 1 == iter)
-		return strdup("");
-	name_iter = name = malloc(iter - last_slash);
-	while (++last_slash < iter) {
-		if (*last_slash != '%' ||
-		    !isxdigit((unsigned char)last_slash[1]) ||
-		    !isxdigit((unsigned char)last_slash[2])) {
-			*name_iter++ = *last_slash;
-			continue;
-		}
-		*name_iter++ = xdigit2digit(last_slash[1]) * 16 +
-		    xdigit2digit(last_slash[2]);
-		last_slash += 2;
-	}
-	*name_iter = '\0';
-	return name;
+	if ((unquoted = fetch_unquote_doc(url)) == NULL)
+		return NULL;
+
+	if ((last_slash = strrchr(unquoted, '/')) == NULL)
+		return unquoted;
+	filename = strdup(last_slash + 1);
+	free(unquoted);
+	return filename;
 }
