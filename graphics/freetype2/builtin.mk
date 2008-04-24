@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.10 2008/04/24 01:11:15 jnemeth Exp $
+# $NetBSD: builtin.mk,v 1.11 2008/04/24 11:18:13 tron Exp $
 
 BUILTIN_PKG:=	freetype2
 
@@ -81,35 +81,6 @@ BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.3
 BUILDLINK_PREFIX.freetype2=	${X11BASE}
 .    include "../../mk/x11.buildlink3.mk"
 .    include "../../mk/x11.builtin.mk"
-
-.    if !empty(USE_TOOLS:C/:.*//:Mpkg-config)
-do-configure-pre-hook: override-freetype2-pkgconfig
-
-BLKDIR_PKGCFG=	${BUILDLINK_DIR}/lib/pkgconfig
-FREETYPE2_PKGCFGF=	freetype2.pc
-
-override-freetype2-pkgconfig: override-message-freetype2-pkgconfig
-override-message-freetype2-pkgconfig:
-	@${STEP_MSG} "Installing freetype2.pc."
-
-override-freetype2-pkgconfig:
-	${_PKG_SILENT}${_PKG_DEBUG}set -e;		\
-	${MKDIR} ${BLKDIR_PKGCFG};			\
-	{						\
-	${ECHO} "prefix=${X11BASE}";				\
-	${ECHO} "exec_prefix=\$${prefix}";		\
-	${ECHO} "libdir=\$${exec_prefix}/lib";		\
-	${ECHO} "includedir=\$${prefix}/include";	\
-	${ECHO}	"";					\
-	${ECHO} "Name: Freetype 2";				\
-	${ECHO} "Description: A free, high-quality, and portable font engine.";	\
-	${ECHO} "Version: ${BUILTIN_VERSION.freetype2}";		\
-	${ECHO} "Libs: -Wl,-R\$${libdir} -L\$${libdir} -lfreetype -lz";	\
-	${ECHO} "Cflags: -I\$${includedir}/freetype2 -I\$${includedir}"; \
-	} >> ${BLKDIR_PKGCFG}/${FREETYPE2_PKGCFGF};
-
-.    endif # pkg-config
-
 .  endif
 
 .endif	# CHECK_BUILTIN.freetype2
