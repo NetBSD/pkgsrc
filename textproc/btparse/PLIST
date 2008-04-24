@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2005/09/27 12:24:06 tonio Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/04/24 21:17:51 markd Exp $
 bin/bibparse
 include/btparse.h
 lib/libbtparse.la
+lib/pkgconfig/btparse.pc
 man/man3/bt_format_names.3
 man/man3/bt_input.3
 man/man3/bt_language.3
