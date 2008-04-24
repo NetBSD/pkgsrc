@@ -1,40 +1,15 @@
-$NetBSD: patch-ac,v 1.3 2008/02/20 13:11:00 xtraeme Exp $
+$NetBSD: patch-ac,v 1.3.2.1 2008/04/24 13:27:08 rtr Exp $
 
---- include/vlc_threads_funcs.h.orig	2007-11-26 14:08:12.000000000 +0100
-+++ include/vlc_threads_funcs.h
-@@ -111,7 +111,7 @@ static inline int __vlc_mutex_lock( cons
-     i_result = pthread_mutex_lock( &p_mutex->mutex );
-     if ( i_result )
-     {
--        i_thread = (int)pthread_self();
-+        i_thread = (intptr_t)pthread_self();
-         psz_error = strerror(i_result);
+Fix wrong boundary check in Speex decoder (CVE-2008-1686).
+
+--- modules/codec/speex.c.orig	2008-03-23 22:41:48.000000000 +0000
++++ modules/codec/speex.c
+@@ -332,7 +332,7 @@ static int ProcessInitialHeader( decoder
+         msg_Err( p_dec, "cannot read Speex header" );
+         return VLC_EGENERIC;
      }
- 
-@@ -184,7 +184,7 @@ static inline int __vlc_mutex_unlock( co
-     i_result = pthread_mutex_unlock( &p_mutex->mutex );
-     if ( i_result )
+-    if( p_header->mode >= SPEEX_NB_MODES )
++    if( p_header->mode >= SPEEX_NB_MODES || p_header->mode < 0 )
      {
--        i_thread = (int)pthread_self();
-+        i_thread = (intptr_t)pthread_self();
-         psz_error = strerror(i_result);
-     }
- 
-@@ -322,7 +322,7 @@ static inline int __vlc_cond_signal( con
-     i_result = pthread_cond_signal( &p_condvar->cond );
-     if ( i_result )
-     {
--        i_thread = (int)pthread_self();
-+        i_thread = (intptr_t)pthread_self();
-         psz_error = strerror(i_result);
-     }
- 
-@@ -512,7 +512,7 @@ static inline int __vlc_cond_wait( const
- 
-     if ( i_result )
-     {
--        i_thread = (int)pthread_self();
-+        i_thread = (intptr_t)pthread_self();
-         psz_error = strerror(i_result);
-     }
- 
+         msg_Err( p_dec, "mode number %d does not (yet/any longer) exist in "
+                  "this version of libspeex.", p_header->mode );
