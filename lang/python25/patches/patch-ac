@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
+
+--- Lib/distutils/command/build_scripts.py.orig	2004-11-10 17:23:15.000000000 -0500
++++ Lib/distutils/command/build_scripts.py
+@@ -104,7 +104,7 @@ class build_scripts (Command):
+                         outf.write("#!%s%s\n" %
+                                    (os.path.join(
+                             sysconfig.get_config_var("BINDIR"),
+-                            "python" + sysconfig.get_config_var("EXE")),
++			    "python%s" % sys.version[:3] + sysconfig.get_config_var("EXE")),
+                                     post_interp))
+                     outf.writelines(f.readlines())
+                     outf.close()

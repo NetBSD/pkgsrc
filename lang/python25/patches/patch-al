@@ -1,0 +1,84 @@
+$NetBSD: patch-al,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
+
+--- configure.orig	2007-03-12 06:50:51.000000000 -0400
++++ configure
+@@ -1560,6 +1560,8 @@ case $ac_sys_system/$ac_sys_release in
+   # Marc Recht
+   NetBSD/1.5 | NetBSD/1.5.* | NetBSD/1.6 | NetBSD/1.6.* | NetBSD/1.6A-S)
+     define_xopen_source=no;;
++  NetBSD/1.5 | NetBSD/1.5.* | NetBSD/1.6 | NetBSD/1.6.* | NetBSD/1.6[A-S])
++    define_xopen_source=no;;
+   # On Solaris 2.6, sys/wait.h is inconsistent in the usage
+   # of union __?sigval. Reported by Stuart Bishop.
+   SunOS/5.6)
+@@ -3412,15 +3414,10 @@ _ACEOF
+ 	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
+ 	  INSTSONAME="$LDLIBRARY".$SOVERSION
+           ;;
+-    Linux*|GNU*|NetBSD*|FreeBSD*|DragonFly*)
++    Linux*|GNU*|NetBSD*|FreeBSD*|Interix*|DragonFly*)
+ 	  LDLIBRARY='libpython$(VERSION).so'
+ 	  BLDLIBRARY='-L. -lpython$(VERSION)'
+ 	  RUNSHARED=LD_LIBRARY_PATH=`pwd`:${LD_LIBRARY_PATH}
+-	  case $ac_sys_system in
+-	      FreeBSD*)
+-		SOVERSION=`echo $SOVERSION|cut -d "." -f 1`
+-		;;
+-	  esac
+ 	  INSTSONAME="$LDLIBRARY".$SOVERSION
+ 	  ;;
+     hp*|HP*)
+@@ -3890,7 +3887,12 @@ echo "${ECHO_T}$ac_cv_no_strict_aliasing
+ 	    ;;
+ 	# is there any other compiler on Darwin besides gcc?
+ 	Darwin*)
+-	    BASECFLAGS="$BASECFLAGS -Wno-long-double -no-cpp-precomp -mno-fused-madd"
++		if [[ `/usr/bin/arch` = 'ppc' ]]
++		then
++			BASECFLAGS="$BASECFLAGS -Wno-long-double -no-cpp-precomp -mno-fused-madd -fno-common"
++		else
++			BASECFLAGS="$BASECFLAGS -Wno-long-double -no-cpp-precomp -fno-common"
++		fi
+ 	    if test "${enable_universalsdk}"; then
+ 		BASECFLAGS="-arch ppc -arch i386 -isysroot ${UNIVERSALSDK} ${BASECFLAGS}"
+ 	    fi
+@@ -11033,12 +11035,12 @@ then
+ 				LDSHARED="$LDSHARED "'$(PYTHONFRAMEWORKPREFIX)/$(PYTHONFRAMEWORKDIR)/Versions/$(VERSION)/$(PYTHONFRAMEWORK)'
+ 			else
+ 				# No framework, use the Python app as bundle-loader
+-				BLDSHARED="$LDSHARED "'-bundle_loader $(BUILDPYTHON)'
+-				LDSHARED="$LDSHARED "'-bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
++				BLDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BUILDPYTHON)'
++				LDSHARED="$LDSHARED "'-flat_namespace -undefined suppress -bundle_loader $(BINDIR)/python$(VERSION)$(EXE)'
+ 			fi
+ 		fi
+ 		;;
+-	Linux*|GNU*) LDSHARED='$(CC) -shared';;
++	Linux*|GNU*) LDSHARED='$(CC) -shared'" ${LDFLAGS}";;
+ 	BSD/OS*/4*) LDSHARED="gcc -shared";;
+ 	FreeBSD*)
+ 		if [ "`$CC -dM -E - </dev/null | grep __ELF__`" != "" ]
+@@ -11062,6 +11064,7 @@ then
+ 				esac
+ 		fi;;
+ 	NetBSD*|DragonFly*) LDSHARED="cc -shared ${LDFLAGS}";;
++	Interix*) LDSHARED='$(CC) -shared'" ${LDFLAGS}";; # XXX tv needs image-base hack
+ 	OpenUNIX*|UnixWare*)
+ 		if test "$GCC" = "yes"
+ 		then LDSHARED='$(CC) -shared'
+@@ -11097,6 +11100,7 @@ then
+ 	Linux*|GNU*) CCSHARED="-fPIC";;
+ 	BSD/OS*/4*) CCSHARED="-fpic";;
+ 	FreeBSD*|NetBSD*|OpenBSD*|DragonFly*) CCSHARED="-fPIC";;
++	Interix*) CCSHARED="";;
+ 	OpenUNIX*|UnixWare*)
+ 		if test "$GCC" = "yes"
+ 		then CCSHARED="-fPIC"
+@@ -11154,6 +11158,7 @@ then
+ 		then
+ 			LINKFORSHARED="-Wl,--export-dynamic"
+ 		fi;;
++	Interix*) LINKFORSHARED="-Wl,-E";;
+ 	SunOS/5*) case $CC in
+ 		  *gcc*)
+ 		    if $CC -Xlinker --help 2>&1 | grep export-dynamic >/dev/null

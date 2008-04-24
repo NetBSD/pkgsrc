@@ -1,0 +1,15 @@
+$NetBSD: patch-aj,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
+
+--- Modules/bsddbmodule.c.orig	2006-02-15 12:27:45.000000000 -0500
++++ Modules/bsddbmodule.c
+@@ -13,6 +13,10 @@
+    www.nightmare.com/software.html
+ */
+ 
++#if defined(__sgi) && _COMPILER_VERSION>700 && !_SGIAPI
++#define _BSD_TYPES
++#endif
++
+ #include "Python.h"
+ #ifdef WITH_THREAD
+ #include "pythread.h"

@@ -1,0 +1,14 @@
+$NetBSD: patch-at,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
+
+--- Modules/mmapmodule.c.orig	2006-08-22 09:57:07.000000000 -0400
++++ Modules/mmapmodule.c
+@@ -449,6 +449,9 @@ mmap_resize_method(mmap_object *self,
+ 
+ #ifdef MREMAP_MAYMOVE
+ 		newmap = mremap(self->data, self->size, new_size, MREMAP_MAYMOVE);
++#elif defined(__NetBSD__)
++                newmap = mremap(self->data, self->size, self->data, new_size, 0);
++
+ #else
+ 		newmap = mremap(self->data, self->size, new_size, 0);
+ #endif
