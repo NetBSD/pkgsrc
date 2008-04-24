@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.8 2008/04/24 07:55:00 joerg Exp $	*/
+/*	$NetBSD: file.c,v 1.9 2008/04/24 10:21:33 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -69,10 +69,17 @@ fetchFile_close(void *cookie)
 fetchIO *
 fetchXGetFile(struct url *u, struct url_stat *us, const char *flags)
 {
+	char *path;
 	fetchIO *f;
 	int fd, *cookie;
 
-	fd = open(u->doc, O_RDONLY);
+	if ((path = fetch_unquote_doc(u)) == NULL) {
+		fetch_syserr();
+		return NULL;
+	}
+
+	fd = open(path, O_RDONLY);
+	free(path);
 	if (fd == -1) {
 		fetch_syserr();
 		return NULL;
@@ -114,13 +121,21 @@ fetchGetFile(struct url *u, const char *flags)
 fetchIO *
 fetchPutFile(struct url *u, const char *flags)
 {
+	char *path;
 	fetchIO *f;
 	int fd, *cookie;
 
+	if ((path = fetch_unquote_doc(u)) == NULL) {
+		fetch_syserr();
+		return NULL;
+	}
+
 	if (CHECK_FLAG('a'))
-		fd = open(u->doc, O_WRONLY | O_APPEND);
+		fd = open(path, O_WRONLY | O_APPEND);
 	else
-		fd = open(u->doc, O_WRONLY);
+		fd = open(path, O_WRONLY);
+
+	free(path);
 
 	if (fd == -1) {
 		fetch_syserr();
@@ -166,34 +181,47 @@ fetch_stat_file(int fd, struct url_stat *us)
 	return (0);
 }
 
-static int
-fetch_stat_file2(const char *fn, struct url_stat *us)
+int
+fetchStatFile(struct url *u, struct url_stat *us, const char *flags)
 {
+	char *path;
 	int fd, rv;
 
-	fd = open(fn, O_RDONLY);
+	if ((path = fetch_unquote_doc(u)) == NULL) {
+		fetch_syserr();
+		return -1;
+	}
+
+	fd = open(path, O_RDONLY);
+	free(path);
+
 	if (fd == -1) {
 		fetch_syserr();
 		return -1;
 	}
+
 	rv = fetch_stat_file(fd, us);
 	close(fd);
-	return rv;
-}
 
-int
-fetchStatFile(struct url *u, struct url_stat *us, const char *flags)
-{
-	return (fetch_stat_file2(u->doc, us));
+	return rv;
 }
 
 int
 fetchListFile(struct url_list *ue, struct url *u, const char *pattern, const char *flags)
 {
+	char *path;
 	struct dirent *de;
 	DIR *dir;
 
-	if ((dir = opendir(u->doc)) == NULL) {
+	if ((path = fetch_unquote_doc(u)) == NULL) {
+		fetch_syserr();
+		return -1;
+	}
+		
+	dir = opendir(path);
+	free(path);
+
+	if (dir == NULL) {
 		fetch_syserr();
 		return -1;
 	}
