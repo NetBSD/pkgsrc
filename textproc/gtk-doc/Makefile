@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.29 2007/10/31 20:00:54 drochner Exp $
+# $NetBSD: Makefile,v 1.30 2008/04/24 21:32:01 wiz Exp $
 #
 
-DISTNAME=	gtk-doc-1.9
+DISTNAME=	gtk-doc-1.10
 CATEGORIES=	textproc
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/1.9/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtk-doc/1.10/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gtk.org/rdp/
+HOMEPAGE=	http://www.gtk.org/gtk-doc/
 COMMENT=	Tools for authors of the GTK+ reference documentation
 
 DEPENDS+=	docbook-xml>=4.4nb1:../../textproc/docbook-xml
