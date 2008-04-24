@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7245 2008/04/24 20:14:25 wiz Exp $
+$NetBSD: TODO,v 1.7246 2008/04/24 21:24:06 markd Exp $
 
 Suggested new packages
 ======================
@@ -1029,7 +1029,6 @@ Suggested package updates
 	o p5-Term-Size-0.203
 	o p5-Test-Harness-2.64
 	o p5-Test-Unit-0.25
-	o p5-Text-BibTeX-0.34
 	o p5-Text-Tabs+Wrap-2006.1117
 	o p5-Time-HiRes-1.9707
 	o p5-XML-RAI-1.04
