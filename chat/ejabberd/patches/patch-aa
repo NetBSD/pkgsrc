@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/03/10 08:58:32 martti Exp $
+$NetBSD: patch-aa,v 1.1.1.1.2.1 2008/04/25 01:09:18 rtr Exp $
 
 Modified for pkgsrc
 
@@ -17,7 +17,7 @@ Modified for pkgsrc
 -LOGDIR = $(DESTDIR)@prefix@/var/log/ejabberd
 -ETCDIR = $(DESTDIR)@prefix@/etc/ejabberd
 +LOGDIR = $(DESTDIR)/@JABBERD_LOGDIR@
-+ETCDIR = $(DESTDIR)/@PKG_SYSCONFDIR@
++ETCDIR = $(DESTDIR)@prefix@/share/examples/ejabberd
  SBINDIR = $(DESTDIR)@prefix@/sbin
  
  ifeq ($(shell uname),Darwin)
