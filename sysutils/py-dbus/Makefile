@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2008/02/03 12:22:26 drochner Exp $
+# $NetBSD: Makefile,v 1.12 2008/04/25 20:06:04 tnn Exp $
 #
 
-DISTNAME=	dbus-python-0.82.3
+DISTNAME=	dbus-python-0.82.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/-python//}
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus-python/
@@ -12,10 +12,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/Software/dbus
 COMMENT=	Python bindings for the D-BUS message bus system
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	pkg-config gmake
 GNU_CONFIGURE=	yes
 
-PYTHON_VERSIONS_ACCEPTED=	24
+PYTHON_VERSIONS_ACCEPTED=	25 24
 #PYDISTUTILSPKG=			YES
 #PYBINMODULE=			YES
 PY_PATCHPLIST=			YES
