@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2008/03/15 20:35:26 smb Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/25 15:04:32 smb Exp $
 #
 DISTNAME=stalonetray-0.7.6
 CATEGORIES=x11
 MASTER_SITES=${MASTER_SITE_SOURCEFORGE:=stalonetray/}
+PKGREVISION=	1
 
 MAINTAINER=	smb@NetBSD.org
 HOMEPAGE=	http://stalonetray.sourceforge.net/
@@ -11,7 +12,6 @@ COMMENT=	Stand-alone system tray
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--disable-debug
 CONFIGURE_ARGS+=	--disable-native-kde
 USE_LANGUAGES+=	c
 
