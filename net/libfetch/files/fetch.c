@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.c,v 1.9 2008/04/24 10:24:04 joerg Exp $	*/
+/*	$NetBSD: fetch.c,v 1.10 2008/04/25 16:25:25 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -545,7 +545,7 @@ xdigit2digit(char digit)
  * Skips optional parts like query or fragment identifier.
  */ 
 char *
-fetch_unquote_doc(struct url *url)
+fetchUnquotePath(struct url *url)
 {
 	char *unquoted;
 	const char *iter;
@@ -576,12 +576,12 @@ fetch_unquote_doc(struct url *url)
  * Extract the file name component of a URL.
  */
 char *
-fetch_extract_filename(struct url *url)
+fetchUnquoteFilename(struct url *url)
 {
 	char *unquoted, *filename;
 	const char *last_slash;
 
-	if ((unquoted = fetch_unquote_doc(url)) == NULL)
+	if ((unquoted = fetchUnquotePath(url)) == NULL)
 		return NULL;
 
 	if ((last_slash = strrchr(unquoted, '/')) == NULL)
