@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/04/25 07:47:47 kefren Exp $
+
+SHA1 (fcrackzip-0.3.tar.gz) = b5f545af57f3537a21132616fa8cbec0ef256a30
+RMD160 (fcrackzip-0.3.tar.gz) = 3bfab22c3cf98c7fe63c1be1b4df4e8e713886a4
+Size (fcrackzip-0.3.tar.gz) = 103038 bytes
+SHA1 (patch-aa) = 9983c71207326d44c2de0dfc3785d1ba42ccba11

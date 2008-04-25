@@ -1,0 +1,3 @@
+fcrackzip searches each zipfile given for encrypted files and tries to
+guess the password. All files must be encrypted with the same password,
+the more files you provide, the better.
