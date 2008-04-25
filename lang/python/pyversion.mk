@@ -1,4 +1,4 @@
-# $NetBSD: pyversion.mk,v 1.57 2008/04/24 02:02:04 tnn Exp $
+# $NetBSD: pyversion.mk,v 1.58 2008/04/25 16:11:11 tnn Exp $
 
 # This file determines which Python version is used as a dependency for
 # a package.
@@ -8,7 +8,7 @@
 # PYTHON_VERSION_DEFAULT
 #	The preferred Python version to use.
 #
-#	Possible values: 15 20 21 22 23 24 25
+#	Possible values: 15 21 23 24 25
 #	Default: 24
 #
 # === Package-settable variables ===
@@ -21,13 +21,13 @@
 #	PYTHON_VERSIONS_INCOMPATIBLE instead, since it will
 #	automatically include future versions.
 #
-#	Possible values: 25 24 23 22 21 20 15
+#	Possible values: 25 24 23 21 15
 #	Default: (all)
 #
 # PYTHON_VERSIONS_INCOMPATIBLE
 #	The Python versions that are NOT acceptable for the package.
 #
-#	Possible values: 15 20 21 22 23 24 25
+#	Possible values: 15 21 23 24 25
 #	Default: (depends on the platform)
 #
 # PYTHON_FOR_BUILD_ONLY
@@ -62,17 +62,15 @@ BUILD_DEFS+=		PYTHON_VERSION_DEFAULT
 BUILD_DEFS_EFFECTS+=	PYPACKAGE
 
 PYTHON_VERSION_DEFAULT?=		24
-PYTHON_VERSIONS_ACCEPTED?=		25 24 23 22 21 20
+PYTHON_VERSIONS_ACCEPTED?=		25 24 23 21
 PYTHON_VERSIONS_INCOMPATIBLE?=		# empty by default
 
 .if ${OPSYS} == "Darwin"
-PYTHON_VERSIONS_INCOMPATIBLE+=		22 21 20 15
+PYTHON_VERSIONS_INCOMPATIBLE+=		21 15
 .endif
 
 BUILDLINK_API_DEPENDS.python15?=		python15>=1.5
-BUILDLINK_API_DEPENDS.python20?=		python20>=2.0
 BUILDLINK_API_DEPENDS.python21?=		python21>=2.1
-BUILDLINK_API_DEPENDS.python22?=		python22>=2.2
 BUILDLINK_API_DEPENDS.python23?=		python23>=2.3
 BUILDLINK_API_DEPENDS.python24?=		python24>=2.4
 BUILDLINK_API_DEPENDS.python25?=		python25>=2.5.1
@@ -135,24 +133,12 @@ PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python23}:${PYPKGSRCDIR}
 PYPACKAGE=	python23
 PYVERSSUFFIX=	2.3
 PYPKGPREFIX=	py23
-.elif ${_PYTHON_VERSION} == "22"
-PYPKGSRCDIR=	../../lang/python22
-PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python22}:${PYPKGSRCDIR}
-PYPACKAGE=	python22
-PYVERSSUFFIX=	2.2
-PYPKGPREFIX=	py22
 .elif ${_PYTHON_VERSION} == "21"
 PYPKGSRCDIR=	../../lang/python21
 PYPACKAGE=	python21
 PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python21}:${PYPKGSRCDIR}
 PYVERSSUFFIX=	2.1
 PYPKGPREFIX=	py21
-.elif ${_PYTHON_VERSION} == "20"
-PYPKGSRCDIR=	../../lang/python20
-PYPACKAGE=	python20
-PYDEPENDENCY=	${BUILDLINK_API_DEPENDS.python20}:${PYPKGSRCDIR}
-PYVERSSUFFIX=	2.0
-PYPKGPREFIX=	py20
 .elif ${_PYTHON_VERSION} == "15"
 PYPKGSRCDIR=	../../lang/python15
 PYPACKAGE=	python15
