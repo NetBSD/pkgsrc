@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.42 2008/01/29 01:05:13 rillig Exp $
+$NetBSD: distinfo,v 1.43 2008/04/25 07:13:39 wiz Exp $
 
-SHA1 (ocaml-3.10.1.tar.bz2) = 908176ff481fd6ce3ab89a96a76d9b3d7ca8c105
-RMD160 (ocaml-3.10.1.tar.bz2) = bf5bc105aece26df6460204d5a04e90c0d90d1cb
-Size (ocaml-3.10.1.tar.bz2) = 2282041 bytes
+SHA1 (ocaml-3.10.2.tar.bz2) = f604580bf2943891d8faf265eeb900bbe90abce0
+RMD160 (ocaml-3.10.2.tar.bz2) = f631230b090dbd9bf9a9f71631cd0347c033cbb1
+Size (ocaml-3.10.2.tar.bz2) = 2284860 bytes
 SHA1 (patch-aa) = 858f326fe4db7971a05b3b001c6aecc02ecb2903
 SHA1 (patch-ab) = c6140f43fdb76c4f2d499f9d3beb714de3926460
 SHA1 (patch-ac) = efe8290b394f40d6675fc9d57557c49ddafdb239
