@@ -1,0 +1,8 @@
+GGZ Gaming Zone
+
+GGZ is a project to create a free gaming platform.  The project includes
+a server, games for the server, clients, and games for the clients.  Other
+projects may include ggz networking into their games.  GNOME games project
+and Freeciv 2.1 releases use ggz.
+
+This package contains the base libraries the server and clients depend on.
