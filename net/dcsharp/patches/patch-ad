@@ -1,0 +1,35 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/04/25 16:10:27 kefren Exp $
+--- gtk/src/MainWindow.cs.old	2008-04-24 12:17:45.000000000 +0300
++++ gtk/src/MainWindow.cs	2007-10-26 12:11:04.000000000 +0300
+@@ -45,11 +45,11 @@
+ 		private Page currentPage;
+ 		private ActionGroup pageActions;
+ 		private uint mergeId;
+-		private Dictionary<MenuItem, Action> itemToAction;
++		private Dictionary<MenuItem, Gtk.Action> itemToAction;
+ 
+ 		private UIManager uim;
+ 		private ActionGroup actionGroup;
+-		private Action closeAction;
++		private Gtk.Action closeAction;
+ 		private ToggleAction toolbarVisibleAction;
+ 		private RadioAction layoutTabsAction;
+ 
+@@ -85,7 +85,7 @@
+ 			}
+ 			this.favoriteHubManager = favoriteHubManager;
+ 
+-			itemToAction = new Dictionary<MenuItem, Action>();
++			itemToAction = new Dictionary<MenuItem, Gtk.Action>();
+ 
+ 			Window.Title = Util.AppName;
+ 
+@@ -399,7 +399,7 @@
+ 
+ 		private void OnMenuItemSelected(object obj, EventArgs args)
+ 		{
+-			Action action;
++			Gtk.Action action;
+ 			if (itemToAction.TryGetValue((MenuItem)obj, out action) &&
+ 				action.Tooltip != null)
+ 			{

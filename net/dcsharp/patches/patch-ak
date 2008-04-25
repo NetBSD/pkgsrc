@@ -1,0 +1,27 @@
+$NetBSD: patch-ak,v 1.1.1.1 2008/04/25 16:10:27 kefren Exp $
+--- gtk/src/View/SearchResultView.cs.old	2008-04-24 12:20:56.000000000 +0300
++++ gtk/src/View/SearchResultView.cs	2007-10-26 12:11:04.000000000 +0300
+@@ -30,10 +30,10 @@
+ 	public class SearchResultView : ExtendedTreeView
+ 	{
+ 		private ActionGroup actionGroup;
+-		private Action downloadAction;
+-		private Action saveAsAction;
+-		private Action fileListAction;
+-		private Action matchQueueAction;
++		private Gtk.Action downloadAction;
++		private Gtk.Action saveAsAction;
++		private Gtk.Action fileListAction;
++		private Gtk.Action matchQueueAction;
+ 
+ 		#region Constructors
+ 
+@@ -86,7 +86,7 @@
+ 
+ 			pixbufRenderer = new CellRendererPixbuf();
+ 			column.PackStart(pixbufRenderer , false);
+-			column.SetCellDataFunc(pixbufRenderer, SetPixbuf);
++			column.SetCellDataFunc(pixbufRenderer, (Gtk.TreeCellDataFunc)SetPixbuf);
+ 
+ 			textRenderer = new CellRendererText();
+ 			textRenderer.Ellipsize = Pango.EllipsizeMode.End;

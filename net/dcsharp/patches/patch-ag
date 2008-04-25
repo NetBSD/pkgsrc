@@ -1,0 +1,21 @@
+$NetBSD: patch-ag,v 1.1.1.1 2008/04/25 16:10:27 kefren Exp $
+--- gtk/src/Page/SearchPage.cs.old	2008-04-24 12:26:20.000000000 +0300
++++ gtk/src/Page/SearchPage.cs	2007-10-26 12:11:04.000000000 +0300
+@@ -150,7 +150,7 @@
+ 				{
+ 					if (renderer is CellRendererText)
+ 					{
+-						column.SetCellDataFunc(renderer, SetTextStyle);
++						column.SetCellDataFunc(renderer, (Gtk.TreeCellDataFunc)SetTextStyle);
+ 					}
+ 				}
+ 			}
+@@ -468,7 +468,7 @@
+ 			item.Show();
+ 
+ 			// Search by TTH
+-			Action searchAction = actionGroup["SearchTTH"];
++			Gtk.Action searchAction = actionGroup["SearchTTH"];
+ 			searchAction.Sensitive = searchButton.Sensitive && GetSelectedTTH() != null;
+ 			menu.Append(searchAction.CreateMenuItem());
+ 		}

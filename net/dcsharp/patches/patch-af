@@ -1,0 +1,18 @@
+$NetBSD: patch-af,v 1.1.1.1 2008/04/25 16:10:27 kefren Exp $
+--- gtk/src/Page/PageManagerTree.cs.old	2008-04-24 12:23:26.000000000 +0300
++++ gtk/src/Page/PageManagerTree.cs	2007-10-26 12:11:04.000000000 +0300
+@@ -117,12 +117,12 @@
+ 
+ 			pixbufRenderer = new CellRendererPixbuf();
+ 			column.PackStart(pixbufRenderer , false);
+-			column.SetCellDataFunc(pixbufRenderer, PixbufDataHandler);
++			column.SetCellDataFunc(pixbufRenderer, (Gtk.TreeCellDataFunc)PixbufDataHandler);
+ 
+ 			textRenderer = new CellRendererText();
+ 			textRenderer.Ellipsize = Pango.EllipsizeMode.End;
+ 			column.PackStart(textRenderer , true);
+-			column.SetCellDataFunc(textRenderer, TextDataHandler);
++			column.SetCellDataFunc(textRenderer, (Gtk.TreeCellDataFunc)TextDataHandler);
+ 
+ 			// Events
+ 			favoriteHubManager.HubsSorted += OnFavoriteHubsSorted;
