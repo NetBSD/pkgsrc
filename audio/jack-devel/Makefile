@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/04/12 22:42:58 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2008/04/25 11:16:25 bjs Exp $
 #
 
 DISTNAME=	jack-audio-connection-kit-${JACK_VERSION}
@@ -68,7 +68,6 @@ CONFIGURE_ARGS+=	--disable-sun
 .if ${OSS_TYPE} != "none"
 CONFIGURE_ARGS+= 	--enable-oss
 PLIST.oss=		yes
-PLIST_SUBST+=		OSS=""
 MAKE_ENV+=		LIBOSSAUDIO=${LIBOSSAUDIO:Q}
 CFLAGS+=		-DDEVOSSAUDIO=\"${DEVOSSAUDIO:U/dev/dsp}\"
 .else
