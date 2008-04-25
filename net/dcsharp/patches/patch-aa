@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/04/25 16:10:27 kefren Exp $
+--- SConstruct.orig	2007-10-26 12:11:04.000000000 +0300
++++ SConstruct	2008-04-24 21:34:37.000000000 +0300
+@@ -12,7 +12,7 @@
+ opts.Add(PathOption('LIBDIR', 'System library path', '$PREFIX/lib'));
+ opts.Add(PathOption('BINDIR', 'System executable path', '$PREFIX/bin'));
+ opts.Add(PathOption('SHAREDIR', 'System shared data path', '$PREFIX/share'));
+-opts.Add(PathOption('SYSCONFDIR', 'System configuration path', '/etc'));
++opts.Add(PathOption('SYSCONFDIR', 'System configuration path', '$PREFIX/etc'));
+ opts.Add(PathOption('DESTDIR', 'System base installation path', '/'));
+ 
+ opts.Add(BoolOption('DEBUG', 'Compile with debug information', 0));
+@@ -179,7 +179,7 @@
+ 	env['RESOURCE'] = Split('')
+ 	env['CSCFLAGS'] = Split('')
+ 
+-env = Environment(options = opts)
++env = Environment(ENV = os.environ, options = opts)
+ conf = Configure(env, custom_tests = { 'CheckPKGConfig' : CheckPKGConfig,
+                                        'CheckPKG' : CheckPKG })
+ Help(opts.GenerateHelpText(env))

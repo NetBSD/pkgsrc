@@ -1,0 +1,16 @@
+$NetBSD: patch-ah,v 1.1.1.1 2008/04/25 16:10:27 kefren Exp $
+--- gtk/src/Page/UploadPage.cs.old	2008-04-24 11:22:21.000000000 +0300
++++ gtk/src/Page/UploadPage.cs	2007-10-26 12:11:04.000000000 +0300
+@@ -40,9 +40,9 @@
+ 		private uint timeout;
+ 
+ 		private ActionGroup actionGroup;
+-		private Action stopAction;
+-		private Action removeAction;
+-		private Action clearAction;
++		private Gtk.Action stopAction;
++		private Gtk.Action removeAction;
++		private Gtk.Action clearAction;
+ 
+ 		[Widget]
+ 		private ScrolledWindow scrolledWindow;

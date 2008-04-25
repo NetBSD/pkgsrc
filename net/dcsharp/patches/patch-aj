@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1.1.1 2008/04/25 16:10:27 kefren Exp $
+--- gtk/src/View/FileListView.cs	2008-04-24 12:17:17.000000000 +0300
++++ gtk/src/View/FileListView.cs	2007-10-26 12:11:04.000000000 +0300
+@@ -68,7 +68,7 @@
+ 
+ 			pixbufRenderer = new CellRendererPixbuf();
+ 			column.PackStart(pixbufRenderer , false);
+-			column.SetCellDataFunc(pixbufRenderer, SetPixbuf);
++			column.SetCellDataFunc(pixbufRenderer, (Gtk.TreeCellDataFunc)SetPixbuf);
+ 
+ 			textRenderer = new CellRendererText();
+ 			column.PackStart(textRenderer , true);

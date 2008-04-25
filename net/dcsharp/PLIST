@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/25 16:10:27 kefren Exp $
+bin/dcsharp
+share/applications/dcsharp.desktop
+lib/dcsharp/DCSharp.Base.dll
+lib/dcsharp/DCSharp.Base.dll.config
+lib/dcsharp/DCSharp.exe
+lib/dcsharp/DCSharp.exe.config
+lib/dcsharp/notify-sharp.dll
+lib/dcsharp/notify-sharp.dll.config
+etc/gconf/schemas/dcsharp-handlers.schema
+share/locale/sv/LC_MESSAGES/dcsharp.mo
+share/locale/pl/LC_MESSAGES/dcsharp.mo
+share/locale/de/LC_MESSAGES/dcsharp.mo
+@dirrm etc/gconf/schemas

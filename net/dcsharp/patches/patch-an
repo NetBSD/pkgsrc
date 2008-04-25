@@ -1,0 +1,25 @@
+$NetBSD: patch-an,v 1.1.1.1 2008/04/25 16:10:27 kefren Exp $
+--- gtk/src/View/UserView.cs.old	2008-04-24 12:21:54.000000000 +0300
++++ gtk/src/View/UserView.cs	2007-10-26 12:11:04.000000000 +0300
+@@ -68,7 +68,7 @@
+ 
+ 			pixbufRenderer = new CellRendererPixbuf();
+ 			column.PackStart(pixbufRenderer , false);
+-			column.SetCellDataFunc(pixbufRenderer, RenderUserPixbuf);
++			column.SetCellDataFunc(pixbufRenderer, (Gtk.TreeCellDataFunc)RenderUserPixbuf);
+ 
+ 			textRenderer = new CellRendererText();
+ 			textRenderer.Ellipsize = Pango.EllipsizeMode.End;
+@@ -140,9 +140,9 @@
+ 
+ 		protected override void OnPopulatePopup(Menu menu)
+ 		{
+-			Action fileListAction = actionGroup["FileList"];
+-			Action messageAction = actionGroup["PrivateMessage"];
+-			Action infoAction = actionGroup["Information"];
++			Gtk.Action fileListAction = actionGroup["FileList"];
++			Gtk.Action messageAction = actionGroup["PrivateMessage"];
++			Gtk.Action infoAction = actionGroup["Information"];
+ 
+ 			TreeIter iter;
+ 			if (Selection.GetSelected(out iter))

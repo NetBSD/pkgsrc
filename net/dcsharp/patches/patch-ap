@@ -1,0 +1,9 @@
+$NetBSD: patch-ap,v 1.1.1.1 2008/04/25 16:10:27 kefren Exp $
+--- bin/dcsharp.in.orig	2008-04-25 18:58:52.000000000 +0300
++++ bin/dcsharp.in	2008-04-25 18:59:11.000000000 +0300
+@@ -7,4 +7,4 @@
+ export MONO_PATH="$MONO_PATH:$LIB_DIR/dcsharp"
+ export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$LIB_DIR/dcsharp"
+ 
+-exec mono "$LIB_DIR/dcsharp/DCSharp.exe" "$@"
++exec dbus-launch mono "$LIB_DIR/dcsharp/DCSharp.exe" "$@"
