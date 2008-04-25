@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/04/25 19:35:03 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2008/04/25 19:52:58 joerg Exp $
 
 DISTNAME=	docutils-0.4
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -12,7 +12,7 @@ COMMENT=	Python tool to generate documents
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED=	24 22
+PYTHON_VERSIONS_ACCEPTED=	24 23
 PYDISTUTILSPKG=	YES
 
 .include "../../lang/python/extension.mk"
