@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/04/25 23:24:49 wiz Exp $
+
+--- ggz-wrapper/ggz.orig    2007-01-26 03:47:45.000000000 -0600
++++ ggz-wrapper/ggz
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
+ #
+ # GGZ: Auto-selection of an appropriate GGZ Gaming Zone core client
+ # Copyright (C) 2006 Josef Spillner <josef@ggzgamingzone.org>
