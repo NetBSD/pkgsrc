@@ -56,6 +56,8 @@ DEFINE_TEST(test_option_a)
 {
 	struct stat st;
 	int r;
+	int f;
+	char buff[64];
 
 	/* Sanity check; verify that test_create really works. */
 	test_create("f0");
@@ -63,24 +65,46 @@ DEFINE_TEST(test_option_a)
 	failure("test_create function is supposed to create a file with atime == 1; if this doesn't work, test_option_a is entirely invalid.");
 	assertEqualInt(st.st_atime, 1);
 
-	/* Copy the file without -a; should change the atime. */
-	test_create("f1");
-	r = systemf("echo f1 | %s -pd --quiet copy-no-a > copy-no-a.out 2>copy-no-a.err", testprog);
-	assertEqualInt(r, 0);
-	assertEmptyFile("copy-no-a.err");
-	assertEmptyFile("copy-no-a.out");
-	assertEqualInt(0, stat("f1", &st));
-	failure("Copying file without -a should have changed atime.  Ignore this if your system does not record atimes.");
-	assert(st.st_atime != 1);
+	/* Sanity check; verify that atimes really do get modified. */
+	f = open("f0", O_RDONLY);
+	assertEqualInt(1, read(f,buff, 1));
+	assertEqualInt(0, close(f));
+	assertEqualInt(0, stat("f0", &st));
+	if (st.st_atime == 1) {
+		skipping("Cannot verify -a option\n"
+		    "      Your system appears to not support atime.");
+	}
+	else
+	{
+		/*
+		 * If this disk is mounted noatime, then we can't
+		 * verify correct operation without -a.
+		 */
 
-	/* Archive the file without -a; should change the atime. */
-	test_create("f2");
-	r = systemf("echo f2 | %s -o --quiet > archive-no-a.out 2>archive-no-a.err", testprog);
-	assertEqualInt(r, 0);
-	assertEmptyFile("copy-no-a.err");
-	assertEqualInt(0, stat("f2", &st));
-	failure("Archiving file without -a should have changed atime.  Ignore this if your system does not record atimes.");
-	assert(st.st_atime != 1);
+		/* Copy the file without -a; should change the atime. */
+		test_create("f1");
+		r = systemf("echo f1 | %s -pd --quiet copy-no-a > copy-no-a.out 2>copy-no-a.err", testprog);
+		assertEqualInt(r, 0);
+		assertEmptyFile("copy-no-a.err");
+		assertEmptyFile("copy-no-a.out");
+		assertEqualInt(0, stat("f1", &st));
+		failure("Copying file without -a should have changed atime.  Ignore this if your system does not record atimes.");
+		assert(st.st_atime != 1);
+
+		/* Archive the file without -a; should change the atime. */
+		test_create("f2");
+		r = systemf("echo f2 | %s -o --quiet > archive-no-a.out 2>archive-no-a.err", testprog);
+		assertEqualInt(r, 0);
+		assertEmptyFile("copy-no-a.err");
+		assertEqualInt(0, stat("f2", &st));
+		failure("Archiving file without -a should have changed atime.  Ignore this if your system does not record atimes.");
+		assert(st.st_atime != 1);
+	}
+
+	/*
+	 * We can, of course, still verify that the atime is unchanged
+	 * when using the -a option.
+	 */
 
 	/* Copy the file with -a; should not change the atime. */
 	test_create("f3");
