@@ -1,29 +1,38 @@
-$NetBSD: patch-aa,v 1.7 2007/04/17 21:32:06 joerg Exp $
+$NetBSD: patch-aa,v 1.8 2008/04/25 05:21:30 wiz Exp $
 
---- configure.orig	2007-03-08 13:05:01.000000000 +0000
+--- configure.orig	2008-03-11 04:09:40.000000000 +0100
 +++ configure
-@@ -22302,13 +22302,13 @@ fi
+@@ -22648,13 +22648,13 @@ fi
  
  PTHREAD_LIBS=notfound
  if test "x$PTHREAD_LIBS" = xnotfound; then
--echo "$as_me:$LINENO: checking for pthread_exit in -lpthread" >&5
--echo $ECHO_N "checking for pthread_exit in -lpthread... $ECHO_C" >&6
-+echo "$as_me:$LINENO: checking for pthread_exit in ${PTHREAD_LDFLAGS} ${REAL_PTHREAD_LIBS}" >&5
-+echo $ECHO_N "checking for pthread_exit in ${PTHREAD_LDFLAGS} ${REAL_PTHREAD_LIBS}... $ECHO_C" >&6
+-{ echo "$as_me:$LINENO: checking for pthread_exit in -lpthread" >&5
+-echo $ECHO_N "checking for pthread_exit in -lpthread... $ECHO_C" >&6; }
++{ echo "$as_me:$LINENO: checking for pthread_exit in ${PTHREAD_LDFLAGS} ${REAL_PTHREAD_LIBS}" >&5
++echo $ECHO_N "checking for pthread_exit in ${PTHREAD_LDFLAGS} ${REAL_PTHREAD_LIBS}... $ECHO_C" >&6; }
  if test "${ac_cv_lib_pthread_pthread_exit+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lpthread  $LIBS"
-+LIBS="${PTHREAD_LDFLAGS} ${REAL_PTHREAD_LIBS}  $LIBS"
++LIBS="${PTHREAD_LDFLAGS} ${REAL_PTHREAD_LIBS} $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -22367,7 +22367,7 @@ fi
- echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_exit" >&5
- echo "${ECHO_T}$ac_cv_lib_pthread_pthread_exit" >&6
+@@ -22710,7 +22710,7 @@ fi
+ { echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_exit" >&5
+ echo "${ECHO_T}$ac_cv_lib_pthread_pthread_exit" >&6; }
  if test $ac_cv_lib_pthread_pthread_exit = yes; then
 -  PTHREAD_LIBS="-lpthread"
++  PTHREAD_LIBS="${PTHREAD_LDFLAGS} ${REAL_PTHREAD_LIBS}"
+ fi
+ 
+ fi
+@@ -22777,7 +22777,7 @@ fi
+ { echo "$as_me:$LINENO: result: $ac_cv_lib_pthreads_pthread_exit" >&5
+ echo "${ECHO_T}$ac_cv_lib_pthreads_pthread_exit" >&6; }
+ if test $ac_cv_lib_pthreads_pthread_exit = yes; then
+-  PTHREAD_LIBS="-lpthreads"
 +  PTHREAD_LIBS="${PTHREAD_LDFLAGS} ${REAL_PTHREAD_LIBS}"
  fi
  
