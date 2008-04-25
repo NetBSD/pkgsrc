@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/10/19 01:33:16 wiz Exp $
+$NetBSD: distinfo,v 1.5 2008/04/25 17:16:40 tnn Exp $
 
-SHA1 (psyco-1.4-src.tar.gz) = 965d2b8fdecde3f1fb3a1855b697b53da66fa058
-RMD160 (psyco-1.4-src.tar.gz) = 9520355ea9e55f6c910e6c0563bc2ea8f3a17535
-Size (psyco-1.4-src.tar.gz) = 345871 bytes
+SHA1 (psyco-1.6-src.tar.gz) = 3c1ffa70b1a37bd855454d41d41a830e9ea82e7d
+RMD160 (psyco-1.6-src.tar.gz) = 472669a7a3714aae63710fd9bc5322b4b5214944
+Size (psyco-1.6-src.tar.gz) = 355914 bytes
