@@ -1,0 +1,21 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/04/25 16:10:27 kefren Exp $
+
+SHA1 (dcsharp-0.11.1.tar.bz2) = 7589a5620619a85ebb9c5f531a558e72c81e2c79
+RMD160 (dcsharp-0.11.1.tar.bz2) = 524630248f0c353abf81f2854d6e0a67b764f318
+Size (dcsharp-0.11.1.tar.bz2) = 207178 bytes
+SHA1 (patch-aa) = ca2b8120e2114ce901b2578d7a266d6277f3aa21
+SHA1 (patch-ab) = a410159c9c4d6c379024560b6f34229a38d4995e
+SHA1 (patch-ac) = 8ea771838c3497a9121473454dff55e87577c03c
+SHA1 (patch-ad) = 779fded1a2068e10e7bc81722e519ab2283d16db
+SHA1 (patch-ae) = dd544e02773d645a326bc9a3e6b1bb89b797ff89
+SHA1 (patch-af) = 25a2b2f47a5307dde058005677f2212c95589ab1
+SHA1 (patch-ag) = bc3a593351cde3968cedab70ec5bc01896548e34
+SHA1 (patch-ah) = b996e20c6cd6201bd54c6b7b7c22d627fa0a0ec7
+SHA1 (patch-ai) = ce6ed38c77bfcf17d367cc5152a78b7ebc8ab1e3
+SHA1 (patch-aj) = 10f3076e1d2205b510aa76bc46f9a8933bd8fbfa
+SHA1 (patch-ak) = 283168eb4dc137e2050bd0dc6fd17155ec5aba40
+SHA1 (patch-al) = dfac5219c6dd24c197cbffcdca88295b1238192a
+SHA1 (patch-am) = 793da3431a6f2b5c57c0a6eb674e8374b7dd8391
+SHA1 (patch-an) = 1d7bb63a6e7d75fbb76e853d8d1b9bb27f1c6ca4
+SHA1 (patch-ao) = 79102886c7e5f43a83140f0a893ac281551101bb
+SHA1 (patch-ap) = c02e1f6da6dd9970704113492e87ae1d66d17182

@@ -1,0 +1,47 @@
+$NetBSD: patch-al,v 1.1.1.1 2008/04/25 16:10:27 kefren Exp $
+--- gtk/src/View/TransferView.cs.old	2008-04-24 12:18:11.000000000 +0300
++++ gtk/src/View/TransferView.cs	2007-10-26 12:11:04.000000000 +0300
+@@ -61,14 +61,14 @@
+ 
+ 			pixbufRenderer = new CellRendererPixbuf();
+ 			column.PackStart(pixbufRenderer, false);
+-			column.SetCellDataFunc(pixbufRenderer, SetPixbuf);
++			column.SetCellDataFunc(pixbufRenderer, (Gtk.TreeCellDataFunc)SetPixbuf);
+ 
+ 			textRenderer = new CellRendererText();
+ 			textRenderer.Ellipsize = Pango.EllipsizeMode.End;
+ 			column.PackStart(textRenderer, true);
+ 			column.AddAttribute(textRenderer, "text",
+ 				(int)TransferStoreColumn.Name);
+-			column.SetCellDataFunc(textRenderer, SetTextStyle);
++			column.SetCellDataFunc(textRenderer, (Gtk.TreeCellDataFunc)SetTextStyle);
+ 
+ 			ExpanderColumn = column;
+ 
+@@ -77,7 +77,7 @@
+ 			column = AppendColumn(Catalog.GetString("Size"), textRenderer,
+ 				"text", (int)TransferStoreColumn.SizeText);
+ 			column.SortColumnId = (int)TransferStoreColumn.Size;
+-			column.SetCellDataFunc(textRenderer, SetTextStyle);
++			column.SetCellDataFunc(textRenderer, (Gtk.TreeCellDataFunc)SetTextStyle);
+ 
+ 			// Status
+ 			textRenderer = new CellRendererText();
+@@ -85,7 +85,7 @@
+ 			column = AppendColumn(Catalog.GetString("Status"), textRenderer);
+ 			column.Resizable = true;
+ 			column.MinWidth = 100;
+-			column.SetCellDataFunc(textRenderer, SetStatusText);
++			column.SetCellDataFunc(textRenderer, (Gtk.TreeCellDataFunc)SetStatusText);
+ 
+ 			// Progress
+ 			progressRenderer = new CellRendererProgress();
+@@ -102,7 +102,7 @@
+ 			column = AppendColumn(Catalog.GetString("Time Left"), textRenderer,
+ 				"text", (int)TransferStoreColumn.TimeLeft);
+ 			column.SortColumnId = (int)TransferStoreColumn.TimeLeft;
+-			column.SetCellDataFunc(textRenderer, SetTextStyle);
++			column.SetCellDataFunc(textRenderer, (Gtk.TreeCellDataFunc)SetTextStyle);
+ 		}
+ 
+ 		#region Methods
