@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/04/25 11:34:11 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/25 11:51:13 tnn Exp $
 
 DISTNAME=	Python-2.5.2
 PKGNAME=	python25-2.5.2
@@ -78,10 +78,21 @@ PLIST_VARS+=	dl
 PLIST.dl=	yes
 .endif
 
+# builds additional modules if OpenSSL < 0.9.8
+PLIST_VARS+=	openssl097
+CHECK_BUILTIN.openssl:=	no
+.include "../../security/openssl/builtin.mk"
+CHECK_BUILTIN.openssl:=	yes
+.if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
+. if !empty(BUILTIN_PKG.openssl:Mopenssl-0.9.[67]*)
+PLIST.openssl097=	yes
+. endif
+.endif
+
 # setup.py causes some modules to be built if the platform is *not* 64bit.
 PLIST_VARS+=	extra-so
 .if !empty(IS_64BIT_PLATFORM:M[nN][oO])
-LIST.extra-so=	yes
+PLIST.extra-so=	yes
 .endif
 
 # ossaudiodev is only available on x86 for the following platforms
