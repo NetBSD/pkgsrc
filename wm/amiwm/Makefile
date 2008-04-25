@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2008/04/14 23:31:29 rh Exp $
+# $NetBSD: Makefile,v 1.22 2008/04/25 02:16:11 reed Exp $
 #
 
 DISTNAME=	amiwm0.20pl48
 PKGNAME=	amiwm-0.20p48
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 wm
 MASTER_SITES=	ftp://ftp.lysator.liu.se/pub/X11/wm/amiwm/
 
