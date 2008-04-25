@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/04/19 19:23:17 kefren Exp $
+$NetBSD: distinfo,v 1.3 2008/04/25 08:26:45 kefren Exp $
 
-SHA1 (xsp-1.9.tar.bz2) = 57b7ef069e09c3cbc98fb00342eebd9cd8f251e4
-RMD160 (xsp-1.9.tar.bz2) = 2b0660d2c7ce87cf44eec3ce6831e67a9ec5d40a
-Size (xsp-1.9.tar.bz2) = 241472 bytes
+SHA1 (xsp-1.9.1.tar.bz2) = 1ee1e8950631e695dae867adcd0328c6562693ad
+RMD160 (xsp-1.9.1.tar.bz2) = a976861dca1b68a566c6c614d40c521794b3528d
+Size (xsp-1.9.1.tar.bz2) = 241700 bytes
