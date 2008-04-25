@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2008/04/16 12:15:28 abs Exp $
+# $NetBSD: Makefile,v 1.50 2008/04/25 20:39:10 joerg Exp $
 
 DISTNAME=	mailman-2.1.9
 CATEGORIES=	mail www
@@ -64,7 +64,6 @@ RCD_SCRIPTS=		mailman
 INSTALL_TEMPLATES+=	${FILESDIR}/INSTALL
 DEINSTALL_TEMPLATES+=	${FILESDIR}/DEINSTALL
 
-PYTHON_VERSIONS_ACCEPTED= 25 24 23 22 21
 PYTHON_PATCH_SCRIPTS+=	Mailman/Archiver/pipermail.py
 PYTHON_PATCH_SCRIPTS+=	Mailman/Post.py
 PYTHON_PATCH_SCRIPTS+=	admin/bin/faq2ht.py

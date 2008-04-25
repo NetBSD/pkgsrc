@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/06/04 16:46:08 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2008/04/25 20:39:09 joerg Exp $
 #
 
 DISTNAME=		TTFQuery-0.2.6
@@ -14,7 +14,6 @@ COMMENT=		Query TTF font files for metadata and font outlines
 DEPENDS+=		${PYPKGPREFIX}-fonttools>=2.0b1:../../fonts/py-fonttools
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_ACCEPTED=	24 23 22
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

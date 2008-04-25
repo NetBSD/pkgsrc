@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/04/16 13:42:40 abs Exp $
+# $NetBSD: Makefile,v 1.24 2008/04/25 20:39:13 joerg Exp $
 
 DISTNAME=	mod_python-${VERSION}
 PKGNAME=	${APACHE_PKG_PREFIX}-${PYPKGPREFIX}-python-${VERSION}
@@ -20,7 +20,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-apxs=${APXS:Q}
 CONFIGURE_ARGS+=--with-python=${PYTHONBIN:Q}
 
-PYTHON_VERSIONS_ACCEPTED=	25 24 23
 PY_PATCHPLIST=	YES
 
 PKG_APACHE_ACCEPTED=	apache2 apache22

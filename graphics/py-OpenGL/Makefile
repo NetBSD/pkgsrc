@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/07/16 15:09:40 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/25 20:39:09 joerg Exp $
 #
 
 DISTNAME=	PyOpenGL-3.0.0a6
@@ -10,7 +10,7 @@ MAINTAINER=	cube@cubidou.net
 HOMEPAGE=	http://pyopengl.sourceforge.net/
 COMMENT=	Pyhton bindings for OpenGL
 
-PYTHON_VERSIONS_ACCEPTED= 24
+PYTHON_VERSIONS_ACCEPTED= 25 24
 PYDISTUTILSPKG=	YES
 PY_PATCHPLIST=	YES
 

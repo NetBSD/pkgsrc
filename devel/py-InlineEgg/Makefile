@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/04 21:29:27 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2008/04/25 20:39:08 joerg Exp $
 #
 
 DISTNAME=		InlineEgg-1.08
@@ -16,7 +16,7 @@ LICENSE=		inlineegg-license
 PY_PATCHPLIST=		YES
 PYDISTUTILSPKG=		YES
 
-PYTHON_VERSIONS_ACCEPTED=	24 23 22 21
+PYTHON_VERSIONS_ACCEPTED=	25 24 23 21
 PYTHON_PATCH_SCRIPTS=		examples/example1.py examples/example2.py \
 				examples/example3.py examples/example4.py \
 				examples/example5.py examples/example6.py \

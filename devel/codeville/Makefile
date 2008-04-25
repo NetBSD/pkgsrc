@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/01/12 11:36:31 adam Exp $
+# $NetBSD: Makefile,v 1.16 2008/04/25 20:39:08 joerg Exp $
 
 DISTNAME=	Codeville-0.1.16
 PKGNAME=	codeville-0.1.16
@@ -11,9 +11,6 @@ HOMEPAGE=	http://codeville.org/
 COMMENT=	Distributed revision control system
 
 PYDISTUTILSPKG=		yes
-
-# XXX we don't need threads, but db3 is linked against libpthread
-PYTHON_VERSIONS_ACCEPTED= 23 24
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

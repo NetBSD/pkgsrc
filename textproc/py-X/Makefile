@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/11/08 23:47:03 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/04/25 20:39:12 joerg Exp $
 #
 
 DISTNAME=	PyX-0.9
@@ -9,7 +9,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pyx/}
 
 DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX3-bin
 
-PYTHON_VERSIONS_ACCEPTED=	24 23
 PYBINMODULE=	yes
 PYDISTUTILSPKG=	yes
 

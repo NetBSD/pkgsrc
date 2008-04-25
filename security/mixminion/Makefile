@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/01/18 05:09:38 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2008/04/25 20:39:11 joerg Exp $
 #
 
 DISTNAME=		Mixminion-0.0.7.1
@@ -14,7 +14,7 @@ COMMENT=		Mixminion impedes message traffic analysis
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7d
 
 CRYPTO=				YES
-PYTHON_VERSIONS_ACCEPTED=	23 22 21
+PYTHON_VERSIONS_ACCEPTED=	23 21
 PYDISTUTILSPKG=			YES
 
 TEST_TARGET=			test

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/02/22 19:26:59 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2008/04/25 20:39:11 joerg Exp $
 #
 
 DISTNAME=	pygoogle-0.6
@@ -12,8 +12,6 @@ HOMEPAGE=	http://pygoogle.sourceforge.net/
 COMMENT=	Call the Google web API from Python
 
 PYDISTUTILSPKG=	yes
-
-PYTHON_VERSIONS_ACCEPTED=	24 23 22
 
 .include "../../lang/python/extension.mk"
 .include "../../net/py-soappy/buildlink3.mk"

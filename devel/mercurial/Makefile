@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/04/10 23:34:51 bjs Exp $
+# $NetBSD: Makefile,v 1.17 2008/04/25 20:39:08 joerg Exp $
 #
 
 DISTNAME=	mercurial-1.0
@@ -17,8 +17,6 @@ BUILD_DEPENDS+=	asciidoc-[0-9]*:../../textproc/asciidoc
 PY_PATCHPLIST=	yes
 PYDISTUTILSPKG=	yes
 USE_TOOLS+=	gmake
-
-PYTHON_VERSIONS_ACCEPTED=	24 23
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/09/21 13:03:28 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/04/25 20:39:06 joerg Exp $
 #
 
 DISTNAME=		solfege-3.8.0
@@ -25,7 +25,6 @@ USE_TOOLS+=		gmake gm4 makeinfo pkg-config msgfmt bash:run
 
 REPLACE_BASH=		lesson-files/bin/csound-play-harmonic-interval.sh
 
-PYTHON_VERSIONS_ACCEPTED=	24 23
 PYTHON_PATCH_SCRIPTS=	*.py *.py.in */*.py */*.py.in
 PYCOMPILEALL=		${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
 

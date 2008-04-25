@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/03/13 17:38:48 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2008/04/25 20:39:08 joerg Exp $
 #
 
 DISTNAME=	psycopg2-2.0.5.1
@@ -14,7 +14,6 @@ COMMENT=	PostgreSQL database adapter for Python
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED= 24 23
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/pgsql.buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/08/09 13:29:33 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2008/04/25 20:39:13 joerg Exp $
 #
 
 DISTNAME=		textile-2
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
 NO_CONFIGURE=		yes
-PYTHON_VERSIONS_ACCEPTED= 24 23 22
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

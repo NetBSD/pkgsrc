@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/03/06 14:53:52 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2008/04/25 20:39:10 joerg Exp $
 #
 
 DISTNAME=		gstreamer-0.8.11
@@ -31,8 +31,6 @@ PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-control.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer.pc.in
 
 REQD_DIRS+=		${GST0.8_DBDIR}
-
-PYTHON_VERSIONS_ACCEPTED=	24 23 22
 
 .include "../../mk/bsd.prefs.mk"
 

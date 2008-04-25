@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/02/19 10:31:53 schmonz Exp $
+# $NetBSD: Makefile,v 1.8 2008/04/25 20:39:13 joerg Exp $
 #
 
 DISTNAME=		html2text-2.29
@@ -15,7 +15,7 @@ WRKSRC=			${WRKDIR}
 
 USE_TOOLS+=		tr
 NO_BUILD=		yes
-PYTHON_VERSIONS_ACCEPTED?=	24 23 22 21
+PYTHON_VERSIONS_ACCEPTED?=	25 24 23 21
 
 INSTALLATION_DIRS=	share/html2text
 

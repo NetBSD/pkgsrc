@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/01/03 15:02:51 adrianp Exp $
+# $NetBSD: Makefile,v 1.5 2008/04/25 20:39:11 joerg Exp $
 #
 
 DISTNAME=		scapy-1.0.5
@@ -10,7 +10,7 @@ HOMEPAGE=		http://www.secdev.org/projects/scapy/
 COMMENT=		Interactive packet manipulation program
 
 NO_BUILD=			yes
-PYTHON_VERSIONS_ACCEPTED=	24
+PYTHON_VERSIONS_ACCEPTED=	25 24
 PYTHON_PATCH_SCRIPTS=		scapy.py
 
 .include "options.mk"

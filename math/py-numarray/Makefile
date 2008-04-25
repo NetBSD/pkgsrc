@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/04/12 22:43:04 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2008/04/25 20:39:10 joerg Exp $
 #
 
 DISTNAME=	numarray-1.5.2
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.stsci.edu/resources/software_hardware/numarray
 COMMENT=	Array manipulation
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_ACCEPTED= 24 23 22
 
 PLIST_VARS+=	blas
 .if exists(/System/Library/Frameworks/vecLib.framework/Headers)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/01/06 03:38:36 darcy Exp $
+# $NetBSD: Makefile,v 1.10 2008/04/25 20:39:07 joerg Exp $
 #
 
 DISTNAME=	pgnotify-0.1
@@ -20,7 +20,6 @@ USE_TOOLS+=		gmake
 
 PYDISTUTILSPKG=	yes
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
-PYTHON_VERSIONS_ACCEPTED=	24 23 22
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/09/21 13:03:30 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2008/04/25 20:39:06 joerg Exp $
 #
 
 DISTNAME=		gourmet-0.8.5.14
@@ -13,7 +13,6 @@ COMMENT=		Recipe database
 USE_DIRS+=		xdg-1.2
 USE_PKGLOCALEDIR=	yes
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_ACCEPTED= 23 24
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

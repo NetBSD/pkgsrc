@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/04/17 12:22:00 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2008/04/25 20:39:11 joerg Exp $
 #
 
 DISTNAME=	email-2.5
@@ -14,7 +14,7 @@ COMMENT=	Email package for Python
 PYDISTUTILSPKG=	yes
 # This pkg (or an older version of it) comes with 2.2 and later;
 # 2.1 is the primary target (particulary for Zope).
-PYTHON_VERSIONS_ACCEPTED= 21 22 23
+PYTHON_VERSIONS_ACCEPTED=	25 24 23 21
 
 .include "../../lang/python/extension.mk"
 

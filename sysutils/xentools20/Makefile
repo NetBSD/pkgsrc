@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/01/18 05:09:45 tnn Exp $
+# $NetBSD: Makefile,v 1.33 2008/04/25 20:39:12 joerg Exp $
 #
 
 DISTNAME=		xen-2.0.7-src
@@ -28,7 +28,6 @@ MESSAGE_SUBST=		EGDIR=${EGDIR}
 USE_TOOLS+=		gmake
 MAKE_ENV+=		EGDIR=${EGDIR:Q}
 MAKE_ENV+=		MV=${MV:Q} PYTHON=${PYTHONBIN:Q} SED=${SED:Q}
-PYTHON_VERSIONS_ACCEPTED= 24 23 22
 PY_PATCHPLIST=		yes
 PYTHON_PATCH_SCRIPTS=	python/xen/util/console_client.py
 PYTHON_PATCH_SCRIPTS+=	python/xen/xend/server/SrvServer.py

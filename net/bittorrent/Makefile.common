@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.17 2006/02/26 22:43:33 tron Exp $
+# $NetBSD: Makefile.common,v 1.18 2008/04/25 20:39:11 joerg Exp $
 
 DISTNAME=	BitTorrent-4.4.0
 CATEGORIES=	net
@@ -11,5 +11,3 @@ COMMENT=	File sharing tool
 DISTINFO_FILE=	${.CURDIR}/../../net/bittorrent/distinfo
 FILESDIR=	${.CURDIR}/../../net/bittorrent/files
 PATCHDIR=	${.CURDIR}/../../net/bittorrent/patches
-
-PYTHON_VERSIONS_ACCEPTED=	24 23 22
