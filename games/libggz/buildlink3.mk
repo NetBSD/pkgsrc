@@ -1,0 +1,21 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/04/25 23:09:44 wiz Exp $
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+LIBGGZ_BUILDLINK3_MK:=	${LIBGGZ_BUILDLINK3_MK}+
+
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	libggz
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibggz}
+BUILDLINK_PACKAGES+=	libggz
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libggz
+
+.if ${LIBGGZ_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.libggz+=	libggz>=0.0.14.1
+BUILDLINK_PKGSRCDIR.libggz?=	../../games/libggz
+.endif	# LIBGGZ_BUILDLINK3_MK
+
+.include "../../security/gnutls/buildlink3.mk"
+
+BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
