@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/25 23:09:44 wiz Exp $
+include/ggz.h
+include/ggz_common.h
+include/ggz_dio.h
+lib/libggz.la
+man/man3/ggz.h.3
