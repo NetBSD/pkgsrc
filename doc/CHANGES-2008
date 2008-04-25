@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.883 2008/04/25 07:21:36 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.884 2008/04/25 07:28:47 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1606,3 +1606,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/fox to 1.6.32 [wiz 2008-04-25]
 	Updated lang/ocaml to 3.10.2 [wiz 2008-04-25]
 	Updated devel/yasm to 0.7.0 [wiz 2008-04-25]
+	Updated x11/xtrans to 1.1 [wiz 2008-04-25]
