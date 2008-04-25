@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.300 2008/04/04 19:13:49 dsainty Exp $
+# $NetBSD: Makefile,v 1.301 2008/04/25 22:49:37 wiz Exp $
 #
 
 COMMENT=	Games
@@ -26,6 +26,7 @@ SUBDIR+=	billardgl
 SUBDIR+=	blindmine
 SUBDIR+=	blobwars
 SUBDIR+=	blokus
+SUBDIR+=	bluemoon
 SUBDIR+=	bomberclone
 SUBDIR+=	bos
 SUBDIR+=	boson
