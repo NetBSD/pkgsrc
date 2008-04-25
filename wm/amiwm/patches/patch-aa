@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2008/04/25 02:16:11 reed Exp $
+
+--- libami/drawinfo.c.orig	2008-04-05 16:38:47.000000000 -0500
++++ libami/drawinfo.c	2008-04-05 16:39:26.000000000 -0500
+@@ -143,7 +143,7 @@
+     if(!(dri->dri_Font = XLoadQueryFont(dpy, default_screenfont))) {
+       fprintf(stderr, "%s: cannot open font %s\n", progname,
+ 	      default_screenfont);
+-      exit(1);
++      dri->dri_Font = XLoadQueryFont(dpy, "fixed");
+     }
+   if(override)
+     setdriprop(dpy, driatom, dritypatom, root, dri);
