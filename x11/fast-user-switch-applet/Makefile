@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2008/03/06 14:53:56 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2008/04/25 07:58:05 wiz Exp $
 #
 
-DISTNAME=	fast-user-switch-applet-2.20.0
-PKGREVISION=	1
+DISTNAME=	fast-user-switch-applet-2.22.0
 CATEGORIES=	misc gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/fast-user-switch-applet/2.20/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/fast-user-switch-applet/2.22/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	jmmv@NetBSD.org
@@ -34,7 +33,7 @@ CONFIGURE_ARGS+=	--with-gdm-config=${PKG_SYSCONFBASE}/gdm/custom.conf
 
 GCONF_SCHEMAS=		fast-user-switch-applet.schemas
 
-BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.0
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
