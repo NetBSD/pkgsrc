@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/14 01:29:28 wiz Exp $
+$NetBSD: distinfo,v 1.2 2008/04/25 19:18:23 tnn Exp $
 
-SHA1 (urlgrabber-3.0.0.tar.gz) = 8f1a82a44e7ab769c0843ca56c5e7863b6c8e71a
-RMD160 (urlgrabber-3.0.0.tar.gz) = cc0bec42126b8981ae4a9be8c9baaee0b5a77d3e
-Size (urlgrabber-3.0.0.tar.gz) = 77982 bytes
+SHA1 (urlgrabber-3.1.0.tar.gz) = 866c5907a9ef072bea71d020079b4c53e44e1318
+RMD160 (urlgrabber-3.1.0.tar.gz) = cf470cd2ddd9a92b3fc0f6bed3f53063b72216aa
+Size (urlgrabber-3.1.0.tar.gz) = 78848 bytes
