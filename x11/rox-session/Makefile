@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/09/21 13:04:44 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2008/04/25 20:39:14 joerg Exp $
 #
 
 DISTNAME=	rox-session-0.28
@@ -18,7 +18,7 @@ DIST_SUBDIR=	rox
 
 NO_BUILD=	yes
 
-PYTHON_VERSIONS_ACCEPTED=	24
+PYTHON_VERSIONS_ACCEPTED=	25 24
 PYTHON_PATCH_SCRIPTS=	AppRun tests/testutils.py
 
 INSTALLATION_DIRS=	share/rox/ROX-Session

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/03/03 17:45:34 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2008/04/25 20:39:08 joerg Exp $
 #
 
 VERSION=		0.4.4
@@ -15,7 +15,6 @@ COMMENT=		Python IDE
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_OPTS_ZIP=	-aqo
-PYTHON_VERSIONS_ACCEPTED=	23 24
 
 BOADIR=	${PREFIX}/share/boa-constructor-${VERSION}
 

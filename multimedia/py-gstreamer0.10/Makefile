@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/04/11 19:58:30 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2008/04/25 20:39:10 joerg Exp $
 #
 
 DISTNAME=		gst-python-0.10.11
@@ -15,7 +15,6 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config gmake
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN}
-PYTHON_VERSIONS_ACCEPTED= 23 24
 PY_PATCHPLIST=		yes
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/gst-python.pc.in

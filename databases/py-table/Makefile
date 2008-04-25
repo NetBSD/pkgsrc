@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/10/04 20:53:46 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2008/04/25 20:39:08 joerg Exp $
 #
 
 DISTNAME=	pytable-0.8.3a
@@ -18,7 +18,6 @@ MAKE_ENV+=		BINDIR=${PREFIX}/bin
 USE_TOOLS+=		gmake
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED=	24 23 22
 PLIST_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX:Q}
 
 .include "../../lang/python/extension.mk"

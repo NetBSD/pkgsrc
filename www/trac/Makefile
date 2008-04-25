@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2008/04/11 15:27:22 abs Exp $
+# $NetBSD: Makefile,v 1.31 2008/04/25 20:39:14 joerg Exp $
 #
 
 DISTNAME=	trac-0.10.4
@@ -35,7 +35,6 @@ DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2:../../databases/py-psycopg2
 PYDISTUTILSPKG=	YES
 PY_PATCHPLIST=	YES
 PYTHON_PATCH_SCRIPTS=	contrib/*.py contrib/*-hook
-PYTHON_VERSIONS_INCOMPATIBLE=	15 20 21 22
 
 EGDIR=		${PREFIX}/share/examples/trac
 

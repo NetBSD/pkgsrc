@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/06/02 23:38:10 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2008/04/25 20:39:09 joerg Exp $
 #
 
 DISTNAME=		fonttools-2.0b1
@@ -14,7 +14,6 @@ COMMENT=		Library for manipulating fonts
 
 WRKSRC=			${WRKDIR}/fonttools
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_ACCEPTED=	24 23 22
 
 .include "../../lang/python/extension.mk"
 .include "../../math/py-Numeric/buildlink3.mk"

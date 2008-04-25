@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/03/04 06:59:05 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2008/04/25 20:39:09 joerg Exp $
 #
 
 DISTNAME=	pysol-4.81
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 NO_BUILD=	yes
 PLIST_SRC=	${WRKDIR}/PLIST.src
 
-PYTHON_VERSIONS_ACCEPTED=	22 21 20 15
+PYTHON_VERSIONS_ACCEPTED=	21 15
 
 CARDSETS=	pysol-cardsets-4.40
 

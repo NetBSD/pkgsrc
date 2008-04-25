@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/06/10 21:54:07 minskim Exp $
+# $NetBSD: Makefile,v 1.6 2008/04/25 20:39:08 joerg Exp $
 
 DISTNAME=	ko-po-check-0.8
 PKGREVISION=	1
@@ -11,7 +11,7 @@ COMMENT=	Korean .po file checker
 
 GNU_CONFIGURE=	yes
 
-PYTHON_VERSIONS_INCOMPATIBLE+=	23 22 21 20 15
+PYTHON_VERSIONS_ACCEPTED=	25 24
 CONFIGURE_ENV+=	PYTHON=${PYTHONBIN:Q}
 
 PYTHON_PATCH_SCRIPTS=	${WRKSRC}/scripts/ko-po-check.in

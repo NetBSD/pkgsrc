@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/04/22 23:05:49 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/04/25 20:39:11 joerg Exp $
 #
 
 DISTNAME=	clive-0.4.10
@@ -13,7 +13,6 @@ COMMENT=	Command line video extraction tool for user-uploaded video hosts
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	# none
-PYTHON_VERSIONS_ACCEPTED=	24 23 22
 PY_PATCHPLIST=			yes
 
 REPLACE_INTERPRETER+=	env_python

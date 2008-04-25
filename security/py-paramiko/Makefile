@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/12/14 13:35:04 bjs Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/25 20:39:12 joerg Exp $
 #
 
 DISTNAME=		paramiko-1.7.1
@@ -12,7 +12,6 @@ HOMEPAGE=		http://www.lag.net/paramiko/
 COMMENT=		SSH2 protocol library
 
 PYDISTUTILSPKG=		yes
-PYTHON_VERSIONS_ACCEPTED= 23 24
 
 .include "../../lang/python/extension.mk"
 .include "../../security/py-amkCrypto/buildlink3.mk"

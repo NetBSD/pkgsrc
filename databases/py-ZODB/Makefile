@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/04 21:29:10 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2008/04/25 20:39:07 joerg Exp $
 #
 
 DISTNAME=		ZODB3-3.2.1
@@ -14,7 +14,7 @@ COMMENT=		Standalone distro of Zope Object Database
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
-PYTHON_VERSIONS_ACCEPTED=	23 22
+PYTHON_VERSIONS_ACCEPTED=	23
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

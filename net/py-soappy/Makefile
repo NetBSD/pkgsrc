@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/06/07 12:52:24 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2008/04/25 20:39:11 joerg Exp $
 #
 
 DISTNAME=	SOAPpy-0.11.4
@@ -13,8 +13,6 @@ COMMENT=	SOAP implementation
 
 PYDISTUTILSPKG=	YES
 PY_PATCHPLIST=	YES
-
-PYTHON_VERSIONS_ACCEPTED=	24 23 22
 
 .include "../../lang/python/extension.mk"
 .include "../../math/py-fpconst/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/04/18 13:51:53 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2008/04/25 20:39:09 joerg Exp $
 #
 
 DISTNAME=		matplotlib-0.87.2
@@ -15,8 +15,6 @@ USE_LANGUAGES=		c c++
 USE_TOOLS+=		pkg-config
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-
-PYTHON_VERSIONS_ACCEPTED=	24 23
 
 .include "../../lang/python/extension.mk"
 

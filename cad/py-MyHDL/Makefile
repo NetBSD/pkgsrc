@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/05/04 16:58:05 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2008/04/25 20:39:06 joerg Exp $
 #
 
 DISTNAME=	myhdl-0.5.1
@@ -11,7 +11,7 @@ HOMEPAGE=	http://jandecaluwe.com/Tools/MyHDL/Overview.html
 COMMENT=	Hardware description in Python
 
 PYDISTUTILSPKG=	yes
-PYTHON_VERSIONS_ACCEPTED=	24
+PYTHON_VERSIONS_ACCEPTED=	25 24
 
 do-test:
 	cd ${WRKSRC}/myhdl/test && ${PYTHONBIN} test_all.py

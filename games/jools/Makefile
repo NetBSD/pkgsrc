@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/17 23:39:24 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/25 20:39:09 joerg Exp $
 #
 
 DISTNAME=		jools-0.20
@@ -12,7 +12,6 @@ COMMENT=		Bejeweled clone
 
 DEPENDS+=		${PYPKGPREFIX}-game>=1.4:../../devel/py-game
 
-PYTHON_VERSIONS_ACCEPTED=	21 22 23 24
 PYDISTUTILSPKG=			YES
 
 post-install:

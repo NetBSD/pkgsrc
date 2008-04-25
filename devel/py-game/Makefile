@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/06/12 16:28:06 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/04/25 20:39:08 joerg Exp $
 #
 
 DISTNAME=		pygame-1.7.1release
@@ -13,8 +13,6 @@ COMMENT=		Set of Python modules designed for writing games
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-
-PYTHON_VERSIONS_ACCEPTED=	24 23 22
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"

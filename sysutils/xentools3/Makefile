@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/04/17 08:44:51 abs Exp $
+# $NetBSD: Makefile,v 1.12 2008/04/25 20:39:12 joerg Exp $
 #
 
 VERSION=		3.1.3
@@ -44,7 +44,6 @@ MAKE_ENV+=		XEN_TARGET_ARCH="x86_64" XEN_COMPILE_ARCH="x86_64"
 .else
 MAKE_ENV+=		XEN_TARGET_ARCH="unsupported"
 .endif
-PYTHON_VERSIONS_ACCEPTED= 25 24 23
 PY_PATCHPLIST=		yes
 PYTHON_PATCH_SCRIPTS+=	misc/xm
 PYTHON_PATCH_SCRIPTS+=	misc/netfix

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/07/13 14:58:38 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2008/04/25 20:39:08 joerg Exp $
 
 DISTNAME=	ctypes-1.0.2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -9,7 +9,6 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://starship.python.net/crew/theller/ctypes/
 COMMENT=	Foreign Function Interface package for Python
 
-PYTHON_VERSIONS_ACCEPTED=	24 23
 PYDISTUTILSPKG=	yes
 
 do-test:

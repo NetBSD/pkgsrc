@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/01/07 09:13:51 rillig Exp $
+# $NetBSD: Makefile,v 1.31 2008/04/25 20:39:09 joerg Exp $
 
 DISTNAME=	roundup-1.1.2
 CATEGORIES=	devel
@@ -11,8 +11,6 @@ COMMENT=	Issue tracking system with command-line, web and email clients
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
 USE_LANGUAGES=
-
-PYTHON_VERSIONS_ACCEPTED=	24 23
 
 PYTHON_PATCH_SCRIPTS+=	cgi-bin/roundup.cgi demo.py roundup/admin.py
 PYTHON_PATCH_SCRIPTS+=	roundup/backends/locking.py
