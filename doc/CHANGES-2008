@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.894 2008/04/25 16:15:24 kefren Exp $
+$NetBSD: CHANGES-2008,v 1.895 2008/04/25 16:44:31 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1622,3 +1622,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Added sysutils/ndesk-dbus version 0.6.1a [kefren 2008-04-25]
 	Added sysutils/ndesk-dbus-glib version 0.4.1 [kefren 2008-04-25]
 	Added net/dcsharp version 0.11.1 [kefren 2008-04-25]
+	Updated devel/scmgit to 1.5.5.1 [bjs 2008-04-25]
+	Updated devel/scmgit-base to 1.5.5.1 [bjs 2008-04-25]
+	Updated devel/scmgit-docs to 1.5.5.1 [bjs 2008-04-25]
