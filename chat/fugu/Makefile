@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/02/22 19:26:11 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2008/04/25 20:39:06 joerg Exp $
 #
 
 DISTNAME=	fugu-1.0
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fugu.gale.org/
 COMMENT=	Graphical client for the gale secure instant messaging system
 
-PYTHON_VERSIONS_ACCEPTED= 20 21 # no 22 - uses Makefile.pre.in
+PYTHON_VERSIONS_ACCEPTED= 21 # no 22 - uses Makefile.pre.in
 PYTHON_PATCH_SCRIPTS=	puffdisp.py pygale/authcache.py pygale/prettypuff.py
 
 GNU_CONFIGURE=	YES

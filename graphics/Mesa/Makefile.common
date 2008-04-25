@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.58 2008/04/24 07:40:23 bjs Exp $
+# $NetBSD: Makefile.common,v 1.59 2008/04/25 20:39:09 joerg Exp $
 #
 # This Makefile fragment is included either directly or indirectly (through
 # Makefile.lib) by all packages that are built from the Mesa sources.
@@ -24,6 +24,7 @@ MAINTAINER=		bjs@NetBSD.org
 HOMEPAGE=		http://www.mesa3d.org/
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS=		no
 
 WRKSRC=			${WRKDIR}/Mesa-${MESA_VERSION}
 BUILDING_MESA=		yes

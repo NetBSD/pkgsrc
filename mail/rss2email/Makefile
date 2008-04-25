@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/03/04 17:57:19 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2008/04/25 20:39:10 joerg Exp $
 #
 
 DISTNAME=		rss2email-2.62
@@ -20,7 +20,6 @@ WRKSRC=			${WRKDIR}
 USE_TOOLS+=		tr
 NO_BUILD=		yes
 PYTHON_PATCH_SCRIPTS=	*.py
-PYTHON_VERSIONS_ACCEPTED=	24 23 22
 
 SUBST_CLASSES+=		bin
 SUBST_STAGE.bin=	do-configure
