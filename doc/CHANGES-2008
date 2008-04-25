@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.880 2008/04/24 21:32:11 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.881 2008/04/25 05:21:45 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1603,3 +1603,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-Text-BibTeX to 0.37 [markd 2008-04-24]
 	Updated games/crimsonfields to 0.5.2 [wiz 2008-04-24]
 	Updated textproc/gtk-doc to 1.10 [wiz 2008-04-24]
+	Updated x11/fox to 1.6.32 [wiz 2008-04-25]
