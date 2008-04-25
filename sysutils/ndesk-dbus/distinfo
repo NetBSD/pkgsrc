@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/04/25 15:18:28 kefren Exp $
+
+SHA1 (ndesk-dbus-0.6.1a.tar.gz) = ab129ba3d566e6d8eedd41bcdbd18e65edf095fe
+RMD160 (ndesk-dbus-0.6.1a.tar.gz) = 3e1a3a6e040609ba332b35c6e233d1f002de79fc
+Size (ndesk-dbus-0.6.1a.tar.gz) = 121667 bytes
