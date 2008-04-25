@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.14 2008/04/25 11:23:26 kefren Exp $
+--- mcs/mcs/anonymous.cs.orig	2008-04-25 13:42:00.000000000 +0300
++++ mcs/mcs/anonymous.cs	2008-04-25 13:42:44.000000000 +0300
+@@ -1150,7 +1150,7 @@
+ 
+ 		public virtual bool HasExplicitParameters {
+ 			get {
+-				return true;
++				return Parameters != null;
+ 			}
+ 		}
+ 
