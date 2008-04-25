@@ -143,7 +143,7 @@ DESCRIPTION
      typeflag
 	     Type of entry.  POSIX extended the earlier linkflag field with
 	     several new type values:
-	     ``0''   Regular file.  NULL should be treated as a synonym, for
+	     ``0''   Regular file.  NUL should be treated as a synonym, for
 		     compatibility purposes.
 	     ``1''   Hard link.
 	     ``2''   Symbolic link.
@@ -167,7 +167,7 @@ DESCRIPTION
 	     allocate directory space.	For all other types, it should be set
 	     to zero by writers and ignored by readers.
 
-     magic   Contains the magic value ``ustar'' followed by a NULL byte to
+     magic   Contains the magic value ``ustar'' followed by a NUL byte to
 	     indicate that this is a POSIX standard archive.  Full compliance
 	     requires the uname and gname fields be properly set.
 
@@ -191,15 +191,15 @@ DESCRIPTION
 	     a / character to the regular name field to obtain the full path-
 	     name.
 
-     Note that all unused bytes must be set to NULL.
+     Note that all unused bytes must be set to NUL.
 
      Field termination is specified slightly differently by POSIX than by pre-
      vious implementations.  The magic, uname, and gname fields must have a
-     trailing NULL.  The pathname, linkname, and prefix fields must have a
-     trailing NULL unless they fill the entire field.  (In particular, it is
+     trailing NUL.  The pathname, linkname, and prefix fields must have a
+     trailing NUL unless they fill the entire field.  (In particular, it is
      possible to store a 256-character pathname if it happens to have a / as
      the 156th character.)  POSIX requires numeric fields to be zero-padded in
-     the front, and allows them to be terminated with either space or NULL
+     the front, and allows them to be terminated with either space or NUL
      characters.
 
      Currently, most tar implementations comply with the ustar format, occa-

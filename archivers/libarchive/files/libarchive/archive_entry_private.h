@@ -28,6 +28,8 @@
 #ifndef ARCHIVE_ENTRY_PRIVATE_H_INCLUDED
 #define	ARCHIVE_ENTRY_PRIVATE_H_INCLUDED
 
+#include "archive_string.h"
+
 /*
  * Handle wide character (i.e., Unicode) and non-wide character
  * strings transparently.
@@ -35,10 +37,9 @@
  */
 
 struct aes {
-	const char *aes_mbs;
-	char *aes_mbs_alloc;
+	struct archive_string aes_mbs;
+	struct archive_string aes_utf8;
 	const wchar_t *aes_wcs;
-	wchar_t *aes_wcs_alloc;
 };
 
 struct ae_acl {
@@ -141,6 +142,8 @@ struct archive_entry {
 	struct aes ae_pathname;	/* Name of entry */
 	struct aes ae_symlink;		/* symlink contents */
 	struct aes ae_uname;		/* Name of owner */
+	unsigned char	ae_hardlinkset;
+	unsigned char	ae_symlinkset;
 
 	struct ae_acl	*acl_head;
 	struct ae_acl	*acl_p;
