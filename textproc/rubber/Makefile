@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/08/10 03:21:40 minskim Exp $
+# $NetBSD: Makefile,v 1.19 2008/04/25 20:39:13 joerg Exp $
 #
 
 DISTNAME=		rubber-1.1
@@ -15,7 +15,6 @@ USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
 INFO_FILES=		# PLIST
 TEXINFO_REQD=		4.6
-PYTHON_VERSIONS_ACCEPTED=	24 23
 TEX_ACCEPTED=		teTeX3
 
 CONFIGURE_ARGS+=	--python=${PYTHONBIN:Q}

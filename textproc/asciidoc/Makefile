@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/04/11 23:15:48 gdt Exp $
+# $NetBSD: Makefile,v 1.10 2008/04/25 20:39:12 joerg Exp $
 #
 
 DISTNAME=		asciidoc-8.2.5
@@ -16,7 +16,6 @@ DEPENDS+=		getopt-[0-9]*:../../misc/getopt
 
 REPLACE_BASH+=		a2x
 USE_TOOLS+=		bash:run
-PYTHON_VERSIONS_INCOMPATIBLE=	15 20 21 22
 PYTHON_PATCH_SCRIPTS=	asciidoc.py filters/code-filter.py filters/music2png.py
 
 NO_BUILD=		yes

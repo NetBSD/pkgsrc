@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/11/13 22:49:51 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/25 20:39:10 joerg Exp $
 #
 
 DISTNAME=		pyephem-3.7b
@@ -17,7 +17,6 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 PYDISTUTILSPKG=			true
-PYTHON_VERSIONS_ACCEPTED=	23 24
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGNAME}
