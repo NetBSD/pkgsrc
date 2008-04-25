@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2008/04/25 11:34:11 tnn Exp $
 bin/pydoc${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}
 bin/python${PY_VER_SUFFIX}-config
@@ -84,8 +84,8 @@ include/python${PY_VER_SUFFIX}/tupleobject.h
 include/python${PY_VER_SUFFIX}/ucnhash.h
 include/python${PY_VER_SUFFIX}/unicodeobject.h
 include/python${PY_VER_SUFFIX}/weakrefobject.h
-${NOSHLIB}lib/libpython${PY_VER_SUFFIX}.so
-${NOSHLIB}lib/libpython${PY_VER_SUFFIX}.so.1.0
+${PLIST.dll}lib/libpython${PY_VER_SUFFIX}.so
+${PLIST.dll}lib/libpython${PY_VER_SUFFIX}.so.1.0
 lib/python${PY_VER_SUFFIX}/BaseHTTPServer.py
 lib/python${PY_VER_SUFFIX}/BaseHTTPServer.pyc
 lib/python${PY_VER_SUFFIX}/BaseHTTPServer.pyo
@@ -1543,7 +1543,7 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/_weakref.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/array.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/audioop.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/binascii.so
-${BSDDBMODULE}lib/python${PY_VER_SUFFIX}/lib-dynload/bsddb185.so
+${PLIST.bsddb}lib/python${PY_VER_SUFFIX}/lib-dynload/bsddb185.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/bz2.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/cPickle.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/cStringIO.so
@@ -1552,21 +1552,21 @@ lib/python${PY_VER_SUFFIX}/lib-dynload/collections.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/crypt.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/datetime.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/dbm.so
-${DLMODULE}lib/python${PY_VER_SUFFIX}/lib-dynload/dl.so
+${PLIST.dl}lib/python${PY_VER_SUFFIX}/lib-dynload/dl.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/fcntl.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/grp.so
-${EXTRA_SO}lib/python${PY_VER_SUFFIX}/lib-dynload/imageop.so
+${PLIST.extra-so}lib/python${PY_VER_SUFFIX}/lib-dynload/imageop.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/itertools.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/math.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/mmap.so
-${NISMODULE}lib/python${PY_VER_SUFFIX}/lib-dynload/nis.so
-${NO_NISMODULE}lib/python${PY_VER_SUFFIX}/lib-dynload/nis_failed.so
+${PLIST.nis}lib/python${PY_VER_SUFFIX}/lib-dynload/nis.so
+${PLIST.no-nis}lib/python${PY_VER_SUFFIX}/lib-dynload/nis_failed.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/operator.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/parser.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/pyexpat.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/resource.so
-${EXTRA_SO}lib/python${PY_VER_SUFFIX}/lib-dynload/rgbimg.so
-${OSSAUDIODEV}lib/python${PY_VER_SUFFIX}/lib-dynload/ossaudiodev.so
+${PLIST.extra-so}lib/python${PY_VER_SUFFIX}/lib-dynload/rgbimg.so
+${PLIST.oss}lib/python${PY_VER_SUFFIX}/lib-dynload/ossaudiodev.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/select.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/strop.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/syslog.so

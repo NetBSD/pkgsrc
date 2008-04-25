@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/04/24 04:42:00 bjs Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/25 11:34:11 tnn Exp $
 
 DISTNAME=	Python-2.5.2
 PKGNAME=	python25-2.5.2
@@ -73,27 +73,24 @@ IS_64BIT_PLATFORM?=	no
 .endif
 
 # the dl module isn't built for 64 bit archs and Darwin
-.if !empty(IS_64BIT_PLATFORM:M[yY][eE][sS]) || (${OPSYS} == "Darwin")
-PLIST_SUBST+=	DLMODULE="@comment "
-.else
-PLIST_SUBST+=	DLMODULE=
+PLIST_VARS+=	dl
+.if empty(IS_64BIT_PLATFORM:M[yY][eE][sS]) && (${OPSYS} != "Darwin")
+PLIST.dl=	yes
 .endif
 
 # setup.py causes some modules to be built if the platform is *not* 64bit.
+PLIST_VARS+=	extra-so
 .if !empty(IS_64BIT_PLATFORM:M[nN][oO])
-PLIST_SUBST+=	EXTRA_SO=
-.else
-PLIST_SUBST+=	EXTRA_SO="@comment "
+LIST.extra-so=	yes
 .endif
 
 # ossaudiodev is only available on x86 for the following platforms
+PLIST_VARS+=	oss
 .if (${MACHINE_ARCH} == "i386") && \
     (${PY_PLATNAME} == "linux2" || ${OPSYS} == "FreeBSD")
-PLIST_SUBST+=	OSSAUDIODEV=
+PLIST.oss=	yes
 .elif (${MACHINE_ARCH} == "x86_64") && (${PY_PLATNAME} == "linux2")
-PLIST_SUBST+=	OSSAUDIODEV=
-.else
-PLIST_SUBST+=	OSSAUDIODEV="@comment "
+PLIST.oss=	yes
 .endif
 
 # Make sure python modules can link correctly
@@ -101,30 +98,25 @@ PLIST_SUBST+=	OSSAUDIODEV="@comment "
 INSTALL_UNSTRIPPED=	yes
 .endif
 
+PLIST_VARS+=	bsddb dll nis no-nis
 .if ${OPSYS} == "IRIX"
 .  if ${ABI} == "64"
-PLIST_SUBST+=	NISMODULE="@comment "
-PLIST_SUBST+=	NO_NISMODULE="@comment "
+PLIST.no-nis=	yes
 .  else
-PLIST_SUBST+=	NISMODULE=
-PLIST_SUBST+=	NO_NISMODULE="@comment "
+PLIST.nis=	yes
 .  endif
-PLIST_SUBST+=	BSDDBMODULE="@comment "
-PLIST_SUBST+=	NOSHLIB="@comment "
 .else
 .  include "../../mk/bdb.buildlink3.mk"
 MAKE_ENV+=	PY_BDB_TYPE=${BDB_TYPE}
 MAKE_ENV+=	PY_BDB_INCDIRS=${BUILDLINK_INCDIRS.${BDB_TYPE}:S,^,${BDBBASE}/,:Q}
 MAKE_ENV+=	PY_BDB_LIBDIRS=${BDBBASE}/lib
 LIBS+=		${BDB_LIBS}
-PLIST_SUBST+=	BSDDBMODULE=
-PLIST_SUBST+=	NOSHLIB=
+PLIST.bsddb=	yes
+PLIST.dll=	yes
 .  if ${OPSYS} != "NetBSD" || exists(/usr/bin/ypcat)
-PLIST_SUBST+=	NISMODULE=
-PLIST_SUBST+=	NO_NISMODULE="@comment "
+PLIST.nis=	yes
 .  else
-PLIST_SUBST+=	NISMODULE="@comment "
-PLIST_SUBST+=	NO_NISMODULE=
+PLIST.no-nis=	yes
 .  endif
 .endif
 
