@@ -24,7 +24,7 @@
 .\" SUCH DAMAGE.
 .\"
 .\" $FreeBSD: fetch.3,v 1.64 2007/12/18 11:03:26 des Exp $
-.\" $NetBSD: fetch.3,v 1.6 2008/04/25 16:25:25 joerg Exp $
+.\" $NetBSD: fetch.3,v 1.7 2008/04/25 19:59:30 joerg Exp $
 .\"
 .Dd April 25, 2008
 .Dt FETCH 3
@@ -63,6 +63,7 @@
 .Nm fetchFreeURLList ,
 .Nm fetchUnquotePath ,
 .Nm fetchUnquoteFilename ,
+.Nm fetchStringifyURL ,
 .Nm fetch
 .Nd file transfer functions
 .Sh LIBRARY
@@ -136,6 +137,8 @@
 .Fn fetchUnquotePath "struct url *u"
 .Ft char *
 .Fn fetchUnquoteFilename "struct url *u"
+.Ft char *
+.Fn fetchStringifyURL "const struct url *u"
 .Sh DESCRIPTION
 These functions implement a high-level library for retrieving and
 uploading files using Uniform Resource Locators (URLs).
@@ -272,12 +275,15 @@ The list should be initialised by calling
 and the entries be freed by calling
 .Fn fetchFreeURLList .
 .Pp
+.Fn fetchStringifyURL
+returns the URL as string.
 .Fn fetchUnquotePath
 returns the path name part of the URL with any quoting undone.
 Query arguments and fragment identifiers are not included.
 .Fn fetchUnquoteFilename
 returns the last component of the path name as returned by
 .Fn fetchUnquotePath .
+.Fn fetchStringifyURL ,
 .Fn fetchUnquotePath
 and
 .Fn fetchUnquoteFilename

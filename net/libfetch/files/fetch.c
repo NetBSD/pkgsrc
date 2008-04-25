@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.c,v 1.10 2008/04/25 16:25:25 joerg Exp $	*/
+/*	$NetBSD: fetch.c,v 1.11 2008/04/25 19:59:30 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -589,4 +589,40 @@ fetchUnquoteFilename(struct url *url)
 	filename = strdup(last_slash + 1);
 	free(unquoted);
 	return filename;
+}
+
+char *
+fetchStringifyURL(const struct url *url)
+{
+	size_t total;
+	char *doc;
+
+	/* scheme :// user : pwd @ host :port doc */
+	total = strlen(url->scheme) + 3 + strlen(url->user) + 1 +
+	    strlen(url->pwd) + 1 + strlen(url->host) + 6 + strlen(url->doc) + 1;
+	if ((doc = malloc(total)) == NULL)
+		return NULL;
+	if (url->port != 0)
+		snprintf(doc, total, "%s%s%s%s%s%s%s:%d%s",
+		    url->scheme,
+		    url->scheme[0] != '\0' ? "://" : "",
+		    url->user,
+		    url->pwd[0] != '\0' ? ":" : "",
+		    url->pwd,
+		    url->user[0] != '\0' || url->pwd[0] != '\0' ? "@" : "",
+		    url->host,
+		    (int)url->port,
+		    url->doc);
+	else {
+		snprintf(doc, total, "%s%s%s%s%s%s%s%s",
+		    url->scheme,
+		    url->scheme[0] != '\0' ? "://" : "",
+		    url->user,
+		    url->pwd[0] != '\0' ? ":" : "",
+		    url->pwd,
+		    url->user[0] != '\0' || url->pwd[0] != '\0' ? "@" : "",
+		    url->host,
+		    url->doc);
+	}
+	return doc;
 }
