@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.899 2008/04/25 22:50:37 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.900 2008/04/25 23:11:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1635,3 +1635,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/py-pexpect to 2.3 [tnn 2008-04-25]
 	Updated sysutils/duplicity to 0.4.10 [tnn 2008-04-25]
 	Added games/bluemoon version 1.1.2 [wiz 2008-04-25]
+	Added games/libggz version 0.0.14.1 [wiz 2008-04-25]
