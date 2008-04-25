@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/14 01:29:28 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/04/25 19:18:23 tnn Exp $
 bin/urlgrabber
 ${PYSITELIB}/urlgrabber/__init__.py
 ${PYSITELIB}/urlgrabber/__init__.pyc
@@ -18,6 +18,9 @@ ${PYSITELIB}/urlgrabber/mirror.pyo
 ${PYSITELIB}/urlgrabber/progress.py
 ${PYSITELIB}/urlgrabber/progress.pyc
 ${PYSITELIB}/urlgrabber/progress.pyo
+${PYSITELIB}/urlgrabber/sslfactory.py
+${PYSITELIB}/urlgrabber/sslfactory.pyc
+${PYSITELIB}/urlgrabber/sslfactory.pyo
 share/doc/${PKGNAME}/ChangeLog
 share/doc/${PKGNAME}/LICENSE
 share/doc/${PKGNAME}/README
