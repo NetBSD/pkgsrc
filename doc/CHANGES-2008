@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.882 2008/04/25 07:13:51 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.883 2008/04/25 07:21:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1605,3 +1605,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/gtk-doc to 1.10 [wiz 2008-04-24]
 	Updated x11/fox to 1.6.32 [wiz 2008-04-25]
 	Updated lang/ocaml to 3.10.2 [wiz 2008-04-25]
+	Updated devel/yasm to 0.7.0 [wiz 2008-04-25]
