@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/04/25 07:47:47 kefren Exp $
+--- main.c.orig	2008-04-25 10:21:47.000000000 +0300
++++ main.c	2008-04-25 10:20:35.000000000 +0300
+@@ -33,7 +33,7 @@
+ 
+ #include "crack.h"
+ 
+-static int use_unzip;
++int use_unzip;
+ static method *crack_method = methods;
+ static int method_number = -1;
+ static int min_length = -1;
