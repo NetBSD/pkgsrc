@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2008/04/25 02:28:24 reed Exp $
+
+--- src/weewm.c.orig	2008-04-05 12:48:23.000000000 -0500
++++ src/weewm.c	2008-04-05 12:51:26.000000000 -0500
+@@ -305,7 +305,8 @@
+     if (!font)
+     {
+         fprintf(stderr, "error loading font\n");
+-        exit(1);
++        font = XLoadQueryFont(display, "fixed");
++/*        exit(1);	*/
+     }
+     
+     sattr.event_mask = SubstructureRedirectMask | SubstructureNotifyMask | PropertyChangeMask | ButtonPressMask | ButtonReleaseMask;
