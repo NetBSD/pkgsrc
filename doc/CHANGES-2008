@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.887 2008/04/25 07:51:45 kefren Exp $
+$NetBSD: CHANGES-2008,v 1.888 2008/04/25 07:58:22 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1610,3 +1610,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-ExtUtils-CBuilder to 0.23 [wiz 2008-04-25]
 	Updated wm/dwm to 4.9 [wiz 2008-04-25]
 	Added archivers/fcrackzip version 0.3 [kefren 2008-04-25]
+	Updated x11/fast-user-switch-applet to 2.22.0 [wiz 2008-04-25]
