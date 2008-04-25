@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.5 2004/08/19 20:44:31 recht Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/04/25 17:37:56 tnn Exp $
 bin/pyrexc
+${PYSITELIB}/Pyrex/Compiler/Builtin.py
+${PYSITELIB}/Pyrex/Compiler/Builtin.pyc
+${PYSITELIB}/Pyrex/Compiler/Builtin.pyo
 ${PYSITELIB}/Pyrex/Compiler/CmdLine.py
 ${PYSITELIB}/Pyrex/Compiler/CmdLine.pyc
 ${PYSITELIB}/Pyrex/Compiler/CmdLine.pyo
@@ -22,6 +25,9 @@ ${PYSITELIB}/Pyrex/Compiler/Lexicon.pyo
 ${PYSITELIB}/Pyrex/Compiler/Main.py
 ${PYSITELIB}/Pyrex/Compiler/Main.pyc
 ${PYSITELIB}/Pyrex/Compiler/Main.pyo
+${PYSITELIB}/Pyrex/Compiler/ModuleNode.py
+${PYSITELIB}/Pyrex/Compiler/ModuleNode.pyc
+${PYSITELIB}/Pyrex/Compiler/ModuleNode.pyo
 ${PYSITELIB}/Pyrex/Compiler/Naming.py
 ${PYSITELIB}/Pyrex/Compiler/Naming.pyc
 ${PYSITELIB}/Pyrex/Compiler/Naming.pyo
@@ -61,33 +67,33 @@ ${PYSITELIB}/Pyrex/Distutils/__init__.pyo
 ${PYSITELIB}/Pyrex/Distutils/build_ext.py
 ${PYSITELIB}/Pyrex/Distutils/build_ext.pyc
 ${PYSITELIB}/Pyrex/Distutils/build_ext.pyo
+${PYSITELIB}/Pyrex/Distutils/extension.py
+${PYSITELIB}/Pyrex/Distutils/extension.pyc
+${PYSITELIB}/Pyrex/Distutils/extension.pyo
+${PYSITELIB}/Pyrex/DistutilsOld/__init__.py
+${PYSITELIB}/Pyrex/DistutilsOld/__init__.pyc
+${PYSITELIB}/Pyrex/DistutilsOld/__init__.pyo
+${PYSITELIB}/Pyrex/DistutilsOld/build_ext.py
+${PYSITELIB}/Pyrex/DistutilsOld/build_ext.pyc
+${PYSITELIB}/Pyrex/DistutilsOld/build_ext.pyo
 ${PYSITELIB}/Pyrex/Mac/DarwinSystem.py
 ${PYSITELIB}/Pyrex/Mac/DarwinSystem.pyc
 ${PYSITELIB}/Pyrex/Mac/DarwinSystem.pyo
-${PYSITELIB}/Pyrex/Mac/Finder_Std_Suite.py
-${PYSITELIB}/Pyrex/Mac/Finder_Std_Suite.pyc
-${PYSITELIB}/Pyrex/Mac/Finder_Std_Suite.pyo
-${PYSITELIB}/Pyrex/Mac/MPW_Misc_Suite.py
-${PYSITELIB}/Pyrex/Mac/MPW_Misc_Suite.pyc
-${PYSITELIB}/Pyrex/Mac/MPW_Misc_Suite.pyo
 ${PYSITELIB}/Pyrex/Mac/MacSystem.py
 ${PYSITELIB}/Pyrex/Mac/MacSystem.pyc
 ${PYSITELIB}/Pyrex/Mac/MacSystem.pyo
 ${PYSITELIB}/Pyrex/Mac/MacUtils.py
 ${PYSITELIB}/Pyrex/Mac/MacUtils.pyc
 ${PYSITELIB}/Pyrex/Mac/MacUtils.pyo
-${PYSITELIB}/Pyrex/Mac/PS_Misc_Suite.py
-${PYSITELIB}/Pyrex/Mac/PS_Misc_Suite.pyc
-${PYSITELIB}/Pyrex/Mac/PS_Misc_Suite.pyo
-${PYSITELIB}/Pyrex/Mac/PyServerMain.py
-${PYSITELIB}/Pyrex/Mac/PyServerMain.pyc
-${PYSITELIB}/Pyrex/Mac/PyServerMain.pyo
 ${PYSITELIB}/Pyrex/Mac/TS_Misc_Suite.py
 ${PYSITELIB}/Pyrex/Mac/TS_Misc_Suite.pyc
 ${PYSITELIB}/Pyrex/Mac/TS_Misc_Suite.pyo
 ${PYSITELIB}/Pyrex/Mac/__init__.py
 ${PYSITELIB}/Pyrex/Mac/__init__.pyc
 ${PYSITELIB}/Pyrex/Mac/__init__.pyo
+${PYSITELIB}/Pyrex/Mac/setup.py
+${PYSITELIB}/Pyrex/Mac/setup.pyc
+${PYSITELIB}/Pyrex/Mac/setup.pyo
 ${PYSITELIB}/Pyrex/Plex/Actions.py
 ${PYSITELIB}/Pyrex/Plex/Actions.pyc
 ${PYSITELIB}/Pyrex/Plex/Actions.pyo
@@ -124,14 +130,22 @@ ${PYSITELIB}/Pyrex/Plex/__init__.pyo
 ${PYSITELIB}/Pyrex/Plex/test_tm.py
 ${PYSITELIB}/Pyrex/Plex/test_tm.pyc
 ${PYSITELIB}/Pyrex/Plex/test_tm.pyo
+${PYSITELIB}/Pyrex/Unix/LinuxSystem.py
+${PYSITELIB}/Pyrex/Unix/LinuxSystem.pyc
+${PYSITELIB}/Pyrex/Unix/LinuxSystem.pyo
+${PYSITELIB}/Pyrex/Unix/__init__.py
+${PYSITELIB}/Pyrex/Unix/__init__.pyc
+${PYSITELIB}/Pyrex/Unix/__init__.pyo
 ${PYSITELIB}/Pyrex/Utils.py
 ${PYSITELIB}/Pyrex/Utils.pyc
 ${PYSITELIB}/Pyrex/Utils.pyo
 ${PYSITELIB}/Pyrex/__init__.py
 ${PYSITELIB}/Pyrex/__init__.pyc
 ${PYSITELIB}/Pyrex/__init__.pyo
+@dirrm ${PYSITELIB}/Pyrex/Unix
 @dirrm ${PYSITELIB}/Pyrex/Plex
 @dirrm ${PYSITELIB}/Pyrex/Mac
+@dirrm ${PYSITELIB}/Pyrex/DistutilsOld
 @dirrm ${PYSITELIB}/Pyrex/Distutils
 @dirrm ${PYSITELIB}/Pyrex/Compiler
 @dirrm ${PYSITELIB}/Pyrex
