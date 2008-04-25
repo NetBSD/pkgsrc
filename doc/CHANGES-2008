@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.891 2008/04/25 08:28:22 kefren Exp $
+$NetBSD: CHANGES-2008,v 1.892 2008/04/25 11:13:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1615,3 +1615,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated editors/gconf-editor to 2.22.0 [wiz 2008-04-25]
 	Updated lang/mono to 1.9.1 [kefren 2008-04-25]
 	Updated www/mono-xsp to 1.9.1 [kefren 2008-04-25]
+	Updated www/ap2-perl to 2.0.4nb1 [wiz 2008-04-25]
