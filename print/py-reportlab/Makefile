@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/11/05 20:57:51 drochner Exp $
+# $NetBSD: Makefile,v 1.30 2008/04/25 19:50:11 joerg Exp $
 #
 
 DISTNAME=	ReportLab_1_21_2
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.reportlab.com/
 COMMENT=	Powerful PDF-generating toolkit for Python
+
+PYTHON_VERSIONS_ACCEPTED=	25 24 23 21
 
 WRKSRC=		${WRKDIR}/reportlab_1_21_2/reportlab
 PYBINMODULE=	yes
