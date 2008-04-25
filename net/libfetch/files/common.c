@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.11 2008/04/24 10:21:33 joerg Exp $	*/
+/*	$NetBSD: common.c,v 1.12 2008/04/25 16:25:25 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -705,14 +705,14 @@ fetch_add_entry(struct url_list *ue, struct url *base, const char *name,
 }
 
 void
-fetch_init_url_list(struct url_list *ue)
+fetchInitURLList(struct url_list *ue)
 {
 	ue->length = ue->alloc_size = 0;
 	ue->urls = NULL;
 }
 
 void
-fetch_free_url_list(struct url_list *ue)
+fetchFreeURLList(struct url_list *ue)
 {
 	size_t i;
 

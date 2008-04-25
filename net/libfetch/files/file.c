@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.10 2008/04/24 10:24:04 joerg Exp $	*/
+/*	$NetBSD: file.c,v 1.11 2008/04/25 16:25:25 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -74,7 +74,7 @@ fetchXGetFile(struct url *u, struct url_stat *us, const char *flags)
 	fetchIO *f;
 	int fd, *cookie;
 
-	if ((path = fetch_unquote_doc(u)) == NULL) {
+	if ((path = fetchUnquotePath(u)) == NULL) {
 		fetch_syserr();
 		return NULL;
 	}
@@ -126,7 +126,7 @@ fetchPutFile(struct url *u, const char *flags)
 	fetchIO *f;
 	int fd, *cookie;
 
-	if ((path = fetch_unquote_doc(u)) == NULL) {
+	if ((path = fetchUnquotePath(u)) == NULL) {
 		fetch_syserr();
 		return NULL;
 	}
@@ -188,7 +188,7 @@ fetchStatFile(struct url *u, struct url_stat *us, const char *flags)
 	char *path;
 	int fd, rv;
 
-	if ((path = fetch_unquote_doc(u)) == NULL) {
+	if ((path = fetchUnquotePath(u)) == NULL) {
 		fetch_syserr();
 		return -1;
 	}
@@ -214,7 +214,7 @@ fetchListFile(struct url_list *ue, struct url *u, const char *pattern, const cha
 	struct dirent *de;
 	DIR *dir;
 
-	if ((path = fetch_unquote_doc(u)) == NULL) {
+	if ((path = fetchUnquotePath(u)) == NULL) {
 		fetch_syserr();
 		return -1;
 	}

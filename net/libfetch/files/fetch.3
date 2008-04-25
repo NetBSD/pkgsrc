@@ -24,14 +24,15 @@
 .\" SUCH DAMAGE.
 .\"
 .\" $FreeBSD: fetch.3,v 1.64 2007/12/18 11:03:26 des Exp $
-.\" $NetBSD: fetch.3,v 1.5 2008/04/19 14:49:23 joerg Exp $
+.\" $NetBSD: fetch.3,v 1.6 2008/04/25 16:25:25 joerg Exp $
 .\"
-.Dd April 19, 2008
+.Dd April 25, 2008
 .Dt FETCH 3
 .Os
 .Sh NAME
 .Nm fetchMakeURL ,
 .Nm fetchParseURL ,
+.Nm fetchCopyURL ,
 .Nm fetchFreeURL ,
 .Nm fetchXGetURL ,
 .Nm fetchGetURL ,
@@ -58,6 +59,11 @@
 .Nm fetchPutFTP ,
 .Nm fetchStatFTP ,
 .Nm fetchListFTP
+.Nm fetchInitURLList ,
+.Nm fetchFreeURLList ,
+.Nm fetchUnquotePath ,
+.Nm fetchUnquoteFilename ,
+.Nm fetch
 .Nd file transfer functions
 .Sh LIBRARY
 .Lb libfetch
@@ -68,6 +74,8 @@
 .Fn fetchMakeURL "const char *scheme" "const char *host" "int port" "const char *doc" "const char *user" "const char *pwd"
 .Ft struct url *
 .Fn fetchParseURL "const char *URL"
+.Ft struct url *
+.Fn fetchCopyURL "const struct url *u"
 .Ft void
 .Fn fetchFreeURL "struct url *u"
 .Ft fetchIO *
@@ -120,6 +128,14 @@
 .Fn fetchStatFTP "struct url *u" "struct url_stat *us" "const char *flags"
 .Ft int
 .Fn fetchListFTP "struct url_list *list" "struct url *u" "const char *flags"
+.Ft void
+.Fn fetchInitURLList "struct url_list *ul"
+.Ft void
+.Fn fetchFreeURLList "struct url_list *ul"
+.Ft char *
+.Fn fetchUnquotePath "struct url *u"
+.Ft char *
+.Fn fetchUnquoteFilename "struct url *u"
 .Sh DESCRIPTION
 These functions implement a high-level library for retrieving and
 uploading files using Uniform Resource Locators (URLs).
@@ -133,20 +149,26 @@ A regular expression which produces this syntax is:
     <scheme>:(//(<user>(:<pwd>)?@)?<host>(:<port>)?)?/(<document>)?
 .Ed
 .Pp
-If the URL does not seem to begin with a scheme name, the following
-syntax is assumed:
-.Bd -literal
-    ((<user>(:<pwd>)?@)?<host>(:<port>)?)?/(<document>)?
-.Ed
+If the URL does not seem to begin with a scheme name, it is assumed to be a local path.
+Only absolute path names are accepted.
 .Pp
 Note that some components of the URL are not necessarily relevant to
 all URL schemes.
 For instance, the file scheme only needs the <scheme> and <document>
 components.
-.Pp
-.Fn fetchMakeURL
-and
 .Fn fetchParseURL
+quotes any unsafe character in the URL automatically.
+This is not done by
+.Fn fetchMakeURL .
+.Fn fetchCopyURL
+copies an existing
+.Vt url
+structure.
+.Pp
+.Fn fetchMakeURL ,
+.Fn fetchParseURL
+and
+.Fn fetchCopyURL
 return a pointer to a
 .Vt url
 structure, which is defined as follows in
@@ -170,8 +192,9 @@ struct url {
 .Ed
 .Pp
 The pointer returned by
-.Fn fetchMakeURL
-or
+.Fn fetchMakeURL ,
+.Fn fetchCopyURL
+and
 .Fn fetchParseURL
 should be freed using
 .Fn fetchFreeURL .
@@ -245,9 +268,22 @@ struct url_list {
 .Ed
 .Pp
 The list should be initialised by calling
-.Fn fetch_init_url_list
+.Fn fetchInitURLList
 and the entries be freed by calling
-.Fn fetch_free_url_list .
+.Fn fetchFreeURLList .
+.Pp
+.Fn fetchUnquotePath
+returns the path name part of the URL with any quoting undone.
+Query arguments and fragment identifiers are not included.
+.Fn fetchUnquoteFilename
+returns the last component of the path name as returned by
+.Fn fetchUnquotePath .
+.Fn fetchUnquotePath
+and
+.Fn fetchUnquoteFilename
+return a string that should be deallocated with
+.Fn free
+after use.
 .Pp
 .Fn fetchXGet ,
 .Fn fetchGet ,
