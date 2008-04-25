@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.NetBSD,v 1.3 2005/01/25 13:09:03 tv Exp $
-lib/python${PY_VER_SUFFIX}/lib-dynload/bsddb.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/dbm.so
-lib/python${PY_VER_SUFFIX}/lib-dynload/nis.so

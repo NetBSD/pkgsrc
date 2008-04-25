@@ -1,4 +1,4 @@
-# $NetBSD: srcdist.mk,v 1.21 2008/04/24 01:39:25 tnn Exp $
+# $NetBSD: srcdist.mk,v 1.22 2008/04/25 16:11:11 tnn Exp $
 
 .include "../../lang/python/pyversion.mk"
 
@@ -32,16 +32,6 @@ PYSUBDIR=	Python-2.3.5
 WRKSRC=		${WRKDIR}/${PYSUBDIR}
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.3.5/
 
-.elif ${_PYTHON_VERSION} == "22"
-
-DISTNAME=	Python-2.2.3
-EXTRACT_SUFX=	.tgz
-DISTINFO_FILE=	${.CURDIR}/../../lang/python22/distinfo
-PATCHDIR=	${.CURDIR}/../../lang/python22/patches
-PYSUBDIR=	Python-2.2.3
-WRKSRC=		${WRKDIR}/${PYSUBDIR}
-MASTER_SITES=	ftp://ftp.python.org/pub/python/2.2.3/
-
 .elif ${_PYTHON_VERSION} == "21"
 
 DISTNAME=	Python-2.1.3
@@ -51,18 +41,6 @@ PATCHDIR=	${.CURDIR}/../../lang/python21/patches
 PYSUBDIR=	Python-2.1.3
 WRKSRC=		${WRKDIR}/${PYSUBDIR}
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.1.3/
-
-.elif ${_PYTHON_VERSION} == "20"
-
-DISTNAME=	Python-2.0.1
-# for historical reasons
-DIST_SUBDIR=	python
-EXTRACT_SUFX=	.tgz
-DISTINFO_FILE=	${.CURDIR}/../../lang/python20/distinfo
-PATCHDIR=	${.CURDIR}/../../lang/python20/patches
-PYSUBDIR=	Python-2.0.1
-WRKSRC=		${WRKDIR}/${PYSUBDIR}
-MASTER_SITES=	ftp://ftp.python.org/pub/python/2.0.1/
 
 .elif ${_PYTHON_VERSION} == "15"
 
