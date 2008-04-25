@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/01/13 11:59:33 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2008/04/25 20:39:14 joerg Exp $
 #
 
 DISTNAME=	wxPython-src-2.6.3.3
@@ -17,8 +17,6 @@ USE_TOOLS+=	gmake pkg-config
 
 # previous name of the package
 CONFLICTS+=	${PYPKGPREFIX}-wxWindows-[0-9]*
-
-PYTHON_VERSIONS_ACCEPTED=	24 23
 
 WXARG=	WXPORT=gtk2 \
 	WX_CONFIG=${BUILDLINK_PREFIX.wxGTK}/bin/wx-config \

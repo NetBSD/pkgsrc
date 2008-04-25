@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/06/11 17:38:35 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/25 20:39:06 joerg Exp $
 #
 
 DISTNAME=	PythonDaap-0.7
@@ -9,8 +9,6 @@ MASTER_SITES=	http://jerakeen.org/files/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://jerakeen.org/PythonDaap/
 COMMENT=	Python binding for DAAP
-
-PYTHON_VERSIONS_ACCEPTED=	24 23
 
 PYSETUP=		setup.py
 PLIST_SUBST+=		PYSITELIB=${PYSITELIB:Q}
