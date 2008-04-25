@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/04/07 17:08:53 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/04/25 22:35:38 wiz Exp $
 bin/inkscape
 bin/inkview
 man/fr/man1/inkscape.1
@@ -543,6 +543,8 @@ share/pixmaps/inkscape.png
 @dirrm share/inkscape/icons
 @dirrm share/inkscape/gradients
 @dirrm share/inkscape/fonts
+@dirrm share/inkscape/extensions/xaml2svg
+@dirrm share/inkscape/extensions/Barcode
 @dirrm share/inkscape/extensions
 @dirrm share/inkscape/examples
 @dirrm share/inkscape/clipart
