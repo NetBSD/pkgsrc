@@ -1,4 +1,4 @@
-/*	$NetBSD: ftp.c,v 1.21 2008/04/24 10:21:33 joerg Exp $	*/
+/*	$NetBSD: ftp.c,v 1.22 2008/04/25 16:25:25 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -1126,7 +1126,7 @@ ftp_request(struct url *url, const char *op, const char *op_arg,
 	if (conn == NULL)
 		return (NULL);
 
-	if ((path = fetch_unquote_doc(url)) == NULL) {
+	if ((path = fetchUnquotePath(url)) == NULL) {
 		fetch_syserr();
 		return NULL;
 	}
