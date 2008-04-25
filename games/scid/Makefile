@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/02/02 18:46:26 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2008/04/25 13:14:52 joerg Exp $
 #
 
 DISTNAME=		scid-3.6.1
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scid/}
 MAINTAINER=		luapzz@gmail.com
 HOMEPAGE=		http://scid.sourceforge.net/
 COMMENT=		Shane's Chess Information Database
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 HAS_CONFIGURE=		yes
