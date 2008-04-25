@@ -478,7 +478,8 @@ file_to_archive(struct cpio *cpio, const char *srcpath)
 static int
 entry_to_archive(struct cpio *cpio, struct archive_entry *entry)
 {
-	const char *destpath, *srcpath;
+	const char *destpath;
+	char *srcpath;
 	int fd = -1;
 	ssize_t bytes_read;
 	size_t len;
@@ -488,7 +489,12 @@ entry_to_archive(struct cpio *cpio, struct archive_entry *entry)
 	/*
 	 * Generate a target path for this entry.
 	 */
-	destpath = srcpath = archive_entry_pathname(entry);
+	p = archive_entry_pathname(entry);
+	srcpath = malloc(strlen(p) + 1);
+	if (srcpath == NULL)
+		cpio_errc(1, ENOMEM, "Can't allocate path buffer");
+	strcpy(srcpath, p);
+	destpath = srcpath;
 	if (cpio->destdir) {
 		len = strlen(cpio->destdir) + strlen(srcpath) + 8;
 		if (len >= cpio->pass_destpath_alloc) {
@@ -511,8 +517,10 @@ entry_to_archive(struct cpio *cpio, struct archive_entry *entry)
 	}
 	if (cpio->option_rename)
 		destpath = cpio_rename(destpath);
-	if (destpath == NULL)
+	if (destpath == NULL) {
+		free(srcpath);
 		return (0);
+	}
 	archive_entry_copy_pathname(entry, destpath);
 
 	/* Print out the destination name to the user. */
@@ -526,12 +534,12 @@ entry_to_archive(struct cpio *cpio, struct archive_entry *entry)
 		/* Note: link(2) doesn't create parent directories. */
 		archive_entry_set_hardlink(entry, srcpath);
 		r = archive_write_header(cpio->archive, entry);
-		if (r == ARCHIVE_OK)
-			return (0);
-		cpio_warnc(archive_errno(cpio->archive),
-		    archive_error_string(cpio->archive));
+		if (r != ARCHIVE_OK)
+			cpio_warnc(archive_errno(cpio->archive),
+			    archive_error_string(cpio->archive));
 		if (r == ARCHIVE_FATAL)
 			exit(1);
+		free(srcpath);
 		return (0);
 	}
 
@@ -563,8 +571,7 @@ entry_to_archive(struct cpio *cpio, struct archive_entry *entry)
 	if (r == ARCHIVE_FATAL)
 		exit(1);
 
-	if (r >= ARCHIVE_WARN && fd >= 0 && archive_entry_size(entry) > 0) {
-		fd = open(srcpath, O_RDONLY);
+	if (r >= ARCHIVE_WARN && fd >= 0) {
 		bytes_read = read(fd, cpio->buff, cpio->buff_size);
 		while (bytes_read > 0) {
 			r = archive_write_data(cpio->archive,
@@ -587,6 +594,7 @@ cleanup:
 		fprintf(stderr,"\n");
 	if (fd >= 0)
 		close(fd);
+	free(srcpath);
 	return (0);
 }
 

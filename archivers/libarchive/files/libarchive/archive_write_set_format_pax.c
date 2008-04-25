@@ -496,34 +496,48 @@ archive_write_pax_header(struct archive_write *a,
 	if (hdrcharset != NULL)
 		add_pax_attr(&(pax->pax_header), "hdrcharset", hdrcharset);
 
-	/*
-	 * Determining whether or not the name is too big is ugly
-	 * because of the rules for dividing names between 'name' and
-	 * 'prefix' fields.  Here, I pick out the longest possible
-	 * suffix, then test whether the remaining prefix is too long.
-	 */
-	if (strlen(path) <= 100)    /* Short enough for just 'name' field */
-		suffix_start = path;	/* Record a zero-length prefix */
-	else
-		/* Find the largest suffix that fits in 'name' field. */
-		suffix_start = strchr(path + strlen(path) - 100 - 1, '/');
 
 	/*
 	 * If name is too long, or has non-ASCII characters, add
 	 * 'path' to pax extended attrs.  (Note that an unconvertible
 	 * name must have non-ASCII characters.)
 	 */
-	if (suffix_start == NULL || suffix_start - path > 155
-	    || path_w == NULL || has_non_ASCII(path_w)) {
-		if (path_w == NULL || hdrcharset != NULL)
-			/* Can't do UTF-8, so store it raw. */
-			add_pax_attr(&(pax->pax_header), "path", path);
-		else
-			add_pax_attr_w(&(pax->pax_header), "path", path_w);
-		archive_entry_set_pathname(entry_main,
-		    build_ustar_entry_name(ustar_entry_name,
-			path, strlen(path), NULL));
+	if (path == NULL) {
+		/* We don't have a narrow version, so we have to store
+		 * the wide version. */
+		add_pax_attr_w(&(pax->pax_header), "path", path_w);
+		archive_entry_set_pathname(entry_main, "@WidePath");
 		need_extension = 1;
+	} else {
+		/* We have a narrow path; we first need to decide
+		 * if we can just put it in the ustar header. */
+		suffix_start = path;	/* Start with a zero-length prefix. */
+		if (strlen(path) > 100) {
+			/* Find largest suffix that will fit. */
+			suffix_start = strchr(path + strlen(path) - 100 - 1, '/');
+		}
+		/* We can put it in the ustar header if it's all ASCII
+		 * and it's either <= 100 characters or can be split at a
+		 * '/' into a prefix <= 155 chars and a suffix <= 100 chars.
+		 * (Note the strchr() above will return NULL exactly when
+		 * the path can't be split.)
+		 */
+		if (has_non_ASCII(path_w) || suffix_start == NULL
+		    || suffix_start - path > 155) {
+			/* Path is either too long or has non-ASCII chars. */
+			if (path_w == NULL || hdrcharset != NULL) {
+				/* Can't do UTF-8, so store it raw. */
+				add_pax_attr(&(pax->pax_header), "path", path);
+			} else {
+				/* Store UTF-8 */
+				add_pax_attr_w(&(pax->pax_header),
+				    "path", path_w);
+			}
+			archive_entry_set_pathname(entry_main,
+			    build_ustar_entry_name(ustar_entry_name,
+				path, strlen(path), NULL));
+			need_extension = 1;
+		}
 	}
 
 	if (linkpath != NULL) {
@@ -1215,6 +1229,8 @@ archive_write_pax_data(struct archive_write *a, const void *buff, size_t s)
 static int
 has_non_ASCII(const wchar_t *wp)
 {
+	if (wp == NULL)
+		return (1);
 	while (*wp != L'\0' && *wp < 128)
 		wp++;
 	return (*wp != L'\0');

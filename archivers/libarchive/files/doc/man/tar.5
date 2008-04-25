@@ -193,7 +193,7 @@ field with several new type values:
 .TP
 ``0''
 Regular file.
-NULL should be treated as a synonym, for compatibility purposes.
+NUL should be treated as a synonym, for compatibility purposes.
 .TP
 ``1''
 Hard link.
@@ -238,7 +238,7 @@ by readers.
 \fImagic\fP
 Contains the magic value
 ``ustar''
-followed by a NULL byte to indicate that this is a POSIX standard archive.
+followed by a NUL byte to indicate that this is a POSIX standard archive.
 Full compliance requires the uname and gname fields be properly set.
 .TP
 \fIversion\fP
@@ -267,7 +267,7 @@ the prefix value and a
 \fI/\fP
 character to the regular name field to obtain the full pathname.
 Note that all unused bytes must be set to
-.BR NULL.
+.BR NUL.
 Field termination is specified slightly differently by POSIX
 than by previous implementations.
 The
@@ -276,14 +276,14 @@ The
 and
 \fIgname\fP
 fields must have a trailing
-.BR NULL.
+.BR NUL.
 The
 \fIpathname\fP,
 \fIlinkname\fP,
 and
 \fIprefix\fP
 fields must have a trailing
-.BR NULL
+.BR NUL
 unless they fill the entire field.
 (In particular, it is possible to store a 256-character pathname if it
 happens to have a
@@ -291,7 +291,7 @@ happens to have a
 as the 156th character.)
 POSIX requires numeric fields to be zero-padded in the front, and allows
 them to be terminated with either space or
-.BR NULL
+.BR NUL
 characters.
 Currently, most tar implementations comply with the ustar
 format, occasionally extending it by adding new fields to the

@@ -1,4 +1,6 @@
 
+Mar 30, 2008: libarchive 2.5.1b released
+
 Mar 15, 2008: libarchive 2.5.0b released
 Mar 15, 2008: bsdcpio now seems to correctly write hardlinks into newc,
 	ustar, and old cpio archives.  Just a little more testing before
