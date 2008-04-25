@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2008/04/24 21:32:01 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2008/04/25 05:26:29 wiz Exp $
 #
 
 DISTNAME=	gtk-doc-1.10
@@ -29,6 +29,7 @@ SGML_CATALOGS= ${PREFIX}/share/sgml/gtk-doc/gtk-doc.cat
 .include "../../textproc/jade/buildlink3.mk"
 .endif
 
+.include "../../lang/python/application.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../textproc/scrollkeeper/omf.mk"
 .include "../../textproc/xmlcatmgr/catalogs.mk"
