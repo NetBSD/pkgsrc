@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.707 2008/04/21 21:42:37 reed Exp $
+# $NetBSD: Makefile,v 1.708 2008/04/25 16:18:20 kefren Exp $
 #
 
 COMMENT=	Networking tools
@@ -71,6 +71,7 @@ SUBDIR+=	ctorrent
 SUBDIR+=	dante
 SUBDIR+=	darkstat
 SUBDIR+=	dc_gui2
+SUBDIR+=	dcsharp
 SUBDIR+=	dctc
 SUBDIR+=	ddclient
 SUBDIR+=	delegate
