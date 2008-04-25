@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/04/25 15:49:30 kefren Exp $
+
+SHA1 (ndesk-dbus-glib-0.4.1.tar.gz) = 4acb1a066e245172f15f0aeba1eb608c9b65918d
+RMD160 (ndesk-dbus-glib-0.4.1.tar.gz) = 99cc3239560fc65c181039a56cd24b1445fea765
+Size (ndesk-dbus-glib-0.4.1.tar.gz) = 85471 bytes

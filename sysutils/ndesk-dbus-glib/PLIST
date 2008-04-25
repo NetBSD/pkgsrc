@@ -1,0 +1,8 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/25 15:49:30 kefren Exp $
+lib/mono/ndesk-dbus-glib-1.0/NDesk.DBus.GLib.dll
+lib/mono/gac/NDesk.DBus.GLib/1.0.0.0__f6716e4f9b2ed099/NDesk.DBus.GLib.dll
+lib/mono/gac/NDesk.DBus.GLib/1.0.0.0__f6716e4f9b2ed099/NDesk.DBus.GLib.dll.config
+lib/mono/gac/NDesk.DBus.GLib/1.0.0.0__f6716e4f9b2ed099/NDesk.DBus.GLib.dll.mdb
+lib/pkgconfig/ndesk-dbus-glib-1.0.pc
+@dirrm lib/mono/gac/NDesk.DBus.GLib/1.0.0.0__f6716e4f9b2ed099
+@dirrm lib/mono/gac/NDesk.DBus.GLib
