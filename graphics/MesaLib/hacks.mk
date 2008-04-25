@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.5 2008/04/24 07:40:24 bjs Exp $
+# $NetBSD: hacks.mk,v 1.6 2008/04/25 20:11:11 bjs Exp $
 
 .if !defined(MESALIBS_HACKS_MK)
 MESALIBS_HACKS_MK=	# defined
@@ -33,6 +33,22 @@ CFLAGS+=		-ffast-math
 PKG_HACKS+=		gcc-hidden-visibility
 CFLAGS+=		-fvisibility=hidden
 .    endif
+.  endif
+###
+### XXX this shoddy hack is here to fix the unresolved symbol error that
+###	results due to '.extern pthread_getspecific' in the x86 and x86-64
+###	assembler dispatch routines.  This should be removed ASAP!
+###
+.  include "../../mk/bsd.fast.prefs.mk"
+
+.  if ${OPSYS} == "NetBSD" && !empty(MACHINE_ARCH:M*86*) && \
+	empty(PTHREAD_STUBLIB:U:M*pthstub*)
+SUBST_CLASSES+=	asm-hack
+SUBST_FILES.asm-hack=	src/mesa/x86/glapi_x86.S
+SUBST_FILES.asm-jack+=	src/mesa/x86/glapi_x86-64.S
+SUBST_MESSAGE.asm-hack+=Teaching x86 assembler code about NetBSD thread stubs
+SUBST_SED.asm-hack=	-e 's,pthread_getspecific,__libc_thr_getspecific,g'
+SUBST_STAGE.asm-hack=	post-patch
 .  endif
 
 .endif
