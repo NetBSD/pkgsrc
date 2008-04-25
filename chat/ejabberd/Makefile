@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/03/25 11:49:55 martti Exp $
+# $NetBSD: Makefile,v 1.2.2.1 2008/04/25 01:09:18 rtr Exp $
 
 DISTNAME=	ejabberd-2.0.0
-#PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	http://www.process-one.net/downloads/ejabberd/2.0.0/
 
@@ -80,17 +80,14 @@ INSTALLATION_DIRS+=	${PREFIX}/share/doc/${DISTNAME}/api
 INSTALLATION_DIRS+=	${EGDIR}
 
 CONF_FILES=		${EGDIR}/ejabberd.cfg ${PKG_SYSCONFDIR}/ejabberd.cfg
+CONF_FILES+=		${EGDIR}/ejabberdctl.cfg ${PKG_SYSCONFDIR}/ejabberdctl.cfg
 CONF_FILES+=		${EGDIR}/inetrc ${PKG_SYSCONFDIR}/inetrc
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/src/ejabberd.cfg.example ${EGDIR}/ejabberd.cfg
-	${INSTALL_DATA} ${WRKSRC}/src/inetrc ${EGDIR}/inetrc
 	${INSTALL_DATA} ${WRKSRC}/doc/*.* ${PREFIX}/share/doc/${DISTNAME}
 	${INSTALL_DATA} ${WRKSRC}/doc/Makefile ${PREFIX}/share/doc/${DISTNAME}
 	${INSTALL_DATA} ${WRKSRC}/doc/COPYING ${PREFIX}/share/doc/${DISTNAME}
 	${INSTALL_DATA} ${WRKSRC}/doc/api/* ${PREFIX}/share/doc/${DISTNAME}/api
-
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Localizing paths
