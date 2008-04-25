@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2008/04/21 01:09:51 bjs Exp $
+# $NetBSD: Makefile.common,v 1.10 2008/04/25 16:40:47 bjs Exp $
 #
 # used by devel/scmgit-base/Makefile
 # used by devel/scmgit-docs/Makefile
@@ -12,7 +12,7 @@ HOMEPAGE?=	http://git.or.cz/
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GIT_VERSION=		1.5.5
+GIT_VERSION=		1.5.5.1
 
 .include "../../mk/bsd.fast.prefs.mk"
 
