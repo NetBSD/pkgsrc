@@ -1,0 +1,30 @@
+$NetBSD: patch-am,v 1.1.1.1 2008/04/25 16:10:27 kefren Exp $
+--- gtk/src/View/UploadView.cs.old	2008-04-24 12:15:50.000000000 +0300
++++ gtk/src/View/UploadView.cs	2007-10-26 12:11:04.000000000 +0300
+@@ -39,7 +39,7 @@
+ 				"text", (int)UploadStore.Column.Started);
+ 			column = GetColumn(0);
+ 			column.SortColumnId = (int)UploadStore.Column.Started;
+-			column.SetCellDataFunc(textRenderer, SetTextStyle);
++			column.SetCellDataFunc(textRenderer, (Gtk.TreeCellDataFunc)SetTextStyle);
+ 
+ 			// Directory
+ 			textRenderer = new CellRendererText();
+@@ -50,7 +50,7 @@
+ 			column.Expand = true;
+ 			column.Resizable = true;
+ 			column.SortColumnId = (int)TransferStoreColumn.Directory;
+-			column.SetCellDataFunc(textRenderer, SetTextStyle);
++			column.SetCellDataFunc(textRenderer, (Gtk.TreeCellDataFunc)SetTextStyle);
+ 
+ 			// User
+ 			textRenderer = new CellRendererText();
+@@ -59,7 +59,7 @@
+ 			column = GetColumn(3);
+ 			column.Resizable = true;
+ 			column.SortColumnId = (int)UploadStore.Column.User;
+-			column.SetCellDataFunc(textRenderer, SetTextStyle);
++			column.SetCellDataFunc(textRenderer, (Gtk.TreeCellDataFunc)SetTextStyle);
+ 		}
+ 
+ 		#region Methods

@@ -1,0 +1,13 @@
+DC# is a file sharing client for the Direct Connect protocol, which allows
+you to connect to hubs to chat and share files. It supports the basic
+features expected from a Direct Connect client:
+
+ * Hub chat and private messages
+ * File search and transfer
+
+Additional features are:
+
+ * Segmented downloading
+ * The integrity of downloaded files are verified
+ * Downloads can be started and stopped/paused
+ * Notification when a download is complete

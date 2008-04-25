@@ -1,0 +1,12 @@
+$NetBSD: patch-ai,v 1.1.1.1 2008/04/25 16:10:27 kefren Exp $
+--- gtk/src/View/DownloadView.cs.old	2008-04-24 12:22:29.000000000 +0300
++++ gtk/src/View/DownloadView.cs	2007-10-26 12:11:04.000000000 +0300
+@@ -76,7 +76,7 @@
+ 			column = GetColumn("Progress");
+ 			progressRenderer = (CellRendererProgress)column.CellRenderers[0];
+ 
+-			column.SetCellDataFunc(progressRenderer, SetProgressVisible);
++			column.SetCellDataFunc(progressRenderer, (Gtk.TreeCellDataFunc)SetProgressVisible);
+ 		}
+ 
+ 		#region Methods
