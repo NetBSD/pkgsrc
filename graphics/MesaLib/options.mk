@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2008/04/24 07:40:24 bjs Exp $
+# $NetBSD: options.mk,v 1.2 2008/04/25 20:33:08 bjs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=	mesa-execmem-mmap
@@ -47,6 +47,16 @@ PKG_SUGGESTED_OPTIONS=	mesa-execmem-mmap
      ${MACHINE_ARCH} == "sparc64") && \
     (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD")
 PKG_SUPPORTED_OPTIONS+=		dri
+.endif
+###
+### XXX OpenGL still works fine with the software fallback.  As of now,
+###	I think this is a good way to see which bugs surface before the
+###	next release branch.  Upgrading the X server to the 1.4 branch
+###	is advised given that it's glx/glcore modules are built from
+###	Mesa 6.5.3 (a development release). 
+###
+.if !empty(MACHINE_PLATFORM:MNetBSD-[4-9]*-[ix]86*)
+PKG_SUGGESTED_OPTIONS+=		dri
 .endif
 
 .include "../../mk/bsd.options.mk"
