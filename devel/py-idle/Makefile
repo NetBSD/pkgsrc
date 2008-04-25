@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/03/03 17:45:36 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2008/04/25 17:53:48 joerg Exp $
 #
 
 PKGNAME=	${PYPKGPREFIX}-idle-0
@@ -27,9 +27,9 @@ do-patch:
 # We just install a wrapper script. Also, threads are required now.
 # NOTE: if you add a new version of Python here, add to the following test
 #
-PYTHON_VERSIONS_ACCEPTED=	24 23 22 21 20
+PYTHON_VERSIONS_ACCEPTED=	25 24 23 22 21 20
 .include "../../lang/python/extension.mk"
-.if (${PYPKGPREFIX} != "py23") && (${PYPKGPREFIX} != "py24")
+.if (${PYPKGPREFIX} != "py23") && (${PYPKGPREFIX} != "py24") && (${PYPKGPREFIX} != "py25")
 
 EXTRACT_ELEMENTS=	${PYSUBDIR}/Tools/idle/*
 PYTHON_PATCH_SCRIPTS=	Tools/idle/idle.py
