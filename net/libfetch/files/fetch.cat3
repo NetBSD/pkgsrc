@@ -7,8 +7,8 @@ NNAAMMEE
      ffeettcchhPPuuttFFiillee, ffeettcchhSSttaattFFiillee, ffeettcchhLLiissttFFiillee, ffeettcchhXXGGeettHHTTTTPP, ffeettcchhGGeettHHTTTTPP,
      ffeettcchhPPuuttHHTTTTPP, ffeettcchhSSttaattHHTTTTPP, ffeettcchhLLiissttHHTTTTPP, ffeettcchhXXGGeettFFTTPP, ffeettcchhGGeettFFTTPP,
      ffeettcchhPPuuttFFTTPP, ffeettcchhSSttaattFFTTPP, ffeettcchhLLiissttFFTTPP ffeettcchhIInniittUURRLLLLiisstt,
-     ffeettcchhFFrreeeeUURRLLLLiisstt, ffeettcchhUUnnqquuootteePPaatthh, ffeettcchhUUnnqquuootteeFFiilleennaammee, ffeettcchh -- file
-     transfer functions
+     ffeettcchhFFrreeeeUURRLLLLiisstt, ffeettcchhUUnnqquuootteePPaatthh, ffeettcchhUUnnqquuootteeFFiilleennaammee,
+     ffeettcchhSSttrriinnggiiffyyUURRLL, ffeettcchh -- file transfer functions
 
 LLIIBBRRAARRYY
      library ``libfetch''
@@ -117,6 +117,9 @@ SSYYNNOOPPSSIISS
      _c_h_a_r _*
      ffeettcchhUUnnqquuootteeFFiilleennaammee(_s_t_r_u_c_t _u_r_l _*_u);
 
+     _c_h_a_r _*
+     ffeettcchhSSttrriinnggiiffyyUURRLL(_c_o_n_s_t _s_t_r_u_c_t _u_r_l _*_u);
+
 DDEESSCCRRIIPPTTIIOONN
      These functions implement a high-level library for retrieving and upload-
      ing files using Uniform Resource Locators (URLs).
@@ -201,12 +204,13 @@ DDEESSCCRRIIPPTTIIOONN
      The list should be initialised by calling ffeettcchhIInniittUURRLLLLiisstt() and the
      entries be freed by calling ffeettcchhFFrreeeeUURRLLLLiisstt().
 
-     ffeettcchhUUnnqquuootteePPaatthh() returns the path name part of the URL with any quoting
-     undone.  Query arguments and fragment identifiers are not included.
+     ffeettcchhSSttrriinnggiiffyyUURRLL() returns the URL as string.  ffeettcchhUUnnqquuootteePPaatthh()
+     returns the path name part of the URL with any quoting undone.  Query
+     arguments and fragment identifiers are not included.
      ffeettcchhUUnnqquuootteeFFiilleennaammee() returns the last component of the path name as
-     returned by ffeettcchhUUnnqquuootteePPaatthh().  ffeettcchhUUnnqquuootteePPaatthh() and
-     ffeettcchhUUnnqquuootteeFFiilleennaammee() return a string that should be deallocated with
-     ffrreeee() after use.
+     returned by ffeettcchhUUnnqquuootteePPaatthh().  ffeettcchhSSttrriinnggiiffyyUURRLL(), ffeettcchhUUnnqquuootteePPaatthh()
+     and ffeettcchhUUnnqquuootteeFFiilleennaammee() return a string that should be deallocated
+     with ffrreeee() after use.
 
      ffeettcchhXXGGeett(), ffeettcchhGGeett(), ffeettcchhPPuutt() and ffeettcchhSSttaatt() are similar to
      ffeettcchhXXGGeettUURRLL(), ffeettcchhGGeettUURRLL(), ffeettcchhPPuuttUURRLL() and ffeettcchhSSttaattUURRLL(), except
