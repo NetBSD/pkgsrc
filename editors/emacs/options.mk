@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2007/11/01 06:44:08 uebayasi Exp $
+# $NetBSD: options.mk,v 1.7 2008/04/25 16:35:32 jlam Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.emacs
 PKG_SUPPORTED_OPTIONS=		x11
@@ -11,17 +11,19 @@ PKG_SUGGESTED_OPTIONS=		x11
 ###
 ### Any of the "toolkit" options implies "x11".
 ###
-.if !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mmotif) || !empty(PKG_OPTIONS:Mxaw)
+.if !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mmotif) || \
+    !empty(PKG_OPTIONS:Mxaw)
 .  if empty(PKG_OPTIONS:Mx11)
 PKG_OPTIONS+=		x11
 .  endif
 .endif
 
 ###
-### Default to using the Xaw X11 toolkit if none is specified.
+### Default to using the Athena X11 toolkit if none is specified.
 ###
 .if !empty(PKG_OPTIONS:Mx11)
-.  if empty(PKG_OPTIONS:Mgtk) && empty(PKG_OPTIONS:Mmotif) && empty(PKG_OPTIONS:Mxaw)
+.  if empty(PKG_OPTIONS:Mgtk) && empty(PKG_OPTIONS:Mmotif) && \
+      empty(PKG_OPTIONS:Mxaw)
 PKG_OPTIONS+=		xaw
 .  endif
 .endif
@@ -53,13 +55,11 @@ CONFIGURE_ARGS+=	--without-tiff
 CONFIGURE_ARGS+=	--without-x
 CONFIGURE_ARGS+=	--without-xpm
 .  if exists(/System/Library/Frameworks/Carbon.framework)
-APPLICATIONS_DIR=	Applications
 CONFIGURE_ARGS+=	--with-carbon
-CONFIGURE_ARGS+=	--enable-carbon-app=${PREFIX}/${APPLICATIONS_DIR}
+CONFIGURE_ARGS+=	--enable-carbon-app=${PREFIX}/Applications
 PLIST_SRC+=		PLIST.carbon
-PLIST_SUBST+=		APPLIDATIONS_DIR=${APPLICATIONS_DIR:Q}
-INSTALLATION_DIRS+=	${APPLICATIONS_DIR}
-CHECK_WRKREF_SKIP+=	${APPLICATIONS_DIR}/Emacs.app/Contents/MacOS/Emacs
+INSTALLATION_DIRS+=	Applications
+CHECK_WRKREF_SKIP+=	Applications/Emacs.app/Contents/MacOS/Emacs
 .  endif
 .endif
 
