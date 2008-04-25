@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2007/11/25 23:23:25 wiz Exp $
+$NetBSD: distinfo,v 1.5 2008/04/25 07:35:48 wiz Exp $
 
-SHA1 (dwm-4.7.tar.gz) = db70a42edb383e6539cce4f9a8ee1fcbe59ab73d
-RMD160 (dwm-4.7.tar.gz) = 2a464cebbca431c0bb199fc0ae9fdac48105c226
-Size (dwm-4.7.tar.gz) = 17693 bytes
-SHA1 (patch-aa) = 86f16ed2861759da3d1aed694efc1f261fe31625
+SHA1 (dwm-4.9.tar.gz) = c8ecf932084f626a22efc020764a62aaebd48db5
+RMD160 (dwm-4.9.tar.gz) = 8cd82f10f0ac5852e2c3ab51774df710a29bd8b2
+Size (dwm-4.9.tar.gz) = 18132 bytes
+SHA1 (patch-aa) = fa44f979fbd99bf236a53c76d77a03c609bae006
