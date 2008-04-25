@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.888 2008/04/25 07:58:22 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.889 2008/04/25 08:06:42 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1611,3 +1611,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated wm/dwm to 4.9 [wiz 2008-04-25]
 	Added archivers/fcrackzip version 0.3 [kefren 2008-04-25]
 	Updated x11/fast-user-switch-applet to 2.22.0 [wiz 2008-04-25]
+	Updated math/gcalctool to 5.23.1 [wiz 2008-04-25]
