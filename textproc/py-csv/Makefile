@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2005/04/11 21:47:41 tv Exp $
+# $NetBSD: Makefile,v 1.8 2008/04/25 20:39:12 joerg Exp $
 #
 
 DISTNAME=	csv-1.0
@@ -14,7 +14,7 @@ COMMENT=	CSV reading module for Python
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
 
-PYTHON_VERSIONS_ACCEPTED=	22 21 20
+PYTHON_VERSIONS_ACCEPTED=	21
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/02/22 19:01:17 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2008/04/25 20:39:08 joerg Exp $
 #
 
 DISTNAME=	eric-3.8.1
@@ -16,7 +16,6 @@ NO_BUILD=		yes
 USE_LANGUAGES=
 
 PY_PATCHPLIST=		yes
-PYTHON_VERSIONS_ACCEPTED=	24 23 22
 
 CONFIGURE_ARGS+=	-b ${PREFIX:Q}/bin
 CONFIGURE_ARGS+=	-d ${PREFIX:Q}/${PYSITELIB:Q}

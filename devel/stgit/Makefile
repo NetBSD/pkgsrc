@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/04/10 12:12:24 bjs Exp $
+# $NetBSD: Makefile,v 1.9 2008/04/25 20:39:09 joerg Exp $
 
 DISTNAME=	stgit-0.14.2
 CATEGORIES=	devel
@@ -20,7 +20,6 @@ USE_TOOLS+= 	bash:run perl gmake
 REPLACE_PERL=	Documentation/build-docdep.perl
 REPLACE_BASH= 	contrib/stg-*
 
-PYTHON_VERSIONS_ACCEPTED?=24 23
 PYTHON_PATCH_SCRIPTS=	*.py stgit/*.py stg
 PYDISTUTILSPKG=		yes
 PYSETUPINSTALLARGS=	--prefix=${PREFIX}

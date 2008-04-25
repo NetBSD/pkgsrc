@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/08/09 13:22:14 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/04/25 20:39:09 joerg Exp $
 #
 
 EGG_VERSION=		0.6c6
@@ -14,7 +14,7 @@ COMMENT=		New Python packaging system
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-PYTHON_VERSIONS_ACCEPTED= 24
+PYTHON_VERSIONS_ACCEPTED= 25 24
 USE_TOOLS+=		unzip
 
 PY_PATCHPLIST=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2006/05/28 22:59:59 joerg Exp $
+# $NetBSD: Makefile.common,v 1.8 2008/04/25 20:39:14 joerg Exp $
 #
 
 # XXX: when updating version, be sure to update distinfo for both
@@ -28,7 +28,6 @@ CONFIGURE_ARGS+=	-b ${PREFIX}/bin
 CONFIGURE_ARGS+=	-d ${PREFIX}/${PYSITELIB}
 CONFIGURE_ARGS+=	-v ${PREFIX}/share/sip${PYVERSSUFFIX}
 
-PYTHON_VERSIONS_ACCEPTED=	24 23
 PY_PATCHPLIST=	yes
 PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX:Q}
 
