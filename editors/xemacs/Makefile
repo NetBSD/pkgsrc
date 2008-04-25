@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.86 2008/04/24 15:37:00 jlam Exp $
+# $NetBSD: Makefile,v 1.87 2008/04/25 17:58:24 tron Exp $
 
 PKGNAME?=	${DISTNAME}
 COMMENT?=	XEmacs text editor version 21
@@ -91,11 +91,11 @@ pre-build:
 
 .if defined(MANZ)
 PLIST_SUBST+=		ELSUFX='.gz'
-.else
-PLIST_SUBST+=		ELSUFX=''
 
 post-install:
 	find ${DESTDIR}${LIBDIR} -name "*.el" -type f -print | xargs ${GZIP_CMD}
+.else
+PLIST_SUBST+=		ELSUFX=''
 .endif
 
 .include "../../databases/gdbm/buildlink3.mk"
