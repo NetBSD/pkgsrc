@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/04/22 23:05:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/04/26 01:23:58 wiz Exp $
 bin/clive
 ${PYSITELIB}/clive/__init__.py
 ${PYSITELIB}/clive/__init__.pyc
@@ -15,27 +15,12 @@ ${PYSITELIB}/clive/console.pyo
 ${PYSITELIB}/clive/error.py
 ${PYSITELIB}/clive/error.pyc
 ${PYSITELIB}/clive/error.pyo
-${PYSITELIB}/clive/feedparser/__init__.py
-${PYSITELIB}/clive/feedparser/__init__.pyc
-${PYSITELIB}/clive/feedparser/__init__.pyo
-${PYSITELIB}/clive/feedparser/feedparser.py
-${PYSITELIB}/clive/feedparser/feedparser.pyc
-${PYSITELIB}/clive/feedparser/feedparser.pyo
 ${PYSITELIB}/clive/login.py
 ${PYSITELIB}/clive/login.pyc
 ${PYSITELIB}/clive/login.pyo
 ${PYSITELIB}/clive/main.py
 ${PYSITELIB}/clive/main.pyc
 ${PYSITELIB}/clive/main.pyo
-${PYSITELIB}/clive/newt/__init__.py
-${PYSITELIB}/clive/newt/__init__.pyc
-${PYSITELIB}/clive/newt/__init__.pyo
-${PYSITELIB}/clive/newt/_snackmodule.a
-${PYSITELIB}/clive/newt/_snackmodule.la
-${PYSITELIB}/clive/newt/_snackmodule.so
-${PYSITELIB}/clive/newt/snack.py
-${PYSITELIB}/clive/newt/snack.pyc
-${PYSITELIB}/clive/newt/snack.pyo
 ${PYSITELIB}/clive/nomad.py
 ${PYSITELIB}/clive/nomad.pyc
 ${PYSITELIB}/clive/nomad.pyo
@@ -60,23 +45,5 @@ ${PYSITELIB}/clive/rss.pyo
 ${PYSITELIB}/clive/update.py
 ${PYSITELIB}/clive/update.pyc
 ${PYSITELIB}/clive/update.pyo
-${PYSITELIB}/clive/urlgrabber/__init__.py
-${PYSITELIB}/clive/urlgrabber/__init__.pyc
-${PYSITELIB}/clive/urlgrabber/__init__.pyo
-${PYSITELIB}/clive/urlgrabber/byterange.py
-${PYSITELIB}/clive/urlgrabber/byterange.pyc
-${PYSITELIB}/clive/urlgrabber/byterange.pyo
-${PYSITELIB}/clive/urlgrabber/grabber.py
-${PYSITELIB}/clive/urlgrabber/grabber.pyc
-${PYSITELIB}/clive/urlgrabber/grabber.pyo
-${PYSITELIB}/clive/urlgrabber/keepalive.py
-${PYSITELIB}/clive/urlgrabber/keepalive.pyc
-${PYSITELIB}/clive/urlgrabber/keepalive.pyo
-${PYSITELIB}/clive/urlgrabber/sslfactory.py
-${PYSITELIB}/clive/urlgrabber/sslfactory.pyc
-${PYSITELIB}/clive/urlgrabber/sslfactory.pyo
 man/man1/clive.1
-@dirrm ${PYSITELIB}/clive/urlgrabber
-@dirrm ${PYSITELIB}/clive/newt
-@dirrm ${PYSITELIB}/clive/feedparser
 @dirrm ${PYSITELIB}/clive
