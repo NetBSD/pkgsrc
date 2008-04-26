@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.96 2008/03/15 22:16:41 markd Exp $
+# $NetBSD: Makefile,v 1.97 2008/04/26 02:39:27 markd Exp $
 
-DISTNAME=		R-2.6.2
+DISTNAME=		R-2.7.0
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/R-2/}
 
@@ -47,6 +47,9 @@ CONFIGURE_ARGS+=	--without-libmoto
 CONFIGURE_ENV+=		ac_cv_lib_blas_dgemm=yes
 CONFIGURE_ENV+=		ac_cv_lib_blas_dgemm_=yes
 
+# Broken test for bzlib >= 1.0.5 in R 2.7.0
+CONFIGURE_ENV+=		r_cv_have_bzlib=yes
+
 CONFIGURE_ENV+=		GETWD=${TOOLS_PWD_CMD:Q}
 CONFIGURE_ENV+=		lt_cv_path_LD=${LD:Q}
 CONFIGURE_ENV+=		lt_cv_path_SED=${TOOLS_SED:Q}
@@ -76,7 +79,8 @@ CONFIGURE_ENV+=		R_PAPERSIZE=${R_PAPERSIZE:Q}
 INSTALL_DATA=		${INSTALL} ${COPY} -m ${SHAREMODE}
 INSTALL_SCRIPT=		${INSTALL} ${COPY} -m ${BINMODE}
 
-BUILDLINK_API_DEPENDS.zlib+= zlib>=1.2.1
+BUILDLINK_API_DEPENDS.zlib+= zlib>=1.2.3
+BUILDLINK_API_DEPENDS.bzip2+= bzip2>=1.0.5
 
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.[0-6]*)
 CONFIGURE_ARGS+=	--enable-mbcs=no
@@ -90,6 +94,7 @@ CONFIGURE_ARGS+=	--enable-mbcs=no
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
 .include "../../math/blas/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
@@ -99,4 +104,5 @@ DEINSTALL_TEMPLATES+=	../../math/R/files/pkg-index.tmpl
 PRINT_PLIST_AWK+=	/^lib\/R\/doc\/html\/packages.html$$/ { next; }
 PRINT_PLIST_AWK+=	/^lib\/R\/doc\/html\/search\/index.txt$$/ { next; }
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

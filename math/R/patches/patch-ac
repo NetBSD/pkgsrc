@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.22 2008/03/15 22:16:41 markd Exp $
+$NetBSD: patch-ac,v 1.23 2008/04/26 02:39:27 markd Exp $
 
---- configure.orig	2008-01-30 23:43:09.000000000 +1300
+--- configure.orig	2008-04-15 14:06:13.000000000 +1200
 +++ configure
-@@ -2672,7 +2672,7 @@ fi
+@@ -2712,7 +2712,7 @@ fi
  
  
  if test "${want_R_shlib}" = yes; then
@@ -11,97 +11,7 @@ $NetBSD: patch-ac,v 1.22 2008/03/15 22:16:41 markd Exp $
  else
    LIBR=
  fi
-@@ -8445,7 +8445,7 @@ darwin* | rhapsody*)
-   lt_cv_deplibs_check_method=pass_all
-   ;;
- 
--freebsd* | kfreebsd*-gnu)
-+freebsd* | kfreebsd*-gnu | dragonfly*)
-   if echo __ELF__ | $CC -E - | grep __ELF__ > /dev/null; then
-     case $host_cpu in
-     i*86 )
-@@ -11117,7 +11117,7 @@ if test -z "$aix_libpath"; then aix_libp
-       ;;
- 
-     # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
--    freebsd* | kfreebsd*-gnu)
-+    freebsd* | kfreebsd*-gnu | dragonfly*)
-       archive_cmds='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
-       hardcode_libdir_flag_spec='-R$libdir'
-       hardcode_direct=yes
-@@ -11695,7 +11695,7 @@ kfreebsd*-gnu)
-   dynamic_linker='GNU ld.so'
-   ;;
- 
--freebsd*)
-+freebsd* | dragonfly*)
-   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
-   version_type=freebsd-$objformat
-   case $version_type in
-@@ -14183,7 +14183,7 @@ if test -z "$aix_libpath"; then aix_libp
-   freebsd-elf*)
-     archive_cmds_need_lc_CXX=no
-     ;;
--  freebsd* | kfreebsd*-gnu)
-+  freebsd* | kfreebsd*-gnu | dragonfly*)
-     # FreeBSD 3 and later use GNU C++ and GNU ld with standard ELF
-     # conventions
-     ld_shlibs_CXX=yes
-@@ -14894,7 +14894,7 @@ echo $ECHO_N "checking for $compiler opt
- 	    ;;
- 	esac
- 	;;
--      freebsd* | kfreebsd*-gnu)
-+      freebsd* | kfreebsd*-gnu | dragonfly*)
- 	# FreeBSD uses GNU C++
- 	;;
-       hpux9* | hpux10* | hpux11*)
-@@ -15505,7 +15505,7 @@ kfreebsd*-gnu)
-   dynamic_linker='GNU ld.so'
-   ;;
- 
--freebsd*)
-+freebsd* | dragonfly*)
-   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
-   version_type=freebsd-$objformat
-   case $version_type in
-@@ -18183,7 +18183,7 @@ if test -z "$aix_libpath"; then aix_libp
-       ;;
- 
-     # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
--    freebsd* | kfreebsd*-gnu)
-+    freebsd* | kfreebsd*-gnu | dragonfly*)
-       archive_cmds_F77='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
-       hardcode_libdir_flag_spec_F77='-R$libdir'
-       hardcode_direct_F77=yes
-@@ -18761,7 +18761,7 @@ kfreebsd*-gnu)
-   dynamic_linker='GNU ld.so'
-   ;;
- 
--freebsd*)
-+freebsd* | dragonfly*)
-   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
-   version_type=freebsd-$objformat
-   case $version_type in
-@@ -20561,7 +20561,7 @@ if test -z "$aix_libpath"; then aix_libp
-       ;;
- 
-     # FreeBSD 3 and greater uses gcc -shared to do shared libraries.
--    freebsd* | kfreebsd*-gnu)
-+    freebsd* | kfreebsd*-gnu | dragonfly*)
-       archive_cmds_GCJ='$CC -shared -o $lib $libobjs $deplibs $compiler_flags'
-       hardcode_libdir_flag_spec_GCJ='-R$libdir'
-       hardcode_direct_GCJ=yes
-@@ -21139,7 +21139,7 @@ kfreebsd*-gnu)
-   dynamic_linker='GNU ld.so'
-   ;;
- 
--freebsd*)
-+freebsd* | dragonfly*)
-   objformat=`test -x /usr/bin/objformat && /usr/bin/objformat || echo aout`
-   version_type=freebsd-$objformat
-   case $version_type in
-@@ -32411,6 +32411,7 @@ cat > conftest.c <<EOF
+@@ -28129,6 +28129,7 @@ cat > conftest.c <<EOF
  #else
  # define F77_SYMBOL(x)   x
  #endif
@@ -109,7 +19,7 @@ $NetBSD: patch-ac,v 1.22 2008/03/15 22:16:41 markd Exp $
  int main () {
    exit(0);
  }
-@@ -32488,6 +32489,9 @@ cat > conftest.c <<EOF
+@@ -28206,6 +28207,9 @@ cat > conftest.c <<EOF
  
  extern void F77_SYMBOL(cftest)(int *a, int *b, double *x, double *y);
  
@@ -119,7 +29,7 @@ $NetBSD: patch-ac,v 1.22 2008/03/15 22:16:41 markd Exp $
  int main () {
    int a[3] = {17, 237, 2000000000}, b[2], res = 0;
    double x[3] = {3.14159265, 123.456789, 2.3e34}, z[3];
-@@ -32585,6 +32589,9 @@ typedef struct {
+@@ -28303,6 +28307,9 @@ typedef struct {
  
  extern void F77_SYMBOL(cftest)(Rcomplex *x);
  
@@ -129,7 +39,7 @@ $NetBSD: patch-ac,v 1.22 2008/03/15 22:16:41 markd Exp $
  int main () {
      Rcomplex z[3];
  
-@@ -33752,183 +33759,6 @@ echo "${ECHO_T}no" >&6; }
+@@ -29385,151 +29392,6 @@ echo "${ECHO_T}no" >&6; }
  fi
  
      fi
@@ -165,27 +75,11 @@ $NetBSD: patch-ac,v 1.22 2008/03/15 22:16:41 markd Exp $
 -  rm -f conftest.er1
 -  cat conftest.err >&5
 -  echo "$as_me:$LINENO: \$? = $ac_status" >&5
--  (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_f77_werror_flag" || test ! -s conftest.err'
--  { (case "(($ac_try" in
--  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
--  *) ac_try_echo=$ac_try;;
--esac
--eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
--  (eval "$ac_try") 2>&5
--  ac_status=$?
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
--  (exit $ac_status); }; } &&
--	 { ac_try='test -s conftest$ac_exeext'
--  { (case "(($ac_try" in
--  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
--  *) ac_try_echo=$ac_try;;
--esac
--eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
--  (eval "$ac_try") 2>&5
--  ac_status=$?
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
--  (exit $ac_status); }; }; then
+-  (exit $ac_status); } && {
+-	 test -z "$ac_f77_werror_flag" ||
+-	 test ! -s conftest.err
+-       } && test -s conftest$ac_exeext &&
+-       $as_test_x conftest$ac_exeext; then
 -  eval "r_cv_prog_f77_flag_${ac_safe}=yes"
 -else
 -  echo "$as_me: failed program was:" >&5
@@ -194,7 +88,7 @@ $NetBSD: patch-ac,v 1.22 2008/03/15 22:16:41 markd Exp $
 -	eval "r_cv_prog_f77_flag_${ac_safe}=no"
 -fi
 -
--rm -f core conftest.err conftest.$ac_objext \
+-rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
 -      conftest$ac_exeext conftest.$ac_ext
 -FFLAGS="${r_save_FFLAGS}"
 -ac_ext=c
@@ -253,27 +147,11 @@ $NetBSD: patch-ac,v 1.22 2008/03/15 22:16:41 markd Exp $
 -  rm -f conftest.er1
 -  cat conftest.err >&5
 -  echo "$as_me:$LINENO: \$? = $ac_status" >&5
--  (exit $ac_status); } &&
--	 { ac_try='test -z "$ac_f77_werror_flag" || test ! -s conftest.err'
--  { (case "(($ac_try" in
--  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
--  *) ac_try_echo=$ac_try;;
--esac
--eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
--  (eval "$ac_try") 2>&5
--  ac_status=$?
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
--  (exit $ac_status); }; } &&
--	 { ac_try='test -s conftest$ac_exeext'
--  { (case "(($ac_try" in
--  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
--  *) ac_try_echo=$ac_try;;
--esac
--eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
--  (eval "$ac_try") 2>&5
--  ac_status=$?
--  echo "$as_me:$LINENO: \$? = $ac_status" >&5
--  (exit $ac_status); }; }; then
+-  (exit $ac_status); } && {
+-	 test -z "$ac_f77_werror_flag" ||
+-	 test ! -s conftest.err
+-       } && test -s conftest$ac_exeext &&
+-       $as_test_x conftest$ac_exeext; then
 -  eval "r_cv_prog_f77_flag_${ac_safe}=yes"
 -else
 -  echo "$as_me: failed program was:" >&5
@@ -282,7 +160,7 @@ $NetBSD: patch-ac,v 1.22 2008/03/15 22:16:41 markd Exp $
 -	eval "r_cv_prog_f77_flag_${ac_safe}=no"
 -fi
 -
--rm -f core conftest.err conftest.$ac_objext \
+-rm -f core conftest.err conftest.$ac_objext conftest_ipa8_conftest.oo \
 -      conftest$ac_exeext conftest.$ac_ext
 -FFLAGS="${r_save_FFLAGS}"
 -ac_ext=c
@@ -313,16 +191,7 @@ $NetBSD: patch-ac,v 1.22 2008/03/15 22:16:41 markd Exp $
      if test "${GXX}" = yes; then
        ac_safe=_mieee
  { echo "$as_me:$LINENO: checking whether ${CXX-c++} accepts -mieee" >&5
-@@ -34393,7 +34223,7 @@ _ACEOF
-     if test "${GCC}" = yes; then
-       ## only Apple build of gcc supports (and needs?) -no-cpp-precomp
-       ${CC} --version|grep Apple >/dev/null 2>/dev/null
--      if test $? == 0; then
-+      if test $? = 0; then
-         separator=""
- test -z "${separator}" && separator=" "
- if test -z "${R_XTRA_CPPFLAGS}"; then
-@@ -35564,7 +35394,7 @@ echo "$as_me: WARNING: Use of flat names
+@@ -31027,7 +30889,7 @@ echo "$as_me: WARNING: Use of flat names
        SHLIB_LIBADD="-lcc_dynamic"
      fi
      ;;
@@ -331,7 +200,7 @@ $NetBSD: patch-ac,v 1.22 2008/03/15 22:16:41 markd Exp $
      ## Only sure for FreeBSD 3 and above.
      main_ldflags="-export-dynamic"
      shlib_ldflags="-shared"
-@@ -35653,6 +35483,12 @@ echo "$as_me: WARNING: Use of flat names
+@@ -31116,6 +30978,12 @@ echo "$as_me: WARNING: Use of flat names
      fcpicflags=
      ;;
    netbsd*)
@@ -344,7 +213,7 @@ $NetBSD: patch-ac,v 1.22 2008/03/15 22:16:41 markd Exp $
      if ${CPP} - -dM < /dev/null | grep __ELF__ >/dev/null ; then
        main_ldflags="-export-dynamic"
        shlib_ldflags="-shared"
-@@ -35752,7 +35588,7 @@ fi
+@@ -31215,7 +31083,7 @@ fi
  : ${FPICFLAGS="${fpicflags}"}
  if test -z "${FPICFLAGS}"; then
    case "${host_os}" in
@@ -353,7 +222,7 @@ $NetBSD: patch-ac,v 1.22 2008/03/15 22:16:41 markd Exp $
        ;;
      *)
        { echo "$as_me:$LINENO: WARNING: I could not determine FPICFLAGS." >&5
-@@ -42907,6 +42743,15 @@ cat > conftest.c <<EOF
+@@ -37567,6 +37435,15 @@ cat > conftest.c <<EOF
  #endif
  extern void F77_SYMBOL(test1)(int *iflag);
  
@@ -369,7 +238,7 @@ $NetBSD: patch-ac,v 1.22 2008/03/15 22:16:41 markd Exp $
  int main () {
    int iflag;
    F77_SYMBOL(test1)(&iflag);
-@@ -42971,6 +42816,14 @@ else
+@@ -37631,6 +37508,14 @@ else
  #else
  # define F77_SYMBOL(x)   x
  #endif
