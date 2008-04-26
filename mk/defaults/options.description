@@ -224,6 +224,7 @@ openal			Enable OpenAL support.
 opengl			Use OpenGL as display library.
 openldap		Enable OpenLDAP support.
 oracle			Enable Oracle support.
+otr				Enable Off-the-record encrypted messaging
 oss			Enable support for the Open Sound System audio library.
 osx-addressbook		Enable support for the Mac OS X Address Book.
 pam			Enable PAM support.
