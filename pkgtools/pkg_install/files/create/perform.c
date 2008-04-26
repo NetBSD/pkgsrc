@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.19 2008/04/18 17:16:44 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.20 2008/04/26 14:56:34 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.38 1997/10/13 15:03:51 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.19 2008/04/18 17:16:44 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.20 2008/04/26 14:56:34 joerg Exp $");
 #endif
 #endif
 
@@ -88,6 +88,38 @@ register_depends(package_t *plist, char *deps, int build_only)
 	}
 	if (Verbose && !PlistOnly)
 		printf(".\n");
+}
+
+/*
+ *  Expect "fname" to point at a file, and read it into
+ *  the buffer returned.
+ */
+static char   *
+fileGetContents(char *fname)
+{
+	char   *contents;
+	struct stat sb;
+	int     fd;
+
+	if (stat(fname, &sb) == FAIL) {
+		cleanup(0);
+		errx(2, "can't stat '%s'", fname);
+	}
+
+	contents = (char *) malloc((size_t) (sb.st_size) + 1);
+	fd = open(fname, O_RDONLY, 0);
+	if (fd == FAIL) {
+		cleanup(0);
+		errx(2, "unable to open '%s' for reading", fname);
+	}
+	if (read(fd, contents, (size_t) sb.st_size) != (size_t) sb.st_size) {
+		cleanup(0);
+		errx(2, "short read on '%s' - did not get %lld bytes",
+		    fname, (long long) sb.st_size);
+	}
+	close(fd);
+	contents[(size_t) sb.st_size] = '\0';
+	return contents;
 }
 
 /*

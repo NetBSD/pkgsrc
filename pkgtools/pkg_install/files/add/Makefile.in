@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.16 2008/03/10 12:14:32 wiz Exp $
+# $NetBSD: Makefile.in,v 1.17 2008/04/26 14:56:33 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -13,9 +13,9 @@ cat1dir=	$(mandir)/cat1
 
 CC=		@CC@
 CCLD=		$(CC)
-LIBS=		-linstall @LIBS@
+LIBS=		-linstall -lfetch -larchive -lbz2 -lz @LIBS@
 CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib
-DEFS=		@DEFS@ -DOPSYS_NAME=\"$(OPSYS)\" -DMACHINE_ARCH=\"$(MACHINE_ARCH)\" -DBINDIR=\"$(sbindir)\" -DTAR_CMD=\"@tar@\" -DPAX_CMD=\"@pax@\"
+DEFS=		@DEFS@ -DOPSYS_NAME=\"$(OPSYS)\" -DMACHINE_ARCH=\"$(MACHINE_ARCH)\" -DBINDIR=\"$(sbindir)\"
 CFLAGS=		@CFLAGS@
 LDFLAGS=	@LDFLAGS@ -L../lib
 
@@ -23,7 +23,7 @@ INSTALL=	@INSTALL@
 
 PROG=		pkg_add
 
-OBJS=	main.o perform.o futil.o extract.o verify.o
+OBJS=	main.o perform.o verify.o
 
 all: $(PROG)
 
