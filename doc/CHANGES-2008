@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.901 2008/04/25 23:25:59 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.902 2008/04/26 00:07:51 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1637,3 +1637,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added games/bluemoon version 1.1.2 [wiz 2008-04-25]
 	Added games/libggz version 0.0.14.1 [wiz 2008-04-25]
 	Added games/ggz-client-libs version 0.0.14.1 [wiz 2008-04-25]
+	Updated games/gnome-games to 2.22.1.1 [wiz 2008-04-26]
