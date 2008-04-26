@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.46 2008/04/04 15:21:32 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.47 2008/04/26 14:56:34 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -17,7 +17,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.46 2008/04/04 15:21:32 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.47 2008/04/26 14:56:34 joerg Exp $");
 #endif
 #endif
 
@@ -126,7 +126,7 @@ static const struct pkg_meta_desc {
 	int entry_mask;
 	int required_file;
 } pkg_meta_descriptors[] = {
-	{ offsetof(struct pkg_meta, meta_contents), CONTENTS_FNAME ,
+	{ offsetof(struct pkg_meta, meta_contents), CONTENTS_FNAME,
 	    LOAD_CONTENTS, 1},
 	{ offsetof(struct pkg_meta, meta_comment), COMMENT_FNAME,
 	    LOAD_COMMENT, 1 },
@@ -302,30 +302,19 @@ pkg_do(const char *pkg)
 	int     code = 0;
 	const char   *binpkgfile = NULL;
 
-	if (IS_URL(pkg)) {
-#ifdef BOOTSTRAP
-		errx(2, "Remote access not supported during bootstrap");
-#else
-		struct archive *archive;
-		void *remote_archive_cookie;
-
-		archive = open_remote_archive(pkg, &remote_archive_cookie);
-
-		meta = read_meta_data_from_archive(archive);
-		close_remote_archive(remote_archive_cookie);
-#endif
-	} else if (fexists(pkg) && isfile(pkg)) {
+	if (IS_URL(pkg) || (fexists(pkg) && isfile(pkg))) {
 #ifdef BOOTSTRAP
 		errx(2, "Binary packages not supported during bootstrap");
 #else
 		struct archive *archive;
-		void *remote_archive_cookie;
+		void *archive_cookie;
 
-		archive = open_local_archive(pkg, &remote_archive_cookie);
+		archive = open_archive(pkg, &archive_cookie);
 
 		meta = read_meta_data_from_archive(archive);
-		close_local_archive(remote_archive_cookie);
-		binpkgfile = pkg;
+		close_archive(archive_cookie);
+		if (!IS_URL(pkg))
+			binpkgfile = pkg;
 #endif
 	} else {
 		/*
