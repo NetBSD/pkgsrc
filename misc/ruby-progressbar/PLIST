@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/01 07:17:23 obache Exp $
-${RUBY_SITELIBDIR}/progressbar.rb
-${RUBY_DOCDIR}/progressbar/progressbar.en.rd
-${RUBY_DOCDIR}/progressbar/progressbar.ja.rd
-@dirrm ${RUBY_DOCDIR}/progressbar

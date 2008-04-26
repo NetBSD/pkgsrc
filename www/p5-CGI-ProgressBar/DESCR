@@ -1,5 +1,0 @@
-This module provides a progress bar for web browsers, to keep end-users
-occupied when otherwise nothing would appear to be happening.
-
-It aims to require that the recipient client have a minimum of
-JavaScript 1.0, HTML 4.0, ancd CSS/1, but this has yet to be tested.

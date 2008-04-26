@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.9 2008/03/17 15:59:05 kristerw Exp $
-
-SHA1 (darcs-1.0.9.tar.gz) = e085b73b0c82d7465f54709c91ef1d14147c63e5
-RMD160 (darcs-1.0.9.tar.gz) = 459c9f8415979888dafee021e368efef06a685a2
-Size (darcs-1.0.9.tar.gz) = 1080280 bytes
-SHA1 (patch-aa) = dc0d9e08eb8397a6252aa49c0457ec2e948e1ff7
-SHA1 (patch-ab) = ff0c47f0ed42ed6853db00c80ff0d965199e57b6
-SHA1 (patch-ac) = dde83524390b90fb18cb50b831acadeb3b4f9970
-SHA1 (patch-ad) = ed3f8c5a1f7611cc991686d40332cac04c9f415d

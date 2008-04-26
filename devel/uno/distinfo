@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/09/10 15:19:16 xtraeme Exp $
-
-SHA1 (uno_v212.tar.gz) = f580adab4e95005481717801574e7bf27d1030a5
-RMD160 (uno_v212.tar.gz) = 3764526043327569f74d87f1b509f15568a55470
-Size (uno_v212.tar.gz) = 238673 bytes
-SHA1 (patch-aa) = 1585fa0e6fa1c3229fbb705c046996314391c5a2
-SHA1 (patch-ab) = 01fe0a5fdc85e8d6103d2a9bbd8556661a84a7c8

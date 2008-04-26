@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 08:45:10 agc Exp $
-
-SHA1 (ljpg-1.0/ljpg.tar.Z) = 47071fad1f11a3b9241a34b188ab07d54dcd13bc
-RMD160 (ljpg-1.0/ljpg.tar.Z) = c61e5207ebf449e016ea9e2f23c54d323f680a54
-Size (ljpg-1.0/ljpg.tar.Z) = 334459 bytes
-SHA1 (patch-aa) = 562ce4a8f82c6ed59b4b730f59822d4749e925a3
-SHA1 (patch-ab) = c56ad99b8ce278d58f50fc8770c6ca62aa8936f4

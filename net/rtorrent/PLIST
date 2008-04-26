@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/22 22:28:08 adam Exp $
-bin/rtorrent
-man/man1/rtorrent.1
-share/examples/rtorrent/rtorrent.rc
-@dirrm share/examples/rtorrent

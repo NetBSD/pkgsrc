@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/07/25 15:53:10 joerg Exp $
-
-SHA1 (compositeproto-0.4.tar.gz) = 976a6a5102688cd6c3e9a0a03175e8ce1aa34d9f
-RMD160 (compositeproto-0.4.tar.gz) = d60934c8e22829d8710cd9c8cf600ce69e718bbf
-Size (compositeproto-0.4.tar.gz) = 53324 bytes
-SHA1 (patch-aa) = ead53d18596ad98dcc41025fad4ce821a8882f27

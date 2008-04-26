@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST.vax,v 1.2 2007/10/01 15:49:17 jlam Exp $
-${EMULSUBDIRSLASH}usr/lib/libg2c.so
-${EMULSUBDIRSLASH}usr/lib/libg2c.so.1
-${EMULSUBDIRSLASH}usr/lib/libg2c.so.1.0
-${EMULSUBDIRSLASH}usr/lib/libobjc.so.1
-${EMULSUBDIRSLASH}usr/lib/libobjc.so.1.0
-${EMULSUBDIRSLASH}usr/lib/libstdc++.so.4
-${EMULSUBDIRSLASH}usr/lib/libstdc++.so.4.0

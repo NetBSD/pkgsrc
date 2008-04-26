@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:15:42 jlam Exp $
-
-SHA1 (datamapper-0.3.0.gem) = 41cdd8896bb9eddfca5054b75711487697da0131
-RMD160 (datamapper-0.3.0.gem) = cf44f74fc33a8f3c14dee4bd4e19155101d8b02c
-Size (datamapper-0.3.0.gem) = 115712 bytes
-SHA1 (patch-aa) = e4a0a1d970b9addaf921c8a63df40b3723739bb6

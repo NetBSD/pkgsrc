@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/02 02:41:26 obache Exp $
-share/doc/suikyo/elisp/index.html
-${EMACS_LISPPREFIX}/init-suikyo.el
-${EMACS_LISPPREFIX}/suikyo/suikyo-config.el
-${EMACS_LISPPREFIX}/suikyo/suikyo.el
-@dirrm ${EMACS_LISPPREFIX}/suikyo
-@dirrm share/doc/suikyo/elisp

@@ -1,5 +1,0 @@
-MapServer is an OpenSource development environment for building spatially
-enabled Internet applications.  It now supports MapScript which allows popular
-scripting languages such as Perl, Python, Tk/Tcl, Guile and even Java to
-access the MapServer C API.  MapScript provides a rich environment for
-developing applications that integrate disparate data.

@@ -1,4 +1,0 @@
-Jpeginfo is a utility to generate informative listings from JPEG files, and to
-check JPEG files for errors.  Program also supports automagic deletion of
-broken JPEGs.  Currently developed using Linux & SGI, but should compile on
-any decent UNIX :)

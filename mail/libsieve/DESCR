@@ -1,5 +1,0 @@
-This code is a standalone library providing an interpreter for RFC 3028 Sieve
-and various extensions. It is based upon code distributed with the Cyrus Mail
-Server prior to CMU's switch to a more restrictive license. The libSieve API
-attempts to be easy to use and extensible, and replaces the more rigid API in
-the Cyrus Sieve implementation.

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/24 05:21:04 atatat Exp $
-bin/rdigest
-man/man1/rdigest.1

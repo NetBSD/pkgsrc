@@ -1,16 +1,0 @@
-$NetBSD: patch-ac,v 1.6 2008/03/07 16:16:22 wiz Exp $
-
---- src/gcrypt.h.orig	2007-12-10 09:05:46.000000000 +0000
-+++ src/gcrypt.h
-@@ -171,6 +171,11 @@ gcry_err_code_t gcry_error_from_errno (i
- 
- 
- enum gcry_thread_option
-+#elif defined(__INTERIX)
-+#define _GCRY_PTH_FD_SET    fd_set
-+#define _GCRY_PTH_SOCKADDR  struct sockaddr
-+#define _GCRY_PTH_SOCKLEN_T int
-+#define _GCRY_PTH_MSGHDR    void
-   {
-     GCRY_THREAD_OPTION_DEFAULT = 0,
-     GCRY_THREAD_OPTION_USER = 1,

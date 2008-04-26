@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:37 jlam Exp $
-bin/selectwm
-man/man1/selectwm.1
-share/locale/fr/LC_MESSAGES/selectwm.mo

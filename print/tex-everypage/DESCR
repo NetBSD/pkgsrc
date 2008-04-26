@@ -1,5 +1,0 @@
-The "everypage" package extends LaTeX providing hooks to perform
-actions on every page or on the current page. Specifically, actions
-are performed after the page is composed, but before it is shipped,
-so they can be used to prepare the output page in tasks like putting
-watermarks in the background, setting the next page layout, etc.

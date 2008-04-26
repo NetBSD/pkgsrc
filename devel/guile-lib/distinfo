@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/07/21 16:29:44 gdt Exp $
-
-SHA1 (guile-lib-0.1.4.tar.gz) = 393fa3681f41e4916a2eb6c94816b1631650deeb
-RMD160 (guile-lib-0.1.4.tar.gz) = 4538e226f4ee0eb3d638eb37df6daa19d2a7429c
-Size (guile-lib-0.1.4.tar.gz) = 481717 bytes

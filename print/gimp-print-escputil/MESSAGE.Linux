@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.Linux,v 1.1 2004/02/06 06:29:13 reed Exp $
-
-Linux kernel support is required for bidirectional communication
-used by the ${PKGNAME_NOREV} package.  For Linux version 2.2,
-CONFIG_PRINTER_READBACK should be enabled; this is called
-CONFIG_PARPORT_1284 on 2.4 and later kernels.
-
-===========================================================================

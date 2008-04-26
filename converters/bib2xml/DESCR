@@ -1,4 +1,0 @@
-Bib2xml converts BibTeX to well formed xml.  The package uses Greg Ward's
-great btparse library.  The output is a well-formed XML file that is
-almost compatible with bibtexml (besides the order of elements and
-elements that are not supported by bibtexml). It's a flat format, however.

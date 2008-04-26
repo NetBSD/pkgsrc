@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/03 13:43:58 rillig Exp $
-bin/vmpsd
-man/man1/vmpsd.1
-share/examples/openvmps/vlan.db
-share/examples/rc.d/vmpsd
-@dirrm share/examples/openvmps

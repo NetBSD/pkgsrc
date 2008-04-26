@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2008/04/04 15:20:48 jlam Exp $
-
-SHA1 (puppet-0.24.4.gem) = f07e544664f1f95ae55a94a1773681bfa873718f
-RMD160 (puppet-0.24.4.gem) = 158e43103c2c0a42cedfa322112ec45c22d9d2e6
-Size (puppet-0.24.4.gem) = 652288 bytes
-SHA1 (patch-ad) = c85064eea10564caa76fa8f36e550785ca82dc3b

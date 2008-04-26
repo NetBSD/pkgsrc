@@ -1,3 +1,0 @@
-The Perl 5 module Regexp::Assemble provides a way to assemble an
-arbitrary number of regular expressions into a single regular
-expression (or RE) that matches all that the individual REs match.

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/26 01:14:26 rh Exp $
-bin/SpiralSynth
-share/spiralsynth/.SpiralPatches.bank
-share/spiralsynth/.Spiralrc
-@dirrm share/spiralsynth

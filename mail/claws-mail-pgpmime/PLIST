@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2007/08/03 02:34:57 smb Exp $
-include/claws-mail/plugins/pgpmime/pgpmime.h
-lib/claws-mail/plugins/pgpmime.deps
-lib/claws-mail/plugins/pgpmime.la
-@dirrm lib/claws-mail/plugins
-@dirrm include/claws-mail/plugins/pgpmime
-@dirrm include/claws-mail/plugins

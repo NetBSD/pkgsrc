@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.6 2008/01/22 02:00:42 gdt Exp $
-include/lwp/lock.h
-include/lwp/lwp.h
-include/lwp/timer.h
-lib/liblwp.la
-lib/pkgconfig/lwp.pc
-@dirrm include/lwp
-

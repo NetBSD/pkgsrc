@@ -1,5 +1,0 @@
-TiffIO is a plugin that add TIFF images read/write capabilities to the
-Qt3 and Qt4 QImage class.  Adding the generated plugin in the Qt's
-tree enable any Qt application to manipulate TIFF images. TiffIO come
-with a self-test suite, and have been compiled and used successfully
-on a variety of windows and unixes platforms.

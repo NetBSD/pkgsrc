@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/11/04 10:05:44 rillig Exp $
-
-SHA1 (net6-1.3.5.tar.gz) = 62807f3e2d932c087c99d1a10e9d0e515903e0ba
-RMD160 (net6-1.3.5.tar.gz) = eeaa04bc6975424b5b602220f84a6368e731f825
-Size (net6-1.3.5.tar.gz) = 439188 bytes

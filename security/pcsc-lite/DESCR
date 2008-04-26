@@ -1,8 +1,0 @@
-The purpose of PC/SC Lite is to provide a
-Windows(R) SCard interface in a very small
-form factor for communicating to smartcards
-and readers.
-
-The PC/SC Lite library is used to connect to
-the PC/SC daemon from a client application
-and provide access to the desired reader. 

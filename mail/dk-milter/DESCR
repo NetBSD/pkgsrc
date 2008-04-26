@@ -1,9 +1,0 @@
-The dk-milter package is an open source implementation of the DomainKeys
-sender authentication system proposed by Yahoo!, Inc.  It consists of a
-library that implements the DomainKeys service, and a milter-based filter
-application that can plug in to the sendmail MTA to provide that service
-to sufficiently recent sendmail MTAs.
-
-An optional asynchronous resolver library is also provided to work around
-limitations of the basic BIND resolver which comes installed on most
-systems.

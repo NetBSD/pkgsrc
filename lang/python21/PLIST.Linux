@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2005/05/29 07:54:52 minskim Exp $
-lib/python${PY_VER_SUFFIX}/lib-dynload/linuxaudiodev.so
-lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.py
-lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.pyc
-lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.pyo

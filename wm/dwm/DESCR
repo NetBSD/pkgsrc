@@ -1,9 +1,0 @@
-dwm is a dynamic window manager for X. It manages windows in tiling
-and floating modes. Either mode can be applied dynamically, optimizing
-the environment for the application in use and the task performed. It
-is the little brother of wmii.
-
-dwm contains a small status bar which displays all available tags, the
-mode, the title of the focused window, and the text read from standard
-input. The selected tags are highlighted with a different color, the
-tags of the focused window are highlighted with a small point.

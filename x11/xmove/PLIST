@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/03 04:17:31 jschauma Exp $
-bin/xmove
-bin/xmovectrl
-${IMAKE_MAN_DIR}/xmove.${IMAKE_MANNEWSUFFIX}.gz
-${IMAKE_MAN_DIR}/xmovectrl.${IMAKE_MANNEWSUFFIX}.gz
-share/doc/xmove/features.txt
-share/doc/xmove/limitations.txt
-share/doc/xmove/using_xmove.txt
-@dirrm share/doc/xmove

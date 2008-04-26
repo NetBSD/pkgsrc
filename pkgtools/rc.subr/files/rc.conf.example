@@ -1,8 +1,0 @@
-#	$NetBSD: rc.conf.example,v 1.2 2003/06/23 07:02:16 grant Exp $
-#
-# see rc.conf(5) for more information.
-#
-# Use program=YES to enable program, NO to disable it. program_flags are
-# passed to the program on the command line.
-#
-

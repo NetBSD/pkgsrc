@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:11 jlam Exp $
-bin/cplay
-man/man1/cplay.1
-share/examples/cplay/cplayrc
-share/locale/da/LC_MESSAGES/cplay.mo
-share/locale/de/LC_MESSAGES/cplay.mo
-share/locale/hu/LC_MESSAGES/cplay.mo
-share/locale/pl/LC_MESSAGES/cplay.mo
-@dirrm share/examples/cplay

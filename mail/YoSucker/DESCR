@@ -1,4 +1,0 @@
-YoSucker is a simple portable Perl application, that simulates user
-actions to retrieve mail from Yahoo Mail to a local inbox. It simply
-connects to the Yahoo Mail web site, parses the HTML code and
-fetches new messages.

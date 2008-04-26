@@ -1,7 +1,0 @@
-# $NetBSD: INSTALL,v 1.1 2007/07/29 05:19:32 jlam Exp $
-
-case ${STAGE} in
-POST-INSTALL)
-	${PREFIX}/bin/sun6-java -Xshare:dump
-	;;
-esac

@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2007/12/17 18:55:31 drochner Exp $
-
-For sound output, you'll need the GStreamer plugins
-audio/gst-plugins0.10-vorbis, multimedia/gst-plugins0.10-ogg and
-some audio output support (eg. audio/gst-plugins0.10-esound or
-audio/gst-plugins0.10-oss).
-
-===========================================================================

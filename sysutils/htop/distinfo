@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/06/03 12:53:59 xtraeme Exp $
-
-SHA1 (htop-0.6.6.tar.gz) = d0bb46a815a5075777ceb557586f72f622c28919
-RMD160 (htop-0.6.6.tar.gz) = 5d91a086657aba75d467cadf3eac4a476814cb5b
-Size (htop-0.6.6.tar.gz) = 141140 bytes

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:23 jlam Exp $
-lib/tcl/tclgdbm/libtclgdbm.la
-lib/tcl/tclgdbm/pkgIndex.tcl
-man/mann/tclgdbm.n
-@dirrm lib/tcl/tclgdbm

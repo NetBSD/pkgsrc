@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 20:39:54 agc Exp $
-
-SHA1 (dflowers-1.2.tar.gz) = 5f7b518652a6df3677fdeaffa5014ad0171dd426
-RMD160 (dflowers-1.2.tar.gz) = 40fc89003846f180ca3b803c1ac1eade9c428e80
-Size (dflowers-1.2.tar.gz) = 47953 bytes
-SHA1 (patch-aa) = 23999676cc61311cfc69206e67653c6a01e4f1e5

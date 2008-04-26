@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/08/05 17:38:47 joerg Exp $
-
-SHA1 (upx-1.25-src.tar.gz) = 7ce05370efe969832d841a73dd165e6a4292f9d4
-RMD160 (upx-1.25-src.tar.gz) = 1c73a1eb8d98d32ef63ed351ca494526f895a9de
-Size (upx-1.25-src.tar.gz) = 250849 bytes
-SHA1 (patch-aa) = d638e86e98e16b629179b188acfccac6cd3140de
-SHA1 (patch-ab) = 5bd7cf8c5deb07d833b48587a95e48eb547d10ac

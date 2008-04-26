@@ -1,6 +1,0 @@
-GNU cpio is a full-featured cpio command that can access remote and
-local magnetic tapes, and both tar and cpio format archives in files or
-on tapes.
-
-This package does not include the mt (control magnetic tape drive
-operation) or rmt commands.

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/01/09 14:44:11 drochner Exp $
-
-SHA1 (libdvdnav-0.1.10.tar.gz) = 22289cb8f297664ce36551b818c0083e936632a7
-RMD160 (libdvdnav-0.1.10.tar.gz) = 75e7878ab6fd99294b5a1c8fca1391bdbf113616
-Size (libdvdnav-0.1.10.tar.gz) = 539803 bytes
-SHA1 (patch-aa) = d8170dcb91c08384a6f77f69d3d960e8144686cd
-SHA1 (patch-ab) = cd8a866df5c037b2f882939048ed1e368d55a384
-SHA1 (patch-ac) = 7c9e28af8ed74ab6d1a31923556aa3aefa32510e
-SHA1 (patch-ad) = f4b42e53b8e955dc926b458b2a38a549b562ad00

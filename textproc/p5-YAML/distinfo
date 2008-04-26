@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2007/11/29 14:19:49 wiz Exp $
-
-SHA1 (YAML-0.66.tar.gz) = 2ae86eca722df3dbcd64843fff1ed671c4fc3849
-RMD160 (YAML-0.66.tar.gz) = c67c4f14b7ca8a7c2fe702986570120ee9c08d88
-Size (YAML-0.66.tar.gz) = 94654 bytes

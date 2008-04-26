@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/12 20:52:02 wiz Exp $
-bin/goggles
-bin/ogle_gui_goggles
-share/doc/goggles/goggles_manual.pdf
-@dirrm share/doc/goggles

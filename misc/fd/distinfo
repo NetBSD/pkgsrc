@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.8 2007/01/22 03:52:27 hira Exp $
-
-SHA1 (FD-2.09a.tar.gz) = 1ceae6da209074ecac83a2822274146e7b3faf67
-RMD160 (FD-2.09a.tar.gz) = 1b35f1569d33e2050ad9a6cbdec3a26abe306c6f
-Size (FD-2.09a.tar.gz) = 800540 bytes
-SHA1 (patch-aa) = 1a82228acdc531f8a021c9fea76c5a51e63d1444
-SHA1 (patch-ae) = ef6980330eba5ed6d10e91fea780eb986a6c6925

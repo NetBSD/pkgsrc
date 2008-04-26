@@ -1,4 +1,0 @@
-Provides driver support for the CoolKey and Common Access Card (CAC)
-smart card used in a Public Key Infrastructure (PKI). The libpkcs11
-module allows use of Smart Cards in applications that use mozilla
-Network Security Services (NSS).

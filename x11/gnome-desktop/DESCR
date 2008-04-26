@@ -1,9 +1,0 @@
-This package contains the libgnome-desktop library which contains
-APIs that really belong in libgnome[ui] but have not seen enough
-testing or development to be considered stable.
-Use at your own risk.
-
-Also contained here are documents installed as part of the core
-GNOME distribution, e.g. the GPL, GNOME's .desktop files, the
-gnome-about program, some manpages and GNOME's core graphics
-files and icons.

@@ -1,5 +1,0 @@
-The Xen virtual machine monitor allows running several virtual machines
-on a single physical machine.  The xentools12 package contains the
-tools to create, destroy and control the virtual machines.
-
-The xentools12 package contains the tools for Xen v1.2.

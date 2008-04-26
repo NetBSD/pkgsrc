@@ -1,4 +1,0 @@
-The NLANR/DAST Multicast Beacon is a multicast diagnostic tool written
-in Perl which uses the RTP protocol (RFC3550) to provide useful statistics
-and diagnostic information about a given multicast group's connectivity
-characteristics.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/03/01 21:14:11 mjl Exp $
-
-SHA1 (climm-0.6.2.tgz) = 42ab55aa576a9ab0b51d83b38dc06af1a5467941
-RMD160 (climm-0.6.2.tgz) = 7a52b4d26456c1068707e5cc3bafdbad31a28e2a
-Size (climm-0.6.2.tgz) = 1190182 bytes
-SHA1 (patch-aa) = e5a5fea34fd165efe5f91e71a1c9cd9cb4a7cb84

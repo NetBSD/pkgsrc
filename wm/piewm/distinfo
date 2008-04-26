@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/12/10 11:35:08 obache Exp $
-
-SHA1 (piewm-1.04.tar.gz) = 90cfd7cd8708fd5b6514951d392163e7cf5e350e
-RMD160 (piewm-1.04.tar.gz) = bb963f3f5d1a06c665b7040ba5c5e39d2a227a98
-Size (piewm-1.04.tar.gz) = 300723 bytes
-SHA1 (patch-ab) = 38d8407cb4d40425db0cf998a08e75d4218cad41
-SHA1 (patch-ac) = 62b7491e7658db8ac0c00bf691ba4e0e270a7b70
-SHA1 (patch-ad) = 1a6e9c24771d5c3d339a2ecd7e92472be09bb6a4

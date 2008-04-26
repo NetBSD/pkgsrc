@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/03/07 12:51:16 jmmv Exp $
-
-SHA1 (unix-2.0.20060921.tar.gz) = ec345010118f65c63b53ef88384b3ff3b1ecfb71
-RMD160 (unix-2.0.20060921.tar.gz) = d21e9d5ceebee8132c004e683e9ab11d6c6a165c
-Size (unix-2.0.20060921.tar.gz) = 67187 bytes

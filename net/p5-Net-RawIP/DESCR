@@ -1,5 +1,0 @@
-Perl extension to manipulate raw ip packets with interface to libpcap.
-
-This package provides a class object which can be used for creating,
-manipulating and sending a raw ip packets with optional feature for
-manipulating ethernet headers.

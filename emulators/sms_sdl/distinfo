@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/06/17 18:53:26 minskim Exp $
-
-SHA1 (sms_sdl-0.9.4a-r7.1-src.zip) = 66147e5b9d69eca64924093ca26c580acf20c493
-RMD160 (sms_sdl-0.9.4a-r7.1-src.zip) = 98a7b6101a496f80b5c5b54231816d39a69e40f5
-Size (sms_sdl-0.9.4a-r7.1-src.zip) = 113154 bytes
-SHA1 (patch-aa) = 80a6ee341b8b3e4d5c92bcd42ef26164dac3e9f6

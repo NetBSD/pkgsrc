@@ -1,5 +1,0 @@
-This package provides the wordview program that comes with catdoc,
-which requires Tk and X11.
-
-The wordview program is simple GUI wrapper around catdoc(1) which
-allows browsing through a Word file interactively.

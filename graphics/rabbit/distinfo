@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.7 2008/03/31 15:26:34 jlam Exp $
-
-SHA1 (rabbit-0.5.5.tar.gz) = 9f0071a32fb1465d245b2077b49a1afce70213c9
-RMD160 (rabbit-0.5.5.tar.gz) = e2174a536ba673b807c1bb619cd0dc71acef89f0
-Size (rabbit-0.5.5.tar.gz) = 3627230 bytes
-SHA1 (patch-ab) = 848ccd627644dde7e36d27032ab318af729dc3ce
-SHA1 (patch-ac) = 8e9e5a831f54e4a350a422d3c0027aa7dfa85d35
-SHA1 (patch-ad) = ee455a7c34587fa68fc8152d6ad0a6f48b608222

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/10/31 20:25:34 tv Exp $
-
-SHA1 (intercal-0.20.tar.gz) = ee31b5c2694d91e4dd704bed385595069aac6c7e
-RMD160 (intercal-0.20.tar.gz) = cafa6fd7e8de1d0ae6bc72a0492a9154b9b27ca1
-Size (intercal-0.20.tar.gz) = 169172 bytes
-SHA1 (patch-aa) = eb5b6c45f0e86c2b38f53d6a16d315bc931a431a
-SHA1 (patch-ab) = 63784f37c3635f92a1552dfec05d3b714b398a78
-SHA1 (patch-ac) = 83e2e1016e8f39f32bd2983447582713ef493543

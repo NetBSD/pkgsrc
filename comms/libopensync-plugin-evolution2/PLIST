@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/20 19:11:32 drochner Exp $
-include/opensync-1.0/opensync/evo2_sync.h
-lib/opensync/plugins/evo2_sync.la
-share/opensync/defaults/evo2-sync

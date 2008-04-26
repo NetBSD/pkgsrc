@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/07/02 18:05:24 wiz Exp $
-
-SHA1 (python-dateutil-1.2.tar.bz2) = 9884849261bc9dd64f7dd05a39e62385a30b5819
-RMD160 (python-dateutil-1.2.tar.bz2) = 31e62aceb2ce980b5cfb64841f7d125f817f618b
-Size (python-dateutil-1.2.tar.bz2) = 135624 bytes

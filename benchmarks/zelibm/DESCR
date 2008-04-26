@@ -1,8 +1,0 @@
-A little program I wrote can be used to analyze the quality of the math
-library implementation. It simply computes the real result with a high
-precision and determines from this the error of the value the libm
-implementation produced. Very easy.
-To make the time waiting for the result a bit more interesting the program
-displays the error graphically in an updated window. Once the program is
-done it writes the plot in a GIF file which then can be used for later
-reference.

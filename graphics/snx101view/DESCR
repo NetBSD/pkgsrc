@@ -1,4 +1,0 @@
-USB Webcam based sonix SN9C101 chip Utility Programs
-
-snx101shot ... simple image capture program ( output stdout PPM file )
-snx101view ... sequential image viewer program

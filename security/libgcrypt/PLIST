@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.9 2008/03/07 16:16:22 wiz Exp $
-bin/dumpsexp
-bin/libgcrypt-config
-include/gcrypt-module.h
-include/gcrypt.h
-info/gcrypt.info
-lib/libgcrypt.la
-share/aclocal/libgcrypt.m4

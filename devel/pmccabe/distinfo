@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/01/09 18:37:26 joerg Exp $
-
-SHA1 (pmccabe_2.2-3.tar.gz) = 5a05a04e50820cfab714017e0cd28c24a601f955
-RMD160 (pmccabe_2.2-3.tar.gz) = 5c89fd12720159b9133ee6923ab6a91879b0ba13
-Size (pmccabe_2.2-3.tar.gz) = 54990 bytes
-SHA1 (patch-aa) = c0b1bcb232f843eef27e7b3f6f6b251eb5f8495e

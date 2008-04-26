@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2008/02/18 12:20:29 obache Exp $
-
-SHA1 (BerkeleyDB-0.33.tar.gz) = 8d347741dba155d6e9cd4be7a30fae8c90004e32
-RMD160 (BerkeleyDB-0.33.tar.gz) = 49b5e1cd769d1ef0d832981a0e817d1645263bc0
-Size (BerkeleyDB-0.33.tar.gz) = 165750 bytes

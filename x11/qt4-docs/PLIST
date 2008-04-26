@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/20 12:09:27 adam Exp $
-@dirrm qt4/doc/html/images
-@dirrm qt4/doc/html
-@dirrm qt4/doc

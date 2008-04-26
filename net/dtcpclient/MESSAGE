@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2007/06/17 04:23:32 obache Exp $
-
-If your password is found in ${PKG_SYSCONFDIR}/dtcpclient.auth, dtcpclient does
-not ask for your password.  The format is a colon-separated list of the
-server name, the user name, and the password.
-
-===========================================================================

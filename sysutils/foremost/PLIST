@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/26 16:36:29 minskim Exp $
-bin/foremost
-man/man1/foremost.1
-share/examples/foremost/foremost.conf
-@dirrm share/examples/foremost

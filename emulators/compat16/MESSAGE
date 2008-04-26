@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2007/08/21 22:49:14 jlam Exp $
-
-The COMPAT_16 option must be included in the kernel configuration (and
-possibly others; see options(4) for more information) to make use of
-NetBSD 1.6 binaries.
-===========================================================================

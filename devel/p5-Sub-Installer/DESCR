@@ -1,3 +1,0 @@
-The Perl 5 module Sub::Installer provides two universal methods
-that any package/class can use to install subroutines in its own
-namespace.

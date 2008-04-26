@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST.powerpc,v 1.1 2007/08/21 22:49:16 jlam Exp $
-${EMULSUBDIRSLASH}usr/X11R6/lib/libexpat.so.1
-${EMULSUBDIRSLASH}usr/X11R6/lib/libexpat.so.1.0
-${EMULSUBDIRSLASH}usr/lib/libobjc.so.1
-${EMULSUBDIRSLASH}usr/lib/libobjc.so.1.0
-${EMULSUBDIRSLASH}usr/lib/libstdc++.so.4
-${EMULSUBDIRSLASH}usr/lib/libstdc++.so.4.0
-@dirrm ${EMULSUBDIRSLASH}usr/X11R6/lib
-@dirrm ${EMULSUBDIRSLASH}usr/X11R6

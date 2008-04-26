@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/08 05:02:59 jlam Exp $
-bin/${GNU_PROGRAM_PREFIX}time
-info/time.info

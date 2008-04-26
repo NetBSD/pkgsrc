@@ -1,3 +1,0 @@
-Tcpslice extract pieces of and/or merge together packet trace files generated
-using tcpdump's -w flag.  Tcpslice uses libpcap, a system-independent interface
-for user-level packet capture.

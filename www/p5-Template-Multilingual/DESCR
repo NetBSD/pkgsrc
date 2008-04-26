@@ -1,7 +1,0 @@
-This subclass of Template Toolkit supports multilingual templates:
-templates that contain text in several languages.
-
-  <t>
-    <en>Hello!</en>
-    <fr>Bonjour !</fr>
-  </t>

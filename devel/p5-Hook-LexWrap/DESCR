@@ -1,5 +1,0 @@
-Hook::LexWrap Perl5 module allows you to install a pre- or post-wrapper
-(or both) around an existing subroutine. Unlike other modules that
-provide this capacity (e.g. Hook::PreAndPost and Hook::WrapSub),
-Hook::LexWrap implements wrappers in such a way that the standard
-`caller' function works correctly within the wrapped subroutine.

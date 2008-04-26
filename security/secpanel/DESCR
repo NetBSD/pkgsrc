@@ -1,4 +1,0 @@
-SecPanel serves as a graphical user interface for managing and running
-SSH (Secure Shell) and SCP (Secure Copy) connections.  SecPanel is
-written entirely in pure Tcl/Tk and does not need any extensions but
-it requires version 8.x of Tcl and Tk.

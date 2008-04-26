@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2008/02/15 16:23:09 gdt Exp $
-lib/libamanda.la
-lib/libamandad.la
-man/man5/amanda-client.conf.5
-man/man5/amanda.conf.5
-man/man8/amanda.8
-share/doc/amanda/COPYRIGHT
-share/doc/amanda/ReleaseNotes
-@dirrm share/doc/amanda

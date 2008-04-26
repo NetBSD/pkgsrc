@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/07 17:31:51 joerg Exp $
-bin/xmodmap
-man/man1/xmodmap.1

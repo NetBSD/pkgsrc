@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:51:06 zuntum Exp $
-bin/cgoban
-bin/grab_cgoban
-man/man6/cgoban.6
-man/man6/grab_cgoban.6
-share/misc/seigen-minoru.sgf

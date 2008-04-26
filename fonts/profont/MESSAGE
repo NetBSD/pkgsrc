@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2003/12/20 00:28:12 perry Exp $
-
-You may need to add the following to your /etc/X11/XF86Config:
-
-	FontPath	"${PREFIX}/lib/X11/fonts/misc/"
-
-===========================================================================

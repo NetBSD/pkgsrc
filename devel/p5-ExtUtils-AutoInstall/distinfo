@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/11/22 22:58:02 wiz Exp $
-
-SHA1 (ExtUtils-AutoInstall-0.63.tar.gz) = 44cc7a07d774cea79da1967229331afc349586a0
-RMD160 (ExtUtils-AutoInstall-0.63.tar.gz) = 80e115155ac1bd0a990ea58188270b1937192b17
-Size (ExtUtils-AutoInstall-0.63.tar.gz) = 26951 bytes

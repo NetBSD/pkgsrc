@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/11/06 20:16:16 drochner Exp $
-
-SHA1 (gelemental-1.2.0.tar.bz2) = 5640c8912de555eddf72924c866831249d0fdd28
-RMD160 (gelemental-1.2.0.tar.bz2) = a54b29e853d4861f4fd5adb947816cb0f736d2bc
-Size (gelemental-1.2.0.tar.bz2) = 460757 bytes
-SHA1 (patch-aa) = bef3bc522e630b5f5674b75bb9713a844e38b66f

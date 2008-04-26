@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1 2006/01/18 12:44:04 jmmv Exp $
-
-SHA1 (gstreamer-0.8.11.tar.bz2) = 945b08e68f31f99621ce7c35d7ec3b7ac3e49b1e
-RMD160 (gstreamer-0.8.11.tar.bz2) = bb471ba4f4c32bacc26d29efc1cb8577825ce1e9
-Size (gstreamer-0.8.11.tar.bz2) = 1459651 bytes
-SHA1 (patch-aa) = 749f788b2639bdffb48cf937aae0520db2ba864f
-SHA1 (patch-ab) = bcde1ea5717b45904280ec0492ee3cf04222dff1

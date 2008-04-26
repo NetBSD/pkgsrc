@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/01/03 14:28:30 taca Exp $
-
-SHA1 (icmp-0.2.2.tar.gz) = c0f5edf327780bd0aa094570e262e36549385b49
-RMD160 (icmp-0.2.2.tar.gz) = 3372bf9abd64deecd611170e31690638787cb4f3
-Size (icmp-0.2.2.tar.gz) = 6522 bytes

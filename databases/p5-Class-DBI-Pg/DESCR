@@ -1,2 +1,0 @@
-Class::DBI::Pg automates the setup of Class::DBI columns and primary
-key for Postgres.

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/31 17:18:45 minskim Exp $
-${PYSITELIB}/_dbxml.so
-${PYSITELIB}/dbxml.py
-${PYSITELIB}/dbxml.pyc
-${PYSITELIB}/dbxml.pyo

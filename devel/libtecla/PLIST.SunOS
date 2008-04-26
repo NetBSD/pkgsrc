@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST.SunOS,v 1.1 2004/02/04 12:19:57 grant Exp $
-lib/libtecla.so
-lib/libtecla.so.1
-lib/libtecla_r.a
-lib/libtecla_r.so
-lib/libtecla_r.so.1

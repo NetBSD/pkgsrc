@@ -1,9 +1,0 @@
-$NetBSD: patch-ac,v 1.3 2004/08/23 04:03:34 mrg Exp $
-
---- Makefile.am.orig	Mon Dec 17 00:23:45 2001
-+++ Makefile.am	Thu Jun 13 10:04:13 2002
-@@ -1,3 +1,3 @@
--SUBDIRS = autotools include doc liba52 libao src vc++ test
-+SUBDIRS = autotools include liba52 libao src
- 
- EXTRA_DIST = HISTORY bootstrap

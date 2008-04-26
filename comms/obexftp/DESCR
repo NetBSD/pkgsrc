@@ -1,7 +1,0 @@
-The overall goal of ObexFTP is to make mobile devices featuring the OBEX
-protocol and adhering to the OBEX FTP standard accessible by an open source
-implementation.
-
-The common usage for ObexFTP is to access your mobile phones memory to
-store and retrieve e.g. your phonebook, logos, ringtones, music, pictures
-and alike.

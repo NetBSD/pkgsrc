@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/10/29 09:48:31 seb Exp $
-
-SHA1 (gsnmp-0.2.0.tar.gz) = a607c6104dac883822b03103af8ad591fe51b621
-RMD160 (gsnmp-0.2.0.tar.gz) = d7a0290af8f75cf13a3ea1db4e0ad14fa6190f9c
-Size (gsnmp-0.2.0.tar.gz) = 389559 bytes

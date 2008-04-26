@@ -1,5 +1,0 @@
-Prelude is a hybrid IDS consisting of multiple
-sensors, managers, and a display console. LibPrelude
-is the glue that binds all aspects of Prelude together.
-LibPrelude is a library which enables Prelude
-components to communicate in a standard IDMEF method.

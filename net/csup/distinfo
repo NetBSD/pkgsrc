@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/07/12 06:11:54 xtraeme Exp $
-
-SHA1 (csup-snap-20070216.tar.gz) = b2a5b5a95496f166caa6f4c03003fe354a4e76c2
-RMD160 (csup-snap-20070216.tar.gz) = 7d96422461d7538b8f5ff2afaff9341a38ad2a8f
-Size (csup-snap-20070216.tar.gz) = 80734 bytes
-SHA1 (patch-aa) = 9f0792cb8d3f6acd28df3db6fd6b629800c4cc1c
-SHA1 (patch-ab) = 3ae5cc715d204d2b08042b0ace24092cbc423f01

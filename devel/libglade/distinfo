@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.10 2007/09/21 12:58:55 wiz Exp $
-
-SHA1 (libglade-2.6.2.tar.bz2) = 99ffcf33bcd0fdd67191c99b117a0cefc26b84bc
-RMD160 (libglade-2.6.2.tar.bz2) = d6b25114cdbcc5c74412186a9a5a2cc9a140c4e7
-Size (libglade-2.6.2.tar.bz2) = 351755 bytes
-SHA1 (patch-aa) = 7f03c8ae0f604e0abe04b705901f60221c75d6b2

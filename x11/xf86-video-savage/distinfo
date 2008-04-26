@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2008/01/17 23:34:57 tnn Exp $
-
-SHA1 (xf86-video-savage-2.1.3.tar.bz2) = bb73843d38a8152c39311acc8b1a18d5d51603af
-RMD160 (xf86-video-savage-2.1.3.tar.bz2) = d34fa69ecf927725783205301dab219ec25ba244
-Size (xf86-video-savage-2.1.3.tar.bz2) = 310709 bytes
-SHA1 (patch-aa) = 7641e31fec7a60aab84ebc0b89bcaa5b340c16dd
-SHA1 (patch-ab) = 79b3eb30992c679a9316aafd6fc3feaee1af0093

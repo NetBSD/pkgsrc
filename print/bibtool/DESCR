@@ -1,9 +1,0 @@
-BibTeX provides an easy to use means to integrate citations and
-bibliographies into LaTeX documents. But the user is left alone
-with the management of the BibTeX files. The program BibTool is
-intended to fill this gap. BibTool allows the manipulation of BibTeX
-files which goes beyond the possibilities---and intentions---of
-BibTeX.
-
-BibTool contains a user's manual written in LaTeX of more than 60
-pages (and still growing).

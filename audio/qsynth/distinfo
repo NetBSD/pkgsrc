@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/19 15:13:38 adam Exp $
-
-SHA1 (qsynth-0.2.4.tar.gz) = 280ce73c6f3d3f127dd14201eb190edfb7eabcaf
-RMD160 (qsynth-0.2.4.tar.gz) = eb048cb1a8d46cdb4c2ac44a30803f9b2067fa20
-Size (qsynth-0.2.4.tar.gz) = 127895 bytes

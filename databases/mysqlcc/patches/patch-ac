@@ -1,9 +1,0 @@
-$NetBSD: patch-ac,v 1.1.1.1 2003/12/21 07:58:31 martti Exp $
-
---- mysqlcc.pro.in.orig	2003-12-13 23:10:43.000000000 +0000
-+++ mysqlcc.pro.in	2003-12-20 18:24:25.000000000 +0000
-@@ -29,3 +29,3 @@
- unix {
--      LIBS        += @MYSQL_LIB@ 
-+      LIBS        += @MYSQL_LIB@ @OPENSSL_LIB@
-       INCLUDEPATH += @MYSQL_INCLUDE@

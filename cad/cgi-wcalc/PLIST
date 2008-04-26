@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/01 03:52:12 dmcmahill Exp $
-${WCALC_CGIDIR}/air_coil.cgi
-${WCALC_CGIDIR}/coax.cgi
-${WCALC_CGIDIR}/coupled_microstrip.cgi
-${WCALC_CGIDIR}/ic_microstrip.cgi
-${WCALC_CGIDIR}/microstrip.cgi
-${WCALC_CGIDIR}/stripline.cgi
-@unexec ${RMDIR} %D/${WCALC_CGIDIR} 2>/dev/null || ${TRUE}

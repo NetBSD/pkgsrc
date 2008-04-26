@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/03/22 15:17:01 joerg Exp $
-
-SHA1 (driftnet-0.1.6.tar.gz) = 279cb3a596f354e7e9c6ac3cc456b3d11dced2ff
-RMD160 (driftnet-0.1.6.tar.gz) = 01057f3cb992faa537a8b188e116c6f21016cfac
-Size (driftnet-0.1.6.tar.gz) = 36989 bytes
-SHA1 (patch-aa) = 42a48fb35b005b961483c40cbd8991ba0ed0dbe7
-SHA1 (patch-ab) = 5b6bc10901295c58d5607deab9bd25effbbbf950

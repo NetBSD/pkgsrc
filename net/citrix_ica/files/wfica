@@ -1,8 +1,0 @@
-#!/bin/sh
-#
-# $Id: wfica,v 1.3 2008/02/29 16:41:44 sborrill Exp $
-#
-
-ICAROOT=DESTINATION
-export ICAROOT
-exec $ICAROOT/wfica $*

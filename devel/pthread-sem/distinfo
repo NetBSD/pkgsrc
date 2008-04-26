@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:31 agc Exp $
-
-SHA1 (pthread-sem-1.0.tar.gz) = fbb9235014db3dfe5abf7fd720d2e8985454352f
-RMD160 (pthread-sem-1.0.tar.gz) = 317418a51f0385b5c180a9534c82dd8fe562d252
-Size (pthread-sem-1.0.tar.gz) = 5897 bytes

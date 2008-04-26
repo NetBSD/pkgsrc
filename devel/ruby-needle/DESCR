@@ -1,4 +1,0 @@
-Needle is a Dependency Injection/Inversion of Control container for
-Ruby.  It supports both type-2 (setter) and type-3 (constructor)
-injection.  It takes advantage of the dynamic nature of Ruby to provide
-a rich and flexible approach to injecting dependencies.

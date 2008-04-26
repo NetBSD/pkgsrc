@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 16:05:30 agc Exp $
-
-SHA1 (linuxsms-0.65.tar.gz) = f407d3f4d8dc2eb3e5cfbaedb9de6ada8dfbafa1
-RMD160 (linuxsms-0.65.tar.gz) = af89db52995bd874a879123450611fc5581885ed
-Size (linuxsms-0.65.tar.gz) = 36023 bytes
-SHA1 (patch-aa) = bed6cf08d3488505a1873f0f7750da8276105fcd

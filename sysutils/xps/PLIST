@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:54:26 zuntum Exp $
-bin/xps
-lib/X11/app-defaults/Xps
-man/man1/xps.1

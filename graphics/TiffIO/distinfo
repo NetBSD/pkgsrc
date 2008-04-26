@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/03/23 03:25:12 minskim Exp $
-
-SHA1 (TiffIO-120e.tgz) = ff27532efc97db5f5ab964b202ff320133ba4108
-RMD160 (TiffIO-120e.tgz) = 11f1a6ff85d713c62545e8bffcf6590a37228a2f
-Size (TiffIO-120e.tgz) = 1144429 bytes
-SHA1 (patch-ab) = a79c4f0a4ac734c387a67c7571b06f06ca7774b3

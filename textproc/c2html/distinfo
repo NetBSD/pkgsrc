@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/01/29 16:40:58 minskim Exp $
-
-SHA1 (c2html-20070126.tar.gz) = 91e0935a6f4e4f9b2f56e29f80fdd6611178db93
-RMD160 (c2html-20070126.tar.gz) = 7667558f7fad3856bbfd257f1563b99b84681ca8
-Size (c2html-20070126.tar.gz) = 17422 bytes
-SHA1 (patch-aa) = be9ed0c668fcf1915dcdd5b3f58a057a2563e203
-SHA1 (patch-ab) = 48bf7abefadcb8dfe6c6c0427183113700b73340
-SHA1 (patch-ac) = 7fc9b98073dd8b7a84b0c09a1a367ded8c0bb73e

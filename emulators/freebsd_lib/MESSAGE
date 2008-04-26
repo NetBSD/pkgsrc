@@ -1,8 +1,0 @@
-==============================================================================
-$NetBSD: MESSAGE,v 1.1 2006/06/19 23:20:59 jlam Exp $
-
-Do not forget to include COMPAT_FREEBSD in your kernel configuration
-file.  FreeBSD binaries require this option in order to work.
-
-Note that FreeBSD ELF binaries are not yet supported with this package.
-==============================================================================

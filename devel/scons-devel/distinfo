@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/01/02 14:05:59 rillig Exp $
-
-SHA1 (scons-0.96.91.tar.gz) = 95a717e1acb891f92e71c221f704a44f180830aa
-RMD160 (scons-0.96.91.tar.gz) = 3dd9be90a1e9508b2618f7e321321340f9f6a605
-Size (scons-0.96.91.tar.gz) = 351618 bytes
-SHA1 (patch-aa) = aab5daf05325e7a0f1d415f5deb15bb58e896e4b

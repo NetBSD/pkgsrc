@@ -1,8 +1,0 @@
-The purpose of pgpenvelope is to allow easy use of GnuPG
-to encrypt/sign/decrypt/verify messages using Pine's send-
-ing/displaying filters.
-
-Simply make the appropriate filter entries in one's Pine
-configuration, and run Pine as normal.  When sending mail,
-choose the pgpenvelope_encrypt filter.  Additionally, one
-can use it as a procmail filter.

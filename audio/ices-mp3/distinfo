@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 20:39:46 agc Exp $
-
-SHA1 (ices-0.4.tar.gz) = 427f39d3ac4a45e84222c8f8a4007767a754749c
-RMD160 (ices-0.4.tar.gz) = 2a40856c8dbcef8558c7a85bf247c2c7cdf97c22
-Size (ices-0.4.tar.gz) = 372837 bytes
-SHA1 (patch-aa) = 39818857ea23f620e8d85e36a1c9225a3787c490

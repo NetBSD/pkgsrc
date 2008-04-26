@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/08/07 19:35:06 wiz Exp $
-
-SHA1 (kajaani-kombat-0.7.tar.gz) = a6aa674591fef6445c1dbdba446773e9e3d91c8c
-RMD160 (kajaani-kombat-0.7.tar.gz) = 0f932876dfe5f9f32d9889f0b1720dd9b570b8e2
-Size (kajaani-kombat-0.7.tar.gz) = 1805504 bytes
-SHA1 (patch-aa) = bc1ec637e480db4ec499b51d9bd9fabd951b1048

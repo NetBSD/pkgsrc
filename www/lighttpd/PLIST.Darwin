@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1 2007/10/14 09:06:19 adam Exp $
-lib/lighttpd/liblightcomp.la

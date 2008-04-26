@@ -1,15 +1,0 @@
-$NetBSD: patch-aj,v 1.1 2003/07/13 17:35:06 wiz Exp $
-
---- stage2/bios.c.orig	Sun Dec 30 08:33:23 2001
-+++ stage2/bios.c
-@@ -20,6 +20,10 @@
- 
- #include "shared.h"
- 
-+void __enable_execute_stack(void *addr)
-+{
-+}
-+
- 
- /* These are defined in asm.S, and never be used elsewhere, so declare the
-    prototypes here.  */

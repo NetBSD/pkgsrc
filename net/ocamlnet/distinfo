@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/11 15:43:36 wiz Exp $
-
-SHA1 (ocamlnet-1.1.2.tar.gz) = 09683bd8d2116449deaf96873424cebf569d65e7
-RMD160 (ocamlnet-1.1.2.tar.gz) = 2c554571f53b99e7cd23dcf043bebc3c3f779435
-Size (ocamlnet-1.1.2.tar.gz) = 817450 bytes

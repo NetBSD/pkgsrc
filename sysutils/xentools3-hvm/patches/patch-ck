@@ -1,9 +1,0 @@
-$NetBSD: patch-ck,v 1.1.1.1 2007/06/14 19:42:12 bouyer Exp $
---- firmware/rombios/32bit/Makefile.orig	2007-06-12 22:41:50.000000000 +0200
-+++ firmware/rombios/32bit/Makefile	2007-06-12 22:41:59.000000000 +0200
-@@ -39,4 +39,4 @@
- 	    nm -u 32bitbios_all.o;                           \
- 	    exit 11;                                         \
- 	  } || :
--	bash mkhex highbios_array 32bitbios_all.o > $@
-+	sh mkhex highbios_array 32bitbios_all.o > $@

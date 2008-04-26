@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.9 2006/03/08 23:06:40 minskim Exp $
-
-SHA1 (zebedee-2.5.3.tar.gz) = 54717faade0275929163369942885cc448bc9986
-RMD160 (zebedee-2.5.3.tar.gz) = 2b4bee4c5f66f59628308a6c300b4c9d0c854e30
-Size (zebedee-2.5.3.tar.gz) = 176088 bytes
-SHA1 (patch-aa) = 5ab4c410cc372c1eb1e56f90ff92386b92454b40
-SHA1 (patch-ab) = d7b800bab4b5e0f242b4e0a8545e3364abc3f95b

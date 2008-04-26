@@ -1,4 +1,0 @@
-PVS is a verification system: that is, a specification language integrated
-with support tools and a theorem prover. It is intended to capture the
-state-of-the-art in mechanized formal methods and to be sufficiently rugged
-that it can be used for significant applications.

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 12:14:07 agc Exp $
-
-SHA1 (wmpload-0.9.5.tar.gz) = 8627bb43d789f4639ecbca67b198f371c9487e65
-RMD160 (wmpload-0.9.5.tar.gz) = d0bf961b4593797caab667b160ef97f4c6d4d16c
-Size (wmpload-0.9.5.tar.gz) = 25373 bytes
-SHA1 (patch-aa) = e9ab516214c664e930b4156531c3515dd3e6f8df
-SHA1 (patch-ab) = dfc510295d8c59908fe4a619b3ec22af90021271

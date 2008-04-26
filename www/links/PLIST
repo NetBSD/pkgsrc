@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/29 09:28:21 wiz Exp $
-bin/links
-man/man1/links.1
-share/doc/links/KEYS
-@dirrm share/doc/links

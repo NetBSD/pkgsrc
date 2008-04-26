@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/05/12 14:47:11 schmonz Exp $
-bin/xanalyser
-lib/X11/app-defaults/XAnalyser
-man/man1/xanalyser.1

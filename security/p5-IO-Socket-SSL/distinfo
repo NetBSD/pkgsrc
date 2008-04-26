@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.22 2008/02/05 11:36:04 obache Exp $
-
-SHA1 (IO-Socket-SSL-1.13.tar.gz) = 6c25cb636d0252b280a4f173ede19ce6d29d4a42
-RMD160 (IO-Socket-SSL-1.13.tar.gz) = a984018c083964214e0c53cbbe728d0071b9cb94
-Size (IO-Socket-SSL-1.13.tar.gz) = 52531 bytes

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/14 17:03:54 rillig Exp $
-bin/tetrix
-share/examples/rc.d/tetrinetx
-share/tetrinetx/game.conf
-share/tetrinetx/game.motd
-share/tetrinetx/game.pmotd
-share/tetrinetx/game.secure
-@dirrm share/tetrinetx

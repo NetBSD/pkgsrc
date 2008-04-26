@@ -1,5 +1,0 @@
-Extended Affix Grammars (EAG) are an attempt to implement a very
-general form of Affix Grammars, with very few restrictions.  EAG can
-be used as a specification formalism, specifying in general relations
-rather than functions, or as a relational programming language similar
-in many respects to PROLOG.

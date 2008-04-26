@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/01/31 13:32:46 rillig Exp $
-
-SHA1 (svnfs-0.4.tgz) = edc8584c08ab58a321c8b93a237528b162ea3a08
-RMD160 (svnfs-0.4.tgz) = 6df496b4a66705407526c7881f8f8ace7f09a3d0
-Size (svnfs-0.4.tgz) = 206594 bytes
-SHA1 (patch-aa) = 04b4a5080de8653f00c2dadc2ce41235debce2df

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/12/22 12:08:58 obache Exp $
-
-SHA1 (pxe-1.4.2.tar.gz) = b2e53e97eeb01fe8d4e9978016f6a9d7872e869d
-RMD160 (pxe-1.4.2.tar.gz) = 8d626d500d088140284bdad32616d8b45aae8baf
-Size (pxe-1.4.2.tar.gz) = 56342 bytes
-SHA1 (patch-aa) = 7d24c06f1d584d2d4c555e0ca793fb6ee1e0b7f6

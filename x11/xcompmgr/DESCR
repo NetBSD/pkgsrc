@@ -1,7 +1,0 @@
-xcompmgr is a sample compositing manager for X servers supporting the
-XFIXES, DAMAGE, and COMPOSITE extensions. It enables basic eye-candy
-effects.
-
-NOTE:  Running it with -FfCc gives nice-looking results.  Do not try this
-without switching from XAA to EXA acceleration!  The composite
-extension is virtually unusable with XAA.

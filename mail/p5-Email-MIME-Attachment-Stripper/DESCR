@@ -1,2 +1,0 @@
-Given a Email::MIME object, detach all attachments from the message.
-These are then available separately.

@@ -1,9 +1,0 @@
-A set of tools to create web pages for tcpdump output files
-	<<Alpha test version for MAWI-WG internal use>>
-			March 8, 1999
-			WIDE Project MAWI WorkingGroup
-			Kenjiro Cho <kjc@csl.sony.co.jp>
-
-	tcpdstat:
-		a program to extract statistical information from
-		tcpdump trace files.

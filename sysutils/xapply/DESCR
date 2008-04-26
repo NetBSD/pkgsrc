@@ -1,8 +1,0 @@
-xapply (Extended Apply) is an clever derivative of xargs and apply.
-Using list or tabular input from one or more descriptors, xapply executes
-a template command modified for each input.  It supports simple split
-on token expression, and has support (a la make -j) for running many
-jobs in parallel.
-
-Note that as far as anyone can tell, this is no longer maintained.
-It may not build on every system pkgsrc supports.

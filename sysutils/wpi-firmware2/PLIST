@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/09 19:16:23 degroote Exp $
-libdata/if_wpi/LICENSE.iwlwifi-3945-ucode
-libdata/if_wpi/README.iwlwifi-3945-ucode
-libdata/if_wpi/iwlwifi-3945.ucode
-@dirrm libdata/if_wpi

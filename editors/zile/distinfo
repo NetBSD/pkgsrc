@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/11/19 07:12:45 hiramatsu Exp $
-
-SHA1 (zile-2.2.50.tar.gz) = aa69afce4b8e510658767ed2e410bdd4d97b9ccb
-RMD160 (zile-2.2.50.tar.gz) = ca748c4047ee935a0297ba41d0e2e3e0eea740e7
-Size (zile-2.2.50.tar.gz) = 328477 bytes
-SHA1 (patch-aa) = ceb1d7997376b9c0f3f16d482ae579218ed13f98
-SHA1 (patch-ab) = ba5b8a21255a88a41a7bc64c1912f3ce4ec20723

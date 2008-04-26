@@ -1,9 +1,0 @@
-$NetBSD: patch-ab,v 1.1.1.1 2004/11/17 02:31:34 xtraeme Exp $
-
---- Source/plugin-support.cpp.orig	2004-11-17 02:28:45.000000000 +0100
-+++ Source/plugin-support.cpp	2004-11-17 02:29:03.000000000 +0100
-@@ -1,3 +1,4 @@
-+#include <string.h>
- #include "plugin.h"
- #include <strings.h>
- #include <errno.h>

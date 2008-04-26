@@ -1,9 +1,0 @@
-mini_sendmail reads its standard input up to an end-of-file and
-sends a copy of the message found there to all of the addresses
-listed.  The message is sent by connecting to a local SMTP server.
-
-If you want to use mini_sendmail to send email from inside a
-chroot(2) area, you might want to use the mini_sendmail_static
-package instead to avoid copying libraries.
-
-See the manual entry for more details.

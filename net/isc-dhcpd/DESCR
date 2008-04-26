@@ -1,9 +1,0 @@
-This package provides the ISC Dynamic Host Configuration Protocol (DHCP)
-server and DHCP relay agent.
-
-It includes an DHCP (and BOOTP) server daemon used to distribute network
-information, an Object Management API command shell for querying and
-modifying DHCP server attributes (while it is running), and an agent
-for relaying DHCP and BOOTP requests between subnets.
-
-This package contains the Server component.

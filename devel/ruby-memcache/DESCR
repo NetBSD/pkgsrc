@@ -1,2 +1,0 @@
-The ruby-memcache package is a wrapper around memcache(3) and provides
-exceptionally fast access to a memcached(8) cluster.

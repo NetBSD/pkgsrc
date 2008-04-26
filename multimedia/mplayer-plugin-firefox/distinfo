@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/12/11 21:46:51 xtraeme Exp $
-
-SHA1 (mplayerplug-in-3.50.tar.gz) = 54e5d7a3b33f503830183545f7bc278d37cb89d5
-RMD160 (mplayerplug-in-3.50.tar.gz) = 6eb61df0c06e1b9f6118be4f75bf05648bb8dbd8
-Size (mplayerplug-in-3.50.tar.gz) = 452730 bytes
-SHA1 (patch-aa) = 2a6724f536ad8a08c7766dfb269458df12bb3603
-SHA1 (patch-ab) = 950bec845ef3120e8b63a2343e79d5ded99a8bfa
-SHA1 (patch-ad) = 06699a71bb0f8da969d11a812a544e3aefa4d9a7
-SHA1 (patch-ae) = 885eafce6747ed1f682eb78a6e15a473806924e3

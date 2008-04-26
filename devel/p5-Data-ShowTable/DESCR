@@ -1,4 +1,0 @@
-ShowTable.pm is a Perl 5 module which defines subroutines to print
-arrays of data in a nicely formatted listing, using one of four
-possible formats: simple table, boxed table, list style, and
-HTML-formatting (for World-Wide-Web output).

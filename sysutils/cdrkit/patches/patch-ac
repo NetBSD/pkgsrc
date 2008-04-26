@@ -1,9 +1,0 @@
-$NetBSD: patch-ac,v 1.1.1.1 2007/07/01 00:26:14 wiz Exp $
-
---- 3rd-party/dirsplit/CMakeLists.txt.orig	2006-08-24 17:36:32.000000000 +0000
-+++ 3rd-party/dirsplit/CMakeLists.txt
-@@ -1,3 +1,3 @@
- PROJECT (DIRSPLIT)
- INSTALL(PROGRAMS dirsplit DESTINATION bin)
--INSTALL(FILES dirsplit.1 DESTINATION share/man/man1)
-+INSTALL(FILES dirsplit.1 DESTINATION ${MANSUBDIR}/man1)

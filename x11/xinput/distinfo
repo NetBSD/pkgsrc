@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/03 03:04:56 bjs Exp $
-
-SHA1 (xinput-1.3.0.tar.gz) = 2d82ffb57ff745401cface41af5e204a6d51284b
-RMD160 (xinput-1.3.0.tar.gz) = 3138a8824bcf5805b8416ee967caecfc5cf9e0c5
-Size (xinput-1.3.0.tar.gz) = 119964 bytes

@@ -1,7 +1,0 @@
-The listres program generates a list of a widget's resource database.
-The class in which each resource is first defined, the instance and
-class name, and the type of each resource is listed. If no specific
-widgets or the -all switch are given, a two-column list of widget names
-and their class hierarchies is printed.
-
-This is from the modular X.org X11 project.

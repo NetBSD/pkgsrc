@@ -1,9 +1,0 @@
-shntool is a multi-purpose WAVE data processing and reporting utility.
-File formats are abstracted from its core, so it can process any file
-that contains WAVE data, compressed or not - provided there exists a
-format module to handle that particular file type.
-
-shntool has native support for .wav files. If you want it to work with
-other formats, you must have the appropriate helper program installed.
-The "Helper programs" section below contains links to helper programs
-for each format that shntool supports.

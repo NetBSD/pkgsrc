@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/11/09 11:08:01 rillig Exp $
-bin/bits-avail
-bin/bitstir
-man/man1/bitstir.1

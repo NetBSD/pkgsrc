@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/16 09:14:38 martti Exp $
-bin/yafic
-bin/yafic-check
-bin/yafic-sign
-man/man1/yafic-check.1
-man/man1/yafic-sign.1
-man/man1/yafic.1
-man/man5/yafic.conf.5

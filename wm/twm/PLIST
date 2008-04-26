@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/19 14:54:57 jlam Exp $
-bin/twm
-man/man1/twm.1
-share/X11/twm/system.twmrc
-@dirrm share/X11/twm

@@ -1,5 +1,0 @@
-  img2eps packages raster images into EPS (Embedded PostScript) files,
-using whatever PostScript features are advantageous.  If possible, the
-compressed image data is copied directly to the EPS file.
-
-  Supported image file formats are GIF, JPEG, PNG, TIFF, and XPM.

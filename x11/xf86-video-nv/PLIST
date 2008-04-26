@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/03/20 15:01:10 joerg Exp $
-lib/xorg/modules/drivers/nv_drv.la
-man/man4/nv.4
-@comment @dirrm lib/xorg/modules/drivers
-@comment @dirrm lib/xorg/modules
-@comment @dirrm lib/xorg

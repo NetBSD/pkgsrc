@@ -1,4 +1,0 @@
-ICSI finger (based on GNU finger) is intended for workstation pools
-and similar sites, that have unique usernames across multiple
-machines. A single finger request will return the status of the
-whole site, or the whereabouts of a person anywhere on the site.

@@ -1,5 +1,0 @@
-Simple screen locker for X.
-
-It blanks the screen and hides the pointer.  To unlock, type in
-your password and press Enter.  The Escape key resets input and it
-beeps on wrong password.

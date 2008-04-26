@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/01/02 18:44:52 xtraeme Exp $
-
-SHA1 (libkexif-0.2.5.tar.bz2) = d73127e76781fb3ad453fd77c7c3aab00df0ae5d
-RMD160 (libkexif-0.2.5.tar.bz2) = a06d7110da86e3678ffb73ba0e9328ba7f5c7d64
-Size (libkexif-0.2.5.tar.bz2) = 460345 bytes
-SHA1 (patch-aa) = 3359ed5b3a91a301a547d300951df27640837a32

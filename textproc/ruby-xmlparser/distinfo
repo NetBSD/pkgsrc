@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2008/04/04 15:22:24 jlam Exp $
-
-SHA1 (xmlparser-0.6.81.gem) = 8c1000bbc5b4e7a4fd84a06f8a51955323ace594
-RMD160 (xmlparser-0.6.81.gem) = dc8e1d7801239315ae780d036a13ec6404b789ed
-Size (xmlparser-0.6.81.gem) = 91648 bytes
-SHA1 (patch-ac) = 0087db1fc0a44b22541018de4efbb4caef53f81c

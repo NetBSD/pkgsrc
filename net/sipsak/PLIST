@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/11/10 21:32:35 schwarz Exp $
-bin/sipsak
-man/man1/sipsak.1

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 13:40:57 agc Exp $
-
-SHA1 (safetynet-1.15.tar.gz) = 6875bec180c57c10a9c948ffd8a7787bd4d4e38c
-RMD160 (safetynet-1.15.tar.gz) = 744502170a8fb2a9f04531c51c21d6fe35989002
-Size (safetynet-1.15.tar.gz) = 12638 bytes

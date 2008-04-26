@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/07/01 00:26:14 wiz Exp $
-
-SHA1 (cdrkit-1.1.6.tar.gz) = 39fd5f9c500f4f084bd112bc103bed2785a8eb8b
-RMD160 (cdrkit-1.1.6.tar.gz) = e8d322cdef9770c0cdce3fbb9b45a5e904f20d23
-Size (cdrkit-1.1.6.tar.gz) = 1407346 bytes
-SHA1 (patch-aa) = b83c5b64b957db9f2c0b003b2c6088ca9d17aa9a
-SHA1 (patch-ab) = 07e110ec3165c697f80f8fc2dbb104863f2bac97
-SHA1 (patch-ac) = 21d3b2cce56dadd2195897ed0e4c8ab34e9ac884

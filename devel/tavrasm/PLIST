@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/10/01 21:03:36 dillo Exp $
-bin/tavrasm
-man/man1/tavrasm.1
-share/doc/tavrasm/README
-@dirrm share/doc/tavrasm

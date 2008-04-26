@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/03/14 14:49:53 drochner Exp $
-
-SHA1 (FlightGear-1.0.0.tar.gz) = 27de60d87316160eb9eb70bb82cd7ee2ed0407df
-RMD160 (FlightGear-1.0.0.tar.gz) = 78a9c145f82bde79ac070e65d215e5d6ea555be9
-Size (FlightGear-1.0.0.tar.gz) = 2123216 bytes
-SHA1 (patch-aa) = 509c2f58e92a4f4a845cf738b9743793cd9e78d7

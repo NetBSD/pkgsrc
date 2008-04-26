@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/11/11 18:58:18 joerg Exp $
-
-SHA1 (mad123-0.8.5.tar.gz) = 97c5d6185a54e2262d52a687ff3a3714ff260af8
-RMD160 (mad123-0.8.5.tar.gz) = bd2bf0b79a3c9d3513583daccdfc182a2d17cc41
-Size (mad123-0.8.5.tar.gz) = 24836 bytes
-SHA1 (patch-aa) = 16aecc1f75178cb62bca7d5012cea4dffe393f9c
-SHA1 (patch-ab) = eea40969ca88bd65666aada085742a3bdd5d9eba
-SHA1 (patch-ac) = 7c150b2f15cbc00876c8619b80ee29c73b0b71df

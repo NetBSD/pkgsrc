@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2007/05/30 01:22:12 schmonz Exp $
-include/X11/extensions/Xrandr.h
-lib/libXrandr.la
-lib/pkgconfig/xrandr.pc

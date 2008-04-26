@@ -1,4 +1,0 @@
-dirdiff is a graphical tool to display the differences(a la diff)
-between files in directories.  Given two or more directory trees,
-dirdiff will display the differences between them in various glorious
-colors.  It provides merging and the creation of patches.

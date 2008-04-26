@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/09/28 18:59:41 rillig Exp $
-
-SHA1 (hint_unix_serial.tar) = b590c036638050c116b12d09a80ed910f68af271
-RMD160 (hint_unix_serial.tar) = ca58d34cc3ab2c7effeec19106f1c01153f4a593
-Size (hint_unix_serial.tar) = 71680 bytes
-SHA1 (patch-ab) = 7ac0dd017bbc25c6573b8d60f08f85785baed8f5
-SHA1 (patch-ac) = aca05bc3024cd42dbb8b6dc9006c771948b04838

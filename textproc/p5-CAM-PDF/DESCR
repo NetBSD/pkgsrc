@@ -1,6 +1,0 @@
-The Perl 5 module CAM::PDF reads and writes any document that
-conforms to the PDF specification.
-Other Perl modules implementing the PDF specification are optimized
-for programatically creating new PDF documents from scratch. On
-the contrary, CAM::PDF is optimized for reading and manipulating
-existing PDF documents.

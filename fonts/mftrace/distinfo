@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/02/24 18:06:21 darcy Exp $
-
-SHA1 (mftrace-1.2.14.tar.gz) = cc73bee54a28c48b78bc08a60f03c2774d782835
-RMD160 (mftrace-1.2.14.tar.gz) = 67056a5fb7760a9b2143ddd88386c4406f02f420
-Size (mftrace-1.2.14.tar.gz) = 74565 bytes

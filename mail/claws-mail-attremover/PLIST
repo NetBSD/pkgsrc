@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2007/08/06 00:33:06 smb Exp $
-lib/claws-mail/plugins/att_remover.la
-@dirrm lib/claws-mail/plugins

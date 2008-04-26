@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2008/04/23 19:53:46 wiz Exp $
-
-SHA1 (prefork-1.02.tar.gz) = cd5f7138466c251e386edc43ea18d9f6d5f6b59a
-RMD160 (prefork-1.02.tar.gz) = 70c045b732945d29d882f3990116b5c92ef402c7
-Size (prefork-1.02.tar.gz) = 25175 bytes

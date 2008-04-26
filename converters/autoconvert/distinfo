@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/09/29 12:35:11 rillig Exp $
-
-SHA1 (autoconvert-0.3.13.tar.gz) = cc59899e46ccfaacdb39f7a73767780b721ab75d
-RMD160 (autoconvert-0.3.13.tar.gz) = b429b82f6aa4086edd745baf18d5f8ba48821d23
-Size (autoconvert-0.3.13.tar.gz) = 464081 bytes
-SHA1 (patch-aa) = 803666f4de76422dec546dc56c643abeda43edb1
-SHA1 (patch-ab) = f2dc6af133d620e67e414b7f0f1543e47ef794db
-SHA1 (patch-ac) = f39bf83874feea530883383acd0c37658bf6d454
-SHA1 (patch-ad) = 7f5fda124a2bf24d972830adc9694322d27317c8

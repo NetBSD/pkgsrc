@@ -1,3 +1,0 @@
-The DBD::CSV module is yet another driver for the DBI that implements
-access to so-called CSV files (Comma separated values). Such files are
-mostly used for exporting MS Access and MS Excel data.

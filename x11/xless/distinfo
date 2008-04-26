@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 17:36:24 wiz Exp $
-
-SHA1 (xless-1.7.tar.gz) = 2fb2c468aa6c0237be1d2bc256fcaf754c98b20e
-RMD160 (xless-1.7.tar.gz) = 87047418d9928df97635b1f2b2908559fe5d2461
-Size (xless-1.7.tar.gz) = 45559 bytes
-SHA1 (patch-aa) = 40886d34888ab70deba4cec08a1f9f596c3a6a88

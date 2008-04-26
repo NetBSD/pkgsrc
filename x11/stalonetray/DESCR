@@ -1,4 +1,0 @@
-Stalonetray is a stand-alone freedesktop.org and KDE system tray
-(notification area) for X Window System/X11 (e.g. X.Org or XFree 86). It
-has full XEMBED support and minimal dependencies: an X11 lib only.
-Stalonetray works with virtually any EWMH-compliant window manager.

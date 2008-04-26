@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2008/02/09 07:26:57 adam Exp $
-
-SHA1 (libiodbc-3.52.6.tar.gz) = 5bb893887f7ced1de1f776b9c5ed2aaad0508b85
-RMD160 (libiodbc-3.52.6.tar.gz) = 9b1554d468b9b49f1af8adcdc91f3d71a837531e
-Size (libiodbc-3.52.6.tar.gz) = 757876 bytes
-SHA1 (patch-aa) = 7fc72be935b3e19a836f20edf8efac05d22c643f
-SHA1 (patch-ac) = ff520f920c9aa9db44ce315219836dc4e98af9cd

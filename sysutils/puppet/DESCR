@@ -1,5 +1,0 @@
-Puppet lets you centrally manage every important aspect of your system using
-a cross-platform specification language that manages all the separate
-element normally aggregated in different files, like users, cron jobs, and
-hosts, along with obviouslly discrete elements like packages, services, and
-files.

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/01/04 23:18:08 joerg Exp $
-
-SHA1 (xtux-arena-src-nov-15.tar.gz) = f8141f0d0c190adfd79b23137ffd632688b539bd
-RMD160 (xtux-arena-src-nov-15.tar.gz) = 5b33530ef6ebd2f8c36819ded6aff947da2817bb
-Size (xtux-arena-src-nov-15.tar.gz) = 1278142 bytes
-SHA1 (patch-aa) = 797c86e26852d8280598e0e8a7e19af7842977ee
-SHA1 (patch-ab) = 176f16f7b2827e536232af48621d6acc0bb86368
-SHA1 (patch-ac) = 858a4f470eeeba3166fec4b2edb67fc13f67d8d6
-SHA1 (patch-ad) = 264aa15cb12a3566455d3253daba7321d170e5d5

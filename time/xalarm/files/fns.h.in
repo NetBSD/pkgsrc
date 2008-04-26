@@ -1,9 +1,0 @@
-#define	GETXALARMPIDS	\
-    "@SKILL@ -n xalarm | @GREP@ -w -v %d"
-
-/*
- * Full path of kill(1), typically "/bin/kill".
- */
-
-#define	KILLPATH	"@KILL@"
-

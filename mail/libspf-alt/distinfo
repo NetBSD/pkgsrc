@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/07/03 13:54:45 joerg Exp $
-
-SHA1 (libspf_alt-0.4.0.tar.gz) = ba269d7508daebf42e9e20720f410c9409207558
-RMD160 (libspf_alt-0.4.0.tar.gz) = 67a789cfbc4df391fd6938e81ce90e3b24264615
-Size (libspf_alt-0.4.0.tar.gz) = 598003 bytes
-SHA1 (patch-aa) = c2663da02cd12ff6c148f4dd2d9670e5ce71d3cb

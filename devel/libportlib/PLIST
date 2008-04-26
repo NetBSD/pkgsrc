@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/04/09 18:37:25 wiz Exp $
-include/portlib.h
-lib/libport.a

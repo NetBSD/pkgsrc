@@ -1,7 +1,0 @@
-Log::Dispatch::Config is a subclass of Log::Dispatch and provides a way
-to configure Log::Dispatch object with configulation file (default, in
-AppConfig format). This is similar to the way that Java log4j works.
-
-What you do is call "configure" method once in somewhere (like
-"startup.pl" in mod_perl), then you can get configured dispatcher
-instance via "Log::Dispatch::Config->instance".

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/12/09 13:57:29 obache Exp $
-
-SHA1 (libntlm-0.3.12.tar.gz) = 9817766086915304d307ed0a6bd644661bb76437
-RMD160 (libntlm-0.3.12.tar.gz) = 55a9c9f7a6414360439f5c3087076f7c00966c75
-Size (libntlm-0.3.12.tar.gz) = 393196 bytes
-SHA1 (patch-aa) = 74091394db44717ded27fa77a92261f6e01523c6
-SHA1 (patch-ab) = a483cc8d22392e52c5aebbcf34fffa39462463c5
-SHA1 (patch-ac) = df45a385645029752a92ef3751a972f30161580f
-SHA1 (patch-ad) = f1becbe91bb7aa990d78121d3307da7595b80546

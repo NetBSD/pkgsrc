@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:23:01 jlam Exp $
-${GEM_HOME}/cache/merb-${PKGVERSION}.gem
-${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/README
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/TODO
-${GEM_HOME}/specifications/merb-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}
-@exec ${MKDIR} %D/${GEM_DOCDIR}

@@ -1,7 +1,0 @@
-CMU dhcpd 3.3.7 is a combined BootP and DHCP server, available from
-Carnegie Mellon University.
-
-Development of this sofware at CMU has been halted.  At Princeton
-we've added a few new features, and fixed some bugs (and probably
-introduced new ones, naturally).  We've also incorporated patches
-that others have posted.

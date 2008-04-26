@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/05/02 13:37:16 wiz Exp $
-
-SHA1 (album.tar.gz) = 8ebf94792c7f98916ffc3624057ac8b3ff682d77
-RMD160 (album.tar.gz) = 6532da2c1d4eef8d28923029836ede651d69b732
-Size (album.tar.gz) = 99600 bytes
-SHA1 (patch-aa) = a26b5349c8952fd26cef1bf657566a28c2209f4b

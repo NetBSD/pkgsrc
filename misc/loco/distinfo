@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 11:02:55 agc Exp $
-
-SHA1 (loco-0.32.tar.gz) = b582820fcc6b7ff264c4df2ceb6fe17c286af1bb
-RMD160 (loco-0.32.tar.gz) = 2927f382999292874ab7f9d684aa0ec19ac9410d
-Size (loco-0.32.tar.gz) = 3913 bytes
-SHA1 (patch-aa) = dd7924b9589ed84802fd90ac0b7475c9cfe39780

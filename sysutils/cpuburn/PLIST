@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/06/01 20:56:33 joerg Exp $
-share/doc/cpuburn/README
-bin/burnBX
-bin/burnK6
-bin/burnK7
-bin/burnMMX
-bin/burnP5
-bin/burnP6

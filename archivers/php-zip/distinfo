@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 14:45:25 agc Exp $
-
-SHA1 (php-zip/zip-1.0.tgz) = 0ac6f2d25385eb2c74af82c7a54639eb531d8414
-RMD160 (php-zip/zip-1.0.tgz) = e84897c46c84a206fe9536cdaa6ad50f684d77db
-Size (php-zip/zip-1.0.tgz) = 4930 bytes

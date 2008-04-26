@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:11 agc Exp $
-
-SHA1 (cppunit-1.10.2.tar.gz) = 4581195b3c36d9095c551683208a47b96c7538aa
-RMD160 (cppunit-1.10.2.tar.gz) = 72f22402256409f4853215e471258323673ab353
-Size (cppunit-1.10.2.tar.gz) = 723340 bytes

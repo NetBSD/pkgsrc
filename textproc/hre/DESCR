@@ -1,4 +1,0 @@
-HRE is a regular expression library for Korean.  While most regex
-libraries support only per-syllable processing for Korean, HRE
-provides an extended grammar to specify phonemes in each syllable.
-It supports both KS X 1001 and Unicode charsets.

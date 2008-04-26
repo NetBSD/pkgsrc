@@ -1,4 +1,4 @@
-/* $NetBSD: add.h,v 1.10 2007/09/29 13:24:32 rillig Exp $ */
+/* $NetBSD: add.h,v 1.10.8.1 2008/04/26 17:44:23 joerg Exp $ */
 
 /* from FreeBSD Id: add.h,v 1.8 1997/02/22 16:09:15 peter Exp  */
 
@@ -35,15 +35,8 @@ extern Boolean NoRecord;
 extern Boolean Force;
 extern Boolean Automatic;
 extern int Replace;
-extern char *Mode;
-extern char *Owner;
-extern char *Group;
-extern char *Directory;
-extern char *PkgName;
-extern char FirstPen[];
 
 int     make_hierarchy(char *);
-int     extract_plist(char *, package_t *);
 void    apply_perms(char *, char **, int);
 
 int     pkg_perform(lpkg_head_t *);

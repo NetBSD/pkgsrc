@@ -1,9 +1,0 @@
-$NetBSD: patch-bh,v 1.1 2005/10/17 20:18:34 is Exp $
-
---- runerr.h.orig	2005-03-11 09:28:59.000000000 +0100
-+++ runerr.h
-@@ -40,3 +40,4 @@ RUNERR(E_CCNV,41,"illegal conversion: ch
- RUNERR(E_BCNV,42,"illegal conversion: bool(\"%S\")")
- RUNERR(E_ICNV,43,"illegal conversion: int(\"%S\")")
- RUNERR(E_RCNV,44,"illegal conversion: real(\"%S\")")
-+RUNERR(E_PCNV,45,"illegal conversion: pointer(\"%S\")")

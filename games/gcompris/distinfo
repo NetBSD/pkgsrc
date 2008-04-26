@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2008/02/28 21:01:45 drochner Exp $
-
-SHA1 (gcompris-8.4.4.tar.gz) = a93e58d7b281c5840ec35417211469fff9462be4
-RMD160 (gcompris-8.4.4.tar.gz) = ed5010bc898b87db0918d5c5e1fcd2972f0d18ed
-Size (gcompris-8.4.4.tar.gz) = 88822523 bytes
-SHA1 (patch-aa) = 7b01f780bd75fd46d030ab9aac5fd770e3f56d40
-SHA1 (patch-ab) = 53b958f9038ee3da0439af567dbc196103076da0
-SHA1 (patch-ac) = e15ecf9a3ffd553e62f99b9af35f0d3aaf312693

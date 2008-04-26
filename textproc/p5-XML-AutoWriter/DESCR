@@ -1,8 +1,0 @@
-XML::ValidWriter is a drop-in replacement for XML::Writer that uses
-the DTD contained in an XML::Doctype to enable compile- and run-time
-checks of XML output validity.  It also provides methods and functions
-named after the elements mentioned in the DTD.
-
-XML::AutoWriter is a subclass of XML::ValidWriter that provides
-automatic start and end tag generation, allowing you to emit only the
-"important" tags.

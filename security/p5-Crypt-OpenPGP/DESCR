@@ -1,4 +1,0 @@
-Crypt::OpenPGP is a pure-Perl implementation of the OpenPGP standard.
-In addition to support for the standard itself, Crypt::OpenPGP claims
-compatibility with many other PGP implementations, both those that
-support the standard and those that preceded it.

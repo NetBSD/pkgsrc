@@ -1,8 +1,0 @@
-iSCSI is an IETF standard (RFC 3720) for remote access to block-level
-storage.  It can be thought of as similar to NFS, except that an NFS
-server exports files; the iSCSI target exports blocks to the iSCSI
-initiators, which are the clients.
-
-The NetBSD iSCSI initiator is based on FUSE/ReFUSE, and provides a
-portable initiator for any operating system with a FUSE-like
-interface.

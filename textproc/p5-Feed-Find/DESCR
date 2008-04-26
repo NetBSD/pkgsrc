@@ -1,8 +1,0 @@
-The Perl module Feed::Find implements feed auto-discovery for finding
-syndication feeds, given a URI. It (currently) passes all of the
-auto-discovery tests at http://diveintomark.org/tests/client/autodiscovery/.
-Feed::Find will discover the following feed formats:
-* RSS 0.91
-* RSS 1.0
-* RSS 2.0
-* Atom

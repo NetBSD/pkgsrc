@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/04/20 16:05:44 joerg Exp $
-
-SHA1 (cambevao-2.2.tar.gz) = 98d67a1e8e79cdb5b3cc8b099065f90c2c204b36
-RMD160 (cambevao-2.2.tar.gz) = 922fc6e98503917e503ab4e5a7271dc882be3455
-Size (cambevao-2.2.tar.gz) = 158557 bytes
-SHA1 (patch-aa) = 9b37747201dca6e86484c69f50e57ca9dd91339c
-SHA1 (patch-ab) = 4c489afb31b8e713ab75776dc154d8545d4833e0

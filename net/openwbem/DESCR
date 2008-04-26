@@ -1,8 +1,0 @@
-OpenWBEM is an enterprise-grade open-source implementation of WBEM,
-written in C++, suitable for commercial and non-commercial
-applications.  It provides a foundation for development of management
-frameworks that overcome cross-platform barriers and empower true
-interoperability.  Developers can use OpenWBEM as a management agent
-and WBEM framework to provide applications for configuration and
-change management, system health monitoring, and enterprise-wide
-management functionality.

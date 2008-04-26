@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 11:02:51 agc Exp $
-
-SHA1 (cuecat-0.2.1.tar.gz) = 4ce8ea07a97860cf45c0becf8bd638307a4e1ae0
-RMD160 (cuecat-0.2.1.tar.gz) = db8bdeb764fb331b05121e6c32df8803b595fc53
-Size (cuecat-0.2.1.tar.gz) = 268495 bytes
-SHA1 (patch-aa) = b47bdbdfc04db7e96eab189ea7cb4411a976e533
-SHA1 (patch-ab) = 1342ed521ddd540d2776021a6e4abeea8cb5c80c

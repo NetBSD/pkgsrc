@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2007/11/26 22:14:23 seb Exp $
-bin/nsca
-bin/send_nsca
-share/examples/nagios/nsca.cfg
-@unexec ${RMDIR} %D/share/examples/nagios 2>/dev/null || ${TRUE}

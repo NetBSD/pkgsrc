@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:17:37 jlam Exp $
-
-SHA1 (log4r-1.0.5.gem) = 4e85852ce03c7526ddf194b023b353d1784e0b48
-RMD160 (log4r-1.0.5.gem) = b5ea60108198bb88a24e5dc6c40d6df3447c178b
-Size (log4r-1.0.5.gem) = 311215 bytes
-SHA1 (patch-aa) = 88e9e7c0aea687ae844f263270984ca7dd8f2e4d

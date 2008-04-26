@@ -1,7 +1,0 @@
-chkjis.pl is Perl library for Japanese character code processing.
-It replace vendor's own characters which isn't defined in JIS X
-0208:1997 to "geta" character and support ISO-2022-JP, euc-JP and
-Shift_JIS.
-
-It is useful to check intentional use of vendor's own characters in
-text or to filter out these characters.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:08:39 wiz Exp $
-
-SHA1 (spfc-0.2.0.tar.gz) = 263e4f62ecf3bd8a116faadfad923934f42c98d5
-RMD160 (spfc-0.2.0.tar.gz) = 80680697bb96d2f3802ece4036d0fe493698ef84
-Size (spfc-0.2.0.tar.gz) = 389387 bytes
-SHA1 (patch-aa) = c33eaa0ca572e4ca16077b189cde6771ef0abf5a

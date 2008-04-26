@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/10/31 20:44:57 tv Exp $
-
-SHA1 (libtar-1.2.11.tar.gz) = 9611f23024b0e89aad1cfea301122186b3c160f8
-RMD160 (libtar-1.2.11.tar.gz) = 205d1213ed32f9708fb2135010afdd9e184c430e
-Size (libtar-1.2.11.tar.gz) = 145354 bytes
-SHA1 (patch-aa) = c07f32034bb5e84b0b90ac5ab322e800036d5fde

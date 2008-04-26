@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.gtk,v 1.1 2006/02/17 23:46:39 adam Exp $
-share/applications/celestia.desktop
-share/celestia/celestia-logo.png
-share/celestia/celestiaui.xml
-share/pixmaps/celestia.png

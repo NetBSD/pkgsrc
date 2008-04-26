@@ -1,5 +1,0 @@
-FLUCTUATE fits the model which has a single population which has been
-growing (or shrinking) according to an exponential growth law. It
-estimates 4Nu and g, where N is the effective population size, u is
-the neutral mutation rate per site, and g is the growth rate of the
-population.

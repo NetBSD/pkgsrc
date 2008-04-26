@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/07/27 23:10:37 seb Exp $
-
-SHA1 (Crypt-RC4-2.02.tar.gz) = e25f69936a828afa90cfe145349b58bc825cd23e
-RMD160 (Crypt-RC4-2.02.tar.gz) = cfdcba724a44d95694305872c2af6d5c9c86fce4
-Size (Crypt-RC4-2.02.tar.gz) = 4173 bytes

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/04/15 11:09:59 grant Exp $
-bin/yasql
-man/man1/yasql.1
-share/examples/yasql/yasql.conf
-@dirrm share/examples/yasql

@@ -1,8 +1,0 @@
-A VPN client compatible with Cisco's EasyVPN equipment.
-
-vpnc is supposed to work with:
-
-    * Cisco VPN concentrator 3000 Series
-    * Cisco IOS routers
-    * Cisco PIX / ASA Zecurity Appliances
-    * Juniper/Netscreen

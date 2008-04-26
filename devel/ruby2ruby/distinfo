@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/04/21 15:53:55 jlam Exp $
-
-SHA1 (ruby2ruby-1.1.8.gem) = 104dfa2a6ea4615fe7d667234e842236320b0893
-RMD160 (ruby2ruby-1.1.8.gem) = 32ee5917e72ead9002a934b22194689a7f4494d1
-Size (ruby2ruby-1.1.8.gem) = 13824 bytes
-SHA1 (patch-aa) = 05ffe3d4d399f37fc3258abaad8f8de0c9661554

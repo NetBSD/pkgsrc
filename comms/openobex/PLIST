@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2006/07/09 09:27:52 xtraeme Exp $
-include/openobex/obex.h
-include/openobex/obex_const.h
-lib/libopenobex.la
-lib/pkgconfig/openobex.pc
-share/aclocal/openobex.m4
-@dirrm include/openobex

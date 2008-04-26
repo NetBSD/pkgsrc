@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2004/06/22 18:31:58 wiz Exp $
-
-You can specify your password to connect to DTCP server in the
-config file.  If your password is found in ${PREFIX}/etc/dtcpc.auth,
-dtcpc does not ask for your password.  The format is a colon-separated
-list of the server name, the user name, and the password.
-
-===========================================================================

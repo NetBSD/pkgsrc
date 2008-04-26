@@ -1,4 +1,0 @@
-etcmanage is used to update files in /etc on a BSD system
-automatically.  The essential concept is that a file which was
-installed automatically and has not been changed will be updated with
-new versions, and modified files will not be changed.

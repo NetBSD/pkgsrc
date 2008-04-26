@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/09/10 16:27:14 xtraeme Exp $
-
-SHA1 (libnms-0.6.0.tar.bz2) = 914676b86c1eb15068a95984b197796693bbfe99
-RMD160 (libnms-0.6.0.tar.bz2) = 4c5b82969d0e60be9c2fb686161c0ef619287bbd
-Size (libnms-0.6.0.tar.bz2) = 347203 bytes
-SHA1 (patch-aa) = bcb4f65cb547281b475eb21468e93f34ee806260

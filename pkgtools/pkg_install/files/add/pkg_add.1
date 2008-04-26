@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_add.1,v 1.28 2007/10/13 19:38:27 rillig Exp $
+.\" $NetBSD: pkg_add.1,v 1.28.6.1 2008/04/26 17:44:23 joerg Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -30,7 +30,6 @@
 .Op Fl m Ar machine
 .Op Fl p Ar prefix
 .Op Fl s Ar verification-type
-.Op Fl t Ar template
 .Op Fl W Ar viewbase
 .Op Fl w Ar view
 .Ar \fR[[ftp|http]://[\fIuser\fR[:\fIpassword]\fR@]\fIhost\fR[:\fIport\fR]][/\fIpath/\fR]pkg-name ...
@@ -160,6 +159,8 @@ into
 .Ar pkgdb .
 .It Fl R
 Do not record the installation of a package.
+This implies 
+.Fl I .
 This means that you cannot deinstall it later, so only use this option if
 you know what you are doing!
 .It Fl s Ar verification-type
@@ -183,30 +184,6 @@ the verification feature when using
 to add a binary package via a URL - the package, and the related
 detached signature file, must be local
 for the verification to work.
-.It Fl t Ar template
-Use
-.Ar template
-as the input to
-.Xr mktemp 3
-when creating a
-.Dq staging area .
-By default, this is the string
-.Pa /var/tmp/instmp.XXXXXX ,
-but it may be necessary to override it in the situation where
-space in your
-.Pa /var/tmp
-directory is limited.
-Be sure to leave some number of
-.Sq X
-characters for
-.Xr mktemp 3
-to fill in with a unique ID.
-.Pp
-You can get a performance boost by setting the staging area
-.Ar template
-to reside on the same disk partition as target directories for package
-file installation; often this is
-.Pa /usr .
 .It Fl u
 If the package that's being installed is already installed, either
 in the same or a different version, an update is performed.
@@ -275,11 +252,10 @@ passive mode
 ftp.
 .Sh TECHNICAL DETAILS
 .Nm
-extracts each package's
-.Dq packing list
-into a special staging directory in /var/tmp (or $PKG_TMPDIR if set)
-and then runs through the following sequence to fully extract the contents
-of the package:
+extracts each package's meta data (including the
+.Dq packing list )
+to memory and then runs through the following sequence to fully extract
+the contents of the package:
 .Bl -enum -offset indent
 .It
 A check is made to determine if the package or another version of it

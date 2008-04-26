@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/02/23 22:24:14 agc Exp $
-
-SHA1 (ftnchek-3.2.2.tar.bz2) = af1ed68d8270d464bf52cd5c415bada22d50ed21
-RMD160 (ftnchek-3.2.2.tar.bz2) = caa27cb97385742a8812cf400be490ced3e08d41
-Size (ftnchek-3.2.2.tar.bz2) = 745015 bytes
-SHA1 (patch-aa) = 585621cbeb2a240cd44d35ebc04904db656f31b3
-SHA1 (patch-ab) = 83af96a60c977fa25a1e423ae17cc61e56be3d84

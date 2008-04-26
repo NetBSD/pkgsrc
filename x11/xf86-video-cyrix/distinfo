@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/08/15 16:34:12 joerg Exp $
-
-SHA1 (xf86-video-cyrix-1.1.0.tar.bz2) = e82a9384828ce3f43ea7d3623df76ffa17aa4813
-RMD160 (xf86-video-cyrix-1.1.0.tar.bz2) = e1c3bb53b98487250e7c392964ba279fd5cf9887
-Size (xf86-video-cyrix-1.1.0.tar.bz2) = 249372 bytes
-SHA1 (patch-aa) = 973ef4b90a4dfb57667e11a77c0b3d9167838f97

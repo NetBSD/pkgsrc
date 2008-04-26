@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/11/03 16:47:50 rillig Exp $
-
-SHA1 (netbiff-0.9.18.tar.gz) = 5163fdc8887d9435d3780ec3d854f0da728db05f
-RMD160 (netbiff-0.9.18.tar.gz) = d59c0e8a764ba00cb72868322955ca9b8838df89
-Size (netbiff-0.9.18.tar.gz) = 27319 bytes

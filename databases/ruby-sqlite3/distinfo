@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2008/04/04 15:30:00 jlam Exp $
-
-SHA1 (sqlite3-ruby-1.2.1.gem) = b749ca7ceff3f568965918d68259081bdd650802
-RMD160 (sqlite3-ruby-1.2.1.gem) = 4fe9e32803cb65307831c8b5b60fcab3935b5205
-Size (sqlite3-ruby-1.2.1.gem) = 59392 bytes

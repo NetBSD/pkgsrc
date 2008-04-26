@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/09/28 21:11:49 dmcmahill Exp $
-
-SHA1 (avrdude-5.2.tar.gz) = 113689a10fb504e9e760e8bbf984d487ec3eff01
-RMD160 (avrdude-5.2.tar.gz) = 39e23f1cad78c8072062727838ff6de753e7ccba
-Size (avrdude-5.2.tar.gz) = 426800 bytes
-SHA1 (patch-aa) = 2cad04c6e27c5c00df2364dbadd61cc0996ac07f
-SHA1 (patch-ac) = 035322d7ace5d0a0b1026afe2291ee9c000efe97
-SHA1 (patch-ad) = da95addf23d2675d05ab374216c8426185797a69
-SHA1 (patch-ae) = bfff132d3275e4016d5ac423609f39d8a5ff63a9

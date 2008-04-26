@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/10/20 08:15:14 dsainty Exp $
-
-SHA1 (exmh-2.7.2/exmh-2.7.2.tar.gz) = 0e8e11c29c7e1b9371d5a72b4cb2bf6085f20edf
-RMD160 (exmh-2.7.2/exmh-2.7.2.tar.gz) = fd0d8689304cdb6dcbcd341ec5ba5f8f5b2f9712
-Size (exmh-2.7.2/exmh-2.7.2.tar.gz) = 1081601 bytes
-SHA1 (patch-aw) = 396ef41611de11a9ba48f15711e20f4e44f73da9

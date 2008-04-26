@@ -1,9 +1,0 @@
-Cawf is a C version of awf, Henry Spencer's Amazingly Workable (text)
-Formatter.  (Awf is written in awk and appears in comp.sources.unix,
-Volume 23, Issue 27.)  Cawf and awf provide a usable subset of raw nroff
-capabilities and the styles of the man(7), me(7) (only cawf supports
-me(7)), and ms(7) macro sets.
-
-Like awf, cawf is completely independent of any licensed Unix source
-code.  In comparison to awf, cawf supports more nroff functions and one
-more macro set, me(7).

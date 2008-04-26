@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 23:11:59 agc Exp $
-
-SHA1 (icebreaker-1.9.7.tgz) = 856ed5e3c8498660b97558acdd10abb6b9472bfa
-RMD160 (icebreaker-1.9.7.tgz) = d3648094ee5d65bccde30f70ad774378e3b5d817
-Size (icebreaker-1.9.7.tgz) = 189167 bytes
-SHA1 (patch-aa) = 97accbbf40dec7b3212fcf32efd4b4fce265bb1b

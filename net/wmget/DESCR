@@ -1,5 +1,0 @@
-wmget is a dock app for the GNU Window Maker window manager (or one of
-the many other WM's which support dockapps) which makes it more
-convenient to perform long downloads in the background.  It uses the
-excellent libcurl library, part of the cURL automated-download program,
-to perform file retrieval.

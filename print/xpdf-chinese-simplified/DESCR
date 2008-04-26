@@ -1,7 +1,0 @@
-This package provides support files needed to use the Xpdf tools with
-Chinese (Simplified) PDF files.
-
-Contents:
-- Adobe-GB1 character collection support
-- ISO-2022-CN encoding
-- EUC-CN encoding

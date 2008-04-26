@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.10 2008/04/04 15:22:20 jlam Exp $
-
-SHA1 (rttool-1.0.2.0.gem) = e2c29a1d8f9247b45db8f4bec7efd4460c823633
-RMD160 (rttool-1.0.2.0.gem) = 6d075f46d0e376ef4da9b38550f21675c8fc7118
-Size (rttool-1.0.2.0.gem) = 33792 bytes
-SHA1 (patch-ab) = 4e42a678c47af375c31687bab791d7782601a9c7

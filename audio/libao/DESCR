@@ -1,9 +1,0 @@
-Libao is a cross-platform audio library that allows programs to
-output audio using a simple API on a wide variety of platforms.
-
-This package provides the libao's core library and support for AU
-(.au) file output, Null output (does nothing), RAW sample output,
-and WAV (.wav) file output.
-
-You will have to install a libao-* plugin package in order to get
-audio working.

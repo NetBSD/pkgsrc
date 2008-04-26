@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 08:45:11 agc Exp $
-
-SHA1 (Plotmtv1.4.1.tar.Z) = 38ab9cd60db9fc14e99b3353a8c122ae8cecbc06
-RMD160 (Plotmtv1.4.1.tar.Z) = 451d133b9a189b5d5309f7ee7fd518816b758429
-Size (Plotmtv1.4.1.tar.Z) = 1972882 bytes
-SHA1 (patch-aa) = bfc044bbf46b3a53417c1172080f017138d5bcb0
-SHA1 (patch-ab) = f713b037e4000c509c2bbb058e6494cd0a5e9c95
-SHA1 (patch-ac) = bf7ef352f02c173a371c6471c5124ad7f2eddbf5
-SHA1 (patch-ad) = f9afdf4c7e3d9c52edd611794a4eabe97afd8e00

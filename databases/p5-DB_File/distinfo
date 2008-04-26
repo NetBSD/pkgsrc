@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/06/10 08:24:13 obache Exp $
-
-SHA1 (DB_File-1.815.tar.gz) = be02dbd60d997cc804ef594cda982fe77dd62928
-RMD160 (DB_File-1.815.tar.gz) = d08a874fcb9f24276d02662ca722d48f10b9e431
-Size (DB_File-1.815.tar.gz) = 87656 bytes
-SHA1 (patch-aa) = c9166206b62b66a5d3a87620602ce50a7d049472

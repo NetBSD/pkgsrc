@@ -1,5 +1,0 @@
-This package contains a public list of all known IDs used in PCI devices;
-that is ID's of vendors, devices, subsystems and device classes.  These ID
-lists (usually in form of a pci.ids file) are used in various programs (The
-Linux Kernel, The PCI Utilities, new version of the XFree86 etc.) to display
-full device names instead of the numeric IDs.

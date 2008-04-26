@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 10:16:53 agc Exp $
-
-SHA1 (uisp-20040311.tar.bz2) = 8e4c1e05d2f9a962b8969fc76d8b448c9e0751d4
-RMD160 (uisp-20040311.tar.bz2) = 4f45d375e942376a2508232cf787f94ab7f8995b
-Size (uisp-20040311.tar.bz2) = 142973 bytes
-SHA1 (patch-aa) = 60d42fc897b8c77c8396823fd9b26b95adb68a77

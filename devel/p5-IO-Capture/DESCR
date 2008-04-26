@@ -1,5 +1,0 @@
-IO::Capture defines an abstract base class that can be used to create
-any number of useful sub-classes that capture output being sent on a
-filehandle such as STDOUT or STDERR.  Several modules come with the
-distribution that define sub-classes of IO::Capture to do just that,
-i.e., capture STDOUT and STDERR.

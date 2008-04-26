@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/05/29 15:37:02 joerg Exp $
-
-SHA1 (Pyrex-0.9.4.1.tar.gz) = cafd221d75bacd411d8f0ca8dabc450a58466ba5
-RMD160 (Pyrex-0.9.4.1.tar.gz) = c6474bfdab3ed7df745b83aba89a47c6482d7d0a
-Size (Pyrex-0.9.4.1.tar.gz) = 181507 bytes

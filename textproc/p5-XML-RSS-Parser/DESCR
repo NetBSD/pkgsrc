@@ -1,7 +1,0 @@
-XML::RSS::Parser is a lightweight liberal parser of RSS feeds that
-is derived from the XML::Parser::LP module the I developed for
-mt-rssfeed -- a Movable Type plugin. This parser is "liberal" in
-that it does not demand compliance of a specific RSS version and
-will attempt to gracefully handle tags it does not expect or
-understand. The parser's only requirements is that the file is
-well-formed XML and remotely resembles RSS.

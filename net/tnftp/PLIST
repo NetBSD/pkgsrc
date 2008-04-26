@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/24 08:10:37 rillig Exp $
-bin/ftp
-man/cat1/ftp.0

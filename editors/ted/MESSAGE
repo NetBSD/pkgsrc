@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/24 12:29:58 wiz Exp $
-
-This pkg does not install any spelling dictionaries.  Spelling dictionaries
-for various languages are available as separate packages.
-
-===========================================================================

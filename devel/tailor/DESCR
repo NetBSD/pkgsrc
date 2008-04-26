@@ -1,8 +1,0 @@
-Tailor is a tool to migrate changesets between ArX, Bazaar,
-`Bazaar-NG`, CVS, Codeville, Darcs, Git, Mercurial, Monotone,
-Subversion, and Tla repositories.
-
-This script makes it easier to keep the upstream changes merged in
-a branch of a product, storing needed information such as the
-upstream URI and revision in special properties on the branched
-directory.

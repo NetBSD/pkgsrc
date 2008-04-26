@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.11 2008/04/15 17:34:51 drochner Exp $
-
-SHA1 (eel-2.22.1.tar.bz2) = a0180db9f175d7a316fcdb054bec3ca098607bef
-RMD160 (eel-2.22.1.tar.bz2) = fc7f1516d39fa535c036f9e46b2523e117d9eefc
-Size (eel-2.22.1.tar.bz2) = 612389 bytes
-SHA1 (patch-aa) = 9c3e5cdcc3b5688985c8145d0aa7482a39d692f9

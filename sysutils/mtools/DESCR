@@ -1,4 +1,0 @@
-These tools allow you to access MS-DOS or other FAT disks without mounting
-them. You can copy from or to BSD files, list directories, or run various
-other MS-DOS-style file / disk access tool imitates, (in general with an 'm'
-prepended to their name).

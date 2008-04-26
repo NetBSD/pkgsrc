@@ -1,7 +1,0 @@
-# $NetBSD: INSTALL,v 1.1 2006/09/21 18:06:18 drochner Exp $
-
-case ${STAGE} in
-POST-INSTALL)
-	ln -sf ${PREFIX}/lib/nss_mdns.so.0 /usr/lib/nss_mdns.so.0
-	;;
-esac
