@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.7 2008/04/24 07:40:23 bjs Exp $
+# $NetBSD: Makefile.lib,v 1.8 2008/04/26 20:38:49 tnn Exp $
 #
 # This Makefile fragment is included by all packages that build libraries
 # from the Mesa sources.
@@ -42,7 +42,7 @@ MESA_HZ?=	100
 MAKE_ENV+=	MESA_HZ=${MESA_HZ:Q}
 .if ${OPSYS} == "NetBSD" && exists(/sbin/sysctl)
 tmphz=\
-	${sysctl kern.clockrate || ${TRUE}\
+	${/sbin/sysctl kern.clockrate || ${TRUE}\
 	:L:sh:ts,:S/,//gW:C/([^[0-9]]*)(=|[^ hz])*([^[0-9])//g:M[0-9]*}
 .  if !empty(tmphz) && (${tmphz} > 50) && (${tmphz} < 2001)
 MESA_HZ=	${tmphz}
