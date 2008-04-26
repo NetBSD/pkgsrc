@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.915 2008/04/26 05:09:04 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.916 2008/04/26 11:38:59 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1651,3 +1651,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/libupnp to 1.6.6 [obache 2008-04-26]
 	Updated math/R to 2.7.0 [markd 2008-04-26]
 	Updated misc/pciids to 20080312 [bjs 2008-04-26]
+	Updated net/liblive to 2008.04.09 [obache 2008-04-26]
