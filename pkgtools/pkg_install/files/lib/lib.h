@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.43 2008/04/26 14:56:34 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.44 2008/04/26 17:40:01 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -86,16 +86,46 @@
 #define DEF_UMASK 022
 #endif
 
-#define	MKDIR_CMD	"mkdir"
-
 /* Usually "rm", but often "echo" during debugging! */
 #define REMOVE_CMD	"rm"
 
 /* Usually "rm", but often "echo" during debugging! */
 #define RMDIR_CMD	"rmdir"
 
+/* Define tar as a string, in case it's called gtar or something */
+#ifndef TAR_CMD
+#define TAR_CMD	"tar"
+#endif
+
+/* Define pax as a string, used to copy files from staging area */              
+#ifndef PAX_CMD        
+#define PAX_CMD "pax"
+#endif
+
+/* Define gzip and bzip2, used to unpack binary packages */
+#ifndef GZIP_CMD
+#define GZIP_CMD "gzip"
+#endif
+
+#ifndef BZIP2_CMD
+#define BZIP2_CMD "bzip2"
+#endif
+
+/* Define ftp as a string, in case the ftp client is called something else */
+#ifndef FTP_CMD
+#define FTP_CMD "ftp"
+#endif
+
+#ifndef CHOWN_CMD
+#define CHOWN_CMD "chown"
+#endif
+
 #ifndef CHMOD_CMD
 #define CHMOD_CMD "chmod"
+#endif
+
+#ifndef CHGRP_CMD
+#define CHGRP_CMD "chgrp"
 #endif
 
 /* some operating systems don't have this */
@@ -128,8 +158,13 @@ enum {
 /* The names of special variables */
 #define AUTOMATIC_VARNAME	"automatic"
 
-/* Prefix for extended PLIST cmd */
-#define CMD_CHAR		'@'	
+/*
+ * files which we expect to be in every package, passed to
+ * tar --fast-read.
+ */
+#define ALL_FNAMES              CONTENTS_FNAME" "COMMENT_FNAME" "DESC_FNAME" "MTREE_FNAME" "BUILD_VERSION_FNAME" "BUILD_INFO_FNAME" "SIZE_PKG_FNAME" "SIZE_ALL_FNAME
+
+#define CMD_CHAR		'@'	/* prefix for extended PLIST cmd */
 
 /* The name of the "prefix" environment variable given to scripts */
 #define PKG_PREFIX_VNAME	"PKG_PREFIX"
@@ -238,6 +273,14 @@ typedef struct _lpkg_t {
 TAILQ_HEAD(_lpkg_head_t, _lpkg_t);
 typedef struct _lpkg_head_t lpkg_head_t;
 
+/* This structure describes a pipe to a child process */
+typedef struct {
+	int fds[2];	/* pipe, 0=child stdin, 1=parent output */
+	FILE *fp;	/* output from parent process */
+	pid_t pid;	/* process id of child process */
+	void (*cleanup)(void);	/* called on non-zero child exit status */
+} pipe_to_system_t;
+
 struct pkg_vulnerabilities {
 	size_t	entries;
 	char	**vulnerability;
@@ -253,17 +296,25 @@ struct pkg_vulnerabilities {
 #define IS_FULLPATH(str)	((str) != NULL && (str)[0] == '/')
 
 /* Conflict handling (conflicts.c) */
-int	some_installed_package_conflicts_with(const char *, const char *, char **, char **);
+int	some_installed_package_conflicts_with(const char *, char **, char **);
 
 
 /* Prototypes */
 /* Misc */
 void    cleanup(int);
+char   *make_playpen(char *, size_t, size_t);
+char   *where_playpen(void);
+void    leave_playpen(char *);
+uint64_t min_free(const char *);
+void    save_dirs(char **, char **);
+void    restore_dirs(char *, char *);
 void    show_version(void);
 int	fexec(const char *, ...);
 int	fexec_skipempty(const char *, ...);
 int	fcexec(const char *, const char *, ...);
 int	pfcexec(const char *, const char *, const char **);
+pipe_to_system_t	*pipe_to_system_begin(const char *, char *const *, void (*)(void));
+int	pipe_to_system_end(pipe_to_system_t *);
 
 /* variables file handling */
 
@@ -284,6 +335,7 @@ const char *suffix_of(const char *);
 int     pkg_match(const char *, const char *);
 int	pkg_order(const char *, const char *, const char *);
 int     ispkgpattern(const char *);
+void	strip_txz(char *, char *, const char *);
 
 /* Iterator functions */
 int	iterate_pkg_generic_src(int (*)(const char *, void *), void *,
@@ -309,17 +361,35 @@ Boolean isfile(const char *);
 Boolean isbrokenlink(const char *);
 Boolean isempty(const char *);
 int     URLlength(const char *);
+char   *fileGetURL(const char *);
+const char *fileURLFilename(const char *, char *, int);
+const char *fileURLHost(const char *, char *, int);
+char   *fileFindByPath(const char *);
+char   *fileGetContents(char *);
 Boolean make_preserve_name(char *, size_t, char *, char *);
+void    write_file(char *, char *);
+void    copy_file(char *, char *, char *);
+void    move_file(char *, char *, char *);
+void    move_files(const char *, const char *, const char *);
 void    remove_files(const char *, const char *);
 int     delete_hierarchy(char *, Boolean, Boolean);
-int     format_cmd(char *, size_t, const char *, const char *, const char *);
+int     unpack(const char *, const lfile_head_t *);
+void    format_cmd(char *, size_t, char *, char *, char *);
+
+/* ftpio.c: FTP handling */
+int	expandURL(char *, const char *);
+int	unpackURL(const char *, const char *);
+int	ftp_cmd(const char *, const char *);
+int	ftp_start(const char *);
+void	ftp_stop(void);
 
 /* pkg_io.c: Local and remote archive handling */
 struct archive;
 
-struct archive *open_archive(const char *, void **);
-void	close_archive(void *);
-struct archive *find_archive(const char *, void **);
+struct archive *open_remote_archive(const char *, void **);
+void	close_remote_archive(void *);
+struct archive *open_local_archive(const char *, void **);
+void	close_local_archive(void *);
 
 /* Packing list */
 plist_t *new_plist_entry(void);
