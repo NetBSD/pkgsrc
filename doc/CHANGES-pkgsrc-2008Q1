@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.20 2008/04/26 04:29:50 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.21 2008/04/26 06:35:31 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -46,3 +46,5 @@ pullup ticket #2348 - requested by martti
 update ejabberd fixes problem with startup after reboot
 pullup ticket #2342 - requested by hira
 fixes security vulnerabilities
+pullup ticket #2350 - requested by wiz
+security fix, plist fix
