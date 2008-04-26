@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.15 2008/04/04 20:46:59 tnn Exp $
+# $NetBSD: Makefile.in,v 1.15.2.1 2008/04/26 18:37:10 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -23,6 +23,7 @@ LDFLAGS=	@LDFLAGS@ -L../lib
 INSTALL=	@INSTALL@
 
 PROG=		pkg_admin
+SCRIPTS=	audit-packages download-vulnerability-list
 
 .if empty(BOOTSTRAP)
 LIBS=		-linstall -lbz2 -lfetch -lz @LIBS@
@@ -36,7 +37,7 @@ CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib -DBOOTSTRAP \
 		-DSYSCONFDIR=\"$(sysconfdir)\"
 .endif
 
-all: $(PROG)
+all: $(PROG) $(SCRIPTS)
 
 .c.o:
 	$(CC) $(DEFS) $(CPPFLAGS) $(CFLAGS) -c $<
@@ -52,5 +53,14 @@ install:
 	$(INSTALL) -m 755 -d ${DESTDIR}$(man1dir)
 	$(INSTALL) -m 755 -d ${DESTDIR}$(cat1dir)
 	$(INSTALL) $(PROG) ${DESTDIR}$(sbindir)/$(PROG)
+	$(INSTALL) -m 555 $(SCRIPTS) ${DESTDIR}$(sbindir)
 	$(INSTALL) -m 444 $(PROG).1 ${DESTDIR}$(man1dir)/$(PROG).1
 	$(INSTALL) -m 444 $(PROG).cat1 ${DESTDIR}$(cat1dir)/$(PROG).0
+
+audit-packages: audit-packages.sh.in
+	sed -e 's|@PKG_ADMIN@|${sbindir}/pkg_admin|' \
+	    ${.CURDIR}/audit-packages.sh.in > $@
+
+download-vulnerability-list: download-vulnerability-list.sh.in
+	sed -e 's|@PKG_ADMIN@|${sbindir}/pkg_admin|' \
+	    ${.CURDIR}/download-vulnerability-list.sh.in > $@
