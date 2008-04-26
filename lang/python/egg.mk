@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.3 2007/08/10 13:49:08 joerg Exp $
+# $NetBSD: egg.mk,v 1.4 2008/04/26 15:37:21 joerg Exp $
 #
 # Common logic to handle Python Eggs
 #
@@ -7,7 +7,7 @@
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
 # Only Python 2.4 support by devel/py-setuptools right now
-PYTHON_VERSIONS_ACCEPTED?=	24
+PYTHON_VERSIONS_ACCEPTED?=	25 24
 
 PLIST_SUBST+=	EGG_NAME=${EGG_NAME}-py${PYVERSSUFFIX}
 PLIST_SUBST+=	EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
