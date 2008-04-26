@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.7 2008/01/27 06:11:24 obache Exp $
+$NetBSD: patch-aa,v 1.8 2008/04/26 01:52:53 obache Exp $
 
---- threadutil/src/ThreadPool.c.orig	2008-01-22 10:16:37.000000000 +0000
+--- threadutil/src/ThreadPool.c.orig	2008-04-10 16:03:04.000000000 +0000
 +++ threadutil/src/ThreadPool.c
 @@ -234,7 +234,7 @@ static int SetPolicyType( PolicyType in 
  	return 0;
@@ -27,5 +27,5 @@ $NetBSD: patch-aa,v 1.7 2008/01/27 06:11:24 obache Exp $
 -#elif defined(__FreeBSD__) || defined(__OSX__) || defined(__APPLE__)
 +#elif defined(__FreeBSD__) || defined(__OSX__) || defined(__APPLE__) || defined(__NetBSD__)
   	srand( ( unsigned int )t.tv_usec + (unsigned int)ithread_get_current_thread_id() );
- #elif defined(__linux__)
+ #elif defined(__linux__) || defined(__sun)
   	srand( ( unsigned int )t.tv_usec + ithread_get_current_thread_id() );
