@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.10 2007/12/24 02:07:10 hira Exp $
+$NetBSD: patch-ba,v 1.10.4.1 2008/04/26 04:29:13 rtr Exp $
 
---- config_office/configure.orig	2007-11-02 17:30:08.000000000 +0900
-+++ config_office/configure	2007-12-24 09:04:32.000000000 +0900
-@@ -3010,11 +3010,11 @@
+--- config_office/configure.orig	2008-01-31 20:47:17.000000000 +0900
++++ config_office/configure	2008-04-09 17:33:05.000000000 +0900
+@@ -3176,11 +3176,11 @@
  		test_cups=no
  		_os=OSF1
  		;;
@@ -16,7 +16,16 @@ $NetBSD: patch-ba,v 1.10 2007/12/24 02:07:10 hira Exp $
  		PTHREAD_CFLAGS="-pthread"
  		PTHREAD_LIBS="-pthread -lpthread"
  		_os=NetBSD
-@@ -9544,7 +9544,7 @@
+@@ -10304,7 +10304,7 @@
+ fi
+ 
+ if test "$SOLAR_JAVA" != ""; then
+-        if test "$JDK" == "gcj" -a -z "$JAVA_HOME"; then
++        if test "$JDK" = "gcj" -a -z "$JAVA_HOME"; then
+       if test "x$with_jdk_home" = "x" -a "$_gij_longver" -ge "40200"; then
+         cat > findhome.java <<_ACEOF
+ import java.io.File;
+@@ -10404,7 +10404,7 @@
           echo "JAVA_HOME was not explicitly informed with --with-jdk-home. the configure script" >> warn
           echo "attempted to find JAVA_HOME automatically, but apparently it failed" >> warn
           echo "in case JAVA_HOME is incorrectly set, some projects with not be built correctly" >> warn
@@ -25,7 +34,7 @@ $NetBSD: patch-ba,v 1.10 2007/12/24 02:07:10 hira Exp $
               echo "e.g. install java-1.4.2-gcj-compat-devel and use --with-jdk-home=/usr/lib/jvm/java-1.4.2-gcj" >> warn
           fi
        fi
-@@ -12477,7 +12477,7 @@
+@@ -13098,7 +13098,7 @@
  if test -n "$with_system_libxslt" -o -n "$with_system_libs" && \
     test "$with_system_libxslt" != "no"; then
      if test -z "$with_system_libxml" -a -z "$with_system_libs" || \
@@ -34,7 +43,7 @@ $NetBSD: patch-ba,v 1.10 2007/12/24 02:07:10 hira Exp $
        # somehow AC_MSG_WARN won't work...
         echo "to prevent incompatibilities between internal libxml2 and libxslt, the office will be build with system-libxml"
         echo "to prevent incompatibilities between internal libxml2 and libxslt, the office will be build with system-libxml" >> warn
-@@ -12487,7 +12487,7 @@
+@@ -13108,7 +13108,7 @@
  if test -n "$with_system_libxml" -o -n "$with_system_libs" && \
     test "$with_system_libxml" != "no"; then
      if test -z "$with_system_libxslt" -a -z "$with_system_libs" || \
@@ -43,14 +52,14 @@ $NetBSD: patch-ba,v 1.10 2007/12/24 02:07:10 hira Exp $
        # somehow AC_MSG_WARN won't work...
         echo "to prevent incompatibilities between internal libxslt and libxml2, the office will be build with system-libxslt"
         echo "to prevent incompatibilities between internal libxslt and libxml2, the office will be build with system-libxslt" >> warn
-@@ -12970,13 +12970,13 @@
+@@ -13591,13 +13591,14 @@
  
  
     python_include=`$PYTHON -c "import distutils.sysconfig; print distutils.sysconfig.get_config_var('INCLUDEPY');"`
 +   python_ldflags=`$PYTHON -c "import distutils.sysconfig; print distutils.sysconfig.get_config_var('LDFLAGS');"`
     python_version=`$PYTHON -c "import distutils.sysconfig; print distutils.sysconfig.get_config_var('VERSION');"`
     PYTHON_CFLAGS="-I$python_include"
--
+ 
     if test "$_os" = "Darwin"; then
        PYTHON_LIBS="-framework Python"
     else
@@ -59,7 +68,7 @@ $NetBSD: patch-ba,v 1.10 2007/12/24 02:07:10 hira Exp $
     fi
  
        save_CPPFLAGS="$CPPFLAGS"
-@@ -13200,7 +13200,7 @@
+@@ -13868,7 +13869,7 @@
  echo "$as_me:$LINENO: result: $ac_cv_header_db_h" >&5
  echo "${ECHO_T}$ac_cv_header_db_h" >&6
  if test $ac_cv_header_db_h = yes; then
@@ -68,7 +77,7 @@ $NetBSD: patch-ba,v 1.10 2007/12/24 02:07:10 hira Exp $
  else
  
               CFLAGS=-I/usr/include/db4
-@@ -13323,13 +13323,13 @@
+@@ -13991,13 +13992,13 @@
      #AC_CHECK_LIB(db, db_create, [],
      #  [AC_MSG_ERROR([db library not installed or functional])], [])
  
@@ -85,7 +94,7 @@ $NetBSD: patch-ba,v 1.10 2007/12/24 02:07:10 hira Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -13386,7 +13386,7 @@
+@@ -14054,7 +14055,7 @@
  #define HAVE_LIBDB 1
  _ACEOF
  
@@ -94,7 +103,7 @@ $NetBSD: patch-ba,v 1.10 2007/12/24 02:07:10 hira Exp $
  
  else
    { { echo "$as_me:$LINENO: error: db not installed or functional" >&5
-@@ -19101,7 +19101,7 @@
+@@ -19781,7 +19782,7 @@
  echo "$as_me:$LINENO: result: $ac_cv_header_audio_audiolib_h" >&5
  echo "${ECHO_T}$ac_cv_header_audio_audiolib_h" >&6
  if test $ac_cv_header_audio_audiolib_h = yes; then
@@ -103,7 +112,16 @@ $NetBSD: patch-ba,v 1.10 2007/12/24 02:07:10 hira Exp $
  else
  
               CFLAGS=-I/usr/X11R6/include
-@@ -22998,7 +22998,7 @@
+@@ -24012,7 +24013,7 @@
+   ENABLE_REPORTDESIGN=YES
+   echo "$as_me:$LINENO: checking which jfreereport libs to use" >&5
+ echo $ECHO_N "checking which jfreereport libs to use... $ECHO_C" >&6
+-  if test "$with_system_jfreereport" == "yes"; then
++  if test "$with_system_jfreereport" = "yes"; then
+    	SYSTEM_JFREEREPORT=YES
+   	echo "$as_me:$LINENO: result: external" >&5
+ echo "${ECHO_T}external" >&6
+@@ -24529,7 +24530,7 @@
      fi
  
          KDE_CFLAGS="-I$qt_incdir -I$kde_incdir -DQT_CLEAN_NAMESPACE -DQT_THREAD_SUPPORT"
@@ -112,12 +130,12 @@ $NetBSD: patch-ba,v 1.10 2007/12/24 02:07:10 hira Exp $
  fi
  
  
-@@ -23652,7 +23652,7 @@
+@@ -25082,7 +25083,7 @@
     XINERAMA_LINK=dynamic
     echo "$as_me:$LINENO: result: yes" >&5
  echo "${ECHO_T}yes" >&6
 -elif test "$_os" = "Linux" -o "$_os" = "FreeBSD"; then
-+elif test "$_os" = "Linux" -o "$_os" = "FreeBSD" -o "$_os" = "NetBSD" ; then
++elif test "$_os" = "Linux" -o "$_os" = "FreeBSD" -o "$_os" = "NetBSD"; then
     if test -e "$XLIB/libXinerama.so" -a -e "$XLIB/libXinerama.a"; then
-       # we have both versions, let the user decide but use the static one
+       # we have both versions, let the user decide but use the dynamic one
        # per default

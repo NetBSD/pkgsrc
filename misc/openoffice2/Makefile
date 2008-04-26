@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.40 2008/03/21 09:20:55 hira Exp $
+# $NetBSD: Makefile,v 1.40.2.1 2008/04/26 04:29:13 rtr Exp $
 #
 
-OO_VER=			2.3.1
-PKGREVISION=		5
+OO_VER=			2.4.0
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice2-${OO_VER}
 CATEGORIES=		misc
@@ -30,7 +29,7 @@ DEPENDS+=		libpaper-[0-9]*:../../print/libpaper
 
 .include "../../mk/bsd.prefs.mk"
 
-WRKSRC=			${WRKDIR}/OOG680_m9
+WRKSRC=			${WRKDIR}/OOH680_m12
 CONFIGURE_DIRS=		config_office
 
 # Cannot compile with 3.3.x (GCC Bugzilla Bug 16879).
@@ -113,7 +112,7 @@ PLIST_SRC+=		${WRKDIR}/.PLIST_SRC
 MESSAGE_SUBST+=		OO_RELEASE=${OO_RELEASE}
 INSTALLATION_DIRS=	bin ${OO_RELEASE}
 
-OO_UNXNAME=	openoffice.org2.3
+OO_UNXNAME=	openoffice.org2.4
 OO_PKGPATH=	${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install
 OO_PKGROOT=	/opt/${OO_UNXNAME}
 OO_PROGRAMS=	scalc sdraw simpress soffice swriter unopkg

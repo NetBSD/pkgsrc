@@ -1,10 +1,10 @@
-$NetBSD: patch-bg,v 1.3 2007/04/05 23:24:01 hira Exp $
+$NetBSD: patch-bg,v 1.3.10.1 2008/04/26 04:29:13 rtr Exp $
 
---- vcl/util/makefile.mk.orig	2007-01-19 21:56:23.000000000 +0900
-+++ vcl/util/makefile.mk	2007-04-01 21:30:29.000000000 +0900
-@@ -300,8 +300,8 @@
- SHL2STDLIBS+=$(LIBSN_LIBS)
- .ENDIF
+--- vcl/util/makefile.mk.orig	2008-01-24 02:19:40.000000000 +0900
++++ vcl/util/makefile.mk	2008-04-07 18:15:43.000000000 +0900
+@@ -323,8 +323,8 @@
+ 
+ .IF "$(GUIBASE)"=="unx"
  
 -SHL2STDLIBS += -lXext -lSM -lICE -lX11
 -.IF "$(OS)"!="MACOSX" && "$(OS)"!="FREEBSD"
