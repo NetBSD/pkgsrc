@@ -1,0 +1,10 @@
+$NetBSD: patch-aa,v 1.1 2008/04/26 00:56:05 wiz Exp $
+
+--- sounds/Makefile.orig	2008-03-25 15:05:00.000000000 +0000
++++ sounds/Makefile
+@@ -1,4 +1,4 @@
+-datadir=/usr/share
++datadir=${PREFIX}/share
+ 
+ LN_S=ln -sf
+ INSTALL_DATA=install -c -m 444 
