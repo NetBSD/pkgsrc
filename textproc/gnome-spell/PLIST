@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.6 2007/04/15 10:42:40 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/04/26 00:29:27 wiz Exp $
 lib/bonobo/servers/GNOME_Spell.server
 lib/gnome-spell/libgnome-spell-component.la
-share/control-center-2.0/icons/spell-checker.png
 share/${PKGNAME}/spell-checker.glade
+share/control-center-2.0/icons/spell-checker.png
 share/idl/Spell-${PKGVERSION}.idl
 share/locale/am/LC_MESSAGES/${PKGNAME}.mo
+share/locale/ar/LC_MESSAGES/gnome-spell-1.0.8.mo
 share/locale/az/LC_MESSAGES/${PKGNAME}.mo
 share/locale/be/LC_MESSAGES/${PKGNAME}.mo
 share/locale/bg/LC_MESSAGES/${PKGNAME}.mo
@@ -12,10 +13,12 @@ share/locale/ca/LC_MESSAGES/${PKGNAME}.mo
 share/locale/cs/LC_MESSAGES/${PKGNAME}.mo
 share/locale/da/LC_MESSAGES/${PKGNAME}.mo
 share/locale/de/LC_MESSAGES/${PKGNAME}.mo
+share/locale/dz/LC_MESSAGES/gnome-spell-1.0.8.mo
 share/locale/el/LC_MESSAGES/${PKGNAME}.mo
 share/locale/en_CA/LC_MESSAGES/${PKGNAME}.mo
 share/locale/en_GB/LC_MESSAGES/${PKGNAME}.mo
 share/locale/es/LC_MESSAGES/${PKGNAME}.mo
+share/locale/et/LC_MESSAGES/gnome-spell-1.0.8.mo
 share/locale/fi/LC_MESSAGES/${PKGNAME}.mo
 share/locale/fr/LC_MESSAGES/${PKGNAME}.mo
 share/locale/ga/LC_MESSAGES/${PKGNAME}.mo
@@ -32,7 +35,7 @@ share/locale/lv/LC_MESSAGES/${PKGNAME}.mo
 share/locale/nb/LC_MESSAGES/${PKGNAME}.mo
 share/locale/ne/LC_MESSAGES/${PKGNAME}.mo
 share/locale/nl/LC_MESSAGES/${PKGNAME}.mo
-share/locale/no/LC_MESSAGES/${PKGNAME}.mo
+share/locale/oc/LC_MESSAGES/gnome-spell-1.0.8.mo
 share/locale/pa/LC_MESSAGES/${PKGNAME}.mo
 share/locale/pl/LC_MESSAGES/${PKGNAME}.mo
 share/locale/pt/LC_MESSAGES/${PKGNAME}.mo
@@ -40,6 +43,7 @@ share/locale/pt_BR/LC_MESSAGES/${PKGNAME}.mo
 share/locale/ru/LC_MESSAGES/${PKGNAME}.mo
 share/locale/rw/LC_MESSAGES/${PKGNAME}.mo
 share/locale/sk/LC_MESSAGES/${PKGNAME}.mo
+share/locale/sl/LC_MESSAGES/gnome-spell-1.0.8.mo
 share/locale/sq/LC_MESSAGES/${PKGNAME}.mo
 share/locale/sr/LC_MESSAGES/${PKGNAME}.mo
 share/locale/sr@Latn/LC_MESSAGES/${PKGNAME}.mo
