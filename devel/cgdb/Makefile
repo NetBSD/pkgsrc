@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/03/03 17:45:34 jlam Exp $
+# $NetBSD: Makefile,v 1.13.2.1 2008/04/26 07:01:33 rtr Exp $
 #
 
 DISTNAME=	cgdb-0.4.0
@@ -17,12 +17,11 @@ USE_TOOLS+=	gmake
 USE_NCURSES=	# tigetstr()
 USE_GNU_READLINE=	# rl_mark and others
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/cgdb
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/cgdb/src/cgdb ${DESTDIR]${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${DESTDIR]${PREFIX}/share/doc/cgdb
-	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR]${PREFIX}/share/doc/cgdb
+	${INSTALL_PROGRAM} ${WRKSRC}/cgdb/src/cgdb ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/cgdb
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
