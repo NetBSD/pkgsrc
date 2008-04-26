@@ -1,24 +1,22 @@
-$NetBSD: patch-cw,v 1.1 2007/11/11 03:35:36 hira Exp $
+$NetBSD: patch-cw,v 1.1.4.1 2008/04/26 04:29:13 rtr Exp $
 
---- i18npool/source/collator/makefile.mk.orig	2007-01-26 00:25:50.000000000 +0900
-+++ i18npool/source/collator/makefile.mk	2007-11-09 02:40:37.000000000 +0900
-@@ -46,7 +46,26 @@
+--- i18npool/source/collator/makefile.mk.orig	2007-11-07 00:50:57.000000000 +0900
++++ i18npool/source/collator/makefile.mk	2008-04-07 18:28:18.000000000 +0900
+@@ -46,7 +46,24 @@
  
  # --- Files --------------------------------------------------------
  
--tempvar:=$(shell cd data && ls *.txt)
+-tempvar:=$(shell @cd data && ls *.txt)
 +tempvar= \
 +	dz_charset.txt \
 +	hu_charset.txt \
 +	ja_charset.txt \
 +	ja_phonetic_alphanumeric_first.txt \
 +	ja_phonetic_alphanumeric_last.txt \
-+	km_charset.txt \
 +	ko_charset.txt \
 +	ku_alphanumeric.txt \
 +	ln_charset.txt \
 +	ne_charset.txt \
-+	vi_charset.txt \
 +	zh_TW_charset.txt \
 +	zh_TW_radical.txt \
 +	zh_TW_stroke.txt \

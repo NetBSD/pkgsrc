@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.17 2007/12/18 22:24:29 hira Exp $
+# $NetBSD: options.mk,v 1.17.4.1 2008/04/26 04:29:13 rtr Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice2
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 kde nas ooo-external-libwpd
@@ -8,11 +8,11 @@ PKG_OPTIONS_GROUP.browser=	firefox seamonkey # firefox-gtk1 seamonkey-gtk1
 OO_SUPPORTED_LANGUAGES=		af ar as-IN be-BY bg br bn bn-BD bn-IN bs ca \
 				cs cy da de dz el en-GB en-US en-ZA eo es et \
 				eu fa fi fr ga gl gu-IN he hi-IN hr hu it ja \
-				ka km kn-IN ko ku lo lt lv mk ms ml-IN mr-IN \
-				ne nb nl nn nr ns or-IN pa-IN pl pt pt-BR ru \
-				rw sk sl sh-YU sr-CS ss st sv sw sw-TZ sx    \
-				te-IN ti-ER ta-IN th tn tr ts tg ur-IN uk ve \
-				vi xh zh-CN zh-TW zu
+				ka km kn ko ku lo lt lv mk ms ml-IN mr-IN ne \
+				nb nl nn nr ns oc or-IN pa-IN pl pt pt-BR ru \
+				rw sk sl sh sr ss st sv sw sw-TZ te-IN ti-ER \
+				ta-IN th tn tr ts tg ur-IN uk ve vi xh zh-CN \
+				zh-TW zu
 .for l in ${OO_SUPPORTED_LANGUAGES}
 PKG_SUPPORTED_OPTIONS+=		lang-${l}
 .endfor
