@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2007/10/13 18:19:22 adam Exp $
+$NetBSD: distinfo,v 1.6 2008/04/26 01:14:34 wiz Exp $
 
-SHA1 (libgnomecanvasmm-2.20.0.tar.bz2) = 229a78a3b4a671d052f6d368b89401d4069147e6
-RMD160 (libgnomecanvasmm-2.20.0.tar.bz2) = 0e6a9c7c9f0eb5a3536c6afa3d6257d3c66d4fee
-Size (libgnomecanvasmm-2.20.0.tar.bz2) = 321375 bytes
+SHA1 (libgnomecanvasmm-2.22.0.tar.bz2) = 6a0834b21fb4744106d1471f763466e20c5f6067
+RMD160 (libgnomecanvasmm-2.22.0.tar.bz2) = ca9fb8b57eb7b7e7660442c13af12371304607e9
+Size (libgnomecanvasmm-2.22.0.tar.bz2) = 319048 bytes
