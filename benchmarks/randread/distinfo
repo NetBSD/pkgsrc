@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/22 21:16:37 agc Exp $
-
-SHA1 (randread-0.1.tar.gz) = fefdf7ebeda6767a85215898e67606745f57d149
-RMD160 (randread-0.1.tar.gz) = 012cfc71799affe061bff87a511c6298a7d61361
-Size (randread-0.1.tar.gz) = 3490 bytes
-SHA1 (patch-aa) = 9d29d08e0830320c3e9964b80c008f2b1b95711c
-SHA1 (patch-ab) = 36338dd76487b5df132993ec865938af4ff14972

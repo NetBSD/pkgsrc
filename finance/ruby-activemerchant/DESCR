@@ -1,4 +1,0 @@
-Active Merchant is a Ruby library for dealing with credit cards,
-payment processors and shipping.  It has a simple and unified API to
-access dozens of different payment gateways with very different internal
-APIs.

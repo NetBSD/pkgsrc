@@ -1,7 +1,0 @@
-HTTP::Cache::Transparent is an implementation of http get that
-keeps a local cache of fetched pages to avoid fetching the same
-data from the server if it hasn't been updated. The cache is stored
-on disk and is thus persistent between invocations.
-
-The http-headers If-Modified-Since and ETag are used to let the
-server decide if the version in the cache is up-to-date or not.

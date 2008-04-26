@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/02/28 09:15:12 abs Exp $
-
-SHA1 (JSON-Any-1.16.tar.gz) = 791d974f89a83c810d2c22345141fa95d289890e
-RMD160 (JSON-Any-1.16.tar.gz) = 691339f3f936be13671a41aae52cb7bb752e137c
-Size (JSON-Any-1.16.tar.gz) = 23972 bytes
-SHA1 (patch-aa) = dab82cda2f24e6f779b7f06b5bf43922a6bd0168

@@ -1,8 +1,0 @@
-The capabilities of the Color library are limited to pure mathematical
-manipulation of the colors based on color theory without reference to
-color profiles (such as sRGB or Adobe RGB).  For most purposes, when
-working with the RGB and HSL colors, this won't matter.  However, some
-color models (like CIE La*b) are not supported because Color does not
-yet support color profiles, giving no meaningful way to convert colors
-in absolute color spaces (like La*b, XYZ) to non-absolute color spaces
-(like RGB).

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.20 2006/02/26 22:43:33 tron Exp $
-
-SHA1 (BitTorrent-4.4.0.tar.gz) = 8ca3e52c8049ff29a6785da410d6aa80c6726882
-RMD160 (BitTorrent-4.4.0.tar.gz) = 9e743b3178142855d289743d4430598353fb4d3f
-Size (BitTorrent-4.4.0.tar.gz) = 1255281 bytes
-SHA1 (patch-aa) = f295a93a91a0a8ba428edf8b7fb9357e1eb624bd
-SHA1 (patch-ab) = e392544d6f45b7639d2d7a2bbb86ff61e9bee3e9
-SHA1 (patch-ac) = f8aa299b7dc096b483f9199d9171bf2da088b8eb

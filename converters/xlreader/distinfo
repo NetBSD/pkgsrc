@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/05/25 11:34:41 wiz Exp $
-
-SHA1 (xlreader-0.9.0.tgz) = 233c8663e345f9f09c326e8e303acf463e6017e3
-RMD160 (xlreader-0.9.0.tgz) = 1bca01d7d8509e52f71e17e4ac15446b9ded0018
-Size (xlreader-0.9.0.tgz) = 45838 bytes
-SHA1 (patch-aa) = 3acdc2956379bbd2c8f0871c1875ba9c1f6600f8
-SHA1 (patch-ab) = 138ec332e1691129b3336243fc7a6b88d650396a

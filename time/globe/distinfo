@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 19:14:54 wiz Exp $
-
-SHA1 (globe_26mar94.tar.gz) = e1d27953237d3ae1648080045f86a0529cd01b7f
-RMD160 (globe_26mar94.tar.gz) = 94470c28771d33c20411ce706aa3695f89a8f336
-Size (globe_26mar94.tar.gz) = 9813 bytes
-SHA1 (patch-aa) = 1026b2f69c4b2d02da6e643245a07ace9c49b663

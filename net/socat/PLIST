@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/14 22:43:38 minskim Exp $
-bin/filan
-bin/procan
-bin/socat
-man/man1/socat.1

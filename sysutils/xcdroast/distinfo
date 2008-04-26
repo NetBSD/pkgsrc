@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.15 2007/08/15 18:34:59 plunky Exp $
-
-SHA1 (xcdroast-0.98alpha15.tar.gz) = f354ea9ffe918c4ec11312d5537e6e245730fecc
-RMD160 (xcdroast-0.98alpha15.tar.gz) = 9198f67659023ce8f508fa2c331df9d9c8b81a8f
-Size (xcdroast-0.98alpha15.tar.gz) = 3282794 bytes
-SHA1 (patch-aa) = 0beee32a5550646cd360459d90281cb0ec9a826a
-SHA1 (patch-ab) = 085da3b440ba1d6a0e305626e1ac3fba49d2f546
-SHA1 (patch-ad) = 417a82344e14ae2a9f602254b152337c33afae4a
-SHA1 (patch-ae) = 773d1a5b2b2ce5ef0a947cb5d7f67f83985b6e5e

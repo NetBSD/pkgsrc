@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/05 15:56:34 rillig Exp $
-bin/rename
-man/man1/rename.1

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:40 wiz Exp $
-
-SHA1 (zope/BTreeFolder2-0.5.0.tar.gz) = 1a0dfed56d90d41265ec149869f83c58a2258270
-RMD160 (zope/BTreeFolder2-0.5.0.tar.gz) = d122875c15bde4ef8fd9ccc6a6651c509b60f19f
-Size (zope/BTreeFolder2-0.5.0.tar.gz) = 9798 bytes

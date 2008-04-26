@@ -1,4 +1,0 @@
-This module offers a simple API for io, timer and completion callbacks,
-independent of the event loop in use. This allows module authors to use
-those events internally without forcing users of the module on a specific
-event loop. Currently supported are Event, Coro::Event, Glib and Tk.

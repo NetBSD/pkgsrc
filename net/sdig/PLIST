@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2007/02/15 21:45:35 rillig Exp $
-bin/nbname
-bin/sdig
-man/man5/sdig.conf.5
-man/man8/sdig.8
-share/doc/sdig.README
-share/examples/sdig.conf
-share/misc/mactable

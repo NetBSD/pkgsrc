@@ -1,3 +1,0 @@
-The Perl 5 module Perl6::Export::Attrs implements the Perl 6 'is
-export(...)' trait as a Perl 5 attribute (compare with the
-Perl6::Export module).

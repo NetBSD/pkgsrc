@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/12/08 15:02:30 heinz Exp $
-
-SHA1 (CDDB_get-2.27.tar.gz) = cec39851678bbb1fdd76f2cbd170628baf4971e6
-RMD160 (CDDB_get-2.27.tar.gz) = 0b753c81ad9f6ada0bec022d0909d9f14faaa23f
-Size (CDDB_get-2.27.tar.gz) = 21820 bytes

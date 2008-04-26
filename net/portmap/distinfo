@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/07 23:40:06 reed Exp $
-
-SHA1 (portmap_4.tar.gz) = 02e32c98040da21dfa965a0468e4f561f3ad08a1
-RMD160 (portmap_4.tar.gz) = 3559e1652b04a34ac8814243b70069fd64a2f68e
-Size (portmap_4.tar.gz) = 16152 bytes
-SHA1 (patch-aa) = f26735fc93188c8f1d4503bab7e9ccb616847743
-SHA1 (patch-ab) = ebc8a440384f93724dfba10df4f4583b78af4b5d

@@ -1,12 +1,0 @@
-$NetBSD: patch-bf,v 1.1 2006/04/11 15:08:38 joerg Exp $
-
---- uip/scan.c.orig	2006-04-11 14:46:19.000000000 +0000
-+++ uip/scan.c
-@@ -50,7 +50,6 @@ static struct swit switches[] = {
- 
- /*  */
- 
--extern int errno;
- #ifdef	LBL	/* global for sbr/formatsbr.c - yech! */
- extern struct msgs *fmt_current_folder;	
- #endif

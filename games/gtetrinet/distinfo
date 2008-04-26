@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/01/06 19:42:06 rillig Exp $
-
-SHA1 (gtetrinet-0.7.11.tar.gz) = 44d2dc0b1a1bcd72fd018a478f0741390b33adff
-RMD160 (gtetrinet-0.7.11.tar.gz) = 1d546758b60ad75380011045c1ec746ddcc273a5
-Size (gtetrinet-0.7.11.tar.gz) = 480097 bytes

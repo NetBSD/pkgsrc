@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 13:40:59 agc Exp $
-
-SHA1 (wmSMPmon-2.3.tar.gz) = 90d6665e7314fd4e5dd21cde5d90abd887e519cf
-RMD160 (wmSMPmon-2.3.tar.gz) = 2c95b70488d33b811bd261b0cbb4aad26c845e86
-Size (wmSMPmon-2.3.tar.gz) = 16413 bytes
-SHA1 (patch-aa) = 312453d6f8646453d9676451d182f7cf1d669515
-SHA1 (patch-ab) = 362d0fc7a3ed58b84a9ecbf894dac4752f5b8ee0

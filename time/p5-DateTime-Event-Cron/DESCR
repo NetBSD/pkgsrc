@@ -1,7 +1,0 @@
-The DateTime::Event::Cron module generates DateTime and DateTime::Set objects
-based on crontab-style entries.  The crontab formats are the extended V7
-standard as described in crontab(5) on linux systems and as noted in the
-documentation for Set::Crontab.
-
-Note that the module is still alpha status.  Methods provided are likely to
-change in the future.

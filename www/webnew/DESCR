@@ -1,3 +1,0 @@
-Webnew produces a listing of URLs (web documents) sorted by
-the last modification time as reported by the HTTP server.
-It produces by default a HTML 2.0 document on standard output.

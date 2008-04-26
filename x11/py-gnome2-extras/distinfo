@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/11/05 19:58:20 drochner Exp $
-
-SHA1 (gnome-python-extras-2.14.3.tar.bz2) = 35b48fe0a3716c5323337be7d601066e9fd8e0a0
-RMD160 (gnome-python-extras-2.14.3.tar.bz2) = 09673ff84ddbccf961e4b59c802e19d5172314ec
-Size (gnome-python-extras-2.14.3.tar.bz2) = 363684 bytes
-SHA1 (patch-aa) = ca71fde88d061e79c8711a9233583dfc26050dd9

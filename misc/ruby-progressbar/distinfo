@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/01 07:17:23 obache Exp $
-
-SHA1 (ruby-progressbar-0.9.tar.gz) = 232e04f360e9729c666b98196069db374fa0d930
-RMD160 (ruby-progressbar-0.9.tar.gz) = a286de1b973a01520d59e7b7389bdbb3a122f47e
-Size (ruby-progressbar-0.9.tar.gz) = 5580 bytes

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/06/13 23:21:34 heinz Exp $
-
-SHA1 (XML-SAX-Expat-0.39.tar.gz) = 0f440b662a137705ee0e358fd1fc92e510500806
-RMD160 (XML-SAX-Expat-0.39.tar.gz) = da36f9b2a1c9a53729f4b0e1e35a15349c8f0101
-Size (XML-SAX-Expat-0.39.tar.gz) = 5838 bytes

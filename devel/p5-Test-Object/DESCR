@@ -1,4 +1,0 @@
-The Perl 5 module Test::Object is a testing package designed to
-allow you to easily test what you believe is a valid object against
-the expected behaviour of all of the classes in its inheritance
-tree in one single call.

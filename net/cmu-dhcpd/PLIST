@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/18 22:06:01 abs Exp $
-man/man5/bootptab.5
-man/man5/dhcpd.conf.5
-man/man8/dhcpd.8
-sbin/cmu-dhcpd

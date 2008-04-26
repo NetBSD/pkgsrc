@@ -1,7 +1,0 @@
-This package provides a high-level R interface to Unidata's netCDF data files,
-which are portable across platforms and include metadata information in
-addition to the data sets. Using this package netCDF files can be opened and
-data sets read in easily. It is also easy to create new netCDF dimensions,
-variables, and files, or manipulate existing netCDF files. This interface
-provides considerably more functionality than the old "netCDF" package for R,
-and is not compatible with the old "netCDF" package for R.

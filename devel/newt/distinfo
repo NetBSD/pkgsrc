@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/04/13 09:54:42 wiz Exp $
-
-SHA1 (newt-0.51.6-5.src.rpm) = 69f705b6593ba48169219c11259704467811a321
-RMD160 (newt-0.51.6-5.src.rpm) = b5791cb36a7209da132ce7cd24c6d93d976ddf1e
-Size (newt-0.51.6-5.src.rpm) = 174867 bytes
-SHA1 (patch-aa) = f81b1879a7d1a6b2fa5ce58ffaf4ada4d8b1003c

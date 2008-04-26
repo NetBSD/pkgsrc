@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/03/27 13:08:45 jmmv Exp $
-
-SHA1 (arka-0.11.tgz) = 7b1e373cb7e74a70da8c2c423dd6d7f3fecd6960
-RMD160 (arka-0.11.tgz) = 203d155b292cd34cd00f36b4162756081f03a6fc
-Size (arka-0.11.tgz) = 280123 bytes
-SHA1 (patch-aa) = 97321d794aa8dbe525ac50eb8f2409572485aa56
-SHA1 (patch-ab) = 935e3100a86cc6b43ff62a202f6337765a003c6a

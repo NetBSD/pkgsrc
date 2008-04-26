@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.10 2007/11/30 12:31:52 tron Exp $
-
-SHA1 (gnuplot-4.2.2.tar.gz) = 991db8024f04e8cad300804bc2661e358fdcf348
-RMD160 (gnuplot-4.2.2.tar.gz) = 7364d283718d89c05652d7c25a841154caa2efd8
-Size (gnuplot-4.2.2.tar.gz) = 2832174 bytes
-SHA1 (patch-aa) = a6f67cc9ef3dc1cac2dc5bd9d0ecc634b9b70a92
-SHA1 (patch-ab) = 96db3ecda621a20381d9905dc8faa0dbc71cc426

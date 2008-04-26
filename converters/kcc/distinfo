@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/02/11 16:49:04 rillig Exp $
-
-SHA1 (kcc.tar.gz) = 1ecb051b48c5f3e0e5c055dd34eee89c252cf176
-RMD160 (kcc.tar.gz) = e75c0e13bc4bd435c18a2bb690c24188e34610b1
-Size (kcc.tar.gz) = 18869 bytes
-SHA1 (patch-aa) = 648888b03277eb9361c10b614bce049c8d6df38b

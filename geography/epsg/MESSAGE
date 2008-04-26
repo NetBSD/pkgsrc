@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.4 2007/07/28 11:06:36 gdt Exp $
-
-Before the EPSG data can be used, it must be installed into a
-relational database.  The data files are installed in ${EPSGDIR}.  A
-script "${BINDIR}/epsg-load" to install the data is provided.
-
-===========================================================================

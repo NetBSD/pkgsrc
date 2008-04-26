@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.pam,v 1.1 2006/08/09 16:42:09 adrianp Exp $
-lib/rlm_pam-${RADVER}.la
-lib/rlm_pam.la

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/22 05:32:46 minskim Exp $
-bin/error
-man/cat1/error.0
-man/man1/error.1

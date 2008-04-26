@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.sparc,v 1.1 2007/08/21 22:49:19 jlam Exp $
-${EMULSUBDIRSLASH}lib/libsparc_v8.so.0
-${EMULSUBDIRSLASH}lib/libsparc_v8.so.0.0
-${EMULSUBDIRSLASH}usr/lib/libsparc_v8.so.0
-${EMULSUBDIRSLASH}usr/lib/libsparc_v8.so.0.0

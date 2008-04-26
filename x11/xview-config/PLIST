@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:44 zuntum Exp $
-lib/X11/config/XView.cf
-lib/X11/config/XView.lib
-lib/X11/config/XView.obj
-lib/X11/config/XView.prog
-lib/X11/config/XView.rules
-lib/X11/config/XView.tmpl

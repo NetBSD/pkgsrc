@@ -1,5 +1,0 @@
-Guile interface to FastCGI.
-
-guile-fcgi incorporates both FCGI and FCGX interfaces into Guile. For
-more information about FastCGI, see the ap-fastcgi and fcgi-devkit
-packages.

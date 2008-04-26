@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/13 15:55:55 wulf Exp $
-
-SHA1 (pyephem-3.7b.tar.gz) = 541346dbcad966bcc8be407722132304c3d2bc3a
-RMD160 (pyephem-3.7b.tar.gz) = bc1b1a8312dbc95735b6c1b82439d604992a942f
-Size (pyephem-3.7b.tar.gz) = 299901 bytes

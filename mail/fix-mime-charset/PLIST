@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/09/26 10:21:51 wiz Exp $
-bin/fix-mime-charset
-man/man1/fix-mime-charset.1

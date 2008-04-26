@@ -1,8 +1,0 @@
-GNU hypertext utilities to view and manipulate info
-documentation files.
-
-The  GNU  project has a hypertext system called Info which
-allows the same source file to  be  either  printed  as  a
-paper manual, or viewed using info.  It is possible to use
-the info program from inside Emacs, or to use  the  stand-
-alone  version  described  here.

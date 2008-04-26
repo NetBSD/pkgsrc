@@ -1,3 +1,0 @@
-Small (in dimensions) tool to display various statistics like average
-load during the last minute, last 5 minutes and 15 minutes, memory
-usage, swap usage and CPU usage. Especially suited for BlackBox.

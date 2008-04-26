@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2007/01/16 11:03:38 tonio Exp $
-
-SHA1 (apache-ant-1.7.0-bin.tar.bz2) = 5c65a8f98cb333382f0f718b203c6c8da1a1326c
-RMD160 (apache-ant-1.7.0-bin.tar.bz2) = 2d8a443342e08836fc6079e61b719ce0434823c5
-Size (apache-ant-1.7.0-bin.tar.bz2) = 7467376 bytes
-SHA1 (patch-aa) = bcc0f10596466e0069fb406893a387c8be437f34

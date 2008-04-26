@@ -1,7 +1,0 @@
-This perl package uses perl5 objects to make it easy for manipulating
-spreadsheet data among disk files, database, and Web publishing.
-
-A table object contains a header and a two-dimensional array of scalars.
-Three class methods Data::Table::fromCSV, Data::Table::fromTSV, and
-Data::Table::fromSQL allow users to create a table object from a CSV/TSV
-file or a database SQL selection in a snap.

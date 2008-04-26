@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 11:24:04 agc Exp $
-
-SHA1 (smpeg-xmms-0.3.5.tar.gz) = e67a22cf99a9238be0652fe503b2fa37ae0c1379
-RMD160 (smpeg-xmms-0.3.5.tar.gz) = 038580713079090866b0c45cbdc857c4e2251adb
-Size (smpeg-xmms-0.3.5.tar.gz) = 141182 bytes
-SHA1 (patch-aa) = 506d41ca8e6b197526fc913c92a529046178cad3

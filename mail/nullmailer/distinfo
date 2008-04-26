@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.10 2007/03/24 06:49:02 schmonz Exp $
-
-SHA1 (nullmailer-1.03.tar.gz) = 95ed13bd0d4e05f5f66bb1a022e9424f892df3b2
-RMD160 (nullmailer-1.03.tar.gz) = b4b6244eb86a7c01330f0a65338a204c07794e23
-Size (nullmailer-1.03.tar.gz) = 172250 bytes
-SHA1 (patch-aa) = dc2ca7a43598e3057f7903319581d3d529d3326f
-SHA1 (patch-ab) = a8bbf42d43b2e8aec3cedea9715c31b94c7b7ddf
-SHA1 (patch-ac) = 6e8f3e4ab3f11ceefdaede505b52db24d8a34fde

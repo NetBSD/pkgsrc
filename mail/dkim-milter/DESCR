@@ -1,4 +1,0 @@
-dkim-milter consists of two parts: A milter-based application
-(dkim-filter) which plugs in to Sendmail to provide DomainKeys
-Identified Mail service, and a library (libdkim) which can be used to
-build DKIM-compliant applications or MTAs.

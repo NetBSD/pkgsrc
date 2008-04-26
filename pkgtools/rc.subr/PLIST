@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2004/08/01 08:56:10 schmonz Exp $
-etc/rc.conf.example
-etc/rc.subr
-${RCD_SCRIPTS_DIR}/DAEMON
-${RCD_SCRIPTS_DIR}/LOGIN
-${RCD_SCRIPTS_DIR}/NETWORKING
-${RCD_SCRIPTS_DIR}/SERVERS
-@unexec ${RMDIR} ${RCD_SCRIPTS_DIR} 2> /dev/null || ${TRUE}

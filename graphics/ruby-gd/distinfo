@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2008/04/04 15:30:01 jlam Exp $
-
-SHA1 (ruby-gd-0.7.4.gem) = 35f2bd3810f77da1f7bc2ce6bdfdcd50000cad6b
-RMD160 (ruby-gd-0.7.4.gem) = 28db1a6e12c601c0acb2329d1f694b9f0276a189
-Size (ruby-gd-0.7.4.gem) = 41472 bytes

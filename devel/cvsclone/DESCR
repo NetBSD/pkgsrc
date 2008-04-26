@@ -1,8 +1,0 @@
-Utility to clone CVS repositories over the pserver interface.  Works
-for anonymous access.
-
-FEATURES
-- reads $HOME/.cvspass
-- can clone corrupt repositories: writes ,v files directly, does not
-  need rcs.  (For example, ccvs module has archives that go backwards
-  in time.)

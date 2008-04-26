@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/04/21 03:15:00 itohy Exp $
-bin/kyopon
-man/cat1/kyopon.0
-man/man1/kyopon.1

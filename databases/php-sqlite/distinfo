@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/09/18 15:22:11 jdolecek Exp $
-
-SHA1 (php-SQLite/SQLite-1.0.3.tgz) = 338333183875deb74956b37a8d58e2659d47a501
-RMD160 (php-SQLite/SQLite-1.0.3.tgz) = 681928ec360b5fe3e7cdcecc5ff88491f5547428
-Size (php-SQLite/SQLite-1.0.3.tgz) = 371189 bytes
-SHA1 (patch-aa) = cfc560a992bd8706f79828f31b7210fcef14e25f

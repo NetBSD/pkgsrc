@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:29 wiz Exp $
-
-SHA1 (crawl-0.4.tar.gz) = b53be27b572ba6a88ab80243b177873aed0b314b
-RMD160 (crawl-0.4.tar.gz) = c86898b66c661e6b841170114deba4d8f076651d
-Size (crawl-0.4.tar.gz) = 111084 bytes
-SHA1 (patch-aa) = 874cb3b73cbc56e320c58039ecc9fd98ab258a0b
-SHA1 (patch-ab) = 9c934c5c7f03e4acbd02222a30267aded4d01e26
-SHA1 (patch-ac) = 079c792e55fa3e60dead7ff9c1c46132d01a00d4

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:19:06 zuntum Exp $
-bin/webnew
-man/man1/webnew.1

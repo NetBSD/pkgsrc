@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/04/25 18:06:51 tnn Exp $
-bin/less
-bin/lesskey
-bin/lessecho
-man/man1/less.1
-man/man1/lesskey.1
-man/man1/lessecho.1

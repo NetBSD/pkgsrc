@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/06/17 20:57:55 rillig Exp $
-
-SHA1 (patchutils-0.2.31.tar.bz2) = 046570f2fcd66e9d561b4863ac0212d958d9fedd
-RMD160 (patchutils-0.2.31.tar.bz2) = 8207f769d38faed7d848daae56ff24e697a5f0c0
-Size (patchutils-0.2.31.tar.bz2) = 146392 bytes

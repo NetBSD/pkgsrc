@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/02 02:38:57 obache Exp $
-
-SHA1 (suikyo-2.1.0.tar.gz) = 2e57df7e9144370b45e1a896b2ae1a7f94d06d7c
-RMD160 (suikyo-2.1.0.tar.gz) = fb55a82666d789e3f2e7b63a8a69f4b4429d06cf
-Size (suikyo-2.1.0.tar.gz) = 202155 bytes
-SHA1 (patch-aa) = 3dc948215fa1c5c2b69a6ebaecae3dcc5d2520c7

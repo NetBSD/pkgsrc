@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/08/06 11:49:50 joerg Exp $
-
-SHA1 (liblbxutil-1.0.1.tar.bz2) = 91b21ca5f315f844c2f12aba898c4d2c527f5fb6
-RMD160 (liblbxutil-1.0.1.tar.bz2) = c30f05119eab8ade950217e2add9af09d3996304
-Size (liblbxutil-1.0.1.tar.bz2) = 242504 bytes
-SHA1 (patch-aa) = 938c49a062da92eba5e7054cdc412752a20c4913
-SHA1 (patch-ab) = 54557385783e1331624e46ce5062288d15cf301a
-SHA1 (patch-ac) = d631e712f190e46661a83c59a687c16ea21a6121
-SHA1 (patch-ad) = 179d850176a1cf38d36d2df1dd409800df9e5ff5

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.21 2007/07/31 04:44:01 schmonz Exp $
-
-SHA1 (tmda-1.1.12.tgz) = 0b175d01cd03cb4046d41c62ede2268d4eb12b03
-RMD160 (tmda-1.1.12.tgz) = 8a674f312fe9612fe204d081e7fd3d38d802cdba
-Size (tmda-1.1.12.tgz) = 1427638 bytes
-SHA1 (patch-ab) = 4cac0a76d160eebedc06e1789728be5872113fee

@@ -1,9 +1,0 @@
-This module allows you to run a subprocess and redirect stdin, stdout,
-and/or stderr to files and perl data structures. It aims to satisfy
-99% of the need for using system, qx, and open3 with a simple,
-extremely Perlish API and none of the bloat and rarely used features
-of IPC::Run.
-Speed, simplicity, and portability are paramount. (That's speed of
-Perl code; which is often much slower than the kind of buffered I/O
-that this module uses to spool input to and output from the child
-command.) Disk space is not.

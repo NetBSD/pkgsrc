@@ -1,7 +1,0 @@
-This Kwiki plugin can run a standalone HTTP server for the Kwiki under
-the current working directory.  It is helpful for debugging purposes
-or for starting up a wiki site quickly.  After installation, just run:
-
-	kwiki -start
-
-and you can access the Kwiki site at http://localhost:8080/.

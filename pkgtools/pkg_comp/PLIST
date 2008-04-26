@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/09/07 00:08:35 rh Exp $
-sbin/pkg_comp
-man/man8/pkg_comp.8

@@ -1,7 +1,0 @@
-# $NetBSD: DEINSTALL,v 1.2 2006/04/06 14:39:11 jlam Exp $
-
-case ${STAGE} in
-DEINSTALL)
-	${TEST} ! -x ./+TETEX || ./+TETEX REMOVE
-	;;
-esac

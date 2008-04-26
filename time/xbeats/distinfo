@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 19:14:56 wiz Exp $
-
-SHA1 (xbeats-0.4.tar.gz) = 2a36587b4f94d0fa6b351f8756bd1c08f5730e24
-RMD160 (xbeats-0.4.tar.gz) = 2ec8c230068b91d9eff29bc1d02f29fa3632633e
-Size (xbeats-0.4.tar.gz) = 37526 bytes
-SHA1 (patch-aa) = 79226edb7949514983c6c83f13e2056cac3f0c51

@@ -1,5 +1,0 @@
-Abc2ps is a typesetting program for abc. It reads a file containing abc
-code and outputs the music to another file in Postscript. The music can
-then displayed (i.e. using ghostview) or printed on a Postscript
-printer. The program is written in C and runs on most systems which have
-a C compiler.

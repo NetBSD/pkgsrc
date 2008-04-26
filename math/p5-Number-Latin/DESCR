@@ -1,2 +1,0 @@
-A perl module for converting to a "lower-latin" / "upper-latin" numbering
-system, where 1-26 is a-z, 27 is aa, 53 is ba, et cetera.

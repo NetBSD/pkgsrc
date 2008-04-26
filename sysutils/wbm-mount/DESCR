@@ -1,2 +1,0 @@
-This is the standard "mount" Webmin module to mount filesystems and
-swap files usually configured in /etc/fstab or /etc/vfstab.

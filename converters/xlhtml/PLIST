@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/10/22 15:25:59 wiz Exp $
-bin/nsopen
-bin/nspptview
-bin/nsxlview
-bin/ppthtml
-bin/xlhtml
-man/man1/ppthtml.1
-man/man1/xlhtml.1

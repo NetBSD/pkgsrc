@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.23 2007/12/09 22:08:32 jklos Exp $
-
-SHA1 (apr-1.2.12.tar.gz) = 12ebc5ee6bba6b66b75e25ff8326fd2d2ad8f4ff
-RMD160 (apr-1.2.12.tar.gz) = 912c34e412b42e678288727b811ba35f03d07b6b
-Size (apr-1.2.12.tar.gz) = 1127522 bytes

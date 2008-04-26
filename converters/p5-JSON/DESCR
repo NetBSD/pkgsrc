@@ -1,5 +1,0 @@
-This module converts between JSON (JavaScript Object Notation) and Perl
-data structure into each other.
-For JSON, See to http://www.JSON.org/.
-
-  JSON-RPC http://json-rpc.org/

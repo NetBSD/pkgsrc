@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/22 18:54:47 drochner Exp $
-qt4/plugins/imageformats/libqtiff.la
-@unexec ${RMDIR} %D/qt4/plugins/imageformats 2>/dev/null || ${TRUE}

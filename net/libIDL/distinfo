@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.14 2008/02/13 19:33:26 drochner Exp $
-
-SHA1 (libIDL-0.8.10.tar.bz2) = 643d1aa2a4be94dd568f8d585d7df22e69706cdd
-RMD160 (libIDL-0.8.10.tar.bz2) = 9d02e51bd12a5f05ccca134717d0304e7746d3aa
-Size (libIDL-0.8.10.tar.bz2) = 372665 bytes

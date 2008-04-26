@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.15 2008/04/04 21:55:51 tnn Exp $
-
-SHA1 (sawfish-1.3.3.tar.gz) = 3a77267cc8a2032a5a0810070b2a200fe4961250
-RMD160 (sawfish-1.3.3.tar.gz) = 82f11163013c711559fe48e51a85ff9926086faf
-Size (sawfish-1.3.3.tar.gz) = 1805122 bytes
-SHA1 (patch-aa) = 1861de9c9c0135db7edf9db8c035732d2ef18556
-SHA1 (patch-ab) = 21a89c87afa9cb5fdf3b028109b0db9c5991fb1e

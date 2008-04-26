@@ -1,4 +1,0 @@
-PHP is a programming language designed to be embedded into web pages.
-The extension allows you to operate on an XML document with the DOM
-(Document Object Model) API. DOM extension module in PHP5 replaces
-DOM XML extension in PHP4.

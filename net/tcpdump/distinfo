@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.16 2007/10/19 03:48:47 taca Exp $
-
-SHA1 (tcpdump-3.9.7.tar.gz) = 5d2a95f0de1cbae70ba01c64f9a2c0fac0183dba
-RMD160 (tcpdump-3.9.7.tar.gz) = 1c662f61c99121bfc8336eb059b60630cab03998
-Size (tcpdump-3.9.7.tar.gz) = 873866 bytes
-SHA1 (patch-af) = 5bf681fd99c2436875d7aafb8939fae231e906cf

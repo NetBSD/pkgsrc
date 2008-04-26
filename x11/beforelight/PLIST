@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/03/08 17:21:54 joerg Exp $
-bin/beforelight
-lib/X11/app-defaults/Beforelight
-man/man1/beforelight.1

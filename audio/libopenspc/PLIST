@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/26 16:44:00 drochner Exp $
-bin/ospcplay
-include/openspc.h
-lib/libopenspc.la

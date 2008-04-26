@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2006/01/18 12:44:03 jmmv Exp $
-lib/gstreamer-0.8/libgstmpeg2dec.la
-@comment in gstreamer0.8: @dirrm lib/gstreamer-0.8

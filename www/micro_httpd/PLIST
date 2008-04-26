@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/01/09 09:44:55 jmmv Exp $
-man/man8/micro_httpd.8
-sbin/micro_httpd

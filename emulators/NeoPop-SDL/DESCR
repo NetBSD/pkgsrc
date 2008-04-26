@@ -1,6 +1,0 @@
-NeoPop-SDL is the SDL port of NeoPop, a portable NeoGeo Pocket
-emulator.  It supports black&white and color games, game state saving,
-screenshots (BMP and PNG), sound and music, double- and
-triple-size both in software and hardware scaling as well as
-full-screen-modes, joysticks and keyboard input, and reading from
-ZIP files.

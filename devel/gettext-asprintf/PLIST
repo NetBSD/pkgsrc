@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/04 16:53:56 joerg Exp $
-include/autosprintf.h
-info/autosprintf.info
-lib/libasprintf.la
-share/doc/libasprintf/autosprintf.html
-@dirrm share/doc/libasprintf

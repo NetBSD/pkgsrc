@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.9 2006/10/06 22:14:44 reed Exp $
-
-SHA1 (xisp-2.7p1.tar.gz) = 158db1ad0f9820da33b5f51fa5110b0a9374ba2f
-RMD160 (xisp-2.7p1.tar.gz) = 47a4c6ebe0c7e5a1971f2934f7371370e7cbdfe2
-Size (xisp-2.7p1.tar.gz) = 294492 bytes
-SHA1 (patch-aa) = 827a1e0bdd66d75e20d7526a0b5d68942fec207f
-SHA1 (patch-ab) = 19f3a0ef7fd776108d7796917019ffcc28576c8f
-SHA1 (patch-ac) = 14f251acd447c2502322c55c912fb66561e91555

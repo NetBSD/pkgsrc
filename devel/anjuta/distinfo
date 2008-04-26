@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.16 2007/12/16 14:49:40 drochner Exp $
-
-SHA1 (anjuta-2.2.3.tar.bz2) = 8c44f7d9d19899f47c71b297668cff85a273b7a1
-RMD160 (anjuta-2.2.3.tar.bz2) = 4e17d285f6dcb668a3e81cd87055253b745cfbd2
-Size (anjuta-2.2.3.tar.bz2) = 5547518 bytes
-SHA1 (patch-bb) = c7ecb2034d8b9f63905d878ff7d901eda7422c11
-SHA1 (patch-bf) = 8a07e2074019419111cf0845856a3a7636601a30

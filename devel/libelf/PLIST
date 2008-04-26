@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2007/10/11 18:53:12 drochner Exp $
-include/libelf/elf_repl.h
-include/libelf/gelf.h
-include/libelf/libelf.h
-include/libelf/nlist.h
-include/libelf/sys_elf.h
-lib/libelf.la
-lib/pkgconfig/libelf.pc
-@dirrm include/libelf

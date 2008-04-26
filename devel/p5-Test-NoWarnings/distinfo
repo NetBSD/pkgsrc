@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/12/11 11:58:04 rhaen Exp $
-
-SHA1 (Test-NoWarnings-0.084.tar.gz) = 6c11e3c8d7e724e70ba2e4cc180844a87f5ed5e3
-RMD160 (Test-NoWarnings-0.084.tar.gz) = a659ab279e0398d70098630979a850b721ac6993
-Size (Test-NoWarnings-0.084.tar.gz) = 15335 bytes

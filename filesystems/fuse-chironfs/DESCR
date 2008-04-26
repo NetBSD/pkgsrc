@@ -1,3 +1,0 @@
-ChironFS implements RAID1-like replication on the file system level.
-In case of a unit failure, other replicas on the mount will be
-used.

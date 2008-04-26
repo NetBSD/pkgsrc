@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 12:06:56 agc Exp $
-
-SHA1 (Math-BigInteger-1.0.tar.gz) = 15a738cfee2e0d235b324c07e477739c747f62f7
-RMD160 (Math-BigInteger-1.0.tar.gz) = 4f27b9e3ed2f41bda8e3ed7c2d4b8cb9006da0a4
-Size (Math-BigInteger-1.0.tar.gz) = 19869 bytes
-SHA1 (patch-aa) = 3a3d3792e499dc1cd5104c9db5e0e9c4aa03e35e

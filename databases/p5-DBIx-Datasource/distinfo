@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 16:33:08 agc Exp $
-
-SHA1 (DBIx-DataSource-0.02.tar.gz) = 33a961507b8989ace245f0aeb508fc02c00140eb
-RMD160 (DBIx-DataSource-0.02.tar.gz) = b5d538bf7f3eee9980d1b9fbbefa54d8c3a62bc1
-Size (DBIx-DataSource-0.02.tar.gz) = 3432 bytes

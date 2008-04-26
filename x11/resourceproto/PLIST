@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 22:03:23 joerg Exp $
-include/X11/extensions/XResproto.h
-lib/pkgconfig/resourceproto.pc
-@comment @dirrm include/X11/extensions

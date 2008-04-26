@@ -1,7 +1,0 @@
-Cone is a text-based mail client.  Cone seamlessly handles multiple
-POP3, IMAP accounts, and local mail folders.  Cone is also a simple
-newsreader.  Cone's interface is foolproof enough to be used by
-inexperienced users, but it also offers advanced features for power
-users.  Cone also serves as a platform for development of a new
-experimental network mail access protocol, SMAP, that offers additional
-functionality not available with IMAP or POP3.

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 20:39:48 agc Exp $
-
-SHA1 (libvisual-xmms-0.2.0.tar.gz) = 9e0188dc880ffdb202aea005049c45df7e77d14a
-RMD160 (libvisual-xmms-0.2.0.tar.gz) = 22ed3ba95cf8d72defa80aa306807358c725f475
-Size (libvisual-xmms-0.2.0.tar.gz) = 379314 bytes
-SHA1 (patch-aa) = cc01876e758ebbff13c930514b5f3274fd853461
-SHA1 (patch-ab) = 2a9ddff14a7638ca0589481837a357a88bbc559c

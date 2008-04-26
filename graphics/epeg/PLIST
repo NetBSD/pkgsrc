@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/12/28 21:54:35 xtraeme Exp $
-bin/epeg
-bin/epeg-config
-include/Epeg.h
-lib/libepeg.la

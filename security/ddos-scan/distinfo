@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/06/30 18:49:38 joerg Exp $
-
-SHA1 (ddos_scan.tar) = 97e695f19df0edef4d833afb8114b24822e3db27
-RMD160 (ddos_scan.tar) = 5aedea63bbcf357b8084d8e0e6ad0a4294ba3ba3
-Size (ddos_scan.tar) = 30720 bytes
-SHA1 (patch-aa) = 3110095195d3f69f22359957c8c73ade29a3079c
-SHA1 (patch-ab) = d74cc9a603f20e144c77444b2c956e53c8511b55

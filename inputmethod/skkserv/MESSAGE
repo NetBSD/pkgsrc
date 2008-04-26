@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.4 2006/07/05 07:09:58 jlam Exp $
-
-The default port number for the SKK service should be added to the
-/etc/services database:
-
-    skkserv	1178/tcp
-
-===========================================================================

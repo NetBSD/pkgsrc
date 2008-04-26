@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/01/21 08:12:03 agc Exp $
-
-SHA1 (vtcl-1.6.0.tar.gz) = e115fe7b3d340cabb5b1475c097d701e4b793fee
-RMD160 (vtcl-1.6.0.tar.gz) = 02c03470bd7449d11f388638adf0aee89f403c67
-Size (vtcl-1.6.0.tar.gz) = 554727 bytes
-SHA1 (patch-aa) = 17f477855cd02e190698a1e14adf628e8f50d2cf

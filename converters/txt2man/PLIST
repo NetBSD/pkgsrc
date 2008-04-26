@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/05/23 09:39:13 xtraeme Exp $
-bin/bookman
-bin/src2man
-bin/txt2man
-man/man1/bookman.1
-man/man1/src2man.1
-man/man1/txt2man.1

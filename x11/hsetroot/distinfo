@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/07/25 03:14:09 kristerw Exp $
-
-SHA1 (hsetroot-1.0.2.tar.gz) = a39e0fff11eb17e5432761aabcd8b68242210bb5
-RMD160 (hsetroot-1.0.2.tar.gz) = 0aadf0308ec0068525babca338a35cc3899c1dc9
-Size (hsetroot-1.0.2.tar.gz) = 125535 bytes
-SHA1 (patch-aa) = 72abcf8b764bd9b9109915da7da3a370f274bdf3

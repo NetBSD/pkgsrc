@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 16:33:10 agc Exp $
-
-SHA1 (xsqlmenu-2.10.tar.gz) = d97c3237d5bfd2213648067196b5f6d4a57fe706
-RMD160 (xsqlmenu-2.10.tar.gz) = ab3f35954ce50de1bf391174d13045989839db84
-Size (xsqlmenu-2.10.tar.gz) = 31458 bytes
-SHA1 (patch-aa) = 68c45a0787adf3a840343cf968d1c2172822a080

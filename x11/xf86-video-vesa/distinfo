@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/08/02 14:15:18 sborrill Exp $
-
-SHA1 (xf86-video-vesa-1.3.0.tar.bz2) = 09d74f838c07c58b6eba3600f3afa5fb74420ff4
-RMD160 (xf86-video-vesa-1.3.0.tar.bz2) = d75e863733a8803a442f74f3f9ecedce1506e05b
-Size (xf86-video-vesa-1.3.0.tar.bz2) = 237759 bytes
-SHA1 (patch-aa) = 9a60c79ef6cbf10356eb5fb6eb8712b69d12ea99

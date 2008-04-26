@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/09/24 13:53:17 joerg Exp $
-
-SHA1 (wimon-0.3.tar.gz) = 8be1bc6d4917adee5641310258fe77f8b265013f
-RMD160 (wimon-0.3.tar.gz) = d8670b1ceb1fde0c0001b2e6ca39a82909cd42d4
-Size (wimon-0.3.tar.gz) = 8103 bytes
-SHA1 (patch-aa) = 5edbd8bbebf8aa31f6a95d4c1c5370a7d61f0e1a
-SHA1 (patch-ab) = 8bd60329cd0bb61ceff81e58774d1fabba65e9e7

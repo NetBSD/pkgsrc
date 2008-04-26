@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/04 11:31:04 shannonjr Exp $
-
-SHA1 (pcsc-perl-1.4.6.tar.gz) = 4f6cb030aa5f20d071ab9ab56ad81ee10a74e493
-RMD160 (pcsc-perl-1.4.6.tar.gz) = bfdc0149bcb82ec2ac1e24e107692d68d9de8f0d
-Size (pcsc-perl-1.4.6.tar.gz) = 41828 bytes
-SHA1 (patch-aa) = 2b8ec38a837888784ad8e12c26238e9e1170e924

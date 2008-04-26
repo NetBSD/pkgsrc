@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/05/18 15:45:09 gavan Exp $
-share/examples/rc.d/tits
-share/examples/tits.conf
-sbin/tits
-man/man8/tits.8
-man/cat8/tits.0

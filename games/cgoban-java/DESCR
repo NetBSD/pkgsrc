@@ -1,5 +1,0 @@
-CGoban-java (CGoban 3) is a port of the SGF editor of CGoban 1 to Java
-combined with a client for the Kiseido Go Server.  It is missing the Go
-Modem Protocol adapter from CGoban 1 and the IGS/NNGS client from cgoban
-1, but the SGF editor is a bit better (and of course the KGS client in
-it is much better than the IGS/NNGS client in CGoban 1).

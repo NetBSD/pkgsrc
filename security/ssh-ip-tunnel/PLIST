@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/30 09:15:36 obache Exp $
-man/man8/vpn.8
-sbin/vpn
-share/examples/vpn/global.conf
-share/examples/vpn/peers/sample.peer
-@dirrm share/examples/vpn/peers
-@dirrm share/examples/vpn

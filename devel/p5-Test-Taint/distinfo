@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:29 agc Exp $
-
-SHA1 (Test-Taint-1.04.tar.gz) = a0b7f19be31fefb1a475466599903ee1e33f1191
-RMD160 (Test-Taint-1.04.tar.gz) = 83b768a0c49430261814c235181f677f9554abdf
-Size (Test-Taint-1.04.tar.gz) = 12404 bytes

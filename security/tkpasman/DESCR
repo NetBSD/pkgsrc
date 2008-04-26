@@ -1,7 +1,0 @@
-TkPasMan is a simple program that lets you store usernames and passwords
-you collect during access to forums, mailing lists, and other websites.
-It is inspired in gpasman, but it has more paste possibilities. You can,
-for example, paste the username at first and then password, using two
-mouse clicks.
-
-Passwords can be stored in a secure file, using OpenSSL to encrypt it.

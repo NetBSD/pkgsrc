@@ -1,4 +1,0 @@
-HTTP::Server::Simple::Kwiki is a standalone webserver for Kwiki.  This
-means that you don't need to run it under a proper webserver.  This
-is intended mostly for debugging Kwiki, or for when you just want to
-play with it without having to configure Apache.

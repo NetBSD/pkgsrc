@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/23 08:21:34 rillig Exp $
-share/festival/lib/dicts/COPYING.poslex
-share/festival/lib/dicts/wsj.wp39.poslexR
-share/festival/lib/dicts/wsj.wp39.tri.ngrambin

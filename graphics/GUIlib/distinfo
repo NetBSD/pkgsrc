@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/10/10 22:02:20 rillig Exp $
-
-SHA1 (GUIlib-1.1.0.tar.gz) = 4ba285dc9902c6204663a935ee3d8600cc921cc9
-RMD160 (GUIlib-1.1.0.tar.gz) = aeed496d4d92c0f3a28531fb37def7b69c78109a
-Size (GUIlib-1.1.0.tar.gz) = 180318 bytes
-SHA1 (patch-aa) = d83443dfb9509bc9e63c100fd64b61294eb87f03

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST.common_end,v 1.3 2006/06/18 10:07:09 rillig Exp $
-@dirrm share/hbench/conf
-@dirrm share/hbench/Results
-@dirrm share/hbench
-@dirrm share/doc/hbench
-@dirrm libexec/hbench/${PLATFORM}
-@dirrm libexec/hbench

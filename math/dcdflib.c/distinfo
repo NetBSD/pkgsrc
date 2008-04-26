@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/06/09 09:58:57 rillig Exp $
-
-SHA1 (dcdflib.c-1.1/dcdflib.c-1.1.tar.gz) = 729774058df2789b0ca678d06885632222f7edd5
-RMD160 (dcdflib.c-1.1/dcdflib.c-1.1.tar.gz) = 4378bdf5b7f486a18ba4da7a2e6856639c57d6d4
-Size (dcdflib.c-1.1/dcdflib.c-1.1.tar.gz) = 61435 bytes
-SHA1 (patch-aa) = f901207229ae25b7ebdbdedf764e8d963fd4097e
-SHA1 (patch-ab) = 3ce5c77cddd2006ecd6279b1ba31ddb7f4da4422

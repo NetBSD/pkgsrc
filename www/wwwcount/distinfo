@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/07/19 19:48:21 jlam Exp $
-
-SHA1 (wwwcount2.5.tar.gz) = 374babfc93db3092eda13bda5fd65a372beca4bb
-RMD160 (wwwcount2.5.tar.gz) = 354c92ab5e0f8ec2acd484108fa968a5bfb6e62a
-Size (wwwcount2.5.tar.gz) = 441215 bytes
-SHA1 (patch-aa) = 2c1db53763365a08e32e9724efd3148994af9963
-SHA1 (patch-ab) = f6f71b1428506ab565f127c38096b65408f5bc53
-SHA1 (patch-ae) = e950e48c2f9a8f3da27c8b51267a52d7a7bd704e

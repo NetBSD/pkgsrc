@@ -1,4 +1,0 @@
-Kwiki plugin to archive pages using CVS.
-
-(This package includes the http://www.kwiki.org/?PatchKwikiArchiveCvs patches
-to make Kwiki::Archives::Cvs work with Kwiki::Revision.)

@@ -1,3 +1,0 @@
-The SPF (Sender Policy Framework) protocol relies on sender domains to publish
-a DNS whitelist of their designated outbound mailers. Given an envelope
-sender, Mail::SPF::Query determines the legitimacy of an SMTP client IP.

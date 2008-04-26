@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/07/23 20:24:11 jonb Exp $
-bin/mmafm
-bin/mmpfb
-man/man1/mmafm.1
-man/man1/mmpfb.1

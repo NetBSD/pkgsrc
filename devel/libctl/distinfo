@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 22:24:17 agc Exp $
-
-SHA1 (libctl-2.2.tar.gz) = 8d115f9094fd3ec9c29fb5777facd5eb3d38c47f
-RMD160 (libctl-2.2.tar.gz) = 2993277faef4d99d1a07a46591b0b984a7042663
-Size (libctl-2.2.tar.gz) = 185325 bytes

@@ -1,6 +1,0 @@
-IndexedCatalog is an extension to the Zope Object Database (ZODB) that
-provides indexing and allows queries for objects based on attributes.
-Which is accomplished by indexing all fields by type
-(string/integer/float) and by a simple query language.
-
-IndexedCatalog is licensed under the Lesser GNU Public Licence (LGPL).

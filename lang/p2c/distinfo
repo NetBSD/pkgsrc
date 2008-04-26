@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 09:03:10 agc Exp $
-
-SHA1 (p2c-1.20.tar.Z) = 797c5394d50567d5195548d3919c5a66ab90f680
-RMD160 (p2c-1.20.tar.Z) = 9917ef3f501b1506f2992d572f439398862fba4c
-Size (p2c-1.20.tar.Z) = 579294 bytes
-SHA1 (patch-aa) = 0cd351023774bd4ffa50d10b1a02bf37cb54f781
-SHA1 (patch-ab) = 852981992cefacd660ae8f136d64e22fb323fb03

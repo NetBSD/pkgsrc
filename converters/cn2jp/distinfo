@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/06/21 15:00:51 minskim Exp $
-
-SHA1 (cn2jp1.4b.tar.gz) = 09cee0b189e5925a5378f1f817cc9593be899518
-RMD160 (cn2jp1.4b.tar.gz) = 7697648e23586a0fba0d840ba57cf816c175ac10
-Size (cn2jp1.4b.tar.gz) = 271660 bytes
-SHA1 (patch-aa) = a1b67afbc36161b2731a938d81e19af2c9fba7dd
-SHA1 (patch-ab) = a5a43c0dd84515a5c8b7d0cacc9a49b9b378a8e1
-SHA1 (patch-ac) = b601a2893b8a94374e4b4271be49f87ee244ae53
-SHA1 (patch-ad) = 4c568df93470c404f12e4221fbb64c532ff18c6b

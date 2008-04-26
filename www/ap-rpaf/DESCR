@@ -1,9 +1,0 @@
-mod_rpaf changes the remote address of the client visible to other Apache
-modules when two conditions are satisfied. First condition is that the
-remote client is actually a proxy that is defined in httpd.conf.
-Secondly if there is an incoming X-Forwarded-For header and the proxy is
-in it's list of known proxies it takes the last IP from the incoming
-X-Forwarded-For header and changes the remote address of the client in
-the request structure. It also takes the incoming X-Host header and
-updates the virtualhost settings accordingly. For Apache2 mod_proxy it
-takes the X-Forwared-Host header and updates the virtualhosts.

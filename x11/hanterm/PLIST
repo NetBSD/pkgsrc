@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/12 20:55:04 joerg Exp $
-bin/hanterm
-${IMAKE_MAN_DIR}/hanterm.${IMAKE_MAN_SUFFIX}
-lib/X11/app-defaults/Hanterm

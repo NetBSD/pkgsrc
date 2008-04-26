@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/16 20:53:30 joerg Exp $
-bin/iceauth
-man/man1/iceauth.1

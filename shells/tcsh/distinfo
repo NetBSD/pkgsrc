@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.22 2007/04/11 06:12:10 wiz Exp $
-
-SHA1 (tcsh-6.15.00.tar.gz) = d24f7bf27e80222a6293b6629c14db547f0b7387
-RMD160 (tcsh-6.15.00.tar.gz) = 8065279e93bd3fddb2a95a3f74a680858d36508c
-Size (tcsh-6.15.00.tar.gz) = 870886 bytes
-SHA1 (patch-aa) = 5ba012bfa662b57be300f5e81a8fcce44b218e72
-SHA1 (patch-ab) = ab71a3826bbcef0702a7d43446f13454176aa671

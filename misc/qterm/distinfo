@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/08/31 21:50:50 agc Exp $
-
-SHA1 (qterm-ac-1.0.tar.gz) = 2603f57265f62b144418ff4a283fc3454f9dcb4c
-RMD160 (qterm-ac-1.0.tar.gz) = 6234e96caff468ba5dd13babb6a0b2e33dcbd3d4
-Size (qterm-ac-1.0.tar.gz) = 42415 bytes
-SHA1 (patch-aa) = f4909ffb2d7729b264e796f6083a71f284d1884e
-SHA1 (patch-ab) = 49c741feed2bab08084fba6c9880a4e29e2db62c

@@ -1,7 +1,0 @@
-This library abstracts architecture-dependent part of garbage collector
-roots acquisition such as register windows of SPARC and register stack
-backing store of IA-64. Main part of the code is based on Boehm GC 7.0.
-
-With this library, you can easily write your own garbage collector such as
-for small footprint, some application-specific optimizations, just learning
-or to test experimental ideas.

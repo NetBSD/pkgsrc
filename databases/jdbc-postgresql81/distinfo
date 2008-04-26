@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2008/01/07 23:15:01 abs Exp $
-
-SHA1 (postgresql-8.1-411.jdbc3.jar) = be21ba73b0b651ee05e202fbf497e5f4bfb27dd0
-RMD160 (postgresql-8.1-411.jdbc3.jar) = 2c6b5a4b56fe8ccd0670de714d98ea7d0bdd8944
-Size (postgresql-8.1-411.jdbc3.jar) = 408401 bytes
-SHA1 (postgresql-jdbc-8.1-411.src.tar.gz) = 62ba3066c127f00317f8496bb21b3de4560a72f4
-RMD160 (postgresql-jdbc-8.1-411.src.tar.gz) = c067ac5d1f679eb708dffd08d9892e07e796ceb9
-Size (postgresql-jdbc-8.1-411.src.tar.gz) = 489183 bytes

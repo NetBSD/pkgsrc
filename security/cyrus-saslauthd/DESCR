@@ -1,2 +1,0 @@
-saslauthd is a daemon process that handles plaintext authentication
-requests on behalf of the Cyrus SASL library.

@@ -1,7 +1,0 @@
-WSBasic is a BASIC interpreter written entirely in C++ without the use
-of lex or yacc.  It shows how one can create a compiler or interpreter
-using some simple classes to parse and/or execute script code.  It is
-a good way to fully understand how a parser/compiler actually works,
-at least that was the original purpose of this project.  Later the
-ability to run shell commands was added just like in bash scripting
-and this gives the project also some nice practical use.

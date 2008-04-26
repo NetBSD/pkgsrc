@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2006/07/02 10:05:55 rillig Exp $
-
-Do not forget to include EXEC_MACHO, COMPAT_MACH, and COMPAT_DARWIN
-in your kernel configuration file.  Darwin binaries require these
-options in order to work.
-===========================================================================

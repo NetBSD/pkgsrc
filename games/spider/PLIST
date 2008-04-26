@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/12 23:12:06 joerg Exp $
-bin/spider
-${IMAKE_MAN_DIR}/spider.${IMAKE_MAN_SUFFIX}
-share/doc/spider/doc.intro
-share/doc/spider/doc.rules
-share/doc/spider/doc.controls
-share/doc/spider/doc.examples
-share/doc/spider/doc.misc
-share/doc/spider/doc.summary

@@ -1,2 +1,0 @@
-The `same' utility looks for identical files and links them together
-using either hard links or symbolic links, saving disk space.

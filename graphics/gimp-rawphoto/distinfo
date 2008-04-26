@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/11/27 01:31:03 rillig Exp $
-
-SHA1 (rawphoto-200410220928.tgz) = 413db61a75c43f10c067b9e22180c70874f2636a
-RMD160 (rawphoto-200410220928.tgz) = abbe6002602096c3d4fb995b204a698ce6025085
-Size (rawphoto-200410220928.tgz) = 17289 bytes
-SHA1 (patch-aa) = 2ab88490f96863edbfc6ce21844499950614da49
-SHA1 (patch-ab) = eebe570ae93b6a1b7499969d7a37fc6850903bae

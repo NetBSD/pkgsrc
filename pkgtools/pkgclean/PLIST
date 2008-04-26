@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/18 22:32:01 tv Exp $
-bin/pkgclean
-man/man1/pkgclean.1

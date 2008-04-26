@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/11/03 14:28:21 rillig Exp $
-
-SHA1 (oak-1.5.0.tar.gz) = cbfb413d0d6fcd16a7684b586c19ca481e060077
-RMD160 (oak-1.5.0.tar.gz) = b1ec46d5f5c0453b07b501d368196e7d884b150e
-Size (oak-1.5.0.tar.gz) = 31034 bytes
-SHA1 (patch-aa) = 4dba7d09f70786340881437dca77a99f0a731647
-SHA1 (patch-ab) = b202613feea1d6d9b538bbc1d34db6c64884c34c
-SHA1 (patch-ac) = ce53cf83a7a1e3cb55bb12141a8f5fe744b1cacd

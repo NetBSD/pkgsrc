@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.12 2007/03/07 04:41:57 rillig Exp $
-
-SHA1 (AfterStep-2.1.2.tar.bz2) = c367e7c73561ddf03b3725f80d2f39f50d2b45bd
-RMD160 (AfterStep-2.1.2.tar.bz2) = f891ded642b9190bd261f3e3f92cb595da2d785b
-Size (AfterStep-2.1.2.tar.bz2) = 5079333 bytes
-SHA1 (patch-aa) = c903ca64b609e4270ead1f1e03cb6ea962b294f8
-SHA1 (patch-ab) = b513b41f5be32170c3e7027d53e44625cbb4958a
-SHA1 (patch-ac) = bbf8b111e335941f5cf8f3fab28c1e1dcc884713

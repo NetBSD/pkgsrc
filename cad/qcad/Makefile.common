@@ -1,8 +1,0 @@
-# $NetBSD: Makefile.common,v 1.1 2006/06/15 08:26:58 chap Exp $
-#
-
-CATEGORIES=		cad
-MASTER_SITES=		http://www.ribbonsoft.com/archives/qcad/
-
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.ribbonsoft.com/qcad.html

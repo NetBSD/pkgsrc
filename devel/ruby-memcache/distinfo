@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:28:10 jlam Exp $
-
-SHA1 (ruby-memcache-0.1.0.tar.bz2) = fa2d88e84f49a8662f466b87ce749a4c58aa4f27
-RMD160 (ruby-memcache-0.1.0.tar.bz2) = 3aa4371c0b1da76a96cafa0a509028cdcd03083a
-Size (ruby-memcache-0.1.0.tar.bz2) = 6237 bytes

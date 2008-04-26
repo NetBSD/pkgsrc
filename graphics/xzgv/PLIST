@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/04 14:45:45 jlam Exp $
-bin/xzgv
-info/xzgv
-man/man1/xzgv.1

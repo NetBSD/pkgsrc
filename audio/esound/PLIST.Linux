@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.6 2007/05/06 16:36:06 wiz Exp $
-bin/esddsp
-lib/libesddsp.la
-man/man1/esddsp.1

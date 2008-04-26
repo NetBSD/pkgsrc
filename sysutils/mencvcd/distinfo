@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/11/01 08:34:43 rillig Exp $
-
-SHA1 (mencvcd-0.3/mencvcd) = a3ace9d50e0722946286b8704b800ccbce86233b
-RMD160 (mencvcd-0.3/mencvcd) = 3785524bf26a9c7630a08a29b246d209c0b19d3c
-Size (mencvcd-0.3/mencvcd) = 13038 bytes
-SHA1 (patch-aa) = 3bc66db72486cc08766aa3b54ff44fe6a8b958b4

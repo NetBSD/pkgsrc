@@ -1,6 +1,0 @@
-RubyGems is the premier Ruby packaging system.  It provides:
-
-  * A standard format for destributing Ruby programs and libraries.
-  * An easy to use tool for managing the installation of gem packages.
-  * A gem server utility for serving gems from any machine where
-    RubyGems is installed.

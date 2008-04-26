@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.10 2005/09/10 10:43:42 adrianp Exp $
-
-SHA1 (ntp-4.2.0.tar.gz) = 38343a4ebfc0b8d9aff3bec4c6a93f4c59071ce3
-RMD160 (ntp-4.2.0.tar.gz) = 73de5671ea583f6699c8052ea9f8270a8455c295
-Size (ntp-4.2.0.tar.gz) = 2514502 bytes
-SHA1 (patch-aa) = 6a6825604de9345001731c7d8b728f56602f15cc

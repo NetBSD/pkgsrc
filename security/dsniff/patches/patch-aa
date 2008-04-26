@@ -1,8 +1,0 @@
-$NetBSD: patch-aa,v 1.1 2000/12/18 08:49:39 itojun Exp $
-
---- pcaputil.c-	Mon Dec 18 17:40:54 2000
-+++ pcaputil.c	Mon Dec 18 17:41:03 2000
-@@ -16,2 +16,3 @@
- #include <pcap.h>
-+#undef BSD
- #ifdef BSD

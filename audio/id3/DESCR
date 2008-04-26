@@ -1,5 +1,0 @@
-id3 is an ID3 v1.1 tag editor.  ID3 tags are traditionally put at the
-end of compressed streamed audio files to denote information about the
-audio contents.  Up to thirty characters of Title, Artist, and Album
-information can be stored, as well as a 28-character comment,
-four-digit year, track number up to 255, and an enumerated genre.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.15 2008/04/09 09:01:52 wiz Exp $
-
-SHA1 (tidy-20080324.tar.gz) = 88bdeb0f470679704f9d41cb1f2278dda947136b
-RMD160 (tidy-20080324.tar.gz) = 85209cd3614cd035b4be1794e4fda669fac16781
-Size (tidy-20080324.tar.gz) = 490324 bytes
-SHA1 (patch-aa) = e27b9b82ee47b9b54004c4a4a5bccba944847040

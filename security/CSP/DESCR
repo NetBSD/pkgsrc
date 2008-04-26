@@ -1,6 +1,0 @@
-Certificate Service Provider is a perl wrapper around openssl that allows you
-to run multiple simple certificate authorities (CAs).  CSP is designed to be
-simple (almost to a fault) and is ideally suited to small PKIs (< 1000
-entities) where security is paramount.  CSP is meant to be run on isolated,
-offline computers while still allowing CRLs and certificate repositories to be
-easily published.

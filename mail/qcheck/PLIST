@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/03/15 04:41:39 schmonz Exp $
-bin/qcheck
-share/doc/qcheck/README
-@dirrm share/doc/qcheck

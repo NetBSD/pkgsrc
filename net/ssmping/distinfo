@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/10/11 19:35:26 is Exp $
-
-SHA1 (ssmping-0.9.tar.gz) = f3eee602d5c39e07e4d0382497b6b1cba88d59f3
-RMD160 (ssmping-0.9.tar.gz) = 008c34fa9d3401c9763f9f4566e297975216ad1a
-Size (ssmping-0.9.tar.gz) = 16464 bytes
-SHA1 (patch-aa) = b4b074cc646e16315c0f24b903808b0cacd7d433
-SHA1 (patch-ab) = e5edaef7a41c3b9a409ab653c148a344e836158e

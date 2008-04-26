@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.10 2007/03/17 14:19:59 rillig Exp $
-
-SHA1 (epic4-2.2.tar.bz2) = 88d4140e693b571ceb8148f98d504a5fefa74076
-RMD160 (epic4-2.2.tar.bz2) = 8f1f1b446bd3260e665093864f1becc0b625be32
-Size (epic4-2.2.tar.bz2) = 623254 bytes
-SHA1 (patch-aa) = c00699223db490c044d07754d73078c4f768e3a3

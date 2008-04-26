@@ -1,4 +1,0 @@
-Net::LDAP::Server provides the protocol handling for an LDAP server.
-You can subclass it and implement the methods you need. Then you just
-instantiate your subclass and call its C<handle> method to establish a
-connection with the client.

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/12/08 17:28:31 joerg Exp $
-
-SHA1 (makeztxt-1.40b-src.tar.gz) = 10cf3c89003a3b113aa51a668dbdfcfd7a94eeb3
-RMD160 (makeztxt-1.40b-src.tar.gz) = c45ab3e2e43da3e9f9f1d472dc73af517d50c4c1
-Size (makeztxt-1.40b-src.tar.gz) = 24272 bytes
-SHA1 (patch-aa) = 33b9234edd019e605f824a26ca12800b3ff82e83
-SHA1 (patch-ab) = 5fc03cd447f694f12bc2a43f52e4df05741bc73c
-SHA1 (patch-ac) = ff2d4710cf86527c342e4ced10274750022b8b29
-SHA1 (patch-ad) = 577e0d35be10f3f86055927a92be839726c7ac5c

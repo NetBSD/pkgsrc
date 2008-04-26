@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/12/05 20:50:47 rillig Exp $
-
-SHA1 (ares-1.1.1.tar.gz) = eafe6ba9c85122538f06dabd735a048abea8bb1e
-RMD160 (ares-1.1.1.tar.gz) = 2b564f1194f538ba12378034428bd3a22f8e5a98
-Size (ares-1.1.1.tar.gz) = 65463 bytes
-SHA1 (patch-aa) = cb8aaad721963f958d61b6b9f3d466c522736c56
-SHA1 (patch-ab) = 093014d0747a2077826fa2ae07a1a7a576cde6e4
-SHA1 (patch-ac) = b3c1688b4e9c6c590eaf269d634c5506869f1c7d

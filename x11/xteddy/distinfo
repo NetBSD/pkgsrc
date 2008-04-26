@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/09/10 13:39:40 schwarz Exp $
-
-SHA1 (xteddy-1.1.tar.gz) = a681923333a4e2b2112290d601c167fd7e8e1302
-RMD160 (xteddy-1.1.tar.gz) = b392d8385422198808ab02ccd0b6dc025512f7f2
-Size (xteddy-1.1.tar.gz) = 117141 bytes
-SHA1 (patch-aa) = b77f0b43a999f54b28602ab1fb66ed320a5632c1
-SHA1 (patch-ab) = 260f836f4aab651c72caebac821e497b54d72cbd
-SHA1 (patch-ac) = 28dce1fcdd1367c33159001bd5bba9cf4e7291a8

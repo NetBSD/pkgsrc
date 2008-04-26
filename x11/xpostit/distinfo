@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/07/29 04:42:08 minskim Exp $
-
-SHA1 (xpostit3.3.1.tar.Z) = 8ba13bb544d9c99308e36fff2590623ad9a16fef
-RMD160 (xpostit3.3.1.tar.Z) = 913ed61908541c65b8f2930c0f066ad2704b7856
-Size (xpostit3.3.1.tar.Z) = 53910 bytes
-SHA1 (patch-aa) = f958b6cfdf3d6ac269d0a73efb4c483fcba1a273
-SHA1 (patch-ab) = 6a61ec1ed69e0311a98bea7bca30f09a74e386a3
-SHA1 (patch-ac) = ba9db152d764e0ab02aca8e0c2f8bf67ce4d4dc4

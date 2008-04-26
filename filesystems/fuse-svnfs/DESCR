@@ -1,3 +1,0 @@
-SvnFs is a filesystem written using FUSE for accessing Subversion
-repositories.  Please see <http://www.jmadden.eu> for search google
-for more information, as it comes with no documentation.

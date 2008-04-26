@@ -1,9 +1,0 @@
-PRIME is Japanese PRedictive Input Method Editor.
-PRIME predicts the user's input using knowledge of natural languages and the
-user's previous input to reduce the difficulty of typing.  For example, when the
-user types "ap", intending "application", PRIME might suggest "apple",
-"application", and "appointment."  The user then easily selects "application."
-
-Currently, PRIME only supports Japanese.
-
-This package provides dictionary files for prime.

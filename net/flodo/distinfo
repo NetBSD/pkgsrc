@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/02/24 20:33:47 joerg Exp $
-
-SHA1 (flodo-v4.tar.bz2) = 66e800e0dd3b817ea0c5ac1befe17aeb39d12165
-RMD160 (flodo-v4.tar.bz2) = 75c9c9146ae36007228497692e993dfd1605a322
-Size (flodo-v4.tar.bz2) = 9508 bytes
-SHA1 (patch-aa) = 14d347f23fcb524cca132dc42012baa1d45c5cd0

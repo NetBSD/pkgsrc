@@ -1,4 +1,0 @@
-PDCurses is a public domain curses library that implements most of
-the functions available in X/Open and System V R4 curses.  This X11
-port allows for recompiling programs using text-mode curses to produce
-native X11 applications.

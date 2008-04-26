@@ -1,6 +1,0 @@
-The BasicProperty/BasicTypes system provides a mechanism for intelligent
-property-based modeling of problem domains in Python 2.2+.  The idea behind
-property-based domain modeling is to simplify the definition of objects/data
-structures so that concerns such as initialization, data-type checking and
-coercion, run-time introspection, and domain specific storage/retrieval
-operations can be abstracted out from the modeling operations.

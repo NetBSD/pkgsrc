@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.13 2007/01/02 18:33:50 adam Exp $
-
-SHA1 (gphoto2-2.3.1.tar.bz2) = 553668806d45d7db5926eb3963863a58da9032c1
-RMD160 (gphoto2-2.3.1.tar.bz2) = 77b4325acbbace03ab5a70251f0b36d6c6d1a586
-Size (gphoto2-2.3.1.tar.bz2) = 553795 bytes
-SHA1 (patch-aa) = 0abe9dcd50f0e6b5065ee7bc3262a3758cd9f113

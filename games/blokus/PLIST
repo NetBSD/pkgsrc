@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2007/02/19 09:47:14 rillig Exp $
-bin/blokus
-bin/blokus_dedicated
-share/blokus/field.bmp
-share/blokus/font.bmp
-share/blokus/ground.bmp
-share/blokus/wall.bmp

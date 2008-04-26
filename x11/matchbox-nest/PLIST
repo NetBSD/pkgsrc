@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/31 13:30:29 peter Exp $
-bin/matchbox-nest
-share/matchbox-nest/dot.png
-share/matchbox-nest/ipaq3800.png
-share/matchbox-nest/ipaq3800.xml
-@dirrm share/matchbox-nest

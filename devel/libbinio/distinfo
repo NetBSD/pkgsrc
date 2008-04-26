@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/01/13 22:42:06 rillig Exp $
-
-SHA1 (libbinio-1.4.tar.bz2) = 47db5f7448245f38b9d26c8b11f53a07b6f6da73
-RMD160 (libbinio-1.4.tar.bz2) = 4c80c3e5d9f5eb4e3632df85667a14f8714796b1
-Size (libbinio-1.4.tar.bz2) = 307664 bytes
-SHA1 (patch-aa) = 2626bddd8422f496076e944b0b641564b0450de9

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.11 2006/02/19 11:13:53 wiz Exp $
-
-SHA1 (teapop-0.3.8.tar.gz) = 33632cc34148d88408bcb9afa5433c1a103f3cf5
-RMD160 (teapop-0.3.8.tar.gz) = fce3606748c33bd71134c09d8bb3e65aaabcdfa3
-Size (teapop-0.3.8.tar.gz) = 147098 bytes
-SHA1 (patch-aa) = f6b8a9d20748bb1579c4fc234e40d7f11cccea42
-SHA1 (patch-ab) = 45ec8313606bc3c738f5e4a19e48470fd3b8beb6

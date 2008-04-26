@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2007/11/25 18:09:53 adrianp Exp $
-
-SHA1 (base-1.3.9.tar.gz) = 916115e3f2e68abfed1a6fa305778508bbe38db4
-RMD160 (base-1.3.9.tar.gz) = 2581be05a11a9800aa3ad96dac74fa47103ebca0
-Size (base-1.3.9.tar.gz) = 487292 bytes
-SHA1 (patch-aa) = 71c95cbf0bfe45ee818c409bfe9d57753b71689d

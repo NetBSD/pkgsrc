@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/09/29 11:35:11 rillig Exp $
-
-SHA1 (nosefart-2.3-mls.tar.bz2) = ab5755674adefa3f6f63e0772245831e7c0be2f7
-RMD160 (nosefart-2.3-mls.tar.bz2) = 54365aaf542d76f726a9b9ebb0d93a7a219c2e5e
-Size (nosefart-2.3-mls.tar.bz2) = 531605 bytes
-SHA1 (patch-aa) = 0ccefb7d1e9cfa7ca147624ac117c9570f012609
-SHA1 (patch-ab) = 325c4038a865ec686a33d440540be16a46445564
-SHA1 (patch-ac) = fc606d92877bc5f83c149b42570249d5f5778219

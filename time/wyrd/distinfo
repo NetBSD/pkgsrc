@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/07/24 23:03:35 wiz Exp $
-
-SHA1 (wyrd-1.4.1.tar.gz) = 5d34bdef0ae5a28f47ac7fc927fe60639926a568
-RMD160 (wyrd-1.4.1.tar.gz) = cb6ce509c140f97123a544aaf94d390d59811e9f
-Size (wyrd-1.4.1.tar.gz) = 198530 bytes
-SHA1 (patch-aa) = d4ad2bbfbc1e493797d4c078863e233b9422b5d3

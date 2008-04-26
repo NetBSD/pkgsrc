@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/07/17 17:25:25 joerg Exp $
-
-SHA1 (lbrate-1.1.tar.gz) = 8731283e79fa6c7a73ebd6c821b42854cb864ea9
-RMD160 (lbrate-1.1.tar.gz) = ccf0d889eb597d3beecceb40349ddbf00f0273c8
-Size (lbrate-1.1.tar.gz) = 29907 bytes
-SHA1 (patch-aa) = 4f8177dfdfa11162da966c3f216d52bcd8e599db
-SHA1 (patch-ab) = 94127154f052908a99fb7a6a218984637850b93d

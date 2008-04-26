@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:25:38 jlam Exp $
-
-SHA1 (mongrel_config-0.3.1.gem) = ffa8b4e4010f7003198166e20b562edcdd7564bb
-RMD160 (mongrel_config-0.3.1.gem) = 23a1a17b6a653687ee85e1f75077d57e6246d6f7
-Size (mongrel_config-0.3.1.gem) = 45568 bytes

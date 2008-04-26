@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.8 2007/12/30 17:25:42 cjep Exp $
-
-SHA1 (star-1.4.3.tar.gz) = c59b68d97edba77a9ac6000be04d457ded1eefe9
-RMD160 (star-1.4.3.tar.gz) = f7ec71bfab1723c994e5eed7e6818394a41d44d9
-Size (star-1.4.3.tar.gz) = 520388 bytes
-SHA1 (patch-aa) = 4fe4af396adf23eb7ac071b02a7bf726ab1e4318
-SHA1 (patch-ab) = aea3af88d3bedf2ce7a7744c90062ba4e57bb79f
-SHA1 (patch-ac) = 81e6361db3903e5b04fae4e70ad3a37f9a2f4fa7

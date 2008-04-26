@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/04 20:28:05 ghen Exp $
-bin/dmenu
-bin/dmenu_path
-bin/dmenu_run
-man/man1/dmenu.1

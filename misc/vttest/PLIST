@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:29:52 zuntum Exp $
-bin/vttest
-man/man1/vttest.1

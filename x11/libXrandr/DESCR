@@ -1,7 +1,0 @@
-This package provides the X RandR Library from the modular X.org
-X11 project.
-
-This simple library is designed to interface with the X Resize,
-Rotate, and Reflection Extension. This allows clients to change
-the size and rotation of the root window of a screen, along with
-the ability to reflect the screen about either axis.

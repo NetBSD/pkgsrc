@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/04/05 10:40:46 wiz Exp $
-bin/qident
-man/cat1/qident.0
-man/man1/qident.1

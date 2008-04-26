@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 23:45:33 zuntum Exp $
-bin/NPtcp
-man/man1/netpipe.1

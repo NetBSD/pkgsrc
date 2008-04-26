@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 12:28:30 agc Exp $
-
-SHA1 (pkg_notify-0.4.2.tar.gz) = 67e7b2216d046abdb9179c67f5ce2a661570b105
-RMD160 (pkg_notify-0.4.2.tar.gz) = 43646e4c9c5004a762c823041f4a4290b262607f
-Size (pkg_notify-0.4.2.tar.gz) = 5741 bytes

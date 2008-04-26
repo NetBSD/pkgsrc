@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1 2006/08/20 23:07:18 jschauma Exp $
-
-SHA1 (bbkeys-0.9.0.tar.gz) = b406f47f298fe83df6be89d2437dae2cee007439
-RMD160 (bbkeys-0.9.0.tar.gz) = a42506693da977bed17d56ee0c1e5d0440464ac6
-Size (bbkeys-0.9.0.tar.gz) = 199146 bytes
-SHA1 (patch-aa) = b0c79c06d3e7897a63c43ee09ccbf7e05eedffe8

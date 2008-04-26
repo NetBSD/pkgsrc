@@ -1,6 +1,0 @@
-The Perl 5 module Text::PDF allows interaction with existing PDF files
-directly. It includes various tools including:
-
-pdfbklt - make booklets out of existing PDF files
-pdfrevert - remove edits from a PDF file
-pdfstamp - stamp text on each page of a PDF file

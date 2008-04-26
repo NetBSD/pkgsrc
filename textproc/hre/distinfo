@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/08/19 11:56:21 minskim Exp $
-
-SHA1 (hre-0.9.8a.tar.gz) = 9082ec1553052483340ec15648204738ecab1e41
-RMD160 (hre-0.9.8a.tar.gz) = ea5bb3ce17e07eb85c596502d3ecdb1e62c06fc0
-Size (hre-0.9.8a.tar.gz) = 369257 bytes
-SHA1 (patch-aa) = ad42f93bea365cedb78265a728281e1d759141f8
-SHA1 (patch-ab) = 4e2116d8ac686f5f0764e959779e571d71fc5b1f

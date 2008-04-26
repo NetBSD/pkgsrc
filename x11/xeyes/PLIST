@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/10 13:46:51 joerg Exp $
-bin/xeyes
-man/man1/xeyes.1

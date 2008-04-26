@@ -1,7 +1,0 @@
-fastforward handles qmail forwarding according to a cdb database. It can create
-forwarding databases from a sendmail-style /etc/aliases or from user-oriented
-virtual-domain tables.
-
-fastforward supports external mailing lists, stored in a binary format for fast
-access. It has a tool to convert sendmail-style include files into binary
-lists.

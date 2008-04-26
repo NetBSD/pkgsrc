@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/01/03 14:10:14 joerg Exp $
-
-SHA1 (openquicktime-1.0-src.tgz) = 1304ac28acb953351780dd3626fdb6a73f23c97f
-RMD160 (openquicktime-1.0-src.tgz) = 53c36cf87e48855460106cec8442ad004681be5c
-Size (openquicktime-1.0-src.tgz) = 320144 bytes
-SHA1 (patch-aa) = 2a452b9fd0bd2d4b0b86b39340a3c0a1ae6933a1

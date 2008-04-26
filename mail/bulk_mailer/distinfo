@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/04/24 22:31:19 abs Exp $
-
-SHA1 (bulk_mailer-1.13.tar.gz) = 2886641461b6702affc4624456829b5944581a35
-RMD160 (bulk_mailer-1.13.tar.gz) = fc4cc57d9d13429311e2d17ca4c51c95003246c4
-Size (bulk_mailer-1.13.tar.gz) = 34854 bytes
-SHA1 (patch-aa) = 8cd168ec716b27b2f608076e50dab3587c618667
-SHA1 (patch-ab) = d23db609f5e11df6352a4e958ae409f7ec8c0143
-SHA1 (patch-ac) = 71328168aa35a3228b6eeaedfe9dfd9c3ae7dc04

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/05/11 05:58:00 adam Exp $
-bin/gcfclient
-man/man6/gcfclient.6

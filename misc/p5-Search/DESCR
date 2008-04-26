@@ -1,6 +1,0 @@
-This module is a base class interfacing to search engines.  It defines
-an interface that can be used by any of the Search search modules,
-such as Search::Glimpse or Search::TextSearch, which are the standard
-ones included with the module.
-
-It exports no routines, just provides methods for the other classes.

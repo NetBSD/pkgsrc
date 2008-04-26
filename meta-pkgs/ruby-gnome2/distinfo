@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/01/29 06:42:34 minskim Exp $
-
-SHA1 (ruby-gnome2-all-0.16.0.tar.gz) = 488f6c1f139060e005f336c9c854c4dc5b3e6b7c
-RMD160 (ruby-gnome2-all-0.16.0.tar.gz) = c83c7cdcf633ad5cc213180f641a6c8f18002a9c
-Size (ruby-gnome2-all-0.16.0.tar.gz) = 1208856 bytes

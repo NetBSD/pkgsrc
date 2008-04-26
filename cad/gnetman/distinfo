@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 14:59:24 agc Exp $
-
-SHA1 (gnetman-11Feb05.tar.gz) = 025a79cec01d10ba2340dcad543c2a5517822800
-RMD160 (gnetman-11Feb05.tar.gz) = 45fcefa99645a1b331a51be10c23fb85d31cc66e
-Size (gnetman-11Feb05.tar.gz) = 725836 bytes
-SHA1 (patch-aa) = 256335cd9600d5d95c37f7ec7421980191966b10
-SHA1 (patch-ab) = ccdecc7f59291f1925aa100679406ae72de2a7f1
-SHA1 (patch-ac) = a5ea82aaf95e5847b1c84c34f88aa19b2093a224
-SHA1 (patch-ad) = e57c00c364b213e2989cb4f7e1462ea0de5f595f

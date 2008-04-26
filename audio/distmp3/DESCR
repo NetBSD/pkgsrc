@@ -1,5 +1,0 @@
-distmp3 is a client and a daemon (both written in perl) for distributed
-mp3-encoding across multiple hosts on a network.
-
-distmp3 can be used standalone or with a front-end CD ripper such as
-audio/abcde.

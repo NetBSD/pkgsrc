@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/10/02 17:12:19 rillig Exp $
-
-SHA1 (squirm-1.0betaB.tar.gz) = 3f4a989c60efc693264b0c59d5fd3d7d7a0140b8
-RMD160 (squirm-1.0betaB.tar.gz) = 821ee338c0c1b5c17fbc4d41a7ccfcec5009f816
-Size (squirm-1.0betaB.tar.gz) = 318142 bytes
-SHA1 (patch-aa) = 164ddea2e0253de018924ec8ef5dadfee5bf1ffa
-SHA1 (patch-ab) = 7ba93bcc97261bd47271b472fa085f54558b7cc5

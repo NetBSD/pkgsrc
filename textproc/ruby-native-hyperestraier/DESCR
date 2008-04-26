@@ -1,7 +1,0 @@
-Hyper Estraier is a full-text search system.  You can search lots of
-documents for some documents including specified words.  If you run a
-web site, it is useful as your own search engine for pages in your
-site.  Also, it is useful as search utilities of mail boxes and file
-servers.
-
-This package provides the Ruby native interface of Hyper Estraier.

@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/14 13:30:57 joerg Exp $
-include/GL/glxint.h
-include/GL/glxmd.h
-include/GL/glxproto.h
-include/GL/glxtokens.h
-include/GL/internal/glcore.h
-lib/pkgconfig/glproto.pc
-@dirrm include/GL/internal
-@unexec ${RMDIR} %D/include/GL >/dev/null 2>&1 || ${TRUE}

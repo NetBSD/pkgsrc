@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 17:36:20 wiz Exp $
-
-SHA1 (tkinfo-2.8.tar.gz) = 1653290ae887e99bd71980a848ed0e6a5224d6ee
-RMD160 (tkinfo-2.8.tar.gz) = bab0bdb683c030a0be6b9bf7b1f596b70b5714a6
-Size (tkinfo-2.8.tar.gz) = 56234 bytes
-SHA1 (patch-aa) = 3fe8c55edf9f47d5604e3786e3b87e5d35896f31

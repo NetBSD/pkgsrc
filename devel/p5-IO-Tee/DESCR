@@ -1,4 +1,0 @@
-This class provides a mechanism to mirror a stream to multiple other
-streams.  It can either multiplex an output stream to multiple output
-streams, or it can multiplex an input stream to multiple output streams
-(mirroring all the data read onto the output streams).

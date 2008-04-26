@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/12/13 15:44:12 joerg Exp $
-
-SHA1 (atlc-4.6.0.tar.gz) = 4c2185e17812925351345465094e2036fefa9724
-RMD160 (atlc-4.6.0.tar.gz) = 1923ed83762fec124662c7a628c337f46857ca78
-Size (atlc-4.6.0.tar.gz) = 2445849 bytes
-SHA1 (patch-aa) = 73158578f1f7ef6f1466a2c875fad1f08bf609fc
-SHA1 (patch-ab) = 42f9a5198c27f6fb8dcda46c47cf93561857683c
-SHA1 (patch-ac) = 84c06f17df86502c8c37714915e6959da2b8d2c3

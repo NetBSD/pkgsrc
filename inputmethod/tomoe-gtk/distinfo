@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/13 06:06:40 obache Exp $
-
-SHA1 (tomoe-gtk-0.6.0.tar.gz) = dddb1178c437380a92b59dbc273dafdd2045e1d1
-RMD160 (tomoe-gtk-0.6.0.tar.gz) = 72e0954b8994d1e62acb7d4cb0c478dadb54b8f0
-Size (tomoe-gtk-0.6.0.tar.gz) = 448058 bytes

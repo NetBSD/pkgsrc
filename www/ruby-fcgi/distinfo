@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2008/04/04 15:30:02 jlam Exp $
-
-SHA1 (fcgi-0.8.7.gem) = 16ef71a7639c06ebf56af1990ea2e0beda63316b
-RMD160 (fcgi-0.8.7.gem) = 25707cceb2795be9740add51b6a9ca4463166eee
-Size (fcgi-0.8.7.gem) = 13312 bytes
-SHA1 (patch-aa) = 0a4c7e25dcaad0fcc044aef96db89fae837a9067

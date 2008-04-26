@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/12/31 02:07:09 obache Exp $
-
-SHA1 (i2ocfg-1.1.tar.gz) = 18ee6750f43e6c686d5f29bfc3d99bb47e667505
-RMD160 (i2ocfg-1.1.tar.gz) = a289fb7542fc94251f0a8d7309cc2532234787fa
-Size (i2ocfg-1.1.tar.gz) = 6888 bytes
-SHA1 (patch-aa) = 07bdd61dce4e16528eb07ecf0a7c9f6726bc87bc

@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/10/11 19:35:26 is Exp $
-bin/asmping
-bin/mcfirst
-bin/ssmping
-man/man1/asmping.1
-man/man1/mcfirst.1
-man/man1/ssmping.1
-sbin/ssmpingd

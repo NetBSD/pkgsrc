@@ -1,7 +1,0 @@
-YTalk is a compatible replacement for the Unix talk(1) program,
-which adds a number of features.  Mainly, it can talk to more than
-one person at a time, and it can talk to the two different types
-of talk daemons out there.
-
-YTalk supports multi-homed hosts, and provides a basic, optional
-X interface.

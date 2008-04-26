@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2008/04/23 19:00:46 tnn Exp $
-
-SHA1 (xf86-video-intel-2.3.0.tar.bz2) = a257c12739b94b5897a0c21cd9b8da46bd311d24
-RMD160 (xf86-video-intel-2.3.0.tar.bz2) = 4680b4cab5f3bb2fdc1e536be800c16f2e0e634e
-Size (xf86-video-intel-2.3.0.tar.bz2) = 663384 bytes
-SHA1 (patch-ab) = b0cb0975f3f0e5678ad967d560378ada9b3361b6
-SHA1 (patch-ad) = db9a5a55cd0c31e1e0d62b9cd94393143ab23c08

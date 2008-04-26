@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:33 agc Exp $
-
-SHA1 (sgi-stl-docs-3.3/STL_doc.tar.gz) = cc716472713c938e0cb5b96e889cb54c1ba97de8
-RMD160 (sgi-stl-docs-3.3/STL_doc.tar.gz) = 5b3c38c330fac60a67cc8612a622b517f1da7279
-Size (sgi-stl-docs-3.3/STL_doc.tar.gz) = 550813 bytes

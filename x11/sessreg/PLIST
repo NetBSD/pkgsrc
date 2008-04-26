@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/08 17:35:15 joerg Exp $
-bin/sessreg
-man/man1/sessreg.1

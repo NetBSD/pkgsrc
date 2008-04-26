@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.10 2007/11/15 23:53:48 dmcmahill Exp $
-
-SHA1 (gwave-20060606.tar.gz) = e335822815ec7580b1e66ac253fe438ef439dfbe
-RMD160 (gwave-20060606.tar.gz) = 67c6e9bb5a001352f627662bd6eb225a78d028e8
-Size (gwave-20060606.tar.gz) = 490107 bytes
-SHA1 (patch-aa) = 2125f457fccd9f57f700a46852393ae0688be71d

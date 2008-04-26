@@ -1,4 +1,0 @@
-Thin is a very simple web server written in Ruby.  It's single-threaded,
-which means it can only serve one request at a time.  This simplicity
-affords increased speed and decreased memory usage for singled-threaded
-framework like Rails.

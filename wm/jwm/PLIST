@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/04 01:08:21 reed Exp $
-bin/jwm
-man/man1/jwm.1
-share/examples/jwm/system.jwmrc
-@dirrm share/examples/jwm

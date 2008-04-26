@@ -1,2 +1,0 @@
-This code provides various crypt()-compatible interfaces to the
-MD5-based crypt() function found in various *nixes.

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/10/11 18:53:12 drochner Exp $
-
-SHA1 (libelf-0.8.10.tar.gz) = 5f6fb666b0cf604243110383ba55ef37df1c8ece
-RMD160 (libelf-0.8.10.tar.gz) = 097b3c18f34233bd9484f2ec53c65a84b2222f31
-Size (libelf-0.8.10.tar.gz) = 147824 bytes
-SHA1 (patch-aa) = bb70182806c0541e46af884e324d6ae2b8831665
-SHA1 (patch-ab) = d04cb8da2a84478b15d4ff71cc45e30fc35d1a23

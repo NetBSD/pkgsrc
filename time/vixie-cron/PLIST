@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/08 18:38:14 reed Exp $
-bin/crontab
-man/man1/crontab.1
-man/man5/crontab.5
-man/man8/cron.8
-sbin/cron
-share/examples/rc.d/cron

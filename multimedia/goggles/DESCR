@@ -1,9 +1,0 @@
-Goggles DVD Player is a frontend for the Ogle DVD player. Besides the
-usual features like having a play button etc., Goggles tries to
-provide features not often found in other DVD players. Since Ogle
-in itself is only a DVD player, it has some neat capabilities that
-"general" media players cannot provide. Goggles extends these
-capabilities with a very user-friendly interface.
-
-Goggles' attractive and responsive user interface is written using
-the FOX Toolkit.

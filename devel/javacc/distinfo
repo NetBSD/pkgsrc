@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/11 03:50:02 minskim Exp $
-
-SHA1 (javacc-4.0.tar.gz) = 74b1daf2e10077f9f64225f2ac8d08075b40445d
-RMD160 (javacc-4.0.tar.gz) = e17b9d81aef094384ee7578432adc66f4ff816dd
-Size (javacc-4.0.tar.gz) = 422038 bytes

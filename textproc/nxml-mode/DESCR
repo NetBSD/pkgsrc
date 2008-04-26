@@ -1,4 +1,0 @@
-A new major mode for GNU Emacs for editing XML documents. It
-supports editing well-formed XML documents and also provides
-schema-sensitive editing of XML documents using RELAX NG Compact
-Syntax.

@@ -1,4 +1,0 @@
-Yap2lc (Yet Another Passwd 2 LDIF Converter) is an LDAP migration
-tool, which extracts information from passwd, shadow/passwd, and
-master.passwd formatted files, filters out unwanted/misshapen accounts
-and writes an LDIF file for easy importing.

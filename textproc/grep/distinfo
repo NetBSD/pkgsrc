@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.9 2008/03/11 02:18:22 tnn Exp $
-
-SHA1 (grep-2.5.3.tar.bz2) = 53227ca9a01d5548448372f9b2e9111adf159f3b
-RMD160 (grep-2.5.3.tar.bz2) = dafa692fd67dfcd1c94115e9831d291b29fa7729
-Size (grep-2.5.3.tar.bz2) = 618184 bytes
-SHA1 (patch-aa) = 4b25015c920849a3fd5bd13a544eb87029223d36

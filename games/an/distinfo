@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 23:11:54 agc Exp $
-
-SHA1 (an-0.93.tar.gz) = 9202b32efa74da44150ea22d36e0bc104c01e7f8
-RMD160 (an-0.93.tar.gz) = 4b2f8c7ab192d379f0b83b3b82e0840ae8772ba8
-Size (an-0.93.tar.gz) = 84531 bytes
-SHA1 (patch-aa) = 5aface8b7e7c78bf5b25e66ecb1f903e5717f0bf
-SHA1 (patch-ab) = fd158133f22e77551440b43684f3bab773098dd1

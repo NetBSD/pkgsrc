@@ -1,3 +1,0 @@
-Capistrano is a tool for automating tasks on one or more remote servers.
-It executes commands in parallel on all targeted machines, and provides
-a mechanism for rolling back changes across multiple machines.

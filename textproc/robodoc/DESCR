@@ -1,5 +1,0 @@
-This package is a documentation tool (based on the AutoDocs program
-written by Commodore). It extracts specially formated comment
-headers from the source file and puts them in a separate file.
-ROBODoc thus allows you to include the program documentation in
-the source code and avoid having to maintain two separate documents.

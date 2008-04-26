@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/03/22 23:32:47 joerg Exp $
-
-SHA1 (mbrowse-0.3.1.tar.gz) = aee6fd632e41a19007c1b40f198e55ed1d4bd699
-RMD160 (mbrowse-0.3.1.tar.gz) = 4a17ad1d7dd85e04f6ce37d6baaa9ef0b5a630fa
-Size (mbrowse-0.3.1.tar.gz) = 99948 bytes
-SHA1 (patch-aa) = 156ed9a22ecc3a557de38f3a3bcfe54e2f498a17
-SHA1 (patch-ab) = fb9b0946ec607a7e3471f4620cbb5792a7596eef
-SHA1 (patch-ac) = 120522628bca90e25d6128e9b9411319762ca658

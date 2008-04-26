@@ -1,7 +1,0 @@
-By default, this module exports a single function: prompt().  It
-prompts the user to enter some input, and returns an object that
-represents the user input.
-
-You may specify various flags to the function to affect its behaviour;
-most notably, it defaults to automatically chomp the input, unless
-the -line flag is specified.

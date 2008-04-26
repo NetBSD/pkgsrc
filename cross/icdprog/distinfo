@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/11/28 16:20:47 tv Exp $
-
-SHA1 (icdprog-0.3.tar.gz) = 4e8a8aac8845c531971b7a371d6dc5a9d460dbea
-RMD160 (icdprog-0.3.tar.gz) = 5643ffd9687602ace01007f0514aeb5b372ca48e
-Size (icdprog-0.3.tar.gz) = 8714 bytes
-SHA1 (patch-aa) = 05e8cb5e69822ad854bd48bfcf0b24ea5b84ad22
-SHA1 (patch-ab) = 1f16d2c06b3f0e0742f801cb2783d785ad735044

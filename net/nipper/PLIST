@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/01 22:33:53 adrianp Exp $
-bin/nipper
-share/doc/nipper/Features.txt
-share/doc/nipper/Options.txt
-share/doc/nipper/Quickstart.txt
-share/doc/nipper/XML.txt
-@dirrm share/doc/nipper

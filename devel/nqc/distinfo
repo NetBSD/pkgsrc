@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 22:24:22 agc Exp $
-
-SHA1 (nqc-2.3.r1.tar.gz) = 40adcd87c12fc23c600899a6a704620ef2208488
-RMD160 (nqc-2.3.r1.tar.gz) = 2f7a435a99cb207814a8f357b701b1cc1fee2964
-Size (nqc-2.3.r1.tar.gz) = 193028 bytes
-SHA1 (patch-aa) = 0682d30f8c98e6b152e7227d5526a79bff91707b

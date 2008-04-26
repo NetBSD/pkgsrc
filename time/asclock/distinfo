@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 19:14:53 wiz Exp $
-
-SHA1 (asclock-classic-1.0.tar.gz) = 91e98efd49ec71d4018a4372744fa1edcca6172a
-RMD160 (asclock-classic-1.0.tar.gz) = 538179ab6659072c0f52dbf93d5472065cebe7eb
-Size (asclock-classic-1.0.tar.gz) = 33949 bytes
-SHA1 (patch-aa) = 8d9f1cc5b3c035d5e06102b8464aaf9cf757e8cd
-SHA1 (patch-ab) = 83d20644751d47bb5a90500075354541e43720be
-SHA1 (patch-ac) = c86fe29211da8d4a884ce94a63eb13a83af7e030

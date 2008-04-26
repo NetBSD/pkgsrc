@@ -1,4 +1,0 @@
-This is a Perl implementation of the reCAPTCHA Mailhide API. It can
-generate URLs or even directly usable HTML code for using the reCAPTCHA
-Mailhide web service, which provides a way of asking people to solve a
-reCAPTCHA before they can view your email address.

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/03 22:05:26 kristerw Exp $
-man/man8/qadsl.8.gz
-sbin/qadsl
-share/examples/qadsl.conf.sample

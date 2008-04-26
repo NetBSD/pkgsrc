@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/06/10 08:36:13 obache Exp $
-
-SHA1 (MLDBM-Sync-0.30.tar.gz) = 669a4b12d82404063d8f76690cd3d09b5d623836
-RMD160 (MLDBM-Sync-0.30.tar.gz) = 4ab6b286db83bac00c26dcfa67d06467bab09f74
-Size (MLDBM-Sync-0.30.tar.gz) = 22058 bytes

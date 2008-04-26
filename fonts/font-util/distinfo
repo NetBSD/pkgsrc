@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/08/05 19:20:19 joerg Exp $
-
-SHA1 (font-util-1.0.1.tar.bz2) = 97c2880c5f664e655f5bc2b194c52fbd496bab19
-RMD160 (font-util-1.0.1.tar.bz2) = a9c758164ebc1da1a743fa73b68fae0fc5c215cc
-Size (font-util-1.0.1.tar.bz2) = 98637 bytes
-SHA1 (patch-aa) = dd254f9f21b052371c9dabe90c403e7ae5b73d98
-SHA1 (patch-ab) = cf487b4ad2c6089e66aab3e4c28596225bf98e95

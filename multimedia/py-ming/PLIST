@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/09/13 15:54:58 obache Exp $
-${PYSITELIB}/ming.py
-${PYSITELIB}/ming.pyc
-${PYSITELIB}/ming.pyo
-${PYSITELIB}/mingc.py
-${PYSITELIB}/mingc.pyc
-${PYSITELIB}/mingc.pyo
-${PYSITELIB}/_mingc.so

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/05/17 04:29:00 minskim Exp $
-
-SHA1 (TclExpat-1.1.tar.gz) = 232bb47305a471dc0f8bc52e684a04b7cf703b80
-RMD160 (TclExpat-1.1.tar.gz) = 2d133137d51ffd0ca7ad638433836f97782b4e29
-Size (TclExpat-1.1.tar.gz) = 268538 bytes
-SHA1 (patch-aa) = 2342c07d81dba19de70feed87b69d115aef9b563
-SHA1 (patch-ab) = 9985adb007741c36182d093a18c210c0230ac566

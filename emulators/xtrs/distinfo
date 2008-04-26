@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/07/27 23:50:19 joerg Exp $
-
-SHA1 (xtrs-4.9.tar.gz) = abfbbdb972c7fa2b3545ed42698162a88168bded
-RMD160 (xtrs-4.9.tar.gz) = 6daabf36a53e4af8b9d6b97d91cba00cc55b406f
-Size (xtrs-4.9.tar.gz) = 422910 bytes
-SHA1 (patch-aa) = f43c92142a240c45015fad93fd702df78e5a707c
-SHA1 (patch-ab) = 11aa129243aa5bb5c7b017241ebd444e9ac43ff2
-SHA1 (patch-ac) = f57cd85b5896bbdf1ae0346e1d703aa460ba8984

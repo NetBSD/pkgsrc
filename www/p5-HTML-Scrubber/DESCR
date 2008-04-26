@@ -1,3 +1,0 @@
-HTML::Scrubber allows a program to sanitize, or scrub, an input in HTML
-format in a reliable and flexible way.  Moreover, it doesn't depend on
-HTML::TreeBuilder, but rather on HTML::Parser.

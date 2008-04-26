@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/05/15 13:19:13 obache Exp $
-
-SHA1 (Proc-ProcessTable-0.41.tar.gz) = ea53477f1274ea585640964fd2e0c9b5e6646548
-RMD160 (Proc-ProcessTable-0.41.tar.gz) = d1db30d2aeb1d6453c9488adce30e20e2808643c
-Size (Proc-ProcessTable-0.41.tar.gz) = 64497 bytes
-SHA1 (patch-aa) = c2b50d452b5136b3cfaac1376e8a8c49bd5e9b5b

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/09/20 20:02:53 jlam Exp $
-
-SHA1 (certdata-20070713.txt) = 2f07092e7bceb4354f9255a8455d46671831b2be
-RMD160 (certdata-20070713.txt) = c665e7265fb7fc2a04bc4405d4d650f8ff1c182e
-Size (certdata-20070713.txt) = 793526 bytes

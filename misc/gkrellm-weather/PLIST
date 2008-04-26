@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2006/04/17 07:07:25 jlam Exp $
-bin/GrabWeather
-lib/gkrellm2/plugins/gkrellweather.so
-share/locale/ru/LC_MESSAGES/gkrellweather.mo

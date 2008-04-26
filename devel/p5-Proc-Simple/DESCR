@@ -1,7 +1,0 @@
-The Proc::Simple package provides objects mimicing real-life processes
-from a user's point of view.  A new process object is created by
-
-    $myproc = Proc::Simple->new();
-
-Either external programs or perl subroutines can be launched and
-controlled as processes in the background.

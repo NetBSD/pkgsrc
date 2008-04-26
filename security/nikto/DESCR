@@ -1,5 +1,0 @@
-Nikto is a web server scanner which performs comprehensive tests against web
-servers for multiple items, including over 2200 potentially dangerous
-files/CGIs, versions on over 140 servers, and problems on over 210 servers.
-Scan items and plugins are frequently updated and can be automatically
-updated (if desired).

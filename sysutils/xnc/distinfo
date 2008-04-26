@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/06/08 15:20:20 joerg Exp $
-
-SHA1 (xnc-5.0.4.src.tar.gz) = 4673ba128f4df88342bfd4968a2427e894f6f3cb
-RMD160 (xnc-5.0.4.src.tar.gz) = 46366a75eca41f10f68ae7d4ad95b76ed4d576e2
-Size (xnc-5.0.4.src.tar.gz) = 2130633 bytes
-SHA1 (patch-aa) = 2da27a17e9b5c114b9ff930c38f8ec04b7221abc
-SHA1 (patch-ab) = 2ec2bbbc1eb542527c5e45756a10e91337b7719d
-SHA1 (patch-ak) = 8174f9791016fbaa179efbefa4971423677f7652
-SHA1 (patch-am) = 5522a4a41bf5e0512f38017c28300cc9529c9c23

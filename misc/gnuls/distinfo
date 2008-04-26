@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/07/20 12:41:29 tnn Exp $
-
-SHA1 (coreutils-6.9.tar.bz2) = 10310a78c4e1d9f742f3815ac28e9bf1086a5885
-RMD160 (coreutils-6.9.tar.bz2) = c6ae65204b2e9c234a1140f39a8be1ee5cdcaab7
-Size (coreutils-6.9.tar.bz2) = 5384378 bytes
-SHA1 (patch-aa) = f1c25c1ca167fbd83680d4ea1dc45771f6800fdb
-SHA1 (patch-ab) = ec3f8be38adbf9bdd14d7ec8c64440b09c66a718
-SHA1 (patch-ac) = 676fd4eaeedf8f94ac6d1894fd16491ce8412cb0

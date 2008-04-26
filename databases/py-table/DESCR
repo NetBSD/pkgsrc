@@ -1,4 +1,0 @@
-PyTable is a relational database wrapper based on BasicProperty's rich
-property-based modeling system.  PyTable provides a "thick" wrapper for
-PostgreSQL (and MySQL) database adapters which fills in missing functionality
-in the adapter layer to provide a uniform rich external API.

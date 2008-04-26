@@ -1,9 +1,0 @@
-MOPAC is a general-purpose semi-empirical molecular orbital package for the
-study of chemical structures and reactions. The semi-empirical Hamiltonians
-MNDO, MINDO/3, AM1, and PM3 are used in the electronic part of the
-calculation to obtain molecular orbitals, the heat of formation and its
-derivative with respect to molecular geometry. Using these results MOPAC
-calculates the vibrational spectra, thermodynamic quantities, isotopic
-substitution effects and force constants for molecules, radicals, ions, and
-polymers.  For studying chemical reactions, a transition state location
-routine and two transition state optimizing routines are available.

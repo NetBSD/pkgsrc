@@ -1,8 +1,0 @@
-EasyH10 is an open source project for the development of a software suite for
-iRiver H10 digital audio players. It creates the database layout for an H10
-player, without the need for iRiver Plus or Windows Media Player 10, based on
-music and playlist files transferred manually (e.g., drag-and-drop operation,
-copy command, rsync utility, etc). EasyH10 is compatible with iriver H10 5GB,
-6GB, and 20GB models shipped worldwide as well as various platforms such as
-Windows 98SE/ME/2000/XP, Linux, MacOS X, and other POSIX-like operating
-systems.

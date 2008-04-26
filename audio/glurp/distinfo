@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/15 01:00:05 xtraeme Exp $
-
-SHA1 (glurp-0.11.6.tar.gz) = 5ded37b3573b4f486addd60f96875e52803d5434
-RMD160 (glurp-0.11.6.tar.gz) = 4f12249b5830374ec874e7ce28d92d317c03e142
-Size (glurp-0.11.6.tar.gz) = 138603 bytes
-SHA1 (patch-aa) = d7f7a0d9aa8a46c1d711abf93cc3dbf6b250365f

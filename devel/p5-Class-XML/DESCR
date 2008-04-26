@@ -1,3 +1,0 @@
-The Perl 5 module Class::XML is designed to make it reasonably easy
-to create, consume or modify XML from Perl while thinking in terms
-of Perl objects rather than the available XML APIs.

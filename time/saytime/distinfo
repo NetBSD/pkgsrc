@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/07/07 21:23:21 is Exp $
-
-SHA1 (saytime_11nov1995.tar.gz) = 0deae40ee1c4f128a75d93bc0d9d7cf61c6c757b
-RMD160 (saytime_11nov1995.tar.gz) = c5b4193f4ccabcf75da59e0019e2a73673576d06
-Size (saytime_11nov1995.tar.gz) = 104245 bytes
-SHA1 (patch-aa) = 6d644e2a8de98357d33987a2f3f375c862da81b4
-SHA1 (patch-ab) = 764f5d214742d450e18b6e83555ba806979fefa5

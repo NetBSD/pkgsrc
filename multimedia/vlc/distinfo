@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.16 2008/04/20 15:31:02 tonnerre Exp $
-
-SHA1 (vlc-0.8.6f.tar.bz2) = 9684bb7504636d3e3143734698c2bbac250f4a03
-RMD160 (vlc-0.8.6f.tar.bz2) = c52d0cb7e8ba36f9d0959b9d6e1e8b1b36b71b04
-Size (vlc-0.8.6f.tar.bz2) = 11433698 bytes
-SHA1 (patch-aa) = 497a83bb0f1e2c095a81aa84115e66b56dd47e2c
-SHA1 (patch-ab) = c311b82c00f1eea164189a9759c9ca576faec671
-SHA1 (patch-ac) = 69f90b13aa4c398a00c12279c8bd8af922e9e8aa
-SHA1 (patch-ad) = 29660533b468e6871fa8104e081f9321cfb30aa5

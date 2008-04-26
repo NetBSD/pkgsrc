@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/01/03 14:25:50 taca Exp $
-
-SHA1 (ruby-tcpwrap-0.6.tar.gz) = e66ce2b424db90d461686784d7b69003df76e6de
-RMD160 (ruby-tcpwrap-0.6.tar.gz) = ebc9dad7beb4f2f222f71a252502905c61ec41e2
-Size (ruby-tcpwrap-0.6.tar.gz) = 4504 bytes

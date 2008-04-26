@@ -1,4 +1,0 @@
-merb-core is the heart of the merb MVC framwork.  It has the rack
-abstraction along with the dispatcher, router, controller and view
-layers.  You can make very fast, small footprint services and apps with
-just merb-core.

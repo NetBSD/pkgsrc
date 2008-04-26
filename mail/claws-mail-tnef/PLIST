@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2008/01/09 14:49:36 smb Exp $
-lib/claws-mail/plugins/tnef_parse.la
-share/locale/fi/LC_MESSAGES/tnef_parse.mo
-share/locale/fr/LC_MESSAGES/tnef_parse.mo
-share/locale/hu/LC_MESSAGES/tnef_parse.mo
-share/locale/it/LC_MESSAGES/tnef_parse.mo
-share/locale/pt_BR/LC_MESSAGES/tnef_parse.mo
-share/locale/sk/LC_MESSAGES/tnef_parse.mo
-@dirrm lib/claws-mail/plugins

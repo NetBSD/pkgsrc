@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2006/10/13 20:25:22 markd Exp $
-include/poppler/poppler-link-qt3.h
-include/poppler/poppler-page-transition.h
-include/poppler/poppler-qt.h
-lib/libpoppler-qt.la
-lib/pkgconfig/poppler-qt.pc

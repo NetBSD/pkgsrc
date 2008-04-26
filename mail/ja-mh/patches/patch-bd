@@ -1,14 +1,0 @@
-$NetBSD: patch-bd,v 1.1 2006/04/11 15:08:38 joerg Exp $
-
---- uip/prompter.c.orig	2006-04-11 14:45:09.000000000 +0000
-+++ uip/prompter.c
-@@ -68,9 +68,6 @@ static struct swit switches[] = {
- 
- /*  */
- 
--extern int  errno;
--
--
- #ifndef	SYS5
- #define	ERASE	sg.sg_erase
- #define	KILL	sg.sg_kill

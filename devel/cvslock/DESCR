@@ -1,7 +1,0 @@
-The cvslock (1) program is used to safely manipulate and inspect CVS
-repositories; to this end, it properly uses CVS' lock file mechanism.
-
-The primary application for which this program was created was
-keeping several instances of the same CVS repository in synch; using
-CVSup which apparently does a superior task at this was not an
-option in my precise application.

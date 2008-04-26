@@ -1,9 +1,0 @@
-Gimp-Print is a suite of printer drivers for all UNIX operating systems,
-supporting printers from Canon, Epson, Hewlett-Packard, Lexmark, and compatible
-printers from other vendors, featuring extremely high quality, flexibility, and
-integration with most common printing systems.
-Gimp-Print includes a core module (libgimpprint) that forms a common print
-engine supporting CUPS, Ghostscript, and Foomatic. It also includes the Print
-plug-in for the GIMP. The libgimpprint core, which is portable to all
-POSIX-compliant operating systems, can also be used by custom printing
-solutions.

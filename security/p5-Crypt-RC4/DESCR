@@ -1,9 +1,0 @@
-The Perl 5 module Crypt::RC4 provides a simple implementation of
-the RC4 algorithm, developed by RSA Security, Inc.
-
-Disclaimer: Strictly speaking, this module uses the "alleged" RC4
-algorithm. The Algorithm known as "RC4" is a trademark of RSA
-Security Inc., and this document [the module documentation] makes
-no claims one way or another that this is the correct algorithm,
-and further, make no claims about the quality of the source code
-nor any licensing requirements for commercial use

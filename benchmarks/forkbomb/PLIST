@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/13 08:17:51 xtraeme Exp $
-bin/forkbomb
-man/man8/forkbomb.8

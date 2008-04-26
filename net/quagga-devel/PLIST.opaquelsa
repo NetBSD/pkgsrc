@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST.opaquelsa,v 1.1.1.1 2006/03/08 01:46:05 gdt Exp $
-include/quagga/ospfapi/ospf_apiclient.h
-lib/libospfapiclient.la
-sbin/ospfclient
-@dirrm include/quagga/ospfapi

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1 2008/01/24 03:00:28 smb Exp $
-
-SHA1 (clawsker-0.3.0.tar.gz) = 72118a32636d95103380a1e65f831c95a7dda71a
-RMD160 (clawsker-0.3.0.tar.gz) = 27b76cded291ceec49c448569fde6763a502aebd
-Size (clawsker-0.3.0.tar.gz) = 29524 bytes
-SHA1 (patch-aa) = bc7d011e4fae77968d6d5e9ccbfaa6feb4a6bbc5
-SHA1 (patch-ab) = 2be3130215d38b76192fd796b9443cf54740addc
-SHA1 (patch-ac) = 95ae82ef362248fce8f84de80c7a3b912938a9f5

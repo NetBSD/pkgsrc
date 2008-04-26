@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2008/03/07 20:05:57 wiz Exp $
-
-SHA1 (xf86-video-nv-2.1.8.tar.bz2) = 82a0f0bf9c3f528312cc7c497630946b206d81f5
-RMD160 (xf86-video-nv-2.1.8.tar.bz2) = d34e4267b4d4b409f355f62ce312e0a5b650c898
-Size (xf86-video-nv-2.1.8.tar.bz2) = 384527 bytes

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/12 14:50:20 joerg Exp $
-bin/showrgb
-man/man1/showrgb.1
-share/X11/rgb.txt

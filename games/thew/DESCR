@@ -1,8 +1,0 @@
-The hermit worm (THEW) is a curses-based game similar to an old version of the
-C64 Snake game. It works with the arrow keys and with the vi-like keys h, j, k
-and l. It is possible to enter in auto-mode where THEW play without user
-interaction useful to use it as console screensaver. There is a "status bar"
-with several informations: scores, speed level, user moves, number of "numbers"
-to eat before switch to the next level, and others. You have constantly two
-squares with the current worm position and the position of the current number
-to eat. Enjoy game!

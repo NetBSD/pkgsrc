@@ -1,7 +1,0 @@
-Liquid Rescale is a free, open source implementation of the algorithm
-described in the paper entitled "Seam Carving for Content-Aware Image Resizing"
-by Shai Avidan and Ariel Shamir.
-It aims at resizing pictures non-uniformly while preserving their features,
-i.e. avoiding distortion of the important parts. It supports manual feature
-selection, and can also be used to remove portions of the picture in a
-consistent way.

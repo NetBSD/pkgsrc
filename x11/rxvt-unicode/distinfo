@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.11 2008/04/03 22:36:52 tonnerre Exp $
-
-SHA1 (rxvt-unicode-8.3.tar.bz2) = cd335c47543ba086585a296ca0fe7445c07120dd
-RMD160 (rxvt-unicode-8.3.tar.bz2) = 000dbcb1ff297edbff0a8b21dbbba3db30854579
-Size (rxvt-unicode-8.3.tar.bz2) = 885212 bytes
-SHA1 (patch-aa) = e5760c57a6b47780ee851efe09dda5f2f02fca40
-SHA1 (patch-ab) = 2bfbffea8d63ebd65bfa9b0dc43a1901f844137e

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/05/25 23:37:11 rh Exp $
-
-SHA1 (Pantomime-1.1.2.tar.gz) = 06755835a74ff3686eca35ba5169722f17cf968e
-RMD160 (Pantomime-1.1.2.tar.gz) = 2d6a3bf2c5e1cd146ba3f72ac69970ed6b5ee999
-Size (Pantomime-1.1.2.tar.gz) = 394509 bytes
-SHA1 (patch-aa) = ef93a034eb706006ae9c7f0b6f393d8117656129
-SHA1 (patch-ab) = e93e2e507b22d9deaf91af147ec6552a707f70bb

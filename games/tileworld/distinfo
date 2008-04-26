@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/11/30 11:20:43 wiz Exp $
-
-SHA1 (tworld-1.3.0.tar.gz) = 21542cb012143d563232883d9337ed0e3bd06672
-RMD160 (tworld-1.3.0.tar.gz) = c4cee133bf2d3e0df2bd31a49d46d1c6628ef9a8
-Size (tworld-1.3.0.tar.gz) = 1045555 bytes
-SHA1 (patch-aa) = 3fcc14d03b35d52e15d0d4e61797bd052d413003

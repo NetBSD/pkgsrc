@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/11/05 20:12:36 minskim Exp $
-
-SHA1 (ruby-doc-stdlib-0.10.1.tgz) = 170039eb456cb8a5127d14dfa7b6485406f15d07
-RMD160 (ruby-doc-stdlib-0.10.1.tgz) = 242c985fa03aaa6ee54276a28d11e98e9b6c9d59
-Size (ruby-doc-stdlib-0.10.1.tgz) = 2347615 bytes

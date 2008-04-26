@@ -1,6 +1,0 @@
-A Sequence Cleanup Program.  Lucy is a utility that prepares raw DNA
-sequence fragments for sequence assembly,possibly using the TIGR
-Assembler.  The cleanup process includes quality assessment,
-confidence reassurance, vector trimming and vector removal.  The
-primary advantage of Lucy over other similar utilities is that it is a
-fully integrated, stand alone program.

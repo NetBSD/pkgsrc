@@ -1,3 +1,0 @@
-When using HTTP authentication for your Kwiki, use this module to
-automatically set the user's name from the username they logged in
-with. This name will appear in any Recent Changes listing.

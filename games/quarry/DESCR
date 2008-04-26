@@ -1,7 +1,0 @@
-Quarry is a multi-purpose GUI for several board games, at present
-Go, Amazons, and Reversi (a.k.a. Othello.) It allows users to play
-against computer players (third-party programs, e.g. GNU Go or
-GRhino) or other humans, view and edit game records. Future versions
-will also support Internet game servers and provide certain features
-for developers of board game-playing engines for enhancing their
-programs.

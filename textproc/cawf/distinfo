@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/11/08 19:33:50 tv Exp $
-
-SHA1 (cawf-4.10/cawf.zip) = c16985f79c5d9b11de62dff6ed24d210ca12eb40
-RMD160 (cawf-4.10/cawf.zip) = 33bce828f0a88c05c32c221a9fd5d1ca5d4ad2b4
-Size (cawf-4.10/cawf.zip) = 287677 bytes
-SHA1 (patch-aa) = 21ff1ae5d3fb3a32cb855c2b4353ffbe62ebcd17
-SHA1 (patch-ab) = 52fa93c4903539f5cf56e2c904b7ffea3610899f

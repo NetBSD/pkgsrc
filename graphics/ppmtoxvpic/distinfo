@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 08:45:12 agc Exp $
-
-SHA1 (dfm-0.99.9.tar.gz) = 491f7ed1f8f82a0272143fa79b1b7ca705d34664
-RMD160 (dfm-0.99.9.tar.gz) = ab7a4b36e594d9d347e5a1e3d9c06abc2a287693
-Size (dfm-0.99.9.tar.gz) = 389444 bytes
-SHA1 (patch-aa) = 2ffe8bad9f6d21f323b472a18636a1e3d5815413

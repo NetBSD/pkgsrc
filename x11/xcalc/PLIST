@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/12 18:03:17 joerg Exp $
-bin/xcalc
-lib/X11/app-defaults/XCalc
-lib/X11/app-defaults/XCalc-color
-man/man1/xcalc.1
-@dirrm lib/X11/app-defaults
-@dirrm lib/X11

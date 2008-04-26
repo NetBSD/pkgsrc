@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/06/17 19:27:04 rillig Exp $
-
-SHA1 (semantic-1.4.4.tar.gz) = 65a3826d47d9deaf936c2564425aa4e970ad11c2
-RMD160 (semantic-1.4.4.tar.gz) = e67bed991b9c1d0ade548304a47fad7019d2f912
-Size (semantic-1.4.4.tar.gz) = 322819 bytes
-SHA1 (patch-aa) = 1def5dec1947b0def770b6228688792116b46bf1

@@ -1,7 +1,0 @@
-Time::Interval
-==============
-
-This package installs the Time::Interval perl module.
-Time::Interval's primary purpose is to take a given number
-of seconds and return the number of days, hours, minutes,
-and seconds are represented.

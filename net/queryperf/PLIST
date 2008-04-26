@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2006/08/09 18:20:46 tv Exp $
-bin/queryperf
-share/doc/queryperf/README
-share/examples/queryperf/gen-data-queryperf.py
-share/examples/queryperf/sample.0
-share/examples/queryperf/sample.1
-@dirrm share/examples/queryperf
-@dirrm share/doc/queryperf

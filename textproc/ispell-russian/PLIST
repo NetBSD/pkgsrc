@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/11/19 15:53:25 jschauma Exp $
-lib/russian.aff
-lib/russian.hash

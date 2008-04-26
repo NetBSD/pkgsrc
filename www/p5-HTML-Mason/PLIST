@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/10/01 21:29:33 heinz Exp $
-share/examples/p5-HTML-Mason/MyApp/Mason.pm
-share/examples/p5-HTML-Mason/MyApp/MasonWithSession.pm
-share/examples/p5-HTML-Mason/README
-share/examples/p5-HTML-Mason/dump-request
-share/examples/p5-HTML-Mason/httpd.conf
-share/examples/p5-HTML-Mason/show-env
-@dirrm share/examples/p5-HTML-Mason/MyApp
-@dirrm share/examples/p5-HTML-Mason

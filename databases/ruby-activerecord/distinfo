@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.12 2008/04/04 15:30:00 jlam Exp $
-
-SHA1 (activerecord-2.0.2.gem) = 9a7a0356fd20e65dd61d2a2c8441ad336c2fba80
-RMD160 (activerecord-2.0.2.gem) = fe105181e94577fbd96619b703e888df5198707e
-Size (activerecord-2.0.2.gem) = 422400 bytes

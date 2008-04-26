@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:01:05 zuntum Exp $
-bin/poppy
-man/man1/poppy.1

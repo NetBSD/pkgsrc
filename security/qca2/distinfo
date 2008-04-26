@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/12/21 00:19:43 jdolecek Exp $
-
-SHA1 (qca-2.0.0.tar.bz2) = 5b896647426637e1974703f2950786746408c70b
-RMD160 (qca-2.0.0.tar.bz2) = 256ca518fea507d03b67c0f5d26ba2ac7b3db517
-Size (qca-2.0.0.tar.bz2) = 5106520 bytes
-SHA1 (patch-aa) = 5dcb9d5eb4c0906c97f9b8d98eac2ab996c33f67

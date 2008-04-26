@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 13:10:12 agc Exp $
-
-SHA1 (rc5-mlg-004.tar.gz) = 84c33e46011d18fd8b4cf4bffec2707161fdd34a
-RMD160 (rc5-mlg-004.tar.gz) = b5435c1066d29cdc2cc73f45b91f736659175303
-Size (rc5-mlg-004.tar.gz) = 498715 bytes
-SHA1 (patch-aa) = cf2eaeb6dcad327b9796fd4ad805af078c3302e2
-SHA1 (patch-ab) = 12346a67da9f227f1a7adf7af8be1060fb888493

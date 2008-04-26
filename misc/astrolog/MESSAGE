@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2004/02/14 18:04:41 snj Exp $
-
-See the file ${PREFIX}/share/doc/astrolog/Helpfile.530 for help.
-You may also want to tune ${PREFIX}/lib/astrolog/astrolog.dat.
-
-===========================================================================

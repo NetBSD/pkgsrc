@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2003/11/04 20:52:47 heinz Exp $
-bin/x2vnc
-man/man1/x2vnc.1

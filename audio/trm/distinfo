@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/07/01 11:59:01 chris Exp $
-
-SHA1 (trm-0.2.1.tar.gz) = ea032c38ca83266026e0c10919749814282994e9
-RMD160 (trm-0.2.1.tar.gz) = fb74d692920af62a7fcbbacfb32cd0e277e56126
-Size (trm-0.2.1.tar.gz) = 131349 bytes
-SHA1 (patch-aa) = 152a7b8503ca887c641aeedfdd78f2520b88763b
-SHA1 (patch-ab) = 909c55da818a72b687c88c69a4e8d682f5a02df5
-SHA1 (patch-ac) = 980651e3f8b196575c09aa99cf33e9ce008a708f

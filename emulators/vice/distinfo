@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.31 2007/08/30 12:23:00 wiz Exp $
-
-SHA1 (vice-1.22.tar.gz) = 55e0047824f64173539e03ddd2d5ab51cd581fbb
-RMD160 (vice-1.22.tar.gz) = ca93fc424e617e38f27e288ebcdfbab2aa3659db
-Size (vice-1.22.tar.gz) = 6088483 bytes
-SHA1 (patch-af) = 524913b7bc753dafde909bb26ace8f0500be14d5

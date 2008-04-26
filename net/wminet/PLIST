@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:59:50 zuntum Exp $
-bin/wminet
-man/man1/wminet.1

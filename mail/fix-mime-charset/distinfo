@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 09:59:22 agc Exp $
-
-SHA1 (fix-mime-charset-0.5.3.tar.gz) = e331d21ba71460041958b8d4eeb61757e9f52182
-RMD160 (fix-mime-charset-0.5.3.tar.gz) = 7a456f8e40c017b9f3f06db79c7cfcd2d2d15149
-Size (fix-mime-charset-0.5.3.tar.gz) = 115465 bytes

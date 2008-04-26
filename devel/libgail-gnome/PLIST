@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/09/22 08:09:26 jlam Exp $
-lib/gtk-2.0/modules/libgail-gnome.la
-lib/pkgconfig/libgail-gnome.pc
-@comment in gtk2: @dirrm lib/gtk-2.0/modules

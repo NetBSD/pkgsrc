@@ -1,4 +1,0 @@
-The purpose of the Perl 5 module PPI is to parse Perl code or more
-accurately Perl Documents. Among the things that people might want
-a "Perl parser" for you will find tasks like documentation, structural
-and quality analysis, refactoring, layout and presentation

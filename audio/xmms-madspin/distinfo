@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/05/23 11:51:53 rillig Exp $
-
-SHA1 (madspin-0.05.tar.gz) = 4bddb3e77da8f28a17c2a9190c0a345c29159b42
-RMD160 (madspin-0.05.tar.gz) = 8613d81ea06d101a62eec46291c2c4204199d203
-Size (madspin-0.05.tar.gz) = 565244 bytes
-SHA1 (patch-aa) = 4cc8d55a32ff980376ca965d6e09d1a9ab928b7e
-SHA1 (patch-configc) = 18ac135023338e77a366be486149466dba748da9
-SHA1 (patch-madspinh) = 427ff8c9f6f5d32bf3288f161ae3464358f52966

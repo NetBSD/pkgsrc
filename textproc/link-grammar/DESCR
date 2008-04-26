@@ -1,4 +1,0 @@
-This package contains a *patched* version of the final original
-release of the Link Grammar Parser.  It has been patched to fix a
-few bugs, add a few enhancements, and, in general, make the Link
-Grammar Parser easier to use. This version includes Java bindings.

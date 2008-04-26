@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.8 2006/09/28 20:52:23 minskim Exp $
-
-SHA1 (xscavenger-1.4.4.tgz) = d9ef34d2ec1a9dfeca398004725cae4878bf9f2e
-RMD160 (xscavenger-1.4.4.tgz) = e410c86dbf406243cfac3d0f81ea83e79cdeab32
-Size (xscavenger-1.4.4.tgz) = 193346 bytes
-SHA1 (patch-aa) = 8f4ef6a4fe58b5d4a395426b38bfc848d63ec582
-SHA1 (patch-ab) = aba4113a688f295a1a318c07be607cedecd1fb9a
-SHA1 (patch-ac) = dd92d176417b90dc2c8330cc9c6f222692133219
-SHA1 (patch-ad) = ec134bb41baba7a68b1c05434ade23b448e17517

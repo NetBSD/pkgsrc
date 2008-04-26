@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/10 14:38:01 adrianp Exp $
-lib/security/pam_radius_auth.so
-share/doc/pam-radius/INSTALL
-share/doc/pam-radius/README
-share/doc/pam-radius/USAGE
-share/examples/pam-radius/pam_radius_auth.conf
-@dirrm share/doc/pam-radius
-@dirrm share/examples/pam-radius

@@ -1,8 +1,0 @@
-The cpuburn programs are designed to load x86 CPUs as heavily as
-possible for the purposes of system testing.  They have been
-optimized for different processors.  FPU and ALU instructions are
-coded an assembler endless loop.  They do not test every instruction.
-The goal has been to maximize heat production from the CPU, putting
-stress on the CPU itself, cooling system, motherboard (especially
-voltage regulators) and power supply (likely cause of burnBX/MMX
-errors).

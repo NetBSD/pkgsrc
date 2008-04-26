@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2008/01/12 04:17:38 bjs Exp $
-
-SHA1 (fe-1.8.tar.gz) = b956e5e4c9c9bc925903d0c0b6de0b7b829fcce6
-RMD160 (fe-1.8.tar.gz) = a3d186dbc042fe74fbfdc8e83d6237a50fea692d
-Size (fe-1.8.tar.gz) = 169151 bytes
-SHA1 (patch-aa) = 3686219a0f3fac572772344718384cf06cf5baba
-SHA1 (patch-ab) = 4b72dbe1eabfdb7f65c20f9d2db03950c636f97c

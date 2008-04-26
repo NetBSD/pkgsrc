@@ -1,6 +1,0 @@
-Service Location Protocol is an IETF standards track protocol that provides
-a framework to allow networking applications to discover the existence,
-location, and configuration of networked services in enterprise networks.
-The OpenSLP project is an effort to develop an open-source implementation of
-Service Location Protocol suitable for commercial and non-commercial
-application.

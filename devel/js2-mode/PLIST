@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/12 13:57:19 wiz Exp $
-${EMACS_LISPPREFIX}/js2.el
-${EMACS_LISPPREFIX}/js2.elc

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/06/05 05:59:23 wiz Exp $
-
-SHA1 (szip-2.0.tar.gz) = 6d811c3a75b86e3dded2b849058a1f368aebd60e
-RMD160 (szip-2.0.tar.gz) = 4ab7780bc00efa39d071ac2ef92580dcd02dae6e
-Size (szip-2.0.tar.gz) = 368913 bytes
-SHA1 (patch-aa) = c1a2a539bc2da6d19e0e338796c9ffae4e360de9

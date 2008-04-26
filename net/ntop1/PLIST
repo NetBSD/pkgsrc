@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/06 11:44:16 adam Exp $
-sbin/ntop
-man/man8/ntop.8

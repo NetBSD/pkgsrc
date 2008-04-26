@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.pam,v 1.3 2003/10/08 18:54:42 reed Exp $
-
-To authenticate for SSH using PAM, add the contents of the file:
-
-	${EGDIR}/sshd.pam
-
-to your PAM configuration file (or PAM configuration directory).
-===========================================================================

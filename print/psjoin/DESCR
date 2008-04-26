@@ -1,4 +1,0 @@
-psjoin concatenates several PostScript files (complying with the
-Document Structuring Convention, DSC) and generate a single PostScript
-document. The concatenated PostScript document will be written to
-the standard output.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/04/04 15:30:01 jlam Exp $
-
-SHA1 (PriorityQueue-0.1.2.gem) = 37b3eb7424b056a9ebb94d882f9ce0059303dc3e
-RMD160 (PriorityQueue-0.1.2.gem) = db7e836b0f22b923c374045417e97ad78ab53888
-Size (PriorityQueue-0.1.2.gem) = 59392 bytes
-SHA1 (patch-aa) = 1fdbdfec45dbc0fe3260eb1c657e5f3a5f366d4f

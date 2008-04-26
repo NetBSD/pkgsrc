@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:19 agc Exp $
-
-SHA1 (portlib-1.01.tar.gz) = b1cfc22c5c8550f26daca3043e5379a7358302a3
-RMD160 (portlib-1.01.tar.gz) = 353e2caf3d157f4612ca5352664dde8d4f9eb383
-Size (portlib-1.01.tar.gz) = 12589 bytes
-SHA1 (patch-aa) = 9b6c846775e3fd15ff739198b749e7f3357c2b2a

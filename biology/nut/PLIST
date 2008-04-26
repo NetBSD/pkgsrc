@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2008/01/30 05:43:55 obache Exp $
-bin/nut
-man/man1/nut.1
-share/nut/FOOD_DES.txt
-share/nut/NUT_DATA.txt
-share/nut/WEIGHT.lib
-share/nut/WEIGHT.txt
-share/nut/sr20.nut
-@dirrm share/nut

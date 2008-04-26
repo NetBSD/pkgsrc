@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/12/01 14:09:53 rillig Exp $
-
-SHA1 (qbrew-0.3.5.tar.gz) = ec67830af5adb413a60c79c59c350467abb6ba7c
-RMD160 (qbrew-0.3.5.tar.gz) = 3134f2763164ba6e9b1200e61f8fe8d1ca916fd4
-Size (qbrew-0.3.5.tar.gz) = 458523 bytes
-SHA1 (patch-aa) = e231af46234b81178e7acea69133f78d08128e42

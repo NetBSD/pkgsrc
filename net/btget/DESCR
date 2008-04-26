@@ -1,7 +1,0 @@
-LibBT is a C reimplementation of the BitTorrent core protocols.  Our
-goal for the project is to develop a low overhead library version of
-the protocols so that BitTorrent transfers can easily be built in to
-any existing application.
-
-A suplied application called `btget' is a full fledged bittorrent
-application based on this library.

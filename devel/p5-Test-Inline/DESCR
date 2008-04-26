@@ -1,3 +1,0 @@
-Test::Inline is a way to embed tests in the same file as your source code
-rather than in a separate file. The idea is, the closer your tests are to
-your code and docs, the more likely you'll keep them up to date.

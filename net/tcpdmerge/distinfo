@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:14:05 agc Exp $
-
-SHA1 (tcpdmerge.c) = 6cf440a4f4802c28ab1cdbc71a6b1845efe062d6
-RMD160 (tcpdmerge.c) = 27c46ae47f4b3a80bdbb7eb098ae0d96a3ac02d8
-Size (tcpdmerge.c) = 9944 bytes
-SHA1 (00README.TXT) = ee508be0ffc9004c3ef42d98cc3ce394081634be
-RMD160 (00README.TXT) = 8d7042c50beb9261acc33edfdb3f28d6886e8f76
-Size (00README.TXT) = 3388 bytes

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 09:59:26 agc Exp $
-
-SHA1 (pfqueue-0.1.4.tar.gz) = 0b47055f3a012b9e827d83ba50850b1295d88b5d
-RMD160 (pfqueue-0.1.4.tar.gz) = 9932454d57f641c9fbfcb77456cd899f78ce7dae
-Size (pfqueue-0.1.4.tar.gz) = 103880 bytes

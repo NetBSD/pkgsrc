@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/15 14:48:19 joerg Exp $
-
-SHA1 (font-daewoo-misc-1.0.0.tar.bz2) = 6984606b6dcd9db3d908caf01e8e1855fc171632
-RMD160 (font-daewoo-misc-1.0.0.tar.bz2) = 20df091bb7c3f15405575c774cfd5d6c24b1d02b
-Size (font-daewoo-misc-1.0.0.tar.bz2) = 682909 bytes
-SHA1 (patch-aa) = c9180bce8f2fed4fe91eeae680da1dbdaaa413db
-SHA1 (patch-ab) = 77064ac1f0e01a1cc4439e71a14b88d33c6da3b8
-SHA1 (patch-ac) = a27449b0cc6c6ed91681e3bff3f1826c28119f30

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/06/10 08:42:10 obache Exp $
-
-SHA1 (Perl-Tidy-20070508.tar.gz) = 9bbea2181e8dcf69744eca20bf5b7254de5c55e6
-RMD160 (Perl-Tidy-20070508.tar.gz) = 138b36b097cf6a4c669f1e9d92a9659a0e651f5e
-Size (Perl-Tidy-20070508.tar.gz) = 363515 bytes

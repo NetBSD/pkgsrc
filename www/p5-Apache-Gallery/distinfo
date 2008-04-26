@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2006/04/16 14:19:25 kim Exp $
-
-SHA1 (Apache-Gallery-0.9.1.tar.gz) = e818c89d2b9a6d1aa63bacf149c4a259e6323284
-RMD160 (Apache-Gallery-0.9.1.tar.gz) = 015f9921520c5c3fe382b5e3b7d358b96ddd4be7
-Size (Apache-Gallery-0.9.1.tar.gz) = 82230 bytes
-SHA1 (patch-aa) = ba3246c428255c752fe2a3877072cf4de0f6c86d

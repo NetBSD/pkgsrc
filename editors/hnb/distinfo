@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/10/01 18:52:03 kristerw Exp $
-
-SHA1 (hnb-1.9.17.tar.gz) = b5204a9bda13b42ef04921e71f52e5bfe5412f13
-RMD160 (hnb-1.9.17.tar.gz) = 1363eac8a785a3bad2ac319ae38726cd826268cf
-Size (hnb-1.9.17.tar.gz) = 143700 bytes
-SHA1 (patch-aa) = f44cef4b2a3ccf20513420a1f57946e342aa2ee3
-SHA1 (patch-ab) = 9c87fbe5ddfb7525941cb8e1d66d377fbe726811
-SHA1 (patch-ac) = 88778957d3a52aa6c8b9811133dfe4f2ceca213e

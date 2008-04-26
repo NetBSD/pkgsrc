@@ -1,4 +1,0 @@
-This is a library and a command-line frontend to manipulate digital
-still cameras based on Fujitsu chipset and Sierra Imaging firmware.  The
-program is known to work with Agfa, Epson, Olympus, Sanyo and Nikon (at
-least CoolPix 900, but not CoolPix 600!) cameras.

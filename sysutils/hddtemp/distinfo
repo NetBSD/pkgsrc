@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.1 2006/10/19 21:00:18 christos Exp $
-
-SHA1 (hddtemp-0.3-beta15.tar.bz2) = 65393b0a4d9862c030c81702d95c1acd00da275b
-RMD160 (hddtemp-0.3-beta15.tar.bz2) = 82b6affbbb14d23b5a8f3fecf3fff7acc0bd9def
-Size (hddtemp-0.3-beta15.tar.bz2) = 256372 bytes
-SHA1 (hddtemp.db) = f4ed19e51edfe5b5e8edffab7c650a0e6ce3ccb4
-RMD160 (hddtemp.db) = ce148a09adfe2dde91c922f7a40cc71cdaf011f4
-Size (hddtemp.db) = 20559 bytes
-SHA1 (patch-aa) = de89c8d8904435f084443735030daa9b9882caaa

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/24 08:42:44 rillig Exp $
-bin/jcabc2ps
-man/cat1/jcabc2ps.0

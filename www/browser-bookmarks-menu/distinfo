@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/05/08 13:09:39 drochner Exp $
-
-SHA1 (browser-bookmarks-menu-0.6.tar.gz) = c822bf2d95a3233a724242b3b6f791bb04e827a3
-RMD160 (browser-bookmarks-menu-0.6.tar.gz) = ec943d7127bb4d5844db903f80858141d4076407
-Size (browser-bookmarks-menu-0.6.tar.gz) = 14442 bytes
-SHA1 (patch-aa) = dc620dbb7abde69b9eb40070188db8ce63639e17

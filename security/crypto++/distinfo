@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/12/01 04:17:51 rillig Exp $
-
-SHA1 (cryptopp552.zip) = 18efe451b3c682f40db75dc2b09cb448a835e7d6
-RMD160 (cryptopp552.zip) = 8929795b654d7186b2b38714d22a57ea01862dbd
-Size (cryptopp552.zip) = 992073 bytes
-SHA1 (patch-aa) = 777f0cec232cf696ea1a9dd04fa626f3e76442c1

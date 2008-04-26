@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/04 14:45:44 jlam Exp $
-bin/gnugo
-info/gnugo.info
-man/man6/gnugo.6

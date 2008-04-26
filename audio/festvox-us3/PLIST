@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:16:27 zuntum Exp $
-@comment the next two entries are symlinks
-share/festival/lib/voices/english/us3_mbrola/us3mrpa
-share/festival/lib/voices/english/us3_mbrola/us3
-share/festival/lib/voices/english/us3_mbrola/usradio
-share/festival/lib/voices/english/us3_mbrola/festvox/us3_mbrola.scm
-share/festival/lib/voices/english/us3_mbrola/festvox/usdurtreeZ.scm
-@dirrm share/festival/lib/voices/english/us3_mbrola/festvox
-@dirrm share/festival/lib/voices/english/us3_mbrola

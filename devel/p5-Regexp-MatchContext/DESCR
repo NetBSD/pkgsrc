@@ -1,5 +1,0 @@
-The Perl 5 module Regexp::MatchContext provides replacements for
-the regexp related variables $PREMATCH, $MATCH, and $POSTMATCH in
-a way that only impacts the performance of matches that you specify.
-These three variables are only set if the most recently matched
-regex contained the special (non-standard) meta- flag: (?p).

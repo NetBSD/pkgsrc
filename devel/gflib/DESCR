@@ -1,6 +1,0 @@
-This package contains C procedures for limited Galois Field
-arithmetic and Reed-Solomon coding.
-
-Reed-Solomon coding is the error correction coding used in diverse
-fields from CDs, DVDs and DAT tapes, to the communications used by
-NASA for such missions as Voyager, Voyager II and Cassini Huygens.

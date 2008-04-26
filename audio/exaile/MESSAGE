@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1 2007/09/03 10:21:07 drochner Exp $
-
-To view WWW track information, the "gtkmozembed" Python module is needed
-which is part of x11/py-gnome2-extras>=2.14.2nb3.
-
-===========================================================================

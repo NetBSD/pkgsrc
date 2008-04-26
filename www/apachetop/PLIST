@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/12/08 16:28:38 sketch Exp $
-man/man1/apachetop.1
-bin/apachetop

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/02/23 21:38:59 agc Exp $
-
-SHA1 (or1ksim-0.2.0rc2.tar.gz) = 7db0dfcf60c072b4143f45a4214f5eb65f2fd5ff
-RMD160 (or1ksim-0.2.0rc2.tar.gz) = 4111113389484969827e20f8c61caf33176b5407
-Size (or1ksim-0.2.0rc2.tar.gz) = 624729 bytes
-SHA1 (patch-aa) = 5e348fc6e687bab8edb0e5abe545d829cb781792

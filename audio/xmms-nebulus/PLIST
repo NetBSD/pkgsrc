@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2008/03/16 12:35:05 obache Exp $
-lib/xmms/Visualization/libnebulus.la
-share/locale/fr/LC_MESSAGES/xmms-nebulus.mo
-share/locale/fr_FR/LC_MESSAGES/xmms-nebulus.mo
-share/locale/pt/LC_MESSAGES/xmms-nebulus.mo

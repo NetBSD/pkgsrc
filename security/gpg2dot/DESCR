@@ -1,8 +1,0 @@
-This simple perl script takes the output of gpg --list-keys --verbose,
-which lists all the keys in your public key ring, along with all
-their signatures, and converts it to a di-graph in "dot" language
-form.
-
-The graphviz package can turn the description into a graph you can
-look at to see who has signed whose key, or how far it is from your
-key to someone in Reykjavik, etc.

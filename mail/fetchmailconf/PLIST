@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/01/17 14:29:12 tron Exp $
-bin/fetchmailconf
-${PYSITELIB}/fetchmailconf.py
-${PYSITELIB}/fetchmailconf.pyc
-${PYSITELIB}/fetchmailconf.pyo
-man/man1/fetchmailconf.1

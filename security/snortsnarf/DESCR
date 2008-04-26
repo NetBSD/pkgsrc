@@ -1,3 +1,0 @@
-SnortSnarf is a Perl program to take files of alerts from the free Snort
-Intrusion Detection System, produce HTML output intended for diagnostic
-inspection and tracking down problems.

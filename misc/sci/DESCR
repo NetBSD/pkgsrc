@@ -1,5 +1,0 @@
-sci builds multi-user data entry screens from a text template.
-The data input into a screen is saved in a tab-delimited file.
-The template may supply default values for a data entry field,
-and fields may be marked as numeric data, or alphabetic only.
-sci uses curses for screen control.

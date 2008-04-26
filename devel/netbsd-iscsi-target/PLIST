@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/14 20:29:20 agc Exp $
-man/man5/targets.5
-man/man8/iscsi-target.8
-sbin/iscsi-target
-share/doc/iscsi/FAQ
-@dirrm share/doc/iscsi

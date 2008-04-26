@@ -1,7 +1,0 @@
-Xaw-xpm is a hack on Xaw3d, which is in turn based on the 'standard' X11 Xaw
-widget set. It adds the ability to insert colour images into the backgrounds
-of widgets, vastly improving the look of your Xaw apps. Just put the library
-(libXaw.so.6.0) in place of your current one (usually /usr/X11R6/lib on Linux
-systems) and customise away with editres, etc.
-
-Hacked by Ben Buxton <bb@zip.com.au>.

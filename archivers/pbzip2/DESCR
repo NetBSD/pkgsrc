@@ -1,5 +1,0 @@
-The pbzip2 program is a parallel version of bzip2 for use on shared
-memory machines.  It provides near-linear speedup when used on true
-multi-processor machines and 5-10% speedup on Hyperthreaded machines.
-The output is fully compatible with the regular bzip2 data so any
-files created with pbzip2 can be uncompressed by bzip2 and vice-versa.

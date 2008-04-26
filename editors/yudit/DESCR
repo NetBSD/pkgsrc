@@ -1,4 +1,0 @@
-Yudit stands for "Unicode editor" and is a nice text editor for the X-Window
-system that uses Unicode (ISO-10646). It supports representation schemes
-such as UTF-7, UTF-8, UTF-16 and older non-Unicode character sets like
-ISO 8959, KOI8, JIS, GB, BIG5, KSC, EUC, HZ.

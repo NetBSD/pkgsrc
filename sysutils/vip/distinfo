@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/09/28 20:59:08 seb Exp $
-
-SHA1 (vip-19971113/vip) = 0b2794b5ac2792af5fcf1d97f9aae04798eac049
-RMD160 (vip-19971113/vip) = d40e36c1141422ce69c963c671efaf1f34945326
-Size (vip-19971113/vip) = 4752 bytes
-SHA1 (vip-19971113/vip.man) = d52ce874d594ca2c82538200706bffdf1313fdc1
-RMD160 (vip-19971113/vip.man) = 271880dab784db08bc455f0e8a25c5c94138e55f
-Size (vip-19971113/vip.man) = 2411 bytes
-SHA1 (patch-aa) = f223b69e382c7f44e893040ee64c1a595cfdb60f

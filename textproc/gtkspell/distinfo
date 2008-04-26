@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/07/28 12:43:13 adam Exp $
-
-SHA1 (gtkspell-2.0.11.tar.gz) = d0e288b2d1456e33083dc7d7c61f013688c5cc65
-RMD160 (gtkspell-2.0.11.tar.gz) = c5ca1804807f445e246de2b384448a7c7c76855f
-Size (gtkspell-2.0.11.tar.gz) = 347172 bytes

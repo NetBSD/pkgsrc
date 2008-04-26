@@ -1,9 +1,0 @@
-The most important tools for those who want to insert their own content as a
-website into Freenet or Entropy, are the Freenet Tools (or similiar tools
-from other authors :). For Freenet, there are some such programs linked from
-their http://freenetproject.org) pages. Not many of them will work with
-Entropy out-of-the-box, as they sometimes specialize on minor deviations in
-the FCP interface. Specificially the newer tools, supporting the FEC FCP
-v1.1 will fail with Entropy, as Entropy does not yet fully support the
-changes to the Freenet Client Protocol. So I suggest you use ft for Entropy
-for now, since I can help you there with problems or questions.

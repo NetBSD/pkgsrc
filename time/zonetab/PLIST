@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/03 21:46:38 drochner Exp $
-share/examples/zoneinfo/zone.tab
-@dirrm share/examples/zoneinfo

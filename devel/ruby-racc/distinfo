@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.10 2007/03/17 15:49:43 taca Exp $
-
-SHA1 (racc-1.4.5.tar.gz) = 1eeafd937b6b0ea1f7a8f2a6ba695bc9841500db
-RMD160 (racc-1.4.5.tar.gz) = 0d3f874140cd7e2cd900b2492266bccf7f24235b
-Size (racc-1.4.5.tar.gz) = 103324 bytes

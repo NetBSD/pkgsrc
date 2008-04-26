@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2008/03/06 21:21:10 adrianp Exp $
-
-SHA1 (viewvc-1.0.5.tar.gz) = dccda7e35881a90662f638694f37b0aa2ecb1998
-RMD160 (viewvc-1.0.5.tar.gz) = 9a1e76076f8216ba481213f29befa60870291926
-Size (viewvc-1.0.5.tar.gz) = 522323 bytes
-SHA1 (patch-aa) = da1bc13cf0936289d4254d73f14864c39b2ddf96
-SHA1 (patch-ab) = c8562a82ea747690d748807503d826bbc0a063ab

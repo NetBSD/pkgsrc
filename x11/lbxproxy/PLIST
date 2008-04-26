@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/10 13:46:38 joerg Exp $
-bin/lbxproxy
-lib/X11/lbxproxy/AtomControl
-man/man1/lbxproxy.1
-@dirrm lib/X11/lbxproxy

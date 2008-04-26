@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/12/09 10:56:47 joerg Exp $
-
-SHA1 (lrmi-0.8.tar.gz) = e01ba74b5343551b8d717c2fa9c365cb11d1ab48
-RMD160 (lrmi-0.8.tar.gz) = 680c7f7e6599f71b942edef10846991e1c1ce14b
-Size (lrmi-0.8.tar.gz) = 9347 bytes
-SHA1 (patch-aa) = 1505e0095b79f0e3b7a601adb07541ede68ee15b
-SHA1 (patch-ab) = c7c63c4d69e842736e430960a4efe23eef776e86
-SHA1 (patch-ac) = 16174abce6d5959e0bd0bdbf28c573ccb1e1445e

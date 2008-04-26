@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/06/15 11:28:04 drochner Exp $
-
-SHA1 (exif-0.6.15.tar.gz) = b338f0e54991dec1f8e6ffb60103728df0afb3fd
-RMD160 (exif-0.6.15.tar.gz) = 50c91a46a9c7a42b5ea54312cb12db1329c682a0
-Size (exif-0.6.15.tar.gz) = 440720 bytes

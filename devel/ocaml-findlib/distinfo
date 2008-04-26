@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/20 10:19:35 rillig Exp $
-
-SHA1 (findlib-1.1.2pl1.tar.gz) = ccd8b9d6249b5a4097040d32b90048b11054f461
-RMD160 (findlib-1.1.2pl1.tar.gz) = 1bd97ac60eb6ba9b3711814d38f7682a5f874cd3
-Size (findlib-1.1.2pl1.tar.gz) = 153542 bytes

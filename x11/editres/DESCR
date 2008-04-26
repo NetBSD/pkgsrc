@@ -1,5 +1,0 @@
-This package provides editres, a program to display the widget tree of
-applications with Editres protocol support and dynamically alter the
-resource specification for those.
-
-This is from the modular X.org X11 project.

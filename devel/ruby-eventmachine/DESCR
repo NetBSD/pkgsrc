@@ -1,4 +1,0 @@
-Ruby/EventMachine is a fast, simple event-processing library for Ruby
-programs.  It lets you write network clients and servers without
-handling sockets -- all you do is send and receive data.  Single-threaded
-socket engine -- scalable and fast!

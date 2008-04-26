@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:33:59 reed Exp $
-bin/cygaudiofile-0.dll
-bin/cygesd-0.dll
-emul/cygwin/bin/esd.exe
-share/examples/rc.d/cygwin_esd

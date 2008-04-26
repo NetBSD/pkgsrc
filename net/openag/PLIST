@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/06 00:01:13 hubertf Exp $
-bin/openag
-share/doc/OpenAG/AUTHORS
-share/doc/OpenAG/ChangeLog
-share/doc/OpenAG/INSTALL
-share/doc/OpenAG/NEWS
-share/doc/OpenAG/README

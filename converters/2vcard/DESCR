@@ -1,6 +1,0 @@
-2vcard is a little perl script to convert an addressbook to the popular
-VCARD file format. Currently, 2vcard can convert mutt's and mh's alias as
-well as pine's, abook's and juno's addressbook format.
-
-The VCARD format is used by gnomecard, for example, which in turn is used
-by the balsa email client.

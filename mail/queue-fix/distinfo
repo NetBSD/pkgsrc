@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/10/12 09:53:55 wiz Exp $
-
-SHA1 (queue-fix-1.4.tar.gz) = ce42fcc4daf5076adcf8fea6a9a84f2e1716c67c
-RMD160 (queue-fix-1.4.tar.gz) = 7babeb21844214779dc58b96129ab0ee555393f8
-Size (queue-fix-1.4.tar.gz) = 18486 bytes

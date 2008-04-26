@@ -1,6 +1,0 @@
-METIS is a family of programs for partitioning unstructured graphs and
-hypergraphs and computing fill-reducing orderings of sparse matrices.
-The underlying algorithms used by METIS are based on the
-state-of-the-art multilevel paradigm that has been shown to produce
-high quality results and scale to very large problems.  It is
-available both as a set of stand-alone programs and as a library.

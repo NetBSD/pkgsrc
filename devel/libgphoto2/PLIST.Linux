@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.4 2007/12/23 05:11:34 minskim Exp $
-share/doc/libgphoto2/linux-hotplug/usbcam.console
-share/doc/libgphoto2/linux-hotplug/usbcam.group
-share/doc/libgphoto2/linux-hotplug/usbcam.user
-share/doc/libgphoto2/linux-hotplug/usbcam.x11-app
-@dirrm share/doc/libgphoto2/linux-hotplug

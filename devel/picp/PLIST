@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/27 05:34:27 dogcow Exp $
-bin/picp
-share/doc/picp/PICPmanual.html
-@dirrm share/doc/picp

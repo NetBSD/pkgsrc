@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/01/12 14:27:22 dillo Exp $
-lib/opensync/plugins/syncml_plugin.la
-share/opensync/defaults/syncml-http-server
-share/opensync/defaults/syncml-obex-client
-@dirrm share/opensync/defaults
-@dirrm lib/opensync/plugins

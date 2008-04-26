@@ -1,4 +1,0 @@
-Module::Refresh Perl5 module is a generalization of the functionality
-provided by Apache::StatINC and Apache::Reload.  It's designed to
-make it easy to do simple iterative development when working in a
-persistent environment.

@@ -1,8 +1,0 @@
-LuaExpat is a XML parser based on the Expat XML parser.
-It allows Lua programs to:
-
-- Process a XML document incrementally , thus being able to handle
-  huge documents without memory penalties;
-
-- Register handler functions wich are called by the parser during
-  the processing of the document, handling the document elements or text.

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/02 14:09:48 jmmv Exp $
-bin/vms-empire
-man/man6/vms-empire.6

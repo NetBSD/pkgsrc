@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/04/08 03:41:00 bjs Exp $
-
-SHA1 (libXxf86vm-1.0.1.tar.bz2) = 75469e9ef5bc29dc84fcc5e35251583d10c04859
-RMD160 (libXxf86vm-1.0.1.tar.bz2) = f9bd6533f37c74a948ad9f8af58d833a8ce1bfcf
-Size (libXxf86vm-1.0.1.tar.bz2) = 227928 bytes
-SHA1 (patch-aa) = aeff97fa6c348314c3a4e4aae8aa9ba782ab6f28

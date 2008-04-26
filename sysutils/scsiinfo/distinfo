@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/05/25 13:39:07 wiz Exp $
-
-SHA1 (scsiinfo-4.7.shar) = 571b9269ddb09f63a3e6b497c7fb46c23242a8da
-RMD160 (scsiinfo-4.7.shar) = 64c01795a721e947a90935608aa75226a1f38645
-Size (scsiinfo-4.7.shar) = 198732 bytes
-SHA1 (patch-aa) = 76e00e321de8a0ed8cbbfa47121057831049912a

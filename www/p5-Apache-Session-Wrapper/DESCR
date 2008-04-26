@@ -1,2 +1,0 @@
-This module provides a simple wrapper for Apache::Session that manages
-the session id for you.  See the module documentation for details.

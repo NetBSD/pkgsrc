@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/11/15 14:57:54 joerg Exp $
-
-SHA1 (font-mutt-misc-1.0.0.tar.bz2) = f65b7659d1abde092044349d3be996ab9a1e02c6
-RMD160 (font-mutt-misc-1.0.0.tar.bz2) = be37a2edfafb5f969f53e85e10aa2eab6fad62b6
-Size (font-mutt-misc-1.0.0.tar.bz2) = 203608 bytes
-SHA1 (patch-aa) = e8520f9d92a3938ef45b09698769c0a233fa543e
-SHA1 (patch-ab) = 2cd773af858094c91abe832a8949e82c97f04449
-SHA1 (patch-ac) = 20a5fa0490ef9b67deb62d5c3bf5da5f7742b0c3

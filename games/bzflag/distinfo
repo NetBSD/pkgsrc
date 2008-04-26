@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.11 2007/08/06 22:41:06 xtraeme Exp $
-
-SHA1 (bzflag-2.0.8.tar.gz) = d59f3966757a6fee248b533ecb382f83e96bf574
-RMD160 (bzflag-2.0.8.tar.gz) = 0b8840f250dad3c781d962c631f65ff640022a24
-Size (bzflag-2.0.8.tar.gz) = 11908327 bytes
-SHA1 (patch-ad) = 75e49c8e78e421f5b495a49a13ac2cdc51ef85e1

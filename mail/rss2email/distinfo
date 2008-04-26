@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.15 2008/02/19 10:33:05 schmonz Exp $
-
-SHA1 (rss2email-2.62.py) = 0c69c3325fa9ddac11f8d461337f11c989c62f66
-RMD160 (rss2email-2.62.py) = 715c9c26406336984e5e7862adfb920421a07bdf
-Size (rss2email-2.62.py) = 24310 bytes
-SHA1 (patch-ad) = ce953548c05c764b8dff1a7f9cc6fb7c52acf166

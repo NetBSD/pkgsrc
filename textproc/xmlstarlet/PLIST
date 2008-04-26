@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/23 21:32:01 seb Exp $
-bin/xml
-man/man1/xmlstarlet.1
-share/doc/xmlstarlet/xmlstarlet-ug.pdf
-share/doc/xmlstarlet/xmlstarlet.txt
-@dirrm share/doc/xmlstarlet

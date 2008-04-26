@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2007/11/10 11:33:00 agc Exp $
-
-The storage requirements for this package could be considered to
-be quite large - on the order of 20 Gigabytes for the complete
-data.
-
-===========================================================================

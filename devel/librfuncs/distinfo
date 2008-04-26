@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.11 2007/02/15 14:24:24 rillig Exp $
-
-SHA1 (librfuncs-1.0.7.tar.bz2) = af25987e33b7cee65ff159ca3767827c490b8cb3
-RMD160 (librfuncs-1.0.7.tar.bz2) = fbe3716ca424ed28380645c107dd14d7523d6289
-Size (librfuncs-1.0.7.tar.bz2) = 485448 bytes
-SHA1 (patch-aa) = 7ac79fdd00c2fc0bade0b2b7e711ba6a95c9f5e7
-SHA1 (patch-ab) = 0ba6f77a4bf3e4c0c1c438d4d74133c9174b75f0

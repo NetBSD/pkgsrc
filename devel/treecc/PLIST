@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2008/03/19 11:56:46 obache Exp $
-bin/treecc
-info/treecc.info
-lib/libtreecc.a
-man/man1/treecc.1

@@ -1,7 +1,0 @@
-mkcmd lets us build a nifty command line option parser and some on-line
-documentation in a snap.  It is a prerequisite for many of Kevin
-Braunsdorf's tools.
-
-Note that as far as anyone can tell, this is no longer maintained.
-It may not build on every system pkgsrc supports.  This is only
-here in support of xapply.

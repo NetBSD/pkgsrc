@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/10/23 20:17:16 jdolecek Exp $
-
-SHA1 (pear/Mail_Mime-1.3.1.tgz) = bd36dc20f400cab31978c74231eec236c9b1d82b
-RMD160 (pear/Mail_Mime-1.3.1.tgz) = d918979f1167aca81cbdf48f8ae3792be6e5c379
-Size (pear/Mail_Mime-1.3.1.tgz) = 16481 bytes

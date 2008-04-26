@@ -1,5 +1,0 @@
-This is the GNOME Virtual File System, version 2.
-
-GNOME VFS provides an abstraction layer of the file system; applications
-use this layer to access many different protocols and simulate that they
-are part of the local file system.

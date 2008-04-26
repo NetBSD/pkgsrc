@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:20 agc Exp $
-
-SHA1 (TS-1.08.tar.gz) = b1146389c77f79b381b31c565e05cbedc4b285cf
-RMD160 (TS-1.08.tar.gz) = fea453aae44ef3866bade3bd0eca8f8d193c263a
-Size (TS-1.08.tar.gz) = 12623 bytes
-SHA1 (patch-aa) = 93523690ee520efaba0946aeeaaaeeb318efacad

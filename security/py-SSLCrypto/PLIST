@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/05 00:03:54 agc Exp $
-${PYSITELIB}/SSLCrypto.so

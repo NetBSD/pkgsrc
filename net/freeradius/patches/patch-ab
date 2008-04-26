@@ -1,9 +1,0 @@
-$NetBSD: patch-ab,v 1.5 2006/03/21 23:08:08 adrianp Exp $
-
---- src/modules/rlm_perl/Makefile.in.orig	2006-02-10 19:47:17.000000000 +0000
-+++ src/modules/rlm_perl/Makefile.in
-@@ -15,4 +15,3 @@ include ../rules.mak
- $(LT_OBJS): $(HEADERS)
- 
- install-scripts:
--	$(INSTALL) -m 755 example.pl $(R)$(raddbdir)

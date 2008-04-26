@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.5 2005/09/06 18:15:32 tonio Exp $
-
-Before running Kaffe it is necessary to configure the environment.
-
-	PATH=$PATH:${JAVA_HOME}/bin
-	CLASSPATH=${JAVA_HOME}/jre/lib/rt.jar:.
-
-===========================================================================

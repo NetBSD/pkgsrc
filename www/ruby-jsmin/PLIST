@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:26:19 jlam Exp $
-${GEM_HOME}/cache/jsmin-${PKGVERSION}.gem
-${GEM_LIBDIR}/HISTORY
-${GEM_LIBDIR}/lib/jsmin.rb
-${GEM_HOME}/specifications/jsmin-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/lib
-@dirrm ${GEM_LIBDIR}

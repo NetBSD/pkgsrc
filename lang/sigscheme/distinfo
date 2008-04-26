@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/02/29 13:11:14 obache Exp $
-
-SHA1 (sigscheme-0.8.0.tar.gz) = 388596b5551b132b1ca1dfa069be0c5d2ed549db
-RMD160 (sigscheme-0.8.0.tar.gz) = af8f4936976fccac734288a4d79b2797872057b5
-Size (sigscheme-0.8.0.tar.gz) = 1585383 bytes
-SHA1 (patch-aa) = 6866c4d43962bde75c6a669ffff2df53de3a9254
-SHA1 (patch-ab) = d18a5f5973501adcd75edc017e4c04b9f0411a2e

@@ -1,2 +1,0 @@
-cvs2html is a perl script to transform the 'cvs log' output to HTML.
-The program can be used for any type of cvs archive.

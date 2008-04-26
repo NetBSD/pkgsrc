@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/12/30 09:15:36 obache Exp $
-
-SHA1 (vpn-1.0.tar.gz) = b0cdc510dda909fa76635896163ddebd35b8f1e1
-RMD160 (vpn-1.0.tar.gz) = 4f2d2f8b589ef21f27cb4f7568aa2def10c986b6
-Size (vpn-1.0.tar.gz) = 10652 bytes
-SHA1 (patch-aa) = e68b77038c2a5839b65be68ce24cdb5241e3c71c

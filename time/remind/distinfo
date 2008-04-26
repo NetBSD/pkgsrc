@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/09/08 21:58:01 jlam Exp $
-
-SHA1 (remind-03.00.24.tar.gz) = 7fc8823e4e574fd7630b2ff3e2f5d014003fd26b
-RMD160 (remind-03.00.24.tar.gz) = 2f84a240dd28b68e352c6f8d13ed241a2626f0d6
-Size (remind-03.00.24.tar.gz) = 303964 bytes
-SHA1 (patch-ab) = c14e78560d091c417a719a1d699b580a84f934e7
-SHA1 (patch-ac) = 6a45874750d090d91c0a2a033bdb007ae7287488
-SHA1 (patch-ad) = 56feacc6f9af5c59197900fe4591e7d54ff9372c
-SHA1 (patch-ae) = 4e90c971a519d9ac46992fe5e5ab70300c352262

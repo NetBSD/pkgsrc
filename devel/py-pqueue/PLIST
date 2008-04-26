@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/07/24 13:28:16 drochner Exp $
-${PYSITELIB}/pqueuemodule.so
-share/doc/${PYPKGPREFIX}-PQueue/README
-@dirrm share/doc/${PYPKGPREFIX}-PQueue

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2006/07/29 06:59:37 minskim Exp $
-lib/ggi/input/linux_evdev.la
-lib/ggi/input/linux_joy.la
-lib/ggi/input/linux_kbd.la

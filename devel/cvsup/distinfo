@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2005/02/23 22:24:12 agc Exp $
-
-SHA1 (cvsup-snap-16.1h.tar.gz) = 976439eb09c9e929d3bb2837b5e4db14719393b2
-RMD160 (cvsup-snap-16.1h.tar.gz) = 3d90676dfcc15781855c7dfe6aa0c1b37ee3c5af
-Size (cvsup-snap-16.1h.tar.gz) = 430951 bytes
-SHA1 (patch-aa) = 21e66792dfb53c592577710ade53ae4bd2d425bc

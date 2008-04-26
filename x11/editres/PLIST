@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/10 13:46:29 joerg Exp $
-bin/editres
-lib/X11/app-defaults/Editres
-lib/X11/app-defaults/Editres-color
-man/man1/editres.1

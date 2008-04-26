@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/03/24 14:10:31 markd Exp $
-
-SHA1 (libtrace-3.0.0.tar.bz2) = d6aeab482761f5b90bdd891ff74e2415431f0fd4
-RMD160 (libtrace-3.0.0.tar.bz2) = 2f34466e9eaaac0f9e7d8269de643bc3a20374d9
-Size (libtrace-3.0.0.tar.bz2) = 511516 bytes

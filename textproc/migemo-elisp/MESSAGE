@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2008/02/10 13:10:27 obache Exp $
-
-You will need to add something like the following to your ~/.emacs.el or
-~/.xemacs/init.el file to autoload migemo library for Emacs/XEmacs.
-
-(load-library "migemo")
-
-===========================================================================

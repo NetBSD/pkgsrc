@@ -1,6 +1,0 @@
-LibGGIMisc is a place to put support for graphics target features
-which are not deserving their own special extensions.  Right now
-this means basically some VGA adaptor features -- getting and
-waiting for the raster position, using a hardware horizontal
-splitline feature, and loading/unloading font data from hardware
-text modes.

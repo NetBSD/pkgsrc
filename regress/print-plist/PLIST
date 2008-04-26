@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/09/08 15:04:23 jmmv Exp $
-print-plist/foo
-@dirrm print-plist

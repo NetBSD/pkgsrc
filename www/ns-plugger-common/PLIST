@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2003/01/05 04:27:11 rh Exp $
-bin/plugger-4.0
-${NS_PLUGINS_DIR}/plugger.so
-man/man7/plugger.7
-share/doc/plugger/README
-share/doc/plugger/COPYING
-@dirrm share/doc/plugger
-@unexec ${RMDIR} -p %D/${NS_PLUGINS_DIR} 2>/dev/null || ${TRUE}

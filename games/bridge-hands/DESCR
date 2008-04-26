@@ -1,6 +1,0 @@
-Hands is a program to generate bridge hands for a duplicate game.  The
-program writes output to the terminal ("Standard out") which may be
-redirected to a file or a printer.  The output is suitable for printing on
-8 1/2 x 11 inch pages using any fixed-pitch font at 12 characters per inch,
-such as 10-point Courier, or for redirection to any Postcript printer or
-compatible interpreter.

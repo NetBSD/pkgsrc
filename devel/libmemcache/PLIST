@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/06/17 19:07:10 rillig Exp $
-include/memcache.h
-include/memcache/_buffer.h
-include/memcache/buffer.h
-lib/libmemcache.la
-@dirrm include/memcache

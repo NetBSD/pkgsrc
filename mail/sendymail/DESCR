@@ -1,5 +1,0 @@
-sendymail allows you to send e-mails through Yahoo! Mail, using your
-favorite email client. sendymail works as a gateway between Yahoo!
-Mail web interface and your e-mail program, and can be used in
-conjunction with fetchyahoo or YoSucker to emulate a POP3/SMTP-like
-interface.

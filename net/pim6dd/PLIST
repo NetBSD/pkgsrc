@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/03/24 19:21:30 joerg Exp $
-man/cat5/pim6dd.conf.0
-man/cat8/pim6dd.0
-man/man5/pim6dd.conf.5
-man/man8/pim6dd.8
-sbin/pim6dd

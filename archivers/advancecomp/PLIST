@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/16 01:32:10 xtraeme Exp $
-bin/advdef
-bin/advmng
-bin/advpng
-bin/advzip
-man/man1/advdef.1
-man/man1/advmng.1
-man/man1/advpng.1
-man/man1/advzip.1

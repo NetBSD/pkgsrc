@@ -1,7 +1,0 @@
-Increased reliance on optimistic data replication has led to
-burgeoning interest in tools and frameworks for synchronizing
-disconnected updates to replicated data.  To better understand the
-issues underlying the design of generic and heterogeneous synchronizers,
-we have implemented an experimental framework, called Harmony, that
-can be used to build synchronizers for tree-structured data stored
-in a variety of concrete formats, in particular XML.

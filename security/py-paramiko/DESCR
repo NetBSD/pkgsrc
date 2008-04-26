@@ -1,8 +1,0 @@
-paramiko is a module for python 2.2 (or higher) that implements the SSH2
-protocol for secure (encrypted and authenticated) connections to remote
-machines. unlike SSL (aka TLS), SSH2 protocol does not require heirarchical
-certificates signed by a powerful central authority. you may know SSH2 as
-the protocol that replaced telnet and rsh for secure access to remote shells,
-but the protocol also includes the ability to open arbitrary channels to
-remote services across the encrypted tunnel (this is how sftp works,
-for example).

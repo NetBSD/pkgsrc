@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/22 21:28:55 agc Exp $
-
-SHA1 (fluctuate1.4.src.doc.tar.gz) = 7e9fb766312237f85a191327aae37c9a52a2e408
-RMD160 (fluctuate1.4.src.doc.tar.gz) = 39b11f768ad148319cefdee8058017c31d5ef14c
-Size (fluctuate1.4.src.doc.tar.gz) = 70690 bytes
-SHA1 (patch-aa) = d7637d2d2b47d9ceb920319393f13e84a60bfae0

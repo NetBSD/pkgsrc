@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/11/03 13:42:40 rillig Exp $
-share/doc/lambdamoo/HelpSystem-02Jun93.txt
-share/doc/lambdamoo/ProgrammersManual.texinfo
-share/doc/lambdamoo/ProgrammersManual.txt
-@dirrm share/doc/lambdamoo

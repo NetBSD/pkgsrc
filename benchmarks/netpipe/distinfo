@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/22 21:16:36 agc Exp $
-
-SHA1 (NetPIPE_2.4.tar.gz) = 1d5c795c912dfbf9b48c0a7fc0e751ed521a760b
-RMD160 (NetPIPE_2.4.tar.gz) = a7316d7151b5eb48a6ddc4fd48c8ecfc207df9a4
-Size (NetPIPE_2.4.tar.gz) = 23009 bytes
-SHA1 (patch-aa) = 0cbb01a8fb5efb8d14bbeb7f47a456cce758a8e9

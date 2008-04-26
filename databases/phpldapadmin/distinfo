@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.9 2006/05/21 11:58:25 adrianp Exp $
-
-SHA1 (phpldapadmin-0.9.8.3.tar.gz) = 73564d9d56cd7baa2fc607531f17a1659d0a5bce
-RMD160 (phpldapadmin-0.9.8.3.tar.gz) = cdc5fecb341da9a62bedc71f4456ce57d3215f10
-Size (phpldapadmin-0.9.8.3.tar.gz) = 754593 bytes

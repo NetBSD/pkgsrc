@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/08/30 15:16:11 joerg Exp $
-
-SHA1 (freealut-1.1.0.tar.gz) = b2c04d2b5e0896b3164c01deda39f58933c8055f
-RMD160 (freealut-1.1.0.tar.gz) = 6cbf31bd2e51240721a5ee919e576e7348d954ab
-Size (freealut-1.1.0.tar.gz) = 461830 bytes
-SHA1 (patch-aa) = f7909d91a62c9bbeb554926b64fc49f26a794b3b
-SHA1 (patch-ab) = d5d926a3e1ef7aee0e911051e36fca298a38c833
-SHA1 (patch-ac) = 814e5385948d3f6406e932565923f765912a220e

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:10 agc Exp $
-
-SHA1 (blib-1.0.2.tar.gz) = 2a4cd733d4769d265a3aff6e9e9cf26ea243529c
-RMD160 (blib-1.0.2.tar.gz) = 3a31c5d53206d0c05f1fe8e1cfa9358172c8683e
-Size (blib-1.0.2.tar.gz) = 526378 bytes
-SHA1 (patch-aa) = 7f61077b2cce8ad1ca8de8bdad6532d55f58732a
-SHA1 (patch-ab) = e85e7801d4d23ceea3442c10cf51dee73dfa63b0

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.10 2007/06/06 12:43:31 tnn Exp $
-
-SHA1 (euler-1.61.0.tgz) = 55f8c768bf370db5ea07911cc40a995c556d23a4
-RMD160 (euler-1.61.0.tgz) = d015f1eaf1192508ddfe20ea9aba033bcc1d140d
-Size (euler-1.61.0.tgz) = 1202485 bytes
-SHA1 (patch-aa) = 68f12461b0c37256295ae272dfeaabf96b37a532
-SHA1 (patch-ab) = 11049b09d4fd218b3f0f60770f022a4cf110c094

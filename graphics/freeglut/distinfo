@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/10/10 22:22:14 rillig Exp $
-
-SHA1 (freeglut-2.2.0.tar.gz) = 87c762bd9653fe844f67e1944f1397061b590dc8
-RMD160 (freeglut-2.2.0.tar.gz) = 854de841d634074aac0df1cd62c8ca236570419a
-Size (freeglut-2.2.0.tar.gz) = 384055 bytes
-SHA1 (patch-aa) = 94fbd8965fa42db9c6c57c2b4089c764f9e7bcc0
-SHA1 (patch-ab) = ec636c3684a2d64c1a7c47e1ff95651ce0061b30

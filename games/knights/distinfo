@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/06/21 14:20:37 joerg Exp $
-
-SHA1 (knights-0.6.tar.gz) = 54cbed6c3e0ab9d62840ad75ed8e6cf874fa7f61
-RMD160 (knights-0.6.tar.gz) = 3974312d834a63a7cfe53762346b64952763732c
-Size (knights-0.6.tar.gz) = 1317589 bytes
-SHA1 (patch-aa) = fb48569f22c081254e48ced8634375a6e1769e41

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.10 2007/10/05 23:35:11 joerg Exp $
-
-SHA1 (docsis-0.9.4.tar.gz) = 226ee5989475fdb93f8879bebddb07a20738553c
-RMD160 (docsis-0.9.4.tar.gz) = 7e318cfce452e76fb4eb30bd5e43558837fb707f
-Size (docsis-0.9.4.tar.gz) = 506944 bytes
-SHA1 (patch-aa) = 946c40cc7a6545cc67eb666130156193aa17d0bd
-SHA1 (patch-ab) = 4643af1e64d19567ac251a130df00ba5be27583d
-SHA1 (patch-ac) = c536cac40a73786538f60f5f6cb04c5bd1625e79
-SHA1 (patch-ad) = a7301246087950eff52c59c585e1e3ee06f77a75

@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.5 2008/04/22 21:23:41 wiz Exp $
-bin/playsound
-bin/playsound_simple
-include/SDL/SDL_sound.h
-lib/libSDL_sound.la

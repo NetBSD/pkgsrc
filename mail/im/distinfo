@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/01/06 12:00:29 obache Exp $
-
-SHA1 (im-149.tar.gz) = 638fd2af6b8a04d51cb6e3e36660c0ebe0ae346f
-RMD160 (im-149.tar.gz) = 482ef2714e3e1810740200dca80a5e3ad27a00f9
-Size (im-149.tar.gz) = 221971 bytes
-SHA1 (patch-aa) = 71bb1bed56be580c30f291360e7320a85a818087

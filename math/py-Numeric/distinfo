@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.15 2007/12/27 14:07:25 joerg Exp $
-
-SHA1 (Numeric-24.2.tar.gz) = 72869ef80c12630a9a125ba10c96093b6ae16aff
-RMD160 (Numeric-24.2.tar.gz) = c9502db28663558c535e236392c9beddec9743bb
-Size (Numeric-24.2.tar.gz) = 743800 bytes
-SHA1 (patch-aa) = 31920706522b5730644da8191e0c1c8191d4add1
-SHA1 (patch-ab) = 35dd9debd94e9cea059d0802149192e7ecdcf938
-SHA1 (patch-ac) = 45ca40e38123dc72ec42b3775b2401c0037674c0

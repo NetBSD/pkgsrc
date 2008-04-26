@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:51:44 agc Exp $
-
-SHA1 (php-pdflib/pdflib-2.0.3.tgz) = 7fc7107906ad035ed9e8fc7923ce2b03f39864c2
-RMD160 (php-pdflib/pdflib-2.0.3.tgz) = 813607275e565a33bbf3b0445217fddadd0f568e
-Size (php-pdflib/pdflib-2.0.3.tgz) = 36143 bytes

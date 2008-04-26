@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/02/28 23:38:10 tnn Exp $
-
-SHA1 (chrpath-0.13.tar.gz) = 11ff3e3dda2acaf1e529475f394f74f2ef7a8204
-RMD160 (chrpath-0.13.tar.gz) = 89b91919e3f629173388f10469dc94fadd46aa56
-Size (chrpath-0.13.tar.gz) = 125129 bytes
-SHA1 (patch-aa) = 5d78f1325d21d92dfd19e69d49cd1aff977cbccf

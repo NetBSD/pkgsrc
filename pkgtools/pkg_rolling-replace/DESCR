@@ -1,3 +1,0 @@
-pkg_rolling-replace does 'make replace' on one package at a time,
-tsorting the packages being replaced according to their
-interdependencies, which avoids most duplicate rebuilds.

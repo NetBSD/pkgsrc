@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/12 09:22:00 schmonz Exp $
-bin/checkpassword-pam
-man/man8/checkpassword-pam.8

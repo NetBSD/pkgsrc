@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2008/01/04 19:58:41 jmmv Exp $
-lib/libboost_python-mt-d.a
-lib/libboost_python-mt-d.so
-lib/libboost_python-mt.a
-lib/libboost_python-mt.so

@@ -1,8 +1,0 @@
-#!/bin/sh
-#
-# $Id: wfcmgr,v 1.4 2008/02/29 16:41:44 sborrill Exp $
-
-ICAROOT=DESTINATION
-export ICAROOT
-mkdir -p ~/.ICAClient
-exec $ICAROOT/wfcmgr $*

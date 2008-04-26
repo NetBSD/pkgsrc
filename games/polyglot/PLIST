@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/10/02 20:06:07 rillig Exp $
-bin/polyglot
-share/doc/polyglot/readme.txt
-share/examples/polyglot/fruit.ini

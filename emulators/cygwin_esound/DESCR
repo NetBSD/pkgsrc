@@ -1,3 +1,0 @@
-This is the Enlightened Sound Daemon (EsounD) for Cygwin, providing the
-ability for Interix applications to output sound via the libesd client
-side library (audio/esound).

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/03/17 13:40:00 rillig Exp $
-
-SHA1 (blackened-1.7.1.tar.gz) = 2101762d9b78792616e71bfc3b08113a806c088a
-RMD160 (blackened-1.7.1.tar.gz) = 7a57d36f965e18b42c9c0bcfa52b9a8ba55316f7
-Size (blackened-1.7.1.tar.gz) = 675752 bytes
-SHA1 (patch-aa) = 8bc21cd2aad84e5007126f53ad5e951e67ab3e03
-SHA1 (patch-ab) = a64908228f75aea6053879fdd0d4b9c0195647a1
-SHA1 (patch-ac) = 5b83317be7adafbc9b98a19012e7495b9c62f06f

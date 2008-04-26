@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.10 2005/12/15 22:04:00 joerg Exp $
-
-SHA1 (CSSC-1.0.1.tar.gz) = 17ef27a67349dc40577cc09ff10209630efc383b
-RMD160 (CSSC-1.0.1.tar.gz) = c93d7b9c29c6d5ca77bd98188251cfe95384c6a5
-Size (CSSC-1.0.1.tar.gz) = 698524 bytes
-SHA1 (patch-aa) = 3f29e0b6835b85129088e36e3fd415a9535772df
-SHA1 (patch-ab) = 5f77a20b1e54c4989a3770672c4fcc207dde4817
-SHA1 (patch-ac) = 945a5c992f6ed7ffb94d15de9c2724e9afc4c421
-SHA1 (patch-ad) = a5eb52ffa365693f117c0ee1598d3c34e3e9499e

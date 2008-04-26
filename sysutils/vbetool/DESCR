@@ -1,3 +1,0 @@
-vbetool uses lrmi in order to run code from the video BIOS.
-Currently, it is able to alter DPMS states, save/restore video card
-state and attempt to initialize the video card from scratch.

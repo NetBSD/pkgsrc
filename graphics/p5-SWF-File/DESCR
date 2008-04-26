@@ -1,5 +1,0 @@
-SWF modules are manipulating Macromedia Flash movie (SWF) files.
-This package contains:
-
-SWF::File module can be used to make SWF movie.
-SWF::Parser module provides a parser for SWF file.

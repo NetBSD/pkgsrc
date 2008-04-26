@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/05/01 20:46:54 adam Exp $
-bin/mkbitmap
-bin/potrace
-man/man1/mkbitmap.1
-man/man1/potrace.1

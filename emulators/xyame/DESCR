@@ -1,7 +1,0 @@
-YAME is a multi-system emulator which currently emulates the Gameboy,
-NES, and PC-Engine.
-
-This is a Japanese emulator. It has sound logging, frameskip, and
-realtime save/load. The man page is in Japanese though.
-
-This package contains the Linux binary of the program.

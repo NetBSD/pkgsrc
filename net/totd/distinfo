@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/06/26 11:20:47 rillig Exp $
-
-SHA1 (totd-1.5.1.tar.gz) = cf9d48b386b2f218032b8997e28b46e64921d59e
-RMD160 (totd-1.5.1.tar.gz) = 3b80931837eed1bd9e5cdfa8a3ed708d6ed40429
-Size (totd-1.5.1.tar.gz) = 235809 bytes
-SHA1 (patch-aa) = b39db5c3a38c34b603038aa053e8a8711694e1ed

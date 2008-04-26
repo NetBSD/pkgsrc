@@ -1,2 +1,0 @@
-pkgfind can find packages in pkgsrc.  It tries to find packages which
-matches a keyword in the package name.

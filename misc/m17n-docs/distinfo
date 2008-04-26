@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/02/27 13:50:43 obache Exp $
-
-SHA1 (m17n-docs-1.5.0.tar.gz) = c001cdbcea8cd5803082869de43252ff1cf3ea8b
-RMD160 (m17n-docs-1.5.0.tar.gz) = dc5a36fef30c0598f168625e84a70393d8659272
-Size (m17n-docs-1.5.0.tar.gz) = 2325655 bytes
-SHA1 (patch-aa) = 8845f6e11a635df61a76381ef49a3a5c3098ad9a
-SHA1 (patch-ab) = 509544d34b90d52a75241d31f755f95b34ae5017

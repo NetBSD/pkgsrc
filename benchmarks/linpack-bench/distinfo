@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/09/28 13:21:33 drochner Exp $
-
-SHA1 (linpackc) = be1507b205b0226a1deba358a90a469c2e55d3ee
-RMD160 (linpackc) = d54385d1a20b062776edfe8d10a3ec8900163b8b
-Size (linpackc) = 20942 bytes
-SHA1 (patch-aa) = 521bcb06993df028d03d15679adc3146f790b6dc

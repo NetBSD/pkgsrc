@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/06/17 01:40:51 hubertf Exp $
-
-SHA1 (ssldump-0.9b3.tar.gz) = a633a9a811a138eac5ed440d583473b644135ef5
-RMD160 (ssldump-0.9b3.tar.gz) = 941cf8f2ef8459ec4f9ce65772e134505d46566f
-Size (ssldump-0.9b3.tar.gz) = 137435 bytes
-SHA1 (patch-aa) = 8ab6a65c0e338e99249a0c90b87340252494020a
-SHA1 (patch-ab) = 38479b85460d56841a62b04c1134461bfaae72e5

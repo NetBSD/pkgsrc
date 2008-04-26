@@ -1,3 +1,0 @@
-This is the standard "cluster-copy" Webmin module to schedule the
-transfer of files from this server to multiple servers in a Webmin
-cluster.

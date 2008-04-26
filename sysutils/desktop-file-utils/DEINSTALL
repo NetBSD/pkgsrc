@@ -1,9 +1,0 @@
-# $NetBSD: DEINSTALL,v 1.1 2006/06/15 20:40:16 jlam Exp $
-
-APPLICATIONS_PATH="@APPLICATIONS_PATH@"
-
-case ${STAGE} in
-POST-DEINSTALL)
-	${RM} -f ${APPLICATIONS_PATH}/mimeinfo.cache
-	;;
-esac

@@ -1,6 +1,0 @@
-The Perl 5 module Class::Adapter is intended as an abstract base
-class for creating any sort of class or object that follows the
-Adapter pattern.  An Adapter in this Perl sense of the term is when
-a class is created to achieve by composition (objects containing
-other object) something that can't be achieved by inheritance
-(sub-classing).

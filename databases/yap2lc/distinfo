@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/08/22 17:32:07 tron Exp $
-
-SHA1 (yap2lc-0.5.9.tar.gz) = c63b36ec5068793b53c0a84db207209fc30be277
-RMD160 (yap2lc-0.5.9.tar.gz) = c5538663917bd46dbda1e71834a8ccf145bbb4af
-Size (yap2lc-0.5.9.tar.gz) = 58651 bytes
-SHA1 (patch-aa) = a2abfd8dcd49f3119af143f30503a60d5ef5e2d2

@@ -1,5 +1,0 @@
-AVRDUDE - AVR Downloader/UploaDEr - is a program for updating the
-flash, eeprom, and fuse bit memories of Atmel AVR microcontrollers.
-Avrdude supports a wide variety of chip programmers (including the
-widely used STK500) that attach to the serial port, and, if supported
-by the underlying OS, to the parallel port.

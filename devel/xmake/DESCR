@@ -1,5 +1,0 @@
-XMAKE is simliar to other make's out there, but is specifically
-designed to allow you to easily construct multiple complex
-dependancies without getting screwed by default rulesets.  XMake
-contains a number of features specifically designed to trivialize the
-construction of compilation rules.

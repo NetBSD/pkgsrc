@@ -1,6 +1,0 @@
-InspIRCd is a modular C++ IRC Daemon for Linux, BSD and Windows systems
-created to provide a stable, modern, lightweight ircd (irc server) from
-scratch and provide a vast number of features in a modularised form using
-an advanced module API. By keeping the functionality of the main core to a
-minimum we hope to increase the stability and speed of our project and make
-it customisable to the needs of many users.

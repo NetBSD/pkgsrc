@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/01/02 22:18:22 joerg Exp $
-
-SHA1 (gchore-1.0.tar.gz) = 93ad338a7ac4480af435fd5469095a8a5f16c4fb
-RMD160 (gchore-1.0.tar.gz) = 29abc758894b63dfd528f01bdc2bcf1b17925c4b
-Size (gchore-1.0.tar.gz) = 112959 bytes
-SHA1 (patch-aa) = 808412199d8fab55d8a5899ad6de2eccc022169a

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 17:36:22 wiz Exp $
-
-SHA1 (xcursorgen-4.3.0.tar.bz2) = ade20086c9122d47da82deaeb2707b720e72b735
-RMD160 (xcursorgen-4.3.0.tar.bz2) = 2daa61f0781db6d775b01d6b6fd627e8c0931919
-Size (xcursorgen-4.3.0.tar.bz2) = 2195176 bytes
-SHA1 (patch-aa) = 8eb4d1783b747f3212daeee7d3907b1862d8320c
-SHA1 (patch-ab) = 56c7d3e860c14cc7a18c90865847ecf271df438c
-SHA1 (patch-ac) = 31151a77830170cccbd1f33be83d1157bfd4344a

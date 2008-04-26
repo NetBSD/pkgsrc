@@ -1,7 +1,0 @@
-  Btparse is the C component of btOOL, a pair of libraries for parsing and
-processing BibTeX files.  Its primary use is as the back-end to the
-Text::BibTeX library for Perl (the other half of btOOL), but there's
-nothing to prevent you from writing C programs using btparse -- or from
-writing extensions to other high-level languages using btparse as a
-back-end.  There's even copious documentation on using the library in
-the "doc" directory.

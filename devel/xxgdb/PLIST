@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:27:21 zuntum Exp $
-bin/xxgdb
-lib/X11/app-defaults/XDbx
-man/man1/xxgdb.1

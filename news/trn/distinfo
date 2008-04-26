@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.9 2006/11/01 17:12:21 christos Exp $
-
-SHA1 (trn-4.0-test76.tar.gz) = 4741d506d4c2d62a8dbaa5d4fd62cce656abcf3b
-RMD160 (trn-4.0-test76.tar.gz) = f60478f8808b9c0d46a22ac924821cf2edd1fe87
-Size (trn-4.0-test76.tar.gz) = 565528 bytes
-SHA1 (patch-aa) = fe2d378d3600938025846998f222d1f239549045
-SHA1 (patch-ab) = 683c2ac9d34ca0d6220752218646cbf9e359f23d
-SHA1 (patch-ac) = 96dd4bd4ca73baf552c4d8172f7ad6d6a600bd7f
-SHA1 (patch-ad) = 78c18d634cb0861754e1d555a0e514299136ecbc

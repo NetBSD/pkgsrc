@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/22 17:32:07 tron Exp $
-bin/yap2lc
-share/doc/yap2lc/README
-share/examples/yap2lc/ldif.template
-share/examples/yap2lc/yap2lc.conf
-@dirrm share/examples/yap2lc
-@dirrm share/doc/yap2lc

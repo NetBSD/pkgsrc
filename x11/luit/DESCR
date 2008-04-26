@@ -1,5 +1,0 @@
-This package provides luit, a filter to convert the output of arbitrary
-applications from a given locale's encoding into UTF-8 and terminal
-input from UTF-8 into the given locale's encoding.
-
-This is from the modular X.org X11 project.

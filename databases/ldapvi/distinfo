@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/10/11 19:26:39 ghen Exp $
-
-SHA1 (ldapvi-1.7.tar.gz) = d1cde4cbb618180f9ae0e77c56a1520b8ad61c9a
-RMD160 (ldapvi-1.7.tar.gz) = f4cd1c2fcfc87e7a9e912269e60280e9ecd82156
-Size (ldapvi-1.7.tar.gz) = 119503 bytes

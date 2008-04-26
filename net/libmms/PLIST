@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/10 16:17:34 xtraeme Exp $
-include/libmms/bswap.h
-include/libmms/mms.h
-include/libmms/mmsh.h
-include/libmms/mmsio.h
-lib/libmms.la
-lib/pkgconfig/libmms.pc
-@dirrm include/libmms

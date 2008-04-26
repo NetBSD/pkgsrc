@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST.local,v 1.1.1.1 2006/04/28 18:10:21 jlam Exp $
-bin/preline
-libexec/courier/modules/local/courierdeliver
-libexec/courier/modules/local/courierlocal
-share/examples/courier/module.local
-@dirrm libexec/courier/modules/local

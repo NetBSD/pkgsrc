@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 17:36:25 wiz Exp $
-
-SHA1 (pns_source.tar.Z) = 2fab75ecdcddba9250a836740821202d8b19f5b8
-RMD160 (pns_source.tar.Z) = 0f55bf6c830f179dd0d20e32884159ab2f8fea1d
-Size (pns_source.tar.Z) = 256925 bytes
-SHA1 (patch-aa) = 65b4aadd67e2d0211e8f5c1b14f49061404a272d
-SHA1 (patch-ab) = f32b75e6be49c02eb6e5e196c718a573570de6e3

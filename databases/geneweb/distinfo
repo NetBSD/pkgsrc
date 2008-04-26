@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.13 2006/10/22 07:01:38 rillig Exp $
-
-SHA1 (geneweb-4.10nb1/geneweb-4.10.tar.gz) = 0ab12497a3ffc3541228d9dc899c095b18e7fba1
-RMD160 (geneweb-4.10nb1/geneweb-4.10.tar.gz) = 5d5c9d08d76bbc08a288e7ae56aa335b9cfc0fb8
-Size (geneweb-4.10nb1/geneweb-4.10.tar.gz) = 998314 bytes
-SHA1 (patch-aa) = 5f90d1c0a8545b670587ee5d7bbd39829073671f
-SHA1 (patch-ab) = 36e0ed9d8034ea546400cdc685a43fce4bac1d30
-SHA1 (patch-ac) = cf35956939ab1ce57cac2a4261f892b0a34cb053

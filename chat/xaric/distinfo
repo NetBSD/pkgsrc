@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/06/09 15:31:29 minskim Exp $
-
-SHA1 (xaric-0.12.1.tar.gz) = d01fc8d8189e18f3824cdccb539a97c1862ecdbe
-RMD160 (xaric-0.12.1.tar.gz) = b78cd4496510642a967b1d173e150d3cbe836b5c
-Size (xaric-0.12.1.tar.gz) = 435998 bytes
-SHA1 (patch-aa) = 25948e1723987bf93f713895d6f8ac5d23a1e404
-SHA1 (patch-ab) = 33e89f44a22ed2ad3b14546e9f669013eb503ddd

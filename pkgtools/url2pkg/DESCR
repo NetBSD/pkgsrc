@@ -1,3 +1,0 @@
-The url2pkg program creates a new pkgsrc package from only the URL of a
-distribution file. It is intended to help pkgsrc developers create new
-packages quickly and easily.

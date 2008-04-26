@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/05/29 22:17:19 schmonz Exp $
-lib/httpd/mod_suphp.so
-sbin/suphp
-share/examples/suphp/suphp.conf
-@dirrm share/examples/suphp

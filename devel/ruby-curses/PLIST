@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/04 17:20:46 taca Exp $
-${RUBY_SITEARCHLIBDIR}/curses.${RUBY_DLEXT}
-${RUBY_EXAMPLESDIR}/curses/hello.rb
-${RUBY_EXAMPLESDIR}/curses/rain.rb
-${RUBY_EXAMPLESDIR}/curses/view.rb
-${RUBY_EXAMPLESDIR}/curses/view2.rb
-@dirrm ${RUBY_EXAMPLESDIR}/curses

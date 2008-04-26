@@ -1,3 +1,0 @@
-"rpm2pkg" can be used to convert RedHat Package Manager archives used by
-many Linux distribution like e.g. Red Hat or SuSE into NetBSD packages.
-It will extract the RPM files and create a NetBSD package list on the fly.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/11/23 12:23:40 bjs Exp $
-
-SHA1 (sessreg-1.0.3.tar.bz2) = cdebc8cc176b16c05f34b5dd1eaca710bda0e5be
-RMD160 (sessreg-1.0.3.tar.bz2) = 6ed2c5568d58e42557ac65dff500fc019cf65550
-Size (sessreg-1.0.3.tar.bz2) = 94690 bytes
-SHA1 (patch-ab) = 81c42cd1206d58d740d04be65f037f2173a451e4

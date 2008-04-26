@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 08:45:05 agc Exp $
-
-SHA1 (get_ds7_1.2.4.tar) = 0f755b5e39fc577360204eb4f53217d9b63eff97
-RMD160 (get_ds7_1.2.4.tar) = e4ba6af0722cef9b95e5dce6fc0f6696844e68fe
-Size (get_ds7_1.2.4.tar) = 51200 bytes
-SHA1 (patch-aa) = 15c75da504a229ee67b3f6235a0b37f2d60bfc17

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/04/10 09:31:01 martti Exp $
-
-SHA1 (jftpgw-0.13.5.tar.gz) = 16c24ca00e33f551fcb83b92eec233206636b108
-RMD160 (jftpgw-0.13.5.tar.gz) = 04999db40908f0d25c90c64c54ef25a7baf4c7cf
-Size (jftpgw-0.13.5.tar.gz) = 287387 bytes
-SHA1 (patch-aa) = ef8684c7793eea2a2bc11875294c167cdc978639
-SHA1 (patch-ab) = 610cfa10d5282c5877f40529092c346db7d90078

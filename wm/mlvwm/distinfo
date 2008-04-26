@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/02/23 03:03:10 obache Exp $
-
-SHA1 (mlvwm091.tar.gz) = 2dc7f1ea45297e42186bde67cc910c7e186f46dc
-RMD160 (mlvwm091.tar.gz) = f06fe9d0b29b9a4ce7ff57c8b7a95b848ecea508
-Size (mlvwm091.tar.gz) = 88575 bytes
-SHA1 (patch-aa) = 51ee6f9eef7802bdbf18c15858b16cabf1cfac84
-SHA1 (patch-ab) = 2bb29f736493d7e9dd0b828a7edf459502f7883c

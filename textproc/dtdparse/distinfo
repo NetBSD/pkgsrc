@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:48:41 agc Exp $
-
-SHA1 (dtdparse-2.0beta6.tar.gz) = 13ec57c7c6d58703ca80e9410bc6f82ebaf554f0
-RMD160 (dtdparse-2.0beta6.tar.gz) = 0df38da70ecd8b80b8a4b5c926d9953524e01c71
-Size (dtdparse-2.0beta6.tar.gz) = 37950 bytes

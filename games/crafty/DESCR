@@ -1,8 +1,0 @@
-Crafty is a chess program written by Bob Hyatt (hyatt@cis.uab.edu).
-It is modeled after Cray Blitz (also written by Bob).
-
-Crafty has the following features:
-
-	- has a customizable opening book
-	- supports tablebases (Steven Edward's endgame database)
-	- text interface

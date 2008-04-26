@@ -1,7 +1,0 @@
-The X Fixes Extension provides workarounds for various limitations
-in the core protocol.  The extension is designed to hold various
-vaguely related extension bits that change how the X server and
-clients interact with fundamental parts of the window system.
-
-This package provides the libXFixes library from the modular X.org
-X11 project.

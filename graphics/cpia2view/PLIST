@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/03/07 08:15:20 hamajima Exp $
-bin/cpia2shot
-bin/cpia2view
-man/cat1/cpia2shot.0
-man/cat1/cpia2view.0
-man/man1/cpia2shot.1
-man/man1/cpia2view.1

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/06/17 15:38:54 salo Exp $
-
-SHA1 (kali-0.47.tar.gz) = 6f55c4b58304b337453e51c284e08e50d355fd55
-RMD160 (kali-0.47.tar.gz) = f2ea2b3ba55e534365c3d6082f91feb773285cd7
-Size (kali-0.47.tar.gz) = 970455 bytes
-SHA1 (patch-aa) = 1852dd676cd52676bcfe6f745eb5ed667df91c6f

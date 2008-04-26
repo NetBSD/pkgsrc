@@ -1,8 +1,0 @@
-This is a perl program to collect entropy from a running Unix-like system,
-mostly through various stats calls (vmstat and friends). The output is
-hashed into a pool, stirred with an SHA1 hash, and used to provide
-(theoretically) high-quality random data to callers over a UNIX- or TCP-
-socket interface. This aims to provide functionality similar to the Linux
-/dev/random device, but implemented in a fairly-portable user-space daemon
-so that it can run on many unix-like systems. See the README for common
-usage details.

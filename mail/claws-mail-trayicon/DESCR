@@ -1,4 +1,0 @@
-The TrayIcon plugin provides a notification icon in the system's
-notification area.  It can be used to see whether you have unread
-or new mail, and to trigger common actions.  A tooltip also shows
-the current new, unread and total number of messages.

@@ -1,5 +1,0 @@
-The octave-forge project contains functions for Octave which are not in
-the main distribution.  While the main Octave distribution is
-conservative about accepting new functions and changes, octave-forge is
-very open.  As a result, be prepared for some lower quality code and
-more rapidly changing interfaces to the functions in octave-forge.

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.10 2006/05/31 10:25:24 joerg Exp $
-
-SHA1 (ViPEC-3.2.0.tar.gz) = 022bdd49effb22a64bf3da25ec1e48a072228ddf
-RMD160 (ViPEC-3.2.0.tar.gz) = b2452324b78e29bf7a33c7e5cf83116bf9a0550c
-Size (ViPEC-3.2.0.tar.gz) = 191819 bytes
-SHA1 (patch-aa) = 55ddfbddc0c7206961ed16a3ea242c1e0d285ec6
-SHA1 (patch-ab) = 6158ee0b5f767065828be8582cdcc574d729a132
-SHA1 (patch-ac) = 4a8dcc7bc73e56b5cf79e0b9f9e205b03c9c2263
-SHA1 (patch-ad) = 2fba5db87866b6dbdc3f75409cc5430f04363325

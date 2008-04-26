@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2006/10/01 12:23:39 tonio Exp $
-
-SHA1 (id3v2-0.1.11.tar.gz) = ca825d851ca0c6a5783af107dc6baa7aa93f0bad
-RMD160 (id3v2-0.1.11.tar.gz) = 433900ec5ccc072e5daeaf3fc25902d87bc95a01
-Size (id3v2-0.1.11.tar.gz) = 52427 bytes
-SHA1 (patch-aa) = 24369db9115ea921e5ebaa4befa66a71ebb4da19

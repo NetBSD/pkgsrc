@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.12 2005/02/23 17:15:12 agc Exp $
-
-SHA1 (nedit-5.5-src.tar.bz2) = 7d3c87a793a5047cf857af1ac82e39f3b33e8a87
-RMD160 (nedit-5.5-src.tar.bz2) = 93fce64bdc5d8a9eff86ab76cec67d44d676d0eb
-Size (nedit-5.5-src.tar.bz2) = 1124825 bytes
-SHA1 (patch-aa) = 29cf7e55b23e437b0203e0dde09cc053d65f245c

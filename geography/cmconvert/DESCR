@@ -1,4 +1,0 @@
-cmconvert is used to convert EasyGPS XML file formats (LOC and GPX)
-to a format that can be installed onto a Palm OS device and imported
-into CacheMate. Options are also available to list waypoints contained
-in an XML file, and selectively convert specified waypoints.

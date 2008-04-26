@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.28 2008/04/05 17:08:41 adam Exp $
-
-SHA1 (scummvm-0.11.1.tar.bz2) = a254d7382aa6c3f769591999f83ca9dfad939028
-RMD160 (scummvm-0.11.1.tar.bz2) = 067be5e8f4bdc099cd3faa963e3df3b3a1fd39e2
-Size (scummvm-0.11.1.tar.bz2) = 5539656 bytes
-SHA1 (patch-aa) = 2d47f055f899b7e8e04a53b1ccc742756b857d1a
-SHA1 (patch-ac) = 468c028df0ea84750582e9e311a32b81f96e4b2d
-SHA1 (patch-ad) = e1dcb9bb10478cfad125783ac8d6cdbca4999d15

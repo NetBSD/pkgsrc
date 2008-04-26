@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:10:23 zuntum Exp $
-bin/9term
-man/man1/9term.1

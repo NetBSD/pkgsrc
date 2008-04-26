@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/02/05 18:55:22 adam Exp $
-
-SHA1 (libtlen-20041113.tar.gz) = 5746e82329f7d92256940d36fe77ab63fa239c18
-RMD160 (libtlen-20041113.tar.gz) = b5fe22369e1515d6dc645eb272ea418b60fd734b
-Size (libtlen-20041113.tar.gz) = 160834 bytes
-SHA1 (patch-aa) = 6d74bca5329c1055c17fb0c531e798808ddd287c
-SHA1 (patch-ab) = dd1569e2dee2208b7a5a8d83800d55454f8d9c36

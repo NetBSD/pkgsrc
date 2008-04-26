@@ -1,3 +1,0 @@
-This is the standard "lpadmin" Webmin module to create and edit local
-and remote printers.  It Supports Windows print servers and Ghostscript
-print drivers.

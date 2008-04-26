@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2008/04/04 15:30:00 jlam Exp $
-
-SHA1 (rake-0.8.1.gem) = 349b0853d5a32012a8f282750c2f1abaf1169213
-RMD160 (rake-0.8.1.gem) = fbb00b09f577b71081fe01c7e318e54acaabf37c
-Size (rake-0.8.1.gem) = 90112 bytes
-SHA1 (patch-aa) = 289062ead67e2dde7a5a28a8b3d7c9d0df00ac01

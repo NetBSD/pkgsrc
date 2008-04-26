@@ -1,8 +1,0 @@
-The Pound program is a reverse proxy, load balancer and HTTPS front-end
-for Web server(s).  Pound was developed to enable distributing the
-load among several Web-servers and to allow for a convenient SSL wrapper
-for those Web servers that do not offer it natively.  Pound is a very
-small program, easily audited for security problems.  It can run as
-setuid/setgid and/or in a chroot jail.  Pound does not access the
-hard-disk at all (except for reading the certificate file on start,
-if required) and should thus pose no security threat to any machine.

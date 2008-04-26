@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/12/01 16:38:36 rillig Exp $
-
-SHA1 (rfstool-0.14-source.zip) = c7397d4e6afae2d6537205043a048bc0103a28e0
-RMD160 (rfstool-0.14-source.zip) = a01709437d938dcb975d7f4eeefa6105f258cefa
-Size (rfstool-0.14-source.zip) = 80381 bytes
-SHA1 (patch-aa) = 51433a8c70c491db17ec2c3eb5559136074434e1
