@@ -1,13 +1,22 @@
-$NetBSD: patch-ad,v 1.11 2007/03/14 11:50:35 markd Exp $
+$NetBSD: patch-ad,v 1.12 2008/04/26 02:39:27 markd Exp $
 
---- src/main/Makefile.in.orig	2006-09-05 02:41:33.000000000 +1200
+Add LIBMULTITHREAD to EXTRA_LIBS to pick up -lpthread on NetBSD, otherwise
+R segfaults on loading tcltk extension.
+
+--- src/main/Makefile.in.orig	2008-04-10 14:05:02.000000000 +1200
 +++ src/main/Makefile.in
-@@ -104,7 +104,7 @@ COMMON_DEPENDENCIES = \
+@@ -91,12 +91,12 @@ MAIN_LIBS = ../unix/libunix.a ../appl/li
+ EXTRA_STATIC_LIBS = $(R_ZLIBS) $(R_BZLIBS) $(R_PCRE) $(R_XDR)$(R_LIBINTL)
+ STATIC_LIBS = $(MAIN_LIBS) $(EXTRA_STATIC_LIBS)
+ 
+-EXTRA_LIBS = $(BLAS_LIBS) $(FLIBS) $(R_XTRA_LIBS) @LIBINTL@ $(READLINE_LIBS) $(LIBS)
++EXTRA_LIBS = $(BLAS_LIBS) $(FLIBS) $(R_XTRA_LIBS) @LIBINTL@ $(READLINE_LIBS) $(LIBS) @LIBMULTITHREAD@
+ 
  R_binary = R.bin
- R_bin_OBJECTS = Rmain.o @WANT_R_SHLIB_FALSE@$(OBJECTS)
- @WANT_R_SHLIB_FALSE@R_bin_LDADD = $(RLIBS) $(EXTRA_LIBS)
+ R_bin_OBJECTS = Rmain.o
+ @WANT_R_SHLIB_FALSE@R_bin_LDADD = libR.a $(EXTRA_LIBS)
 -@WANT_R_SHLIB_TRUE@R_bin_LDADD = -L../../lib@R_ARCH@ -lR @BLAS_SHLIB_TRUE@-lRblas
 +@WANT_R_SHLIB_TRUE@R_bin_LDADD = -L../../lib@R_ARCH@ ${COMPILER_RPATH_FLAG}$(Rexeclibdir) -lR @BLAS_SHLIB_TRUE@-lRblas
- R_bin_DEPENDENCIES =@WANT_R_SHLIB_FALSE@ $(RLIBS) $(COMMON_DEPENDENCIES)
+ R_bin_DEPENDENCIES =@WANT_R_SHLIB_FALSE@ libR.a
  
  libR_la = libR$(DYLIB_EXT)
