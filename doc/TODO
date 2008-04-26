@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7247 2008/04/26 01:02:51 wiz Exp $
+$NetBSD: TODO,v 1.7248 2008/04/26 02:42:33 markd Exp $
 
 Suggested new packages
 ======================
@@ -344,7 +344,6 @@ Suggested package updates
 	o GWLib-0.7.0
 	o GridSim-3.3
 	o PAM-0.99.7.1
-	o R-2.7.0
 	o R-CGIwithR-0.72
 	o R-DAAG-0.91
 	o R-Matrix-0.9975.11
