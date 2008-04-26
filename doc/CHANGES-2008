@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.906 2008/04/26 00:29:42 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.907 2008/04/26 00:36:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1642,3 +1642,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/gnome-speech to 0.4.19 [wiz 2008-04-26]
 	Updated audio/gnome-speech-espeak to 0.4.19 [wiz 2008-04-26]
 	Updated textproc/gnome-spell to 1.0.8 [wiz 2008-04-26]
+	Updated x11/gnome-terminal to 2.22.1 [wiz 2008-04-26]
