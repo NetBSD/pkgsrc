@@ -30,6 +30,7 @@
  */
 struct package_conflict {
 	const char *pkgname;
+	const char *skip_pkgname;
 	char **conflicting_pkgname;
 	char **conflicting_pattern;
 };
@@ -70,6 +71,10 @@ check_package_conflict(const char *pkgname, void *v)
 	FILE *f;
 	int rv;
 
+	if (conflict->skip_pkgname != NULL &&
+	    strcmp(conflict->skip_pkgname, pkgname) == 0)
+		return 0;
+
 	rv = 0;
 	pkg.head = NULL;
 	pkg.tail = NULL;
@@ -102,12 +107,14 @@ check_package_conflict(const char *pkgname, void *v)
  * variables are set to NULL.
  */
 int
-some_installed_package_conflicts_with(const char *pkgname, char **inst_pkgname, char **inst_pattern)
+some_installed_package_conflicts_with(const char *pkgname,
+    const char *skip_pkgname, char **inst_pkgname, char **inst_pattern)
 {
 	struct package_conflict cfl;
 	int rv;
 
 	cfl.pkgname = pkgname;
+	cfl.skip_pkgname = skip_pkgname;
 	*inst_pkgname = NULL;
 	*inst_pattern = NULL;
 	cfl.conflicting_pkgname = inst_pkgname;
