@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.c,v 1.11 2008/04/25 19:59:30 joerg Exp $	*/
+/*	$NetBSD: fetch.c,v 1.12 2008/04/26 22:42:49 tnn Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -300,10 +300,11 @@ fetchMakeURL(const char *scheme, const char *host, int port, const char *doc,
 int
 fetch_urlpath_safe(char x)
 {
+	if ((x >= '0' && x <= '9') || (x >= 'A' && x <= 'Z') ||
+	    (x >= 'a' && x <= 'z'))
+		return 1;
+
 	switch (x) {
-	case 'a'...'z':
-	case 'A'...'Z':
-	case '0'...'9':
 	case '$':
 	case '-':
 	case '_':
