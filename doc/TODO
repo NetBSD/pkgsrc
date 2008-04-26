@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7246 2008/04/24 21:24:06 markd Exp $
+$NetBSD: TODO,v 1.7247 2008/04/26 01:02:51 wiz Exp $
 
 Suggested new packages
 ======================
@@ -343,8 +343,6 @@ Suggested package updates
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
 	o GridSim-3.3
-	o Mesa-7.0.3
-	o MesaLib-7.0.3
 	o PAM-0.99.7.1
 	o R-2.7.0
 	o R-CGIwithR-0.72
@@ -425,7 +423,7 @@ Suggested package updates
 	o apache-tomcat55-6.0.14
 	o apsfilter-7.2.8
 	o aqsis-1.2
-	o aranym-0.9.5
+	o aranym-0.9.6
 	o argtable-2.9
 	o arla-0.90
 	o arnold-20040104
@@ -433,7 +431,7 @@ Suggested package updates
 	o asapm-3.1
 	o asc-2.1.0
 	o ascii-3.8
-	o aspell-danish-1.6.12
+	o aspell-danish-13.7
 	o aspell-faroese-0.2.31
 	o aspell-norwegian-2.0.10
 	o aspell-ukrainian-1.3.3
@@ -500,6 +498,7 @@ Suggested package updates
 	o claws-mail-3.4.0
 	o clearsilver-0.10.5
 	o clearsilver-base-0.10.5
+	o clive-0.4.11
 	o cmus-2.2.0 [pkg/37856]
 	o cocoon-2.1.10
 	o colorize-0.3.4
@@ -533,7 +532,6 @@ Suggested package updates
 	o dctc-0.85.9
 	o ddclient-3.7.3
 	o defendguin-0.0.11
-	o dejavu-ttf-2.24
 	o dejavu-ttf-2.24 [pkg/38212]
 	o delegate-9.7.5
 	o devIL-1.6.7
@@ -552,7 +550,6 @@ Suggested package updates
 	o dpkg-1.13.25
 	o drscheme-371
 	o dvipng-1.9
-	o dwm-4.9
 	o eagle-4.16
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
@@ -590,7 +587,6 @@ Suggested package updates
 	o f2c-20061008
 	o faces-1.7.7
 	o fakeroot-1.6.5
-	o fast-user-switch-applet-2.22.0
 	o fbdesk-1.4.1 [pkg/38473]
 	o fd-2.09c
 	o fdgw-20040609
@@ -608,7 +604,6 @@ Suggested package updates
 	o fmsx-3.0
 	o fondu-040927
 	o fop-0.20.5
-	o fox-1.6.32
 	o freeciv-2.1.3
 	o freefont-ttf-20080323
 	o freeglut-2.4.0
@@ -625,7 +620,6 @@ Suggested package updates
 	o fvwm2-themes-0.7.0
 	o gap-4r4p9
 	o gated-3.6
-	o gcalctool-5.23.1
 	o gcc-4.3.0
 	o gcc-ssp-3.4.4
 	o gcin-1.3.7.1
@@ -635,7 +629,6 @@ Suggested package updates
 	o gcpio-2.7
 	o gdal-lib-1.4.4
 	o gdb-6.7.1
-	o gdb6-6.7.1
 	o gdeskcal-1.01
 	o gdl-0.7.11
 	o gdsreader-0.3.2
@@ -653,25 +646,17 @@ Suggested package updates
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
 	o glade-3.4.4
-	o glade3-3.4.3
 	o glchess-1.0.5
 	o global-5.6
 	o gmpc-0.15.1
 	o gnash-0.8.1 [pkg/37639]
-	o gnash-0.8.2
+	o gnash-0.8.2 [wip]
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-2.22.1
-	o gnome-audio-2.22.1
 	o gnome-build-0.2.4
-	o gnome-games-2.22.1.1
-	o gnome-mag-0.15.0
 	o gnome-pilot-2.0.16
 	o gnome-sharp-2.20.1
-	o gnome-speech-0.4.19
-	o gnome-spell-1.0.8
-	o gnome-terminal-2.22.1
-	o gnome-themes-extras-2.22.0
 	o gnome-vfsmm-2.22.0
 	o gnomeicu-0.99.14
 	o gnu-crypto-2.1.0
@@ -710,10 +695,8 @@ Suggested package updates
 	o gtexinfo-4.12
 	o gthumb-2.10.8
 	o gtick-0.4.1
-	o gtk-doc-1.10
 	o gtk-sharp-2.12.1
 	o gtk-systrace-20030623
-	o gtk2-sharp-2.12.0
 	o gtklife-5.1
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
@@ -722,7 +705,6 @@ Suggested package updates
 	o gtranscript-0.2.0
 	o guile-gtk-2.0
 	o gworkspace-0.8.6
-	o gzrecover-0.5
 	o hackbot-2.21
 	o hanzim-1.8
 	o haskell-mode-1.45
@@ -783,7 +765,7 @@ Suggested package updates
 	o jgrasp-183
 	o jhead-2.82
 	o jools-1.0
-	o jwhois-4.0
+	o jwhois-4.0 [pkg/38500]
 	o jwm-2.0.1
 	o k3b-1.0.4
 	o kapooka-0.3
@@ -824,6 +806,7 @@ Suggested package updates
 	o libevent-1.4.0beta
 	o libextractor-0.5.20a
 	o libflash-0.4.13
+	o libgcrypt-1.4.1
 	o libgda-3.1.4
 	o libggi-2.2.2
 	o libggigcp-1.0.2
@@ -831,7 +814,6 @@ Suggested package updates
 	o libggiwmh-0.3.2
 	o libgii-1.0.2
 	o libgiigic-1.1.2
-	o libglademm-2.6.6
 	o libgnomecanvasmm-2.22.0
 	o libgnomecups-0.2.3
 	o libgnomedb-3.1.2
@@ -850,10 +832,9 @@ Suggested package updates
 	o libntlm-1.0
 	o libole2-2.2.8
 	o libopensync-0.35
+	o libprelude-0.9.17
 	o libpreludedb-0.9.14
 	o libshout-2.2.2
-	o libsigc++-2.2.2
-	o libsoup-2.4.1
 	o libspiff-0.8.3
 	o libssh-0.2
 	o libstatgrab-0.16
@@ -957,10 +938,9 @@ Suggested package updates
 	o ntp4-4.2.4p3
 	o nulib2-220
 	o nullmailer-1.04
-	o nut-13.6
+	o nut-13.7
 	o nxtvepg-2.8.0
 	o objc-3.2.8
-	o ocaml-3.10.2
 	o ocamlnet-2.2.4
 	o ocrad-0.17
 	o odbc-postgresql-8.2.3
@@ -969,7 +949,6 @@ Suggested package updates
 	o onyx-5.1.2
 	o oo2c-2.1.7
 	o openafs-1.4.6
-	o openbox-3.4.7.2
 	o openh323-1.19.1
 	o openmortal-0.7.1
 	o openmotif-2.3.0 [pkg/38038]
@@ -992,7 +971,6 @@ Suggested package updates
 	o p5-Curses-1.15
 	o p5-DBD-Sybase-1.07
 	o p5-Data-FormValidator-4.50
-	o p5-ExtUtils-CBuilder-0.23
 	o p5-Filter-1.33
 	o p5-Font-TTF-0.40
 	o p5-GMail-IMAPD-0.94
@@ -1206,7 +1184,6 @@ Suggested package updates
 	o scew-0.4.0
 	o sch-3.8.3
 	o scm-5e5
-	o scmgit-1.5.5.1
 	o scons-0.98.1
 	o scrollz-1.9.99
 	o scsh-1.3.0
@@ -1237,7 +1214,7 @@ Suggested package updates
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.65
 	o smtpfeed-1.20
-	o snd-9.7
+	o snd-9.9
 	o snes9x-1.51
 	o snobol-1.1
 	o snort-2.8.1
@@ -1283,6 +1260,7 @@ Suggested package updates
 	o ted-2.17
 	o ted-en-us-2.17
 	o tex-musixtex-113 [pkg/34758]
+	o texmaker-1.7
 	o tfmxplay-1.1.6
 	o tig-0.11
 	o tile-0.7.4
@@ -1336,7 +1314,6 @@ Suggested package updates
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
 	o wbm-cyrus-imapd-1.6.2
-	o wcalc-2.3
 	o wcalc-2.3.1
 	o wdm-1.28
 	o webmin-1.410
@@ -1420,7 +1397,7 @@ Suggested package updates
 	o xmms-musepack-1.8.0 [http://dl.slik.org/musepack/xmms-musepack-1.8.0.tar.gz]
 	o xmmsctrl-1.8
 	o xmon-1.5.6
-	o xmp-2.5.1
+	o xmp-2.5.1 [pkg/38499]
 	o xmule-1.12.2
 	o xnap-2.5r3
 	o xpad-2.13
@@ -1436,7 +1413,6 @@ Suggested package updates
 	o xskat-4.0
 	o xsoldier-1.4
 	o xtraceroute-0.9.1
-	o xtrans-1.1
 	o xtu-1.3
 	o xtux-20030306
 	o xvidcap-1.1.6
@@ -1446,7 +1422,6 @@ Suggested package updates
 	o yabause-0.9.4
 	o yacas-1.2.0
 	o yafc-1.1
-	o yasm-0.7.0
 	o yodl-2.01.02
 	o youtube-dl-20080420
 	o ysm-2.9.9.1
