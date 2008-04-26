@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.909 2008/04/26 00:57:27 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.910 2008/04/26 01:07:27 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1645,3 +1645,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/gnome-terminal to 2.22.1 [wiz 2008-04-26]
 	Updated x11/gnome-themes-extras to 2.22.0 [wiz 2008-04-26]
 	Updated audio/gnome-audio to 2.22.1 [wiz 2008-04-26]
+	Updated sysutils/gnome-vfsmm to 2.22.0 [wiz 2008-04-26]
