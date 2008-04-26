@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.904 2008/04/26 00:25:16 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.905 2008/04/26 00:25:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1640,3 +1640,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/gnome-games to 2.22.1.1 [wiz 2008-04-26]
 	Updated x11/gnome-mag to 0.15.0 [wiz 2008-04-26]
 	Updated audio/gnome-speech to 0.4.19 [wiz 2008-04-26]
+	Updated audio/gnome-speech-espeak to 0.4.19 [wiz 2008-04-26]
