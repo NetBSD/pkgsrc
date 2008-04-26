@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.81 2008/03/06 14:53:50 wiz Exp $
+# $NetBSD: Makefile,v 1.82 2008/04/26 00:07:27 wiz Exp $
 
-DISTNAME=		gnome-games-2.20.3
-PKGREVISION=		2
+DISTNAME=		gnome-games-2.22.1.1
 CATEGORIES=		games gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.20/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.22/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -58,6 +57,7 @@ BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.12.6
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
+.include "../../games/ggz-client-libs/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
@@ -69,7 +69,5 @@ BUILDLINK_API_DEPENDS.librsvg+=	librsvg>=2.12.6
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
 .include "../../x11/py-gnome2-desktop/buildlink3.mk"
-# optional for network games
-#.include "../../wip/ggz-libggz/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
