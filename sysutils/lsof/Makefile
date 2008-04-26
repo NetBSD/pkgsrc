@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.94 2007/12/17 12:15:59 tron Exp $
+# $NetBSD: Makefile,v 1.95 2008/04/26 11:54:24 apb Exp $
 
 DISTNAME=		lsof_4.78
 PKGNAME=		${DISTNAME:S/_/-/}.${OS_VERSION}
@@ -52,12 +52,12 @@ LSOF_MORE_SECURE?= 0
 
 post-extract:
 	@(cd ${TMPWRK} ; \
-	EXPMD5=`${GREP} MD5 README.${DISTNAME} | ${SED} 's/^[ ]*//'` ; \
+	EXPMD5=`${GREP} 'MD5 (' README.${DISTNAME} | ${SED} 's/^[ ]*//'` ; \
 	CALCMD5=`${DIGEST} MD5 ${SRCBALL_NAME}.tar` ; \
 	if [ "$${EXPMD5}"X != "$${CALCMD5}"X ]; then \
 		${ECHO} "Expected and calculated MD5 signatures don't agree." ; \
 		${ECHO} "($$EXPMD5 != $$CALCMD5)" ; \
-		${FALSE} ; \
+		exit 1 ; \
 	fi ; \
 	if [ X${EXTRACT_USING} = Xgtar ]; then \
 		${GTAR} -xf ${SRCBALL_NAME}.tar; \
