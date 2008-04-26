@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2008/04/25 20:39:10 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2008/04/26 02:41:00 markd Exp $
 #
 
 DISTNAME=	rpy-0.99.0
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	math python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=rpy/}
@@ -13,7 +13,7 @@ COMMENT=	R interface for Python
 
 PYDISTUTILSPKG=		YES
 
-BUILDLINK_API_DEPENDS.R+= R>=2.6.0
+BUILDLINK_API_DEPENDS.R+= R>=2.7.0
 
 .include "../../lang/python/extension.mk"
 .include "../../math/py-Numeric/buildlink3.mk"
