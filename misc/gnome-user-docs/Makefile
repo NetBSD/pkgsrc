@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/04/15 18:50:17 drochner Exp $
+# $NetBSD: Makefile,v 1.10 2008/04/26 00:12:59 bjs Exp $
 #
 
 DISTNAME=	gnome-user-docs-2.22.0
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	The GNOME 2 users guide
 
 CONFLICTS+=		gnome2-user-docs-[0-9]*
+
+MAKE_JOBS_SAFE=		no
 
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake pkg-config msgfmt
