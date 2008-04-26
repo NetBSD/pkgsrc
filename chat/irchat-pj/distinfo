@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2008/01/19 08:52:11 obache Exp $
-
-SHA1 (irchat-pj-2.4.24.22.tar.bz2) = c6e309192e065c2d6c0a1d12b74599b9a8737095
-RMD160 (irchat-pj-2.4.24.22.tar.bz2) = 77b22d2f93898c6a083f1d48d793a13abd999005
-Size (irchat-pj-2.4.24.22.tar.bz2) = 83897 bytes
-SHA1 (patch-aa) = ba02dd82c57bb2dfb7482f6e371bfef94e72d317

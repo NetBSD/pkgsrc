@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/08/22 16:43:36 jlam Exp $
-
-SHA1 (rarbsd.sfx) = bafd5d6e4956ad10898ab19d601fa506d1681b4a
-RMD160 (rarbsd.sfx) = 3510af235244162f47d85fb7744468c9b093ffdf
-Size (rarbsd.sfx) = 246569 bytes
-SHA1 (rarlinux-3.6.0.tar.gz) = 4b43766371fd2f117fb3af5826001a7eab7a0f3b
-RMD160 (rarlinux-3.6.0.tar.gz) = c0f6d19738f69deb9fd75589e461a7a0ed430d39
-Size (rarlinux-3.6.0.tar.gz) = 752997 bytes

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:48:39 agc Exp $
-
-SHA1 (GutenMark_source_20020714.tar.gz) = 6b65f69f687dfba12a60aa6099c806ca50ca276d
-RMD160 (GutenMark_source_20020714.tar.gz) = 58f205c09875cfbfcb686b54ae5e775479460e28
-Size (GutenMark_source_20020714.tar.gz) = 192099 bytes
-SHA1 (patch-aa) = 111bd0e2ae18d84f2c8af88dc0ba45195472687c

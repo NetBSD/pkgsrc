@@ -1,4 +1,0 @@
-User::Identity helps maintaining user information from various
-sources.  It abstracts the information used about a human begin
-(usually configuration information) from its storage.  It tries to be
-smart in detecting defaults and such.

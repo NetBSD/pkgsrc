@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.17 2008/04/16 14:43:38 wiz Exp $
-
-SHA1 (gnet-2.0.8.tar.gz) = 762b606874fed243d2befe730212a398eef02872
-RMD160 (gnet-2.0.8.tar.gz) = b2ab816f4101e5825867b4fd1a7f6b7cb91c31d3
-Size (gnet-2.0.8.tar.gz) = 725267 bytes
-SHA1 (patch-ad) = 4c7e3a07df6f1018fe9446db333348eaf587225e
-SHA1 (patch-ae) = cf642dc0f9ea7a6c87ef0a9fb6be0f110d42232d
-SHA1 (patch-co) = 286194dfea94f17e44b2fdb454076b076cc235ad

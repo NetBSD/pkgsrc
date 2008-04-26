@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/11/07 12:28:59 rillig Exp $
-
-SHA1 (xdelta-1.1.1.tar.gz) = 47dd23ab2ffbe3effa47889148905bd5f7dd0b67
-RMD160 (xdelta-1.1.1.tar.gz) = ae49badb09ea27634aba1812e56a242978fd7858
-Size (xdelta-1.1.1.tar.gz) = 295398 bytes
-SHA1 (patch-aa) = fa412dd5111f630f76aa6daa39483a00b689d2cd
-SHA1 (patch-ab) = 342dcb9229e62a0239459e2c3d4419409ba58137
-SHA1 (patch-ac) = 5909069f4a4397fd696f6041d50ca63198cf3ddb

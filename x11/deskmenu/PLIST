@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/16 13:06:33 sborrill Exp $
-bin/deskmenu
-share/examples/deskmenu/deskmenurc

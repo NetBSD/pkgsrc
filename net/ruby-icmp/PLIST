@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2004/11/28 04:13:56 taca Exp $
-${RUBY_SITELIBDIR}/icmp.rb
-${RUBY_EXAMPLESDIR}/icmp/ping.rb
-${RUBY_EXAMPLESDIR}/icmp/traceroute.rb
-@dirrm ${RUBY_EXAMPLESDIR}/icmp

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/13 20:58:20 agc Exp $
-
-SHA1 (xen-2.0.7-install-x86_32.tgz) = 6fe975840b6ab1fdcb3cfc4bb2b26f31ff6d371e
-RMD160 (xen-2.0.7-install-x86_32.tgz) = 03f6b2f452059254e59f3db7b937d56e42281cf8
-Size (xen-2.0.7-install-x86_32.tgz) = 14295119 bytes

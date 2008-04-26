@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/04 11:32:15 shannonjr Exp $
-
-SHA1 (pcsc-tools-1.4.12.tar.gz) = 193fe6e7b04eb5afff685a9bc1ea4bc5c5926302
-RMD160 (pcsc-tools-1.4.12.tar.gz) = a584b4c37fbbc53b6153857fe7eaee0fb49e524b
-Size (pcsc-tools-1.4.12.tar.gz) = 57657 bytes
-SHA1 (patch-aa) = ce9441fe2479558012da2aea4d36c204fc627dbb

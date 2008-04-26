@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/06/22 18:52:00 jlam Exp $
-
-SHA1 (qalculate-currency-0.9.4.tar.gz) = 8352fd1bc8434299e4c3a1111f1b6b275246ee0f
-RMD160 (qalculate-currency-0.9.4.tar.gz) = fa7a52c922ed0c01494e43b6a9c971124a9856cb
-Size (qalculate-currency-0.9.4.tar.gz) = 370506 bytes
-SHA1 (patch-aa) = 40d2dcb92b1affa6df71679cfce4027291fcd894
-SHA1 (patch-ab) = 06824dc714d112ce6ed422f550939ae802e2452b

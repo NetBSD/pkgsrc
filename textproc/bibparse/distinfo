@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:48:40 agc Exp $
-
-SHA1 (bibparse-1.06.tar.gz) = 74e356264cb8c11b212d8a61c503bbf915a0729c
-RMD160 (bibparse-1.06.tar.gz) = e41a53cf2f72c150252642c344b5b686e91e0e46
-Size (bibparse-1.06.tar.gz) = 856432 bytes
-SHA1 (patch-aa) = b9fd8a0d82d8ee2d4a0b19b68558184e38572a75
-SHA1 (patch-ab) = facf719e4ea6ad2857b08145857246d4ee871138

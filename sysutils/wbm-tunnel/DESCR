@@ -1,2 +1,0 @@
-This is the standard "tunnel" Webmin module to connect to another HTTP
-server via a tunnel through the Webmin server.

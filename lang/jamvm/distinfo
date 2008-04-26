@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/06/05 14:08:43 rillig Exp $
-
-SHA1 (jamvm-1.4.5.tar.gz) = ad22e8eedf375230eae2917660c09c9063ffafd8
-RMD160 (jamvm-1.4.5.tar.gz) = 63221c64e285349494f9a3166dce7e2a58381a55
-Size (jamvm-1.4.5.tar.gz) = 547407 bytes
-SHA1 (patch-aa) = e6cb00c963d82dd0617fb20e1e8a35527d891dd6
-SHA1 (patch-bsdosc) = ac223f74472ec6e9ed69cef04a0d343aa942e8de

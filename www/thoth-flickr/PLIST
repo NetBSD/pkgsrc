@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:27:05 jlam Exp $
-${GEM_HOME}/cache/thoth_flickr-${PKGVERSION}.gem
-${GEM_LIBDIR}/.require_paths
-${GEM_LIBDIR}/plugin/thoth_flickr.rb
-${GEM_HOME}/specifications/thoth_flickr-${PKGVERSION}.gemspec
-@dirrm ${GEM_LIBDIR}/plugin
-@dirrm ${GEM_LIBDIR}

@@ -1,5 +1,0 @@
-ICB (International CB) is a teleconferencing system that allows Internet users
-to participate in realtime online discussions. This package builds a client
-program (called, strangely enough, "icb") that is used to access ICB.
-
-i2cb was enhanced to support IPv6 etc.

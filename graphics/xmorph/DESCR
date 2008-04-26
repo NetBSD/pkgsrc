@@ -1,7 +1,0 @@
-xmorph is a digital image warping and dissolving program, also known
-as a "morphing" program.  It runs under the X Window System.  The
-primary use of xmorph is to generate and modify meshes which control
-the shape of an image.  xmorph also has the capacity to dissolve
-images together, and to generate a sequence of warped and dissolved
-images.  When this sequence is made into a movie, it is called a
-"morph".

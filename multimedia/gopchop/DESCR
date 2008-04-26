@@ -1,7 +1,0 @@
-This tool is used for people wanting to take sections out of MPEG2-PS
-files without re-encoding the resulting frames.  The idea is to
-write specific "Group of Pictures" (GOP) sections to a new MPEG2-PS
-file.  These GOPs will decode correctly (in theory), and the gaps
-won't be noticed.  I wrote this tool to edit commercials out of
-MPEG2 files produced by my KFir MPEG2 capture card.  Using this
-tool for anything else is really beyond the scope of its design.

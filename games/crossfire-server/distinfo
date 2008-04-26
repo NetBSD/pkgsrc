@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/06/11 11:36:47 adrianp Exp $
-
-SHA1 (crossfire-1.9.0.tar.gz) = 7f8ef84f4d465736fc854b4be4e32f39ed415eaf
-RMD160 (crossfire-1.9.0.tar.gz) = 6069e1d566a738c73756096240694d8f62ab8ce4
-Size (crossfire-1.9.0.tar.gz) = 5317109 bytes
-SHA1 (patch-aa) = 7102244e70498f89dc2f0a600415f06dcb93853f
-SHA1 (patch-ab) = b50c940ab25f3b2361afa6ae49be6edab498f43e
-SHA1 (patch-ae) = 4f9aee487d8cff1bb6295f3661d0194d045b328c

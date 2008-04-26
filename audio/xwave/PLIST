@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:18:42 zuntum Exp $
-bin/xwave
-lib/X11/app-defaults/XWave
-share/doc/xwave2/README
-share/doc/xwave2/README-XWAVE2
-share/doc/xwave2/README.v06
-share/doc/xwave2/COPYING
-share/doc/xwave2/INSTALL
-@dirrm share/doc/xwave2

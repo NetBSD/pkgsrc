@@ -1,4 +1,0 @@
-This package collects provides a lookup interface for mail addresses
-for several data sources.  It can retrieve data from Emacs bbdb, abook,
-ldap and even MacOS X addressbooks, and provide the results to external
-programs such as the mutt mail reader.

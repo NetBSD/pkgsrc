@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/01/03 14:25:50 taca Exp $
-
-SHA1 (html-parser-19990912p2.tar.gz) = 9af1a9c5cd952f5b392ef6cfa13b8778184253e7
-RMD160 (html-parser-19990912p2.tar.gz) = aad044d8ae91e98f59888dc52e51aee8aa184e57
-Size (html-parser-19990912p2.tar.gz) = 7216 bytes
-SHA1 (patch-aa) = 4a5ca1551f28bf03ba4d77e323da48846273dc7e

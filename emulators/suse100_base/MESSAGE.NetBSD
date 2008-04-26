@@ -1,6 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.2 2007/11/30 14:18:09 rillig Exp $
-
-Do not forget to include COMPAT_LINUX in your kernel configuration file.
-Linux binaries require this option in order to work.
-===========================================================================

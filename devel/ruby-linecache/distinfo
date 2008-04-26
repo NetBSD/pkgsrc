@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/13 07:37:14 jlam Exp $
-
-SHA1 (linecache-0.42.gem) = 8d7963c3ff384f1827d52e222987b3f19c4e590d
-RMD160 (linecache-0.42.gem) = 05168c271bf705a046e86cd3dd51d775b5992df8
-Size (linecache-0.42.gem) = 29184 bytes

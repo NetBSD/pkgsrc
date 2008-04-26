@@ -1,3 +1,0 @@
-The xinput utility configures and tests XInput devices. It wasn't
-originally designed to be the primary tool for doing this but it's
-still pretty much the only program out there for doing it.

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/22 21:16:36 agc Exp $
-
-SHA1 (flops.c) = f7f62c6d726f19e26a6621f8cc30ce3dd190a1d6
-RMD160 (flops.c) = d193df09aef2ebdb3ce8b76c5942bb2543c72623
-Size (flops.c) = 33791 bytes
-SHA1 (flops.doc) = 97e57d0e847f67fa177418163c67a753b52ade2f
-RMD160 (flops.doc) = 7705d274ae852c312c7b510732f29e9905901370
-Size (flops.doc) = 7751 bytes
-SHA1 (patch-aa) = 89ae2861738560f66ff35a06b715ae9c3535b5d1

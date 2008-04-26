@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/08/10 21:21:01 gdt Exp $
-
-SHA1 (guile-cairo-1.4.0.tar.gz) = 7b5a500b40233dd474e2bd5787d96099441ac926
-RMD160 (guile-cairo-1.4.0.tar.gz) = 57a788303c6ff2044ef94f34d614aa90f511ff56
-Size (guile-cairo-1.4.0.tar.gz) = 512208 bytes

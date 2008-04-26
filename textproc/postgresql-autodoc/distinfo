@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2007/06/19 18:46:16 mjl Exp $
-
-SHA1 (postgresql_autodoc-1.30.tar.gz) = 91de871ca5e0adf649de0c5d597be5a678268486
-RMD160 (postgresql_autodoc-1.30.tar.gz) = 91f00429d0675b578b0542ed2f94958eb37b2946
-Size (postgresql_autodoc-1.30.tar.gz) = 46216 bytes

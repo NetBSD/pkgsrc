@@ -1,4 +1,0 @@
-The perl5 module XML::SematicDiff provides a way to compare the
-contents and structure of two XML documents. By default, it returns
-a list of hashrefs where each hashref describes a single difference
-between the two docs.

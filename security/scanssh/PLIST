@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:17:46 zuntum Exp $
-bin/scanssh
-man/man1/scanssh.1

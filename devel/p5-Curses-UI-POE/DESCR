@@ -1,2 +1,0 @@
-This is a subclass for Curses::UI that enables it to work with POE.
-It is designed to simply slide over Curses::UI.

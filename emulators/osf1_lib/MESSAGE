@@ -1,6 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2006/07/02 10:06:43 rillig Exp $
-
-Do not forget to include COMPAT_OSF1 in your kernel configuration file.
-OSF/1 binaries require this option in order to work.
-===========================================================================

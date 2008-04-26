@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/06/19 16:19:37 jlam Exp $
-
-SHA1 (twm-1.0.3.tar.bz2) = 8e3724f53f8796359705d8e4ff334608bc887f64
-RMD160 (twm-1.0.3.tar.bz2) = 985e158b34473740498ede37d78cff67ffd31004
-Size (twm-1.0.3.tar.bz2) = 238448 bytes
-SHA1 (patch-aa) = 5d19b2e917eda1e405f727ca9b521310fa1d8bab

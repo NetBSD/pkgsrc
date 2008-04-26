@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/07/19 10:46:29 abs Exp $
-bin/visitors
-share/doc/visitors/doc.html
-share/visitors/visitors.png
-share/visitors/powered-by-visitors.png
-@dirrm share/visitors
-@dirrm share/doc/visitors

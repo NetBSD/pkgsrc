@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 16:33:10 agc Exp $
-
-SHA1 (yasql-1.81.tar.gz) = c2a50ddedaa539c6a8890ff7bd76289581ed6de6
-RMD160 (yasql-1.81.tar.gz) = 11edc72952bcf5f36bb4823303fb70befb81022e
-Size (yasql-1.81.tar.gz) = 105825 bytes

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2008/04/19 05:38:16 obache Exp $
-
-SHA1 (weex-2.6.1.5.tar.gz) = eab3560cc75265bd96bac52f08d81f3d735696f0
-RMD160 (weex-2.6.1.5.tar.gz) = adf792c92f95799cfde9d96a54de006ebc840aca
-Size (weex-2.6.1.5.tar.gz) = 206972 bytes
-SHA1 (patch-aa) = f8f092150b3556d78ab8ef66070447724c9c118d
-SHA1 (patch-ab) = 49e383c1c766d63b56256afe3293bf473ca63f6f
-SHA1 (patch-ac) = c58dbbe7ee381a33ad6b77aeceaa3cef2923d2e7
-SHA1 (patch-ad) = c0ec8dc6e55134316f61372724b5e7aee0c493b8

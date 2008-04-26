@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/09/29 12:18:16 rillig Exp $
-
-SHA1 (ScrollZ-1.9.5.tar.gz) = 33496b0e8f4e87b3de9ce78a47d5b77b66b155c0
-RMD160 (ScrollZ-1.9.5.tar.gz) = 8817697f6c47f47bcecef196793cb1cffc0031ba
-Size (ScrollZ-1.9.5.tar.gz) = 906167 bytes
-SHA1 (patch-aa) = 8c30f9e340a291ff2badcf733861f74e4a44f413

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/02/22 08:12:58 bjs Exp $
-
-SHA1 (libarena-20080221.tgz) = e658fa68eed15604ff299c22b0b09c2d2e9339b5
-RMD160 (libarena-20080221.tgz) = d4e6e6529759e206807fe661b594058c94f6323a
-Size (libarena-20080221.tgz) = 22865 bytes
-SHA1 (patch-aa) = 7bfca72eedc7a3bd7b36acb718e57d5347762aa8
-SHA1 (patch-ab) = 56be16d641097e1ae6149e10aefb22837639dff3

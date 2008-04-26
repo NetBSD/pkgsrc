@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.15 2006/04/02 20:10:51 wiz Exp $
-
-SHA1 (make-3.81.tar.gz) = cd4fa5a3184176492bf0799593a8f250a728210c
-RMD160 (make-3.81.tar.gz) = a713a72875cb9a29568677c98022465c6f55cbbf
-Size (make-3.81.tar.gz) = 1564560 bytes
-SHA1 (patch-aa) = ba88ee2175c7c2258fc647b3654b2f725cf75a50
-SHA1 (patch-ac) = de18956fde66fa3fc61a991bb3e6724d9c5b1eac
-SHA1 (patch-af) = 067cac366694ce33e5bc52ef937603ae17d3bc2e

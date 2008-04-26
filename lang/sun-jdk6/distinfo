@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2008/03/05 22:32:09 tnn Exp $
-
-SHA1 (jdk-6u5-linux-i586.bin) = 0e5f6163bbd1ca388939345a1853c30d95e4a76d
-RMD160 (jdk-6u5-linux-i586.bin) = b965b2d715ae01b7e829e875b38892bada80cee2
-Size (jdk-6u5-linux-i586.bin) = 70504987 bytes
-SHA1 (jdk-6u5-linux-x64.bin) = dd1bcccc6aafd86022014beb53f4df0be51e3ee6
-RMD160 (jdk-6u5-linux-x64.bin) = 7fe84df0edf809d1e17ab93b5a1afb1050addac8
-Size (jdk-6u5-linux-x64.bin) = 63724381 bytes

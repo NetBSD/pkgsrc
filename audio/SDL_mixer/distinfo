@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.10 2007/07/26 00:03:27 wiz Exp $
-
-SHA1 (SDL_mixer-1.2.8.tar.gz) = 7fa56d378f9ca53434f9470aeb2997ad84a348c6
-RMD160 (SDL_mixer-1.2.8.tar.gz) = f2188b907aa779bb81415ac6726ad7f496357b85
-Size (SDL_mixer-1.2.8.tar.gz) = 2096559 bytes
-SHA1 (patch-aa) = fb2d442a918936fabf427abf883df4605e219f37
-SHA1 (patch-ab) = 309c5879cad60e8975f2c4e36669a8708b5f996a

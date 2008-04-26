@@ -1,2 +1,0 @@
-This package installs a zone.tab file (part of the tzdata distribution)
-which is commonly installed with the OS but missing in NetBSD.

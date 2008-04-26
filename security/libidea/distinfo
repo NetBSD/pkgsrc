@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 13:10:07 agc Exp $
-
-SHA1 (libidea-0.8.2b.tar.gz) = c52ca4dd3d0f5eba06a4ae16ba1d643bad8bae2b
-RMD160 (libidea-0.8.2b.tar.gz) = 34a35be2dee6e5ee4024d6eaede4b68e1dad30c7
-Size (libidea-0.8.2b.tar.gz) = 9641 bytes
-SHA1 (patch-aa) = 097f76e812b25162e83aa969c66b16fc61806ac4

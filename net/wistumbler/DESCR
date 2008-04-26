@@ -1,5 +1,0 @@
-The wistumbler command display and logging WaveLAN/IEEE wireless network-
-ing Access Point via the wi(4) and awi(4) drivers.
-
-The iface argument given to wistumbler should be the logical interface
-name associated with the WaveLAN/IEEE device (e.g. wi0, wi1, etc.).

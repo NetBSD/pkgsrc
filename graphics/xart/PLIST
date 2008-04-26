@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2006/02/23 21:24:11 joerg Exp $
-bin/xart
-${IMAKE_MAN_DIR}/xart.${IMAKE_MAN_SUFFIX}
-lib/X11/app-defaults/XArt

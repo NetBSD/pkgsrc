@@ -1,9 +1,0 @@
-# $NetBSD: Makefile.pkg,v 1.4 2007/02/19 20:17:21 joerg Exp $
-
-.include "../../mk/bsd.prefs.mk"
-
-.if !defined(XEMACS_PREFIX)
-XEMACS_PREFIX!=	${MAKE} XEMACS_PREFIX= EVAL_PREFIX=_XEMACS_PREFIX=xemacs \
-		VARNAME=_XEMACS_PREFIX show-var
-MAKEFLAGS+=	XEMACS_PREFIX=${XEMACS_PREFIX:Q}
-.endif

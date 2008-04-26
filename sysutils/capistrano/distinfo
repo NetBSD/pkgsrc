@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:20:41 jlam Exp $
-
-SHA1 (capistrano-2.2.0.gem) = 6a75cf0a108265081766d4445df818f069732ae1
-RMD160 (capistrano-2.2.0.gem) = b58cea081346323aabd70aab9a7a5c72904ab15d
-Size (capistrano-2.2.0.gem) = 96256 bytes

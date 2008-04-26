@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2007/09/19 23:33:10 wiz Exp $
-lib/gnome-vfs-2.0/modules/libcdda.la
-share/examples/gnome-vfs-2.0/modules/cdda-module.conf
-@comment in gnome-vfs: @dirrm share/examples/gnome-vfs-2.0/modules
-@comment in gnome-vfs: @dirrm lib/gnome-vfs-2.0/modules

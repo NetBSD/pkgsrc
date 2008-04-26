@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/12/30 14:52:17 joerg Exp $
-
-SHA1 (purge-20040201-src.tar.gz) = 9347ead8f1444c7c8d1828e0c8ff8bd0ca5e0891
-RMD160 (purge-20040201-src.tar.gz) = c98c146223d6322850e7203af2b074a40440184a
-Size (purge-20040201-src.tar.gz) = 30572 bytes
-SHA1 (patch-aa) = cb01736e19a00eaaec18c5e4f61b20ca1609eb1b
-SHA1 (patch-ab) = c461769a7eae2f249ec3b8acb4fe40b42f2f411b
-SHA1 (patch-ac) = d18823eca80d17a9c3768df5ffd515508b38f38c

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/11/02 09:17:33 rillig Exp $
-
-SHA1 (fort77-1.18.tar.gz) = 0f8ba5a1106182a15e5ab87c615569b8911bc3a7
-RMD160 (fort77-1.18.tar.gz) = 9748f9e068b8071a5b89009bfdb533ee2a9b0c11
-Size (fort77-1.18.tar.gz) = 6562 bytes
-SHA1 (patch-fort77) = 0dccaff05defa1b0f57d94ede31e6b6b5c8cf78d

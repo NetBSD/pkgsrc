@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/14 11:00:13 kefren Exp $
-bin/dynamips
-bin/nvram_export

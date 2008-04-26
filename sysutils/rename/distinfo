@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/11/05 15:56:34 rillig Exp $
-
-SHA1 (rename-1.3.tar.gz) = 8d835e628aeb1f71816e092c0de57daf2519f43a
-RMD160 (rename-1.3.tar.gz) = 56bd0ebaabbf9aae1fb93a12ca1cf9fccee5c5ab
-Size (rename-1.3.tar.gz) = 83854 bytes
-SHA1 (patch-aa) = 5a287999d712b540964de5f447194c00160f8805

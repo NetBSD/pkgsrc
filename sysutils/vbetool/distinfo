@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/10/29 18:41:24 joerg Exp $
-
-SHA1 (vbetool_0.7-1.tar.gz) = 49c86aa6fb877f35a0b336d6aa1d6b204c2cc66f
-RMD160 (vbetool_0.7-1.tar.gz) = b5a5d3a0794f8dbb06c78373e15c26d9536d8303
-Size (vbetool_0.7-1.tar.gz) = 176277 bytes
-SHA1 (patch-aa) = d27a3dd8eb1943c3f30351996483a01638521e90
-SHA1 (patch-ab) = 16e42e95d69b98b5ec5886a84bbc294aea942056
-SHA1 (patch-ac) = 89b24bd2fadbf40ab614186b53dc339653029919

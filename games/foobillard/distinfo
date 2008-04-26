@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/03/28 19:37:43 joerg Exp $
-
-SHA1 (foobillard-3.0a.tar.gz) = 1caa51a201b55883640b5c5b1e9fde20fc71a095
-RMD160 (foobillard-3.0a.tar.gz) = 9d5a2d271ca270563592c5f6cf23533447c51483
-Size (foobillard-3.0a.tar.gz) = 1138477 bytes
-SHA1 (patch-aa) = 966973b8a1f7768f1a93c70eb73b6398b0b0e397

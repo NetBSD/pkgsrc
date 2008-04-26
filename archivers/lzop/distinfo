@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 14:45:24 agc Exp $
-
-SHA1 (lzop-1.01.tar.gz) = ad61e58d7bf02687c2da48e4386d5b377352db3f
-RMD160 (lzop-1.01.tar.gz) = d7d93d217fcdeb542c2535e444a4c1271659e980
-Size (lzop-1.01.tar.gz) = 282491 bytes

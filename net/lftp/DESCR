@@ -1,5 +1,0 @@
-lftp is powerful file transfer client. It uses GNU readline to read
-commands and shell-like command syntax allowing you to launch several
-commands in parallel in background. lftp has reliable put, reput, mirror,
-and many other commands. lftp supports ftp, http, https, fish and sftp
-protocols.

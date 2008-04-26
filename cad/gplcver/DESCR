@@ -1,4 +1,0 @@
-Cver is a full 1995 IEEE P1364 standard Verilog simulator.  It also
-implements some of the 2001 P1364 standard features.  All three
-PLI interfaces (tf_, acc_, and vpi_) are implemented as defined
-in the IEEE 2001 P1364 LRM.

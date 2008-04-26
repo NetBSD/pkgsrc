@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2005/07/12 09:55:57 adam Exp $
-bin/dbench
-bin/tbench
-bin/tbench_srv
-man/man1/dbench.1
-man/man1/tbench.1
-man/man1/tbench_srv.1
-share/client.txt

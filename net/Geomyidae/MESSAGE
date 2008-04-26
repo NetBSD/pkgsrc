@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2008/04/06 11:50:36 obache Exp $
-
-Geomyidae options can be specified in referenced rc.d startup script;
-see ${PREFIX}/share/examples/rc.d/Geomyidae for details.
-
-For documentation, license, and examples see Geomyidae(8) and/or
-${PREFIX}/share/{doc,examples}/Geomyidae/
-===========================================================================

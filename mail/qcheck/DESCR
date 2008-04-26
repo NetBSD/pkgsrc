@@ -1,5 +1,0 @@
-This is a quick utility to check if there are new mails
-on any un*x system running qmail with Maildir. It won't work
-for someone running mailboxes in mbox format and I can't be
-bothered to add that. Do it yourself if you need to support
-this old format.

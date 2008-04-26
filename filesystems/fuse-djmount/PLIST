@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/11 14:55:45 agc Exp $
-bin/djmount
-share/doc/djmount/README
-@dirrm share/doc/djmount

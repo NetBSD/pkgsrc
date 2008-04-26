@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1 2007/08/21 22:49:17 jlam Exp $
-
-SHA1 (compat16-extras-i386-1.6.2.tar.bz2) = 99bea740ae6f158e9af3da28e763e2b747437b8f
-RMD160 (compat16-extras-i386-1.6.2.tar.bz2) = 8dd72d861531bd00db90d462244986415076399c
-Size (compat16-extras-i386-1.6.2.tar.bz2) = 3506953 bytes
-SHA1 (compat16-extras-sparc-1.6.2.tar.bz2) = aa59568f73bbdb6d6f5dc2f97b94006cf58e7834
-RMD160 (compat16-extras-sparc-1.6.2.tar.bz2) = 507b051de677a85111d0de45a6c218271b571ba2
-Size (compat16-extras-sparc-1.6.2.tar.bz2) = 1595142 bytes

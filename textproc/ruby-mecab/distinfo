@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2008/02/04 04:58:54 obache Exp $
-
-SHA1 (mecab-ruby-0.97.tar.gz) = 9278f53d18e9dc8daa0d1da6d62833bec34500b4
-RMD160 (mecab-ruby-0.97.tar.gz) = 60b93134e13de94437611a894ad648335b9cb0c7
-Size (mecab-ruby-0.97.tar.gz) = 41355 bytes

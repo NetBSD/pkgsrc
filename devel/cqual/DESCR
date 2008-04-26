@@ -1,5 +1,0 @@
-cqual is a type-based analysis tool for finding bugs in C programs. It
-extends the type system of C with extra user-defined type qualifiers.
-The programmer annotates their program in a few places, and cqual
-performs qualifier inference to check whether the annotations are
-correct.

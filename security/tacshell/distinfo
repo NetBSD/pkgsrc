@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/02/20 23:05:27 wiz Exp $
-
-SHA1 (tacshell-0.91.tar.gz) = cddbdfd0bacd197d0783270898d3935026c9e54d
-RMD160 (tacshell-0.91.tar.gz) = ac436ecb10c1a50852ec63b66f786bcbe0b24eb6
-Size (tacshell-0.91.tar.gz) = 56453 bytes
-SHA1 (patch-aa) = 901014cd45cc8e3dc693bc8f3fc0fe548b24aef3

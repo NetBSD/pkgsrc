@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/05/05 17:46:26 abs Exp $
-man/man8/autonet.8
-sbin/autonet
-share/examples/autonet/autonet.local
-share/examples/autonet/lid_switch
-share/examples/rc.d/autonet
-@dirrm share/examples/autonet

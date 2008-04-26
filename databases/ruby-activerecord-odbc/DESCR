@@ -1,4 +1,0 @@
-Data adapter for ODBC-accessible databases such as Oracle, Informix,
-Ingres, OpenLink Virtuoso, SQL Server, Sybase, MySQL, PostgreSQL, DB2,
-Firebird, Progress, and others, providing consistent behaviour to
-ActiveRecord.

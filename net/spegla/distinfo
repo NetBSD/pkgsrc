@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/09/06 08:10:59 abs Exp $
-
-SHA1 (spegla-1.1p4.tar.gz) = c85036d0ed4e198c517198628fbc9a842f0d3e85
-RMD160 (spegla-1.1p4.tar.gz) = 1e07b1a667a69d25df3b91bf2cb0a8b4bda8b839
-Size (spegla-1.1p4.tar.gz) = 101515 bytes
-SHA1 (patch-aa) = c52aa11ed64f7ed3575aa868a1688c9777363d91
-SHA1 (patch-ab) = b237f8bf7f6db1fce07d88ff42ea50b871449563

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.8 2007/06/30 15:11:24 joerg Exp $
-
-SHA1 (gnash-0.8.0.tar.bz2) = b03d3c03bb93b0ebaf5ad10cabd3d7fef2434f7e
-RMD160 (gnash-0.8.0.tar.bz2) = 6c885c283345973d27206f6e3f90635264a724ae
-Size (gnash-0.8.0.tar.bz2) = 2053076 bytes
-SHA1 (patch-aa) = 4774c9bd41ca69611f980c85e79763b159a262ed
-SHA1 (patch-ab) = c361305a5dd508907d4408f16ec7a748186a5f6e

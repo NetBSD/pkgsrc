@@ -1,6 +1,0 @@
-This is the LibOFX library. It is a parser and an API designed to
-allow applications to very easily support OFX command responses,
-usually provided by financial institutions for statement downloads.
-To my knowledge, it is the first working OpenSource implementation
-of the OFX (Open Financial eXchange) specification on the client
-side.

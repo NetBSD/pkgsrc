@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/06/08 13:03:22 wiz Exp $
-
-SHA1 (gst-fluendo-mp3-0.10.6.tar.bz2) = f6c19f138af2325fdbb2c632badc806cd49f6980
-RMD160 (gst-fluendo-mp3-0.10.6.tar.bz2) = 536c71e2935923fa067b24d317bf56f8b1913712
-Size (gst-fluendo-mp3-0.10.6.tar.bz2) = 336337 bytes
-SHA1 (patch-aa) = 17a8cae12502fd617aa1a7e9b9277cb4f8991ff5

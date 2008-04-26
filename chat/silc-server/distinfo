@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.33 2007/05/18 21:13:54 salo Exp $
-
-SHA1 (silc-server-1.0.4.tar.bz2) = 6b3f2a5c61710b3ae3f1c08087c9c6b5ff597ec8
-RMD160 (silc-server-1.0.4.tar.bz2) = 0ff1fd41b8e1fb379ad75a4e53c694d135aa752a
-Size (silc-server-1.0.4.tar.bz2) = 895370 bytes
-SHA1 (patch-aa) = 3b189047000593b36305f23301987982706355dc
-SHA1 (patch-ab) = 55b3f00076c5b8a443465753ae07b9e812236f18

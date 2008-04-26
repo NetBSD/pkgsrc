@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/02 12:13:38 he Exp $
-bin/pcc
-libexec/ccom
-libexec/cpp
-man/man1/pcc.1
-man/man1/cpp.1
-man/man1/ccom.1

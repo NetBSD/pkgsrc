@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.10 2008/03/08 00:08:42 tnn Exp $
-
-SHA1 (flex-2.5.35.tar.gz) = 333c876a8e24ae5a17d9573459fc501b7721930b
-RMD160 (flex-2.5.35.tar.gz) = 648645f4751ec5029f510730577f5c3e291b7a5e
-Size (flex-2.5.35.tar.gz) = 1456620 bytes
-SHA1 (patch-aa) = 938335a9071be62f534bad8e785003318816fd38
-SHA1 (patch-ab) = 84e8f679973ffa298391bfe20215f5c6878ed65e

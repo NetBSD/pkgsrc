@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/16 18:13:48 wiz Exp $
-${PYSITELIB}/Mk4py.so
-${PYSITELIB}/metakit.py
-${PYSITELIB}/metakit.pyc

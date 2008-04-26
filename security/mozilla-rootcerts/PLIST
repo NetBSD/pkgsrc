@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/20 20:02:53 jlam Exp $
-sbin/mozilla-rootcerts
-share/mozilla-rootcerts/certdata.txt
-@dirrm share/mozilla-rootcerts

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2008/04/04 15:30:00 jlam Exp $
-
-SHA1 (rubyzip-0.9.1.gem) = 66086ec206030088b706895b4634c261a0d9fd01
-RMD160 (rubyzip-0.9.1.gem) = 4826c23eff6b8b6759fffc5cf6583fd0ec3f3b03
-Size (rubyzip-0.9.1.gem) = 85504 bytes

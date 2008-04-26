@@ -1,8 +1,0 @@
-# $NetBSD: xorg.libXrender,v 1.1 2007/12/17 18:20:20 tron Exp $
-#
-include/X11/extensions/Xrender.h
-lib/libXrender.1.3.0.dylib
-lib/libXrender.1.dylib
-lib/libXrender.dylib
-lib/libXrender.la
-lib/pkgconfig/xrender.pc

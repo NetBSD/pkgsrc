@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/12/09 13:47:58 joerg Exp $
-
-SHA1 (bvi-1.3.2.src.tar.gz) = 0ff213ebb5cd0993c5d1f7c8d4172aaec709aac1
-RMD160 (bvi-1.3.2.src.tar.gz) = d50aa06d5c978026d363002fee194802b2096cbc
-Size (bvi-1.3.2.src.tar.gz) = 170444 bytes
-SHA1 (patch-aa) = e62f72fd84d03a0109a0b02950aff468ba5639b6
-SHA1 (patch-ab) = b3aa82a7fea3122328a2bee8e532684bf7f306c2

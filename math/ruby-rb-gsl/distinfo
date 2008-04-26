@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/12/17 23:37:49 minskim Exp $
-
-SHA1 (rb-gsl-1.9.2.tar.gz) = 39d29abe95906b9c1b9cd28ca3df213bb4826cc8
-RMD160 (rb-gsl-1.9.2.tar.gz) = ccaea4d25d1ce7526bf17035be650e24df83bb54
-Size (rb-gsl-1.9.2.tar.gz) = 671120 bytes

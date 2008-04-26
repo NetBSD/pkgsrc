@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 09:03:10 agc Exp $
-
-SHA1 (pfthpc21.zip) = 550de4405f593004ff6e957a1c294bd801167e5b
-RMD160 (pfthpc21.zip) = cd5ab920efad2098351be98f86955d0e10ea61b2
-Size (pfthpc21.zip) = 295565 bytes
-SHA1 (patch-aa) = 8e2c5bcde82e078f341db25d12b79e667cf76c54
-SHA1 (patch-ab) = bce3729fabfd196b11562ccdc2e559455e29176e

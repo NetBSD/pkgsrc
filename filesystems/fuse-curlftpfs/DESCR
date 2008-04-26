@@ -1,9 +1,0 @@
-CurlFtpFS is a file system for accessing FTP hosts based on FUSE and libcurl.
-Features
-
-CurlFtpFS differentiates itself from other FTP file systems because it features:
-
-    * SSLv3 and TLSv1 support
-    * connecting through tunneling HTTP proxies
-    * automatically reconnection if the server times out
-    * transform absolute symlinks to point back into the ftp file system

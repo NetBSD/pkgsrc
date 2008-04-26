@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/13 20:15:50 wiz Exp $
-bin/dvdview
-share/doc/dvdview/README
-@dirrm share/doc/dvdview

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 11:02:51 agc Exp $
-
-SHA1 (cstream-2.2.tar.gz) = aef89176123f1ae6cb824e66b2e9b3aa3be7644e
-RMD160 (cstream-2.2.tar.gz) = 911c9deb0023a65cf8288a7af98bbdba50cece81
-Size (cstream-2.2.tar.gz) = 43124 bytes
-SHA1 (patch-aa) = 68f73e1052731342f59cbd3baaf772d45e62cacd

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/18 21:38:23 mrg Exp $
-
-SHA1 (shntool-2.0.3.tar.gz) = 1d52d349759a7c12407e2399105f00f6d23f4a55
-RMD160 (shntool-2.0.3.tar.gz) = ecd7d4114e2582ba165e152f77d98c1a82e4f502
-Size (shntool-2.0.3.tar.gz) = 189583 bytes

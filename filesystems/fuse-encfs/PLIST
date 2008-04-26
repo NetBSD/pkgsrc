@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/01 00:34:14 xtraeme Exp $
-bin/encfs
-bin/encfsctl
-man/man1/encfs.1
-man/man1/encfsctl.1

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/04/19 12:22:20 reed Exp $
-
-SHA1 (libXcomposite-1.0.1.tar.bz2) = a3b9f2d5293e1f84a063da1de692f372f5e24356
-RMD160 (libXcomposite-1.0.1.tar.bz2) = 5df01817b4152cfa54346148d6c8b98c4b2b0441
-Size (libXcomposite-1.0.1.tar.bz2) = 181910 bytes
-SHA1 (patch-aa) = 6cac5babd295e26b10db709b8432a49657e032d4

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/07/30 18:58:26 wiz Exp $
-
-SHA1 (texi2html-1.78.tar.gz) = 9a6ccb6026fbab390872cb6ab8bd69288aff9934
-RMD160 (texi2html-1.78.tar.gz) = 9be92744be0605c3f34bacbe7651f955884ae5f9
-Size (texi2html-1.78.tar.gz) = 559694 bytes
-SHA1 (patch-aa) = 9f1d1cd149b9c5adee08652a5e974e21e9b93f38

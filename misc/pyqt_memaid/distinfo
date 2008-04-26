@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/11/30 19:08:54 rillig Exp $
-
-SHA1 (pyqt_memaid_0.2.4.tgz) = 25a6f7e3df7e3170ce026bcb881352c8b6b73d87
-RMD160 (pyqt_memaid_0.2.4.tgz) = 4eb36acf081303ee65b0c805af3adfa74a29c6a6
-Size (pyqt_memaid_0.2.4.tgz) = 170549 bytes
-SHA1 (patch-aa) = df1b3fd23f278b9babca51aea9c64801caf4a28b

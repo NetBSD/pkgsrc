@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 21:51:13 zuntum Exp $
-bin/dos2unix
-bin/unix2dos
-man/man1/unix2dos.1
-man/man1/dos2unix.1

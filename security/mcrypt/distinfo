@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/04/30 19:28:35 adam Exp $
-
-SHA1 (mcrypt-2.6.5.tar.bz2) = 157cff1fd38cb8ea74c174f4b13c63a091e52d7e
-RMD160 (mcrypt-2.6.5.tar.bz2) = dc7546cf4debe2b0bf4704400d0c33490eac8e10
-Size (mcrypt-2.6.5.tar.bz2) = 643902 bytes
-SHA1 (patch-aa) = ecbab562df721331ca18a353693ea7a08d3d344d

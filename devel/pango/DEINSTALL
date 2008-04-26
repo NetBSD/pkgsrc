@@ -1,9 +1,0 @@
-#!/bin/sh
-#
-# $NetBSD: DEINSTALL,v 1.1 2006/11/03 11:27:56 joerg Exp $
-
-case ${STAGE} in
-DEINSTALL)
-	${RM} -f ${PREFIX}/libdata/pango/pango.modules
-	;;
-esac

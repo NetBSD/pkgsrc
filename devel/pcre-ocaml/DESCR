@@ -1,3 +1,0 @@
-This OCaml-library interfaces the PCRE (Perl-compatible regular
-expressions) library which is written in C. it can be used for matching
-regular expressions which are written in "Perl"-style.

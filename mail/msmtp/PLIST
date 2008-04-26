@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.6 2007/09/08 08:05:22 obache Exp $
-bin/msmtp
-info/msmtp.info
-man/man1/msmtp.1
-share/examples/msmtp/msmtprc-user.example
-share/locale/de/LC_MESSAGES/msmtp.mo
-@dirrm share/examples/msmtp

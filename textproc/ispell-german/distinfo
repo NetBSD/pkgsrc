@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2005/02/24 14:48:43 agc Exp $
-
-SHA1 (igerman98-20030222.tar.bz2) = 3c453257cab294260fc2157b175a3ab1318c5ade
-RMD160 (igerman98-20030222.tar.bz2) = f532e14e3c60e6a7b543f92e173f8dca1a5aad63
-Size (igerman98-20030222.tar.bz2) = 305783 bytes
-SHA1 (patch-aa) = a9905826bf120cdf3a54a387cd08ef2ed5428f99

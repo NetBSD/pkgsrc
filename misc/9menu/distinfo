@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 11:02:49 agc Exp $
-
-SHA1 (9menu-1.8.shar.gz) = 8eed85ccf211d967fcf9100beaf6bfc2a3330ea5
-RMD160 (9menu-1.8.shar.gz) = e91eaa901c9f7db3860be49f977a9460bbafd01e
-Size (9menu-1.8.shar.gz) = 8990 bytes
-SHA1 (patch-aa) = 381ea9092583fc0e91a9cc619ea1ee0d32c49abb

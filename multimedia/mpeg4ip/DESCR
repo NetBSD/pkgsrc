@@ -1,8 +1,0 @@
-The MPEG4IP project provides a standards-based system for encoding,
-streaming, and playing encoded audio, video and text. To achieve
-this we've integrated a number of existing open source packages,
-and created some original code to fill in the gaps.
-
-Please note this project is intended for developers who are interested
-in standards based audio and video, and Internet streaming. It is
-not intended for end-users.

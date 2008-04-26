@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2007/04/21 10:38:06 wiz Exp $
-
-You'll need git-1.5 or newer (from devel/scmgit) for togit,
-or mercurial (from devel/mercurial) for tohg.
-
-===========================================================================

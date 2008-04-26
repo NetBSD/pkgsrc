@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/03 16:47:50 rillig Exp $
-bin/netbiff
-bin/netbiffd-file
-bin/netbiffd-imap
-share/doc/netbiff/CONFIG

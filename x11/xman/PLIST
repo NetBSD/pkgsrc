@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/10 13:46:59 joerg Exp $
-bin/xman
-lib/X11/app-defaults/Xman
-man/man1/xman.1
-share/X11/xman.help

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/08/05 15:48:09 joerg Exp $
-
-SHA1 (wmget-0.6.0-src.tar.gz) = 936fa30702c65216dc0371fcd3e5d2104bced1f8
-RMD160 (wmget-0.6.0-src.tar.gz) = 5caefbb15c66e38c4c3677428a086f49e4a529a3
-Size (wmget-0.6.0-src.tar.gz) = 41155 bytes
-SHA1 (patch-aa) = cdcab9a51b4e688f49d78e2307d0752c33705f06

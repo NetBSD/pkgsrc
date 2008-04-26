@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/12/08 17:46:16 joerg Exp $
-
-SHA1 (prngd-0.9.29.tar.gz) = 72e82928b99a94e11fe379159d5fe3a5ddab4112
-RMD160 (prngd-0.9.29.tar.gz) = 08a61c80ce18782e5accd5e7e7b7fd6482120eab
-Size (prngd-0.9.29.tar.gz) = 76392 bytes
-SHA1 (patch-aa) = af3891375f135a69d3da14e6095d68d6554e83d8

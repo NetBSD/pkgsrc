@@ -1,6 +1,0 @@
-ProxSMTP is a flexible tool that allows you to reject, change or log
-email based on arbitrary critera.  It accepts SMTP connections and
-forwards the SMTP commands and responses to another SMTP server.  The
-'DATA' email body is intercepted and filtered before forwarding.
-ProxSMTP can be used as a transparent proxy to filter an entire
-network's SMTP traffic at the router.

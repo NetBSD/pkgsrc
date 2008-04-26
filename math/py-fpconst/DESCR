@@ -1,9 +1,0 @@
-This python module implements constants and functions for working with IEEE754
-double-precision special values. It provides constants for Not-a-Number (NaN),
-Positive Infinity (Inf), and Negative Infinity (-Inf), as well as functions to
-test for these values.
-
-The code is implemented in pure python by taking advantage of the 'struct'
-standard module. Care has been taken to generate proper results on both
-big-endian and little-endian machines. Some efficiency could be gained by
-translating the core routines into C.

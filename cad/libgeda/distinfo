@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.20 2008/02/01 02:34:21 dmcmahill Exp $
-
-SHA1 (geda/libgeda-1.4.0.tar.gz) = d169b31f938f0ddc2e51499892de88c61467afd3
-RMD160 (geda/libgeda-1.4.0.tar.gz) = 40076de4e0b8509eacecbef1356af163c67372cd
-Size (geda/libgeda-1.4.0.tar.gz) = 1010177 bytes
-SHA1 (patch-aa) = c613ba03180a163a384f022c52eb4de69448b2b5

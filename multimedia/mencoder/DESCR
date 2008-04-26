@@ -1,6 +1,0 @@
-mencoder (MPlayer's Movie Encoder) is a simple movie encoder, designed to
-encode MPlayer-playable movies (AVI/ASF/OGG/DVD/VCD/VOB/MPG/MOV/VIV/FLI/
-RM/NUV/NET) to other MPlayer-playable formats. It encodes to DivX4 (1,
-2 or 3 passes), XviD, codecs of libavcodec, PCM/MP3/VBRMP3 audio. It also
-has stream copying abilities, a powerful plugin system (crop, expand,
-flip, postprocess, rotate, scale, rgb/yuv conversion) and more.

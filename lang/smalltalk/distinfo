@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.16 2007/09/03 16:28:56 obache Exp $
-
-SHA1 (smalltalk-2.3.5.tar.gz) = e67e953e2ee06f8343dccbd8ad23230c40b8272a
-RMD160 (smalltalk-2.3.5.tar.gz) = cc9df741304dce7350a4e0ffa99a7adfe29fa67e
-Size (smalltalk-2.3.5.tar.gz) = 4369835 bytes
-SHA1 (patch-ac) = 640808f34bdbc8ed6beab6d7d8e022d45e33ee90
-SHA1 (patch-ae) = 69585b82cab161cb40a6509e8eafb73c88f14d05
-SHA1 (patch-af) = 6d094368cd30fffe5678b1bdf8a7b6da766137e4
-SHA1 (patch-ag) = 5eec4c1f315e05dea00f33d8f31b6b17f32e557a

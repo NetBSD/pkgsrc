@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 13:10:06 agc Exp $
-
-SHA1 (gnu-crypto-2.0.1-bin.tar.bz2) = a35fca0e8ea559f41dccdd5422cc64a0a8b02619
-RMD160 (gnu-crypto-2.0.1-bin.tar.bz2) = e7c097889d76cf0738817fd65c1d79fb7f693abf
-Size (gnu-crypto-2.0.1-bin.tar.bz2) = 1083808 bytes

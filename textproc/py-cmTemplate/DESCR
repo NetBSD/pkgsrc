@@ -1,7 +1,0 @@
-cmTemplate is a Python module that allows CGI programmers to separate code
-from HTML.  It is much more powerful than a simple HTML preprocessor, and
-can be used to generate any type of formatted text output.
-
-cmTemplate converts the template code into Python code, which is
-byte-compiled afterwards.  This makes the template processing extremely
-fast.

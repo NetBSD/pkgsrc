@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.50 2008/01/13 15:57:59 wiz Exp $
-
-SHA1 (SDL-1.2.13.tar.gz) = 51fcaa3e1d5c01fd813ea08688780f86b19cf539
-RMD160 (SDL-1.2.13.tar.gz) = ed8825fc98f4b3759cf9e5cf8357d71c50df9925
-Size (SDL-1.2.13.tar.gz) = 3373673 bytes
-SHA1 (patch-aa) = 5a3b922c1ad64837d2bc1461723e4f34622b481f

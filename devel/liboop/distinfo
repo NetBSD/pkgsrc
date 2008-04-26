@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:19 agc Exp $
-
-SHA1 (liboop-1.0.tar.bz2) = 9c58eeb8b08ba455ac379970cd7df02c48d111d1
-RMD160 (liboop-1.0.tar.bz2) = ed257fd810fa38cf1a664a3dec8fbf6a9a69c9fb
-Size (liboop-1.0.tar.bz2) = 215477 bytes
-SHA1 (patch-aa) = aa43fcd1b3ea8da6465d07a1b12cacb5edf5de26

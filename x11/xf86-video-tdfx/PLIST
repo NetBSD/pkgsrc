@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2007/04/09 14:28:00 xtraeme Exp $
-lib/xorg/modules/drivers/tdfx_drv.la
-man/man4/tdfx.4
-@comment @dirrm lib/xorg/modules/drivers
-@comment @dirrm lib/xorg/modules
-@comment @dirrm lib/xorg

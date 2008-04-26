@@ -1,5 +1,0 @@
-This is a server and a client for the Software Update Protocol
-developed at Carnegie Mellon University. It provides pull-style
-synchronization functionality, where the server creates a file
-list using supscan and the client fetches the list, compares it
-against his local filelist and fetches files that need updating.

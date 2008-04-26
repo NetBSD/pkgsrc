@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/20 19:55:49 xtraeme Exp $
-bin/streamripper
-man/man1/streamripper.1

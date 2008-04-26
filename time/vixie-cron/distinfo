@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/08 18:38:14 reed Exp $
-
-SHA1 (cron_4.1.shar) = 77c52a492b075a77f87eded9dfdbf4bf9ba0ac91
-RMD160 (cron_4.1.shar) = a9a8d3fe6c851d7fcd098676f2edc0bc310f695e
-Size (cron_4.1.shar) = 205506 bytes
-SHA1 (patch-aa) = dc237791d5053e2f1ca3a9b8d0783498ab359ffe

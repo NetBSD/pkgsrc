@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.12 2007/09/05 19:04:00 shannonjr Exp $
-
-SHA1 (libpreludedb-0.9.13.tar.gz) = e8dcb2e5a19cadfa0fdf6feed9ba5c09cea02745
-RMD160 (libpreludedb-0.9.13.tar.gz) = 335feb172e86111ab93d7dfd8fd473643ffcd6de
-Size (libpreludedb-0.9.13.tar.gz) = 699987 bytes

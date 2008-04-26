@@ -1,7 +1,0 @@
-Libsynce is part of the SynCE project.
-
-The SynCE library is required to compile (at least) the following
-parts of the SynCE project:
-
-	o librapi2
-	o dccmd

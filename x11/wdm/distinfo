@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.9 2008/01/05 20:52:17 rillig Exp $
-
-SHA1 (wdm-1.28.tar.gz) = eb806c5057bc69452547e4c78813e00f91bebe3b
-RMD160 (wdm-1.28.tar.gz) = c64d604e7f2fad68a298fb4fe0e655b1aa3a7b3b
-Size (wdm-1.28.tar.gz) = 409544 bytes
-SHA1 (patch-aa) = 7dc96ecf4d8e492bec54c5e6f2b9e5d6ec651103
-SHA1 (patch-ab) = 0a63e3b18aa002ece5c9f63ce6dbcdd9e0dbdb03

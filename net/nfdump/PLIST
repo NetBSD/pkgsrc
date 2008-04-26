@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/09/12 07:33:31 seb Exp $
-bin/nfcapd
-bin/nfdump
-bin/nfexpire
-bin/nfreplay
-man/man1/nfcapd.1
-man/man1/nfdump.1
-man/man1/nfexpire.1
-man/man1/nfreplay.1

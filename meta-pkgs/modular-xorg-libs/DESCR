@@ -1,5 +1,0 @@
-This is the modular Xorg library meta-package for installing the
-various libraries from the modular Xorg project.
-
-For pkgsrc usage, you generally don't want to install this as all
-packages have explicit dependencies on the libraries they need.

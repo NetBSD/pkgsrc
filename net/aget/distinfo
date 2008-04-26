@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/06/18 19:00:21 minskim Exp $
-
-SHA1 (aget-0.4.tar.gz) = acd428c919c105401f4b1c19a082c71f470fe9af
-RMD160 (aget-0.4.tar.gz) = f2a342ee513c9225e6f124ebc35b3d297cdfcb62
-Size (aget-0.4.tar.gz) = 11152 bytes
-SHA1 (patch-aa) = 2c01b67e4b7251927b46442cd9951baa1ec772d3
-SHA1 (patch-ab) = 9fd3a4eaf9bfdad2326b7d6f49d9a0baff57ea3a
-SHA1 (patch-ac) = 09c189a304b3d7fafa6a5f73d62101b6221d724f
-SHA1 (patch-ad) = 118179ecef613b59d161e8bf8de2133aeed7aac5

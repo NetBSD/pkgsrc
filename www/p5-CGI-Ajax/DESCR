@@ -1,7 +1,0 @@
-CGI::Ajax is an object-oriented module that provides a unique
-mechanism for using perl code asynchronously from javascript-
-enhanced HTML pages. CGI::Ajax unburdens the user from having to
-write extensive javascript, except for associating an exported
-method with a document-defined event (such as onClick, onKeyUp,
-etc). CGI::Ajax also mixes well with HTML containing more complex
-javascript.

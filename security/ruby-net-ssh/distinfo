@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:20:34 jlam Exp $
-
-SHA1 (net-ssh-1.1.2.gem) = 57e041126b9352869bd15b78d7a4c172f5c0026a
-RMD160 (net-ssh-1.1.2.gem) = c498d8761d234c3e76354ebf1a30aabf31544e07
-Size (net-ssh-1.1.2.gem) = 164352 bytes

@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.bdb,v 1.1 2004/09/30 14:39:33 epg Exp $
-lib/libsvn_fs_base-1.la

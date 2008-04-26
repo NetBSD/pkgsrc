@@ -1,15 +1,0 @@
-$NetBSD: patch-bg,v 1.1 2006/04/11 15:08:38 joerg Exp $
-
---- uip/send.c.orig	2006-04-11 14:47:09.000000000 +0000
-+++ uip/send.c
-@@ -162,10 +162,6 @@ extern int verbsw;
- extern char *altmsg;		/*  .. */
- extern char *annotext;
- extern char *distfile;
--
--
--extern int   errno;
--
- /*  */
- 
- /* ARGSUSED */

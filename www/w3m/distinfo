@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.17 2007/06/02 02:35:42 uebayasi Exp $
-
-SHA1 (w3m-0.5.2.tar.gz) = 484522547ae6dbb342d3858a2a53a65451e273f9
-RMD160 (w3m-0.5.2.tar.gz) = 09ce72d8ef5e621a2e49496b63e22f2773edbe79
-Size (w3m-0.5.2.tar.gz) = 1906812 bytes
-SHA1 (patch-ab) = c0c21616d1d3557453648107eca26eaa91af4741

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/07/02 13:05:53 markd Exp $
-
-SHA1 (R/gtools_2.2.3.tar.gz) = 904f2743ec436c30e1ff64ff19c85109ffffa9a5
-RMD160 (R/gtools_2.2.3.tar.gz) = a1f23ef38699741c9d81d6e48b987cb39a0112b7
-Size (R/gtools_2.2.3.tar.gz) = 40690 bytes

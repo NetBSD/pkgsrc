@@ -1,13 +1,0 @@
-$NetBSD: patch-bf,v 1.1 2005/12/14 13:53:24 joerg Exp $
-
---- tcl/tclCmdIZ.c.orig	2005-12-13 16:50:37.000000000 +0000
-+++ tcl/tclCmdIZ.c
-@@ -30,8 +30,6 @@ static char rcsid[] = "$Header: /home/ag
- #include <sys/time.h>
- #include "tclInt.h"
- 
--extern int errno;
--
- 
- /*
-  *----------------------------------------------------------------------

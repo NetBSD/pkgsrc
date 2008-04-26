@@ -1,3 +1,0 @@
-GNET-SNMP is an SNMP library implementation based on glib and gnet.
-This library has been developed as part of the scli package (an
-SNMP command line interface).

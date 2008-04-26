@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.9 2008/02/14 21:42:20 tnn Exp $
-
-SHA1 (rcs-5.7.tar.gz) = a5c7982cf538d5e006b5db40f0aefaea5eb2cbba
-RMD160 (rcs-5.7.tar.gz) = 6ade4d835f7586416abe8b9bc768912eb722dff3
-Size (rcs-5.7.tar.gz) = 282413 bytes
-SHA1 (patch-ab) = aec735f6e1746ced1179049bab46f4f1521996ee
-SHA1 (patch-ac) = d529a44d9562c5c734555391e8cf594b4fc858a3

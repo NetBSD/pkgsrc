@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2004/12/21 21:06:40 christos Exp $
-bin/netgroup
-bin/innetgr
-man/man1/netgroup.1
-man/man1/innetgr.1

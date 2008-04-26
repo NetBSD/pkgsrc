@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:16:28 jlam Exp $
-
-SHA1 (rubigen-1.2.4.gem) = 645c2d779a3c590b0addb793e620618ab97124d5
-RMD160 (rubigen-1.2.4.gem) = 1ef3a13547b91dfde36c43e55f28d465ad96d302
-Size (rubigen-1.2.4.gem) = 63488 bytes
-SHA1 (patch-aa) = 53796eaf5eb0799e3e1ed1b5b1ee3283d0309947

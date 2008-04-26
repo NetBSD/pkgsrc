@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:23:46 jlam Exp $
-
-SHA1 (merb-core-0.9.2.gem) = 44c1824adbcbf7d844492dbfccadfd4a648091c8
-RMD160 (merb-core-0.9.2.gem) = 49ad831b53a96d45f560282a0a74854b589bd9d2
-Size (merb-core-0.9.2.gem) = 164864 bytes
-SHA1 (patch-aa) = 65d9c04666980ad9a267eadb32eaafef4f16a57a

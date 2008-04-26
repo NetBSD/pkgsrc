@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 08:45:10 agc Exp $
-
-SHA1 (opendis-0.0.3.tar.gz) = 5ae79c1f5d1624338fdeefbee62c0b4615d0a0b6
-RMD160 (opendis-0.0.3.tar.gz) = b8ca66a794d1da7c0c52687c6588f12c84e0a219
-Size (opendis-0.0.3.tar.gz) = 77458 bytes
-SHA1 (patch-aa) = 856ce675b8e21b3193ef730a888abeefd7040fa4
-SHA1 (patch-ab) = 844ae151a882e4be0344e396443824a00ed987e6

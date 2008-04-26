@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/16 15:53:12 heinz Exp $
-bin/microdc2
-bin/tthsum
-man/man1/microdc.1
-man/man1/microdc.pl.1
-man/man1/microdc2.1
-share/locale/pl/LC_MESSAGES/microdc2.mo
-share/locale/sv/LC_MESSAGES/microdc2.mo

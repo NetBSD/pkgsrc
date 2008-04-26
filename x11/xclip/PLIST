@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2008/03/08 20:42:02 tnn Exp $
-bin/xclip
-bin/xclip-copyfile
-bin/xclip-cutfile
-bin/xclip-pastefile
-man/man1/xclip.1

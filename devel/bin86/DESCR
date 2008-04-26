@@ -1,3 +1,0 @@
-This is a simple assember, linker, and related tools for 80x86
-machine code. This is based on the as86 and ld86 distribution
-written by Bruce Evans and was maintained by Robert de Bath.

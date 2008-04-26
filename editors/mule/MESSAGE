@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2003/05/06 17:41:06 jmmv Exp $
-
-If you want to use PostScript conversion (coco, m2ps, any2ps), you
-will need to install the intlfonts package (pkgsrc/fonts/intlfonts)
-
-===========================================================================

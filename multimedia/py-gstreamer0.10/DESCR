@@ -1,5 +1,0 @@
-GStreamer is a library that allows the construction of graphs of
-media-handling components, ranging from simple Ogg/Vorbis playback to
-complex audio (mixing) and video (non-linear editing) processing.
-
-This package contains python bindings for the GStreamer library.

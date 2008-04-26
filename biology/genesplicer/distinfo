@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/11/03 19:36:39 rillig Exp $
-
-SHA1 (GeneSplicer.tar.gz) = 2be13d1a3ccb108e3e209ca5e66cd5a46e023198
-RMD160 (GeneSplicer.tar.gz) = 7ada20a18c742ca259a208ac5ea6fd53fd41a2c4
-Size (GeneSplicer.tar.gz) = 9278730 bytes
-SHA1 (patch-aa) = 49823d73c45088f599ce288e9d1adb7917f20a3a

@@ -1,3 +1,0 @@
-abcMIDI is a package of programs developed by James Allwright for
-processing ABC music notation files. It consists of several programs:
-abc2midi, abc2abc, yaps, and midi2abc.

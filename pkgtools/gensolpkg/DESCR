@@ -1,8 +1,0 @@
-This is a small utility to translate from NetBSD-derived pkgsrc
-packages into Solaris packages.  I wrote this as an aid to
-understanding Solaris packages, and to provide some Solaris packages
-which can be used in jumpstart, and manipulated with the Solaris
-package manipulation tools, but still have the benefit of the original
-package being maintained by a number of people who know what they're
-doing, and put a lot of time into keeping abreast of latest versions
-and bug fix releases.

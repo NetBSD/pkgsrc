@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/11/19 08:15:17 wiz Exp $
-
-SHA1 (dirb19.tar.gz) = 5b80f6700805ba02226d1cf0cf0505693762ca89
-RMD160 (dirb19.tar.gz) = 0b4a7f7efced1057b58f7a314dc43c7d89d60810
-Size (dirb19.tar.gz) = 223149 bytes
-SHA1 (patch-aa) = 90a54b6c81278e58220616759a05504f33e3af5b

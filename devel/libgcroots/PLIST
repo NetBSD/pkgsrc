@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/29 13:06:36 obache Exp $
-include/gcroots.h
-lib/libgcroots.la
-lib/pkgconfig/gcroots.pc

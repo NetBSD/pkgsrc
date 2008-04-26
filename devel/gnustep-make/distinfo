@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.20 2007/11/25 14:42:02 adam Exp $
-
-SHA1 (gnustep-make-2.0.2.tar.gz) = 102e36485d4582832d87ea53e0963f6553aaf7d2
-RMD160 (gnustep-make-2.0.2.tar.gz) = bd5e3aefdaa98729a18954102500783e23c0a48a
-Size (gnustep-make-2.0.2.tar.gz) = 449260 bytes
-SHA1 (patch-aa) = 2b727a92404aeead88c9699fee144bfb0114370b
-SHA1 (patch-ad) = 263c887b63a7d3d51e4626730d210d1c5c45f071
-SHA1 (patch-ae) = 882a726126ef25fb06f65eab5a3e752b9328adcb

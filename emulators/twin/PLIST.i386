@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.i386,v 1.2 2003/04/21 20:25:45 cjep Exp $
-lib/libreadline.a
-lib/libdebug.so
-lib/libpe32.so

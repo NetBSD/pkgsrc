@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/13 16:40:59 minskim Exp $
-bin/makedepf90
-man/man1/makedepf90.1

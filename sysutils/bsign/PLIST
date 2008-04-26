@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/17 23:36:33 agc Exp $
-bin/bsign
-man/man1/bsign.1
-share/doc/bsign/scripts/bsign_check
-share/doc/bsign/scripts/bsign_hash
-share/doc/bsign/scripts/bsign_sign
-share/doc/bsign/scripts/bsign_verify
-@dirrm share/doc/bsign/scripts
-@dirrm share/doc/bsign

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/02/07 21:37:27 rillig Exp $
-
-SHA1 (DBD-PgPP-0.05.tar.gz) = ed3ce9886575fb5549fc108a3cad8641ed51e970
-RMD160 (DBD-PgPP-0.05.tar.gz) = 950ed923eeb8cfc5916aa0f4483ba5901dd491f4
-Size (DBD-PgPP-0.05.tar.gz) = 16807 bytes

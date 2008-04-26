@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:21:43 jlam Exp $
-
-SHA1 (json-1.1.2.gem) = 6425eb472af5c7e22b29e95fc3479ff894142c8a
-RMD160 (json-1.1.2.gem) = 2e9d337512ab8a102fa8b353955d43ac767273a7
-Size (json-1.1.2.gem) = 113152 bytes
-SHA1 (patch-aa) = 8787445abfb91162e0bd1d182dea9d65053bf04a

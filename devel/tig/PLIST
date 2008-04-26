@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/16 07:41:11 bjs Exp $
-bin/tig
-man/man1/tig.1
-man/man5/tigrc.5
-share/doc/tig/README.html
-share/doc/tig/manual.html
-share/doc/tig/tig.1.html
-share/doc/tig/tigrc.5.html
-@dirrm share/doc/tig

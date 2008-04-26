@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/06/20 18:09:24 tnn Exp $
-
-SHA1 (obpager-1.8.tar.gz) = e97ecf8f44d5b787cdb5bfa853ab76eac919323a
-RMD160 (obpager-1.8.tar.gz) = 45ca48aa8745fae522e7b0caf7b5a99d956e5413
-Size (obpager-1.8.tar.gz) = 23773 bytes
-SHA1 (patch-aa) = 2f701f8e3b8f81335ba2ad2478d2b3faf66b2126
-SHA1 (patch-ab) = 7640ba0f05b27ffd7411fb9d6004511d5b6262f5

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.Linux,v 1.1 2006/07/22 00:37:56 minskim Exp $
-lib/python1.5/plat-${PY_PLATNAME}/CDROM.py
-lib/python1.5/plat-${PY_PLATNAME}/CDROM.pyc
-lib/python1.5/plat-${PY_PLATNAME}/CDROM.pyo

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/12 09:47:58 wiz Exp $
-
-SHA1 (bash-completion-20060301.tar.gz) = c99206545484c5d970803b098ce3cb84644cabc3
-RMD160 (bash-completion-20060301.tar.gz) = 12c9c11600e08f9b3547586d5a82441b1dfc290a
-Size (bash-completion-20060301.tar.gz) = 123300 bytes

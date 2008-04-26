@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/08/17 23:46:18 agc Exp $
-
-SHA1 (wily-0.13.41.tgz) = 2d6c6dfbda2c7b7b37181aaac20b02f8954c69ee
-RMD160 (wily-0.13.41.tgz) = 970e6b90b1093ce1c8bad535aff9db90200763e6
-Size (wily-0.13.41.tgz) = 483429 bytes
-SHA1 (patch-aa) = 5308659dd6b0100124f7a34dea425dc2161d6c61
-SHA1 (patch-ab) = a8076717ebafc3dbc66a838b9b9c9d4a62feaad2

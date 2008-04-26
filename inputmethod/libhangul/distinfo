@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/05/09 17:29:39 minskim Exp $
-
-SHA1 (libhangul-0.0.4.tar.gz) = e060011a849830eb014ceee67f4c54986ded60c4
-RMD160 (libhangul-0.0.4.tar.gz) = 56552fb503bf89b2c05a0abc2b6a3154a09c2d96
-Size (libhangul-0.0.4.tar.gz) = 689104 bytes
-SHA1 (patch-aa) = fa44cbbd45ecf0c19a838a845ea85217af8f995d

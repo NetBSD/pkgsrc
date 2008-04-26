@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/17 19:06:47 drochner Exp $
-lib/X11/fonts/misc/12x24.pcf.gz
-lib/X11/fonts/misc/12x24rk.pcf.gz
-lib/X11/fonts/misc/8x16.pcf.gz
-lib/X11/fonts/misc/8x16rk.pcf.gz

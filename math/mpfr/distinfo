@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/09/18 20:15:58 drochner Exp $
-
-SHA1 (mpfr-2.3.0.tar.gz) = 04cccc50438248e71b9232bb3c852f508ad0ffea
-RMD160 (mpfr-2.3.0.tar.gz) = 2e61748abc86a9c9578666ca5d2498956a24fa4b
-Size (mpfr-2.3.0.tar.gz) = 1153474 bytes
-SHA1 (patch-aa) = 5eb0a9996c8c7af27df9081a4b675b47a15c096e

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.71 2007/10/07 13:59:43 joerg Exp $
-
-SHA1 (libtool-1.5.24.tar.gz) = b4c994f1bf4a76d2b0c1d0a6f54d16598c15f3db
-RMD160 (libtool-1.5.24.tar.gz) = e682fe6570c71d93ad65e0c6c77cb6558846f27d
-Size (libtool-1.5.24.tar.gz) = 2919557 bytes
-SHA1 (patch-aa) = 4c979de3439dfffa48295e094c1aee40c7e79fa6
-SHA1 (patch-ab) = ee24f61f6825e352c421c3b887cd9cf1eb1884c2
-SHA1 (patch-ac) = 52f22f3f7a58e22d2240d0c6bb77455783ee5d70
-SHA1 (patch-ad) = d2f3979009c4d77541ba0df85425e4a20b16564d

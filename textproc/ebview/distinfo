@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/12/12 08:34:16 obache Exp $
-
-SHA1 (ebview-0.3.6.tar.gz) = 47b63fb2f265c83cc5bf7aeb92f96d0e1cc7f9af
-RMD160 (ebview-0.3.6.tar.gz) = c32de00be68c13794f2c1d9c08edc34fc5dcb613
-Size (ebview-0.3.6.tar.gz) = 564915 bytes
-SHA1 (patch-aa) = 8ecee1eeb1fddb9f1378a3258c8b8ae9a91c1640
-SHA1 (patch-ab) = ffedc7cc8b931f63f5a661314ef3703f88498434

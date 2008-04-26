@@ -1,8 +1,0 @@
-[General]
-FirstTime=true
-
-[Programs]
-CScope=@LOCALBASE@/bin/cscope
-CTags=@LOCALBASE@/bin/exctags
-Dot=@LOCALBASE@/bin/dot
-VerboseCScope=true

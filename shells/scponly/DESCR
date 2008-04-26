@@ -1,6 +1,0 @@
-scponly is an alternative shell for system administrators who would like to
-allow remote users to both read and write local files without providing any
-remote execution privileges.
-
-The only commands allowed are "scp" (for ssh1), "sftp-server" (for ssh2") and
-"ls".  Arguments to these commands are passed along unmolested.

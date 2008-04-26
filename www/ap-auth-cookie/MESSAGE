@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.4 2003/02/17 20:55:24 grant Exp $
-
-In order to use this module in your Apache installation, you need to
-add the following to your httpd.conf file:
-
-  LoadModule cookie_auth_module lib/httpd/mod_auth_cookie.so
-
-===========================================================================

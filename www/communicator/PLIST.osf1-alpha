@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.osf1-alpha,v 1.1 2007/07/29 05:19:52 jlam Exp $
-lib/netscape/${BINNAME}-${NS_VERS}/plugins/libnullplugin.so

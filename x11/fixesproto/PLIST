@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/04/18 17:13:35 reed Exp $
-include/X11/extensions/xfixesproto.h
-include/X11/extensions/xfixeswire.h
-lib/pkgconfig/fixesproto.pc
-@comment @dirrm include/X11/extensions

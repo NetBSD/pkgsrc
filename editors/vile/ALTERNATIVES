@@ -1,2 +1,0 @@
-bin/vi @PREFIX@/bin/vile
-bin/view @PREFIX@/bin/vile -v

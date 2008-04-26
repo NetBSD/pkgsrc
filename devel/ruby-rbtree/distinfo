@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/04/04 15:30:01 jlam Exp $
-
-SHA1 (rbtree-0.2.0.gem) = 261e599253ccb5cb385eced3316f39edb3f1ad6b
-RMD160 (rbtree-0.2.0.gem) = bed3036ff854c1da0dd7ee5dd1cbcdee424c5aec
-Size (rbtree-0.2.0.gem) = 28160 bytes

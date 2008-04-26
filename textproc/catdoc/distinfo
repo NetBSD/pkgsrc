@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.9 2007/06/21 19:25:47 minskim Exp $
-
-SHA1 (catdoc-0.94.2.tar.gz) = 50ce9d7cb24ad6b10a856c9c24183e2b0a11ca04
-RMD160 (catdoc-0.94.2.tar.gz) = 59eb7a026fd3a2dae74a3e7f01a58266f7efaf72
-Size (catdoc-0.94.2.tar.gz) = 146012 bytes
-SHA1 (patch-aa) = 7190b66e2dc0c68844b560ce59a7fad5fb0453c0
-SHA1 (patch-ac) = 573aad7759f1975e27216023f45663c2a17febff
-SHA1 (patch-af) = 2441e50fcb3c829c39d3f62086e871701d735df2

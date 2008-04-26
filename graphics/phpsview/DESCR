@@ -1,6 +1,0 @@
-Philips USB Cameras Utilities for NetBSD
-
-phpsshot ... simple image capture program ( output stdout PPM file )
-phpsview ... sequential image viewer program ( about 3fps )
-
-Note this program has been discontinued by the author.

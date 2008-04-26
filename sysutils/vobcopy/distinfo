@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/05/13 06:14:38 darcy Exp $
-
-SHA1 (vobcopy-0.5.14.tar.gz) = d4d7c6c5ed4380e4a57e82f561892ad7fba9593b
-RMD160 (vobcopy-0.5.14.tar.gz) = 47887e9897b1217e3841fd239cfaa2f2973cb9f5
-Size (vobcopy-0.5.14.tar.gz) = 44420 bytes
-SHA1 (patch-aa) = 431d7d05356fd8e756bcdf67a822360e9183492e
-SHA1 (patch-ab) = eea1f5bb3004e86281663c03c8662d5b6e4ea4fe
-SHA1 (patch-ac) = 47573a8ce870474a585a0dfc7bf434e822d009c0

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.12 2007/01/28 07:31:20 wiz Exp $
-
-SHA1 (chmlib-0.39.tar.bz2) = 985cb51136beaf42cdd886744ebe600ebacafcfc
-RMD160 (chmlib-0.39.tar.bz2) = 488f5a0619ee4c107014d768df6299971a0e0677
-Size (chmlib-0.39.tar.bz2) = 263013 bytes
-SHA1 (patch-aa) = c4a7c21e8ae0cb097e9225cdf7e099395c5ed331
-SHA1 (patch-ac) = b57e5c7246fd3db876325f476bdf4249c49e0734

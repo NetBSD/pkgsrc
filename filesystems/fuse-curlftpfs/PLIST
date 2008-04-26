@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/20 23:02:03 xtraeme Exp $
-bin/curlftpfs
-man/man1/curlftpfs.1

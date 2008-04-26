@@ -1,8 +1,0 @@
-# $NetBSD: xorg.expat,v 1.1 2007/12/15 17:53:40 tron Exp $
-#
-include/expat.h
-include/expat_external.h
-lib/libexpat.1.5.0.dylib
-lib/libexpat.1.dylib
-lib/libexpat.dylib
-lib/libexpat.la

@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/06/01 15:59:17 jmmv Exp $
-bin/linuxsms
-man/man1/linuxsms.1
-share/doc/linuxsms/BUGS
-share/doc/linuxsms/CHANGES
-share/doc/linuxsms/README
-share/doc/linuxsms/README.ES
-share/doc/linuxsms/TODO
-@dirrm share/doc/linuxsms

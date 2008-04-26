@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/24 14:01:02 wiz Exp $
-bin/sms_sdl
-share/doc/sms_sdl/README-CORE.TXT
-share/doc/sms_sdl/README.TXT
-share/doc/sms_sdl/SOURCE.TXT
-share/doc/sms_sdl/license
-@dirrm share/doc/sms_sdl

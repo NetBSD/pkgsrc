@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/01/11 18:35:19 joerg Exp $
-
-SHA1 (Yap-5.0.0-1/Yap-5.0.0.tar.gz) = 56c6ddc976208f66f49c59f2a6787590d1512732
-RMD160 (Yap-5.0.0-1/Yap-5.0.0.tar.gz) = e63d5ecf66dda0fced26afe9dc9afb892a02762b
-Size (Yap-5.0.0-1/Yap-5.0.0.tar.gz) = 3102749 bytes
-SHA1 (patch-aa) = dca2acac805aabd8e2815b509ad516294484ad0f
-SHA1 (patch-ab) = fc4e742886129fac5cbb2195e8aec072c7a3e9ac
-SHA1 (patch-ac) = 4ebf6b8c6c7a9d4cecd2d0d59ee708168c4de60a

@@ -1,7 +1,0 @@
-# $NetBSD: Makefile.linux-i386,v 1.2 2007/10/09 19:19:10 martti Exp $
-
-DISTNAME=	thunderbird-3.0a1pre.en-US.linux-i686
-EXTRACT_SUFX=	.tar.bz2
-
-MOZ_GTK2=	yes
-MOZ_PLATFORM=	linux

@@ -1,8 +1,0 @@
-SciGraphica is an Open Source data analysis and visualisation tool. It
-pretends to be a clone of Microcal Origin but with the aim to be fully
-featured, cross-platform, user-friendly scientific package that through
-its Open Source nature can be extended and/or bugfixed by users, as well
-as being user-extensible with Python modules.
-
-This package contains the support library, which is separated from the
-graphical user interface.

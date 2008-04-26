@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2007/10/29 04:35:09 uebayasi Exp $
-${EMACS_LISPPREFIX}/etach/etach.el
-share/doc/etach/FAQ.txt
-share/doc/etach/LICENSE.txt
-share/doc/etach/README.txt
-@dirrm share/doc/etach
-@dirrm ${EMACS_LISPPREFIX}/etach

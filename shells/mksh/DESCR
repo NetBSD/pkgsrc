@@ -1,5 +1,0 @@
-mksh is the MirBSD enhanced version of the Public Domain Korn shell
-(pdksh), a Bourne-compatible shell which is largely similar to the
-original AT&T Korn shell.  It includes bug fixes and feature improvements
-in order to produce a modern, robust shell good for interactive and
-especially script use.

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:13:58 agc Exp $
-
-SHA1 (Net-DNSServer-0.11.tar.gz) = 8c9313e85f994de3b26b62d28b1b8a96e3bad6b3
-RMD160 (Net-DNSServer-0.11.tar.gz) = 8e563946f60186e1a7ff424391abd23b2b3afa4f
-Size (Net-DNSServer-0.11.tar.gz) = 25566 bytes

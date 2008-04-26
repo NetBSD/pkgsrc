@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/07/27 18:49:47 rillig Exp $
-
-SHA1 (slatec_src.tgz) = 9ff75f3976fa4a5544806a29bf8402aab2132ee0
-RMD160 (slatec_src.tgz) = f4393d91e25ecd2ec0cae6b25d4b2829afcd4291
-Size (slatec_src.tgz) = 2373787 bytes
-SHA1 (patch-aa) = e9df720c0ca20a1280987dab8f3056b75bef1aeb

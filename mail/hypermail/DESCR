@@ -1,7 +1,0 @@
-Hypermail is a program that takes a file of mail messages in UNIX mailbox
-format and generates a set of cross-referenced HTML documents.
-
-This version of hypermail has substantial support for attachments and for
-splitting archives into subdirectories. It also allows an administrator to
-customize the header and footers to match their local needs.  This allows
-you to have hypermail facilities better integrated into your web site.

@@ -1,3 +1,0 @@
-# $NetBSD: Makefile.version,v 1.8 2008/04/07 15:14:09 bjs Exp $
-
-TK_VERSION=	8.4.18

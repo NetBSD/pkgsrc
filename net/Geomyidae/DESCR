@@ -1,4 +1,0 @@
-Geomyidae is a daemon for serving the protocol specified in RFC
-1436 (Gopher). Under 1000 lines of C by design, it is lightweight
-yet supports dynamic content, automatic file/directory indexing,
-logging and privilege separation.

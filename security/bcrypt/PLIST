@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/03 22:45:51 xtraeme Exp $
-bin/bcrypt
-man/man1/bcrypt.1

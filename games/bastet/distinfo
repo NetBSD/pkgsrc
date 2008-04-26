@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/09/14 21:58:59 rillig Exp $
-
-SHA1 (bastet-0.41.tgz) = 644a0f76adedef84946159520c1639ff0c6c47ec
-RMD160 (bastet-0.41.tgz) = 00801881e8ee5d42f91fe5f231d3151606032851
-Size (bastet-0.41.tgz) = 24195 bytes
-SHA1 (patch-aa) = 249ef96a5324e46f439767226fcfc8c887094b85
-SHA1 (patch-ab) = ce2a671e0582fc227bac442186c9f8c1621db278
-SHA1 (patch-ac) = 899f9b4be7057fae6c8f7bcfb69b132142881c9b

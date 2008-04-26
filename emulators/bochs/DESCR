@@ -1,8 +1,0 @@
-The program bochs is a highly portable open source x86 PC emulator
-written in C++, and runs on most popular platforms.  It includes
-emulation of the Intel x86 CPU, common IO devices, and a custom
-BIOS.  Currently, bochs can be compiled to emulate a 386, 486,
-Pentium, Pentium PRO or AMD64 CPU.
-
-Bochs is capable of running most operating systems inside the
-emulation including Linux, NetBSD, Windows 95, DOS, and Windows NT 4.

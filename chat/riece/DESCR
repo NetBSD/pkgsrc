@@ -1,8 +1,0 @@
-Riece is a redesign of the Liece IRC client.
-
-Riece has many advanced features:
-
-+ Can connect to multiple servers per session
-+ Provide more sophisticated API
-+ Reduced code size (total amount of code is about 5k lines)
-+ 100% APEL free

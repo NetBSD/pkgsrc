@@ -1,3 +1,0 @@
-#!/bin/sh
-cd @PREFIX@/lib/gate88
-LD_LIBRARY_PATH="$LD_LIBRARY_PATH:./lib" ./gate88 "$@"

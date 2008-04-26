@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/24 03:03:46 wiz Exp $
-lib/aspell/ca.multi
-lib/aspell/ca.rws
-lib/aspell/catalan.alias
-share/aspell/ca.dat
-share/aspell/ca_affix.dat

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2002/12/09 16:01:24 tron Exp $
-share/doc/crafty/crafty.doc.ps
-@unexec ${RMDIR} -p %D/share/doc/crafty 2>/dev/null || ${TRUE}

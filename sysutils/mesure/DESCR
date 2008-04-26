@@ -1,7 +1,0 @@
-This tool is to be used to measure different kinds of streams, the
-idea is to create a good source to get concepts and resources for
-other tools that measure system usage.
-
-You can measure by how many KB/s a file received by FTP or NetCat
-grows, for example.  How fast processes eat memory, stream usage
-(pipe like), etc.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.21 2008/04/06 17:47:27 joerg Exp $
+# $NetBSD: Makefile.in,v 1.21.2.1 2008/04/26 17:44:23 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -20,7 +20,7 @@ RANLIB=		@RANLIB@
 AR=		@AR@
 CC=		@CC@
 CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir)
-DEFS=		@DEFS@ -DDEF_LOG_DIR=\"$(pkgdbdir)\" -DTAR_CMD=\"$(tar)\" -DFTP_CMD=\"$(ftp)\"
+DEFS=		@DEFS@ -DDEF_LOG_DIR=\"$(pkgdbdir)\"
 CFLAGS=		@CFLAGS@
 
 INSTALL=	@INSTALL@
@@ -28,8 +28,8 @@ INSTALL=	@INSTALL@
 LIB=	libinstall.a
 
 OBJS=	automatic.o conflicts.o decompress.o dewey.o fexec.o file.o \
-	ftpio.o global.o iterate.o lpkg.o opattern.o \
-	path.o pen.o pexec.o pkgdb.o plist.o \
+	global.o iterate.o lpkg.o opattern.o \
+	path.o pkgdb.o plist.o \
 	str.o var.o version.o vulnerabilities-file.o
 
 .if !empty(BOOTSTRAP)

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/22 21:16:36 agc Exp $
-
-SHA1 (nsieve.c) = 003ec02c832fc2e53810d85451f178d194b80d93
-RMD160 (nsieve.c) = 9d3e72be9a28fa938d045dda59bb6a81d8092da8
-Size (nsieve.c) = 22452 bytes

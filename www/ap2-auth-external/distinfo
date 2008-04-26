@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/12/20 14:59:14 sborrill Exp $
-
-SHA1 (mod_auth_external-2.1.19.tar.gz) = da2266f93acf82e488e14380157f1acd69198ad9
-RMD160 (mod_auth_external-2.1.19.tar.gz) = f4012119f3e3eca73b07c1f90292338e6256e31a
-Size (mod_auth_external-2.1.19.tar.gz) = 51390 bytes
-SHA1 (mod_auth_external-2.2.11.tar.gz) = da89adcdac611ec8c0f69a79f2edff669210f2a1
-RMD160 (mod_auth_external-2.2.11.tar.gz) = be27183d8049989f64548a5c8dd3cdecc3b3a5e2
-Size (mod_auth_external-2.2.11.tar.gz) = 52542 bytes
-SHA1 (patch-aa) = 7232921601c3e61e70d13cd0bb252eb219de3569

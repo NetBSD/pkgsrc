@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/05/25 10:41:21 wiz Exp $
-
-SHA1 (rman-3.2.tar.gz) = d3b2889b5feabb78a0422a1f5d3ae9fdf0333b79
-RMD160 (rman-3.2.tar.gz) = 5ec8830466ec478e4470fbda8635d06b8cf967b7
-Size (rman-3.2.tar.gz) = 79397 bytes

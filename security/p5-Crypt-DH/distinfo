@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/12 17:55:26 seb Exp $
-
-SHA1 (Crypt-DH-0.06.tar.gz) = 99bfb2ba25872924f65b2c8c6e97d5e7c85f9b04
-RMD160 (Crypt-DH-0.06.tar.gz) = 777476bd6a20082e44fe3cd4b1b6c81b2b93aa22
-Size (Crypt-DH-0.06.tar.gz) = 18088 bytes

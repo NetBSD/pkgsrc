@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2008/03/06 02:57:10 obache Exp $
-bin/btcli
-bin/btinfo
-bin/btpd
-share/doc/btpd/README
-@dirrm share/doc/btpd

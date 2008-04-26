@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/03/12 15:18:12 rillig Exp $
-
-SHA1 (aop-0.6.tar.gz) = 88bc2216f1898c42d8223ebaf0bfe665d03d0074
-RMD160 (aop-0.6.tar.gz) = 2c329b08f14455b181bf2be15e90790a718f50e4
-Size (aop-0.6.tar.gz) = 11811 bytes
-SHA1 (patch-aa) = 5bd877de15ad1546f37d830e75013364d6727c19

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/03/02 19:35:11 drochner Exp $
-
-SHA1 (dmalloc-5.4.2.tgz) = ecb53b6db7e4d6b6d16ab8e95d87ae79b5c771c7
-RMD160 (dmalloc-5.4.2.tgz) = b47d8d64f583d8115ef4279964abc229807890fe
-Size (dmalloc-5.4.2.tgz) = 371228 bytes

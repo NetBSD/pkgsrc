@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/01/02 22:13:26 joerg Exp $
-
-SHA1 (vtwm-5.4.7.tar.gz) = 6165b4a1f167b50dee0cf0526011fe4ab8123f8c
-RMD160 (vtwm-5.4.7.tar.gz) = 9ab71147abdbaea9f95a2528595b79a3faf49834
-Size (vtwm-5.4.7.tar.gz) = 1021160 bytes
-SHA1 (patch-aa) = b1bff2a3438b5f0ccad5bfa5d1603de95a4a0c30
-SHA1 (patch-ab) = 318c5ff0c04586de089670934e2703d99434df79

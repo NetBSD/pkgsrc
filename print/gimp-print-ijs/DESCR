@@ -1,3 +1,0 @@
-This package contains an IJS server that can output raster images supported
-by the GIMP print library, to be used in conjunction with IJS clients such
-as GNU Ghostscript.

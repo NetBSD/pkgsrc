@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/07/02 13:04:13 markd Exp $
-
-SHA1 (R/gdata_2.1.2.tar.gz) = eb8550fe8629f264a82f885f3576e1d5b35bdb73
-RMD160 (R/gdata_2.1.2.tar.gz) = bb85d68ee5e8f63492f48bdbfacedd8d5865668a
-Size (R/gdata_2.1.2.tar.gz) = 207087 bytes

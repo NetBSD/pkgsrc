@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:26 agc Exp $
-
-SHA1 (IPC-SharedCache-1.3.tar.gz) = ff7ae33c8423f5b8793b701aa860ff4b851fa212
-RMD160 (IPC-SharedCache-1.3.tar.gz) = 1d33eeda39ace8616cc14d30a528cd47935dfc68
-Size (IPC-SharedCache-1.3.tar.gz) = 19717 bytes

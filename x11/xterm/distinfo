@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.24 2008/04/21 17:10:40 bjs Exp $
-
-SHA1 (xterm-235.tgz) = 4d449a9e50e342e0b7a6deba9d713e6ba9323d1e
-RMD160 (xterm-235.tgz) = 8a3cb03df08ad9da8d4391de612ec6e8f1573bcb
-Size (xterm-235.tgz) = 857714 bytes
-SHA1 (patch-aa) = cf93a5388106cf08bf7145890a45be7c12d186f6

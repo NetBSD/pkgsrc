@@ -1,9 +1,0 @@
-Unix syslogs are convenient to read for humans but because
-of small differences between operating systems and things
-like 'last message repeated xx times' not very easy to parse
-by a script.
-
-Parse::Syslog presents a simple interface to parse syslog
-files: you create a parser on a file (with new) and call
-next to get one line at a time with Unix-timestamp, host,
-program, pid and text returned in a hash-reference.

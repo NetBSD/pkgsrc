@@ -1,6 +1,0 @@
-priv allows authorised users to execute commands that run as different
-users.
-
-When priv is invoked, it reads a list of authorised commands from
-a per-user database file that defines expiry date, user name to
-run command as, flags, and command names to run.

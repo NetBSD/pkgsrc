@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/13 16:06:16 wiz Exp $
-
-SHA1 (quarry-0.2.0.tar.gz) = 261683ed795db8309b2a830badff4d2f1f2cd860
-RMD160 (quarry-0.2.0.tar.gz) = d931fa8a228f545c285c5481771bae91fa0787f8
-Size (quarry-0.2.0.tar.gz) = 1148739 bytes
-SHA1 (patch-aa) = 4ca3baf50d135572e3fe2905cb7369b54f1d6233
-SHA1 (patch-ab) = 30214ce85f680b99dccc0009f5bd7ff8f927d9d1
-SHA1 (patch-ac) = f37e86ecf9fb0d93fd02c990a3224fffb9ee5c15
-SHA1 (patch-ad) = 07b6eb3a618a26830c74a085cc9e132b413caa52

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.8 2007/09/07 13:53:44 obache Exp $
-
-SHA1 (ttt-1.8.2.tar.gz) = 8b52a1e90de17202c22f062f44025b7ae0e21454
-RMD160 (ttt-1.8.2.tar.gz) = 8f1877904087d9260e61e76f869196111de585c0
-Size (ttt-1.8.2.tar.gz) = 138877 bytes
-SHA1 (patch-aa) = 6d119e544ef3ae578b70c5d13a032f2a1529dde5
-SHA1 (patch-ab) = 4ced63fabf7c4d7360fc3f1a249fb08256b1a745
-SHA1 (patch-ac) = f513d90f7c8ef2389aa868d76795a82c91052e86

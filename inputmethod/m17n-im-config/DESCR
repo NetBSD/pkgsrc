@@ -1,4 +1,0 @@
-The m17n-im-config package provides a C library (libm17n-im-config.so) to create
-a GTK+ widget for per-user configuration of input methods provided by the m17n
-library, and a standalone GTK+ program (m17n-im-config) that uses the above
-widget.

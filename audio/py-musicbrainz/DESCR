@@ -1,7 +1,0 @@
-python-musicbrainz2 contains various modules for accessing the MusicBrainz
-web service, as well as parsing the MusicBrainz Metadata XML (MMD),
-or calculating DiscIDs from Audio CDs.
-
-The MusicBrainz Project (see http://musicbrainz.org) collects music
-metadata and is maintained by its large and constantly growing user
-community.

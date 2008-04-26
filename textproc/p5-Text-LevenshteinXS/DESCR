@@ -1,4 +1,0 @@
-Text::LevenshteinXS is an XS implementation of the Levenshtein edit
-distance in Perl.
-
-A good point to start is: http://www.merriampark.com/ld.htm

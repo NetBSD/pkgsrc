@@ -1,2 +1,0 @@
-chrpath allows you to modify the dynamic library load path
-(rpath and runpath) of compiled programs and libraries.

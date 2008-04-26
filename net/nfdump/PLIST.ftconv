@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.ftconv,v 1.1.1.1 2007/07/29 21:33:42 seb Exp $
-bin/ft2nfdump
-man/man1/ft2nfdump.1

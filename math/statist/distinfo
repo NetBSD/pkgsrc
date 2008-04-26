@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 12:06:58 agc Exp $
-
-SHA1 (statist-1.0.1.tar.gz) = 2900c58e730ecf93dfa3e15a881a1afca0cfdf20
-RMD160 (statist-1.0.1.tar.gz) = 1c6b16fe2dfe74ccb6fe2bd3cd6846a5e17f8025
-Size (statist-1.0.1.tar.gz) = 214635 bytes
-SHA1 (patch-aa) = 6cfe11d15d888d042b97ad1470db1405aa7bc489

@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/09 17:21:02 salo Exp $
-bin/dtsdec
-bin/extract_dts
-include/dts.h
-lib/libdts.a
-lib/libdts_pic.a
-lib/pkgconfig/libdts.pc
-man/man1/dtsdec.1
-man/man1/extract_dts.1

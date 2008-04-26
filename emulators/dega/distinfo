@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/06/17 18:47:31 minskim Exp $
-
-SHA1 (dega-1.07.tar.gz) = 1401e5af566bc3e7658a4552940219688c082ce8
-RMD160 (dega-1.07.tar.gz) = a20ad5d4ec47b3a8e65e64355557b6018a9dcfc4
-Size (dega-1.07.tar.gz) = 85189 bytes
-SHA1 (patch-aa) = 92f5e498320b751003f2efb79cafa5f7d96ab119

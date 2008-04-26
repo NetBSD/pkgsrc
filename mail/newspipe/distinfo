@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/12/03 06:34:01 schmonz Exp $
-
-SHA1 (newspipe.1.1.9.zip) = 6adb2553a32c997f8d51495ef75659b81b08144e
-RMD160 (newspipe.1.1.9.zip) = d322545faead198dad908f675038558b133db0cf
-Size (newspipe.1.1.9.zip) = 76060 bytes
-SHA1 (patch-aa) = 4d1577f8f6376b1ef6f317348697680470795c6f
-SHA1 (patch-ab) = 69933506636914f28d0c2f9746862e8a7bec67c2

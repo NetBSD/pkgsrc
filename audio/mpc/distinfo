@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/08/09 04:03:57 simonb Exp $
-
-SHA1 (mpc-0.12.1.tar.bz2) = 08aa44b5e72331e3ffeba558be77c80a41cd046e
-RMD160 (mpc-0.12.1.tar.bz2) = a9973450abd4f7937f327f068c8dee70ba7a6b7a
-Size (mpc-0.12.1.tar.bz2) = 93293 bytes
-SHA1 (patch-aa) = 1b6d858d4124ce717fc412716c01667e2178da31

@@ -1,7 +1,0 @@
-TeX2page makes Web pages from TeX manuscripts. It reads an input
-document that is marked up in a TeX format (viz., plain TeX, LaTeX,
-Texinfo), and produces an output document with the functionally
-equivalent HTML markup. TeX2page uses the same input file syntax,
-calling conventions, and error-recovery mechanisms as TeX, and thus
-demands no additional expertise of a user already familiar with
-TeX. TeX2page runs on modern Schemes and Common Lisp.

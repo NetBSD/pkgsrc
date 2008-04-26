@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/07/29 05:34:06 minskim Exp $
-
-SHA1 (xcoral-3.2.tar.gz) = 31b9ea50da10a3c09433062b0ae121246094cdbf
-RMD160 (xcoral-3.2.tar.gz) = 6b1b3206d3e0d8b0da87e85c30e0eed167ef42c3
-Size (xcoral-3.2.tar.gz) = 1412437 bytes
-SHA1 (patch-aa) = 5ee143709bb60de8be543fae08f9534894a1aa42
-SHA1 (patch-ab) = cd23f32a4b242e640db44f29c0f5aad7b90080dd
-SHA1 (patch-ac) = e0285e7bedce0d98c0d977a002b0b2ac70a748b5
-SHA1 (patch-ad) = 3dfe4e1c81672cf4c96a16c434aebaeead5777be

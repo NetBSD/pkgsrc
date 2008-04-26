@@ -1,3 +1,0 @@
-The Perl 5 module Net::SMTP_auth is a small extension to the
-Net::SMTP module to authenticate to an SMTP server using one of
-the AUTH methods provided by Authen::SASL.

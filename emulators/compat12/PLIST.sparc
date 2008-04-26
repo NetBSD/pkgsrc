@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.sparc,v 1.1 2007/08/21 22:49:05 jlam Exp $
-${EMULSUBDIRSLASH}usr/lib/libkvm.so.4.0

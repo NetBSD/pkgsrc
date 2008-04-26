@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/29 16:40:58 minskim Exp $
-bin/c2html
-share/doc/c2html/README
-@dirrm share/doc/c2html

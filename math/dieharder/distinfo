@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/09/13 10:07:36 gson Exp $
-
-SHA1 (dieharder-2.24.4.tgz) = 09db7de25b024afad242a0aeb38d303c26226c93
-RMD160 (dieharder-2.24.4.tgz) = 005e318ae277f331884e183876c2a62095943a50
-Size (dieharder-2.24.4.tgz) = 796175 bytes
-SHA1 (patch-aa) = a710122b5053d5553115e9d2bcecebfc9e2c2486
-SHA1 (patch-ac) = 509814ff4770ee6780fb03e963dd496a3d75d062
-SHA1 (patch-ad) = 37f8d4cc8a150239d3399a545fb15f0f328c3454

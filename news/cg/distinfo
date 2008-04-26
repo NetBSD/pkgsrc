@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/11/03 16:53:34 tv Exp $
-
-SHA1 (cg-0.4.tar.gz) = 8fdb3156e3ad11fd182d2adf1d87ff799beaac60
-RMD160 (cg-0.4.tar.gz) = 9a706b5b1dc5e4e2617dec7f9f6e37b19ed634aa
-Size (cg-0.4.tar.gz) = 203503 bytes
-SHA1 (patch-aa) = c30af62f04e07b347c5a048edad19b2cca70ae98

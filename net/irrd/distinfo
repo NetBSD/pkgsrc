@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.11 2006/07/05 21:39:42 wiz Exp $
-
-SHA1 (irrd2.2.8.tgz) = cfaf5fb6e4abdd2bce8de0233231dd2514c5d111
-RMD160 (irrd2.2.8.tgz) = 74688380c6cdcc8ddaa5ebf8705c10922f02fb8b
-Size (irrd2.2.8.tgz) = 693852 bytes
-SHA1 (patch-aa) = 3059131bad8df2071ae64ea5e9d0c6f858a7ae2e
-SHA1 (patch-ab) = d9172a35b907dbaac24ef7b72fcce05310d674bd
-SHA1 (patch-ac) = 5ea304aad5a2b3a2e835e63ac58ebbb83f12a5c3

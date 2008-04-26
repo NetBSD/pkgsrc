@@ -1,3 +1,0 @@
-IM provides a series of user interface commands (imput, imget, imls, ...)
-and backend Perl5 modules to integrate E-mail and NetNews user interface.
-They are designed to be used both from Mew version 1.x and on command line.

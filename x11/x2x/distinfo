@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 17:36:21 wiz Exp $
-
-SHA1 (x2x-1.27.tar.gz) = ff817f2c9ce5b99f1d1cbb58efcc2c5e8bdbe94f
-RMD160 (x2x-1.27.tar.gz) = d26dad258aa785d1257f5d0fb6d4b45a322b5693
-Size (x2x-1.27.tar.gz) = 16776 bytes
-SHA1 (patch-aa) = 836928297a81c46b380ad0ccf9cf62148fa49d89

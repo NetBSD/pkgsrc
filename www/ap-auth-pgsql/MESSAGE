@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2003/07/31 19:22:28 wiz Exp $
-
-In order to use this module in your Apache installation, you need to
-add the following to your httpd.conf file:
-
-  LoadModule auth_pgsql_module lib/httpd/mod_auth_pgsql.so
-
-===========================================================================

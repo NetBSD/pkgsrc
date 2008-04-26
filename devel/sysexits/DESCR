@@ -1,1 +1,0 @@
-Substitute <sysexits.h> for OS's which do not have one.

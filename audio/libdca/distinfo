@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/06/08 19:14:15 rillig Exp $
-
-SHA1 (libdts-0.0.2.tar.gz) = 602fd9d9442453600e425f62972797bf508ea2d3
-RMD160 (libdts-0.0.2.tar.gz) = c7b904465244b887e6b62f997bcf043d241cf2ce
-Size (libdts-0.0.2.tar.gz) = 295185 bytes
-SHA1 (patch-dtsdec) = d6c56d7d696b0f4d9bdedfaba4d212b1dbc50560

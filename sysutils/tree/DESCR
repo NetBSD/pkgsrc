@@ -1,7 +1,0 @@
-Tree is a recursive directory listing program  that  produces  a  depth
-indented  listing  of  files,  which  is colorized ala dircolors if the
-LS_COLORS environment variable is set and output is to  tty.
-
-Tree has various options for changing the information printed (size,
-permissions, etc.) As well as plain text output, it is capable of
-producing HTML output that includes links with an appropriate prefix.

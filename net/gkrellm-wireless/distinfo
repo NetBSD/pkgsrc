@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 12:13:47 agc Exp $
-
-SHA1 (gkrellmwireless-2.0.3.tar.gz) = a5ed777fe05e58f36aa58158b6d85cfbba69108f
-RMD160 (gkrellmwireless-2.0.3.tar.gz) = 85fb1b4e9464dd6d886c5eaef5037f99387a1d08
-Size (gkrellmwireless-2.0.3.tar.gz) = 9557 bytes
-SHA1 (patch-aa) = 2e23ee2d90b4b2f4fab85ada6d50084705d41ae9
-SHA1 (patch-ab) = 1c5920518b8b3b9adb7f5d644a6b88a73fa8b73d

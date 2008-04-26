@@ -1,2 +1,0 @@
-Net::SSH is to SSH as Net::Telnet is to Telnet and Net::HTTP is to
-HTTP.  Perform non-interactive SSH processing, purely from Ruby!

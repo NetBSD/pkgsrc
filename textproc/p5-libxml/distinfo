@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 14:48:47 agc Exp $
-
-SHA1 (libxml-perl-0.08.tar.gz) = 4fdc3b47b084c5801f389f5eb9fec95c710136a3
-RMD160 (libxml-perl-0.08.tar.gz) = 8489547f31e3a7c67c18780a1ac97120a54dfaba
-Size (libxml-perl-0.08.tar.gz) = 64335 bytes

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2003/05/29 14:25:24 itohy Exp $
-bin/jdisdvi
-bin/jdvi2tty
-man/man1/jdvi2tty.1

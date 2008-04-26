@@ -1,9 +1,0 @@
-Apache Rivet is a system for creating dynamic web content via a
-programming language integrated with Apache Web Server.  It is
-designed to be fast, powerful and extensible, consume few system
-resources, be easy to learn, and to provide the user with a platform
-that can also be used for other programming tasks outside the web
-(GUI's, system administration tasks, text processing, database
-manipulation, XML, and so on).  In order to meet these goals, the Tcl
-programming language has been chosen to combine with the Apache Web
-Server.

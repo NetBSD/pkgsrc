@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/09/11 21:26:04 cube Exp $
-
-SHA1 (rblcheck-1.5.tar.gz) = 395e4bde8c2d3ec350e81a0af64cb63f82c4cdb3
-RMD160 (rblcheck-1.5.tar.gz) = 82dd687151175084d74958090877311d9d2e8f23
-Size (rblcheck-1.5.tar.gz) = 150395 bytes
-SHA1 (patch-aa) = 3c3ded88623fe118e020b36e68683a7cd2ab2f3d

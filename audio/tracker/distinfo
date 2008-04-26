@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.9 2006/03/17 08:04:15 jlam Exp $
-
-SHA1 (tracker-5.3.tgz) = b0973d6a9c363caebd3a71547412f42b0681f323
-RMD160 (tracker-5.3.tgz) = d089f514ace6f64dcb90866542121b51ab5f154c
-Size (tracker-5.3.tgz) = 454803 bytes
-SHA1 (patch-aa) = da8fa5ecf7ec2a1981e642963d147c8e293d4ad8
-SHA1 (patch-ab) = 4acd7c74548754b4d640be784aa904e24066568d
-SHA1 (patch-ac) = 76ec86b6132e4f954acefa71be30b2c702114a5c
-SHA1 (patch-ae) = 85a1d61b5adedcf378fbed90f5337610b30c365b

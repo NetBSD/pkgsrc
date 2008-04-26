@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/12/24 08:47:31 obache Exp $
-
-SHA1 (netname-1.7.tar.gz) = cc3bca5ceb11bdb05f39a9904a5b46f02e3a8dff
-RMD160 (netname-1.7.tar.gz) = 7809a80146e2096a010ec3c40a8e9c583255b919
-Size (netname-1.7.tar.gz) = 2362 bytes
-SHA1 (patch-aa) = 998ca7e23281d474d3a262d426a4de5b67c9dfe4

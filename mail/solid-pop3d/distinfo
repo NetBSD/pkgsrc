@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 09:59:29 agc Exp $
-
-SHA1 (solid-pop3d-0.15.tar.gz) = 77534072dc352700acf23d29c781659833e53a04
-RMD160 (solid-pop3d-0.15.tar.gz) = c01c120bb835c0e7b139ff091e3f80aecada1b05
-Size (solid-pop3d-0.15.tar.gz) = 102927 bytes
-SHA1 (patch-aa) = ce2a1959bfd917f99281c6b0f3e5ed9fd47511d8

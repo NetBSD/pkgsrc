@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.10 2007/01/10 16:33:02 joerg Exp $
-
-SHA1 (classpath-0.93.tar.gz) = 336cae589ec91a4fe212c2149c57b51dab2ca002
-RMD160 (classpath-0.93.tar.gz) = 4c72b68766e35adbb2c89170fbdf7f30dd788836
-Size (classpath-0.93.tar.gz) = 9534222 bytes
-SHA1 (patch-aa) = 3c74808a0a0b322b796788483134a7dcec81cfe8
-SHA1 (patch-ab) = a788879bb8c0655174fcd10b9357faaca3b0d3d5
-SHA1 (patch-ac) = 4c4a93015ea44945b53db1e250961b4e07eecc15

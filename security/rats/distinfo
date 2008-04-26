@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/01/18 22:55:19 rillig Exp $
-
-SHA1 (rats-2.1.tar.gz) = b837b1765caa8ed36b70e6c88446c4d415554500
-RMD160 (rats-2.1.tar.gz) = 6385ff617bf629b03eff64f5563963c905341f22
-Size (rats-2.1.tar.gz) = 326930 bytes
-SHA1 (patch-aa) = dd5cf15ab3c8221681e4311c5327ec17c11401af

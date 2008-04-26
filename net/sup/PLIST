@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2006/03/14 22:58:47 christos Exp $
-sbin/sup
-sbin/supscan
-sbin/supfilesrv
-man/man1/sup.1
-man/man8/supservers.8

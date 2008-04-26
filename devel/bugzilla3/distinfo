@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/09/19 22:06:30 adrianp Exp $
-
-SHA1 (bugzilla-3.0.2.tar.gz) = 7151d1fa11a67412fe03193ee21b73c0abc59330
-RMD160 (bugzilla-3.0.2.tar.gz) = 5a03e344e686421c16eddf3a4992f44fbedeff8f
-Size (bugzilla-3.0.2.tar.gz) = 2164888 bytes

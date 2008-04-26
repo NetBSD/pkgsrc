@@ -1,6 +1,0 @@
-nkf stands for "Network Kanji Filter," and it's a program used to
-convert between various encodings used for Japanese character sets. It
-handles ISO-2022-JP, Shift_JIS, EUC-JP, UTF-8, and some variants of the
-above (such as the Microsoft version of Shift_JIS). As well, it can do
-a limited amount of MIME decoding. It also can try to guess the input
-encoding so that you don't have to specify it.

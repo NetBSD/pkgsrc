@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2007/06/24 20:55:28 jmmv Exp $
-sbin/monotone-server-init
-share/examples/monotone-server/hooks.conf
-share/examples/monotone-server/read-permissions
-share/examples/monotone-server/write-permissions
-share/examples/rc.d/monotone
-@dirrm share/examples/monotone-server

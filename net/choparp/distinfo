@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/11/09 09:12:30 rillig Exp $
-
-SHA1 (choparp-20021107.tar.gz) = 1b83f967c46ec466513447b10b4a98371301f504
-RMD160 (choparp-20021107.tar.gz) = 2cae71b0c61b38db891b598bbc36a5477d40edbf
-Size (choparp-20021107.tar.gz) = 6687 bytes
-SHA1 (patch-aa) = 94dbd0c5b97acd28b0229e6bc4499d107f6051d5
-SHA1 (patch-ab) = 5ff2ce93298689983b6fd46af6c467ec2b393d61

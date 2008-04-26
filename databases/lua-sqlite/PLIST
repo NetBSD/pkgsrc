@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/06/04 07:37:58 rillig Exp $
-lib/libluasqlite.so
-share/doc/lua-sqlite/readme.txt
-share/examples/lua-sqlite/test.lua

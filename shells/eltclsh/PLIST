@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/11/30 18:02:28 joerg Exp $
-bin/eltclsh
-bin/elwish
-man/man1/eltclsh.1
-share/eltcl/complete.tcl
-share/eltcl/init.tcl
-share/eltcl/pkgIndex.tcl
-share/eltcl/tools.tcl
-@dirrm share/eltcl

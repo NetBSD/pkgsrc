@@ -1,9 +1,0 @@
-$NetBSD: patch-ai,v 1.2 2005/01/11 09:04:16 martti Exp $
-
---- ddd/Command.C.orig	2004-06-07 14:52:52.000000000 +0300
-+++ ddd/Command.C	2005-01-11 10:15:09.000000000 +0200
-@@ -190,2 +190,4 @@
- 	break;
-+    default:
-+        break;
-     }

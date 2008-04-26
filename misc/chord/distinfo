@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 11:02:51 agc Exp $
-
-SHA1 (chord.tar.gz) = 2d93a43ee153f840786d7218cf49b44c85d19388
-RMD160 (chord.tar.gz) = a0f01ac2f67f1556e7249848601901a1481fb4a1
-Size (chord.tar.gz) = 74809 bytes
-SHA1 (patch-aa) = 8625a6cf246d265c305faaffd826e984b30fdbc3
-SHA1 (patch-ab) = d99fade958792cf1b31905d5b685b6cbfd699585

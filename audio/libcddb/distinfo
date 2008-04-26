@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.10 2007/01/20 17:43:36 wiz Exp $
-
-SHA1 (libcddb-1.3.0.tar.bz2) = 171618045dfa75075c6ced446d25e88f2c7ca88a
-RMD160 (libcddb-1.3.0.tar.bz2) = d34588f416ba80ececb23ffcff3312fc0b699f30
-Size (libcddb-1.3.0.tar.bz2) = 329319 bytes

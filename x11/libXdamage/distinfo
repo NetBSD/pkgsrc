@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2008/01/29 03:50:25 bjs Exp $
-
-SHA1 (libXdamage-1.1.1.tar.bz2) = a88e5a004084400d638ed623e281a6076519a8d0
-RMD160 (libXdamage-1.1.1.tar.bz2) = 90de272adbd42113869a8e4d36a51e2e4e576dc9
-Size (libXdamage-1.1.1.tar.bz2) = 201096 bytes
-SHA1 (patch-aa) = f45851e0cdd665b78e5e712a11c2a838cae272b2

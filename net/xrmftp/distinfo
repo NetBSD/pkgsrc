@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:14:07 agc Exp $
-
-SHA1 (xrmftp-1.2.4.src.tgz) = 7d6276fdb6f0582a6d31ab12ef058c418532ffc4
-RMD160 (xrmftp-1.2.4.src.tgz) = 21c97fb5422efb01e60dba38b826d91b318c07c9
-Size (xrmftp-1.2.4.src.tgz) = 37171 bytes
-SHA1 (patch-aa) = a89c99e75c45d5a1aabacc6e81f47dadeff4cece

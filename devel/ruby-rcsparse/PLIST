@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/21 10:35:04 wiz Exp $
-${RUBY_SITEARCHLIBDIR}/rcsfile.${RUBY_DLEXT}

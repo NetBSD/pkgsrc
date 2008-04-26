@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.14 2007/11/21 23:33:13 minskim Exp $
-
-SHA1 (readline-5.2.tar.gz) = 18f3412c73068509d5f491b7b4535aeaf9522834
-RMD160 (readline-5.2.tar.gz) = 983cbb25192e0a376b80cb2428fe8ee254a041c7
-Size (readline-5.2.tar.gz) = 2037705 bytes
-SHA1 (patch-ae) = b68716ae29eeb101c34d69dd274dbd846689a794

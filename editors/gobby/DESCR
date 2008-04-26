@@ -1,7 +1,0 @@
-Gobby is a free collaborative editor. This means that it provides you
-with the possibility to edit files simultaneously with other users over
-a network. It supports multiple documents in one session and a
-multi-user chat. The platforms on which you could use Gobby are so far
-Microsoft Windows, Linux, Mac OS X and other Unix-like ones. Developed
-with the Gtk+ toolkit it integrates nicely into the GNOME desktop
-environment if you want it to.

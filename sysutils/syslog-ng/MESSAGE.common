@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE.common,v 1.1.1.1 2006/05/14 19:56:05 adrianp Exp $
-
-You will want to generate your own syslog-ng.conf from an existing
-customised syslog.conf before using syslog-ng. The ${PREFIX}/bin/syslog2ng
-script can be used to do this.  The resulting output should be copied to
-${PKG_SYSCONFDIR}/syslog-ng.conf
-
-===========================================================================

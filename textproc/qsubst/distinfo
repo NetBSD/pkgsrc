@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/12/31 06:39:42 obache Exp $
-
-SHA1 (qsubst-20010422.tar.gz) = 9602b274ff10266b94a96adc90ded003f8cdeda8
-RMD160 (qsubst-20010422.tar.gz) = 443d5d5d2a014a286f436685c9e188255b6acd0a
-Size (qsubst-20010422.tar.gz) = 5965 bytes
-SHA1 (patch-aa) = 023f59c2ce9130500b7ed7d1ab3c7c75db8cf37b
-SHA1 (patch-ab) = 1b740a8e82e0c6f20948b42cb03371fd028145fd

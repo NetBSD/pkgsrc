@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/07/29 06:58:59 obache Exp $
-
-SHA1 (spreadlogd-2.0.0/spreadlogd.tar.gz) = 4fd88a3b804e4fbd655c822350d3137505120234
-RMD160 (spreadlogd-2.0.0/spreadlogd.tar.gz) = 2f70a3a0b6768128b2152321e016d795540a6ada
-Size (spreadlogd-2.0.0/spreadlogd.tar.gz) = 79559 bytes
-SHA1 (patch-aa) = 952d46b24ec2a8bea5335290bc7ba4aedd9f3a7d
-SHA1 (patch-ab) = c70fd89f4839213969febac0825329acbf61b59a
-SHA1 (patch-ac) = d38e189fbaceb97f4fffde25ff78a671eb39d4e9

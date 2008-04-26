@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/05/07 16:51:01 jdolecek Exp $
-
-SHA1 (pear/SOAP-0.8.1.tgz) = a6a305780e82b0fa520b0554f5f6a1f5f00faa1d
-RMD160 (pear/SOAP-0.8.1.tgz) = 616c91582dccb4ebd7a3ee15131183dd155cfa5c
-Size (pear/SOAP-0.8.1.tgz) = 69177 bytes

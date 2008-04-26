@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 13:40:51 agc Exp $
-
-SHA1 (cdbkup-1.0.tar.gz) = 78d02726eaa8e55138639b4b6a0164251a3d0766
-RMD160 (cdbkup-1.0.tar.gz) = e7be03fc797c5b40fed7ded012bc06a278807c33
-Size (cdbkup-1.0.tar.gz) = 38252 bytes
-SHA1 (patch-aa) = 96084141e52169a1759891d12f77ec6111c4ee78

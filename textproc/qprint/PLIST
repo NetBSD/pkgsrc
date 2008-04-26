@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/08/30 08:30:00 simonb Exp $
-bin/qprint
-man/man1/qprint.1

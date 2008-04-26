@@ -1,5 +1,0 @@
-pim6sd is an IPv6 multicast routing daemon, which supports PIMv2
-(Protocol Independent Multicast Version 2) sparse mode for IPv6.
-It also implements MLDv[12] and thus can function as a first or
-last-hop router. In many of these respects it is somewhat similar
-to mrouted(8).

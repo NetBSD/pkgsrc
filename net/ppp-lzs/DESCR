@@ -1,9 +1,0 @@
-This is a NetBSD decompressor for PPP compatible with the Stac LZS
-scheme as described in rfc1974.  The algorithm is apparently covered
-by patents held by Hifn in the USA and Europe though it was written
-independently with no help from Hifn or anybody associated with them,
-and with no reference to the patents.  You might want to consider this
-'example' code only if that makes you feel better.
-
-This package patches the included pppd in NetBSD and thus, in order to
-compile this, you will need to have the NetBSD source sets installed.

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/01/15 19:32:44 joerg Exp $
-
-SHA1 (fMSX24.tar.Z) = ea44eb273b9532ad0fb388e5ffbebdf348d00467
-RMD160 (fMSX24.tar.Z) = 1df5673271ed354ccc6ee720ad06ccbb07e60a91
-Size (fMSX24.tar.Z) = 506755 bytes
-SHA1 (patch-aa) = 07ee581d3dc3aab51a311c7504c2616f39e3409b
-SHA1 (patch-ab) = 58d44910dbae52ebecb42854f477f32b7a75e20b
-SHA1 (patch-ac) = 884f137a757be514a87005c82f2f3a0c4031190d
-SHA1 (patch-ad) = 8d0db8cc68283e1a98e355672db4cb7ca0de42e9

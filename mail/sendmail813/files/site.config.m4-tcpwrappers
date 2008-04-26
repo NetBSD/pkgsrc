@@ -1,5 +1,0 @@
-# $NetBSD: site.config.m4-tcpwrappers,v 1.1.1.1 2007/04/17 10:16:53 jnemeth Exp $
-
-# enable tcpwrappers
-APPENDDEF(`confENVDEF', `-DTCPWRAPPERS')
-APPENDDEF(`conf_sendmail_LIBS', `-lwrap')

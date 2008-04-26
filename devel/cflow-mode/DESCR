@@ -1,5 +1,0 @@
-GNU cflow analyzes a collection of C source files and prints a graph,
-charting control flow within the program.
-
-This package is the GNU Emacs mode only. For the call graph analyzer, see
-the cflow package.

@@ -1,6 +1,0 @@
-Server for DAAP, the digital audio access protocol
-Copyright deleet 2003, Alexander Oberdorster
-
-daapd scans a directory for mp3 files and makes them available via the Apple
-proprietary protocol DAAP. DAAP clients can browse the directory and retrieve
-individual files, either by streaming or by downloading them.

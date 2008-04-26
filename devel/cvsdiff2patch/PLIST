@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/29 10:11:13 bjs Exp $
-bin/cvsdiff2patch

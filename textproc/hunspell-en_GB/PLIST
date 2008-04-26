@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/11 18:37:53 wiz Exp $
-share/doc/hunspell-en_GB/README_en_GB.txt
-share/doc/hunspell-en_GB/dictionary.lst
-share/hunspell/en_GB.aff
-share/hunspell/en_GB.dic
-@unexec ${RMDIR} %D/share/hunspell 2>/dev/null || ${TRUE}
-@dirrm share/doc/hunspell-en_GB

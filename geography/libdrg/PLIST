@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/11 02:53:02 gdt Exp $
-include/drg_tiff.h
-lib/libdrg.la
-lib/pkgconfig/libdrg.pc

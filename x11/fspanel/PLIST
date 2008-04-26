@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/07/27 15:56:42 reed Exp $
-bin/fspanel
-share/doc/fspanel/README

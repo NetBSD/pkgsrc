@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/03/02 10:52:23 drochner Exp $
-
-SHA1 (libdnet-1.12.tgz) = 71302be302e84fc19b559e811951b5d600d976f8
-RMD160 (libdnet-1.12.tgz) = 4b849f07c3513522fda65af067928b7e6d504aab
-Size (libdnet-1.12.tgz) = 970125 bytes

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/13 06:05:44 obache Exp $
-
-SHA1 (tomoe-0.6.0.tar.gz) = 0ab5b4fd4609d0439f90010c35305595522f54f2
-RMD160 (tomoe-0.6.0.tar.gz) = fc8e799c4b845e9c4b41879980fecc9d9dc77c69
-Size (tomoe-0.6.0.tar.gz) = 4918949 bytes

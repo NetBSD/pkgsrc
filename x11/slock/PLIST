@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/11 22:48:17 reed Exp $
-bin/slock
-share/doc/slock/README
-@dirrm share/doc/slock

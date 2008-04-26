@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.ldap,v 1.1 2007/04/09 14:44:30 adrianp Exp $
-lib/echoping/ldap.la
-man/man1/echoping_ldap.1
-@unexec ${RMDIR} %D/lib/echoping 2>/dev/null || ${TRUE}

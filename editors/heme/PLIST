@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/01 05:57:30 minskim Exp $
-bin/heme
-man/man1/heme.1

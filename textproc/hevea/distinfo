@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.11 2008/01/13 19:24:49 tonio Exp $
-
-SHA1 (hevea-1.10/hevea-1.10.tar.gz) = d3b07ad59b815899d953d18b480faa856b77077b
-RMD160 (hevea-1.10/hevea-1.10.tar.gz) = 651e8799bc4e8ca0c893cf7668df4ff1bf15d9d7
-Size (hevea-1.10/hevea-1.10.tar.gz) = 305269 bytes
-SHA1 (patch-aa) = 74bfb1c1b797bf1cbee90e035d53755695c3a190

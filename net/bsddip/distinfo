@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.1 2006/06/30 16:17:27 tron Exp $
-
-SHA1 (bsddip-1.02.tar.Z) = f938ba32fcbb958c6a9632502d6728cb0a8bac4c
-RMD160 (bsddip-1.02.tar.Z) = 799b899cee5ef1b8a49c8a0929a2c4f0d17bcbab
-Size (bsddip-1.02.tar.Z) = 78191 bytes
-SHA1 (patch-aa) = 597aa71afc9cc8bcb38ad4be949d42630db0b840
-SHA1 (patch-ab) = 657e3dd81394df2d8789222776a14ce083a252b6
-SHA1 (patch-ac) = 0bf7e78142ef21167475fd9af4071494054016e9

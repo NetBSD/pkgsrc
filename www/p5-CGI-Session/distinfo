@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/03/16 20:41:22 wiz Exp $
-
-SHA1 (CGI-Session-4.20.tar.gz) = a8bdcc63b897ce53c965a5f20b07097c8cd085bf
-RMD160 (CGI-Session-4.20.tar.gz) = 75f6a62283c884442a0408954215a32f1f0c41e6
-Size (CGI-Session-4.20.tar.gz) = 70995 bytes

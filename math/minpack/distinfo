@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 12:06:56 agc Exp $
-
-SHA1 (minpack-20001130.tar.gz) = 34d26afa91e6deb55582affae618a7ac7fe49ad6
-RMD160 (minpack-20001130.tar.gz) = 4554f68ef6b2d527b00ae787cb16d2c307794b79
-Size (minpack-20001130.tar.gz) = 186179 bytes

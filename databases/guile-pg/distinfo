@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2008/03/03 19:43:22 gdt Exp $
-
-SHA1 (guile-pg-0.36.tar.gz) = 901e465f0bfd42753054971db1c225ce2471f054
-RMD160 (guile-pg-0.36.tar.gz) = 4d05644c441bc833a067851fa5da4005875ef08d
-Size (guile-pg-0.36.tar.gz) = 597486 bytes

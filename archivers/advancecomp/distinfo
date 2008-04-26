@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/01/14 16:28:40 rillig Exp $
-
-SHA1 (advancecomp-1.15.tar.gz) = 74fed754841efadcb8dd156d2c5e095bfaff83e6
-RMD160 (advancecomp-1.15.tar.gz) = 13468f350e15e7f23778d8351819a792fbf07c9a
-Size (advancecomp-1.15.tar.gz) = 259340 bytes
-SHA1 (patch-aa) = bb74883968ec79e3f5f62085668cf3341c46570c
-SHA1 (patch-ab) = 1e6e10943bd2a414d4f704bd94b1de3d1036dd90
-SHA1 (patch-ac) = d08d44224c4351c66c920b26bacc3f749a54d31a

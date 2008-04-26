@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/10/05 22:14:33 joerg Exp $
-
-SHA1 (gfract-0.32.tar.gz) = f603c067c9616ebde714b72b3bda801e9906d6c3
-RMD160 (gfract-0.32.tar.gz) = 6196bd3cc17c4c41bbd0b7df4cbe0691e52de521
-Size (gfract-0.32.tar.gz) = 34166 bytes
-SHA1 (gfract-palettes-0.1.tar.gz) = f05e06e6012e1b1526e0c796ca7f6617fca8ab7d
-RMD160 (gfract-palettes-0.1.tar.gz) = 3430c31cb5cb2317a02b1e2cf506c5ffa9601a7c
-Size (gfract-palettes-0.1.tar.gz) = 223648 bytes
-SHA1 (patch-aa) = 9e15a3cb22101e895db398ad8dc703994bcadccf

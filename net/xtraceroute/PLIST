@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:31 jlam Exp $
-bin/xtraceroute
-man/man1/xtraceroute.1
-share/xtraceroute/earth.tif
-share/xtraceroute/hosts.cache
-share/xtraceroute/networks.cache
-share/locale/es/LC_MESSAGES/xtraceroute.mo
-share/locale/fr/LC_MESSAGES/xtraceroute.mo
-share/locale/ja/LC_MESSAGES/xtraceroute.mo

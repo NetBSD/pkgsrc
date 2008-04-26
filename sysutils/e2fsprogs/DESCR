@@ -1,2 +1,0 @@
-The filesystem utilities for the EXT2 filesystem, including e2fsck, mke2fs,
-dumpe2fs, fsck, and others.

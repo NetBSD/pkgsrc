@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.9 2008/01/24 18:32:37 adam Exp $
-
-SHA1 (fuse-0.9.0.tar.gz) = 08c1980737cfffc7dce229b22922eb774e2bf8b8
-RMD160 (fuse-0.9.0.tar.gz) = 2ae21b3f22f1a2ad975c63eeed9548a903945e2a
-Size (fuse-0.9.0.tar.gz) = 1371359 bytes
-SHA1 (patch-aa) = 68d610ec43b220400e7781ae84327926c9d5c498
-SHA1 (patch-ab) = 5d77d2076a00cd4c1bd2dfa0a9432f87a71a6443

@@ -1,3 +1,0 @@
-This Perl 5 module provides a compromise between SAX and DOM
-processing by allowing to use DOM API to process only reasonably
-small parts of an XML document.

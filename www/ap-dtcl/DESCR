@@ -1,3 +1,0 @@
-The mod_dtcl Apache module enables the use of Tcl as an HTML-embedded
-scripting language, similar to PHP. It is fast, light, and lets you
-use the extensive codebase of existing Tcl code, on the web.

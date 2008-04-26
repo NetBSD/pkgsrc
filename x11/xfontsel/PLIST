@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/12 18:03:25 joerg Exp $
-bin/xfontsel
-lib/X11/app-defaults/XFontSel
-man/man1/xfontsel.1

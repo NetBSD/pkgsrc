@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/06/04 07:58:36 kim Exp $
-
-SHA1 (sdist-1.7.tar.gz) = 661e6061f23a0b93fbb3f594f320fad6a0d08795
-RMD160 (sdist-1.7.tar.gz) = ce2bc68d5db77bc724d9b4ffa42d410742b411f9
-Size (sdist-1.7.tar.gz) = 2879 bytes

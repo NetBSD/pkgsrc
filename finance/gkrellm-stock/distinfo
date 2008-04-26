@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/22 21:11:48 agc Exp $
-
-SHA1 (gkrellstock-0.5.1.tar.gz) = b0352fbcde2f6f2cfbbb666176ce415a4924b434
-RMD160 (gkrellstock-0.5.1.tar.gz) = c7ce495ed93fe81cb74488c63c8b95a2fe12d53d
-Size (gkrellstock-0.5.1.tar.gz) = 22385 bytes
-SHA1 (patch-aa) = fe5e598211dcf16a8eb828a8c6f4fae19679f017

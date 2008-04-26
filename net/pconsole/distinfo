@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 12:13:59 agc Exp $
-
-SHA1 (pconsole-1.0.tar.gz) = 5c841e90548263671b6903a31cde6101154a20a3
-RMD160 (pconsole-1.0.tar.gz) = 64545616d8a5b0e312e8d33976268de6c64318b1
-Size (pconsole-1.0.tar.gz) = 215426 bytes
-SHA1 (patch-aa) = 7319fd99b6af01d09f4bf2421c6950d7f050c931

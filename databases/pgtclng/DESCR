@@ -1,7 +1,0 @@
-TCL interface to PostgreSQL.
-
-This is one of three different ones that are available. This is the
-"standard version" evolved from the interfaces/libpgtcl which used to
-be included with the PostgreSQL distribution. There is also a pgintcl
-interface, which is entirely native TCL and does not rely on libpq, and
-pgtcl, which is the "current generation" version of pgtclng.

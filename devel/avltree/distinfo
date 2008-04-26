@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 22:24:10 agc Exp $
-
-SHA1 (avltree-1.1.tar.gz) = b0568fa59d4115297043ce580abf904143c2d6f1
-RMD160 (avltree-1.1.tar.gz) = 7e76e869c38437ae2e561b463c74a736785e8ea4
-Size (avltree-1.1.tar.gz) = 11698 bytes
-SHA1 (patch-aa) = dc1111cc00296cae21373fddf7ab5ea5b571faa6
-SHA1 (patch-ab) = ec7010335ac0475b2df7fc9d232d7a49075440c9

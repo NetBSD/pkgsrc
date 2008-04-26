@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2008/01/03 23:32:58 grant Exp $
-
-SHA1 (Device-SerialPort-1.04.tar.gz) = c2e34c4cbbf3bc578c5b7fd2790906bc0a5d4cf0
-RMD160 (Device-SerialPort-1.04.tar.gz) = 2a70e5cbaf1ac66575cd0f5aefba99fa5075b681
-Size (Device-SerialPort-1.04.tar.gz) = 98706 bytes

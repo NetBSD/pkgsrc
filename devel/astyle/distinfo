@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/11/28 19:06:01 joerg Exp $
-
-SHA1 (astyle_1.13.6.1.zip) = 4e0172fe30986d68c61b4a7c1638a1fc42ea0675
-RMD160 (astyle_1.13.6.1.zip) = 74030324515be84e0e7499edc2503d0e549673ba
-Size (astyle_1.13.6.1.zip) = 61422 bytes
-SHA1 (patch-aa) = 3e8adb7b979188f9828b3ae22d8037008975fb5b
-SHA1 (patch-ab) = c9b21d45f53331411425a734971f003d415b11e7
-SHA1 (patch-ac) = d143f2cd5ef3d15317d8dbe01be98f3a9a862ec6

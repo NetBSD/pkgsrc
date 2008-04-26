@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/11/07 17:12:30 rillig Exp $
-
-SHA1 (gobby-0.4.5.tar.gz) = 9f7a66d89c2f33b13a01a9dbb73a7fe35c5bf646
-RMD160 (gobby-0.4.5.tar.gz) = 63e7158539be941f53391e399a518b7db429d135
-Size (gobby-0.4.5.tar.gz) = 356399 bytes
-SHA1 (patch-aa) = be469582c2e0d0b958adc7a8edb17b796f3ac15b

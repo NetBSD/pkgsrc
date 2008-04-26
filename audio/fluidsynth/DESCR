@@ -1,9 +1,0 @@
-FluidSynth is a real-time software synthesizer based on the SoundFont 2
-specifications. FluidSynth can read MIDI events from a MIDI input
-device and render them to an audio device using SoundFont instruments.
-SoundFont files are composed of digital audio "samples" and additional
-instrument parameters. These files can be created or downloaded off the
-Internet. FluidSynth also has support for controlling effects in real
-time and can play MIDI files.
-
-Note: FluidSynth was previously called IIWU Synth.

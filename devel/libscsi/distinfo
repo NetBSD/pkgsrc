@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/09/12 21:05:29 rillig Exp $
-
-SHA1 (libscsi-1.6.tar.gz) = 8d6d47d2baa5e272e09ac5ee1330dd37461e922f
-RMD160 (libscsi-1.6.tar.gz) = 586e0b73777a6be41f075c2b6f4fb73c81d7fa03
-Size (libscsi-1.6.tar.gz) = 11896 bytes
-SHA1 (patch-aa) = d34b6769997c3fe29b99d0465710bd3c5d9bcda8
-SHA1 (patch-ab) = 8b6894ca7084605d67a3b01dba06bab51e6c0bfa
-SHA1 (patch-ac) = 26234441505ad213642692f5b705e166c48eba47
-SHA1 (patch-ad) = 7772f992e3df11b0461db33c91ff570f90ea82db

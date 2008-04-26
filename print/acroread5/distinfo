@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.9 2006/03/13 19:54:37 joerg Exp $
-
-SHA1 (linux-5010.tar.gz) = 68df0a31c08d97f96d082ddbb66f2f615e501106
-RMD160 (linux-5010.tar.gz) = be3eb598a023f49212b7c17926c5774130f7aef8
-Size (linux-5010.tar.gz) = 9286383 bytes
-SHA1 (solaris-5010.tar.gz) = 25537c27a83618bf754c6a3a9ecbf0059c51b72b
-RMD160 (solaris-5010.tar.gz) = ea6ab3c00a09fb488c26181289018fa90eafe9bb
-Size (solaris-5010.tar.gz) = 9941925 bytes
-SHA1 (patch-aa) = 3565ac34ddcd1fd6769c859e0b76bdc2f57f9f91

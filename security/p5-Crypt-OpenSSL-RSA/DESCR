@@ -1,2 +1,0 @@
-Crypt::OpenSSL::RSA is a XS Perl module designed to provide basic RSA
-functionality by using the RSA functions in the OpenSSL library.

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/08/16 13:23:16 ghen Exp $
-libexec/nut/bcmxcp_usb
-libexec/nut/newhidups
-libexec/nut/tripplite_usb
-man/man8/bcmxcp_usb.8
-man/man8/newhidups.8
-man/man8/tripplite_usb.8

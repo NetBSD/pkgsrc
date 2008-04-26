@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/11/20 05:11:30 phil Exp $
-
-SHA1 (yaz-2.1.56.tar.gz) = 85e7c2d4b2d3b7ebd31afa65530381a4a9f0b922
-RMD160 (yaz-2.1.56.tar.gz) = e6ef56188bd6de355e71202407af7d8163556627
-Size (yaz-2.1.56.tar.gz) = 1704271 bytes

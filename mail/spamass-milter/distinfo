@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/10/12 12:19:09 obache Exp $
-
-SHA1 (spamass-milter-0.3.1.tar.gz) = dd488eb9ab1f230440fba8a729bee80550f2fbff
-RMD160 (spamass-milter-0.3.1.tar.gz) = 5db6af6b31de1bf83eafbd9713d81cdc957b5033
-Size (spamass-milter-0.3.1.tar.gz) = 141144 bytes
-SHA1 (patch-aa) = a1eaf9d3d2dad72f7fa08628293f80cc15374800

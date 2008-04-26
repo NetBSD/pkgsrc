@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.14 2007/08/27 06:37:01 xtraeme Exp $
-
-SHA1 (dosbox-0.72.tar.gz) = c49fba00187cd871ffdcbcd87ab82a23ea2d5e7d
-RMD160 (dosbox-0.72.tar.gz) = 2088e9bd633719dedcd2aa7431e45b3c81eaa2ea
-Size (dosbox-0.72.tar.gz) = 1046475 bytes
-SHA1 (patch-aa) = 3393501f0d438e53a55481dc0e237c2bb2a75d3e
-SHA1 (patch-ab) = c4555ed9e6337380f52f271025d8f55ed7602aa6
-SHA1 (patch-ad) = 3c0c0eabceb4cefa07918ae1d558e553ff18d592

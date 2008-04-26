@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/06/18 22:53:32 joerg Exp $
-
-SHA1 (basket-1.0.2.tar.gz) = 8f227c45d84e3739750d39b32700b3329b8c3c84
-RMD160 (basket-1.0.2.tar.gz) = 02e5a9bea054f0dc2aaa5c7f916a106dc970a1fd
-Size (basket-1.0.2.tar.gz) = 6046068 bytes
-SHA1 (patch-aa) = 204154819ad1d53ec8d8c2e7ff25c6f508e9b311

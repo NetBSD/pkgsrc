@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/06/14 22:02:45 darcy Exp $
-
-SHA1 (spamd-20060330.tar.gz) = 152b8da2baac9eeedd9b69a9a7a2f8169ca55d9e
-RMD160 (spamd-20060330.tar.gz) = 94707f9714e7a67c778aad12032339eba452a490
-Size (spamd-20060330.tar.gz) = 34509 bytes
-SHA1 (patch-aa) = 8b588735bfea41b4340a5570902267e5eb1267bb

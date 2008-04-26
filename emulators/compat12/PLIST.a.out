@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST.a.out,v 1.1 2007/08/21 22:49:04 jlam Exp $
-${EMULSUBDIRSLASH}usr/lib/libedit.so.0.0
-${EMULSUBDIRSLASH}usr/lib/libg++.so.2.0
-${EMULSUBDIRSLASH}usr/lib/libg++.so.3.0
-${EMULSUBDIRSLASH}usr/lib/libutil.so.3.2
-@dirrm ${EMULSUBDIRSLASH}usr/lib
-@dirrm ${EMULSUBDIRSLASH}usr

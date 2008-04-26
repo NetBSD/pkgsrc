@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/10/13 18:35:36 adam Exp $
-
-SHA1 (gperf-3.0.3.tar.gz) = 3c535d2727eb0dca10ca87cefa03720a8280c7a2
-RMD160 (gperf-3.0.3.tar.gz) = 8e48ce2cdeed599f7905090fb0d5c5113c168126
-Size (gperf-3.0.3.tar.gz) = 865088 bytes
-SHA1 (patch-aa) = 281fa0fedce15cd9b96613960898eb2b2f351de1

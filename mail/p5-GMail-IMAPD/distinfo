@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/08/09 08:03:33 jmmv Exp $
-
-SHA1 (GMail-IMAPD-0.93.tar.gz) = 0d65e6c8470aabbe73148e0aaa5e611e6e8da6a2
-RMD160 (GMail-IMAPD-0.93.tar.gz) = b842b620da0d129dcdf28003ac604b91a03d972c
-Size (GMail-IMAPD-0.93.tar.gz) = 22749 bytes
-SHA1 (patch-aa) = c1c9179cb17dbaa4b4943c62a01349ef3466d750

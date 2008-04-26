@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/05/23 11:44:36 rillig Exp $
-
-SHA1 (synaesthesia-xmms-0.0.3-rc3.tar.gz) = 7c60a4ac9cc069e0f1fecf97d34b4f48a7b77c5c
-RMD160 (synaesthesia-xmms-0.0.3-rc3.tar.gz) = 89150fd577e7639fb9878ce6d11ffdf50f1bdebb
-Size (synaesthesia-xmms-0.0.3-rc3.tar.gz) = 152116 bytes
-SHA1 (patch-aa) = 4eec587086f03253ecb292db82ac1f3fa319838b
-SHA1 (patch-synacore) = ddf6ae0f9d3eb01ff5e9e5e1a879a153b5f74071
-SHA1 (patch-synah) = 7fa2e69feb3dae9039cd8c5d7a6f7da26fc8e94e

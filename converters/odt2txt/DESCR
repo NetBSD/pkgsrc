@@ -1,4 +1,0 @@
-odt2txt is a small, command-line tool which extracts the text out
-of OpenDocument Texts, as produced by OpenOffice.org, KOffice,
-StarOffice, and others.  It supports multiple output encodings, has
-locale support, and is able to substitute unknown characters.

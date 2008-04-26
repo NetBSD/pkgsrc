@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST.DragonFly,v 1.1 2006/03/22 18:33:57 joerg Exp $
-include/bind/sys/bitypes.h

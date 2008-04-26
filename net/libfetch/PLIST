@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/02 15:33:14 joerg Exp $
-include/fetch.h
-lib/libfetch.a
-man/cat3/fetch.0
-man/man3/fetch.3

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.11 2007/07/17 10:35:55 drochner Exp $
-
-SHA1 (libmng-1.0.10.tar.gz) = 78ad516a1de79d00de720bf2a7c9afea2c896b09
-RMD160 (libmng-1.0.10.tar.gz) = ed09e537ebb129f5e13cba56d9d2c2a106955393
-Size (libmng-1.0.10.tar.gz) = 1093337 bytes

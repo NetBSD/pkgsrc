@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.11 2006/03/20 19:51:40 joerg Exp $
-
-SHA1 (gtksql-0.3.tar.gz) = b2d078cb0eb8816b26f3e0369fc440085071fc0c
-RMD160 (gtksql-0.3.tar.gz) = e05cb980ce29c44b37eaafc43e9161fb281b2a9d
-Size (gtksql-0.3.tar.gz) = 50557 bytes
-SHA1 (patch-aa) = 01961207b8bcb6a60da2224a8bf07160d660c0c6
-SHA1 (patch-ab) = 0d194dd153e3d3ce34b0f0d805ae0d83408de33b

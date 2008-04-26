@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/02 15:02:59 tron Exp $
-bin/netio
-share/doc/netio/netio.txt
-@dirrm share/doc/netio

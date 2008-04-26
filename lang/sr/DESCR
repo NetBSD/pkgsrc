@@ -1,7 +1,0 @@
-This is the language SR from the University of Arizona.
-
-SR is described in "The SR Programming Language: Concurrency in Practice"
-by Gregory R. Andrews and Ronald A. Olsson (Benjamin/Cummings, 1993, ISBN
-0-8053-0088-0).  Information about concurrent programming in general can be
-found in "Concurrent Programming: Principles and Practice" by Gregory R.
-Andrews (Benjamin/Cummings, 1991, ISBN 0-8053-0086-4).

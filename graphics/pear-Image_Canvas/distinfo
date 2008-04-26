@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/01/03 20:57:53 adrianp Exp $
-
-SHA1 (pear/Image_Canvas-0.2.4.tgz) = f5d9b5c47719786f5e5f5705b6de129264a31fd7
-RMD160 (pear/Image_Canvas-0.2.4.tgz) = 5743751bf4c0824e9eeefe128d523ab98f385213
-Size (pear/Image_Canvas-0.2.4.tgz) = 42101 bytes
-SHA1 (patch-aa) = c0ee51f835dacda49ff7583ed15868febaadadf1

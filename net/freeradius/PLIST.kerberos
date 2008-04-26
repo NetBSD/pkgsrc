@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST.kerberos,v 1.2 2006/08/09 16:42:09 adrianp Exp $
-lib/rlm_krb5-${RADVER}.la
-lib/rlm_krb5.la

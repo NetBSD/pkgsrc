@@ -1,4 +1,0 @@
-NQXML is a pure Ruby implementation of a non-validating XML processor. It
-includes an XML tokenizer, a SAX-style streaming XML parser, a DOM-style
-tree parser, an XML writer, and a context-sensitive callback mechanism.
-``NQ'' stands for ``Not Quite''.

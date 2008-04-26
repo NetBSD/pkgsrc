@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/26 13:12:34 drochner Exp $
-lib/gstreamer-0.10/libgstflump3dec.la

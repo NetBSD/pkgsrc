@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/02/24 12:28:30 agc Exp $
-
-SHA1 (gensolpkg-1.10.tar.gz) = d7981f6c2159a1a2304a5e446185ce6b2ade7305
-RMD160 (gensolpkg-1.10.tar.gz) = 829d5078431b1f9f15f639ce13e124f77b00a6f2
-Size (gensolpkg-1.10.tar.gz) = 8430 bytes
-SHA1 (patch-aa) = ad9239f3b4a037402b785bf6c37d40208f786ade
-SHA1 (patch-ab) = 0ecef672900def2d2f2151943effdaaf16f8e221
-SHA1 (patch-ac) = 1da06afa9c8128d3334f7251e8e0bc21f7945d72

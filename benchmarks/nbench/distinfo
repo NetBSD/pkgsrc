@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/08/08 20:22:10 joerg Exp $
-
-SHA1 (nbench-byte-2.2.2.tar.gz) = 2ad7c76fb88f80e475650dd3802c187195cc80c1
-RMD160 (nbench-byte-2.2.2.tar.gz) = 78b8e1eaf3c24ca8c619a90693265402a4f8be68
-Size (nbench-byte-2.2.2.tar.gz) = 111751 bytes
-SHA1 (patch-aa) = 5beabbb962fc2a56b5561b6d5a3eaa882af3dbd1
-SHA1 (patch-ab) = 6308ca09483da37a72e17503ba8d6f342692e508

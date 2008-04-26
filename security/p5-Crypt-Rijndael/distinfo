@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2008/01/25 02:26:31 heinz Exp $
-
-SHA1 (Crypt-Rijndael-1.05.tar.gz) = ab8f490383c8896d92fede387f35a833eab68d57
-RMD160 (Crypt-Rijndael-1.05.tar.gz) = f625d55289e5966b838cca8dec1aea956162f88e
-Size (Crypt-Rijndael-1.05.tar.gz) = 28100 bytes

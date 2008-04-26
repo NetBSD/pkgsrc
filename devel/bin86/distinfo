@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/08 00:39:23 reed Exp $
-
-SHA1 (bin86-0.16.17.tar.gz) = 656f06b4b26d08412132e338baa25e42d713eeec
-RMD160 (bin86-0.16.17.tar.gz) = b0ae5aff632a3528214749e256f5ab498f1a7fa4
-Size (bin86-0.16.17.tar.gz) = 152400 bytes
-SHA1 (patch-aa) = f4a4fcc5cb51fb428a660d0fc70579f73e2de719

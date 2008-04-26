@@ -1,3 +1,0 @@
-POE::Component::Client::DNS is an event driven wrapper for
-Net::DNS::Resolver.  It accepts events containing Net::DNS::Resolver
-questions, and it emits events carrying Net::DNS::Packet responses.

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 15:10:11 is Exp $
-include/libpgtcl.h
-lib/pgtcl${PKGVERSION}/pkgIndex.tcl
-lib/pgtcl${PKGVERSION}/libpgtcl153.so
-lib/libpgtcl.so
-@dirrm lib/pgtcl${PKGVERSION}

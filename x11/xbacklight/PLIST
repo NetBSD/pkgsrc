@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/04 19:43:26 tnn Exp $
-bin/xbacklight
-man/man1/xbacklight.1

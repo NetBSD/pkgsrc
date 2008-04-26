@@ -1,7 +1,0 @@
-$NetBSD: patch-af,v 1.4 2006/03/03 22:06:44 kristerw Exp $
-
---- src/rra-timezone.c.orig	2004-08-01 18:01:27.000000000 +0000
-+++ src/rra-timezone.c	2006-01-05 17:15:55.000000000 +0000
-@@ -2,2 +1,0 @@
--#define _POSIX_C_SOURCE 2 /* for getopt */
--#define _BSD_SOURCE

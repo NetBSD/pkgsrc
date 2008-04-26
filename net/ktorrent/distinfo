@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.10 2007/12/09 19:08:15 wiz Exp $
-
-SHA1 (ktorrent-2.2.4.tar.gz) = f0451984d2e9c9c76f84ce360e6427ececc29531
-RMD160 (ktorrent-2.2.4.tar.gz) = 5f5e6456c194f327d4c7fcf3cb11abec197f5a6b
-Size (ktorrent-2.2.4.tar.gz) = 3843873 bytes
-SHA1 (patch-aa) = ef4fb3204159a548ba13b8259efb1aa9cb50a19f
-SHA1 (patch-ab) = 7deeb27c42d10f104852d227cacd5ddd54e46f49
-SHA1 (patch-ac) = 4534aae8e78f92cb1f5cae7e77befb0db8c46735

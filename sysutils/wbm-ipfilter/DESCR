@@ -1,2 +1,0 @@
-This is the standard "ipfilter" Webmin module to configure a firewall
-using the IPFilter package by creating and editing rules.

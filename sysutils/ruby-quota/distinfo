@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.9 2006/09/24 15:40:38 joerg Exp $
-
-SHA1 (ruby-quota-0.5.1.tar.gz) = 9edf6054c465af80d7a3534b8fed89fbafc01ec1
-RMD160 (ruby-quota-0.5.1.tar.gz) = 85189827a256d0cfeaa0e755db37b85c625c18df
-Size (ruby-quota-0.5.1.tar.gz) = 5110 bytes
-SHA1 (patch-aa) = 354277b1f3e174d7de742d965c0b788ec04350a8
-SHA1 (patch-ab) = 061755cac0cbed45ed05157cd646c2746f30b71c

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 21:00:35 agc Exp $
-
-SHA1 (tc-2.3.1.tar.gz) = 7eb55134581b83692ea6deb10c227232d0c8df4d
-RMD160 (tc-2.3.1.tar.gz) = 4364a4e14c710e68d714146da3545d928b87bf52
-Size (tc-2.3.1.tar.gz) = 798831 bytes

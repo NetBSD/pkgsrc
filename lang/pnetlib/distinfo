@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2008/02/18 16:39:43 xtraeme Exp $
-
-SHA1 (pnetlib-0.8.0.tar.gz) = 294c04a9d2e88f878382397f405ad21fb3939d23
-RMD160 (pnetlib-0.8.0.tar.gz) = e438c03ac7439c962452fc235dea5e6e6e3c293f
-Size (pnetlib-0.8.0.tar.gz) = 5092807 bytes

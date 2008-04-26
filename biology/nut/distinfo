@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.15 2008/01/30 05:43:55 obache Exp $
-
-SHA1 (nut-13.2.tar.gz) = cdefbe18338ae7e0c62d8d91bf2296bdb9235876
-RMD160 (nut-13.2.tar.gz) = a6aab1fd776c7763f0529b71fdcd7f1d736f5ab1
-Size (nut-13.2.tar.gz) = 1183222 bytes
-SHA1 (patch-ab) = 023e7cbe6f06507ee303b56e85f48354855661a3

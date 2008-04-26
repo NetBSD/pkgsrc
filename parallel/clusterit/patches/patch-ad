@@ -1,8 +1,0 @@
---- pcp/pcp.c.orig	2008-02-27 12:29:47.000000000 -0700
-+++ pcp/pcp.c	2008-02-27 14:49:30.000000000 -0700
-@@ -51,5 +51,4 @@
- #endif
- 
--extern int errno;
- 
- void do_copy(char **argv, int recurse, int preserve, char *username);

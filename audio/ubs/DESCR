@@ -1,9 +1,0 @@
-The Uninterrupted Broadcasting System (UBS) is a program designed to run the
-operations of a radio station when a DJ isn't in house. This includes playing
-station ID's, public service announcements, and songs. This program is
-similar in function (but not design nor implementation) to DRS 2006.
-
-The UBS was not intended to be used for webcasting, but it could presumably
-be adapted for this purpose. The intended audience of the UBS is smaller
-college/high school/commercial radio stations which wish to do unattended
-broadcasting via a stable and reliable computer daemon.

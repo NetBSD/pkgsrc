@@ -1,7 +1,0 @@
-Exifprobe reads image files produced by digital cameras (including
-several so-called "raw" file formats) and reports the structure of
-the files and the auxilliary data and metadata contained within them.
-In addition to TIFF, JPEG, and EXIF, the program understands several
-formats which may contain "raw" camera data, including MRW, CIFF/CRW,
-JP2/JPEG2000, RAF, and X3F, as well as most most TIFF-derived "raw"
-formats, including DNG, ORF, CR2, NEF, K25/KDC/DCR, and PEF.

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/06/12 20:56:55 joerg Exp $
-
-SHA1 (wmtime-1.0b2.tar.gz) = 2a66762d548b9f91415603e8d6a37cfacb9340ad
-RMD160 (wmtime-1.0b2.tar.gz) = f267f75237c111ed336521ca175688a33f1e171a
-Size (wmtime-1.0b2.tar.gz) = 20680 bytes
-SHA1 (patch-aa) = 8943b1da225f26110e52c00269e3e0c6a7651404
-SHA1 (patch-ab) = e1e4203a219b0a0d539fc4426ec3d5424e9c3962
-SHA1 (patch-ac) = 31d864557165692350436e18c1cba61b95027c2c

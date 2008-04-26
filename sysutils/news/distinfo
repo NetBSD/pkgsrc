@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/11/28 16:46:16 tv Exp $
-
-SHA1 (news-0.2.tar.gz) = 4c6b8cdae58eb3c57d78b14d45104eb96098d052
-RMD160 (news-0.2.tar.gz) = 091c2c7b3502fad33984035a6589986cbc4b018a
-Size (news-0.2.tar.gz) = 3812 bytes
-SHA1 (patch-aa) = f6550129bb13741e2eb10dfcdb74067dca020609

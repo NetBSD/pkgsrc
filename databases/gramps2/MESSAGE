@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/07/06 20:09:31 drochner Exp $
-
-To generate PDF reports with GRAMPS, install the ${PYPKGPREFIX}-reportlab
-(print/py-reportlab) package. To enable creation of graphs using
-the GraphViz engine, install the graphics/graphviz package.
-
-===========================================================================

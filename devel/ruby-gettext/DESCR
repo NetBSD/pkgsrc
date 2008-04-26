@@ -1,3 +1,0 @@
-Ruby-gettext is a localization library and tools which is modeled after
-the GNU gettext package.  It converts the messages to localized messages
-properly using client-side locale information.

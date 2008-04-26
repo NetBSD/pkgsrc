@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2006/04/17 07:07:20 jlam Exp $
-lib/gimp/2.0/plug-ins/gimp_plugin-refocus-it
-share/locale/cs/LC_MESSAGES/refocus-it.mo

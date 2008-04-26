@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/04/16 01:00:06 perry Exp $
-
-SHA1 (xalarm-3.06.tar.gz) = a4365224c14491d1f089f4a30722d8e33ccccad5
-RMD160 (xalarm-3.06.tar.gz) = 9a9a6fd67669e6464729bdba2210ef38265dd5ea
-Size (xalarm-3.06.tar.gz) = 55351 bytes
-SHA1 (patch-aa) = 9d6837ff4ba95d82b37df9144178581e39a48283
-SHA1 (patch-ab) = f9890acefcef2111da7284f2c96f21875bf27d29
-SHA1 (patch-ac) = c053df3ac2503a03233e076b590e6387b04f6faa

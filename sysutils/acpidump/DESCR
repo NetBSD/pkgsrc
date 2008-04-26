@@ -1,4 +1,0 @@
-The acpidump utility analyzes ACPI tables in physical memory and dumps
-them to standard output.  In addition, acpidump can disassemble AML
-(ACPI Machine Language) found in these tables and dump them as ASL
-(ACPI Source Language).

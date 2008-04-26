@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.8 2006/11/09 13:45:33 martin Exp $
-
-SHA1 (xmahjongg-3.6.1.tar.gz) = 35e380e53412568e6af7f4fcc1677693f52fc60e
-RMD160 (xmahjongg-3.6.1.tar.gz) = acfc0161322b22296639dff313bae8d57e012618
-Size (xmahjongg-3.6.1.tar.gz) = 462833 bytes
-SHA1 (patch-aa) = 5305cfb0c0c8c0fcc507bc3730043331255a94a5
-SHA1 (patch-ab) = d3c2574c8de7e85c8e38670017d0eda64fe3b0be
-SHA1 (patch-ac) = ea3083eff9216833153c1ad68e31a4282938e9d9

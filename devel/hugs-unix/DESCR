@@ -1,3 +1,0 @@
-This package is part of the Haskell Core Libraries.  It includes the
-System.Posix and System.Sendfile modules, both of which provide an
-interface over native POSIX operating system calls.

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/08/20 23:18:07 joerg Exp $
-
-SHA1 (xmessage-1.0.2.tar.bz2) = 866dea3f01e2c9a3657bb1e56396b6ae1af4be3f
-RMD160 (xmessage-1.0.2.tar.bz2) = 610815e2c5a04f441fb41c6f63f2b33aaa2fa254
-Size (xmessage-1.0.2.tar.bz2) = 94805 bytes
-SHA1 (patch-aa) = 8c4ddffa627634ecab7e149816e643e9d233729c

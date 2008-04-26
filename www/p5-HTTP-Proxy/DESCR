@@ -1,4 +1,0 @@
-HTTP::Proxy Perl5 implements an HTTP proxy utilizing the module
-HTTP::Daemon to accept client connection and LWP::UserAgent to
-ask for the pages. It has the ability to filter HTTP requests
-and responses through user-defined agents.

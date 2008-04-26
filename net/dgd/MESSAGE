@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.4 2002/09/11 20:13:58 tron Exp $
-
-It is recommended that you create a nonprivileged account to run
-the DGD driver.
-
-===========================================================================

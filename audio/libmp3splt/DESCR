@@ -1,5 +1,0 @@
-This library provides functions for splitting/manipulation of MP3 and
-OGG/Vorbis files.  It is provided mainly for use with mp3splt, as this
-allows the mp3splt package not to explicitly depend on any of this
-library's dependencies.  Of course, other programs are free to
-use it!

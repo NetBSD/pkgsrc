@@ -1,7 +1,0 @@
-This is the GNU version of ed(1).
-
-ed is a line-oriented text editor.  It is used to create, display,
-modify and otherwise manipulate text files.
-
-This also includes a restricted ed, which can only edit files in the
-current directory and cannot execute shell commands.

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/10/16 00:51:35 wiz Exp $
-
-SHA1 (gopchop-1.1.7.tar.gz) = d7e110d0e12aeb6ae6b6b90c9a3cf1f9222f30e4
-RMD160 (gopchop-1.1.7.tar.gz) = 31e9cf6934099dcda3025ec62e6d84714171809d
-Size (gopchop-1.1.7.tar.gz) = 556083 bytes
-SHA1 (patch-aa) = 560d87bf80a877b39acee9430b10d14e5363c82a
-SHA1 (patch-ab) = d4ea7c7828f3403f29ff493f707767f245204e71
-SHA1 (patch-ac) = 36d01756a44ba7f669b739579b119f85d16051af

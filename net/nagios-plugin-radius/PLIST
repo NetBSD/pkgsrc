@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/13 20:06:21 bouyer Exp $
-libexec/nagios/check_radius

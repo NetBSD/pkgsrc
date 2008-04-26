@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.13 2007/07/30 18:55:23 wiz Exp $
-
-SHA1 (datlib221.zip) = a5076fb30d8c871473025ee2b1c913c379e2538b
-RMD160 (datlib221.zip) = 61c239645d193a674002c9555de81ba525a8de58
-Size (datlib221.zip) = 95554 bytes
-SHA1 (patch-aa) = 58052a8c72989212d83081691f685574af6b40d4
-SHA1 (patch-ab) = e01959114bafc63ae29fcde587b507f67e1c69b2
-SHA1 (patch-ac) = 55d7c856fc86aa40e625bcbde401b2c66b1d5b0c

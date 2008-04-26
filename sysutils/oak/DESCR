@@ -1,5 +1,0 @@
-Oak is a program that can be used to monitor syslogs from a collection
-of servers and notify operators when problem conditions arise. In
-addition to providing immediate notification of critical problems, oak
-will also batch less critical problems into summary messages that can be
-sent less often and via any medium.

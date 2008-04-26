@@ -1,8 +1,0 @@
-XMLSec library provides C based implementation for major XML Security
-standards:
-    * XML Signature Syntax and Processing
-      http://www.w3.org/TR/xmldsig-core
-    * XML Encryption Syntax and Processing
-      http://www.w3.org/TR/xmlenc-core/
-XMLSec is based on well known LibXML (http://xmlsoft.org), LibXSLT
-(http://xmlsoft.org/XSLT) and OpenSSL (http://www.openssl.org) libraries.

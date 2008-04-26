@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/02/20 23:44:06 xtraeme Exp $
-
-SHA1 (httpfs_with_static_binaries_2.06.08.26.tar.gz) = 857dfe72b817b01c8a445eb486a047b8c4f8ec02
-RMD160 (httpfs_with_static_binaries_2.06.08.26.tar.gz) = 0172c155d38b0ee2e862fdcf8815886ed7d28e48
-Size (httpfs_with_static_binaries_2.06.08.26.tar.gz) = 115384 bytes

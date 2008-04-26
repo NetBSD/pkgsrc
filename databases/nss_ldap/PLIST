@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/08/30 12:47:52 drochner Exp $
-lib/nss_ldap.so
-lib/nss_ldap.so.1
-man/man5/nss_ldap.5
-share/examples/nss_ldap/nss_ldap.conf
-share/examples/nss_ldap/nsswitch.ldap
-@dirrm share/examples/nss_ldap

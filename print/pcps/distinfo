@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 12:51:44 agc Exp $
-
-SHA1 (pcps840.tar.gz) = aa144398d59326c183d2d248b16f30f31420b3c6
-RMD160 (pcps840.tar.gz) = b5a172dc5e0bb876bb52ac7d6c0aa450c12f957b
-Size (pcps840.tar.gz) = 84459 bytes
-SHA1 (patch-aa) = b61ed0bac9c83716519797cc980e2ccfabbdd395
-SHA1 (patch-ab) = e17de47516bc1b97704c632a618f881aadb6432e

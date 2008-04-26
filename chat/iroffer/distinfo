@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/10/05 12:25:33 obache Exp $
-
-SHA1 (iroffer1.3.b11.tgz) = cc6db30dffa070a69ed9c1f9298a817863e13b16
-RMD160 (iroffer1.3.b11.tgz) = 51e00c06d15598a18502e554eb8816a69c71131a
-Size (iroffer1.3.b11.tgz) = 126909 bytes
-SHA1 (patch-aa) = 01b0e9f40da7caaece7028d61fedf2b3468bfb3b
-SHA1 (patch-ac) = c4864f674da3296434ab1aed254899ae6b79d2d8
-SHA1 (patch-ad) = e80159cfbe6b37284e0eeca762791f15ee1bae8c

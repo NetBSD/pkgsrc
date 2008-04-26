@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/11/30 21:13:53 rillig Exp $
-
-SHA1 (coconut-0.3.0.tar.gz) = 69c1c4cbf061def240f7c8c1636bdddb2c00da5b
-RMD160 (coconut-0.3.0.tar.gz) = 71098f8eb9a731f990534c98d532707ce93329dc
-Size (coconut-0.3.0.tar.gz) = 692317 bytes
-SHA1 (patch-aa) = ea9f4b49f55ae74a61f0b72687c973de71b14a7b
-SHA1 (patch-ab) = dec14730ce92d32e1bc53bc301f1b7e3dae32043

@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/09/13 23:13:48 wiz Exp $
-include/ncursesw/ncurses.h
-lib/libformw.la
-lib/libmenuw.la
-lib/libncurses++w.la
-lib/libncursesw.la
-lib/libpanelw.la

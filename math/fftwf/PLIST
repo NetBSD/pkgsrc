@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/02 12:06:42 wulf Exp $
-bin/fftwf-wisdom
-lib/libfftw3f.la
-lib/pkgconfig/fftw3f.pc
-man/man1/fftwf-wisdom.1

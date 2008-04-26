@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/01/03 15:51:02 joerg Exp $
-
-SHA1 (xtend-1.2beta4.tar.gz) = 475b5aa26502a5b3f7a828c038d3dade3884fd88
-RMD160 (xtend-1.2beta4.tar.gz) = aa705d00b22ca3b7c7c83c54908d91000c61f768
-Size (xtend-1.2beta4.tar.gz) = 49502 bytes
-SHA1 (patch-aa) = 5091708ed66f71c66fbdce52b0b33f727baf8c60
-SHA1 (patch-ab) = b827d265aaed3578863273ad97f9c585442fae3c
-SHA1 (patch-ac) = 02515550e4bd1e50a89790993fa165f326848445
-SHA1 (patch-ad) = 6f952e3e21f11882f800c5a04497b114eca7cb52

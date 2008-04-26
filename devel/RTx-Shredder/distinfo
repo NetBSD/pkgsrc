@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/01 09:42:13 cube Exp $
-
-SHA1 (RTx-Shredder-0.03.tar.gz) = e0bb6dd1128d5d6603c1d434456bddbe3de748da
-RMD160 (RTx-Shredder-0.03.tar.gz) = 43d5aabccea3e24f971962123a0df587fa98847c
-Size (RTx-Shredder-0.03.tar.gz) = 43315 bytes
-SHA1 (patch-aa) = 5230c031f94d6f3af8f1b7afdd14a96dbd7def1f

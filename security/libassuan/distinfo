@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.9 2007/11/07 11:13:15 shannonjr Exp $
-
-SHA1 (libassuan-1.0.3.tar.bz2) = 1a16c9d1086e2cda819a3f7d4e5ebd41eb350e5f
-RMD160 (libassuan-1.0.3.tar.bz2) = fd4fa8bff29d8a7ee9901aa2ad665df989c5c82e
-Size (libassuan-1.0.3.tar.bz2) = 292168 bytes

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/04/04 15:30:02 jlam Exp $
-
-SHA1 (activeresource-2.0.2.gem) = 5ea6bb567ed1e7b231a699946325053c7cfa0871
-RMD160 (activeresource-2.0.2.gem) = 6def62f59c32dcea27afe6ce811daa22e32ed238
-Size (activeresource-2.0.2.gem) = 33280 bytes

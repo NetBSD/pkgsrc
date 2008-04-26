@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/03/22 15:43:29 joerg Exp $
-lib/xorg/modules/drivers/i128_drv.la
-man/man4/i128.4
-@comment @dirrm lib/xorg/modules/drivers
-@comment @dirrm lib/xorg/modules
-@comment @dirrm lib/xorg

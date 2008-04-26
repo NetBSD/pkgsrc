@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 11:24:04 agc Exp $
-
-SHA1 (mpeg_play-2.4-patched-src.tar.gz) = c73bfee6b9ea4ae12678bce28dd617fd53728241
-RMD160 (mpeg_play-2.4-patched-src.tar.gz) = 2a763142cd3b3c24223df3870470e9f4275c2fc4
-Size (mpeg_play-2.4-patched-src.tar.gz) = 146696 bytes
-SHA1 (patch-aa) = b9538234c58dd7e671e61bc4e0ed14efb1f3e733
-SHA1 (patch-ab) = 104053d82635859c66d4a968c08110e5b33d88de

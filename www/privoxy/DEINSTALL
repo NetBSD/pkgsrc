@@ -1,9 +1,0 @@
-#!@SH@
-#
-# $NetBSD: DEINSTALL,v 1.1 2006/06/15 20:36:08 jlam Exp $
-
-case "${STAGE}" in
-DEINSTALL)
-	${RM} -f ${PKG_SYSCONFDIR}/templates
-	;;
-esac

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/02/24 08:45:10 agc Exp $
-
-SHA1 (mpeg2vidcodec_v12.tar.gz) = 2ba56c46f3a70213e4f09417ad5340ef2b1e312e
-RMD160 (mpeg2vidcodec_v12.tar.gz) = 32fbd8edc485e7d03ab84b8328ff40a74a2b3002
-Size (mpeg2vidcodec_v12.tar.gz) = 259790 bytes
-SHA1 (patch-aa) = 0c1be867300e99fb62e90d782a29f71d07bded21

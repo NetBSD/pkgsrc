@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/21 14:31:18 drochner Exp $
-
-SHA1 (dbus-qt3-0.70.tar.bz2) = d87cfd7af62d36cc98f0a01f3d7e66eb677b081a
-RMD160 (dbus-qt3-0.70.tar.bz2) = 8e2e3919ea71d50966000239e435b41ead089b1b
-Size (dbus-qt3-0.70.tar.bz2) = 220305 bytes

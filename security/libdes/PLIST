@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/03/24 19:21:31 joerg Exp $
-bin/libdes
-include/libdes.h
-lib/libdes.a
-man/man1/libdes.1
-man/man3/libdes_crypt.3

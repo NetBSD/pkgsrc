@@ -1,5 +1,0 @@
-Totem is simple movie player for the GNOME desktop based on GStreamer and
-Xine.  It features a playlist, a full-screen mode, seek and volume controls,
-as well as a pretty complete keyboard navigation.
-
-This package is built using the Xine backend.

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.11 2008/03/01 03:09:35 jlam Exp $
-
-SHA1 (slang-1.4.9.tar.bz2) = 667709eb1bc1b0f68ce36b31204bf8a99d31eefa
-RMD160 (slang-1.4.9.tar.bz2) = bd2c37554129134e4e874502af0ebcb6fc7e151b
-Size (slang-1.4.9.tar.bz2) = 631079 bytes
-SHA1 (patch-aa) = 619ed90efc4cb833db2695920f7772fc67df4155
-SHA1 (patch-ab) = 47f7aa6341072f113cbf138c1206d36dbbc59dc9
-SHA1 (patch-ac) = 1ae91c0d5772d3b85c7028eca8decd8c0bc474c5
-SHA1 (patch-ad) = 5d8f0350d473381d5bb0808db60e872b82b0dca4

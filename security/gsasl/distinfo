@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/10/25 21:24:53 adam Exp $
-
-SHA1 (gsasl-0.2.21.tar.gz) = 971ede97fc148ac3238415c55b1b95eca485afac
-RMD160 (gsasl-0.2.21.tar.gz) = a570098ba0e3f6d1b50b92010c6aeb687ada14ec
-Size (gsasl-0.2.21.tar.gz) = 3293537 bytes

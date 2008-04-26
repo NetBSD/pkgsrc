@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:14:00 agc Exp $
-
-SHA1 (fnet.pl-1.4.tar.gz) = 7c26e3a1a4115eacd2bc3bef8d09486c156abd20
-RMD160 (fnet.pl-1.4.tar.gz) = 45f911b1232d0fc87a590da560c5d50c2d903ec3
-Size (fnet.pl-1.4.tar.gz) = 9548 bytes
-SHA1 (patch-aa) = 24310d7982662fb019ccbb7bf1371fe0f6fc7729

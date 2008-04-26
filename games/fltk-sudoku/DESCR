@@ -1,5 +1,0 @@
-Sudoku (pronounced soo-dough-coo with the emphasis on the first syllable) is a
-simple number-based puzzle/game played on a 9x9 grid that is divided into 3x3
-subgrids. The goal is to enter a number from 1 to 9 in each cell so that each
-number appears only once in each column and row. In addition, each 3x3 subgrid
-may only contain one of each number.

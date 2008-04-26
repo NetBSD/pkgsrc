@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/12/04 00:52:10 joerg Exp $
-
-SHA1 (xscript.tar.Z) = 57d2d5fdcf05718eebc9532347be46ac07206030
-RMD160 (xscript.tar.Z) = 1ef8579f0e6a09b9d1b29d2218ae3d213a3f7ac9
-Size (xscript.tar.Z) = 122669 bytes
-SHA1 (patch-aa) = 988d5270563e03df0ec74d69d2379733076f9e04
-SHA1 (patch-ab) = b5b3df7f4952350ea3be15045151803742173a7a
-SHA1 (patch-ac) = f64bbda1baf7ef20ef33d0a79672ee77abf662eb
-SHA1 (patch-ad) = 3e09dcbc257cecf81dbc9f336a79682a28802c66

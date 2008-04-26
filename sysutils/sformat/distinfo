@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/06/27 13:40:49 joerg Exp $
-
-SHA1 (sformat-3.5.tar.gz) = 1ebde6c9d58f376ad2d82f6f8e3bb2e89da00920
-RMD160 (sformat-3.5.tar.gz) = 5dd3e15d1fca7dd961694996bd094e3f2abce28f
-Size (sformat-3.5.tar.gz) = 526375 bytes
-SHA1 (patch-aa) = e398bc734a7bc48668a0b61d3535c0d87b1a4ccf

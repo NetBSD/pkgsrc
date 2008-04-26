@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/12 13:12:57 wiz Exp $
-include/ofa1/ofa.h
-lib/libofa.la
-lib/pkgconfig/libofa.pc
-@dirrm include/ofa1

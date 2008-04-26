@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2007/08/11 23:48:40 joerg Exp $
-
-The configuration format of nsd has changed between 2.x and 3.x.
-A sample Python script to help migrating the old nsd.zones format
-into the new nsd.conf can be found in share/examples/nsd.
-
-===========================================================================

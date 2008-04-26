@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/10/02 20:23:07 heinz Exp $
-libexec/tftpd
-man/cat8/tftpd.0
-man/man8/tftpd.8

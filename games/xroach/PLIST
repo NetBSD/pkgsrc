@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:57:39 zuntum Exp $
-bin/xroach
-man/man6/xroach.6
-man/cat6/xroach.0

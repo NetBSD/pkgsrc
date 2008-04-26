@@ -1,5 +1,0 @@
-Rename is a command-line rename tool.  It can substitute, lowcase,
-upcase large numbers of file names, or change their ownerships.
-This is a quick and powerful tool written in C with extended regular
-expression support for searching and substituting pattern strings
-in filenames.

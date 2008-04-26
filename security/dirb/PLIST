@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/10/14 00:44:03 minskim Exp $
-bin/dirb
-bin/gendict
-bin/html2dic
-man/man1/dirb.1

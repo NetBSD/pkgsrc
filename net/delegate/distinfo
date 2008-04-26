@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.11 2008/02/17 10:20:56 rillig Exp $
-
-SHA1 (delegate9.7.7.tar.gz) = 2c21295d68920bacaaf4dd52bd2eb46eab9deee6
-RMD160 (delegate9.7.7.tar.gz) = 0eab5ee18a28f4414bdef0aae8be68ba4c7c164b
-Size (delegate9.7.7.tar.gz) = 1749848 bytes

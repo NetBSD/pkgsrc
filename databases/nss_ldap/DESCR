@@ -1,4 +1,0 @@
-This is the nss_ldap library, an LDAP module for the Solaris Nameservice
-Switch (NSS), the GNU libc NSS, and the ISC BIND IRS (used on BSDI
-and IRS).
-The LDAP schema used is described in RFC 2307

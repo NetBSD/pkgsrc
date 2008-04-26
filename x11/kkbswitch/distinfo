@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 17:36:16 wiz Exp $
-
-SHA1 (kkbswitch-1.4.3.tar.gz) = 3286c746facd1f03d206ee018a2bdf8d4e4cc6ad
-RMD160 (kkbswitch-1.4.3.tar.gz) = e5663ca0a4d81355b9e8971242014c149e5250c2
-Size (kkbswitch-1.4.3.tar.gz) = 693625 bytes
-SHA1 (patch-aa) = 4661a76d3f2df9d9a2c2948105c91781ec730a54
-SHA1 (patch-ab) = fa3823f504636b7e5ad5ea2f6deaae7c85945910

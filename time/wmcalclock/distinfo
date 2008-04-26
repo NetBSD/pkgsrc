@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 19:14:55 wiz Exp $
-
-SHA1 (wmCalClock-1.25.tar.gz) = 029bdda7ec7e93ed4b29b67936b40729e7f1dcdc
-RMD160 (wmCalClock-1.25.tar.gz) = d8c2e3837fe84fcacc357401496ae11b1f770e52
-Size (wmCalClock-1.25.tar.gz) = 71574 bytes
-SHA1 (patch-aa) = 3ade88a3f671615fedbf4e1f41473e8e19c48ec2

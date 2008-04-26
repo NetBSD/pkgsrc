@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/13 15:06:09 drochner Exp $
-${PYSITELIB}/PyOpenGL-3.0.0a6-py2.4.egg

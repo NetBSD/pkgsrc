@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/30 18:16:16 mlelstv Exp $
-mdec/memtest
-mdec/memtest.bin
-share/doc/memtest/README
-@unexec ${RMDIR} %D/mdec 2>/dev/null || ${TRUE}
-@dirrm share/doc/memtest

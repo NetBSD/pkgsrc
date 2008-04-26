@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/03/17 14:52:51 rillig Exp $
-
-SHA1 (z80-asm-1.0.tar.gz) = 0e34b722a91aa24d92f127f39c565fba8b0e028a
-RMD160 (z80-asm-1.0.tar.gz) = 0fc754258de1051bd8136ad3f3bdf823b61b4a95
-Size (z80-asm-1.0.tar.gz) = 53161 bytes
-SHA1 (patch-aa) = 9271ae1662f750ecaf235ba760ad7a93fda3cbfe
-SHA1 (patch-ab) = 800d2c7eccaadb74a4f0c7df94f1dfe316f3ea07
-SHA1 (patch-ac) = 4fc3e9304ad6641974b55452d742a62154d76909

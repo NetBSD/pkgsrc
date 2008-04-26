@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/02 14:11:54 bjs Exp $
-
-SHA1 (libssh2-0.18.tar.gz) = 9bc6148869fca08350e27ea2c9fc44917ac027ff
-RMD160 (libssh2-0.18.tar.gz) = 2088c73a7903828670e14c6289a6961f5a3e4764
-Size (libssh2-0.18.tar.gz) = 541428 bytes

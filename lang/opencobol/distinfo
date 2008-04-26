@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/01/14 15:19:04 rillig Exp $
-
-SHA1 (open-cobol-0.32.tar.gz) = 9d30d0107b098c4638aa78643d833b9b2946565e
-RMD160 (open-cobol-0.32.tar.gz) = 920efc8f63f5b3f9204934108f16812569d9675c
-Size (open-cobol-0.32.tar.gz) = 768635 bytes
-SHA1 (patch-aa) = 635e0ec19fdcf689fc6dfdbd910825c791825c36
-SHA1 (patch-ab) = 85f82b5c7f4a2a9cbb8b830a5d3c4a6d55e531f9

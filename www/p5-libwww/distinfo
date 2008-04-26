@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.20 2008/04/22 21:48:58 wiz Exp $
-
-SHA1 (libwww-perl-5.812.tar.gz) = aae024d183fd1800e694c4d578deeb056337b413
-RMD160 (libwww-perl-5.812.tar.gz) = 8ee3ecf1c97776ada1c29abd464521c892064316
-Size (libwww-perl-5.812.tar.gz) = 242458 bytes
-SHA1 (patch-aa) = f0fdaf60af8c16a6b362024f38db956211fce175

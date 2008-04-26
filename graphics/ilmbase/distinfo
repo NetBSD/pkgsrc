@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/02/03 03:37:32 heinz Exp $
-
-SHA1 (ilmbase-1.0.1.tar.gz) = 143adc547be83c6df75831ae957eef4b2706c9c0
-RMD160 (ilmbase-1.0.1.tar.gz) = 124f10b6f4ebefc9bb5dba7715d8897c7d71b947
-Size (ilmbase-1.0.1.tar.gz) = 463275 bytes
-SHA1 (patch-aa) = 7498a0cfafaec4f1e43dd57270f514bc5a8e7b1f

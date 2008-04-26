@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/03/05 20:14:32 darcy Exp $
-
-SHA1 (ec-fonts-mftraced-1.0.8.tar.gz) = 6080627136a284ea0173e35198a8751bd3d9e854
-RMD160 (ec-fonts-mftraced-1.0.8.tar.gz) = 2a342747a368fb4477d92c59eb678c51245a3b64
-Size (ec-fonts-mftraced-1.0.8.tar.gz) = 8581 bytes
-SHA1 (patch-aa) = 206cef3aa789f69a64d5f59c589a2672839e2d59
-SHA1 (patch-ab) = 1d736a0b4144f67ba0528245d4e23240a0792b15

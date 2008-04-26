@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/01/12 19:57:00 wiz Exp $
-
-SHA1 (ytalk-3.3.0.tar.gz) = 7a988cc6f7ef1ca7499aa54e73ed6db4e7416bc6
-RMD160 (ytalk-3.3.0.tar.gz) = 1332d5600d1a669f517727542d6c1b7226212cfc
-Size (ytalk-3.3.0.tar.gz) = 137989 bytes
-SHA1 (patch-aa) = 8e82bc438aacb5e2f612ab7596097aadb696fac2
-SHA1 (patch-ab) = 46d4cfcd480a11070a5b5bd2a51f6938ea517627
-SHA1 (patch-ac) = ff42a7f98f39daf17b336c9d16e9091c19410d02
-SHA1 (patch-ad) = 55b130c2e070d93fad2cd050952fa3602cd32d2d

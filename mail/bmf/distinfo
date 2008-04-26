@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/01/08 13:50:53 joerg Exp $
-
-SHA1 (bmf-0.9.4.tar.gz) = d0b7ab253a531a533fefc6bc0691cc7af7ccea79
-RMD160 (bmf-0.9.4.tar.gz) = 3b8d73879d8e616d52d00bf838395ed7f6a7fc4d
-Size (bmf-0.9.4.tar.gz) = 36740 bytes
-SHA1 (patch-aa) = d7b2492915aa0d3f29d8b29c74c7d24af78370a6
-SHA1 (patch-ab) = 3975eed6acd129f292631bcb2ddc6916b079e3e7

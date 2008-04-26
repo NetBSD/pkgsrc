@@ -1,3 +1,0 @@
-Utility to download DNS zone contents using the DNSSEC NXT/NSEC
-record chain (even when AXFR is disabled).  It can also verify all
-digital signature resource records within a zone against the zone key.

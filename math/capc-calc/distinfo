@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.19 2007/09/18 19:40:19 drochner Exp $
-
-SHA1 (calc-2.12.2.tar.gz) = b8d6459892b576db28df88b59eb4c42cd83e58fd
-RMD160 (calc-2.12.2.tar.gz) = 5354b3d576fa9b57329c58def734012a29bf1882
-Size (calc-2.12.2.tar.gz) = 1064176 bytes
-SHA1 (patch-aa) = 7cd0aa6d8c028584cf992d5c85f693e6037b64fa

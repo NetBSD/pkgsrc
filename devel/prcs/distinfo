@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.8 2006/07/17 17:55:43 wiz Exp $
-
-SHA1 (prcs-1.3.3.tar.gz) = 0f1770289ee4e9e8028c1aee9e19fd4fae8d2da6
-RMD160 (prcs-1.3.3.tar.gz) = 85d90b12eb7e00585f1fd880939ee01642293b4e
-Size (prcs-1.3.3.tar.gz) = 907482 bytes
-SHA1 (patch-aa) = 46cfb535d79cce8b337dc28d1c421db8676e3d69
-SHA1 (patch-ab) = d13c14c776fc4abab32b50f1fca82469e9dfd855
-SHA1 (patch-ac) = 3325292dc27785dc01beaa6586b23ced6cbc4c42

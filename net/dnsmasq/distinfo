@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/02/23 15:08:07 wiz Exp $
-
-SHA1 (dnsmasq-2.38.tar.gz) = 267ac7b78e9f48b0d8d65f30fc0faa2a6552ae8c
-RMD160 (dnsmasq-2.38.tar.gz) = bfa7ca4a5ededa2aedd708991b8177274b1db8b7
-Size (dnsmasq-2.38.tar.gz) = 272953 bytes
-SHA1 (patch-aa) = 584464432ddedd1d00b742330a73f8a27c0e8e17

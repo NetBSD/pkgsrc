@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 17:36:21 wiz Exp $
-
-SHA1 (x3270-3213.tgz) = ce92607384f72761bd85bc7f5cd37d59f52a4452
-RMD160 (x3270-3213.tgz) = 9a4e1323c95dafa96e13789bddc9eb43834cb2f1
-Size (x3270-3213.tgz) = 500073 bytes
-SHA1 (patch-aa) = fa17fb709185bb319462c32048addbecdd39b8dd

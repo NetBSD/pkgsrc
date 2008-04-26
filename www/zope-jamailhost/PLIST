@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/12/18 16:03:48 taca Exp $
-${ZOPE_PKG_PRODUCT}/README.ja
-${ZOPE_PKG_PRODUCT}/__init__.py
-${ZOPE_PKG_PRODUCT}/__init__.pyc
-${ZOPE_PKG_PRODUCT}/version.txt
-@dirrm ${ZOPE_PKG_PRODUCT}

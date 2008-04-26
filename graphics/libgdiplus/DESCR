@@ -1,3 +1,0 @@
-An Open Source implementation of the GDI+ API. Spun off from Mono's C#
-library.
-libgdiplus is needed for using the System.Drawing APIs.
