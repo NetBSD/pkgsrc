@@ -1,12 +1,12 @@
-$NetBSD: patch-cp,v 1.1 2007/10/06 20:02:24 hira Exp $
+$NetBSD: patch-cp,v 1.1.6.1 2008/04/26 04:29:13 rtr Exp $
 
---- pyuno/source/module/makefile.mk.orig	2007-09-27 01:51:03.000000000 +0900
-+++ pyuno/source/module/makefile.mk	2007-09-27 01:52:52.000000000 +0900
-@@ -91,6 +91,7 @@
+--- pyuno/source/module/makefile.mk.orig	2008-01-03 02:29:28.000000000 +0900
++++ pyuno/source/module/makefile.mk	2008-04-07 18:22:21.000000000 +0900
+@@ -96,6 +96,7 @@
  		$(CPPULIB)		\
  		$(CPPUHELPERLIB)	\
  		$(SALLIB)		\
-+		$(PYTHON_LIBS)		\
- 		$(PYTHONLIB)
++		$(PYTHON_LIBS) 		\
+ 		$(PYTHONLIB) 		\
+ 		$(EXTRA_FRAMEWORK_FLAG) 
  
- SHL1DEPN=
