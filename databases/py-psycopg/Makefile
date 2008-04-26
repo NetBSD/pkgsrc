@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2008/04/25 20:39:07 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2008/04/26 15:36:22 joerg Exp $
 #
 
 DISTNAME=	psycopg-1.1.21
@@ -19,6 +19,8 @@ CONFIGURE_ARGS+= \
 BUILD_TARGET=	default
 
 PY_PATCHPLIST=	yes
+
+PYTHON_VERSIONS_ACCEPTED=	25 24 23 21
 
 .include "../../lang/python/extension.mk"
 .include "../../time/py-mxDateTime/buildlink3.mk"
