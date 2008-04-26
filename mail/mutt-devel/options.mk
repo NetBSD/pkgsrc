@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.29 2008/04/12 22:43:03 jlam Exp $
+# $NetBSD: options.mk,v 1.30 2008/04/26 11:11:15 tonio Exp $
 
 # Global and legacy options
 
@@ -6,7 +6,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
 PKG_OPTIONS_GROUP.display=	slang ncurses ncursesw curses
 PKG_SUPPORTED_OPTIONS=	debug gpgme idn ssl smime sasl
-PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox mutt-hcache mutt-smtp
+PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox mutt-hcache mutt-smtp mutt-xlabel
 PKG_SUGGESTED_OPTIONS=	ssl smime curses
 
 .include "../../mk/bsd.options.mk"
@@ -99,7 +99,6 @@ CONFIGURE_ARGS+=	--disable-hcache
 
 ###
 ### Compressed mail boxes
-### Internal SMTP relay support
 ###
 .if !empty(PKG_OPTIONS:Mmutt-compressed-mbox)
 PATCH_SITES=           http://www.spinnaker.de/mutt/compressed/
@@ -115,6 +114,15 @@ CONFIGURE_ARGS+=       --enable-compressed
 CONFIGURE_ARGS+=	--enable-smtp
 .else
 CONFIGURE_ARGS+=	--disable-smtp
+.endif
+
+###
+### X-Label header support
+###
+.if !empty(PKG_OPTIONS:Mmutt-xlabel)
+PATCH_SITES=		http://home.uchicago.edu/~dgc/sw/mutt/
+PATCHFILES+=		patch-1.5.14.dgc.xlabel_ext.9
+PATCH_DIST_STRIP=	-p1
 .endif
 
 ###
