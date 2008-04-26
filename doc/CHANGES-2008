@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.912 2008/04/26 01:24:13 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.913 2008/04/26 01:53:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1648,3 +1648,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/gnome-vfsmm to 2.22.0 [wiz 2008-04-26]
 	Updated graphics/libgnomecanvasmm to 2.22.0 [wiz 2008-04-26]
 	Updated net/clive to 0.4.11 [wiz 2008-04-26]
+	Updated net/libupnp to 1.6.6 [obache 2008-04-26]
