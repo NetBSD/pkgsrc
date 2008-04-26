@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2006/11/19 22:36:20 rillig Exp $
+$NetBSD: distinfo,v 1.6 2008/04/26 11:38:43 obache Exp $
 
-SHA1 (live.2006.11.16a.tar.gz) = 605d0e288a8d09654ef0d2cc271f0bc0837c53f5
-RMD160 (live.2006.11.16a.tar.gz) = f43dfc069ca17008d96a6f217f80549747cf724a
-Size (live.2006.11.16a.tar.gz) = 425773 bytes
+SHA1 (live.2008.04.09.tar.gz) = e6146a3c7e270d556d2b067d390428fdc308a5af
+RMD160 (live.2008.04.09.tar.gz) = 69be6fe4aca83671d295573c1a57028ced2372c8
+Size (live.2008.04.09.tar.gz) = 450306 bytes
