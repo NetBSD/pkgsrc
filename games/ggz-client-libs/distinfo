@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/25 23:24:49 wiz Exp $
+$NetBSD: distinfo,v 1.2 2008/04/26 13:38:15 markd Exp $
 
 SHA1 (ggz-client-libs-0.0.14.1.tar.gz) = 1328095d0f7e3415e1748208438127f0ee67a573
 RMD160 (ggz-client-libs-0.0.14.1.tar.gz) = b7a0e3b63261b3f8ff725eae212ecf0001c46fa8
 Size (ggz-client-libs-0.0.14.1.tar.gz) = 614117 bytes
 SHA1 (patch-aa) = e4cbdca57a8d2e82802228c851f97230698f9160
+SHA1 (patch-ab) = cd815b923b5d0992bf08d444afdb141c1c974c56

@@ -1,9 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/25 23:24:49 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/04/26 13:38:15 markd Exp $
 bin/ggz
 bin/ggz-config
 bin/ggz-wrapper
-etc/xdg/menus/applications-merged/ggz.merge.menu
-etc/xdg/menus/ggz.menu
 include/ggzcore.h
 include/ggzmod.h
 lib/ggz/ggzwrap
@@ -19,6 +17,8 @@ man/man6/ggz.6
 man/man7/ggz.7
 share/desktop-directories/ggz-games.directory
 share/desktop-directories/ggz.directory
+share/examples/ggz-client-libs/ggz.menu
+share/examples/ggz-client-libs/ggz.merge.menu
 share/locale/ar/LC_MESSAGES/ggzcore.mo
 share/locale/bg/LC_MESSAGES/ggzcore.mo
 share/locale/ca/LC_MESSAGES/ggzcore.mo
@@ -55,5 +55,6 @@ share/locale/vi/LC_MESSAGES/ggzcore.mo
 share/locale/zh_CN/LC_MESSAGES/ggzcore.mo
 share/locale/zh_HK/LC_MESSAGES/ggzcore.mo
 share/locale/zh_TW/LC_MESSAGES/ggzcore.mo
+@dirrm share/examples/ggz-client-libs
 @comment in xdg-dirs: @dirrm share/desktop-directories
 @dirrm lib/ggz
