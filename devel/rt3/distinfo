@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.10 2008/03/16 20:47:03 tonnerre Exp $
-
-SHA1 (rt-3.6.6.tar.gz) = fa0f3787027851348f52eefda8fee13f30b43ca7
-RMD160 (rt-3.6.6.tar.gz) = 46d928304d0435f122cecb9a62df137bf47b0e56
-Size (rt-3.6.6.tar.gz) = 1715913 bytes
-SHA1 (patch-aa) = 4d29c290658144dcd7aa08d87649681dd2549b43
-SHA1 (patch-ac) = efa7095fe10e313a1578a1d739a8e77244c2ba6e

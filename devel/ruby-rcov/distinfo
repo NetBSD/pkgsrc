@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:18:21 jlam Exp $
-
-SHA1 (rcov-0.8.1.2.0.gem) = 5f922dcfbceeb02fc3cf615946e68c34ac63cd79
-RMD160 (rcov-0.8.1.2.0.gem) = f477239223e3d5dc98054a766a69553f88d7b037
-Size (rcov-0.8.1.2.0.gem) = 74240 bytes
-SHA1 (patch-aa) = 8e14b6e51ee9ed58415a343ae9ea1f0077c8ca5f

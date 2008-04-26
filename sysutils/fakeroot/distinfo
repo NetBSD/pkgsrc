@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/01/13 18:26:04 wiz Exp $
-
-SHA1 (fakeroot_1.5.6.tar.gz) = 8101d3eb63e9932e35d678234062421a50e6194b
-RMD160 (fakeroot_1.5.6.tar.gz) = 47a3ac29465c39b431300cc0fc7d851781de6342
-Size (fakeroot_1.5.6.tar.gz) = 980208 bytes
-SHA1 (patch-aa) = 390eaa7976cd22383756541e1e3be9692b87c3bf
-SHA1 (patch-ab) = 5045f46ee3d77ee3e025ca29561b79ef011a23b1

@@ -1,2 +1,0 @@
-HTTP::Server::Simple::Static is a mixin class that adds a method to
-serve static files with the correct Content-type MIME type headers.

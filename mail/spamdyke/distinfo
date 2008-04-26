@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.12 2008/04/08 05:18:24 schmonz Exp $
-
-SHA1 (spamdyke-3.1.7.tgz) = 7ec009590a15f6498dc33308aa3c68afa45b73b3
-RMD160 (spamdyke-3.1.7.tgz) = d2f0c7d3fbc6e5849d986904b97ef87862896267
-Size (spamdyke-3.1.7.tgz) = 264474 bytes
-SHA1 (patch-aa) = 17fc08c6e41286a70195b70acd4e9985e9604ddd
-SHA1 (patch-ab) = 96caec14477be0b25544793b7b7c610d4a0ca195
-SHA1 (patch-ac) = f83bd4a30b77ff3ac641d744a4521d8fa40f0d1d
-SHA1 (patch-ad) = 9558c4f30489d2d6c5cd5abd7848128c95ef9f40

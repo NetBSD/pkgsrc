@@ -1,8 +1,0 @@
-The primary purpose of File::Tail is reading and analysing log files while
-they are being written.
-
-The module tries very hard NOT to ``busy-wait'' on a file that has little
-traffic.  If the file does not get altered for a while, File::Tail gets
-suspicious and startschecking if the file was truncated, or moved and
-recreated. If anything like that had happened, File::Tail will quietly
-reopen the file, and continue reading.

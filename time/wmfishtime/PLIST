@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2002/01/19 04:58:49 mjl Exp $
-bin/wmfishtime
-man/man1/wmfishtime.1

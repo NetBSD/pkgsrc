@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.12 2005/10/23 22:57:55 rillig Exp $
-
-SHA1 (xbill-2.0.tgz) = 4ce4e37687801343af5f57c28498bd0b969c0537
-RMD160 (xbill-2.0.tgz) = 8f1551fb5f2bf7b620243ba4787c88c91d00d460
-Size (xbill-2.0.tgz) = 46909 bytes
-SHA1 (patch-aa) = 6dbb52be7523877ae52a5b6f8f913acc2e7d8a5d
-SHA1 (patch-ab) = 13a90b12c94352e228406541db06bacab8cd4a0d
-SHA1 (patch-ac) = c3dd487d0002f528f6726d268673bc11be0b24b6
-SHA1 (patch-ad) = 841d5ff9bbd984b62076a96e82b04e082d09a40c

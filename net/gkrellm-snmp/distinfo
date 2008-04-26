@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 12:13:47 agc Exp $
-
-SHA1 (gkrellm_snmp-0.21.tar.gz) = 7f8dc2eb754da769414a6c64c06d7903e45f3fc5
-RMD160 (gkrellm_snmp-0.21.tar.gz) = ee8a2eaa1f06fdca05a75ed4efeec64b0c63891b
-Size (gkrellm_snmp-0.21.tar.gz) = 17034 bytes
-SHA1 (patch-aa) = b767ba4d279f2cf51417d0528a2f6dee6e114b03
-SHA1 (patch-ab) = d136139689fd2971f5b596db2184e46b20f6bb76

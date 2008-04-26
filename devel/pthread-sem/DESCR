@@ -1,5 +1,0 @@
-  This is a simple POSIX-style semaphore implementation that can be used
-with pthread libraries that don't come with POSIX semaphores.  At the
-moment, this is a quick hack that does not implement all functions.  The
-functions that are implemented are probably not 100% POSIX compliant.  Use
-at your own risk!

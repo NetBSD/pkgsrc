@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/01/11 15:44:30 manu Exp $
-
-In order to use this module in your Apache installation, you need to
-add the following to your httpd.conf file:
-
-  LoadModule radius_auth_module lib/httpd/mod_auth_radius.so
-
-===========================================================================

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/03/08 13:39:21 rillig Exp $
-
-SHA1 (Coin-2.4.4.tar.gz) = 5482b8ad371484ab3194b2bef828297a1b059c33
-RMD160 (Coin-2.4.4.tar.gz) = 6bdeabf38809c2cf0873c85f030fe3392dec89f3
-Size (Coin-2.4.4.tar.gz) = 3784368 bytes
-SHA1 (patch-aa) = 1da1a55e083d330cd21e41686a248b7d0ea552c7
-SHA1 (patch-ab) = c09e209fdece24b844e0e747ab8051bce31cdd27

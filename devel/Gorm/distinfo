@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.23 2007/11/25 14:42:47 adam Exp $
-
-SHA1 (gorm-1.2.2.tar.gz) = ec6b063a5e84440feed8cbedcd202160959f8afe
-RMD160 (gorm-1.2.2.tar.gz) = 34561efee1d991561d99924d1c588390c7a45145
-Size (gorm-1.2.2.tar.gz) = 628338 bytes

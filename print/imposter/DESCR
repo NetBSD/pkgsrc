@@ -1,4 +1,0 @@
-Imposter is a standalone viewer for the presentations created by OpenOffice.org
-Impress software. User interface uses GTK2 toolkit. GNOME Human Interface
-Guidelines are followed but GNOME libraries are not used to keep dependencies
-at minimum.

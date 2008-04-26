@@ -1,4 +1,0 @@
-The Foomatic PPD collection includes suitable PPDs for printers listed
-in the Foomatic printer/driver database.  Together with the
-foomatic-filters package, this collection of PPDs allows many
-non-PostScript printers to function as if they were PostScript printers.

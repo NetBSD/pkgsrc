@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2004/12/04 17:20:46 taca Exp $
-${RUBY_SITEARCHLIBDIR}/readline.${RUBY_DLEXT}
-${RUBY_DOCDIR}/readline/README
-${RUBY_DOCDIR}/readline/README.ja
-@dirrm ${RUBY_DOCDIR}/readline

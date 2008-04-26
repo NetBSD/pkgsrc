@@ -1,8 +1,0 @@
-TCX is a system designed for the transparent decompression, execution
-and recompression of executables under Unix.  It allows configuration
-options such as the type of compression system used (compress(1),
-gzip(1), your own local system etc), timeouts between recompressions,
-and emergency directories in case a decompression fails from shortage
-of disk space.  The system is designed with a reasonable amount of
-robustness in mind, such as in the event of system crashes, or races
-on trying to uncompress, compress or execute something.

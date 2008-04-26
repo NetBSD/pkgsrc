@@ -1,4 +1,0 @@
-A platform independent Sendmail interface module.  This module will
-allow you to send email from perl via sendmail.  The only requirement
-is a network connection.  It has good error reporting abilities in
-addition to good time zone detection.

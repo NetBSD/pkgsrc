@@ -1,3 +1,0 @@
-This library implements SNMP (the Simple Network Management Protocol).
-It is implemented in pure Ruby. You can run this library anywhere
-that Ruby can run.

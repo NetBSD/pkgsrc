@@ -1,5 +1,0 @@
-This is the Ada compiler from the gcc 3.4 compiler suite.
-
-This package has a test target. For testing (only), this
-package requires dejagnu. As part of the tests, acats
-(the Ada compiler validation suite) is run.

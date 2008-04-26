@@ -1,4 +1,0 @@
-Bitstir monitors the level of entropy available from /dev/random and
-generates disk activity to automatically restore this level when it
-gets low.  Programs which block when entropy runs out are delayed only
-momentarily if at all.

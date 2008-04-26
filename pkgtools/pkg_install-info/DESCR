@@ -1,6 +1,0 @@
-This package provides a standalone GNU install-info utility.  It
-used by pkgsrc on systems that do not provide a native install-info
-utility.
-
-An install-info tool and documentation is also available in the
-devel/gtexinfo package.

@@ -1,3 +1,0 @@
-6tunnel can translate between protocol versions on the same host,
-thus offering a way to setup v4/v6 and v6/v4 proxy services.
-It can bind to any of your IPv4 (default) or IPv6 addresses.

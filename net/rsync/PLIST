@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2008/03/11 10:16:43 tron Exp $
-bin/rsync
-man/man1/rsync.1
-man/man5/rsyncd.conf.5
-share/doc/rsync/README
-share/doc/rsync/tech_report.tex
-@dirrm share/doc/rsync

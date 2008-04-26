@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/12/10 13:25:03 obache Exp $
-
-SHA1 (wmi-10.tar.gz) = 46fbafc5d896863f5e22c2d7c77244b21fbd5d35
-RMD160 (wmi-10.tar.gz) = 49ba3c481c6149a815c89d9de5f3233ede25edeb
-Size (wmi-10.tar.gz) = 193148 bytes
-SHA1 (patch-ab) = d0112ad98f1812aa9be96f0531670a02d01de71f
-SHA1 (patch-ac) = cc10b19adf1867926a4bc15de12f64172d3ddcae
-SHA1 (patch-ad) = 91cab093a6111b05652a614b6f160a28617279b3

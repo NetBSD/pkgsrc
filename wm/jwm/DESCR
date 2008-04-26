@@ -1,5 +1,0 @@
-JWM is a light-weight window manager for the X11 Window System.
-It provides a menu, taskbar, key binding, system notification tray,
-pager, a dock, and simple customizations.  JWM is written in C and
-uses only Xlib and the shape extension, libXpm and (optionally)
-libpng. It can support some MWM, GNOME, and WM Spec hints.

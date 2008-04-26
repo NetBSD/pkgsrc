@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.14 2007/12/22 10:57:12 obache Exp $
-
-SHA1 (gtk-send-pr-0.4.9.tar.bz2) = 3f0a091028bdc8d45048f70d58acf1b24fcd3d1a
-RMD160 (gtk-send-pr-0.4.9.tar.bz2) = 1154a6ba3e25d236af0ef514a265f98869c1e5e7
-Size (gtk-send-pr-0.4.9.tar.bz2) = 59582 bytes

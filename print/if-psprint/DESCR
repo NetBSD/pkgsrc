@@ -1,3 +1,0 @@
-if-psprint is intended to print text, postscript, or native printer language
-to an arbitrary printer, either connected to a the local unix server, or
-remote machine via SMB (if samba is installed).

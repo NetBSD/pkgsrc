@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 22:24:13 agc Exp $
-
-SHA1 (elf-0.5.3.tar.gz) = 7cf3ea7d098b239c7b70405a2641dfcd55a49c37
-RMD160 (elf-0.5.3.tar.gz) = f3198b4183c9bd6d288013847e525c21c972afff
-Size (elf-0.5.3.tar.gz) = 43552 bytes
-SHA1 (patch-aa) = 014c15b1f440cd1695ac768883accf7a972350bc

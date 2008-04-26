@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/12 13:39:44 xtraeme Exp $
-bin/skippy
-share/examples/skippy/skippyrc
-@dirrm share/examples/skippy

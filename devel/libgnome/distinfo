@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.32 2008/04/10 16:40:49 drochner Exp $
-
-SHA1 (libgnome-2.22.0.tar.bz2) = 2d263acdd313d37d1018356c74e9d1cc7a9c2e0d
-RMD160 (libgnome-2.22.0.tar.bz2) = 50b0c0fc21e14c45245b95138b40e1ea40084547
-Size (libgnome-2.22.0.tar.bz2) = 1407548 bytes
-SHA1 (patch-af) = 783e295d1714b7c121538ed7459ffbcf3ff3713a
-SHA1 (patch-ag) = cf65f35eb15371c46e603e804ff4b0b9ef820b5f

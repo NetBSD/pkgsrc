@@ -1,5 +1,0 @@
-This package provides the LBX utilities library from modular X.org.
-
-LBX (Low Bandwidth X) is an X server extension which performs
-compression and caching on the X protocol to improve the performance
-of X over low-bandwidth, high-latency links.

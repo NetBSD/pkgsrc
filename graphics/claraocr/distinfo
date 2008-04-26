@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 08:45:04 agc Exp $
-
-SHA1 (clara-0.9.9.tar.gz) = 7d18088ad086d476cce2821497db16f4f444231e
-RMD160 (clara-0.9.9.tar.gz) = 6831d71a5ae383fd025d57050edbabe4a5359666
-Size (clara-0.9.9.tar.gz) = 419529 bytes
-SHA1 (patch-aa) = 3c8ae0031b579917299f314eb34918b7e2b955a1

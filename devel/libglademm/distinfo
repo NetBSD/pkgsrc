@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/10/13 17:52:18 adam Exp $
-
-SHA1 (libglademm-2.6.5.tar.bz2) = 92a347cefcb4e0dc66eda06ba414bfd68dff1e64
-RMD160 (libglademm-2.6.5.tar.bz2) = 64bc9e1200ae07ef1badd5be143f5d57b8ca8d9f
-Size (libglademm-2.6.5.tar.bz2) = 367037 bytes

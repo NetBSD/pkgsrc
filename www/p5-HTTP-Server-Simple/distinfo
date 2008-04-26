@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.4 2008/04/23 20:46:56 wiz Exp $
-
-SHA1 (HTTP-Server-Simple-0.31.tar.gz) = 632018907f2242a86ac86807dacdff024f7ae22c
-RMD160 (HTTP-Server-Simple-0.31.tar.gz) = 022d0466fb7e0e2133f41320ac985839fcae9492
-Size (HTTP-Server-Simple-0.31.tar.gz) = 25067 bytes

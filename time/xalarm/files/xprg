@@ -1,2 +1,0 @@
-#!/bin/sh
-exec xmemo -name @XPRG@ ${1+"$@"} "@PRG@"

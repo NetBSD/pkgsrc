@@ -1,5 +1,0 @@
-This library provides a C++ interface to XML files.  It uses libxml2
-to access the XML files, and in order to configure libxml++ you
-must have both libxml and pkg-config installed.
-
-A newer version of this library is in textproc/libxml++.

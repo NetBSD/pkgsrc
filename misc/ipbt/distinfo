@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/06/12 14:03:27 pooka Exp $
-
-SHA1 (ipbt-r7471.tar.gz) = fe829f38239dd3fb1f882e3a59d31dfae8ec234d
-RMD160 (ipbt-r7471.tar.gz) = 0b6bc5095800a6f8c4801f7d30f15c23c1d9b0b4
-Size (ipbt-r7471.tar.gz) = 177241 bytes
-SHA1 (patch-aa) = 849f97f82ea635f2cb022e5e8c1a86d242734f7e

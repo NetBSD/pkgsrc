@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/06/12 14:48:33 joerg Exp $
-
-SHA1 (sparse-0.3.tar.gz) = 1d868b29234176abd5f3f5463aad1f11d5268dc2
-RMD160 (sparse-0.3.tar.gz) = 36bb7e5611f56c5b222f33a0853e8315af406704
-Size (sparse-0.3.tar.gz) = 177462 bytes
-SHA1 (patch-aa) = 234aa80cdd04835b9a8b2bfe4e41b0c7a1f07ff2
-SHA1 (patch-ab) = 4240f8ff570592da6d838815edcb6a7976f23a07

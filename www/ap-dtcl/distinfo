@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.10 2007/11/30 20:43:08 rillig Exp $
-
-SHA1 (mod_dtcl-0.11.6.tar.gz) = 8a48b2292bb1048b17fd268011d1a4307ef5770e
-RMD160 (mod_dtcl-0.11.6.tar.gz) = 9fe42c888d476029852dad2742accb7b7d654e67
-Size (mod_dtcl-0.11.6.tar.gz) = 90374 bytes
-SHA1 (patch-aa) = 512e310549e475fbd6106eef52d2f789f4a0390b
-SHA1 (patch-ab) = 6eed9b2e971501ddcd1500cab5e16fa6a7037658

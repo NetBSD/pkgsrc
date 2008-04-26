@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 22:24:31 agc Exp $
-
-SHA1 (Pyro-3.4.tar.gz) = 9df62d1fd9036e5b5a468ab4c9670a2fcf79b331
-RMD160 (Pyro-3.4.tar.gz) = d99593d14f0e1596e7bf9eca70a9aea5470e4ef3
-Size (Pyro-3.4.tar.gz) = 217795 bytes
-SHA1 (patch-aa) = e359095c9fed22be396633703fc3f9886f6fe4f6

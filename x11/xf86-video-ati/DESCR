@@ -1,5 +1,0 @@
-This is the video driver for ATI cards for the modular Xorg server.
-Support hardware includes the following chipsets:
-- Radeon
-- Rage 128
-- Mach 64

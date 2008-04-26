@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/13 12:18:48 schmonz Exp $
-bin/qtplay
-man/man1/qtplay.1

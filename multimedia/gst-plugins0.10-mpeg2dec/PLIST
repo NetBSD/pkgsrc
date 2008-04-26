@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/06/14 10:58:55 drochner Exp $
-lib/gstreamer-0.10/libgstmpeg2dec.la

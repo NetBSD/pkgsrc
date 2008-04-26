@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.16 2008/04/18 14:58:32 tron Exp $
-
-SHA1 (libcdio-0.80.tar.gz) = 40c1558a65a9eca2b693d1951ed2664efbe7d1ed
-RMD160 (libcdio-0.80.tar.gz) = 3ca404bffb107ad950505b8ccd9e659e306545cb
-Size (libcdio-0.80.tar.gz) = 2083287 bytes
-SHA1 (patch-aa) = 8e70ee2840c19da3efc0c47dfa9f7ea400a1ec2e
-SHA1 (patch-ab) = a2bcb4fec5acf46ede7386287dec3d0d4aa0d81e
-SHA1 (patch-ac) = 7932908d34f8d1cc7946bce6a6d61d5036d102d6

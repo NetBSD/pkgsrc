@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/06/30 18:31:52 joerg Exp $
-
-SHA1 (b116.tgz) = 5c149c54f2d55bc16e1ccf84c811234c5b1d7285
-RMD160 (b116.tgz) = 7cec7b35e2b5ce89b81e8e3f10d0db9838a8cbf5
-Size (b116.tgz) = 381894 bytes
-SHA1 (patch-aa) = a5b12fb2a0b7483bd0591d004c87642a394d4253

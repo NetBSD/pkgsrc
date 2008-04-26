@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/02 12:26:08 obache Exp $
-
-SHA1 (mell-1.0.0.tar.gz) = a682bc230db30f11496c6fd6c680028086d1f516
-RMD160 (mell-1.0.0.tar.gz) = 5d45bee16f4e889ba5e87c4cf8c6d72dc2541153
-Size (mell-1.0.0.tar.gz) = 54979 bytes
-SHA1 (patch-aa) = b680bd1c40e9e7e94ca93744293b8eb8afac7154
-SHA1 (patch-ab) = e484c2935ea9b06559a0a289c152218d86845a0f

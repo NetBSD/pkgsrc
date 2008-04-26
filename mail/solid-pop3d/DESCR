@@ -1,6 +1,0 @@
-The Solid POP3 Server is an implementation of a Post Office Protocol
-version 3 server that has flexibility as its main goal. The server is
-easily configurable and has support for few features such as APOP
-authentication scheme, virtual hosting, maildir and mailbox handling,
-bulletins and expiration of messages. Each user can specify position and
-type of his maildrop.

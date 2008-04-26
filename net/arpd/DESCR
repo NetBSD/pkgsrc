@@ -1,3 +1,0 @@
-arpd provides a simple way to configure static ARP entries for addresses
-in given networks, with the ability to exclude subnets and hosts within
-them.

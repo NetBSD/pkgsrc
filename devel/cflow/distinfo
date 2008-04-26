@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2006/08/14 13:44:43 rpaulo Exp $
-
-SHA1 (cflow-1.1.tar.gz) = 57355331ffab12c502d2cbfc7b5d216a266911a1
-RMD160 (cflow-1.1.tar.gz) = 1063a4edd400362e379d54a20064344106f8a684
-Size (cflow-1.1.tar.gz) = 515770 bytes

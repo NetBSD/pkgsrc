@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/08/11 02:53:02 gdt Exp $
-
-SHA1 (libdrg-0.0.81.tar.gz) = 48e45c91710adce23e6cf41a8c5d0368681db1a6
-RMD160 (libdrg-0.0.81.tar.gz) = 2fb8b5fee6464ec47c2ada9f474304003edfee6c
-Size (libdrg-0.0.81.tar.gz) = 320228 bytes

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.10 2007/08/08 21:02:53 joerg Exp $
-
-SHA1 (tavrasm-1.22/tavrasm.tar.gz) = 9d19035b9fcc460a33a85338010541824633c417
-RMD160 (tavrasm-1.22/tavrasm.tar.gz) = 1e0f4553be660ebcfa44b2a9d81b3936997492e2
-Size (tavrasm-1.22/tavrasm.tar.gz) = 65685 bytes
-SHA1 (patch-aa) = 45442e39cee3daaf08361811ec8607b59c223a2c
-SHA1 (patch-ab) = 209bbf9f2ce809d0d7460355258ab5b6d955d9a6

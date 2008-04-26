@@ -1,2 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/29 15:42:15 joerg Exp $
-${PYSITELIB}/SwishE.so

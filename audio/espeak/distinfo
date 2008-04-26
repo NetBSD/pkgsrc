@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.3 2008/02/28 20:16:55 drochner Exp $
-
-SHA1 (espeak-1.31-source.zip) = e33291b29153d0fc179da11ac4a61cc85fba679a
-RMD160 (espeak-1.31-source.zip) = a26596f25d8897848238d81fe5e5d179d47f01a6
-Size (espeak-1.31-source.zip) = 1204202 bytes
-SHA1 (patch-aa) = a01dccb651c0160a7af5af14f3292578c8396ae0
-SHA1 (patch-ab) = 37e434f3c3e2fb722f927da4ca83a2b814c28879
-SHA1 (patch-ac) = e94b0597b0c104daaa24b6421b5bcf69147b1046

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/12/05 20:49:53 rillig Exp $
-
-SHA1 (icbirc-1.8.tar.gz) = 99ff8674b189fdf8a86b6acd2bc19418b888c38b
-RMD160 (icbirc-1.8.tar.gz) = 769c35949b79b9e401d99026800e61063e6d1103
-Size (icbirc-1.8.tar.gz) = 11061 bytes
-SHA1 (patch-aa) = 97441a0fb639095fc9e10290aa0d8b125f59285b

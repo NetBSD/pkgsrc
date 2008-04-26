@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:54:57 zuntum Exp $
-bin/bounce
-man/man1/bounce.1

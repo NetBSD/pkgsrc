@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/26 11:38:41 obache Exp $
-lib/gtk-2.0/2.10.0/immodules/im-thai-libthai.la
-@comment in gtk2: @dirrm lib/gtk-2.0/2.10.0/immodules

@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/05/02 20:33:59 reed Exp $
-bin/cambevao
-share/doc/cambevao.README
-share/examples/cambevao/cambevao.xml
-share/examples/rc.d/cambevao
-@dirrm share/examples/cambevao

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:24:31 jlam Exp $
-
-SHA1 (merb-mailer-0.9.2.gem) = c676b029691fd1f8993a8fd38d02f80d9df31384
-RMD160 (merb-mailer-0.9.2.gem) = 1b7236e34ebeca6034f232b58db07ec9b7b50d99
-Size (merb-mailer-0.9.2.gem) = 10240 bytes
-SHA1 (patch-aa) = 65d9c04666980ad9a267eadb32eaafef4f16a57a

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/07/17 19:23:45 drochner Exp $
-bin/espeak-synthesis-driver
-lib/bonobo/servers/GNOME_Speech_SynthesisDriver_Espeak.server
-@comment in libbonobo: @dirrm lib/bonobo/servers

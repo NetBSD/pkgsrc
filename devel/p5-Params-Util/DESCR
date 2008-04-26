@@ -1,5 +1,0 @@
-"Params::Util" provides a basic set of importable functions that
-makes checking parameters a hell of a lot easier.
-
-The functions provided by "Params::Util" check in the most strictly
-correct manner, and in should not be fooled by odd cases.

@@ -1,7 +1,0 @@
-The Getopt::Long module implements an extended getopt function
-called GetOptions(). This function adheres to the POSIX syntax for
-command line options, with GNU extensions. In general, this means
-that options have long names instead of single letters, and are
-introduced with a double dash "--". Support for bundling of command
-line options, as was the case with the more traditional single-letter
-approach, is provided but not enabled by default.

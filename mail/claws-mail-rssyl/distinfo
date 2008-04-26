@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2008/01/10 01:57:27 smb Exp $
-
-SHA1 (rssyl-0.17.tar.gz) = 8531d9a5eac8a4688bd88e3ef1e33604e52bb965
-RMD160 (rssyl-0.17.tar.gz) = 7ba0fa3261ee3234360af117194c9b6b036a0c73
-Size (rssyl-0.17.tar.gz) = 472774 bytes
-SHA1 (patch-aa) = af0f39ff0527ae8a4ea23ce88d1b4f2a323470f3

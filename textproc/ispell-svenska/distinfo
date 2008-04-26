@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:48:43 agc Exp $
-
-SHA1 (iswedish-1.2.1.tar.gz) = c26c851123a427b495ca9ac10c443ec23efa8e3a
-RMD160 (iswedish-1.2.1.tar.gz) = 4d5a040018b12d06f4d8f45f89eb775ba6f88aab
-Size (iswedish-1.2.1.tar.gz) = 122346 bytes
-SHA1 (patch-aa) = c0f1d8a8ba1b61fb1e6675bb9232fe50124f2171

@@ -1,6 +1,0 @@
-A progress bar for things that take a while.  It looks like
-
-  50% [=====     ]
-
-and is as long as the terminal.  Linear estimation of the time left for
-the process to run is available.

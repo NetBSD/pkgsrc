@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/11/09 21:40:20 tonio Exp $
-
-SHA1 (jadetex-3.13.tar.gz) = fa70595ad3b1dc9dae2b4f5051ab28261808769c
-RMD160 (jadetex-3.13.tar.gz) = d28ea2f55892c26fe04eea2faace15e9b646cef4
-Size (jadetex-3.13.tar.gz) = 103137 bytes
-SHA1 (patch-aa) = 13b7def2fb8ee8f07096ae1bf34158af689a8b42

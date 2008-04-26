@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/08/14 21:41:06 drochner Exp $
-
-SHA1 (streamripper-1.61.27.tar.gz) = bdbf0e301c3c783e1f13c2977508afd5076328ad
-RMD160 (streamripper-1.61.27.tar.gz) = 14b55b91e3b995515d6978383f9fc618fe92bbcb
-Size (streamripper-1.61.27.tar.gz) = 1227559 bytes
-SHA1 (patch-aa) = 1150430aa345f78c58d7a207433947a4241ecf29
-SHA1 (patch-ab) = d1fc536498e0216eec469da7f89d4b1712082e0f

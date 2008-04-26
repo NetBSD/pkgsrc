@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/12/16 15:25:41 bouyer Exp $
-
-SHA1 (netdisco-0.95_with_mibs.tar.gz) = 0aedc3ba409be8f6697b18eac9f839ea22cb6d53
-RMD160 (netdisco-0.95_with_mibs.tar.gz) = 138dba8d7e31d6f0ea35a0b41f3d76d705637713
-Size (netdisco-0.95_with_mibs.tar.gz) = 8318725 bytes
-SHA1 (patch-aa) = 8b235fd46284866cc5e2b5f8c682c316900c9b04
-SHA1 (patch-ad) = 88afec93b9d2e642a88ca9a422a3a511d2f5f4a3

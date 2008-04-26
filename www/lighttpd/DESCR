@@ -1,6 +1,0 @@
-Lighttpd is a secure, speedy, compliant, and very flexible web-server
-which is designed and optimized for for high-performance environments.
-With a small memory footprint compared to other web-servers, effective
-management of the CPU-load, and advanced feature set (FastCGI, SCGI,
-Auth, Output-Compression, URL-Rewriting and many more) lighttpd is the
-perfect solution for every server that is suffering load problems.

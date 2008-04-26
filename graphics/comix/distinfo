@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.10 2008/04/19 14:28:46 tonnerre Exp $
-
-SHA1 (comix-3.6.4.tar.gz) = c14a1ba9d931436eb7215f8065f1bbda22f00409
-RMD160 (comix-3.6.4.tar.gz) = 8cd0f6459f56efb35cea7b7a899e4420796535d7
-Size (comix-3.6.4.tar.gz) = 398202 bytes
-SHA1 (patch-aa) = 2bb137273d14134c5c040ae7fd6b83d665cbaeb8
-SHA1 (patch-ab) = 4445829d4c9f20ca783adc26089ab042488288bf

@@ -1,9 +1,0 @@
-identd that does IPv6, IPv4 and NAT with IPv4.
-
-NOTE: You should not rely on the data integrity the identd protocol
-tries to provide you with. If you think you need this, you really need
-protocols which do strong host and/or user authentication such as ssh
-and IPsec in conjunction with audit trails.
-
-Note also that this package is not very efficient in that it runs
-several processes per connection.

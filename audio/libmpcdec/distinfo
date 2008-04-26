@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/01/25 19:31:34 drochner Exp $
-
-SHA1 (libmpcdec-1.2.4.tar.bz2) = 2522288ac1baf12854b92c219662bfc9bd88067b
-RMD160 (libmpcdec-1.2.4.tar.bz2) = d2414d1cbfacbdbcd479ce6855e3e439ccb6098a
-Size (libmpcdec-1.2.4.tar.bz2) = 259859 bytes

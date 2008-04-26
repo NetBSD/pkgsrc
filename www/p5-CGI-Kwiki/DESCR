@@ -1,9 +1,0 @@
-A Wiki is a website that allows its users to add pages, and edit any
-existing pages.
-
-You can create a new kwiki website with a single command. The module
-has no prerequisite modules, except the ones that ship with Perl.
-It doesn't require a database backend, although it could be made to
-use one. The default kwiki behaviour is fairly full featured, and includes
-support for html tables. Any behaviour of the kwiki can be customized,
-without much trouble.

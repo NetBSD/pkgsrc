@@ -1,8 +1,0 @@
-KKBSwitch is a keyboard layout indicator for KDE 2 or 3.
-It is useful when you have configured the XKeyboard extension
-of your X Server to have more than one keyboard group (layout),
-for example US/ASCII and Russian. KKBSwitch displays an icon
-in the system tray that indicates which layout is currently active.
-Note that KKBSwitch does not help you configure XKeyboard,
-it merely serves as the indicator of the current layout.
-You still have to configure XKeyboard by editing the XF86Config file.

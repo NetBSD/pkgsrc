@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/04 09:35:33 minskim Exp $
-
-SHA1 (sgb.tar.gz) = 3dec52ac3352a09fb6478dd04e8321a6832eb5d1
-RMD160 (sgb.tar.gz) = 5d9361770ebc0d66124fa845205d4ecdf8eaa313
-Size (sgb.tar.gz) = 493841 bytes
-SHA1 (patch-aa) = 310fb196a09cdc0255d491ebad9d3c2ec1c18c38

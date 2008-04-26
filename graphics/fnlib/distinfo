@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 08:45:05 agc Exp $
-
-SHA1 (fnlib/fnlib-0.5.tar.gz) = 0dd7053e443ea5d22e4864fe6997b77901118335
-RMD160 (fnlib/fnlib-0.5.tar.gz) = b47d35467eba385863dfc661db33fa69664f85cf
-Size (fnlib/fnlib-0.5.tar.gz) = 473740 bytes
-SHA1 (patch-aa) = 79050e44ffc9029881a35402937a8ed67be677bd

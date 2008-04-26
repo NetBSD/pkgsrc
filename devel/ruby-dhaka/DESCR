@@ -1,3 +1,0 @@
-Dhaka is a set of tools for generating tokenizers, parsers and evaluators
-for context-free grammars.  It is written solely in Ruby with no native
-extensions and no dependencies.

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/25 01:48:02 heinz Exp $
-bin/convmv
-man/man1/convmv.1

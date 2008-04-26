@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/06/21 18:47:02 minskim Exp $
-
-SHA1 (par2cmdline-0.4.tar.gz) = 2fcdc932b5d7b4b1c68c4a4ca855ca913d464d2f
-RMD160 (par2cmdline-0.4.tar.gz) = e98dc84fa7a4304b8d71c1d373fdce0bca1e6290
-Size (par2cmdline-0.4.tar.gz) = 239312 bytes
-SHA1 (patch-aa) = cb2cc7bb718cd003fea2afc1f278d5d8a46381e0

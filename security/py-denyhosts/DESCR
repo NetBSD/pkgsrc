@@ -1,7 +1,0 @@
-DenyHosts is a script intended to be run by system administrators
-to help thwart SSH server attacks (also known as dictionary based
-attacks and brute force attacks).
-
-In short, it does this by monitoring your syslog output for failed
-login attempts and tweaking /etc/hosts.deny accordingly, and it can
-optionally send and fetch lists of ssh probers from a central server.

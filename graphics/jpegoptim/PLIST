@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/02/03 21:50:29 cube Exp $
-bin/jpegoptim
-man/man1/jpegoptim.1

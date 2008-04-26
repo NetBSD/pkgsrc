@@ -1,7 +1,0 @@
-The suPHP Apache module together with suPHP itself provides an easy way
-to run PHP scripts with different users on the same server.
-
-It provides security, because the PHP scripts are not run with the
-rights of the webserver's user. In addition to that you probably won't
-have to use PHP's "safe mode", which applies many restrictions on the
-scripts.

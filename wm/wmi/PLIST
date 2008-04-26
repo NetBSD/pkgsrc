@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/05/16 02:20:01 xtraeme Exp $
-bin/wmi
-bin/wmiremote
-man/man1/wmi.1
-man/man1/wmiremote.1
-man/man5/actions.conf.5
-man/man5/common.conf.5
-man/man5/session.conf.5
-man/man5/theme.conf.5

@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/12/30 23:29:36 joerg Exp $
-
-SHA1 (bwbasic-2.20pl2/bwbasic-2.20.tar.Z) = b96ff440c573b9aac17dfd90830e3defa46a5592
-RMD160 (bwbasic-2.20pl2/bwbasic-2.20.tar.Z) = a6ae5cdde2aa18228258314a34b776d3681cb0e8
-Size (bwbasic-2.20pl2/bwbasic-2.20.tar.Z) = 485971 bytes
-SHA1 (patch-aa) = 45a1ff2c8e76a8f8c7d1c1f4876acb8e0bb55add
-SHA1 (patch-ab) = 7c2efa205c5866733bfd99dbd102aa517afc819f
-SHA1 (patch-ac) = 286c3f91c90b33d1bab2de1581900129661ca74a

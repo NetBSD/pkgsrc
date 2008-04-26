@@ -1,6 +1,0 @@
-gnuserv allows you to attach to an already running Emacs.  This allows
-external programs to make use of Emacs' editing capabilities.  It is
-like GNU Emacs' emacsserver/server.el, but has many more features.
-
-This is the gnuserv part of XEmacs split out for use in GNU Emacs.  If
-you use XEmacs you do not need this package.

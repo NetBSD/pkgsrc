@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2005/02/23 20:39:46 agc Exp $
-
-SHA1 (gtkmserv-0.5.2.tar.gz) = 59829ef0c2a438b6f35577effbeaff5ed91ccd0d
-RMD160 (gtkmserv-0.5.2.tar.gz) = 073cabc485d4abca55d545c230b9023d021d95cc
-Size (gtkmserv-0.5.2.tar.gz) = 22441 bytes
-SHA1 (patch-aa) = b9b0b62d0444c5e793ea0f331444b25417e1a882

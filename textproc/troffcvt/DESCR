@@ -1,5 +1,0 @@
-troffcvt  is  a translator that turns troff input into a form that can
-be  more  easily  processed.  The  troffcvt  distribution  comes  with
-postprocessors  that  turn  troffcvt  into various destination formats
-such  as  HTML  (Hypertext Markup Language), RTF (Rich Text Format) or
-plain text.

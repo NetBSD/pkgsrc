@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/01/29 16:42:52 joerg Exp $
-
-SHA1 (wmmemmon-1.0.1.tar.gz) = de394a55e3386f5e0c06524c4ddea79f51f8d17b
-RMD160 (wmmemmon-1.0.1.tar.gz) = 8e120a5f039cf206163abfc1cf4287f3f8413a60
-Size (wmmemmon-1.0.1.tar.gz) = 145287 bytes
-SHA1 (patch-aa) = 85098c03d12329cd1363bdee62b6d373152411f3

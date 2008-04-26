@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/23 23:34:29 rpaulo Exp $
-bin/WMmp
-man/man1/WMmp.1

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/24 08:07:42 obache Exp $
-man/man8/sdist.8
-sbin/sdist

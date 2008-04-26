@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.3 2008/04/12 22:43:15 jlam Exp $
-${PLIST.XvMC}lib/libviaXvMC.la
-${PLIST.XvMC}lib/libviaXvMCPro.la
-lib/xorg/modules/drivers/via_drv.la
-man/man4/via.4
-@comment @dirrm lib/xorg/modules/drivers
-@comment @dirrm lib/xorg/modules
-@comment @dirrm lib/xorg

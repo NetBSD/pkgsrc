@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.13 2008/03/24 18:40:19 adrianp Exp $
-
-SHA1 (ircu2.10.12.12.tar.gz) = 1b4876d7de2d31bb515b1f6dcb35a12b28ab81d9
-RMD160 (ircu2.10.12.12.tar.gz) = 263155d56ae96556b971aed40eed97ac56501224
-Size (ircu2.10.12.12.tar.gz) = 1013342 bytes
-SHA1 (patch-ah) = 2ffd8cc861bbe8aad697bd3b8ca63aa145104eea
-SHA1 (patch-ai) = 308d4087e5dc182bfe299a4e5157719bff2a914f

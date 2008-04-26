@@ -1,9 +1,0 @@
-# $NetBSD: DEINSTALL,v 1.1 2007/07/29 05:19:00 jlam Exp $
-
-case "${STAGE}" in
-DEINSTALL)
-	# Run any actions that require root privileges.
-	${TEST} ! -x ./+ROOT_ACTIONS ||
-		./+ROOT_ACTIONS REMOVE ${PKG_METADATA_DIR} || exit 1
-	;;
-esac

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/11/29 18:47:28 wiz Exp $
-
-SHA1 (libgpod-0.6.0.tar.gz) = 09b660324785cec122b5df62f1825ebd595c4ecc
-RMD160 (libgpod-0.6.0.tar.gz) = 684ea4276cd2c1fbe4c415a8ac931d8777e8c2fb
-Size (libgpod-0.6.0.tar.gz) = 843097 bytes
-SHA1 (patch-aa) = 1b9bc0a84875d7aaf52a6e49ce9024fa4096250c

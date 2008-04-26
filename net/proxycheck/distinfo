@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2005/02/24 12:14:01 agc Exp $
-
-SHA1 (proxycheck-0.49a.tar.gz) = bca196026391aac6d1bc9733439be3838610443b
-RMD160 (proxycheck-0.49a.tar.gz) = d7c473dcdc7aebe403221f041b613d372dfa483f
-Size (proxycheck-0.49a.tar.gz) = 38879 bytes

@@ -1,9 +1,0 @@
-Berkeley DB XML is an application-specific native XML data manager
-built on Berkeley DB, the world's most widely deployed data management
-engine.  Berkeley DB XML provides fast, reliable, scalable and
-cost-effective storage and retrieval for native XML data and
-semi-structured data.
-
-Berkeley DB XML is supplied as a library that links directly into the
-application's address space.  This provides superior performance by
-eliminating bottlenecks that occur in client-server systems.

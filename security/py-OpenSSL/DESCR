@@ -1,4 +1,0 @@
-pyOpenSSL is a Python module that is a rather thin wrapper around (a
-subset of) the OpenSSL library.  A lot of the object methods do
-nothing more than call a corresponding function in the OpenSSL
-library.

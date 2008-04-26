@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.10 2005/12/12 00:34:41 joerg Exp $
-
-SHA1 (streamtuner-0.99.99.tar.gz) = d912dbe1741ba9d14342ab6d9d818f06e97f6b59
-RMD160 (streamtuner-0.99.99.tar.gz) = b2f7dbc47a148e4c195f85b8f5e77bb843bb7d4e
-Size (streamtuner-0.99.99.tar.gz) = 948075 bytes
-SHA1 (patch-aa) = 5f5605d8724f40c97156d492dd12aed3260f4e3f

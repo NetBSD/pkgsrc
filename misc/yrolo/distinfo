@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.8 2007/07/27 23:56:16 joerg Exp $
-
-SHA1 (yrolo-1.1.tar.gz) = 3d2f6f36ad57a41dca940a28a6139a381e5f7a33
-RMD160 (yrolo-1.1.tar.gz) = ce680e2ee1d02a291d2506fbda438fdfa9fa4ce3
-Size (yrolo-1.1.tar.gz) = 79332 bytes
-SHA1 (patch-aa) = db7853c0af6b305e237ee9f373768f865377a910
-SHA1 (patch-ab) = 11e7bdf23566626da247a1eb11a3351ca6591954

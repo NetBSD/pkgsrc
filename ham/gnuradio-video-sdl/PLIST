@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/08/08 03:22:05 wulf Exp $
-include/gnuradio/swig/video_sdl.i
-include/gnuradio/video_sdl_sink_s.h
-include/gnuradio/video_sdl_sink_uc.h
-${PYSITELIB}/gnuradio/_video_sdl.la
-${PYSITELIB}/gnuradio/video_sdl.py
-${PYSITELIB}/gnuradio/video_sdl.pyc
-${PYSITELIB}/gnuradio/video_sdl.pyo

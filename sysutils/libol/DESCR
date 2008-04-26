@@ -1,3 +1,0 @@
-libol is a library written by the author of syslog-ng, Balazs
-Scheidler, which is used in syslog-ng.  A built copy of libol needs to
-be present on a system when syslog-ng is built.

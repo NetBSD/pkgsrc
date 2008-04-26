@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 12:06:56 agc Exp $
-
-SHA1 (otter-3.0.6.tar.gz) = 4d62fbeaf3464641bf63c2cd97a15a13ee81a858
-RMD160 (otter-3.0.6.tar.gz) = 7bcf1ca173ed06dc34d46a242ec5adbd5dca494b
-Size (otter-3.0.6.tar.gz) = 764045 bytes
-SHA1 (patch-aa) = 7e36860368e3cbfcc56b1b1c2e25ff6e0b092e17
-SHA1 (patch-ab) = ea7da3af08c16c8bccb6c7a950debc96c7cf2388

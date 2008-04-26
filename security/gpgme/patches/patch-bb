@@ -1,9 +1,0 @@
-$NetBSD: patch-bb,v 1.1 2006/10/20 15:25:22 shannonjr Exp $
-
---- assuan/assuan-errors.c.orig	2005-10-01 15:15:12.000000000 -0600
-+++ assuan/assuan-errors.c
-@@ -107,4 +107,3 @@ assuan_strerror (AssuanError err)
- 
-   return s;
- }
--

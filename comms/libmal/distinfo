@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.8 2007/07/30 08:07:00 joerg Exp $
-
-SHA1 (libmal-0.44.tar.gz) = 82b55ff6ccfa71a9f004663b8e7754a5514d22e1
-RMD160 (libmal-0.44.tar.gz) = da3f6217a32073e688524c15907e2d5e8494abf3
-Size (libmal-0.44.tar.gz) = 454980 bytes
-SHA1 (patch-aa) = 4578532862f064677df973bbfc810a7e75d60541
-SHA1 (patch-ab) = 054e5062519cc982f5e9caee4904a20a8510e1e7
-SHA1 (patch-ac) = 08bbd30da889e7c0ee1931573636aae13c4e0628

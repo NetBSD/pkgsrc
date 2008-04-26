@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/24 13:40:53 agc Exp $
-
-SHA1 (gnome-pkgview-1.0.6.tar.gz) = 975e1897441312177015d4ef27c785684a30d26d
-RMD160 (gnome-pkgview-1.0.6.tar.gz) = 62c1927b617eb098e11ec74db1fc5b944b3d485e
-Size (gnome-pkgview-1.0.6.tar.gz) = 222563 bytes
-SHA1 (patch-aa) = bdcfb7c4e89b80c73b050e8f92681c578292168d

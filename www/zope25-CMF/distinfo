@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:08:40 wiz Exp $
-
-SHA1 (zope/CMF-1.3.1.tar.gz) = 512a4d01cd1f108a1c0315a24cfc90f68ee8a422
-RMD160 (zope/CMF-1.3.1.tar.gz) = 8b5741dd0cb7c13a14da1818f5050e591372e3c7
-Size (zope/CMF-1.3.1.tar.gz) = 557690 bytes

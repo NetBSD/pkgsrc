@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2006/01/09 22:14:32 joerg Exp $
-
-SHA1 (focal.tar.gz) = 704d1411365085fb47ff25c1a77ae1f8e7fa601e
-RMD160 (focal.tar.gz) = 6b06cc08b2761035c315ae13b80d64a5e7a6004b
-Size (focal.tar.gz) = 12561 bytes
-SHA1 (patch-aa) = f37f7271b0a7fe508bee1bf1630229096efb21d0
-SHA1 (patch-ab) = f42b9f219bfee5a0deaae5d030989a6bc4ae2e77

@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:20 wiz Exp $
-
-If you want to use Egg key binding on kinput2, then
-you should run
-
-kinput2 -ccdef ccdef.kinput2.egg
-
-===========================================================================

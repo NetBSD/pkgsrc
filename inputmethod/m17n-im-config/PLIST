@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/27 14:07:46 obache Exp $
-bin/m17n-im-config
-include/m17n-im-config.h
-lib/libm17n-im-config.la
-lib/pkgconfig/m17n-im-config.pc
-share/locale/fr/LC_MESSAGES/m17n-im-config.mo
-share/locale/ja/LC_MESSAGES/m17n-im-config.mo

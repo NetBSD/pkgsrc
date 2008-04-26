@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/03/23 21:38:02 reed Exp $
-
-SHA1 (micro_httpd_12dec2005.tar.gz) = 9246997f9b83cee8d1b42778d4e2f8a87b679b00
-RMD160 (micro_httpd_12dec2005.tar.gz) = d5eacf573951203aaf6040c7509e868a893869bd
-Size (micro_httpd_12dec2005.tar.gz) = 5109 bytes
-SHA1 (patch-aa) = c42274a95b90c15926c21c0d6785a8af0f01d192

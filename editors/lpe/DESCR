@@ -1,6 +1,0 @@
-LPE is a small, efficient programmer's editor for UNIX systems.  It has grown
-from the result of a single night of hacking into a very capable and very
-versatile editor that defines its own philosophy of text editing.  That
-philosophy is that awk and sed are the right tools for most advanced editing
-jobs, and a text editor should make simple operations easy and make text look
-good.

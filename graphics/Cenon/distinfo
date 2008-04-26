@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/11/30 19:53:02 rillig Exp $
-
-SHA1 (Cenon-3.83.tar.bz2) = 3dca565e928b255ef73eafb5a227d6e70e170157
-RMD160 (Cenon-3.83.tar.bz2) = cea5c17065650349737c2edf95df029cac9ef15d
-Size (Cenon-3.83.tar.bz2) = 2162127 bytes
-SHA1 (patch-aa) = 3c84810aa89ef43dc5c1ebeaadba392be81a4115
-SHA1 (patch-ab) = d03cea657573cdbde6e18ff8697d7dfbcb54b8f3

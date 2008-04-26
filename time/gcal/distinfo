@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/09/22 01:38:50 minskim Exp $
-
-SHA1 (gcal-3.01.tar.gz) = 2f8dda0f759760c38beccd07fb73b18b392d6920
-RMD160 (gcal-3.01.tar.gz) = 01b54c72df3cbae242d221745343db4a9f3615cb
-Size (gcal-3.01.tar.gz) = 2371244 bytes
-SHA1 (patch-aa) = 4dd11184acc9e4f1d9dcba796a14b68adb012a87
-SHA1 (patch-ab) = eb85707cf22603be7ba43a3e1478b510c8d45645
-SHA1 (patch-ac) = 67fd170face9176330a94aa05133710848386aec

@@ -1,6 +1,0 @@
-This is a copy of the NetBSD sed(1) program, for use on operating
-systems where the native sed(1) is limited in the number of
-expressions it will accept.
-
-sed is a stream editor, used for transforming its input stream into
-a modified output stream.

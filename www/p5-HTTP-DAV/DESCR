@@ -1,3 +1,0 @@
-This is HTTP::DAV.  It contains the perl5 module to interface with a
-WebDav enabled server.  This also includes the 'dave' command line utility
-which acts like a command line ftp interface to a WebDav server.

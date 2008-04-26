@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/24 19:06:03 agc Exp $
-libexec/u9fs
-man/man8/u9fs.8

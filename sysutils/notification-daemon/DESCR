@@ -1,3 +1,0 @@
-notification-daemon is an application that shows notifications sent by
-other applications on your desktop in the form of popups.  It is based
-on the libnotify library.

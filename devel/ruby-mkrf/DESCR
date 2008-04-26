@@ -1,4 +1,0 @@
-mkrf is a library for generating Rakefiles.  It is primarily for
-building C extensions for Ruby, but will be able to be used for generic
-Rakefile generation as well.  Main goals include simple use and reuse
-in other projects.

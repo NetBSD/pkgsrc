@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/08/15 21:45:51 joerg Exp $
-
-SHA1 (xman-1.0.3.tar.bz2) = 1612166e4ccc93e9e18904c0d297b0135ee5dd62
-RMD160 (xman-1.0.3.tar.bz2) = 39989b375681370700b711a198580650502a7638
-Size (xman-1.0.3.tar.bz2) = 142846 bytes
-SHA1 (patch-aa) = fffdcd64260e5e7977c5ce9be5c6793ce0d457bc
-SHA1 (patch-ab) = a03693cc8867d96759e78a01e8f5c02f999c7f80

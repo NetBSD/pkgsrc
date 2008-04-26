@@ -1,9 +1,0 @@
-Un fonts are GPL'd Korean fonts.  They were originally available as
-PostScript fonts for HLaTeX, and later converted into TrueType fonts.
-This package contains the following 9 core fonts.
-
- * UnBatang, UnBatangBold: serif
- * UnDotum, UnDotumBold: sans-serif
- * UnGraphic, UnGraphicBold: sans-serif style
- * UnPilgi, UnPilgiBold: script
- * UnGungseo: cursive, brush-stroke

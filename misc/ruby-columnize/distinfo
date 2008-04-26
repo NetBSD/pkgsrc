@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/04/17 17:23:24 jlam Exp $
-
-SHA1 (columnize-0.1.gem) = ee0ae8309529dc3f16902cef5e9dd82df02ae02c
-RMD160 (columnize-0.1.gem) = e9920606528ede3e98fcebe4e5348de0e1a6a918
-Size (columnize-0.1.gem) = 14336 bytes
-SHA1 (patch-aa) = 914a3cd3e583fd32cbcdc64fb77fa56a29491520

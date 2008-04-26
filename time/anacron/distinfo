@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/01/22 04:21:41 joerg Exp $
-
-SHA1 (anacron-2.3.tar.gz) = d0e154123585e9faf615d67230d82d7d1b4c099a
-RMD160 (anacron-2.3.tar.gz) = 613de5f8612871d92f6059c6cd324899f6fb8fcb
-Size (anacron-2.3.tar.gz) = 24140 bytes
-SHA1 (patch-aa) = d11218f289d48b6a12ce2a5a59f645a04695214d
-SHA1 (patch-ab) = 7934402cd051cf0e5e434716a7c4ac677f993e2a
-SHA1 (patch-ac) = ee6554ccd85d4152f3c3059b547f20991d0a897c

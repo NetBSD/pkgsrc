@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2002/11/17 09:02:00 salo Exp $
-bin/bash
-bin/bashbug
-man/man1/bash.1
-man/man1/bashbug.1

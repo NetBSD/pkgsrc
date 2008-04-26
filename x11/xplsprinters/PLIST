@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/04/12 15:06:23 joerg Exp $
-bin/xplsprinters
-man/man1/xplsprinters.1

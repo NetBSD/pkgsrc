@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 23:11:56 agc Exp $
-
-SHA1 (exult-1.2.tar.gz) = 81f9d3d428c80990b8e970a4dee5c85a7236dace
-RMD160 (exult-1.2.tar.gz) = 339231edf84507f05115ab3189875cb15be9c04f
-Size (exult-1.2.tar.gz) = 1722259 bytes
-SHA1 (patch-aa) = 2acecb0c4e2da2769559d9603a08930c30b38c72
-SHA1 (patch-ab) = 039fd49b570ad5796a43d86fb679b517c4149f13

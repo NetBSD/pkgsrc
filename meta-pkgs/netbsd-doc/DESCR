@@ -1,8 +1,0 @@
-Meta-package that includes all packages needed for the NetBSD
-Documentation project to convert SGML/DocBook to HTML.
-
-A separate web browser is strongly recommended.
-
-Set the SGML_CATALOG_FILES environment variable to a colon-separated list
-of catalog files. You can produce such a list with
-	find /usr/pkg/share/sgml -name catalog | tr '\012' :

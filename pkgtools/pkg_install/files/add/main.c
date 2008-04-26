@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.14 2008/03/01 19:06:10 rillig Exp $	*/
+/*	$NetBSD: main.c,v 1.14.4.1 2008/04/26 17:44:23 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.16 1997/10/08 07:45:43 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.14 2008/03/01 19:06:10 rillig Exp $");
+__RCSID("$NetBSD: main.c,v 1.14.4.1 2008/04/26 17:44:23 joerg Exp $");
 #endif
 #endif
 
@@ -60,12 +60,6 @@ Boolean NoInstall = FALSE;
 Boolean NoRecord = FALSE;
 Boolean Automatic = FALSE;
 
-char   *Mode = NULL;
-char   *Owner = NULL;
-char   *Group = NULL;
-char   *PkgName = NULL;
-char   *Directory = NULL;
-char    FirstPen[MaxPathSize];
 int     Replace = 0;
 
 static void
@@ -73,7 +67,7 @@ usage(void)
 {
 	(void) fprintf(stderr, "%s\n%s\n%s\n",
 	    "usage: pkg_add [-AfhILnRuVv] [-K pkg_dbdir] [-m machine] [-p prefix]",
-	    "               [-s verification-type] [-t template] [-W viewbase] [-w view]",
+	    "               [-s verification-type] [-W viewbase] [-w view]",
 	    "               [[ftp|http]://[user[:password]@]host[:port]][/path/]pkg-name ...");
 	exit(1);
 }
@@ -126,13 +120,11 @@ main(int argc, char **argv)
 			Prefix = optarg;
 			break;
 
+#if 0
 		case 's':
 			set_verification(optarg);
 			break;
-
-		case 't':
-			strlcpy(FirstPen, optarg, sizeof(FirstPen));
-			break;
+#endif
 
 		case 'u':
 			Replace++;

@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.8 2007/02/08 20:12:25 drochner Exp $
-
-SHA1 (etherape-0.9.7.tar.gz) = 72e5e570530a89ea962a17e55723318010e9a8e5
-RMD160 (etherape-0.9.7.tar.gz) = e2e6ade6869d9472fd862c1b1d1b11f0d11789c3
-Size (etherape-0.9.7.tar.gz) = 860868 bytes
-SHA1 (patch-aa) = 3a8f8260fb1d9d410d40d452e242e240a4750d14
-SHA1 (patch-ab) = c3638bd0fb154b1f95be7253bb2f0fb944e8b8fb

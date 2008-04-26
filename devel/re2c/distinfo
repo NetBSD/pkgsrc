@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.8 2007/08/24 14:56:13 heinz Exp $
-
-SHA1 (re2c-0.12.3.tar.gz) = 54340f9d2913b4ecc1ce552a5d6290f482a89cb9
-RMD160 (re2c-0.12.3.tar.gz) = 614cb47afc2142514987b3816efcbbf033d981d1
-Size (re2c-0.12.3.tar.gz) = 618144 bytes

@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/09/26 23:27:37 xtraeme Exp $
-bin/mesure
-share/doc/mesure/mesure.txt
-man/man1/mesure.1

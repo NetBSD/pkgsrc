@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/04/02 22:18:58 ben Exp $
-
-SHA1 (jcabc2ps-src.tar.gz) = 6dbd9d00453c97ccf04cf707e6c4db88361c3bea
-RMD160 (jcabc2ps-src.tar.gz) = e454dc1d787c9b5a833316f5edb5dff463e6daa4
-Size (jcabc2ps-src.tar.gz) = 550842 bytes
-SHA1 (patch-aa) = fe4235fbf9ef6e364fda51849f9b1dddf4af6d76
-SHA1 (patch-ab) = 8fd77d205e902eabc0338de6b88169735c812f42

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/05/29 04:58:06 gendalia Exp $
-
-SHA1 (allinone.patch) = 16631a912955fcf57e86d923522e6dde899cdcd8
-RMD160 (allinone.patch) = 52773fbb89f67e7a53782da9a4c3a05e42452914
-Size (allinone.patch) = 287659 bytes
-SHA1 (hobbit-4.2.0.tar.gz) = 9a784696f6d7211f60f07d575cb1142bbf4661d2
-RMD160 (hobbit-4.2.0.tar.gz) = d3633c32f4fa7961d1069df2eb39104e9c891be2
-Size (hobbit-4.2.0.tar.gz) = 2341167 bytes
-SHA1 (patch-ab) = 8be66af4b877958f2bc64e18494c67a73acd4360

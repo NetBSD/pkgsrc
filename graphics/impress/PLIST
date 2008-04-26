@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/01/08 18:28:20 minskim Exp $
-bin/impress
-bin/impress.tcl
-bin/transeps
-bin/font3d

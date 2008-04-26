@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2006/05/20 23:38:16 wiz Exp $
-
-    You should set up create a chrooted filesystem and create
-    repositories.  Read the README file in ${PREFIX}/share/doc/cvsd
-    for more details on setting up the environment.
-
-===========================================================================

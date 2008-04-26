@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2008/02/18 16:39:43 xtraeme Exp $
-
-SHA1 (pnet-0.8.0.tar.gz) = 3d048cbef0476f21cbdd86f81c1706f52b7a7218
-RMD160 (pnet-0.8.0.tar.gz) = 232f96fb92be2cab4109ab03845bafa84c3d0259
-Size (pnet-0.8.0.tar.gz) = 4510420 bytes

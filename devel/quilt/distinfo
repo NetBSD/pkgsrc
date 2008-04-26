@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/01/08 08:28:58 apb Exp $
-
-SHA1 (quilt-0.46.tar.gz) = 9344c1289f262053beb0196645b41ea5d9cda597
-RMD160 (quilt-0.46.tar.gz) = 508d6b4f8c1283b20acf8a757d4b3dfc3b8a7961
-Size (quilt-0.46.tar.gz) = 403984 bytes
-SHA1 (patch-aa) = 2fa6118a27a82c28fe4302b8668c19cbd106ed7d

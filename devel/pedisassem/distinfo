@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/08/29 19:57:09 rillig Exp $
-
-SHA1 (dsasmsrc.zip) = bc50eb6786dd0f5c68e61036587e04919721156c
-RMD160 (dsasmsrc.zip) = fac4e2e37f5b3c6649a32e4ed6004079e2cb60bb
-Size (dsasmsrc.zip) = 104759 bytes
-SHA1 (patch-aa) = fa289b7dad71b9c732681dd57ffd06a9118dc2d3
-SHA1 (patch-ab) = 5ee866f0bc5faa6658485b0b5a77dd2e84aa781a
-SHA1 (patch-ac) = ad261e1f1b3672021441d7a9a78534a6054a026f
-SHA1 (patch-ad) = 7f9b97c1f17595ec527103405c07fb3fb38edaf3

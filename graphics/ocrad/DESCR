@@ -1,6 +1,0 @@
-GNU Ocrad is an OCR (Optical Character Recognition) program based
-on a feature extraction method. It reads a bitmap image in pbm or
-pgm formats and produces text in byte (8-bit) or UTF-8 formats.
-
-Ocrad includes a layout analyser able to separate the columns or
-blocks of text normally found on printed pages.

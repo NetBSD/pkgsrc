@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/05/19 01:14:07 adrianp Exp $
-
-SHA1 (PyX-0.9.tar.gz) = 79daf941f0ad36126471567879aaf6f94d21ccc4
-RMD160 (PyX-0.9.tar.gz) = 095148e1cf5af028724ba3abf52794741e72d084
-Size (PyX-0.9.tar.gz) = 351451 bytes
-SHA1 (patch-aa) = 789d1a8209334f4258c4e404cdf0b0daf1d4f18f

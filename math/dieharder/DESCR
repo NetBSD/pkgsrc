@@ -1,3 +1,0 @@
-DieHarder is a test suite for random number generators.  It includes a
-reimplementation in C of the well-known Diehard test suite as well as
-additional tests.

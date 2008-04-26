@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST.common_end,v 1.2 2004/05/10 15:56:21 minskim Exp $
-@dirrm lib/xmms/Output
-@dirrm lib/xmms/General
-@dirrm lib/xmms

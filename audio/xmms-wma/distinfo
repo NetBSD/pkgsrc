@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2008/01/06 18:21:37 rillig Exp $
-
-SHA1 (xmms-wma-1.0.5.tar.bz2) = 168a97e540601c7ad939a7d06ab3c23eb73ebdb9
-RMD160 (xmms-wma-1.0.5.tar.bz2) = 7c2418fce81f41bffe699e676b62fbb1ca24456a
-Size (xmms-wma-1.0.5.tar.bz2) = 146687 bytes
-SHA1 (patch-aa) = 817d7969c904d46cced1fbd93c753fa3d84f461a
-SHA1 (patch-ab) = 6a7daf57e68ca1bde8c9f9fb14af25843f5ba34e
-SHA1 (patch-ad) = aee4ea1a154f71b2d4d1672bd8226ed76e0f909a

@@ -1,4 +1,0 @@
-rcorder is designed to print out a dependency ordering of a set of
-interdependent files. Typically it is used to find an execution
-sequence for a set of shell scripts in which certain files must be
-executed before others (such as rc.d startup and shutdown scripts).

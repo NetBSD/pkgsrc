@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/23 03:37:26 atatat Exp $
-bin/binpatch
-man/man1/binpatch.1

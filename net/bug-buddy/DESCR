@@ -1,3 +1,0 @@
-This is a graphical bug reporting tool for GNOME2.  It can extract
-debugging information from a core file or crashed application (via
-gnome_segv).

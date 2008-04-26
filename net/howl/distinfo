@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.7 2006/01/01 18:27:53 tron Exp $
-
-SHA1 (howl-1.0.0.tar.gz) = 0592b72e8d2fac24e737cf3455969a95c6505e24
-RMD160 (howl-1.0.0.tar.gz) = f8eb6633d9edbb62038795ea66dcbf9dca4cffc1
-Size (howl-1.0.0.tar.gz) = 542782 bytes
-SHA1 (patch-aa) = 1766b2457f52a81f649e8b22c453a55342846a27

@@ -1,8 +1,0 @@
-KBarcode is a barcode and label printing application for KDE 3. It can
-be used to print every thing from simple business cards up to complex
-labels with several barcodes (e.g. article descriptions). KBarcode
-comes with an easy to use WYSIWYG label designer, a setup wizard,
-batch import of labels (directly from the delivery note), thousands
-of predefined labels, database managment tools and translations
-in many languages. All major types of barcodes like EAN, UPC, CODE39,
-DataMatrix and ISBN are supported.

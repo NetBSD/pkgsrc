@@ -1,6 +1,0 @@
-This package provides the ACPICA user-space utilities built upon
-the same kernel code. The following utilities are provided:
-
-    * ASL Compiler & Disassembler
-    * ACPI Simulator (AcpiExec)
-    * ACPI Table Extractor

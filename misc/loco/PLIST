@@ -1,7 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 01:28:47 zuntum Exp $
-bin/loco
-man/man1/loco.1
-share/doc/loco/COPYRIGHT
-share/doc/loco/README
-share/doc/loco/loco.html
-@dirrm share/doc/loco

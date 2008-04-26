@@ -1,5 +1,0 @@
-Xbacklight is used to adjust the backlight brightness where supported.
-It finds all outputs on the X server supporting backlight brightness
-control and changes them all in the same way.
-
-This is from the modular X.org X11 project.

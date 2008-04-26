@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/09/23 13:22:45 dmcmahill Exp $
-
-SHA1 (gtkwave-3.1.1.tar.gz) = badbc85ff3b4a74a79180f6610205b8f0cafbc12
-RMD160 (gtkwave-3.1.1.tar.gz) = cb8fcc31d5bcfc0bf700a62f72f1376fa66c349e
-Size (gtkwave-3.1.1.tar.gz) = 2736384 bytes

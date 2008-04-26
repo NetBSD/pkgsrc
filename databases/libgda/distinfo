@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.30 2007/08/04 11:13:37 obache Exp $
-
-SHA1 (libgda-3.0.1.tar.bz2) = 78c9054c4c40463020b8f62da72fca909dd9df03
-RMD160 (libgda-3.0.1.tar.bz2) = a9a1f71cc3a6faf8086bf3044b8de91dfc3f3032
-Size (libgda-3.0.1.tar.bz2) = 2866965 bytes
-SHA1 (patch-ab) = 2304f46df0500f3f15af210fcb1f9770df59e99e
-SHA1 (patch-ad) = 5deb66dc704027625ce6fc795d880779a4b69d4b
-SHA1 (patch-ak) = dafc05f5697a733a32d135bb08b9a4275673d359
-SHA1 (patch-al) = 0267218fb02aa3e011bddc1675d2f427a97c954f

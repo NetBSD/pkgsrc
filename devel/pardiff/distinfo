@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/01/09 17:57:15 joerg Exp $
-
-SHA1 (pardiff-0.9.4.tar.gz) = 285248293feb87a03d410caa9193c4ac47f9942d
-RMD160 (pardiff-0.9.4.tar.gz) = a573efe90c9bcdb2bad85c3c7a2240b0db5878ab
-Size (pardiff-0.9.4.tar.gz) = 40325 bytes
-SHA1 (patch-aa) = 04d6ee8e9ca5c939c5729beb171f81c04a6c46f2
-SHA1 (patch-ab) = 7916dc6cc60468e338a8d349baed07d6e153ae6d

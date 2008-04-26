@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 20:39:48 agc Exp $
-
-SHA1 (malint-0.2.tar.gz) = 6aa79cfcaef0764727f87b3ef9c64644f8458dae
-RMD160 (malint-0.2.tar.gz) = 9f9b5176dce068d2151ec9513a3291ed99b15988
-Size (malint-0.2.tar.gz) = 100607 bytes

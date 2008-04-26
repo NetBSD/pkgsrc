@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/01/13 16:03:48 wiz Exp $
-
-SHA1 (monsterz-0.7.1.tar.gz) = 8fb1933b7141a058e7b55f85537873e65568cb00
-RMD160 (monsterz-0.7.1.tar.gz) = 6497b3c561f4a7c31b903a380d916778e44de5b8
-Size (monsterz-0.7.1.tar.gz) = 1879537 bytes
-SHA1 (patch-aa) = 59d0e33054001e57c107a92554a77b684b4c60f0

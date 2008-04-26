@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/09/07 05:42:25 taca Exp $
-
-SHA1 (synergy-1.3.1.tar.gz) = 03113ec8aadfecaeba8e369b083f4fb5b44f5c62
-RMD160 (synergy-1.3.1.tar.gz) = 5f5d7cb8fcfb57a6c8eae83fb53c704cb85c6c16
-Size (synergy-1.3.1.tar.gz) = 793172 bytes
-SHA1 (patch-aa) = da4ad36cdcec251bf4334c2dccd68346042894de
-SHA1 (patch-ab) = fae459f7063a6a879b385a94d5e889877c94860d
-SHA1 (patch-ac) = 4a5ac29f4d4c51ea03d985a2d481259a1a733dc7

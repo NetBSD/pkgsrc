@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/02/23 16:33:06 agc Exp $
-
-SHA1 (jdb-1.13.tar.gz) = 112a113fb11fdc69c8352707a3480a5c90c247db
-RMD160 (jdb-1.13.tar.gz) = 15cc7a5a17d99ea25531845ee26467b7f2e02524
-Size (jdb-1.13.tar.gz) = 143843 bytes

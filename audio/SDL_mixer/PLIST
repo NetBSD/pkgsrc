@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2004/09/22 08:09:14 jlam Exp $
-bin/playmus
-bin/playwave
-include/SDL/SDL_mixer.h
-lib/libSDL_mixer.la

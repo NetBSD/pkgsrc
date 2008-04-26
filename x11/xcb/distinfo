@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.5 2006/02/06 12:13:09 rpaulo Exp $
-
-SHA1 (xcb-2.4.tar.gz) = 9c9075a45366b15c25692628e90cb383c0381ecb
-RMD160 (xcb-2.4.tar.gz) = a6edcdac89091d69d49aa176f05237fbf546d092
-Size (xcb-2.4.tar.gz) = 19830 bytes

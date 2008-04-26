@@ -1,7 +1,0 @@
-GT-ITM contains code to generate graphs that model the topological
-structure of internetworks.  In addition, some sample graphs are
-provided.  More detail on most of the methods can be found in the
-paper:
-
-"How to Model an Internetwork," Ellen Zegura, Ken Calvert,
-and Samrat Bhattacharjee, Proceedings of IEEE Infocom '96.

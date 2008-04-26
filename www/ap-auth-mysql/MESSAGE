@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2004/07/16 11:28:19 jdolecek Exp $
-
-In order to use this module in your Apache installation, you need to
-add the following to your httpd.conf file:
-
-  LoadModule auth_mysql_module ${PREFIX}/lib/httpd/mod_auth_mysql.so
-
-===========================================================================

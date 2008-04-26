@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2006/02/23 21:16:16 joerg Exp $
-
-SHA1 (viewfax-2.4.tar.gz) = 97162d138010acae67801a3ce3923095b8f3889c
-RMD160 (viewfax-2.4.tar.gz) = ed3525abd05ff1c1aaf84639d49c0b4824461e33
-Size (viewfax-2.4.tar.gz) = 55892 bytes
-SHA1 (patch-aa) = ce794583417c801ec1cad0ae933233f25f2c128a

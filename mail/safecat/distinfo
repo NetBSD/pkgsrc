@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2008/02/16 15:21:40 heinz Exp $
-
-SHA1 (safecat-1.13.tar.gz) = 07b42cb06490abeacefce9429a1dbf96caa1629b
-RMD160 (safecat-1.13.tar.gz) = 614df1d43d13a638ab30a2921b66d78f3fafc4c6
-Size (safecat-1.13.tar.gz) = 33953 bytes
-SHA1 (patch-aa) = 2e06a02df248b91e2b1fda9f783c53a10081b196
-SHA1 (patch-ab) = 59b4876e127ebffdbd3cad83a37e3971d9736e8f

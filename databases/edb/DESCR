@@ -1,8 +1,0 @@
-  Edb is a database abstraction layer to Berkeley Databases.  Edb contains
-the source for DB 2.7.7, thus freezing the database format on disk, making
-sure it will never become incompatible.  Edb wraps this with a convenience
-and optimization API layer, making database access easy, fast and
-consistent. It handles typing of information in the database and much
-more.  Edb is *VERY* fast and all of Enlightenment 17 configuration
-management is built on top of it - every configuration file is a database
-- including Ebits files.

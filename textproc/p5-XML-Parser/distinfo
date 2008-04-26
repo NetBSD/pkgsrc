@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.8 2007/11/29 14:25:46 wiz Exp $
-
-SHA1 (XML-Parser-2.36.tar.gz) = 74acac4f939ebf788d8ef5163cbc9802b1b04bfa
-RMD160 (XML-Parser-2.36.tar.gz) = 1c31a2398ada943efd5d2451389e163914168253
-Size (XML-Parser-2.36.tar.gz) = 230002 bytes
-SHA1 (patch-aa) = f8f863d1016547d4f7e177a6d2b7d63089c5a403

@@ -1,9 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/08/15 17:55:41 joerg Exp $
-
-SHA1 (xf86-video-tdfx-1.3.0.tar.bz2) = 8089883c87b64c2876b9152b4820901cc6273f57
-RMD160 (xf86-video-tdfx-1.3.0.tar.bz2) = 31fc8fa884ad669278344164bc7118b1f5edcec8
-Size (xf86-video-tdfx-1.3.0.tar.bz2) = 261448 bytes
-SHA1 (patch-aa) = c6a83f95062b7e7cdf4eedab6dfb1112def41bb9
-SHA1 (patch-ab) = c6167275098624bc3542306f10bfde81f3e9ff7f
-SHA1 (patch-ac) = fed8d44cca95b1d47841239191bfd65811a19aa1
-SHA1 (patch-ad) = 18ee966cc8b3e1939eb853b9c3d295bed0b471da

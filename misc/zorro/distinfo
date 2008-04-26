@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2008/01/04 05:41:52 obache Exp $
-
-SHA1 (zorro-1.1p8.tar.gz) = 216c1b1c3c652791f89661c92abb39059d5086ce
-RMD160 (zorro-1.1p8.tar.gz) = 85f126b4906dbd680080ba8b88c810361ed2340f
-Size (zorro-1.1p8.tar.gz) = 14672 bytes
-SHA1 (patch-ab) = 9c435cdd2192e7ccef543a3f325ec30cf4f9865a

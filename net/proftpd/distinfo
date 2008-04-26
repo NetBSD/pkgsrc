@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.25 2007/10/12 10:06:20 martti Exp $
-
-SHA1 (proftpd-1.3.1.tar.bz2) = 0b54286492967172c5355e2f489f9665b46591e5
-RMD160 (proftpd-1.3.1.tar.bz2) = ed47f7a7c446b01c3d00d2d25d89573c787da905
-Size (proftpd-1.3.1.tar.bz2) = 2243888 bytes
-SHA1 (patch-aa) = d7ad034e763a2bf729c9af669c3094402bdd03b7
-SHA1 (patch-ab) = f214c7b321028bda1c27d654059b2a1d6aa73cbc
-SHA1 (patch-ac) = be33bb40718c4f5a124e2c80ad5dfe8db28e3af3

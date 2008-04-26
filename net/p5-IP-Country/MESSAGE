@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2006/06/11 19:38:05 heinz Exp $
-
-If you wish to use the IP::Country::MaxMind wrapper for the MaxMind GeoIP
-database, the package net/p5-Geo-IP must also be installed.  No additional
-packages are required in order to use the builtin IP::Country::Fast and
-IP::Country::Medium modules.
-
-===========================================================================

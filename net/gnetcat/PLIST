@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2007/12/21 20:38:53 joerg Exp $
-bin/netcat
-info/netcat.info
-man/man1/netcat.1
-share/locale/it/LC_MESSAGES/netcat.mo
-share/locale/sk/LC_MESSAGES/netcat.mo

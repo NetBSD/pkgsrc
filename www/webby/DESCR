@@ -1,3 +1,0 @@
-Webby is a static website generator tool.  Rake tasks are used to
-convert erb, textile, markdown, etc. formatted files into HTML suitable
-for publication to a web server.

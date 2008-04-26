@@ -1,5 +1,0 @@
-This is a fibonacci-heap priority-queue implementation.  This project
-is different from K. Kodamas PQueue in that it allows a decrease key
-operation.  That makes PriorityQueue usable for algorithms like
-dijkstras shortest path algorithm, while PQueue is more suitable for
-Heapsort and the like.

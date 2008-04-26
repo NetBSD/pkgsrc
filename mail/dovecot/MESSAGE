@@ -1,8 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2007/09/23 18:07:17 ghen Exp $
-
-The Dovecot configuration file format has changed between 0.99.x
-and 1.0.  If you are upgrading from 0.99.x, be sure to read
-http://wiki.dovecot.org/Upgrading/1.0 to avoid any issues.
-
-===========================================================================

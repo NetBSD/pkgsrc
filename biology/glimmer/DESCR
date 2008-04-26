@@ -1,6 +1,0 @@
-Glimmer (Gene Locator and Interpolated Markov Modeler) is a system for finding
-genes in microbial DNA, especially the genomes of bacteria and archaea.
-Glimmer uses interpolated Markov models (IMMs) to identify the coding regions
-and  distinguish them from noncoding DNA. The IMM approach uses a combination
-of Markov models from 1st through 8th-order, weighting each model according to
-its predictive power.

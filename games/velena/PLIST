@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2007/07/25 22:55:35 rillig Exp $
-bin/velena
-share/doc/velena/README
-share/velena/white_ob.cn4

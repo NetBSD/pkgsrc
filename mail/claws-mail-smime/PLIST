@@ -1,4 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1 2007/08/03 02:34:59 smb Exp $
-lib/claws-mail/plugins/smime.deps
-lib/claws-mail/plugins/smime.la
-@dirrm lib/claws-mail/plugins

@@ -1,9 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/13 22:05:21 adrianp Exp $
-man/man5/dhclient.conf.5
-man/man5/dhclient.leases.5
-man/man8/dhclient-script.8
-man/man8/dhclient.8
-sbin/dhclient
-share/examples/isc-dhcp-client/dhclient.conf
-share/examples/rc.d/isc_dhclient
-@dirrm share/examples/isc-dhcp-client

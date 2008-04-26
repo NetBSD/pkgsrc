@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.2 2005/09/07 20:21:37 bouyer Exp $
-lib/libgpsim_oscilloscope.la
-share/examples/gpsim-oscilloscope/tst_txdot.asm
-share/examples/gpsim-oscilloscope/tst_txdot.stc
-@dirrm share/examples/gpsim-oscilloscope

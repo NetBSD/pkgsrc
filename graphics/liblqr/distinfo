@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/05 02:00:39 tnn Exp $
-
-SHA1 (liblqr-1-0.1.0-2.tar.gz) = 0cfe35c404b36e50b122937d189b7608bb4f1e89
-RMD160 (liblqr-1-0.1.0-2.tar.gz) = 9f196e89f165b25806cd60fbec859d6b8ed7fc89
-Size (liblqr-1-0.1.0-2.tar.gz) = 369098 bytes

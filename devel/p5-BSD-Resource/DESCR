@@ -1,3 +1,0 @@
-This module provides a Perl interface to part of the BSD process
-resource library.  It allows the use of the {get,set}rlimit and
-getrusage BSD C Library routines from perl.

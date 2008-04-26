@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/04/20 14:01:00 obache Exp $
-
-SHA1 (parrot-0.4.11.tar.gz) = 1aff85f941155d7f3758431cb1383138cf635c3a
-RMD160 (parrot-0.4.11.tar.gz) = ffec3ad25d80e60c3d977e787602e90efd7c729d
-Size (parrot-0.4.11.tar.gz) = 4113878 bytes
-SHA1 (patch-aa) = 19b64813750a1714438e2db45e0487381e401187

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/11 14:55:45 agc Exp $
-
-SHA1 (djmount-0.71.tar.gz) = 527d4603d85b7fb86dc97d326b78c97bdcc4d687
-RMD160 (djmount-0.71.tar.gz) = 695e2ea0cd3fe654339f82c5101eb74da739d3f7
-Size (djmount-0.71.tar.gz) = 1159653 bytes
-SHA1 (patch-aa) = 5cc9d72ee0035f51ff968862a54adad055fae7b9

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/05/31 13:01:01 seb Exp $
-bin/ack
-man/ja_JP.EUC/man1/ack.1

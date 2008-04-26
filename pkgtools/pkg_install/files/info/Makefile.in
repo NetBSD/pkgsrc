@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.14 2008/04/04 15:21:32 joerg Exp $
+# $NetBSD: Makefile.in,v 1.14.2.1 2008/04/26 17:44:23 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -16,7 +16,7 @@ BOOTSTRAP=	@bootstrap@
 CC=		@CC@
 CCLD=		$(CC)
 .if empty(BOOTSTRAP)
-LIBS=		-linstall -larchive -lbz2 -lfetch -lz @LIBS@
+LIBS=		-linstall -larchive -lfetch -lbz2 -lz @LIBS@
 CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib
 .else
 LIBS=		-linstall @LIBS@

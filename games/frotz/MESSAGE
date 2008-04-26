@@ -1,9 +1,0 @@
-===========================================================================
-$NetBSD: MESSAGE,v 1.2 2002/09/24 12:30:00 wiz Exp $
-
-To enable the '-f' and '-b' options, you must set the TERM environment
-variable to the name of a terminfo entry that supports color. Both
-'color_xterm' and 'xterm-16color' are known to work with the X11R6
-xterm distributed with NetBSD-1.4.1.
-
-===========================================================================

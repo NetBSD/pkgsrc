@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/06/23 08:01:08 minskim Exp $
-
-SHA1 (xmorph_20060817.tar.gz) = 7eeb4d59c937c155dc36d97c43a27da629bf0a1e
-RMD160 (xmorph_20060817.tar.gz) = 0ce2138ad0a590b4ecc404758c026d38f720557e
-Size (xmorph_20060817.tar.gz) = 1564280 bytes
-SHA1 (patch-aa) = 0ece4ac06bbc772471ef8847bfe8151e3299bd26
-SHA1 (patch-ab) = 75079fb481f3875d5c984b5b6a1d395ba139a588

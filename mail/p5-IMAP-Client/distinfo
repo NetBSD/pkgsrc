@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1 2007/10/11 15:49:57 tv Exp $
-
-SHA1 (IMAP-Client-0.13.tar.gz) = 3a6c41ca69575269b0b7c58719f3ca7cede412c5
-RMD160 (IMAP-Client-0.13.tar.gz) = b4c290f0e6f69489d2f54d3da48bb6dcda27eb61
-Size (IMAP-Client-0.13.tar.gz) = 45201 bytes

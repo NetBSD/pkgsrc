@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.2 2008/01/18 02:54:15 bjs Exp $
-
-SHA1 (xdm-1.1.6.tar.bz2) = 9b5642407f01bbdaa8ad699e2d2417bd26372c53
-RMD160 (xdm-1.1.6.tar.bz2) = 24f5d5fef2e608b7a0a0f7efd174e4d536663c90
-Size (xdm-1.1.6.tar.bz2) = 394175 bytes
-SHA1 (patch-aa) = f2308286759f5af228fea0e0dfe4934b56a4b591

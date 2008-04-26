@@ -1,9 +1,0 @@
-Florist is the FSU open-source implementaton
-of IEEE Standard 1003.5b-1996, the POSIX Ada
-binding, including real-time extensions. This
-software provides access to the UNIX operating
-system services for application programs
-written in the Ada programming language.
-
-Florist is written in Ada and requires an
-installed Ada compiler.

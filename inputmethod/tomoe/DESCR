@@ -1,5 +1,0 @@
-Tomoe is originally a handwriting character recognition engine.
-
-Current Tomoe does not only provide handwriting recognition engine but also
-provide other character searching API such as searching by readings, stroke
-counts, radicals, valiations and so on.

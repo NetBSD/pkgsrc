@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.6 2007/09/05 16:42:16 drochner Exp $
-
-SHA1 (libofx-0.8.3.tar.gz) = 0fa22f0535c1f50d4b9056f6f86d1429f1c8485f
-RMD160 (libofx-0.8.3.tar.gz) = a5c9acd6af4ce252d5a0941c82436af72961cd7c
-Size (libofx-0.8.3.tar.gz) = 971250 bytes
-SHA1 (patch-aa) = 639e3a0d4204966ff318e27aa9eea79e2783c00e
-SHA1 (patch-ab) = 1afecedcc76ac45824a13da1d2a39881c734a179

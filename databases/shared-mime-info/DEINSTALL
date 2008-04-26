@@ -1,9 +1,0 @@
-# $NetBSD: DEINSTALL,v 1.1 2006/06/15 20:40:15 jlam Exp $
-
-MIMEDB_PATH="@MIMEDB_PATH@"
-
-case ${STAGE} in
-POST-DEINSTALL)
-	${RM} -rf ${MIMEDB_PATH}
-	;;
-esac

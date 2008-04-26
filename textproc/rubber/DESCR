@@ -1,9 +1,0 @@
-Rubber is a building system for LaTeX documents.
-
-It is based on a routine that runs just as many compilations as necessary.  The
-module system provides a great flexibility that virtually allows support for
-any package with no user intervention, as well as pre- and post-processing of
-the document.  The standard modules currently provide support for bibtex,
-dvips, dvipdfm, pdftex, makeindex.  A good number of standard packages are
-supported, including graphics/graphicx (with automatic conversion between
-various formats and Metapost compilation).

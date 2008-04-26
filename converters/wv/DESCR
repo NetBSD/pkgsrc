@@ -1,8 +1,0 @@
-wv is a library which allows access to Microsoft Word files.
-It can load and parse the Word 6-9 formats (Word 6, 95, 97, 2000).
-
-And several converter executables called wvWare are also provided:
-	wvHtml, wvLatex, wvCleanLatex, wvDVI, wvPS, wvPDF,
-	wvText, wvAbw, wvWml, wvMime
-
-Note: wvHtml is previously known as MSWordView.

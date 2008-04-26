@@ -1,3 +1,0 @@
-Mule-UCS is an Emacs Lisp library providing flexible and complehensible
-encoding mechanism to Emacs. As the name suggests, it supports Unicode, which
-the original Emacs doesn't support.

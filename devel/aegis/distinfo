@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.6 2006/10/07 08:50:41 rillig Exp $
-
-SHA1 (aegis-4.22.tar.gz) = 52e1d6c8b72a8bcc131669e228745b5a53d5e479
-RMD160 (aegis-4.22.tar.gz) = a028d6c350ed5ea5f1f498f74a9b9f8c2c1da750
-Size (aegis-4.22.tar.gz) = 3797655 bytes
-SHA1 (patch-ac) = 33ba0ea39710659fe6499cb08530e2f039164b3c

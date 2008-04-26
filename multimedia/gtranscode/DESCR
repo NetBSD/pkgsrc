@@ -1,8 +1,0 @@
-gtranscode is a GTK+ GUI (graphical use interface) front-end for transcode in
-order to make this powerful tool easier to use.  transcode is a powerful video
-and audio processing tool that can read in just about any format of video
-and/or audio and convert to just as many different formats.  In addition to
-transcode's extremely flexible modular concept for reading/writing different
-formats and codecs, it can apply filters, do re-sampling, resizing, cropping,
-and more.  The cost from all this comes in the form of over 100 command line
-options which gtranscode aims to simplify.

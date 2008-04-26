@@ -1,9 +1,0 @@
-Rtunes streams files containing Apple Lossless audio data to
-an Apple AirPort Express device.  If a '-' is given as the
-file(s) argument, rtunes expects raw PCM audio data on stdin
-and encodes it to the Apple Lossless format prior to streaming
-it.  With this method it is possible to stream audio data from
-any source that can output raw PCM audio data on stdout.
-
-NOTE: the patch and mplayer helper library for this package are
-untested; it is installed merely as a convenience.

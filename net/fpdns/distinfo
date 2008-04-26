@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/09/08 12:03:07 wiz Exp $
-
-SHA1 (fpdns-0.9.1.tar.gz) = c880bbc47be0e9dda5b79cfa8860d1f4bc39a214
-RMD160 (fpdns-0.9.1.tar.gz) = 610645f0302c18a26741d2e9b45296340272f0b3
-Size (fpdns-0.9.1.tar.gz) = 8583 bytes

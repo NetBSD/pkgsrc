@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2002/12/09 11:07:20 ad Exp $
-sbin/dpteng
-sbin/dptutil

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2007/01/03 12:09:19 obache Exp $
-
-SHA1 (wmctrl-1.07.tar.gz) = a123019a7fd5adc3e393fc1108cb706268a34e4d
-RMD160 (wmctrl-1.07.tar.gz) = b19b23c7368875b62ffef71780915b439b2c09d5
-Size (wmctrl-1.07.tar.gz) = 87820 bytes
-SHA1 (patch-aa) = 1531a6a6f02d195c10d4ead305aacb6aef1ce66a

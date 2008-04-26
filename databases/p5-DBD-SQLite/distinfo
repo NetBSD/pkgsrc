@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.9 2007/10/29 21:53:25 adrianp Exp $
-
-SHA1 (DBD-SQLite-1.14.tar.gz) = 68e13a5f1ba1249962930140a0b0e3b587401ab7
-RMD160 (DBD-SQLite-1.14.tar.gz) = 07616d3db7de55134588fca7dff3dec5091ffc77
-Size (DBD-SQLite-1.14.tar.gz) = 703380 bytes

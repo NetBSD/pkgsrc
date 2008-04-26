@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.9 2006/09/23 13:02:17 ben Exp $
-
-SHA1 (cabextract-1.2.tar.gz) = 871b3db4bc2629eb5726659c147aecea1af6a6d0
-RMD160 (cabextract-1.2.tar.gz) = 55292e287047b14945e69b0be8ab9ff1d4902f71
-Size (cabextract-1.2.tar.gz) = 194006 bytes

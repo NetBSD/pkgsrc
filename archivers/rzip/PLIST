@@ -1,5 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/29 15:29:04 recht Exp $
-bin/runzip
-bin/rzip
-man/man1/runzip.1
-man/man1/rzip.1

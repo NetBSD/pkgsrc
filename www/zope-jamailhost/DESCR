@@ -1,3 +1,0 @@
-MailHost is Zope-integrated feature to send mail from Web applications,
-but can not send Japanese mail correctly.
-This "jaMailHost" product will solve this problem.

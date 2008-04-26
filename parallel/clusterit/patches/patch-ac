@@ -1,8 +1,0 @@
---- dsh/run.c.orig	2008-02-27 12:29:38.000000000 -0700
-+++ dsh/run.c	2008-02-27 14:49:30.000000000 -0700
-@@ -48,5 +48,4 @@
- #endif
- 
--extern int errno;
- 
- void do_command(char **argv, int allrun, char *username);

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.5 2007/02/01 10:21:58 drochner Exp $
-
-SHA1 (libmusepack-1.0.3.tar.bz2) = 2c2bc15f960c4593bee209fed939829e82ad030c
-RMD160 (libmusepack-1.0.3.tar.bz2) = 532a982c6e4af68d802812661c396a50db523c23
-Size (libmusepack-1.0.3.tar.bz2) = 226099 bytes
-SHA1 (patch-aa) = e4842ead0a8eced96b59cb4ce4062557464e49bb

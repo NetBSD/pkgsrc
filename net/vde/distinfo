@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/07/11 03:23:29 grant Exp $
-
-SHA1 (vde-1.5.9.tar.gz) = 5c4b478c718783b4a7e42fd3128e2095b5d94680
-RMD160 (vde-1.5.9.tar.gz) = b829263dc074110d95687add76b8227ca85d00e1
-Size (vde-1.5.9.tar.gz) = 437770 bytes
-SHA1 (patch-aa) = 934810045bd01e77fad382ec39ab09c1f2f5badb

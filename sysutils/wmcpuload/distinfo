@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2007/01/20 12:56:27 joerg Exp $
-
-SHA1 (wmcpuload-1.0.1.tar.bz2) = 6e767dd5acd291cfe3fc4fece5ff32eef78915e4
-RMD160 (wmcpuload-1.0.1.tar.bz2) = 1ff01f09464dc8628acd7d375adcd106ea7ce317
-Size (wmcpuload-1.0.1.tar.bz2) = 92457 bytes
-SHA1 (patch-aa) = 581eb45891beace0fae14cf77329921e9146762e

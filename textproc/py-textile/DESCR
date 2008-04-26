@@ -1,3 +1,0 @@
-Textile is a XHTML generator using a simple markup developed by Dean Allen.
-This is a Python port with support for code validation, itex to MathML
-translation, Python code coloring and much more.

@@ -1,3 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/02/25 13:31:28 rpaulo Exp $
-bin/wmget
-man/man1/wmget.1

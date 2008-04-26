@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/12/28 14:17:57 joerg Exp $
-
-SHA1 (electric-7.00.tar.gz) = 782652b078e81060928eadfae364cd74da07788e
-RMD160 (electric-7.00.tar.gz) = c57a2e0a32e40d435e125cad6dfc5c1b98e9067b
-Size (electric-7.00.tar.gz) = 4474722 bytes
-SHA1 (patch-aa) = ca3aa5c28eef818dce61055daeedc1b7d2e9a8a7
-SHA1 (patch-ab) = f9c648dda476f1e7cd3c3e875236b76198fa317b
-SHA1 (patch-ac) = f599a3440bb1a6402280fe4129361c13cabd38f8

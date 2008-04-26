@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.7 2008/01/05 23:29:42 rillig Exp $
-
-SHA1 (kscope-1.6.0.tar.gz) = 72e342243f475e69ccb46b40a28594c5ef0ea1ab
-RMD160 (kscope-1.6.0.tar.gz) = bd9986a321504fbbc9f5613cf3af3f2c99569f49
-Size (kscope-1.6.0.tar.gz) = 1988221 bytes

@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2007/07/11 14:37:25 obache Exp $
-
-SHA1 (LibVNCServer-0.9.1.tar.gz) = 8044885868a973fe64a8b048b6f76074aec56488
-RMD160 (LibVNCServer-0.9.1.tar.gz) = 8a39b803701b301e14f9120d5ef6e4b0bebc775b
-Size (LibVNCServer-0.9.1.tar.gz) = 1060476 bytes

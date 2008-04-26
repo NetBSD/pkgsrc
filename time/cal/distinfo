@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.7 2005/02/23 19:14:53 wiz Exp $
-
-SHA1 (cal-3.5.tar.gz) = 4be982ce4576db6e2db8f8006b7bffa016d6af9d
-RMD160 (cal-3.5.tar.gz) = 85063624b66d93c5dbc41c2cd88e2b21ddffb32d
-Size (cal-3.5.tar.gz) = 47645 bytes
-SHA1 (patch-aa) = 59faa366d366cf9ed265c7f0664b5d09e1c671d1
-SHA1 (patch-ab) = 7d7da6560743f1163b0524bbd47755437bd4776c

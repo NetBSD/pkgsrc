@@ -1,6 +1,0 @@
-@comment $NetBSD: PLIST,v 1.4 2005/06/03 15:40:31 jmmv Exp $
-include/libdv/dv.h
-include/libdv/dv_types.h
-lib/libdv.la
-lib/pkgconfig/libdv.pc
-@dirrm include/libdv

@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 17:15:11 agc Exp $
-
-SHA1 (jde-2.3.2.tar.gz) = 9c464389077e44036cec6d8c93f77c29fd032cc9
-RMD160 (jde-2.3.2.tar.gz) = c259387c68bfa8fc5fb20ed7ae4516cdeb30ed25
-Size (jde-2.3.2.tar.gz) = 2181034 bytes
-SHA1 (patch-aa) = e408fe6e4528a4b9034b9de03ff24f8cd5099e06

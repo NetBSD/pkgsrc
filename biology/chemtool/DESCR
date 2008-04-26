@@ -1,7 +1,0 @@
-Chemtool is a program for drawing organic molecules easily and store
-them as a X bitmap file. It runs under the X Window System using the
-GTK widget set.
-
-Molecules can be exported in X bitmap format. Encapsulated postscript,
-fig, or PicTeX formats are also possible if the fig2dev program from
-the transfig package (pkgsrc/print/transfig/) is installed.

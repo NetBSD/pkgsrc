@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 13:41:00 agc Exp $
-
-SHA1 (xmeter-1.15.tar.gz) = 2377d4ffad82f2a1397d41969c3d3be76e6f54d7
-RMD160 (xmeter-1.15.tar.gz) = 5c6df005d139d01e26f404fdfd845c69364113bc
-Size (xmeter-1.15.tar.gz) = 20695 bytes
-SHA1 (patch-aa) = a07d78142dd5408557d3e72f508db70939124d39
