@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.925 2008/04/27 15:22:33 tron Exp $
+$NetBSD: CHANGES-2008,v 1.926 2008/04/27 16:51:08 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1661,3 +1661,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/camlp5 to 5.08 [tonio 2008-04-27]
 	Updated databases/phpmyadmin to 2.11.5.2 [tron 2008-04-27]
 	Updated multimedia/mplayer to 1.0rc10nb6 [tron 2008-04-27]
+	Added mail/p5-MIME-Charset version 1.006.2 [bouyer 2008-04-27]
+	Added mail/p5-MIME-EncWords version 1.010.101 [bouyer 2008-04-27]
+	Added www/p5-HTML-StripScripts version 1.04 [bouyer 2008-04-27]
+	Added www/p5-HTML-StripScripts-Parser version 1.02 [bouyer 2008-04-27]
