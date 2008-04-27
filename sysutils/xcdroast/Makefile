@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2007/08/15 18:34:59 plunky Exp $
+# $NetBSD: Makefile,v 1.48 2008/04/27 18:14:04 frueauf Exp $
 
 DISTNAME=	xcdroast-${DIST_VER}
 PKGNAME=	xcdroast-${DIST_VER:S/alpha/a/}
@@ -6,7 +6,7 @@ PKGREVISION=	8
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xcdroast/}
 
-MAINTAINER=	frueauf@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xcdroast.org/
 COMMENT=	Graphical user interface for the command-line cdrecord-tools
 
