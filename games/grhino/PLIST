@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/04/17 07:07:19 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/04/27 06:36:02 wiz Exp $
 bin/grhino
 bin/gtp-rhino
 share/gnome/help/grhino/C/figures/gamelist.png
@@ -8,7 +8,7 @@ share/gnome/help/grhino/C/figures/pattern.png
 share/gnome/help/grhino/C/figures/prefs-ai.png
 share/gnome/help/grhino/C/figures/prefs-board.png
 share/gnome/help/grhino/C/figures/prefs-theme.png
-share/gnome/help/grhino/C/grhino-C.omf
+share/gnome/help/grhino/C/figures/toolbar-edit.png
 share/gnome/help/grhino/C/grhino.xml
 share/gnome/help/grhino/C/legal.xml
 share/${PKGNAME}/book/book.bin
@@ -26,6 +26,9 @@ share/${PKGNAME}/theme/small/black.xpm
 share/${PKGNAME}/theme/small/black_last.xpm
 share/${PKGNAME}/theme/small/bottom.xpm
 share/${PKGNAME}/theme/small/empty.xpm
+share/${PKGNAME}/theme/small/highlight_black.xpm
+share/${PKGNAME}/theme/small/highlight_empty.xpm
+share/${PKGNAME}/theme/small/highlight_white.xpm
 share/${PKGNAME}/theme/small/hint_black.xpm
 share/${PKGNAME}/theme/small/hint_white.xpm
 share/${PKGNAME}/theme/small/left.xpm
@@ -34,6 +37,11 @@ share/${PKGNAME}/theme/small/top.xpm
 share/${PKGNAME}/theme/small/white.xpm
 share/${PKGNAME}/theme/small/white_last.xpm
 share/locale/en_GB/LC_MESSAGES/grhino.mo
+share/omf/grhino/grhino-C.omf
+share/pixmaps/grhino.png
+@comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/omf/grhino
+@comment in rarian: @dirrm share/omf
 @dirrm share/${PKGNAME}/theme/small
 @dirrm share/${PKGNAME}/theme
 @dirrm share/${PKGNAME}/pattern
@@ -42,4 +50,4 @@ share/locale/en_GB/LC_MESSAGES/grhino.mo
 @dirrm share/gnome/help/grhino/C/figures
 @dirrm share/gnome/help/grhino/C
 @dirrm share/gnome/help/grhino
-@comment in gnome-dirs: @dirrm share/gnome/help
+@comment in gnome2-dirs: @dirrm share/gnome/help
