@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST.opt,v 1.4 2007/01/17 11:14:46 tonio Exp $
+@comment $NetBSD: PLIST.opt,v 1.5 2008/04/27 10:46:16 tonio Exp $
 bin/coq-interface.opt
-${WITH_IDE}bin/coqide.opt
+${PLIST.coqide}bin/coqide.opt
 bin/coqtop.opt
 bin/parser.opt
 man/man1/coqtop.opt.1
