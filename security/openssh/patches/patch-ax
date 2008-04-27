@@ -1,18 +1,10 @@
-$NetBSD: patch-ax,v 1.5 2008/04/03 07:59:08 tonnerre Exp $
+$NetBSD: patch-ax,v 1.6 2008/04/27 00:34:27 tnn Exp $
 
-Don't deadlock on exit with multiple X forwarded channels.
-Don't use X11 port which can't be bound on all IP families.
-Fixes CVE-2008-1483.
-
---- channels.c.orig	2007-06-25 09:04:47.000000000 +0000
-+++ channels.c
-@@ -2905,9 +2905,6 @@ x11_create_display_inet(int x11_display_
- 				debug2("bind port %d: %.100s", port, strerror(errno));
- 				close(sock);
+--- sftp.h.orig	2008-02-10 12:40:12.000000000 +0100
++++ sftp.h
+@@ -94,4 +94,4 @@
+ struct passwd;
  
--				if (ai->ai_next)
--					continue;
--
- 				for (n = 0; n < num_socks; n++) {
- 					close(socks[n]);
- 				}
+ int	sftp_server_main(int, char **, struct passwd *);
+-void	sftp_server_cleanup_exit(int) __dead;
++void	sftp_server_cleanup_exit(int) __attribute__((noreturn));
