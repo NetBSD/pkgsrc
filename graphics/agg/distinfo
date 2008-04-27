@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/04/27 06:41:08 wiz Exp $
+
+SHA1 (agg-2.5.tar.gz) = 08f23da64da40b90184a0414369f450115cdb328
+RMD160 (agg-2.5.tar.gz) = fac24d8ea56ee0a87307189f73c432b07b6d3c50
+Size (agg-2.5.tar.gz) = 564313 bytes
