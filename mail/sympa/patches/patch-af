@@ -1,19 +1,13 @@
-$NetBSD: patch-af,v 1.1 2007/03/28 20:51:11 bouyer Exp $
+$NetBSD: patch-af,v 1.2 2008/04/27 17:06:40 bouyer Exp $
 
---- src/Language.pm.orig	2007-02-28 22:25:02.000000000 +0100
-+++ src/Language.pm	2007-02-28 22:26:10.000000000 +0100
-@@ -174,10 +174,10 @@
- 		last;
- 	    }	
- 	}
--	unless ($success) {
--	    &do_log('err','Failed to setlocale(%s) ; you either have a problem with the catalogue .mo files or you should extend available locales in  your /etc/locale.gen (or /etc/sysconfig/i18n) file', $locale);
--	    return undef;
--	}
-+#	unless ($success) {
-+#	    &do_log('err','Failed to setlocale(%s) ; you either have a problem with the catalogue .mo files or you should extend available locales in  your /etc/locale.gen (or /etc/sysconfig/i18n) file', $locale);
-+#	    return undef;
-+#	}
-     }
-     
-     ## Define what catalog is used
+--- src/Language.pm.orig	2008-04-27 17:43:28.000000000 +0200
++++ src/Language.pm	2008-04-27 17:43:47.000000000 +0200
+@@ -162,7 +162,7 @@
+     ## Set Locale::Messages context
+     my $locale_dashless = $locale.'.utf-8';
+     $locale_dashless =~ s/-//g;
+-    foreach my $type (&POSIX::LC_ALL, &POSIX::LC_TIME) {
++    foreach my $type (&POSIX::LC_CTYPE) {
+ 	my $success;
+ 	foreach my $try ($locale.'.utf-8',
+ 			 $locale.'.UTF-8',  ## UpperCase required for FreeBSD

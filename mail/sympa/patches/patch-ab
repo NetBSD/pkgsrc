@@ -1,12 +1,14 @@
-$NetBSD: patch-ab,v 1.3 2007/03/28 20:51:10 bouyer Exp $
+$NetBSD: patch-ab,v 1.4 2008/04/27 17:06:40 bouyer Exp $
 
---- check_perl_modules.pl.orig	2006-11-16 10:47:33.000000000 +0100
-+++ check_perl_modules.pl	2007-02-28 20:09:50.000000000 +0100
-@@ -171,35 +171,7 @@
+--- check_perl_modules.pl.orig	2008-03-27 17:41:49.000000000 +0100
++++ check_perl_modules.pl	2008-04-27 14:20:25.000000000 +0200
+@@ -180,69 +180,7 @@
  # Install a CPAN module
  ##----------------------
  sub install_module {
--    my ($module, $default) = @_;
+-    my ($module, $options) = @_;
+-
+-    my $default = $options->{'default'};
 -
 -    unless ($ENV{'FTP_PASSIVE'} eq 1) {
 -	$ENV{'FTP_PASSIVE'} = 1;
@@ -24,13 +26,45 @@ $NetBSD: patch-ab,v 1.3 2007/03/28 20:51:10 bouyer Exp $
 -	return undef;
 -    }
 -
--    printf "Description: %s\n", $opt_features{$module};
--    print "Install module $module ? [$default]";
--    my $answer = <STDIN>; chomp $answer;
--    $answer ||= $default;
--    next unless ($answer =~ /^y$/i);
+-    unless ($options->{'force'}) {
+-	printf "Description: %s\n", $opt_features{$module};
+-	print "Install module $module ? [$default]";
+-	my $answer = <STDIN>; chomp $answer;
+-	$answer ||= $default;
+-	return unless ($answer =~ /^y$/i);
+-    }
+-    
 -    $CPAN::Config->{'inactivity_timeout'} = 4;
--    CPAN::Shell->install($module);
+-    $CPAN::Config->{'colorize_output'} = 1;
+-
+-    #CPAN::Shell->clean($module) if ($options->{'force'});
+-
+-    CPAN::Shell->make($module);
+-    
+-    if ($options->{'force'}) {
+-	CPAN::Shell->force('test', $module);
+-      }else {
+-	  CPAN::Shell->test($module);
+-      }
+-    
+-
+-    CPAN::Shell->install($module); ## Could use CPAN::Shell->force('install') if make test failed
+-
+-    ## Check if module has been successfuly installed
+-    unless (&test_module($module) == 1) {
+-
+-	## Prevent recusive calls if already in force mode
+-	if ($options->{'force'}) {
+-	    print  "Installation of $module still FAILED. You should download the tar.gz from http://search.cpan.org and install it manually.";
+-	    my $answer = <STDIN>;
+-	}else {
+-	    print  "Installation of $module FAILED. Do you want to force the installation of this module? (y/N) ";
+-	    my $answer = <STDIN>; chomp $answer;
+-	    if ($answer =~ /^y/i) {
+-		&install_module($module, {'force' => 1});
+-	    }
+-	}
+-    }
 -
 -    ## Restore lang
 -    $ENV{'LANG'} = $lang if (defined $lang);
