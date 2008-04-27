@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.917 2008/04/27 00:35:01 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.918 2008/04/27 06:36:19 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1653,3 +1653,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/pciids to 20080312 [bjs 2008-04-26]
 	Updated net/liblive to 2008.04.09 [obache 2008-04-26]
 	Updated security/openssh to 5.0.1 [tnn 2008-04-27]
+	Updated games/grhino to 0.16.0 [wiz 2008-04-27]
