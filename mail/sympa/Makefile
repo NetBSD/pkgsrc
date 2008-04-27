@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.31 2008/03/17 11:23:30 obache Exp $
+# $NetBSD: Makefile,v 1.32 2008/04/27 17:06:40 bouyer Exp $
 #
 
-DISTNAME=	sympa-5.2.4
-PKGREVISION=	2
+DISTNAME=	sympa-5.4.2
 CATEGORIES=	mail
 MASTER_SITES=	http://www.sympa.org/distribution/ \
 		http://www.sympa.org/distribution/old
@@ -32,14 +31,17 @@ DEPENDS+=	p5-libwww>=1.09:../../www/p5-libwww
 DEPENDS+=	p5-Locale-libintl>=1.16:../../misc/p5-Locale-libintl
 DEPENDS+=	p5-XML-LibXML>=1.61:../../textproc/p5-XML-LibXML
 DEPENDS+=	p5-Regexp-Common>=2.120:../../textproc/p5-Regexp-Common
+DEPENDS+=	p5-HTML-StripScripts-Parser>=1.02:../../www/p5-HTML-StripScripts-Parser
+DEPENDS+=	p5-MIME-EncWords>=1.010.101:../../mail/p5-MIME-EncWords
 DEPENDS.SunOS+=	p5-DB_File>=1.75:../../databases/p5-DB_File
 
 OPSYSVARS+=	DEPENDS
 
+USE_TOOLS+=		gmake
+
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-confdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-cgidir=${SYMPA_BIN:Q}
-CONFIGURE_ARGS+=	--with-iconsdir=${SYMPA_PREFIX}/httpd/icons
 CONFIGURE_ARGS+=	--with-bindir=${SYMPA_BIN:Q}
 CONFIGURE_ARGS+=	--with-sbindir=${SYMPA_BIN:Q}
 CONFIGURE_ARGS+=	--with-libexecdir=${SYMPA_BIN:Q}
@@ -51,7 +53,7 @@ CONFIGURE_ARGS+=	--with-lockdir=${SYMPA_VARBASE}/lock
 CONFIGURE_ARGS+=	--with-piddir=${SYMPA_VARBASE}/run
 CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}/sympa
 CONFIGURE_ARGS+=	--with-nlsdir=${SYMPA_PREFIX}/nls
-CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/html/sympa
+CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/sympa
 CONFIGURE_ARGS+=	--with-scriptdir=${SYMPA_BIN:Q}
 CONFIGURE_ARGS+=	--with-sampledir=${PREFIX}/share/examples/sympa
 CONFIGURE_ARGS+=	--with-spooldir=${SYMPA_SPOOL:Q}
