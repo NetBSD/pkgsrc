@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2007/08/06 05:28:36 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2008/04/27 08:19:54 wiz Exp $
 
-DISTNAME=	sox-13.0.0
-PKGREVISION=	1
+DISTNAME=	sox-14.0.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sox/}
 
@@ -11,23 +10,22 @@ COMMENT=	SOund eXchange - universal sound sample translator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 GNU_CONFIGURE=		yes
+#USE_CMAKE=		yes
+USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
 
-SUBST_CLASSES+=		lrf
-SUBST_FILES.lrf=	src/libst-config.in
-SUBST_SED.lrf=		-e "s!@LRF@!"${LINKER_RPATH_FLAG}"!"
-SUBST_STAGE.lrf=	pre-configure
-
 SUBST_CLASSES+=		gsm
-SUBST_FILES.gsm=	configure src/gsm.c src/wav.c
+SUBST_FILES.gsm=	configure src/gsm.c src/wav.c CMakeLists.txt
 SUBST_SED.gsm=		-e "s!gsm/gsm.h!gsm.h!"
 SUBST_STAGE.gsm=	pre-configure
 
+post-install:
+	-${RMDIR} ${DESTDIR}${PREFIX}/lib/sox
+
 .include "options.mk"
 
-# needs obsolete FLAC API
-#.include "../../audio/flac/buildlink3.mk"
+.include "../../audio/flac/buildlink3.mk"
 .include "../../audio/gsm/buildlink3.mk"
 .include "../../audio/libmad/buildlink3.mk"
 .include "../../audio/libsndfile/buildlink3.mk"
