@@ -1,19 +1,33 @@
-@comment $NetBSD: PLIST,v 1.3 2007/06/14 06:01:29 wiz Exp $
-bin/cygnal
+@comment $NetBSD: PLIST,v 1.4 2008/04/27 06:44:52 wiz Exp $
+bin/dumpshm
 bin/gnash
-bin/gparser
 bin/gprocessor
-lib/libgnashamf.la
-lib/libgnashbackend.la
-lib/libgnashbase.la
-lib/libgnashgeo.la
-lib/libgnashgui.la
-lib/libgnashplayer.la
-lib/libgnashserver.la
+bin/soldumper
+lib/gnash/libgnashamf.la
+lib/gnash/libgnashbase.la
+lib/gnash/libgnashmedia.la
+lib/gnash/libgnashserver.la
+man/man1/cygnal.1
+man/man1/dumpshm.1
 man/man1/gnash.1
-share/gnash/GnashG.png
-share/gnash/gnash_128_96.ico
-share/locale/de/gnash.mo
-share/locale/es/gnash.mo
-share/locale/fr/gnash.mo
-@dirrm share/gnash
+man/man1/gprocessor.1
+man/man1/soldumper.1
+share/doc/gnash/gnashref.html
+share/doc/gnash/gnashuser.html
+share/doc/gnash/images/car_crash.png
+share/doc/gnash/images/rtmp.png
+share/${KDE}gnash/GnashG.png
+share/${KDE}gnash/gnash_128_96.ico
+share/${KDE}locale/cs/LC_MESSAGES/gnash.mo
+share/${KDE}locale/de/LC_MESSAGES/gnash.mo
+share/${KDE}locale/es/LC_MESSAGES/gnash.mo
+share/${KDE}locale/fi/LC_MESSAGES/gnash.mo
+share/${KDE}locale/fr/LC_MESSAGES/gnash.mo
+share/${KDE}locale/it/LC_MESSAGES/gnash.mo
+share/${KDE}locale/sv/LC_MESSAGES/gnash.mo
+@dirrm share/${KDE}gnash
+@dirrm share/doc/gnash/images
+@dirrm share/doc/gnash
+@dirrm lib/gnash
+@unexec ${RMDIR} %D/lib/firefox/plugins 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/lib/firefox 2>/dev/null || ${TRUE}
