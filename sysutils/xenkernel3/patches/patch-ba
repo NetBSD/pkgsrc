@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.4 2008/02/15 20:34:35 bouyer Exp $
+$NetBSD: patch-ba,v 1.5 2008/04/27 19:59:40 bouyer Exp $
 
---- xen/arch/x86/domain_build.c.orig	2008-01-31 11:06:54.000000000 +0100
-+++ xen/arch/x86/domain_build.c	2008-02-13 21:24:12.000000000 +0100
-@@ -312,6 +312,9 @@
+--- xen/arch/x86/domain_build.c.orig	2008-04-25 15:03:12.000000000 +0200
++++ xen/arch/x86/domain_build.c	2008-04-26 18:23:30.000000000 +0200
+@@ -308,6 +308,9 @@
             parms.pae       ? ", PAE"  : "",
             elf_msb(&elf)   ? "msb"    : "lsb",
             elf.pstart, elf.pend);
@@ -12,12 +12,3 @@ $NetBSD: patch-ba,v 1.4 2008/02/15 20:34:35 bouyer Exp $
  
      if ( !compatible )
      {
-@@ -349,6 +352,8 @@
-     if ( parms.pae == PAEKERN_extended_cr3 )
-             set_bit(VMASST_TYPE_pae_extended_cr3, &d->vm_assist);
- 
-+    d->arch.physaddr_bitsize = 64;
-+
-     if ( UNSET_ADDR != parms.virt_hv_start_low && elf_32bit(&elf) )
-     {
- #if CONFIG_PAGING_LEVELS < 4
