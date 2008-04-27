@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.922 2008/04/27 09:23:14 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.923 2008/04/27 10:45:12 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1658,3 +1658,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/gnash to 0.8.2 [wiz 2008-04-27]
 	Updated audio/sox to 14.0.1 [wiz 2008-04-27]
 	Updated x11/gtk-sharp to 2.12.1 [wiz 2008-04-27]
+	Updated lang/camlp5 to 5.08 [tonio 2008-04-27]
