@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.8 2008/04/26 20:38:49 tnn Exp $
+# $NetBSD: Makefile.lib,v 1.9 2008/04/27 09:43:12 tnn Exp $
 #
 # This Makefile fragment is included by all packages that build libraries
 # from the Mesa sources.
@@ -51,17 +51,7 @@ MESA_HZ=	${tmphz}
 ###
 ### XXX do we still want this?
 ###
-.if ${OPSYS} == "SunOS"
-.  if ${MACHINE_ARCH} == "sparc"
-.    if !empty(PKGSRC_COMPILER:Msunpro)
-BUILD_TARGET=		sunos5
-.    else
-BUILD_TARGET=		sunos5-gcc
-.    endif
-.  else
-BUILD_TARGET?=		pkgsrc
-.  endif
-.elif ${OPSYS} == "Interix"
+.if ${OPSYS} == "Interix"
 BUILD_TARGET=		interix3
 .else
 BUILD_TARGET?=		pkgsrc
