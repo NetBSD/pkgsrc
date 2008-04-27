@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7249 2008/04/27 08:32:27 wiz Exp $
+$NetBSD: TODO,v 1.7250 2008/04/27 23:17:54 wiz Exp $
 
 Suggested new packages
 ======================
@@ -692,7 +692,6 @@ Suggested package updates
 	o gtexinfo-4.12
 	o gthumb-2.10.8
 	o gtick-0.4.1
-	o gtk-sharp-2.12.1
 	o gtk-systrace-20030623
 	o gtklife-5.1
 	o gtksee-0.6.0b
@@ -838,6 +837,7 @@ Suggested package updates
 	o libtcl-nothread-8.5.1
 	o libtool-2.2.2
 	o libtool-base-2.2.2
+	o libxklavier-3.6
 	o libxml++-2.22.0
 	o lighttpd-1.4.19
 	o lilypond-2.10.33 [schmonz]
