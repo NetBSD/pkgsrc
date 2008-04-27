@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.916 2008/04/26 11:38:59 obache Exp $
+$NetBSD: CHANGES-2008,v 1.917 2008/04/27 00:35:01 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1652,3 +1652,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated math/R to 2.7.0 [markd 2008-04-26]
 	Updated misc/pciids to 20080312 [bjs 2008-04-26]
 	Updated net/liblive to 2008.04.09 [obache 2008-04-26]
+	Updated security/openssh to 5.0.1 [tnn 2008-04-27]
