@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1 2008/04/27 06:44:52 wiz Exp $
+
+--- gui/Makefile.in.orig	2008-04-25 17:05:02.000000000 +0200
++++ gui/Makefile.in
+@@ -1164,8 +1164,8 @@ GUI_SRCS = gnash.cpp \
+ @BUILD_QTOPIA_GUI_TRUE@	$(GNASH_LIBS) $(AM_LDFLAGS) \
+ @BUILD_QTOPIA_GUI_TRUE@	$(am__append_14) $(am__append_17)
+ @BUILD_KDE_GUI_TRUE@kde_gnash_CPPFLAGS = -DGUI_KDE \
+-@BUILD_KDE_GUI_TRUE@	-DGUI_CONFIG=\"KDE\" $(AM_CPPFLAGS) \
+ @BUILD_KDE_GUI_TRUE@	$(KDE_CFLAGS) $(QT_CFLAGS) \
++@BUILD_KDE_GUI_TRUE@	-DGUI_CONFIG=\"KDE\" $(AM_CPPFLAGS) \
+ @BUILD_KDE_GUI_TRUE@	$(am__append_22) $(am__append_25)
+ @BUILD_KDE_GUI_TRUE@kde_gnash_SOURCES = $(GUI_SRCS) gui_kde.cpp \
+ @BUILD_KDE_GUI_TRUE@	$(am__append_24) $(am__append_27)
