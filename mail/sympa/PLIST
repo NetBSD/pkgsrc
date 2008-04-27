@@ -1,116 +1,92 @@
-@comment $NetBSD: PLIST,v 1.4 2007/03/28 20:51:09 bouyer Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/04/27 17:06:40 bouyer Exp $
 man/man8/alias_manager.8
 man/man8/archived.8
 man/man8/bounced.8
 man/man8/sympa.8
-share/doc/html/sympa/contents.png
-share/doc/html/sympa/crossref.png
-share/doc/html/sympa/img1.old
-share/doc/html/sympa/img1.png
-share/doc/html/sympa/img2.old
-share/doc/html/sympa/img2.png
-share/doc/html/sympa/index.html
-share/doc/html/sympa/index.png
-share/doc/html/sympa/next.png
-share/doc/html/sympa/next_g.png
-share/doc/html/sympa/node1.html
-share/doc/html/sympa/node10.html
-share/doc/html/sympa/node11.html
-share/doc/html/sympa/node12.html
-share/doc/html/sympa/node13.html
-share/doc/html/sympa/node14.html
-share/doc/html/sympa/node15.html
-share/doc/html/sympa/node16.html
-share/doc/html/sympa/node17.html
-share/doc/html/sympa/node18.html
-share/doc/html/sympa/node19.html
-share/doc/html/sympa/node2.html
-share/doc/html/sympa/node20.html
-share/doc/html/sympa/node21.html
-share/doc/html/sympa/node22.html
-share/doc/html/sympa/node23.html
-share/doc/html/sympa/node24.html
-share/doc/html/sympa/node25.html
-share/doc/html/sympa/node26.html
-share/doc/html/sympa/node27.html
-share/doc/html/sympa/node28.html
-share/doc/html/sympa/node29.html
-share/doc/html/sympa/node3.html
-share/doc/html/sympa/node30.html
-share/doc/html/sympa/node31.html
-share/doc/html/sympa/node4.html
-share/doc/html/sympa/node5.html
-share/doc/html/sympa/node6.html
-share/doc/html/sympa/node7.html
-share/doc/html/sympa/node8.html
-share/doc/html/sympa/node9.html
-share/doc/html/sympa/prev.png
-share/doc/html/sympa/prev_g.png
-share/doc/html/sympa/sympa.css
-share/doc/html/sympa/sympa.html
-share/doc/html/sympa/sympa.pdf
-share/doc/html/sympa/sympa.ps
-share/doc/html/sympa/sympa.tex
-share/doc/html/sympa/up.png
-share/doc/html/sympa/up_g.png
 share/doc/sympa/NEWS
+share/doc/sympa/sympa.pdf
 share/examples/sympa/README
-share/examples/sympa/config.digest
-share/examples/sympa/config.include
-share/examples/sympa/config.moderation
-share/examples/sympa/config.privateorpublickey
-share/examples/sympa/config.public
-share/examples/sympa/sympa.conf
-share/examples/sympa/wwsympa.conf
+share/examples/sympa/employees.ldap
+share/examples/sympa/robot.conf
 share/examples/sympa/sample-list/config
 share/examples/sympa/sample-list/info
 share/examples/sympa/sample-list/message.footer
 share/examples/sympa/sample-list/welcome.tpl
+share/examples/sympa/trusted_applications.conf
 share/examples/rc.d/archived
 share/examples/rc.d/bounced
 share/examples/rc.d/sympa
 share/examples/rc.d/task_manager
+share/locale/ar/LC_MESSAGES/sympa.mo
+share/locale/ar/LC_MESSAGES/web_help.mo
 share/locale/cs/LC_MESSAGES/sympa.mo
+share/locale/cs/LC_MESSAGES/web_help.mo
 share/locale/de/LC_MESSAGES/sympa.mo
+share/locale/de/LC_MESSAGES/web_help.mo
 share/locale/el/LC_MESSAGES/sympa.mo
+share/locale/el/LC_MESSAGES/web_help.mo
 share/locale/en_US/LC_MESSAGES/sympa.mo
+share/locale/en_US/LC_MESSAGES/web_help.mo
 share/locale/es/LC_MESSAGES/sympa.mo
+share/locale/es/LC_MESSAGES/web_help.mo
 share/locale/et/LC_MESSAGES/sympa.mo
+share/locale/et/LC_MESSAGES/web_help.mo
 share/locale/fi/LC_MESSAGES/sympa.mo
+share/locale/fi/LC_MESSAGES/web_help.mo
 share/locale/fr/LC_MESSAGES/sympa.mo
+share/locale/fr/LC_MESSAGES/web_help.mo
 share/locale/hu/LC_MESSAGES/sympa.mo
+share/locale/hu/LC_MESSAGES/web_help.mo
+share/locale/id/LC_MESSAGES/sympa.mo
+share/locale/id/LC_MESSAGES/web_help.mo
 share/locale/it/LC_MESSAGES/sympa.mo
+share/locale/it/LC_MESSAGES/web_help.mo
 share/locale/ja/LC_MESSAGES/sympa.mo
+share/locale/ja/LC_MESSAGES/web_help.mo
 share/locale/nb_NO/LC_MESSAGES/sympa.mo
+share/locale/nb_NO/LC_MESSAGES/web_help.mo
 share/locale/nl/LC_MESSAGES/sympa.mo
+share/locale/nl/LC_MESSAGES/web_help.mo
 share/locale/oc/LC_MESSAGES/sympa.mo
+share/locale/oc/LC_MESSAGES/web_help.mo
 share/locale/pl/LC_MESSAGES/sympa.mo
-share/locale/pt/LC_MESSAGES/sympa.mo
+share/locale/pl/LC_MESSAGES/web_help.mo
 share/locale/pt_BR/LC_MESSAGES/sympa.mo
+share/locale/pt_BR/LC_MESSAGES/web_help.mo
 share/locale/ro/LC_MESSAGES/sympa.mo
+share/locale/ro/LC_MESSAGES/web_help.mo
 share/locale/sv/LC_MESSAGES/sympa.mo
+share/locale/sv/LC_MESSAGES/web_help.mo
 share/locale/tr/LC_MESSAGES/sympa.mo
+share/locale/tr/LC_MESSAGES/web_help.mo
 share/locale/zh_CN/LC_MESSAGES/sympa.mo
-share/locale/zh_TW/LC_MESSAGES/sympa.mo
+share/locale/zh_CN/LC_MESSAGES/web_help.mo
 sympa/bin/Archive.pm
 sympa/bin/Auth.pm
 sympa/bin/CAS.pm
 sympa/bin/Commands.pm
 sympa/bin/Conf.pm
 sympa/bin/Config_XML.pm
+sympa/bin/Datasource.pm
 sympa/bin/Family.pm
 sympa/bin/Fetch.pm
+sympa/bin/LDAPSource.pm
 sympa/bin/Language.pm
 sympa/bin/Ldap.pm
 sympa/bin/List.pm
+sympa/bin/Lock.pm
 sympa/bin/Log.pm
 sympa/bin/Marc.pm
 sympa/bin/Marc/Search.pm
 sympa/bin/Message.pm
 sympa/bin/PlainDigest.pm
+sympa/bin/SQLSource.pm
+sympa/bin/Scenario.pm
 sympa/bin/SharedDocument.pm
+sympa/bin/SympaSession.pm
 sympa/bin/SympaTransport.pm
 sympa/bin/Task.pm
+sympa/bin/Upgrade.pm
 sympa/bin/Version.pm
 sympa/bin/admin.pm
 sympa/bin/alias_manager.pl
@@ -153,13 +129,14 @@ sympa/bin/etc/global_task_models/expire_bounce.daily.task
 sympa/bin/etc/global_task_models/process_bouncers.weekly.task
 sympa/bin/etc/global_task_models/purge_orphan_bounces.monthly.task
 sympa/bin/etc/global_task_models/purge_user_table.monthly.task
+sympa/bin/etc/global_task_models/purge_session_table.daily.task
+sympa/bin/etc/global_task_models/purge_logs_table.daily.task
 sympa/bin/etc/list_aliases.tt2
 sympa/bin/etc/list_task_models/expire.yearly.task
 sympa/bin/etc/list_task_models/remind.2month.task
 sympa/bin/etc/list_task_models/remind.monthly.task
 sympa/bin/etc/list_task_models/remind.yearly.task
 sympa/bin/etc/list_task_models/sync_include.ttl.task
-sympa/bin/etc/mail_tt2/archive.tt2
 sympa/bin/etc/mail_tt2/authorization_reject.tt2
 sympa/bin/etc/mail_tt2/bye.tt2
 sympa/bin/etc/mail_tt2/certif_warning.tt2
@@ -217,6 +194,9 @@ sympa/bin/etc/scenari/add.closed
 sympa/bin/etc/scenari/add.default
 sympa/bin/etc/scenari/add.owner
 sympa/bin/etc/scenari/add.owner_notify
+sympa/bin/etc/scenari/automatic_list_creation.public
+sympa/bin/etc/scenari/automatic_list_creation.listmaster
+sympa/bin/etc/crawlers_detection.conf
 sympa/bin/etc/scenari/create_list.intranet
 sympa/bin/etc/scenari/create_list.listmaster
 sympa/bin/etc/scenari/create_list.public_listmaster
@@ -245,6 +225,7 @@ sympa/bin/etc/scenari/invite.default
 sympa/bin/etc/scenari/invite.owner
 sympa/bin/etc/scenari/invite.private
 sympa/bin/etc/scenari/invite.public
+sympa/bin/etc/ldap_alias_manager.conf
 sympa/bin/etc/scenari/remind.default
 sympa/bin/etc/scenari/remind.listmaster
 sympa/bin/etc/scenari/remind.owner
@@ -318,6 +299,7 @@ sympa/bin/etc/web_tt2/arc_protect.tt2
 sympa/bin/etc/web_tt2/arcsearch.tt2
 sympa/bin/etc/web_tt2/arcsearch_form.tt2
 sympa/bin/etc/web_tt2/authorization_reject.tt2
+sympa/bin/etc/web_tt2/blacklist.tt2
 sympa/bin/etc/web_tt2/button_footer.tt2
 sympa/bin/etc/web_tt2/button_header.tt2
 sympa/bin/etc/web_tt2/change_email.tt2
@@ -335,6 +317,8 @@ sympa/bin/etc/web_tt2/d_properties.tt2
 sympa/bin/etc/web_tt2/d_read.tt2
 sympa/bin/etc/web_tt2/d_upload.tt2
 sympa/bin/etc/web_tt2/dump_scenario.tt2
+sympa/bin/etc/web_tt2/dumpvars.tt2
+sympa/bin/etc/web_tt2/edit_attributes.tt2
 sympa/bin/etc/web_tt2/edit_list_request.tt2
 sympa/bin/etc/web_tt2/edit_template.tt2
 sympa/bin/etc/web_tt2/editfile.tt2
@@ -347,8 +331,17 @@ sympa/bin/etc/web_tt2/get_latest_lists.tt2
 sympa/bin/etc/web_tt2/get_pending_lists.tt2
 sympa/bin/etc/web_tt2/help.tt2
 sympa/bin/etc/web_tt2/help_admin.tt2
+sympa/bin/etc/web_tt2/help_arc.tt2
 sympa/bin/etc/web_tt2/help_editfile.tt2
 sympa/bin/etc/web_tt2/help_editlist.tt2
+sympa/bin/etc/web_tt2/help_faqadmin.tt2
+sympa/bin/etc/web_tt2/help_faquser.tt2
+sympa/bin/etc/web_tt2/help_introduction.tt2
+sympa/bin/etc/web_tt2/help_listconfig.tt2
+sympa/bin/etc/web_tt2/help_mail_commands.tt2
+sympa/bin/etc/web_tt2/help_sendmsg.tt2
+sympa/bin/etc/web_tt2/help_shared.tt2
+sympa/bin/etc/web_tt2/help_user.tt2
 sympa/bin/etc/web_tt2/help_user_options.tt2
 sympa/bin/etc/web_tt2/home.tt2
 sympa/bin/etc/web_tt2/info.tt2
@@ -373,6 +366,7 @@ sympa/bin/etc/web_tt2/maintenance.tt2
 sympa/bin/etc/web_tt2/menu.tt2
 sympa/bin/etc/web_tt2/modindex.tt2
 sympa/bin/etc/web_tt2/notice.tt2
+sympa/bin/etc/web_tt2/picture_upload.tt2
 sympa/bin/etc/web_tt2/pref.tt2
 sympa/bin/etc/web_tt2/remindpasswd.tt2
 sympa/bin/etc/web_tt2/remove_arc.tt2
@@ -391,6 +385,7 @@ sympa/bin/etc/web_tt2/serveradmin.tt2
 sympa/bin/etc/web_tt2/set_pending_list_request.tt2
 sympa/bin/etc/web_tt2/setlang.tt2
 sympa/bin/etc/web_tt2/show_cert.tt2
+sympa/bin/etc/web_tt2/show_sessions.tt2
 sympa/bin/etc/web_tt2/sigrequest.tt2
 sympa/bin/etc/web_tt2/skinsedit.tt2
 sympa/bin/etc/web_tt2/sso_login.tt2
@@ -402,13 +397,16 @@ sympa/bin/etc/web_tt2/title.tt2
 sympa/bin/etc/web_tt2/tt2_error.tt2
 sympa/bin/etc/web_tt2/view_template.tt2
 sympa/bin/etc/web_tt2/viewbounce.tt2
+sympa/bin/etc/web_tt2/viewlogs.tt2
 sympa/bin/etc/web_tt2/viewmod.tt2
 sympa/bin/etc/web_tt2/which.tt2
 sympa/bin/etc/web_tt2/your_lists.tt2
+sympa/bin/familyqueue
 sympa/bin/init_comment.pl
 sympa/bin/ldap_alias_manager.pl
 sympa/bin/mail.pm
 sympa/bin/mod2html.pl
+sympa/bin/mysql_alias_manager.pl
 sympa/bin/p12topem.pl
 sympa/bin/parser.pl
 sympa/bin/queue
@@ -416,6 +414,7 @@ sympa/bin/report.pm
 sympa/bin/sympa.pl
 sympa/bin/sympa_soap_client.pl
 sympa/bin/sympa_soap_server.fcgi
+sympa/bin/sympa_soap_server-wrapper.fcgi
 sympa/bin/sympa_wizard.pl
 sympa/bin/sympasoap.pm
 sympa/bin/task_manager.pl
@@ -428,32 +427,34 @@ sympa/bin/tt2.pl
 sympa/bin/virtualwrapper
 sympa/bin/wwslib.pm
 sympa/bin/wwsympa.fcgi
+sympa/bin/wwsympa-wrapper.fcgi
 sympa/bin/wwsympa_sudo_wrapper.pl
-sympa/httpd/icons/back.png
-sympa/httpd/icons/begin.png
-sympa/httpd/icons/binary.png
-sympa/httpd/icons/down.png
-sympa/httpd/icons/end.png
-sympa/httpd/icons/folder.open.png
-sympa/httpd/icons/folder.png
-sympa/httpd/icons/image2.png
-sympa/httpd/icons/left.png
-sympa/httpd/icons/link.png
-sympa/httpd/icons/locked.png
-sympa/httpd/icons/logo-s-lock.png
-sympa/httpd/icons/logo-s.png
-sympa/httpd/icons/movie.png
-sympa/httpd/icons/right.png
-sympa/httpd/icons/sound1.png
-sympa/httpd/icons/text.png
-sympa/httpd/icons/unknown.png
-@dirrm sympa/httpd/icons
-@dirrm sympa/httpd
+sympa/static_content/icons/back.png
+sympa/static_content/icons/begin.png
+sympa/static_content/icons/binary.png
+sympa/static_content/icons/down.png
+sympa/static_content/icons/end.png
+sympa/static_content/icons/folder.open.png
+sympa/static_content/icons/folder.png
+sympa/static_content/icons/image2.png
+sympa/static_content/icons/left.png
+sympa/static_content/icons/link.png
+sympa/static_content/icons/locked.png
+sympa/static_content/icons/logo-s-lock.png
+sympa/static_content/icons/logo-s.png
+sympa/static_content/icons/movie.png
+sympa/static_content/icons/right.png
+sympa/static_content/icons/sound1.png
+sympa/static_content/icons/text.png
+sympa/static_content/icons/unknown.png
+@dirrm sympa/static_content/icons
+@dirrm sympa/static_content
 @dirrm sympa/bin/etc/web_tt2
 @dirrm sympa/bin/etc/scenari
 @dirrm sympa/bin/etc/mail_tt2
 @dirrm sympa/bin/etc/list_task_models
 @dirrm sympa/bin/etc/global_task_models
+@dirrm sympa/bin/etc/families
 @dirrm sympa/bin/etc/create_list_templates/public_web_forum
 @dirrm sympa/bin/etc/create_list_templates/private_working_group
 @dirrm sympa/bin/etc/create_list_templates/news-letter
@@ -466,7 +467,6 @@ sympa/httpd/icons/unknown.png
 @dirrm sympa/bin/Marc
 @dirrm sympa/bin
 @dirrm sympa
-@dirrm share/doc/html/sympa
 @dirrm share/doc/sympa
 @dirrm share/examples/sympa/sample-list
 @dirrm share/examples/sympa

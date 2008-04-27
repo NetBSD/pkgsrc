@@ -1,0 +1,15 @@
+$NetBSD: patch-ai,v 1.1 2008/04/27 17:06:41 bouyer Exp $
+
+--- wwsympa/Makefile.orig	2008-04-27 15:14:36.000000000 +0200
++++ wwsympa/Makefile	2008-04-27 15:14:59.000000000 +0200
+@@ -100,8 +100,8 @@
+ 
+ installicons:
+ 	@echo "Installing icons..."
+-	@echo $(DIR)/static_content/icons
+-	cp icons/*.png $(DIR)/static_content/icons
++	@echo $(DIR)/sympa/static_content/icons
++	cp icons/*.png $(DIR)/sympa/static_content/icons
+ 
+ installwrapper:
+ 	@echo "Installing wwsympa-wrapper binary..."
