@@ -2,6 +2,7 @@ aalib			Enable aalib support.
 abook			Enable abook support.
 acl			Enable POSIX ACL support.
 ads			Enable Windows's Active Directory support.
+agg			Enable agg support.
 anope-dbencryption	Enable database encryption.
 anthy			Use Anthy as Japanese conversion program.
 anthy-2ch-dict		Include the 2ch dictionary.
@@ -25,6 +26,7 @@ bugzilla-imagemagick	Compress .BMPs to save space.
 bugzilla-patchviewer	Enable patchviewer support.
 bugzilla-xmlimportbugs	Bulk import/export of bugs in XML format.
 bzip2			Enable compression using bzip2
+cairo			Enable cairo support.
 canna			Use Canna as Japanese conversion program.
 cares			Use the c-ares library for asynchronous name resolution.
 catalog-mysql		Store Bacula catalog in MySQL database.
@@ -96,6 +98,7 @@ faad			Enable AAC decoding support using faad2.
 fam			Support using File Alteration Monitor (FAM).
 fastcgi			Use FastCGI as the CGI manager.
 fd-small		Build smaller misc/fd package.
+ffmpeg			Enable ffmpeg support.
 finger			Enable finger support.
 firefox			Use firefox as gecko rendering engine.
 flac			Enable FLAC support.
@@ -117,6 +120,7 @@ gqmpeg-japanese		Japanese ID3 tag support.
 gqmpeg-russian		Russian ID3 tag support.
 graphicsmagick		Use GraphicsMagick as imaging library.
 groff-docs		Install documentation images.
+gstreamer		Enable gstreamer support.
 gtk			Enable support for GTK.
 gtkspell		Enable gtkspell support.	
 gzip			Enable compression using gzip
@@ -224,9 +228,9 @@ openal			Enable OpenAL support.
 opengl			Use OpenGL as display library.
 openldap		Enable OpenLDAP support.
 oracle			Enable Oracle support.
-otr				Enable Off-the-record encrypted messaging
 oss			Enable support for the Open Sound System audio library.
 osx-addressbook		Enable support for the Mac OS X Address Book.
+otr				Enable Off-the-record encrypted messaging
 pam			Enable PAM support.
 pcb-motif		Use Motif for the gui instead of GTK for cad/pcb.
 pcre			Enable Perl-compatible regular expressions.
