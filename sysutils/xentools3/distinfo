@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.8 2008/03/08 17:24:20 bouyer Exp $
+$NetBSD: distinfo,v 1.9 2008/04/27 19:59:40 bouyer Exp $
 
-SHA1 (xen-3.1.3-src.tgz) = 87b370df928feda599bbc7076e7a4589f67355c8
-RMD160 (xen-3.1.3-src.tgz) = b26b71e0422db7aece60aa4dd9f9c8d34affd0c7
-Size (xen-3.1.3-src.tgz) = 6891760 bytes
+SHA1 (xen-3.1.4.tar.gz) = 0d784662776239195df10b3f29d40350f9d0644d
+RMD160 (xen-3.1.4.tar.gz) = c02ad2bd64e6306b127a4f37a8aa370dadc11859
+Size (xen-3.1.4.tar.gz) = 6894493 bytes
 SHA1 (patch-aa) = dca8b8de73b9bdbb17f8245224575eb881cdf00d
 SHA1 (patch-ab) = dcafc8b6c4cd1e4dfc6f4ec806fd8076b3104b86
 SHA1 (patch-ac) = 4eb0f474d4e3a685788c1ce92c0b407dc3d7a855
