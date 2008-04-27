@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.929 2008/04/27 23:03:34 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.930 2008/04/27 23:14:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1670,3 +1670,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/xentools3 to 3.1.4 [bouyer 2008-04-27]
 	Updated sysutils/xentools3-hvm to 3.1.4 [bouyer 2008-04-27]
 	Updated x11/gnome-sharp to 2.20.1 [wiz 2008-04-27]
+	Added x11/gnome-desktop-sharp version 2.20.1 [wiz 2008-04-27]
