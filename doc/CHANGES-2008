@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.926 2008/04/27 16:51:08 bouyer Exp $
+$NetBSD: CHANGES-2008,v 1.927 2008/04/27 17:07:27 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1665,3 +1665,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added mail/p5-MIME-EncWords version 1.010.101 [bouyer 2008-04-27]
 	Added www/p5-HTML-StripScripts version 1.04 [bouyer 2008-04-27]
 	Added www/p5-HTML-StripScripts-Parser version 1.02 [bouyer 2008-04-27]
+	Updated mail/sympa to 5.4.2 [bouyer 2008-04-27]
