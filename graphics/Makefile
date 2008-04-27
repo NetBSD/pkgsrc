@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.480 2008/04/05 02:02:20 tnn Exp $
+# $NetBSD: Makefile,v 1.481 2008/04/27 06:41:59 wiz Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -26,6 +26,7 @@ SUBDIR+=	SDLKit
 SUBDIR+=	SDL_image
 SUBDIR+=	TiffIO
 SUBDIR+=	aalib
+SUBDIR+=	agg
 SUBDIR+=	aqsis
 SUBDIR+=	artist
 SUBDIR+=	autotrace
