@@ -1,15 +1,15 @@
-$NetBSD: patch-aa,v 1.5 2006/03/28 21:41:13 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2008/04/27 06:36:02 wiz Exp $
 
---- configure.orig	2005-04-15 14:03:04.000000000 +0000
+--- configure.orig	2008-04-26 21:41:31.000000000 +0000
 +++ configure
-@@ -3324,13 +3324,13 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
+@@ -4300,13 +4300,13 @@ ac_compiler_gnu=$ac_cv_cxx_compiler_gnu
  
  
  
--echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
--echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6
-+echo "$as_me:$LINENO: checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
-+echo $ECHO_N "checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... $ECHO_C" >&6
+-{ echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
+-echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6; }
++{ echo "$as_me:$LINENO: checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
++echo $ECHO_N "checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... $ECHO_C" >&6; }
  if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
@@ -19,33 +19,12 @@ $NetBSD: patch-aa,v 1.5 2006/03/28 21:41:13 joerg Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -3389,7 +3389,7 @@ fi
- echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_create" >&5
- echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6
+@@ -4378,7 +4378,7 @@ fi
+ { echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_create" >&5
+ echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6; }
  if test $ac_cv_lib_pthread_pthread_create = yes; then
 -  LIBS="$LIBS -lpthread"
 +  LIBS="$LIBS ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
  else
     { { echo "$as_me:$LINENO: error: pthread library is required" >&5
  echo "$as_me: error: pthread library is required" >&2;}
-@@ -6926,18 +6926,12 @@ cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
- #include <libintl.h>
--extern int _nl_msg_cat_cntr;
--extern
--#ifdef __cplusplus
--"C"
--#endif
--const char *_nl_expand_alias ();
-+
- int
- main ()
- {
- bindtextdomain ("", "");
--return (int) gettext ("") + _nl_msg_cat_cntr + *_nl_expand_alias (0)
--  ;
-+return (int) gettext ("");
-   return 0;
- }
- _ACEOF
