@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/04/27 16:45:16 bouyer Exp $
+
+SHA1 (HTML-StripScripts-Parser-1.02.tar.gz) = 2b32c8fced5b6f2cdb350a1883d5da5f3cf5548f
+RMD160 (HTML-StripScripts-Parser-1.02.tar.gz) = 0ef447e38216de836a376f0e6310b94be3710e79
+Size (HTML-StripScripts-Parser-1.02.tar.gz) = 10164 bytes
