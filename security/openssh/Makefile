@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.187 2008/04/03 07:59:08 tonnerre Exp $
+# $NetBSD: Makefile,v 1.188 2008/04/27 00:34:27 tnn Exp $
 
-DISTNAME=		openssh-4.7p1
-PKGNAME=		openssh-4.7.1
-PKGREVISION=		3
+DISTNAME=		openssh-5.0p1
+PKGNAME=		openssh-5.0.1
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
@@ -12,7 +11,7 @@ MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
 			ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/old/
 # Don't delete the last entry -- it's there if the pkgsrc version is not
 # up-to-date and the mirrors already removed the old distfile.
-DIST_SUBDIR=		${PKGBASE}-4.7.1-20070919
+DIST_SUBDIR=		${PKGBASE}-5.0.1-20080427
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.openssh.com/
@@ -23,6 +22,8 @@ CONFLICTS+=		ssh-[0-9]* ssh6-[0-9]*
 CONFLICTS+=		ssh2-[0-9]* ssh2-nox11-[0-9]*
 CONFLICTS+=		openssh+gssapi-[0-9]*
 CONFLICTS+=		lsh>2.0
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		perl
 
@@ -161,12 +162,13 @@ SUBST_MESSAGE.patch=	More patch a file.
 .include "../../security/tcp_wrappers/buildlink3.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	cd ${WRKSRC}; for file in ${CONFS}; do				\
-		${INSTALL_DATA} $${file}.out ${EGDIR}/$${file};		\
+		${INSTALL_DATA} $${file}.out ${DESTDIR}${EGDIR}/$${file};		\
 	done
 .if !empty(PKG_OPTIONS:Mpam) && ${OPSYS} == "Linux"
-	${INSTALL_DATA} ${WRKSRC}/contrib/sshd.pam.generic ${EGDIR}/sshd.pam
+	${INSTALL_DATA} ${WRKSRC}/contrib/sshd.pam.generic \
+	  ${DESTDIR}${EGDIR}/sshd.pam
 .endif
 
 .include "../../mk/bsd.pkg.mk"

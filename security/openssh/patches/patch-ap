@@ -1,11 +1,11 @@
-$NetBSD: patch-ap,v 1.8 2006/10/31 03:31:20 taca Exp $
+$NetBSD: patch-ap,v 1.9 2008/04/27 00:34:27 tnn Exp $
 
---- ssh.c.orig	2006-10-29 12:02:30.000000000 +0900
+--- ssh.c.orig	2008-02-28 09:13:52.000000000 +0100
 +++ ssh.c
-@@ -684,7 +684,7 @@ main(int ac, char **av)
- 	/* Open a connection to the remote host. */
+@@ -693,7 +693,7 @@ main(int ac, char **av)
  	if (ssh_connect(host, &hostaddr, options.port,
- 	    options.address_family, options.connection_attempts,
+ 	    options.address_family, options.connection_attempts, &timeout_ms,
+ 	    options.tcp_keep_alive, 
 -#ifdef HAVE_CYGWIN
 +#if defined(HAVE_CYGWIN) || defined(HAVE_INTERIX)
  	    options.use_privileged_port,
