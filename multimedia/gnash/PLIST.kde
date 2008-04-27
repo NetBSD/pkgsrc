@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST.kde,v 1.1 2008/04/27 06:44:52 wiz Exp $
+bin/kde-gnash
+share/kde/apps/klash/pluginsinfo
+share/kde/services/klash_part.desktop
+@dirrm share/kde/apps/klash
+@comment in kde: @dirrm share/kde/apps
+@comment in kde: @dirrm share/kde

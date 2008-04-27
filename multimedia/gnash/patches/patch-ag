@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1 2008/04/27 06:44:52 wiz Exp $
+
+--- gui/am-frag/kde.am.orig	2008-01-21 22:19:22.000000000 +0100
++++ gui/am-frag/kde.am
+@@ -23,8 +23,8 @@ bin_PROGRAMS += kde-gnash
+ if HAVE_QT_4
+ QT_CFLAGS += -DQT3_SUPPORT
+ endif
+-kde_gnash_CPPFLAGS = -DGUI_KDE -DGUI_CONFIG=\"KDE\" \
+-	 $(AM_CPPFLAGS) $(KDE_CFLAGS) $(QT_CFLAGS)
++kde_gnash_CPPFLAGS = $(KDE_CFLAGS) $(QT_CFLAGS) -DGUI_KDE -DGUI_CONFIG=\"KDE\" \
++	 $(AM_CPPFLAGS)
+ kde_gnash_SOURCES = $(GUI_SRCS) gui_kde.cpp
+ kde_gnash_LDFLAGS = $(LIBLTDL) -export-dynamic 
+ #kde_gnash_DEPENDENCIES = .configline
