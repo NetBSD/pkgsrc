@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/04/28 04:16:39 bjs Exp $
+# $NetBSD: Makefile,v 1.3 2008/04/28 19:50:32 bjs Exp $
 #
 
 DISTNAME=	gambc-${GAMBC_DIST_VERSION}
@@ -15,7 +15,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
-USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--enable-single-host
@@ -39,8 +38,6 @@ CHECK_PORTABILITY_SKIP=	prebuilt/*/*
 DLOPEN_REQUIRE_PTHREADS=no
 
 .include "../../mk/bsd.prefs.mk"
-
-GAMBC_DIST_VERSION=		${GAMBC_VERSION:C|^.*|v&|:S|.|_|g}
 
 GAMBC_MAKE_FLAGS=	prefix=${PREFIX}
 GAMBC_MAKE_FLAGS+=	includedir=${PREFIX}/include
