@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.18 2007/12/16 16:41:47 adam Exp $
+$NetBSD: distinfo,v 1.19 2008/04/28 14:47:29 adam Exp $
 
-SHA1 (efax-gtk-3.0.16.src.tgz) = 7613651cb11f826027bc890d3d472bce32a7c4e4
-RMD160 (efax-gtk-3.0.16.src.tgz) = dcc531d91860183f87333f0156aa0f0689cdb4fc
-Size (efax-gtk-3.0.16.src.tgz) = 1140982 bytes
+SHA1 (efax-gtk-3.0.17.src.tgz) = 61bf78b66c1afb77ae19349326b06bf74233ada7
+RMD160 (efax-gtk-3.0.17.src.tgz) = 8f875537a65474d5995646f3ca255b5149397e01
+Size (efax-gtk-3.0.17.src.tgz) = 1148144 bytes
 SHA1 (patch-aa) = 94cd524ea47542e69d4a13704c204522f7324cd8
 SHA1 (patch-ab) = cbada5659b3a9af6862a8941c2c85ab9dccdc475
 SHA1 (patch-ac) = 5d223f5a9cacf3b60e8e5affaf9e5be8511db9be
