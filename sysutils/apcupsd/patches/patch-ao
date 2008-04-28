@@ -1,9 +1,9 @@
-$NetBSD: patch-ao,v 1.5 2007/06/19 22:22:55 bouyer Exp $
+$NetBSD: patch-ao,v 1.6 2008/04/28 08:28:05 sborrill Exp $
 
---- platforms/Makefile.in.orig	2007-06-19 23:54:40.000000000 +0200
-+++ platforms/Makefile.in	2007-06-19 23:56:17.000000000 +0200
-@@ -26,19 +26,6 @@
- 		 DESTDIR=$(DESTDIR) install);
+--- platforms/Makefile.in.orig	2007-11-17 19:09:23.000000000 +0000
++++ platforms/Makefile.in	2008-04-26 22:24:19.000000000 +0100
+@@ -26,20 +26,6 @@
+ 	      DESTDIR=$(DESTDIR) install);
  
  install: @INSTALL_DISTDIR@
 -	@echo "Installing apccontrol script..."
@@ -12,13 +12,14 @@ $NetBSD: patch-ao,v 1.5 2007/06/19 22:22:55 bouyer Exp $
 -	   echo " Found old apccontrol moving it to $(DESTDIR)$(sysconfdir)/apccontrol.orig"; \
 -	fi 
 -	@if test -f ./$(DISTNAME)/apccontrol; then \
--	     $(INSTALL_SCRIPT) -m 744 ./$(DISTNAME)/apccontrol \
--		$(DESTDIR)$(sysconfdir)/apccontrol; \
+-	   $(INSTALL_SCRIPT) -m 744 ./$(DISTNAME)/apccontrol $(DESTDIR)$(sysconfdir)/apccontrol; \
 -	else \
--	     $(INSTALL_SCRIPT) -m 744 ./apccontrol \
--		$(DESTDIR)$(sysconfdir)/apccontrol; \
+-	   $(INSTALL_SCRIPT) -m 744 ./apccontrol $(DESTDIR)$(sysconfdir)/apccontrol; \
 -	fi
 -	(cd etc/; $(MAKE) DESTDIR=$(DESTDIR) install)
+-	@if test "x@HALPOLICYDIR@" != "xno" -a "x@HALPOLICYDIR@" != "x" ; then \
+-	   $(INSTALL_DATA) -m 644 ./80-apcupsd-ups-policy.fdi $(DESTDIR)@HALPOLICYDIR@ ; \
+-	fi
  
  #
  # uninstall symlinks before removing the boot script etc etc

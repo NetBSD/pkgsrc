@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.12 2007/06/19 22:22:55 bouyer Exp $
+$NetBSD: distinfo,v 1.13 2008/04/28 08:28:05 sborrill Exp $
 
-SHA1 (apcupsd-3.14.1.tar.gz) = ee2a9ba074b688aba047d571098f44dc591e985c
-RMD160 (apcupsd-3.14.1.tar.gz) = f6655123f7daa91966e9a2a4877e90b70babc670
-Size (apcupsd-3.14.1.tar.gz) = 4352400 bytes
+SHA1 (apcupsd-3.14.3.tar.gz) = b9f75732752cdee9792a5be526656c153c2d1274
+RMD160 (apcupsd-3.14.3.tar.gz) = 092726b2076e56368cdb7e3c790ee8d5e2a7d2f9
+Size (apcupsd-3.14.3.tar.gz) = 4350109 bytes
 SHA1 (patch-aa) = 112c8db7a67456821a2e449d6a8ff600a7998dc0
 SHA1 (patch-ab) = 3db85accf1b05c8723dd7625278dfac02909dc34
 SHA1 (patch-ac) = 98e8853dd030e09d5a487e57a277ff1269baa517
@@ -13,7 +13,7 @@ SHA1 (patch-ag) = 2b77e969d6cbe8ed06797cd753eb443bd6a3881b
 SHA1 (patch-ah) = 738b93b481310aa92ee16d0fbf91b5723b8cabb8
 SHA1 (patch-ai) = be802d4ea438ac991f7e0ebd1c086699aade0b2b
 SHA1 (patch-aj) = cce8e25f52cc4eaa38eb31baffceb33fe4a43cee
-SHA1 (patch-al) = a41cb4ee8d896fc633d8869f24e548fda0761340
+SHA1 (patch-al) = 071f01068f80aa4380446690c791dd0b2cd8b8af
 SHA1 (patch-am) = a2c060519748cf95f0f9aaa284f783f086c1d7d4
 SHA1 (patch-an) = 56afb8709129ec3bb42d4c29fa5a24c9032aa8a3
-SHA1 (patch-ao) = 4bae4f04a5766b49f1a3cf13cf63c70bd3807937
+SHA1 (patch-ao) = 08594041766d7655e60f7179b086498f27cc4ece
