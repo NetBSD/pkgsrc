@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2008/01/18 05:08:41 tnn Exp $
+# $NetBSD: Makefile,v 1.43 2008/04/28 22:08:14 wiz Exp $
 
 DISTNAME=		ettercap-0.6.b
 PKGREVISION=		4
@@ -17,7 +17,8 @@ CONFIGURE_ARGS+=	--enable-https
 
 .include "options.mk"
 
-USE_NCURSES=		# putwin()
+# putwin() appeared in 4.99.60
+INCOMPAT_CURSES=	NetBSD-[0-3]* NetBSD-4.[0-9].* NetBSD-4.99.[012345]*
 USE_OLD_DES_API=	yes
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
