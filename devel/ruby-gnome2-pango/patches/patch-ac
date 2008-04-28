@@ -1,0 +1,29 @@
+$NetBSD: patch-ac,v 1.1 2008/04/28 14:38:51 obache Exp $
+
+--- pango/src/rbpangoglyphitem.c.orig	2006-12-29 13:17:28.000000000 +0000
++++ pango/src/rbpangoglyphitem.c
+@@ -15,6 +15,7 @@
+ #define _SELF(r) ((PangoGlyphItem*)RVAL2BOXED(r, PANGO_TYPE_GLYPH_ITEM))
+ 
+ /**********************************/
++#ifndef HAVE_PANGO_GLYPH_ITEM_GET_TYPE
+ static PangoGlyphItem*
+ glyph_item_copy(ref)
+     const PangoGlyphItem* ref;
+@@ -26,7 +27,7 @@ glyph_item_copy(ref)
+   return new_ref;
+ }
+ 
+-#if ! HAVE_PANGO_GLYPH_ITEM_FREE
++#  ifndef HAVE_PANGO_GLYPH_ITEM_FREE
+ void
+ pango_glyph_item_free(PangoGlyphItem* glyph_item)
+ {
+@@ -49,6 +50,7 @@ pango_glyph_item_get_type(void)
+                     (GBoxedFreeFunc)pango_glyph_item_free);
+     return our_type;
+ }
++#endif
+ /**********************************/
+ 
+ static VALUE

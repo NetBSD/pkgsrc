@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2008/04/28 14:38:51 obache Exp $
+
+--- pango/extconf.rb.orig	2006-12-29 13:17:28.000000000 +0000
++++ pango/extconf.rb
+@@ -23,6 +23,7 @@ have_func("pango_render_part_get_type")
+ have_func("pango_attr_strikethrough_color_new")
+ have_func("pango_attr_underline_color_new")
+ have_func("pango_glyph_item_free")
++have_func("pango_glyph_item_get_type")
+ have_func("pango_attr_iterator_get_attrs")
+ have_func("pango_itemize_with_base_dir")
+ have_func("pango_font_family_is_monospace")
