@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7252 2008/04/28 15:56:31 schmonz Exp $
+$NetBSD: TODO,v 1.7253 2008/04/28 23:00:29 wiz Exp $
 
 Suggested new packages
 ======================
@@ -378,6 +378,7 @@ Suggested package updates
 	o ROMBuild-2.10
 	o RTx-Shredder-0.05
 	o RealPlayer-11
+	o SDL_sound-1.0.3
 	o SmartEiffel-2.3
 	o TiffIO-130e
 	o YoSucker-81
@@ -434,12 +435,13 @@ Suggested package updates
 	o asapm-3.1
 	o asc-2.1.0
 	o ascii-3.8
+	o aspell-0.60.6
 	o aspell-danish-13.7
 	o aspell-faroese-0.2.31
 	o aspell-norwegian-2.0.10
 	o aspell-ukrainian-1.3.3
 	o ast-ksh-20080202 [pkg/37854]
-	o asterisk-1.4.19
+	o asterisk-1.4.19.1
 	o astyle-1.15.3
 	o aterm-1.0.1
 	o auctex-11.85
@@ -657,6 +659,8 @@ Suggested package updates
 	o gnome-sharp-2.20.1
 	o gnomeicu-0.99.14
 	o gnu-crypto-2.1.0
+	o gnucash-2.2.5
+	o gnupg-2.0.9
 	o gnupg2-2.0.9
 	o gnustep-1.14.0
 	o gnustep-back-0.12.1
@@ -686,6 +690,8 @@ Suggested package updates
 	o gsl-1.11
 	o gsm-1.0.12
 	o gss-0.0.22
+	o gst-plugins0.10-bad-0.10.7
+	o gst-plugins0.10-good-0.10.8
 	o gtar-1.20
 	o gtar-base-1.20
 	o gtexinfo-4.12
@@ -775,6 +781,7 @@ Suggested package updates
 	o kmymoney2-0.8.8
 	o kodos-2.4.5
 	o kphotobook-0.0.7
+	o kronolith-2.1.8
 	o krusader-1.90.0
 	o ksi-3.4.2
 	o ktorrent-2.2.6 [pkg/38494]
@@ -797,7 +804,6 @@ Suggested package updates
 	o libdiscid-0.1.1
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.6
-	o libebml-0.7.8
 	o libevent-1.4.0beta
 	o libextractor-0.5.20a
 	o libflash-0.4.13
@@ -815,6 +821,7 @@ Suggested package updates
 	o libgnomeuimm-2.22.0
 	o libgtop-2.22.1
 	o libhydrogen-0.9.2
+	o libidn-1.8
 	o liblive-2007.01.17 [pkg/38038]
 	o liblive-2007.02.20
 	o libltdl-2.2.2
@@ -826,13 +833,13 @@ Suggested package updates
 	o libntlm-1.0
 	o libole2-2.2.8
 	o libopensync-0.35
-	o libprelude-0.9.17
 	o libpreludedb-0.9.14
 	o libshout-2.2.2
 	o libspiff-0.8.3
 	o libssh-0.2
 	o libstatgrab-0.16
 	o libstree-0.4.2
+	o libtasn1-1.4
 	o libtcl-nothread-8.5.1
 	o libtool-2.2.2
 	o libtool-base-2.2.2
@@ -854,7 +861,7 @@ Suggested package updates
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.13a
-	o mail-notification-5.1
+	o mail-notification-5.3
 	o mailfront-1.11 [pkg/34765]
 	o mailgraph-1.14
 	o mailscanner-4.54.6
@@ -961,6 +968,8 @@ Suggested package updates
 	o p5-Authen-SASL-Cyrus-0.13
 	o p5-Class-DBI-3.0.16
 	o p5-Class-DBI-AbstractSearch-0.07
+	o p5-Compress-Raw-Zlib-2.009
+	o p5-Compress-Zlib-2.009
 	o p5-Config-General-2.38
 	o p5-Convert-UUlib-1.09
 	o p5-Curses-1.15
@@ -975,9 +984,12 @@ Suggested package updates
 	o p5-HTML-Table-2.05
 	o p5-HTTP-Proxy-0.20
 	o p5-HTTP-Request-Form-0.952
+	o p5-HTTP-Server-Simple-0.33
 	o p5-HTTP-Server-Simple-Static-0.05
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IMAP-Admin-1.6.4
+	o p5-IO-Compress-Base-2.009
+	o p5-IO-Compress-Zlib-2.009
 	o p5-Locale-Codes-2.07
 	o p5-MARC-1.38
 	o p5-Math-Random-0.69
@@ -1002,6 +1014,7 @@ Suggested package updates
 	o p5-Term-Size-0.203
 	o p5-Test-Harness-2.64
 	o p5-Test-Unit-0.25
+	o p5-Text-Markdown-1.0.19
 	o p5-Text-Tabs+Wrap-2006.1117
 	o p5-Time-HiRes-1.9707
 	o p5-XML-RAI-1.04
@@ -1061,6 +1074,7 @@ Suggested package updates
 	o po4a-0.29
 	o poedit-1.4.1
 	o polsms-2.1.0
+	o poppler-0.8.1
 	o poppy-4.01
 	o poptop-1.3.0
 	o posh-0.5.5
@@ -1068,7 +1082,6 @@ Suggested package updates
 	o postgresql81-postgis-1.3.3
 	o powermanga-0.90
 	o pptp-1.7.1 [pkg/38038]
-	o prelude-lml-0.9.12
 	o prelude-manager-0.9.12
 	o profit-2.5.3
 	o projclock-0.9
@@ -1096,6 +1109,7 @@ Suggested package updates
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
+	o py-html2text-2.291
 	o py-imagingtk-1.1.6
 	o py-kenosis-0.96
 	o py-ldap-2.3.4
@@ -1108,7 +1122,6 @@ Suggested package updates
 	o py-mutagen-1.11
 	o py-mysqldb-1.2.2 [pkg/38090]
 	o py-paramiko-1.7
-	o py-prewikka-0.9.14
 	o py-psyco-1.5.1
 	o py-pyrex-0.9.5.1a
 	o py-qt3-3.17.3
@@ -1211,7 +1224,6 @@ Suggested package updates
 	o smlnj-110.65
 	o smokeping-2.3.6
 	o smtpfeed-1.20
-	o snd-9.9
 	o snes9x-1.51
 	o snobol-1.1
 	o snort-2.8.1
@@ -1256,6 +1268,7 @@ Suggested package updates
 	o tea-17.6.0
 	o ted-2.17
 	o ted-en-us-2.17
+	o tesseract-2.03
 	o tex-musixtex-113 [pkg/34758]
 	o texmaker-1.7
 	o tfmxplay-1.1.6
@@ -1289,7 +1302,7 @@ Suggested package updates
 	o ucblogo-5.5
 	o ups-nut-2.2.1 [pkgsrc-wip]
 	o upx-2.90
-	o uriparser-0.7.0
+	o uriparser-0.7.1
 	o userppp-030706
 	o valgrind-3.2.3
 	o varnish-1.1.1
@@ -1329,7 +1342,7 @@ Suggested package updates
 	o wxRemind-79
 	o wyrd-1.4.4
 	o x11perf-1.5
-	o x264-devel-20080405
+	o x264-devel-20080426
 	o xanalyser-1.30
 	o xbindkeys-1.8.2
 	o xbindkeys-tk-1.8.0
