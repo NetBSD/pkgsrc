@@ -1,0 +1,50 @@
+$NetBSD: patch-r42674,v 1.1 2008/04/28 21:35:25 jmmv Exp $
+
+Fix for CVE-2008-0171.  Patch from Boost's svn repository, r42674.
+
+--- boost/regex/v4/basic_regex_parser.hpp (revision 38864)
++++ boost/regex/v4/basic_regex_parser.hpp (revision 42674)
+@@ -785,4 +785,5 @@
+       case syntax_element_jump:
+       case syntax_element_startmark:
++      case syntax_element_backstep:
+          // can't legally repeat any of the above:
+          fail(regex_constants::error_badrepeat, m_position - m_base);
+@@ -1870,4 +1871,5 @@
+    {
+       re_syntax_base* b = this->getaddress(expected_alt_point);
++      // Make sure we have exactly one alternative following this state:
+       if(b->type != syntax_element_alt)
+       {
+@@ -1878,4 +1880,13 @@
+       {
+          fail(regex_constants::error_bad_pattern, m_position - m_base);
++         return false;
++      }
++      // check for invalid repetition of next state:
++      b = this->getaddress(expected_alt_point);
++      b = this->getaddress(static_cast<re_alt*>(b)->next.i, b);
++      if((b->type != syntax_element_assert_backref)
++         && (b->type != syntax_element_startmark))
++      {
++         fail(regex_constants::error_badrepeat, m_position - m_base);
+          return false;
+       }
+--- libs/regex/test/regress/test_perl_ex.cpp (revision 30980)
++++ libs/regex/test/regress/test_perl_ex.cpp (revision 42674)
+@@ -122,4 +122,15 @@
+    TEST_INVALID_REGEX("(?:(a)|b)(?(?<", perl);
+    TEST_INVALID_REGEX("(?:(a)|b)(?(?<a", perl);
++
++   TEST_INVALID_REGEX("(?(?!#?)+)", perl);
++   TEST_INVALID_REGEX("(?(?=:-){0})", perl);
++   TEST_INVALID_REGEX("(?(123){1})", perl);
++   TEST_INVALID_REGEX("(?(?<=A)*)", perl);
++   TEST_INVALID_REGEX("(?(?<=A)+)", perl);
++
++   TEST_INVALID_REGEX("(?<!*|^)", perl);
++   TEST_INVALID_REGEX("(?<!*|A)", perl);
++   TEST_INVALID_REGEX("(?<=?|A)", perl);
++   TEST_INVALID_REGEX("(?<=*|\B)", perl);
+ }
+ 

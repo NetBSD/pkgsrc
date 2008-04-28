@@ -1,0 +1,13 @@
+$NetBSD: patch-r42745,v 1.1 2008/04/28 21:35:25 jmmv Exp $
+
+Fix for CVE-2008-0171.  Patch from Boost's svn repository, r42745.
+
+--- libs/regex/test/regress/test_perl_ex.cpp (revision 42674)
++++ libs/regex/test/regress/test_perl_ex.cpp (revision 42745)
+@@ -132,5 +132,5 @@
+    TEST_INVALID_REGEX("(?<!*|A)", perl);
+    TEST_INVALID_REGEX("(?<=?|A)", perl);
+-   TEST_INVALID_REGEX("(?<=*|\B)", perl);
++   TEST_INVALID_REGEX("(?<=*|\\B)", perl);
+ }
+ 
