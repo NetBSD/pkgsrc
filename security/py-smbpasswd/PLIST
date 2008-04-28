@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/28 22:03:53 bouyer Exp $
+${PYSITELIB}/smbpasswd.so
