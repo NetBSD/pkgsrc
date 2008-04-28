@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.10 2007/08/04 10:27:58 tnn Exp $
+$NetBSD: patch-ae,v 1.11 2008/04/28 22:24:22 wiz Exp $
 
 --- makedepend.SH.orig	2003-06-05 20:11:10.000000000 +0200
 +++ makedepend.SH
@@ -10,6 +10,15 @@ $NetBSD: patch-ae,v 1.10 2007/08/04 10:27:58 tnn Exp $
      *) $touch $firstmakefile ;;
      esac
  fi
+@@ -128,7 +127,7 @@ for file in `$cat .clist`; do
+     *.y) filebase=`basename $file .y` ;;
+     esac
+     case "$file" in
+-    */*) finc="-I`echo $file | sed 's#/[^/]*$##`" ;;
++    */*) finc="-I`echo $file | sed 's#/[^/]*$##'`" ;;
+     *)   finc= ;;
+     esac
+     $echo "Finding dependencies for $filebase$_o."
 @@ -167,6 +166,7 @@ for file in `$cat .clist`; do
              -e '/^#.*<builtin>/d' \
              -e '/^#.*<built-in>/d' \
