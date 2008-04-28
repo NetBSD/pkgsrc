@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.938 2008/04/28 14:22:48 mjl Exp $
+$NetBSD: CHANGES-2008,v 1.939 2008/04/28 14:49:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1680,3 +1680,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/py-prewikka to 0.9.14 [shannonjr 2008-04-28]
 	Updated audio/snd to 9.9 [wiz 2008-04-28]
 	Added textproc/p5-iCal-Parser version 1.14 [mjl 2008-04-28]
+	Updated comms/efax-gtk to 3.0.17 [adam 2008-04-28]
