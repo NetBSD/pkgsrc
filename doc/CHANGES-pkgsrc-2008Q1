@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.22 2008/04/26 07:02:03 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.23 2008/04/28 10:42:08 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -50,3 +50,5 @@ pullup ticket #2350 - requested by wiz
 security fix, plist fix
 pullup ticket #2349 - requested is,joerg
 fixes package installation
+pullup ticket #2352 - requested by tron 
+update for security problem
