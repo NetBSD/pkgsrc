@@ -1,0 +1,19 @@
+$NetBSD: patch-bd,v 1.1 2008/04/28 10:16:57 tnn Exp $
+
+DESTDIR support.
+
+--- compiler/Makefile.orig	2000-06-27 18:46:19.000000000 +0400
++++ compiler/Makefile	2008-04-27 22:50:05.000000000 +0400
+@@ -117,9 +117,9 @@
+ 	rm -f Makefile.bak
+ 
+ install:
+-	${INSTALL_DATA} mosmlcmp $(LIBDIR)
+-	${INSTALL_DATA} mosmllnk $(LIBDIR)
+-	${INSTALL_DATA} mosmltop $(LIBDIR)
++	${INSTALL_DATA} mosmlcmp $(DESTDIR)$(LIBDIR)
++	${INSTALL_DATA} mosmllnk $(DESTDIR)$(LIBDIR)
++	${INSTALL_DATA} mosmltop $(DESTDIR)$(LIBDIR)
+ 
+ promote:
+ 	test -f ../mosmlcmp.orig || cp ../mosmlcmp ../mosmlcmp.orig
