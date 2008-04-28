@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.4 2007/02/23 00:34:53 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/04/28 12:47:44 wiz Exp $
 bin/snd
 man/man1/snd.1
 share/locale/de/LC_MESSAGES/snd.mo
 share/snd/analog-filter.rb
 share/snd/analog-filter.scm
+share/snd/animals.scm
 share/snd/autosave.scm
 share/snd/bess.rb
 share/snd/bess.scm
@@ -12,6 +13,7 @@ share/snd/bess1.scm
 share/snd/bird.fsm
 share/snd/bird.rb
 share/snd/bird.scm
+share/snd/clean.scm
 share/snd/clm-ins.fs
 share/snd/clm-ins.rb
 share/snd/clm-ins.scm
@@ -41,6 +43,7 @@ share/snd/event.scm
 share/snd/examp.fs
 share/snd/examp.rb
 share/snd/examp.scm
+share/snd/export-all.scm
 share/snd/extensions.fs
 share/snd/extensions.rb
 share/snd/extensions.scm
@@ -53,6 +56,7 @@ share/snd/freeverb.rb
 share/snd/freeverb.scm
 share/snd/gauche-format.scm
 share/snd/gauche-optargs.scm
+share/snd/generators.scm
 share/snd/grani.scm
 share/snd/green.scm
 share/snd/gtk-effects-utils.scm
@@ -77,7 +81,6 @@ share/snd/marks.scm
 share/snd/maxf.rb
 share/snd/maxf.scm
 share/snd/misc.scm
-share/snd/mix-menu.scm
 share/snd/mix.fs
 share/snd/mix.rb
 share/snd/mix.scm
@@ -92,6 +95,7 @@ share/snd/new-buttons.scm
 share/snd/new-effects.scm
 share/snd/noise.rb
 share/snd/noise.scm
+share/snd/numerics.scm
 share/snd/oo.scm
 share/snd/oscope.scm
 share/snd/panic.scm
@@ -122,15 +126,18 @@ share/snd/pvoc.scm
 share/snd/rgb.fs
 share/snd/rgb.rb
 share/snd/rgb.scm
+share/snd/rt-clm-ins.scm
 share/snd/rt-compiler.scm
 share/snd/rt-engine.scm
 share/snd/rt-examples.scm
+share/snd/rt-faust.scm
 share/snd/rt-player.scm
 share/snd/rtio.rb
 share/snd/rtio.scm
 share/snd/rubber.fs
 share/snd/rubber.rb
 share/snd/rubber.scm
+share/snd/selection.scm
 share/snd/singer.rb
 share/snd/singer.scm
 share/snd/snd-forth-init.fs
@@ -148,17 +155,19 @@ share/snd/snd5.scm
 share/snd/snd6.scm
 share/snd/snd7.scm
 share/snd/snd8.scm
+share/snd/snd9.scm
 share/snd/snd_conffile.scm
+share/snd/snddiff.scm
 share/snd/sndwarp.scm
 share/snd/special-menu.scm
 share/snd/spectr.fs
 share/snd/spectr.rb
 share/snd/spectr.scm
+share/snd/spokenword.scm
 share/snd/stochastic.scm
 share/snd/strad.rb
 share/snd/strad.scm
 share/snd/toolbar.scm
-share/snd/track-colors.scm
 share/snd/v.rb
 share/snd/v.scm
 share/snd/ws.rb
