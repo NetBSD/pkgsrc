@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.317 2008/04/20 02:53:33 jnemeth Exp $
+# $NetBSD: Makefile,v 1.318 2008/04/28 22:05:05 bouyer Exp $
 #
 
 COMMENT=	Security tools
@@ -229,6 +229,7 @@ SUBDIR+=	py-m2crypto
 SUBDIR+=	py-mcrypt
 SUBDIR+=	py-paramiko
 SUBDIR+=	py-prewikka
+SUBDIR+=	py-smbpasswd
 SUBDIR+=	py-tlslite
 SUBDIR+=	pyca
 SUBDIR+=	qca
