@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/25 15:18:28 kefren Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/28 07:12:57 kefren Exp $
 
 DISTNAME=	ndesk-dbus-0.6.1a
 CATEGORIES=	sysutils
@@ -12,6 +12,7 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake
 
 CONFLICTS+=	dbus-sharp-[0-9]*
+DEPENDS+=	dbus>=1.0:../../sysutils/dbus
 
 PKGCONFIG_OVERRIDE+=	ndesk-dbus-1.0.pc.in
 
