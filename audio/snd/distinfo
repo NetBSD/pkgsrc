@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.14 2007/02/23 00:34:53 wiz Exp $
+$NetBSD: distinfo,v 1.15 2008/04/28 12:47:44 wiz Exp $
 
-SHA1 (snd-8.8.tar.gz) = 8aa73ec7bbbb84b97c4325b05769f3388e6f0680
-RMD160 (snd-8.8.tar.gz) = 33a2a5f196a501c0cfb0fba623fa6f37c489def2
-Size (snd-8.8.tar.gz) = 8580035 bytes
-SHA1 (patch-aa) = c0940f37c8455e7dcfac64d528c9baf545ba14b7
+SHA1 (snd-9.9.tar.gz) = 8c00b1d48d66032a9085b8ae652a5d25c8ef14a2
+RMD160 (snd-9.9.tar.gz) = 39561a38d8bba7ead73a16fc7647cb2bd6ef275a
+Size (snd-9.9.tar.gz) = 12349176 bytes
+SHA1 (patch-aa) = b17208a09350d6f9be61b60d6ece6d92d60c5ad5
