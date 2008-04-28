@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/11/07 15:26:20 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/04/28 10:59:42 shannonjr Exp $
 ${PYSITELIB}/prewikka/Auth.py
 ${PYSITELIB}/prewikka/Auth.pyc
 ${PYSITELIB}/prewikka/Auth.pyo
@@ -179,6 +179,13 @@ ${PYSITELIB}/prewikka/modules/auth/anonymous/__init__.pyo
 ${PYSITELIB}/prewikka/modules/auth/anonymous/anonymous.py
 ${PYSITELIB}/prewikka/modules/auth/anonymous/anonymous.pyc
 ${PYSITELIB}/prewikka/modules/auth/anonymous/anonymous.pyo
+${PYSITELIB}/prewikka/_threading_local.py
+${PYSITELIB}/prewikka/_threading_local.pyc
+${PYSITELIB}/prewikka/_threading_local.pyo
+${PYSITELIB}/prewikka/resolve.py
+${PYSITELIB}/prewikka/resolve.pyc
+${PYSITELIB}/prewikka/resolve.pyo
+share/locale/pl/LC_MESSAGES/prewikka.mo
 share/locale/de/LC_MESSAGES/prewikka.mo
 share/locale/es/LC_MESSAGES/prewikka.mo
 share/locale/pt_BR/LC_MESSAGES/prewikka.mo
