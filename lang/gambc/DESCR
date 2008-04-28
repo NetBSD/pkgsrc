@@ -1,0 +1,12 @@
+This package  the Gambit-C Scheme programming system.  Gambit-C
+includes a Scheme interpreter and a Scheme compiler which can be used
+to build standalone executables.  Because the compiler generates
+portable C code it is fairly easy to port to any platform with a
+decent C compiler.
+
+The Gambit-C system conforms to the R4RS, R5RS and IEEE Scheme standards.
+The full numeric tower is implemented, including: infinite precision
+integers (bignums), rationals, inexact reals (floating point numbers),
+and complex numbers.  Gambit-C supports a number of extensions to the
+standards.  Please see the <http://gambit.uri.umontreal.ca/~gambit/wiki>
+for more information:  there is simply not enough room here to elaborate!
