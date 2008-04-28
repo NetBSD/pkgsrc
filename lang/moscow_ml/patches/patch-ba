@@ -1,0 +1,32 @@
+$NetBSD: patch-ba,v 1.1 2008/04/28 10:16:57 tnn Exp $
+
+Fix insecure temporary file handling.
+DESTDIR support.
+
+--- launch/Makefile.orig	2000-01-21 13:07:13.000000000 +0300
++++ launch/Makefile	2008-04-27 22:42:28.000000000 +0400
+@@ -10,16 +10,16 @@
+ install:
+ 	(echo "#!$(BINDIR)/camlrunm"; \
+ 	 echo "exit 2"; \
+-	 cat testprog) > /tmp/testscr
+-	chmod a+x /tmp/testscr
+-	sh -c 'if sh -c /tmp/testscr 2>/dev/null; \
+-               then echo "#!$(BINDIR)/camlrunm" > $(LIBDIR)/header; \
+-               else ${INSTALL_PROGRAM} camlexec$(EXE) $(LIBDIR)/header; \
++	 cat testprog) > ./testscr
++	chmod a+x ./testscr
++	sh -c 'if sh -c ./testscr 2>/dev/null; \
++               then echo "#!$(BINDIR)/camlrunm" > $(DESTDIR)$(LIBDIR)/header; \
++               else ${INSTALL_PROGRAM} camlexec$(EXE) $(DESTDIR)$(LIBDIR)/header; \
+                fi'
+-	rm -f /tmp/testscr
++	rm -f ./testscr
+ 	for script in mosml mosmlc mosmllex; do \
+-	  ${INSTALL_SCRIPT} $$script $(BINDIR)/$$script; \
+-	  chmod a+x $(BINDIR)/$$script; \
++	  ${INSTALL_SCRIPT} $$script $(DESTDIR)$(BINDIR)/$$script; \
++	  chmod a+x $(DESTDIR)$(BINDIR)/$$script; \
+ 	done
+ 
+ mosml: mosml.tpl

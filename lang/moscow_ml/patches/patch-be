@@ -1,0 +1,15 @@
+$NetBSD: patch-be,v 1.1 2008/04/28 10:16:57 tnn Exp $
+
+DESTDIR support.
+
+--- toolssrc/Makefile.orig	2000-01-21 13:07:13.000000000 +0300
++++ toolssrc/Makefile	2008-04-27 22:51:05.000000000 +0400
+@@ -34,7 +34,7 @@
+ 	rm -f cutdeps mosmldep
+ 
+ install:
+-	${INSTALL_DATA} cutdeps mosmldep $(TOOLDIR)
++	${INSTALL_DATA} cutdeps mosmldep $(DESTDIR)$(TOOLDIR)
+ 
+ depend: Deplex.sml Deppars.sml Mosmldep.sml
+ 	rm -f Makefile.bak

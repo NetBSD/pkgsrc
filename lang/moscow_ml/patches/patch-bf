@@ -1,0 +1,15 @@
+$NetBSD: patch-bf,v 1.1 2008/04/28 10:16:57 tnn Exp $
+
+DESTDIR support.
+
+--- lex/Makefile.orig	2000-01-25 00:59:00.000000000 +0300
++++ lex/Makefile	2008-04-27 22:52:08.000000000 +0400
+@@ -37,7 +37,7 @@
+ 	cd test; make clean
+ 
+ install:
+-	${INSTALL_DATA} mosmllex $(LIBDIR)
++	${INSTALL_DATA} mosmllex $(DESTDIR)$(LIBDIR)
+ 
+ Grammar.sml Grammar.sig: Grammar.grm
+ 	$(MOSMLYACC) Grammar.grm
