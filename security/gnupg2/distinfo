@@ -1,15 +1,15 @@
-$NetBSD: distinfo,v 1.10 2007/11/07 15:24:26 shannonjr Exp $
+$NetBSD: distinfo,v 1.11 2008/04/28 14:54:27 shannonjr Exp $
 
-SHA1 (gnupg-2.0.7.tar.bz2) = f7d9ae7695bd9b849475b482bb7b027ec6fadbae
-RMD160 (gnupg-2.0.7.tar.bz2) = 70bd8dbf52fe2ccc9d89791c374a5507f6a61ee8
-Size (gnupg-2.0.7.tar.bz2) = 3609953 bytes
-SHA1 (libassuan-1.0.3.tar.bz2) = 1a16c9d1086e2cda819a3f7d4e5ebd41eb350e5f
-RMD160 (libassuan-1.0.3.tar.bz2) = fd4fa8bff29d8a7ee9901aa2ad665df989c5c82e
-Size (libassuan-1.0.3.tar.bz2) = 292168 bytes
+SHA1 (gnupg-2.0.9.tar.bz2) = 959bdb934e3a72d256bfbd0122d996a73adb5d1f
+RMD160 (gnupg-2.0.9.tar.bz2) = 175f8d4e83dd6ae8e186b7c09bb8bdbb001a5799
+Size (gnupg-2.0.9.tar.bz2) = 3718925 bytes
+SHA1 (libassuan-1.0.4.tar.bz2) = 4b720706a8e4251d8cb7a0f2336226907df1426c
+RMD160 (libassuan-1.0.4.tar.bz2) = d9c46d02a5c3955f813cdac05953d779ed9f1992
+Size (libassuan-1.0.4.tar.bz2) = 297123 bytes
 SHA1 (pth-2.0.7.tar.gz) = 9a71915c89ff2414de69fe104ae1016d513afeee
 RMD160 (pth-2.0.7.tar.gz) = 80bc66777ba20d9648b7aaf3f58d593be6416910
 Size (pth-2.0.7.tar.gz) = 652640 bytes
-SHA1 (patch-af) = 97fbb195fa8ab33c4fddfee9b23ae2024f99c615
-SHA1 (patch-ah) = e31a1e863be10884e03bfcdceffcdad79d19e9ab
+SHA1 (patch-af) = df9028d8476df0121698d6e89fecf41c63515184
+SHA1 (patch-ah) = 7c000c576a5329ea89df3a38551da46661efa362
 SHA1 (patch-ai) = 555b8768c30f470e98e5be62a4a4bea29eefdf78
 SHA1 (patch-aj) = 20be6b455167962ffa556979d8d0f167dd14131e
