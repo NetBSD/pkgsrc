@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2008/04/25 20:39:13 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2008/04/28 22:51:30 schmonz Exp $
 #
 
-DISTNAME=		html2text-2.29
+DISTNAME=		html2text-2.291
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=		textproc python
 MASTER_SITES=		${HOMEPAGE}
@@ -20,7 +20,7 @@ PYTHON_VERSIONS_ACCEPTED?=	25 24 23 21
 INSTALLATION_DIRS=	share/html2text
 
 do-extract:
-	${_PKG_SILENT}${_PKG_DEBUG}					\
+	${RUN}								\
 	${TR} -d '\r' < ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}		\
 		> ${WRKSRC}/html2text.py
 
