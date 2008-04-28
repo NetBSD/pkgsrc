@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/04/28 14:19:58 mjl Exp $
+
+SHA1 (iCal-Parser-1.14.tar.gz) = 00fd7d7e3eebf5e202bc4f5a641b6252071a1a68
+RMD160 (iCal-Parser-1.14.tar.gz) = 68b28bfe9d097b9f387fabe8277cc2c1aabc23c3
+Size (iCal-Parser-1.14.tar.gz) = 29364 bytes
