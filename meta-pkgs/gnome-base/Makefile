@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2007/12/19 12:27:27 rillig Exp $
+# $NetBSD: Makefile,v 1.47 2008/04/28 18:19:45 drochner Exp $
 
 DISTNAME=	gnome-base-2.18.1
 CATEGORIES=	meta-pkgs x11 gnome
@@ -60,6 +60,7 @@ DEPENDS+=	gnome-desktop>=2.18.1:../../x11/gnome-desktop
 DEPENDS+=	gnome-menus>=2.18.0:../../sysutils/gnome-menus
 DEPENDS+=	eel>=2.18.0.1:../../devel/eel
 DEPENDS+=	nautilus>=2.18.1:../../sysutils/nautilus
+DEPENDS+=	gvfs>=0.2.3:../../sysutils/gvfs
 DEPENDS+=	metacity>=2.18.2:../../wm/metacity
 DEPENDS+=	gstreamer0.10>=0.10.12:../../multimedia/gstreamer0.10
 DEPENDS+=	gst-plugins0.10-base>=0.10.12:../../multimedia/gst-plugins0.10-base
