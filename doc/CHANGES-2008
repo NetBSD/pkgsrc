@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.932 2008/04/28 08:28:55 sborrill Exp $
+$NetBSD: CHANGES-2008,v 1.933 2008/04/28 09:48:25 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1673,3 +1673,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added x11/gnome-desktop-sharp version 2.20.1 [wiz 2008-04-27]
 	Added lang/gambc version 4.2.6 [bjs 2008-04-28]
 	Updated sysutils/apcupsd to 3.14.3 [sborrill 2008-04-28]
+	Updated devel/libebml to 0.7.8 [wiz 2008-04-28]
