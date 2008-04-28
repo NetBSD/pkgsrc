@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/04/28 04:14:31 bjs Exp $
+
+--- makefile.in.orig	2008-03-17 13:13:58.000000000 -0400
++++ makefile.in
+@@ -56,7 +56,7 @@ includedir=$(includedir) libdir=$(libdir
+ bindir=$(bindir) docdir=$(docdir) \
+ infodir=$(infodir) emacsdir=$(emacsdir)
+ 
+-SUBDIRS = include lib gsi gsc bin misc doc tests examples prebuilt
++SUBDIRS = include lib gsi gsc bin doc tests examples
+ 
+ RCFILES = README INSTALL.txt LICENSE-2.0.txt LGPL.txt \
+ makefile.in configure.ac config.guess config.sub install-sh mkidirs \
+@@ -174,10 +174,10 @@ publish-release: fake_target
+ install-pre:
+ 
+ install-post: all
+-	rm -f $(prefix)/current $(prefix)/current.lnk
+-	if test "@bat@" = ""; then \
+-	  (cd $(prefix) && $(LN_S) .$(PACKAGE_SUBDIR) current); \
+-	fi
++#	rm -f $(prefix)/current $(prefix)/current.lnk
++#	if test "@bat@" = ""; then \
++#	  (cd $(prefix) && $(LN_S) .$(PACKAGE_SUBDIR) current); \
++#	fi
+ 
+ uninstall-pre:
+ 
