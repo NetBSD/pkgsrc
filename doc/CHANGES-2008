@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.935 2008/04/28 11:04:17 shannonjr Exp $
+$NetBSD: CHANGES-2008,v 1.936 2008/04/28 12:47:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1678,3 +1678,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/libprelude to 0.9.17 [ shannonjr 2008-04-28]
 	Updated security/prelude-lml to 0.9.12.2 [ shannonjr 2008-04-28]
 	Updated security/py-prewikka to 0.9.14 [ shannonjr 2008-04-28]
+	Updated audio/snd to 9.9 [wiz 2008-04-28]
