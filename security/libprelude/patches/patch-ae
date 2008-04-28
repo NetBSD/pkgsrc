@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2008/04/28 10:52:40 shannonjr Exp $
+
+--- configure.orig	2008-04-25 07:08:22.000000000 -0600
++++ configure
+@@ -44961,7 +44961,7 @@ fi
+ 
+ { echo "$as_me:$LINENO: checking for cpu-specific compiler flags" >&5
+ echo $ECHO_N "checking for cpu-specific compiler flags... $ECHO_C" >&6; }
+-if test "$host_cpu" == "x86_64" && test $enable_static = "yes"; then
++if test "$host_cpu" = "x86_64" && test $enable_static = "yes"; then
+         { echo "$as_me:$LINENO: result: x86_64/static: adding -fPIC" >&5
+ echo "${ECHO_T}x86_64/static: adding -fPIC" >&6; }
+ 
