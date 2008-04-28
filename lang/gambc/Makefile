@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/28 04:14:31 bjs Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/28 04:16:39 bjs Exp $
 #
 
 DISTNAME=	gambc-${GAMBC_DIST_VERSION}
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake autoconf automake
+USE_TOOLS+=		gmake
 
 CONFIGURE_ARGS+=	--enable-single-host
 CONFIGURE_ARGS+=	--enable-cplusplus
