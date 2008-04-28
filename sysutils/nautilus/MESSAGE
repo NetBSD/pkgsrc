@@ -1,0 +1,7 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2008/04/28 17:38:44 drochner Exp $
+
+For some GNOME desktop functions, like the trashbin or the Windows network
+display, the "sysutils/gvfs" package needs to be installed.
+(and possibly, future gvfs-* components which come as seperate packages)
+===========================================================================
