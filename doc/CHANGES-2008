@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.948 2008/04/29 09:37:17 sborrill Exp $
+$NetBSD: CHANGES-2008,v 1.949 2008/04/29 09:40:34 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1690,3 +1690,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/vorbis-tools to 1.2.0nb1 [wiz 2008-04-29]
 	Updated audio/SDL_sound to 1.0.3 [wiz 2008-04-29]
 	Updated devel/libgphoto2 to 2.4.1 [sborrill 2008-04-29]
+	Updated graphics/gtkam to 0.1.15 [sborrill 2008-04-29]
+	Updated graphics/gphoto2 to 2.4.1 [sborrill 2008-04-29]
+	Updated filesystems/fuse-gphotofs to 0.4.0 [sborrill 2008-04-29]
