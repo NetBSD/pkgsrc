@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7254 2008/04/29 00:05:41 schmonz Exp $
+$NetBSD: TODO,v 1.7255 2008/04/29 00:24:41 bjs Exp $
 
 Suggested new packages
 ======================
@@ -579,7 +579,7 @@ Suggested package updates
 	o epsg-6.14
 	o epstool-3.08
 	o eric3-4.1.2 [now called eric4]
-	o erlang-12b1
+	o erlang-12b2
 	o esh-0.8.5
 	o et-2.60
 	o etach-1.4.1
