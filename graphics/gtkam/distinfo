@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.9 2007/08/19 10:53:18 obache Exp $
+$NetBSD: distinfo,v 1.10 2008/04/29 09:36:42 sborrill Exp $
 
-SHA1 (gtkam-0.1.14.tar.gz) = 7a46ee2cc9d88ed31d6ee46b15bc51ac296488ba
-RMD160 (gtkam-0.1.14.tar.gz) = 7cab97cf3da2a87b23d854e615ac9be9d5d47ae6
-Size (gtkam-0.1.14.tar.gz) = 1301806 bytes
+SHA1 (gtkam-0.1.15.tar.gz) = 232c132662c5624e22d79c3fe25fbef48649b906
+RMD160 (gtkam-0.1.15.tar.gz) = 54d587b62720bbee5fdaf53ff8b26a93f005fcb8
+Size (gtkam-0.1.15.tar.gz) = 1032151 bytes
 SHA1 (patch-aa) = 4e884fca60cde5f37aa699b567bc968f637072f5
 SHA1 (patch-ab) = 1a4d9f26121a9054b2c3fc325cc20d819f58a558
 SHA1 (patch-ac) = b4edf05ef2c55b48d803cde7e154310180422930
