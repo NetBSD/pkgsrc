@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/13 06:56:30 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/04/29 18:39:02 jlam Exp $
 ${GEM_HOME}/cache/sequel-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/COPYING
@@ -9,10 +9,12 @@ ${GEM_LIBDIR}/lib/sequel_model.rb
 ${GEM_LIBDIR}/lib/sequel_model/associations.rb
 ${GEM_LIBDIR}/lib/sequel_model/base.rb
 ${GEM_LIBDIR}/lib/sequel_model/caching.rb
+${GEM_LIBDIR}/lib/sequel_model/deprecated.rb
 ${GEM_LIBDIR}/lib/sequel_model/eager_loading.rb
 ${GEM_LIBDIR}/lib/sequel_model/hooks.rb
+${GEM_LIBDIR}/lib/sequel_model/inflections.rb
+${GEM_LIBDIR}/lib/sequel_model/inflector.rb
 ${GEM_LIBDIR}/lib/sequel_model/plugins.rb
-${GEM_LIBDIR}/lib/sequel_model/pretty_table.rb
 ${GEM_LIBDIR}/lib/sequel_model/record.rb
 ${GEM_LIBDIR}/lib/sequel_model/schema.rb
 ${GEM_LIBDIR}/lib/sequel_model/validations.rb
@@ -22,6 +24,7 @@ ${GEM_LIBDIR}/spec/caching_spec.rb
 ${GEM_LIBDIR}/spec/deprecated_relations_spec.rb
 ${GEM_LIBDIR}/spec/eager_loading_spec.rb
 ${GEM_LIBDIR}/spec/hooks_spec.rb
+${GEM_LIBDIR}/spec/inflector_spec.rb
 ${GEM_LIBDIR}/spec/model_spec.rb
 ${GEM_LIBDIR}/spec/plugins_spec.rb
 ${GEM_LIBDIR}/spec/rcov.opts
