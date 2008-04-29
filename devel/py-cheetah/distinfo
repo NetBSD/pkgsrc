@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2007/10/31 23:15:54 shannonjr Exp $
+$NetBSD: distinfo,v 1.5 2008/04/29 11:07:36 shannonjr Exp $
 
-SHA1 (Cheetah-2.0.tar.gz) = db234e14f4b2a6a8e3a94cf7b06207ea78c519b2
-RMD160 (Cheetah-2.0.tar.gz) = 63f82bbd5bd5033ff6f8c2d38124253abda928b0
-Size (Cheetah-2.0.tar.gz) = 215011 bytes
+SHA1 (Cheetah-2.0.1.tar.gz) = 6c1aab90bf2d34f3f72998c96ff2767d870a5e7d
+RMD160 (Cheetah-2.0.1.tar.gz) = 9e8ef0afc4eabd1349e4228f5ad78551f7bddbe4
+Size (Cheetah-2.0.1.tar.gz) = 215295 bytes
