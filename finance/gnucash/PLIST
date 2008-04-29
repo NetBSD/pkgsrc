@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.30 2008/03/10 11:33:11 wiz Exp $
+@comment $NetBSD: PLIST,v 1.31 2008/04/29 10:43:34 wiz Exp $
 bin/gnc-fq-check
 bin/gnc-fq-dump
 bin/gnc-fq-helper
@@ -250,6 +250,7 @@ share/gconf/schemas/apps_gnucash_dialog_totd.schemas
 share/gconf/schemas/apps_gnucash_general.schemas
 share/gconf/schemas/apps_gnucash_history.schemas
 share/gconf/schemas/apps_gnucash_import_generic_matcher.schemas
+share/gconf/schemas/apps_gnucash_import_qif.schemas
 share/gconf/schemas/apps_gnucash_warnings.schemas
 share/gconf/schemas/apps_gnucash_window_pages_account_tree.schemas
 share/gconf/schemas/apps_gnucash_window_pages_register.schemas
@@ -530,6 +531,7 @@ share/gnucash/accounts/zh_CN/acctchrt_retiremt.gnucash-xea
 share/gnucash/accounts/zh_CN/acctchrt_spouseinc.gnucash-xea
 share/gnucash/accounts/zh_CN/acctchrt_spouseretire.gnucash-xea
 share/gnucash/checks/deluxe.chk
+share/gnucash/checks/liberty.chk
 share/gnucash/checks/quicken.chk
 share/gnucash/checks/quicken_wallet.chk
 share/gnucash/doc/AUTHORS
@@ -797,6 +799,8 @@ share/gnucash/xml/qsf/pilot-qsf-gncCustomer.xml
 share/gnucash/xml/qsf/qsf-map.xsd.xml
 share/gnucash/xml/qsf/qsf-object.xsd.xml
 share/icons/hicolor/16x16/apps/gnucash-icon.png
+share/icons/hicolor/22x22/apps/gnucash-icon.png
+share/icons/hicolor/24x24/apps/gnucash-icon.png
 share/icons/hicolor/32x32/apps/gnucash-icon.png
 share/icons/hicolor/48x48/apps/gnucash-icon.png
 share/icons/hicolor/scalable/apps/gnucash-icon.svg
