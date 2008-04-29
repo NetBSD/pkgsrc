@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.954 2008/04/29 11:41:01 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.955 2008/04/29 11:46:05 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1698,3 +1698,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/libpurple to 2.4.1nb1 [jmmv 2008-04-29]
 	Updated security/libgcrypt to 1.4.1 [wiz 2008-04-29]
 	Updated textproc/aspell to 0.60.6 [wiz 2008-04-29]
+	Updated security/libtasn1 to 1.4 [wiz 2008-04-29]
