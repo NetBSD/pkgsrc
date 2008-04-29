@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2008/04/29 09:35:15 sborrill Exp $
+# $NetBSD: Makefile,v 1.41 2008/04/29 19:10:11 drochner Exp $
 
 DISTNAME=	gphoto2-2.4.1
 CATEGORIES=	graphics
@@ -25,7 +25,6 @@ USE_GNU_READLINE=	yes
 
 .include "../../devel/cdk/buildlink3.mk"
 .include "../../devel/libgphoto2/buildlink3.mk"
-.include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"
