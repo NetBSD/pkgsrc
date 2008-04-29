@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/13 06:56:27 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/04/29 18:39:06 jlam Exp $
 bin/sequel
 ${GEM_HOME}/cache/sequel_core-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -20,18 +20,20 @@ ${GEM_LIBDIR}/lib/sequel_core/adapters/openbase.rb
 ${GEM_LIBDIR}/lib/sequel_core/adapters/oracle.rb
 ${GEM_LIBDIR}/lib/sequel_core/adapters/postgres.rb
 ${GEM_LIBDIR}/lib/sequel_core/adapters/sqlite.rb
-${GEM_LIBDIR}/lib/sequel_core/array_keys.rb
+${GEM_LIBDIR}/lib/sequel_core/connection_pool.rb
 ${GEM_LIBDIR}/lib/sequel_core/core_ext.rb
 ${GEM_LIBDIR}/lib/sequel_core/core_sql.rb
 ${GEM_LIBDIR}/lib/sequel_core/database.rb
 ${GEM_LIBDIR}/lib/sequel_core/dataset.rb
 ${GEM_LIBDIR}/lib/sequel_core/dataset/callback.rb
 ${GEM_LIBDIR}/lib/sequel_core/dataset/convenience.rb
+${GEM_LIBDIR}/lib/sequel_core/dataset/pagination.rb
 ${GEM_LIBDIR}/lib/sequel_core/dataset/sequelizer.rb
 ${GEM_LIBDIR}/lib/sequel_core/dataset/sql.rb
+${GEM_LIBDIR}/lib/sequel_core/deprecated.rb
 ${GEM_LIBDIR}/lib/sequel_core/exceptions.rb
 ${GEM_LIBDIR}/lib/sequel_core/migration.rb
-${GEM_LIBDIR}/lib/sequel_core/model.rb
+${GEM_LIBDIR}/lib/sequel_core/object_graph.rb
 ${GEM_LIBDIR}/lib/sequel_core/pretty_table.rb
 ${GEM_LIBDIR}/lib/sequel_core/schema.rb
 ${GEM_LIBDIR}/lib/sequel_core/schema/generator.rb
@@ -42,12 +44,13 @@ ${GEM_LIBDIR}/spec/adapters/mysql_spec.rb
 ${GEM_LIBDIR}/spec/adapters/oracle_spec.rb
 ${GEM_LIBDIR}/spec/adapters/postgres_spec.rb
 ${GEM_LIBDIR}/spec/adapters/sqlite_spec.rb
-${GEM_LIBDIR}/spec/array_keys_spec.rb
+${GEM_LIBDIR}/spec/connection_pool_spec.rb
 ${GEM_LIBDIR}/spec/core_ext_spec.rb
 ${GEM_LIBDIR}/spec/core_sql_spec.rb
 ${GEM_LIBDIR}/spec/database_spec.rb
 ${GEM_LIBDIR}/spec/dataset_spec.rb
 ${GEM_LIBDIR}/spec/migration_spec.rb
+${GEM_LIBDIR}/spec/object_graph_spec.rb
 ${GEM_LIBDIR}/spec/pretty_table_spec.rb
 ${GEM_LIBDIR}/spec/rcov.opts
 ${GEM_LIBDIR}/spec/schema_generator_spec.rb
