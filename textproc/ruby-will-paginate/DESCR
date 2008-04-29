@@ -1,0 +1,11 @@
+Pagination is just limiting the number of records displayed.  Why should
+you let it get in your way while developing, then?  This library makes
+magic happen.  Did you ever want to be able to do just this on a model:
+
+    @posts = Post.paginate :page => params[:page],
+                           :order => 'created_at DESC'
+
+and then render the page links with a single view helper?  Well, now
+you can.
+
+    <%= will_paginate @posts %>
