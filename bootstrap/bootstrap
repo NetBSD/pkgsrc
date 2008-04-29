@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.121 2008/03/06 04:45:58 jlam Exp $
+# $NetBSD: bootstrap,v 1.122 2008/04/29 22:03:19 minskim Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -385,8 +385,10 @@ while [ $# -gt 0 ]; do
 			binary_gzip_kit=`get_optarg "$1"` ;;
 	--gzip-binary-kit)
 			binary_gzip_kit="$2"; shift ;;
-	--binary-macpkg)
+	--binary-macpkg=*)
 			binary_macpkg=`get_optarg "$1"` ;;
+	--binary-macpkg)
+			binary_macpkg="$2"; shift ;;
 	--full)		full=yes ;;
 	--quiet)	quiet=yes ;;
 	--help)		echo "$usage"; exit ;;
