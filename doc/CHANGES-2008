@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.959 2008/04/29 16:56:32 jlam Exp $
+$NetBSD: CHANGES-2008,v 1.960 2008/04/29 17:36:43 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1703,3 +1703,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated editors/emacs to 22.1nb3 [tonnerre 2008-04-29]
 	Updated editors/xemacs to 21.4.17nb5 [tonnerre 2008-04-29]
 	Updated databases/ruby-activerecord-odbc to 2.0 [jlam 2008-04-29]
+	Updated devel/rubigen to 1.3.1 [jlam 2008-04-29]
+	Updated www/merbful-authentication to 0.9.3 [jlam 2008-04-29]
+	Updated mail/ruby-mailfactory to 1.3.1 [jlam 2008-04-29]
+	Updated graphics/ruby-rcairo to 1.6.1 [jlam 2008-04-29]
