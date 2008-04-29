@@ -1,12 +1,14 @@
-$NetBSD: distinfo,v 1.35 2007/06/11 13:57:16 markd Exp $
+$NetBSD: distinfo,v 1.36 2008/04/29 12:54:56 tonnerre Exp $
 
 SHA1 (emacs-22.1.tar.gz) = 327664173eabe5db49d4e7e4a4b1794577af902e
 RMD160 (emacs-22.1.tar.gz) = da5360871db8b1d473ff7f0b0937ee6c278c0b19
 Size (emacs-22.1.tar.gz) = 38172226 bytes
 SHA1 (patch-aa) = d7ae318f2140dbd8f796bfcbb48f299fe6bf2d81
 SHA1 (patch-ab) = 0e022290d305fd73ab7aa633f955fca10ac70799
+SHA1 (patch-ac) = 1fc45d38f879c2ae7287bc7f7a9cb868e2db74d8
 SHA1 (patch-ad) = 39a11bc214ae3d2f9d634c30b196a46d473ab92f
 SHA1 (patch-ae) = 30a31df58bbcae854ded212ad42bde5b855a7318
+SHA1 (patch-af) = 9b2b8c5dfe1b2dc9ca76587cdb323272f8cb103e
 SHA1 (patch-aj) = 7707c5f8bb57bbacbd1d3c6f37a34916baacc363
 SHA1 (patch-ak) = ef0bf533754e5392c419c251aac8278b5e90b438
 SHA1 (patch-am) = 4e068210bcbea638d143bd9fb566795636d77b35
