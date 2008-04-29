@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.8 2008/04/29 13:54:55 wiz Exp $
+
+--- lib/freading.c.orig	2007-11-10 15:24:02 -0800
++++ lib/freading.c	2008-04-14 17:41:47 -0700
+@@ -42,6 +42,8 @@
+ #elif defined __QNX__               /* QNX */
+   return ((fp->_Mode & 0x2 /* _MOPENW */) == 0
+ 	  || (fp->_Mode & 0x1000 /* _MREAD */) != 0);
++#elif defined __DragonFly__	    /* DragonFly */
++  return ((((struct __FILE_public *)fp)->_flags & __SRD) != 0);
+ #else
+  #error "Please port gnulib freading.c to your platform!"
+ #endif
