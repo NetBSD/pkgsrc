@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/04/04 15:15:29 jlam Exp $
+$NetBSD: distinfo,v 1.2 2008/04/29 16:56:18 jlam Exp $
 
-SHA1 (odbc-rails-1.4.gem) = 24c0eaccf50a098432b5f393358da81f0b92416c
-RMD160 (odbc-rails-1.4.gem) = 95ef300421b764356b6168f6e2fae95ede7dc1e5
-Size (odbc-rails-1.4.gem) = 77312 bytes
+SHA1 (activerecord-odbc-adapter-2.0.gem) = 232efe71d9e55d02e02b8532ea21de2df36eda41
+RMD160 (activerecord-odbc-adapter-2.0.gem) = 4c08de38f621c3fd5af05dd6599be6fc9588af40
+Size (activerecord-odbc-adapter-2.0.gem) = 80384 bytes
+SHA1 (patch-aa) = 2ac6742263630b6ee2d1e062867e4390efc33a2f
