@@ -1,0 +1,37 @@
+$NetBSD: patch-af,v 1.11 2008/04/29 12:54:56 tonnerre Exp $
+
+--- lib-src/vcdiff.orig	2007-01-21 04:49:26.000000000 +0000
++++ lib-src/vcdiff	2008-04-29 12:48:03.000000000 +0100
+@@ -4,13 +4,13 @@
+ # This version is more compatible with rcsdiff(1).
+ #
+ # Copyright (C) 1992, 1993, 1995, 1997, 2001, 2002, 2003, 2004,
+-#               2005, 2006, 2007 Free Software Foundation, Inc.
++#               2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+ #
+ # This file is part of GNU Emacs.
+ #
+ # GNU Emacs is free software; you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+-# the Free Software Foundation; either version 2, or (at your option)
++# the Free Software Foundation; either version 3, or (at your option)
+ # any later version.
+ #
+ # GNU Emacs is distributed in the hope that it will be useful,
+@@ -84,14 +84,14 @@
+ 	case $f in
+ 	s.* | */s.*)
+ 		if
+-			rev1=/tmp/geta$$
++			rev1=`mktemp /tmp/geta.XXXXXXXX`
+ 			get -s -p -k $sid1 "$f" > $rev1 &&
+ 			case $sid2 in
+ 			'')
+ 				workfile=`expr " /$f" : '.*/s.\(.*\)'`
+ 				;;
+ 			*)
+-				rev2=/tmp/getb$$
++				rev2=`mktemp /tmp/getb.XXXXXXXX`
+ 				get -s -p -k $sid2 "$f" > $rev2
+ 				workfile=$rev2
+ 			esac
