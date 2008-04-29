@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.1 2008/04/29 09:31:09 sborrill Exp $
+
+--- libgphoto2_port/serial/unix.c.orig	2008-03-24 19:00:32.000000000 +0000
++++ libgphoto2_port/serial/unix.c	2008-04-25 00:10:34.000000000 +0100
+@@ -38,6 +38,9 @@
+ #ifdef HAVE_UNISTD_H
+ #include <unistd.h>
+ #endif
++#ifdef __NetBSD__
++#define _NETBSD_SOURCE
++#endif
+ #ifdef HAVE_FCNTL_H
+ #include <fcntl.h>
+ #endif
