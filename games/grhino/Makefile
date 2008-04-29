@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/04/27 06:36:02 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2008/04/29 19:13:04 drochner Exp $
 #
 
 DISTNAME=		grhino-0.16.0
@@ -16,6 +16,6 @@ USE_DIRS+=		gnome2-1.5
 USE_PKGLOCALEDIR=	yes
 
 .include "../../devel/libgnomeui/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
