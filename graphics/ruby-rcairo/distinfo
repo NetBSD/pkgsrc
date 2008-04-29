@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.5 2008/04/14 20:09:32 jlam Exp $
+$NetBSD: distinfo,v 1.6 2008/04/29 17:36:32 jlam Exp $
 
-SHA1 (cairo-1.6.0.gem) = c135531b4817defcd8f06b43aa0ad43c93d8bef8
-RMD160 (cairo-1.6.0.gem) = e465d9a5598a66e68fc57ac4f1ff21f43bc49d87
-Size (cairo-1.6.0.gem) = 181760 bytes
+SHA1 (cairo-1.6.1.gem) = 9166472bfbd8157b135a44ce90ccec5647ee94c8
+RMD160 (cairo-1.6.1.gem) = 948bd5c42020754c2409bfb305342e6d65455e8a
+Size (cairo-1.6.1.gem) = 183808 bytes
