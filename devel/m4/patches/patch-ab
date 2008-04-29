@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.7 2008/04/29 13:54:55 wiz Exp $
+
+--- lib/freadahead.c.orig	2008-03-10 19:11:22 -0700
++++ lib/freadahead.c	2008-04-14 17:38:46 -0700
+@@ -78,6 +78,8 @@
+ 	 + (fp->_Mode & 0x4000 /* _MBYTE */
+ 	    ? (fp->_Back + sizeof (fp->_Back)) - fp->_Rback
+ 	    : 0);
++#elif defined __DragonFly__	    /* DragonFly */
++  return __sreadahead(fp);
+ #else
+  #error "Please port gnulib freadahead.c to your platform! Look at the definition of fflush, fread, ungetc on your system, then report this to bug-gnulib."
+ #endif
