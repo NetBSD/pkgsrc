@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1 2008/04/29 09:39:17 sborrill Exp $
+
+--- gphotofs.c.orig	2008-04-25 00:21:37.000000000 +0100
++++ gphotofs.c	2008-04-25 00:22:57.000000000 +0100
+@@ -26,6 +26,10 @@
+ #include <fcntl.h>
+ #include <sys/time.h>
+ 
++#ifdef HAVE_LOCALE_H
++#include <locale.h>
++#endif
++
+ /*
+  * Static variables set by command line arguments.
+  */
