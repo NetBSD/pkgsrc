@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/10/14 12:25:15 obache Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/04/29 04:56:24 obache Exp $
 bin/GraphicsMagick++-config
 bin/GraphicsMagick-config
 bin/GraphicsMagickWand-config
@@ -191,7 +191,6 @@ share/${PKGNAME}/www/api/transform.html
 share/${PKGNAME}/www/api/types.html
 share/${PKGNAME}/www/api/widget.html
 share/${PKGNAME}/www/body.html
-share/${PKGNAME}/www/body.html.rej
 share/${PKGNAME}/www/books.html
 share/${PKGNAME}/www/color.html
 share/${PKGNAME}/www/composite.html

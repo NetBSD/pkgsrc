@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2008/02/24 02:58:40 obache Exp $
+# $NetBSD: Makefile,v 1.8 2008/04/29 04:56:24 obache Exp $
 #
 
-DISTNAME=	GraphicsMagick-1.1.11
+DISTNAME=	GraphicsMagick-1.1.12
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=graphicsmagick/} \
 		ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/
@@ -38,7 +38,10 @@ TEST_TARGET=	check
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/tiff/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
