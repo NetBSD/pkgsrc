@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.951 2008/04/29 10:51:54 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.952 2008/04/29 10:55:32 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1695,3 +1695,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated filesystems/fuse-gphotofs to 0.4.0 [sborrill 2008-04-29]
 	Updated finance/gnucash to 2.2.5 [wiz 2008-04-29]
 	Updated devel/libidn to 1.8 [wiz 2008-04-29]
+	Updated chat/libpurple to 2.4.1nb1 [jmmv 2008-04-29]
