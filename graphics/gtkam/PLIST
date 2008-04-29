@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2007/08/19 10:53:18 obache Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/04/29 09:36:42 sborrill Exp $
 bin/gtkam
 man/man1/gtkam.1
 share/applications/gtkam.desktop
@@ -38,6 +38,7 @@ share/images/gtkam/gtkam-folder-camera.png
 share/images/gtkam/gtkam-folder.png
 share/images/gtkam/gtkam-lock.png
 share/images/gtkam/gtkam-new.png
+share/locale/be/LC_MESSAGES/gtkam.mo
 share/locale/cs/LC_MESSAGES/gtkam.mo
 share/locale/da/LC_MESSAGES/gtkam.mo
 share/locale/de/LC_MESSAGES/gtkam.mo
@@ -47,13 +48,17 @@ share/locale/hu/LC_MESSAGES/gtkam.mo
 share/locale/it/LC_MESSAGES/gtkam.mo
 share/locale/ja/LC_MESSAGES/gtkam.mo
 share/locale/nb/LC_MESSAGES/gtkam.mo
+share/locale/nl/LC_MESSAGES/gtkam.mo
+share/locale/pa/LC_MESSAGES/gtkam.mo
 share/locale/pl/LC_MESSAGES/gtkam.mo
+share/locale/pt/LC_MESSAGES/gtkam.mo
 share/locale/pt_BR/LC_MESSAGES/gtkam.mo
-share/locale/pt_PT/LC_MESSAGES/gtkam.mo
 share/locale/ru/LC_MESSAGES/gtkam.mo
+share/locale/sk/LC_MESSAGES/gtkam.mo
 share/locale/sl/LC_MESSAGES/gtkam.mo
 share/locale/sv/LC_MESSAGES/gtkam.mo
 share/locale/uk/LC_MESSAGES/gtkam.mo
+share/locale/vi/LC_MESSAGES/gtkam.mo
 share/omf/gtkam/gtkam-C.omf
 share/omf/gtkam/gtkam-ru.omf
 share/pixmaps/gtkam.png
