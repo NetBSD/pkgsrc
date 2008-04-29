@@ -1,0 +1,121 @@
+#
+#
+# patch "key_store.cc"
+#  from [55878f97b03349c66d95398799780f43ae63165b]
+#    to [510eb02eab491fd9e79c49fcfcf5e6efa145872f]
+# 
+# patch "ssh_agent.cc"
+#  from [dcc8cefe23e376c74df2eb10011f874802a609d6]
+#    to [a2a0e96fd30804230e181747f36dcae3be34fd26]
+# 
+# patch "ssh_agent.hh"
+#  from [c0c03bdb37905e1e6bbf8350a00fc68b0d83611b]
+#    to [c9b7efaf4b0f2c137336046b0ebe3ccff7ad5076]
+#
+============================================================
+--- key_store.cc	55878f97b03349c66d95398799780f43ae63165b
++++ key_store.cc	510eb02eab491fd9e79c49fcfcf5e6efa145872f
+@@ -438,6 +438,14 @@ key_store::cache_decrypted_key(const rsa
+ key_store::cache_decrypted_key(const rsa_keypair_id & id)
+ {
+   signing_key = id;
++  keypair key;
++  get_key_pair(id, key);
++  if (s->get_agent().has_key(key))
++    {
++      L(FL("ssh-agent has key '%s' loaded, skipping internal cache") % id);
++      return;
++    }
++
+   if (s->lua.hook_persist_phrase_ok())
+     s->decrypt_private_key(id);
+ }
+============================================================
+--- ssh_agent.cc	dcc8cefe23e376c74df2eb10011f874802a609d6
++++ ssh_agent.cc	a2a0e96fd30804230e181747f36dcae3be34fd26
+@@ -20,6 +20,7 @@
+ #include "botan/bigint.h"
+ #include <boost/shared_ptr.hpp>
+ #include "platform.hh"
++#include "key_store.hh"
+ 
+ #ifdef WIN32
+ #include "win32/ssh_agent_platform.hh"
+@@ -27,14 +28,18 @@
+ #include "unix/ssh_agent_platform.hh"
+ #endif
+ 
++using std::string;
++using std::vector;
++
++using boost::shared_ptr;
++using boost::shared_dynamic_cast;
++
+ using Botan::RSA_PublicKey;
+ using Botan::RSA_PrivateKey;
+ using Botan::BigInt;
+ using Botan::SecureVector;
++using Botan::X509_PublicKey;
+ using Netxx::Stream;
+-using boost::shared_ptr;
+-using std::string;
+-using std::vector;
+ 
+ struct ssh_agent_state : ssh_agent_platform
+ {
+@@ -375,6 +380,35 @@ ssh_agent::get_keys()
+   return s->keys;
+ }
+ 
++bool
++ssh_agent::has_key(const keypair & key)
++{
++  //grab the monotone public key as an RSA_PublicKey
++  SecureVector<Botan::byte> pub_block;
++  pub_block.set(reinterpret_cast<Botan::byte const *>((key.pub)().data()),
++                (key.pub)().size());
++  L(FL("has_key: building %d-byte pub key") % pub_block.size());
++  shared_ptr<X509_PublicKey> x509_key =
++    shared_ptr<X509_PublicKey>(Botan::X509::load_key(pub_block));
++  shared_ptr<RSA_PublicKey> pub_key = shared_dynamic_cast<RSA_PublicKey>(x509_key);
++
++  if (!pub_key)
++    throw informative_failure("has_key: Failed to get monotone RSA public key");
++  
++  vector<RSA_PublicKey> ssh_keys = get_keys();
++  for (vector<RSA_PublicKey>::const_iterator
++         si = ssh_keys.begin(); si != ssh_keys.end(); ++si)
++    {
++      if ((*pub_key).get_e() == (*si).get_e()
++          && (*pub_key).get_n() == (*si).get_n())
++        {
++          L(FL("has_key: key found"));
++          return true;
++        }
++    }
++  return false;
++}
++
+ void
+ ssh_agent::sign_data(RSA_PublicKey const & key,
+                      string const & data,
+============================================================
+--- ssh_agent.hh	c0c03bdb37905e1e6bbf8350a00fc68b0d83611b
++++ ssh_agent.hh	c9b7efaf4b0f2c137336046b0ebe3ccff7ad5076
+@@ -13,6 +13,8 @@
+ #include "vector.hh"
+ #include <boost/scoped_ptr.hpp>
+ 
++struct keypair;
++
+ namespace Botan
+ {
+   class RSA_PublicKey;
+@@ -26,6 +28,7 @@ struct ssh_agent
+   ssh_agent();
+   ~ssh_agent();
+   std::vector<Botan::RSA_PublicKey> const get_keys();
++  bool has_key(const keypair & key);
+   void sign_data(Botan::RSA_PublicKey const & key,
+                  std::string const & data,
+                  std::string & out);
