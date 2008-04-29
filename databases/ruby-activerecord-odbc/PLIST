@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:15:29 jlam Exp $
-${GEM_HOME}/cache/odbc-rails-${PKGVERSION}.gem
+@comment $NetBSD: PLIST,v 1.2 2008/04/29 16:56:18 jlam Exp $
+${GEM_HOME}/cache/activerecord-odbc-adapter-${PKGVERSION}.gem
 ${GEM_LIBDIR}/AUTHORS
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/ChangeLog
@@ -18,6 +18,8 @@ ${GEM_LIBDIR}/lib/active_record/vendor/odbcext_oracle.rb
 ${GEM_LIBDIR}/lib/active_record/vendor/odbcext_postgresql.rb
 ${GEM_LIBDIR}/lib/active_record/vendor/odbcext_progress.rb
 ${GEM_LIBDIR}/lib/active_record/vendor/odbcext_progress89.rb
+${GEM_LIBDIR}/lib/active_record/vendor/odbcext_sqlanywhere.rb
+${GEM_LIBDIR}/lib/active_record/vendor/odbcext_sqlanywhere_col.rb
 ${GEM_LIBDIR}/lib/active_record/vendor/odbcext_sybase.rb
 ${GEM_LIBDIR}/lib/active_record/vendor/odbcext_sybase_col.rb
 ${GEM_LIBDIR}/lib/active_record/vendor/odbcext_virtuoso.rb
@@ -71,7 +73,7 @@ ${GEM_LIBDIR}/test/fixtures/db_definitions/virtuoso.drop.sql
 ${GEM_LIBDIR}/test/fixtures/db_definitions/virtuoso.sql
 ${GEM_LIBDIR}/test/fixtures/db_definitions/virtuoso2.drop.sql
 ${GEM_LIBDIR}/test/fixtures/db_definitions/virtuoso2.sql
-${GEM_HOME}/specifications/odbc-rails-${PKGVERSION}.gemspec
+${GEM_HOME}/specifications/activerecord-odbc-adapter-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/test/fixtures/db_definitions
 @dirrm ${GEM_LIBDIR}/test/fixtures
 @dirrm ${GEM_LIBDIR}/test/connections/native_odbc
