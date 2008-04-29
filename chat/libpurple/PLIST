@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/04/12 22:42:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/04/29 10:55:02 jmmv Exp $
 include/libpurple/account.h
 include/libpurple/accountopt.h
 include/libpurple/blist.h
@@ -170,6 +170,7 @@ ${PLIST.dbus}include/libpurple/dbus-bindings.h
 ${PLIST.dbus}include/libpurple/dbus-define-api.h
 ${PLIST.dbus}include/libpurple/dbus-purple.h
 ${PLIST.dbus}include/libpurple/dbus-server.h
+${PLIST.dbus}include/libpurple/dbus-types.h
 ${PLIST.dbus}include/libpurple/dbus-useful.h
 ${PLIST.dbus}lib/libpurple-client.la
 ${PLIST.dbus}lib/purple-2/dbus-example.la
