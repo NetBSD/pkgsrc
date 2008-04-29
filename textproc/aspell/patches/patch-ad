@@ -1,13 +1,7 @@
-$NetBSD: patch-ad,v 1.6 2006/11/24 16:31:48 rillig Exp $
+$NetBSD: patch-ad,v 1.7 2008/04/29 11:40:50 wiz Exp $
 
-The second hunk is needed for Solaris with SunPro, but I don't have a
-clue why.
-
-See also:
-* http://src.opensolaris.org/source/xref/jds/spec-files/trunk/patches/aspell-01-forte.diff
-
---- common/convert.cpp.orig	2006-09-17 19:24:05.000000000 +0200
-+++ common/convert.cpp	2006-09-17 19:24:46.000000000 +0200
+--- common/convert.cpp.orig	2007-12-03 07:55:45.000000000 +0100
++++ common/convert.cpp
 @@ -24,6 +24,10 @@
  
  #include "gettext.h"
@@ -19,12 +13,3 @@ See also:
  namespace acommon {
  
    typedef unsigned char  byte;
-@@ -238,7 +242,7 @@ namespace acommon {
-   }
- 
-   template <class T>
--  static void free_norm_table(NormTable<T> * d)
-+  void free_norm_table(NormTable<T> * d)
-   {
-     for (T * cur = d->data; cur != d->end; ++cur) {
-       if (cur->sub_table) 
