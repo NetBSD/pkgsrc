@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.952 2008/04/29 10:55:32 jmmv Exp $
+$NetBSD: CHANGES-2008,v 1.953 2008/04/29 11:04:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1696,3 +1696,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated finance/gnucash to 2.2.5 [wiz 2008-04-29]
 	Updated devel/libidn to 1.8 [wiz 2008-04-29]
 	Updated chat/libpurple to 2.4.1nb1 [jmmv 2008-04-29]
+	Updated security/libgcrypt to 1.4.1 [wiz 2008-04-29]
