@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.956 2008/04/29 12:35:33 jmmv Exp $
+$NetBSD: CHANGES-2008,v 1.957 2008/04/29 12:56:29 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1700,3 +1700,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/aspell to 0.60.6 [wiz 2008-04-29]
 	Updated security/libtasn1 to 1.4 [wiz 2008-04-29]
 	Updated chat/pidgin to 2.4.1nb2 [jmmv 2008-04-29]
+	Updated editors/emacs to 22.1nb3 [tonnerre 2008-04-29]
