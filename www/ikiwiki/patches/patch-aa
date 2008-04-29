@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.4 2008/04/29 00:05:41 reed Exp $
+
+--- pm_filter.orig	2008-04-18 11:27:18 -0700
++++ pm_filter	2008-04-28 14:51:50 -0700
+@@ -20,6 +20,9 @@
+ 		$_="use lib '$libdir';\n";
+ 	}
+ }
+-elsif ($. == 1 && ($ENV{NOTAINT} || ! exists $ENV{NOTAINT}) && m{^(#!/usr/bin/perl) -T$}) {
++elsif ($. == 1 && ($ENV{NOTAINT} || ! exists $ENV{NOTAINT}) && m{^(#!.*perl.*?) -T$}) {
+ 	$_=qq{$1\n};
+ }
++if (/^\$ENV{PATH}="(.*)";/) {
++	$_="\$ENV{PATH}=\"$1:$prefix/bin\";\n";
++}

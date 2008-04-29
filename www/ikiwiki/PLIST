@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST,v 1.4 2008/04/12 22:43:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/04/29 00:05:41 reed Exp $
 bin/ikiwiki
 bin/ikiwiki-makerepo
+bin/ikiwiki-transition
 bin/ikiwiki-update-wikilist
-lib/ikiwiki/plugins/externaldemo
-lib/ikiwiki/plugins/rst
 ${PLIST.w3m}libexec/w3m/cgi-bin/ikiwiki-w3m.cgi
 man/man1/ikiwiki-makerepo.1
+man/man1/ikiwiki-transition.1
 man/man1/ikiwiki-update-wikilist.1
 man/man1/ikiwiki.1
 man/man8/ikiwiki-mass-rebuild.8
@@ -16,17 +16,27 @@ ${PLIST.w3m}share/doc/ikiwiki/w3mmode/ikiwiki.setup
 share/ikiwiki/basewiki/blog.mdwn
 share/ikiwiki/basewiki/favicon.ico
 share/ikiwiki/basewiki/helponformatting.mdwn
+share/ikiwiki/basewiki/ikiwiki.mdwn
+share/ikiwiki/basewiki/ikiwiki/blog.mdwn
+share/ikiwiki/basewiki/ikiwiki/formatting.mdwn
+share/ikiwiki/basewiki/ikiwiki/markdown.mdwn
+share/ikiwiki/basewiki/ikiwiki/openid.mdwn
+share/ikiwiki/basewiki/ikiwiki/pagespec.mdwn
+share/ikiwiki/basewiki/ikiwiki/preprocessordirective.mdwn
+share/ikiwiki/basewiki/ikiwiki/subpage.mdwn
+share/ikiwiki/basewiki/ikiwiki/subpage/linkingrules.mdwn
+share/ikiwiki/basewiki/ikiwiki/wikilink.mdwn
 share/ikiwiki/basewiki/index.mdwn
 share/ikiwiki/basewiki/local.css
 share/ikiwiki/basewiki/markdown.mdwn
 share/ikiwiki/basewiki/openid.mdwn
 share/ikiwiki/basewiki/pagespec.mdwn
 share/ikiwiki/basewiki/preprocessordirective.mdwn
+share/ikiwiki/basewiki/recentchanges.mdwn
 share/ikiwiki/basewiki/sandbox.mdwn
 share/ikiwiki/basewiki/shortcuts.mdwn
 share/ikiwiki/basewiki/style.css
 share/ikiwiki/basewiki/subpage.mdwn
-share/ikiwiki/basewiki/subpage/linkingrules.mdwn
 share/ikiwiki/basewiki/templates.mdwn
 share/ikiwiki/basewiki/templates/note.mdwn
 share/ikiwiki/basewiki/templates/popup.mdwn
@@ -66,12 +76,12 @@ share/ikiwiki/templates/archivepage.tmpl
 share/ikiwiki/templates/atomitem.tmpl
 share/ikiwiki/templates/atompage.tmpl
 share/ikiwiki/templates/blogpost.tmpl
+share/ikiwiki/templates/change.tmpl
 share/ikiwiki/templates/editpage.tmpl
 share/ikiwiki/templates/estseek.conf
 share/ikiwiki/templates/feedlink.tmpl
 share/ikiwiki/templates/inlinepage.tmpl
 share/ikiwiki/templates/misc.tmpl
-share/ikiwiki/templates/notifymail.tmpl
 share/ikiwiki/templates/page.tmpl
 share/ikiwiki/templates/passwordmail.tmpl
 share/ikiwiki/templates/recentchanges.tmpl
@@ -93,11 +103,10 @@ share/locale/vi/LC_MESSAGES/ikiwiki.mo
 @dirrm share/ikiwiki/smiley
 @dirrm share/ikiwiki/basewiki/wikiicons
 @dirrm share/ikiwiki/basewiki/templates
-@dirrm share/ikiwiki/basewiki/subpage
+@dirrm share/ikiwiki/basewiki/ikiwiki/subpage
+@dirrm share/ikiwiki/basewiki/ikiwiki
 @dirrm share/ikiwiki/basewiki
 @dirrm share/ikiwiki
 ${PLIST.w3m}@dirrm share/doc/ikiwiki/w3mmode
 @dirrm share/doc/ikiwiki
 ${PLIST.w3m}@dirrm libexec/w3m/cgi-bin
-@dirrm lib/ikiwiki/plugins
-@dirrm lib/ikiwiki
