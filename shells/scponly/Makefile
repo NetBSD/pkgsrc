@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.11 2005/12/29 06:22:13 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2008/04/29 03:46:57 snj Exp $
 
-DISTNAME=	scponly-4.3
+DISTNAME=	scponly-4.8
 CATEGORIES=	shells security
-MASTER_SITES=	http://www.sublimation.org/scponly/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=scponly/}
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	snj@NetBSD.org
-HOMEPAGE=	http://www.sublimation.org/scponly/
-COMMENT=	Tiny shell that only permits scp and sftp
+HOMEPAGE=	http://sublimation.org/scponly/wiki/
+COMMENT=	Shell that only permits sftp
 
 GNU_CONFIGURE=	yes
 
