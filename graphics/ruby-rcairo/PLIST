@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/04/14 20:09:32 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/04/29 17:36:32 jlam Exp $
 ${GEM_HOME}/cache/cairo-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/AUTHORS
@@ -79,6 +79,7 @@ ${GEM_LIBDIR}/doc/en/cairo-pdf-surface.html
 ${GEM_LIBDIR}/doc/en/cairo-point.html
 ${GEM_LIBDIR}/doc/en/cairo-ps-level.html
 ${GEM_LIBDIR}/doc/en/cairo-ps-surface.html
+${GEM_LIBDIR}/doc/en/cairo-quartz-image-surface.html
 ${GEM_LIBDIR}/doc/en/cairo-quartz-surface.html
 ${GEM_LIBDIR}/doc/en/cairo-radial-pattern.html
 ${GEM_LIBDIR}/doc/en/cairo-read-error.html
@@ -94,6 +95,7 @@ ${GEM_LIBDIR}/doc/en/cairo-svg-surface.html
 ${GEM_LIBDIR}/doc/en/cairo-svg-version.html
 ${GEM_LIBDIR}/doc/en/cairo-temp-file-error.html
 ${GEM_LIBDIR}/doc/en/cairo-text-extents.html
+${GEM_LIBDIR}/doc/en/cairo-win32-printing-surface.html
 ${GEM_LIBDIR}/doc/en/cairo-win32-surface.html
 ${GEM_LIBDIR}/doc/en/cairo-write-error.html
 ${GEM_LIBDIR}/doc/en/cairo.html
@@ -169,6 +171,7 @@ ${GEM_LIBDIR}/doc/ja/cairo-pdf-surface.html
 ${GEM_LIBDIR}/doc/ja/cairo-point.html
 ${GEM_LIBDIR}/doc/ja/cairo-ps-level.html
 ${GEM_LIBDIR}/doc/ja/cairo-ps-surface.html
+${GEM_LIBDIR}/doc/ja/cairo-quartz-image-surface.html
 ${GEM_LIBDIR}/doc/ja/cairo-quartz-surface.html
 ${GEM_LIBDIR}/doc/ja/cairo-radial-pattern.html
 ${GEM_LIBDIR}/doc/ja/cairo-read-error.html
@@ -184,6 +187,7 @@ ${GEM_LIBDIR}/doc/ja/cairo-svg-surface.html
 ${GEM_LIBDIR}/doc/ja/cairo-svg-version.html
 ${GEM_LIBDIR}/doc/ja/cairo-temp-file-error.html
 ${GEM_LIBDIR}/doc/ja/cairo-text-extents.html
+${GEM_LIBDIR}/doc/ja/cairo-win32-printing-surface.html
 ${GEM_LIBDIR}/doc/ja/cairo-win32-surface.html
 ${GEM_LIBDIR}/doc/ja/cairo-write-error.html
 ${GEM_LIBDIR}/doc/ja/cairo.html
