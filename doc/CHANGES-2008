@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.949 2008/04/29 09:40:34 sborrill Exp $
+$NetBSD: CHANGES-2008,v 1.950 2008/04/29 10:44:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1693,3 +1693,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/gtkam to 0.1.15 [sborrill 2008-04-29]
 	Updated graphics/gphoto2 to 2.4.1 [sborrill 2008-04-29]
 	Updated filesystems/fuse-gphotofs to 0.4.0 [sborrill 2008-04-29]
+	Updated finance/gnucash to 2.2.5 [wiz 2008-04-29]
