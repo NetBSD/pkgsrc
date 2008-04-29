@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.944 2008/04/29 03:49:22 snj Exp $
+$NetBSD: CHANGES-2008,v 1.945 2008/04/29 04:56:40 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1686,3 +1686,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/py-html2text to 2.291 [schmonz 2008-04-28]
 	Updated www/ikiwiki to 2.44 [reed 2008-04-29]
 	Updated shells/scponly to 4.8 [snj 2008-04-29]
+	Updated graphics/GraphicsMagick to 1.1.12 [obache 2008-04-29]
