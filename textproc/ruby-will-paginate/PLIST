@@ -1,0 +1,52 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/29 18:02:05 jlam Exp $
+${GEM_HOME}/cache/will_paginate-${PKGVERSION}.gem
+${GEM_LIBDIR}/CHANGELOG
+${GEM_LIBDIR}/LICENSE
+${GEM_LIBDIR}/README.rdoc
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/examples/apple-circle.gif
+${GEM_LIBDIR}/examples/index.haml
+${GEM_LIBDIR}/examples/index.html
+${GEM_LIBDIR}/examples/pagination.css
+${GEM_LIBDIR}/examples/pagination.sass
+${GEM_LIBDIR}/init.rb
+${GEM_LIBDIR}/lib/will_paginate.rb
+${GEM_LIBDIR}/lib/will_paginate/array.rb
+${GEM_LIBDIR}/lib/will_paginate/collection.rb
+${GEM_LIBDIR}/lib/will_paginate/core_ext.rb
+${GEM_LIBDIR}/lib/will_paginate/finder.rb
+${GEM_LIBDIR}/lib/will_paginate/named_scope.rb
+${GEM_LIBDIR}/lib/will_paginate/named_scope_patch.rb
+${GEM_LIBDIR}/lib/will_paginate/version.rb
+${GEM_LIBDIR}/lib/will_paginate/view_helpers.rb
+${GEM_LIBDIR}/test/boot.rb
+${GEM_LIBDIR}/test/collection_test.rb
+${GEM_LIBDIR}/test/console
+${GEM_LIBDIR}/test/database.yml
+${GEM_LIBDIR}/test/finder_test.rb
+${GEM_LIBDIR}/test/fixtures/admin.rb
+${GEM_LIBDIR}/test/fixtures/developer.rb
+${GEM_LIBDIR}/test/fixtures/developers_projects.yml
+${GEM_LIBDIR}/test/fixtures/project.rb
+${GEM_LIBDIR}/test/fixtures/projects.yml
+${GEM_LIBDIR}/test/fixtures/replies.yml
+${GEM_LIBDIR}/test/fixtures/reply.rb
+${GEM_LIBDIR}/test/fixtures/schema.rb
+${GEM_LIBDIR}/test/fixtures/topic.rb
+${GEM_LIBDIR}/test/fixtures/topics.yml
+${GEM_LIBDIR}/test/fixtures/user.rb
+${GEM_LIBDIR}/test/fixtures/users.yml
+${GEM_LIBDIR}/test/helper.rb
+${GEM_LIBDIR}/test/lib/activerecord_test_case.rb
+${GEM_LIBDIR}/test/lib/activerecord_test_connector.rb
+${GEM_LIBDIR}/test/lib/load_fixtures.rb
+${GEM_LIBDIR}/test/lib/view_test_process.rb
+${GEM_LIBDIR}/test/view_test.rb
+${GEM_HOME}/specifications/will_paginate-${PKGVERSION}.gemspec
+@dirrm ${GEM_LIBDIR}/test/lib
+@dirrm ${GEM_LIBDIR}/test/fixtures
+@dirrm ${GEM_LIBDIR}/test
+@dirrm ${GEM_LIBDIR}/lib/will_paginate
+@dirrm ${GEM_LIBDIR}/lib
+@dirrm ${GEM_LIBDIR}/examples
+@dirrm ${GEM_LIBDIR}
