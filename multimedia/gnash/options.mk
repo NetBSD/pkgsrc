@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2008/04/27 06:44:52 wiz Exp $
+# $NetBSD: options.mk,v 1.6 2008/04/29 20:16:08 wiz Exp $
 #
 
 #
@@ -30,6 +30,9 @@ PLIST_SRC+=		${PKGDIR}/PLIST.kde
 PLIST_SUBST+=		KDE="kde/"
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
+
+post-install:
+	cd ${WRKSRC}/plugin/klash && make install-plugin
 .else
 PLIST_SUBST+=		KDE=""
 .endif
