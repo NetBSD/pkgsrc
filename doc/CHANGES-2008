@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.943 2008/04/29 00:07:11 reed Exp $
+$NetBSD: CHANGES-2008,v 1.944 2008/04/29 03:49:22 snj Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1685,3 +1685,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added security/py-smbpasswd version 1.0.1 [bouyer 2008-04-28]
 	Updated textproc/py-html2text to 2.291 [schmonz 2008-04-28]
 	Updated www/ikiwiki to 2.44 [reed 2008-04-29]
+	Updated shells/scponly to 4.8 [snj 2008-04-29]
