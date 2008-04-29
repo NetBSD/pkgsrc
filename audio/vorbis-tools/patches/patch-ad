@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.3 2008/04/29 05:51:10 wiz Exp $
+
+https://trac.xiph.org/attachment/ticket/1347/vorbis-tools-1.2.0-sec.patch
+for
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1686
+
+--- ogg123/speex_format.c.orig	2008-03-03 06:37:26.000000000 +0100
++++ ogg123/speex_format.c
+@@ -475,7 +475,7 @@ void *process_header(ogg_packet *op, int
+            cb->printf_error(callback_arg, ERROR, _("Cannot read header"));
+      return NULL;
+    }
+-   if ((*header)->mode >= SPEEX_NB_MODES) {
++   if ((*header)->mode >= SPEEX_NB_MODES || (*header)->mode < 0) {
+      cb->printf_error(callback_arg, ERROR, 
+ 		      _("Mode number %d does not (any longer) exist in this version"),
+ 	      (*header)->mode);
