@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/11/03 16:24:10 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/04/29 19:27:59 drochner Exp $
 bin/devhelp
 include/devhelp-1.0/devhelp/dh-base.h
 include/devhelp-1.0/devhelp/dh-book-tree.h
@@ -30,6 +30,10 @@ share/doc/devhelp/TODO
 share/examples/devhelp/devhelp.el
 share/examples/devhelp/devhelp.vim
 share/gconf/schemas/devhelp.schemas
+share/icons/hicolor/16x16/apps/devhelp.png
+share/icons/hicolor/22x22/apps/devhelp.png
+share/icons/hicolor/24x24/apps/devhelp.png
+share/icons/hicolor/32x32/apps/devhelp.png
 share/icons/hicolor/48x48/apps/devhelp.png
 share/icons/hicolor/scalable/apps/devhelp.svg
 share/locale/am/LC_MESSAGES/devhelp.mo
@@ -85,6 +89,7 @@ share/locale/sq/LC_MESSAGES/devhelp.mo
 share/locale/sr/LC_MESSAGES/devhelp.mo
 share/locale/sr@Latn/LC_MESSAGES/devhelp.mo
 share/locale/sv/LC_MESSAGES/devhelp.mo
+share/locale/ta/LC_MESSAGES/devhelp.mo
 share/locale/te/LC_MESSAGES/devhelp.mo
 share/locale/th/LC_MESSAGES/devhelp.mo
 share/locale/tr/LC_MESSAGES/devhelp.mo

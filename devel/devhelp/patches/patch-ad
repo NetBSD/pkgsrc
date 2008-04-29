@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.1 2006/08/10 14:07:55 drochner Exp $
+$NetBSD: patch-ad,v 1.2 2008/04/29 19:27:59 drochner Exp $
 
---- misc/Makefile.in.orig	2006-08-10 14:17:59.000000000 +0200
+--- misc/Makefile.in.orig	2008-02-07 13:39:47.000000000 +0100
 +++ misc/Makefile.in
-@@ -246,7 +246,7 @@ sbindir = @sbindir@
- sharedstatedir = @sharedstatedir@
- sysconfdir = @sysconfdir@
+@@ -242,7 +242,7 @@ sysconfdir = @sysconfdir@
  target_alias = @target_alias@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
 -SUBDIRS = gedit-plugin
-+SUBDIRS = 
++SUBDIRS =
  EXTRA_DIST = devhelp.el devhelp.vim html2funcs.py html2xml.py man2xml.py
  all: all-recursive
  
