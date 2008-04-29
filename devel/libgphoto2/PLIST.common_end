@@ -1,11 +1,11 @@
-@comment $NetBSD: PLIST.common_end,v 1.4 2007/01/03 08:20:18 adam Exp $
+@comment $NetBSD: PLIST.common_end,v 1.5 2008/04/29 09:31:38 sborrill Exp $
 @dirrm share/libgphoto2/${PKGVERSION}/konica
 @dirrm share/libgphoto2/${PKGVERSION}
 @dirrm share/libgphoto2
 @dirrm share/doc/libgphoto2/camlibs
 @dirrm share/doc/libgphoto2
 @dirrm lib/udev
-@dirrm lib/libgphoto2_port/0.7.1
+@dirrm lib/libgphoto2_port/0.8.0
 @dirrm lib/libgphoto2_port
 @dirrm lib/libgphoto2/${PKGVERSION}
 @dirrm lib/libgphoto2
