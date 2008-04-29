@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.957 2008/04/29 12:56:29 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.958 2008/04/29 14:10:51 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1701,3 +1701,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/libtasn1 to 1.4 [wiz 2008-04-29]
 	Updated chat/pidgin to 2.4.1nb2 [jmmv 2008-04-29]
 	Updated editors/emacs to 22.1nb3 [tonnerre 2008-04-29]
+	Updated editors/xemacs to 21.4.17nb5 [tonnerre 2008-04-29]
