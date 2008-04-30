@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2007/02/22 19:26:07 wiz Exp $
+# $NetBSD: Makefile,v 1.25.10.1 2008/04/30 10:41:52 rtr Exp $
 #
 
 DISTNAME=	speex-1.0.5
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	http://downloads.us.xiph.org/releases/speex/
 
