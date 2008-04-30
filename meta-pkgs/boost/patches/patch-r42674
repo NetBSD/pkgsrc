@@ -1,50 +1,58 @@
-$NetBSD: patch-r42674,v 1.1 2008/04/28 21:35:25 jmmv Exp $
+$NetBSD: patch-r42674,v 1.2 2008/04/30 07:13:26 jmmv Exp $
 
 Fix for CVE-2008-0171.  Patch from Boost's svn repository, r42674.
 
---- boost/regex/v4/basic_regex_parser.hpp (revision 38864)
-+++ boost/regex/v4/basic_regex_parser.hpp (revision 42674)
-@@ -785,4 +785,5 @@
-       case syntax_element_jump:
-       case syntax_element_startmark:
-+      case syntax_element_backstep:
-          // can't legally repeat any of the above:
-          fail(regex_constants::error_badrepeat, m_position - m_base);
-@@ -1870,4 +1871,5 @@
-    {
-       re_syntax_base* b = this->getaddress(expected_alt_point);
-+      // Make sure we have exactly one alternative following this state:
-       if(b->type != syntax_element_alt)
+--- boost/regex/v4/basic_regex_parser.hpp.orig	2008-04-30 09:00:21.000000000 +0200
++++ boost/regex/v4/basic_regex_parser.hpp	2008-04-30 09:01:13.000000000 +0200
+@@ -784,6 +784,7 @@ bool basic_regex_parser<charT, traits>::
+          // do nothing...
+          break;
+       }
++      case syntax_element_backstep:
+       insert_point = this->getoffset(this->m_last_state);
+    }
+    //
+@@ -1869,6 +1870,7 @@ bool basic_regex_parser<charT, traits>::
+       }
+       else if(this->getaddress(static_cast<re_alt*>(b)->alt.i, b)->type == syntax_element_alt)
        {
-@@ -1878,4 +1880,13 @@
-       {
++      // Make sure we have exactly one alternative following this state:
           fail(regex_constants::error_bad_pattern, m_position - m_base);
-+         return false;
-+      }
-+      // check for invalid repetition of next state:
-+      b = this->getaddress(expected_alt_point);
-+      b = this->getaddress(static_cast<re_alt*>(b)->next.i, b);
-+      if((b->type != syntax_element_assert_backref)
-+         && (b->type != syntax_element_startmark))
-+      {
-+         fail(regex_constants::error_badrepeat, m_position - m_base);
           return false;
        }
---- libs/regex/test/regress/test_perl_ex.cpp (revision 30980)
-+++ libs/regex/test/regress/test_perl_ex.cpp (revision 42674)
-@@ -122,4 +122,15 @@
+@@ -1877,6 +1879,15 @@ bool basic_regex_parser<charT, traits>::
+    // append closing parenthesis state:
+    //
+    pb = static_cast<re_brace*>(this->append_state(syntax_element_endmark, sizeof(re_brace)));
++         return false;
++      }
++      // check for invalid repetition of next state:
++      b = this->getaddress(expected_alt_point);
++      b = this->getaddress(static_cast<re_alt*>(b)->next.i, b);
++      if((b->type != syntax_element_assert_backref)
++         && (b->type != syntax_element_startmark))
++      {
++         fail(regex_constants::error_badrepeat, m_position - m_base);
+    pb->index = markid;
+    this->m_paren_start = last_paren_start;
+    //
+--- libs/regex/test/regress/test_perl_ex.cpp.orig	2008-04-30 09:00:21.000000000 +0200
++++ libs/regex/test/regress/test_perl_ex.cpp	2008-04-30 09:01:13.000000000 +0200
+@@ -121,6 +121,17 @@ void test_conditionals()
+    TEST_INVALID_REGEX("(?:(a)|b)(?(?:", perl);
     TEST_INVALID_REGEX("(?:(a)|b)(?(?<", perl);
     TEST_INVALID_REGEX("(?:(a)|b)(?(?<a", perl);
-+
-+   TEST_INVALID_REGEX("(?(?!#?)+)", perl);
-+   TEST_INVALID_REGEX("(?(?=:-){0})", perl);
-+   TEST_INVALID_REGEX("(?(123){1})", perl);
-+   TEST_INVALID_REGEX("(?(?<=A)*)", perl);
-+   TEST_INVALID_REGEX("(?(?<=A)+)", perl);
-+
-+   TEST_INVALID_REGEX("(?<!*|^)", perl);
-+   TEST_INVALID_REGEX("(?<!*|A)", perl);
-+   TEST_INVALID_REGEX("(?<=?|A)", perl);
-+   TEST_INVALID_REGEX("(?<=*|\B)", perl);
++
++   TEST_INVALID_REGEX("(?(?!#?)+)", perl);
++   TEST_INVALID_REGEX("(?(?=:-){0})", perl);
++   TEST_INVALID_REGEX("(?(123){1})", perl);
++   TEST_INVALID_REGEX("(?(?<=A)*)", perl);
++   TEST_INVALID_REGEX("(?(?<=A)+)", perl);
++
++   TEST_INVALID_REGEX("(?<!*|^)", perl);
++   TEST_INVALID_REGEX("(?<!*|A)", perl);
++   TEST_INVALID_REGEX("(?<=?|A)", perl);
++   TEST_INVALID_REGEX("(?<=*|\B)", perl);
  }
  
+ void test_options()
