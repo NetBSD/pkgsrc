@@ -1,0 +1,23 @@
+$NetBSD: patch-ao,v 1.1 2008/04/30 21:35:59 dmcmahill Exp $
+
+--- configure.orig	2008-04-30 16:47:33.000000000 +0000
++++ configure	2008-04-30 17:00:40.000000000 +0000
+@@ -1640,11 +1640,15 @@
+ 
+ 
+-if [[ $host = *cygwin* ]] ; then
++case $host in
++  *cygwin*)
+   WINDOWS_TRUE=
+   WINDOWS_FALSE='#'
+-else
++  ;;
++
++  *)
+   WINDOWS_TRUE='#'
+   WINDOWS_FALSE=
+-fi
++  ;;
++esac
+ 
+ 

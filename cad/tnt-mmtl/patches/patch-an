@@ -1,0 +1,19 @@
+$NetBSD: patch-an,v 1.1 2008/04/30 21:35:59 dmcmahill Exp $
+
+remove a syntax error from the generated configure script.
+
+--- configure.ac.orig	2004-09-10 20:04:53.000000000 +0000
++++ configure.ac	2008-04-30 16:59:21.000000000 +0000
+@@ -43,5 +43,11 @@
+ #  (we just copy PrFile32.exe to ./bin)
+ #----------------------------------------------------------------
+-AM_CONDITIONAL(WINDOWS, [[[[ $host = *cygwin* ]]]] )
++cygwin=no
++case $host in
++	*cygwin*)
++		cygwin=yes
++		;;
++esac
++AM_CONDITIONAL(WINDOWS, test $cygwin = yes )
+ 
+ 
