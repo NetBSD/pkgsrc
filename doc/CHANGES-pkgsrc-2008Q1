@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.29 2008/04/30 12:28:48 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.30 2008/04/30 12:48:30 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -64,3 +64,5 @@ pullup ticket #2356 - requested by cube
 p5-DBIx-SearchBuilder: update package
 pullup ticket #2357 - requested by cube
 rt: fix up dependencies
+pullup ticket #2358 - requested by cube
+p5-Module-Versions-Report: update package to 1.03
