@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.976 2008/04/30 21:09:51 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.977 2008/04/30 21:39:43 dmcmahill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1728,3 +1728,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added databases/pear-MDB2_Driver_mysql version 1.4.1 [adrianp 2008-04-30]
 	Added databases/pear-MDB2_Driver_pgsql version 1.4.1 [adrianp 2008-04-30]
 	Added databases/pear-MDB2_Driver_sqlite version 1.4.1 [adrianp 2008-04-30]
+	Updated lang/f2c to 20001205nb10 [dmcmahill 2008-04-30]
