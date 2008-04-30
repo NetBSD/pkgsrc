@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.27 2008/04/30 10:54:15 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.28 2008/04/30 11:26:09 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -60,3 +60,5 @@ pullup ticket #2354 - requested by wiz
 speex: update package to address security issue
 pullup ticket #2355 - requested by tron
 win32-codecs: update package
+pullup ticket #2356 - requested by cube
+p5-DBIx-SearchBuilder: update package
