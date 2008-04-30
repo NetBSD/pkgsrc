@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.20 2008/03/14 18:55:54 wiz Exp $
+$NetBSD: distinfo,v 1.20.2.1 2008/04/30 09:23:27 rtr Exp $
 
 SHA1 (vorbis-tools-1.2.0.tar.gz) = c5c5ee4637ab8c9fc953d203663b7264432f874a
 RMD160 (vorbis-tools-1.2.0.tar.gz) = 8cb6925c6e4e69373b6c91ff20d7ed8d75153b7c
@@ -6,3 +6,4 @@ Size (vorbis-tools-1.2.0.tar.gz) = 1076814 bytes
 SHA1 (patch-aa) = a9fe36760479678df09f840671c515e0d9f37796
 SHA1 (patch-ab) = b706ae0bc9e13c5ccff689aa1451efc782e340e9
 SHA1 (patch-ac) = 53065c4db39f7e975712c2cba51ff5542cf5a77f
+SHA1 (patch-ad) = 6fe04631cd098fc64bf0914f1fd4ef654c0089b0
