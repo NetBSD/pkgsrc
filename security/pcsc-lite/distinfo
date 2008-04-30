@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/04 11:29:08 shannonjr Exp $
+$NetBSD: distinfo,v 1.2 2008/04/30 13:34:28 shannonjr Exp $
 
 SHA1 (pcsc-lite-1.4.99.tar.gz) = 7f5ff7d8e187c1d46f3bc26567d393107ac0e362
 RMD160 (pcsc-lite-1.4.99.tar.gz) = 689d99ae26a13dc78856670b0deafbd5fed517ab
@@ -9,3 +9,5 @@ SHA1 (patch-ac) = 4404dec1418df59baafdc5c45fae9dc810418991
 SHA1 (patch-ad) = 3172e6063cc48b1302d08865cd8e9039b502a807
 SHA1 (patch-ae) = 79978e1a6e1b6cd11ba4411e69bbf6f7d83c90ae
 SHA1 (patch-af) = 931c031eba226336ceb1c12bc2ffd9193cb24e44
+SHA1 (patch-ag) = 3b404ecb91d976989969803577410f61d40aab73
+SHA1 (patch-ah) = 3335320a7005644baca1fbf58985e2e8099ef728
