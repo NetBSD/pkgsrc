@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/04/30 21:05:16 adrianp Exp $
+
+--- package.xml.orig	2007-05-03 20:05:23.000000000 +0100
++++ package.xml
+@@ -79,9 +79,6 @@ open todo items:
+     <channel>pear.php.net</channel>
+     <min>2.4.1</min>
+    </package>
+-   <extension>
+-    <name>mysql</name>
+-   </extension>
+   </required>
+  </dependencies>
+  <phprelease />
