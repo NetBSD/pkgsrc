@@ -1,13 +1,13 @@
-$NetBSD: patch-ao,v 1.1 2008/04/24 07:40:24 bjs Exp $
+$NetBSD: patch-ao,v 1.2 2008/04/30 07:00:14 bjs Exp $
 
---- src/mesa/x86/common_x86.c.orig	2007-07-12 16:49:55.000000000 -0400
+--- src/mesa/x86/common_x86.c.orig	2008-04-29 15:29:20.000000000 -0400
 +++ src/mesa/x86/common_x86.c
 @@ -38,7 +38,7 @@
  #if defined(USE_SSE_ASM) && defined(__linux__)
  #include <linux/version.h>
  #endif
--#if defined(USE_SSE_ASM) && defined(__FreeBSD__)
-+#if defined(USE_SSE_ASM) && (defined(__FreeBSD__) || defined(__NetBSD__))
+-#if defined(USE_SSE_ASM) && (defined(__FreeBSD__) || defined(__DragonFly__))
++#if defined(USE_SSE_ASM) && defined(USE_SSE_SYSCTL_DETECTION)
  #include <sys/types.h>
  #include <sys/sysctl.h>
  #endif
