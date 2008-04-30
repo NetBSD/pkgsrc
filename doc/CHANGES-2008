@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.967 2008/04/30 10:06:45 cube Exp $
+$NetBSD: CHANGES-2008,v 1.968 2008/04/30 16:23:22 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1719,3 +1719,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/glut to 7.0.3.2 [bjs 2008-04-30]
 	Updated graphics/glx-utils to 7.0.3.2 [bjs 2008-04-30]
 	Updated devel/p5-Module-Versions-Report to 1.03 [cube 2008-04-30]
+	Added graphics/ruby-mini-magick version 1.2.3 [jlam 2008-04-30]
