@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/03/03 17:45:33 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2008/04/30 10:20:20 cube Exp $
 #
 
 DISTNAME=	RTFM-2.0.4
@@ -6,7 +6,7 @@ PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	http://download.bestpractical.com/pub/rt/release/
 
-MAINTAINER=	cube@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bestpractical.com/rtfm/
 COMMENT=	Enterprise-grade knowledge management tool
 
