@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.974 2008/04/30 21:09:15 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.975 2008/04/30 21:09:32 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1726,3 +1726,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added databases/pear-MDB2 version 2.4.1 [adrianp 2008-04-30]
 	Added mail/pear-Auth_SASL version 1.0.2 [adrianp 2008-04-30]
 	Added databases/pear-MDB2_Driver_mysql version 1.4.1 [adrianp 2008-04-30]
+	Added databases/pear-MDB2_Driver_pgsql version 1.4.1 [adrianp 2008-04-30]
