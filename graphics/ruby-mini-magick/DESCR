@@ -1,0 +1,5 @@
+MiniMagick gives you access to all the command-line options ImageMagick
+has (found at http://www.imagemagick.org/script/mogrify.php).  Using
+MiniMagick as an alternative to RMagick allows the Ruby processes memory
+to remain small because it spawns ImageMagick's mogrify program, which
+has much lower memory usage than RMagick.
