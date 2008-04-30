@@ -1,11 +1,8 @@
-$NetBSD: distinfo,v 1.17 2006/10/31 22:44:16 wiz Exp $
+$NetBSD: distinfo,v 1.18 2008/04/30 06:40:06 tron Exp $
 
-SHA1 (qtextras-20041107.tar.bz2) = e3ff8124fab7bdd46ab393d59245a281867c4687
-RMD160 (qtextras-20041107.tar.bz2) = 93980e0c878568851eb244270965ee7378ca3669
-Size (qtextras-20041107.tar.bz2) = 974913 bytes
 SHA1 (rp9codecs-win32-20050115.tar.bz2) = 926f9b85747a4076882d98e4f808aa36771262e3
 RMD160 (rp9codecs-win32-20050115.tar.bz2) = e768685ce05149f34c500c29289539ee6198ecca
 Size (rp9codecs-win32-20050115.tar.bz2) = 540641 bytes
-SHA1 (windows-all-20061022.zip) = 8d16971efffb1eb04aa02362dd07d910ed5318c9
-RMD160 (windows-all-20061022.zip) = 929c62baa159ca7b408d9773e8985e7b7557106a
-Size (windows-all-20061022.zip) = 13311513 bytes
+SHA1 (windows-all-20071007.zip) = 7d0118d957b9dd0d318edf955199f2e9d29ebedd
+RMD160 (windows-all-20071007.zip) = 33ced83d7e31139815feb36bbef82bcac4c42d92
+Size (windows-all-20071007.zip) = 13314249 bytes
