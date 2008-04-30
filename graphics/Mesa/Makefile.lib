@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.9 2008/04/27 09:43:12 tnn Exp $
+# $NetBSD: Makefile.lib,v 1.10 2008/04/30 07:09:48 bjs Exp $
 #
 # This Makefile fragment is included by all packages that build libraries
 # from the Mesa sources.
@@ -14,6 +14,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+LIBTOOL=		${PKG_SHLIBTOOL}
 USE_TOOLS+=		gmake makedepend pkg-config
 
 PATCHDIR=		${.CURDIR}/../MesaLib/patches
