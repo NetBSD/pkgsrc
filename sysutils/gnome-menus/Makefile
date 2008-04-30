@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2008/04/15 17:33:21 drochner Exp $
+# $NetBSD: Makefile,v 1.38 2008/04/30 13:38:16 jmmv Exp $
 #
 
 DISTNAME=	gnome-menus-2.22.1
@@ -6,7 +6,7 @@ CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-menus/2.22/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Implementation of the desktop menu specification for GNOME
 

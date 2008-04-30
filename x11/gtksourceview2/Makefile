@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/04/15 17:49:48 drochner Exp $
+# $NetBSD: Makefile,v 1.7 2008/04/30 13:38:17 jmmv Exp $
 #
 
 DISTNAME=	gtksourceview-${DISTVER}
@@ -7,7 +7,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gtksourceview/2.2/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gtksourceview.sourceforge.net/
 COMMENT=	Text widget that extends GTK2's GtkTextView widget
 

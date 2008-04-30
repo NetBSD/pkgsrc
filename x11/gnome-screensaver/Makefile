@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.28 2008/04/21 19:53:50 drochner Exp $
+# $NetBSD: Makefile,v 1.29 2008/04/30 13:38:17 jmmv Exp $
 #
 
 DISTNAME=	gnome-screensaver-2.22.2
 CATEGORIES=	x11 gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-screensaver/2.22/}
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/GnomeScreensaver/
 COMMENT=	Screen saver and locker for the GNOME desktop
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/03/06 14:53:53 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/04/30 13:38:16 jmmv Exp $
 #
 
 DISTNAME=	gnome-keyring-manager-2.20.0
@@ -7,7 +7,7 @@ CATEGORIES=	security gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-keyring-manager/2.20/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gnomesupport.org/wiki/index.php/GNOME_Keyring_Manager_Wiki
 COMMENT=	GNOME password and secret manager
 

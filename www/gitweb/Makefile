@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/03/25 18:41:26 jmmv Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/30 13:38:16 jmmv Exp $
 #
 
 DISTNAME=	git-1.5.0.3
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/git/gitweb/}
 CATEGORIES=	www
 MASTER_SITES=	http://www.kernel.org/pub/software/scm/git/
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://git.or.cz/
 COMMENT=	Web interface for GIT repositories
 

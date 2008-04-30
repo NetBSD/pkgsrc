@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.common,v 1.39 2008/04/29 10:01:05 drochner Exp $
+# $NetBSD: Makefile.common,v 1.40 2008/04/30 13:38:16 jmmv Exp $
 #
 
 DISTNAME=	totem-2.22.2
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/2.22/}
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/totem/
 COMMENT=	Movie player for the GNOME Desktop
 

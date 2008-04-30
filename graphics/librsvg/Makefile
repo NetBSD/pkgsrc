@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.30 2008/04/15 21:24:27 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2008/04/30 13:38:15 jmmv Exp $
 
 DISTNAME=	librsvg-2.22.2
 CATEGORIES=	graphics gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/librsvg/2.22/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://librsvg.sourceforge.net/
 COMMENT=	SVG library for GNOME2
 

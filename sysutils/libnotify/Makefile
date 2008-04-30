@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.6 2007/03/21 22:33:59 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2008/04/30 13:38:16 jmmv Exp $
 #
 
 DISTNAME=	libnotify-0.4.4
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	http://www.galago-project.org/files/releases/source/libnotify/
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.galago-project.org/
 COMMENT=	Desktop notification framework
 
