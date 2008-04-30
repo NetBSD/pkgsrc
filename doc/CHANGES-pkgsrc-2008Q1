@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.24 2008/04/28 10:44:07 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.25 2008/04/30 09:24:09 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -54,3 +54,5 @@ pullup ticket #2352 - requested by tron
 update for security problem
 Pullup ticket 2351 - requested by markd
 security fix for kdelibs3
+pullup ticket #2353 - requested by wiz
+vorbis-tools: resolves security issue
