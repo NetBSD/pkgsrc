@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/04/30 21:07:17 adrianp Exp $
+
+--- package.xml.orig	2007-05-03 20:08:22.000000000 +0100
++++ package.xml
+@@ -72,9 +72,6 @@ open todo items:
+     <channel>pear.php.net</channel>
+     <min>2.4.1</min>
+    </package>
+-   <extension>
+-    <name>sqlite</name>
+-   </extension>
+   </required>
+  </dependencies>
+  <phprelease />
