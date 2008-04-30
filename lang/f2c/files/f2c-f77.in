@@ -303,12 +303,23 @@ F2CFLAGS="$F2CFLAGS $S2DBLFLAGS"
 
 eval "set -- $ARGS"
 
+# strip off lines which just are for the linker in cases where
+# we are not linkng.  Otherwise we produce gcc warnings
+# like:
+#
+# cc: -R/usr/pkg/lib: linker input file unused because linking not done
+#
+# which messes up the autoconf tests for fortran libraries.
+ 
+CFLAGS_NOLINK=`echo $CFLAGS |  sed -e 's; '\''-Wl,[^ ]*; ;g' -e 's; -Wl,[^ ]*; ;g'`
+
 if test $VERBOSE = "yes"; then
   F2CVER=`$F2C < /dev/null | awk '/.*version/ {print $6" "$7}'`
   echo "f2c-f77:"
   echo "F2C= $F2C, $F2CVER"
   echo "CC= $CC"
   echo "CFLAGS= $CFLAGS"
+  echo "CFLAGS_NOLINK= $CFLAGS_NOLINK"
   echo "CPPFLAGS= $CPPFLAGS"
   echo "FLIBS= $FLIBS"
   echo "LD_RUN_PATH= @PREFIX@/lib"
@@ -343,7 +354,7 @@ do
 				;;
 			esac
 		case $rc in 0);; *) exit;; esac
-                eval "\$CC -c $CFLAGS \$b.c" 2>$s
+                eval "\$CC -c $CFLAGS_NOLINK \$b.c" 2>$s
 		rc=$?
 		sed '/parameter .* is not referenced/d;/warning: too many parameters/d' $s 1>&2
 		case $rc in 0);; *) exit;; esac
@@ -358,7 +369,7 @@ do
 		case $? in 0);; *) rc=$?; exit;; esac
 		eval "\$F2C $F2CFLAGS \$b.f"
 		case $? in 0);; *) rc=$?; exit;; esac
-                eval "\$CC -c $CFLAGS \$b.c"
+                eval "\$CC -c $CFLAGS_NOLINK \$b.c"
 		case $? in 0);; *) rc=$?; exit;; esac
 		OFILES="$OFILES $b.o"
 		rm $b.[cf]
@@ -371,7 +382,7 @@ do
 		case $? in 0);; *) rc=$?; exit;; esac
 		eval "\$F2C $F2CFLAGS \$b.f"
 		case $? in 0);; *) rc=$?; exit;; esac
-		eval "\$CC -c $CFLAGS \$b.c"
+		eval "\$CC -c $CFLAGS_NOLINK \$b.c"
 		case $? in 0);; *) rc=$?; exit;; esac
 		OFILES="$OFILES $b.o"
 		rm $b.[cf]
@@ -390,7 +401,7 @@ do
 	*.c)
 		echo $1: 1>&2
 		OFILE=`basename $1 .c`.o
-                eval "\$CC -c $CPPFLAGS $CFLAGS \$1"
+                eval "\$CC -c $CPPFLAGS $CFLAGS_NOLINK \$1"
 		rc=$?; case $rc in 0);; *) rc=$?; exit;; esac
 		OFILES="$OFILES $OFILE"
 		case $cOPT in 1) cOPT=2;; esac
