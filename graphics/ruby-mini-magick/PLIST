@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/30 16:22:47 jlam Exp $
+${GEM_HOME}/cache/mini_magick-${PKGVERSION}.gem
+${GEM_LIBDIR}/History.txt
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/Manifest.txt
+${GEM_LIBDIR}/README.txt
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/init.rb
+${GEM_LIBDIR}/lib/image_temp_file.rb
+${GEM_LIBDIR}/lib/mini_magick.rb
+${GEM_LIBDIR}/test/actually_a_gif.jpg
+${GEM_LIBDIR}/test/not_an_image.php
+${GEM_LIBDIR}/test/simple.gif
+${GEM_LIBDIR}/test/test_image_temp_file.rb
+${GEM_LIBDIR}/test/test_mini_magick_test.rb
+${GEM_LIBDIR}/test/trogdor.jpg
+${GEM_HOME}/specifications/mini_magick-${PKGVERSION}.gemspec
+@dirrm ${GEM_LIBDIR}/test
+@dirrm ${GEM_LIBDIR}/lib
+@dirrm ${GEM_LIBDIR}
