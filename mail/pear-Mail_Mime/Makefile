@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2007/05/05 22:09:18 adrianp Exp $
+# $NetBSD: Makefile,v 1.8 2008/04/30 19:28:03 adrianp Exp $
 
-DISTNAME=	Mail_Mime-1.3.1
+DISTNAME=	Mail_Mime-1.4.0
 CATEGORIES+=	mail
-PKGREVISION=	1
 
 MAINTAINER=	jdolecek@NetBSD.org
 COMMENT=	PHP classes to create and decode mime messages
