@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/03/04 11:30:08 shannonjr Exp $
+$NetBSD: patch-aa,v 1.2 2008/04/30 13:32:21 shannonjr Exp $
 
---- configure.in.orig	2008-01-22 12:33:34.000000000 -0700
+--- configure.in.orig	2008-02-22 06:42:28.000000000 -0700
 +++ configure.in
-@@ -93,6 +93,10 @@ case "$host" in
+@@ -94,6 +94,10 @@ case "$host" in
  	BUNDLE_HOST="FreeBSD"
  	DYN_LIB_EXT="so"
  	;;
@@ -13,3 +13,30 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/03/04 11:30:08 shannonjr Exp $
  *-*-openbsd*)
  	BUNDLE_HOST="OpenBSD"
  	DYN_LIB_EXT="so.0.0"
+@@ -102,6 +106,10 @@ case "$host" in
+ 	BUNDLE_HOST="Solaris"
+ 	DYN_LIB_EXT="so"
+ 	;;
++*-*-dragonfly*)
++	BUNDLE_HOST="DragonFly"
++	DYN_LIB_EXT="so"
++	;;
+ *)
+ 	BUNDLE_HOST="Linux"
+ 	DYN_LIB_EXT="so"
+@@ -251,12 +259,15 @@ AC_ARG_ENABLE(pcsclite,
+ if test "${pcsclite}" != no ; then
+ 	# check that pcsc-lite is installed
+ 	OLD_LIBS="$LIBS"
++	OLD_CFLAGS="$CFLAGS"
+ 	LIBS="$LIBS $PCSC_LIBS"
++	CFLAGS="$CFLAGS $PCSC_CFLAGS"
+ 	AC_MSG_CHECKING([for SCardEstablishContext])
+ 	AC_TRY_LINK_FUNC(SCardEstablishContext,
+ 	    [ AC_MSG_RESULT([yes]) ],
+ 		[ AC_MSG_ERROR([SCardEstablishContext() not found, install pcsc-lite 1.2.9-beta9 or later,or use PCSC_LIBS=...  ./configure]) ])
+ 	LIBS="$OLD_LIBS"
++	CFLAGS"$OLD_CFLAGS"
+ 
+ 	pcsclite=yes
+ fi
