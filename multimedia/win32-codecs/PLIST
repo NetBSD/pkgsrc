@@ -1,21 +1,14 @@
-@comment $NetBSD: PLIST,v 1.12 2006/10/31 22:44:16 wiz Exp $
-lib/win32/3ivX.qtx
-lib/win32/ACTLComponent.qtx
-lib/win32/AvidQTAVUICodec.qtx
-lib/win32/BeHereiVideo.qtx
+@comment $NetBSD: PLIST,v 1.12.12.1 2008/04/30 10:53:45 rtr Exp $
 lib/win32/CLRVIDDC.DLL
 lib/win32/CtWbJpg.DLL
 lib/win32/DECVW_32.DLL
-lib/win32/Indeo4.qtx
 lib/win32/LCodcCMP.dll
-lib/win32/On2_VP3.qtx
 lib/win32/QuickTime.qts
 lib/win32/QuickTimeEssentials.qtx
 lib/win32/QuickTimeInternetExtras.qtx
 lib/win32/Readme.txt
 lib/win32/VDODEC32.dll
 lib/win32/ViVD2.dll
-lib/win32/ZyGoVideo.qtx
 lib/win32/acelpdec.ax
 lib/win32/alf2cd.acm
 lib/win32/aslcodec_vfw.dll
@@ -27,6 +20,7 @@ lib/win32/atrc3260.dll
 lib/win32/avimszh.dll
 lib/win32/avizlib.dll
 lib/win32/clrviddd.dll
+lib/win32/cook.dll
 lib/win32/cook3260.dll
 lib/win32/ctadp32.acm
 lib/win32/divx.dll
@@ -38,6 +32,7 @@ lib/win32/drv13260.dll
 lib/win32/drv23260.dll
 lib/win32/drv33260.dll
 lib/win32/drv43260.dll
+lib/win32/frapsvid.dll
 lib/win32/huffyuv.dll
 lib/win32/i263_32.drv
 lib/win32/iccvid.dll
@@ -116,5 +111,6 @@ lib/win32/wmvds32.ax
 lib/win32/wnvplay1.dll
 lib/win32/wnvwinx.dll
 lib/win32/wvc1dmod.dll
+lib/win32/xanlib.dll
 lib/win32/zmbv.dll
 @dirrm lib/win32
