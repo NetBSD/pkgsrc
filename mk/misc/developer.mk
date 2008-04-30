@@ -1,4 +1,4 @@
-# $NetBSD: developer.mk,v 1.11 2007/11/29 23:35:37 gdt Exp $
+# $NetBSD: developer.mk,v 1.12 2008/04/30 16:22:18 jlam Exp $
 #
 # Public targets for developers:
 #
@@ -50,14 +50,14 @@ _CYEAR_cmd=		${DATE} -u +%Y
 _CDATE_cmd=		${DATE} -u +%Y-%m-%d
 _NETBSD_LOGIN_NAME_cmd=	${ID} -nu
 
-.if ${CTYPE} == "Updated"
+.if !empty(CTYPE:tl:Mup*)				# updated
 _CE_MSG1=	Updated ${PKGPATH} to ${PKGVERSION}
-.elif ${CTYPE} == "Removed"
+.elif !empty(CTYPE:tl:Mrem*) || !empty(CTYPE:tl:Mrm)	# removed
 # XXX Check OLDNAME, and if so add " successor ${OLDNAME}".
 _CE_MSG1=	Removed ${PKGPATH}
-.elif ${CTYPE} == "Added"
+.elif !empty(CTYPE:tl:Madd*)				# added
 _CE_MSG1=	Added ${PKGPATH} version ${PKGVERSION}
-.elif ${CTYPE} == "Renamed" || ${CTYPE} == "Moved"
+.elif !empty(CTYPE:tl:Mren*) || !empty(CTYPE:tl:Mmov*) || !empty(CTYPE:tl:Mmv)
 .  if defined(TO)
 .    if exists(${PKGSRCDIR}/${TO})
 _CE_MSG1=	${CTYPE} ${PKGPATH} to ${TO}
