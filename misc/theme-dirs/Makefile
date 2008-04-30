@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/10/25 22:01:02 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2008/04/30 13:38:15 jmmv Exp $
 #
 
 DISTNAME=	theme-dirs-1.1
@@ -7,7 +7,7 @@ CATEGORIES=	misc gnome kde
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# empty
 COMMENT=	Shared theme directories
 

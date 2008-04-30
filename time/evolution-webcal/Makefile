@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/03/06 14:53:55 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2008/04/30 13:38:16 jmmv Exp $
 #
 
 DISTNAME=	evolution-webcal-2.12.0
@@ -7,7 +7,7 @@ CATEGORIES=	time gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/evolution-webcal/2.12/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.novell.com/products/desktop/features/evolution.html
 COMMENT=	GNOME URL handler for web-published iCal calendar files
 

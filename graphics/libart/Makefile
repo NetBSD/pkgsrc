@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/02/03 12:17:09 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2008/04/30 13:38:15 jmmv Exp $
 
 DISTNAME=		libart_lgpl-2.3.20
 PKGNAME=		${DISTNAME:S/_lgpl//}
@@ -6,7 +6,7 @@ CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libart_lgpl/2.3/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		jmmv@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.levien.com/libart/
 COMMENT=		High-performance 2D graphics library
 
