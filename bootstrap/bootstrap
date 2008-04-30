@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.122 2008/04/29 22:03:19 minskim Exp $
+# $NetBSD: bootstrap,v 1.123 2008/04/30 03:14:55 minskim Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -445,6 +445,17 @@ Darwin)
 	set_opsys=no
 	machine_arch=`uname -p`
 	CC="gcc -isystem /usr/include"; export CC
+	osrev=`uname -r`
+	macosx_version=`echo $osrev | awk -F . '{ print "10."$1-4; }'`
+	case "$macosx_version" in
+	10.[0-4])
+		packagemaker=/Developer/Tools/packagemaker
+		;;
+	*)
+		packagemaker=/Developer/usr/bin/packagemaker
+		;;
+	esac
+	unset osrev macosx_version
 	;;
 DragonFly)
 	root_group=wheel
