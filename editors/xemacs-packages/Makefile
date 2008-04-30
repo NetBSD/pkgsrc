@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2008/03/03 18:25:53 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2008/04/30 06:35:01 tron Exp $
 
 DISTNAME=	xemacs-packages
 PKGNAME=	xemacs-packages-1.16
+PKGREVISION=	1
+
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_XEMACS:=packages/}
 DISTFILES=	\
@@ -218,6 +220,9 @@ do-install:
 	@${ECHO_MSG} -n "Fixing file ownerships ... "
 	@${CHOWN} -R ${BINOWN}:${BINGRP} \
 		${DESTDIR}${PREFIX}/lib/xemacs/xemacs-packages
+	@${ECHO_MSG} "done"
+	@${ECHO_MSG} -n "Fixing file permissions ... "
+	@${CHMOD} -R g-w,o-w ${DESTDIR}${PREFIX}/lib/xemacs/xemacs-packages
 	@${ECHO_MSG} "done"
 .for PROG in ${REPLACEMENT_PROGS}
 	@${ECHO_MSG} "Fixing ${PROG} paths"
