@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.969 2008/04/30 19:28:19 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.970 2008/04/30 19:30:36 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1721,3 +1721,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Module-Versions-Report to 1.03 [cube 2008-04-30]
 	Added graphics/ruby-mini-magick version 1.2.3 [jlam 2008-04-30]
 	Updated mail/pear-Mail_Mime to 1.4.0 [adrianp 2008-04-30]
+	Updated net/pear-Net_Socket to 1.0.8 [adrianp 2008-04-30]
