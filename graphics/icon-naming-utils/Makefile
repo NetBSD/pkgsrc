@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.5 2007/11/25 23:50:55 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2008/04/30 13:38:15 jmmv Exp $
 #
 
 DISTNAME=	icon-naming-utils-0.8.6
 CATEGORIES=	graphics
 MASTER_SITES=	http://tango-project.org/releases/
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tango.freedesktop.org/
 COMMENT=	Adapts GNOME and KDE icon names to the Icon Naming Specification
 

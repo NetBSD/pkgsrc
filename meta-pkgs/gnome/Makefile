@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.73 2007/12/19 12:27:27 rillig Exp $
+# $NetBSD: Makefile,v 1.74 2008/04/30 13:38:15 jmmv Exp $
 
 DISTNAME=	gnome-2.18.1
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Meta-package for the GNU Network Object Model Environment
 

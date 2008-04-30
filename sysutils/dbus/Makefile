@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/03/02 13:21:07 drochner Exp $
+# $NetBSD: Makefile,v 1.28 2008/04/30 13:38:16 jmmv Exp $
 #
 
 DISTNAME=	dbus-1.0.2
@@ -6,7 +6,7 @@ PKGREVISION=	5
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/Software/dbus
 COMMENT=	Message bus system
 

@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.57 2008/04/10 16:22:13 drochner Exp $
+# $NetBSD: Makefile,v 1.58 2008/04/30 13:38:14 jmmv Exp $
 
 DISTNAME=		libbonobo-2.22.0
 CATEGORIES=		devel gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/libbonobo/2.22/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		jmmv@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://developer.gnome.org/
 COMMENT=		GNOME2 Object activation framework library
 

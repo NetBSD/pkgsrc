@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2004/09/08 15:04:23 jmmv Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/30 13:38:16 jmmv Exp $
 #
 
 DISTNAME=	print-plist-0.0
@@ -6,7 +6,7 @@ CATEGORIES=	regress
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Test print-PLIST and related functionality
 
 EXTRACT_ONLY=	# empty

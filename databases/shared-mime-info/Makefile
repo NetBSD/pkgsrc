@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/01/15 22:53:59 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2008/04/30 13:38:14 jmmv Exp $
 #
 
 DISTNAME=	shared-mime-info-0.23
@@ -6,7 +6,7 @@ CATEGORIES=	databases
 MASTER_SITES=	http://freedesktop.org/~hadess/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.freedesktop.org/wiki/Software/shared-mime-info
 COMMENT=	Core database of common types
 
