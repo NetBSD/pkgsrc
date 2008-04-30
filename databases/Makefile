@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.245 2008/04/30 19:38:20 adrianp Exp $
+# $NetBSD: Makefile,v 1.246 2008/04/30 21:08:19 adrianp Exp $
 #
 
 COMMENT=	Databases
@@ -108,6 +108,9 @@ SUBDIR+=	p5-sybperl
 SUBDIR+=	palm-db-tools
 SUBDIR+=	pear-DB
 SUBDIR+=	pear-MDB2
+SUBDIR+=	pear-MDB2_Driver_mysql
+SUBDIR+=	pear-MDB2_Driver_pgsql
+SUBDIR+=	pear-MDB2_Driver_sqlite
 SUBDIR+=	pgpool
 SUBDIR+=	pgtcl
 SUBDIR+=	pgtclng
