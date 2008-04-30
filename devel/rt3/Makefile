@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2008/04/12 22:43:00 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2008/04/30 10:13:37 cube Exp $
 
 DISTNAME=		rt-3.6.6
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
 
@@ -17,49 +17,46 @@ USE_TOOLS+=	perl:run
 DEPENDS+=	p5-Digest-[0-9]*:../../security/p5-Digest
 DEPENDS+=	p5-Digest-MD5>=2.27:../../security/p5-Digest-MD5
 DEPENDS+=	p5-DBI>=1.37:../../databases/p5-DBI
-DEPENDS+=	p5-Test-Inline>=0.15:../../devel/p5-Test-Inline
 DEPENDS+=	p5-Class-ReturnValue>=0.40:../../devel/p5-Class-ReturnValue
-DEPENDS+=	p5-DBIx-SearchBuilder>=1.35:../../databases/p5-DBIx-SearchBuilder
+DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
+DEPENDS+=	p5-DBIx-SearchBuilder>=1.50:../../databases/p5-DBIx-SearchBuilder
 DEPENDS+=	p5-Text-Template>=1.43:../../textproc/p5-Text-Template
 DEPENDS+=	p5-HTML-Parser>=3.35:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTML-Scrubber>=0.08:../../www/p5-HTML-Scrubber
-DEPENDS+=	p5-Net>=1.15:../../net/p5-Net
 DEPENDS+=	p5-Log-Dispatch>=2.0:../../devel/p5-Log-Dispatch
+DEPENDS+=	p5-Locale-Maketext>=1.06:../../misc/p5-Locale-Maketext
 DEPENDS+=	p5-Locale-Maketext-Lexicon>=0.32:../../misc/p5-Locale-Maketext-Lexicon
 DEPENDS+=	p5-Locale-Maketext-Fuzzy>=0.02:../../misc/p5-Locale-Maketext-Fuzzy
 DEPENDS+=	p5-MIME-tools>=5.411.1:../../mail/p5-MIME-tools
 DEPENDS+=	p5-MailTools>=1.57:../../mail/p5-MailTools
+DEPENDS+=	p5-Net>=1.15:../../net/p5-Net
 DEPENDS+=	p5-Text-Wrapper>=1.0:../../textproc/p5-Text-Wrapper
 DEPENDS+=	p5-Time>=101.062101:../../time/p5-Time
-DEPENDS+=	p5-Term-ReadKey>=2.21:../../devel/p5-Term-ReadKey
 DEPENDS+=	p5-Text-Autoformat>=1.04:../../textproc/p5-Text-Autoformat
-DEPENDS+=	p5-Text-Quoted>=1.5:../../textproc/p5-Text-Quoted
+DEPENDS+=	p5-Text-Quoted>=2.02:../../textproc/p5-Text-Quoted
 DEPENDS+=	p5-Tree-Simple>=1.04:../../devel/p5-Tree-Simple
-DEPENDS+=	p5-Module-Versions-Report-[0-9]*:../../devel/p5-Module-Versions-Report
-DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
+DEPENDS+=	p5-Regexp-Common>=2.113:../../textproc/p5-Regexp-Common
+DEPENDS+=	p5-Module-Versions-Report>=1.03:../../devel/p5-Module-Versions-Report
+DEPENDS+=	p5-Cache-Simple-TimedExpiry-[0-9]*:../../devel/p5-Cache-Simple-TimedExpiry
 DEPENDS+=	p5-UNIVERSAL-require>=0.11:../../devel/p5-UNIVERSAL-require
+DEPENDS+=	p5-Calendar-Simple>=1.00:../../time/p5-Calendar-Simple
+DEPENDS+=	p5-CSS-Squish>=0.07:../../www/p5-CSS-Squish
 
 # Mason dependencies:
-DEPENDS+=	p5-Params-Validate>=0.02:../../devel/p5-Params-Validate
-DEPENDS+=	p5-Cache-Cache>=1.02:../../devel/p5-Cache-Cache
-DEPENDS+=	p5-Exception-Class>=1.14:../../devel/p5-Exception-Class
 DEPENDS+=	p5-HTML-Mason>=1.31:../../www/p5-HTML-Mason
-DEPENDS+=	p5-MLDBM>=2.01:../../databases/p5-MLDBM
-DEPENDS+=	p5-FreezeThaw>=0.43:../../devel/p5-FreezeThaw
-DEPENDS+=	p5-Storable>=2.08:../../devel/p5-Storable
 DEPENDS+=	p5-Apache-Session>=1.53:../../www/p5-Apache-Session
 DEPENDS+=	p5-XML-RSS>=1.05:../../textproc/p5-XML-RSS
-DEPENDS+=	p5-HTTP-Server-Simple>=0.07:../../www/p5-HTTP-Server-Simple
-DEPENDS+=	p5-HTTP-Server-Simple-Mason>=0.09:../../www/p5-HTTP-Server-Simple-Mason
-DEPENDS+=	p5-Text-WikiFormat>=0.72:../../textproc/p5-Text-WikiFormat
-DEPENDS+=	p5-CSS-Squish>=0.07:../../www/p5-CSS-Squish
-DEPENDS+=	p5-Calendar-Simple>=1.00:../../time/p5-Calendar-Simple
+DEPENDS+=	p5-GD-[0-9]*:../../graphics/p5-GD
+DEPENDS+=	p5-GDGraph-[0-9]*:../../graphics/p5-GDGraph
+DEPENDS+=	p5-GDTextUtil-[0-9]*:../../graphics/p5-GDTextUtil
+DEPENDS+=	p5-Text-WikiFormat>=0.76:../../textproc/p5-Text-WikiFormat
+DEPENDS+=	p5-Module-Refresh>=0.03:../../devel/p5-Module-Refresh
 
 # Mailgate dependencies:
 DEPENDS+=	p5-HTML-Tree>=3.18:../../www/p5-HTML-Tree
 DEPENDS+=	p5-HTML-Format>=2.03:../../www/p5-HTML-Format
 DEPENDS+=	p5-libwww>=5.76:../../www/p5-libwww
-DEPENDS+=	p5-Module-Refresh>=0.03:../../devel/p5-Module-Refresh
+DEPENDS+=	p5-Term-ReadKey>=2.21:../../devel/p5-Term-ReadKey
 
 # Front-end dependencies:
 .if !empty(PKG_OPTIONS:Mmodperl1)
@@ -88,20 +85,15 @@ rm-speedycgi:
 DEPENDS+=	p5-DBD-mysql>=2.1018:../../databases/p5-DBD-mysql
 _RT_DB_TYPE=	mysql
 .elif !empty(PKG_OPTIONS:Mpgsql)
-DEPENDS+=	p5-DBD-postgresql>=1.41:../../databases/p5-DBD-postgresql
+DEPENDS+=	p5-DBD-postgresql>=1.43:../../databases/p5-DBD-postgresql
 _RT_DB_TYPE=	Pg
 .elif !empty(PKG_OPTIONS:Moracle)
 DEPENDS+=	p5-DBD-Oracle-[0-9]*:../../databases/p5-DBD-Oracle
 _RT_DB_TYPE=	Oracle
 .elif !empty(PKG_OPTIONS:Msqlite)
-DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
+DEPENDS+=	p5-DBD-SQLite>=1.00:../../databases/p5-DBD-SQLite
 _RT_DB_TYPE=	SQLite
 .endif
-
-# Dev dependencies:
-DEPENDS+=	p5-Regexp-Common>=2.113:../../textproc/p5-Regexp-Common
-DEPENDS+=	p5-WWW-Mechanize>=0.72:../../www/p5-WWW-Mechanize
-DEPENDS+=	p5-Test-WWW-Mechanize-[0-9]*:../../www/p5-Test-WWW-Mechanize
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
