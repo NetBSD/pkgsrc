@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2008/04/10 16:22:52 drochner Exp $
+# $NetBSD: Makefile,v 1.55 2008/04/30 13:38:14 jmmv Exp $
 #
 
 DISTNAME=	gail-1.22.1
@@ -6,7 +6,7 @@ CATEGORIES=	devel gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gail/1.22/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	jmmv@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://developer.gnome.org/projects/gap/
 COMMENT=	GNOME Accessibility Implementation Library
 
