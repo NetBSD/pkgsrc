@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/04/30 21:06:04 adrianp Exp $
+
+SHA1 (pear/MDB2_Driver_pgsql-1.4.1.tgz) = 07a69e5ebd8a0d920ac372f3666b39f2601c2a82
+RMD160 (pear/MDB2_Driver_pgsql-1.4.1.tgz) = 0a102683779d3b8ee38ce7716221fec14ab7c25c
+Size (pear/MDB2_Driver_pgsql-1.4.1.tgz) = 33839 bytes
+SHA1 (patch-aa) = 090e9761c9bb3a23d77458f3dcb7c415868b032f
