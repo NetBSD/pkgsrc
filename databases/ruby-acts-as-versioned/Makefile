@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/04 15:15:35 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2008/04/30 18:02:02 jlam Exp $
 
 DISTNAME=	acts_as_versioned-0.2.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/_/-/g}
-CATEGORIES=	database
+CATEGORIES=	databases
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ar-versioned.rubyforge.org/
