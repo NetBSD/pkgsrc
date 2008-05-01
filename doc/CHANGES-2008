@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.984 2008/05/01 17:43:50 jlam Exp $
+$NetBSD: CHANGES-2008,v 1.985 2008/05/01 21:10:19 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1737,3 +1737,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added audio/tunapie version 2.1.6 [xtraeme 2008-05-01]
 	Updated databases/ruby-sequel-core to 1.5.1 [jlam 2008-05-01]
 	Updated databases/ruby-sequel to 1.5.1 [jlam 2008-05-01]
+	Updated security/ruby-ezcrypto to 0.7 [jlam 2008-05-01]
