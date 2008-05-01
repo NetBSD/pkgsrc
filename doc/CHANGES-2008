@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.981 2008/05/01 13:46:20 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.982 2008/05/01 15:15:09 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1733,3 +1733,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated benchmarks/dbench to 3.04 [obache 2008-05-01]
 	Updated print/poppler to 0.8.2 [xtraeme 2008-05-01]
 	Updated mail/sylpheed-devel to 2.5.0beta3 [xtraeme 2008-05-01]
+	Updated devel/atf to 0.5 [jmmv 2008-05-01]
