@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.979 2008/05/01 13:18:07 obache Exp $
+$NetBSD: CHANGES-2008,v 1.980 2008/05/01 13:32:59 xtraeme Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1731,3 +1731,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/f2c to 20001205nb10 [dmcmahill 2008-04-30]
 	Updated graphics/GraphicsMagick to 1.2 [obache 2008-05-01]
 	Updated benchmarks/dbench to 3.04 [obache 2008-05-01]
+	Updated print/poppler to 0.8.2 [xtraeme 2008-05-01]
