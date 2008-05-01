@@ -1,0 +1,7 @@
+TunaPie is a directory browser for Internet radio and TV streams.
+As of 0.9.6, it is compatible with the Icecast directory as well as the
+Shoutcast (winamp) stream directory service.
+
+Tunapie allows you to search for streams and then launch your audio player
+(XMMS) or NSV viewer (Mplayer) of choice. It also allows recording of audio
+and video streams using streamripper.
