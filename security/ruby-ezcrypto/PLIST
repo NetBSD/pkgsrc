@@ -1,0 +1,36 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/01 21:09:47 jlam Exp $
+${GEM_HOME}/cache/ezcrypto-${PKGVERSION}.gem
+${GEM_LIBDIR}/CHANGELOG
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/README_ACTIVE_CRYPTO
+${GEM_LIBDIR}/init.rb
+${GEM_LIBDIR}/lib/active_crypto.rb
+${GEM_LIBDIR}/lib/ezcrypto.rb
+${GEM_LIBDIR}/lib/ezsig.rb
+${GEM_LIBDIR}/lib/trusted.pem
+${GEM_LIBDIR}/rakefile
+${GEM_LIBDIR}/test/active_crypto_test.rb
+${GEM_LIBDIR}/test/association_key_holder_test.rb
+${GEM_LIBDIR}/test/database.yml
+${GEM_LIBDIR}/test/debug.log
+${GEM_LIBDIR}/test/dsakey.pem
+${GEM_LIBDIR}/test/dsapubkey.pem
+${GEM_LIBDIR}/test/dsig_test.rb
+${GEM_LIBDIR}/test/encrypt_test.rb
+${GEM_LIBDIR}/test/ezcrypto_test.rb
+${GEM_LIBDIR}/test/key_holder_test.rb
+${GEM_LIBDIR}/test/protectedsigner.pem
+${GEM_LIBDIR}/test/sf_issuing.crt
+${GEM_LIBDIR}/test/test_helper.rb
+${GEM_LIBDIR}/test/testchild.pem
+${GEM_LIBDIR}/test/testchild.req
+${GEM_LIBDIR}/test/testpub.pem
+${GEM_LIBDIR}/test/testsigner.cert
+${GEM_LIBDIR}/test/testsigner.pem
+${GEM_LIBDIR}/test/valicert_class2_root.crt
+${GEM_LIBDIR}/test/wideword.net.cert
+${GEM_HOME}/specifications/ezcrypto-${PKGVERSION}.gemspec
+@dirrm ${GEM_LIBDIR}/test
+@dirrm ${GEM_LIBDIR}/lib
+@dirrm ${GEM_LIBDIR}
