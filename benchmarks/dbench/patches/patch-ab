@@ -1,21 +1,13 @@
-$NetBSD: patch-ab,v 1.5 2005/10/10 08:35:54 xtraeme Exp $
+$NetBSD: patch-ab,v 1.6 2008/05/01 13:17:55 obache Exp $
 
---- Makefile.in.orig	2005-10-10 10:26:24.000000000 +0200
-+++ Makefile.in	2005-10-10 10:26:46.000000000 +0200
-@@ -32,12 +32,12 @@
- 
- # Careful here: don't install client.txt over itself.
- install: all
--	${INSTALLCMD} -d $(bindir) $(datadir) $(mandir)
-+	${INSTALLCMD} -d $(bindir) $(datadir) $(mandir)/man1
- 	${INSTALLCMD} dbench tbench tbench_srv $(bindir)
- 	${INSTALLCMD} client.txt $(datadir)
--	${INSTALLCMD} -m644 dbench.1 $(mandir)
--	ln -sf dbench.1 $(mandir)/tbench.1
--	ln -sf dbench.1 $(mandir)/tbench_srv.1
-+	${INSTALLCMD} -m644 dbench.1 $(mandir)/man1
-+	ln -sf dbench.1 $(mandir)/man1/tbench.1
-+	ln -sf dbench.1 $(mandir)/man1/tbench_srv.1
- 
- clean:
- 	rm -f *.o *~ dbench tbench tbench_srv
+--- Makefile.in.orig	2005-11-08 03:40:41.000000000 +0000
++++ Makefile.in
+@@ -6,7 +6,7 @@ VPATH=@srcdir@
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ bindir=@bindir@
+-mandir=@mandir@
++mandir=@mandir@/man1
+ datadir=@datadir@
+ INSTALLCMD=@INSTALL@
+ LIBS=@LIBS@
