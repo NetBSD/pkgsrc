@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2008/04/19 06:17:36 obache Exp $
+# $NetBSD: Makefile.common,v 1.14 2008/05/01 13:51:56 obache Exp $
 #
 
 DISTNAME=	catdoc-0.94.2
@@ -16,5 +16,6 @@ USE_FEATURES=		glob
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/share
+CONFIGURE_ARGS+=	--with-install-root=${DESTDIR}
 
 CPPFLAGS+=		-Dunix -D__unix
