@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2008/04/29 18:39:06 jlam Exp $
+$NetBSD: distinfo,v 1.4 2008/05/01 17:30:32 jlam Exp $
 
-SHA1 (sequel_core-1.5.0.gem) = fe15a3fd80c7a0e58cff9e2d5db4fa9b42951da8
-RMD160 (sequel_core-1.5.0.gem) = 51e10defd1faf432a290a56102be44d25182ca50
-Size (sequel_core-1.5.0.gem) = 112128 bytes
+SHA1 (sequel_core-1.5.1.gem) = b42f2b95fabf72e549662a13dc4ed35ca2ec537c
+RMD160 (sequel_core-1.5.1.gem) = 7b41a656033b60c0039479a8ccd1f79bd723f6e3
+Size (sequel_core-1.5.1.gem) = 112640 bytes
