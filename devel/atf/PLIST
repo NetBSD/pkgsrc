@@ -1,29 +1,52 @@
-@comment $NetBSD: PLIST,v 1.4 2008/02/04 20:19:33 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/05/01 15:14:21 jmmv Exp $
 bin/atf-compile
 bin/atf-config
 bin/atf-report
 bin/atf-run
 bin/atf-version
-include/atf.hpp
-include/atf/application.hpp
-include/atf/atffile.hpp
-include/atf/config.hpp
-include/atf/env.hpp
-include/atf/exceptions.hpp
-include/atf/expand.hpp
-include/atf/formats.hpp
-include/atf/fs.hpp
-include/atf/io.hpp
-include/atf/macros.hpp
-include/atf/parser.hpp
-include/atf/sanity.hpp
-include/atf/tests.hpp
-include/atf/text.hpp
-include/atf/ui.hpp
-include/atf/user.hpp
-include/atf/utils.hpp
-lib/libatf.la
-lib/pkgconfig/atf.pc
+include/atf-c++.hpp
+include/atf-c++/application.hpp
+include/atf-c++/atffile.hpp
+include/atf-c++/config.hpp
+include/atf-c++/env.hpp
+include/atf-c++/exceptions.hpp
+include/atf-c++/expand.hpp
+include/atf-c++/formats.hpp
+include/atf-c++/fs.hpp
+include/atf-c++/io.hpp
+include/atf-c++/macros.hpp
+include/atf-c++/parser.hpp
+include/atf-c++/sanity.hpp
+include/atf-c++/tests.hpp
+include/atf-c++/text.hpp
+include/atf-c++/ui.hpp
+include/atf-c++/user.hpp
+include/atf-c++/utils.hpp
+include/atf-c.h
+include/atf-c/config.h
+include/atf-c/defs.h
+include/atf-c/dynstr.h
+include/atf-c/env.h
+include/atf-c/error.h
+include/atf-c/expand.h
+include/atf-c/fs.h
+include/atf-c/io.h
+include/atf-c/list.h
+include/atf-c/macros.h
+include/atf-c/map.h
+include/atf-c/object.h
+include/atf-c/sanity.h
+include/atf-c/signals.h
+include/atf-c/tc.h
+include/atf-c/tcr.h
+include/atf-c/text.h
+include/atf-c/tp.h
+include/atf-c/ui.h
+include/atf-c/user.h
+lib/libatf-c++.la
+lib/libatf-c.la
+lib/pkgconfig/atf-c++.pc
+lib/pkgconfig/atf-c.pc
 libexec/atf-cleanup
 libexec/atf-exec
 libexec/atf-format
@@ -39,6 +62,7 @@ man/man1/atf-run.1
 man/man1/atf-test-program.1
 man/man1/atf-version.1
 man/man3/atf-c++-api.3
+man/man3/atf-c-api.3
 man/man3/atf-sh-api.3
 man/man4/atf-test-case.4
 man/man5/atf-formats.5
@@ -58,6 +82,44 @@ share/xml/atf/tests-results.dtd
 @comment in xmlcatmgr: share/xml/catalog
 share/xsl/atf/tests-results.xsl
 tests/atf/Atffile
+tests/atf/atf-c++/Atffile
+tests/atf/atf-c++/t_config
+tests/atf/atf-c++/t_env
+tests/atf/atf-c++/t_expand
+tests/atf/atf-c++/t_fs
+tests/atf/atf-c++/t_io
+tests/atf/atf-c++/t_macros
+tests/atf/atf-c++/t_parser
+tests/atf/atf-c++/t_signals
+tests/atf/atf-c++/t_tests
+tests/atf/atf-c++/t_text
+tests/atf/atf-c++/t_user
+tests/atf/atf-c++/t_utils
+tests/atf/atf-c/Atffile
+tests/atf/atf-c/t_config
+tests/atf/atf-c/t_dynstr
+tests/atf/atf-c/t_env
+tests/atf/atf-c/t_error
+tests/atf/atf-c/t_expand
+tests/atf/atf-c/t_fs
+tests/atf/atf-c/t_io
+tests/atf/atf-c/t_list
+tests/atf/atf-c/t_macros
+tests/atf/atf-c/t_map
+tests/atf/atf-c/t_sanity
+tests/atf/atf-c/t_signals
+tests/atf/atf-c/t_tc
+tests/atf/atf-c/t_tcr
+tests/atf/atf-c/t_text
+tests/atf/atf-c/t_ui
+tests/atf/atf-c/t_user
+tests/atf/atf-sh/Atffile
+tests/atf/atf-sh/h_misc
+tests/atf/atf-sh/t_atf_check
+tests/atf/atf-sh/t_config
+tests/atf/atf-sh/t_normalize
+tests/atf/atf-sh/t_tc
+tests/atf/atf-sh/t_tp
 tests/atf/data/Atffile
 tests/atf/data/t_pkg_config
 tests/atf/formats/Atffile
@@ -230,14 +292,8 @@ tests/atf/formats/d_tps_66.expout
 tests/atf/formats/h_parser
 tests/atf/formats/t_parsers
 tests/atf/formats/t_writers
-tests/atf/sh_interface/Atffile
-tests/atf/sh_interface/h_misc
-tests/atf/sh_interface/t_atf_check
-tests/atf/sh_interface/t_config
-tests/atf/sh_interface/t_normalize
-tests/atf/sh_interface/t_tc
-tests/atf/sh_interface/t_tp
 tests/atf/test_programs/Atffile
+tests/atf/test_programs/h_c
 tests/atf/test_programs/h_cpp
 tests/atf/test_programs/h_sh
 tests/atf/test_programs/t_cleanup
@@ -260,25 +316,13 @@ tests/atf/tools/t_atf_exec
 tests/atf/tools/t_atf_killpg
 tests/atf/tools/t_atf_report
 tests/atf/tools/t_atf_run
-tests/atf/units/Atffile
-tests/atf/units/t_config
-tests/atf/units/t_env
-tests/atf/units/t_expand
-tests/atf/units/t_fs
-tests/atf/units/t_io
-tests/atf/units/t_parser
-tests/atf/units/t_sanity
-tests/atf/units/t_signals
-tests/atf/units/t_tests
-tests/atf/units/t_text
-tests/atf/units/t_user
-tests/atf/units/t_utils
-@dirrm tests/atf/units
 @dirrm tests/atf/tools
 @dirrm tests/atf/test_programs
-@dirrm tests/atf/sh_interface
 @dirrm tests/atf/formats
 @dirrm tests/atf/data
+@dirrm tests/atf/atf-sh
+@dirrm tests/atf/atf-c++
+@dirrm tests/atf/atf-c
 @dirrm tests/atf
 @dirrm tests
 @dirrm share/xsl/atf
@@ -288,4 +332,5 @@ tests/atf/units/t_utils
 @dirrm share/examples/atf
 @dirrm share/doc/atf
 @dirrm share/atf
-@dirrm include/atf
+@dirrm include/atf-c++
+@dirrm include/atf-c
