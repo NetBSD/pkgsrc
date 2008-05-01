@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2008/04/24 19:10:40 xtraeme Exp $
+# $NetBSD: Makefile,v 1.50 2008/05/01 13:45:30 xtraeme Exp $
 
-DISTNAME=	sylpheed-2.5.0beta2
+DISTNAME=	sylpheed-2.5.0beta3
 #PKGREVISION=	1
 CATEGORIES=	mail news x11
 MASTER_SITES=	http://sylpheed.sraoss.jp/sylpheed/v2.5beta/
