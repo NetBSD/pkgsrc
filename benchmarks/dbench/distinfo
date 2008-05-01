@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.10 2006/03/16 23:00:08 minskim Exp $
+$NetBSD: distinfo,v 1.11 2008/05/01 13:17:55 obache Exp $
 
-SHA1 (dbench-3.03.tar.gz) = 9261e6c3d800ee6822be579ac37a9d531a03e4c2
-RMD160 (dbench-3.03.tar.gz) = 1fc311e3d598f25b96448002006a94e24ae8424a
-Size (dbench-3.03.tar.gz) = 2076982 bytes
+SHA1 (dbench-3.04.tar.gz) = 09d7b647663ddc3e5617956dedd1aa6a4da2d840
+RMD160 (dbench-3.04.tar.gz) = 707f396aec21e6c6c79a6b93217e9503356cefea
+Size (dbench-3.04.tar.gz) = 2078197 bytes
 SHA1 (patch-aa) = 462f50ac9d529d788f165556846df88b8d8765c6
-SHA1 (patch-ab) = 5a26819bffe3a20c31e88846d327e3af92144833
+SHA1 (patch-ab) = 8d17f83c86ef9b733f6970454f3321a8afdac600
 SHA1 (patch-ac) = b60ff204f1f2a1f30976a8c2a51f19e0633e4bf5
