@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2008/04/27 09:43:12 tnn Exp $
+# $NetBSD: options.mk,v 1.4 2008/05/01 15:37:13 bjs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=	mesa-execmem-mmap
@@ -78,6 +78,10 @@ PLIST.dri=	# empty
 .else
 BUILD_TARGET=	pkgsrc${BUILD_TARGET_SUFFIX}
 PLIST.nodri=	# empty
+###
+### XXX building libOSMesa breaks with -j, and GNU make has no .WAIT
+###
+MAKE_JOBS_SAFE=			no
 .endif
 ###
 ### XXX This is the default heap size.  Would there be an occasion to
