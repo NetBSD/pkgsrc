@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.978 2008/05/01 11:55:28 obache Exp $
+$NetBSD: CHANGES-2008,v 1.979 2008/05/01 13:18:07 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1730,3 +1730,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added databases/pear-MDB2_Driver_sqlite version 1.4.1 [adrianp 2008-04-30]
 	Updated lang/f2c to 20001205nb10 [dmcmahill 2008-04-30]
 	Updated graphics/GraphicsMagick to 1.2 [obache 2008-05-01]
+	Updated benchmarks/dbench to 3.04 [obache 2008-05-01]
