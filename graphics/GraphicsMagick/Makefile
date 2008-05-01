@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2008/04/29 04:56:24 obache Exp $
+# $NetBSD: Makefile,v 1.9 2008/05/01 11:55:12 obache Exp $
 #
 
-DISTNAME=	GraphicsMagick-1.1.12
+DISTNAME=	GraphicsMagick-1.2
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=graphicsmagick/} \
 		ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/
-EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.graphicsmagick.org/
@@ -16,14 +15,14 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake pkg-config gs
-USE_FEATURES+=	vsnprintf		# optional but recommended for security
+USE_FEATURES=	vsnprintf		# optional but recommended for security
 GNU_CONFIGURE=	yes
 
 PKGCONFIG_OVERRIDE+=	magick/GraphicsMagick.pc.in \
 			wand/GraphicsMagickWand.pc.in \
 			Magick++/lib/GraphicsMagick++.pc.in
 
-CONFIGURE_ARGS+=--without-perl
+CONFIGURE_ARGS+=	--without-perl
 
 TEST_TARGET=	check
 
