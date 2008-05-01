@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7255 2008/04/29 00:24:41 bjs Exp $
+$NetBSD: TODO,v 1.7256 2008/05/01 12:10:12 wiz Exp $
 
 Suggested new packages
 ======================
@@ -378,7 +378,6 @@ Suggested package updates
 	o ROMBuild-2.10
 	o RTx-Shredder-0.05
 	o RealPlayer-11
-	o SDL_sound-1.0.3
 	o SmartEiffel-2.3
 	o TiffIO-130e
 	o YoSucker-81
@@ -435,7 +434,6 @@ Suggested package updates
 	o asapm-3.1
 	o asc-2.1.0
 	o ascii-3.8
-	o aspell-0.60.6
 	o aspell-danish-13.7
 	o aspell-faroese-0.2.31
 	o aspell-norwegian-2.0.10
@@ -489,6 +487,7 @@ Suggested package updates
 	o cdif-1.19
 	o cdlabelgen-4.0.0
 	o cdrkit-1.1.7.1
+	o cdrtools-2.01.01.39
 	o cfitsio-3.030
 	o cflow-1.2
 	o cgdb-0.6.4
@@ -656,12 +655,8 @@ Suggested package updates
 	o gnome-2.22.1
 	o gnome-build-0.2.4
 	o gnome-pilot-2.0.16
-	o gnome-sharp-2.20.1
 	o gnomeicu-0.99.14
 	o gnu-crypto-2.1.0
-	o gnucash-2.2.5
-	o gnupg-2.0.9
-	o gnupg2-2.0.9
 	o gnustep-1.14.0
 	o gnustep-back-0.12.1
 	o gnustep-gui-0.12.1
@@ -807,7 +802,6 @@ Suggested package updates
 	o libevent-1.4.0beta
 	o libextractor-0.5.20a
 	o libflash-0.4.13
-	o libgcrypt-1.4.1
 	o libgda-3.1.4
 	o libggi-2.2.2
 	o libggigcp-1.0.2
@@ -821,9 +815,6 @@ Suggested package updates
 	o libgnomeuimm-2.22.0
 	o libgtop-2.22.1
 	o libhydrogen-0.9.2
-	o libidn-1.8
-	o liblive-2007.01.17 [pkg/38038]
-	o liblive-2007.02.20
 	o libltdl-2.2.2
 	o liblzo-2.02
 	o libmatheval-1.1.6
@@ -839,7 +830,6 @@ Suggested package updates
 	o libssh-0.2
 	o libstatgrab-0.16
 	o libstree-0.4.2
-	o libtasn1-1.4
 	o libtcl-nothread-8.5.1
 	o libtool-2.2.2
 	o libtool-base-2.2.2
