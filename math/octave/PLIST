@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2008/01/11 01:23:43 adam Exp $
+@comment $NetBSD: PLIST,v 1.16 2008/05/02 08:50:46 adam Exp $
 bin/mkoctfile
 bin/mkoctfile-${PKGVERSION}
 bin/octave
@@ -662,8 +662,8 @@ libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/lsode.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/lu.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/luinc.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/matrix_type.oct
+libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/max.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/md5sum.oct
-libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/minmax.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/pinv.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/qr.oct
 libexec/octave/${PKGVERSION}/oct/${MACHINE_GNU_PLATFORM}/quad.oct
@@ -1046,6 +1046,7 @@ share/octave/${PKGVERSION}/m/general/rem.m
 share/octave/${PKGVERSION}/m/general/repmat.m
 share/octave/${PKGVERSION}/m/general/rot90.m
 share/octave/${PKGVERSION}/m/general/rotdim.m
+share/octave/${PKGVERSION}/m/general/runlength.m
 share/octave/${PKGVERSION}/m/general/shift.m
 share/octave/${PKGVERSION}/m/general/shiftdim.m
 share/octave/${PKGVERSION}/m/general/sortrows.m
@@ -1224,7 +1225,9 @@ share/octave/${PKGVERSION}/m/plot/__plt2__.m
 share/octave/${PKGVERSION}/m/plot/__plt2mm__.m
 share/octave/${PKGVERSION}/m/plot/__plt2mv__.m
 share/octave/${PKGVERSION}/m/plot/__plt2ss__.m
+share/octave/${PKGVERSION}/m/plot/__plt2sv__.m
 share/octave/${PKGVERSION}/m/plot/__plt2vm__.m
+share/octave/${PKGVERSION}/m/plot/__plt2vs__.m
 share/octave/${PKGVERSION}/m/plot/__plt2vv__.m
 share/octave/${PKGVERSION}/m/plot/__plt__.m
 share/octave/${PKGVERSION}/m/plot/__plt_get_axis_arg__.m
