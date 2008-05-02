@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.5 2008/05/02 09:22:21 degroote Exp $
+
+Fix DESTDIR installation.
+
+--- Makefile.in.orig	2008-01-26 18:06:27.000000000 +0300
++++ Makefile.in	2008-05-01 16:47:38.000000000 +0400
+@@ -416,8 +416,8 @@
+ 	    -e 's,@LD\@,$(LD),g'					\
+ 	    -e 's,@DYNAMIC_EXTERNALS_CFLAGS\@,$(DYNAMIC_EXTERNALS_CFLAGS),g' \
+ 	    -e 's,@DYNAMIC_EXTERNALS_LDFLAGS\@,$(DYNAMIC_EXTERNALS_LDFLAGS),g' \
+-	< $(srcdir)/build/$(CONFIG_SCRIPT).in > $$config_script &&	\
+-	chmod +x $$config_script
++	< $(srcdir)/build/$(CONFIG_SCRIPT).in > $(DESTDIR)$$config_script &&	\
++	chmod +x $(DESTDIR)$$config_script
+ 
+ inst-externals:
+ 	$(INSTALL_PROGRAM) $(POSIX_EXTERNAL) $(SRFI_27_EXTERNAL) $(DESTDIR)$(LIB)/
