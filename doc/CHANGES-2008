@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.985 2008/05/01 21:10:19 jlam Exp $
+$NetBSD: CHANGES-2008,v 1.986 2008/05/02 03:55:52 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1738,3 +1738,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/ruby-sequel-core to 1.5.1 [jlam 2008-05-01]
 	Updated databases/ruby-sequel to 1.5.1 [jlam 2008-05-01]
 	Updated security/ruby-ezcrypto to 0.7 [jlam 2008-05-01]
+	Updated mail/cue to 20080211 [obache 2008-05-02]
