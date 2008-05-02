@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2007/05/13 20:47:37 bouyer Exp $
+# $NetBSD: Makefile,v 1.10 2008/05/02 16:03:00 bouyer Exp $
 
-DISTNAME=	gputils-0.13.4
+DISTNAME=	gputils-0.13.5
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gputils/}
 
