@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.9 2008/05/02 10:22:45 wiz Exp $
+
+--- digikam/utilities/cameragui/gpcamera.cpp.orig	2007-12-22 17:19:47.000000000 +0000
++++ digikam/utilities/cameragui/gpcamera.cpp
+@@ -22,13 +22,6 @@
+  * 
+  * ============================================================ */
+ 
+-// C Ansi includes.
+-
+-extern "C"
+-{
+-#include <gphoto2.h>
+-}
+-
+ // C++ includes.
+ 
+ #include <cstdio>
+@@ -47,6 +40,13 @@ extern "C"
+ 
+ #include <klocale.h>
+ 
++// C Ansi includes.
++
++extern "C"
++{
++#include <gphoto2.h>
++}
++
+ // Local includes.
+ 
+ #include "ddebug.h"
