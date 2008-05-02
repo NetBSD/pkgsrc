@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2007/02/16 15:47:40 obache Exp $
+$NetBSD: patch-aa,v 1.6 2008/05/02 13:44:02 obache Exp $
 
 --- Makefile.in.orig	2006-07-10 10:14:49.000000000 +0000
 +++ Makefile.in
@@ -22,8 +22,8 @@ $NetBSD: patch-aa,v 1.5 2007/02/16 15:47:40 obache Exp $
 -	  echo " $(sysconfDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(sysconfdir)/$$f'"; \
 -	  $(sysconfDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(sysconfdir)/$$f"; \
 -	done
-+	$(mkdir_p) $(egdir)
-+	$(INSTALL_DATA) $(sysconf_DATA) $(egdir)/bogofilter.cf
++	$(mkdir_p) $(DESTDIR)$(egdir)
++	$(INSTALL_DATA) $(sysconf_DATA) $(DESTDIR)$(egdir)/bogofilter.cf
  
  uninstall-sysconfDATA:
  	@$(NORMAL_UNINSTALL)
