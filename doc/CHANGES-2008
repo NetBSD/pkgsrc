@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.991 2008/05/02 19:06:34 apb Exp $
+$NetBSD: CHANGES-2008,v 1.992 2008/05/02 19:16:19 apb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1744,3 +1744,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/scheme48 to 1.8 [degroote 2008-05-02]
 	Updated devel/gputils to 0.13.5 [bouyer 2008-05-02]
 	Updated pkgtools/pkg_rolling-replace to 0.16 [apb 2008-05-02]
+	Updated pkgtools/pkg_chk to 1.91 [apb 2008-05-02]
