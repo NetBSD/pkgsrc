@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.988 2008/05/02 09:38:32 degroote Exp $
+$NetBSD: CHANGES-2008,v 1.989 2008/05/02 15:29:06 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1741,4 +1741,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/cue to 20080211 [obache 2008-05-02]
 	Updated math/octave to 3.0.1 [adam 2008-05-02]
 	Updated math/gsl to 1.11 [adam 2008-05-02]
-	Updated lang/scheme88 to 1.8 [degroote 2008-05-02]
+	Updated lang/scheme48 to 1.8 [degroote 2008-05-02]
