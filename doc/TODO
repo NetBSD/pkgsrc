@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7259 2008/05/01 13:46:20 xtraeme Exp $
+$NetBSD: TODO,v 1.7260 2008/05/02 08:52:20 adam Exp $
 
 Suggested new packages
 ======================
@@ -682,7 +682,6 @@ Suggested package updates
 	o gri-2.12.8
 	o gsasl-0.2.25
 	o gsharutils-4.7
-	o gsl-1.11
 	o gsm-1.0.12
 	o gss-0.0.22
 	o gst-plugins0.10-bad-0.10.7
