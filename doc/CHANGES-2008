@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.989 2008/05/02 15:29:06 jnemeth Exp $
+$NetBSD: CHANGES-2008,v 1.990 2008/05/02 16:03:48 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1742,3 +1742,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated math/octave to 3.0.1 [adam 2008-05-02]
 	Updated math/gsl to 1.11 [adam 2008-05-02]
 	Updated lang/scheme48 to 1.8 [degroote 2008-05-02]
+	Updated devel/gputils to 0.13.5 [bouyer 2008-05-02]
