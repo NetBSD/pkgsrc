@@ -1,5 +1,5 @@
-.\" $NetBSD: pkg_rolling-replace.8,v 1.10 2008/03/11 01:53:05 tnn Exp $
-.Dd March 11, 2008
+.\" $NetBSD: pkg_rolling-replace.8,v 1.11 2008/05/02 19:04:03 apb Exp $
+.Dd May 2, 2008
 .Dt PKG_ROLLING-REPLACE 8
 .Os
 .Sh NAME
@@ -113,12 +113,14 @@ from being rebuilt for any reason.
 .El
 .Sh EXAMPLES
 .Pp
-To update all packages on the system and ensure correct shared library dependencies:
+To update all packages on the system and ensure correct shared library
+dependencies:
 .Bd -literal -offset indent
 pkg_rolling-replace -rsuv
 .Ed
 .Pp
-To update all packages on the system, do as little rebuilding as possible, and also produce binary packages:
+To update all packages on the system, do as little rebuilding as possible,
+and also produce binary packages:
 .Bd -literal -offset indent
 pkg_rolling-replace -uv
 .Ed
@@ -136,15 +138,19 @@ uses the following environment variables.
 Path to
 .Pa mk.conf .
 Defaults to
-.Pa /etc/mk.conf
+.Pa @MAKECONF@ , @PREFIX@/etc/mk.conf ,
 or
-.Pa ${PREFIX}/etc/mk.conf
-(if using bmake).
+.Pa /etc/mk.conf .
 .It Ev PKGSRCDIR
 Base of pkgsrc tree.
-Defaults to value configured in MAKECONF or
+If not set in the environment, then this variable is read from
+.Pa ${MAKECONF} .
+If it is still not set, and if the current working directory
+appears to be inside a pkgsrc tree, then this variable
+is set to the base of that pkgsrc tree.
+Finally, if
 .Pa /usr/pkgsrc
-if unset.
+appears to contain a pkgsrc tree, then that is used as a last resort.
 .It Ev PKG_DBDIR
 pkgsrc database directory.
 If not set in environment then defaults to
