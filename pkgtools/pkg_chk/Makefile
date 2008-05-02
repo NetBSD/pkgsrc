@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2008/04/23 21:55:29 abs Exp $
+# $NetBSD: Makefile,v 1.61 2008/05/02 19:10:26 apb Exp $
 
 DISTNAME=	pkg_chk-1.91
 CATEGORIES=	pkgtools
@@ -17,6 +17,7 @@ USE_LANGUAGES=	# empty
 USE_TOOLS+=	mktemp:run
 USE_TOOLS+= 	gzip:run
 NO_CHECKSUM=	YES
+NO_BUILD=	yes
 
 CONFLICTS=	pkgchk-[0-9]*
 
@@ -24,32 +25,22 @@ INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man8
 
 .include "../../mk/bsd.prefs.mk"
 
-# Avoid changing any the actual value of MAKECONF
-TMP_MAKECONF=${MAKECONF:U/etc/mk.conf}
+SUBST_CLASSES+=		vars
+SUBST_STAGE.vars=	pre-configure
+SUBST_MESSAGE.vars=	Configuring sources.
+SUBST_FILES.vars=	pkg_chk.sh pkg_chk.8
+SUBST_VARS.vars=	AWK GREP GZIP_CMD ID MAKE MAKECONF MKTEMP \
+			PKG_ADD PKG_ADMIN PKG_DELETE PKG_INFO \
+			SED SH SORT TSORT PREFIX PKG_DBDIR XARGS
 
-do-build:
-	${SED} -e 's#@AWK@#${AWK}#g' \
-	  -e 's#@GREP@#${GREP}#g' \
-	  -e 's#@GZIP_CMD@#${GZIP_CMD}#g' \
-	  -e 's#@ID@#${ID}#g' \
-	  -e 's#@MAKE@#${MAKE}#g' \
-	  -e 's#@MAKECONF@#${TMP_MAKECONF}#g' \
-	  -e 's#@MKTEMP@#${MKTEMP}#g' \
-	  -e 's#@PKG_ADD@#${PKG_ADD}#g' \
-	  -e 's#@PKG_ADMIN@#${PKG_ADMIN}#g' \
-	  -e 's#@PKG_DELETE@#${PKG_DELETE}#g' \
-	  -e 's#@PKG_INFO@#${PKG_INFO}#g' \
-	  -e 's#@SED@#${SED}#g' \
-	  -e 's#@SH@#${SH}#g' \
-	  -e 's#@SORT@#${SORT}#g' \
-	  -e 's#@TSORT@#${TSORT}#g' \
-	  -e 's#@PREFIX@#${PREFIX}#g' \
-	  -e 's#@PKG_DBDIR@#${PKG_DBDIR}#g' \
-	  -e 's#@XARGS@#${XARGS}#g' \
-	  ${FILESDIR}/pkg_chk.sh >${WRKSRC}/pkg_chk.sh
+REPLACE_SH+=		pkg_chk.sh
+
+do-extract:
+	cp ${FILESDIR}/pkg_chk.sh ${WRKSRC}
+	cp ${FILESDIR}/pkg_chk.8 ${WRKSRC}
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkg_chk.sh ${PREFIX}/sbin/pkg_chk
-	${INSTALL_MAN} ${FILESDIR}/pkg_chk.8 ${PREFIX}/${PKGMANDIR}/man8/pkg_chk.8
+	${INSTALL_MAN} ${WRKSRC}/pkg_chk.8 ${PREFIX}/${PKGMANDIR}/man8/pkg_chk.8
 
 .include "../../mk/bsd.pkg.mk"

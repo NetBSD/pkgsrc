@@ -1,9 +1,9 @@
-.\"	$NetBSD: pkg_chk.8,v 1.25 2007/08/27 15:28:54 abs Exp $
+.\"	$NetBSD: pkg_chk.8,v 1.26 2008/05/02 19:10:26 apb Exp $
 .\"
 .\" Copyright (c) 2001 by David Brownlee (abs@NetBSD.org)
 .\" Absolutely no warranty.
 .\"
-.Dd September 29, 2006
+.Dd May 2, 2008
 .Dt PKG_CHK 8
 .Sh NAME
 .Nm pkg_chk
@@ -268,20 +268,27 @@ option.
 .Nm
 uses the following environment variables.
 .Bl -tag -width xxxx
-.It Ev PKGSRCDIR
-Base of pkgsrc tree.
-If not set in environment then read from
-.Pa ${MAKECONF}
+.It Ev MAKECONF
+Path to
+.Pa mk.conf .
+Defaults to
+.Pa @MAKECONF@ , @PREFIX@/etc/mk.conf ,
 or
 .Pa /etc/mk.conf .
-Defaults to
+.It Ev PKGSRCDIR
+Base of pkgsrc tree.
+If not set in the environment, then this variable is read from
+.Pa ${MAKECONF} .
+If it is still not set, and if the current working directory
+appears to be inside a pkgsrc tree, then this variable
+is set to the base of that pkgsrc tree.
+Finally, if
 .Pa /usr/pkgsrc
+appears to contain a pkgsrc tree, then that is used as a last resort.
 .It Ev PKG_DBDIR
 pkgsrc database directory.
 If not set in environment then read from
-.Pa ${MAKECONF}
-or
-.Pa /etc/mk.conf .
+.Pa ${MAKECONF} .
 Defaults to
 .Pa /var/db/pkg
 .It Ev PACKAGES
