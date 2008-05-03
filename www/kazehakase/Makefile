@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.24 2008/03/06 14:53:56 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2008/05/03 19:58:43 tonnerre Exp $
 #
 
-DISTNAME=	kazehakase-0.4.9
-PKGREVISION=	1
+DISTNAME=	kazehakase-0.5.4
 CATEGORIES=	www
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=kazehakase/27353/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=kazehakase/30219/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	tonnerre@NetBSD.org
 HOMEPAGE=	http://kazehakase.sourceforge.jp/
 COMMENT=	Web browser with multiple layout engines support
 
@@ -19,7 +18,7 @@ USE_PKGLOCALEDIR=	yes
 
 .include "options.mk"
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 
 PKG_SYSCONFSUBDIR=	kazehakase
 EGDIR=		${PREFIX}/share/examples/kazehakase
