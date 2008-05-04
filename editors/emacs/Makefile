@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.108 2008/04/29 12:54:56 tonnerre Exp $
+# $NetBSD: Makefile,v 1.109 2008/05/04 12:09:33 markd Exp $
 
 PKGNAME?=	${DISTNAME}
 COMMENT?=	GNU editing macros (editor)
 
 DISTNAME=	emacs-22.1
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_GNU:=emacs/}
 
@@ -59,6 +59,10 @@ CPPFLAGS+=		-DDFLY_PRE_17_CRT
 post-extract:
 	cp ${FILESDIR}/site-init.el ${WRKSRC}/lisp
 	cp ${FILESDIR}/dragonfly.h ${WRKSRC}/src/s
+
+# for patch-ac
+post-build:
+	(cd ${WRKSRC}/lisp; ${MAKE_PROGRAM} files.elc)
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
