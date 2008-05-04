@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.994 2008/05/03 19:59:34 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.995 2008/05/04 16:34:20 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1746,3 +1746,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/pkg_rolling-replace to 0.16 [apb 2008-05-02]
 	Updated pkgtools/pkg_chk to 1.92 [apb 2008-05-03]
 	Updated www/kazehakase to 0.5.4 [tonnerre 2008-05-03]
+	Updated mail/roundcube to 0.1.1 [adrianp 2008-05-04]
