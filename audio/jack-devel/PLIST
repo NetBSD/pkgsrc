@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/04/12 22:42:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/05/04 01:02:07 bjs Exp $
 bin/jack_alias
 bin/jack_connect
 bin/jack_disconnect
@@ -11,6 +11,7 @@ bin/jack_metro
 bin/jack_midiseq
 bin/jack_midisine
 bin/jack_monitor_client
+bin/jack_netsource
 bin/jack_showtime
 bin/jack_simple_client
 bin/jack_transport
@@ -32,7 +33,6 @@ lib/jack/jack_dummy.la
 lib/jack/jack_net.la
 ${PLIST.oss}lib/jack/jack_oss.la
 ${PLIST.sunaudio}lib/jack/jack_sun.la
-lib/jack/netsource.la
 lib/libjack.la
 lib/libjackserver.la
 lib/pkgconfig/jack.pc
