@@ -1,16 +1,16 @@
-# $NetBSD: options.mk,v 1.2 2007/05/11 11:51:05 schmonz Exp $
+# $NetBSD: options.mk,v 1.3 2008/05/04 16:34:03 adrianp Exp $
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.roundcube
+PKG_OPTIONS_VAR=		PKG_OPTIONS.roundcube
 
 PKG_OPTIONS_REQUIRED_GROUPS=	db
 PKG_OPTIONS_GROUP.db=		mysql pgsql sqlite
 
-PKG_SUPPORTED_OPTIONS=	iconv ldap multibyte
-PKG_SUGGESTED_OPTIONS=	mysql
+PKG_SUPPORTED_OPTIONS=		iconv ldap multibyte mcrypt sockets gd
+# Following the recommendations in INSTALL the iconv, multibyte, gd and
+# mcrypt PHP extensions are all 'recommended' requirements
+PKG_SUGGESTED_OPTIONS=		mysql iconv multibyte mcrypt sockets gd
 
 .include "../../mk/bsd.options.mk"
-
-.include "../../lang/php/phpversion.mk"
 
 ###
 ### Use mysql backend
@@ -18,6 +18,7 @@ PKG_SUGGESTED_OPTIONS=	mysql
 .if !empty(PKG_OPTIONS:Mmysql)
 .	include "../../mk/mysql.buildlink3.mk"
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.1:../../databases/php-mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-MDB2_Driver_mysql-[0-9]*:../../databases/pear-MDB2_Driver_mysql
 .endif
 
 ###
@@ -26,15 +27,16 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.1:../../databases/php-mysql
 .if !empty(PKG_OPTIONS:Mpgsql)
 .	include "../../mk/pgsql.buildlink3.mk"
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=4.3.1:../../databases/php-pgsql
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-MDB2_Driver_pgsql-[0-9]*:../../databases/pear-MDB2_Driver_pgsql
 .endif
 
 ###
 ### Use sqlite backend
 ###
 .if !empty(PKG_OPTIONS:Msqlite)
-PHP_VERSIONS_ACCEPTED=	4
 .	include "../../databases/sqlite/buildlink3.mk"
 DEPENDS+=	${PHP_PKG_PREFIX}-sqlite-[0-9]*:../../databases/php-sqlite
+DEPENDS+=	${PHP_PKG_PREFIX}-pear-MDB2_Driver_sqlite-[0-9]*:../../databases/pear-MDB2_Driver_sqlite
 .endif
 
 ###
@@ -56,4 +58,25 @@ DEPENDS+=	${PHP_PKG_PREFIX}-ldap>=4.3.1:../../databases/php-ldap
 ###
 .if !empty(PKG_OPTIONS:Mmultibyte)
 DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=4.3.1:../../misc/php-mbstring
+.endif
+
+###
+### Use mcrypt
+###
+.if !empty(PKG_OPTIONS:Mmcrypt)
+DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=4.3.1:../../security/php-mcrypt
+.endif
+
+###
+### Use sockets
+###
+.if !empty(PKG_OPTIONS:Msockets)
+DEPENDS+=	${PHP_PKG_PREFIX}-sockets>=4.3.1:../../net/php-sockets
+.endif
+
+###
+### Add support for gd
+###
+.if !empty(PKG_OPTIONS:Mgd)
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.3.1:../../graphics/php-gd
 .endif
