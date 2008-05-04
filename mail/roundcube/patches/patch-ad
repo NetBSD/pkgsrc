@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2008/05/04 16:34:03 adrianp Exp $
+
+--- index.php.orig	2008-04-05 13:49:21.000000000 +0100
++++ index.php
+@@ -161,7 +161,7 @@ if ($_action=='login' && $_task=='mail')
+   }
+   else if ($_SESSION['temp'] && !empty($_POST['_user']) && isset($_POST['_pass']) &&
+            rcmail_login(trim(get_input_value('_user', RCUBE_INPUT_POST), ' '),
+-              get_input_value('_pass', RCUBE_INPUT_POST, true, 'ISO-8859-1'), $host))
++              get_input_value('_pass', RCUBE_INPUT_POST, true, ''), $host))
+   {
+     // create new session ID
+     unset($_SESSION['temp']);

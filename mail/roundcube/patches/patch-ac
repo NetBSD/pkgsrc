@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2008/05/04 16:34:03 adrianp Exp $
+
+--- installer/config.php.orig	2008-04-05 13:49:21.000000000 +0100
++++ installer/config.php
+@@ -187,7 +187,7 @@ echo $select_mdnreq->show(intval($RCI->g
+ <p>Database settings for read/write operations:</p>
+ <?php
+ 
+-require_once 'DB.php';
++require_once 'MDB2.php';
+ 
+ $supported_dbs = array('MySQL' => 'mysql', 'MySQLi' => 'mysqli',
+     'PgSQL' => 'pgsql', 'SQLite' => 'sqlite');
+@@ -204,7 +204,7 @@ $input_dbname = new textfield(array('nam
+ $input_dbuser = new textfield(array('name' => '_dbuser', 'size' => 20, 'id' => "cfgdbuser"));
+ $input_dbpass = new textfield(array('name' => '_dbpass', 'size' => 20, 'id' => "cfgdbpass"));
+ 
+-$dsnw = DB::parseDSN($RCI->getprop('db_dsnw'));
++$dsnw = MDB2::parseDSN($RCI->getprop('db_dsnw'));
+ 
+ echo $select_dbtype->show($RCI->is_post ? $_POST['_dbtype'] : $dsnw['phptype']);
+ echo '<label for="cfgdbtype">Database type</label><br />';
