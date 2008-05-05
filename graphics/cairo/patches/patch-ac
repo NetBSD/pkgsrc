@@ -1,0 +1,30 @@
+$NetBSD: patch-ac,v 1.8 2008/05/05 06:53:00 yyamano Exp $
+
+--- src/cairo-quartz-image-surface.c.orig	2008-04-04 15:45:23.000000000 -0700
++++ src/cairo-quartz-image-surface.c
+@@ -42,6 +42,25 @@
+ 
+ #include "cairo-quartz-private.h"
+ 
++/* XXX The following code is copied from cairo-quartz-surface.c to make this 
++ * build on 10.4.x ppc. Need clean up.
++ */
++/* We need to work with the 10.3 SDK as well (and 10.3 machines; luckily, 10.3.9
++ * has all the stuff we care about, just some of it isn't exported in the SDK.
++ */
++#ifndef kCGBitmapByteOrder32Host
++#define USE_10_3_WORKAROUNDS
++#define kCGBitmapAlphaInfoMask 0x1F
++#define kCGBitmapByteOrderMask 0x7000
++#define kCGBitmapByteOrder32Host 0
++
++typedef uint32_t CGBitmapInfo;
++
++/* public in 10.4, present in 10.3.9 */
++CG_EXTERN void CGContextReplacePathWithStrokedPath (CGContextRef);
++CG_EXTERN CGImageRef CGBitmapContextCreateImage (CGContextRef);
++#endif
++
+ #define SURFACE_ERROR_NO_MEMORY (_cairo_surface_create_in_error(_cairo_error(CAIRO_STATUS_NO_MEMORY)))
+ #define SURFACE_ERROR_INVALID_FORMAT (_cairo_surface_create_in_error(_cairo_error(CAIRO_STATUS_INVALID_FORMAT)))
+ 
