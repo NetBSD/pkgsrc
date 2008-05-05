@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.109 2008/05/04 12:09:33 markd Exp $
+# $NetBSD: Makefile,v 1.110 2008/05/05 00:13:59 markd Exp $
 
 PKGNAME?=	${DISTNAME}
 COMMENT?=	GNU editing macros (editor)
@@ -63,6 +63,8 @@ post-extract:
 # for patch-ac
 post-build:
 	(cd ${WRKSRC}/lisp; ${MAKE_PROGRAM} files.elc)
+	touch ${WRKSRC}/etc/DOC
+	touch ${WRKSRC}/src/emacs
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
