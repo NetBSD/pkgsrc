@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/04/12 22:43:09 jlam Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/05/05 02:26:03 jwise Exp $
 bin/afslog
 bin/compile_et
 bin/gss
@@ -93,6 +93,7 @@ lib/libasn1.la
 lib/libcom_err.la
 lib/libeditline.la
 lib/libgssapi.la
+lib/libhcrypto.la
 lib/libhdb.la
 lib/libheimntlm.la
 lib/libhx509.la
