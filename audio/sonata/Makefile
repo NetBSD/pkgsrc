@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/04/25 20:39:06 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/05 10:41:21 drochner Exp $
 #
 
-DISTNAME=	sonata-1.4.2
+DISTNAME=	sonata-1.5.1
 CATEGORIES=	audio
 MASTER_SITES=	http://download.berlios.de/sonata/
 EXTRACT_SUFX=	.tar.bz2
@@ -28,5 +28,6 @@ BUILDLINK_ABI_DEPENDS.pygtk2+= ${PYPKGPREFIX}-gtk2>=2.12.1nb1
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../net/py-soappy/buildlink3.mk"
 .include "../../textproc/py-elementtree/buildlink3.mk"
+.include "../../audio/py-mpd/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

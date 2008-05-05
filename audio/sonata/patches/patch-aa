@@ -1,11 +1,11 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/03/14 14:24:22 drochner Exp $
+$NetBSD: patch-aa,v 1.2 2008/05/05 10:41:22 drochner Exp $
 
---- setup.py.orig	2008-03-14 14:54:33.000000000 +0100
+--- setup.py.orig	2008-05-04 02:30:45.000000000 +0200
 +++ setup.py
-@@ -68,7 +68,7 @@ setup(name='Sonata',
+@@ -73,7 +73,7 @@ setup(name='Sonata',
          data_files=[('share/sonata', ['README', 'CHANGELOG', 'TODO', 'TRANSLATORS']),
                      ('share/applications', ['sonata.desktop']),
-                     ('share/pixmaps', ['pixmaps/sonata.png', 'pixmaps/sonata_large.png', 'pixmaps/sonatacd.png', 'pixmaps/sonatacd_large.png', 'pixmaps/sonata-artist.png', 'pixmaps/sonata-album.png', 'pixmaps/sonata-stock_volume-mute.png', 'pixmaps/sonata-stock_volume-min.png', 'pixmaps/sonata-stock_volume-med.png', 'pixmaps/sonata-stock_volume-max.png', 'pixmaps/sonata_pause.png', 'pixmaps/sonata_play.png', 'pixmaps/sonata_disconnect.png']),
+                     ('share/pixmaps', glob.glob('sonata/pixmaps/*')),
 -                    ('share/man/man1', ['sonata.1']),
 +                    ('man/man1', ['sonata.1']),
                      ('share/locale/de/LC_MESSAGES', ['mo/de/sonata.mo']),
