@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/05/05 10:19:22 drochner Exp $
+
+--- mpd.py.orig	2008-04-03 06:06:55.000000000 +0200
++++ mpd.py
+@@ -293,7 +293,7 @@ class MPDClient(object):
+         msg = "getaddrinfo returns an empty list"
+         for res in socket.getaddrinfo(host, port, socket.AF_UNSPEC,
+                                       socket.SOCK_STREAM, socket.IPPROTO_TCP,
+-                                      socket.AI_ADDRCONFIG):
++                                      0):
+             af, socktype, proto, canonname, sa = res
+             try:
+                 self._sock = socket.socket(af, socktype, proto)

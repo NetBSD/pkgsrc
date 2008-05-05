@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/05 10:19:22 drochner Exp $
+${PYSITELIB}/mpd.py
+${PYSITELIB}/mpd.pyc
+${PYSITELIB}/mpd.pyo
