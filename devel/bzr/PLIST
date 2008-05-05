@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2008/04/07 20:10:10 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.17 2008/05/05 11:17:51 xtraeme Exp $
 bin/bzr
 ${PYSITELIB}/bzrlib/__init__.py
 ${PYSITELIB}/bzrlib/__init__.pyc
@@ -960,6 +960,18 @@ ${PYSITELIB}/bzrlib/tests/revisionstore_implementations/test_all.pyo
 ${PYSITELIB}/bzrlib/tests/stub_sftp.py
 ${PYSITELIB}/bzrlib/tests/stub_sftp.pyc
 ${PYSITELIB}/bzrlib/tests/stub_sftp.pyo
+${PYSITELIB}/bzrlib/tests/test_mutabletree.py
+${PYSITELIB}/bzrlib/tests/test_mutabletree.pyc
+${PYSITELIB}/bzrlib/tests/test_mutabletree.pyo
+${PYSITELIB}/bzrlib/tests/test_revisionspec.py
+${PYSITELIB}/bzrlib/tests/test_revisionspec.pyc
+${PYSITELIB}/bzrlib/tests/test_revisionspec.pyo
+${PYSITELIB}/bzrlib/tests/test_uncommit.py
+${PYSITELIB}/bzrlib/tests/test_uncommit.pyc
+${PYSITELIB}/bzrlib/tests/test_uncommit.pyo
+${PYSITELIB}/bzrlib/transport/nosmart.py
+${PYSITELIB}/bzrlib/transport/nosmart.pyc
+${PYSITELIB}/bzrlib/transport/nosmart.pyo
 ${PYSITELIB}/bzrlib/tests/test__dirstate_helpers.py
 ${PYSITELIB}/bzrlib/tests/test__dirstate_helpers.pyc
 ${PYSITELIB}/bzrlib/tests/test__dirstate_helpers.pyo
@@ -1226,9 +1238,6 @@ ${PYSITELIB}/bzrlib/tests/test_revert.pyo
 ${PYSITELIB}/bzrlib/tests/test_revision.py
 ${PYSITELIB}/bzrlib/tests/test_revision.pyc
 ${PYSITELIB}/bzrlib/tests/test_revision.pyo
-${PYSITELIB}/bzrlib/tests/test_revisionnamespaces.py
-${PYSITELIB}/bzrlib/tests/test_revisionnamespaces.pyc
-${PYSITELIB}/bzrlib/tests/test_revisionnamespaces.pyo
 ${PYSITELIB}/bzrlib/tests/test_revisiontree.py
 ${PYSITELIB}/bzrlib/tests/test_revisiontree.pyc
 ${PYSITELIB}/bzrlib/tests/test_revisiontree.pyo
