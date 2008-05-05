@@ -1,0 +1,1897 @@
+$NetBSD: patch-at,v 1.1 2008/05/05 22:48:22 tonnerre Exp $
+
+--- texk/dviljk/dvi2xx.c
++++ texk/dviljk/dvi2xx.c
+@@ -1,5 +1,5 @@
+ /* $Id: patch-at,v 1.1 2008/05/05 22:48:22 tonnerre Exp $ */
+-#define VERSION "2.6p2 (dviljk)"
++#define VERSION "dviljk (version 2.6p3)"
+ /*
+ #define DEBUGGS 1
+ */
+@@ -165,7 +165,7 @@ char    *argv[];
+ # endif
+ #endif
+ 
+-  /* Initialize pixel_files */   
++  /* Initialize pixel_files */
+   for (i = 0; i <= MAXOPEN; i++)
+     pixel_files[i].pixel_file_id = FPNULL;
+ 
+@@ -173,7 +173,7 @@ char    *argv[];
+   y_origin = YDEFAULTOFF; /* y-origin in dots                    */
+ 
+   setbuf(ERR_STREAM, NULL);
+-  (void) strcpy(G_progname, argv[0]);
++  G_progname = argv[0];
+ #ifdef KPATHSEA
+   kpse_set_progname(argv[0]);
+   kpse_set_program_enabled (kpse_pk_format, MAKE_TEX_PK_BY_DEFAULT, kpse_src_compile);
+@@ -275,7 +275,7 @@ char    *argv[];
+   EMIT1("@PJL SET PAGEPROTECT=OFF\012");
+   EMIT1("@PJL ENTER LANGUAGE=PCL\012");
+   if (econoMode && LJ6)
+-      EMIT1("@PJL SET ECONOMODE=ON\012");  
++      EMIT1("@PJL SET ECONOMODE=ON\012");
+   EMIT3("\033&u%dD\033*t%dR",RESOLUTION,RESOLUTION);
+   if (econoMode && !LJ6)
+     EMIT1("\033*v1T");
+@@ -431,8 +431,8 @@ char    *argv[];
+           /*
+             fprintf(ERR_STREAM,"FirstPart\n count %d, mod %d, pp %d\n",(int)count[0],(int)count[0]%2,PageParity);
+             */
+-          SkipMode = 
+-            (bool)(PageParity != (short)((count[0]<0 ? 
++          SkipMode =
++            (bool)(PageParity != (short)((count[0]<0 ?
+                                           labs(count[0])+1 : count[0])%2));
+           if (count[0] == 0) SkipMode = (bool)!SkipMode;
+         }
+@@ -641,7 +641,7 @@ char    *argv[];
+    is not buffered. */
+ 
+ /* read a buffered byte */
+-char 
++char
+ #if NeedFunctionPrototypes
+ b_read(FILEPTR spfp)
+ #else
+@@ -661,7 +661,7 @@ FILEPTR spfp;
+ }
+ 
+ #ifdef RISC_BUFFER
+-void 
++void
+ #if NeedFunctionPrototypes
+ b_write(FILEPTR spfp, char c) /* write a buffered byte */
+ #else
+@@ -677,7 +677,7 @@ char c;
+   buffout[boact++] = c;
+ }
+ 
+-void 
++void
+ #if NeedFunctionPrototypes
+ b_wrtmult(FILEPTR spfp, char *buf, int len) /* write a sequence of bytes to the output buffer */
+ #else
+@@ -693,22 +693,22 @@ int len;
+     write_multi(buffout,1,boact,spfp);
+     /* Copy only small blocks; large ones are written directly */
+     if (len < (BUFFSIZE/4)) {
+-      for (i = 0; i<len; i++) 
++      for (i = 0; i<len; i++)
+         buffout[i] = buf[i];
+       boact = len;
+     } else {
+-      write_multi(buf,1,len,spfp); 
++      write_multi(buf,1,len,spfp);
+       boact = 0;
+     }
+   }
+   else {
+-    for (i = 0; i<len; i++) 
++    for (i = 0; i<len; i++)
+       buffout[boact++] = buf[i];
+   }
+ }
+ 
+ /* flush the output buffer */
+-void 
++void
+ #if NeedFunctionPrototypes
+ b_oflush(FILEPTR spfp)
+ #else
+@@ -762,9 +762,9 @@ char    *str;
+ /***************************** CopyHPFile ******************************/
+ /*********************************************************************/
+ #if NeedFunctionPrototypes
+-int getnum(FILEPTR spfp, char *t, char *numstr) 
++int getnum(FILEPTR spfp, char *t, char *numstr)
+ #else
+-int getnum(spfp, t, numstr) 
++int getnum(spfp, t, numstr)
+ FILEPTR spfp;
+ char *t, *numstr;
+ #endif
+@@ -777,30 +777,30 @@ char *t, *numstr;
+ }
+ 
+ #if NeedFunctionPrototypes
+-void setOffset(char dir, char sign, int pos) 
++void setOffset(char dir, char sign, int pos)
+ #else
+-void setOffset(dir, sign, pos, first) 
++void setOffset(dir, sign, pos, first)
+ char dir, sign;
+ int pos;
+ #endif
+ {
+   if ((sign == '+' || sign == '-') && pos > 0 ) {
+     EMIT4("\033*p%c%d%c",sign,pos,dir);
+-#ifdef DEBUGGS   
++#ifdef DEBUGGS
+     fprintf(stderr, "relative: *p%c%d%c\n", sign, pos, dir);
+ #endif
+   } else if (pos>0) {
+     EMIT3("\033*p%d%c",pos,dir);
+-#ifdef DEBUGGS   
++#ifdef DEBUGGS
+     fprintf(stderr, "absolute: *p%d%c\n", pos, dir);
+ #endif
+-    if (dir == 'X') 
++    if (dir == 'X')
+       last_rx = pos;
+-    else 
++    else
+       last_ry = pos;
+   } else {
+     /*EMIT3("\033*p%d%c",pos,dir);*/
+-#ifdef DEBUGGS   
++#ifdef DEBUGGS
+     fprintf(stderr, "Relative: *p%d%c\n", pos, dir);
+ #endif
+   }
+@@ -832,7 +832,7 @@ char    *str;
+      unwanted commands from the input file and outputs the rest */
+ 
+   /* reset the input buffer */
+-  binumber = 0; 
++  binumber = 0;
+   biact = 0;
+ 
+   qfprintf(ERR_STREAM," [%s", str);
+@@ -853,16 +853,16 @@ char    *str;
+           /* of the commands (x first, y first) */
+ 
+           if (t=='Y' || t=='y') {
+-            if (numstr[0]!='+' && numstr[0]!='-' && num<miny) 
++            if (numstr[0]!='+' && numstr[0]!='-' && num<miny)
+               miny = num;
+             if (t=='y') {
+               num = getnum(spfp, &t, numstr);
+-              if (numstr[0]!='+' && numstr[0]!='-' && num<minx) 
++              if (numstr[0]!='+' && numstr[0]!='-' && num<minx)
+                 minx = num;
+             }
+           }
+           if (t=='X' || t=='x') {
+-            if (numstr[0]!='+' && numstr[0]!='-' && num<minx) 
++            if (numstr[0]!='+' && numstr[0]!='-' && num<minx)
+               minx = num;
+ 
+             if (t=='x') {
+@@ -920,16 +920,16 @@ char    *str;
+   }
+   qfprintf(ERR_STREAM," [%s", str);
+   /* reset input buffer again */
+-  binumber = 0; 
++  binumber = 0;
+   biact = 0;
+ 
+ 
+   /* Pass through the input file again but this time output the */
+   /* retained PCL commands */
+-#ifdef DEBUGGS   
+-  fprintf(stderr,"\nminx=%d, miny=%d, xg=%d, yg=%d\n", 
++#ifdef DEBUGGS
++  fprintf(stderr,"\nminx=%d, miny=%d, xg=%d, yg=%d\n",
+           minx, miny, x_goffset, y_goffset);
+-#endif  
++#endif
+   do {
+     t = (char)b_read(spfp);
+     if (t==0x1B) {
+@@ -948,7 +948,7 @@ char    *str;
+             } else {
+               setOffset('Y',numstr[0], num);
+             }
+-            
++
+             if (t == 'y') {
+               num = getnum(spfp, &t,numstr);
+               if (numstr[0]!='+' && numstr[0]!='-') {
+@@ -960,16 +960,16 @@ char    *str;
+               }
+             }
+           }
+-            
++
+           if (t=='X' || t=='x') {
+             if (numstr[0]!='+' && numstr[0]!='-') {
+               /*Add in the correct horizontal offset*/
+               setOffset('X',numstr[0],
+                         num - minx + (int)PIXROUND(h,hconv) + x_goffset);
+-            } else { 
++            } else {
+               setOffset('X',numstr[0], num);
+             }
+-            
++
+             if (t=='x') {
+               num = getnum(spfp, &t,numstr);
+               if (numstr[0]!='+' && numstr[0]!='-') {
+@@ -1027,7 +1027,7 @@ char    *str;
+         case(0x63):
+           /* Rectangular draw commands */
+           EMIT1("\033*c");
+-          for (t = (char)b_read(spfp); t<0x40 || t>0x60; 
++          for (t = (char)b_read(spfp); t<0x40 || t>0x60;
+                t = (char)b_read(spfp))
+             EMITC(t);
+           EMITC(t);
+@@ -1110,7 +1110,7 @@ register int    n;      /* number of byt
+   long4 x = 0;      /* number being constructed */
+   unsigned char h;
+   while (n--) {
+-    x <<= 8; 
++    x <<= 8;
+     read_byte(fp,h);
+     x |= h;
+   }
+@@ -1143,7 +1143,7 @@ register int     n;   /* number of bytes
+ #ifdef SIGN_DEBUG
+   long4    x0;      /* copy of x  */
+ #endif
+-  read_byte(fp,h); 
++  read_byte(fp,h);
+   x = h; /* get first (high-order) byte */
+   n1 = n--;
+   while (n--) {
+@@ -1296,7 +1296,7 @@ FILEPTR f;
+                                         /* ---> result in DX       */
+ 
+   if (  (regs.h.dl & 0x80)              /* file handle points to a device */
+-        && !(regs.h.dl & 0x07) ) {      /* neither console i/o or null    */ 
++        && !(regs.h.dl & 0x07) ) {      /* neither console i/o or null    */
+ 
+     regs.h.dl  |= 0x20;                 /* set BINARY bit in device info  */
+     regs.h.ah = (unsigned char) 0x44;   /* IOCTL                  */
+@@ -1501,20 +1501,20 @@ printf("Emit character %c(%d) id=%d, yof
+     /* For COMPRESSED CHARS */
+     if (PrevSize < nbpl) {
+       PrevSize = nbpl;
+-      if (PrevLine != NULL) 
++      if (PrevLine != NULL)
+         free(PrevLine);
+-      if ((PrevLine = (unsigned char*)malloc(PrevSize*sizeof(char))) 
++      if ((PrevLine = (unsigned char*)malloc(PrevSize*sizeof(char)))
+           == NULL) {
+-        PrevSize = 0; 
++        PrevSize = 0;
+         Fatal("EmitChar: Out of memory error!\n");
+       }
+     }
+     /* Clear seed line */
+-    for (i = 0; i<nbpl; i++) 
++    for (i = 0; i<nbpl; i++)
+       PrevLine[i] = 0;
+-    CChar_Off = 0; 
++    CChar_Off = 0;
+     CChar_Last = -1;
+-    
++
+     /* This bit copied from below... */
+ #  ifdef USEPXL
+     if (fontptr->id == pk89)
+@@ -1530,11 +1530,11 @@ printf("Emit character %c(%d) id=%d, yof
+         CompressedCharLine(ce,nbpl,sl);
+       }
+ #  else
+-    for (i = num_rows; i > 0; i--) 
++    for (i = num_rows; i > 0; i--)
+       CompressedCharLine(ce,nbpl,(bits + (i-1)*nbpl));
+ #  endif /* USEPXL */
+   }
+-  else 
++  else
+     CChar_Off = -1;
+ # endif /* LJ4 */
+ 
+@@ -1544,10 +1544,10 @@ printf("Emit character %c(%d) id=%d, yof
+ # ifdef LJ4
+   /* printf("raw: %d (%d * %d), comp: %d\n",
+      total,ce->width,ce->height,CChar_Off); */
+-  /* Characters that don't compress well are usually rather small so 
+-     reading them again and writing them uncompressed won't take 
++  /* Characters that don't compress well are usually rather small so
++     reading them again and writing them uncompressed won't take
+      much time anyway. */
+-  if (CChar_Off > total) 
++  if (CChar_Off > total)
+     CChar_Off = -1;
+   if (CChar_Off >= 0) {
+     EMIT4("\033*c%sd%dE\033(s%ldW", cnv_buffer,
+@@ -1606,7 +1606,7 @@ printf("Emit character %c(%d) id=%d, yof
+       }
+ #endif
+     }
+-    
++
+ #ifdef IBM3812
+ #ifdef USEPXL
+   used_fontstorage += (long4)ce->height * ((ce->width + 15) >> 4) * 2 + 14;
+@@ -1652,7 +1652,7 @@ unsigned char   *pkloc;
+ int     repeatcount;
+ 
+ void             /* <Read and translate raster description@>*/
+-#if NeedFunctionPrototypes 
++#if NeedFunctionPrototypes
+ PkRaster(struct char_entry *ce, int raster)
+ #else
+ PkRaster(ce, raster)
+@@ -1735,7 +1735,7 @@ int raster;
+       if (wordweight < 31) {
+ #ifdef COMMENT
+ # ifdef DRAWGLYPH
+-        { 
++        {
+           int k;
+           for (k = 15; k>=0; k--) {
+             if ((power[k] & word)!=0) printf("Z");
+@@ -1749,7 +1749,7 @@ int raster;
+         for (j = 3; j >= (wordwidth * 4 - (long4)nbpl); j--) {
+           OUTCHAR(((word >> (j << 3)) & 0xff));
+ #ifdef DRAWGLYPH
+-          { 
++          {
+             int k;
+             for (k = 7; k>=0; k--) {
+               if ((power[k] & ((word >> (j << 3)) & 0xff))!=0) printf("M");
+@@ -1760,9 +1760,9 @@ int raster;
+         }
+ 
+       }
+-        
++
+       switch (raster) {
+-      case 1: 
++      case 1:
+         RasterLine(ce, nbpl, current_line, raster_line_buf);
+         current_line++;
+         break;
+@@ -1826,7 +1826,7 @@ int raster;
+             OUTCHAR((tl       & 0xFF));
+ 
+ #ifdef DRAWGLYPH
+-            { 
++            {
+               int k;
+               for (k = 31; k>=0; k--) {
+                 if ((power[k] & row[ii])!=0) printf("M");
+@@ -1839,7 +1839,7 @@ int raster;
+           for (j = 3; j >= (wordwidth *4 - (long4)nbpl); j--) {
+             OUTCHAR(((tl >> (j << 3)) & 0xff));
+ #ifdef DRAWGLYPH
+-            { 
++            {
+               int k;
+               for (k = 7; k>=0; k--) {
+                 if ((power[k] & ((tl >> (j << 3)) & 0xff))!=0) printf("M");
+@@ -1850,7 +1850,7 @@ int raster;
+           }
+ 
+           switch (raster) {
+-          case 1: 
++          case 1:
+             RasterLine(ce, (unsigned int)nbpl, current_line, raster_line_buf);
+             current_line++;
+             break;
+@@ -1969,7 +1969,7 @@ int n;
+ 
+ #ifdef LJ4
+ /* Compress a raster line in compression mode 2 */
+-int 
++int
+ #if NeedFunctionPrototypes
+ CompressLine2(unsigned char *buffer, unsigned char *buffout, int emitbytes)
+ #else
+@@ -1984,13 +1984,13 @@ int emitbytes;
+   char last,c;
+ 
+   /* trap empty lines (otherwise problems with Packbits) */
+-  if (emitbytes == 0) 
++  if (emitbytes == 0)
+     return(0);
+   /* Use Packbits compression (mode 2) on raster line */
+-  pos = buffer; 
+-  litpos = buffer; 
+-  pack = 1; 
+-  ppos = buffout; 
++  pos = buffer;
++  litpos = buffer;
++  pack = 1;
++  ppos = buffout;
+   last = *pos++;
+   upper = buffer + emitbytes;
+   while (pos < upper) {
+@@ -2000,14 +2000,14 @@ int emitbytes;
+       /* At least three equal bytes ==> write out preceding literal sequence */
+       if ((pack == 3) && ((lit = (int)(pos - litpos - 3)) != 0)) {
+         while (lit >= 128) {
+-          *ppos++ = 127; 
+-          for (i = 1; i<=128; i++) 
++          *ppos++ = 127;
++          for (i = 1; i<=128; i++)
+             *ppos++ = *litpos++;
+           lit -= 128;
+         }
+         if (lit != 0) {
+-          *ppos++ = lit-1; 
+-          while ((lit--) > 0) 
++          *ppos++ = lit-1;
++          while ((lit--) > 0)
+             *ppos++ = *litpos++;
+           /* litpos is now pos-3 (i.e. first of the sequence) */
+         }
+@@ -2015,19 +2015,19 @@ int emitbytes;
+     }
+     else {
+       while (pack >= 128) {
+-        *ppos++ = 129; 
+-        *ppos++ = last; 
+-        litpos += 128; 
++        *ppos++ = 129;
++        *ppos++ = last;
++        litpos += 128;
+         pack -= 128;
+       }
+       /* At least 3 equal bytes or 2 that don't break a literal sequence
+          ==> write out packed sequence */
+       if ((pack >= 3) || ((pack == 2) && (litpos == pos-3))) {
+-        *ppos++ = 257 - pack; 
+-        *ppos++ = last; 
++        *ppos++ = 257 - pack;
++        *ppos++ = last;
+         litpos += pack;
+       }
+-      pack = 1; 
++      pack = 1;
+       last = c;
+     }
+     if (ppos > (buffout + BUFFSIZE/2 - 129)) {
+@@ -2036,28 +2036,28 @@ int emitbytes;
+       return(0);
+     }
+   }
+-  
++
+   while (pack >= 128) {
+-    *ppos++ = 129; 
+-    *ppos++ = last; 
+-    litpos += 128; 
++    *ppos++ = 129;
++    *ppos++ = last;
++    litpos += 128;
+     pack -= 128;
+   }
+   if ((pack >= 3) || ((pack == 2) && (litpos == pos-3))) {
+-    *ppos++ = 257 - pack; 
+-    *ppos++ = last; 
++    *ppos++ = 257 - pack;
++    *ppos++ = last;
+     litpos += pack;
+   }
+   else if ((lit = (int)(pos - litpos)) != 0) {
+     while (lit >= 128) {
+-      *ppos++ = 127; 
+-      for (i = 1; i<=128; i++) 
++      *ppos++ = 127;
++      for (i = 1; i<=128; i++)
+         *ppos++ = *litpos++;
+       lit -= 128;
+     }
+     if (lit != 0) {
+-      *ppos++ = lit-1; 
+-      while ((lit--) > 0) 
++      *ppos++ = lit-1;
++      while ((lit--) > 0)
+         *ppos++ = *litpos++;
+     }
+   }
+@@ -2079,24 +2079,24 @@ int emitbytes;
+   int lit,i,pack;
+ 
+   /* Use compression mode 3 */
+-  pos = buffer; 
+-  ppos = buffout; 
+-  upper = buffer + emitbytes; 
++  pos = buffer;
++  ppos = buffout;
++  upper = buffer + emitbytes;
+   prev = PrevLine;
+   while(pos < upper) {
+     litpos = pos;
+     while ((*prev == *pos) && (pos < upper)) {
+-      prev++; 
++      prev++;
+       pos++;
+     }
+     if (pos < upper) {
+-      pack = (int)(pos - litpos); 
++      pack = (int)(pos - litpos);
+       litpos = pos;
+-      i = upper - pos; 
+-      if (i > 8) 
++      i = upper - pos;
++      if (i > 8)
+         i = 8;
+       while ((*pos != *prev) && (i > 0)) {
+-        *prev++ = *pos++; 
++        *prev++ = *pos++;
+         i--;
+       }
+       i = (int)(pos - litpos - 1);
+@@ -2105,16 +2105,16 @@ int emitbytes;
+         *ppos++ = lit + pack;
+       }
+       else {
+-        *ppos++ = lit + 31; 
++        *ppos++ = lit + 31;
+         pack -= 31;
+         while (pack >= 255) {
+-          *ppos++ = 255; 
++          *ppos++ = 255;
+           pack -= 255;
+         }
+         *ppos++ = pack;
+       }
+       while (i >= 0) {
+-        *ppos++ = *litpos++; 
++        *ppos++ = *litpos++;
+         i--;
+       }
+     }
+@@ -2134,7 +2134,7 @@ int emitbytes;
+ /**********************************************************************/
+ void
+ #if NeedFunctionPrototypes
+-RasterLine(struct char_entry *ce, unsigned int nbpl, 
++RasterLine(struct char_entry *ce, unsigned int nbpl,
+            unsigned int current_line, unsigned char *buffer)
+ #else
+ RasterLine(ce, nbpl, current_line, buffer)
+@@ -2208,21 +2208,21 @@ char *buffer;
+     EMIT2("\033*b%dW", emitbytes);
+     EMITL(emitbytes, buffer);
+     break;
+- 
++
+   case 2:
+     i = CompressLine2(buffer,buffin,emitbytes);
+     EMIT2("\033*b%dW", i);
+     EMITL(i,buffin);
+     break;
+- 
++
+   case 3:
+     i = CompressLine3(buffer,buffin + BUFFSIZE/2,(int)nbpl);
+     EMIT2("\033*b%dW", i);
+     EMITL(i,buffin + BUFFSIZE/2);
+     break;
+- 
+-  default: 
+-    fprintf(ERR_STREAM,"Unsupported compression mode!\n"); 
++
++  default:
++    fprintf(ERR_STREAM,"Unsupported compression mode!\n");
+   }
+ # else
+   EMIT2("\033*b%dW", emitbytes);
+@@ -2280,10 +2280,10 @@ struct char_entry *ce;
+   if (CompressCharMode == 3) {
+     /* Check if PrevLine big enough; claim more space if not */
+     if (((int)nbpl) > PrevSize) {
+-      if (PrevLine != NULL) 
++      if (PrevLine != NULL)
+         free(PrevLine);
+       if ((PrevLine = (unsigned char *)malloc(nbpl*sizeof(char))) == NULL) {
+-        PrevSize = 0; 
++        PrevSize = 0;
+         Fatal("RasterChar: out of memory!\n");
+       }
+       PrevSize = (int)nbpl;
+@@ -2419,7 +2419,7 @@ register struct char_entry *ptr;
+   if (bytes > 0) {
+     /* do NOT load Huge characters */
+     if ((bytes > HUGE_CHAR_PATTERN) && (fontptr->id != pk89)) {
+-      qfprintf(ERR_STREAM,"Huge Character <%c> (%ld Bytes)\n", 
++      qfprintf(ERR_STREAM,"Huge Character <%c> (%ld Bytes)\n",
+                (char)c, bytes);
+       ptr->charsize = HUGE_SIZE;
+       ptr->where.isloaded = _FALSE;
+@@ -2505,7 +2505,7 @@ bool do_posn,in_string;
+     SetPosn(h, v);
+   }
+ 
+-  /*  
++  /*
+     fprintf(ERR_STREAM,
+             "(%d) hh=%ld (+%ld/+%ld), h=%ld, xh=%ld,xhh=%ld, [%ld|%ld] ->%d\n",
+             (int)do_posn,hh,(long4)ptr->cw,(long4)ptr->cw*(long4)hconv,h,
+@@ -2553,7 +2553,7 @@ bool do_posn,in_string;
+       int     tmp;
+       char    sign;
+ 
+-      if (!do_posn) 
++      if (!do_posn)
+         SetPosn(h, v);
+ 
+ #ifdef USEPXL
+@@ -2563,7 +2563,7 @@ bool do_posn,in_string;
+ #endif
+       if (tmp != 0) {
+         if (tmp < 0) {
+-          sign = '-'; 
++          sign = '-';
+           tmp = -tmp;
+         } else
+           sign = '+';
+@@ -2576,7 +2576,7 @@ bool do_posn,in_string;
+ #endif
+       if (tmp != 0) {
+         if (tmp < 0) {
+-          sign = '-'; 
++          sign = '-';
+           tmp = -tmp;
+         } else
+           sign = '+';
+@@ -2644,7 +2644,7 @@ bool do_posn,in_string;
+     fprintf(stderr,"--> hh(%ld) += cw(%ld) * hconv(%ld)",
+             (long)hh, (long)ptr->cw, (long) hconv);
+             */
+-#ifdef LJ    
++#ifdef LJ
+     /* the guessed position must be a multiple of pixels */
+     if (RESOLUTION == 300)
+       hh += (long4) ((ptr->cw)/4)*4*hconv;
+@@ -2661,7 +2661,7 @@ bool do_posn,in_string;
+   if (command <= SET4)
+     h += ptr->tfmw;
+ 
+-  if (pos_after) 
++  if (pos_after)
+     SetPosn(h, v);
+   else
+     last_rx = (int)PIXROUND(h, hconv) + x_goffset;
+@@ -2682,7 +2682,7 @@ void DoBop()
+   }
+   fonts_used_on_this_page = 0;
+ #endif
+-  for (p = hfontptr; p; p = p->next) 
++  for (p = hfontptr; p; p = p->next)
+     p->used_on_this_page = _FALSE;
+ }
+ 
+@@ -2740,7 +2740,7 @@ long4    x, y;
+   rx = (int)PIXROUND(x, hconv) + x_goffset;
+   ry = (int)PIXROUND(y, vconv) + y_goffset;
+ 
+-  /*  
++  /*
+   fprintf(ERR_STREAM,
+ 	  "setposn to %ld/%ld, %d/%d, last: %d/%d\n",
+ 	  (long)x,(long)y,
+@@ -2804,13 +2804,13 @@ long4    x, y;
+    offset in the buffer, CChar_Last is the first byte of the last
+    compacted row (line repeat count).  Updates the previous line
+    (PrevLine) if necessary. */
+-void 
++void
+ #if NeedFunctionPrototypes
+ CompressedCharLine(struct char_entry *ce, int nbpl, unsigned char *buffer)
+ #else
+ CompressedCharLine(ce, nbpl, buffer)
+ struct char_entry *ce;
+-int nbpl; 
++int nbpl;
+ unsigned char *buffer;
+ #endif
+ {
+@@ -2821,31 +2821,31 @@ unsigned char *buffer;
+     int t,mode,max;
+     register int x,y,i;
+ 
+-    prev = PrevLine; 
+-    obuf = buffer; 
+-    end = buffer + nbpl; 
++    prev = PrevLine;
++    obuf = buffer;
++    end = buffer + nbpl;
+     x = 0;
+     while (obuf < end) {
+       if (*obuf != *prev) {
+-        *prev = *obuf; 
++        *prev = *obuf;
+         x = 1;
+       }
+-      obuf++; 
++      obuf++;
+       prev++;
+     }
+     if (x == 0 && CChar_Last >= 0) {
+-      (buffin[CChar_Last])++; 
++      (buffin[CChar_Last])++;
+       return; /* line repeat count +1 */
+     }
+ 
+-    end = buffin + BUFFSIZE - 16; 
+-    obuf = buffin + CChar_Off; 
++    end = buffin + BUFFSIZE - 16;
++    obuf = buffin + CChar_Off;
+     buff = buffer;
+     *obuf++ = 0; /* Line repeat count = 0 */
+     t = 0;
+     CChar_Last = CChar_Off; /* Next line */
+-    mode = 0; 
+-    y = *buff++; 
++    mode = 0;
++    y = *buff++;
+     i = 7; /* i = current bit */
+     while ((t < ce->width) && (obuf < end)) {
+       max = ce->width - t; /* maximum pixels left to do */
+@@ -2853,13 +2853,13 @@ unsigned char *buffer;
+       if (mode == 0) {
+         /* white run */
+         while ((y & (1<<i)) == 0 && x < max) {
+-          x++; 
+-          i--; 
++          x++;
++          i--;
+           if (i < 0) {
+-            i = 7; 
+-            y = *buff++; 
++            i = 7;
++            y = *buff++;
+             while (y == 0 && x < max) {
+-              x += 8; 
++              x += 8;
+               y = *buff++;
+             }
+           }
+@@ -2869,26 +2869,26 @@ unsigned char *buffer;
+       else {
+         /* black run */
+         while ((y & (1<<i)) != 0 && x < max) {
+-          x++; 
+-          i--; 
++          x++;
++          i--;
+           if (i < 0) {
+-            i = 7; 
+-            y = *buff++; 
++            i = 7;
++            y = *buff++;
+             while (y == 0xff && x < max) {
+-              x += 8; 
++              x += 8;
+               y = *buff++;
+             }
+           }
+         }
+         mode = 0;
+       }
+-      if (x > max) 
++      if (x > max)
+         x = max;
+       t += x;
+       /* make precautions for very long runs */
+       while (x > 0xff) {
+-        *obuf++ = 0xff; 
+-        *obuf++ = 0; 
++        *obuf++ = 0xff;
++        *obuf++ = 0;
+         x -= 0xff;
+       }
+       *obuf++ = x;
+@@ -2968,8 +2968,8 @@ char    *argv[];
+ #endif
+ {
+   int     argind;            /* argument index for flags      */
+-  char    curarea[STRSIZE];  /* current file area             */
+-  char    curname[STRSIZE];  /* current file name             */
++  char    *curarea;	     /* current file area             */
++  char    *curname;   	     /* current file name             */
+   char    *tcp, *tcp1;       /* temporary character pointers  */
+   char    *this_arg;
+   double  x_offset = 0.0, y_offset = 0.0;
+@@ -2988,9 +2988,9 @@ char    *argv[];
+ #endif
+ #endif
+ 
+-  if (argc == 2 && (strcmp (argv[1], "--version") == 0)) {
++  if (argc == 2 && EQ(argv[1], "--version")) {
+     extern KPSEDLL char *kpathsea_version_string;
+-    puts ("dvilj(k) 2.6");
++    puts (VERSION);
+     puts (kpathsea_version_string);
+     puts ("Copyright (C) 1997 Gustaf Neumann.\n\
+ There is NO warranty.  You may redistribute this software\n\
+@@ -2998,7 +2998,7 @@ under the terms of the GNU General Publi
+ For more information about these matters, see the files\n\
+ named COPYING and dvi2xx.c.\n\
+ Primary author of Dvi2xx: Gustaf Neumann; -k maintainer: K. Berry.");
+-    exit (0); 
++    exit (0);
+   }
+ 
+ #ifdef LJ4
+@@ -3048,9 +3048,9 @@ Primary author of Dvi2xx: Gustaf Neumann
+ #ifdef LJ2P
+       case 'd':       /* d selects DUPLEX mode  */
+         tcp++;
+-        if (*tcp == '1' ) 
++        if (*tcp == '1' )
+           DuplexMode = 1;
+-        else if (*tcp == '2') 
++        else if (*tcp == '2')
+           DuplexMode = 2;
+         else {
+           Warning("Invalid DUPLEX mode, assuming DUPLEX=1, Long-Edge Binding");
+@@ -3062,13 +3062,13 @@ Primary author of Dvi2xx: Gustaf Neumann
+         DoublePage = _TRUE;
+         tcp++;
+         if (*tcp == '1' || *tcp == '2') {
+-          if (*tcp == '2') 
++          if (*tcp == '2')
+             PrintFirstPart = _FALSE;
+-          else             
++          else
+             PrintSecondPart = _FALSE;
+           tcp++;
+         }
+-        if (*tcp == '-') 
++        if (*tcp == '-')
+           PrintEmptyPages = _FALSE;
+         break;
+ #ifdef LJ4
+@@ -3256,14 +3256,14 @@ Primary author of Dvi2xx: Gustaf Neumann
+ #ifdef LJ
+       case 'V':   /* bugfixes for various vendor's PCL emulations */
+         tcp++;
+-        if (*tcp == 'K' || *tcp == 'k') 
++        if (*tcp == 'K' || *tcp == 'k')
+           kyocera_mode = _TRUE;
+         else
+-          if (*tcp == 'B' || *tcp == 'b') 
++          if (*tcp == 'B' || *tcp == 'b')
+             brother_mode = _TRUE;
+ # ifdef LJ4
+ 	else
+-        if (*tcp == '6' || *tcp == '6') 
++        if (*tcp == '6' || *tcp == '6')
+ 	    LJ6 = _TRUE;
+ # endif
+         break;
+@@ -3306,7 +3306,7 @@ Primary author of Dvi2xx: Gustaf Neumann
+ #endif
+ #ifdef __riscos
+       case 'i': /* name of directory to store diagrams in */
+-        tcp++; 
++        tcp++;
+         ddi = 0;
+         while (*tcp != ' ' && *tcp != '\0' && ddi < DIAGDIRSIZE-1) {
+           diagdir[ddi++] = *tcp++;
+@@ -3328,8 +3328,8 @@ Primary author of Dvi2xx: Gustaf Neumann
+       }
+     } else {
+ 
+-      (void) strcpy(filename, tcp);
+-      if (!strcmp(filename, "-")) {
++      filename = tcp;
++      if (EQ(filename, "-")) {
+         EmitFileName = "-";
+ #ifdef RISC_USE_OSL
+         dvifp = BINOPEN("Kbd:");
+@@ -3339,57 +3339,68 @@ Primary author of Dvi2xx: Gustaf Neumann
+ 	  AssureBinary(fileno(dvifp));
+ #endif
+       } else {
++	/* Since this code is used only once during startup, we don't care
++	   about free()ing the allocated strings that represent filenames.
++	   It will be more work to realize proper deallocation handling than
++	   it's worth in terms of saving a few bytes. We consider these
++	   bytes actually static memory where we don't know the size in
++	   advance and don't add them to the allocated_storage count.
++	   [27 Jun 07 -js] */
+ #ifdef KPATHSEA
+         /* split into directory + file name */
+ 	int tcplen, argvlen;
+ 	tcp = (char *)xbasename(argv[argind]);/* this knows about any kind of slashes */
+ 	tcplen = strlen(tcp);
++	if ( tcplen == 0 ) {
++	  /* This happens when the DVI file name has a trailing slash; this
++	     is not a valid name. Then we terminate the argument parsing
++	     loop, a usage message will be output below. */
++	  break;
++	}
+ 	argvlen = strlen(argv[argind]);
+ 	if (tcplen == argvlen)
+-	  curarea[0] = '\0';
++	  curarea = "";
+ 	else {
+-	  (void) strcpy(curarea, argv[argind]);
++	  curarea = xstrdup(argv[argind]);
+ 	  curarea[argvlen-tcplen] = '\0';
+ 	}
+ #else
+         tcp = strrchr(argv[argind], '/');
+         /* split into directory + file name */
+         if (tcp == NULL) {
+-          curarea[0] = '\0';
++          curarea[0] = "";
+           tcp = argv[argind];
+         } else {
+-          (void) strcpy(curarea, argv[argind]);
++	  curarea = xstrdup(argv[argind]);
+           curarea[tcp-argv[argind]+1] = '\0';
+           tcp += 1;
+         }
+ #endif
+ 
+-        (void) strcpy(curname, tcp);
++        curname = (char *) xmalloc(strlen(tcp)+5);  /* + space for ".dvi" */
++	(void) strcpy(curname, tcp);
+         /* split into file name + extension */
+-        tcp1 = strrchr(tcp, '.');
++        tcp1 = strrchr(curname, '.');
+         if (tcp1 == NULL) {
+-          (void) strcpy(rootname, curname);
++          rootname = xstrdup(curname);
+           strcat(curname, ".dvi");
+         } else {
+           *tcp1 = '\0';
+-          (void) strcpy(rootname, curname);
++          rootname = xstrdup(curname);
+           *tcp1 = '.';
+         }
+ 
++	filename = (char *) xmalloc(strlen(curarea)+strlen(curname)+1);
+         (void) strcpy(filename, curarea);
+         (void) strcat(filename, curname);
+ 
+         if ((dvifp = BINOPEN(filename)) == FPNULL) {
+           /* do not insist on .dvi */
+           if (tcp1 == NULL) {
+-            int l = strlen(curname);
+-            if (l > 4)
+-              curname[l - 4] = '\0';
+-            l = strlen(filename);
+-            if (l > 4)
+-              filename[l - 4] = '\0';
++	    filename[strlen(filename) - 4] = '\0';
++	    dvifp = BINOPEN(filename);
+           }
+-          if (tcp1 != NULL || (dvifp = BINOPEN(filename)) == FPNULL) {
++          if (dvifp == FPNULL) {
+ #ifdef MSC5
+             Fatal("%s: can't find DVI file \"%s\"\n\n",
+                   G_progname, filename);
+@@ -3411,7 +3422,7 @@ Primary author of Dvi2xx: Gustaf Neumann
+   y_goffset = (short) MM_TO_PXL(y_offset) + y_origin;
+ 
+   if (dvifp == FPNULL) {
+-    fprintf(ERR_STREAM,"\nThis is the DVI to %s converter version %s",
++    fprintf(ERR_STREAM,"\nThis is the DVI to %s converter %s",
+             PRINTER, VERSION);
+ #ifdef SEVENBIT
+     fprintf(ERR_STREAM,", 7bit");
+@@ -3507,13 +3518,8 @@ Primary author of Dvi2xx: Gustaf Neumann
+     exit(1);
+   }
+   if (EQ(EmitFileName, "")) {
+-    if ((EmitFileName = (char *)malloc( STRSIZE )) != NULL)
+-      allocated_storage += STRSIZE;
+-    else
+-      Fatal("Can't allocate storage of %d bytes\n",STRSIZE);
+-    (void) strcpy(EmitFileName, curname);
+-    if ((tcp1 = strrchr(EmitFileName, '.')))
+-      *tcp1 = '\0';
++    EmitFileName = (char *) xmalloc(strlen(rootname)+sizeof(EMITFILE_EXTENSION));
++    (void) strcpy(EmitFileName, rootname);
+     strcat(EmitFileName, EMITFILE_EXTENSION);
+   }
+   if (G_quiet)
+@@ -3668,7 +3674,7 @@ bool PFlag;
+   if (PrintTestPage) EMIT1("\033z");
+ #ifdef vms
+   /* last record is not flushed to file, unless it is completely filled */
+-  for (kk = (int)((*outfp)->_cnt); kk > 0; --kk) 
++  for (kk = (int)((*outfp)->_cnt); kk > 0; --kk)
+     putc('\0',outfp);
+   fflush(outfp);
+ #endif
+@@ -3698,6 +3704,8 @@ bool PFlag;
+ #endif
+   }
+   CloseFiles();
++  if ( tmp_dir[0] != '\0' )
++    rmdir (tmp_dir);			/* ignore errors */
+   exit(G_errenc);
+ }
+ 
+@@ -3764,15 +3772,15 @@ char **end;
+ #endif
+ {
+   char *a,*b;
+-  
+-  a = s1; 
++
++  a = s1;
+   b = s2;
+   while (*a != '\0') {
+     if (tolower(*a) != tolower(*b)) return(_FALSE);
+-    a++; 
++    a++;
+     b++;
+   }
+-  *end = b; 
++  *end = b;
+   return(_TRUE);
+ }
+ 
+@@ -3791,18 +3799,18 @@ char **end;
+ {
+   char *s;
+   int count = 0;
+-  
++
+   s = str;
+   while ((*s != '\0') && (count < number)) {
+-    while ((*s == ' ') || (*s == ',') || (*s == '=')) 
++    while ((*s == ' ') || (*s == ',') || (*s == '='))
+       s++;
+     if (*s != '\0') {
+       result[count++] = strtod(s,&s);
+     }
+   }
+-  while ((*s == ' ') || (*s == ',') || (*s == '=')) 
++  while ((*s == ' ') || (*s == ',') || (*s == '='))
+     s++;
+-  *end = s; 
++  *end = s;
+   return(count);
+ }
+ 
+@@ -3822,22 +3830,22 @@ char *str;
+   int results[4],no;
+ 
+   s = str;
+-  while (*s == ' ') 
++  while (*s == ' ')
+     s++;
+   if ((StrCompare("drawfile",s,&s)) || (StrCompare("DVIview_diagram",s,&s))) {
+ 
+-    if (printdiag == _FALSE) 
++    if (printdiag == _FALSE)
+       return(_TRUE); /* it's a diagram, but don't print */
+ 
+-    while ((*s == ' ') || (*s == '=')) 
++    while ((*s == ' ') || (*s == '='))
+       s++; /* space or '=' separates keyword/keyval */
+ 
+     if (*s == '\0') {
+-      fprintf(ERR_STREAM,"No filename given for \\special-diagram!\n"); 
++      fprintf(ERR_STREAM,"No filename given for \\special-diagram!\n");
+       return(_TRUE);
+     }
+     sh = diagname;
+-    while ((*s != ' ') && (*s != ',') && (*s != '\0')) 
++    while ((*s != ' ') && (*s != ',') && (*s != '\0'))
+       *sh++ = *s++;
+     *sh = '\0';
+ 
+@@ -3845,7 +3853,7 @@ char *str;
+     dt.scalex = dt.scaley = 100;
+     dt.cropl = dt.cropb = dt.cropr = dt.cropt = 0;
+     while (*s != '\0') {
+-      while ((*s == ' ') || (*s == ',')) 
++      while ((*s == ' ') || (*s == ','))
+         s++;
+       if (*s != '\0') {
+         if (StrCompare("scale",s,&s)) {
+@@ -3853,7 +3861,7 @@ char *str;
+             fprintf(ERR_STREAM,
+                    "Too few arguments (%d) given for <scale> - ignored.\n",no);
+           }
+-          dt.scalex = results[0]; 
++          dt.scalex = results[0];
+           dt.scaley = results[1];
+         }
+         else if (StrCompare("crop",s,&s)) {
+@@ -3861,15 +3869,15 @@ char *str;
+             fprintf(ERR_STREAM,
+                    "Too few arguments (%d) given for <crop> - ignored.\n",no);
+           }
+-          dt.cropl = results[0]; 
++          dt.cropl = results[0];
+           dt.cropr = results[1];
+-          dt.cropt = results[2]; 
++          dt.cropt = results[2];
+           dt.cropb = results[3];
+         }
+         else {
+           fprintf(ERR_STREAM,"Bad \\special keyword - <%s> ignored\n",s);
+           /* skip over this word */
+-          while ((*s != ' ') && (*s != ',') && (*s != '=') && (*s != '\0')) 
++          while ((*s != ' ') && (*s != ',') && (*s != '=') && (*s != '\0'))
+             s++;
+         }
+       }
+@@ -3879,7 +3887,7 @@ char *str;
+     diagram(diagname,&dt);
+     return(_TRUE);
+   }
+-  else 
++  else
+     return(_FALSE);
+ }
+ # endif /* LJ */
+@@ -3895,70 +3903,58 @@ char *str;
+ int  n;
+ #endif
+ {
+-  char    spbuf[STRSIZE], xs[STRSIZE], ys[STRSIZE];
+-  char    *sf = NULL, *psfile = NULL;
++  char    xs[STRSIZE], ys[STRSIZE];
++  char    *include_file = NULL;
++  enum    { VerbFile, HPFile, PSFile } file_type;
+   float   x,y;
+   long4   x_pos, y_pos;
+   KeyWord k;
+   int     i, j, j1;
+   static  int   GrayScale = 10, Pattern = 1;
+   static  bool  GrayFill = _TRUE;
+-  static  long4 p_x[80], p_y[80];
+-  int llx=0, lly=0, urx=0, ury=0, rwi=0, rhi=0;
+-#ifdef WIN32
+-  char    *gs_path;
+-#endif
++  static  long4 p_x[MAX_SPECIAL_DEFPOINTS], p_y[MAX_SPECIAL_DEFPOINTS];
++  int llx=0, lly=0, urx=0, ury=0, rwi=0;
+ 
+   str[n] = '\0';
+-  spbuf[0] = '\0';
++  for ( i=0 ; i<MAX_SPECIAL_DEFPOINTS ; i++ )
++    p_x[i] = p_y[i] = -1;
+ 
+   SetPosn(h, v);
+ #ifdef __riscos
+ #ifdef LJ
+-  if (ParseDiagram(str)) 
++  if (ParseDiagram(str))
+     return;
+ #endif
+ #endif
+- 
++
+   while ( (str = GetKeyStr(str, &k)) != NULL ) {
+     /* get all keyword-value pairs */
+     /* for compatibility, single words are taken as file names */
+     if ( k.vt == None && access(k.Key, 0) == 0) {
+-      if ( sf
+-#ifdef KPATHSEA
+-           && !kpse_tex_hush ("special")
+-#endif
+-         )
+-        Warning("More than one \\special file name given. %s ignored", sf);
+-      (void) strcpy(spbuf, k.Key);
+-      sf = spbuf;
+-      /*
+-        for (j = 1; ((sf[j]=='/' ? sf[j]='\\':sf[j]) != '\0'); j++);
+-        */
+-    } else if ( GetKeyVal( &k, KeyTab, NKEYS, &i ) && i != -1 )
++      if ( include_file && !kpse_tex_hush ("special") ) {
++        Warning("More than one \\special file name given. %s ignored", include_file);
++	free (include_file);
++      }
++      include_file = xstrdup(k.Key);
++      file_type = VerbFile;
++    } else if ( GetKeyVal( &k, KeyTab, NKEYS, &i ) && i != -1 ) {
+       switch (i) {
+       case PSFILE:
+-        if (sf
+-#ifdef KPATHSEA
+-            && !kpse_tex_hush ("special")
+-#endif
+-            )
+-            Warning("More than one \\special file name given. %s ignored", sf);
+-        (void) strcpy(spbuf, k.Val);
+-        psfile = spbuf;
+-        /*
+-          for (j=1; ((sf[j]=='/' ? sf[j]='\\':sf[j]) != '\0'); j++);
+-          */
++        if ( include_file ) {
++	  Warning("More than one \\special file name given. %s ignored", include_file);
++	  free(include_file);
++	}
++        include_file = xstrdup(k.Val);
++	file_type = PSFile;
+         break;
+-        
++
+       case HPFILE:
+-        if (sf)
+-            Warning("More than one \\special file name given. %s ignored", sf);
+-        (void) strcpy(spbuf, k.Val);
+-        sf = spbuf;
+-        /*
+-          for (j=1; ((sf[j]=='/' ? sf[j]='\\':sf[j]) != '\0'); j++);
+-          */
++        if ( include_file && !kpse_tex_hush ("special") ) {
++	  Warning("More than one \\special file name given. %s ignored", include_file);
++	  free(include_file);
++	}
++        include_file = xstrdup(k.Val);
++	file_type = HPFile;
+         break;
+ 
+       case ORIENTATION:
+@@ -3977,24 +3973,26 @@ int  n;
+           EMIT2("\033&l%dO\033*rF", (unsigned char)k.v.i);
+         }
+ #endif
+-        else
+-#ifdef KPATHSEA
+-           if (!kpse_tex_hush ("special"))
+-#endif
+-          Warning( "Invalid orientation (%d)given; ignored.", k.v.i);
++        else {
++	  Warning( "Invalid orientation (%d) given; ignored.", k.v.i);
++	}
+         break;
+ 
+       case RESETPOINTS:
+-        (void) strcpy(spbuf, k.Val);
+-
+-        sf = NULL;
++	for ( i=0 ; i<MAX_SPECIAL_DEFPOINTS ; i++ )
++	  p_x[i] = p_y[i] = -1;
+         break;
+ 
+       case DEFPOINT:
+-        (void) strcpy(spbuf, k.Val);
+-        i = sscanf(spbuf,"%d(%[^,],%s)",&j,xs,ys);
++	/* 254 is STRSIZE-1. cpp should be used to construct that number. */
++        i = sscanf(k.Val,"%d(%254[^,],%254s)",&j,xs,ys);
+         if (i>0) {
+-          x_pos = h; 
++	  if ( j < 0  ||  j >= MAX_SPECIAL_DEFPOINTS ) {
++	    Warning ("defpoint %d ignored, must be between 0 and %d",
++		     j, MAX_SPECIAL_DEFPOINTS);
++	    break;
++	  }
++          x_pos = h;
+           y_pos = v;
+           if (i>1) {
+             if (sscanf(xs,"%fpt",&x)>0) {
+@@ -4010,20 +4008,34 @@ int  n;
+           }
+           p_x[j]=x_pos;
+           p_y[j]=y_pos;
+-        } else
+-#ifdef KPATHSEA
+-              if (!kpse_tex_hush ("special"))
+-#endif
+-          Warning("invalid point definition\n");
+-
+-        sf = NULL;
++        } else {
++	  Warning("invalid point definition");
++	}
+         break;
+ 
+       case FILL:
+-        (void) strcpy(spbuf, k.Val);
+-        i = sscanf(spbuf,"%d/%d %s",&j,&j1,xs);
++	/* 254 is STRSIZE-1. cpp should be used to construct that number. */
++        i = sscanf(k.Val,"%d/%d %254s",&j,&j1,xs);
+         if (i>1) {
+ #ifdef LJ
++	  if ( j < 0 || j >= MAX_SPECIAL_DEFPOINTS ) {
++	    Warning ("fill ignored, point %d must be between 0 and %d",
++		     j, MAX_SPECIAL_DEFPOINTS);
++	    break;
++	  }
++	  if ( p_x[j] == -1 ) {
++	    Warning ("fill ignored, point %d is undefined\n", j);
++	    break;
++	  }
++	  if ( j1 < 0 || j1 >= MAX_SPECIAL_DEFPOINTS ) {
++	    Warning ("fill ignored, point %d must be between 0 and %d",
++		     j1, MAX_SPECIAL_DEFPOINTS);
++	    break;
++	  }
++	  if ( p_x[j1] == -1 ) {
++	    Warning ("fill ignored, point %d is undefined\n", j1);
++	    break;
++	  }
+           SetPosn(p_x[j], p_y[j]);
+           x_pos = (long4)PIXROUND(p_x[j1]-p_x[j], hconv);
+           y_pos = (long4)PIXROUND(p_y[j1]-p_y[j], vconv);
+@@ -4043,22 +4055,18 @@ int  n;
+         if ((k.v.i >= 0) && (k.v.i < 101)) {
+           GrayScale = k.v.i;
+           GrayFill = _TRUE;
+-        } else
+-#ifdef KPATHSEA
+-           if (!kpse_tex_hush ("special"))
+-#endif
++        } else {
+           Warning( "Invalid gray scale (%d) given; ignored.", k.v.i);
++	}
+         break;
+ 
+       case PATTERN:
+         if ((k.v.i >= 0) && (k.v.i < 7)) {
+           Pattern = k.v.i;
+           GrayFill = _FALSE;
+-        } else
+-#ifdef KPATHSEA
+-           if (!kpse_tex_hush ("special"))
+-#endif
++        } else {
+           Warning( "Invalid pattern (%d) given; ignored.", k.v.i);
++	}
+         break;
+ 
+       case LLX: llx = k.v.i; break;
+@@ -4066,103 +4074,161 @@ int  n;
+       case URX: urx = k.v.i; break;
+       case URY: ury = k.v.i; break;
+       case RWI: rwi = k.v.i; break;
+-      case RHI: rhi = k.v.i; break;
++      case RHI:
++	if (!kpse_tex_hush ("special"))
++	  Warning("Whatever rhi was good for once, it is ignored now.");
++	break;
+ 
+       default:
+-#ifdef KPATHSEA
+-           if (!kpse_tex_hush ("special"))
+-#endif
+-        Warning("Can't handle %s=%s command; ignored.", k.Key, k.Val);
++	if ( !kpse_tex_hush ("special") )
++	  Warning("Can't handle %s=%s command; ignored.", k.Key, k.Val);
+         break;
+       }
+-      
+-    else
+-#ifdef KPATHSEA
+-           if (!kpse_tex_hush ("special"))
+-#endif
++
++    } else if (!kpse_tex_hush ("special")) {
+       Warning("Invalid keyword or value in \\special - <%s> ignored", k.Key);
++    }
++
++    free (k.Key);
++    if ( k.Val != NULL )  free(k.Val);
+   }
+ 
+-  if ( sf || psfile ) {
++  if ( include_file ) {
+     last_rx = last_ry = UNKNOWN;
+ #ifdef IBM3812
+     PMPflush;
+ #endif
+-    if (sf) {
+-      if (i == HPFILE) 
+-        CopyHPFile( sf );
+-      else 
+-        CopyFile( sf );
+-    }
+-    else
++
+ #ifdef LJ
+-      if (psfile) {
+-        /* int height = rwi * (urx - llx) / (ury - lly);*/
+-        int width  = urx - llx;
+-        int height = ury - lly;
+-        char cmd[255];
+-        int scale_factor    = 3000 * width / rwi;
+-        int adjusted_height = height * 300/scale_factor;
+-        int adjusted_llx    = llx    * 300/scale_factor;
+-        char *printer = "ljetplus"; /* use the most stupid one */
+-
+-
+-        char scale_file_name[255];
+-        char *scale_file = tmpnam(scale_file_name);
+-        char *pcl_file = tmpnam(NULL);  
+-        FILEPTR scalef;
+-
+-        if ( (scalef = BOUTOPEN(scale_file)) == FPNULL ) {
+-          Warning("Unable to open file %s for writing", scale_file );
+-          return;
+-        }
+-        fprintf(scalef, "%.2f %.2f scale\n%d %d translate\n",  
+-                300.0/scale_factor, 300.0/scale_factor,
+-                0, adjusted_height == height ? 0 : ury);
+-        BCLOSE( scalef );
++    if ( file_type == PSFile) {
++      /* int height = rwi * (urx - llx) / (ury - lly);*/
++      int width  = urx - llx;
++      int height = ury - lly;
++      char cmd[255];
++      char *cmd_format = "%s -q -dSIMPLE -dSAFER -dNOPAUSE -sDEVICE=%s -sOutputFile=%s %s %s showpage.ps -c quit";
++      char *gs_cmd;
++      int scale_factor, adjusted_height, adjusted_llx;
++      char *printer = "ljetplus"; /* use the most stupid one */
++
++      char pcl_file[STRSIZE];
++      char scale_file[STRSIZE];
++      FILEPTR scalef;
++
++      if ( urx == 0 || ury == 0 || rwi == 0 ) {
++	/* Since dvips' psfile special has a different syntax, this might
++	   well be one of those specials, i.e., a non-dviljk special. Then
++	   the Warning should be suppressable. */
++	if ( !kpse_tex_hush ("special") )
++	  Warning ("Ignoring psfile special without urx, ury and rwi attributes");
++	free (include_file);
++	return;
++      }
++      scale_factor    = 3000 * width / rwi;
++      adjusted_height = height * 300/scale_factor;
++      adjusted_llx    = llx    * 300/scale_factor;
++
++      /* We cannot use mkstemp, as we cannot pass two open file descriptors
++	 portably to Ghostscript. We don't want to use tmpnam() or tempnam()
++	 either, as they have tempfile creation race conditions. Instead we
++	 create a temporary directory with mkdtemp() -- if that's available.
++	 If not, we are thrown back to tempnam(), to get our functionality
++	 at all. We need to create the temporary directory only once per
++	 run; it will be deleted in AllDone(). */
++      if ( tmp_dir[0] == '\0' ) {
++	char * base_dir;
++	if ( (base_dir = getenv("TMPDIR")) == NULL ) {
++	  base_dir = "/tmp";
++	} else if ( strlen(base_dir) > STRSIZE - sizeof("/dviljkXXXXXX/include.pcl") ) {
++	  Warning ("TMPDIR %s is too long, using /tmp instead", base_dir);
++	  base_dir = "/tmp";
++	}
++	if ( base_dir[0] == '/'  && base_dir[1] == '\0' ) {
++	  Warning ("Feeling naughty, do we? / is no temporary directory, dude");
++	  base_dir = "/tmp";
++	}
++	strcpy (tmp_dir, base_dir);
++	strcat (tmp_dir, "/dviljkXXXXXX");
++	if ( mkdtemp(tmp_dir) == NULL ) {
++	  Warning ("Could not create temporary directory %s, errno = %d; ignoring include file special",
++		   tmp_dir, errno);
++	  return;
++	}
++      }
++      strcpy(pcl_file, tmp_dir);
++      strcat(pcl_file, "/include.pcl");
++      strcpy(scale_file, tmp_dir);
++      strcat(scale_file, "/scale.ps");
++
++      if ( (scalef = BOUTOPEN(scale_file)) == FPNULL ) {
++	Warning("Unable to open file %s for writing", scale_file );
++	free (include_file);
++	unlink(scale_file);		/* ignore error */
++	return;
++      }
++      fprintf(scalef, "%.2f %.2f scale\n%d %d translate\n",
++	      300.0/scale_factor, 300.0/scale_factor,
++	      0, adjusted_height == height ? 0 : ury);
++      BCLOSE( scalef );
+ 
+ #ifdef WIN32
+-	gs_path = getenv("GS_PATH");
+-	if (!gs_path)
+-	  gs_path = "gswin32c.exe";
+-        sprintf(cmd,"%s -q -dSIMPLE -dSAFER -dNOPAUSE -sDEVICE=%s -sOutputFile=%s %s %s showpage.ps -c quit",
+-		gs_path, printer, pcl_file, scale_file, psfile);
+-#else
+-        sprintf(cmd,"gs -q -dSIMPLE -dSAFER -dNOPAUSE -sDEVICE=%s -sOutputFile=%s %s %s showpage.ps -c quit",
+-                printer, pcl_file, scale_file, psfile);
+-#endif
+-#ifdef DEBUGGS   
+-        fprintf(stderr,
+-          "PS-file '%s' w=%d, h=%d, urx=%d, ury=%d, llx=%d, lly=%d, rwi=%d\n",
+-                psfile, urx - llx, height, urx,ury,llx,lly, rwi);
+-        fprintf(stderr,"%s\n",cmd);
++      if ( (gs_cmd = getenv("GS_PATH")) == NULL )
++	gs_cmd = "gswin32c.exe";
++#else
++      gs_cmd = "gs";
+ #endif
+-        if (system(cmd)) {
+-          Warning("execution of '%s' returned an error", cmd);
+-        } else {
+-#ifdef DEBUGGS   
+-          fprintf(stderr, "o=%d, h=%d, so=%d, sh=%d\n", 
+-                  llx, height, adjusted_llx, adjusted_height);
+-          
+-          fprintf(stderr, "OLD x=%d, y=%d\n", 
+-                  (int)PIXROUND(h, hconv) + x_goffset,
+-                  (int)PIXROUND(v, vconv) + y_goffset);
+-#endif  
+-          v -= 65536l*adjusted_height; /**300/scale_factor;*/
+-          h -= 65536l*adjusted_llx; /* *300/scale_factor;*/
+-          SetPosn(h, v);
+-#ifdef DEBUGGS   
+-          fprintf(stderr, "NEW x=%d, y=%d\n", 
+-                  (int)PIXROUND(h, hconv) + x_goffset,
+-                  (int)PIXROUND(v, vconv) + y_goffset);
+-#endif
+-
+-          CopyHPFile( pcl_file );
+-          /* unlink(pcl_file); */
+-          /* unlink(scale_file); */
+-        }
++      if ( strlen(cmd_format)-10 + strlen(gs_cmd) + strlen(printer) +
++	       strlen(pcl_file) + strlen(scale_file) + strlen(include_file) +1 >
++	   sizeof(cmd) ) {
++	Warning ("Ghostscript command for %s would be too long, skipping special", include_file);
++	free (include_file);
++	unlink(scale_file);		/* ignore errors */
++	unlink(pcl_file);
++	return;
++      }
++      sprintf(cmd, cmd_format,
++	      gs_cmd, printer, pcl_file, scale_file, include_file);
++#ifdef DEBUGGS
++      fprintf(stderr,
++	"PS-file '%s' w=%d, h=%d, urx=%d, ury=%d, llx=%d, lly=%d, rwi=%d\n",
++	      include_file, urx - llx, height, urx,ury,llx,lly, rwi);
++      fprintf(stderr,"%s\n",cmd);
++#endif
++      if (system(cmd)) {
++	Warning("execution of '%s' returned an error", cmd);
++      } else {
++#ifdef DEBUGGS
++	fprintf(stderr, "o=%d, h=%d, so=%d, sh=%d\n",
++		llx, height, adjusted_llx, adjusted_height);
++
++	fprintf(stderr, "OLD x=%d, y=%d\n",
++		(int)PIXROUND(h, hconv) + x_goffset,
++		(int)PIXROUND(v, vconv) + y_goffset);
++#endif
++	v -= 65536l*adjusted_height; /**300/scale_factor;*/
++	h -= 65536l*adjusted_llx; /* *300/scale_factor;*/
++	SetPosn(h, v);
++#ifdef DEBUGGS
++	fprintf(stderr, "NEW x=%d, y=%d\n",
++		(int)PIXROUND(h, hconv) + x_goffset,
++		(int)PIXROUND(v, vconv) + y_goffset);
++#endif
++
++	CopyHPFile( pcl_file );
+       }
++      unlink(scale_file);		/* ignore errors */
++      unlink(pcl_file);
++    }
++    else
+ #endif /* LJ */
++
++    if ( file_type == HPFile )
++      CopyHPFile( include_file );
++    else if ( file_type == VerbFile )
++      CopyFile( include_file );
++    else
++      Warning ("This can't happen: unknown file_type value %d", file_type);
++
++    if ( include_file != NULL )  free(include_file);
+   }
+ }
+ 
+@@ -4173,12 +4239,11 @@ int  n;
+ /**********************************************************************/
+ /*****************************  GetKeyStr  ****************************/
+ /**********************************************************************/
+-/* extract first keyword-value pair from string (value part may be null)
+- * return pointer to remainder of string
+- * return NULL if none found
++/* Extract first keyword-value pair from string (value part may be null),
++ * keyword and value are allocated and must be free by caller.
++ * Return pointer to remainder of string,
++ * return NULL if none found.
+  */
+-char    KeyStr[STRSIZE];
+-char    ValStr[STRSIZE];
+ #if NeedFunctionPrototypes
+ char *GetKeyStr(char *str, KeyWord *kw )
+ #else
+@@ -4187,39 +4252,46 @@ char    *str;
+ KeyWord *kw;
+ #endif
+ {
+-  char    *s, *k, *v, t;
++  char *s, *start;
++  char save_char, quote_char;
+   if ( !str )
+     return( NULL );
+   for (s = str; *s == ' '; s++)
+     ;          /* skip over blanks */
+   if (*s == '\0')
+     return( NULL );
+-  for (k = KeyStr; /* extract keyword portion */
+-       *s != ' ' && *s != '\0' && *s != '=';
+-       *k++ = *s++)
+-    ;
+-  *k = '\0';
+-  kw->Key = KeyStr;
+-  kw->Val = v = NULL;
++  start = s++;				/* start of keyword */
++  while ( *s != ' ' && *s != '\0' && *s != '=' )  /* locate end */
++    s++;
++  save_char = *s;
++  *s = '\0';
++  kw->Key = xstrdup(start);
++  kw->Val = NULL;
+   kw->vt = None;
+-  for ( ; *s == ' '; s++)
+-    ;            /* skip over blanks */
+-  if ( *s != '=' )         /* look for "=" */
++  if ( save_char == '\0' )		/* shortcut when we're at the end */
++    return (s);
++  *s = save_char;			/* restore keyword end char */
++  while ( *s == ' ' ) s++ ;		/* skip over blanks */
++  if ( *s != '=' )			/* no "=" means no value */
+     return( s );
+-  for (s++; *s == ' '; s++);      /* skip over blanks */
+-  if ( *s == '\'' || *s == '\"' )  /* get string delimiter */
+-    t = *s++;
++  for (s++; *s == ' '; s++)
++    ;					/* skip over blanks */
++  if ( *s == '\'' || *s == '\"' )	/* get string delimiter */
++    quote_char = *s++;
+   else
+-    t = ' ';
+-  for (v = ValStr; /* copy value portion up to delim */
+-       *s != t && *s != '\0';
+-       *v++ = *s++)
+-    ;
+-  if ( t != ' ' && *s == t )
+-    s++;
+-  *v = '\0';
+-  kw->Val = ValStr;
++    quote_char = ' ';
++  start = s;				/* no increment, might be "" as value */
++  while ( *s != quote_char && *s != '\0' )
++    s++;			  /* locate end of value portion */
++  save_char = *s;
++  *s = '\0';
++  kw->Val = xstrdup(start);
+   kw->vt = String;
++  if ( save_char != '\0' ) {		/* save_char is now quote_char */
++    *s = save_char;
++    if ( quote_char != ' ' )		/* we had real quote chars */
++      s++;
++  }
+   return( s );
+ }
+ 
+@@ -4281,7 +4353,7 @@ char    *a, *b;
+ #endif
+ {
+   char *x, *y;
+-  
++
+   for (x = a, y = b; *a; a++, b++)
+     if ( tolower(*a) != tolower(*b) )
+       return( _FALSE );
+@@ -4469,10 +4541,10 @@ int     Set;
+        *   process for simplicity always horizontally
+        */
+ 
+-      /* 
++      /*
+          fprintf(ERR_STREAM,"large box: w=%d,x=%d,y=%d\n",(int)yy,(int)xx,0);
+          */
+-      
++
+       hor_offset  = HOR_HALF(30);
+       MoveHor(hor_offset);
+       vert_offset = VERT_HALF(30);
+@@ -4547,7 +4619,7 @@ int     Set;
+       yy += (long4)pgsiz_dots - (long4)last_ry;
+ 
+     if ((yy>0) && (xx>0))
+-      EMIT4("\033*p-%ldY\033*c%lda%ldbP", 
++      EMIT4("\033*p-%ldY\033*c%lda%ldbP",
+             (long)yy - 1, (long)xx, (long)yy);
+ #endif
+     last_rx = last_ry = UNKNOWN;       /* next time full positioning */
+@@ -4708,7 +4780,7 @@ void OpenFontFile()
+       if ((fid = pixel_files[least_used].pixel_file_id) != NO_FILE) {
+         /* mark file as being closed in the entry */
+         fp = hfontptr;
+-        while (fp != NULL && fp->font_file_id != fid) 
++        while (fp != NULL && fp->font_file_id != fid)
+           fp = fp->next;
+         if (fp == NULL)
+           Fatal("Open file %x not found in font entry list.\n", fid);
+@@ -4763,9 +4835,9 @@ void OpenFontFile()
+       while ((fp != NULL) && (fp->font_file_id != f))
+         fp = fp->next;
+ 
+-      if (fp == NULL) 
++      if (fp == NULL)
+         Fatal("Open file %x not found in font entry list.\n",f);
+-      else 
++      else
+         fp->font_file_id = FPNULL;
+     }
+     BCLOSE(f);
+@@ -4819,13 +4891,14 @@ struct font_entry *fontptr;
+      the resident fonts.  */
+   if (tfm_read_info(fontptr->n, &tfm_info)
+       && tfm_info.family[0]
+-      && strcmp((char *)tfm_info.family, "HPAUTOTFM") == 0) {
++      && EQ((char *)tfm_info.family, "HPAUTOTFM")) {
+     unsigned i;
+     double factor = fontptr->s / (double)0x100000;
+ 
+     resident_count++;
+     fontptr->resident_p = _TRUE;
+-    strcpy(fontptr->symbol_set, (char *)tfm_info.coding_scheme);
++    strncpy(fontptr->symbol_set, (char *)tfm_info.coding_scheme, 39);
++    fontptr->symbol_set[39] = '\0';
+     fontptr->resid = tfm_info.typeface_id;
+     fontptr->spacing = tfm_info.spacing;
+     fontptr->style = tfm_info.style;
+@@ -4878,7 +4951,7 @@ struct font_entry *fontptr;
+     fontptr->resident_p = _FALSE;
+ 
+     if (tfm_info.family[0]
+-        && strcmp((char *)tfm_info.family, "UNSPECIFIED") == 0) {
++        && EQ((char *)tfm_info.family, "UNSPECIFIED")) {
+       Warning("font family for %s is UNSPECIFIED; need to run dvicopy?",
+               fontptr->n);
+       fontptr->font_file_id = NO_FILE;
+@@ -5005,7 +5078,7 @@ long4    k;
+   GetBytes(dvifp, tfontptr->n, tfontptr->a + tfontptr->l);
+   tfontptr->n[tfontptr->a+tfontptr->l] = '\0';
+ 
+-  tfontptr->font_mag = 
++  tfontptr->font_mag =
+     (long4)((ActualFactor((long4)(1000.0*tfontptr->s/(double)tfontptr->d+0.5))
+              * ActualFactor(mag)
+ #ifdef USEPXL
+@@ -5031,10 +5104,9 @@ printf("[%ld]=%lf * %lf * %lf + 0.5 = %l
+   if (tfontptr->resident_p)
+     return;
+ 
+-  if (!(resident_font_located)) {
++  if (!(resident_font_located))
+ #endif
+ 
+-#ifdef KPATHSEA
+     {
+       kpse_glyph_file_type font_ret;
+       char *name;
+@@ -5042,14 +5114,14 @@ printf("[%ld]=%lf * %lf * %lf + 0.5 = %l
+         = kpse_magstep_fix ((unsigned) (tfontptr->font_mag / 5.0 + .5),
+                             RESOLUTION, NULL);
+       tfontptr->font_mag = dpi * 5; /* save correct dpi */
+-      
++
+       name = kpse_find_pk (tfontptr->n, dpi, &font_ret);
+       if (name)
+         {
+           font_found = _TRUE;
+-          strcpy (tfontptr->name, name);
+-          free (name);
+-          
++          tfontptr->name = name;
++          allocated_storage += strlen(name)+1;
++
+           if (!FILESTRCASEEQ (tfontptr->n, font_ret.name)) {
+               fprintf (stderr,
+                        "dvilj: Font %s not found, using %s at %d instead.\n",
+@@ -5071,29 +5143,6 @@ printf("[%ld]=%lf * %lf * %lf + 0.5 = %l
+             tfontptr->n, dpi);
+         }
+     }
+-#else /* not KPATHSEA */
+-    if (!(findfile(PXLpath,
+-                   tfontptr->n,
+-                   tfontptr->font_mag,
+-                   tfontptr->name,
+-                   _FALSE,
+-                   0))) {
+-      Warning(tfontptr->name); /* contains error messsage */
+-      tfontptr->font_file_id = NO_FILE;
+-#ifdef __riscos
+-      MakeMetafontFile(PXLpath, tfontptr->n, tfontptr->font_mag);
+-#endif
+-    }
+-    else {
+-      font_found = _TRUE;
+-      if (G_verbose)
+-        fprintf(ERR_STREAM,"%d: using font <%s>\n", plusid, tfontptr->name);
+-    }
+-#endif /* not KPATHSEA */
+-
+-#ifdef LJ_RESIDENT_FONTS
+-  }
+-#endif
+ 
+   tfontptr->plusid = plusid;
+   plusid++;
+@@ -5107,7 +5156,7 @@ printf("[%ld]=%lf * %lf * %lf + 0.5 = %l
+           HANDLE_MAX_FONTS);
+ #endif
+   if (tfontptr != pfontptr) {
+-    if (font_found) 
++    if (font_found)
+       OpenFontFile();
+     else
+       pxlfp = NO_FILE;
+@@ -5146,7 +5195,7 @@ printf("[%ld]=%lf * %lf * %lf + 0.5 = %l
+     if (t == PK_PRE) {
+       unsigned char   temp_byte;
+       temp_byte = (unsigned char) NoSignExtend(pxlfp, 1);
+-      if (temp_byte != PK_ID) 
++      if (temp_byte != PK_ID)
+         Fatal( "Wrong Version of pk file!  (%d should be 89)\n",
+                (int)temp_byte);
+       else
+@@ -5163,7 +5212,7 @@ printf("[%ld]=%lf * %lf * %lf + 0.5 = %l
+ 
+     tfontptr->magnification = NoSignExtend(pxlfp, 4);
+     tfontptr->designsize    = NoSignExtend(pxlfp, 4);
+-        
++
+     if (tfontptr->id == id1001)
+       FSEEK(pxlfp, (long)(NoSignExtend(pxlfp, 4) * 4), SEEK_SET);
+     else
+@@ -5232,7 +5281,7 @@ printf("[%ld]=%lf * %lf * %lf + 0.5 = %l
+     hppp = NoSignExtend(pxlfp, 4);
+     vppp = NoSignExtend(pxlfp, 4);
+     if (hppp != vppp)
+-      Warning("aspect ratio is %ld:%ld (should be 1:1)!", 
++      Warning("aspect ratio is %ld:%ld (should be 1:1)!",
+               (long)hppp, (long)vppp);
+     tfontptr->magnification = (long4)(hppp * 72.27 * 5 / 65536l + 0.5);
+ 
+@@ -5515,7 +5564,7 @@ void SkipFontDef()
+ {
+   int     a, l;
+   char    n[STRSIZE];
+-  
++
+   (void) NoSignExtend(dvifp, 4);
+   (void) NoSignExtend(dvifp, 4);
+   (void) NoSignExtend(dvifp, 4);
+@@ -5524,7 +5573,7 @@ void SkipFontDef()
+   GetBytes(dvifp, n, a + l);
+ }
+ 
+-    
++
+ 
+ /*------------------------ end dvifont.c -------------------------------*/
+ 
+@@ -5598,7 +5647,7 @@ Warning(va_alist)
+ #endif
+   if ( G_nowarn || G_quiet )
+     return;
+-  
++
+   fprintf(ERR_STREAM, "%s: warning: ", G_progname);
+   vfprintf(ERR_STREAM, fmt, args);
+   fprintf(ERR_STREAM, "\n");
