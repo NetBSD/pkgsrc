@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1000 2008/05/05 15:32:25 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1001 2008/05/05 22:49:12 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1752,3 +1752,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/youtube-dl to 20080420 [tnn 2008-05-05]
 	Updated devel/bzr to 1.4 [xtraeme 2008-05-05]
 	Updated chat/inspircd to 1.1.19 [adrianp 2008-05-05]
+	Updated print/teTeX3-bin to 3.0nb16 [tonnerre 2008-05-05]
