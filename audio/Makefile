@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.372 2008/05/01 16:07:13 xtraeme Exp $
+# $NetBSD: Makefile,v 1.373 2008/05/05 10:20:50 drochner Exp $
 #
 
 COMMENT=	Audio tools
@@ -260,6 +260,7 @@ SUBDIR+=	py-cddb
 SUBDIR+=	py-daap
 SUBDIR+=	py-karaoke
 SUBDIR+=	py-mad
+SUBDIR+=	py-mpd
 SUBDIR+=	py-musicbrainz
 SUBDIR+=	py-musique
 SUBDIR+=	py-mutagen
