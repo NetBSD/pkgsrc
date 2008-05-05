@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.5 2008/04/25 20:39:11 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/05 08:25:14 tnn Exp $
 #
 
 DISTNAME=	youtube-dl
-PKGNAME=	youtube-dl-20080308
+PKGNAME=	youtube-dl-20080420
 CATEGORIES=	net
 MASTER_SITES=	http://www.arrakis.es/~rggi3/youtube-dl/
 EXTRACT_SUFX=	# none
