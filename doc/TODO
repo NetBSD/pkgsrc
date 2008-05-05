@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7261 2008/05/03 01:39:13 obache Exp $
+$NetBSD: TODO,v 1.7262 2008/05/05 05:25:08 martti Exp $
 
 Suggested new packages
 ======================
@@ -1165,7 +1165,6 @@ Suggested package updates
 	o roxirc-2.0
 	o rp-l2tp-0.4
 	o rpm-5.1.0
-	o rrdtool-1.2.27
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o ruby-clearsilver-0.10.5
