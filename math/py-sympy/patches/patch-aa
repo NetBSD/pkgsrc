@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/05/05 19:10:02 drochner Exp $
+
+--- setup.py.orig	2008-02-17 09:47:35.000000000 +0100
++++ setup.py
+@@ -273,10 +273,10 @@ setup(
+       url = 'http://code.google.com/p/sympy',
+       packages = ['sympy'] + [ m[1] for m in modules ] + tests + \
+         pyglet_packages,
+-      scripts = ['bin/isympy'],
++      scripts = ['bin/isympy' + sys.version[0:3]],
+       ext_modules = [],
+       package_data = { 'sympy.utilities.mathml' : ['data/*.xsl'] },
+-      data_files = [('share/man/man1', ['doc/man/isympy.1'])],
++      data_files = [('man/man1', ['doc/man/isympy' + sys.version[0:3] + '.1'])],
+       cmdclass    = {'test': test_sympy,
+                      'test_core' : test_sympy_core,
+                      'test_doc' : test_sympy_doc,
