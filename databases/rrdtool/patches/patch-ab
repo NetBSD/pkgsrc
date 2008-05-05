@@ -1,0 +1,30 @@
+$NetBSD: patch-ab,v 1.9 2008/05/05 05:25:20 martti Exp $
+
+--- src/rrd_getopt1.c.orig	2008-02-17 12:26:32.000000000 +0200
++++ src/rrd_getopt1.c	2008-05-05 08:18:29.000000000 +0300
+@@ -19,12 +19,6 @@
+    write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+    Boston, MA 02111-1307, USA.  */
+ 
+-#ifdef HAVE_CONFIG_H
+-#include "../rrd_config.h"
+-#endif
+-
+-#include "rrd_getopt.h"
+-
+ #if !defined (__STDC__) || !__STDC__
+ /* This is a separate conditional since some stdc systems
+    reject `defined (const)'.  */
+@@ -33,6 +27,12 @@
+ #endif
+ #endif
+ 
++#ifdef HAVE_CONFIG_H
++#include "../rrd_config.h"
++#endif
++
++#include "rrd_getopt.h"
++
+ #include <stdio.h>
+ 
+ /* Comment out all this code if we are using the GNU C Library, and are not
