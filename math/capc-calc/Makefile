@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.33 2007/09/18 19:40:19 drochner Exp $
+# $NetBSD: Makefile,v 1.34 2008/05/05 18:54:05 drochner Exp $
 #
 
-DISTNAME=	calc-2.12.2
+DISTNAME=	calc-2.12.3.0
 PKGNAME=	capc-${DISTNAME:S/t/./}
 CATEGORIES=	math
 MASTER_SITES=	http://www.isthe.com/chongo/src/calc/ \
 		http://prdownloads.sourceforge.net/calc/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.isthe.com/chongo/tech/comp/calc/
