@@ -1,0 +1,13 @@
+$NetBSD: patch-an,v 1.1 2008/05/05 22:48:22 tonnerre Exp $
+
+--- texk/dviljk/configure.in.orig	1999-02-08 22:42:01.000000000 +0100
++++ texk/dviljk/configure.in
+@@ -14,6 +14,8 @@ dnl These tests prevent reliable cross-c
+ AC_C_CHAR_UNSIGNED
+ AC_CHECK_SIZEOF(long)
+ 
++AC_CHECK_FUNCS(rmdir unlink mkdtemp)
++
+ AC_OUTPUT(Makefile)
+ dnl Update stamp-auto, since we just remade `c-auto.h'.
+ date >stamp-auto

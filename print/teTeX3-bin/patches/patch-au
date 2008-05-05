@@ -1,0 +1,100 @@
+$NetBSD: patch-au,v 1.1 2008/05/05 22:48:22 tonnerre Exp $
+
+--- texk/dviljk/dvi2xx.h
++++ texk/dviljk/dvi2xx.h
+@@ -10,8 +10,8 @@
+ 
+ #ifdef KPATHSEA
+ #include <kpathsea/config.h>
++#include <kpathsea/c-std.h>
+ #include <kpathsea/c-limits.h>
+-#include <kpathsea/c-memstr.h>
+ #include <kpathsea/magstep.h>
+ #include <kpathsea/proginit.h>
+ #include <kpathsea/progname.h>
+@@ -24,6 +24,7 @@
+ #include <string.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <unistd.h>
+ #ifdef  unix
+ #include <limits.h>
+ #endif
+@@ -41,9 +42,6 @@
+ #ifdef MSC5
+ #include <dos.h>     /* only for binaryopen on device  */
+ #endif
+-#if defined (unix) && !defined (KPATHSEA)
+-#include <limits.h>
+-#endif
+ 
+ 
+ #include "config.h"
+@@ -116,6 +114,7 @@
+ #define  HUGE_SIZE  (unsigned char) 2
+ #define  HUGE_CHAR_PATTERN 32767l
+ #define  BYTES_PER_PIXEL_LINE 500    /* max number of bytes per pixel line */
++#define  MAX_SPECIAL_DEFPOINTS 80    /* max number of defpoint specials */
+ 
+ 
+ #define PK_POST 245
+@@ -281,7 +280,14 @@ char *MFMODE     = MFMODE600;
+ #define VisChar(c) (unsigned char)(c)
+ #endif
+ 
+-#define GetBytes(fp,buf,n) read_multi(buf,1,n,fp) /* used to be a function */
++/* Used to be a function. buf is always an array, never a pointer.
++   Without that invariant, we would have to introduce full dynamic
++   memory management in this driver -- probably it would be easier to
++   write a new one. [27 Jun 07 -js] */
++#define GetBytes(fp,buf,n) \
++    ( sizeof(buf) != sizeof(void *) && sizeof(buf) > n ? \
++        read_multi(buf, 1, n, fp) \
++      : Fatal("Try to read %d bytes in an array of size %d", n, sizeof(buf)) )
+ 
+ 
+ /**********************************************************************/
+@@ -307,6 +313,7 @@ int     printf();
+ int     sscanf();
+ int     strcmp();
+ char   *strcpy();
++char   *strncpy();
+ #   ifdef MSC5
+ unsigned int strlen();
+ #   endif
+@@ -393,7 +400,7 @@ struct font_entry {    /* font entry */
+     char n[STRSIZE];          /* FNT_DEF command parameters                */
+     long4    font_mag;         /* computed from FNT_DEF s and d parameters  */
+     /*char psname[STRSIZE];*/ /* PostScript name of the font               */
+-    char    name[STRSIZE];    /* full name of PXL file                     */
++    char    *name;	       /* full name of PXL file                     */
+     FILEPTR font_file_id;      /* file identifier (NO_FILE if none)         */
+ #ifdef USEPXL
+     long4    magnification;    /* magnification read from PXL file          */
+@@ -487,8 +494,8 @@ void    LoadAChar DVIPROTO((long4, regis
+ long4   NoSignExtend DVIPROTO((FILEPTR, int));
+ void    OpenFontFile DVIPROTO((void));
+ long4   PixRound DVIPROTO((long4, long4));
+-void    PkRaster DVIPROTO((struct char_entry *, int)); 
+-void    RasterLine DVIPROTO((struct char_entry *, unsigned int, 
++void    PkRaster DVIPROTO((struct char_entry *, int));
++void    RasterLine DVIPROTO((struct char_entry *, unsigned int,
+ 			     unsigned int, unsigned char *));
+ void    RasterChar DVIPROTO((struct char_entry *));
+ void    ReadFontDef DVIPROTO((long4));
+@@ -534,11 +541,12 @@ bool    LastPageSpecified = _FALSE;
+ #ifndef KPATHSEA
+ char   *PXLpath = FONTAREA;
+ #endif
+-char    G_progname[STRSIZE];     /* program name                        */
+-char    filename[STRSIZE];       /* DVI file name                       */
+-char    rootname[STRSIZE];       /* DVI filename without extension      */
++char   *G_progname;		 /* program name                        */
++char   *filename;	         /* DVI file name                       */
++char   *rootname;		 /* DVI filename without extension      */
+ char   *HeaderFileName = "";     /* file name & path of Headerfile      */
+ char   *EmitFileName = "";       /* file name & path for output         */
++char    tmp_dir[STRSIZE] = "";	 /* temporary directory for auxilliary files */
+ #ifdef IBM3812
+ bool    FirstAlternate = _FALSE; /* first page from alternate casette ?   */
+ #endif
