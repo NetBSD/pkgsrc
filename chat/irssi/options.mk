@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2007/11/25 13:19:04 adrianp Exp $
+# $NetBSD: options.mk,v 1.7 2008/05/05 07:44:29 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.irssi
 PKG_SUPPORTED_OPTIONS=	inet6 irssi-perl ssl
@@ -23,6 +23,8 @@ CONFIGURE_ARGS+=	--with-perl=no
 
 .if !empty(PKG_OPTIONS:Minet6)
 CONFIGURE_ARGS+=	--enable-ipv6
+.else
+CONFIGURE_ARGS+=	--disable-ipv6
 .endif
 
 .if !empty(PKG_OPTIONS:Mssl)
