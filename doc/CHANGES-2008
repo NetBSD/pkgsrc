@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.999 2008/05/05 11:18:51 xtraeme Exp $
+$NetBSD: CHANGES-2008,v 1.1000 2008/05/05 15:32:25 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1751,3 +1751,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated editors/xemacs-current to 21.5.27nb2 [tonnerre 2008-05-04]
 	Updated net/youtube-dl to 20080420 [tnn 2008-05-05]
 	Updated devel/bzr to 1.4 [xtraeme 2008-05-05]
+	Updated chat/inspircd to 1.1.19 [adrianp 2008-05-05]
