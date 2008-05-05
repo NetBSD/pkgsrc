@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.997 2008/05/04 22:28:01 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.998 2008/05/05 08:26:54 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1749,3 +1749,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/roundcube to 0.1.1 [adrianp 2008-05-04]
 	Updated lang/php5 to 5.2.6 [adrianp 2008-05-04]
 	Updated editors/xemacs-current to 21.5.27nb2 [tonnerre 2008-05-04]
+	Updated net/youtube-dl to 20080420 [tnn 2008-05-05]
