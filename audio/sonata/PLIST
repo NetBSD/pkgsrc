@@ -1,22 +1,40 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/14 14:24:22 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/05/05 10:41:21 drochner Exp $
 bin/sonata
-${PYSITELIB}/audioscrobbler.py
-${PYSITELIB}/audioscrobbler.pyc
-${PYSITELIB}/audioscrobbler.pyo
 ${PYSITELIB}/mmkeys.so
-${PYSITELIB}/mpdclient3.py
-${PYSITELIB}/mpdclient3.pyc
-${PYSITELIB}/mpdclient3.pyo
-${PYSITELIB}/sonata.py
-${PYSITELIB}/sonata.pyc
-${PYSITELIB}/sonata.pyo
+${PYSITELIB}/sonata/__init__.py
+${PYSITELIB}/sonata/__init__.pyc
+${PYSITELIB}/sonata/__init__.pyo
+${PYSITELIB}/sonata/audioscrobbler.py
+${PYSITELIB}/sonata/audioscrobbler.pyc
+${PYSITELIB}/sonata/audioscrobbler.pyo
+${PYSITELIB}/sonata/img.py
+${PYSITELIB}/sonata/img.pyc
+${PYSITELIB}/sonata/img.pyo
+${PYSITELIB}/sonata/main.py
+${PYSITELIB}/sonata/main.pyc
+${PYSITELIB}/sonata/main.pyo
+${PYSITELIB}/sonata/misc.py
+${PYSITELIB}/sonata/misc.pyc
+${PYSITELIB}/sonata/misc.pyo
+${PYSITELIB}/sonata/mpdhelper.py
+${PYSITELIB}/sonata/mpdhelper.pyc
+${PYSITELIB}/sonata/mpdhelper.pyo
+${PYSITELIB}/sonata/tray.py
+${PYSITELIB}/sonata/tray.pyc
+${PYSITELIB}/sonata/tray.pyo
+${PYSITELIB}/sonata/ui.py
+${PYSITELIB}/sonata/ui.pyc
+${PYSITELIB}/sonata/ui.pyo
 man/man1/sonata.1
 share/applications/sonata.desktop
+share/locale/ar/LC_MESSAGES/sonata.mo
 share/locale/be@latin/LC_MESSAGES/sonata.mo
+share/locale/ca/LC_MESSAGES/sonata.mo
 share/locale/cs/LC_MESSAGES/sonata.mo
 share/locale/da/LC_MESSAGES/sonata.mo
 share/locale/de/LC_MESSAGES/sonata.mo
 share/locale/es/LC_MESSAGES/sonata.mo
+share/locale/et/LC_MESSAGES/sonata.mo
 share/locale/fi/LC_MESSAGES/sonata.mo
 share/locale/fr/LC_MESSAGES/sonata.mo
 share/locale/it/LC_MESSAGES/sonata.mo
@@ -29,6 +47,7 @@ share/locale/uk/LC_MESSAGES/sonata.mo
 share/locale/zh_CN/LC_MESSAGES/sonata.mo
 share/pixmaps/sonata-album.png
 share/pixmaps/sonata-artist.png
+share/pixmaps/sonata-case.png
 share/pixmaps/sonata-stock_volume-max.png
 share/pixmaps/sonata-stock_volume-med.png
 share/pixmaps/sonata-stock_volume-min.png
@@ -46,4 +65,6 @@ share/sonata/TODO
 share/sonata/TRANSLATORS
 @dirrm share/sonata
 @comment in xdg-dirs: @dirrm share/pixmaps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor
 @comment in xdg-dirs: @dirrm share/applications
+@dirrm ${PYSITELIB}/sonata
