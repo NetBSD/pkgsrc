@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.15 2007/09/25 10:54:09 hira Exp $
+@comment $NetBSD: PLIST,v 1.16 2008/05/06 06:26:59 bjs Exp $
 bin/rhythmbox
 bin/rhythmbox-client
 lib/librhythmbox-core.la
 lib/rhythmbox/plugins/audiocd/audiocd.rb-plugin
 lib/rhythmbox/plugins/audiocd/libaudiocd.la
 lib/rhythmbox/plugins/audiocd/multiple-album.glade
+lib/rhythmbox/plugins/audioscrobbler/as-icon.svg
 lib/rhythmbox/plugins/audioscrobbler/audioscrobbler-prefs.glade
 lib/rhythmbox/plugins/audioscrobbler/audioscrobbler-ui.xml
 lib/rhythmbox/plugins/audioscrobbler/audioscrobbler.rb-plugin
