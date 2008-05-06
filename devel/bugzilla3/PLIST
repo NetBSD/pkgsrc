@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/08/27 17:51:33 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/05/06 19:45:54 adrianp Exp $
 share/bugzilla/Bugzilla.pm
 share/bugzilla/Bugzilla/Attachment.pm
 share/bugzilla/Bugzilla/Attachment/PatchReader.pm
@@ -92,6 +92,9 @@ share/bugzilla/config.cgi
 share/bugzilla/createaccount.cgi
 share/bugzilla/describecomponents.cgi
 share/bugzilla/describekeywords.cgi
+share/bugzilla/docs/html/keywords.html
+share/bugzilla/docs/html/multiple-bz-dbs.html
+share/bugzilla/docs/html/sanitycheck.html
 share/bugzilla/docs/html/Bugzilla-Guide.html
 share/bugzilla/docs/html/about.html
 share/bugzilla/docs/html/administration.html
@@ -178,7 +181,6 @@ share/bugzilla/docs/html/using.html
 share/bugzilla/docs/html/versions.html
 share/bugzilla/docs/html/voting.html
 share/bugzilla/docs/html/whining.html
-share/bugzilla/docs/html/x834.html
 share/bugzilla/duplicates.cgi
 share/bugzilla/duplicates.xul
 share/bugzilla/editclassifications.cgi
