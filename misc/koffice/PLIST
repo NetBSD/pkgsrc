@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2008/04/12 22:43:04 jlam Exp $
+@comment $NetBSD: PLIST,v 1.28 2008/05/06 23:50:42 markd Exp $
 bin/karbon
 bin/kchart
 bin/kexi
@@ -504,8 +504,6 @@ lib/kde3/libkprkword.la
 lib/kde3/libkrita_openexr_export.la
 lib/kde3/libkrita_openexr_import.la
 lib/kde3/libkrita_raw_import.la
-lib/kde3/libkritagmagickexport.la
-lib/kde3/libkritagmagickimport.la
 lib/kde3/libkritajpegexport.la
 lib/kde3/libkritajpegimport.la
 lib/kde3/libkritapart.la
@@ -1595,7 +1593,6 @@ share/icons/hicolor/scalable/apps/koshell.svgz
 share/icons/locolor/16x16/apps/kudesigner.png
 share/icons/locolor/32x32/apps/kudesigner.png
 share/kde/applnk/.hidden/krita_jpeg.desktop
-share/kde/applnk/.hidden/krita_magick.desktop
 share/kde/applnk/.hidden/krita_openexr.desktop
 share/kde/applnk/.hidden/krita_pdf.desktop
 share/kde/applnk/.hidden/krita_png.desktop
@@ -4674,8 +4671,6 @@ share/kde/services/krita_gray_u16_plugin.desktop
 share/kde/services/krita_jpeg_export.desktop
 share/kde/services/krita_jpeg_import.desktop
 share/kde/services/krita_lms_f32_plugin.desktop
-share/kde/services/krita_magick_export.desktop
-share/kde/services/krita_magick_import.desktop
 share/kde/services/krita_openexr_export.desktop
 share/kde/services/krita_openexr_import.desktop
 share/kde/services/krita_pdf_import.desktop

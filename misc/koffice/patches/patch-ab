@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.7 2006/10/17 09:33:15 markd Exp $
+$NetBSD: patch-ab,v 1.8 2008/05/06 23:50:42 markd Exp $
 
---- configure.orig	2006-10-08 12:08:50.000000000 +1300
+--- configure.orig	2007-05-31 09:56:35.000000000 +1200
 +++ configure
-@@ -41734,7 +41734,7 @@ fi
+@@ -33848,6 +33848,7 @@ echo "${ECHO_T}$kde_cv_path" >&6; }
+ 
+    fi
+ 
++GRAPHICS_MAGICK_CONFIG=
+ 
+ if test -n "$GRAPHICS_MAGICK_CONFIG"; then
+  vers=`$GRAPHICS_MAGICK_CONFIG --version 2>/dev/null | $AWK 'BEGIN { FS = "."; } { printf "%d", ($1 * 1000 + $2) * 1000 + $3;}'`
+@@ -38534,7 +38535,7 @@ fi
  
  
  
@@ -11,7 +19,7 @@ $NetBSD: patch-ab,v 1.7 2006/10/17 09:33:15 markd Exp $
    compile_kexi_macros_plugin_TRUE=
    compile_kexi_macros_plugin_FALSE='#'
  else
-@@ -41743,7 +41743,7 @@ else
+@@ -38543,7 +38544,7 @@ else
  fi
  
  
@@ -20,7 +28,7 @@ $NetBSD: patch-ab,v 1.7 2006/10/17 09:33:15 markd Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define KEXI_MACROS_SUPPORT 1
-@@ -42176,6 +42176,10 @@ else
+@@ -38928,6 +38929,10 @@ else
    version=""2.5""
  fi
  

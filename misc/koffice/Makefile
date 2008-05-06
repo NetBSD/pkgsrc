@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.101 2008/04/25 20:39:10 joerg Exp $
+# $NetBSD: Makefile,v 1.102 2008/05/06 23:50:42 markd Exp $
 
 DISTNAME=	koffice-1.6.3
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	misc kde
 MASTER_SITES=	${MASTER_SITE_KDE:=koffice-1.6.3/src/}
 EXTRACT_SUFX=	.tar.bz2
@@ -56,7 +56,6 @@ post-install:
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
-.include "../../graphics/GraphicsMagick/buildlink3.mk"
 .include "../../graphics/ImageMagick/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/jasper/buildlink3.mk"
