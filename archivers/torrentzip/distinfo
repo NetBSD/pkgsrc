@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/05/06 08:35:15 dillo Exp $
+
+SHA1 (trrntzip_v02_src.tar.gz) = ad2487d7e9edc6608358104df8367da3d535fd2b
+RMD160 (trrntzip_v02_src.tar.gz) = 1a6718babc3cfb42e99fadbb53360ecb4f15b5b9
+Size (trrntzip_v02_src.tar.gz) = 46971 bytes
+SHA1 (patch-aa) = 639626aab0ab5f3a359cde057d83f0291f1476cb
