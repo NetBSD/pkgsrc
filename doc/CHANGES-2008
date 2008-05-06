@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1001 2008/05/05 22:49:12 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1002 2008/05/06 01:49:38 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1753,3 +1753,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/bzr to 1.4 [xtraeme 2008-05-05]
 	Updated chat/inspircd to 1.1.19 [adrianp 2008-05-05]
 	Updated print/teTeX3-bin to 3.0nb16 [tonnerre 2008-05-05]
+	Updated mail/dbmail to 2.2.10 [obache 2008-05-06]
