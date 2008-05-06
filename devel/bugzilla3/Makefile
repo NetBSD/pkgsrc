@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.4 2008/03/03 17:45:34 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/06 19:45:54 adrianp Exp $
 #
 
-DISTNAME=	bugzilla-3.0.2
+DISTNAME=	bugzilla-3.0.4
 CATEGORIES=	www devel
 MASTER_SITES=	${MASTER_SITE_MOZILLA_ALL:=webtools/}
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.bugzilla.org/
 COMMENT=	Web based bug tracking system
+
+CONFLICTS+=	bugzilla-2.[0-9]*
 
 DEPENDS+=	p5-CGI>=2.93:../../www/p5-CGI
 DEPENDS+=	p5-DBI>=1.41:../../databases/p5-DBI
