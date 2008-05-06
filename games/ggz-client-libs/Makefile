@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/04/26 13:38:15 markd Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/06 23:47:06 markd Exp $
 #
 
 DISTNAME=	ggz-client-libs-0.0.14.1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	http://mirrors.ibiblio.org/pub/mirrors/ggzgamingzone/ggz/0.0.14.1/
 
@@ -22,6 +22,7 @@ CONF_FILES+=	${PREFIX}/share/examples/ggz-client-libs/ggz.menu \
 		${PKG_SYSCONFDIR}/xdg/menus/ggz.menu
 CONF_FILES+=	${PREFIX}/share/examples/ggz-client-libs/ggz.merge.menu \
 		${PKG_SYSCONFDIR}/xdg/menus/ggz.merge.menu
+CONF_FILES+=	/dev/null ${PKG_SYSCONFDIR}/ggz.modules
 
 .include "../../games/libggz/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
