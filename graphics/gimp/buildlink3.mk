@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.24 2008/03/06 14:53:50 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.25 2008/05/06 13:25:14 dsainty Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GIMP_BUILDLINK3_MK:=	${GIMP_BUILDLINK3_MK}+
@@ -17,9 +17,15 @@ BUILDLINK_ABI_DEPENDS.gimp+=	gimp>=2.4.4
 BUILDLINK_PKGSRCDIR.gimp?=	../../graphics/gimp
 .endif	# GIMP_BUILDLINK3_MK
 
+pkgbase := gimp
+.include "../../mk/pkg-build-options.mk"
+
+.if !empty(PKG_BUILD_OPTIONS.gimp:Maalib)
+.include "../../graphics/aalib/buildlink3.mk"
+.endif
+
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
-.include "../../graphics/aalib/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
