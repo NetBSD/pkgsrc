@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/06 08:35:15 dillo Exp $
+bin/trrntzip
+share/doc/torrentzip/README
+@dirrm share/doc/torrentzip
