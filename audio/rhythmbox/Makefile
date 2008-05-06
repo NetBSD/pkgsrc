@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.55 2008/03/06 14:53:48 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2008/05/06 06:26:59 bjs Exp $
 #
 
-DISTNAME=	rhythmbox-0.9.8
-PKGREVISION=	7
+DISTNAME=	rhythmbox-0.10.1
 CATEGORIES=	audio gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/0.9/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/rhythmbox/0.10/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.rhythmbox.org/
 COMMENT=	Music management application for GNOME
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_DIRS+=		gnome2-1.5
@@ -39,7 +40,7 @@ BUILDLINK_API_DEPENDS.totem+=		{totem,totem-xine}>=1.1.5
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
-.include "../../multimedia/totem/buildlink3.mk"
+.include "../../multimedia/totem-pl-parser/buildlink3.mk"
 .include "../../net/libsoup-devel/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
