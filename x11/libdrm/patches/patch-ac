@@ -1,0 +1,30 @@
+$NetBSD: patch-ac,v 1.1 2008/05/06 06:20:25 bjs Exp $
+
+--- libdrm/xf86drm.h.orig	2006-11-08 16:55:14.000000000 -0500
++++ libdrm/xf86drm.h
+@@ -37,7 +37,11 @@
+ #define _XF86DRM_H_
+ 
+ #include <stdarg.h>
++#if @ATOMIC_OPS_CHECK@	/* configured by pkgsrc */
++#include <sys/atomic.h>
++#else
+ #include <sys/types.h>
++#endif
+ #include <drm.h>
+ 
+ 				/* Defaults, if nothing set in xf86config */
+@@ -305,7 +309,12 @@ typedef struct _drmSetVersion {
+ #define DRM_LOCK_HELD  0x80000000U /**< Hardware lock is held */
+ #define DRM_LOCK_CONT  0x40000000U /**< Hardware lock is contended */
+ 
+-#if defined(__GNUC__) && (__GNUC__ >= 2)
++#if @ATOMIC_OPS_CHECK@ /* configured by pkgsrc */
++
++#define DRM_CAS(lock, old, new, __ret)	\
++ (__ret = atomic_cas_uint(&__drm_dummy_lock(lock), (old), (new)) != (old));
++
++#elif defined(__GNUC__) && (__GNUC__ >= 2)
+ # if defined(__i386) || defined(__AMD64__) || defined(__x86_64__) || defined(__amd64__)
+ 				/* Reflect changes here to drmP.h */
+ #define DRM_CAS(lock,old,new,__ret)                                    \
