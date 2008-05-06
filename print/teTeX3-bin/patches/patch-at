@@ -1,9 +1,8 @@
-$NetBSD: patch-at,v 1.1 2008/05/05 22:48:22 tonnerre Exp $
+$NetBSD: patch-at,v 1.2 2008/05/06 09:24:20 tonnerre Exp $
 
 --- texk/dviljk/dvi2xx.c
 +++ texk/dviljk/dvi2xx.c
-@@ -1,5 +1,5 @@
- /* $Id: patch-at,v 1.1 2008/05/05 22:48:22 tonnerre Exp $ */
+@@ -2,4 +2,4 @@
 -#define VERSION "2.6p2 (dviljk)"
 +#define VERSION "dviljk (version 2.6p3)"
  /*
