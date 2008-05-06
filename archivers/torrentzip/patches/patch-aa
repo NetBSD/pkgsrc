@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/05/06 08:35:15 dillo Exp $
+
+--- src/trrntzip.c.orig	2005-05-02 15:38:40.000000000 +0200
++++ src/trrntzip.c
+@@ -782,7 +782,7 @@ RecursiveMigrate (const char *pszPath, W
+   
+           if (strstr (szTmpBuf, ".zip\0") && !(istat.st_mode & S_IWUSR))
+           {            
+-            chmod (direntp->d_name, S_IWUSR);
++            chmod (direntp->d_name, S_IRUSR|S_IWUSR);
+             mig.cEncounteredZips++;
+   
+             if (!mig.fProcessLog)
