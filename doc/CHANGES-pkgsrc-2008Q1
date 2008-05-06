@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.31 2008/05/01 13:42:10 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.32 2008/05/06 19:57:07 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -68,3 +68,7 @@ pullup ticket #2358 - requested by cube
 p5-Module-Versions-Report: update package to 1.03
 pullup ticket #2359 - requested by tonnerre
 emacs, emacs-nox11: fix for security issue
+pullup ticket #2361 - requested by markd
+security fix for emacs (part 2)
+pullup ticket #2363 - requested by tron
+security fix for rsync
