@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2007/05/30 08:54:28 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2008/05/06 06:36:44 bjs Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 SDL_BUILDLINK3_MK:=	${SDL_BUILDLINK3_MK}+
@@ -40,6 +40,7 @@ pkgbase := SDL
 .include "../../audio/nas/buildlink3.mk"
 .endif
 
+.include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 
