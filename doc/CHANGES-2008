@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1004 2008/05/06 06:27:38 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1005 2008/05/06 06:37:16 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1756,3 +1756,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/dbmail to 2.2.10 [obache 2008-05-06]
 	Updated x11/libdrm to 2.3.0nb2 [bjs 2008-05-06]
 	Updated audio/rhythmbox to 0.10.1 [bjs 2008-05-06]
+	Updated devel/SDL to 1.2.13nb1 [bjs 2008-05-06]
