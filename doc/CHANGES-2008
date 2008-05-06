@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1008 2008/05/06 19:46:07 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1009 2008/05/06 20:28:02 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1760,3 +1760,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added archivers/torrentzip version 0.2 [dillo 2008-05-06]
 	Updated devel/bugzilla to 2.22.4 [adrianp 2008-05-06]
 	Updated devel/bugzilla3 to 3.0.4 [adrianp 2008-05-06]
+	Updated time/kronolith to 2.1.8 [adrianp 2008-05-06]
