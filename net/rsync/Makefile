@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2008/03/11 10:16:42 tron Exp $
+# $NetBSD: Makefile,v 1.71.2.1 2008/05/06 19:54:41 spz Exp $
 
 DISTNAME=	rsync-2.6.9
 CATEGORIES=	net
-PKGREVISION=	1
+PKGREVISION=	2
 MASTER_SITES=	http://rsync.samba.org/ftp/rsync/ \
 		http://rsync.samba.org/ftp/rsync/old-versions/  \
 		ftp://ftp.sunet.se/pub/unix/admin/rsync/  \
@@ -11,6 +11,10 @@ MASTER_SITES=	http://rsync.samba.org/ftp/rsync/ \
 MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://rsync.samba.org/
 COMMENT=	Network file distribution/synchronisation utility
+
+PATCH_SITES=		http://rsync.samba.org/ftp/rsync/
+PATCHFILES=		munge-symlinks-2.6.9.diff
+PATCH_DIST_STRIP=	-p1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
