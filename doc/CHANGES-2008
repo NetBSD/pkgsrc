@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1012 2008/05/07 04:16:48 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1013 2008/05/07 10:03:22 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1764,3 +1764,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/nucleo to 0.7.1 [bjs 2008-05-06]
 	Updated graphics/GraphicsMagick to 1.2.1 [obache 2008-05-07]
 	Updated devel/monotone-viz to 1.0.1 [bjs 2008-05-07]
+	Updated www/py-moin to 1.6.3 [joerg 2008-05-07]
