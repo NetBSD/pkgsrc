@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1010 2008/05/07 02:55:59 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1011 2008/05/07 04:15:36 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1762,3 +1762,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/bugzilla3 to 3.0.4 [adrianp 2008-05-06]
 	Updated time/kronolith to 2.1.8 [adrianp 2008-05-06]
 	Updated x11/nucleo to 0.7.1 [bjs 2008-05-06]
+	Updated graphics/GraphicsMagick to 1.2.1 [obache 2008-05-07]
