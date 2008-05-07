@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1014 2008/05/07 15:01:47 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1015 2008/05/07 19:53:04 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1766,3 +1766,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/monotone-viz to 1.0.1 [bjs 2008-05-07]
 	Updated www/py-moin to 1.6.3 [joerg 2008-05-07]
 	Added audio/qjackctl version 0.3.2 [bjs 2008-05-07]
+	Updated graphics/p5-Image-ExifTool to 7.25 [gdt 2008-05-07]
