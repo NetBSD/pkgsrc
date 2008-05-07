@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/03/15 18:16:51 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/05/07 10:02:44 joerg Exp $
 bin/moin
 ${PYSITELIB}/MoinMoin/Page.py
 ${PYSITELIB}/MoinMoin/Page.pyc
@@ -299,8 +299,6 @@ ${PYSITELIB}/MoinMoin/formatter/text_xml.pyc
 ${PYSITELIB}/MoinMoin/formatter/text_xml.pyo
 ${PYSITELIB}/MoinMoin/i18n/Makefile
 ${PYSITELIB}/MoinMoin/i18n/MoinMoin.pot
-${PYSITELIB}/MoinMoin/i18n/POTFILES
-${PYSITELIB}/MoinMoin/i18n/POTFILES.in
 ${PYSITELIB}/MoinMoin/i18n/README
 ${PYSITELIB}/MoinMoin/i18n/__init__.py
 ${PYSITELIB}/MoinMoin/i18n/__init__.pyc
@@ -332,6 +330,7 @@ ${PYSITELIB}/MoinMoin/i18n/ko.MoinMoin.po
 ${PYSITELIB}/MoinMoin/i18n/ku.MoinMoin.po
 ${PYSITELIB}/MoinMoin/i18n/lt.MoinMoin.po
 ${PYSITELIB}/MoinMoin/i18n/lv.MoinMoin.po
+${PYSITELIB}/MoinMoin/i18n/mk.MoinMoin.po
 ${PYSITELIB}/MoinMoin/i18n/mn.MoinMoin.po
 ${PYSITELIB}/MoinMoin/i18n/msgfmt.py
 ${PYSITELIB}/MoinMoin/i18n/msgfmt.pyc
@@ -674,6 +673,12 @@ ${PYSITELIB}/MoinMoin/script/migration/1060000.pyo
 ${PYSITELIB}/MoinMoin/script/migration/1060100.py
 ${PYSITELIB}/MoinMoin/script/migration/1060100.pyc
 ${PYSITELIB}/MoinMoin/script/migration/1060100.pyo
+${PYSITELIB}/MoinMoin/script/migration/1060200.py
+${PYSITELIB}/MoinMoin/script/migration/1060200.pyc
+${PYSITELIB}/MoinMoin/script/migration/1060200.pyo
+${PYSITELIB}/MoinMoin/script/migration/1060300.py
+${PYSITELIB}/MoinMoin/script/migration/1060300.pyc
+${PYSITELIB}/MoinMoin/script/migration/1060300.pyo
 ${PYSITELIB}/MoinMoin/script/migration/__init__.py
 ${PYSITELIB}/MoinMoin/script/migration/__init__.pyc
 ${PYSITELIB}/MoinMoin/script/migration/__init__.pyo
@@ -1051,6 +1056,7 @@ share/moin/config/wikifarm/mywiki.py
 share/moin/data/cache/README
 share/moin/data/dict/dummy_dict
 share/moin/data/edit-log
+share/moin/data/event-log
 share/moin/data/intermap.txt
 share/moin/data/meta
 share/moin/data/pages/BadContent/current
@@ -1995,7 +2001,6 @@ share/moin/server/mointwisted.py
 share/moin/underlay/pages/AbandonedPages/current
 share/moin/underlay/pages/AbandonedPages/revisions/00000001
 share/moin/underlay/pages/AutoAdminGroup/current
-share/moin/underlay/pages/AutoAdminGroup/edit-log
 share/moin/underlay/pages/AutoAdminGroup/revisions/00000001
 share/moin/underlay/pages/BadContent/current
 share/moin/underlay/pages/BadContent/revisions/00000001
@@ -2157,6 +2162,9 @@ share/moin/underlay/pages/HelpOnInstalling/current
 share/moin/underlay/pages/HelpOnInstalling/revisions/00000001
 share/moin/underlay/pages/HelpOnLanguages/current
 share/moin/underlay/pages/HelpOnLanguages/revisions/00000001
+share/moin/underlay/pages/HelpOnLinking(2f)NotesLinks/attachments/docprop.jpg
+share/moin/underlay/pages/HelpOnLinking(2f)NotesLinks/current
+share/moin/underlay/pages/HelpOnLinking(2f)NotesLinks/revisions/00000001
 share/moin/underlay/pages/HelpOnLinking/current
 share/moin/underlay/pages/HelpOnLinking/revisions/00000001
 share/moin/underlay/pages/HelpOnLists/current
@@ -2277,7 +2285,6 @@ share/moin/underlay/pages/MoinMoin(2f)TextFormatting/revisions/00000001
 share/moin/underlay/pages/MoinMoin/current
 share/moin/underlay/pages/MoinMoin/revisions/00000001
 share/moin/underlay/pages/MoinPagesEditorGroup/current
-share/moin/underlay/pages/MoinPagesEditorGroup/edit-log
 share/moin/underlay/pages/MoinPagesEditorGroup/revisions/00000001
 share/moin/underlay/pages/OrphanedPages/current
 share/moin/underlay/pages/OrphanedPages/revisions/00000001
@@ -2312,10 +2319,8 @@ share/moin/underlay/pages/SystemAdmin/revisions/00000001
 share/moin/underlay/pages/SystemInfo/current
 share/moin/underlay/pages/SystemInfo/revisions/00000001
 share/moin/underlay/pages/SystemPagesGroup/current
-share/moin/underlay/pages/SystemPagesGroup/edit-log
 share/moin/underlay/pages/SystemPagesGroup/revisions/00000001
 share/moin/underlay/pages/SystemPagesInEnglishGroup/current
-share/moin/underlay/pages/SystemPagesInEnglishGroup/edit-log
 share/moin/underlay/pages/SystemPagesInEnglishGroup/revisions/00000001
 share/moin/underlay/pages/SystemPagesSetup/attachments/Bulgarian.zip
 share/moin/underlay/pages/SystemPagesSetup/attachments/Croatian.zip
@@ -2330,6 +2335,7 @@ share/moin/underlay/pages/SystemPagesSetup/attachments/Hebrew.zip
 share/moin/underlay/pages/SystemPagesSetup/attachments/Hindi.zip
 share/moin/underlay/pages/SystemPagesSetup/attachments/Hungarian.zip
 share/moin/underlay/pages/SystemPagesSetup/attachments/Indonesian.zip
+share/moin/underlay/pages/SystemPagesSetup/attachments/Irish.zip
 share/moin/underlay/pages/SystemPagesSetup/attachments/Italian.zip
 share/moin/underlay/pages/SystemPagesSetup/attachments/Japanese.zip
 share/moin/underlay/pages/SystemPagesSetup/attachments/Korean.zip
@@ -2677,6 +2683,9 @@ share/moin/underlay/pages/XsltVersion/revisions/00000001
 @dirrm share/moin/underlay/pages/HelpOnLists/revisions
 @dirrm share/moin/underlay/pages/HelpOnLists
 @dirrm share/moin/underlay/pages/HelpOnLinking/revisions
+@dirrm share/moin/underlay/pages/HelpOnLinking(2f)NotesLinks/revisions
+@dirrm share/moin/underlay/pages/HelpOnLinking(2f)NotesLinks/attachments
+@dirrm share/moin/underlay/pages/HelpOnLinking(2f)NotesLinks
 @dirrm share/moin/underlay/pages/HelpOnLinking
 @dirrm share/moin/underlay/pages/HelpOnLanguages/revisions
 @dirrm share/moin/underlay/pages/HelpOnLanguages
