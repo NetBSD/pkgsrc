@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2008/03/16 09:26:46 bjs Exp $
+$NetBSD: MESSAGE,v 1.2 2008/05/07 12:15:02 bjs Exp $
 
 NOTE:  Unfortunately, JACK wants to use a linux /proc filesystem to
 perform shared memory housekeeping tasks.  Therefore, if your platform
@@ -14,5 +14,11 @@ pathname for this filesystem, you may define the JACKD_PROCFS_PATH
 variable in your build environment or mk.conf as shown below.
 
 		JACKD_PROCFS_PATH= /emul/linux/proc
+
+ATTENTION:  NetBSD-current users who wish to run jackd with real-time
+	    scheduling will likely find that the loader fails to mmap
+	    the driver module(s) when using -R.  Until this issue is re-
+	    solved, one may work around this problem by using the -m
+	    (--no-mlock) option.
 
 ===========================================================================
