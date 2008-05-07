@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/05/01 11:55:12 obache Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/05/07 04:15:11 obache Exp $
 bin/GraphicsMagick++-config
 bin/GraphicsMagick-config
 bin/GraphicsMagickWand-config
@@ -95,10 +95,8 @@ share/${PKGNAME}/config/log.mgk
 share/${PKGNAME}/config/magic.mgk
 share/${PKGNAME}/config/modules.mgk
 share/${PKGNAME}/images/ball.png
-share/${PKGNAME}/images/checkerboard.miff
 share/${PKGNAME}/images/corbis.png
 share/${PKGNAME}/images/examples.jpg
-share/${PKGNAME}/images/gm-112x64t.xbm
 share/${PKGNAME}/images/gm-125x80t.png
 share/${PKGNAME}/images/gm-188x120t.png
 share/${PKGNAME}/images/gm-282x180t.png
@@ -108,8 +106,6 @@ share/${PKGNAME}/images/pdfsages.png
 share/${PKGNAME}/images/pngnow.png
 share/${PKGNAME}/images/right_triangle.png
 share/${PKGNAME}/images/right_triangle_option.png
-share/${PKGNAME}/images/tile.xbm
-share/${PKGNAME}/images/white.png
 share/${PKGNAME}/index.html
 share/${PKGNAME}/www/AUTHORS.html
 share/${PKGNAME}/www/BENCHMARKS.html
