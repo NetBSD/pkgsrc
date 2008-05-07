@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/05/07 15:00:08 bjs Exp $
+
+SHA1 (qjackctl-0.3.2.tar.gz) = 690e77f10d934e648fbc975db81b1bccb20d7487
+RMD160 (qjackctl-0.3.2.tar.gz) = 0dc0638205371b49ad35883e235802da770169cf
+Size (qjackctl-0.3.2.tar.gz) = 264605 bytes
+SHA1 (patch-aa) = 87d9e8ba4693474cd820c38ef29999750ba0ce6b
