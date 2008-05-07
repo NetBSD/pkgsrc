@@ -1,2 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/05/31 16:00:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/05/07 04:15:56 bjs Exp $
 bin/monotone-viz
+share/examples/monotone-viz/monotone-viz.style.sample
+@dirrm share/examples/monotone-viz

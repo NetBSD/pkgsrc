@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.20 2008/03/03 17:45:36 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2008/05/07 04:15:56 bjs Exp $
 #
 
-DISTNAME=		monotone-viz-0.15
-PKGREVISION=		2
+DISTNAME=		monotone-viz-1.0.1-nolablgtk
+PKGNAME=		${DISTNAME:S/-nolablgtk//}
 CATEGORIES=		devel scm
 MASTER_SITES=		http://oandrieu.nerim.net/monotone-viz/
 
@@ -16,15 +16,15 @@ BUILD_TARGET=		monotone-viz
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config
 
-CONFIGURE_ARGS+=	--with-shared-sqlite
-CONFIGURE_ARGS+=	--without-local-lablgtk
-
-INSTALLATION_DIRS=	bin
+AUTO_MKDIRS=		yes
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/monotone-viz ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/monotone-viz.style.sample ${DESTDIR}${EGDIR}
 
-.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../graphics/graphviz/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
