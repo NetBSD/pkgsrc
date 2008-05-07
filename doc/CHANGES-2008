@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1011 2008/05/07 04:15:36 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1012 2008/05/07 04:16:48 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1763,3 +1763,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated time/kronolith to 2.1.8 [adrianp 2008-05-06]
 	Updated x11/nucleo to 0.7.1 [bjs 2008-05-06]
 	Updated graphics/GraphicsMagick to 1.2.1 [obache 2008-05-07]
+	Updated devel/monotone-viz to 1.0.1 [bjs 2008-05-07]
