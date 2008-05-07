@@ -1,27 +1,26 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/27 12:25:26 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/05/07 19:32:55 drochner Exp $
+share/rmap/factbook/extra/Akrotiri
+share/rmap/factbook/extra/Arctic_Ocean
 share/rmap/factbook/extra/Ashmore_and_Cartier_Islands
 share/rmap/factbook/extra/Atlantic_Ocean
-share/rmap/factbook/extra/Baker_Island
 share/rmap/factbook/extra/Clipperton_Island
 share/rmap/factbook/extra/Coral_Sea_Islands
+share/rmap/factbook/extra/Dhekelia
 share/rmap/factbook/extra/Europa_Island
-share/rmap/factbook/extra/External_Territories
+share/rmap/factbook/extra/European_Union
+share/rmap/factbook/extra/Gaza_Strip
 share/rmap/factbook/extra/Glorioso_Islands
-share/rmap/factbook/extra/High_Peaks
-share/rmap/factbook/extra/Howland_Island
 share/rmap/factbook/extra/Jan_Mayen
-share/rmap/factbook/extra/Jarvis_Island
-share/rmap/factbook/extra/Johnston_Atoll
 share/rmap/factbook/extra/Juan_de_Nova_Island
-share/rmap/factbook/extra/Kingman_Reef
-share/rmap/factbook/extra/Lakes
-share/rmap/factbook/extra/Midway_Islands
 share/rmap/factbook/extra/Navassa_Island
 share/rmap/factbook/extra/Pacific_Ocean
-share/rmap/factbook/extra/Palmyra_Atoll
-share/rmap/factbook/extra/Rivers
+share/rmap/factbook/extra/Serbia_and_Montenegro
+share/rmap/factbook/extra/Southern_Ocean
+share/rmap/factbook/extra/Spratly_Islands
 share/rmap/factbook/extra/Tromelin_Island
+share/rmap/factbook/extra/US_Pacific_Islands
 share/rmap/factbook/extra/Wake_Island
+share/rmap/factbook/extra/West_Bank
 share/rmap/factbook/extra/World
 share/rmap/factbook/text/ad.txt
 share/rmap/factbook/text/ae.txt
@@ -201,7 +200,6 @@ share/rmap/factbook/text/pl.txt
 share/rmap/factbook/text/pm.txt
 share/rmap/factbook/text/pn.txt
 share/rmap/factbook/text/pr.txt
-share/rmap/factbook/text/ps.txt
 share/rmap/factbook/text/pt.txt
 share/rmap/factbook/text/pw.txt
 share/rmap/factbook/text/py.txt
@@ -239,6 +237,7 @@ share/rmap/factbook/text/tk.txt
 share/rmap/factbook/text/tm.txt
 share/rmap/factbook/text/tn.txt
 share/rmap/factbook/text/to.txt
+share/rmap/factbook/text/tp.txt
 share/rmap/factbook/text/tr.txt
 share/rmap/factbook/text/tt.txt
 share/rmap/factbook/text/tv.txt
@@ -260,7 +259,6 @@ share/rmap/factbook/text/wf.txt
 share/rmap/factbook/text/ws.txt
 share/rmap/factbook/text/ye.txt
 share/rmap/factbook/text/yt.txt
-share/rmap/factbook/text/yu.txt
 share/rmap/factbook/text/za.txt
 share/rmap/factbook/text/zm.txt
 share/rmap/factbook/text/zw.txt
