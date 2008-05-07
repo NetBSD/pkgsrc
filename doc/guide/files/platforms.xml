@@ -1,4 +1,4 @@
-<!-- $NetBSD: platforms.xml,v 1.59 2007/10/18 23:01:30 rillig Exp $ -->
+<!-- $NetBSD: platforms.xml,v 1.60 2008/05/07 09:10:19 obache Exp $ -->
 
 <chapter id="platforms">
   <title>Using pkgsrc on systems other than &os;</title>
@@ -226,9 +226,9 @@
 	pkgsrc and other gcc-compiled binaries reliably, a hotfix containing
 	POSIX.EXE, PSXDLL.DLL, PSXRUN.EXE, and PSXSS.EXE (899522 or newer)
 	must be installed.  Hotfixes are available from Microsoft through a
-	support contract; however, a NetBSD developer has made most Interix
+	support contract; however, Debian Interix Port has made most Interix
 	hotfixes available for personal use from <ulink
-	url="http://www.duh.org/interix/hotfixes.php">http://www.duh.org/interix/hotfixes.php</ulink>.</para>
+	url="http://www.debian-interix.net/hotfixes/">http://www.debian-interix.net/hotfixes/</ulink>.</para>
 
 	<para>In addition to the hotfix noted above, it may be necessary to
 	disable Data Execution Prevention entirely to make Interix functional.
