@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.42 2008/04/16 00:53:06 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.42.2.1 2008/05/08 23:34:27 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.42 2008/04/16 00:53:06 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.42.2.1 2008/05/08 23:34:27 joerg Exp $");
 #endif
 
 /*-
@@ -347,7 +347,6 @@ rebuild_tree(void)
 int 
 main(int argc, char *argv[])
 {
-	const char     *config_file = SYSCONFDIR"/pkg_install.conf";
 	Boolean		 use_default_sfx = TRUE;
 	Boolean 	 show_basename_only = FALSE;
 	char		 lsdir[MaxPathSize];
@@ -413,7 +412,7 @@ main(int argc, char *argv[])
 		usage();
 	}
 
-	pkg_install_config(config_file);
+	pkg_install_config();
 
 	if (use_default_sfx)
 		(void) snprintf(sfx, sizeof(sfx), "%s", DEFAULT_SFX);

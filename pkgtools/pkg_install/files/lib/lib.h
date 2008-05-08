@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.42.2.1 2008/04/26 17:44:23 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.42.2.2 2008/05/08 23:34:27 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -368,10 +368,23 @@ struct pkg_vulnerabilities *parse_pkg_vulnerabilities(const char *, size_t, int)
 struct pkg_vulnerabilities *read_pkg_vulnerabilities(const char *, int, int);
 void free_pkg_vulnerabilities(struct pkg_vulnerabilities *);
 
+/* Parse configuration file */
+void pkg_install_config(void);
+/* Print configuration variable */
+void pkg_install_show_variable(const char *);
+
 /* Externs */
 extern Boolean Verbose;
 extern Boolean Fake;
 extern Boolean Force;
+extern const char *config_file;
 extern const char *gpg_cmd;
+extern const char *verify_cmd;
+
+extern const char *pkg_vulnerabilities_dir;
+extern const char *pkg_vulnerabilities_file;
+extern const char *pkg_vulnerabilities_url;
+extern const char *ignore_advisories;
+extern const char tnf_vulnerability_base[];
 
 #endif				/* _INST_LIB_LIB_H_ */
