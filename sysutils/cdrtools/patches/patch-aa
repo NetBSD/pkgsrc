@@ -1,17 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2008/03/07 19:38:58 wiz Exp $
+$NetBSD: patch-aa,v 1.6 2008/05/08 13:16:13 wiz Exp $
 
---- conf/configure.orig	2008-02-24 16:21:13.000000000 +0000
-+++ conf/configure	2008-03-07 19:07:14.000000000 +0000
-@@ -14703,7 +14703,7 @@
- 
- ; return 0; }
- EOF
--if { (eval echo configure:14707: \"$ac_link\") 1>&5; (eval $ac_link) 2>&5; } && test -s conftest${ac_exeext}; then
-+if { (eval echo configure:14707: \"$ac_link\") 1>&5; (eval "$ac_link $librt") 2>&5; } && test -s conftest${ac_exeext}; then
-   rm -rf conftest*
-   eval "ac_cv_func_$ac_func=yes"
- else
-@@ -14717,6 +14717,7 @@
+--- conf/configure.orig	2008-03-27 18:58:21.000000000 +0000
++++ conf/configure
+@@ -14702,6 +14702,7 @@ fi
  
  if eval "test \"`echo '$ac_cv_func_'$ac_func`\" = yes"; then
    echo "$ac_t""yes" 1>&6
