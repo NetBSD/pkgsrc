@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.15.2.1 2008/04/26 18:37:10 joerg Exp $
+# $NetBSD: Makefile.in,v 1.15.2.2 2008/05/08 23:34:27 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -27,14 +27,12 @@ SCRIPTS=	audit-packages download-vulnerability-list
 
 .if empty(BOOTSTRAP)
 LIBS=		-linstall -lbz2 -lfetch -lz @LIBS@
-OBJS=		audit.o check.o config.o main.o
-CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib \
-		-DSYSCONFDIR=\"$(sysconfdir)\"
+OBJS=		audit.o check.o main.o
+CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib
 .else
 LIBS=		-linstall @LIBS@
-OBJS=		check.o config.o main.o
-CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib -DBOOTSTRAP \
-		-DSYSCONFDIR=\"$(sysconfdir)\"
+OBJS=		check.o main.o
+CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib -DBOOTSTRAP
 .endif
 
 all: $(PROG) $(SCRIPTS)
