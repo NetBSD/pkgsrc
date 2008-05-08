@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.32 2008/05/06 19:57:07 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.33 2008/05/08 14:22:33 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -72,3 +72,5 @@ pullup ticket #2361 - requested by markd
 security fix for emacs (part 2)
 pullup ticket #2363 - requested by tron
 security fix for rsync
+pullup ticket #2362 - requested by tonnerre
+teTeX3-bin: fixes security vulnerability
