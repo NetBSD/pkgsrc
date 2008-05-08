@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.21.2.1 2008/04/26 17:44:23 joerg Exp $
+# $NetBSD: Makefile.in,v 1.21.2.2 2008/05/08 23:34:27 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -29,8 +29,10 @@ LIB=	libinstall.a
 
 OBJS=	automatic.o conflicts.o decompress.o dewey.o fexec.o file.o \
 	global.o iterate.o lpkg.o opattern.o \
-	path.o pkgdb.o plist.o \
+	parse-config.o path.o pkgdb.o plist.o \
 	str.o var.o version.o vulnerabilities-file.o
+
+CPPFLAGS+=	-DSYSCONFDIR=\"$(sysconfdir)\"
 
 .if !empty(BOOTSTRAP)
 CPPFLAGS+=	-DBOOTSTRAP

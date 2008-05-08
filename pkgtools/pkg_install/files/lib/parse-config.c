@@ -1,4 +1,4 @@
-/*	$NetBSD: config.c,v 1.5 2008/04/07 13:25:32 joerg Exp $	*/
+/*	$NetBSD: parse-config.c,v 1.1.2.1 2008/05/08 23:34:27 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: config.c,v 1.5 2008/04/07 13:25:32 joerg Exp $");
+__RCSID("$NetBSD: parse-config.c,v 1.1.2.1 2008/05/08 23:34:27 joerg Exp $");
 #endif
 
 /*-
@@ -47,13 +47,16 @@ __RCSID("$NetBSD: config.c,v 1.5 2008/04/07 13:25:32 joerg Exp $");
 #include <string.h>
 #endif
 
-#include "admin.h"
 #include "lib.h"
 
+const char     *config_file = SYSCONFDIR"/pkg_install.conf";
+
+const char *gpg_cmd;
 const char *pkg_vulnerabilities_dir;
 const char *pkg_vulnerabilities_file;
 const char *pkg_vulnerabilities_url;
 const char *ignore_advisories = NULL;
+const char *verify_cmd;
 const char tnf_vulnerability_base[] = "ftp://ftp.NetBSD.org/pub/NetBSD/packages/vulns";
 
 static struct config_variable {
@@ -64,11 +67,12 @@ static struct config_variable {
 	{ "PKGVULNDIR", &pkg_vulnerabilities_dir },
 	{ "PKGVULNURL", &pkg_vulnerabilities_url },
 	{ "IGNORE_URL", &ignore_advisories },
+	{ "VERIFY_CMD", &verify_cmd },
 	{ NULL, NULL }
 };
 
 void
-pkg_install_config(const char *config_file)
+pkg_install_config(void)
 {
 	char *value;
 	int ret;
