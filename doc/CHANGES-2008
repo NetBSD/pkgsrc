@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1016 2008/05/08 13:16:53 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1017 2008/05/08 13:28:52 jlam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1768,3 +1768,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added audio/qjackctl version 0.3.2 [bjs 2008-05-07]
 	Updated graphics/p5-Image-ExifTool to 7.25 [gdt 2008-05-07]
 	Updated sysutils/cdrtools to 2.01.01.39 [wiz 2008-05-08]
+	Updated databases/freetds to 0.82 [jlam 2008-05-08]
