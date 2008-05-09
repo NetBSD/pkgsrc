@@ -1,0 +1,18 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/09 21:39:17 agc Exp $
+bin/stegclient
+bin/stegserver
+include/packetp.h
+include/packetp/addr_netcmp.h
+include/packetp/firewallstate.h
+include/packetp/forkarp.h
+include/packetp/hashtab.h
+include/packetp/lookupa.h
+include/packetp/pcapf.h
+include/packetp/recycle.h
+include/packetp/routestate.h
+include/packetp/standard.h
+lib/libpacketp.a
+man/man1/stegclient.1
+man/man1/stegserver.1
+man/man3/packetp.3
+@dirrm include/packetp
