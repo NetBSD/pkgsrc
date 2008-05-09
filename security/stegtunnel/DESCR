@@ -1,0 +1,4 @@
+Stegtunnel provides a covert channel in the IPID and sequence number
+fields of any desired TCP connection.  It requires the server and
+client to have a previously shared secret in common to detect and
+decrypt the data.
