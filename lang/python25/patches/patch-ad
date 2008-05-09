@@ -1,13 +1,19 @@
-$NetBSD: patch-ad,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
-
---- Modules/_ctypes/libffi/configure.orig	2006-08-14 18:17:41.000000000 +0200
-+++ Modules/_ctypes/libffi/configure
-@@ -3516,7 +3516,7 @@ arm*-*-rtems*) TARGET=ARM; TARGETDIR=arm
+--- Modules/_ctypes/libffi/configure.orig	2007-09-05 02:47:16 +0300
++++ Modules/_ctypes/libffi/configure	2008-05-08 23:56:47 +0300
+@@ -3486,6 +3486,7 @@
+ i*86-*-freebsd* | i*86-*-kfreebsd*-gnu) TARGET=X86; TARGETDIR=x86;;
+ i*86-*-netbsdelf* | i*86-*-knetbsd*-gnu) TARGET=X86; TARGETDIR=x86;;
+ i*86-*-openbsd*) TARGET=X86; TARGETDIR=x86;;
++i*86-*-dragonfly*) TARGET=X86; TARGETDIR=x86;;
+ i*86-*-rtems*) TARGET=X86; TARGETDIR=x86;;
+ i*86-*-win32*) TARGET=X86_WIN32; TARGETDIR=x86;;
+ i*86-*-cygwin*) TARGET=X86_WIN32; TARGETDIR=x86;;
+@@ -3516,7 +3517,7 @@
  cris-*-*) TARGET=LIBFFI_CRIS; TARGETDIR=cris;;
  s390-*-linux-*) TARGET=S390; TARGETDIR=s390;;
  s390x-*-linux-*) TARGET=S390; TARGETDIR=s390;;
 -x86_64-*-linux* | x86_64-*-freebsd* | x86_64-*-kfreebsd*-gnu) TARGET=X86_64; TARGETDIR=x86;;
-+x86_64-*-netbsd* | x86_64-*-linux* | x86_64-*-freebsd* | x86_64-*-kfreebsd*-gnu) TARGET=X86_64; TARGETDIR=x86;;
++x86_64-*-netbsd* | x86_64-*-linux* | x86_64-*-freebsd* | x86_64-*-kfreebsd*-gnu | x86_64-*-dragonfly*) TARGET=X86_64; TARGETDIR=x86;;
  sh-*-linux* | sh[34]*-*-linux*) TARGET=SH; TARGETDIR=sh;;
  sh-*-rtems*) TARGET=SH; TARGETDIR=sh;;
  sh64-*-linux* | sh5*-*-linux*) TARGET=SH64; TARGETDIR=sh64;;
