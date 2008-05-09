@@ -814,7 +814,7 @@ void SHA512_Last(SHA512_CTX* context) {
 		/* Begin padding with a 1 bit: */
 		context->buffer[usedspace++] = 0x80;
 
-		if (usedspace < SHA512_SHORT_BLOCK_LENGTH) {
+		if (usedspace <= SHA512_SHORT_BLOCK_LENGTH) {
 			/* Set-up for the last transform: */
 			MEMSET_BZERO(&context->buffer[usedspace], SHA512_SHORT_BLOCK_LENGTH - usedspace);
 		} else {
