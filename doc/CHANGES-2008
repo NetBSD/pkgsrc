@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1020 2008/05/09 09:04:32 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1021 2008/05/09 09:47:32 martti Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1772,3 +1772,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xkbcomp to 1.0.5 [bjs 2008-05-09]
 	Updated wm/fvwm-devel to 2.5.26 [martti 2008-05-09]
 	Updated x11/xtrans to 1.2 [wiz 2008-05-09]
+	Updated editors/vim-share to 7.1.297 [martti 2008-05-09]
