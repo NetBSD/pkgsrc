@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2007/11/30 12:31:52 tron Exp $
+$NetBSD: patch-ab,v 1.9 2008/05/09 11:12:27 jmmv Exp $
 
---- share/Makefile.in.orig	2007-08-31 07:35:05.000000000 +0100
-+++ share/Makefile.in	2007-11-30 12:10:08.000000000 +0000
-@@ -189,7 +189,7 @@
+--- share/Makefile.in.orig	2007-08-31 08:35:05.000000000 +0200
++++ share/Makefile.in
+@@ -189,7 +189,7 @@ sysconfdir = @sysconfdir@
  target_alias = @target_alias@
  AUTOMAKE_OPTIONS = foreign 1.2h
  EXTRA_DIST = Gnuplot.app-defaults
@@ -11,3 +11,22 @@ $NetBSD: patch-ab,v 1.8 2007/11/30 12:31:52 tron Exp $
  xresourcedir = $(libdir)/X11/app-defaults
  xresource_DATA = Gnuplot.app-defaults
  all: all-recursive
+@@ -227,13 +227,15 @@ $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
+ uninstall-info-am:
+ install-xresourceDATA: $(xresource_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(xresourcedir)" || $(mkdir_p) "$(DESTDIR)$(xresourcedir)"
+-	@list='$(xresource_DATA)'; for p in $$list; do \
++	if test $${INSTALL_XRESOURCE_DATA:-yes} = yes; then \
++	test -z "$(xresourcedir)" || $(mkdir_p) "$(DESTDIR)$(xresourcedir)"; \
++	list='$(xresource_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f=$(am__strip_dir) \
+ 	  echo " $(xresourceDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(xresourcedir)/$$f'"; \
+ 	  $(xresourceDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(xresourcedir)/$$f"; \
+-	done
++	done; \
++	fi
+ 
+ uninstall-xresourceDATA:
+ 	@$(NORMAL_UNINSTALL)
