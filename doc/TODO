@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7262 2008/05/05 05:25:08 martti Exp $
+$NetBSD: TODO,v 1.7263 2008/05/09 21:48:13 markd Exp $
 
 Suggested new packages
 ======================
@@ -1142,7 +1142,6 @@ Suggested package updates
 	o raine-0.50.6
 	o randread-0.2
 	o rapidsvn-0.9.6
-	o raptor-1.4.17
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
