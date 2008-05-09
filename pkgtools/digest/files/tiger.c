@@ -650,6 +650,7 @@ TIGERInit(tiger_context_t *tp)
 	tp->ctx[0] = 0x0123456789ABCDEFLL;
 	tp->ctx[1] = 0xFEDCBA9876543210LL;
 	tp->ctx[2] = 0xF096A5B4C3B2E187LL;
+	tp->first_time = 1;
 }
 
 void
@@ -704,12 +705,14 @@ TIGERUpdate(tiger_context_t *tp, const uint8_t *data, size_t len)
 	}
 	((uint64_t *) (&(temp[56])))[0] = ((uint64_t) len) << 3;
 	tiger_compress(((uint64_t *) temp), tp->ctx);
+	tp->first_time = 0;
 }
 
 void
 TIGERFinal(uint8_t *digest, tiger_context_t *tp)
 {
-	/* nothing to do - included for compatibility with SHA* interface */
+	if (tp->first_time)
+		TIGERUpdate(tp, NULL, 0);
 }
 
 static void
@@ -732,6 +735,9 @@ TIGEREnd(tiger_context_t *tp, char *buf)
 	if (buf == NULL && (buf = malloc(41)) == NULL) {
 		return NULL;
 	}
+
+	if (tp->first_time)
+		TIGERUpdate(tp, NULL, 0);
 
 	for (i = 0; i < 3; ++i)
 		print_uint64(buf + i * 16, tp->ctx[i]);
