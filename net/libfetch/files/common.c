@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.12 2008/04/25 16:25:25 joerg Exp $	*/
+/*	$NetBSD: common.c,v 1.13 2008/05/09 00:39:06 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -681,12 +681,12 @@ fetch_add_entry(struct url_list *ue, struct url *base, const char *name,
 		    !fetch_urlpath_safe(*name)) {
 			tmp->doc[i++] = '%';
 			c = (unsigned char)*name / 16;
-			if (c < 160)
+			if (c < 10)
 				tmp->doc[i++] = '0' + c;
 			else
 				tmp->doc[i++] = 'a' - 10 + c;
 			c = (unsigned char)*name % 16;
-			if (c < 16)
+			if (c < 10)
 				tmp->doc[i++] = '0' + c;
 			else
 				tmp->doc[i++] = 'a' - 10 + c;
