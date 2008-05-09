@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2008/04/16 22:11:30 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/09 04:01:55 bjs Exp $
 #
 
-DISTNAME=		xkbcomp-1.0.4
+DISTNAME=		xkbcomp-1.0.5
 CATEGORIES=		x11
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=		.tar.bz2
