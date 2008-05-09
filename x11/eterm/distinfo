@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.16 2008/04/03 22:42:33 tonnerre Exp $
+$NetBSD: distinfo,v 1.17 2008/05/09 18:43:07 agc Exp $
 
 SHA1 (Eterm-0.9.4.tar.gz) = d63628098b3aa08c8f2bc1bd756683e5fd227995
 RMD160 (Eterm-0.9.4.tar.gz) = ce5d7ba74b19e3c8992d104d00f10302c3e8150e
@@ -16,5 +16,5 @@ SHA1 (patch-aa) = 19da5e05392994a60fdf47e9d52c82fc41cefa4c
 SHA1 (patch-ab) = d019a18bb32f890d6de7c5bb0cdb43e7715a7d4d
 SHA1 (patch-ac) = eaeed9066b546d563f7b0404afbdb9e9737d8f63
 SHA1 (patch-ad) = f70a92e4eb84466e379653cbd3a9188db6d408c8
-SHA1 (patch-ah) = e9a924abff857448a6d7c9281915bcf001b7451c
+SHA1 (patch-ah) = 9d2a995fa118e30be20aa3fdc18ffee1eeec1192
 SHA1 (patch-ai) = 94d684a490752831de2fb2aba92c0b9f461ddb5a
