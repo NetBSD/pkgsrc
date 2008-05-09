@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/09 16:58:32 drochner Exp $
+bin/gimmix
+share/applications/gimmix.desktop
+share/gimmix/gimmix.glade
+share/gimmix/gimmix_firstrun.png
+share/locale/tr/LC_MESSAGES/gimmix.mo
+share/locale/zh_TW/LC_MESSAGES/gimmix.mo
+share/pixmaps/gimmix.png
+share/pixmaps/gimmix_logo_small.png
+share/pixmaps/gimmix_playlist.png
+@comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/gimmix
+@comment in xdg-dirs: @dirrm share/applications
