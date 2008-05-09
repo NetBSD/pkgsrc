@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1023 2008/05/09 21:48:13 markd Exp $
+$NetBSD: CHANGES-2008,v 1.1024 2008/05/09 22:31:09 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1775,3 +1775,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated editors/vim-share to 7.1.297 [martti 2008-05-09]
 	Added security/stegtunnel version 0.4 [agc 2008-05-09]
 	Updated textproc/raptor to 1.4.17 [markd 2008-05-09]
+	Added net/ruby-netaddr version 1.4.0 [seb 2008-05-09]
