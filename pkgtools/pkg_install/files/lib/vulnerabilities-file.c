@@ -36,7 +36,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: vulnerabilities-file.c,v 1.3.4.1 2008/05/08 23:34:27 joerg Exp $");
+__RCSID("$NetBSD: vulnerabilities-file.c,v 1.3.4.2 2008/05/09 00:49:38 joerg Exp $");
 
 #if HAVE_SYS_STAT_H
 #include <sys/stat.h>
@@ -122,9 +122,27 @@ static const char *
 sha512_hash_finish(void *ctx)
 {
 	static char hash[SHA512_DIGEST_STRING_LENGTH];
+	unsigned char digest[SHA512_DIGEST_LENGTH];
 	SHA512_CTX *hash_ctx = ctx;
+	int i;
 
-	SHA512_End(hash_ctx, hash);
+	SHA512_Final(digest, hash_ctx);
+	for (i = 0; i < SHA512_DIGEST_LENGTH; ++i) {
+		unsigned char c;
+
+		c = digest[i] / 16;
+		if (c < 10)
+			hash[2 * i] = '0' + c;
+		else
+			hash[2 * i] = 'a' - 10 + c;
+
+		c = digest[i] % 16;
+		if (c < 10)
+			hash[2 * i + 1] = '0' + c;
+		else
+			hash[2 * i + 1] = 'a' - 10 + c;
+	}
+	hash[2 * i] = '\0';
 
 	return hash;
 }
