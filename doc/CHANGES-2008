@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1021 2008/05/09 09:47:32 martti Exp $
+$NetBSD: CHANGES-2008,v 1.1022 2008/05/09 21:45:58 agc Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1773,3 +1773,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated wm/fvwm-devel to 2.5.26 [martti 2008-05-09]
 	Updated x11/xtrans to 1.2 [wiz 2008-05-09]
 	Updated editors/vim-share to 7.1.297 [martti 2008-05-09]
+	Added security/stegtunnel version 0.4 [agc 2008-05-09]
