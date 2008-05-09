@@ -1,4 +1,4 @@
-/* $NetBSD: tiger.h,v 1.4 2007/09/21 18:44:38 joerg Exp $ */
+/* $NetBSD: tiger.h,v 1.5 2008/05/09 15:00:32 joerg Exp $ */
 
 /*
  * Copyright © 2005 Alistair Crooks.  All rights reserved.
@@ -44,6 +44,7 @@
 
 typedef struct tiger_context_t {
 	uint64_t	ctx[3];
+	int first_time;
 } tiger_context_t;
 
 void TIGERInit(tiger_context_t *);
