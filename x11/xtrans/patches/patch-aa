@@ -1,25 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2008/04/25 18:15:55 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2008/05/09 09:04:06 wiz Exp $
 
---- Xtranssock.c.orig	2008-03-06 02:48:42.000000000 +0100
+--- Xtranssock.c.orig	2008-05-08 14:23:07.000000000 +0000
 +++ Xtranssock.c
-@@ -48,6 +48,7 @@ from the copyright holders.
-  * CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
-  */
- 
-+#include <sys/stat.h>
- #include <ctype.h>
- #ifdef XTHREADS
- #include <X11/Xthreads.h>
-@@ -215,7 +216,7 @@ static int TRANS(SocketINETClose) (Xtran
- 
- #ifdef UNIXCONN
- 
--#ifdef hpux
-+#ifdef __hpux
- 
- #if defined(X11_t)
- #define UNIX_PATH "/usr/spool/sockets/X11/"
-@@ -286,11 +287,6 @@ static int TRANS(SocketINETClose) (Xtran
+@@ -294,11 +295,6 @@ static int TRANS(SocketINETClose) (Xtran
   * that don't have IPv6 support.
   */
  #if defined(IPv6) && defined(AF_INET6)
@@ -31,13 +14,3 @@ $NetBSD: patch-aa,v 1.4 2008/04/25 18:15:55 joerg Exp $
  static int haveIPv6 = 1;
  #endif
  
-@@ -541,6 +537,9 @@ TRANS(SocketReopen) (int i, int type, in
- 
-     portlen = strlen(port) + 1; // include space for trailing null
- #ifdef BSD44SOCKETS
-+#  ifndef SOCK_MAXADDRLEN
-+#  define SOCK_MAXADDRLEN 255
-+#  endif
-     if (portlen < 0 || portlen > (SOCK_MAXADDRLEN + 2)) {
-       PRMSG (1, "SocketReopen: invalid portlen %d\n", portlen, 0, 0);
-       return NULL;
