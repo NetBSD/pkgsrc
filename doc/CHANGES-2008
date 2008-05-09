@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1018 2008/05/09 04:02:26 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1019 2008/05/09 06:10:11 martti Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1770,3 +1770,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/cdrtools to 2.01.01.39 [wiz 2008-05-08]
 	Updated databases/freetds to 0.82 [jlam 2008-05-08]
 	Updated x11/xkbcomp to 1.0.5 [bjs 2008-05-09]
+	Updated wm/fvwm-devel to 2.5.26 [martti 2008-05-09]
