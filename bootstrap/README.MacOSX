@@ -1,37 +1,15 @@
-$NetBSD: README.MacOSX,v 1.5 2008/04/20 02:58:51 rtr Exp $
+$NetBSD: README.MacOSX,v 1.6 2008/05/09 18:39:54 agc Exp $
 
 Please read "README.Darwin" as well, as everything there also applies
 to Mac OS X.
 
 
-Creating a case-sensitive pkgsrc partition:
+File systems
 
-Since most Macintoshes come with only 1 disk installed, and you
-want to have your pkgsrc UFS partition on that disk, there's a
-little trick you will have to do.
-
-The problem is that none of the disk tools will let you touch a
-disk that is booted from.  In my case, I have a 30G drive that I
-partitioned 4G for Classic/OS9, 4G for pkgsrc, and the rest for OS
-X.  Now, you can unmount the pkgsrc partition, but even if you
-newfs it, the partition map will show the partition as Apple_HFS
-and not Apple_UFS as automounter needs it to say.  The result of
-that newfs would be that the partition wouldn't be automounted,
-and if you manually mount it, it won't appear in Finder.
-
-You'll need to boot off of the OS X Installation (User) CD.  When
-the Installtion program starts, go up to the menu and select Disk
-Utility.  Now, you will be able to select the partition you want
-to be UFS, and Format it Apple UFS.
-
-Once you've done that, you Quit the Disk Utility and Quit the
-Installer... which will reboot your computer.  Now the new UFS
-partition will show up, but the permissions will be set to root,
-so you won't be able to write to it.  You'll have to chown the
-mount point to you (/Volumes/whatever).
-
-This note is as of 10.2 (Jaguar) and applies to earlier versions.
-[Hopefully Apple will fix Disk Utility in 10.3 (Panther)].
+Previously, pkgsrc needed to be installed on a case-insensitive file
+system.  Starting in 2007, this restriction has been relaxed, and
+pkgsrc will work on case-insensitive as well as case sensitive file
+systems.
 
 
 Developer tools:
