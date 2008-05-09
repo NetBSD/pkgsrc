@@ -1,0 +1,30 @@
+$NetBSD: patch-ae,v 1.1.1.1 2008/05/09 21:39:17 agc Exp $
+
+--- stegclient.c	2007/10/03 12:11:42	1.1
++++ stegclient.c	2007/10/03 12:12:59
+@@ -52,9 +52,7 @@
+   struct addr verbose_addr;
+   char verbose_buf[80];
+   uint32_t ack_num;
+-  uint32_t tmp_seq;
+   uint32_t tmp_seqoff;
+-  uint32_t tmp_loc;
+   uint8_t extracted[4];
+ 
+   st_ctx = void_ctx;
+@@ -202,7 +200,6 @@
+   struct addr verbose_addr;
+   char verbose_buf[80];
+   uint32_t seq_num;
+-  uint8_t packet_hash[16];
+   uint8_t cipher_stream[4];
+   uint8_t readbuf[2];
+   int i;
+@@ -319,7 +316,6 @@
+   int c;
+   int got_proxy;
+   int got_target;
+-  int i;
+ 
+   if(!(getuid() == 0)) {
+     fprintf(stderr, "Gotta be root to run %s\n", argv[0]);

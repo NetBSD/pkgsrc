@@ -1,0 +1,73 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/05/09 21:39:17 agc Exp $
+
+--- hashtab.c	2007/10/03 12:04:01	1.1
++++ hashtab.c	2007/10/03 12:08:02
+@@ -28,6 +28,10 @@
+ --------------------------------------------------------------------
+ */
+ 
++#include <sys/types.h>
++#include <stdlib.h>
++#include <string.h>
++
+ #ifndef STANDARD
+ #include "standard.h"
+ #endif
+@@ -41,6 +45,7 @@
+ #include "recycle.h"
+ #endif
+ 
++#ifdef HASHTAB_DEBUG
+ /* sanity check -- make sure ipos, apos, and count make sense */
+ static void  hsanity(t)
+ htab *t;
+@@ -51,7 +56,7 @@
+   /* test that apos makes sense */
+   end = (ub4)1<<(t->logsize);
+   if (end < t->apos)
+-    printf("error:  end %ld  apos %ld\n", end, t->apos);
++    printf("error:  end %ld  apos %ld\n", (long) end, (long) t->apos);
+ 
+   /* test that ipos is in bucket apos */
+   if (t->ipos)
+@@ -59,7 +64,7 @@
+     for (h=t->table[t->apos];  h && h != t->ipos;  h = h->next)
+       ;
+     if (h != t->ipos)
+-      printf("error:ipos not in apos, apos is %ld\n", t->apos);
++      printf("error:ipos not in apos, apos is %ld\n", (long) t->apos);
+   }
+ 
+   /* test that t->count is the number of elements in the table */
+@@ -68,8 +73,9 @@
+     for (h=t->table[i];  h;  h=h->next)
+       ++counter;
+   if (counter != t->count)
+-    printf("error: counter %ld  t->count %ld\n", counter, t->count);
++    printf("error: counter %ld  t->count %ld\n", (long) counter, (long) t->count);
+ }
++#endif /* HASHTAB_DEBUG */
+ 
+ 
+ /*
+@@ -138,7 +144,6 @@
+ void hdestroy( t)
+ htab  *t;    /* the table */
+ {
+-  hitem *h;
+   refree(t->space);
+   free((char *)t->table);
+   free((char *)t);
+@@ -351,10 +356,10 @@
+   printf("\n");
+   for (walk=stat; walk; walk=walk->next)
+   {
+-    printf("items %ld:  %ld buckets\n", walk->keyl, walk->hval);
++    printf("items %ld:  %ld buckets\n", (long)walk->keyl, (long)walk->hval);
+   }
+   printf("\nbuckets: %ld  items: %ld  existing: %g\n\n",
+-         ((ub4)1<<t->logsize), t->count, total);
++         (long)((ub4)1<<t->logsize), (long)t->count, total);
+ 
+   /* clean up */
+   while (stat)

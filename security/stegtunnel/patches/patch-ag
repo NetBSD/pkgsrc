@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1.1.1 2008/05/09 21:39:17 agc Exp $
+
+--- session.c	2007/10/03 19:15:45	1.1
++++ session.c	2007/10/03 19:15:56
+@@ -219,7 +219,6 @@
+   struct tcp_hdr *tcp_header;
+   uint8_t hash[SHA1HashSize];
+   uint16_t proxy_port;
+-  int i;
+ 
+   ip_header = (struct ip_hdr *)packet;
+   if (ip_header->ip_p != IP_PROTO_TCP)

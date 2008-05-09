@@ -1,0 +1,21 @@
+$NetBSD: patch-af,v 1.1.1.1 2008/05/09 21:39:17 agc Exp $
+
+--- crypto.c	2007/10/03 18:50:14	1.1
++++ crypto.c	2007/10/03 18:51:13
+@@ -76,7 +76,7 @@
+   passlen = strlen(passphrase);
+ 
+   SHA1Reset(&sha1_ctx);
+-  SHA1Input(&sha1_ctx, passphrase, passlen);
++  SHA1Input(&sha1_ctx, (unsigned char *)passphrase, passlen);
+   SHA1Result(&sha1_ctx, st_ctx->pw_hash);
+   for(c = 0; c < passlen; c++) {
+     passphrase[c] = 0;
+@@ -156,7 +156,6 @@
+   struct ip_hdr *ip_header;
+   struct tcp_hdr *tcp_header;
+   uint8_t *tmp_pkt;
+-  int i;
+ 
+   ip_header = (struct ip_hdr *)packet;
+   tcp_header = (struct tcp_hdr *) (packet + (ip_header->ip_hl * 4));
