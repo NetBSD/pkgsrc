@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.34 2008/05/09 10:21:41 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.35 2008/05/09 11:21:52 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -76,3 +76,5 @@ pullup ticket #2362 - requested by tonnerre
 teTeX3-bin: fixes security vulnerability
 pullup ticket #2364 - requested by joerg
 py-moin: update to 1.6.3 for bug fix    
+pullup ticket #2366 - requested by obache
+GraphicsMagick: security & bug fixes
