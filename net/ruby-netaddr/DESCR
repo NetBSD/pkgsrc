@@ -1,0 +1,4 @@
+NetAddr (formerly IPAdmin) is a Ruby package for working with
+network addresses. Includes: ability to subnet/supernet IPv4 and
+IPv6 space, create CIDR-based hierarchical trees, manipulate MAC
+addresses, and much more.
