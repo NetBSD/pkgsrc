@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/05/09 21:39:17 agc Exp $
+
+--- Makefile.in	2007/10/02 16:00:26	1.1
++++ Makefile.in	2007/10/02 16:01:50
+@@ -74,7 +74,7 @@
+ PACKAGE_VERSION = @PACKAGE_VERSION@
+ PATH_SEPARATOR = @PATH_SEPARATOR@
+ PCAPINC = @PCAPINC@
+-PCAPLIB = @PCAPLIB@
++PCAPLIB = -Wl,-R${PREFIX}/lib @PCAPLIB@
+ RANLIB = @RANLIB@
+ SET_MAKE = @SET_MAKE@
+ SHELL = @SHELL@
+@@ -151,9 +151,9 @@
+ DEFAULT_INCLUDES =  -I. -I$(srcdir)
+ depcomp =
+ am__depfiles_maybe =
+-COMPILE = $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
++COMPILE = libtool --mode=compile $(CC) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) \
+ 	$(CPPFLAGS) $(AM_CFLAGS) $(CFLAGS)
+-CCLD = $(CC)
++CCLD = libtool --mode=link $(CC)
+ LINK = $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
+ DIST_SOURCES = $(stegclient_SOURCES) $(stegserver_SOURCES)
+ 
