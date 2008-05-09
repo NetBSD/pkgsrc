@@ -1,0 +1,24 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/05/09 21:39:17 agc Exp $
+
+--- recycle.c	2007/10/03 12:08:42	1.1
++++ recycle.c	2007/10/03 12:09:47
+@@ -13,6 +13,10 @@
+ --------------------------------------------------------------------
+ */
+ 
++#include <sys/types.h>
++#include <stdlib.h>
++#include <string.h>
++
+ #ifndef STANDARD
+ # include "standard.h"
+ #endif
+@@ -36,7 +40,7 @@
+ struct reroot *r;
+ {
+    recycle *temp;
+-   if (temp = r->list) while (r->list)
++   if ((temp = r->list) != NULL) while (r->list)
+    {
+       temp = r->list->next;
+       free((char *)r->list);

@@ -1,0 +1,28 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/05/09 21:39:17 agc Exp $
+
+--- stegtunnel.c	2007/10/03 12:10:29	1.1
++++ stegtunnel.c	2007/10/03 12:11:03
+@@ -95,7 +95,6 @@
+   SHA1Context sha;
+   uint8_t sha_inbuf[SHA_INBUF_SZ];
+   int num_read;
+-  int i;
+ 
+   lseek(file_ctx->fd, 0, SEEK_SET);
+   SHA1Reset(&sha);
+@@ -294,7 +293,6 @@
+ stegt_file_output(struct stegt_file *file_ctx, uint8_t *out_buf, int width)
+ {
+   int i;
+-  int j;
+   uint8_t *size_ptr;
+   uint32_t tmp_size;
+   int ret_val;
+@@ -394,7 +392,6 @@
+ 		 uint8_t *in_buf, int width)
+ {
+   int i;
+-  int j;
+   
+   i = 0;
+ 

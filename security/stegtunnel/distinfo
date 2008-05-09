@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/05/09 21:39:17 agc Exp $
+
+SHA1 (stegtunnel-0.4.tar.gz) = c29c1ddc4bca2e2b266acf0040a2029c3bdeb33d
+RMD160 (stegtunnel-0.4.tar.gz) = c06d13c0c22b684fb5141894bae81d3d4d623470
+Size (stegtunnel-0.4.tar.gz) = 167291 bytes
+SHA1 (patch-aa) = c4dea849a440bb6520a41def36d3448741a0e4e1
+SHA1 (patch-ab) = 6472ca339cecaad6ca9369ac717059be7b817124
+SHA1 (patch-ac) = 6cfe164a46acf3fee5644e9d45eee4414815066f
+SHA1 (patch-ad) = ba43ac603014b46358666c8a34f071473269f83d
+SHA1 (patch-ae) = f6b233b7e5a5dfb4a1c39b655ae242afe24f03ba
+SHA1 (patch-af) = 2cf20415cc4110dd1cd7244f1d10b2ea3b3d727b
+SHA1 (patch-ag) = 3bbc440df74241aa47f40417c0ce176f3850b42b
