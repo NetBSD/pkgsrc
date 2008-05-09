@@ -1,7 +1,5 @@
-$NetBSD: patch-ab,v 1.17 2008/01/10 21:55:53 adam Exp $
-
---- dist/configure.orig	2007-09-27 17:32:04.000000000 +0200
-+++ dist/configure
+--- dist/configure.orig	2007-09-27 18:32:04 +0300
++++ dist/configure	2008-05-09 01:20:00 +0300
 @@ -5938,6 +5938,7 @@ db_cv_gxx_except=no;
  if test "$GXX" = "yes"; then
  	GXX_VERSION=`${MAKEFILE_CXX} --version`
@@ -45,7 +43,20 @@ $NetBSD: patch-ab,v 1.17 2008/01/10 21:55:53 adam Exp $
  	hp*)		_JNI_INC_SUBDIRS="hp-ux";;
  	linux*)		_JNI_INC_SUBDIRS="linux genunix";;
  	osf*)		_JNI_INC_SUBDIRS="alpha";;
-@@ -29859,7 +29859,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -28547,10 +28547,12 @@ typedef FILE ac__type_new_;
+ int
+ main ()
+ {
++#ifndef __DragonFly__
+ if ((ac__type_new_ *) 0)
+   return 0;
+ if (sizeof (ac__type_new_))
+   return 0;
++#endif
+   ;
+   return 0;
+ }
+@@ -29859,7 +29861,7 @@ rm -f core conftest.err conftest.$ac_obj
  	# If the user specified we use POSIX pthreads mutexes, and we fail to
  	# find the full interface, try and configure for just intra-process
  	# support.
