@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/02/27 16:58:18 martti Exp $
+# $NetBSD: Makefile,v 1.26 2008/05/09 06:09:43 martti Exp $
 
 DISTNAME=	fvwm-${FVWM_VER}
 #PKGREVISION=	1
@@ -12,7 +12,7 @@ COMMENT=	Development version of X11 Virtual window manager
 #LICENSE=	gnu-gpl-v2
 
 CONFLICTS=	fvwm1-[0-9]* fvwm2-[0-9]*
-FVWM_VER=	2.5.25
+FVWM_VER=	2.5.26
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
