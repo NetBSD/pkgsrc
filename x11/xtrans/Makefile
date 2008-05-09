@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2008/05/09 09:04:06 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/05/09 22:53:21 dsainty Exp $
 #
 
 DISTNAME=		xtrans-1.2
+PKGREVISION=		1
 CATEGORIES=		x11 net
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
 EXTRACT_SUFX=		.tar.bz2
