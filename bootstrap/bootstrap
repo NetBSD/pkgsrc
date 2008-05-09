@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.123 2008/04/30 03:14:55 minskim Exp $
+# $NetBSD: bootstrap,v 1.124 2008/05/09 18:35:35 agc Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -774,7 +774,7 @@ fi
 # make sure we're using a case-sensitive file system
 if [ $ignorecasecheck = "no" ]; then
 case "$opsys" in
-Darwin|Interix)
+Interix)
 	echo_msg "Testing file system case sensitivity"
 	for fs in "$prefix"; do
 		testdir="pkgsrc-REQUIRES-case-SENSITIVE-filesystem"
