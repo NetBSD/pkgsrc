@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2008/04/25 02:28:24 reed Exp $
+# $NetBSD: Makefile,v 1.10 2008/05/10 08:12:10 obache Exp $
 #
 
 DISTNAME=	weewm-0.0.2
 PKGREVISION=	2
 CATEGORIES=	wm
-MASTER_SITES=	http://weewm.flashtux.org/download.php
+MASTER_SITES=	http://weewm.flashtux.org/download/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	minskim@NetBSD.org
