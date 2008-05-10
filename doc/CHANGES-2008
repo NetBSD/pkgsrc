@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1028 2008/05/10 15:29:56 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1029 2008/05/10 16:19:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1780,3 +1780,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/plone3 to 3.1.1 [taca 2008-05-10]
 	Updated audio/cmus to 2.2.0 [obache 2008-05-10]
 	Updated net/rdesktop to 1.5.0nb4 [tonnerre 2008-05-10]
+	Updated x11/fbdesk to 1.4.1 [obache 2008-05-10]
