@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2007/12/22 19:12:27 minskim Exp $
+# $NetBSD: Makefile,v 1.45 2008/05/10 11:52:14 obache Exp $
 
 DISTNAME=	mm2.7
 PKGNAME=	metamail-2.7
@@ -14,12 +14,13 @@ COMMENT=	Implementation of MIME, the Multipurpose Internet Mail Extensions
 CONFLICTS+=	elm>=2.5.5 mm-2.7
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 
 CFLAGS.Linux+=	-DLINUX
 CFLAGS.SunOS+=	-DSYSV
-MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q} CHMOD=${CHMOD:Q} SED=${SED:Q}
+MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR} CHMOD=${CHMOD:Q} SED=${SED:Q}
 
 EGDIR=		${PREFIX}/share/examples/metamail
 CONF_FILES=	${EGDIR}/mailcap ${PKG_SYSCONFDIR}/mailcap
@@ -36,7 +37,7 @@ REPLACE_FILES.csh+=	bin/showpicture bin/sun-audio-file bin/sun-message.csh
 REPLACE_FILES.csh+=	bin/sun-to-mime
 REPLACE_FILES.csh+=	fonts/Xmailto-hebrew fonts/Xshownonascii
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man4
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man4 ${EGDIR}
 
 SUBST_CLASSES+=		awk sys
 SUBST_STAGE.awk=	post-patch
@@ -52,14 +53,12 @@ post-patch:
 	${RM} -f ${WRKDIR}/mm2.7/src/bin/*.orig
 
 pre-configure:
+	set -e;								\
 	if ${GREP} putenv /usr/include/stdlib.h >/dev/null;		\
 	then								\
 		cd ${WRKSRC}/metamail;					\
 		${MV} Makefile Makefile.pre-sed;			\
 		${SED} -e s/putenv.o//g Makefile.pre-sed >Makefile;	\
 	fi
-
-pre-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
