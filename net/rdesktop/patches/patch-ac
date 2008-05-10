@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.5 2008/05/10 15:28:04 tonnerre Exp $
+
+--- iso.c.orig	2006-08-07 13:45:43.000000000 +0200
++++ iso.c
+@@ -98,6 +98,11 @@ iso_recv_msg(uint8 * code, uint8 * rdpve
+ 			next_be(s, length);
+ 		}
+ 	}
++	if (length < 4)
++	{
++		error("Bad packet header\n");
++		return NULL;
++	}
+ 	s = tcp_recv(s, length - 4);
+ 	if (s == NULL)
+ 		return NULL;
