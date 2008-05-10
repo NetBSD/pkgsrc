@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2007/12/18 15:46:59 taca Exp $
+$NetBSD: MESSAGE,v 1.2 2008/05/10 09:06:00 taca Exp $
 
 To complete the installation of Plone:
 
@@ -14,5 +14,7 @@ To complete the installation of Plone:
 	- Go to portal_migrations
 	- Click the Migration tab
 	- Click Migrate
+
+* For OpenID support, Python OpenID package needs to install.
 
 ===========================================================================
