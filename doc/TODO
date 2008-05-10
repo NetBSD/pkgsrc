@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7263 2008/05/09 21:48:13 markd Exp $
+$NetBSD: TODO,v 1.7264 2008/05/10 14:57:19 obache Exp $
 
 Suggested new packages
 ======================
@@ -502,7 +502,6 @@ Suggested package updates
 	o claws-mail-3.4.0
 	o clearsilver-0.10.5
 	o clearsilver-base-0.10.5
-	o cmus-2.2.0 [pkg/37856]
 	o cocoon-2.1.10
 	o colorize-0.3.4
 	o connect-1.96
