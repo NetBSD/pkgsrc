@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1 2008/05/10 09:06:00 taca Exp $
+
+--- Products/PloneTranslations/i18n/plone-nl.po.orig	2008-04-28 22:16:23.000000000 +0900
++++ Products/PloneTranslations/i18n/plone-nl.po
+@@ -3381,7 +3381,7 @@ msgstr ""
+ "${from_address} stuurt u dit bericht met een reactie op de inhoud die u heeft geplaatst op ${url}.\n"
+ "De inhoud van het bericht is:\n"
+ "\n"
+-"${message}\n"
++"${message}"
+ 
+ #. Default: "Back to Add/Remove Products"
+ #: CMFPlone/skins/plone_prefs/prefs_installed_product_overview.pt:20
+@@ -7975,7 +7975,7 @@ msgstr ""
+ "${comment}\n\n"
+ "${document_title}\n\n"
+ "${document_description}\n\n"
+-"${document_url}\n"
++"${document_url}"
+ 
+ #. Default: "show"
+ #: workflow transition defined in folder_workflow - title Member makes content visible new state visible
+@@ -7989,7 +7989,7 @@ msgid "site_feedback_mailtemplate_body"
+ msgstr "U ontvangt dit bericht, omdat ${fullname} ${from_address} u een reactie stuurt over de Plone website die u beheert op ${url} \n"
+ "De inhoud van het bericht is:\n"
+ "\n"
+-"${message}\n"
++"${message}"
+ 
+ #. Default: "Small"
+ #: CMFPlone/skins/plone_templates/accessibility-info.pt:32
