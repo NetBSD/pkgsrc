@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2008/05/10 15:28:04 tonnerre Exp $
+
+--- disk.c.orig	2006-08-07 13:45:43.000000000 +0200
++++ disk.c
+@@ -799,7 +799,7 @@ disk_set_information(NTHANDLE handle, ui
+ 
+ 			if (length && (length / 2) < 256)
+ 			{
+-				rdp_in_unistr(in, newname, length);
++				rdp_in_unistr(in, newname, sizeof(newname), length);
+ 				convert_to_unix_filename(newname);
+ 			}
+ 			else

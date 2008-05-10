@@ -1,0 +1,19 @@
+$NetBSD: patch-ai,v 1.1 2008/05/10 15:28:04 tonnerre Exp $
+
+--- rdesktop.c.orig	2006-08-07 13:45:43.000000000 +0200
++++ rdesktop.c
+@@ -1082,12 +1082,12 @@ xrealloc(void *oldmem, int size)
+ {
+ 	void *mem;
+ 
+-	if (size < 1)
++	if (size == 0)
+ 		size = 1;
+ 	mem = realloc(oldmem, size);
+ 	if (mem == NULL)
+ 	{
+-		error("xrealloc %d\n", size);
++		error("xrealloc %ld\n", size);
+ 		exit(1);
+ 	}
+ 	return mem;
