@@ -1,0 +1,13 @@
+$NetBSD: patch-cb,v 1.1 2008/05/10 17:13:12 jmcneill Exp $
+
+--- gio/xdgmime/xdgmime.c.orig	2008-05-10 13:00:48.000000000 -0400
++++ gio/xdgmime/xdgmime.c	2008-05-10 13:01:28.000000000 -0400
+@@ -236,7 +236,7 @@
+ 
+   xdg_data_dirs = getenv ("XDG_DATA_DIRS");
+   if (xdg_data_dirs == NULL)
+-    xdg_data_dirs = "/usr/local/share/:/usr/share/";
++    xdg_data_dirs = PREFIX "/share/";
+ 
+   ptr = xdg_data_dirs;
+ 
