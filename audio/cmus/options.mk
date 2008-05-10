@@ -1,7 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2008/02/28 17:15:48 jlam Exp $
+# $NetBSD: options.mk,v 1.4 2008/05/10 14:56:33 obache Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cmus
 PKG_SUPPORTED_OPTIONS=		flac mad vorbis arts ao mpcdec	#faad alsa
+PKG_SUPPORTED_OPTIONS+=		wide-curses
 PKG_OPTIONS_OPTIONAL_GROUPS=	mod
 PKG_OPTIONS_GROUP.mod=		modplug mikmod
 PKG_SUGGESTED_OPTIONS=		flac mad ao vorbis modplug
@@ -103,3 +104,12 @@ CONFIGURE_ARGS+=	CONFIG_MIKMOD=n
 #CONFIGURE_ARGS+=	CONFIG_AAC=n
 #CONFIGURE_ARGS+=	CONFIG_MP4=n
 #.endif
+
+###
+### Wide curses support; otherwise, default to using narrow curses.
+###
+.if !empty(PKG_OPTIONS:Mwide-curses)
+.  include "../../devel/ncursesw/buildlink3.mk"
+.else
+.  include "../../devel/ncurses/buildlink3.mk"
+.endif
