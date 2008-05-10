@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2008/03/03 00:51:44 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2008/05/10 08:41:48 obache Exp $
 
 DISTNAME=	nttcp-1.47
 PKGREVISION=	1
 CATEGORIES=	benchmarks net
-MASTER_SITES=	http://home.leo.org/~elmar/nttcp/
+MASTER_SITES=	http://www.sfr-fresh.com/unix/privat/
 
 MAINTAINER=	thorpej@NetBSD.org
-HOMEPAGE=	http://home.leo.org/~elmar/nttcp/
+HOMEPAGE=	# http://home.leo.org/~elmar/nttcp/
 COMMENT=	New TCP testing and performance measuring tool
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
