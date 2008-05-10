@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7264 2008/05/10 14:57:19 obache Exp $
+$NetBSD: TODO,v 1.7265 2008/05/10 16:20:09 obache Exp $
 
 Suggested new packages
 ======================
@@ -588,7 +588,6 @@ Suggested package updates
 	o f2c-20061008
 	o faces-1.7.7
 	o fakeroot-1.6.5
-	o fbdesk-1.4.1 [pkg/38473]
 	o fd-2.09c
 	o fdgw-20040609
 	o festival-1.96
