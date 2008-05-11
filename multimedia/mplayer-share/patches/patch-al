@@ -1,0 +1,14 @@
+$NetBSD: patch-al,v 1.3 2008/05/11 03:46:24 tonnerre Exp $
+
+--- stream/realrtsp/sdpplin.c.orig	2007-10-07 21:49:25.000000000 +0200
++++ stream/realrtsp/sdpplin.c
+@@ -330,7 +330,8 @@ sdpplin_t *sdpplin_parse(char *data) {
+     
+     if(filter(data,"a=StreamCount:integer;",&buf)) {
+       desc->stream_count=(unsigned int)atoi(buf);
+-      desc->stream=malloc(sizeof(sdpplin_stream_t*)*desc->stream_count);
++      desc->stream=calloc(desc->stream_count, sizeof(sdpplin_stream_t*));
++      if (!desc->stream) desc->stream_count = 0;
+       handled=1;
+       data=nl(data);
+     }
