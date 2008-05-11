@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/05/11 20:27:04 jmcneill Exp $
+
+--- pathnames.h.orig	2008-05-11 16:10:05.000000000 -0400
++++ pathnames.h
+@@ -35,6 +35,6 @@
+ #ifndef _MTFTPD_PATHNAMES_H
+ #define _MTFTPD_PATHNAMES_H
+ 
+-#define MTFTPD_PLIST		"mtftpd.plist"
++#define MTFTPD_PLIST		PKG_SYSCONFDIR"/mtftpd.plist"
+ 
+ #endif /* !_MTFTPD_PATHNAMES_H */
