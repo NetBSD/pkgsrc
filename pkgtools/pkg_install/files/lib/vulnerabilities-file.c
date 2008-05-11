@@ -36,7 +36,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: vulnerabilities-file.c,v 1.3.4.2 2008/05/09 00:49:38 joerg Exp $");
+__RCSID("$NetBSD: vulnerabilities-file.c,v 1.3.4.3 2008/05/11 20:20:38 joerg Exp $");
 
 #if HAVE_SYS_STAT_H
 #include <sys/stat.h>
@@ -65,13 +65,10 @@ __RCSID("$NetBSD: vulnerabilities-file.c,v 1.3.4.2 2008/05/09 00:49:38 joerg Exp
 #include "lib.h"
 
 static void
-verify_signature(const char *input, size_t input_len)
+verify_signature_gpg(const char *input, size_t input_len)
 {
 	pid_t child;
 	int fd[2], status;
-
-	if (gpg_cmd == NULL)
-		errx(EXIT_FAILURE, "GPG variable not set in configuration file");
 
 	if (pipe(fd) == -1)
 		err(EXIT_FAILURE, "cannot create input pipes");
@@ -99,6 +96,54 @@ verify_signature(const char *input, size_t input_len)
 	waitpid(child, &status, 0);
 	if (status)
 		errx(EXIT_FAILURE, "GPG could not verify the signature");
+}
+
+static const char pgp_msg_start[] = "-----BEGIN PGP SIGNED MESSAGE-----\n";
+static const char pgp_msg_end[] = "-----BEGIN PGP SIGNATURE-----\n";
+static const char pkcs7_begin[] = "-----BEGIN PKCS7-----\n";
+static const char pkcs7_end[] = "-----END PKCS7-----\n";
+
+static void
+verify_signature_pkcs7(const char *input)
+{
+#ifdef HAVE_SSL
+	const char *begin_pkgvul, *end_pkgvul, *begin_sig, *end_sig;
+
+	if (strcmp(input, pgp_msg_start) == 0) {
+		begin_pkgvul = pgp_msg_start + strlen(pgp_msg_start);
+		if ((end_pkgvul = strstr(begin_pkgvul, pgp_msg_end)) == NULL)
+			errx(EXIT_FAILURE, "Invalid PGP signature");
+		if ((begin_sig = strstr(end_pkgvul, pkcs7_begin)) == NULL)
+			errx(EXIT_FAILURE, "No PKCS7 signature");
+	} else {
+		begin_pkgvul = input;
+		if ((begin_sig = strstr(begin_pkgvul, pkcs7_begin)) == NULL)
+			errx(EXIT_FAILURE, "No PKCS7 signature");
+		end_pkgvul = begin_sig;		
+	}
+	if ((end_sig = strstr(begin_sig, pkcs7_end)) == NULL)
+		errx(EXIT_FAILURE, "Invalid PKCS7 signature");
+	end_sig += strlen(pkcs7_end);
+
+	if (easy_pkcs7_verify(begin_pkgvul, end_pkgvul - begin_pkgvul,
+	    begin_sig, end_sig - begin_sig, certs_pkg_vulnerabilities))
+		errx(EXIT_FAILURE, "Unable to verify PKCS7 signature");
+#else
+	errx(EXIT_FAILURE, "OpenSSL support is not compiled in");
+#endif
+}
+
+static void
+verify_signature(const char *input, size_t input_len)
+{
+	if (gpg_cmd == NULL && certs_pkg_vulnerabilities == NULL)
+		errx(EXIT_FAILURE,
+		    "At least GPG or CERTIFICATE_ANCHOR_PKGVULN "
+		    "must be configured");
+	if (gpg_cmd != NULL)
+		verify_signature_gpg(input, input_len);
+	if (certs_pkg_vulnerabilities != NULL)
+		verify_signature_pkcs7(input);
 }
 
 static void *
