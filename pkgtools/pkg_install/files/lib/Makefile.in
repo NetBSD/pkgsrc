@@ -1,20 +1,19 @@
-# $NetBSD: Makefile.in,v 1.21.2.2 2008/05/08 23:34:27 joerg Exp $
+# $NetBSD: Makefile.in,v 1.21.2.3 2008/05/11 20:20:38 joerg Exp $
 
 srcdir=		@srcdir@
 
 pkgdbdir=	@pkgdbdir@
 mandir=		@mandir@
 datarootdir=	@datarootdir@
+sysconfdir=	@sysconfdir@
 
 cat5dir=	$(mandir)/cat5
 cat7dir=	$(mandir)/cat7
 man5dir=	$(mandir)/man5
 man7dir=	$(mandir)/man7
 
-tar=		@tar@
-ftp=		@ftp@
-
 BOOTSTRAP=	@bootstrap@
+SSL_SUPPORT=	@ssl_support@
 
 RANLIB=		@RANLIB@
 AR=		@AR@
@@ -29,7 +28,7 @@ LIB=	libinstall.a
 
 OBJS=	automatic.o conflicts.o decompress.o dewey.o fexec.o file.o \
 	global.o iterate.o lpkg.o opattern.o \
-	parse-config.o path.o pkgdb.o plist.o \
+	parse-config.o path.o pkgdb.o plist.o pkg_signature.o pkcs7.o \
 	str.o var.o version.o vulnerabilities-file.o
 
 CPPFLAGS+=	-DSYSCONFDIR=\"$(sysconfdir)\"
@@ -38,6 +37,10 @@ CPPFLAGS+=	-DSYSCONFDIR=\"$(sysconfdir)\"
 CPPFLAGS+=	-DBOOTSTRAP
 .else
 OBJS+=	pkg_io.o
+.endif
+
+.if !empty(SSL_SUPPORT)
+CPPFLAGS+=	-DHAVE_SSL
 .endif
 
 all: $(LIB)

@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_add.1,v 1.28.6.1 2008/04/26 17:44:23 joerg Exp $
+.\" $NetBSD: pkg_add.1,v 1.28.6.2 2008/05/11 20:20:37 joerg Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -17,7 +17,7 @@
 .\"
 .\"     @(#)pkg_add.1
 .\"
-.Dd August 23, 2007
+.Dd May 9, 2008
 .Dt PKG_ADD 1
 .Os
 .Sh NAME
@@ -29,7 +29,6 @@
 .Op Fl K Ar pkg_dbdir
 .Op Fl m Ar machine
 .Op Fl p Ar prefix
-.Op Fl s Ar verification-type
 .Op Fl W Ar viewbase
 .Op Fl w Ar view
 .Ar \fR[[ftp|http]://[\fIuser\fR[:\fIpassword]\fR@]\fIhost\fR[:\fIport\fR]][/\fIpath/\fR]pkg-name ...
@@ -163,27 +162,6 @@ This implies
 .Fl I .
 This means that you cannot deinstall it later, so only use this option if
 you know what you are doing!
-.It Fl s Ar verification-type
-Use a callout to an external program to verify the binary package
-being installed against an existing detached signature file.
-The signature file must reside in the same directory
-as the binary package.
-At the present time, the following verification types
-are defined: none, gpg and pgp5.
-The signature will be verified at install time, and the results
-will be displayed.
-If the signature type is anything other than none, the user will be asked if
-.Nm
-should proceed to install the binary package.
-The user must then take the decision whether to proceed or not, depending
-upon the amount of trust that is placed in the signatory of the binary
-package.
-Please note that, at the current time, it is not possible to use
-the verification feature when using
-.Nm
-to add a binary package via a URL - the package, and the related
-detached signature file, must be local
-for the verification to work.
 .It Fl u
 If the package that's being installed is already installed, either
 in the same or a different version, an update is performed.

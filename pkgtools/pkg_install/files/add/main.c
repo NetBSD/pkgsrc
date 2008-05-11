@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.14.4.1 2008/04/26 17:44:23 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.14.4.2 2008/05/11 20:20:37 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.16 1997/10/08 07:45:43 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.14.4.1 2008/04/26 17:44:23 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.14.4.2 2008/05/11 20:20:37 joerg Exp $");
 #endif
 #endif
 
@@ -47,9 +47,8 @@ __RCSID("$NetBSD: main.c,v 1.14.4.1 2008/04/26 17:44:23 joerg Exp $");
 #endif
 #include "lib.h"
 #include "add.h"
-#include "verify.h"
 
-static char Options[] = "AIK:LRVW:fhm:np:s:t:uvw:";
+static char Options[] = "AIK:LRVW:fhm:np:t:uvw:";
 
 char   *OverrideMachine = NULL;
 char   *Prefix = NULL;
@@ -66,7 +65,7 @@ static void
 usage(void)
 {
 	(void) fprintf(stderr, "%s\n%s\n%s\n",
-	    "usage: pkg_add [-AfhILnRuVv] [-K pkg_dbdir] [-m machine] [-p prefix]",
+	    "usage: pkg_add [-AfhILnRuVv] [-C config] [-K pkg_dbdir] [-m machine] [-p prefix]",
 	    "               [-s verification-type] [-W viewbase] [-w view]",
 	    "               [[ftp|http]://[user[:password]@]host[:port]][/path/]pkg-name ...");
 	exit(1);
@@ -86,6 +85,9 @@ main(int argc, char **argv)
 		case 'A':
 			Automatic = TRUE;
 			break;
+
+		case 'C':
+			config_file = optarg;
 
 		case 'f':
 			Force = TRUE;
@@ -120,12 +122,6 @@ main(int argc, char **argv)
 			Prefix = optarg;
 			break;
 
-#if 0
-		case 's':
-			set_verification(optarg);
-			break;
-#endif
-
 		case 'u':
 			Replace++;
 			break;
@@ -155,6 +151,8 @@ main(int argc, char **argv)
 	}
 	argc -= optind;
 	argv += optind;
+
+	pkg_install_config();
 
 	path_create(getenv("PKG_PATH"));
 	TAILQ_INIT(&pkgs);

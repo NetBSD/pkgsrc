@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.42.2.1 2008/05/08 23:34:27 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.42.2.2 2008/05/11 20:20:38 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.42.2.1 2008/05/08 23:34:27 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.42.2.2 2008/05/11 20:20:38 joerg Exp $");
 #endif
 
 /*-
@@ -117,7 +117,9 @@ usage(void)
 	    " audit-pkg [-es] [-t type] ...   - check listed packages for vulnerabilities\n"
 	    " audit-batch [-es] [-t type] ... - check packages in listed files for vulnerabilities\n"
 	    " audit-history [-t type] ...     - print all advisories for package names\n"
-	    " config-var name                 - print current value of the configuration variable\n",
+	    " config-var name                 - print current value of the configuration variable\n"
+	    " check-signature ...         - verify the signature of packages\n"
+	    " sign-package pkg spkg key cert  - create signature\n",
 	    getprogname());
 	exit(EXIT_FAILURE);
 }
@@ -541,6 +543,29 @@ main(int argc, char *argv[])
 		audit_batch(--argc, ++argv);
 	} else if (strcasecmp(argv[0], "audit-history") == 0) {
 		audit_history(--argc, ++argv);
+	} else if (strcasecmp(argv[0], "check-signature") == 0) {
+#ifdef HAVE_SSL
+		struct archive *pkg;
+		void *cookie;
+
+		for (--argc, ++argv; argc > 0; --argc, ++argv) {
+			pkg = open_archive(*argv, &cookie);
+			pkg_full_signature_check(pkg);
+			close_archive(pkg);
+		}
+#else
+		errx(EXIT_FAILURE, "OpenSSL support is not included");
+#endif
+	} else if (strcasecmp(argv[0], "sign-package") == 0) {
+#ifdef HAVE_SSL
+		--argc;
+		++argv;
+		if (argc != 4)
+			errx(EXIT_FAILURE, "sign-package takes exactly four arguments");
+		pkg_sign(argv[0], argv[1], argv[2], argv[3]);
+#else
+		errx(EXIT_FAILURE, "OpenSSL support is not included");
+#endif
 	}
 #endif
 #ifdef PKGDB_DEBUG
