@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2008/04/12 22:43:01 jlam Exp $
+# $NetBSD: Makefile,v 1.45 2008/05/11 13:01:07 tonnerre Exp $
 #
 
 DISTNAME=	libggi-2.1.1.src
@@ -45,6 +45,7 @@ PLIST.libvgl=		yes
 .include "../../x11/libXxf86dga/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 PLIST_SUBST+=	COND_XF86DGA=""
+PLIST.xf86dga=		yes
 .elif exists(${X11BASE}/include/X11/extensions/xf86dga.h)
 PLIST.xf86dga=		yes
 .endif
