@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1 2005/10/31 18:58:38 tv Exp $
+$NetBSD: patch-aa,v 1.2 2008/05/11 04:12:34 tonnerre Exp $
 
---- include/licq_socket.h.orig	2002-03-20 11:00:54.000000000 -0500
+--- include/licq_socket.h.orig	2006-10-18 10:59:12.000000000 +0200
 +++ include/licq_socket.h
 @@ -6,6 +6,7 @@
  #endif
@@ -10,3 +10,11 @@ $NetBSD: patch-aa,v 1.1 2005/10/31 18:58:38 tv Exp $
  #include <sys/socket.h>
  #include <netinet/in.h>
  #include <arpa/inet.h>
+@@ -250,6 +251,7 @@ public:
+ 
+   fd_set SocketSet()   {  return m_sSockets.SocketSet(); }
+   int LargestSocket()  {  return m_sSockets.Largest(); }
++  unsigned short Num() {  return m_sSockets.Num(); }
+ 
+ protected:
+   CSocketSet m_sSockets;
