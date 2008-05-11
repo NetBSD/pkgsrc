@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.1 2008/04/26 17:44:23 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.2 2008/05/11 20:20:37 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.1 2008/04/26 17:44:23 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.2 2008/05/11 20:20:37 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -71,7 +71,7 @@ struct pkg_meta {
 };
 
 struct pkg_task {
-	const char *pkgname;
+	char *pkgname;
 
 	const char *prefix;
 	const char *install_prefix;
@@ -139,9 +139,17 @@ read_meta_data(struct pkg_task *pkg)
 
 	found_required = 0;
 
+	r = ARCHIVE_OK;
 	last_descr = 0;
-	while ((r = archive_read_next_header(pkg->archive, &pkg->entry)) ==
-	    ARCHIVE_OK) {
+
+	if (pkg->entry != NULL)
+		goto skip_header;
+
+	for (;;) {
+		r = archive_read_next_header(pkg->archive, &pkg->entry);
+		if (r != ARCHIVE_OK)
+				break;
+skip_header:
 		fname = archive_entry_pathname(pkg->entry);
 
 		for (descr = pkg_meta_descriptors; descr->entry_filename;
@@ -175,7 +183,7 @@ read_meta_data(struct pkg_task *pkg)
 		if ((*target = malloc(size + 1)) == NULL)
 			err(2, "cannot allocate meta data");
 		if (archive_read_data(pkg->archive, *target, size) != size) {
-			warn("cannot read package meta data");
+			warnx("cannot read package meta data");
 			return -1;
 		}
 		(*target)[size] = '\0';
@@ -183,13 +191,15 @@ read_meta_data(struct pkg_task *pkg)
 
 	if (r != ARCHIVE_OK)
 		pkg->entry = NULL;
+	if (r == ARCHIVE_EOF)
+		r = ARCHIVE_OK;
 
 	for (descr = pkg_meta_descriptors; descr->entry_filename; ++descr) {
 		if (descr->required_file)
 			--found_required;
 	}
 
-	return !found_required ? 0 : -1;
+	return !found_required && r == ARCHIVE_OK ? 0 : -1;
 }
 
 /*
@@ -222,7 +232,12 @@ pkg_parse_plist(struct pkg_task *pkg)
 		warnx("Invalid PLIST: missing @name");
 		return -1;
 	}
-	pkg->pkgname = p->name;
+	if (pkg->pkgname == NULL)
+		pkg->pkgname = strdup(p->name);
+	else if (strcmp(pkg->pkgname, p->name) != 0) {
+		warnx("Signature and PLIST differ on package name");
+		return -1;
+	}
 	if ((p = find_plist(&pkg->plist, PLIST_CWD)) == NULL) {
 		warnx("Invalid PLIST: missing @cwd");
 		return -1;
@@ -1054,6 +1069,9 @@ pkg_do(const char *pkgpath, int mark_automatic)
 {
 	int status;
 	void *archive_cookie;
+#ifdef HAVE_SSL
+	void*signature_cookie;
+#endif
 	struct pkg_task *pkg;
 
 	if ((pkg = calloc(1, sizeof(*pkg))) == NULL)
@@ -1065,6 +1083,11 @@ pkg_do(const char *pkgpath, int mark_automatic)
 		warnx("no pkg found for '%s', sorry.", pkgpath);
 		goto clean_memory;
 	}
+#ifdef HAVE_SSL
+	if (pkg_verify_signature(&pkg->archive, &pkg->entry, &pkg->pkgname,
+	    &signature_cookie))
+		goto clean_memory;
+#endif
 	if (read_meta_data(pkg))
 		goto clean_memory;
 
@@ -1205,6 +1228,10 @@ clean_memory:
 		close_archive(archive_cookie);
 	}
 	free(pkg->other_version);
+	free(pkg->pkgname);
+#ifdef HAVE_SSL
+	pkg_free_signature(signature_cookie);
+#endif
 	free(pkg);
 	return status;
 }

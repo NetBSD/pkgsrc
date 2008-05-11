@@ -714,9 +714,8 @@ TOUCH
 AUTOCONF
 AUTOHEADER
 pkgdbdir
-ftp
-tar
 pax
+ssl_support
 bootstrap
 CPP
 EGREP
@@ -726,9 +725,8 @@ ac_subst_files=''
 ac_user_opts='
 enable_option_checking
 with_pkgdbdir
-with_ftp
-with_tar
 with_pax
+with_ssl
 enable_bootstrap
 '
       ac_precious_vars='build_alias
@@ -1371,9 +1369,8 @@ Optional Packages:
   --with-PACKAGE[=ARG]    use PACKAGE [ARG=yes]
   --without-PACKAGE       do not use PACKAGE (same as --with-PACKAGE=no)
   --with-pkgdbdir=DIR     Where to put the pkg database (/var/db/pkg)
-  --with-ftp=path         Path to tnftp (PREFIX/bin/ftp)
-  --with-tar=path         Path to pax-as-tar (PREFIX/bin/tar)
   --with-pax=path         Path to pax (PREFIX/bin/pax)
+ --with-ssl		Enable OpenSSL based signature support
 
 Some influential environment variables:
   CC          C compiler command
@@ -3691,31 +3688,21 @@ fi
 
 
 
-# Check whether --with-ftp was given.
-if test "${with_ftp+set}" = set; then
-  withval=$with_ftp;  ftp="$with_ftp"
-else
-   ftp='$(prefix)/bin/ftp'
-fi
-
-
-
-
-# Check whether --with-tar was given.
-if test "${with_tar+set}" = set; then
-  withval=$with_tar;  tar="$with_tar"
-else
-   tar='$(prefix)/bin/tar'
-fi
-
-
-
-
 # Check whether --with-pax was given.
 if test "${with_pax+set}" = set; then
   withval=$with_pax;  pax="$with_pax"
 else
    pax='$(prefix)/bin/pax'
+fi
+
+
+
+
+# Check whether --with-ssl was given.
+if test "${with_ssl+set}" = set; then
+  withval=$with_ssl;  ssl_support=yes
+else
+   ssl_support=
 fi
 
 

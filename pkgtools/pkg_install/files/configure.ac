@@ -43,23 +43,17 @@ AC_ARG_WITH(pkgdbdir,
 [ pkgdbdir="/var/db/pkg" ])
 AC_SUBST(pkgdbdir)
 
-AC_ARG_WITH(ftp,
-[  --with-ftp=path         Path to tnftp (PREFIX/bin/ftp)],
-[ ftp="$with_ftp" ],
-[ ftp='$(prefix)/bin/ftp' ])
-AC_SUBST(ftp)
-
-AC_ARG_WITH(tar,
-[  --with-tar=path         Path to pax-as-tar (PREFIX/bin/tar)],
-[ tar="$with_tar" ],
-[ tar='$(prefix)/bin/tar' ])
-AC_SUBST(tar)
-
 AC_ARG_WITH(pax,
 [  --with-pax=path         Path to pax (PREFIX/bin/pax)],
 [ pax="$with_pax" ],
 [ pax='$(prefix)/bin/pax' ])
 AC_SUBST(pax)
+
+AC_ARG_WITH(ssl,
+[ --with-ssl		Enable OpenSSL based signature support],
+[ ssl_support=yes ],
+[ ssl_support= ])
+AC_SUBST(ssl_support)
 
 AC_ARG_ENABLE([bootstrap],
     [AS_HELP_STRING([--enable-bootstrap], [build minimal version of pkg_install])],

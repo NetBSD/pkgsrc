@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.42.2.2 2008/05/08 23:34:27 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.42.2.3 2008/05/11 20:20:38 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -316,6 +316,7 @@ int     format_cmd(char *, size_t, const char *, const char *, const char *);
 
 /* pkg_io.c: Local and remote archive handling */
 struct archive;
+struct archive_entry;
 
 struct archive *open_archive(const char *, void **);
 void	close_archive(void *);
@@ -373,13 +374,32 @@ void pkg_install_config(void);
 /* Print configuration variable */
 void pkg_install_show_variable(const char *);
 
+#ifdef HAVE_SSL
+/* Package signature creation and validation */
+int pkg_verify_signature(struct archive **, struct archive_entry **, char **,
+    void **);
+int pkg_full_signature_check(struct archive *);
+void pkg_free_signature(void *);
+void pkg_sign(const char *, const char *, const char *, const char *);
+#endif
+
+#ifdef HAVE_SSL
+/* PKCS7 signing/verification */
+int easy_pkcs7_verify(const char *, size_t, const char *, size_t,
+    const char *);
+int easy_pkcs7_sign(const char *, size_t, char **, size_t *, const char *,
+    const char *);
+#endif
+
 /* Externs */
 extern Boolean Verbose;
 extern Boolean Fake;
 extern Boolean Force;
+extern const char *cert_chain_file;
+extern const char *certs_packages;
+extern const char *certs_pkg_vulnerabilities;
 extern const char *config_file;
 extern const char *gpg_cmd;
-extern const char *verify_cmd;
 
 extern const char *pkg_vulnerabilities_dir;
 extern const char *pkg_vulnerabilities_file;

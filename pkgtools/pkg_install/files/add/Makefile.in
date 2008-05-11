@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.16.4.1 2008/04/26 17:44:23 joerg Exp $
+# $NetBSD: Makefile.in,v 1.16.4.2 2008/05/11 20:20:37 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -13,17 +13,25 @@ cat1dir=	$(mandir)/cat1
 
 CC=		@CC@
 CCLD=		$(CC)
-LIBS=		-linstall -lfetch -larchive -lbz2 -lz @LIBS@
 CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib
 DEFS=		@DEFS@ -DOPSYS_NAME=\"$(OPSYS)\" -DMACHINE_ARCH=\"$(MACHINE_ARCH)\" -DBINDIR=\"$(sbindir)\"
 CFLAGS=		@CFLAGS@
 LDFLAGS=	@LDFLAGS@ -L../lib
 
+SSL_SUPPORT=	@ssl_support@
+
+LIBS=		-linstall -lfetch -lcrypto -larchive -lbz2 -lz
+.if !empty(SSL_SUPPORT)
+LIBS+=		-lcrypto
+CPPFLAGS+=	-DHAVE_SSL
+.endif
+LIBS+=		@LIBS@
+
 INSTALL=	@INSTALL@
 
 PROG=		pkg_add
 
-OBJS=	main.o perform.o verify.o
+OBJS=	main.o perform.o
 
 all: $(PROG)
 
