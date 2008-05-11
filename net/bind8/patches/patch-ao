@@ -1,0 +1,16 @@
+$NetBSD: patch-ao,v 1.1 2008/05/11 00:00:57 tonnerre Exp $
+
+--- src/lib/inet/inet_network.c.orig	2004-03-17 01:20:24.000000000 +0100
++++ src/lib/inet/inet_network.c
+@@ -84,9 +84,9 @@ again:
+ 	}
+ 	if (!digit)
+ 		return (INADDR_NONE);
++	if (pp >= parts + 4 || val > 0xffU)
++		return (INADDR_NONE);
+ 	if (*cp == '.') {
+-		if (pp >= parts + 4 || val > 0xffU)
+-			return (INADDR_NONE);
+ 		*pp++ = val, cp++;
+ 		goto again;
+ 	}
