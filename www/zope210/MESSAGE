@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2007/12/18 15:35:22 taca Exp $
+$NetBSD: MESSAGE,v 1.2 2008/05/11 16:28:03 taca Exp $
 
 Zope Successfull installed.
 
@@ -42,6 +42,7 @@ zeo${ZOPE_VERSION}${RCVAR_SUFFIX}="YES"
 zeo${ZOPE_VERSION}_instances="<ZEODIR>"
 zeo${ZOPE_VERSION}_encoding="<ENCODING>"
 
-Additional zeo Instances have to be added to zeo${ZOPE_VERSION}_instances seperated
-by a space.
+Additional zeo Instances have to be added to zeo${ZOPE_VERSION}_instances
+seperated by a space.
+
 ===========================================================================
