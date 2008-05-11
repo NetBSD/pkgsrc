@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2008/04/25 20:39:10 joerg Exp $
+# $NetBSD: Makefile,v 1.44 2008/05/11 07:21:51 hira Exp $
 #
 
 OO_VER=			2.4.0
@@ -52,6 +52,8 @@ ONLY_FOR_PLATFORM+=	NetBSD-1.6Z[G-Z]*-x86_64 NetBSD-[2-9]*-x86_64
 
 GNU_CONFIGURE=		yes
 
+REPLACE_PYTHON+=	scripting/source/pyprov/mailmerge.py
+
 SUBST_CLASSES+=		lib
 SUBST_STAGE.lib=	post-patch
 SUBST_MESSAGE.lib=	Adding library paths
@@ -61,12 +63,6 @@ SUBST_SED.lib+=		-e 's,@BLNK_PREFIX_${pkg}@,${BUILDLINK_PREFIX.${pkg}},g'
 LIBS+=			-L${BUILDLINK_PREFIX.${pkg}}/lib
 LIBS+=			${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.${pkg}}/lib
 .endfor
-
-SUBST_CLASSES+=		python
-SUBST_STAGE.python=	post-patch
-SUBST_MESSAGE.python=	Fix python path
-SUBST_FILES.python=	scripting/source/pyprov/mailmerge.py
-SUBST_SED.python+=	-e 's,^\#!/bin/python$$,\#!${PYTHONBIN:Q},'
 
 CONFIGURE_ENV+=		LIBS=${LIBS:O:u:Q}
 CONFIGURE_ENV+=		X_LIBS=${X11_LDFLAGS:M*:Q}
