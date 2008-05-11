@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2008/04/23 14:37:10 joerg Exp $
+# $NetBSD: Makefile,v 1.152.2.1 2008/05/11 20:20:37 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -23,10 +23,8 @@ CONFLICTS+=		audit-packages-[0-9]*
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR:Q}
-CONFIGURE_ARGS+=	--with-ftp=${FETCH_CMD:Q}
 CONFIGURE_ARGS+=	--with-pax=${PAX:Q}
-CONFIGURE_ARGS+=	--with-tar=${TAR:Q}
-USE_TOOLS+=		pax:run tar:run gzcat:run
+USE_TOOLS+=		pax:run
 
 # The following tools are needed by pkg_view and linkfarm.
 USE_TOOLS+=		chmod cmp cp env find grep ln mkdir rm rmdir	\
@@ -84,21 +82,19 @@ MESSAGE_SUBST+=		PKGVULNDIR=${PKG_DBDIR:Q}			\
 VERSION!=		${AWK} -F '"' '/PKGTOOLS_VERSION/ {print $$2}' \
 			${FILESDIR}/lib/version.h
 
-# Make sure the audit-packages files pick up the right tools in the right
-# places.
-#
-SUBST_CLASSES=		paths
-SUBST_STAGE.paths=	pre-configure
-SUBST_MESSAGE.paths=	Fixing paths in scripts.
-SUBST_FILES.paths=	audit-packages/Makefile.in
-SUBST_SED.paths=	-e 's,_gzcat_,${GZCAT},g'
-
 # linkresolver interface appeared in libarchive 2.5.
 BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=2.5
 
 .include "../../archivers/bzip2/builtin.mk"
 .include "../../archivers/libarchive/builtin.mk"
 .include "../../devel/zlib/builtin.mk"
+.include "../../security/openssl/builtin.mk"
+
+.if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
+CONFIGURE_ARGS+=	--with-ssl
+
+.include "../../security/openssl/buildlink3.mk"
+.endif
 
 .if empty(USE_BUILTIN.bzip2:M[yY][eE][sS]) || \
     empty(USE_BUILTIN.zlib:M[yY][eE][sS])

@@ -1,10 +1,9 @@
-# $NetBSD: Makefile.in,v 1.15.2.2 2008/05/08 23:34:27 joerg Exp $
+# $NetBSD: Makefile.in,v 1.15.2.3 2008/05/11 20:20:38 joerg Exp $
 
 srcdir=		@srcdir@
 
 prefix=		@prefix@
 exec_prefix=	@exec_prefix@
-sysconfdir=	@sysconfdir@
 sbindir=	@sbindir@
 mandir=		@mandir@
 datarootdir=	@datarootdir@
@@ -13,6 +12,7 @@ man1dir=	$(mandir)/man1
 cat1dir=	$(mandir)/cat1
 
 BOOTSTRAP=	@bootstrap@
+SSL_SUPPORT=	@ssl_support@
 
 CC=		@CC@
 CCLD=		$(CC)
@@ -26,7 +26,12 @@ PROG=		pkg_admin
 SCRIPTS=	audit-packages download-vulnerability-list
 
 .if empty(BOOTSTRAP)
-LIBS=		-linstall -lbz2 -lfetch -lz @LIBS@
+LIBS=		-linstall -lbz2 -lfetch -larchive -lbz2 -lz
+.if !empty(SSL_SUPPORT)
+LIBS+=		-lcrypto
+CPPFLAGS+=	-DHAVE_SSL
+.endif
+LIBS+=		@LIBS@
 OBJS=		audit.o check.o main.o
 CPPFLAGS=	@CPPFLAGS@ -I. -I$(srcdir) -I../lib
 .else
