@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2007/06/15 14:29:41 jlam Exp $
+# $NetBSD: Makefile,v 1.41 2008/05/11 07:18:58 obache Exp $
 
 DISTNAME=	kterm-6.2.0
 PKGREVISION=	10
@@ -40,6 +40,5 @@ post-patch:
 	@${PATCH} ${PATCH_ARGS} < ${FILESDIR:Q}/patch-xaw3d
 .endif
 
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
