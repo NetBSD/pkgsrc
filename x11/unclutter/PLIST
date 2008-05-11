@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.2 2003/03/03 04:17:44 jschauma Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/05/11 14:29:23 tonnerre Exp $
 bin/unclutter
-${IMAKE_MAN_DIR}/unclutter.${IMAKE_MANNEWSUFFIX}.gz
+${IMAKE_MAN_DIR}/unclutter.${IMAKE_MAN_SUFFIX}

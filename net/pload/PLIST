@@ -1,3 +1,3 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:57:54 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/05/11 14:29:23 tonnerre Exp $
 bin/pload
-man/cat1/pload.0
+${IMAKE_MAN_DIR}/pload.${IMAKE_MAN_SUFFIX}

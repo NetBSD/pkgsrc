@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2006/02/22 00:06:21 rillig Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/05/11 14:29:23 tonnerre Exp $
 bin/cda
 bin/xmcd
 bin/xmcd_start
@@ -248,8 +248,8 @@ lib/X11/xmcd/pixmaps/xmcd.xpm
 lib/X11/xmcd/pixmaps/xmcd_a.px
 lib/X11/xmcd/pixmaps/xmcd_b.px
 lib/X11/xmcd/scripts/genidx
-man/man1/cda.1
-man/man1/xmcd.1
+man/man1/cda.${IMAKE_MAN_SUFFIX}
+man/man1/xmcd.${IMAKE_MAN_SUFFIX}
 @dirrm lib/X11/xmcd/pixmaps
 @dirrm lib/X11/xmcd/help/Xm
 @dirrm lib/X11/xmcd/help/Ur
