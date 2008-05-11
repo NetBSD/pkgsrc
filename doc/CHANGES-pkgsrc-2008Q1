@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.36 2008/05/10 00:53:41 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.37 2008/05/11 09:44:20 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -80,3 +80,9 @@ pullup ticket #2366 - requested by obache
 GraphicsMagick: security & bug fixes
 pullup ticket #2367 - requested by joerg
 digest: bug fixes for tiger & sha512
+Pullup ticket 2368 - requested by tonnerre
+security fix for rdesktop
+Pullup ticket 2369 - requested by tonnerre
+security fix for bind 8
+Pullup ticket 2370 - requested by tonnerre
+security fix for bind 9
