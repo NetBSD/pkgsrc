@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.39 2007/11/17 12:04:13 rillig Exp $
+# $NetBSD: Makefile,v 1.39.4.1 2008/05/11 09:33:42 ghen Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME}pl1
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.isc.org/isc/bind8/src/${BIND_VERSION}/
 DISTFILES=	bind-src.tar.gz bind-doc.tar.gz
