@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1035 2008/05/11 16:30:56 taca Exp $
+$NetBSD: CHANGES-2008,v 1.1036 2008/05/11 20:35:08 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1789,3 +1789,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xmascot to 2.6a [obache 2008-05-11]
 	Updated www/zope29 to 2.9.9 [taca 2008-05-11]
 	Updated www/zope210 to 2.10.6 [taca 2008-05-11]
+	Added net/mtftpd version 20080229 [jmcneill 2008-05-11]
