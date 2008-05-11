@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7265 2008/05/10 16:20:09 obache Exp $
+$NetBSD: TODO,v 1.7266 2008/05/11 05:25:39 obache Exp $
 
 Suggested new packages
 ======================
@@ -1374,7 +1374,6 @@ Suggested package updates
 	o xlog-1.7
 	o xm7-1020s
 	o xmahjongg-3.70
-	o xmascot-2.6a
 	o xmbdfed-4.6
 	o xmcd-3.3.0
 	o xmlsec1-1.2.11
