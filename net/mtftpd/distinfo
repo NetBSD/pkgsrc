@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/05/11 20:27:04 jmcneill Exp $
+
+SHA1 (mtftpd-20080229.tar.gz) = f4ca14fa9dfd3ba6fa92abe9b87bcc1b4f071810
+RMD160 (mtftpd-20080229.tar.gz) = af3d046ea7a57fcc00d7955a7707d8c007e7aeca
+Size (mtftpd-20080229.tar.gz) = 135499 bytes
+SHA1 (patch-aa) = 2a6c77a7481500fcf41b4fe89905447b346c5569

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/11 20:27:04 jmcneill Exp $
+bin/mtftpd
+share/examples/mtftpd/mtftpd.plist
+@dirrm share/examples/mtftpd
