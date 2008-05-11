@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2008/04/16 06:13:57 obache Exp $
+# $NetBSD: Makefile,v 1.21 2008/05/11 05:24:50 obache Exp $
 
-DISTNAME=	xmascot2.5p2
-PKGNAME=	xmascot-2.5p2
-PKGREVISION=	2
+DISTNAME=	xmascot2.6a
+PKGNAME=	xmascot-2.6a
 CATEGORIES=	x11
 MASTER_SITES=	http://cclub-flying.dsl.gr.jp/products/xmascot/
 
@@ -10,11 +9,12 @@ MAINTAINER=	Nakai@Mlab.t.u-tokyo.ac.jp
 HOMEPAGE=	http://cclub-flying.dsl.gr.jp/products/xmascot/
 COMMENT=	Moving mascot on your X-Window screen
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_IMAKE=	yes
 
-.include "../../mk/bsd.prefs.mk"
+INSTALL_MAKE_FLAGS+=	LANG=ja_JP.eucJP
 
 .include "../../x11/libXaw/buildlink3.mk"
-.include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
