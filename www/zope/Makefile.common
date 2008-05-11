@@ -1,5 +1,7 @@
-# $NetBSD: Makefile.common,v 1.1 2008/01/06 15:52:29 taca Exp $
+# $NetBSD: Makefile.common,v 1.2 2008/05/11 16:28:54 taca Exp $
 #
+# used by www/zope29/Makefile
+# used by www/zope210/Makefile
 
 FILES_SUBST+=	RCVAR_SUFFIX=${RCVAR_SUFFIX}
 MESSAGE_SUBST+=	RCVAR_SUFFIX=${RCVAR_SUFFIX}
