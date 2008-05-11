@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1031 2008/05/11 00:02:27 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1032 2008/05/11 03:47:15 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1784,3 +1784,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/glib2 to 2.16.3nb2 [jmcneill 2008-05-10]
 	Updated net/bind8 to 8.4.7pl1nb1 [tonnerre 2008-05-11]
 	Updated net/bind9 to 9.4.1pl1nb3 [tonnerre 2008-05-11]
+	Updated multimedia/mplayer to 1.0rc10nb7 [tonnerre 2008-05-11]
