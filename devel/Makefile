@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.935 2008/05/12 12:09:14 jmcneill Exp $
+# $NetBSD: Makefile,v 1.936 2008/05/12 12:41:02 jmcneill Exp $
 #
 
 COMMENT=	Development utilities
@@ -95,6 +95,7 @@ SUBDIR+=	cmake-mode
 SUBDIR+=	coconut
 SUBDIR+=	codeville
 SUBDIR+=	cogito
+SUBDIR+=	compiz-bcop
 SUBDIR+=	compizconfig-backend-gconf
 SUBDIR+=	confuse
 SUBDIR+=	cook
