@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.37 2008/05/11 09:44:20 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.38 2008/05/12 10:48:27 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -86,3 +86,5 @@ Pullup ticket 2369 - requested by tonnerre
 security fix for bind 8
 Pullup ticket 2370 - requested by tonnerre
 security fix for bind 9
+pullup ticket #2372 - requested by tonnerre
+licq-core: fix for DoS vulnerability
