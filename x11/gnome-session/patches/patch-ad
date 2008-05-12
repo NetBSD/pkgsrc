@@ -1,17 +1,22 @@
-$NetBSD: patch-ad,v 1.5 2008/05/12 02:10:24 jmcneill Exp $
+$NetBSD: patch-ad,v 1.6 2008/05/12 12:58:03 jmcneill Exp $
 
---- gnome-session/gnome-wm.orig	2008-05-11 22:00:59.000000000 -0400
-+++ gnome-session/gnome-wm	2008-05-11 22:01:36.000000000 -0400
-@@ -119,15 +119,17 @@
+--- gnome-session/gnome-wm.orig	2008-04-10 10:32:20.000000000 -0400
++++ gnome-session/gnome-wm	2008-05-12 08:50:00.000000000 -0400
+@@ -119,15 +119,21 @@
  case `basename $WINDOW_MANAGER` in
    compiz)
      export LIBGL_ALWAYS_INDIRECT=1
 +    export INTEL_BATCH=1
      gtk-window-decorator &
-     OPT3=glib
+-    OPT3=glib
 -    OPT4=gconf
-+    OPT4=decoration
-+    OPT5=gconf
++    if which ccsm >/dev/null; then
++      OPT3=ccp
++    else
++      OPT3=glib
++      OPT4=decoration
++      OPT5=gconf
++    fi
      ;;
    beryl)
      emerald &
