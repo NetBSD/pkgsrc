@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2008/04/23 22:48:35 xtraeme Exp $
+# $NetBSD: Makefile,v 1.18 2008/05/12 01:57:37 jmcneill Exp $
 #
 
 DISTNAME=	compiz-0.6.2
-#PKGREVISION=	8
+PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
 
@@ -16,14 +16,57 @@ USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 
+COMPIZ_GCONF_SCHEMAS+=		compiz-annotate.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-blur.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-clone.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-core.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-cube.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-dbus.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-decoration.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-fade.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-fs.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-gconf.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-glib.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-ini.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-inotify.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-minimize.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-move.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-place.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-plane.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-png.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-regex.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-resize.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-rotate.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-scale.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-screenshot.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-svg.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-switcher.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-video.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-water.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-wobbly.schemas
+COMPIZ_GCONF_SCHEMAS+=		compiz-zoom.schemas
+
 GCONF_SCHEMAS+=		gwd.schemas
+GCONF_SCHEMAS+=		${COMPIZ_GCONF_SCHEMAS}
+
 PKGCONFIG_OVERRIDE+=	compiz.pc.in
 PKGCONFIG_OVERRIDE+=	libdecoration/libdecoration.pc.in
 
 CONFIGURE_ARGS+=	--disable-inotify
 
 PKG_SUPPORTED_OPTIONS=	gnome kde
+PKG_SUGGESTED_OPTIONS=	gnome
 PKG_OPTIONS_VAR=	PKG_OPTIONS.compiz
+
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	metadata/compiz-decoration.schemas
+SUBST_SED.paths=	-e 's,@PREFIX@,${PREFIX},g'
+SUBST_STAGE.paths=	post-patch
+
+post-install:
+.for schema in ${COMPIZ_GCONF_SCHEMAS}
+	${INSTALL_DATA} ${WRKSRC}/metadata/${schema} ${PREFIX}/share/gconf/schemas
+.endfor
 
 .include "../../mk/bsd.options.mk"
 
