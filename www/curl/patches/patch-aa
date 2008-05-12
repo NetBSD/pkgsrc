@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.12 2008/05/12 20:37:06 dholland Exp $
+
+--- configure.orig	2008-01-28 06:59:49.000000000 -0500
++++ configure	2008-03-29 12:29:42.000000000 -0400
+@@ -25049,7 +25049,7 @@
+         GSSAPI_LIBS=`$GSSAPI_ROOT/bin/krb5-config --libs gssapi`
+      elif test "$GSSAPI_ROOT" != "yes"; then
+         GSSAPI_INCS="-I$GSSAPI_ROOT/include"
+-        GSSAPI_LIBS="-lgssapi"
++        GSSAPI_LIBS="-lgssapi -lkrb5"
+      fi
+   fi
+ 
+@@ -25516,12 +25516,12 @@
+         gss_ldflags=`$GSSAPI_ROOT/bin/krb5-config --libs gssapi`
+         LDFLAGS="$LDFLAGS $gss_ldflags"
+      elif test "$GSSAPI_ROOT" != "yes"; then
+-        LDFLAGS="$LDFLAGS -L$GSSAPI_ROOT/lib$libsuff -lgssapi"
++        LDFLAGS="$LDFLAGS -L$GSSAPI_ROOT/lib$libsuff -lgssapi -lkrb5"
+      else
+-        LDFLAGS="$LDFLAGS -lgssapi"
++        LDFLAGS="$LDFLAGS -lgssapi -lkrb5"
+      fi
+   else
+-     LDFLAGS="$LDFLAGS $GSSAPI_LIB_DIR -lgssapi"
++     LDFLAGS="$LDFLAGS $GSSAPI_LIB_DIR -lgssapi -lkrb5"
+   fi
+ else
+   CPPFLAGS="$save_CPPFLAGS"
