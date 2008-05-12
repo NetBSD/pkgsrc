@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.3 2008/05/12 01:57:37 jmcneill Exp $
+
+--- metadata/compiz-decoration.schemas.orig	2007-10-01 13:43:31.000000000 -0400
++++ metadata/compiz-decoration.schemas	2008-05-11 21:38:39.000000000 -0400
+@@ -6,7 +6,7 @@
+       <applyto>/apps/compiz/plugins/decoration/allscreens/options/shadow_radius</applyto>
+       <owner>compiz</owner>
+       <type>float</type>
+-      <default>8.0</default>
++      <default>9.0</default>
+       <locale name="C">
+         <short>Shadow Radius</short>
+         <long>Drop shadow radius (0.1 - 18.0)</long>
+@@ -337,7 +337,7 @@
+       <applyto>/apps/compiz/plugins/decoration/allscreens/options/command</applyto>
+       <owner>compiz</owner>
+       <type>string</type>
+-      <default/>
++      <default>@PREFIX@/bin/gtk-window-decorator</default>
+       <locale name="C">
+         <short>Command</short>
+         <long>Decorator command line that is executed if no decorator is already running</long>
