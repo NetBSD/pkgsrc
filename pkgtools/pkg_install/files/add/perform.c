@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.2 2008/05/11 20:20:37 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.3 2008/05/12 14:37:50 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.2 2008/05/11 20:20:37 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.3 2008/05/12 14:37:50 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1081,7 +1081,7 @@ pkg_do(const char *pkgpath, int mark_automatic)
 
 	if ((pkg->archive = find_archive(pkgpath, &archive_cookie)) == NULL) {
 		warnx("no pkg found for '%s', sorry.", pkgpath);
-		goto clean_memory;
+		goto clean_find_archive;
 	}
 #ifdef HAVE_SSL
 	if (pkg_verify_signature(&pkg->archive, &pkg->entry, &pkg->pkgname,
@@ -1232,6 +1232,7 @@ clean_memory:
 #ifdef HAVE_SSL
 	pkg_free_signature(signature_cookie);
 #endif
+clean_find_archive:
 	free(pkg);
 	return status;
 }
