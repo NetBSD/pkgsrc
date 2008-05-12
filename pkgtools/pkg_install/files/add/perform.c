@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.3 2008/05/12 14:37:50 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.4 2008/05/12 15:44:17 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.3 2008/05/12 14:37:50 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.4 2008/05/12 15:44:17 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -41,13 +41,16 @@ __RCSID("$NetBSD: perform.c,v 1.70.4.3 2008/05/12 14:37:50 joerg Exp $");
  */
 
 #include <sys/utsname.h>
-#include <archive.h>
-#include <archive_entry.h>
+#if HAVE_ERR_H
 #include <err.h>
+#endif
 #include <errno.h>
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+
+#include <archive.h>
+#include <archive_entry.h>
 
 #include "lib.h"
 #include "add.h"
