@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/17 21:44:41 drochner Exp $
-
-SHA1 (gnome-compiz-manager-0.10.4.tar.gz) = 5b4e7877ad69020a287bec1c49d19e2fcb792d35
-RMD160 (gnome-compiz-manager-0.10.4.tar.gz) = 47722e1dffd72d4c023457e3b31937afd4f15632
-Size (gnome-compiz-manager-0.10.4.tar.gz) = 614741 bytes
-SHA1 (patch-aa) = 02acb4dc02c470771ed479a439b4a3a55e933969
