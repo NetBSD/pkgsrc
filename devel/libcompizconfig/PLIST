@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/12 10:38:01 jmcneill Exp $
+include/compizconfig/ccs-backend.h
+include/compizconfig/ccs.h
+lib/compiz/libccp.la
+lib/compizconfig/backends/libini.la
+lib/libcompizconfig.la
+lib/pkgconfig/libcompizconfig.pc
+share/compizconfig/global.xml
+share/examples/compizconfig/config
+@dirrm share/examples/compizconfig
+@dirrm share/compizconfig
+@dirrm lib/compizconfig/backends
+@dirrm lib/compizconfig
+@dirrm include/compizconfig
