@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7267 2008/05/11 14:04:42 obache Exp $
+$NetBSD: TODO,v 1.7268 2008/05/12 23:30:53 tonnerre Exp $
 
 Suggested new packages
 ======================
@@ -333,6 +333,23 @@ Suggested new packages
 	p5-Net-Twitter [pkg/38486]
 	http://search.cpan.org/CPAN/authors/id/C/CT/CTHOM/Net-Twitter-1.10.tar.gz
 	Twitter support module for Perl.
+
+	Shoutcast [pkgsrc-wip]
+	Internet Streaming server for MP3 audio.
+	http://www.shoutcast.com/
+	Unpatched security issues: CVE-2007-1229.
+
+	SIPp [pkgsrc-wip]
+	Free Open Source SIP test tool/traffic generator.
+	http://sipp.sourceforge.net/
+	Unpatched security issues: CVE-2008-1959, CVE-2008-2085.
+
+	Linux Kernel [pkgsrc-wip]
+	The Linux kernel
+	http://www.kernel.org/
+	Unpatched security issues: CVE-2008-1375, CVE-2008-1675, CVE-2008-1669,
+	CVE-2008-1615, CVE-2008-1375, CVE-2008-0007, CVE-2007-6282,
+	CVE-2005-0504.
 
 Suggested package updates
 =========================
