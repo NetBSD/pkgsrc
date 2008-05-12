@@ -36,7 +36,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: vulnerabilities-file.c,v 1.3.4.3 2008/05/11 20:20:38 joerg Exp $");
+__RCSID("$NetBSD: vulnerabilities-file.c,v 1.3.4.4 2008/05/12 12:46:06 joerg Exp $");
 
 #if HAVE_SYS_STAT_H
 #include <sys/stat.h>
@@ -63,6 +63,11 @@ __RCSID("$NetBSD: vulnerabilities-file.c,v 1.3.4.3 2008/05/11 20:20:38 joerg Exp
 #include <unistd.h>
 
 #include "lib.h"
+
+static const char pgp_msg_start[] = "-----BEGIN PGP SIGNED MESSAGE-----\n";
+static const char pgp_msg_end[] = "-----BEGIN PGP SIGNATURE-----\n";
+static const char pkcs7_begin[] = "-----BEGIN PKCS7-----\n";
+static const char pkcs7_end[] = "-----END PKCS7-----\n";
 
 static void
 verify_signature_gpg(const char *input, size_t input_len)
@@ -98,19 +103,14 @@ verify_signature_gpg(const char *input, size_t input_len)
 		errx(EXIT_FAILURE, "GPG could not verify the signature");
 }
 
-static const char pgp_msg_start[] = "-----BEGIN PGP SIGNED MESSAGE-----\n";
-static const char pgp_msg_end[] = "-----BEGIN PGP SIGNATURE-----\n";
-static const char pkcs7_begin[] = "-----BEGIN PKCS7-----\n";
-static const char pkcs7_end[] = "-----END PKCS7-----\n";
-
 static void
 verify_signature_pkcs7(const char *input)
 {
 #ifdef HAVE_SSL
 	const char *begin_pkgvul, *end_pkgvul, *begin_sig, *end_sig;
 
-	if (strcmp(input, pgp_msg_start) == 0) {
-		begin_pkgvul = pgp_msg_start + strlen(pgp_msg_start);
+	if (strncmp(input, pgp_msg_start, strlen(pgp_msg_start)) == 0) {
+		begin_pkgvul = input + strlen(pgp_msg_start);
 		if ((end_pkgvul = strstr(begin_pkgvul, pgp_msg_end)) == NULL)
 			errx(EXIT_FAILURE, "Invalid PGP signature");
 		if ((begin_sig = strstr(end_pkgvul, pkcs7_begin)) == NULL)
@@ -240,6 +240,7 @@ verify_hash(const char *input, const char *hash_line)
 	const struct hash_algorithm *hash;
 	void *ctx;
 	const char *last_start, *next, *hash_value;
+	int in_pgp_msg;
 
 	for (hash = hash_algorithms; hash->name != NULL; ++hash) {
 		if (strncmp(hash_line, hash->name, hash->name_len))
@@ -268,19 +269,27 @@ verify_hash(const char *input, const char *hash_line)
 		errx(EXIT_FAILURE, "Invalid #CHECKSUM");
 
 	ctx = (*hash->init)();
+	if (strncmp(input, pgp_msg_start, strlen(pgp_msg_start)) == 0) {
+		input += strlen(pgp_msg_start);
+		in_pgp_msg = 1;
+	} else {
+		in_pgp_msg = 0;
+	}
 	for (last_start = input; *input != '\0'; input = next) {
 		if ((next = strchr(input, '\n')) == NULL)
 			errx(EXIT_FAILURE, "Missing newline in pkg-vulnerabilities");
 		++next;
+		if (in_pgp_msg && strncmp(input, pgp_msg_end, strlen(pgp_msg_end)) == 0)
+			break;
+		if (!in_pgp_msg && strncmp(input, pkcs7_begin, strlen(pkcs7_begin)) == 0)
+			break;
 		if (*input == '\n' ||
-		    strncmp(input, "-----BEGIN", 10) == 0 ||
 		    strncmp(input, "Hash:", 5) == 0 ||
 		    strncmp(input, "# $NetBSD", 9) == 0 ||
 		    strncmp(input, "#CHECKSUM", 9) == 0) {
 			(*hash->update)(ctx, last_start, input - last_start);
 			last_start = next;
-		} else if (strncmp(input, "Version:", 8) == 0)
-			break;
+		}
 	}
 	(*hash->update)(ctx, last_start, input - last_start);
 	hash_value = (*hash->finish)(ctx);
@@ -418,6 +427,7 @@ parse_pkg_vulnerabilities(const char *input, size_t input_len, int check_sum)
 	char *end;
 	const char *iter, *next;
 	size_t allocated_vulns;
+	int in_pgp_msg;
 
 	pv = malloc(sizeof(*pv));
 	if (pv == NULL)
@@ -434,13 +444,19 @@ parse_pkg_vulnerabilities(const char *input, size_t input_len, int check_sum)
 	if (check_sum)
 		verify_signature(input, input_len);
 
-	for (iter = input; *iter; iter = next) {
+	if (strncmp(input, pgp_msg_start, strlen(pgp_msg_start)) == 0) {
+		iter = input + strlen(pgp_msg_start);
+		in_pgp_msg = 1;
+	} else {
+		iter = input;
+		in_pgp_msg = 0;
+	}
+
+	for (; *iter; iter = next) {
 		if ((next = strchr(iter, '\n')) == NULL)
 			errx(EXIT_FAILURE, "Missing newline in pkg-vulnerabilities");
 		++next;
 		if (*iter == '\0' || *iter == '\n')
-			continue;
-		if (strncmp(iter, "-----BEGIN", 10) == 0)
 			continue;
 		if (strncmp(iter, "Hash:", 5) == 0)
 			continue;
@@ -487,7 +503,9 @@ parse_pkg_vulnerabilities(const char *input, size_t input_len, int check_sum)
 		++next;
 		if (*iter == '\0' || *iter == '\n')
 			continue;
-		if (strncmp(iter, "Version:", 5) == 0)
+		if (in_pgp_msg && strncmp(iter, pgp_msg_end, strlen(pgp_msg_end)) == 0)
+			break;
+		if (!in_pgp_msg && strncmp(iter, pkcs7_begin, strlen(pkcs7_begin)) == 0)
 			break;
 		if (*iter == '#' &&
 		    (iter[1] == '\0' || iter[1] == '\n' || isspace((unsigned char)iter[1])))
