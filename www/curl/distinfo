@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.54 2008/03/02 14:40:26 bjs Exp $
+$NetBSD: distinfo,v 1.55 2008/05/12 20:37:06 dholland Exp $
 
 SHA1 (curl-7.18.0.tar.bz2) = f561a6a1f285c22d1f6a54b4dfa19b6cb9362c2a
 RMD160 (curl-7.18.0.tar.bz2) = f25ec844e7ef6221719439b3214fd3c3a42f5604
 Size (curl-7.18.0.tar.bz2) = 1779421 bytes
+SHA1 (patch-aa) = e9bf335832b55aa3a0ff12fa6a958594c961b3ad
