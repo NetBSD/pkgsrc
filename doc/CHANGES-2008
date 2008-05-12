@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1053 2008/05/12 20:33:24 degroote Exp $
+$NetBSD: CHANGES-2008,v 1.1054 2008/05/12 20:41:01 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1807,3 +1807,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added wm/compiz-fusion-plugins-extra version 0.6.0 [jmcneill 2008-05-12]
 	Updated benchmarks/netperf to 2.3.1nb1 [tonnerre 2008-05-12]
 	Updated lang/chicken to 3.2.0 [degroote 2008-05-12]
+	Updated www/curl to 7.18.0nb2 [dholland 2008-05-12]
