@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1037 2008/05/12 02:03:16 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.1038 2008/05/12 02:10:58 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1791,3 +1791,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/zope210 to 2.10.6 [taca 2008-05-11]
 	Added net/mtftpd version 20080229 [jmcneill 2008-05-11]
 	Updated wm/compiz to 0.6.2nb1 [jmcneill 2008-05-12]
+	Updated x11/gnome-session to 2.22.1.1nb1 [jmcneill 2008-05-12]
