@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1042 2008/05/12 11:22:04 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.1043 2008/05/12 12:04:45 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1796,3 +1796,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/clawsker to 0.4.0 [smb 2008-05-11]
 	Added devel/libcompizconfig version 0.6.0 [jmcneill 2008-05-12]
 	Added devel/py-compizconfig version 0.6.0 [jmcneill 2008-05-12]
+	Removed wm/gnome-compiz-manager [jmcneill 2008-05-12]
