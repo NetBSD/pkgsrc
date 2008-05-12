@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/12 12:06:59 jmcneill Exp $
+lib/compizconfig/backends/libgconf.la
