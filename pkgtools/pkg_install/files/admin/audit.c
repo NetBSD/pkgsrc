@@ -1,4 +1,4 @@
-/*	$NetBSD: audit.c,v 1.8 2008/04/16 00:53:06 joerg Exp $	*/
+/*	$NetBSD: audit.c,v 1.8.2.1 2008/05/12 12:12:07 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: audit.c,v 1.8 2008/04/16 00:53:06 joerg Exp $");
+__RCSID("$NetBSD: audit.c,v 1.8.2.1 2008/05/12 12:12:07 joerg Exp $");
 #endif
 
 /*-
@@ -483,6 +483,8 @@ check_pkg_history(const char *pkg)
 	size_t i;
 
 	for (i = 0; i < pv->entries; ++i) {
+		if (!quick_pkg_match(pv->vulnerability[i], pkg))
+			continue;
 		if (strcmp("eol", pv->classification[i]) == 0)
 			continue;
 		if (check_pkg_history1(pkg, pv->vulnerability[i]) == 0)
