@@ -1,0 +1,12 @@
+$NetBSD: patch-ak,v 1.1 2008/05/12 15:49:30 tonnerre Exp $
+
+--- netlib.c.orig	2004-09-21 23:33:40.000000000 +0200
++++ netlib.c
+@@ -422,6 +422,7 @@ union   netperf_request_struct  netperf_
+ union   netperf_response_struct netperf_response;
+ 
+ FILE    *where;
++int	fd = -1;
+ 
+ char    libfmt = 'm';
+         
