@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/05/12 11:20:58 jmcneill Exp $
+
+SHA1 (compizconfig-python-0.6.0.tar.gz) = 98027b793f072e88596f564c58ee28dc78a9ca91
+RMD160 (compizconfig-python-0.6.0.tar.gz) = 1e5ea245f028a987032b7c45a94cd7e204c1fa66
+Size (compizconfig-python-0.6.0.tar.gz) = 356375 bytes
