@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/01/09 03:55:11 smb Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/12 02:25:40 smb Exp $
 #
 
-DISTNAME=	pdf_viewer-0.8
-PKGNAME=	claws-mail-pdf_viewer-0.8
+DISTNAME=	pdf_viewer-0.9.1
+PKGNAME=	claws-mail-pdf_viewer-0.9.1
 CATEGORIES=	mail
 MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 
@@ -11,7 +11,7 @@ COMMENT=	Enables the viewing of PDF and PostScript attachments
 
 PLIST_SRC+=	PLIST
 
-DEPENDS+=	claws-mail-3.2.0{,nb[0-9]*}:../../mail/claws-mail
+DEPENDS+=	claws-mail-3.4.0{,nb[0-9]*}:../../mail/claws-mail
 
 .include "../../mail/claws-mail/openssl.mk"
 .include "../../mk/bsd.prefs.mk"
