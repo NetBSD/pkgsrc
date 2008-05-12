@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2007/12/29 10:14:50 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/12 15:49:30 tonnerre Exp $
 #
 
 DISTNAME=	netperf-2.3pl1
 PKGNAME=	netperf-2.3.1
+PKGREVISION=	1
 CATEGORIES=	benchmarks
 MASTER_SITES=	ftp://ftp.cup.hp.com/dist/networking/benchmarks/netperf/archive/ \
 		ftp://ftp.netperf.org/netperf/archive/ \
