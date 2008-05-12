@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2008/04/07 18:23:06 tnn Exp $
+@comment $NetBSD: PLIST,v 1.19 2008/05/12 20:31:08 degroote Exp $
 bin/chicken
 bin/chicken-bug
 bin/chicken-profile
@@ -21,6 +21,7 @@ man/man1/csi.1
 share/chicken/chicken-ffi-macros.scm
 share/chicken/chicken-more-macros.scm
 share/chicken/chicken-sys-macros.scm
+share/chicken/data-structures.exports
 share/chicken/eval.exports
 share/chicken/extras.exports
 share/chicken/library.exports
@@ -33,11 +34,11 @@ share/chicken/srfi-13.exports
 share/chicken/srfi-14.exports
 share/chicken/srfi-18.exports
 share/chicken/srfi-4.exports
+share/chicken/srfi-69.exports
 share/chicken/tcp.exports
 share/chicken/utils.exports
 share/doc/${PKGNAME}/LICENSE
 share/doc/${PKGNAME}/README
-share/doc/${PKGNAME}/chicken.pdf
 share/doc/${PKGNAME}/html/accessing-external-objects.html
 share/doc/${PKGNAME}/html/acknowledgements.html
 share/doc/${PKGNAME}/html/basic-mode-of-operation.html
@@ -53,6 +54,7 @@ share/doc/${PKGNAME}/html/embedding.html
 share/doc/${PKGNAME}/html/extensions-to-the-standard.html
 share/doc/${PKGNAME}/html/faq.html
 share/doc/${PKGNAME}/html/foreign-type-specifiers.html
+share/doc/${PKGNAME}/html/getting-started.html
 share/doc/${PKGNAME}/html/index.html
 share/doc/${PKGNAME}/html/interface-to-external-functions-and-variables.html
 share/doc/${PKGNAME}/html/locations.html
@@ -62,6 +64,7 @@ share/doc/${PKGNAME}/html/other-support-procedures.html
 share/doc/${PKGNAME}/html/parameters.html
 share/doc/${PKGNAME}/html/pattern-matching.html
 share/doc/${PKGNAME}/html/supported-language.html
+share/doc/${PKGNAME}/html/unit-data-structures.html
 share/doc/${PKGNAME}/html/unit-eval.html
 share/doc/${PKGNAME}/html/unit-extras.html
 share/doc/${PKGNAME}/html/unit-library.html
@@ -74,6 +77,7 @@ share/doc/${PKGNAME}/html/unit-srfi-13.html
 share/doc/${PKGNAME}/html/unit-srfi-14.html
 share/doc/${PKGNAME}/html/unit-srfi-18.html
 share/doc/${PKGNAME}/html/unit-srfi-4.html
+share/doc/${PKGNAME}/html/unit-srfi-69.html
 share/doc/${PKGNAME}/html/unit-tcp.html
 share/doc/${PKGNAME}/html/unit-utils.html
 share/doc/${PKGNAME}/html/using-the-compiler.html
