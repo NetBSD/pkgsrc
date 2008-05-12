@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.5 2008/05/12 02:10:24 jmcneill Exp $
+
+--- gnome-session/gnome-wm.orig	2008-05-11 22:00:59.000000000 -0400
++++ gnome-session/gnome-wm	2008-05-11 22:01:36.000000000 -0400
+@@ -119,15 +119,17 @@
+ case `basename $WINDOW_MANAGER` in
+   compiz)
+     export LIBGL_ALWAYS_INDIRECT=1
++    export INTEL_BATCH=1
+     gtk-window-decorator &
+     OPT3=glib
+-    OPT4=gconf
++    OPT4=decoration
++    OPT5=gconf
+     ;;
+   beryl)
+     emerald &
+     ;;
+ esac
+ 
+-exec $WINDOW_MANAGER $OPT1 $OPT2 $OPT3 $OPT4
++exec $WINDOW_MANAGER $OPT1 $OPT2 $OPT3 $OPT4 $OPT5
+ 
+ echo "ERROR: No window manager could run!"
