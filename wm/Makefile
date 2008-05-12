@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.103 2008/05/12 12:48:03 jmcneill Exp $
+# $NetBSD: Makefile,v 1.104 2008/05/12 13:20:58 jmcneill Exp $
 #
 
 COMMENT=	X11 window managers, configuration tools, and themes
@@ -20,6 +20,7 @@ SUBDIR+=	blackbox
 SUBDIR+=	blackbox70
 SUBDIR+=	bsetroot
 SUBDIR+=	compiz
+SUBDIR+=	compiz-fusion-plugins-extra
 SUBDIR+=	compiz-fusion-plugins-main
 SUBDIR+=	ccsm
 SUBDIR+=	ctwm
