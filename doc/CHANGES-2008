@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1043 2008/05/12 12:04:45 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.1044 2008/05/12 12:10:00 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1797,3 +1797,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/libcompizconfig version 0.6.0 [jmcneill 2008-05-12]
 	Added devel/py-compizconfig version 0.6.0 [jmcneill 2008-05-12]
 	Removed wm/gnome-compiz-manager [jmcneill 2008-05-12]
+	Added devel/compizconfig-backend-gconf version 0.6.0 [jmcneill 2008-05-12]
