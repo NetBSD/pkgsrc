@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/05/12 12:47:29 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/12 13:19:17 jmcneill Exp $
 #
 
 DISTNAME=	compiz-fusion-plugins-main-0.6.0
+PKGREVISION=	1
 CATEGORIES=	wm x11
 MASTER_SITES=	http://releases.compiz-fusion.org/0.6.0/
 
