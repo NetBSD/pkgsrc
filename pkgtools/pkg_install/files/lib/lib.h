@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.42.2.3 2008/05/11 20:20:38 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.42.2.4 2008/05/12 12:12:07 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -284,6 +284,7 @@ const char *suffix_of(const char *);
 int     pkg_match(const char *, const char *);
 int	pkg_order(const char *, const char *, const char *);
 int     ispkgpattern(const char *);
+int	quick_pkg_match(const char *, const char *);
 
 /* Iterator functions */
 int	iterate_pkg_generic_src(int (*)(const char *, void *), void *,

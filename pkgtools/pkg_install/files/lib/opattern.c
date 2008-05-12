@@ -1,4 +1,4 @@
-/*	$NetBSD: opattern.c,v 1.4 2007/10/14 23:24:24 rillig Exp $	*/
+/*	$NetBSD: opattern.c,v 1.4.6.1 2008/05/12 12:12:07 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "Id: str.c,v 1.5 1997/10/08 07:48:21 charnier Exp";
 #else
-__RCSID("$NetBSD: opattern.c,v 1.4 2007/10/14 23:24:24 rillig Exp $");
+__RCSID("$NetBSD: opattern.c,v 1.4.6.1 2008/05/12 12:12:07 joerg Exp $");
 #endif
 #endif
 
@@ -119,11 +119,35 @@ simple_match(const char *pattern, const char *pkg)
 }
 
 /*
+ * Performs a fast check if pattern can ever match pkg.
+ * Returns 1 if a match is possible and 0 otherwise.
+ */
+int
+quick_pkg_match(const char *pattern, const char *pkg)
+{
+#define simple(x) (isalnum((unsigned char)(x)) || (x) == '-')
+	if (!simple(pattern[0]))
+		return 1;
+	if (pattern[0] != pkg[0])
+		return 0;
+
+	if (!simple(pattern[1]))
+		return 1;
+	if (pattern[1] != pkg[1])
+		return 0;
+	return 1;
+#undef simple
+}
+
+/*
  * Match pkg against pattern, return 1 if matching, 0 else
  */
 int
 pkg_match(const char *pattern, const char *pkg)
 {
+	if (!quick_pkg_match(pattern, pkg))
+		return 0;
+
 	if (strchr(pattern, '{') != (char *) NULL) {
 		/* emulate csh-type alternates */
 		return alternate_match(pattern, pkg);
