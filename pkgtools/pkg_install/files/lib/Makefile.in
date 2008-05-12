@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.21.2.3 2008/05/11 20:20:38 joerg Exp $
+# $NetBSD: Makefile.in,v 1.21.2.4 2008/05/12 15:26:10 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -28,7 +28,7 @@ LIB=	libinstall.a
 
 OBJS=	automatic.o conflicts.o decompress.o dewey.o fexec.o file.o \
 	global.o iterate.o lpkg.o opattern.o \
-	parse-config.o path.o pkgdb.o plist.o pkg_signature.o pkcs7.o \
+	parse-config.o path.o pkgdb.o plist.o \
 	str.o var.o version.o vulnerabilities-file.o
 
 CPPFLAGS+=	-DSYSCONFDIR=\"$(sysconfdir)\"
@@ -41,6 +41,7 @@ OBJS+=	pkg_io.o
 
 .if !empty(SSL_SUPPORT)
 CPPFLAGS+=	-DHAVE_SSL
+OBJS+=		pkg_signature.o pkcs7.o
 .endif
 
 all: $(LIB)
