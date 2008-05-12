@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1041 2008/05/12 10:38:39 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.1042 2008/05/12 11:22:04 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1795,3 +1795,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/claws-mail to 3.4.0 [smb 2008-05-11]
 	Updated mail/clawsker to 0.4.0 [smb 2008-05-11]
 	Added devel/libcompizconfig version 0.6.0 [jmcneill 2008-05-12]
+	Added devel/py-compizconfig version 0.6.0 [jmcneill 2008-05-12]
