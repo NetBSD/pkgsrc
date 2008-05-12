@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.33 2008/04/07 18:23:06 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2008/05/12 20:31:08 degroote Exp $
 #
 
-DISTNAME=	chicken-3.1.0
+DISTNAME=	chicken-3.2.0
 CATEGORIES=	lang
 MASTER_SITES=	http://chicken.wiki.br/releases/${PKGVERSION_NOREV}/
 
 MAINTAINER=	asau@inbox.ru #, airhead@users.sourceforge.net
-HOMEPAGE=	http://www.call-with-current-continuation.org/chicken.html
+HOMEPAGE=	http://www.call-with-current-continuation.org/
 COMMENT=	Scheme to C compiler, handling R5RS
 
 PKG_DESTDIR_SUPPORT=	user-destdir
