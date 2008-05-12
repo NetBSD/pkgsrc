@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1 2008/05/12 15:49:30 tonnerre Exp $
+
+--- netlib.h.orig	2004-09-21 23:33:40.000000000 +0200
++++ netlib.h
+@@ -343,6 +343,7 @@ extern  int     lib_num_loc_cpus;
+ extern  SOCKET  server_sock;
+ extern  int     times_up;
+ extern  FILE    *where;
++extern	int	fd;
+ extern  int     loops_per_msec;
+ extern  float   lib_local_per_cpu_util[];
+   
