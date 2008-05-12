@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2007/09/18 03:17:28 smb Exp $
+$NetBSD: distinfo,v 1.3 2008/05/12 02:25:40 smb Exp $
 
-SHA1 (mailmbox-1.14.tar.gz) = 5f1403c00f9c5ecd21a30fd2eaa30321ea33b044
-RMD160 (mailmbox-1.14.tar.gz) = 804a3148d4cda280228cd24e52c75dc877936315
-Size (mailmbox-1.14.tar.gz) = 403040 bytes
+SHA1 (mailmbox-1.14.1.tar.gz) = 1f25145df3af1945182549b97c7314f5d9369101
+RMD160 (mailmbox-1.14.1.tar.gz) = 9b0abe14bc6c29376082f5c0cd42c7d82eb3b8f5
+Size (mailmbox-1.14.1.tar.gz) = 407434 bytes
