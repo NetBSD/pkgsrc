@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/05/12 12:08:13 jmcneill Exp $
+
+SHA1 (ccsm-0.6.0.tar.gz) = 6bd25039608d4a98ecfa30665b332198c233e754
+RMD160 (ccsm-0.6.0.tar.gz) = 50564ea2e8e185fba0a8a0c05e2273169047727b
+Size (ccsm-0.6.0.tar.gz) = 565794 bytes
+SHA1 (patch-aa) = b6e0b750158a4a35149bd9d012a909ed045614d7
