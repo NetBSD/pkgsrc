@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/04/23 22:48:35 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/05/12 01:57:37 jmcneill Exp $
 bin/compiz
 bin/gtk-window-decorator
 include/compiz/compiz.h
@@ -37,7 +37,7 @@ lib/pkgconfig/compiz-gconf.pc
 lib/pkgconfig/compiz-scale.pc
 lib/pkgconfig/compiz.pc
 lib/pkgconfig/libdecoration.pc
-${PLIST.gnome}window-manager-settings/libcompiz.la
+${PLIST.gnome}lib/window-manager-settings/libcompiz.la
 share/compiz/annotate.xml
 share/compiz/blur.xml
 share/compiz/clone.xml
@@ -70,6 +70,35 @@ share/compiz/video.xml
 share/compiz/water.xml
 share/compiz/wobbly.xml
 share/compiz/zoom.xml
+share/gconf/schemas/compiz-annotate.schemas
+share/gconf/schemas/compiz-blur.schemas
+share/gconf/schemas/compiz-clone.schemas
+share/gconf/schemas/compiz-core.schemas
+share/gconf/schemas/compiz-cube.schemas
+share/gconf/schemas/compiz-dbus.schemas
+share/gconf/schemas/compiz-decoration.schemas
+share/gconf/schemas/compiz-fade.schemas
+share/gconf/schemas/compiz-fs.schemas
+share/gconf/schemas/compiz-gconf.schemas
+share/gconf/schemas/compiz-glib.schemas
+share/gconf/schemas/compiz-ini.schemas
+share/gconf/schemas/compiz-inotify.schemas
+share/gconf/schemas/compiz-minimize.schemas
+share/gconf/schemas/compiz-move.schemas
+share/gconf/schemas/compiz-place.schemas
+share/gconf/schemas/compiz-plane.schemas
+share/gconf/schemas/compiz-png.schemas
+share/gconf/schemas/compiz-regex.schemas
+share/gconf/schemas/compiz-resize.schemas
+share/gconf/schemas/compiz-rotate.schemas
+share/gconf/schemas/compiz-scale.schemas
+share/gconf/schemas/compiz-screenshot.schemas
+share/gconf/schemas/compiz-svg.schemas
+share/gconf/schemas/compiz-switcher.schemas
+share/gconf/schemas/compiz-video.schemas
+share/gconf/schemas/compiz-water.schemas
+share/gconf/schemas/compiz-wobbly.schemas
+share/gconf/schemas/compiz-zoom.schemas
 share/gconf/schemas/gwd.schemas
 ${PLIST.gnome}share/gnome-control-center/keybindings/50-compiz-desktop-key.xml
 ${PLIST.gnome}share/gnome-control-center/keybindings/50-compiz-key.xml
