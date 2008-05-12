@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1051 2008/05/12 13:22:19 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.1052 2008/05/12 15:52:01 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1805,3 +1805,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added meta-pkgs/compiz-fusion version 0.6 [jmcneill 2008-05-12]
 	Updated wm/compiz-fusion-plugins-main to 0.6.0nb1 [jmcneill 2008-05-12]
 	Added wm/compiz-fusion-plugins-extra version 0.6.0 [jmcneill 2008-05-12]
+	Updated benchmarks/netperf to 2.3.1nb1 [tonnerre 2008-05-12]
