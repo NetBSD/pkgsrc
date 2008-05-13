@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/05/12 12:08:13 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/13 20:13:06 drochner Exp $
 #
 
 DISTNAME=		ccsm-0.6.0
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.compiz-fusion.org/
 COMMENT=		CompizConfig Settings Manager
 
 USE_TOOLS+=		pkg-config gmake
+USE_DIRS+=		xdg-1.1
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
@@ -23,5 +24,6 @@ DEPENDS+=	compizconfig-backend-gconf>=0.6.0:../../devel/compizconfig-backend-gco
 .include "../../devel/py-compizconfig/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
-
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
