@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/29 13:11:14 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/13 02:53:04 obache Exp $
 #
 
-DISTNAME=	sigscheme-0.8.0
+DISTNAME=	sigscheme-0.8.3
 CATEGORIES=	lang
 MASTER_SITES=	http://sigscheme.googlecode.com/files/
 
