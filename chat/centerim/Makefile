@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2008/01/18 05:06:22 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/13 15:15:51 obache Exp $
 #
 
-DISTNAME=	centerim-4.22.1
-PKGREVISION=	3
+DISTNAME=	centerim-4.22.5
 CATEGORIES=	chat
 MASTER_SITES=	http://www.centerim.org/download/releases/ \
 		http://transacid.de/centerim/releases/
@@ -10,8 +9,6 @@ MASTER_SITES=	http://www.centerim.org/download/releases/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.centerim.org/
 COMMENT=	Instant Messenger interface supporting many protocols
-
-CONFLICTS=	centericq-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -23,7 +20,7 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl --with-openssl=${SSLBASE:Q}
 LIBS+=			${LDFLAGS}
 
-REPLACE_PERL=		misc/cicqconv
+REPLACE_PERL=		misc/cimconv
 
 INCOMPAT_CURSES+=	NetBSD-1.[45]*-* NetBSD-1.6-* NetBSD-1.6.[1-9]-*
 INCOMPAT_CURSES+=	NetBSD-1.6_*-* NetBSD-1.6.[1-9]_*-* NetBSD-1.6[A-T]-*
