@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/05/13 21:36:14 sborrill Exp $
+
+--- src/ftmenu.c.orig	2008-05-13 21:49:29.000000000 +0100
++++ src/ftmenu.c	2008-05-13 22:24:01.000000000 +0100
+@@ -178,7 +178,7 @@
+ 	regcomp(&reg_command ,"{.*}"           ,0);
+ 
+ 	// find the menu file	
+-	while((nchars=getline(&line,&line_len,file))>0){
++	while(fgets(line, MAX_LINE_LENGTH, file) != NULL) {
+ 		if(regexec(&reg_file,line,0,NULL,0)==0){
+ 			g_strstrip(line);
+ 			line = strchr(line,':');		// break into tokens
+@@ -195,7 +195,7 @@
+ 
+ 	// read the menu file
+ 	file = fopen(menufile,"r");
+-	while((nchars=getline(&line,&line_len,file))>0){
++	while(fgets(line, MAX_LINE_LENGTH, file) != NULL) {
+ 		// finds the menu title
+ 		if(regexec(&reg_begin,line,0,NULL,0)==0){
+ 			if(regexec(&reg_paren,line,(size_t) 1,exp_match,0)==0){
+@@ -226,7 +226,7 @@
+ 			menu_depth--;		
+ 	}
+ 	fclose(file);
+-	g_free(&line);
++	g_free(line);
+ 
+ 	regfree(&reg_file);
+ 	regfree(&reg_begin);
