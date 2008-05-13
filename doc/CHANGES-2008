@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1059 2008/05/13 18:30:46 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.1060 2008/05/13 20:05:16 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1813,3 +1813,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/Transmission to 1.20 [tnn 2008-05-13]
 	Updated chat/centerim to 4.22.5 [obache 2008-05-13]
 	Updated emulators/yabause to 0.9.5 [tnn 2008-05-13]
+	Updated graphics/potrace to 1.8 [root 2008-05-13]
