@@ -1,4 +1,4 @@
-# $NetBSD: bsd.check-vars.mk,v 1.5 2008/03/09 13:47:08 joerg Exp $
+# $NetBSD: bsd.check-vars.mk,v 1.6 2008/05/13 11:40:24 tnn Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -8,7 +8,7 @@
 CHECK_FILES_SUPPORTED?=		yes
 CHECK_SHLIBS_SUPPORTED?=	yes
 
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD"
 USE_CHECK_SHLIBS_ELF?=		yes
 .else
 USE_CHECK_SHLIBS_ELF?=		no
