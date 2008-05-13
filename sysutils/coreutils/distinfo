@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.14 2008/03/08 01:06:52 tnn Exp $
+$NetBSD: distinfo,v 1.15 2008/05/13 09:22:46 tron Exp $
 
-SHA1 (coreutils-6.10.tar.gz) = f91f16e999dea6097bf555b467066ac931d584e4
-RMD160 (coreutils-6.10.tar.gz) = bddc507cd9bef5dc7f07c4c51518870b7ac6b3a9
-Size (coreutils-6.10.tar.gz) = 9193125 bytes
+SHA1 (coreutils-6.11.tar.gz) = 238dc7cb815659abe69ba52a1cbb7fb7f481dc0e
+RMD160 (coreutils-6.11.tar.gz) = 6a109d0fbab686d7258f933cfcbfde49f6faa68a
+Size (coreutils-6.11.tar.gz) = 9095150 bytes
 SHA1 (patch-ab) = bc1e79814a6ebc177862eae1816a24e3a4a5c577
 SHA1 (patch-ac) = 83e271d8da9d8d70e1f9eb34129d2cbf1cd352fc
 SHA1 (patch-ad) = 145a88a6731fbec315037a140677f2fc763e5026
