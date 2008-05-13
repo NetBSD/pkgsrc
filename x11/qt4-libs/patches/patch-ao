@@ -1,17 +1,34 @@
-$NetBSD: patch-ao,v 1.2 2007/11/22 18:51:25 drochner Exp $
+$NetBSD: patch-ao,v 1.3 2008/05/13 18:35:19 drochner Exp $
 
---- ./src/corelib/codecs/qiconvcodec.cpp.orig	2007-10-01 15:06:02.000000000 +0200
-+++ ./src/corelib/codecs/qiconvcodec.cpp
-@@ -44,7 +44,7 @@
+--- src/corelib/codecs/qiconvcodec.cpp.orig	2007-12-04 18:42:55 +0200
++++ src/corelib/codecs/qiconvcodec.cpp	2008-05-13 09:47:40 +0300
+@@ -43,9 +43,14 @@
+ #include <stdio.h>
+ #include <dlfcn.h>
  
++// for __DragonFly_version
++#if defined(__DragonFly__)
++#include <sys/param.h>
++#endif
++
  // unistd.h is needed for the _XOPEN_UNIX macro
  #include <unistd.h>
 -#if defined(_XOPEN_UNIX) && !defined(Q_OS_QNX6) && !defined(Q_OS_OSF)
-+#if (defined(_XOPEN_UNIX) && !defined(Q_OS_QNX6) && !defined(Q_OS_OSF)) || defined(Q_OS_NETBSD)
++#if (defined(_XOPEN_UNIX) && !defined(Q_OS_QNX6) && !defined(Q_OS_OSF)) || defined(Q_OS_NETBSD) || defined(__DragonFly__)
  #  include <langinfo.h>
  #endif
  
-@@ -95,7 +95,7 @@ QString QIconvCodec::convertToUnicode(co
+@@ -55,6 +60,9 @@
+ #elif defined(Q_OS_AIX)
+ #  define NO_BOM
+ #  define UTF16 "UCS-2"
++#elif defined(__DragonFly__) && __DragonFly_version < 197700
++#  define NO_BOM
++#  define UTF16 "UTF-16"
+ #else
+ #  define UTF16 "UTF-16"
+ #endif
+@@ -129,7 +137,7 @@ QString QIconvCodec::convertToUnicode(co
      QByteArray ba;
      size_t outBytesLeft = len * 2 + 2;
      ba.resize(outBytesLeft);
@@ -20,7 +37,7 @@ $NetBSD: patch-ao,v 1.2 2007/11/22 18:51:25 drochner Exp $
      // GNU doesn't disagree with POSIX :/
      const char *inBytes = chars;
  #else
-@@ -155,7 +155,7 @@ QByteArray QIconvCodec::convertFromUnico
+@@ -189,7 +197,7 @@ QByteArray QIconvCodec::convertFromUnico
      ba.resize(outBytesLeft);
      char *outBytes = ba.data();
  
@@ -29,7 +46,7 @@ $NetBSD: patch-ao,v 1.2 2007/11/22 18:51:25 drochner Exp $
      const char *inBytes;
  #else
      char *inBytes;
-@@ -165,7 +165,7 @@ QByteArray QIconvCodec::convertFromUnico
+@@ -199,7 +207,7 @@ QByteArray QIconvCodec::convertFromUnico
  #if !defined(NO_BOM)
      // give iconv() a BOM
      QChar bom[] = { QChar(QChar::ByteOrderMark) };
@@ -38,7 +55,7 @@ $NetBSD: patch-ao,v 1.2 2007/11/22 18:51:25 drochner Exp $
      // GNU doesn't disagree with POSIX :/
      inBytes = reinterpret_cast<const char *>(bom);
  #else
-@@ -179,7 +179,7 @@ QByteArray QIconvCodec::convertFromUnico
+@@ -213,7 +221,7 @@ QByteArray QIconvCodec::convertFromUnico
  #endif // NO_BOM
  
      // now feed iconv() the real data
@@ -47,12 +64,12 @@ $NetBSD: patch-ao,v 1.2 2007/11/22 18:51:25 drochner Exp $
      // GNU doesn't disagree with POSIX :/
      inBytes = reinterpret_cast<const char *>(uc);
  #else
-@@ -244,7 +244,7 @@ iconv_t QIconvCodec::createIconv_t(const
+@@ -278,7 +286,7 @@ iconv_t QIconvCodec::createIconv_t(const
      char *codeset = 0;
  #endif
  
 -#if defined(_XOPEN_UNIX) && !defined(Q_OS_QNX6) && !defined(Q_OS_OSF)
-+#if (defined(_XOPEN_UNIX) && !defined(Q_OS_QNX6) && !defined(Q_OS_OSF)) || defined(Q_OS_NETBSD)
++#if (defined(_XOPEN_UNIX) && !defined(Q_OS_QNX6) && !defined(Q_OS_OSF)) || defined(Q_OS_NETBSD) || defined(__DragonFly__)
      if (cd == (iconv_t) -1) {
          codeset = nl_langinfo(CODESET);
          if (codeset)
