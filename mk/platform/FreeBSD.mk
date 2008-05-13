@@ -1,4 +1,4 @@
-# $NetBSD: FreeBSD.mk,v 1.24 2008/03/04 06:45:34 jlam Exp $
+# $NetBSD: FreeBSD.mk,v 1.25 2008/05/13 11:40:24 tnn Exp $
 #
 # Variable definitions for the FreeBSD operating system.
 
@@ -48,6 +48,8 @@ IMAKE_MANINSTALL?=	maninstall catinstall
 
 _OPSYS_EMULDIR.freebsd=	# empty
 _OPSYS_EMULDIR.linux=	/compat/linux
+
+_OPSYS_SYSTEM_RPATH?=	/lib:/usr/lib	# STANDARD_LIBRARY_PATH (from rtld.h)
 
 .if exists(/usr/include/netinet6)
 _OPSYS_HAS_INET6=	yes	# IPv6 is standard
