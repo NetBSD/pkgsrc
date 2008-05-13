@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1056 2008/05/13 09:23:10 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1057 2008/05/13 12:01:22 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1810,3 +1810,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/curl to 7.18.0nb2 [dholland 2008-05-12]
 	Updated lang/sigscheme to 0.8.3 [obache 2008-05-13]
 	Updated sysutils/coreutils to 6.11 [tron 2008-05-13]
+	Updated net/Transmission to 1.20 [tnn 2008-05-13]
