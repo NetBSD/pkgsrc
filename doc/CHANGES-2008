@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1054 2008/05/12 20:41:01 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.1055 2008/05/13 02:53:32 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1808,3 +1808,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated benchmarks/netperf to 2.3.1nb1 [tonnerre 2008-05-12]
 	Updated lang/chicken to 3.2.0 [degroote 2008-05-12]
 	Updated www/curl to 7.18.0nb2 [dholland 2008-05-12]
+	Updated lang/sigscheme to 0.8.3 [obache 2008-05-13]
