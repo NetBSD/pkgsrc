@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2008/05/13 21:36:14 sborrill Exp $
+
+To use ftmenu, first define an icon image in the same way you use in the
+.fluxbox/menu file to handle icons (i.e. a <full icon path here> string).
+Define the icon image after the [begin] string, at the start of the menu file.
+
+For example:
+
+[begin] (fluxbox) <${PREFIX}/share/ftmenu/fb.xpm>
+
+You can then start ftmenu.
+
+===========================================================================
