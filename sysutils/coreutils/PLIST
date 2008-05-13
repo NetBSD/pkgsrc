@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/04/12 22:43:12 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/05/13 09:22:46 tron Exp $
 bin/${GNU_PROGRAM_PREFIX}[
 bin/${GNU_PROGRAM_PREFIX}base64
 bin/${GNU_PROGRAM_PREFIX}basename
@@ -219,7 +219,6 @@ share/locale/pl/LC_MESSAGES/coreutils.mo
 share/locale/pt/LC_MESSAGES/coreutils.mo
 share/locale/pt_BR/LC_MESSAGES/coreutils.mo
 share/locale/ru/LC_MESSAGES/coreutils.mo
-share/locale/rw/LC_MESSAGES/coreutils.mo
 share/locale/sk/LC_MESSAGES/coreutils.mo
 share/locale/sl/LC_MESSAGES/coreutils.mo
 share/locale/sv/LC_MESSAGES/coreutils.mo
@@ -254,7 +253,6 @@ share/locale/pl/LC_TIME/coreutils.mo
 share/locale/pt/LC_TIME/coreutils.mo
 share/locale/pt_BR/LC_TIME/coreutils.mo
 share/locale/ru/LC_TIME/coreutils.mo
-share/locale/rw/LC_TIME/coreutils.mo
 share/locale/sk/LC_TIME/coreutils.mo
 share/locale/sl/LC_TIME/coreutils.mo
 share/locale/sv/LC_TIME/coreutils.mo
