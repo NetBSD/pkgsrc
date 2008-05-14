@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/12 13:20:17 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/05/14 18:26:42 drochner Exp $
 lib/compiz/libaddhelper.la
 lib/compiz/libbench.la
 lib/compiz/libcrashhandler.la
@@ -38,3 +38,34 @@ share/compiz/splash_background.png
 share/compiz/splash_logo.png
 share/compiz/trailfocus.xml
 share/compiz/widget.xml
+share/gconf/schemas/compiz-addhelper.schemas
+share/gconf/schemas/compiz-bench.schemas
+share/gconf/schemas/compiz-crashhandler.schemas
+share/gconf/schemas/compiz-cubecaps.schemas
+share/gconf/schemas/compiz-cubereflex.schemas
+share/gconf/schemas/compiz-extrawm.schemas
+share/gconf/schemas/compiz-fadedesktop.schemas
+share/gconf/schemas/compiz-firepaint.schemas
+share/gconf/schemas/compiz-gears.schemas
+share/gconf/schemas/compiz-group.schemas
+share/gconf/schemas/compiz-mblur.schemas
+share/gconf/schemas/compiz-reflex.schemas
+share/gconf/schemas/compiz-scalefilter.schemas
+share/gconf/schemas/compiz-showdesktop.schemas
+share/gconf/schemas/compiz-splash.schemas
+share/gconf/schemas/compiz-trailfocus.schemas
+share/gconf/schemas/compiz-widget.schemas
+share/locale/ca/LC_MESSAGES/compiz-fusion-plugins-extra.mo
+share/locale/de/LC_MESSAGES/compiz-fusion-plugins-extra.mo
+share/locale/el/LC_MESSAGES/compiz-fusion-plugins-extra.mo
+share/locale/fr/LC_MESSAGES/compiz-fusion-plugins-extra.mo
+share/locale/gl/LC_MESSAGES/compiz-fusion-plugins-extra.mo
+share/locale/it/LC_MESSAGES/compiz-fusion-plugins-extra.mo
+share/locale/ja/LC_MESSAGES/compiz-fusion-plugins-extra.mo
+share/locale/nb/LC_MESSAGES/compiz-fusion-plugins-extra.mo
+share/locale/pl/LC_MESSAGES/compiz-fusion-plugins-extra.mo
+share/locale/pt/LC_MESSAGES/compiz-fusion-plugins-extra.mo
+share/locale/sv/LC_MESSAGES/compiz-fusion-plugins-extra.mo
+share/locale/tr/LC_MESSAGES/compiz-fusion-plugins-extra.mo
+share/locale/zh_CN/LC_MESSAGES/compiz-fusion-plugins-extra.mo
+@comment in GConf: @dirrm share/gconf/schemas
