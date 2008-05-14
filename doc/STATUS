@@ -1,4 +1,4 @@
-$NetBSD: STATUS,v 1.37 2006/12/15 13:22:14 martti Exp $
+$NetBSD: STATUS,v 1.38 2008/05/14 15:27:41 wiz Exp $
 
 Below is a list of packages known to build on various non-NetBSD
 platforms.  Currently, there are three categories.  If all packages in a given
@@ -92,7 +92,7 @@ editors/abiword
 graphics/mplayer                    Y               Y                  N
 lang/gcc                N/A                         Y                  Y
 lang/gcc3               N/A                  Y      Y                  Y
-lang/python22                                Y      Y
+lang/python25                                        
 lang/ruby                                    Y      Y
 lang/sun-j*                                         Y
 lang/wonka
