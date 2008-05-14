@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2005/09/21 00:02:17 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/14 11:56:26 jmcneill Exp $
 #
 
-DISTNAME=		unshield-0.5
+DISTNAME=		unshield-0.5.1
 CATEGORIES=		archivers
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=synce/}
 
@@ -11,6 +11,9 @@ COMMENT=		Extract InstallShield .CAB files
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
+USE_TOOLS+=		pkg-config
+
+PKGCONFIG_OVERRIDE+=	libunshield.pc.in
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
