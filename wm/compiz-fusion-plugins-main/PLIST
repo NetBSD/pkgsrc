@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/12 12:47:29 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/05/14 18:26:42 drochner Exp $
 include/compiz/text.h
 lib/compiz/libanimation.la
 lib/compiz/libcolorfilter.la
@@ -43,4 +43,37 @@ share/compiz/vpswitch.xml
 share/compiz/wall.xml
 share/compiz/winrules.xml
 share/compiz/workarounds.xml
+share/gconf/schemas/compiz-animation.schemas
+share/gconf/schemas/compiz-colorfilter.schemas
+share/gconf/schemas/compiz-expo.schemas
+share/gconf/schemas/compiz-ezoom.schemas
+share/gconf/schemas/compiz-imgjpeg.schemas
+share/gconf/schemas/compiz-neg.schemas
+share/gconf/schemas/compiz-opacify.schemas
+share/gconf/schemas/compiz-put.schemas
+share/gconf/schemas/compiz-resizeinfo.schemas
+share/gconf/schemas/compiz-ring.schemas
+share/gconf/schemas/compiz-scaleaddon.schemas
+share/gconf/schemas/compiz-shift.schemas
+share/gconf/schemas/compiz-snap.schemas
+share/gconf/schemas/compiz-text.schemas
+share/gconf/schemas/compiz-thumbnail.schemas
+share/gconf/schemas/compiz-vpswitch.schemas
+share/gconf/schemas/compiz-wall.schemas
+share/gconf/schemas/compiz-winrules.schemas
+share/gconf/schemas/compiz-workarounds.schemas
+share/locale/ca/LC_MESSAGES/compiz-fusion-plugins-main.mo
+share/locale/de/LC_MESSAGES/compiz-fusion-plugins-main.mo
+share/locale/el/LC_MESSAGES/compiz-fusion-plugins-main.mo
+share/locale/fr/LC_MESSAGES/compiz-fusion-plugins-main.mo
+share/locale/gl/LC_MESSAGES/compiz-fusion-plugins-main.mo
+share/locale/it/LC_MESSAGES/compiz-fusion-plugins-main.mo
+share/locale/ja/LC_MESSAGES/compiz-fusion-plugins-main.mo
+share/locale/nb/LC_MESSAGES/compiz-fusion-plugins-main.mo
+share/locale/pl/LC_MESSAGES/compiz-fusion-plugins-main.mo
+share/locale/pt/LC_MESSAGES/compiz-fusion-plugins-main.mo
+share/locale/sv/LC_MESSAGES/compiz-fusion-plugins-main.mo
+share/locale/tr/LC_MESSAGES/compiz-fusion-plugins-main.mo
+share/locale/zh_CN/LC_MESSAGES/compiz-fusion-plugins-main.mo
+@comment in GConf: @dirrm share/gconf/schemas
 @dirrm share/compiz/filters
