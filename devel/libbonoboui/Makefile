@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2008/04/30 13:38:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.66 2008/05/14 02:24:18 gdt Exp $
 #
 
 DISTNAME=	libbonoboui-2.22.0
@@ -38,4 +38,9 @@ BUILDLINK_API_DEPENDS.libgnome+=	libgnome>=2.13.7
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+# Because pango does not include -lX11, configure does AC_PATH_XTRA
+# which links the following three libraries.
+.include "../../x11/libICE/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
