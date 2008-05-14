@@ -1,6 +1,8 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/05/12 12:40:32 jmcneill Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/05/14 16:40:20 drochner Exp $
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
+BUILDLINK_DEPMETHOD.compiz-bcop?=	build
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 COMPIZ_BCOP_BUILDLINK3_MK:=	${COMPIZ_BCOP_BUILDLINK3_MK}+
 
 .if ${BUILDLINK_DEPTH} == "+"
@@ -16,6 +18,4 @@ BUILDLINK_API_DEPENDS.compiz-bcop+=	compiz-bcop>=0.6.0
 BUILDLINK_PKGSRCDIR.compiz-bcop?=	../../devel/compiz-bcop
 .endif	# COMPIZ_BCOP_BUILDLINK3_MK
 
-.include "../../wm/compiz/buildlink3.mk"
-
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
