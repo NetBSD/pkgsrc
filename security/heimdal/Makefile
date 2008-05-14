@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2008/05/05 02:26:03 jwise Exp $
+# $NetBSD: Makefile,v 1.71 2008/05/14 18:01:26 jwise Exp $
 
 DISTNAME=	heimdal-1.1
 CATEGORIES=	security
@@ -53,9 +53,12 @@ CONFIGURE_ENV.SunOS+=	ac_cv_header_vis_h=no
 CONFIGURE_ARGS+=	--with-readline=${BUILDLINK_PREFIX.readline}
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.readline}/include/readline
 
-PLIST_VARS+=		afskauth
+PLIST_VARS+=		afskauth hcrypto
 .if ${OPSYS} == "IRIX"
 PLIST.afskauth=		yes
+.endif
+.if ${MACHINE_PLATFORM:MNetBSD-[1-3]*} != ""
+PLIST.hcrypto=		yes
 .endif
 
 OWN_DIRS_PERMS=		${HEIMDAL_HDB_DIR} ${ROOT_USER} ${ROOT_GROUP} 0700
