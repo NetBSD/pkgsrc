@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1065 2008/05/14 15:28:01 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1066 2008/05/14 20:29:39 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1820,3 +1820,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/sudo to 1.6.9p16 [taca 2008-05-14]
 	Updated graphics/cairo to 1.6.4nb2 [obache 2008-05-14]
 	Updated devel/pango to 1.20.2nb2 [obache 2008-05-14]
+	Updated print/lilypond to 2.10.33 [sborrill 2008-05-14]
