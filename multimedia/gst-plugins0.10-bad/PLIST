@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/02/28 19:36:24 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/05/14 18:32:04 drochner Exp $
 include/gstreamer-0.10/gst/app/gstappbuffer.h
 include/gstreamer-0.10/gst/app/gstappsink.h
 include/gstreamer-0.10/gst/app/gstappsrc.h
@@ -22,6 +22,7 @@ lib/gstreamer-0.10/libgstmpegvideoparse.la
 lib/gstreamer-0.10/libgstmve.la
 lib/gstreamer-0.10/libgstnsf.la
 lib/gstreamer-0.10/libgstnuvdemux.la
+lib/gstreamer-0.10/libgstoss4audio.la
 lib/gstreamer-0.10/libgstrawparse.la
 lib/gstreamer-0.10/libgstreal.la
 lib/gstreamer-0.10/libgstreplaygain.la
@@ -32,6 +33,7 @@ lib/gstreamer-0.10/libgstselector.la
 lib/gstreamer-0.10/libgstspeed.la
 lib/gstreamer-0.10/libgstspeexresample.la
 lib/gstreamer-0.10/libgststereo.la
+lib/gstreamer-0.10/libgstsubenc.la
 lib/gstreamer-0.10/libgsttta.la
 lib/gstreamer-0.10/libgstvideosignal.la
 lib/gstreamer-0.10/libgstvmnc.la
@@ -42,6 +44,7 @@ share/locale/az/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/bg/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/cs/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/da/LC_MESSAGES/gst-plugins-bad-0.10.mo
+share/locale/de/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/en_GB/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/es/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/fi/LC_MESSAGES/gst-plugins-bad-0.10.mo
@@ -53,6 +56,7 @@ share/locale/nl/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/or/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/pl/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/pt_BR/LC_MESSAGES/gst-plugins-bad-0.10.mo
+share/locale/ru/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/sk/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/sq/LC_MESSAGES/gst-plugins-bad-0.10.mo
 share/locale/sr/LC_MESSAGES/gst-plugins-bad-0.10.mo
