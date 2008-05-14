@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1063 2008/05/14 11:57:18 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.1064 2008/05/14 14:02:19 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1817,3 +1817,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added x11/ftmenu version 0.3 [sborrill 2008-05-13]
 	Updated net/quagga to 0.98.6nb1 [tonnerre 2008-05-13]
 	Updated archivers/unshield to 0.5.1 [jmcneill 2008-05-14]
+	Updated security/sudo to 1.6.9p16 [taca 2008-05-14]
