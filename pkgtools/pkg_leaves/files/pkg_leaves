@@ -1,0 +1,62 @@
+#!@SH@
+#
+# Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE NETBSD FOUNDATION, INC. AND CONTRIBUTORS
+# ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+# TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+# PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE FOUNDATION OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+# INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+# CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+# ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+# POSSIBILITY OF SUCH DAMAGE.
+#
+
+PKG_INFO="@PKG_INFO_CMD@"
+PKG_DBDIR="@PKG_DBDIR@"
+
+skip_manual=yes
+
+usage()
+{
+	echo "$0 [-a] [-K pkg_dbdir]"
+	echo "Print all automatically installed leaf packages."
+	echo "If -a is specified, print all leaf packages."
+	exit 1
+}
+
+while [ $# -gt 0 ] ; do
+	case "$1" in
+	-a)
+		skip_manual=no
+		shift
+		;;
+	-K)
+		PKG_DBDIR="$2"
+		;;
+	esac
+done
+
+${PKG_INFO} -K "${PKG_DBDIR}" -e '*' | while read pkg; do
+	if [ -z "`${PKG_INFO} -K "${PKG_DBDIR}" -q -R ${pkg}`" ]; then
+		if [ ${skip_manual} = "yes" ]; then
+			if [ "`${PKG_INFO} -K "${PKG_DBDIR}" -Q automatic ${pkg}`" != yes ]; then
+				continue
+			fi
+		fi
+		echo ${pkg}
+	fi
+done

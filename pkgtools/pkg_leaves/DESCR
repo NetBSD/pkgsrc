@@ -1,0 +1,2 @@
+pkg_leaves is a small script to print a list of leaf packages aka
+packages not depended on.
