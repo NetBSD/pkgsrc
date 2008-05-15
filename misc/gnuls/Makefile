@@ -1,37 +1,20 @@
-# $NetBSD: Makefile,v 1.19 2008/03/04 19:21:11 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2008/05/15 20:01:03 tnn Exp $
 #
 
-DISTNAME=	coreutils-6.9
+.include "../../sysutils/coreutils/Makefile.common"
+
 PKGNAME=	${DISTNAME:S/coreutils/gnuls/}
 CATEGORIES=	misc
-MASTER_SITES=	${MASTER_SITE_GNU:=coreutils/}
-EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.gnu.org/software/coreutils/
 COMMENT=	GNU ls utility with color support
 
 CONFLICTS=	coreutils-[0-9]* linuxls-[0-9]*
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-GNU_CONFIGURE=		YES
-
-PLIST_SUBST+=		GNU_PROGRAM_PREFIX=${GNU_PROGRAM_PREFIX:Q}
-BUILD_DEFS+=		GNU_PROGRAM_PREFIX
+do-build:
+	${RUN} cd ${WRKSRC}/lib && ${BUILD_MAKE_CMD} all
+	${RUN} cd ${WRKSRC}/src && ${BUILD_MAKE_CMD} dircolors ls
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
-.include "../../mk/bsd.prefs.mk"
-
-.if ${OPSYS} == "Interix"
-CONFIGURE_ENV+=		ac_list_mounted_fs=found
-.endif
-
-.if ${OPSYS} != "Linux"
-CONFIGURE_ENV+=		gt_cv_func_gnugettext3_libintl=yes
-.endif
-CONFIGURE_ENV+=		MKDIR_P=${MKDIR:Q}
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/dircolors \
