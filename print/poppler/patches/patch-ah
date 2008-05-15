@@ -1,0 +1,22 @@
+$NetBSD: patch-ah,v 1.3 2008/05/15 09:15:41 drochner Exp $
+
+--- poppler/Annot.cc.orig	2008-03-26 20:38:52.000000000 +0100
++++ poppler/Annot.cc
+@@ -1735,7 +1735,7 @@ void AnnotWidget::initialize(XRef *xrefA
+   // Only text or choice fields needs to have appearance regenerated
+   // see section 8.6.2 "Variable Text" of PDFReference
+   regen = gFalse;
+-  if (widget->getType () == formText || widget->getType () == formChoice) {
++  if (widget != NULL && (widget->getType () == formText || widget->getType () == formChoice)) {
+     regen = form->getNeedAppearances ();
+   }
+ 
+@@ -2577,7 +2577,7 @@ void AnnotWidget::generateFieldAppearanc
+   int dashLength, ff, quadding, comb, nOptions, topIdx, i, j;
+   GBool modified;
+ 
+-  if (!widget->getField () || !widget->getField ()->getObj ()->isDict ())
++  if (widget == NULL || !widget->getField () || !widget->getField ()->getObj ()->isDict ())
+     return;
+ 
+   field = widget->getField ()->getObj ()->getDict ();
