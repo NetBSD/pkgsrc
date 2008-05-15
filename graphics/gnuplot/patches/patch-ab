@@ -1,32 +1,32 @@
-$NetBSD: patch-ab,v 1.9 2008/05/09 11:12:27 jmmv Exp $
+$NetBSD: patch-ab,v 1.10 2008/05/15 20:22:02 drochner Exp $
 
---- share/Makefile.in.orig	2007-08-31 08:35:05.000000000 +0200
+--- share/Makefile.in.orig	2008-03-08 21:06:28.000000000 +0100
 +++ share/Makefile.in
 @@ -189,7 +189,7 @@ sysconfdir = @sysconfdir@
  target_alias = @target_alias@
  AUTOMAKE_OPTIONS = foreign 1.2h
  EXTRA_DIST = Gnuplot.app-defaults
 -SUBDIRS = LaTeX
-+SUBDIRS = 
- xresourcedir = $(libdir)/X11/app-defaults
- xresource_DATA = Gnuplot.app-defaults
- all: all-recursive
-@@ -227,13 +227,15 @@ $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
++SUBDIRS =
+ appdefaultdir = $(libdir)/X11/app-defaults
+ APPDEFAULTFILES = Gnuplot
+ appdefault_DATA = $(APPDEFAULTFILES)
+@@ -229,13 +229,15 @@ $(ACLOCAL_M4):  $(am__aclocal_m4_deps)
  uninstall-info-am:
- install-xresourceDATA: $(xresource_DATA)
+ install-appdefaultDATA: $(appdefault_DATA)
  	@$(NORMAL_INSTALL)
--	test -z "$(xresourcedir)" || $(mkdir_p) "$(DESTDIR)$(xresourcedir)"
--	@list='$(xresource_DATA)'; for p in $$list; do \
+-	test -z "$(appdefaultdir)" || $(mkdir_p) "$(DESTDIR)$(appdefaultdir)"
+-	@list='$(appdefault_DATA)'; for p in $$list; do \
 +	if test $${INSTALL_XRESOURCE_DATA:-yes} = yes; then \
-+	test -z "$(xresourcedir)" || $(mkdir_p) "$(DESTDIR)$(xresourcedir)"; \
-+	list='$(xresource_DATA)'; for p in $$list; do \
++	test -z "$(appdefaultdir)" || $(mkdir_p) "$(DESTDIR)$(appdefaultdir)"; \
++	list='$(appdefault_DATA)'; for p in $$list; do \
  	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
  	  f=$(am__strip_dir) \
- 	  echo " $(xresourceDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(xresourcedir)/$$f'"; \
- 	  $(xresourceDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(xresourcedir)/$$f"; \
+ 	  echo " $(appdefaultDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(appdefaultdir)/$$f'"; \
+ 	  $(appdefaultDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(appdefaultdir)/$$f"; \
 -	done
 +	done; \
 +	fi
  
- uninstall-xresourceDATA:
+ uninstall-appdefaultDATA:
  	@$(NORMAL_UNINSTALL)
