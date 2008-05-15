@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.dbm,v 1.1.1.1 2008/05/15 19:43:47 adrianp Exp $
+bin/rlm_dbm_cat
+bin/rlm_dbm_parser
+lib/rlm_dbm-${RADVER}.la
+lib/rlm_dbm.la

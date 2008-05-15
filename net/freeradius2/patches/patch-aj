@@ -1,0 +1,12 @@
+$NetBSD: patch-aj,v 1.1.1.1 2008/05/15 19:43:47 adrianp Exp $
+
+--- Make.inc.in.orig	2008-05-14 23:18:20.000000000 +0200
++++ Make.inc.in	2008-05-14 23:18:50.000000000 +0200
+@@ -45,6 +45,7 @@
+ LCRYPT		= @CRYPTLIB@
+ LIBS		= @LIBS@
+ LDFLAGS		= @LDFLAGS@
++RLM_LIBS	+= -lcrypto -L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib
+ 
+ LOGDIR		= ${logdir}
+ RADDBDIR	= ${raddbdir}
