@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.43 2008/05/15 09:39:47 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.44 2008/05/15 09:56:58 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -98,3 +98,5 @@ pullup ticket #2376 - requested by tonnerre
 quagga: fixes denial of service
 pullup ticket #2377 - requested by taca
 plone3, plone: resolves security vulberability
+pullup ticket #2378 - requested by adrianp
+php5: many security fixes
