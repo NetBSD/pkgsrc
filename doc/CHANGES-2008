@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1070 2008/05/15 13:42:44 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1071 2008/05/15 17:45:34 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1832,3 +1832,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/musicpd to 0.13.1 [drochner 2008-05-14]
 	Updated geography/xrmap-factbook_text to 2006 [drochner 2008-05-14]
 	Updated net/libupnp to 1.6.6nb1 [obache 2008-05-15]
+	Added pkgtools/pkg_leaves version 1.0 [joerg 2008-05-15]
