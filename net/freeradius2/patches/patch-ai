@@ -1,0 +1,48 @@
+$NetBSD: patch-ai,v 1.1.1.1 2008/05/15 19:43:47 adrianp Exp $
+
+--- configure.orig	2008-01-22 14:16:37.000000000 +0000
++++ configure
+@@ -20341,13 +20341,13 @@ fi
+ done
+ 
+ 
+-  { echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
+-echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6; }
++  { echo "$as_me:$LINENO: checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}" >&5
++echo $ECHO_N "checking for pthread_create in ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}... $ECHO_C" >&6; }
+ if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpthread  $LIBS"
++LIBS="${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -20404,7 +20404,7 @@ fi
+ echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6; }
+ if test $ac_cv_lib_pthread_pthread_create = yes; then
+    CFLAGS="$CFLAGS -D_REENTRANT -D_POSIX_PTHREAD_SEMANTICS"
+-                  LIBS="$LIBS -lpthread"
++                  LIBS="$LIBS ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}"
+ else
+   { echo "$as_me:$LINENO: checking for pthread_create in -lc_r" >&5
+ echo $ECHO_N "checking for pthread_create in -lc_r... $ECHO_C" >&6; }
+@@ -20872,7 +20872,7 @@ if test "${ac_cv_lib_ssl_SSL_new+set}" =
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lssl  $LIBS"
++LIBS="-lssl -lcrypto  $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -24695,7 +24695,7 @@ gethostbyaddrrstyle=""
+ { echo "$as_me:$LINENO: checking gethostbyaddr_r() syntax" >&5
+ echo $ECHO_N "checking gethostbyaddr_r() syntax... $ECHO_C" >&6; }
+ case "$host" in
+-*-freebsd*)
++*-freebsd* | *-dragonfly*)
+ 	{ echo "$as_me:$LINENO: checking whether gethostbyaddr_r is declared" >&5
+ echo $ECHO_N "checking whether gethostbyaddr_r is declared... $ECHO_C" >&6; }
+ if test "${ac_cv_have_decl_gethostbyaddr_r+set}" = set; then
