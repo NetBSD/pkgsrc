@@ -1,0 +1,65 @@
+$NetBSD: patch-al,v 1.1.1.1 2008/05/15 19:43:47 adrianp Exp $
+
+--- src/modules/rlm_preprocess/rlm_preprocess.c.orig	2008-03-05 11:13:21.000000000 +0100
++++ src/modules/rlm_preprocess/rlm_preprocess.c	2008-05-14 22:59:18.000000000 +0200
+@@ -130,7 +130,7 @@
+ 		/*
+ 		 *  No weird packing.  Ignore it.
+ 		 */
+-		ptr = strchr(vp->vp_strvalue, '='); /* find an '=' */
++		ptr = strchr((char *)vp->vp_strvalue, '='); /* find an '=' */
+ 		if (!ptr) continue;
+ 
+ 		/*
+@@ -148,7 +148,7 @@
+ 			const char *p;
+ 			DICT_ATTR	*dattr;
+ 
+-			p = vp->vp_strvalue;
++			p = (char *)vp->vp_strvalue;
+ 			gettoken(&p, newattr, sizeof(newattr));
+ 
+ 			if (((dattr = dict_attrbyname(newattr)) != NULL) &&
+@@ -233,10 +233,10 @@
+ 		 *
+ 		 *	FIXME: should we handle this as a REALM ?
+ 		 */
+-		if ((ptr = strchr(namepair->vp_strvalue, '\\')) != NULL) {
++		if ((ptr = strchr((char *)namepair->vp_strvalue, '\\')) != NULL) {
+ 			strlcpy(newname, ptr + 1, sizeof(newname));
+ 			/* Same size */
+-			strcpy(namepair->vp_strvalue, newname);
++			strcpy((char *)namepair->vp_strvalue, newname);
+ 			namepair->length = strlen(newname);
+ 		}
+ 	}
+@@ -404,9 +404,9 @@
+ 						       &request->packet->vps,
+ 						       PW_HUNTGROUP_NAME,
+ 						       PW_TYPE_STRING);
+-				strlcpy(vp->vp_strvalue, i->name,
++				strlcpy((char *)vp->vp_strvalue, i->name,
+ 					sizeof(vp->vp_strvalue));
+-				vp->length = strlen(vp->vp_strvalue);
++				vp->length = strlen((char *)vp->vp_strvalue);
+ 			}
+ 			r = RLM_MODULE_OK;
+ 		}
+@@ -581,7 +581,7 @@
+ 				  data->huntgroups)) != RLM_MODULE_OK) {
+ 		char buf[1024];
+ 		radlog(L_AUTH, "No huntgroup access: [%s] (%s)",
+-		       request->username ? request->username->vp_strvalue : "<NO User-Name>",
++		       request->username ? (char *)request->username->vp_strvalue : "<NO User-Name>",
+ 		       auth_name(buf, sizeof(buf), request, 1));
+ 		return r;
+ 	}
+@@ -632,7 +632,7 @@
+ 				  data->huntgroups)) != RLM_MODULE_OK) {
+ 		char buf[1024];
+ 		radlog(L_INFO, "No huntgroup access: [%s] (%s)",
+-		       request->username ? request->username->vp_strvalue : "<NO User-Name>",
++		       request->username ? (char *)request->username->vp_strvalue : "<NO User-Name>",
+ 		       auth_name(buf, sizeof(buf), request, 1));
+ 		return r;
+ 	}
