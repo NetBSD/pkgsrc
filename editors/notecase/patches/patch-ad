@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.4 2008/02/28 20:59:03 drochner Exp $
+$NetBSD: patch-ad,v 1.5 2008/05/15 19:18:07 drochner Exp $
 
---- Makefile.orig	2008-02-27 10:24:44.000000000 +0100
+--- Makefile.orig	2008-04-24 12:10:36.000000000 +0200
 +++ Makefile
 @@ -10,7 +10,7 @@
- VERSION=1.8.1
+ VERSION=1.8.8
  
  # define install target dirs
 -prefix=/usr
@@ -11,7 +11,7 @@ $NetBSD: patch-ad,v 1.4 2008/02/28 20:59:03 drochner Exp $
  bindir=$(prefix)/bin
  datadir=$(prefix)/share
  
-@@ -125,7 +125,7 @@ BIN=./bin
+@@ -130,7 +130,7 @@ BIN=./bin
  OBJ=./bin
  
  #define proper install flags
@@ -20,7 +20,7 @@ $NetBSD: patch-ad,v 1.4 2008/02/28 20:59:03 drochner Exp $
  ifdef OSX_BUILD
   INSTALL=install -c
  endif 
-@@ -164,7 +164,7 @@ CC=$(QC) $(CXX) $(DEBUG) $(PROFILE) -DEN
+@@ -170,7 +170,7 @@ CC=$(QC) $(CXX) $(DEBUG) $(PROFILE) -DEN
  ifdef WINDIR
   LD=$(QL) $(CXX) $(DEBUG) $(PROFILE) $(LDFLAGS) -L$(OBJ) -lz 
  else
@@ -29,7 +29,7 @@ $NetBSD: patch-ad,v 1.4 2008/02/28 20:59:03 drochner Exp $
  endif
  
  ifndef OSX_BUILD 
-@@ -197,7 +197,6 @@ OBJS= $(OBJ)/main.o $(OBJ)/support.o $(O
+@@ -203,7 +203,6 @@ OBJS= $(OBJ)/main.o $(OBJ)/support.o $(O
   $(OBJ)/IOLayerRedirect.o $(OBJ)/FileExportDlg.o $(OBJ)/FormatIOTxt.o $(OBJ)/FindReplaceDlg.o \
   $(OBJ)/FindReplaceInfo.o $(OBJ)/LinkInfo.o $(OBJ)/LinkPropertiesDlg.o $(OBJ)/ExecuteFile.o \
   $(OBJ)/FileSaveAsDlg.o $(OBJ)/CircularBuffer.o $(OBJ)/FormatIOMMLX.o \
@@ -37,7 +37,7 @@ $NetBSD: patch-ad,v 1.4 2008/02/28 20:59:03 drochner Exp $
   $(OBJ)/ProgressDlg.o $(OBJ)/DocActionPix.o $(OBJ)/DocActionFinish.o $(OBJ)/DocActionFmt.o $(OBJ)/FmtInfo.o \
   $(OBJ)/FileAttachmentDlg.o $(OBJ)/DocActionAtt.o $(OBJ)/PixPropertiesDlg.o $(OBJ)/DocActionFinishDel.o \
   $(OBJ)/ShortcutsList.o $(OBJ)/ShortcutsListDlg.o $(OBJ)/DateTimeDlg.o $(OBJ)/AboutDlg.o $(OBJ)/EditDlg.o \
-@@ -626,7 +625,7 @@ updatesrc:
+@@ -630,7 +629,7 @@ updatesrc:
  	$(Q)$(SED) 's/^Version:.*/Version:        $(VERSION)/' ./docs/notecase.spec
  	$(Q)$(SED) 's/^Source:.*/Source:         $(archive)_src.tar.gz/' ./docs/notecase.spec
  	$(Q)$(SED) 's/\#define APP_VER_STR .*/\#define APP_VER_STR "$(VERSION)"/' ./src/config.h
