@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/04/21 20:11:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/05/15 18:16:17 drochner Exp $
 ${PYSITELIB}/bsddb3/__init__.py
 ${PYSITELIB}/bsddb3/__init__.pyc
 ${PYSITELIB}/bsddb3/__init__.pyo
@@ -81,6 +81,9 @@ ${PYSITELIB}/bsddb3/tests/test_queue.pyo
 ${PYSITELIB}/bsddb3/tests/test_recno.py
 ${PYSITELIB}/bsddb3/tests/test_recno.pyc
 ${PYSITELIB}/bsddb3/tests/test_recno.pyo
+${PYSITELIB}/bsddb3/tests/test_replication.py
+${PYSITELIB}/bsddb3/tests/test_replication.pyc
+${PYSITELIB}/bsddb3/tests/test_replication.pyo
 ${PYSITELIB}/bsddb3/tests/test_sequence.py
 ${PYSITELIB}/bsddb3/tests/test_sequence.pyc
 ${PYSITELIB}/bsddb3/tests/test_sequence.pyo
