@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.5 2008/05/15 17:49:49 drochner Exp $
+
+--- ./properties/ev-properties-view.c.orig	2008-05-15 19:35:25.000000000 +0200
++++ ./properties/ev-properties-view.c
+@@ -218,7 +218,7 @@ get_default_user_units (void)
+ 
+ 	if (strcmp (e, "default:inch") == 0)
+ 		return GTK_UNIT_INCH;
+-	else if (strcmp (e, "default:mm") == 0)
++	else if (strcmp (e, "default:mm"))
+ 		g_warning ("Whoever translated default:mm did so wrongly.\n");
+ 				
+ 	return GTK_UNIT_MM;
