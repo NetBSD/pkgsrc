@@ -46,6 +46,8 @@ while [ $# -gt 0 ] ; do
 		;;
 	-K)
 		PKG_DBDIR="$2"
+		shift
+		shift
 		;;
 	esac
 done
