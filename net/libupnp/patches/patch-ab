@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.4 2008/05/15 13:42:29 obache Exp $
+
+--- upnp/src/ssdp/ssdp_server.c.orig	2008-03-20 23:08:25.000000000 +0000
++++ upnp/src/ssdp/ssdp_server.c
+@@ -47,6 +47,8 @@
+ 	#include <winsock2.h>
+ 	#include <ws2tcpip.h>
+ 	#include "unixutil.h"
++#else
++	#include <sys/param.h>
+ #endif
+ 
+ #define MAX_TIME_TOREAD  45
+@@ -915,7 +917,7 @@ get_ssdp_sockets( MiniServerSockArray * 
+         return UPNP_E_SOCKET_ERROR;
+     }
+     
+-#if defined(__FreeBSD__) || defined(__OSX__) || defined(__APPLE__)
++#if (defined(BSD) && BSD >= 199306) || defined(__OSX__) || defined(__APPLE__)
+     ret = setsockopt( ssdpSock, SOL_SOCKET, SO_REUSEPORT,
+         (char *)&onOff, sizeof (onOff) );
+     if ( ret == -1 ) {
