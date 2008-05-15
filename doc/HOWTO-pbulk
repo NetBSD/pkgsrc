@@ -60,7 +60,7 @@ This bootstrap kit is created by the following:
 
     cd /usr/pkgsrc/bootstrap
     ./bootstrap --mk-fragment /tmp/mk.conf \
-        --gzip-binary-kit boostrap_kit.tar.gz
+        --gzip-binary-kit bootstrap_kit.tar.gz
 
 Note that we have specified the make file fragment, /tmp/mk.conf, created
 in step (a) above.
