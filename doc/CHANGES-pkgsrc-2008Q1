@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.46 2008/05/15 10:33:25 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.47 2008/05/15 10:48:44 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -104,3 +104,5 @@ pullup ticket #2379 - requested by adrianp
 mt-daapd: security updates for dos vulnerabilities
 pullup ticket #2380 - requested by adrianp
 bugzilla: update for cross-site scripting vulnerability
+pullup ticket #2381 - requested by adrianp
+bugzilla3: bug fixes, cross-site scripting fixes
