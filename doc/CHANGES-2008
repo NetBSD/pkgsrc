@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1068 2008/05/14 21:43:44 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1069 2008/05/15 13:17:38 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1823,3 +1823,11 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated print/lilypond to 2.10.33 [sborrill 2008-05-14]
 	Updated audio/mt-daapd to 0.2.4.2 [adrianp 2008-05-14]
 	Updated devel/mantis to 1.1.1 [adrianp 2008-05-14]
+	Updated mail/evolution to 2.22.1.1 [drochner 2008-05-14]
+	Updated mail/evolution-data-server to 2.22.1.1 [drochner 2008-05-14]
+	Updated multimedia/totem-pl-parser to 2.22.3 [drochner 2008-05-14]
+	Updated multimedia/gst-plugins0.10-bad to 0.10.7 [drochner 2008-05-14]
+	Updated multimedia/gst-plugins0.10-good to 0.10.8 [drochner 2008-05-14]
+	Added audio/gimmix version 0.4.3 [drochner 2008-05-14]
+	Updated audio/musicpd to 0.13.1 [drochner 2008-05-14]
+	Updated geography/xrmap-factbook_text to 2006 [drochner 2008-05-14]
