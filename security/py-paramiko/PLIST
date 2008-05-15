@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/12/14 13:35:04 bjs Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/05/15 18:27:43 drochner Exp $
 ${PYSITELIB}/paramiko/__init__.py
 ${PYSITELIB}/paramiko/__init__.pyc
 ${PYSITELIB}/paramiko/__init__.pyo
@@ -50,6 +50,9 @@ ${PYSITELIB}/paramiko/logging22.pyo
 ${PYSITELIB}/paramiko/message.py
 ${PYSITELIB}/paramiko/message.pyc
 ${PYSITELIB}/paramiko/message.pyo
+${PYSITELIB}/paramiko/osrandom.py
+${PYSITELIB}/paramiko/osrandom.pyc
+${PYSITELIB}/paramiko/osrandom.pyo
 ${PYSITELIB}/paramiko/packet.py
 ${PYSITELIB}/paramiko/packet.pyc
 ${PYSITELIB}/paramiko/packet.pyo
