@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2008/01/18 05:08:41 tnn Exp $
+# $NetBSD: Makefile,v 1.65 2008/05/15 19:40:58 adrianp Exp $
 
 DISTNAME=	freeradius-${RADVER}
 PKGREVISION=	2
@@ -8,6 +8,8 @@ MASTER_SITES=	ftp://ftp.freeradius.org/pub/radius/
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.freeradius.org/
 COMMENT=	Free RADIUS server implementation
+
+CONFLICTS+=	freeradius-2.[0-9]*
 
 .include "../../mk/bsd.prefs.mk"
 
