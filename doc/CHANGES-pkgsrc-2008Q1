@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.41 2008/05/13 12:56:00 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.42 2008/05/15 08:45:24 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -94,3 +94,5 @@ pullup ticket #2374 - requested by tonnerre
 netperf: fix for symlink vulnerability
 pullup ticket #2375 - requested by dholland
 curl: fix broken build on netbsd 3
+pullup ticket #2376 - requested by tonnerre
+quagga: fixes denial of service
