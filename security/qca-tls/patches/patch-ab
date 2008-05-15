@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.5 2007/12/23 21:05:51 jdolecek Exp $
+$NetBSD: patch-ab,v 1.6 2008/05/15 11:06:05 wiz Exp $
 
---- qca-tls.cpp.orig	2005-12-27 22:22:32.000000000 +0000
+--- qca-tls.cpp.orig	2003-12-10 16:53:57.000000000 +0000
 +++ qca-tls.cpp
 @@ -454,7 +454,11 @@ public:
  			if(!r) {
@@ -26,3 +26,12 @@ $NetBSD: patch-ab,v 1.5 2007/12/23 21:05:51 jdolecek Exp $
  		X509 *t = d2i_X509(NULL, &p, len);
  		if(!t)
  			return false;
+@@ -945,7 +953,7 @@ public:
+ 	RSAKeyContext *key;
+ 
+ 	SSL *ssl;
+-	SSL_METHOD *method;
++	const SSL_METHOD *method;
+ 	SSL_CTX *context;
+ 	BIO *rbio, *wbio;
+ 	CertContext cc;
