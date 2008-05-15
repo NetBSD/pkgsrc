@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.13 2008/01/19 09:16:24 wiz Exp $
+# $NetBSD: Makefile.common,v 1.14 2008/05/15 20:22:02 drochner Exp $
 
 # used by ../../graphics/gnuplot-nox11
 
-DISTNAME=		gnuplot-4.2.2
+DISTNAME=		gnuplot-4.2.3
 CATEGORIES+=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gnuplot/} \
 			ftp://ftp.ucc.ie/pub/gnuplot/ \
