@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/11/08 19:00:56 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2008/05/16 20:02:31 tnn Exp $
 #
 
 DISTNAME=		pkg_install-info-${VERSION}
@@ -23,7 +23,7 @@ CHECK_PERMS=		no
 # Otherwise use PKGREVISION if you need to change this package version.
 VERSION=		4.5
 
-MAKE_ENV+=		BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q}
+USE_BSD_MAKEFILE=	yes
 
 INSTALLATION_DIRS=	bin
 
