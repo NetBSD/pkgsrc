@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1073 2008/05/15 20:01:29 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.1074 2008/05/16 09:06:37 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1835,3 +1835,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added pkgtools/pkg_leaves version 1.0 [joerg 2008-05-15]
 	Added net/freeradius2 version 2.0.4 [adrianp 2008-05-15]
 	Updated misc/gnuls to 6.11 [tnn 2008-05-15]
+	Updated wm/wmii to 3.6nb2 [ghen 2008-05-16]
