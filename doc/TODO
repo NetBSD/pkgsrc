@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7270 2008/05/14 20:29:39 sborrill Exp $
+$NetBSD: TODO,v 1.7271 2008/05/16 22:13:05 wiz Exp $
 
 Suggested new packages
 ======================
@@ -364,6 +364,7 @@ Suggested package updates
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
 	o GridSim-3.3
+	o MAMEDiff-2.29
 	o PAM-0.99.7.1
 	o R-CGIwithR-0.72
 	o R-DAAG-0.91
@@ -418,7 +419,7 @@ Suggested package updates
 	o alee-ttf-11.2
 	o algae-4.3.6
 	o aliados-0.2.0
-	o amanda-2.6.0
+	o amanda-2.6.0p1
 	o amavis-perl-0.3.12 [called just amavis]
 	o amavisd-new-2.6.0
 	o amaya-9.54
@@ -508,7 +509,6 @@ Suggested package updates
 	o cdif-1.19
 	o cdlabelgen-4.0.0
 	o cdrkit-1.1.7.1
-	o cdrtools-2.01.01.39
 	o cfitsio-3.030
 	o cflow-1.2
 	o cgdb-0.6.4
@@ -524,6 +524,7 @@ Suggested package updates
 	o claws-mail-3.4.0
 	o clearsilver-0.10.5
 	o clearsilver-base-0.10.5
+	o clisp-2.45
 	o clive-0.4.12
 	o cocoon-2.1.10
 	o colorize-0.3.4
@@ -571,11 +572,12 @@ Suggested package updates
 	o djvulibre-tools-4.1.2
 	o dnsmasq-2.41 [pkg/38186]
 	o dnstop-20070307
-	o dnstracer-1.8
+	o dnstracer-1.9
 	o doxygen-1.5.5
 	o dpkg-1.13.25
 	o drraw-2.2a5
 	o drscheme-371
+	o dvdstyler-1.6.2
 	o dvipng-1.10
 	o dvtm-0.4.1
 	o eagle-4.16
@@ -609,8 +611,6 @@ Suggested package updates
 	o et-2.60
 	o etach-1.4.1
 	o eukleides-1.0.3
-	o evolution-2.22.1.1
-	o evolution-data-server-2.22.1.1
 	o evolution-exchange-2.22.1.2
 	o ex-20050325
 	o ezmlm-idx-5.1.2 [schmonz]
@@ -622,7 +622,7 @@ Suggested package updates
 	o fdgw-20040609
 	o festival-1.96
 	o fetchyahoo-2.11.2
-	o file-4.23
+	o file-4.24
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.0
@@ -638,6 +638,7 @@ Suggested package updates
 	o freeciv-2.1.4
 	o freefont-ttf-20080323
 	o freeglut-2.4.0
+	o freenet-0.7
 	o freepops-0.2.6
 	o freeradius-2.0.0
 	o freetype-lib-1.5.20050518
@@ -676,8 +677,6 @@ Suggested package updates
 	o gkrellm-multiping-2.0.13
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
-	o glade-3.4.4
-	o glade3-3.4.5
 	o glchess-1.0.5
 	o global-5.6
 	o gmime-2.2.19
@@ -720,8 +719,6 @@ Suggested package updates
 	o gsharutils-4.7
 	o gsm-1.0.12
 	o gss-0.0.22
-	o gst-plugins0.10-bad-0.10.7
-	o gst-plugins0.10-good-0.10.8
 	o gtar-1.20
 	o gtar-base-1.20
 	o gtexinfo-4.12
@@ -810,7 +807,7 @@ Suggested package updates
 	o kismet-2007.01.1b
 	o kmess-1.5.1
 	o kmp-0.5
-	o kmymoney2-0.8.8
+	o kmymoney2-0.9
 	o kodos-2.4.5
 	o kphotobook-0.0.7
 	o kronolith-2.1.8
@@ -876,7 +873,7 @@ Suggested package updates
 	o libxml++-2.22.0
 	o lighttpd-1.4.19
 	o lincvs-2.0.0 [now called CrossVC]
-	o links-2.1.0.35
+	o links-2.1.0.36
 	o linuxsms-0.77
 	o lmms-0.2.1
 	o lout-3.31
@@ -1144,7 +1141,6 @@ Suggested package updates
 	o py-ZODB-3.2.10
 	o py-ZopeInterface-3.3.0
 	o py-bdb-xml-2.1.8
-	o py-bsddb3-4.6.4
 	o py-checker-0.8.17
 	o py-clearsilver-0.10.5
 	o py-curl-7.16.4
@@ -1162,7 +1158,6 @@ Suggested package updates
 	o py-musicbrainz-0.4.1
 	o py-mutagen-1.11
 	o py-mysqldb-1.2.2 [pkg/38090]
-	o py-paramiko-1.7
 	o py-psyco-1.5.1
 	o py-pyrex-0.9.5.1a
 	o py-qt3-3.17.3
@@ -1200,6 +1195,7 @@ Suggested package updates
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
+	o rdesktop-1.6.0
 	o rdp-1.6
 	o regionset-0.2
 	o remind-3.1.5
@@ -1261,7 +1257,7 @@ Suggested package updates
 	o skkinput-2.06.4
 	o skype-2.0.0.43
 	o smalleiffel-0.90
-	o smalltalk-3.0.2
+	o smalltalk-3.0.3
 	o smartmontools-5.38 [pkg/38573]
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.67
@@ -1329,7 +1325,6 @@ Suggested package updates
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
-	o totem-pl-parser-2.22.3
 	o tpasm-1.2
 	o tpb-0.6.4
 	o transfig-3.2.5
@@ -1374,6 +1369,7 @@ Suggested package updates
 	o wdm-1.28
 	o webmin-1.410
 	o weewm-0.01
+	o wesnoth-1.4.2
 	o wget-1.11.2
 	o win32-codecs-20071007
 	o windowlab-1.34
