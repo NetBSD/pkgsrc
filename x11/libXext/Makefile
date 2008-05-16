@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/02 14:44:47 bjs Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/16 13:48:41 tnn Exp $
 #
 
 DISTNAME=		libXext-1.0.4
@@ -23,6 +23,11 @@ PKGCONFIG_OVERRIDE+=	xext.pc.in
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--disable-malloc0returnsnull
+.endif
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mhp)
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
 .endif
 
 .include "../../x11/libX11/buildlink3.mk"

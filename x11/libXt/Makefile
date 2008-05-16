@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/01/29 03:37:02 bjs Exp $
+# $NetBSD: Makefile,v 1.8 2008/05/16 13:48:41 tnn Exp $
 #
 
 DISTNAME=		libXt-1.0.5
@@ -30,6 +30,11 @@ CONFIGURE_ARGS+=	--disable-malloc0returnsnull
 
 .if !empty(USE_CROSS_COMPILE:M[yY][eE][sS])
 MAKE_ENV+=	CC_FOR_BUILD=${NATIVE_CC:Q} CPPFLAGS_FOR_BUILD=-I${PREFIX}/include
+.endif
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mhp)
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
 .endif
 
 .include "../../x11/libSM/buildlink3.mk"

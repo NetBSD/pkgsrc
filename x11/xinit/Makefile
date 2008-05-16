@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/04/16 22:07:24 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/16 13:48:41 tnn Exp $
 #
 
 DISTNAME=		xinit-1.0.8
@@ -14,6 +14,11 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config xauth:run
+
+.include "../../mk/compiler.mk"
+.if !empty(PKGSRC_COMPILER:Mhp)
+CONFIGURE_ENV+=		ac_cv_path_RAWCPP="cc -E -Uunix -"
+.endif
 
 .include "../../x11/libX11/buildlink3.mk"
 
