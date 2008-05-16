@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.49 2008/05/16 12:12:45 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.50 2008/05/16 13:53:51 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -110,3 +110,5 @@ pullup ticket #2382 - requested by adrianp
 mantis: update for bug and security fixes
 pullup ticket #2383 - requested by obache 
 centerim: update package bug & security fixes
+pullup ticket #2384 - requested by obache
+liblive: update package fixes & security vulnerabilities
