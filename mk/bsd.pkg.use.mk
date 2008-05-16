@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.use.mk,v 1.46 2008/02/07 12:26:55 tnn Exp $
+#	$NetBSD: bsd.pkg.use.mk,v 1.47 2008/05/16 20:00:09 tnn Exp $
 #
 # Turn USE_* macros into proper depedency logic.  Included near the top of
 # bsd.pkg.mk, after bsd.prefs.mk.
@@ -20,7 +20,7 @@
 #
 
 .if defined(USE_BSD_MAKEFILE)
-MAKE_ENV+=		${BSD_MAKE_ENV}
+MAKE_ENV+=		${BSD_MAKE_ENV} INSTALL=${TOOLS_INSTALL:Q}
 .endif
 
 .if defined(USE_IMAKE) || !empty(USE_TOOLS:Mimake)
