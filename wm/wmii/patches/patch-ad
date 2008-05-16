@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2008/05/16 09:06:03 ghen Exp $
+
+Fix compatibily with dmenu 3.6 (-b for bottom replaced by -y for arbitrary y coordinate).
+
+--- rc/wmiirc.sh.orig	2007-11-16 14:59:15.000000000 +0100
++++ rc/wmiirc.sh
+@@ -16,7 +16,7 @@ WMII_BACKGROUND='#333333'
+ WMII_FONT='-*-fixed-medium-r-*-*-13-*-*-*-*-*-*-*'
+ 
+ set -- $(echo $WMII_NORMCOLORS $WMII_FOCUSCOLORS)
+-WMII_MENU="dmenu -b -fn '$WMII_FONT' -nf '$1' -nb '$2' -sf '$4' -sb '$5'"
++WMII_MENU="dmenu -y -0 -fn '$WMII_FONT' -nf '$1' -nb '$2' -sf '$4' -sb '$5'"
+ WMII_9MENU="wmii9menu -font '$WMII_FONT' -nf '$1' -nb '$2' -sf '$4' -sb '$5' -br '$6'"
+ WMII_TERM="xterm"
+ 
