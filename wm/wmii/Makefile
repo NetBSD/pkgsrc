@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2008/01/08 12:38:43 ghen Exp $
+# $NetBSD: Makefile,v 1.18 2008/05/16 09:06:03 ghen Exp $
 
 DISTNAME=		wmii-3.6
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		wm
 MASTER_SITES=		http://www.suckless.org/download/
 
@@ -9,7 +9,7 @@ MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://wmii.suckless.org/
 COMMENT=		Modular and keyboard-friendly window manager
 
-DEPENDS+=		dmenu>=3.4:../../x11/dmenu
+DEPENDS+=		dmenu>=3.6:../../x11/dmenu
 
 NO_CONFIGURE=		yes
 
