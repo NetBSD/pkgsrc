@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/02/22 19:27:09 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/05/17 08:22:56 obache Exp $
 #
 
 DISTNAME=	smimemsg15
@@ -6,7 +6,7 @@ PKGNAME=	smimemsg-1.5
 CATEGORIES=	security
 MASTER_SITES=	http://mars.elcom.nitech.ac.jp/security/
 
-MAINTAINER=	tech-pkg@jp.NetBSD.org
+MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://mars.elcom.nitech.ac.jp/security/
 COMMENT=	Generate and read S/MIME messages
 
