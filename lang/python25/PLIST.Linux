@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST.Linux,v 1.1.1.1 2008/04/24 01:50:55 tnn Exp $
+@comment $NetBSD: PLIST.Linux,v 1.2 2008/05/17 22:46:34 tnn Exp $
 lib/python${PY_VER_SUFFIX}/lib-dynload/linuxaudiodev.so
+lib/python${PY_VER_SUFFIX}/lib-dynload/spwd.so
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.py
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.pyc
 lib/python${PY_VER_SUFFIX}/plat-${PY_PLATNAME}/CDROM.pyo
