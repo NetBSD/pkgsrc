@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7272 2008/05/17 02:38:21 obache Exp $
+$NetBSD: TODO,v 1.7273 2008/05/17 05:12:09 obache Exp $
 
 Suggested new packages
 ======================
@@ -1257,7 +1257,7 @@ Suggested package updates
 	o skype-2.0.0.43
 	o smalleiffel-0.90
 	o smalltalk-3.0.3
-	o smartmontools-5.38 [pkg/38573]
+	o smartmontools-5.38 [pkg/38573, see also pkg/38199,pkg/36982]
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.67
 	o smokeping-2.3.6
