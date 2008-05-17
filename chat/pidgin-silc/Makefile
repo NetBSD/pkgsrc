@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/04/05 02:41:05 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/17 23:46:46 tnn Exp $
 #
 
 PKGNAME=		pidgin-silc-${PIDGIN_VERSION}
@@ -7,10 +7,6 @@ COMMENT=		SILC plugin for the Pidgin instant messenger
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../chat/libpurple/Makefile.common"
-
-CONFIGURE_ARGS+=	--disable-gevolution
-CONFIGURE_ARGS+=	--disable-gtkui
-CONFIGURE_ARGS+=	--disable-consoleui
 
 USE_TOOLS+=		msgfmt
 
