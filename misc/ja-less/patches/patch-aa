@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2008/02/04 14:34:09 obache Exp $
+$NetBSD: patch-aa,v 1.3 2008/05/17 14:18:46 obache Exp $
 
---- Makefile.in.orig	2008-02-04 13:36:20.000000000 +0000
+--- Makefile.in.orig	2008-05-17 13:58:31.000000000 +0000
 +++ Makefile.in
 @@ -22,13 +22,13 @@ exec_prefix = @exec_prefix@
  
@@ -18,3 +18,27 @@ $NetBSD: patch-aa,v 1.2 2008/02/04 14:34:09 obache Exp $
  
  #### End of system configuration section. ####
  
+@@ -60,17 +60,17 @@ lessecho: lessecho.${O} version.${O}
+ ${OBJ}: ${srcdir}/less.h ${srcdir}/funcs.h ${srcdir}/multi.h defines.h 
+ 
+ install: all ${srcdir}/less.nro ${srcdir}/lesskey.nro installdirs
+-	${INSTALL_PROGRAM} less ${bindir}/${binprefix}less
+-	${INSTALL_PROGRAM} lesskey ${bindir}/${binprefix}lesskey
+-	${INSTALL_PROGRAM} lessecho ${bindir}/${binprefix}lessecho
+-	${INSTALL_DATA} ${srcdir}/less.nro ${mandir}/man${manext}/${manprefix}less.${manext}
+-	${INSTALL_DATA} ${srcdir}/lesskey.nro ${mandir}/man${manext}/${manprefix}lesskey.${manext}
++	${INSTALL_PROGRAM} less ${DESTDIR}${bindir}/${binprefix}less
++	${INSTALL_PROGRAM} lesskey ${DESTDIR}${bindir}/${binprefix}lesskey
++	${INSTALL_PROGRAM} lessecho ${DESTDIR}${bindir}/${binprefix}lessecho
++	${INSTALL_DATA} ${srcdir}/less.nro ${DESTDIR}${mandir}/man${manext}/${manprefix}less.${manext}
++	${INSTALL_DATA} ${srcdir}/lesskey.nro ${DESTDIR}${mandir}/man${manext}/${manprefix}lesskey.${manext}
+ 
+ install-strip:
+ 	${MAKE} INSTALL_PROGRAM='${INSTALL_PROGRAM} -s' install
+ 
+ installdirs: mkinstalldirs
+-	${srcdir}/mkinstalldirs ${bindir} ${mandir}/man${manext}
++	${srcdir}/mkinstalldirs ${DESTDIR}${bindir} ${DESTDIR}${mandir}/man${manext}
+ 
+ uninstall:
+ 	rm -f ${bindir}/${binprefix}less ${bindir}/${binprefix}lesskey ${bindir}/${binprefix}lessecho

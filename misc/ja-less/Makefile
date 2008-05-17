@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2008/02/04 14:34:09 obache Exp $
+# $NetBSD: Makefile,v 1.10 2008/05/17 14:18:45 obache Exp $
 
 DISTNAME=	less-382
 PKGNAME=	ja-${DISTNAME}.262
+PKGREVISION=	1
 CATEGORIES=	japanese misc
 MASTER_SITES=	${MASTER_SITE_GNU:=less/}
 
@@ -17,6 +18,16 @@ MAINTAINER=	komine@cc.meisei-u.ac.jp
 HOMEPAGE=	http://www25.big.jp/~jam/less/
 COMMENT=	Less + zcat + ISO-2022 - a pager similar to more and pg
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	yes
 
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+
+SUBST_CLASSES+=		cfgdir
+SUBST_STAGE.cfgdir=	post-configure
+SUBST_FILES.cfgdir=	less.nro lesskey.nro
+SUBST_SED.cfgdir=	-e 's|/usr/local/etc|${PKG_SYSCONFDIR}|'
+
+.include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
