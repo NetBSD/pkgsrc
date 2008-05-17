@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1076 2008/05/17 02:37:42 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1077 2008/05/17 10:35:05 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1838,3 +1838,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated wm/wmii to 3.6nb2 [ghen 2008-05-16]
 	Updated mail/dovecot-sieve to 1.0.3 [ghen 2008-05-16]
 	Updated www/ap2-suphp to 0.6.3 [obache 2008-05-17]
+	Updated graphics/blender to 2.45nb2 [tonnerre 2008-05-17]
