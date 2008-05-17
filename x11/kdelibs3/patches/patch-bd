@@ -1,8 +1,23 @@
-$NetBSD: patch-bd,v 1.12 2006/09/11 19:03:50 joerg Exp $
+$NetBSD: patch-bd,v 1.13 2008/05/17 02:28:17 markd Exp $
 
---- kio/kssl/kopenssl.cc.orig	2006-07-22 08:16:39.000000000 +0000
+--- kio/kssl/kopenssl.cc.orig	2006-07-22 20:16:39.000000000 +1200
 +++ kio/kssl/kopenssl.cc
-@@ -217,7 +217,7 @@ void KOpenSSLProxy::destroy() {
+@@ -96,9 +96,14 @@ static int  (*K_BIO_write) (BIO *b, cons
+ static int (*K_PEM_ASN1_write_bio) (int (*)(),const char *,BIO *,char *,
+                                    const EVP_CIPHER *,unsigned char *,int ,
+                                             pem_password_cb *, void *) = 0L;
++#if OPENSSL_VERSION_NUMBER < 0x00909000L
+ static ASN1_METHOD* (*K_X509_asn1_meth) (void) = 0L;
+ static int (*K_ASN1_i2d_fp)(int (*)(),FILE *,unsigned char *) = 0L;
+ static int (*K_i2d_ASN1_HEADER)(ASN1_HEADER *, unsigned char **) = 0L;
++#else
++static int (*K_ASN1_item_i2d_fp)(ASN1_ITEM *,FILE *,unsigned char *) = 0L;
++static ASN1_ITEM *K_NETSCAPE_X509_it = 0L;
++#endif
+ static int (*K_X509_print_fp)  (FILE *, X509*) = 0L;
+ static int (*K_i2d_PKCS12)  (PKCS12*, unsigned char**) = 0L;
+ static int (*K_i2d_PKCS12_fp)  (FILE *, PKCS12*) = 0L;
+@@ -217,7 +222,7 @@ void KOpenSSLProxy::destroy() {
    _me = 0L;
  }
  
@@ -11,7 +26,7 @@ $NetBSD: patch-bd,v 1.12 2006/09/11 19:03:50 joerg Exp $
  #include <qdir.h>
  #include <qstring.h>
  #include <qstringlist.h>
-@@ -240,10 +240,20 @@ static QString findMostRecentLib(QString
+@@ -240,10 +245,20 @@ static QString findMostRecentLib(QString
         for (QStringList::Iterator it = l.begin(); it != l.end(); ++it) {
                 QString numberpart = (*it).mid(s);
                 uint endmaj = numberpart.find('.');
@@ -35,7 +50,7 @@ $NetBSD: patch-bd,v 1.12 2006/09/11 19:03:50 joerg Exp $
                 if (!ok)
                         continue;
                 int min = numberpart.mid(endmaj+1).toInt(&ok);
-@@ -280,42 +290,23 @@ KConfig *cfg;
+@@ -280,42 +295,23 @@ KConfig *cfg;
  
     delete cfg;
  
@@ -84,7 +99,7 @@ $NetBSD: patch-bd,v 1.12 2006/09/11 19:03:50 joerg Exp $
  // FIXME: #define here for the various OS types to optimize
     libnamess
  	     #ifdef hpux
-@@ -355,6 +346,11 @@ KConfig *cfg;
+@@ -355,6 +351,11 @@ KConfig *cfg;
     for (QStringList::Iterator it = libpaths.begin();
                                it != libpaths.end();
                                ++it) {
@@ -96,7 +111,7 @@ $NetBSD: patch-bd,v 1.12 2006/09/11 19:03:50 joerg Exp $
        for (QStringList::Iterator shit = libnamesc.begin();
                                   shit != libnamesc.end();
                                   ++shit) {
-@@ -368,6 +364,7 @@ KConfig *cfg;
+@@ -368,6 +369,7 @@ KConfig *cfg;
              _cryptoLib = ll->globalLibrary(alib.latin1());
           if (_cryptoLib) break;
        }
@@ -104,7 +119,22 @@ $NetBSD: patch-bd,v 1.12 2006/09/11 19:03:50 joerg Exp $
        if (_cryptoLib) break;
     }
  
-@@ -497,16 +494,14 @@ KConfig *cfg;
+@@ -404,9 +406,14 @@ KConfig *cfg;
+       K_BIO_ctrl = (long (*) (BIO *,int,long,void *)) _cryptoLib->symbol("BIO_ctrl");
+       K_BIO_write = (int (*) (BIO *b, const void *data, int len)) _cryptoLib->symbol("BIO_write");
+       K_PEM_ASN1_write_bio = (int (*)(int (*)(), const char *,BIO*, char*, const EVP_CIPHER *, unsigned char *, int, pem_password_cb *, void *)) _cryptoLib->symbol("PEM_ASN1_write_bio");
++#if OPENSSL_VERSION_NUMBER < 0x00909000L
+       K_X509_asn1_meth = (ASN1_METHOD* (*)(void)) _cryptoLib->symbol("X509_asn1_meth");
+       K_ASN1_i2d_fp = (int (*)(int (*)(), FILE*, unsigned char *)) _cryptoLib->symbol("ASN1_i2d_fp");
+       K_i2d_ASN1_HEADER = (int (*)(ASN1_HEADER *, unsigned char **)) _cryptoLib->symbol("i2d_ASN1_HEADER");
++#else
++      K_ASN1_item_i2d_fp = (int (*)(ASN1_ITEM *, FILE*, unsigned char *)) _cryptoLib->symbol("ASN1_item_i2d_fp");
++      K_NETSCAPE_X509_it = (ASN1_ITEM *) _cryptoLib->symbol("NETSCAPE_X509_it");
++#endif
+       K_X509_print_fp = (int (*)(FILE*, X509*)) _cryptoLib->symbol("X509_print_fp");
+       K_i2d_PKCS12 = (int (*)(PKCS12*, unsigned char**)) _cryptoLib->symbol("i2d_PKCS12");
+       K_i2d_PKCS12_fp = (int (*)(FILE *, PKCS12*)) _cryptoLib->symbol("i2d_PKCS12_fp");
+@@ -497,16 +504,14 @@ KConfig *cfg;
  #endif
     }
  
@@ -126,7 +156,7 @@ $NetBSD: patch-bd,v 1.12 2006/09/11 19:03:50 joerg Exp $
        for (QStringList::Iterator shit = libnamess.begin();
                                   shit != libnamess.end();
                                   ++shit) {
-@@ -520,10 +515,10 @@ KConfig *cfg;
+@@ -520,10 +525,10 @@ KConfig *cfg;
           	_sslLib = ll->globalLibrary(alib.latin1());
           if (_sslLib) break;
        }
@@ -139,3 +169,26 @@ $NetBSD: patch-bd,v 1.12 2006/09/11 19:03:50 joerg Exp $
     if (_sslLib) {
  #ifdef KSSL_HAVE_SSL
        // stand back from your monitor and look at this.  it's fun! :)
+@@ -957,6 +962,8 @@ int KOpenSSLProxy::PEM_write_bio_X509(BI
+ }
+ 
+ 
++#if OPENSSL_VERSION_NUMBER < 0x00909000L
++
+ ASN1_METHOD *KOpenSSLProxy::X509_asn1_meth(void) {
+    if (K_X509_asn1_meth) return (K_X509_asn1_meth)();
+    else return 0L;
+@@ -968,6 +975,13 @@ int KOpenSSLProxy::ASN1_i2d_fp(FILE *out
+         return (K_ASN1_i2d_fp)((int (*)())K_i2d_ASN1_HEADER, out, x);
+    else return -1;
+ }
++#else
++int KOpenSSLProxy::ASN1_i2d_fp(FILE *out,unsigned char *x) {
++   if (K_ASN1_item_i2d_fp && K_NETSCAPE_X509_it)
++        return (K_ASN1_item_i2d_fp)(K_NETSCAPE_X509_it, out, x);
++   else return -1;
++}
++#endif
+ 
+ 
+ int KOpenSSLProxy::X509_print(FILE *fp, X509 *x) {
