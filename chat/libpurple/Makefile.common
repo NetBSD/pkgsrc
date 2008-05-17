@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2008/05/17 22:56:17 tnn Exp $
+# $NetBSD: Makefile.common,v 1.16 2008/05/17 23:26:06 tnn Exp $
 #
 # used by chat/finch/Makefile
 # used by chat/libpurple/Makefile
@@ -27,3 +27,10 @@ CONFIGURE_ARGS+=	--disable-consoleui
 CONFIGURE_ARGS+=	--disable-meanwhile
 CONFIGURE_ARGS+=	--disable-gstreamer
 CONFIGURE_ARGS+=	--disable-avahi
+CONFIGURE_ARGS+=	--disable-perl
+CONFIGURE_ARGS+=	--disable-tcl
+CONFIGURE_ARGS+=	--disable-gnutls
+CONFIGURE_ARGS+=	--disable-nss
+CONFIGURE_ARGS+=	--disable-dbus
+CONFIGURE_ARGS+=	--disable-cyrus-sasl
+CONFIGURE_ARGS+=	--disable-debug
