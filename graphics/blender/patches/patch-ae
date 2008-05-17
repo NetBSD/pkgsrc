@@ -1,0 +1,19 @@
+$NetBSD: patch-ae,v 1.7 2008/05/17 10:33:15 tonnerre Exp $
+
+--- source/blender/src/usiblender.c.orig	2007-09-18 04:58:42.000000000 +0000
++++ source/blender/src/usiblender.c
+@@ -172,10 +172,12 @@ static void init_userdef_file(void)
+ 		U.tb_rightmouse= 5;
+ 	}
+ 	if(U.mixbufsize==0) U.mixbufsize= 2048;
+-	if (BLI_streq(U.tempdir, "/")) {
++	if (BLI_streq(U.tempdir, "/") || BLI_streq(U.tempdir, "/tmp/")) {
+ 		char *tmp= getenv("TEMP");
++		char *home= getenv("HOME");
+ 		
+-		strcpy(U.tempdir, tmp?tmp:"/tmp/");
++		strcpy(U.tempdir, tmp?tmp:home);
++		if (!tmp) strcat(U.tempdir, "/.blender/");
+ 	}
+ 	if (U.savetime <= 0) {
+ 		U.savetime = 1;
