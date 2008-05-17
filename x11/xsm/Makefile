@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/17 20:51:31 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/17 20:52:13 tnn Exp $
 #
 
 DISTNAME=		xsm-1.0.1
@@ -17,8 +17,6 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
 CONFIGURE_ENV+=		APP_MAN_SUFFIX=1
-
-.include "../../mk/bsd.prefs.mk"
 
 # Most modern Linuxen don't come with rcmds by default,
 # so just pretend to have them to keep configure happy.
