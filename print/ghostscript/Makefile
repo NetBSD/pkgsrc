@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2008/03/10 12:34:10 wiz Exp $
+# $NetBSD: Makefile,v 1.48 2008/05/17 20:57:29 tnn Exp $
 
 DISTNAME=	ghostscript-8.62
 PKGREVISION=	2
@@ -43,6 +43,12 @@ SUBST_SED.resdir=	-e "s|/Resource/|${GS_RESOURCEDIR}/|g"
 
 .if ${OPSYS} == "HPUX"
 CONFIGURE_ENV+=		ac_cv_func_fopen64=no
+.endif
+
+# Interim IRIX build fix, the real problem is that fontconfig.pc doesn't
+# require linking against libiconv when it should do so.
+.if ${OPSYS} == "IRIX"
+BUILDLINK_TRANSFORM+=	l:fontconfig:fontconfig:iconv
 .endif
 
 post-extract:
