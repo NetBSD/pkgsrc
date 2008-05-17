@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/02/22 19:27:06 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/05/17 08:22:56 obache Exp $
 #
 
 DISTNAME=	AiSSLtelnet-0.15
@@ -6,7 +6,7 @@ PKGREVISION=	1
 CATEGORIES=	security
 MASTER_SITES=	http://mars.elcom.nitech.ac.jp/security/
 
-MAINTAINER=	tech-pkg@jp.NetBSD.org
+MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://mars.elcom.nitech.ac.jp/security/
 COMMENT=	SSL Telnet based on AiSSL
 
