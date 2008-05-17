@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1079 2008/05/17 14:19:00 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1080 2008/05/17 20:35:40 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1841,3 +1841,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/blender to 2.45nb2 [tonnerre 2008-05-17]
 	Updated sysutils/smartmontools to 5.38 [obache 2008-05-17]
 	Updated misc/ja-less to 382.262nb1 [obache 2008-05-17]
+	Updated x11/xrandr to 1.2.3 [tnn 2008-05-17]
