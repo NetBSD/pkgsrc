@@ -1,15 +1,16 @@
-# $NetBSD: Makefile,v 1.13 2008/03/04 11:02:26 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2008/05/17 02:37:24 obache Exp $
 #
 
-DISTNAME=		suphp-0.6.0
+DISTNAME=		suphp-0.6.3
 PKGNAME=		${APACHE_PKG_PREFIX}-${DISTNAME}
-PKGREVISION=		3
 CATEGORIES=		www
 MASTER_SITES=		http://www.suphp.org/download/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.suphp.org/
 COMMENT=		SuEXEC-like wrapper for PHP scripts
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		lex
 USE_PKGLOCALEDIR=	yes
@@ -34,10 +35,12 @@ SUBST_CLASSES+=		suphp
 SUBST_STAGE.suphp=	post-configure
 SUBST_FILES.suphp=	doc/suphp.conf-example
 SUBST_SED.suphp=	-e "s,wwwrun,${APACHE_USER},g"
+SUBST_SED.suphp+=	-e "s,/var/log/suphp.log,${VARBASE}/httpd/suphp_log,g"
+SUBST_SED.suphp+=	-e "s,/usr/bin/php,${PREFIX}/bin/php,g"
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR:Q}
-	${INSTALL_DATA} ${WRKSRC}/doc/suphp.conf-example ${EGDIR}/suphp.conf
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR:Q}
+	${INSTALL_DATA} ${WRKSRC}/doc/suphp.conf-example ${DESTDIR}${EGDIR}/suphp.conf
 
 .include "../../mk/apache.mk"
 .include "../../mk/bsd.pkg.mk"
