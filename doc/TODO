@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7271 2008/05/16 22:13:05 wiz Exp $
+$NetBSD: TODO,v 1.7272 2008/05/17 02:38:21 obache Exp $
 
 Suggested new packages
 ======================
@@ -438,7 +438,6 @@ Suggested package updates
 	o ap2-auth-ldap-3.11
 	o ap2-chroot-0.5
 	o ap2-python-3.3.1
-	o ap2-suphp-0.6.2
 	o ap2-transform-0.6.0
 	o apache-ant15-1.7.0
 	o apache-tomcat55-6.0.14
