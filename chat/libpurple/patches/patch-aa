@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2007/09/30 13:47:03 tnn Exp $
+$NetBSD: patch-aa,v 1.8 2008/05/17 22:56:17 tnn Exp $
 
---- configure.orig	2007-09-29 18:40:51.000000000 +0200
+--- configure.orig	2008-05-16 20:53:50.000000000 +0200
 +++ configure
-@@ -19940,6 +19940,11 @@ INTLTOOL_SOUNDLIST_RULE='%.soundlist: %.
+@@ -20047,6 +20047,11 @@ INTLTOOL_SOUNDLIST_RULE='%.soundlist: %.
  
  
  
@@ -14,24 +14,42 @@ $NetBSD: patch-aa,v 1.7 2007/09/30 13:47:03 tnn Exp $
  # Use the tools built into the package, not the ones that are installed.
  INTLTOOL_EXTRACT='$(top_builddir)/intltool-extract'
  
-@@ -20173,6 +20178,7 @@ else
-   { echo "$as_me:$LINENO: result: no" >&5
- echo "${ECHO_T}no" >&6; }
+@@ -20117,6 +20122,7 @@ echo "$as_me: error: XML::Parser perl mo
+    { (exit 1); exit 1; }; }
+    fi
  fi
 +fi # pkgsrc
  
+ # Substitute ALL_LINGUAS so we can use it in po/Makefile
  
- 
-@@ -28484,7 +28490,7 @@ if test "${ac_cv_lib_panel_update_panels
+@@ -28293,7 +28299,7 @@ if test "${ac_cv_lib_panelw_update_panel
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
+   ac_check_lib_save_LIBS=$LIBS
+-LIBS="-lpanelw  $LIBS"
++LIBS="-lpanelw -lncursesw $LIBS"
+ cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -28349,7 +28355,7 @@ fi
+ { echo "$as_me:$LINENO: result: $ac_cv_lib_panelw_update_panels" >&5
+ echo "${ECHO_T}$ac_cv_lib_panelw_update_panels" >&6; }
+ if test $ac_cv_lib_panelw_update_panels = yes; then
+-  GNT_LIBS="$GNT_LIBS -lpanelw"
++  GNT_LIBS="$GNT_LIBS -lpanelw -lncursesw"
+ else
+   enable_consoleui=no
+ fi
+@@ -28647,7 +28653,7 @@ if test "${ac_cv_lib_panel_update_panels
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lpanel  $LIBS"
-+LIBS="-lpanel -lncurses  $LIBS"
++LIBS="-lpanel -lncurses $LIBS"
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -28540,7 +28546,7 @@ fi
+@@ -28703,7 +28709,7 @@ fi
  { echo "$as_me:$LINENO: result: $ac_cv_lib_panel_update_panels" >&5
  echo "${ECHO_T}$ac_cv_lib_panel_update_panels" >&6; }
  if test $ac_cv_lib_panel_update_panels = yes; then
