@@ -1,4 +1,4 @@
-# $NetBSD: tools.Linux.mk,v 1.43 2008/04/04 15:49:18 tnn Exp $
+# $NetBSD: tools.Linux.mk,v 1.44 2008/05/17 18:34:50 tnn Exp $
 #
 # System-supplied tools for the Linux operating system.
 
@@ -170,7 +170,9 @@ TOOLS_PLATFORM.nroff?=		/usr/bin/nroff
 .if exists(/usr/bin/openssl)
 TOOLS_PLATFORM.openssl?=	/usr/bin/openssl
 .endif
+.if exists(/usr/bin/patch)
 TOOLS_PLATFORM.patch?=		/usr/bin/patch
+.endif
 .if exists(/usr/bin/printf)
 TOOLS_PLATFORM.printf?=		/usr/bin/printf
 .endif
