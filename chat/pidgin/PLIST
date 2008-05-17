@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/04/29 12:35:10 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/05/17 23:45:47 tnn Exp $
 bin/pidgin
 include/pidgin/eggtrayicon.h
 include/pidgin/gtkaccount.h
@@ -61,6 +61,7 @@ ${PLIST.dbus}lib/pidgin/musicmessaging.la
 lib/pidgin/notify.la
 lib/pidgin/pidginrc.la
 lib/pidgin/relnot.la
+lib/pidgin/sendbutton.la
 lib/pidgin/spellchk.la
 lib/pidgin/ticker.la
 lib/pidgin/timestamp.la
@@ -430,6 +431,8 @@ share/pixmaps/pidgin/status/48/log-out.png
 share/pixmaps/pidgin/status/48/offline.png
 share/pixmaps/pidgin/status/48/person.png
 share/pixmaps/pidgin/status/48/rtl/extended-away.png
+share/pixmaps/pidgin/status/48/rtl/login.png
+share/pixmaps/pidgin/status/48/rtl/logout.png
 share/pixmaps/pidgin/toolbar/16/change-bgcolor.png
 share/pixmaps/pidgin/toolbar/16/change-fgcolor.png
 share/pixmaps/pidgin/toolbar/16/emote-select.png

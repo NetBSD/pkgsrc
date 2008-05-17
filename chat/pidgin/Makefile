@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2008/04/29 12:35:10 jmmv Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/17 23:45:47 tnn Exp $
 #
 
 PKGNAME=		pidgin-${PIDGIN_VERSION}
 COMMENT=		Multi-protocol Instant Messaging client GTK frontend
-PKGREVISION=		2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -16,9 +15,7 @@ PKGCONFIG_OVERRIDE+=	gaim.pc.in
 PKGCONFIG_OVERRIDE+=	libpurple/purple.pc.in
 PKGCONFIG_OVERRIDE+=	pidgin/pidgin.pc.in
 
-CONFIGURE_ARGS+=	--disable-gevolution
 CONFIGURE_ARGS+=	--enable-gtkui
-CONFIGURE_ARGS+=	--disable-consoleui
 
 BUILD_DIRS=		pidgin
 
