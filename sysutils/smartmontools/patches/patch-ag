@@ -1,0 +1,20 @@
+$NetBSD: patch-ag,v 1.1 2008/05/17 13:07:54 obache Exp $
+
+Avoid special man page section handling for Solaris (PR 38199).
+
+--- configure.orig	2008-03-10 10:44:14.000000000 +0000
++++ configure
+@@ -8141,13 +8141,8 @@ else
+   OS_DARWIN_FALSE=
+ fi
+ 
+- if echo $host_os | grep '^solaris' > /dev/null; then
+-  OS_SOLARIS_TRUE=
+-  OS_SOLARIS_FALSE='#'
+-else
+   OS_SOLARIS_TRUE='#'
+   OS_SOLARIS_FALSE=
+-fi
+ 
+  if echo $host_os | grep '^mingw' > /dev/null; then
+   OS_WIN32_MINGW_TRUE=
