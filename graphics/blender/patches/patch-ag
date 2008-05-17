@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.6 2008/05/17 10:33:15 tonnerre Exp $
+
+--- source/blender/imbuf/intern/radiance_hdr.c.orig	2007-09-18 04:58:45.000000000 +0000
++++ source/blender/imbuf/intern/radiance_hdr.c
+@@ -191,7 +191,8 @@ struct ImBuf *imb_loadhdr(unsigned char 
+ 			}
+ 		}
+ 		if (found) {
+-			sscanf((char*)&mem[x+1], "%s %d %s %d", (char*)&oriY, &height, (char*)&oriX, &width);
++			if (sscanf((char *)&mem[x+1], "%79s %d %79s %d", (char*)&oriY, &height,
++				(char*)&oriX, &width) != 4) return NULL;
+ 
+ 			/* find end of this line, data right behind it */
+ 			ptr = (unsigned char *)strchr((char*)&mem[x+1], '\n');
