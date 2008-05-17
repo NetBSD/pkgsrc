@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1080 2008/05/17 20:35:40 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.1081 2008/05/17 21:53:23 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1842,3 +1842,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/smartmontools to 5.38 [obache 2008-05-17]
 	Updated misc/ja-less to 382.262nb1 [obache 2008-05-17]
 	Updated x11/xrandr to 1.2.3 [tnn 2008-05-17]
+	Updated x11/xf86-video-vmware to 10.16.1 [tnn 2008-05-17]
