@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/04/29 10:55:02 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/05/17 22:56:17 tnn Exp $
 include/libpurple/account.h
 include/libpurple/accountopt.h
 include/libpurple/blist.h
@@ -125,6 +125,7 @@ share/locale/nb/LC_MESSAGES/pidgin.mo
 share/locale/ne/LC_MESSAGES/pidgin.mo
 share/locale/nl/LC_MESSAGES/pidgin.mo
 share/locale/nn/LC_MESSAGES/pidgin.mo
+share/locale/oc/LC_MESSAGES/pidgin.mo
 share/locale/pa/LC_MESSAGES/pidgin.mo
 share/locale/pl/LC_MESSAGES/pidgin.mo
 share/locale/ps/LC_MESSAGES/pidgin.mo
