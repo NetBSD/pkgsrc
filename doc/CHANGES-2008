@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1081 2008/05/17 21:53:23 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.1082 2008/05/17 22:12:14 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1843,3 +1843,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/ja-less to 382.262nb1 [obache 2008-05-17]
 	Updated x11/xrandr to 1.2.3 [tnn 2008-05-17]
 	Updated x11/xf86-video-vmware to 10.16.1 [tnn 2008-05-17]
+	Added x11/xf86-input-vmmouse version 12.5.0 [tnn 2008-05-17]
+	Updated meta-pkgs/modular-xorg-drivers to 1.2 [tnn 2008-05-17]
