@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2008/01/29 13:58:35 abs Exp $
+# $NetBSD: Makefile,v 1.9 2008/05/17 22:10:11 tnn Exp $
 
 DISTNAME=	# empty
-PKGNAME=	modular-xorg-drivers-1.1
-PKGREVISION=	2
+PKGNAME=	modular-xorg-drivers-1.2
 CATEGORIES=	meta-pkgs drivers x11
 MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/drivers
 DISTFILES=	# empty
@@ -15,6 +14,7 @@ COMMENT=	Modular Xorg driver meta-package
 
 DEPENDS+=	xf86-input-keyboard-[0-9]*:../../x11/xf86-input-keyboard
 DEPENDS+=	xf86-input-mouse-[0-9]*:../../x11/xf86-input-mouse
+DEPENDS+=	xf86-input-vmmouse-[0-9]*:../../x11/xf86-input-vmmouse
 DEPENDS+=	xf86-input-void-[0-9]*:../../x11/xf86-input-void
 DEPENDS+=	xf86-video-apm-[0-9]*:../../x11/xf86-video-apm
 DEPENDS+=	xf86-video-ark-[0-9]*:../../x11/xf86-video-ark
