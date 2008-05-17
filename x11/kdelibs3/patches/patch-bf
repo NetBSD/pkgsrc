@@ -1,0 +1,36 @@
+$NetBSD: patch-bf,v 1.4 2008/05/17 02:28:17 markd Exp $
+
+--- kio/kssl/ksslcertificate.cc.orig	2006-01-20 06:06:12.000000000 +1300
++++ kio/kssl/ksslcertificate.cc
+@@ -1003,10 +1003,16 @@ return qba;
+ QByteArray KSSLCertificate::toNetscape() {
+ QByteArray qba;
+ #ifdef KSSL_HAVE_SSL
++#if OPENSSL_VERSION_NUMBER < 0x00909000L
+ ASN1_HEADER ah;
+ ASN1_OCTET_STRING os;
++#else
++NETSCAPE_X509 nx;
++ASN1_OCTET_STRING hdr;
++#endif
+ KTempFile ktf;
+ 
++#if OPENSSL_VERSION_NUMBER < 0x00909000L
+ 	os.data = (unsigned char *)NETSCAPE_CERT_HDR;
+ 	os.length = strlen(NETSCAPE_CERT_HDR);
+ 	ah.header = &os;
+@@ -1014,6 +1020,14 @@ KTempFile ktf;
+ 	ah.meth = d->kossl->X509_asn1_meth();
+ 
+ 	d->kossl->ASN1_i2d_fp(ktf.fstream(),(unsigned char *)&ah);
++#else
++	hdr.data = (unsigned char *)NETSCAPE_CERT_HDR;
++	hdr.length = strlen(NETSCAPE_CERT_HDR);
++	nx.header = &hdr;
++	nx.cert = getCert();
++
++	d->kossl->ASN1_i2d_fp(ktf.fstream(),(unsigned char *)&nx);
++#endif
+ 
+ 	ktf.close();
+ 

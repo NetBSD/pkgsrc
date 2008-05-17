@@ -1,0 +1,17 @@
+$NetBSD: patch-be,v 1.6 2008/05/17 02:28:17 markd Exp $
+
+--- kio/kssl/kopenssl.h.orig	2006-07-22 20:16:39.000000000 +1200
++++ kio/kssl/kopenssl.h
+@@ -447,10 +447,12 @@ public:
+    int PEM_write_bio_X509(BIO *bp, X509 *x);
+ 
+ 
++#if OPENSSL_VERSION_NUMBER < 0x00909000L
+    /*
+     *   X509_asn1_meth - used for netscape output
+     */
+    ASN1_METHOD *X509_asn1_meth();
++#endif
+ 
+ 
+    /*
