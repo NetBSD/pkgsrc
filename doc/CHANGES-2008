@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1075 2008/05/16 19:51:36 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.1076 2008/05/17 02:37:42 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1837,3 +1837,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/gnuls to 6.11 [tnn 2008-05-15]
 	Updated wm/wmii to 3.6nb2 [ghen 2008-05-16]
 	Updated mail/dovecot-sieve to 1.0.3 [ghen 2008-05-16]
+	Updated www/ap2-suphp to 0.6.3 [obache 2008-05-17]
