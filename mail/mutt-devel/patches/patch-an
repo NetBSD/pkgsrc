@@ -1,4 +1,6 @@
-$NetBSD: patch-an,v 1.1 2007/12/06 08:51:51 cjs Exp $
+$NetBSD: patch-an,v 1.2 2008/05/18 08:26:31 tonio Exp $
+
+Add change_folder_next option.
 
 --- init.h.orig	2007-11-01 02:48:52.000000000 +0900
 +++ init.h	2007-12-06 17:35:34.000000000 +0900
