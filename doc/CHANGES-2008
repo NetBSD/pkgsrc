@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1082 2008/05/17 22:12:14 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.1083 2008/05/18 00:09:46 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1845,3 +1845,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xf86-video-vmware to 10.16.1 [tnn 2008-05-17]
 	Added x11/xf86-input-vmmouse version 12.5.0 [tnn 2008-05-17]
 	Updated meta-pkgs/modular-xorg-drivers to 1.2 [tnn 2008-05-17]
+	Updated chat/libpurple to 2.4.2 [tnn 2008-05-18]
+	Updated chat/pidgin to 2.4.2 [tnn 2008-05-18]
+	Updated chat/pidgin-sametime to 2.4.2 [tnn 2008-05-18]
+	Updated chat/pidgin-silc to 2.4.2 [tnn 2008-05-18]
+	Updated chat/finch to 2.4.2 [tnn 2008-05-18]
