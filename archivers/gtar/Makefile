@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.33 2007/10/25 22:00:39 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2008/05/18 01:48:58 tnn Exp $
 
-DISTNAME=	gtar-1.15.1
-PKGREVISION=	1
+DISTNAME=	gtar-1.20
 CATEGORIES=	archivers
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,8 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/tar/tar.html
 COMMENT=	The "meta-package" for the GNU tape archiver (tar)
 
-DEPENDS+=	gtar-base-1.15.1{,nb*}:../../archivers/gtar-base
-DEPENDS+=	gtar-info-1.15.1{,nb*}:../../archivers/gtar-info
+DEPENDS+=	gtar-base-1.20{,nb*}:../../archivers/gtar-base
+DEPENDS+=	gtar-info-1.20{,nb*}:../../archivers/gtar-info
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
