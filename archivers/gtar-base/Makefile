@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2008/04/12 22:42:57 jlam Exp $
+# $NetBSD: Makefile,v 1.63 2008/05/18 01:48:09 tnn Exp $
 
-DISTNAME=	tar-1.15.1
-PKGNAME=	gtar-base-1.15.1
-PKGREVISION=	6
+DISTNAME=	tar-1.20
+PKGNAME=	gtar-base-1.20
 SVR4_PKGNAME=	gtarb
 CATEGORIES=	archivers
 MASTER_SITES=	${MASTER_SITE_GNU:=tar/}
@@ -54,6 +53,11 @@ PLIST.gtar=		yes
 # don't include rmt if gtar won't build it
 .if ${OPSYS} != "Interix"
 PLIST.rmt=		yes
+.endif
+
+# XXX see similar hack in coreutils.
+.if ${OPSYS} != "Linux"
+CONFIGURE_ENV+=		gt_cv_func_gnugettext3_libintl=yes
 .endif
 
 post-install:
