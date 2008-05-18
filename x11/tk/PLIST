@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/05/31 13:02:06 adam Exp $
+@comment $NetBSD: PLIST,v 1.9.8.1 2008/05/18 15:46:13 spz Exp $
 bin/wish
 bin/wish8.4
 include/tk.h
@@ -132,6 +132,7 @@ lib/tk8.4/msgs/en_gb.msg
 lib/tk8.4/msgs/eo.msg
 lib/tk8.4/msgs/es.msg
 lib/tk8.4/msgs/fr.msg
+lib/tk8.4/msgs/hu.msg
 lib/tk8.4/msgs/it.msg
 lib/tk8.4/msgs/nl.msg
 lib/tk8.4/msgs/pl.msg
