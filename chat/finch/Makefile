@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/03/04 17:48:50 tnn Exp $
+# $NetBSD: Makefile,v 1.13 2008/05/18 00:06:46 tnn Exp $
 #
 
 PKGNAME=	finch-${PIDGIN_VERSION}
@@ -17,12 +17,8 @@ PKGCONFIG_OVERRIDE+=	gaim.pc.in
 PKGCONFIG_OVERRIDE+=	libpurple/purple.pc.in
 PKGCONFIG_OVERRIDE+=	pidgin/pidgin.pc.in
 
-CONFIGURE_ARGS+=	--disable-gevolution
-CONFIGURE_ARGS+=	--disable-gtkui
 CONFIGURE_ARGS+=	--enable-consoleui
 
-CONFIGURE_ARGS+=	--disable-gnutls
-CONFIGURE_ARGS+=	--disable-nss
 #CONFIGURE_ARGS+=	--disable-plugins
 
 # The configure script uses an incredibly stupid way to detect if the
