@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST,v 1.12 2008/04/12 22:42:57 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/05/18 01:48:09 tnn Exp $
 bin/${GTAR_PROGRAM_PREFIX}tar
 ${PLIST.gtar}bin/gtar
 ${PLIST.rmt}libexec/${GTAR_PROGRAM_PREFIX}rmt
 man/man1/${GTAR_PROGRAM_PREFIX}tar.1
+share/locale/bg/LC_MESSAGES/tar.mo
 share/locale/cs/LC_MESSAGES/tar.mo
 share/locale/da/LC_MESSAGES/tar.mo
 share/locale/de/LC_MESSAGES/tar.mo
 share/locale/el/LC_MESSAGES/tar.mo
 share/locale/es/LC_MESSAGES/tar.mo
 share/locale/et/LC_MESSAGES/tar.mo
+share/locale/eu/LC_MESSAGES/tar.mo
 share/locale/fi/LC_MESSAGES/tar.mo
 share/locale/fr/LC_MESSAGES/tar.mo
 share/locale/ga/LC_MESSAGES/tar.mo
@@ -19,10 +21,10 @@ share/locale/id/LC_MESSAGES/tar.mo
 share/locale/it/LC_MESSAGES/tar.mo
 share/locale/ja/LC_MESSAGES/tar.mo
 share/locale/ko/LC_MESSAGES/tar.mo
+share/locale/ky/LC_MESSAGES/tar.mo
 share/locale/ms/LC_MESSAGES/tar.mo
 share/locale/nb/LC_MESSAGES/tar.mo
 share/locale/nl/LC_MESSAGES/tar.mo
-share/locale/no/LC_MESSAGES/tar.mo
 share/locale/pl/LC_MESSAGES/tar.mo
 share/locale/pt/LC_MESSAGES/tar.mo
 share/locale/pt_BR/LC_MESSAGES/tar.mo
@@ -32,5 +34,7 @@ share/locale/sk/LC_MESSAGES/tar.mo
 share/locale/sl/LC_MESSAGES/tar.mo
 share/locale/sv/LC_MESSAGES/tar.mo
 share/locale/tr/LC_MESSAGES/tar.mo
+share/locale/uk/LC_MESSAGES/tar.mo
+share/locale/vi/LC_MESSAGES/tar.mo
 share/locale/zh_CN/LC_MESSAGES/tar.mo
 share/locale/zh_TW/LC_MESSAGES/tar.mo
