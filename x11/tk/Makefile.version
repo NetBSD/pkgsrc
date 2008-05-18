@@ -1,3 +1,3 @@
-# $NetBSD: Makefile.version,v 1.7 2007/10/13 11:41:33 adam Exp $
+# $NetBSD: Makefile.version,v 1.7.4.1 2008/05/18 15:46:13 spz Exp $
 
-TK_VERSION=	8.4.16
+TK_VERSION=	8.4.18
