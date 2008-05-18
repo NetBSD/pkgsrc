@@ -1,0 +1,16 @@
+$NetBSD: patch-ge,v 1.3 2008/05/18 12:19:01 markd Exp $
+
+--- kcontrol/crypto/crypto.cpp.orig	2006-10-02 06:31:49.000000000 +1300
++++ kcontrol/crypto/crypto.cpp
+@@ -2321,7 +2321,11 @@ bool KCryptoConfig::loadCiphers() {
+ unsigned int i;
+ SSL_CTX *ctx;
+ SSL *ssl;
++#if OPENSSL_VERSION_NUMBER < 0x00909000L
+ SSL_METHOD *meth;
++#else
++const SSL_METHOD *meth;
++#endif
+ 
+   SSLv2Box->clear();
+   SSLv3Box->clear();
