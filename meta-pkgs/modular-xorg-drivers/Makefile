@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/05/17 22:10:11 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2008/05/18 03:10:07 tnn Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.2
@@ -14,7 +14,9 @@ COMMENT=	Modular Xorg driver meta-package
 
 DEPENDS+=	xf86-input-keyboard-[0-9]*:../../x11/xf86-input-keyboard
 DEPENDS+=	xf86-input-mouse-[0-9]*:../../x11/xf86-input-mouse
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 DEPENDS+=	xf86-input-vmmouse-[0-9]*:../../x11/xf86-input-vmmouse
+.endif
 DEPENDS+=	xf86-input-void-[0-9]*:../../x11/xf86-input-void
 DEPENDS+=	xf86-video-apm-[0-9]*:../../x11/xf86-video-apm
 DEPENDS+=	xf86-video-ark-[0-9]*:../../x11/xf86-video-ark
@@ -46,7 +48,9 @@ DEPENDS+=	xf86-video-tseng-[0-9]*:../../x11/xf86-video-tseng
 DEPENDS+=	xf86-video-vesa-[0-9]*:../../x11/xf86-video-vesa
 DEPENDS+=	xf86-video-vga-[0-9]*:../../x11/xf86-video-vga
 DEPENDS+=	xf86-video-via-[0-9]*:../../x11/xf86-video-via
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
 DEPENDS+=	xf86-video-vmware-[0-9]*:../../x11/xf86-video-vmware
+.endif
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
 DEPENDS+=	xf86-video-wsfb-[0-9]*:../../x11/xf86-video-wsfb
 .endif
