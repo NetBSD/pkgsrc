@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.67 2008/04/12 22:43:03 jlam Exp $
+# $NetBSD: Makefile,v 1.68 2008/05/18 08:26:30 tonio Exp $
 
-DISTNAME=		mutt-1.5.17
-PKGREVISION=		5
+DISTNAME=		mutt-1.5.18
 CATEGORIES=		mail
 MUTT_SITES=		ftp://ftp.mutt.org/mutt/ \
 			ftp://ftp.stealth.net/pub/mirrors/ftp.mutt.org/pub/mutt/ \
@@ -35,7 +34,7 @@ MAKE_ENV+=		CHGRP=${CHGRP:Q} CHMOD=${CHMOD:Q}
 # support mailwrapper.
 CONFIGURE_ENV+=		SENDMAIL=/usr/sbin/sendmail
 .endif
- 
+
 .if (${OPSYS} == "SunOS")
 CONFIGURE_ARGS+=	--without-wc-funcs
 .endif
@@ -55,7 +54,7 @@ DOCDIR=			${PREFIX}/share/doc/mutt
 EGDIR=			${PREFIX}/share/examples/mutt
 CONF_FILES=		${EGDIR}/Muttrc ${PKG_SYSCONFDIR}/Muttrc
 CONF_FILES+=		${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
-FILES_SUBST+=		DOCDIR=${DOCDIR:Q}
+FILES_SUBST+=		DOCDIR=${DOCDIR}
 INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
 
 # Define WRKSRC explicitly so we can use its value below.
