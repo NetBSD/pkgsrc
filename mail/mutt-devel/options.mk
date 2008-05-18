@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.30 2008/04/26 11:11:15 tonio Exp $
+# $NetBSD: options.mk,v 1.31 2008/05/18 08:26:30 tonio Exp $
 
 # Global and legacy options
 
@@ -6,7 +6,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.mutt
 PKG_OPTIONS_REQUIRED_GROUPS=	display
 PKG_OPTIONS_GROUP.display=	slang ncurses ncursesw curses
 PKG_SUPPORTED_OPTIONS=	debug gpgme idn ssl smime sasl
-PKG_SUPPORTED_OPTIONS+=	mutt-compressed-mbox mutt-hcache mutt-smtp mutt-xlabel
+PKG_SUPPORTED_OPTIONS+=	mutt-hcache mutt-smtp mutt-xlabel
 PKG_SUGGESTED_OPTIONS=	ssl smime curses
 
 .include "../../mk/bsd.options.mk"
@@ -101,10 +101,10 @@ CONFIGURE_ARGS+=	--disable-hcache
 ### Compressed mail boxes
 ###
 .if !empty(PKG_OPTIONS:Mmutt-compressed-mbox)
-PATCH_SITES=           http://www.spinnaker.de/mutt/compressed/
-PATCHFILES+=           patch-${PKGVERSION_NOREV}.rr.compressed.1.gz
-PATCH_DIST_STRIP=      -p1
-CONFIGURE_ARGS+=       --enable-compressed
+PATCH_SITES=		http://www.spinnaker.de/mutt/compressed/
+PATCHFILES+=		patch-${PKGVERSION_NOREV}.rr.compressed.1.gz
+PATCH_DIST_STRIP=	-p1
+CONFIGURE_ARGS+=	--enable-compressed
 .endif
 
 ###
