@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/04/16 16:45:23 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/18 13:38:51 obache Exp $
 #
 
 DISTNAME=	libgweather-2.22.1.2
@@ -12,7 +12,7 @@ COMMENT=	Weather information access library
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool gmake
+USE_TOOLS+=	pkg-config intltool gmake msgfmt
 
 GCONF_SCHEMAS+=	gweather.schemas
 PKGCONFIG_OVERRIDE+=	libgweather/gweather.pc.in
