@@ -1,9 +1,9 @@
-$NetBSD: patch-ad,v 1.7 2005/01/09 22:52:14 recht Exp $
+$NetBSD: patch-ad,v 1.8 2008/05/18 01:48:09 tnn Exp $
 
---- Makefile.in.orig	Mon Dec 20 12:06:01 2004
-+++ Makefile.in	Sun Jan  9 19:30:11 2005
-@@ -247,7 +247,7 @@
- target_alias = @target_alias@
+--- Makefile.in.orig	2008-04-14 14:04:01.000000000 +0200
++++ Makefile.in
+@@ -532,7 +532,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
  ACLOCAL_AMFLAGS = -I m4
  EXTRA_DIST = ChangeLog.1 PORTS
 -SUBDIRS = doc lib rmt src scripts po tests

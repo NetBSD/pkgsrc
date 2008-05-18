@@ -1,9 +1,9 @@
-$NetBSD: patch-ae,v 1.7 2005/01/09 22:52:14 recht Exp $
+$NetBSD: patch-ae,v 1.8 2008/05/18 01:48:09 tnn Exp $
 
---- lib/Makefile.in.orig	Sun Jan  9 18:41:01 2005
-+++ lib/Makefile.in	Sun Jan  9 18:42:35 2005
-@@ -668,7 +668,6 @@
- all-am: Makefile $(LIBRARIES) $(HEADERS) all-local
+--- lib/Makefile.in.orig	2008-04-14 14:03:58.000000000 +0200
++++ lib/Makefile.in
+@@ -980,7 +980,6 @@ check: $(BUILT_SOURCES)
+ all-am: Makefile $(LIBRARIES) $(LTLIBRARIES) $(HEADERS) all-local
  installdirs:
  install: $(BUILT_SOURCES)
 -	$(MAKE) $(AM_MAKEFLAGS) install-am
