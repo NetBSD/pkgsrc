@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/04/04 23:45:57 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2008/05/18 12:28:17 obache Exp $
 
 DISTNAME=	phylip-3.61
 PKGREVISION=	2
@@ -18,7 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 
-INSTALLATION_DIRS=	bin share/fonts/phylib share/doc/html/phylip
+INSTALLATION_DIRS=	bin share/fonts/phylip share/doc/html/phylip
 
 do-install:
 .for PROGRAM in clique consense contml contrast dnacomp dnadist		\
