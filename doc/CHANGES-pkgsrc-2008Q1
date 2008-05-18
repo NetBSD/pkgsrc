@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.52 2008/05/18 15:12:48 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.53 2008/05/18 15:47:32 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -116,3 +116,7 @@ pullup ticket #2385 - requested by obache
 ap2-suphp: update package for fixes
 pullup ticket #2387 - requested by tron
 net-snmp: fixes a buffer overflow in the Perl SNMP module
+pullup ticket #2388 - requested by tron
+tcl: update package for numerous fixes
+pullup ticket #2389 - requested by tron
+tk: update package for numerous fixes
