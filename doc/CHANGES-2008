@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1084 2008/05/18 01:50:27 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.1085 2008/05/18 08:28:05 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1853,3 +1853,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated archivers/gtar-base to 1.20 [tnn 2008-05-18]
 	Updated archivers/gtar-info to 1.20 [tnn 2008-05-18]
 	Updated archivers/gtar to 1.20 [tnn 2008-05-18]
+	Updated mail/mutt-devel to 1.5.18 [tonio 2008-05-18]
