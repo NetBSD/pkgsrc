@@ -1,4 +1,4 @@
-/*	$NetBSD: nbcompat.h,v 1.39 2008/04/29 05:46:08 martin Exp $	*/
+/*	$NetBSD: nbcompat.h,v 1.40 2008/05/19 12:52:57 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
@@ -108,21 +108,18 @@
 # if HAVE_MD5_H
 #  undef HAVE_MD5_H
 # endif
-# include <nbcompat/md5.h>
 #endif
 
 #if HAVE_NBCOMPAT_RMD160
 # if HAVE_RMD160_H
 #  undef HAVE_RMD160_H
 # endif
-# include <nbcompat/rmd160.h>
 #endif
 
 #if HAVE_NBCOMPAT_SHA1
 # if HAVE_SHA1_H
 #  undef HAVE_SHA1_H
 # endif
-# include <nbcompat/sha1.h>
 #endif
 
 #if HAVE_NBCOMPAT_VIS
