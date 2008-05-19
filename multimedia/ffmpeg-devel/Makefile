@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/04/20 20:38:53 heinz Exp $
+# $NetBSD: Makefile,v 1.8 2008/05/19 11:47:44 abs Exp $
 
 DISTNAME=	ffmpeg-${DISTVERSION}
 PKGNAME=	ffmpeg-devel-${DISTVERSION:S/-//g}
@@ -28,6 +28,8 @@ SUBST_STAGE.pc=		pre-install
 SUBST_FILES.pc=		*.pc
 SUBST_SED.pc=		-e 's|-lx264||g'
 SUBST_MESSAGE.pc=	Fixing hardcoded libs.
+
+CONFLICTS+=	ffmpeg-[0-9]*
 
 PLIST_SRC+=	${PKGDIR}/PLIST
 
