@@ -1,4 +1,6 @@
-# $NetBSD: Makefile-thunderbird.common,v 1.33 2008/02/27 10:00:47 ghen Exp $
+# $NetBSD: Makefile-thunderbird.common,v 1.34 2008/05/19 10:43:02 tnn Exp $
+# used by mail/thunderbird/Makefile
+# used by mail/thunderbird-gtk1/Makefile
 
 MOZILLA_BIN=		thunderbird-bin
 MOZ_VER=		2.0.0.12

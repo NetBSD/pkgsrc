@@ -1,4 +1,4 @@
-$NetBSD: patch-ba,v 1.4 2005/12/30 21:35:58 joerg Exp $
+$NetBSD: patch-ba,v 1.5 2008/05/19 10:43:02 tnn Exp $
 
 diff -ruN ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.cfg ./nsprpub/pr/include/md/_netbsd.cfg
 --- ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.cfg	2004-04-28 09:33:44.000000000 +0900
@@ -18,7 +18,7 @@ diff -ruN ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.cfg ./nsprpub/pr/include
  #define PR_ALIGN_OF_POINTER 4
  
 -#elif defined(__sparc__) || defined(__MIPSEB__)
-+#elif defined(__sparc_v9__)
++#elif defined(__sparcv9)
 +
 +#undef IS_LITTLE_ENDIAN
 +#define  IS_BIG_ENDIAN 1
@@ -64,7 +64,7 @@ diff -ruN ../Orig/mozilla/nsprpub/pr/include/md/_netbsd.cfg ./nsprpub/pr/include
 +#define PR_ALIGN_OF_DOUBLE  8 
 +#define PR_ALIGN_OF_POINTER 8 
 +
-+#elif defined(__sparc__) || defined(__MIPSEB__) || defined(__ARMEB__)
++#elif defined(__sparc) || defined(__MIPSEB__) || defined(__ARMEB__)
  
  #undef IS_LITTLE_ENDIAN
  #define  IS_BIG_ENDIAN 1
