@@ -1,10 +1,13 @@
-$NetBSD: patch-ab,v 1.6 2007/01/30 20:53:23 tv Exp $
+$NetBSD: patch-ab,v 1.7 2008/05/19 13:47:45 tnn Exp $
 
---- src/glitzint.h.orig	2006-03-13 08:43:57.000000000 -0500
+--- src/glitzint.h.orig	2006-03-13 14:43:57.000000000 +0100
 +++ src/glitzint.h
-@@ -51,12 +51,16 @@
+@@ -49,14 +49,18 @@
+   typedef __int64 int64_t;
+   typedef unsigned __int64 uint64_t;
  #else
- #  if defined(__OpenBSD__)
+-#  if defined(__OpenBSD__)
++#  if defined(__OpenBSD__) || defined(__sgi)
  #    include <inttypes.h>
 +#  elif defined(__INTERIX)
 +#    include <sys/types.h>
