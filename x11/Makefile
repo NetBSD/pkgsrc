@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.550 2008/05/17 22:12:14 tnn Exp $
+# $NetBSD: Makefile,v 1.551 2008/05/19 22:17:08 taca Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -431,6 +431,7 @@ SUBDIR+=	xfce4-screenshooter-plugin
 SUBDIR+=	xfce4-session
 SUBDIR+=	xfce4-terminal
 SUBDIR+=	xfce4-utils
+SUBDIR+=	xfd
 SUBDIR+=	xfishtank
 SUBDIR+=	xflame
 SUBDIR+=	xfontsel
