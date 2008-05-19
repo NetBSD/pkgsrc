@@ -1,0 +1,7 @@
+The xfd utility creates a window containing the name of the font being
+displayed, a row of command buttons, several lines of text for display-
+ing character metrics, and a grid containing one glyph per cell.
+The characters are shown in increasing order from left to right, top to
+bottom.
+
+This is the version of xfd maintained by Xorg.

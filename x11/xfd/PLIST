@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/19 22:15:55 taca Exp $
+bin/xfd
+man/man1/xfd.1
