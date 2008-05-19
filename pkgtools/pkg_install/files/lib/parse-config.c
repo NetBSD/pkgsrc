@@ -1,4 +1,4 @@
-/*	$NetBSD: parse-config.c,v 1.1.2.2 2008/05/11 20:20:38 joerg Exp $	*/
+/*	$NetBSD: parse-config.c,v 1.1.2.3 2008/05/19 10:42:41 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: parse-config.c,v 1.1.2.2 2008/05/11 20:20:38 joerg Exp $");
+__RCSID("$NetBSD: parse-config.c,v 1.1.2.3 2008/05/19 10:42:41 joerg Exp $");
 #endif
 
 /*-
@@ -54,11 +54,13 @@ const char     *config_file = SYSCONFDIR"/pkg_install.conf";
 const char *cert_chain_file;
 const char *certs_packages;
 const char *certs_pkg_vulnerabilities;
+const char *verified_installation;
 const char *gpg_cmd;
 const char *pkg_vulnerabilities_dir;
 const char *pkg_vulnerabilities_file;
 const char *pkg_vulnerabilities_url;
 const char *ignore_advisories = NULL;
+
 const char tnf_vulnerability_base[] = "ftp://ftp.NetBSD.org/pub/NetBSD/packages/vulns";
 
 static struct config_variable {
@@ -72,6 +74,7 @@ static struct config_variable {
 	{ "PKGVULNDIR", &pkg_vulnerabilities_dir },
 	{ "PKGVULNURL", &pkg_vulnerabilities_url },
 	{ "IGNORE_URL", &ignore_advisories },
+	{ "VERIFIED_INSTALLATION", &verified_installation },
 	{ NULL, NULL }
 };
 
@@ -101,6 +104,8 @@ pkg_install_config(void)
 		if (ret == -1)
 			err(EXIT_FAILURE, "asprintf failed");
 	}
+	if (verified_installation == NULL)
+		verified_installation = "never";
 }
 
 void
