@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1087 2008/05/19 03:00:59 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1088 2008/05/19 21:04:21 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1856,3 +1856,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/mutt-devel to 1.5.18 [tonio 2008-05-18]
 	Updated net/net-snmp to 5.4.1nb2 [tron 2008-05-18]
 	Updated fonts/mkfontscale to 1.0.5 [bjs 2008-05-19]
+	Updated multimedia/gmplayer to 1.0rc10nb5 [tonnerre 2008-05-19]
