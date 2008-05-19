@@ -1,8 +1,30 @@
-$NetBSD: patch-ca,v 1.1 2008/04/29 18:58:40 drochner Exp $
+$NetBSD: patch-ca,v 1.2 2008/05/19 19:08:36 tnn Exp $
 
---- gio/glocalfile.c.orig	2008-04-28 13:27:29.000000000 +0200
+--- gio/glocalfile.c.orig	2008-04-08 05:47:30.000000000 +0200
 +++ gio/glocalfile.c
-@@ -1580,7 +1580,8 @@ escape_trash_name (char *name)
+@@ -53,7 +53,7 @@
+ #if defined(HAVE_STATFS) && defined(HAVE_STATVFS)
+ /* Some systems have both statfs and statvfs, pick the
+    most "native" for these */
+-# if defined(sun) && defined(__SVR4)
++# if (defined(sun) && defined(__SVR4)) || defined(__sgi)
+    /* on solaris, statfs doesn't even have the
+       f_bavail field */
+ #  define USE_STATVFS
+@@ -1004,8 +1004,12 @@ g_local_file_query_filesystem_info (GFil
+ #if defined(HAVE_STRUCT_STATFS_F_FSTYPENAME)
+   fstype = g_strdup(statfs_buffer.f_fstypename);
+ #else
++#if defined(__sgi)
++  fstype = get_fs_type (statfs_buffer.f_fstyp);
++#else
+   fstype = get_fs_type (statfs_buffer.f_type);
+ #endif
++#endif
+   if (fstype &&
+       g_file_attribute_matcher_matches (attribute_matcher,
+ 					G_FILE_ATTRIBUTE_FILESYSTEM_TYPE))
+@@ -1580,7 +1584,8 @@ escape_trash_name (char *name)
  gboolean
  _g_local_file_has_trash_dir (const char *dirname, dev_t dir_dev)
  {
@@ -12,7 +34,7 @@ $NetBSD: patch-ca,v 1.1 2008/04/29 18:58:40 drochner Exp $
    char *topdir, *globaldir, *trashdir, *tmpname;
    uid_t uid;
    char uid_str[32];
-@@ -1588,18 +1589,17 @@ _g_local_file_has_trash_dir (const char 
+@@ -1588,18 +1593,17 @@ _g_local_file_has_trash_dir (const char 
    gboolean res;
    int statres;
        
