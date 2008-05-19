@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/04/30 13:38:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.32 2008/05/19 16:18:39 darcy Exp $
 
 DISTNAME=	librsvg-2.22.2
 CATEGORIES=	graphics gnome
@@ -17,6 +17,7 @@ MAKE_JOBS_SAFE=	NO
 USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config
+USE_LANGUAGES+=	c c++ fortran
 GNU_CONFIGURE=		yes
 
 PKGCONFIG_OVERRIDE=	librsvg-2.0.pc.in
