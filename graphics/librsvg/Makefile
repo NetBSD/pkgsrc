@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/05/19 16:18:39 darcy Exp $
+# $NetBSD: Makefile,v 1.33 2008/05/19 16:29:33 darcy Exp $
 
 DISTNAME=	librsvg-2.22.2
 CATEGORIES=	graphics gnome
@@ -35,7 +35,7 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.12.0
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
 
 post-install:
-	-rmdir -p ${PREFIX}/lib/mozilla/plugins
+	rmdir -p ${PREFIX}/lib/mozilla/plugins || ${TRUE}
 
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libgsf/buildlink3.mk"
