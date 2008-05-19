@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1088 2008/05/19 21:04:21 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1089 2008/05/19 22:19:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1857,3 +1857,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/net-snmp to 5.4.1nb2 [tron 2008-05-18]
 	Updated fonts/mkfontscale to 1.0.5 [bjs 2008-05-19]
 	Updated multimedia/gmplayer to 1.0rc10nb5 [tonnerre 2008-05-19]
+	Added x11/xfd version 1.0.1 [taca 2008-05-19]
