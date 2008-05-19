@@ -198,6 +198,7 @@ modperl2		Use modperl 2.x as the CGI manager (with Apache 2.x).
 modplug			Use for decoding mod-like music formats.
 motif			Enable motif support.
 mozilla			Use mozilla as gecko rendering engine.
+official-mozilla-branding	Use official Mozilla reg. trademarks and logos.
 mozilla-single-profile	Enable single profiles on mozilla browsers
 mpcdec			Enable the portable Musepack decoder library.
 mpeg4ip			Enable mpeg4ip support.
