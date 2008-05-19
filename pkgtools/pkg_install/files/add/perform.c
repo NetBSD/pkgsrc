@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.4 2008/05/12 15:44:17 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.5 2008/05/19 10:42:41 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.4 2008/05/12 15:44:17 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.5 2008/05/19 10:42:41 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1064,16 +1064,73 @@ start_replacing(struct pkg_task *pkg)
 	return 0;
 }
 
+static int check_input(const char *line, size_t len)
+{
+	if (line == NULL || len == 0)
+		return 1;
+	switch (*line) {
+	case 'Y':
+	case 'y':
+	case 'T':
+	case 't':
+	case '1':
+		return 0;
+	default:
+		return 1;
+	}
+}
+
+static int
+check_signature(struct pkg_task *pkg, void *signature_cookie, int invalid_sig)
+{
+	char *line;
+	size_t len;
+
+	if (strcasecmp(verified_installation, "never") == 0)
+		return 0;
+	if (strcasecmp(verified_installation, "always") == 0) {
+		if (invalid_sig)
+			warnx("No valid signature found, rejected");
+		return invalid_sig;
+	}
+	if (strcasecmp(verified_installation, "trusted") == 0) {
+		if (!invalid_sig)
+			return 0;
+		fprintf(stderr, "No valid signature found for %s.\n",
+		    pkg->pkgname);
+		fprintf(stderr,
+		    "Do you want to proceed with the installation [y/n]?\n");
+		line = fgetln(stdin, &len);
+		if (check_input(line, len)) {
+			fprintf(stderr, "Cancelling installation\n");
+			return 1;
+		}
+		return 0;
+	}
+	if (strcasecmp(verified_installation, "interactive") == 0) {
+		fprintf(stderr, "Do you want to proceed with "
+		    "the installation of %s [y/n]?\n", pkg->pkgname);
+		line = fgetln(stdin, &len);
+		if (check_input(line, len)) {
+			fprintf(stderr, "Cancelling installation\n");
+			return 1;
+		}
+		return 0;
+	}
+	warnx("Unknown value of configuration variable VERIFIED_INSTALLATION");
+	return 1;
+}
+
 /*
  * Install a single package.
  */
 static int
 pkg_do(const char *pkgpath, int mark_automatic)
 {
-	int status;
+	int status, invalid_sig;
 	void *archive_cookie;
 #ifdef HAVE_SSL
-	void*signature_cookie;
+	void *signature_cookie;
 #endif
 	struct pkg_task *pkg;
 
@@ -1086,16 +1143,22 @@ pkg_do(const char *pkgpath, int mark_automatic)
 		warnx("no pkg found for '%s', sorry.", pkgpath);
 		goto clean_find_archive;
 	}
+
 #ifdef HAVE_SSL
-	if (pkg_verify_signature(&pkg->archive, &pkg->entry, &pkg->pkgname,
-	    &signature_cookie))
-		goto clean_memory;
+	invalid_sig = pkg_verify_signature(&pkg->archive, &pkg->entry,
+	    &pkg->pkgname, &signature_cookie);
+#else
+	invalid_sig = 1;
 #endif
+
 	if (read_meta_data(pkg))
 		goto clean_memory;
 
 	/* Parse PLIST early, so that messages can use real package name. */
 	if (pkg_parse_plist(pkg))
+		goto clean_memory;
+
+	if (check_signature(pkg, &signature_cookie, invalid_sig))
 		goto clean_memory;
 
 	if (pkg->meta_data.meta_mtree != NULL)
