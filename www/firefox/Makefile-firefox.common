@@ -1,4 +1,5 @@
-# $NetBSD: Makefile-firefox.common,v 1.56 2008/04/17 07:39:20 ghen Exp $
+# $NetBSD: Makefile-firefox.common,v 1.57 2008/05/19 10:43:02 tnn Exp $
+# used by www/firefox/Makefile
 
 MOZILLA_BIN=		firefox-bin
 MOZ_VER=		2.0.0.14
