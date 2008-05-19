@@ -25,13 +25,13 @@ WWAARRNNIINNGG
 
      _Y_o_u _a_r_e _a_d_v_i_s_e_d _t_o _v_e_r_i_f_y _t_h_e _c_o_m_p_e_t_e_n_c_e _a_n_d _i_d_e_n_t_i_t_y _o_f _t_h_o_s_e _w_h_o _p_r_o_-
      _v_i_d_e _i_n_s_t_a_l_l_a_b_l_e _p_a_c_k_a_g_e _f_i_l_e_s_.  _F_o_r _e_x_t_r_a _p_r_o_t_e_c_t_i_o_n_, _u_s_e _t_h_e _d_i_g_i_t_a_l
-     _s_i_g_n_a_t_u_r_e_s _p_r_o_v_i_d_e_d _w_h_e_r_e _p_o_s_s_i_b_l_e _(_s_e_e _t_h_e --ss _o_p_t_i_o_n_)_, _o_r_, _f_a_i_l_i_n_g _t_h_a_t_,
-     _u_s_e tar(_1) _t_o _e_x_t_r_a_c_t _t_h_e _p_a_c_k_a_g_e _f_i_l_e_, _a_n_d _i_n_s_p_e_c_t _i_t_s _c_o_n_t_e_n_t_s _a_n_d
-     _s_c_r_i_p_t_s _t_o _e_n_s_u_r_e _i_t _p_o_s_e_s _n_o _d_a_n_g_e_r _t_o _y_o_u_r _s_y_s_t_e_m_'_s _i_n_t_e_g_r_i_t_y_.  _P_a_y
-     _p_a_r_t_i_c_u_l_a_r _a_t_t_e_n_t_i_o_n _t_o _a_n_y _+_I_N_S_T_A_L_L _o_r _+_D_E_I_N_S_T_A_L_L _f_i_l_e_s_, _a_n_d _i_n_s_p_e_c_t _t_h_e
-     _+_C_O_N_T_E_N_T_S _f_i_l_e _f_o_r @@ccwwdd_, @@mmooddee _(_c_h_e_c_k _f_o_r _s_e_t_u_i_d_)_, @@ddiirrrrmm_, @@eexxeecc_, _a_n_d
-     @@uunneexxeecc _d_i_r_e_c_t_i_v_e_s_, _a_n_d_/_o_r _u_s_e _t_h_e pkg_info(_1) _c_o_m_m_a_n_d _t_o _e_x_a_m_i_n_e _t_h_e
-     _p_a_c_k_a_g_e _f_i_l_e_.
+     _s_i_g_n_a_t_u_r_e_s _p_r_o_v_i_d_e_d _w_h_e_r_e _p_o_s_s_i_b_l_e _(_s_e_e _t_h_e pkg_install.conf(_5) _)_, _o_r_,
+     _f_a_i_l_i_n_g _t_h_a_t_, _u_s_e tar(_1) _t_o _e_x_t_r_a_c_t _t_h_e _p_a_c_k_a_g_e _f_i_l_e_, _a_n_d _i_n_s_p_e_c_t _i_t_s
+     _c_o_n_t_e_n_t_s _a_n_d _s_c_r_i_p_t_s _t_o _e_n_s_u_r_e _i_t _p_o_s_e_s _n_o _d_a_n_g_e_r _t_o _y_o_u_r _s_y_s_t_e_m_'_s
+     _i_n_t_e_g_r_i_t_y_.  _P_a_y _p_a_r_t_i_c_u_l_a_r _a_t_t_e_n_t_i_o_n _t_o _a_n_y _+_I_N_S_T_A_L_L _o_r _+_D_E_I_N_S_T_A_L_L _f_i_l_e_s_,
+     _a_n_d _i_n_s_p_e_c_t _t_h_e _+_C_O_N_T_E_N_T_S _f_i_l_e _f_o_r @@ccwwdd_, @@mmooddee _(_c_h_e_c_k _f_o_r _s_e_t_u_i_d_)_,
+     @@ddiirrrrmm_, @@eexxeecc_, _a_n_d @@uunneexxeecc _d_i_r_e_c_t_i_v_e_s_, _a_n_d_/_o_r _u_s_e _t_h_e pkg_info(_1) _c_o_m_m_a_n_d
+     _t_o _e_x_a_m_i_n_e _t_h_e _p_a_c_k_a_g_e _f_i_l_e_.
 
 OOPPTTIIOONNSS
      The following command line arguments are supported:
@@ -142,12 +142,28 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                 age was not installed, and restores the _+_R_E_Q_U_I_R_E_D___B_Y file
                 afterwards.
 
-           2.   A check is made to determine if the package conflicts (from
-                @@ppkkggccffll directives, see pkg_create(1)) with an already
-                recorded as installed package.  If it is, installation is ter-
-                minated.
+           2.   The package build information is extracted from the
+                _+_B_U_I_L_D___I_N_F_O file and compared against the result of uname(3).
+                If the operating system or architecture of the package differ
+                from that of the host, installation is aborted.  This behavior
+                is overridable with the --ff flag.
 
-           3.   All package dependencies (from @@ppkkggddeepp directives, see
+           3.   The package build information from _+_B_U_I_L_D___I_N_F_O is then checked
+                for USE_ABI_DEPENDS=NO (or IGNORE_RECOMMENDED).  If the pack-
+                age was built with ABI dependency recommendations ignored, a
+                warning will be issued.
+
+           4.   A check is made to determine if the package conflicts (from
+                @@ppkkggccffll directives, see pkg_create(1)) with an already
+                recorded as installed package or if an installed package con-
+                flicts with the package.  If it is, installation is termi-
+                nated.
+
+           5.   The file list of the package is compared to the file lists of
+                the installed packeges.  If there is any overlap, the instal-
+                lation is terminated.
+
+           6.   All package dependencies (from @@ppkkggddeepp directives, see
                 pkg_create(1)) are read from the packing list.  If any of
                 these required packages are not currently installed, an
                 attempt is made to find and install it; if the missing package
@@ -156,24 +172,6 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                 that are installed, but which have a version number that is
                 considered to be too old, are also updated.  The dependant
                 packages are found according to the normal PKG_PATH rules.
-
-           4.   A search is made for any @@ooppttiioonn directives which control how
-                the package is added to the system.  The only currently imple-
-                mented option is @@ooppttiioonn pprreesseerrvvee, which tells pkg_add to move
-                any existing files out of the way, preserving the previous
-                contents (which are also resurrected on pkg_delete, so caveat
-                emptor).
-
-           5.   The package build information is extracted from the
-                _+_B_U_I_L_D___I_N_F_O file and compared against the result of uname(3).
-                If the operating system or architecture of the package differ
-                from that of the host, installation is aborted.  This behavior
-                is overridable with the --ff flag.
-
-           6.   The package build information from _+_B_U_I_L_D___I_N_F_O is then checked
-                for USE_ABI_DEPENDS=NO (or IGNORE_RECOMMENDED).  If the pack-
-                age was built with ABI dependency recommendations ignored, a
-                warning will be issued.
 
            7.   If the package contains an _i_n_s_t_a_l_l script, it is executed with
                 the following arguments:
@@ -187,8 +185,8 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
                 If the _i_n_s_t_a_l_l script exits with a non-zero status code, the
                 installation is terminated.
 
-           8.   It is used as a guide for moving (or copying, as necessary)
-                files from the staging area into their final locations.
+           8.   The files from the file list are extracted to the choosen pre-
+                fix.
 
            9.   If an _i_n_s_t_a_l_l script exists for the package, it is executed
                 with the following arguments:
@@ -210,9 +208,7 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
            11.  If the package is a depoted package, then add it to the
                 default view.
 
-           12.  The staging area is deleted and the program terminates.
-
-           13.  Finally, if we were upgrading a package, any _+_R_E_Q_U_I_R_E_D___B_Y file
+           12.  Finally, if we were upgrading a package, any _+_R_E_Q_U_I_R_E_D___B_Y file
                 that was moved aside before upgrading was started is now moved
                 back into place.
 
@@ -247,10 +243,6 @@ EENNVVIIRROONNMMEENNTT
                  The default location is the path to the package database
                  directory with ``.refcount'' appended to the path, e.g.
                  _/_v_a_r_/_d_b_/_p_k_g_._r_e_f_c_o_u_n_t.
-
-     PKG_TMPDIR  Staging directory for installing packages, defaults to
-                 /var/tmp.  Set to directory with lots of free disk if you run
-                 out of space when installing a binary package.
 
      PKG_VIEW    The default view can be specified in the PKG_VIEW environment
                  variable.
@@ -287,6 +279,25 @@ EEXXAAMMPPLLEESS
      ter.)  If you do this, consider installing and using the
      _s_e_c_u_r_i_t_y_/_a_u_d_i_t_-_p_a_c_k_a_g_e_s package and running it after every ppkkgg__aadddd.
 
+CCOONNFFIIGGUURRAATTIIOONN VVAARRIIAABBLLEESS
+     The following variables change the behaviour of ppkkgg__aadddd and can be found
+     in greater detail in pkg_install.conf(5):
+
+     CERTIFICATE_ANCHOR_PKGS  Location of the trust anchor for binary pack-
+                              ages.
+
+     CERTIFICATE_CHAIN        Location of a file with additional certificates
+                              used to fill holes in the trust chain.
+
+     VERIFIED_INSTALLATION    Specify interactiveness and use of digital sig-
+                              nature.  The value "never" just uses the binary
+                              package without requiring a signature.  The
+                              value "always" requires a valid signature and
+                              terminates the installation otherwise.  The
+                              value "trusted" asks before installing packages
+                              without valid signature.  The value "interac-
+                              tive" will always ask the user.
+
 SSEEEE AALLSSOO
      pkg_admin(1), pkg_create(1), pkg_delete(1), pkg_info(1), tar(1),
      mktemp(3), sysconf(3), pkgsrc(7)
@@ -300,6 +311,8 @@ AAUUTTHHOORRSS
              NetBSD wildcard dependency processing, pkgdb, upgrading, etc.
      Thomas Klausner
              HTTP support.
+     Joerg Sonnenberger
+             Rewrote most of the code base to work without external commands.
 
 BBUUGGSS
      Hard links between files in a distribution are only preserved if either
