@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: moz-install,v 1.5 2007/03/07 21:32:56 dmcmahill Exp $
+# $NetBSD: moz-install,v 1.6 2008/05/19 16:32:43 tnn Exp $
 
 ${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
 ${SED} -e "s,@PREFIX@,${PREFIX},g" -e "s,@MOZILLA@,${MOZILLA}," -e "s,@MOZILLA_BIN@,${MOZILLA_BIN}," ${FILESDIR}/mozilla-${OBJECT_FMT}.in > ${DESTDIR}${PREFIX}/bin/${MOZILLA}
@@ -63,6 +63,12 @@ for i in `${SED} -n -e '/^@comment begin INCLUDE-PUBLIC$/,/^@comment end INCLUDE
 	${BSD_INSTALL_DATA} ${WRKSRC}/${src} ${DESTDIR}${PREFIX}/$i
 done
 
+# install INCLUDE-SDK
+for i in `${SED} -n -e '/^@comment begin INCLUDE-SDK$/,/^@comment end INCLUDE-SDK$/p' ${TMP_PLIST} | ${EGREP} -v ^@comment` ; do
+	src=`echo $i | ${SED} -e "s@include/${MOZILLA}@dist/sdk/include@"`;
+	${BSD_INSTALL_DATA} ${WRKSRC}/${src} ${DESTDIR}${PREFIX}/$i
+done
+	
 ${RM} -f ${TMP_PLIST}
 
 #
