@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.136 2008/05/10 17:13:11 jmcneill Exp $
+# $NetBSD: Makefile,v 1.137 2008/05/19 19:08:36 tnn Exp $
 
 # When updating glib2, please apply patch-ak to configure.in
 # Then run a matching version of autoconf to regen patch-aa.
@@ -79,6 +79,16 @@ SUBST_MESSAGE.thr=	Fixing libgthread.
 
 .if !empty(MACHINE_PLATFORM:MDarwin-[56].*-*)
 CONFIGURE_ENV+=		gt_cv_c_wchar_t=no
+.endif
+
+.if ${OPSYS} == "IRIX"
+SUBST_CLASSES+=			fam-linkage
+SUBST_STAGE.fam-linkage=	pre-configure
+SUBST_MESSAGE.fam-linkage=	Fixing fam linkage
+SUBST_FILES.fam-linkage=	gio/fam/Makefile.in
+SUBST_SED.fam-linkage=		-e 's,^FAM_LIBS =.*$$,FAM_LIBS = -lfam -lC,g'
+
+BUILDLINK_TRANSFORM+=		l:fam:fam:C
 .endif
 
 .if ${OPSYS} == "HPUX"
