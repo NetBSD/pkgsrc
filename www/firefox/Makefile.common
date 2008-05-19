@@ -1,4 +1,5 @@
-# $NetBSD: Makefile.common,v 1.24 2008/02/08 10:34:19 tnn Exp $
+# $NetBSD: Makefile.common,v 1.25 2008/05/19 10:43:02 tnn Exp $
+# used by www/firefox/Makefile-firefox.common
 
 MOZ_DIST_VER?=		${MOZ_VER}
 DISTNAME?=		mozilla-${MOZ_DIST_VER}-source
@@ -183,7 +184,7 @@ post-build:
 # do that part dynamically rather than trying to always keep our conditionals
 # up to date.  Note that the exact set of libfreebl libs has had a history
 # of changing even on minor releases.
-PLIST_SRC=      ${WRKDIR}/PLIST
+PLIST_SRC=	${WRKDIR}/PLIST
 pre-install:
 	cd ${WRKSRC:Q}/dist/bin && ls libfreebl*.${SO_SUFFIX} | ${SORT}  | \
 		${AWK} '{print "lib/$${MOZILLA}/" $$0}' > ${WRKSRC}/PLIST.libfreebl
@@ -206,9 +207,9 @@ post-install:
 .include "../../mk/pthread.buildlink3.mk"
 
 .if defined(PTHREAD_TYPE) && (${PTHREAD_TYPE} == "none")
-CONFIGURE_ARGS+=	 --without-pthreads
+CONFIGURE_ARGS+=	--without-pthreads
 .else
-CONFIGURE_ARGS+=	 --with-pthreads
+CONFIGURE_ARGS+=	--with-pthreads
 .endif
 
 .if ${MOZILLA_USE_XFT} == "YES"
