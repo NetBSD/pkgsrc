@@ -1,7 +1,9 @@
-# $NetBSD: options.mk,v 1.10 2008/03/02 15:24:07 abs Exp $
+# $NetBSD: options.mk,v 1.11 2008/05/19 10:43:02 tnn Exp $
+# used by www/firefox/Makefile.common
+# used by www/seamonkey/Makefile.common
 
-PKG_OPTIONS_VAR		= PKG_OPTIONS.gecko
-PKG_SUPPORTED_OPTIONS	= debug official-mozilla-branding
+PKG_OPTIONS_VAR=	PKG_OPTIONS.gecko
+PKG_SUPPORTED_OPTIONS=	debug official-mozilla-branding
 
 .if ( ${MOZILLA_BIN} == "firefox-bin" || ${MOZILLA_BIN} == "seamonkey-bin" || ${MOZILLA_BIN} == "thunderbird-bin" )
 PKG_SUPPORTED_OPTIONS  += mozilla-single-profile
