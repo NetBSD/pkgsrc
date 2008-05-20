@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1092 2008/05/20 11:53:28 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.1093 2008/05/20 12:07:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1862,3 +1862,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/wesnoth to 1.4.2 [wiz 2008-05-20]
 	Updated mail/thunderbird to 2.0.0.14 [ghen 2008-05-20]
 	Updated mail/thunderbird-gtk1 to 2.0.0.14 [ghen 2008-05-20]
+	Updated graphics/png to 1.2.29 [wiz 2008-05-20]
