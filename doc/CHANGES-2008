@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1098 2008/05/20 15:12:06 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1099 2008/05/20 18:54:37 darcy Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1868,3 +1868,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/py-django to 0.96.1nb1 [joerg 2008-05-20]
 	Updated textproc/iso-codes to 2.1 [wiz 2008-05-20]
 	Updated archivers/lzo to 2.03 [wiz 2008-05-20]
+	Updated devel/generate to 2.5 [darcy 2008-05-20]
