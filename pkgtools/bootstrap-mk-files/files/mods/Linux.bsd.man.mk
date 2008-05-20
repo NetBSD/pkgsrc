@@ -1,4 +1,4 @@
-#	$NetBSD: Linux.bsd.man.mk,v 1.1.1.1 2006/07/14 23:13:01 jlam Exp $
+#	$NetBSD: Linux.bsd.man.mk,v 1.2 2008/05/20 12:27:23 tnn Exp $
 #	@(#)bsd.man.mk	8.1 (Berkeley) 6/8/93
 
 .if !target(__initialized__)
@@ -18,7 +18,9 @@ realinstall:	${MANINSTALL}
 .endif
 cleandir: cleanman
 
-.if exists(${DESTDIR}/usr/share/groff/1.18.1/tmac)
+.if exists(${DESTDIR}/usr/share/groff/1.19.2/tmac)
+TMACDIR?=	${DESTDIR}/usr/share/groff/1.19.2/tmac
+.elif exists(${DESTDIR}/usr/share/groff/1.18.1/tmac)
 TMACDIR?=	${DESTDIR}/usr/share/groff/1.18.1/tmac
 .else
 TMACDIR?=	${DESTDIR}/usr/share/groff/tmac
