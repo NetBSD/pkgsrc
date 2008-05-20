@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.26 2005/12/11 21:59:29 joerg Exp $
+$NetBSD: patch-aa,v 1.27 2008/05/20 18:36:47 tnn Exp $
 
---- Makefile.orig	2005-12-11 21:33:57.000000000 +0000
+--- Makefile.orig	2008-05-20 20:33:45.000000000 +0200
 +++ Makefile
+@@ -6,7 +6,7 @@
+ 
+ PREFIX=/usr/local
+ BINDIR=$(PREFIX)/bin
+-MANDIR=$(PREFIX)/man
++MANDIR=$(PREFIX)/$(PKGMANDIR)
+ SECTION=1
+ 
+ # Enable the below line If your plathome support IPv6
 @@ -54,6 +54,23 @@ nothing-specified:
  	@echo "make aix-tk3play    IBM AIX"
  	@echo "make os2            IBM OS/2"
@@ -96,8 +105,7 @@ $NetBSD: patch-aa,v 1.26 2005/12/11 21:59:29 joerg Exp $
 +		OBJECTS='decode_i386.o dct64_i386.o decode_i586.o \
 +			audio_sun.o term.o' \
 +		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -fomit-frame-pointer \
- 			-funroll-all-loops -ffast-math -DROT_I386 \
--			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD' \
++			-funroll-all-loops -ffast-math -DROT_I386 \
 +			-DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DUSE_MMAP \
 +			-DREAD_MMAP -DNETBSD -DTERM_CONTROL' \
 +		mpg123-make
@@ -230,7 +238,8 @@ $NetBSD: patch-aa,v 1.26 2005/12/11 21:59:29 joerg Exp $
 +		OBJECTS='decode_i386.o dct64_i386.o decode_i586.o \
 +			audio_nas.o term.o' \
 +		CFLAGS='$(CFLAGS) -Wall -ansi -pedantic -O4 -fomit-frame-pointer \
-+			-funroll-all-loops -ffast-math -DROT_I386 \
+ 			-funroll-all-loops -ffast-math -DROT_I386 \
+-			-DI386_ASSEM -DREAL_IS_FLOAT -DUSE_MMAP -DNETBSD' \
 +			-DI386_ASSEM -DPENTIUM_OPT -DREAL_IS_FLOAT -DUSE_MMAP \
 +			-DREAD_MMAP -DNETBSD -DTERM_CONTROL \
 +			-DNAS' \
