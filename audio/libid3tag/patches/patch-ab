@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2008/05/20 13:31:39 simonb Exp $
+
+Fix for initite loop bug in libid3tag-0.15.0b.
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=3DCVE-2008-2109
+
+--- field.c.orig	2004-01-23 20:41:32.000000000 +1100
++++ field.c
+@@ -291,7 +291,7 @@ int id3_field_parse(union id3_field *fie
+ 
+       end = *ptr + length;
+ 
+-      while (end - *ptr > 0) {
++      while (end - *ptr > 0 && **ptr != '\0') {
+ 	ucs4 = id3_parse_string(ptr, end - *ptr, *encoding, 0);
+ 	if (ucs4 == 0)
+ 	  goto fail;
