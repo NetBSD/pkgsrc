@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2003/07/31 13:04:40 uebayasi Exp $
+$NetBSD: patch-aa,v 1.3 2008/05/20 18:53:17 tnn Exp $
 
---- Canna.conf.orig	Sat Jan 25 17:47:47 2003
+--- Canna.conf.orig	2003-09-22 12:27:12.000000000 +0200
 +++ Canna.conf
 @@ -133,18 +133,18 @@
  /* rootにならずにインストールする時はこれを定義して下さい */
@@ -24,7 +24,16 @@ $NetBSD: patch-aa,v 1.2 2003/07/31 13:04:40 uebayasi Exp $
  #  define DefLibCannaDir $(cannaExecPrefix)/lib
  # endif
  #endif
-@@ -173,10 +173,10 @@
+@@ -164,7 +164,7 @@ XCOMM cannaLibDir = /var/lib/canna
+ XCOMM cannaLibDir = /var/db/canna
+ cannaLibDir = DefCannaLibDir
+ XCOMM cannaManDir = $(cannaPrefix)/share/man
+-cannaManDir = $(cannaPrefix)/man
++cannaManDir = $(cannaPrefix)/$(PKGMANDIR)
+ cannaIncDir = $(cannaPrefix)/include/canna
+ 
+ libCannaDir = DefLibCannaDir
+@@ -173,10 +173,10 @@ ErrDir  = DefErrDir
  /* 次の3行は変更しないでください */
  wcharDefinition = -DCANNA_WCHAR
  Wlib =
@@ -38,7 +47,7 @@ $NetBSD: patch-aa,v 1.2 2003/07/31 13:04:40 uebayasi Exp $
  
  #ifdef InstallAsUser
  cannaOwnerGroup =
-@@ -246,7 +246,7 @@
+@@ -249,7 +249,7 @@ dontHaveRename = 0
   * コマンド類をリンクする時は、次を YES にしてくだい。
   */
  /* #define UseInstalledLibCanna YES */
@@ -47,7 +56,7 @@ $NetBSD: patch-aa,v 1.2 2003/07/31 13:04:40 uebayasi Exp $
  
  DicDir   = $(cannaLibDir)/dic
  
-@@ -291,18 +291,18 @@
+@@ -294,18 +294,18 @@ DicDir   = $(cannaLibDir)/dic
      DEPCANNALIB = $(libCannaDir)/libcanna.a
  #endif
  # endif
@@ -71,7 +80,7 @@ $NetBSD: patch-aa,v 1.2 2003/07/31 13:04:40 uebayasi Exp $
  #endif /* UseInstalledLibCanna */
  
  #if UseInstalledLibCanna
-@@ -311,14 +311,14 @@
+@@ -314,14 +314,14 @@ DicDir   = $(cannaLibDir)/dic
  # else
      DEPCANNALIB16 = $(libCannaDir)/libcanna16.a
  # endif
@@ -90,7 +99,7 @@ $NetBSD: patch-aa,v 1.2 2003/07/31 13:04:40 uebayasi Exp $
  #endif /* UseInstalledLibCanna */
  
  /*
-@@ -335,7 +335,7 @@
+@@ -338,7 +338,7 @@ DicDir   = $(cannaLibDir)/dic
       SCRIPTS_DEFINES = 
  
  #ifdef JAPANESEMAN
