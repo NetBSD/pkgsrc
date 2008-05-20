@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2007/07/04 20:54:39 jlam Exp $
+# $NetBSD: Makefile.common,v 1.14 2008/05/20 19:14:21 tnn Exp $
 #
 
 DISTNAME=	FreeWnn-1.10
@@ -52,6 +52,7 @@ post-patch:
 			-e 's|\(WNNBINDIR = $${PREFIX}/\)\(bin\)|\1s\2|' \
 			-e 's|\([CK]*WNNBINDIR = $$(WNNBINDIR)\)/[ck]*Wnn4|\1|'\
 			-e 's|\(WNNWNNDIR = $${PREFIX}/\)lib\(/wnn\)|\1share\2|'\
+			-e 's|\(MANPATH = .*/\)man|\1$${PKGMANDIR}|'\
 			-e '/(COMPRESSMANCMD) /d'		\
 			-e 's|\/usr\/X11R6|$${PREFIX}|'		\
 			${SEDSCRIPT}				\
