@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2007/07/01 15:57:16 heinz Exp $
+# $NetBSD: Makefile,v 1.22 2008/05/20 13:31:39 simonb Exp $
 #
 
 DISTNAME=	libid3tag-0.15.1b
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mad/}
 
