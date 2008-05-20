@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1090 2008/05/20 05:44:23 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.1091 2008/05/20 11:44:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1859,3 +1859,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/gmplayer to 1.0rc10nb5 [tonnerre 2008-05-19]
 	Added x11/xfd version 1.0.1 [taca 2008-05-19]
 	Updated mail/spamassassin to 3.2.4nb2 [ghen 2008-05-20]
+	Updated games/wesnoth to 1.4.2 [wiz 2008-05-20]
