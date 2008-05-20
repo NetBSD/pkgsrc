@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2008/04/19 09:35:24 wiz Exp $
+@comment $NetBSD: PLIST,v 1.23 2008/05/20 11:43:59 wiz Exp $
 bin/wesnoth
 man/ca_ES@valencia/man6/wesnoth.6
 man/cs/man6/wesnoth.6
@@ -15,7 +15,10 @@ man/man6/wesnoth.6
 man/nl/man6/wesnoth.6
 man/pl/man6/wesnoth.6
 man/sk/man6/wesnoth.6
+man/sr/man6/wesnoth.6
+man/sr@latin/man6/wesnoth.6
 man/sv/man6/wesnoth.6
+man/tr/man6/wesnoth.6
 man/zh_CN/man6/wesnoth.6
 share/applications/wesnoth.desktop
 share/doc/wesnoth/manual/images/game-screen.jpg
@@ -47,6 +50,7 @@ share/doc/wesnoth/manual/manual.it.html
 share/doc/wesnoth/manual/manual.pl.html
 share/doc/wesnoth/manual/manual.ru.html
 share/doc/wesnoth/manual/manual.sv.html
+share/doc/wesnoth/manual/manual.tr.html
 share/doc/wesnoth/manual/manual.txt
 share/doc/wesnoth/manual/manual.zh_CN.html
 share/doc/wesnoth/manual/styles/manual.css
@@ -1594,6 +1598,16 @@ share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/units/undead/dread-li
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/units/undead/dread-lich.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/units/undead/dreadbat-attack.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/units/undead/dreadbat-defend.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/units/undead/dreadbat-ne-1.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/units/undead/dreadbat-ne-2.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/units/undead/dreadbat-ne-3.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/units/undead/dreadbat-ne-4.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/units/undead/dreadbat-ne-5.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/units/undead/dreadbat-se-1.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/units/undead/dreadbat-se-2.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/units/undead/dreadbat-se-3.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/units/undead/dreadbat-se-4.png
+share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/units/undead/dreadbat-se-5.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/units/undead/dreadbat.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/units/undead/skeletonrider-attack1.png
 share/wesnoth/data/campaigns/Under_the_Burning_Suns/images/units/undead/skeletonrider-attack2.png
@@ -2070,6 +2084,7 @@ share/wesnoth/data/core/images/items/staff.png
 share/wesnoth/data/core/images/items/storm-trident.png
 share/wesnoth/data/core/images/items/straw-bale1.png
 share/wesnoth/data/core/images/items/straw-bale2.png
+share/wesnoth/data/core/images/maps/mainmenu.jpg
 share/wesnoth/data/core/images/maps/mainmenu.png
 share/wesnoth/data/core/images/maps/wesnoth-httt.jpg
 share/wesnoth/data/core/images/maps/wesnoth.png
@@ -4473,8 +4488,23 @@ share/wesnoth/data/core/images/units/elves-wood/shyde-healing7.png
 share/wesnoth/data/core/images/units/elves-wood/shyde-healing8.png
 share/wesnoth/data/core/images/units/elves-wood/shyde-healing9.png
 share/wesnoth/data/core/images/units/elves-wood/shyde.png
+share/wesnoth/data/core/images/units/elves-wood/sorceress-defend-1.png
+share/wesnoth/data/core/images/units/elves-wood/sorceress-defend-2.png
 share/wesnoth/data/core/images/units/elves-wood/sorceress-defend.png
+share/wesnoth/data/core/images/units/elves-wood/sorceress-magic-1.png
+share/wesnoth/data/core/images/units/elves-wood/sorceress-magic-2.png
+share/wesnoth/data/core/images/units/elves-wood/sorceress-magic-3.png
 share/wesnoth/data/core/images/units/elves-wood/sorceress-magic.png
+share/wesnoth/data/core/images/units/elves-wood/sorceress-melee-attack-1.png
+share/wesnoth/data/core/images/units/elves-wood/sorceress-melee-attack-10.png
+share/wesnoth/data/core/images/units/elves-wood/sorceress-melee-attack-2.png
+share/wesnoth/data/core/images/units/elves-wood/sorceress-melee-attack-3.png
+share/wesnoth/data/core/images/units/elves-wood/sorceress-melee-attack-4.png
+share/wesnoth/data/core/images/units/elves-wood/sorceress-melee-attack-5.png
+share/wesnoth/data/core/images/units/elves-wood/sorceress-melee-attack-6.png
+share/wesnoth/data/core/images/units/elves-wood/sorceress-melee-attack-7.png
+share/wesnoth/data/core/images/units/elves-wood/sorceress-melee-attack-8.png
+share/wesnoth/data/core/images/units/elves-wood/sorceress-melee-attack-9.png
 share/wesnoth/data/core/images/units/elves-wood/sorceress-melee.png
 share/wesnoth/data/core/images/units/elves-wood/sorceress.png
 share/wesnoth/data/core/images/units/elves-wood/sylph-defend.png
@@ -5143,6 +5173,7 @@ share/wesnoth/data/core/images/units/human-outlaws/ranger-bow.png
 share/wesnoth/data/core/images/units/human-outlaws/ranger-sword-attack1.png
 share/wesnoth/data/core/images/units/human-outlaws/ranger-sword-attack2.png
 share/wesnoth/data/core/images/units/human-outlaws/ranger-sword-attack3.png
+share/wesnoth/data/core/images/units/human-outlaws/ranger-sword-attack4.png
 share/wesnoth/data/core/images/units/human-outlaws/ranger-sword-defend-1.png
 share/wesnoth/data/core/images/units/human-outlaws/ranger-sword-defend-2.png
 share/wesnoth/data/core/images/units/human-outlaws/ranger-sword.png
@@ -5840,6 +5871,10 @@ share/wesnoth/data/core/images/units/undead-skeletal/banebow-bow-attack-3.png
 share/wesnoth/data/core/images/units/undead-skeletal/banebow-bow-attack-4.png
 share/wesnoth/data/core/images/units/undead-skeletal/banebow-bow-defend.png
 share/wesnoth/data/core/images/units/undead-skeletal/banebow-bow.png
+share/wesnoth/data/core/images/units/undead-skeletal/banebow-melee-attack-1.png
+share/wesnoth/data/core/images/units/undead-skeletal/banebow-melee-attack-2.png
+share/wesnoth/data/core/images/units/undead-skeletal/banebow-melee-attack-3.png
+share/wesnoth/data/core/images/units/undead-skeletal/banebow-melee-attack-4.png
 share/wesnoth/data/core/images/units/undead-skeletal/banebow-melee-attack.png
 share/wesnoth/data/core/images/units/undead-skeletal/banebow-melee-defend-1.png
 share/wesnoth/data/core/images/units/undead-skeletal/banebow-melee-defend-2.png
@@ -5850,6 +5885,10 @@ share/wesnoth/data/core/images/units/undead-skeletal/bone-shooter-bow-attack-3.p
 share/wesnoth/data/core/images/units/undead-skeletal/bone-shooter-bow-attack-4.png
 share/wesnoth/data/core/images/units/undead-skeletal/bone-shooter-bow-defend.png
 share/wesnoth/data/core/images/units/undead-skeletal/bone-shooter-bow.png
+share/wesnoth/data/core/images/units/undead-skeletal/bone-shooter-melee-attack-1.png
+share/wesnoth/data/core/images/units/undead-skeletal/bone-shooter-melee-attack-2.png
+share/wesnoth/data/core/images/units/undead-skeletal/bone-shooter-melee-attack-3.png
+share/wesnoth/data/core/images/units/undead-skeletal/bone-shooter-melee-attack-4.png
 share/wesnoth/data/core/images/units/undead-skeletal/bone-shooter-melee-attack.png
 share/wesnoth/data/core/images/units/undead-skeletal/bone-shooter-melee-defend-1.png
 share/wesnoth/data/core/images/units/undead-skeletal/bone-shooter-melee-defend-2.png
@@ -7658,6 +7697,7 @@ share/wesnoth/translations/hr/LC_MESSAGES/wesnoth-tsg.mo
 share/wesnoth/translations/hr/LC_MESSAGES/wesnoth-tutorial.mo
 share/wesnoth/translations/hr/LC_MESSAGES/wesnoth-units.mo
 share/wesnoth/translations/hr/LC_MESSAGES/wesnoth-utbs.mo
+share/wesnoth/translations/hr/LC_MESSAGES/wesnoth.mo
 share/wesnoth/translations/hu/LC_MESSAGES/wesnoth-aoi.mo
 share/wesnoth/translations/hu/LC_MESSAGES/wesnoth-did.mo
 share/wesnoth/translations/hu/LC_MESSAGES/wesnoth-editor.mo
@@ -8433,8 +8473,14 @@ share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth.mo
 @comment in xdg-dirs: @dirrm share/applications
 @unexec ${RMDIR} %D/man/zh_CN/man6 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/zh_CN 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/tr/man6 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/tr 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/sv/man6 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/sv 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/sr@latin/man6 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/sr@latin 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/sr/man6 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/sr 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/sk/man6 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/sk 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/nl/man6 2>/dev/null || ${TRUE}
