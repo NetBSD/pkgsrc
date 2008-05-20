@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1091 2008/05/20 11:44:31 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1092 2008/05/20 11:53:28 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1860,3 +1860,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added x11/xfd version 1.0.1 [taca 2008-05-19]
 	Updated mail/spamassassin to 3.2.4nb2 [ghen 2008-05-20]
 	Updated games/wesnoth to 1.4.2 [wiz 2008-05-20]
+	Updated mail/thunderbird to 2.0.0.14 [ghen 2008-05-20]
+	Updated mail/thunderbird-gtk1 to 2.0.0.14 [ghen 2008-05-20]
