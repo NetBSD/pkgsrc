@@ -1,9 +1,9 @@
-$NetBSD: distinfo,v 1.7 2005/12/30 15:16:21 joerg Exp $
+$NetBSD: distinfo,v 1.8 2008/05/20 18:53:17 tnn Exp $
 
 SHA1 (Canna36p4.tar.gz) = 4edc22e2e4e5c6db42daa2083fabb53aa1ae8168
 RMD160 (Canna36p4.tar.gz) = 7f8bb7f5d87e6b939ff2b84edf58072c75a5d09d
 Size (Canna36p4.tar.gz) = 1455672 bytes
-SHA1 (patch-aa) = eb21b7beaa66c4d0c5815599dc49b7c0b7eb3a40
+SHA1 (patch-aa) = 6bb6da1cc2a458ebbcfe09fe19a371d7e8aea7da
 SHA1 (patch-ab) = b203ad0cb1285ffed0037e0eced3ae298bec5eb9
 SHA1 (patch-ac) = a81a07db87d3b501dedd423e148a8e7e1d1804c4
 SHA1 (patch-ad) = d4b5720c206f81124e0d53e71590de86f66c524c
