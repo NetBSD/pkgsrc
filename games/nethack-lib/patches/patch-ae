@@ -1,13 +1,13 @@
-$NetBSD: patch-ae,v 1.4 2003/03/01 21:12:50 pooka Exp $
+$NetBSD: patch-ae,v 1.5 2008/05/20 19:47:16 tnn Exp $
 
---- sys/unix/Makefile.doc.orig	2003-02-23 16:43:39.000000000 +0200
-+++ sys/unix/Makefile.doc	2003-03-01 16:36:19.000000000 +0200
-@@ -38,7 +38,7 @@
+--- sys/unix/Makefile.doc.orig	2003-12-08 00:39:13.000000000 +0100
++++ sys/unix/Makefile.doc
+@@ -41,7 +41,7 @@ Guidebook.dvi:	Guidebook.tex
  
  
  GAME	= nethack
 -MANDIR	= /usr/man/man6
-+MANDIR	= $(PREFIX)/man/man6
++MANDIR	= $(PREFIX)/$(PKGMANDIR)/man6
  MANEXT	= 6
  
  # manual installation for most BSD-style systems
