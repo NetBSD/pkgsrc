@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/03/04 06:59:05 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2008/05/20 20:27:00 tnn Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
 PKGNAME=	quake3server-1.32b
@@ -17,6 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gtar
 EXTRACT_CMD=	${SED} '1,265d' ${DOWNLOADED_DISTFILE} | ${GTAR} xzf -
+NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}
 BASEDOCDIR=	${PREFIX}/share/doc/lokigames/quake3server
