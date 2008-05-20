@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.44 2008/04/29 14:14:10 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2008/05/20 11:43:59 wiz Exp $
 
-DISTNAME=	wesnoth-1.4.1
+DISTNAME=	wesnoth-1.4.2
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wesnoth/}
 EXTRACT_SUFX=	.tar.bz2
@@ -30,14 +30,15 @@ USE_TOOLS+=		perl:run msgfmt
 REPLACE_PYTHON=		data/ais/documentation.py
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	post-build
-SUBST_FILES.python=	data/ais/sample.py
-SUBST_FILES.python+=	data/ais/bruteforce.py
+SUBST_FILES.python=	data/ais/bruteforce.py
+SUBST_FILES.python+=	data/ais/documentation.py
+SUBST_FILES.python+=	data/ais/sample.py
 SUBST_FILES.python+=	data/campaigns/Descent_Into_Darkness/ais/kamikaze.py
 SUBST_FILES.python+=	data/tools/scoutDefault.py
 SUBST_MESSAGE.python=	Fixing path to python.
 # Best we can do without pulling in a python dependency.
-SUBST_SED.python+=	-e 's,WPY,${PREFIX}/bin/python2.4,'
-SUBST_SED.python+=	-e 's,/bin/env.*python,${PREFIX}/bin/python2.4,'
+SUBST_SED.python+=	-e 's,WPY,${PREFIX}/bin/python2.5,'
+SUBST_SED.python+=	-e 's,/bin/env.*python,${PREFIX}/bin/python2.5,'
 
 REPLACE_RUBY=		data/tools/terrain2wiki.rb
 .include "../../lang/ruby/replace.mk"
