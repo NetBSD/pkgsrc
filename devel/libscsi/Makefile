@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/01/07 09:13:51 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2008/05/20 20:42:04 tnn Exp $
 #
 
 DISTNAME=	libscsi-1.6
@@ -20,5 +20,7 @@ MAKE_ENV+=	MANOWN=${MANOWN} MANGRP=${MANGRP}
 MANCOMPRESSED_IF_MANZ=	yes
 
 INSTALLATION_DIRS=	include lib ${PKGMANDIR}/cat3 ${PKGMANDIR}/man3
+
+BUILDLINK_TRANSFORM+=	rm:-Werror
 
 .include "../../mk/bsd.pkg.mk"
