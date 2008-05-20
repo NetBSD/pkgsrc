@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1095 2008/05/20 13:42:19 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.1096 2008/05/20 13:47:23 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1865,3 +1865,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/png to 1.2.29 [wiz 2008-05-20]
 	Updated audio/libid3tag to 0.15.1bnb2 [simonb 2008-05-20]
 	Removed graphics/sodipodi successor graphics/inkscape [tnn 2008-05-20]
+	Updated www/py-django to 0.96.1nb1 [joerg 2008-05-20]
