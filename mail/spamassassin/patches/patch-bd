@@ -1,0 +1,41 @@
+$NetBSD: patch-bd,v 1.1 2008/05/20 05:42:46 ghen Exp $
+
+Updated sa-update PGP key to fix GnuGP 1.4.9 "cross-certified" error,
+see http://wiki.apache.org/spamassassin/SaUpdateKeyNotCrossCertified
+
+--- rules/sa-update-pubkey.txt.orig	2008-01-05 22:11:39.000000000 +0100
++++ rules/sa-update-pubkey.txt
+@@ -52,8 +52,31 @@ NvzB1i9yubAMrsTQVu1Q8e5LsnL/MNYKb6oEJbBy
+ VNqX9f7jlybpLZW/n8cQ2r1ax19v7FleO/xSGvkYm7B1+4BW0mjy6A5dta5+e5WG
+ D5R06Uya3/xRAPGdmV6t4Mw8fFsuyCvs+vC73PR3+eS1UvCYsDpcQD8KpVBnsHaA
+ duWRKKhjuFL0vdOWAr25tFOTKAj5Ywas47PBukO0isov2WBCA1rVqOr6FUvdP76y
+-mqHv/0E6/vnTLxFoNsu4Ce42nAQ/A/jR
+-=SY0J
++mqHv/0E6/vnTLxFoNsu4Ce42nAQ/A/jRiQQ+BBgBAgAJAhsCBQJHhbheAinBXSAE
++GQECAAYFAkOnbIoACgkQbFU5eCT0NM68MQ/8DvYqxRm3vP0Gwnr+63kzET8S+6vf
++gxOghnU+eMlqUeUu/ajqnVDMzoAIRDw9QgQc9ZZoklOSJQwOuloAbdpL4TwQ2XfJ
++MLU60JkZWnEOXJwClb0qG1GqtcBPbMEUPfZcQfphdRL3jpWZlaexFiJRSD+A0riw
++7q3NZKPDt4FrF7F3GY9krFy+P0nRt5f462DeDhCYZgguBQH+oGtjc5Hx+kOVWDsS
++txo5xkt4/0DG50ZklPkTlCohmJwRLACy+NswdQ9q83eWAhzKOPgkal7xF6a+LyE+
++ytVYy2EgEU74r2gVw5iizy92FDj//Z2QAUyf/c4BMuAhvfwVIHd8n2DPHvpMP15L
++6fwoymh0OjzmhwK94Z2u1YqNC1CK27/hfB6okQ/Tct7/Ik61dBjtiYdUC9tTA5Ze
++W8X5ouSmttS1QFixx+Z4hiXV7Qj12lgVKuJohjrVshfcbVzTHljjAo3YkOZIHIoA
++IJTUMRNzTIx9k4hrPVbxbVQhKjKTwFNtBuxvmptGTcLEIv9THpqlq8jkcStJ2Zrd
++hhofPCWRT/Kzo+WE+Kgefv88T5Li7Ku12U/UpiK85+6nRspXj3rnkfDOUbLZjGM+
++1NET0xQTPuyxN6CXF7MMxfGCpszCudYxMANDQqNXu9brcPN/+EIxGRjqin4E7q+h
++kYUaY7Ki8mXtJ8cJEEBWphpSROxFktcQALWQv996bFq1iFcGuQ0ITxNDlOWCsses
++bgEM5zR10DH+6s2bXEO8xyDHQJtrvdCPetRDosnuOToBMnGMXTYVytnWzwwAzwq1
++YM+bGAeTHaIX+2UmxwFyX4GMOdqsNB+xDZ8pmRKjamJSgUQt6e18YpZlg1Y4QkxS
++Vptq7OZBjiKeLUhLhGJ6GWgEIedLcoCtFzKCfz3zwn0Oxl+1EnVu8yqN+quWTf8P
++7EZn+0ztqZY059BrcK2jmOyXvtOZBcAHXCUknh/uPHwAJV2WFWSNid2kNiLOrV+J
++3eLTs5sF9wNhxWRhl6/10cwTzjy0Onv5cJh2tjdwksigMRMwz4c839zXORni/tnY
+++IY22kNTKu84gB8rBuqUq8MQXNdS3bbROwwNUzpC0D1C1z1fBvyXDL1EwJdz70Wc
++2m/Sw6tIid5g98+XMW+Ibt43Jk2XbK71JLhbVbePbAcHVh/UXEtnjhRfX7oyWlwS
++a+lkKMiJd/6CQ6bvYsgklE7uEzTpRskpkkOcCk1O+8jfl+DsDwKrvVaNu8tpx45k
++TtV4JDA6iEHKakD/zZdVTR79W2CFqBvRfRikc5INOl1OfMQ4ODmjkMl3yI9wrHwS
++SQQxdq2XsS7xbU9HDFBEguQDu0rfzILZ9DuKIVHyr/CsRoJ5joj+JvKaUQC81ywQ
++aB8EKy5bg4U6
++=IbYW
+ -----END PGP PUBLIC KEY BLOCK-----
+ 
+ 
