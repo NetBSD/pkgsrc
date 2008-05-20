@@ -1,4 +1,4 @@
-/*	$NetBSD: plist.c,v 1.17.4.1 2008/04/26 17:44:23 joerg Exp $	*/
+/*	$NetBSD: plist.c,v 1.17.4.2 2008/05/20 15:00:44 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: plist.c,v 1.24 1997/10/08 07:48:15 charnier Exp";
 #else
-__RCSID("$NetBSD: plist.c,v 1.17.4.1 2008/04/26 17:44:23 joerg Exp $");
+__RCSID("$NetBSD: plist.c,v 1.17.4.2 2008/05/20 15:00:44 joerg Exp $");
 #endif
 #endif
 
@@ -428,7 +428,8 @@ write_plist(package_t *pkg, FILE * fp, char *realprefix)
  * Like write_plist, but compute memory string.
  */
 void
-stringify_plist(package_t *pkg, char **real_buf, size_t *real_len, char *realprefix)
+stringify_plist(package_t *pkg, char **real_buf, size_t *real_len,
+    const char *realprefix)
 {
 	plist_t *p;
 	const cmd_t *cmdp;
