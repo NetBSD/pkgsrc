@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.5 2008/05/19 10:42:41 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.6 2008/05/20 15:00:44 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.5 2008/05/19 10:42:41 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.6 2008/05/20 15:00:44 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -77,7 +77,6 @@ struct pkg_task {
 	char *pkgname;
 
 	const char *prefix;
-	const char *install_prefix;
 
 	char *logdir;
 	char *other_version;
@@ -245,9 +244,19 @@ pkg_parse_plist(struct pkg_task *pkg)
 		warnx("Invalid PLIST: missing @cwd");
 		return -1;
 	}
-	/* XXX change first @cwd in PLIST? */
-	pkg->prefix = p->name;
-	pkg->install_prefix = Prefix != NULL ? Prefix : pkg->prefix;
+
+	if (Prefix != NULL &&
+	    strcmp(p->name, Prefix) != 0) {
+		size_t len;
+
+		delete_plist(&pkg->plist, FALSE, PLIST_CWD, NULL);
+		add_plist_top(&pkg->plist, PLIST_CWD, Prefix);
+		free(pkg->meta_data.meta_contents);
+		stringify_plist(&pkg->plist, &pkg->meta_data.meta_contents, &len,
+		    Prefix);
+		pkg->prefix = Prefix;
+	} else
+		pkg->prefix = p->name;
 
 	return 0;
 }
@@ -563,13 +572,13 @@ extract_files(struct pkg_task *pkg)
 	if (Fake)
 		return 0;
 
-	if (mkdir_p(pkg->install_prefix)) {
-		warn("Can't create prefix: %s", pkg->install_prefix);
+	if (mkdir_p(pkg->prefix)) {
+		warn("Can't create prefix: %s", pkg->prefix);
 		return -1;
 	}
 
-	if (chdir(pkg->install_prefix) == -1) {
-		warn("Can't change into prefix: %s", pkg->install_prefix);
+	if (chdir(pkg->prefix) == -1) {
+		warn("Can't change into prefix: %s", pkg->prefix);
 		return -1;
 	}
 
@@ -603,7 +612,7 @@ extract_files(struct pkg_task *pkg)
 				    p->name, archive_entry_pathname(pkg->entry));
 				goto out;
 			}
-			if (asprintf(&fullpath, "%s/%s", pkg->install_prefix, p->name) == -1) {
+			if (asprintf(&fullpath, "%s/%s", pkg->prefix, p->name) == -1) {
 				warnx("asprintf failed");
 				goto out;
 			}
@@ -614,7 +623,7 @@ extract_files(struct pkg_task *pkg)
 			break;
 
 		case PLIST_CMD:
-			if (format_cmd(cmd, sizeof(cmd), p->name, pkg->install_prefix, last_file))
+			if (format_cmd(cmd, sizeof(cmd), p->name, pkg->prefix, last_file))
 				return -1;
 			printf("Executing '%s'\n", cmd);
 			if (!Fake && system(cmd))
@@ -812,7 +821,7 @@ run_install_script(struct pkg_task *pkg, const char *argument)
 	if (pkg->meta_data.meta_install == NULL || NoInstall)
 		return 0;
 
-	setenv(PKG_PREFIX_VNAME, pkg->install_prefix, 1); /* XXX or prefix? */
+	setenv(PKG_PREFIX_VNAME, pkg->prefix, 1);
 	setenv(PKG_METADATA_DIR_VNAME, pkg->logdir, 1);
 	setenv(PKG_REFCOUNT_DBDIR_VNAME, pkgdb_refcount_dir(), 1);
 
@@ -905,7 +914,7 @@ check_implicit_conflict(struct pkg_task *pkg)
 		} else if (p->type != PLIST_FILE)
 			continue;
 
-		if (asprintf(&fullpath, "%s/%s", pkg->install_prefix, p->name) == -1) {
+		if (asprintf(&fullpath, "%s/%s", pkg->prefix, p->name) == -1) {
 			warnx("asprintf failed");
 			status = -1;
 			break;
@@ -1052,12 +1061,12 @@ start_replacing(struct pkg_task *pkg)
 
 	if (Verbose || Fake) {
 		printf("%s/pkg_delete -K %s -p %s '%s'\n",
-			BINDIR, _pkgdb_getPKGDB_DIR(), pkg->install_prefix,
+			BINDIR, _pkgdb_getPKGDB_DIR(), pkg->prefix,
 			pkg->other_version);
 	}
 	if (!Fake)
 		fexec(BINDIR "/pkg_delete", "-K", _pkgdb_getPKGDB_DIR(),
-		    "-p", pkg->install_prefix,
+		    "-p", pkg->prefix,
 		    pkg->other_version, NULL);
 
 	/* XXX Check return value and do what? */
@@ -1165,7 +1174,7 @@ pkg_do(const char *pkgpath, int mark_automatic)
 		warnx("mtree specification in pkg `%s' ignored", pkg->pkgname);
 
 	if (pkg->meta_data.meta_views != NULL) {
-		if ((pkg->logdir = strdup(pkg->install_prefix)) == NULL)
+		if ((pkg->logdir = strdup(pkg->prefix)) == NULL)
 			err(EXIT_FAILURE, "strdup failed");
 		_pkgdb_setPKGDB_DIR(dirname_of(pkg->logdir));
 	} else {
