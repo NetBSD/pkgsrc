@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.768 2008/03/06 08:51:36 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.769 2008/05/21 20:16:19 abs Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -6064,7 +6064,8 @@ sub checklines_package_Makefile_varorder($) {
 		],
 		[ "Unsorted stuff, part 2", once,
 			[
-				[ "MAINTAINER", once ],
+				[ "MAINTAINER", optional ],
+				[ "OWNER", optional ],
 				[ "HOMEPAGE", optional ],
 				[ "COMMENT", once ],
 			]
