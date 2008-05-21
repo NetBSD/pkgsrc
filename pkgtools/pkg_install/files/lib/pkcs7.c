@@ -1,4 +1,4 @@
-/*	$NetBSD: pkcs7.c,v 1.1.2.1 2008/05/11 20:20:38 joerg Exp $	*/
+/*	$NetBSD: pkcs7.c,v 1.1.2.2 2008/05/21 13:08:47 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -7,7 +7,7 @@
 #include <sys/cdefs.h>
 #endif
 
-__RCSID("$NetBSD: pkcs7.c,v 1.1.2.1 2008/05/11 20:20:38 joerg Exp $");
+__RCSID("$NetBSD: pkcs7.c,v 1.1.2.2 2008/05/21 13:08:47 joerg Exp $");
 
 /*-
  * Copyright (c) 2004, 2008 The NetBSD Foundation, Inc.
@@ -51,6 +51,10 @@ __RCSID("$NetBSD: pkcs7.c,v 1.1.2.1 2008/05/11 20:20:38 joerg Exp $");
 #include <openssl/ui.h>
 
 #include "lib.h"
+
+#ifndef __UNCONST
+#define __UNCONST(a)	((void *)(unsigned long)(const void *)(a))
+#endif
 
 static STACK_OF(X509) *
 file_to_certs(const char *file)
