@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.1 2008/05/20 13:31:39 simonb Exp $
+$NetBSD: patch-ab,v 1.2 2008/05/21 09:42:13 tron Exp $
 
 Fix for initite loop bug in libid3tag-0.15.0b.
-http://cve.mitre.org/cgi-bin/cvename.cgi?name=3DCVE-2008-2109
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-2109
 
 --- field.c.orig	2004-01-23 20:41:32.000000000 +1100
 +++ field.c
