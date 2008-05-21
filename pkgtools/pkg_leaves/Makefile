@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/05/15 17:44:42 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/21 15:24:40 tnn Exp $
 
-DISTNAME=	pkg_leaves-1.0
+DISTNAME=	pkg_leaves-1.1
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
