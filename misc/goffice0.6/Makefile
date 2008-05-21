@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/05/21 10:57:40 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/21 15:36:47 drochner Exp $
 #
 
 DISTNAME=		goffice-0.6.4
@@ -29,7 +29,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.8.0
 .include "../../devel/libgsf/buildlink3.mk"
 BUILDLINK_API_DEPENDS.pango+=	pango>=1.8.1
 .include "../../devel/pango/buildlink3.mk"
-.include "../../devel/pcre/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 BUILDLINK_API_DEPENDS.libart+=	libart>=2.3.11
 .include "../../graphics/libart/buildlink3.mk"
