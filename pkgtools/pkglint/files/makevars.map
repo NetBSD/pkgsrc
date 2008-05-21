@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.181 2008/02/01 08:50:22 rillig Exp $
+# $NetBSD: makevars.map,v 1.182 2008/05/21 20:16:19 abs Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -482,6 +482,7 @@ OSVERSION_SPECIFIC	Yes [m:s,c:s]
 OS_VERSION		Version [$system]
 OVERRIDE_DIRDEPTH*	Integer [$package]
 OVERRIDE_GNU_CONFIG_SCRIPTS	Yes [$package]
+OWNER			Mail_Address [m:s,c:d]
 OWN_DIRS		List of Pathname [$package_list]
 OWN_DIRS_PERMS		List of ShellWord [$package_list]
 PAMBASE			Pathname [$system]
