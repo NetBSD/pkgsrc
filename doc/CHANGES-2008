@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1101 2008/05/21 09:39:26 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1102 2008/05/21 09:42:15 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1871,3 +1871,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/generate to 2.5 [darcy 2008-05-20]
 	Updated graphics/MesaLib to 7.0.3.3 [bjs 2008-05-21]
 	Updated textproc/enchant to 1.4.2 [wiz 2008-05-21]
+	Updated devel/fromcvs to 0.0.0.122 [wiz 2008-05-21]
