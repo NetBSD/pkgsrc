@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1116 2008/05/21 20:17:14 abs Exp $
+$NetBSD: CHANGES-2008,v 1.1117 2008/05/21 20:53:28 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1886,3 +1886,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/pkg_leaves to 1.1 [tnn 2008-05-21]
 	Updated benchmarks/bonnie++ to 1.03c [wiz 2008-05-21]
 	Updated pkgtools/pkglint to 4.86 [abs 2008-05-21]
+	Updated pkgtools/pkg_chk to 1.93 [dillo 2008-05-21]
