@@ -1,0 +1,73 @@
+$NetBSD: patch-ab,v 1.3 2008/05/21 16:13:46 gdt Exp $
+
+This patch is from upstream, at
+  http://launchpadlibrarian.net/11684452/mail-notification-5.0-eelfix.diff
+referenced from
+  https://bugs.launchpad.net/mail-notification/+bug/180400
+
+--- src/mn-maildir-mailbox-backend.c.orig	2008-01-04 17:03:57.000000000 +0100
++++ src/mn-maildir-mailbox-backend.c	2008-01-31 20:47:10.000000000 +0100
+@@ -161,7 +161,7 @@
+       {
+ 	char *filename;
+ 
+-	filename = eel_uri_get_basename(info_uri);
++	filename = mn_vfs_uri_get_basename(info_uri);
+ 	if (filename)
+ 	  {
+ 	    if (filename[0] != '.')
+--- src/mn-mh-mailbox-backend.c.orig	2008-01-04 17:03:57.000000000 +0100
++++ src/mn-mh-mailbox-backend.c	2008-01-31 20:46:49.000000000 +0100
+@@ -191,7 +191,7 @@
+       {
+ 	char *filename;
+ 
+-	filename = eel_uri_get_basename(info_uri);
++	filename = mn_vfs_uri_get_basename(info_uri);
+ 	if (filename)
+ 	  {
+ 	    if (! strcmp(filename, SEQUENCES_FILE) || mn_str_isnumeric(filename))
+--- src/mn-sylpheed-mailbox-backend.c.orig	2008-01-04 17:03:58.000000000 +0100
++++ src/mn-sylpheed-mailbox-backend.c	2008-01-31 20:46:57.000000000 +0100
+@@ -180,7 +180,7 @@
+       {
+ 	char *filename;
+ 
+-	filename = eel_uri_get_basename(info_uri);
++	filename = mn_vfs_uri_get_basename(info_uri);
+ 	if (filename)
+ 	  {
+ 	    /*
+--- src/mn-vfs.c.orig	2008-01-04 16:40:15.000000000 +0100
++++ src/mn-vfs.c	2008-01-31 20:45:31.000000000 +0100
+@@ -335,3 +335,21 @@
+   g_set_error(err, 0, 0, "%s", gnome_vfs_result_to_string(result));
+   return FALSE;
+ }
++
++char *
++mn_vfs_uri_get_basename (const char *text_uri)
++{
++  GnomeVFSURI *uri;
++  char *name;
++
++  g_return_val_if_fail(text_uri != NULL, NULL);
++
++  uri = gnome_vfs_uri_new(text_uri);
++  if (! uri)
++    return NULL;
++
++  name = gnome_vfs_uri_extract_short_name(uri);
++  gnome_vfs_uri_unref(uri);
++
++  return name;
++}
+--- src/mn-vfs.h.orig	2008-01-04 16:40:16.000000000 +0100
++++ src/mn-vfs.h	2008-01-31 20:45:42.000000000 +0100
+@@ -54,4 +54,6 @@
+ 
+ gboolean mn_vfs_result_to_g_error (GnomeVFSResult result, GError **err);
+ 
++char *mn_vfs_uri_get_basename (const char *text_uri);
++
+ #endif /* _MN_VFS_H */
