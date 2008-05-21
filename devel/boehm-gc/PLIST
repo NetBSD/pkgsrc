@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.9 2007/07/07 15:21:07 wiz Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/05/21 13:47:25 wiz Exp $
+include/gc.h
 include/gc/gc.h
 include/gc/gc_allocator.h
 include/gc/gc_amiga_redirects.h
@@ -11,6 +12,7 @@ include/gc/gc_mark.h
 include/gc/gc_pthread_redirects.h
 include/gc/gc_tiny_fl.h
 include/gc/gc_typed.h
+include/gc/gc_version.h
 include/gc/leak_detector.h
 include/gc/new_gc_alloc.h
 include/gc/private/gc_hdrs.h
@@ -18,6 +20,7 @@ include/gc/private/gc_locks.h
 include/gc/private/gc_priv.h
 include/gc/private/gcconfig.h
 include/gc/weakpointer.h
+include/gc_cpp.h
 lib/libcord.la
 lib/libgc.la
 lib/libgccpp.la

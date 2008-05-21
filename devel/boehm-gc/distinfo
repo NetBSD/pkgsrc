@@ -1,10 +1,9 @@
-$NetBSD: distinfo,v 1.34 2008/03/03 16:27:41 tnn Exp $
+$NetBSD: distinfo,v 1.35 2008/05/21 13:47:25 wiz Exp $
 
-SHA1 (gc-7.0.tar.gz) = 657d84b702a572f8a510d2c28578a6dbaad3fed2
-RMD160 (gc-7.0.tar.gz) = 4912e2590dd8212bebeeb1e32506762ca31d0088
-Size (gc-7.0.tar.gz) = 1072682 bytes
+SHA1 (gc-7.1.tar.gz) = e84cba5d18f4ea5ed4e5fd3f1dc6a46bc190ff6f
+RMD160 (gc-7.1.tar.gz) = 9338c1128686395739e3acd9052a651d1dffffb2
+Size (gc-7.1.tar.gz) = 1077714 bytes
 SHA1 (patch-aa) = 87a5bd5e83b0201d80a1e4e4ce6745c11b2e7cfe
-SHA1 (patch-ab) = 99795ee73356e90be3fd721a89a6a38efcf209bf
-SHA1 (patch-ac) = 64c0f042a1ed7488158d49c77bab0330537d9e96
+SHA1 (patch-ab) = 9b5133c7aa84e6824616e29613716a2fedd1d334
 SHA1 (patch-ad) = 893b5146db0d9f82ec95acd7e217f3d910e33ea0
 SHA1 (patch-af) = 80f1b9b136f808db1b227b70801ffa378abd07c7
