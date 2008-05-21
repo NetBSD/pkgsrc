@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.52 2008/05/01 15:37:13 bjs Exp $
+$NetBSD: distinfo,v 1.53 2008/05/21 04:11:37 bjs Exp $
 
 SHA1 (Mesa-7.0.3/Mesa-7.0.3-001) = 32725fd4632d51495253b06786b3f0e743d11dbd
 RMD160 (Mesa-7.0.3/Mesa-7.0.3-001) = 92b1e1d3eb3932a419c6d1fb9e7b96ef5c32fd1a
@@ -6,6 +6,9 @@ Size (Mesa-7.0.3/Mesa-7.0.3-001) = 12578 bytes
 SHA1 (Mesa-7.0.3/Mesa-7.0.3-002) = 9fcdeb76d4cf44f0aeadff48bf7c48335773a2c0
 RMD160 (Mesa-7.0.3/Mesa-7.0.3-002) = 63b568f9c3f0e09cf53de064aee3350b4f96ee2d
 Size (Mesa-7.0.3/Mesa-7.0.3-002) = 639 bytes
+SHA1 (Mesa-7.0.3/Mesa-7.0.3-003) = d514fc54a8002983e16e38506253caed68470f39
+RMD160 (Mesa-7.0.3/Mesa-7.0.3-003) = 380c8929b520f597d618c69b014efa12a9c11e2f
+Size (Mesa-7.0.3/Mesa-7.0.3-003) = 10876 bytes
 SHA1 (Mesa-7.0.3/MesaDemos-7.0.3.tar.bz2) = c8dfef08f3b3f7abc70d99e16a35b0bbc1af4f8a
 RMD160 (Mesa-7.0.3/MesaDemos-7.0.3.tar.bz2) = 22917fbab3987e1d60d46321e1a77d5cbdd3800c
 Size (Mesa-7.0.3/MesaDemos-7.0.3.tar.bz2) = 1342158 bytes
