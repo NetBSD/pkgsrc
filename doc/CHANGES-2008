@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1112 2008/05/21 15:15:21 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1113 2008/05/21 15:23:19 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1882,3 +1882,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/links-gui to 2.1.0.36 [wiz 2008-05-21]
 	Updated net/mldonkey to 2.9.5 [wiz 2008-05-21]
 	Updated net/mldonkey-gui to 2.9.5 [wiz 2008-05-21]
+	Updated security/gsasl to 0.2.26 [obache 2008-05-21]
