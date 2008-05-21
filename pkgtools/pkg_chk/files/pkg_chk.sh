@@ -1,10 +1,11 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.57 2008/05/02 19:10:26 apb Exp $
+# $Id: pkg_chk.sh,v 1.58 2008/05/21 20:52:31 dillo Exp $
 #
 # TODO: Make -g check dependencies and tsort
-# TODO: Variation of -g which only lists top level packages
-# TODO: List top level packages installed but not in config
+# TODO: Make -g list user-installed packages first, followed by commented
+#	out automatically installed packages
+# TODO: List user-installed packages that are not in config
 
 PATH=${PATH}:/usr/sbin:/usr/bin
 
@@ -254,7 +255,7 @@ get_bin_pkg_info()
     {
     summary_file=$PACKAGES/$SUMMARY_FILE
     if [ -f $summary_file ] ; then
-	if [ -z "$(find $PACKAGES -type f -newer $summary_file)" ] ; then
+	if [ -z "$(find $PACKAGES -type f -newer $summary_file -name '*.t[bg]z')" ] ; then
 	    zcat $summary_file
 	    return;
 	fi
@@ -543,6 +544,7 @@ pkg_install()
     FAIL=
     if [ -d $PKG_DBDIR/$PKGNAME ];then
 	msg "$PKGNAME installed in previous stage"
+	run_cmd_su "${PKG_ADMIN} unset automatic $PKGNAME"
     elif [ -n "$opt_b" ] && is_binary_available $PKGNAME; then
 	if [ -n "$saved_PKG_PATH" ] ; then
 	    export PKG_PATH=$saved_PKG_PATH
