@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1103 2008/05/21 09:44:21 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1104 2008/05/21 10:57:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1873,3 +1873,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/enchant to 1.4.2 [wiz 2008-05-21]
 	Updated devel/fromcvs to 0.0.0.122 [wiz 2008-05-21]
 	Updated devel/ruby-rcsparse to 0.0.0.42 [wiz 2008-05-21]
+	Updated misc/goffice0.6 to 0.6.4 [wiz 2008-05-21]
