@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1102 2008/05/21 09:42:15 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1103 2008/05/21 09:44:21 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1872,3 +1872,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/MesaLib to 7.0.3.3 [bjs 2008-05-21]
 	Updated textproc/enchant to 1.4.2 [wiz 2008-05-21]
 	Updated devel/fromcvs to 0.0.0.122 [wiz 2008-05-21]
+	Updated devel/ruby-rcsparse to 0.0.0.42 [wiz 2008-05-21]
