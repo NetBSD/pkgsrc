@@ -32,10 +32,15 @@ skip_manual=yes
 
 usage()
 {
-	echo "$0 [-a] [-K pkg_dbdir]"
-	echo "Print all automatically installed leaf packages."
-	echo "If -a is specified, print all leaf packages."
-	exit 1
+cat << EOF
+usage: $(basename "$0") [-a] [-K pkg_dbdir]
+       Prints all automatically installed leaf packages.
+
+  -a            Print all leaf packages, including manually installed ones.
+  -K <dir>      Specify alternate package database (default: ${PKG_DBDIR})
+
+EOF
+exit 1
 }
 
 while [ $# -gt 0 ] ; do
@@ -48,6 +53,9 @@ while [ $# -gt 0 ] ; do
 		PKG_DBDIR="$2"
 		shift
 		shift
+		;;
+	*)
+		usage
 		;;
 	esac
 done
