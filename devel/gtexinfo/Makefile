@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2008/03/05 22:26:46 jlam Exp $
+# $NetBSD: Makefile,v 1.71 2008/05/21 12:30:16 tnn Exp $
 
 DISTNAME=		texinfo-4.11
 PKGNAME=		g${DISTNAME}
@@ -35,6 +35,13 @@ PLIST_SRC+=		${PKGDIR}/PLIST.locale
 .else
 CONFIGURE_ARGS+=	--disable-nls
 .endif
+
+SUBST_CLASSES+=		macro
+SUBST_STAGE.macro=	pre-configure
+SUBST_MESSAGE.macro=	Replacing use of __ macro.
+SUBST_FILES.macro=	makeinfo/*.c makeinfo/makeinfo.h
+SUBST_SED.macro=	-e 's,\#define __(s) getdocumenttext(s),,'
+SUBST_SED.macro+=	-e 's,__(",getdocumenttext(",g'
 
 .include "../../mk/termcap.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
