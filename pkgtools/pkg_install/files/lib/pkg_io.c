@@ -1,4 +1,4 @@
-/*	$NetBSD: pkg_io.c,v 1.1.2.1 2008/04/26 17:44:23 joerg Exp $	*/
+/*	$NetBSD: pkg_io.c,v 1.1.2.2 2008/05/21 20:29:24 joerg Exp $	*/
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
  * All rights reserved.
@@ -36,7 +36,7 @@
 #include <sys/cdefs.h>
 #endif
 
-__RCSID("$NetBSD: pkg_io.c,v 1.1.2.1 2008/04/26 17:44:23 joerg Exp $");
+__RCSID("$NetBSD: pkg_io.c,v 1.1.2.2 2008/05/21 20:29:24 joerg Exp $");
 
 #include <archive.h>
 #include <archive_entry.h>
@@ -165,7 +165,7 @@ strip_suffix(char *filename)
 static int
 find_best_package(struct url *url, const char *pattern, struct url **best_url)
 {
-	char *cur_match, *best_match = NULL;
+	char *cur_match, *url_pattern, *best_match = NULL;
 	struct url_list ue;
 	size_t i;
 
@@ -180,11 +180,24 @@ find_best_package(struct url *url, const char *pattern, struct url **best_url)
 		return -1;
 	}
 
+	for (i = 0; pattern[i] != '\0'; ++i) {
+		if (!isalnum((unsigned char)(pattern[i])) &&
+		    (pattern[i]) != '-')
+			break;
+	}
+	if (asprintf(&url_pattern, "%*.*s*", (int)i, (int)i, pattern) == -1) {
+		free(best_match);
+		return -1;
+	}
+
 	fetchInitURLList(&ue);
-	if (fetchList(&ue, url, NULL, "")) {
+	if (fetchList(&ue, url, url_pattern, "")) {
+		free(url_pattern);
 		fetchFreeURLList(&ue);
 		return -1;
 	}
+	free(url_pattern);
+
 	for (i = 0; i < ue.length; ++i) {
 		cur_match = fetchUnquoteFilename(ue.urls + i);
 
