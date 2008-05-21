@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2008/01/19 09:16:26 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2008/05/21 11:11:52 drochner Exp $
 
-DISTNAME=	transfig.3.2.5_alpha7
-PKGNAME=	transfig-3.2.5alpha7
-PKGREVISION=	2
+DISTNAME=	transfig.3.2.5
+PKGNAME=	transfig-3.2.5
 CATEGORIES=	graphics print
 MASTER_SITES=	ftp://epb.lbl.gov/xfig/alpha/
 
@@ -25,6 +24,9 @@ USE_TOOLS+=		gmake
 .endif
 
 MAKE_ENV+=		ICONVLIBS="${BUILDLINK_LDADD.iconv}"
+
+# fig2ps2tex needs csh which might not be present on eg. Linux
+CHECK_INTERPRETER_SKIP=	bin/fig2ps2tex
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
