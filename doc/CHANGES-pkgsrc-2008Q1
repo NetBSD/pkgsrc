@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.55 2008/05/21 13:02:17 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.56 2008/05/21 16:20:51 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -124,3 +124,5 @@ pullup ticket 2386 - requested by tonnerre
 blender: security fix
 Pullup ticket 2391 - requested by joerg
 lighttpd: security fix
+Pullup ticket 2394 - requested by ghen
+thunderbird, thunderbird-gtk1: security update
