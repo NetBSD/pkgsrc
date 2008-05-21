@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.7 2008/02/20 09:56:44 xtraeme Exp $
+$NetBSD: patch-ae,v 1.8 2008/05/21 19:21:33 tonio Exp $
 
 --- mpeg3io.c.orig	2005-05-01 07:57:56.000000000 +0200
 +++ mpeg3io.c	2008-02-19 19:25:09.000000000 +0100
-@@ -1,11 +1,27 @@
+@@ -1,11 +1,29 @@
  #include "mpeg3private.h"
  #include "mpeg3protos.h"
  
@@ -12,14 +12,16 @@ $NetBSD: patch-ae,v 1.7 2008/02/20 09:56:44 xtraeme Exp $
  #include <string.h>
 -#include <sys/stat.h>
 +
-+#if defined(__NetBSD__) || defined(__DragonFly__)
++#if defined(__NetBSD__) || defined(__DragonFly__) || (defined(__APPLE__) && defined(__MACH__))
 +# include <sys/param.h>
 +# include <sys/mount.h>
 +
-+# if defined(__NetBSD__) && __NetBSD_Version__ >= 299000900   /* 2.99.9 */
++# if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900 /* 2.99.9 */) || (defined(__APPLE__) && defined(__MACH__) /* MacOSX */)
 +#  define fopen64 fopen
 +#  define fseeko64 fseek
 +#  define stat64 stat
++# endif
++# if defined(__NetBSD__) && __NetBSD_Version__ >= 299000900 /* 2.99.9 */
 +#  define statfs statvfs
 +# endif
 +
@@ -36,7 +38,7 @@ $NetBSD: patch-ae,v 1.7 2008/02/20 09:56:44 xtraeme Exp $
  
  int mpeg3io_device(char *path, char *device)
  {
-+#if defined(__NetBSD__) || defined(__DragonFly__)
++#if defined(__NetBSD__) || defined(__DragonFly__) || (defined(__APPLE__) && defined(__MACH__))
 +	struct statfs file_st;
 +
 +	if (statfs(path, &file_st) < 0)
@@ -53,7 +55,7 @@ $NetBSD: patch-ae,v 1.7 2008/02/20 09:56:44 xtraeme Exp $
  		return 1;
  	}
  
-+#if defined(__NetBSD__) || defined(__DragonFly__)
++#if defined(__NetBSD__) || defined(__DragonFly__) || (defined(__APPLE__) && defined(__MACH__))
 +	strncpy(device, file_st.f_mntfromname, MPEG3_STRLEN);
 +#else
  	fp = setmntent(MOUNTED, "r");
