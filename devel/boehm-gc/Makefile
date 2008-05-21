@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.60 2008/03/03 16:27:41 tnn Exp $
+# $NetBSD: Makefile,v 1.61 2008/05/21 13:47:25 wiz Exp $
 
-DISTNAME=	gc-7.0
+DISTNAME=	gc-7.1
 PKGNAME=	${DISTNAME:S/gc/boehm-gc/}
-PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/
 
@@ -37,13 +36,6 @@ EXTRACT_ELEMENTS=	-u
 .if ${MACHINE_ARCH} == "mipsel"
 CFLAGS+=		-D__MIPSEL__
 .endif
-
-post-extract:
-	${MV} ${WRKSRC}/doc/gc.man ${WRKSRC}/doc/gc.man.in
-
-pre-build:
-	${SED}	-e "s|@PREFIX@|${PREFIX}|g"				\
-		${WRKSRC}/doc/gc.man.in > ${WRKSRC}/doc/gc.man
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/doc/gc.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/gc.3
