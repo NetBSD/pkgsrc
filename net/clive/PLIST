@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/04/26 01:23:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/05/21 13:50:30 wiz Exp $
 bin/clive
 ${PYSITELIB}/clive/__init__.py
 ${PYSITELIB}/clive/__init__.pyc
@@ -42,6 +42,9 @@ ${PYSITELIB}/clive/recall.pyo
 ${PYSITELIB}/clive/rss.py
 ${PYSITELIB}/clive/rss.pyc
 ${PYSITELIB}/clive/rss.pyo
+${PYSITELIB}/clive/scan.py
+${PYSITELIB}/clive/scan.pyc
+${PYSITELIB}/clive/scan.pyo
 ${PYSITELIB}/clive/update.py
 ${PYSITELIB}/clive/update.pyc
 ${PYSITELIB}/clive/update.pyo
