@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2008/03/06 14:53:53 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2008/05/21 15:22:56 obache Exp $
 
-DISTNAME=	gsasl-0.2.21
-PKGREVISION=	1
+DISTNAME=	gsasl-0.2.26
 CATEGORIES=	security
 MASTER_SITES=	http://josefsson.org/gsasl/releases/ \
 		ftp://alpha.gnu.org/pub/gnu/gsasl/
@@ -10,12 +9,14 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gsasl/
 COMMENT=	GNU implementation of the Simple Authentication and Security Layer
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		msgfmt pkg-config
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--disable-gtk-doc
-CONFIGURE_ARGS+=	--enable-gssapi=${GSSIMPL.${KRB5_TYPE}}
+CONFIGURE_ARGS+=	--with-gssapi-impl=${GSSIMPL.${KRB5_TYPE}}
 CONFIGURE_ARGS+=	--with-html-dir=${PREFIX}/share/doc/html
 CONFIGURE_ARGS+=	--with-libgcrypt
 GSSIMPL.heimdal=	heimdal
