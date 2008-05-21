@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.7 2008/05/21 04:11:37 bjs Exp $
+# $NetBSD: hacks.mk,v 1.8 2008/05/21 05:58:52 bjs Exp $
 
 .if !defined(MESALIBS_HACKS_MK)
 MESALIBS_HACKS_MK=	# defined
@@ -17,8 +17,10 @@ post-wrapper:
 .include "../../mk/compiler.mk"
 ###
 ### Ordinarily, this is defined by the build.  However, in pkgsrc,
-### policy dictates that we do it here.  Let's trust a semi-modern
-### gcc with -ffast-math for now.
+### policy dictates that we do it here.  
+###
+### XXXbjs:  -ffast-math seems to cause instability, at least on amd64.
+###	      I have disabled it pending further testing.
 ###
 .  if !empty(CC_VERSION:Mgcc-[34]*)
 PKG_HACKS+=		no-strict-aliasing
