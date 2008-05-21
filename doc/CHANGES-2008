@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1108 2008/05/21 13:50:41 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1109 2008/05/21 14:00:54 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1878,3 +1878,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/shared-mime-info to 0.30 [wiz 2008-05-21]
 	Updated devel/boehm-gc to 7.1 [wiz 2008-05-21]
 	Updated net/clive to 0.4.13 [wiz 2008-05-21]
+	Updated www/links to 2.1.0.36 [wiz 2008-05-21]
