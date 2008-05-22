@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.56 2008/05/21 16:20:51 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.57 2008/05/22 14:02:26 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -126,3 +126,9 @@ Pullup ticket 2391 - requested by joerg
 lighttpd: security fix
 Pullup ticket 2394 - requested by ghen
 thunderbird, thunderbird-gtk1: security update
+Pullup ticket 2390 - requested by joerg
+security fix for py-django
+Pullup ticket 2393 - requested by drochner
+security fixes for libvorbis
+Pullup ticket 2395 - requested by tron
+security fix for mtr
