@@ -1,4 +1,4 @@
-# $NetBSD: bsd.checksum.mk,v 1.8 2008/01/04 01:46:26 rillig Exp $
+# $NetBSD: bsd.checksum.mk,v 1.9 2008/05/22 16:27:22 joerg Exp $
 #
 # This Makefile fragment is included by bsd.pkg.mk and defines the
 # relevant variables and targets for the "checksum" phase.
@@ -30,8 +30,10 @@
 # Package-settable variables:
 #
 # NO_CHECKSUM
-#	When defined, no checksums are generated for patches or
+#	When defined, no checksums are validated for patches or
 #	distfiles.
+#
+#	Note: This does not alter the behaviour of FAILOVER_FETCH.
 #
 #	Default value: undefined
 #
@@ -43,9 +45,4 @@ checksum checksum-phase distinfo makesum: fetch
 makedistinfo mdi: distinfo
 mps: makepatchsum
 
-.if defined(NO_CHECKSUM)
-checksum checksum-phase makesum makepatchsum mps mdi makedistinfo distinfo:
-	@${DO_NADA}
-.else
-.  include "checksum.mk"
-.endif
+.include "checksum.mk"
