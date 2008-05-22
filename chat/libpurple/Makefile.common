@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.16 2008/05/17 23:26:06 tnn Exp $
+# $NetBSD: Makefile.common,v 1.17 2008/05/22 10:11:57 tnn Exp $
 #
 # used by chat/finch/Makefile
 # used by chat/libpurple/Makefile
@@ -34,3 +34,4 @@ CONFIGURE_ARGS+=	--disable-nss
 CONFIGURE_ARGS+=	--disable-dbus
 CONFIGURE_ARGS+=	--disable-cyrus-sasl
 CONFIGURE_ARGS+=	--disable-debug
+CONFIGURE_ARGS+=	--disable-nm
