@@ -1,4 +1,4 @@
-.\" $NetBSD: mklivecd.8,v 1.20 2008/04/29 13:48:06 xtraeme Exp $
+.\" $NetBSD: mklivecd.8,v 1.21 2008/05/22 13:26:54 gson Exp $
 .\"
 .\" mklivecd - Make your own NetBSD/x86 Live CD-ROM/DVD-ROM
 .\"
@@ -528,6 +528,17 @@ This line is required in the kernel config file for
 the Live CD-ROM/DVD-ROM to boot correctly and without
 human interactivity, otherwise you'll have to enter
 the parameters manually when booting.
+If you use Grub, you will also need
+.Bd -literal -offset indent
+options INCLUDE_CONFIG_FILE
+.Ed
+.Pp
+because
+.Nm
+will run
+.Ic "config -x"
+on the kernel to determine
+whether the MULTIBOOT option is enabled.
 .Sh EXAMPLES
 Below are the minimal steps to create your own Live CD-ROM/DVD-ROM:
 .Bd -literal -offset indent
