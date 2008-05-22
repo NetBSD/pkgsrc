@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/13 17:44:06 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/22 19:04:37 tnn Exp $
 
-DISTNAME=	String-Random-0.21
+DISTNAME=	String-Random-0.22
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	perl5 security
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=String/}
 
 MAINTAINER=	adrianp@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/~steve/${DISTNAME}/
+HOMEPAGE=	http://search.cpan.org/dist/String-Random/
 COMMENT=	Perl module to generate random strings based on a pattern
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
