@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2008/05/22 13:18:55 drochner Exp $
+
+--- lib/driver/FreeBSD/freebsd.h.orig	2007-12-28 02:01:06.000000000 +0100
++++ lib/driver/FreeBSD/freebsd.h
+@@ -158,7 +158,7 @@ void get_drive_cap_freebsd_cam (const _i
+ 				cdio_drive_write_cap_t *p_write_cap,
+ 				cdio_drive_misc_cap_t  *p_misc_cap);
+ 
+-int get_media_changed_freebsd (const void *p_user_data);
++static int get_media_changed_freebsd (const void *p_user_data);
+ 
+ char *get_mcn_freebsd_ioctl (const _img_private_t *p_env);
+ 
