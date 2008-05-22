@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1120 2008/05/22 03:11:16 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1121 2008/05/22 11:45:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1890,3 +1890,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/tkdiff to 4.1.3 [tnn 2008-05-21]
 	Updated net/Transmission to 1.21 [tnn 2008-05-22]
 	Added devel/sunifdef version 3.1.3 [bjs 2008-05-22]
+	Updated devel/boehm-gc to 7.1nb1 [wiz 2008-05-22]
