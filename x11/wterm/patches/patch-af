@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.1 2008/05/22 12:30:44 tron Exp $
+
+--- src/main.c.orig	2001-08-17 05:47:41.000000000 +0100
++++ src/main.c	2008-05-22 13:20:38.000000000 +0100
+@@ -1444,8 +1444,10 @@
+ /*
+  * Open display, get options/resources and create the window
+  */
+-    if ((display_name = getenv("DISPLAY")) == NULL)
+-	display_name = ":0";
++    if ((display_name = getenv("DISPLAY")) == NULL) {
++	print_error("display not defined");
++	exit(EXIT_FAILURE);
++    }
+ 
+     get_options(argc, argv);
+ 
