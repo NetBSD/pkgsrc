@@ -1,34 +1,10 @@
-# $NetBSD: fetch.mk,v 1.33 2008/04/03 14:07:51 joerg Exp $
+# $NetBSD: fetch.mk,v 1.34 2008/05/22 16:27:22 joerg Exp $
 
 _MASTER_SITE_BACKUP=	${MASTER_SITE_BACKUP:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 _MASTER_SITE_OVERRIDE=	${MASTER_SITE_OVERRIDE:=${DIST_SUBDIR}${DIST_SUBDIR:D/}}
 
 # Where to put distfiles that don't have any other master site
 MASTER_SITE_LOCAL?=	${MASTER_SITE_BACKUP:=LOCAL_PORTS/}
-
-ALLFILES?=	${DISTFILES} ${PATCHFILES}
-ALLFILES:=	${ALLFILES:O:u}		# remove duplicates
-CKSUMFILES?=	${ALLFILES}
-.for __tmp__ in ${IGNOREFILES}
-CKSUMFILES:=	${CKSUMFILES:N${__tmp__}}
-.endfor
-
-# List of all files, with ${DIST_SUBDIR} in front.  Used for fetch and checksum.
-.if defined(DIST_SUBDIR) && !empty(DIST_SUBDIR)
-_CKSUMFILES?=	${CKSUMFILES:@.f.@${DIST_SUBDIR}/${.f.}@}
-_DISTFILES?=	${DISTFILES:@.f.@${DIST_SUBDIR}/${.f.}@}
-_IGNOREFILES?=	${IGNOREFILES:@.f.@${DIST_SUBDIR}/${.f.}@}
-_PATCHFILES?=	${PATCHFILES:@.f.@${DIST_SUBDIR}/${.f.}@}
-.else
-_CKSUMFILES?=	${CKSUMFILES}
-_DISTFILES?=	${DISTFILES}
-_IGNOREFILES?=	${IGNOREFILES}
-_PATCHFILES?=	${PATCHFILES}
-.endif
-_ALLFILES?=	${_DISTFILES} ${_PATCHFILES}
-_ALLFILES:=	${_ALLFILES:O:u}	# remove duplicates
-
-_BUILD_DEFS+=	_DISTFILES _PATCHFILES
 
 # Set up _ORDERED_SITES to work out the exact list of sites for every file,
 # using the dynamic sites script, or ordering according to the master site
