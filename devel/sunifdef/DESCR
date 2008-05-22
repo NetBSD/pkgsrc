@@ -1,0 +1,10 @@
+Sunifdef is a commandline tool for eliminating superfluous preprocessor
+clutter from C and C++ source files. It is a more powerful successor to
+the FreeBSD 'unifdef' tool.
+
+Sunifdef is most useful to developers of constantly evolving products with
+large code bases, where preprocessor conditionals are used to configure
+the feature sets, APIs or implementations of different releases. In these
+environments the code base steadily accumulates #ifdef pollution as
+transient configuration options become obselete. Sunifdef can largely
+automate the recurrent task of purging redundant #if logic from the code.
