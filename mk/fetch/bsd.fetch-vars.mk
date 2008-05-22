@@ -1,4 +1,4 @@
-# $NetBSD: bsd.fetch-vars.mk,v 1.9 2007/11/02 09:02:57 rillig Exp $
+# $NetBSD: bsd.fetch-vars.mk,v 1.10 2008/05/22 16:27:22 joerg Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -39,13 +39,30 @@ _DISTDIR=		${DISTDIR}/${DIST_SUBDIR}
 DEFAULT_DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 DISTFILES?=		${DEFAULT_DISTFILES}
 
-# "Failover" fetching requires the digest tool to compute checksums to
-# verify any fetched files.  But if no checksumming is requested, don't
-# add it.
-#
-.if defined(FAILOVER_FETCH) && !defined(NO_CHECKSUM)
-USE_TOOLS+=		${FAILOVER_FETCH:Ddigest\:bootstrap}
+# File lists, defined early to allow tool dependencies.
+ALLFILES?=	${DISTFILES} ${PATCHFILES}
+ALLFILES:=	${ALLFILES:O:u}		# remove duplicates
+CKSUMFILES?=	${ALLFILES}
+.for __tmp__ in ${IGNOREFILES}
+CKSUMFILES:=	${CKSUMFILES:N${__tmp__}}
+.endfor
+
+# List of all files, with ${DIST_SUBDIR} in front.  Used for fetch and checksum.
+.if defined(DIST_SUBDIR) && !empty(DIST_SUBDIR)
+_CKSUMFILES?=	${CKSUMFILES:@.f.@${DIST_SUBDIR}/${.f.}@}
+_DISTFILES?=	${DISTFILES:@.f.@${DIST_SUBDIR}/${.f.}@}
+_IGNOREFILES?=	${IGNOREFILES:@.f.@${DIST_SUBDIR}/${.f.}@}
+_PATCHFILES?=	${PATCHFILES:@.f.@${DIST_SUBDIR}/${.f.}@}
+.else
+_CKSUMFILES?=	${CKSUMFILES}
+_DISTFILES?=	${DISTFILES}
+_IGNOREFILES?=	${IGNOREFILES}
+_PATCHFILES?=	${PATCHFILES}
 .endif
+_ALLFILES?=	${_DISTFILES} ${_PATCHFILES}
+_ALLFILES:=	${_ALLFILES:O:u}	# remove duplicates
+
+_BUILD_DEFS+=	_DISTFILES _PATCHFILES
 
 # When mirroring distfiles which others may fetch, only fetch the
 # distfiles if it is allowed to be re-distributed freely.  Also,
@@ -54,4 +71,11 @@ USE_TOOLS+=		${FAILOVER_FETCH:Ddigest\:bootstrap}
 .if make(mirror-distfiles)
 NO_SKIP=		# defined
 _BOOTSTRAP_VERBOSE=	# defined
+.endif
+
+.if !empty(_CKSUMFILES)
+#USE_TOOLS+=	ftp:bootstrap
+.  if defined(FAILOVER_FETCH)
+USE_TOOLS+=	digest:bootstrap
+.  endif
 .endif

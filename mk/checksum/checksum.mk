@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.12 2007/10/09 19:19:13 martti Exp $
+# $NetBSD: checksum.mk,v 1.13 2008/05/22 16:27:22 joerg Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
@@ -6,7 +6,7 @@
 _DIGEST_ALGORITHMS?=		SHA1 RMD160
 _PATCH_DIGEST_ALGORITHMS?=	SHA1
 
-# These variables are set by pkgsrc/mk/fetch/fetch.mk.
+# These variables are set by pkgsrc/mk/fetch/bsd.fetch-vars.mk.
 #_CKSUMFILES?=	# empty
 #_IGNOREFILES?=	# empty
 
@@ -32,6 +32,10 @@ _CHECKSUM_CMD=								\
 		TEST=${TOOLS_TEST:Q}					\
 	${SH} ${PKGSRCDIR}/mk/checksum/checksum				\
 
+.if defined(NO_CHECKSUM)
+checksum checksum-phase:
+	@${DO_NADA}
+.else
 checksum checksum-phase:
 	${RUN} set -e;							\
 	case ${.TARGET:Q} in						\
@@ -45,6 +49,7 @@ checksum checksum-phase:
 		${ERROR_MSG} "\"${MAKE} NO_CHECKSUM=yes [other args]\"."; \
 		exit 1;							\
 	fi
+.endif
 
 _DISTINFO_CMD=	${SETENV} DIGEST=${TOOLS_DIGEST:Q} SED=${TOOLS_SED:Q}	\
 			TEST=${TOOLS_TEST:Q} WC=${TOOLS_WC:Q}		\
