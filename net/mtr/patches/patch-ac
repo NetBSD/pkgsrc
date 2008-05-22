@@ -1,0 +1,45 @@
+$NetBSD: patch-ac,v 1.3 2008/05/22 12:10:49 tron Exp $
+
+--- split.c.orig	2005-01-11 08:34:07.000000000 +0000
++++ split.c	2008-05-22 13:07:48.000000000 +0100
+@@ -100,24 +100,28 @@
+     addr = net_addr(at);
+     
+     if( addrcmp( (void *) addr, (void *) &unspec_addr, af ) != 0 ) {
++      int bytes;
+       name = dns_lookup(addr);
+       if(name != NULL) {
+ 	/* May be we should test name's length */
+-	sprintf(newLine, "%s %d %d %d %d %d %d", name,
+-		net_loss(at),
+-		net_returned(at), net_xmit(at),
+-		net_best(at) /1000, net_avg(at)/1000, 
+-		net_worst(at)/1000);
++	bytes = snprintf(newLine, sizeof(newLine), "%s %d %d %d %d %d %d",
++			 name,
++			 net_loss(at),
++			 net_returned(at), net_xmit(at),
++			 net_best(at) /1000, net_avg(at)/1000, 
++			 net_worst(at)/1000);
+       } else {
+-	sprintf(newLine, "%s %d %d %d %d %d %d", 
+-		strlongip( addr ),
+-		net_loss(at),
+-		net_returned(at), net_xmit(at),
+-		net_best(at) /1000, net_avg(at)/1000, 
+-		net_worst(at)/1000);
++	bytes = snprintf(newLine, sizeof(newLine), "%s %d %d %d %d %d %d", 
++			 strlongip( addr ),
++			 net_loss(at),
++			 net_returned(at), net_xmit(at),
++			 net_best(at) /1000, net_avg(at)/1000, 
++			 net_worst(at)/1000);
+       }
++      if (bytes < 0 || bytes >= sizeof(newLine))
++        strcpy(newLine, "???");
+     } else {
+-      sprintf(newLine, "???");
++      strcpy(newLine, "???");
+     }
+ 
+     if (strcmp(newLine, Lines[at]) == 0) {
