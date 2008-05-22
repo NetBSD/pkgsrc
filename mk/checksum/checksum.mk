@@ -1,4 +1,4 @@
-# $NetBSD: checksum.mk,v 1.13 2008/05/22 16:27:22 joerg Exp $
+# $NetBSD: checksum.mk,v 1.14 2008/05/22 20:47:21 joerg Exp $
 #
 # See bsd.checksum.mk for helpful comments.
 #
@@ -32,7 +32,7 @@ _CHECKSUM_CMD=								\
 		TEST=${TOOLS_TEST:Q}					\
 	${SH} ${PKGSRCDIR}/mk/checksum/checksum				\
 
-.if defined(NO_CHECKSUM)
+.if defined(NO_CHECKSUM) || empty(_CKSUMFILES)
 checksum checksum-phase:
 	@${DO_NADA}
 .else
