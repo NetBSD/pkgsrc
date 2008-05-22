@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2008/04/29 20:16:08 wiz Exp $
+# $NetBSD: options.mk,v 1.7 2008/05/22 20:58:32 wiz Exp $
 #
 
 #
@@ -70,14 +70,6 @@ CONFIGURE_ARGS+=	--enable-media=ffmpeg
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../multimedia/ffmpeg-devel/buildlink3.mk"
-# is ffmpeg-devel buildlink broken? we need all that:
-.include "../../audio/faac/buildlink3.mk"
-.include "../../audio/lame/buildlink3.mk"
-.include "../../multimedia/libtheora/buildlink3.mk"
-.include "../../multimedia/libogg/buildlink3.mk"
-.include "../../audio/libvorbis/buildlink3.mk"
-.include "../../multimedia/x264-devel/buildlink3.mk"
-# --------------------------------------------------
 .endif
 
 .if !empty(PKG_OPTIONS:Mgstreamer)
