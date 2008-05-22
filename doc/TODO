@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7278 2008/05/22 02:36:45 taca Exp $
+$NetBSD: TODO,v 1.7279 2008/05/22 11:23:35 wiz Exp $
 
 Suggested new packages
 ======================
@@ -486,6 +486,7 @@ Suggested package updates
 	o binutils-2.18
 	o bioperl-1.5.0
 	o bittorrent-5.0.5
+	o blender-2.46
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o boehm-gc-7.1
@@ -524,7 +525,6 @@ Suggested package updates
 	o clearsilver-0.10.5
 	o clearsilver-base-0.10.5
 	o clisp-2.45
-	o clive-0.4.12
 	o cmake-2.6.0
 	o cocoon-2.1.10
 	o colorize-0.3.4
@@ -534,7 +534,6 @@ Suggested package updates
 	o cpmtools-2.6
 	o cppunit-1.12.0
 	o crafty-19.5
-	o crimsonfields-0.5.2
 	o cross-h8300-hms-binutils-2.17
 	o crossfire-client-1.10.0
 	o crossfire-maps-1.10.0
@@ -599,7 +598,6 @@ Suggested package updates
 	o eltclsh-1.8 [pkg/37283]
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
-	o enchant-1.4.2
 	o enlightenment-0.16.8.12
 	o enscript-1.6.4
 	o epic4-2.6
@@ -645,7 +643,6 @@ Suggested package updates
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
 	o freewais-sf-2.2.14
-	o fromcvs-0.0.0.122
 	o frozen-bubble-2.1.0
 	o ftplibpp-2.0.2
 	o fugu-1.2.3
@@ -695,12 +692,10 @@ Suggested package updates
 	o gnustep-gui-0.12.1
 	o gnustep-examples-1.2.0
 	o gnustep-objc-1.4.0
-	o gnutls-2.2.3
+	o gnutls-2.2.5
 	o gob2-2.0.15
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
-	o goffice-0.6.3
-	o goffice0.6-0.6.4
 	o gogo-3.11p1
 	o golem-0.0.6
 	o gossip-0.29
@@ -741,7 +736,7 @@ Suggested package updates
 	o herrie-2.0.1
 	o hesiod-3.1.0
 	o hexedit-1.2.12
-	o heyu-2.2.2
+	o heyu-2.3.0
 	o highlight-2.6.10
 	o hobbitmon-4.0.4 [pkg/30484]
 	o honeyd-1.5c
@@ -825,6 +820,7 @@ Suggested package updates
 	o leafpad-0.8.13
 	o lft-2.5 [at http://pwhois.org/]
 	o lftp-3.7.0
+	o libFS-1.0.1
 	o libFoundation-1.1.3
 	o libarchive-2.5.3b
 	o libast-0.7
@@ -873,8 +869,6 @@ Suggested package updates
 	o libxml++-2.22.0
 	o lighttpd-1.4.19
 	o lincvs-2.0.0 [now called CrossVC]
-	o links-2.1.0.36
-	o links-gui-2.1.0.36
 	o linuxsms-0.77
 	o lmms-0.2.1
 	o lout-3.31
@@ -910,10 +904,8 @@ Suggested package updates
 	o minivmac-3.0.4
 	o mirmon-1.37
 	o mk-files-20061230
-	o mkfontscale-1.0.5
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-2.2.0
-	o mldonkey-2.9.5
 	o mlview-0.9.0
 	o mmg-2.0.2
 	o modular-xorg-server-1.4
@@ -1111,9 +1103,8 @@ Suggested package updates
 	o plptools-0.13 [pkg/30244]
 	o plptools-1.0.3
 	o pmccabe-2.3.1
-	o png-1.2.29
 	o pngcheck-2.3.0
-	o pngcrush-1.6.5
+	o pngcrush-1.6.6
 	o po4a-0.29
 	o poedit-1.4.1
 	o polsms-2.1.0
@@ -1223,7 +1214,6 @@ Suggested package updates
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o ruby-clearsilver-0.10.5
 	o ruby-rbtree-0.3.0
-	o ruby-rcsparse-0.0.0.42
 	o rudiments-0.30
 	o rxvt-unicode-9.0
 	o sablecc-3.2
@@ -1242,7 +1232,6 @@ Suggested package updates
 	o sendmail-8.14.3
 	o ser-0.9.6
 	o sge-6.1.2
-	o shared-mime-info-0.30
 	o sharity-3.3
 	o sharity-light-1.3
 	o shc-3.8
@@ -1253,7 +1242,6 @@ Suggested package updates
 	o silc-toolkit-1.1.7
 	o simh-3.7.3 [pkg/38406]
 	o simulavr-0.1.2.2
-	o singularity-0.28
 	o sipcalc-1.1.4
 	o sitecopy-0.16.3
 	o sitescooper-3.1.2
@@ -1317,7 +1305,6 @@ Suggested package updates
 	o tex-musixtex-113 [pkg/34758]
 	o texmaker-1.7.1
 	o tfmxplay-1.1.6
-	o thunderbird-2.0.0.14 [pkg/38610]
 	o tig-0.11
 	o tile-0.7.4
 	o tinyproxy-1.7.0
@@ -1400,7 +1387,8 @@ Suggested package updates
 	o xdaliclock-2.25
 	o xdesktopwaves-1.3
 	o xdialog-2.3.1
-	o xdm-1.1.7
+	o xdm-1.1.8
+	o xdpyinfo-1.0.3
 	o xdx-2.4
 	o xemacs-21.4.21
 	o xemacs-current-21.5.28
@@ -1408,7 +1396,7 @@ Suggested package updates
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
 	o xeukleides-1.0.1
-	o xf86-input-keyboard-1.3.0
+	o xf86-input-keyboard-1.3.1
 	o xf86-input-mouse-1.3.0
 	o xf86-video-amd-2.9.0 [now xf86-video-geode]
 	o xf86-video-apm-1.2.0
@@ -1416,16 +1404,16 @@ Suggested package updates
 	o xf86-video-ast-0.85.0
 	o xf86-video-ati-6.8.0
 	o xf86-video-chips-1.2.0
-	o xf86-video-cirrus-1.2.0
+	o xf86-video-cirrus-1.2.1
 	o xf86-video-glint-1.2.0
 	o xf86-video-i128-1.3.0
 	o xf86-video-i740-1.2.0
-	o xf86-video-neomagic-1.2.0
+	o xf86-video-neomagic-1.2.1
 	o xf86-video-nv-2.1.9
 	o xf86-video-rendition-4.2.0
 	o xf86-video-s3-0.6.0
-	o xf86-video-s3virge-1.10.0
-	o xf86-video-savage-2.2.0
+	o xf86-video-s3virge-1.10.1
+	o xf86-video-savage-2.2.1
 	o xf86-video-siliconmotion-1.6.0
 	o xf86-video-sis-0.10.0
 	o xf86-video-tdfx-1.4.0
@@ -1434,6 +1422,7 @@ Suggested package updates
 	o xf86-video-vmware-10.16.0
 	o xfstt-1.7
 	o xhippo-3.5
+	o xinit-1.0.9
 	o xisp-2.7p4
 	o xjman-0.7
 	o xkbset-0.5
