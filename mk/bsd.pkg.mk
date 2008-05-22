@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1942 2008/05/21 19:53:59 tnn Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1943 2008/05/22 16:27:22 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -84,7 +84,6 @@ PKGVERSION_NOREV=	${PKGNAME_NOREV:C/^.*-//}
 #
 .if defined(META_PACKAGE)
 PKG_DESTDIR_SUPPORT=	user-destdir
-NO_CHECKSUM=		yes
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 DISTFILES=		# none
@@ -403,8 +402,6 @@ USE_TOOLS+=								\
 	egrep env false file find grep head hostname id install ln ls	\
 	mkdir mv pax printf pwd rm rmdir sed sh sort			\
 	tail test touch tr true	wc xargs
-
-USE_TOOLS+=	${NO_CHECKSUM:D:Udigest\:bootstrap}
 
 # bsd.wrapper.mk
 USE_TOOLS+=	expr
