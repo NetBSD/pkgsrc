@@ -1,4 +1,4 @@
-# $NetBSD: tools.NetBSD.mk,v 1.40 2007/09/30 12:19:12 rillig Exp $
+# $NetBSD: tools.NetBSD.mk,v 1.41 2008/05/22 20:11:55 joerg Exp $
 #
 # System-supplied tools for the NetBSD operating system.
 
@@ -31,6 +31,7 @@ TOOLS_PLATFORM.fgrep?=		/usr/bin/fgrep
 TOOLS_PLATFORM.file?=		/usr/bin/file
 TOOLS_PLATFORM.find?=		/usr/bin/find
 TOOLS_PLATFORM.flex?=		/usr/bin/lex
+TOOLS_PLATFORM.ftp?=		/usr/bin/ftp
 .if !empty(MACHINE_PLATFORM:MNetBSD-1.[0-6]*-*)
 TOOLS_PLATFORM.gawk?=		${TOOLS_PLATFORM.awk}
 .endif
