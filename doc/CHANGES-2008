@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1125 2008/05/22 16:04:39 recht Exp $
+$NetBSD: CHANGES-2008,v 1.1126 2008/05/22 19:04:37 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1895,3 +1895,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/wterm to 6.2.9nb8 [tron 2008-05-22]
 	Updated security/gnutls to 2.2.5 [tnn 2008-05-22]
 	Updated textproc/libxslt to 1.1.24 [recht 2008-05-22]
+	Removed textproc/p5-String-Random successor security/p5-String-Random [tnn 2008-05-22]
+	Updated security/p5-String-Random to 0.22 [tnn 2008-05-22]
