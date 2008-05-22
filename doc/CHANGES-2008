@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1118 2008/05/21 22:24:39 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.1119 2008/05/22 00:54:30 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1888,3 +1888,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/pkglint to 4.86 [abs 2008-05-21]
 	Updated pkgtools/pkg_chk to 1.93 [dillo 2008-05-21]
 	Updated devel/tkdiff to 4.1.3 [tnn 2008-05-21]
+	Updated net/Transmission to 1.21 [tnn 2008-05-22]
