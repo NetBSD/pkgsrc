@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.61 2008/05/21 13:47:25 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2008/05/22 11:45:25 wiz Exp $
 
 DISTNAME=	gc-7.1
 PKGNAME=	${DISTNAME:S/gc/boehm-gc/}
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.hpl.hp.com/personal/Hans_Boehm/gc/gc_source/
 
@@ -17,6 +18,7 @@ USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-cplusplus
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/doc
 INSTALLATION_DIRS=	${PKGMANDIR}/man3
 
 MAKE_ENV+=		COPTS=${CFLAGS:M*:Q}
