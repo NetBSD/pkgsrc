@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/04 10:06:25 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/05/22 17:39:50 tnn Exp $
 bin/gobby
 man/man1/gobby.1
+${PLIST.gnome}share/applications/gobby.desktop
 share/locale/ca/LC_MESSAGES/gobby.mo
 share/locale/de/LC_MESSAGES/gobby.mo
 share/locale/es/LC_MESSAGES/gobby.mo
@@ -14,3 +15,6 @@ share/pixmaps/gobby.png
 share/pixmaps/gobby/chat.png
 share/pixmaps/gobby/doclist.png
 share/pixmaps/gobby/userlist.png
+@dirrm share/pixmaps/gobby
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in xdg-dirs: @dirrm share/applications
