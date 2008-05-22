@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2008/05/16 13:48:41 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2008/05/22 21:24:17 wiz Exp $
 #
 
-DISTNAME=		xinit-1.0.8
+DISTNAME=		xinit-1.0.9
 CATEGORIES=		x11
 MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/app/
 EXTRACT_SUFX=		.tar.bz2
