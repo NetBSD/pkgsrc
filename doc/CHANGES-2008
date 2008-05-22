@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1127 2008/05/22 21:15:06 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1128 2008/05/22 21:24:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1898,3 +1898,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed textproc/p5-String-Random successor security/p5-String-Random [tnn 2008-05-22]
 	Updated security/p5-String-Random to 0.22 [tnn 2008-05-22]
 	Updated x11/xdpyinfo to 1.0.3 [wiz 2008-05-22]
+	Updated x11/xinit to 1.0.9 [wiz 2008-05-22]
