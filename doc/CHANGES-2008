@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1123 2008/05/22 12:30:58 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1124 2008/05/22 13:23:56 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1893,3 +1893,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/boehm-gc to 7.1nb1 [wiz 2008-05-22]
 	Updated net/mtr to 0.72nb1 [tron 2008-05-22]
 	Updated x11/wterm to 6.2.9nb8 [tron 2008-05-22]
+	Updated security/gnutls to 2.2.5 [tnn 2008-05-22]
