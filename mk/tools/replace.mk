@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.210 2008/04/15 13:00:11 tron Exp $
+# $NetBSD: replace.mk,v 1.211 2008/05/22 20:11:55 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -355,6 +355,16 @@ TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.flex=flex
 TOOLS_PATH.flex=		${TOOLS_PREFIX.flex}/bin/flex
 .  endif
 TOOLS_ALIASES.flex=		lex
+.endif
+
+.if !defined(TOOLS_IGNORE.ftp) && !empty(_USE_TOOLS:Mftp)
+.  if !empty(PKGPATH:Mnet/tnftp)
+MAKEFLAGS+=			TOOLS_IGNORE.ftp=
+.  elif !empty(_TOOLS_USE_PKGSRC.ftp:M[yY][eE][sS])
+TOOLS_DEPENDS.ftp?=		tnftp-[0-9]*:../../net/tnftp
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.ftp=ftp
+TOOLS_PATH.ftp=			${TOOLS_PREFIX.ftp}/bin/ftp
+.  endif
 .endif
 
 .if !defined(TOOLS_IGNORE.gawk) && !empty(_USE_TOOLS:Mgawk)
