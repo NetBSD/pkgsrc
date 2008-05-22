@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/22 03:10:01 bjs Exp $
+bin/sunifdef
+man/man1/sunifdef.1
+share/doc/sunifdef/html/sunifdef_man_1.html
