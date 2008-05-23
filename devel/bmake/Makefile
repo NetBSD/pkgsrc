@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2008/03/09 19:54:28 joerg Exp $
+# $NetBSD: Makefile,v 1.42 2008/05/23 17:43:31 tnn Exp $
 #
 
 DISTNAME=	bmake-20080215
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -34,6 +35,11 @@ BOOTSTRAP_ARGS=		-q -o ${OPSYS} --prefix=${PREFIX} \
 
 .if ${OPSYS} == "SunOS" && exists(/usr/xpg4/bin/sh)
 BOOTSTRAP_ARGS+=	--with-defshell=/usr/xpg4/bin/sh
+.endif
+
+.if ${OPSYS} == "OSF1"
+DEPENDS+=		pdksh-[0-9]*:../../shells/pdksh
+BOOTSTRAP_ARGS+=	--with-defshell=${PREFIX}/bin/pdksh
 .endif
 
 do-extract:
