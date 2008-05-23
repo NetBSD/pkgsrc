@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.46.2.1 2008/04/26 17:44:23 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.46.2.2 2008/05/23 15:36:48 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -17,7 +17,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.46.2.1 2008/04/26 17:44:23 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.46.2.2 2008/05/23 15:36:48 joerg Exp $");
 #endif
 #endif
 
@@ -236,7 +236,7 @@ read_meta_data_from_archive(struct archive *archive)
 	}
 	if (found_required != 0) {
 		free_pkg_meta(meta);
-		return NULL;
+		meta = NULL;
 	}
 
 	archive_read_finish(archive);
