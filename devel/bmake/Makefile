@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2008/05/23 17:43:31 tnn Exp $
+# $NetBSD: Makefile,v 1.43 2008/05/23 18:06:44 tnn Exp $
 #
 
 DISTNAME=	bmake-20080215
@@ -33,11 +33,7 @@ BOOTSTRAP_ARGS=		-q -o ${OPSYS} --prefix=${PREFIX} \
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "SunOS" && exists(/usr/xpg4/bin/sh)
-BOOTSTRAP_ARGS+=	--with-defshell=/usr/xpg4/bin/sh
-.endif
-
-.if ${OPSYS} == "OSF1"
+.if ${OPSYS} == "SunOS" || ${OPSYS} == "OSF1"
 DEPENDS+=		pdksh-[0-9]*:../../shells/pdksh
 BOOTSTRAP_ARGS+=	--with-defshell=${PREFIX}/bin/pdksh
 .endif

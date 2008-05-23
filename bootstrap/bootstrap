@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.125 2008/05/23 17:49:52 tnn Exp $
+# $NetBSD: bootstrap,v 1.126 2008/05/23 18:06:44 tnn Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -560,14 +560,12 @@ SunOS)
 	if [ -d "/usr/xpg4/bin" ]; then
 		overpath="/usr/xpg4/bin:$overpath"
 	fi
-	if [ -x "/usr/xpg4/bin" ]; then
-		bmakexargs="$bmakexargs --with-defshell=/usr/xpg4/bin/sh"
-	fi
 	root_group=root
 	need_pax=yes
 	need_bsd_install=no
 	need_awk=yes
 	need_sed=yes
+	need_ksh=yes
 	set_opsys=no
 	whoamiprog=/usr/ucb/whoami
 	machine_arch=`uname -p | sed -e 's/i86pc/i386/'`
