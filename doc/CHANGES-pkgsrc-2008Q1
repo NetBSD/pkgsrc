@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.59 2008/05/23 11:16:19 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.60 2008/05/23 11:40:13 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -136,3 +136,5 @@ pullup ticket #2392 - requested by simonb, tron
 libid3tag: fix end of string check
 pullup ticket #2396 - requested by tron
 wterm: security fix
+pullup ticket #2397 - requested by tnn
+gnutls: update for security fixes
