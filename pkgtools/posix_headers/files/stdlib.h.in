@@ -1,9 +1,0 @@
-#if !defined(@strtoll@) && defined(__hpux)
-@include <inttypes.h>
-@define strtoll(nptr, endptr, base) __strtoll(nptr, endptr, base)
-@define strtoull(nptr, endptr, base) __strtoull(nptr, endptr, base)
-#endif
-#if !defined(@strtoll@) && defined(__digital__) && defined(notyet)
-@define strtoll(nptr, endptr, base) strtol(nptr, endptr, base)
-@define strtoull(nptr, endptr, base) strtoul(nptr, endptr, base)
-#endif
