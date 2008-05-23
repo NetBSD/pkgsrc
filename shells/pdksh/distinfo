@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.3 2005/11/10 22:21:56 joerg Exp $
-
-SHA1 (pdksh-5.2.14.tar.gz) = 8b022e45de7691ef330f13b0981f0cff30b4047d
-RMD160 (pdksh-5.2.14.tar.gz) = 3ecb47ac7c7fc43445806a68c740c94278e2368f
-Size (pdksh-5.2.14.tar.gz) = 480107 bytes
-SHA1 (patch-aa) = 19cbe1ae50ee63549019c55c3eafb2bf138c401e
-SHA1 (patch-ab) = d1623335dee7933f3daf612eaf0cfe37c7e96744
