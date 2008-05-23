@@ -1,0 +1,328 @@
+dnl
+dnl This file, configure.in, which is a part of pdksh (the public domain ksh),
+dnl is placed in the public domain.  It comes with no licence, warranty
+dnl or guarantee of any kind (i.e., at your own risk).
+dnl
+dnl
+dnl
+dnl Process this file with autoconf to produce a configure script
+dnl
+AC_INIT(c_ksh.c)
+AC_CONFIG_HEADER(config.h)
+dnl
+dnl
+dnl
+dnl  Set up command line options (--enable/--disable)
+dnl
+def_path_unix="/bin:/usr/bin:/usr/ucb"
+def_path_os2="c:/usr/bin;c:/os2;/os2"
+AC_ARG_ENABLE(path,
+[  --enable-path=PaTh      (NOTE: this value isn't used if confstr() and _CS_PATH
+                          are available, or if <paths.h> defines _PATH_DEFPATH)
+                          Use PaTh if PATH isn't specified in the environment
+                          when the shell starts.  A value without . in it is
+                          safest.
+                          The default value is \"/bin:/usr/bin:/usr/ucb\".],,
+                enable_path=default)
+case $enable_path:$ksh_cv_os_type in
+ default:OS2_EMX) enable_path="$def_path_os2" ;;
+ default:*) enable_path="$def_path_unix" ;;
+esac
+case $enable_path in
+  \"*\") ;;
+  *)
+    enable_path="\"$enable_path\""
+    ;;
+esac
+AC_DEFINE_UNQUOTED(DEFAULT_PATH, $enable_path)
+dnl
+dnl
+dnl
+dnl  Specify what kind of shell we are to build.  Options are ksh and sh.
+dnl  This must be before most other options, as it controls their default
+dnl  behaviour.
+dnl
+AC_ARG_ENABLE(shell,
+[  --enable-shell={sh,ksh} Specify the kind of shell that is to be built (the
+                          default is ksh).  Specifiying sh compiles out:
+                          command line editing (emacs/vi), history,
+                          a bunch of aliases, [[ .. ]], select, let,
+                          brace-expansion, extended globing (*(..|..), etc.),
+                          co-processes, some special environment variables
+                          (ie, MAIL, MAILCHECK, MAILPATH, RANDOM, SECONDS,
+                          TMOUT).],,
+  enable_shell=ksh)
+case $enable_shell in
+  ksh) AC_DEFINE(KSH) ;;
+  sh) ;;
+  *)
+    AC_MSG_ERROR(bad --enable-shell: must be one of sh or ksh)
+esac
+SHELL_PROG=$enable_shell
+AC_SUBST(SHELL_PROG)
+dnl
+dnl
+dnl
+AC_ARG_ENABLE(emacs,
+[  --disable-emacs         Compile out emacs command line editing (by default,
+                          this is compiled in for ksh, compiled out for sh).])
+case $enable_emacs:$enable_shell in
+  yes:*|:ksh) enable_emacs=yes; AC_DEFINE(EMACS) ;;
+  no:*|:sh) enable_emacs=no;;
+  *) AC_MSG_ERROR(bad --enable-emacs argument)
+esac
+dnl
+dnl
+AC_ARG_ENABLE(vi,
+[  --disable-vi            Compile out vi command line editing (by default,
+                          this is compiled in for ksh, compiled out for sh).])
+case $enable_vi:$enable_shell in
+  yes:*|:ksh) enable_vi=yes; AC_DEFINE(VI) ;;
+  no:*|:sh) enable_vi=no;;
+  *) AC_MSG_ERROR(bad --enable-vi argument)
+esac
+dnl
+dnl
+AC_ARG_ENABLE(jobs,
+[  --disable-jobs          Compile out job control support.  If your system
+                          doesn't support job control, this will automatically
+			  be compiled out.])
+case $enable_jobs in
+  yes|'') enable_jobs=yes; AC_DEFINE(JOBS) ;;
+  no) enable_jobs=no;;
+  *) AC_MSG_ERROR(bad --enable-jobs argument)
+esac
+dnl
+dnl
+AC_ARG_ENABLE(brace-expand,
+[  --disable-brace-expand  Compile out brace expansion code (a{b,c} -> ab ac)
+                          (by default, this is compiled in for ksh, compiled
+                          out for sh).  Brace expansion can also be disabled
+                          at run time (see set +o braceexpand).])
+case $enable_brace_expand:$enable_shell in
+  yes:*|:ksh) enable_brace_expand=yes; AC_DEFINE(BRACE_EXPAND) ;;
+  no:*|:sh) enable_brace_expand=no;;
+  *) AC_MSG_ERROR(bad --enable-brace-expand argument)
+esac
+dnl
+dnl
+AC_ARG_ENABLE(history,
+[  --enable-history={no,simple,complex} By default, simple history is used for
+                          ksh, no history is used for sh.  \`simple' means
+                          history file is read on start-up, written when shell
+                          exists.  \`complex' means history files are updated
+                          after each command so concurrent shells read each
+                          other's commands.  Note: \`complex' history doesn't
+                          work well across NFS; also, it requires the mmap()
+                          and flock() functions - if these aren't available,
+                          \`simple' history is automatically used.])
+case $enable_history:$enable_shell in
+  simple:*|:ksh) enable_history=simple; ;;
+  complex:*) enable_history=complex; AC_DEFINE(COMPLEX_HISTORY) ;;
+  no:*|:sh)
+    case $enable_history:$enable_vi:$enable_emacs in
+    no:yes:*|no:*:yes)
+      AC_MSG_ERROR(can't disable history when vi or emacs is enabled) ;;
+    :yes:*|:*:yes)
+      enable_history=yes;;
+    *)
+      enable_history=no;;
+    esac
+    ;;
+  *) AC_MSG_ERROR(bad --enable-history argument)
+esac
+test X"$enable_history" != Xno && AC_DEFINE(HISTORY)
+dnl
+dnl
+AC_ARG_ENABLE(posixly_correct,
+[  --enable-posixly-correct Enable if you want POSIX behavior by default
+                          (otherwise, posix behavior is only turned on if the
+                          environment variable POSIXLY_CORRECT is present or by
+                          using \"set -o posix\"; it can be turned off with
+                          \"set +o posix\").  See the POSIX Mode section in the
+                          man page for details on what this option affects.
+                          NOTE:  posix mode is not compatable with some bourne
+                          sh/at&t ksh scripts.])
+case $enable_posixly_correct:$enable_shell in
+  yes:*) enable_posixly_correct=yes; AC_DEFINE(POSIXLY_CORRECT) ;;
+  no:*|:*) enable_posixly_correct=no;;
+  *) AC_MSG_ERROR(bad --enable-posixly_correct argument)
+esac
+dnl
+dnl
+AC_ARG_ENABLE(default-env,
+[  --enable-default-env=FILE Include FILE if ENV parameter is not set when
+                          the shell starts.  This can be useful when used with
+                          rsh(1), which creates a non-login shell (ie, profile
+                          isn't read, so there is no opertunity to set ENV).
+                          Setting ENV to null disables the inclusion of
+                          DEFAULT_ENV.  NOTE: This is a non-standard feature
+                          (ie, at&t ksh has no default environment).],,
+  enable_default_env=no)
+if test X"$enable_default_env" != Xno; then
+  # The [a-zA-Z]:/ is for os2 types...
+  case $enable_default_env in
+    /*|[[a-zA-Z]]:/*)
+      enable_default_env="\"$enable_default_env\""
+      ;;
+    \"/*\"|\"[[a-zA-Z]]:/*\")
+      ;;
+    *)
+      AC_MSG_ERROR(--enable-default-env argument must be an absolute path (was $enable_default_env))
+      ;;
+  esac
+  AC_DEFINE_UNQUOTED(DEFAULT_ENV, $enable_default_env)
+fi
+dnl
+dnl
+dnl Don't want silly documented - its silly
+AC_ARG_ENABLE(silly,[  --enable-silly          [A silly option]])
+case $enable_silly:$enable_shell in
+  yes:*) enable_silly=yes; AC_DEFINE(SILLY) ;;
+  no:*|:*) enable_silly=no;;
+  *) AC_MSG_ERROR(bad --enable-silly argument)
+esac
+dnl
+dnl
+dnl don't want swtch documented - its ancient and probably doesn't work
+AC_ARG_ENABLE(swtch,
+[  --enable-swtch          For use with shell layers (shl(1)).  This has not
+                          been tested for some time.])
+case $enable_swtch:$enable_shell in
+  yes:*) enable_swtch=yes; AC_DEFINE(SWTCH) ;;
+  no:*|:*) enable_swtch=no;;
+  *) AC_MSG_ERROR(bad --enable-swtch argument)
+esac
+dnl
+dnl
+dnl  Start of auto-configuration stuff...
+dnl
+dnl
+AC_PROG_CC
+AC_PROG_CPP
+AC_PROG_GCC_TRADITIONAL
+dnl A hack to turn on warning messages for gcc - Warn-flags is not in
+dnl the distribution since not everyone wants to see this stuff.
+dnl (Warn-flags contains: -Wall)
+if test X"$GCC" = Xyes && test -f $srcdir/Warn-flags; then
+  CFLAGS="${CFLAGS+$CFLAGS }`cat $srcdir/Warn-flags`"
+fi
+
+dnl
+dnl If LDSTATIC set in environment, pass it on to the Makefile and use it when
+dnl doing compile checks to ensure we are checking the right thing.
+AC_SUBST(LDSTATIC)LDSTATIC=${LDSTATIC-}
+test X"$LDSTATIC" != X && LDFLAGS="${LDFLAGS+$LDFLAGS }$LDSTATIC"
+dnl
+dnl Executable suffix - normally empty; .exe on os2.
+AC_SUBST(ac_exe_suffix)dnl
+
+dnl this incorperates AC_AIX, AC_ISC_POSIX and AC_MINIX tests and does others
+KSH_OS_TYPE
+dnl
+dnl Program name munging stuff (prefix, suffix, transform)
+AC_ARG_PROGRAM
+dnl
+dnl
+dnl Headers
+dnl
+AC_HEADER_DIRENT
+KSH_UNISTD_H
+KSH_TERM_CHECK
+AC_CHECK_HEADERS(stddef.h stdlib.h string.h memory.h fcntl.h limits.h paths.h \
+	sys/param.h sys/resource.h values.h ulimit.h sys/time.h)
+AC_HEADER_TIME
+KSH_HEADER_SYS_WAIT
+dnl
+dnl
+dnl Typedefs
+dnl
+dnl (don't use AC_TYPE_XXX() 'cause it doesn't check word boundaries)
+KSH_CHECK_H_TYPE(off_t, for off_t in sys/types.h, , long)
+KSH_CHECK_H_TYPE(mode_t, for mode_t in sys/types.h, , short)
+KSH_CHECK_H_TYPE(pid_t, for pid_t in sys/types.h, , int)
+KSH_CHECK_H_TYPE(uid_t, for uid_t in sys/types.h, , int)
+if test $ac_cv_type_uid_t = no; then
+  AC_DEFINE(gid_t, int)
+fi
+define([AC_PROVIDE_AC_TYPE_UID_T],)
+AC_TYPE_SIGNAL
+case $ac_cv_type_signal in
+int)  ksh_cv_signal_retval=0 ;;
+void) ksh_cv_signal_retval=  ;;
+*)
+    AC_MSG_ERROR(Internal erorr: unknown signal return type: $ac_cv_type_signal)
+esac
+AC_DEFINE_UNQUOTED(RETSIGVAL, $ksh_cv_signal_retval)
+AC_CHECK_SIZEOF(int)
+AC_CHECK_SIZEOF(long)
+dnl sh.h sets INT32 to int or long as appropriate.  Some burnt systems, such
+dnl as NeXT's, clock_t is in sys/time.h (in non-posix mode).
+KSH_CHECK_H_TYPE(clock_t, [[for clock_t in any of <sys/types.h>, <sys/times.h> and <sys/time.h>]],
+  [
+#ifdef HAVE_SYS_TIME_H
+#include <sys/time.h>
+#endif /* HAVE_SYS_TIME_H */
+#include <sys/times.h>
+	], INT32)
+KSH_CHECK_H_TYPE(sigset_t, for sigset_t in <sys/types.h> and <signal.h>,
+  [#include <signal.h>], unsigned)
+KSH_RLIM_CHECK
+dnl
+dnl
+dnl Library functions
+dnl
+KSH_MEMMOVE
+KSH_MEMSET
+AC_CHECK_FUNCS(confstr dup2 flock getcwd getwd killpg nice \
+	setrlimit strerror strcasecmp strstr sysconf tcsetpgrp \
+	ulimit waitpid wait3)
+AC_CHECK_FUNCS(sigsetjmp _setjmp, break)
+AC_FUNC_MMAP
+KSH_FUNC_LSTAT
+KSH_SYS_ERRLIST
+KSH_SYS_SIGLIST
+KSH_TIME_DECLARED
+KSH_TIMES_CHECK
+dnl
+dnl
+dnl Structures
+dnl
+AC_HEADER_STAT
+AC_STRUCT_ST_RDEV
+dnl
+dnl
+dnl Compiler characteristics
+dnl
+AC_C_CONST
+KSH_C_VOID
+KSH_C_VOLATILE
+KSH_C_PROTOTYPES
+KSH_C_FUNC_ATTR
+dnl
+dnl
+dnl System services
+dnl
+AC_SYS_INTERPRETER
+if test $ac_cv_sys_interpreter = no;
+  then AC_DEFINE(SHARPBANG)
+fi
+AC_PROG_INSTALL
+dnl
+dnl
+dnl  Misc ksh tests
+dnl
+KSH_DUP2_CLEXEC_CHECK
+KSH_SIGNAL_CHECK
+KSH_PGRP_CHECK
+KSH_PGRP_SYNC
+KSH_OPENDIR_CHECK
+KSH_DEV_FD
+dnl
+dnl
+dnl Take replace value of LDSTATIC in LDFLAGS with reference to make variable
+if test X"$LDSTATIC" != X; then
+  LDFLAGS=`echo -- "$LDFLAGS" | sed -e 's/^-- //' -e 's?$LDSTATIC?\$(LDSTATIC)?'`
+fi
+dnl
+AC_OUTPUT(Makefile)
