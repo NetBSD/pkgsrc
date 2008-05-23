@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1129 2008/05/22 22:56:33 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1130 2008/05/23 21:42:25 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1900,3 +1900,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xdpyinfo to 1.0.3 [wiz 2008-05-22]
 	Updated x11/xinit to 1.0.9 [wiz 2008-05-22]
 	Updated x11/fox to 1.6.33 [wiz 2008-05-22]
+	Removed pkgtools/posix_headers [tnn 2008-05-23]
