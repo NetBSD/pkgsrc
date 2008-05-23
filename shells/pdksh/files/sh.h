@@ -2,7 +2,7 @@
  * Public Domain Bourne/Korn shell
  */
 
-/* $Id: sh.h,v 1.1.1.1 2008/05/23 17:15:20 tnn Exp $ */
+/* $Id: sh.h,v 1.2 2008/05/23 17:19:49 tnn Exp $ */
 
 #include "config.h"	/* system and option configuration info */
 
@@ -116,7 +116,6 @@ void *memmove ARGS((void *d, const void *s, size_t n));
 #endif /* HAVE_PROTOTYPES */
 
 #include <errno.h>
-extern int errno;
 
 #ifdef HAVE_FCNTL_H
 # include <fcntl.h>
