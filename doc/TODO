@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7280 2008/05/23 14:18:40 wiz Exp $
+$NetBSD: TODO,v 1.7281 2008/05/23 14:19:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -689,7 +689,6 @@ Suggested package updates
 	o gnustep-gui-0.12.1
 	o gnustep-examples-1.2.0
 	o gnustep-objc-1.4.0
-	o gnutls-2.2.5
 	o gob2-2.0.15
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
@@ -875,7 +874,6 @@ Suggested package updates
 	o ltris-1.0.12
 	o lucy-1.19p
 	o lzma-4.57
-	o lzo-2.03
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o magicpoint-1.13a [pkg/38552]
