@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7279 2008/05/22 11:23:35 wiz Exp $
+$NetBSD: TODO,v 1.7280 2008/05/23 14:18:40 wiz Exp $
 
 Suggested new packages
 ======================
@@ -489,8 +489,6 @@ Suggested package updates
 	o blender-2.46
 	o blur6ex-0.3.462
 	o bmon-2.1.0
-	o boehm-gc-7.1
-	o bonnie++-1.03c
 	o boolean-6.97
 	o bos-2.5
 	o boson-0.13
@@ -632,7 +630,6 @@ Suggested package updates
 	o fmsx-3.0
 	o fondu-040927
 	o fop-0.20.5
-	o fox-1.6.33
 	o freeciv-2.1.4
 	o freefont-ttf-20080323
 	o freeglut-2.4.0
@@ -770,7 +767,6 @@ Suggested package updates
 	o irrd-2.3.4 [pkg/36813|38002]
 	o irrtoolset-nox11-4.8.4
 	o iselect-1.4.0
-	o iso-codes-2.1
 	o ispell-gaeilge-4.1
 	o ispell-german-20071211
 	o ispell-slovak-0.3.2
@@ -1388,7 +1384,6 @@ Suggested package updates
 	o xdesktopwaves-1.3
 	o xdialog-2.3.1
 	o xdm-1.1.8
-	o xdpyinfo-1.0.3
 	o xdx-2.4
 	o xemacs-21.4.21
 	o xemacs-current-21.5.28
@@ -1398,6 +1393,7 @@ Suggested package updates
 	o xeukleides-1.0.1
 	o xf86-input-keyboard-1.3.1
 	o xf86-input-mouse-1.3.0
+	o xf86-input-vmmouse-12.5.1
 	o xf86-video-amd-2.9.0 [now xf86-video-geode]
 	o xf86-video-apm-1.2.0
 	o xf86-video-ark-0.7.0
@@ -1422,7 +1418,6 @@ Suggested package updates
 	o xf86-video-vmware-10.16.0
 	o xfstt-1.7
 	o xhippo-3.5
-	o xinit-1.0.9
 	o xisp-2.7p4
 	o xjman-0.7
 	o xkbset-0.5
