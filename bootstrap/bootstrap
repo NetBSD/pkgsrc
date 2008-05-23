@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.124 2008/05/09 18:35:35 agc Exp $
+# $NetBSD: bootstrap,v 1.125 2008/05/23 17:49:52 tnn Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -627,6 +627,7 @@ OSF1)
 	need_bsd_install=yes
 	need_awk=yes
 	need_sed=yes
+	need_ksh=yes
 	set_opsys=no
 	;;
 QNX)
@@ -666,6 +667,7 @@ yes)
 	need_awk=yes
 	need_sed=yes
 	need_ftp=yes
+	need_ksh=yes
 	;;
 esac
 
@@ -888,12 +890,31 @@ run_cmd "(cd ${pkgsrcdir}/pkgtools/bootstrap-mk-files/files && env CP=${cpprog} 
 ROOT_USER=${root_user} SED=${sedprog} SYSCONFDIR=${sysconfdir} \
 $shprog ./bootstrap.sh)"
 
-echo_msg "Bootstrapping bmake"
-copy_src $pkgsrcdir/devel/bmake/files bmake
-run_cmd "(cd $wrkdir/bmake && env CPPFLAGS='$CPPFLAGS -I../../libnbcompat' LDFLAGS='$LDFLAGS -L../../libnbcompat' LIBS='-lnbcompat' $bmakexenv $shprog ./boot-strap $configure_quiet_flags -q -o $opsys --prefix=$wrkdir --sysconfdir=$wrkdir --mksrc none --with-default-sys-path="$wrkdir/share/mk" $bmakexargs)"
-run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/bmake/$opsys/bmake $wrkdir/bin/bmake"
+bootstrap_bmake() {
+	echo_msg "Bootstrapping bmake"
+	copy_src $pkgsrcdir/devel/bmake/files bmake
+	run_cmd "(cd $wrkdir/bmake && env CPPFLAGS='$CPPFLAGS -I../../libnbcompat' LDFLAGS='$LDFLAGS -L../../libnbcompat' LIBS='-lnbcompat' $bmakexenv $shprog ./boot-strap $configure_quiet_flags -q -o $opsys --prefix=$wrkdir --sysconfdir=$wrkdir --mksrc none --with-default-sys-path="$wrkdir/share/mk" $bmakexargs)"
+	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/bmake/$opsys/bmake $wrkdir/bin/bmake"
+}
+bootstrap_bmake
 
 bmake="$wrkdir/bin/bmake $make_quiet_flags"
+
+# bootstrap ksh if necessary
+case "$need_ksh" in
+yes)	echo_msg "Bootstrapping ksh"
+	copy_src $pkgsrcdir/shells/pdksh/files ksh
+	test -n "$CC" || CC=gcc	# default to gcc if no compiler is specified
+	run_cmd "(cd $wrkdir/ksh && env $BSTRAP_ENV $shprog ./configure $configure_quiet_flags --prefix=$prefix --mandir=$mandir --sysconfdir=$sysconfdir && $bmake)"
+	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/ksh/ksh $wrkdir/bin/pdksh"
+	echo "TOOLS_PLATFORM.sh?=		$prefix/bin/pdksh" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.sh?=		$wrkdir/bin/pdksh" >> ${BOOTSTRAP_MKCONF}
+# Now rebootstrap bmake for ksh
+	echo_msg "Rebootstrapping bmake for ksh"
+	bmakexargs="$bmakexargs --with-defshell=$wrkdir/bin/pdksh"
+	bootstrap_bmake
+	;;
+esac
 
 # bootstrap awk if necessary
 case "$need_awk" in
@@ -1025,6 +1046,9 @@ build_package() {
 
 echo_msg "Installing packages"
 build_package "pkgtools/bootstrap-mk-files"
+case "$need_ksh" in
+yes)	build_package "shells/pdksh";;
+esac
 build_package "devel/bmake"
 case "$need_awk" in
 yes)	build_package "lang/nawk";;
