@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1943 2008/05/22 16:27:22 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1944 2008/05/23 12:31:24 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -21,6 +21,36 @@
 
 .include "misc/common.mk"
 
+############################################################################
+# Transform package Makefile variables and set defaults
+# This is the early set used directly or indirectly in
+# the phase variables.
+############################################################################
+
+##### PKGBASE, PKGNAME[_NOREV], PKGVERSION
+
+PKGBASE?=		${PKGNAME:C/-[^-]*$//}
+PKGVERSION?=		${PKGNAME:C/^.*-//}
+PKGVERSION?=		${PKGNAME:C/^.*-//}
+.if defined(PKGREVISION) && !empty(PKGREVISION) && (${PKGREVISION} != "0")
+.  if defined(PKGNAME)
+PKGNAME_NOREV:=		${PKGNAME}
+PKGNAME:=		${PKGNAME}nb${PKGREVISION}
+.  else
+PKGNAME?=		${DISTNAME}nb${PKGREVISION}
+PKGNAME_NOREV=		${DISTNAME}
+.  endif
+.else
+PKGNAME?=		${DISTNAME}
+PKGNAME_NOREV=		${PKGNAME}
+.endif
+PKGVERSION_NOREV=	${PKGNAME_NOREV:C/^.*-//}
+
+####
+
+############################################################################
+# Allow various phases to define the default variables
+############################################################################
 .if defined(EMUL_PLATFORMS) && !empty(EMUL_PLATFORMS)
 .  include "emulator/emulator.mk"
 .endif
@@ -57,24 +87,6 @@ LICENSE=		${LICENCE}
 ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
 .endif
 
-##### PKGBASE, PKGNAME[_NOREV], PKGVERSION
-
-PKGBASE?=		${PKGNAME:C/-[^-]*$//}
-PKGVERSION?=		${PKGNAME:C/^.*-//}
-PKGVERSION?=		${PKGNAME:C/^.*-//}
-.if defined(PKGREVISION) && !empty(PKGREVISION) && (${PKGREVISION} != "0")
-.  if defined(PKGNAME)
-PKGNAME_NOREV:=		${PKGNAME}
-PKGNAME:=		${PKGNAME}nb${PKGREVISION}
-.  else
-PKGNAME?=		${DISTNAME}nb${PKGREVISION}
-PKGNAME_NOREV=		${DISTNAME}
-.  endif
-.else
-PKGNAME?=		${DISTNAME}
-PKGNAME_NOREV=		${PKGNAME}
-.endif
-PKGVERSION_NOREV=	${PKGNAME_NOREV:C/^.*-//}
 
 # A meta-package is a package that does not have any files and whose
 # only purpose is to depend on other packages, giving that collection
