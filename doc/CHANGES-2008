@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1131 2008/05/24 03:39:29 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.1132 2008/05/24 04:49:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1902,3 +1902,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/fox to 1.6.33 [wiz 2008-05-22]
 	Removed pkgtools/posix_headers successor pkgtools/compat_headers [tnn 2008-05-23]
 	Added pkgtools/compat_headers version 0.1 [tnn 2008-05-24]
+	Updated net/msdl to 1.2 [obache 2008-05-24]
