@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2007/07/28 00:52:34 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/24 21:45:18 tnn Exp $
 #
 
 DISTNAME=	xwd-1.0.1
 CATEGORIES=	x11 graphics
-MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
+MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	reed@reedmedia.net

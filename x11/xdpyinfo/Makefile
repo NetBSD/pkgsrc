@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2008/05/22 21:14:52 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/24 21:45:16 tnn Exp $
 #
 
 DISTNAME=	xdpyinfo-1.0.3
 CATEGORIES=	x11
-MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
+MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
