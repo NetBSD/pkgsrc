@@ -1,0 +1,229 @@
+#include "config.h"
+@include "@real_header@"
+@ifndef _COMPAT_INTTYPES_H_
+@define _COMPAT_INTTYPES_H_
+#if CH_INT8_T < 1
+typedef char int8_t;
+#endif
+#if CH_UINT8_T < 1
+typedef unsigned char uint8_t;
+#endif
+#if CH_INT16_T < 1
+typedef short int16_t;
+#endif
+#if CH_UINT16_T < 1
+typedef unsigned short uint16_t;
+#endif
+#if CH_INT32_T < 1
+typedef int int32_t;
+#endif
+#if CH_UINT32_T < 1
+typedef unsigned int uint32_t;
+#endif
+#if CH_INT64_T < 1
+#if CH_LP64 > 0
+typedef long int64_t;
+#else
+typedef long long int64_t;
+#endif
+#endif
+#if CH_UINT64_T < 1
+#if CH_LP64 > 0
+typedef unsigned long uint64_t;
+#else
+typedef unsigned long long uint64_t;
+#endif
+#endif
+#if CH_INT_LEAST8_T < 1
+typedef int8_t int_least8_t;
+#endif
+#if CH_UINT_LEAST8_T < 1
+typedef uint8_t uint_least8_t;
+#endif
+#if CH_INT_LEAST16_T < 1
+typedef int16_t int_least16_t;
+#endif
+#if CH_UINT_LEAST16_T < 1
+typedef uint16_t uint_least16_t;
+#endif
+#if CH_INT_LEAST32_T < 1
+typedef int32_t int_least32_t;
+#endif
+#if CH_UINT_LEAST32_T < 1
+typedef uint32_t uint_least32_t;
+#endif
+#if CH_INT_LEAST64_T < 1
+typedef int64_t int_least64_t;
+#endif
+#if CH_UINT_LEAST64_T < 1
+typedef uint64_t uint_least64_t;
+#endif
+#if CH_INT_FAST8_T < 1
+typedef int8_t int_fast8_t;
+#endif
+#if CH_UINT_FAST8_T < 1
+typedef uint8_t uint_fast8_t;
+#endif
+#if CH_INT_FAST16_T < 1
+typedef int16_t int_fast16_t;
+#endif
+#if CH_UINT_FAST16_T < 1
+typedef uint16_t uint_fast16_t;
+#endif
+#if CH_INT_FAST32_T < 1
+typedef int32_t int_fast32_t;
+#endif
+#if CH_UINT_FAST32_T < 1
+typedef uint32_t uint_fast32_t;
+#endif
+#if CH_INT_FAST64_T < 1
+typedef int64_t int_fast64_t;
+#endif
+#if CH_UINT_FAST64_T < 1
+typedef uint64_t uint_fast64_t;
+#endif
+#if CH_INT8_MIN < 1
+@define INT8_MIN (-0x80)
+#endif
+#if CH_INT16_MIN < 1
+@define INT16_MIN (-0x8000)
+#endif
+#if CH_INT32_MIN < 1
+@define INT32_MIN (-0x80000000)
+#endif
+#if CH_INT64_MIN < 1
+#if CH_LP64 > 0
+@define INT64_MIN (-0x8000000000000000L)
+#else
+@define INT64_MIN (-0x8000000000000000LL)
+#endif
+#endif
+#if CH_INT8_MAX < 1
+@define INT8_MAX 0x7f
+#endif
+#if CH_INT16_MAX < 1
+@define INT16_MAX 0x7fff
+#endif
+#if CH_INT32_MAX < 1
+@define INT32_MAX 0x7fffffff
+#endif
+#if CH_INT64_MAX < 1
+#if CH_LP64 > 0
+@define INT64_MAX 0x7fffffffffffffffL
+#else
+@define INT64_MAX 0x7fffffffffffffffLL
+#endif
+#endif
+#if CH_UINT8_MAX < 1
+@define UINT8_MAX 0xff
+#endif
+#if CH_UINT16_MAX < 1
+@define UINT16_MAX 0xffff
+#endif
+#if CH_UINT32_MAX < 1
+@define UINT32_MAX 0xffffffffU
+#endif
+#if CH_UINT64_MAX < 1
+#if CH_LP64 > 0
+@define UINT64_MAX 0xffffffffffffffffUL
+#else
+@define UINT64_MAX 0xffffffffffffffffULL
+#endif
+#endif
+#if CH_INT_LEAST8_MIN < 1
+@define INT_LEAST8_MIN (-0x80)
+#endif
+#if CH_INT_LEAST16_MIN < 1
+@define INT_LEAST16_MIN (-0x8000)
+#endif
+#if CH_INT_LEAST32_MIN < 1
+@define INT_LEAST32_MIN (-0x80000000)
+#endif
+#if CH_INT_LEAST64_MIN < 1
+#if CH_LP64 > 0
+@define INT_LEAST64_MIN (-0x8000000000000000L)
+#else
+@define INT_LEAST64_MIN (-0x8000000000000000LL)
+#endif
+#endif
+#if CH_INT_LEAST8_MAX < 1
+@define INT_LEAST8_MAX 0x7f
+#endif
+#if CH_INT_LEAST16_MAX < 1
+@define INT_LEAST16_MAX 0x7fff
+#endif
+#if CH_INT_LEAST32_MAX < 1
+@define INT_LEAST32_MAX 0x7fffffff
+#endif
+#if CH_INT_LEAST64_MAX < 1
+#if CH_LP64 > 0
+@define INT_LEAST64_MAX 0x7fffffffffffffffL
+#else
+@define INT_LEAST64_MAX 0x7fffffffffffffffLL
+#endif
+#endif
+#if CH_UINT_LEAST8_MAX < 1
+@define UINT_LEAST8_MAX 0xff
+#endif
+#if CH_UINT_LEAST16_MAX < 1
+@define UINT_LEAST16_MAX 0xffff
+#endif
+#if CH_UINT_LEAST32_MAX < 1
+@define UINT_LEAST32_MAX 0xffffffffU
+#endif
+#if CH_UINT_LEAST64_MAX < 1
+#if CH_LP64 > 0
+@define UINT_LEAST64_MAX 0xffffffffffffffffUL
+#else
+@define UINT_LEAST64_MAX 0xffffffffffffffffULL
+#endif
+#endif
+#if CH_INT_FAST8_MIN < 1
+@define INT_FAST8_MIN (-0x80)
+#endif
+#if CH_INT_FAST16_MIN < 1
+@define INT_FAST16_MIN (-0x8000)
+#endif
+#if CH_INT_FAST32_MIN < 1
+@define INT_FAST32_MIN (-0x80000000)
+#endif
+#if CH_INT_FAST64_MIN < 1
+#if CH_LP64 > 0
+@define INT_FAST64_MIN (-0x8000000000000000L)
+#else
+@define INT_FAST64_MIN (-0x8000000000000000LL)
+#endif
+#endif
+#if CH_INT_FAST8_MAX < 1
+@define INT_FAST8_MAX 0x7f
+#endif
+#if CH_INT_FAST16_MAX < 1
+@define INT_FAST16_MAX 0x7fff
+#endif
+#if CH_INT_FAST32_MAX < 1
+@define INT_FAST32_MAX 0x7fffffff
+#endif
+#if CH_INT_FAST64_MAX < 1
+#if CH_LP64 > 0
+@define INT_FAST64_MAX 0x7fffffffffffffffL
+#else
+@define INT_FAST64_MAX 0x7fffffffffffffffLL
+#endif
+#endif
+#if CH_UINT_FAST8_MAX < 1
+@define UINT_FAST8_MAX 0xff
+#endif
+#if CH_UINT_FAST16_MAX < 1
+@define UINT_FAST16_MAX 0xffff
+#endif
+#if CH_UINT_FAST32_MAX < 1
+@define UINT_FAST32_MAX 0xffffffffU
+#endif
+#if CH_UINT_FAST64_MAX < 1
+#if CH_LP64 > 0
+@define UINT_FAST64_MAX 0xffffffffffffffffUL
+#else
+@define UINT_FAST64_MAX 0xffffffffffffffffULL
+#endif
+#endif
+@endif /* _COMPAT_INTTYPES_H_ */

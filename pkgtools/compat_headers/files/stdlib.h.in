@@ -1,0 +1,10 @@
+#include "config.h"
+@include "@real_header@"
+@ifndef _COMPAT_STDLIB_H_
+@define _COMPAT_STDLIB_H_
+#if CH_HPUX___STRTOLL > 0
+@include <inttypes.h>
+@define strtoll(nptr, endptr, base) __strtoll(nptr, endptr, base)
+@define strtoull(nptr, endptr, base) __strtoull(nptr, endptr, base)
+#endif
+@endif /* _COMPAT_STDLIB_H_ */

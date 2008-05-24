@@ -1,0 +1,268 @@
+/* config.h.in.  Generated from configure.in by autoheader.  */
+
+/* descr */
+#undef CH_ACOSF
+
+/* descr */
+#undef CH_ASINF
+
+/* descr */
+#undef CH_ATAN2F
+
+/* descr */
+#undef CH_ATANF
+
+/* descr */
+#undef CH_CEILF
+
+/* descr */
+#undef CH_COSF
+
+/* descr */
+#undef CH_FLOORF
+
+/* descr */
+#undef CH_HPUX
+
+/* descr */
+#undef CH_HPUX_MISSING_RES_PROTO
+
+/* descr */
+#undef CH_HPUX___STRTOLL
+
+/* descr */
+#undef CH_INT16_MAX
+
+/* descr */
+#undef CH_INT16_MIN
+
+/* descr */
+#undef CH_INT16_T
+
+/* descr */
+#undef CH_INT32_MAX
+
+/* descr */
+#undef CH_INT32_MIN
+
+/* descr */
+#undef CH_INT32_T
+
+/* descr */
+#undef CH_INT64_MAX
+
+/* descr */
+#undef CH_INT64_MIN
+
+/* descr */
+#undef CH_INT64_T
+
+/* descr */
+#undef CH_INT8_MAX
+
+/* descr */
+#undef CH_INT8_MIN
+
+/* descr */
+#undef CH_INT8_T
+
+/* descr */
+#undef CH_INT_FAST16_MAX
+
+/* descr */
+#undef CH_INT_FAST16_MIN
+
+/* descr */
+#undef CH_INT_FAST16_T
+
+/* descr */
+#undef CH_INT_FAST32_MAX
+
+/* descr */
+#undef CH_INT_FAST32_MIN
+
+/* descr */
+#undef CH_INT_FAST32_T
+
+/* descr */
+#undef CH_INT_FAST64_MAX
+
+/* descr */
+#undef CH_INT_FAST64_MIN
+
+/* descr */
+#undef CH_INT_FAST64_T
+
+/* descr */
+#undef CH_INT_FAST8_MAX
+
+/* descr */
+#undef CH_INT_FAST8_MIN
+
+/* descr */
+#undef CH_INT_FAST8_T
+
+/* descr */
+#undef CH_INT_LEAST16_MAX
+
+/* descr */
+#undef CH_INT_LEAST16_MIN
+
+/* descr */
+#undef CH_INT_LEAST16_T
+
+/* descr */
+#undef CH_INT_LEAST32_MAX
+
+/* descr */
+#undef CH_INT_LEAST32_MIN
+
+/* descr */
+#undef CH_INT_LEAST32_T
+
+/* descr */
+#undef CH_INT_LEAST64_MAX
+
+/* descr */
+#undef CH_INT_LEAST64_MIN
+
+/* descr */
+#undef CH_INT_LEAST64_T
+
+/* descr */
+#undef CH_INT_LEAST8_MAX
+
+/* descr */
+#undef CH_INT_LEAST8_MIN
+
+/* descr */
+#undef CH_INT_LEAST8_T
+
+/* descr */
+#undef CH_LP64
+
+/* descr */
+#undef CH_SINF
+
+/* descr */
+#undef CH_SQRTF
+
+/* descr */
+#undef CH_TANF
+
+/* descr */
+#undef CH_UINT16_MAX
+
+/* descr */
+#undef CH_UINT16_T
+
+/* descr */
+#undef CH_UINT32_MAX
+
+/* descr */
+#undef CH_UINT32_T
+
+/* descr */
+#undef CH_UINT64_MAX
+
+/* descr */
+#undef CH_UINT64_T
+
+/* descr */
+#undef CH_UINT8_MAX
+
+/* descr */
+#undef CH_UINT8_T
+
+/* descr */
+#undef CH_UINT_FAST16_MAX
+
+/* descr */
+#undef CH_UINT_FAST16_T
+
+/* descr */
+#undef CH_UINT_FAST32_MAX
+
+/* descr */
+#undef CH_UINT_FAST32_T
+
+/* descr */
+#undef CH_UINT_FAST64_MAX
+
+/* descr */
+#undef CH_UINT_FAST64_T
+
+/* descr */
+#undef CH_UINT_FAST8_MAX
+
+/* descr */
+#undef CH_UINT_FAST8_T
+
+/* descr */
+#undef CH_UINT_LEAST16_MAX
+
+/* descr */
+#undef CH_UINT_LEAST16_T
+
+/* descr */
+#undef CH_UINT_LEAST32_MAX
+
+/* descr */
+#undef CH_UINT_LEAST32_T
+
+/* descr */
+#undef CH_UINT_LEAST64_MAX
+
+/* descr */
+#undef CH_UINT_LEAST64_T
+
+/* descr */
+#undef CH_UINT_LEAST8_MAX
+
+/* descr */
+#undef CH_UINT_LEAST8_T
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#undef HAVE_INTTYPES_H
+
+/* Define to 1 if you have the <memory.h> header file. */
+#undef HAVE_MEMORY_H
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#undef HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#undef HAVE_STDLIB_H
+
+/* Define to 1 if you have the <strings.h> header file. */
+#undef HAVE_STRINGS_H
+
+/* Define to 1 if you have the <string.h> header file. */
+#undef HAVE_STRING_H
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#undef HAVE_SYS_STAT_H
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#undef HAVE_SYS_TYPES_H
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#undef HAVE_UNISTD_H
+
+/* Define to the address where bug reports for this package should be sent. */
+#undef PACKAGE_BUGREPORT
+
+/* Define to the full name of this package. */
+#undef PACKAGE_NAME
+
+/* Define to the full name and version of this package. */
+#undef PACKAGE_STRING
+
+/* Define to the one symbol short name of this package. */
+#undef PACKAGE_TARNAME
+
+/* Define to the version of this package. */
+#undef PACKAGE_VERSION
+
+/* Define to 1 if you have the ANSI C header files. */
+#undef STDC_HEADERS
