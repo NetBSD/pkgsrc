@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.126 2008/05/23 18:06:44 tnn Exp $
+# $NetBSD: bootstrap,v 1.127 2008/05/24 13:38:33 tnn Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -1044,6 +1044,9 @@ build_package() {
 
 echo_msg "Installing packages"
 build_package "pkgtools/bootstrap-mk-files"
+case "$need_bsd_install" in
+yes)	build_package "sysutils/install-sh";;
+esac
 case "$need_ksh" in
 yes)	build_package "shells/pdksh";;
 esac
@@ -1053,9 +1056,6 @@ yes)	build_package "lang/nawk";;
 esac
 case "$need_sed" in
 yes)	build_package "textproc/nbsed" "LIBNBCOMPAT_STYLE=inplace";;
-esac
-case "$need_bsd_install" in
-yes)	build_package "sysutils/install-sh";;
 esac
 case "$need_extras" in
 yes)	build_package "pkgtools/bootstrap-extras";;
