@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/03/02 03:48:37 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2008/05/24 23:00:18 tnn Exp $
 
 DISTNAME=		xmill-0.9.1
 PKGREVISION=		3
@@ -29,7 +29,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/xmill
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/xmill
 	${INSTALL_DATA} ${WRKSRC}/documentation/COPYRIGHT.txt \
 		${WRKSRC}/documentation/LICENSE.txt \
 		${WRKSRC}/documentation/MANUAL.txt \
