@@ -1,0 +1,690 @@
+dnl $NetBSD: configure.in,v 1.1.1.1 2008/05/24 03:35:41 tnn Exp $
+
+AC_PREREQ(2.62)
+AC_INIT([compat_headers],[20080523],[tnn@NetBSD.org])
+AC_CONFIG_HEADER(config.h)
+AC_ARG_PROGRAM
+
+AC_PROG_CC
+AC_PROG_INSTALL
+AC_SUBST(prefix)
+
+REPLACE_stdint=no
+REPLACE_inttypes=no
+REPLACE_resolv=no
+REPLACE_sys_select=no
+REPLACE_stdlib=no
+REPLACE_math=no
+
+AC_SUBST(REPLACE_stdint)
+AC_SUBST(REPLACE_inttypes)
+AC_SUBST(REPLACE_resolv)
+AC_SUBST(REPLACE_sys_select)
+AC_SUBST(REPLACE_stdlib)
+AC_SUBST(REPLACE_math)
+
+AC_DEFINE([CH_LP64], [0], [descr])
+AC_DEFINE([CH_HPUX], [0], [descr])
+AC_DEFINE([CH_HPUX_MISSING_RES_PROTO], [0], [descr])
+AC_DEFINE([CH_HPUX___STRTOLL], [0], [descr])
+
+AC_DEFINE([CH_FLOORF], [0], [descr])
+AC_DEFINE([CH_CEILF], [0], [descr])
+AC_DEFINE([CH_SINF], [0], [descr])
+AC_DEFINE([CH_COSF], [0], [descr])
+AC_DEFINE([CH_TANF], [0], [descr])
+AC_DEFINE([CH_ASINF], [0], [descr])
+AC_DEFINE([CH_ACOSF], [0], [descr])
+AC_DEFINE([CH_ATANF], [0], [descr])
+AC_DEFINE([CH_ATAN2F], [0], [descr])
+AC_DEFINE([CH_SQRTF], [0], [descr])
+
+AC_DEFINE([CH_INT8_T], [0], [descr])
+AC_DEFINE([CH_UINT8_T], [0], [descr])
+AC_DEFINE([CH_INT16_T], [0], [descr])
+AC_DEFINE([CH_UINT16_T], [0], [descr])
+AC_DEFINE([CH_INT32_T], [0], [descr])
+AC_DEFINE([CH_UINT32_T], [0], [descr])
+AC_DEFINE([CH_INT64_T], [0], [descr])
+AC_DEFINE([CH_UINT64_T], [0], [descr])
+
+AC_DEFINE([CH_INT_LEAST8_T], [0], [descr])
+AC_DEFINE([CH_UINT_LEAST8_T], [0], [descr])
+AC_DEFINE([CH_INT_LEAST16_T], [0], [descr])
+AC_DEFINE([CH_UINT_LEAST16_T], [0], [descr])
+AC_DEFINE([CH_INT_LEAST32_T], [0], [descr])
+AC_DEFINE([CH_UINT_LEAST32_T], [0], [descr])
+AC_DEFINE([CH_INT_LEAST64_T], [0], [descr])
+AC_DEFINE([CH_UINT_LEAST64_T], [0], [descr])
+
+AC_DEFINE([CH_INT_FAST8_T], [0], [descr])
+AC_DEFINE([CH_UINT_FAST8_T], [0], [descr])
+AC_DEFINE([CH_INT_FAST16_T], [0], [descr])
+AC_DEFINE([CH_UINT_FAST16_T], [0], [descr])
+AC_DEFINE([CH_INT_FAST32_T], [0], [descr])
+AC_DEFINE([CH_UINT_FAST32_T], [0], [descr])
+AC_DEFINE([CH_INT_FAST64_T], [0], [descr])
+AC_DEFINE([CH_UINT_FAST64_T], [0], [descr])
+
+AC_DEFINE([CH_INT8_MIN], [0], [descr])
+AC_DEFINE([CH_INT16_MIN], [0], [descr])
+AC_DEFINE([CH_INT32_MIN], [0], [descr])
+AC_DEFINE([CH_INT64_MIN], [0], [descr])
+
+AC_DEFINE([CH_INT8_MAX], [0], [descr])
+AC_DEFINE([CH_INT16_MAX], [0], [descr])
+AC_DEFINE([CH_INT32_MAX], [0], [descr])
+AC_DEFINE([CH_INT64_MAX], [0], [descr])
+
+AC_DEFINE([CH_UINT8_MAX], [0], [descr])
+AC_DEFINE([CH_UINT16_MAX], [0], [descr])
+AC_DEFINE([CH_UINT32_MAX], [0], [descr])
+AC_DEFINE([CH_UINT64_MAX], [0], [descr])
+
+AC_DEFINE([CH_INT_LEAST8_MIN], [0], [descr])
+AC_DEFINE([CH_INT_LEAST16_MIN], [0], [descr])
+AC_DEFINE([CH_INT_LEAST32_MIN], [0], [descr])
+AC_DEFINE([CH_INT_LEAST64_MIN], [0], [descr])
+
+AC_DEFINE([CH_INT_LEAST8_MAX], [0], [descr])
+AC_DEFINE([CH_INT_LEAST16_MAX], [0], [descr])
+AC_DEFINE([CH_INT_LEAST32_MAX], [0], [descr])
+AC_DEFINE([CH_INT_LEAST64_MAX], [0], [descr])
+
+AC_DEFINE([CH_UINT_LEAST8_MAX], [0], [descr])
+AC_DEFINE([CH_UINT_LEAST16_MAX], [0], [descr])
+AC_DEFINE([CH_UINT_LEAST32_MAX], [0], [descr])
+AC_DEFINE([CH_UINT_LEAST64_MAX], [0], [descr])
+
+AC_DEFINE([CH_INT_FAST8_MIN], [0], [descr])
+AC_DEFINE([CH_INT_FAST16_MIN], [0], [descr])
+AC_DEFINE([CH_INT_FAST32_MIN], [0], [descr])
+AC_DEFINE([CH_INT_FAST64_MIN], [0], [descr])
+
+AC_DEFINE([CH_INT_FAST8_MAX], [0], [descr])
+AC_DEFINE([CH_INT_FAST16_MAX], [0], [descr])
+AC_DEFINE([CH_INT_FAST32_MAX], [0], [descr])
+AC_DEFINE([CH_INT_FAST64_MAX], [0], [descr])
+
+AC_DEFINE([CH_UINT_FAST8_MAX], [0], [descr])
+AC_DEFINE([CH_UINT_FAST16_MAX], [0], [descr])
+AC_DEFINE([CH_UINT_FAST32_MAX], [0], [descr])
+AC_DEFINE([CH_UINT_FAST64_MAX], [0], [descr])
+
+dnl ---
+
+# Replace stdint.h if it doesn't exist
+AC_CHECK_HEADER([stdint.h], [:],
+REPLACE_stdint=yes
+)
+
+# Replace select.h if it doesn't exist
+AC_CHECK_HEADER([sys/select.h], [:],
+REPLACE_sys_select=yes
+)
+
+# Check if LP64
+AC_MSG_CHECKING([for LP64])
+AC_TRY_RUN([int main(void) {return (sizeof(long) != 8);}],
+[AC_DEFINE(CH_LP64) AC_MSG_RESULT(yes)], [AC_MSG_RESULT(no)])
+
+#
+# Workarounds for HPUX bugs
+#
+
+AC_MSG_CHECKING([for HPUX])
+AC_TRY_COMPILE([], [#ifndef __hpux
+#error
+#endif],
+[AC_DEFINE(CH_HPUX) AC_MSG_RESULT(yes)]
+AC_MSG_CHECKING([for missing res_ prototypes on HPUX])
+AC_TRY_COMPILE([#include <resolv.h>
+void res_init(void *foo) {}], [],
+[AC_DEFINE(CH_HPUX_MISSING_RES_PROTO) AC_MSG_RESULT(yes)
+REPLACE_resolv=yes
+]
+, [AC_MSG_RESULT(no)])
+AC_MSG_CHECKING([if __strtoll is needed on HPUX])
+AC_TRY_COMPILE([#include <stdlib.h>
+void foo(char *a, char **b, int c) {strtoll(a,b,c);}], [],
+[AC_DEFINE(CH_HPUX___STRTOLL) AC_MSG_RESULT(yes)
+REPLACE_stdlib=yes
+]
+, [AC_MSG_RESULT(no)])
+, [AC_MSG_RESULT(no)])
+
+#
+# Make sure we have float math functions, provide macros otherwise.
+#
+
+AC_MSG_CHECKING([for floorf prototype])
+AC_TRY_COMPILE([#include <math.h>
+void floorf(void *foo) {}], [],
+[REPLACE_math=yes
+AC_MSG_RESULT(no)],
+[AC_DEFINE(CH_FLOORF) AC_MSG_RESULT(yes)])
+
+AC_MSG_CHECKING([for ceilf prototype])
+AC_TRY_COMPILE([#include <math.h>
+void ceilf(void *foo) {}], [],
+[REPLACE_math=yes
+AC_MSG_RESULT(no)],
+[AC_DEFINE(CH_CEILF) AC_MSG_RESULT(yes)])
+
+AC_MSG_CHECKING([for sinf prototype])
+AC_TRY_COMPILE([#include <math.h>
+void sinf(void *foo) {}], [],
+[REPLACE_math=yes
+AC_MSG_RESULT(no)],
+[AC_DEFINE(CH_SINF) AC_MSG_RESULT(yes)])
+
+AC_MSG_CHECKING([for cosf prototype])
+AC_TRY_COMPILE([#include <math.h>
+void cosf(void *foo) {}], [],
+[REPLACE_math=yes
+AC_MSG_RESULT(no)],
+[AC_DEFINE(CH_COSF) AC_MSG_RESULT(yes)])
+
+AC_MSG_CHECKING([for tanf prototype])
+AC_TRY_COMPILE([#include <math.h>
+void tanf(void *foo) {}], [],
+[REPLACE_math=yes
+AC_MSG_RESULT(no)],
+[AC_DEFINE(CH_TANF) AC_MSG_RESULT(yes)])
+
+AC_MSG_CHECKING([for asinf prototype])
+AC_TRY_COMPILE([#include <math.h>
+void asinf(void *foo) {}], [],
+[REPLACE_math=yes
+AC_MSG_RESULT(no)],
+[AC_DEFINE(CH_ASINF) AC_MSG_RESULT(yes)])
+
+AC_MSG_CHECKING([for acosf prototype])
+AC_TRY_COMPILE([#include <math.h>
+void acosf(void *foo) {}], [],
+[REPLACE_math=yes
+AC_MSG_RESULT(no)],
+[AC_DEFINE(CH_ACOSF) AC_MSG_RESULT(yes)])
+
+AC_MSG_CHECKING([for atanf prototype])
+AC_TRY_COMPILE([#include <math.h>
+void atanf(void *foo) {}], [],
+[REPLACE_math=yes
+AC_MSG_RESULT(no)],
+[AC_DEFINE(CH_ATANF) AC_MSG_RESULT(yes)])
+
+AC_MSG_CHECKING([for atan2f prototype])
+AC_TRY_COMPILE([#include <math.h>
+void atan2f(void *foo) {}], [],
+[REPLACE_math=yes
+AC_MSG_RESULT(no)],
+[AC_DEFINE(CH_ATAN2F) AC_MSG_RESULT(yes)])
+
+AC_MSG_CHECKING([for sqrtf prototype])
+AC_TRY_COMPILE([#include <math.h>
+void sqrtf(void *foo) {}], [],
+[REPLACE_math=yes
+AC_MSG_RESULT(no)],
+[AC_DEFINE(CH_SQRTF) AC_MSG_RESULT(yes)])
+
+
+#
+# Provide standard integer types and defs.
+#
+
+AC_MSG_CHECKING([for int8_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [int8_t x;],
+[AC_DEFINE(CH_INT8_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for uint8_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [uint8_t x;],
+[AC_DEFINE(CH_UINT8_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for int16_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [int16_t x;],
+[AC_DEFINE(CH_INT16_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for uint16_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [uint16_t x;],
+[AC_DEFINE(CH_UINT16_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for int32_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [int32_t x;],
+[AC_DEFINE(CH_INT32_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for uint32_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [uint32_t x;],
+[AC_DEFINE(CH_UINT32_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for int64_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [int64_t x;],
+[AC_DEFINE(CH_INT64_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for uint64_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [uint64_t x;],
+[AC_DEFINE(CH_UINT64_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+dnl ---
+
+AC_MSG_CHECKING([for int_least8_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [int_least8_t x;],
+[AC_DEFINE(CH_INT_LEAST8_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for uint_least8_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [uint_least8_t x;],
+[AC_DEFINE(CH_UINT_LEAST8_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for int_least16_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [int_least16_t x;],
+[AC_DEFINE(CH_INT_LEAST16_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for uint_least16_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [uint_least16_t x;],
+[AC_DEFINE(CH_UINT_LEAST16_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for int_least32_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [int_least32_t x;],
+[AC_DEFINE(CH_INT_LEAST32_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for uint_least32_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [uint_least32_t x;],
+[AC_DEFINE(CH_UINT_LEAST32_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for int_least64_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [int_least64_t x;],
+[AC_DEFINE(CH_INT_LEAST64_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for uint_least64_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [uint_least64_t x;],
+[AC_DEFINE(CH_UINT_LEAST64_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+dnl ---
+
+AC_MSG_CHECKING([for int_fast8_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [int_fast8_t x;],
+[AC_DEFINE(CH_INT_FAST8_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for uint_fast8_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [uint_fast8_t x;],
+[AC_DEFINE(CH_UINT_FAST8_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for int_fast16_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [int_fast16_t x;],
+[AC_DEFINE(CH_INT_FAST16_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for uint_fast16_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [uint_fast16_t x;],
+[AC_DEFINE(CH_UINT_FAST16_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for int_fast32_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [int_fast32_t x;],
+[AC_DEFINE(CH_INT_FAST32_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for uint_fast32_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [uint_fast32_t x;],
+[AC_DEFINE(CH_UINT_FAST32_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for int_fast64_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [int_fast64_t x;],
+[AC_DEFINE(CH_INT_FAST64_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for uint_fast64_t])
+AC_TRY_COMPILE([#include <inttypes.h>], [uint_fast64_t x;],
+[AC_DEFINE(CH_UINT_FAST64_T) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+dnl ---
+
+AC_MSG_CHECKING([for INT8_MIN])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT8_MIN
+#error
+#endif],
+[AC_DEFINE(CH_INT8_MIN) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for INT16_MIN])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT16_MIN
+#error
+#endif],
+[AC_DEFINE(CH_INT16_MIN) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for INT32_MIN])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT32_MIN
+#error
+#endif],
+[AC_DEFINE(CH_INT32_MIN) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for INT64_MIN])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT64_MIN
+#error
+#endif],
+[AC_DEFINE(CH_INT64_MIN) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+dnl ---
+
+AC_MSG_CHECKING([for INT8_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT8_MAX
+#error
+#endif],
+[AC_DEFINE(CH_INT8_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for INT16_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT16_MAX
+#error
+#endif],
+[AC_DEFINE(CH_INT16_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for INT32_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT32_MAX
+#error
+#endif],
+[AC_DEFINE(CH_INT32_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for INT64_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT64_MAX
+#error
+#endif],
+[AC_DEFINE(CH_INT64_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+dnl ---
+
+AC_MSG_CHECKING([for UINT8_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef UINT8_MAX
+#error
+#endif],
+[AC_DEFINE(CH_UINT8_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for UINT16_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef UINT16_MAX
+#error
+#endif],
+[AC_DEFINE(CH_UINT16_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for UINT32_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef UINT32_MAX
+#error
+#endif],
+[AC_DEFINE(CH_UINT32_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for UINT64_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef UINT64_MAX
+#error
+#endif],
+[AC_DEFINE(CH_UINT64_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+dnl ---
+
+AC_MSG_CHECKING([for INT_LEAST8_MIN])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT_LEAST8_MIN
+#error
+#endif],
+[AC_DEFINE(CH_INT_LEAST8_MIN) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for INT_LEAST16_MIN])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT_LEAST16_MIN
+#error
+#endif],
+[AC_DEFINE(CH_INT_LEAST16_MIN) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for INT_LEAST32_MIN])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT_LEAST32_MIN
+#error
+#endif],
+[AC_DEFINE(CH_INT_LEAST32_MIN) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for INT_LEAST64_MIN])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT_LEAST64_MIN
+#error
+#endif],
+[AC_DEFINE(CH_INT_LEAST64_MIN) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+dnl ---
+
+AC_MSG_CHECKING([for INT_LEAST8_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT_LEAST8_MAX
+#error
+#endif],
+[AC_DEFINE(CH_INT_LEAST8_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for INT_LEAST16_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT_LEAST16_MAX
+#error
+#endif],
+[AC_DEFINE(CH_INT_LEAST16_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for INT_LEAST32_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT_LEAST32_MAX
+#error
+#endif],
+[AC_DEFINE(CH_INT_LEAST32_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for INT_LEAST64_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT_LEAST64_MAX
+#error
+#endif],
+[AC_DEFINE(CH_INT_LEAST64_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+dnl ---
+
+AC_MSG_CHECKING([for UINT_LEAST8_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef UINT_LEAST8_MAX
+#error
+#endif],
+[AC_DEFINE(CH_UINT_LEAST8_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for UINT_LEAST16_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef UINT_LEAST16_MAX
+#error
+#endif],
+[AC_DEFINE(CH_UINT_LEAST16_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for UINT_LEAST32_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef UINT_LEAST32_MAX
+#error
+#endif],
+[AC_DEFINE(CH_UINT_LEAST32_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for UINT_LEAST64_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef UINT_LEAST64_MAX
+#error
+#endif],
+[AC_DEFINE(CH_UINT_LEAST64_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+dnl ---
+
+AC_MSG_CHECKING([for INT_FAST8_MIN])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT_FAST8_MIN
+#error
+#endif],
+[AC_DEFINE(CH_INT_FAST8_MIN) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for INT_FAST16_MIN])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT_FAST16_MIN
+#error
+#endif],
+[AC_DEFINE(CH_INT_FAST16_MIN) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for INT_FAST32_MIN])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT_FAST32_MIN
+#error
+#endif],
+[AC_DEFINE(CH_INT_FAST32_MIN) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for INT_FAST64_MIN])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT_FAST64_MIN
+#error
+#endif],
+[AC_DEFINE(CH_INT_FAST64_MIN) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+dnl ---
+
+AC_MSG_CHECKING([for INT_FAST8_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT_FAST8_MAX
+#error
+#endif],
+[AC_DEFINE(CH_INT_FAST8_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for INT_FAST16_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT_FAST16_MAX
+#error
+#endif],
+[AC_DEFINE(CH_INT_FAST16_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for INT_FAST32_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT_FAST32_MAX
+#error
+#endif],
+[AC_DEFINE(CH_INT_FAST32_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for INT_FAST64_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef INT_FAST64_MAX
+#error
+#endif],
+[AC_DEFINE(CH_INT_FAST64_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+dnl ---
+
+AC_MSG_CHECKING([for UINT_FAST8_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef UINT_FAST8_MAX
+#error
+#endif],
+[AC_DEFINE(CH_UINT_FAST8_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for UINT_FAST16_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef UINT_FAST16_MAX
+#error
+#endif],
+[AC_DEFINE(CH_UINT_FAST16_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for UINT_FAST32_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef UINT_FAST32_MAX
+#error
+#endif],
+[AC_DEFINE(CH_UINT_FAST32_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_MSG_CHECKING([for UINT_FAST64_MAX])
+AC_TRY_COMPILE([#include <inttypes.h>], [#ifndef UINT_FAST64_MAX
+#error
+#endif],
+[AC_DEFINE(CH_UINT_FAST64_MAX) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_inttypes=yes])
+
+AC_CONFIG_FILES([Makefile])
+AC_OUTPUT
