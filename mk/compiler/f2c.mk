@@ -1,4 +1,4 @@
-# $NetBSD: f2c.mk,v 1.10 2008/02/07 20:59:05 rillig Exp $
+# $NetBSD: f2c.mk,v 1.11 2008/05/24 07:27:11 obache Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -40,8 +40,6 @@ COMPILER_F2C_MK=	defined
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_LANGUAGES+=		c
-
 .if !empty(PKGPATH:Mlang/f2c) || !empty(PKGPATH:Mdevel/patch) || \
     !empty(PKGPATH:Mdevel/libtool-base)
 IGNORE_F2C=	yes
@@ -70,6 +68,8 @@ _USE_F2C=	YES
 .endif
 
 .if !empty(_USE_F2C:M[yY][eE][sS])
+USE_LANGUAGES+=		c
+
 EVAL_PREFIX+=		_F2CBASE=f2c
 _F2CBASE_DEFAULT=	${LOCALBASE}
 
