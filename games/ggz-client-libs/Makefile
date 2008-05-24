@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/06 23:47:06 markd Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/24 09:27:49 obache Exp $
 #
 
 DISTNAME=	ggz-client-libs-0.0.14.1
@@ -13,6 +13,7 @@ COMMENT=	GGZ Gaming Zone libraries
 GNU_CONFIGURE=	yes
 USE_DIRS+=	xdg-1.4
 USE_LIBTOOL=	yes
+USE_TOOLS+=	msgfmt
 
 CONFIGURE_ARGS+=	--enable-debug-gdb
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
