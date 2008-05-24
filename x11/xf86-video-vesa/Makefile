@@ -1,13 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2007/08/02 14:15:18 sborrill Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/24 21:45:18 tnn Exp $
 #
 
 DISTNAME=	xf86-video-vesa-1.3.0
 PKGREVISION=	1
 CATEGORIES=	x11
-MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/driver/
+MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
+HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg VESA video driver
 
 PKG_DESTDIR_SUPPORT=    user-destdir

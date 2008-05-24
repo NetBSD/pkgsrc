@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/03 03:04:56 bjs Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 21:45:17 tnn Exp $
 #
 
 DISTNAME=	xinput-1.3.0
 CATEGORIES=	x11
-MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
+MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 
 MAINTAINER=	bjs@NetBSD.org
-HOMEPAGE=	http://xorg.freedesktop.org/releases/individual/app/
+HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Xinput diagnostic utility for modular X.org
 
 PKG_DESTDIR_SUPPORT= 	user-destdir

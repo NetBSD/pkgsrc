@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2006/11/03 20:13:38 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/24 21:45:16 tnn Exp $
 #
 
 DISTNAME=		recordproto-1.13.2
 CATEGORIES=		x11
-MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/proto/
+MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org

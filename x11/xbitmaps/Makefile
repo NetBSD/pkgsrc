@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/03 19:41:40 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 21:45:16 tnn Exp $
 #
 
 DISTNAME=		xbitmaps-1.0.1
 CATEGORIES=		x11 devel
-MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/data/
+MASTER_SITES=		${MASTER_SITE_XORG:=data/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
