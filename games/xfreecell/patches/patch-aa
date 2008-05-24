@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2005/02/22 13:44:13 minskim Exp $
+$NetBSD: patch-aa,v 1.4 2008/05/24 15:59:27 obache Exp $
 
---- makefile.orig	1999-04-03 07:42:49.000000000 -0600
+--- makefile.orig	1999-04-03 13:42:49.000000000 +0000
 +++ makefile
 @@ -1,10 +1,10 @@
  OBJECTS=card.o freecell.o option.o stack.o subwindows.o undo.o util.o gnmanager.o random.o
@@ -8,7 +8,7 @@ $NetBSD: patch-aa,v 1.3 2005/02/22 13:44:13 minskim Exp $
 -CFLAGS=-g -Wall -DSHAPE -DBOGUSRANDOM
 -LIBS=-lm -L. -lns -L/usr/X11R6/lib -lXext -lX11
 +CFLAGS=-Wall -DSHAPE -DBOGUSRANDOM -I${X11BASE}/include
-+LIBS=-lm -L. -lns -Wl,-R${X11BASE}/lib -L${X11BASE}/lib -lXext -lX11
++LIBS=-lm -L. -lns ${COMPILER_RPATH_FLAG}${X11BASE}/lib -L${X11BASE}/lib -lXext -lX11
  STATICDIR=xfreecell-static
  DOCS=README CHANGES mshuffle.txt xfreecell.6
 -LIBDIR=/usr/local/lib/xfreecell
@@ -16,23 +16,18 @@ $NetBSD: patch-aa,v 1.3 2005/02/22 13:44:13 minskim Exp $
  
  all: $(OBJECTS) lib
  	$(CC) -o xfreecell $(CFLAGS) $(OBJECTS) $(LIBS)
-@@ -25,13 +25,13 @@ static-release: static
- 
- clean:
- 	rm -f *~ *.o a.out xfreecell libns.a
--	make -C widget clean
-+	${GMAKE} -C widget clean
- 
+@@ -30,8 +30,8 @@ clean:
  lib:
--	make -C widget lib
-+	${GMAKE} -C widget lib
+ 	make -C widget lib
  
- install: all
+-install: all
 -	install xfreecell $(DESTDIR)/usr/local/bin
 -	install xfreecell.6 $(DESTDIR)/usr/local/man/man6
-+	install xfreecell $(DESTDIR)${PREFIX}/bin
-+	install xfreecell.6 $(DESTDIR)${PREFIX}/man/man6
- #	install -d $(LIBDIR)
+-#	install -d $(LIBDIR)
 -#	install ms-compatible/MSNumbers $(DESTDIR)/usr/local/lib/xfreecell
 \ No newline at end of file
-+#	install ms-compatible/MSNumbers $(DESTDIR)${PREFIX}/lib/xfreecell
++install: xfreecell
++	${BSD_INSTALL_PROGRAM} xfreecell $(DESTDIR)${PREFIX}/bin
++	${BSD_INSTALL_MAN} xfreecell.6 $(DESTDIR)${PREFIX}/${PKGMANDIR}/man6
++#	install -d $(DESTDIR)$(LIBDIR)
++#	install ms-compatible/MSNumbers $(DESTDIR)$(LIBDIR)
