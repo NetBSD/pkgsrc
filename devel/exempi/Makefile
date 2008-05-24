@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/12 10:56:18 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 06:14:00 obache Exp $
 #
 
 DISTNAME=	exempi-2.0.0
@@ -12,7 +12,7 @@ COMMENT=	XMP library
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
-USE_LANGUAGES=	c++
+USE_LANGUAGES=	c c++
 
 PKGCONFIG_OVERRIDE+=	exempi/exempi-2.0.pc.in
 
