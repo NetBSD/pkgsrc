@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2007/03/18 20:22:12 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/24 21:45:20 tnn Exp $
 #
 
 DISTNAME=		encodings-1.0.2
 CATEGORIES=		fonts x11
-MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/font/
+MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
