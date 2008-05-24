@@ -1,0 +1,61 @@
+# $NetBSD: Makefile.in,v 1.1.1.1 2008/05/24 03:35:41 tnn Exp $
+
+REPLACE_stdint=		@REPLACE_stdint@
+REPLACE_inttypes=	@REPLACE_inttypes@
+REPLACE_resolv=		@REPLACE_resolv@
+REPLACE_sys_select=	@REPLACE_sys_select@
+REPLACE_math=		@REPLACE_math@
+REPLACE_stdlib=		@REPLACE_stdlib@
+
+PREFIX=         @prefix@
+DESTDIR?=
+INSTALL?=	@INSTALL@
+
+all: .PHONY
+.if ${REPLACE_stdint} == "yes"
+	./mkhdr.sh stdint.h < stdint.h.in > stdint.h
+.endif
+.if ${REPLACE_inttypes} == "yes"
+	./mkhdr.sh inttypes.h < inttypes.h.in > inttypes.h
+.endif
+.if ${REPLACE_resolv} == "yes"
+	./mkhdr.sh resolv.h < resolv.h.in > resolv.h
+.endif
+.if ${REPLACE_sys_select} == "yes"
+	./mkhdr.sh sys/select.h < select.h.in > select.h
+.endif
+.if ${REPLACE_math} == "yes"
+	./mkhdr.sh math.h < math.h.in > math.h
+.endif
+.if ${REPLACE_stdlib} == "yes"
+	./mkhdr.sh stdlib.h < stdlib.h.in > stdlib.h
+.endif
+
+install: .PHONY
+	printf "" > PLIST
+	${INSTALL} -m 755 -d ${DESTDIR}${PREFIX}/include
+.if ${REPLACE_stdint} == "yes"
+	${INSTALL} -m 644 -c stdint.h ${DESTDIR}${PREFIX}/include
+	echo include/stdint.h >> PLIST
+.endif
+.if ${REPLACE_inttypes} == "yes"
+	${INSTALL} -m 644 -c inttypes.h ${DESTDIR}${PREFIX}/include
+	echo include/inttypes.h >> PLIST
+.endif
+.if ${REPLACE_resolv} == "yes"
+	${INSTALL} -m 644 -c resolv.h ${DESTDIR}${PREFIX}/include
+	echo include/resolv.h >> PLIST
+.endif
+.if ${REPLACE_sys_select} == "yes"
+	${INSTALL} -m 755 -d ${DESTDIR}${PREFIX}/include/sys
+	${INSTALL} -m 644 select.h ${DESTDIR}${PREFIX}/include/sys
+	echo include/sys/select.h >> PLIST
+.endif
+.if ${REPLACE_math} == "yes"
+	${INSTALL} -m 644 math.h ${DESTDIR}${PREFIX}/include
+	echo include/math.h >> PLIST
+.endif
+.if ${REPLACE_stdlib} == "yes"
+	${INSTALL} -m 644 stdlib.h ${DESTDIR}${PREFIX}/include
+	echo include/stdlib.h >> PLIST
+.endif

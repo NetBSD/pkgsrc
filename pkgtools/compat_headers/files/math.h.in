@@ -1,0 +1,35 @@
+#include "config.h"
+@include "@real_header@"
+@ifndef _COMPAT_MATH_H_
+@define _COMPAT_MATH_H_
+#if CH_FLOORF < 1
+@define floorf(x)	((float)floor (x))
+#endif
+#if CH_CEILF < 1
+@define ceilf(x)	((float)ceil (x))
+#endif
+#if CH_SINF < 1
+@define sinf(x)		((float)sin (x))
+#endif
+#if CH_COSF < 1
+@define cosf(x)		((float)cos (x))
+#endif
+#if CH_TANF < 1
+@define tanf(x)		((float)tan (x))
+#endif
+#if CH_ASINF < 1
+@define asinf(x)	((float)asin (x))
+#endif
+#if CH_ACOSF < 1
+@define acosf(x)	((float)acos (x))
+#endif
+#if CH_ATANF < 1
+@define atanf(x)	((float)atan (x))
+#endif
+#if CH_ATAN2F < 1
+@define atan2f(x,y)	((float)atan2 (x, y))
+#endif
+#if CH_SQRTF < 1
+@define sqrtf(x)	((float)sqrt (y))
+#endif
+@endif /* _COMPAT_MATH_H_ */
