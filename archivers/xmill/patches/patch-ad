@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.4 2008/05/24 23:00:18 tnn Exp $
+
+--- XMill/PPMDI.cpp.orig	2003-03-20 03:12:58.000000000 +0100
++++ XMill/PPMDI.cpp
+@@ -245,7 +245,7 @@ int PPMDI::uncompress(unsigned char *dst
+ 
+ cleanup:
+    *outused = j;
+-   *inused = inlen - (int)endptr + (int)src;
++   *inused = inlen - (int)(src - endptr);
+    return ret;
+ }
+  
