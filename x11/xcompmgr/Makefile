@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2008/04/22 19:40:28 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2008/05/24 21:45:16 tnn Exp $
 #
 
 DISTNAME=	xcompmgr-1.1.4
 CATEGORIES=	x11
-MASTER_SITES =	http://xorg.freedesktop.org/archive/individual/app/
+MASTER_SITES =	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org

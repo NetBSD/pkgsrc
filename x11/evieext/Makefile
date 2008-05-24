@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/03 21:47:55 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 21:45:14 tnn Exp $
 #
 
 DISTNAME=		evieext-1.0.2
 CATEGORIES=		x11
-MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/proto/
+MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org

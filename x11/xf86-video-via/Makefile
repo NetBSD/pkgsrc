@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2008/04/12 22:43:15 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/24 21:45:18 tnn Exp $
 #
 
 DISTNAME=	xf86-video-via-0.2.2
 CATEGORIES=	x11
-MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/driver/
+MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
+HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg VIA unichrome video driver
 
 PKG_DESTDIR_SUPPORT=    user-destdir

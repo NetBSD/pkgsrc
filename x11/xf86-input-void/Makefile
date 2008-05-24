@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2008/04/07 17:59:57 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/24 21:45:17 tnn Exp $
 
 DISTNAME=	xf86-input-void-1.1.1
 CATEGORIES=	x11
-MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/driver/
+MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
+HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg dummy input driver
 
 PKG_DESTDIR_SUPPORT=	user-destdir

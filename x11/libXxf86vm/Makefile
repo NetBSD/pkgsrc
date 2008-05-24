@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.3 2008/04/08 03:41:00 bjs Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/24 21:45:16 tnn Exp $
 #
 
 DISTNAME=		libXxf86vm-1.0.1
 PKGREVISION=		1
 CATEGORIES=		x11
-MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
+MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/releases/individual/lib/
+HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Library for the XFree86-VidMode X extension
 
 PKG_DESTDIR_SUPPORT=	user-destdir

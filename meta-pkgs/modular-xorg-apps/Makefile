@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2008/03/04 20:16:34 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/24 21:45:21 tnn Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-apps-1.5
 CATEGORIES=	meta-pkgs x11
-MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
+MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 DISTFILES=	# empty
 
 MAINTAINER=	joerg@NetBSD.org

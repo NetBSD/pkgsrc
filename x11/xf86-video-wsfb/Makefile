@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.3 2007/03/20 15:10:01 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/24 21:45:18 tnn Exp $
 
 DISTNAME=	xf86-video-wsfb-0.2.1
 CATEGORIES=	x11
-MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/driver/
+MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	reed@NetBSD.org
+HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg wsdisplay framebuffer video driver
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* OpenBSD-*-*

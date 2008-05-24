@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2007/07/25 15:53:10 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/24 21:45:14 tnn Exp $
 #
 
 DISTNAME=		compositeproto-0.4
 CATEGORIES=		x11
-MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/proto/
+MASTER_SITES=		${MASTER_SITE_XORG:=proto/}
 
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://xorg.freedesktop.org/

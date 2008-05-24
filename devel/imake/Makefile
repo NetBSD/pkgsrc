@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.5 2007/07/17 21:05:11 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/24 21:45:20 tnn Exp $
 #
 
 DISTNAME=		imake-1.0.2
 PKGREVISION=		2
 CATEGORIES=		x11 devel
-MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/util/
+MASTER_SITES=		${MASTER_SITE_XORG:=util/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/releases/individual/util/
+HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Imake and other utilities from modular X.org
 
 PKG_DESTDIR_SUPPORT=	user-destdir

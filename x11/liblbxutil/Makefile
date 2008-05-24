@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2007/08/06 11:49:50 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/24 21:45:16 tnn Exp $
 #
 
 DISTNAME=		liblbxutil-1.0.1
 CATEGORIES=		x11
-MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
+MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org

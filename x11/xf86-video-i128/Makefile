@@ -1,12 +1,13 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/22 15:43:29 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 21:45:17 tnn Exp $
 #
 
 DISTNAME=	xf86-video-i128-1.2.1
 CATEGORIES=	x11
-MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/driver/
+MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
+HOMEPAGE=	http://xorg.freedesktop.org/
 COMMENT=	Modular Xorg Number 9 I128 video driver
 
 PKG_DESTDIR_SUPPORT=    user-destdir

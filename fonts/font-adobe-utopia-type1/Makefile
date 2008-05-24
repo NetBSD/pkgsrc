@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2007/02/19 07:57:25 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/24 21:45:20 tnn Exp $
 #
 
 DISTNAME=		font-adobe-utopia-type1-1.0.1
 CATEGORIES=		fonts
-MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/font/
+MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
