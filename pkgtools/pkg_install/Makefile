@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152.2.1 2008/05/11 20:20:37 joerg Exp $
+# $NetBSD: Makefile,v 1.152.2.2 2008/05/24 21:54:22 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -23,12 +23,6 @@ CONFLICTS+=		audit-packages-[0-9]*
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR:Q}
-CONFIGURE_ARGS+=	--with-pax=${PAX:Q}
-USE_TOOLS+=		pax:run
-
-# The following tools are needed by pkg_view and linkfarm.
-USE_TOOLS+=		chmod cmp cp env find grep ln mkdir rm rmdir	\
-			sed sort touch
 
 USE_FEATURES=		nbcompat
 

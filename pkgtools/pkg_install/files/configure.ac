@@ -1,6 +1,6 @@
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
-AC_INIT([pkg_install], [20070804], [joerg@NetBSD.org])
+AC_INIT([pkg_install], [20080524], [joerg@NetBSD.org])
 AC_CONFIG_SRCDIR([lib/plist.c])
 AC_CONFIG_HEADER(lib/config.h)
 
@@ -42,12 +42,6 @@ AC_ARG_WITH(pkgdbdir,
 [ pkgdbdir="$with_pkgdbdir" ],
 [ pkgdbdir="/var/db/pkg" ])
 AC_SUBST(pkgdbdir)
-
-AC_ARG_WITH(pax,
-[  --with-pax=path         Path to pax (PREFIX/bin/pax)],
-[ pax="$with_pax" ],
-[ pax='$(prefix)/bin/pax' ])
-AC_SUBST(pax)
 
 AC_ARG_WITH(ssl,
 [ --with-ssl		Enable OpenSSL based signature support],
