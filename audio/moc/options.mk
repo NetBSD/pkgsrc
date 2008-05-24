@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2008/04/12 22:42:58 jlam Exp $
+# $NetBSD: options.mk,v 1.5 2008/05/24 23:05:27 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.moc
 PKG_SUPPORTED_OPTIONS=	sndfile flac vorbis speex curl samplerate
@@ -6,7 +6,7 @@ PKG_SUGGESTED_OPTIONS=	sndfile flac vorbis curl
 
 .include "../../mk/bsd.options.mk"
 
-PLIST_VARS+=		fac sndfile speex vorbis
+PLIST_VARS+=		flac sndfile speex vorbis
 
 .if !empty(PKG_OPTIONS:Msamplerate)
 PKG_OPTIONS+=		sndfile
