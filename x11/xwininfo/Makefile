@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2007/09/21 19:50:31 bjs Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/24 21:45:20 tnn Exp $
 #
 
 DISTNAME=		xwininfo-1.0.3
 CATEGORIES=		x11
-MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/app/
+MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org

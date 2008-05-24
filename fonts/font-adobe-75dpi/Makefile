@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2008/01/22 17:09:52 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/24 21:45:20 tnn Exp $
 #
 
 DISTNAME=		font-adobe-75dpi-1.0.0
 CATEGORIES=		fonts
-MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/font/
+MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org

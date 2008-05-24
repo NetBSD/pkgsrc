@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2007/12/19 12:27:29 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/24 21:45:22 tnn Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-libs-1.0
 CATEGORIES=	meta-pkgs x11
-MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/lib/
+MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 DISTFILES=	# empty
 
 MAINTAINER=	joerg@NetBSD.org

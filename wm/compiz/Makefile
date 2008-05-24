@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2008/05/12 01:57:37 jmcneill Exp $
+# $NetBSD: Makefile,v 1.19 2008/05/24 21:45:14 tnn Exp $
 #
 
 DISTNAME=	compiz-0.6.2
 PKGREVISION=	1
 CATEGORIES=	wm x11
-MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
+MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://compiz.org/

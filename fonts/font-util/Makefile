@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.5 2008/02/20 22:33:18 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/24 21:45:21 tnn Exp $
 #
 
 DISTNAME=		font-util-1.0.1
 PKGREVISION=		1
 CATEGORIES=		fonts
-MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/font/
+MASTER_SITES=		${MASTER_SITE_XORG:=font/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org

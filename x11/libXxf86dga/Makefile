@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.5 2008/01/15 23:59:22 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/24 21:45:16 tnn Exp $
 #
 
 DISTNAME=		libXxf86dga-1.0.2
 CATEGORIES=		x11
-MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
+MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
-HOMEPAGE=		http://xorg.freedesktop.org/releases/individual/lib/
+HOMEPAGE=		http://xorg.freedesktop.org/
 COMMENT=		Library for the XFree86-DGA X extension
 
 PKG_DESTDIR_SUPPORT=	user-destdir

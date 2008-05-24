@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.8 2008/04/23 19:00:46 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2008/05/24 21:45:20 tnn Exp $
 
 DISTNAME=	xf86-video-intel-2.3.0
 CATEGORIES=	x11
-MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/driver/
+MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 CONFLICTS+=	xf86-video-i810-[0-9]*
