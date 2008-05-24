@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/01/18 02:54:15 bjs Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/24 21:45:20 tnn Exp $
 
 DISTNAME=	xdm-1.1.6
 CATEGORIES=	x11
-MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/app/
+MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	blair.sadewitz@gmail.com

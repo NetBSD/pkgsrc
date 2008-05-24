@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2007/07/25 15:56:09 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/24 21:45:15 tnn Exp $
 #
 
 DISTNAME=		libXcomposite-0.4.0
 CATEGORIES=		x11 devel
-MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/lib/
+MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org
