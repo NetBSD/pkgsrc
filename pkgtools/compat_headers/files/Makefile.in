@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.1.1.1 2008/05/24 03:35:41 tnn Exp $
+# $NetBSD: Makefile.in,v 1.2 2008/05/24 22:11:20 tnn Exp $
 
 REPLACE_stdint=		@REPLACE_stdint@
 REPLACE_inttypes=	@REPLACE_inttypes@
@@ -9,7 +9,7 @@ REPLACE_stdlib=		@REPLACE_stdlib@
 
 PREFIX=         @prefix@
 DESTDIR?=
-INSTALL?=	@INSTALL@
+INSTALL=	@INSTALL@
 
 all: .PHONY
 .if ${REPLACE_stdint} == "yes"
