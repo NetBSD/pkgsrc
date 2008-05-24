@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1135 2008/05/24 14:06:56 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.1136 2008/05/24 15:59:42 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1905,3 +1905,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/msdl to 1.2 [obache 2008-05-24]
 	Updated multimedia/vlc to 0.8.6fnb1 [wiz 2008-05-24]
 	Updated devel/pcre to 7.7 [wiz 2008-05-24]
+	Updated games/xfreecell to 1.0.5bnb2 [obache 2008-05-24]
