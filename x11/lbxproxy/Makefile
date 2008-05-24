@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/10 13:46:38 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/24 21:45:19 tnn Exp $
 #
 
 DISTNAME=		lbxproxy-1.0.1
 CATEGORIES=		x11
-MASTER_SITES=		http://xorg.freedesktop.org/releases/individual/app/
+MASTER_SITES=		${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		joerg@NetBSD.org

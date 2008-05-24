@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2008/05/18 03:10:07 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/24 21:45:21 tnn Exp $
 
 DISTNAME=	# empty
 PKGNAME=	modular-xorg-drivers-1.2
 CATEGORIES=	meta-pkgs drivers x11
-MASTER_SITES=	http://xorg.freedesktop.org/releases/individual/drivers
+MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 DISTFILES=	# empty
 
 MAINTAINER=	joerg@NetBSD.org
