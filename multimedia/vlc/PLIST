@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/04/12 22:43:08 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/05/24 10:29:40 wiz Exp $
 ${PLIST.skins}bin/svlc
 bin/vlc
 bin/vlc-config
@@ -80,6 +80,7 @@ lib/vlc/codec/libdts_plugin.so
 lib/vlc/codec/libdvbsub_plugin.so
 ${PLIST.faad}lib/vlc/codec/libfaad_plugin.so
 lib/vlc/codec/libfake_plugin.so
+lib/vlc/codec/libffmpeg_plugin.so
 lib/vlc/codec/libflacdec_plugin.so
 lib/vlc/codec/liblibmpeg2_plugin.so
 lib/vlc/codec/liblpcm_plugin.so
@@ -92,6 +93,7 @@ lib/vlc/codec/libsubsdec_plugin.so
 lib/vlc/codec/libsvcdsub_plugin.so
 lib/vlc/codec/libtelx_plugin.so
 lib/vlc/codec/libvorbis_plugin.so
+lib/vlc/codec/libx264_plugin.so
 lib/vlc/control/libgestures_plugin.so
 lib/vlc/control/libhotkeys_plugin.so
 lib/vlc/control/libhttp_plugin.so
@@ -137,7 +139,6 @@ lib/vlc/demux/libwav_plugin.so
 lib/vlc/demux/libxa_plugin.so
 ${PLIST.skins}lib/vlc/gui/libskins2_plugin.so
 ${PLIST.wxwidgets}lib/vlc/gui/libwxwidgets_plugin.so
-lib/vlc/libffmpeg.a
 lib/vlc/libi420_rgb_mmx.a
 lib/vlc/libi420_ymga_mmx.a
 lib/vlc/libi420_yuy2_mmx.a
@@ -146,7 +147,6 @@ lib/vlc/libmemcpy3dn.a
 lib/vlc/libmemcpymmx.a
 lib/vlc/libmemcpymmxext.a
 lib/vlc/libmux_ts.a
-lib/vlc/libstream_out_switcher.a
 lib/vlc/misc/libdummy_plugin.so
 lib/vlc/misc/libexport_plugin.so
 lib/vlc/misc/libfreetype_plugin.so
@@ -185,6 +185,7 @@ lib/vlc/stream_out/libstream_out_gather_plugin.so
 lib/vlc/stream_out/libstream_out_mosaic_bridge_plugin.so
 lib/vlc/stream_out/libstream_out_rtp_plugin.so
 lib/vlc/stream_out/libstream_out_standard_plugin.so
+lib/vlc/stream_out/libstream_out_switcher_plugin.so
 lib/vlc/stream_out/libstream_out_transcode_plugin.so
 lib/vlc/video_chroma/libi420_rgb_plugin.so
 lib/vlc/video_chroma/libi420_ymga_plugin.so
