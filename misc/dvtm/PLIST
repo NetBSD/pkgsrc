@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/09 17:20:47 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/05/25 11:46:33 tnn Exp $
 bin/dvtm
+bin/dvtm-status
 man/man1/dvtm.1
