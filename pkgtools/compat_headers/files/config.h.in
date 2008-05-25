@@ -22,6 +22,9 @@
 #undef CH_FLOORF
 
 /* descr */
+#undef CH_HAVE_VA_COPY
+
+/* descr */
 #undef CH_HPUX
 
 /* descr */
