@@ -1,10 +1,13 @@
-# $NetBSD: tools.DragonFly.mk,v 1.34 2008/05/22 20:11:55 joerg Exp $
+# $NetBSD: tools.DragonFly.mk,v 1.35 2008/05/25 21:40:59 joerg Exp $
 #
 # System-supplied tools for the DragonFly operating system.
 
 TOOLS_PLATFORM.[?=		[			# shell builtin
 TOOLS_PLATFORM.awk?=		/usr/bin/awk
 TOOLS_PLATFORM.basename?=	/usr/bin/basename
+.if exists(/usr/bin/bsdtar)
+TOOLS_PLATFORM.bsdtar?=		/usr/bin/bsdtar
+.endif
 TOOLS_PLATFORM.byacc?=		/usr/bin/yacc
 TOOLS_PLATFORM.cat?=		/bin/cat
 TOOLS_PLATFORM.bzcat?=		/usr/bin/bzcat
