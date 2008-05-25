@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.85 2007/06/08 18:39:23 wiz Exp $
+# $NetBSD: Makefile,v 1.86 2008/05/25 14:45:17 tron Exp $
 
 DISTNAME=		glib-1.2.10
 PKGREVISION=		10
@@ -6,7 +6,7 @@ CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/gtk/v1.2/ \
 			${MASTER_SITE_GNOME:=sources/glib/1.2/}
 
-MAINTAINER=		tron@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://developer.gnome.org/doc/API/glib/index.html
 COMMENT=		Some useful routines for C programming (glib1)
 

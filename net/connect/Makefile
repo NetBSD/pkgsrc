@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/10/04 21:53:16 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2008/05/25 14:45:17 tron Exp $
 
 DISTNAME=	connect
 PKGNAME=	${DISTNAME}-1.95
@@ -6,7 +6,7 @@ CATEGORIES=	net security
 MASTER_SITES=	http://zippo.taiyo.co.jp/~gotoh/ssh/
 EXTRACT_SUFX=	.c
 
-MAINTAINER=	tron@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://zippo.taiyo.co.jp/~gotoh/ssh/connect.html
 COMMENT=	Open a TCP connection using a SOCKS4/5 or HTTP proxy server
 

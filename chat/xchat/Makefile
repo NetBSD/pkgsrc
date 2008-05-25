@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2008/01/18 05:06:25 tnn Exp $
+# $NetBSD: Makefile,v 1.54 2008/05/25 14:45:16 tron Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -6,7 +6,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKGREVISION=	2
 
-MAINTAINER=	tron@NetBSD.org
+OWNER=	tron@NetBSD.org
 COMMENT=	X11 (X Window System) IRC client, using the GTK2 toolkit
 
 CONFLICTS=		xchat-gnome-[0-9]*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/02/05 23:08:58 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/05/25 14:45:17 tron Exp $
 
 DISTNAME=	ue400dev
 PKGNAME=	uemacs-4.0
@@ -7,7 +7,7 @@ CATEGORIES=	editors
 MASTER_SITES=	ftp://aquest.com/pub/uemacs400/disk2/
 EXTRACT_SUFX=	.zip
 
-MAINTAINER=	tron@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	"emacs" key sequences compatible full screen editor
 
 WRKSRC=		${WRKDIR}

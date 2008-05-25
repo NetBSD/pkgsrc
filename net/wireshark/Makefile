@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/03/31 13:13:40 tron Exp $
+# $NetBSD: Makefile,v 1.20 2008/05/25 14:45:17 tron Exp $
 
 DISTNAME=		wireshark-1.0.0
 CATEGORIES=		net
@@ -6,7 +6,7 @@ MASTER_SITES=		http://www.wireshark.org/download/src/ \
 			${MASTER_SITE_SOURCEFORGE:=wireshark/}
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		tron@NetBSD.org
+OWNER=		tron@NetBSD.org
 HOMEPAGE=		http://www.wireshark.org/
 COMMENT=		Network protocol analyzer
 

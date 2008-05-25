@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2006/11/09 09:14:05 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/25 14:45:17 tron Exp $
 
 DISTNAME=	cia-20030922
 CATEGORIES=	net
 MASTER_SITES=	http://scheler.de/~matthias/files/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tron@NetBSD.org
+OWNER=	tron@NetBSD.org
 COMMENT=	Simple IP accounting software
 
 DOC_DIR=	${PREFIX}/share/doc/cia
