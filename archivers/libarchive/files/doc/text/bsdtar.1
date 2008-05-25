@@ -87,11 +87,13 @@ OPTIONS
 	     filenames specified on the command line.
 
      --format format (-W format=format)
-	     (c mode only) Use the specified format for the created archive.
-	     Supported formats include ``cpio'', ``pax'', ``shar'', and
-	     ``ustar''.  Other formats may also be supported; see
+	     (c, r, u mode only) Use the specified format for the created ar-
+	     chive.  Supported formats include ``cpio'', ``pax'', ``shar'',
+	     and ``ustar''.  Other formats may also be supported; see
 	     libarchive-formats(5) for more information about currently-sup-
-	     ported formats.
+	     ported formats.  In r and u modes, when extending an existing ar-
+	     chive, the format specified here must be compatible with the for-
+	     mat of the existing archive on disk.
 
      -f file
 	     Read the archive from or write the archive to the specified file.
@@ -126,6 +128,10 @@ OPTIONS
      -k      (x mode only) Do not overwrite existing files.  In particular, if
 	     a file appears more than once in an archive, later copies will
 	     not overwrite earlier copies.
+
+     --keep-newer-files (-W keep-newer-files)
+	     (x mode only) Do not overwrite existing files that are newer than
+	     the versions appearing in the archive being extracted.
 
      -L      (c and r mode only) All symbolic links will be followed.  Nor-
 	     mally, symbolic links are archived as such.  With this option,
@@ -164,17 +170,23 @@ OPTIONS
 	     null characters, not by newlines.	This is often used to read
 	     filenames output by the -print0 option to find(1).
 
+     --numeric-owner
+	     (x mode only) Ignore symbolic user and group names when restoring
+	     archives to disk, only numeric uid and gid values will be obeyed.
+
      -O      (x, t modes only) In extract (-x) mode, files will be written to
 	     standard out rather than being extracted to disk.	In list (-t)
 	     mode, the file listing will be written to stderr rather than the
 	     usual stdout.
 
-     -o      (x mode only) Use the user and group of the user running the pro-
-	     gram rather than those specified in the archive.  Note that this
-	     has no significance unless -p is specified, and the program is
-	     being run by the root user.  In this case, the file modes and
-	     flags from the archive will be restored, but ACLs or owner infor-
-	     mation in the archive will be discarded.
+     -o      (x mode) Use the user and group of the user running the program
+	     rather than those specified in the archive.  Note that this has
+	     no significance unless -p is specified, and the program is being
+	     run by the root user.  In this case, the file modes and flags
+	     from the archive will be restored, but ACLs or owner information
+	     in the archive will be discarded.
+
+     -o      (c, r, u mode) A synonym for --format ustar
 
      --one-file-system (-W one-file-system)
 	     (c, r, and u modes) Do not cross mount points.
@@ -204,11 +216,29 @@ OPTIONS
 	     entries overwrite earlier entries.  This option is provided as a
 	     performance optimization.
 
+     -S      (x mode only) Extract files as sparse files.  For every block on
+	     disk, check first if it contains only NULL bytes and seek over it
+	     otherwise.  This works similiar to the conv=sparse option of dd.
+
      --strip-components count (-W strip-components=count)
 	     (x and t mode only) Remove the specified number of leading path
 	     elements.	Pathnames with fewer elements will be silently
 	     skipped.  Note that the pathname is edited after checking inclu-
 	     sion/exclusion patterns but before security checks.
+
+     -s pattern
+	     Modify file or archive member names according to pattern.	The
+	     pattern has the format /old/new/[gps].  old is a basic regular
+	     expression.  If it doesn't apply, the pattern is skipped.	new is
+	     the replacement string of the matched part.  ~ is substituted
+	     with the match, 1 to 9 with the content of the corresponding cap-
+	     tured group.  The optional trailing g specifies that matching
+	     should continue after the matched part and stopped on the first
+	     unmatched pattern.  The optional trailing s specifies that the
+	     pattern applies to the value of symbolic links.  The optional
+	     trailing p specifies that after a successful substitution the
+	     original path name and the new path name should be printed to
+	     standard error.
 
      -T filename
 	     In x or t mode, tar will read the list of names to be extracted
@@ -306,6 +336,15 @@ EXAMPLES
      each entry from old.tgz and add those entries to the output archive.
      Finally, it will switch to the /tmp directory and add foo2 to the output
      archive.
+
+     An input file in mtree(5) format can be used to create an output archive
+     with arbitrary ownership, permissions, or names that differ from existing
+     data on disk:
+
+	   $ cat input.mtree
+	   usr/bin uid=0 gid=0 mode=0755 type=dir
+	   usr/bin/ls uid=0 gid=0 mode=0755 type=file content=myls
+	   $ tar -cvf output.tar @input.mtree
 
      The --newer and --newer-mtime switches accept a variety of common date
      and time specifications, including ``12 Mar 2005 7:14:29pm'',
@@ -447,4 +486,4 @@ BUGS
      There are alternative long options for many of the short options that are
      deliberately not documented.
 
-FreeBSD 6.0			April 13, 2004			   FreeBSD 6.0
+FreeBSD 6.0			 May 15, 2008			   FreeBSD 6.0

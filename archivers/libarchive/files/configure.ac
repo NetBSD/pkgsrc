@@ -4,13 +4,13 @@ dnl First, define all of the version numbers up front.
 dnl In particular, this allows the version macro to be used in AC_INIT
 
 dnl These first two version numbers are updated automatically on each release.
-m4_define([LIBARCHIVE_VERSION_S],[2.5.1b])
-m4_define([LIBARCHIVE_VERSION_N],[2005001])
+m4_define([LIBARCHIVE_VERSION_S],[2.5.4b])
+m4_define([LIBARCHIVE_VERSION_N],[2005004])
 
 dnl bsdtar versioning tracks libarchive
 m4_define([BSDTAR_VERSION_S],LIBARCHIVE_VERSION_S())
 dnl bsdcpio is still versioning separately
-m4_define([BSDCPIO_VERSION_S],[0.9.9a])
+m4_define([BSDCPIO_VERSION_S],[0.9.10a])
 
 #
 # Now starts the "real" configure script.
@@ -63,7 +63,6 @@ AC_SUBST(LIBARCHIVE_VERSION_NUMBER)
 
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_FILES([Makefile])
-AC_CONFIG_FILES([libarchive/archive.h])
 
 # Checks for programs.
 AC_PROG_CC
@@ -174,7 +173,7 @@ AC_CHECK_HEADERS([inttypes.h langinfo.h limits.h linux/ext2_fs.h linux/fs.h])
 AC_CHECK_HEADER(inttypes.h,
 	 [AC_SUBST(ARCHIVE_H_INCLUDE_INTTYPES_H,['#include <inttypes.h> /* For int64_t */'])],
 	 [AC_SUBST(ARCHIVE_H_INCLUDE_INTTYPES_H,[''])])
-AC_CHECK_HEADERS([locale.h paths.h poll.h pwd.h stdarg.h])
+AC_CHECK_HEADERS([locale.h paths.h poll.h pwd.h regex.h stdarg.h])
 AC_CHECK_HEADERS([stdint.h stdlib.h string.h sys/acl.h sys/ioctl.h])
 AC_CHECK_HEADERS([sys/param.h sys/poll.h sys/select.h sys/time.h sys/utime.h])
 AC_CHECK_HEADERS([time.h unistd.h utime.h wchar.h zlib.h])
@@ -240,13 +239,13 @@ AC_FUNC_STAT
 AC_FUNC_STRERROR_R
 AC_FUNC_STRFTIME
 AC_FUNC_VPRINTF
-AC_CHECK_FUNCS([chflags chown fchdir fchflags fchmod fchown fstat])
+AC_CHECK_FUNCS([chflags chown fchdir fchflags fchmod fchown fcntl fstat])
 AC_CHECK_FUNCS([ftruncate futimes geteuid getopt_long getpid])
 AC_CHECK_FUNCS([lchflags lchmod lchown])
 AC_CHECK_FUNCS([lutimes memmove memset mkdir mkfifo mknod])
-AC_CHECK_FUNCS([nl_langinfo poll select setenv setlocale])
+AC_CHECK_FUNCS([nl_langinfo pipe poll select setenv setlocale])
 AC_CHECK_FUNCS([strchr strdup strerror strrchr timegm])
-AC_CHECK_FUNCS([tzset unsetenv utime utimes])
+AC_CHECK_FUNCS([tzset unsetenv utime utimes vfork])
 AC_CHECK_FUNCS([wcscpy wcslen wmemcmp wmemcpy])
 
 # FreeBSD's nl_langinfo supports an option to specify whether the

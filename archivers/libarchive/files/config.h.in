@@ -114,6 +114,9 @@
 /* Define to 1 if you have the `fchown' function. */
 #undef HAVE_FCHOWN
 
+/* Define to 1 if you have the `fcntl' function. */
+#undef HAVE_FCNTL
+
 /* Define to 1 if you have the <fcntl.h> header file. */
 #undef HAVE_FCNTL_H
 
@@ -244,6 +247,9 @@
 /* Define to 1 if you have the <paths.h> header file. */
 #undef HAVE_PATHS_H
 
+/* Define to 1 if you have the `pipe' function. */
+#undef HAVE_PIPE
+
 /* Define to 1 if you have the `poll' function. */
 #undef HAVE_POLL
 
@@ -252,6 +258,9 @@
 
 /* Define to 1 if you have the <pwd.h> header file. */
 #undef HAVE_PWD_H
+
+/* Define to 1 if you have the <regex.h> header file. */
+#undef HAVE_REGEX_H
 
 /* Define to 1 if you have the `select' function. */
 #undef HAVE_SELECT
@@ -381,6 +390,9 @@
 
 /* Define to 1 if you have the <utime.h> header file. */
 #undef HAVE_UTIME_H
+
+/* Define to 1 if you have the `vfork' function. */
+#undef HAVE_VFORK
 
 /* Define to 1 if you have the `vprintf' function. */
 #undef HAVE_VPRINTF

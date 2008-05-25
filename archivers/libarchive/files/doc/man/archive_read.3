@@ -26,6 +26,7 @@
 \fBarchive_read_data_into_buffer\fP,
 \fBarchive_read_data_into_fd\fP,
 \fBarchive_read_extract\fP,
+\fBarchive_read_extract2\fP,
 \fBarchive_read_extract_set_progress_callback\fP,
 \fBarchive_read_close\fP,
 \fBarchive_read_finish\fP
@@ -199,6 +200,13 @@ Fo archive_read_extract
 Fa "struct archive *"
 Fa "struct archive_entry *"
 Fa "int flags"
+Fc
+\fIint\fP
+.RE
+Fo archive_read_extract2
+Fa "struct archive *src"
+Fa "struct archive_entry *"
+Fa "struct archive *dest"
 Fc
 \fIvoid\fP
 .RE
@@ -538,6 +546,35 @@ The
 \fIflags\fP
 argument is passed unmodified to
 \fBarchive_write_disk_set_options\fP(3).
+.TP
+.nh
+\fBarchive_read_extract2\fP
+.hy
+();
+This is another version of
+.nh
+\fBarchive_read_extract\fP
+.hy
+();
+that allows you to provide your own restore object.
+In particular, this allows you to override the standard lookup functions
+using
+\fBarchive_write_disk_set_group_lookup\fP(3),
+and
+\fBarchive_write_disk_set_user_lookup\fP(3).
+Note that
+.nh
+\fBarchive_read_extract2\fP
+.hy
+();
+does not accept a
+\fIflags\fP
+argument; you should use
+.nh
+\fBarchive_write_disk_set_options\fP
+.hy
+();
+to set the restore options yourself.
 .TP
 .nh
 \fBarchive_read_extract_set_progress_callback\fP

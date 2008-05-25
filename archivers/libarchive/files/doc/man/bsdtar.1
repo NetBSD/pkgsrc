@@ -1,4 +1,4 @@
-.TH BSDTAR 1 "April 13, 2004" ""
+.TH BSDTAR 1 "May 15, 2008" ""
 .SH NAME
 \fBtar\fP
 \- manipulate tape archives
@@ -149,7 +149,7 @@ Note that exclusions take precedence over patterns or filenames
 specified on the command line.
 .TP
 \fB\--format\fP \fIformat\fP (\fB\-W\fP \fBformat\fP=\fIformat\fP)
-(c mode only)
+(c, r, u mode only)
 Use the specified format for the created archive.
 Supported formats include
 ``cpio'',
@@ -160,6 +160,8 @@ and
 Other formats may also be supported; see
 \fBlibarchive-formats\fP(5)
 for more information about currently-supported formats.
+In r and u modes, when extending an existing archive, the format specified
+here must be compatible with the format of the existing archive on disk.
 .TP
 \fB\-f\fP \fIfile\fP
 Read the archive from or write the archive to the specified file.
@@ -223,6 +225,11 @@ Do not overwrite existing files.
 In particular, if a file appears more than once in an archive,
 later copies will not overwrite earlier copies.
 .TP
+\fB\--keep-newer-files\fP (\fB\-W\fP \fBkeep-newer-files\fP)
+(x mode only)
+Do not overwrite existing files that are newer than the
+versions appearing in the archive being extracted.
+.TP
 \fB\-L\fP
 (c and r mode only)
 All symbolic links will be followed.
@@ -282,6 +289,11 @@ This is often used to read filenames output by the
 option to
 \fBfind\fP(1).
 .TP
+\fB\--numeric-owner\fP
+(x mode only)
+Ignore symbolic user and group names when restoring archives to disk,
+only numeric uid and gid values will be obeyed.
+.TP
 \fB\-O\fP
 (x, t modes only)
 In extract (-x) mode, files will be written to standard out rather than
@@ -290,7 +302,7 @@ In list (-t) mode, the file listing will be written to stderr rather than
 the usual stdout.
 .TP
 \fB\-o\fP
-(x mode only)
+(x mode)
 Use the user and group of the user running the program rather
 than those specified in the archive.
 Note that this has no significance unless
@@ -299,6 +311,11 @@ is specified, and the program is being run by the root user.
 In this case, the file modes and flags from
 the archive will be restored, but ACLs or owner information in
 the archive will be discarded.
+.TP
+\fB\-o\fP
+(c, r, u mode)
+A synonym for
+\fB\--format\fP \fIustar\fP
 .TP
 \fB\--one-file-system\fP (\fB\-W\fP \fBone-file-system\fP)
 (c, r, and u modes)
@@ -341,12 +358,36 @@ there can be multiple entries with the same name and, by convention,
 later entries overwrite earlier entries.
 This option is provided as a performance optimization.
 .TP
+\fB\-S\fP
+(x mode only)
+Extract files as sparse files.
+For every block on disk, check first if it contains only NULL bytes and seek
+over it otherwise.
+This works similiar to the conv=sparse option of dd.
+.TP
 \fB\--strip-components\fP \fIcount\fP (\fB\-W\fP \fBstrip-components\fP=\fIcount\fP)
 (x and t mode only)
 Remove the specified number of leading path elements.
 Pathnames with fewer elements will be silently skipped.
 Note that the pathname is edited after checking inclusion/exclusion patterns
 but before security checks.
+.TP
+\fB\-s\fP \fIpattern\fP
+Modify file or archive member names according to
+\fIpattern\fP.
+The pattern has the format /old/new/[gps].
+old is a basic regular expression.
+If it doesn't apply, the pattern is skipped.
+new is the replacement string of the matched part.
+~ is substituted with the match, \1 to \9 with the content of
+the corresponding captured group.
+The optional trailing g specifies that matching should continue
+after the matched part and stopped on the first unmatched pattern.
+The optional trailing s specifies that the pattern applies to the value
+of symbolic links.
+The optional trailing p specifies that after a successful substitution
+the original path name and the new path name should be printed to
+standard error.
 .TP
 \fB\-T\fP \fIfilename\fP
 In x or t mode,
@@ -535,6 +576,22 @@ Finally, it will switch to the
 directory and add
 \fIfoo2\fP
 to the output archive.
+An input file in
+\fBmtree\fP(5)
+format can be used to create an output archive with arbitrary ownership,
+permissions, or names that differ from existing data on disk:
+.RS
+$ cat input.mtree
+.RE
+.RS
+usr/bin uid=0 gid=0 mode=0755 type=dir
+.RE
+.RS
+usr/bin/ls uid=0 gid=0 mode=0755 type=file content=myls
+.RE
+.RS
+$ tar -cvf output.tar @input.mtree
+.RE
 The
 \fB\--newer\fP
 and

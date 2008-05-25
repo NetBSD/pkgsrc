@@ -1,12 +1,12 @@
 .TH MTREE 5 "August 20, 2007" ""
 .SH NAME
 \fBmtree\fP
-\- format of mtree dir heirarchy files
+\- format of mtree dir hierarchy files
 .SH DESCRIPTION
 The
 \fBmtree\fP
 format is a textual format that describes a collection of filesystem objects.
-Such files are typically used to create or verify directory heirarchies.
+Such files are typically used to create or verify directory hierarchies.
 .SS General Format
 An
 \fBmtree\fP
@@ -105,8 +105,7 @@ the
 utility.
 .TP
 \fBcontents\fP
-The full pathname of a file whose contents should be
-compared to the contents of this file.
+The full pathname of a file that holds the contents of this file.
 .TP
 \fBflags\fP
 The file flags as a symbolic name.
@@ -127,7 +126,7 @@ The file group as a symbolic name.
 Ignore any file hierarchy below this file.
 .TP
 \fBlink\fP
-The file the symbolic link is expected to reference.
+The target of the symbolic link when type=link.
 .TP
 \fBmd5\fP
 The MD5 message digest of the file.

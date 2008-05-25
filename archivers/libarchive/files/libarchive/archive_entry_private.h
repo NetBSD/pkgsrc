@@ -22,7 +22,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: src/lib/libarchive/archive_entry_private.h,v 1.2 2007/12/30 04:58:21 kientzle Exp $
+ * $FreeBSD: src/lib/libarchive/archive_entry_private.h,v 1.3 2008/03/31 06:24:39 kientzle Exp $
  */
 
 #ifndef ARCHIVE_ENTRY_PRIVATE_H_INCLUDED
@@ -33,13 +33,20 @@
 /*
  * Handle wide character (i.e., Unicode) and non-wide character
  * strings transparently.
- *
  */
 
 struct aes {
 	struct archive_string aes_mbs;
 	struct archive_string aes_utf8;
 	const wchar_t *aes_wcs;
+	/* Bitmap of which of the above are valid.  Because we're lazy
+	 * about malloc-ing and reusing the underlying storage, we
+	 * can't rely on NULL pointers to indicate whether a string
+	 * has been set. */
+	int aes_set;
+#define	AES_SET_MBS 1
+#define	AES_SET_UTF8 2
+#define	AES_SET_WCS 4
 };
 
 struct ae_acl {
@@ -129,8 +136,6 @@ struct archive_entry {
 		dev_t		aest_rdevminor;
 	} ae_stat;
 
-
-
 	/*
 	 * Use aes here so that we get transparent mbs<->wcs conversions.
 	 */
@@ -145,15 +150,21 @@ struct archive_entry {
 	unsigned char	ae_hardlinkset;
 	unsigned char	ae_symlinkset;
 
+	/* Not used within libarchive; useful for some clients. */
+	struct aes ae_sourcepath;	/* Path this entry is sourced from. */
+
+	/* ACL support. */
 	struct ae_acl	*acl_head;
 	struct ae_acl	*acl_p;
 	int		 acl_state;	/* See acl_next for details. */
 	wchar_t		*acl_text_w;
 
+	/* extattr support. */
 	struct ae_xattr *xattr_head;
 	struct ae_xattr *xattr_p;
 
-	char		 strmode[11];
+	/* Miscellaneous. */
+	char		 strmode[12];
 };
 
 

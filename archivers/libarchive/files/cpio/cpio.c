@@ -70,7 +70,7 @@ static void	mode_pass(struct cpio *, const char *);
 static void	restore_time(struct cpio *, struct archive_entry *,
 		    const char *, int fd);
 static void	usage(void);
-static void	version(FILE *);
+static void	version(void);
 
 int
 main(int argc, char *argv[])
@@ -204,7 +204,7 @@ main(int argc, char *argv[])
 			cpio->verbose++;
 			break;
 		case OPTION_VERSION: /* GNU convention */
-			version(stdout);
+			version();
 			break;
 #if 0
 	        /*
@@ -326,16 +326,16 @@ long_help(void)
 		} else
 			putchar(*p);
 	}
-	version(stdout);
+	version();
 }
 
 static void
-version(FILE *out)
+version(void)
 {
-	fprintf(out,"bsdcpio %s -- %s\n",
+	fprintf(stdout,"bsdcpio %s -- %s\n",
 	    BSDCPIO_VERSION_STRING,
 	    archive_version());
-	exit(1);
+	exit(0);
 }
 
 static void
@@ -412,7 +412,10 @@ static int
 file_to_archive(struct cpio *cpio, const char *srcpath)
 {
 	struct stat st;
+	const char *destpath;
 	struct archive_entry *entry, *spare;
+	size_t len;
+	const char *p;
 	int lnklen;
 	int r;
 
@@ -422,7 +425,7 @@ file_to_archive(struct cpio *cpio, const char *srcpath)
 	entry = archive_entry_new();
 	if (entry == NULL)
 		cpio_errc(1, 0, "Couldn't allocate entry");
-	archive_entry_set_pathname(entry, srcpath);
+	archive_entry_copy_sourcepath(entry, srcpath);
 
 	/* Get stat information. */
 	if (cpio->option_follow_links)
@@ -455,45 +458,11 @@ file_to_archive(struct cpio *cpio, const char *srcpath)
 	}
 
 	/*
-	 * If we're trying to preserve hardlinks, match them here.
+	 * Generate a destination path for this entry.
+	 * "destination path" is the name to which it will be copied in
+	 * pass mode or the name that will go into the archive in
+	 * output mode.
 	 */
-	spare = NULL;
-	if (cpio->linkresolver != NULL
-	    && !S_ISDIR(st.st_mode)) {
-		archive_entry_linkify(cpio->linkresolver, &entry, &spare);
-	}
-
-	if (entry != NULL) {
-		r = entry_to_archive(cpio, entry);
-		archive_entry_free(entry);
-	}
-	if (spare != NULL) {
-		if (r == 0)
-			r = entry_to_archive(cpio, spare);
-		archive_entry_free(spare);
-	}
-	return (r);
-}
-
-static int
-entry_to_archive(struct cpio *cpio, struct archive_entry *entry)
-{
-	const char *destpath;
-	char *srcpath;
-	int fd = -1;
-	ssize_t bytes_read;
-	size_t len;
-	const char *p;
-	int r;
-
-	/*
-	 * Generate a target path for this entry.
-	 */
-	p = archive_entry_pathname(entry);
-	srcpath = malloc(strlen(p) + 1);
-	if (srcpath == NULL)
-		cpio_errc(1, ENOMEM, "Can't allocate path buffer");
-	strcpy(srcpath, p);
 	destpath = srcpath;
 	if (cpio->destdir) {
 		len = strlen(cpio->destdir) + strlen(srcpath) + 8;
@@ -517,11 +486,39 @@ entry_to_archive(struct cpio *cpio, struct archive_entry *entry)
 	}
 	if (cpio->option_rename)
 		destpath = cpio_rename(destpath);
-	if (destpath == NULL) {
-		free(srcpath);
+	if (destpath == NULL)
 		return (0);
-	}
 	archive_entry_copy_pathname(entry, destpath);
+
+	/*
+	 * If we're trying to preserve hardlinks, match them here.
+	 */
+	spare = NULL;
+	if (cpio->linkresolver != NULL
+	    && !S_ISDIR(st.st_mode)) {
+		archive_entry_linkify(cpio->linkresolver, &entry, &spare);
+	}
+
+	if (entry != NULL) {
+		r = entry_to_archive(cpio, entry);
+		archive_entry_free(entry);
+	}
+	if (spare != NULL) {
+		if (r == 0)
+			r = entry_to_archive(cpio, spare);
+		archive_entry_free(spare);
+	}
+	return (r);
+}
+
+static int
+entry_to_archive(struct cpio *cpio, struct archive_entry *entry)
+{
+	const char *destpath = archive_entry_pathname(entry);
+	const char *srcpath = archive_entry_sourcepath(entry);
+	int fd = -1;
+	ssize_t bytes_read;
+	int r;
 
 	/* Print out the destination name to the user. */
 	if (cpio->verbose)
@@ -539,7 +536,6 @@ entry_to_archive(struct cpio *cpio, struct archive_entry *entry)
 			    archive_error_string(cpio->archive));
 		if (r == ARCHIVE_FATAL)
 			exit(1);
-		free(srcpath);
 		return (0);
 	}
 
@@ -594,7 +590,6 @@ cleanup:
 		fprintf(stderr,"\n");
 	if (fd >= 0)
 		close(fd);
-	free(srcpath);
 	return (0);
 }
 
