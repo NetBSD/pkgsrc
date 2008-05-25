@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1145 2008/05/25 19:50:24 joerg Exp $
+$NetBSD: CHANGES-2008,v 1.1146 2008/05/25 23:49:25 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1922,3 +1922,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/XaoS to 3.3 [tnn 2008-05-25]
 	Updated archivers/bsdtar to 2.5.4b [joerg 2008-05-25]
 	Updated archivers/libarchive to 2.5.4b [joerg 2008-05-25]
+	Updated net/snort to 2.8.1 [adrianp 2008-05-25]
