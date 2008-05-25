@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/05/25 15:29:19 joerg Exp $
+
+--- configure.orig	2008-05-16 18:07:17.000000000 +0200
++++ configure
+@@ -11085,7 +11085,7 @@ if test "${enable_xshm+set}" = set; then
+   enableval=$enable_xshm;
+ fi
+ 
+-	if test x$enable_xshm == xyes; then
++	if test x$enable_xshm = xyes; then
+ 	  { echo "$as_me:$LINENO: checking for X11/extensions/XShm.h" >&5
+ echo $ECHO_N "checking for X11/extensions/XShm.h... $ECHO_C" >&6; }
+ if test "${ac_cv_header_X11_extensions_XShm_h+set}" = set; then
