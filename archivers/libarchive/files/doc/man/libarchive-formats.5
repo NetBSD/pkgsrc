@@ -226,6 +226,14 @@ There are two common variants:
 the GNU format derived from SVR4,
 and the BSD format, which first appeared in 4.4BSD.
 Libarchive provides read and write support for both variants.
+.SS mtree
+Libarchive can read files in
+\fBmtree\fP(5)
+format. This format is not a true archive format, but rather a description
+of a file hierarchy. When requested, libarchive obtains the contents of
+the files described by the
+\fBmtree\fP(5)
+format from files on disk instead.
 .SH SEE ALSO
 \fBar\fP(1),
 \fBcpio\fP(1),
