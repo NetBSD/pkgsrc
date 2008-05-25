@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/03 01:50:27 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/25 21:42:20 joerg Exp $
 #
 
 DISTNAME=		partlibrary-2.0.1.2-1
@@ -16,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
+USE_TOOLS+=	pax
 
 DEPENDS+=	qcad>=2.0.0.0:../../cad/qcad
 

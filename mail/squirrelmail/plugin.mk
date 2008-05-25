@@ -1,4 +1,4 @@
-# $NetBSD: plugin.mk,v 1.5 2008/03/04 17:57:20 jlam Exp $
+# $NetBSD: plugin.mk,v 1.6 2008/05/25 21:42:21 joerg Exp $
 
 DISTNAME?=		${PLUGIN_NAME}-${PLUGIN_VERSION}
 PKGNAME=		sm-${PLUGIN_NAME}-${PLUGIN_VERSION}
@@ -16,6 +16,8 @@ FULL_PLUGIN_DIR=	${PREFIX}/${PLUGIN_DIR}
 INSTALLATION_DIRS+=	${PLUGIN_DIR}
 
 PLIST_SUBST+=		PLUGIN_DIR=${PLUGIN_DIR:Q}
+
+USE_TOOLS+=		pax
 
 do-install:
 	cd ${WRKSRC:Q} && \
