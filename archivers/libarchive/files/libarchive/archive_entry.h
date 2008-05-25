@@ -28,6 +28,14 @@
 #ifndef ARCHIVE_ENTRY_H_INCLUDED
 #define	ARCHIVE_ENTRY_H_INCLUDED
 
+/*
+ * Note: archive_entry.h is for use outside of libarchive; the
+ * configuration headers (config.h, archive_platform.h, etc.) are
+ * purely internal.  Do NOT use HAVE_XXX configuration macros to
+ * control the behavior of this header!  If you must conditionalize,
+ * use predefined compiler and/or platform macros.
+ */
+
 #include <sys/types.h>
 #include <stddef.h>  /* for wchar_t */
 #include <time.h>
@@ -37,17 +45,24 @@
 #ifdef _WIN32
 #define	__LA_UID_T	unsigned int
 #define	__LA_GID_T	unsigned int
-#define	__LA_INO_T	unsigned int
 #define	__LA_DEV_T	unsigned int
 #define	__LA_MODE_T	unsigned short
 #else
 #include <unistd.h>
 #define	__LA_UID_T	uid_t
 #define	__LA_GID_T	gid_t
-#define	__LA_INO_T	ino_t
 #define	__LA_DEV_T	dev_t
 #define	__LA_MODE_T	mode_t
 #endif
+
+/*
+ * XXX Is this defined for all Windows compilers?  If so, in what
+ * header?  It would be nice to remove the __LA_INO_T indirection and
+ * just use plain ino_t everywhere.  Likewise for the other types just
+ * above.
+ */
+#define	__LA_INO_T	ino_t
+
 
 /*
  * On Windows, define LIBARCHIVE_STATIC if you're building or using a
@@ -69,7 +84,7 @@
 #  endif
 # endif
 #else
-/* Static libraries and shared libraries on non-Windows. */
+/* Static libraries on all platforms and shared libraries on non-Windows. */
 # define __LA_DECL
 #endif
 
@@ -80,7 +95,7 @@ extern "C" {
 /*
  * Description of an archive entry.
  *
- * Basically, a "struct stat" with a few text fields added in.
+ * You can think of this as "struct stat" with some text fields added in.
  *
  * TODO: Add "comment", "charset", and possibly other entries that are
  * supported by "pax interchange" format.  However, GNU, ustar, cpio,
@@ -139,40 +154,41 @@ __LA_DECL struct archive_entry	*archive_entry_new(void);
  * Retrieve fields from an archive_entry.
  */
 
-__LA_DECL time_t			 archive_entry_atime(struct archive_entry *);
-__LA_DECL long			 archive_entry_atime_nsec(struct archive_entry *);
-__LA_DECL time_t			 archive_entry_ctime(struct archive_entry *);
-__LA_DECL long			 archive_entry_ctime_nsec(struct archive_entry *);
-__LA_DECL dev_t			 archive_entry_dev(struct archive_entry *);
-__LA_DECL dev_t			 archive_entry_devmajor(struct archive_entry *);
-__LA_DECL dev_t			 archive_entry_devminor(struct archive_entry *);
-__LA_DECL __LA_MODE_T			 archive_entry_filetype(struct archive_entry *);
-__LA_DECL void			 archive_entry_fflags(struct archive_entry *,
+__LA_DECL time_t	 archive_entry_atime(struct archive_entry *);
+__LA_DECL long		 archive_entry_atime_nsec(struct archive_entry *);
+__LA_DECL time_t	 archive_entry_ctime(struct archive_entry *);
+__LA_DECL long		 archive_entry_ctime_nsec(struct archive_entry *);
+__LA_DECL dev_t		 archive_entry_dev(struct archive_entry *);
+__LA_DECL dev_t		 archive_entry_devmajor(struct archive_entry *);
+__LA_DECL dev_t		 archive_entry_devminor(struct archive_entry *);
+__LA_DECL __LA_MODE_T	 archive_entry_filetype(struct archive_entry *);
+__LA_DECL void		 archive_entry_fflags(struct archive_entry *,
 			    unsigned long * /* set */,
 			    unsigned long * /* clear */);
-__LA_DECL const char		*archive_entry_fflags_text(struct archive_entry *);
-__LA_DECL __LA_GID_T			 archive_entry_gid(struct archive_entry *);
-__LA_DECL const char		*archive_entry_gname(struct archive_entry *);
-__LA_DECL const wchar_t		*archive_entry_gname_w(struct archive_entry *);
-__LA_DECL const char		*archive_entry_hardlink(struct archive_entry *);
-__LA_DECL const wchar_t		*archive_entry_hardlink_w(struct archive_entry *);
-__LA_DECL __LA_INO_T		 archive_entry_ino(struct archive_entry *);
-__LA_DECL __LA_MODE_T			 archive_entry_mode(struct archive_entry *);
-__LA_DECL time_t			 archive_entry_mtime(struct archive_entry *);
-__LA_DECL long			 archive_entry_mtime_nsec(struct archive_entry *);
-__LA_DECL unsigned int		 archive_entry_nlink(struct archive_entry *);
-__LA_DECL const char		*archive_entry_pathname(struct archive_entry *);
-__LA_DECL const wchar_t		*archive_entry_pathname_w(struct archive_entry *);
-__LA_DECL dev_t			 archive_entry_rdev(struct archive_entry *);
-__LA_DECL dev_t			 archive_entry_rdevmajor(struct archive_entry *);
-__LA_DECL dev_t			 archive_entry_rdevminor(struct archive_entry *);
-__LA_DECL int64_t			 archive_entry_size(struct archive_entry *);
-__LA_DECL const char		*archive_entry_strmode(struct archive_entry *);
-__LA_DECL const char		*archive_entry_symlink(struct archive_entry *);
-__LA_DECL const wchar_t		*archive_entry_symlink_w(struct archive_entry *);
-__LA_DECL __LA_UID_T			 archive_entry_uid(struct archive_entry *);
-__LA_DECL const char		*archive_entry_uname(struct archive_entry *);
-__LA_DECL const wchar_t		*archive_entry_uname_w(struct archive_entry *);
+__LA_DECL const char	*archive_entry_fflags_text(struct archive_entry *);
+__LA_DECL __LA_GID_T	 archive_entry_gid(struct archive_entry *);
+__LA_DECL const char	*archive_entry_gname(struct archive_entry *);
+__LA_DECL const wchar_t	*archive_entry_gname_w(struct archive_entry *);
+__LA_DECL const char	*archive_entry_hardlink(struct archive_entry *);
+__LA_DECL const wchar_t	*archive_entry_hardlink_w(struct archive_entry *);
+__LA_DECL __LA_INO_T	 archive_entry_ino(struct archive_entry *);
+__LA_DECL __LA_MODE_T	 archive_entry_mode(struct archive_entry *);
+__LA_DECL time_t	 archive_entry_mtime(struct archive_entry *);
+__LA_DECL long		 archive_entry_mtime_nsec(struct archive_entry *);
+__LA_DECL unsigned int	 archive_entry_nlink(struct archive_entry *);
+__LA_DECL const char	*archive_entry_pathname(struct archive_entry *);
+__LA_DECL const wchar_t	*archive_entry_pathname_w(struct archive_entry *);
+__LA_DECL dev_t		 archive_entry_rdev(struct archive_entry *);
+__LA_DECL dev_t		 archive_entry_rdevmajor(struct archive_entry *);
+__LA_DECL dev_t		 archive_entry_rdevminor(struct archive_entry *);
+__LA_DECL const char	*archive_entry_sourcepath(struct archive_entry *);
+__LA_DECL int64_t	 archive_entry_size(struct archive_entry *);
+__LA_DECL const char	*archive_entry_strmode(struct archive_entry *);
+__LA_DECL const char	*archive_entry_symlink(struct archive_entry *);
+__LA_DECL const wchar_t	*archive_entry_symlink_w(struct archive_entry *);
+__LA_DECL __LA_UID_T	 archive_entry_uid(struct archive_entry *);
+__LA_DECL const char	*archive_entry_uname(struct archive_entry *);
+__LA_DECL const wchar_t	*archive_entry_uname_w(struct archive_entry *);
 
 /*
  * Set fields in an archive_entry.
@@ -220,6 +236,7 @@ __LA_DECL void	archive_entry_set_rdev(struct archive_entry *, dev_t);
 __LA_DECL void	archive_entry_set_rdevmajor(struct archive_entry *, dev_t);
 __LA_DECL void	archive_entry_set_rdevminor(struct archive_entry *, dev_t);
 __LA_DECL void	archive_entry_set_size(struct archive_entry *, int64_t);
+__LA_DECL void	archive_entry_copy_sourcepath(struct archive_entry *, const char *);
 __LA_DECL void	archive_entry_set_symlink(struct archive_entry *, const char *);
 __LA_DECL void	archive_entry_copy_symlink(struct archive_entry *, const char *);
 __LA_DECL void	archive_entry_copy_symlink_w(struct archive_entry *, const wchar_t *);
