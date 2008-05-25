@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2006/10/02 23:03:33 rillig Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/05/25 19:23:02 tnn Exp $
 bin/xaos
 info/xaos.info
 man/man6/xaos.6
@@ -9,6 +9,7 @@ share/XaoS/catalogs/english.cat
 share/XaoS/catalogs/espanhol.cat
 share/XaoS/catalogs/francais.cat
 share/XaoS/catalogs/magyar.cat
+share/XaoS/catalogs/romanian.cat
 share/XaoS/doc/AUTHORS
 share/XaoS/doc/PROBLEMS
 share/XaoS/doc/README
@@ -27,6 +28,7 @@ share/XaoS/examples/3d7.xpf
 share/XaoS/examples/3d8.xpf
 share/XaoS/examples/3d9.xpf
 share/XaoS/examples/README
+share/XaoS/examples/alien.xpf
 share/XaoS/examples/axe.xpf
 share/XaoS/examples/barnsl1.xpf
 share/XaoS/examples/barnsl2.xpf
@@ -41,7 +43,10 @@ share/XaoS/examples/beatle.xpf
 share/XaoS/examples/beatle2.xpf
 share/XaoS/examples/bolygo.xpf
 share/XaoS/examples/brown.xpf
+share/XaoS/examples/burnship.xpf
+share/XaoS/examples/butterfly.xpf
 share/XaoS/examples/checker.xpf
+share/XaoS/examples/circle.xpf
 share/XaoS/examples/crone.xpf
 share/XaoS/examples/csiga2.xpf
 share/XaoS/examples/csiga3.xpf
@@ -54,6 +59,7 @@ share/XaoS/examples/edge.xpf
 share/XaoS/examples/edge2.xpf
 share/XaoS/examples/edge3.xpf
 share/XaoS/examples/eifell.xpf
+share/XaoS/examples/eyes.xpf
 share/XaoS/examples/fract0.xpf
 share/XaoS/examples/fract1.xpf
 share/XaoS/examples/galaxy.xpf
@@ -63,6 +69,8 @@ share/XaoS/examples/goldrive.xpf
 share/XaoS/examples/head.xpf
 share/XaoS/examples/head2.xpf
 share/XaoS/examples/head3.xpf
+share/XaoS/examples/heart.xpf
+share/XaoS/examples/helloween.xpf
 share/XaoS/examples/hornflake1.xpf
 share/XaoS/examples/hornflake2.xpf
 share/XaoS/examples/impulzus.xpf
@@ -127,6 +135,7 @@ share/XaoS/examples/orveny.xpf
 share/XaoS/examples/palace.xpf
 share/XaoS/examples/pavaszem.xpf
 share/XaoS/examples/pavaszem2.xpf
+share/XaoS/examples/pentafrac.xpf
 share/XaoS/examples/pepita.xpf
 share/XaoS/examples/perb1.xpf
 share/XaoS/examples/perb2.xpf
@@ -140,6 +149,7 @@ share/XaoS/examples/redmand.xpf
 share/XaoS/examples/redmand2.xpf
 share/XaoS/examples/rocks.xpf
 share/XaoS/examples/shell.xpf
+share/XaoS/examples/skullfrm.xpf
 share/XaoS/examples/something.xpf
 share/XaoS/examples/spiral.xpf
 share/XaoS/examples/spiral2.xpf
@@ -159,6 +169,7 @@ share/XaoS/examples/truecol5.xpf
 share/XaoS/examples/truecol6.xpf
 share/XaoS/examples/truecol7.xpf
 share/XaoS/examples/ufo.xpf
+share/XaoS/examples/warriormask.xpf
 share/XaoS/examples/zsigapro.xpf
 share/XaoS/help/xaos.hlp
 share/XaoS/tutorial/3dtutor.xaf
@@ -220,6 +231,7 @@ share/locale/de/LC_MESSAGES/xaos.mo
 share/locale/es/LC_MESSAGES/xaos.mo
 share/locale/fr/LC_MESSAGES/xaos.mo
 share/locale/hu/LC_MESSAGES/xaos.mo
+share/locale/ro/LC_MESSAGES/xaos.mo
 @dirrm share/XaoS/tutorial
 @dirrm share/XaoS/help
 @dirrm share/XaoS/examples
