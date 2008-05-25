@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1140 2008/05/25 11:49:04 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.1141 2008/05/25 15:32:52 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1916,3 +1916,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/gnustep-gui to 0.12.1 [adam 2008-05-25]
 	Updated x11/gnustep-back to 0.12.1 [adam 2008-05-25]
 	Updated misc/dvtm to 0.4.1 [tnn 2008-05-25]
+	Added x11/fltk2 version 2.0pre6129 [joerg 2008-05-25]
