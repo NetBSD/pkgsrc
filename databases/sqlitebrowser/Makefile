@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/05/25 08:04:44 adam Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/25 16:13:25 dillo Exp $
 
 DISTNAME=	sqlitebrowser-1.3-src
 PKGNAME=	sqlitebrowser-1.3
@@ -11,8 +11,12 @@ HOMEPAGE=	http://sqlitebrowser.sourceforge.net/
 
 WRKSRC=		${WRKDIR}/sqlitebrowser
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES=	c c++
 QMAKE=		${QTDIR}/bin/qmake
+
+INSTALLATION_DIRS=	bin
 
 BUILDLINK_DEPMETHOD.qt3-tools=	build
 
@@ -20,7 +24,7 @@ do-configure:
 	cd ${WRKSRC} && ${QMAKE} QMAKE=${QMAKE:Q} sqlitedbbrowser.pro
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/sqlitebrowser/sqlitebrowser ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/sqlitebrowser/sqlitebrowser ${DESTDIR}${PREFIX}/bin
 
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
