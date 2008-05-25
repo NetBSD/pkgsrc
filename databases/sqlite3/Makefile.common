@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.18 2008/03/04 10:46:55 wiz Exp $
+# $NetBSD: Makefile.common,v 1.19 2008/05/25 07:11:13 adam Exp $
 
 # used by databases/sqlite3-tcl/Makefile
 
-DISTNAME=	sqlite-3.5.6
+DISTNAME=	sqlite-3.5.9
 PKGNAME=	${DISTNAME:S/-/3-/}
 CATEGORIES=	databases
 MASTER_SITES=	http://www.hwaci.com/sw/sqlite/ \
@@ -26,4 +26,4 @@ USE_LIBTOOL=		yes
 # database through different database connections, though.
 CONFIGURE_ARGS+=	--disable-threadsafe
 
-PKGCONFIG_OVERRIDE=	sqlite3.pc.in
+PKGCONFIG_OVERRIDE+=	sqlite3.pc.in
