@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2008/05/25 14:45:17 tron Exp $
+# $NetBSD: Makefile,v 1.37 2008/05/25 20:49:39 tron Exp $
 
 DISTNAME=	rpm2pkg-2.1.1
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
 
-OWNER=	tron@NetBSD.org
+OWNER=		tron@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/docs/pkgsrc/
 COMMENT=	Convert RPM archives to NetBSD packages
 
