@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/03/04 15:39:10 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2008/05/25 21:42:21 joerg Exp $
 #
 
 DISTNAME=	Cult3D_NS4_5.2b1
@@ -18,6 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/cult3d-5.2-b1-linux-x86
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
+USE_TOOLS+=		pax
 CHECK_SHLIBS_SUPPORTED=	no
 CRYPTO=			yes
 

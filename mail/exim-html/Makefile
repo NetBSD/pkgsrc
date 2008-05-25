@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/03/04 17:57:18 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2008/05/25 21:42:21 joerg Exp $
 
 DISTNAME=	exim-html-4.69
 CATEGORIES=	mail net
@@ -15,6 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=		yes
 INSTALLATION_DIRS=	share/doc/exim/html
+
+USE_TOOLS+=	pax
 
 do-install:
 	cd ${WRKSRC}/doc/html && pax -wr * \

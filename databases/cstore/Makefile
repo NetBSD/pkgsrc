@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/03/03 15:21:07 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/25 21:42:20 joerg Exp $
 
 DISTNAME=	cstore0.2
 PKGNAME=	cstore-0.2
@@ -14,7 +14,7 @@ COMMENT=	Read-optimised column store relational DBMS
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	gmake perl
+USE_TOOLS+=	gmake perl pax
 USE_LANGUAGES+=	c c++
 WRKSRC=		${WRKDIR}/cstore
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/10/04 22:00:59 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2008/05/25 21:42:22 joerg Exp $
 #
 # Note: we currently use the pre-built (-bin) distribution of FOP,
 # because although FOP runs fine under JDK 1.1, JDK 1.2 or greater is
@@ -23,6 +23,7 @@ COMMENT=	The Apache Project's XSL Formatting Objects implementation
 
 WRKSRC=		${WRKDIR}
 USE_JAVA=	run
+USE_TOOLS+=	pax
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 INSTALLATION_DIRS=	lib/java share/doc/java/fop

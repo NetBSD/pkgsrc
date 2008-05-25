@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/12/30 09:15:36 obache Exp $
+# $NetBSD: Makefile,v 1.16 2008/05/25 21:42:22 joerg Exp $
 
 DISTNAME=	vpn-1.0
 PKGNAME=	ssh-ip-tunnel-1.0
@@ -16,6 +16,8 @@ SSH=		${PREFIX}/bin/ssh
 .else
 SSH=		/usr/bin/ssh
 .endif
+
+USE_TOOLS+=	pax
 
 CONFLICTS=	vpn-1.0
 

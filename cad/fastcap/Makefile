@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/03/03 01:50:27 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2008/05/25 21:42:20 joerg Exp $
 #
 
 DISTNAME=	fastcap-2.0-18Sep92
@@ -14,7 +14,7 @@ COMMENT=	Fast 3-D capacitance solver
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-EXTRACT_USING=	gtar	# cannot be extracted with pax as tar
+EXTRACT_USING=		bsdtar
 
 WRKSRC=			${WRKDIR}
 HAS_CONFIGURE=		yes

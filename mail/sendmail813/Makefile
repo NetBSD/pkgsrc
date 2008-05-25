@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/10/19 09:20:03 jnemeth Exp $
+# $NetBSD: Makefile,v 1.8 2008/05/25 21:42:21 joerg Exp $
 
 PKG_DESTDIR_SUPPORT=	destdir
 
@@ -7,6 +7,8 @@ PKG_DESTDIR_SUPPORT=	destdir
 PKGNAME=	sendmail-${DIST_VERS}
 PKGREVISION=	4
 COMMENT=	The well known Mail Transport Agent
+
+USE_TOOLS+=	pax
 
 CONFLICTS+=	courier-mta-[0-9]* fastforward>=0.51nb2 postfix-[0-9]*
 

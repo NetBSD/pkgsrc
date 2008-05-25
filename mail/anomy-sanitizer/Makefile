@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/03/04 17:57:17 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2008/05/25 21:42:21 joerg Exp $
 #
 
 DISTNAME=	anomy-sanitizer-1.76
@@ -19,7 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../mk/bsd.prefs.mk"
 
 WRKSRC=		${WRKDIR}/anomy
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	perl:run pax
 
 REPLACE_PERL+=			bin/*.pl
 CHECK_INTERPRETER_SKIP+=	*.pm

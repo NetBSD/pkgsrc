@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/03/04 19:21:12 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/25 21:42:22 joerg Exp $
 #
 
 DISTNAME=	ofl06trial
@@ -22,6 +22,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/officetrial
 USE_LANGUAGES=	# none
+USE_TOOLS+=		pax
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base x11
 
