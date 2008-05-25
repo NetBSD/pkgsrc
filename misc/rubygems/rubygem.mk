@@ -1,4 +1,4 @@
-# $NetBSD: rubygem.mk,v 1.36 2008/03/31 15:47:44 jlam Exp $
+# $NetBSD: rubygem.mk,v 1.37 2008/05/25 21:42:22 joerg Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install Ruby gems.
@@ -261,6 +261,8 @@ RUBYGEM_GENERATE_PLIST=	\
 		${SORT} && \
 	  ${FIND} ${GEM_DOCDIR:S|${PREFIX}/||} -type d -print | \
 		${SORT} -r | ${SED} -e "s,^,@dirrm ," );
+
+USE_TOOLS+=	pax
 
 .PHONY: gem-install
 do-install: gem-install

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2008/04/26 00:49:51 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2008/05/25 21:42:22 joerg Exp $
 #
 
 DISTNAME=	gnome-themes-extras-2.22.0
@@ -11,12 +11,8 @@ HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Collection of metathemes for the GNOME desktop environment
 
 .include "../../mk/bsd.prefs.mk"
-# NetBSD's pax-as-tar truncates filenames
-.if ${OPSYS} == "DragonFly"
-# and so does older GNU tar
-TOOLS_PLATFORM.gtar=	/usr/bin/bsdtar
-.endif
-EXTRACT_USING=		gtar
+
+EXTRACT_USING=		bsdtar
 
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes

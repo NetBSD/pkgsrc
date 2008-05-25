@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/10/04 22:04:09 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/05/25 21:42:22 joerg Exp $
 
 PKGNAME=	jakarta-tomcat5-${TOMCAT_VERSION}
 DISTNAME=	jakarta-tomcat-${TOMCAT_VERSION}
@@ -27,7 +27,7 @@ EGDIR2=		${EGDIR}/${CATALINA_DIR}
 
 # Work around a bug in NetBSD 2.0's pax-as-tar (bin/27228)
 .if !empty(MACHINE_PLATFORM:MNetBSD-2.0*)
-EXTRACT_USING=	gtar
+EXTRACT_USING=	bsdtar
 .endif
 
 PKG_SYSCONFDIR.jakarta-tomcat5= ${TOMCAT_LIB}/conf
