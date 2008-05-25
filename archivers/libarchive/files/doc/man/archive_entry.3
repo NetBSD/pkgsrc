@@ -1,4 +1,4 @@
-.TH archive_entry 3 "December 15, 2003" ""
+.TH archive_entry 3 "May 12, 2008" ""
 .SH NAME
 \fBarchive_entry_acl_add_entry\fP,
 \fBarchive_entry_acl_add_entry_w\fP,
@@ -12,6 +12,7 @@
 \fBarchive_entry_atime_nsec\fP,
 \fBarchive_entry_clear\fP,
 \fBarchive_entry_clone\fP,
+\fBarchive_entry_copy_fflags_text\fP,
 \fBarchive_entry_copy_fflags_text_w\fP,
 \fBarchive_entry_copy_gname\fP,
 \fBarchive_entry_copy_gname_w\fP,
@@ -20,6 +21,7 @@
 \fBarchive_entry_copy_link\fP,
 \fBarchive_entry_copy_link_w\fP,
 \fBarchive_entry_copy_pathname_w\fP,
+\fBarchive_entry_copy_sourcepath\fP,
 \fBarchive_entry_copy_stat\fP,
 \fBarchive_entry_copy_symlink\fP,
 \fBarchive_entry_copy_symlink_w\fP,
@@ -67,6 +69,7 @@
 \fBarchive_entry_set_uid\fP,
 \fBarchive_entry_set_uname\fP,
 \fBarchive_entry_size\fP,
+\fBarchive_entry_sourcepath\fP,
 \fBarchive_entry_stat\fP,
 \fBarchive_entry_symlink\fP,
 \fBarchive_entry_uid\fP,
@@ -165,6 +168,12 @@ Fc
 \fBarchive_entry_clone\fP
 .hy
 ("struct archive_entry *");
+\fIconst char * *\fP
+.RE
+.nh
+\fBarchive_entry_copy_fflags_text_w\fP
+.hy
+("struct archive_entry *" "const char *");
 \fIconst wchar_t *\fP
 .RE
 .nh
@@ -195,6 +204,12 @@ Fc
 \fBarchive_entry_copy_hardlink_w\fP
 .hy
 ("struct archive_entry *" "const wchar_t *");
+\fIvoid\fP
+.RE
+.nh
+\fBarchive_entry_copy_sourcepath\fP
+.hy
+("struct archive_entry *" "const char *");
 \fIvoid\fP
 .RE
 .nh
@@ -485,6 +500,12 @@ Fc
 \fBarchive_entry_size\fP
 .hy
 ("struct archive_entry *");
+\fIconst char *\fP
+.RE
+.nh
+\fBarchive_entry_sourcepath\fP
+.hy
+("struct archive_entry *");
 \fIconst struct stat *\fP
 .RE
 .nh
@@ -627,10 +648,15 @@ will be ignored.
 The canonical text format is a comma-separated list of flag names.
 The
 .nh
+\fBarchive_entry_copy_fflags_text\fP
+.hy
+();
+and
+.nh
 \fBarchive_entry_copy_fflags_text_w\fP
 .hy
 ();
-function parses the provided text and sets the internal bitmap values.
+functions parse the provided text and sets the internal bitmap values.
 This is a platform-specific operation; names that are not meaningful
 on the current platform will be ignored.
 The function returns a pointer to the start of the first name that was not
