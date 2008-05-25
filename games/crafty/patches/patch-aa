@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.7 2008/05/25 15:56:02 joerg Exp $
+
+--- Makefile.orig	2008-04-20 19:11:58.000000000 +0200
++++ Makefile
+@@ -428,7 +428,7 @@ crafty-make:
+ crafty.o: *.c *.h
+ 
+ crafty:	$(objects) egtb.o
+-	$(CC) $(LDFLAGS) -o crafty $(objects) egtb.o -lm  $(LIBS)
++	$(CXX) $(LDFLAGS) -o crafty $(objects) egtb.o -lm  $(LIBS)
+ 
+ egtb.o: egtb.cpp
+ 	$(CXX) -c $(CXFLAGS) $(opts) egtb.cpp
