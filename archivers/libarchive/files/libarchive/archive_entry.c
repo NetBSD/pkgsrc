@@ -155,6 +155,7 @@ aes_clean(struct aes *aes)
 	}
 	archive_string_free(&(aes->aes_mbs));
 	archive_string_free(&(aes->aes_utf8));
+	aes->aes_set = 0;
 }
 
 static void
@@ -162,6 +163,7 @@ aes_copy(struct aes *dest, struct aes *src)
 {
 	wchar_t *wp;
 
+	dest->aes_set = src->aes_set;
 	archive_string_copy(&(dest->aes_mbs), &(src->aes_mbs));
 	archive_string_copy(&(dest->aes_utf8), &(src->aes_utf8));
 
@@ -178,25 +180,28 @@ aes_copy(struct aes *dest, struct aes *src)
 static const char *
 aes_get_utf8(struct aes *aes)
 {
-	if (aes->aes_utf8.s == NULL || aes->aes_utf8.length == 0) {
-		if (aes->aes_wcs == NULL)
-			return (NULL);
-		if (archive_strappend_w_utf8(&(aes->aes_utf8), aes->aes_wcs) == NULL)
-			return (NULL);
+	if (aes->aes_set & AES_SET_UTF8)
+		return (aes->aes_utf8.s);
+	if ((aes->aes_set & AES_SET_WCS)
+	    && archive_strappend_w_utf8(&(aes->aes_utf8), aes->aes_wcs) != NULL) {
+		aes->aes_set |= AES_SET_UTF8;
+		return (aes->aes_utf8.s);
 	}
-	return (aes->aes_utf8.s);
+	return (NULL);
 }
 
 static const char *
 aes_get_mbs(struct aes *aes)
 {
 	/* If we already have an MBS form, return that immediately. */
-	if (aes->aes_mbs.s != NULL && aes->aes_mbs.length != 0)
+	if (aes->aes_set & AES_SET_MBS)
 		return (aes->aes_mbs.s);
 	/* If there's a WCS form, try converting with the native locale. */
-	if (aes->aes_wcs != NULL
-	    && archive_strappend_w_mbs(&(aes->aes_mbs), aes->aes_wcs) != NULL)
+	if ((aes->aes_set & AES_SET_WCS)
+	    && archive_strappend_w_mbs(&(aes->aes_mbs), aes->aes_wcs) != NULL) {
+		aes->aes_set |= AES_SET_MBS;
 		return (aes->aes_mbs.s);
+	}
 	/* We'll use UTF-8 for MBS if all else fails. */
 	return (aes_get_utf8(aes));
 }
@@ -208,10 +213,10 @@ aes_get_wcs(struct aes *aes)
 	int r;
 
 	/* Return WCS form if we already have it. */
-	if (aes->aes_wcs != NULL)
+	if (aes->aes_set & AES_SET_WCS)
 		return (aes->aes_wcs);
 
-	if (aes->aes_mbs.s != NULL && aes->aes_mbs.length > 0) {
+	if (aes->aes_set & AES_SET_MBS) {
 		/* Try converting MBS to WCS using native locale. */
 		/*
 		 * No single byte will be more than one wide character,
@@ -224,14 +229,17 @@ aes_get_wcs(struct aes *aes)
 			__archive_errx(1, "No memory for aes_get_wcs()");
 		r = mbstowcs(w, aes->aes_mbs.s, wcs_length);
 		w[wcs_length] = 0;
-		if (r > 0)
+		if (r > 0) {
+			aes->aes_set |= AES_SET_WCS;
 			return (aes->aes_wcs = w);
+		}
 		free(w);
 	}
 
-	if (aes->aes_utf8.s != NULL && aes->aes_utf8.length > 0) {
+	if (aes->aes_set & AES_SET_UTF8) {
 		/* Try converting UTF8 to WCS. */
 		aes->aes_wcs = __archive_string_utf8_w(&(aes->aes_utf8));
+		aes->aes_set |= AES_SET_WCS;
 		return (aes->aes_wcs);
 	}
 	return (NULL);
@@ -246,6 +254,11 @@ aes_set_mbs(struct aes *aes, const char *mbs)
 static int
 aes_copy_mbs(struct aes *aes, const char *mbs)
 {
+	if (mbs == NULL) {
+		aes->aes_set = 0;
+		return (0);
+	}
+	aes->aes_set = AES_SET_MBS; /* Only MBS form is set now. */
 	archive_strcpy(&(aes->aes_mbs), mbs);
 	archive_string_empty(&(aes->aes_utf8));
 	if (aes->aes_wcs) {
@@ -268,6 +281,11 @@ aes_copy_mbs(struct aes *aes, const char *mbs)
 static int
 aes_update_utf8(struct aes *aes, const char *utf8)
 {
+	if (utf8 == NULL) {
+		aes->aes_set = 0;
+		return (1); /* Succeeded in clearing everything. */
+	}
+
 	/* Save the UTF8 string. */
 	archive_strcpy(&(aes->aes_utf8), utf8);
 
@@ -278,18 +296,24 @@ aes_update_utf8(struct aes *aes, const char *utf8)
 		aes->aes_wcs = NULL;
 	}
 
-	/* TODO: We should just do a UTF-8 to MBS conversion here.
-	 * That would be faster, use less space, and give the same
-	 * information. */
+	aes->aes_set = AES_SET_UTF8;	/* Only UTF8 is set now. */
+
+	/* TODO: We should just do a direct UTF-8 to MBS conversion
+	 * here.  That would be faster, use less space, and give the
+	 * same information.  (If a UTF-8 to MBS conversion succeeds,
+	 * then UTF-8->WCS and Unicode->MBS conversions will both
+	 * succeed.) */
 
 	/* Try converting UTF8 to WCS, return false on failure. */
 	aes->aes_wcs = __archive_string_utf8_w(&(aes->aes_utf8));
 	if (aes->aes_wcs == NULL)
 		return (0);
+	aes->aes_set = AES_SET_UTF8 | AES_SET_WCS; /* Both UTF8 and WCS set. */
 
 	/* Try converting WCS to MBS, return false on failure. */
 	if (archive_strappend_w_mbs(&(aes->aes_mbs), aes->aes_wcs) == NULL)
 		return (0);
+	aes->aes_set = AES_SET_UTF8 | AES_SET_WCS | AES_SET_MBS;
 
 	/* All conversions succeeded. */
 	return (1);
@@ -298,7 +322,7 @@ aes_update_utf8(struct aes *aes, const char *utf8)
 static int
 aes_copy_wcs(struct aes *aes, const wchar_t *wcs)
 {
-	return aes_copy_wcs_len(aes, wcs, wcslen(wcs));
+	return aes_copy_wcs_len(aes, wcs, wcs == NULL ? 0 : wcslen(wcs));
 }
 
 static int
@@ -306,6 +330,11 @@ aes_copy_wcs_len(struct aes *aes, const wchar_t *wcs, size_t len)
 {
 	wchar_t *w;
 
+	if (wcs == NULL) {
+		aes->aes_set = 0;
+		return (0);
+	}
+	aes->aes_set = AES_SET_WCS; /* Only WCS form set. */
 	archive_string_empty(&(aes->aes_mbs));
 	archive_string_empty(&(aes->aes_utf8));
 	if (aes->aes_wcs) {
@@ -623,6 +652,12 @@ archive_entry_size(struct archive_entry *entry)
 }
 
 const char *
+archive_entry_sourcepath(struct archive_entry *entry)
+{
+	return (aes_get_mbs(&entry->ae_sourcepath));
+}
+
+const char *
 archive_entry_symlink(struct archive_entry *entry)
 {
 	if (!entry->ae_symlinkset)
@@ -919,6 +954,12 @@ archive_entry_set_size(struct archive_entry *entry, int64_t s)
 {
 	entry->stat_valid = 0;
 	entry->ae_stat.aest_size = s;
+}
+
+void
+archive_entry_copy_sourcepath(struct archive_entry *entry, const char *path)
+{
+	aes_set_mbs(&entry->ae_sourcepath, path);
 }
 
 void
@@ -1889,13 +1930,13 @@ ae_strtofflags(const char *s, unsigned long *setp, unsigned long *clrp)
 		while (*end != '\0'  &&  *end != '\t'  &&
 		    *end != ' '  &&  *end != ',')
 			end++;
-		for (flag = flags; flag->wname != NULL; flag++) {
-			if (memcmp(start, flag->wname, end - start) == 0) {
+		for (flag = flags; flag->name != NULL; flag++) {
+			if (memcmp(start, flag->name, end - start) == 0) {
 				/* Matched "noXXXX", so reverse the sense. */
 				clear |= flag->set;
 				set |= flag->clear;
 				break;
-			} else if (memcmp(start, flag->wname + 2, end - start)
+			} else if (memcmp(start, flag->name + 2, end - start)
 			    == 0) {
 				/* Matched "XXXX", so don't reverse. */
 				set |= flag->set;
@@ -1904,7 +1945,7 @@ ae_strtofflags(const char *s, unsigned long *setp, unsigned long *clrp)
 			}
 		}
 		/* Ignore unknown flag names. */
-		if (flag->wname == NULL  &&  failed == NULL)
+		if (flag->name == NULL  &&  failed == NULL)
 			failed = start;
 
 		/* Find start of next token. */

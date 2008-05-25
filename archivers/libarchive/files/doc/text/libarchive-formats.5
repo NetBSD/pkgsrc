@@ -173,6 +173,12 @@ DESCRIPTION
      SVR4, and the BSD format, which first appeared in 4.4BSD.	Libarchive
      provides read and write support for both variants.
 
+   mtree
+     Libarchive can read files in mtree(5) format. This format is not a true
+     archive format, but rather a description of a file hierarchy. When
+     requested, libarchive obtains the contents of the files described by the
+     mtree(5) format from files on disk instead.
+
 SEE ALSO
      ar(1), cpio(1), mkisofs(1), shar(1), tar(1), zip(1), zlib(3), cpio(5),
      mtree(5), tar(5)
