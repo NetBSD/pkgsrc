@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7285 2008/05/25 08:07:40 adam Exp $
+$NetBSD: TODO,v 1.7286 2008/05/25 08:31:34 adam Exp $
 
 Suggested new packages
 ======================
@@ -675,8 +675,6 @@ Suggested package updates
 	o gnomeicu-0.99.14
 	o gnu-crypto-2.1.0
 	o gnustep-1.14.0
-	o gnustep-back-0.12.1
-	o gnustep-gui-0.12.1
 	o gnustep-examples-1.2.0
 	o gnustep-objc-1.4.0
 	o gob2-2.0.15
