@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/05/25 13:16:11 dillo Exp $
+# $NetBSD: Makefile,v 1.20 2008/05/25 21:42:21 joerg Exp $
 #
 
 DISTNAME=		arnsrc27012002
@@ -27,6 +27,8 @@ MAKE_FLAGS+=		LFLAGS2=#none, especially not -s
 SHAREDIR=		${PREFIX}/share/arnold
 MAKE_ENV+=		SHAREDIR=${SHAREDIR}
 AUTO_MKDIRS=		yes
+
+USE_TOOLS+=		pax
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/arnold ${DESTDIR}${PREFIX}/bin

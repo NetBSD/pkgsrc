@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/04/09 19:34:41 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/25 21:42:22 joerg Exp $
 #
 
 DISTNAME=	pgf-1.10
@@ -15,6 +15,7 @@ DEPENDS=	tex-xkeyval-[0-9]*:../../print/tex-xkeyval
 
 USE_LANGUAGES=	# none
 
+USE_TOOLS+=	pax
 USE_DIRS+=	texmf-1.4
 
 .include "../../print/teTeX/module.mk"

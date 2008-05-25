@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2008/04/03 10:53:46 joerg Exp $
+# $NetBSD: Makefile,v 1.48 2008/05/25 21:42:20 joerg Exp $
 #
 
 DISTNAME=		qcad-2.0.5.0-1-community.src
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 COMMENT=		2D CAD system
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		autoconf gmake
+USE_TOOLS+=		autoconf gmake pax
 USE_LANGUAGES=		c c++
 
 CONFIGURE_DIRS=		fparser dxflib

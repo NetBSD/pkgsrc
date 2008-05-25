@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/01/21 21:19:41 heinz Exp $
+# $NetBSD: Makefile,v 1.22 2008/05/25 21:42:20 joerg Exp $
 #
 
 DISTNAME=	eawpats12_full
@@ -20,6 +20,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}
 NO_BUILD=		yes
 USE_LANGUAGES=		# empty
+USE_TOOLS+=		pax
 MESSAGE_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
 post-extract:

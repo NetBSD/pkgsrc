@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/03/03 01:10:06 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2008/05/25 21:42:20 joerg Exp $
 #
 
 DISTNAME=		MUMmer3.19
@@ -13,7 +13,7 @@ COMMENT=		System for aligning whole genome sequences
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
-USE_TOOLS+=		csh:run gmake perl:run
+USE_TOOLS+=		csh:run gmake perl:run pax
 USE_LANGUAGES=		c c++
 
 MAKE_ENV+=		SH=${SH:Q}

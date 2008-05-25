@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/02/17 02:23:52 obache Exp $
+# $NetBSD: Makefile,v 1.15 2008/05/25 21:42:22 joerg Exp $
 
 DISTNAME=	NetBSD1.3I-jman-19990531
 PKGNAME=	ja-man-19990531
@@ -23,7 +23,7 @@ MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}/${JAMANDIR}
 
 PLIST_SRC=	${WRKDIR}/PLIST
 
-USE_TOOLS+=		patch
+USE_TOOLS+=		patch pax
 USE_BSD_MAKE=		yes
 MANCOMPRESSED_IF_MANZ=	yes
 INSTALLATION_DIRS=	bin share/groff/tmac/mdoc share/examples

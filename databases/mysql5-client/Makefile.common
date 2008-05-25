@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.30 2008/03/06 16:50:38 jlam Exp $
+# $NetBSD: Makefile.common,v 1.31 2008/05/25 21:42:21 joerg Exp $
 
 DISTNAME=		mysql-5.0.51
 CATEGORIES=		databases
@@ -13,7 +13,7 @@ GNU_CONFIGURE=		yes
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
-EXTRACT_USING=		pax
+EXTRACT_USING=		bsdtar
 
 # MYSQL_USER		username of the database administrator
 # MYSQL_GROUP		group of the database administrator
