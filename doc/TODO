@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7284 2008/05/24 21:06:12 adam Exp $
+$NetBSD: TODO,v 1.7285 2008/05/25 08:07:40 adam Exp $
 
 Suggested new packages
 ======================
@@ -233,10 +233,6 @@ Suggested new packages
 	crm114 [pkg/31969]
 	http://crm114.sourceforge.net/
 	Controllable Regex Mutilator
-
-	SQLite Browser [pkg/32461]
-	http://sqlitebrowser.sourceforge.net/
-	SQLite Database Browser
 
 	sysjail [pkg/34123, pkgsrc-wip]
 	http://sysjail.bsd.lv/
