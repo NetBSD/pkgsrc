@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: wide.in,v 1.1.1.1 2005/02/01 19:11:20 jschauma Exp $
+# $NetBSD: wide.in,v 1.2 2008/05/25 20:57:28 joerg Exp $
 
 PREFIX=@PREFIX@
 
@@ -18,7 +18,7 @@ if [ ! -d ${WIDE} ]; then
 	ln -s ${PREFIX}/libexec/wide/lib
 	cd ${PREFIX}/share/wide/
 	for file in ${COPY_FILES}; do
-		pax -rw ${file} ${WIDE}/
+		@PAX@ -rw ${file} ${WIDE}/
 	done
 	echo " done."
 fi

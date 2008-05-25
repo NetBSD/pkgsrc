@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2008/04/07 16:18:02 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2008/05/25 20:57:27 joerg Exp $
 #
 
 DISTNAME=		wide
 PKGNAME=		wide-0.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel lang
 MASTER_SITES=		http://www2.mta.ac.il/~tal/WIDE/
 EXTRACT_SUFX=		.zip
@@ -24,11 +24,13 @@ PKG_JVMS_ACCEPTED=	sun-jdk14 sun-jdk15
 
 INSTALLATION_DIRS=	bin libexec/wide share/wide
 
+USE_TOOLS+=		pax:run
+
 post-extract:
 	chmod -R go-w ${WRKSRC}
 
 do-configure:
-	${SED} -e 's|@PREFIX@|${PREFIX}|g' ${FILESDIR}/wide.in > ${WRKSRC}/wide
+	${SED} -e 's|@PAX@|${PAX}|' -e 's|@PREFIX@|${PREFIX}|g' ${FILESDIR}/wide.in > ${WRKSRC}/wide
 	${RM} -fr ${WRKSRC}/images/Copy*
 
 do-install:
