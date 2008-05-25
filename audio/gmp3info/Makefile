@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/09/04 19:08:21 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2008/05/25 14:45:16 tron Exp $
 
 DISTNAME=	mp3info-0.8.5a
 PKGNAME=	g${DISTNAME}
@@ -7,7 +7,7 @@ MASTER_SITES=	ftp://ftp.ibiblio.org/pub/linux/apps/sound/mp3-utils/mp3info/ \
 		${MASTER_SITE_SUNSITE:=apps/sound/mp3-utils/mp3info/}
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	tron@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ibiblio.org/mp3info/
 COMMENT=	Utility to read and modify the ID3 tags of MP3 files
 

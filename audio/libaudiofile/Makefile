@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2007/06/08 18:34:38 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2008/05/25 14:45:16 tron Exp $
 
 DISTNAME=		audiofile-0.2.6
 PKGNAME=		lib${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=		audio
 MASTER_SITES=		http://www.68k.org/~michael/audiofile/ \
 			${MASTER_SITE_GNOME:=sources/audiofile/0.2/}
 
-MAINTAINER=		tron@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://andromeda.68k.org/~michael/audiofile/
 COMMENT=		Sound library for SGI audio file
 
