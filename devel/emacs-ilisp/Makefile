@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/03/19 12:13:08 obache Exp $
+# $NetBSD: Makefile,v 1.13 2008/05/25 13:16:10 dillo Exp $
 #
 
 DISTNAME=	ilisp-20021222
@@ -7,7 +7,7 @@ PKGREVISION=	3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ilisp/}
 
-MAINTAINER=	dillo@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/ilisp/
 COMMENT=	Emacs interface to embedded Lisp process
 

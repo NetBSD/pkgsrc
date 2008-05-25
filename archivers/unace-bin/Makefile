@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/10/31 21:50:49 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/25 13:16:10 dillo Exp $
 #
 
 DISTNAME=	linunace25
@@ -7,7 +7,7 @@ CATEGORIES=	archivers
 MASTER_SITES=	http://www.winace.com/files/
 EXTRACT_SUFX=	.tgz
 
-MAINTAINER=	dillo@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.winace.com/
 COMMENT=	Extract, list and test files in ACE archives (Linux binary)
 
