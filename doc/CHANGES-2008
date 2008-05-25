@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1143 2008/05/25 16:20:32 taca Exp $
+$NetBSD: CHANGES-2008,v 1.1144 2008/05/25 19:23:26 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1919,3 +1919,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added x11/fltk2 version 2.0pre6129 [joerg 2008-05-25]
 	Updated games/crafty to 22.1 [joerg 2008-05-25]
 	Added x11/xvidtune version 1.0.1 [taca 2008-05-25]
+	Updated x11/XaoS to 3.3 [tnn 2008-05-25]
