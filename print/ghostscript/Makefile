@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2008/05/17 20:57:29 tnn Exp $
+# $NetBSD: Makefile,v 1.49 2008/05/25 10:26:41 tnn Exp $
 
 DISTNAME=	ghostscript-8.62
 PKGREVISION=	2
@@ -22,6 +22,7 @@ USE_TOOLS+=		gmake perl:run lex pkg-config
 GNU_CONFIGURE=		yes
 #CONFIGURE_ARGS+=	--enable-debug
 MAKE_JOBS_SAFE=		no
+UNLIMIT_RESOURCES+=	datasize	# gsromfs1.c
 
 REPLACE_PERL+=		lib/fixmswrd.pl
 
