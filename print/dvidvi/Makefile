@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2007/01/07 09:14:09 rillig Exp $
+# $NetBSD: Makefile,v 1.9 2008/05/25 13:16:11 dillo Exp $
 #
 
 DISTNAME=	dvidvi-1.0
 CATEGORIES=	print
 MASTER_SITES=	ftp://sunsite.univie.ac.at/pub/distfiles/
 
-MAINTAINER=	dillo@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Select and/or rearrange pages in a TeX dvi file
 
 
