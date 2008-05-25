@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/05/16 11:46:11 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/25 21:23:26 wiz Exp $
 #
 
 DISTNAME=	obexfs-0.8
@@ -6,7 +6,7 @@ PKGNAME=	fuse-${DISTNAME}
 CATEGORIES=	filesystems
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openobex/}
 
-MAINTAINER=	xtraeme@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.openobex.org/
 COMMENT=	FUSE based filesystem using ObexFTP
 
