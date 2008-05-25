@@ -1,4 +1,4 @@
-# $NetBSD: bsd.extract-vars.mk,v 1.9 2007/12/30 13:37:18 joerg Exp $
+# $NetBSD: bsd.extract-vars.mk,v 1.10 2008/05/25 20:02:02 joerg Exp $
 #
 # This Makefile fragment is included separately by bsd.pkg.mk and
 # defines some variables which must be defined earlier than where
@@ -33,7 +33,9 @@ EXTRACT_SUFX?=		.tar.gz
     !empty(EXTRACT_ONLY:M*.tgz) || \
     !empty(EXTRACT_ONLY:M*-tar.gz) || \
     !empty(EXTRACT_ONLY:M*_tar.gz)
-.  if !empty(EXTRACT_USING:Mgtar)
+.  if !empty(EXTRACT_USING:Mbsdtar)
+USE_TOOLS+=	bsdtar
+.  elif !empty(EXTRACT_USING:Mgtar)
 USE_TOOLS+=	gtar
 .  elif !empty(EXTRACT_USING:Mnbtar)
 USE_TOOLS+=	tar
