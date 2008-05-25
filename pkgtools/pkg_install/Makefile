@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152.2.2 2008/05/24 21:54:22 joerg Exp $
+# $NetBSD: Makefile,v 1.152.2.3 2008/05/25 19:52:55 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -76,8 +76,9 @@ MESSAGE_SUBST+=		PKGVULNDIR=${PKG_DBDIR:Q}			\
 VERSION!=		${AWK} -F '"' '/PKGTOOLS_VERSION/ {print $$2}' \
 			${FILESDIR}/lib/version.h
 
-# linkresolver interface appeared in libarchive 2.5.
-BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=2.5
+# linkresolver interface appeared in libarchive 2.5 and extract
+# requires version 2.5.4b to handle hardlinks correctly.
+BUILDLINK_API_DEPENDS.libarchive+=	libarchive>=2.5.4b
 
 .include "../../archivers/bzip2/builtin.mk"
 .include "../../archivers/libarchive/builtin.mk"
