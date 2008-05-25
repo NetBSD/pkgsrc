@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/09 17:20:47 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/25 11:46:33 tnn Exp $
 #
 
-DISTNAME=	dvtm-0.4
+DISTNAME=	dvtm-0.4.1
 CATEGORIES=	misc
 MASTER_SITES=	http://www.brain-dump.org/projects/dvtm/
 
@@ -14,11 +14,17 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=		c99
 NO_CONFIGURE=		yes
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+SUBST_CLASSES+=		makefile
+SUBST_STAGE.makefile=	pre-build
+SUBST_MESSAGE.makefile=	Fixing config.mk...
+SUBST_FILES.makefile=	config.mk
+SUBST_SED.makefile+=	-e 's,/usr/local,${PREFIX},g'
+SUBST_SED.makefile+=	-e 's,share/man,${PKGMANDIR},g'
+SUBST_SED.makefile+=	-e 's,^CFLAGS =,CFLAGS +=,'
+SUBST_SED.makefile+=	-e 's,^LDFLAGS =,LDFLAGS +=,'
+SUBST_SED.makefile+=	-e 's/cc/${CC:Q}/'
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/dvtm ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/dvtm.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 .include "options.mk"
 

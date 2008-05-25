@@ -1,26 +1,33 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/03/09 17:20:47 tnn Exp $
+$NetBSD: patch-aa,v 1.2 2008/05/25 11:46:33 tnn Exp $
 
---- config.mk.orig	2008-02-06 17:30:25.000000000 +0100
-+++ config.mk
-@@ -3,16 +3,13 @@ VERSION = 0.4
+--- Makefile.orig	2008-05-10 18:39:01.000000000 +0200
++++ Makefile
+@@ -20,6 +20,7 @@ ${OBJ}: config.h config.mk
+ dvtm: ${OBJ}
+ 	@echo CC -o $@
+ 	@${CC} -o $@ ${OBJ} ${LDFLAGS}
++	@sed "s/VERSION/${VERSION}/g" < dvtm.1 > dvtm.1.out
  
- # Customize below to fit your system
+ unicode: clean
+ 	@make LIBS='${LIBS_UTF8}' CFLAGS='${CFLAGS} -DUSE_UTF8'
+@@ -45,15 +46,12 @@ install: dvtm
+ 	@echo stripping executable
+ 	@strip -s dvtm
+ 	@echo installing executable file to ${DESTDIR}${PREFIX}/bin
+-	@mkdir -p ${DESTDIR}${PREFIX}/bin
+-	@cp -f dvtm ${DESTDIR}${PREFIX}/bin
+-	@chmod 755 ${DESTDIR}${PREFIX}/bin/dvtm
+-	@cp -f dvtm-status ${DESTDIR}${PREFIX}/bin
+-	@chmod 755 ${DESTDIR}${PREFIX}/bin/dvtm-status
++	@install -m 755 -d ${DESTDIR}${PREFIX}/bin
++	@install -m 755 -c dvtm ${DESTDIR}${PREFIX}/bin
++	@install -m 755 -c dvtm-status ${DESTDIR}${PREFIX}/bin
+ 	@echo installing manual page to ${DESTDIR}${MANPREFIX}/man1
+-	@mkdir -p ${DESTDIR}${MANPREFIX}/man1
+-	@sed "s/VERSION/${VERSION}/g" < dvtm.1 > ${DESTDIR}${MANPREFIX}/man1/dvtm.1
+-	@chmod 644 ${DESTDIR}${MANPREFIX}/man1/dvtm.1
++	@install -m 755 -d ${DESTDIR}${MANPREFIX}/man1
++	@install -m 644 -c dvtm.1.out ${DESTDIR}${MANPREFIX}/man1/dvtm.1
  
--PREFIX = /usr/local
--MANPREFIX = ${PREFIX}/share/man
-+MANPREFIX = ${DESTDIR}${PREFIX}/${PKGMANDIR}
- 
- INCS = -I. -I/usr/include -I/usr/local/include 
--LIBS = -lc -lutil -lncurses
--LIBS_UTF8 = -lc -lutil -lncursesw
-+LIBS = -lc -lutil -lncurses -L/usr/lib -L${DESTDIR}${PREFIX}/lib
-+LIBS_UTF8 = -lc -lutil -lncursesw -L/usr/lib -L${DESTDIR}${PREFIX}/lib
- 
--CFLAGS = -std=c99 -Os ${INCS} -DVERSION=\"${VERSION}\" -DNDEBUG
--LDFLAGS = -L/usr/lib -L/usr/local/lib ${LIBS}
-+CFLAGS += ${INCS} -DVERSION=\"${VERSION}\" -DNDEBUG
-+LDFLAGS += ${LIBS}
- 
- DEBUG_CFLAGS = -std=c99 -O0 -g -ggdb ${INCS} -Wall -DVERSION=\"${VERSION}\"
--
--CC = cc
+ uninstall:
+ 	@echo removing executable file from ${DESTDIR}${PREFIX}/bin
