@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.212 2008/05/25 16:27:05 joerg Exp $
+# $NetBSD: replace.mk,v 1.213 2008/05/25 16:55:32 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -256,6 +256,17 @@ TOOLS_CMD.bison-yacc=		${TOOLS_DIR}/bin/yacc
 # so that bison will be correctly invoked in yacc-compatilility mode.
 #
 TOOLS_VALUE_GNU.bison-yacc=	${TOOLS_CMDLINE.bison-yacc}
+.endif
+
+.if !defined(TOOLS_IGNORE.bsdtar) && !empty(_USE_TOOLS:Mbsdtar)
+.  if !empty(PKGPATH:Marchivers/bsdtar)
+MAKEFLAGS+=			TOOLS_IGNORE.bsdtar=
+.  elif !empty(_TOOLS_USE_PKGSRC.bsdtar:M[yY][eE][sS])
+TOOLS_DEPENDS.bsdtar?=		bsdtar-[0-9]*:../../archivers/bsdtar
+TOOLS_CREATE+=			bsdtar
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.bsdtar=bsdtar
+TOOLS_PATH.bsdtar=		${TOOLS_PREFIX.bsdtar}/bin/bsdtar
+.  endif
 .endif
 
 .if !defined(TOOLS_IGNORE.byacc) && !empty(_USE_TOOLS:Mbyacc)
