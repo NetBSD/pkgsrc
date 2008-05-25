@@ -1,4 +1,10 @@
-@comment $NetBSD: PLIST,v 1.14 2007/11/25 14:42:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/05/25 08:16:06 adam Exp $
+share/GNUstep/System/Library/Documentation/man/man1/debugapp.1.gz
+share/GNUstep/System/Library/Documentation/man/man1/gnustep-config.1.gz
+share/GNUstep/System/Library/Documentation/man/man1/openapp.1.gz
+share/GNUstep/System/Library/Documentation/man/man1/opentool.1.gz
+share/GNUstep/System/Library/Documentation/man/man7/GNUstep.7.gz
+share/GNUstep/System/Library/Documentation/man/man7/library-combo.7.gz
 share/GNUstep/System/Library/Makefiles/GNUstep-reset.sh
 share/GNUstep/System/Library/Makefiles/GNUstep.csh
 share/GNUstep/System/Library/Makefiles/GNUstep.sh
@@ -46,6 +52,7 @@ share/GNUstep/System/Library/Makefiles/Master/gswbundle.make
 share/GNUstep/System/Library/Makefiles/Master/java-tool.make
 share/GNUstep/System/Library/Makefiles/Master/java.make
 share/GNUstep/System/Library/Makefiles/Master/library.make
+share/GNUstep/System/Library/Makefiles/Master/nsis.make
 share/GNUstep/System/Library/Makefiles/Master/objc.make
 share/GNUstep/System/Library/Makefiles/Master/palette.make
 share/GNUstep/System/Library/Makefiles/Master/resource-set.make
@@ -97,6 +104,7 @@ share/GNUstep/System/Library/Makefiles/messages.make
 share/GNUstep/System/Library/Makefiles/mkinstalldirs
 share/GNUstep/System/Library/Makefiles/names.make
 share/GNUstep/System/Library/Makefiles/native-library.make
+share/GNUstep/System/Library/Makefiles/nsi-app.template
 share/GNUstep/System/Library/Makefiles/objc.make
 share/GNUstep/System/Library/Makefiles/os.sh
 share/GNUstep/System/Library/Makefiles/palette.make
@@ -158,7 +166,8 @@ share/examples/GNUstep/GNUstep.conf
 @dirrm share/GNUstep/System/Library/Frameworks
 @exec ${MKDIR} %D/share/GNUstep/System/Library/Fonts
 @dirrm share/GNUstep/System/Library/Fonts
-@exec ${MKDIR} %D/share/GNUstep/System/Library/Documentation/man
+@dirrm share/GNUstep/System/Library/Documentation/man/man7
+@dirrm share/GNUstep/System/Library/Documentation/man/man1
 @dirrm share/GNUstep/System/Library/Documentation/man
 @exec ${MKDIR} %D/share/GNUstep/System/Library/Documentation/info
 @dirrm share/GNUstep/System/Library/Documentation/info
