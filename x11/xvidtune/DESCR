@@ -1,0 +1,3 @@
+Xvidtune is a client interface to the X server video mode extension
+(XFree86-VidModeExtension).  It can show current video mode, switch the
+video mode and interactively adjust current video mode.
