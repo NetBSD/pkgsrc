@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.in,v 1.1.1.1 2008/05/24 03:35:41 tnn Exp $
+dnl $NetBSD: configure.in,v 1.2 2008/05/25 18:32:28 tnn Exp $
 
 AC_PREREQ(2.62)
 AC_INIT([compat_headers],[20080523],[tnn@NetBSD.org])
@@ -15,18 +15,22 @@ REPLACE_resolv=no
 REPLACE_sys_select=no
 REPLACE_stdlib=no
 REPLACE_math=no
+REPLACE_stdarg=no
 
 AC_SUBST(REPLACE_stdint)
 AC_SUBST(REPLACE_inttypes)
 AC_SUBST(REPLACE_resolv)
 AC_SUBST(REPLACE_sys_select)
 AC_SUBST(REPLACE_stdlib)
+AC_SUBST(REPLACE_stdarg)
 AC_SUBST(REPLACE_math)
 
 AC_DEFINE([CH_LP64], [0], [descr])
 AC_DEFINE([CH_HPUX], [0], [descr])
 AC_DEFINE([CH_HPUX_MISSING_RES_PROTO], [0], [descr])
 AC_DEFINE([CH_HPUX___STRTOLL], [0], [descr])
+
+AC_DEFINE([CH_HAVE_VA_COPY], [0], [descr])
 
 AC_DEFINE([CH_FLOORF], [0], [descr])
 AC_DEFINE([CH_CEILF], [0], [descr])
@@ -152,6 +156,20 @@ REPLACE_stdlib=yes
 ]
 , [AC_MSG_RESULT(no)])
 , [AC_MSG_RESULT(no)])
+
+
+#
+# Check for va_copy
+#
+
+# XXX needs to be TRY_RUN
+AC_MSG_CHECKING([if we have va_copy])
+AC_TRY_RUN([#include <stdarg.h>
+void foo(va_list x, va_list y) {va_copy(x, y);}
+int main(void) {return 0;}],
+[AC_DEFINE(CH_HAVE_VA_COPY) AC_MSG_RESULT(yes)],
+[AC_MSG_RESULT(no)
+REPLACE_stdarg=yes])
 
 #
 # Make sure we have float math functions, provide macros otherwise.

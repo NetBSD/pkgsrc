@@ -1,0 +1,8 @@
+#include "config.h"
+@include "@real_header@"
+@ifndef _COMPAT_STDARG_H_
+@define _COMPAT_STDARG_H_
+#if CH_HAVE_VA_COPY < 1
+@define va_copy(dst,src) (dst=(src))
+#endif
+@endif /* _COMPAT_STDARG_H_ */
