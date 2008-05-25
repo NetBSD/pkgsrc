@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/02/22 19:27:29 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2008/05/25 14:45:18 tron Exp $
 
 DISTNAME=	xservers-3.3.6.5
 PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	tron@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xfree86.org/
 COMMENT=	Old X11 servers for use under XFree86 4.x
 
