@@ -1,4 +1,4 @@
-.TH archive_write 3 "August 19, 2006" ""
+.TH archive_write 3 "May 11, 2008" ""
 .SH NAME
 \fBarchive_write_new\fP,
 \fBarchive_write_set_format_cpio\fP,
@@ -11,6 +11,7 @@
 \fBarchive_write_set_bytes_per_block\fP,
 \fBarchive_write_set_bytes_in_last_block\fP,
 \fBarchive_write_set_compression_bzip2\fP,
+\fBarchive_write_set_compression_compress\fP,
 \fBarchive_write_set_compression_gzip\fP,
 \fBarchive_write_set_compression_none\fP,
 \fBarchive_write_set_compression_program\fP,
@@ -56,6 +57,12 @@
 .RE
 .nh
 \fBarchive_write_set_compression_bzip2\fP
+.hy
+("struct archive *");
+\fIint\fP
+.RE
+.nh
+\fBarchive_write_set_compression_compress\fP
 .hy
 ("struct archive *");
 \fIint\fP
@@ -300,6 +307,10 @@ In most cases, this will result in ordinary ustar archives.
 Xo
 .nh
 \fBarchive_write_set_compression_bzip2\fP
+.hy
+(,);
+.nh
+\fBarchive_write_set_compression_compress\fP
 .hy
 (,);
 .nh

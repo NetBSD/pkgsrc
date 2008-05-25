@@ -25,8 +25,9 @@ DISTCHECK_CONFIGURE_FLAGS = --enable-bsdtar --enable-bsdcpio
 #
 EXTRA_DIST= version			\
 	contrib				\
+	doc				\
 	examples			\
-        doc				\
+	windows				\
 	$(libarchive_EXTRA_DIST)	\
 	$(libarchive_test_EXTRA_DIST)	\
 	$(bsdtar_EXTRA_DIST)		\
@@ -43,7 +44,7 @@ dist-hook:
 	rm -f `find $(distdir) -name '*.out'`
 	rm -f `find $(distdir) -name '*.core'`
 	-rm -f $(distdir)/*/Makefile $(distdir)/*/*/Makefile
-	cd $(distdir)/doc && ./update.sh
+	cd $(distdir)/doc && /bin/sh update.sh
 
 #
 # Extra rules for cleanup
@@ -57,16 +58,19 @@ distclean-local:
 	-rm -rf .ref
 	-rm -rf autom4te.cache/
 	-rm -f *~
+	-[ -f libarchive/Makefile ] && cd libarchive && make clean
+	-[ -f libarchive/test/Makefile ] && cd libarchive/test && make clean
+	-[ -f tar/Makefile ] && cd tar && make clean
+	-[ -f tar/test/Makefile ] && cd tar/test && make clean
+	-[ -f cpio/Makefile ] && cd cpio && make clean
+	-[ -f cpio/test/Makefile ] && cd cpio/test && make clean
 
 #
 # Libarchive headers, source, etc.
 #
 #
 
-include_HEADERS= libarchive/archive_entry.h
-# Note: archive.h is built from archive.h.in, so don't
-# include archive.h in the distfile, but do install it.
-nodist_include_HEADERS= libarchive/archive.h
+include_HEADERS= libarchive/archive.h libarchive/archive_entry.h
 
 libarchive_la_SOURCES=						\
 	libarchive/archive_check_magic.c			\
@@ -134,9 +138,9 @@ libarchive_la_SOURCES=						\
 	libarchive/filter_fork.c				\
 	libarchive/filter_fork.h
 
-# archive.h ends up in the build directory, so make sure we can find it.
-libarchive_la_CPPFLAGS= -I$(top_builddir)/libarchive
-libarchive_la_LDFLAGS= -version-info $(ARCHIVE_LIBTOOL_VERSION)
+# cygwin barfs without -no-undefined; I don't know what it does or
+# whether it helps or hurts other platforms...
+libarchive_la_LDFLAGS= -no-undefined -version-info $(ARCHIVE_LIBTOOL_VERSION)
 
 # Manpages to install
 libarchive_man_MANS=						\
@@ -153,8 +157,10 @@ libarchive_man_MANS=						\
 	libarchive/tar.5
 
 # Additional libarchive files to include in the distribution
-libarchive_EXTRA_DIST=		\
-	libarchive/test/list.h	\
+libarchive_EXTRA_DIST=			\
+	libarchive/test/list.h		\
+	libarchive/archive_windows.c	\
+	libarchive/archive_windows.h	\
 	$(libarchive_man_MANS)
 
 #
@@ -198,6 +204,7 @@ libarchive_test_SOURCES=					\
 	libarchive/test/test_read_format_mtree.c		\
 	libarchive/test/test_read_format_pax_bz2.c		\
 	libarchive/test/test_read_format_tar.c			\
+	libarchive/test/test_read_format_tar_empty_filename.c	\
 	libarchive/test/test_read_format_tbz.c			\
 	libarchive/test/test_read_format_tgz.c			\
 	libarchive/test/test_read_format_tz.c			\
@@ -208,6 +215,7 @@ libarchive_test_SOURCES=					\
 	libarchive/test/test_read_truncated.c			\
 	libarchive/test/test_tar_filenames.c			\
 	libarchive/test/test_tar_large.c			\
+	libarchive/test/test_ustar_filenames.c			\
 	libarchive/test/test_write_compress.c			\
 	libarchive/test/test_write_compress_program.c		\
 	libarchive/test/test_write_disk.c			\
@@ -222,6 +230,7 @@ libarchive_test_SOURCES=					\
 	libarchive/test/test_write_format_shar_empty.c		\
 	libarchive/test/test_write_format_tar.c			\
 	libarchive/test/test_write_format_tar_empty.c		\
+	libarchive/test/test_write_format_tar_ustar.c		\
 	libarchive/test/test_write_open_memory.c
 
 libarchive_test_CPPFLAGS= -I$(top_builddir)/libarchive -I$(top_srcdir)/libarchive -I$(top_builddir)/libarchive/test
@@ -244,7 +253,9 @@ libarchive_test_EXTRA_DIST=\
 	libarchive/test/test_read_format_gtar_sparse_1_17_posix00.tgz.uu \
 	libarchive/test/test_read_format_gtar_sparse_1_17_posix01.tgz.uu \
 	libarchive/test/test_read_format_gtar_sparse_1_17_posix10.tgz.uu \
-	libarchive/test/test_read_format_gtar_sparse_1_17_posix10_modified.tar.uu
+	libarchive/test/test_read_format_gtar_sparse_1_17_posix10_modified.tar.uu \
+	libarchive/test/test_read_format_tar_empty_filename.tar.uu
+
 
 #
 #
@@ -259,14 +270,14 @@ bsdtar_SOURCES=				\
 		tar/getdate.y		\
 		tar/matching.c		\
 		tar/read.c		\
+		tar/siginfo.c		\
+		tar/subst.c		\
 		tar/tree.c		\
 		tar/tree.h		\
 		tar/util.c		\
 		tar/write.c
 
-bsdtar_DEPENDENCIES= libarchive.la		\
-		libarchive/archive_entry.h	\
-		libarchive/archive.h
+bsdtar_DEPENDENCIES= libarchive.la
 
 if STATIC_BSDTAR
 bsdtar_static= -static
@@ -296,15 +307,15 @@ bsdtar_test_SOURCES=						\
 	tar/getdate.c						\
 	tar/test/main.c						\
 	tar/test/test.h						\
+	tar/test/test_0.c					\
 	tar/test/test_basic.c					\
 	tar/test/test_copy.c					\
 	tar/test/test_getdate.c					\
 	tar/test/test_help.c					\
+	tar/test/test_option_T.c				\
+	tar/test/test_patterns.c				\
 	tar/test/test_stdio.c					\
 	tar/test/test_version.c
-
-bsdtar_test_EXTRA_DIST=						\
-	tar/test/old
 
 bsdtar_test_CPPFLAGS= -I$(top_builddir)/tar/test
 
@@ -337,9 +348,7 @@ bsdcpio_SOURCES=			\
 		cpio/pathmatch.c	\
 		cpio/pathmatch.h
 
-bsdcpio_DEPENDENCIES = libarchive.la		\
-		libarchive/archive_entry.h	\
-		libarchive/archive.h
+bsdcpio_DEPENDENCIES = libarchive.la
 
 
 if STATIC_BSDCPIO
@@ -374,6 +383,7 @@ bsdcpio_test_SOURCES=						\
 	cpio/pathmatch.c					\
 	cpio/test/main.c					\
 	cpio/test/test.h					\
+	cpio/test/test_0.c					\
 	cpio/test/test_basic.c					\
 	cpio/test/test_format_newc.c				\
 	cpio/test/test_gcpio_compat.c				\

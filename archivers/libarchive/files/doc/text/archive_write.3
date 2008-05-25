@@ -6,8 +6,9 @@ NAME
      archive_write_set_format_shar, archive_write_set_format_shar_binary,
      archive_write_set_format_ustar, archive_write_get_bytes_per_block,
      archive_write_set_bytes_per_block, archive_write_set_bytes_in_last_block,
-     archive_write_set_compression_bzip2, archive_write_set_compression_gzip,
-     archive_write_set_compression_none,
+     archive_write_set_compression_bzip2,
+     archive_write_set_compression_compress,
+     archive_write_set_compression_gzip, archive_write_set_compression_none,
      archive_write_set_compression_program, archive_write_open,
      archive_write_open_fd, archive_write_open_FILE,
      archive_write_open_filename, archive_write_open_memory,
@@ -32,6 +33,9 @@ SYNOPSIS
 
      int
      archive_write_set_compression_bzip2(struct archive *);
+
+     int
+     archive_write_set_compression_compress(struct archive *);
 
      int
      archive_write_set_compression_gzip(struct archive *);
@@ -159,6 +163,7 @@ DESCRIPTION
 	     result in ordinary ustar archives.
 
      archive_write_set_compression_bzip2(),
+	     archive_write_set_compression_compress(),
 	     archive_write_set_compression_gzip(),
 	     archive_write_set_compression_none()
 	     The resulting archive will be compressed as specified.  Note that
@@ -417,4 +422,4 @@ BUGS
      correctly restore device nodes with large device numbers from archives
      created by this library.
 
-FreeBSD 6.0			August 19, 2006 		   FreeBSD 6.0
+FreeBSD 6.0			 May 11, 2008			   FreeBSD 6.0

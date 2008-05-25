@@ -129,6 +129,11 @@ DESCRIPTION
 		     paths.  Note that paths ending in .. always cause an
 		     error, regardless of this flag.
 
+     ARCHIVE_EXTRACT_SPARSE
+	     Scan data for blocks of NUL bytes and try to recreate them with
+	     holes.  This results in sparse files, independent of whether the
+	     archive format supports or uses them.
+
      archive_write_disk_set_group_lookup(),
 	     archive_write_disk_set_user_lookup()
 	     The struct archive_entry objects contain both names and ids that
