@@ -210,6 +210,11 @@ Note that paths ending in
 \fI\& ..\fP
 always cause an error, regardless of this flag.
 .TP
+\fBARCHIVE_EXTRACT_SPARSE\fP
+Scan data for blocks of NUL bytes and try to recreate them with holes.
+This results in sparse files, independent of whether the archive format
+supports or uses them.
+.TP
 Xo
 .nh
 \fBarchive_write_disk_set_group_lookup\fP
