@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.551 2008/05/19 22:17:08 taca Exp $
+# $NetBSD: Makefile,v 1.552 2008/05/25 15:32:51 joerg Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -45,6 +45,7 @@ SUBDIR+=	fbdesk
 SUBDIR+=	filerunner
 SUBDIR+=	fixesproto
 SUBDIR+=	fltk
+SUBDIR+=	fltk2
 SUBDIR+=	fontcacheproto
 SUBDIR+=	fontsproto
 SUBDIR+=	fox
