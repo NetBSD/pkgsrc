@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/01/21 21:07:29 heinz Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/25 21:42:20 joerg Exp $
 #
 
 DISTNAME=	freepats-20060219
@@ -16,6 +16,7 @@ WRKSRC=		${WRKDIR}/freepats
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 USE_LANGUAGES=	# empty
+USE_TOOLS+=	pax
 
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR}
 
