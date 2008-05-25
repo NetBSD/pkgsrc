@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.2 2008/05/24 22:11:20 tnn Exp $
+# $NetBSD: Makefile.in,v 1.3 2008/05/25 18:32:28 tnn Exp $
 
 REPLACE_stdint=		@REPLACE_stdint@
 REPLACE_inttypes=	@REPLACE_inttypes@
@@ -6,6 +6,7 @@ REPLACE_resolv=		@REPLACE_resolv@
 REPLACE_sys_select=	@REPLACE_sys_select@
 REPLACE_math=		@REPLACE_math@
 REPLACE_stdlib=		@REPLACE_stdlib@
+REPLACE_stdarg=		@REPLACE_stdarg@
 
 PREFIX=         @prefix@
 DESTDIR?=
@@ -29,6 +30,9 @@ all: .PHONY
 .endif
 .if ${REPLACE_stdlib} == "yes"
 	./mkhdr.sh stdlib.h < stdlib.h.in > stdlib.h
+.endif
+.if ${REPLACE_stdarg} == "yes"
+	./mkhdr.sh stdarg.h < stdarg.h.in > stdarg.h
 .endif
 
 install: .PHONY
@@ -58,4 +62,8 @@ install: .PHONY
 .if ${REPLACE_stdlib} == "yes"
 	${INSTALL} -m 644 stdlib.h ${DESTDIR}${PREFIX}/include
 	echo include/stdlib.h >> PLIST
+.endif
+.if ${REPLACE_stdarg} == "yes"
+	${INSTALL} -m 644 stdarg.h ${DESTDIR}${PREFIX}/include
+	echo include/stdarg.h >> PLIST
 .endif
