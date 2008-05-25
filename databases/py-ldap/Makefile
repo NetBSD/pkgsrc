@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2008/04/25 20:39:07 joerg Exp $
+# $NetBSD: Makefile,v 1.36 2008/05/25 21:42:21 joerg Exp $
 
 DISTNAME=	python-ldap-2.3.1
 PKGNAME=	${DISTNAME:S/python/${PYPKGPREFIX}/}
@@ -26,6 +26,8 @@ SUBST_SED.setup+=	-e "s|@PY_LDAP_INCLUDE_DIRS@|${PY_LDAP_INCLUDE_DIRS}|"
 SUBST_SED.setup+=	-e "s|@PY_LDAP_LIBS@|${PY_LDAP_LIBS}|"
 
 PY_LDAP_DOCDIR=		${PREFIX}/share/doc/py-ldap
+
+USE_TOOLS+=		pax
 
 post-install:
 	${INSTALL_DATA_DIR} ${PY_LDAP_DOCDIR}

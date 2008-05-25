@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/04 11:02:25 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/25 21:42:22 joerg Exp $
 #
 
 DISTNAME=	jdom-1.0
@@ -13,6 +13,7 @@ COMMENT=	Simple API for processing XML documents in Java
 BUILD_DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
 USE_LANGUAGES=	# only Java
+USE_TOOLS+=	pax
 AUTO_MKDIRS=			yes
 
 do-build:
