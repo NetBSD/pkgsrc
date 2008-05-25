@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/05/25 08:04:44 adam Exp $
+
+SHA1 (sqlitebrowser-1.3-src.tar.gz) = 5defc7965e352bcaf8c763b76b2cfe11360b68f9
+RMD160 (sqlitebrowser-1.3-src.tar.gz) = 884330dd595ec091f1aab885cb845dd19adeb189
+Size (sqlitebrowser-1.3-src.tar.gz) = 563588 bytes
