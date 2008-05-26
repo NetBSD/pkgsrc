@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/12 20:52:02 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/26 11:05:28 wiz Exp $
 #
 
 DISTNAME=		goggles-0.9.1
@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.fifthplanet.net/goggles.html
 COMMENT=		Easy to use frontend for Ogle DVD Player
 
-USE_LANGUAGES+=		c++
+USE_LANGUAGES+=		c c++ # c for configure script
 USE_TOOLS+=		gmake
 
 do-build:
