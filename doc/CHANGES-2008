@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1149 2008/05/26 12:55:32 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1150 2008/05/26 12:56:30 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1926,3 +1926,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/pkg_chk to 1.94 [tron 2008-05-26]
 	Updated www/horde to 3.2 [adrianp 2008-05-26]
 	Updated mail/imp to 4.2 [adrianp 2008-05-26]
+	Updated mail/ingo to 1.2 [adrianp 2008-05-26]
