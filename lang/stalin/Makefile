@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/03/04 16:38:13 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2008/05/26 16:47:21 tnn Exp $
 
 DISTNAME=		stalin-0.9
 PKGREVISION=		5
@@ -23,6 +23,12 @@ UNLIMIT_RESOURCES=	stacksize datasize
 CFLAGS:=		${CFLAGS:C/-O[0-9]*/-O0/}
 .endif
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.boehm-gc}/include/gc
+
+.include "../../mk/compiler.mk"
+
+.if !empty(PKGSRC_COMPILER:Msunpro)
+BROKEN=			Sorry, sunpro isn't supported for this package.
+.endif
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
