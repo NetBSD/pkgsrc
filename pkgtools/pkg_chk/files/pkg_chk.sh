@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.58 2008/05/21 20:52:31 dillo Exp $
+# $Id: pkg_chk.sh,v 1.59 2008/05/26 09:25:43 tron Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Make -g list user-installed packages first, followed by commented
@@ -922,8 +922,8 @@ if [ -n "$opt_u" -a -z "$FAIL_DONE" -a -f $PKGCHK_UPDATE_CONF ] ; then
     run_cmd "rm -f $PKGCHK_UPDATE_CONF"
 fi
 
-[ -n "$MISS_DONE" ] &&		msg "Missing:$MISS_DONE"
-[ -n "$INSTALL_DONE" ] &&	msg "Installed:$INSTALL_DONE"
+[ -z "$MISS_DONE" ] ||		msg "Missing:$MISS_DONE"
+[ -z "$INSTALL_DONE" ] ||	msg "Installed:$INSTALL_DONE"
 
 if [ -n "$FAIL_DONE" ] ; then
    msg "Failed:$FAIL_DONE"
