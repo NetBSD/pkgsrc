@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1151 2008/05/26 12:57:29 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1152 2008/05/26 12:59:01 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1928,3 +1928,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/imp to 4.2 [adrianp 2008-05-26]
 	Updated mail/ingo to 1.2 [adrianp 2008-05-26]
 	Updated mail/turba to 2.2 [adrianp 2008-05-26]
+	Updated time/kronolith to 2.2 [adrianp 2008-05-26]
