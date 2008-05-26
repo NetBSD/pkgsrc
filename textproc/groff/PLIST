@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/08/05 08:47:57 tnn Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/05/26 17:54:25 tnn Exp $
 bin/addftinfo
 bin/afmtodit
 bin/${GNU_PREFIX}eqn
@@ -382,7 +382,7 @@ share/groff/${PKGVERSION}/tmac/ps.tmac
 share/groff/${PKGVERSION}/tmac/psatk.tmac
 share/groff/${PKGVERSION}/tmac/psold.tmac
 share/groff/${PKGVERSION}/tmac/pspic.tmac
-share/groff/${PKGVERSION}/tmac/${GNU_PREFIX_TMAC}s.tmac
+share/groff/${PKGVERSION}/tmac/${GNU_PREFIX_AN_TMAC}s.tmac
 share/groff/${PKGVERSION}/tmac/safer.tmac
 share/groff/${PKGVERSION}/tmac/spdf.tmac
 share/groff/${PKGVERSION}/tmac/trace.tmac
