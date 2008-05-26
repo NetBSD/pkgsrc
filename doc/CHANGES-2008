@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1147 2008/05/26 09:26:21 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1148 2008/05/26 12:53:04 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1924,3 +1924,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated archivers/libarchive to 2.5.4b [joerg 2008-05-25]
 	Updated net/snort to 2.8.1 [adrianp 2008-05-25]
 	Updated pkgtools/pkg_chk to 1.94 [tron 2008-05-26]
+	Updated www/horde to 3.2 [adrianp 2008-05-26]
