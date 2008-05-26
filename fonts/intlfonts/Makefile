@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/02/06 18:27:33 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2008/05/26 12:15:14 joerg Exp $
 
 DISTNAME=	intlfonts-1.2.1
 PKGREVISION=	5
@@ -39,6 +39,7 @@ CONFIGURE_ARGS+=	--with-type1 --with-truetype
 MISC_FILES=	README.split
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
+EXTRACT_SUFX=	.tar.gz
 EXTRACT_ONLY=	${FONT_SETS:S/$/${EXTRACT_SUFX}/}
 
 GNU_CONFIGURE=	yes
