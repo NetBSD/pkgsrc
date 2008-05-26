@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/01/03 13:42:53 obache Exp $
+# $NetBSD: Makefile,v 1.18 2008/05/26 22:37:30 tnn Exp $
 #
 
 DISTNAME=		cdif-1.15
@@ -15,6 +15,8 @@ LICENSE=		cdif-license
 RESTRICTED=		Redistribution only for "non-commercial purpose".
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 
 WRKSRC=			${WRKDIR}
 USE_TOOLS+=		perl:run
