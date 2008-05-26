@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.17 2008/04/21 19:44:14 drochner Exp $
+$NetBSD: distinfo,v 1.18 2008/05/26 16:52:21 drochner Exp $
 
-SHA1 (libxslt-1.1.23.tar.gz) = 9b6bb279808893643d9116e514eafecb22eff76c
-RMD160 (libxslt-1.1.23.tar.gz) = fcecbaddd9b35e4d5e44670f6bd6d9d5fff327bc
-Size (libxslt-1.1.23.tar.gz) = 2791463 bytes
+SHA1 (libxslt-1.1.24.tar.gz) = b5402e24abff5545ed76f6a55049cbebc664bd58
+RMD160 (libxslt-1.1.24.tar.gz) = 41e7721eeed722c45310877d045422b47ab32973
+Size (libxslt-1.1.24.tar.gz) = 3363961 bytes
