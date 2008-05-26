@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1148 2008/05/26 12:53:04 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1149 2008/05/26 12:55:32 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1925,3 +1925,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/snort to 2.8.1 [adrianp 2008-05-25]
 	Updated pkgtools/pkg_chk to 1.94 [tron 2008-05-26]
 	Updated www/horde to 3.2 [adrianp 2008-05-26]
+	Updated mail/imp to 4.2 [adrianp 2008-05-26]
