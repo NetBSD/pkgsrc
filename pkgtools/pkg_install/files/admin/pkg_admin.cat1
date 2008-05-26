@@ -181,13 +181,31 @@ EENNVVIIRROONNMMEENNTT
              package database directory.  The default package database direc-
              tory is _/_v_a_r_/_d_b_/_p_k_g.
 
+CCOONNFFIIGGUURRAATTIIOONN VVAARRIIAABBLLEESS
+     The following variables change the behaviour of ppkkgg__aaddmmiinn and are
+     described in pkg_install.conf(5):
+
+     CERTIFICATE_ANCHOR_PKGS
+
+     CERTIFICATE_ANCHOR_PKGVULN
+
+     CERTIFICATE_CHAIN
+
+     GPG
+
+     PKGVULNDIR
+
+     PKGVULNURL
+
+     IGNORE_URL
+
 FFIILLEESS
      /var/db/pkg/pkgdb.byfile.db
      /var/db/pkg/<pkg>/+CONTENTS
 
 SSEEEE AALLSSOO
      pkg_add(1), pkg_create(1), pkg_delete(1), pkg_info(1), pkg_view(1),
-     pkgsrc(7)
+     pkg_install.conf(5), pkgsrc(7)
 
 HHIISSTTOORRYY
      The ppkkgg__aaddmmiinn command first appeared in NetBSD 1.4.
@@ -195,4 +213,4 @@ HHIISSTTOORRYY
 AAUUTTHHOORRSS
      The ppkkgg__aaddmmiinn command was written by Hubert Feyrer.
 
-NetBSD 4.0                      March 10, 2007                      NetBSD 4.0
+NetBSD 4.0                       May 26, 2008                       NetBSD 4.0
