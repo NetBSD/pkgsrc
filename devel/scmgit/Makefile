@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2008/01/05 11:10:18 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2008/05/26 10:50:17 wiz Exp $
 
 .include "Makefile.common"
 
-DISTNAME=	scmgit-${GIT_VERSION}
+PKGNAME=	scmgit-${GIT_VERSION}
 CATEGORIES+=	meta-pkgs
 
 MAINTAINER=	bjs@NetBSD.org
