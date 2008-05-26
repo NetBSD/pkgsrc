@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/03/03 19:21:39 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2008/05/26 22:25:25 tnn Exp $
 #
 
 DISTNAME=		xm71010s
@@ -15,6 +15,7 @@ COMMENT=		X11-based FM-7 emulator
 BUILD_DEPENDS+=		nkf>=1.7:../../converters/nkf
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+NOT_FOR_BULK_PLATFORM=	Linux-*-*
 
 RESTRICTED=		source archive is not redistributable
 LICENSE=		no-commercial-use
