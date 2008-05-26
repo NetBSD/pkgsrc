@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1156 2008/05/26 22:03:13 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1157 2008/05/26 22:38:27 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1933,3 +1933,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/autogen to 5.9.5 [wiz 2008-05-26]
 	Updated wm/compiz to 0.6.2nb2 [hira 2008-05-26]
 	Updated mail/imap-uw to 2006j2nb6 [tron 2008-05-26]
+	Added net/unbound version 1.0.0 [joerg 2008-05-26]
