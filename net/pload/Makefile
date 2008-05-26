@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/12/09 23:41:11 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2008/05/26 22:37:30 tnn Exp $
 #
 
 DISTNAME=	pload-0.9.5
@@ -11,6 +11,7 @@ COMMENT=	PPP monitor for X11, monitoring totals and current in/out rates
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 
 HAS_CONFIGURE=	YES
 USE_TOOLS+=	imake
