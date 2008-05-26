@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2007/12/16 14:38:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/05/26 14:50:19 wiz Exp $
 bin/autogen
 bin/autoopts-config
 bin/columns
@@ -50,7 +50,7 @@ share/autogen/fsm-macro.tpl
 share/autogen/fsm-trans.tpl
 share/autogen/fsm.tpl
 share/autogen/getopt.tpl
-share/autogen/libopts-31.0.6.tar.gz
+share/autogen/libopts-31.1.6.tar.gz
 share/autogen/optcode.tpl
 share/autogen/opthead.tpl
 share/autogen/options.tpl
