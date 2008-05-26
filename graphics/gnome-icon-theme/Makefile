@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2008/04/15 17:37:13 drochner Exp $
+# $NetBSD: Makefile,v 1.56 2008/05/26 22:37:30 tnn Exp $
 #
 
 DISTNAME=		gnome-icon-theme-2.22.0
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Theme consisting of a set of icons for GNOME
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1
