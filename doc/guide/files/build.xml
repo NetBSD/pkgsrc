@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.49 2008/05/25 20:52:01 joerg Exp $ -->
+<!-- $NetBSD: build.xml,v 1.50 2008/05/26 13:38:12 joerg Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -426,7 +426,7 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
       <literal>bsdtar</literal, <literal>gtar</literal>, <literal>nbtar</literal>
       (which is the default value), <literal>pax</literal>, or an
       absolute pathname pointing to the command with which tar
-      archives should be extracted.  It is prefered to choose bsdtar over gtar
+      archives should be extracted.  It is preferred to choose bsdtar over gtar
       if NetBSD's pax-as-tar is not good enough.</para></listitem></varlistentry>
 
     </variablelist>
