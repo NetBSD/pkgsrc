@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/04/28 19:50:32 bjs Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/26 14:41:07 tnn Exp $
 #
 
 DISTNAME=	gambc-${GAMBC_DIST_VERSION}
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.iro.umontreal.ca/~gambit/
 COMMENT=	GambitC Scheme System
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+NOT_FOR_PLATFORM+=	SunOS-*-*
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
