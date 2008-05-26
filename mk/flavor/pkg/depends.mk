@@ -1,4 +1,4 @@
-# $NetBSD: depends.mk,v 1.42 2008/04/03 14:07:51 joerg Exp $
+# $NetBSD: depends.mk,v 1.43 2008/05/26 14:21:43 tron Exp $
 
 # This command prints out the dependency patterns for all full (run-time)
 # dependencies of the package.
@@ -122,7 +122,7 @@ _flavor-install-dependencies: .PHONY ${_DEPENDS_FILE}
 	exec 3<&0;							\
 	${CAT} ${_DEPENDS_FILE} | 					\
 	while read type pattern dir; do					\
-		${TEST} "$$type" = "bootstrap" && continue;		\
+		${TEST} "$$type" != "bootstrap" || continue;		\
 		${_DEPENDS_INSTALL_CMD} 0<&3;				\
 	done
 
@@ -167,7 +167,7 @@ bootstrap-depends: ${_BOOTSTRAP_DEPENDS_TARGETS}
 _flavor-bootstrap-depends:
 	${RUN}${_LIST_DEPENDS_CMD.bootstrap} | 				\
 	while read type pattern dir; do					\
-		${TEST} "$$type" != "bootstrap" && continue;		\
+		${TEST} "$$type" = "bootstrap" || continue;		\
 		${_DEPENDS_INSTALL_CMD};				\
 	done
 
