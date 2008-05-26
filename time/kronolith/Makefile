@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/05/26 02:13:24 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2008/05/26 12:58:49 adrianp Exp $
 
 DISTNAME=	kronolith-h3-${KRONOLITHVER}
 PKGNAME=	kronolith-${KRONOLITHVER}
@@ -10,7 +10,7 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.horde.org/kronolith/
 COMMENT=	Horde calendar application
 
-DEPENDS+=	horde>=3.0.0:../../www/horde
+DEPENDS+=	horde>=3.2:../../www/horde
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Date-[0-9]*:../../time/pear-Date
 
@@ -22,7 +22,7 @@ DOCDIR=		${PREFIX}/share/doc/kronolith
 EGDIR=		${PREFIX}/share/examples/kronolith
 HORDEDIR=	${PREFIX}/share/horde
 KRONOLITHDIR=	${HORDEDIR}/kronolith
-KRONOLITHVER=	2.1.8
+KRONOLITHVER=	2.2
 PAXDIRS=	js lib locale po scripts templates themes
 
 REPLACE_INTERPRETER+=	php
@@ -30,8 +30,7 @@ REPLACE.php.old=	.*/bin.php
 REPLACE.php.new=	${PREFIX}/bin/php
 REPLACE_FILES.php=	scripts/import_icals.php \
 			scripts/migrate_to_sql_driver.php \
-			scripts/reminders.php \
-			scripts/upgrades/2004-05-19_convert_categories_to_strings.php
+			scripts/reminders.php
 
 MESSAGE_SUBST+=	KRONOLITHDIR=${KRONOLITHDIR:Q}
 MESSAGE_SUBST+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
