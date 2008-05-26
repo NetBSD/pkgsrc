@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2008/03/19 10:32:02 mjl Exp $
+# $NetBSD: Makefile,v 1.50 2008/05/26 12:29:24 wiz Exp $
 
 DISTNAME=	asterisk-1.2.27
 #PKGREVISION=	2
@@ -17,6 +17,7 @@ REPLACE_BASH=		mkpkgconfig
 REPLACE_PERL+=		agi/agi-test.agi
 
 INSTALL_TARGET=		install samples
+INSTALLATION_DIRS=	lib/pkgconfig
 
 # Running as non-root will come later
 #ASTERISK_USER?= 	asterisk
