@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1146 2008/05/25 23:49:25 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1147 2008/05/26 09:26:21 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1923,3 +1923,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated archivers/bsdtar to 2.5.4b [joerg 2008-05-25]
 	Updated archivers/libarchive to 2.5.4b [joerg 2008-05-25]
 	Updated net/snort to 2.8.1 [adrianp 2008-05-25]
+	Updated pkgtools/pkg_chk to 1.94 [tron 2008-05-26]
