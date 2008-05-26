@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2008/05/26 02:13:22 joerg Exp $
+# $NetBSD: Makefile,v 1.48 2008/05/26 12:55:02 adrianp Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
@@ -10,9 +10,9 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.horde.org/imp/
 COMMENT=	Internet Messaging Program
 
-CONFLICTS+=	imp-3.*
+CONFLICTS+=	imp-3.*{,nb*}
 
-DEPENDS+=	horde>=3.0.2:../../www/horde
+DEPENDS+=	horde>=3.2:../../www/horde
 DEPENDS+=	${PHP_PKG_PREFIX}-imap>4.3.3:../../mail/php-imap
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail-[0-9]*:../../mail/pear-Mail
 
@@ -26,7 +26,7 @@ DOCDIR=		${PREFIX}/share/doc/imp
 EGDIR=		${PREFIX}/share/examples/imp
 HORDEDIR=	${PREFIX}/share/horde
 IMPDIR=		${HORDEDIR}/imp
-IMPVER=		4.1.6
+IMPVER=		4.2
 PAXDIRS=	lib locale po scripts templates themes
 
 PKG_USERS_VARS+=	APACHE_USER
@@ -70,6 +70,12 @@ SUBST_STAGE.files=	post-build
 SUBST_FILES.files=	imp.conf.dist
 SUBST_SED.files=	-e "s|@IMPDIR@|${IMPDIR}|g"
 SUBST_MESSAGE.files=	Fixing configuration files.
+
+REPLACE_INTERPRETER+=	php
+REPLACE.php.old=	.*/bin/php
+REPLACE.php.new=	${PREFIX}/bin/php
+REPLACE_FILES.php=	scripts/bounce_spam.php \
+			scripts/upgrades/convert_vfolders.php
 
 .include "options.mk"
 
