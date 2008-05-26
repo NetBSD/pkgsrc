@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1154 2008/05/26 14:51:56 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1155 2008/05/26 17:24:27 hira Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1931,3 +1931,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated time/kronolith to 2.2 [adrianp 2008-05-26]
 	Updated chat/xchat to 2.8.4nb3 [tron 2008-05-26]
 	Updated devel/autogen to 5.9.5 [wiz 2008-05-26]
+	Updated wm/compiz to 0.6.2nb2 [hira 2008-05-26]
