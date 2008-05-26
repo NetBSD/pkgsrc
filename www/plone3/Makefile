@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/05/10 09:06:00 taca Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/26 02:13:25 joerg Exp $
 # FreeBSD: ports/www/plone/Makefile,v 1.25 2007/02/17 08:32:54 rafan Exp
 #
 
@@ -20,7 +20,7 @@ ZOPE_PRODUCT_VER=	${PLONE3_VERSION}
 ZOPE_BUILD_METHOD=	zope-force-build
 ZOPE_PRODUCT_SRCDIR=	${WRKSRC}/Products
 
-USE_TOOLS+=		msgfmt
+USE_TOOLS+=		msgfmt pax
 PRIVILEGED_STAGES+=	clean
 CONFLICTS=		zope25-BTreeFolder2-[0-9]* zope25-CMF-[0-9]* \
 			zope25-CMFPlone-[0-9]*
@@ -47,7 +47,7 @@ post-build:
 	${CAT} ${PKGDIR}/PLIST.common_end >> ${WRKDIR}/PLIST
 
 post-install:
-	cd ${WRKSRC}/lib; ${PAX} -rw . ${ZOPE_DIR}/lib
+	cd ${WRKSRC}/lib; pax -rw . ${ZOPE_DIR}/lib
 
 .include "../../www/plone/ploneversion.mk"
 .include "../../www/zope/replace.mk"

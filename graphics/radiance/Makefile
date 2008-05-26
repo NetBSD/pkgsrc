@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/04/12 22:43:01 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2008/05/26 02:13:20 joerg Exp $
 #
 
 DISTNAME=	rad3R6P1
@@ -14,6 +14,8 @@ HOMEPAGE=	http://www.radiance-online.org/
 COMMENT=	Physically-based, image-generating, backward raytracer
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=	pax
 
 WRKSRC=		${WRKDIR}/ray
 
@@ -72,13 +74,13 @@ do-build:
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIRPREFIX:Q}/radiance
-	cd ${WRKSRC}/radiance && ${PAX} -rw -s '|.*/\.DS_Store||' . ${DESTDIRPREFIX:Q}/radiance/
+	cd ${WRKSRC}/radiance && pax -rw -s '|.*/\.DS_Store||' . ${DESTDIRPREFIX:Q}/radiance/
 	${INSTALL_DATA_DIR} ${DESTDIRPREFIX:Q}/radiance/obj
-	cd ${WRKSRC}/obj && ${PAX} -rw -s '|.*/\.DS_Store||' . ${DESTDIRPREFIX:Q}/radiance/obj/
+	cd ${WRKSRC}/obj && pax -rw -s '|.*/\.DS_Store||' . ${DESTDIRPREFIX:Q}/radiance/obj/
 	${INSTALL_DATA_DIR} ${DESTDIRPREFIX:Q}/radiance/lib
-	cd ${WRKSRC}/lib && ${PAX} -rw -s '|.*/\.DS_Store||' . ${DESTDIRPREFIX:Q}/radiance/lib/
+	cd ${WRKSRC}/lib && pax -rw -s '|.*/\.DS_Store||' . ${DESTDIRPREFIX:Q}/radiance/lib/
 	${INSTALL_DATA_DIR} ${DESTDIRPREFIX:Q}/radiance/man
-	cd ${WRKSRC}/doc/man && ${PAX} -rw -s '|.*/\.DS_Store||' . ${DESTDIRPREFIX:Q}/radiance/man/
+	cd ${WRKSRC}/doc/man && pax -rw -s '|.*/\.DS_Store||' . ${DESTDIRPREFIX:Q}/radiance/man/
 	${INSTALL_DATA_DIR} ${DESTDIRPREFIX:Q}/share/doc/radiance
 	${INSTALL_DATA} ${WRKSRC}/doc/pdf/*.pdf \
 		${DESTDIRPREFIX:Q}/share/doc/radiance/

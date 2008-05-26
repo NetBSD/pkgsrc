@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/07/07 22:15:03 agc Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/26 02:13:24 joerg Exp $
 #
 
 DISTNAME=		saytime_11nov1995
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.acme.com/software/saytime/
 MAINTAINER=		is@NetBSD.org
 HOMEPAGE=		http://www.acme.com/software/saytime/
 COMMENT=		Talking clock
+
+USE_TOOLS+=	pax
 
 ONLY_FOR_PLATFORM=	NetBSD-*-* OpenBSD-*-* SunOS-*-*
 
@@ -23,6 +25,6 @@ pre-configure:
 
 post-install:
 	${INSTALL_DATA_DIR} ${LOCALBASE}/share/saytime
-	cd ${WRKSRC}/times && ${PAX} -rw * ${LOCALBASE}/share/saytime/
+	cd ${WRKSRC}/times && pax -rw * ${LOCALBASE}/share/saytime/
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.96 2008/05/17 23:53:29 christos Exp $
+# $NetBSD: Makefile,v 1.97 2008/05/26 02:13:23 joerg Exp $
 
 DISTNAME=		lsof_4.78
 PKGNAME=		${DISTNAME:S/_/-/}.${OS_VERSION}
@@ -34,7 +34,7 @@ REPLACE_PERL+=	scripts/sort_res.perl5 scripts/count_pf.perl5 \
 		scripts/idrlogin.perl5 scripts/count_pf.perl \
 		scripts/idrlogin.perl scripts/list_fields.perl \
 		scripts/watch_a_file.perl
-USE_TOOLS+=	gtar perl:run
+USE_TOOLS+=	gtar pax perl:run
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
@@ -62,7 +62,7 @@ post-extract:
 	if [ X${EXTRACT_USING} = Xgtar ]; then \
 		${GTAR} -xf ${SRCBALL_NAME}.tar; \
 	else \
-		${PAX} -O -r < ${SRCBALL_NAME}.tar; \
+		pax -O -r < ${SRCBALL_NAME}.tar; \
 	fi)
 	@( cd ${WRKSRC} ; ${ECHO} "y" | ./Inventory || exit 1 )
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2008/05/11 00:00:57 tonnerre Exp $
+# $NetBSD: Makefile,v 1.41 2008/05/26 02:13:22 joerg Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME}pl1
@@ -11,7 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.isc.org/sw/bind/
 COMMENT=	The Berkeley Internet Name Daemon, an implementation of DNS
 
-USE_TOOLS+=	lex yacc
+USE_TOOLS+=	lex pax yacc
 
 WRKSRC=		${WRKDIR}
 BIND_VERSION=	8.4.7
@@ -44,7 +44,7 @@ post-extract:
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/bind8
-	cd ${WRKSRC}/doc/html && ${PAX} -rw * ${PREFIX}/share/doc/html/bind8
+	cd ${WRKSRC}/doc/html && pax -rw * ${PREFIX}/share/doc/html/bind8
 	${CHMOD} ${DOCMODE} ${PREFIX}/share/doc/html/bind8/*.html
 
 .include "../../mk/bsd.pkg.mk"

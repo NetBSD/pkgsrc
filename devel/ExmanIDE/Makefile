@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/04/25 20:39:08 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/26 02:13:16 joerg Exp $
 
 DISTNAME=	ExmanIDE-0.9.4
 PKGREVISION=	4
@@ -10,6 +10,8 @@ HOMEPAGE=	http://exmanide.kldp.net/
 COMMENT=	Integrated development environment for Python
 
 DEPENDS+=	${PYPKGPREFIX}-wxWidgets>=2.6:../../x11/py-wxWidgets
+
+USE_TOOLS+=	pax
 
 WRKSRC=		${WRKDIR}/${PKGBASE}
 NO_CONFIGURE=	yes
@@ -35,7 +37,7 @@ INSTALLATION_DIRS=	 bin
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/ExmanIDE ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${PREFIX}/share/${PKGBASE}
-	cd ${WRKSRC} && ${PAX} -rwppm '-s|.*/CVS.*$$||'	\
+	cd ${WRKSRC} && pax -rwppm '-s|.*/CVS.*$$||'	\
 		'-s|.*/ExmanIDE$$||' '-s|.*/.xvpics.*$$||' \
 		. ${PREFIX}/share/${PKGBASE}
 	${PYTHONBIN} ${PYCOMPILEALL} ${PREFIX}/share/${PKGBASE}

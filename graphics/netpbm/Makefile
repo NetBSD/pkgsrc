@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2008/02/08 10:34:19 tnn Exp $
+# $NetBSD: Makefile,v 1.157 2008/05/26 02:13:20 joerg Exp $
 
 DISTNAME=	netpbm-10.34
 PKGREVISION=	1
@@ -14,7 +14,7 @@ MAKE_JOBS_SAFE=	no
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=	bash:run gmake lex perl
+USE_TOOLS+=	bash:run gmake lex pax perl
 USE_FEATURES=	snprintf
 
 INSTALL_TARGET=	install-dev install-run
@@ -95,7 +95,7 @@ post-install:
 		${TEST} -d "${PREFIX}/$${DIR}" ||		\
 			${ECHO} "@dirrm $${DIR}";		\
 	done >>${PLIST_SRC} &&					\
-	${PAX} -rwpppm . ${PREFIX}
+	pax -rwpppm . ${PREFIX}
 	${RM} -fr ${STAGEDIR}
 	${FIND} ${PREFIX}/share/doc/netpbm -type f -print |	\
 		${XARGS} ${CHMOD} ${NONBINMODE}

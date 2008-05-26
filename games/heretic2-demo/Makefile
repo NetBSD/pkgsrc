@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/03/04 06:59:04 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2008/05/26 02:13:19 joerg Exp $
 #
 
 DISTNAME=	heretic2-demo-x86
@@ -19,7 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 NO_CONFIGURE=	yes
 EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} | \
 								${GTAR} xzf -
-USE_TOOLS+=	gtar
+USE_TOOLS+=	gtar pax
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -58,7 +58,7 @@ do-install:
 		${DESTDIR}${SHAREDIR}/${BINNAME}-QuickStart.txt
 	${INSTALL_DATA} ${WRKSRC}/README \
 		${DESTDIR}${SHAREDIR}/${BINNAME}-README
-	cd ${WRKSRC} && ${PAX} -rw base gl_drivers icon.xpm ref_glx.so \
+	cd ${WRKSRC} && pax -rw base gl_drivers icon.xpm ref_glx.so \
 		${DESTDIR}${LIBDIR}
 
 .include "../../mk/bsd.pkg.mk"

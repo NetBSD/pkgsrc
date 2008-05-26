@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/11/18 10:39:57 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/26 02:13:17 joerg Exp $
 #
 
 DISTNAME=	hptools-src-3.0.8
@@ -20,12 +20,13 @@ WRKSRC=		${WRKDIR}/Hptools
 GNU_CONFIGURE=	YES
 CONFIGURE_DIRS=	support
 BUILD_DIRS=	support
+USE_TOOLS+=	pax
 
 post-build:
 	${CHMOD} ${SHAREMODE} ${WRKSRC}/doc/*
 
 post-install:
 	cd ${WRKSRC} \
-	&& ${PAX} -rw -pam -s ',^doc,hptools,g' doc ${PREFIX}/share/doc
+	&& pax -rw -pam -s ',^doc,hptools,g' doc ${PREFIX}/share/doc
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/04/25 20:39:09 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2008/05/26 02:13:18 joerg Exp $
 
 DISTNAME=	roundup-1.1.2
 CATEGORIES=	devel
@@ -11,6 +11,7 @@ COMMENT=	Issue tracking system with command-line, web and email clients
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
 USE_LANGUAGES=
+USE_TOOLS+=	pax
 
 PYTHON_PATCH_SCRIPTS+=	cgi-bin/roundup.cgi demo.py roundup/admin.py
 PYTHON_PATCH_SCRIPTS+=	roundup/backends/locking.py
@@ -35,7 +36,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/CHANGES.txt ${ROUNDUPDOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/COPYING.txt ${ROUNDUPDOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.txt ${ROUNDUPDOCDIR}
-	cd ${WRKSRC}/doc && ${PAX} -s '/.*\.1//g' -rw -pp -pm . ${ROUNDUPDOCDIR}
+	cd ${WRKSRC}/doc && pax -s '/.*\.1//g' -rw -pp -pm . ${ROUNDUPDOCDIR}
 
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
