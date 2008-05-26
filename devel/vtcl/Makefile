@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/03/03 17:45:38 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/26 02:13:18 joerg Exp $
 
 DISTNAME=		vtcl-1.6.0
 PKGREVISION=		1
@@ -11,6 +11,7 @@ COMMENT=		Visual Tcl/Tk application development environment
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_TOOLS+=	pax
 HAS_CONFIGURE=		yes
 NO_BUILD=		yes
 
@@ -27,11 +28,11 @@ do-install:
 	${INSTALL_SCRIPT_DIR} ${DESTDIR}${VTCLEGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/vtcl ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/vtcl.tcl ${DESTDIR}${VTCLDIR}
-	cd ${WRKSRC} && ${PAX} -rwpam lib ${DESTDIR}${VTCLDIR}
-	cd ${WRKSRC} && ${PAX} -rwpam images ${DESTDIR}${VTCLDIR}
-	cd ${WRKSRC} && ${PAX} -rwpam doc ${DESTDIR}${VTCLDOCDIR}
-	cd ${WRKSRC} && ${PAX} -rwpam demo ${DESTDIR}${VTCLEGDIR}
-	cd ${WRKSRC} && ${PAX} -rwpam sample ${DESTDIR}${VTCLEGDIR}
+	cd ${WRKSRC} && pax -rwpam lib ${DESTDIR}${VTCLDIR}
+	cd ${WRKSRC} && pax -rwpam images ${DESTDIR}${VTCLDIR}
+	cd ${WRKSRC} && pax -rwpam doc ${DESTDIR}${VTCLDOCDIR}
+	cd ${WRKSRC} && pax -rwpam demo ${DESTDIR}${VTCLEGDIR}
+	cd ${WRKSRC} && pax -rwpam sample ${DESTDIR}${VTCLEGDIR}
 
 .include "options.mk"
 .include "../../mk/bsd.pkg.mk"

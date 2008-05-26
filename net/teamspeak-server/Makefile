@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/08/03 16:51:10 abs Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/26 02:13:23 joerg Exp $
 
 ftp://ftp.freenet.de/pub/4players/teamspeak.org/developer/server/202319/ts2_server_rc2_202319.tar.bz2
 
@@ -57,6 +57,8 @@ INSTALLATION_DIRS=	${LIB_DIR} share/examples/rc.d ${SHARE_DIR}/httpdocs \
 			${SHARE_DIR}/tcpquerydocs ${SHARE_DIR}/mysql_sql \
 			${SHARE_DIR}/sqlite_sql ${DOC_DIR}/Manual
 
+USE_TOOLS+=	pax
+
 do-build:
 	${MV} ${WRKSRC}/Manual/_TeamSpeak\ RC2\ Server\ manual-1.png \
 	      ${WRKSRC}/Manual/_TeamSpeak_RC2_Server_manual-1.png
@@ -66,7 +68,7 @@ do-install:
 	${INSTALL_LIB} ${WRKSRC}/*.so* ${LIB_DIR}
 	${INSTALL_SCRIPT} -m 644 ${FILESDIR}/teamspeak.sh ${PREFIX}/share/examples/rc.d/teamspeak
 	for d in httpdocs tcpquerydocs mysql_sql sqlite_sql ; do \
-	cd ${WRKSRC}/$$d && ${PAX} -rw . ${SHARE_DIR}/$$d;\
+	cd ${WRKSRC}/$$d && pax -rw . ${SHARE_DIR}/$$d;\
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${SHARE_DIR}/$$d;\
 	${FIND} ${SHARE_DIR}/$$d -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE};\
 	done

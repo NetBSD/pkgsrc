@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/01/18 05:08:47 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2008/05/26 02:13:22 joerg Exp $
 
 DISTNAME=	openslp-1.2.1
 PKGREVISION=	2
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 # Needs pkgviews-enabled automake
 # PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_TOOLS+=		automake bison lex
+USE_TOOLS+=		automake bison lex pax
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
@@ -45,7 +45,7 @@ pre-configure:
 		${LOCALBASE}/bin/libtoolize && automake --add-missing
 
 post-install:
-	@cd ${WRKSRC}/doc && ${PAX} -rw . ${DESTDIR}${PREFIX}/share/doc/openslp
+	@cd ${WRKSRC}/doc && pax -rw . ${DESTDIR}${PREFIX}/share/doc/openslp
 	@${FIND} ${DESTDIR}${PREFIX}/share/doc/openslp | ${XARGS} ${CHOWN} \
 		${SHAREOWN}:${SHAREGRP}
 	@${FIND} ${DESTDIR}${PREFIX}/share/doc/openslp -type f | ${XARGS} ${CHMOD} \

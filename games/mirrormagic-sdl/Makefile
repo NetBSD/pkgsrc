@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/03/04 06:59:05 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2008/05/26 02:13:19 joerg Exp $
 #
 
 DISTNAME=		mirrormagic-2.0.2
@@ -15,7 +15,7 @@ CONFLICTS=		mirrormagic-[1-9]*
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pax
 PLIST_SRC=		${WRKDIR}/PLIST PLIST
 
 # if you change SCORE_PATH, don't forget to change patch-aa, too
@@ -37,7 +37,7 @@ INSTALLATION_DIRS=	bin
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/mirrormagic ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/mirrormagic
-	cd ${WRKSRC} && ${PAX} -rw graphics levels music sounds \
+	cd ${WRKSRC} && pax -rw graphics levels music sounds \
 		${DESTDIR}${PREFIX}/share/mirrormagic/
 
 	${RM} -f ${WRKDIR}/PLIST

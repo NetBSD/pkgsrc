@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:31:06 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/26 02:13:26 joerg Exp $
 #
 
 DISTNAME=	ZopeBook
@@ -13,10 +13,12 @@ COMMENT=	Documentation for Zope-2.5
 
 NO_BUILD=	yes
 
+USE_TOOLS+=	pax
+
 ZBDIR=	${PREFIX}/share/doc/html/ZopeBook-2.5
 
 do-install:
 	${INSTALL_DATA_DIR} ${ZBDIR}
-	cd ${WRKSRC} && ${PAX} -rw . ${ZBDIR}
+	cd ${WRKSRC} && pax -rw . ${ZBDIR}
 
 .include "../../mk/bsd.pkg.mk"

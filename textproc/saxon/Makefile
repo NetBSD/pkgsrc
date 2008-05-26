@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/10/04 22:01:00 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2008/05/26 02:13:24 joerg Exp $
 #
 
 DISTNAME=	saxon
@@ -18,6 +18,8 @@ USE_JAVA=	run
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
+USE_TOOLS+=	pax
+
 post-extract:
 	chmod -R u+w,go-w ${WRKSRC}
 
@@ -25,9 +27,9 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/saxon.jar ${PREFIX}/lib/java
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java
-	cd ${WRKSRC} && ${PAX} -rw -s '/^doc/saxon/' doc ${PREFIX}/share/doc/java
+	cd ${WRKSRC} && pax -rw -s '/^doc/saxon/' doc ${PREFIX}/share/doc/java
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/saxon
-	cd ${WRKSRC} && ${PAX} -rw -s '/^samples/saxon/' samples ${PREFIX}/share/examples/java
+	cd ${WRKSRC} && pax -rw -s '/^samples/saxon/' samples ${PREFIX}/share/examples/java
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

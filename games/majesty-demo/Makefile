@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/03/04 06:59:05 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2008/05/26 02:13:19 joerg Exp $
 #
 
 DISTNAME=	majesty_demo
@@ -13,7 +13,7 @@ HOMEPAGE=	http://www.linuxgamepublishing.com/info.php?id=majesty
 COMMENT=	Fantasy kingdom simulation (demo)
 
 EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} | \
-			${GZCAT} | ${PAX} -O -r
+			${GZCAT} | pax -O -r
 USE_TOOLS+=	gzcat pax
 
 EMUL_PLATFORMS=		linux-i386
@@ -41,7 +41,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${MAJ_PATH}
 	${INSTALL_PROGRAM} ${WRKDIR}/bin/Linux/x86/glibc-2.1/maj_demo \
 		${DESTDIR}${MAJ_PATH}
-	cd ${WRKDIR} && ${PAX} -rw README README.licenses data majesty* \
+	cd ${WRKDIR} && pax -rw README README.licenses data majesty* \
 		quests ${DESTDIR}${MAJ_PATH}
 	${INSTALL_SCRIPT} ${WRKDIR}/${BINNAME}.sh \
 		${DESTDIR}${PREFIX}/bin/${BINNAME}

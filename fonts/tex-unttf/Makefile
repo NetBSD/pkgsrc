@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/03/03 20:17:12 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2008/05/26 02:13:18 joerg Exp $
 #
 
 DISTNAME=	fonts-unttf-20070507
@@ -18,6 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/fonts-unttf
 USE_DIRS+=	texmf-1.0
+USE_TOOLS+=	pax
 NO_CONFIGURE=	yes
 
 TEX_FONTMAPS=		unttf-pdftex-dhucs.map
@@ -34,7 +35,7 @@ do-build:
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/fonts/
-	cd ${WRKSRC}/fonts; ${PAX} -rw . ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/fonts/
+	cd ${WRKSRC}/fonts; pax -rw . ${DESTDIR}${PKG_LOCALTEXMFPREFIX}/fonts/
 	${INSTALL_DATA_DIR} ${DESTDIR}${TEXTTFDIR}/unbt
 	${LN} -sf ${SYSTTFDIR}/UnBatang.ttf ${DESTDIR}${TEXTTFDIR}/unbt/
 	${LN} -sf ${SYSTTFDIR}/UnBatangBold.ttf ${DESTDIR}${TEXTTFDIR}/unbt/

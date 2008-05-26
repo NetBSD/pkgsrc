@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2008/03/04 06:59:05 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2008/05/26 02:13:19 joerg Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
 PKGREVISION=	3
@@ -22,7 +22,7 @@ NO_BIN_ON_FTP=	no
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	gtar gunzip tail
+USE_TOOLS+=	gtar gunzip pax tail
 
 # The distfile is a self-extracting shell script.  "266" is a magic
 # number that's taken from the distfile itself.
@@ -53,7 +53,7 @@ do-install:
 		${DESTDIR}${LIBDIR}/${BINNAME}
 	${INSTALL_DATA} ${WRKSRC}/README-linux.txt ${DESTDIR}${SHAREDIR}/${BINNAME}-README
 
-	cd ${WRKSRC} && ${PAX} -rw baseq3 ${DESTDIR}${LIBDIR}
+	cd ${WRKSRC} && pax -rw baseq3 ${DESTDIR}${LIBDIR}
 
 # Some platforms, e.g. FreeBSD, need to "brand" the ELF binaries to
 # the correct type.

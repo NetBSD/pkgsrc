@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/03/04 14:44:05 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/26 02:13:20 joerg Exp $
 #
 
 DISTNAME=		hymns-1.2
@@ -14,6 +14,8 @@ COMMENT=		National anthems (MIDI) for xrmap
 
 DEPENDS+=		xrmap-base>=2.29:../../geography/xrmap-base
 
+USE_TOOLS+=	pax
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
@@ -21,6 +23,6 @@ NO_BUILD=		yes
 INSTALLATION_DIRS=	share/rmap
 
 do-install:
-	cd ${WRKSRC} && ${PAX} -rw -pe hymns ${DESTDIR}${PREFIX}/share/rmap
+	cd ${WRKSRC} && pax -rw -pe hymns ${DESTDIR}${PREFIX}/share/rmap
 
 .include "../../mk/bsd.pkg.mk"

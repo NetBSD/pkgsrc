@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/03 17:45:36 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/26 02:13:17 joerg Exp $
 #
 
 DISTNAME=		nspr-reference
@@ -15,12 +15,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		YES
 NO_BUILD=		YES
+USE_TOOLS+=	pax
 
 WRKSRC=			${WRKDIR}/nspr/reference/html
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/nspr/html
-	cd ${WRKSRC} && ${PAX}  -s,.*/CVS.*,, -rwvpe . \
+	cd ${WRKSRC} && pax  -s,.*/CVS.*,, -rwvpe . \
 		${DESTDIR}${PREFIX}/share/doc/nspr/html
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/03/21 19:24:11 jwise Exp $
+# $NetBSD: Makefile,v 1.33 2008/05/26 02:13:25 joerg Exp $
 
 DISTNAME=	ApacheJSSI-1.1.2
 PKGNAME=	jssi-1.1.2
@@ -20,7 +20,7 @@ BUILD_DIRS=	src/java
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pax
 NO_CONFIGURE=	yes
 MAKE_ENV+=	CLASSPATH=${CLASSPATH:Q}
 
@@ -32,7 +32,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/src/java/ApacheJSSI.jar ${PREFIX}/lib/java/ApacheJSSI.jar
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/jssi
 	${RM} -f ${WRKSRC}/docs/*.orig
-	cd ${WRKSRC}/docs && ${PAX} -rw -pp . ${PREFIX}/share/doc/java/jssi
+	cd ${WRKSRC}/docs && pax -rw -pp . ${PREFIX}/share/doc/java/jssi
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
