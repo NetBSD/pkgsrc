@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/03/04 18:12:59 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2008/05/26 22:25:25 tnn Exp $
 
 DISTNAME=	lapack-lite-3.1.1
 PKGNAME=	lapack-3.1.1
@@ -14,6 +14,7 @@ COMMENT=	Linear Algebra PACKage
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+NOT_FOR_BULK_PLATFORM=	Linux-*-*
 
 USE_LANGUAGES=		c fortran
 USE_LIBTOOL=		YES
