@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2008/04/12 22:43:03 jlam Exp $
+# $NetBSD: Makefile,v 1.49 2008/05/26 02:13:21 joerg Exp $
 
 # Note: Regen distinfo with PKG_DEFAULT_OPTIONS+=sun-jre-jce
 
@@ -9,6 +9,8 @@ MASTER_SITES=	# empty
 COMMENT=	Sun's Java(tm) 2 Runtime Environment 1.4.2
 
 SHORT=		JRE
+
+USE_TOOLS+=	pax
 
 WRKSRC=		${WRKDIR}/j2re1.4.2_17
 JAVA_WRAPPERS=	java keytool orbd policytool rmid rmiregistry \
@@ -95,7 +97,7 @@ do-configure:
 
 pre-install:
 .if !empty(PKG_OPTIONS:Msun-jre-jce)
-	cd ${WRKDIR}/jce ; ${PAX} -rw -pe -v . ${WRKSRC}/lib/security
+	cd ${WRKDIR}/jce ; pax -rw -pe -v . ${WRKSRC}/lib/security
 .endif
 
 .include "../../mk/bsd.pkg.mk"

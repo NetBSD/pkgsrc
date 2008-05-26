@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/03/03 17:45:36 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2008/05/26 02:13:17 joerg Exp $
 #
 
 DISTNAME=	NetBeansIDE-release351
@@ -14,6 +14,7 @@ COMMENT=	NetBeans Java IDE
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_TOOLS+=	pax
 USE_JAVA=	run
 PKG_JVMS_ACCEPTED=  sun-jdk13 sun-jdk14 jdk14 sun-jdk15 jdk15 sun-jdk6 jdk6
 NO_CONFIGURE=	yes
@@ -32,12 +33,12 @@ pre-install:
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
 	${INSTALL_DATA_DIR} ${DESTDIR}${SHAREDIR}
-	cd ${WRKSRC}/docs && ${PAX} -rwpm . ${DESTDIR}${DOCDIR}
+	cd ${WRKSRC}/docs && pax -rwpm . ${DESTDIR}${DOCDIR}
 	for f in CHANGES.html CREDITS.html README.html netbeans.css; \
 	do \
 		${INSTALL_DATA} ${WRKSRC}/$${f} ${DESTDIR}${DOCDIR}; \
 	done
-	cd ${WRKSRC} && ${PAX} -rwpm beans bin lib modules system \
+	cd ${WRKSRC} && pax -rwpm beans bin lib modules system \
 	    tomcat406 update_tracking ${DESTDIR}${SHAREDIR}
 	${LN} -sf ${SHAREDIR}/bin/runide.sh ${DESTDIR}${PREFIX}/bin/netbeans
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/03/03 17:45:34 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2008/05/26 02:13:17 joerg Exp $
 #
 # NOTE: if you are depending on ant from another package, please be aware that
 # the ant team has CHANGED the version numbering scheme.  A previous version
@@ -25,6 +25,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_JAVA=	run
+USE_TOOLS+=	pax
 
 EXTRACT_OPTS_ZIP=	-Caq
 INSTALLATION_DIRS=	bin
@@ -42,7 +43,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/lib/ant.jar ${DESTDIR}${PREFIX}/lib/java/ant
 	${INSTALL_DATA} ${WRKSRC}/lib/optional.jar ${DESTDIR}${PREFIX}/lib/java/ant
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/java/ant
-	cd ${WRKSRC}/docs && ${PAX} -rw -pmp * ${DESTDIR}${PREFIX}/share/doc/java/ant
+	cd ${WRKSRC}/docs && pax -rw -pmp * ${DESTDIR}${PREFIX}/share/doc/java/ant
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/java/ant
 	${INSTALL_DATA} ${WRKSRC}/WHATSNEW ${DESTDIR}${PREFIX}/share/doc/java/ant
 

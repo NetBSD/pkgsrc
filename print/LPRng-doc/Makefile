@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/09/04 08:47:17 martti Exp $
+# $NetBSD: Makefile,v 1.16 2008/05/26 02:13:23 joerg Exp $
 
 DISTNAME=	LPRng_DOC-3.6.13
 PKGNAME=	LPRng-doc-3.6.13
@@ -14,11 +14,13 @@ EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
+USE_TOOLS+=	pax
+
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/LPRng
 	cd ${WRKDIR:Q} && \
-	    ${PAX} -O -zrf ${DISTDIR:Q}/${DISTNAME:Q}${EXTRACT_SUFX:Q}
+	    pax -O -zrf ${DISTDIR:Q}/${DISTNAME:Q}${EXTRACT_SUFX:Q}
 	cd ${WRKSRC:Q} && \
-	    ${PAX} -rw *.dvi *.gif *.html *.ps *.txt ${PREFIX:Q}/share/doc/LPRng
+	    pax -rw *.dvi *.gif *.html *.ps *.txt ${PREFIX:Q}/share/doc/LPRng
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2008/05/25 21:23:26 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2008/05/26 02:13:18 joerg Exp $
 #
 
 DISTNAME=	gxemul-0.4.6.1
@@ -12,6 +12,8 @@ COMMENT=	Machine emulator
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_TOOLS+=	pax
+
 USE_LANGUAGES=	c
 HAS_CONFIGURE=	yes
 BUILD_TARGET=	build
@@ -24,7 +26,7 @@ do-install:
 .for f in README HISTORY TODO RELEASE.html LICENSE
 	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 .endfor
-	cd ${WRKSRC}/doc && ${PAX} -rwppm . ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
+	cd ${WRKSRC}/doc && pax -rwppm . ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gxemul
 PKG_SUPPORTED_OPTIONS=	x11

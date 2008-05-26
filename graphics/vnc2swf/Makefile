@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/02/15 13:33:20 obache Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/26 02:13:20 joerg Exp $
 #
 
 DISTNAME=		vnc2swf-0.5.0
@@ -22,6 +22,8 @@ DEPENDS+=		xwininfo-[0-9]*:../../x11/xwininfo
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 
+USE_TOOLS+=	pax
+
 INSTALLATION_DIRS=	bin lib/X11/app-defaults share/doc/html/vnc2swf
 
 SUBST_CLASSES+=		x11base
@@ -41,7 +43,7 @@ SUBST_SED.toolpath=	-e "s|VNC2SWF=vnc2swf|VNC2SWF=${PREFIX}/bin/vnc2swf|" \
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/Vnc2Swf.ad ${DESTDIR}${PREFIX}/lib/X11/app-defaults/Vnc2Swf
 	cd ${WRKSRC}/docs && \
-	${PAX} -rw -pp -pm . ${DESTDIR}${PREFIX}/share/doc/html/vnc2swf
+	pax -rw -pp -pm . ${DESTDIR}${PREFIX}/share/doc/html/vnc2swf
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"

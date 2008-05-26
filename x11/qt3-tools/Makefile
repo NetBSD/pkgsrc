@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2008/01/18 05:10:07 tnn Exp $
+# $NetBSD: Makefile,v 1.56 2008/05/26 02:13:26 joerg Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -26,6 +26,8 @@ BUILD_TARGET=		sub-tools
 INSTALLATION_DIRS=	${QTPREFIX}/bin ${QTPREFIX}/lib			\
 			${QTPREFIX}/plugins/designer ${QTPREFIX}/mkspecs
 
+USE_TOOLS+=		pax
+
 do-install:
 	for bin in assistant designer linguist lrelease lupdate qm2ts	\
 	    qmake qtconfig uic; do					\
@@ -42,7 +44,7 @@ do-install:
 		    ${WRKSRC}/plugins/designer/$$plugin			\
 		    ${DESTDIR}${QTPREFIX}/plugins/designer;		\
 	done
-	cd ${WRKSRC}/mkspecs && ${PAX} -rw . ${DESTDIR}${QTPREFIX}/mkspecs
+	cd ${WRKSRC}/mkspecs && pax -rw . ${DESTDIR}${QTPREFIX}/mkspecs
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"

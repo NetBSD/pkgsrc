@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/01/21 15:07:10 xtraeme Exp $
+# $NetBSD: Makefile,v 1.25 2008/05/26 02:13:25 joerg Exp $
 
 .include "Makefile.common"
 
@@ -14,7 +14,7 @@ CONFLICTS=	apache-{,*ssl}-[0-9]* apache6-[0-9]*
 BUILD_DEFS+=	IPV6_READY
 BUILD_DEFS+=	VARBASE
 
-USE_TOOLS+=		perl perl:run pkg-config
+USE_TOOLS+=		pax perl perl:run pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-layout=NetBSD

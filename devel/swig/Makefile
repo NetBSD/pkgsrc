@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/07/10 19:51:22 heinz Exp $
+# $NetBSD: Makefile,v 1.24 2008/05/26 02:13:18 joerg Exp $
 
 DISTNAME=	swig-1.3.31
 PKGREVISION=	1
@@ -16,7 +16,7 @@ CONFLICTS=		swig-build-[0-9]*
 CONFIGURE_ARGS+=	--with-swiglibdir=${PREFIX}/share/swig/1.3
 BUILD_TARGET=		swig
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pax
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		YES
@@ -30,7 +30,7 @@ post-install:
 	${INSTALL_DATA} SWIGDocumentation.html SWIGDocumentation.pdf	\
 		*.png ${DESTDIR:Q}${PREFIX:Q}/share/doc/swig
 	cd ${WRKSRC:Q}/Examples &&					\
-	${PAX} -wr							\
+	pax -wr								\
 		-s ',.*CVS.*,,'						\
 		-s ',.*Makefile\.in$$,,'				\
 		-s ',^test-suite.*,,'					\

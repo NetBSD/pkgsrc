@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/09 17:52:57 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/26 02:13:16 joerg Exp $
 #
 
 DISTNAME=		mopac7
@@ -20,7 +20,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/mopac7
 BUILD_TARGET=		MOPAC7
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pax
 USE_LANGUAGES=		fortran
 PKG_FC=			f2c-f77
 
@@ -34,9 +34,9 @@ pre-build:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/mopac ${DESTDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/MOPAC7 ${DESTDIR}${PREFIX}/bin
-	cd ${WRKSRC} && ${PAX} -wr test_* \
+	cd ${WRKSRC} && pax -wr test_* \
 	  ${DESTDIR}${PREFIX}/share/mopac7/sample
-	cd ${WRKDIR} && ${PAX} -wr mopac7-man ${DESTDIR}${PREFIX}/share/mopac7
+	cd ${WRKDIR} && pax -wr mopac7-man ${DESTDIR}${PREFIX}/share/mopac7
 
 # "g77" can not be used for external function
 

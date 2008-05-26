@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/03/10 12:34:10 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/26 02:13:23 joerg Exp $
 
 DISTNAME=		ghostscript-${GS_VERS}
 PKGREVISION=		11
@@ -23,7 +23,7 @@ CONFLICTS+=		hpijs-[0-9]*
 
 WRKSRC=			${WRKDIR}/gs${GS_VERS}
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake lex
+USE_TOOLS+=		gmake lex pax
 GNU_CONFIGURE=		yes
 
 REQD_DIRS+=		share/ghostscript
@@ -188,7 +188,7 @@ GS_CONF_PREREQ=		# empty
 
 .PHONY: contrib-drivers
 contrib-drivers:
-	cd ${WRKSRC}/src; ${PAX} -rf ${WRKDIR}/${HPDJ_DRV}/hpdj.tar
+	cd ${WRKSRC}/src; pax -rf ${WRKDIR}/${HPDJ_DRV}/hpdj.tar
 	${MV} ${WRKSRC}/src/gs-hpdj.1 ${WRKSRC}/man
 	cd ${WRKDIR}; ${CP} gdevdmpr.c gdevdmpr.mak		${WRKSRC}/src
 	cd ${WRKDIR}; ${CP} dviprlib.*				${WRKSRC}/src

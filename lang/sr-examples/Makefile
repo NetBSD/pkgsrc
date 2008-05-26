@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/04 16:38:13 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2008/05/26 02:13:21 joerg Exp $
 #
 
 DISTNAME=		vs233
@@ -14,6 +14,8 @@ COMMENT=		The SR language compiler and run time system
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_TOOLS+=	pax
+
 WRKSRC=			${WRKDIR}
 NO_EXTRACT=		yes
 NO_CONFIGURE=		yes
@@ -26,7 +28,7 @@ DOMOD=
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/share/examples/sr
 	cd ${DESTDIR}${PREFIX:Q}/share/examples/sr &&			\
-	${PAX} -zr ${DOMOD} -f ${DISTDIR:Q}/${DISTFILES:Q}		\
+	pax -zr ${DOMOD} -f ${DISTDIR:Q}/${DISTFILES:Q}		\
 		-s ,vsuite/examples,.,					\
 		vsuite/examples
 

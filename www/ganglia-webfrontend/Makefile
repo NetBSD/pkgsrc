@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/06/02 18:28:00 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/26 02:13:25 joerg Exp $
 #
 
 DISTNAME=	ganglia-3.0.1
@@ -15,6 +15,8 @@ COMMENT=	PHP based frontend for the Ganglia Cluster Monitor
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.1:../../www/ap-php
 DEPENDS+=	ganglia-monitor-core>=3.0.1:../../parallel/ganglia-monitor-core
 
+USE_TOOLS+=	pax
+
 NO_BUILD=	YES
 WRKSRC=		${WRKDIR}/${DISTNAME}/web/
 
@@ -29,7 +31,7 @@ do-configure:
 
 do-install:
 	${INSTALL_DATA_DIR} ${DOCROOT}
-	cd ${WRKSRC} && ${PAX} -rw . ${DOCROOT}/
+	cd ${WRKSRC} && pax -rw . ${DOCROOT}/
 
 .include "../../mk/apachever.mk"
 .include "../../lang/php/phpversion.mk"

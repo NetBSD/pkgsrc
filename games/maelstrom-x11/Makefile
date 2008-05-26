@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/01/19 09:16:21 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2008/05/26 02:13:19 joerg Exp $
 
 DISTNAME=		Maelstrom-1.4.3-L2.0.6-src.tar.gz
 PKGNAME=		maelstrom-x11-2.0.6
@@ -23,6 +23,7 @@ EXTRACT_ONLY=		${DISTNAME}
 
 WRKSRC=			${WRKDIR}/Maelstrom
 USE_LANGUAGES=		c c++
+USE_TOOLS+=		pax
 USE_X11BASE=		YES
 MAKE_ENV+=		BINOWN=${BINOWN:Q} BINGRP=${BINGRP:Q} XPMDIR=${BUILDLINK_PREFIX.libXpm}
 MAKE_ENV+=		GAMEOWN=${GAMEOWN} GAMEGRP=${GAMEGRP}
@@ -35,9 +36,9 @@ CONF_FILES_PERMS+=	${PREFIX}/share/maelstrom/Maelstrom-Scores \
 
 post-install:
 	cd ${PREFIX}/share/maelstrom && \
-		${PAX} -O -pm -zrf ${DISTDIR}/${ESOUND} && \
-		${PAX} -O -pm -zrf ${DISTDIR}/${STREK} && \
-		${PAX} -O -pm -zrf ${DISTDIR}/${SWARS}
+		pax -O -pm -zrf ${DISTDIR}/${ESOUND} && \
+		pax -O -pm -zrf ${DISTDIR}/${STREK} && \
+		pax -O -pm -zrf ${DISTDIR}/${SWARS}
 	${CHOWN} ${GAMEOWN}:${GAMEGRP} ${PREFIX}/bin/Maelstrom
 	${CHMOD} ${GAMEMODE} ${PREFIX}/bin/Maelstrom
 	${INSTALL_DATA} ${WRKSRC}/README.* ${PREFIX}/share/maelstrom

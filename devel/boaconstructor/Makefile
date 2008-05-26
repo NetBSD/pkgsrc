@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/04/25 20:39:08 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2008/05/26 02:13:17 joerg Exp $
 #
 
 VERSION=		0.4.4
@@ -26,12 +26,14 @@ INSTALLATION_DIRS=	bin
 
 DEPENDS+=	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 
+USE_TOOLS+=	pax
+
 do-build:
 	${SED} ${SEDSUBST} <${FILESDIR}/Boa.sh >${WRKDIR}/Boa
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${BOADIR}
-	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${BOADIR}
+	cd ${WRKSRC} && pax -rw . ${DESTDIR}${BOADIR}
 	${CHMOD} -R go-w ${DESTDIR}${BOADIR}
 	${INSTALL_SCRIPT} ${WRKDIR}/Boa ${DESTDIR}${PREFIX}/bin
 

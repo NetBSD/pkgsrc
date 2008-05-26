@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2008/05/11 00:00:59 tonnerre Exp $
+# $NetBSD: Makefile,v 1.98 2008/05/26 02:13:22 joerg Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P1/pl1/}
@@ -18,6 +18,7 @@ BUILD_DEFS+=	IPV6_READY
 
 BUILD_DEFS+=	BIND_DIR VARBASE
 
+USE_TOOLS+=	pax
 USE_LIBTOOL=	yes
 
 GNU_CONFIGURE=	yes
@@ -60,7 +61,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bind9/misc
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bind9/rfc
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/bind9
-	set -e; cd ${WRKSRC}/doc && ${PAX} -rwppm			\
+	set -e; cd ${WRKSRC}/doc && pax -rwppm			\
 	  -s ',.*xsl.*,,' -s ',Makefile.*,,' -s ',.*\.pl,,'		\
 	  . ${PREFIX}/share/doc/bind9
 	${CHMOD} -R g-w ${PREFIX}/share/doc/bind9

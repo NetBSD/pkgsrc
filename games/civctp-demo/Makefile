@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/03/04 06:59:03 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2008/05/26 02:13:19 joerg Exp $
 
 DISTNAME=	civctp-demo-10251999
 PKGNAME=	civctp-demo-19991025
@@ -17,6 +17,8 @@ EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	x11
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=	pax
 
 WRKSRC=		${WRKDIR}/${WRKNAME}
 BUILD_DIRS=	# empty
@@ -53,7 +55,7 @@ do-install:
 		${DESTDIR}${LIBDIR}/${BINNAME}
 	${INSTALL_DATA} ${WRKSRC}/README \
 		${DESTDIR}${SHAREDIR}/${BINNAME}-README
-	cd ${WRKSRC} && ${PAX} -rw appstr.txt civpaths.txt ctp_data \
+	cd ${WRKSRC} && pax -rw appstr.txt civpaths.txt ctp_data \
 		${DESTDIR}${LIBDIR}
 
 .include "../../mk/bsd.pkg.mk"

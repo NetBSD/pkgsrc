@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/03/21 06:00:49 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2008/05/26 02:13:24 joerg Exp $
 #
 
 DISTNAME=	docbook-website-2.6.0
@@ -14,6 +14,7 @@ DEPENDS+=	docbook-simple-[0-9]*:../../textproc/docbook-simple
 DEPENDS+=	docbook-xsl>=1.58:../../textproc/docbook-xsl
 
 USE_LANGUAGES=	# empty
+USE_TOOLS+=	pax
 NO_BUILD=	YES
 NO_CONFIGURE=	YES
 
@@ -29,11 +30,11 @@ do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${DTDDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
-	cd ${WRKSRC} && ${PAX} -rwpm ChangeLog README VERSION \
+	cd ${WRKSRC} && pax -rwpm ChangeLog README VERSION \
 		RELEASE-NOTES.html RELEASE-NOTES.txt RELEASE-NOTES.xml \
 		TODO ${DOCDIR}
-	cd ${WRKSRC}/example && ${PAX} -rwpm . ${EGDIR}
-	cd ${WRKSRC} && ${PAX} -rwpm VERSION extensions schema xsl \
+	cd ${WRKSRC}/example && pax -rwpm . ${EGDIR}
+	cd ${WRKSRC} && pax -rwpm VERSION extensions schema xsl \
 		${DTDDIR}
 	${INSTALL_DATA} ${WRKSRC}/catalog.xml ${WRKSRC}/catalog ${DTDDIR}
 

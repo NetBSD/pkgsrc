@@ -1,4 +1,4 @@
-#	$NetBSD: cross.mk,v 1.38 2006/07/27 18:48:02 jlam Exp $
+#	$NetBSD: cross.mk,v 1.39 2008/05/26 02:13:16 joerg Exp $
 
 # Shared definitions for building a cross-compile environment.
 
@@ -157,7 +157,7 @@ PLIST_PRE+=		${COMMON_DIR}/PLIST-egcs
 CROSS_DISTFILES+=	${EGCS_DISTNAME}.tar.gz ${EGCS_PATCHBUNDLE}
 SITES.${EGCS_DISTNAME}.tar.gz=		# no known-good site; fall back to distfiles mirrors
 SITES.${EGCS_PATCHBUNDLE}=		${MASTER_SITE_LOCAL}
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pax
 
 CC_FOR_TARGET=		${EGCS_WRKSRC}/gcc/xgcc -B${EGCS_WRKSRC}/gcc/ ${CFLAGS_FOR_TARGET}
 CXX_FOR_TARGET=		${CC_FOR_TARGET}
@@ -273,13 +273,13 @@ EXTRACT_ONLY=		${DISTFILES:N*.diff.gz}
 .if defined(CROSS_SYS_INCLUDE) && !defined(EGCS_FAKE_RUNTIME)
 pre-install: pre-install-includes
 pre-install-includes:
-	cd ${CROSS_SYS_INCLUDE} && ${PAX} -rw . ${TARGET_DIR}/include
+	cd ${CROSS_SYS_INCLUDE} && pax -rw . ${TARGET_DIR}/include
 .endif
 
 .if defined(SYS_LIB)
 pre-install: pre-install-lib
 pre-install-lib:
-	cd ${SYS_LIB} && ${PAX} -rw . ${TARGET_DIR}/lib
+	cd ${SYS_LIB} && pax -rw . ${TARGET_DIR}/lib
 .endif
 
 post-install: post-install-plist

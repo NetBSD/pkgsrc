@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/04/07 17:27:31 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/26 02:13:18 joerg Exp $
 
 DISTNAME=		jave_6.0_M7
 PKGNAME=		jave-6.0m7
@@ -14,6 +14,7 @@ COMMENT=		Java ASCII Versatile Editor
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_TOOLS+=	pax
 USE_JAVA=		run
 PKG_JVMS_ACCEPTED=	sun-jdk14 sun-jdk15
 
@@ -32,7 +33,7 @@ do-build:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKDIR:Q}/jave ${DESTDIR}${PREFIX}/bin
-	(cd ${WRKDIR:Q}/.workdir && ${PAX} -rw * ${DESTDIR}${PREFIX}/share/jave)
+	(cd ${WRKDIR:Q}/.workdir && pax -rw * ${DESTDIR}${PREFIX}/share/jave)
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

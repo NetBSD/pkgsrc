@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/04/30 10:20:20 cube Exp $
+# $NetBSD: Makefile,v 1.8 2008/05/26 02:13:17 joerg Exp $
 #
 
 DISTNAME=	RTFM-2.0.4
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.bestpractical.com/rtfm/
 COMMENT=	Enterprise-grade knowledge management tool
 
 DEPENDS+=	rt>=3.4.5:../../devel/rt3
+
+USE_TOOLS+=	pax
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -28,15 +30,15 @@ do-install:
 	@${ECHO} "=> Libraries"
 	${INSTALL_DATA_DIR} ${DESTDIR}${RT_LIB_DIR}
 	cd ${WRKSRC}/lib/RT && ${FIND} . -type f ! -name '*.orig' 2>/dev/null |		\
-		${PAX} -rw ${DESTDIR}${RT_LIB_DIR}/RT
+		pax -rw ${DESTDIR}${RT_LIB_DIR}/RT
 	@${ECHO} "=> HTML Documents"
 	${INSTALL_DATA_DIR} ${DESTDIR}${RT_HTML_DIR}
 	cd ${WRKSRC}/html && ${FIND} . -type f ! -name '*.orig' 2>/dev/null |		\
-		${PAX} -rw ${DESTDIR}${RT_HTML_DIR}
+		pax -rw ${DESTDIR}${RT_HTML_DIR}
 	@${ECHO} "=> Locales"
 	${INSTALL_DATA_DIR} ${DESTDIR}${RT_I18N_DIR}
 	cd ${WRKSRC}/po && ${FIND} . -type f ! -name '*.orig' 2>/dev/null |		\
-		${PAX} -rw ${DESTDIR}${RT_I18N_DIR}
+		pax -rw ${DESTDIR}${RT_I18N_DIR}
 	@${ECHO} "=> Database Schemas"
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/RTFM
 	for file in acl.Oracle acl.Pg acl.mysql schema.Oracle schema.Pg schema.mysql;	\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/03/03 02:19:52 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2008/05/26 02:13:16 joerg Exp $
 #
 
 DISTNAME=	pircbot-0.9.11
@@ -16,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_JAVA=	run
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
+USE_TOOLS+=	pax
 
 post-extract:
 	${FIND} ${WRKSRC} -type d -print | ${XARGS} ${CHMOD} 755
@@ -26,7 +27,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/pircbot.jar ${DESTDIR}${PREFIX}/lib/java
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/java/pircbot
 	cd ${WRKSRC}/javadocs && \
-	    ${PAX} -rw -pp -pm . ${DESTDIR}${PREFIX}/share/doc/java/pircbot
+	    pax -rw -pp -pm . ${DESTDIR}${PREFIX}/share/doc/java/pircbot
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

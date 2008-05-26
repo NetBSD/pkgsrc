@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/03/02 06:10:31 jlam Exp $
+# $NetBSD: Makefile,v 1.22 2008/05/26 02:13:15 joerg Exp $
 
 DISTNAME=	voice_abc_di-2.0
 PKGNAME=	festvox-abc-2.0
@@ -16,6 +16,8 @@ DEPENDS+=	festogi-spanish>=2.0:../../audio/festogi-spanish
 
 LICENSE=	no-commercial-use
 
+USE_TOOLS+=	pax
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/festival
@@ -31,6 +33,6 @@ post-extract:
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${FHOME}
-	cd ${WRKSRC} && ${PAX} -rw * ${DESTDIR}${FHOME}
+	cd ${WRKSRC} && pax -rw * ${DESTDIR}${FHOME}
 
 .include "../../mk/bsd.pkg.mk"

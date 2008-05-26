@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/03/04 06:59:03 jlam Exp $
+# $NetBSD: Makefile,v 1.33 2008/05/26 02:13:19 joerg Exp $
 #
 
 DISTNAME=		angband-283
@@ -16,6 +16,8 @@ COMMENT=		Tolkien based variant of Moria for tty/console displays
 CONFLICTS=		angband-x11-[0-9]*
 
 PKG_DESTDIR_SUPPORT=	destdir
+
+USE_TOOLS+=	pax
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src
 EXTRACT_ONLY=		${DISTNAME}${EXTRACT_SUFX}
@@ -35,10 +37,10 @@ INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/angband
-	cd ${WRKDIR}/${DISTNAME}/lib && ${PAX} -wr * \
+	cd ${WRKDIR}/${DISTNAME}/lib && pax -wr * \
 		${DESTDIR}${PREFIX}/share/angband
 	cd ${DESTDIR}${PREFIX}/share/angband/help && \
-		${PAX} -O -zrf ${DISTDIR}/${SPOILERFILE}
+		pax -O -zrf ${DISTDIR}/${SPOILERFILE}
 	${CHOWN} -R ${GAMEOWN}:${GAMEGRP} ${DESTDIR}${PREFIX}/share/angband
 	cd ${DESTDIR}${PREFIX}/share/angband && \
 		${CHMOD} ${GAMEDATAMODE} */*

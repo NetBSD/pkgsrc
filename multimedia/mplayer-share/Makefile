@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/12/15 15:14:26 heinz Exp $
+# $NetBSD: Makefile,v 1.15 2008/05/26 02:13:22 joerg Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -8,6 +8,8 @@ PKGNAME=	mplayer-share-${MPLAYER_PKG_VERSION}
 COMMENT=	Documentation used by mplayer and gmplayer
 
 DEPENDS+=	mplayer-fonts-[0-9]*:../../fonts/mplayer-fonts
+
+USE_TOOLS+=	pax
 
 NO_BUILD=	YES
 NO_CONFIGURE=	YES
@@ -19,7 +21,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/etc/codecs.conf ${DESTDIR}${PREFIX}/share/mplayer
 	${INSTALL_DATA} ${WRKSRC}/etc/input.conf ${DESTDIR}${PREFIX}/share/mplayer
 	(cd ${WRKSRC}/DOCS && \
-		${PAX} -rwpppm * ${DESTDIR}${PREFIX}/share/mplayer/DOCS); \
+		pax -rwpppm * ${DESTDIR}${PREFIX}/share/mplayer/DOCS); \
 	${FIND} ${DESTDIR}${PREFIX}/share/mplayer/DOCS -type d -print | \
 		${XARGS} ${CHMOD} ${PKGDIRMODE}
 	${FIND} ${DESTDIR}${PREFIX}/share/mplayer/DOCS -type f -print | \

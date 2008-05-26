@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/02/05 23:11:43 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/26 02:13:26 joerg Exp $
 #
 
 DISTNAME=	wallpaper-2.0
@@ -29,11 +29,13 @@ SUBST_STAGE.lib=	post-patch
 SUBST_FILES.lib=	findrox.py
 SUBST_SED.lib=		-e 's,/usr/local/lib,${PREFIX}/share/rox,g'
 
+USE_TOOLS+=	pax
+
 post-patch:
 	@${FIND} ${WRKSRC} -name 'CVS' -print | ${XARGS} ${RM} -rf
 
 do-install:
-	cd ${WRKSRC} && ${PAX} -rw . ${PREFIX}/share/rox/Wallpaper
+	cd ${WRKSRC} && pax -rw . ${PREFIX}/share/rox/Wallpaper
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

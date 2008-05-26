@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2008/02/05 22:34:47 heinz Exp $
+# $NetBSD: Makefile.common,v 1.14 2008/05/26 02:13:22 joerg Exp $
 #
 
 BOOST_PACKAGE?=		undefined
@@ -30,6 +30,7 @@ CONFLICTS+=		boost<1.34.0
 DISTINFO_FILE=		${.CURDIR}/../../meta-pkgs/boost/distinfo
 PATCHDIR=		${.CURDIR}/../../meta-pkgs/boost/patches
 
+USE_TOOLS+=		pax
 USE_LANGUAGES=		c c++
 GCC_REQD+=		3.2 # if using gcc; ignored otherwise
 
@@ -55,6 +56,6 @@ do-configure:
 .endif
 
 boost-install-libs:
-	cd ${WRKSRC}/stage/lib && ${PAX} -rw -p p libboost* ${DESTDIR}${PREFIX}/lib
+	cd ${WRKSRC}/stage/lib && pax -rw -p p libboost* ${DESTDIR}${PREFIX}/lib
 
 .endif # ${BOOST_PACKAGE} == "meta-pkg"

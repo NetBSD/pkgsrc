@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/04/12 22:43:00 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2008/05/26 02:13:17 joerg Exp $
 
 DISTNAME=		nspr-4.6.7
 PKGREVISION=		1
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/${DISTNAME}/mozilla/nsprpub
 CONFIGURE_DIRS=		build
 
-USE_TOOLS+=		autoconf213 gmake
+USE_TOOLS+=		autoconf213 gmake pax
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
 
@@ -73,8 +73,8 @@ pre-configure:
 	cd ${WRKSRC} && autoconf
 
 do-install:
-	(cd ${WRKSRC}/build/dist/include && ${PAX} -Lrwpe . ${DESTDIR}${PREFIX}/include/ )
-	(cd ${WRKSRC}/build/dist/lib && ${PAX} -Lrwpe . ${DESTDIR}${PREFIX}/lib/nspr/ )
+	(cd ${WRKSRC}/build/dist/include && pax -Lrwpe . ${DESTDIR}${PREFIX}/include/ )
+	(cd ${WRKSRC}/build/dist/lib && pax -Lrwpe . ${DESTDIR}${PREFIX}/lib/nspr/ )
 	${INSTALL_SCRIPT} ${WRKSRC}/build/config/nspr-config ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/pkgconfig
 	set -e; \

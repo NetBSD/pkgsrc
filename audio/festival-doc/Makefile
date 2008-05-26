@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/03/02 06:10:31 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2008/05/26 02:13:15 joerg Exp $
 
 DISTNAME=	festdoc-1.4.0.1
 PKGNAME=	festival-doc-1.4.0.1
@@ -13,6 +13,8 @@ COMMENT=	Festival documentation, in (tex)info, html, dvi and ps formats
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
+
+USE_TOOLS+=	pax
 
 DOC=		${PREFIX}/share/doc/festival
 
@@ -30,13 +32,13 @@ post-extract:
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOC}
 	cd ${WRKSRC};							\
-	${PAX} -rw speechtools ${DESTDIR}${DOC};			\
+	pax -rw speechtools ${DESTDIR}${DOC};			\
 	cd festival;							\
 	for f in info/*.info info/*.info-[0-9]*; do			\
 		${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/${PKGINFODIR};\
 	done;								\
-	${PAX} -rw user-manual ${DESTDIR}${DOC};			\
-	${PAX} -rw src-manual ${DESTDIR}${DOC};				\
+	pax -rw user-manual ${DESTDIR}${DOC};			\
+	pax -rw src-manual ${DESTDIR}${DOC};				\
 	for f in festival.* refcard.*; do				\
 		${INSTALL_DATA} $${f} ${DESTDIR}${DOC};			\
 	done

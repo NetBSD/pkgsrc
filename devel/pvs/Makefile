@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/03/03 17:45:36 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2008/05/26 02:13:18 joerg Exp $
 #
 
 DISTNAME=		pvs-${VERSION}
@@ -27,6 +27,8 @@ COMMENT=		The PVS Specification and Verification System
 
 DEPENDS+=		tk>=8.0:../../x11/tk
 
+USE_TOOLS+=	pax
+
 EMUL_PLATFORMS+=	linux-i386 solaris-sparc
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -50,7 +52,7 @@ do-build:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pvs ${DESTDIR}${PREFIX}/bin/pvs
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/pvs
-	cd ${WRKSRC} && ${PAX} -s ,^./[.].*,, -rw . ${DESTDIR}${PREFIX}/pvs
+	cd ${WRKSRC} && pax -s ,^./[.].*,, -rw . ${DESTDIR}${PREFIX}/pvs
 	${CHMOD} 755 ${DESTDIR}${PREFIX}/pvs/pvs
 
 .include "../../mk/tex.buildlink3.mk"

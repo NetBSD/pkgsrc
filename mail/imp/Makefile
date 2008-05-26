@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2008/03/04 17:57:18 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2008/05/26 02:13:22 joerg Exp $
 
 DISTNAME=	imp-h3-${IMPVER}
 PKGNAME=	imp-${IMPVER}
@@ -15,6 +15,8 @@ CONFLICTS+=	imp-3.*
 DEPENDS+=	horde>=3.0.2:../../www/horde
 DEPENDS+=	${PHP_PKG_PREFIX}-imap>4.3.3:../../mail/php-imap
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Mail-[0-9]*:../../mail/pear-Mail
+
+USE_TOOLS+=	pax
 
 PKG_DESTDIR_SUPPORT=	destdir
 
@@ -91,7 +93,7 @@ do-install:
 .	endfor
 
 .	for d in ${PAXDIRS}
-		cd ${WRKSRC}/${d} && ${PAX} -rwpam . ${DESTDIR}${IMPDIR}/${d}
+		cd ${WRKSRC}/${d} && pax -rwpam . ${DESTDIR}${IMPDIR}/${d}
 .	endfor
 
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${DESTDIR}${IMPDIR}/config

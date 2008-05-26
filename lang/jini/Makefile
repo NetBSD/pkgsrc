@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/03/04 16:38:12 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2008/05/26 02:13:21 joerg Exp $
 #
 
 DISTNAME=		jini-${SUN_VERSION}-src
@@ -24,6 +24,8 @@ NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
+
+USE_TOOLS+=	pax
 
 PKG_DESTDIR_SUPPORT=	destdir
 
@@ -51,7 +53,7 @@ FETCH_MESSAGE+=	${DOWNLOAD:Q}
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/jini
 	${CHOWN} -hR ${BINOWN}:${BINGRP} ${WRKSRC}
-	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/jini
+	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/jini
 
 cleandir: clean
 	${RM} -fr ${JINI_HOME}

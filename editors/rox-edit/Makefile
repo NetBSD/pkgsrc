@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/03 18:25:53 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/26 02:13:18 joerg Exp $
 #
 
 DISTNAME=	edit-2.0
@@ -13,6 +13,8 @@ HOMEPAGE=	http://rox.sourceforge.net/desktop/node/20
 COMMENT=	Simple text editor for ROX
 
 DEPENDS+=	rox-lib>=2.0.2nb2:../../devel/rox-lib
+
+USE_TOOLS+=	pax
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -36,7 +38,7 @@ post-patch:
 	@${RM} -f ${WRKSRC}/.cvsignore
 
 do-install:
-	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/share/rox/Edit
+	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/share/rox/Edit
 
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"

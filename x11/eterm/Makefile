@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2008/04/03 22:42:33 tonnerre Exp $
+# $NetBSD: Makefile,v 1.53 2008/05/26 02:13:26 joerg Exp $
 
 DISTNAME=	Eterm-0.9.4
 PKGNAME=	${DISTNAME:S/^E/e/}
@@ -21,7 +21,7 @@ ETERM_SRCS=		${DISTNAME}${EXTRACT_SUFX}
 PIXMAP_FILES=		Eterm-bg-scale-1.tar.gz Eterm-bg-scale-2.tar.gz \
 			Eterm-bg-tile.tar.gz
 
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		perl:run pax
 USE_LIBTOOL=		YES
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
@@ -49,7 +49,7 @@ post-extract:
 	set -e; \
 	cd ${WRKDIR} && \
 	for f in ${PIXMAP_FILES}; do \
-		${PAX} -O -zrf ${DISTDIR}/"$$f"; \
+		pax -O -zrf ${DISTDIR}/"$$f"; \
 	done
 
 .include "../../devel/libast/buildlink3.mk"

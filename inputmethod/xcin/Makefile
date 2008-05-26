@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/02/15 14:38:33 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2008/05/26 02:13:20 joerg Exp $
 #
 
 DISTNAME=	xcin-2.5.3.pre2
@@ -15,7 +15,7 @@ WRKSRC=			${WRKDIR}/xcin
 USE_PKGLOCALEDIR=	yes
 USE_X11BASE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		msgfmt perl:run
+USE_TOOLS+=		msgfmt pax perl:run
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
@@ -41,7 +41,7 @@ post-extract:
 	${CP} ${FILESDIR}/xcinrc.DRAGONFLY ${WRKSRC}/etc
 
 post-install:
-	cd ${WRKSRC}/doc && ${PAX} -rw	\
+	cd ${WRKSRC}/doc && pax -rw	\
 		-s ',^\./man$$,,' -s ',^\./man/.*,,'	\
 		. ${PREFIX}/share/doc/xcin
 

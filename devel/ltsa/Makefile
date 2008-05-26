@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/03/03 17:45:36 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2008/05/26 02:13:17 joerg Exp $
 #
 
 DISTNAME=	ltsa2.2
@@ -17,6 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=		YES
 USE_JAVA2=		YES
+USE_TOOLS+=		pax
 
 INSTALLATION_DIRS=	bin
 
@@ -30,12 +31,12 @@ do-build:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/ltsa.sh ${DESTDIR}${PREFIX}/bin/ltsa
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/ltsa
-	cd ${WRKSRC}/lib && ${PAX} -rwpppm . ${DESTDIR}${PREFIX}/lib/ltsa
+	cd ${WRKSRC}/lib && pax -rwpppm . ${DESTDIR}${PREFIX}/lib/ltsa
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/ltsa
 	${INSTALL_DATA} ${WRKSRC}/fspv2.pdf ${DESTDIR}${PREFIX}/share/doc/ltsa
 	${INSTALL_DATA} ${WRKSRC}/readme.txt ${DESTDIR}${PREFIX}/share/doc/ltsa
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/ltsa
-	cd ${WRKSRC}/examples && ${PAX} -rwpppm . ${DESTDIR}${PREFIX}/share/examples/ltsa
+	cd ${WRKSRC}/examples && pax -rwpppm . ${DESTDIR}${PREFIX}/share/examples/ltsa
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

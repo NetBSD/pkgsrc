@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/09/09 02:41:58 obache Exp $
+# $NetBSD: Makefile,v 1.15 2008/05/26 02:13:18 joerg Exp $
 
 DISTNAME=	tet3.7-unsup.src
 PKGNAME=	tet3-3.7
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	-t inet
 BUILD_DIRS=		src
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	pax perl:run
 REPLACE_PERL=	contrib/suite/src/common.pl contrib/NTperldemo/ts/tc1.pl
 REPLACE_PERL+=	contrib/NTperldemo/ts/tc2.pl contrib/NTperldemo/ts/tc3.pl
 REPLACE_PERL+=	contrib/tetreport/TetJournal.pl contrib/tetreport/TetReports.pl
@@ -28,9 +28,9 @@ MAKE_FILE=	makefile
 post-install:
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/tet3
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/tet3/bin
-	cd ${WRKSRC}/bin && ${PAX} -rwpe . ${PREFIX}/tet3/bin
+	cd ${WRKSRC}/bin && pax -rwpe . ${PREFIX}/tet3/bin
 	${INSTALL_PROGRAM_DIR} ${PREFIX}/tet3/lib
-	cd ${WRKSRC}/lib && ${PAX} -rwpe . ${PREFIX}/tet3/lib
+	cd ${WRKSRC}/lib && pax -rwpe . ${PREFIX}/tet3/lib
 
 PTHREAD_OPTS+=	native	# only native threads make sense
 .include "../../mk/pthread.buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2008/04/12 22:43:08 jlam Exp $
+# $NetBSD: Makefile,v 1.55 2008/05/26 02:13:22 joerg Exp $
 #
 
 DISTNAME=	ntp-4.2.0
@@ -16,7 +16,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 CONFLICTS+=	openntpd-[0-9]*
 
 GNU_CONFIGURE=	YES
-USE_TOOLS+=	perl
+USE_TOOLS+=	pax perl
 
 CONFIGURE_ENV+=	PATH_PERL=${PERL5:Q} ac_cv_header_sys_soundcard_h=no
 
@@ -29,8 +29,8 @@ ALL_NTP_DOCS=	${DOCDIR} ${EXAMPLESDIR}
 RCD_SCRIPTS=	ntpd ntpdate
 
 post-install:
-	cd ${WRKSRC}/html && ${PAX} -rw . ${DOCDIR}
-	cd ${WRKSRC}/conf && ${PAX} -rw . ${EXAMPLESDIR}
+	cd ${WRKSRC}/html && pax -rw . ${DOCDIR}
+	cd ${WRKSRC}/conf && pax -rw . ${EXAMPLESDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${ALL_NTP_DOCS}
 	${FIND} ${ALL_NTP_DOCS} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	${FIND} ${ALL_NTP_DOCS} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}

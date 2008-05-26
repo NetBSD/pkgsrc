@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/05/25 20:57:27 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/05/26 02:13:18 joerg Exp $
 #
 
 DISTNAME=		wide
@@ -35,9 +35,9 @@ do-configure:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/wide ${DESTDIR}${PREFIX}/bin/wide
-	cd ${WRKSRC} && ${PAX} -rw Study etc help images *.ini *.xml version.txt \
+	cd ${WRKSRC} && pax -rw Study etc help images *.ini *.xml version.txt \
 				${DESTDIR}${PREFIX}/share/wide/
-	cd ${WRKSRC} && ${PAX} -rw lib ${DESTDIR}${PREFIX}/libexec/wide/
+	cd ${WRKSRC} && pax -rw lib ${DESTDIR}${PREFIX}/libexec/wide/
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

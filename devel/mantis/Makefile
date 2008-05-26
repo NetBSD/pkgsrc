@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2008/05/14 21:43:06 adrianp Exp $
+# $NetBSD: Makefile,v 1.31 2008/05/26 02:13:17 joerg Exp $
 
 DISTNAME=	mantis-1.1.1
 CATEGORIES=	devel www
@@ -14,6 +14,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.0.6:../../databases/php-mysql
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	YES
+
+USE_TOOLS+=	pax
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -63,7 +65,7 @@ do-install:
 .	endfor
 
 	cd ${WRKSRC} && ${FIND} . -name .cvsignore -print | ${XARGS} ${RM}
-	cd ${WRKSRC} && ${PAX} -rwpppm . ${DESTDIR}${MANTIS_HOME}
+	cd ${WRKSRC} && pax -rwpppm . ${DESTDIR}${MANTIS_HOME}
 
 	cd ${DESTDIR}${MANTIS_HOME} && \
 		${FIND} . -type f | ${XARGS} ${CHMOD} ${SHAREMODE}

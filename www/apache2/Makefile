@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.122 2008/04/12 22:43:13 jlam Exp $
+# $NetBSD: Makefile,v 1.123 2008/05/26 02:13:25 joerg Exp $
 
 .include "Makefile.common"
 
@@ -13,7 +13,7 @@ CONFLICTS=	apache-*ssl-[0-9]* apache6-[0-9]*
 BUILD_DEFS+=	IPV6_READY
 BUILD_DEFS+=	VARBASE
 
-USE_TOOLS+=		perl perl:run pkg-config
+USE_TOOLS+=		pax perl perl:run pkg-config
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-layout=NetBSD
@@ -216,7 +216,7 @@ post-install:
 	done
 
 	${INSTALL_DATA_DIR} ${PREFIX}/share/httpd/manual
-	cd ${WRKSRC}/docs/manual && ${PAX} -rw . ${PREFIX}/share/httpd/manual
+	cd ${WRKSRC}/docs/manual && pax -rw . ${PREFIX}/share/httpd/manual
 
 	${INSTALL_SCRIPT} ${WRKDIR}/mkcert ${PREFIX}/sbin
 

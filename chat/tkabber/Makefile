@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/08 18:57:38 reed Exp $
+# $NetBSD: Makefile,v 1.2 2008/05/26 02:13:16 joerg Exp $
 #
 
 # TODO: gnupg support, ssl support, others
@@ -15,7 +15,7 @@ DEPENDS+=	tcllib-[0-9]*:../../devel/tcllib
 DEPENDS+=	bwidget>=1.8.0:../../x11/bwidget
 
 NO_BUILD=	yes
-USE_TOOLS+=	wish:run
+USE_TOOLS+=	pax wish:run
 
 EGDIR=		${PREFIX}/share/examples/tkabber
 DATADIR=	${PREFIX}/share/tkabber
@@ -39,9 +39,9 @@ EXTRA_FILES=	AUTHORS README COPYING INSTALL ChangeLog
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.tcl ${DATADIR} #${WRKSRC}/*.xrdb ${DATADIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${EXTRA_FILES} ${DOCDIR}
-	cd ${WRKSRC}/examples && ${PAX} -rw -pm . ${EGDIR}
+	cd ${WRKSRC}/examples && pax -rw -pm . ${EGDIR}
 .for i in ${SUBDIRS}
-	cd ${WRKSRC} && ${PAX} -rw -pm ${i} ${DATADIR}
+	cd ${WRKSRC} && pax -rw -pm ${i} ${DATADIR}
 .endfor
 	# TODO This must be a CLASS
 	${SED} -e "s,@WISH@,${WISH}," \

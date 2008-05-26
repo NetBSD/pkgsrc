@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/03/17 08:45:03 obache Exp $
+# $NetBSD: Makefile,v 1.9 2008/05/26 02:13:21 joerg Exp $
 #
 
 DISTNAME=	spl-1.0pre3
@@ -11,7 +11,7 @@ HOMEPAGE=	http://www.clifford.at/spl/
 COMMENT=	The SPL Programming Language
 
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	bash gmake gawk
+USE_TOOLS+=	bash gmake gawk pax
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	pre-patch
@@ -34,7 +34,7 @@ post-install:
 	${CHMOD} a+rwx ${PREFIX}/libexec/cgi-bin/webspl_cache
 	${LN} -s ${PREFIX}/lib/spl_modules ${PREFIX}/libexec/cgi-bin/spl_modules
 	${INSTALL_DATA_DIR} ${DOCDIR}
-	cd ${WRKSRC} && ${PAX} -rw -p am README* manual.tex spldoc webspl_demo webspltut qtdemo ${DOCDIR}
+	cd ${WRKSRC} && pax -rw -p am README* manual.tex spldoc webspl_demo webspltut qtdemo ${DOCDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}
 	cd ${WRKSRC}/examples && ${INSTALL_DATA} example* ${EGDIR}
 

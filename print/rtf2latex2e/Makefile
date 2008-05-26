@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/02/03 02:49:19 reed Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/26 02:13:23 joerg Exp $
 #
 
 # fix install so it uses ${prefix}
@@ -20,6 +20,8 @@ CONFIGURE_DIRS=	Unix
 GNU_CONFIGURE=	yes
 MAKE_ENV+=	INSTALL_DIR=${PREFIX}/share/rtf2latex2e
 
+USE_TOOLS+=	pax
+
 INSTALLATION_DIRS+=	bin share/doc/rtf2latex2e share/rtf2latex2e
 
 do-install:
@@ -27,7 +29,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/rtf2latex2e/
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/rtf2latex2e/
 	${INSTALL_DATA} ${WRKSRC}/doc/rtf2LaTeX2eDoc.html ${PREFIX}/share/doc/rtf2latex2e/
-	cd ${WRKSRC} && ${PAX} -rw pref ${PREFIX}/share/rtf2latex2e
+	cd ${WRKSRC} && pax -rw pref ${PREFIX}/share/rtf2latex2e
 
 # install other docs and examples too?
 

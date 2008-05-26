@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/05/06 20:27:50 adrianp Exp $
+# $NetBSD: Makefile,v 1.13 2008/05/26 02:13:24 joerg Exp $
 
 DISTNAME=	kronolith-h3-${KRONOLITHVER}
 PKGNAME=	kronolith-${KRONOLITHVER}
@@ -13,6 +13,8 @@ COMMENT=	Horde calendar application
 DEPENDS+=	horde>=3.0.0:../../www/horde
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-pear-Date-[0-9]*:../../time/pear-Date
+
+USE_TOOLS+=	pax
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -80,7 +82,7 @@ do-install:
 .	endfor
 
 .	for d in ${PAXDIRS}
-		cd ${WRKSRC}/${d} && ${PAX} -rwpma . ${KRONOLITHDIR}/${d}
+		cd ${WRKSRC}/${d} && pax -rwpma . ${KRONOLITHDIR}/${d}
 .	endfor
 
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${KRONOLITHDIR}/config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2008/03/21 01:12:15 obache Exp $
+# $NetBSD: Makefile,v 1.31 2008/05/26 02:13:17 joerg Exp $
 
 DISTNAME=		nss-3.11.5
 CATEGORIES=		security
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DIRS=		mozilla/security/nss
 
-USE_TOOLS+=		awk gmake perl
+USE_TOOLS+=		awk gmake pax perl
 DIST=			${WRKSRC}/mozilla/dist
 BUILD_TARGET=		nss_build_all
 MAKE_ENV+=		LD_LIBS="-L${BUILDLINK_PREFIX.nspr}/lib/nspr ${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.nspr}/lib/nspr ${COMPILER_RPATH_FLAG}${LOCALBASE}/lib/nss"
@@ -44,9 +44,9 @@ pre-configure:
 		${WRKSRC}/mozilla/security/coreconf/
 
 do-install:
-	(cd ${DIST}/public && ${PAX} -Lrwpe . ${DESTDIR}${PREFIX}/include/nss/ )
+	(cd ${DIST}/public && pax -Lrwpe . ${DESTDIR}${PREFIX}/include/nss/ )
 	(cd ${DIST}/*_OPT.OBJ/lib && \
-		${PAX} -Lrwpe *.${SO_SUFFIX} ${DESTDIR}${PREFIX}/lib/nss/ )
+		pax -Lrwpe *.${SO_SUFFIX} ${DESTDIR}${PREFIX}/lib/nss/ )
 	set -e; \
 	{ ${ECHO} "Name: NSS"; \
 	  ${ECHO} "Description: Mozilla Network Security Services"; \

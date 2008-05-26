@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2008/03/12 09:50:28 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2008/05/26 02:13:16 joerg Exp $
 #
 
 DISTNAME=	boolean_6_92
@@ -19,7 +19,7 @@ WRKSRC=		${WRKDIR}/boolean
 EXTRACT_OPTS_ZIP=	-aqo
 
 GCC_REQD+=	3.0
-USE_TOOLS+=	gmake pkg-config tar
+USE_TOOLS+=	gmake pax pkg-config tar
 USE_LANGUAGES=	c c++
 USE_CMAKE=	yes
 
@@ -36,9 +36,9 @@ CMAKE_ARGS+=		-DWXWIDGET_GTK2=YES
 do-install:
 	${INSTALL_DATA_DIR}  ${DESTDIR}${PREFIX}/share/boolean
 	cd ${WRKSRC}/apps/edit						\
-		&& ${PAX} -rw default gdsuser ${DESTDIR}${PREFIX}/share/boolean
+		&& pax -rw default gdsuser ${DESTDIR}${PREFIX}/share/boolean
 	cd ${WRKSRC}/docs						\
-		&& ${PAX} -rw html ${DESTDIR}${PREFIX}/share/boolean
+		&& pax -rw html ${DESTDIR}${PREFIX}/share/boolean
 	${CHOWN} -R ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/share/boolean
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/boolean  ${DESTDIR}${PREFIX}/bin/boolean
 	${INSTALL_PROGRAM} ${WRKSRC}/apps/edit/edit  ${DESTDIR}${PREFIX}/bin/edit

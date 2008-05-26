@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/05/11 16:27:16 taca Exp $
+# $NetBSD: Makefile,v 1.19 2008/05/26 02:13:26 joerg Exp $
 # FreeBSD Id: ports/www/zope29/Makefile,v 1.86 2006/08/03 15:53:04 garga Exp
 
 DISTNAME=	Zope-${ZOPE29_VERSION}-final
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.zope.org/
 COMMENT=	Zope ${ZOPE29_VERSION}, the Z Object Publishing Environment
 
 DEPENDS+=	${PYPKGPREFIX}-expat>=0:../../textproc/py-expat
+
+USE_TOOLS+=	pax
 
 PYTHON_VERSIONS_ACCEPTED=	24
 ZOPE_VERSION=			29
@@ -54,8 +56,8 @@ pre-install:
 	${FIND} ${WRKSRC} -name '*.orig' -print0 | ${XARGS} -0 -- ${RM}
 
 post-install:
-	cd ${WRKSRC}/doc/ZEO; ${PAX} -rw *.txt ${ZOPE_DOC_DIR}/zeo
-	cd ${WRKSRC}/doc; ${PAX} -rw *.txt ${ZOPE_DOC_DIR}/zope
+	cd ${WRKSRC}/doc/ZEO; pax -rw *.txt ${ZOPE_DOC_DIR}/zeo
+	cd ${WRKSRC}/doc; pax -rw *.txt ${ZOPE_DOC_DIR}/zope
 	${FIND} ${ZOPE_DIR} ${ZOPE_DOC_DIR} -type f -print0 \
 		| ${XARGS} -0 -- ${CHMOD} a-w+r
 	${FIND} ${ZOPE_DIR} -type f -name '*.pyc' -print0 | \

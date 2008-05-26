@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/04/07 02:41:13 minskim Exp $
+# $NetBSD: Makefile,v 1.8 2008/05/26 02:13:23 joerg Exp $
 #
 
 DISTNAME=	chemarrow
@@ -16,6 +16,8 @@ NO_CONFIGURE=	yes
 NO_BUILD=	yes
 USE_DIRS+=	texmf-1.0
 
+USE_TOOLS+=	pax
+
 .include "../../print/teTeX/module.mk"
 
 post-extract:
@@ -32,7 +34,7 @@ do-install:
 		${PKG_LOCALTEXMFPREFIX}/fonts/tfm/chemarrow
 	${INSTALL_DATA} ${WRKSRC}/chemarrow.sty			\
 		${PKG_LOCALTEXMFPREFIX}/tex/latex/chemarrow
-	cd ${WRKSRC}/type1/arrow\ PC && ${PAX} -rw . 		\
+	cd ${WRKSRC}/type1/arrow\ PC && pax -rw . 		\
 		${PREFIX}/share/fonts/chemarrow/
 
 .include "../../mk/bsd.pkg.mk"

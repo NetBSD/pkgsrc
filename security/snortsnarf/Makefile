@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/04/22 09:22:14 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2008/05/26 02:13:23 joerg Exp $
 #
 
 DISTNAME=	SnortSnarf-050314.1
@@ -14,7 +14,7 @@ DEPENDS+=	p5-Time>=101.062101:../../time/p5-Time
 
 NO_BUILD=	YES
 
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	pax perl:run
 REPLACE_PERL=	snortsnarf.pl include/ann_xml.pl include/web_utils.pl	\
 		include/xml_help.pl
 
@@ -29,7 +29,7 @@ INSTALLATION_DIRS=	bin
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/snortsnarf.pl ${PREFIX}/bin/snortsnarf.pl
 	${INSTALL_DATA_DIR} ${PREFIX}/share/snortsnarf
-	cd ${WRKSRC}/include && ${PAX} -rw -pm * ${PREFIX}/share/snortsnarf
+	cd ${WRKSRC}/include && pax -rw -pm * ${PREFIX}/share/snortsnarf
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/snortsnarf
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/snortsnarf
 	${INSTALL_DATA} ${WRKSRC}/Usage ${PREFIX}/share/doc/snortsnarf

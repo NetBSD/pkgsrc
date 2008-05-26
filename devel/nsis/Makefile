@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/03/03 17:45:36 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/26 02:13:17 joerg Exp $
 #
 
 DISTNAME=	nsis-${NSIS_VER}
@@ -14,6 +14,8 @@ HOMEPAGE=	http://nsis.sourceforge.net/Main_Page
 COMMENT=	Scriptable system to build Windows installers
 
 DEPENDS+=	scons>=0.96.91:../../devel/scons-devel
+
+USE_TOOLS+=	pax
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -49,7 +51,7 @@ do-install:
 		${DESTDIR}${MAKENSIS_BIN:Q}
 	${INSTALL_SCRIPT} ${WRKSRC:Q}/makensis.sh			\
 		${DESTDIR}${PREFIX:Q}/bin/makensis
-	cd ${WRKDIR:Q}/${DISTNAME:Q} && ${PAX} -rw .			\
+	cd ${WRKDIR:Q}/${DISTNAME:Q} && pax -rw .			\
 		${DESTDIR}${PREFIX:Q}/share/nsis
 
 .include "../../mk/bsd.pkg.mk"

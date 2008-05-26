@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/06/12 19:13:38 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2008/05/26 02:13:24 joerg Exp $
 
 DISTNAME=	db2latex-xsl-0.8pre1
 PKGNAME=	${DISTNAME:S/xsl-//}
@@ -15,6 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
+USE_TOOLS+=	pax
 
 DOCDIR=		${PREFIX}/share/doc/db2latex
 XSLDIR=		${PREFIX}/share/xsl/db2latex
@@ -33,9 +34,9 @@ pre-install:
 do-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA_DIR} ${XSLDIR}
-	cd ${WRKSRC}/doc && ${PAX} -rwpm . ${DOCDIR}
-	cd ${WRKSRC} && ${PAX} -rwpm AUTHOR COPYING COPYRIGHT README \
+	cd ${WRKSRC}/doc && pax -rwpm . ${DOCDIR}
+	cd ${WRKSRC} && pax -rwpm AUTHOR COPYING COPYRIGHT README \
 		TODO VERSION ${DOCDIR}
-	cd ${WRKSRC}/xsl && ${PAX} -rwpm . ${XSLDIR}
+	cd ${WRKSRC}/xsl && pax -rwpm . ${XSLDIR}
 
 .include "../../mk/bsd.pkg.mk"

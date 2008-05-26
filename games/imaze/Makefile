@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/01/19 09:16:21 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2008/05/26 02:13:19 joerg Exp $
 
 DISTNAME=		imaze1.3
 PKGNAME=		imaze-1.3
@@ -15,11 +15,12 @@ EXTRACT_ONLY=		imaze1.3.tar.Z
 
 WRKSRC=			${WRKDIR}/imaze
 USE_X11BASE=		yes
+USE_TOOLS+=		pax
 
 INSTALLATION_DIRS=	bin lib/X11/app-defaults ${PKGMANDIR}/man6
 
 post-build:
-	cd ${WRKSRC} && ${PAX} -O -rf ${DISTDIR}/imaze-sounds.tar
+	cd ${WRKSRC} && pax -O -rf ${DISTDIR}/imaze-sounds.tar
 
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

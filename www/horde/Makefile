@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2008/03/08 17:36:53 adrianp Exp $
+# $NetBSD: Makefile,v 1.54 2008/05/26 02:13:25 joerg Exp $
 
 DISTNAME=	horde-3.1.7
 CATEGORIES=	www
@@ -27,6 +27,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-domxml>=4.3.3:../../textproc/php4-domxml
 DEPENDS+=	${PHP_PKG_PREFIX}-dom-[0-9]*:../../textproc/php5-dom
 .endif
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=4.3.3:../../archivers/php-zlib
+
+USE_TOOLS+=	pax
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -127,7 +129,7 @@ do-install:
 .	endfor
 
 .	for d in ${PAXDIRS}
-		cd ${WRKSRC}/${d} && ${PAX} -rwpam . ${HORDEDIR}/${d}
+		cd ${WRKSRC}/${d} && pax -rwpam . ${HORDEDIR}/${d}
 .	endfor
 
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${HORDEDIR}/config

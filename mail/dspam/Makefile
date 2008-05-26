@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2007/07/04 20:54:42 jlam Exp $
+# $NetBSD: Makefile,v 1.58 2008/05/26 02:13:21 joerg Exp $
 
 DISTNAME=	dspam-3.8.0
 CATEGORIES=	mail
@@ -11,7 +11,7 @@ COMMENT=	Extremely scalable, statistical-hybrid anti-spam filter
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
-USE_TOOLS+=		perl:run pkg-config
+USE_TOOLS+=		pax perl:run pkg-config
 REPLACE_PERL=		src/tools/dspam_train.in
 REPLACE_PERL+=		src/tools/dspam_logrotate
 REPLACE_PERL+=		webui/cgi-bin/*.cgi webui/cgi-bin/configure.pl.in
@@ -130,7 +130,7 @@ post-install:
 
 .for d in txt webui/cgi-bin webui/htdocs
 	${INSTALL_DATA_DIR} ${DATADIR}/${d}
-	cd ${WRKSRC}/${d} && ${PAX} -rwppm '-s|.*/Makefile.*$$||'	\
+	cd ${WRKSRC}/${d} && pax -rwppm '-s|.*/Makefile.*$$||'	\
 		'-s|./admins.*$$||' '-s|./default.prefs.*$$||'		\
 		'-s|./configure.pl.*$$||' . ${DATADIR}/${d}
 .endfor
@@ -139,14 +139,14 @@ post-install:
 .  if !empty(DSPAM_STORAGE_DRIVER:M${drv})
 	${INSTALL_DATA_DIR} ${DATADIR}/${drv}
 	cd ${WRKSRC}/src/tools.${drv}_drv && \
-		${PAX} -rwppm ./*.sql ${DATADIR}/${drv}
+		pax -rwppm ./*.sql ${DATADIR}/${drv}
 .  endif
 .endfor
 
 .if !empty(DSPAM_STORAGE_DRIVER:Msqlite*)
 	${INSTALL_DATA_DIR} ${DATADIR}/sqlite
 	 cd ${WRKSRC}/src/tools.sqlite_drv && \
-	 	${PAX} -rwppm '-s|.*/Makefile.*$$||' . ${DATADIR}/sqlite
+	 	pax -rwppm '-s|.*/Makefile.*$$||' . ${DATADIR}/sqlite
 .endif
 
 	${CHMOD} ${SHAREMODE} ${DATADIR}/webui/cgi-bin/*.txt

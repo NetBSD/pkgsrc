@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/06/16 14:15:15 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/26 02:13:23 joerg Exp $
 #
 
 DISTNAME=		gridsimtoolkit-3.0
@@ -13,6 +13,7 @@ MAINTAINER=		jschauma@NetBSD.org
 HOMEPAGE=		http://www.gridbus.org/gridsim/
 COMMENT=		Toolkit for simulation of parallel systems
 
+USE_TOOLS+=	pax
 USE_JAVA2=		1.4
 PKG_JVMS_ACCEPTED=	sun-jdk14 jdk14
 NO_BUILD=		yes
@@ -22,18 +23,18 @@ do-configure:
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/GridSim
-	cd ${WRKSRC} && ${PAX} -rw application jars source ${PREFIX}/GridSim/
+	cd ${WRKSRC} && pax -rw application jars source ${PREFIX}/GridSim/
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/GridSim
-	cd ${WRKSRC}/doc && ${PAX} -rw . ${PREFIX}/share/doc/html/GridSim
+	cd ${WRKSRC}/doc && pax -rw . ${PREFIX}/share/doc/html/GridSim
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/GridSim
 .for f in bugfix changelog faq readme
 	${INSTALL_DATA} ${WRKSRC}/${f}.txt ${PREFIX}/share/doc/GridSim/
 .endfor
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/GridSim
-	cd ${WRKSRC}/examples && ${PAX} -rw . ${PREFIX}/share/examples/GridSim
-	cd ${WRKSRC}-patch2/doc && ${PAX} -rw . ${PREFIX}/share/doc/html/GridSim
-	cd ${WRKSRC}-patch2/jars && ${PAX} -rw . ${PREFIX}/GridSim/jars/
-	cd ${WRKSRC}-patch2/source && ${PAX} -rw . ${PREFIX}/GridSim/source/
+	cd ${WRKSRC}/examples && pax -rw . ${PREFIX}/share/examples/GridSim
+	cd ${WRKSRC}-patch2/doc && pax -rw . ${PREFIX}/share/doc/html/GridSim
+	cd ${WRKSRC}-patch2/jars && pax -rw . ${PREFIX}/GridSim/jars/
+	cd ${WRKSRC}-patch2/source && pax -rw . ${PREFIX}/GridSim/source/
 	${INSTALL_DATA} ${WRKSRC}-patch2/readme_v3.0-patch2.txt ${PREFIX}/share/doc/GridSim/
 
 .include "../../mk/java-vm.mk"

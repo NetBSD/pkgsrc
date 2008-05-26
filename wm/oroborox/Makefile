@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/01/13 17:51:06 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2008/05/26 02:13:25 joerg Exp $
 #
 
 DISTNAME=	OroboROX-0.9.8
@@ -19,7 +19,7 @@ DIST_SUBDIR=	rox
 
 PLATFORM=	${OPSYS}-${MACHINE_ARCH}
 
-USE_TOOLS+=		autoconf pkg-config
+USE_TOOLS+=		autoconf pax pkg-config
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-xft --with-platform=${PLATFORM:Q}
 
@@ -73,7 +73,7 @@ post-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC:Q}/${PLATFORM:Q}/OroboROX ${PREFIX:Q}/libexec/rox
-	cd ${WRKSRC:Q} && ${PAX} -rw	\
+	cd ${WRKSRC:Q} && pax -rw	\
 		-s ',^\./${PLATFORM}$$,,' -s ',^\./${PLATFORM}/.*,,'	\
 		-s ',^\./src$$,,' -s ',^\./src/.*,,'	\
 		. ${PREFIX:Q}/share/rox/OroboROX

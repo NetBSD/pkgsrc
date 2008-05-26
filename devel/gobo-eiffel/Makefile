@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/03/11 20:10:19 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2008/05/26 02:13:17 joerg Exp $
 #
 
 DISTNAME=	gobo15
@@ -15,6 +15,7 @@ COMMENT=	Portable Eiffel structure libraries and tools
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	SmartEiffel-[0-9]*:../../lang/SmartEiffel
+USE_TOOLS+=	pax
 
 EXTRACT_OPTS_ZIP=	-uLa
 
@@ -55,11 +56,11 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/gelex/a.out ${DESTDIR}${PREFIX}/bin/gelex
 	${INSTALL_PROGRAM} ${WRKSRC}/src/gepp/a.out ${DESTDIR}${PREFIX}/bin/gepp
 	${INSTALL_PROGRAM} ${WRKSRC}/src/geyacc/a.out ${DESTDIR}${PREFIX}/bin/geyacc
-	cd ${WRKSRC}; ${PAX} -rw library ${DESTDIR}${GOBO}
+	cd ${WRKSRC}; pax -rw library ${DESTDIR}${GOBO}
 	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${GOBO}
-	cd ${WRKSRC}/doc; ${PAX} -rw * ${DESTDIR}${PREFIX}/share/doc/gobo-eiffel
+	cd ${WRKSRC}/doc; pax -rw * ${DESTDIR}${PREFIX}/share/doc/gobo-eiffel
 	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/doc/gobo-eiffel
-	cd ${WRKSRC}/example; ${PAX} -rw * ${DESTDIR}${PREFIX}/share/examples/gobo-eiffel
+	cd ${WRKSRC}/example; pax -rw * ${DESTDIR}${PREFIX}/share/examples/gobo-eiffel
 	${CHOWN} ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/share/examples/gobo-eiffel
 
 .include "../../mk/bsd.pkg.mk"

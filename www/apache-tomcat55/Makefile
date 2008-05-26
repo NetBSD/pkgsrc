@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/05/25 21:42:22 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2008/05/26 02:13:25 joerg Exp $
 
 DISTNAME=	apache-tomcat-${TOMCAT_VERSION}
 CATEGORIES=	www java
@@ -14,6 +14,8 @@ TOMCAT_VERSION=	5.5.26
 USE_JAVA=	run
 # This needs java 1.5 or higher.
 USE_JAVA2=	1.5
+
+USE_TOOLS+=	pax
 
 TOMCAT_LIB=	${PREFIX}/tomcat
 CATALINA_DIR=	Catalina/localhost
@@ -68,7 +70,7 @@ do-install:
 .endfor
 	${INSTALL_DATA_DIR} ${TOMCAT_LIB}
 	${RM} -rf ${WRKSRC}/temp/*
-	@cd ${WRKSRC} && ${PAX} -rw -pm . ${TOMCAT_LIB}
+	@cd ${WRKSRC} && pax -rw -pm . ${TOMCAT_LIB}
 
 	${FIND} ${TOMCAT_LIB} -type f -name \*.bat -print | ${XARGS} ${RM} -f
 	${FIND} ${TOMCAT_LIB} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}

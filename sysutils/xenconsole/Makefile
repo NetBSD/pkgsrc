@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/07/09 22:36:28 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/26 02:13:24 joerg Exp $
 
 DISTNAME=	xenConsole-r0.15b1-1
 PKGNAME=	xenconsole-0.15b1.1
@@ -23,7 +23,7 @@ DEPENDS+=	p5-Sys-CpuLoad>=0.03:../../sysutils/p5-Sys-CpuLoad
 DEPENDS+=	p5-Term-Size>=0.2:../../devel/p5-Term-Size
 DEPENDS+=	p5-Time-HiRes>=0:../../time/p5-Time-HiRes
 
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	pax perl:run
 
 SUBST_CLASSES+=			xenconsole
 SUBST_STAGE.xenconsole=		pre-configure
@@ -43,7 +43,7 @@ do-build:
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/xenconsole
-	(cd ${WRKSRC:Q} && ${PAX} -rw *.pm */*.pm ${PREFIX:Q}/share/xenconsole)
+	(cd ${WRKSRC:Q} && pax -rw *.pm */*.pm ${PREFIX:Q}/share/xenconsole)
 	${INSTALL_SCRIPT} ${WRKSRC:Q}/xcon.pl ${PREFIX:Q}/share/xenconsole/xcon
 
 	# Configuration file
@@ -52,7 +52,7 @@ do-install:
 
 	# Documentation
 	${INSTALL_DATA_DIR} ${PREFIX:Q}/share/doc/xenconsole
-	(cd ${WRKSRC:Q} && ${PAX} -rw *.txt ${PREFIX:Q}/share/doc/xenconsole)
+	(cd ${WRKSRC:Q} && pax -rw *.txt ${PREFIX:Q}/share/doc/xenconsole)
 
 	# Launcher script
 	${INSTALL_SCRIPT} ${WRKDIR:Q}/xcon ${PREFIX:Q}/bin/xcon
