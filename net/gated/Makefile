@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/11/11 23:57:39 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2008/05/26 02:13:22 joerg Exp $
 
 DISTNAME=	gated-3-5-11
 PKGNAME=	gated-3.5.11
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.gated.org/
 COMMENT=	Routing protocol daemon
 
 NOT_FOR_PLATFORM=	Interix-*-* # no userland routing table support
+
+USE_TOOLS+=	pax
 
 LICENSE=		gated-license
 RESTRICTED=		Required license from Merit
@@ -42,7 +44,7 @@ do-configure:
 
 post-install:
 	${CHMOD} -w ${PREFIX}/bin/gdc ${PREFIX}/bin/ospf_monitor
-	cd ${WRKSRC}/doc && ${PAX} -rw . ${PREFIX}/share/doc/gated
+	cd ${WRKSRC}/doc && pax -rw . ${PREFIX}/share/doc/gated
 	${CHOWN} -R ${SHAREOWN} ${PREFIX}/share/doc/gated
 	${CHGRP} -R ${SHAREGRP} ${PREFIX}/share/doc/gated
 	${FIND} ${PREFIX}/share/doc/gated -type f -print | \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2008/01/19 09:16:25 wiz Exp $
+# $NetBSD: Makefile,v 1.54 2008/05/26 02:13:23 joerg Exp $
 
 DISTNAME=		mpich-1.2.6
 PKGREVISION=		6
@@ -20,7 +20,7 @@ DEPENDS+=		{openssh-[0-9]*,ssh{,6}-1.2.27*}:../../security/openssh
 BUILD_TARGET=		ALL examples
 INSTALL_TARGET=		install-all
 USE_LANGUAGES=		c c++ fortran
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		pax perl:run
 HAS_CONFIGURE=		yes
 USE_FORTRAN=		yes
 PKG_SYSCONFSUBDIR=	mpi-ch
@@ -114,7 +114,7 @@ post-patch:
 	${RM} -f ${WRKSRC}/man/man1/MPI.1.orig
 
 post-install:
-	cd ${WRKDIR}/docs && ${PAX} -rw . ${PREFIX}/share/doc/mpi-ch/html
+	cd ${WRKDIR}/docs && pax -rw . ${PREFIX}/share/doc/mpi-ch/html
 	@${RM} ${PREFIX}/${PKGMANDIR}/mandesc
 	@${MV} ${PREFIX}/sbin/mpiuninstall ${PREFIX}/sbin/mpiuninstall.not
 	@${CHMOD} 444 ${PREFIX}/sbin/mpiuninstall.not

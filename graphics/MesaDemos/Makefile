@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/08/13 11:18:32 seb Exp $
+# $NetBSD: Makefile,v 1.32 2008/05/26 02:13:20 joerg Exp $
 
 PKGNAME=	MesaDemos-${MESA_VERSION}
 COMMENT=	OpenGL examples and Demos
@@ -12,7 +12,7 @@ COMMENT=	OpenGL examples and Demos
 PATCHDIR=	${.CURDIR}/patches
 DISTINFO_FILE=	${.CURDIR}/distinfo
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pax
 MAKE_FLAGS+=	LIB_DEP=""
 
 .include "../../graphics/Mesa/buildlink3.mk"
@@ -22,7 +22,7 @@ pre-build:
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/${PKGNAME_NOREV}/${dir}
-	cd ${WRKSRC}/progs && ${PAX}		\
+	cd ${WRKSRC}/progs && pax		\
 		-s ',^./.*Makefile.*,,'	\
 		-s ',^./CVS.*,,'		\
 		-s ',^./.*\.o$$,,'		\

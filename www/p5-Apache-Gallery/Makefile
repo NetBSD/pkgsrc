@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/02/15 14:07:44 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2008/05/26 02:13:25 joerg Exp $
 #
 
 DISTNAME=	Apache-Gallery-0.9.1
@@ -57,6 +57,8 @@ SUBST_SED.paths+=	-e 's,@AG@,${AG},g'
 SUBST_SED.paths+=	-e 's,@AG_SHAREDIR@,${AG_SHAREDIR},g'
 SUBST_STAGE.paths=	post-patch
 
+USE_TOOLS+=	pax
+
 post-extract:
 	${CP} ${FILESDIR}/ag.conf ${WRKSRC}
 
@@ -89,7 +91,7 @@ post-install:
 	for i in htdocs templates; \
 	do \
 	    ${INSTALL_DATA_DIR} ${AG_SHAREDIR}/$$i; \
-	    cd ${WRKSRC}/$$i && ${PAX} -rw . ${AG_SHAREDIR}/$$i; \
+	    cd ${WRKSRC}/$$i && pax -rw . ${AG_SHAREDIR}/$$i; \
 	done; \
 	${INSTALL_DATA_DIR} ${AG_DOCDIR}; \
 	for i in Changes INSTALL LICENSE README UPGRADE; \
