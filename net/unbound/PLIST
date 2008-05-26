@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/26 22:36:56 joerg Exp $
+include/unbound.h
+lib/libunbound.la
+man/man1/unbound-host.1
+man/man3/libunbound.3
+man/man5/unbound.conf.5
+man/man8/unbound-checkconf.8
+man/man8/unbound.8
+sbin/unbound
+sbin/unbound-checkconf
+sbin/unbound-host
+share/examples/rc.d/unbound
+share/examples/unbound/unbound.conf
+@dirrm share/examples/unbound

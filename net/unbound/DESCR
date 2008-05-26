@@ -1,0 +1,5 @@
+Unbound is an implementation of a DNS resolver.  It provides a library
+similiar to libresolv that can be used for synchronous and asynchronous
+DNS look ups.  It also provides a caching-only (recursive) DNS server.
+
+Unbound has full support for IPv6 and DNSSEC validation.

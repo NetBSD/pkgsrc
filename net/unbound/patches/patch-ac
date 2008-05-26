@@ -1,0 +1,40 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/05/26 22:36:56 joerg Exp $
+
+--- Makefile.in.orig	2008-05-14 09:34:02.000000000 +0200
++++ Makefile.in
+@@ -70,10 +70,9 @@ UNITTEST_SRC=$(patsubst $(srcdir)/%,%, \
+ 	testcode/readhex.c testcode/ldns-testpkts.c smallapp/worker_cb.c \
+ 	$(COMMON_SRC)
+ UNITTEST_OBJ=$(addprefix $(BUILD),$(UNITTEST_SRC:.c=.o)) $(COMPAT_OBJ)
+-DAEMON_SRC=$(patsubst $(srcdir)/%,%, $(wildcard $(srcdir)/daemon/*.c)) \
+-	$(COMMON_SRC)
++DAEMON_SRC=$(patsubst $(srcdir)/%,%, $(wildcard $(srcdir)/daemon/*.c))
+ DAEMON_OBJ=$(addprefix $(BUILD),$(DAEMON_SRC:.c=.o)) $(COMPAT_OBJ)
+-CHECKCONF_SRC=smallapp/unbound-checkconf.c smallapp/worker_cb.c $(COMMON_SRC)
++CHECKCONF_SRC=smallapp/unbound-checkconf.c smallapp/worker_cb.c
+ CHECKCONF_OBJ=$(addprefix $(BUILD),$(CHECKCONF_SRC:.c=.o)) $(COMPAT_OBJ)
+ HOST_SRC=smallapp/unbound-host.c
+ HOST_OBJ=$(addprefix $(BUILD),$(HOST_SRC:.c=.o)) $(COMPAT_OBJ)
+@@ -148,17 +147,17 @@ else
+ ldnslib=
+ endif
+ 
+-unbound:	$(DAEMON_OBJ) $(ldnslib)
++unbound:	$(DAEMON_OBJ) $(ldnslib) libunbound.la
+ 	$(INFO) Link $@
+-	$Q$(LINK) -o $@ $(sort $(DAEMON_OBJ)) $(LIBS)
++	$Q$(LINK) -o $@ $(sort $(DAEMON_OBJ)) libunbound.la $(LIBS)
+ 
+-unbound-checkconf:	$(CHECKCONF_OBJ) $(ldnslib)
++unbound-checkconf:	$(CHECKCONF_OBJ) $(ldnslib) libunbound.la
+ 	$(INFO) Link $@
+-	$Q$(LINK) -o $@ $(sort $(CHECKCONF_OBJ)) $(LIBS)
++	$Q$(LINK) -o $@ $(sort $(CHECKCONF_OBJ)) libunbound.la $(LIBS)
+ 
+ unbound-host:	$(HOST_OBJ) libunbound.la $(ldnslib)
+ 	$(INFO) Link $@
+-	$Q$(LINK) -o $@ $(sort $(HOST_OBJ)) -L. -L.libs -lunbound $(LIBS)
++	$Q$(LINK) -o $@ $(sort $(HOST_OBJ)) libunbound.la $(LIBS)
+ 
+ unittest:	$(UNITTEST_OBJ) $(ldnslib)
+ 	$(INFO) Link $@
