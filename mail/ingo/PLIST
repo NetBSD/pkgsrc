@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/01/09 21:48:51 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/05/26 12:56:16 adrianp Exp $
 share/doc/ingo/INSTALL
 share/doc/ingo/README
 share/doc/ingo/RELEASE_NOTES
@@ -8,6 +8,7 @@ share/horde/ingo/blacklist.php
 share/horde/ingo/config/backends.php.dist
 share/horde/ingo/config/conf.xml.dist
 share/horde/ingo/config/fields.php.dist
+share/horde/ingo/config/hooks.php.dist
 share/horde/ingo/config/prefs.php.dist
 share/horde/ingo/filters.php
 share/horde/ingo/forward.php
@@ -16,27 +17,41 @@ share/horde/ingo/lib/Block/overview.php
 share/horde/ingo/lib/Driver.php
 share/horde/ingo/lib/Driver/ldap.php
 share/horde/ingo/lib/Driver/null.php
+share/horde/ingo/lib/Driver/sivtest.php
 share/horde/ingo/lib/Driver/timsieved.php
 share/horde/ingo/lib/Driver/vfs.php
 share/horde/ingo/lib/IMAP/Search.php
 share/horde/ingo/lib/Ingo.php
 share/horde/ingo/lib/Script.php
 share/horde/ingo/lib/Script/imap.php
+share/horde/ingo/lib/Script/imap/live.php
+share/horde/ingo/lib/Script/imap/mock.php
 share/horde/ingo/lib/Script/maildrop.php
 share/horde/ingo/lib/Script/procmail.php
 share/horde/ingo/lib/Script/sieve.php
 share/horde/ingo/lib/Session.php
 share/horde/ingo/lib/Storage.php
+share/horde/ingo/lib/Storage/mock.php
 share/horde/ingo/lib/Storage/prefs.php
+share/horde/ingo/lib/Storage/sql.php
+share/horde/ingo/lib/Template.php
+share/horde/ingo/lib/UI/VarRenderer/ingo.php
 share/horde/ingo/lib/api.php
 share/horde/ingo/lib/base.php
+share/horde/ingo/lib/tests/MaildropTest.php
+share/horde/ingo/lib/tests/ProcmailTest.php
+share/horde/ingo/lib/tests/ScriptTest.php
+share/horde/ingo/lib/tests/SieveTest.php
+share/horde/ingo/lib/tests/TestBase.php
+share/horde/ingo/lib/tests/_data/from_spammer
+share/horde/ingo/lib/tests/_data/not_from_spammer
 share/horde/ingo/lib/version.php
+share/horde/ingo/locale/ca_ES/LC_MESSAGES/ingo.mo
+share/horde/ingo/locale/ca_ES/help.xml
 share/horde/ingo/locale/cs_CZ/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/da_DK/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/de_DE/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/de_DE/help.xml
-share/horde/ingo/locale/ca_ES/LC_MESSAGES/ingo.mo
-share/horde/ingo/locale/ca_ES/help.xml
 share/horde/ingo/locale/el_GR/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/en_US/help.xml
 share/horde/ingo/locale/es_ES/LC_MESSAGES/ingo.mo
@@ -46,9 +61,9 @@ share/horde/ingo/locale/fi_FI/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/fi_FI/help.xml
 share/horde/ingo/locale/fr_FR/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/fr_FR/help.xml
-share/horde/ingo/locale/ja_JP/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/hu_HU/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/it_IT/LC_MESSAGES/ingo.mo
+share/horde/ingo/locale/ja_JP/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/ko_KR/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/lt_LT/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/lv_LV/LC_MESSAGES/ingo.mo
@@ -59,11 +74,14 @@ share/horde/ingo/locale/pl_PL/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/pt_BR/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/pt_PT/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/ro_RO/LC_MESSAGES/ingo.mo
+share/horde/ingo/locale/ru_RU/LC_MESSAGES/ingo.mo
+share/horde/ingo/locale/sk_SK/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/sl_SI/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/sv_SE/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/tr_TR/LC_MESSAGES/ingo.mo
-share/horde/ingo/locale/zh_TW/LC_MESSAGES/ingo.mo
+share/horde/ingo/locale/uk_UA/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/zh_CN/LC_MESSAGES/ingo.mo
+share/horde/ingo/locale/zh_TW/LC_MESSAGES/ingo.mo
 share/horde/ingo/po/README
 share/horde/ingo/po/ca_ES.po
 share/horde/ingo/po/cs_CZ.po
@@ -84,17 +102,26 @@ share/horde/ingo/po/lv_LV.po
 share/horde/ingo/po/nb_NO.po
 share/horde/ingo/po/nl_NL.po
 share/horde/ingo/po/pl_PL.po
-share/horde/ingo/po/zh_CN.po
 share/horde/ingo/po/pt_BR.po
 share/horde/ingo/po/pt_PT.po
 share/horde/ingo/po/ro_RO.po
+share/horde/ingo/po/ru_RU.po
+share/horde/ingo/po/sk_SK.po
 share/horde/ingo/po/sl_SI.po
 share/horde/ingo/po/sv_SE.po
 share/horde/ingo/po/tr_TR.po
+share/horde/ingo/po/uk_UA.po
+share/horde/ingo/po/zh_CN.po
 share/horde/ingo/po/zh_TW.po
 share/horde/ingo/rule.php
 share/horde/ingo/script.php
-share/horde/ingo/scripts/convert_imp_filters.php
+share/horde/ingo/scripts/ingo-postfix-policyd
+share/horde/ingo/scripts/sql/ingo.oci8.sql
+share/horde/ingo/scripts/sql/ingo.sql
+share/horde/ingo/scripts/upgrades/convert_datatree_shares_to_sql.php
+share/horde/ingo/scripts/upgrades/convert_imp_filters.php
+share/horde/ingo/scripts/upgrades/convert_prefs_to_sql.php
+share/horde/ingo/spam.php
 share/horde/ingo/templates/blacklist/blacklist.inc
 share/horde/ingo/templates/common-header.inc
 share/horde/ingo/templates/filters/filter-none.inc
@@ -102,7 +129,6 @@ share/horde/ingo/templates/filters/filter.html
 share/horde/ingo/templates/filters/footer.inc
 share/horde/ingo/templates/filters/header.inc
 share/horde/ingo/templates/filters/settings.inc
-share/horde/ingo/templates/forward/forward.inc
 share/horde/ingo/templates/javascript/new_folder.js
 share/horde/ingo/templates/menu.inc
 share/horde/ingo/templates/rule/filter.inc
@@ -112,7 +138,6 @@ share/horde/ingo/templates/script/activate.inc
 share/horde/ingo/templates/script/footer.inc
 share/horde/ingo/templates/script/header.inc
 share/horde/ingo/templates/script/script.inc
-share/horde/ingo/templates/vacation/vacation.inc
 share/horde/ingo/templates/whitelist/whitelist.inc
 share/horde/ingo/test.php
 share/horde/ingo/themes/graphics/blacklist.png
@@ -123,35 +148,69 @@ share/horde/ingo/themes/graphics/favicon.ico
 share/horde/ingo/themes/graphics/forward.png
 share/horde/ingo/themes/graphics/ingo.png
 share/horde/ingo/themes/graphics/script.png
+share/horde/ingo/themes/graphics/spam.png
 share/horde/ingo/themes/graphics/vacation.png
 share/horde/ingo/themes/graphics/whitelist.png
 share/horde/ingo/themes/screen.css
+share/horde/ingo/themes/silver/graphics/blacklist.png
+share/horde/ingo/themes/silver/graphics/copy.png
+share/horde/ingo/themes/silver/graphics/disable.png
+share/horde/ingo/themes/silver/graphics/enable.png
+share/horde/ingo/themes/silver/graphics/favicon.ico
+share/horde/ingo/themes/silver/graphics/forward.png
+share/horde/ingo/themes/silver/graphics/ingo.png
+share/horde/ingo/themes/silver/graphics/script.png
+share/horde/ingo/themes/silver/graphics/spam.png
+share/horde/ingo/themes/silver/graphics/vacation.png
+share/horde/ingo/themes/silver/graphics/whitelist.png
+share/horde/ingo/themes/silver/themed_graphics
+share/horde/ingo/themes/tango-blue/graphics/blacklist.png
+share/horde/ingo/themes/tango-blue/graphics/copy.png
+share/horde/ingo/themes/tango-blue/graphics/disable.png
+share/horde/ingo/themes/tango-blue/graphics/enable.png
+share/horde/ingo/themes/tango-blue/graphics/favicon.ico
+share/horde/ingo/themes/tango-blue/graphics/forward.png
+share/horde/ingo/themes/tango-blue/graphics/ingo.png
+share/horde/ingo/themes/tango-blue/graphics/script.png
+share/horde/ingo/themes/tango-blue/graphics/spam.png
+share/horde/ingo/themes/tango-blue/graphics/vacation.png
+share/horde/ingo/themes/tango-blue/graphics/whitelist.png
+share/horde/ingo/themes/tango-blue/themed_graphics
 share/horde/ingo/vacation.php
 share/horde/ingo/whitelist.php
-@dirrm share/examples/ingo
+@dirrm share/horde/ingo/themes/tango-blue/graphics
+@dirrm share/horde/ingo/themes/tango-blue
+@dirrm share/horde/ingo/themes/silver/graphics
+@dirrm share/horde/ingo/themes/silver
 @dirrm share/horde/ingo/themes/graphics
 @dirrm share/horde/ingo/themes
 @dirrm share/horde/ingo/templates/whitelist
-@dirrm share/horde/ingo/templates/vacation
 @dirrm share/horde/ingo/templates/script
 @dirrm share/horde/ingo/templates/rule
 @dirrm share/horde/ingo/templates/javascript
-@dirrm share/horde/ingo/templates/forward
 @dirrm share/horde/ingo/templates/filters
 @dirrm share/horde/ingo/templates/blacklist
 @dirrm share/horde/ingo/templates
+@dirrm share/horde/ingo/scripts/upgrades
+@dirrm share/horde/ingo/scripts/sql
 @dirrm share/horde/ingo/scripts
 @dirrm share/horde/ingo/po
-@dirrm share/horde/ingo/locale/zh_CN/LC_MESSAGES
-@dirrm share/horde/ingo/locale/zh_CN
 @dirrm share/horde/ingo/locale/zh_TW/LC_MESSAGES
 @dirrm share/horde/ingo/locale/zh_TW
+@dirrm share/horde/ingo/locale/zh_CN/LC_MESSAGES
+@dirrm share/horde/ingo/locale/zh_CN
+@dirrm share/horde/ingo/locale/uk_UA/LC_MESSAGES
+@dirrm share/horde/ingo/locale/uk_UA
 @dirrm share/horde/ingo/locale/tr_TR/LC_MESSAGES
 @dirrm share/horde/ingo/locale/tr_TR
 @dirrm share/horde/ingo/locale/sv_SE/LC_MESSAGES
 @dirrm share/horde/ingo/locale/sv_SE
 @dirrm share/horde/ingo/locale/sl_SI/LC_MESSAGES
 @dirrm share/horde/ingo/locale/sl_SI
+@dirrm share/horde/ingo/locale/sk_SK/LC_MESSAGES
+@dirrm share/horde/ingo/locale/sk_SK
+@dirrm share/horde/ingo/locale/ru_RU/LC_MESSAGES
+@dirrm share/horde/ingo/locale/ru_RU
 @dirrm share/horde/ingo/locale/ro_RO/LC_MESSAGES
 @dirrm share/horde/ingo/locale/ro_RO
 @dirrm share/horde/ingo/locale/pt_PT/LC_MESSAGES
@@ -170,23 +229,23 @@ share/horde/ingo/whitelist.php
 @dirrm share/horde/ingo/locale/lt_LT
 @dirrm share/horde/ingo/locale/ko_KR/LC_MESSAGES
 @dirrm share/horde/ingo/locale/ko_KR
+@dirrm share/horde/ingo/locale/ja_JP/LC_MESSAGES
+@dirrm share/horde/ingo/locale/ja_JP
 @dirrm share/horde/ingo/locale/it_IT/LC_MESSAGES
 @dirrm share/horde/ingo/locale/it_IT
 @dirrm share/horde/ingo/locale/hu_HU/LC_MESSAGES
 @dirrm share/horde/ingo/locale/hu_HU
-@dirrm share/horde/ingo/locale/ja_JP/LC_MESSAGES/
-@dirrm share/horde/ingo/locale/ja_JP
 @dirrm share/horde/ingo/locale/fr_FR/LC_MESSAGES
 @dirrm share/horde/ingo/locale/fr_FR
 @dirrm share/horde/ingo/locale/fi_FI/LC_MESSAGES
 @dirrm share/horde/ingo/locale/fi_FI
-@dirrm share/horde/ingo/locale/el_GR/LC_MESSAGES
-@dirrm share/horde/ingo/locale/el_GR/
+@dirrm share/horde/ingo/locale/et_EE/LC_MESSAGES
+@dirrm share/horde/ingo/locale/et_EE
 @dirrm share/horde/ingo/locale/es_ES/LC_MESSAGES
 @dirrm share/horde/ingo/locale/es_ES
-@dirrm share/horde/ingo/locale/et_EE/LC_MESSAGES
-@dirrm share/horde/ingo/locale/et_EE/
 @dirrm share/horde/ingo/locale/en_US
+@dirrm share/horde/ingo/locale/el_GR/LC_MESSAGES
+@dirrm share/horde/ingo/locale/el_GR
 @dirrm share/horde/ingo/locale/de_DE/LC_MESSAGES
 @dirrm share/horde/ingo/locale/de_DE
 @dirrm share/horde/ingo/locale/da_DK/LC_MESSAGES
@@ -196,7 +255,12 @@ share/horde/ingo/whitelist.php
 @dirrm share/horde/ingo/locale/ca_ES/LC_MESSAGES
 @dirrm share/horde/ingo/locale/ca_ES
 @dirrm share/horde/ingo/locale
+@dirrm share/horde/ingo/lib/tests/_data
+@dirrm share/horde/ingo/lib/tests
+@dirrm share/horde/ingo/lib/UI/VarRenderer
+@dirrm share/horde/ingo/lib/UI
 @dirrm share/horde/ingo/lib/Storage
+@dirrm share/horde/ingo/lib/Script/imap
 @dirrm share/horde/ingo/lib/Script
 @dirrm share/horde/ingo/lib/IMAP
 @dirrm share/horde/ingo/lib/Driver
@@ -204,4 +268,5 @@ share/horde/ingo/whitelist.php
 @dirrm share/horde/ingo/lib
 @unexec ${RMDIR} %D/share/horde/ingo/config 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/horde/ingo 2>/dev/null || ${TRUE}
+@dirrm share/examples/ingo
 @dirrm share/doc/ingo
