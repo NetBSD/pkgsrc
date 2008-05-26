@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/04/07 17:54:03 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2008/05/26 02:13:19 joerg Exp $
 
 DISTNAME=	linuxq3ademo-1_11-6_x86_gz
 PKGREVISION=	3
@@ -19,7 +19,7 @@ EMUL_MODULES.linux=	base x11 glx
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	gtar
+USE_TOOLS+=	gtar pax
 EXTRACT_CMD=	${SED} '1,/^END_OF_STUB$$/d' ${DOWNLOADED_DISTFILE} |	\
 		${GTAR} xzf -
 
@@ -51,8 +51,8 @@ do-install:
 	${LN} -s ${LIBDIR}/libMesaVoodooGL.so.3.2 \
 		${DESTDIR}${LIBDIR}/libMesaVoodooGL.so
 	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${SHAREDIR}/${BINNAME}-README
-	cd ${WRKSRC} && ${PAX} -rw demoq3 icon.bmp icon.xpm ${DESTDIR}${LIBDIR}
-	cd ${WRKSRC} && ${PAX} -rw Help ${DESTDIR}${SHAREDIR}
+	cd ${WRKSRC} && pax -rw demoq3 icon.bmp icon.xpm ${DESTDIR}${LIBDIR}
+	cd ${WRKSRC} && pax -rw Help ${DESTDIR}${SHAREDIR}
 	${MV} ${DESTDIR}${SHAREDIR}/Help ${DESTDIR}${SHAREDIR}/quake3arena-Help
 
 .include "../../mk/bsd.pkg.mk"

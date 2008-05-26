@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2008/04/07 17:58:55 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2008/05/26 02:13:21 joerg Exp $
 
 DISTNAME=		sather-1.2.1
 PKGREVISION=		7
@@ -11,7 +11,7 @@ COMMENT=		Compiler for the Sather object oriented programming language
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gmake makeinfo
+USE_TOOLS+=		gmake makeinfo pax
 
 BUILD_TARGET=		full optional
 INFO_FILES=		# PLIST
@@ -71,7 +71,7 @@ do-install:
 		${DESTDIR}${PREFIX}/lib/sather/Bin
 	 ${LN} -sf ../lib/sather/Bin/bin-wrapper ${DESTDIR}${PREFIX}/bin/sacomp
 	 ${LN} -sf ../lib/sather/Bin/bin-wrapper ${DESTDIR}${PREFIX}/bin/sabrowse
-	cd ${WRKSRC} && ${PAX} -s ',.*\.sav,,' -rw Library		\
+	cd ${WRKSRC} && pax -s ',.*\.sav,,' -rw Library		\
 		System/FORBID						\
 		System/Debug						\
 		System/Common/*.c System/Common/*.h			\
@@ -87,7 +87,7 @@ do-install:
 		${TEST} ! -f "$$f" ||					\
 		${INSTALL_DATA} "$$f" ${DESTDIR}${PREFIX}/${PKGINFODIR};\
 	done
-	cd ${WRKSRC}/Doc && ${PAX} -rw -s ',.*/man.*,,' .		\
+	cd ${WRKSRC}/Doc && pax -rw -s ',.*/man.*,,' .		\
 		${DESTDIR}${PREFIX}/share/doc/sather
 	${INSTALL_MAN} ${WRKSRC}/Doc/man/man1/sacomp.1			\
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1

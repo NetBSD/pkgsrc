@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/07/27 18:48:04 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2008/05/26 02:13:25 joerg Exp $
 #
 
 DISTNAME=	validate-1.2.2
@@ -20,7 +20,7 @@ DIST_SUBDIR=	validate
 EXTRACT_ONLY=	wdg-sgml-lib-1.1.4.tar.gz
 SITES.wdg-sgml-lib-1.1.4.tar.gz=	http://www.htmlhelp.com/tools/validator/src/
 
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	perl:run pax
 REPLACE_PERL=	validate
 NO_BUILD=	YES
 
@@ -41,6 +41,6 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/wdg/sgml-lib
 	${INSTALL_SCRIPT} ${WRKSRC}/validate ${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/validate.README
-	cd ${WRKSRC}/wdg/sgml-lib && ${PAX} -rw * ${PREFIX}/share/wdg/sgml-lib/
+	cd ${WRKSRC}/wdg/sgml-lib && pax -rw * ${PREFIX}/share/wdg/sgml-lib/
 
 .include "../../mk/bsd.pkg.mk"

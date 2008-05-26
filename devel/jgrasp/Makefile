@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/03/03 17:45:35 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2008/05/26 02:13:17 joerg Exp $
 #
 
 DISTNAME=		jgrasp170
@@ -16,6 +16,8 @@ WRKSRC=			${WRKDIR}/jgrasp
 USE_JAVA=		run
 PKG_JVMS_ACCEPTED=	sun-jdk13 sun-jdk14 jdk14
 INSTALLATION_DIRS=	bin
+
+USE_TOOLS+=		pax
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -44,7 +46,7 @@ do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/bin
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/bin/${LOWER_OPSYS}
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/jbin
-	cd ${WRKSRC} && ${PAX} -s ,^./.*bin/.*,, 			\
+	cd ${WRKSRC} && pax -s ,^./.*bin/.*,, 			\
 		-rw . ${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/
 	${INSTALL_DATA} ${WRKSRC}/jbin/JGRASP__829J_6h.class		\
 		${DESTDIR}${PREFIX}/${PKGNAME_NOREV}/jbin/

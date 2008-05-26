@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1 2006/06/15 08:41:13 chap Exp $
+# $NetBSD: Makefile.common,v 1.2 2008/05/26 02:13:16 joerg Exp $
 #
 
 EXTRACT_SUFX=		.zip
@@ -11,11 +11,13 @@ EXTRACT_SUFX=		.zip
 
 DEPENDS+=		qcad>=2.0.4.0:../../cad/qcad
 
+USE_TOOLS+=	pax
+
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/qcad/doc
-	cd ${WRKSRC} && umask 022 && ${PAX} -rwpm . ${PREFIX}/share/qcad/doc
+	cd ${WRKSRC} && umask 022 && pax -rwpm . ${PREFIX}/share/qcad/doc
 
 .include "../../mk/bsd.pkg.mk"

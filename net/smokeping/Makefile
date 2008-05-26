@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/04/06 21:47:00 adrianp Exp $
+# $NetBSD: Makefile,v 1.25 2008/05/26 02:13:23 joerg Exp $
 
 DISTNAME=	smokeping-2.3.5
 CATEGORIES=	net
@@ -13,7 +13,7 @@ DEPENDS+=	fping>=2.4b2:../../net/fping
 DEPENDS+=	p5-Digest-MD5>=2.20:../../security/p5-Digest-MD5
 DEPENDS+=	p5-libwww>=5.64:../../www/p5-libwww
 
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	pax perl:run
 NO_BUILD=	YES
 
 PKG_SYSCONFSUBDIR?=	smokeping
@@ -123,7 +123,7 @@ do-install:
 			$$FILE ${PREFIX}/lib/smokeping/Smokeping/sorters; \
 	done
 
-	cd ${WRKSRC}/htdocs/cropper && ${PAX} -rw -pm . ${SPDIR}/cropper
+	cd ${WRKSRC}/htdocs/cropper && pax -rw -pm . ${SPDIR}/cropper
 
 	for FILE in ${WRKSRC}/etc/config.dist \
 		${WRKSRC}/etc/basepage.html.dist \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/05/25 21:42:22 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2008/05/26 02:13:25 joerg Exp $
 
 PKGNAME=	jakarta-tomcat5-${TOMCAT_VERSION}
 DISTNAME=	jakarta-tomcat-${TOMCAT_VERSION}
@@ -16,6 +16,8 @@ TOMCAT_VERSION= 5.0.30
 USE_JAVA=	run
 # This needs java 1.4 or higher.
 USE_JAVA2=	yes
+
+USE_TOOLS+=	pax
 
 TOMCAT_LIB=	${PREFIX}/tomcat5
 CATALINA_DIR=	Catalina/localhost
@@ -59,7 +61,7 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/conf/${CATALINA_DIR}/${f} ${EGDIR2}
 .endfor
 	${INSTALL_DATA_DIR} ${TOMCAT_LIB}
-	@(cd ${WRKSRC} && ${PAX} -rw -pm . ${TOMCAT_LIB};		\
+	@(cd ${WRKSRC} && pax -rw -pm . ${TOMCAT_LIB};		\
 	${FIND} ${TOMCAT_LIB} -type f -print | ${XARGS} ${CHMOD} a+r;	\
 	${FIND} ${TOMCAT_LIB} \( -type f -o -perm -u+x \) -print	\
 		| ${XARGS} ${CHMOD} a+rx;				\

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/01/18 05:09:36 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/26 02:13:23 joerg Exp $
 #
 
 DISTNAME=	CSP-0.32
@@ -14,6 +14,8 @@ COMMENT=	Simple PKI Toolkit
 DEPENDS+=	p5-Date-Calc>=5.4:../../devel/p5-Date-Calc
 DEPENDS+=	p5-IPC-Run>=0.79:../../devel/p5-IPC-Run
 DEPENDS+=	p5-Term-Prompt>=1.03:../../devel/p5-Term-Prompt
+
+USE_TOOLS+=	pax
 
 CSPGUIDE=	cspguide.pdf
 SITES.${CSPGUIDE}=	http://devel.it.su.se/content/1/c4/32/90/
@@ -35,7 +37,7 @@ SUBST_SED.csp=		-e s,@@CSPHOME@@,${CSPHOME},	\
 SUBST_STAGE.csp=	post-patch
 
 post-install:
-	cd ${WRKSRC}/ca && ${FIND} . -type f | ${PAX} -rw ${CSPHOME}
+	cd ${WRKSRC}/ca && ${FIND} . -type f | pax -rw ${CSPHOME}
 	${INSTALL_DATA} ${DISTDIR}/${CSPGUIDE} ${PREFIX}/share/doc/csp
 
 .include "../../lang/perl5/module.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/05/18 10:23:16 adrianp Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/26 02:13:23 joerg Exp $
 #
 
 DISTNAME=	modsecurity-apache_1.9.4
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.modsecurity.org/download/
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.modsecurity.org/
 COMMENT=	Intrusion detection and prevention engine for web applications
+
+USE_TOOLS+=	pax
 
 .include "../../mk/apache.mk"
 
@@ -44,6 +46,6 @@ post-install:
 
 	${INSTALL_DATA} ${WRKSRC}/httpd.conf.example-minimal \
 		${PREFIX}/share/examples/ap-security
-	cd ${WRKSRC}/doc && ${PAX} -rw . ${PREFIX}/share/doc/ap-security
+	cd ${WRKSRC}/doc && pax -rw . ${PREFIX}/share/doc/ap-security
 
 .include "../../mk/bsd.pkg.mk"

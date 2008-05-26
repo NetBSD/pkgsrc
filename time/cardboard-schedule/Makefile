@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/03/21 19:44:10 jwise Exp $
+# $NetBSD: Makefile,v 1.23 2008/05/26 02:13:24 joerg Exp $
 #
 
 DISTNAME=	cs113ins
@@ -18,7 +18,7 @@ RESTRICTED=	License prohibits redistribution on CDROM
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
-USE_TOOLS+=	gtar unzip
+USE_TOOLS+=	pax gtar unzip
 
 WRKSRC=		${WRKDIR}
 EXTRACT_CMD=	cd ${WRKDIR:Q} && {					\
@@ -50,7 +50,7 @@ post-extract:
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX:Q}/lib/cardboard-schedule
-	cd ${WRKDIR:Q}/C:/projects && ${PAX} -rw ${CSFILES} ${PREFIX:Q}/lib/cardboard-schedule
+	cd ${WRKDIR:Q}/C:/projects && pax -rw ${CSFILES} ${PREFIX:Q}/lib/cardboard-schedule
 	${INSTALL_SCRIPT} ${WRKDIR:Q}/csched.sh ${PREFIX:Q}/bin/csched
 
 .include "../../mk/java-vm.mk"

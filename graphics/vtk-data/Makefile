@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/03/04 15:39:11 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/26 02:13:20 joerg Exp $
 #
 
 DISTNAME=	VTKData-4.2
@@ -11,11 +11,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/VTKData-release-4-2
 NO_BUILD=	yes
 
+USE_TOOLS+=	pax
+
 EXAMPLES_DIR=	share/vtk
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${EXAMPLES_DIR}
-	cd ${WRKSRC} && ${PAX} -rw -pe -s '|.*/CVS/.*||' . \
+	cd ${WRKSRC} && pax -rw -pe -s '|.*/CVS/.*||' . \
 		${DESTDIR}${PREFIX}/${EXAMPLES_DIR}
 
 .include "../../graphics/vtk/Makefile.common"

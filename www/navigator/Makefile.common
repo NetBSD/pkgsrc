@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.89 2007/10/31 21:44:19 gdt Exp $
+# $NetBSD: Makefile.common,v 1.90 2008/05/26 02:13:25 joerg Exp $
 #
 # Common include file for communicator and navigator packages
 
@@ -132,6 +132,8 @@ RPM2PKG_PREFIX=		${PREFIX}
 RPM2PKG_SUBPREFIX=	${EMULSUBDIR}
 RPM2PKG_STAGE=		do-install
 
+USE_TOOLS+=	pax
+
 do-install:
 	${CP} ${PKGDIR}/DESCR.linux-powerpc ${WRKDIR}
 	${SED}	-e 's#@BINNAME@#${BINNAME}#g'				\
@@ -176,9 +178,9 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${file} ${MOZILLA_HOME}/java/classes
 .  endfor
 	cd ${MOZILLA_HOME} && ${GZCAT} \
-		${WRKSRC}/nethelp-v${NS_VERS_SHORT}.nif | ${PAX} -r
+		${WRKSRC}/nethelp-v${NS_VERS_SHORT}.nif | pax -r
 	cd ${MOZILLA_HOME} && ${GZCAT} \
-		${WRKSRC}/netscape-v${NS_VERS_SHORT}.nif | ${PAX} -cr \
+		${WRKSRC}/netscape-v${NS_VERS_SHORT}.nif | pax -cr \
 		'*libflashplayer.so' '*ShockwaveFlash.class' '*dynMotif*' \
 		|| ${TRUE}
 .  if ${BINNAME} == "communicator"
