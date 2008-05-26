@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/04/06 10:12:35 adrianp Exp $
+# $NetBSD: Makefile,v 1.29 2008/05/26 02:13:25 joerg Exp $
 
 DISTNAME=	drupal-5.7
 CATEGORIES=	www
@@ -21,7 +21,7 @@ PKG_GROUPS_VARS+=	APACHE_GROUP
 PKG_USERS_VARS+=	APACHE_USER
 
 BUILD_DEFS+=		APACHE_USER APACHE_GROUP
-USE_TOOLS+=		perl:run
+USE_TOOLS+=		perl:run pax
 REPLACE_PERL=		scripts/code-style.pl
 
 OWN_DIRS+=		${DRUPAL}/sites/default
@@ -81,7 +81,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/*.php ${DRUPAL}
 
 .	for i in ${PAX_DIRS}
-		cd ${WRKSRC}/${i} && ${PAX} -rw . ${DRUPAL}/${i}
+		cd ${WRKSRC}/${i} && pax -rw . ${DRUPAL}/${i}
 .	endfor
 
 	${CHOWN} ${APACHE_USER}:${APACHE_GROUP} ${DRUPAL}/files

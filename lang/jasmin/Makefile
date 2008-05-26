@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/03/04 16:38:12 jlam Exp $
+# $NetBSD: Makefile,v 1.25 2008/05/26 02:13:21 joerg Exp $
 #
 
 DISTNAME=	jasmin-1.06
@@ -13,6 +13,7 @@ COMMENT=	Java "assembler" interface
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_JAVA=	run
+USE_TOOLS+=	pax
 
 WRKSRC=		${WRKDIR}/jasmin
 NO_BUILD=	yes
@@ -29,7 +30,7 @@ post-patch:
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/jasmin
-	cd ${WRKSRC} && ${PAX} -rw . ${DESTDIR}${PREFIX}/jasmin
+	cd ${WRKSRC} && pax -rw . ${DESTDIR}${PREFIX}/jasmin
 	${LN} -s ../jasmin/bin/jasmin ${DESTDIR}${PREFIX}/bin/jasmin
 
 .include "../../mk/java-vm.mk"

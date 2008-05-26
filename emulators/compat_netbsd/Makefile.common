@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.10 2008/03/03 19:21:37 jlam Exp $
+# $NetBSD: Makefile.common,v 1.11 2008/05/26 02:13:18 joerg Exp $
 #
 # Common infrastructure for NetBSD compat* packages.
 #
@@ -15,6 +15,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 PKG_DESTDIR_SUPPORT=	destdir
 
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
+
+USE_TOOLS+=	pax
 
 NETBSD_PKG=		yes
 EMUL_REQD=		netbsd>=${NETBSD_VERSION}
@@ -132,7 +134,7 @@ compat-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${EMULSUBDIR}
 	cd ${WRKSRC} && for dir in lib libexec usr; do			\
 		if ${TEST} -d "$$dir"; then				\
-			${PAX} -rw "$$dir"				\
+			pax -rw "$$dir"				\
 				${DESTDIR}${PREFIX}/${EMULSUBDIR};	\
 		fi;							\
 	done

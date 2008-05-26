@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/02/24 21:07:51 minskim Exp $
+# $NetBSD: Makefile,v 1.9 2008/05/26 02:13:23 joerg Exp $
 
 .include "Makefile.common"
 
@@ -10,6 +10,8 @@ COMMENT=	Japanese Vector font library
 CONFIGURE_ARGS+=	--without-x
 BUILD_TARGET=		build-src
 INSTALL_TARGET=		install-src
+
+USE_TOOLS+=	pax
 
 post-build:
 .for FILE in vfontcap vfontcap.bdf
@@ -26,7 +28,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/VFlib/${VFLIB_VERSION}
 	cd ${WRKSRC} && ${INSTALL_DATA} COPYING COPYING.LIB README.txt.JP_EUC \
 		${PREFIX}/share/VFlib/${VFLIB_VERSION}
-	cd ${WRKSRC} && ${PAX} -rw jTeX ${PREFIX}/share/VFlib/${VFLIB_VERSION}
+	cd ${WRKSRC} && pax -rw jTeX ${PREFIX}/share/VFlib/${VFLIB_VERSION}
 	${FIND} ${PREFIX}/share/VFlib/${VFLIB_VERSION} -type d -print \
 		-exec ${CHMOD} ${PKGDIRMODE} {} \;
 	${FIND} ${PREFIX}/share/VFlib/${VFLIB_VERSION} -type f -print \

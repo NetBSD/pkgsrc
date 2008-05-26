@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/12/27 15:13:20 joerg Exp $
+# $NetBSD: Makefile,v 1.33 2008/05/26 02:13:22 joerg Exp $
 
 DISTNAME=	dotfile-2.4.1
 PKGREVISION=	2
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.blackie.dk/dotfile/
 COMMENT=	GUI dotfile generator program to create .config files
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
+
+USE_TOOLS+=	pax
 
 BUILD_DEFS+=	DOTFILE_LANG
 
@@ -30,7 +32,7 @@ pre-install:
 	rm -f ${WRKSRC}/Generator/makeHelp.orig
 
 post-install:
-	cd ${WRKSRC:Q}/Doc && ${PAX} -rw . ${PREFIX}/share/doc/${PKGNAME_NOREV}
+	cd ${WRKSRC:Q}/Doc && pax -rw . ${PREFIX}/share/doc/${PKGNAME_NOREV}
 	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${PREFIX}/share/doc/${PKGNAME_NOREV}
 
 .include "../../mk/bsd.pkg.mk"

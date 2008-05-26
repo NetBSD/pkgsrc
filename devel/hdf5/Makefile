@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2007/09/18 18:58:08 drochner Exp $
+# $NetBSD: Makefile,v 1.40 2008/05/26 02:13:17 joerg Exp $
 
 DISTNAME=	hdf5-1.6.6
 CATEGORIES=	devel
@@ -10,7 +10,7 @@ COMMENT=	Hierarchical Data Format (new generation)
 
 DIST_SUBDIR=		${PKGNAME_NOREV}
 USE_LIBTOOL=		yes
-USE_TOOLS+=		tr
+USE_TOOLS+=		pax tr
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 #CONFIGURE_ARGS+= --disable-production --enable-debug
@@ -35,7 +35,7 @@ post-install:
 		release_docs/RELEASE.txt ${PREFIX}/share/doc/hdf5
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/hdf5/html
 	# avoid installing the Makefile and Makefile.in's  They are not needed
-	cd ${WRKSRC}/doc/html && ${PAX} -s '/.*Makefile.*//' -rwpm . ${PREFIX}/share/doc/hdf5/html
+	cd ${WRKSRC}/doc/html && pax -s '/.*Makefile.*//' -rwpm . ${PREFIX}/share/doc/hdf5/html
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/doc/hdf5/html
 
 .include "../../devel/zlib/buildlink3.mk"

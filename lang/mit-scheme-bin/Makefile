@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/04 16:38:12 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/26 02:13:21 joerg Exp $
 #
 
 DISTNAME=		mit-scheme-7.7.1-ix86-gnu-linux
@@ -18,6 +18,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}
 INSTALLATION_DIRS=	bin libexec
 
+USE_TOOLS+=	pax
+
 do-build:
 	${SED} "s!@PREFIX@!${PREFIX}!g" ${FILESDIR}/scheme > ${WRKSRC}/scheme
 	${SED} "s!@PREFIX@!${PREFIX}!g" ${FILESDIR}/bchscheme \
@@ -29,7 +31,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/bchscheme ${DESTDIR}${PREFIX}/libexec
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/scheme ${DESTDIR}${PREFIX}/libexec
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/mit-scheme
-	cd ${WRKSRC}/lib && ${PAX} -rw mit-scheme ${DESTDIR}${PREFIX}/lib
+	cd ${WRKSRC}/lib && pax -rw mit-scheme ${DESTDIR}${PREFIX}/lib
 	${RMDIR} ${DESTDIR}${PREFIX}/lib/mit-scheme/lib
 
 .include "../../mk/bsd.pkg.mk"

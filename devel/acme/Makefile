@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/03/03 17:45:33 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2008/05/26 02:13:17 joerg Exp $
 #
 
 DISTNAME=	acme085_linux
@@ -14,7 +14,7 @@ COMMENT=	Cross assembler for 6502, 65c02, and 65816
 
 PKG_DESTDIR_SUPPORT=	destdir
 
-USE_TOOLS+=	unzip
+USE_TOOLS+=	pax unzip
 
 WRKSRC=		${WRKTOP}/sources
 LIBDIST=	lib002.zip
@@ -34,7 +34,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/acme
 	${INSTALL_DATA} ${WRKTOP}/docs/* ${DESTDIR}${PREFIX}/share/doc/acme
 	${INSTALL_DATA_DIR} ${DESTDIR}${ACME_LIB}
-	cd ${WRKDIR}/ACME_Lib && ${PAX} -rw . ${DESTDIR}${ACME_LIB}
+	cd ${WRKDIR}/ACME_Lib && pax -rw . ${DESTDIR}${ACME_LIB}
 	${CHOWN} -R ${ROOT_USER}:${ROOT_GROUP} ${DESTDIR}${ACME_LIB}
 
 .include "../../mk/bsd.pkg.mk"

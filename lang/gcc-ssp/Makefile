@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2007/06/12 22:00:39 joerg Exp $
+# $NetBSD: Makefile,v 1.49 2008/05/26 02:13:21 joerg Exp $
 
 DISTNAME=		gcc-2.95.3
 PKGNAME=		gcc-ssp-2.95.3.13
@@ -37,7 +37,7 @@ CONFIGURE_ARGS+=	--host=${MACHINE_GNU_PLATFORM:Q}
 CONFIGURE_ARGS+=	--prefix=${GCC_PREFIX:Q}
 CONFIGURE_ARGS+=	--enable-shared
 
-USE_TOOLS+=		chmod
+USE_TOOLS+=		chmod pax
 MAKE_ENV+=		ac_cv_prog_chmod=${TOOLS_CHMOD:Q}
 MAKE_ENV+=		SHELL=${CONFIG_SHELL}
 
@@ -91,7 +91,7 @@ post-extract:
 	${RM} ${WRKSRC}/libf2c/libF77/etime_.c
 
 post-patch:
-	cd ${WRKDIR} && ${PAX} -O -zrf ${_DISTDIR}/${SSP_PATCH}
+	cd ${WRKDIR} && pax -O -zrf ${_DISTDIR}/${SSP_PATCH}
 	${CP} ${WRKDIR}/protector.c ${WRKDIR}/protector.h ${WRKSRC}/gcc/
 	${PATCH} -p0 -d ${WRKSRC} --forward --quiet -E < ${WRKDIR}/protector.dif
 	${PATCH} -p0 -d ${WRKSRC} --forward --quiet -E < ${WRKDIR}/protectonly.dif

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/04/07 16:21:03 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2008/05/26 02:13:19 joerg Exp $
 #
 
 DISTNAME=		4stAttack-2.1.4
@@ -13,6 +13,8 @@ COMMENT=		Game in which you have to try to out-smart your opponent
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin share/${PKGBASE}
+
+USE_TOOLS+=	pax
 
 PYTHON_PATCH_SCRIPTS=	4stattack.py
 
@@ -29,7 +31,7 @@ do-build:
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/4stattack ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC} && ${FIND} . -type f -and \! ${FIND_EXCLUDE} \
-		-print | ${PAX} -rw -pp -pm ${DESTDIR}${PREFIX}/share/${PKGBASE}
+		-print | pax -rw -pp -pm ${DESTDIR}${PREFIX}/share/${PKGBASE}
 
 .include "../../devel/py-game/buildlink3.mk"
 .include "../../lang/python/application.mk"

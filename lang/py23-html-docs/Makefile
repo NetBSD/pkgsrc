@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/03/04 16:38:12 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2008/05/26 02:13:21 joerg Exp $
 #
 
 DISTNAME=	html-2.3.3
@@ -13,6 +13,8 @@ COMMENT=	HTML Documentation for Python
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_TOOLS+=	pax
+
 WRKSRC=		${WRKDIR}/Python-Docs-2.3.3/
 DIST_SUBDIR=	python
 
@@ -25,7 +27,7 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${HTMLDIR}
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	cd ${WRKSRC} && ${PAX} -rw -pe [a-z]* ${DESTDIR}${PREFIX}/${HTMLDIR}
+	cd ${WRKSRC} && pax -rw -pe [a-z]* ${DESTDIR}${PREFIX}/${HTMLDIR}
 	cd ${DESTDIR}${PREFIX} && ${FIND} ${HTMLDIR} -type f -print >>${PLIST_SRC}
 	cd ${DESTDIR}${PREFIX} && ${FIND} -d ${HTMLDIR} -type d -print | \
 	${SED} -e "s/^/@dirrm /" >>${PLIST_SRC}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/05/11 16:28:03 taca Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/26 02:13:26 joerg Exp $
 # FreeBSD Id: ports/www/zope29/Makefile,v 1.86 2006/08/03 15:53:04 garga Exp
 
 DISTNAME=	Zope-${ZOPE210_VERSION}-final
@@ -41,6 +41,8 @@ REPLACE_PYTHON=		test.py lib/python/Zope2/Startup/zopectl.py \
 			lib/python/zdaemon/zdctl.py lib/python/zdaemon/zdrun.py
 REPLACE_PYTHON_DIRS+=	${WRKSRC}/lib/python/ZEO/scripts ${WRKSRC}/utilities
 
+USE_TOOLS+=	pax
+
 post-extract:
 	cd ${WRKSRC}; ${FIND} doc lib skel/import -type f -print | \
 		${XARGS} ${CHMOD} -x
@@ -57,8 +59,8 @@ pre-install:
 		-print0 | ${XARGS} -0 -- ${RM}
 
 post-install:
-	cd ${WRKSRC}/doc/ZEO; ${PAX} -rw *.txt ${ZOPE_DOC_DIR}/zeo
-	cd ${WRKSRC}/doc; ${PAX} -rw *.txt ${ZOPE_DOC_DIR}/zope
+	cd ${WRKSRC}/doc/ZEO; pax -rw *.txt ${ZOPE_DOC_DIR}/zeo
+	cd ${WRKSRC}/doc; pax -rw *.txt ${ZOPE_DOC_DIR}/zope
 	${FIND} ${ZOPE_DIR} ${ZOPE_DOC_DIR} -type f -print0 \
 		| ${XARGS} -0 -- ${CHMOD} a-w+r
 	${FIND} ${ZOPE_DIR} -type f -name '*.pyc' -print0 | \

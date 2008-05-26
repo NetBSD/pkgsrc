@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2008/02/16 13:19:56 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2008/05/26 02:13:18 joerg Exp $
 
 DISTNAME=	t1lib-5.1.2
 CATEGORIES=	fonts devel graphics
@@ -11,7 +11,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pax
 GNU_CONFIGURE=		yes
 
 BUILD_TARGET=	without_doc
@@ -39,14 +39,14 @@ pre-build:
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DATADIR}
 	cd ${WRKSRC};							\
-	${PAX} -rw Fonts ${DESTDIR}${DATADIR};					\
+	pax -rw Fonts ${DESTDIR}${DATADIR};					\
 	${CHMOD} go+r ${DESTDIR}${DATADIR}/Fonts/enc/IsoLatin2.enc;		\
-	${PAX} -rw -s "/doc/${PKGBASE}/" doc ${DESTDIR}${PREFIX}/share/doc
+	pax -rw -s "/doc/${PKGBASE}/" doc ${DESTDIR}${PREFIX}/share/doc
 
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/t1lib.config.sample ${DESTDIR}${EGDIR}
 	cd ${WRKSRC}/examples;						\
-	${PAX} -rw FontDataBase t1example1.c t1lib.config ${DESTDIR}${EGDIR}
+	pax -rw FontDataBase t1example1.c t1lib.config ${DESTDIR}${EGDIR}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/04/01 01:58:38 obache Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/26 02:13:24 joerg Exp $
 #
 
 DISTNAME=	xmlscan-${VER}
@@ -14,6 +14,7 @@ VER=		0.2.3
 
 NO_BUILD=		yes
 USE_RUBY_INSTALL=	yes
+USE_TOOLS+=	pax
 
 REPLACE_RUBY=	samples/getxmlchar.rb samples/xmlbench.rb \
 		samples/xmlconftest.rb
@@ -38,7 +39,7 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/ja/manual.ja.html ${RUBY_DOCDIR}/xmlscan/ja
 	${INSTALL_DATA} ${WRKSRC}/doc/ja/manual.ja.rd ${RUBY_DOCDIR}/xmlscan/ja
 	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/xmlscan
-	cd ${WRKSRC}/samples && ${PAX} -rw -pp * ${RUBY_EXAMPLESDIR}/xmlscan
+	cd ${WRKSRC}/samples && pax -rw -pp * ${RUBY_EXAMPLESDIR}/xmlscan
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"

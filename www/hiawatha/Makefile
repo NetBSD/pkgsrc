@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/02/05 23:11:24 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2008/05/26 02:13:25 joerg Exp $
 #
 
 DISTNAME=	hiawatha
@@ -21,6 +21,7 @@ NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}
 USE_JAVA=	run
+USE_TOOLS+=	pax
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
@@ -46,7 +47,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/simple.cfg ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/SeeAlso/pault_com.cfg ${EGDIR}
 	${INSTALL_DATA} ${WRKDIR}/hiawatha.cfg ${EGDIR}
-	cd ${WRKSRC} && ${PAX} -s '/^WEBROOT/pault.com/' -rw WEBROOT ${EGDIR}
+	cd ${WRKSRC} && pax -s '/^WEBROOT/pault.com/' -rw WEBROOT ${EGDIR}
 	${INSTALL_DATA_DIR} ${EGDIR}/WEBROOT
 	${INSTALL_DATA} ${FILESDIR}/index.xml ${EGDIR}/WEBROOT
 	${INSTALL_DATA} ${FILESDIR}/index.xsl ${EGDIR}/WEBROOT

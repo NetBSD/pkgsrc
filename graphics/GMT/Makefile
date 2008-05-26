@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/12/02 12:02:47 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2008/05/26 02:13:20 joerg Exp $
 
 DISTNAME=	GMT4.1.4
 PKGNAME=	GMT-4.1.4
@@ -22,6 +22,7 @@ DIST_SUBDIR=	${DISTNAME}
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+USE_TOOLS+=	pax
 
 CONFIGURE_ARGS+=--includedir=${PREFIX}/include/gmt
 CONFIGURE_ARGS+=--datadir=${PREFIX}/share/gmt
@@ -51,14 +52,14 @@ post-install:
 		${PREFIX}/share/examples/gmt/tutorial;
 	${INSTALL_DATA_DIR} ${PREFIX}/share/gmt
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${WRKSRC}/share
-	cd ${WRKSRC}/share && ${PAX} -rw . ${PREFIX}/share/gmt
+	cd ${WRKSRC}/share && pax -rw . ${PREFIX}/share/gmt
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gmt
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${WRKSRC}/examples/
-	cd ${WRKSRC}/examples && ${PAX} -rw . ${PREFIX}/share/examples/gmt
+	cd ${WRKSRC}/examples && pax -rw . ${PREFIX}/share/examples/gmt
 	${RM} ${PREFIX}/share/gmt/.gmtdefaults_SI.orig
 	${RM} ${PREFIX}/share/gmt/.gmtdefaults_US.orig
 	${RM} ${PREFIX}/share/gmt/gmt.conf.orig
-	cd ${WRKDIR}/share && ${PAX} -rw . ${PREFIX}/share/gmt
+	cd ${WRKDIR}/share && pax -rw . ${PREFIX}/share/gmt
 
 .include "../../devel/netcdf/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"

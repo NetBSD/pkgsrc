@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.install,v 1.8 2008/03/22 18:44:44 tonnerre Exp $
+# $NetBSD: Makefile.install,v 1.9 2008/05/26 02:13:18 joerg Exp $
 
 .include "dirs.mk"
 
@@ -45,6 +45,8 @@ RT_UPGRADE_DIRS=	3.3.0 3.3.11 3.5.1
 
 MESSAGE_SUBST+=		RTVARDIR=${RT_VAR_DIR:Q} RTSHAREDIR=${RT_SHARE_DIR:Q}
 
+USE_TOOLS+=	pax
+
 do-install:
 	@${ECHO} "=> Configuration files"
 	${INSTALL_DATA_DIR} ${RT_EXAMPLE_DIR}
@@ -60,11 +62,11 @@ do-install:
 	${INSTALL_DATA_DIR} ${RT_SHARE_DIR}/etc/upgrade/${_dir_}
 	cd ${WRKSRC}/etc/upgrade/${_dir_} &&						\
 		${FIND} . -type f ! -name '*.orig' 2>/dev/null | 			\
-		${PAX} -rw ${RT_SHARE_DIR}/etc/upgrade/${_dir_}
+		pax -rw ${RT_SHARE_DIR}/etc/upgrade/${_dir_}
 .endfor
 	@${ECHO} "=> Libraries"
 	${INSTALL_DATA_DIR} ${RT_LIB_DIR}
-	cd ${WRKSRC}/lib && ${FIND} . -type f ! -name '*.orig' 2>/dev/null | ${PAX} -rw ${RT_LIB_DIR}
+	cd ${WRKSRC}/lib && ${FIND} . -type f ! -name '*.orig' 2>/dev/null | pax -rw ${RT_LIB_DIR}
 	@${ECHO} "=> Binaries"
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/rt-mailgate ${WRKSRC}/bin/rt-crontool		\
 		${WRKSRC}/bin/mason_handler.fcgi ${WRKSRC}/bin/mason_handler.scgi	\
@@ -76,7 +78,7 @@ do-install:
 		${WRKSRC}/sbin/rt-test-dependencies ${PREFIX}/sbin
 	@${ECHO} "=> HTML documents"
 	${INSTALL_DATA_DIR} ${RT_HTML_DIR}
-	cd ${WRKSRC}/html && ${FIND} . -type f ! -name '*.orig' 2>/dev/null | ${PAX} -rw ${RT_HTML_DIR}
+	cd ${WRKSRC}/html && ${FIND} . -type f ! -name '*.orig' 2>/dev/null | pax -rw ${RT_HTML_DIR}
 	@${ECHO} "=> Documentation"
 	${INSTALL_DATA_DIR} ${RT_DOC_DIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${RT_DOC_DIR}

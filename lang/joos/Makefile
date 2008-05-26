@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/03/04 16:38:12 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/26 02:13:21 joerg Exp $
 #
 
 DISTNAME=	joos-0.2
@@ -13,10 +13,11 @@ COMMENT=	Java Object Oriented Subset
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_JAVA=	run
+USE_TOOLS+=	pax
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/joos
-	cd ${WRKSRC} && ${PAX} -s ,^./.*orig,, -rw . ${DESTDIR}${PREFIX}/joos
+	cd ${WRKSRC} && pax -s ,^./.*orig,, -rw . ${DESTDIR}${PREFIX}/joos
 	cd ${DESTDIR}${PREFIX}/joos/Bin && ${LN} -s joos.a- joos
 
 .include "../../mk/java-vm.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/06/06 23:50:14 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2008/05/26 02:13:23 joerg Exp $
 
 DISTNAME=	dhucs-3.2.2-20070507
 PKGNAME=	tex-${DISTNAME:C/-[0-9]+$//}
@@ -19,7 +19,7 @@ SITES.fonts-unttf-20070507.tar.gz= \
 WRKSRC=		${WRKDIR}/dhucs
 NO_BUILD=	yes
 USE_DIRS+=	texmf-1.0
-USE_TOOLS+=	bzcat perl:run
+USE_TOOLS+=	bzcat pax perl:run
 
 REPLACE_PERL+=	script/makeindex-dhucs.pl
 
@@ -33,7 +33,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/makeindex/dhucs.ist \
 		${PKG_LOCALTEXMFPREFIX}/makeindex/
 	${INSTALL_DATA_DIR} ${PKG_LOCALTEXMFPREFIX}/tex/latex/dhucs
-	cd ${WRKSRC}/tex-latex-dhucs && ${PAX} -rwppm . \
+	cd ${WRKSRC}/tex-latex-dhucs && pax -rwppm . \
 		${PKG_LOCALTEXMFPREFIX}/tex/latex/dhucs/
 	find ${PKG_LOCALTEXMFPREFIX}/tex/latex/dhucs \
 		-type d -exec chmod ${PKGDIRMODE} {} \;

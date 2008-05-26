@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/09/09 02:46:09 obache Exp $
+# $NetBSD: Makefile,v 1.27 2008/05/26 02:13:25 joerg Exp $
 
 DISTNAME=	jakarta-servletapi-${TOMCAT_VERSION}-src
 PKGNAME=	${DISTNAME:S/-src$//}
@@ -15,6 +15,7 @@ BUILD_DEPENDS+=	apache-ant>=1.4.1:../../devel/apache-ant
 
 WRKSRC=		${WRKDIR}/${DISTNAME}
 USE_JAVA2=	yes
+USE_TOOLS+=	pax
 MAKE_FILE=	build.xml
 PLIST_SRC=	${PKGDIR}/PLIST ${WRKDIR}/PLIST.javadoc
 
@@ -38,7 +39,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${PREFIX}/${DOCDIR}
-	cd ${WRKDIR}/dist/servletapi/docs && ${PAX} -rw -pp . ${PREFIX}/${DOCDIR}
+	cd ${WRKDIR}/dist/servletapi/docs && pax -rw -pp . ${PREFIX}/${DOCDIR}
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/java-env.mk"

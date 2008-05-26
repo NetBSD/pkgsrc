@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/03/10 10:33:38 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2008/05/26 02:13:19 joerg Exp $
 #
 
 DISTNAME=	starfighter-1.1-1
@@ -12,7 +12,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.parallelrealities.co.uk/starfighter.php
 COMMENT=	Old school 2D shoot them up
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pax
 USE_LANGUAGES=	c++
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-1$//}
 
@@ -23,7 +23,7 @@ MAKE_FILE=	makefile
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/starfighter/music
 	${CHMOD} 644 ${WRKDIR}/music/*
-	cd ${WRKDIR}/music && ${PAX} -rw . \
+	cd ${WRKDIR}/music && pax -rw . \
 		${PREFIX}/share/starfighter/music
 
 .include "../../audio/SDL_mixer/buildlink3.mk"

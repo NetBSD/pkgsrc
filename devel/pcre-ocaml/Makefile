@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/04 11:02:24 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/26 02:13:17 joerg Exp $
 #
 
 DISTNAME=		pcre-ocaml-5.11.2
@@ -14,7 +14,7 @@ DEPENDS+=		ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 
 .include "../../mk/bsd.prefs.mk"
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pax
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
     (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
 PLIST_SRC=		PLIST PLIST.opt
@@ -26,7 +26,7 @@ EGDIR=			${PREFIX}/share/examples/pcre-ocaml
 INSTALLATION_DIRS=	${EGDIR}
 
 post-install:
-	cd ${WRKSRC}/examples && ${PAX} -rw -pm . ${EGDIR}
+	cd ${WRKSRC}/examples && pax -rw -pm . ${EGDIR}
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"

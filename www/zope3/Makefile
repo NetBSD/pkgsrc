@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/12/21 16:18:35 taca Exp $
+# $NetBSD: Makefile,v 1.19 2008/05/26 02:13:26 joerg Exp $
 #
 
 DISTNAME=		Zope-3.3.1
@@ -45,8 +45,10 @@ MESSAGE_SUBST+=		ZOPE3_USER=${ZOPE3_USER:Q} \
 .include "../../mk/bsd.prefs.mk"
 
 .if !empty(MACHINE_PLATFORM:MNetBSD-1.[0-6]*)
-EXTRACT_USING=		gtar
+EXTRACT_USING=		bsdtar
 .endif
+
+USE_TOOLS+=		pax
 
 pre-install:
 	${FIND} ${WRKSRC} -name "*.orig" -type f -print | ${XARGS} ${RM} -f
@@ -56,9 +58,9 @@ post-install:
 	${LN} -s ${ZOPE3_DIR}/bin/mkzopeinstance ${PREFIX}/bin
 	${LN} -s ${ZOPE3_DIR}/bin/zopetest ${PREFIX}/bin
 	${INSTALL_DATA_DIR} ${ZOPE3_DOCDIR}
-	cd ${WRKSRC}/Zope && ${PAX} -r -w LICENSES.txt ZopePublicLicense.txt \
+	cd ${WRKSRC}/Zope && pax -r -w LICENSES.txt ZopePublicLicense.txt \
 		${ZOPE3_DOCDIR}
-	cd ${WRKSRC}/Zope/doc && ${PAX} -r -w *.txt ${ZOPE3_DOCDIR}
+	cd ${WRKSRC}/Zope/doc && pax -r -w *.txt ${ZOPE3_DOCDIR}
 
 .include "Makefile.common"
 .include "../../devel/zlib/buildlink3.mk"

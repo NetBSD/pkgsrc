@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/10/31 21:45:33 gdt Exp $
+# $NetBSD: Makefile,v 1.25 2008/05/26 02:13:24 joerg Exp $
 
 DISTNAME=		sm_linux_v314_install
 PKGNAME=		storage-manager-3.14
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.rpm
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://opensource.adaptec.com/
 COMMENT=		Adaptec Storage Management software
+
+USE_TOOLS+=	pax
 
 LICENSE=		generic-nonlicense
 RESTRICTED=		Redistribution not permitted
@@ -42,7 +44,7 @@ INSTALLATION_DIRS=	etc/rc.d sbin
 do-extract:
 	${MKDIR} ${WRKSRC}
 	cd ${WRKSRC} && rpm2cpio ${DISTDIR}/${DISTNAME}.rpm > ${DISTNAME}.cpio
-	cd ${WRKSRC} && ${PAX} -O -d -rf ${DISTNAME}.cpio
+	cd ${WRKSRC} && pax -O -d -rf ${DISTNAME}.cpio
 
 do-patch:
 	${SED}	-e "s,@PREFIX@,${PREFIX},g"			\

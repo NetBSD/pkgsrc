@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/04/25 20:39:13 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2008/05/26 02:13:25 joerg Exp $
 #
 
 DISTNAME=		mod_python-2.7.10
@@ -11,6 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.modpython.org/
 COMMENT=		Python interpreter embedded into Apache
 
+USE_TOOLS+=	pax
+
 CONFLICTS=	ap-python-[0-9]*
 
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
@@ -22,7 +24,7 @@ PYTHON_VERSIONS_ACCEPTED=	23 21
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/ap-mod_python
-	cd ${WRKSRC} && ${PAX} -rw -s /doc-html/ap-mod_python/ \
+	cd ${WRKSRC} && pax -rw -s /doc-html/ap-mod_python/ \
 		-pe doc-html ${PREFIX}/share/doc/html
 	${ECHO} lib/httpd/mod_python.so >${PLIST_SRC}
 	cd ${PREFIX} && ${FIND} ${PYSITELIB}/mod_python \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/04/07 17:45:40 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2008/05/26 02:13:16 joerg Exp $
 #
 
 DISTNAME=		mu-conference-0.6.0
@@ -19,7 +19,7 @@ WRKSRC=			${WRKDIR}/jcr-0.1.2
 SUBWRKSRC=		${WRKSRC}/${DISTNAME}/src
 XMLCONFIG=		${WRKDIR}/${DISTNAME}/muc-jcr.xml
 
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pax pkg-config
 
 PKG_SYSCONFSUBDIR=	jabberd
 RCD_SCRIPTS=		muc
@@ -48,7 +48,7 @@ pre-configure:
 		${XMLCONFIG:Q}.in > ${XMLCONFIG:Q}
 
 pre-build:
-	cd ${WRKDIR:Q} && ${PAX} -rw -pe ${DISTNAME:Q} ${WRKSRC:Q}
+	cd ${WRKDIR:Q} && pax -rw -pe ${DISTNAME:Q} ${WRKSRC:Q}
 
 post-build:
 	${CP} ${WRKSRC:Q}/src/main.c ${WRKSRC:Q}/src/jcomp.mk ${SUBWRKSRC:Q}

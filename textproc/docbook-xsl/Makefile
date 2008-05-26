@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2007/10/01 23:39:20 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.49 2008/05/26 02:13:24 joerg Exp $
 #
 
 DISTNAME=	docbook-xsl-1.73.2
@@ -18,7 +18,7 @@ DEPENDS+=	docbook-xml>=4.2:../../textproc/docbook-xml
 USE_LANGUAGES=	# empty
 NO_BUILD=	YES
 
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	pax perl:run
 REPLACE_PERL+=	fo/pdf2index
 
 EGDIR=		${PREFIX}/share/examples/docbook-xsl
@@ -32,13 +32,13 @@ XML_CATALOGS=	${XSLDIR}/catalog.xml
 INSTALLATION_DIRS=	${EGDIR} ${XSLDIR}
 
 do-install:
-	cd ${WRKSRC}/template && ${PAX} -rw -pp -pm . ${DESTDIR}${EGDIR}
+	cd ${WRKSRC}/template && pax -rw -pp -pm . ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/VERSION ${DESTDIR}${XSLDIR}
 	${INSTALL_DATA} ${WRKSRC}/catalog.xml ${DESTDIR}${XSLDIR}/catalog.xml
 	for d in ${XSLMODS}; do \
 	    ${ECHO} "${INSTALL_DATA_DIR} ${DESTDIR}${XSLDIR}/$$d"; \
-	    ${ECHO} "cd ${WRKSRC} && ${PAX} -rw -pp -pm $$d ${DESTDIR}${XSLDIR}/"; \
-	    cd ${WRKSRC} && ${PAX} -rw -pp -pm $$d ${DESTDIR}${XSLDIR}/; \
+	    ${ECHO} "cd ${WRKSRC} && pax -rw -pp -pm $$d ${DESTDIR}${XSLDIR}/"; \
+	    cd ${WRKSRC} && pax -rw -pp -pm $$d ${DESTDIR}${XSLDIR}/; \
 	done
 	for f in `${FIND} ${DESTDIR}${XSLDIR} -name \*.orig -print` ; do \
 		${ECHO} "Remove .orig file $$f" ; \

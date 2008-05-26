@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.13 2008/03/07 05:06:16 jlam Exp $
+# $NetBSD: Makefile.common,v 1.14 2008/05/26 02:13:25 joerg Exp $
 
 DISTNAME=		${MOZILLA}${MOX_EXTRA}-bin	# overridden below
 PKGNAME=		${MOZILLA}${MOZ_EXTRA}-bin-${MOZ_VER}
@@ -10,6 +10,7 @@ HOMEPAGE?=		http://www.mozilla.org/
 WRKSRC?=		${WRKDIR}/${MOZILLA}
 BUILD_DIRS?=		# empty
 USE_LANGUAGES=		# empty
+USE_TOOLS+=		pax
 
 FILESDIR=		${.CURDIR}/../../www/seamonkey-bin/files
 MOZILLA_SCRIPT?=	${FILESDIR}/mozilla.sh
@@ -67,7 +68,7 @@ post-extract:
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${MOZILLA_LIB}
-	cd ${WRKSRC} && ${PAX} -rw -pm . ${DESTDIR}${MOZILLA_LIB}
+	cd ${WRKSRC} && pax -rw -pm . ${DESTDIR}${MOZILLA_LIB}
 	${INSTALL_SCRIPT} ${WRKDIR}/${MOZILLA}.sh \
 		${DESTDIR}${PREFIX}/bin/${MOZILLA}${MOZ_EXTRA}-${MOZ_PLATFORM}
 	@${FIND} ${DESTDIR}${MOZILLA_LIB} -type f -print \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/09/05 01:06:07 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2008/05/26 02:13:21 joerg Exp $
 #
 
 DISTNAME=	twelf-1-4
@@ -18,6 +18,8 @@ NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
+
+USE_TOOLS+=	pax
 
 WRKSRC=		${WRKDIR}/twelf
 MAKE_FILE=	smlnj/Makefile
@@ -53,10 +55,10 @@ post-build:
 	find ${WRKSRC} -name "*.orig" | xargs rm
 
 do-install:
-	cd ${WRKSRC} && ${PAX} -rw -pam bin ${TWELF_LIBDIR}
+	cd ${WRKSRC} && pax -rw -pam bin ${TWELF_LIBDIR}
 	${LN} -sf ${TWELF_LIBDIR}/bin/* ${PREFIX}/bin
 
-	cd ${WRKSRC}/emacs && ${PAX} -rw -pam * ${TWELF_EMACSDIR}
+	cd ${WRKSRC}/emacs && pax -rw -pam * ${TWELF_EMACSDIR}
 	${LN} -sf ${TWELF_EMACSDIR} ${TWELF_LIBDIR}/emacs
 
 	cd ${WRKSRC}/doc; for t in dvi pdf ps; do			\
@@ -69,9 +71,9 @@ do-install:
 		${INSTALL_DATA} "$$f" ${PREFIX}/${PKGINFODIR};		\
 	done
 
-	cd ${WRKSRC}/doc/html && ${PAX} -rw -pam * ${TWELF_HTMLDOCDIR}
+	cd ${WRKSRC}/doc/html && pax -rw -pam * ${TWELF_HTMLDOCDIR}
 
-	cd ${WRKSRC}/examples && ${PAX} -rw -pam * ${TWELF_EXAMPLEDIR}
+	cd ${WRKSRC}/examples && pax -rw -pam * ${TWELF_EXAMPLEDIR}
 	${LN} -sf ${TWELF_EXAMPLEDIR} ${TWELF_LIBDIR}/examples
 
 .include "../../mk/emacs.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/03/04 18:12:59 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/26 02:13:22 joerg Exp $
 #
 
 DISTNAME=	lag-2.1
@@ -19,9 +19,11 @@ WRKSRC=		${WRKDIR}/lag
 NO_BUILD=	YES
 GAP_PKG_NAME=	lag
 
+USE_TOOLS+=	pax
+
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${GAP_PKG_ROOT}
-	cd ${WRKDIR} && ${PAX} -rw ${GAP_PKG_NAME} ${DESTDIR}${GAP_PKG_ROOT}
+	cd ${WRKDIR} && pax -rw ${GAP_PKG_NAME} ${DESTDIR}${GAP_PKG_ROOT}
 
 .include "../../math/gap/gap.package.mk"
 .include "../../mk/bsd.pkg.mk"

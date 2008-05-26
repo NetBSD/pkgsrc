@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/03/03 02:19:52 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2008/05/26 02:13:16 joerg Exp $
 #
 
 DISTNAME=		tik-0.90
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/tik
 NO_BUILD=		yes
-USE_TOOLS+=		wish:run
+USE_TOOLS+=		pax wish:run
 
 REPLACE_INTERPRETER+=	wish
 REPLACE.wish.old=	.*sh
@@ -53,12 +53,12 @@ do-install:
 		${WRKSRC}/example.pkgrc \
 		${DESTDIR}${TIKDIR}
 	cd ${WRKSRC} && \
-		${PAX} -rw components ${DESTDIR}${TIKDIR} && \
-		${PAX} -rw media ${DESTDIR}${TIKDIR} && \
-		${PAX} -rw packages ${DESTDIR}${TIKDIR} && \
-		${PAX} -rw strs ${DESTDIR}${TIKDIR}
+		pax -rw components ${DESTDIR}${TIKDIR} && \
+		pax -rw media ${DESTDIR}${TIKDIR} && \
+		pax -rw packages ${DESTDIR}${TIKDIR} && \
+		pax -rw strs ${DESTDIR}${TIKDIR}
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/tik
-	cd ${WRKSRC}/doc && ${PAX} -rw . ${DESTDIR}${PREFIX}/share/doc/tik
+	cd ${WRKSRC}/doc && pax -rw . ${DESTDIR}${PREFIX}/share/doc/tik
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/tik
 	${INSTALL_DATA} \
 		${WRKSRC}/example.awayrc \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/03/03 17:45:37 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2008/05/26 02:13:18 joerg Exp $
 #
 
 DISTNAME=		teem-1.8.0-src
@@ -13,7 +13,7 @@ COMMENT=		Libraries for manipulation of Structured Scientific Data
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake pax
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -58,9 +58,9 @@ pre-install:
 		${WRKSRC}/${TEEM_ARCH}/lib/.empty
 
 do-install:
-	cd ${WRKSRC}/include && ${PAX} -rw . ${DESTDIR}${PREFIX}/include/
-	cd ${WRKSRC}/${TEEM_ARCH}/bin && ${PAX} -rw . ${DESTDIR}${PREFIX}/bin/
-	cd ${WRKSRC}/${TEEM_ARCH}/lib && ${PAX} -rw . ${DESTDIR}${PREFIX}/lib/
+	cd ${WRKSRC}/include && pax -rw . ${DESTDIR}${PREFIX}/include/
+	cd ${WRKSRC}/${TEEM_ARCH}/bin && pax -rw . ${DESTDIR}${PREFIX}/bin/
+	cd ${WRKSRC}/${TEEM_ARCH}/lib && pax -rw . ${DESTDIR}${PREFIX}/lib/
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/03/10 21:03:18 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2008/05/26 02:13:20 joerg Exp $
 #
 
 DISTNAME=	GraphViz-2.02
@@ -14,6 +14,8 @@ COMMENT=	Perl interface to the Graphviz tools set
 # This is for the 'test' target
 BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
 
+USE_TOOLS+=	pax
+
 DEPENDS+=	p5-IPC-Run>=0.74:../../devel/p5-IPC-Run
 DEPENDS+=	graphviz-[0-9]*:../../graphics/graphviz
 
@@ -24,7 +26,7 @@ REPLACE_PERL+=	examples/*
 
 post-install:
 	cd ${WRKSRC}/examples &&	\
-	  ${PAX} -pm -rw . ${PREFIX}/share/examples/p5-GraphViz
+	  pax -pm -rw . ${PREFIX}/share/examples/p5-GraphViz
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

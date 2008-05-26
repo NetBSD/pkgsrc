@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/03/04 17:57:18 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2008/05/26 02:13:22 joerg Exp $
 
 DISTNAME=	ingo-h3-${INGOVER}
 PKGNAME=	ingo-${INGOVER}
@@ -15,6 +15,8 @@ DEPENDS+=	horde>=3.0.0:../../www/horde
 PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/bsd.prefs.mk"
+
+USE_TOOLS+=	pax
 
 DOCDIR=		${PREFIX}/share/doc/ingo
 EGDIR=		${PREFIX}/share/examples/ingo
@@ -75,7 +77,7 @@ do-install:
 .	endfor
 
 .	for d in ${PAXDIRS}
-		cd ${WRKSRC}/${d:Q} && ${PAX} -rwpma . ${DESTDIR}${INGODIR}/${d:Q}
+		cd ${WRKSRC}/${d:Q} && pax -rwpma . ${DESTDIR}${INGODIR}/${d:Q}
 .	endfor
 
 	${INSTALL_DATA} ${WRKSRC}/config/*.dist ${DESTDIR}${INGODIR}/config

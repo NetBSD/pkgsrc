@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/10/15 19:37:26 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2008/05/26 02:13:26 joerg Exp $
 #
 
 DISTNAME=	WebSVN_161
@@ -16,6 +16,8 @@ DEPENDS+=	${PHP_PKG_PREFIX}-zlib-[0-9]*:../../archivers/php-zlib
 
 WRKSRC=		${WRKDIR}/WebSVN
 NO_BUILD=	yes
+
+USE_TOOLS+=	pax
 
 PKG_SYSCONFDIR.websvn=	${PREFIX}/${HTTPD_ROOT}/websvn/include
 
@@ -38,7 +40,7 @@ post-extract:
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/include/distconfig.inc ${EGDIR}
-	cd ${WRKSRC} && ${PAX} -rwppm . ${PREFIX}/${HTTPD_ROOT}/websvn
+	cd ${WRKSRC} && pax -rwppm . ${PREFIX}/${HTTPD_ROOT}/websvn
 
 post-install:
 	${RM} ${PREFIX}/${HTTPD_ROOT}/websvn/include/distconfig.inc

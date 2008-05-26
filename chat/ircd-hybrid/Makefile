@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2008/01/18 05:06:24 tnn Exp $
+# $NetBSD: Makefile,v 1.38 2008/05/26 02:13:16 joerg Exp $
 
 DISTNAME=	ircd-hybrid-7.2.3
 PKGREVISION=	1
@@ -11,6 +11,8 @@ HOMEPAGE=	http://ircd-hybrid.com/
 COMMENT=	IRC server with many options
 
 CONFLICTS+=	ircu-[0-9]*
+
+USE_TOOLS+=	pax
 
 GNU_CONFIGURE=	YES
 BUILD_DEFS+=	IRCD_HYBRID_SYSLOG_FACILITY IRCD_HYBRID_NICLEN \
@@ -106,7 +108,7 @@ post-install:
 
 	${RM} ${WRKSRC}/doc/Makefile
 	${RM} ${WRKSRC}/doc/Makefile.in
-	cd ${WRKSRC}/doc && ${PAX} -rwppm . ${HYBRID_DOC}/doc
+	cd ${WRKSRC}/doc && pax -rwppm . ${HYBRID_DOC}/doc
 
 	cd ${WRKSRC}/messages && \
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} install

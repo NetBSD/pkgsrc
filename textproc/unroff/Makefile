@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2007/12/02 11:44:26 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2008/05/26 02:13:24 joerg Exp $
 
 DISTNAME=		unroff-1.0
 PKGNAME=		unroff-1.0.2
@@ -15,6 +15,8 @@ COMMENT=		Programmable troff translator with backend for HTML
 
 DIST_SUBDIR=		unroff
 
+USE_TOOLS+=	pax
+
 CFLAGS+=		-DBSD
 BUILD_DIRS=		src
 
@@ -29,7 +31,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${LIBDIR}
 	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man1
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} src/unroff ${PREFIX}/bin/unroff
-	cd ${WRKSRC} && ${PAX} -wr scm ${LIBDIR}
+	cd ${WRKSRC} && pax -wr scm ${LIBDIR}
 	${INSTALL_DATA_DIR} ${LIBDIR}/doc
 	cd ${WRKSRC} && ${INSTALL_DATA} doc/manual.ms ${LIBDIR}/doc
 	${INSTALL_DATA_DIR} ${LIBDIR}/misc

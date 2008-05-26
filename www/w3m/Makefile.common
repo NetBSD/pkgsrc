@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.48 2008/03/05 18:01:50 jlam Exp $
+# $NetBSD: Makefile.common,v 1.49 2008/05/26 02:13:25 joerg Exp $
 #
 
 DISTNAME=	w3m-${W3M_VERS}
@@ -18,7 +18,7 @@ USE_PKGLOCALEDIR=       yes
 W3M_VERS=	0.5.2
 
 # For w3mman, xface2xpm, cgi scripts.
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	perl:run pax
 
 DOCDIR=		share/doc/w3m
 
@@ -63,10 +63,10 @@ post-patch:
 post-install:
 	# Install help files.
 	@cd ${WRKSRC}; ${MAKE_PROGRAM} install-helpfile
-	# Use ${PAX} to discard uid/gid.  Exclude manuals (*.1).
+	# Use pax to discard uid/gid.  Exclude manuals (*.1).
 	${INSTALL_DATA_DIR} ${PREFIX}/${DOCDIR}
-	@cd ${WRKSRC}; ${PAX} -w -s ',.*\.1$$,,' doc doc-jp | \
-	    ( cd ${PREFIX}/${DOCDIR}; ${PAX} -r )
+	@cd ${WRKSRC}; pax -w -s ',.*\.1$$,,' doc doc-jp | \
+	    ( cd ${PREFIX}/${DOCDIR}; pax -r )
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: product.mk,v 1.3 2008/01/16 14:54:41 taca Exp $
+# $NetBSD: product.mk,v 1.4 2008/05/26 02:13:26 joerg Exp $
 #
 
 .if !defined(_ZOPE_PRODUCT_MK)
@@ -19,6 +19,8 @@ _ZOPE_PRODUCT_MK=	# defined
 #
 
 .include "../../www/zope/zopeversion.mk"
+
+USE_TOOLS+=	pax
 
 DEPENDS+=	${ZOPE_DEPENDENCY}
 
@@ -68,7 +70,7 @@ zope-force-build:
 
 .PHONY: zope-install-product
 zope-install-product:
-	cd ${ZOPE_PRODUCT_SRCDIR:Q} && ${PAX} -rw \
+	cd ${ZOPE_PRODUCT_SRCDIR:Q} && pax -rw \
 		-s ',.*/CVS/.*,,'		\
 		-s ',.*/CVS$$,,'		\
 		-s ',.*/\.cvsignore$$,,' 	\

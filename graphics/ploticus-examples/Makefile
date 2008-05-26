@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/03/04 15:39:10 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/26 02:13:20 joerg Exp $
 #
 
 DISTNAME=	plnode141
@@ -14,6 +14,8 @@ COMMENT=	Examples for the ploticus data plotting suite
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_TOOLS+=	pax
+
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
@@ -22,7 +24,7 @@ EXDIR=		${PREFIX}/share/examples/ploticus
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EXDIR}
-	cd ${WRKSRC} && ${PAX} -rw -pp doc gallery tabgallery thumbnails thumbpng ${DESTDIR}${EXDIR}
+	cd ${WRKSRC} && pax -rw -pp doc gallery tabgallery thumbnails thumbpng ${DESTDIR}${EXDIR}
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

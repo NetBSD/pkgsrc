@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/03/02 06:10:33 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2008/05/26 02:13:16 joerg Exp $
 
 DISTNAME=	us2-980812
 PKGNAME=	mbrolavox-${DISTNAME}
@@ -13,6 +13,8 @@ HOMEPAGE=	http://tcts.fpms.ac.be/synthesis/mbrola/
 COMMENT=	American English male voice for MBROLA
 
 DEPENDS+=	mbrola-301h{,nb[0-9]*}:../../audio/mbrola
+
+USE_TOOLS+=	pax
 
 LICENSE=	no-commercial-use
 
@@ -29,6 +31,6 @@ post-extract:
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${MHOME}
-	cd ${WRKSRC} && ${PAX} -rw us2 ${DESTDIR}${MHOME}
+	cd ${WRKSRC} && pax -rw us2 ${DESTDIR}${MHOME}
 
 .include "../../mk/bsd.pkg.mk"

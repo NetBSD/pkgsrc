@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/03 20:17:12 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2008/05/26 02:13:18 joerg Exp $
 #
 
 DISTNAME=	dejavu-ttf-2.21
@@ -16,12 +16,14 @@ USE_X11BASE=	yes
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
+USE_TOOLS+=	pax
+
 FONTS_DIRS.ttf+=	${PREFIX}/lib/X11/fonts/TTF
 
 INSTALLATION_DIRS=	lib/X11/fonts/TTF share/doc/dejavu-ttf
 
 do-install:
-	cd ${WRKSRC} && ${PAX} -rw -pm *.ttf \
+	cd ${WRKSRC} && pax -rw -pm *.ttf \
 		${DESTDIR}${PREFIX}/lib/X11/fonts/TTF/
 	cd ${WRKSRC} && ${INSTALL_DATA} AUTHORS BUGS LICENSE NEWS README \
 		${DESTDIR}${PREFIX}/share/doc/dejavu-ttf

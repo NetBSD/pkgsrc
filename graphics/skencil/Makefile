@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/02/22 19:26:36 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/05/26 02:13:20 joerg Exp $
 #
 
 DISTNAME=	skencil-0.6.17
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=sketch/}
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://sketch.sourceforge.net/
 COMMENT=	Interactive drawing program
+
+USE_TOOLS+=	pax
 
 PYTHON_PATCH_SCRIPTS= sk2ppm.py sk2ps.py skconvert.py skencil.py skshow.py
 SK_CONF_ARGS=	--imaging-include=${BUILDLINK_PREFIX.pyimaging}/${PYINC}/PIL
@@ -33,11 +35,11 @@ SKETCHEXDIR=	${PREFIX}/share/examples/skencil
 
 post-install:
 	${INSTALL_DATA_DIR} ${SKETCHDOCDIR}
-	cd ${WRKSRC} && ${PAX} -rwpm -v ${SKETCHDOCS} ${SKETCHDOCDIR}
+	cd ${WRKSRC} && pax -rwpm -v ${SKETCHDOCS} ${SKETCHDOCDIR}
 	${RM} ${SKETCHDOCDIR}/Doc/fonts.alias
 	${RM} ${SKETCHDOCDIR}/Doc/fonts.scale
 	${INSTALL_DATA_DIR} ${SKETCHEXDIR}
-	cd ${WRKSRC}/Examples && ${PAX} -rwpm -v . ${SKETCHEXDIR}
+	cd ${WRKSRC}/Examples && pax -rwpm -v . ${SKETCHEXDIR}
 
 .include "../../lang/python/application.mk"
 .include "../../graphics/py-imaging/buildlink3.mk"

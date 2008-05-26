@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.58 2008/03/02 06:10:31 jlam Exp $
+# $NetBSD: Makefile,v 1.59 2008/05/26 02:13:15 joerg Exp $
 
 DISTNAME=	festival-1.95-beta
 PKGNAME=	festival-1.95beta
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_LANGUAGES=	c c++
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pax
 MAKE_JOBS_SAFE=	no
 
 SPEECHTOOLS=	${WRKSRC}/speech_tools
@@ -93,7 +93,7 @@ do-install:
 	${FIND} ${FESTIVAL}/lib -type d -print | ${XARGS} ${CHMOD} 755
 	-@${MV} ${FESTIVAL}/lib/etc/unknown_${OPSYS}			\
 		${FESTIVAL}/lib/etc/pkgsrc
-	cd ${FESTIVAL} && ${PAX} -rw lib examples ${DESTDIR}${FHOME}
+	cd ${FESTIVAL} && pax -rw lib examples ${DESTDIR}${FHOME}
 	${RM} ${DESTDIR}${FHOME}/examples/Makefile.orig
 	${RM} -f ${DESTDIR}${FHOME}/lib/etc/unknown_${OPSYS}/audsp	\
 		${DESTDIR}${FHOME}/lib/etc/pkgsrc/audsp

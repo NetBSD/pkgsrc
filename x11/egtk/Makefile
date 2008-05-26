@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/03/11 20:09:02 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2008/05/26 02:13:26 joerg Exp $
 #
 
 DISTNAME=	eGTK_0.3.4
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.netlabs.net/hp/richieb/gtk_eiffel.html
 COMMENT=	Eiffel/GTK+ interface for SmallEiffel
 
 DEPENDS+=	SmartEiffel-[0-9]*:../../lang/SmartEiffel
+
+USE_TOOLS+=	pax
 
 WRKSRC=		${WRKDIR}/eGTK
 
@@ -46,15 +48,15 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/C/se/eif_gtk.a ${PREFIX}/lib/libegtk_se.a
 
 	${INSTALL_DATA_DIR} ${PREFIX}/share/egtk
-	cd ${WRKSRC}/lib && ${PAX} -rw * ${PREFIX}/share/egtk
-	cd ${WRKSRC} && ${PAX} -rw pixmaps ${PREFIX}/share/egtk
+	cd ${WRKSRC}/lib && pax -rw * ${PREFIX}/share/egtk
+	cd ${WRKSRC} && pax -rw pixmaps ${PREFIX}/share/egtk
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/egtk
 	${INSTALL_DATA_DIR} ${PREFIX}/share/egtk/se
 	${INSTALL_DATA} ${WRKSRC}/C/se/cecil.se ${PREFIX}/share/egtk/se
 	${INSTALL_DATA} ${WRKSRC}/C/se/eif_gtk_se.c ${PREFIX}/share/egtk/se
 
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/egtk
-	cd ${WRKSRC}/examples && ${PAX} -rw * ${PREFIX}/share/examples/egtk
+	cd ${WRKSRC}/examples && pax -rw * ${PREFIX}/share/examples/egtk
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${PREFIX}/share/examples/egtk
 
 post-install:

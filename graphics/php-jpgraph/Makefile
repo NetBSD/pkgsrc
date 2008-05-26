@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/04/07 17:49:55 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2008/05/26 02:13:20 joerg Exp $
 
 DISTNAME=	jpgraph-1.18
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME}
@@ -12,6 +12,8 @@ COMMENT=	Object Oriented class library for PHP
 CONFLICTS=	php-jgraph-[0-9]*
 
 DEPENDS+=	${PHP_PKG_PREFIX}-gd>=4.3.1:../../graphics/php-gd
+
+USE_TOOLS+=	pax
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -51,7 +53,7 @@ do-install:
 		${INSTALL_DATA} ${WRKSRC}/$$f \
 			${DESTDIR}${PREFIX}/share/doc/php-jpgraph; \
 	done
-	cd ${WRKSRC}/docs && ${PAX} -rw . \
+	cd ${WRKSRC}/docs && pax -rw . \
 		${DESTDIR}${PREFIX}/share/doc/php-jpgraph/html
 	${FIND} ${DESTDIR}${PREFIX}/share/doc/php-jpgraph/html -type d |
 	${XARGS} ${CHMOD} ${PKGDIRMODE}

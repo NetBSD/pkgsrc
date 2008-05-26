@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.39 2008/01/21 01:39:02 tnn Exp $
+# $NetBSD: Makefile.common,v 1.40 2008/05/26 02:13:21 joerg Exp $
 
 CATEGORIES=	lang java
 EXTRACT_SUFX=	.bin
@@ -60,6 +60,6 @@ post-fetch:
 
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${JAVA_HOME}
-	cd ${WRKSRC} && ${PAX} -rwp ma . ${DESTDIR}${JAVA_HOME}
+	cd ${WRKSRC} && pax -rwp ma . ${DESTDIR}${JAVA_HOME}
 
 .include "../../mk/java-env.mk"

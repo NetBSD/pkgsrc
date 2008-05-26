@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2008/01/19 09:16:20 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2008/05/26 02:13:19 joerg Exp $
 #
 
 DISTNAME=	angband-3.0.3
@@ -15,6 +15,8 @@ COMMENT=	Tolkien based variant of Moria for X11 displays
 CONFLICTS=	angband-tty-[0-9]*
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
+
+USE_TOOLS+=	pax
 
 INCOMPAT_CURSES=	NetBSD-1.5*-* NetBSD-1.6[-_.]*-*
 INCOMPAT_CURSES+=	NetBSD-1.6[A-M]-*
@@ -38,7 +40,7 @@ SUBST_SED.070=		-e 's,070,770,g'
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/games/angband/lib/info
 	cd ${PREFIX}/share/games/angband/lib/info/ && \
-		 ${PAX} -O -zrf ${DISTDIR}/${SPOILERFILE}
+		 pax -O -zrf ${DISTDIR}/${SPOILERFILE}
 	${CHOWN} -R bin:games ${PREFIX}/share/games/angband
 	${FIND} ${PREFIX}/share/games/angband -name delete.me -exec ${RM} {} \;
 

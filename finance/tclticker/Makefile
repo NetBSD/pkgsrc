@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/03/03 19:31:21 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2008/05/26 02:13:18 joerg Exp $
 #
 
 DISTNAME=	tclticker-1.1
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Stock-quote ticker tape application
 
 DEPENDS+=	tk>=8.3.2:../../x11/tk
+
+USE_TOOLS+=	pax
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -29,6 +31,6 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC:Q}/tclticker ${DESTDIR}${PREFIX:Q}/bin
 	${INSTALL_SCRIPT} ${WRKSRC:Q}/mailquote ${DESTDIR}${PREFIX:Q}/bin
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX:Q}/share/tclticker
-	cd ${WRKSRC:Q}/lib && ${PAX} -rw . ${DESTDIR}${PREFIX:Q}/share/tclticker
+	cd ${WRKSRC:Q}/lib && pax -rw . ${DESTDIR}${PREFIX:Q}/share/tclticker
 
 .include "../../mk/bsd.pkg.mk"

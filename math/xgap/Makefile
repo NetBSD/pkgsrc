@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/03/04 18:12:59 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2008/05/26 02:13:22 joerg Exp $
 #
 
 DISTNAME=	xgap4r16
@@ -17,6 +17,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/${GAP_PKG_NAME}
 GNU_CONFIGURE=	YES
 BUILD_TARGET=	default
+
+USE_TOOLS+=	pax
 
 CONFIGURE_ENV+=	GAP_DIRECTORY=${GAP_DIRECTORY:Q}
 
@@ -37,7 +39,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/init.g ${DESTDIR}${GAP_PKG_DIRECTORY}
 	for I in doc examples htm lib; do				\
 		cd ${WRKSRC} &&						\
-		${PAX} -rw $$I ${DESTDIR}${GAP_PKG_DIRECTORY};		\
+		pax -rw $$I ${DESTDIR}${GAP_PKG_DIRECTORY};		\
 	done
 
 .include "../../math/gap/gap.package.mk"

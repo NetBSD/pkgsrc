@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/08/08 17:21:15 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2008/05/26 02:13:20 joerg Exp $
 #
 
 DISTNAME=	tuxracer-0.61
@@ -23,16 +23,18 @@ CONFIGURE_ARGS+=	--with-tcl-libs=${BUILDLINK_PREFIX.tcl}/lib
 CONFIGURE_ENV+=		CFLAGS=${CFLAGS:M*:Q}
 USE_LANGUAGES=	c c++
 
+USE_TOOLS+=	pax
+
 INSTALLATION_DIRS=	share/doc/html/tuxracer share/examples/tuxracer \
 			share/tuxracer
 
 post-install:
 	cd ${WRKSRC}/html && \
-		${PAX} -rw .  ${DESTDIR}${PREFIX}/share/doc/html/tuxracer/
+		pax -rw .  ${DESTDIR}${PREFIX}/share/doc/html/tuxracer/
 	cd ${WRKSRC}/contrib && \
-		${PAX} -rw .  ${DESTDIR}${PREFIX}/share/examples/tuxracer/
+		pax -rw .  ${DESTDIR}${PREFIX}/share/examples/tuxracer/
 	cd ${WRKDIR}/${PKGBASE}-data-${PKGVERSION:C/nb[0-9]*$//} && \
-		${PAX} -rw .  ${DESTDIR}${PREFIX}/share/tuxracer/
+		pax -rw .  ${DESTDIR}${PREFIX}/share/tuxracer/
 	cd ${DESTDIR}${PREFIX}/share/tuxracer && \
 		${FIND} . -type f -exec ${CHMOD} 444 {} \;
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/03/24 22:40:22 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2008/05/26 02:13:18 joerg Exp $
 #
 
 DISTNAME=	ttf-bitstream-vera-1.10
@@ -18,12 +18,14 @@ USE_X11BASE=	YES
 NO_CONFIGURE=	YES
 NO_BUILD=	YES
 
+USE_TOOLS+=	pax
+
 INSTALLATION_DIRS=	lib/X11/fonts/TTF \
 			share/doc/vera-ttf share/examples/vera-ttf
 FONTS_DIRS.ttf=	${PREFIX}/lib/X11/fonts/TTF
 
 do-install:
-	cd ${WRKSRC} && ${PAX} -rw -pm *.ttf ${DESTDIR}${FONTS_DIRS.ttf}
+	cd ${WRKSRC} && pax -rw -pm *.ttf ${DESTDIR}${FONTS_DIRS.ttf}
 	${INSTALL_DATA} ${WRKSRC}/local.conf ${DESTDIR}${PREFIX}/share/examples/vera-ttf
 	cd ${WRKSRC} && ${INSTALL_DATA} *.TXT ${DESTDIR}${PREFIX}/share/doc/vera-ttf
 

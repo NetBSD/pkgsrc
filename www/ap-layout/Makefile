@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/10/04 22:04:09 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/05/26 02:13:25 joerg Exp $
 #
 
 DISTNAME=	mod_layout-3.2
@@ -11,6 +11,8 @@ MAINTAINER=	grant@NetBSD.org
 HOMEPAGE=	http://tangent.org/
 COMMENT=	Apache module to wrap static or dynamic content
 
+USE_TOOLS+=	pax
+
 CONFLICTS=	ap-layout-[0-9]*
 
 APACHE_MODULE_NAME=	mod_layout.so
@@ -21,7 +23,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${LAYOUT_DIR}
 	${INSTALL_DATA} ${WRKSRC}/faq.html ${LAYOUT_DIR}
 	${INSTALL_DATA_DIR} ${LAYOUT_DIR}/directives
-	cd ${WRKSRC}/directives && ${PAX} -rw . ${LAYOUT_DIR}/directives
+	cd ${WRKSRC}/directives && pax -rw . ${LAYOUT_DIR}/directives
 
 .include "../../www/apache/module.mk"
 .include "../../mk/bsd.pkg.mk"

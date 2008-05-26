@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/12/02 13:04:15 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/26 02:13:24 joerg Exp $
 
 DISTNAME=	syslog-ng-1.6.11
 PKGREVISION=	1
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.balabit.com/downloads/syslog-ng/1.6/src/
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.balabit.com/network-security/syslog-ng/
 COMMENT=	Syslog-ng tries to fill the gaps original syslogd's were lacking
+
+USE_TOOLS+=	pax
 
 GNU_CONFIGURE=		YES
 RCD_SCRIPTS=		syslogng
@@ -49,7 +51,7 @@ CONFIGURE_ARGS+=	--enable-spoof-source
 
 pre-build:
 	cd ${WRKSRC}/doc/sgml && \
-		${PAX} -O -zrf ${WRKSRC}/doc/sgml/syslog-ng.html.tar.gz
+		pax -O -zrf ${WRKSRC}/doc/sgml/syslog-ng.html.tar.gz
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}

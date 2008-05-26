@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/03/04 06:59:05 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2008/05/26 02:13:19 joerg Exp $
 
 DISTNAME=	wolf-linux-1.33.x86
 PKGNAME=	rtcw-1.33
@@ -27,7 +27,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DIRS=	# empty
 RTCWDIR=	${PREFIX}/lib/lokigames/rtcw
-USE_TOOLS+=	gtar
+USE_TOOLS+=	gtar pax
 EXTRACT_CMD=	${SED} '1,178d' ${DOWNLOADED_DISTFILE} |		\
 		${GTAR} xzf - -C ${WRKSRC}
 
@@ -36,6 +36,6 @@ pre-extract:
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${RTCWDIR}
-	cd ${WRKSRC} && ${PAX} -rw -p am . ${DESTDIR}${RTCWDIR}
+	cd ${WRKSRC} && pax -rw -p am . ${DESTDIR}${RTCWDIR}
 
 .include "../../mk/bsd.pkg.mk"

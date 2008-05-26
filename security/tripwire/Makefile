@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/02/28 11:58:49 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2008/05/26 02:13:23 joerg Exp $
 #
 
 DISTNAME=	tripwire-1.2
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cerias.purdue.edu/about/history/coast/coast-library.html
 COMMENT=	File and directory integrity checker
 
+USE_TOOLS+=	pax
+
 ONLY_FOR_PLATFORM=	NetBSD-*-* FreeBSD-*-* SunOS-*-*
 
 PKG_SYSCONFSUBDIR=	tripwire
@@ -20,7 +22,7 @@ CONF_FILES=		${EGDIR}/tripwire.conf ${PKG_SYSCONFDIR}/tripwire.conf
 AUTO_MKDIRS=			yes
 
 post-extract:
-	cd ${WRKDIR} && ${PAX} -O -rf T1.2.tar
+	cd ${WRKDIR} && pax -O -rf T1.2.tar
 	${CP} ${FILESDIR}/conf-${LOWER_OPSYS}.h ${WRKSRC}/configs
 
 pre-configure:

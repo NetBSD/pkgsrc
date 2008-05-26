@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/06/02 18:28:00 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/26 02:13:25 joerg Exp $
 #
 
 DISTNAME=	blur6ex-0.1.198
@@ -13,6 +13,8 @@ COMMENT=	Weblog and content framework
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.0.0:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql-[0-9]*:../../databases/php-mysql
 DEPENDS+=	mysql-server>=4.1:../../databases/mysql5-server
+
+USE_TOOLS+=	pax
 
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
@@ -46,7 +48,7 @@ do-install:
 		${WRKSRC}/install/INSTALL.txt			\
 		${WRKSRC}/install/blur6ex_tables.sql		\
 		${PREFIX}/share/doc/${PKGBASE}
-	cd ${WRKSRC} && ${PAX} -rwppm '-s|.*/install.*$$||'	\
+	cd ${WRKSRC} && pax -rwppm '-s|.*/install.*$$||'	\
 		'-s|./index.php$$||'				\
 		'-s|./engine/core/db.php$$||' .			\
 		${PREFIX}/${HTTPD_ROOT}/blog

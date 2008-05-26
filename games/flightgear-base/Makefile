@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/14 14:49:53 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/26 02:13:19 joerg Exp $
 #
 
 DISTNAME=	fgfs-base-1.0.0
@@ -21,6 +21,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/data
 NO_BUILD=	yes
 USE_LANGUAGES=	# empty
+USE_TOOLS+=	pax
 
 FG_SHAREDIR=	${PREFIX}/share/FlightGear
 
@@ -29,7 +30,7 @@ do-install:
 	(							\
 	cd ${WRKSRC};						\
 	${FIND} . -type f -name .\* -print|${XARGS} rm -f;	\
-	${PAX} -rwppm . ${DESTDIR}${FG_SHAREDIR};		\
+	pax -rwppm . ${DESTDIR}${FG_SHAREDIR};		\
 	)
 
 .include "../../mk/bsd.pkg.mk"

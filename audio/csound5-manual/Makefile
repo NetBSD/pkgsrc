@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/02 06:10:31 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/26 02:13:15 joerg Exp $
 #
 
 DISTNAME=		Csound${CSOUND_VERSION}_manual_html
@@ -19,10 +19,11 @@ NO_BUILD=		yes
 WRKSRC=			${WRKDIR}/html
 DIST_SUBDIR=		${PKGNAME_NOREV}
 EXTRACT_OPTS_ZIP=	-aqo
+USE_TOOLS+=		pax
 
 INSTALLATION_DIRS+=	share/doc/csound5
 
 do-install:
-	cd ${WRKSRC} && ${PAX} -rw * ${DESTDIR}${PREFIX}/share/doc/csound5
+	cd ${WRKSRC} && pax -rw * ${DESTDIR}${PREFIX}/share/doc/csound5
 
 .include "../../mk/bsd.pkg.mk"

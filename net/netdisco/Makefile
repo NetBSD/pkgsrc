@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/11/12 23:10:08 seb Exp $
+# $NetBSD: Makefile,v 1.21 2008/05/26 02:13:22 joerg Exp $
 #
 
 DISTNAME=		netdisco-0.95_with_mibs
@@ -28,7 +28,7 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 EGDIR=			${PREFIX}/share/examples/${PKGNAME_NOREV}
 
-USE_TOOLS+=	perl:run
+USE_TOOLS+=	pax perl:run
 REPLACE_PERL+=	bin/doc_munge
 REPLACE_PERL+=	bin/pod_arg_link_fix
 REPLACE_PERL+=	bin/test_cdp.pl
@@ -133,7 +133,7 @@ do-build:
 
 do-install:
 	${RM} -f ${WRKSRC:Q}/bin/netdisco_daemon
-	cd ${WRKSRC:Q} && ${PAX} -rw -pp . ${PREFIX:Q}/netdisco
+	cd ${WRKSRC:Q} && pax -rw -pp . ${PREFIX:Q}/netdisco
 	${CHOWN} -R ${NETDISCOUSER}:${NETDISCOGROUP} ${PREFIX:Q}/netdisco
 	${CHMOD} 775 ${PREFIX:Q}/netdisco/html
 	set -e; \
