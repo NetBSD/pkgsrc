@@ -1,10 +1,11 @@
-# $NetBSD: can-be-built-here.mk,v 1.4 2007/02/10 09:01:05 rillig Exp $
+# $NetBSD: can-be-built-here.mk,v 1.5 2008/05/26 22:05:46 tnn Exp $
 #
 # This file checks whether a package can be built in the current pkgsrc
 # environment. It checks the following variables:
 #
 # * NOT_FOR_COMPILER, ONLY_FOR_COMPILER
 # * NOT_FOR_PLATFORM, ONLY_FOR_PLATFORM
+# * NOT_FOR_BULK_PLATFORM
 # * NOT_FOR_UNPRIVILEGED, ONLY_FOR_UNPRIVILEGED
 # * PKG_FAIL_REASON, PKG_SKIP_REASON
 #
@@ -60,6 +61,17 @@ _CBBH.nplat=		yes
 .for p in ${NOT_FOR_PLATFORM}
 .  if !empty(MACHINE_PLATFORM:M${p})
 _CBBH.nplat=		no
+.  endif
+.endfor
+
+# Check NOT_FOR_BULK_PLATFORM
+_CBBH_CHECKS+=		nbplat
+_CBBH_MSGS.nbplat=	"This package is known to stall the bulk build on these platforms: "${NOT_FOR_BULK_PLATFORM:Q}"."
+
+_CBBH.nbplat=		yes
+.for p in ${NOT_FOR_BULK_PLATFORM}
+.  if defined(BATCH) && !empty(MACHINE_PLATFORM:M${p})
+_CBBH.nbplat=		no
 .  endif
 .endfor
 
