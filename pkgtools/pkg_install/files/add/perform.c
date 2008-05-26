@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.6 2008/05/20 15:00:44 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.7 2008/05/26 15:29:03 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.6 2008/05/20 15:00:44 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.7 2008/05/26 15:29:03 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1138,9 +1138,7 @@ pkg_do(const char *pkgpath, int mark_automatic)
 {
 	int status, invalid_sig;
 	void *archive_cookie;
-#ifdef HAVE_SSL
 	void *signature_cookie;
-#endif
 	struct pkg_task *pkg;
 
 	if ((pkg = calloc(1, sizeof(*pkg))) == NULL)
@@ -1158,6 +1156,7 @@ pkg_do(const char *pkgpath, int mark_automatic)
 	    &pkg->pkgname, &signature_cookie);
 #else
 	invalid_sig = 1;
+	signature_cookie = NULL;
 #endif
 
 	if (read_meta_data(pkg))

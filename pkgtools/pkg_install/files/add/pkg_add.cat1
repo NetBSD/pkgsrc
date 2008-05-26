@@ -280,27 +280,18 @@ EEXXAAMMPPLLEESS
      _s_e_c_u_r_i_t_y_/_a_u_d_i_t_-_p_a_c_k_a_g_e_s package and running it after every ppkkgg__aadddd.
 
 CCOONNFFIIGGUURRAATTIIOONN VVAARRIIAABBLLEESS
-     The following variables change the behaviour of ppkkgg__aadddd and can be found
-     in greater detail in pkg_install.conf(5):
+     The following variables change the behaviour of ppkkgg__aadddd and are explained
+     in pkg_install.conf(5):
 
-     CERTIFICATE_ANCHOR_PKGS  Location of the trust anchor for binary pack-
-                              ages.
+     CERTIFICATE_ANCHOR_PKGS
 
-     CERTIFICATE_CHAIN        Location of a file with additional certificates
-                              used to fill holes in the trust chain.
+     CERTIFICATE_CHAIN
 
-     VERIFIED_INSTALLATION    Specify interactiveness and use of digital sig-
-                              nature.  The value "never" just uses the binary
-                              package without requiring a signature.  The
-                              value "always" requires a valid signature and
-                              terminates the installation otherwise.  The
-                              value "trusted" asks before installing packages
-                              without valid signature.  The value "interac-
-                              tive" will always ask the user.
+     VERIFIED_INSTALLATION
 
 SSEEEE AALLSSOO
-     pkg_admin(1), pkg_create(1), pkg_delete(1), pkg_info(1), tar(1),
-     mktemp(3), sysconf(3), pkgsrc(7)
+     pkg_admin(1), pkg_create(1), pkg_delete(1), pkg_info(1),
+     pkg_install.conf(5), tar(1), mktemp(3), sysconf(3), pkgsrc(7)
 
 AAUUTTHHOORRSS
      Jordan Hubbard
@@ -327,4 +318,4 @@ BBUUGGSS
 
      Sure to be others.
 
-NetBSD 4.0                        May 9, 2008                       NetBSD 4.0
+NetBSD 4.0                       May 26, 2008                       NetBSD 4.0

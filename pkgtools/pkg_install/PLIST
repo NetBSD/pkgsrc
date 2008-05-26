@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.10.8.2 2008/05/24 21:54:22 joerg Exp $
+@comment $NetBSD: PLIST,v 1.10.8.3 2008/05/26 15:29:03 joerg Exp $
 man/cat1/pkg_add.0
 man/cat1/pkg_admin.0
 man/cat1/pkg_create.0
 man/cat1/pkg_delete.0
 man/cat1/pkg_info.0
+man/cat5/pkg_install.conf.0
 man/cat5/pkg_summary.0
 man/cat7/pkgsrc.0
 man/man1/pkg_add.1
@@ -11,6 +12,7 @@ man/man1/pkg_admin.1
 man/man1/pkg_create.1
 man/man1/pkg_delete.1
 man/man1/pkg_info.1
+man/man5/pkg_install.conf.5
 man/man5/pkg_summary.5
 man/man7/pkgsrc.7
 sbin/audit-packages

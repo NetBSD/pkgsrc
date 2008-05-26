@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.21.2.4 2008/05/12 15:26:10 joerg Exp $
+# $NetBSD: Makefile.in,v 1.21.2.5 2008/05/26 15:29:03 joerg Exp $
 
 srcdir=		@srcdir@
 
@@ -63,5 +63,7 @@ install:
 	$(INSTALL) -m 755 -d ${DESTDIR}$(cat7dir)
 	$(INSTALL) -m 444 pkg_summary.5 ${DESTDIR}$(man5dir)/pkg_summary.5
 	$(INSTALL) -m 444 pkg_summary.cat5 ${DESTDIR}$(cat5dir)/pkg_summary.0
+	$(INSTALL) -m 444 pkg_install.conf.5 ${DESTDIR}$(man5dir)/pkg_install.conf.5
+	$(INSTALL) -m 444 pkg_install.conf.cat5 ${DESTDIR}$(cat5dir)/pkg_install.conf.0
 	$(INSTALL) -m 444 pkgsrc.7 ${DESTDIR}$(man7dir)/pkgsrc.7
 	$(INSTALL) -m 444 pkgsrc.cat7 ${DESTDIR}$(cat7dir)/pkgsrc.0
