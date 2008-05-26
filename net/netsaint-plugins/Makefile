@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/03/13 17:38:48 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2008/05/26 22:25:25 tnn Exp $
 #
 
 DISTNAME=		netsaint-plugins-1.2.9-4
@@ -11,7 +11,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://netsaintplug.sourceforge.net/
 COMMENT=		NetSaint plugins
 
-BROKEN_IN=		pkgsrc-2006Q4
+NOT_FOR_BULK_PLATFORM=	Linux-*-*
 
 DEPENDS+=		netsaint-base-[0-9]*:../../net/netsaint-base
 .if !exists(/usr/bin/ssh)

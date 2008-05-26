@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/09/09 02:43:11 obache Exp $
+# $NetBSD: Makefile,v 1.18 2008/05/26 22:25:25 tnn Exp $
 #
 
 DISTNAME=	netsaint-plugins-1.2.9-4
@@ -15,6 +15,8 @@ DEPENDS+=	netsaint-base-[0-9]*:../../net/netsaint-base
 DEPENDS+=	net-snmp>=5.0.9:../../net/net-snmp
 
 .include "../../net/netsaint-base/Makefile.common"
+
+NOT_FOR_BULK_PLATFORM=	Linux-*-*
 
 BUILD_TARGET=	check_snmp check_hpjd
 
