@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/05/20 20:40:31 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2008/05/26 22:37:30 tnn Exp $
 
 DISTNAME=	se
 PKGNAME=	SmartEiffel-2.0
@@ -11,6 +11,7 @@ HOMEPAGE=	http://smarteiffel.loria.fr/
 COMMENT=	The GNU Eiffel Compiler
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+NOT_FOR_BULK_PLATFORM=	HPUX-*-*
 
 WRKSRC=		${WRKDIR}/SmartEiffel
 
