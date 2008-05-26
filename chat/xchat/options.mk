@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.11 2008/04/12 22:42:58 jlam Exp $
+# $NetBSD: options.mk,v 1.12 2008/05/26 14:39:24 tron Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -7,7 +7,7 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.xchat
 PKG_SUPPORTED_OPTIONS=	inet6 ssl socks5 mitshm gnome
 PKG_OPTIONS_GROUP.spell=	libsexy gtkspell
 PKG_OPTIONS_OPTIONAL_GROUPS=	spell
-PKG_SUGGESTED_OPTIONS=	ssl
+PKG_SUGGESTED_OPTIONS=	inet6 ssl
 
 .include "../../mk/bsd.options.mk"
 
