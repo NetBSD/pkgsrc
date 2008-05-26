@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.5 2007/08/05 18:41:52 tron Exp $
+# $NetBSD: options.mk,v 1.6 2008/05/26 22:01:07 tron Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.imap-uw
 PKG_SUPPORTED_OPTIONS+=	imapuw-cleartextpwd imapuw-whoson inet6 ssl
-PKG_SUGGESTED_OPTIONS+=	imapuw-cleartextpwd ssl
+PKG_SUGGESTED_OPTIONS+=	imapuw-cleartextpwd inet6 ssl
 
 # On NetBSD 1.x, using the native Kerberos 5 implementation causes
 # interoperability problems with OpenSSL 0.9.7 and above.
