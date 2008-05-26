@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1945 2008/05/25 21:42:22 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1946 2008/05/26 13:25:22 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -46,6 +46,24 @@ PKGNAME_NOREV=		${PKGNAME}
 .endif
 PKGVERSION_NOREV=	${PKGNAME_NOREV:C/^.*-//}
 
+# A meta-package is a package that does not have any files and whose
+# only purpose is to depend on other packages, giving that collection
+# a simple name.
+#
+# Keywords: meta meta-package META_PACKAGE
+#
+.if defined(META_PACKAGE)
+PKG_DESTDIR_SUPPORT=	user-destdir
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
+DISTFILES=		# none
+PLIST_SRC=		# none
+do-patch:
+	@${DO_NADA}
+do-install:
+	@${DO_NADA}
+.endif
+
 ####
 
 ############################################################################
@@ -85,25 +103,6 @@ LICENSE=		${LICENCE}
 .endif
 .if defined(ACCEPTABLE_LICENCES) && !defined(ACCEPTABLE_LICENSES)
 ACCEPTABLE_LICENSES=	${ACCEPTABLE_LICENCES}
-.endif
-
-
-# A meta-package is a package that does not have any files and whose
-# only purpose is to depend on other packages, giving that collection
-# a simple name.
-#
-# Keywords: meta meta-package META_PACKAGE
-#
-.if defined(META_PACKAGE)
-PKG_DESTDIR_SUPPORT=	user-destdir
-NO_CONFIGURE=		yes
-NO_BUILD=		yes
-DISTFILES=		# none
-PLIST_SRC=		# none
-do-patch:
-	@${DO_NADA}
-do-install:
-	@${DO_NADA}
 .endif
 
 ##### Others
