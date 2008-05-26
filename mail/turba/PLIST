@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/01/10 23:19:10 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/05/26 12:57:13 adrianp Exp $
 share/doc/turba/INSTALL
 share/doc/turba/LDAP
 share/doc/turba/README
@@ -6,39 +6,70 @@ share/doc/turba/RELEASE_NOTES
 share/doc/turba/UPGRADING
 share/examples/turba/turba.conf
 share/horde/turba/add.php
-share/horde/turba/addressbooks.php
 share/horde/turba/browse.php
 share/horde/turba/config/attributes.php.dist
 share/horde/turba/config/conf.xml.dist
+share/horde/turba/config/hooks.php.dist
 share/horde/turba/config/menu.php.dist
 share/horde/turba/config/mime_drivers.php.dist
 share/horde/turba/config/prefs.php.dist
 share/horde/turba/config/sources.php.dist
+share/horde/turba/contact.php
 share/horde/turba/data.php
 share/horde/turba/delete.php
-share/horde/turba/display.php
+share/horde/turba/deletefile.php
 share/horde/turba/edit.php
 share/horde/turba/index.php
 share/horde/turba/lib/Block/minisearch.php
 share/horde/turba/lib/Block/tree_menu.php
+share/horde/turba/lib/Data/ldif.php
 share/horde/turba/lib/Driver.php
+share/horde/turba/lib/Driver/favourites.php
+share/horde/turba/lib/Driver/group.php
 share/horde/turba/lib/Driver/imsp.php
 share/horde/turba/lib/Driver/kolab.php
 share/horde/turba/lib/Driver/ldap.php
 share/horde/turba/lib/Driver/null.php
 share/horde/turba/lib/Driver/prefs.php
+share/horde/turba/lib/Driver/share.php
 share/horde/turba/lib/Driver/sql.php
+share/horde/turba/lib/Driver/vbook.php
+share/horde/turba/lib/Forms/AddContact.php
+share/horde/turba/lib/Forms/Contact.php
+share/horde/turba/lib/Forms/CreateAddressBook.php
+share/horde/turba/lib/Forms/DeleteAddressBook.php
+share/horde/turba/lib/Forms/EditAddressBook.php
+share/horde/turba/lib/Forms/EditContact.php
 share/horde/turba/lib/Group.php
 share/horde/turba/lib/List.php
 share/horde/turba/lib/ListView.php
+share/horde/turba/lib/Maintenance/Task/upgradelists.php
+share/horde/turba/lib/Maintenance/Task/upgradeprefs.php
 share/horde/turba/lib/Object.php
 share/horde/turba/lib/Object/Group.php
-share/horde/turba/lib/ObjectView.php
-share/horde/turba/lib/Renderer.php
 share/horde/turba/lib/Turba.php
+share/horde/turba/lib/Views/Browse.php
+share/horde/turba/lib/Views/Contact.php
+share/horde/turba/lib/Views/DeleteContact.php
+share/horde/turba/lib/Views/EditContact.php
 share/horde/turba/lib/api.php
 share/horde/turba/lib/base.php
 share/horde/turba/lib/prefs.php
+share/horde/turba/lib/tests/ApiTest.php
+share/horde/turba/lib/tests/BrowsePageTest.php
+share/horde/turba/lib/tests/DriverTest.php
+share/horde/turba/lib/tests/GroupTest.php
+share/horde/turba/lib/tests/ListTest.php
+share/horde/turba/lib/tests/ListViewTest.php
+share/horde/turba/lib/tests/TestBase.php
+share/horde/turba/lib/tests/ViewBrowseTest.php
+share/horde/turba/lib/tests/bug_6518.phpt
+share/horde/turba/lib/tests/import.ldif
+share/horde/turba/lib/tests/importCRLF.ldif
+share/horde/turba/lib/tests/ldif_exportFile.phpt
+share/horde/turba/lib/tests/ldif_importFile.phpt
+share/horde/turba/lib/tests/ldif_importFileCRLF.phpt
+share/horde/turba/lib/tests/tohash.phpt
 share/horde/turba/lib/tests/tovcard.phpt
 share/horde/turba/lib/version.php
 share/horde/turba/locale/ar_SY/LC_MESSAGES/turba.mo
@@ -128,61 +159,107 @@ share/horde/turba/po/uk_UA.po
 share/horde/turba/po/zh_CN.po
 share/horde/turba/po/zh_TW.po
 share/horde/turba/scripts/Turba.reg
+share/horde/turba/scripts/import_squirrelmail_abook.php
 share/horde/turba/scripts/import_vcards.php
 share/horde/turba/scripts/ldap/addou
 share/horde/turba/scripts/ldap/addou.pl
 share/horde/turba/scripts/ldap/core.schema.patch
 share/horde/turba/scripts/ldap/rfc2739.schema
+share/horde/turba/scripts/sql/test.xml
 share/horde/turba/scripts/sql/turba.mssql.sql
-share/horde/turba/scripts/sql/turba.mysql.sql
 share/horde/turba/scripts/sql/turba.oci8.sql
 share/horde/turba/scripts/sql/turba.pgsql.sql
 share/horde/turba/scripts/sql/turba.sql
-share/horde/turba/scripts/sql/turba_weddingguests.sql
 share/horde/turba/scripts/sql/turba.xml
 share/horde/turba/scripts/upgrades/1.1_to_1.2.sql
 share/horde/turba/scripts/upgrades/1.2_to_2.0.oci8.sql
 share/horde/turba/scripts/upgrades/1.2_to_2.0.sql
+share/horde/turba/scripts/upgrades/2.1_to_${PKGVERSION}_add_sql_share_tables.mssql.sql
+share/horde/turba/scripts/upgrades/2.1_to_${PKGVERSION}_add_sql_share_tables.oci8.sql
+share/horde/turba/scripts/upgrades/2.1_to_${PKGVERSION}_add_sql_share_tables.pgsql.sql
+share/horde/turba/scripts/upgrades/2.1_to_${PKGVERSION}_add_sql_share_tables.sql
+share/horde/turba/scripts/upgrades/2.1_to_${PKGVERSION}_sql_schema.php
+share/horde/turba/scripts/upgrades/2007-06-17_flatten_shares.php
+share/horde/turba/scripts/upgrades/convert_datatree_shares_to_sql.php
 share/horde/turba/scripts/upgrades/create_default_histories.php
 share/horde/turba/scripts/upgrades/public_to_horde_share.php
 share/horde/turba/search.php
-share/horde/turba/templates/addressbooks.inc
+share/horde/turba/templates/addressbook_list.php
 share/horde/turba/templates/block/minisearch.inc
 share/horde/turba/templates/browse/actions.inc
 share/horde/turba/templates/browse/column_footers.inc
 share/horde/turba/templates/browse/column_headers.inc
 share/horde/turba/templates/browse/contactrow.inc
-share/horde/turba/templates/browse/footer.inc
-share/horde/turba/templates/browse/footerAlpha.inc
 share/horde/turba/templates/browse/header.inc
 share/horde/turba/templates/browse/javascript.inc
 share/horde/turba/templates/browse/row.inc
 share/horde/turba/templates/browse/search.inc
 share/horde/turba/templates/browse/search_criteria.inc
+share/horde/turba/templates/browse/search_vbook.inc
 share/horde/turba/templates/common-header.inc
 share/horde/turba/templates/data/export.inc
 share/horde/turba/templates/data/import.inc
+share/horde/turba/templates/list/alphaPager.inc
+share/horde/turba/templates/list/numPager.inc
 share/horde/turba/templates/menu.inc
 share/horde/turba/templates/prefs/addressbookselect.inc
 share/horde/turba/templates/prefs/columnselect.inc
 share/horde/turba/templates/prefs/imsp_opt.inc
 share/horde/turba/test.php
+share/horde/turba/themes/bluewhite/screen.css
+share/horde/turba/themes/graphics/az.png
+share/horde/turba/themes/graphics/az_secondary.png
 share/horde/turba/themes/graphics/contact.png
 share/horde/turba/themes/graphics/favicon.ico
 share/horde/turba/themes/graphics/group.png
 share/horde/turba/themes/graphics/menu/browse.png
 share/horde/turba/themes/graphics/menu/new.png
 share/horde/turba/themes/graphics/new.png
+share/horde/turba/themes/graphics/redbox_spinner.gif
+share/horde/turba/themes/graphics/search.png
 share/horde/turba/themes/graphics/turba.png
+share/horde/turba/themes/graphics/za.png
+share/horde/turba/themes/graphics/za_secondary.png
 share/horde/turba/themes/ideas/screen.css
 share/horde/turba/themes/screen.css
+share/horde/turba/themes/silver/graphics/az.png
+share/horde/turba/themes/silver/graphics/az_secondary.png
+share/horde/turba/themes/silver/graphics/contact.png
+share/horde/turba/themes/silver/graphics/favicon.ico
+share/horde/turba/themes/silver/graphics/group.png
+share/horde/turba/themes/silver/graphics/menu/browse.png
+share/horde/turba/themes/silver/graphics/menu/new.png
+share/horde/turba/themes/silver/graphics/new.png
+share/horde/turba/themes/silver/graphics/turba.png
+share/horde/turba/themes/silver/graphics/za.png
+share/horde/turba/themes/silver/graphics/za_secondary.png
+share/horde/turba/themes/silver/screen.css
+share/horde/turba/themes/silver/themed_graphics
+share/horde/turba/themes/tango-blue/graphics/az_secondary.png
+share/horde/turba/themes/tango-blue/graphics/contact.png
+share/horde/turba/themes/tango-blue/graphics/favicon.ico
+share/horde/turba/themes/tango-blue/graphics/group.png
+share/horde/turba/themes/tango-blue/graphics/menu/browse.png
+share/horde/turba/themes/tango-blue/graphics/menu/new.png
+share/horde/turba/themes/tango-blue/graphics/new.png
+share/horde/turba/themes/tango-blue/graphics/turba.png
+share/horde/turba/themes/tango-blue/graphics/za_secondary.png
+share/horde/turba/themes/tango-blue/themed_graphics
 share/horde/turba/vcard.php
 share/horde/turba/view.php
+@dirrm share/horde/turba/themes/tango-blue/graphics/menu
+@dirrm share/horde/turba/themes/tango-blue/graphics
+@dirrm share/horde/turba/themes/tango-blue
+@dirrm share/horde/turba/themes/silver/graphics/menu
+@dirrm share/horde/turba/themes/silver/graphics
+@dirrm share/horde/turba/themes/silver
+@dirrm share/horde/turba/themes/ideas
 @dirrm share/horde/turba/themes/graphics/menu
 @dirrm share/horde/turba/themes/graphics
-@dirrm share/horde/turba/themes/ideas
+@dirrm share/horde/turba/themes/bluewhite
 @dirrm share/horde/turba/themes
 @dirrm share/horde/turba/templates/prefs
+@dirrm share/horde/turba/templates/list
 @dirrm share/horde/turba/templates/data
 @dirrm share/horde/turba/templates/browse
 @dirrm share/horde/turba/templates/block
@@ -234,6 +311,8 @@ share/horde/turba/view.php
 @dirrm share/horde/turba/locale/ja_JP
 @dirrm share/horde/turba/locale/it_IT/LC_MESSAGES
 @dirrm share/horde/turba/locale/it_IT
+@dirrm share/horde/turba/locale/is_IS/LC_MESSAGES
+@dirrm share/horde/turba/locale/is_IS
 @dirrm share/horde/turba/locale/hu_HU/LC_MESSAGES
 @dirrm share/horde/turba/locale/hu_HU
 @dirrm share/horde/turba/locale/gl_ES/LC_MESSAGES
@@ -263,13 +342,16 @@ share/horde/turba/view.php
 @dirrm share/horde/turba/locale/bg_BG
 @dirrm share/horde/turba/locale/ar_SY/LC_MESSAGES
 @dirrm share/horde/turba/locale/ar_SY
-@dirrm share/horde/turba/locale/is_IS/LC_MESSAGES
-@dirrm share/horde/turba/locale/is_IS
 @dirrm share/horde/turba/locale
-@dirrm share/horde/turba/lib/Object
-@dirrm share/horde/turba/lib/Driver
-@dirrm share/horde/turba/lib/Block
 @dirrm share/horde/turba/lib/tests
+@dirrm share/horde/turba/lib/Views
+@dirrm share/horde/turba/lib/Object
+@dirrm share/horde/turba/lib/Maintenance/Task
+@dirrm share/horde/turba/lib/Maintenance
+@dirrm share/horde/turba/lib/Forms
+@dirrm share/horde/turba/lib/Driver
+@dirrm share/horde/turba/lib/Data
+@dirrm share/horde/turba/lib/Block
 @dirrm share/horde/turba/lib
 @unexec ${RMDIR} %D/share/horde/turba/config 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/horde/turba 2>/dev/null || ${TRUE}
