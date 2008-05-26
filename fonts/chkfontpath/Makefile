@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/03/03 20:17:11 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2008/05/26 02:13:18 joerg Exp $
 #
 
 DISTNAME=	chkfontpath-1.9.7
@@ -15,7 +15,7 @@ BUILD_DEPENDS+=	rpm2cpio>=1.1:../../converters/rpm2cpio
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_ENV+=	VERSION=${PKGVERSION:Q}
-USE_TOOLS+=	gmake gtar
+USE_TOOLS+=	gmake gtar pax
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 
@@ -23,7 +23,7 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8
 do-extract:
 		cd ${WRKDIR} ; \
 		${PREFIX}/bin/rpm2cpio.pl ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} \
-		| ${PAX} -r ; \
+		| pax -r ; \
 		${GTAR} zxf ${DISTNAME}.tar.gz
 
 do-install:

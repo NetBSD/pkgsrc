@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/03/03 01:10:06 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/26 02:13:16 joerg Exp $
 #
 
 DISTNAME=		ProFitV2.2
@@ -11,6 +11,8 @@ HOMEPAGE=		http://acrmwww.biochem.ucl.ac.uk/programs/profit/index.html
 COMMENT=		Performs least squares fits of two protein structures
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=	pax
 
 BUILD_TARGET=		profit
 BUILD_DIRS=		src
@@ -25,6 +27,6 @@ do-install:
 .endfor
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/html/profit
 	cd ${WRKSRC}/doc/ProFit/ && 					\
-		${PAX} -rw . ${DESTDIR}${PREFIX}/share/doc/html/profit/
+		pax -rw . ${DESTDIR}${PREFIX}/share/doc/html/profit/
 
 .include "../../mk/bsd.pkg.mk"

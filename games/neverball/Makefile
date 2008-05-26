@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/03/04 06:59:05 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2008/05/26 02:13:19 joerg Exp $
 #
 
 DISTNAME=	neverball-1.4.0
@@ -12,7 +12,7 @@ COMMENT=	Part puzzle game, part action game and with SDL graphics
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pax
 
 # Avoiding multiples patches...
 BUILDLINK_FNAME_TRANSFORM.SDL+=	-e "s|/SDL/|/|g"
@@ -29,7 +29,7 @@ do-install:
 	    ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	${INSTALL_PROGRAM} ${WRKSRC}/neverball ${WRKSRC}/neverputt \
 	    ${DESTDIR}${SHAREDIR}
-	cd ${WRKSRC} && ${PAX} -rwppm data ${DESTDIR}${SHAREDIR}
+	cd ${WRKSRC} && pax -rwppm data ${DESTDIR}${SHAREDIR}
 	${SED} -e "s,@SHAREDIR@,${SHAREDIR},g" ${FILESDIR}/neverball.sh \
 	    > ${WRKSRC}/neverball.sh
 	${INSTALL_SCRIPT} ${WRKSRC}/neverball.sh \

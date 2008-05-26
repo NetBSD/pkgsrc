@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/05/04 16:34:03 adrianp Exp $
+# $NetBSD: Makefile,v 1.10 2008/05/26 02:13:22 joerg Exp $
 #
 
 DISTNAME=	roundcubemail-${VERSION}-dep
@@ -10,6 +10,7 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://roundcube.net/
 COMMENT=	Browser-based multilingual IMAP client
 
+USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
 VERSION=	0.1.1
@@ -95,7 +96,7 @@ do-install:
 	${CHOWN} ${WWW_USER}:${WWW_GROUP} ${RCDIR}/config/*.dist
 
 .	for i in ${PAX_DIRS}
-		cd ${WRKSRC}/${i} && ${PAX} -rw . ${RCDIR}/${i}
+		cd ${WRKSRC}/${i} && pax -rw . ${RCDIR}/${i}
 		${FIND} ${RCDIR}/${i} -type f | ${XARGS} ${CHMOD} ${SHAREMODE}
 		${FIND} ${RCDIR}/${i} -type d | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 		${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${RCDIR}/${i}

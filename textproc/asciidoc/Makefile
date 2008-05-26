@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/04/25 20:39:12 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/05/26 02:13:24 joerg Exp $
 #
 
 DISTNAME=		asciidoc-8.2.5
@@ -15,7 +15,7 @@ DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 DEPENDS+=		getopt-[0-9]*:../../misc/getopt
 
 REPLACE_BASH+=		a2x
-USE_TOOLS+=		bash:run
+USE_TOOLS+=		bash:run pax
 PYTHON_PATCH_SCRIPTS=	asciidoc.py filters/code-filter.py filters/music2png.py
 
 NO_BUILD=		yes
@@ -43,7 +43,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/asciidoc.txt ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/doc/asciidoc.html ${DOCDIR}
 
-	cd ${WRKSRC} && ${PAX} -wr -pma *.conf filters/*.py \
+	cd ${WRKSRC} && pax -wr -pma *.conf filters/*.py \
 		filters/*.conf docbook-xsl/*.xsl stylesheets/*.css	\
 		javascripts/*.js images/icons/callouts/* images/icons/*.png \
 		images/icons/README \

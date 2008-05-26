@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/04/07 16:23:01 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2008/05/26 02:13:21 joerg Exp $
 #
 
 DISTNAME=	CgLinux-1.3.0408-0400
@@ -17,6 +17,8 @@ EMUL_REQD=		suse>=7.3
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+USE_TOOLS+=	pax
+
 WRKSRC=			${WRKDIR}
 BUILD_DIRS=		# empty
 RUN_LDCONFIG=		yes
@@ -34,7 +36,7 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/usr/lib/* ${DESTDIR}${EMULDIR}/lib
 	${INSTALL_MAN} ${WRKSRC}/usr/share/man/man3/* \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
-	cd ${WRKSRC}/usr/local && ${PAX} -rwppm . \
+	cd ${WRKSRC}/usr/local && pax -rwppm . \
 		${DESTDIR}${PREFIX}/share/NVIDIA-Cg-linux
 
 .include "../../mk/bsd.pkg.mk"

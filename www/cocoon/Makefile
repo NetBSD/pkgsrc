@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/01/31 00:04:12 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2008/05/26 02:13:25 joerg Exp $
 
 DISTNAME=	Cocoon-1.8.2
 PKGNAME=	cocoon-1.8.2
@@ -36,6 +36,8 @@ NO_CONFIGURE=	yes
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 
+USE_TOOLS+=	pax
+
 post-extract:
 	${RM} ${WRKSRC}/lib/fop_0_15_0.jar ${WRKSRC}/lib/servlet_2_2.jar \
 		${WRKSRC}/lib/xalan_1_2_D02.jar ${WRKSRC}/lib/xerces_1_2.jar \
@@ -57,11 +59,11 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/lib/turbine-pool.jar ${PREFIX}/lib/java
 	${INSTALL_DATA} ${WRKSRC}/lib/sax-bugfix.jar ${PREFIX}/lib/java
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/cocoon
-	cd ${WRKSRC}/docs && ${PAX} -rw -pp . ${PREFIX}/share/doc/java/cocoon
+	cd ${WRKSRC}/docs && pax -rw -pp . ${PREFIX}/share/doc/java/cocoon
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/java/cocoon/WEB-INF
 	${INSTALL_DATA} ${FILESDIR}/web.xml ${PREFIX}/share/examples/java/cocoon/WEB-INF
 	${INSTALL_DATA} ${WRKSRC}/conf/cocoon.properties ${PREFIX}/share/examples/java/cocoon/WEB-INF
-	cd ${WRKSRC}/samples && ${PAX} -rw -pp . ${PREFIX}/share/examples/java/cocoon
+	cd ${WRKSRC}/samples && pax -rw -pp . ${PREFIX}/share/examples/java/cocoon
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

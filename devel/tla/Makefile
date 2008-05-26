@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/10/09 19:19:09 martti Exp $
+# $NetBSD: Makefile,v 1.34 2008/05/26 02:13:18 joerg Exp $
 #
 
 DISTNAME=	tla-1.3.5
@@ -24,7 +24,7 @@ CHECK_PORTABILITY_SKIP+=	\
 REPLACE_BASH+=	src/tla/tests/changeset-tests/chmod_random
 USE_TOOLS+=	bash
 
-USE_TOOLS+=	gmake
+USE_TOOLS+=	gmake pax
 
 HAS_CONFIGURE=		yes
 OVERRIDE_GNU_CONFIG_SCRIPTS=	yes
@@ -48,7 +48,7 @@ post-install:
 	cd ${WRKDIR}/${DISTNAME}/src/docs-tla &&		\
 		${FIND} . \( -name \*.css -or -name \*.html	\
 			-or -name \*.txt \) -print		\
-		| ${PAX} -rwppm ${DOCDIR}
+		| pax -rwppm ${DOCDIR}
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DOCDIR}
 	${FIND} ${DOCDIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
 	${FIND} ${DOCDIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/01/04 10:05:51 adrianp Exp $
+# $NetBSD: Makefile,v 1.8 2008/05/26 02:13:23 joerg Exp $
 
 DISTNAME=	modsecurity-apache_2.1.4
 PKGNAME=	${APACHE_PKG_PREFIX}-${DISTNAME:S/apache_//}
@@ -11,6 +11,8 @@ COMMENT=	Intrusion detection and prevention engine for web applications
 
 .include "../../mk/apache.mk"
 .include "options.mk"
+
+USE_TOOLS+=	pax
 
 PKG_APACHE_ACCEPTED=	apache2
 BUILD_DIRS=		apache2
@@ -46,7 +48,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ap-security
 
 	${INSTALL_DATA} ${WRKSRC}/modsecurity.conf-minimal ${EGDIR}
-	cd ${WRKSRC}/doc && ${PAX} -rw . ${PREFIX}/share/doc/ap-security
+	cd ${WRKSRC}/doc && pax -rw . ${PREFIX}/share/doc/ap-security
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
