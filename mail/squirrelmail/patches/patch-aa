@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.14 2007/12/05 07:11:28 martti Exp $
+$NetBSD: patch-aa,v 1.15 2008/05/27 12:40:37 martti Exp $
+
+Make this pkgsrc friendly.
 
 --- config/config_default.php.orig	2007-07-10 17:52:53.000000000 +0300
 +++ config/config_default.php	2007-12-05 08:50:31.000000000 +0200

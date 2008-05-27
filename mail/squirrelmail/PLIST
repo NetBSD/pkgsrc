@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.25 2007/12/14 20:44:35 martti Exp $
+@comment $NetBSD: PLIST,v 1.26 2008/05/27 12:40:37 martti Exp $
 man/man8/squirrelmail-conf.pl.8
 share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/AUTHORS
@@ -206,6 +206,7 @@ share/squirrelmail/plugins/administrator/options.php
 share/squirrelmail/plugins/administrator/setup.php
 share/squirrelmail/plugins/bug_report/README
 share/squirrelmail/plugins/bug_report/bug_report.php
+share/squirrelmail/plugins/bug_report/functions.php
 share/squirrelmail/plugins/bug_report/index.php
 share/squirrelmail/plugins/bug_report/setup.php
 share/squirrelmail/plugins/calendar/README
@@ -244,6 +245,7 @@ share/squirrelmail/plugins/filters/options.php
 share/squirrelmail/plugins/filters/setup.php
 share/squirrelmail/plugins/filters/spamoptions.php
 share/squirrelmail/plugins/fortune/README
+share/squirrelmail/plugins/fortune/fortune_functions.php
 share/squirrelmail/plugins/fortune/index.php
 share/squirrelmail/plugins/fortune/setup.php
 share/squirrelmail/plugins/index.php
