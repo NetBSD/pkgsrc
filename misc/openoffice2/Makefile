@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.44 2008/05/11 07:21:51 hira Exp $
+# $NetBSD: Makefile,v 1.45 2008/05/27 15:44:44 hira Exp $
 #
 
 OO_VER=			2.4.0
+PKGREVISION=		1
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice2-${OO_VER}
 CATEGORIES=		misc
@@ -52,6 +53,11 @@ ONLY_FOR_PLATFORM+=	NetBSD-1.6Z[G-Z]*-x86_64 NetBSD-[2-9]*-x86_64
 
 GNU_CONFIGURE=		yes
 
+REPLACE_PERL+=		sd/res/webview/editpic.pl	\
+			sd/res/webview/poll.pl		\
+			sd/res/webview/savepic.pl	\
+			sd/res/webview/show.pl		\
+			sd/res/webview/webview.pl
 REPLACE_PYTHON+=	scripting/source/pyprov/mailmerge.py
 
 SUBST_CLASSES+=		lib
@@ -130,6 +136,8 @@ post-build:
 			tar xpfk $$f;				\
 		done;						\
 	done
+	chmod ${SHAREMODE} ${WRKDIR/${OO_UNXNAME}/program/hid.lst	\
+			   ${WRKDIR/${OO_UNXNAME}/program/testtoolrc
 	${ECHO} "#!${SH}" > ${WRKDIR}/${OO_UNXNAME}
 	${ECHO} "exec ${PREFIX}/${OO_RELEASE}/program/soffice \"\$$@\""	\
 		>> ${WRKDIR}/${OO_UNXNAME}
