@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/05/27 04:53:16 bjs Exp $
+
+SHA1 (rendercheck-1.3.tar.bz2) = 75e5840c51ff2b774a6785259a09b4e8c87f2c5c
+RMD160 (rendercheck-1.3.tar.bz2) = 1d835e658305afe7dc9be64a618460c30bd76152
+Size (rendercheck-1.3.tar.bz2) = 87655 bytes
