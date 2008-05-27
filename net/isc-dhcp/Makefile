@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2008/04/07 17:23:40 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/05/27 19:34:30 adrianp Exp $
 #
 
 COMMENT=	ISC Dynamic Host Configuration Protocol (DHCP) Base
 COMPONENT=	base
-PKGREVISION=	1
 SUBDIR=		common minires dst
 
 MAN_FILES=	man5/dhcp-eval.5 man5/dhcp-options.5
@@ -25,6 +24,7 @@ post-install:
 	${INSTALL_LIB} \
 		${WRKSRC}/work.`${WRKSRC}/configure --print-sysname`/dst/*.a \
 		${PREFIX}/lib
+	${CHMOD} ${LIBMODE} ${PREFIX}/lib/libdst.a
 
 .include "../../net/isc-dhcp/Makefile.common"
 .include "../../mk/bsd.pkg.mk"
