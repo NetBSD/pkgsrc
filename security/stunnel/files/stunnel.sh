@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: stunnel.sh,v 1.1 2004/06/06 14:19:04 schmonz Exp $
+# $NetBSD: stunnel.sh,v 1.1.32.1 2008/05/27 13:29:03 rtr Exp $
 #
 
 # PROVIDE: stunnel
@@ -10,7 +10,7 @@
 
 name="stunnel"
 rcvar=$name
-command="@PREFIX@/sbin/stunnel"
+command="@PREFIX@/bin/stunnel"
 required_files="@PKG_SYSCONFDIR@/stunnel.conf"
 
 load_rc_config $name
