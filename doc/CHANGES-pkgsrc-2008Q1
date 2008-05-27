@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.62 2008/05/27 09:31:33 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.63 2008/05/27 13:29:33 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -142,3 +142,5 @@ pullup ticket #2398 - requested by adrianp
 snort: update for fixes & security vulnerability
 pullup ticket #2371 - requested by tonnerre
 security fix for mplayer and gmplayer
+pullup ticket #2400 - requested by tnn
+stunnel: update package due to security issue
