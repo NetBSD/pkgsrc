@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2008/05/25 21:23:25 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2008/05/27 13:23:43 obache Exp $
 #
 
 DISTNAME=		jabberd-2.1.23
@@ -11,13 +11,13 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://jabberd2.xiaoka.com/
 COMMENT=		Instant messaging server (version 2)
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFLICTS=		jabberd-[0-9]*
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-
-BUILDLINK_FNAME_TRANSFORM.db4+=	-e "s,/db4/,/,g"
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
@@ -102,17 +102,17 @@ pre-configure:
 post-install:
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/etc/templates/roster.xml.dist.in	\
-	    ${EGDIR}/roster.xml
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/pipe-auth.pl ${BINDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/tools/migrate.pl ${BINDIR}
+	    ${DESTDIR}${EGDIR}/roster.xml
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/pipe-auth.pl ${DESTDIR}${BINDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/tools/migrate.pl ${DESTDIR}${BINDIR}
 .for f in ${DBFILES}
-	${INSTALL_DATA} ${WRKSRC}/tools/${f} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/tools/${f} ${DESTDIR}${EGDIR}
 .endfor
 .for f in ${FILES}
-	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/${f} ${DESTDIR}${EGDIR}
 .endfor
 .for f in ${DOCFILES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}
 .endfor
 
 .include "../../converters/libiconv/buildlink3.mk"
