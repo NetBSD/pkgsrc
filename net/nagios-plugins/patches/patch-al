@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.1 2006/10/16 05:29:40 seb Exp $
+$NetBSD: patch-al,v 1.2 2008/05/27 21:22:03 tonnerre Exp $
 
---- contrib/check_axis.sh.orig	2003-05-26 10:09:23.000000000 +0000
+--- contrib/check_axis.sh.orig	2003-05-26 12:09:23.000000000 +0200
 +++ contrib/check_axis.sh
 @@ -5,7 +5,7 @@ port=$2
  usr=$3
@@ -18,9 +18,9 @@ $NetBSD: patch-al,v 1.1 2006/10/16 05:29:40 seb Exp $
 -if [ "$status" == "Printing" ]; then
 +if [ "$status" = "Printing" ]; then
  	bytes=`echo $lines | awk '{ print $4 }'`;
- 	comments=`echo $lines | tr -d "" | awk '{ print $5 " " $6 }'`;
- else
-@@ -40,48 +40,48 @@ if [ "$comma" -eq "1" ]; then
+ 	comments=`echo $lines | tr -d "
+ " | awk '{ print $5 " " $6 }'`;
+@@ -42,48 +42,48 @@ if [ "$comma" -eq "1" ]; then
  fi
  	
  
