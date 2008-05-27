@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2007/02/26 14:52:58 joerg Exp $
+$NetBSD: distinfo,v 1.5 2008/05/27 17:14:45 tnn Exp $
 
 SHA1 (randrproto-1.2.1.tar.bz2) = f8698f76f23d856e1821339814a986b9d876d87d
 RMD160 (randrproto-1.2.1.tar.bz2) = 544919ec5a62a35949e49d7c183a85001a7c50f2
 Size (randrproto-1.2.1.tar.bz2) = 54962 bytes
+SHA1 (patch-aa) = 54136755c7064ef737c255b9bf2e6a9c13d68c24
