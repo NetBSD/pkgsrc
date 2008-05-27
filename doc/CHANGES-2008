@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1168 2008/05/27 21:23:11 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1169 2008/05/27 21:47:46 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1945,3 +1945,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/isc-dhcpd to 3.1.1 [adrianp 2008-05-27]
 	Updated net/isc-dhclient to 3.1.1 [adrianp 2008-05-27]
 	Updated net/nagios-plugins to 1.4.11 [tonnerre 2008-05-27]
+	Updated x11/aterm to 1.0.0nb5 [tonnerre 2008-05-27]
