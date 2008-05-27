@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2008/04/12 22:42:58 jlam Exp $
+# $NetBSD: options.mk,v 1.21 2008/05/27 13:23:43 obache Exp $
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.jabberd2
@@ -17,15 +17,14 @@ PKG_SUGGESTED_OPTIONS=		auth-sqlite storage-sqlite
 PLIST_VARS+=		db ldap mysql pam pgsql sqlite
 
 .if !empty(PKG_OPTIONS:Mauth-db) || !empty(PKG_OPTIONS:Mstorage-db)
+.  include "../../databases/db4/buildlink3.mk"
+# XXX: configure script is broken, always using -ldb even if detect db4.
 SUBST_CLASSES+=		fixdb
-SUBST_STAGE.fixdb=	post-configure
+SUBST_STAGE.fixdb=	pre-configure
 SUBST_FILES.fixdb=	storage/Makefile.in
-SUBST_SED.fixdb=	-e "s|@DB_LIBS@||g"
-BUILDLINK_TRANSFORM+=	rm:-ldb
-BDB_ACCEPTED=		db4
+SUBST_SED.fixdb=	-e "s|@DB_LIBS@|${BUILDLINK_LDADD.db4}|g"
 PLIST.db=		yes
 CONFIGURE_ARGS+=	--enable-db
-.  include "../../mk/bdb.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-db
 .endif
