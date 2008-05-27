@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1166 2008/05/27 19:38:20 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1167 2008/05/27 19:39:05 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1943,3 +1943,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/isc-dhcp to 3.1.1 [adrianp 2008-05-27]
 	Updated net/isc-dhcrelay to 3.1.1 [adrianp 2008-05-27]
 	Updated net/isc-dhcpd to 3.1.1 [adrianp 2008-05-27]
+	Updated net/isc-dhclient to 3.1.1 [adrianp 2008-05-27]
