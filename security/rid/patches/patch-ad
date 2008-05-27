@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2008/05/27 22:28:21 agc Exp $
+
+Fix the 3rd arg of waitpid to match the prototype
+
+--- rid.c	2008/05/27 12:45:41	1.1
++++ rid.c	2008/05/27 12:45:10
+@@ -295,7 +295,7 @@
+                 sender();
+ 		sleep(Sleep); /* Wait for all responses before exiting */
+                 kill(PidListener, SIGTERM);
+-                waitpid(PidListener, NULL, NULL);
++                waitpid(PidListener, NULL, 0);
+                 break;
+   }
+ 

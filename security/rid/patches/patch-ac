@@ -1,14 +1,30 @@
-$NetBSD: patch-ac,v 1.1 2005/12/08 17:41:16 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2008/05/27 22:28:21 agc Exp $
 
 --- grammer.y.orig	2005-12-08 17:37:54.000000000 +0000
 +++ grammer.y
-@@ -1,4 +1,5 @@
+@@ -1,4 +1,7 @@
  %{
++#include <sys/types.h>
++
 +#include <errno.h>
  #include <stdio.h>
  #include <strings.h>
  #include "netconfig.h"
-@@ -20,8 +21,6 @@ char *data;
+@@ -9,25 +12,23 @@
+ extern struct udp_item *UDP_Recv;
+ extern struct tcp_item *TCP_Send;
+ extern struct tcp_item *TCP_Recv;
+-extern u_short ConfigNum;
++extern uint16_t ConfigNum;
+ 
+ /* Fields that might be set */
+-u_long sport=-1, dport=-1, seq=-1, id=-1, type=-1, code=-1, ack=-1, win=-1;
+-u_long nmatch=-1;
++uint64_t sport=-1, dport=-1, seq=-1, id=-1, type=-1, code=-1, ack=-1, win=-1;
++uint64_t nmatch=-1;
+ 
+ /* Data in the packet */
+ char *data;
  
  /* Name of current ddos we're working on */
  char ddos_name[BUFSIZE];
@@ -17,3 +33,11 @@ $NetBSD: patch-ac,v 1.1 2005/12/08 17:41:16 joerg Exp $
  %}
  
  %union {
+ 	char *string;
+-	u_short us;
+-	u_long ul;
++	uint16_t us;
++	uint64_t ul;
+ }
+ 
+ %token START END SEND RECV
