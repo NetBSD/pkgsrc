@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.4 2006/12/11 12:23:24 sketch Exp $
+$NetBSD: patch-aa,v 1.5 2008/05/27 21:46:53 tonnerre Exp $
 
---- src/main.c.orig	2006-12-11 12:19:55.000000000 +0000
-+++ src/main.c	2006-12-11 12:20:28.000000000 +0000
-@@ -1037,12 +1037,10 @@
+--- src/main.c.orig	2005-06-20 18:10:19.000000000 +0200
++++ src/main.c
+@@ -1037,12 +1037,10 @@ resize_window(XEvent* ev)
  	XConfigureEvent *xconf = &(ev->xconfigure);
  	
  	while( XCheckTypedWindowEvent( Xdisplay, TermWin.parent, ConfigureNotify, ev ) );
@@ -15,3 +15,21 @@ $NetBSD: patch-aa,v 1.4 2006/12/11 12:23:24 sketch Exp $
  	TermWin.root_x = root_x ; 
  	TermWin.root_y = root_y ; 
  	TermWin.root_width = xconf->width ; 
+@@ -2047,9 +2045,14 @@ main(int argc, char *argv[])
+  */
+     get_options(argc, argv);
+ 
+-	if( display_name == NULL )
+-    	if ((display_name = getenv("DISPLAY")) == NULL)
+-			display_name = ":0";
++    if( display_name == NULL )
++	display_name = getenv("DISPLAY");
++
++    if( display_name == NULL )
++    {
++	print_error("DISPLAY variable not set and none given");
++	exit(EXIT_FAILURE);
++    }
+ 
+ #ifdef HAVE_AFTERSTEP
+ #ifdef MyArgs_IS_MACRO	
