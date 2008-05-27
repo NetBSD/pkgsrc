@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.553 2008/05/25 16:19:22 taca Exp $
+# $NetBSD: Makefile,v 1.554 2008/05/27 04:53:55 bjs Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -291,6 +291,7 @@ SUBDIR+=	qwt
 SUBDIR+=	randrproto
 SUBDIR+=	ratmen
 SUBDIR+=	recordproto
+SUBDIR+=	rendercheck
 SUBDIR+=	renderproto
 SUBDIR+=	rep-gtk2
 SUBDIR+=	resourceproto
