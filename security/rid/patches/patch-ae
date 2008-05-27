@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2008/05/27 22:28:21 agc Exp $
+
+--- sender.c	2008/05/27 12:47:48	1.1
++++ sender.c	2008/05/27 12:48:45
+@@ -146,7 +146,7 @@
+   struct icmp_item *icmp_current;
+   static u_char outpack[IP_MAXPACKET];
+   register struct icmp *icp = (struct icmp *)outpack;
+-  char *data = &outpack[8];
++  char *data = (char *)&outpack[8];
+   int cc, i, j;
+   int RawSock;
+ 
