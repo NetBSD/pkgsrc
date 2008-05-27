@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1163 2008/05/27 15:46:03 hira Exp $
+$NetBSD: CHANGES-2008,v 1.1164 2008/05/27 19:37:42 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1940,3 +1940,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/squirrelmail to 1.4.15 [martti 2008-05-27]
 	Updated net/clive to 0.4.14 [wiz 2008-05-27]
 	Updated misc/openoffice2 to 2.4.0nb1 [hira 2008-05-27]
+	Updated net/isc-dhcp to 3.1.1 [adrianp 2008-05-27]
