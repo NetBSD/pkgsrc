@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.13 2008/03/22 14:52:21 tonnerre Exp $
+# $NetBSD: Makefile,v 1.14 2008/05/27 21:22:03 tonnerre Exp $
 #
 
-PKGREVISION=	5
 CATEGORIES=	net sysutils
 
 MAINTAINER=	tonnerre@NetBSD.org
