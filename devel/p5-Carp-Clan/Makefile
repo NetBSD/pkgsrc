@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2007/06/09 23:26:44 abs Exp $
+# $NetBSD: Makefile,v 1.10 2008/05/28 21:59:39 abs Exp $
 #
 
-DISTNAME=		Carp-Clan-5.9
+DISTNAME=		Carp-Clan-6.00
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5ccl
 CATEGORIES=		devel perl5
@@ -13,8 +13,11 @@ COMMENT=		Report errors from perspective of a "clan" of modules
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_LANGUAGES=	# empty
 PERL5_PACKLIST=		auto/Carp/Clan/.packlist
 MAKE_PARAMS+=		< /dev/null
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
