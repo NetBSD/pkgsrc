@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1172 2008/05/28 13:21:53 dsainty Exp $
+$NetBSD: CHANGES-2008,v 1.1173 2008/05/28 14:07:07 jonb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1948,3 +1948,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/aterm to 1.0.0nb5 [tonnerre 2008-05-27]
 	Updated archivers/sarab to 0.2.4 [dsainty 2008-05-28]
 	Updated games/xblast to 2.10.2nb1 [dsainty 2008-05-28]
+	Updated lang/sbcl to 1.0.16 [jonb 2008-05-28]
