@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1170 2008/05/28 05:17:37 dsainty Exp $
+$NetBSD: CHANGES-2008,v 1.1171 2008/05/28 13:19:32 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1947,3 +1947,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/nagios-plugins to 1.4.11 [tonnerre 2008-05-27]
 	Updated x11/aterm to 1.0.0nb5 [tonnerre 2008-05-27]
 	Updated archivers/sarab to 0.2.4 [dave 2008-05-28]
+	Updated games/xblast to 2.10.2nb1 [netdev 2008-05-28]
