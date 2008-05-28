@@ -1,0 +1,13 @@
+$NetBSD: patch-eb,v 1.1 2008/05/28 15:39:55 drochner Exp $
+
+--- client/smbctool.c.orig	2008-03-08 16:33:34.000000000 +0100
++++ client/smbctool.c
+@@ -3304,7 +3304,7 @@ static void readline_callback(void)
+ 	   session keepalives and then drop them here.
+ 	*/
+ 	if (FD_ISSET(cli->fd,&fds)) {
+-		receive_smb(cli->fd,cli->inbuf,0);
++		receive_smb(cli->fd,cli->inbuf,cli->bufsize,0);
+ 		goto again;
+ 	}
+ 	  
