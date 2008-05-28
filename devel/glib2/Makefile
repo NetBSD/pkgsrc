@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2008/05/20 21:07:57 tnn Exp $
+# $NetBSD: Makefile,v 1.139 2008/05/28 21:20:48 joerg Exp $
 
 # When updating glib2, please apply patch-ak to configure.in
 # Then run a matching version of autoconf to regen patch-aa.
@@ -81,16 +81,6 @@ SUBST_MESSAGE.thr=	Fixing libgthread.
 CONFIGURE_ENV+=		gt_cv_c_wchar_t=no
 .endif
 
-.if ${OPSYS} == "IRIX"
-SUBST_CLASSES+=			fam-linkage
-SUBST_STAGE.fam-linkage=	pre-configure
-SUBST_MESSAGE.fam-linkage=	Fixing fam linkage
-SUBST_FILES.fam-linkage=	gio/fam/Makefile.in
-SUBST_SED.fam-linkage=		-e 's,^FAM_LIBS =.*$$,FAM_LIBS = -lfam -lC,g'
-
-BUILDLINK_TRANSFORM+=		l:fam:fam:C
-.endif
-
 .if ${OPSYS} == "HPUX"
 CONFIGURE_ENV+=		ac_cv_func_mmap_fixed_mapped=yes
 .endif
@@ -100,22 +90,24 @@ PRINT_PLIST_AWK+=	/^@dirrm include\/glib$$/ \
 				{ print "@unexec $${RMDIR} %D/" $$2 \
 				  " 2>/dev/null || $${TRUE}"; next; }
 
+PLIST_VARS+=		fam
+
+# Overriden in options.mk.
+CONFIGURE_ARGS+=	--disable-fam
+
+.if ${OPSYS} != "HPUX" && ${OPSYS} != "OSF1"
+.include "options.mk"
+.endif
+
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
+
 .if !empty(MACHINE_PLATFORM:MIRIX-5*)
 CONFIGURE_ARGS+=	--disable-threads
 .else
 .include "../../mk/pthread.buildlink3.mk"
 .endif
 .include "../../devel/pcre/buildlink3.mk"
-PLIST_VARS+=		fam
-.if ${OPSYS} == "HPUX" || ${OPSYS} == "OSF1"
-CONFIGURE_ARGS+=	--disable-fam
-.else
-PLIST.fam=		yes
-FAM_ACCEPTED=		fam
-. include "../../mk/fam.buildlink3.mk"
-.endif
 
 .include "../../mk/bsd.pkg.mk"
