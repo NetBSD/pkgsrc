@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2007/11/07 17:34:18 jonb Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/05/28 14:06:31 jonb Exp $
 bin/sbcl
 lib/sbcl/asdf-install/.cvsignore
 lib/sbcl/asdf-install/CVS/Entries
@@ -12,7 +12,6 @@ lib/sbcl/asdf-install/defpackage.fasl
 lib/sbcl/asdf-install/defpackage.lisp
 lib/sbcl/asdf-install/installer.fasl
 lib/sbcl/asdf-install/installer.lisp
-lib/sbcl/asdf-install/installer.lisp.dist
 lib/sbcl/asdf-install/installer.lisp.orig
 lib/sbcl/asdf-install/test-passed
 lib/sbcl/asdf/asdf.fasl
@@ -106,11 +105,8 @@ lib/sbcl/sb-cover/test-data-1.fasl
 lib/sbcl/sb-cover/test-data-1.lisp
 lib/sbcl/sb-cover/test-data-2.fasl
 lib/sbcl/sb-cover/test-data-2.lisp
-lib/sbcl/sb-cover/test-output/_stuff_sbcl_contrib_sb-cover_test-data-1_lisp.html
-lib/sbcl/sb-cover/test-output/_stuff_sbcl_contrib_sb-cover_test-data-2_lisp.html
-lib/sbcl/sb-cover/test-output/_usr_pkgsrc_lang_sbcl_work_sbcl-1_0_11_contrib_sb-cover_test-data-1_lisp.html
-lib/sbcl/sb-cover/test-output/_usr_pkgsrc_lang_sbcl_work_sbcl-1_0_11_contrib_sb-cover_test-data-2_lisp.html
-lib/sbcl/sb-cover/test-output/cover-index.html
+lib/sbcl/sb-cover/test-data-3.fasl
+lib/sbcl/sb-cover/test-data-3.lisp
 lib/sbcl/sb-cover/test-passed
 lib/sbcl/sb-cover/tests.fasl
 lib/sbcl/sb-cover/tests.lisp
@@ -263,6 +259,7 @@ share/doc/sbcl/SUPPORT
 @dirrm lib/sbcl/sb-rt
 @dirrm lib/sbcl/sb-rotate-byte/CVS
 @dirrm lib/sbcl/sb-rotate-byte
+@dirrm lib/sbcl/sb-posix/test-lab
 @dirrm lib/sbcl/sb-posix/CVS
 @dirrm lib/sbcl/sb-posix
 @dirrm lib/sbcl/sb-md5/CVS
@@ -271,7 +268,6 @@ share/doc/sbcl/SUPPORT
 @dirrm lib/sbcl/sb-grovel/CVS
 @dirrm lib/sbcl/sb-grovel
 @dirrm lib/sbcl/sb-executable
-@dirrm lib/sbcl/sb-cover/test-output
 @dirrm lib/sbcl/sb-cover/CVS
 @dirrm lib/sbcl/sb-cover
 @dirrm lib/sbcl/sb-cltl2/CVS
