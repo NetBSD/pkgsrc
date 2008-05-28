@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.3 2006/05/07 03:16:48 dsainty Exp $
+$NetBSD: patch-ab,v 1.4 2008/05/28 12:10:26 dsainty Exp $
 
 Purge the unnecessary complication of PID_FORMAT, and add NetBSD support.  Use
 OSS for sound for NetBSD, because the Sun support is a bit too Sun-centric.
@@ -16,7 +16,7 @@ OSS for sound for NetBSD, because the Sun support is a bit too Sun-centric.
  /* needed for bzero(), open()*/
  #include <strings.h>
  #include <fcntl.h>
-@@ -58,8 +56,6 @@
+@@ -58,11 +56,9 @@
  #include <sys/stropts.h>
  #endif
  #else
@@ -27,6 +27,9 @@ OSS for sound for NetBSD, because the Sun support is a bit too Sun-centric.
 -#include <machine/soundcard.h>
 +#if defined(__DragonFly__) || defined(__FreeBSD__) || defined(__NetBSD__)
 +#include <sys/soundcard.h>
+ #else
+ #include <linux/soundcard.h>
+ #endif
 @@ -499,18 +495,18 @@
    ptr=fopen(userPath ,"r+");
    if(ptr==NULL){
