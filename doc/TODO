@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7291 2008/05/29 00:47:39 schmonz Exp $
+$NetBSD: TODO,v 1.7292 2008/05/29 03:05:21 taca Exp $
 
 Suggested new packages
 ======================
@@ -956,7 +956,7 @@ Suggested package updates
 	o openldap-2.4.9
 	o openmortal-0.7.1
 	o openmotif-2.3.0 [pkg/38038]
-	o openssh-5.0p1
+	o openssl-0.9.8h
 	o orca-2.22.1
 	o oregano-0.60.0
 	o oroborus-2.0.18
