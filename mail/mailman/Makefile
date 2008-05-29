@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2008/04/25 20:39:10 joerg Exp $
+# $NetBSD: Makefile,v 1.51 2008/05/29 19:17:34 joerg Exp $
 
 DISTNAME=	mailman-2.1.9
 CATEGORIES=	mail www
@@ -96,6 +96,9 @@ SUBST_SED.paths+=	-e 's,@MAILMAN_DATADIR@,${MAILMAN_DATADIR},g'
 SUBST_STAGE.paths=	post-patch
 
 PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
+
+# mailman depends a lot on it and will bitch if changed.
+CHECK_PERMS=	no
 
 post-extract:
 	${CP} ${FILESDIR}/mailman.conf.dist ${WRKDIR}/mailman.conf.dist
