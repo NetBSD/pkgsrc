@@ -1,140 +1,59 @@
-# $NetBSD: Makefile,v 1.54 2008/05/26 02:13:23 joerg Exp $
+# $NetBSD: Makefile,v 1.55 2008/05/29 20:25:53 tnn Exp $
 
-DISTNAME=		mpich-1.2.6
-PKGREVISION=		6
-CATEGORIES=		parallel
-MASTER_SITES=		ftp://ftp.mcs.anl.gov/pub/mpi/
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX} mpich-docs.tgz
+DISTNAME=	mpich2-1.0.7
+CATEGORIES=	parallel
+MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www-unix.mcs.anl.gov/mpi/mpich1/
-COMMENT=		Free implementation of the Message Passing Interface
+MAINTAINER=	asau@inbox.ru
+HOMEPAGE=	http://www.mcs.anl.gov/research/projects/mpich2/
+COMMENT=	Open source MPI and MPI-2 implementation from Univ. of Chicago
 
-# many failures
+CONFLICTS+=	musicpd-[0-9]*	# installs bin/mpd
+CONFLICTS+=	mpich-[0-9]*	# installs bin/mpicc & other wrappers
+CONFLICTS+=	openmpi-[0-9]*	# installs bin/mpicc & other wrappers
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 MAKE_JOBS_SAFE=		no
 
-.if !exists(/usr/bin/ssh)
-DEPENDS+=		{openssh-[0-9]*,ssh{,6}-1.2.27*}:../../security/openssh
-.endif
-
-BUILD_TARGET=		ALL examples
-INSTALL_TARGET=		install-all
+GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++ fortran
-USE_TOOLS+=		pax perl:run
-HAS_CONFIGURE=		yes
-USE_FORTRAN=		yes
-PKG_SYSCONFSUBDIR=	mpi-ch
 
-MPI_RSH?=		ssh
+PKG_SYSCONFSUBDIR=	mpich
 
-.include "../../mk/bsd.prefs.mk"
+CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/${PKGBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/${PKGBASE}
+CONFIGURE_ARGS+=	--with-htmldir=${PREFIX}/share/doc/${PKGBASE}/html
 
-CONFIGURE_ARGS+=	-prefix=${PREFIX:Q}
-CONFIGURE_ARGS+=	-docdir=${PREFIX}/share/doc/mpi-ch
-CONFIGURE_ARGS+=	-htmldir=${PREFIX}/share/doc/mpi-ch/html
-CONFIGURE_ARGS+=	-mandir=${PREFIX}/${PKGMANDIR}
-CONFIGURE_ARGS+=	-opt=-O
-CONFIGURE_ARGS+=	-rsh=${MPI_RSH:Q}
-CONFIGURE_ARGS+=	--with-comm=ch_p4
-CONFIGURE_ARGS+=	--with-mpe
-CONFIGURE_ARGS+=	--disable-devdebug
-CONFIGURE_ARGS+=	--disable-f90
-CONFIGURE_ARGS+=	--disable-f90modules
-CONFIGURE_ENV+=		sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ENV+=		PERL=${PERL5:Q}
-CONFIGURE_ENV+=		PERLFULLPATH=${PERL5:Q}
+USE_TOOLS+=		perl:run
 
-# build PATH in the config file is not a problem
-CHECK_WRKREF_SKIP+=	share/examples/mpi-ch/perftest/config.system
+REPLACE_PYTHON+=	src/pm/mpd/*.py src/pm/mpd/test/*.py
 
-PKG_SYSCONFSUBDIR=	mpi-ch
-EGDIR=			${PREFIX}/share/examples/mpi-ch
-CONF_FILES+=		${EGDIR}/mpichconf.h.dat ${PKG_SYSCONFDIR}/mpichconf.h.dat
-CONF_FILES+=		${EGDIR}/mpichlib.conf ${PKG_SYSCONFDIR}/mpichlib.conf
-CONF_FILES+=		${EGDIR}/mpichversion.c ${PKG_SYSCONFDIR}/mpichversion.c
-CONF_FILES+=		${EGDIR}/mpif77.conf ${PKG_SYSCONFDIR}/mpif77.conf
+CONF_FILES+=		share/${PKGBASE}/examples/mpe_callstack_ldflags.conf \
+			${PKG_SYSCONFDIR}/mpe_callstack_ldflags.conf
+CONF_FILES+=		share/${PKGBASE}/examples/mpe_f77env.conf \
+			${PKG_SYSCONFDIR}/mpe_f77env.conf
+CONF_FILES+=		share/${PKGBASE}/examples/mpe_help.conf \
+			${PKG_SYSCONFDIR}/mpe_help.conf
+CONF_FILES+=		share/${PKGBASE}/examples/mpe_log.conf \
+			${PKG_SYSCONFDIR}/mpe_log.conf
+CONF_FILES+=		share/${PKGBASE}/examples/mpe_log_postlib.conf \
+			${PKG_SYSCONFDIR}/mpe_log_postlib.conf
+CONF_FILES+=		share/${PKGBASE}/examples/mpe_mpicheck.conf \
+			${PKG_SYSCONFDIR}/mpe_mpicheck.conf
+CONF_FILES+=		share/${PKGBASE}/examples/mpe_mpilog.conf \
+			${PKG_SYSCONFDIR}/mpe_mpilog.conf
+CONF_FILES+=		share/${PKGBASE}/examples/mpe_mpitrace.conf \
+			${PKG_SYSCONFDIR}/mpe_mpitrace.conf
+CONF_FILES+=		share/${PKGBASE}/examples/mpe_nolog.conf \
+			${PKG_SYSCONFDIR}/mpe_nolog.conf
+CONF_FILES+=		share/${PKGBASE}/examples/mpicc.conf \
+			${PKG_SYSCONFDIR}/mpicc.conf
+CONF_FILES+=		share/${PKGBASE}/examples/mpicxx.conf \
+			${PKG_SYSCONFDIR}/mpicxx.conf
+CONF_FILES+=		share/${PKGBASE}/examples/mpif77.conf \
+			${PKG_SYSCONFDIR}/mpif77.conf
 
-.if ${OPSYS} == "NetBSD"
-CONFIGURE_ARGS+=	--with-arch=netbsd
-PLIST_SUBST+=		MPICH_OPSYS=${LOWER_OPSYS:Q}
-.elif ${OPSYS} == "DragonFly"
-CONFIGURE_ARGS+=	--with-arch=freebsd
-PLIST_SUBST+=		MPICH_OPSYS=freebsd
-.elif ${OPSYS} == "IRIX"
-CONFIGURE_ARGS+=	--with-arch=IRIX${ABI:S/32/N32/}
-PLIST_SUBST+=		MPICH_OPSYS="${OPSYS}${ABI:S/32/N32/}"
-.endif
-
-.include "../../mk/compiler.mk"
-.if !empty(CC_VERSION:Mgcc-3*)
-CONFIGURE_ARGS+=	--disable-weak-symbols
-.endif
-
-MAKE_ENV+=		RSHCOMMAND=${MPI_RSH:Q}
-
-BUILD_DEFS+=		MPI_RSH
-
-PLIST_SRC+=		${PKGDIR}/PLIST
-
-post-extract:
-	chmod -R g-w ${WRKDIR}/docs
-
-pre-configure:
-	set -e; for f in MPI-2-C++ examples/perftest/config/confdb mpe \
-	    mpe/slog2sdk mpe/slog2sdk/trace_rlog mpe/slog2sdk/trace_sample\
-	    mpid/ch_p4/p4 romio/confdb src/fortran/config; do \
-		${RM} -f ${WRKSRC}/"$$f"/config.guess; \
-		${CP} ${PKGSRCDIR}/mk/gnu-config/config.guess \
-		    ${WRKSRC}/$$f; \
-	done
-	set -e; for f in MPI-2-C++ examples/perftest/config/confdb mpe \
-	    mpe/slog2sdk mpe/slog2sdk/trace_rlog mpe/slog2sdk/trace_sample\
-	    romio/confdb src/fortran/config; do \
-		${RM} -f ${WRKSRC}/"$$f"/config.sub; \
-		${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub \
-		    ${WRKSRC}/$$f; \
-	done
-.if ${MPI_RSH} == "rsh"
-	@${ECHO} "======================================================================"
-	@${ECHO} "Remember to enable 'shell' and 'login' in your /etc/inetd.conf and"
-	@${ECHO} "restart inetd -- otherwise, the configure script will disable 'rsh'!"
-	@${ECHO} "======================================================================"
-	@sleep 3
-.endif
-
-post-build:
-	@(if [ -r ${WRKSRC}/mpe/viewers/jumpshot-2/bin/jumpshot ]; then \
-		${TOUCH} ${WRKDIR}/with-java; \
-	fi)
-	${SED} -e "s,@PREFIX@,${PREFIX}," ${WRKSRC}/man/man1/MPI.1 >	\
-			${WRKSRC}/man/man1/MPI.1.tmp
-	${MV} ${WRKSRC}/man/man1/MPI.1.tmp ${WRKSRC}/man/man1/MPI.1
-
-post-patch:
-	${RM} -f ${WRKSRC}/man/man1/MPI.1.orig
-
-post-install:
-	cd ${WRKDIR}/docs && pax -rw . ${PREFIX}/share/doc/mpi-ch/html
-	@${RM} ${PREFIX}/${PKGMANDIR}/mandesc
-	@${MV} ${PREFIX}/sbin/mpiuninstall ${PREFIX}/sbin/mpiuninstall.not
-	@${CHMOD} 444 ${PREFIX}/sbin/mpiuninstall.not
-	@${ECHO} "#!/bin/sh" > ${PREFIX}/sbin/mpiuninstall
-	@${ECHO} "echo Please use the pkg_delete command to uninstall MPICH." \
-	    >> ${PREFIX}/sbin/mpiuninstall
-	@${ECHO} "echo The original mpiuninstall script is provided in" \
-	    >> ${PREFIX}/sbin/mpiuninstall
-	@${ECHO} "echo ${PREFIX}/sbin/mpiuninstall.not for reference." \
-	    >> ${PREFIX}/sbin/mpiuninstall
-	@${ECHO} "exit" >> ${PREFIX}/sbin/mpiuninstall
-	@${CHMOD} 755 ${PREFIX}/sbin/mpiuninstall
-
-BUILDLINK_DEPMETHOD.libXt?=	build
-
-.include "../../x11/libX11/buildlink3.mk"
-.include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/tk/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
-
-.if exists(${WRKDIR}/with-java)
-PLIST_SRC+=		${PKGDIR}/PLIST.java
-.endif
