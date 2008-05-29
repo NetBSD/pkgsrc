@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1182 2008/05/29 15:46:13 jnemeth Exp $
+$NetBSD: CHANGES-2008,v 1.1183 2008/05/29 17:10:02 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1991,3 +1991,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added mail/p5-Email-Valid-Loose 0.05 [abs 2008-05-29]
 	Updated devel/p5-Array-Compare to 1.15 [abs 2008-05-29]
 	Updated time/p5-DateTime-Locale to 0.4001 [abs 2008-05-29]
+	Updated pkgtools/shlock to 20080529 [tnn 2008-05-29]
