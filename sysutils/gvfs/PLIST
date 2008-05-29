@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/11 19:25:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/05/29 08:04:45 wiz Exp $
 bin/gvfs-cat
 bin/gvfs-copy
 bin/gvfs-info
@@ -92,5 +92,8 @@ share/locale/zh_CN/LC_MESSAGES/gvfs.mo
 share/locale/zh_HK/LC_MESSAGES/gvfs.mo
 share/locale/zh_TW/LC_MESSAGES/gvfs.mo
 @dirrm share/gvfs/mounts
+@dirrm share/gvfs
 @comment in dbus: @dirrm share/dbus-1/services
+@comment in glib2: @dirrm lib/gio/modules
 @dirrm include/gvfs-client/gvfs
+@dirrm include/gvfs-client
