@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1185 2008/05/29 20:52:44 sketch Exp $
+$NetBSD: CHANGES-2008,v 1.1186 2008/05/29 20:58:33 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1994,3 +1994,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/shlock to 20080529 [tnn 2008-05-29]
 	Updated parallel/mpi-ch to 1.0.7 [tnn 2008-05-29]
 	Updated net/vpnc to 0.5.1nb1 [sketch 2008-05-29]
+	Downgraded graphics/glx-utils to 7.0.3 [tnn 2008-05-29]
