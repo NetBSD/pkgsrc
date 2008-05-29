@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.37 2008/04/15 17:52:40 drochner Exp $
+@comment $NetBSD: PLIST,v 1.38 2008/05/29 11:15:49 drochner Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/panel-test-applets
@@ -212,6 +212,7 @@ share/gnome/help/workspace-switcher/ko/workspace-switcher.xml
 share/gnome/help/workspace-switcher/nl/workspace-switcher.xml
 share/gnome/help/workspace-switcher/oc/workspace-switcher.xml
 share/gnome/help/workspace-switcher/pa/workspace-switcher.xml
+share/gnome/help/workspace-switcher/pt_BR/workspace-switcher.xml
 share/gnome/help/workspace-switcher/ru/workspace-switcher.xml
 share/gnome/help/workspace-switcher/sv/workspace-switcher.xml
 share/gnome/help/workspace-switcher/uk/workspace-switcher.xml
@@ -460,6 +461,7 @@ share/omf/workspace-switcher/workspace-switcher-ko.omf
 share/omf/workspace-switcher/workspace-switcher-nl.omf
 share/omf/workspace-switcher/workspace-switcher-oc.omf
 share/omf/workspace-switcher/workspace-switcher-pa.omf
+share/omf/workspace-switcher/workspace-switcher-pt_BR.omf
 share/omf/workspace-switcher/workspace-switcher-ru.omf
 share/omf/workspace-switcher/workspace-switcher-sv.omf
 share/omf/workspace-switcher/workspace-switcher-uk.omf
@@ -488,6 +490,7 @@ share/omf/workspace-switcher/workspace-switcher-vi.omf
 @dirrm share/gnome/help/workspace-switcher/uk
 @dirrm share/gnome/help/workspace-switcher/sv
 @dirrm share/gnome/help/workspace-switcher/ru
+@dirrm share/gnome/help/workspace-switcher/pt_BR
 @dirrm share/gnome/help/workspace-switcher/pa
 @dirrm share/gnome/help/workspace-switcher/oc
 @dirrm share/gnome/help/workspace-switcher/nl
