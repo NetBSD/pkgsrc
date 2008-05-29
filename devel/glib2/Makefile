@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.139 2008/05/28 21:20:48 joerg Exp $
+# $NetBSD: Makefile,v 1.140 2008/05/29 07:28:07 wiz Exp $
 
 # When updating glib2, please apply patch-ak to configure.in
 # Then run a matching version of autoconf to regen patch-aa.
@@ -92,7 +92,7 @@ PRINT_PLIST_AWK+=	/^@dirrm include\/glib$$/ \
 
 PLIST_VARS+=		fam
 
-# Overriden in options.mk.
+# Overridden in options.mk.
 CONFIGURE_ARGS+=	--disable-fam
 
 .if ${OPSYS} != "HPUX" && ${OPSYS} != "OSF1"
