@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2008/05/27 11:51:32 tnn Exp $
+# $NetBSD: Makefile,v 1.63 2008/05/29 00:44:30 schmonz Exp $
 
 DISTNAME=		stunnel-4.24
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.fu-berlin.de/unix/security/stunnel/ \
 			ftp://stunnel.mirt.net/stunnel/ \
@@ -18,6 +19,7 @@ CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q} \
 			--with-cert-dir=${SSLCERTS:Q} \
 			--with-pem-dir=${SSLCERTS:Q} \
 			--with-tcp-wrappers \
+			--sysconfdir=${PKG_SYSCONFDIR:Q} \
 			--localstatedir=${VARBASE:Q}
 
 PTHREAD_OPTS?=		optional
