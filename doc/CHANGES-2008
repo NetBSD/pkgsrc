@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1181 2008/05/29 08:34:26 abs Exp $
+$NetBSD: CHANGES-2008,v 1.1182 2008/05/29 15:46:13 jnemeth Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1987,7 +1987,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/GraphicsMagick to 1.2.2 [obache 2008-05-29]
 	Updated devel/glib2 to 2.16.3nb3 [wiz 2008-05-29]
 	Updated sysutils/gvfs to 0.2.3nb2 [wiz 2008-05-29]
-	Added devel/p5-ExtUtils-Install-1.50 [abs 2008-05-29]
+	Added devel/p5-ExtUtils-Install 1.50 [abs 2008-05-29]
 	Added mail/p5-Email-Valid-Loose 0.05 [abs 2008-05-29]
 	Updated devel/p5-Array-Compare to 1.15 [abs 2008-05-29]
 	Updated time/p5-DateTime-Locale to 0.4001 [abs 2008-05-29]
