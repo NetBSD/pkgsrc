@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/09/18 19:40:19 drochner Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/05/29 17:56:35 drochner Exp $
 bin/calc
 bin/calc-static
 bin/cscript/4dsphere
@@ -482,5 +482,7 @@ share/calc/xx_print.cal
 @dirrm share/calc/custom
 @dirrm share/calc/custhelp
 @dirrm share/calc
+@exec ${MKDIR} %D/include/calc/custom
+@dirrm include/calc/custom
 @dirrm include/calc
 @dirrm bin/cscript
