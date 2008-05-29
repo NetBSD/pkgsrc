@@ -1,0 +1,14 @@
+$NetBSD: patch-ee,v 1.1.2.2 2008/05/29 14:14:53 tron Exp $
+
+--- smbd/process.c.orig	2008-03-08 16:33:36.000000000 +0100
++++ smbd/process.c
+@@ -521,7 +521,8 @@ static BOOL receive_message_or_smb(char 
+ 		goto again;
+ 	}
+ 
+-	return receive_smb(smbd_server_fd(), buffer, 0);
++	return receive_smb(smbd_server_fd(), buffer,
++			BUFFER_SIZE + LARGE_WRITEX_HDR_SIZE, 0);
+ }
+ 
+ /*
