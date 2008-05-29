@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2008/05/21 15:54:34 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2008/05/29 08:03:58 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GLIB2_BUILDLINK3_MK:=	${GLIB2_BUILDLINK3_MK}+
@@ -15,6 +15,10 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}glib2
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.4.0
 BUILDLINK_ABI_DEPENDS.glib2+=	glib2>=2.14.3
 BUILDLINK_PKGSRCDIR.glib2?=	../../devel/glib2
+
+PRINT_PLIST_AWK+=	/^@dirrm lib\/gio$$/ { next; }
+PRINT_PLIST_AWK+=	/^@dirrm lib\/gio\/modules$$/ \
+				{ print "@comment in glib2: " $$0; next; }
 .endif	# GLIB2_BUILDLINK3_MK
 
 .include "../../converters/libiconv/buildlink3.mk"
