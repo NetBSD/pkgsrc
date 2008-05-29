@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2008/03/06 14:53:49 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2008/05/29 16:34:15 drochner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGNOMEUI_BUILDLINK3_MK:=	${LIBGNOMEUI_BUILDLINK3_MK}+
@@ -17,7 +17,6 @@ BUILDLINK_ABI_DEPENDS.libgnomeui+=	libgnomeui>=2.20.1.1nb2
 BUILDLINK_PKGSRCDIR.libgnomeui?=	../../devel/libgnomeui
 .endif	# LIBGNOMEUI_BUILDLINK3_MK
 
-.include "../../audio/esound/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libbonoboui/buildlink3.mk"
