@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2008/05/29 11:30:17 drochner Exp $
+# $NetBSD: Makefile,v 1.99 2008/05/29 16:32:23 drochner Exp $
 #
 
 DISTNAME=		gnome-session-2.22.2
@@ -28,7 +28,6 @@ CPPFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 
 GCONF_SCHEMAS=	gnome-session.schemas
 
-BUILDLINK_API_DEPENDS.esound+=	esound>=0.2.26
 BUILDLINK_API_DEPENDS.gnome-keyring+=	gnome-keyring>=0.5.1
 # Make sure we do not use old packages that rely on XDG_{CONFIG,DATA}_DIRS
 # in the environment being set.
@@ -36,7 +35,6 @@ BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.1
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
-.include "../../audio/esound/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/GConf-ui/buildlink3.mk"
