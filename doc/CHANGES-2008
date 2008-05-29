@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1179 2008/05/29 08:04:16 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1180 2008/05/29 08:05:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1986,3 +1986,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/stunnel to 4.24nb1 [schmonz 2008-05-29]
 	Updated graphics/GraphicsMagick to 1.2.2 [obache 2008-05-29]
 	Updated devel/glib2 to 2.16.3nb3 [wiz 2008-05-29]
+	Updated sysutils/gvfs to 0.2.3nb2 [wiz 2008-05-29]
