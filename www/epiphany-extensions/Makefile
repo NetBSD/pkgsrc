@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.46 2008/04/15 18:17:32 drochner Exp $
+# $NetBSD: Makefile,v 1.47 2008/05/29 16:57:56 drochner Exp $
 #
 
-DISTNAME=	epiphany-extensions-2.22.1
+DISTNAME=	epiphany-extensions-2.22.2
 CATEGORIES=	www gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/epiphany-extensions/2.22/}
 EXTRACT_SUFX=	.tar.bz2
