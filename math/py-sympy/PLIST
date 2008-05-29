@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/05/05 19:10:02 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/05/29 17:59:25 drochner Exp $
 bin/isympy${PYVERSSUFFIX}
 ${PYSITELIB}/sympy/__init__.py
 ${PYSITELIB}/sympy/__init__.pyc
@@ -69,6 +69,9 @@ ${PYSITELIB}/sympy/core/methods.pyo
 ${PYSITELIB}/sympy/core/mul.py
 ${PYSITELIB}/sympy/core/mul.pyc
 ${PYSITELIB}/sympy/core/mul.pyo
+${PYSITELIB}/sympy/core/multidimensional.py
+${PYSITELIB}/sympy/core/multidimensional.pyc
+${PYSITELIB}/sympy/core/multidimensional.pyo
 ${PYSITELIB}/sympy/core/numbers.py
 ${PYSITELIB}/sympy/core/numbers.pyc
 ${PYSITELIB}/sympy/core/numbers.pyo
@@ -120,9 +123,15 @@ ${PYSITELIB}/sympy/core/tests/test_functions.pyo
 ${PYSITELIB}/sympy/core/tests/test_match.py
 ${PYSITELIB}/sympy/core/tests/test_match.pyc
 ${PYSITELIB}/sympy/core/tests/test_match.pyo
+${PYSITELIB}/sympy/core/tests/test_multidimensional.py
+${PYSITELIB}/sympy/core/tests/test_multidimensional.pyc
+${PYSITELIB}/sympy/core/tests/test_multidimensional.pyo
 ${PYSITELIB}/sympy/core/tests/test_numbers.py
 ${PYSITELIB}/sympy/core/tests/test_numbers.pyc
 ${PYSITELIB}/sympy/core/tests/test_numbers.pyo
+${PYSITELIB}/sympy/core/tests/test_pickling.py
+${PYSITELIB}/sympy/core/tests/test_pickling.pyc
+${PYSITELIB}/sympy/core/tests/test_pickling.pyo
 ${PYSITELIB}/sympy/core/tests/test_relational.py
 ${PYSITELIB}/sympy/core/tests/test_relational.pyc
 ${PYSITELIB}/sympy/core/tests/test_relational.pyo
@@ -219,6 +228,9 @@ ${PYSITELIB}/sympy/functions/special/polynomials.pyo
 ${PYSITELIB}/sympy/functions/special/spherical_harmonics.py
 ${PYSITELIB}/sympy/functions/special/spherical_harmonics.pyc
 ${PYSITELIB}/sympy/functions/special/spherical_harmonics.pyo
+${PYSITELIB}/sympy/functions/special/tensor_functions.py
+${PYSITELIB}/sympy/functions/special/tensor_functions.pyc
+${PYSITELIB}/sympy/functions/special/tensor_functions.pyo
 ${PYSITELIB}/sympy/functions/special/tests/test_error_functions.py
 ${PYSITELIB}/sympy/functions/special/tests/test_error_functions.pyc
 ${PYSITELIB}/sympy/functions/special/tests/test_error_functions.pyo
@@ -231,6 +243,9 @@ ${PYSITELIB}/sympy/functions/special/tests/test_spec_polynomials.pyo
 ${PYSITELIB}/sympy/functions/special/tests/test_spherical_harmonics.py
 ${PYSITELIB}/sympy/functions/special/tests/test_spherical_harmonics.pyc
 ${PYSITELIB}/sympy/functions/special/tests/test_spherical_harmonics.pyo
+${PYSITELIB}/sympy/functions/special/tests/test_tensor_functions.py
+${PYSITELIB}/sympy/functions/special/tests/test_tensor_functions.pyc
+${PYSITELIB}/sympy/functions/special/tests/test_tensor_functions.pyo
 ${PYSITELIB}/sympy/functions/special/tests/test_zeta_functions.py
 ${PYSITELIB}/sympy/functions/special/tests/test_zeta_functions.pyc
 ${PYSITELIB}/sympy/functions/special/tests/test_zeta_functions.pyo
@@ -585,9 +600,6 @@ ${PYSITELIB}/sympy/series/gruntz.pyo
 ${PYSITELIB}/sympy/series/limits.py
 ${PYSITELIB}/sympy/series/limits.pyc
 ${PYSITELIB}/sympy/series/limits.pyo
-${PYSITELIB}/sympy/series/limits_series.py
-${PYSITELIB}/sympy/series/limits_series.pyc
-${PYSITELIB}/sympy/series/limits_series.pyo
 ${PYSITELIB}/sympy/series/order.py
 ${PYSITELIB}/sympy/series/order.pyc
 ${PYSITELIB}/sympy/series/order.pyo
@@ -597,9 +609,6 @@ ${PYSITELIB}/sympy/series/tests/test_demidovich.pyo
 ${PYSITELIB}/sympy/series/tests/test_gruntz.py
 ${PYSITELIB}/sympy/series/tests/test_gruntz.pyc
 ${PYSITELIB}/sympy/series/tests/test_gruntz.pyo
-${PYSITELIB}/sympy/series/tests/test_limit_series.py
-${PYSITELIB}/sympy/series/tests/test_limit_series.pyc
-${PYSITELIB}/sympy/series/tests/test_limit_series.pyo
 ${PYSITELIB}/sympy/series/tests/test_limits.py
 ${PYSITELIB}/sympy/series/tests/test_limits.pyc
 ${PYSITELIB}/sympy/series/tests/test_limits.pyo
@@ -681,39 +690,33 @@ ${PYSITELIB}/sympy/statistics/tests/test_statistics.pyo
 ${PYSITELIB}/sympy/test_external/test_numpy.py
 ${PYSITELIB}/sympy/test_external/test_numpy.pyc
 ${PYSITELIB}/sympy/test_external/test_numpy.pyo
+${PYSITELIB}/sympy/thirdparty/__init__.py
+${PYSITELIB}/sympy/thirdparty/__init__.pyc
+${PYSITELIB}/sympy/thirdparty/__init__.pyo
 ${PYSITELIB}/sympy/thirdparty/mpmath/__init__.py
 ${PYSITELIB}/sympy/thirdparty/mpmath/__init__.pyc
 ${PYSITELIB}/sympy/thirdparty/mpmath/__init__.pyo
-${PYSITELIB}/sympy/thirdparty/mpmath/functions2.py
-${PYSITELIB}/sympy/thirdparty/mpmath/functions2.pyc
-${PYSITELIB}/sympy/thirdparty/mpmath/functions2.pyo
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/__init__.py
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/__init__.pyc
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/__init__.pyo
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/complexop.py
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/complexop.pyc
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/complexop.pyo
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/constants.py
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/constants.pyc
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/constants.pyo
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/convert.py
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/convert.pyc
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/convert.pyo
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/floatop.py
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/floatop.pyc
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/floatop.pyo
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/functions.py
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/functions.pyc
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/functions.pyo
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/squareroot.py
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/squareroot.pyc
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/squareroot.pyo
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/util.py
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/util.pyc
-${PYSITELIB}/sympy/thirdparty/mpmath/lib/util.pyo
-${PYSITELIB}/sympy/thirdparty/mpmath/mpmath.py
-${PYSITELIB}/sympy/thirdparty/mpmath/mpmath.pyc
-${PYSITELIB}/sympy/thirdparty/mpmath/mpmath.pyo
+${PYSITELIB}/sympy/thirdparty/mpmath/calculus.py
+${PYSITELIB}/sympy/thirdparty/mpmath/calculus.pyc
+${PYSITELIB}/sympy/thirdparty/mpmath/calculus.pyo
+${PYSITELIB}/sympy/thirdparty/mpmath/conftest.py
+${PYSITELIB}/sympy/thirdparty/mpmath/conftest.pyc
+${PYSITELIB}/sympy/thirdparty/mpmath/conftest.pyo
+${PYSITELIB}/sympy/thirdparty/mpmath/intervals.py
+${PYSITELIB}/sympy/thirdparty/mpmath/intervals.pyc
+${PYSITELIB}/sympy/thirdparty/mpmath/intervals.pyo
+${PYSITELIB}/sympy/thirdparty/mpmath/lib.py
+${PYSITELIB}/sympy/thirdparty/mpmath/lib.pyc
+${PYSITELIB}/sympy/thirdparty/mpmath/lib.pyo
+${PYSITELIB}/sympy/thirdparty/mpmath/libmpc.py
+${PYSITELIB}/sympy/thirdparty/mpmath/libmpc.pyc
+${PYSITELIB}/sympy/thirdparty/mpmath/libmpc.pyo
+${PYSITELIB}/sympy/thirdparty/mpmath/mptypes.py
+${PYSITELIB}/sympy/thirdparty/mpmath/mptypes.pyc
+${PYSITELIB}/sympy/thirdparty/mpmath/mptypes.pyo
+${PYSITELIB}/sympy/thirdparty/mpmath/specfun.py
+${PYSITELIB}/sympy/thirdparty/mpmath/specfun.pyc
+${PYSITELIB}/sympy/thirdparty/mpmath/specfun.pyo
 ${PYSITELIB}/sympy/thirdparty/pyglet/pyglet/__init__.py
 ${PYSITELIB}/sympy/thirdparty/pyglet/pyglet/__init__.pyc
 ${PYSITELIB}/sympy/thirdparty/pyglet/pyglet/__init__.pyo
@@ -989,7 +992,6 @@ man/man1/isympy${PYVERSSUFFIX}.1
 @dirrm ${PYSITELIB}/sympy/thirdparty/pyglet/pyglet/font
 @dirrm ${PYSITELIB}/sympy/thirdparty/pyglet/pyglet
 @dirrm ${PYSITELIB}/sympy/thirdparty/pyglet
-@dirrm ${PYSITELIB}/sympy/thirdparty/mpmath/lib
 @dirrm ${PYSITELIB}/sympy/thirdparty/mpmath
 @dirrm ${PYSITELIB}/sympy/thirdparty
 @dirrm ${PYSITELIB}/sympy/test_external
