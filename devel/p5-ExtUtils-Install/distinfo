@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/05/29 08:22:30 abs Exp $
+
+SHA1 (ExtUtils-Install-1.50.tar.gz) = 8bd5064194eecc92ef5628be918374f9dec26969
+RMD160 (ExtUtils-Install-1.50.tar.gz) = 1e44f61e69d1b8d8f95d606cf482e3e53fd027e0
+Size (ExtUtils-Install-1.50.tar.gz) = 62057 bytes
