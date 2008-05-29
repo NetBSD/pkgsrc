@@ -1,6 +1,6 @@
-$NetBSD: patch-ba,v 1.1 2008/04/10 12:13:49 drochner Exp $
+$NetBSD: patch-ba,v 1.2 2008/05/29 12:41:35 tnn Exp $
 
---- gio/gunixmounts.c.orig	2008-04-01 15:51:11.000000000 +0200
+--- gio/gunixmounts.c.orig	2008-04-08 05:47:30.000000000 +0200
 +++ gio/gunixmounts.c
 @@ -561,7 +561,11 @@ get_mtab_monitor_file (void)
  static GList *
@@ -14,17 +14,22 @@ $NetBSD: patch-ba,v 1.1 2008/04/10 12:13:49 drochner Exp $
    int num_mounts, i;
    GUnixMountEntry *mount_entry;
    GList *return_list;
-@@ -579,8 +583,13 @@ _g_get_unix_mounts (void)
+@@ -578,8 +582,18 @@ _g_get_unix_mounts (void)
+       
        mount_entry->mount_path = g_strdup (mntent[i].f_mntonname);
        mount_entry->device_path = g_strdup (mntent[i].f_mntfromname);
++#if defined(__digital__)
++      mount_entry->filesystem_type = g_strdup ("unknown");
++#else
        mount_entry->filesystem_type = g_strdup (mntent[i].f_fstypename);
-+#ifdef __NetBSD__
++#endif
++#if defined(__NetBSD__)
 +      if (mntent[i].f_flag & MNT_RDONLY)
-+	mount_entry->is_read_only = TRUE;
++#elif defined(__digital__)
++      if (mntent[i].f_flags & M_RDONLY)
 +#else
        if (mntent[i].f_flags & MNT_RDONLY)
- 	mount_entry->is_read_only = TRUE;
 +#endif
+ 	mount_entry->is_read_only = TRUE;
  
        mount_entry->is_system_internal =
- 	guess_system_internal (mount_entry->mount_path,
