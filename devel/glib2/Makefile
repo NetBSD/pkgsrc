@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.140 2008/05/29 07:28:07 wiz Exp $
+# $NetBSD: Makefile,v 1.141 2008/05/29 08:03:58 wiz Exp $
 
 # When updating glib2, please apply patch-ak to configure.in
 # Then run a matching version of autoconf to regen patch-aa.
 DISTNAME=		glib-2.16.3
 PKGNAME=		${DISTNAME:S/glib/glib2/}
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		devel
 MASTER_SITES=		ftp://ftp.gtk.org/pub/glib/2.16/ \
 			ftp://ftp.cs.umn.edu/pub/gimp/pub/glib/2.16/ \
