@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.2 2007/12/27 14:55:36 joerg Exp $
+$NetBSD: patch-ag,v 1.3 2008/05/29 17:53:36 drochner Exp $
 
---- Src/DasherCore/DasherViewSquare.cpp.orig	2007-10-30 17:46:41.000000000 +0100
+--- Src/DasherCore/DasherViewSquare.cpp.orig	2008-04-07 19:25:34.000000000 +0200
 +++ Src/DasherCore/DasherViewSquare.cpp
-@@ -791,7 +791,7 @@ void CDasherViewSquare::GetScaleFactor( 
+@@ -805,7 +805,7 @@ void CDasherViewSquare::GetScaleFactor( 
  inline myint CDasherViewSquare::CustomIDiv(myint iNumerator, myint iDenominator) { 
    // Integer division rounding away from zero
    
@@ -11,12 +11,3 @@ $NetBSD: patch-ag,v 1.2 2007/12/27 14:55:36 joerg Exp $
    myint quot = iNumerator / iDenominator;
    myint rem = (int64)iNumerator % (int64)iDenominator;
  
-@@ -802,7 +802,7 @@ inline myint CDasherViewSquare::CustomID
-   else
-     return quot;
- #else
--  lldiv_t res = __gnu_cxx::lldiv(iNumerator, iDenominator);
-+  lldiv_t res = ::lldiv(iNumerator, iDenominator);
-   
-   if(res.rem < 0)
-     return res.quot - 1;
