@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1183 2008/05/29 17:10:02 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.1184 2008/05/29 20:31:15 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1992,3 +1992,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Array-Compare to 1.15 [abs 2008-05-29]
 	Updated time/p5-DateTime-Locale to 0.4001 [abs 2008-05-29]
 	Updated pkgtools/shlock to 20080529 [tnn 2008-05-29]
+	Updated parallel/mpi-ch to 1.0.7 [tnn 2008-05-29]
