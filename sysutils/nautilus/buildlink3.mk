@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.30 2008/04/15 17:48:16 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.31 2008/05/29 11:25:28 drochner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 NAUTILUS_BUILDLINK3_MK:=	${NAUTILUS_BUILDLINK3_MK}+
@@ -22,7 +22,6 @@ PRINT_PLIST_AWK+=	/^@dirrm lib\/nautilus\/extensions-1.0$$/ \
 				{ print "@comment in nautilus: " $$0; next; }
 .endif	# NAUTILUS_BUILDLINK3_MK
 
-.include "../../audio/esound/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
 .include "../../devel/eel/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2008/05/29 11:19:41 drochner Exp $
+# $NetBSD: Makefile,v 1.90 2008/05/29 11:25:28 drochner Exp $
 #
 
 DISTNAME=		nautilus-2.22.3
@@ -22,14 +22,12 @@ CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 GCONF_SCHEMAS=		apps_nautilus_preferences.schemas
 
 BUILDLINK_API_DEPENDS.eel+=	eel>=2.15.91
-BUILDLINK_API_DEPENDS.esound+=	esound>=0.2.27
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.10.0
 BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.8
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
-.include "../../audio/esound/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/eel/buildlink3.mk"
