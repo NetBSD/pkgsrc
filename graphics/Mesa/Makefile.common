@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.62 2008/05/21 08:26:19 bjs Exp $
+# $NetBSD: Makefile.common,v 1.63 2008/05/29 19:14:17 tnn Exp $
 #
 # This Makefile fragment is included either directly or indirectly (through
 # Makefile.lib) by all packages that are built from the Mesa sources.
@@ -15,7 +15,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 #
 #	graphics/MesaLib
 #	graphics/MesaDemos
-#	graphics/glx-utils
 #
 MESA_VERSION=		7.0.3
 MESA_PKGVERSION=	${MESA_VERSION}${MESA_PATCHLEVEL}
