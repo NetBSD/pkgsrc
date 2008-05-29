@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2008/05/29 20:50:31 sketch Exp $
+
+--- vpnc-disconnect.orig	2005-05-01 21:00:41.000000000 +0100
++++ vpnc-disconnect	2008-05-29 14:02:23.000000000 +0100
+@@ -1,6 +1,6 @@
+-#!/bin/sh
++#!@SH@
+ 
+-pid=/var/run/vpnc/pid
++pid=@VARBASE@/run/vpnc/pid
+ 
+ if [ $# -ne 0 ]; then
+ 	echo "Usage: $0" 1>&2
