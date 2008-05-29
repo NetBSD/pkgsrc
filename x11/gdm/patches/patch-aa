@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.22 2007/11/30 20:08:38 drochner Exp $
+$NetBSD: patch-aa,v 1.23 2008/05/29 17:21:45 drochner Exp $
 
---- configure.orig	2007-09-17 16:48:17.000000000 +0200
+--- configure.orig	2008-05-13 02:27:18.000000000 +0200
 +++ configure
-@@ -27195,7 +27195,9 @@ cat confdefs.h >>conftest.$ac_ext
+@@ -27278,7 +27278,9 @@ cat confdefs.h >>conftest.$ac_ext
  cat >>conftest.$ac_ext <<_ACEOF
  /* end confdefs.h.  */
  #include <sys/statvfs.h>
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.22 2007/11/30 20:08:38 drochner Exp $
  _ACEOF
  if { (ac_try="$ac_cpp conftest.$ac_ext"
  case "(($ac_try" in
-@@ -33464,6 +33466,18 @@ case "$host" in
+@@ -33554,6 +33556,18 @@ case "$host" in
  	HOST_UTMP_LINE_REMOTE=""
  	HOST_UTMP_PSEUDO_DEVICE="false"
  	;;
@@ -31,7 +31,7 @@ $NetBSD: patch-aa,v 1.22 2007/11/30 20:08:38 drochner Exp $
  *)
  	HOST_GDM_USER_PATH="/bin:/usr/bin"
  	HOST_HALT_COMMAND="/usr/bin/poweroff;/sbin/poweroff;/sbin/shutdown -h now;/usr/sbin/shutdown -h now"
-@@ -33480,18 +33494,18 @@ esac
+@@ -33570,18 +33584,18 @@ esac
  
  # allow user to override the host-specific default
  
@@ -62,7 +62,7 @@ $NetBSD: patch-aa,v 1.22 2007/11/30 20:08:38 drochner Exp $
  
  # On Solaris, the /usr/bin/Xserver script is used to decide whether to
  # use Xsun or Xorg, so this is used on Solaris.
-@@ -33564,6 +33578,11 @@ elif test -x /usr/bin/X; then
+@@ -33654,6 +33668,11 @@ elif test -x /usr/bin/X; then
     X_SERVER_PATH="/usr/bin"
     X_SERVER="/usr/bin/X"
     X_CONFIG_OPTIONS="-audit 0"
@@ -74,11 +74,11 @@ $NetBSD: patch-aa,v 1.22 2007/11/30 20:08:38 drochner Exp $
  else
     # what to do, what to do, this is wrong, but this just sets the
     # defaults, perhaps this user is cross compiling or some such
-@@ -33573,6 +33592,7 @@ else
+@@ -33663,6 +33682,7 @@ else
     GDM_USER_PATH="$GDM_USER_PATH:/usr/bin/X11:/usr/X11R6/bin:/usr/local/bin:/opt/X11R6/bin"
     X_CONFIG_OPTIONS="-audit 0"
  fi
 +X_CONFIG_OPTIONS="$X_SERVER_ARGS $X_CONFIG_OPTIONS"
  
- # Don't add bindir to GDM_USER_PATH if it is already in the PATH.
- # If it is /bin or /usr/bin, for example.
+ # Use Xephyr if it is available.  It works better than Xnest since Xephyr
+ # supports the Xserver extensions, even if on a remote machine.
