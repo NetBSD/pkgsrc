@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.82 2008/04/26 00:07:27 wiz Exp $
+# $NetBSD: Makefile,v 1.83 2008/05/29 17:12:31 drochner Exp $
 
-DISTNAME=		gnome-games-2.22.1.1
+DISTNAME=		gnome-games-2.22.2
 CATEGORIES=		games gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.22/}
 EXTRACT_SUFX=		.tar.bz2
@@ -21,6 +21,7 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		PKGLOCALEDIR=${PKGLOCALEDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--without-ggz-server
 
 FILES_SUBST+=		INSTALL=${INSTALL:Q}
 
