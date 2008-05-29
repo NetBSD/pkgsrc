@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1177 2008/05/29 00:53:05 jnemeth Exp $
+$NetBSD: CHANGES-2008,v 1.1178 2008/05/29 04:16:15 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1984,3 +1984,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated time/p5-Time-HiRes to 1.9715 [abs 2008-05-28]
 	Updated mail/spamdyke to 3.1.8 [schmonz 2008-05-28]
 	Updated security/stunnel to 4.24nb1 [schmonz 2008-05-29]
+	Updated graphics/GraphicsMagick to 1.2.2 [obache 2008-05-29]
