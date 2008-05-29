@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2008/04/25 20:39:12 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2008/05/29 16:07:07 drochner Exp $
 #
 
-DISTNAME=	gnome-menus-2.22.1
-PKGNAME=	${PYPKGPREFIX}-gnome-menus-2.22.1
+DISTNAME=	gnome-menus-2.22.2
+PKGNAME=	${PYPKGPREFIX}-gnome-menus-2.22.2
 CATEGORIES=	sysutils gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-menus/2.22/}
 EXTRACT_SUFX=	.tar.bz2
