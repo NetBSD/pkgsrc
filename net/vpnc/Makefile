@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2008/01/09 13:13:09 ghen Exp $
+# $NetBSD: Makefile,v 1.22 2008/05/29 20:50:31 sketch Exp $
 #
 
 DISTNAME=		vpnc-0.5.1
+PKGREVISION=		1
 CATEGORIES=		net security
 MASTER_SITES=		http://www.unix-ag.uni-kl.de/~massar/vpnc/
 
@@ -19,31 +20,35 @@ INSTALLATION_DIRS=	bin sbin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8 \
 			share/doc/vpnc share/examples/vpnc
 OWN_DIRS=		${PKG_SYSCONFDIR}/vpnc
 
-SUBST_CLASSES+= 	paths
+SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	fixing pathnames
 SUBST_STAGE.paths=	post-patch
-SUBST_FILES.paths=	config.c vpnc-script makeman.pl pcf2vpnc vpnc.8.template
+SUBST_FILES.paths=	config.c vpnc-script makeman.pl pcf2vpnc vpnc.8.template vpnc-disconnect
 SUBST_SED.paths=	-e 's|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g'
 SUBST_SED.paths+=	-e 's|@PREFIX@|${PREFIX}|g'
 SUBST_SED.paths+=	-e 's|@PKGMANDIR@|${PKGMANDIR}|g'
 SUBST_SED.paths+=	-e 's|@VARBASE@|${VARBASE}|g'
 SUBST_SED.paths+=	-e 's|@PERL5@|${PERL5}|g'
+SUBST_SED.paths+=	-e 's|@SH@|${SH}|g'
+
+BUILD_DEFS+=		VARBASE
 
 EGDIR=			${PREFIX}/share/examples/vpnc
-CONF_FILES+=		${EGDIR}/vpnc.conf ${PKG_SYSCONFDIR}/vpnc/vpnc.conf
+CONF_FILES+=		${EGDIR}/default.conf ${PKG_SYSCONFDIR}/vpnc/default.conf
+CONF_FILES_MODE=	0600
 CONF_FILES_PERMS+=	${EGDIR}/vpnc-script ${PKG_SYSCONFDIR}/vpnc/vpnc-script ${ROOT_USER} ${ROOT_GROUP} 755
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/vpnc ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_PROGRAM} ${WRKSRC}/cisco-decrypt ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/vpnc-script ${DESTDIR}${EGDIR}
-	${INSTALL_MAN} ${WRKSRC}/vpnc.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/vpnc.conf ${DESTDIR}${EGDIR}/default.conf
 	${INSTALL_SCRIPT} ${WRKSRC}/vpnc-disconnect ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/pcf2vpnc ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/vpnc.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_MAN} ${WRKSRC}/pcf2vpnc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_MAN} ${WRKSRC}/cisco-decrypt.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/vpnc
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/vpnc
 
 .include "../../security/libgcrypt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

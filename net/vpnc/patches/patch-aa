@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.5 2008/01/09 11:35:31 hubertf Exp $
+$NetBSD: patch-aa,v 1.6 2008/05/29 20:50:31 sketch Exp $
 
 --- config.c.orig	2007-09-10 22:39:48.000000000 +0200
-+++ config.c	2007-09-14 14:31:56.000000000 +0200
-@@ -267,7 +267,7 @@ static const char *config_def_app_versio
++++ config.c	2008-05-28 16:32:56.000000000 +0100
+@@ -267,12 +267,12 @@ static const char *config_def_app_versio
  
  static const char *config_def_script(void)
  {
@@ -11,6 +11,12 @@ $NetBSD: patch-aa,v 1.5 2008/01/09 11:35:31 hubertf Exp $
  }
  
  static const char *config_def_pid_file(void)
+ {
+-	return "/var/run/vpnc/pid";
++	return "@VARBASE@/run/vpnc/pid";
+ }
+ 
+ static const char *config_def_vendor(void)
 @@ -538,7 +538,7 @@ static char *get_config_filename(const c
  {
  	char *realname;
