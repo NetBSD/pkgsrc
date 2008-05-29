@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2008/04/30 13:38:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.79 2008/05/29 16:34:15 drochner Exp $
 #
 
 DISTNAME=	libgnomeui-2.22.1
@@ -36,7 +36,6 @@ post-configure:
 		${PKGCONFIG_BASE}.tmp
 	${MV} ${PKGCONFIG_BASE}.tmp ${PKGCONFIG_BASE}
 
-.include "../../audio/esound/buildlink3.mk"
 .include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
