@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.24 2008/04/15 18:09:08 drochner Exp $
+$NetBSD: distinfo,v 1.25 2008/05/29 11:34:16 drochner Exp $
 
-SHA1 (gnome-themes-2.22.0.tar.bz2) = e04a77f401a016abfd6d16c386e676527621400c
-RMD160 (gnome-themes-2.22.0.tar.bz2) = 05d37d37eec14c87254f6b4a590536ea4328ccd0
-Size (gnome-themes-2.22.0.tar.bz2) = 1495495 bytes
+SHA1 (gnome-themes-2.22.2.tar.bz2) = ec386aea350cd22d1a5769a8ca011f59660d9ff6
+RMD160 (gnome-themes-2.22.2.tar.bz2) = 08cf832e650ba020cab16c0fe6fd83dce08f97a3
+Size (gnome-themes-2.22.2.tar.bz2) = 1498952 bytes
