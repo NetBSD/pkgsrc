@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.92 2008/01/23 13:46:21 rillig Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.93 2008/05/29 08:34:26 abs Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -586,7 +586,8 @@ DISTNAME=       foo-17.43
     <varname>PKGREVISION</varname> are:</para>
 
     <itemizedlist><listitem>
-      <para>Changing <varname>HOMEPAGE</varname>, <varname>MAINTAINER</varname>,
+      <para>Changing <varname>HOMEPAGE</varname>,
+      <varname>MAINTAINER</varname>, <varname>OWNER</varname>,
       or comments in Makefile.</para></listitem><listitem><para>
       Changing build variables if the resulting binary package is the same.</para></listitem><listitem><para>
       Changing <filename>DESCR</filename>.</para></listitem><listitem><para>
