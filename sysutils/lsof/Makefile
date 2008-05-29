@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.97 2008/05/26 02:13:23 joerg Exp $
+# $NetBSD: Makefile,v 1.98 2008/05/29 16:52:59 tnn Exp $
 
 DISTNAME=		lsof_4.78
 PKGNAME=		${DISTNAME:S/_/-/}.${OS_VERSION}
@@ -14,6 +14,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		atatat@NetBSD.org
 HOMEPAGE=		http://people.freebsd.org/~abe/
 COMMENT=		Lists information about open files
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/${SRCBALL_NAME}
 HAS_CONFIGURE=		yes
@@ -40,8 +42,9 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 .include "../../mk/bsd.prefs.mk"
 
+REAL_GROUP=		${REAL_ROOT_GROUP}
 .if ${OPSYS} == "NetBSD"
-REAL_GROUP=		-g kmem
+REAL_GROUP=		kmem
 CONFIGURE_ENV+=		NETBSD_SYS="${NETBSDSRCDIR}/sys"
 .elif ${OPSYS} == "SunOS"
 MAKE_ENV+=		CPPFLAGS=
@@ -66,12 +69,14 @@ post-extract:
 	fi)
 	@( cd ${WRKSRC} ; ${ECHO} "y" | ./Inventory || exit 1 )
 
+INSTALLATION_DIRS+=	sbin ${PKGMANDIR}/man8 share/lsof
+SPECIAL_PERMS+=		${PREFIX}/sbin/lsof ${REAL_ROOT_USER} ${REAL_GROUP} 2755
+
 do-install:
-	${INSTALL} ${COPY} ${_STRIPFLAG_INSTALL} -o ${BINOWN} -g ${BINGRP} -m 2755 ${REAL_GROUP} \
-		${WRKSRC}/lsof ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/lsof.8 ${PREFIX}/${PKGMANDIR}/man8/lsof.8
-	@${INSTALL_DATA_DIR} ${PREFIX}/share/lsof
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/* ${PREFIX}/share/lsof
-	@${CHMOD} 0444 ${PREFIX}/share/lsof/00*
+	${INSTALL_PROGRAM} ${WRKSRC}/lsof ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/lsof.8 \
+	  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/lsof.8
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/* ${DESTDIR}${PREFIX}/share/lsof
+	@${CHMOD} 0444 ${DESTDIR}${PREFIX}/share/lsof/00*
 
 .include "../../mk/bsd.pkg.mk"
