@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/12/19 13:28:20 rillig Exp $
+# $NetBSD: Makefile,v 1.19 2008/05/29 16:33:10 tnn Exp $
 #
 
 DISTNAME=	shlock-20020114
@@ -10,7 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=
 COMMENT=	Shell utility to perform dot-locking
 
-WRKSRC=		${WRKDIR}
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 EXTRACT_ONLY=	#empty
 NO_CHECKSUM=	yes
 MANCOMPRESSED_IF_MANZ=	yes
@@ -18,6 +19,8 @@ PLIST_SRC=	${WRKDIR}/PLIST
 BUILD_DEFS+=	MANINSTALL
 
 MAKE_ENV+=	${BSD_MAKE_ENV}
+
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/cat1
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,9 +33,7 @@ MANINSTALL=
 .endif
 
 post-extract:
-	@for FILE in Makefile shlock.c shlock.1; do			\
-		${CP} ${FILESDIR}/$$FILE ${WRKSRC};			\
-	done
+	${CP} -R ${FILESDIR} ${WRKSRC}
 
 pre-install:
 	@${RM} -f ${PLIST_SRC}
