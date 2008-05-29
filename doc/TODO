@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7290 2008/05/28 22:17:41 abs Exp $
+$NetBSD: TODO,v 1.7291 2008/05/29 00:47:39 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1254,7 +1254,6 @@ Suggested package updates
 	o stlport-4.6.2
 	o stratagus-2.2.2
 	o streamripper-1.63.0
-	o stunnel-4.24
 	o subtitleripper-0.3.4
 	o sunbird-0.5 [ghen]
 	o suse_base-10.3
