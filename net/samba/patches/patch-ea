@@ -1,0 +1,13 @@
+$NetBSD: patch-ea,v 1.1.2.2 2008/05/29 14:14:53 tron Exp $
+
+--- client/client.c.orig	2008-03-08 16:56:26.000000000 +0100
++++ client/client.c
+@@ -3626,7 +3626,7 @@ static void readline_callback(void)
+ 	   session keepalives and then drop them here.
+ 	*/
+ 	if (FD_ISSET(cli->fd,&fds)) {
+-		if (!receive_smb(cli->fd,cli->inbuf,0)) {
++		if (!receive_smb(cli->fd,cli->inbuf,cli->bufsize,0)) {
+ 			DEBUG(0, ("Read from server failed, maybe it closed the "
+ 				"connection\n"));
+ 			return;
