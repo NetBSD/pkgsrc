@@ -1,4 +1,4 @@
-# $NetBSD: Makefile-example,v 1.16 2008/01/04 19:53:36 heinz Exp $
+# $NetBSD: Makefile-example,v 1.17 2008/05/29 08:34:26 abs Exp $
 
 # First paragraph - distfile and binary package data
 # DISTNAME PKGNAME PKGREVISION SVR4_PKGNAME CATEGORIES MASTER_SITES
@@ -10,7 +10,7 @@ CATEGORIES=		devel gnu	# multiple categories are allowed
 MASTER_SITES=		${MASTER_SITE_GNU:=make/}
 #EXTRACT_SUFX=		.tar.bz2	# .tar.gz is the default, only needed in unusual circumstances
 
-# Second paragraph - MAINTAINER, HOMEPAGE and COMMENT
+# Second paragraph - MAINTAINER/OWNER, HOMEPAGE and COMMENT
 MAINTAINER=		pkgsrc-users@NetBSD.org	# set this to your email address, pkgsrc-users@ is the default
 HOMEPAGE=		http://www.gnu.org/software/make/make.html
 COMMENT=		GNU version of 'make' utility	# start with a capital, no articles at start
