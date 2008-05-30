@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.64 2008/05/29 14:17:13 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.65 2008/05/30 17:15:29 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -146,3 +146,5 @@ pullup ticket #2400 - requested by tnn
 stunnel: update package due to security issue
 Pullup ticket #2403 - requested by drochner
 samba: security fix
+Pullup ticket #2405 - requested by mishka
+fix build problem on NetBSD-current
