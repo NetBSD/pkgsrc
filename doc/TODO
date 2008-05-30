@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7297 2008/05/30 13:57:25 wiz Exp $
+$NetBSD: TODO,v 1.7298 2008/05/30 14:48:11 hauke Exp $
 
 Suggested new packages
 ======================
@@ -1143,7 +1143,6 @@ Suggested package updates
 	o qvplay-0.95
 	o qwspritefield-1.7
 	o radiance-3.7.2
-	o radmind-1.11.0
 	o raine-0.50.6
 	o randread-0.2
 	o rapidsvn-0.9.6
