@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2008/01/12 11:36:31 adam Exp $
+# $NetBSD: Makefile,v 1.20 2008/05/30 12:29:00 wiz Exp $
 #
 
 DISTNAME=	poedit-1.3.6
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=poedit/}
 
