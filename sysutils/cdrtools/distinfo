@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.15 2008/05/08 13:16:13 wiz Exp $
+$NetBSD: distinfo,v 1.16 2008/05/30 10:59:49 wiz Exp $
 
-SHA1 (cdrtools-2.01.01a39.tar.bz2) = 39d52259adc746c39d996cc7ae74446817d9cddd
-RMD160 (cdrtools-2.01.01a39.tar.bz2) = c89974a7d21aed87abd6b43b2f1b0373a0b1bf86
-Size (cdrtools-2.01.01a39.tar.bz2) = 1667003 bytes
+SHA1 (cdrtools-2.01.01a40.tar.bz2) = 7b972faf6ac531afdb15ad54c67fcafe734a9bf0
+RMD160 (cdrtools-2.01.01a40.tar.bz2) = 33504be57378562a475951611d4c98f9d1da4870
+Size (cdrtools-2.01.01a40.tar.bz2) = 1667432 bytes
 SHA1 (patch-aa) = d6f4c286d2d53e5f422e1c30e96b0a4a8efb6cf7
 SHA1 (patch-ab) = 04a52760204f266ab42ec3eb19fc1e4c82546617
 SHA1 (patch-ac) = cde9bd57eef040d27734f6c86c55ac6153025d4f
