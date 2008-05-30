@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1201 2008/05/30 15:28:19 christos Exp $
+$NetBSD: CHANGES-2008,v 1.1202 2008/05/30 19:35:18 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2053,3 +2053,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/pango to 1.20.3 [drochner 2008-05-30]
 	Updated net/wget to 1.11.3 [wiz 2008-05-30]
 	Updated net/sup to 0.3 [christos 2008-05-30]
+	Updated mail/sylpheed-devel to 2.5.0rc [tnn 2008-05-30]
