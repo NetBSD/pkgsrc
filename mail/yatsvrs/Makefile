@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.16 2006/03/14 01:14:30 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2008/05/30 02:32:47 taca Exp $
 #
 
 DISTNAME=		yatsvrs-5.00p6
 PKGNAME=		${DISTNAME:S/p/./}
 PKGREVISION=		4
 CATEGORIES=		mail
-MASTER_SITES=		ftp://ftp.jone-system.com/pub/jepro/yatsvr/
+MASTER_SITES=		ftp://ftp.back-street.net/pub/misc/
 
 MAINTAINER=		taca@NetBSD.org
 HOMEPAGE=		# not available
