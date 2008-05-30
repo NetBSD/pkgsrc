@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2008/02/22 02:28:06 gdt Exp $
+@comment $NetBSD: PLIST,v 1.21 2008/05/30 17:10:04 drochner Exp $
 bin/guile
 bin/guile-config
 bin/guile-snarf
@@ -121,7 +121,11 @@ lib/libguile-srfi-srfi-4-v-3.la
 lib/libguile-srfi-srfi-60-v-2.la
 lib/libguile.la
 lib/libguilereadline-v-17.la
+lib/pkgconfig/guile-1.8.pc
 share/aclocal/guile.m4
+share/emacs/site-lisp/gds-scheme.el
+share/emacs/site-lisp/gds-server.el
+share/emacs/site-lisp/gds.el
 share/guile/1.8/guile-procedures.txt
 share/guile/1.8/ice-9/and-let-star.scm
 share/guile/1.8/ice-9/boot-9.scm
@@ -136,6 +140,12 @@ share/guile/1.8/ice-9/debugger/commands.scm
 share/guile/1.8/ice-9/debugger/state.scm
 share/guile/1.8/ice-9/debugger/trc.scm
 share/guile/1.8/ice-9/debugger/utils.scm
+share/guile/1.8/ice-9/debugging/example-fns.scm
+share/guile/1.8/ice-9/debugging/ice-9-debugger-extensions.scm
+share/guile/1.8/ice-9/debugging/steps.scm
+share/guile/1.8/ice-9/debugging/trace.scm
+share/guile/1.8/ice-9/debugging/traps.scm
+share/guile/1.8/ice-9/debugging/trc.scm
 share/guile/1.8/ice-9/deprecated.scm
 share/guile/1.8/ice-9/documentation.scm
 share/guile/1.8/ice-9/emacs.scm
@@ -143,6 +153,8 @@ share/guile/1.8/ice-9/expect.scm
 share/guile/1.8/ice-9/format.scm
 share/guile/1.8/ice-9/ftw.scm
 share/guile/1.8/ice-9/gap-buffer.scm
+share/guile/1.8/ice-9/gds-client.scm
+share/guile/1.8/ice-9/gds-server.scm
 share/guile/1.8/ice-9/getopt-long.scm
 share/guile/1.8/ice-9/hcons.scm
 share/guile/1.8/ice-9/history.scm
@@ -266,6 +278,7 @@ share/guile/1.8/srfi/srfi-6.scm
 share/guile/1.8/srfi/srfi-60.scm
 share/guile/1.8/srfi/srfi-69.scm
 share/guile/1.8/srfi/srfi-8.scm
+share/guile/1.8/srfi/srfi-88.scm
 share/guile/1.8/srfi/srfi-9.scm
 @exec ${MKDIR} %D/share/guile/site
 @dirrm share/guile/site
@@ -277,6 +290,7 @@ share/guile/1.8/srfi/srfi-9.scm
 @dirrm share/guile/1.8/lang/elisp/internals
 @dirrm share/guile/1.8/lang/elisp
 @dirrm share/guile/1.8/lang
+@dirrm share/guile/1.8/ice-9/debugging
 @dirrm share/guile/1.8/ice-9/debugger
 @dirrm share/guile/1.8/ice-9
 @dirrm share/guile/1.8

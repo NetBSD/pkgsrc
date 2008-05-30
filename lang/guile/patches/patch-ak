@@ -1,0 +1,15 @@
+$NetBSD: patch-ak,v 1.8 2008/05/30 17:10:04 drochner Exp $
+
+--- libguile/null-threads.c.orig	2008-01-04 14:43:50.000000000 +0100
++++ libguile/null-threads.c
+@@ -47,8 +47,10 @@ int
+ scm_i_pthread_key_create (scm_i_pthread_key_t *key,
+ 			  void (*destr_func) (void *))
+ {
++#if 0 /* keys are needed by other atexit() functions */
+   if (all_keys == NULL)
+     atexit (destroy_keys);
++#endif
+ 
+   key->next = all_keys;
+   all_keys = key;

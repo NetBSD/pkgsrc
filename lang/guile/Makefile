@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.85 2008/03/29 05:12:16 tnn Exp $
+# $NetBSD: Makefile,v 1.86 2008/05/30 17:10:04 drochner Exp $
 
-DISTNAME=		guile-1.8.4
-PKGREVISION=		2
+DISTNAME=		guile-1.8.5
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_GNU:=guile/}
 
@@ -19,12 +18,15 @@ USE_LIBTOOL=		YES
 USE_GNU_READLINE=	YES
 PTHREAD_AUTO_VARS=	YES
 INFO_FILES=		YES
+PKGCONFIG_OVERRIDE=	guile-1.8.pc.in
 
 # XXX Make this conditional on the problematic systems.
 # couldn't figure out how to work around an error on solaris-2.9/sparc with gcc when
 # compiling ${WRKSRC}/libguile/filesys.c.  The warning is that readdir64_r was missing
 # a prototype.
 CONFIGURE_ARGS+=	--disable-error-on-warning
+
+#CONFIGURE_ARGS+=	--without-threads
 
 TEST_DIRS=		.
 TEST_TARGET=		check
