@@ -1,10 +1,5 @@
-#	$NetBSD: Makefile,v 1.5 2006/12/07 19:10:21 rpaulo Exp $
+#	$NetBSD: Makefile,v 1.6 2008/05/30 10:02:38 tnn Exp $
 
 PROG=   shlock
-
-.if (${OPSYS} == SunOS || ${OPSYS} == Darwin || ${OPSYS} == DragonFly || \
-    ${OPSYS} == Linux)
-NOMAN=          YES
-.endif
 
 .include <bsd.prog.mk>
