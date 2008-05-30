@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2008/02/28 11:58:47 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2008/05/30 17:18:23 drochner Exp $
 #
 
-DISTNAME=	exaile_0.2.10
-PKGNAME=	exaile-0.2.10
-PKGREVISION=	2
+DISTNAME=	exaile_0.2.13
+PKGNAME=	exaile-0.2.13
 CATEGORIES=	audio
 MASTER_SITES=	http://www.exaile.org/files/
 
@@ -23,7 +22,8 @@ MAKE_ENV+=	PYTHONBIN=${PYTHONBIN}
 EX=	${PREFIX}/bin/exaile
 post-install:
 	${ECHO} "#!/bin/sh" > ${EX}
-	${ECHO} exec "${PYTHONBIN} ${PREFIX}/share/exaile/exaile.py" >> ${EX}
+	${ECHO} "cd ${PREFIX}/share/exaile" >> ${EX}
+	${ECHO} exec "${PYTHONBIN} ${PREFIX}/lib/exaile/exaile.py" >> ${EX}
 	chmod 755 ${EX}
 
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
@@ -35,4 +35,5 @@ post-install:
 .include "../../textproc/py-elementtree/buildlink3.mk"
 .include "../../databases/py-sqlite2/buildlink3.mk"
 .include "../../sysutils/py-notify/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"
