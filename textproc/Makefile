@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.411 2008/05/22 19:04:37 tnn Exp $
+# $NetBSD: Makefile,v 1.412 2008/05/30 12:10:51 abs Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -179,6 +179,7 @@ SUBDIR+=	p5-Feed-Find
 SUBDIR+=	p5-File-ReadBackwards
 SUBDIR+=	p5-Filter
 SUBDIR+=	p5-Lingua-EN-Inflect
+SUBDIR+=	p5-Lingua-EN-Inflect-Number
 SUBDIR+=	p5-Lingua-EN-Numbers-Ordinate
 SUBDIR+=	p5-Lingua-EN-Sentence
 SUBDIR+=	p5-Lingua-Preferred
@@ -224,6 +225,7 @@ SUBDIR+=	p5-Text-Reflow
 SUBDIR+=	p5-Text-Reform
 SUBDIR+=	p5-Text-RewriteRules
 SUBDIR+=	p5-Text-Shellwords
+SUBDIR+=	p5-Text-SimpleTable
 SUBDIR+=	p5-Text-Substitute
 SUBDIR+=	p5-Text-Tabs+Wrap
 SUBDIR+=	p5-Text-Template
@@ -282,6 +284,7 @@ SUBDIR+=	p5-XML-XUpdate-LibXML
 SUBDIR+=	p5-XML-Xerces
 SUBDIR+=	p5-YAML
 SUBDIR+=	p5-YAML-Syck
+SUBDIR+=	p5-YAML-Tiny
 SUBDIR+=	p5-iCal-Parser
 SUBDIR+=	p5-libxml
 SUBDIR+=	p5-mecab

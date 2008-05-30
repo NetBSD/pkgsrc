@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.938 2008/05/29 08:23:51 abs Exp $
+# $NetBSD: Makefile,v 1.939 2008/05/30 12:10:51 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -392,6 +392,7 @@ SUBDIR+=	p5-App-Cmd
 SUBDIR+=	p5-AppConfig
 SUBDIR+=	p5-AppConfig-Std
 SUBDIR+=	p5-Array-Compare
+SUBDIR+=	p5-Array-RefElem
 SUBDIR+=	p5-AtExit
 SUBDIR+=	p5-Attribute-Handlers
 SUBDIR+=	p5-B-Keywords
@@ -399,6 +400,7 @@ SUBDIR+=	p5-BSD-Resource
 SUBDIR+=	p5-Bit-Vector
 SUBDIR+=	p5-Cache
 SUBDIR+=	p5-Cache-Cache
+SUBDIR+=	p5-Cache-FastMmap
 SUBDIR+=	p5-Cache-Memcached
 SUBDIR+=	p5-Cache-Simple-TimedExpiry
 SUBDIR+=	p5-Carp-Assert
@@ -650,6 +652,7 @@ SUBDIR+=	p5-capitalization
 SUBDIR+=	p5-enum
 SUBDIR+=	p5-gettext
 SUBDIR+=	p5-glib2
+SUBDIR+=	p5-parent
 SUBDIR+=	p5-perl-headers
 SUBDIR+=	p5-prefork
 SUBDIR+=	p5-subversion
