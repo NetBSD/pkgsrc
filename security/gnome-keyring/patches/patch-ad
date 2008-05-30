@@ -1,12 +1,15 @@
-$NetBSD: patch-ad,v 1.2 2008/05/29 10:47:52 drochner Exp $
+$NetBSD: patch-ad,v 1.3 2008/05/30 12:30:07 tron Exp $
 
---- common/gkr-unix-credentials.c.orig	2008-05-26 18:03:16.000000000 +0200
-+++ common/gkr-unix-credentials.c
-@@ -126,7 +126,6 @@ gkr_unix_credentials_read (int sock, pid
- 		cred = (struct sockcred *) CMSG_DATA (&cmsg.hdr);
- 		*pid = 0;
- 		*uid = cred->sc_euid;
--		set_local_creds(sock, FALSE);
- #elif defined(HAVE_GETPEEREID) /* OpenBSD */
- 		uid_t euid;
- 		gid_t egid;
+--- common/gkr-unix-credentials.c.orig	2008-05-30 13:10:12.000000000 +0100
++++ common/gkr-unix-credentials.c	2008-05-30 13:16:17.000000000 +0100
+@@ -134,8 +134,8 @@
+ 		if (getpeereid (sock, &euid, &egid) == 0) {
+ 			*uid = euid;
+ 		} else {
+-			g_warning ("getpeereid() failed: %s", strerror (errno));
+-			return FALSE;
++			fprintf (stderr, "getpeereid() failed: %s", strerror (errno));
++			return -1;
+ 		}
+ #elif defined(HAVE_GETPEERUCRED)
+ 		ucred_t *uc = NULL;
