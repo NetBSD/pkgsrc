@@ -1,8 +1,12 @@
-$NetBSD: patch-ab,v 1.1 2007/03/23 16:28:30 drochner Exp $
-
---- ./libdrm/xf86drm.c.orig	2007-03-19 23:07:15.000000000 +0100
-+++ ./libdrm/xf86drm.c
-@@ -67,7 +67,7 @@
+--- ./libdrm/xf86drm.c.orig	2006-11-08 23:54:38 +0200
++++ ./libdrm/xf86drm.c	2008-02-14 10:14:55 +0200
+@@ -62,12 +62,12 @@
+ 
+ #include "xf86drm.h"
+ 
+-#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__)
++#if defined(__FreeBSD__) || defined(__FreeBSD_kernel__) || defined(__DragonFly__)
+ #define DRM_MAJOR 145
  #endif
  
  #ifdef __NetBSD__
