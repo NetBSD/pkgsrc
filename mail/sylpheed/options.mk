@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2006/05/31 18:22:24 ghen Exp $
+# $NetBSD: options.mk,v 1.4 2008/05/30 19:22:46 tnn Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.sylpheed
-PKG_SUPPORTED_OPTIONS=	jpilot ldap inet6 gtkspell gpgme
+PKG_SUPPORTED_OPTIONS=	jpilot ldap inet6 gpgme # gtkspell
 PKG_SUGGESTED_OPTIONS=	inet6 gpgme
 
 .include "../../mk/bsd.options.mk"
