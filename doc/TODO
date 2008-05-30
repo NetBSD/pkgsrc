@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7296 2008/05/30 13:07:41 wiz Exp $
+$NetBSD: TODO,v 1.7297 2008/05/30 13:57:25 wiz Exp $
 
 Suggested new packages
 ======================
@@ -502,7 +502,6 @@ Suggested package updates
 	o cdif-1.19
 	o cdlabelgen-4.0.0
 	o cdrkit-1.1.7.1
-	o cdrtools-2.01.01.40
 	o cfitsio-3.030
 	o cflow-1.2
 	o cgdb-0.6.4
@@ -661,12 +660,13 @@ Suggested package updates
 	o gkrellm-xmms-2.1.22
 	o glchess-1.0.5
 	o global-5.6
-	o gmime-2.2.21
+	o gmime-2.3.0
 	o gmpc-0.15.1
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-2.22.1
 	o gnome-build-0.2.4
+	o gnome-games-2.22.2.1
 	o gnome-pilot-2.0.16
 	o gnome-terminal-2.22.2
 	o gnomeicu-0.99.14
@@ -870,7 +870,6 @@ Suggested package updates
 	o matchbox-panel-0.9.3
 	o mathomatic-14.0.2
 	o mcrypt-2.6.6
-	o mercurial-1.0.1
 	o mergeant-0.67
 	o mesure-0.7.2
 	o metakit-lib-2.4.9.6
@@ -1316,8 +1315,6 @@ Suggested package updates
 	o wcalc-2.3.1
 	o webmin-1.420
 	o weewm-0.01
-	o wget-1.11.3
-	o win32-codecs-20071007
 	o windowlab-1.34
 	o wine-1.0rc1
 	o wml-2.0.11
