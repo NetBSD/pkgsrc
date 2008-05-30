@@ -1,19 +1,17 @@
-# $NetBSD: Makefile,v 1.25 2008/03/06 14:53:47 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2008/05/30 17:32:28 drochner Exp $
 #
 
-DISTNAME=		gmpc-0.13.0
-PKGREVISION=		7
+DISTNAME=		gmpc-0.15.5.0
 CATEGORIES=		audio
-MASTER_SITES=		#
-# http://sarine.nl/index.php?mact=Uploads,cntnt01,getfile,0&cntnt01showtemplate=false&cntnt01upload_id=1&cntnt01returnid=71
+MASTER_SITES=		http://download.qballcow.nl/gmpc-0.15.5/
 
-MAINTAINER=		pkg@burningsoda.com
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sarine.nl/gmpc
 COMMENT=		GNOME client for the Music Player Daemon
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		intltool msgfmt pkg-config
+USE_TOOLS+=		intltool msgfmt pkg-config gmake
 PKGCONFIG_OVERRIDE=	data/gmpc.pc.in
 
 USE_DIRS+=		xdg-1.1
@@ -21,7 +19,8 @@ USE_DIRS+=		xdg-1.1
 .include "../../audio/libmpd/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
-.include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,34 +1,82 @@
-@comment $NetBSD: PLIST,v 1.8 2006/04/17 07:07:11 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/05/30 17:32:28 drochner Exp $
 bin/gmpc
+include/gmpc/TreeSearchWidget.h
 include/gmpc/config1.h
-include/gmpc/cover-art.h
+include/gmpc/gmpc-clicklabel.h
+include/gmpc/gmpc-connection.h
+include/gmpc/gmpc-meta-watcher.h
+include/gmpc/gmpc-metaimage.h
+include/gmpc/gmpc-mpddata-model-sort.h
+include/gmpc/gmpc-mpddata-model.h
+include/gmpc/gmpc-mpddata-treeview.h
+include/gmpc/gmpc-profiles.h
+include/gmpc/gmpc-signals.h
+include/gmpc/gmpc_easy_download.h
+include/gmpc/metadata.h
+include/gmpc/misc.h
+include/gmpc/playlist3-messages.h
 include/gmpc/plugin.h
-include/gmpc/qthread.h
+lib/pkgconfig/gmpc.pc
 share/applications/gmpc.desktop
-share/gmpc/add-browser.glade
+share/gmpc/gmpc-add-url.png
+share/gmpc/gmpc-loading-cover.png
+share/gmpc/gmpc-no-cover.png
+share/gmpc/gmpc-tray-disconnected.png
+share/gmpc/gmpc-tray-pause.png
+share/gmpc/gmpc-tray-play.png
 share/gmpc/gmpc-tray.png
+share/gmpc/gmpc-volume.png
 share/gmpc/gmpc.glade
 share/gmpc/gmpc.png
-share/gmpc/icecast.png
+share/gmpc/hicolor/16x16/actions/media-playlist.png
+share/gmpc/hicolor/16x16/actions/media-tag.png
+share/gmpc/hicolor/16x16/actions/playlist-browser.png
+share/gmpc/hicolor/16x16/actions/playlist-search-browser.png
+share/gmpc/hicolor/16x16/actions/tag-browser.png
+share/gmpc/hicolor/22x22/actions/gmpc-tray-disconnected.png
+share/gmpc/hicolor/22x22/actions/gmpc-tray-pause.png
+share/gmpc/hicolor/22x22/actions/gmpc-tray-play.png
+share/gmpc/hicolor/22x22/actions/gmpc-tray.png
+share/gmpc/hicolor/22x22/actions/media-playlist.png
+share/gmpc/hicolor/32x32/actions/media-playlist.png
+share/gmpc/hicolor/32x32/actions/media-tag.png
+share/gmpc/hicolor/32x32/actions/playlist-browser.png
+share/gmpc/hicolor/32x32/actions/playlist-search-browser.png
+share/gmpc/hicolor/32x32/actions/tag-browser.png
+share/gmpc/hicolor/48x48/actions/media-playlist.png
+share/gmpc/hicolor/48x48/actions/media-tag.png
+share/gmpc/hicolor/48x48/actions/tag-browser.png
+share/gmpc/hicolor/scalable/actions/gmpc-tray-disconnected.svg
+share/gmpc/hicolor/scalable/actions/gmpc-tray-pause.svg
+share/gmpc/hicolor/scalable/actions/gmpc-tray-play.svg
+share/gmpc/hicolor/scalable/actions/gmpc-tray.svg
 share/gmpc/media-album.png
 share/gmpc/media-artist.png
 share/gmpc/media-audiofile.png
-share/gmpc/media-next.png
-share/gmpc/media-pause.png
-share/gmpc/media-play.png
-share/gmpc/media-playlist.png
-share/gmpc/media-prev.png
-share/gmpc/media-stop.png
+share/gmpc/media-playback-start.png
 share/gmpc/media-stream.png
-share/gmpc/open-location.glade
-share/gmpc/player-repeat.png
-share/gmpc/player-shuffle.png
 share/gmpc/playlist3.glade
+share/locale/de/LC_MESSAGES/gmpc.mo
 share/locale/fr/LC_MESSAGES/gmpc.mo
+share/locale/gl/LC_MESSAGES/gmpc.mo
+share/locale/it/LC_MESSAGES/gmpc.mo
+share/locale/nb_NO/LC_MESSAGES/gmpc.mo
+share/locale/nl/LC_MESSAGES/gmpc.mo
+share/locale/pl/LC_MESSAGES/gmpc.mo
 share/locale/ru/LC_MESSAGES/gmpc.mo
 share/pixmaps/gmpc.png
-lib/pkgconfig/gmpc.pc
 @comment in xdg-dirs: @dirrm share/pixmaps
+@dirrm share/gmpc/hicolor/scalable/actions
+@dirrm share/gmpc/hicolor/scalable
+@dirrm share/gmpc/hicolor/48x48/actions
+@dirrm share/gmpc/hicolor/48x48
+@dirrm share/gmpc/hicolor/32x32/actions
+@dirrm share/gmpc/hicolor/32x32
+@dirrm share/gmpc/hicolor/22x22/actions
+@dirrm share/gmpc/hicolor/22x22
+@dirrm share/gmpc/hicolor/16x16/actions
+@dirrm share/gmpc/hicolor/16x16
+@dirrm share/gmpc/hicolor
 @dirrm share/gmpc
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm include/gmpc
