@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1197 2008/05/30 13:06:37 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1198 2008/05/30 13:14:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2011,3 +2011,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/gtkspell to 2.0.13 [wiz 2008-05-30]
 	Updated devel/p5-Date-Manip to 5.54 [wiz 2008-05-30]
 	Updated graphics/tesseract to 2.03 [wiz 2008-05-30]
+	Updated devel/mercurial to 1.0.1 [wiz 2008-05-30]
