@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2008/05/28 02:31:56 bjs Exp $
+# $NetBSD: options.mk,v 1.6 2008/05/30 14:25:30 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=	mesa-execmem-mmap
@@ -46,7 +46,8 @@ PKG_SUGGESTED_OPTIONS=	mesa-execmem-mmap
 .if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
      ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "sparc" || \
      ${MACHINE_ARCH} == "sparc64") && \
-    (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD")
+    (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || \
+     ${OPSYS} == "DragonFly")
 PKG_SUPPORTED_OPTIONS+=		dri
 .endif
 ###
