@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.31 2008/04/08 11:36:04 obache Exp $
+$NetBSD: distinfo,v 1.32 2008/05/30 13:44:43 wiz Exp $
 
-SHA1 (wget-1.11.1.tar.gz) = 49d3c371b0aca8e73a9da78cde3552df4bc1a305
-RMD160 (wget-1.11.1.tar.gz) = baf2401bbd39301206bae697a27c667879871e6f
-Size (wget-1.11.1.tar.gz) = 1458701 bytes
+SHA1 (wget-1.11.3.tar.gz) = 52e7ffb5226b89a8201db69d8c0a787ae14041fe
+RMD160 (wget-1.11.3.tar.gz) = 83d6785d975a5dd950ad96526effc1c0fa3cb771
+Size (wget-1.11.3.tar.gz) = 1395836 bytes
