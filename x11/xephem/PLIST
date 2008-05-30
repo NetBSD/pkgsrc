@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2007/02/02 14:44:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/05/30 17:04:05 drochner Exp $
 bin/xephem
 lib/X11/app-defaults/XEphem
 man/man1/xephem.1
@@ -25,13 +25,13 @@ share/xephem/auxil/moon.fts
 share/xephem/auxil/mpcorb2edb.pl
 share/xephem/auxil/nearth.gif
 share/xephem/auxil/sample.hzn
-share/xephem/auxil/saturne.1020
 share/xephem/auxil/saturn00.gif
 share/xephem/auxil/saturn04.gif
 share/xephem/auxil/saturn10.gif
 share/xephem/auxil/saturn16.gif
 share/xephem/auxil/saturn20.gif
 share/xephem/auxil/saturn24.gif
+share/xephem/auxil/saturne.1020
 share/xephem/auxil/saturne.9910
 share/xephem/auxil/starcensus.txt
 share/xephem/auxil/uranus.1020
@@ -46,8 +46,26 @@ share/xephem/fifos/README
 share/xephem/fits/Abell426.fts
 share/xephem/fits/horsehead.fts
 share/xephem/gallery/1999-41-a-web_print.jpg
+share/xephem/gallery/I0059-1.jpg
+share/xephem/gallery/I1613-1.jpg
+share/xephem/gallery/I1848-1.jpg
+share/xephem/gallery/I2118-2.jpg
+share/xephem/gallery/M013-2.jpg
+share/xephem/gallery/M034-1.jpg
+share/xephem/gallery/M053-1.jpg
+share/xephem/gallery/N2174-1.jpg
+share/xephem/gallery/N6633-1.jpg
+share/xephem/gallery/N6791-1.jpg
+share/xephem/gallery/N6820-2.jpg
+share/xephem/gallery/N6946-1.jpg
+share/xephem/gallery/N7023-2.jpg
+share/xephem/gallery/N7129-2.jpg
+share/xephem/gallery/S115-1.jpg
+share/xephem/gallery/abell1656-1.jpg
+share/xephem/gallery/abell2151-1.jpg
 share/xephem/gallery/arp295_kelly_c1.jpg
 share/xephem/gallery/gallery.gly
+share/xephem/gallery/hickson68-1.jpg
 share/xephem/gallery/ic5146-2002sep12-hall.jpg
 share/xephem/gallery/m103-2002sep13-lrgb.jpg
 share/xephem/gallery/m29-2002sep05.jpg
