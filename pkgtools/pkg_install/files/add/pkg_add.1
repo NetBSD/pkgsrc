@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_add.1,v 1.28.6.4 2008/05/26 15:29:03 joerg Exp $
+.\" $NetBSD: pkg_add.1,v 1.28.6.5 2008/05/30 13:37:36 wiz Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -58,7 +58,7 @@ You are advised to verify the competence and identity of those who
 provide installable package files.
 For extra protection, use the digital signatures provided where possible
 (see the
-.Xr pkg_install.conf 5 ),
+.Xr pkg_install.conf 5 ) ,
 or, failing that, use
 .Xr tar 1
 to extract the package file, and inspect its contents and scripts
@@ -158,7 +158,7 @@ into
 .Ar pkgdb .
 .It Fl R
 Do not record the installation of a package.
-This implies 
+This implies
 .Fl I .
 This means that you cannot deinstall it later, so only use this option if
 you know what you are doing!
@@ -490,10 +490,10 @@ and are described in
 .Xr pkg_create 1 ,
 .Xr pkg_delete 1 ,
 .Xr pkg_info 1 ,
-.Xr pkg_install.conf 5 ,
 .Xr tar 1 ,
 .Xr mktemp 3 ,
 .Xr sysconf 3 ,
+.Xr pkg_install.conf 5 ,
 .Xr pkgsrc 7
 .Sh AUTHORS
 .Bl -tag -width indent -compact
