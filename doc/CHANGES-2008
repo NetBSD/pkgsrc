@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1188 2008/05/30 10:43:52 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1189 2008/05/30 10:46:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -1997,3 +1997,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Downgraded graphics/glx-utils to 7.0.3 [tnn 2008-05-29]
 	Updated x11/xproto to 7.0.13 [wiz 2008-05-30]
 	Updated x11/xf86-video-nv to 2.1.9 [wiz 2008-05-30]
+	Updated x11/xextproto to 7.0.3 [wiz 2008-05-30]
