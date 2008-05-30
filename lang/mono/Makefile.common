@@ -1,6 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2008/04/25 08:14:20 kefren Exp $
+# $NetBSD: Makefile.common,v 1.3 2008/05/30 11:01:15 tnn Exp $
 # used by lang/mono/Makefile
 
 MONO_VERSION=	1.9.1
-
-ALL_ENV+=	MONO_SHARED_DIR=${WRKDIR:Q}
