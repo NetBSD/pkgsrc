@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.5 2008/04/10 23:34:51 bjs Exp $
+$NetBSD: patch-aa,v 1.6 2008/05/30 13:14:18 wiz Exp $
 
---- doc/Makefile.orig	2006-12-17 17:02:33.000000000 -0800
+--- doc/Makefile.orig	2008-05-22 20:48:40.000000000 +0000
 +++ doc/Makefile
 @@ -15,7 +15,7 @@ hg.1.txt: hg.1.gendoc.txt
  	touch hg.1.txt
@@ -10,4 +10,4 @@ $NetBSD: patch-aa,v 1.5 2008/04/10 23:34:51 bjs Exp $
 +	${PYTHONBIN} gendoc.py > $@
  
  %: %.xml
- 	xmlto man $*.xml
+ 	xmlto man $*.xml ; \
