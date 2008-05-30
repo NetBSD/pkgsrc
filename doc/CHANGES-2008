@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1200 2008/05/30 13:44:56 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1201 2008/05/30 15:28:19 christos Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2052,3 +2052,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/gnome-keyring to 2.22.2 [drochner 2008-05-30]
 	Updated devel/pango to 1.20.3 [drochner 2008-05-30]
 	Updated net/wget to 1.11.3 [wiz 2008-05-30]
+	Updated net/sup to 0.3 [christos 2008-05-30]
