@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.50 2008/05/01 13:45:30 xtraeme Exp $
+# $NetBSD: Makefile,v 1.51 2008/05/30 19:33:42 tnn Exp $
 
-DISTNAME=	sylpheed-2.5.0beta3
-#PKGREVISION=	1
+DISTNAME=	sylpheed-2.5.0rc
 CATEGORIES=	mail news x11
 MASTER_SITES=	http://sylpheed.sraoss.jp/sylpheed/v2.5beta/
 EXTRACT_SUFX=	.tar.bz2
@@ -10,8 +9,10 @@ MAINTAINER=	chris@NetBSD.org
 HOMEPAGE=	http://sylpheed.sraoss.jp/en/
 COMMENT=	X based e-mail and netnews client
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS=		sylpheed-claws-[0-9]*
 
+USE_DIRS+=		xdg-1.4
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake msgfmt pkg-config
@@ -28,8 +29,8 @@ EGDIR=		${PREFIX}/share/examples/sylpheed
 CONF_FILES=	${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/mime.types ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/mime.types ${DESTDIR}${EGDIR}
 
 .include "options.mk"
 .include "../../converters/libiconv/buildlink3.mk"
