@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2008/05/27 15:44:44 hira Exp $
+# $NetBSD: Makefile,v 1.46 2008/05/30 16:05:56 hira Exp $
 #
 
 OO_VER=			2.4.0
@@ -136,8 +136,8 @@ post-build:
 			tar xpfk $$f;				\
 		done;						\
 	done
-	chmod ${SHAREMODE} ${WRKDIR/${OO_UNXNAME}/program/hid.lst	\
-			   ${WRKDIR/${OO_UNXNAME}/program/testtoolrc
+	cd ${WRKDIR}${OO_PKGROOT} &&				\
+	chmod ${SHAREMODE} program/hid.lst program/testtoolrc
 	${ECHO} "#!${SH}" > ${WRKDIR}/${OO_UNXNAME}
 	${ECHO} "exec ${PREFIX}/${OO_RELEASE}/program/soffice \"\$$@\""	\
 		>> ${WRKDIR}/${OO_UNXNAME}
