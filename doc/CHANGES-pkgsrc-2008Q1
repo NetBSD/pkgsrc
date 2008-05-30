@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.65 2008/05/30 17:15:29 spz Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.66 2008/05/30 17:54:41 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -148,3 +148,5 @@ Pullup ticket #2403 - requested by drochner
 samba: security fix
 Pullup ticket #2405 - requested by mishka
 fix build problem on NetBSD-current
+Pullup ticket #2402 - requested by tonnerre
+fix build problem on MacOS X
