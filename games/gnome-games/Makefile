@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.83 2008/05/29 17:12:31 drochner Exp $
+# $NetBSD: Makefile,v 1.84 2008/05/30 16:44:23 drochner Exp $
 
-DISTNAME=		gnome-games-2.22.2
+DISTNAME=		gnome-games-2.22.2.1
 CATEGORIES=		games gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-games/2.22/}
 EXTRACT_SUFX=		.tar.bz2
@@ -41,8 +41,8 @@ GCONF_SCHEMAS+=	iagno.schemas
 GCONF_SCHEMAS+=	mahjongg.schemas
 GCONF_SCHEMAS+=	same-gnome.schemas
 
-PYTHON_PATCH_SCRIPTS+=	glchess/src/glchess
-PYTHON_PATCH_SCRIPTS+=	gnome-sudoku/src/gnome-sudoku
+PYTHON_PATCH_SCRIPTS+=	glchess/src/glchess.in.in
+PYTHON_PATCH_SCRIPTS+=	gnome-sudoku/src/gnome-sudoku.in.in
 PY_PATCHPLIST=		yes
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.3
