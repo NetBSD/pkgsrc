@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2007/03/19 19:51:39 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/05/30 19:33:42 tnn Exp $
 bin/sylpheed
+share/applications/sylpheed.desktop
 share/examples/sylpheed/mime.types
 share/locale/be/LC_MESSAGES/sylpheed.mo
 share/locale/bg/LC_MESSAGES/sylpheed.mo
@@ -31,6 +32,7 @@ share/locale/uk/LC_MESSAGES/sylpheed.mo
 share/locale/vi/LC_MESSAGES/sylpheed.mo
 share/locale/zh_CN/LC_MESSAGES/sylpheed.mo
 share/locale/zh_TW/LC_MESSAGES/sylpheed.mo
+share/pixmaps/sylpheed.png
 share/sylpheed/faq/de/sylpheed-faq-1.html
 share/sylpheed/faq/de/sylpheed-faq-2.html
 share/sylpheed/faq/de/sylpheed-faq-3.html
@@ -108,4 +110,6 @@ share/sylpheed/manual/ja/sylpheed.sgml
 @dirrm share/sylpheed/faq/de
 @dirrm share/sylpheed/faq
 @dirrm share/sylpheed
+@comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/examples/sylpheed
+@comment in xdg-dirs: @dirrm share/applications
