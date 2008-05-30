@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/11/29 16:42:08 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/05/30 13:06:26 wiz Exp $
 #
 
-DISTNAME=	tesseract-2.01
+DISTNAME=	tesseract-2.03
 CATEGORIES=	graphics
 MASTER_SITES=	http://tesseract-ocr.googlecode.com/files/
 
@@ -13,6 +13,7 @@ PKG_DESTDIR_SUPPORT=user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	gmake
 
 post-build:
 	${SED} -e "s,@PREFIX@,${PREFIX}," ${FILESDIR}/tesseract.sh \
