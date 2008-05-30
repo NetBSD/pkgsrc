@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1195 2008/05/30 12:28:56 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1196 2008/05/30 12:32:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2009,3 +2009,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/p5-Text-SimpleTable version 0.03 [abs 2008-05-30]
 	Added textproc/p5-YAML-Tiny version 1.32 [abs 2008-05-30]
 	Updated textproc/gtkspell to 2.0.13 [wiz 2008-05-30]
+	Updated devel/p5-Date-Manip to 5.54 [wiz 2008-05-30]
