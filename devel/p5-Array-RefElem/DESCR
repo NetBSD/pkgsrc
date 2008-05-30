@@ -1,0 +1,18 @@
+This module gives direct access to some of the internal Perl routines
+that let you store things in arrays and hashes. The following
+functions are available:
+
+av_store(@array, $index, $value)
+
+    Stores $value in @array at the specified $index. After executing
+    this call, $array[$index] and $value denote the same thing.
+
+av_push(@array, $value)
+
+    Pushes $value onto the @array. After executing this call,
+    $array[-1] and $value denote the same thing.
+
+hv_store(%hash, $key, $value);
+
+    Stores $value in the %hash with the given $key. After executing
+    this call, $hash{$key} and $value denote the same thing.
