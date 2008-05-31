@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.16 2008/05/19 10:43:02 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.17 2008/05/31 23:08:33 tnn Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 FIREFOX_BUILDLINK3_MK:=	${FIREFOX_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}firefox
 
 .if !empty(FIREFOX_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.firefox+=	firefox>=2.0
+BUILDLINK_API_DEPENDS.firefox+=	firefox<=2.99
 BUILDLINK_ABI_DEPENDS.firefox+=	firefox>=2.0.0.3nb1
 BUILDLINK_PKGSRCDIR.firefox?=	../../www/firefox
 .endif	# FIREFOX_BUILDLINK3_MK
