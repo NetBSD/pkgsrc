@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/12/17 11:32:57 obache Exp $
+# $NetBSD: Makefile,v 1.10 2008/05/31 15:05:40 obache Exp $
 #
 
 DISTNAME=		libsieve-2.2.6
@@ -17,5 +17,10 @@ GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		src
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+SUBST_CLASSES+=			stripcr
+SUBST_STAGE.stripcr=		post-extract
+SUBST_FILES.stripcr=		src/sv_util/exception.*
+SUBST_FILTER_CMD.stripcr=	${TR} -d '\r'
 
 .include "../../mk/bsd.pkg.mk"
