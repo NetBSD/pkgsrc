@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.13 2008/01/10 21:55:53 adam Exp $
+$NetBSD: patch-aa,v 1.14 2008/05/31 13:18:24 tnn Exp $
 
 --- dist/Makefile.in.orig	2007-07-05 20:35:02.000000000 +0200
 +++ dist/Makefile.in
@@ -92,3 +92,12 @@ $NetBSD: patch-aa,v 1.13 2008/01/10 21:55:53 adam Exp $
  	done
  
  uninstall_utilities:
+@@ -795,7 +791,7 @@ install_docs:
+ 	    ($(MKDIR) -p $(DESTDIR)$(docdir) && \
+ 	    $(CHMOD) $(dmode) $(DESTDIR)$(docdir))
+ 	@cd $(DESTDIR)$(docdir) && $(RM) -rf $(DOCLIST)
+-	@cd $(srcdir)/docs && $(CP) -pr $(DOCLIST) $(DESTDIR)$(docdir)/
++	@cd $(srcdir)/docs && pax -rwpp $(DOCLIST) $(DESTDIR)$(docdir)/
+ 
+ uninstall_docs:
+ 	@cd $(DESTDIR)$(docdir) && $(RM) -rf $(DOCLIST)
