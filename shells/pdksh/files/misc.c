@@ -1,6 +1,14 @@
+/*	$NetBSD: misc.c,v 1.2 2008/05/31 16:47:37 tnn Exp $	*/
+
 /*
  * Miscellaneous functions
  */
+#include <sys/cdefs.h>
+
+#ifndef lint
+__RCSID("$NetBSD: misc.c,v 1.2 2008/05/31 16:47:37 tnn Exp $");
+#endif
+
 
 #include "sh.h"
 #include <ctype.h>	/* for FILECHCONV */
@@ -81,7 +89,15 @@ str_save(s, ap)
 	register const char *s;
 	Area *ap;
 {
-	return s ? strcpy((char*) alloc((size_t)strlen(s)+1, ap), s) : NULL;
+	size_t len;
+	char *p;
+
+	if (!s)
+		return NULL;
+	len = strlen(s)+1;
+	p = alloc(len, ap);
+	strlcpy(p, s, len+1);
+	return (p);
 }
 
 /* Allocate a string of size n+1 and copy upto n characters from the possibly
@@ -118,7 +134,7 @@ Xcheck_grow_(xsp, xp, more)
 	return xsp->beg + (xp - old_beg);
 }
 
-const struct option options[] = {
+const struct option goptions[] = {
 	/* Special cases (see parse_args()): -A, -o, -s.
 	 * Options are sorted by their longnames - the order of these
 	 * entries MUST match the order of sh_flag F* enumerations in sh.h.
@@ -131,6 +147,7 @@ const struct option options[] = {
 	{ (char *) 0, 	'c',	    OF_CMDLINE },
 #ifdef EMACS
 	{ "emacs",	  0,		OF_ANY },
+	{ "emacs-usemeta",  0,		OF_ANY }, /* non-standard */
 #endif
 	{ "errexit",	'e',		OF_ANY },
 #ifdef EMACS
@@ -171,7 +188,7 @@ const struct option options[] = {
 #endif
 	{ "xtrace",	'x',		OF_ANY },
 	/* Anonymous flags: used internally by shell only
-	 * (not visable to user)
+	 * (not visible to user)
 	 */
 	{ (char *) 0,	0,		OF_INTERNAL }, /* FTALKING_I */
 };
@@ -185,8 +202,8 @@ option(n)
 {
 	int i;
 
-	for (i = 0; i < NELEM(options); i++)
-		if (options[i].name && strcmp(options[i].name, n) == 0)
+	for (i = 0; i < NELEM(goptions); i++)
+		if (goptions[i].name && strcmp(goptions[i].name, n) == 0)
 			return i;
 
 	return -1;
@@ -197,7 +214,7 @@ struct options_info {
 	struct {
 		const char *name;
 		int	flag;
-	} opts[NELEM(options)];
+	} opts[NELEM(goptions)];
 };
 
 static char *options_fmt_entry ARGS((void *arg, int i, char *buf, int buflen));
@@ -232,22 +249,22 @@ printoptions(verbose)
 		/* verbose version */
 		shprintf("Current option settings\n");
 
-		for (i = n = oi.opt_width = 0; i < NELEM(options); i++)
-			if (options[i].name) {
-				len = strlen(options[i].name);
-				oi.opts[n].name = options[i].name;
+		for (i = n = oi.opt_width = 0; i < NELEM(goptions); i++)
+			if (goptions[i].name) {
+				len = strlen(goptions[i].name);
+				oi.opts[n].name = goptions[i].name;
 				oi.opts[n++].flag = i;
 				if (len > oi.opt_width)
 					oi.opt_width = len;
 			}
 		print_columns(shl_stdout, n, options_fmt_entry, &oi,
-			      oi.opt_width + 5);
+			      oi.opt_width + 5, 1);
 	} else {
 		/* short version ala ksh93 */
 		shprintf("set");
-		for (i = 0; i < NELEM(options); i++)
-			if (Flag(i) && options[i].name)
-				shprintf(" -o %s", options[i].name);
+		for (i = 0; i < NELEM(goptions); i++)
+			if (Flag(i) && goptions[i].name)
+				shprintf(" -o %s", goptions[i].name);
 		shprintf(newline);
 	}
 }
@@ -259,9 +276,9 @@ getoptions()
 	char m[(int) FNFLAGS + 1];
 	register char *cp = m;
 
-	for (i = 0; i < NELEM(options); i++)
-		if (options[i].c && Flag(i))
-			*cp++ = options[i].c;
+	for (i = 0; i < NELEM(goptions); i++)
+		if (goptions[i].c && Flag(i))
+			*cp++ = goptions[i].c;
 	*cp = 0;
 	return str_save(m, ATEMP);
 }
@@ -309,7 +326,9 @@ change_flag(f, what, newval)
 #ifdef OS2
 		;
 #else /* OS2 */
-		setuid(ksheuid = getuid());
+		seteuid(ksheuid = getuid());
+		setuid(ksheuid);
+		setegid(getgid());
 		setgid(getgid());
 #endif /* OS2 */
 	} else if (f == FPOSIX && newval) {
@@ -334,8 +353,8 @@ parse_args(argv, what, setargsp)
 	int	what;		/* OF_CMDLINE or OF_SET */
 	int	*setargsp;
 {
-	static char cmd_opts[NELEM(options) + 3]; /* o:\0 */
-	static char set_opts[NELEM(options) + 5]; /* Ao;s\0 */
+	static char cmd_opts[NELEM(goptions) + 3]; /* o:\0 */
+	static char set_opts[NELEM(goptions) + 5]; /* Ao;s\0 */
 	char *opts;
 	char *array = (char *) 0;
 	Getopt go;
@@ -345,16 +364,18 @@ parse_args(argv, what, setargsp)
 	if (cmd_opts[0] == '\0') {
 		char *p, *q;
 
-		strcpy(cmd_opts, "o:"); /* see cmd_opts[] declaration */
+		/* see cmd_opts[] declaration */
+		strlcpy(cmd_opts, "o:", sizeof cmd_opts);
 		p = cmd_opts + strlen(cmd_opts);
-		strcpy(set_opts, "A:o;s"); /* see set_opts[] declaration */
+		/* see set_opts[] declaration */
+		strlcpy(set_opts, "A:o;s", sizeof set_opts);
 		q = set_opts + strlen(set_opts);
-		for (i = 0; i < NELEM(options); i++) {
-			if (options[i].c) {
-				if (options[i].flags & OF_CMDLINE)
-					*p++ = options[i].c;
-				if (options[i].flags & OF_SET)
-					*q++ = options[i].c;
+		for (i = 0; i < NELEM(goptions); i++) {
+			if (goptions[i].c) {
+				if (goptions[i].flags & OF_CMDLINE)
+					*p++ = goptions[i].c;
+				if (goptions[i].flags & OF_SET)
+					*q++ = goptions[i].c;
 			}
 		}
 		*p = '\0';
@@ -400,7 +421,7 @@ parse_args(argv, what, setargsp)
 				 * if the output of "set +o" is to be used.
 				 */
 				;
-			else if (i >= 0 && (options[i].flags & what))
+			else if (i >= 0 && (goptions[i].flags & what))
 				change_flag((enum sh_flag) i, what, set);
 			else {
 				bi_errorf("%s: bad option", go.optarg);
@@ -417,15 +438,15 @@ parse_args(argv, what, setargsp)
 				sortargs = 1;
 				break;
 			}
-			for (i = 0; i < NELEM(options); i++)
-				if (optc == options[i].c
-				    && (what & options[i].flags))
+			for (i = 0; i < NELEM(goptions); i++)
+				if (optc == goptions[i].c
+				    && (what & goptions[i].flags))
 				{
 					change_flag((enum sh_flag) i, what,
 						    set);
 					break;
 				}
-			if (i == NELEM(options)) {
+			if (i == NELEM(goptions)) {
 				internal_errorf(1, "parse_args: `%c'", optc);
 				return -1; /* not reached */
 			}
@@ -471,18 +492,15 @@ getn(as, ai)
 	const char *as;
 	int *ai;
 {
-	const char *s;
-	register int n;
-	int sawdigit = 0;
+	char *p;
+	long n;
 
-	s = as;
-	if (*s == '-' || *s == '+')
-		s++;
-	for (n = 0; digit(*s); s++, sawdigit = 1)
-		n = n * 10 + (*s - '0');
-	*ai = (*as == '-') ? -n : n;
-	if (*s || !sawdigit)
+	n = strtol(as, &p, 10);
+
+	if (!*as || *p || INT_MIN >= n || n >= INT_MAX)
 		return 0;
+
+	*ai = (int)n;
 	return 1;
 }
 
@@ -528,7 +546,7 @@ gmatch(s, p, isfile)
 		char tbuf[64];
 		char *t = len <= sizeof(tbuf) ? tbuf
 				: (char *) alloc(len, ATEMP);
-		debunk(t, p);
+		debunk(t, p, len);
 		return !strcmp(t, s);
 	}
 	return do_gmatch((const unsigned char *) s, (const unsigned char *) se,
@@ -540,7 +558,7 @@ gmatch(s, p, isfile)
  * if it contains no pattern characters or if there is a syntax error.
  * Syntax errors are:
  *	- [ with no closing ]
- *	- imballenced $(...) expression
+ *	- imbalanced $(...) expression
  *	- [...] and *(...) not nested (eg, [a$(b|]c), *(a[b|c]d))
  */
 /*XXX
@@ -624,8 +642,8 @@ do_gmatch(s, se, p, pe, isfile)
 		sc = s < se ? *s : '\0';
 		s++;
 		if (isfile) {
-			sc = FILECHCONV(sc);
-			pc = FILECHCONV(pc);
+			sc = FILECHCONV((unsigned char)sc);
+			pc = FILECHCONV((unsigned char)pc);
 		}
 		if (!ISMAGIC(pc)) {
 			if (sc != pc)
@@ -854,7 +872,7 @@ qsort1(base, lim, f)
 	for (;;) {
 		if (i < lptr) {
 			if ((c = (*f)(*i, *lptr)) == 0) {
-				lptr --;
+				lptr--;
 				swap2(i, lptr);
 				continue;
 			}
@@ -867,13 +885,13 @@ qsort1(base, lim, f)
 	  begin:
 		if (j > hptr) {
 			if ((c = (*f)(*hptr, *j)) == 0) {
-				hptr ++;
+				hptr++;
 				swap2(hptr, j);
 				goto begin;
 			}
 			if (c > 0) {
 				if (i == lptr) {
-					hptr ++;
+					hptr++;
 					swap3(i, hptr, j);
 					i = lptr += 1;
 					goto begin;
@@ -1024,11 +1042,11 @@ ksh_getopt(argv, go, options)
 		}
 		go->p = 0;
 	} else if (*o == ',') {
-		/* argument is attatched to option character, even if null */
+		/* argument is attached to option character, even if null */
 		go->optarg = argv[go->optind - 1] + go->p;
 		go->p = 0;
 	} else if (*o == '#') {
-		/* argument is optional and may be attatched or unattatched
+		/* argument is optional and may be attached or unattached
 		 * but must start with a digit.  optarg is set to 0 if the
 		 * argument is missing.
 		 */
@@ -1037,13 +1055,13 @@ ksh_getopt(argv, go, options)
 				go->optarg = argv[go->optind - 1] + go->p;
 				go->p = 0;
 			} else
-				go->optarg = (char *) 0;;
+				go->optarg = (char *) 0;
 		} else {
 			if (argv[go->optind] && digit(argv[go->optind][0])) {
 				go->optarg = argv[go->optind++];
 				go->p = 0;
 			} else
-				go->optarg = (char *) 0;;
+				go->optarg = (char *) 0;
 		}
 	}
 	return c;
@@ -1088,12 +1106,13 @@ print_value_quoted(s)
  * element
  */
 void
-print_columns(shf, n, func, arg, max_width)
+print_columns(shf, n, func, arg, max_width, prefcol)
 	struct shf *shf;
 	int n;
 	char *(*func) ARGS((void *, int, char *, int));
 	void *arg;
 	int max_width;
+	int prefcol;
 {
 	char *str = (char *) alloc(max_width + 1, ATEMP);
 	int i;
@@ -1109,7 +1128,7 @@ print_columns(shf, n, func, arg, max_width)
 	if (!cols)
 		cols = 1;
 	rows = (n + cols - 1) / cols;
-	if (n && cols > rows) {
+	if (prefcol && n && cols > rows) {
 		int tmp = rows;
 
 		rows = cols;
@@ -1321,7 +1340,7 @@ ksh_get_wd(buf, bsize)
 		b = buf;
 	else
 		b = alloc(MAXPATHLEN + 1, ATEMP);
-	if (!getwd(b)) {
+	if (!getcwd(b, MAXPATHLEN)) {
 		errno = EACCES;
 		if (b != buf)
 			afree(b, ATEMP);

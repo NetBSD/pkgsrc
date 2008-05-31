@@ -1,5 +1,7 @@
+/*	$NetBSD: ksh_limval.h,v 1.2 2008/05/31 16:47:36 tnn Exp $	*/
+
 /* Wrapper around the values.h/limits.h includes/ifdefs */
-/* $Id: ksh_limval.h,v 1.1.1.1 2008/05/23 17:15:20 tnn Exp $ */
+/* $NetBSD: ksh_limval.h,v 1.2 2008/05/31 16:47:36 tnn Exp $ */
 
 #ifdef HAVE_VALUES_H
 # include <values.h>

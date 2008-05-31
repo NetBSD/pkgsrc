@@ -1,7 +1,9 @@
+/*	$NetBSD: expand.h,v 1.2 2008/05/31 16:47:36 tnn Exp $	*/
+
 /*
  * Expanding strings
  */
-/* $Id: expand.h,v 1.1.1.1 2008/05/23 17:15:18 tnn Exp $ */
+/* $Id: expand.h,v 1.2 2008/05/31 16:47:36 tnn Exp $ */
 
 #define X_EXTRA		8	/* this many extra bytes in X string */
 
@@ -11,7 +13,7 @@
 
 	Xinit(xs, xp, 128, ATEMP); /* allocate initial string */
 	while ((c = generate()) {
-		Xcheck(xs, xp);	/* expand string if neccessary */
+		Xcheck(xs, xp);	/* expand string if necessary */
 		Xput(xs, xp, c); /* add character */
 	}
 	return Xclose(xs, xp);	/* resize string */
