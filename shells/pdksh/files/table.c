@@ -1,6 +1,14 @@
+/*	$NetBSD: table.c,v 1.2 2008/05/31 16:47:37 tnn Exp $	*/
+
 /*
  * dynamic hashed associative table for commands and variables
  */
+#include <sys/cdefs.h>
+
+#ifndef lint
+__RCSID("$NetBSD: table.c,v 1.2 2008/05/31 16:47:37 tnn Exp $");
+#endif
+
 
 #include "sh.h"
 
@@ -52,8 +60,8 @@ texpand(tp, nsize)
 	tp->tbls = ntblp;
 	if (otblp == NULL)
 		return;
-	for (i = 0; i < osize; i++)
-		if ((tblp = otblp[i]) != NULL)
+	for (i = 0; i < osize; i++) {
+		if ((tblp = otblp[i]) != NULL) {
 			if ((tblp->flag&DEFINED)) {
 				for (p = &ntblp[hash(tblp->name)
 					  & (tp->size-1)];
@@ -65,6 +73,8 @@ texpand(tp, nsize)
 			} else if (!(tblp->flag & FINUSE)) {
 				afree((void*)tblp, tp->areap);
 			}
+		}
+	}
 	afree((void*)otblp, tp->areap);
 }
 

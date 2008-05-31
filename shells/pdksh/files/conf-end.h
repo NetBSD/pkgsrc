@@ -1,7 +1,9 @@
+/*	$NetBSD: conf-end.h,v 1.2 2008/05/31 16:47:36 tnn Exp $	*/
+
 /*
  * End of configuration stuff for PD ksh.
  *
- * RCSid: $Id: conf-end.h,v 1.1.1.1 2008/05/23 17:15:16 tnn Exp $
+ * RCSid: $NetBSD: conf-end.h,v 1.2 2008/05/31 16:47:36 tnn Exp $
  */
 
 #if defined(EMACS) || defined(VI)

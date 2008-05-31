@@ -1,6 +1,14 @@
+/*	$NetBSD: io.c,v 1.2 2008/05/31 16:47:36 tnn Exp $	*/
+
 /*
  * shell buffered IO and formatted output
  */
+#include <sys/cdefs.h>
+
+#ifndef lint
+__RCSID("$NetBSD: io.c,v 1.2 2008/05/31 16:47:36 tnn Exp $");
+#endif
+
 
 #include <ctype.h>
 #include "sh.h"
@@ -13,7 +21,7 @@ static int initio_done;
  */
 
 
-/* A shell error occured (eg, syntax error, etc.) */
+/* A shell error occurred (eg, syntax error, etc.) */
 void
 #ifdef HAVE_PROTOTYPES
 errorf(const char *fmt, ...)
@@ -297,11 +305,12 @@ savefd(fd, noclose)
 
 	if (fd < FDBASE) {
 		nfd = ksh_dupbase(fd, FDBASE);
-		if (nfd < 0)
+		if (nfd < 0) {
 			if (errno == EBADF)
 				return -1;
 			else
 				errorf("too many files open in shell");
+		}
 		if (!noclose)
 			close(fd);
 	} else
@@ -318,7 +327,7 @@ restfd(fd, ofd)
 		shf_flush(&shf_iob[fd]);
 	if (ofd < 0)		/* original fd closed */
 		close(fd);
-	else {
+	else if (fd != ofd) {
 		ksh_dup2(ofd, fd, TRUE); /* XXX: what to do if this fails? */
 		close(ofd);
 	}
@@ -353,7 +362,7 @@ check_fd(name, mode, emsgp)
 {
 	int fd, fl;
 
-	if (isdigit(name[0]) && !name[1]) {
+	if (isdigit((unsigned char)name[0]) && !name[1]) {
 		fd = name[0] - '0';
 		if ((fl = fcntl(fd = name[0] - '0', F_GETFL, 0)) < 0) {
 			if (emsgp)
@@ -362,7 +371,7 @@ check_fd(name, mode, emsgp)
 		}
 		fl &= O_ACCMODE;
 #ifdef OS2
-		if (mode == W_OK ) { 
+		if (mode == W_OK ) {
 		       if (setmode(fd, O_TEXT) == -1) {
 				if (emsgp)
 					*emsgp = "couldn't set write mode";
@@ -372,7 +381,7 @@ check_fd(name, mode, emsgp)
 	      		if (setmode(fd, O_BINARY) == -1) {
 				if (emsgp)
 					*emsgp = "couldn't set read mode";
-				return -1; 
+				return -1;
 			}
 #else /* OS2 */
 		/* X_OK is a kludge to disable this check for dups (x<&1):
@@ -449,7 +458,7 @@ coproc_write_close(fd)
 	}
 }
 
-/* Called to check for existance of/value of the co-process file descriptor.
+/* Called to check for existence of/value of the co-process file descriptor.
  * (Used by check_fd() and by c_read/c_print to deal with -p option).
  */
 int
@@ -502,28 +511,36 @@ maketemp(ap, type, tlist)
 	Temp_type type;
 	struct temp **tlist;
 {
+#ifndef __NetBSD__
 	static unsigned int inc;
+#endif
 	struct temp *tp;
 	int len;
 	int fd;
-	char *path;
+	char *pathx;
 	const char *dir;
 
 	dir = tmpdir ? tmpdir : "/tmp";
 	/* The 20 + 20 is a paranoid worst case for pid/inc */
 	len = strlen(dir) + 3 + 20 + 20 + 1;
 	tp = (struct temp *) alloc(sizeof(struct temp) + len, ap);
-	tp->name = path = (char *) &tp[1];
+	tp->name = pathx = (char *) &tp[1];
 	tp->shf = (struct shf *) 0;
 	tp->type = type;
+#ifdef __NetBSD__
+	shf_snprintf(pathx, len, "%s/shXXXXXXXX", dir);
+	fd = mkstemp(pathx);
+	if (fd >= 0)
+		tp->shf = shf_fdopen(fd, SHF_WR, (struct shf *) 0);
+#else
 	while (1) {
 		/* Note that temp files need to fit 8.3 DOS limits */
-		shf_snprintf(path, len, "%s/sh%05u.%03x",
+		shf_snprintf(pathx, len, "%s/sh%05u.%03x",
 			     dir, (unsigned) procpid, inc++);
 		/* Mode 0600 to be paranoid, O_TRUNC in case O_EXCL isn't
 		 * really there.
 		 */
-		fd = open(path, O_RDWR|O_CREAT|O_EXCL|O_TRUNC, 0600);
+		fd = open(pathx, O_RDWR|O_CREAT|O_EXCL|O_TRUNC, 0600);
 		if (fd >= 0) {
 			tp->shf = shf_fdopen(fd, SHF_WR, (struct shf *) 0);
 			break;
@@ -541,7 +558,7 @@ maketemp(ap, type, tlist)
 			 */
 			break;
 	}
-	tp->next = NULL;
+#endif /* __NetBSD__ */
 	tp->pid = procpid;
 
 	tp->next = *tlist;

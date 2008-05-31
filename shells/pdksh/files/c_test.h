@@ -1,5 +1,7 @@
+/*	$NetBSD: c_test.h,v 1.2 2008/05/31 16:47:36 tnn Exp $	*/
+
 /* Various types of operations.  Keeping things grouped nicely
- * (unary,binary) makes switch() statements more efficeint.
+ * (unary,binary) makes switch() statements more efficient.
  */
 enum Test_op {
 	TO_NONOP = 0,	/* non-operator */

@@ -1,8 +1,10 @@
+/*	$NetBSD: c_ulimit.c,v 1.2 2008/05/31 16:47:36 tnn Exp $	*/
+
 /*
 	ulimit -- handle "ulimit" builtin
 
 	Reworked to use getrusage() and ulimit() at once (as needed on
-	some schizophenic systems, eg, HP-UX 9.01), made argument parsing
+	some schizophrenic systems, eg, HP-UX 9.01), made argument parsing
 	conform to at&t ksh, added autoconf support.  Michael Rendell, May, '94
 
 	Eric Gisin, September 1988
@@ -15,6 +17,12 @@
 	the extended 4.nBSD resource limits.  It now includes the code
 	that was originally under case SYSULIMIT in source file "xec.c".
 */
+#include <sys/cdefs.h>
+
+#ifndef lint
+__RCSID("$NetBSD: c_ulimit.c,v 1.2 2008/05/31 16:47:36 tnn Exp $");
+#endif
+
 
 #include "sh.h"
 #include "ksh_time.h"
@@ -109,9 +117,12 @@ c_ulimit(wp)
 # endif /* UL_GMEMLIM */
 #endif /* RLIMIT_VMEM */
 #ifdef RLIMIT_SWAP
-		{ "swap(kbytes)", RLIMIT_SWAP, RLIMIT_SWAP, 1024, 'w' },
+		{ "swap(kbytes)", RLIMIT, RLIMIT_SWAP, RLIMIT_SWAP, 1024, 'w' },
 #endif
-		{ (char *) 0 }
+#ifdef RLIMIT_SBSIZE
+		{ "sbsize(bytes)", RLIMIT, RLIMIT_SBSIZE, RLIMIT_SBSIZE, 1, 'b' },
+#endif
+		{ .name = NULL }
 	    };
 	static char	options[3 + NELEM(limits)];
 	rlim_t		UNINITIALIZED(val);
@@ -194,7 +205,7 @@ c_ulimit(wp)
 					val = limit.rlim_cur;
 				else if (how & HARD)
 					val = limit.rlim_max;
-			} else 
+			} else
 #endif /* HAVE_SETRLIMIT */
 #ifdef HAVE_ULIMIT
 			{

@@ -16,7 +16,7 @@ DEFS = @DEFS@
 LIBS = @LIBS@
 
 CPPFLAGS = @CPPFLAGS@
-CFLAGS = @CFLAGS@
+CFLAGS = @CFLAGS@ "-D__RCSID(str)=void empty_nothingness()" "-D__UNCONST(a)=((void *)(unsigned long)(const void *)(a))"
 LDSTATIC = @LDSTATIC@
 LDFLAGS = @LDFLAGS@
 
@@ -70,7 +70,14 @@ OS2FILES = os2/Makefile os2/config.h os2/config.status os2/configure.cmd \
 	os2/emacs.out os2/kshrc.ksh os2/make.sed os2/os2.c os2/os2siglist.out \
 	os2/README.os2 os2/NEWS.os2 os2/os2bugs os2/th.cmd os2/config.cache
 
-all: $(SHELL_PROG)$(exe_suffix) $(SHELL_PROG).1
+all: check_cdefs real_all
+
+check_cdefs: .PHONY
+	if [ ! -e /usr/include/sys/cdefs.h ]; then \
+		mkdir sys && touch sys/cdefs.h; \
+	fi
+
+real_all: $(SHELL_PROG)$(exe_suffix) $(SHELL_PROG).1
 
 # This shouldn't be first - some makes don't know about PRECIOUS and assume it
 # is the default target.

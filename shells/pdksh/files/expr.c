@@ -1,9 +1,17 @@
+/*	$NetBSD: expr.c,v 1.2 2008/05/31 16:47:36 tnn Exp $	*/
+
 /*
  * Korn expression evaluation
  */
 /*
  * todo: better error handling: if in builtin, should be builtin error, etc.
  */
+#include <sys/cdefs.h>
+
+#ifndef lint
+__RCSID("$NetBSD: expr.c,v 1.2 2008/05/31 16:47:36 tnn Exp $");
+#endif
+
 
 #include "sh.h"
 #include <ctype.h>
@@ -61,7 +69,7 @@ enum prec {
 struct opinfo {
 	char		name[4];
 	int		len;	/* name length */
-	enum prec	prec;	/* precidence: lower is higher */
+	enum prec	prec;	/* precedence: lower is higher */
 };
 
 /* Tokens in this table must be ordered so the longest are first
@@ -138,7 +146,7 @@ static struct tbl *tempvar  ARGS((void));
 static struct tbl *intvar   ARGS((Expr_state *es, struct tbl *vp));
 
 /*
- * parse and evalute expression
+ * parse and evaluate expression
  */
 int
 evaluate(expr, rval, error_ok)
@@ -157,7 +165,7 @@ evaluate(expr, rval, error_ok)
 }
 
 /*
- * parse and evalute expression, storing result in vp.
+ * parse and evaluate expression, storing result in vp.
  */
 int
 v_evaluate(vp, expr, error_ok)
@@ -206,7 +214,7 @@ v_evaluate(vp, expr, error_ok)
 	if (vp->flag & INTEGER)
 		setint_v(vp, v);
 	else
-		/* can fail if readony */
+		/* can fail if readonly */
 		setstr(vp, str_val(v), error_ok);
 
 	quitenv();
@@ -417,21 +425,21 @@ evalexpr(es, prec)
 			break;
 		case O_TERN:
 			{
-				int e = vl->val.i != 0;
-				if (!e)
+				int ex = vl->val.i != 0;
+				if (!ex)
 					es->noassign++;
 				vl = evalexpr(es, MAX_PREC);
-				if (!e)
+				if (!ex)
 					es->noassign--;
 				if (es->tok != CTERN)
 					evalerr(es, ET_STR, "missing :");
 				token(es);
-				if (e)
+				if (ex)
 					es->noassign++;
 				vr = evalexpr(es, P_TERN);
-				if (e)
+				if (ex)
 					es->noassign--;
-				vl = e ? vl : vr;
+				vl = ex ? vl : vr;
 			}
 			break;
 		case O_ASN:
@@ -463,7 +471,7 @@ token(es)
 	char *tvar;
 
 	/* skip white space */
-	for (cp = es->tokp; (c = *cp), isspace(c); cp++)
+	for (cp = es->tokp; (c = *cp), isspace((unsigned char)c); cp++)
 		;
 	es->tokp = cp;
 

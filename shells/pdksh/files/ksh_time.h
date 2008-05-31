@@ -1,8 +1,10 @@
+/*	$NetBSD: ksh_time.h,v 1.2 2008/05/31 16:47:36 tnn Exp $	*/
+
 #ifndef KSH_TIME_H
 # define KSH_TIME_H
 
 /* Wrapper around the ugly time.h,sys/time.h includes/ifdefs */
-/* $Id: ksh_time.h,v 1.1.1.1 2008/05/23 17:15:20 tnn Exp $ */
+/* $NetBSD: ksh_time.h,v 1.2 2008/05/31 16:47:36 tnn Exp $ */
 
 #ifdef TIME_WITH_SYS_TIME
 # include <sys/time.h>
