@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.5 2008/05/31 12:21:15 drochner Exp $
+
+--- applets/clock/clock.c.orig	2008-05-31 14:09:38.000000000 +0200
++++ applets/clock/clock.c
+@@ -64,6 +64,10 @@
+ #include "set-timezone.h"
+ #include "system-timezone.h"
+ 
++#if defined(__FreeBSD__) || defined(__DragonFly__)
++#define daylight 1
++#endif
++
+ #define INTERNETSECOND (864)
+ #define INTERNETBEAT   (86400)
+ 

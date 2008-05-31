@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.44 2008/05/29 11:15:49 drochner Exp $
+$NetBSD: distinfo,v 1.45 2008/05/31 12:21:14 drochner Exp $
 
 SHA1 (gnome-panel-2.22.2.tar.bz2) = 73752c3ce6224886c2381b0b13111253008bc6f7
 RMD160 (gnome-panel-2.22.2.tar.bz2) = 64a37f44b9f34f74d30f30aca349749a24c80859
@@ -6,3 +6,5 @@ Size (gnome-panel-2.22.2.tar.bz2) = 3255261 bytes
 SHA1 (patch-aa) = 192ebd41ddcca1d6db8898b7b65e3acfb200ce00
 SHA1 (patch-ab) = 961186c5db258557294fae4a280d13efdcfe1de1
 SHA1 (patch-ac) = 266fbb403a11c4776a17cd257d3f577b97f01c66
+SHA1 (patch-ad) = c24a5d0a8c1c88d46edfa3e8fc3e4528637a8d31
+SHA1 (patch-ae) = d85575dc403c67a4fcb0818904ab9b0517f7b8e0
