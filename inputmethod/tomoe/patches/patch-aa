@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1 2008/05/31 14:16:47 obache Exp $
+
+--- lib/tomoe-xml-parser.c.orig	2007-04-10 07:24:21.000000000 +0000
++++ lib/tomoe-xml-parser.c
+@@ -22,4 +22,8 @@
+  */
+ 
++#ifdef HAVE_CONFIG_H
++#include "config.h"
++#endif /* HAVE_CONFIG_H */
++
+ #include <stdio.h>
+ #include <errno.h>
+@@ -442,5 +446,9 @@ _tomoe_xml_parser_parse_dictionary_file 
+     if (!f) {
+         g_warning ("failed to open dictionary file %s: %s", filename,
++#ifdef HAVE_STRERROR
++                   strerror(errno));
++#else
+                    sys_errlist[errno]);
++#endif
+     }
+     g_return_val_if_fail (f, FALSE);
