@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.5 2008/05/31 12:21:15 drochner Exp $
+
+--- applets/clock/clock-location.c.orig	2008-05-31 14:10:48.000000000 +0200
++++ applets/clock/clock-location.c
+@@ -27,6 +27,10 @@
+ #include "set-timezone.h"
+ #include "system-timezone.h"
+ 
++#if defined(__FreeBSD__) || defined(__DragonFly__)
++#define daylight 1
++#endif
++
+ G_DEFINE_TYPE (ClockLocation, clock_location, G_TYPE_OBJECT)
+ 
+ typedef struct {
