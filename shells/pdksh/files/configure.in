@@ -276,7 +276,7 @@ KSH_MEMMOVE
 KSH_MEMSET
 AC_CHECK_FUNCS(confstr dup2 flock getcwd getwd killpg nice \
 	setrlimit strerror strcasecmp strstr sysconf tcsetpgrp \
-	ulimit waitpid wait3)
+	ulimit waitpid wait3 strlcpy strlcat)
 AC_CHECK_FUNCS(sigsetjmp _setjmp, break)
 AC_FUNC_MMAP
 KSH_FUNC_LSTAT
