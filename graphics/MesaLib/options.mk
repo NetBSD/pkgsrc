@@ -1,11 +1,11 @@
-# $NetBSD: options.mk,v 1.6 2008/05/30 14:25:30 tnn Exp $
+# $NetBSD: options.mk,v 1.7 2008/05/31 20:43:29 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=	mesa-execmem-mmap
 
 # Assembler code build configurations
 .if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && \
-    ${OPSYS} != "SunOS"
+    ${OPSYS} != "SunOS" && ${OPSYS} != "Darwin"
 PKG_SUPPORTED_OPTIONS+=		${MACHINE_ARCH}
 PKG_SUGGESTED_OPTIONS+=		${MACHINE_ARCH}
 .endif
@@ -65,8 +65,7 @@ PKG_SUGGESTED_OPTIONS+=		dri
 ###
 ### XXX Yes, this is a bit overly verbose; with Mesa, that can't hurt much.
 ###
-.if (!empty(PKG_OPTIONS:Mi386) || !empty(PKG_OPTIONS:Mx86_64)) && \
-    ${OPSYS} != "SunOS"
+.if !empty(PKG_OPTIONS:Mi386) || !empty(PKG_OPTIONS:Mx86_64)
 BUILD_TARGET_SUFFIX=	-${MACHINE_ARCH}
 .else
 BUILD_TARGET_SUFFIX=	# empty
