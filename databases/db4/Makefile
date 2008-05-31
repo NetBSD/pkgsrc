@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2008/01/10 21:55:51 adam Exp $
+# $NetBSD: Makefile,v 1.54 2008/05/31 13:18:24 tnn Exp $
 
 DISTNAME=	db-4.6.21
 PKGNAME=	${DISTNAME:S/db/db4/}
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
+USE_TOOLS+=		pax
 GNU_CONFIGURE=		yes
 CONFIGURE_DIRS=		build_unix
 CONFIGURE_SCRIPT=	../dist/configure
