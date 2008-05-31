@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1203 2008/05/31 09:25:02 adam Exp $
+$NetBSD: CHANGES-2008,v 1.1204 2008/05/31 11:46:01 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2055,3 +2055,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/sup to 0.3 [christos 2008-05-30]
 	Updated mail/sylpheed-devel to 2.5.0rc [tnn 2008-05-30]
 	Updated graphics/gimp to 2.4.6 [adam 2008-05-31]
+	Updated graphics/p5-Image-ExifTool to 7.30 [gdt 2008-05-31]
