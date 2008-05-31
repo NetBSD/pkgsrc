@@ -1,10 +1,12 @@
+/*	$NetBSD: shf.h,v 1.2 2008/05/31 16:47:37 tnn Exp $	*/
+
 #ifndef SHF_H
 # define SHF_H
 
 /*
  * Shell file I/O routines
  */
-/* $Id: shf.h,v 1.1.1.1 2008/05/23 17:15:21 tnn Exp $ */
+/* $Id: shf.h,v 1.2 2008/05/31 16:47:37 tnn Exp $ */
 
 #define SHF_BSIZE	512
 

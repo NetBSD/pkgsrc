@@ -1,6 +1,15 @@
+/*	$NetBSD: main.c,v 1.2 2008/05/31 16:47:37 tnn Exp $	*/
+
 /*
- * startup, main loop, enviroments and error handling
+ * startup, main loop, environments and error handling
  */
+#include <sys/cdefs.h>
+#include <locale.h>
+
+#ifndef lint
+__RCSID("$NetBSD: main.c,v 1.2 2008/05/31 16:47:37 tnn Exp $");
+#endif
+
 
 #define	EXTERN				/* define EXTERNs in sh.h */
 
@@ -64,7 +73,9 @@ static const char *const initcoms [] = {
 #ifdef KSH
 	 /* Aliases that are builtin commands in at&t */
 	  "login=exec login",
+#ifndef __NetBSD__
 	  "newgrp=exec newgrp",
+#endif /* __NetBSD__ */
 #endif /* KSH */
 	  NULL,
 	/* this is what at&t ksh seems to track, with the addition of emacs */
@@ -79,9 +90,7 @@ static const char *const initcoms [] = {
 };
 
 int
-main(argc, argv)
-	int argc;
-	register char **argv;
+main(int argc, char *argv[])
 {
 	register int i;
 	int argi;
@@ -108,14 +117,14 @@ main(argc, argv)
 					    "pdksh", (char *) 0
 					};
 
-		argv = (char **) empty_argv;
+		argv = (char **)__UNCONST(empty_argv);
 		argc = 1;
 	}
 	kshname = *argv;
 
 	ainit(&aperm);		/* initialize permanent Area */
 
-	/* set up base enviroment */
+	/* set up base environment */
 	memset(&env, 0, sizeof(env));
 	env.type = E_NONE;
 	ainit(&env.area);
@@ -175,8 +184,8 @@ main(argc, argv)
 	}
 
 
-	/* Turn on nohup by default for how - will change to off
-	 * by default once people are aware of its existance
+	/* Turn on nohup by default for now - will change to off
+	 * by default once people are aware of its existence
 	 * (at&t ksh does not have a nohup option - it always sends
 	 * the hup).
 	 */
@@ -201,7 +210,17 @@ main(argc, argv)
 	change_flag(FPOSIX, OF_SPECIAL, 1);
 #endif /* POSIXLY_CORRECT */
 
-	/* import enviroment */
+	/* Set edit mode to emacs by default, may be overridden
+	 * by the environment or the user.  Also, we want tab completion
+	 * on in vi by default. */
+#if defined(EDIT) && defined(EMACS)
+	change_flag(FEMACS, OF_SPECIAL, 1);
+#endif /* EDIT && EMACS */
+#if defined(EDIT) && defined(VI)
+	Flag(FVITABCOMPLETE) = 1;
+#endif /* EDIT && VI */
+
+	/* import environment */
 	if (environ != NULL)
 		for (wp = environ; *wp != NULL; wp++)
 			typeset(*wp, IMPORT|EXPORT, 0, 0, 0);
@@ -244,7 +263,7 @@ main(argc, argv)
 	setstr(global(version_param), ksh_version, KSH_RETURN_ERROR);
 
 	/* execute initialization statements */
-	for (wp = (char**) initcoms; *wp != NULL; wp++) {
+	for (wp = (char**)__UNCONST(initcoms); *wp != NULL; wp++) {
 		shcomexec(wp);
 		for (; *wp != NULL; wp++)
 			;
@@ -271,8 +290,10 @@ main(argc, argv)
 	/* this to note if monitor is set on command line (see below) */
 	Flag(FMONITOR) = 127;
 	argi = parse_args(argv, OF_CMDLINE, (int *) 0);
-	if (argi < 0)
+	if (argi < 0) {
 		exit(1);
+		/* NOTREACHED */
+	}
 
 	if (Flag(FCOMMAND)) {
 		s = pushs(SSTRING, ATEMP);
@@ -319,7 +340,8 @@ main(argc, argv)
 	{
 		struct stat s_stdin;
 
-		if (fstat(0, &s_stdin) >= 0 && S_ISCHR(s_stdin.st_mode))
+		if (fstat(0, &s_stdin) >= 0 && S_ISCHR(s_stdin.st_mode) &&
+		    Flag(FTALKING))
 			reset_nonblock(0);
 	}
 
@@ -336,7 +358,7 @@ main(argc, argv)
 	l = e->loc;
 	l->argv = &argv[argi - 1];
 	l->argc = argc - argi;
-	l->argv[0] = (char *) kshname;
+	l->argv[0] = (char *)__UNCONST(kshname);
 	getopts_reset(1);
 
 	/* Disable during .profile/ENV reading */
@@ -391,7 +413,7 @@ main(argc, argv)
 #ifdef DEFAULT_ENV
 		/* If env isn't set, include default environment */
 		if (env_file == null)
-			env_file = DEFAULT_ENV;
+			env_file = __UNCONST(DEFAULT_ENV);
 #endif /* DEFAULT_ENV */
 		env_file = substitute(env_file, DOTILDE);
 		if (*env_file != '\0')
@@ -411,7 +433,7 @@ main(argc, argv)
 						    "ENV", "SHELL",
 						(char *) 0
 					    };
-		shcomexec((char **) restr_com);
+		shcomexec((char **)__UNCONST(restr_com));
 		/* After typeset command... */
 		Flag(FRESTRICTED) = 1;
 	}
@@ -426,6 +448,7 @@ main(argc, argv)
 	} else
 		Flag(FTRACKALL) = 1;	/* set after ENV */
 
+	setlocale(LC_CTYPE, "");
 	shell(s, TRUE);	/* doesn't return */
 	return 0;
 }
@@ -438,7 +461,6 @@ include(name, argc, argv, intr_ok)
 	int intr_ok;
 {
 	register Source *volatile s = NULL;
-	Source *volatile sold;
 	struct shf *shf;
 	char **volatile old_argv;
 	volatile int old_argc;
@@ -455,11 +477,9 @@ include(name, argc, argv, intr_ok)
 		old_argv = (char **) 0;
 		old_argc = 0;
 	}
-	sold = source;
 	newenv(E_INCL);
 	i = ksh_sigsetjmp(e->jbuf, 0);
 	if (i) {
-		source = sold;
 		if (s) /* Do this before quitenv(), which frees the memory */
 			shf_close(s->u.shf);
 		quitenv();
@@ -496,7 +516,6 @@ include(name, argc, argv, intr_ok)
 	s->u.shf = shf;
 	s->file = str_save(name, ATEMP);
 	i = shell(s, FALSE);
-	source = sold;
 	shf_close(s->u.shf);
 	quitenv();
 	if (old_argv) {
@@ -511,10 +530,13 @@ command(comm)
 	const char *comm;
 {
 	register Source *s;
+	int r;
 
 	s = pushs(SSTRING, ATEMP);
 	s->start = s->str = comm;
-	return shell(s, FALSE);
+	r = shell(s, FALSE);
+	afree(s, ATEMP);
+	return r;
 }
 
 /*
@@ -529,6 +551,7 @@ shell(s, toplevel)
 	volatile int wastty = s->flags & SF_TTY;
 	volatile int attempts = 13;
 	volatile int interactive = Flag(FTALKING) && toplevel;
+	Source *volatile old_source = source;
 	int i;
 
 	newenv(E_PARSE);
@@ -536,7 +559,6 @@ shell(s, toplevel)
 		really_exit = 0;
 	i = ksh_sigsetjmp(e->jbuf, 0);
 	if (i) {
-		s->start = s->str = null;
 		switch (i) {
 		  case LINTR: /* we get here if SIGINT not caught or ignored */
 		  case LERROR:
@@ -556,16 +578,20 @@ shell(s, toplevel)
 				 * a tty, but to have stopped jobs, one only
 				 * needs FMONITOR set (not FTALKING/SF_TTY)...
 				 */
+				/* toss any input we have so far */
+				s->start = s->str = null;
 				break;
 			}
 			/* fall through... */
 		  case LEXIT:
 		  case LLEAVE:
 		  case LRETURN:
+			source = old_source;
 			quitenv();
 			unwind(i);	/* keep on going */
 			/*NOREACHED*/
 		  default:
+			source = old_source;
 			quitenv();
 			internal_errorf(1, "shell: %d", i);
 			/*NOREACHED*/
@@ -576,11 +602,12 @@ shell(s, toplevel)
 		if (trap)
 			runtraps(0);
 
-		if (s->next == NULL)
+		if (s->next == NULL) {
 			if (Flag(FVERBOSE))
 				s->flags |= SF_ECHO;
 			else
 				s->flags &= ~SF_ECHO;
+		}
 
 		if (interactive) {
 			j_notify();
@@ -621,6 +648,7 @@ shell(s, toplevel)
 		reclaim();
 	}
 	quitenv();
+	source = old_source;
 	return exstat;
 }
 
@@ -737,7 +765,7 @@ cleanup_parents_env()
 
 	/* Don't clean up temporary files - parent will probably need them.
 	 * Also, can't easily reclaim memory since variables, etc. could be
-	 * anywyere.
+	 * anywhere.
 	 */
 
 	/* close all file descriptors hiding in savefd */
@@ -807,7 +835,7 @@ remove_temps(tp)
 				    APERM);
 				memset(t, 0, sizeof(struct temp));
 				t->name = (char *) &t[1];
-				strcpy(t->name, tp->name);
+				strlcpy(t->name, tp->name, strlen(tp->name) + 1);
 				t->next = delayed_remove;
 				delayed_remove = t;
 			}

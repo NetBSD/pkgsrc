@@ -1,6 +1,13 @@
+/*	$NetBSD: c_ksh.c,v 1.2 2008/05/31 16:47:36 tnn Exp $	*/
+
 /*
  * built-in Korn commands: c_*
  */
+#include <sys/cdefs.h>
+
+#ifndef lint
+__RCSID("$NetBSD: c_ksh.c,v 1.2 2008/05/31 16:47:36 tnn Exp $");
+#endif
 
 #include "sh.h"
 #include "ksh_stat.h"
@@ -25,6 +32,7 @@ c_cd(wp)
 	char *dir, *try, *pwd;
 	int phys_path;
 	char *cdpath;
+	char *fdir = NULL;
 
 	while ((optc = ksh_getopt(wp, &builtin_opt, "LP")) != EOF)
 		switch (optc) {
@@ -73,7 +81,7 @@ c_cd(wp)
 			bi_errorf("don't know current directory");
 			return 1;
 		}
-		/* substitue arg1 for arg2 in current path.
+		/* substitute arg1 for arg2 in current path.
 		 * if the first substitution fails because the cd fails
 		 * we could try to find another substitution. For now
 		 * we don't
@@ -86,7 +94,7 @@ c_cd(wp)
 		olen = strlen(wp[0]);
 		nlen = strlen(wp[1]);
 		elen = strlen(current_wd + ilen + olen) + 1;
-		dir = alloc(ilen + nlen + elen, ATEMP);
+		fdir = dir = alloc(ilen + nlen + elen, ATEMP);
 		memcpy(dir, current_wd, ilen);
 		memcpy(dir + ilen, wp[1], nlen);
 		memcpy(dir + ilen + nlen, current_wd + ilen + olen, elen);
@@ -121,6 +129,8 @@ c_cd(wp)
 			bi_errorf("%s: bad directory", dir);
 		else
 			bi_errorf("%s - %s", try, strerror(errno));
+		if (fdir)
+			afree(fdir, ATEMP);
 		return 1;
 	}
 
@@ -169,6 +179,9 @@ c_cd(wp)
 	if (printpath || cdnode)
 		shprintf("%s\n", pwd);
 
+	if (fdir)
+		afree(fdir, ATEMP);
+
 	return 0;
 }
 
@@ -178,7 +191,7 @@ c_pwd(wp)
 {
 	int optc;
 	int physical = Flag(FPHYSICAL);
-	char *p;
+	char *p, *freep = NULL;
 
 	while ((optc = ksh_getopt(wp, &builtin_opt, "LP")) != EOF)
 		switch (optc) {
@@ -206,7 +219,7 @@ c_pwd(wp)
 	if (p && eaccess(p, R_OK) < 0)
 		p = (char *) 0;
 	if (!p) {
-		p = ksh_get_wd((char *) 0, 0);
+		freep = p = ksh_get_wd((char *) 0, 0);
 		if (!p) {
 			bi_errorf("can't get current directory - %s",
 				strerror(errno));
@@ -214,6 +227,8 @@ c_pwd(wp)
 		}
 	}
 	shprintf("%s\n", p);
+	if (freep)
+		afree(freep, ATEMP);
 	return 0;
 }
 
@@ -333,7 +348,7 @@ c_print(wp)
 		while ((c = *s++) != '\0') {
 			Xcheck(xs, xp);
 #ifdef OS2
-			if ((flags & PO_FSLASH) && c == '\\') 
+			if ((flags & PO_FSLASH) && c == '\\')
 				if (*s == '\\')
 					*s++;
 				else
@@ -359,7 +374,7 @@ c_print(wp)
 				case '0':
 					/* Look for an octal number: can have
 					 * three digits (not counting the
-					 * leading 0).  Truely burnt.
+					 * leading 0).  Truly burnt.
 					 */
 					c = 0;
 					for (i = 0; i < 3; i++) {
@@ -390,8 +405,8 @@ c_print(wp)
 		Xfree(xs, xp);
 	} else {
 		int n, len = Xlength(xs, xp);
-#ifdef KSH
 		int UNINITIALIZED(opipe);
+#ifdef KSH
 
 		/* Ensure we aren't killed by a SIGPIPE while writing to
 		 * a coprocess.  at&t ksh doesn't seem to do this (seems
@@ -582,7 +597,7 @@ c_typeset(wp)
 	struct block *l = e->loc;
 	struct tbl *vp, **p;
 	Tflag fset = 0, fclr = 0;
-	int thing = 0, func = 0, local = 0;
+	int thing = 0, func = 0, localv = 0;
 	const char *options = "L#R#UZ#fi#lprtux";	/* see comment below */
 	char *fieldstr, *basestr;
 	int field, base;
@@ -603,10 +618,10 @@ c_typeset(wp)
 		/* called with 'typeset -' */
 		break;
  	  case 't':		/* typeset */
- 		local = 1;
+ 		localv = 1;
  		break;
  	}
- 
+
 	fieldstr = basestr = (char *) 0;
 	builtin_opt.flags |= GF_PLUSOPT;
 	/* at&t ksh seems to have 0-9 as options, which are multiplied
@@ -650,8 +665,8 @@ c_typeset(wp)
 			flag = LCASEV;
 			break;
 		  case 'p': /* posix export/readonly -p flag.
-			     * typset -p is the same as typeset (in pdksh);
-			     * here for compatability with ksh93.
+			     * typeset -p is the same as typeset (in pdksh);
+			     * here for compatibility with ksh93.
 			     */
 			pflag = 1;
 			break;
@@ -702,7 +717,7 @@ c_typeset(wp)
 		return 1;
 	}
 	if (wp[builtin_opt.optind]) {
-		/* Take care of exclusions.  
+		/* Take care of exclusions.
 		 * At this point, flags in fset are cleared in fclr and vise
 		 * versa.  This property should be preserved.
 		 */
@@ -730,7 +745,7 @@ c_typeset(wp)
 		int rval = 0;
 		struct tbl *f;
 
-		if (local && !func)
+		if (localv && !func)
 			fset |= LOCAL;
 		for (i = builtin_opt.optind; wp[i]; i++) {
 			if (func) {
@@ -822,19 +837,19 @@ c_typeset(wp)
 				shprintf("-x ");
 			    if ((vp->flag&RDONLY))
 				shprintf("-r ");
-			    if ((vp->flag&TRACE)) 
+			    if ((vp->flag&TRACE))
 				shprintf("-t ");
-			    if ((vp->flag&LJUST)) 
+			    if ((vp->flag&LJUST))
 				shprintf("-L%d ", vp->u2.field);
-			    if ((vp->flag&RJUST)) 
+			    if ((vp->flag&RJUST))
 				shprintf("-R%d ", vp->u2.field);
-			    if ((vp->flag&ZEROFIL)) 
+			    if ((vp->flag&ZEROFIL))
 				shprintf("-Z ");
-			    if ((vp->flag&LCASEV)) 
+			    if ((vp->flag&LCASEV))
 				shprintf("-l ");
-			    if ((vp->flag&UCASEV_AL)) 
+			    if ((vp->flag&UCASEV_AL))
 				shprintf("-u ");
-			    if ((vp->flag&INT_U)) 
+			    if ((vp->flag&INT_U))
 				shprintf("-U ");
 			    shprintf("%s\n", vp->name);
 			    if (vp->flag&ARRAY)
@@ -933,7 +948,7 @@ c_alias(wp)
 			return 1;
 		}
 		ksh_getopt_reset(&builtin_opt, GF_ERROR);
-		return c_unalias((char **) args);
+		return c_unalias((char **)__UNCONST(args));
 	}
 
 	
@@ -1110,13 +1125,14 @@ c_jobs(wp)
 			return 1;
 		}
 	wp += builtin_opt.optind;
-	if (!*wp)
+	if (!*wp) {
 		if (j_jobs((char *) 0, flag, nflag))
 			rv = 1;
-	else
+	} else {
 		for (; *wp; wp++)
 			if (j_jobs(*wp, flag, nflag))
 				rv = 1;
+	}
 	return rv;
 }
 
@@ -1188,7 +1204,8 @@ c_kill(wp)
 	int i, n, rv, sig;
 
 	/* assume old style options if -digits or -UPPERCASE */
-	if ((p = wp[1]) && *p == '-' && (digit(p[1]) || isupper(p[1]))) {
+	if ((p = wp[1]) && *p == '-'
+	    && (digit(p[1]) || isupper((unsigned char)p[1]))) {
 		if (!(t = gettrap(p + 1, TRUE))) {
 			bi_errorf("bad signal `%s'", p + 1);
 			return 1;
@@ -1208,6 +1225,7 @@ c_kill(wp)
 						builtin_opt.optarg);
 					return 1;
 				}
+				break;
 			  case '?':
 				return 1;
 			}
@@ -1215,7 +1233,7 @@ c_kill(wp)
 	}
 	if ((lflag && t) || (!wp[i] && !lflag)) {
 		shf_fprintf(shl_out,
-"Usage: kill [ -s signame | -signum | -signame ] {pid|job}...\n\
+"usage: kill [ -s signame | -signum | -signame ] {pid|job}...\n\
        kill -l [exit_status]\n"
 			);
 		bi_errorf(null);
@@ -1241,26 +1259,26 @@ c_kill(wp)
 					shprintf("%s%s", p, sigtraps[i].name);
 			shprintf(newline);
 		} else {
-			int w, i;
+			int w, si;
 			int mess_width;
 			struct kill_info ki;
 
-			for (i = SIGNALS, ki.num_width = 1; i >= 10; i /= 10)
+			for (si = SIGNALS, ki.num_width = 1; si >= 10; si /= 10)
 				ki.num_width++;
 			ki.name_width = mess_width = 0;
-			for (i = 0; i < SIGNALS; i++) {
-				w = sigtraps[i].name ? strlen(sigtraps[i].name)
-						     : ki.num_width;
+			for (si = 0; si < SIGNALS; si++) {
+				w = sigtraps[si].name ?
+				    strlen(sigtraps[si].name) : ki.num_width;
 				if (w > ki.name_width)
 					ki.name_width = w;
-				w = strlen(sigtraps[i].mess);
+				w = strlen(sigtraps[si].mess);
 				if (w > mess_width)
 					mess_width = w;
 			}
 
 			print_columns(shl_stdout, SIGNALS - 1,
 				kill_fmt_entry, (void *) &ki,
-				ki.num_width + ki.name_width + mess_width + 3);
+				ki.num_width + ki.name_width + mess_width + 3, 1);
 		}
 		return 0;
 	}
@@ -1271,7 +1289,7 @@ c_kill(wp)
 			if (j_kill(p, sig))
 				rv = 1;
 		} else if (!getn(p, &n)) {
-			bi_errorf("%s: arguments must be jobs or process ids",
+			bi_errorf("%s: arguments must be jobs or process IDs",
 				p);
 			rv = 1;
 		} else {

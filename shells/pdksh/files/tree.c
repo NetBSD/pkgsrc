@@ -1,6 +1,14 @@
+/*	$NetBSD: tree.c,v 1.2 2008/05/31 16:47:37 tnn Exp $	*/
+
 /*
  * command tree climbing
  */
+#include <sys/cdefs.h>
+
+#ifndef lint
+__RCSID("$NetBSD: tree.c,v 1.2 2008/05/31 16:47:37 tnn Exp $");
+#endif
+
 
 #include "sh.h"
 
@@ -370,7 +378,7 @@ int
 #ifdef HAVE_PROTOTYPES
 fptreef(struct shf *shf, int indent, const char *fmt, ...)
 #else
-fptreef(shf, indent, fmt, va_alist) 
+fptreef(shf, indent, fmt, va_alist)
   struct shf *shf;
   int indent;
   const char *fmt;
@@ -380,7 +388,7 @@ fptreef(shf, indent, fmt, va_alist)
   va_list	va;
 
   SH_VA_START(va, fmt);
-  
+
   vfptreef(shf, indent, fmt, va);
   va_end(va);
   return 0;
@@ -506,7 +514,7 @@ tcopy(t, ap)
 		for (tw = t->vars; *tw++ != NULL; )
 			;
 		rw = r->vars = (char **)
-			alloc((int)(tw - t->vars) * sizeof(*tw), ap);
+			alloc((tw - t->vars + 1) * sizeof(*tw), ap);
 		for (tw = t->vars; *tw != NULL; )
 			*rw++ = wdcopy(*tw++, ap);
 		*rw = NULL;
@@ -518,7 +526,7 @@ tcopy(t, ap)
 		for (tw = t->args; *tw++ != NULL; )
 			;
 		rw = r->args = (char **)
-			alloc((int)(tw - t->args) * sizeof(*tw), ap);
+			alloc((tw - t->args + 1) * sizeof(*tw), ap);
 		for (tw = t->args; *tw != NULL; )
 			*rw++ = wdcopy(*tw++, ap);
 		*rw = NULL;
@@ -553,7 +561,7 @@ wdscan(wp, c)
 	while (1)
 		switch (*wp++) {
 		  case EOS:
-			return (char *) wp;
+			return (char *) __UNCONST(wp);
 		  case CHAR:
 		  case QCHAR:
 			wp++;
@@ -574,7 +582,7 @@ wdscan(wp, c)
 		  case CSUBST:
 			wp++;
 			if (c == CSUBST && nest == 0)
-				return (char *) wp;
+				return (char *) __UNCONST(wp);
 			nest--;
 			break;
 #ifdef KSH
@@ -585,7 +593,7 @@ wdscan(wp, c)
 		  case SPAT:
 		  case CPAT:
 			if (c == wp[-1] && nest == 0)
-				return (char *) wp;
+				return (char *) __UNCONST(wp);
 			if (wp[-1] == CPAT)
 				nest--;
 			break;
@@ -679,7 +687,7 @@ iocopy(iow, ap)
 
 	for (ior = iow; *ior++ != NULL; )
 		;
-	ior = (struct ioword **) alloc((int)(ior - iow) * sizeof(*ior), ap);
+	ior = (struct ioword **) alloc((ior - iow + 1) * sizeof(*ior), ap);
 
 	for (i = 0; iow[i] != NULL; i++) {
 		register struct ioword *p, *q;

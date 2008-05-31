@@ -1,7 +1,15 @@
+/*	$NetBSD: edit.c,v 1.2 2008/05/31 16:47:36 tnn Exp $	*/
+
 /*
  * Command line editing - common code
  *
  */
+#include <sys/cdefs.h>
+
+#ifndef lint
+__RCSID("$NetBSD: edit.c,v 1.2 2008/05/31 16:47:36 tnn Exp $");
+#endif
+
 
 #include "config.h"
 #ifdef EDIT
@@ -15,6 +23,7 @@
 # include <sys/stream.h>	/* needed for <sys/ptem.h> */
 # include <sys/ptem.h>		/* needed for struct winsize */
 #endif /* OS_SCO */
+#include <sys/ioctl.h>
 #include <ctype.h>
 #include "ksh_stat.h"
 
@@ -126,11 +135,6 @@ x_read(buf, len)
 {
 	int	i;
 
-#if defined(TIOCGWINSZ)
-	if (got_sigwinch)
-		check_sigwinch();
-#endif /* TIOCGWINSZ */
-
 	x_mode(TRUE);
 #ifdef EMACS
 	if (Flag(FEMACS) || Flag(FGMACS))
@@ -144,6 +148,11 @@ x_read(buf, len)
 #endif
 		i = -1;		/* internal error */
 	x_mode(FALSE);
+#if defined(TIOCGWINSZ)
+	if (got_sigwinch)
+		check_sigwinch();
+#endif /* TIOCGWINSZ */
+
 	return i;
 }
 
@@ -320,7 +329,7 @@ x_mode(onoff)
  *
  * DESCRIPTION:
  *      This function is based on a fix from guy@demon.co.uk
- *      It fixes a bug in that if PS1 contains '!', the length 
+ *      It fixes a bug in that if PS1 contains '!', the length
  *      given by strlen() is probably wrong.
  *
  * RETURN VALUE:
@@ -382,11 +391,11 @@ set_editmode(ed)
 		    };
 	char *rcp;
 	int i;
-  
+
 	if ((rcp = ksh_strrchr_dirsep(ed)))
 		ed = ++rcp;
 	for (i = 0; i < NELEM(edit_flags); i++)
-		if (strstr(ed, options[(int) edit_flags[i]].name)) {
+		if (strstr(ed, goptions[(int) edit_flags[i]].name)) {
 			change_flag(edit_flags[i], OF_SPECIAL, 1);
 			return;
 		}
@@ -451,14 +460,12 @@ x_do_comment(buf, bsize, lenp)
 /*           Common file/command completion code for vi/emacs	             */
 
 
-static char	*add_glob ARGS((const char *str, int slen));
-static void	glob_table ARGS((const char *pat, XPtrV *wp, struct table *tp));
-static void	glob_path ARGS((int flags, const char *pat, XPtrV *wp,
-				const char *path));
+static char	*add_glob ARGS((const char *, int));
+static void	glob_table ARGS((const char *, XPtrV *, struct table *));
+static void	glob_path ARGS((int, const char *, XPtrV *, const char *));
 
 #if 0 /* not used... */
-int	x_complete_word ARGS((const char *str, int slen, int is_command,
-			      int *multiple, char **ret));
+int	x_complete_word ARGS((const char *, int, int, int *, char **));
 int
 x_complete_word(str, slen, is_command, nwordsp, ret)
 	const char *str;
@@ -496,8 +503,10 @@ x_print_expansions(nwords, words, is_command)
 	int prefix_len;
 	XPtrV l;
 
+	l.beg = NULL;
+
 	/* Check if all matches are in the same directory (in this
-	 * case, we want to omitt the directory name)
+	 * case, we want to omit the directory name)
 	 */
 	if (!is_command
 	    && (prefix_len = x_longest_prefix(nwords, words)) > 0)
@@ -530,7 +539,7 @@ x_print_expansions(nwords, words, is_command)
 	 */
 	x_putc('\r');
 	x_putc('\n');
-	pr_menu(use_copy ? (char **) XPptrv(l) : words);
+	pr_list(use_copy ? (char **) XPptrv(l) : words);
 
 	if (use_copy)
 		XPfree(l); /* not x_free_words() */
@@ -552,7 +561,7 @@ x_file_glob(flags, str, slen, wordsp)
 {
 	char *toglob;
 	char **words;
-	int nwords;
+	int nwords, i, idx, escaping;
 	XPtrV w;
 	struct source *s, *sold;
 
@@ -560,6 +569,20 @@ x_file_glob(flags, str, slen, wordsp)
 		return 0;
 
 	toglob = add_glob(str, slen);
+
+	/* remove all escaping backward slashes */
+	escaping = 0;
+	for(i = 0, idx = 0; toglob[i]; i++) {
+		if (toglob[i] == '\\' && !escaping) {
+			escaping = 1;
+			continue;
+		}
+
+		toglob[idx] = toglob[i];
+		idx++;
+		if (escaping) escaping = 0;
+	}
+	toglob[idx] = '\0';
 
 	/*
 	 * Convert "foo*" (toglob) to an array of strings (words)
@@ -596,13 +619,18 @@ x_file_glob(flags, str, slen, wordsp)
 		    || words[0][0] == '\0')
 		{
 			x_free_words(nwords, words);
+			words = NULL;
 			nwords = 0;
 		}
 	}
 	afree(toglob, ATEMP);
 
-	*wordsp = nwords ? words : (char **) 0;
-
+	if (nwords) {
+		*wordsp = words;
+	} else if (words) {
+		x_free_words(nwords, words);
+		*wordsp = NULL;
+	}
 	return nwords;
 }
 
@@ -612,6 +640,8 @@ struct path_order_info {
 	int base;
 	int path_order;
 };
+
+static int path_order_cmp(const void *aa, const void *bb);
 
 /* Compare routine used in x_command_glob() */
 static int
@@ -722,7 +752,8 @@ x_command_glob(flags, str, slen, wordsp)
 	return nwords;
 }
 
-#define IS_WORDC(c)	!(ctype(c, C_LEX1) || (c) == '\'' || (c) == '"')
+#define IS_WORDC(c)	!( ctype(c, C_LEX1) || (c) == '\'' || (c) == '"'  \
+			    || (c) == '`' || (c) == '=' || (c) == ':' )
 
 static int
 x_locate_word(buf, buflen, pos, startp, is_commandp)
@@ -747,19 +778,22 @@ x_locate_word(buf, buflen, pos, startp, is_commandp)
 	/* Keep going backwards to start of word (has effect of allowing
 	 * one blank after the end of a word)
 	 */
-	for (; start > 0 && IS_WORDC(buf[start - 1]); start--)
+	for (; (start > 0 && IS_WORDC(buf[start - 1]))
+		|| (start > 1 && buf[start-2] == '\\'); start--)
 		;
 	/* Go forwards to end of word */
-	for (end = start; end < buflen && IS_WORDC(buf[end]); end++)
-		;
+	for (end = start; end < buflen && IS_WORDC(buf[end]); end++) {
+		if (buf[end] == '\\' && (end+1) < buflen)
+			end++;
+	}
 
 	if (is_commandp) {
 		int iscmd;
 
 		/* Figure out if this is a command */
-		for (p = start - 1; p >= 0 && isspace(buf[p]); p--)
+		for (p = start - 1; p >= 0 && isspace((unsigned char)buf[p]); p--)
 			;
-		iscmd = p < 0 || strchr(";|&()", buf[p]);
+		iscmd = p < 0 || strchr(";|&()`", buf[p]);
 		if (iscmd) {
 			/* If command has a /, path, etc. is not searched;
 			 * only current directory is searched, which is just
@@ -846,7 +880,7 @@ add_glob(str, slen)
 	for (s = toglob; *s; s++) {
 		if (*s == '\\' && s[1])
 			s++;
-		else if (*s == '*' || *s == '[' || *s == '?' || *s == '$'
+		else if (*s == '*' || *s == '?' || *s == '$'
 			 || (s[1] == '(' /*)*/ && strchr("*+?@!", *s)))
 			break;
 		else if (ISDIRSEP(*s))
@@ -878,7 +912,8 @@ x_longest_prefix(nwords, words)
 	prefix_len = strlen(words[0]);
 	for (i = 1; i < nwords; i++)
 		for (j = 0, p = words[i]; j < prefix_len; j++)
-			if (FILECHCONV(p[j]) != FILECHCONV(words[0][j])) {
+			if (FILECHCONV((unsigned char)p[j])
+			    != FILECHCONV((unsigned char)words[0][j])) {
 				prefix_len = j;
 				break;
 			}
@@ -953,14 +988,15 @@ glob_table(pat, wp, tp)
 }
 
 static void
-glob_path(flags, pat, wp, path)
+glob_path(flags, pat, wp, xpath)
 	int flags;
 	const char *pat;
 	XPtrV *wp;
-	const char *path;
+	const char *xpath;
 {
 	const char *sp, *p;
 	char *xp;
+	int staterr;
 	int pathlen;
 	int patlen;
 	int oldsize, newsize, i, j;
@@ -968,7 +1004,7 @@ glob_path(flags, pat, wp, path)
 	XString xs;
 
 	patlen = strlen(pat) + 1;
-	sp = path;
+	sp = xpath;
 	Xinit(xs, xp, patlen + 128, ATEMP);
 	while (sp) {
 		xp = Xstring(xs, xp);
@@ -995,13 +1031,15 @@ glob_path(flags, pat, wp, path)
 		memcpy(xp, pat, patlen);
 
 		oldsize = XPsize(*wp);
-		glob_str(Xstring(xs, xp), wp, 0);
+		glob_str(Xstring(xs, xp), wp, 1); /* mark dirs */
 		newsize = XPsize(*wp);
 
 		/* Check that each match is executable... */
 		words = (char **) XPptrv(*wp);
 		for (i = j = oldsize; i < newsize; i++) {
-			if (search_access(words[i], X_OK, (int *) 0) >= 0) {
+			staterr = 0;
+			if ((search_access(words[i], X_OK, &staterr) >= 0)
+			    || (staterr == EISDIR)) {
 				words[j] = words[i];
 				if (!(flags & XCF_FULLPATH))
 					memmove(words[j], words[j] + pathlen,
@@ -1018,4 +1056,40 @@ glob_path(flags, pat, wp, path)
 	Xfree(xs, xp);
 }
 
+/*
+ * if argument string contains any special characters, they will
+ * be escaped and the result will be put into edit buffer by
+ * keybinding-specific function
+ */
+int
+x_escape(s, len, putbuf_func)
+	const char *s;
+	size_t len;
+	int putbuf_func ARGS((const char *s, size_t len));
+{
+	size_t add, wlen;
+	const char *ifs = str_val(local("IFS", 0));
+	int rval=0;
+
+	for (add = 0, wlen = len; wlen - add > 0; add++) {
+		if (strchr("\\$(){}[]?*&;#|<>\"'`", s[add]) || strchr(ifs, s[add])) {
+			if (putbuf_func(s, add) != 0) {
+				rval = -1;
+				break;
+			}
+
+			putbuf_func("\\", 1);
+			putbuf_func(&s[add], 1);
+
+			add++;
+			wlen -= add;
+			s += add;
+			add = -1; /* after the increment it will go to 0 */
+		}
+	}
+	if (wlen > 0 && rval == 0)
+		rval = putbuf_func(s, wlen);
+
+	return (rval);
+}
 #endif /* EDIT */

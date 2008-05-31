@@ -1,3 +1,5 @@
+/*	$NetBSD: c_test.c,v 1.2 2008/05/31 16:47:36 tnn Exp $	*/
+
 /*
  * test(1); version 7-like  --  author Erik Baalbergen
  * modified by Eric Gisin to be used as built-in.
@@ -6,6 +8,12 @@
  * modified by Michael Rendell to add Korn's [[ .. ]] expressions.
  * modified by J.T. Conklin to add POSIX compatibility.
  */
+#include <sys/cdefs.h>
+
+#ifndef lint
+__RCSID("$NetBSD: c_test.c,v 1.2 2008/05/31 16:47:36 tnn Exp $");
+#endif
+
 
 #include "sh.h"
 #include "ksh_stat.h"
@@ -85,17 +93,17 @@ static const struct t_op b_ops [] = {
 	{"",	TO_NONOP }
     };
 
-static int	test_stat ARGS((const char *path, struct stat *statb));
-static int	test_eaccess ARGS((const char *path, int mode));
-static int	test_oexpr ARGS((Test_env *te, int do_eval));
-static int	test_aexpr ARGS((Test_env *te, int do_eval));
-static int	test_nexpr ARGS((Test_env *te, int do_eval));
-static int	test_primary ARGS((Test_env *te, int do_eval));
-static int	ptest_isa ARGS((Test_env *te, Test_meta meta));
-static const char *ptest_getopnd ARGS((Test_env *te, Test_op op, int do_eval));
-static int	ptest_eval ARGS((Test_env *te, Test_op op, const char *opnd1,
-				const char *opnd2, int do_eval));
-static void	ptest_error ARGS((Test_env *te, int offset, const char *msg));
+static int	test_stat ARGS((const char *, struct stat *));
+static int	test_eaccess ARGS((const char *, int));
+static int	test_oexpr ARGS((Test_env *, int));
+static int	test_aexpr ARGS((Test_env *, int));
+static int	test_nexpr ARGS((Test_env *, int));
+static int	test_primary ARGS((Test_env *, int));
+static int	ptest_isa ARGS((Test_env *, Test_meta));
+static const char *ptest_getopnd ARGS((Test_env *, Test_op, int));
+static int	ptest_eval ARGS((Test_env *, Test_op, const char *,
+				const char *, int));
+static void	ptest_error ARGS((Test_env *, int, const char *));
 
 int
 c_test(wp)
@@ -124,10 +132,10 @@ c_test(wp)
 	te.pos.wp = wp + 1;
 	te.wp_end = wp + argc;
 
-	/* 
+	/*
 	 * Handle the special cases from POSIX.2, section 4.62.4.
-	 * Implementation of all the rules isn't necessary since 
-	 * our parser does the right thing for the ommited steps.
+	 * Implementation of all the rules isn't necessary since
+	 * our parser does the right thing for the omitted steps.
 	 */
 	if (argc <= 5) {
 		char **owp = wp;
@@ -238,7 +246,7 @@ test_eval(te, op, opnd1, opnd2, do_eval)
 			if (not)
 				res = !res;
 		}
-		return res; 
+		return res;
 	  case TO_FILRD: /* -r */
 		return test_eaccess(opnd1, R_OK) == 0;
 	  case TO_FILWR: /* -w */
@@ -416,26 +424,26 @@ test_eval(te, op, opnd1, opnd2, do_eval)
 
 /* Nasty kludge to handle Korn's bizarre /dev/fd hack */
 static int
-test_stat(path, statb)
-	const char *path;
+test_stat(pathx, statb)
+	const char *pathx;
 	struct stat *statb;
 {
 #if !defined(HAVE_DEV_FD)
 	int fd;
 
-	if (strncmp(path, "/dev/fd/", 8) == 0 && getn(path + 8, &fd))
+	if (strncmp(pathx, "/dev/fd/", 8) == 0 && getn(pathx + 8, &fd))
 		return fstat(fd, statb);
 #endif /* !HAVE_DEV_FD */
 
-	return stat(path, statb);
+	return stat(pathx, statb);
 }
 
 /* Routine to handle Korn's /dev/fd hack, and to deal with X_OK on
  * non-directories when running as root.
  */
 static int
-test_eaccess(path, mode)
-	const char *path;
+test_eaccess(pathx, mode)
+	const char *pathx;
 	int mode;
 {
 	int res;
@@ -444,7 +452,7 @@ test_eaccess(path, mode)
 	int fd;
 
 	/* Note: doesn't handle //dev/fd, etc.. (this is ok) */
-	if (strncmp(path, "/dev/fd/", 8) == 0 && getn(path + 8, &fd)) {
+	if (strncmp(pathx, "/dev/fd/", 8) == 0 && getn(pathx + 8, &fd)) {
 		int flags;
 
 		if ((flags = fcntl(fd, F_GETFL, 0)) < 0
@@ -456,26 +464,22 @@ test_eaccess(path, mode)
 	}
 #endif /* !HAVE_DEV_FD */
 
-	/* On most (all?) unixes, access() says everything is executable for
+	res = eaccess(pathx, mode);
+	/*
+	 * On most (all?) unixes, access() says everything is executable for
 	 * root - avoid this on files by using stat().
 	 */
-	if ((mode & X_OK) && ksheuid == 0) {
+	if (res == 0 && ksheuid == 0 && (mode & X_OK)) {
 		struct stat statb;
 
-		if (stat(path, &statb) < 0)
+		if (stat(pathx, &statb) < 0)
 			res = -1;
 		else if (S_ISDIR(statb.st_mode))
 			res = 0;
 		else
 			res = (statb.st_mode & (S_IXUSR|S_IXGRP|S_IXOTH))
 				? 0 : -1;
-		/* Need to check other permissions?  If so, use access() as
-		 * this will deal with root on NFS.
-		 */
-		if (res == 0 && (mode & (R_OK|W_OK)))
-			res = eaccess(path, mode);
-	} else
-		res = eaccess(path, mode);
+	}
 
 	return res;
 }

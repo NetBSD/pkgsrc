@@ -1,9 +1,18 @@
+/*	$NetBSD: syn.c,v 1.2 2008/05/31 16:47:37 tnn Exp $	*/
+
 /*
  * shell parser (C version)
  */
+#include <sys/cdefs.h>
+
+#ifndef lint
+__RCSID("$NetBSD: syn.c,v 1.2 2008/05/31 16:47:37 tnn Exp $");
+#endif
+
 
 #include "sh.h"
 #include "c_test.h"
+#include <assert.h>
 
 struct nesting_state {
 	int	start_token;	/* token than began nesting (eg, FOR) */
@@ -569,7 +578,7 @@ function_body(name, ksh_func)
 		/*
 		 * Probably something like foo() followed by eof or ;.
 		 * This is accepted by sh and ksh88.
-		 * To make "typset -f foo" work reliably (so its output can
+		 * To make "typeset -f foo" work reliably (so its output can
 		 * be used as input), we pretend there is a colon here.
 		 */
 		t->left = newtp(TCOM);
@@ -674,7 +683,7 @@ const	struct tokeninfo {
 #endif /* KSH */
 	/* and some special cases... */
 	{ "newline",	'\n',	FALSE },
-	{ 0 }
+	{ .name = NULL }
 };
 
 void
@@ -800,7 +809,7 @@ compile(s)
  *	a=[ab]
  *	$ x=typeset; $x a=[ab]; echo "$a"
  *	a=a
- *	$ 
+ *	$
  */
 static int
 assign_command(s)
@@ -889,8 +898,12 @@ dbtestp_isa(te, meta)
 	if (ret) {
 		ACCEPT;
 		if (meta != TM_END) {
-			if (!save)
+			if (!save) {
+				assert(/* meta >= 0 && */
+				    meta < sizeof(dbtest_tokens) /
+				    sizeof(dbtest_tokens[0]));
 				save = wdcopy(dbtest_tokens[(int) meta], ATEMP);
+			}
 			XPput(*te->pos.av, save);
 		}
 	}
