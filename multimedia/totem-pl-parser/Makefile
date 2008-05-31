@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/05/14 18:34:23 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2008/05/31 11:21:44 obache Exp $
 #
 
 DISTNAME=	totem-pl-parser-2.22.3
@@ -12,7 +12,7 @@ COMMENT=	totem playlist parser
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool gmake
+USE_TOOLS+=	pkg-config intltool gmake msgfmt
 
 CONFLICTS+=	totem<2.22.0
 
