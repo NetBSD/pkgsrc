@@ -1,6 +1,14 @@
+/*	$NetBSD: lex.c,v 1.2 2008/05/31 16:47:37 tnn Exp $	*/
+
 /*
  * lexical analysis and source input
  */
+#include <sys/cdefs.h>
+
+#ifndef lint
+__RCSID("$NetBSD: lex.c,v 1.2 2008/05/31 16:47:37 tnn Exp $");
+#endif
+
 
 #include "sh.h"
 #include <ctype.h>
@@ -213,10 +221,10 @@ yylex(cf)
 			  case '\\':
 				c = getsc();
 #ifdef OS2
-				if (isalnum(c)) {
+				if (isalnum((unsigned char)c)) {
 					*wp++ = CHAR, *wp++ = '\\';
 					*wp++ = CHAR, *wp++ = c;
-				} else 
+				} else
 #endif
 				if (c) /* trailing \ is lost */
 					*wp++ = QCHAR, *wp++ = c;
@@ -240,10 +248,16 @@ yylex(cf)
 			  case '\\':
 				c = getsc();
 				switch (c) {
-				  case '"': case '\\':
+				  case '\\':
 				  case '$': case '`':
 					*wp++ = QCHAR, *wp++ = c;
 					break;
+				  case '"':
+					if ((cf & HEREDOC) == 0) {
+						*wp++ = QCHAR, *wp++ = c;
+						break;
+					}
+					/* FALLTROUGH */
 				  default:
 					Xcheck(ws, wp);
 					if (c) { /* trailing \ is lost */
@@ -645,11 +659,13 @@ Done:
 		if (c == c2 || (c == '<' && c2 == '>')) {
 			iop->flag = c == c2 ?
 				  (c == '>' ? IOCAT : IOHERE) : IORDWR;
-			if (iop->flag == IOHERE)
-				if ((c2 = getsc()) == '-')
+			if (iop->flag == IOHERE) {
+				if ((c2 = getsc()) == '-') {
 					iop->flag |= IOSKIP;
-				else
+				} else {
 					ungetsc(c2);
+				}
+			}
 		} else if (c2 == '&')
 			iop->flag = IODUP | (c == '<' ? IORDUP : 0);
 		else {
@@ -725,7 +741,7 @@ Done:
 	/* copy word to unprefixed string ident */
 	for (sp = yylval.cp, dp = ident; dp < ident+IDENT && (c = *sp++) == CHAR; )
 		*dp++ = *sp++;
-	/* Make sure the ident array stays '\0' paded */
+	/* Make sure the ident array stays '\0' padded */
 	memset(dp, 0, (ident+IDENT) - dp + 1);
 	if (c != EOS)
 		*ident = '\0';	/* word is not unquoted */
@@ -934,7 +950,7 @@ getsc__()
 				source->flags |= s->flags & SF_ALIAS;
 				s = source;
 			} else if (*s->u.tblp->val.s
-				 && isspace(strchr(s->u.tblp->val.s, 0)[-1]))
+				 && isspace((unsigned char)strchr(s->u.tblp->val.s, 0)[-1]))
 			{
 				source = s = s->next;	/* pop source stack */
 				/* Note that this alias ended with a space,
@@ -1119,7 +1135,7 @@ set_prompt(to, s)
 		 */
 		{
 			struct shf *shf;
-			char *ps1;
+			char * volatile ps1;
 			Area *saved_atemp;
 
 			ps1 = str_val(global("PS1"));
@@ -1389,5 +1405,5 @@ pop_state_(si, old_end)
 
 	afree(old_base, ATEMP);
 
-	return si->base + STATE_BSIZE - 1;;
+	return si->base + STATE_BSIZE - 1;
 }
