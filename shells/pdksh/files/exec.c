@@ -1,6 +1,14 @@
+/*	$NetBSD: exec.c,v 1.2 2008/05/31 16:47:36 tnn Exp $	*/
+
 /*
  * execute command tree
  */
+#include <sys/cdefs.h>
+
+#ifndef lint
+__RCSID("$NetBSD: exec.c,v 1.2 2008/05/31 16:47:36 tnn Exp $");
+#endif
+
 
 #include "sh.h"
 #include "c_test.h"
@@ -14,25 +22,24 @@
 # define PS4_SUBSTITUTE(s)	(s)
 #endif /* KSH */
 
-static int	comexec	 ARGS((struct op *t, struct tbl *volatile tp, char **ap,
-			      int volatile flags));
-static void	scriptexec ARGS((struct op *tp, char **ap));
-static int	call_builtin ARGS((struct tbl *tp, char **wp));
-static int	iosetup ARGS((struct ioword *iop, struct tbl *tp));
-static int	herein ARGS((const char *content, int sub));
+static int	comexec	 ARGS((struct op *, struct tbl *volatile, char **,
+			      int volatile));
+static void	scriptexec ARGS((struct op *, char **));
+static int	call_builtin ARGS((struct tbl *, char **));
+static int	iosetup ARGS((struct ioword *, struct tbl *));
+static int	herein ARGS((const char *, int));
 #ifdef KSH
-static char 	*do_selectargs ARGS((char **ap, bool_t print_menu));
+static char 	*do_selectargs ARGS((char **, bool_t));
 #endif /* KSH */
 #ifdef KSH
-static int	dbteste_isa ARGS((Test_env *te, Test_meta meta));
-static const char *dbteste_getopnd ARGS((Test_env *te, Test_op op,
-					 int do_eval));
-static int	dbteste_eval ARGS((Test_env *te, Test_op op, const char *opnd1,
-				const char *opnd2, int do_eval));
-static void	dbteste_error ARGS((Test_env *te, int offset, const char *msg));
+static int	dbteste_isa ARGS((Test_env *, Test_meta));
+static const char *dbteste_getopnd ARGS((Test_env *, Test_op, int));
+static int	dbteste_eval ARGS((Test_env *, Test_op, const char *,
+				const char *, int));
+static void	dbteste_error ARGS((Test_env *, int, const char *));
 #endif /* KSH */
 #ifdef OS2
-static int	search_access1 ARGS((const char *path, int mode, int *errnop));
+static int	search_access1 ARGS((const char *, int, int *));
 #endif /* OS2 */
 
 
@@ -99,7 +106,7 @@ execute(t, flags)
 	newenv(E_EXEC);
 	if (trap)
 		runtraps(0);
- 
+
 	if (t->type == TCOM) {
 		/* Clear subst_exstat before argument expansion.  Used by
 		 * null commands (see comexec() and c_eval()) and by c_set().
@@ -228,8 +235,10 @@ execute(t, flags)
 		e->savefd[1] = savefd(1, 0);
 
 		openpipe(pv);
-		ksh_dup2(pv[0], 0, FALSE);
-		close(pv[0]);
+		if (pv[0] != 0) {
+			ksh_dup2(pv[0], 0, FALSE);
+			close(pv[0]);
+		}
 		coproc.write = pv[1];
 		coproc.job = (void *) 0;
 
@@ -448,18 +457,19 @@ comexec(t, tp, ap, flags)
 	int volatile flags;
 {
 	int i;
-	int rv = 0;
+	volatile int rv = 0;
 	register char *cp;
 	register char **lastp;
 	static struct op texec; /* Must be static (XXX but why?) */
 	int type_flags;
 	int keepasn_ok;
 	int fcflags = FC_BI|FC_FUNC|FC_PATH;
+	int bourne_function_call = 0;
 
 #ifdef KSH
 	/* snag the last argument for $_ XXX not the same as at&t ksh,
 	 * which only seems to set $_ after a newline (but not in
-	 * functions/dot scripts, but in interactive and scipt) -
+	 * functions/dot scripts, but in interactive and script) -
 	 * perhaps save last arg here and set it in shell()?.
 	 */
 	if (Flag(FTALKING) && *(lastp = ap)) {
@@ -544,9 +554,10 @@ comexec(t, tp, ap, flags)
 		newblock();
 		/* ksh functions don't keep assignments, POSIX functions do. */
 		if (keepasn_ok && tp && tp->type == CFUNC
-		    && !(tp->flag & FKSH))
+		    && !(tp->flag & FKSH)) {
+			bourne_function_call = 1;
 			type_flags = 0;
-		else
+		} else
 			type_flags = LOCAL|LOCAL_COPY|EXPORT;
 	}
 	if (Flag(FEXPORT))
@@ -563,6 +574,8 @@ comexec(t, tp, ap, flags)
 				shf_flush(shl_out);
 		}
 		typeset(cp, type_flags, 0, 0, 0);
+		if (bourne_function_call && !(type_flags & EXPORT))
+			typeset(cp, LOCAL|LOCAL_COPY|EXPORT, 0, 0, 0);
 	}
 
 	if ((cp = *ap) == NULL) {
@@ -630,7 +643,7 @@ comexec(t, tp, ap, flags)
 		if (tp->flag & FKSH)
 			kshname = ap[0];
 		else
-			ap[0] = (char *) kshname;
+			ap[0] = (char *) __UNCONST(kshname);
 		e->loc->argv = ap;
 		for (i = 0; *ap++ != NULL; i++)
 			;
@@ -712,8 +725,8 @@ comexec(t, tp, ap, flags)
 #ifdef KSH
 		/* set $_ to program's full path */
 		/* setstr() can't fail here */
-		setstr(typeset("_", LOCAL|EXPORT, 0, INTEGER, 0), tp->val.s,
-		       KSH_RETURN_ERROR);
+		setstr(typeset("_", LOCAL|EXPORT, 0, INTEGER, 0),
+		       tp->val.s, KSH_RETURN_ERROR);
 #endif /* KSH */
 
 		if (flags&XEXEC) {
@@ -745,13 +758,13 @@ scriptexec(tp, ap)
 	register struct op *tp;
 	register char **ap;
 {
-	char *shell;
+	char *shellv;
 
-	shell = str_val(global(EXECSHELL_STR));
-	if (shell && *shell)
-		shell = search(shell, path, X_OK, (int *) 0);
-	if (!shell || !*shell)
-		shell = EXECSHELL;
+	shellv = str_val(global(EXECSHELL_STR));
+	if (shellv && *shellv)
+		shellv = search(shellv, path, X_OK, (int *) 0);
+	if (!shellv || !*shellv)
+		shellv = __UNCONST(EXECSHELL);
 
 	*tp->args-- = tp->str;
 #ifdef	SHARPBANG
@@ -768,7 +781,7 @@ scriptexec(tp, ap)
 		}
 		if ((buf[0] == '#' && buf[1] == '!' && (cp = &buf[2]))
 # ifdef OS2
-		    || (strncmp(buf, "extproc", 7) == 0 && isspace(buf[7])
+		    || (strncmp(buf, "extproc", 7) == 0 && isspace((unsigned char)buf[7])
 			&& (cp = &buf[7]))
 # endif /* OS2 */
 		    )
@@ -821,22 +834,22 @@ scriptexec(tp, ap)
 						afree(tmp_a0, ATEMP);
 					}
 # endif /* OS2 */
-					shell = a0;
+					shellv = a0;
 				}
 			}
 # ifdef OS2
 		} else {
 		        /* Use ksh documented shell default if present
 			 * else use OS2_SHELL which is assumed to need
-			 * the /c option and '\' as dir separater.
+			 * the /c option and '\' as dir separator.
 			 */
-		         char *p = shell;
+		         char *p = shellv;
 
-			 shell = str_val(global("EXECSHELL"));
-			 if (shell && *shell)
-				 shell = search(shell, path, X_OK, (int *) 0);
-			 if (!shell || !*shell) {
-				 shell = p;
+			 shellv = str_val(global("EXECSHELL"));
+			 if (shellv && *shellv)
+				 shellv = search(shellv, path, X_OK, (int *) 0);
+			 if (!shellv || !*shellv) {
+				 shellv = p;
 				 *tp->args-- = "/c";
 				 for (p = tp->str; *p; p++)
 					 if (*p == '/')
@@ -846,12 +859,12 @@ scriptexec(tp, ap)
 		}
 	}
 #endif	/* SHARPBANG */
-	*tp->args = shell;
+	*tp->args = shellv;
 
 	ksh_execve(tp->args[0], tp->args, ap, 0);
 
 	/* report both the program that was run and the bogus shell */
-	errorf("%s: %s: %s", tp->str, shell, strerror(errno));
+	errorf("%s: %s: %s", tp->str, shellv, strerror(errno));
 }
 
 int
@@ -1048,7 +1061,12 @@ findcom(name, flags)
 		npath = search(name, flags & FC_DEFPATH ? def_path : path,
 				X_OK, &tp->u2.errno_);
 		if (npath) {
-			tp->val.s = tp == &temp ? npath : str_save(npath, APERM);
+			if (tp == &temp) {
+			    tp->val.s = npath;
+			} else {
+			    tp->val.s = str_save(npath, APERM);
+			    afree(npath, ATEMP);
+			}
 			tp->flag |= ISSET|ALLOC;
 		} else if ((flags & FC_FUNC)
 			   && (fpath = str_val(global("FPATH"))) != null
@@ -1091,8 +1109,8 @@ flushcom(all)
 
 /* Check if path is something we want to find.  Returns -1 for failure. */
 int
-search_access(path, mode, errnop)
-	const char *path;
+search_access(pathx, mode, errnop)
+	const char *pathx;
 	int mode;
 	int *errnop;		/* set if candidate found, but not suitable */
 {
@@ -1100,9 +1118,9 @@ search_access(path, mode, errnop)
 	int ret, err = 0;
 	struct stat statb;
 
-	if (stat(path, &statb) < 0)
+	if (stat(pathx, &statb) < 0)
 		return -1;
-	ret = eaccess(path, mode);
+	ret = eaccess(pathx, mode);
 	if (ret < 0)
 		err = errno; /* File exists, but we can't access it */
 	else if (mode == X_OK
@@ -1130,18 +1148,18 @@ search_access(path, mode, errnop)
 				      (char *) 0
 				   };
 	int i;
-	char *mpath = (char *) path;
+	char *mpath = (char *) pathx;
 	char *tp = mpath + strlen(mpath);
 	char *p;
 	char **sfx;
- 
+
 	/* If a suffix has been specified, check if it is one of the
 	 * suffixes that indicate the file is executable - if so, change
 	 * the access test to R_OK...
 	 * This code assumes OS/2 files can have only one suffix...
 	 */
 	if ((p = strrchr((p = ksh_strrchr_dirsep(mpath)) ? p : mpath, '.'))) {
-		if (mode == X_OK) 
+		if (mode == X_OK)
 			mode = R_OK;
 		return search_access1(mpath, mode, errnop);
 	}
@@ -1161,17 +1179,17 @@ search_access(path, mode, errnop)
 
 #ifdef OS2
 static int
-search_access1(path, mode, errnop)
-	const char *path;
+search_access1(pathx, mode, errnop)
+	const char *pathx;
 	int mode;
 	int *errnop;		/* set if candidate found, but not suitable */
 {
 	int ret, err = 0;
 	struct stat statb;
 
-	if (stat(path, &statb) < 0)
+	if (stat(pathx, &statb) < 0)
 		return -1;
-	ret = eaccess(path, mode);
+	ret = eaccess(pathx, mode);
 	if (ret < 0)
 		err = errno; /* File exists, but we can't access it */
 	else if (!S_ISREG(statb.st_mode)) {
@@ -1188,9 +1206,9 @@ search_access1(path, mode, errnop)
  * search for command with PATH
  */
 char *
-search(name, path, mode, errnop)
+search(name, pathx, mode, errnop)
 	const char *name;
-	const char *path;
+	const char *pathx;
 	int mode;		/* R_OK or X_OK */
 	int *errnop;		/* set if candidate found, but not suitable */
 {
@@ -1217,12 +1235,12 @@ search(name, path, mode, errnop)
 	}
 
 	/* Look in current context always. (os2 style) */
-	if (search_access(Xstring(xs, xp), mode, errnop) == 0) 
+	if (search_access(Xstring(xs, xp), mode, errnop) == 0)
 		return Xstring(xs, xp); /* not Xclose() - xp may be wrong */
 #else /* OS2 */
 	if (ksh_strchr_dirsep(name)) {
 		if (search_access(name, mode, errnop) == 0)
-			return (char *) name;
+			return (char *)__UNCONST(name);
 		return NULL;
 	}
 
@@ -1230,7 +1248,7 @@ search(name, path, mode, errnop)
 	Xinit(xs, xp, 128, ATEMP);
 #endif /* OS2 */
 
-	sp = path;
+	sp = pathx;
 	while (sp != NULL) {
 		xp = Xstring(xs, xp);
 		if (!(p = strchr(sp, PATHSEP)))
@@ -1351,6 +1369,8 @@ iosetup(iop, tp)
 				snptreef((char *) 0, 32, "%R", &iotmp), emsg);
 			return -1;
 		}
+		if (u == iop->unit)
+			return 0;		/* "dup from" == "dup to" */
 		break;
 	  }
 	}
@@ -1375,13 +1395,19 @@ iosetup(iop, tp)
 		return -1;
 	}
 	/* Do not save if it has already been redirected (i.e. "cat >x >y"). */
-	if (e->savefd[iop->unit] == 0)
-		/* c_exec() assumes e->savefd[fd] set for any redirections.
-		 * Ask savefd() not to close iop->unit - allows error messages
-		 * to be seen if iop->unit is 2; also means we can't lose
-		 * the fd (eg, both dup2 below and dup2 in restfd() failing).
-		 */
-		e->savefd[iop->unit] = savefd(iop->unit, 1);
+	if (e->savefd[iop->unit] == 0) {
+		/* If these are the same, it means unit was previously closed */
+		if (u == iop->unit)
+			e->savefd[iop->unit] = -1;
+		else
+			/* c_exec() assumes e->savefd[fd] set for any
+			 * redirections.  Ask savefd() not to close iop->unit;
+			 * this allows error messages to be seen if iop->unit
+			 * is 2; also means we can't lose the fd (eg, both
+			 * dup2 below and dup2 in restfd() failing).
+			 */
+			e->savefd[iop->unit] = savefd(iop->unit, 1);
+	}
 
 	if (do_close)
 		close(iop->unit);
@@ -1463,7 +1489,7 @@ herein(content, sub)
 		s = pushs(SSTRING, ATEMP);
 		s->start = s->str = content;
 		source = s;
-		if (yylex(ONEWORD) != LWORD)
+		if (yylex(ONEWORD|HEREDOC) != LWORD)
 			internal_errorf(1, "herein: yylex");
 		source = osource;
 		shf_puts(evalstr(yylval.cp, 0), shf);
@@ -1509,7 +1535,8 @@ do_selectargs(ap, print_menu)
 		if (print_menu || !*str_val(global("REPLY")))
 			pr_menu(ap);
 		shellf("%s", str_val(global("PS3")));
-		if (call_builtin(findcom("read", FC_BI), (char **) read_args))
+		if (call_builtin(findcom("read", FC_BI),
+		    (char **) __UNCONST(read_args)))
 			return (char *) 0;
 		s = str_val(global("REPLY"));
 		if (*s) {
@@ -1581,7 +1608,40 @@ pr_menu(ap)
 	smi.arg_width = nwidth;
 	smi.num_width = dwidth;
 	print_columns(shl_out, n, select_fmt_entry, (void *) &smi,
-		dwidth + nwidth + 2);
+		dwidth + nwidth + 2, 1);
+
+	return n;
+}
+
+/* XXX: horrible kludge to fit within the framework */
+
+static char *plain_fmt_entry ARGS((void *arg, int i, char *buf, int buflen));
+
+static char *
+plain_fmt_entry(arg, i, buf, buflen)
+	void *arg;
+	int i;
+	char *buf;
+	int buflen;
+{
+	shf_snprintf(buf, buflen, "%s", ((char *const *)arg)[i]);
+	return buf;
+}
+
+int
+pr_list(ap)
+	char *const *ap;
+{
+	char *const *pp;
+	int nwidth;
+	int i, n;
+
+	for (n = 0, nwidth = 0, pp = ap; *pp; n++, pp++) {
+		i = strlen(*pp);
+		nwidth = (i > nwidth) ? i : nwidth;
+	}
+	print_columns(shl_out, n, plain_fmt_entry, (void *)__UNCONST(ap),
+	    nwidth + 1, 0);
 
 	return n;
 }
