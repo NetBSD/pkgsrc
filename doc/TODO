@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7302 2008/06/01 11:25:26 tonnerre Exp $
+$NetBSD: TODO,v 1.7303 2008/06/01 14:29:20 obache Exp $
 
 Suggested new packages
 ======================
@@ -906,7 +906,6 @@ Suggested package updates
 	o nikto-2.0.1
 	o nmap-4.62
 	o nmh-1.2.1
-	o nomarch-1.4
 	o ns-plugger-common-5.1.3
 	o ns-plugger-communicator-5.1.3
 	o ns-plugger-navigator-5.1.3
