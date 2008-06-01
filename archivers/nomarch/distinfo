@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/02/23 14:45:24 agc Exp $
+$NetBSD: distinfo,v 1.5 2008/06/01 14:28:37 obache Exp $
 
-SHA1 (nomarch-1.3.tar.gz) = 5f17dc8b8cbd843fd75ddaeb3d975714b5235b58
-RMD160 (nomarch-1.3.tar.gz) = a67e7ff80e970bec5f2f8467a07939b043c4c78c
-Size (nomarch-1.3.tar.gz) = 22491 bytes
+SHA1 (nomarch-1.4.tar.gz) = 8fc85b43fd0f8674e855b26ab34f18d7241f925d
+RMD160 (nomarch-1.4.tar.gz) = 23de058d62c3b4d6515b75f79d6ffaec80cef437
+Size (nomarch-1.4.tar.gz) = 22411 bytes
