@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1 2008/06/01 08:15:36 obache Exp $
+
+--- src/Makefile.in.orig	2006-09-13 03:38:40.000000000 +0000
++++ src/Makefile.in
+@@ -485,19 +485,7 @@ uninstall-am: uninstall-info-am uninstal
+ # Running this if cross compiling or if DESTDIR is set is going to
+ # not work at all, so skip it.
+ install-data-hook:
+-	@if test -z "$(DESTDIR)" ; then \
+-	  echo $(mkinstalldirs) $(DESTDIR)$(sysconfdir)/gtk-2.0 ; \
+-	  $(mkinstalldirs) $(DESTDIR)$(sysconfdir)/gtk-2.0 ; \
+-	  echo "gtk-query-immodules-2.0 > $(DESTDIR)$(sysconfdir)/gtk-2.0/gtk.immodules" ; \
+-	  gtk-query-immodules-2.0 > $(DESTDIR)$(sysconfdir)/gtk-2.0/gtk.immodules ; \
+-	else \
+-	  echo "***" ; \
+-	  echo "*** Warning: gtk.immodules not built" ; \
+-	  echo "***" ; \
+-	  echo "*** Generate this file manually on host" ; \
+-	  echo "*** system using gtk-query-immodules-2.0" ; \
+-	  echo "***" ; \
+-        fi
++
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
