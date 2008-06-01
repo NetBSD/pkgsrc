@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1205 2008/05/31 16:53:16 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.1206 2008/06/01 04:23:12 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2057,3 +2057,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/gimp to 2.4.6 [adam 2008-05-31]
 	Updated graphics/p5-Image-ExifTool to 7.30 [gdt 2008-05-31]
 	Updated shells/pdksh to 5.2.14nb3 [tnn 2008-05-31]
+	Updated textproc/p5-Text-Markdown to 1.0.19 [schmonz 2008-06-01]
