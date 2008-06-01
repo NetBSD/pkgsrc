@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1213 2008/06/01 22:10:46 he Exp $
+$NetBSD: CHANGES-2008,v 1.1214 2008/06/01 22:19:41 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2065,3 +2065,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated time/p5-DateTime to 0.4302nb1 [wiz 2008-06-01]
 	Updated net/nsd to 3.0.8 [joerg 2008-06-01]
 	Updated lang/perl5 to 5.8.8nb8 [he 2008-06-02]
+	Updated converters/uudeview to 0.5.20nb2 [dholland 2008-06-01]
+	Updated converters/uulib to 0.5.20nb4 [dholland 2008-06-01]
