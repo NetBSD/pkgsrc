@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7303 2008/06/01 14:29:20 obache Exp $
+$NetBSD: TODO,v 1.7304 2008/06/01 15:06:41 wiz Exp $
 
 Suggested new packages
 ======================
@@ -502,6 +502,7 @@ Suggested package updates
 	o cmake-2.6.0
 	o cocoon-2.1.10
 	o colorize-0.3.4
+	o compiz-0.7.6
 	o connect-1.96
 	o cook-2.31
 	o cpio-2.9
@@ -542,6 +543,7 @@ Suggested package updates
 	o djvulibre-lib-4.1.2
 	o djvulibre-tools-4.1.2
 	o dnsmasq-2.41 [pkg/38186]
+	o dnsmasq-2.42
 	o dnstop-20070307
 	o dnstracer-1.9
 	o doxygen-1.5.6
@@ -643,13 +645,11 @@ Suggested package updates
 	o gkrellm-xmms-2.1.22
 	o glchess-1.0.5
 	o global-5.6
-	o gmime-2.3.0
-	o gmpc-0.15.1
+	o gmime-2.2.21
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-2.22.1
 	o gnome-build-0.2.4
-	o gnome-games-2.22.2.1
 	o gnome-pilot-2.0.16
 	o gnome-terminal-2.22.2
 	o gnomeicu-0.99.14
@@ -678,7 +678,6 @@ Suggested package updates
 	o gsharutils-4.7
 	o gsm-1.0.12
 	o gss-0.0.22
-	o gst-plugins0.10-ugly-0.10.8
 	o gtexinfo-4.12
 	o gtick-0.4.2
 	o gtk-systrace-20030623
@@ -688,7 +687,6 @@ Suggested package updates
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
 	o gtranscript-0.2.0
-	o guile-1.8.5
 	o guile-gtk-2.0
 	o gworkspace-0.8.6
 	o hackbot-2.21
@@ -751,6 +749,7 @@ Suggested package updates
 	o jgrasp-183
 	o jhead-2.82
 	o jools-1.0
+	o jpilot-1.6.0
 	o jwhois-4.0 [pkg/38500]
 	o jwm-2.0.1
 	o k3b-1.0.4
@@ -1065,6 +1064,7 @@ Suggested package updates
 	o pstoedit-3.45
 	o puf-0.93.3
 	o puzzle-5.2
+	o pv-1.1.4
 	o pwlib-1.10.10
 	o py-FourSuite-1.0.2
 	o py-Gnosis-Utils-1.2.1
@@ -1106,6 +1106,7 @@ Suggested package updates
 	o py-sybase-0.37
 	o py-textile-2.0.11
 	o py-twisted-8.0.1
+	o py-urwid-0.9.8.2
 	o py-zconfig-2.3.1
 	o pygopherd-2.0.13
 	o pysol-4.82
