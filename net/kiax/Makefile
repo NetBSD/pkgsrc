@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/01/11 11:14:11 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/01 15:25:37 wiz Exp $
 
 DISTNAME=	kiax-0.8.51-src
 PKGNAME=	kiax-0.8.51
@@ -28,6 +28,14 @@ SUBST_MESSAGE.path=	Fixing hardcoded paths.
 SUBST_STAGE.path=	pre-configure
 SUBST_FILES.path=	src/src.pro bin/Makefile
 SUBST_SED.path=		-e 's:/usr/local:${PREFIX}:g'
+
+.include "../../mk/bsd.prefs.mk"
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/pset.h)
+RT_LIB_SCHED=		-lrt
+.else
+RT_LIB_SCHED=		# empty
+.endif
+LDFLAGS+=		${RT_LIB_SCHED}
 
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
