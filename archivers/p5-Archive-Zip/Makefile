@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.22 2008/03/08 13:51:08 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2008/06/01 14:22:15 obache Exp $
 
-DISTNAME=		Archive-Zip-1.18
+DISTNAME=		Archive-Zip-1.23
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5zip
 CATEGORIES=		archivers perl5
@@ -10,8 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Archive-Zip/
 COMMENT=		Perl5 module interface to manipulate zip files
 
-DEPENDS+=		p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
-DEPENDS+=		p5-File-Which-[0-9]*:../../devel/p5-File-Which
+DEPENDS+=		p5-Compress-Zlib>=1.14:../../devel/p5-Compress-Zlib
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
