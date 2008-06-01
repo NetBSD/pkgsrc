@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/02/20 10:57:21 xtraeme Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/01 19:34:36 abs Exp $
 #
 
 DISTNAME=	AnyEvent-2.9
@@ -12,7 +12,10 @@ COMMENT=	Simple API for io, timer and completion callbacks
 
 DEPENDS+=	p5-glib2-[0-9]*:../../devel/p5-glib2
 
+USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/AnyEvent/.packlist
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
