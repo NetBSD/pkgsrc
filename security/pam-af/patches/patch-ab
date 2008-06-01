@@ -1,0 +1,14 @@
+$NetBSD: patch-ab,v 1.1 2008/06/01 08:09:38 obache Exp $
+
+--- pam_af.c.orig	2006-11-07 00:05:53.000000000 +0000
++++ pam_af.c
+@@ -41,6 +41,9 @@
+ #include <fcntl.h>
+ #include <time.h>
+ #include <syslog.h>
++#ifndef LOG_AUTHPRIV
++#define LOG_AUTHPRIV LOG_AUTH
++#endif
+ #include <assert.h>
+ #include <ndbm.h>
+ 
