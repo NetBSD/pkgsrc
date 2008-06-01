@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/05/12 10:38:01 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/01 15:32:31 tnn Exp $
 #
 
 DISTNAME=	libcompizconfig-0.6.0
@@ -11,7 +11,7 @@ COMMENT=	Configuration backend for compiz
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config perl
+USE_TOOLS+=	pkg-config perl intltool
 
 PKG_SYSCONFSUBDIR?=	compizconfig
 EGDIR=		${PREFIX}/share/examples/compizconfig
