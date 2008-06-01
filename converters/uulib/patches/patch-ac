@@ -1,0 +1,83 @@
+$NetBSD: patch-ac,v 1.1 2008/06/01 21:46:37 dholland Exp $
+
+--- uulib/uunconc.c.orig	2004-03-01 17:52:27.000000000 -0500
++++ uulib/uunconc.c	2008-06-01 17:05:57.000000000 -0400
+@@ -49,6 +49,7 @@
+ #include <errno.h>
+ #endif
+ 
++#include <paths.h>
+ #include <crc32.h>
+ #include <uudeview.h>
+ #include <uuint.h>
+@@ -1306,6 +1307,7 @@
+ {
+   int state=BEGIN, part=-1, res=0, hb;
+   long rsize, dsize, numbytes;
++  int dataoutfd;
+   FILE *datain, *dataout;
+   unsigned char r[8];
+   char *mode, *ntmp;
+@@ -1329,13 +1331,13 @@
+   else
+     mode = "wb";	/* otherwise in binary          */
+ 
+-  if ((data->binfile = tempnam (NULL, "uu")) == NULL) {
++  if ((data->binfile = strdup (_PATH_TMP "uu.XXXXXX")) == NULL) {
+     UUMessage (uunconc_id, __LINE__, UUMSG_ERROR,
+ 	       uustring (S_NO_TEMP_NAME));
+     return UURET_NOMEM;
+   }
+ 
+-  if ((dataout = fopen (data->binfile, mode)) == NULL) {
++  if ((dataoutfd = mkstemp (data->binfile)) < 0) {
+     /*
+      * we couldn't create a temporary file. Usually this means that TMP
+      * and TEMP aren't set
+@@ -1348,6 +1350,19 @@
+     uu_errno = errno;
+     return UURET_IOERR;
+   }
++
++  /* file now safely exists, reopen it using the right mode */
++  close (dataoutfd);
++  if ((dataout = fopen (data->binfile, mode)) < 0) {
++    UUMessage (uunconc_id, __LINE__, UUMSG_ERROR,
++	       uustring (S_WR_ERR_TARGET),
++	       data->binfile, strerror (uu_errno = errno));
++    _FP_free (data->binfile);
++    data->binfile = NULL;
++    uu_errno = errno;
++    return UURET_IOERR;
++  }
++
+   /*
+    * we don't have begin lines in Base64 or plain text files.
+    */
+@@ -1496,7 +1511,7 @@
+    */
+ 
+   if (data->uudet == BH_ENCODED && data->binfile) {
+-    if ((ntmp = tempnam (NULL, "uu")) == NULL) {
++    if ((ntmp = strdup (_PATH_TMP "uu.XXXXXX")) == NULL) {
+       UUMessage (uunconc_id, __LINE__, UUMSG_ERROR,
+ 		 uustring (S_NO_TEMP_NAME));
+       progress.action = 0;
+@@ -1510,6 +1525,17 @@
+       free (ntmp);
+       return UURET_IOERR;
+     }
++    if ((dataoutfd = mkstemp (ntmp)) < 0) {
++      UUMessage (uunconc_id, __LINE__, UUMSG_ERROR,
++		 uustring (S_NOT_OPEN_TARGET),
++		 ntmp, strerror (uu_errno = errno));
++      progress.action = 0;
++      fclose (datain);
++      free   (ntmp);
++      return UURET_IOERR;
++    }
++    /* file now safely exists; reopen it with the right mode */
++    close (dataoutfd);
+     if ((dataout = fopen (ntmp, "wb")) == NULL) {
+       UUMessage (uunconc_id, __LINE__, UUMSG_ERROR,
+ 		 uustring (S_NOT_OPEN_TARGET),
