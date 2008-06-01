@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1207 2008/06/01 05:15:29 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.1208 2008/06/01 10:02:41 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2059,3 +2059,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated shells/pdksh to 5.2.14nb3 [tnn 2008-05-31]
 	Updated textproc/p5-Text-Markdown to 1.0.19 [schmonz 2008-06-01]
 	Updated textproc/py-html2text to 2.3 [schmonz 2008-06-01]
+	Updated time/p5-DateTime-Locale to 0.4001nb1 [obache 2008-06-01]
