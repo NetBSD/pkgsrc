@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2008/06/01 19:30:31 abs Exp $
+# $NetBSD: Makefile,v 1.42 2008/06/01 19:52:55 abs Exp $
 #
 
 DISTNAME=	dvdrip-0.98.8
@@ -29,10 +29,10 @@ DEPENDS+=	p5-AnyEvent>=1.02:../../devel/p5-AnyEvent
 
 BUILDLINK_API_DEPENDS.perl+=	perl>=5.6.0
 
-CONFIGURE_ENV+=		SKIP_UNPACK_REQUIRED_MODULES=1
-
+USE_LANGUAGES=		c
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=perl
+USE_TOOLS+=		perl
+MAKE_ENV+=		SKIP_UNPACK_REQUIRED_MODULES=1
 
 PERL5_PACKLIST= auto/Video/DVDRip/.packlist
 
@@ -42,6 +42,8 @@ SUBST_FILES.fping=	lib/Video/DVDRip/Depend.pm
 SUBST_FILES.fping+=	lib/Video/DVDRip/Cluster/Master.pm
 SUBST_SED.fping=	-e "s|/usr/sbin/fping|${LOCALBASE}/sbin/fping|g"
 SUBST_MESSAGE.fping=	Fixing hardcoded path.
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Currently the only option is the i386 rar binary
 .if !empty(MACHINE_ARCH:Mi386)
