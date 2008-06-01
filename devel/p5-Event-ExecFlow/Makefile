@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/04/14 18:08:01 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/01 19:35:36 abs Exp $
 #
 
 DISTNAME=	Event-ExecFlow-0.63
@@ -14,7 +14,10 @@ DEPENDS+=	p5-AnyEvent>=0.4:../../devel/p5-AnyEvent
 DEPENDS+=	p5-Test-Simple>=0.62:../../devel/p5-Test-Simple
 DEPENDS+=	p5-Locale-libintl-[0-9]*:../../misc/p5-Locale-libintl
 
+USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Event/ExecFlow/.packlist
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
