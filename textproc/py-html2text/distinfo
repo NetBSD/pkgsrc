@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.7 2008/04/28 22:51:30 schmonz Exp $
+$NetBSD: distinfo,v 1.8 2008/06/01 04:52:15 schmonz Exp $
 
-SHA1 (html2text-2.291.py) = f37d0028ab6e8b8edd7632835851f49960fae081
-RMD160 (html2text-2.291.py) = 78ddc6210579c07f6871c766b76b0d6a20ce917b
-Size (html2text-2.291.py) = 10045 bytes
-SHA1 (patch-aa) = 41781f6a893ef6d883c65110928e2b072102924a
+SHA1 (html2text-2.3.py) = 5cd6bb95b0e519a89e212354f82f9e0a6960a3a2
+RMD160 (html2text-2.3.py) = 5a5e05485daed9ea2f4af79358123aefb60a51b9
+Size (html2text-2.3.py) = 12987 bytes
+SHA1 (patch-aa) = da6f7f48c276ff115f2d27692fbe41221c1845ce
