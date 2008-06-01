@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1210 2008/06/01 14:28:50 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1211 2008/06/01 15:39:50 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2062,3 +2062,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated time/p5-DateTime-Locale to 0.4001nb1 [obache 2008-06-01]
 	Updated archivers/p5-Archive-Zip to 1.23 [obache 2008-06-01]
 	Updated archivers/nomarch to 1.4 [obache 2008-06-01]
+	Updated time/p5-DateTime to 0.4302nb1 [wiz 2008-06-01]
