@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7306 2008/06/01 18:49:02 wiz Exp $
+$NetBSD: TODO,v 1.7307 2008/06/01 22:33:20 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -826,7 +826,6 @@ Suggested package updates
 	o libtool-2.2.4
 	o libtool-base-2.2.4
 	o libxklavier-3.6
-	o lilypond-2.11.47
 	o lincvs-2.0.0 [now called CrossVC]
 	o linuxsms-0.77
 	o lmms-0.2.1
