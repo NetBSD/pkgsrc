@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.68 2008/06/02 09:17:39 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.69 2008/06/02 09:42:11 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -153,4 +153,6 @@ fix build problem on MacOS X
 Pullup ticket #2401 - requested by tonnerre
 security fix for aterm
 Pullup ticket #2408 - requested by he
-security fix for perl
+perl: security fix
+Pullup ticket #2406 - requested by dholland
+uulib: security fix
