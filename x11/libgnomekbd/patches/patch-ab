@@ -1,0 +1,29 @@
+$NetBSD: patch-ab,v 1.1 2008/06/02 16:42:21 drochner Exp $
+
+--- libgnomekbd/gkbd-indicator-config.c.orig	2008-05-31 14:43:07.000000000 +0200
++++ libgnomekbd/gkbd-indicator-config.c
+@@ -213,21 +213,21 @@ gkbd_indicator_config_init (GkbdIndicato
+ 					   g_build_filename (g_get_home_dir
+ 							     (),
+ 							     ".icons/flags",
+-							     NULL));
++							     VPNULL));
+ 	g_free (sp);
+ 
+ 	gtk_icon_theme_append_search_path (ind_config->icon_theme,
+ 					   sp =
+ 					   g_build_filename (DATADIR,
+ 							     "pixmaps/flags",
+-							     NULL));
++							     VPNULL));
+ 	g_free (sp);
+ 
+ 	gtk_icon_theme_append_search_path (ind_config->icon_theme,
+ 					   sp =
+ 					   g_build_filename (DATADIR,
+ 							     "icons/flags",
+-							     NULL));
++							     VPNULL));
+ 	g_free (sp);
+ }
+ 

@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2008/06/02 16:42:21 drochner Exp $
+
+--- libgnomekbd/gkbd-indicator.c.orig	2007-10-08 17:18:41.000000000 +0200
++++ libgnomekbd/gkbd-indicator.c
+@@ -17,6 +17,8 @@
+  * Boston, MA 02111-1307, USA.
+  */
+ 
++#include <config.h>
++
+ #include <memory.h>
+ 
+ #include <gdk/gdkkeysyms.h>
+@@ -306,7 +308,7 @@ gkbd_indicator_prepare_drawing (GkbdIndi
+ 			utf8length = g_unichar_to_utf8 (cidx, appendix);
+ 			appendix[utf8length] = '\0';
+ 			lbl_title =
+-			    g_strconcat (layout_name, appendix, NULL);
++			    g_strconcat (layout_name, appendix, VPNULL);
+ 		} else {
+ 			/* "first" time this description */
+ 			lbl_title = g_strdup (layout_name);
