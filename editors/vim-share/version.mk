@@ -1,5 +1,5 @@
-# $NetBSD: version.mk,v 1.51 2008/05/09 09:47:21 martti Exp $
+# $NetBSD: version.mk,v 1.52 2008/06/02 11:19:53 martti Exp $
 
 VIM_VERSION=		7.1
-VIM_PATCHLEVEL=		297
+VIM_PATCHLEVEL=		305
 VIM_SUBDIR=		vim71
