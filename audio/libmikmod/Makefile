@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2007/12/16 14:25:35 heinz Exp $
+# $NetBSD: Makefile,v 1.44 2008/06/02 08:20:04 dholland Exp $
 
 DISTNAME=		libmikmod-3.1.11
 PKGNAME=		libmikmod-3.1.11.1
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		audio
 MASTER_SITES=		http://mikmod.raphnet.net/files/
 
