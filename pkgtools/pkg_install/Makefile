@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.152 2008/04/23 14:37:10 joerg Exp $
+# $NetBSD: Makefile,v 1.153 2008/06/02 16:40:25 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -26,7 +26,7 @@ CONFIGURE_ARGS+=	--with-pkgdbdir=${PKG_DBDIR:Q}
 CONFIGURE_ARGS+=	--with-ftp=${FETCH_CMD:Q}
 CONFIGURE_ARGS+=	--with-pax=${PAX:Q}
 CONFIGURE_ARGS+=	--with-tar=${TAR:Q}
-USE_TOOLS+=		pax:run tar:run gzcat:run
+USE_TOOLS+=		pax:run tar:run gzcat:run ftp:run
 
 # The following tools are needed by pkg_view and linkfarm.
 USE_TOOLS+=		chmod cmp cp env find grep ln mkdir rm rmdir	\
