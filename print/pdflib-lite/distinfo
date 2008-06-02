@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/05/15 20:06:03 drochner Exp $
+$NetBSD: distinfo,v 1.2 2008/06/02 16:46:42 drochner Exp $
 
 SHA1 (PDFlib-Lite-7.0.3.tar.gz) = f63950303de23b9c13e9fdf5d6aa6ecae1ddc542
 RMD160 (PDFlib-Lite-7.0.3.tar.gz) = 90f91e2ff08e0280dce63801899162411889f0b7
 Size (PDFlib-Lite-7.0.3.tar.gz) = 5898798 bytes
+SHA1 (patch-aa) = a01fa6d85d550f203982a17a898929a8cd94a492
+SHA1 (patch-ab) = b6278ca1573225e4cd462b88064a800acd19d504

@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1 2008/06/02 16:46:42 drochner Exp $
+
+--- libs/pdflib/p_document.c.orig	2008-06-02 12:35:41 +0300
++++ libs/pdflib/p_document.c	2008-06-02 12:39:01 +0300
+@@ -1358,7 +1358,11 @@ pdf__begin_document(PDF *p, const char *
+ #endif
+ 
+         doc->fp = fp;
++#ifdef __DragonFly__
++        doc->len = sizeof(struct __FILE_public);
++#else
+         doc->len = sizeof(FILE);
++#endif
+     }
+     else if (filename && (*filename || len > 0))
+     {
