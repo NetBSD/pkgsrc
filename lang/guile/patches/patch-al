@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.5 2008/06/02 16:38:20 drochner Exp $
+
+--- Makefile.in.orig	2008-06-02 17:57:21.000000000 +0200
++++ Makefile.in
+@@ -309,7 +309,7 @@ top_srcdir_absolute = @top_srcdir_absolu
+ # config.rpath is needed
+ #
+ AUTOMAKE_OPTIONS = 1.10
+-SUBDIRS = oop libguile ice-9 guile-config guile-readline emacs \
++SUBDIRS = oop libguile ice-9 guile-config guile-readline \
+ 	  scripts srfi doc examples test-suite benchmark-suite lang am
+ 
+ bin_SCRIPTS = guile-tools
