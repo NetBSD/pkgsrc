@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1218 2008/06/02 12:23:17 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1219 2008/06/02 13:37:34 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2070,3 +2070,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/libmikmod to 3.1.11.1nb3 [dholland 2008-06-02]
 	Updated editors/vim-share to 7.1.305 [martti 2008-06-02]
 	Updated security/chkrootkit to 0.47nb1 [obache 2008-06-02]
+	Added math/mprime-bin version 24.14 [wiz 2008-06-02]
