@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/03/02 01:57:37 obache Exp $
+# $NetBSD: Makefile,v 1.32 2008/06/02 11:05:03 obache Exp $
 #
 
 DISTNAME=		uim-1.4.2
@@ -16,7 +16,7 @@ USE_DIRS+=		xdg-1.1
 USE_LIBTOOL=		YES
 USE_NCURSES=		YES	# clear_screen, clr_eos
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake intltool pkg-config
+USE_TOOLS+=		gmake intltool pkg-config msgfmt
 USE_LANGUAGES=		c c++
 PKGCONFIG_OVERRIDE+=	${WRKSRC}/uim.pc.in
 GNU_CONFIGURE=		YES
