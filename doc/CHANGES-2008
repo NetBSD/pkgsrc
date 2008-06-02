@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1217 2008/06/02 11:20:28 martti Exp $
+$NetBSD: CHANGES-2008,v 1.1218 2008/06/02 12:23:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2069,3 +2069,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated converters/uulib to 0.5.20nb4 [dholland 2008-06-01]
 	Updated audio/libmikmod to 3.1.11.1nb3 [dholland 2008-06-02]
 	Updated editors/vim-share to 7.1.305 [martti 2008-06-02]
+	Updated security/chkrootkit to 0.47nb1 [obache 2008-06-02]
