@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.69 2008/06/02 09:42:11 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.70 2008/06/02 11:55:21 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -156,3 +156,5 @@ Pullup ticket #2408 - requested by he
 perl: security fix
 Pullup ticket #2406 - requested by dholland
 uulib: security fix
+Pullup ticket #2407 - requested by dholland
+uudeview: security fix
