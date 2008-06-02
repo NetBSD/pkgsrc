@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.166 2008/05/05 19:11:35 drochner Exp $
+# $NetBSD: Makefile,v 1.167 2008/06/02 13:36:53 wiz Exp $
 
 COMMENT=	Mathematics
 
@@ -92,6 +92,7 @@ SUBDIR+=	meschach
 SUBDIR+=	metis
 SUBDIR+=	minpack
 SUBDIR+=	mpfr
+SUBDIR+=	mprime-bin
 SUBDIR+=	mtl
 SUBDIR+=	newmat
 SUBDIR+=	nickle
