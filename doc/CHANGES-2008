@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1215 2008/06/02 08:21:45 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.1216 2008/06/02 08:40:08 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2067,4 +2067,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/perl5 to 5.8.8nb8 [he 2008-06-02]
 	Updated converters/uudeview to 0.5.20nb2 [dholland 2008-06-01]
 	Updated converters/uulib to 0.5.20nb4 [dholland 2008-06-01]
-	Updated libmikmod to 3.1.11.1nb3 [dholland 2008-06-02]
+	Updated audio/libmikmod to 3.1.11.1nb3 [dholland 2008-06-02]
