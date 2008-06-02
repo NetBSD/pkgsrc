@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1216 2008/06/02 08:40:08 taca Exp $
+$NetBSD: CHANGES-2008,v 1.1217 2008/06/02 11:20:28 martti Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2068,3 +2068,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated converters/uudeview to 0.5.20nb2 [dholland 2008-06-01]
 	Updated converters/uulib to 0.5.20nb4 [dholland 2008-06-01]
 	Updated audio/libmikmod to 3.1.11.1nb3 [dholland 2008-06-02]
+	Updated editors/vim-share to 7.1.305 [martti 2008-06-02]
