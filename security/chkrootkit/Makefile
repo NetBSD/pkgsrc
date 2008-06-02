@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2008/04/12 22:43:09 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/02 12:23:04 obache Exp $
 #
 
 DISTNAME=		chkrootkit-0.47
+PKGREVISION=		1
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.pangeia.com.br/pub/seg/pac/
 
