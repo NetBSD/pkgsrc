@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/02 12:40:16 wiz Exp $
-bin/mprime
-share/doc/mprime/license.txt
-share/doc/mprime/readme.txt
-share/doc/mprime/stress.txt
-share/doc/mprime/undoc.txt
-share/doc/mprime/whatsnew.txt
-@dirrm share/doc/mprime
