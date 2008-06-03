@@ -1,0 +1,5 @@
+CDB_File is a module which provides a Perl interface to Dan Berstein's
+cdb package:
+
+cdb is a fast, reliable, lightweight package for creating and reading
+constant databases.
