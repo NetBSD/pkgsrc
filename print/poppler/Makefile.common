@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.14 2008/05/01 13:32:08 xtraeme Exp $
-#
+# $NetBSD: Makefile.common,v 1.15 2008/06/03 20:31:10 abs Exp $
+# used by print/poppler/Makefile
+# used by print/poppler-qt4/Makefile
 
 POPPLER_VERS=		0.8.2
 DISTNAME=		poppler-${POPPLER_VERS}
