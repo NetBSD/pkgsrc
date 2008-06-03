@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1219 2008/06/02 13:37:34 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1220 2008/06/03 05:52:45 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2071,3 +2071,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated editors/vim-share to 7.1.305 [martti 2008-06-02]
 	Updated security/chkrootkit to 0.47nb1 [obache 2008-06-02]
 	Added math/mprime-bin version 24.14 [wiz 2008-06-02]
+	Updated mail/dovecot to 1.0.14 [ghen 2008-06-03]
