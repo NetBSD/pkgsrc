@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2008/06/03 06:59:12 dsainty Exp $
+# $NetBSD: options.mk,v 1.9 2008/06/03 11:06:17 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=	mesa-execmem-mmap
@@ -46,8 +46,9 @@ PKG_SUGGESTED_OPTIONS=	mesa-execmem-mmap
 .if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
      ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "sparc" || \
      ${MACHINE_ARCH} == "sparc64") && \
-    (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || \
-     ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux")
+    ((${OPSYS} == "NetBSD" && ${X11_TYPE} == "modular") || \
+     ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || \
+     ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux")
 PKG_SUPPORTED_OPTIONS+=		dri
 .endif
 ###
@@ -57,7 +58,7 @@ PKG_SUPPORTED_OPTIONS+=		dri
 ###	is advised given that it's glx/glcore modules are built from
 ###	Mesa 6.5.3 (a development release).
 ###
-.if !empty(MACHINE_PLATFORM:MNetBSD-[4-9]*-*86*)
+.if !empty(MACHINE_PLATFORM:MNetBSD-[4-9]*-*86*) && ${X11_TYPE} == "modular"
 PKG_SUGGESTED_OPTIONS+=		dri
 .endif
 
