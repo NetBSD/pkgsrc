@@ -1,0 +1,13 @@
+$NetBSD: patch-cf,v 1.2.6.1 2008/06/03 11:21:04 ghen Exp $
+
+--- src/modules/loaders/loader_xpm.c.orig	2008-06-02 11:44:35.000000000 +0200
++++ src/modules/loaders/loader_xpm.c
+@@ -284,7 +284,7 @@ load(ImlibImage * im, ImlibProgressFunct
+                                  if (line[k] != ' ')
+                                    {
+                                       s[0] = 0;
+-                                      sscanf(&line[k], "%65535s", s);
++                                      sscanf(&line[k], "%255s", s);
+                                       slen = strlen(s);
+                                       k += slen;
+                                       if (!strcmp(s, "c"))
