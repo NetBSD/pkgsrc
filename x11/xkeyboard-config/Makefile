@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2008/04/15 02:27:54 reed Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/03 06:10:16 bjs Exp $
 #
 
-DISTNAME=	xkeyboard-config-1.2
+DISTNAME=	xkeyboard-config-1.3
 CATEGORIES=	x11
 MASTER_SITES=	http://xlibs.freedesktop.org/xkbdesc/
 EXTRACT_SUFX=	.tar.bz2
@@ -16,7 +16,7 @@ CONFLICTS+=		xkbdata-[0-9]*
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake intltool perl:build 
+USE_TOOLS+=		gmake intltool perl:build
 USE_TOOLS+=		msgfmt xgettext
 
 CONFIGURE_ARGS+=	--with-xkb-rules-symlink=xfree86,xorg
@@ -42,7 +42,7 @@ XKBCOMPDIR?=		${VARBASE}/db/xkb
 ### is the path to the xkbcomp binary we wish to use.
 ###
 XKBCOMPDIR_SYMLINK=	${XKBBASE}/compiled
-XKBCOMP=		${LOCALBASE}/bin/xkbcomp
+XKBCOMP=		${PREFIX}/bin/xkbcomp
 
 BUILD_DEFS+=		VARBASE
 BUILD_DEFS+=		XKBCOMPDIR
