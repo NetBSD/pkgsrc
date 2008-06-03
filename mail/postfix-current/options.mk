@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.22 2008/04/12 22:43:04 jlam Exp $
+# $NetBSD: options.mk,v 1.23 2008/06/03 10:30:51 ghen Exp $
 
 # Global and legacy options
 
@@ -104,4 +104,15 @@ MAKE_DIRS+=	${SASLLIBDIR}
 CONF_FILES+=	${EXAMPLEDIR}/smtpd.conf ${SASLLIBDIR}/smtpd.conf
 .else
 CCARGS+=	-DDEF_SERVER_SASL_TYPE=\"dovecot\"
+.endif
+
+###
+### Support CDB (Constant Database) map type.
+###
+.if !empty(PKG_OPTIONS:Mcdb)
+.  include "../../databases/tinycdb/buildlink3.mk"
+CCARGS+=	-DHAS_CDB
+AUXLIBS+=	-L${BUILDLINK_PREFIX.tinycdb}/lib			\
+		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.tinycdb}/lib	\
+		-lcdb
 .endif
