@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2008/05/31 20:43:29 tnn Exp $
+# $NetBSD: options.mk,v 1.8 2008/06/03 06:59:12 dsainty Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
 PKG_SUPPORTED_OPTIONS=	mesa-execmem-mmap
@@ -46,8 +46,8 @@ PKG_SUGGESTED_OPTIONS=	mesa-execmem-mmap
 .if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64" || \
      ${MACHINE_ARCH} == "powerpc" || ${MACHINE_ARCH} == "sparc" || \
      ${MACHINE_ARCH} == "sparc64") && \
-    (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || ${OPSYS} == "OpenBSD" || \
-     ${OPSYS} == "DragonFly")
+    (${OPSYS} == "NetBSD" || ${OPSYS} == "FreeBSD" || \
+     ${OPSYS} == "OpenBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "Linux")
 PKG_SUPPORTED_OPTIONS+=		dri
 .endif
 ###
@@ -55,7 +55,7 @@ PKG_SUPPORTED_OPTIONS+=		dri
 ###	I think this is a good way to see which bugs surface before the
 ###	next release branch.  Upgrading the X server to the 1.4 branch
 ###	is advised given that it's glx/glcore modules are built from
-###	Mesa 6.5.3 (a development release). 
+###	Mesa 6.5.3 (a development release).
 ###
 .if !empty(MACHINE_PLATFORM:MNetBSD-[4-9]*-*86*)
 PKG_SUGGESTED_OPTIONS+=		dri
