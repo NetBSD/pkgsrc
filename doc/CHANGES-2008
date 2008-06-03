@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1225 2008/06/03 16:24:38 smb Exp $
+$NetBSD: CHANGES-2008,v 1.1226 2008/06/03 21:42:24 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2077,3 +2077,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added databases/p5-CDB_File version 0.96 [ghen 2008-06-03]
 	Updated devel/p5-Module-ScanDeps to 0.84nb1 [obache 2008-06-03]
 	Added lang/py25-html-docs version 2.5.2 [smb 2008-06-03]
+	Updated security/openssl to 0.9.8gnb1 [tonnerre 2008-06-03]
