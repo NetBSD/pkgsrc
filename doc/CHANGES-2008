@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1227 2008/06/04 13:01:51 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1228 2008/06/04 14:13:36 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2079,3 +2079,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added lang/py25-html-docs version 2.5.2 [smb 2008-06-03]
 	Updated security/openssl to 0.9.8gnb1 [tonnerre 2008-06-03]
 	Updated inputmethod/tomoe to 0.6.0nb1 [obache 2008-06-04]
+	Updated converters/p5-JSON-XS to 2.21 [obache 2008-06-04]
