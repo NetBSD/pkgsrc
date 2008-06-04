@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/02/04 20:10:35 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2008/06/04 09:30:07 markd Exp $
 #
 
 DISTNAME=		kscope-1.6.0
@@ -14,7 +14,7 @@ DEPENDS+=		cscope>=15.6:../../devel/cscope
 DEPENDS+=		exctags>=5.5.4:../../devel/exctags
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake lex pkg-config
+USE_TOOLS+=		gmake flex pkg-config
 
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
