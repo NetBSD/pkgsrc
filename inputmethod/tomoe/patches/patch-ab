@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2008/06/04 13:01:36 obache Exp $
+
+--- configure.orig	2007-06-18 03:09:07.000000000 +0000
++++ configure
+@@ -22679,8 +22679,6 @@ echo "${ECHO_T}$LINGUAS" >&6; }
+    sed -e "/^#/d" -e "/^\$/d" -e "s,.*,	$posrcprefix& \\\\," -e "\$s/\(.*\) \\\\/\1/" \
+ 	< $srcdir/po/POTFILES.in > po/POTFILES
+ 
+-ac_config_commands="$ac_config_commands modify-itlocaledir"
+-
+ GETTEXT_PACKAGE=tomoe
+ 
+ 

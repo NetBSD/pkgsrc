@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/13 06:05:44 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/04 13:01:36 obache Exp $
 #
 
 DISTNAME=	tomoe-0.6.0
+PKGREVISION=	1
 CATEGORIES=	inputmethod
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tomoe/}
 
