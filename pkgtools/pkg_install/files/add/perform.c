@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.7 2008/05/26 15:29:03 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.8 2008/06/04 11:23:13 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.7 2008/05/26 15:29:03 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.8 2008/06/04 11:23:13 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1043,20 +1043,35 @@ pkg_register_views(struct pkg_task *pkg)
 static int
 start_replacing(struct pkg_task *pkg)
 {
-	char *old_required_by, *new_required_by;
-
-	old_required_by = pkgdb_pkg_file(pkg->other_version,
-	    REQUIRED_BY_FNAME);
-	new_required_by = pkgdb_pkg_file(pkg->pkgname,
-	    REQUIRED_BY_FNAME);
-
 	if (!Fake) {
-		if (rename(old_required_by, new_required_by) == -1 &&
+		char *old_file, *new_file;
+
+		old_file = pkgdb_pkg_file(pkg->other_version,
+		    REQUIRED_BY_FNAME);
+		new_file = pkgdb_pkg_file(pkg->pkgname, REQUIRED_BY_FNAME);
+		if (rename(old_file, new_file) == -1 &&
 		    errno != ENOENT) {
 			warn("Can't move +REQUIRED_BY from %s to %s",
-			    old_required_by, new_required_by);
+			    old_file, new_file);
 			return -1;			
 		}
+		free(old_file);
+		free(new_file);
+	}
+
+	if (!Fake && pkg->meta_data.meta_preserve == NULL) {
+		char *old_file, *new_file;
+
+		old_file = pkgdb_pkg_file(pkg->other_version, PRESERVE_FNAME);
+		new_file = pkgdb_pkg_file(pkg->pkgname, PRESERVE_FNAME);
+		if (rename(old_file, new_file) == -1 &&
+		    errno != ENOENT) {
+			warn("Can't move +PRESERVED from %s to %s",
+			    old_file, new_file);
+			return -1;			
+		}
+		free(old_file);
+		free(new_file);
 	}
 
 	if (Verbose || Fake) {

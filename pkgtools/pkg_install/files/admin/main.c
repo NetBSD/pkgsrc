@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.42.2.4 2008/05/23 15:57:04 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.42.2.5 2008/06/04 11:23:13 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.42.2.4 2008/05/23 15:57:04 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.42.2.5 2008/06/04 11:23:13 joerg Exp $");
 #endif
 
 /*-
@@ -542,12 +542,16 @@ main(int argc, char *argv[])
 #ifdef HAVE_SSL
 		struct archive *pkg;
 		void *cookie;
+		int rc;
 
+		rc = 0;
 		for (--argc, ++argv; argc > 0; --argc, ++argv) {
 			pkg = open_archive(*argv, &cookie);
-			pkg_full_signature_check(pkg);
+			if (pkg_full_signature_check(pkg))
+				rc = 1;
 			close_archive(pkg);
 		}
+		return rc;
 #else
 		errx(EXIT_FAILURE, "OpenSSL support is not included");
 #endif
