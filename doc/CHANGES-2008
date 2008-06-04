@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1229 2008/06/04 14:20:12 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1230 2008/06/04 15:07:58 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2081,3 +2081,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated inputmethod/tomoe to 0.6.0nb1 [obache 2008-06-04]
 	Updated converters/p5-JSON-XS to 2.21 [obache 2008-06-04]
 	Updated converters/p5-JSON to 2.10 [obache 2008-06-04]
+	Updated devel/doxygen to 1.5.6 [dsainty 2008-06-04]
