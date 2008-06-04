@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2007/11/12 18:10:42 heinz Exp $
+# $NetBSD: Makefile,v 1.57 2008/06/04 08:54:40 markd Exp $
 
 VERS=		4.2.5
 DISTNAME=	hylafax-${VERS}
@@ -49,6 +49,12 @@ PKG_SUPPORTED_OPTIONS=	pam
 .include "../../mk/pam.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-pam
+.endif
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/pset.h)
+CONFIGURE_ENV+=		MACHDEPLIBS=-lrt
 .endif
 
 post-install:
