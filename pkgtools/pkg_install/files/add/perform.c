@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.8 2008/06/04 11:23:13 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.9 2008/06/04 17:28:48 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.8 2008/06/04 11:23:13 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.9 2008/06/04 17:28:48 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1041,38 +1041,39 @@ pkg_register_views(struct pkg_task *pkg)
 }
 
 static int
+preserve_meta_data_file(struct pkg_task *pkg, const char *name)
+{
+	char *old_file, *new_file;
+	int rv;
+
+	if (!Fake)
+		return 0;
+
+	old_file = pkgdb_pkg_file(pkg->other_version, name);
+	new_file = pkgdb_pkg_file(pkg->pkgname, name);
+	rv = 0;
+	if (rename(old_file, new_file) == -1 && errno != ENOENT) {
+		warn("Can't move %s from %s to %s", name, old_file, new_file);
+		rv = -1;			
+	}
+	free(old_file);
+	free(new_file);
+	return rv;
+}
+
+static int
 start_replacing(struct pkg_task *pkg)
 {
-	if (!Fake) {
-		char *old_file, *new_file;
+	if (preserve_meta_data_file(pkg, REQUIRED_BY_FNAME))
+		return -1;
 
-		old_file = pkgdb_pkg_file(pkg->other_version,
-		    REQUIRED_BY_FNAME);
-		new_file = pkgdb_pkg_file(pkg->pkgname, REQUIRED_BY_FNAME);
-		if (rename(old_file, new_file) == -1 &&
-		    errno != ENOENT) {
-			warn("Can't move +REQUIRED_BY from %s to %s",
-			    old_file, new_file);
-			return -1;			
-		}
-		free(old_file);
-		free(new_file);
-	}
+	if (pkg->meta_data.meta_preserve == NULL &&
+	    preserve_meta_data_file(pkg, PRESERVE_FNAME))
+		return -1;
 
-	if (!Fake && pkg->meta_data.meta_preserve == NULL) {
-		char *old_file, *new_file;
-
-		old_file = pkgdb_pkg_file(pkg->other_version, PRESERVE_FNAME);
-		new_file = pkgdb_pkg_file(pkg->pkgname, PRESERVE_FNAME);
-		if (rename(old_file, new_file) == -1 &&
-		    errno != ENOENT) {
-			warn("Can't move +PRESERVED from %s to %s",
-			    old_file, new_file);
-			return -1;			
-		}
-		free(old_file);
-		free(new_file);
-	}
+	if (pkg->meta_data.meta_installed_info == NULL &&
+	    preserve_meta_data_file(pkg, INSTALLED_INFO_FNAME))
+		return -1;
 
 	if (Verbose || Fake) {
 		printf("%s/pkg_delete -K %s -p %s '%s'\n",
