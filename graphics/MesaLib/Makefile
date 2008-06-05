@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2008/06/03 06:59:12 dsainty Exp $
+# $NetBSD: Makefile,v 1.62 2008/06/05 13:03:41 tron Exp $
 
 PKGNAME=	MesaLib-${MESA_PKGVERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 COMMENT=	Graphics library similar to SGI's OpenGL
 
 MESA_HEADERS=	gl.h gl_mangle.h glext.h glx.h glxext.h	\
