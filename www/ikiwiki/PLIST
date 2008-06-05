@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/04/29 00:05:41 reed Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/06/05 13:57:09 reed Exp $
 bin/ikiwiki
 bin/ikiwiki-makerepo
 bin/ikiwiki-transition
@@ -92,6 +92,7 @@ share/ikiwiki/templates/titlepage.tmpl
 share/locale/bg/LC_MESSAGES/ikiwiki.mo
 share/locale/cs/LC_MESSAGES/ikiwiki.mo
 share/locale/da/LC_MESSAGES/ikiwiki.mo
+share/locale/de/LC_MESSAGES/ikiwiki.mo
 share/locale/es/LC_MESSAGES/ikiwiki.mo
 share/locale/fr/LC_MESSAGES/ikiwiki.mo
 share/locale/gu/LC_MESSAGES/ikiwiki.mo
