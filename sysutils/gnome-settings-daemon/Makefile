@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/29 11:03:29 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/05 10:14:54 drochner Exp $
 #
 
 DISTNAME=	gnome-settings-daemon-2.22.2.1
@@ -12,7 +12,7 @@ COMMENT=	GNOME settings daemon
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool gmake
+USE_TOOLS+=	pkg-config intltool gmake msgfmt
 
 CONFLICTS+=	gnome-control-center<2.22.0
 
