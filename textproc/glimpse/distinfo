@@ -1,13 +1,13 @@
-$NetBSD: distinfo,v 1.10 2008/06/05 17:19:52 ghen Exp $
+$NetBSD: distinfo,v 1.11 2008/06/05 17:21:48 ghen Exp $
 
 SHA1 (glimpse-4.18.5.tar.gz) = a7a6168f3decab6cb6c674914259e2cf71be4e40
 RMD160 (glimpse-4.18.5.tar.gz) = c1012980e0e09de9c71e07ffed075817e0814eec
 Size (glimpse-4.18.5.tar.gz) = 410157 bytes
-SHA1 (patch-aa) = fa5342b901355fdaa3b4e2d7964f751a6d46122c
+SHA1 (patch-aa) = 86ba67ee09b876ccbdc34cd19b2f50fd90ace01d
 SHA1 (patch-ab) = fdced623c88a201a3e28aadc8896d50c51774a66
 SHA1 (patch-ac) = be5a951ac1f4db5ab3c99ca8a6ef82c042019690
 SHA1 (patch-ad) = 6e1981e7b6e02eb2b3137e3adddc290ce3002f71
-SHA1 (patch-ae) = 9286a860909a661a7f2671b3447ae644d1e2802a
+SHA1 (patch-ae) = f61418e46a704f1488a00a7b8873e0cf499de797
 SHA1 (patch-af) = 0ef79bdb8477b6426c9fd9a5b708dde7b7c0c6d7
 SHA1 (patch-ag) = 6ef9548db620934e1e7c91c456053898a07cb5f3
 SHA1 (patch-ah) = d374536e090c8f1571ee2e1145c06febce96eee2
