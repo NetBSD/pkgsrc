@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.34 2007/08/12 13:17:12 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2008/06/05 17:19:52 ghen Exp $
 
-DISTNAME=	glimpse-4.18.0
-PKGREVISION=	1
+DISTNAME=	glimpse-4.18.5
 CATEGORIES=	textproc databases
 MASTER_SITES=	http://webglimpse.net/trial/
 
