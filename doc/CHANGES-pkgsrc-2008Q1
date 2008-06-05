@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.74 2008/06/05 12:04:59 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.75 2008/06/05 12:26:10 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -166,3 +166,5 @@ pullup ticket #2399 - requested by minskim
 bootstrap script: --binary-macpkg option fix
 pullup ticket #2413 - requested by markd
 emacs21: Fix for CVE-2008-2142
+pullup ticket #2414 - requested by tonnerre
+openssl: DoS and double free fixes
