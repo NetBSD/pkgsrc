@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.30 2008/05/04 00:13:46 smb Exp $
+@comment $NetBSD: PLIST,v 1.31 2008/06/05 11:05:37 drochner Exp $
 bin/liferea
 bin/liferea-add-feed
 bin/liferea-bin
-lib/liferea/liblihtmlm.la
+${PLIST.gtkhtml}lib/liferea/liblihtmlg.la
+${PLIST.mozilla}lib/liferea/liblihtmlm.la
 lib/liferea/liblinotiflibnotify.la
 man/man1/liferea.1
 man/pl/man1/liferea.1
