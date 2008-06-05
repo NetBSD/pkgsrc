@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.2 2007/10/29 12:38:02 uebayasi Exp $
+# $NetBSD: Makefile.common,v 1.2.4.1 2008/06/05 12:04:36 rtr Exp $
 
 DISTNAME=	emacs-${EMACSVERSION}a
 
@@ -83,7 +83,8 @@ post-extract:
 post-build:
 	cd ${WRKSRC}/lisp && \
 	   rm sort.elc && ${MAKE_PROGRAM} sort.elc && \
-	   rm mail/smtpmail.elc && ${MAKE_PROGRAM} mail/smtpmail.elc
+	   rm mail/smtpmail.elc && ${MAKE_PROGRAM} mail/smtpmail.elc && \
+	   rm fast-lock.elc && ${MAKE_PROGRAM} fast-lock.elc
 
 pre-install:
 	@${FIND} ${WRKSRC} -type f -name "*.orig" -print | ${XARGS} ${RM} -f
