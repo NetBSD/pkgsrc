@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2008/06/05 13:57:09 reed Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/05 14:22:24 reed Exp $
 #
 
 DISTNAME=	ikiwiki_2.48
 PKGNAME=	${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	www textproc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/i/ikiwiki/}
 
@@ -11,7 +12,7 @@ HOMEPAGE=	http://ikiwiki.info/
 COMMENT=	Wiki compiler
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ikiwiki
-PKG_SUPPORTED_OPTIONS=	imagemagick svn w3m
+PKG_SUPPORTED_OPTIONS=	amazon_s3 imagemagick svn w3m
 PKG_SUGGESTED_OPTIONS=	# none on by default
 
 .include "../../mk/bsd.prefs.mk"
@@ -35,6 +36,12 @@ DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
 DEPENDS+=	p5-XML-Feed-[0-9]*:../../textproc/p5-XML-Feed
 DEPENDS+=	p5-File-MimeInfo-[0-9]*:../../devel/p5-File-MimeInfo
 DEPENDS+=	p5-gettext-[0-9]*:../../devel/p5-gettext
+
+# for amazon_s3 plugin which injects wiki pages into Amazon S3
+# allowing ikiwiki to be used without a dedicated web server.
+.if !empty(PKG_OPTIONS:Mamazon_s3)
+DEPENDS+=	p5-Net-Amazon-S3-[0-9]*:../../net/p5-Net-Amazon-S3
+.endif
 
 # for img plugin
 .if !empty(PKG_OPTIONS:Mimagemagick)
