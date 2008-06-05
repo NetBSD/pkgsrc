@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.7.2.1 2008/06/05 12:25:24 rtr Exp $
+
+--- ssl/t1_lib.c.orig	2007-10-19 09:44:10.000000000 +0200
++++ ssl/t1_lib.c
+@@ -324,6 +324,7 @@ int ssl_parse_clienthello_tlsext(SSL *s,
+ 						s->session->tlsext_hostname[len]='\0';
+ 						if (strlen(s->session->tlsext_hostname) != len) {
+ 							OPENSSL_free(s->session->tlsext_hostname);
++							s->session->tlsext_hostname = NULL;
+ 							*al = TLS1_AD_UNRECOGNIZED_NAME;
+ 							return 0;
+ 						}
