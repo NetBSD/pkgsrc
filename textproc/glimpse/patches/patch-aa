@@ -1,7 +1,5 @@
-$NetBSD: patch-aa,v 1.4 2005/06/04 10:44:28 wiz Exp $
-
---- main.c.orig	2004-06-08 19:07:33.000000000 +0200
-+++ main.c
+--- main.c.orig	2006-03-13 20:35:22.000000000 +0100
++++ main.c	2008-06-05 17:04:54.000000000 +0200
 @@ -27,7 +27,9 @@
  
  /* Borrowed from C-Lib */
@@ -12,12 +10,3 @@ $NetBSD: patch-aa,v 1.4 2005/06/04 10:44:28 wiz Exp $
  
  #if	CLIENTSERVER
  #include "communicate.c"
-@@ -1080,7 +1082,7 @@ char *argv[];
- 		clargc = 0;
- 		clargv = NULL;
- 		cli_len = sizeof(cli_addr);
--		if ((newsockfd = accept(sockfd, &cli_addr, &cli_len)) < 0) continue;
-+		if ((newsockfd = accept(sockfd, (struct sockaddr *)&cli_addr, &cli_len)) < 0) continue;
- 		if (getreq(newsockfd, glimpse_reqbuf, &clstdin, &clstdout, &clstderr, &clargc, &clargv, &clpid) < 0) {
- 			ret = -1;
- #if	DEBUG
