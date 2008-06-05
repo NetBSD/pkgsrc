@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/01/18 05:06:42 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2008/06/05 11:58:23 obache Exp $
 #
 
 DISTNAME=	libkdcraw-0.1.3
@@ -12,7 +12,7 @@ HOMEPAGE=	http://www.kipi-plugins.org/
 COMMENT=	C++ interface around dcraw
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config msgfmt
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	yes
 
