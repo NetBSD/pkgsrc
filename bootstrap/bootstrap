@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.121 2008/03/06 04:45:58 jlam Exp $
+# $NetBSD: bootstrap,v 1.121.2.1 2008/06/05 11:57:46 rtr Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -385,8 +385,10 @@ while [ $# -gt 0 ]; do
 			binary_gzip_kit=`get_optarg "$1"` ;;
 	--gzip-binary-kit)
 			binary_gzip_kit="$2"; shift ;;
-	--binary-macpkg)
+	--binary-macpkg=*)
 			binary_macpkg=`get_optarg "$1"` ;;
+	--binary-macpkg)
+			binary_macpkg="$2"; shift ;;
 	--full)		full=yes ;;
 	--quiet)	quiet=yes ;;
 	--help)		echo "$usage"; exit ;;
@@ -443,6 +445,17 @@ Darwin)
 	set_opsys=no
 	machine_arch=`uname -p`
 	CC="gcc -isystem /usr/include"; export CC
+	osrev=`uname -r`
+	macosx_version=`echo $osrev | awk -F . '{ print "10."$1-4; }'`
+	case "$macosx_version" in
+	10.[0-4])
+		packagemaker=/Developer/Tools/packagemaker
+		;;
+	*)
+		packagemaker=/Developer/usr/bin/packagemaker
+		;;
+	esac
+	unset osrev macosx_version
 	;;
 DragonFly)
 	root_group=wheel
