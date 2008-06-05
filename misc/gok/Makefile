@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2008/04/09 22:40:19 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2008/06/05 14:32:26 wiz Exp $
 #
 
 DISTNAME=		gok-1.3.7
@@ -12,7 +12,10 @@ HOMEPAGE=		http://www.gok.ca/
 COMMENT=		GNOME On-Screen Keyboard
 
 USE_DIRS+=		gnome2-1.5
-USE_TOOLS+=		gmake intltool msgfmt pkg-config
+USE_TOOLS+=		gmake msgfmt pkg-config
+# use the bundled intltool, the pkgsrc one is too new
+#USE_TOOLS+=		intltool
+USE_TOOLS+=		perl
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
