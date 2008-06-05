@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/05/12 02:25:40 smb Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/05 10:19:31 drochner Exp $
 #
 
 DISTNAME=	vcalendar-1.102
@@ -17,7 +17,7 @@ DEPENDS+=	claws-mail-3.4.0{,nb[0-9]*}:../../mail/claws-mail
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config
+USE_TOOLS+=	pkg-config gmake
 USE_LANGUAGES+=	c
 
 .include "../../mail/claws-mail/Makefile.vers"
