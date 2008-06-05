@@ -1,6 +1,8 @@
-$NetBSD: patch-ad,v 1.5 2008/06/04 15:05:39 dsainty Exp $
+$NetBSD: patch-ad,v 1.6 2008/06/05 07:55:09 dsainty Exp $
 
 The cast breaks compilation on NetBSD, as iconv() expects const char**.
+
+Submitted as: https://bugzilla.gnome.org/show_bug.cgi?id=536629
 
 --- src/portable.cpp.orig	2008-01-01 23:41:08.000000000 +1300
 +++ src/portable.cpp	2008-06-05 02:06:00.000000000 +1200
