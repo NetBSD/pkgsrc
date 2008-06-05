@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.8 2008/06/05 10:17:28 drochner Exp $
+
+--- ./src/ui/dialog/print.cpp.orig	2008-06-02 23:26:59 +0300
++++ ./src/ui/dialog/print.cpp	2008-06-02 23:28:48 +0300
+@@ -16,6 +16,8 @@
+ #include <io.h>
+ #endif
+ 
++#include <unistd.h> // close() and unlink()
++
+ #include <gtkmm/stock.h>
+ #include "print.h"
+ 
