@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.71 2008/06/03 11:21:55 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.72 2008/06/05 11:51:00 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -160,3 +160,5 @@ Pullup ticket #2407 - requested by dholland
 uudeview: security fix
 Pullup ticket 2411 - requested by drochner
 security fix for imlib2
+pullup ticket #2412 - requested by markd
+emacs: Fix for CVE-2008-2142
