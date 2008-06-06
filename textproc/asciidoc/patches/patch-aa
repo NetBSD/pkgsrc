@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1 2008/06/06 19:51:14 gdt Exp $
+
+a2x uses the '-u' argument to cp, which POSIX does not specify:
+  http://www.opengroup.org/onlinepubs/009695399/utilities/cp.html
+
+--- a2x.orig	2007-10-28 23:50:53.000000000 -0400
++++ a2x
+@@ -379,7 +379,7 @@ function copy_stylesheet()
+     if [[ "$src" -ef "$dst" ]]; then
+         return
+     fi
+-    execute_command_2 "cp -u \"$src\" \"$dst\""
++    execute_command_2 "cp \"$src\" \"$dst\""
+ }
+ 
+ # Copy distribution admonition and navigation icons to destination directory
+@@ -405,7 +405,7 @@ function copy_icons()
+     else
+         execute_command_2 "mkdir -p \"$dst\""
+     fi
+-    execute_command_2 "cp -rfu  \"$src/\"* \"$dst\""
++    execute_command_2 "cp -rf  \"$src/\"* \"$dst\""
+ }
+ 
+ #--------------------------------------------------------------------
