@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2008/04/12 22:43:07 jlam Exp $
+# $NetBSD: Makefile,v 1.77 2008/06/06 17:14:01 dillo Exp $
 
 DISTNAME=	screen-4.0.3
 PKGREVISION=	2
@@ -58,7 +58,7 @@ post-install:
 .PHONY: screen-terminfo
 screen-terminfo:
 	cd ${WRKSRC}/terminfo &&					\
-	${SETENV} TERMINFO=${PREFIX}/share/lib/terminfo			\
+	${SETENV} TERMINFO=${DESTDIR}${PREFIX}/share/lib/terminfo	\
 		/usr/5bin/tic screeninfo.src
 
 .include "../../mk/termcap.buildlink3.mk"
