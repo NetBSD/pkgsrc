@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7309 2008/06/04 15:07:58 dsainty Exp $
+$NetBSD: TODO,v 1.7310 2008/06/06 03:31:24 taca Exp $
 
 Suggested new packages
 ======================
@@ -858,6 +858,7 @@ Suggested package updates
 	o mergeant-0.67
 	o mesure-0.7.2
 	o metakit-lib-2.4.9.6
+	o mew-6.1 [as mew6?]
 	o mgetty+sendfax-1.1.35
 	o mimedefang-2.64
 	o minivmac-3.0.4
@@ -931,6 +932,7 @@ Suggested package updates
 	o onyx-5.1.2
 	o oo2c-2.1.7
 	o openafs-1.4.7
+	o opencobol-1.0
 	o openh323-1.19.1
 	o openldap-2.4.9
 	o openmortal-0.7.1
