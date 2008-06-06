@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/05/10 09:06:00 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/06/06 16:08:07 taca Exp $
 ${PLONE_BASE}/ATContentTypes/AUTHORS.txt
 ${PLONE_BASE}/ATContentTypes/CHANGELOG.txt
 ${PLONE_BASE}/ATContentTypes/HISTORY.txt
@@ -2713,12 +2713,15 @@ ${PLONE_BASE}/CMFPlone/migrations/v3_1/__init__.py
 ${PLONE_BASE}/CMFPlone/migrations/v3_1/__init__.pyc
 ${PLONE_BASE}/CMFPlone/migrations/v3_1/betas.py
 ${PLONE_BASE}/CMFPlone/migrations/v3_1/betas.pyc
+${PLONE_BASE}/CMFPlone/migrations/v3_1/final_three1x.py
+${PLONE_BASE}/CMFPlone/migrations/v3_1/final_three1x.pyc
 ${PLONE_BASE}/CMFPlone/migrations/v3_1/profiles/three0_beta1/actions.xml
 ${PLONE_BASE}/CMFPlone/migrations/v3_1/profiles/three0_beta1/componentregistry.xml
 ${PLONE_BASE}/CMFPlone/migrations/v3_1/profiles/three0_beta1/jsregistry.xml
 ${PLONE_BASE}/CMFPlone/migrations/v3_1/profiles/three0_beta1/kssregistry.xml
 ${PLONE_BASE}/CMFPlone/migrations/v3_1/profiles/three0_beta1/metadata.xml
 ${PLONE_BASE}/CMFPlone/migrations/v3_1/profiles/three0_beta1/portlets.xml
+${PLONE_BASE}/CMFPlone/migrations/v3_1/profiles/three11_three12/jsregistry.xml
 ${PLONE_BASE}/CMFPlone/overrides.zcml
 ${PLONE_BASE}/CMFPlone/patches/__init__.py
 ${PLONE_BASE}/CMFPlone/patches/__init__.pyc
@@ -5775,8 +5778,6 @@ ${PLONE_BASE}/PloneTranslations/tests/test_i18n.py
 ${PLONE_BASE}/PloneTranslations/tests/test_i18n.pyc
 ${PLONE_BASE}/PloneTranslations/utils/admix.py
 ${PLONE_BASE}/PloneTranslations/utils/admix.pyc
-${PLONE_BASE}/PloneTranslations/utils/chart.py
-${PLONE_BASE}/PloneTranslations/utils/chart.pyc
 ${PLONE_BASE}/PloneTranslations/utils/create.py
 ${PLONE_BASE}/PloneTranslations/utils/create.pyc
 ${PLONE_BASE}/PloneTranslations/utils/fillmsgstr.py
@@ -5785,6 +5786,8 @@ ${PLONE_BASE}/PloneTranslations/utils/filter.py
 ${PLONE_BASE}/PloneTranslations/utils/filter.pyc
 ${PLONE_BASE}/PloneTranslations/utils/i18ngenerate.py
 ${PLONE_BASE}/PloneTranslations/utils/i18ngenerate.pyc
+${PLONE_BASE}/PloneTranslations/utils/list.py
+${PLONE_BASE}/PloneTranslations/utils/list.pyc
 ${PLONE_BASE}/PloneTranslations/utils/rebuild-pot.py
 ${PLONE_BASE}/PloneTranslations/utils/rebuild-pot.pyc
 ${PLONE_BASE}/PloneTranslations/utils/relocate.py
@@ -5797,6 +5800,8 @@ ${PLONE_BASE}/PloneTranslations/utils/setprojid.py
 ${PLONE_BASE}/PloneTranslations/utils/setprojid.pyc
 ${PLONE_BASE}/PloneTranslations/utils/sync.py
 ${PLONE_BASE}/PloneTranslations/utils/sync.pyc
+${PLONE_BASE}/PloneTranslations/utils/table.py
+${PLONE_BASE}/PloneTranslations/utils/table.pyc
 ${PLONE_BASE}/PloneTranslations/utils/utils.py
 ${PLONE_BASE}/PloneTranslations/utils/utils.pyc
 ${PLONE_BASE}/PluggableAuthService/COPYRIGHT.txt
@@ -6779,6 +6784,7 @@ ${PLONE_BASE}/kupu/i18n/kupu-he.po
 ${PLONE_BASE}/kupu/i18n/kupu-hu.po
 ${PLONE_BASE}/kupu/i18n/kupu-it.po
 ${PLONE_BASE}/kupu/i18n/kupu-ja.po
+${PLONE_BASE}/kupu/i18n/kupu-manual.pot
 ${PLONE_BASE}/kupu/i18n/kupu-nl.po
 ${PLONE_BASE}/kupu/i18n/kupu-pl.po
 ${PLONE_BASE}/kupu/i18n/kupu-pt-br.po
@@ -6788,6 +6794,7 @@ ${PLONE_BASE}/kupu/i18n/kupu-sk.po
 ${PLONE_BASE}/kupu/i18n/kupu-sl.po
 ${PLONE_BASE}/kupu/i18n/kupu-sr-Latn.po
 ${PLONE_BASE}/kupu/i18n/kupu-sr.po
+${PLONE_BASE}/kupu/i18n/kupu-sv.po
 ${PLONE_BASE}/kupu/i18n/kupu-tr.po
 ${PLONE_BASE}/kupu/i18n/kupu-uk.po
 ${PLONE_BASE}/kupu/i18n/kupu-vi.po
@@ -6801,12 +6808,16 @@ ${PLONE_BASE}/kupu/i18n/kupuconfig-da.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-es.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-eu.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-fr.po
+${PLONE_BASE}/kupu/i18n/kupuconfig-hu.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-it.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-ja.po
+${PLONE_BASE}/kupu/i18n/kupuconfig-manual.pot
+${PLONE_BASE}/kupu/i18n/kupuconfig-nl.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-pl.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-pt.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-pt-br.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-sk.po
+${PLONE_BASE}/kupu/i18n/kupuconfig-sv.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-tr.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-uk.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-vi.po
@@ -6823,8 +6834,10 @@ ${PLONE_BASE}/kupu/i18n/kupupox-eu.po
 ${PLONE_BASE}/kupu/i18n/kupupox-fi.po
 ${PLONE_BASE}/kupu/i18n/kupupox-fr.po
 ${PLONE_BASE}/kupu/i18n/kupupox-he.po
+${PLONE_BASE}/kupu/i18n/kupupox-hu.po
 ${PLONE_BASE}/kupu/i18n/kupupox-it.po
 ${PLONE_BASE}/kupu/i18n/kupupox-ja.po
+${PLONE_BASE}/kupu/i18n/kupupox-manual.pot
 ${PLONE_BASE}/kupu/i18n/kupupox-nl.po
 ${PLONE_BASE}/kupu/i18n/kupupox-pl.po
 ${PLONE_BASE}/kupu/i18n/kupupox-pt-br.po
@@ -6918,6 +6931,7 @@ ${PLONE_BASE}/kupu/mmbase/tools/empty.jspx
 ${PLONE_BASE}/kupu/mmbase/tools/related-type.jspx
 ${PLONE_BASE}/kupu/mmbase/tools/related.jspx
 ${PLONE_BASE}/kupu/mmbase/tools/search-node.jspx
+${PLONE_BASE}/kupu/mmbase/tools/searchrelate.jspx
 ${PLONE_BASE}/kupu/mmbase/tools/test.jspx
 ${PLONE_BASE}/kupu/mmbase/tools/tree.jspx
 ${PLONE_BASE}/kupu/mmbase/wire.kupu
@@ -7101,6 +7115,8 @@ ${PLONE_BASE}/kupu/plone/tests/test_browserSupportsKupu.py
 ${PLONE_BASE}/kupu/plone/tests/test_browserSupportsKupu.pyc
 ${PLONE_BASE}/kupu/plone/tests/test_html2captioned.py
 ${PLONE_BASE}/kupu/plone/tests/test_html2captioned.pyc
+${PLONE_BASE}/kupu/plone/tests/test_i18n.py
+${PLONE_BASE}/kupu/plone/tests/test_i18n.pyc
 ${PLONE_BASE}/kupu/plone/tests/test_librarymanager.py
 ${PLONE_BASE}/kupu/plone/tests/test_librarymanager.pyc
 ${PLONE_BASE}/kupu/plone/tests/test_links.py
@@ -9406,12 +9422,15 @@ ${ZOPE_BASE}/lib/python/plone/intelligenttext/transforms.py
 ${ZOPE_BASE}/lib/python/plone/intelligenttext/transforms.pyc
 ${ZOPE_BASE}/lib/python/plone/keyring/__init__.py
 ${ZOPE_BASE}/lib/python/plone/keyring/__init__.pyc
+${ZOPE_BASE}/lib/python/plone/keyring/configure.zcml
 ${ZOPE_BASE}/lib/python/plone/keyring/interfaces.py
 ${ZOPE_BASE}/lib/python/plone/keyring/interfaces.pyc
 ${ZOPE_BASE}/lib/python/plone/keyring/keymanager.py
 ${ZOPE_BASE}/lib/python/plone/keyring/keymanager.pyc
 ${ZOPE_BASE}/lib/python/plone/keyring/keyring.py
 ${ZOPE_BASE}/lib/python/plone/keyring/keyring.pyc
+${ZOPE_BASE}/lib/python/plone/keyring/profiles/default/componentregistry.xml
+${ZOPE_BASE}/lib/python/plone/keyring/profiles/default/metadata.xml
 ${ZOPE_BASE}/lib/python/plone/keyring/tests/__init__.py
 ${ZOPE_BASE}/lib/python/plone/keyring/tests/__init__.pyc
 ${ZOPE_BASE}/lib/python/plone/keyring/tests/testKeymanager.py
@@ -9562,6 +9581,7 @@ ${ZOPE_BASE}/lib/python/plone/protect/interfaces.py
 ${ZOPE_BASE}/lib/python/plone/protect/interfaces.pyc
 ${ZOPE_BASE}/lib/python/plone/protect/postonly.py
 ${ZOPE_BASE}/lib/python/plone/protect/postonly.pyc
+${ZOPE_BASE}/lib/python/plone/protect/profiles/default/metadata.xml
 ${ZOPE_BASE}/lib/python/plone/protect/tests/__init__.py
 ${ZOPE_BASE}/lib/python/plone/protect/tests/__init__.pyc
 ${ZOPE_BASE}/lib/python/plone/protect/tests/case.py
