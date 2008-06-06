@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2008/05/28 13:18:30 dsainty Exp $
+# $NetBSD: Makefile,v 1.28 2008/06/06 07:45:56 dsainty Exp $
 #
 
-DISTNAME=		xblast-2.10.2
-PKGREVISION=		1
+DISTNAME=		xblast-2.10.4
 CATEGORIES=		games x11
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xblast/}
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} \
@@ -19,18 +18,27 @@ COMMENT=		2-6 player kill the other guy with bombs game. A real blast!
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-sound
 CONFIGURE_ARGS+=	--enable-SMPF
-#CONFIGURE_ARGS+=	--enable-mini
 CONFIGURE_ARGS+=	--with-otherdatadir=${PREFIX}/share/xblast
+
+PKG_OPTIONS_VAR=	PKG_OPTIONS.xblast
+PKG_SUPPORTED_OPTIONS=	xblast-mini
+
+.include "../../mk/bsd.options.mk"
+
+.if !empty(PKG_OPTIONS:Mxblast-mini)
+# Use a 480x392 window instead of the default 960x784 window
+CONFIGURE_ARGS+=	--enable-mini
+.endif
 
 SUBST_CLASSES+=		ossaudio
 SUBST_STAGE.ossaudio=	pre-configure
-SUBST_MESSAGE.ossaudio=	"Linking ossaudio library"
+SUBST_MESSAGE.ossaudio=	Linking ossaudio library
 SUBST_FILES.ossaudio=	Makefile.in
-SUBST_SED.ossaudio=-e 's|xbsndsrv_LDFLAGS =|xbsndsrv_LDFLAGS = ${LIBOSSAUDIO}|'
+SUBST_SED.ossaudio=	-e 's|xbsndsrv_LDADD =|& ${LIBOSSAUDIO}|'
 
 SUBST_CLASSES+=		xbsndsrv
 SUBST_STAGE.xbsndsrv=	pre-configure
-SUBST_MESSAGE.xbsndsrv=	"Qualify path to xbsndsrv"
+SUBST_MESSAGE.xbsndsrv=	Qualify path to xbsndsrv
 SUBST_FILES.xbsndsrv=	x11_sound.c
 SUBST_SED.xbsndsrv=	-e 's|"xbsndsrv"|"${PREFIX}/bin/xbsndsrv"|'
 

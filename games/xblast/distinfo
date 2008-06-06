@@ -1,8 +1,5 @@
-$NetBSD: distinfo,v 1.6 2008/05/28 12:10:26 dsainty Exp $
+$NetBSD: distinfo,v 1.7 2008/06/06 07:45:56 dsainty Exp $
 
-SHA1 (xblast-2.10.2.tar.gz) = 1ff0b26ac003aa68df964ad6a8e44505d82de5fd
-RMD160 (xblast-2.10.2.tar.gz) = b958fe9d130e1cbb13fe71119411f6ad50420f74
-Size (xblast-2.10.2.tar.gz) = 590442 bytes
 SHA1 (images-2005-01-06.tar.gz) = 3fd597a68e96c325654a3772e07528a5b0edc802
 RMD160 (images-2005-01-06.tar.gz) = 3c26c9d570002d6334389055c4651a90841f0ec8
 Size (images-2005-01-06.tar.gz) = 860830 bytes
@@ -18,4 +15,7 @@ Size (musics-2005-01-06.tar.gz) = 5317575 bytes
 SHA1 (sounds.tar.gz) = 8875628de0dda4d4f79ffe324f7e8e560c4e0471
 RMD160 (sounds.tar.gz) = 9a8e0b488f80a9e54a1492368a68ffd7d2562acc
 Size (sounds.tar.gz) = 1612625 bytes
-SHA1 (patch-ab) = a89cbe895f83c553948f0e61eb9d48a6c001a79a
+SHA1 (xblast-2.10.4.tar.gz) = 27ea96ac25a00f77dc962981970e92a90d78e8e4
+RMD160 (xblast-2.10.4.tar.gz) = c78c3ae95df366f927f95f051ef835b3243dee85
+Size (xblast-2.10.4.tar.gz) = 684965 bytes
+SHA1 (patch-ab) = 71cee479d75f92c1947992b565a3279c213fb7a3
