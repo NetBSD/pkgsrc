@@ -1,55 +1,47 @@
-$NetBSD: patch-ab,v 1.4 2008/05/28 12:10:26 dsainty Exp $
+$NetBSD: patch-ab,v 1.5 2008/06/06 07:45:56 dsainty Exp $
 
 Purge the unnecessary complication of PID_FORMAT, and add NetBSD support.  Use
 OSS for sound for NetBSD, because the Sun support is a bit too Sun-centric.
 
---- xbsndsrv.c.orig	2005-03-09 06:27:15.000000000 +1300
-+++ xbsndsrv.c	2006-05-06 19:09:29.000000000 +1200
-@@ -44,9 +44,7 @@
- #include <sys/ioctl.h>
- #include <sys/time.h>
+--- xbsndsrv.c.orig	2008-05-29 03:32:37.000000000 +1200
++++ xbsndsrv.c	2008-05-29 03:37:13.000000000 +1200
+@@ -48,8 +48,6 @@
  
--#ifdef __sun__
+ #ifdef __sun__
+ 
 -/* format for pids on sun */
 -#define PID_FORMAT "%lu"
-+#if defined(__sun__)
  /* needed for bzero(), open()*/
  #include <strings.h>
  #include <fcntl.h>
-@@ -58,11 +56,9 @@
- #include <sys/stropts.h>
- #endif
+@@ -63,8 +61,6 @@
+ 
  #else
+ 
 -/* format for pids, non-sun */
 -#define PID_FORMAT "%u"
  /* non-sun audio includes */
--#ifdef __FreeBSD__
--#include <machine/soundcard.h>
-+#if defined(__DragonFly__) || defined(__FreeBSD__) || defined(__NetBSD__)
-+#include <sys/soundcard.h>
- #else
- #include <linux/soundcard.h>
- #endif
-@@ -499,18 +495,18 @@
-   ptr=fopen(userPath ,"r+");
-   if(ptr==NULL){
-     ptr=fopen(userPath ,"w+");
--    sprintf(tmp, PID_FORMAT, getpid());
-+    sprintf(tmp, "%u", (unsigned int)getpid());
-     fwrite(tmp,1,strlen(tmp),ptr);
-     fclose(ptr);
-     return 0;
+ #ifdef HAVE_SYS_SOUNDCARD_H
+ #include <sys/soundcard.h>
+@@ -550,17 +546,17 @@
+ 	ptr = fopen (userPath, "r+");
+ 	if (ptr == NULL) {
+ 		ptr = fopen (userPath, "w+");
+-		sprintf (tmp, PID_FORMAT, getpid ());
++		sprintf (tmp, "%u", (unsigned int)getpid ());
+ 		fwrite (tmp, 1, strlen (tmp), ptr);
+ 		fclose (ptr);
+ 		return 0;
  
-   }
--  fscanf(ptr, PID_FORMAT, &pid);
--  fprintf(stderr," "PID_FORMAT" \n",pid);
-+  fscanf(ptr, "%u", &pid);
-+  fprintf(stderr," %u \n", pid);
-   if(kill(pid,0)==-1 || pid<=0)
-     {
-       fseek(ptr,0,SEEK_SET);
--      sprintf(tmp, PID_FORMAT, getpid());
-+      sprintf(tmp, "%u", (unsigned int)getpid());
-       fwrite(tmp,1,strlen(tmp),ptr);
-       fclose(ptr);
-       return 0;
+ 	}
+-	fscanf (ptr, PID_FORMAT, &pid);
+-	fprintf (stderr, " " PID_FORMAT " \n", pid);
++	fscanf (ptr, "%u", &pid);
++	fprintf (stderr, " %u \n", pid);
+ 	if (kill (pid, 0) == -1 || pid <= 0) {
+ 		fseek (ptr, 0, SEEK_SET);
+-		sprintf (tmp, PID_FORMAT, getpid ());
++		sprintf (tmp, "%u", (unsigned int)getpid ());
+ 		fwrite (tmp, 1, strlen (tmp), ptr);
+ 		fclose (ptr);
+ 		return 0;
