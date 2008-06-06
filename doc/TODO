@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7310 2008/06/06 03:31:24 taca Exp $
+$NetBSD: TODO,v 1.7311 2008/06/06 07:47:22 dsainty Exp $
 
 Suggested new packages
 ======================
@@ -1326,7 +1326,6 @@ Suggested package updates
 	o xanalyser-1.30
 	o xbindkeys-1.8.2
 	o xbindkeys-tk-1.8.0
-	o xblast-2.10.4
 	o xchm-1.14
 	o xcircuit-3.6.85
 	o xdaliclock-2.25
