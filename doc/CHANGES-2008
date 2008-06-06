@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1236 2008/06/06 03:07:09 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1237 2008/06/06 07:47:22 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2088,3 +2088,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/ikiwiki to 2.4.8 [reed 2008-06-05]
 	Updated textproc/glimpse to 4.18.5 [ghen 2008-06-05]
 	Updated graphics/GraphicsMagick to 1.2.3 [obache 2008-06-06]
+	Updated games/xblast to 2.10.4 [dsainty 2008-06-06]
