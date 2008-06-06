@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common_end,v 1.3 2008/05/10 09:06:00 taca Exp $
+@comment $NetBSD: PLIST.common_end,v 1.4 2008/06/06 16:08:07 taca Exp $
 @dirrm ${ZOPE_BASE}/lib/python/wicked/testing
 @dirrm ${ZOPE_BASE}/lib/python/wicked/plone
 @dirrm ${ZOPE_BASE}/lib/python/wicked/fieldevent
@@ -16,6 +16,8 @@
 @dirrm ${ZOPE_BASE}/lib/python/plone/session/plugins
 @dirrm ${ZOPE_BASE}/lib/python/plone/session
 @dirrm ${ZOPE_BASE}/lib/python/plone/protect/tests
+@dirrm ${ZOPE_BASE}/lib/python/plone/protect/profiles/default
+@dirrm ${ZOPE_BASE}/lib/python/plone/protect/profiles
 @dirrm ${ZOPE_BASE}/lib/python/plone/protect
 @dirrm ${ZOPE_BASE}/lib/python/plone/portlets
 @dirrm ${ZOPE_BASE}/lib/python/plone/portlet/static/tests
@@ -27,7 +29,6 @@
 @dirrm ${ZOPE_BASE}/lib/python/plone/portlet/collection/profiles
 @dirrm ${ZOPE_BASE}/lib/python/plone/portlet/collection
 @dirrm ${ZOPE_BASE}/lib/python/plone/portlet
-@dirrm ${ZOPE_BASE}/lib/python/plone/protect
 @dirrm ${ZOPE_BASE}/lib/python/plone/openid/www
 @dirrm ${ZOPE_BASE}/lib/python/plone/openid/tests
 @dirrm ${ZOPE_BASE}/lib/python/plone/openid/plugins
@@ -36,6 +37,8 @@
 @dirrm ${ZOPE_BASE}/lib/python/plone/locking/browser
 @dirrm ${ZOPE_BASE}/lib/python/plone/locking
 @dirrm ${ZOPE_BASE}/lib/python/plone/keyring/tests
+@dirrm ${ZOPE_BASE}/lib/python/plone/keyring/profiles/default
+@dirrm ${ZOPE_BASE}/lib/python/plone/keyring/profiles
 @dirrm ${ZOPE_BASE}/lib/python/plone/keyring
 @dirrm ${ZOPE_BASE}/lib/python/plone/intelligenttext
 @dirrm ${ZOPE_BASE}/lib/python/plone/i18n/normalizer/tests
@@ -661,6 +664,7 @@
 @dirrm ${PLONE_BASE}/CMFPlone/profiles/default
 @dirrm ${PLONE_BASE}/CMFPlone/profiles
 @dirrm ${PLONE_BASE}/CMFPlone/patches
+@dirrm ${PLONE_BASE}/CMFPlone/migrations/v3_1/profiles/three11_three12
 @dirrm ${PLONE_BASE}/CMFPlone/migrations/v3_1/profiles/three0_beta1
 @dirrm ${PLONE_BASE}/CMFPlone/migrations/v3_1/profiles
 @dirrm ${PLONE_BASE}/CMFPlone/migrations/v3_1
