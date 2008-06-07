@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2008/05/08 13:28:39 jlam Exp $
+# $NetBSD: Makefile,v 1.37 2008/06/07 16:02:21 joerg Exp $
 
 DISTNAME=	freetds-0.82
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	ftp://ftp.ibiblio.org/pub/Linux/ALPHA/freetds/stable/ \
 		ftp://ftp.ibiblio.org/pub/Linux/ALPHA/freetds/old/ \
