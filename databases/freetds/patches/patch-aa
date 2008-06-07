@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.7 2008/06/07 16:02:21 joerg Exp $
+
+--- include/tds.h.orig	2008-06-07 17:28:34.000000000 +0200
++++ include/tds.h
+@@ -36,6 +36,10 @@ typedef struct tds_socket TDSSOCKET;
+ #include "tds_sysdep_private.h"
+ #endif /* _FREETDS_LIBRARY_SOURCE */
+ 
++#if defined(__GNUC__) && __GNUC__ >= 4
++#pragma GCC visibility push(default)
++#endif
++
+ #ifdef __cplusplus
+ extern "C"
+ {
+@@ -1606,4 +1610,8 @@ TDSAUTHENTICATION * tds_gss_get_auth(TDS
+ }
+ #endif
+ 
++#if defined(__GNUC__) && __GNUC__ >= 4
++#pragma GCC visibility pop
++#endif
++
+ #endif /* _tds_h_ */
