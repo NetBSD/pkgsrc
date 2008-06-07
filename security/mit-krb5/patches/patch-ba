@@ -1,7 +1,7 @@
 $NetBSD$
 
---- src/kadmin/server/server_stubs.c.orig	2004-08-20 20:45:30.000000000 +0200
-+++ src/kadmin/server/server_stubs.c
+--- kadmin/server/server_stubs.c.orig	2004-08-20 20:45:30.000000000 +0200
++++ kadmin/server/server_stubs.c
 @@ -14,6 +14,7 @@
  #include <arpa/inet.h>  /* inet_ntoa */
  #include <krb5/adm_proto.h>  /* krb5_klog_syslog */
@@ -570,7 +570,7 @@ $NetBSD$
 +     slen = service_name.length;
 +     trunc_name(&slen, &sdots);
 +     krb5_klog_syslog(LOG_NOTICE, "Request: %s, %.*s%s, %s, "
-+	    client=%.*s%s, service=%.*s%s, addr=%s, flavor=%d",
++	    "client=%.*s%s, service=%.*s%s, addr=%s, flavor=%d",
  	    (ret.api_version == KADM5_API_VERSION_1 ?
  	     "kadm5_init (V1)" : "kadm5_init"),
 -	    client_name.value,

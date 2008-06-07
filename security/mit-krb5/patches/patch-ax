@@ -1,7 +1,7 @@
 $NetBSD$
 
---- src/kadmin/server/ovsec_kadmd.c.orig	2004-09-21 20:20:16.000000000 +0200
-+++ src/kadmin/server/ovsec_kadmd.c
+--- kadmin/server/ovsec_kadmd.c.orig	2004-09-21 20:20:16.000000000 +0200
++++ kadmin/server/ovsec_kadmd.c
 @@ -952,13 +952,25 @@ void log_badverf(gss_name_t client_name,
       rpcproc_t proc;
       int i;
@@ -11,7 +11,8 @@ $NetBSD$
  
       (void) gss_display_name(&minor, client_name, &client, &gss_type);
       (void) gss_display_name(&minor, server_name, &server, &gss_type);
-      if (client.value == NULL)
+-     if (client.value == NULL)
++     if (client.value == NULL) {
  	 client.value = "(null)";
 -     if (server.value == NULL)
 +	 clen = sizeof("(null)") -1;
