@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2008/05/26 12:29:24 wiz Exp $
+# $NetBSD: Makefile,v 1.51 2008/06/07 17:28:11 riz Exp $
 
 DISTNAME=	asterisk-1.2.27
 #PKGREVISION=	2
@@ -6,7 +6,7 @@ CATEGORIES=	comms net audio
 MASTER_SITES=	http://ftp.digium.com/pub/asterisk/ \
 		http://ftp.digium.com/pub/asterisk/old-releases/
 
-MAINTAINER=	riz@NetBSD.org
+MAINTAINER=	packages@NetBSD.org
 HOMEPAGE=	http://www.asterisk.org/
 COMMENT=	The Asterisk Software PBX
 
