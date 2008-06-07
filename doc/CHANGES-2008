@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1239 2008/06/07 11:16:20 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1240 2008/06/07 18:36:57 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2091,3 +2091,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/xblast to 2.10.4 [dsainty 2008-06-06]
 	Updated www/plone3 to 3.1.2 [taca 2008-06-06]
 	Updated parallel/clusterit to 2.5nb1 [obache 2008-06-07]
+	Updated security/mit-krb5 to 1.4.2nb5 [tonnerre 2008-06-07]
