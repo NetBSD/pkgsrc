@@ -167,15 +167,53 @@ $NetBSD$
      }
      free_server_handle(handle);
      free(prime_arg);
-@@ -510,17 +556,14 @@ rename_principal_1_svc(rprinc_arg *arg, 
+@@ -466,12 +512,13 @@ rename_principal_1_svc(rprinc_arg *arg, 
+     static generic_ret		ret;
+     char			*prime_arg1,
+ 				*prime_arg2;
+-    char			prime_arg[BUFSIZ];
+     gss_buffer_desc		client_name,
+ 				service_name;
+     OM_uint32			minor_stat;
+     kadm5_server_handle_t	handle;
+     restriction_t		*rp;
++    size_t tlen1, tlen2, clen, slen;
++    char *tdots1, *tdots2, *cdots, *sdots;
+ 
+     xdr_free(xdr_generic_ret, &ret);
+ 
+@@ -492,7 +539,14 @@ rename_principal_1_svc(rprinc_arg *arg, 
+ 	 ret.code = KADM5_BAD_PRINCIPAL;
+ 	 return &ret;
+     }
+-    sprintf(prime_arg, "%s to %s", prime_arg1, prime_arg2);
++    tlen1 = strlen(prime_arg1);
++    trunc_name(&tlen1, &tdots1);
++    tlen2 = strlen(prime_arg2);
++    trunc_name(&tlen2, &tdots2);
++    clen = client_name.length;
++    trunc_name(&clen, &cdots);
++    slen = service_name.length;
++    trunc_name(&slen, &sdots);
+ 
+     ret.code = KADM5_OK;
+     if (! CHANGEPW_SERVICE(rqstp)) {
+@@ -510,17 +564,29 @@ rename_principal_1_svc(rprinc_arg *arg, 
      } else
  	 ret.code = KADM5_AUTH_INSUFFICIENT;
      if (ret.code != KADM5_OK) {
 -	 krb5_klog_syslog(LOG_NOTICE, LOG_UNAUTH, "kadm5_rename_principal",
 -		prime_arg, client_name.value, service_name.value,
 -		inet_ntoa(rqstp->rq_xprt->xp_raddr.sin_addr));
-+	 log_unauth("kadm5_rename_principal", prime_arg,
-+		    &client_name, &service_name, rqstp);
++	 krb5_klog_syslog(LOG_NOTICE,
++			  "Unauthorized request: kadm5_rename_principal, "
++			  "%.*s%s to %.*s%s, "
++			  "client=%.*s%s, service=%.*s%s, addr=%s",
++			  tlen1, prime_arg1, tdots1,
++			  tlen2, prime_arg2, tdots2,
++			  clen, client_name.value, cdots,
++			  slen, service_name.value, sdots,
++			  inet_ntoa(rqstp->rq_xprt->xp_raddr.sin_addr));
      } else {
  	 ret.code = kadm5_rename_principal((void *)handle, arg->src,
  						arg->dest);
@@ -184,13 +222,21 @@ $NetBSD$
 -			    error_message(ret.code)), 
 -		client_name.value, service_name.value,
 -		inet_ntoa(rqstp->rq_xprt->xp_raddr.sin_addr));
-+	 log_done("kadm5_rename_principal", prime_arg,
-+		  ((ret.code == 0) ? "success" : error_message(ret.code)),
-+		  &client_name, &service_name, rqstp);
++	 krb5_klog_syslog(LOG_NOTICE,
++			  "Request: kadm5_rename_principal, "
++			  "%.*s%s to %.*s%s, %s, "
++			  "client=%.*s%s, service=%.*s%s, addr=%s",
++			  tlen1, prime_arg1, tdots1,
++			  tlen2, prime_arg2, tdots2,
++		  	  ((ret.code == 0) ? "success" :
++				error_message(ret.code)),
++			  clen, client_name.value, cdots,
++			  slen, service_name.value, sdots,
++			  inet_ntoa(rqstp->rq_xprt->xp_raddr.sin_addr));
      }
      free_server_handle(handle);
      free(prime_arg1);
-@@ -572,9 +615,8 @@ get_principal_1_svc(gprinc_arg *arg, str
+@@ -572,9 +638,8 @@ get_principal_1_svc(gprinc_arg *arg, str
  					       arg->princ,
  					       NULL))) {
  	 ret.code = KADM5_AUTH_GET;
@@ -202,7 +248,7 @@ $NetBSD$
      } else {
  	 if (handle->api_version == KADM5_API_VERSION_1) {
  	      ret.code  = kadm5_get_principal_v1((void *)handle,
-@@ -588,12 +630,10 @@ get_principal_1_svc(gprinc_arg *arg, str
+@@ -588,12 +653,10 @@ get_principal_1_svc(gprinc_arg *arg, str
  					      arg->princ, &ret.rec,
  					      arg->mask);
  	 }
@@ -219,7 +265,7 @@ $NetBSD$
      }
      free_server_handle(handle);
      free(prime_arg);
-@@ -638,18 +678,15 @@ get_princs_1_svc(gprincs_arg *arg, struc
+@@ -638,18 +701,15 @@ get_princs_1_svc(gprincs_arg *arg, struc
  					      NULL,
  					      NULL)) {
  	 ret.code = KADM5_AUTH_LIST;
@@ -242,7 +288,7 @@ $NetBSD$
      }
      free_server_handle(handle);
      gss_release_buffer(&minor_stat, &client_name);
-@@ -697,18 +734,15 @@ chpass_principal_1_svc(chpass_arg *arg, 
+@@ -697,18 +757,15 @@ chpass_principal_1_svc(chpass_arg *arg, 
  	 ret.code = kadm5_chpass_principal((void *)handle, arg->princ,
  						arg->pass);
      } else {
@@ -266,7 +312,7 @@ $NetBSD$
      }
  
      free_server_handle(handle);
-@@ -764,18 +798,15 @@ chpass_principal3_1_svc(chpass3_arg *arg
+@@ -764,18 +821,15 @@ chpass_principal3_1_svc(chpass3_arg *arg
  					     arg->ks_tuple,
  					     arg->pass);
      } else {
@@ -290,7 +336,7 @@ $NetBSD$
      }
  
      free_server_handle(handle);
-@@ -822,18 +853,15 @@ setv4key_principal_1_svc(setv4key_arg *a
+@@ -822,18 +876,15 @@ setv4key_principal_1_svc(setv4key_arg *a
  	 ret.code = kadm5_setv4key_principal((void *)handle, arg->princ,
  					     arg->keyblock);
      } else {
@@ -314,7 +360,7 @@ $NetBSD$
      }
  
      free_server_handle(handle);
-@@ -880,18 +908,15 @@ setkey_principal_1_svc(setkey_arg *arg, 
+@@ -880,18 +931,15 @@ setkey_principal_1_svc(setkey_arg *arg, 
  	 ret.code = kadm5_setkey_principal((void *)handle, arg->princ,
  					   arg->keyblocks, arg->n_keys);
      } else {
@@ -338,7 +384,7 @@ $NetBSD$
      }
  
      free_server_handle(handle);
-@@ -941,18 +966,15 @@ setkey_principal3_1_svc(setkey3_arg *arg
+@@ -941,18 +989,15 @@ setkey_principal3_1_svc(setkey3_arg *arg
  					     arg->ks_tuple,
  					     arg->keyblocks, arg->n_keys);
      } else {
@@ -362,7 +408,7 @@ $NetBSD$
      }
  
      free_server_handle(handle);
-@@ -1008,9 +1030,8 @@ chrand_principal_1_svc(chrand_arg *arg, 
+@@ -1008,9 +1053,8 @@ chrand_principal_1_svc(chrand_arg *arg, 
  	 ret.code = kadm5_randkey_principal((void *)handle, arg->princ,
  					    &k, &nkeys);
      } else {
@@ -374,7 +420,7 @@ $NetBSD$
  	 ret.code = KADM5_AUTH_CHANGEPW;
      }
  
-@@ -1025,11 +1046,9 @@ chrand_principal_1_svc(chrand_arg *arg, 
+@@ -1025,11 +1069,9 @@ chrand_principal_1_svc(chrand_arg *arg, 
      }
  
      if(ret.code != KADM5_AUTH_CHANGEPW) {
@@ -389,7 +435,7 @@ $NetBSD$
      }
      free_server_handle(handle);
      free(prime_arg);
-@@ -1090,9 +1109,8 @@ chrand_principal3_1_svc(chrand3_arg *arg
+@@ -1090,9 +1132,8 @@ chrand_principal3_1_svc(chrand3_arg *arg
  					      arg->ks_tuple,
  					      &k, &nkeys);
      } else {
@@ -401,7 +447,7 @@ $NetBSD$
  	 ret.code = KADM5_AUTH_CHANGEPW;
      }
  
-@@ -1107,11 +1125,9 @@ chrand_principal3_1_svc(chrand3_arg *arg
+@@ -1107,11 +1148,9 @@ chrand_principal3_1_svc(chrand3_arg *arg
      }
  
      if(ret.code != KADM5_AUTH_CHANGEPW) {
@@ -416,7 +462,7 @@ $NetBSD$
      }
      free_server_handle(handle);
      free(prime_arg);
-@@ -1152,18 +1168,15 @@ create_policy_1_svc(cpol_arg *arg, struc
+@@ -1152,18 +1191,15 @@ create_policy_1_svc(cpol_arg *arg, struc
  					      rqst2name(rqstp),
  					      ACL_ADD, NULL, NULL)) {
  	 ret.code = KADM5_AUTH_ADD;
@@ -441,7 +487,7 @@ $NetBSD$
      }
      free_server_handle(handle);
      gss_release_buffer(&minor_stat, &client_name);
-@@ -1202,17 +1215,15 @@ delete_policy_1_svc(dpol_arg *arg, struc
+@@ -1202,17 +1238,15 @@ delete_policy_1_svc(dpol_arg *arg, struc
      if (CHANGEPW_SERVICE(rqstp) || !kadm5int_acl_check(handle->context,
  					      rqst2name(rqstp),
  					      ACL_DELETE, NULL, NULL)) {
@@ -465,7 +511,7 @@ $NetBSD$
      }
      free_server_handle(handle);
      gss_release_buffer(&minor_stat, &client_name);
-@@ -1251,18 +1262,16 @@ modify_policy_1_svc(mpol_arg *arg, struc
+@@ -1251,18 +1285,16 @@ modify_policy_1_svc(mpol_arg *arg, struc
      if (CHANGEPW_SERVICE(rqstp) || !kadm5int_acl_check(handle->context,
  					      rqst2name(rqstp),
  					      ACL_MODIFY, NULL, NULL)) {
@@ -490,7 +536,7 @@ $NetBSD$
      }
      free_server_handle(handle);
      gss_release_buffer(&minor_stat, &client_name);
-@@ -1337,15 +1346,13 @@ get_policy_1_svc(gpol_arg *arg, struct s
+@@ -1337,15 +1369,13 @@ get_policy_1_svc(gpol_arg *arg, struct s
  					  &ret.rec);
  	 }
  	 
@@ -512,7 +558,7 @@ $NetBSD$
      }
      free_server_handle(handle);
      gss_release_buffer(&minor_stat, &client_name);
-@@ -1388,18 +1395,15 @@ get_pols_1_svc(gpols_arg *arg, struct sv
+@@ -1388,18 +1418,15 @@ get_pols_1_svc(gpols_arg *arg, struct sv
  					      rqst2name(rqstp),
  					      ACL_LIST, NULL, NULL)) {
  	 ret.code = KADM5_AUTH_LIST;
@@ -536,7 +582,7 @@ $NetBSD$
      }
      free_server_handle(handle);
      gss_release_buffer(&minor_stat, &client_name);
-@@ -1432,11 +1436,9 @@ getprivs_ret * get_privs_1_svc(krb5_ui_4
+@@ -1432,11 +1459,9 @@ getprivs_ret * get_privs_1_svc(krb5_ui_4
       }
  
       ret.code = kadm5_get_privs((void *)handle, &ret.privs);
@@ -551,7 +597,7 @@ $NetBSD$
       free_server_handle(handle);
       gss_release_buffer(&minor_stat, &client_name);
       gss_release_buffer(&minor_stat, &service_name);
-@@ -1450,6 +1452,8 @@ generic_ret *init_1_svc(krb5_ui_4 *arg, 
+@@ -1450,6 +1475,8 @@ generic_ret *init_1_svc(krb5_ui_4 *arg, 
  	 			service_name;
       kadm5_server_handle_t	handle;
       OM_uint32			minor_stat;
@@ -560,7 +606,7 @@ $NetBSD$
  
       xdr_free(xdr_generic_ret, &ret);
  
-@@ -1466,12 +1470,18 @@ generic_ret *init_1_svc(krb5_ui_4 *arg, 
+@@ -1466,12 +1493,18 @@ generic_ret *init_1_svc(krb5_ui_4 *arg, 
  	  return &ret;
       }
  
