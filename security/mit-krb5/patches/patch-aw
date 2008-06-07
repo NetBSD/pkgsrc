@@ -1,8 +1,8 @@
 $NetBSD$
 
---- src/kdc/do_tgs_req.c.orig	2005-07-12 22:59:51.000000000 +0200
-+++ src/kdc/do_tgs_req.c
-@@ -490,27 +490,40 @@ tgt_again:
+--- kdc/do_tgs_req.c.orig	2005-07-12 22:59:51.000000000 +0200
++++ kdc/do_tgs_req.c
+@@ -490,27 +490,38 @@ tgt_again:
  	newtransited = 1;
      }
      if (!isflagset (request->kdc_options, KDC_OPT_DISABLE_TRANSITED_CHECK)) {
@@ -33,7 +33,6 @@ $NetBSD$
 +			      enc_tkt_reply.transited.tr_contents.data,
 +			      tdots);
 +	else {
-+	    char *emsg = krb5_get_error_message(kdc_context, errcode);
  	    krb5_klog_syslog (LOG_ERR,
 -			      "unexpected error checking transit from '%s' to '%s' via '%.*s': %s",
 +			      "unexpected error checking transit from "
@@ -44,13 +43,12 @@ $NetBSD$
 +			      tlen,
  			      enc_tkt_reply.transited.tr_contents.data,
 -			      error_message (errcode));
-+			      tdots, emsg);
-+	    krb5_free_error_message(kdc_context, emsg);
++			      tdots, error_message (errcode));
 +	}
      } else
  	krb5_klog_syslog (LOG_INFO, "not checking transit path");
      if (reject_bad_transit
-@@ -538,6 +551,9 @@ tgt_again:
+@@ -538,6 +549,9 @@ tgt_again:
  	if (!krb5_principal_compare(kdc_context, request->server, client2)) {
  		if ((errcode = krb5_unparse_name(kdc_context, client2, &tmp)))
  			tmp = 0;
@@ -60,7 +58,7 @@ $NetBSD$
  		krb5_klog_syslog(LOG_INFO,
  				 "TGS_REQ %s: 2ND_TKT_MISMATCH: "
  				 "authtime %d, %s for %s, 2nd tkt client %s",
-@@ -800,6 +816,7 @@ find_alternate_tgs(krb5_kdc_req *request
+@@ -800,6 +814,7 @@ find_alternate_tgs(krb5_kdc_req *request
  		krb5_klog_syslog(LOG_INFO,
  		       "TGS_REQ: issuing alternate <un-unparseable> TGT");
  	    } else {
