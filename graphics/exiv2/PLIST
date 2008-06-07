@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2008/01/16 07:54:01 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/06/07 23:28:35 gdt Exp $
 bin/exiv2
 include/exiv2/basicio.hpp
+include/exiv2/bmpimage.hpp
 include/exiv2/canonmn.hpp
+include/exiv2/convert.hpp
 include/exiv2/cr2image.hpp
 include/exiv2/crwimage.hpp
 include/exiv2/datasets.hpp
@@ -11,9 +13,11 @@ include/exiv2/exv_conf.h
 include/exiv2/exv_msvc.h
 include/exiv2/fujimn.hpp
 include/exiv2/futils.hpp
+include/exiv2/gifimage.hpp
 include/exiv2/ifd.hpp
 include/exiv2/image.hpp
 include/exiv2/iptc.hpp
+include/exiv2/jp2image.hpp
 include/exiv2/jpgimage.hpp
 include/exiv2/makernote.hpp
 include/exiv2/makernote2.hpp
@@ -29,11 +33,13 @@ include/exiv2/pentaxmn.hpp
 include/exiv2/pngchunk.hpp
 include/exiv2/pngimage.hpp
 include/exiv2/properties.hpp
+include/exiv2/psdimage.hpp
 include/exiv2/rafimage.hpp
 include/exiv2/rcsid.hpp
 include/exiv2/sigmamn.hpp
 include/exiv2/sonymn.hpp
 include/exiv2/tags.hpp
+include/exiv2/tgaimage.hpp
 include/exiv2/tiffcomposite.hpp
 include/exiv2/tifffwd.hpp
 include/exiv2/tiffimage.hpp
@@ -43,6 +49,7 @@ include/exiv2/types.hpp
 include/exiv2/value.hpp
 include/exiv2/version.hpp
 include/exiv2/xmp.hpp
+include/exiv2/xmpsidecar.hpp
 lib/libexiv2.la
 lib/pkgconfig/exiv2.pc
 man/man1/exiv2.1
@@ -52,4 +59,5 @@ share/locale/fi/LC_MESSAGES/exiv2.mo
 share/locale/fr/LC_MESSAGES/exiv2.mo
 share/locale/pl/LC_MESSAGES/exiv2.mo
 share/locale/ru/LC_MESSAGES/exiv2.mo
+share/locale/sk/LC_MESSAGES/exiv2.mo
 @dirrm include/exiv2
