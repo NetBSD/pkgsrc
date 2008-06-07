@@ -1,7 +1,7 @@
 $NetBSD$
 
---- src/kadmin/server/schpw.c.orig	2004-10-28 00:12:48.000000000 +0200
-+++ src/kadmin/server/schpw.c
+--- kadmin/server/schpw.c.orig	2004-10-28 00:12:48.000000000 +0200
++++ kadmin/server/schpw.c
 @@ -41,6 +41,8 @@ process_chpw_request(context, server_han
      int numresult;
      char strresult[1024];
@@ -22,7 +22,7 @@ $NetBSD$
  		     inet_ntoa(((struct sockaddr_in *)&remote_addr)->sin_addr),
 -		     clientstr, ret ? error_message(ret) : "success");
 +		     clen, clientstr, cdots,
-+		     ret ? krb5_get_error_message (context, ret) : "success");
++		     ret ? error_message(ret) : "success");
      krb5_free_unparsed_name(context, clientstr);
  
      if (ret) {

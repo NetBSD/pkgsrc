@@ -1,7 +1,7 @@
 $NetBSD$
 
---- src/kdc/kdc_util.c.orig	2004-02-13 05:20:56.000000000 +0100
-+++ src/kdc/kdc_util.c
+--- kdc/kdc_util.c.orig	2004-02-13 05:20:56.000000000 +0100
++++ kdc/kdc_util.c
 @@ -404,6 +404,7 @@ kdc_get_server_key(krb5_ticket *ticket, 
  
  	krb5_db_free_principal(kdc_context, &server, nprincs);

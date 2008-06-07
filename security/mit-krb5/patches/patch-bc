@@ -1,7 +1,7 @@
 $NetBSD$
 
---- src/kadmin/server/misc.c.orig	2004-10-29 01:41:10.000000000 +0200
-+++ src/kadmin/server/misc.c
+--- kadmin/server/misc.c.orig	2004-10-29 01:41:10.000000000 +0200
++++ kadmin/server/misc.c
 @@ -149,3 +149,12 @@ check_min_life(void *server_handle, krb5
  
      return kadm5_free_principal_ent(handle->lhandle, &princ);
