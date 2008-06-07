@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/02/14 21:56:55 reed Exp $
+# $NetBSD: Makefile,v 1.22 2008/06/07 17:28:11 riz Exp $
 
 DISTNAME=		vnc-4_1_2-unixsrc
 PKGNAME=		vncviewer-4.1.2
@@ -6,7 +6,7 @@ PKGREVISION=		1
 CATEGORIES=		net x11
 MASTER_SITES=		http://www.realvnc.com/dist/
 
-MAINTAINER=		riz@NetBSD.org
+MAINTAINER=		packages@NetBSD.org
 HOMEPAGE=		http://www.realvnc.com/
 COMMENT=		Viewer for remote X and Win32 VNC servers
 
