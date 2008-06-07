@@ -1,7 +1,7 @@
 $NetBSD$
 
---- src/lib/gssapi/krb5/k5unseal.c.orig	2004-04-13 22:00:19.000000000 +0200
-+++ src/lib/gssapi/krb5/k5unseal.c
+--- lib/gssapi/krb5/k5unseal.c.orig	2004-04-13 22:00:19.000000000 +0200
++++ lib/gssapi/krb5/k5unseal.c
 @@ -457,8 +457,11 @@ kg_unseal_v1(context, minor_status, ctx,
  
      if ((ctx->initiate && direction != 0xff) ||
