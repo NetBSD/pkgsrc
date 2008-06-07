@@ -1,0 +1,10 @@
+$NetBSD$
+
+--- src/kadmin/server/misc.h.orig	2004-10-28 00:12:48.000000000 +0200
++++ src/kadmin/server/misc.h
+@@ -44,3 +44,5 @@ krb5_error_code process_chpw_request(krb
+ #ifdef SVC_GETARGS
+ void  kadm_1(struct svc_req *, SVCXPRT *);
+ #endif
++
++void trunc_name(size_t *len, char **dots);
