@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1244 2008/06/08 04:53:56 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1245 2008/06/08 05:24:20 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2095,3 +2095,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/konversation to 1.0.1nb8 [tonnerre 2008-06-08]
 	Updated archivers/star to 1.4.3nb4 [tonnerre 2008-06-08]
 	Updated net/ntp4 to 4.2.4p4 [obache 2008-06-08]
+	Updated x11/xfd to 1.0.1nb1 [taca 2008-06-08]
