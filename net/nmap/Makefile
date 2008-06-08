@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.58 2008/01/18 05:08:46 tnn Exp $
+# $NetBSD: Makefile,v 1.59 2008/06/08 18:12:52 adrianp Exp $
 #
 
-DISTNAME=	nmap-4.20
-PKGREVISION=	1
+DISTNAME=	nmap-4.65
 CATEGORIES=	net security
-MASTER_SITES=	http://insecure.org/nmap/dist/
+MASTER_SITES=	http://download.insecure.org/nmap/dist/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	salo@NetBSD.org
+MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://insecure.org/nmap/
 COMMENT=	Network/port scanner with OS detection
 
@@ -24,7 +23,7 @@ USE_TOOLS+=		gmake
 CONFIGURE_ARGS+=	--with-libpcap=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-libpcre=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
-CONFIGURE_ARGS+=	--without-nmapfe
+CONFIGURE_ARGS+=	--without-zenmap
 
 .include "../../mk/bsd.prefs.mk"
 
