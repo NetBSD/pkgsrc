@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2007/12/30 17:25:41 cjep Exp $
+# $NetBSD: Makefile,v 1.21.4.1 2008/06/08 12:46:49 tron Exp $
 #
 
 DISTNAME=	star-1.4.3
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	archivers
 MASTER_SITES=	ftp://ftp.berlios.de/pub/star/
 
