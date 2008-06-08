@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1249 2008/06/08 14:36:37 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1250 2008/06/08 16:29:50 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2100,3 +2100,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated inputmethod/uim-tomoe-gtk to 0.6.0nb1 [obache 2008-06-08]
 	Updated databases/phpmyadmin to 2.11.6 [tron 2008-06-08]
 	Updated x11/rgb to 1.0.3 [bjs 2008-06-08]
+	Updated net/rdesktop to 1.6.0 [tron 2008-06-08]
