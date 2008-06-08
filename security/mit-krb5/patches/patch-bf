@@ -1,0 +1,13 @@
+$NetBSD: patch-bf,v 1.1.2.2 2008/06/08 11:47:13 tron Exp $
+
+--- lib/rpc/svc_auth_gssapi.c.orig	2004-09-17 23:52:11.000000000 +0200
++++ lib/rpc/svc_auth_gssapi.c
+@@ -148,6 +148,8 @@ enum auth_stat gssrpc__svcauth_gssapi(
+      rqst->rq_xprt->xp_auth = &svc_auth_none;
+      
+      memset((char *) &call_res, 0, sizeof(call_res));
++     creds.client_handle.length = 0;
++     creds.client_handle.value = NULL;
+      
+      cred = &msg->rm_call.cb_cred;
+      verf = &msg->rm_call.cb_verf;

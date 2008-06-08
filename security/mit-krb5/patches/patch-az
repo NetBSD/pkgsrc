@@ -1,0 +1,28 @@
+$NetBSD$
+
+--- kadmin/server/schpw.c.orig	2004-10-28 00:12:48.000000000 +0200
++++ kadmin/server/schpw.c
+@@ -41,6 +41,8 @@ process_chpw_request(context, server_han
+     int numresult;
+     char strresult[1024];
+     char *clientstr;
++    size_t clen;
++    char *cdots;
+ 
+     ret = 0;
+     rep->length = 0;
+@@ -259,9 +261,12 @@ process_chpw_request(context, server_han
+     free(ptr);
+     clear.length = 0;
+ 
+-    krb5_klog_syslog(LOG_NOTICE, "chpw request from %s for %s: %s",
++    clen = strlen(clientstr);
++    trunc_name(&clen, &cdots);
++    krb5_klog_syslog(LOG_NOTICE, "chpw request from %s for %.*s%s: %s",
+ 		     inet_ntoa(((struct sockaddr_in *)&remote_addr)->sin_addr),
+-		     clientstr, ret ? error_message(ret) : "success");
++		     clen, clientstr, cdots,
++		     ret ? error_message(ret) : "success");
+     krb5_free_unparsed_name(context, clientstr);
+ 
+     if (ret) {
