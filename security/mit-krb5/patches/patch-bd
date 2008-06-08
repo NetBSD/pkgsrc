@@ -1,0 +1,35 @@
+$NetBSD$
+
+--- lib/kadm5/logger.c.orig	2002-09-18 22:44:13.000000000 +0200
++++ lib/kadm5/logger.c
+@@ -45,7 +45,7 @@
+ #include <varargs.h>
+ #endif	/* HAVE_STDARG_H */
+ 
+-#define	KRB5_KLOG_MAX_ERRMSG_SIZE	1024
++#define	KRB5_KLOG_MAX_ERRMSG_SIZE	2048
+ #ifndef	MAXHOSTNAMELEN
+ #define	MAXHOSTNAMELEN	256
+ #endif	/* MAXHOSTNAMELEN */
+@@ -256,7 +256,9 @@ klog_com_err_proc(const char *whoami, lo
+ #endif	/* HAVE_SYSLOG */
+ 
+     /* Now format the actual message */
+-#if	HAVE_VSPRINTF
++#if	HAVE_VSNPRINTF
++    vsnprintf(cp, sizeof(outbuf) - (cp - outbuf), actual_format, ap);
++#elif	HAVE_VSPRINTF
+     vsprintf(cp, actual_format, ap);
+ #else	/* HAVE_VSPRINTF */
+     sprintf(cp, actual_format, ((int *) ap)[0], ((int *) ap)[1],
+@@ -843,7 +845,9 @@ klog_vsyslog(int priority, const char *f
+     syslogp = &outbuf[strlen(outbuf)];
+ 
+     /* Now format the actual message */
+-#ifdef	HAVE_VSPRINTF
++#ifdef	HAVE_VSNPRINTF
++    vsnprintf(syslogp, sizeof(outbuf) - (syslogp - outbuf), format, arglist);
++#elif	HAVE_VSPRINTF
+     vsprintf(syslogp, format, arglist);
+ #else	/* HAVE_VSPRINTF */
+     sprintf(syslogp, format, ((int *) arglist)[0], ((int *) arglist)[1],
