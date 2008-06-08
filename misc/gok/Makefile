@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2008/06/05 14:32:26 wiz Exp $
+# $NetBSD: Makefile,v 1.57 2008/06/08 10:09:04 wiz Exp $
 #
 
 DISTNAME=		gok-1.3.7
@@ -13,9 +13,10 @@ COMMENT=		GNOME On-Screen Keyboard
 
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake msgfmt pkg-config
-# use the bundled intltool, the pkgsrc one is too new
-#USE_TOOLS+=		intltool
+# XXX: use the bundled intltool, the pkgsrc one is too new
+BUILD_DEPENDS+=		p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 USE_TOOLS+=		perl
+#USE_TOOLS+=		intltool
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
