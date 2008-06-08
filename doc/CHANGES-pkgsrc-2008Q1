@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.75 2008/06/05 12:26:10 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.76 2008/06/08 12:48:24 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -168,3 +168,11 @@ pullup ticket #2413 - requested by markd
 emacs21: Fix for CVE-2008-2142
 pullup ticket #2414 - requested by tonnerre
 openssl: DoS and double free fixes
+Pullup ticket #2416 - requested by obache
+GraphicsMagick: security update
+Pullup ticket #2417 - requested by tonnerre
+mit-krb5: security fixes
+Pullup ticket #2418 - requested by gdt
+exiv2: security fix
+Pullup ticket #2420 - requested by tonnerre
+star: security fix
