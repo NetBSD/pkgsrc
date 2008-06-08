@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/04/12 22:43:02 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/06/08 13:01:48 obache Exp $
 ${PLIST.qt}bin/uim-chardict-qt
 ${PLIST.uim-dict-gtk}bin/uim-dict-gtk
 bin/uim-fep
@@ -6,6 +6,7 @@ bin/uim-fep-tick
 ${PLIST.gtk}bin/uim-im-switcher-gtk
 ${PLIST.qt}bin/uim-im-switcher-qt
 ${PLIST.gtk}bin/uim-input-pad-ja
+${PLIST.m17nlib}bin/uim-m17nlib-relink-icons
 bin/uim-module-manager
 ${PLIST.gtk}bin/uim-pref-gtk
 ${PLIST.qt}bin/uim-pref-qt
@@ -15,14 +16,18 @@ ${PLIST.qt}bin/uim-toolbar-qt
 ${PLIST.gtk}bin/uim-toolbar-gtk-systray
 bin/uim-xim
 include/uim/plugin.h
-include/uim/uim-compat-scm.h
 include/uim/uim-custom.h
 include/uim/uim-helper.h
 include/uim/uim-im-switcher.h
+include/uim/uim-notify.h
+include/uim/uim-posix.h
+include/uim/uim-scm-abbrev.h
 include/uim/uim-scm.h
 include/uim/uim-util.h
 include/uim/uim.h
+${PLIST.gnome}lib/bonobo/servers/GNOME_UimApplet.server
 lib/libuim-custom.la
+lib/libuim-scm.la
 lib/libuim.la
 ${PLIST.gtk}lib/gtk-2.0/2.10.0/immodules/im-uim.la
 ${PLIST.kde}lib/kde3/uim_panelapplet.la
@@ -30,10 +35,17 @@ lib/pkgconfig/uim.pc
 ${PLIST.anthy}lib/uim/plugin/libuim-anthy.la
 ${PLIST.canna}lib/uim/plugin/libuim-canna.la
 lib/uim/plugin/libuim-custom-enabler.la
+lib/uim/plugin/libuim-editline.la
+lib/uim/plugin/libuim-look.la
+${PLIST.m17nlib}lib/uim/plugin/libuim-m17nlib.la
+${PLIST.prime}lib/uim/plugin/libuim-prime.la
+${PLIST.sj3}lib/uim/plugin/libuim-sj3.la
 lib/uim/plugin/libuim-skk.la
+${PLIST.wnn}lib/uim/plugin/libuim-wnn.la
 ${PLIST.gtk}libexec/uim-candwin-gtk
 ${PLIST.qt}libexec/uim-candwin-qt
 libexec/uim-helper-server
+${PLIST.gnome}libexec/uim-toolbar-applet
 man/man1/uim-xim.1
 share/applications/uim.desktop
 share/doc/uim/COMPATIBILITY
@@ -56,6 +68,8 @@ ${PLIST.kde}share/kde/apps/kicker/applets/uimapplet.desktop
 share/uim/action.scm
 share/uim/anthy-custom.scm
 share/uim/anthy-key-custom.scm
+share/uim/anthy-utf8-custom.scm
+share/uim/anthy-utf8.scm
 share/uim/anthy.scm
 share/uim/byeoru-custom.scm
 share/uim/byeoru-dic.scm
@@ -68,7 +82,12 @@ share/uim/canna.scm
 share/uim/custom-rt.scm
 share/uim/custom.scm
 share/uim/default.scm
+share/uim/deprecated-util.scm
 share/uim/direct.scm
+share/uim/editline.scm
+share/uim/elatin-custom.scm
+share/uim/elatin-rules.scm
+share/uim/elatin.scm
 share/uim/generic-custom.scm
 share/uim/generic-key-custom.scm
 share/uim/generic.scm
@@ -78,20 +97,33 @@ share/uim/hangul3.scm
 ${PLIST.qt}share/uim/helperdata/bushu.t
 ${PLIST.uim-dict-gtk}share/uim/helperdata/uim-dict-ui.xml
 share/uim/i18n.scm
+share/uim/ichar.scm
 share/uim/im-custom.scm
 share/uim/im-switcher.scm
 share/uim/im.scm
 share/uim/init.scm
 share/uim/installed-modules.scm
 share/uim/ipa-x-sampa.scm
+share/uim/iso-639-1.scm
 share/uim/japanese-azik.scm
 share/uim/japanese-kana.scm
 share/uim/japanese.scm
 share/uim/key.scm
 share/uim/latin.scm
 share/uim/lazy-load.scm
+share/uim/lib/sigscheme-init.scm
+share/uim/lib/srfi-0.scm
+share/uim/lib/srfi-1.scm
+share/uim/lib/srfi-43.scm
+share/uim/lib/srfi-55.scm
+share/uim/lib/srfi-69.scm
+share/uim/lib/srfi-9.scm
+share/uim/lib/srfi-95.scm
+share/uim/lib/unittest.scm
 share/uim/load-action.scm
 share/uim/loader.scm
+share/uim/look-custom.scm
+share/uim/look.scm
 share/uim/m17nlib.scm
 share/uim/mana-custom.scm
 share/uim/mana-key-custom.scm
@@ -105,6 +137,8 @@ share/uim/pixmaps/direct.png
 share/uim/pixmaps/direct.svg
 share/uim/pixmaps/direct_input.png
 share/uim/pixmaps/direct_input.svg
+share/uim/pixmaps/elatin.png
+share/uim/pixmaps/elatin.svg
 share/uim/pixmaps/hangul2.png
 share/uim/pixmaps/hangul2.svg
 share/uim/pixmaps/hangul3.png
@@ -144,6 +178,96 @@ share/uim/pixmaps/ko_hangulword.png
 share/uim/pixmaps/ko_hangulword.svg
 share/uim/pixmaps/latin.png
 share/uim/pixmaps/latin.svg
+share/uim/pixmaps/look.png
+share/uim/pixmaps/look.svg
+${PLIST.m17nlib}share/uim/pixmaps/m17n-am-sera.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-ar-kbd.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-as-itrans.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-bn-itrans.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-bn-unijoy.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-bo-wylie.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-bopo-kbd.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-cmc-kbd.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-dv-phonetic.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-el-kbd.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-en-ispell.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-fa-isiri.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-gu-itrans.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-he-kbd.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-hi-itrans.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-hi-typewriter.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-hr-kbd.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-hy-kbd.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-ja-anthy.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-ja-tcode.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-ka-kbd.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-kk-arabic.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-kk-kbd.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-km-yannis.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-kn-itrans.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-ko-han2.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-ko-romaja.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-latn-post.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-latn-pre.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-lo-kbd.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-lo-lrt.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-ml-itrans.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-my-kbd.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-or-itrans.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-pa-itrans.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-rfc1345.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-ru-kbd.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-ru-yawerty.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-si-samanala.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-si-wijesekera.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-sk-kbd.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-sr-kbd.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-sv-post.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-syrc-phonetic.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-kk-kbd.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-km-yannis.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-kn-itrans.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-ko-han2.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-ko-romaja.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-latn-post.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-latn-pre.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-lo-kbd.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-lo-lrt.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-ml-itrans.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-my-kbd.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-or-itrans.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-pa-itrans.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-rfc1345.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-ru-kbd.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-ru-yawerty.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-si-samanala.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-si-wijesekera.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-sk-kbd.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-sr-kbd.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-sv-post.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-syrc-phonetic.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-ta-itrans.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-te-itrans.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-th-kesmanee-2.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-th-kesmanee.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-th-pattachote-2.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-th-pattachote.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-th-tis820-2.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-th-tis820.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-unicode.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-vi-tcvn.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-vi-telex.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-vi-viqr.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-vi-vni.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-zh-cangjie.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-zh-pinyin.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-zh-py-b5.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-zh-py-gb.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-zh-py.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-zh-quick.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-zh-tonepy-b5.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-zh-tonepy-gb.png
+${PLIST.m17nlib}share/uim/pixmaps/m17n-zh-tonepy.png
 share/uim/pixmaps/mana.png
 share/uim/pixmaps/mana.svg
 share/uim/pixmaps/null.png
@@ -164,6 +288,8 @@ share/uim/pixmaps/romaja.png
 share/uim/pixmaps/romaja.svg
 share/uim/pixmaps/scim.png
 share/uim/pixmaps/scim.svg
+share/uim/pixmaps/sj3.png
+share/uim/pixmaps/sj3.svg
 share/uim/pixmaps/skk.png
 share/uim/pixmaps/skk.svg
 share/uim/pixmaps/tcode.png
@@ -182,6 +308,8 @@ share/uim/pixmaps/unknown.png
 share/uim/pixmaps/unknown.svg
 share/uim/pixmaps/viqr.png
 share/uim/pixmaps/viqr.svg
+share/uim/pixmaps/wnn.png
+share/uim/pixmaps/wnn.svg
 share/uim/plugin.scm
 share/uim/prime-custom.scm
 share/uim/prime-key-custom.scm
@@ -192,31 +320,40 @@ share/uim/pyunihan.scm
 share/uim/rk.scm
 share/uim/romaja.scm
 share/uim/scim.scm
+share/uim/sj3-custom.scm
+share/uim/sj3-key-custom.scm
+share/uim/sj3.scm
 share/uim/skk-custom.scm
 share/uim/skk-dialog.scm
 share/uim/skk-editor.scm
 share/uim/skk-key-custom.scm
 share/uim/skk.scm
-share/uim/spellcheck-custom.scm
-share/uim/spellcheck.scm
 share/uim/tcode.scm
 share/uim/trycode.scm
+share/uim/tutcode-bushudic.scm
+share/uim/tutcode-custom.scm
 share/uim/tutcode-key-custom.scm
+share/uim/tutcode-rule.scm
 share/uim/tutcode.scm
-share/uim/uim-db.scm
 share/uim/uim-module-manager.scm
 share/uim/uim-sh.scm
 share/uim/ustr.scm
 share/uim/util.scm
 share/uim/viqr.scm
+share/uim/wnn-custom.scm
+share/uim/wnn-key-custom.scm
+share/uim/wnn.scm
 share/uim/zaurus.scm
 ${PLIST.helperdata}@dirrm share/uim/helperdata
+@dirrm share/uim/lib
 @dirrm share/uim/pixmaps
 @dirrm share/uim
 @comment in kde: @dirrm share/kde/apps/kicker/applets
 @dirrm share/doc/uim/uim-fep
 @dirrm share/doc/uim
 @comment in xdg-dirs: @dirrm share/applications
+@exec ${MKDIR} %D/lib/uim/notify
+@dirrm lib/uim/notify
 @dirrm lib/uim/plugin
 @dirrm lib/uim
 @comment in kde: @dirrm lib/kde3
