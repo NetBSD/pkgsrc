@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/04/12 22:43:08 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/06/08 04:53:27 obache Exp $
 bin/ntp-keygen
 bin/ntp-wait
 bin/ntpd
@@ -7,15 +7,63 @@ bin/ntpdc
 bin/ntpq
 ${PLIST.ntptime}bin/ntptime
 bin/ntptrace
+bin/sntp
 ${PLIST.ntptime}bin/tickadj
 ${PLIST.timetrim}bin/timetrim
+man/man1/ntp-keygen.1
+man/man1/ntpd.1
+man/man1/ntpdc.1
+man/man1/ntpdsim.1
+man/man1/ntpq.1
+man/man1/sntp.1
 share/doc/ntp4/accopt.html
 share/doc/ntp4/assoc.html
 share/doc/ntp4/audio.html
 share/doc/ntp4/authopt.html
-share/doc/ntp4/build.html
+share/doc/ntp4/build/build.html
+share/doc/ntp4/build/config.html
+share/doc/ntp4/build/hints.html
+share/doc/ntp4/build/hints/a-ux
+share/doc/ntp4/build/hints/aix
+share/doc/ntp4/build/hints/bsdi
+share/doc/ntp4/build/hints/changes
+share/doc/ntp4/build/hints/decosf1
+share/doc/ntp4/build/hints/decosf2
+share/doc/ntp4/build/hints/freebsd
+share/doc/ntp4/build/hints/hpux
+share/doc/ntp4/build/hints/linux
+share/doc/ntp4/build/hints/mpeix
+share/doc/ntp4/build/hints/${LOWER_OPSYS}
+share/doc/ntp4/build/hints/notes-xntp-v3
+share/doc/ntp4/build/hints/parse
+share/doc/ntp4/build/hints/refclocks
+share/doc/ntp4/build/hints/rs6000
+share/doc/ntp4/build/hints/sco.html
+share/doc/ntp4/build/hints/sgi
+share/doc/ntp4/build/hints/solaris-dosynctodr.html
+share/doc/ntp4/build/hints/solaris.html
+share/doc/ntp4/build/hints/solaris.xtra.4023118
+share/doc/ntp4/build/hints/solaris.xtra.4095849
+share/doc/ntp4/build/hints/solaris.xtra.S99ntpd
+share/doc/ntp4/build/hints/solaris.xtra.patchfreq
+share/doc/ntp4/build/hints/sun4
+share/doc/ntp4/build/hints/svr4-dell
+share/doc/ntp4/build/hints/svr4_package
+share/doc/ntp4/build/hints/todo
+share/doc/ntp4/build/hints/vxworks.html
+share/doc/ntp4/build/hints/winnt.html
+share/doc/ntp4/build/patches.html
+share/doc/ntp4/build/porting.html
+share/doc/ntp4/build/quick.html
+share/doc/ntp4/build/scripts/footer.txt
+share/doc/ntp4/build/scripts/links10.txt
+share/doc/ntp4/build/scripts/links11.txt
+share/doc/ntp4/build/scripts/links12.txt
+share/doc/ntp4/build/scripts/links7.txt
+share/doc/ntp4/build/scripts/links8.txt
+share/doc/ntp4/build/scripts/links9.txt
+share/doc/ntp4/build/scripts/style.css
 share/doc/ntp4/clockopt.html
-share/doc/ntp4/config.html
 share/doc/ntp4/confopt.html
 share/doc/ntp4/copyright.html
 share/doc/ntp4/debug.html
@@ -29,14 +77,13 @@ share/doc/ntp4/drivers/driver19.html
 share/doc/ntp4/drivers/driver2.html
 share/doc/ntp4/drivers/driver20.html
 share/doc/ntp4/drivers/driver22.html
-share/doc/ntp4/drivers/driver23.html
-share/doc/ntp4/drivers/driver24.html
 share/doc/ntp4/drivers/driver26.html
 share/doc/ntp4/drivers/driver27.html
 share/doc/ntp4/drivers/driver28.html
 share/doc/ntp4/drivers/driver29.html
 share/doc/ntp4/drivers/driver3.html
 share/doc/ntp4/drivers/driver30.html
+share/doc/ntp4/drivers/driver31.html
 share/doc/ntp4/drivers/driver32.html
 share/doc/ntp4/drivers/driver33.html
 share/doc/ntp4/drivers/driver34.html
@@ -58,37 +105,12 @@ share/doc/ntp4/drivers/driver9.html
 share/doc/ntp4/drivers/icons/home.gif
 share/doc/ntp4/drivers/icons/mail2.gif
 share/doc/ntp4/drivers/oncore-shmem.html
+share/doc/ntp4/drivers/scripts/footer.txt
+share/doc/ntp4/drivers/scripts/style.css
+share/doc/ntp4/drivers/tf582_4.html
 share/doc/ntp4/extern.html
-share/doc/ntp4/hints.html
-share/doc/ntp4/hints/a-ux
-share/doc/ntp4/hints/aix
-share/doc/ntp4/hints/bsdi
-share/doc/ntp4/hints/changes
-share/doc/ntp4/hints/decosf1
-share/doc/ntp4/hints/decosf2
-share/doc/ntp4/hints/freebsd
-share/doc/ntp4/hints/hpux
-share/doc/ntp4/hints/linux
-share/doc/ntp4/hints/mpeix
-share/doc/ntp4/hints/netbsd
-share/doc/ntp4/hints/notes-xntp-v3
-share/doc/ntp4/hints/parse
-share/doc/ntp4/hints/refclocks
-share/doc/ntp4/hints/rs6000
-share/doc/ntp4/hints/sco.html
-share/doc/ntp4/hints/sgi
-share/doc/ntp4/hints/solaris-dosynctodr.html
-share/doc/ntp4/hints/solaris.html
-share/doc/ntp4/hints/solaris.xtra.4023118
-share/doc/ntp4/hints/solaris.xtra.4095849
-share/doc/ntp4/hints/solaris.xtra.S99ntpd
-share/doc/ntp4/hints/solaris.xtra.patchfreq
-share/doc/ntp4/hints/sun4
-share/doc/ntp4/hints/svr4-dell
-share/doc/ntp4/hints/svr4_package
-share/doc/ntp4/hints/todo
-share/doc/ntp4/hints/vxworks.html
-share/doc/ntp4/hints/winnt.html
+share/doc/ntp4/gadget.html
+share/doc/ntp4/groups.html
 share/doc/ntp4/howto.html
 share/doc/ntp4/icons/home.gif
 share/doc/ntp4/icons/mail2.gif
@@ -103,16 +125,17 @@ share/doc/ntp4/monopt.html
 share/doc/ntp4/msyslog.html
 share/doc/ntp4/mx4200data.html
 share/doc/ntp4/notes.html
+share/doc/ntp4/ntp_conf.html
 share/doc/ntp4/ntpd.html
 share/doc/ntp4/ntpdate.html
 share/doc/ntp4/ntpdc.html
 share/doc/ntp4/ntpdsim.html
+share/doc/ntp4/ntpdsim_new.html
 share/doc/ntp4/ntpq.html
 share/doc/ntp4/ntptime.html
 share/doc/ntp4/ntptrace.html
 share/doc/ntp4/parsedata.html
 share/doc/ntp4/parsenew.html
-share/doc/ntp4/patches.html
 share/doc/ntp4/pic/9400n.jpg
 share/doc/ntp4/pic/alice11.gif
 share/doc/ntp4/pic/alice13.gif
@@ -156,17 +179,15 @@ share/doc/ntp4/pic/pogo4.gif
 share/doc/ntp4/pic/pogo5.gif
 share/doc/ntp4/pic/pogo6.gif
 share/doc/ntp4/pic/pogo8.gif
-share/doc/ntp4/pic/pzf509.jpg
+share/doc/ntp4/pic/pzf511.jpg
 share/doc/ntp4/pic/rabbit.gif
 share/doc/ntp4/pic/radio2.jpg
 share/doc/ntp4/pic/sheepb.jpg
 share/doc/ntp4/pic/stack1a.jpg
 share/doc/ntp4/pic/tonea.gif
 share/doc/ntp4/pic/wingdorothy.gif
-share/doc/ntp4/porting.html
 share/doc/ntp4/pps.html
 share/doc/ntp4/prefer.html
-share/doc/ntp4/quick.html
 share/doc/ntp4/rdebug.html
 share/doc/ntp4/refclock.html
 share/doc/ntp4/release.html
@@ -193,7 +214,10 @@ share/examples/rc.d/ntpdate
 @dirrm share/doc/ntp4/scripts
 @dirrm share/doc/ntp4/pic
 @dirrm share/doc/ntp4/icons
-@dirrm share/doc/ntp4/hints
+@dirrm share/doc/ntp4/drivers/scripts
 @dirrm share/doc/ntp4/drivers/icons
 @dirrm share/doc/ntp4/drivers
+@dirrm share/doc/ntp4/build/scripts
+@dirrm share/doc/ntp4/build/hints
+@dirrm share/doc/ntp4/build
 @dirrm share/doc/ntp4
