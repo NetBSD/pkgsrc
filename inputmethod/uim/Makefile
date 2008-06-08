@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2008/06/02 11:05:03 obache Exp $
+# $NetBSD: Makefile,v 1.33 2008/06/08 13:01:48 obache Exp $
 #
 
-DISTNAME=		uim-1.4.2
+DISTNAME=		uim-1.5.1
 CATEGORIES=		inputmethod
 MASTER_SITES=		http://uim.googlecode.com/files/
 EXTRACT_SUFX=		.tar.bz2
@@ -23,11 +23,6 @@ GNU_CONFIGURE=		YES
 GTK2_IMMODULES=		YES
 CONFIGURE_ARGS+=	--disable-emacs
 CONFIGURE_ARGS+=	--with-libgcroots=installed
-
-# Avoid to install internal sigscheme's header & library with patch-aa.
-# It conflict with lang/sigscheme.
-BUILD_DIRS=		sigscheme .
-INSTALL_DIRS=		.
 
 .include "options.mk"
 
