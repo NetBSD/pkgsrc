@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7311 2008/06/06 07:47:22 dsainty Exp $
+$NetBSD: TODO,v 1.7312 2008/06/08 04:54:28 obache Exp $
 
 Suggested new packages
 ======================
@@ -917,7 +917,6 @@ Suggested package updates
 	o nslint-2.1a7
 	o nspr-4.7.1
 	o nss-3.11.7
-	o ntp4-4.2.4p3
 	o nulib2-220
 	o nullmailer-1.04
 	o nut-13.9
