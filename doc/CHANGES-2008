@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1242 2008/06/08 01:23:26 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1243 2008/06/08 02:42:20 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2093,3 +2093,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated parallel/clusterit to 2.5nb1 [obache 2008-06-07]
 	Updated security/mit-krb5 to 1.4.2nb6 [tonnerre 2008-06-07]
 	Updated chat/konversation to 1.0.1nb8 [tonnerre 2008-06-08]
+	Updated archivers/star to 1.4.3nb4 [tonnerre 2008-06-08]
