@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.3 2008/06/08 14:08:47 tonnerre Exp $
+
+--- lib/utils_base.c.orig	2007-07-29 14:42:05.000000000 +0200
++++ lib/utils_base.c
+@@ -89,7 +89,7 @@ _set_thresholds(thresholds **my_threshol
+ {
+ 	thresholds *temp_thresholds = NULL;
+ 
+-	temp_thresholds = malloc(sizeof(temp_thresholds));
++	temp_thresholds = malloc(sizeof(*temp_thresholds));
+ 
+ 	temp_thresholds->warning = NULL;
+ 	temp_thresholds->critical = NULL;
+@@ -105,10 +105,9 @@ _set_thresholds(thresholds **my_threshol
+ 		}
+ 	}
+ 
+-	if (*my_thresholds > 0) {	/* Not sure why, but sometimes could be -1 */
+-		/* printf("Freeing here: %d\n", *my_thresholds); */
++	if (*my_thresholds)
+ 		free(*my_thresholds);
+-	}
++
+ 	*my_thresholds = temp_thresholds;
+ 
+ 	return 0;
