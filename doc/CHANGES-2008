@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1245 2008/06/08 05:24:20 taca Exp $
+$NetBSD: CHANGES-2008,v 1.1246 2008/06/08 13:02:29 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2096,3 +2096,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated archivers/star to 1.4.3nb4 [tonnerre 2008-06-08]
 	Updated net/ntp4 to 4.2.4p4 [obache 2008-06-08]
 	Updated x11/xfd to 1.0.1nb1 [taca 2008-06-08]
+	Updated inputmethod/uim to 1.5.1 [obache 2008-06-08]
