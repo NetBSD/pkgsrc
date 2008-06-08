@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2008/06/08 13:01:48 obache Exp $
+
+--- sigscheme/src/Makefile.in.orig	2008-05-17 10:10:09.000000000 +0900
++++ sigscheme/src/Makefile.in	2008-05-17 10:27:12.000000000 +0900
+@@ -22,7 +22,7 @@
+ VPATH = @srcdir@
+ pkgdatadir = $(datadir)/@PACKAGE@
+ pkglibdir = $(libdir)/@PACKAGE@
+-pkgincludedir = $(includedir)/@PACKAGE@
++pkgincludedir = 
+ am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
+ install_sh_DATA = $(install_sh) -c -m 644
+ install_sh_PROGRAM = $(install_sh) -c

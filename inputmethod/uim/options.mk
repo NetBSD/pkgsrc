@@ -1,17 +1,18 @@
-# $NetBSD: options.mk,v 1.12 2008/04/12 22:43:02 jlam Exp $
+# $NetBSD: options.mk,v 1.13 2008/06/08 13:01:48 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.uim
-PKG_SUPPORTED_OPTIONS=	anthy canna eb gtk qt kde
+#PKG_SUPPORTED_OPTIONS=	anthy canna eb gnome gtk kde m17nlib qt prime sj3 wnn
+PKG_SUPPORTED_OPTIONS=	anthy canna eb gnome gtk kde m17nlib qt prime
 PKG_SUGGESTED_OPTIONS=	anthy canna gtk
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		helperdata uim-dict-gtk
-PLIST_VARS+=		anthy canna gtk kde qt
+PLIST_VARS+=		anthy canna gnome gtk kde m17nlib prime qt sj3 wnn
 
 .if !empty(PKG_OPTIONS:Manthy)
 .  include "../../inputmethod/anthy/buildlink3.mk"
-CONFIGURE_ARGS+=	--with-anthy --enable-dict
+CONFIGURE_ARGS+=	--enable-dict
 PLIST.anthy=		yes
 .  if !empty(PKG_OPTIONS:Mgtk)
 PLIST.helperdata=	yes
@@ -25,21 +26,39 @@ CONFIGURE_ARGS+=	--without-anthy
 .  include "../../inputmethod/canna-lib/buildlink3.mk"
 CONFIGURE_ARGS+=	--with-canna
 PLIST.canna=		yes
-.else
-CONFIGURE_ARGS+=	--without-canna
 .endif
 
 .if !empty(PKG_OPTIONS:Meb)
 .include "../../textproc/eb/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=	--without-eb
+CONFIGURE_ARGS+=	--with-eb
 .endif
 
-.if !empty(PKG_OPTIONS:Mgtk)
+.if !empty(PKG_OPTIONS:Mgnome)
+.  include "../../x11/gnome-panel/buildlink3.mk"
+PLIST.gnome=		yes
+.else
+CONFIGURE_ARGS+=	--disable-gnome-applet
+.endif
+
+.if !empty(PKG_OPTIONS:Mgtk) || !empty(PKG_OPTIONS:Mgnome)
 .include "../../x11/gtk2/modules.mk"
 PLIST.gtk=		yes
 .else
 CONFIGURE_ARGS+=	--without-gtk2
+.endif
+
+.if !empty(PKG_OPTIONS:Mkde)
+.  include "../../x11/kdelibs3/buildlink3.mk"
+.  include "../../x11/qt3-libs/buildlink3.mk"
+CONFIGURE_ARGS+=	--enable-kde-applet
+PLIST.kde=		yes
+.endif
+
+.if !empty(PKG_OPTIONS:Mm17nlib)
+.  include "../../devel/m17n-lib/buildlink3.mk"
+PLIST.m17nlib=		yes
+.else
+CONFIGURE_ARGS+=	--without-m17nlib
 .endif
 
 .if !empty(PKG_OPTIONS:Mqt) || !empty(PKG_OPTIONS:Mkde)
@@ -52,9 +71,24 @@ PLIST.helperdata=	yes
 PLIST.qt=		yes
 .endif
 
-.if !empty(PKG_OPTIONS:Mkde)
-.  include "../../x11/kdelibs3/buildlink3.mk"
-.  include "../../x11/qt3-libs/buildlink3.mk"
-CONFIGURE_ARGS+=	--enable-kde-applet=yes
-PLIST.kde=		yes
+.if !empty(PKG_OPTIONS:Mprime)
+.  include "../../inputmethod/prime/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-prime
+PLIST.prime=		yes
 .endif
+
+#.if !empty(PKG_OPTIONS:Msj3)
+#.  include "../../inputmethod/sj3-lib/buildlink3.mk"
+#CONFIGURE_ARGS+=	--with-sj3
+#CONFIGURE_ARGS+=	SJ3_CFLAGS=-I${BUILDLINK_PREFIX.sj3-lib}/includes
+#CONFIGURE_ARGS+=	SJ3_LIBS="-L${BUILDLINK_PREFIX.sj3-lib}/lib -lsj3lib"
+#PLIST.sj3=		yes
+#.endif
+
+#.if !empty(PKG_OPTIONS:Mwnn)
+#.  include "../../inputmethod/ja-freewnn-lib/buildlink3.mk"
+#CONFIGURE_ARGS+=	--with-wnn
+#CONFIGURE_ARGS+=	--with-wnn-includes=${BUILDLINK_PREFIX.ja-FreeWnn-lib}/include/wnn
+#CONFIGURE_ARGS+=	--with-wnn-libraries=${BUILDLINK_PREFIX.ja-FreeWnn-lib}/lib
+#PLIST.wnn=		yes
+#.endif
