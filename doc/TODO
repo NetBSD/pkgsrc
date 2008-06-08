@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7314 2008/06/08 14:15:51 tron Exp $
+$NetBSD: TODO,v 1.7315 2008/06/08 16:29:50 tron Exp $
 
 Suggested new packages
 ======================
@@ -1137,7 +1137,6 @@ Suggested package updates
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
-	o rdesktop-1.6.0
 	o rdp-1.6
 	o regionset-0.2
 	o remind-3.1.5
