@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/12/18 00:24:31 obache Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/09 14:33:49 obache Exp $
 
 DISTNAME=		ebview-0.3.6
 CATEGORIES=		textproc
@@ -9,7 +9,7 @@ HOMEPAGE=		http://ebview.sourceforge.net/
 COMMENT=		GTK2 based EPWING dictionary browser
 
 USE_PKGLOCALEDIR=	YES
-USE_TOOLS+=		gmake pkg-config
+USE_TOOLS+=		gmake pkg-config msgfmt
 GNU_CONFIGURE=		YES
 
 .include "../../converters/libiconv/buildlink3.mk"
