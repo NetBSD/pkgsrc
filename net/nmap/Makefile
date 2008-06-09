@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.59 2008/06/08 18:12:52 adrianp Exp $
+# $NetBSD: Makefile,v 1.60 2008/06/09 19:35:31 adrianp Exp $
 #
 
 DISTNAME=	nmap-4.65
@@ -19,11 +19,13 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake
+PLIST_SRC=		${WRKDIR}/.PLIST_SRC
+
+.include "options.mk"
 
 CONFIGURE_ARGS+=	--with-libpcap=${BUILDLINK_PREFIX.libpcap}
 CONFIGURE_ARGS+=	--with-libpcre=${BUILDLINK_PREFIX.pcre}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
-CONFIGURE_ARGS+=	--without-zenmap
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -45,6 +47,9 @@ CFLAGS.SunOS+=	-D__FUNCTION__=__FILE__
 pre-build:
 	${ECHO} "# ignored" > ${WRKSRC}/makefile.dep
 .endif
+
+post-build:
+	${CP} ${PKGDIR}/PLIST ${WRKDIR}/.PLIST_SRC
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
