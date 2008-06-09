@@ -1,9 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2005/11/29 19:17:03 adrianp Exp $
+$NetBSD: MESSAGE,v 1.2 2008/06/09 19:37:01 adrianp Exp $
 
 You will need to customise the following files to get unrealircd to work:
 
-	${UIRCD_HOME}/unrealricd.conf
+	${UIRCD_HOME}/unrealircd.conf
 
 For further information see:
 
