@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/06/09 15:27:03 obache Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/09 15:47:24 obache Exp $
 #
 
 DISTNAME=	ftmenu-0.3
@@ -14,6 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 
+#XXX: Not using C++, but configure require it.
 USE_LANGUAGES+=	c c++
 USE_TOOLS+=	pkg-config
 
@@ -21,7 +22,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/ftmenu
 	${INSTALL_DATA} ${WRKSRC}/img/fb.xpm ${DESTDIR}${PREFIX}/share/ftmenu/fb.xpm
 
-#XXX: This package not using glib, but ckeck it.
+#XXX: Not using GLib, but configure require it.
 BUILDLINK_TARGETS+=	glib-fake-pc
 
 glib-fake-pc:
