@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7316 2008/06/08 17:59:21 adrianp Exp $
+$NetBSD: TODO,v 1.7317 2008/06/09 07:53:16 wiz Exp $
 
 Suggested new packages
 ======================
@@ -421,6 +421,7 @@ Suggested package updates
 	o ap2-transform-0.6.0
 	o apache-ant15-1.7.0
 	o apache-tomcat55-6.0.14
+	o apr-1.3.0
 	o apsfilter-7.2.8
 	o aqsis-1.2
 	o aranym-0.9.6
@@ -447,7 +448,7 @@ Suggested package updates
 	o avr-binutils-2.17
 	o avr-libc-1.4.5
 	o avrdude-5.3.1
-	o awesome-2.3
+	o awesome-2.3.1
 	o baci-20040415
 	o bacula-2.2.6 [pkg/37396]
 	o bacula-2.2.8 [pkg/38572]
@@ -470,6 +471,7 @@ Suggested package updates
 	o blender-2.46
 	o blur6ex-0.3.462
 	o bmon-2.1.0
+	o bochs-2.3.7
 	o boolean-6.97
 	o bos-2.5
 	o boson-0.13
@@ -496,7 +498,7 @@ Suggested package updates
 	o cinepaint-0.23
 	o cint-5.16
 	o cjk-lyx-1.4.4
-	o classpath-0.97.1
+	o classpath-0.97.2
 	o clearsilver-0.10.5
 	o clearsilver-base-0.10.5
 	o clisp-2.45
@@ -516,7 +518,7 @@ Suggested package updates
 	o crypto++-523
 	o cstream-2.7.3
 	o cuetools-1.3.1
-	o curl-7.18.1
+	o curl-7.18.2
 	o cvs-1.11.23
 	o cvs2p4-2.5.5 [schmonz]
 	o cvsd-1.0.14
@@ -528,6 +530,7 @@ Suggested package updates
 	o db4-4.7.25
 	o dbench-4.0
 	o dbus-1.2.1
+	o dbus-glib-0.76
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
@@ -614,6 +617,7 @@ Suggested package updates
 	o freetype-lib-1.5.20050518
 	o freetype-utils-1.5.20050518
 	o freewais-sf-2.2.14
+	o fromcvs-0.0.0.124
 	o frozen-bubble-2.1.0
 	o ftplibpp-2.0.2
 	o fugu-1.2.3
@@ -683,6 +687,7 @@ Suggested package updates
 	o gtexinfo-4.12
 	o gtick-0.4.2
 	o gtk-systrace-20030623
+	o gtk2-2.12.10
 	o gtklife-5.1
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
@@ -724,17 +729,19 @@ Suggested package updates
 	o ifile-1.3.8
 	o ifp-line-0.3 [pkg/38038]
 	o ike-2.0.1 [pkg/37032]
-	o ikiwiki-2.48
-	o imap-uw-2007a1
+	o ikiwiki-2.49
+	o imap-uw-2007b
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imapsync-1.252
 	o instiki-0.13
 	o intercal-0.24
+	o intltool-0.40.0
 	o iozone-3.300
 	o ircservices-5.1.11
 	o irrd-2.3.4 [pkg/36813|38002]
 	o irrtoolset-nox11-4.8.4
 	o iselect-1.4.0
+	o iso-codes-3.0
 	o ispell-gaeilge-4.1
 	o ispell-german-20071211
 	o ispell-slovak-0.3.2
@@ -831,6 +838,7 @@ Suggested package updates
 	o lincvs-2.0.0 [now called CrossVC]
 	o linuxsms-0.77
 	o lmms-0.2.1
+	o loudmouth-1.4.0
 	o lout-3.31
 	o lpairs-1.0.3
 	o lq-sp-1.3.4.13
@@ -951,6 +959,7 @@ Suggested package updates
 	o p5-Authen-SASL-Cyrus-0.13
 	o p5-Class-DBI-3.0.16
 	o p5-Class-DBI-AbstractSearch-0.07
+	o p5-Class-Inspector-1.23
 	o p5-Config-General-2.38
 	o p5-Curses-1.15
 	o p5-DBD-Sybase-1.07
@@ -959,6 +968,7 @@ Suggested package updates
 	o p5-Error-0.17014
 	o p5-File-Remove-1.41
 	o p5-Filter-1.33
+	o p5-Font-AFM-1.20
 	o p5-Font-TTF-0.40
 	o p5-GMail-IMAPD-0.94
 	o p5-Graph-0.20105
@@ -972,7 +982,7 @@ Suggested package updates
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IMAP-Admin-1.6.4
 	o p5-MARC-1.38
-	o p5-Mail-IMAPClient-3.07
+	o p5-Mail-IMAPClient-3.08
 	o p5-Math-Random-0.69
 	o p5-Net-Amazon-S3-0.38
 	o p5-Net-Gnats-0.05
@@ -999,6 +1009,7 @@ Suggested package updates
 	o p5-Test-Unit-0.25
 	o p5-Text-Tabs+Wrap-2006.1117
 	o p5-XML-RAI-1.04
+	o p5-XML-RSS-1.33
 	o p5-XML-Stream-1.22
 	o p5-ispman-1.2
 	o p5-sybperl-2.18
@@ -1130,6 +1141,7 @@ Suggested package updates
 	o qvplay-0.95
 	o qwspritefield-1.7
 	o radiance-3.7.2
+	o rails-2.1
 	o raine-0.50.6
 	o randread-0.2
 	o rapidsvn-0.9.6
@@ -1172,7 +1184,7 @@ Suggested package updates
 	o scew-0.4.0
 	o sch-3.8.3
 	o scm-5e5
-	o scmgit-1.5.5.3
+	o scmgit-1.5.5.4
 	o scons-0.98.1
 	o scrollz-1.9.99
 	o scsh-1.3.0
@@ -1234,7 +1246,7 @@ Suggested package updates
 	o sysinfo-4.2.2
 	o systrace-1.6e
 	o tacacs-4.0.4.14
-	o tailor-0.9.34
+	o tailor-0.9.35
 	o taskjuggler-2.4.1
 	o tcl-8.5.2
 	o tcl83-8.3.5
@@ -1297,6 +1309,7 @@ Suggested package updates
 	o vobcopy-1.1.1
 	o vp-1.6
 	o vsftpd-2.0.6
+	o vte-0.16.14
 	o vttest-20071216
 	o wMosaic-3.8.22
 	o wap-utils-1.4.1
@@ -1317,7 +1330,7 @@ Suggested package updates
 	o wxRemind-79
 	o wyrd-1.4.4
 	o x11perf-1.5
-	o x264-devel-20080601
+	o x264-devel-20080607
 	o xanalyser-1.30
 	o xbindkeys-1.8.2
 	o xbindkeys-tk-1.8.0
