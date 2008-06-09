@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1252 2008/06/08 18:13:06 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1253 2008/06/09 09:08:34 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2103,3 +2103,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/rdesktop to 1.6.0 [tron 2008-06-08]
 	Removed net/nmapfe [adrianp 2008-06-08]
 	Updated net/nmap to 4.65 [adrianp 2008-06-08]
+	Updated databases/openldap to 2.4.9 [ghen 2008-06-09]
+	Updated databases/openldap-client to 2.4.9 [ghen 2008-06-09]
+	Updated databases/openldap-doc to 2.4.9 [ghen 2008-06-09]
+	Updated databases/openldap-server to 2.4.9 [ghen 2008-06-09]
