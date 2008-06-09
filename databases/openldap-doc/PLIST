@@ -1,14 +1,21 @@
-@comment $NetBSD: PLIST,v 1.2 2008/01/13 17:15:17 ghen Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/06/09 09:07:38 ghen Exp $
 share/doc/openldap/COPYRIGHT
 share/doc/openldap/LICENSE
 share/doc/openldap/README
+share/doc/openldap/admin/allmail-en.png
+share/doc/openldap/admin/allusersgroup-en.png
 share/doc/openldap/admin/config_dit.png
 share/doc/openldap/admin/config_local.png
 share/doc/openldap/admin/config_ref.png
-share/doc/openldap/admin/config_repl.gif
+share/doc/openldap/admin/config_repl.png
+share/doc/openldap/admin/dual_dc.png
 share/doc/openldap/admin/guide.html
 share/doc/openldap/admin/intro_dctree.png
 share/doc/openldap/admin/intro_tree.png
+share/doc/openldap/admin/refint.png
+share/doc/openldap/admin/set-following-references.png
+share/doc/openldap/admin/set-memberUid.png
+share/doc/openldap/admin/set-recursivegroup.png
 share/doc/openldap/images/LDAPlogo.gif
 share/doc/openldap/images/LDAPwww.gif
 @dirrm share/doc/openldap/images
