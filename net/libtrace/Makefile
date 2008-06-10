@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2007/12/27 17:06:11 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/10 10:21:41 markd Exp $
 #
 
-DISTNAME=	libtrace-3.0.0
+DISTNAME=	libtrace-3.0.4
 CATEGORIES=	net
 MASTER_SITES=	http://research.wand.net.nz/software/libtrace/
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://research.wand.net.nz/software/libtrace.php
 COMMENT=	Library for trace processing
+
+PKG_DESTDIR_SUPPORT=    user-destdir
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
