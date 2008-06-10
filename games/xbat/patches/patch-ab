@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2008/06/10 13:20:00 obache Exp $
+
+--- xev.h.orig	1997-03-14 04:08:26.000000000 +0000
++++ xev.h
+@@ -5,6 +5,7 @@
+ #include <errno.h>
+ #include <unistd.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include "colorlist.h"
+ 
+ #define ABS(x) ( ( (x) > 0  ) ? (x) : -(x))
