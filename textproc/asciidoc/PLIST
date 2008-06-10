@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/12/09 20:56:41 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/06/10 13:06:30 gdt Exp $
 bin/a2x
 bin/asciidoc
 man/man1/a2x.1
@@ -50,6 +50,7 @@ share/asciidoc/javascripts/toc.js
 share/asciidoc/lang-es.conf
 share/asciidoc/latex.conf
 share/asciidoc/linuxdoc.conf
+share/asciidoc/stylesheets/compact.css
 share/asciidoc/stylesheets/docbook-xsl.css
 share/asciidoc/stylesheets/xhtml-deprecated-manpage.css
 share/asciidoc/stylesheets/xhtml-deprecated.css
