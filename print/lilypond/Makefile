@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2008/05/14 20:25:16 sborrill Exp $
+# $NetBSD: Makefile,v 1.53 2008/06/10 08:05:21 wiz Exp $
 #
 
 DISTNAME=	lilypond-2.10.33
@@ -16,7 +16,7 @@ BUILDLINK_API_DEPENDS.mftrace+=	mftrace>=1.1.0
 GNU_CONFIGURE=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		bison flex gmake gs:run makeinfo perl msgfmt
+USE_TOOLS+=		bison flex gmake gs:run makeinfo perl pkg-config msgfmt
 MAKE_FILE=		GNUmakefile
 
 .include "../../mk/bsd.prefs.mk"
@@ -30,8 +30,7 @@ INFO_FILES=		YES
 
 CONFIGURE_ARGS+=	--disable-optimising
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
-PYTHON_VERSIONS_ACCEPTED= 23 21
-# 22 has some regular expression problem
+PYTHON_VERSIONS_ACCEPTED= 25 24
 
 PLIST_SUBST+=	PKGVERSION=${PKGVERSION:S/nb${PKGREVISION}//}
 
