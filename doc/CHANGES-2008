@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1255 2008/06/10 10:23:23 markd Exp $
+$NetBSD: CHANGES-2008,v 1.1256 2008/06/10 13:20:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2109,3 +2109,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/openldap-server to 2.4.9 [ghen 2008-06-09]
 	Updated mail/clamav to 0.93.1 [martti 2008-06-10]
 	Updated net/libtrace to 3.0.4 [markd 2008-06-10]
+	Updated games/xbat to 1.11nb2 [obache 2008-06-10]
