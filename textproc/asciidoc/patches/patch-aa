@@ -1,7 +1,10 @@
-$NetBSD: patch-aa,v 1.1 2008/06/06 19:51:14 gdt Exp $
+$NetBSD: patch-aa,v 1.2 2008/06/10 13:06:30 gdt Exp $
 
 a2x uses the '-u' argument to cp, which POSIX does not specify:
   http://www.opengroup.org/onlinepubs/009695399/utilities/cp.html
+
+Filed upstream on 20080609 as
+https://sourceforge.net/tracker/index.php?func=detail&aid=1989227&group_id=67797&atid=519005
 
 --- a2x.orig	2007-10-28 23:50:53.000000000 -0400
 +++ a2x
