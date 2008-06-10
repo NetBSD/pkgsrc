@@ -1,0 +1,16 @@
+This is the "Virtualmin" module for Webmin.
+
+It is a Webmin module for managing multiple virtual hosts through a
+single interface, like Plesk or Cpanel. It supports the creation and
+management of Apache virtual hosts, BIND DNS domains, MySQL databases,
+and mailboxes and aliases with Sendmail or Postfix. It makes use of the
+existing Webmin modules for these servers, and so should work with any
+existing system configuration, rather than needing it's own mail server,
+web server and so on.
+
+Virtualmin can also create a Webmin user for each virtual server, who is
+restricted to managing just his domain and its files. Webmin's existing
+module access control features are used, and are set up automatically to
+limit the user appropriately. These server administrators can also manage
+the mailboxes and mail aliases in their domain, via a web interface that
+is part of the module.
