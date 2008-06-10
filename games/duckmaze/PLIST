@@ -1,0 +1,46 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/10 18:49:39 drochner Exp $
+bin/duckmaze
+share/duckmaze/doc/COPYING.txt
+share/duckmaze/doc/TODO.txt
+share/duckmaze/doc/index.html
+share/duckmaze/doc/logo.png
+share/duckmaze/doc/screenshot1.png
+share/duckmaze/doc/screenshot2.png
+share/duckmaze/doc/screenshot3.png
+share/duckmaze/doc/style.css
+share/duckmaze/duckmaze.py
+share/duckmaze/images/instructions.png
+share/duckmaze/images/music.png
+share/duckmaze/images/title.png
+share/duckmaze/level.py
+share/duckmaze/level_editor.py
+share/duckmaze/levels/level_001
+share/duckmaze/levels/level_002
+share/duckmaze/levels/level_003
+share/duckmaze/levels/level_004
+share/duckmaze/levels/level_005
+share/duckmaze/levels/level_006
+share/duckmaze/levels/level_007
+share/duckmaze/levels/level_008
+share/duckmaze/levels/level_009
+share/duckmaze/levels/level_010
+share/duckmaze/levels/level_011
+share/duckmaze/levels/level_012
+share/duckmaze/levels/level_013
+share/duckmaze/levels/level_014
+share/duckmaze/levels/level_015
+share/duckmaze/levels/level_016
+share/duckmaze/levels/level_017
+share/duckmaze/levels/level_018
+share/duckmaze/mopelib/__init__.py
+share/duckmaze/mopelib/mopelib.py
+share/duckmaze/version
+@exec ${MKDIR} %D/share/duckmaze/sounds
+@dirrm share/duckmaze/sounds
+@exec ${MKDIR} %D/share/duckmaze/music
+@dirrm share/duckmaze/music
+@dirrm share/duckmaze/mopelib
+@dirrm share/duckmaze/levels
+@dirrm share/duckmaze/images
+@dirrm share/duckmaze/doc
+@dirrm share/duckmaze
