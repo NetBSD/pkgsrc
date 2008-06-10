@@ -1,32 +1,31 @@
-$NetBSD: patch-aa,v 1.2 1999/12/14 00:36:51 sakamoto Exp $
+$NetBSD: patch-aa,v 1.3 2008/06/10 13:20:00 obache Exp $
 
---- Imakefile.orig	Mon Mar 17 12:32:22 1997
-+++ Imakefile	Tue Jul  1 18:37:39 1997
+--- Imakefile.orig	1997-03-17 12:32:22.000000000 +0000
++++ Imakefile
 @@ -1,24 +1,24 @@
  # TOP10 DIR : directory for socre files
  #
 -SCORE_DIR  = /usr/local/games/Xbat/Score
-+SCORE_DIR  = ${PREFIX}/lib/X11/Xbat/Score
++SCORE_DIR  = ${VARBASE}/games/Xbat
  
  # IMAGE DIR : directory for image files
 -IMAGE_DIR = /usr/local/games/Xbat/Image
-+IMAGE_DIR = ${PREFIX}/lib/X11/Xbat/Image
++IMAGE_DIR = ${PREFIX}/share/games/Xbat/Image
  
  # MAP DIR : directory for map files
 -MAP_DIR = /usr/local/games/Xbat/Map
-+MAP_DIR = ${PREFIX}/lib/X11/Xbat/Map
++MAP_DIR = ${PREFIX}/share/games/Xbat/Map
  
  # DOMO_DIR : directory for domogram movement files
 -DOMO_DIR = /usr/local/games/Xbat/Domo
-+DOMO_DIR = ${PREFIX}/lib/X11/Xbat/Domo
++DOMO_DIR = ${PREFIX}/share/games/Xbat/Domo
  
  # UNION : Set 1 if you have Intel CPU or so.
  # If you don't know whether you have Intel CPU or not, 
  # compile union_check.c and run.
 -UNION = 0
--#UNION = 1 
 +#UNION = 0
-+UNION = 1 
+ #UNION = 1 
  
  #BIN DIR
 -BINDIR = /usr/local/bin
