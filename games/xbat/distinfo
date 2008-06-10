@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2005/02/23 23:12:03 agc Exp $
+$NetBSD: distinfo,v 1.4 2008/06/10 13:20:00 obache Exp $
 
 SHA1 (xev111.tar.gz) = feccdcbfb885fb29df609e5a0a1803a436132204
 RMD160 (xev111.tar.gz) = d8cd271be8b59fec2eb7e16c7febb209f520d5e0
 Size (xev111.tar.gz) = 123960 bytes
-SHA1 (patch-aa) = e57c2b1495b87015998e57fb22a4aae7c006e724
+SHA1 (patch-aa) = c1909e7f2742a391e7f082bcb727f3376258ad86
+SHA1 (patch-ab) = 0e2758915caacdf2a9411fd98486b288f8352f13
