@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/06/10 13:06:30 gdt Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/10 13:06:57 gdt Exp $
 #
 
 DISTNAME=		asciidoc-8.2.6
@@ -6,7 +6,7 @@ CATEGORIES=		textproc
 MASTER_SITES=		${HOMEPAGE}	\
 			${MASTER_SITE_SOURCEFORGE:=asciidoc/}
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://www.methods.co.nz/asciidoc/
 COMMENT=		ASCII to formatted document converter
 
