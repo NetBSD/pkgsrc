@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2008/04/28 10:51:49 shannonjr Exp $
+$NetBSD: patch-aa,v 1.6 2008/06/10 13:57:10 shannonjr Exp $
 
 --- Makefile.in.orig	2008-04-24 04:50:26.000000000 -0600
 +++ Makefile.in
@@ -74,7 +74,7 @@ $NetBSD: patch-aa,v 1.5 2008/04/28 10:51:49 shannonjr Exp $
 -        else															\
 -                $(INSTALL) -m 644 $(top_srcdir)/tls.conf $(DESTDIR)$(PRELUDE_CONFIG_DIR)/default;					\
 -	fi
-+	$(INSTALL) -d -m 711 $(DESTDIR)$(prelude_spool_dir)
++	$(INSTALL) -d -m 711 $(DESTDIR)$(PRELUDE_SPOOL_DIR)
 +	$(BSD_INSTALL_DATA) $(top_srcdir)/client.conf @EGDIR@
 +	$(BSD_INSTALL_DATA) $(top_srcdir)/global.conf @EGDIR@
 +	$(BSD_INSTALL_DATA) $(top_srcdir)/idmef-client.conf @EGDIR@
