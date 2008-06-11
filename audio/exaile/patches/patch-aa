@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2008/06/11 11:37:55 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2008/06/11 12:57:44 obache Exp $
 
---- Makefile.orig	2008-06-11 03:42:53 +0300
-+++ Makefile	2008-06-11 03:43:25 +0300
+--- Makefile.orig	2008-04-02 01:42:17.000000000 +0000
++++ Makefile
 @@ -6,15 +6,14 @@ all: compile mmkeys.so translations
  	@echo "Type: 'make install' now"
  
@@ -21,16 +21,42 @@ $NetBSD: patch-aa,v 1.4 2008/06/11 11:37:55 drochner Exp $
  
  make-install-dirs: 
  	mkdir -p $(DESTDIR)$(PREFIX)/bin
-@@ -37,10 +36,10 @@ make-install-dirs: 
+@@ -36,11 +35,11 @@ make-install-dirs: 
+ 	mkdir -p $(DESTDIR)$(PREFIX)/share/exaile/sql
  	mkdir -p $(DESTDIR)$(PREFIX)/share/exaile/xl
  	mkdir -p $(DESTDIR)$(PREFIX)/share/exaile/xl/plugins
- 	mkdir -p $(DESTDIR)$(PREFIX)/share/locale
+-	mkdir -p $(DESTDIR)$(PREFIX)/share/locale
 -	mkdir -p $(DESTDIR)$(PREFIX)/share/man/man1
-+	mkdir -p $(DESTDIR)$(PREFIX)/man/man1
++	mkdir -p $(DESTDIR)$(PREFIX)/${PKGLOCALEDIR}/locale
++	mkdir -p $(DESTDIR)$(PREFIX)/${PKGMANDIR}/man1
  
  install: make-install-dirs
 -	install -m 644 exaile.1 $(DESTDIR)$(PREFIX)/share/man/man1
-+	install -m 644 exaile.1 $(DESTDIR)$(PREFIX)/man/man1
++	install -m 644 exaile.1 $(DESTDIR)$(PREFIX)/${PKGMANDIR}/man1
  	install -m 644 exaile.py $(DESTDIR)$(PREFIX)$(LIBDIR)/exaile
  	install -m 644 exaile.glade $(DESTDIR)$(PREFIX)/share/exaile
  	install -m 644 equalizer.ini $(DESTDIR)$(PREFIX)/share/exaile
+@@ -66,18 +65,18 @@ install: make-install-dirs
+ 	$(DESTDIR)$(PREFIX)/share/pixmaps/exaile.png
+ 	install -m 644 exaile.desktop $(DESTDIR)$(PREFIX)/share/applications/
+ 	cd $(DESTDIR)$(PREFIX)/bin && \
+-	  /bin/echo -e \
++	  echo \
+ 	    "#!/bin/sh\n" \
+ 	    "cd $(PREFIX)/share/exaile\n" \
+-	    "exec python $(PREFIX)$(LIBDIR)/exaile/exaile.py \"\$$@\"" \
+-	    > exaile && \
++	    "exec ${PYTHONBIN} $(PREFIX)$(LIBDIR)/exaile/exaile.py \"\$$@\"" \
++	    | awk '{gsub(/\\n[ 	]*/, "\n");print}' > exaile && \
+ 	  chmod 755 exaile
+ 	for f in `find po -name exaile.mo` ; do \
+ 	  install -d -m 755 \
+-	    `echo $$f | sed "s|^po|$(DESTDIR)$(PREFIX)/share/locale|" | \
++	    `echo $$f | sed "s|^po|$(DESTDIR)$(PREFIX)/${PKGLOCALEDIR}/locale|" | \
+ 	      xargs dirname` && \
+ 	  install -m 644 $$f \
+-	    `echo $$f | sed "s|^po|$(DESTDIR)$(PREFIX)/share/locale|"` ; \
++	    `echo $$f | sed "s|^po|$(DESTDIR)$(PREFIX)/${PKGLOCALEDIR}/locale|"` ; \
+ 	  done
+ 
+ clean:
