@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.127 2008/05/24 13:38:33 tnn Exp $
+# $NetBSD: bootstrap,v 1.128 2008/06/11 12:47:07 sketch Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -907,6 +907,8 @@ yes)	echo_msg "Bootstrapping ksh"
 	run_cmd "$install_sh -c -o $user -g $group -m 755 $wrkdir/ksh/ksh $wrkdir/bin/pdksh"
 	echo "TOOLS_PLATFORM.sh?=		$prefix/bin/pdksh" >> ${TARGET_MKCONF}
 	echo "TOOLS_PLATFORM.sh?=		$wrkdir/bin/pdksh" >> ${BOOTSTRAP_MKCONF}
+	echo "TOOLS_PLATFORM.ksh?=		$prefix/bin/pdksh" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.ksh?=		$wrkdir/bin/pdksh" >> ${BOOTSTRAP_MKCONF}
 # Now rebootstrap bmake for ksh
 	echo_msg "Rebootstrapping bmake for ksh"
 	bmakexargs="$bmakexargs --with-defshell=$wrkdir/bin/pdksh"
