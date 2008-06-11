@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1260 2008/06/11 14:21:53 taca Exp $
+$NetBSD: CHANGES-2008,v 1.1261 2008/06/11 19:45:53 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2115,3 +2115,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/detox to 1.2.0 [obache 2008-06-11]
 	Added converters/p5-Unicode-Map version 0.112 [taca 2008-06-11]
 	Added converters/p5-Unicode-MapUTF8 version 1.11 [taca 2008-06-11]
+	Updated comms/xtel to 3.3.0nb6 [bouyer 2008-06-11]
