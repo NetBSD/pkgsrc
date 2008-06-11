@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1259 2008/06/11 13:56:43 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1260 2008/06/11 14:21:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2113,3 +2113,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/exaile to 0.2.13nb1 [obache 2008-06-11]
 	Updated net/darkstat to 3.0.708 [obache 2008-06-11]
 	Updated sysutils/detox to 1.2.0 [obache 2008-06-11]
+	Added converters/p5-Unicode-Map version 0.112 [taca 2008-06-11]
+	Added converters/p5-Unicode-MapUTF8 version 1.11 [taca 2008-06-11]
