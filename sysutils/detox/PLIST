@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/01 03:32:03 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/06/11 13:56:29 obache Exp $
 bin/detox
+bin/inline-detox
 man/man1/detox.1
 man/man5/detox.tbl.5
 man/man5/detoxrc.5
