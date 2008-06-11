@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.3 2008/05/30 17:18:23 drochner Exp $
+$NetBSD: patch-aa,v 1.4 2008/06/11 11:37:55 drochner Exp $
 
---- Makefile.orig	2008-04-02 03:42:17.000000000 +0200
-+++ Makefile
+--- Makefile.orig	2008-06-11 03:42:53 +0300
++++ Makefile	2008-06-11 03:43:25 +0300
 @@ -6,15 +6,14 @@ all: compile mmkeys.so translations
  	@echo "Type: 'make install' now"
  
@@ -34,13 +34,3 @@ $NetBSD: patch-aa,v 1.3 2008/05/30 17:18:23 drochner Exp $
  	install -m 644 exaile.py $(DESTDIR)$(PREFIX)$(LIBDIR)/exaile
  	install -m 644 exaile.glade $(DESTDIR)$(PREFIX)/share/exaile
  	install -m 644 equalizer.ini $(DESTDIR)$(PREFIX)/share/exaile
-@@ -73,9 +72,6 @@ install: make-install-dirs
- 	    > exaile && \
- 	  chmod 755 exaile
- 	for f in `find po -name exaile.mo` ; do \
--	  install -d -m 755 \
--	    `echo $$f | sed "s|^po|$(DESTDIR)$(PREFIX)/share/locale|" | \
--	      xargs dirname` && \
- 	  install -m 644 $$f \
- 	    `echo $$f | sed "s|^po|$(DESTDIR)$(PREFIX)/share/locale|"` ; \
- 	  done
