@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.37 2008/05/25 23:49:07 adrianp Exp $
+# $NetBSD: Makefile,v 1.38 2008/06/11 13:00:56 adrianp Exp $
 #
 
 DISTNAME=		snort-2.8.1
 CATEGORIES=		net security
-MASTER_SITES=		http://www.snort.org/dl/current/
+MASTER_SITES=		http://www.snort.org/dl/current/ \
+			http://www.snort.org/dl/old/
 
 MAINTAINER=		adrianp@NetBSD.org
 HOMEPAGE=		http://www.snort.org/
