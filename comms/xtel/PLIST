@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/02/28 17:38:47 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/06/11 19:43:38 bouyer Exp $
 bin/install_iminitel
 bin/make_xtel_lignes
 bin/mdmdetect
@@ -10,6 +10,8 @@ lib/X11/xtel/modem.list
 lib/X11/xtel/connect_iminitel
 lib/X11/app-defaults/XTel
 lib/X11/app-defaults/XTel-msg
+lib/X11/fonts/xtel/fonts.alias
+lib/X11/fonts/xtel/fonts.scale
 lib/X11/fonts/xtel/g08x10.pcf.gz
 lib/X11/fonts/xtel/g08x20.pcf.gz
 lib/X11/fonts/xtel/g016x10.pcf.gz
