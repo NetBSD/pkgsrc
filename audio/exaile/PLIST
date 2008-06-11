@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/05/30 17:18:23 drochner Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/06/11 11:37:55 drochner Exp $
 bin/exaile
 lib/exaile/exaile.py
 lib/exaile/lib/__init__.py
@@ -215,9 +215,12 @@ share/locale/eu/LC_MESSAGES/exaile.mo
 share/locale/fa/LC_MESSAGES/exaile.mo
 share/locale/fi/LC_MESSAGES/exaile.mo
 share/locale/fr/LC_MESSAGES/exaile.mo
+share/locale/frp/LC_MESSAGES/exaile.mo
 share/locale/he/LC_MESSAGES/exaile.mo
+share/locale/he_IL/LC_MESSAGES/exaile.mo
 share/locale/hu/LC_MESSAGES/exaile.mo
 share/locale/it/LC_MESSAGES/exaile.mo
+share/locale/it_IT/LC_MESSAGES/exaile.mo
 share/locale/ka/LC_MESSAGES/exaile.mo
 share/locale/ko/LC_MESSAGES/exaile.mo
 share/locale/lt/LC_MESSAGES/exaile.mo
@@ -236,6 +239,7 @@ share/locale/sr@latin/LC_MESSAGES/exaile.mo
 share/locale/sv/LC_MESSAGES/exaile.mo
 share/locale/te/LC_MESSAGES/exaile.mo
 share/locale/tr/LC_MESSAGES/exaile.mo
+share/locale/tr_TR/LC_MESSAGES/exaile.mo
 share/locale/uk/LC_MESSAGES/exaile.mo
 share/locale/zh_TW/LC_MESSAGES/exaile.mo
 share/pixmaps/exaile.png
