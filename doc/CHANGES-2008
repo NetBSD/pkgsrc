@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1258 2008/06/11 13:27:50 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1259 2008/06/11 13:56:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2112,3 +2112,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/xbat to 1.11nb2 [obache 2008-06-10]
 	Updated audio/exaile to 0.2.13nb1 [obache 2008-06-11]
 	Updated net/darkstat to 3.0.708 [obache 2008-06-11]
+	Updated sysutils/detox to 1.2.0 [obache 2008-06-11]
