@@ -1,0 +1,10 @@
+This module converts strings from and to 2-byte Unicode UCS2 format. All
+mappings happen via 2 byte UTF16 encodings, not via 1 byte UTF8 encoding.
+To transform these use Unicode::String.
+
+This module can't deal directly with utf8. Use Unicode::String to convert
+utf8 to utf16 and vice versa.
+
+Character mapping is according to the data of binary mapfiles in
+Unicode::Map hierarchy. Binary mapfiles can also be created with this module,
+enabling you to install own specific character sets.
