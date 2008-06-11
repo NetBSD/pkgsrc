@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.31 2007/12/02 12:19:16 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2008/06/11 14:33:07 obache Exp $
 
 DISTNAME=		nntpcache-3.0.2
 CATEGORIES=		news
-MASTER_SITES=		http://www.nntpcache.com/pub/nntpcache/
+MASTER_SITES=		http://xs4all.nl/~suelette/nntpcache/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.nntpcache.com/
+HOMEPAGE=		http://iq.org/~proff/nntpcache.org/
 COMMENT=		NNTP multi-server caching daemon
 
 LICENSE=		fee-based-commercial-use
