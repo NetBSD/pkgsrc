@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/01/05 02:57:10 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2008/06/11 21:06:37 schmonz Exp $
 #
 
 DISTNAME=		dot-forward-0.71
@@ -9,6 +9,7 @@ MASTER_SITES=		http://cr.yp.to/software/
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://cr.yp.to/dot-forward.html
 COMMENT=		Reads sendmail's .forward files under qmail
+#LICENSE=		public-domain
 
 DEPENDS+=		qmail>=1.03nb7:../../mail/qmail
 
@@ -16,7 +17,7 @@ USE_TOOLS+=		nroff
 
 DJB_BUILD_TARGETS=	install instcheck
 
-DJB_RESTRICTED=		YES
+DJB_RESTRICTED=		no
 
 .include "../../mk/djbware.mk"
 .include "../../mk/bsd.pkg.mk"
