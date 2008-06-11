@@ -1,4 +1,4 @@
-# $NetBSD: install.mk,v 1.50 2007/12/10 22:49:19 rillig Exp $
+# $NetBSD: install.mk,v 1.51 2008/06/11 07:30:33 obache Exp $
 #
 # This file provides the code for the "install" phase.
 #
@@ -273,6 +273,7 @@ install-dirs-from-PLIST:
 		-e 's,\\,\\\\,'						\
 		-e 's,^man/,${PKGMANDIR}/,'				\
 		-e 's,^info/,${PKGINFODIR}/,'				\
+		-e 's,^share/locale/,${PKGLOCALEDIR}/locale/,'		\
 		-e 's,^\([^$$@]*\)/[^/]*$$,\1,p'			\
 	| while read dir; do						\
 		${_INSTALL_ONE_DIR_CMD};				\
