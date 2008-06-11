@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1256 2008/06/10 13:20:28 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1257 2008/06/11 12:58:33 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2110,3 +2110,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/clamav to 0.93.1 [martti 2008-06-10]
 	Updated net/libtrace to 3.0.4 [markd 2008-06-10]
 	Updated games/xbat to 1.11nb2 [obache 2008-06-10]
+	Updated audio/exaile to 0.2.13nb1 [obache 2008-06-11]
