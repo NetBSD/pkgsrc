@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.93 2008/04/17 12:39:36 reed Exp $
+# $NetBSD: Makefile,v 1.94 2008/06/11 14:18:15 taca Exp $
 #
 
 COMMENT=	Document format and character code converters
@@ -44,7 +44,9 @@ SUBDIR+=	p5-MIME-Base64
 SUBDIR+=	p5-MIME-Base64-URLSafe
 SUBDIR+=	p5-Text-Iconv
 SUBDIR+=	p5-Unicode-IMAPUtf7
+SUBDIR+=	p5-Unicode-Map
 SUBDIR+=	p5-Unicode-Map8
+SUBDIR+=	p5-Unicode-MapUTF8
 SUBDIR+=	p5-Unicode-String
 SUBDIR+=	p5-Unicode-UTF8simple
 SUBDIR+=	p5-chkjis
