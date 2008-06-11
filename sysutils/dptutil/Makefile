@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2007/12/30 13:35:44 obache Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/11 16:46:36 ad Exp $
 
 DISTNAME=		raidmgt-3.31
 PKGNAME=		dptutil-3.31
 PKGREVISION=		1
 CATEGORIES=		sysutils
-MASTER_SITES=		http://www.interlude.eu.org/~ad/raidmgt/
+MASTER_SITES=		http://www.netbsd.org/~ad/raidmgt/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://opensource.adaptec.com/
