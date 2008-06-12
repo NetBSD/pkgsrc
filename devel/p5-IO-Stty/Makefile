@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/06/08 15:35:43 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2008/06/12 02:14:23 joerg Exp $
 
 DISTNAME=	IO-Stty-.02
 PKGNAME=	p5-IO-stty-0.02
@@ -11,6 +11,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Perl class for I/O on tty devices
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_PERL+=		stty.pl
 

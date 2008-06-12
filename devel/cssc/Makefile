@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/02/17 20:59:47 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2008/06/12 02:14:22 joerg Exp $
 #
 
 DISTNAME=	CSSC-1.0.1
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cssc/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cssc.sourceforge.net/
 COMMENT=	GNU workalike for the source code control system SCCS
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/07/21 14:27:56 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/12 02:14:31 joerg Exp $
 #
 
 DISTNAME=		TiffIO-120e
@@ -12,10 +12,12 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://artis.imag.fr/Software/TiffIO/
 COMMENT=		Tiff support for QT image loader
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++
 
-PKGSRC_MAKE_ENV+=	QTDIR=${QTDIR:Q}
+PKGSRC_MAKE_ENV+=	QTDIR=${QTDIR:Q} RPM_BUILD_ROOT=${DESTDIR}
 
 .include "../../devel/zlib/buildlink3.mk"
 BUILDLINK_API_DEPENDS.tiff+=	tiff>=3.8.1

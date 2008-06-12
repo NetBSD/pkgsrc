@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/10 23:24:05 abs Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:56 joerg Exp $
 
 DISTNAME=	Template-Stash-EscapeHTML-0.01
 PKGNAME=	p5-${DISTNAME}
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/I/IK/IKEBE/}
 MAINTAINER=	abs@absd.org
 HOMEPAGE=	http://search.cpan.org/~ikebe/Template-Stash-EscapeHTML/
 COMMENT=	Escape HTML automatically in Template-Toolkit
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Template-Toolkit-[0-9]*:../../www/p5-Template-Toolkit
 

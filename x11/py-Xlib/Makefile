@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/02/05 23:11:41 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/12 02:14:57 joerg Exp $
 
 DISTNAME=	python-xlib-0.12
 PKGNAME=	${PYPKGPREFIX}-Xlib-0.12
@@ -10,6 +10,7 @@ MAINTAINER=	ccatrian@eml.cc
 HOMEPAGE=	http://python-xlib.sourceforge.net/
 COMMENT=	Functional X client library for Python
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG= yes
 

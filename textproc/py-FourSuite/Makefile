@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/04/25 20:39:12 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:52 joerg Exp $
 #
 
 DISTNAME=	4Suite-0.12.0a3
@@ -10,6 +10,8 @@ MASTER_SITES=	ftp://ftp.fourthought.com/pub/4Suite/
 MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://4suite.org/
 COMMENT=	XML processing tools
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	${PYPKGPREFIX}-4Suite-*
 

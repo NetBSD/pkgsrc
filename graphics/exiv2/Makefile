@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/06/07 23:28:35 gdt Exp $
+# $NetBSD: Makefile,v 1.20 2008/06/12 02:14:31 joerg Exp $
 #
 
 DISTNAME=		exiv2-0.17
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.exiv2.org/
 MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://www.exiv2.org/
 COMMENT=		Image metadata manipulation
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 GCC_REQD+=		3.3

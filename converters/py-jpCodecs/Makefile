@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/04/25 20:39:06 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:17 joerg Exp $
 
 DISTNAME=	JapaneseCodecs-1.4.11
 PKGNAME=	${PYPKGPREFIX}-jpCodecs-1.4.11
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.python.jp/Zope/download/JapaneseCodecs/ \
 MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://www.asahi-net.or.jp/~rd6t-kjym/python/
 COMMENT=	Python Unicode codecs for Japanese charsets
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes

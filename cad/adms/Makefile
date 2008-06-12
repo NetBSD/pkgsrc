@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/05/12 11:33:42 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:15 joerg Exp $
 #
 
 DISTNAME=	adms-2.2.5
@@ -10,6 +10,7 @@ HOMEPAGE=	http://mot-adms.sourceforge.net/
 COMMENT=	Compact device model code generator for SPICE
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 AUTOMAKE_OVERRIDE=	NO
 GNU_CONFIGURE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/01/07 09:54:52 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2008/06/12 02:14:36 joerg Exp $
 
 DISTNAME=	cln-1.1.13
 CATEGORIES=	math
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://www.ginac.de/CLN/
 COMMENT=	CLN Class Library for Numbers
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake pkg-config
 USE_LANGUAGES=		c c++
