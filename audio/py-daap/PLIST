@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/04 20:23:41 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/06/12 00:18:10 joerg Exp $
 ${PYSITELIB}/daap.py
 ${PYSITELIB}/daap.pyc
+${PYSITELIB}/daap.pyo
 ${PYSITELIB}/md5daap.so
