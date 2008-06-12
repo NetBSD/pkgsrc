@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1263 2008/06/12 14:12:49 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1264 2008/06/12 15:04:05 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2118,3 +2118,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated comms/xtel to 3.3.0nb6 [bouyer 2008-06-11]
 	Updated net/net-snmp to 5.4.1nb4 [tron 2008-06-12]
 	Updated www/apache22 to 2.2.8nb1 [tron 2008-06-12]
+	Updated x11/gnopernicus to 1.1.1nb7 [obache 2008-06-12]
