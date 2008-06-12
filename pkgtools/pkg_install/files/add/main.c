@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.14.4.2 2008/05/11 20:20:37 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.14.4.3 2008/06/12 15:16:41 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.16 1997/10/08 07:45:43 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.14.4.2 2008/05/11 20:20:37 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.14.4.3 2008/06/12 15:16:41 joerg Exp $");
 #endif
 #endif
 
@@ -76,7 +76,6 @@ main(int argc, char **argv)
 {
 	int     ch, error=0;
 	lpkg_head_t pkgs;
-	struct rlimit rlim;
 	int rc;
 
 	setprogname(argv[0]);
@@ -173,22 +172,6 @@ main(int argc, char **argv)
 			lpp = alloc_lpkg(*argv);
 
 		TAILQ_INSERT_TAIL(&pkgs, lpp, lp_link);
-	}
-	
-	/* Increase # of max. open file descriptors as high as possible */
-	/* XXX: Why is this necessary? */
-	rc = getrlimit(RLIMIT_NOFILE, &rlim);
-	if (rc == -1) {
-	  	warn("cannot retrieve max. number of open files resource limit");
-	} else {
-	   	rlim.rlim_cur = rlim.rlim_max;
-		rc = setrlimit(RLIMIT_NOFILE, &rlim);
-		if (rc == -1) {
-		  	warn("cannot increase max. number of open files resource limit, try 'ulimit'");
-		} else {
-		  	if (Verbose)
-		  		printf("increasing RLIMIT_NOFILE to max. %ld open files\n", (long)rlim.rlim_cur);
-		}
 	}
 
 	error += pkg_perform(&pkgs);
