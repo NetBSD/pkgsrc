@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-build,v 1.14 2008/02/26 13:57:51 joerg Exp $
+# $NetBSD: pkg-build,v 1.15 2008/06/12 13:29:27 joerg Exp $
 #
 # Copyright (c) 2007, 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -109,7 +109,7 @@ rm -f ${bulklog}/${pkgname}/*
 
 if [ "$use_destdir" = "user-destdir" ]; then
 	touch ${bulklog}/${pkgname}/work.log
-	chown ${unprivileged_user} ${bulklog}/${pkgname}/work.log
+	@CHOWN@ ${unprivileged_user} ${bulklog}/${pkgname}/work.log
 fi
 
 pkg_add_normal() {
