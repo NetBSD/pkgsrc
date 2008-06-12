@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/02/22 19:26:23 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/12 02:14:26 joerg Exp $
 
 DISTNAME=	Spoon-0.23
 PKGNAME=	p5-${DISTNAME}
@@ -10,6 +10,8 @@ AUTHOR_DIR=	authors/id/I/IN/INGY
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Spiffy Application Building Framework
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-IO-All>=0.32:../../devel/p5-IO-All
 DEPENDS+=	p5-Spiffy>=0.22:../../devel/p5-Spiffy

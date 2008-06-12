@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/02/22 19:01:23 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/12 02:14:40 joerg Exp $
 #
 
 DISTNAME=	SOAP-Lite-0.69
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SOAP/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.soaplite.com/
 COMMENT=	Perl5 module providing a lightweight interface to SOAP
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C|[a-z]$||}
 DEPENDS+=	p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64

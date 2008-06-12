@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/06/12 16:28:07 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:29 joerg Exp $
 #
 
 DISTNAME=		interLOGIC-src-0.30
@@ -12,15 +12,18 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sourceforge.net/projects/interlogic/
 COMMENT=		Logic/puzzle game based on the old Amiga game "Balls"
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}/interlogic
 USE_PKGLOCALEDIR=	yes
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 
+INSTALLATION_DIRS=	share/doc/InterLOGIC
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/InterLOGIC
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"

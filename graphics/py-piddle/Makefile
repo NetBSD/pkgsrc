@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/10/04 21:44:47 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/12 02:14:32 joerg Exp $
 
 DISTNAME=	piddle-1.0.15
 PKGREVISION=	2
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=piddle/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://piddle.sourceforge.net/
 COMMENT=	Python Plug In Drawing, Does Little Else
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	# defined
 

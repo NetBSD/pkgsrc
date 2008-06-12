@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2007/12/21 00:22:49 jdolecek Exp $
+# $NetBSD: Makefile,v 1.53 2008/06/12 02:14:16 joerg Exp $
 
 PSI_VERSION=	0.11
 DISTNAME=	psi-${PSI_VERSION}
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jdolecek@NetBSD.org
 HOMEPAGE=	http://psi-im.org/
 COMMENT=	PSI Jabber Client
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	qca2-ossl>=2.0.0beta3:../../security/qca2-ossl
 
@@ -41,19 +43,21 @@ SITES.${l}=	http://psi-im.org/files/translation/${PSI_VERSION}/
 .endfor
 
 INSTALLATION_DIRS=	bin share/psi share/doc/psi
+INSTALL_DIRS=		src
+INSTALL_TARGET=		install_target install_sharedfiles
+INSTALL_MAKE_FLAGS=	INSTALL_ROOT=${DESTDIR}
 
 # custom install targets, we don't want psi to install the desktop & icon
 # stuff
-do-install:
-	cd ${WRKSRC}/src && ${MAKE} install_target install_sharedfiles
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/psi
-	${RM} ${PREFIX}/share/psi/README
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/psi
-	${RM} ${PREFIX}/share/psi/COPYING
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/psi
+	${RM} ${DESTDIR}${PREFIX}/share/psi/README
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/psi
+	${RM} ${DESTDIR}${PREFIX}/share/psi/COPYING
 .for f in ${LANG_FILES}
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${f} ${PREFIX}/share/psi
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${f} ${DESTDIR}${PREFIX}/share/psi
 .endfor
-	${INSTALL_PROGRAM} ${WRKSRC}/psi ${PREFIX}/bin/psi
+	${INSTALL_PROGRAM} ${WRKSRC}/psi ${DESTDIR}${PREFIX}/bin/psi
 
 .include "../../devel/libidn/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

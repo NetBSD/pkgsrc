@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2008/05/29 11:10:13 drochner Exp $
+# $NetBSD: Makefile,v 1.41 2008/06/12 02:14:22 joerg Exp $
 
 DISTNAME=	eel-2.22.2
 CATEGORIES=	devel gnome
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Eazel Extensions Library for GNOME2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config

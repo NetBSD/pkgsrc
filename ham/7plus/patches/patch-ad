@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2008/06/12 02:14:32 joerg Exp $
+
+--- netbsd.mak.orig	2008-06-10 09:03:21.000000000 +0000
++++ netbsd.mak
+@@ -31,7 +31,7 @@ all: $(OBJS)
+ 	$(LD) $(LDFLAGS) $(SPECFLAGS) -o $(TARGET) $(OBJS) $(LIBS)
+ 
+ install: all
+-	$(INSTALL_PROGRAM) 7plus $(PREFIX)/bin
++	$(INSTALL_PROGRAM) 7plus ${DESTDIR}$(PREFIX)/bin
+ 
+ depend:
+ 	$(CC) -M $(SRCS) >depend.out

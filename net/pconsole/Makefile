@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/08/01 20:13:41 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:40 joerg Exp $
 #
 
 DISTNAME=	pconsole-1.0
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.ka.sara.nl/home/walter/pconsole/
 MAINTAINER=	frueauf@NetBSD.org
 HOMEPAGE=	http://www.ka.sara.nl/home/walter/pconsole/
 COMMENT=	Parallel console tool to access several host via one input tty
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 
@@ -21,9 +23,10 @@ SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	pconsole.sh.in
 SUBST_VARS.path=	PREFIX X11PREFIX
 
+INSTALLATION_DIRS=	share/doc/pconsole
+INSTALL_MAKE_FLAGS=	bindir=${DESTDIR}${PREFIX}/bin
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pconsole
-	cd ${WRKSRC} && ${INSTALL_DATA} \
-	 	README.pconsole ${PREFIX}/share/doc/pconsole
+	${INSTALL_DATA} ${WRKSRC}/README.pconsole ${DESTDIR}${PREFIX}/share/doc/pconsole
 
 .include "../../mk/bsd.pkg.mk"

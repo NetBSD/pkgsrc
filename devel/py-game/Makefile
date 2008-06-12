@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/04/25 20:39:08 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:28 joerg Exp $
 #
 
 DISTNAME=		pygame-1.7.1release
@@ -10,6 +10,8 @@ MASTER_SITES=		http://pygame.org/ftp/
 MAINTAINER=		recht@NetBSD.org
 HOMEPAGE=		http://pygame.org/
 COMMENT=		Set of Python modules designed for writing games
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/01/07 09:14:14 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:52 joerg Exp $
 #
 
 DISTNAME=	anacron-2.3
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=anacron/}
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://anacron.sourceforge.net/
 COMMENT=	Periodic command scheduler
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 
@@ -52,11 +54,13 @@ OWN_DIRS=		/var/spool/anacron
 
 RCD_SCRIPTS=		anacron
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin ${EGDIR}
+
+INSTALL_MAKE_FLAGS=	BINDIR=${DESTDIR}${PREFIX}/sbin \
+			MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/anacrontab.FreeBSD ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/anacrontab.NetBSD ${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/anacrontab.FreeBSD ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/anacrontab.NetBSD ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"

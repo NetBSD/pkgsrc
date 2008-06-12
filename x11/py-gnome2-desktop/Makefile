@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/04/25 20:39:14 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2008/06/12 02:14:57 joerg Exp $
 #
 
 DISTNAME=	gnome-python-desktop-2.22.0
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Python modules for the GNOME desktop
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 PY_PATCHPLIST=	yes

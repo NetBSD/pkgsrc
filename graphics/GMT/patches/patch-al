@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.5 2006/11/14 13:16:00 wennmach Exp $
+$NetBSD: patch-al,v 1.6 2008/06/12 02:14:31 joerg Exp $
 
 Libtoolize.
 
@@ -44,7 +44,7 @@ Libtoolize.
  libgmt_mgg.a:	gmt_mgg.o
 -		$(AR) cvr libgmt_mgg.a $?
 -		$(RANLIB) libgmt_mgg.a
-+		@$(LIBTOOL) --mode=link $(CC) -o libgmt_mgg.la gmt_mgg.lo --version-info 0:0  -rpath $(libdir)
++		@$(LIBTOOL) --mode=link $(CC) -o libgmt_mgg.la gmt_mgg.lo --version-info 0:0  -rpath $(PLAIN_LIBDIR)
  
  gmt_mgg.o:	$(MGG_H)
  

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/04/25 20:39:08 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/12 02:14:28 joerg Exp $
 #
 
 DISTNAME=		at-spi-1.22.1
@@ -11,15 +11,18 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Assistive Technology Service Provider Interface
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_BUILD=	yes
 PY_PATCHPLIST=	yes
 PYTHON_VERSIONS_ACCEPTED=	25 24
 
-PYATSPIDIR=	${PREFIX}/${PYSITELIB}/pyatspi
+PYATSPIDIR=		${PREFIX}/${PYSITELIB}/pyatspi
+INSTALLATION_DIRS=	${PYATSPIDIR}
+
 do-install:
-	${INSTALL_DATA_DIR} ${PYATSPIDIR}
-	${INSTALL_DATA} ${WRKSRC}/pyatspi/*.py ${PYATSPIDIR}
-	${PYTHONBIN} ${PREFIX}/${PYLIB}/compileall.py ${PYATSPIDIR}
+	${INSTALL_DATA} ${WRKSRC}/pyatspi/*.py ${DESTDIR}${PYATSPIDIR}
+	${PYTHONBIN} ${PREFIX}/${PYLIB}/compileall.py ${DESTDIR}${PYATSPIDIR}
 
 .include "../../lang/python/extension.mk"
 .include "../../devel/at-spi/buildlink3.mk"

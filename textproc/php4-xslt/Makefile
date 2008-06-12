@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.22 2006/06/04 16:26:55 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2008/06/12 02:14:51 joerg Exp $
 
 MODNAME=		xslt
 CATEGORIES+=		textproc
 COMMENT=		PHP4 extension for XSLT functions (Sablotron backend)
 
 PHP_VERSIONS_ACCEPTED=	4
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	php-xslt-[0-9]*
 
@@ -32,9 +34,10 @@ CONFIGURE_ARGS+=	--with-iconv-dir
 PLIST_SRC+=		${.CURDIR}/PLIST.extras
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 
+INSTALLATION_DIRS=	${DOCDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	cd ${WRKSRC}; ${INSTALL_DATA} README.XSLT-BACKENDS ${DOCDIR}
+	cd ${WRKSRC}; ${INSTALL_DATA} README.XSLT-BACKENDS ${DESTDIR}${DOCDIR}
 
 .include "../../lang/php/ext.mk"
 .include "../../textproc/sablotron/buildlink3.mk"

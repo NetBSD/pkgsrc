@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2005/07/02 13:03:53 symka Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:39 joerg Exp $
 #
 
 DISTNAME=		docsis-0.9.4
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=docsis/}
 MAINTAINER=		symka@NetBSD.org
 HOMEPAGE=		http://docsis.sourceforge.net/
 COMMENT=		Utility for manipulating DOCSIS-compliant cable modems
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		bison>=1.25:../../devel/bison
 

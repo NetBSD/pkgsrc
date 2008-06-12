@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/04/23 11:08:22 abs Exp $
+# $NetBSD: Makefile,v 1.26 2008/06/12 02:14:55 joerg Exp $
 #
 
 DISTNAME=	checkbot-1.79
@@ -17,6 +17,7 @@ DEPENDS+=	p5-URI>=1.10:../../www/p5-URI
 DEPENDS+=	p5-libwww>=5.76:../../www/p5-libwww
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/checkbot/.packlist
 
