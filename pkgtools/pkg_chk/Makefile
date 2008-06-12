@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.66 2008/06/12 02:14:42 joerg Exp $
+# $NetBSD: Makefile,v 1.67 2008/06/12 13:38:28 abs Exp $
 
 DISTNAME=	pkg_chk-1.94
+PKGREVISION=	1
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -41,7 +42,7 @@ do-extract:
 	cp ${FILESDIR}/pkg_chk.8 ${WRKSRC}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pkg_chk.sh ${PREFIX}/sbin/pkg_chk
-	${INSTALL_MAN} ${WRKSRC}/pkg_chk.8 ${PREFIX}/${PKGMANDIR}/man8/pkg_chk.8
+	${INSTALL_SCRIPT} ${WRKSRC}/pkg_chk.sh ${DESTDIR}/${PREFIX}/sbin/pkg_chk
+	${INSTALL_MAN} ${WRKSRC}/pkg_chk.8 ${DESTDIR}/${PREFIX}/${PKGMANDIR}/man8/pkg_chk.8
 
 .include "../../mk/bsd.pkg.mk"
