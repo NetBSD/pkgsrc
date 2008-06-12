@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/10 14:38:01 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:44 joerg Exp $
 
 PKGNAME=	${DISTNAME:S/_/-/}
 DISTNAME=	pam_radius-1.3.16
@@ -9,20 +9,20 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.freeradius.org/pam_radius_auth/
 COMMENT=	PAM module for authentication against a RADIUS server
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_CONFIGURE=	YES
 EXTRACT_SUFX=	.tar
 
-do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pam-radius
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/pam-radius
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/security
+INSTALLATION_DIRS=	lib/security share/doc/pam-radius share/examples/pam-radius
 
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/pam-radius
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/pam-radius
-	${INSTALL_DATA} ${WRKSRC}/USAGE ${PREFIX}/share/doc/pam-radius
+do-install:
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${PREFIX}/share/doc/pam-radius
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/pam-radius
+	${INSTALL_DATA} ${WRKSRC}/USAGE ${DESTDIR}${PREFIX}/share/doc/pam-radius
 	${INSTALL_DATA} ${WRKSRC}/pam_radius_auth.conf \
-		${PREFIX}/share/examples/pam-radius
-	${INSTALL_LIB} ${WRKSRC}/pam_radius_auth.so ${PREFIX}/lib/security
+		${DESTDIR}${PREFIX}/share/examples/pam-radius
+	${INSTALL_LIB} ${WRKSRC}/pam_radius_auth.so ${DESTDIR}${PREFIX}/lib/security
 
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

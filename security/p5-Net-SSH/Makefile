@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/10/22 06:53:16 dogcow Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/12 02:14:44 joerg Exp $
 #
 
 DISTNAME=		Net-SSH-Perl-1.30
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Net-SSH-Perl/
 COMMENT=		Perl implementations of SSH1 and SSH2 protocols
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Convert-PEM>=0.05:../../textproc/p5-Convert-PEM
 DEPENDS+=		p5-Crypt-Blowfish-[0-9]*:../../security/p5-Crypt-Blowfish

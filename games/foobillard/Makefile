@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/01/11 10:35:40 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/12 02:14:30 joerg Exp $
 #
 
 DISTNAME=	foobillard-3.0a
@@ -9,6 +9,8 @@ MASTER_SITES=	http://foobillard.sunsite.dk/dnl/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://foobillard.sunsite.dk/
 COMMENT=	Free OpenGL-billard game
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/02/22 19:26:37 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/06/12 02:14:32 joerg Exp $
 #
 
 DISTNAME=	7pl225sr
@@ -13,15 +13,18 @@ MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	#http://home.t-online.de/home/dg1bbq/
 COMMENT=	Uuencode-like file coder for AMPR BBS S&F of binary files
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 LICENSE=	no-commercial-use
 
 WRKSRC=		${WRKDIR}/7plsrc.225
 MAKE_FILE=	netbsd.mak
 USE_TOOLS+=	gmake
 
+INSTALLATION_DIRS=	bin share/doc/7plus
+
 post-install:
-		${INSTALL_DATA_DIR} ${PREFIX}/share/doc/7plus && \
-		${INSTALL_DATA} ${WRKDIR}/*.txt ${PREFIX}/share/doc/7plus && \
-		${INSTALL_DATA} ${WRKDIR}/readme.now ${PREFIX}/share/doc/7plus
+	${INSTALL_DATA} ${WRKDIR}/*.txt ${DESTDIR}${PREFIX}/share/doc/7plus && \
+	${INSTALL_DATA} ${WRKDIR}/readme.now ${DESTDIR}${PREFIX}/share/doc/7plus
 
 .include "../../mk/bsd.pkg.mk"

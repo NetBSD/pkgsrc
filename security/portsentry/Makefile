@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/12/28 11:51:42 obache Exp $
+# $NetBSD: Makefile,v 1.19 2008/06/12 02:14:45 joerg Exp $
 #
 
 DISTNAME=	portsentry-1.2
@@ -9,6 +9,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/sentrytools/
 COMMENT=	Detects and respond to port scans against a target host in real-time
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/portsentry_beta
 
 BUILD_TARGET=	${LOWER_OPSYS}
@@ -18,6 +20,7 @@ CONF_FILES=	${EGDIR}/portsentry.conf ${PKG_SYSCONFDIR}/portsentry.conf
 CONF_FILES+=	${EGDIR}/portsentry.ignore ${PKG_SYSCONFDIR}/portsentry.ignore
 
 INSTALLATION_DIRS=	sbin share/doc/portsentry share/examples/portsentry
+INSTALL_MAKE_FLAGS=	INSTALLDIR=${DESTDIR}${PREFIX}
 
 post-patch:
 	@cd ${WRKSRC};							\
@@ -35,7 +38,7 @@ post-patch:
 	done
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/README.install ${PREFIX}/share/doc/portsentry
-	${INSTALL_DATA} ${WRKSRC}/README.methods ${PREFIX}/share/doc/portsentry
+	${INSTALL_DATA} ${WRKSRC}/README.install ${DESTDIR}${PREFIX}/share/doc/portsentry
+	${INSTALL_DATA} ${WRKSRC}/README.methods ${DESTDIR}${PREFIX}/share/doc/portsentry
 
 .include "../../mk/bsd.pkg.mk"

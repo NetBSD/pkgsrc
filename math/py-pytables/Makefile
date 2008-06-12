@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/04/25 20:39:10 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/12 02:14:37 joerg Exp $
 #
 
 DISTNAME=		pytables-1.3.3
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pytables/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pytables.sourceforge.net/
 COMMENT=		Database package for large amounts of data
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pytables
 PKG_SUPPORTED_OPTIONS=	lzo ucl

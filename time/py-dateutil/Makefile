@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/04/25 20:39:13 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:53 joerg Exp $
 #
 
 DISTNAME=	python-dateutil-1.2
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://labix.org/python-dateutil
 COMMENT=	Extensions to the standard datetime module
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes

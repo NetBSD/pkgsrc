@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/02/22 19:26:58 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:41 joerg Exp $
 #
 
 DISTNAME=	adns-python-1.0.0
@@ -10,6 +10,8 @@ MASTER_SITES=	http://dustman.net/andy/python/adns-python/1.0.0/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://dustman.net/andy/python/adns-python/
 COMMENT=	Python interface to the GNU asynchronous DNS resolver library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=
 

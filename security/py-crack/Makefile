@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/10/04 21:58:14 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2008/06/12 02:14:45 joerg Exp $
 #
 
 DISTNAME=	pycrack-0.01
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.digitalevacuation.org/pycrack/
 MAINTAINER=	darcy@NetBSD.org
 HOMEPAGE=	http://www.digitalevacuation.org/
 COMMENT=	Python interface to cracklib
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=			crack>=5.0:../../security/crack
 

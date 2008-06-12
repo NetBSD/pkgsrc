@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.118 2008/03/29 21:55:19 markd Exp $
+# $NetBSD: Makefile,v 1.119 2008/06/12 02:14:35 joerg Exp $
 
 DISTNAME=	pine4.64
 PKGNAME=	pine-4.64
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	jwise@netbsd.org
 HOMEPAGE=	http://www.washington.edu/pine/
 COMMENT=	Program for Internet News and E-mail
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 LICENSE=	pine-license
 
@@ -69,7 +71,8 @@ CFLAGS+=		-DPASSFILE=\\\".pinepwd\\\"
 
 REPLACE_PERL+=		contrib/utils/pwd2pine
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 \
+			share/examples/pine share/pine/contrib/utils
 
 # Make sure the imap lib that comes with pine isn't
 # used (see http://www.securityfocus.com/advisories/2646)
@@ -94,28 +97,24 @@ do-build:
 		EXTRALDFLAGS="${LDFLAGS} ${LIBS}"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/pine ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/rpdump ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/rpload ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/pine
-	${INSTALL_MAN} ${WRKSRC}/doc/pine.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/rpdump.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/doc/rpload.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/pine ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/rpdump ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/rpload ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/doc/pine.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/rpdump.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/doc/rpload.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	( ${ECHO} '# (This file is not part of the pine distribution! - HF)' ; \
-	  ${PREFIX}/bin/pine -conf ) | ${SED} \
+	  ${DESTDIR}${PREFIX}/bin/pine -conf ) | ${SED} \
 	    -e 's|^\(use-only-domain-name\)=.*$$|\1=No|g' \
 	    -e 's|^\(feature-list\)=.*$$|\1=enable-mail-check-cue,enable-suspend,expanded-view-of-addressbooks,include-header-in-reply,include-text-in-reply,show-selected-in-boldface,signature-at-bottom|g' \
 	    -e 's|^\(sort-key\)=.*$$|\1=Arrival/Reverse|g' \
-	    >${PREFIX}/share/examples/pine/pine.conf
-	${INSTALL_DATA}	${FILESDIR}/pine.conf.fixed ${PREFIX}/share/examples/pine/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/pine
-	${INSTALL_DATA_DIR} ${PREFIX}/share/pine/contrib
-	${INSTALL_DATA_DIR} ${PREFIX}/share/pine/contrib/utils
-	${INSTALL_DATA} ${WRKSRC}/doc/tech-notes.txt ${PREFIX}/share/pine/
-	${INSTALL_DATA} ${WRKSRC}/contrib/krb5-setup ${PREFIX}/share/pine/contrib
-	${INSTALL_DATA} ${WRKSRC}/contrib/ldap-setup ${PREFIX}/share/pine/contrib
-	${INSTALL_DATA} ${WRKSRC}/contrib/utils/* ${PREFIX}/share/pine/contrib/utils
-	${CHMOD} +x ${PREFIX}/share/pine/contrib/utils/*.sh
+	    >${DESTDIR}${PREFIX}/share/examples/pine/pine.conf
+	${INSTALL_DATA}	${FILESDIR}/pine.conf.fixed ${DESTDIR}${PREFIX}/share/examples/pine/
+	${INSTALL_DATA} ${WRKSRC}/doc/tech-notes.txt ${DESTDIR}${PREFIX}/share/pine/
+	${INSTALL_DATA} ${WRKSRC}/contrib/krb5-setup ${DESTDIR}${PREFIX}/share/pine/contrib
+	${INSTALL_DATA} ${WRKSRC}/contrib/ldap-setup ${DESTDIR}${PREFIX}/share/pine/contrib
+	${INSTALL_DATA} ${WRKSRC}/contrib/utils/* ${DESTDIR}${PREFIX}/share/pine/contrib/utils
+	${CHMOD} +x ${DESTDIR}${PREFIX}/share/pine/contrib/utils/*.sh
 
 # 2004e contains extensions needed by Pine 4.63
 BUILDLINK_API_DEPENDS.imap-uw+=	imap-uw>=2004e

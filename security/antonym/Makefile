@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/03/19 16:40:28 tv Exp $
+# $NetBSD: Makefile,v 1.7 2008/06/12 02:14:44 joerg Exp $
 #
 
 DISTNAME=		antonym-1.9
@@ -17,14 +17,15 @@ USE_TOOLS+=		perl:run
 REPLACE_PERL=		antonym
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-INSTALLATION_DIRS=	bin
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+INSTALLATION_DIRS=	bin share/examples/antonym
 
 do-build: # empty
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/antonym ${PREFIX}/bin/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/antonym
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/examples/antonym/
-	${INSTALL_DATA} ${WRKSRC}/replyblocks.dat.example ${PREFIX}/share/examples/antonym/dot.antonym
+	${INSTALL_SCRIPT} ${WRKSRC}/antonym ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/examples/antonym/
+	${INSTALL_DATA} ${WRKSRC}/replyblocks.dat.example ${DESTDIR}${PREFIX}/share/examples/antonym/dot.antonym
 
 .include "../../mk/bsd.pkg.mk"

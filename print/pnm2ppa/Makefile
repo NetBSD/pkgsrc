@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2005/12/29 06:22:07 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2008/06/12 02:14:43 joerg Exp $
 #
 
 DISTNAME=	pnm2ppa-1.12
@@ -9,8 +9,12 @@ MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://pnm2ppa.sourceforge.net/
 COMMENT=	Filter to convert PNM file to PPA used by some HP DJ printer
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONF_FILES=	${PREFIX}/share/examples/pnm2ppa/pnm2ppa.conf \
 		${PKG_SYSCONFDIR}/pnm2ppa.conf
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/pnm2ppa
 
 post-build:
 	for f in				\
@@ -24,10 +28,9 @@ post-build:
 	done
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pnm2ppa
 	cd ${WRKSRC} &&	\
 	${INSTALL_DATA} docs/en/CALIBRATION.txt	docs/en/COLOR.txt	\
-		${PREFIX}/share/doc/pnm2ppa
+		${DESTDIR}${PREFIX}/share/doc/pnm2ppa
 
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

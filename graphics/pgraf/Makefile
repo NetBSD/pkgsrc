@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/02/15 14:58:21 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2008/06/12 02:14:32 joerg Exp $
 
 DISTNAME=		pgraf-20010131
 PKGREVISION=		1
@@ -8,21 +8,23 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Portable graphics system
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_SRC_ON_FTP=		Already in MASTER_SITE_LOCAL
-INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 ${PKGMANDIR}/man3 ${PKGMANDIR}/man5
+INSTALLATION_DIRS=	bin include lib ${PKGMANDIR}/man1 \
+			${PKGMANDIR}/man3 ${PKGMANDIR}/man5 \
+			share/doc/pgraf share/examples/pgraf
 
 CONFLICTS=		pgp5-[0-9]*		# Both have a `pgps' executable
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/include/pgraf.h ${PREFIX}/include
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pgraf
-	${INSTALL_DATA} ${WRKSRC}/doc/pgraf_paper ${PREFIX}/share/doc/pgraf
-	${INSTALL_DATA} ${WRKSRC}/man/man1/pgraf.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/man/man3/pgraf.3 ${PREFIX}/${PKGMANDIR}/man3
-	${INSTALL_DATA} ${WRKSRC}/man/man5/pgraf.5 ${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/pgraf
+	${INSTALL_DATA} ${WRKSRC}/include/pgraf.h ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/doc/pgraf_paper ${DESTDIR}${PREFIX}/share/doc/pgraf
+	${INSTALL_DATA} ${WRKSRC}/man/man1/pgraf.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/man/man3/pgraf.3 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
+	${INSTALL_DATA} ${WRKSRC}/man/man5/pgraf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
 	${INSTALL_DATA} ${WRKSRC}/metagens/*.r ${WRKSRC}/tests/*	\
-		${PREFIX}/share/examples/pgraf/
+		${DESTDIR}${PREFIX}/share/examples/pgraf/
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

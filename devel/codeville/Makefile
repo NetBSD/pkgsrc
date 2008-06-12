@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/04/25 20:39:08 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2008/06/12 02:14:21 joerg Exp $
 
 DISTNAME=	Codeville-0.1.16
 PKGNAME=	codeville-0.1.16
@@ -9,6 +9,8 @@ MASTER_SITES=	http://codeville.org/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://codeville.org/
 COMMENT=	Distributed revision control system
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
 

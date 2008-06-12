@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/04/25 20:39:13 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2008/06/12 02:14:53 joerg Exp $
 #
 
 DISTNAME=	egenix-mx-base-2.0.6
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.egenix.com/files/python/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.egenix.com/files/python/mxDateTime.html
 COMMENT=	Python extension that provides types and conversions for dates
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes
