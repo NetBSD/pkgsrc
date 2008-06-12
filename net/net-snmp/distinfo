@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.45 2008/06/06 16:18:03 tron Exp $
+$NetBSD: distinfo,v 1.46 2008/06/12 13:32:24 tron Exp $
 
 SHA1 (net-snmp-5.4.1.tar.gz) = ac5ba033c10d53d3057415121f8c4936c643c208
 RMD160 (net-snmp-5.4.1.tar.gz) = 3723488dab8d164702a7d55c9c72eeaec07dd50c
@@ -42,6 +42,6 @@ SHA1 (patch-eh) = c2dbd651a0fcf6e20b8a9eee68f0ab30763af912
 SHA1 (patch-ei) = 7eb4899b08b73c79f1eb8616bcebad38c0fbe148
 SHA1 (patch-ej) = c8047a6109bf6b833c56562d48b56b480c4299be
 SHA1 (patch-el) = f80dc7058b8a60e3be53e5673538f6eb2d173b68
-SHA1 (patch-ep) = 82071d291813078d27552e5e16e1619e3b3a1bc2
+SHA1 (patch-ep) = 84dde63e97065c0776778583ae73e52adaffbd01
 SHA1 (patch-es) = c26c048ccbda7e4d28cb0a2263cdaa71befb4f96
 SHA1 (patch-et) = 63e31a08413b004608540a28a8fc448966320e7f
