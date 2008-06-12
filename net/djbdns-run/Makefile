@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/07/10 22:59:26 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/12 02:14:39 joerg Exp $
 #
 
 DISTNAME=		djbdns-run-20050415
@@ -15,6 +15,7 @@ DEPENDS+=		daemontools-[0-9]*:../../sysutils/daemontools
 DEPENDS+=		ucspi-tcp-[0-9]*:../../net/ucspi-tcp
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 NO_CHECKSUM=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/17 18:01:52 drochner Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/12 02:14:30 joerg Exp $
 #
 
 DISTNAME=		FlightGear-1.0.0
@@ -14,6 +14,8 @@ MASTER_SITES=		ftp://ftp.flightgear.org/pub/fgfs/Source/ \
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.flightgear.org/
 COMMENT=		The FlightGear Simulator
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/04/13 18:23:38 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2008/06/12 02:14:47 joerg Exp $
 #
 
 DISTNAME=		pv-0.9.6
@@ -9,6 +9,8 @@ MASTER_SITES+=		${MASTER_SITE_SOURCEFORGE:=pipeviewer/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ivarch.com/programs/pv.shtml
 COMMENT=		Monitor the progress of data through a pipeline
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake msgfmt
@@ -27,9 +29,9 @@ post-install:
 	${GREP} "^$$dir/" ${PKGDIR}/PLIST | ${SED} "s|^$$dir/||" |	\
 	while read file; do						\
 		test ! -f "$$file" ||					\
-			${INSTALL_DATA} "$$file" ${PREFIX}/$$dir;	\
+			${INSTALL_DATA} "$$file" ${DESTDIR}${PREFIX}/$$dir; \
 	done
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

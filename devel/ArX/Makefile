@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/03/06 14:53:48 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2008/06/12 02:14:21 joerg Exp $
 #
 
 DISTNAME=	ArX-2.2.4
@@ -30,6 +30,9 @@ CONFIGURE_ARGS+=	ARXPYTHON=${TRUE:Q}
 
 INSTALLATION_DIRS=	bin
 
+INSTALL_ENV+=		prefix=${DESTDIR}${PREFIX}
+INSTALL_ENV+=		mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
+
 do-build:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
 	cd ${WRKSRC}							\
@@ -38,7 +41,7 @@ do-build:
 do-install:
 	${_PKG_SILENT}${_PKG_DEBUG}${_ULIMIT_CMD}			\
 	cd ${WRKSRC}							\
-	&& ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons install
+	&& ${SETENV} ${MAKE_ENV} ${PREFIX}/bin/scons install 
 
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

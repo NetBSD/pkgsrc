@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/06/07 12:00:59 abs Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:23 joerg Exp $
 #
 
 DISTNAME=	IO-Prompt-v0.99.4
@@ -11,6 +11,7 @@ HOMEPAGE=	http://search.cpan.org/~dconway/IO-Prompt/
 COMMENT=	Interactively prompt for user input
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-version-[0-9]*:../../devel/p5-version
 DEPENDS+=	p5-Term-ReadKey-[0-9]*:../../devel/p5-Term-ReadKey

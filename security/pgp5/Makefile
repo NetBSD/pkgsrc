@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/12/02 11:35:41 wiz Exp $
+# $NetBSD: Makefile,v 1.33 2008/06/12 02:14:45 joerg Exp $
 #
 
 DISTNAME=	pgp50i-unix-src
@@ -14,6 +14,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pgpi.org/
 COMMENT=	Public-key encryption and digital signature utilities (v5)
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	perl
 
 CONFLICTS=	pgraf-[0-9]*  	# Both have a `pgps' executable
@@ -27,11 +29,12 @@ LICENSE=	fee-based-commercial-use
 
 PGPLIB=	${PREFIX}/share/pgp5
 
+INSTALLATION_DIRS=	bin ${PGPLIB}
+
 post-patch:
 	${MV} ${WRKSRC}/man/pgp.1 ${WRKSRC}/man/pgp5.1
 
 post-install:
-	${INSTALL_DATA_DIR} ${PGPLIB}
-	${INSTALL_DATA} ${WRKSRC}/language50.txt ${PGPLIB}
+	${INSTALL_DATA} ${WRKSRC}/language50.txt ${DESTDIR}${PGPLIB}
 
 .include "../../mk/bsd.pkg.mk"

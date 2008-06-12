@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/10/21 03:53:45 dsainty Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/12 02:14:18 joerg Exp $
 #
 
 DISTNAME=	${PKGNAME_NOREV:S/./_/g}
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=palm-db-tools/}
 MAINTAINER=	dsainty@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/palm-db-tools/
 COMMENT=	Conversion utilities for PalmOS flat-file database programs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 #LICENSE=	GPL
 
@@ -24,8 +26,10 @@ USE_LIBTOOL=	yes
 # fixes this.
 CONFIGURE_ARGS=	--disable-warnings --enable-libtool
 
+INSTALLATION_DIRS=	share/doc/palm-db-tools
+INSTALL_MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX}
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/docs/manual.* ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_DATA} ${WRKSRC}/docs/manual.* ${DESTDIR}${PREFIX}/share/doc/palm-db-tools
 
 .include "../../mk/bsd.pkg.mk"

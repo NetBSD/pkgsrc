@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/11/12 00:12:41 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2008/06/12 02:14:51 joerg Exp $
 #
 
 DISTNAME=	XML-Node-0.10
@@ -12,6 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://belmont-shores.ics.uci.edu/XML::Node/
 COMMENT=	Node-based XML parsing: an simplified interface to XML::Parser
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	p5-XML-Parser-2.*:../../textproc/p5-XML-Parser
 
 PERL5_PACKLIST=		auto/XML/Node/.packlist
@@ -24,7 +26,7 @@ post-install:
 		${WRKSRC}/test.xml \
 		${WRKSRC}/foo.xml \
 		${WRKSRC}/README \
-		${PERL5_INSTALLVENDORLIB}/XML
+		${DESTDIR}${PERL5_INSTALLVENDORLIB}/XML
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

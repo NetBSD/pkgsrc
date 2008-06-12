@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/03/06 14:53:54 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/12 02:14:45 joerg Exp $
 #
 
 DISTNAME=	prelude-pflogger-0.9.0-rc2
@@ -10,6 +10,8 @@ MASTER_SITES=	http://prelude-ids.org/download/releases/
 MAINTAINER=	shannonjr@NetBSD.org
 HOMEPAGE=	http://prelude-ids.org/download/releases/
 COMMENT=	Prelude sensor for Packet Filter (pf)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -48,6 +50,8 @@ SUBST_FILES.make=       Makefile.am
 SUBST_SED.make=         -e 's,@EGDIR@,${EGDIR},g'
 
 RCD_SCRIPTS=		pflogger
+
+INSTALLATION_DIRS=	share/examples/prelude-pflogger
 
 pre-configure:
 	set -e; cd ${WRKSRC}; \

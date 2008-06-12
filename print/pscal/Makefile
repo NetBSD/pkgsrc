@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:30:31 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:43 joerg Exp $
 #
 
 DISTNAME=	pscal-1.16
@@ -9,13 +9,14 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.panix.com/~mbh/projects.html
 COMMENT=	Produces simple, nice-looking PostScript calendars
 
-INSTALLATION_DIRS=	bin
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-do-build:
+INSTALLATION_DIRS=	bin share/doc/pscal
+
+NO_BUILD=	yes
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pscal ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pscal
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/pscal
+	${INSTALL_SCRIPT} ${WRKSRC}/pscal ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/pscal
 
 .include "../../mk/bsd.pkg.mk"

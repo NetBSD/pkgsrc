@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/02/28 11:58:48 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2008/06/12 02:14:33 joerg Exp $
 #
 
 DISTNAME=		fort77-1.18
@@ -7,6 +7,8 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE:=devel/lang/fortran/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		The driver for f2c, a fortran to C translator
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=		test
 USE_TOOLS+=		perl:run

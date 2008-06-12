@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.11 2006/06/04 16:26:52 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/12 02:14:13 joerg Exp $
 
 MODNAME=		bz2
 CATEGORIES=		archivers
 COMMENT=		PHP extension for bzip2 compression
 
 CONFLICTS=	php-bz2-[0-9]*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PHP_EXT_PATCHES=	yes
 

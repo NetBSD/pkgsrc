@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/10/01 15:56:08 seb Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:40 joerg Exp $
 #
 
 DISTNAME=	SNMP-Info-1.04
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SNMP/}
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://snmp-info.sourceforge.net/
 COMMENT=	Perl5 object oriented interface to SNMP informations
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	net-snmp>=5.1.2:../../net/net-snmp
 

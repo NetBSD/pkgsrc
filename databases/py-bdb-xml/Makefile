@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/04/25 20:39:07 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/12 02:14:20 joerg Exp $
 
 DISTNAME=	dbxml-1.2.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME:S/db/bdb-/}
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.sleepycat.com/update/snapshot/
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://www.sleepycat.com/products/xml.shtml
 COMMENT=	Python wrapper for Berkeley DB XML C++ API
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	${PYPKGPREFIX}-dbxml<=1.2.1
 

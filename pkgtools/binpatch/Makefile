@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/01/07 09:14:08 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:42 joerg Exp $
 #
 
 DISTNAME=	binpatch-1.0
@@ -10,6 +10,7 @@ MAINTAINER=	atatat@NetBSD.org
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Trivial binary patch applicator
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CHECKSUM=	yes
 

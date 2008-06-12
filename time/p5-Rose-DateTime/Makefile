@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/10 13:42:34 abs Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:52 joerg Exp $
 
 DISTNAME=	Rose-DateTime-0.532
 PKGNAME=	p5-${DISTNAME}
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Rose/}
 MAINTAINER=	abs@absd.org
 HOMEPAGE=	http://search.cpan.org/~jsiracusa/Rose-DB-Object/
 COMMENT=	DateTime helper functions and objects for Rose
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+= 	p5-Rose-Object>=0.82:../../devel/p5-Rose-Object
 DEPENDS+=	p5-DateTime-[0-9]*:../../time/p5-DateTime

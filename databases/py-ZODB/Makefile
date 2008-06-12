@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/04/25 20:39:07 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/12 02:14:20 joerg Exp $
 #
 
 DISTNAME=		ZODB3-3.2.1
@@ -10,6 +10,8 @@ MASTER_SITES=		http://zope.org/Products/ZODB3.2/3.2.1/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://zope.org/Products/ZODB3.2/3.2/
 COMMENT=		Standalone distro of Zope Object Database
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes

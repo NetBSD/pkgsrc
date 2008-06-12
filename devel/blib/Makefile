@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/08/10 17:44:11 drochner Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:21 joerg Exp $
 #
 
 DISTNAME=		blib-1.0.2
@@ -9,6 +9,8 @@ MASTER_SITES=		http://sven.gimp.org/blinkenlights/old/
 MAINTAINER=		salo@NetBSD.org
 HOMEPAGE=		http://www.blinkenlights.de/
 COMMENT=		Blinkenlights library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 USE_LIBTOOL=		YES

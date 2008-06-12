@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/01/18 05:09:43 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:45 joerg Exp $
 #
 
 DISTNAME=	adtool-1.2
@@ -11,6 +11,7 @@ HOMEPAGE=	http://gp2x.org/adtool/
 COMMENT=	Active Directory administration utility for Unix
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

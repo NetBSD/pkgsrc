@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/03/07 16:46:39 gson Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:40 joerg Exp $
 #
 
 DISTNAME=	Net-RawIP-0.21_03
@@ -11,6 +11,8 @@ MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/S/SZ/SZABGAB/
 MAINTAINER=	bouyer@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~szabgab/Net-RawIP-0.21_03/
 COMMENT=	Perl extension to manipulate raw ip packets with interface to libpcap
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=              p5-List-MoreUtils-[0-9]*:../../devel/p5-List-MoreUtils
 

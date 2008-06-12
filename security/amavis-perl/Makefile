@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2006/11/12 02:56:41 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2008/06/12 02:14:44 joerg Exp $
 
 DISTNAME=	amavisd-${VERSION}
 PKGNAME=	amavis-perl-${VERSION}
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.amavis.org/dist/perl/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.amavis.org/
 COMMENT=	Mail virus scanner
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	amavis-[0-9]*
 CONFLICTS+=	amavis-perl-[0-9]*
@@ -59,7 +61,8 @@ CONFIGURE_ARGS+=--enable-all
 CONFIGURE_ARGS+=--with-amavisuser=amavis
 CONFIGURE_ARGS+=--with-perl=${PERL5}
 
-INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
+INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5 \
+			${PKGMANDIR}/man8 share/doc/amavis
 
 post-build:
 	${SED} -e "s|/etc/amavisd.conf|${PREFIX}/etc/amavis/amavisd.conf|" \
@@ -68,34 +71,33 @@ post-build:
 do-install:
 	# Program files
 .if empty(PKG_OPTIONS:Mmilter)
-	${INSTALL_PROGRAM} ${WRKSRC}/amavis/amavis ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/amavis/amavis ${DESTDIR}${PREFIX}/sbin
 .endif
-	${INSTALL_SCRIPT} ${WRKDIR}/amavisd ${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKDIR}/amavisd ${DESTDIR}${PREFIX}/sbin
 	# Documents
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/doc/amavis.html ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/doc/amavis.png ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/doc/amavis.txt ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${FILESDIR}/LICENSE.sendmail ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/FAQ ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/NEWS ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/README.exim ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/README.milter ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/README.postfix ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/README.qmail ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/README.scanners ${PREFIX}/share/doc/amavis
-	${INSTALL_DATA} ${WRKSRC}/README.sendmail ${PREFIX}/share/doc/amavis
+	${INSTALL_DATA} ${WRKSRC}/doc/amavis.html ${DESTDIR}${PREFIX}/share/doc/amavis
+	${INSTALL_DATA} ${WRKSRC}/doc/amavis.png ${DESTDIR}${PREFIX}/share/doc/amavis
+	${INSTALL_DATA} ${WRKSRC}/doc/amavis.txt ${DESTDIR}${PREFIX}/share/doc/amavis
+	${INSTALL_DATA} ${FILESDIR}/LICENSE.sendmail ${DESTDIR}${PREFIX}/share/doc/amavis
+	${INSTALL_DATA} ${WRKSRC}/FAQ ${DESTDIR}${PREFIX}/share/doc/amavis
+	${INSTALL_DATA} ${WRKSRC}/NEWS ${DESTDIR}${PREFIX}/share/doc/amavis
+	${INSTALL_DATA} ${WRKSRC}/README.exim ${DESTDIR}${PREFIX}/share/doc/amavis
+	${INSTALL_DATA} ${WRKSRC}/README.milter ${DESTDIR}${PREFIX}/share/doc/amavis
+	${INSTALL_DATA} ${WRKSRC}/README.postfix ${DESTDIR}${PREFIX}/share/doc/amavis
+	${INSTALL_DATA} ${WRKSRC}/README.qmail ${DESTDIR}${PREFIX}/share/doc/amavis
+	${INSTALL_DATA} ${WRKSRC}/README.scanners ${DESTDIR}${PREFIX}/share/doc/amavis
+	${INSTALL_DATA} ${WRKSRC}/README.sendmail ${DESTDIR}${PREFIX}/share/doc/amavis
 	${INSTALL_DATA} ${WRKSRC}/amavis/amavisd.conf \
-		${PREFIX}/share/doc/amavis
+		${DESTDIR}${PREFIX}/share/doc/amavis
 	${SED} "s+@PREFIX@+${PREFIX}+g" < ${FILESDIR}/amavis.m4 \
 		> ${WRKDIR}/amavis.m4
-	${INSTALL_DATA} ${WRKDIR}/amavis.m4 ${PREFIX}/share/doc/amavis
+	${INSTALL_DATA} ${WRKDIR}/amavis.m4 ${DESTDIR}${PREFIX}/share/doc/amavis
 	# Man pages
 .if empty(PKG_OPTIONS:Mmilter)
-	${INSTALL_DATA} ${WRKSRC}/doc/amavis.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/doc/amavis.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .endif
-	${INSTALL_DATA} ${WRKSRC}/doc/amavis-milter.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKSRC}/doc/amavisd.conf.5 ${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_DATA} ${WRKSRC}/doc/amavisd.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/doc/amavis-milter.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/doc/amavisd.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_DATA} ${WRKSRC}/doc/amavisd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../mk/bsd.pkg.mk"

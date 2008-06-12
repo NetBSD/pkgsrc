@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2008/06/05 11:08:08 drochner Exp $
+# $NetBSD: Makefile,v 1.135 2008/06/12 02:14:34 joerg Exp $
 
 DISTNAME=		evolution-2.22.2
 PKGREVISION=		1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/evolution/
 COMMENT=		GNOME mailer, calendar, contact manager, and communications tool
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.evolution
 PKG_SUGGESTED_OPTIONS=	inet6 ssl

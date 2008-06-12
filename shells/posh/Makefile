@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:30:39 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:45 joerg Exp $
 #
 
 DISTNAME=	posh_0.3.14
@@ -12,13 +12,15 @@ HOMEPAGE=	http://packages.debian.org/posh
 COMMENT=	Debian Policy-compliant Ordinary SHell
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 PKG_SHELL=		bin/posh
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
+INSTALLATION_DIRS=	share/doc/posh
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/posh
-	${INSTALL_DATA} ${WRKSRC}/debian/changelog ${PREFIX}/share/doc/posh
+	${INSTALL_DATA} ${WRKSRC}/debian/changelog ${DESTDIR}${PREFIX}/share/doc/posh
 
 .include "../../mk/bsd.pkg.mk"

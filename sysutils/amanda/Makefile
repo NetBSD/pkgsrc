@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2008/02/15 16:23:09 gdt Exp $
+# $NetBSD: Makefile,v 1.44 2008/06/12 02:14:46 joerg Exp $
 #
 
 # XXX get this from ../../sysutils/amanda-common/Makefile.common
@@ -12,6 +12,8 @@ DISTFILES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.amanda.org/
 COMMENT=	The "meta-package" for Amanda, a network backup system
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	amanda-client-${VERSION}{,nb[0-9]*}:../../sysutils/amanda-client
 DEPENDS+=	amanda-server-${VERSION}{,nb[0-9]*}:../../sysutils/amanda-server

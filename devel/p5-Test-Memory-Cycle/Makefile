@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/11/04 11:13:29 obache Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:27 joerg Exp $
 #
 
 DISTNAME=		Test-Memory-Cycle-1.04
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Test/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Test-Memory-Cycle/
 COMMENT=		Check for memory leaks and circular memory references
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Devel-Cycle-[0-9]*:../../devel/p5-Devel-Cycle
 

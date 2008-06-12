@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2008/02/09 23:49:27 tnn Exp $
+# $NetBSD: Makefile,v 1.53 2008/06/12 02:14:42 joerg Exp $
 
 DISTNAME=	pvm3.4.5
 PKGNAME=	pvm-3.4.5
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.csm.ornl.gov/pvm/pvm_home.html
 COMMENT=	Parallel Virtual Machine libraries and environment
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	m4
 
@@ -59,57 +61,54 @@ pre-install:
 	${RM} -f ${WRKSRC}/lib/pvmgetarch.orig
 	${RM} -f ${WRKSRC}/man/man1/pvm_intro.1.orig
 
+INSTALLATION_DIRS=	${PVM_DIR}/bin/${PVM_ARCH} ${PVM_DIR}/conf \
+			${PVM_DIR}/examples ${PVM_DIR}/gexamples \
+			${PVM_DIR}/include ${PVM_DIR}/lib/${PVM_ARCH} \
+			${PKGMANDIR}/man1 ${PKGMANDIR}/man3
+
 do-install:
-	${INSTALL_PROGRAM_DIR} ${PVM_DIR}/lib/${PVM_ARCH}
 .for __tmp__ in libgpvm3.la libpvm3.la libpvmtrc.la libfpvm3.la
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
-		${WRKSRC}/lib/${PVM_ARCH}/${__tmp__} ${PVM_DIR}/lib/${PVM_ARCH}
+		${WRKSRC}/lib/${PVM_ARCH}/${__tmp__} ${DESTDIR}${PVM_DIR}/lib/${PVM_ARCH}
 .endfor
 .for __tmp__ in pvm pvmgs
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} \
-		${WRKSRC}/lib/${PVM_ARCH}/${__tmp__} ${PVM_DIR}/lib/${PVM_ARCH}/
+		${WRKSRC}/lib/${PVM_ARCH}/${__tmp__} ${DESTDIR}${PVM_DIR}/lib/${PVM_ARCH}/
 .endfor
 	${INSTALL_PROGRAM} ${WRKSRC}/lib/${PVM_ARCH}/pvmd3		\
-		${PVM_DIR}/lib/${PVM_ARCH}
-	${LIBTOOL} --mode=finish ${PVM_DIR}/lib/${PVM_ARCH}
+		${DESTDIR}${PVM_DIR}/lib/${PVM_ARCH}
+	${LIBTOOL} --mode=finish ${DESTDIR}${PVM_DIR}/lib/${PVM_ARCH}
 	for f in `${LS} -1 ${WRKSRC}/lib`; do				\
 		if [ -f ${WRKSRC}/lib/$$f ]; then			\
-			${INSTALL_SCRIPT} ${WRKSRC}/lib/$$f ${PVM_DIR}/lib; \
+			${INSTALL_SCRIPT} ${WRKSRC}/lib/$$f ${DESTDIR}${PVM_DIR}/lib; \
 		fi;							\
 	done
 
-	${INSTALL_PROGRAM_DIR} ${PVM_DIR}/bin/${PVM_ARCH}
 	for f in ${WRKSRC}/bin/${PVM_ARCH}/* ; do \
 	${ECHO} "Installing $$f" ; \
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} $$f \
-		${PVM_DIR}/bin/${PVM_ARCH}/ ; done
+		${DESTDIR}${PVM_DIR}/bin/${PVM_ARCH}/ ; done
 
-	${INSTALL_DATA_DIR} ${PVM_DIR}/conf
-	${INSTALL_DATA} ${WRKSRC}/conf/${PVM_ARCH}.def ${PVM_DIR}/conf
-	${INSTALL_DATA} ${WRKSRC}/conf/${PVM_ARCH}.m4 ${PVM_DIR}/conf
+	${INSTALL_DATA} ${WRKSRC}/conf/${PVM_ARCH}.def ${DESTDIR}${PVM_DIR}/conf
+	${INSTALL_DATA} ${WRKSRC}/conf/${PVM_ARCH}.m4 ${DESTDIR}${PVM_DIR}/conf
 
-	${INSTALL_DATA_DIR} ${PVM_DIR}/examples
-	${INSTALL_DATA} ${WRKSRC}/examples/*.c ${PVM_DIR}/examples
-	${INSTALL_DATA} ${WRKSRC}/examples/*.f ${PVM_DIR}/examples
-	${INSTALL_DATA} ${WRKSRC}/examples/Readme ${PVM_DIR}/examples
-	${INSTALL_DATA} ${WRKSRC}/examples/Makefile.aimk ${PVM_DIR}/examples
+	${INSTALL_DATA} ${WRKSRC}/examples/*.c ${DESTDIR}${PVM_DIR}/examples
+	${INSTALL_DATA} ${WRKSRC}/examples/*.f ${DESTDIR}${PVM_DIR}/examples
+	${INSTALL_DATA} ${WRKSRC}/examples/Readme ${DESTDIR}${PVM_DIR}/examples
+	${INSTALL_DATA} ${WRKSRC}/examples/Makefile.aimk ${DESTDIR}${PVM_DIR}/examples
 
-	${INSTALL_DATA_DIR} ${PVM_DIR}/gexamples
-	${INSTALL_DATA} ${WRKSRC}/gexamples/*.c ${PVM_DIR}/gexamples
-	${INSTALL_DATA} ${WRKSRC}/gexamples/*.f ${PVM_DIR}/gexamples
-	${INSTALL_DATA} ${WRKSRC}/gexamples/Readme ${PVM_DIR}/gexamples
-	${INSTALL_DATA} ${WRKSRC}/gexamples/Makefile.aimk ${PVM_DIR}/gexamples
-	${INSTALL_DATA} ${WRKSRC}/gexamples/Makefile ${PVM_DIR}/gexamples
+	${INSTALL_DATA} ${WRKSRC}/gexamples/*.c ${DESTDIR}${PVM_DIR}/gexamples
+	${INSTALL_DATA} ${WRKSRC}/gexamples/*.f ${DESTDIR}${PVM_DIR}/gexamples
+	${INSTALL_DATA} ${WRKSRC}/gexamples/Readme ${DESTDIR}${PVM_DIR}/gexamples
+	${INSTALL_DATA} ${WRKSRC}/gexamples/Makefile.aimk ${DESTDIR}${PVM_DIR}/gexamples
+	${INSTALL_DATA} ${WRKSRC}/gexamples/Makefile ${DESTDIR}${PVM_DIR}/gexamples
 
-	${INSTALL_DATA_DIR} ${PVM_DIR}/include
-	${INSTALL_DATA} ${WRKSRC}/include/* ${PVM_DIR}/include
+	${INSTALL_DATA} ${WRKSRC}/include/* ${DESTDIR}${PVM_DIR}/include
 
-	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man3
-	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/man/man3/* ${PREFIX}/${PKGMANDIR}/man3
-	${RM} ${PREFIX}/${PKGMANDIR}/man1/PVM.1
-	${LN} -s ${PREFIX}/${PKGMANDIR}/man1/pvm_intro.1 ${PREFIX}/${PKGMANDIR}/man1/PVM.1
+	${INSTALL_MAN} ${WRKSRC}/man/man1/* ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/man/man3/* ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
+	${RM} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/PVM.1
+	${LN} -s ${PREFIX}/${PKGMANDIR}/man1/pvm_intro.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/PVM.1
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXp/buildlink3.mk"

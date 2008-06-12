@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.65 2008/05/26 09:25:43 tron Exp $
+# $NetBSD: Makefile,v 1.66 2008/06/12 02:14:42 joerg Exp $
 
 DISTNAME=	pkg_chk-1.94
 CATEGORIES=	pkgtools
@@ -10,6 +10,7 @@ HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Check installed package versions against pkgsrc
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty

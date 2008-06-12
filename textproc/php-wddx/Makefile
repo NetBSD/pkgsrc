@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2007/02/22 19:01:26 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/12 02:14:51 joerg Exp $
 
 MODNAME=		wddx
 CATEGORIES+=		textproc
 COMMENT=		PHP extension for WDDX support
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	php-wddx-[0-9]*
 

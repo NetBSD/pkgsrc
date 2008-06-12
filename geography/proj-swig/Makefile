@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/04/06 14:46:10 gdt Exp $
+# $NetBSD: Makefile,v 1.7 2008/06/12 02:14:30 joerg Exp $
 #
 
 DISTNAME=		proj-swig-0.01
@@ -9,6 +9,8 @@ MASTER_SITES=		http://acert.ir.bbn.com/downloads/acert-geospatial/
 MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://acert.ir.bbn.com/downloads/acert-geospatial/
 COMMENT=		Guile and python wrappers for proj
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_JOBS_SAFE=		no
 

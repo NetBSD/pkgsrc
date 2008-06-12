@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/12/15 14:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:43 joerg Exp $
 #
 
 DISTNAME=	ABC2PS-${ABC2PSVER}
@@ -12,21 +12,23 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ihp-ffo.de/~msm/
 COMMENT=	Music typesetting program for abc
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 ABC2PSVER=	1.3.3
+
+INSTALLATION_DIRS=	bin share/doc/abc2ps share/examples/abc2ps
 
 do-build:
 	cd ${WRKSRC} && ${CC} -o abc2ps abc2ps.c
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/abc2ps
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/abc2ps
-	${INSTALL_PROGRAM} ${WRKSRC}/abc2ps ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/abc2ps ${DESTDIR}${PREFIX}/bin
 	cd ${WRKSRC} && ${INSTALL_DATA} Changes License New.Features \
-		ReadMe.abc2ps layout.txt ${PREFIX}/share/doc/abc2ps/
+		ReadMe.abc2ps layout.txt ${DESTDIR}${PREFIX}/share/doc/abc2ps/
 	cd ${WRKSRC} && ${INSTALL_DATA} bach.abc blue_boy_bass.abc \
 		bran5.abc celloprelude.abc desafinado.abc fbook.fmt \
 		fonts.fmt journey.abc landscape.fmt mtunes1.abc \
 		newfeatures.abc sample.abc scotland.abc trio.abc \
-		voices.abc ${PREFIX}/share/examples/abc2ps/
+		voices.abc ${DESTDIR}${PREFIX}/share/examples/abc2ps/
 
 .include "../../mk/bsd.pkg.mk"

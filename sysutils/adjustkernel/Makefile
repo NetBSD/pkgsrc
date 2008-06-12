@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/02/22 19:27:10 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/12 02:14:45 joerg Exp $
 
 DISTNAME=	adjustkernel-1.7
 CATEGORIES=	sysutils
@@ -7,6 +7,8 @@ DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Generate a NetBSD kernel config
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes

@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.4 2005/12/08 19:21:57 joerg Exp $
+$NetBSD: patch-ac,v 1.5 2008/06/12 02:14:45 joerg Exp $
 
 --- Makefile.orig	2003-05-23 18:10:13.000000000 +0000
 +++ Makefile
@@ -39,12 +39,12 @@ $NetBSD: patch-ac,v 1.4 2005/12/08 19:21:57 joerg Exp $
 -		cp ./portsentry $(INSTALLDIR)$(CHILDDIR)
 +		${BSD_INSTALL_DATA} ./portsentry.conf $(INSTALLDIR)$(CHILDDIR)
 +		${BSD_INSTALL_DATA} ./portsentry.ignore $(INSTALLDIR)$(CHILDDIR)
-+		${BSD_INSTALL_PROGRAM} ./portsentry ${PREFIX}/sbin
++		${BSD_INSTALL_PROGRAM} ./portsentry ${DESTDIR}${PREFIX}/sbin
  		@echo "Setting permissions"
  		chmod 600 $(INSTALLDIR)$(CHILDDIR)/portsentry.ignore
  		chmod 600 $(INSTALLDIR)$(CHILDDIR)/portsentry.conf
 -		chmod 700 $(INSTALLDIR)$(CHILDDIR)/portsentry
-+		chmod 700 ${PREFIX}/sbin/portsentry
++		chmod 700 ${DESTDIR}${PREFIX}/sbin/portsentry
  		@echo ""
  		@echo ""
  		@echo "Edit $(INSTALLDIR)$(CHILDDIR)/portsentry.conf and change"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/04 11:29:08 shannonjr Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:44 joerg Exp $
 #
 
 DISTNAME=	pcsc-lite-1.4.99
@@ -8,6 +8,8 @@ MASTER_SITES=	http://alioth.debian.org/frs/download.php/2257/
 MAINTAINER=	shannonjr@NetBSD.org
 HOMEPAGE=	http://alioth.debian.org/frs/download.php/2257/
 COMMENT=	Middleware to access a smart card using SCard API (PC/SC).
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -32,13 +34,14 @@ CONF_FILES+=		${EGDIR}/reader.conf ${PKG_SYSCONFDIR}/reader.conf
 
 PKGCONFIG_OVERRIDE+=	src/libpcsclite.pc.in
 
+INSTALLATION_DIRS=	${EGDIR}
+
 pre-configure:
 	cd ${WRKSRC} && ${SH} bootstrap
 
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/etc/reader.conf ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/etc/reader.conf ${DESTDIR}${EGDIR}
 
 .include "../../devel/libusb/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

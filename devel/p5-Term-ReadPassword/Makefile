@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/28 12:08:20 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:26 joerg Exp $
 #
 
 VERS=		0.07
@@ -13,6 +13,7 @@ HOMEPAGE=	http://search.cpan.org/~phoenix/Term-ReadPassword/
 COMMENT=	Asking the user for a password
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Term/ReadPassword/.packlist
 

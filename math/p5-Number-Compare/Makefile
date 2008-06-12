@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/08/06 06:19:23 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/12 02:14:36 joerg Exp $
 
 DISTNAME=	Number-Compare-0.01
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Number-Compare/
 COMMENT=	Compiles a simple comparison to an anonymous subroutine
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Number/Compare/.packlist
 

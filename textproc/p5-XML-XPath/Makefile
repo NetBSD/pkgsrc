@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/03/04 21:30:50 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/12 02:14:51 joerg Exp $
 
 DISTNAME=	XML-XPath-1.13
 PKGNAME=	p5-${DISTNAME}
@@ -14,6 +14,7 @@ COMMENT=	XML XPath software
 DEPENDS+=	p5-XML-Parser>=2.23:../../textproc/p5-XML-Parser
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/XML/XPath/.packlist
 

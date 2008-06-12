@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/04/25 20:39:08 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/12 02:14:21 joerg Exp $
 #
 
 DISTNAME=	pytable-0.8.3a
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pytable/}
 MAINTAINER=	darcy@NetBSD.org
 HOMEPAGE=	http://pytable.sourceforge.net/
 COMMENT=	Python RDBMS wrapper for various databases
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${PYPKGPREFIX}-basicproperty-[0-9]*:../../lang/py-basicproperty
 

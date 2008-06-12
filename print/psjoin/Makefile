@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/02/22 19:27:05 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/12 02:14:43 joerg Exp $
 #
 
 DISTNAME=		psjoin
@@ -11,6 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://homepage3.nifty.com/tsato/tools/psjoin.html
 COMMENT=		Concatenate PostScript files
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DIST_SUBDIR=		${PKGNAME_NOREV}
 NO_BUILD=		yes
 REPLACE_PERL=		psjoin
@@ -20,6 +22,6 @@ WRKSRC=			${WRKDIR}
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/psjoin ${PREFIX}/bin/psjoin
+	${INSTALL_SCRIPT} ${WRKDIR}/psjoin ${DESTDIR}${PREFIX}/bin/psjoin
 
 .include "../../mk/bsd.pkg.mk"

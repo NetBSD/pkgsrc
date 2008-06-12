@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/02/17 20:59:46 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2008/06/12 02:14:21 joerg Exp $
 #
 
 DISTNAME=	aegis-4.22
@@ -9,6 +9,8 @@ MASTER_SITES=	http://aegis.sourceforge.net/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://aegis.sourceforge.net/
 COMMENT=	Aegis is a transaction base software configuration management system
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_USING=	gtar
 
@@ -21,10 +23,13 @@ USE_TOOLS+=		groff gsoelim msgfmt perl:run yacc patch
 CONFIGURE_ENV+=		ac_cv_path_PATCH=${TOOLS_PATCH:Q}
 
 EGDIR=			${PREFIX}/share/examples/aegis
-INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
+INSTALL_MAKE_FLAGS+=	RPM_BUILD_ROOT=${DESTDIR} \
+			sysconfdir=${EGDIR}
 
 CONF_FILES+=		${EGDIR}/profile.d/aegis.csh ${PKG_SYSCONFDIR}/profile.d/aegis.csh
 CONF_FILES+=		${EGDIR}/profile.d/aegis.sh ${PKG_SYSCONFDIR}/profile.d/aegis.sh
+
+AUTO_MKDIRS=		yes
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

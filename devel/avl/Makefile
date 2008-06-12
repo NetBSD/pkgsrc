@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/10/04 21:35:58 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/12 02:14:21 joerg Exp $
 #
 
 DISTNAME=	avl-1.4.0
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_GNU:=avl/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.stanford.edu/~blp/avl/
 COMMENT=	Library for manipulation of balanced binary trees
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 INFO_FILES=	# PLIST

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/02/22 19:18:13 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2008/06/12 02:14:18 joerg Exp $
 #
 
 DISTNAME=		MLDBM-2.01
@@ -15,6 +15,7 @@ COMMENT=		Perl5 module for storing arbitrary data in tied hashes
 DEPENDS+=	{p5-Data-Dumper>=2.08,perl{,-thread}>=5.6.1nb2}:../../lang/perl5
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/MLDBM/.packlist

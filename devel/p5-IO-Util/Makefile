@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/10/30 04:07:42 obache Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:23 joerg Exp $
 
 DISTNAME=	IO-Util-1.5
 PKGNAME=	p5-${DISTNAME}0
@@ -11,6 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/IO-Util/
 COMMENT=	Selection of general-utility IO function
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/IO/Util/.packlist
 

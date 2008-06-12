@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/04/23 19:53:46 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:27 joerg Exp $
 #
 
 DISTNAME=	prefork-1.02
@@ -11,6 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/prefork/
 COMMENT=	Optimize module loading across forking and non-forking scenarios
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/prefork/.packlist
 

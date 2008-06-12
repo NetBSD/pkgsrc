@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/07/13 07:31:54 obache Exp $
+# $NetBSD: Makefile,v 1.7 2008/06/12 02:14:41 joerg Exp $
 #
 
 DISTNAME=	GeoIP-Python-1.2.1
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.maxmind.com/download/geoip/api/python/
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	http://www.maxmind.com/app/python
 COMMENT=	GeoIP support for Python
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes

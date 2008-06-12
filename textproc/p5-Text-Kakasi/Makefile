@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/13 09:21:16 taca Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:49 joerg Exp $
 
 DISTNAME=		Text-Kakasi-1.05
 PKGNAME=		p5-${DISTNAME}
@@ -10,6 +10,8 @@ MASTER_SITES=		http://www.daionet.gr.jp/~knok/kakasi/
 MAINTAINER=		kei@NetBSD.org
 HOMEPAGE=		http://www.daionet.gr.jp/~knok/kakasi/
 COMMENT=		Perl5 module to use Kakasi
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Text/Kakasi/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/04/13 04:06:39 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.7 2008/06/12 02:14:55 joerg Exp $
 
 DISTNAME=	Jemplate-0.20
 PKGNAME=	p5-${DISTNAME}
@@ -8,6 +8,8 @@ MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/I/IN/INGY/
 MAINTAINER=	hiramatsu@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~ingy/Jemplate/
 COMMENT=	Javascript Templating with Template Toolkit
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Template-Toolkit>=2.14:../../www/p5-Template-Toolkit
 DEPENDS+=	p5-File-Find-Rule>=0.30:../../devel/p5-File-Find-Rule

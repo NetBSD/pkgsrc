@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/04/25 20:39:12 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2008/06/12 02:14:52 joerg Exp $
 #
 
 DISTNAME=		feedparser-4.1
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.zip
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://feedparser.org/
 COMMENT=		Parse RSS and Atom feeds in Python
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/04/17 15:15:25 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:49 joerg Exp $
 
 DISTNAME=	Text-Context-EitherSide-1.3
 PKGNAME=	p5-${DISTNAME}
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://cpan.uwinnipeg.ca/dist/Text-Context-EitherSide
 COMMENT=	Get n words either side of search keywords
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_REQD+=	5.6.0
 PERL5_PACKLIST=	auto/Text/Context/EitherSide/.packlist

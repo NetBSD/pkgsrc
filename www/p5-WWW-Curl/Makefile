@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/01/18 05:09:52 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:56 joerg Exp $
 #
 
 DISTNAME=	WWW-Curl-2.0
@@ -14,6 +14,7 @@ COMMENT=	Perl binding interface for curl
 DEPENDS+=	curl>=7.12.1:../../www/curl
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/WWW/Curl/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/08/01 19:45:17 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:36 joerg Exp $
 #
 
 DISTNAME=	Math-Random-0.67
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Math/}
 MAINTAINER=	imil@gcu.info
 HOMEPAGE=	http://search.cpan.org/dist/Math-Random/
 COMMENT=	Random number generators
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Math/Random/.packlist
 

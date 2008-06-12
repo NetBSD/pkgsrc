@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/28 14:19:58 mjl Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:51 joerg Exp $
 #
 
 DISTNAME=	iCal-Parser-1.14
@@ -9,6 +9,8 @@ MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/R/RF/RFRANKEL/
 MAINTAINER=     pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/R/RF/RFRANKEL/
 COMMENT=	Parse iCalendar files into a data structure
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # PERL5_MODULE_TYPE=      Module::Build
 PERL5_PACKLIST=         auto/iCal/Parser/.packlist

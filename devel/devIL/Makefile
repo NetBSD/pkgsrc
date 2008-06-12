@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/12/15 20:32:54 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2008/06/12 02:14:22 joerg Exp $
 #
 
 DISTNAME=	DevIL-1.6.6
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openil/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openil.sourceforge.net/
 COMMENT=	Developer's Image Library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/DevIL
 GNU_CONFIGURE=	yes

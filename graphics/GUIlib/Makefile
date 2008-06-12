@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/07/19 19:14:38 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/12 02:14:31 joerg Exp $
 #
 
 DISTNAME=	GUIlib-1.1.0
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.libsdl.org/projects/GUIlib/src/
 MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.libsdl.org/projects/GUIlib/
 COMMENT=	Very simple GUI framework library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 

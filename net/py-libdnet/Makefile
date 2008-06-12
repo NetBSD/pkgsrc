@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/04/25 20:39:11 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:42 joerg Exp $
 #
 
 DISTNAME=	libdnet-1.12
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/libdnet/
 COMMENT=	Python wrapper for libdnet
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 PYDISTUTILSPKG=	yes

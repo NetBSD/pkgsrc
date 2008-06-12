@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/01/04 07:49:35 obache Exp $
+# $NetBSD: Makefile,v 1.33 2008/06/12 02:14:37 joerg Exp $
 #
 
 DISTNAME=		pinfo-0.6.1
@@ -9,6 +9,8 @@ MASTER_SITES=		# http://alioth.debian.org/download.php/1502/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pinfo.alioth.debian.org/
 COMMENT=		Przemek's Info Viewer
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		msgfmt

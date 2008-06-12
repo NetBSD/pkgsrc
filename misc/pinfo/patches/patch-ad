@@ -1,0 +1,24 @@
+$NetBSD: patch-ad,v 1.3 2008/06/12 02:14:37 joerg Exp $
+
+--- po/Makefile.in.in.orig	2008-06-11 09:15:29.000000000 +0000
++++ po/Makefile.in.in
+@@ -124,15 +124,15 @@ install-data: install-data-@USE_NLS@
+ install-data-no: all
+ install-data-yes: all
+ 	if test -r $(MKINSTALLDIRS); then \
+-	  $(MKINSTALLDIRS) $(datadir); \
++	  $(MKINSTALLDIRS) ${DESTDIR}$(datadir); \
+ 	else \
+-	  $(top_srcdir)/mkinstalldirs $(datadir); \
++	  $(top_srcdir)/mkinstalldirs ${DESTDIR}$(datadir); \
+ 	fi
+ 	@catalogs='$(CATALOGS)'; \
+ 	for cat in $$catalogs; do \
+ 	  case "$$cat" in \
+-	    *.gmo) destdir=$(gnulocaledir);; \
+-	    *)     destdir=$(localedir);; \
++	    *.gmo) destdir=${DESTDIR}$(gnulocaledir);; \
++	    *)     destdir=${DESTDIR}$(localedir);; \
+ 	  esac; \
+ 	  lang=`echo $$cat | sed 's/$(CATOBJEXT)$$//'`; \
+ 	  dir=$$destdir/$$lang/LC_MESSAGES; \

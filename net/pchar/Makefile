@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/01/18 05:08:48 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2008/06/12 02:14:40 joerg Exp $
 
 DISTNAME=		pchar-1.5
 PKGREVISION=		1
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.kitchenlab.org/www/bmah/Software/pchar/
 MAINTAINER=		soren@NetBSD.org
 HOMEPAGE=		http://www.kitchenlab.org/www/bmah/Software/pchar/
 COMMENT=		Tool for measuring Internet path characteristics
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
@@ -30,8 +32,8 @@ LIBS+=			-lsnmp -lcrypto -ldes
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pchar ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/pchar.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_PROGRAM} ${WRKSRC}/pchar ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/pchar.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

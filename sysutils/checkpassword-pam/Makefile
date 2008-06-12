@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/01/07 09:14:11 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:46 joerg Exp $
 #
 
 DISTNAME=		checkpassword-pam-0.99
@@ -10,6 +10,7 @@ HOMEPAGE=		http://checkpasswd-pam.sourceforge.net/
 COMMENT=		PAM checkpassword-compatible authentication program
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

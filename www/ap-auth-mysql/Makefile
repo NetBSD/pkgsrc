@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/02/22 19:01:26 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2008/06/12 02:14:54 joerg Exp $
 #
 
 DISTNAME=		libapache-mod-auth-mysql_4.3.1
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_DEBIAN:=pool/main/liba/libapache-mod-auth-mysql/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://packages.debian.org/unstable/net/libapache-mod-auth-mysql.html
 COMMENT=		Module to allow apache authentication against a MySQL database
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	ap-auth-mysql-[0-9]*
 
@@ -31,23 +33,24 @@ CONFIGURE_ARGS+=	--disable-apache13 --enable-apache2
 APACHE_MODULE=		YES
 APACHE_MODULE_NAME=	mod_auth_mysql.so
 
+INSTALLATION_DIRS=	lib/httpd share/doc/mod_auth_mysql
+
 do-install:
 	if [ -f ${WRKSRC}/.libs/${PKG_APACHE}_mod_auth_mysql.so ]; then	\
 		${INSTALL_DATA} \
 			${WRKSRC}/.libs/${PKG_APACHE}_mod_auth_mysql.so \
-			${PREFIX}/lib/httpd/mod_auth_mysql.so;   \
+			${DESTDIR}${PREFIX}/lib/httpd/mod_auth_mysql.so;   \
 	elif [ -f ${WRKSRC}/libs/${PKG_APACHE}_mod_auth_mysql.so ]; then \
 		${INSTALL_DATA} \
 			${WRKSRC}/libs/${PKG_APACHE}_mod_auth_mysql.so  \
-			${PREFIX}/lib/httpd/mod_auth_mysql.so;   \
+			${DESTDIR}${PREFIX}/lib/httpd/mod_auth_mysql.so;   \
 	elif [ -f ${WRKSRC}/${PKG_APACHE}_mod_auth_mysql.so ]; then \
 		${INSTALL_DATA} \
 			${WRKSRC}/${PKG_APACHE}_mod_auth_mysql.so  \
-			${PREFIX}/lib/httpd/mod_auth_mysql.so;   \
+			${DESTDIR}${PREFIX}/lib/httpd/mod_auth_mysql.so;   \
 	fi
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mod_auth_mysql
-	${INSTALL_DATA} ${WRKSRC}/DIRECTIVES ${PREFIX}/share/doc/mod_auth_mysql
-	${INSTALL_DATA} ${WRKSRC}/USAGE ${PREFIX}/share/doc/mod_auth_mysql
+	${INSTALL_DATA} ${WRKSRC}/DIRECTIVES ${DESTDIR}${PREFIX}/share/doc/mod_auth_mysql
+	${INSTALL_DATA} ${WRKSRC}/USAGE ${DESTDIR}${PREFIX}/share/doc/mod_auth_mysql
 
 .include "../../mk/mysql.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

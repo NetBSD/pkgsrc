@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/08/15 08:42:36 xtraeme Exp $
+# $NetBSD: Makefile,v 1.27 2008/06/12 02:14:30 joerg Exp $
 #
 
 DISTNAME=	CriticalMass-1.0.2
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://criticalmass.sourceforge.net/
 COMMENT=	SDL/OpenGL space shoot'em up game
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/06/15 13:31:29 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:47 joerg Exp $
 #
 
 DISTNAME=	GutenMark_source_${GVER}
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sandroid.org/GutenMark/
 COMMENT=	Automatic, high-quality Gutenberg text formatter to LaTeX or HTML
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	GutenMark-words-[0-9]*:../../textproc/GutenMark-words
 
 WRKSRC=		${WRKDIR}/GutenMark-source
@@ -21,7 +23,7 @@ BUILD_TARGET=	GutenMark
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/GutenMark ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/GutenMark ${DESTDIR}${PREFIX}/bin
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

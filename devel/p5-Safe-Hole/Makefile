@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/08/06 06:19:13 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:26 joerg Exp $
 #
 
 DISTNAME=	Safe-Hole-0.08
@@ -13,6 +13,7 @@ HOMEPAGE=	http://theoryx5.uwinnipeg.ca/CPAN/data/Safe-Hole/Hole.html
 COMMENT=	Exec subs in the original package from within a Safe object
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Safe/Hole/.packlist
 

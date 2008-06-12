@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/01/27 00:21:33 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2008/06/12 02:14:46 joerg Exp $
 
 --- Makefile.in.orig	2006-06-08 22:24:47.000000000 -0700
 +++ Makefile.in
@@ -8,8 +8,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/01/27 00:21:33 minskim Exp $
  install :
 -	@INSTALL_DATA@ ${EXE} @bindir@
 -	@INSTALL@ -m 644 ${MAN} @mandir@/man1/
-+	${BSD_INSTALL_PROGRAM} ${EXE} @bindir@
-+	${BSD_INSTALL_MAN} ${MAN} @mandir@/man1/
++	${BSD_INSTALL_PROGRAM} ${EXE} ${DESTDIR}@bindir@
++	${BSD_INSTALL_MAN} ${MAN} ${DESTDIR}@mandir@/man1/
  
  clean :
  	-rm -f ${OBJ} ${EXE} config.log config.status configure.lineno Makefile .DS_Store

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/02/22 19:27:15 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2008/06/12 02:14:48 joerg Exp $
 #
 
 DISTNAME=	Pod-POM-0.17
@@ -11,6 +11,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Pod/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kfs.org/~abw/
 COMMENT=	P5 module to format POD into an object format, hence POM
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Pod/POM/.packlist
 

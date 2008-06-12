@@ -1,15 +1,19 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/01/08 05:49:01 obache Exp $
+$NetBSD: patch-aa,v 1.2 2008/06/12 02:14:44 joerg Exp $
 
---- Makefile.orig	2006-11-07 09:26:58.000000000 +0900
+--- Makefile.orig	2006-11-07 00:26:58.000000000 +0000
 +++ Makefile
-@@ -104,14 +104,14 @@ TOOLMAN = $(TOOLDIR)/$(DISTTOOLMAN)
+@@ -102,16 +102,16 @@ DISTTOOLMAN = pam_af_tool.8
+ LIBMAN = $(LIBDIR)/$(DISTLIBMAN)
+ TOOLMAN = $(TOOLDIR)/$(DISTTOOLMAN)
  
- SECUREDIR = /lib/security
- SBINDIR = /sbin
+-SECUREDIR = /lib/security
+-SBINDIR = /sbin
 -MANDIR = /share/man
 -DESTDIR = /usr/local
-+MANDIR = /$(PKGMANDIR)
-+DESTDIR = $(PREFIX)
++SECUREDIR = ${PREFIX}/lib/security
++SBINDIR = ${PREFIX}/sbin
++MANDIR = ${PREFIX}/$(PKGMANDIR)
++#DESTDIR = /usr/local
  
  LIB_OBJS = $(LIBDIR)/pam_af.o $(LIBDIR)/subr.o
  TOOL_OBJS = $(TOOLDIR)/pam_af_tool.o $(TOOLDIR)/subr.o

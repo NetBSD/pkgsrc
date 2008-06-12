@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2007/03/03 20:55:28 simonb Exp $
+# $NetBSD: Makefile,v 1.62 2008/06/12 02:14:54 joerg Exp $
 #
 
 DISTNAME=	adzap-20070225
@@ -11,13 +11,15 @@ MAINTAINER=	simonb@NetBSD.org
 HOMEPAGE=	http://adzapper.sourceforge.net/
 COMMENT=	Filter out animated ad banners from web pages
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/adzap
 NO_BUILD=	yes
 USE_TOOLS+=	perl:run
 
 CHECK_PORTABILITY_SKIP=	scripts/update-zapper.damien
 
-INSTALLATION_DIRS=	libexec
+INSTALLATION_DIRS=	libexec share/examples/adzap
 
 do-configure:
 .for FILE in scripts/squid_redirect scripts/wrapzap
@@ -28,9 +30,8 @@ do-configure:
 .endfor
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/squid_redirect ${PREFIX}/libexec
-	${INSTALL_SCRIPT} ${WRKSRC}/scripts/wrapzap ${PREFIX}/libexec/adzap
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/adzap
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/squid_redirect ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/wrapzap ${DESTDIR}${PREFIX}/libexec/adzap
 .for FILE in ad-clear.gif ad-clear.mp3 ad-clear.swf \
     ad-grey.gif ad-old.gif \
     ad.gif ad.mp3 ad.swf \
@@ -44,12 +45,12 @@ do-install:
     no-op.html no-op.js \
     webbug-clear.gif webbug-clear.html webbug-clear.js \
     webbug.gif webbug.html webbug.js
-	${INSTALL_DATA} ${WRKSRC}/zaps/${FILE} ${PREFIX}/share/examples/adzap
+	${INSTALL_DATA} ${WRKSRC}/zaps/${FILE} ${DESTDIR}${PREFIX}/share/examples/adzap
 .endfor
 .for FILE in proxy-home.pac proxy-zip.pac
-	${INSTALL_DATA} ${WRKSRC}/rc/${FILE} ${PREFIX}/share/examples/adzap
+	${INSTALL_DATA} ${WRKSRC}/rc/${FILE} ${DESTDIR}${PREFIX}/share/examples/adzap
 .endfor
 	${INSTALL_DATA} ${WRKSRC}/scripts/adzap.conf \
-	    ${PREFIX}/share/examples/adzap
+	    ${DESTDIR}${PREFIX}/share/examples/adzap
 
 .include "../../mk/bsd.pkg.mk"

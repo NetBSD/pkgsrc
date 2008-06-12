@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/09/09 17:10:52 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/06/12 02:14:13 joerg Exp $
 #
 
 DISTNAME=		par2cmdline-0.4
@@ -11,6 +11,7 @@ HOMEPAGE=		http://parchive.sourceforge.net/
 COMMENT=		Create or use PAR2 parity volumes
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes

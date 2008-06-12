@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2007/12/02 08:32:25 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2008/06/12 02:14:53 joerg Exp $
 
 DISTNAME=	plan-1.9
 CATEGORIES=	x11 time
@@ -8,12 +8,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://me.in-berlin.de/~bitrot/plan.html
 COMMENT=	Schedule planner based on X/Motif
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 USE_TOOLS+=	yacc lex
 USE_X11BASE=	YES
 BUILD_TARGET=	${LOWER_OPSYS}
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man4
+INSTALLATION_DIRS=	libexec/plan ${PKGMANDIR}/man1 ${PKGMANDIR}/man4 \
+			share/plan/holiday
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -29,15 +32,12 @@ post-configure:
 .endif
 
 pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/libexec/plan
-	${INSTALL_DATA_DIR} ${PREFIX}/share/plan
-	${INSTALL_DATA_DIR} ${PREFIX}/share/plan/holiday
 	${RM} -f ${WRKDIR}/${DISTNAME}/holiday/holiday_*.orig
 	for f in ${WRKDIR}/${DISTNAME}/holiday/holiday_*; do		\
-		${INSTALL_DATA} $$f ${PREFIX}/share/plan/holiday/;	\
+		${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/share/plan/holiday/;	\
 	done
 	for f in HISTORY README; do					\
-		${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/$$f ${PREFIX}/share/plan; \
+		${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/$$f ${DESTDIR}${PREFIX}/share/plan; \
 	done
 
 .include "../../mk/motif.buildlink3.mk"

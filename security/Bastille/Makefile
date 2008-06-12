@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/04 11:02:25 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/12 02:14:44 joerg Exp $
 #
 
 DISTNAME=	Bastille-3.0.9
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://bastille-linux.sourceforge.net/
 COMMENT=	System hardening tool focusing on educating the user
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/Bastille
 CONFIGURE_ENV+=		GCONF_SCHEMA_FILE_DIR=${PREFIX:Q}/share/gconf/schemas/
@@ -25,8 +27,8 @@ SUBST_CLASSES+=		b
 SUBST_STAGE.b=		pre-configure
 SUBST_FILES.b=		Install.sh
 SUBST_SED.b=		-e 's,umask 077,umask 022,'
-SUBST_SED.b+=		-e 's,\$$RPM_BUILD_ROOT/usr/,${PREFIX}/,g'
-SUBST_SED.b+=		-e 's,\$$RPM_BUILD_ROOT/var/,${VARBASE}/,g'
+SUBST_SED.b+=		-e 's,\$$RPM_BUILD_ROOT/usr/,${DESTDIR}${PREFIX}/,g'
+SUBST_SED.b+=		-e 's,\$$RPM_BUILD_ROOT/var/,${DESTDIR}${VARBASE}/,g'
 
 SUBST_CLASSES+=		b2
 SUBST_STAGE.b2=		pre-configure

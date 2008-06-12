@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/10/09 19:19:09 martti Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:25 joerg Exp $
 #
 
 DISTNAME=	Path-Class-0.16
@@ -11,6 +11,7 @@ HOMEPAGE=	http://search.cpan.org/~kwilliams/Path-Class-0.16/
 COMMENT=	Cross-platform path specification manipulation
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=	auto/Path/Class/.packlist

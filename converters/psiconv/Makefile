@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/10/04 20:52:12 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2008/06/12 02:14:17 joerg Exp $
 
 DISTNAME=	psiconv-0.9.7
 CATEGORIES=	converters
@@ -7,6 +7,8 @@ MASTER_SITES=	http://www.frodol.dds.nl/psiconv/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.frodol.dds.nl/psiconv/
 COMMENT=	PSION 5 file format data conversion utilities
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

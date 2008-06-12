@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/03/24 07:18:11 schmonz Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:51 joerg Exp $
 
 DISTNAME=	XML-RAI-0.51
 PKGNAME=	p5-${DISTNAME}
@@ -13,6 +13,7 @@ DEPENDS+=	p5-XML-RSS-Parser>=2.15:../../textproc/p5-XML-RSS-Parser
 DEPENDS+=	p5-TimeDate>=1.14:../../time/p5-TimeDate
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/XML/RAI/.packlist
 

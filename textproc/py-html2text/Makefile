@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/06/01 04:52:15 schmonz Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:52 joerg Exp $
 #
 
 DISTNAME=		html2text-2.3
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.py
 MAINTAINER=		schmonz@NetBSD.org
 HOMEPAGE=		http://www.aaronsw.com/2002/html2text/
 COMMENT=		Convert HTML into easy-to-read plain ASCII text
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 
@@ -25,7 +27,7 @@ do-extract:
 		> ${WRKSRC}/html2text.py
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/html2text.py ${PREFIX}/share/html2text
+	${INSTALL_SCRIPT} ${WRKSRC}/html2text.py ${DESTDIR}${PREFIX}/share/html2text
 
 .include "../../lang/python/pyversion.mk"
 .include "../../mk/bsd.pkg.mk"

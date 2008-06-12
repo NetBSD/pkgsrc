@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/04/25 20:39:12 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:52 joerg Exp $
 #
 
 DISTNAME=	csv-1.0
@@ -10,6 +10,7 @@ MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://www.object-craft.com.au/projects/csv/
 COMMENT=	CSV reading module for Python
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 PYBINMODULE=	yes

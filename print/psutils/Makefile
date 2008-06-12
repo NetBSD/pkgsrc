@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2007/12/02 13:04:14 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2008/06/12 02:14:43 joerg Exp $
 
 DISTNAME=	psutils-p17
 PKGNAME=	psutils-1.17
@@ -9,6 +9,8 @@ MASTER_SITES=	http://gd.tuwien.ac.at/publishing/tex/tex-utils/psutils/
 MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.go.dlr.de/wt/dv/ig/pdinfo_dv/psutils.html
 COMMENT=	Utilities for manipulating PostScript documents
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/psutils
 USE_TOOLS+=	perl:run
@@ -26,7 +28,7 @@ PKG_FAIL_REASON+=	"Invalid PAPERSIZE (${PAPERSIZE}). Choose one of A4 or Letter.
 
 MAKE_ENV+=	PERL5=${PERL5:Q}
 MAKE_FLAGS+=	PAPER=`${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'`
-MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
+MAKE_FLAGS+=	MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 MAKE_FILE=	Makefile.unix
 
 EGDIR=		${PREFIX}/share/examples/psutils
@@ -38,9 +40,11 @@ SUBST_MESSAGE.psu=	Adjusting the installation prefix.
 SUBST_FILES.psu=	psutil.c
 SUBST_SED.psu=		-e "s|@prefix@|${PREFIX}|g"
 
+INSTALLATION_DIRS=	${EGDIR}
+INSTALL_MAKE_FLAGS=	PREFIX=${DESTDIR}${PREFIX}
+
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
 	low=`${ECHO} ${PAPERSIZE} | ${TR} '[A-Z]' '[a-z]'`		\
-	&& ${ECHO} "PAPERSIZE=$$low" > ${EGDIR}/psutils.cfg
+	&& ${ECHO} "PAPERSIZE=$$low" > ${DESTDIR}${EGDIR}/psutils.cfg
 
 .include "../../mk/bsd.pkg.mk"

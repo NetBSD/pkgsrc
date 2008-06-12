@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/05/29 16:07:07 drochner Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/12 02:14:47 joerg Exp $
 #
 
 DISTNAME=	gnome-menus-2.22.2
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Python bindings for gnome-menus
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool msgfmt pkg-config

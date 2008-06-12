@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/04/07 16:20:23 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/12 02:14:38 joerg Exp $
 #
 
 DISTNAME=	3proxy-0.5.3k
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://3proxy.ru/
 COMMENT=	Multi-protocol proxy
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 MAKE_FILE=	Makefile.unix
@@ -29,9 +31,9 @@ LICENSE=	3proxy-0.5-license
 # install the HTML pages, because they provide no more information than
 # the man pages.
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/3proxy ${PREFIX}/sbin/.
-	${INSTALL_MAN} ${WRKSRC}/man/3proxy.8 ${PREFIX}/${PKGMANDIR}/man8/.
+	${INSTALL_PROGRAM} ${WRKSRC}/src/3proxy ${DESTDIR}${PREFIX}/sbin/.
+	${INSTALL_MAN} ${WRKSRC}/man/3proxy.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/.
 	${INSTALL_MAN} ${WRKSRC}/man/3proxy.cfg.3 \
-			${PREFIX}/${PKGMANDIR}/man5/3proxy.cfg.5
+			${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/3proxy.cfg.5
 
 .include "../../mk/bsd.pkg.mk"

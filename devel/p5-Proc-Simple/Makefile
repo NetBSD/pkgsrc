@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/29 00:38:19 minskim Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:25 joerg Exp $
 #
 
 DISTNAME=	Proc-Simple-1.21
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.cpan.org/
 COMMENT=	Launch and control background processes
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Proc/Simple/.packlist
 

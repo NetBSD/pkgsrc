@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/22 19:27:23 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:55 joerg Exp $
 
 DISTNAME=	Kwiki-Simple-Server-HTTP-0.03
 PKGNAME=	p5-${DISTNAME}
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Kwiki/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Kwiki-Simple-Server-HTTP/
 COMMENT=	Kwiki plugin to start a standalone Kwiki HTTP server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-HTTP-Server-Simple-Kwiki-[0-9]*:../../www/p5-HTTP-Server-Simple-Kwiki
 DEPENDS+=	p5-Kwiki>=0.37:../../www/p5-Kwiki

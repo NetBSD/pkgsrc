@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/07/30 09:53:29 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:25 joerg Exp $
 #
 
 DISTNAME=		Proc-ProcessTable-0.41
@@ -11,6 +11,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Perl extension to access the UNIX process table
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 REPLACE_PERL=		example.pl
 

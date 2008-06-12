@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2007/01/23 17:59:42 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2008/06/12 02:14:36 joerg Exp $
 
 DISTNAME=	pari-2.1.6
 PKGREVISION=	2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pari.math.u-bordeaux.fr/
 COMMENT=	Software package for computer-aided number theory
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 TEX_ACCEPTED=	teTeX3
 TEX_DEPMETHOD=	build

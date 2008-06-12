@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/04 11:02:24 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:25 joerg Exp $
 #
 
 DISTNAME=		PAR-0.89
@@ -9,6 +9,8 @@ MASTER_SITES=		http://search.cpan.org/CPAN/authors/id/A/AU/AUTRIJUS/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/CPAN/authors/id/A/AU/AUTRIJUS/
 COMMENT=		Cross-Platform Packaging and Debugging Tool
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Archive-Zip>=1:../../archivers/p5-Archive-Zip
 DEPENDS+=		p5-Module-ScanDeps>=0.45:../../devel/p5-Module-ScanDeps

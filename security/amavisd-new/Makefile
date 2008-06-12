@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2008/04/12 22:43:09 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2008/06/12 02:14:44 joerg Exp $
 
 DISTNAME=	amavisd-new-${VERSION}${PATCHLEVEL}
 PKGNAME=	amavisd-new-${VERSION}${PATCHLEVEL:S/-//}
@@ -13,6 +13,8 @@ PATCHLEVEL=	# empty
 MAINTAINER=	jdunn@aquezada.com
 HOMEPAGE=	http://www.ijs.si/software/amavisd/
 COMMENT=	daemonized interface between MTA and content checkers
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Archive-Tar-[0-9]*:../../archivers/p5-Archive-Tar
 DEPENDS+=	p5-Archive-Zip>=1.14:../../archivers/p5-Archive-Zip
@@ -104,31 +106,29 @@ SUBST_SED.amavisd=	\
 	-e "s|@LOCALBASE@|${LOCALBASE}|g"				\
 	-e "s|@PREFIX@|${PREFIX}|g"
 
-INSTALLATION_DIRS=	sbin
+INSTALLATION_DIRS=	sbin ${DOCDIR} ${EGDIR}
 
 do-install:
 .if !empty(PKG_OPTIONS:Mmilter)
-	${INSTALL_PROGRAM} ${WRKSRC}/helper-progs/amavis ${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC}/helper-progs/amavis-milter ${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/helper-progs/amavis ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/helper-progs/amavis-milter ${DESTDIR}${PREFIX}/sbin
 .endif
-	${INSTALL_SCRIPT} ${WRKSRC}/amavisd ${PREFIX}/sbin/amavisd
-	${INSTALL_SCRIPT} ${WRKSRC}/amavisd-nanny ${PREFIX}/sbin/amavisd-nanny
-	${INSTALL_SCRIPT} ${WRKSRC}/amavisd-release ${PREFIX}/sbin/amavisd-release
-	${INSTALL_SCRIPT} ${WRKSRC}/amavisd-agent ${PREFIX}/sbin/amavisd-agent
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/AAAREADME.first ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/LDAP.schema ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/MANIFEST ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README_FILES/amavisd-new-docs.html ${DOCDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/amavisd ${DESTDIR}${PREFIX}/sbin/amavisd
+	${INSTALL_SCRIPT} ${WRKSRC}/amavisd-nanny ${DESTDIR}${PREFIX}/sbin/amavisd-nanny
+	${INSTALL_SCRIPT} ${WRKSRC}/amavisd-release ${DESTDIR}${PREFIX}/sbin/amavisd-release
+	${INSTALL_SCRIPT} ${WRKSRC}/amavisd-agent ${DESTDIR}${PREFIX}/sbin/amavisd-agent
+	${INSTALL_DATA} ${WRKSRC}/AAAREADME.first ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/LDAP.schema ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/MANIFEST ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/RELEASE_NOTES ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README_FILES/amavisd-new-docs.html ${DESTDIR}${DOCDIR}
 	for file in README_FILES/README.*; do				\
-		${INSTALL_DATA} ${WRKSRC}/$$file ${DOCDIR};		\
+		${INSTALL_DATA} ${WRKSRC}/$$file ${DESTDIR}${DOCDIR};		\
 	done
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/amavisd.conf ${EGDIR}/amavisd.conf-minimal
-	${INSTALL_DATA} ${WRKSRC}/amavisd.conf-default ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/amavisd.conf-sample ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/amavisd.conf ${DESTDIR}${EGDIR}/amavisd.conf-minimal
+	${INSTALL_DATA} ${WRKSRC}/amavisd.conf-default ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/amavisd.conf-sample ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"

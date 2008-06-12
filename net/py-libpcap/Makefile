@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/04/06 06:22:34 reed Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:42 joerg Exp $
 #
 
 DISTNAME=		pylibpcap-0.5.1
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=pylibpcap/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://pylibpcap.sourceforge.net/
 COMMENT=		Python wrapper for libpcap
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
 BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.9.3nb1

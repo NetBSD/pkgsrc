@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/05/12 02:25:40 smb Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:33 joerg Exp $
 #
 
 DISTNAME=	newmail-0.0.12
@@ -8,6 +8,8 @@ MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	Write log file info on arriving email
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	claws-mail-3.4.0{,nb[0-9]*}:../../mail/claws-mail
 

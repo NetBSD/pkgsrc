@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/03/24 06:52:22 schmonz Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/12 02:14:34 joerg Exp $
 #
 
 DISTNAME=		Ezmlm-0.05.1
@@ -12,6 +12,8 @@ COMMENT=		Perl5 module for managing ezmlm mailing lists
 
 DEPENDS+=		qmail>=1.03:../../mail/qmail
 DEPENDS+=		{ezmlm>=0.53,ezmlm-idx>=0.40}:../../mail/ezmlm
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/Ezmlm-0.05
 

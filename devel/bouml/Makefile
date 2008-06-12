@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/05/25 21:42:21 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:21 joerg Exp $
 #
 
 DISTNAME=		bouml_${BOUMLVERSION}
@@ -9,6 +9,8 @@ MASTER_SITES=		http://bouml.free.fr/
 MAINTAINER=		kcf@users.sourceforge.net
 HOMEPAGE=		http://bouml.free.fr/
 COMMENT=		UML modeling tool, generates C++, JAVA, and IDL
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BOUMLVERSION=		2.27
 

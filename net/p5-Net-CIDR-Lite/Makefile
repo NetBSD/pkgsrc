@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/02/22 19:26:57 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:39 joerg Exp $
 #
 
 DISTNAME=		Net-CIDR-Lite-0.20
@@ -12,6 +12,7 @@ HOMEPAGE=		http://search.cpan.org/dist/Net-CIDR-Lite/
 COMMENT=		Perl extension for merging IPv4/v6 CIDR addresses
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Net/CIDR/Lite/.packlist
 USE_LANGUAGES=		# empty

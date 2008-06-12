@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/07/30 12:22:51 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:30 joerg Exp $
 
 DISTNAME=	crossfire-1.9.0
 PKGNAME=	crossfire-server-1.9.0
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=crossfire/}
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://crossfire.real-time.com/
 COMMENT=	X11 multi/single player game similar to gauntlet and nethack
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl:run bash:run

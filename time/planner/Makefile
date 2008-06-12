@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/04/30 13:38:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:53 joerg Exp $
 #
 
 DISTNAME=	planner-0.14.2
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/Planner
 COMMENT=	Project management tool for the GNOME desktop
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5

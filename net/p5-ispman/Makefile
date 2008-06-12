@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/03/04 21:30:23 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2008/06/12 02:14:40 joerg Exp $
 #
 
 DISTNAME=		ispman-0.5
@@ -12,6 +12,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.ispman.org/
 COMMENT=		Perl module for ISPMan webAdministrator and command line utils
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=		{p5-CGI>=2.72,perl>=5.6.1nb2}:../../www/p5-CGI
 DEPENDS+=		p5-Text-Template>=1.23:../../textproc/p5-Text-Template
 DEPENDS+=		p5-perl-ldap>=0.22:../../databases/p5-perl-ldap
@@ -24,6 +26,7 @@ PERL5_PACKLIST=		auto/ISPMan/.packlist
 PERL5_CONFIGURE_DIRS=	${WRKSRC}/ISPMan ${WRKSRC}/IO-stringy-1.212_patched
 BUILD_DIRS=		${PERL5_CONFIGURE_DIRS}
 INSTALL_DIRS=		${WRKSRC}/ISPMan
+INSTALLATION_DIRS=	${PERL5_INSTALLVENDORLIB}/IO
 
 MAKE_PARAMS+=		--noprompt
 
@@ -34,7 +37,7 @@ SUBST_SED.etc-fix=	-e 's:/etc:${PREFIX}/etc:g'
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/IO-stringy-1.212_patched/lib/IO/Scalar.pm \
-		${PERL5_INSTALLVENDORLIB}/IO/ScalarPatched.pm
+		${DESTDIR}${PERL5_INSTALLVENDORLIB}/IO/ScalarPatched.pm
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
