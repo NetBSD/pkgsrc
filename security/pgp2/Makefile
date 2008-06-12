@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2007/10/31 12:29:34 rillig Exp $
+# $NetBSD: Makefile,v 1.53 2008/06/12 02:14:45 joerg Exp $
 
 DISTNAME=	pgp263is
 PKGREVISION=	1
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.ifi.uio.no/pub/pgp/2.x/src/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pgpi.org/
 COMMENT=	Public-key encryption and digital signature utility (v2)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/src
 CRYPTO=		yes
@@ -42,7 +44,7 @@ CFLAGS+=	-DHIGHFIRST
 
 BUILD_DEFS+=	ASMFLAG
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PGPLIB}
 
 post-extract:
 	cd ${WRKDIR} && ${TAR} xf pgp263ii.tar && ${RM} -f pgp263ii.tar
@@ -54,17 +56,13 @@ do-build:
 		-DMAX_NAMELEN=255" RSALIBS="${RSALIBS}" RSAOBJS="${RSAOBJS}"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pgp ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKDIR}/doc/pgp.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${PGPLIB}
-	cd ${WRKDIR}/doc && ${INSTALL_DATA} pgpdoc1.txt pgpdoc2.txt ${PGPLIB}
+	${INSTALL_PROGRAM} ${WRKSRC}/pgp ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKDIR}/doc/pgp.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	cd ${WRKDIR}/doc && ${INSTALL_DATA} pgpdoc1.txt pgpdoc2.txt ${DESTDIR}${PGPLIB}
 	cd ${WRKDIR} && \
-		${INSTALL_DATA} de.hlp en.hlp es.hlp fr.hlp pgp.hlp ${PGPLIB}
-	[ -f ${PGPLIB}/language.txt ] || \
-		${INSTALL_DATA} ${WRKDIR}/language.txt ${PGPLIB}
-	[ -f ${PGPLIB}/config.txt ] || \
-		${INSTALL_DATA} ${WRKDIR}/config.txt ${PGPLIB}
-	[ -f ${PGPLIB}/pgp.hlp ] || \
-		${INSTALL_DATA} ${WRKDIR}/en.hlp ${PGPLIB}/pgp.hlp
+		${INSTALL_DATA} de.hlp en.hlp es.hlp fr.hlp pgp.hlp ${DESTDIR}${PGPLIB}
+	${INSTALL_DATA} ${WRKDIR}/language.txt ${DESTDIR}${PGPLIB}
+	${INSTALL_DATA} ${WRKDIR}/config.txt ${DESTDIR}${PGPLIB}
+	${INSTALL_DATA} ${WRKDIR}/en.hlp ${DESTDIR}${PGPLIB}/pgp.hlp
 
 .include "../../mk/bsd.pkg.mk"

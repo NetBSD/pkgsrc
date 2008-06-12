@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/07/19 22:49:20 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/12 02:14:31 joerg Exp $
 #
 
 DISTNAME=		djvulibre-3.5.19
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=djvu/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://djvulibre.djvuzone.org/
 COMMENT=		Compression library for scanned documents
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes

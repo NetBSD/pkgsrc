@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/02/22 19:26:23 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/12 02:14:26 joerg Exp $
 
 DISTNAME=	Test-Cmd-1.05
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.baldmt.com/Test-Cmd/
 COMMENT=	Perl5 module for testing of external commands and scripts
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Test/Cmd/.packlist
 

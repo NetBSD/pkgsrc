@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/05/26 02:13:21 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:33 joerg Exp $
 
 DISTNAME=	pyfunge-0.2-beta1
 PKGNAME=	${PYPKGPREFIX}-funge-0.2beta1
@@ -9,6 +9,8 @@ MASTER_SITES=	http://kldp.net/download.php/1270/
 MAINTAINER=	fox9@netb.co.kr
 HOMEPAGE=	http://pyfunge.kldp.net/
 COMMENT=	Extensible Funge-98 interpreter written in Python
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pax
 
@@ -22,14 +24,14 @@ PLIST_SUBST+=	PYSITELIB=${PYSITELIB:Q}
 
 PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
 
+INSTALLATION_DIRS=	${PYSITELIB}/PyFunge share/doc/${PKGBASE}
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/README.ko ${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA_DIR} ${PREFIX}/${PYSITELIB}/PyFunge
+	${INSTALL_DATA} ${WRKSRC}/README.ko ${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	cd ${WRKSRC} && pax -rwppm '-s|.*/README.ko||' \
-		. ${PREFIX}/${PYSITELIB}/PyFunge
-	${PYTHONBIN} ${PYCOMPILEALL} ${PREFIX}/${PYSITELIB}/PyFunge
-	${PYTHONBIN} -O ${PYCOMPILEALL} ${PREFIX}/${PYSITELIB}/PyFunge
+		. ${DESTDIR}${PREFIX}/${PYSITELIB}/PyFunge
+	${PYTHONBIN} ${PYCOMPILEALL} ${DESTDIR}${PREFIX}/${PYSITELIB}/PyFunge
+	${PYTHONBIN} -O ${PYCOMPILEALL} ${DESTDIR}${PREFIX}/${PYSITELIB}/PyFunge
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

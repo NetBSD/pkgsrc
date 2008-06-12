@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/01/28 23:06:13 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.27 2008/06/12 02:14:42 joerg Exp $
 #
 
 DISTNAME=	cdpack-1.8
@@ -9,6 +9,8 @@ DISTFILES=	# empty
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/
 COMMENT=	Utility to create multi-cd/dvd binary package collections
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # for mkisofs
 DEPENDS+=	cdrtools-[0-9]*:../../sysutils/cdrtools

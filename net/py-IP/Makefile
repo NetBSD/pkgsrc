@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/09/30 17:45:24 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:41 joerg Exp $
 
 DISTNAME=	IPy-0.4
 PKGNAME=	${PYPKGPREFIX}-IP-0.4
@@ -9,6 +9,8 @@ MASTER_SITES=	http://c0re.jp:80/c0de/IPy/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://c0re.jp:80/c0de/IPy/
 COMMENT=	Python module to handle IPv4 and IPv6 address
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	# defined
 

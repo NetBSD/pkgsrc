@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2006/10/04 22:01:00 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2008/06/12 02:14:51 joerg Exp $
 #
 
 DISTNAME=	XML-Xerces-2.7.0-0
@@ -13,6 +13,7 @@ COMMENT=	Validating XML parser API for Perl
 CONFLICTS+=	XML-Xerces-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 CC=c++

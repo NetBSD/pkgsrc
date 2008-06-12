@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/05/26 02:13:20 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2008/06/12 02:14:31 joerg Exp $
 
 DISTNAME=	GMT4.1.4
 PKGNAME=	GMT-4.1.4
@@ -16,6 +16,8 @@ DISTFILES=	GMT4.1.4_man.tar.bz2 GMT4.1.4_pdf.tar.bz2	\
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gmt.soest.hawaii.edu/
 COMMENT=	Generic Mapping Tools
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_SUFX=	.tar.bz2
 DIST_SUBDIR=	${DISTNAME}
@@ -40,26 +42,23 @@ post-extract:
 	${MV} -f ${WRKSRC}/www/gmt/doc/pdf ${WRKSRC}
 	${RM} -f ${WRKSRC}/examples/*.bat ${WRKSRC}/examples/*/*.bat
 
+INSTALLATION_DIRS=	share/doc/gmt share/examples/gmt/tutorial share/gmt
+
+pre-install:
+	rm -f ${WRKSRC}/share/.gmtdefaults_SI.orig
+	rm -f ${WRKSRC}/share/.gmtdefaults_US.orig
+	rm -f ${WRKSRC}/share/gmt.conf.orig
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gmt
 	cd ${WRKSRC}/pdf && ${INSTALL_DATA} GMT_Docs.pdf		\
-		 GMT_Tutorial.pdf ${PREFIX}/share/doc/gmt
-	(cd ${PREFIX}/share/doc/html/gmt/doc && ${LN} -sf		\
-	../../../gmt pdf)
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gmt/tutorial
+		 GMT_Tutorial.pdf ${DESTDIR}${PREFIX}/share/doc/gmt
+	ln -sf ../../../gmt ${DESTDIR}${PREFIX}/share/doc/html/gmt/doc/pdf
 	cd ${WRKSRC}/tutorial && ${INSTALL_DATA} bermuda.nc quakes.cpt	\
 		ship.xyz us.nc data quakes.ngdc topo.cpt		\
-		${PREFIX}/share/examples/gmt/tutorial;
-	${INSTALL_DATA_DIR} ${PREFIX}/share/gmt
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${WRKSRC}/share
-	cd ${WRKSRC}/share && pax -rw . ${PREFIX}/share/gmt
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/gmt
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${WRKSRC}/examples/
-	cd ${WRKSRC}/examples && pax -rw . ${PREFIX}/share/examples/gmt
-	${RM} ${PREFIX}/share/gmt/.gmtdefaults_SI.orig
-	${RM} ${PREFIX}/share/gmt/.gmtdefaults_US.orig
-	${RM} ${PREFIX}/share/gmt/gmt.conf.orig
-	cd ${WRKDIR}/share && pax -rw . ${PREFIX}/share/gmt
+		${DESTDIR}${PREFIX}/share/examples/gmt/tutorial;
+	cd ${WRKSRC}/share && pax -rw . ${DESTDIR}${PREFIX}/share/gmt
+	cd ${WRKDIR}/share && pax -rw . ${DESTDIR}${PREFIX}/share/gmt
+	cd ${WRKSRC}/examples && pax -rw . ${DESTDIR}${PREFIX}/share/examples/gmt
 
 .include "../../devel/netcdf/buildlink3.mk"
 .include "../../x11/libXaw/buildlink3.mk"

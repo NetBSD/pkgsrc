@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/10/04 21:53:17 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/12 02:14:41 joerg Exp $
 #
 
 DISTNAME=	fnet.pl-1.4
@@ -11,18 +11,19 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://web.archive.org/web/20021123084932/http://www.abattoir.com/~banshee/Tech/
 COMMENT=	Minimal FNET-like ICB client written in Perl
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/fnet-1.4
 USE_TOOLS+=	perl:run
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${PERL5_INSTALLVENDORLIB}
 
 do-build:
 	${SED} -e 's,/usr/local,${PREFIX},g' ${WRKSRC}/fnet.pl >${WRKSRC}/pfnet
 
 do-install:
-	${INSTALL_DATA_DIR} ${PERL5_INSTALLVENDORLIB}
 	${INSTALL_DATA} ${WRKSRC}/CMDLINE.pm ${WRKSRC}/FNET.pm		\
-		${PERL5_INSTALLVENDORLIB}
-	${INSTALL_SCRIPT} ${WRKSRC}/pfnet ${PREFIX}/bin
+		${DESTDIR}${PERL5_INSTALLVENDORLIB}
+	${INSTALL_SCRIPT} ${WRKSRC}/pfnet ${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

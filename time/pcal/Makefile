@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/01/07 09:14:14 rillig Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:53 joerg Exp $
 #
 
 DISTNAME=	pcal-4.7
@@ -11,6 +11,8 @@ MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://pcal.sourceforge.net/
 COMMENT=	PostScript calendar program
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 HTDOCS=		${PREFIX}/share/httpd/htdocs
 CGIBINDIR=	${PREFIX}/libexec/cgi-bin
 WWWSERVER=	${HOSTNAME_CMD:sh}
@@ -21,7 +23,7 @@ MAKE_ENV+=	CC=${CC:Q} HOST_CC=${CC:Q}
 
 BUILD_TARGET=	pcal
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/pcal ${HTDOCS}
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/pcal ${HTDOCS} ${CGIBINDIR}
 
 pre-install:
 	${MV} ${WRKSRC}/pcal.cgi ${WRKSRC}/pcal.cgi.tmp
@@ -35,12 +37,11 @@ pre-install:
 		< ${WRKSRC}/pcalw.html.tmp > ${WRKSRC}/pcalw.html
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pcal ${PREFIX}/bin
-	${INSTALL_SCRIPT_DIR} ${CGIBINDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/pcal.cgi ${CGIBINDIR}
-	${INSTALL_MAN} ${WRKSRC}/pcal.man ${PREFIX}/${PKGMANDIR}/man1/pcal.1
-	${INSTALL_DATA} ${WRKSRC}/ReadMe ${PREFIX}/share/doc/pcal/ReadMe
-	${INSTALL_DATA} ${WRKSRC}/pcal.html ${HTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/pcalw.html ${HTDOCS}
+	${INSTALL_PROGRAM} ${WRKSRC}/pcal ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/pcal.cgi ${DESTDIR}${CGIBINDIR}
+	${INSTALL_MAN} ${WRKSRC}/pcal.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/pcal.1
+	${INSTALL_DATA} ${WRKSRC}/ReadMe ${DESTDIR}${PREFIX}/share/doc/pcal/ReadMe
+	${INSTALL_DATA} ${WRKSRC}/pcal.html ${DESTDIR}${HTDOCS}
+	${INSTALL_DATA} ${WRKSRC}/pcalw.html ${DESTDIR}${HTDOCS}
 
 .include "../../mk/bsd.pkg.mk"

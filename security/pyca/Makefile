@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/04 21:30:38 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:45 joerg Exp $
 
 # Date-based distfile name for pre-releases leading to 0.6.6.
 DISTNAME=	pyca-20031021
@@ -30,7 +30,9 @@ PYCA_SCRIPT_FIXUP_SED= \
 	-e "s|/home/.*/openssl.cnf|${PKG_SYSCONFDIR}/openssl.cnf|g"	\
 	-e "s|/home/.*/pylib|${PREFIX}/lib/pyca|g"
 
-INSTALLATION_DIRS=	bin libexec/cgi-bin sbin
+INSTALLATION_DIRS=	bin lib/pyca/openssl libexec/cgi-bin sbin \
+			share/doc/html/pyca/help share/doc/html/pyca/ssi \
+			share/examples/pyca
 
 pyca-script-fixup:
 	cd ${WRKSRC}; for file in ${PYTHON_PATCH_SCRIPTS}; do \
@@ -43,37 +45,31 @@ post-configure: pyca-script-fixup
 
 do-install:
 	cd ${WRKSRC}; for file in bin/*.py; do				\
-		${INSTALL_SCRIPT} $${file} ${PREFIX}/bin;		\
+		${INSTALL_SCRIPT} $${file} ${DESTDIR}${PREFIX}/bin;	\
 	done
 	cd ${WRKSRC}; for file in cgi-bin/*.py; do			\
-		${INSTALL_SCRIPT} $${file} ${PREFIX}/libexec/cgi-bin;	\
+		${INSTALL_SCRIPT} $${file} ${DESTDIR}${PREFIX}/libexec/cgi-bin;	\
 	done
 	cd ${WRKSRC}; for file in sbin/*.py; do				\
-		${INSTALL_SCRIPT} $${file} ${PREFIX}/sbin;		\
+		${INSTALL_SCRIPT} $${file} ${DESTDIR}${PREFIX}/sbin;	\
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/pyca
 	cd ${WRKSRC}; for file in pylib/*.py; do			\
-		${INSTALL_DATA} $${file} ${PREFIX}/lib/pyca;		\
+		${INSTALL_DATA} $${file} ${DESTDIR}${PREFIX}/lib/pyca;	\
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/pyca/openssl
 	cd ${WRKSRC}; for file in pylib/openssl/*.py; do		\
-		${INSTALL_DATA} $${file} ${PREFIX}/lib/pyca/openssl;	\
+		${INSTALL_DATA} $${file} ${DESTDIR}${PREFIX}/lib/pyca/openssl;	\
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/pyca
 	cd ${WRKSRC}; for file in conf/*.cnf; do			\
-		${INSTALL_DATA} $${file} ${PREFIX}/share/examples/pyca;	\
+		${INSTALL_DATA} $${file} ${DESTDIR}${PREFIX}/share/examples/pyca;	\
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/pyca
 	cd ${WRKSRC}; for file in htdocs/*.html; do			\
-		${INSTALL_DATA} $${file} ${PREFIX}/share/doc/html/pyca;	\
+		${INSTALL_DATA} $${file} ${DESTDIR}${PREFIX}/share/doc/html/pyca;	\
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/pyca/help
 	cd ${WRKSRC}; for file in htdocs/help/*; do			\
-		${INSTALL_DATA} $${file} ${PREFIX}/share/doc/html/pyca/help; \
+		${INSTALL_DATA} $${file} ${DESTDIR}${PREFIX}/share/doc/html/pyca/help; \
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/pyca/ssi
 	cd ${WRKSRC}; for file in htdocs/ssi/*.html; do			\
-		${INSTALL_DATA} $${file} ${PREFIX}/share/doc/html/pyca/ssi; \
+		${INSTALL_DATA} $${file} ${DESTDIR}${PREFIX}/share/doc/html/pyca/ssi; \
 	done
 
 .include "../../lang/python/application.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2005/12/05 20:50:48 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:39 joerg Exp $
 
 DISTNAME=	Net-IPv4Addr-0.10
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,7 @@ MAINTAINER=	adrianp@NetBSD.org
 COMMENT=	Perl extension for manipulating IPv4 addresses
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Net/IPv4Addr/.packlist
 

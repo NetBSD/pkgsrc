@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/09/13 20:19:09 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2008/06/12 02:14:43 joerg Exp $
 
 DISTNAME=	acroread7	# overridden below
 PKGNAME=	acroread7-7.0.9
@@ -9,6 +9,8 @@ MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/7x/7.0.9/enu/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.adobe.com/products/acrobat/readstep2.html
 COMMENT=	View, distribute and print PDF documents
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	acroread-5.*
 # conflict with acroread5 due to bin/acroread
@@ -46,25 +48,25 @@ BIN_PATCH=	${PATCH} --quiet ${_PATCH_BACKUP_ARG} .orig
 BUILD_DEFS+=		ACROREAD_FONTPATH
 ACROREAD_FONTPATH?=	${PREFIX}/lib/X11/fonts/TTF
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin Acrobat7
 
 do-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/Acrobat7
-	@( ${ECHO} n; ${ECHO} n ) | InstallDir=${PREFIX}/Acrobat7 ${WRKSRC}/INSTALL
+	( ${ECHO} n; ${ECHO} n ) | InstallDir=${DESTDIR}${PREFIX}/Acrobat7 ${WRKSRC}/INSTALL
 
 post-install:
-	@cd ${PREFIX}/Acrobat7/bin && \
+	cd ${DESTDIR}${PREFIX}/Acrobat7/bin && \
 	  ${BIN_PATCH} <${FILESDIR}/acroread.diff && \
 	  ${SED} -e 's:@PREFIX@:${PREFIX}:' \
 	    -e 's|@ACROREAD_FONTPATH@|${ACROREAD_FONTPATH}|' \
 		<acroread >acroread.tmp && \
 	  ${MV} acroread.tmp acroread && \
-	  ${INSTALL_SCRIPT} ${PREFIX}/Acrobat7/bin/acroread \
-	     ${PREFIX}/bin/acroread7 && ${RM} -f acroread.orig acroread.tmp
-	${CHMOD} +x ${PREFIX}/bin/acroread7
+	  ${RM} -f acroread.orig acroread.tmp
+	${INSTALL_SCRIPT} ${DESTDIR}${PREFIX}/Acrobat7/bin/acroread \
+	     ${DESTDIR}${PREFIX}/bin/acroread7
+	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/acroread7
 	@${ECHO_MSG} "Be sure to read the license agreement in"
-	@${ECHO_MSG} "${PREFIX}/Acrobat7/Reader/Legal/ENU/License.html"
-	${LN} -sf ${PREFIX}/bin/acroread7 ${PREFIX}/bin/acroread
-	${RM} ${PREFIX}/Acrobat7/Reader/${PLATFORM}/plug_ins/PPKLite.api
+	@${ECHO_MSG} "${DESTDIR}${PREFIX}/Acrobat7/Reader/Legal/ENU/License.html"
+	${LN} -sf ${PREFIX}/bin/acroread7 ${DESTDIR}${PREFIX}/bin/acroread
+	${RM} ${DESTDIR}${PREFIX}/Acrobat7/Reader/${PLATFORM}/plug_ins/PPKLite.api
 
 .include "../../mk/bsd.pkg.mk"

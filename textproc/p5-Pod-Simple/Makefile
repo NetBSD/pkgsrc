@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/06/10 09:43:02 obache Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/12 02:14:48 joerg Exp $
 
 DISTNAME=	Pod-Simple-3.05
 PKGNAME=	p5-${DISTNAME}
@@ -12,6 +12,7 @@ COMMENT=	Simple framework for parsing Pod
 DEPENDS+=	p5-Pod-Escapes>=1.04:../../textproc/p5-Pod-Escapes
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Pod/Simple/.packlist
 

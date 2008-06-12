@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/06 01:43:32 toshii Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:43 joerg Exp $
 
 DISTNAME=	acroread8	# overridden below
 PKGNAME=	acroread8-8.1.2
@@ -8,6 +8,8 @@ MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.2/enu/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.adobe.com/products/acrobat/readstep2.html
 COMMENT=	View, distribute and print PDF documents
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	acroread-5.*
 # conflict with acroread5 due to bin/acroread
@@ -46,24 +48,24 @@ BIN_PATCH=	${PATCH} --quiet ${_PATCH_BACKUP_ARG} .orig
 BUILD_DEFS+=		ACROREAD_FONTPATH
 ACROREAD_FONTPATH?=	${PREFIX}/lib/X11/fonts/TTF
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	Acrobat8 bin
 
 do-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/Acrobat8
-	@( ${ECHO} n; ${ECHO} n ) | InstallDir=${PREFIX}/Acrobat8 ${WRKSRC}/INSTALL
+	( ${ECHO} n; ${ECHO} n ) | InstallDir=${DESTDIR}${PREFIX}/Acrobat8 ${WRKSRC}/INSTALL
 
 post-install:
-	@cd ${PREFIX}/Acrobat8/Adobe/Reader8/bin && \
+	cd ${DESTDIR}${PREFIX}/Acrobat8/Adobe/Reader8/bin && \
 	  ${BIN_PATCH} <${FILESDIR}/acroread.diff && \
 	  ${SED} -e 's:@PREFIX@:${PREFIX}:' \
 	    -e 's|@ACROREAD_FONTPATH@|${ACROREAD_FONTPATH}|' \
 		<acroread >acroread.tmp && \
 	  ${MV} acroread.tmp acroread && \
-	  ${LN} -sf ${PREFIX}/Acrobat8/Adobe/Reader8/bin/acroread \
-	     ${PREFIX}/bin/acroread8 && ${RM} -f acroread.orig acroread.tmp
-	${CHMOD} +x ${PREFIX}/bin/acroread8
+	  ${RM} -f acroread.orig acroread.tmp
+	${LN} -sf ${DESTDIR}${PREFIX}/Acrobat8/Adobe/Reader8/bin/acroread \
+	     ${DESTDIR}${PREFIX}/bin/acroread8
+	${CHMOD} +x ${DESTDIR}${PREFIX}/bin/acroread8
 	@${ECHO_MSG} "Be sure to read the license agreement in"
-	@${ECHO_MSG} "${PREFIX}/Acrobat8/Reader/Legal/ENU/License.html"
-	${LN} -sf ${PREFIX}/bin/acroread8 ${PREFIX}/bin/acroread
+	@${ECHO_MSG} "${DESTDIR}${PREFIX}/Acrobat8/Reader/Legal/ENU/License.html"
+	${LN} -sf acroread8 ${DESTDIR}${PREFIX}/bin/acroread
 
 .include "../../mk/bsd.pkg.mk"

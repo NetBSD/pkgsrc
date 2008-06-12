@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/02/24 23:08:35 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:34 joerg Exp $
 
 DISTNAME=	Mail-Mbox-MessageParser-1.5000
 PKGNAME=	p5-${DISTNAME}
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Mail/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Mail-Mbox-MessageParser/
 COMMENT=	Perl5 module for parsing mail messages
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-FileHandle-Unget-[0-9]*:../../devel/p5-FileHandle-Unget
 DEPENDS+=	p5-Storable-[0-9]*:../../devel/p5-Storable

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/06/12 12:51:07 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2008/06/12 02:14:29 joerg Exp $
 
 DISTNAME=	BasiliskII_src_01052006
 PKGNAME=	BasiliskII-1.0.20060501
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gwenole.beauchesne.info/projects/basilisk2/
 COMMENT=	Open Source 68k Macintosh emulator
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/BasiliskII-1.0
 USE_LANGUAGES=		c c++
@@ -25,11 +27,12 @@ BUILD_DIRS=		${CONFIGURE_DIRS}
 
 CXXFLAGS+=-g -O0
 
+INSTALLATION_DIRS=	share/doc/BasiliskII
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/BasiliskII
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/BasiliskII/
-	${INSTALL_DATA} ${WRKSRC}/TECH ${PREFIX}/share/doc/BasiliskII/
-	${INSTALL_DATA} ${WRKSRC}/TODO ${PREFIX}/share/doc/BasiliskII/
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/BasiliskII/
+	${INSTALL_DATA} ${WRKSRC}/TECH ${DESTDIR}${PREFIX}/share/doc/BasiliskII/
+	${INSTALL_DATA} ${WRKSRC}/TODO ${DESTDIR}${PREFIX}/share/doc/BasiliskII/
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

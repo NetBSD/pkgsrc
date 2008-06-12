@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/03/24 07:18:26 schmonz Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:51 joerg Exp $
 
 DISTNAME=	XML-RSS-Parser-4.0
 PKGNAME=	p5-${DISTNAME}
@@ -13,6 +13,7 @@ DEPENDS+=	p5-Class-XPath>=1.4:../../devel/p5-Class-XPath
 DEPENDS+=	p5-Class-ErrorHandler-[0-9]*:../../devel/p5-Class-ErrorHandler
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/XML-RSS-Parser-4
 

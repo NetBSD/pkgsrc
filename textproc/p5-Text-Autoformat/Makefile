@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/03/04 21:30:48 jlam Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:49 joerg Exp $
 
 DISTNAME=	Text-Autoformat-1.13
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Text-Autoformat/
 COMMENT=	Perl module for text wrapping and reformatting
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Text-Reform>=1.11:../../textproc/p5-Text-Reform
 

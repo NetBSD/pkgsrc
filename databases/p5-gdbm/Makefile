@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/07/02 10:14:09 obache Exp $
+# $NetBSD: Makefile,v 1.31 2008/06/12 02:14:18 joerg Exp $
 
 DISTNAME=	perl-5.8.8
 PKGNAME=	p5-gdbm-1.08
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Perl interface to gdbm - GNU database manager
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_ELEMENTS=	${DISTNAME}/ext/GDBM_File
 WRKSRC=			${WRKDIR}/${EXTRACT_ELEMENTS}

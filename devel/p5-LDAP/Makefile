@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/12/22 07:22:09 obache Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/12 02:14:23 joerg Exp $
 #
 
 DISTNAME=	perldap-1.2.2
@@ -12,6 +12,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mozilla.org/directory/perldap.html
 COMMENT=	Perl5 module to build LDAP clients with perl
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/perldap
 PERL5_PACKLIST=	auto/Mozilla/LDAP/API/.packlist

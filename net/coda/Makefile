@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/03/06 16:15:18 gdt Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:39 joerg Exp $
 #
 
 DISTNAME=	coda-6.9.2
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.coda.cs.cmu.edu/pub/coda/src/
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://www.coda.cs.cmu.edu/
 COMMENT=	Coda distributed fileystem
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # See http://coda.wikidev.net/Quick_Client_Action for hints on how
 # to configure venus.

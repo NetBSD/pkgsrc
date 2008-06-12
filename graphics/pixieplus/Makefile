@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/01/18 05:06:43 tnn Exp $
+# $NetBSD: Makefile,v 1.32 2008/06/12 02:14:32 joerg Exp $
 #
 
 DISTNAME=	pixieplus-0.5.4
@@ -9,6 +9,8 @@ MASTER_SITES=	http://people.fruitsalad.org/avleeuwen/distfiles/pixieplus/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mosfet.org/pixie/
 COMMENT=	Free, fast, and feature packed image browser for KDE
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake
 USE_LANGUAGES=	c c++

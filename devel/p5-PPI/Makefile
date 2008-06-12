@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/04/22 21:04:13 seb Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:25 joerg Exp $
 #
 
 DISTNAME=	PPI-1.118
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PPI/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/PPI/
 COMMENT=	Perl 5 module to parse, analyze and manipulate Perl (without perl)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Clone>=0.17:../../devel/p5-Clone
 DEPENDS+=	p5-IO-String>=1.07:../../devel/p5-IO-String

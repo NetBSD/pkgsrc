@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/01/08 17:02:11 adrianp Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/12 02:14:45 joerg Exp $
 #
 
 DISTNAME=	putty-0.60
@@ -9,11 +9,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.chiark.greenend.org.uk/~sgtatham/putty/
 COMMENT=	Free implementation of Telnet and SSH for Win32 and Unix platforms
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	gmake
 BUILD_DIRS=	${WRKSRC}/unix
 
 MAKE_FILE=	Makefile.gtk
 MAKE_FLAGS+=	mandir=${PREFIX}/${PKGMANDIR}
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.putty
 PKG_SUPPORTED_OPTIONS=	inet6

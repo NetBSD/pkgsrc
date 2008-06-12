@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/04/25 20:39:07 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:20 joerg Exp $
 #
 
 DISTNAME=		IndexedCatalog-0.6.0
@@ -10,6 +10,8 @@ MASTER_SITES=		http://async.com.br/projects/IndexedCatalog/dist/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://async.com.br/projects/IndexedCatalog/
 COMMENT=		Indexed Catalog extension for standalone ZODB
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_VERSIONS_ACCEPTED=	23
 

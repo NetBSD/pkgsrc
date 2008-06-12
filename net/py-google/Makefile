@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/04/25 20:39:11 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2008/06/12 02:14:41 joerg Exp $
 #
 
 DISTNAME=	pygoogle-0.6
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pygoogle/}
 MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://pygoogle.sourceforge.net/
 COMMENT=	Call the Google web API from Python
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 

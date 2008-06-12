@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2008/02/02 04:50:20 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.43 2008/06/12 02:14:16 joerg Exp $
 #
 
 DISTNAME=	pcb-20080202
@@ -10,6 +10,7 @@ HOMEPAGE=	http://pcb.sourceforge.net/
 COMMENT=	Printed circuit board layout system
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	gettext-tools>=0.14.6:../../devel/gettext-tools
 
@@ -64,7 +65,8 @@ CONFIGURE_ARGS+=	--with-exporters=${EXPORTERS:Q}
 # remove some stuff that is either broken or unmaintained
 # and would require another runtime depends
 post-install:
-	${RM} ${PREFIX}/share/pcb/tools/PCB2HPGL ${PREFIX}/share/pcb/tools/tgo2pcb.tcl
+	${RM} ${DESTDIR}${PREFIX}/share/pcb/tools/PCB2HPGL
+	${RM} ${DESTDIR}${PREFIX}/share/pcb/tools/tgo2pcb.tcl
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

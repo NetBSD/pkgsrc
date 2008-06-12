@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/04/22 09:22:12 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:38 joerg Exp $
 #
 
 DISTNAME=	aget-0.4
@@ -11,6 +11,7 @@ HOMEPAGE=	http://www.enderunix.org/aget/
 COMMENT=	Multithreaded HTTP download accelerator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 
@@ -36,7 +37,7 @@ LDFLAGS+=	-lsocket -lnsl -lresolv
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/aget ${PREFIX}/bin/aget
+	${INSTALL_PROGRAM} ${WRKSRC}/aget ${DESTDIR}${PREFIX}/bin/aget
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

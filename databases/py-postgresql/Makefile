@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2008/04/25 20:39:07 joerg Exp $
+# $NetBSD: Makefile,v 1.53 2008/06/12 02:14:20 joerg Exp $
 
 DISTNAME=		PyGreSQL-3.8.1
 PKGNAME=		${PYPKGPREFIX}-postgresql-3.8.1
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		darcy@NetBSD.org
 HOMEPAGE=		http://www.PyGreSQL.org/
 COMMENT=		Python interface to PostgreSQL
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAKE_ENV+=		MANDIR=${LOCALBASE}/man
 MAKE_ENV+=		BINDIR=${LOCALBASE}/bin
@@ -25,18 +27,18 @@ PYDISTUTILSPKG=		yes
 PYBINMODULE=		yes
 DOCDIR=			${PREFIX}/share/doc/${PYPKGPREFIX}-postgresql
 
+INSTALLATION_DIRS=	${DOCDIR}/tutorial ${DOCDIR}/docs
+
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}/tutorial
-	${INSTALL_DATA_DIR} ${DOCDIR}/docs
 	set -e;								\
 	cd ${WRKSRC}/tutorial;						\
 	for f in *.py; do						\
-		${INSTALL_DATA} "$$f" ${DOCDIR}/tutorial;		\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${DOCDIR}/tutorial;	\
 	done
 	set -e;								\
 	cd ${WRKSRC}/docs;						\
 	for f in *; do							\
-		${INSTALL_DATA} "$$f" ${DOCDIR}/docs;			\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${DOCDIR}/docs;		\
 	done
 
 .include "../../lang/python/extension.mk"

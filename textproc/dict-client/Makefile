@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/02/22 19:27:13 wiz Exp $
+# $NetBSD: Makefile,v 1.31 2008/06/12 02:14:48 joerg Exp $
 
 DISTNAME=	dictd-1.9.15
 PKGNAME=	dict-client-1.9.15
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.dict.org/pub/dict/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dict.org/
 COMMENT=	Dictionary Service Protocol client
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake flex yacc
 GNU_CONFIGURE=		yes

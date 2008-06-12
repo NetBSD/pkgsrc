@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/02/22 12:13:44 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:49 joerg Exp $
 
 DISTNAME=	String-ShellQuote-1.03
 PKGNAME=	p5-${DISTNAME}
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=String/}
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/String-ShellQuote/
 COMMENT=	Quote strings for passing through the shell
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/String/ShellQuote/.packlist
 

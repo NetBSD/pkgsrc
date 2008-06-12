@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/02/02 19:20:21 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2008/06/12 02:14:32 joerg Exp $
 
 DISTNAME=	pstoedit-3.41
 PKGREVISION=	2
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pstoedit/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pstoedit.net/
 COMMENT=	Convert PostScript / PDF into various vector graphic formats
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED?=	"The author writes: If you include this program on a CDROM, please send me a copy of the CD, or if it goes with a book, of the book."
 NO_SRC_ON_CDROM=	${RESTRICTED}
@@ -31,13 +33,13 @@ DOCDIR=		${PREFIX}/share/doc/pstoedit
 HTMLDIR=	${PREFIX}/share/doc/html/pstoedit
 DOCSRC=		${WRKSRC}/doc
 
+INSTALLATION_DIRS=	${DOCDIR} ${HTMLDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${HTMLDIR}
 	for f in ${DOCSRC}/*.htm; do			\
-	   ${INSTALL_DATA} $${f}	${HTMLDIR};	\
+	   ${INSTALL_DATA} $${f}	${DESTDIR}${HTMLDIR};	\
 	done
-	${INSTALL_DATA} ${DOCSRC}/readme.txt	${DOCDIR}
+	${INSTALL_DATA} ${DOCSRC}/readme.txt	${DESTDIR}${DOCDIR}
 
 .include "../../graphics/plotutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2007/11/12 00:00:12 wiz Exp $
+# $NetBSD: Makefile,v 1.47 2008/06/12 02:14:41 joerg Exp $
 
 DISTNAME=		proftpd-1.3.1
 #PKGREVISION=		1
@@ -12,6 +12,8 @@ MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.proftpd.org/
 COMMENT=		FTP server with Apache like configuration
 #LICENSE=		gnu-gpl-v2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
@@ -49,13 +51,13 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 post-install:
 .for i in NEWS README README.IPv6 README.LDAP README.PAM README.capabilities \
           README.classes README.controls README.facl README.modules
-	${INSTALL_DATA} ${WRKSRC:Q}/${i:Q} ${PREFIX:Q}/share/doc/proftpd
+	${INSTALL_DATA} ${WRKSRC}/${i} ${DESTDIR}${PREFIX}/share/doc/proftpd
 .endfor
 .for i in Configuration.html faq.html license.txt
-	${INSTALL_DATA} ${WRKSRC:Q}/doc/${i:Q} ${PREFIX:Q}/share/doc/proftpd
+	${INSTALL_DATA} ${WRKSRC}/doc/${i} ${DESTDIR}${PREFIX}/share/doc/proftpd
 .endfor
-	${INSTALL_DATA} ${WRKSRC:Q}/sample-configurations/*.conf \
-		${PREFIX:Q}/share/examples/proftpd
+	${INSTALL_DATA} ${WRKSRC}/sample-configurations/*.conf \
+		${DESTDIR}${PREFIX}/share/examples/proftpd
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

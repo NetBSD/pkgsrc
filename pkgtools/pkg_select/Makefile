@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/03/16 20:22:16 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:42 joerg Exp $
 #
 
 DISTNAME=	pkg_select-20050817
@@ -10,6 +10,7 @@ MAINTAINER=	imil@gcu.info
 COMMENT=	Curses based pkgsrc system browser / manager
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/pkg_select
 
@@ -33,11 +34,11 @@ SUBST_SED.path+=	-e "s|/usr/bin/make|${MAKE}|g"
 CFLAGS+=		-DPKGTOOLS_PATH=\"${PKG_TOOLS_BIN}\"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pkg_select ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/${PKGBASE}.conf.example ${EXAMPLEDIR}
-	${INSTALL_DATA} ${WRKSRC}/mirrors.cvs ${PREFIX}/share/pkg_select
-	${INSTALL_DATA} ${WRKSRC}/mirrors.ftp ${PREFIX}/share/pkg_select
-	${INSTALL_MAN} ${WRKSRC}/pkg_select.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/pkg_select ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/${PKGBASE}.conf.example ${DESTDIR}${EXAMPLEDIR}
+	${INSTALL_DATA} ${WRKSRC}/mirrors.cvs ${DESTDIR}${PREFIX}/share/pkg_select
+	${INSTALL_DATA} ${WRKSRC}/mirrors.ftp ${DESTDIR}${PREFIX}/share/pkg_select
+	${INSTALL_MAN} ${WRKSRC}/pkg_select.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

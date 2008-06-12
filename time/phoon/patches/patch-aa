@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2001/11/10 19:53:46 is Exp $
+$NetBSD: patch-aa,v 1.2 2008/06/12 02:14:53 joerg Exp $
 diff -r -u phoon.orig/Makefile Makefile
 --- phoon.orig/Makefile	Sat Nov 11 20:57:08 1995
 +++ Makefile	Sat Nov 10 20:10:33 2001
@@ -31,8 +31,8 @@ diff -r -u phoon.orig/Makefile Makefile
 -	cp phoon $(BINDIR)
 -	rm -f $(MANDIR)/phoon.1
 -	cp phoon.1 $(MANDIR)
-+	${BSD_INSTALL_PROGRAM} phoon $(BINDIR)
-+	${BSD_INSTALL_MAN} phoon.1 $(MANDIR)
++	${BSD_INSTALL_PROGRAM} phoon ${DESTDIR}$(BINDIR)
++	${BSD_INSTALL_MAN} phoon.1 ${DESTDIR}$(MANDIR)
  
  clean:
  	rm -f phoon *.o a.out core

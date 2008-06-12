@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/08 00:32:21 mjl Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:52 joerg Exp $
 #
 
 DISTNAME=	pyexcelerator-${VERSION}
@@ -12,6 +12,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/pyexcelerator/
 COMMENT=	Python library for generating Excel 97/2000/XP/2003 files
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 PYDISTUTILSPKG=	yes
 PYTHON_VERSIONS_ACCEPTED=	24 25
 
@@ -20,14 +22,14 @@ EXTRACT_OPTS_ZIP=-aqo
 
 WRKSRC=${WRKDIR}/pyExcelerator-${VERSION}
 
+INSTALLATION_DIRS=	share/doc/py-Excelerator share/examples/py-Excelerator
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/py-Excelerator
 	for f in CHANGES.txt LICENSE.txt README.txt THANKS.txt TODO.txt ; do \
-		${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/share/doc/py-Excelerator/ ; \
+		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/share/doc/py-Excelerator/ ; \
 	done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/py-Excelerator
 	for f in ${WRKSRC}/examples/*.py ${WRKSRC}/tools/*.py ; do \
-		${INSTALL_DATA} $$f ${PREFIX}/share/examples/py-Excelerator/ ; \
+		${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/share/examples/py-Excelerator/ ; \
 	done
 
 .include "../../lang/python/extension.mk"

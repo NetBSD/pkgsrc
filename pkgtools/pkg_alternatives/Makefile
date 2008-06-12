@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/01/15 02:50:06 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2008/06/12 02:14:42 joerg Exp $
 #
 
 DISTNAME=	pkg_alternatives-1.4
@@ -10,6 +10,7 @@ MAINTAINER=	jmmv@NetBSD.org
 COMMENT=	Generic wrappers for programs with similar interfaces
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_ONLY=		# empty
 NO_CHECKSUM=		YES

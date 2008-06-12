@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/04/25 20:39:11 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2008/06/12 02:14:45 joerg Exp $
 #
 
 DISTNAME=		m2crypto-0.13
@@ -14,6 +14,8 @@ PATCHFILES=		0.13p1.patch
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sandbox.rulemaker.net/ngps/m2/
 COMMENT=		Crypto and SSL toolkit for Python
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=			yes
 PYTHON_VERSIONS_ACCEPTED=	25 24 23 21

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/01/15 14:38:08 taca Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:56 joerg Exp $
 # FreeBSD: ports/www/plone/Makefile,v 1.25 2007/02/17 08:32:54 rafan Exp
 #
 
@@ -12,6 +12,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://plone.org/
 COMMENT=	User friendly CMS written on top of ZOPE
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLONE_VERSION=			25
 PYTHON_VERSIONS_ACCEPTED=	24

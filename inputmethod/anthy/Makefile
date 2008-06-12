@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2007/08/30 20:19:45 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:33 joerg Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include	"../../inputmethod/anthy/Makefile.common"
 
@@ -15,11 +17,13 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ENV+=		EMACS=no
 EGDIR=			${PREFIX}/share/examples/anthy
 INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
+INSTALLATION_DIRS=	share/doc/anthy
 CONF_FILES+=		${EGDIR}/anthy-conf ${PKG_SYSCONFDIR}/anthy-conf
 
 PKGCONFIG_OVERRIDE+=	anthy.pc.in
 
 .include	"options.mk"
+
 
 post-patch:
 .if !empty(PKG_OPTIONS:Manthy-2ch-dict)
@@ -36,11 +40,10 @@ post-patch:
 .endif
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/anthy
-	${INSTALL_DATA} ${WRKSRC}/doc/DICUTIL ${PREFIX}/share/doc/anthy
-	${INSTALL_DATA} ${WRKSRC}/doc/ELISP ${PREFIX}/share/doc/anthy
-	${INSTALL_DATA} ${WRKSRC}/doc/GUIDE.english ${PREFIX}/share/doc/anthy
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/anthy
-	${INSTALL_DATA} ${WRKSRC}/README.en ${PREFIX}/share/doc/anthy
+	${INSTALL_DATA} ${WRKSRC}/doc/DICUTIL ${DESTDIR}${PREFIX}/share/doc/anthy
+	${INSTALL_DATA} ${WRKSRC}/doc/ELISP ${DESTDIR}${PREFIX}/share/doc/anthy
+	${INSTALL_DATA} ${WRKSRC}/doc/GUIDE.english ${DESTDIR}${PREFIX}/share/doc/anthy
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/anthy
+	${INSTALL_DATA} ${WRKSRC}/README.en ${DESTDIR}${PREFIX}/share/doc/anthy
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/04/25 18:04:27 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:57 joerg Exp $
 #
 
 DISTNAME=	alacarte-0.11.5
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.realistanew.com/projects/alacarte/
 COMMENT=	Menu editor for the GNOME desktop
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	intltool perl pkg-config gmake msgfmt

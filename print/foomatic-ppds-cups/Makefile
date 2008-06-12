@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2007/10/25 22:01:04 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:43 joerg Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../print/foomatic-ppds/Makefile.common"
 
@@ -16,13 +18,12 @@ EXTRACT_ONLY=	# empty
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
+NO_BUILD=	yes
+NO_INSTALL=	yes
 PLIST_SRC=	# empty
 
 EVAL_PREFIX+=		CUPS_PREFIX=cups
 CUPS_DATADIR=		${CUPS_PREFIX:Q}/share/cups/model
 FILES_SUBST+=		CUPS_DATADIR=${CUPS_DATADIR}
-
-do-build:	# empty
-do-install:	# empty
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/04 19:10:18 dsainty Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:30 joerg Exp $
 #
 
 DISTNAME=	crack-attack-sounds-1.1.14-58.noarch
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.rpm
 MAINTAINER=	dsainty@NetBSD.org
 HOMEPAGE=	http://www.miguev.net/background-music-for-crack-attack-119-v05/
 COMMENT=	Music and sounds for crack-attack
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/usr/share/games/crack-attack
 USE_LANGUAGES=	# none

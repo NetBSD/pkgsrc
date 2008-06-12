@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/04/25 02:16:11 reed Exp $
+# $NetBSD: Makefile,v 1.23 2008/06/12 02:14:53 joerg Exp $
 #
 
 DISTNAME=	amiwm0.20pl48
@@ -10,6 +10,8 @@ MASTER_SITES=	ftp://ftp.lysator.liu.se/pub/X11/wm/amiwm/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lysator.liu.se/~marcus/amiwm.html
 COMMENT=	X window manager with Amiga look and feel
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 LICENSE=	amiwm-license
 RESTRICTED=	Restrictive copyright (non-commerical use only)
@@ -30,6 +32,11 @@ CONFIGURE_ENV+=	X_EXTRA_LIBS=-lXt
 
 X_PRE_LIBS=	${COMPILER_RPATH_FLAG}${X11BASE}/lib
 FIX_RPATH+=	X_PRE_LIBS
+
+INSTALLATION_DIRS=	bin
+
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX} \
+			mandir=${DESTDIR}${PREFIX}/${PKGMANDIR}
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"

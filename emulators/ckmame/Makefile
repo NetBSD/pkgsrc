@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/05/25 13:16:11 dillo Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:29 joerg Exp $
 #
 
 DISTNAME=		ckmame-0.9
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 OWNER=			dillo@NetBSD.org
 HOMEPAGE=		http://www.nih.at/ckmame/
 COMMENT=		Check ROM sets for MAME
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes

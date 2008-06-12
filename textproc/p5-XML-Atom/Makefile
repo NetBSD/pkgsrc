@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/11/29 15:03:21 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2008/06/12 02:14:50 joerg Exp $
 
 DISTNAME=	XML-Atom-0.28
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-Atom/
 COMMENT=	Atom feed and API implementation
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Class-Data-Inheritable-[0-9]*:../../devel/p5-Class-Data-Inheritable
 DEPENDS+=	p5-XML-LibXML>=1.64:../../textproc/p5-XML-LibXML

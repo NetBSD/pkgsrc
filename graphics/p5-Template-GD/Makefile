@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/29 12:16:53 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:32 joerg Exp $
 #
 
 DISTNAME=	Template-GD-2.66
@@ -9,6 +9,8 @@ MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/A/AB/ABW/
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/A/AB/ABW/
 COMMENT=	GD plugin(s) for the Template Toolkit
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Template/GD/.packlist
 USE_LANGUAGES=	# none

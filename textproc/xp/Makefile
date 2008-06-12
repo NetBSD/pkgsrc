@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/05/26 02:13:24 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2008/06/12 02:14:52 joerg Exp $
 #
 
 DISTNAME=	xp
@@ -12,21 +12,23 @@ MAINTAINER=	jwise@NetBSD.org
 HOMEPAGE=	http://www.jclark.com/xml/
 COMMENT=	James Clark's non-validating XML Parser for Java
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	pax unzip
 EXTRACT_ONLY=	# empty
 USE_JAVA=	run
 NO_CONFIGURE=	yes
 NO_BUILD=	yes
 
+INSTALLATION_DIRS=	lib/java share/doc/java/xp
+
 post-extract:
 	cd ${WRKDIR} && unzip -x ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
 	${RM} -r ${WRKDIR}/docs/api/CVS ${WRKDIR}/docs/api/images/CVS
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/java
-	${INSTALL_DATA} ${WRKDIR}/xp.jar ${PREFIX}/lib/java
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/java/xp
-	cd ${WRKDIR}/docs && pax -rw -pp . ${PREFIX}/share/doc/java/xp
+	${INSTALL_DATA} ${WRKDIR}/xp.jar ${DESTDIR}${PREFIX}/lib/java
+	cd ${WRKDIR}/docs && pax -rw -pp . ${DESTDIR}${PREFIX}/share/doc/java/xp
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

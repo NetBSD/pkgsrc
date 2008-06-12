@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/02/18 18:46:53 adrianp Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/12 02:14:40 joerg Exp $
 
 DISTNAME=	packit-1.0
 PKGREVISION=	1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://packit.sourceforge.net/
 COMMENT=	Network auditing tool with the ability to manipulate IP traffic
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 

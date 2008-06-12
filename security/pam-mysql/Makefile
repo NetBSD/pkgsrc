@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/01/18 05:09:40 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:44 joerg Exp $
 
 DISTNAME=	pam_mysql-0.7RC1
 PKGNAME=	${DISTNAME:S/_/-/:S/RC/rc/}
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pam-mysql/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pam-mysql.sourceforge.net/
 COMMENT=	PAM module for authenticating with MySQL
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DOCDIR=		${PREFIX}/share/doc/pam-mysql
 
@@ -21,9 +23,10 @@ CONFIGURE_ARGS+=	--with-pam-mods-dir=${PREFIX:Q}/lib/security
 CONFIGURE_ARGS+=	--with-pam=${PAMBASE:Q}
 CONFIGURE_ARGS+=	--disable-static
 
+INSTALLATION_DIRS=	${DOCDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR:Q}
-	cd ${WRKSRC:Q} && ${INSTALL_DATA} CREDITS ChangeLog README ${DOCDIR:Q}
+	cd ${WRKSRC:Q} && ${INSTALL_DATA} CREDITS ChangeLog README ${DESTDIR}${DOCDIR}
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/mysql.buildlink3.mk"

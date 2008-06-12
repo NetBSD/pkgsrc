@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/15 15:41:29 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:48 joerg Exp $
 #
 
 DISTNAME=		Net-Dict-2.07
@@ -11,6 +11,8 @@ HOMEPAGE=		http://search.cpan.org/~neilb/Net-Dict/
 COMMENT=		Client API for the DICT protocol defined in RFC2229
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 PERL5_PACKLIST=		auto/Net/Dict/.packlist
 
 CONFLICTS=		dict-client-[0-9]*

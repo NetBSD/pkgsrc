@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/01/03 14:09:28 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:40 joerg Exp $
 #
 
 DISTNAME=	Net-Write-1.00
@@ -9,6 +9,8 @@ MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/G/GO/GOMOR/
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/G/GO/GOMOR/
 COMMENT=	Portable interface to open and send raw data to network
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Class-Gomor-[0-9]*:../../devel/p5-Class-Gomor
 DEPENDS+=	p5-Net-Pcap>=0.12:../../net/p5-Net-Pcap

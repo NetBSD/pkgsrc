@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/06/15 05:12:05 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2008/06/12 02:14:54 joerg Exp $
 #
 
 DISTNAME=	pwm-20060517
@@ -11,6 +11,7 @@ HOMEPAGE=	http://modeemi.fi/~tuomov/ion/pwm.html
 COMMENT=	Window manager that frames multiple client windows in a single frame
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	ion<=20040729nb2
 
@@ -35,7 +36,7 @@ CONF_FILES+=	${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
 post-install:
-	${INSTALL_DATA} ${FILESDIR}/look-cdelike.conf ${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/look-cdelike.conf ${DESTDIR}${EGDIR}
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

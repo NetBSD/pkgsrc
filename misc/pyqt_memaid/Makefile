@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/04/25 20:39:10 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:37 joerg Exp $
 #
 
 DISTNAME=		pyqt_memaid_0.2.4
@@ -18,6 +18,8 @@ USE_LANGUAGES=	c
 NO_BUILD=	yes
 PYDISTUTILSPKG=	yes
 
+INSTALLATION_DIRS=	share/doc/pyqt_memaid
+
 # Necessary for 0.2.4 because the files were created for an earlier
 # version of py-qt3, and don't work with the current pkgsrc version.
 do-configure:
@@ -30,9 +32,8 @@ do-configure:
 
 # XXX: convert.py missing in distribution, should be installed too
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/pyqt_memaid
 	${INSTALL_DATA} ${WRKSRC}/pyqt_memaid/docs/pyqt_memaid.html \
-		${PREFIX}/share/doc/pyqt_memaid
+		${DESTDIR}${PREFIX}/share/doc/pyqt_memaid
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

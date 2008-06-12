@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/07/27 18:48:04 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:47 joerg Exp $
 #
 
 DISTNAME=	GutenMark-words-20030107
@@ -9,6 +9,8 @@ DISTFILES=	${WORDLISTS} GutenMark.cfg
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sandroid.org/GutenMark/
 COMMENT=	Word lists for GutenMark
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WORDLISTS=	special.words.gz english.names.gz US.places.gz \
 		french.names.gz english.words.gz french.words.gz \
@@ -23,6 +25,8 @@ DIST_SUBDIR=	${DISTNAME}
 EXTRACT_ONLY=	# empty
 NO_CONFIGURE=	YES
 
+INSTALLATION_DIRS=	share/GutenMark share/examples/GutenMark
+
 post-extract:
 	${CP} ${_DISTDIR}/GutenMark.cfg ${WRKDIR}/GutenMark.cfg.in
 
@@ -31,12 +35,10 @@ do-build:
 		GutenMark.cfg.in > GutenMark.cfg
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/GutenMark
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/GutenMark
 	for wl in ${WORDLISTS}; do \
-		${INSTALL_DATA} ${_DISTDIR}/$$wl ${PREFIX}/share/GutenMark; \
+		${INSTALL_DATA} ${_DISTDIR}/$$wl ${DESTDIR}${PREFIX}/share/GutenMark; \
 	done
 	${INSTALL_DATA} ${WRKDIR}/GutenMark.cfg \
-		${PREFIX}/share/examples/GutenMark
+		${DESTDIR}${PREFIX}/share/examples/GutenMark
 
 .include "../../mk/bsd.pkg.mk"

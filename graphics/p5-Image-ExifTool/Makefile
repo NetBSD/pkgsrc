@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/05/31 11:45:45 gdt Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/12 02:14:32 joerg Exp $
 
 DISTNAME=	Image-ExifTool-${VERSION}
 PKGNAME=	p5-${DISTNAME}
@@ -10,6 +10,8 @@ MAINTAINER=	gdt@NetBSD.org
 # author says www.sno is the same machine, but was never advertised
 HOMEPAGE=	http://owl.phy.queensu.ca/~phil/exiftool/
 COMMENT=	Perl module and program to read EXIF information
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Author requests that we package only "production" versions.
 VERSION=	7.30

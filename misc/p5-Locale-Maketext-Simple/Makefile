@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/11/04 11:54:39 obache Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:37 joerg Exp $
 
 DISTNAME=		Locale-Maketext-Simple-0.18
 PKGNAME=		p5-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=		http://search.cpan.org/~audreyt/Locale-Maketext-Simple/
 COMMENT=		Simple interface to Locale::Maketext::Lexicon
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Locale/Maketext/Simple/.packlist

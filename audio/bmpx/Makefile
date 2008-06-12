@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/03/06 14:53:47 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/12 02:14:14 joerg Exp $
 #
 
 DISTNAME=	bmpx-0.40.13
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://beep-media-player.org/site/BMPx_Homepage
 COMMENT=	Audio player to be used with a frontend or as a daemon
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	zip-[0-9]*:../../archivers/zip
 

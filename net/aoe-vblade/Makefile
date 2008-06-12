@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/07/28 17:25:51 obache Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:38 joerg Exp $
 
 DISTNAME=	vblade-14
 PKGNAME=	aoe-vblade-14
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://aoetools.sourceforge.net/
 COMMENT=	ATA over Ethernet (AoE) server - thin, LAN-based storage protocol
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM+=	NetBSD-*-* FreeBSD-*-* Linux-*-* DragonFly-*-*
 
@@ -24,8 +26,8 @@ do-build:
 .endif
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/vblade ${PREFIX}/sbin/
-	${INSTALL_SCRIPT} ${WRKSRC}/vbladed ${PREFIX}/sbin/
-	${INSTALL_MAN} ${WRKSRC}/vblade.8 ${PREFIX}/${PKGMANDIR}/man8/
+	${INSTALL_PROGRAM} ${WRKSRC}/vblade ${DESTDIR}${PREFIX}/sbin/
+	${INSTALL_SCRIPT} ${WRKSRC}/vbladed ${DESTDIR}${PREFIX}/sbin/
+	${INSTALL_MAN} ${WRKSRC}/vblade.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/
 
 .include "../../mk/bsd.pkg.mk"

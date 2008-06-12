@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/01/18 05:09:36 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2008/06/12 02:14:44 joerg Exp $
 #
 
 DISTNAME=	AiCA-0.81
@@ -9,6 +9,8 @@ MASTER_SITES=	http://mars.elcom.nitech.ac.jp/security/
 MAINTAINER=	tech-pkg-ja@jp.NetBSD.org
 HOMEPAGE=	http://mars.elcom.nitech.ac.jp/security/
 COMMENT=	Manage Certification Authority and PKI utilities
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 WRKSRC=			${WRKDIR}/AiCA
@@ -25,7 +27,7 @@ LIBRARIES=		libaica.a libaicrypto.a libaissl.a
 DOCS=			COPYRIGHT README README.j
 EXAMPLES=		lib/aica.cnf sample.csv
 
-INSTALLATION_DIRS=	bin include lib
+INSTALLATION_DIRS=	bin include lib certs templates ${DOCDIR} ${EXAMPLESDIR}
 
 pre-configure:
 	cd ${WRKSRC}; \
@@ -34,25 +36,21 @@ pre-configure:
 
 do-install:
 .for f in ${LIBRARIES}
-	${INSTALL_LIB} ${WRKSRC}/lib/${f} ${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/lib/${f} ${DESTDIR}${PREFIX}/lib
 .endfor
 .for f in ${COMMANDS}
-	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/bin
 .endfor
-	${INSTALL_SCRIPT} ${WRKSRC}/bin/newca.sh ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/aicrypto/include/*.h ${PREFIX}/include
-	${INSTALL_DATA} ${WRKSRC}/aiconfig.h ${PREFIX}/include
-	${INSTALL_DATA_DIR} ${PREFIX}/certs
-	${CP} ${WRKSRC}/certs/*  ${PREFIX}/certs
-	${INSTALL_DATA_DIR} ${PREFIX}/templates
-	${CP} ${WRKSRC}/templates/*  ${PREFIX}/templates
-	${INSTALL_DATA_DIR} ${DOCDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/bin/newca.sh ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/aicrypto/include/*.h ${DESTDIR}${PREFIX}/include
+	${INSTALL_DATA} ${WRKSRC}/aiconfig.h ${DESTDIR}${PREFIX}/include
+	${CP} ${WRKSRC}/certs/*  ${DESTDIR}${PREFIX}/certs
+	${CP} ${WRKSRC}/templates/*  ${DESTDIR}${PREFIX}/templates
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${DOCDIR}
 .endfor
-	${INSTALL_DATA_DIR} ${EXAMPLESDIR}
 .for f in ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${EXAMPLESDIR}
 .endfor
 
 .include "../../security/openssl/buildlink3.mk"

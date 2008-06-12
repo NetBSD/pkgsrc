@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/03/04 21:29:24 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:26 joerg Exp $
 
 DISTNAME=	Schedule-RateLimiter-0.01
 PKGNAME=	p5-${DISTNAME}
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Schedule/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Perl5 module to schedule tasks with rate limiting
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 

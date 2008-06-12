@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/09/09 02:41:56 obache Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:17 joerg Exp $
 #
 
 DISTNAME=	dasm212
@@ -13,6 +13,7 @@ HOMEPAGE=	http://members.cox.net/rcolbert/dasm.htm
 COMMENT=	Multi-CPU cross-assembler for 6502, 6803 and 68HC11
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	YES

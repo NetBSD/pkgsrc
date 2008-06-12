@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/01/09 20:09:35 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2008/06/12 02:14:47 joerg Exp $
 #
 
 DISTNAME=	antiword-0.37
@@ -10,6 +10,8 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.winfield.demon.nl/index.html
 COMMENT=	Free MS Word to text and PostScript converter
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFLICTS=	siag<3.6.1
 
 USE_TOOLS+=	mktemp:run
@@ -20,6 +22,8 @@ REPLACE_INTERPRETER+=	bash
 REPLACE.bash.old=	/bin/bash
 REPLACE.bash.new=	${SH}
 REPLACE_FILES.bash=	kantiword
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 post-patch:
 	cd ${WRKSRC} ; \

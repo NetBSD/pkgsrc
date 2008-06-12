@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/03/25 05:37:34 heinz Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/12 02:14:47 joerg Exp $
 #
 
 DISTNAME=	Markdown_1.0.1
@@ -12,6 +12,8 @@ MAINTAINER=	dan@NetBSD.org
 HOMEPAGE=	http://daringfireball.net/projects/markdown/
 COMMENT=	Text-to-HTML conversion tool for web writers
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
 USE_TOOLS+=	perl:run
@@ -20,15 +22,14 @@ REPLACE_PERL+=	Markdown.pl
 
 PERL5_SITELIB=	${PERL5_SUB_INSTALLVENDORLIB:Q}
 PLIST_SUBST+=	PERL5_SITELIB=${PERL5_SITELIB:Q}
-INSTALLATION_DIRS=	${PERL5_INSTALLVENDORLIB}
+INSTALLATION_DIRS=	bin ${PERL5_INSTALLVENDORLIB} share/doc/Markdown
 
 .include "../../mk/bsd.prefs.mk"
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/Markdown.pl ${PREFIX}/bin/Markdown
-	${INSTALL_SCRIPT} ${WRKSRC}/Markdown.pl ${PREFIX}/${PERL5_SITELIB}/Markdown.pm
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/Markdown
-	${INSTALL_DATA} ${WRKSRC}/"Markdown Readme.text" ${PREFIX}/share/doc/Markdown
-	${INSTALL_DATA} ${WRKSRC}/License.text ${PREFIX}/share/doc/Markdown
+	${INSTALL_SCRIPT} ${WRKSRC}/Markdown.pl ${DESTDIR}${PREFIX}/bin/Markdown
+	${INSTALL_SCRIPT} ${WRKSRC}/Markdown.pl ${DESTDIR}${PREFIX}/${PERL5_SITELIB}/Markdown.pm
+	${INSTALL_DATA} ${WRKSRC}/"Markdown Readme.text" ${DESTDIR}${PREFIX}/share/doc/Markdown
+	${INSTALL_DATA} ${WRKSRC}/License.text ${DESTDIR}${PREFIX}/share/doc/Markdown
 
 .include "../../mk/bsd.pkg.mk"

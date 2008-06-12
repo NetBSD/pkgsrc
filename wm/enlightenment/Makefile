@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2007/07/04 07:39:33 dsieger Exp $
+# $NetBSD: Makefile,v 1.41 2008/06/12 02:14:54 joerg Exp $
 
 DISTNAME=	e16-0.16.8.8
 PKGNAME=	${DISTNAME:S/e16/enlightenment/}
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=enlightenment/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://enlightenment.org/
 COMMENT=	Highly themeable and configurable window manager
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		bison perl:run pkg-config
 USE_PKGLOCALEDIR=	YES

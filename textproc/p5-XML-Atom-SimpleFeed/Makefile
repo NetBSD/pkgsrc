@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/03/28 20:37:55 kleink Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/12 02:14:50 joerg Exp $
 
 DISTNAME=	XML-Atom-SimpleFeed-0.8
 PKGNAME=	p5-${DISTNAME}
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 MAINTAINER=	kleink@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-Atom-SimpleFeed/
 COMMENT=	Generate simple Atom syndication feeds
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	p5-Test-Simple-[0-9]*:../../devel/p5-Test-Simple
 BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/04/25 20:39:12 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/12 02:14:52 joerg Exp $
 
 DISTNAME=	gdick-0.9.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://gdick.sourceforge.net/
 COMMENT=	English-Korean Dictionary Client for GNOME2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_VERSIONS_ACCEPTED=	25 24
 

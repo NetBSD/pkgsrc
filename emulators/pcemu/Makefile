@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/12/01 23:57:23 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:29 joerg Exp $
 
 DISTNAME=	pcemu1.01alpha
 PKGNAME=	pcemu-1.01a
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_FREEBSD}
 MAINTAINER=	eric@fox.phoenix.az.us
 COMMENT=	8086 PC emulator, by David Hedley
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	bdftopcf mkfontdir
 
 MAKE_ENV+=	FILESDIR=${FILESDIR:Q}
@@ -16,6 +18,8 @@ MAKE_ENV+=	FILESDIR=${FILESDIR:Q}
 FONTS_DIRS.x11=	${PREFIX}/lib/pcemu/font
 REQD_DIRS=	${PREFIX}/lib/pcemu/font
 REQD_DIRS+=	${PREFIX}/lib/pcemu
+
+INSTALL_MAKE_FLAGS=	LOCALPREFIX=${DESTDIR}${PREFIX}
 
 do-configure:
 	cd ${WRKSRC};							\

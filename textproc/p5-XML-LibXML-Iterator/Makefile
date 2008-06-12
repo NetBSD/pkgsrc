@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/11/18 16:05:47 seb Exp $
+# $NetBSD: Makefile,v 1.13 2008/06/12 02:14:50 joerg Exp $
 #
 
 DISTNAME=	XML-LibXML-Iterator-1.04
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-LibXML-Iterator/
 COMMENT=	Iterator for XML::LibXML parsed documents
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-XML-LibXML>=1.52:../../textproc/p5-XML-LibXML
 DEPENDS+=	p5-XML-NodeFilter-[0-9]*:../../textproc/p5-XML-NodeFilter

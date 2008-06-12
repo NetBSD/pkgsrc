@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2003/08/12 06:44:37 jlam Exp $
+$NetBSD: patch-aa,v 1.7 2008/06/12 02:14:54 joerg Exp $
 
 --- Makefile.orig	Wed May 28 14:58:16 2003
 +++ Makefile	Wed Jul 16 03:44:16 2003
@@ -33,15 +33,15 @@ $NetBSD: patch-aa,v 1.6 2003/08/12 06:44:37 jlam Exp $
 -		echo "Installing sample configuration file $(ETCDIR)/pwm/pwm.conf"; \
 -		$(INSTALL) -m $(DATA_MODE) etc/pwm/sample.conf $(ETCDIR)/pwm/pwm.conf; \
 -	fi
-+	$(BSD_INSTALL_PROGRAM_DIR) $(BINDIR)
-+	$(BSD_INSTALL_PROGRAM) pwm $(BINDIR)
-+	$(BSD_INSTALL_MAN_DIR) $(MANDIR)/man1
-+	$(BSD_INSTALL_MAN) pwm.1x $(MANDIR)/man1/pwm.1
-+	$(BSD_INSTALL_DATA_DIR) $(DOCDIR)/pwm
-+	$(BSD_INSTALL_DATA) config.txt LICENSE $(DOCDIR)/pwm
-+	$(BSD_INSTALL_DATA_DIR) $(ETCDIR)/pwm
-+	$(BSD_INSTALL_DATA) etc/pwm/*-*.conf $(ETCDIR)/pwm
-+	$(BSD_INSTALL_DATA) etc/pwm/sample.conf $(ETCDIR)/pwm/pwm.conf.default
++	$(BSD_INSTALL_PROGRAM_DIR) ${DESTDIR}$(BINDIR)
++	$(BSD_INSTALL_PROGRAM) pwm ${DESTDIR}$(BINDIR)
++	$(BSD_INSTALL_MAN_DIR) ${DESTDIR}$(MANDIR)/man1
++	$(BSD_INSTALL_MAN) pwm.1x ${DESTDIR}$(MANDIR)/man1/pwm.1
++	$(BSD_INSTALL_DATA_DIR) ${DESTDIR}$(DOCDIR)/pwm
++	$(BSD_INSTALL_DATA) config.txt LICENSE ${DESTDIR}$(DOCDIR)/pwm
++	$(BSD_INSTALL_DATA_DIR) ${DESTDIR}$(ETCDIR)/pwm
++	$(BSD_INSTALL_DATA) etc/pwm/*-*.conf ${DESTDIR}$(ETCDIR)/pwm
++	$(BSD_INSTALL_DATA) etc/pwm/sample.conf ${DESTDIR}$(ETCDIR)/pwm/pwm.conf.default
  
  
  # Disclaimer: I don't have either Gnome or KDE.

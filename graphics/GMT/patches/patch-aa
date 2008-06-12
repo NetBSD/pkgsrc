@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.8 2006/11/14 13:16:00 wennmach Exp $
+$NetBSD: patch-aa,v 1.9 2008/06/12 02:14:31 joerg Exp $
 
 Libtoolize.
 
---- src/Makefile.orig	2006-11-08 15:19:48.000000000 +0100
-+++ src/Makefile	2006-11-08 16:04:24.000000000 +0100
-@@ -43,7 +43,7 @@
+--- src/Makefile.orig	2006-11-01 16:41:02.000000000 +0000
++++ src/Makefile
+@@ -43,7 +43,7 @@ include makegmt.macros	# GMT-specific se
  NETCDFLIB	= $(NETCDF)/lib
  NETCDFINC	= $(NETCDF)/include
  CFLAGS		= -I$(NETCDFINC) $(WIN32) $(CC_OPT) -DGMT_DEFAULT_PATH=\"$(GMT_DEFAULT_PATH)\" $(TRIANGLE_D)
@@ -13,7 +13,7 @@ Libtoolize.
  
  PS	= -lpsl
  GMT	= -lgmt
-@@ -151,38 +151,34 @@
+@@ -151,38 +151,34 @@ gmt_notposix.h:	
  		./configure
  
  install:	all
@@ -65,7 +65,7 @@ Libtoolize.
  
  uninstall:
  		for i in $(ALLPROGS); do \
-@@ -207,13 +203,13 @@
+@@ -207,13 +203,13 @@ uninstall:
  		fi
  
  clean:
@@ -81,7 +81,7 @@ Libtoolize.
  		touch makegmt.macros
  
  distclean:	spotless
-@@ -225,40 +221,32 @@
+@@ -225,40 +221,32 @@ distclean:	spotless
  libs:		$(GMTLIB)
  
  pslib.o:	pslib.c $(PS_H) $(PS_I) gmt_notunix.h gmt_notposix.h gmt_math.h
@@ -103,19 +103,19 @@ Libtoolize.
 -./libpsl.$(SL):	pslib.o
 -		$(LD) $(LD_OPT) $? -o $@
 +libpsl.la:	pslib.o
-+		@$(LIBTOOL) --mode=link $(CC) -o $@ pslib.lo $(LDFLAGS) -lm --version-info 0:0 -rpath $(libdir)
++		@$(LIBTOOL) --mode=link $(CC) -o $@ pslib.lo $(LDFLAGS) -lm --version-info 0:0 -rpath $(PLAIN_LIBDIR)
  
 -./libgmt.$(SL):	$(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O)
 -		$(LD) $(LD_OPT) $(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O) -o $@
 +libgmt.la:	$(LIB_O) $(TRIANGLE_O) $(ALPHA_SINCOS_O)
 +		@$(LIBTOOL) --mode=link $(CC) -o $@ $(LIB_O:.o=.lo) \
 +		 $(TRIANGLE_O:.o=.lo) $(ALPHA_SINCOS_O:.o=.lo) $(LDFLAGS) \
-+		 $(CDF) $(LIBS) --version-info 0:0 -rpath $(libdir)
++		 $(CDF) $(LIBS) --version-info 0:0 -rpath $(PLAIN_LIBDIR)
  
 -./libgmtps.$(SL):	$(LIBPS_O)
 -		$(LD) $(LD_OPT) $(LIBPS_O) -o $@
 +libgmtps.la:	$(LIBPS_O) 
-+		@$(LIBTOOL) --mode=link $(CC) -o $@ $(LIBPS_O:.o=.lo) $(LDFLAGS) -lm --version-info 0:0 -rpath $(libdir)
++		@$(LIBTOOL) --mode=link $(CC) -o $@ $(LIBPS_O:.o=.lo) $(LDFLAGS) -lm --version-info 0:0 -rpath $(PLAIN_LIBDIR)
  
  #-------------------------------------------------------------------------------
  #	program dependencies

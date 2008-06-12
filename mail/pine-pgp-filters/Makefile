@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/03/17 11:53:37 obache Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:35 joerg Exp $
 #
 
 DISTNAME=		pine-pgp-filters-1.1
@@ -10,11 +10,15 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://dougbarton.us/PGP/scripts/ppf/
 COMMENT=		Filters to integrate Pine with gnupg or pgp
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 HAS_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 
 DOCDIR=			 ${PREFIX}/share/doc/pine-pgp-filters
 DOCFILES=		BUGS CHANGES INSTALL LICENSE README
+
+INSTALLATION_DIRS=	${DOCDIR}
 
 do-build:
 .for f in ${DOCFILES}
@@ -22,10 +26,9 @@ do-build:
 .endfor
 
 post-install:
-	${RM} ${PREFIX}/libexec/ppf_*.orig
-	${INSTALL_DATA_DIR} ${DOCDIR}
+	${RM} ${DESTDIR}${PREFIX}/libexec/ppf_*.orig
 .for f in ${DOCFILES}
-	${INSTALL_DATA} ${WRKSRC}/${f}.gen ${DOCDIR}/${f}
+	${INSTALL_DATA} ${WRKSRC}/${f}.gen ${DESTDIR}${DOCDIR}/${f}
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

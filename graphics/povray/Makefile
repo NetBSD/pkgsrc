@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2007/04/04 11:50:39 obache Exp $
+# $NetBSD: Makefile,v 1.40 2008/06/12 02:14:32 joerg Exp $
 
 DISTNAME=	povray-3.6.1
 PKGREVISION=	5
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.povray.org/
 COMMENT=	Persistence of Vision Ray Tracer
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 LICENSE=	povray-license
 
@@ -34,8 +36,7 @@ EGDIR=		${PREFIX}/share/examples/povray
 CONF_FILES=	${EGDIR}/povray.conf ${PKG_SYSCONFDIR}/povray.conf
 CONF_FILES+=	${EGDIR}/povray.ini ${PKG_SYSCONFDIR}/povray.ini
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/povray-3.6/scripts
+INSTALLATION_DIRS=	share/povray-3.6/scripts
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/01/18 05:09:36 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2008/06/12 02:14:44 joerg Exp $
 #
 
 DISTNAME=	amap-5.2
@@ -9,6 +9,8 @@ MASTER_SITES=	http://freeworld.thc.org/releases/
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://freeworld.thc.org/thc-amap/
 COMMENT=	Applications and Services scanner
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	YES
 
@@ -34,21 +36,19 @@ SUBST_SED.conf+=	-e "s|@GREP@|${GREP}|g"
 SUBST_SED.conf+=	-e "s|@SED@|${SED}|g"
 SUBST_MESSAGE.conf=	Fixing configure script.
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${EGDIR}
 
 post-extract:
 	${CHMOD} 0700 ${WRKSRC}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/amap ${PREFIX}/bin
-	${LN} -s ${PREFIX}/bin/amap ${PREFIX}/bin/amap6
-	${INSTALL_PROGRAM} ${WRKSRC}/amapcrap ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/amap.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/appdefs.trig ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/appdefs.resp ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/appdefs.rpc ${EGDIR}
-
+	${INSTALL_PROGRAM} ${WRKSRC}/amap ${DESTDIR}${PREFIX}/bin
+	${LN} -s amap ${DESTDIR}${PREFIX}/bin/amap6
+	${INSTALL_PROGRAM} ${WRKSRC}/amapcrap ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/amap.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKSRC}/appdefs.trig ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/appdefs.resp ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/appdefs.rpc ${DESTDIR}${EGDIR}
 
 .include "../../devel/pcre/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

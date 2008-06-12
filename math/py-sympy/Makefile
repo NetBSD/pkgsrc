@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/05/29 17:59:25 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:37 joerg Exp $
 #
 
 DISTNAME=	sympy-0.5.15
@@ -9,6 +9,8 @@ MASTER_SITES=	http://sympy.googlecode.com/files/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://code.google.com/p/sympy/
 COMMENT=	Python library for symbolic mathematics
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes

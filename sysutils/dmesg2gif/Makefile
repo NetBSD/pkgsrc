@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/01/07 09:14:11 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/12 02:14:46 joerg Exp $
 #
 
 DISTNAME=		dmesg2gif-1.3
@@ -9,6 +9,8 @@ DISTFILES=		# empty
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Output dmesg(8) device tree as GIF image
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		graphviz-[0-9]*:../../graphics/graphviz
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/01/07 09:13:59 rillig Exp $
+# $NetBSD: Makefile,v 1.25 2008/06/12 02:14:35 joerg Exp $
 #
 
 DISTNAME=		qpopper${VERSION}
@@ -14,6 +14,8 @@ MAINTAINER=		mellon@fugue.com
 HOMEPAGE=		${QPOPPER_HOMEPAGE}
 COMMENT=		Qualcomm's password change server mainly for Eudora
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 .include "../../mail/qpopper/Makefile.common"
 
 CONFIGURE_ARGS+=	--enable-poppassd --without-pam
@@ -23,6 +25,8 @@ MAKE_ENV+=	ROOT_USER=${ROOT_USER:Q} ROOT_GROUP=${ROOT_GROUP:Q}
 .include "options.mk"
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 share/doc libexec
+# popper makefile doesn't have an install target...
+INSTALL_DIRS=		password
 
 do-build:
 .for DIR in common password
@@ -30,12 +34,9 @@ do-build:
 		${MAKE_PROGRAM} ${MAKE_FLAGS} ${BUILD_TARGET}
 .endfor
 
-# popper makefile doesn't have an install target...
-do-install:
-	cd ${WRKSRC}/password; ${SETENV} ${MAKE_ENV}			\
-		${MAKE_PROGRAM} ${MAKE_FLAGS} ${INSTALL_TARGET}
-	${INSTALL_MAN} ${WRKSRC}/man/poppassd.8 ${PREFIX}/${PKGMANDIR}/man8
+post-install:
+	${INSTALL_MAN} ${WRKSRC}/man/poppassd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/License.txt				\
-		${PREFIX}/share/doc/poppassd.License;
+		${DESTDIR}${PREFIX}/share/doc/poppassd.License;
 
 .include "../../mk/bsd.pkg.mk"

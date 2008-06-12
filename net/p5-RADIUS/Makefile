@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/10/14 08:07:06 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:40 joerg Exp $
 #
 
 DISTNAME=	RADIUS-1.0
@@ -11,6 +11,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=RADIUS/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~chrmasto/RADIUS-1.0/
 COMMENT=	Perl5 module for RADIUS queries
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/RADIUS/.packlist
 

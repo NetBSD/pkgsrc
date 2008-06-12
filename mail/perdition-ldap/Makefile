@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.5 2008/01/18 05:08:28 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:35 joerg Exp $
 #
 
 PKGREVISION=		4
 
 PERDITION_COMMENT=	LDAP user database module
 PERDITION_PKGNAME=	ldap
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=	--with-ldap-includes=${BUILDLINK_PREFIX.openldap-client}/include
 CONFIGURE_ARGS+=	--with-ldap-libs=${BUILDLINK_PREFIX.openldap-client}/lib

@@ -1,4 +1,4 @@
-$NetBSD: patch-at,v 1.7 2006/11/14 13:16:00 wennmach Exp $
+$NetBSD: patch-at,v 1.8 2008/06/12 02:14:31 joerg Exp $
 
 Libtoolize.
 
@@ -24,7 +24,7 @@ Libtoolize.
 -			$(AR) cvr libx2sys.a $?
 -			$(RANLIB) libx2sys.a
 +libx2sys.la:		x2sys.o
-+			$(LIBTOOL) --mode=link $(CC) -o libx2sys.la x2sys.lo --version-info 0:0 -rpath $(libdir)
++			$(LIBTOOL) --mode=link $(CC) -o libx2sys.la x2sys.lo --version-info 0:0 -rpath $(PLAIN_LIBDIR)
  
  install:		all
 -			for i in $(XSYSTEM); do \

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/12/15 14:34:21 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/12 02:14:49 joerg Exp $
 #
 
 DISTNAME=	Text-LevenshteinXS-0.03
@@ -11,6 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Text-LevenshteinXS
 COMMENT=	XS implementation of the Levenshtein edit distance
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
 PERL5_PACKLIST=	auto/Text/LevenshteinXS/.packlist

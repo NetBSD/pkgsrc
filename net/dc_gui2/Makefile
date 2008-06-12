@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2008/03/06 14:53:52 wiz Exp $
+# $NetBSD: Makefile,v 1.42 2008/06/12 02:14:39 joerg Exp $
 #
 
 DISTNAME=	dc_gui2-0.75
@@ -10,6 +10,8 @@ MASTER_SITES=	http://ac2i.homelinux.com/dctc/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ac2i.homelinux.com/dctc/
 COMMENT=	Graphical user interface for DCTC
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	dctc>=0.85.4:../../net/dctc
 

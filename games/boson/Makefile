@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/01/18 05:06:34 tnn Exp $
+# $NetBSD: Makefile,v 1.29 2008/06/12 02:14:30 joerg Exp $
 #
 
 DISTNAME=		boson-all-0.8
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://boson.eu.org/
 COMMENT=		OpenGL real-time strategy game for KDE 3
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake msgfmt

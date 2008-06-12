@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/06/04 16:26:56 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/12 02:14:56 joerg Exp $
 
 DISTNAME=	FastTemplate-1_1_0
 PKGNAME=	${PHP_PKG_PREFIX}-FastTemplate-1.1.0
@@ -11,6 +11,8 @@ PATCH_SITES=	http://www.thewebmasters.net/php/FastTemplate/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.thewebmasters.net/php/FastTemplate.phtml
 COMMENT=	PHP extension for managing templates and variable interpolation
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	php-FastTemplate-[0-9]*
 
@@ -29,17 +31,16 @@ EGDIR=		${PREFIX}/share/examples/${PKGBASE}
 PLIST_SUBST+=	PHP_LIB_SUBDIR=${PHP_LIB_SUBDIR:Q}
 PLIST_SUBST+=	PKGBASE=${PKGBASE:Q}
 
+INSTALLATION_DIRS=	${PHP_LIB_DIR} ${DOCDIR} ${EGDIR}/templates
+
 do-install:
-	${INSTALL_DATA_DIR} ${PHP_LIB_DIR}
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${EGDIR}/templates
-	${INSTALL_DATA} ${WRKSRC}/class.FastTemplate.php3 ${PHP_LIB_DIR}
-	${INSTALL_DATA} ${WRKSRC}/docs/FastTemplate.html ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/class.FastTemplate.php3 ${DESTDIR}${PHP_LIB_DIR}
+	${INSTALL_DATA} ${WRKSRC}/docs/FastTemplate.html ${DESTDIR}${DOCDIR}
 	cd ${WRKSRC}; for file in *.phtml; do				\
-		dest=${EGDIR}/`${BASENAME} $${file} .phtml`.php;	\
+		dest=${DESTDIR}${EGDIR}/`${BASENAME} $${file} .phtml`.php; \
 		${INSTALL_DATA} $${file} $${dest};			\
 	done
-	${INSTALL_DATA} ${WRKSRC}/templates/*.tpl ${EGDIR}/templates
+	${INSTALL_DATA} ${WRKSRC}/templates/*.tpl ${DESTDIR}${EGDIR}/templates
 
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"

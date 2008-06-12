@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/03/04 21:29:23 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2008/06/12 02:14:25 joerg Exp $
 
 DISTNAME=	PerlVision-1.4
 PKGNAME=	p5-PV-1.4
@@ -13,6 +13,7 @@ COMMENT=	Perl5 library for text-mode user interface widgets
 DEPENDS+=	p5-Curses>=1.02:../../devel/p5-Curses
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/PV/.packlist
 

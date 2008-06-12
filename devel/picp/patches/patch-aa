@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2005/07/27 05:34:27 dogcow Exp $
+$NetBSD: patch-aa,v 1.2 2008/06/12 02:14:28 joerg Exp $
 
 --- Makefile.orig	2005-07-26 21:37:11.000000000 -0700
 +++ Makefile
@@ -32,8 +32,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2005/07/27 05:34:27 dogcow Exp $
  
  install:
 -	cp -f $(APP) /usr/local/bin/
-+	$(INSTALL) -m 755 $(APP) $(PREFIX)/bin/
-+	$(INSTALL) -m 644 PICPmanual.html $(PREFIX)/share/doc/picp/
++	$(INSTALL) -m 755 $(APP) ${DESTDIR}$(PREFIX)/bin/
++	$(INSTALL) -m 644 PICPmanual.html ${DESTDIR}$(PREFIX)/share/doc/picp/
  
  win: $(APP).exe
  

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/05/26 02:13:25 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:56 joerg Exp $
 #
 
 DISTNAME=	paros-3.2.13-unix
@@ -11,10 +11,14 @@ MAINTAINER=	salo@NetBSD.org
 HOMEPAGE=	http://www.parosproxy.org/
 COMMENT=	HTTP/HTTPS proxy for assessing web application vulnerabilities
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_BUILD=	yes
 USE_JAVA2=	yes
 USE_JAVA=	run
 USE_TOOLS+=	pax
+
+INSTALLATION_DIRS=	bin lib
 
 WRKSRC=		${WRKDIR}/${PKGBASE}
 
@@ -33,8 +37,8 @@ do-configure:
 		 ${WRKSRC}/license/TheClarifiedArtisticLicense.htm
 
 do-install:
-	@cd ${WRKDIR} && pax -rw -pm ${PKGBASE} ${PREFIX}/lib/
-	${INSTALL_SCRIPT} ${WRKDIR}/paros.sh ${PREFIX}/bin/paros
+	@cd ${WRKDIR} && pax -rw -pm ${PKGBASE} ${DESTDIR}${PREFIX}/lib/
+	${INSTALL_SCRIPT} ${WRKDIR}/paros.sh ${DESTDIR}${PREFIX}/bin/paros
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

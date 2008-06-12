@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2008/05/29 16:43:23 drochner Exp $
+# $NetBSD: Makefile,v 1.84 2008/06/12 02:14:13 joerg Exp $
 #
 
 DISTNAME=	file-roller-2.22.3
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fileroller.sourceforge.net/
 COMMENT=	Front-end to archiving programs like tar and zip
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		gtar-base>=1.13.25:../../archivers/gtar-base
 DEPENDS+=		unzip>=5.50nb2:../../archivers/unzip
