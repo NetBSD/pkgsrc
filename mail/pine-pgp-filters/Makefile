@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:35 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/12 21:46:44 abs Exp $
 #
 
-DISTNAME=		pine-pgp-filters-1.1
-PKGREVISION=		3
+DISTNAME=		pine-pgp-filters-1.6
 CATEGORIES=		security mail
-MASTER_SITES=		http://dougbarton.us/PGP/scripts/ppf/Old/
+MASTER_SITES=		http://dougbarton.us/PGP/scripts/ppf/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://dougbarton.us/PGP/scripts/ppf/
@@ -20,13 +19,16 @@ DOCFILES=		BUGS CHANGES INSTALL LICENSE README
 
 INSTALLATION_DIRS=	${DOCDIR}
 
-do-build:
+post-build:
 .for f in ${DOCFILES}
 	${SED} 's:/usr/local:${PREFIX}:g' ${WRKSRC}/${f} > ${WRKSRC}/${f}.gen
 .endfor
 
+pre-install:
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/libexec
+
 post-install:
-	${RM} ${DESTDIR}${PREFIX}/libexec/ppf_*.orig
 .for f in ${DOCFILES}
 	${INSTALL_DATA} ${WRKSRC}/${f}.gen ${DESTDIR}${DOCDIR}/${f}
 .endfor

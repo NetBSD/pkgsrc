@@ -1,7 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2006/02/19 00:55:46 wiz Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/06/12 21:46:44 abs Exp $
+bin/ppf_mime
+bin/ppf_mime_decrypt
 libexec/ppf_decrypt
 libexec/ppf_encrypt
 libexec/ppf_mime
+libexec/ppf_mime_decrypt
 libexec/ppf_sign
 libexec/ppf_verify
 share/doc/pine-pgp-filters/BUGS
