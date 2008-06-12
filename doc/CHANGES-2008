@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1261 2008/06/11 19:45:53 bouyer Exp $
+$NetBSD: CHANGES-2008,v 1.1262 2008/06/12 13:32:49 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2116,3 +2116,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added converters/p5-Unicode-Map version 0.112 [taca 2008-06-11]
 	Added converters/p5-Unicode-MapUTF8 version 1.11 [taca 2008-06-11]
 	Updated comms/xtel to 3.3.0nb6 [bouyer 2008-06-11]
+	Updated net/net-snmp to 5.4.1nb4 [tron 2008-06-12]
