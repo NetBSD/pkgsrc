@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.32 2008/06/11 14:33:07 obache Exp $
+# $NetBSD: Makefile,v 1.33 2008/06/12 01:01:47 obache Exp $
 
 DISTNAME=		nntpcache-3.0.2
 CATEGORIES=		news
-MASTER_SITES=		http://xs4all.nl/~suelette/nntpcache/
+MASTER_SITES=		http://www.xs4all.nl/~suelette/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://iq.org/~proff/nntpcache.org/
