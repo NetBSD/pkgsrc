@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7320 2008/06/12 09:46:12 wiz Exp $
+$NetBSD: TODO,v 1.7321 2008/06/12 15:04:41 obache Exp $
 
 Suggested new packages
 ======================
@@ -659,6 +659,7 @@ Suggested package updates
 	o gnome-pilot-2.0.16
 	o gnome-terminal-2.22.2
 	o gnomeicu-0.99.14
+	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
 	o gnustep-1.14.0
 	o gnustep-examples-1.2.0
