@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2008/06/11 19:27:03 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2008/06/12 13:29:27 joerg Exp $
 
 DISTNAME=	pbulk-0.31
 CATEGORIES=	pkgtools
@@ -43,7 +43,7 @@ SUBST_FILES.tools=	pbulk.conf scripts/build scripts/build-client-start \
 	scripts/compute-packages.awk scripts/create-broken-graph.awk \
 	scripts/create-report-html.awk scripts/create-report-txt.awk \
 	scripts/create-report.awk
-SUBST_VARS.tools=	AWK BZIP2 DIGEST GZIP_CMD IDENT MAIL_CMD NEATO \
+SUBST_VARS.tools=	AWK BZIP2 CHOWN DIGEST GZIP_CMD IDENT MAIL_CMD NEATO \
 			PBULK_CONFIG PKG_ADD_CMD PKG_DELETE_CMD \
 			PKG_INFO_CMD PREFIX SED SH TAR TARGET_MAKE
 
