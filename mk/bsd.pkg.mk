@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1947 2008/06/12 00:06:27 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1948 2008/06/12 01:09:01 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -45,24 +45,6 @@ PKGNAME?=		${DISTNAME}
 PKGNAME_NOREV=		${PKGNAME}
 .endif
 PKGVERSION_NOREV=	${PKGNAME_NOREV:C/^.*-//}
-
-# A meta-package is a package that does not have any files and whose
-# only purpose is to depend on other packages, giving that collection
-# a simple name.
-#
-# Keywords: meta meta-package META_PACKAGE
-#
-.if defined(META_PACKAGE)
-PKG_DESTDIR_SUPPORT=	user-destdir
-NO_CONFIGURE=		yes
-NO_BUILD=		yes
-DISTFILES=		# none
-PLIST_SRC=		# none
-do-patch:
-	@${DO_NADA}
-do-install:
-	@${DO_NADA}
-.endif
 
 ####
 

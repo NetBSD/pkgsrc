@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.283 2008/05/24 03:40:35 tnn Exp $
+# $NetBSD: bsd.prefs.mk,v 1.284 2008/06/12 01:09:02 joerg Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -353,6 +353,24 @@ PKG_FAIL_REASON+=	"missing mk/platform/${OPSYS}.mk"
 .endif
 
 PKGDIRMODE?=		755
+
+# A meta-package is a package that does not have any files and whose
+# only purpose is to depend on other packages, giving that collection
+# a simple name.
+#
+# Keywords: meta meta-package META_PACKAGE
+#
+.if defined(META_PACKAGE)
+PKG_DESTDIR_SUPPORT=	user-destdir
+NO_CONFIGURE=		yes
+NO_BUILD=		yes
+DISTFILES=		# none
+PLIST_SRC=		# none
+do-patch:
+	@${DO_NADA}
+do-install:
+	@${DO_NADA}
+.endif
 
 # PKG_DESTDIR_SUPPORT can only be one of "destdir" or "user-destdir".
 USE_DESTDIR?=		no
