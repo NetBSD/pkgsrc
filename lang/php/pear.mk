@@ -1,4 +1,4 @@
-# $NetBSD: pear.mk,v 1.10 2007/05/05 21:32:12 adrianp Exp $
+# $NetBSD: pear.mk,v 1.11 2008/06/12 00:20:10 joerg Exp $
 #
 # This Makefile fragment is intended to be included by packages that build
 # and install pear packages.
@@ -33,6 +33,9 @@ DEPENDS+=	${PHP_PKG_PREFIX}-pear-[0-9]*:../../lang/pear
 
 PEAR_CMD=	${PREFIX}/bin/pear
 PEAR_LIB=	lib/php
+.if ${_USE_DESTDIR} != "no"
+PEAR_DESTDIR=	-R ${DESTDIR}
+.endif
 
 # whether @dirrm for baseinstalldir should be included in PLIST
 PEAR_DIRRM_BASEDIR?=	# empty
@@ -53,7 +56,19 @@ post-extract:
 	@cd ${WRKSRC} && ${LN} -s ${WRKDIR}/package.xml package.xml
 
 do-install:
-	cd ${WRKSRC} && ${PEAR_CMD} "install" package.xml || exit 1
+	cd ${WRKSRC} && ${PEAR_CMD} "install" ${PEAR_DESTDIR} package.xml || exit 1
+
+.if ${_USE_DESTDIR} != "no"
+CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.channels/.alias/pear.txt
+CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.channels/.alias/pecl.txt
+CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.channels/__uri.reg
+CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.channels/pear.php.net.reg
+CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.channels/pecl.php.net.reg
+CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.depdb
+CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.depdblock
+CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.filemap
+CHECK_FILES_SKIP+=	${PREFIX}/lib/php/.lock
+.endif
 
 .include "../../lang/php/phpversion.mk"
 .include "${PHPPKGSRCDIR}/buildlink3.mk"
