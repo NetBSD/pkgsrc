@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/04/25 20:39:09 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/12 02:14:29 joerg Exp $
 #
 
 DISTNAME=		fonttools-2.0b1
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://fonttools.sourceforge.net/
 COMMENT=		Library for manipulating fonts
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/fonttools
 PYDISTUTILSPKG=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/12/02 13:04:16 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/12 02:14:57 joerg Exp $
 #
 
 DISTNAME=	antiright-3.4
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	antiright@gmail.com
 HOMEPAGE=	http://www.nongnu.org/antiright/
 COMMENT=	The gtkshell GUI creator, gshterm, and ACE desktop implementation
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	YES
 USE_LANGUAGES=	c
@@ -33,6 +35,9 @@ SUBST_SED.hpath+=	-e 's|/usr/pkg|${PREFIX}|'
 
 TOOLS_DEPENDS.pkg-config=	pkg-config>=0.20:../../devel/pkg-config
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.6.0
+
+INSTALL_MAKE_FLAGS+=		PREFIX=${DESTDIR}${PREFIX} \
+				mandir=${DESTDIR}${PREFIX}/${PKGMANDIR} \
 
 .include "../../x11/vte/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"

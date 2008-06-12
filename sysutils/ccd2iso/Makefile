@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/04/12 21:42:19 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:46 joerg Exp $
 #
 
 DISTNAME=		ccd2iso-0.3
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ccd2iso/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sourceforge.net/projects/ccd2iso/
 COMMENT=		CloneCD to ISO converter
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

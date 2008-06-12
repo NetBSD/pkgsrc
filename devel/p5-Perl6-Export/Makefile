@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/06/07 11:56:15 abs Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:25 joerg Exp $
 #
 
 DISTNAME=	Perl6-Export-0.07
@@ -11,6 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Perl6-Export/
 COMMENT=	Implements the Perl 6 'is export(...)' trait
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Perl6/Export/.packlist

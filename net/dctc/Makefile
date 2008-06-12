@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2008/01/12 11:55:02 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2008/06/12 02:14:39 joerg Exp $
 #
 
 DISTNAME=	dctc-0.85.4
@@ -10,6 +10,8 @@ MASTER_SITES=	http://ac2i.homelinux.com/dctc/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://ac2i.homelinux.com/dctc/
 COMMENT=	Direct Connect clone (Direct Connect Text Client)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-manual-db-detect

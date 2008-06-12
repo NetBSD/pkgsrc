@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2006/03/04 21:29:28 jlam Exp $
+# $NetBSD: Makefile,v 1.7 2008/06/12 02:14:29 joerg Exp $
 #
 
 DISTNAME=		ZConfig-1.0
@@ -10,6 +10,8 @@ MASTER_SITES=		http://www.zope.org/Members/fdrake/zconfig/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.zope.org/Members/fdrake/zconfig/
 COMMENT=		Configuration library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
 

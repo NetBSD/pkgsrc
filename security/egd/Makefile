@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/11/12 00:04:06 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/06/12 02:14:44 joerg Exp $
 #
 
 DISTNAME=	egd-0.8
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.lothar.com/pub/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lothar.com/tech/crypto/
 COMMENT=	EGD: Entropy Gathering Daemon
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-SHA-[0-9]*:../../security/p5-SHA
 

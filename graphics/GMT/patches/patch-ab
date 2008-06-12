@@ -1,8 +1,16 @@
-$NetBSD: patch-ab,v 1.6 2006/11/14 13:16:00 wennmach Exp $
+$NetBSD: patch-ab,v 1.7 2008/06/12 02:14:31 joerg Exp $
 
 --- src/makegmt.macros.in.orig	2006-11-08 16:19:32.000000000 +0100
 +++ src/makegmt.macros.in	2006-11-08 16:20:29.000000000 +0100
-@@ -49,6 +49,9 @@
+@@ -19,6 +19,7 @@ exec_prefix	= @exec_prefix@
+ srcdir		= @rootdir@/src
+ bindir		= $(DESTDIR)@bindir@
+ libdir		= $(DESTDIR)@libdir@
++PLAIN_LIBDIR	= @libdir@
+ includedir	= $(DESTDIR)@includedir@
+ mandir		= $(DESTDIR)@mandir@
+ datadir		= $(DESTDIR)@datadir@
+@@ -49,6 +50,9 @@ LIBS	= @LIBS@
  # Misc. Standard Utilities:
  #---------------------------------------------------------------
  INSTALL		= @INSTALL@
@@ -12,7 +20,7 @@ $NetBSD: patch-ab,v 1.6 2006/11/14 13:16:00 wennmach Exp $
  AWK		= @AWK@
  AS		= @AS@
  AR		= @AR@
-@@ -146,4 +149,4 @@
+@@ -146,4 +150,4 @@ ALPHA_SINCOS_O	= @ALPHA_SINCOS_O@
  #	Select STATIC (Default) or SHARED libraries
  #-------------------------------------------------------------------------------
  #

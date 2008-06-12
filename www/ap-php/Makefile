@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2007/11/17 12:04:15 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2008/06/12 02:14:54 joerg Exp $
 #
 
 PKGNAME=		${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}-${PHP_BASE_VERS}
 PKGREVISION=		1
 COMMENT=		Apache (${PKG_APACHE}) module for ${PKG_PHP}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		ap-php-[0-9]*
 
@@ -22,10 +24,10 @@ INSTALLATION_DIRS=	lib/httpd
 do-install:
 	if [ -f ${WRKSRC}/.libs/libphp${PKG_PHP_VERSION}.so ]; then	\
 		${INSTALL_DATA} ${WRKSRC}/.libs/libphp${PKG_PHP_VERSION}.so \
-			${PREFIX}/lib/httpd/mod_php${PKG_PHP_VERSION}.so;   \
+			${DESTDIR}${PREFIX}/lib/httpd/mod_php${PKG_PHP_VERSION}.so;   \
 	elif [ -f ${WRKSRC}/libs/libphp${PKG_PHP_VERSION}.so ]; then	\
 		${INSTALL_DATA} ${WRKSRC}/libs/libphp${PKG_PHP_VERSION}.so  \
-			${PREFIX}/lib/httpd/mod_php${PKG_PHP_VERSION}.so;   \
+			${DESTDIR}${PREFIX}/lib/httpd/mod_php${PKG_PHP_VERSION}.so;   \
 	fi
 
 .include "${PHPPKGSRCDIR}/buildlink3.mk"

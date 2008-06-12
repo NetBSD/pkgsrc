@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2007/10/10 14:20:39 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2008/06/12 02:14:32 joerg Exp $
 #
 
 DISTNAME=		plotutils-2.4.1
@@ -13,6 +13,7 @@ COMMENT=		Programs and library for plotting scientific data
 CONFLICTS+=		plotutils-nox11-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		lex yacc

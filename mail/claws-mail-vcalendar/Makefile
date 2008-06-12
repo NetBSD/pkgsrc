@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/06/05 10:19:31 drochner Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:34 joerg Exp $
 #
 
 DISTNAME=	vcalendar-1.102
@@ -8,6 +8,8 @@ MASTER_SITES=	http://claws-mail.org/downloads/plugins/
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	Enable vCalendar message handling
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 #PLIST_SRC+=	PLIST
 

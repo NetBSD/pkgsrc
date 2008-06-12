@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/10/04 21:54:59 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:42 joerg Exp $
 #
 
 DISTNAME=	pkg_notify-0.4.2
@@ -12,6 +12,7 @@ COMMENT=	Notifies package maintainer when a new version is available
 DEPENDS+=	p5-libwww>=5.76:../../www/p5-libwww
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=		yes
 NO_CONFIGURE=		yes
@@ -31,13 +32,11 @@ SUBST_SED.pkg_notify=		-e 's|/usr/pkgsrc|${PKGSRCDIR}|'	\
 				-e 's|/usr/bin/make|${MAKE}|g'		\
 				-e 's|/usr/pkg/bin/perl|${PERL5}|g'
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin ${EXAMPLEDIR} share/doc/pkg_notify
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pkg_notify ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
-	${INSTALL_DATA} ${WRKSRC}/${PKGBASE}.list ${EXAMPLEDIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE}
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/${PKGBASE}
+	${INSTALL_SCRIPT} ${WRKSRC}/pkg_notify ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/pkg_notify.list ${DESTDIR}${EXAMPLEDIR}
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/pkg_notify
 
 .include "../../mk/bsd.pkg.mk"

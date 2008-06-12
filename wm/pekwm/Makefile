@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/05/25 21:23:26 wiz Exp $
+# $NetBSD: Makefile,v 1.29 2008/06/12 02:14:54 joerg Exp $
 #
 
 DISTNAME=	pekwm-0.1.6
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.pekwm.org/trac
 COMMENT=	Window manager based on aewm++
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake perl:run

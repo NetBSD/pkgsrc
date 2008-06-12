@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.5 2007/11/26 11:38:50 obache Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/12 02:14:51 joerg Exp $
 #
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../textproc/hyperestraier/Makefile.common"
 

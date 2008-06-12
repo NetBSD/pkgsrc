@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/04/21 14:43:20 xtraeme Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/12 02:14:32 joerg Exp $
 #
 
 DISTNAME=	Cairo-${DIST_VER}
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gtk2-perl/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gtk2-perl.sourceforge.net/
 COMMENT=	Perl bindings to the cairo graphics library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 

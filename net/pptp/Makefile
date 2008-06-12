@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/05/12 09:30:55 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/12 02:14:41 joerg Exp $
 
 DISTNAME=	pptp-1.7.0
 PKGREVISION=	2
@@ -9,21 +9,22 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://pptpclient.sourceforge.net/
 COMMENT=	PPTP client package for Microsoft VPN servers (no encryption yet)
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NOT_FOR_PLATFORM=	Interix-*-*
 
-MAKE_ENV+=	ROOT_USER=${ROOT_USER}
-MAKE_FLAGS+=	BINDIR=${PREFIX:Q}/sbin
-MAKE_FLAGS+=	MANDIR=${PREFIX:Q}/${PKGMANDIR:Q}/man8
-MAKE_FLAGS+=	PPPDIR=${PREFIX:Q}/share/examples/pptp
+MAKE_FLAGS+=	BINDIR=${PREFIX}/sbin
+MAKE_FLAGS+=	MANDIR=${PREFIX}/${PKGMANDIR:Q}/man8
+MAKE_FLAGS+=	PPPDIR=${PREFIX}/share/examples/pptp
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR:Q}/man8 share/examples/pptp
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man8 share/examples/pptp
 INSTALLATION_DIRS+=	share/doc/pptp/Documentation share/doc/pptp/Reference
 DOCDIR=		${PREFIX}/share/doc/pptp
 
 post-install:
-	cd ${WRKSRC:Q}/Documentation && ${INSTALL_DATA} * ${DOCDIR:Q}/Documentation
-	cd ${WRKSRC:Q}/Reference && ${INSTALL_DATA} * ${DOCDIR:Q}/Reference
-	cd ${WRKSRC:Q} && ${INSTALL_DATA} INSTALL NEWS README USING ${DOCDIR:Q}
+	cd ${WRKSRC}/Documentation && ${INSTALL_DATA} * ${DESTDIR}${DOCDIR}/Documentation
+	cd ${WRKSRC}/Reference && ${INSTALL_DATA} * ${DESTDIR}${DOCDIR}/Reference
+	cd ${WRKSRC} && ${INSTALL_DATA} INSTALL NEWS README USING ${DESTDIR}${DOCDIR}
 
 .include "../../mk/bsd.prefs.mk"
 

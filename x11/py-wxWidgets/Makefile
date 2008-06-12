@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/04/25 20:39:14 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2008/06/12 02:14:58 joerg Exp $
 #
 
 DISTNAME=	wxPython-src-2.6.3.3
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://wxpython.org/
 COMMENT=	Python bindings for wxWidgets
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/wxPython-src-2.6.3.3/wxPython
 USE_LANGUAGES=	c c++

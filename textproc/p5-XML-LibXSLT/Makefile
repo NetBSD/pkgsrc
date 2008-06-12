@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/04/16 13:37:34 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:50 joerg Exp $
 #
 
 DISTNAME=	XML-LibXSLT-1.66
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 MAINTAINER=	adam@migus.org
 HOMEPAGE=	http://search.cpan.org/dist/XML-LibXSLT/
 COMMENT=	Perl interface to the libxslt library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-XML-LibXML>=1.66:../../textproc/p5-XML-LibXML
 

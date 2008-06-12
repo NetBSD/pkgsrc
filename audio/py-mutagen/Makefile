@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/04/25 20:39:06 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/12 02:14:14 joerg Exp $
 #
 
 DISTNAME=	mutagen-1.10
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.sacredchao.net/~piman/software/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sacredchao.net/quodlibet/wiki/Development/Mutagen
 COMMENT=	Audio metadata handling for Python
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# none
 PYDISTUTILSPKG=	yes
