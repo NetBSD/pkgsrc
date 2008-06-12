@@ -73,7 +73,6 @@ AC_CHECK_HEADERS([sys/cdefs.h sys/file.h sys/ioctl.h sys/param.h \
 
 # Checks for library functions.
 AC_CHECK_FUNCS([chflags dbopen __db185_open tgetent vfork])
-AC_CHECK_FUNCS([getrlimit setrlimit])
 
 AC_SEARCH_LIBS([gethostbyname], [nsl])
 AC_SEARCH_LIBS([socket],
