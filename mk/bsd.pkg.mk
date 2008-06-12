@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1946 2008/05/26 13:25:22 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1947 2008/06/12 00:06:27 joerg Exp $
 #
 # This file is in the public domain.
 #
@@ -241,6 +241,7 @@ _BUILD_DEFS=		${BUILD_DEFS}
 _BUILD_DEFS+=		LOCALBASE
 _BUILD_DEFS+=		PKGINFODIR
 _BUILD_DEFS+=		PKGMANDIR
+_BUILD_DEFS+=		_USE_DESTDIR
 
 # Store the result in the +BUILD_INFO file so we can query for the build
 # options using "pkg_info -Q PKG_OPTIONS <pkg>".
