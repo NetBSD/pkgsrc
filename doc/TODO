@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7318 2008/06/09 08:00:46 wiz Exp $
+$NetBSD: TODO,v 1.7319 2008/06/12 09:15:19 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -610,7 +610,7 @@ Suggested package updates
 	o freefont-ttf-20080323
 	o freeglut-2.4.0
 	o freenet-0.7
-	o freepops-0.2.6
+	o freepops-0.2.7
 	o freeradius-2.0.0
 	o freesci-0.6.4
 	o freetype-lib-1.5.20050518
