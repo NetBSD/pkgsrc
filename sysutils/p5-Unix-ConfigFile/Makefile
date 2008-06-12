@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/13 20:03:34 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:46 joerg Exp $
 
 DISTNAME=	Unix-ConfigFile-0.06
 PKGNAME=	p5-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	http://search.cpan.org/~ssnodgra/${DISTNAME}
 COMMENT=	Simple interfaces to various Unix configuration files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Unix/ConfigFile/.packlist
 

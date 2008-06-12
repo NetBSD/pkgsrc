@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.14 2007/09/21 18:52:07 veego Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:38 joerg Exp $
 #
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../net/bittornado/Makefile.common"
 
@@ -19,9 +20,9 @@ PYTHON_PATCH_SCRIPTS+=	btmaketorrentgui.py
 INSTALLATION_DIRS=	bin
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/btcompletedirgui.py ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/btdownloadgui.py ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/btmaketorrentgui.py ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/btcompletedirgui.py ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/btdownloadgui.py ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/btmaketorrentgui.py ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/python/application.mk"
 .include "../../x11/py-wxWidgets/buildlink3.mk"

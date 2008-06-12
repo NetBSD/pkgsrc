@@ -1,4 +1,4 @@
-$NetBSD: patch-ba,v 1.1 2006/11/14 13:16:00 wennmach Exp $
+$NetBSD: patch-ba,v 1.2 2008/06/12 02:14:31 joerg Exp $
 
 Libtoolize.
 
@@ -77,7 +77,7 @@ Libtoolize.
 -		$(AR) cvur $@ $?
 -		$(RANLIB) $@
 +libmgd77.la:	$(LIB_O)
-+		@$(LIBTOOL) --mode=link $(CC) -o libmgd77.la $(LIB_O:.o=.lo) --version-info 0:0  -rpath $(libdir)
++		@$(LIBTOOL) --mode=link $(CC) -o libmgd77.la $(LIB_O:.o=.lo) --version-info 0:0  -rpath $(PLAIN_LIBDIR)
  
  #-------------------------------------------------------------------------------
  #	program dependencies

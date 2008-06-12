@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2007/12/09 13:59:38 jdolecek Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:56 joerg Exp $
 
 MODNAME=	eaccelerator
 PECL_VERSION=	0.9.5.2
 CATEGORIES+=	sysutils
 COMMENT=	PHP accelerator, optimizer, encoder and dynamic content cache
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	php-eaccelator-[0-9]*
 

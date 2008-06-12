@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/02/20 10:04:24 rillig Exp $
+# $NetBSD: Makefile,v 1.29 2008/06/12 02:14:21 joerg Exp $
 
 DISTNAME=	allegro-4.2.2
 CATEGORIES=	devel
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=alleg/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://alleg.sourceforge.net/
 COMMENT=	Allegro game programming library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake makeinfo
 GNU_CONFIGURE=		yes

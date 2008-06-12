@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2005/12/05 20:50:48 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/12 02:14:40 joerg Exp $
 #
 
 DISTNAME=	POE-Component-Client-Ident-0.7
@@ -14,6 +14,7 @@ COMMENT=	Non-blocking ident lookups to your sessions
 DEPENDS+=	p5-POE-[0-9]*:../../devel/p5-POE
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/POE/Component/Client/Ident/.packlist
 

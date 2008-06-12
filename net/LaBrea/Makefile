@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/04 21:30:16 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2008/06/12 02:14:38 joerg Exp $
 #
 
 DISTNAME=	labrea-2.5-stable-1
@@ -11,6 +11,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://labrea.sourceforge.net/labrea-info.html
 COMMENT=	Builds tarpits/honeypots for scanners
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 GNU_CONFIGURE=	YES
@@ -18,13 +20,13 @@ GNU_CONFIGURE=	YES
 CONF_FILES=	${PREFIX}/share/examples/LaBrea/labrea.conf \
 		${PKG_SYSCONFDIR}/labrea.conf
 
+INSTALLATION_DIRS=	share/doc/LaBrea share/examples/LaBrea
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/LaBrea
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/LaBrea
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/LaBrea
-	${INSTALL_DATA} ${WRKSRC}/INSTALL ${PREFIX}/share/doc/LaBrea
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/LaBrea
+	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DESTDIR}${PREFIX}/share/doc/LaBrea
 	${INSTALL_DATA} ${WRKSRC}/misc/labrea.conf \
-		${PREFIX}/share/examples/LaBrea
+		${DESTDIR}${PREFIX}/share/examples/LaBrea
 
 .include "../../net/libdnet/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"

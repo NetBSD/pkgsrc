@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2005/08/06 06:19:22 jlam Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/12 02:14:35 joerg Exp $
 #
 
 DISTNAME=	Net-LMTP-0.02
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~lhoward/${DISTNAME}/
 COMMENT=	Local Mail Transfer Protocol Client
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Net/LMTP/.packlist
 

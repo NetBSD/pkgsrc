@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/01 21:44:17 seb Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:35 joerg Exp $
 
 DISTNAME=	Net-SMTP_auth-0.08
 PKGNAME=	p5-${DISTNAME}
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Net-SMTP_auth/
 COMMENT=	Perl module adding SMTP AUTH support to Net::SMTP module
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Net/SMTP_auth/.packlist
 

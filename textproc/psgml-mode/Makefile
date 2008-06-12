@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/09/13 22:21:42 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/12 02:14:52 joerg Exp $
 
 DISTNAME=		psgml-1.3.2
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME:S/-/-mode-/}
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=psgml/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.lysator.liu.se/~lenst/about_psgml/
 COMMENT=		SGML/XML mode for Emacs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EMACS_MODULES+=		base
 
@@ -23,12 +25,12 @@ INSTALLATION_DIRS+=	${EMACS_INFOPREFIX} ${EMACS_LISPPREFIX}/psgml-mode
 
 do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} *.el *.elc			\
-		${EMACS_LISPPREFIX:Q}/psgml-mode
+		${DESTDIR}${EMACS_LISPPREFIX:Q}/psgml-mode
 	${INSTALL_DATA} ${WRKSRC:Q}/iso88591.map			\
-		${EMACS_LISPPREFIX:Q}/psgml-mode
+		${DESTDIR}${EMACS_LISPPREFIX:Q}/psgml-mode
 	cd ${WRKSRC:Q}; for f in *.info *.info-[0-9]*; do		\
 		${TEST} ! -f "$$f" ||					\
-		${INSTALL_DATA} "$$f" ${EMACS_INFOPREFIX:Q};		\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${EMACS_INFOPREFIX:Q};	\
 	done
 
 .include "../../mk/bsd.pkg.mk"

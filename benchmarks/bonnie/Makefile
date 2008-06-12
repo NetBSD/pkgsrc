@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/02/07 13:24:36 tnn Exp $
+# $NetBSD: Makefile,v 1.34 2008/06/12 02:14:15 joerg Exp $
 
 DISTNAME=	bonnie
 PKGNAME=	bonnie-2.06
@@ -13,6 +13,7 @@ COMMENT=	Performance Test of Sequential Filesystem I/O and STDIO
 NOT_FOR_PLATFORM=	Interix-*-* # has only 32-bit off_t
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 WRKSRC=		${WRKDIR}

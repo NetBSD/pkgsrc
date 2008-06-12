@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/02/22 19:01:17 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:25 joerg Exp $
 #
 
 DISTNAME=	Proc-Daemon-0.03
@@ -13,6 +13,7 @@ HOMEPAGE=	http://www.mhonarc.org/~ehood/earlsperls.html
 COMMENT=	Provide capability for a Perl program to run as a daemon
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Proc/Daemon/.packlist
 

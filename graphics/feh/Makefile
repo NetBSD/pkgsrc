@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/09/02 13:19:21 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2008/06/12 02:14:31 joerg Exp $
 #
 
 DISTNAME=	feh-1.3.4
@@ -9,6 +9,8 @@ MASTER_SITES=	http://linuxbrit.co.uk/downloads/
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://linuxbrit.co.uk/feh/
 COMMENT=	Advanced image viewer
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	wget-[0-9]*:../../net/wget
 

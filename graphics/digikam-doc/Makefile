@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/01/18 05:06:38 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2008/06/12 02:14:31 joerg Exp $
 
 DISTNAME=		digikam-doc-0.9.1
 PKGREVISION=		3
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.digikam.org/
 COMMENT=		Documentation for Digikam
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake perl

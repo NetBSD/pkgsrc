@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/11/12 00:10:10 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:46 joerg Exp $
 
 DISTNAME=		cdbkup-1.0
 PKGREVISION=		6
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=cdbkup/}
 MAINTAINER=		mishka@terabyte.com.ua
 HOMEPAGE=		http://sourceforge.net/projects/cdbkup/
 COMMENT=		CD-R(W) backup/restore system
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		{cdrtools,cdrtools-ossdvd}>=1.10:../../sysutils/cdrtools
 

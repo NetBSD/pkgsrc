@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2008/04/12 22:43:00 jlam Exp $
+# $NetBSD: Makefile,v 1.30 2008/06/12 02:14:27 joerg Exp $
 #
 
 DISTNAME=	patch-2.5.4
@@ -18,6 +18,7 @@ HOMEPAGE=	http://www.gnu.org/software/patch/patch.html
 COMMENT=	Patch files using diff output
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 
@@ -35,6 +36,9 @@ PLIST_VARS+=		gpatch
 PLIST.gpatch=		yes
 .endif
 
+INSTALL_MAKE_FLAGS=	bindir=${DESTDIR}${PREFIX}/bin \
+			man1dir=${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+
 do-patch:
 	${MV} ${WRKSRC}/pch.c ${WRKSRC}/pch.c.orig
 	${AWK} '/#include <pch.h>/{print $$0 "\n#include <sys/param.h>";next;}\
@@ -46,7 +50,7 @@ do-patch:
 
 .if !defined(GNU_PROGRAM_PREFIX) || ${GNU_PROGRAM_PREFIX} != "g"
 post-install:
-	${LN} -sf ${GNU_PROGRAM_PREFIX}patch ${PREFIX}/bin/gpatch
+	${LN} -sf ${GNU_PROGRAM_PREFIX}patch ${DESTDIR}${PREFIX}/bin/gpatch
 .endif
 
 .include "../../mk/bsd.pkg.mk"

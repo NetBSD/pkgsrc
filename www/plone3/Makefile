@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/06/06 16:08:07 taca Exp $
+# $NetBSD: Makefile,v 1.7 2008/06/12 02:14:56 joerg Exp $
 # FreeBSD: ports/www/plone/Makefile,v 1.25 2007/02/17 08:32:54 rafan Exp
 #
 
@@ -10,6 +10,8 @@ MASTER_SITES=	http://launchpad.net/plone/3.1/3.1.2/+download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://plone.org/
 COMMENT=	User friendly CMS written on top of ZOPE
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLONE_VERSION=			3
 PYTHON_VERSIONS_ACCEPTED=	24
@@ -47,7 +49,7 @@ post-build:
 	${CAT} ${PKGDIR}/PLIST.common_end >> ${WRKDIR}/PLIST
 
 post-install:
-	cd ${WRKSRC}/lib; pax -rw . ${ZOPE_DIR}/lib
+	cd ${WRKSRC}/lib; pax -rw . ${DESTDIR}${ZOPE_DIR}/lib
 
 .include "../../www/plone/ploneversion.mk"
 .include "../../www/zope/replace.mk"
