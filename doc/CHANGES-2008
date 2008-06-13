@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1269 2008/06/13 05:15:40 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1270 2008/06/13 05:57:54 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2124,3 +2124,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/tailor to 0.9.35 [bjs 2008-06-13]
 	Updated textproc/uriparser to 0.7.1 [bjs 2008-06-13]
 	Updated audio/libspiff to 0.8.3 [bjs 2008-06-13]
+	Updated devel/codeville to 0.8.0nb1 [bjs 2008-06-13]
