@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/07/06 18:23:26 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/06/13 11:31:10 drochner Exp $
 bin/dbus-binding-tool
 include/dbus-1.0/dbus/dbus-glib-bindings.h
 include/dbus-1.0/dbus/dbus-glib-error-enum.h
@@ -11,7 +11,6 @@ share/gtk-doc/html/dbus-glib/ch01.html
 share/gtk-doc/html/dbus-glib/ch02.html
 share/gtk-doc/html/dbus-glib/ch03.html
 share/gtk-doc/html/dbus-glib/dbus-binding-tool.html
-share/gtk-doc/html/dbus-glib/dbus-glib-DBus-GLib-low-level.html
 share/gtk-doc/html/dbus-glib/dbus-glib-DBus-GObject-related-functions.html
 share/gtk-doc/html/dbus-glib/dbus-glib-DBusGConnection.html
 share/gtk-doc/html/dbus-glib/dbus-glib-DBusGError.html
