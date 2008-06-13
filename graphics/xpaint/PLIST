@@ -1,6 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2004/11/03 15:54:31 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/06/13 13:35:13 tron Exp $
 bin/xpaint
-${IMAKE_MAN_DIR}/xpaint.${IMAKE_MANNEWSUFFIX}.gz
+${IMAKE_MAN_DIR}/xpaint.${IMAKE_MAN_SUFFIX}
 lib/X11/app-defaults/XPaint
 lib/X11/app-defaults/XPaint_es
 lib/X11/app-defaults/XPaint_fr
