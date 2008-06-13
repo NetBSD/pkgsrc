@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2007/07/11 19:32:23 adrianp Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/13 23:32:45 adrianp Exp $
 
-DISTNAME=	anope-1.7.19
+DISTNAME=	anope-1.7.21
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=anope/}
 
@@ -25,6 +25,10 @@ PKG_GROUPS_VARS+=	ANOPE_GROUP
 PKG_USERS=	${ANOPE_USER}:${ANOPE_GROUP}::anope\ user:${PREFIX}/lib/anope:${NOLOGIN}
 PKG_GROUPS=	${ANOPE_GROUP}
 MAKE_ENV+=	RUNGROUP=${ANOPE_GROUP:Q}
+OWN_DIRS_PERMS+=	${PREFIX}/lib/anope/logs \
+			${ANOPE_USER:Q} ${ANOPE_GROUP:Q} 2755
+OWN_DIRS_PERMS+=	${PREFIX}/lib/anope/modules/runtime \
+			${ANOPE_USER:Q} ${ANOPE_GROUP:Q} 2755
 
 CONF_FILES_PERMS+=	${PREFIX}/share/examples/anope/example.conf \
 			${PREFIX}/lib/anope/services.conf \
