@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7322 2008/06/12 21:52:57 abs Exp $
+$NetBSD: TODO,v 1.7323 2008/06/13 05:02:00 bjs Exp $
 
 Suggested new packages
 ======================
@@ -1250,7 +1250,6 @@ Suggested package updates
 	o sysinfo-4.2.2
 	o systrace-1.6e
 	o tacacs-4.0.4.14
-	o tailor-0.9.35
 	o taskjuggler-2.4.1
 	o tcl-8.5.2
 	o tcl83-8.3.5
