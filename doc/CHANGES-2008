@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1267 2008/06/13 05:01:59 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1268 2008/06/13 05:09:01 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2122,3 +2122,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/pine-pgp-filters to 1.6 [abs 2008-06-12]
 	Updated devel/codeville to 0.8.0 [bjs 2008-06-13]
 	Updated devel/tailor to 0.9.35 [bjs 2008-06-13]
+	Updated textproc/uriparser to 0.7.1 [bjs 2008-06-13]
