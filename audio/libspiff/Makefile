@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2007/11/08 20:25:25 bjs Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/13 05:14:00 bjs Exp $
 #
 
-DISTNAME=	libspiff-0.8.2
+DISTNAME=	libspiff-0.8.3
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libspiff/}
 EXTRACT_SUFX=	.tar.bz2
