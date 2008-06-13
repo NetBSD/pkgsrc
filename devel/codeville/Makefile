@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2008/06/13 04:55:53 bjs Exp $
+# $NetBSD: Makefile,v 1.19 2008/06/13 05:57:07 bjs Exp $
 
 DISTNAME=	Codeville-0.8.0
 PKGNAME=	codeville-0.8.0
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	http://codeville.org/download/
 
@@ -18,7 +19,7 @@ BUILD_DEFS+=		VARBASE
 BUILD_DEFS_EFFECTS+=	CODEVILLE_DATADIR
 CODEVILLE_DATADIR?=	${VARBASE}/db/cdv
 
-# XXX Could create a user for the server, rc script, etc.
+# XXX Could create a user for the server, rc script, server directory hier, etc.
 
 CONF_FILES=		${EGDIR}/cdvserver.conf  \
 			${PKG_SYSCONFDIR}/cdvserver.conf
@@ -26,9 +27,9 @@ CONF_FILES=		${EGDIR}/cdvserver.conf  \
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
 SUBST_CLASSES+=		paths
-SUBST_FILES.paths=	cdvserver.conf.sample
+SUBST_FILES.paths=	cdvserver.conf.sample cdvpasswd cdvserver
 SUBST_MESSAGE.paths=	performing pathname substitutions
-SUBST_STAGE.paths=	pre-install
+SUBST_STAGE.paths=	pre-configure
 SUBST_VARS.paths=	CODEVILLE_DATADIR VARBASE PKG_SYSCONFDIR
 
 post-install:
