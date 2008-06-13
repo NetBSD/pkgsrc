@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1271 2008/06/13 10:11:19 mjl Exp $
+$NetBSD: CHANGES-2008,v 1.1272 2008/06/13 11:23:30 hira Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2126,3 +2126,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/libspiff to 0.8.3 [bjs 2008-06-13]
 	Updated devel/codeville to 0.8.0nb1 [bjs 2008-06-13]
 	Updated comms/asterisk to 1.2.29 [mjl 2008-06-13]
+	Updated misc/openoffice2 to 2.4.1 [hira 2008-06-13]
