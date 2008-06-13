@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2008/06/12 02:14:21 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/13 04:55:53 bjs Exp $
 
-DISTNAME=	Codeville-0.1.16
-PKGNAME=	codeville-0.1.16
-PKGREVISION=	2
+DISTNAME=	Codeville-0.8.0
+PKGNAME=	codeville-0.8.0
 CATEGORIES=	devel scm
 MASTER_SITES=	http://codeville.org/download/
 
@@ -11,8 +10,31 @@ HOMEPAGE=	http://codeville.org/
 COMMENT=	Distributed revision control system
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
 PYDISTUTILSPKG=		yes
+REPLACE_PYTHON=		*.py
+REPLACE_PYTHON+=	*/*.py
+
+BUILD_DEFS+=		VARBASE
+BUILD_DEFS_EFFECTS+=	CODEVILLE_DATADIR
+CODEVILLE_DATADIR?=	${VARBASE}/db/cdv
+
+# XXX Could create a user for the server, rc script, etc.
+
+CONF_FILES=		${EGDIR}/cdvserver.conf  \
+			${PKG_SYSCONFDIR}/cdvserver.conf
+
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+
+SUBST_CLASSES+=		paths
+SUBST_FILES.paths=	cdvserver.conf.sample
+SUBST_MESSAGE.paths=	performing pathname substitutions
+SUBST_STAGE.paths=	pre-install
+SUBST_VARS.paths=	CODEVILLE_DATADIR VARBASE PKG_SYSCONFDIR
+
+post-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/cdvserver.conf.sample \
+		${DESTDIR}${EGDIR}/cdvserver.conf
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
