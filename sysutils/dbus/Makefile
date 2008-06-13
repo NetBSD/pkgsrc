@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2008/04/30 13:38:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.29 2008/06/13 11:28:35 drochner Exp $
 #
 
-DISTNAME=	dbus-1.0.2
-PKGREVISION=	5
+DISTNAME=	dbus-1.2.1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -21,48 +20,50 @@ USE_LIBTOOL=		YES
 
 PKGCONFIG_OVERRIDE=	dbus-1.pc.in
 
-CONFIGURE_ARGS+=	--disable-abstract-sockets
-CONFIGURE_ARGS+=	--disable-ansi
-CONFIGURE_ARGS+=	--disable-asserts
-CONFIGURE_ARGS+=	--disable-console-owner-file
-CONFIGURE_ARGS+=	--disable-dnotify
-CONFIGURE_ARGS+=	--disable-doxygen-docs
-CONFIGURE_ARGS+=	--disable-gcov
-CONFIGURE_ARGS+=	--disable-selinux
-CONFIGURE_ARGS+=	--disable-tests
-CONFIGURE_ARGS+=	--disable-verbose-mode
-CONFIGURE_ARGS+=	--disable-xml-docs
-CONFIGURE_ARGS+=	--enable-checks
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+.include "../../mk/bsd.prefs.mk"
+
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--with-xml=expat
-CONFIGURE_ARGS+=	--with-dbus-user=${DBUS_USER}
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.dbus
-PKG_SUPPORTED_OPTIONS+=	debug nox11
+#CFLAGS.NetBSD+=		-D_NETBSD_SOURCE
 
-.include "../../mk/bsd.options.mk"
+CONFIGURE_ARGS_GROUPS=	enable disable with without
 
-.if !empty(PKG_OPTIONS:Mdebug)
-CONFIGURE_ARGS+=	--enable-asserts
-CONFIGURE_ARGS+=	--enable-tests
-CONFIGURE_ARGS+=	--enable-verbose-mode
+CONFIGURE_ARGS.Linux=	abstract-sockets dnotify selinux
+CONFIGURE_ARGS.docs=	doxygen-docs xml-docs
+
+CONFIGURE_ARGS.disable=		ansi asserts gcov tests
+CONFIGURE_ARGS.disable+=	console-owner-file verbose-mode
+CONFIGURE_ARGS.disable+=	${CONFIGURE_ARGS.docs}
+CONFIGURE_ARGS.enable=		checks static
+
+CONFIGURE_ARGS.with=	dbus-user=${DBUS_USER}
+CONFIGURE_ARGS.with+=	test-socket-dir=${WRKDIR:Q}
+CONFIGURE_ARGS.with+=	xml=expat
+
+PTHREAD_AUTO_VARS=	yes
+
+.if ${OPSYS} != "Linux"
+CONFIGURE_ARGS.disable+=\
+			${CONFIGURE_ARGS.Linux}
 .endif
 
-.if !empty(PKG_OPTIONS:Mnox11)
-CONFIGURE_ARGS+=	--without-x
-.else
-.include "../../x11/libX11/buildlink3.mk"
-.endif
+CONFIGURE_ARGS+=\
+	${CONFIGURE_ARGS_GROUPS:@.g.@			\
+		${CONFIGURE_ARGS.${.g.}:@.a.@		\
+			--${.g.}-${.a.}			\
+		@}					\
+	@:M*}
 
-PKG_SYSCONFSUBDIR=	dbus-1
-MAKE_DIRS=		${PKG_SYSCONFDIR}/event.d
-MAKE_DIRS+=		${PKG_SYSCONFDIR}/system.d
+MAKE_DIRS=		${PKG_SYSCONFDIR}/dbus-1/event.d
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/dbus-1/system.d
+MAKE_DIRS+=		${PKG_SYSCONFDIR}/dbus-1/session.d
 
 EGDIR=			${PREFIX}/share/examples/dbus
-CONF_FILES=		${EGDIR}/session.conf ${PKG_SYSCONFDIR}/session.conf
-CONF_FILES+=		${EGDIR}/system.conf ${PKG_SYSCONFDIR}/system.conf
-INSTALLATION_DIRS=	${EGDIR}
+CONF_FILES=	${EGDIR}/session.conf ${PKG_SYSCONFDIR}/dbus-1/session.conf
+CONF_FILES+=	${EGDIR}/system.conf ${PKG_SYSCONFDIR}/dbus-1/system.conf
 
 RCD_SCRIPTS=		dbus
 
@@ -77,6 +78,16 @@ PKG_HOME.${DBUS_USER}=	${VARBASE}/run/dbus
 FILES_SUBST+=		DBUS_USER=${DBUS_USER}
 FILES_SUBST+=		DBUS_GROUP=${DBUS_GROUP}
 
+
+.include "options.mk"
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/bus/rc.messagebus \
+		${DESTDIR}${PREFIX}/share/examples/rc.d/rc.messagebus.slackware
+	${INSTALL_DATA} ${WRKSRC}/bus/messagebus \
+		${DESTDIR}${PREFIX}/share/examples/rc.d/messagebus.redhat
+
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
