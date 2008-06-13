@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2006/07/18 22:43:36 adrianp Exp $
+# $NetBSD: options.mk,v 1.10 2008/06/13 23:15:33 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.unrealircd
 
@@ -75,7 +75,12 @@ CONFIGURE_ARGS+=		--enable-libcurl=${PREFIX:Q}
 ### CHROOTDIR is defined as ${IRCD_HOME}.
 ###
 .if !empty(PKG_OPTIONS:Munrealircd-chroot)
-CFLAGS+=	-DCHROOTDIR
+CFLAGS+=		-DCHROOTDIR
+CFLAGS+=		-DIRC_USER=\"${UIRCD_USER}\"
+CFLAGS+=		-DIRC_GROUP=\"${UIRCD_GROUP}\"
+CONFIGURE_ARGS+=	--disable-dynamic-linking
+.else
+CONFIGURE_ARGS+=	--enable-dynamic-linking
 .endif
 
 ###
