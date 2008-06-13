@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2008/06/13 04:55:53 bjs Exp $
+
+--- cdvserver.orig	2006-02-23 15:44:13.000000000 -0500
++++ cdvserver
+@@ -45,7 +45,7 @@ def run(args):
+     else:
+         daemonize = True
+         noconfig = False
+-        configfile = '/etc/cdvserver.conf'
++        configfile = '@PKG_SYSCONFDIR@/cdvserver.conf'
+ 
+     # parse command line arguments
+     initialize = False

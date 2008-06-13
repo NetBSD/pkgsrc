@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2008/06/13 04:55:53 bjs Exp $
+
+--- cdvpasswd.orig	2005-11-20 19:33:02.000000000 -0500
++++ cdvpasswd
+@@ -36,7 +36,7 @@ def run(args):
+     if platform == 'win32':
+         noconfig = True
+     else:
+-        config_file = '/etc/cdvserver.conf'
++        config_file = '@PKG_SYSCONFDIR@/cdvserver.conf'
+ 
+     # do a first pass of the command line to pick up an alternate config
+     for (opt, arg) in optlist:
