@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2008/04/16 08:47:27 wiz Exp $
+$NetBSD: distinfo,v 1.10 2008/06/13 05:01:23 bjs Exp $
 
-SHA1 (tailor-0.9.31.tar.gz) = 3575696b5d9286e633c00132fdb5e94cf4c9d154
-RMD160 (tailor-0.9.31.tar.gz) = 202ca7be499b23c183127899e71f27340657ec76
-Size (tailor-0.9.31.tar.gz) = 212010 bytes
+SHA1 (tailor-0.9.35.tar.gz) = 442d1d11bf4ba5d54684f78783f94f753a02292e
+RMD160 (tailor-0.9.35.tar.gz) = a3fc4339c6e7ce1397584363d127ae1219ee3888
+Size (tailor-0.9.35.tar.gz) = 228650 bytes
