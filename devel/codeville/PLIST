@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/03/02 19:25:25 drochner Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/06/13 04:55:53 bjs Exp $
 bin/cdv
 bin/cdv-agent
 bin/cdvpasswd
@@ -92,7 +92,8 @@ ${PYSITELIB}/Codeville/upgrade.py
 ${PYSITELIB}/Codeville/upgrade.pyc
 ${PYSITELIB}/Codeville/upgrade.pyo
 share/doc/Codeville-${PKGVERSION}/LICENSE.txt
-share/doc/Codeville-${PKGVERSION}/cdvserver.conf.sample
+share/examples/codeville/cdvserver.conf
+@dirrm share/examples/codeville
 @dirrm share/doc/Codeville-${PKGVERSION}
 @dirrm ${PYSITELIB}/Codeville/old
 @dirrm ${PYSITELIB}/Codeville
