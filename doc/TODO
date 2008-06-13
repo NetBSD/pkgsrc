@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7325 2008/06/13 05:16:00 bjs Exp $
+$NetBSD: TODO,v 1.7326 2008/06/13 11:17:27 taca Exp $
 
 Suggested new packages
 ======================
@@ -464,6 +464,7 @@ Suggested package updates
 	o bftpd-2.2
 	o biew-5.6.4
 	o bind-9.4.2
+	o bind-9.5.0
 	o binutils-2.18
 	o bioperl-1.5.0
 	o bittorrent-5.0.5
@@ -942,7 +943,8 @@ Suggested package updates
 	o openafs-1.4.7
 	o opencobol-1.0
 	o openh323-1.19.1
-	o openldap-2.4.9
+	o openldap-2.4.10
+	o openoffice-2.4.1
 	o openmortal-0.7.1
 	o openmotif-2.3.0 [pkg/38038]
 	o openssl-0.9.8h
