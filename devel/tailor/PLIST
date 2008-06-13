@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/04/16 08:47:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/06/13 05:01:23 bjs Exp $
 bin/tailor
 ${PYSITELIB}/vcpx/__init__.py
 ${PYSITELIB}/vcpx/__init__.pyc
@@ -21,6 +21,12 @@ ${PYSITELIB}/vcpx/project.pyo
 ${PYSITELIB}/vcpx/repository/__init__.py
 ${PYSITELIB}/vcpx/repository/__init__.pyc
 ${PYSITELIB}/vcpx/repository/__init__.pyo
+${PYSITELIB}/vcpx/repository/aegis/__init__.py
+${PYSITELIB}/vcpx/repository/aegis/__init__.pyc
+${PYSITELIB}/vcpx/repository/aegis/__init__.pyo
+${PYSITELIB}/vcpx/repository/aegis/target.py
+${PYSITELIB}/vcpx/repository/aegis/target.pyc
+${PYSITELIB}/vcpx/repository/aegis/target.pyo
 ${PYSITELIB}/vcpx/repository/arx.py
 ${PYSITELIB}/vcpx/repository/arx.pyc
 ${PYSITELIB}/vcpx/repository/arx.pyo
@@ -105,11 +111,12 @@ ${PYSITELIB}/vcpx/tzinfo.pyo
 ${PYSITELIB}/vcpx/workdir.py
 ${PYSITELIB}/vcpx/workdir.pyc
 ${PYSITELIB}/vcpx/workdir.pyo
-share/doc/tailor/README.rst
 share/doc/tailor/README.html
+share/doc/tailor/README.rst
 @dirrm share/doc/tailor
 @dirrm ${PYSITELIB}/vcpx/repository/p4
 @dirrm ${PYSITELIB}/vcpx/repository/git
 @dirrm ${PYSITELIB}/vcpx/repository/darcs
+@dirrm ${PYSITELIB}/vcpx/repository/aegis
 @dirrm ${PYSITELIB}/vcpx/repository
 @dirrm ${PYSITELIB}/vcpx
