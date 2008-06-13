@@ -1,32 +1,35 @@
-# $NetBSD: Makefile,v 1.31 2008/03/03 15:21:07 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2008/06/13 22:57:08 gdt Exp $
 #
 
-DISTNAME=	geneweb-4.10
-PKGREVISION=	3
+DISTNAME=	geneweb-5.01
 CATEGORIES=	databases
-MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/cristal/geneweb/Src/
+EXTRACT_SUFX=	.tgz
+MASTER_SITES=	ftp://ftp.inria.fr/INRIA/Projects/cristal/geneweb/Src/ \
+		http://www.sartorelli.gen.nz/GeneWeb/Src/
 
 MAINTAINER=	wulf@NetBSD.org
-HOMEPAGE=	http://cristal.inria.fr/~ddr/GeneWeb/
-COMMENT=	GeneWeb is a comprehensive genealogy database application
+# also gdt@NetBSD.org
+HOMEPAGE=	http://www.geneweb.org/
+COMMENT=	GeneWeb is a genealogy database that runs as a web server
 
-DIST_SUBDIR=	${PKGNAME_NOREV}nb1
+# A macports packages is at:
+#  http://db.macports.org/port/show/903
 
 PKG_DESTDIR_SUPPORT=	destdir
 
 USE_TOOLS+=	gmake
+HAS_CONFIGURE=	YES
 
-RCD_SCRIPTS=	geneweb
-
+# ocaml can compile in two modes; if the optimizing compiler
+# is not present (limited support across architectures), ask
+# the geneweb build system to build non-optimized versions.
 .if !exists(${LOCALBASE}/bin/ocamlc.opt)
 BUILD_TARGET=	out
 .endif
 
-.include "../../mk/bsd.prefs.mk"
+RCD_SCRIPTS=	geneweb
 
-# needed for patch-ab to work:
-# since 3.09.0, camlp4 uses _loc instead of loc
-BUILDLINK_API_DEPENDS.ocaml+=       ocaml>=3.09.0
+.include "../../mk/bsd.prefs.mk"
 
 # sysutils/coreutils a 'gwc' program, so conflict with it if
 # ${GNU_PROGRAM_PREFIX} == "g"
@@ -34,22 +37,23 @@ BUILDLINK_API_DEPENDS.ocaml+=       ocaml>=3.09.0
 CONFLICTS+=	coreutils-[0-9]*
 .endif
 
-# Stripped OCAML binaries don't seem to work nolonger
-# Installing unstripped binaries until this is fixed
+# Stripped OCAML binaries don't seem to work any more.
+# Installing unstripped binaries until this is fixed.
+# (not checked in 5.01)
 INSTALL_PROGRAM =  ${INSTALL} ${COPY} -o ${BINOWN} -g ${BINGRP} -m ${BINMODE}
 
+# XXX How does this relate to do-install?
 INSTALLATION_DIRS=	bin libexec sbin
-
-pre-configure:
-		if ! ${TEST} -x ${LOCALBASE}/bin/ocamlc.opt; then \
-		  ${ECHO} "No optimized ocaml binaries found"; \
-		  cd ${WRKSRC}/tools/; \
-		  ${MV} Makefile.inc Makefile.inc.orig; \
-		  ${SED} -e "s/\.opt//g" Makefile.inc.orig > Makefile.inc; \
-		fi
 
 post-build:
 		cd ${WRKSRC} && ${GMAKE} distrib
+
+# XXX do not use CP
+# XXX better permission fix
+# XXX maybe:
+#   gwc2 update_nldb
+# XXX doc should be in html
+# XXX LICENSE.txt should be installed
 
 do-install:
 		${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/geneweb
@@ -69,6 +73,7 @@ do-install:
 		${INSTALL_PROGRAM} gwsetup ${DESTDIR}${PREFIX}/sbin && \
 		${INSTALL_PROGRAM} gwu ${DESTDIR}${PREFIX}/bin && \
 		${CP} -Rp doc/* ${DESTDIR}${PREFIX}/share/doc/geneweb && \
+		${CHMOD} 444 etc/* && \
 		${CP} -Rp etc ${DESTDIR}${PREFIX}/share/geneweb && \
 		${CP} -Rp gwtp_tmp ${DESTDIR}${PREFIX}/share/geneweb && \
 		${CP} -Rp images ${DESTDIR}${PREFIX}/share/geneweb && \
@@ -80,7 +85,8 @@ do-install:
 		${TOUCH} ${DESTDIR}${PREFIX}/share/geneweb/gwtp_tmp/gwtp.log
 		${CHMOD} 600 ${DESTDIR}${PREFIX}/share/geneweb/gwtp_tmp/passwd
 		${CHMOD} 600 ${DESTDIR}${PREFIX}/share/geneweb/gwtp_tmp/gwtp.log
-		${CHOWN} -R nobody.${ROOT_GROUP} ${DESTDIR}${PREFIX}/share/geneweb
+		${CHOWN} -R root.${ROOT_GROUP} ${DESTDIR}${PREFIX}/share/geneweb
 
+.include "../../lang/camlp5/buildlink3.mk"
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
