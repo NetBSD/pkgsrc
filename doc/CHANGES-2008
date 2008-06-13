@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1265 2008/06/12 21:52:57 abs Exp $
+$NetBSD: CHANGES-2008,v 1.1266 2008/06/13 04:56:32 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2120,3 +2120,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/apache22 to 2.2.8nb1 [tron 2008-06-12]
 	Updated x11/gnopernicus to 1.1.1nb7 [obache 2008-06-12]
 	Updated mail/pine-pgp-filters to 1.6 [abs 2008-06-12]
+	Updated devel/codeville to 0.8.0 [bjs 2008-06-13]
