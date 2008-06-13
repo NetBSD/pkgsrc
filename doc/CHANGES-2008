@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1270 2008/06/13 05:57:54 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1271 2008/06/13 10:11:19 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2125,3 +2125,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/uriparser to 0.7.1 [bjs 2008-06-13]
 	Updated audio/libspiff to 0.8.3 [bjs 2008-06-13]
 	Updated devel/codeville to 0.8.0nb1 [bjs 2008-06-13]
+	Updated comms/asterisk to 1.2.29 [mjl 2008-06-13]
