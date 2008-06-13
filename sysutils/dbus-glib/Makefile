@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/06/13 11:31:10 drochner Exp $
+# $NetBSD: Makefile,v 1.17 2008/06/13 11:32:28 drochner Exp $
 #
 
 DISTNAME=	dbus-glib-0.76
@@ -39,7 +39,7 @@ CONFIGURE_ARGS+=	--enable-tests
 CONFIGURE_ARGS+=	--enable-verbose-mode
 .endif
 
-BUILDLINK_API_DEPENDS.dbus+=	dbus>=0.94
+BUILDLINK_API_DEPENDS.dbus+=	dbus>=1.1
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
