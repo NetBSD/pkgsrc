@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7324 2008/06/13 05:09:33 bjs Exp $
+$NetBSD: TODO,v 1.7325 2008/06/13 05:16:00 bjs Exp $
 
 Suggested new packages
 ======================
@@ -829,7 +829,6 @@ Suggested package updates
 	o libopensync-0.35
 	o libpreludedb-0.9.14
 	o libshout-2.2.2
-	o libspiff-0.8.3
 	o libssh-0.2
 	o libstatgrab-0.16
 	o libstree-0.4.2
