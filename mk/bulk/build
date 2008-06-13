@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.104 2008/06/08 21:04:30 he Exp $
+# $NetBSD: build,v 1.105 2008/06/13 21:52:16 sketch Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -260,10 +260,10 @@ load_vars () {
 		BULK_DBFILE DEPENDSFILE INDEXFILE ORDERFILE STARTFILE
 		SUPPORTSFILE BULK_BUILD_ID_FILE BUILDLOG BROKENFILE
 		BROKENWRKLOG
-		AWK GREP MAIL_CMD MKDIR PERL5 SED
+		AWK GREP MAIL_CMD MKDIR PAX PERL5 SED
 		PKG_DELETE PKG_INFO PKGBASE"
 
-	values=`cd "$lintpkgsrc_dir" && $BMAKE show-vars VARNAMES="$vars" USE_TOOLS="awk grep mail mkdir perl sed"`
+	values=`cd "$lintpkgsrc_dir" && $BMAKE show-vars VARNAMES="$vars" USE_TOOLS="awk grep mail mkdir pax perl sed"`
 
 	for v in $vars; do
 		eval "read $v" || die "Could not read value for $v"
