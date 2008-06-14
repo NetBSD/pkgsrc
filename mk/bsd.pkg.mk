@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.mk,v 1.1948 2008/06/12 01:09:01 joerg Exp $
+#	$NetBSD: bsd.pkg.mk,v 1.1949 2008/06/14 08:32:33 dillo Exp $
 #
 # This file is in the public domain.
 #
@@ -94,7 +94,11 @@ COMMENT?=		(no description)
 DEPENDS?=		# empty
 DESCR_SRC?=		${PKGDIR}/DESCR
 INTERACTIVE_STAGE?=	none
+.if defined(OWNER)
+MAINTAINER=${OWNER}
+.else
 MAINTAINER?=		pkgsrc-users@NetBSD.org
+.endif
 PKGWILDCARD?=		${PKGBASE}-[0-9]*
 SVR4_PKGNAME?=		${PKGNAME}
 WRKSRC?=		${WRKDIR}/${DISTNAME}
