@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/06/11 14:08:14 obache Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/06/14 00:59:51 obache Exp $
 ${PLIST.skins}bin/svlc
 bin/vlc
 bin/vlc-config
@@ -211,6 +211,7 @@ lib/vlc/video_filter/libscale_plugin.so
 lib/vlc/video_filter/libtime_plugin.so
 lib/vlc/video_filter/libtransform_plugin.so
 lib/vlc/video_filter/libwall_plugin.so
+${PLIST.fb}lib/vlc/video_output/libfb_plugin.so
 lib/vlc/video_output/libglx_plugin.so
 lib/vlc/video_output/libimage_plugin.so
 lib/vlc/video_output/libopengl_plugin.so
