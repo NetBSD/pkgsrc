@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2007/10/11 18:25:19 drochner Exp $
+# $NetBSD: Makefile,v 1.29 2008/06/14 20:00:15 heinz Exp $
 
 DISTNAME=	libusb-0.1.12
 PKGREVISION=	2
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libusb/}
 MAINTAINER=	drochner@NetBSD.org
 HOMEPAGE=	http://libusb.sourceforge.net/
 COMMENT=	USB access library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 GCC_REQD+=		3.3
