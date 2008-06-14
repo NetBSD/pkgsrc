@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1277 2008/06/14 13:08:04 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1278 2008/06/14 17:30:18 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2133,3 +2133,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/libmilter to 8.14.3 [tron 2008-06-14]
 	Updated games/lmarbles to 1.0.7nb6 [obache 2008-06-14]
 	Updated chat/inspircd to 1.1.20 [adrianp 2008-06-14]
+	Added devel/mowgli version 0.6.1 [adrianp 2008-06-14]
