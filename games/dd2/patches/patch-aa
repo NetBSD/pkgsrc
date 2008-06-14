@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2008/06/14 02:58:24 obache Exp $
+
+--- src/data/Makefile.in.orig	2007-08-16 17:11:33.000000000 +0000
++++ src/data/Makefile.in
+@@ -197,7 +197,6 @@ maintainer-clean-generic clean mostlycle
+ 
+ 
+ install-data-hook:
+-	chmod a+rw $(pkgdatadir)/dd2-hiscore
+ 
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
