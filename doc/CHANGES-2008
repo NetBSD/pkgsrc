@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1275 2008/06/14 08:59:28 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1276 2008/06/14 09:23:08 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2131,3 +2131,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/dd2 to 0.2.2 [obache 2008-06-14]
 	Updated mail/sendmail to 8.14.3 [tron 2008-06-14]
 	Updated mail/libmilter to 8.14.3 [tron 2008-06-14]
+	Updated games/lmarbles to 1.0.7nb6 [obache 2008-06-14]
