@@ -1,6 +1,13 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/01/12 15:50:18 adam Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/06/14 09:22:40 obache Exp $
 bin/lmarbles
 man/man6/lmarbles.6
+share/doc/lmarbles/arrow.jpg
+share/doc/lmarbles/arrow2.jpg
+share/doc/lmarbles/crumble.jpg
+share/doc/lmarbles/manual.html
+share/doc/lmarbles/marbles.jpg
+share/doc/lmarbles/teleport.jpg
+share/examples/lmarbles/lmarbles.prfs
 share/lmarbles/gfx/board.bmp
 share/lmarbles/gfx/f_red.bmp
 share/lmarbles/gfx/f_small.bmp
@@ -66,7 +73,6 @@ share/lmarbles/sounds/score.wav
 share/lmarbles/sounds/select.wav
 share/lmarbles/sounds/stop.wav
 share/lmarbles/sounds/teleport.wav
-var/lmarbles.prfs
 @dirrm share/lmarbles/sounds
 @dirrm share/lmarbles/levels
 @dirrm share/lmarbles/gfx/wood
@@ -74,3 +80,5 @@ var/lmarbles.prfs
 @dirrm share/lmarbles/gfx/metal
 @dirrm share/lmarbles/gfx
 @dirrm share/lmarbles
+@dirrm share/examples/lmarbles
+@dirrm share/doc/lmarbles
