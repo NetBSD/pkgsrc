@@ -1,8 +1,8 @@
-# $NetBSD: features-vars.mk,v 1.18 2008/05/26 17:48:27 tnn Exp $
+# $NetBSD: features-vars.mk,v 1.19 2008/06/14 08:55:58 joerg Exp $
 #
 # The platforms that are supported by pkgsrc differ in the amount of
 # functions they provide in the C library (libc). Functions that are
-# typically available on NetBSD are provided in the libnbcomat package.
+# typically available on NetBSD are provided in the libnbcompat package.
 #
 # This file defines a set of "features" that some packages require.
 # Whenever a package makes use of them, it should list the features in
