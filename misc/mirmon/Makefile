@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/04/07 17:39:50 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/14 08:49:14 joerg Exp $
 #
 
 DISTNAME=		mirmon-1.36
@@ -30,7 +30,7 @@ SUBST_STAGE.mirmon2=	pre-configure
 SUBST_FILES.mirmon2=	${WRKDIR}/mirmon.conf
 SUBST_SED.mirmon2+=	-e s!@@MIRMONDIR@@!${MIRMONDIR}!g
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR} share/examples/mirmon \
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/examples/mirmon \
 			share/mirmon/icons
 
 post-extract:
