@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2008/06/14 00:59:51 obache Exp $
+# $NetBSD: Makefile,v 1.55 2008/06/14 01:06:56 obache Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
@@ -91,6 +91,8 @@ PLIST.vcd=		yes
 .if ${OPSYS} == "Linux" && exists(/usr/include/linux/fb.h)
 CONFIGURE_ARGS+=	--enable-fb
 PLIST.fb=		yes
+.else
+CONFIGURE_ARGS+=	--disable-fb
 .endif
 
 .if ${X11_TYPE} == "modular"
