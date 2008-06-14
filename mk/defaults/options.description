@@ -16,6 +16,7 @@ aterm-big5		Enable Chinese support.
 aterm-greek		Enable Greek keyboard support.
 aterm-kanji		Enable kanji support.
 aterm-xterm-scroll	Use xterm-scrollbar instead of a NeXT-like one.
+atheme-large-net	Enable support for large networks (i.e. > 2000 users)
 batch			Enable batch mode support.
 bdb			Enable Berkeley DB support.
 bittorrent		Enable bittorrent support
