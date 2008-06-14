@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2008/04/29 09:31:38 sborrill Exp $
+# $NetBSD: Makefile,v 1.41 2008/06/14 21:23:09 heinz Exp $
 
 DISTNAME=	libgphoto2-2.4.1
 CATEGORIES=	devel graphics
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gphoto.sourceforge.net/proj/libgphoto2/
 COMMENT=	Digital camera access library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	gphoto<2.1.1
 
@@ -28,7 +30,7 @@ PLIST.libusb=		yes
 
 # remove symbolic link
 post-install:
-	rm ${PREFIX}/include/gphoto2/gphoto2
+	rm ${DESTDIR}${PREFIX}/include/gphoto2/gphoto2
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
