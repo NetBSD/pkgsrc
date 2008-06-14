@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1274 2008/06/14 03:03:39 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1275 2008/06/14 08:59:28 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2129,3 +2129,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/openoffice2 to 2.4.1 [hira 2008-06-13]
 	Updated chat/anope to 1.7.21 [adrianp 2008-06-13]
 	Updated games/dd2 to 0.2.2 [obache 2008-06-14]
+	Updated mail/sendmail to 8.14.3 [tron 2008-06-14]
+	Updated mail/libmilter to 8.14.3 [tron 2008-06-14]
