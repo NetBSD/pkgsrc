@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2006/06/12 16:28:08 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/14 02:58:24 obache Exp $
 #
 
-DISTNAME=		dd2-0.2.1
-PKGREVISION=		5
+DISTNAME=		dd2-0.2.2
 CATEGORIES=		games
 MASTER_SITES=		http://www.usebox.net/jjm/dd2/releases/
 
@@ -10,7 +9,22 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.usebox.net/jjm/dd2/
 COMMENT=		Shoot'em up arcade game for one or two players
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=		yes
+
+DD2_SCORE=		${VARBASE}/games
+CFLAGS+=		-DDD2_SCORE=\"${DD2_SCORE}\"
+
+SETGIDGAME=		yes
+SPECIAL_PERMS=		bin/dd2 ${SETGID_GAMES_PERMS}
+REQD_DIRS_PERMS+=	${DD2_SCORE} ${GAMEOWN} ${GAMEGRP} ${GAMEDIRMODE}
+REQD_FILES_PERMS+=	share/dd2/dd2-hiscore ${DD2_SCORE}/dd2-hiscore	\
+			${GAMEOWN} ${GAMEGRP} ${GAMEDATAMODE}
+
+BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		GAMEDATAMODE
+BUILD_DEFS+=		GAMEMODE
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
