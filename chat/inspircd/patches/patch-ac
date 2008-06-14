@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2007/10/13 21:11:39 adrianp Exp $
+$NetBSD: patch-ac,v 1.5 2008/06/14 14:30:23 adrianp Exp $
 
---- configure.orig	2007-08-20 22:06:16.000000000 +0100
+--- configure.orig	2008-05-11 01:19:59.000000000 +0100
 +++ configure
-@@ -230,8 +230,8 @@ $config{EXTRA_DIR}          = "";						#
+@@ -232,8 +231,8 @@ $config{EXTRA_DIR}          = "";						#
  if ($config{OSNAME} =~ /darwin/i)
  {
  	$config{IS_DARWIN} = "YES";
