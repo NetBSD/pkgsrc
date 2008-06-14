@@ -1,6 +1,6 @@
-$NetBSD: patch-ag,v 1.4 2007/03/05 15:56:27 obache Exp $
+$NetBSD: patch-ag,v 1.5 2008/06/14 14:48:01 obache Exp $
 
---- LTmakefile.in.orig	2007-03-05 15:58:16.000000000 +0900
+--- LTmakefile.in.orig	2007-03-05 06:58:16.000000000 +0000
 +++ LTmakefile.in
 @@ -37,7 +37,7 @@ MYLIBDIR = @libdir@
  MYBINDIR = @bindir@
@@ -26,3 +26,32 @@ $NetBSD: patch-ag,v 1.4 2007/03/05 15:56:27 obache Exp $
  INSTALL = install
  MKDIR = mkdir -p
  CP = cp -rf
+@@ -89,17 +89,17 @@ clean :
+ 
+ 
+ install :
+-	$(LIBTOOL) --mode=install $(INSTALL) $(MYHEADS) $(MYHEADDIR)
+-	$(LIBTOOL) --mode=install $(INSTALL) $(MYLIBS) $(MYLIBDIR)
+-	$(LIBTOOL) --mode=install $(INSTALL) $(MYBINS) $(MYBINDIR)
+-	$(MKDIR) $(MYMAN1DIR)
+-	cd man && $(CP) $(MYMAN1S) $(MYMAN1DIR)
+-	$(MKDIR) $(MYMAN3DIR)
+-	cd man && $(CP) $(MYMAN3S) $(MYMAN3DIR)
+-	$(MKDIR) $(MYSHAREDIR)
+-	$(CP) $(MYDOCS) $(MYSHAREDIR)
+-	$(MKDIR) $(MYPCDIR)
+-	$(CP) $(MYPCS) $(MYPCDIR)
++	${BSD_INSTALL_DATA} $(MYHEADS) $(DESTDIR)$(MYHEADDIR)
++	$(LIBTOOL) --mode=install $(INSTALL) $(MYLIBS) $(DESTDIR)$(MYLIBDIR)
++	$(LIBTOOL) --mode=install $(INSTALL) $(MYBINS) $(DESTDIR)$(MYBINDIR)
++	${BSD_INSTALL_MAN_DIR} $(DESTDIR)$(MYMAN1DIR)
++	cd man && ${BSD_INSTALL_MAN} $(MYMAN1S) $(DESTDIR)$(MYMAN1DIR)
++	${BSD_INSTALL_MAN_DIR} $(DESTDIR)$(MYMAN3DIR)
++	cd man && ${BSD_INSTALL_MAN} $(MYMAN3S) $(DESTDIR)$(MYMAN3DIR)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(MYSHAREDIR)
++	${BSD_INSTALL_DATA} $(MYDOCS) $(DESTDIR)$(MYSHAREDIR)
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(MYPCDIR)
++	${BSD_INSTALL_DATA} $(MYPCS) $(DESTDIR)$(MYPCDIR)
+ 	@printf '\n'
+ 	@printf '#================================================================\n'
+ 	@printf '# Thanks for using QDBM.\n'
