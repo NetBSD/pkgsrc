@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1273 2008/06/13 23:33:00 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1274 2008/06/14 03:03:39 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2128,3 +2128,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated comms/asterisk to 1.2.29 [mjl 2008-06-13]
 	Updated misc/openoffice2 to 2.4.1 [hira 2008-06-13]
 	Updated chat/anope to 1.7.21 [adrianp 2008-06-13]
+	Updated games/dd2 to 0.2.2 [obache 2008-06-14]
