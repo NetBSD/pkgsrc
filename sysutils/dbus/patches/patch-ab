@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.10 2008/06/13 11:28:35 drochner Exp $
+$NetBSD: patch-ab,v 1.11 2008/06/14 10:24:52 tnn Exp $
 
---- dbus/dbus-sysdeps-unix.c.orig	2008-04-04 11:24:08.000000000 -0400
+--- dbus/dbus-sysdeps-unix.c.orig	2008-04-04 17:24:08.000000000 +0200
 +++ dbus/dbus-sysdeps-unix.c
 @@ -35,6 +35,9 @@
  #include "dbus-list.h"
@@ -62,3 +62,22 @@ $NetBSD: patch-ab,v 1.10 2008/06/13 11:28:35 drochner Exp $
  
  #ifdef DBUS_BUILD_TESTS
  /** Gets our GID
+@@ -2711,8 +2733,18 @@ int
+ _dbus_printf_string_upper_bound (const char *format,
+                                  va_list     args)
+ {
++#if defined(__hpux) || defined(__sgi)
++/* this code from libnbcompat's vsnprintf */
++  static FILE *devnull = 0;
++  if (!devnull) {
++    devnull = fopen("/dev/null", "w");
++    if (!devnull) return -1;
++  }
++  return vfprintf(devnull, format, args);
++#else
+   char c;
+   return vsnprintf (&c, 1, format, args);
++#endif
+ }
+ 
+ /**
