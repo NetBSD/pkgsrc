@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7327 2008/06/14 08:59:28 tron Exp $
+$NetBSD: TODO,v 1.7328 2008/06/14 23:32:47 peter Exp $
 
 Suggested new packages
 ======================
@@ -1038,8 +1038,9 @@ Suggested package updates
 	o pear-SOAP-0.10.1
 	o pen-0.17.3
 	o perl5-5.10.0
+	o pftop-0.7 [peter]
 	o pfqueue-0.5.6
-	o pfstat-1.8
+	o pfstat-2.3 [peter]
 	o pgadmin3-1.6.0
 	o pgpool-3.1.1
 	o phoon-20050629
