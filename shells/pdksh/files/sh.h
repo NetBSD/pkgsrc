@@ -1,10 +1,10 @@
-/*	$NetBSD: sh.h,v 1.3 2008/05/31 16:47:37 tnn Exp $	*/
+/*	$NetBSD: sh.h,v 1.4 2008/06/15 14:20:09 tnn Exp $	*/
 
 /*
  * Public Domain Bourne/Korn shell
  */
 
-/* $Id: sh.h,v 1.3 2008/05/31 16:47:37 tnn Exp $ */
+/* $Id: sh.h,v 1.4 2008/06/15 14:20:09 tnn Exp $ */
 
 #include "config.h"	/* system and option configuration info */
 
@@ -733,3 +733,8 @@ EXTERN	int	x_cols I__(80);	/* tty columns */
 # undef EXTERN
 #endif
 #undef I__
+
+#ifdef __UNCONST
+#undef __UNCONST
+#endif
+#define __UNCONST(a) ((void *)(unsigned long)(const void *)(a))

@@ -1,10 +1,4 @@
-/*	$NetBSD: path.c,v 1.2 2008/05/31 16:47:37 tnn Exp $	*/
-#include <sys/cdefs.h>
-
-#ifndef lint
-__RCSID("$NetBSD: path.c,v 1.2 2008/05/31 16:47:37 tnn Exp $");
-#endif
-
+/*	$NetBSD: path.c,v 1.3 2008/06/15 14:20:09 tnn Exp $	*/
 
 #include "sh.h"
 #include "ksh_stat.h"
