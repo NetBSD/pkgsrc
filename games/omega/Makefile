@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2008/03/04 06:59:05 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2008/06/15 11:21:43 joerg Exp $
 
 DISTNAME=	omega-0.90.4-src
 PKGNAME=	omega-0.90.4
@@ -11,13 +11,13 @@ HOMEPAGE=	http://www.alcyone.com/max/projects/omega/
 COMMENT=	Complex rogue-like game of exploration with a sense of humor
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+SETGIDGAME=		yes
 
 WRKSRC=			${WRKDIR}/omega
 BUILD_TARGET=		# empty
 
 .include "../../mk/bsd.prefs.mk"
 
-SETGIDGAME=		yes
 SPECIAL_PERMS=		bin/Omega ${SETGID_GAMES_PERMS}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
