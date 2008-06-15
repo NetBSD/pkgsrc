@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2008/04/30 13:38:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.49 2008/06/15 09:51:59 joerg Exp $
 
 DISTNAME=	gnome-base-2.18.1
 CATEGORIES=	meta-pkgs x11 gnome
@@ -8,6 +8,8 @@ DISTFILES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Meta-package for basic components of the GNOME desktop
+
+META_PACKAGE=	yes
 
 # The dependencies listed here are in an order such as a package in a line
 # can be installed if all the packages listed above it are installed.
@@ -77,7 +79,5 @@ DEPENDS+=	gnome-backgrounds>=2.15.92:../../graphics/gnome-backgrounds
 DEPENDS+=	vte>=0.16.1:../../x11/vte
 DEPENDS+=	gnome-terminal>=2.18.0:../../x11/gnome-terminal
 DEPENDS+=	gnome-session>=2.18.0:../../x11/gnome-session
-
-META_PACKAGE=	yes
 
 .include "../../mk/bsd.pkg.mk"
