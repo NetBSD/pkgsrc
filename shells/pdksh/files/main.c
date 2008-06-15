@@ -1,15 +1,9 @@
-/*	$NetBSD: main.c,v 1.2 2008/05/31 16:47:37 tnn Exp $	*/
+/*	$NetBSD: main.c,v 1.3 2008/06/15 14:20:09 tnn Exp $	*/
 
 /*
  * startup, main loop, environments and error handling
  */
-#include <sys/cdefs.h>
 #include <locale.h>
-
-#ifndef lint
-__RCSID("$NetBSD: main.c,v 1.2 2008/05/31 16:47:37 tnn Exp $");
-#endif
-
 
 #define	EXTERN				/* define EXTERNs in sh.h */
 

@@ -1,14 +1,8 @@
-/*	$NetBSD: syn.c,v 1.2 2008/05/31 16:47:37 tnn Exp $	*/
+/*	$NetBSD: syn.c,v 1.3 2008/06/15 14:20:09 tnn Exp $	*/
 
 /*
  * shell parser (C version)
  */
-#include <sys/cdefs.h>
-
-#ifndef lint
-__RCSID("$NetBSD: syn.c,v 1.2 2008/05/31 16:47:37 tnn Exp $");
-#endif
-
 
 #include "sh.h"
 #include "c_test.h"

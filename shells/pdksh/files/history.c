@@ -1,4 +1,4 @@
-/*	$NetBSD: history.c,v 1.2 2008/05/31 16:47:36 tnn Exp $	*/
+/*	$NetBSD: history.c,v 1.3 2008/06/15 14:20:09 tnn Exp $	*/
 
 /*
  * command history
@@ -16,12 +16,6 @@
  *		things. You need to have the mmap system call for this
  *		to work on your system
  */
-#include <sys/cdefs.h>
-
-#ifndef lint
-__RCSID("$NetBSD: history.c,v 1.2 2008/05/31 16:47:36 tnn Exp $");
-#endif
-
 
 #include "sh.h"
 #include "ksh_stat.h"

@@ -1,4 +1,4 @@
-/*	$NetBSD: emacs.c,v 1.2 2008/05/31 16:47:36 tnn Exp $	*/
+/*	$NetBSD: emacs.c,v 1.3 2008/06/15 14:20:08 tnn Exp $	*/
 
 /*
  *  Emacs-like command line editing and history
@@ -7,12 +7,6 @@
  *  modified by Doug Kingston, Doug Gwyn, and Lou Salkind
  *  adapted to PD ksh by Eric Gisin
  */
-#include <sys/cdefs.h>
-
-#ifndef lint
-__RCSID("$NetBSD: emacs.c,v 1.2 2008/05/31 16:47:36 tnn Exp $");
-#endif
-
 
 #include "config.h"
 #ifdef EMACS
