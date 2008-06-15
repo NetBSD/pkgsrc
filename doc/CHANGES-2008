@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1278 2008/06/14 17:30:18 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1279 2008/06/15 10:34:18 gavan Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2134,3 +2134,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/lmarbles to 1.0.7nb6 [obache 2008-06-14]
 	Updated chat/inspircd to 1.1.20 [adrianp 2008-06-14]
 	Added devel/mowgli version 0.6.1 [adrianp 2008-06-14]
+	Added converters/qrencode version 3.0.3 [gavan 2008-06-15]
