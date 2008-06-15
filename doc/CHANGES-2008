@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1279 2008/06/15 10:34:18 gavan Exp $
+$NetBSD: CHANGES-2008,v 1.1280 2008/06/15 12:23:10 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2135,3 +2135,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/inspircd to 1.1.20 [adrianp 2008-06-14]
 	Added devel/mowgli version 0.6.1 [adrianp 2008-06-14]
 	Added converters/qrencode version 3.0.3 [gavan 2008-06-15]
+	Updated misc/openoffice2-bin to 2.4.1 [tron 2008-06-15]
