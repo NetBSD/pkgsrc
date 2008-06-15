@@ -1,0 +1,33 @@
+$NetBSD: patch-ai,v 1.1 2008/06/15 14:09:04 peter Exp $
+
+--- sf-scanner.l.old	2008-06-14 18:04:30.000000000 +0200
++++ sf-scanner.l	2008-06-14 18:19:59.000000000 +0200
+@@ -222,7 +222,8 @@
+ 			  if (getaddrinfo(yytext, NULL, &hints, &res))
+ 				sf_error("bogus IPv6 address %s", yytext);
+ 			  else {
+-				yylval.e = sdup((char *)yytext); return HID6;
++				yylval.e = (u_char *)sdup((char *)yytext);
++				return HID6;
+ 			  }
+ 			}
+ [A-Za-z0-9][-_.A-Za-z0-9]*[.A-Za-z0-9] {
+@@ -232,8 +233,17 @@
+ [^ \[\]\t\n\-_.A-Za-z0-9!<>()&|=]+ {
+ 			size_t len = strlen(yytext) * 4 + 1;
+ 			char *v = malloc(len);
+-			if (v != NULL)
++			if (v != NULL) {
++#ifdef __NetBSD__
++				size_t len = strlen(yytext);
++				if (len > sizeof v) {
++					len = sizeof v;
++				}
++				strvisx(v, yytext, len, 0);
++#else
+ 				strnvis(v, yytext, len, 0);
++#endif /* !__NetBSD__ */
++			}
+ 			sf_error("illegal token: %s", v);
+ 			free(v);
+ 			}
