@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2008/01/13 23:07:14 rillig Exp $
+# $NetBSD: Makefile,v 1.64 2008/06/15 09:51:59 joerg Exp $
 
 GCC_VERSION=	3.3.6
 DISTNAME=	gcc3-${GCC_VERSION}
@@ -10,12 +10,12 @@ COMMENT=	GNU Compiler Collection, v3
 
 NOT_FOR_PLATFORM=	Darwin-*-*
 
+META_PACKAGE=	yes
+
 DEPENDS+=	gcc3-c-${GCC_VERSION}{,nb*}:../../lang/gcc3-c
 DEPENDS+=	gcc3-c++-${GCC_VERSION}{,nb*}:../../lang/gcc3-c++
 DEPENDS+=	gcc3-f77-${GCC_VERSION}{,nb*}:../../lang/gcc3-f77
 DEPENDS+=	gcc3-java-${GCC_VERSION}{,nb*}:../../lang/gcc3-java
 DEPENDS+=	gcc3-objc-${GCC_VERSION}{,nb*}:../../lang/gcc3-objc
-
-META_PACKAGE=	yes
 
 .include "../../mk/bsd.pkg.mk"
