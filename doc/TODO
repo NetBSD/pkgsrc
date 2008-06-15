@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7328 2008/06/14 23:32:47 peter Exp $
+$NetBSD: TODO,v 1.7329 2008/06/15 00:04:58 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1226,7 +1226,7 @@ Suggested package updates
 	o snes9x-1.51
 	o snobol-1.1
 	o socat-1.6.0.1
-	o solfege-3.10.3 [schmonz]
+	o solfege-3.10.4 [schmonz]
 	o sope-4.5.9
 	o sound-juicer-2.16.4 [needs nautilus-cd-burner>=2.15.3]
 	o sound-juicer-2.22.0
