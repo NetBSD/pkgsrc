@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1280 2008/06/15 12:23:10 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1281 2008/06/15 13:09:56 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2136,3 +2136,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/mowgli version 0.6.1 [adrianp 2008-06-14]
 	Added converters/qrencode version 3.0.3 [gavan 2008-06-15]
 	Updated misc/openoffice2-bin to 2.4.1 [tron 2008-06-15]
+	Updated news/nntpcache to 3.0.2nb1 [obache 2008-06-15]
