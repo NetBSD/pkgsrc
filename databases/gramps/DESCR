@@ -11,5 +11,7 @@ GRAMPS can also include extra media types (like JPEG images and audio
 files), record sources of information, and keep track of locations
 (place names).
 
-This package is superseded by the gramps-2.x release series
-in pkgsrc/databases/gramps2.
+This package is superseded by the gramps-2.x release series in
+pkgsrc/databases/gramps2.  As of 2008, it is retained in pkgsrc only
+because the database format of gramps2 is incompatible and
+dump/restore to GEDCOM is required to upgrade.
