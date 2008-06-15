@@ -1,4 +1,4 @@
-/*	$NetBSD: c_ulimit.c,v 1.2 2008/05/31 16:47:36 tnn Exp $	*/
+/*	$NetBSD: c_ulimit.c,v 1.3 2008/06/15 14:20:08 tnn Exp $	*/
 
 /*
 	ulimit -- handle "ulimit" builtin
@@ -17,12 +17,6 @@
 	the extended 4.nBSD resource limits.  It now includes the code
 	that was originally under case SYSULIMIT in source file "xec.c".
 */
-#include <sys/cdefs.h>
-
-#ifndef lint
-__RCSID("$NetBSD: c_ulimit.c,v 1.2 2008/05/31 16:47:36 tnn Exp $");
-#endif
-
 
 #include "sh.h"
 #include "ksh_time.h"
