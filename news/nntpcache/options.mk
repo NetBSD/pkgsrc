@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.3 2006/05/31 18:22:25 ghen Exp $
+# $NetBSD: options.mk,v 1.4 2008/06/15 13:08:52 obache Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.nntpcache
 PKG_SUPPORTED_OPTIONS=	nntpcache-pgp
@@ -12,6 +12,7 @@ PKG_SUPPORTED_OPTIONS=	nntpcache-pgp
 
 .if !empty(PKG_OPTIONS:Mnntpcache-pgp)
 DEPENDS+=		pgp-2.*:../../security/pgp2
+CONFIGURE_ENV+=		ac_cv_path_PGP=${PREFIX}/bin/pgp
 .endif
 
 .if !empty(PKG_OPTIONS:Mopenldap)
