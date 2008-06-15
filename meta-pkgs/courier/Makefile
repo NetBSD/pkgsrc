@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/02/19 18:45:37 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/15 09:51:59 joerg Exp $
 
 DISTNAME=	courier-${COURIER_VERSION}
 CATEGORIES=	meta-pkgs mail
@@ -8,6 +8,8 @@ DISTFILES=	# empty
 MAINTAINER=	jlam@pkgsrc.org
 HOMEPAGE=	http://www.courier-mta.org/
 COMMENT=	Meta-package for the Courier mail server suite
+
+META_PACKAGE=	yes
 
 # COURIER_VERSION should match the variable of the same name found in
 # pkgsrc/mail/courier-mta/Makefile.common.
@@ -36,7 +38,5 @@ DEPENDS+=	sqwebmail>=5.2.0nb2:../../mail/sqwebmail
 # log format of the current Courier release.
 #
 DEPENDS+=	courier-analog>=0.15:../../mail/courier-analog
-
-META_PACKAGE=	yes
 
 .include "../../mk/bsd.pkg.mk"

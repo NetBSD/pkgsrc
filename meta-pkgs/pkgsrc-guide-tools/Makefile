@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/12/19 12:27:30 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/15 09:51:59 joerg Exp $
 #
 
 DISTNAME=	pkgsrc-guide-tools-1.0
@@ -12,8 +12,8 @@ COMMENT=	Packages required to build the pkgsrc Guide
 
 _GUIDE_DEPTYPE=	run
 
-.include "../../doc/guide/Makefile.common"
-
 META_PACKAGE=	yes
+
+.include "../../doc/guide/Makefile.common"
 
 .include "../../mk/bsd.pkg.mk"

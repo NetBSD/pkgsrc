@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2008/02/05 22:34:47 heinz Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/15 09:51:59 joerg Exp $
 #
 
 BOOST_PACKAGE=	meta-pkg
 BOOST_COMMENT=	(meta package)
 PKGREVISION=	3
 
-PKG_DESTDIR_SUPPORT=	user-destdir
+META_PACKAGE=	yes
 
 .include "Makefile.common"
 
@@ -25,7 +25,5 @@ DEPENDS+=	boost-headers-${BOOST_DEPENDS_VERSION}:../../devel/boost-headers
 DEPENDS+=	boost-jam-${BOOST_DEPENDS_VERSION}:../../devel/boost-jam
 DEPENDS+=	boost-libs-${BOOST_DEPENDS_VERSION}:../../devel/boost-libs
 DEPENDS+=	boost-python-${BOOST_DEPENDS_VERSION}:../../devel/boost-python
-
-META_PACKAGE=	yes
 
 .include "../../mk/bsd.pkg.mk"
