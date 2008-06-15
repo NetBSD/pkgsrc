@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.11 2007/02/22 19:27:08 wiz Exp $
+# $NetBSD: builtin.mk,v 1.12 2008/06/15 14:03:22 peter Exp $
 
 BUILTIN_PKG:=	pflkm
 
@@ -15,6 +15,10 @@ BUILTIN_FIND_FILES.EXE_PFCTL+=	/sbin/pfctl
 .if !defined(PF_VERSION)
 PF_VERSION=	3.7	# package default
 .  if empty(H_PFLKM:M__nonexistent__)
+# OpenBSD 4.2: pf_statelist added
+_BLTN_PF_4_2!=	${GREP} -c pf_statelist ${H_PFLKM} || ${TRUE}
+# OpenBSD 4.1: PF_OSFP_INET6 added
+_BLTN_PF_4_1!=	${GREP} -c PF_OSFP_INET6 ${H_PFLKM} || ${TRUE}
 # OpenBSD 3.8: pf_socket_lookup added
 _BLTN_PF_3_8!=	${GREP} -c pf_socket_lookup ${H_PFLKM} || ${TRUE}
 # OpenBSD 3.7: pf_threshold added
@@ -22,7 +26,11 @@ _BLTN_PF_3_7!=	${GREP} -c pf_threshold ${H_PFLKM} || ${TRUE}
 # OpenBSD 3.6: pf_cksum_fixup added
 _BLTN_PF_3_6!=	${GREP} -c pf_cksum_fixup ${H_PFLKM} || ${TRUE}
 
-.    if ${_BLTN_PF_3_8} != "0"
+.    if ${_BLTN_PF_4_2} != "0"
+PF_VERSION=	4.2
+.    elif ${_BLTN_PF_4_1} != "0"
+PF_VERSION=	4.1
+.    elif ${_BLTN_PF_3_8} != "0"
 PF_VERSION=	3.8
 .    elif ${_BLTN_PF_3_7} != "0"
 PF_VERSION=	3.7
