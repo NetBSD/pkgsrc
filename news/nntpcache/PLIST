@@ -1,44 +1,14 @@
-@comment $NetBSD: PLIST,v 1.9 2002/12/09 16:01:36 tron Exp $
-etc/nntpcache/VERSION
-etc/nntpcache/innreport.conf-dist
-etc/nntpcache/innreport.pl
-etc/nntpcache/innreport.pm
-etc/nntpcache/newshound.conf-dist
-etc/nntpcache/nntpcache.access-dist
-etc/nntpcache/nntpcache.access
-etc/nntpcache/nntpcache.config-dist
-etc/nntpcache/nntpcache.config
-etc/nntpcache/nntpcache.servers-dist
-etc/nntpcache/nntpcache.servers
-etc/nntpcache/pubring.asc-dist
-etc/nntpcache/pubring.asc
-etc/nntpcache/pubring.pgp-dist
-etc/nntpcache/pubring.pgp
-etc/nntpcache/spam.filter
-etc/nntpcache/http/index.html
-etc/nntpcache/http/moose.gif
-etc/nntpcache/http/nntpcache.jpg
-@exec ${MKDIR} %D/etc/nntpcache/http/innreport/pics
-@exec ${CHOWN} -R news:news %D/etc/nntpcache
-@exec ${CHMOD} 700 %D/etc/nntpcache
-@unexec ${RMDIR} -p %D/etc/nntpcache/http/innreport/pics 2>/dev/null || ${TRUE}
-etc/rc.d/nntpcached
+@comment $NetBSD: PLIST,v 1.10 2008/06/15 13:08:52 obache Exp $
+libexec/nntpcache-gdb.sh
+libexec/nntpcache.gdb
+libexec/nntpcached.debug
+libexec/unixauth
+man/man8/newshound.8
+man/man8/nntpcached.8
 sbin/innreport.sh
 sbin/newshound
 sbin/newshound.pl
 sbin/nntpcached
-libexec/unixauth
-libexec/nntpcached.debug
-libexec/nntpcache-gdb.sh
-libexec/nntpcache.gdb
-man/man8/newshound.8
-man/man8/nntpcached.8
-@unexec ${RMDIR} %D/etc/nntpcache 2>/dev/null || ${TRUE}
-@exec ${MKDIR} /var/spool/nntpcache
-@exec cp %D/etc/nntpcache/VERSION /var/spool/nntpcache/VERSION
-@exec ${CHOWN} -R news:news /var/spool/nntpcache
-@exec ${CHMOD} 700 /var/spool/nntpcache
-@unexec ${RM} -rf /var/spool/nntpcache
 share/doc/nntpcache/ChangeLog
 share/doc/nntpcache/FAQ
 share/doc/nntpcache/FAQ.html
@@ -47,4 +17,29 @@ share/doc/nntpcache/LICENSING
 share/doc/nntpcache/README
 share/doc/nntpcache/README.INN
 share/doc/nntpcache/README.pam
+share/examples/nntpcache/VERSION
+share/examples/nntpcache/http/index.html
+share/examples/nntpcache/http/moose.gif
+share/examples/nntpcache/http/nntpcache.jpg
+share/examples/nntpcache/innreport.conf-dist
+share/examples/nntpcache/innreport.pl
+share/examples/nntpcache/innreport.pm
+share/examples/nntpcache/newshound.conf-dist
+share/examples/nntpcache/nntpcache.access
+share/examples/nntpcache/nntpcache.access-dist
+share/examples/nntpcache/nntpcache.config
+share/examples/nntpcache/nntpcache.config-dist
+share/examples/nntpcache/nntpcache.servers
+share/examples/nntpcache/nntpcache.servers-dist
+share/examples/nntpcache/pubring.asc
+share/examples/nntpcache/pubring.asc-dist
+share/examples/nntpcache/pubring.pgp
+share/examples/nntpcache/pubring.pgp-dist
+share/examples/nntpcache/spam.filter
+@exec ${MKDIR} %D/share/examples/nntpcache/http/innreport/pics
+share/examples/rc.d/nntpcached
+@dirrm share/examples/nntpcache/http/innreport/pics
+@dirrm share/examples/nntpcache/http/innreport
+@dirrm share/examples/nntpcache/http
+@dirrm share/examples/nntpcache
 @dirrm share/doc/nntpcache
