@@ -1,7 +1,0 @@
-#!/bin/sh
-#
-# $NetBSD: nntpcached.rc,v 1.2 2002/09/23 15:32:56 grant Exp $
-#
-
-PATH=%%PREFIX%%/sbin:/bin:/usr/bin
-[ -x %%PREFIX%%/sbin/nntpcached ] && nntpcached && echo -n ' nntpcached'
