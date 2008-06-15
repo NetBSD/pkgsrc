@@ -1,15 +1,28 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/11/05 15:08:33 peter Exp $
+$NetBSD: patch-aa,v 1.2 2008/06/15 14:09:03 peter Exp $
 
---- config.h.orig	2003-08-05 03:19:58.000000000 +0200
-+++ config.h	2004-10-25 13:20:55.000000000 +0200
-@@ -24,8 +24,8 @@
- #if OS_LEVEL > 32
- #define HAVE_ADDR_MASK
- #define HAVE_ADDR_TYPE
--#define HAVE_ALTQ
--#define HAVE_RULE_ANCHOR
-+/*#define HAVE_ALTQ*/
-+/*#define HAVE_RULE_ANCHOR*/
- #define HAVE_RULE_TOS
- #endif
+--- Makefile.old	2007-11-07 07:34:18.000000000 +0100
++++ Makefile	2008-06-15 00:43:41.000000000 +0200
+@@ -6,17 +6,21 @@
  
+ PROG=	pftop
+ SRCS=	pftop.c cache.c engine.c
+-SRCS+=	sf-gencode.c sf-grammer.y sf-scanner.l pcap-nametoaddr.c
++SRCS+=	sf-gencode.c sf-grammer.c sf-scanner.l pcap-nametoaddr.c
+ SRCS+=  bpf_optimize.c bpf_filter.c bpf_dump.c bpf_image.c
+ MAN=	pftop.8
+ 
++CLEANFILES+= sf-grammer.c
++
+ CFLAGS+= -Wall -DOS_LEVEL=${OSLEVEL}
+ LDADD+= -lcurses
+ 
++NOGCCERROR=yes
++
+ MANDIR=${LOCALBASE}/man/cat
+ BINDIR=${LOCALBASE}/sbin
+ 
+-.y.c:
++sf-grammer.c: sf-grammer.y
+ 	${YACC.y} -d -b ${.TARGET:R} -o ${.TARGET} ${.IMPSRC}
+ 
+ .include <bsd.prog.mk>

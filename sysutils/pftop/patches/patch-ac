@@ -1,24 +1,25 @@
-$NetBSD: patch-ac,v 1.2 2006/03/06 23:02:08 peter Exp $
+$NetBSD: patch-ac,v 1.3 2008/06/15 14:09:03 peter Exp $
 
---- cache.c.orig	2003-08-05 03:20:29.000000000 +0200
-+++ cache.c	2006-03-06 23:52:42.000000000 +0100
-@@ -37,7 +37,11 @@
- #include <netinet/in.h>
+--- config.h.old	2008-06-15 01:19:59.000000000 +0200
++++ config.h	2008-06-15 12:16:51.000000000 +0200
+@@ -42,7 +42,9 @@
+ #if OS_LEVEL > 32
+ #define HAVE_ADDR_MASK
+ #define HAVE_ADDR_TYPE
++#ifndef __NetBSD__
+ #define HAVE_ALTQ
++#endif /* !__NetBSD__ */
+ #define HAVE_RULE_TOS
+ #define HAVE_OP_RRG
+ #endif
+@@ -64,6 +66,10 @@
  
- #include <netinet/tcp_fsm.h>
-+#ifdef __DragonFly__
-+#include <net/pf/pfvar.h>
-+#else
- #include <net/pfvar.h>
-+#endif
- #include <arpa/inet.h>
+ #if OS_LEVEL > 37
+ #define HAVE_INOUT_COUNT_RULES
++#ifdef __NetBSD__
++/* NetBSD has pf/ALTQ since 4.0, which shipped with pf 3.7 */
++#define HAVE_ALTQ
++#endif /* __NetBSD__ */
+ #endif
  
- #include <stdio.h>
-@@ -54,6 +58,7 @@
- 
- /* initialize the tree and queue */
- RB_HEAD(sc_tree, sc_ent) sctree;
-+RB_PROTOTYPE(sc_tree, sc_ent, tlink, sc_cmp);
- TAILQ_HEAD(sc_queue, sc_ent) scq1, scq2, scq_free;
- RB_GENERATE(sc_tree, sc_ent, tlink, sc_cmp);
- 
+ #if OS_LEVEL > 38

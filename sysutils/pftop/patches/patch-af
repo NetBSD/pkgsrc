@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2008/06/15 14:09:04 peter Exp $
+
+--- pftop.8.old	2008-06-14 18:16:37.000000000 +0200
++++ pftop.8	2008-06-14 18:16:47.000000000 +0200
+@@ -143,6 +143,7 @@
+ .It Fl w Ar width
+ Set the width of the display for batch mode.
+ The default width is 80.
++.El
+ .Sh INTERACTIVE MODE
+ When
+ .Nm
