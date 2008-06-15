@@ -1,0 +1,140 @@
+How to license NNTPCACHE for your commercial / government / site
+----------------------------------------------------------------------------
+
+	0. If you are upgrading from an old nntpcache license then the
+           upgrade fee is n/3, where n is the number of years since
+	   your last license. So during the first year
+	   upgrades are free, during the second year 1/3 the cost, etc.
+
+	1. Work out how many users your site has. You will probably
+	   want to artificially increase this number if you expect
+	   it to grow in the future so you don't unintentionally
+	   break the license conditions. This figure is the actual
+	   number of users site-wide (e.g wc /etc/passwd or ypcat
+	   passwd|wc), NOT the number of concurrent NNTPCache users.
+
+	   Don't worry, it is presumed that only a minority of
+	   network users use news regularly. The figures reflect
+	   this expectation. What we're trying to work out is the
+	   approximate size of the network user base.
+
+	   We calculate the license size in this fashion because
+	   other models would dramatically increase compliance costs
+	   or prevent interesting network topologies.
+           Organisations usually know (or can easily work out),
+	   the number of network users they have, but introducing
+	   a user accounting system for just for news would be
+	   be odious as would limiting the number or configuration
+	   of servers.
+
+	   You can run as many NNTPCache machines as you want. In
+	   *any* network configuration you want. If NNTPCache was
+	   licensed on a per-machine or concurrent user basis, then
+	   this would be impossible.
+
+	2. Choose the appropriate site license for your site:
+
+	        TYPE			$US		$AUS*
+
+		Single user		$10		$15
+		Under 10    users	$50		$70
+		Under 100   users	$120		$190
+		Under 500   users	$300		$450
+		Under 1000  users	$500		$750
+		Under 5000  users	$1500		$2272
+		Under 10000 users	$3000		$4545
+		Over  10000 users	negotiable+	negotiable+
+
+* Note than you can only pay in Australian dollars if your organisation
+  is headquartered in Australia or New-Zealand.
+
++ If no fee is mutally negotiated, then the fee shall be $3000 USD per
+  ten thousand users.
+
+	3. Make your payment as follows:
+	
+		i) Fill out the following and send it off (see iii)
+
+License type		____________________	(see above)
+Cost of license		________		(In dollars)
+Payment type		_____________________   (cheque drawn on an Australian
+						bank, international money order, EFT
+						VISA, Master or Bankcard)
+Name/Company	        ___________________	(On the card/cheque/money order/EFT)
+
+Credit card #		____ ____ ____ ____ 	(if credit card)
+
+Card Expiry date	__/__/__		(if credit card)
+Currency		___			($US or $AUS)
+Email address		___________________	(e.g currierbell@isp.com)
+Company / site		___________________	(that the license is to be made
+						 out to. e.g Stone Head Systems)
+
+		ii)	Make the transaction payable to:
+
+			a) In the case of a cheque / money order:
+
+				Australian National Cognitive Facility
+
+			   WE WILL NOT ACCEPT INTERNATIONAL CHEQUES, UNLESS 
+	                   SPECIFICALLY NEGOTIATED. We'd like to be able
+			   to accept international cheques but the
+			   banking fees and paperwork are unbelievable.
+
+			b) In the case of an Electronic Funds Transfer (EFT):
+
+				Please tell us what part of the world you are
+				in and the name of your bank and we will provide
+				you with an appropriate SWIFT/BSB number. This
+				is usually the least painful method if you have
+				access to a modern banking system.
+
+		iii) Send the license request...
+
+			a) In the case of a cheque or international money
+			   order, land/air mail to:
+
+				Australian National Cognitive Facility
+				PO BOX 4080
+				Melbourne University 3052
+				Australia
+
+			b) in the case of a credit card, email to:
+
+				nntpcache-license@nntpcache.com
+
+		           Or you can FAX to:
+
+			   	+61-3-9416-2966 (ACNF)
+
+			   Or for the truly depraved, snail mail to:
+
+				Australian National Cognitive Facility
+				PO BOX 4080
+				Melbourne University 3052
+				Australia
+
+------------------------------------------------------------------------
+This software is a copyrighted product and may not be used by
+commercial organisations, or by individuals acting in a commercial
+or profit making venture, or by government departments, institutions
+or bodies (with the exception of those primarily involved in
+non-military scientific research, medical treatment or education)
+including for-profit educational institutions, without an appropriate
+license from the copyright holders.  Violation of this copyright
+is subject of, but not limited to civil and/or criminal remedies
+and/or penalties under the laws of the United States, Australia &
+New Zealand, the European Community and international law.
+
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: 2.6.3ia
+
+mQCNAitu3RkAAAEEAJoZsGE2H1t3Fb8v8lQDBIFtUmGIl1EpnN/Ia6cllN4W59cL
+aoYi+ePp2Zym6Bjxn0czmZBjWnJ0FKFuTJuyL5gKJCEJIn2yy9IkZizIn3BpboLK
+P98qjOYDk8RL96Q2Ukh3TiCxTEFQbWTSX5VPsi46weKUGv3UxkoKRTxpCqrxAAUR
+tB1KdWxpYW4gQXNzYW5nZSA8cHJvZmZAaXEub3JnPokAlQIFECtu3RlKCkU8aQqq
+8QEBmboD/jSjwyhueDfNlofqs6qUkXp5bUueeBUUd4aso0rx/9IllZFU0aq5tcxO
+1GhVChIM5q4RT3AdsZ3J4uFxbcnln/YiI7Flh3J2KCf92sc0dvuCGVIl7ZYnFkGe
+fvcJjZnvHgN0w1GOuEQrfpwp83KvkuezigUJY24VqRiFjkni9CcG
+=j8g4
+-----END PGP PUBLIC KEY BLOCK-----
