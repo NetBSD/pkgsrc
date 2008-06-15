@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/06/14 16:21:03 bjs Exp $
+# $NetBSD: Makefile,v 1.27 2008/06/15 09:52:00 joerg Exp $
 
 .include "../../devel/scmgit/Makefile.version"
 
@@ -11,9 +11,9 @@ MASTER_SITES=	http://www.kernel.org/pub/software/scm/git/
 MAINTAINER=	bjs@NetBSD.org
 COMMENT=	GIT version control suite meta-package
 
+META_PACKAGE=	yes
+
 DEPENDS+=	scmgit-base-[0-9]*:../../devel/scmgit-base
 DEPENDS+=	scmgit-docs-[0-9]*:../../devel/scmgit-docs
-
-META_PACKAGE=	yes
 
 .include "../../mk/bsd.pkg.mk"
