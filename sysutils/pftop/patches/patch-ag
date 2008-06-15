@@ -1,0 +1,120 @@
+$NetBSD: patch-ag,v 1.1 2008/06/15 14:09:04 peter Exp $
+
+--- pftop.c.old	2008-06-14 17:41:08.000000000 +0200
++++ pftop.c	2008-06-15 12:42:06.000000000 +0200
+@@ -40,7 +40,11 @@
+ #include <netinet/in.h>
+ #define TCPSTATES
+ #include <netinet/tcp_fsm.h>
++#ifdef __DragonFly__
++#include <net/pf/pfvar.h>
++#else
+ #include <net/pfvar.h>
++#endif /* !__DragonFly__ */
+ #include <arpa/inet.h>
+ 
+ #ifdef HAVE_ALTQ
+@@ -55,6 +59,7 @@
+ #include <err.h>
+ #include <errno.h>
+ #include <fcntl.h>
++#include <limits.h>
+ #include <netdb.h>
+ #include <signal.h>
+ #include <stdio.h>
+@@ -736,7 +741,7 @@
+ 	} else {
+ 		num_states = 0;
+ 		for (n = 0; n<num_states_all; n++)
+-			if (bpf_filter(filter_prog.bf_insns, (char *)(&state_buf[n]),
++			if (bpf_filter(filter_prog.bf_insns, (u_char *)(&state_buf[n]),
+ 			    sizeof(pf_state_t), sizeof(pf_state_t)) > 0)
+ 				state_ord[num_states++] = n;
+ 	}
+@@ -828,7 +833,7 @@
+ 		tbprintf(" PAUSED");
+ 
+ 	if (rawmode)
+-		printf("\n\n%s\n", tmp_buf);
++		printf("\n%s", tmp_buf);
+ 	else
+ 		mvprintw(0, 0, "%s", tmp_buf);
+ 
+@@ -843,7 +848,10 @@
+ 		len = columns - strlen(tmp_buf);
+ 		if (len < 0)
+ 			len = 0;
+-		mvprintw(0, len, "%s", tmp_buf);
++		if (rawmode)
++			printf(" %s\n", tmp_buf);
++		else
++			mvprintw(0, len, "%s", tmp_buf);
+ 	}
+ 
+ 	tb_end();
+@@ -1244,7 +1252,6 @@
+ 		FLD_ANCHOR->max_width = mx;
+ 		FLD_ANCHOR->norm_width = nx;
+ 		field_setup();
+-		need_update = 1;
+ 	}
+ }
+ #endif
+@@ -1279,7 +1286,6 @@
+ 			FLD_LABEL->norm_width = nw;
+ 			FLD_LABEL->max_width = mw;
+ 			field_setup();
+-			need_update = 1;
+ 		}
+ 	}
+ #endif
+@@ -2041,11 +2047,9 @@
+ 	if (cachestates) {
+ 		show_field(FLD_SI);
+ 		show_field(FLD_SP);
+-		gotsig_alarm = 1;
+ 	} else {
+ 		hide_field(FLD_SI);
+ 		hide_field(FLD_SP);
+-		need_update = 1;
+ 	}
+ 	field_setup();
+ }
+@@ -2105,8 +2109,10 @@
+ 	line++;
+ 	mvprintw(line++, 6, "press any key to continue ...");
+ 
+-	while (getch() == ERR);
+-
++	timeout(-1);
++	while (getch() == ERR)
++		continue;
++	timeout(0);
+ }
+ 
+ 
+@@ -2142,7 +2148,6 @@
+ 	del = atoi(cmdbuf);
+ 	if (del > 0) {
+ 		delay = del;
+-		gotsig_alarm = 1;
+ 	}
+ }
+ 
+@@ -2175,7 +2180,6 @@
+ 		/* FALLTHROUGH */
+ 	case 'h':
+ 		show_help();
+-		need_update = 1;
+ 		break;
+ 	case 'n':
+ 		command_set(&cm_count, NULL);
+@@ -2349,8 +2353,6 @@
+ 	if (rawmode && countmax == 0)
+ 		countmax = 1;
+ 
+-	gotsig_alarm = 1;
+-
+ 	engine_loop(countmax);
+ 
+ 	close(pf_dev);

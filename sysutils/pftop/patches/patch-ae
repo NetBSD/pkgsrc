@@ -1,0 +1,28 @@
+$NetBSD: patch-ae,v 1.1 2008/06/15 14:09:04 peter Exp $
+
+--- engine.h.old	2008-06-14 17:39:04.000000000 +0200
++++ engine.h	2008-06-15 12:38:21.000000000 +0200
+@@ -100,8 +100,8 @@
+ 
+ void tb_end(void);
+ 
+-int tbprintf(char *format, ...) GCC_PRINTFLIKE(1,2);
+-int msgprintf(char *format, ...) GCC_PRINTFLIKE(1,2);
++int tbprintf(char *format, ...);
++int msgprintf(char *format, ...);
+ 
+ void end_line(void);
+ void end_page(void);
+@@ -150,12 +150,8 @@
+ extern int rawwidth;
+ extern int columns, lines;
+ 
+-extern int need_update;
+-extern int need_sort;
+-
+ extern volatile sig_atomic_t gotsig_close;
+ extern volatile sig_atomic_t gotsig_resize;
+-extern volatile sig_atomic_t gotsig_alarm;
+ 
+ extern field_view *curr_view;
+ extern struct view_manager *curr_mgr;

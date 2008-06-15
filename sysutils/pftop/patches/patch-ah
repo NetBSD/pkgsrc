@@ -1,0 +1,53 @@
+$NetBSD: patch-ah,v 1.1 2008/06/15 14:09:04 peter Exp $
+
+--- sf-gencode.c.old	2008-06-14 17:44:52.000000000 +0200
++++ sf-gencode.c	2008-06-15 01:19:43.000000000 +0200
+@@ -32,8 +32,11 @@
+ #include <netinet/in.h>
+ #include <netinet/if_ether.h>
+ 
+-#include <net/if_pflog.h>
++#ifdef __DragonFly__
++#include <net/pf/pfvar.h>
++#else
+ #include <net/pfvar.h>
++#endif /* !__DragonFly__ */
+ 
+ #include <netdb.h>
+ #include <stdlib.h>
+@@ -44,7 +47,7 @@
+ 
+ #define INET6
+ 
+-#include <pcap-int.h>
++#include "pcap-int.h"
+ #include <pcap-namedb.h>
+ #include "sf-gencode.h"
+ 
+@@ -733,13 +736,17 @@
+ 		b1 = gen_proto(IPPROTO_ESP);
+ 		break;
+ 
++#ifdef IPPROTO_PFSYNC
+ 	case Q_PFSYNC:
+ 		b1 = gen_proto(IPPROTO_PFSYNC);
+ 		break;
++#endif /* IPPROTO_PFSYNC */
+ 
++#ifdef IPPROTO_CARP
+ 	case Q_CARP:
+ 		b1 = gen_proto(IPPROTO_CARP);
+ 		break;
++#endif /* IPPROTO_CARP */
+ 
+ 	default:
+ 		sf_error("Unknown protocol abbreviation");
+@@ -1560,7 +1567,7 @@
+ 		/* NOTREACHED */
+ 	}
+ 
+-	b0 = gen_bcmp(off, strlen(ifname), ifname);
++	b0 = gen_bcmp(off, strlen(ifname), (const u_char *)ifname);
+ 	return (b0);
+ #else
+ 	sf_error("ifname not supported in this OpenBSD release");
