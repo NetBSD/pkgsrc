@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/06/12 02:14:17 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2008/06/16 13:32:55 joerg Exp $
 
 DISTNAME=	bfd-crunchide-1.2
 CATEGORIES=	cross
@@ -24,13 +24,12 @@ MAKE_ENV+=	${BSD_MAKE_ENV}
 
 BFD_LIBS=	${PREFIX}/lib/libbfd.a ${PREFIX}/lib/libiberty.a ${PREFIX}/lib/libintl.a
 
+INSTALLATION_DIRS=	bin
+
 do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${FILESDIR}/Makefile ${FILESDIR}/crunchide.1 ${FILESDIR}/crunchide.c \
 		${WRKSRC}
-
-pre-install:
-	@if [ ! -d ${PREFIX}/bin ]; then ${INSTALL_PROGRAM_DIR} ${PREFIX}/bin; fi
 
 .include "../../cross/binutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
