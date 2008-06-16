@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.63 2007/12/02 12:05:00 wiz Exp $
+# $NetBSD: Makefile,v 1.63.4.1 2008/06/16 09:07:34 ghen Exp $
 
-DISTNAME=	freetype-2.3.5
+DISTNAME=	freetype-2.3.6
 PKGNAME=	${DISTNAME:S/-/2-/}
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=freetype/} \
