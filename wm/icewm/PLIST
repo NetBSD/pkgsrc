@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2007/08/25 15:41:32 obache Exp $
+@comment $NetBSD: PLIST,v 1.22 2008/06/16 10:17:56 hauke Exp $
 bin/icehelp
 bin/icesh
 bin/icewm
@@ -35,18 +35,6 @@ share/doc/icewm/html/icewm-9.html
 share/doc/icewm/html/icewm.html
 share/icewm/icons/app_16x16.xpm
 share/icewm/icons/app_32x32.xpm
-share/icewm/icons/bomb_16x16.xpm
-share/icewm/icons/bomb_32x32.xpm
-share/icewm/icons/communicator-abook_16x16.xpm
-share/icewm/icons/communicator-abook_32x32.xpm
-share/icewm/icons/communicator-browser_16x16.xpm
-share/icewm/icons/communicator-browser_32x32.xpm
-share/icewm/icons/communicator-composer_16x16.xpm
-share/icewm/icons/communicator-composer_32x32.xpm
-share/icewm/icons/communicator-discussion_16x16.xpm
-share/icewm/icons/communicator-discussion_32x32.xpm
-share/icewm/icons/communicator-mail_16x16.xpm
-share/icewm/icons/communicator-mail_32x32.xpm
 share/icewm/icons/emacs_16x16.xpm
 share/icewm/icons/emacs_32x32.xpm
 share/icewm/icons/file_16x16.xpm
@@ -55,31 +43,13 @@ share/icewm/icons/folder_16x16.xpm
 share/icewm/icons/folder_32x32.xpm
 share/icewm/icons/fte_16x16.xpm
 share/icewm/icons/fte_32x32.xpm
-share/icewm/icons/gimp_16x16.xpm
-share/icewm/icons/gimp_32x32.xpm
-share/icewm/icons/gnome_16x16.xpm
 share/icewm/icons/java_16x16.xpm
 share/icewm/icons/java_32x32.xpm
-share/icewm/icons/kde_16x16.xpm
-share/icewm/icons/koules_16x16.xpm
-share/icewm/icons/koules_32x32.xpm
-share/icewm/icons/navigator_16x16.xpm
-share/icewm/icons/navigator_32x32.xpm
-share/icewm/icons/netscape_16x16.xpm
-share/icewm/icons/netscape_32x32.xpm
-share/icewm/icons/pdf_16x16.xpm
-share/icewm/icons/pdf_32x32.xpm
 share/icewm/icons/vim_16x16.xpm
 share/icewm/icons/vim_32x32.xpm
 share/icewm/icons/vim_48x48.xpm
-share/icewm/icons/xisp_16x16.xpm
-share/icewm/icons/xisp_32x32.xpm
-share/icewm/icons/xload_16x16.xpm
-share/icewm/icons/xload_32x32.xpm
 share/icewm/icons/xterm_16x16.xpm
 share/icewm/icons/xterm_32x32.xpm
-share/icewm/icons/xv_16x16.xpm
-share/icewm/icons/xv_32x32.xpm
 share/icewm/keys
 share/icewm/ledclock/a.xpm
 share/icewm/ledclock/colon.xpm
@@ -108,17 +78,10 @@ share/icewm/menu
 share/icewm/preferences
 share/icewm/taskbar/bsd-daemon.xpm
 share/icewm/taskbar/collapse.xpm
-share/icewm/taskbar/debian.xpm
 share/icewm/taskbar/desktop.xpm
 share/icewm/taskbar/expand.xpm
-share/icewm/taskbar/icewm.xpm
-share/icewm/taskbar/linux.xpm
-share/icewm/taskbar/linux1.xpm
-share/icewm/taskbar/linux2.xpm
-share/icewm/taskbar/linux20.xpm
 share/icewm/taskbar/start.xpm
 share/icewm/taskbar/windows.xpm
-share/icewm/taskbar/xfreeos2.xpm
 share/icewm/themes/Infadel2/Ergonomic.theme
 share/icewm/themes/Infadel2/Overloaded.theme
 share/icewm/themes/Infadel2/closeA.xpm
@@ -161,7 +124,7 @@ share/icewm/themes/Infadel2/rolldownI.xpm
 share/icewm/themes/Infadel2/rollupA.xpm
 share/icewm/themes/Infadel2/rollupI.xpm
 share/icewm/themes/Infadel2/snap.pcf
-share/icewm/themes/Infadel2/taskbar/linux.xpm
+share/icewm/themes/Infadel2/taskbar/start.xpm
 share/icewm/themes/Infadel2/taskbar/windows.xpm
 share/icewm/themes/Infadel2/titleAB.xpm
 share/icewm/themes/Infadel2/titleAJ.xpm
@@ -390,3 +353,5 @@ share/locale/zh_TW/LC_MESSAGES/icewm.mo
 @dirrm share/icewm
 @dirrm share/doc/icewm/html
 @dirrm share/doc/icewm
+@exec ${MKDIR} %D/etc/icewm
+@dirrm etc/icewm

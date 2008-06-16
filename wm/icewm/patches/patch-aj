@@ -1,9 +1,8 @@
-$NetBSD: patch-aj,v 1.2 2006/10/04 19:38:06 rillig Exp $
+$NetBSD: patch-aj,v 1.3 2008/06/16 10:17:56 hauke Exp $
 
---- src/aapm.cc.orig	2006-08-06 20:38:16.000000000 +0200
-+++ src/aapm.cc	2006-10-04 21:23:18.000000000 +0200
-@@ -38,8 +38,12 @@
- #include <sys/file.h>
+--- src/aapm.cc.orig	2007-12-27 19:16:17.000000000 +0100
++++ src/aapm.cc	2008-06-08 15:50:01.000000000 +0200
+@@ -39,6 +39,10 @@
  #include <sys/ioctl.h>
  #include <sys/types.h>
 +#ifdef __sparcv9
@@ -14,4 +13,3 @@ $NetBSD: patch-aj,v 1.2 2006/10/04 19:38:06 rillig Exp $
 +#endif
  
  YColor *YApm::apmBg = 0;
- YColor *YApm::apmFg = 0;
