@@ -1,0 +1,8 @@
+atheme-services is a set of Services for IRC networks that allows users to
+manage their channels in a secure and efficient way and allows operators to
+manage various things about their networks. Unlike it's predecessor, Shrike,
+services has a completely reworked form of channel management that feels
+somewhat like eggdrop and is somewhat more useful.
+
+Services currently works with many irc daemons. More details are
+available in the config file.
