@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2008/05/27 13:23:43 obache Exp $
+# $NetBSD: Makefile,v 1.48 2008/06/16 13:29:25 joerg Exp $
 #
 
 DISTNAME=		jabberd-2.1.23
@@ -100,7 +100,6 @@ pre-configure:
 .endfor
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/etc/templates/roster.xml.dist.in	\
 	    ${DESTDIR}${EGDIR}/roster.xml
 	${INSTALL_SCRIPT} ${WRKSRC}/tools/pipe-auth.pl ${DESTDIR}${BINDIR}
