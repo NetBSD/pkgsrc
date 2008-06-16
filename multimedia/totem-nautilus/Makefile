@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/04/30 13:38:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/16 14:44:47 joerg Exp $
 #
 
 DISTNAME=	totem-2.22.2
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/2.22/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/projects/totem/
 COMMENT=	Movie player for the GNOME Desktop
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTINFO_FILE=	${.CURDIR}/../../multimedia/totem/distinfo
 PATCHDIR=	${.CURDIR}/../../multimedia/totem/patches
@@ -23,9 +25,11 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_LANGUAGES=		c c++
 
+INSTALLATION_DIRS=	lib/nautilus/extensions-2.0
+
 do-install:
 	cd ${WRKSRC}/src && ${LIBTOOL} --mode=install ${INSTALL_DATA} \
-	 libtotem-properties-page.la ${PREFIX}/lib/nautilus/extensions-2.0
+	 libtotem-properties-page.la ${DESTDIR}${PREFIX}/lib/nautilus/extensions-2.0
 
 BUILDLINK_API_DEPENDS.glib2+=			glib2>=2.8.0
 BUILDLINK_API_DEPENDS.gnome-icon-theme+=	gnome-icon-theme>=2.10.0
