@@ -1,0 +1,12 @@
+Smbldap-tools is a set of scripts designed to help integrate Samba and
+a LDAP directory.  They target both users and administrators of unix
+systems.
+
+Users can change their password in a way similar to the standard
+`passwd' command.
+
+Administrators can perform user and group management command line
+actions and synchronise Samba account management consistently.
+
+A version of these tools are bundled with samba, but this set is from
+the master development site and is generally more up to date.

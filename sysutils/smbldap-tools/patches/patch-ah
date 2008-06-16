@@ -1,0 +1,96 @@
+$NetBSD: patch-ah,v 1.1.1.1 2008/06/16 16:04:25 taca Exp $
+
+--- smbldap.conf.orig	2008-04-22 17:13:29.000000000 +0900
++++ smbldap.conf
+@@ -58,7 +58,7 @@ sambaDomain="DOMSMB"
+ # Slave LDAP server
+ # Ex: slaveLDAP=127.0.0.1
+ # If not defined, parameter is set to "127.0.0.1"
+-slaveLDAP="ldap.iallanis.info"
++slaveLDAP="ldap.example.info"
+ 
+ # Slave LDAP port
+ # If not defined, parameter is set to "389"
+@@ -67,7 +67,7 @@ slavePort="389"
+ # Master LDAP server: needed for write operations
+ # Ex: masterLDAP=127.0.0.1
+ # If not defined, parameter is set to "127.0.0.1"
+-masterLDAP="ldap.iallanis.info"
++masterLDAP="ldap.example.info"
+ 
+ # Master LDAP port
+ # If not defined, parameter is set to "389"
+@@ -92,19 +92,19 @@ verify="require"
+ 
+ # CA certificate
+ # see "man Net::LDAP" in start_tls section for more details
+-cafile="/etc/smbldap-tools/ca.pem"
++cafile="@PKG_SYSCONFDIR@/ca.pem"
+ 
+ # certificate to use to connect to the ldap server
+ # see "man Net::LDAP" in start_tls section for more details
+-clientcert="/etc/smbldap-tools/smbldap-tools.iallanis.info.pem"
++clientcert="@PKG_SYSCONFDIR@/smbldap-tools.example.info.pem"
+ 
+ # key certificate to use to connect to the ldap server
+ # see "man Net::LDAP" in start_tls section for more details
+-clientkey="/etc/smbldap-tools/smbldap-tools.iallanis.info.key"
++clientkey="@PKG_SYSCONFDIR@/smbldap-tools.example.info.key"
+ 
+ # LDAP Suffix
+ # Ex: suffix=dc=IDEALX,dc=ORG
+-suffix="dc=iallanis,dc=info"
++suffix="dc=example,dc=info"
+ 
+ # Where are stored Users
+ # Ex: usersdn="ou=Users,dc=IDEALX,dc=ORG"
+@@ -121,6 +121,14 @@ computersdn="ou=Computers,${suffix}"
+ # Warning: if 'suffix' is not set here, you must set the full dn for groupsdn
+ groupsdn="ou=Groups,${suffix}"
+ 
++# Groups objectclasses, as a space-separated list
++# Ex: groupsclasses="top posixGroup"
++groupsclasses="posixGroup groupOfNames"
++
++# Groups default member (rfc2307bis prohibit empty groups)
++# Ex: groupsdefaultmember="cn=default,${suffix}"
++groupsdefaultmember="cn=default,ou=roles,${suffix}"
++
+ # Where are stored Idmap entries (used if samba is a domain member server)
+ # Ex: groupsdn="ou=Idmap,dc=IDEALX,dc=ORG"
+ # Warning: if 'suffix' is not set here, you must set the full dn for idmapdn
+@@ -151,8 +159,8 @@ crypt_salt_format="%s"
+ 
+ # Login defs
+ # Default Login Shell
+-# Ex: userLoginShell="/bin/bash"
+-userLoginShell="/bin/bash"
++# Ex: userLoginShell="/bin/csh"
++userLoginShell="/bin/csh"
+ 
+ # Home directory
+ # Ex: userHome="/home/%U"
+@@ -210,7 +218,7 @@ userScript="logon.bat"
+ # Domain appended to the users "mail"-attribute
+ # when smbldap-useradd -M is used
+ # Ex: mailDomain="idealx.com"
+-mailDomain="iallanis.info"
++mailDomain="example.info"
+ 
+ ##############################################################################
+ #
+@@ -221,12 +229,12 @@ mailDomain="iallanis.info"
+ # Allows not to use smbpasswd (if with_smbpasswd == 0 in smbldap_conf.pm) but
+ # prefer Crypt::SmbHash library
+ with_smbpasswd="0"
+-smbpasswd="/usr/bin/smbpasswd"
++smbpasswd="@PREFIX@/bin/smbpasswd"
+ 
+ # Allows not to use slappasswd (if with_slappasswd == 0 in smbldap_conf.pm)
+ # but prefer Crypt:: libraries
+ with_slappasswd="0"
+-slappasswd="/usr/sbin/slappasswd"
++slappasswd="@PREFIX@/sbin/slappasswd"
+ 
+ # comment out the following line to get rid of the default banner
+ # no_banner="1"
