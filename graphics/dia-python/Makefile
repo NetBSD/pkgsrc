@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/09/21 13:03:48 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/16 14:05:24 joerg Exp $
 #
 
 DIA_SUBPKG=		-python
@@ -20,7 +20,7 @@ INSTALL_DIRS+=		${WRKSRC}/plug-ins/python
 PYCOMPILEALL=	${BUILDLINK_PREFIX.${PYPACKAGE}}/${PYLIB}/compileall.py
 
 post-install:
-	${PYTHONBIN} ${PYCOMPILEALL} ${PREFIX}/share/dia
+	${PYTHONBIN} ${PYCOMPILEALL} ${DESTDIR}${PREFIX}/share/dia
 
 .include "../../lang/python/application.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
