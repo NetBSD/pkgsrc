@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/04/28 10:54:08 shannonjr Exp $
+# $NetBSD: Makefile,v 1.24 2008/06/16 15:33:11 joerg Exp $
 #
 
 DISTNAME=		prelude-lml-0.9.12.2
@@ -32,6 +32,8 @@ PRELUDE_GROUP?=		_prelude
 BUILD_DEFS+=		VARBASE
 PRELUDE_LML_PID_DIR=	${VARBASE}/run/prelude-lml
 PRELUDE_HOME=		${VARBASE}/prelude-lml
+
+INSTALLATION_DIRS=	sbin
 
 PKG_GROUPS=		${PRELUDE_GROUP}
 PKG_USERS=		${PRELUDE_USER}:${PRELUDE_GROUP}
