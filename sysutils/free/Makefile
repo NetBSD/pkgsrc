@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:46 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/16 15:41:44 joerg Exp $
 #
 
 DISTNAME=		free-1.0
@@ -22,7 +22,7 @@ NO_BUILD=	yes
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
-	${INSTALL_SCRIPT} ${FILESDIR}/free ${PREFIX}/bin/free
-	${INSTALL_MAN} ${FILESDIR}/free.1 ${PREFIX}/${PKGMANDIR}/man1/free.1
+	${INSTALL_SCRIPT} ${FILESDIR}/free ${DESTDIR}${PREFIX}/bin/free
+	${INSTALL_MAN} ${FILESDIR}/free.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/free.1
 
 .include "../../mk/bsd.pkg.mk"
