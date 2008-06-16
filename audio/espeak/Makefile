@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/02 06:10:31 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/16 13:13:44 joerg Exp $
 #
 
 DISTNAME=	espeak-1.31-source
@@ -23,12 +23,12 @@ INSTALLATION_DIRS=	bin include lib share
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/espeak ${DESTDIR}${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/libespeak.so.1.1.31 ${DESTDIR}${PREFIX}/lib
-	${LN} -sf ${PREFIX}/lib/libespeak.so.1.1.31 \
+	${INSTALL_LIB} ${WRKSRC}/libespeak.so.1.1.31 ${DESTDIR}${PREFIX}/lib
+	${LN} -sf libespeak.so.1.1.31 \
 		${DESTDIR}${PREFIX}/lib/libespeak.so.1
-	${LN} -sf ${PREFIX}/lib/libespeak.so.1.1.31 \
+	${LN} -sf libespeak.so.1.1.31 \
 		${DESTDIR}${PREFIX}/lib/libespeak.so
-	${INSTALL_DATA} ${WRKSRC}/libespeak.a ${DESTDIR}${PREFIX}/lib
+	${INSTALL_LIB} ${WRKSRC}/libespeak.a ${DESTDIR}${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/speak_lib.h ${DESTDIR}${PREFIX}/include
 	${CP} -r ${WRKDIR}/espeak-1.31-source/espeak-data \
 		${DESTDIR}${PREFIX}/share
