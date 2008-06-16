@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.77 2008/06/13 13:58:06 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.78 2008/06/16 09:08:45 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -178,3 +178,9 @@ Pullup ticket #2420 - requested by tonnerre
 star: security fix
 Pullup ticket 2422 - requested by martti
 latest update for clamav
+Pullup ticket 2424 - requested by tron
+security patch + build fixes for net-snmp
+Pullup ticket 2425 - requested by tron
+security patch for apache22
+Pullup ticket 2426 - requested by kefren
+security update for freetype2
