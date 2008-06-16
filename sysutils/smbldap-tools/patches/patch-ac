@@ -1,0 +1,64 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/06/16 16:04:25 taca Exp $
+
+--- doc/smb.conf.orig	2008-04-22 17:13:30.000000000 +0900
++++ doc/smb.conf
+@@ -5,7 +5,7 @@
+ 	security = user
+ 	enable privileges = yes
+ 	#interfaces = 192.168.5.11
+-	#username map = /etc/samba/smbusers
++	#username map = @PREFIX@/etc/samba/smbusers
+ 	server string = Samba Server %v
+ 	#security = ads
+ 	encrypt passwords = Yes
+@@ -20,13 +20,13 @@
+ 	# method 2:
+ 	unix password sync = yes
+ 	ldap passwd sync = no
+-	passwd program = /usr/sbin/smbldap-passwd -u "%u"
++	passwd program = @PREFIX@/sbin/smbldap-passwd -u "%u"
+ 	passwd chat = "Changing *\nNew password*" %n\n "*Retype new password*" %n\n"
+ 
+ 	log level = 0
+ 	syslog = 0
+-	log file = /var/log/samba/log.%U
+-	max log size = 100000
++	#log file = /var/log/samba/log.%U
++	#max log size = 100000
+ 	time server = Yes
+ 	socket options = TCP_NODELAY SO_RCVBUF=8192 SO_SNDBUF=8192
+ 	mangling method = hash2
+@@ -45,22 +45,22 @@
+ 	wins support = yes
+ 	# passdb backend = ldapsam:"ldap://ldap1.company.com ldap://ldap2.company.com"
+ 	passdb backend = ldapsam:ldap://127.0.0.1/
+-	ldap admin dn = cn=Manager,dc=company,dc=com
+-	#ldap admin dn = cn=samba,ou=DSA,dc=company,dc=com
+-	ldap suffix = dc=company,dc=com
++	ldap admin dn = cn=Manager,dc=example,dc=com
++	#ldap admin dn = cn=samba,ou=DSA,dc=example,dc=com
++	ldap suffix = dc=example,dc=com
+         ldap group suffix = ou=Groups
+         ldap user suffix = ou=Users
+         ldap machine suffix = ou=Computers
+ 	#ldap idmap suffix = ou=Idmap
+-        add user script = /usr/sbin/smbldap-useradd -m "%u"
++        add user script = @PREFIX@/sbin/smbldap-useradd -m "%u"
+         #ldap delete dn = Yes
+-        delete user script = /usr/sbin/smbldap-userdel "%u"
+-        add machine script = /usr/sbin/smbldap-useradd -t 0 -w "%u"
+-        add group script = /usr/sbin/smbldap-groupadd -p "%g" 
+-        #delete group script = /usr/sbin/smbldap-groupdel "%g"
+-        add user to group script = /usr/sbin/smbldap-groupmod -m "%u" "%g"
+-        delete user from group script = /usr/sbin/smbldap-groupmod -x "%u" "%g"
+-	set primary group script = /usr/sbin/smbldap-usermod -g '%g' '%u'
++        delete user script = @PREFIX@/sbin/smbldap-userdel "%u"
++        add machine script = @PREFIX@/sbin/smbldap-useradd -t 0 -w "%u"
++        add group script = @PREFIX@/sbin/smbldap-groupadd -p "%g" 
++        #delete group script = @PREFIX@/sbin/smbldap-groupdel "%g"
++        add user to group script = @PREFIX@/sbin/smbldap-groupmod -m "%u" "%g"
++        delete user from group script = @PREFIX@/sbin/smbldap-groupmod -x "%u" "%g"
++	set primary group script = @PREFIX@/sbin/smbldap-usermod -g '%g' '%u'
+ 
+ 	# printers configuration
+ 	#printer admin = @"Print Operators"

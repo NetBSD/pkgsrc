@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1.1.1 2008/06/16 16:04:25 taca Exp $
+
+--- smbldap-usermod.orig	2008-04-22 17:13:29.000000000 +0900
++++ smbldap-usermod
+@@ -626,7 +626,7 @@ if ( defined( $tmp = $Options{'B'} ) ) {
+                 $_sambaAcctFlags = "\[$letters\]";
+                 push( @mods, 'sambaAcctFlags' => $_sambaAcctFlags );
+             }
+-            push( @mods, 'sambaPwdLastSet' => '0' );
++            push( @mods, 'sambaPwdLastSet' => time );
+         }
+         else {
+             $_sambaPwdMustChange = $winmagic;

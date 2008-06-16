@@ -1,0 +1,27 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/16 16:04:25 taca Exp $
+bin/smbldap-passwd
+${PERL5_SUB_INSTALLVENDORLIB}/smbldap_tools.pm
+sbin/smbldap-groupadd
+sbin/smbldap-groupdel
+sbin/smbldap-groupmod
+sbin/smbldap-groupshow
+sbin/smbldap-useradd
+sbin/smbldap-userdel
+sbin/smbldap-userinfo
+sbin/smbldap-usermod
+sbin/smbldap-usershow
+sbin/smbldap-tools/configure.pl
+sbin/smbldap-tools/smbldap-populate
+sbin/smbldap-tools/smbldap-migrate-pwdump-accounts
+sbin/smbldap-tools/smbldap-migrate-pwdump-groups
+sbin/smbldap-tools/smbldap-migrate-unix-accounts
+sbin/smbldap-tools/smbldap-migrate-unix-groups
+share/doc/smbldap-tools/smbldap-tools.html
+share/doc/smbldap-tools/smbldap-tools.pdf
+share/examples/smbldap-tools/slapd.conf
+share/examples/smbldap-tools/smb.conf
+share/examples/smbldap-tools/smbldap.conf
+share/examples/smbldap-tools/smbldap_bind.conf
+@dirrm share/examples/smbldap-tools
+@dirrm share/doc/smbldap-tools
+@dirrm sbin/smbldap-tools
