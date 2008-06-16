@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.30 2007/07/04 20:54:48 jlam Exp $
+# $NetBSD: Makefile,v 1.31 2008/06/16 14:39:35 joerg Exp $
 
 DISTNAME=	jitterbug-1.6.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	misc
 MASTER_SITES=	ftp://jitterbug.samba.org/pub/jitterbug/
 
@@ -9,20 +9,7 @@ MAINTAINER=	wennmach@NetBSD.org
 HOMEPAGE=	http://jitterbug.samba.org/
 COMMENT=	Web-oriented bug-tracking tool
 
-BROKEN_IN=		pkgsrc-2006Q4
-
-.if exists(/usr/sbin/user)
-ADDUSER=		/usr/sbin/useradd
-ADDGROUP=		/usr/sbin/groupadd
-.else
-DEPENDS+=		user>=20000313:../../sysutils/user
-ADDUSER=		${LOCALBASE}/sbin/useradd
-ADDGROUP=		${LOCALBASE}/sbin/groupadd
-.endif
-
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}/source
-DEINSTALL_SRC=	${PKGDIR}/DEINSTALL
-INSTALL_SRC=	${PKGDIR}/INSTALL
 CONFIGDIR=	${WRKDIR}/${PKGNAME_NOREV}/config
 DOCSDIR=	${WRKDIR}/${PKGNAME_NOREV}/docs
 CGIBINDIR=	libexec/cgi-bin
@@ -48,6 +35,11 @@ JB_LONGNAME=	`hostname`
 JB_FQHOSTNAME=	${JB_LONGNAME}
 .endif
 JB_EMAIL?=	${JB_LOCALMAIL}@${JB_FQHOSTNAME}
+
+PKG_GROUPS=		${JB_GROUP}
+PKG_GID.${JB_GROUP}=	${JB_GROUPID}
+PKG_UID.${JB_USER}=	${JB_USERID}
+PKG_USERS=		${JB_USER}:${JB_GROUP}
 
 PKG_GROUPS_VARS+=	JB_GROUP
 PKG_USERS_VARS+=	JB_USER
@@ -206,8 +198,6 @@ do-install:
 		${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 755             \
 		${WRKDIR}/jitterbug.auth ${PREFIX}/${JB_USER}/etc
 	${INSTALL_DATA_DIR} ${PREFIX}/${JB_USER}/doc
-	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
-		${MESSAGE} ${PREFIX}/${JB_USER}/doc/POSTINSTALL
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \
 		${WRKDIR}/NEWPACKAGE ${PREFIX}/${JB_USER}/doc
 	${INSTALL} -c -o ${JB_USER} -g ${JB_GROUP} -m 644                     \

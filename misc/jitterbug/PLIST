@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2006/01/10 18:50:09 rillig Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/06/16 14:39:35 joerg Exp $
 ${JB_USER}/config/footer.html
 @exec if [ ! -d %D/${JB_DATADIR} ]; then ${MKDIR} %D/${JB_DATADIR}; fi
 @exec if [ ! -f %D/${JB_DATADIR}/footer.html ]; then /bin/cp -p %D/%F %D/${JB_DATADIR}/footer.html; fi
@@ -25,7 +25,6 @@ etc/jitterbug/httpd.conf.add
 ${JB_USER}/bin/new_message
 ${JB_USER}/bin/jitterbug
 @dirrm ${JB_USER}/bin
-${JB_USER}/doc/POSTINSTALL
 ${JB_USER}/doc/NEWPACKAGE
 ${JB_USER}/doc/CONFIG.txt
 ${JB_USER}/doc/INSTALL
