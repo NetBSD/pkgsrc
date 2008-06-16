@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.284 2008/06/12 01:09:02 joerg Exp $
+# $NetBSD: bsd.prefs.mk,v 1.285 2008/06/16 15:10:48 joerg Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -357,6 +357,9 @@ PKGDIRMODE?=		755
 # A meta-package is a package that does not have any files and whose
 # only purpose is to depend on other packages, giving that collection
 # a simple name.
+#
+# This variable must be set before including bsd.prefs.mk directly or
+# indirectly.
 #
 # Keywords: meta meta-package META_PACKAGE
 #
