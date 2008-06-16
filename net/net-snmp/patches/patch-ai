@@ -1,0 +1,23 @@
+$NetBSD: patch-ai,v 1.3.18.1 2008/06/16 08:51:43 ghen Exp $
+
+--- agent/mibgroup/mibII/ip.c.orig	2008-06-06 15:51:31.000000000 +0100
++++ agent/mibgroup/mibII/ip.c	2008-06-06 15:55:38.000000000 +0100
+@@ -212,6 +212,18 @@
+ #define	USES_TRADITIONAL_IPSTAT
+ #endif
+ 
++#ifdef IP_NSTATS
++typedef struct ipstat {
++	uint64_t st[IP_NSTATS];
++};
++#define IP_STAT_STRUCTURE	struct ipstat
++#endif
++
++#ifdef dragonfly
++#define IP_STAT_STRUCTURE	struct ip_stats
++#define	USES_TRADITIONAL_IPSTAT
++#endif
++
+ #if !defined(IP_STAT_STRUCTURE)
+ #define IP_STAT_STRUCTURE	struct ipstat
+ #define	USES_TRADITIONAL_IPSTAT
