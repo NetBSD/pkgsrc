@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1283 2008/06/16 10:39:38 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1284 2008/06/16 10:50:30 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2139,3 +2139,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated news/nntpcache to 3.0.2nb1 [obache 2008-06-15]
 	Updated sysutils/pftop to 0.7 [peter 2008-06-15]
 	Added chat/atheme version 3.0.4 [adrianp 2008-06-16]
+	Updated mail/p5-Mail-Box to 2.082 [adrianp 2008-06-16]
