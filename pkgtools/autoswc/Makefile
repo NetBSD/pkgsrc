@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/06/12 02:14:42 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/16 15:23:05 joerg Exp $
 
 DISTNAME=		autoswc-1.5
 CATEGORIES=		pkgtools sysutils
@@ -50,7 +50,7 @@ SUBST_SED.build+=	-e 's|@PREFIX@|${PREFIX}|g'
 SUBST_SED.build+=	-e 's|@SH@|${SH}|g'
 SUBST_SED.build+=	-e 's|@SYSCONFDIR@|${PKG_SYSCONFDIR}|g'
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/autoswc
 
 do-extract:
 	${CP} ${FILESDIR}/autoswc.8 ${WRKSRC}
@@ -62,11 +62,10 @@ do-build:
 	@${DO_NADA}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/autoswc ${PREFIX}/sbin
-	${INSTALL_DATA} ${WRKSRC}/autoswc.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA_DIR} ${PREFIX}/share/autoswc
-	${INSTALL_DATA} ${WRKSRC}/autoswc.mk ${PREFIX}/share/autoswc
-	${INSTALL_DATA} ${WRKSRC}/config.site ${PREFIX}/share/autoswc
-	${INSTALL_DATA} ${FILESDIR}/configure.ac ${PREFIX}/share/autoswc
+	${INSTALL_SCRIPT} ${WRKSRC}/autoswc ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_DATA} ${WRKSRC}/autoswc.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/autoswc.mk ${DESTDIR}${PREFIX}/share/autoswc
+	${INSTALL_DATA} ${WRKSRC}/config.site ${DESTDIR}${PREFIX}/share/autoswc
+	${INSTALL_DATA} ${FILESDIR}/configure.ac ${DESTDIR}${PREFIX}/share/autoswc
 
 .include "../../mk/bsd.pkg.mk"
