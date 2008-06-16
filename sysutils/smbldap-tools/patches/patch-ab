@@ -1,0 +1,96 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/06/16 16:04:25 taca Exp $
+
+--- doc/slapd.conf.orig	2008-04-22 17:13:30.000000000 +0900
++++ doc/slapd.conf
+@@ -2,11 +2,11 @@
+ # See slapd.conf(5) for details on configuration options.
+ # This file should NOT be world readable.
+ #
+-include		/etc/openldap/schema/core.schema
+-include		/etc/openldap/schema/cosine.schema
+-include		/etc/openldap/schema/inetorgperson.schema
+-include		/etc/openldap/schema/nis.schema
+-include		/etc/openldap/schema/samba.schema
++include		@PREFIX@/etc/openldap/schema/core.schema
++include		@PREFIX@/etc/openldap/schema/cosine.schema
++include		@PREFIX@/etc/openldap/schema/inetorgperson.schema
++include		@PREFIX@/etc/openldap/schema/nis.schema
++include		@PREFIX@/etc/openldap/schema/samba.schema
+ 
+ schemacheck	on
+ 
+@@ -17,11 +17,11 @@ allow bind_v2
+ # service AND an understanding of referrals.
+ #referral	ldap://root.openldap.org
+ 
+-pidfile		/var/run/slapd.pid
+-argsfile	/var/run/slapd.args
++pidfile		@OPENLDAP_VARDIR@/run/slapd.pid
++argsfile	@OPENLDAP_VARDIR@/run/slapd.args
+ 
+ # Load dynamic backend modules:
+-# modulepath	/usr/sbin/openldap
++# modulepath	@PREFIX@/lib/openldap
+ # moduleload	back_bdb.la
+ # moduleload	back_ldap.la
+ # moduleload	back_ldbm.la
+@@ -33,9 +33,9 @@ argsfile	/var/run/slapd.args
+ # /usr/share/ssl/certs, running "make slapd.pem", and fixing permissions on
+ # slapd.pem so that the ldap user or group can read it.  Your client software
+ # may balk at self-signed certificates, however.
+-#TLSCertificateFile /etc/openldap/ldap.company.com.pem
+-#TLSCertificateKeyFile /etc/openldap/ldap.company.com.key
+-#TLSCACertificateFile /etc/openldap/ca.pem
++#TLSCertificateFile @PREFIX@/etc/openldap/ldap.example.com.pem
++#TLSCertificateKeyFile @PREFIX@/etc/openldap/ldap.example.com.key
++#TLSCACertificateFile @PREFIX@/etc/openldap/ca.pem
+ #TLSCipherSuite :SSLv3
+ 
+ # Sample security restrictions
+@@ -70,8 +70,8 @@ argsfile	/var/run/slapd.args
+ #######################################################################
+ 
+ database	bdb
+-suffix		"dc=company,dc=com"
+-rootdn		"cn=Manager,dc=company,dc=com"
++suffix		"dc=example,dc=com"
++rootdn		"cn=Manager,dc=example,dc=com"
+ # Cleartext passwords, especially for the rootdn, should
+ # be avoided.  See slappasswd(8) and slapd.conf(5) for details.
+ # Use of strong authentication encouraged.
+@@ -81,7 +81,7 @@ rootpw		secret
+ # The database directory MUST exist prior to running slapd AND 
+ # should only be accessible by the slapd and slap tools.
+ # Mode 700 recommended.
+-directory	/var/lib/ldap
++directory	@OPENLDAP_VARDIR@/openldap-data
+ lastmod		on
+ 
+ # Indices to maintain for this database
+@@ -102,7 +102,7 @@ index default              		sub
+ 
+ # users can authenticate and change their password
+ access to attrs=userPassword,sambaNTPassword,sambaLMPassword,sambaPwdMustChange,sambaPwdLastSet
+-      by dn="cn=Manager,dc=company,dc=com" write
++      by dn="cn=Manager,dc=example,dc=com" write
+       by self write
+       by anonymous auth
+       by * none
+@@ -110,7 +110,7 @@ access to attrs=userPassword,sambaNTPass
+ # those 2 parameters must be world readable for password aging to work correctly
+ # (or use a priviledge account in /etc/ldap.conf to bind to the directory)
+ access to attrs=shadowLastChange,shadowMax
+-      by dn="cn=Manager,dc=company,dc=com" write
++      by dn="cn=Manager,dc=example,dc=com" write
+       by self write
+       by * read
+ 
+@@ -119,7 +119,7 @@ access to *
+       by * read
+ 
+ # Replicas of this database
+-#replogfile /var/lib/ldap/openldap-master-replog
++#replogfile @OPENLDAP_VARDIR@/openldap-data/openldap-master-replog
+ #replica host=ldap-1.example.com:389 starttls=critical
+ #     bindmethod=sasl saslmech=GSSAPI
+ #     authcId=host/ldap-master.example.com@EXAMPLE.COM

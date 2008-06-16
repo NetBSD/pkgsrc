@@ -1,0 +1,131 @@
+$NetBSD: patch-ai,v 1.1.1.1 2008/06/16 16:04:25 taca Exp $
+
+--- smbldap_tools.pm.orig	2008-04-22 17:13:29.000000000 +0900
++++ smbldap_tools.pm
+@@ -27,28 +27,9 @@ use Net::LDAP;
+ use Crypt::SmbHash;
+ use Unicode::MapUTF8 qw(to_utf8 from_utf8);
+ 
+-my $smbldap_conf;
+-if ( -e "/etc/smbldap-tools/smbldap.conf" ) {
+-    $smbldap_conf = "/etc/smbldap-tools/smbldap.conf";
+-}
+-else {
+-    $smbldap_conf = "/etc/opt/IDEALX/smbldap-tools/smbldap.conf";
+-}
+-
+-my $smbldap_bind_conf;
+-if ( -e "/etc/smbldap-tools/smbldap_bind.conf" ) {
+-    $smbldap_bind_conf = "/etc/smbldap-tools/smbldap_bind.conf";
+-}
+-else {
+-    $smbldap_bind_conf = "/etc/opt/IDEALX/smbldap-tools/smbldap_bind.conf";
+-}
+-my $samba_conf;
+-if ( -e "/etc/samba/smb.conf" ) {
+-    $samba_conf = "/etc/samba/smb.conf";
+-}
+-else {
+-    $samba_conf = "/usr/local/samba/lib/smb.conf";
+-}
++my $smbldap_conf = "@PKG_SYSCONFDIR@/smbldap.conf";
++my $smbldap_bind_conf = "@PKG_SYSCONFDIR@/smbldap_bind.conf";
++my $samba_conf = "@PREFIX@/etc/samba/smb.conf";
+ 
+ use vars qw($VERSION @ISA @EXPORT @EXPORT_OK %EXPORT_TAGS);
+ use Exporter;
+@@ -267,6 +248,15 @@ $config{groupsdn} = get_parameter( "ldap
+ if ( $config{groupsdn} !~ m/,/ ) {
+     $config{groupsdn} = $config{groupsdn} . "," . $config{suffix};
+ }
++if ( ! defined $config{groupsclasses} ) {
++    $config{groupsclasses} = "top posixGroup";
++}
++if ( defined $config{groupsdefaultmember} ) {
++    if ( $config{groupsdefaultmember} !~ m/,/ ) {
++        $config{groupsdefaultmember} = 
++            $config{groupsdefaultmember} . "," . $config{suffix};
++    }
++}
+ $config{computersdn} = get_parameter( "ldap machine suffix", "computersdn" );
+ if ( $config{computersdn} !~ m/,/ ) {
+     $config{computersdn} = $config{computersdn} . "," . $config{suffix};
+@@ -606,8 +596,8 @@ sub add_posix_machine {
+             'uid'           => "$user",
+             'uidNumber'     => "$uid",
+             'gidNumber'     => "$gid",
+-            'homeDirectory' => '/dev/null',
+-            'loginShell'    => '/bin/false',
++            'homeDirectory' => '/nonexistent',
++            'loginShell'    => '/sbin/nologin',
+             'description'   => 'Computer',
+             'gecos'         => 'Computer',
+         ]
+@@ -764,15 +754,22 @@ sub group_add {
+     if ( $nscd_status == 0 ) {
+         system "/etc/init.d/nscd start > /dev/null 2>&1";
+     }
+-    my $modify = $ldap->add(
+-        "cn=$gname,$config{groupsdn}",
+-        attrs => [
+-            objectClass => [ 'top', 'posixGroup' ],
+-            cn          => "$gname",
+-            gidNumber   => "$gid"
+-        ]
++
++    my $entry = Net::LDAP::Entry->new();
++    $entry->dn("cn=$gname,$config{groupsdn}");
++    $entry->add(
++        objectClass => [ split(' ', $config{groupsclasses}) ],
++        cn          => "$gname",
++        gidNumber   => "$gid"
+     );
+ 
++    if ($config{groupsdefaultmember}) {
++        $entry->add(
++            member => $config{groupsdefaultmember}
++        );
++    }
++    my $modify = $ldap->add($entry);
++
+     $modify->code && die "failed to add entry: ", $modify->error;
+     return $gid;
+ }
+@@ -1159,6 +1156,22 @@ sub get_next_id($$) {
+     my $found        = 0;
+     my $next_uid_mesg;
+     my $nextuid;
++
++    # retry number
++    my $retrv = 5;
++    # lock directory path
++    my $lockdir = "/tmp/smbldap-useradd";
++    # wait time
++    my $wtime = 3;
++    # create the lockdir
++    while (!mkdir($lockdir,0755)) {
++	if (--$retrv <= 0) {
++	    die "System busy and failed to add entry";
++	}
++    # if exist the lockdir, wait x second
++	sleep($wtime);
++    }
++
+     if ( $ldap_base_dn =~ m/$config{usersdn}/i ) {
+ 
+         # when adding a new user, we'll check if the uidNumber available is not
+@@ -1198,9 +1211,14 @@ sub get_next_id($$) {
+    # now, look if the id or gid is not already used in /etc/passwd or /etc/group
+             if ( !getpwuid($nextuid) ) {
+                 $found = 1;
++
++   # remove the lockdir
++                rmdir($lockdir);
+                 return $nextuid;
+             }
+         }
++        # remove the lockdir
++        rmdir($lockdir);
+         $tries++;
+         print
+ "Cannot confirm $attribute $nextuid is free: checking for the next one\n";
