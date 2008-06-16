@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/27 10:44:28 tonio Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/06/16 14:08:07 joerg Exp $
 bin/camlp5
 bin/camlp5o
 bin/camlp5r
 bin/camlp5sch
+bin/mkcamlp5
 bin/ocpp5
 lib/ocaml/camlp5/ast2pt.cmi
 lib/ocaml/camlp5/ast2pt.mli
