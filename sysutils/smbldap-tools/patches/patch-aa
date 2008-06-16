@@ -1,0 +1,96 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/06/16 16:04:25 taca Exp $
+
+--- configure.pl.orig	2008-04-22 17:13:29.000000000 +0900
++++ configure.pl
+@@ -31,6 +31,7 @@
+ 
+ use strict;
+ use File::Basename;
++use FileHandle;
+ 
+ # we need to be root to configure the scripts
+ if ($< != 0) {
+@@ -49,16 +50,19 @@ Before starting, check
+ print "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-\n";
+ 
+ # we first check if Samba is up and running
+-my $test_smb=`pidof smbd`;
+-chomp($test_smb);
++my $test_smb;
++$test_smb = read_pidfile('@SAMBA_PIDDIR@/smbd.pid');
++if (not defined $test_smb) {
++    $test_smb =`pidof smbd`;
++    chomp($test_smb);
++}
++
+ die "\nSamba need to be started first !\n" if ($test_smb eq "" || not defined $test_smb);
+ 
+ print "Looking for configuration files...\n\n";
+ my $smb_conf="";
+-if (-e "/etc/samba/smb.conf") {
+-  $smb_conf="/etc/samba/smb.conf";
+-} elsif (-e "/usr/local/samba/lib/smb.conf") {
+-  $smb_conf="/usr/local/samba/lib/smb.conf";
++if (-e "@PREFIX@/etc/samba/smb.conf") {
++  $smb_conf="@PREFIX@/etc/samba/smb.conf";
+ }
+ print "Samba Configuration File Path [$smb_conf] > ";
+ chomp(my $config_smb=<STDIN>);
+@@ -66,14 +70,7 @@ if ($config_smb ne "") {
+   $smb_conf=$config_smb;
+ }
+ 
+-my $conf_dir;
+-if (-d "/etc/opt/IDEALX/smbldap-tools") {
+-	$conf_dir="/etc/opt/IDEALX/smbldap-tools/";
+-} elsif (-d "/etc/smbldap-tools") {
+-	$conf_dir="/etc/smbldap-tools/";
+-} else {
+-	$conf_dir="/etc/opt/IDEALX/smbldap-tools/";
+-}
++my $conf_dir = '@PKG_SYSCONFDIR@';
+ 
+ print "\nThe default directory in which the smbldap configuration files are stored is shown.\n";
+ print "If you need to change this, enter the full directory path, then press enter to continue.\n";
+@@ -304,7 +301,7 @@ my $default_user_gidnumber=read_entry(".
+ 
+ my $default_computer_gidnumber=read_entry(". default computer gidNumber","","515",0);
+ 
+-my $userLoginShell=read_entry(". default login shell","","/bin/bash",0);
++my $userLoginShell=read_entry(". default login shell","","/bin/csh",0);
+ 
+ my $skeletonDir=read_entry(". default skeleton directory","","/etc/skel",0);
+ 
+@@ -528,12 +525,12 @@ mailDomain=\"$mailDomain\"
+ # Allows not to use smbpasswd (if with_smbpasswd == 0 in smbldap_conf.pm) but
+ # prefer Crypt::SmbHash library
+ with_smbpasswd=\"0\"
+-smbpasswd=\"/usr/bin/smbpasswd\"
++smbpasswd=\"@PREFIX@/bin/smbpasswd\"
+ 
+ # Allows not to use slappasswd (if with_slappasswd == 0 in smbldap_conf.pm)
+ # but prefer Crypt:: libraries
+ with_slappasswd=\"0\"
+-slappasswd=\"/usr/sbin/slappasswd\"
++slappasswd=\"@PREFIX@/sbin/slappasswd\"
+ 
+ # comment out the following line to get rid of the default banner
+ # no_banner=\"1\"
+@@ -574,5 +571,15 @@ print "  $smbldap_bind_conf done.\n";
+ $mode=0600;
+ chmod $mode,"$smbldap_bind_conf","$smbldap_bind_conf.old";
+ 
+-
+-
++sub read_pidfile {
++    my($file) = @_;
++    my($fh, $line);
++
++    $fh = new FileHandle $file;
++    if (defined $fh) {
++	$line = $fh->getline;
++	chomp($line);
++	$fh->close;
++    }
++    return $line;
++}
