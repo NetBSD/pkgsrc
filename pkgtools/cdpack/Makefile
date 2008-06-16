@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/06/12 02:14:42 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2008/06/16 15:29:35 joerg Exp $
 #
 
 DISTNAME=	cdpack-1.8
@@ -47,9 +47,9 @@ do-build:
 
 do-install:
 .for f in cdpack cddist
-	${INSTALL_SCRIPT} ${WRKSRC}/${f} ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${f}.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${f}.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .endfor
-	${INSTALL_SCRIPT} ${WRKSRC}/cdgen.awk ${PREFIX}/libexec
+	${INSTALL_SCRIPT} ${WRKSRC}/cdgen.awk ${DESTDIR}${PREFIX}/libexec
 
 .include "../../mk/bsd.pkg.mk"
