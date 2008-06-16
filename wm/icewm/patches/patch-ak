@@ -1,0 +1,16 @@
+$NetBSD: patch-ak,v 1.3 2008/06/16 14:55:03 hauke Exp $
+
+--- src/wmtaskbar.cc.orig	2008-01-05 08:34:24.000000000 +0100
++++ src/wmtaskbar.cc
+@@ -81,7 +81,10 @@ static void initPixmaps() {
+      * filename. This will be unified and be a forced standard in
+      * icewm-2
+      */
+-    startImage = themedirs.loadImage(base, "start.xpm");
++    /* pkgsrc *BSD: Try Beastie first */
++    startImage = subdirs.loadImage(base, START_PIXMAP);
++    if (startImage == null || !startImage->valid())
++        startImage = themedirs.loadImage(base, "start.xpm");
+     if (startImage == null || !startImage->valid())
+         startImage = themedirs.loadImage(base, "linux.xpm");
+     if (startImage == null || !startImage->valid())
