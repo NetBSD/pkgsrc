@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/06/12 02:14:17 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2008/06/16 13:33:33 joerg Exp $
 
 DISTNAME=	bfd-mdsetimage-1.15.1
 PKGREVISION=	1
@@ -10,6 +10,8 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Mdsetimage using libbfd, used for cross-building distributions
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+INSTALLATION_DIRS=	bin
 
 WRKSRC=		${WRKDIR}
 EXTRACT_ONLY=	# empty
@@ -29,9 +31,6 @@ do-extract:
 	@${MKDIR} ${WRKSRC}
 	@${CP} ${FILESDIR}/Makefile ${FILESDIR}/mdsetimage.8 ${FILESDIR}/mdsetimage.c \
 		${WRKSRC}
-
-pre-install:
-	@if [ ! -d ${PREFIX}/bin ]; then ${INSTALL_PROGRAM_DIR} ${PREFIX}/bin; fi
 
 .include "../../cross/binutils/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
