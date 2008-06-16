@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.25 2007/07/06 18:16:28 drochner Exp $
+$NetBSD: distinfo,v 1.25.6.1 2008/06/16 09:07:34 ghen Exp $
 
-SHA1 (freetype-2.3.5.tar.bz2) = 45695d44c74be31944d807526a7e69a818e4afd2
-RMD160 (freetype-2.3.5.tar.bz2) = 2a97cb1c3d93572c094d5d2890d12445ef2786d4
-Size (freetype-2.3.5.tar.bz2) = 1279861 bytes
+SHA1 (freetype-2.3.6.tar.bz2) = 611bae913e8a593449a4dc60e0bf3300abc4f974
+RMD160 (freetype-2.3.6.tar.bz2) = 8047e734804191856a941e19f6acf82047099d66
+Size (freetype-2.3.6.tar.bz2) = 1305717 bytes
