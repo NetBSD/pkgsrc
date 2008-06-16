@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/22 23:55:37 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/16 14:54:41 joerg Exp $
 #
 
 DISTNAME=	mrt-2.2.2a-Aug11
@@ -16,15 +16,16 @@ GNU_CONFIGURE=	yes
 
 PLIST_SRC=	${WRKSRC}/.PLIST_SRC
 
+INSTALLATION_DIRS=	sbin share/examples/mrt
+
 # nuke yet-to-be-ready directories, configure.in is written in a strange way
 post-extract:
 	(cd ${WRKSRC}/programs; ${RM} -fr route_tracker sospf srip)
 
 post-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mrt
 	${INSTALL_DATA} ${WRKSRC}/programs/*/*.conf \
-		${PREFIX}/share/examples/mrt
+		${DESTDIR}${PREFIX}/share/examples/mrt
 	(cd ${PREFIX}; ${FIND} share/examples/mrt -type f -print \
 		>> ${PLIST_SRC})
 	(cd ${PREFIX}; ${FIND} share/examples/mrt -type d -print | \
