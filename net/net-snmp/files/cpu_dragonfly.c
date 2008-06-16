@@ -24,6 +24,9 @@ void init_cpu_nlist( void ) {
     size_t len;
     char           descr[ SNMP_MAXBUF ];
 
+    cpu = netsnmp_cpu_get_byIdx( -1, 1 );
+    strcpy(cpu->name, "Overall CPU statistics");
+
     kinfo_get_cpus(&cpu_num);
     len = sizeof(descr);
     sysctlbyname("hw.model", descr, &len, NULL, 0);

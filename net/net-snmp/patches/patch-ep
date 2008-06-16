@@ -1,8 +1,8 @@
-$NetBSD: patch-ep,v 1.2 2007/02/05 12:06:16 adam Exp $
+$NetBSD: patch-ep,v 1.2.10.1 2008/06/16 08:51:43 ghen Exp $
 
---- snmplib/scapi.c.orig	2006-09-15 14:47:00.000000000 +0200
-+++ snmplib/scapi.c
-@@ -272,7 +272,7 @@ sc_generate_keyed_hash(const oid * autht
+--- snmplib/scapi.c.orig	2006-09-15 13:47:01.000000000 +0100
++++ snmplib/scapi.c	2008-06-12 13:58:35.000000000 +0100
+@@ -272,7 +272,7 @@
  
      u_char          buf[SNMP_MAXBUF_SMALL];
  #if  defined(NETSNMP_USE_OPENSSL) || defined(NETSNMP_USE_PKCS11)
@@ -11,3 +11,14 @@ $NetBSD: patch-ep,v 1.2 2007/02/05 12:06:16 adam Exp $
  #endif
  
      DEBUGTRACE;
+@@ -563,6 +563,10 @@
+     }
+ 
+ 
++    if (maclen != USM_MD5_AND_SHA_AUTH_LEN) {
++        QUITFUN(SNMPERR_GENERR, sc_check_keyed_hash_quit);
++    }
++    
+     /*
+      * Generate a full hash of the message, then compare
+      * the result with the given MAC which may shorter than
