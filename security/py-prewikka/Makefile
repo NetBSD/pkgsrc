@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/04/28 10:59:42 shannonjr Exp $
+# $NetBSD: Makefile,v 1.27 2008/06/16 15:34:30 joerg Exp $
 #
 
 DISTNAME=		prewikka-${VERSION}
@@ -51,7 +51,7 @@ FILES_SUBST+=	PREWIKKA_USER=${PREWIKKA_USER:Q}
 
 MAKE_ENV+=	EXAMPLEDIR=share/examples/${PKGBASE}
 
-INSTALLATION_DIRS+=	${PREFIX}/share/examples/${PKGBASE}
+INSTALLATION_DIRS+=	share/examples/${PKGBASE} sbin
 CONF_FILES+=	${PREFIX}/share/examples/${PKGBASE}/prewikka.conf ${PKG_SYSCONFDIR}/prewikka.conf
 
 pre-patch:
@@ -61,7 +61,7 @@ post-build:
 	cd ${WRKSRC} && env ${MAKE_ENV} ${CC} ${CFLAGS} -o runPrewikka runPrewikka.c
 
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/runPrewikka ${PREFIX}/sbin/runPrewikka
+	${INSTALL_PROGRAM} ${WRKSRC}/runPrewikka ${DESTDIR}${PREFIX}/sbin/runPrewikka
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
