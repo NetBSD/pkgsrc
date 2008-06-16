@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/06/12 02:14:43 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2008/06/16 13:21:49 joerg Exp $
 #
 
 DISTNAME=	papersize-1.0.8
@@ -38,9 +38,9 @@ do-extract:
 	cd ${FILESDIR} && cp setpapersize getpapersize ${WRKSRC}/.
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/setpapersize ${PREFIX}/bin/setpapersize
-	${INSTALL_SCRIPT} ${WRKSRC}/getpapersize ${PREFIX}/bin/getpapersize
-	${INSTALL_MAN} ${FILESDIR}/getpapersize.1 ${PREFIX}/${PKGMANDIR}/man1/getpapersize.1
-	${INSTALL_MAN} ${FILESDIR}/setpapersize.1 ${PREFIX}/${PKGMANDIR}/man1/setpapersize.1
+	${INSTALL_SCRIPT} ${WRKSRC}/setpapersize ${DESTDIR}${PREFIX}/bin/setpapersize
+	${INSTALL_SCRIPT} ${WRKSRC}/getpapersize ${DESTDIR}${PREFIX}/bin/getpapersize
+	${INSTALL_MAN} ${FILESDIR}/getpapersize.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/getpapersize.1
+	${INSTALL_MAN} ${FILESDIR}/setpapersize.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/setpapersize.1
 
 .include "../../mk/bsd.pkg.mk"
