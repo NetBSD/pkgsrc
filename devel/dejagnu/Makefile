@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/12/08 13:54:34 obache Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/16 13:45:55 joerg Exp $
 #
 
 DISTNAME=	dejagnu-1.4.4
@@ -19,6 +19,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 INSTALL_TARGET=	install install-doc
 
 post-install:
-		chmod -x ${DESTDIR}${PREFIX}/share/dejagnu/runtest.exp
+	chmod -x ${DESTDIR}${PREFIX}/share/dejagnu/runtest.exp
 
 .include "../../mk/bsd.pkg.mk"
