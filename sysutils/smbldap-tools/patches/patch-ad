@@ -1,0 +1,31 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/06/16 16:04:25 taca Exp $
+
+--- smbldap-passwd.orig	2008-04-22 17:13:29.000000000 +0900
++++ smbldap-passwd
+@@ -99,6 +99,17 @@ if ($< != 0) {
+ 	system "/bin/stty echo" if (-t STDIN);
+ 	print "\n";
+ 
++	{			# Check if user dn is stored in subtree.
++	    my $test_conn = connect_ldap_master();
++	    my $usersdn = &get_user_dn($user);
++	    if ($usersdn && $usersdn =~ /^dn: uid=(.+?)(,(.*))?$config{usersdn}/) {
++		my ($uid,$subtree) = ("","");
++		$uid = $1; $subtree = defined($3)?$3 : "";
++		$config{usersdn} = $subtree . $config{usersdn};
++	    }
++	    $test_conn->unbind;
++	}
++
+ 	$config{masterDN}="uid=$user,$config{usersdn}";
+ 	$config{masterPw}="$oldpass";
+ 	$ldap_master=connect_ldap_master();
+@@ -228,7 +239,7 @@ if ( $samba and $update_samba_passwd ) {
+ 		    my $winmagic = 2147483647;
+ 		    my $valacctflags = "[U]";
+ 		    push(@mods, 'sambaPwdMustChange' => 0);
+-		    push(@mods, 'sambaPwdLastSet' => 0);
++		    push(@mods, 'sambaPwdLastSet' => $date);
+ 		    push(@mods, 'sambaAcctFlags' => $valacctflags);
+ 		}
+ 	# Let's change nt/lm passwords
