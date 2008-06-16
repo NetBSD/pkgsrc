@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1 2007/12/08 13:54:35 obache Exp $
+$NetBSD: patch-ac,v 1.2 2008/06/16 13:45:55 joerg Exp $
 
 --- doc/Makefile.in.orig	2004-01-27 07:26:35.000000000 +0000
 +++ doc/Makefile.in
@@ -11,3 +11,12 @@ $NetBSD: patch-ac,v 1.1 2007/12/08 13:54:35 obache Exp $
  pkglibdir = $(libdir)/@PACKAGE@
  pkgincludedir = $(includedir)/@PACKAGE@
  top_builddir = ..
+@@ -369,7 +369,7 @@ install-doc: $(TARGETS)
+ 	$(INSTALL_DATA) overview.rtf $(DESTDIR)$(pkgdatadir)/dejagnu.rtf
+ 	$(INSTALL_DATA) overview.ps $(DESTDIR)$(pkgdatadir)/dejagnu.ps
+ 	$(INSTALL_DATA) overview.pdf $(DESTDIR)$(pkgdatadir)/dejagnu.pdf
+-	$(INSTALL_DATA) $(srcdir)/runtest.1 $(mandir)/man1/
++	$(INSTALL_DATA) $(srcdir)/runtest.1 $(DESTDIR)$(mandir)/man1/
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
