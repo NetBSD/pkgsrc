@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/06/16 10:50:15 adrianp Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/16 10:52:33 adrianp Exp $
 
 DISTNAME=	Mail-Box-2.082
 PKGNAME=	p5-${DISTNAME}
@@ -17,7 +17,7 @@ DEPENDS+=	p5-MIME-Types>=1.004:../../mail/p5-MIME-Types
 DEPENDS+=	p5-URI>=1.23:../../www/p5-URI
 DEPENDS+=	p5-Test-Simple>=0.47:../../devel/p5-Test-Simple
 DEPENDS+=	p5-User-Identity>=0.07:../../mail/p5-User-Identity
-DEPENDS+=	p5-MailTools-[0-9]*:../../mail/p5-MailTools
+DEPENDS+=	p5-MailTools>=2.01:../../mail/p5-MailTools
 DEPENDS+=	p5-MIME-tools-[0-9]*:../../mail/p5-MIME-tools
 DEPENDS+=	p5-Digest-HMAC-[0-9]*:../../security/p5-Digest-HMAC
 DEPENDS+=	p5-File-Remove-[0-9]*:../../sysutils/p5-File-Remove
