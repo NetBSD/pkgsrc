@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2008/05/24 21:45:20 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/17 00:42:14 abs Exp $
 
 DISTNAME=	xdm-1.1.6
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=app/}
 EXTRACT_SUFX=	.tar.bz2
@@ -32,6 +33,24 @@ CFLAGS+=	-fno-strict-aliasing
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-random-device=/dev/urandom
+.endif
+
+# The following forces the X server to start on the 5th virtual terminal.
+# This is suboptimal but matches the defaults for the xdm configuration,
+# which should work for most installations.  See the definition of
+# DEFAULTVT in xsrc/xfree/xc/programs/xdm/config/Imakefile.
+#
+# If we do not do this, we hit a very annoying and obscure problem: during
+# system startup, xdm starts before init spawns gettys.  If the X server
+# is started before init spawns the gettys (which easily happens on slow
+# machines), it grabs the first virtual terminal (instead of the first
+# "free" one).  Later on, when the first getty is started, it grabs the
+# same terminal X used (the first one).  As a result, only one of them
+# will receive key presses.  And on slow machines, X will have lost access
+# to the keyboard.
+.if (${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD") && \
+    (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64")
+CONFIGURE_ARGS+=	--with-default-vt=vt05
 .endif
 
 .include "options.mk"
