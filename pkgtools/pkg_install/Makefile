@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.149 2008/04/03 14:22:26 jlam Exp $
+# $NetBSD: Makefile,v 1.149.2.1 2008/06/17 14:58:14 tron Exp $
 
 # Notes to package maintainers:
 #
@@ -53,10 +53,12 @@ CHECK_PERMS=		no
 # from an older pkg_install might required features of the new program. 
 #
 USE_NATIVE_GCC=		yes
+.if exists(${WRKSRC}/add/pkg_add)
 PKG_ADD_CMD=		${WRKSRC}/add/pkg_add
 PKG_CREATE_CMD=		${WRKSRC}/create/pkg_create
 PKG_DELETE_CMD=		${WRKSRC}/delete/pkg_delete
 PKG_INFO_CMD=		${WRKSRC}/info/pkg_info
+.endif
 
 CPPFLAGS+=		-D_LARGEFILE_SOURCE -D_LARGE_FILES
 CPPFLAGS+=		-D_FILE_OFFSET_BITS=64
