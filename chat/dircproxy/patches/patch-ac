@@ -1,15 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2007/03/17 13:47:08 rillig Exp $
+$NetBSD: patch-ac,v 1.2 2008/06/17 12:53:54 tron Exp $
 
-The ?: operator returns an rvalue, not an lvalue.
-
---- src/dcc_net.c.orig	2001-12-21 21:15:55.000000000 +0100
-+++ src/dcc_net.c	2007-03-17 14:44:21.000000000 +0100
-@@ -364,7 +364,7 @@ int dccnet_expunge_proxies(void) {
-       n = p->next;
-       _dccnet_free(p);
+--- src/irc_server.c.orig	2006-10-07 22:07:08.000000000 +0100
++++ src/irc_server.c
+@@ -1155,7 +1155,7 @@ static int _ircserver_gotmsg(struct ircp
+       
+         if (!strcmp(cmsg.cmd, "ACTION")) {
+           irclog_log(p, IRC_LOG_ACTION, logdest, msg.src.orig,
+-                     "%s", cmsg.paramstarts[0]);
++                     "%s", (cmsg.paramstarts != NULL) ?  cmsg.paramstarts[0]: "none");
  
--      p = (l ? l->next : proxies) = n;
-+      p = *(l ? &(l->next) : &(proxies)) = n;
-     } else {
-       l = p;
-       p = p->next;
+         } else if (!strcmp(cmsg.cmd, "DCC")
+                    && p->conn_class->dcc_proxy_incoming) {

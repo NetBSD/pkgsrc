@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2008/06/16 10:39:17 adrianp Exp $
+# $NetBSD: Makefile,v 1.139 2008/06/17 12:53:54 tron Exp $
 #
 
 COMMENT=	Communication programs
@@ -19,7 +19,6 @@ SUBDIR+=	cgiirc
 SUBDIR+=	climm
 SUBDIR+=	dccserver
 SUBDIR+=	dircproxy
-SUBDIR+=	dircproxy-devel
 SUBDIR+=	eggdrop
 SUBDIR+=	ejabberd
 SUBDIR+=	ekg
