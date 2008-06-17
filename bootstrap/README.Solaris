@@ -1,4 +1,4 @@
-$NetBSD: README.Solaris,v 1.7 2007/07/02 19:05:29 tnn Exp $
+$NetBSD: README.Solaris,v 1.8 2008/06/17 11:59:08 sketch Exp $
 
 You will need a working C compiler. Any version of gcc >2.8 should
 work, 2.95.x and 3.x have been tested. SunPro 5 and 8 have been
@@ -60,16 +60,20 @@ Sun ONE Studio 8:
 The corresponding 64-bit packages are also required to build 64-bit
 binaries and libraries.
 
-You should set PKGSRC_COMPILER=sunpro in /etc/mk.conf:
+To build 64-bit binaries, pass '--abi=64' to bootstrap, and also see the
+crle(1) man page to configure the runtime linking environment.
 
-	PKGSRC_COMPILER=sunpro
+pkgsrc defaults to finding the Sun compiler in /opt/SUNWspro.  If you use a
+different prefix, pass SUNWSPROBASE in the environment to bootstrap.  If 'cc'
+is not in your path, pass CC as well.  So, to build 64-bit Sun compiler
+bootstrap with a non-standard install:
 
-To build 64-bit binaries:
+	env CC=/opt/studio12/SUNWspro/bin/cc \
+	    SUNWSPROBASE=/opt/studio12/SUNWspro \
+	    ./bootstrap --abi=64
 
-	CFLAGS=		-xtarget=ultra -xarch=v9
-
-(also see the crle(1) man page to configure the runtime linking
-environment).
+When bootstrap is finished your default mk.conf will contain ABI and
+SUNWSPROBASE so you will not need to set these variables again.
 
 Whichever compiler you use, please ensure the compiler tools and
 your $prefix are in your PATH. This includes /usr/ccs/{bin,lib}
