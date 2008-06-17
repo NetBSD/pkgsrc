@@ -1,8 +1,0 @@
-$NetBSD: distinfo,v 1.7 2007/10/13 19:41:23 adrianp Exp $
-
-SHA1 (dircproxy-1.2.0-beta2.tar.bz) = 43ab3d1b7559fd34a315c50150eebedeb4ec48db
-RMD160 (dircproxy-1.2.0-beta2.tar.bz) = 3e8bf9e11fd46caa7fd90189faf51c9e5f37d369
-Size (dircproxy-1.2.0-beta2.tar.bz) = 314480 bytes
-SHA1 (patch-aa) = 59870074b86f1150f904e10269c654719b506f29
-SHA1 (patch-ab) = c0e8706c0f1bb7a2c981d1140d1b1deb105c601b
-SHA1 (patch-ag) = ad94320d493ea50603c90cd0c1e2499716496712
