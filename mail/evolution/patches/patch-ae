@@ -1,0 +1,62 @@
+$NetBSD: patch-ae,v 1.6.20.1 2008/06/17 17:36:45 tron Exp $
+
+--- calendar/gui/itip-utils.c.orig	2007-10-12 09:04:17.000000000 +0200
++++ calendar/gui/itip-utils.c
+@@ -176,50 +176,16 @@ get_attendee_if_attendee_sentby_is_user 
+ }
+ 
+ static char *
+-html_new_lines_for (char *string)
++html_new_lines_for (const char *string)
+ {
+-	char *html_string = (char *) malloc (sizeof (char)* (3500));
+-	int length = strlen (string);
+-	int index = 0;
+-	char *index_ptr = string;
+-	char *temp = string;
++	gchar **lines;
++	gchar *joined;
+ 
+-	/*Find the first occurence*/
+-	index_ptr = strstr ((const char *)temp, "\n");
++	lines = g_strsplit_set (string, "\n", -1);
++	joined = g_strjoinv ("<br>", lines);
++	g_strfreev (lines);
+ 
+-	/*Doesn't occur*/
+-	if (index_ptr == NULL) {
+-		strcpy (html_string, (const char *)string);
+-		html_string[length] = '\0';
+-		return html_string;
+-	}
+-
+-	/*Split into chunks inserting <br> for \n */
+-	do{
+-		while (temp != index_ptr){
+-			html_string[index++] = *temp;
+-			temp++;
+-		}
+-		temp++; 
+-		
+-		html_string[index++] = '<';
+-		html_string[index++] = 'b';
+-		html_string[index++] = 'r';
+-		html_string[index++] = '>';
+-
+-		index_ptr = strstr ((const char *)temp, "\n");
+-
+-	} while (index_ptr);
+-
+-	/*Don't leave out the last chunk*/
+-	while (*temp != '\0'){
+-		html_string[index++] = *temp;
+-		temp++;
+-	}
+-		
+-	html_string[index] = '\0';
+-		
+-	return html_string;
++	return joined;
+ }
+ 
+ char *
