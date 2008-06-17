@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1289 2008/06/17 14:06:54 gdt Exp $
+$NetBSD: CHANGES-2008,v 1.1290 2008/06/17 14:08:27 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2146,3 +2146,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed chat/dircproxy-devel [tron 2008-06-17]
 	Updated chat/libotr to 3.2.0 [gdt 2008-06-17]
 	Updated chat/pidgin-otr to 3.2.0 [gdt 2008-06-17]
+	Updated devel/nasm to 2.02nb1 [tron 2008-06-17]
