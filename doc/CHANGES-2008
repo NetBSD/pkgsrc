@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1285 2008/06/16 16:06:23 taca Exp $
+$NetBSD: CHANGES-2008,v 1.1286 2008/06/17 00:02:45 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2141,3 +2141,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added chat/atheme version 3.0.4 [adrianp 2008-06-16]
 	Updated mail/p5-Mail-Box to 2.082 [adrianp 2008-06-16]
 	Added sysutils/smbldap-tools version 0.9.5 [taca 2008-06-16]
+	Updated wm/jwm to 2.0.1 [abs 2008-06-16]
