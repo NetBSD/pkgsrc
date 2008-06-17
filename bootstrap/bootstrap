@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.128 2008/06/11 12:47:07 sketch Exp $
+# $NetBSD: bootstrap,v 1.129 2008/06/17 11:38:52 sketch Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -70,6 +70,7 @@ usage="Usage: $0 "'
     [ --unprivileged | --ignore-user-check ]
     [ --preserve-path ]
     [ --compiler <compiler> ]
+    [ --abi [32|64] ]
     [ --mk-fragment <mk.conf> ]
     [ --binary-kit <tarball> ]
     [ --gzip-binary-kit <tarball> ]
@@ -369,6 +370,8 @@ while [ $# -gt 0 ]; do
 	--fetch-cmd)	fetch_cmd="$2"; shift ;;
 	--compiler=*)	compiler=`get_optarg "$1"` ;;
 	--compiler)	compiler="$2"; shift ;;
+	--abi=*)	abi=`get_optarg "$1"` ;;
+	--abi)		abi="$2"; shift ;;
 	--ignore-case-check) ignorecasecheck=yes ;;
 	--unprivileged | --ignore-user-check) unprivileged=yes ;;
 	--preserve-path) preserve_path=yes ;;
