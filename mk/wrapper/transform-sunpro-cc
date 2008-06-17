@@ -1,4 +1,4 @@
-# $NetBSD: transform-sunpro-cc,v 1.29 2007/11/28 13:03:56 rillig Exp $
+# $NetBSD: transform-sunpro-cc,v 1.30 2008/06/17 12:58:28 sketch Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -110,6 +110,7 @@ case $arg in
 -fast		) transform_to_and_split "-fast -xnolibmopt" ;;
 
 # Pass through those options that SunPro understands.
+-#*		|\
 -Bdynamic	|\
 -Bstatic	|\
 -fd		|\
@@ -126,8 +127,14 @@ case $arg in
 -ftrap*		|\
 -G		|\
 -h*.so.*	|\
+-m32		|\
+-m64		|\
+-mcpu=*		|\
 -mt		|\
+-S		|\
 -template=*	|\
+-V		|\
+-v		|\
 -xarch=*	|\
 -xcode=*	|\
 -xdepend	|\
