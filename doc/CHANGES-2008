@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1291 2008/06/17 21:25:55 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1292 2008/06/17 21:29:22 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2148,3 +2148,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/pidgin-otr to 3.2.0 [gdt 2008-06-17]
 	Updated devel/nasm to 2.02nb1 [tron 2008-06-17]
 	Updated www/horde to 3.2.1 [adrianp 2008-06-17]
+	Updated mail/turba to 2.2.1 [adrianp 2008-06-17]
