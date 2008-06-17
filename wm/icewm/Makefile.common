@@ -1,6 +1,7 @@
-# $NetBSD: Makefile.common,v 1.62 2008/06/16 14:55:03 hauke Exp $
+# $NetBSD: Makefile.common,v 1.63 2008/06/17 08:32:41 hauke Exp $
 
 DISTNAME=		icewm-1.2.35
+PKGREVISION=		1
 CATEGORIES=		x11 wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=icewm/}
 
@@ -34,10 +35,6 @@ CONFIGURE_ARGS+=	--disable-xinerama
 MAKE_FLAGS+=		LOCDIR=${PREFIX}/${PKGLOCALEDIR}/locale
 
 PKG_SYSCONFSUBDIR=	icewm
-
-.if ${OPSYS} == "FreeBSD" || ${OPSYS} == "NetBSD" || ${OPSYS} == "OpenBSD"
-CXXFLAGS+=		-DSTART_PIXMAP="\"bsd-daemon.xpm\""
-.endif
 
 .if ${OPSYS} == "NetBSD" && (!exists(/usr/include/machine/apmvar.h) || \
 	(${MACHINE_ARCH} == "sparc64" && !exists(/usr/include/sparc/apmvar.h)))
