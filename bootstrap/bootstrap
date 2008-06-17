@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.129 2008/06/17 11:38:52 sketch Exp $
+# $NetBSD: bootstrap,v 1.130 2008/06/17 11:50:45 sketch Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -831,6 +831,10 @@ fi
 if [ "$compiler" != "" ]; then
 	echo "PKGSRC_COMPILER=	$compiler" >> ${TARGET_MKCONF}
 fi
+if [ -n "$SUNWSPROBASE" ]; then
+	echo "SUNWSPROBASE=		$SUNWSPROBASE" >> ${TARGET_MKCONF}
+fi
+echo "" >> ${TARGET_MKCONF}
 
 # enable unprivileged builds if not root
 if [ "$unprivileged" = "yes" ]; then
