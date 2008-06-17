@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7333 2008/06/17 00:02:45 abs Exp $
+$NetBSD: TODO,v 1.7334 2008/06/17 09:12:20 obache Exp $
 
 Suggested new packages
 ======================
@@ -1239,6 +1239,7 @@ Suggested package updates
 	o statist-1.3.0
 	o stella-2.6.1
 	o stlport-4.6.2
+	o strace-4.5.16
 	o stratagus-2.2.2
 	o streamripper-1.63.0
 	o subtitleripper-0.3.4
