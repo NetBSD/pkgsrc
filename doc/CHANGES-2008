@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1290 2008/06/17 14:08:27 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1291 2008/06/17 21:25:55 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2147,3 +2147,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/libotr to 3.2.0 [gdt 2008-06-17]
 	Updated chat/pidgin-otr to 3.2.0 [gdt 2008-06-17]
 	Updated devel/nasm to 2.02nb1 [tron 2008-06-17]
+	Updated www/horde to 3.2.1 [adrianp 2008-06-17]
