@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1287 2008/06/17 12:56:46 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1288 2008/06/17 13:58:18 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2144,3 +2144,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated wm/jwm to 2.0.1 [abs 2008-06-16]
 	Updated chat/dircproxy to 1.2.0beta2nb1 [tron 2008-06-17]
 	Removed chat/dircproxy-devel [tron 2008-06-17]
+	Updated chat/libotr to 3.2.0 [gdt 2008-06-17]
