@@ -1,28 +1,32 @@
-# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:16 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/17 12:53:54 tron Exp $
 
-DISTNAME=	dircproxy-1.0.5
-PKGREVISION=	2
+DISTNAME=	dircproxy-1.2.0-beta2
+PKGNAME=	${DISTNAME:S/-beta/beta/}
+PKGREVISION=	1
 CATEGORIES=	chat
-MASTER_SITES=	ftp://ftp.netsplit.com/pub/dircproxy/stable/ \
-		http://dircproxy.securiweb.net/pub/1.0/
+MASTER_SITES=	http://dircproxy.securiweb.net/
+EXTRACT_SUFX=	.tar.bz
 
-MAINTAINER=	sb125499@ohiou.edu
+MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://dircproxy.securiweb.net/
-COMMENT=	Detachable internet relay chat proxy server
+COMMENT=	Detachable internet relay chat proxy server (devel version)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		perl:run
 
-CONFLICTS=		dircproxy-1.1.[0-9]*
+.include "options.mk"
 
-REPLACE_PERL=		contrib/log.pl contrib/privmsg-log.pl
+CONFLICTS=		dircproxy-1.[0-1].[0-9]*
+
+REPLACE_PERL+=		contrib/log.pl contrib/privmsg-log.pl
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 
 EGDIR=			${PREFIX}/share/examples/dircproxy
-CONF_FILES=		${EGDIR}/dircproxyrc ${PKG_SYSCONFDIR}/dircproxyrc
+CONF_FILES=		${EGDIR:Q}/dircproxyrc.sample \
+			${PKG_SYSCONFDIR:Q}/dircproxyrc
 RCD_SCRIPTS=		dircproxy
 
 .include "../../mk/bsd.pkg.mk"
