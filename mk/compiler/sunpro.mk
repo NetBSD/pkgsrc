@@ -1,4 +1,4 @@
-# $NetBSD: sunpro.mk,v 1.43 2007/11/30 16:55:28 rhaen Exp $
+# $NetBSD: sunpro.mk,v 1.44 2008/06/17 11:23:48 sketch Exp $
 #
 # This is the compiler definition for the SUNWspro C compiler.
 #
@@ -72,13 +72,6 @@ _LINKER_RPATH_FLAG=	-R
 # This is transformed by the compiler wrapper to "-R".
 _COMPILER_RPATH_FLAG=	-Wl,-R
 
-# SunPro compiler must be passed certain flags to compile/link 64-bit code.
-.if ${MACHINE_ARCH} == "sparc"
-_COMPILER_ABI_FLAG.64=	-xtarget=ultra -xarch=v9
-.else
-_COMPILER_ABI_FLAG.64= -xarch=amd64
-.endif
-
 # XXX: What about the versions of the other compilers? Fortran and C++?
 # XXX: should be moved to compiler.mk.
 .if exists(${CCPATH})
@@ -87,6 +80,15 @@ CC_VERSION!=		${CCPATH} -V 2>&1 | ${GREP} '^cc'
 .else
 CC_VERSION_STRING?=	${CC_VERSION}
 CC_VERSION?=		cc: Sun C
+.endif
+
+# SunPro compiler must be passed certain flags to compile/link 64-bit code.
+.if !empty(CC_VERSION:M5.9) 
+_COMPILER_ABI_FLAG.64= -m64
+.elif ${MACHINE_ARCH} == "sparc"
+_COMPILER_ABI_FLAG.64=	-xtarget=ultra -xarch=v9
+.else
+_COMPILER_ABI_FLAG.64= -xarch=amd64
 .endif
 
 # _LANGUAGES.<compiler> is ${LANGUAGES.<compiler>} restricted to the
