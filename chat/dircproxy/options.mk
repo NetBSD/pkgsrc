@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2006/02/19 15:47:35 adrianp Exp $
+# $NetBSD: options.mk,v 1.1 2008/06/17 12:53:54 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dircproxy
 PKG_SUPPORTED_OPTIONS=	ssl debug
