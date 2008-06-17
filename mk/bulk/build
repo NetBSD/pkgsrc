@@ -1,5 +1,5 @@
 #!/bin/sh
-# $NetBSD: build,v 1.103 2008/01/04 15:49:07 rillig Exp $
+# $NetBSD: build,v 1.103.2.1 2008/06/17 14:58:14 tron Exp $
 
 #
 # Copyright (c) 1999, 2000 Hubert Feyrer <hubertf@NetBSD.org>
@@ -232,8 +232,7 @@ check_tools () {
 	  echo "build> Updating pkgtools"
 	  ( cd "${pkgsrc_dir}/pkgtools/pkg_install"	\
 	    && ${BMAKE} clean 				\
-	    && ${BMAKE} install 			\
-	    && ${BMAKE} clean
+	    && ${BMAKE} update
 	  ) || die "Could not update the package tools."
 	}
 }
