@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.130 2008/06/17 11:50:45 sketch Exp $
+# $NetBSD: bootstrap,v 1.131 2008/06/17 12:11:59 sketch Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -164,6 +164,11 @@ EOF
 get_abi()
 {
 	abi_opsys=$@
+
+	if [ -n "$abi" ]; then
+		die "ERROR: $abi_opsys has special ABI handling, --abi not supported (yet)."
+	fi
+
 	case "$abi_opsys" in
 	IRIX)
 		if [ `uname -r` -ge 6 ]; then
