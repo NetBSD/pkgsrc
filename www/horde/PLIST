@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/05/26 12:52:51 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.18 2008/06/17 21:25:38 adrianp Exp $
 share/doc/horde/CHANGES
 share/doc/horde/CODING_STANDARDS
 share/doc/horde/CONTRIBUTING
@@ -258,6 +258,7 @@ share/horde/lib/Horde/Form/Renderer.php
 share/horde/lib/Horde/Form/Type/tableset.php
 share/horde/lib/Horde/Group.php
 share/horde/lib/Horde/Group/hooks.php
+share/horde/lib/Horde/Group/kolab.php
 share/horde/lib/Horde/Group/ldap.php
 share/horde/lib/Horde/Group/mock.php
 share/horde/lib/Horde/Group/sql.php
@@ -309,6 +310,7 @@ share/horde/lib/Horde/Kolab/XML.php
 share/horde/lib/Horde/Kolab/XML/contact.php
 share/horde/lib/Horde/Kolab/XML/distributionlist.php
 share/horde/lib/Horde/Kolab/XML/event.php
+share/horde/lib/Horde/Kolab/XML/hprefs.php
 share/horde/lib/Horde/Kolab/XML/note.php
 share/horde/lib/Horde/Kolab/XML/task.php
 share/horde/lib/Horde/LDAP.php
@@ -418,6 +420,7 @@ share/horde/lib/Horde/Prefs/UI.php
 share/horde/lib/Horde/Prefs/file.php
 share/horde/lib/Horde/Prefs/imsp.php
 share/horde/lib/Horde/Prefs/kolab.php
+share/horde/lib/Horde/Prefs/kolab_imap.php
 share/horde/lib/Horde/Prefs/ldap.php
 share/horde/lib/Horde/Prefs/session.php
 share/horde/lib/Horde/Prefs/sql.php
@@ -501,19 +504,12 @@ share/horde/lib/Horde/Text/Filter/environment.php
 share/horde/lib/Horde/Text/Filter/highlightquotes.php
 share/horde/lib/Horde/Text/Filter/html2text.php
 share/horde/lib/Horde/Text/Filter/linkurls.php
-share/horde/lib/Horde/Text/Filter/rst.php
 share/horde/lib/Horde/Text/Filter/simplemarkup.php
 share/horde/lib/Horde/Text/Filter/space2html.php
 share/horde/lib/Horde/Text/Filter/tabs2spaces.php
 share/horde/lib/Horde/Text/Filter/text2html.php
 share/horde/lib/Horde/Text/Filter/words.php
 share/horde/lib/Horde/Text/Filter/xss.php
-share/horde/lib/Horde/Text/Rst.php
-share/horde/lib/Horde/Text/Rst/Formatter.php
-share/horde/lib/Horde/Text/Rst/Formatter/Html.php
-share/horde/lib/Horde/Text/Rst/Parser.php
-share/horde/lib/Horde/Text/Rst/Parser/Node.php
-share/horde/lib/Horde/Text/Rst/Parser/State.php
 share/horde/lib/Horde/Text/Textile.php
 share/horde/lib/Horde/Token.php
 share/horde/lib/Horde/Token/file.php
@@ -835,12 +831,12 @@ share/horde/scripts/upgrades/2006-06-29_horde_prefs_indexes.sql
 share/horde/scripts/upgrades/3.0_to_3.1.mysql.sql
 share/horde/scripts/upgrades/3.0_to_3.1.oci8.sql
 share/horde/scripts/upgrades/3.0_to_3.1.sql
-share/horde/scripts/upgrades/3.1_to_${PKGVERSION}.msde.sql
-share/horde/scripts/upgrades/3.1_to_${PKGVERSION}.mysql.sql
-share/horde/scripts/upgrades/3.1_to_${PKGVERSION}.oci8.sql
-share/horde/scripts/upgrades/3.1_to_${PKGVERSION}.pgsql.sql
-share/horde/scripts/upgrades/3.1_to_${PKGVERSION}.sql
-share/horde/scripts/upgrades/3.1_to_${PKGVERSION}.sybase.sql
+share/horde/scripts/upgrades/3.1_to_3.2.msde.sql
+share/horde/scripts/upgrades/3.1_to_3.2.mysql.sql
+share/horde/scripts/upgrades/3.1_to_3.2.oci8.sql
+share/horde/scripts/upgrades/3.1_to_3.2.pgsql.sql
+share/horde/scripts/upgrades/3.1_to_3.2.sql
+share/horde/scripts/upgrades/3.1_to_3.2.sybase.sql
 share/horde/scripts/upgrades/convert_datatree_groups_to_sql.php
 share/horde/scripts/upgrades/convert_datatree_perms_to_sql.php
 share/horde/scripts/upgrades/migrate_user_categories.php
@@ -4056,9 +4052,6 @@ share/horde/util/icon_browser.php
 @dirrm share/horde/lib/Horde/Token
 @exec ${MKDIR} %D/share/horde/lib/Horde/Text/tests
 @dirrm share/horde/lib/Horde/Text/tests
-@dirrm share/horde/lib/Horde/Text/Rst/Parser
-@dirrm share/horde/lib/Horde/Text/Rst/Formatter
-@dirrm share/horde/lib/Horde/Text/Rst
 @dirrm share/horde/lib/Horde/Text/Filter
 @dirrm share/horde/lib/Horde/Text
 @dirrm share/horde/lib/Horde/SpellChecker
@@ -4131,7 +4124,6 @@ share/horde/util/icon_browser.php
 @dirrm share/horde/lib/File
 @dirrm share/horde/lib/Block/feed
 @dirrm share/horde/lib/Block
-@dirrm share/horde/lib/docs
 @dirrm share/horde/lib
 @dirrm share/horde/js/src
 @dirrm share/horde/js
