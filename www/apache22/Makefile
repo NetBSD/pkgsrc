@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2008/06/12 14:12:19 tron Exp $
+# $NetBSD: Makefile,v 1.27 2008/06/18 21:38:00 tron Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	apache-${APACHE_VERSION}
-PKGREVISION=	1
 CATEGORIES=	www
 
 HOMEPAGE=	http://httpd.apache.org/
@@ -27,6 +26,7 @@ CONFIGURE_ENV+=		ac_cv_path_RSYNC=/nonexistent
 CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}
 CONFIGURE_ARGS+=	--with-apr-util=${BUILDLINK_PREFIX.apr-util}
 
+CHECK_INTERPRETER_SKIP+=	lib/httpd/httpd.exp
 CHECK_PORTABILITY_SKIP+=	srclib/pcre/* \
 				srclib/apr-util/* \
 				srclib/apr/*
@@ -264,6 +264,7 @@ post-install:
 		${CHOWN} ${MANOWN}:${MANGRP} ${PREFIX}/${PKGMANDIR}/$$file; \
 	done
 
-	[ ! -f ${PREFIX}/sbin/suexec ] || ${CHMOD} -w ${PREFIX}/sbin/suexec
+	${CHMOD} -x ${PREFIX}/sbin/envvars-std
+	${TEST} ! -f ${PREFIX}/sbin/suexec || ${CHMOD} -w ${PREFIX}/sbin/suexec
 
 .include "../../mk/bsd.pkg.mk"
