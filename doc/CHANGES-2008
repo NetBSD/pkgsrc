@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1292 2008/06/17 21:29:22 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1293 2008/06/18 21:30:58 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2149,3 +2149,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/nasm to 2.02nb1 [tron 2008-06-17]
 	Updated www/horde to 3.2.1 [adrianp 2008-06-17]
 	Updated mail/turba to 2.2.1 [adrianp 2008-06-17]
+	Updated emulators/gxemul to 0.4.6.5 [minskim 2008-06-18]
