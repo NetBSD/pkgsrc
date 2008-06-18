@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2008/06/18 22:21:13 gdt Exp $
+
+--- src/gen/db/dbdir.py.orig	2008-05-17 16:14:29.000000000 -0400
++++ src/gen/db/dbdir.py
+@@ -36,7 +36,7 @@ import time
+ from types import InstanceType
+ 
+ from gettext import gettext as _
+-from bsddb import dbshelve, db
++from bsddb3 import dbshelve, db
+ import logging
+ 
+ _LOG = logging.getLogger(".GrampsDb")

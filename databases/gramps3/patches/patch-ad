@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/06/18 22:21:13 gdt Exp $
+
+--- src/gen/db/base.py.orig	2008-05-17 16:14:29.000000000 -0400
++++ src/gen/db/base.py
+@@ -36,7 +36,7 @@ import random
+ import locale
+ import os
+ from sys import maxint
+-from bsddb import db
++from bsddb3 import db
+ from gettext import gettext as _
+ 
+ import logging

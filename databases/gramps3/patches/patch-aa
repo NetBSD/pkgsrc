@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/06/18 22:21:13 gdt Exp $
+
+--- src/Editors/_EditFamily.py.orig	2008-05-17 16:14:26.000000000 -0400
++++ src/Editors/_EditFamily.py
+@@ -25,7 +25,7 @@
+ # python modules
+ #
+ #-------------------------------------------------------------------------
+-from bsddb import db as bsddb_db
++from bsddb3 import db as bsddb_db
+ from gettext import gettext as _
+ from DdTargets import DdTargets
+ import pickle
