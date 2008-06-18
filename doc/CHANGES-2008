@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1294 2008/06/18 21:38:48 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1295 2008/06/18 22:21:50 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2151,3 +2151,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/turba to 2.2.1 [adrianp 2008-06-17]
 	Updated emulators/gxemul to 0.4.6.5 [minskim 2008-06-18]
 	Updated www/apache22 to 2.2.9 [tron 2008-06-18]
+	Updated databases/gramps3 to 3.0.1 [gdt 2008-06-18]
