@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2008/06/07 17:28:11 riz Exp $
+# $NetBSD: Makefile,v 1.43 2008/06/18 11:12:54 wiz Exp $
 
 DISTNAME=		vnc-3.3.3r2
 PKGNAME=		vnc-3.3.3.2
@@ -12,7 +12,7 @@ PATCH_SITES=		ftp://ftp.kame.net/pub/kame/misc/
 PATCHFILES=		vnc-3.3.3r2-v6-20010421.diff.gz
 PATCH_DIST_STRIP=	-p1
 
-MAINTAINER=		packages@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.uk.research.att.com/vnc/
 COMMENT=		Display X and Win32 desktops on remote X/Win32/Java displays
 
