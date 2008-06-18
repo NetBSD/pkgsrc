@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.42 2008/05/24 19:41:48 tnn Exp $
+# $NetBSD: sites.mk,v 1.43 2008/06/18 18:40:36 heinz Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -169,18 +169,27 @@ MASTER_SITE_XEMACS+=    \
 
 MASTER_SITE_APACHE+=    \
 	http://www.apache.org/dist/ \
-	http://mirrors.ccs.neu.edu/Apache/dist/ \
-	http://apache.planetmirror.com.au/dist/ \
-	http://www.ibiblio.org/pub/mirrors/apache/ \
+	http://www.eu.apache.org/dist/ \
+	http://apache.mirror.aussiehq.net.au/ \
 	http://apache.oregonstate.edu/ \
-	http://apache.secsup.org/dist/ \
-	http://apache.osuosl.org/ \
+	http://www.ibiblio.org/pub/mirrors/apache/ \
+	http://mirror.nyi.net/apache/ \
+	http://apache.mirrors.tds.net/ \
+	http://ftp.unicamp.br/pub/apache/ \
 	http://www.mirrorservice.org/sites/ftp.apache.org/ \
-	ftp://ftp.ccs.neu.edu/net/mirrors/Apache/dist/ \
+	http://gd.tuwien.ac.at/infosys/servers/http/apache/dist/ \
+	http://www.meisei-u.ac.jp/mirror/apache/dist/ \
+	http://ftp.twaren.net/Unix/Web/apache/ \
+	http://ftp.cuhk.edu.hk/pub/packages/apache.org/ \
 	ftp://ftp.planetmirror.com.au/pub/apache/dist/ \
-	ftp://www.ibiblio.org/pub/mirrors/apache/ \
 	ftp://ftp.oregonstate.edu/pub/apache/ \
-	ftp://apache.secsup.org/pub/apache/dist/
+	ftp://www.ibiblio.org/pub/mirrors/apache/ \
+	ftp://mirror.nyi.net/apache/ \
+	ftp://apache.mirrors.tds.net/pub/apache.org/ \
+	ftp://ftp.mirrorservice.org/sites/ftp.apache.org/ \
+	ftp://gd.tuwien.ac.at/pub/infosys/servers/http/apache/dist/ \
+	ftp://ftp.meisei-u.ac.jp/pub/www/apache/dist/ \
+	ftp://ftp.twaren.net/Unix/Web/apache/
 
 MASTER_SITE_MYSQL+=	\
 	ftp://ftp.fi.muni.cz/pub/mysql/Downloads/	\
