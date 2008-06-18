@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/05/14 20:25:16 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/06/18 20:29:32 wiz Exp $
 bin/abc2ly
 bin/convert-ly
 bin/etf2ly
@@ -19,7 +19,6 @@ man/man1/lilypond-invoke-editor.1
 man/man1/lilypond.1
 man/man1/midi2ly.1
 man/man1/musicxml2ly.1
-share/emacs/site-lisp/lilypond-words.el
 share/lilypond/${PKGVERSION}/dvips/ps
 share/lilypond/${PKGVERSION}/fonts/otf/CenturySchL-Bold.otf
 share/lilypond/${PKGVERSION}/fonts/otf/CenturySchL-BoldItal.otf
