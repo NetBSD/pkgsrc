@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/06/18 22:21:13 gdt Exp $
+
+--- src/GrampsLogger/_ErrorReportAssistant.py.orig	2008-05-17 16:15:03.000000000 -0400
++++ src/GrampsLogger/_ErrorReportAssistant.py
+@@ -2,7 +2,7 @@ from gettext import gettext as _
+ import Assistant
+ import const
+ import gtk
+-import sys, os,bsddb
++import sys, os, bsddb3
+ 
+ 
+ 
+@@ -99,7 +99,7 @@ class ErrorReportAssistant:
+                "OS: %s\n"\
+                "Distribution: %s\n"\
+                % (str(sys.version).replace('\n',''),
+-                  str(bsddb.__version__),
++                  str(bsddb3.__version__),
+                   str(const.VERSION),
+                   os.environ.get('LANG',''),
+                   operatingsystem,
