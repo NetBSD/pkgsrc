@@ -1,10 +1,29 @@
-$NetBSD: README.Linux,v 1.3 2005/02/16 11:02:50 grant Exp $
+$NetBSD: README.Linux,v 1.4 2008/06/18 21:37:31 dmcmahill Exp $
 
 Please read the general README file as well.
+
+==========================================================================
+
+Some versions of Linux (RHEL3 Update 2 for i386 for example) have a
+/usr/lib/libacl.la libtool archive file that lists /lib/libattr.la as a
+dependency.  However, libattr.la does not exist in /lib/libattr.la.  If
+this is the case, the bootstrap will fail with
+
+grep: /lib/libattr.la: No such file or directory
+/usr/pkgsrc/bootstrap/work/wrk/pkgtools/pkg_install/work/.tools/bin/sed: can't read /lib/libattr.la: No such file or directory
+libtool: link: `/lib/libattr.la' is not a valid libtool archive
+
+The soltion is to copy /usr/lib/libattr.la to /lib/libattr.la with:
+
+cp -p /usr/lib/libattr.la /lib
+
+==========================================================================
 
 Some versions of Linux (for example Debian GNU/Linux) need either libtermcap
 or libcurses (libncurses).  Installing the distributions libncurses-dev
 package (or equivalent) should fix the problem.
+
+==========================================================================
 
 pkgsrc supports both gcc (GNU Compiler Collection) and icc (Intel C++
 Compiler). gcc is the default. icc 8.0 and 8.1 on i386 have been tested.
