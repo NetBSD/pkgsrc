@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7337 2008/06/18 21:38:48 tron Exp $
+$NetBSD: TODO,v 1.7338 2008/06/18 22:23:55 gdt Exp $
 
 Suggested new packages
 ======================
@@ -685,7 +685,6 @@ Suggested package updates
 	o gpsdrive-2.09
 	o grace-5.1.22 [pkg/38884]
 	o gramofile-1.6P
-	o gramps-3.0.0
 	o granulate-0.2
 	o graphviz-2.18
 	o gri-2.12.8
