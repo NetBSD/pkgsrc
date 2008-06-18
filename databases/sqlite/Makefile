@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/01/07 09:13:50 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2008/06/18 22:19:51 dmcmahill Exp $
 
 DISTNAME=		sqlite-2.8.16
 PKGREVISION=		1
@@ -21,8 +21,16 @@ CONFIGURE_ENV+=		config_TARGET_READLINE_INC="-I${BUILDLINK_PREFIX.readline}/incl
 CONFIG_GUESS_OVERRIDE=	../sqlite-2.8.16/config.guess
 CONFIG_SUB_OVERRIDE=	../sqlite-2.8.16/config.sub
 
+.include "../../mk/bsd.prefs.mk"
+# this is certainly needed for SunOS-5.8 with gcc.  How about
+# other compilers or newer versions of the OS?
+.if (${OPSYS} == "SunOS") && !empty(OS_VERSION:M5.[6-9]) 
+CFLAGS+=		-DUINT32_TYPE=uint32_t -DUINT16_TYPE=uint16_t \
+			-DUINT8_TYPE=uint8_t -DINTPTR_TYPE=long
+.else
 CFLAGS+=		-DUINT32_TYPE=u_int32_t -DUINT16_TYPE=u_int16_t \
 			-DUINT8_TYPE=u_int8_t -DINTPTR_TYPE=long
+.endif
 
 PKGCONFIG_OVERRIDE=	${WRKDIR}/sqlite-2.8.16/sqlite.pc.in
 
