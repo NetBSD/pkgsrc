@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/06/07 17:28:11 riz Exp $
+# $NetBSD: Makefile,v 1.7 2008/06/18 11:12:54 wiz Exp $
 #
 
 DISTNAME=		zaptel-netbsd-20060127
@@ -7,7 +7,7 @@ CATEGORIES=		comms
 MASTER_SITES=		http://www.tastylime.net/netbsd/zaptel/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=	packages@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tastylime.net/netbsd/zaptel/
 COMMENT=	The "zaptel" drivers and utils for the Asterisk Software PBX
 
