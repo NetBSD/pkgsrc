@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/05/26 13:16:00 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/19 14:55:48 taca Exp $
 
 DISTNAME=	htree-0.6
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=	2
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.a-k-r.org/htree/
 
