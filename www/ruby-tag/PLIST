@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 02:18:47 zuntum Exp $
-${RUBY_SITELIBDIR}/tag.rb
-${RUBY_DOCDIR}/tag/ja/tag.html
-@dirrm ${RUBY_DOCDIR}/tag/ja
-@dirrm ${RUBY_DOCDIR}/tag
+@comment $NetBSD: PLIST,v 1.2 2008/06/19 15:05:15 taca Exp $
+${RUBY_VENDORLIB}/tag.rb
+${RUBY_DOC}/tag/ja/tag.html
+@dirrm ${RUBY_DOC}/tag/ja
+@dirrm ${RUBY_DOC}/tag

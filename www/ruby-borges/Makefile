@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2006/03/04 21:31:03 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2008/06/19 15:04:36 taca Exp $
 
 DISTNAME=	borges-1.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www ruby
 MASTER_SITES=	http://rubyforge.org/frs/download.php/574/ \
 		http://segment7.net/projects/ruby/borges/
@@ -12,6 +12,10 @@ HOMEPAGE=	http://borges.rubyforge.org/
 COMMENT=	Ruby web application framework
 
 USE_RUBY_SETUP=		yes
+CONFIGURE_ARGS+=	--site-ruby-common=${PREFIX}/${RUBY_VENDORLIB_BASE} \
+			--site-ruby=${PREFIX}/${RUBY_VENDORLIB} \
+			--so-dir=path=${PREFIX}/${RUBY_VENDORARCHLIB}
+
 BORGES_SHARE_DIR=	data/doc data/examples
 
 .include "../../lang/ruby/rubyversion.mk"
@@ -19,7 +23,9 @@ BORGES_SHARE_DIR=	data/doc data/examples
 .if !empty(RUBY_SUFFIX)
 pre-configure:
 .for d in ${BORGES_SHARE_DIR}
-	cd ${WRKSRC}; ${MV} ${d}/ruby ${d}/${RUBY_NAME}
+	cd ${WRKSRC}; if [ -d ${d}/ruby ]; then \
+		 ${MV} -f ${d}/ruby ${d}/${RUBY_NAME}; \
+	fi
 .endfor
 .endif
 
