@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2008/06/19 14:35:37 taca Exp $
+# $NetBSD: Makefile,v 1.44 2008/06/19 22:19:37 obache Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -97,7 +97,7 @@ PTY_EXAMPLES=		expect_sample.rb script.rb shl.rb
 
 REPLACE_RUBY_DIRS=	bin ext lib sample
 INSTALLATION_DIRS=	bin ${RUBY_ARCHLIB} ${RUBY_DOC}/irb ${RUBY_DOC}/pty \
-			${DESTDIR}${RUBY_EG}/bigdecimal ${RUBY_EG}/dl \
+			${RUBY_EG}/bigdecimal ${RUBY_EG}/dl \
 			${RUBY_EG}/openssl ${RUBY_EG}/pty
 FIX_PERM=		${RUBY_ARCHLIB}/digest.h ${RUBY_ARCHLIB}/dl.h \
 			${RUBY_ARCHLIB}/dlconfig.h
