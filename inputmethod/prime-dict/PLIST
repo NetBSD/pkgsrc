@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/02 02:50:45 obache Exp $
-${RUBY_SITELIBDIR}/prime/prime-dict-config.rb
+@comment $NetBSD: PLIST,v 1.2 2008/06/19 14:49:51 taca Exp $
+${RUBY_VENDORLIB}/prime/prime-dict-config.rb
 share/prime/dict/prime-dict
 share/prime/dict/prime-dict-en
 share/prime/dict/prime-dict-en-pos
@@ -14,4 +14,4 @@ share/prime/dict/prime-dict.ary
 share/prime/dict/prime-dict_literal.ary
 @dirrm share/prime/dict
 @dirrm share/prime
-@dirrm ${RUBY_SITELIBDIR}/prime
+@dirrm ${RUBY_VENDORLIB}/prime

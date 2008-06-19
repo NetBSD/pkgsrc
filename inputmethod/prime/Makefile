@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/04/04 15:31:39 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/19 14:50:08 taca Exp $
 #
 
 DISTNAME=	prime-1.0.0.1
@@ -26,7 +26,7 @@ PKGCONFIG_OVERRIDE+=	prime.pc.in
 REPLACE_RUBY_DIRS=	src
 REPLACE_RUBY_PAT=	*.src
 
-CONFIGURE_ARGS+=	--with-rubydir=${RUBY_SITELIBDIR}
+CONFIGURE_ARGS+=	--with-rubydir=${PREFIX}/${RUBY_VENDORLIB}
 CONFIGURE_ARGS+=	--with-prime-configdir=${PKG_SYSCONFDIR}
 
 PKG_SYSCONFSUBDIR=	prime

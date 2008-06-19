@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:28:10 jlam Exp $
-${RUBY_SITEARCHLIBDIR}/memcache.${RUBY_DLEXT}
+@comment $NetBSD: PLIST,v 1.2 2008/06/19 14:47:42 taca Exp $
+${RUBY_VENDORARCHLIB}/memcache.${RUBY_DLEXT}
