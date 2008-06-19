@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2008/04/14 21:47:35 jlam Exp $
+# $NetBSD: Makefile,v 1.43 2008/06/19 14:35:37 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -21,7 +21,7 @@ CONFLICTS=	${RUBY_PKGPREFIX}-dbm-[0-9]* \
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c
-USE_TOOLS+=	yacc
+USE_TOOLS+=	pax yacc
 GNU_CONFIGURE=	yes
 TEST_TARGET=	test
 CONFIGURE_ARGS+= --enable-shared \
@@ -83,8 +83,7 @@ DOCS=		COPYING COPYING.ja ChangeLog NEWS README \
 		doc/irb/irb-tools.rd.ja doc/irb/irb.rd doc/irb/irb.rd.ja \
 		doc/shell.rd doc/shell.rd.ja
 EXT_DOCS=	bigdecimal/bigdecimal_en.html bigdecimal/bigdecimal_ja.html \
-		dl/doc/dl.txt enumerator/enumerator.txt \
-		etc/etc.txt etc/etc.txt.ja syslog/syslog.txt \
+		dl/doc/dl.txt etc/etc.txt etc/etc.txt.ja syslog/syslog.txt \
 		zlib/doc/zlib.rd
 
 BIGDECIMAL_EXAMPLES=	linear.rb nlsolve.rb pi.rb
@@ -97,6 +96,11 @@ OPENSSL_EXAMPLES=	c_rehash.rb cert2text.rb cert_store_view.rb \
 PTY_EXAMPLES=		expect_sample.rb script.rb shl.rb
 
 REPLACE_RUBY_DIRS=	bin ext lib sample
+INSTALLATION_DIRS=	bin ${RUBY_ARCHLIB} ${RUBY_DOC}/irb ${RUBY_DOC}/pty \
+			${DESTDIR}${RUBY_EG}/bigdecimal ${RUBY_EG}/dl \
+			${RUBY_EG}/openssl ${RUBY_EG}/pty
+FIX_PERM=		${RUBY_ARCHLIB}/digest.h ${RUBY_ARCHLIB}/dl.h \
+			${RUBY_ARCHLIB}/dlconfig.h
 
 pre-configure:
 	${RM} -f ${WRKSRC}/ext/curses/extconf.rb
@@ -109,36 +113,33 @@ pre-install:
 		-exec ${RM} -f {} \;
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_DOCDIR}/irb
-	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_DOCDIR}/pty
-	${INSTALL_DATA} ${FILESDIR}/CHANGES.pkgsrc ${DESTDIR}${RUBY_DOCDIR}
+	${INSTALL_DATA} ${FILESDIR}/CHANGES.pkgsrc ${DESTDIR}${PREFIX}/${RUBY_DOC}
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${RUBY_DOCDIR}/${f:C/^doc\///}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${RUBY_DOC}/${f:C/^doc\///}
 .endfor
 	${INSTALL_SCRIPT} ${WRKSRC}/ext/dl/h2rb ${DESTDIR}${PREFIX}/bin/h2rb${RUBY_VER}
 .for f in ${EXT_DOCS}
-	${INSTALL_DATA} ${WRKSRC}/ext/${f} ${DESTDIR}${RUBY_DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/ext/${f} ${DESTDIR}${PREFIX}/${RUBY_DOC}
 .endfor
-	${CP} -r ${WRKSRC}/ext/pty/README.* ${DESTDIR}${RUBY_DOCDIR}/pty
-	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_EXAMPLESDIR}/pty
-	${CP} -r ${WRKSRC}/sample/* ${DESTDIR}${RUBY_EXAMPLESDIR}
-	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_EXAMPLESDIR}/bigdecimal
+	cd ${WRKSRC}/ext/pty; ${PAX} -rw README.* ${DESTDIR}${PREFIX}/${RUBY_DOC}/pty
+	cd ${WRKSRC}/sample; ${PAX} -rw . ${DESTDIR}${PREFIX}/${RUBY_EG}
 .for f in ${BIGDECIMAL_EXAMPLES}
 	${INSTALL_DATA} ${RUBY_WRKSRC}/ext/bigdecimal/sample/${f} \
-		${DESTDIR}${RUBY_EXAMPLESDIR}/bigdecimal
+		${DESTDIR}${PREFIX}/${RUBY_EG}/bigdecimal
 .endfor
-	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_EXAMPLESDIR}/dl
 .for f in ${DL_EXAMPLES}
 	${INSTALL_DATA} ${RUBY_WRKSRC}/ext/dl/sample/${f} \
-		${DESTDIR}${RUBY_EXAMPLESDIR}/dl
+		${DESTDIR}${PREFIX}/${RUBY_EG}/dl
 .endfor
-	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_EXAMPLESDIR}/openssl
 .for f in ${OPENSSL_EXAMPLES}
 	${INSTALL_DATA} ${RUBY_WRKSRC}/sample/openssl/${f} \
-		${DESTDIR}${RUBY_EXAMPLESDIR}/openssl
+		${DESTDIR}${PREFIX}/${RUBY_EG}/openssl
 .endfor
 .for f in ${PTY_EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/ext/pty/${f} ${DESTDIR}${RUBY_EXAMPLESDIR}/pty
+	${INSTALL_DATA} ${WRKSRC}/ext/pty/${f} ${DESTDIR}${PREFIX}/${RUBY_EG}/pty
+.endfor
+.for f in ${FIX_PERM}
+	${CHMOD} ${SHAREMODE} ${DESTDIR}${PREFIX}/${f}
 .endfor
 	${RUBY_GENERATE_PLIST}
 
