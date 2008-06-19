@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2005/05/23 22:58:26 epg Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/06/19 22:33:25 epg Exp $
 lib/libsvn_swig_py-1.la
 ${PYSITELIB}/libsvn/__init__.py
 ${PYSITELIB}/libsvn/__init__.pyc
 ${PYSITELIB}/libsvn/_client.la
 ${PYSITELIB}/libsvn/_core.la
 ${PYSITELIB}/libsvn/_delta.la
+${PYSITELIB}/libsvn/_diff.la
 ${PYSITELIB}/libsvn/_fs.la
 ${PYSITELIB}/libsvn/_ra.la
 ${PYSITELIB}/libsvn/_repos.la
@@ -15,6 +16,8 @@ ${PYSITELIB}/libsvn/core.py
 ${PYSITELIB}/libsvn/core.pyc
 ${PYSITELIB}/libsvn/delta.py
 ${PYSITELIB}/libsvn/delta.pyc
+${PYSITELIB}/libsvn/diff.py
+${PYSITELIB}/libsvn/diff.pyc
 ${PYSITELIB}/libsvn/fs.py
 ${PYSITELIB}/libsvn/fs.pyc
 ${PYSITELIB}/libsvn/ra.py
@@ -31,6 +34,8 @@ ${PYSITELIB}/svn/core.py
 ${PYSITELIB}/svn/core.pyc
 ${PYSITELIB}/svn/delta.py
 ${PYSITELIB}/svn/delta.pyc
+${PYSITELIB}/svn/diff.py
+${PYSITELIB}/svn/diff.pyc
 ${PYSITELIB}/svn/fs.py
 ${PYSITELIB}/svn/fs.pyc
 ${PYSITELIB}/svn/ra.py
@@ -44,6 +49,7 @@ share/examples/subversion/hook-scripts/mailer.py
 share/examples/subversion/python/blame.py
 share/examples/subversion/python/check-modified.py
 share/examples/subversion/python/dumpprops.py
+share/examples/subversion/python/get-location-segments.py
 share/examples/subversion/python/getfile.py
 share/examples/subversion/python/geturl.py
 share/examples/subversion/python/putfile.py

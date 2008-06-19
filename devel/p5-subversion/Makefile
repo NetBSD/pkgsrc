@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.39 2008/01/18 05:14:36 tnn Exp $
+# $NetBSD: Makefile,v 1.40 2008/06/19 22:33:25 epg Exp $
 
 PKGNAME=	p5-subversion-${SVNVER}
-PKGREVISION=	1
 COMMENT=	Perl bindings for Subversion
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
@@ -18,7 +17,7 @@ PERL5_CONFIGURE=	no
 PERL5_OPTIONS+=		threads
 PERL5_PACKLIST=		auto/SVN/_Core/.packlist
 
-BUILD_TARGET=		swig-pl-lib swig-pl
+BUILD_TARGET=		swig-pl
 INSTALL_TARGET=		install-swig-pl
 TEST_TARGET=		check-swig-pl
 
