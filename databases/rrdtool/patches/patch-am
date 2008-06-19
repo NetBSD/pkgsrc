@@ -1,0 +1,16 @@
+$NetBSD: patch-am,v 1.4 2008/06/19 15:56:04 he Exp $
+
+--- src/rrd_update.c.orig	2008-02-17 11:26:32.000000000 +0100
++++ src/rrd_update.c
+@@ -533,9 +533,9 @@ _rrd_update(const char *filename, const 
+ 	if(current_time < rrd.live_head->last_up || 
+ 	  (current_time == rrd.live_head->last_up && 
+ 	   (long)current_time_usec <= (long)rrd.live_head->last_up_usec)) {
+-	    rrd_set_error("illegal attempt to update using time %ld when "
++	    rrd_set_error("%s: illegal attempt to update using time %ld when "
+ 			  "last update time is %ld (minimum one second step)",
+-			  current_time, rrd.live_head->last_up);
++			  filename, current_time, rrd.live_head->last_up);
+ 	    free(step_start);
+ 	    break;
+ 	}
