@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/10/04 22:04:09 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/19 15:24:04 taca Exp $
 
 DISTNAME=	instiki-0.9.2
 PKGREVISION=	4
@@ -17,7 +17,7 @@ FILES_SUBST+=	RUBY=${RUBY:Q}
 
 REPLACE_RUBY=		instiki
 
-INSTIKI_DIR=	${PREFIX}/share/${PKGBASE}
+INSTIKI_DIR=		share/${PKGBASE}
 
 SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
@@ -26,20 +26,20 @@ SUBST_FILES.paths=	app/controllers/wiki.rb
 SUBST_SED.paths=							\
 	-e 's,File.dirname(__FILE__) + "/../../storage,"${VARBASE}/instiki,g'
 
+INSTALLATION_DIRS=	share/doc/${PKGBASE} ${INSTIKI_DIR}
+
 post-patch:
 	${MV} ${WRKSRC}/instiki ${WRKSRC}/instiki.tmp
 	${TR} -d '\015' < ${WRKSRC}/instiki.tmp > ${WRKSRC}/instiki
 
 do-install:
-	${INSTALL_DATA_DIR} ${INSTIKI_DIR}
 .for d in app libraries
-	cd ${WRKSRC} && ${CP} -R ${d} ${INSTIKI_DIR}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${INSTIKI_DIR}/${d}
+	cd ${WRKSRC} && ${CP} -R ${d} ${DESTDIR}${PREFIX}/${INSTIKI_DIR}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${PREFIX}/${INSTIKI_DIR}/${d}
 .endfor
-	${FIND} ${INSTIKI_DIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${INSTIKI_DIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
-	${INSTALL_SCRIPT} ${WRKSRC}/instiki ${INSTIKI_DIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/${PKGBASE}
+	${FIND} ${DESTDIR}${PREFIX}/${INSTIKI_DIR} -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${DESTDIR}${PREFIX}/${INSTIKI_DIR} -type f -print | ${XARGS} ${CHMOD} ${SHAREMODE}
+	${INSTALL_SCRIPT} ${WRKSRC}/instiki ${DESTDIR}${PREFIX}/${INSTIKI_DIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/${PKGBASE}
 
 .include "../../lang/ruby/replace.mk"
