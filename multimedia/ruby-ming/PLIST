@@ -1,17 +1,17 @@
-@comment $NetBSD: PLIST,v 1.3 2006/09/13 15:58:48 obache Exp $
-${RUBY_SITEARCHLIBDIR}/ming/mingc.${RUBY_DLEXT}
-${RUBY_SITELIBDIR}/ming/ming.rb
-${RUBY_EXAMPLESDIR}/ming/README.examples
-${RUBY_EXAMPLESDIR}/ming/action.rb
-${RUBY_EXAMPLESDIR}/ming/drag.rb
-${RUBY_EXAMPLESDIR}/ming/gradient.rb
-${RUBY_EXAMPLESDIR}/ming/gradientxform.rb
-${RUBY_EXAMPLESDIR}/ming/hello.rb
-${RUBY_EXAMPLESDIR}/ming/keypress.rb
-${RUBY_EXAMPLESDIR}/ming/mousetrack.rb
-${RUBY_EXAMPLESDIR}/ming/movieclip.rb
-${RUBY_EXAMPLESDIR}/ming/newbutton.rb
-${RUBY_EXAMPLESDIR}/ming/shape.rb
-@dirrm ${RUBY_SITEARCHLIBDIR}/ming
-@dirrm ${RUBY_SITELIBDIR}/ming
-@dirrm ${RUBY_EXAMPLESDIR}/ming
+@comment $NetBSD: PLIST,v 1.4 2008/06/19 14:52:45 taca Exp $
+${RUBY_VENDORARCHLIB}/ming/mingc.${RUBY_DLEXT}
+${RUBY_VENDORLIB}/ming/ming.rb
+${RUBY_EG}/ming/README.examples
+${RUBY_EG}/ming/action.rb
+${RUBY_EG}/ming/drag.rb
+${RUBY_EG}/ming/gradient.rb
+${RUBY_EG}/ming/gradientxform.rb
+${RUBY_EG}/ming/hello.rb
+${RUBY_EG}/ming/keypress.rb
+${RUBY_EG}/ming/mousetrack.rb
+${RUBY_EG}/ming/movieclip.rb
+${RUBY_EG}/ming/newbutton.rb
+${RUBY_EG}/ming/shape.rb
+@dirrm ${RUBY_VENDORARCHLIB}/ming
+@dirrm ${RUBY_VENDORLIB}/ming
+@dirrm ${RUBY_EG}/ming
