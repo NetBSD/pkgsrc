@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/03/03 17:45:37 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2008/06/19 15:24:36 taca Exp $
 #
 
 DISTNAME=	rdtool-${RUBY_RD_VERSION}
@@ -19,12 +19,13 @@ RUBY_VERSION=		${RUBY18_VERSION}
 RUBY_NOVERSION=		yes
 NO_CONFIGURE=		yes
 
+INSTALLATION_DIRS=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/rd-mode
+
 do-build:
 	cd ${WRKSRC}; ${EMACS_BIN} --no-init-file --no-site-file -batch \
 		-f batch-byte-compile rd-mode.el
 
 do-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/rd-mode
 	${INSTALL_DATA} ${WRKSRC}/rd-mode.el ${DESTDIR}${EMACS_LISPPREFIX}/rd-mode
 	${INSTALL_DATA} ${WRKSRC}/rd-mode.elc ${DESTDIR}${EMACS_LISPPREFIX}/rd-mode
 
