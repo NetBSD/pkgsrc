@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2008/05/26 02:13:24 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/19 14:58:13 taca Exp $
 #
 
 DISTNAME=	xmlscan-${VER}
 PKGNAME=	${RUBY_PKGPREFIX}-xmlscan-${VER}
+PKGREVISION=	1
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.blue.sky.or.jp/atelier/ruby/xmlscan/
 
@@ -14,32 +15,30 @@ VER=		0.2.3
 
 NO_BUILD=		yes
 USE_RUBY_INSTALL=	yes
-USE_TOOLS+=	pax
+USE_TOOLS+=		pax
 
+INSTALLATION_DIRS=	${RUBY_DOC}/xmlscan/en ${RUBY_DOC}/xmlscan/ja \
+			${RUBY_EG}/xmlscan
+
+DOCS=		ChangeLog README THANKS
 REPLACE_RUBY=	samples/getxmlchar.rb samples/xmlbench.rb \
 		samples/xmlconftest.rb
 
-DOCS=		ChangeLog README THANKS
-
 post-install:
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/xmlscan
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/xmlscan
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${RUBY_DOC}/xmlscan
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/doc/changes.html ${RUBY_DOCDIR}/xmlscan
-	${INSTALL_DATA} ${WRKSRC}/doc/changes.rd ${RUBY_DOCDIR}/xmlscan
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/xmlscan/en
-	${INSTALL_DATA} ${WRKSRC}/doc/en/conformance.html ${RUBY_DOCDIR}/xmlscan/en
-	${INSTALL_DATA} ${WRKSRC}/doc/en/conformance.rd ${RUBY_DOCDIR}/xmlscan/en
-	${INSTALL_DATA} ${WRKSRC}/doc/en/manual.html ${RUBY_DOCDIR}/xmlscan/en
-	${INSTALL_DATA} ${WRKSRC}/doc/en/manual.rd ${RUBY_DOCDIR}/xmlscan/en
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/xmlscan/ja
-	${INSTALL_DATA} ${WRKSRC}/doc/ja/conformance.ja.html ${RUBY_DOCDIR}/xmlscan/ja
-	${INSTALL_DATA} ${WRKSRC}/doc/ja/conformance.ja.rd ${RUBY_DOCDIR}/xmlscan/ja
-	${INSTALL_DATA} ${WRKSRC}/doc/ja/manual.ja.html ${RUBY_DOCDIR}/xmlscan/ja
-	${INSTALL_DATA} ${WRKSRC}/doc/ja/manual.ja.rd ${RUBY_DOCDIR}/xmlscan/ja
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/xmlscan
-	cd ${WRKSRC}/samples && pax -rw -pp * ${RUBY_EXAMPLESDIR}/xmlscan
+	${INSTALL_DATA} ${WRKSRC}/doc/changes.html ${DESTDIR}${PREFIX}/${RUBY_DOC}/xmlscan
+	${INSTALL_DATA} ${WRKSRC}/doc/changes.rd ${DESTDIR}${PREFIX}/${RUBY_DOC}/xmlscan
+	${INSTALL_DATA} ${WRKSRC}/doc/en/conformance.html ${DESTDIR}${PREFIX}/${RUBY_DOC}/xmlscan/en
+	${INSTALL_DATA} ${WRKSRC}/doc/en/conformance.rd ${DESTDIR}${PREFIX}/${RUBY_DOC}/xmlscan/en
+	${INSTALL_DATA} ${WRKSRC}/doc/en/manual.html ${DESTDIR}${PREFIX}/${RUBY_DOC}/xmlscan/en
+	${INSTALL_DATA} ${WRKSRC}/doc/en/manual.rd ${DESTDIR}${PREFIX}/${RUBY_DOC}/xmlscan/en
+	${INSTALL_DATA} ${WRKSRC}/doc/ja/conformance.ja.html ${DESTDIR}${PREFIX}/${RUBY_DOC}/xmlscan/ja
+	${INSTALL_DATA} ${WRKSRC}/doc/ja/conformance.ja.rd ${DESTDIR}${PREFIX}/${RUBY_DOC}/xmlscan/ja
+	${INSTALL_DATA} ${WRKSRC}/doc/ja/manual.ja.html ${DESTDIR}${PREFIX}/${RUBY_DOC}/xmlscan/ja
+	${INSTALL_DATA} ${WRKSRC}/doc/ja/manual.ja.rd ${DESTDIR}${PREFIX}/${RUBY_DOC}/xmlscan/ja
+	cd ${WRKSRC}/samples && pax -rw -pp * ${DESTDIR}${PREFIX}/${RUBY_EG}/xmlscan
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"
