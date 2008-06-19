@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1301 2008/06/19 14:10:16 taca Exp $
+$NetBSD: CHANGES-2008,v 1.1302 2008/06/19 15:40:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2157,3 +2157,20 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/Transmission to 1.22 [tnn 2008-06-19]
 	Updated mail/fetchmail to 6.3.8nb3 [obache 2008-06-19]
 	Updated www/geeklog to 1.4.1nb2 [taca 2008-06-19]
+	Updated lang/ruby18-base to 1.8.7.17 [taca 2008-06-19]
+	Updated databases/ruby-gdbm to 1.8.7.17 [taca 2008-06-19]
+	Updated devel/ruby-curses to 1.8.7.17 [taca 2008-06-19]
+	Updated devel/ruby-readline to 1.8.7.17 [taca 2008-06-19]
+	Updated x11/ruby-tk to 1.8.7.17 [taca 2008-06-19]
+	Updated lang/ruby18 to 1.8.7.17 [taca 2008-06-19]
+	Updated lang/ruby to 1.8.7.17 [taca 2008-06-19]
+	Updated comms/ruby-termios to 0.9.5nb2 [taca 2008-06-19]
+	Updated math/ruby-rb-gsl to 1.9.2nb1 [taca 2008-06-19]
+	Updated textproc/ruby-eruby to 1.0.5nb7 [taca 2008-06-19]
+	Updated textproc/ruby-itex2MML to 1.2.3nb1 [taca 2008-06-19]
+	Updated www/ap-ruby to 1.2.6nb1 [taca 2008-06-19]
+	Updated devel/ruby-debug-ide to 0.1.10 [taca 2008-06-19]
+	Updated meta-pkgs/ruby-gnome2 to 0.17.0rc1 [taca 2008-06-19]
+	Updated textproc/ruby-native-hyperestraier to 1.0.0.1.4.13nb1 [taca 2008-06-19]
+	Updated textproc/ruby-pure-hyperestraier to 1.0.0.1.4.13nb1 [taca 2008-06-19]
+	Updated x11/kdebindings-ruby to 3.5.9nb1 [taca 2008-06-19]
