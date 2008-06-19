@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.80 2008/06/19 09:15:24 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.81 2008/06/19 16:46:06 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -190,3 +190,5 @@ Pullup ticket #2423 - requested by drochner
 evolution: security fix
 Pullup ticket 2430 - requested by martti
 security update for vim
+Pullup ticket 2431 - requested by obache
+security fix for fetchmail
