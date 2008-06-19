@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2008/03/13 21:55:48 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2008/06/19 14:36:53 taca Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
 PKGNAME=		${RUBY_PKGPREFIX}-curses-${RUBY_VERSION_SUFFIX}
-PKGREVISION=		1
 CATEGORIES=		devel ruby
 MASTER_SITES=		${MASTER_SITE_RUBY}
 
@@ -20,11 +19,11 @@ WRKSRC=			${RUBY_WRKSRC}/ext/curses
 
 CURSES_EXAMPLES=	hello.rb rain.rb view.rb view2.rb
 REPLACE_RUBY=		${CURSES_EXAMPLES}
+INSTALLATION_DIRS=	${RUBY_EG}/curses
 
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_EXAMPLESDIR}/curses
 .for f in ${CURSES_EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${RUBY_EXAMPLESDIR}/curses
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${RUBY_EG}/curses
 .endfor
 
 .include "../../lang/ruby/modules.mk"
