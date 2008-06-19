@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2008/06/19 15:10:28 taca Exp $
+
+--- glib/src/lib/mkmf-gnome2.rb.orig	2008-06-06 23:03:39.000000000 +0900
++++ glib/src/lib/mkmf-gnome2.rb
+@@ -241,6 +241,7 @@ end
+ 
+ def check_ruby_func
+   $CPPFLAGS << " -I$(sitearchdir) "
++  $CPPFLAGS << " -I$(vendorarchdir) "
+ 
+   #Other options
+   have_func("rb_define_alloc_func") # for ruby-1.8
