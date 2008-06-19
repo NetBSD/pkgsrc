@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2008/05/23 18:06:44 tnn Exp $
+# $NetBSD: Makefile,v 1.44 2008/06/19 18:36:51 joerg Exp $
 #
 
 DISTNAME=	bmake-20080215
@@ -17,6 +17,7 @@ COMMENT=	Portable (autoconf) version of NetBSD 'make' utility
 DEPENDS+=	bootstrap-mk-files-[0-9]*:../../pkgtools/bootstrap-mk-files
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+BOOTSTRAP_PKG=	yes
 
 WRKSRC=		${WRKDIR}/bmake
 NO_CHECKSUM=	yes

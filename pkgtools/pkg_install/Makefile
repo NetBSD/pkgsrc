@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.154 2008/06/08 21:04:30 he Exp $
+# $NetBSD: Makefile,v 1.155 2008/06/19 18:36:51 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -17,6 +17,7 @@ COMMENT=		Package management and administration tools for pkgsrc
 #LICENSE=		modified-bsd
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+BOOTSTRAP_PKG=	yes
 
 CONFLICTS+=		audit-packages-[0-9]*
 

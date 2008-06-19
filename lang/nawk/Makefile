@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/03/04 16:38:12 jlam Exp $
+# $NetBSD: Makefile,v 1.32 2008/06/19 18:36:51 joerg Exp $
 
 DISTNAME=	nawk-20050424
 CATEGORIES=	lang
@@ -11,6 +11,8 @@ COMMENT=	Brian Kernighan's pattern-directed scanning and processing language
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+BOOTSTRAP_PKG=	yes
 
 CFLAGS+=	${CPPFLAGS}
 MAKE_FLAGS+=	CC=${CC:Q} CFLAGS=${CFLAGS:M*:Q}
