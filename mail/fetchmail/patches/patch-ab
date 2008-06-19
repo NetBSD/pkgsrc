@@ -1,0 +1,34 @@
+$NetBSD: patch-ab,v 1.17.10.1 2008/06/19 16:45:15 ghen Exp $
+
+CVE-2008-2711
+http://fetchmail.berlios.de/fetchmail-SA-2008-01.txt
+
+--- report.c.orig	2006-03-14 08:53:31.000000000 +0000
++++ report.c
+@@ -238,11 +238,17 @@ report_build (FILE *errfp, message, va_a
+     rep_ensuresize();
+ 
+ #if defined(VA_START)
+-    VA_START (args, message);
+     for ( ; ; )
+     {
++	/*
++	 * args has to be initialized before every call of vsnprintf(),
++	 * because vsnprintf() invokes va_arg macro and thus args is
++	 * undefined after the call.
++	 */
++	VA_START(args, message);
+ 	n = vsnprintf (partial_message + partial_message_size_used, partial_message_size - partial_message_size_used,
+ 		       message, args);
++	va_end (args);
+ 
+ 	if (n >= 0
+ 	    && (unsigned)n < partial_message_size - partial_message_size_used)
+@@ -254,7 +260,6 @@ report_build (FILE *errfp, message, va_a
+ 	partial_message_size += 2048;
+ 	partial_message = REALLOC (partial_message, partial_message_size);
+     }
+-    va_end (args);
+ #else
+     for ( ; ; )
+     {
