@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/03/03 17:45:37 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/19 15:52:13 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -17,7 +17,8 @@ EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/misc
 RUBY_VERSION=		${RUBY18_VERSION}
 RUBY_NOVERSION=		yes
 NO_CONFIGURE=		yes
-SRCS=			ruby-mode.el rubydb3x.el inf-ruby.el
+SRCS=			ruby-mode.el rubydb3x.el ruby-electric.el \
+			inf-ruby.el ruby-style.el
 
 PLIST_SUBST+=	SITE_LISP=${SITE_LISP:Q}
 
