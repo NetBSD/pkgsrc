@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/04/12 22:43:09 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/19 18:12:18 joerg Exp $
 
 DISTNAME=	bootstrap-extra-files-20070702
 CATEGORIES=	pkgtools
@@ -7,6 +7,8 @@ DISTFILES=	# empty
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Extra bootstrap files and scripts for ${OPSYS}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CHECKSUM=	yes
 NO_MTREE=	yes
@@ -51,19 +53,19 @@ do-install:
 	@${ECHO} ${.ALLSRC}
 
 do-install-fakeldd:
-	${INSTALL_SCRIPT_DIR} ${PREFIX}/sbin
-	${INSTALL_SCRIPT} ${WRKSRC}/fakeldd ${PREFIX}/sbin/fakeldd
+	${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKSRC}/fakeldd ${DESTDIR}${PREFIX}/sbin/fakeldd
 
 do-install-mkdir:
-	${INSTALL_SCRIPT_DIR} ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/mkdir-sh ${PREFIX}/bin/mkdir-sh
+	${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/mkdir-sh ${DESTDIR}${PREFIX}/bin/mkdir-sh
 
 do-install-strip:
-	${INSTALL_SCRIPT_DIR} ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/strip-sh ${PREFIX}/bin/strip
+	${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/strip-sh ${DESTDIR}${PREFIX}/bin/strip
 
 do-install-xargs:
-	${INSTALL_SCRIPT_DIR} ${PREFIX}/bin
-	${INSTALL_SCRIPT} ${WRKSRC}/xargs-sh ${PREFIX}/bin/xargs
+	${INSTALL_SCRIPT_DIR} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/xargs-sh ${DESTDIR}${PREFIX}/bin/xargs
 
 .include "../../mk/bsd.pkg.mk"
