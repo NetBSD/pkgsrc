@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7340 2008/06/19 16:59:49 bjs Exp $
+$NetBSD: TODO,v 1.7341 2008/06/19 17:34:43 bjs Exp $
 
 Suggested new packages
 ======================
@@ -431,7 +431,6 @@ Suggested package updates
 	o arping-2.06
 	o asapm-3.1
 	o asc-2.1.0
-	o ascii-3.8
 	o aspell-danish-13.7
 	o aspell-faroese-0.2.31
 	o aspell-norwegian-2.0.10
