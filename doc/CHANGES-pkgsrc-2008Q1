@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.79 2008/06/17 17:38:57 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.80 2008/06/19 09:15:24 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -188,3 +188,5 @@ Pullup ticket 2421 - requested by he
 Fix old-style bulk builds
 Pullup ticket #2423 - requested by drochner
 evolution: security fix
+Pullup ticket 2430 - requested by martti
+security update for vim
