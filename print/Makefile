@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.184 2008/05/15 20:07:33 drochner Exp $
+# $NetBSD: Makefile,v 1.185 2008/06/19 16:27:10 reed Exp $
 #
 
 COMMENT=	Desktop publishing
@@ -129,6 +129,7 @@ SUBDIR+=	tex-foiltex
 SUBDIR+=	tex-glossaries
 SUBDIR+=	tex-hlatex
 SUBDIR+=	tex-hugelatex
+SUBDIR+=	tex-ifxetex
 SUBDIR+=	tex-igo
 SUBDIR+=	tex-jadetex
 SUBDIR+=	tex-memhangul-ucs
