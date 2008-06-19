@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1300 2008/06/19 11:30:20 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1301 2008/06/19 14:10:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2156,3 +2156,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated editors/vim-share to 7.1.315 [martti 2008-06-19]
 	Updated net/Transmission to 1.22 [tnn 2008-06-19]
 	Updated mail/fetchmail to 6.3.8nb3 [obache 2008-06-19]
+	Updated www/geeklog to 1.4.1nb2 [taca 2008-06-19]
