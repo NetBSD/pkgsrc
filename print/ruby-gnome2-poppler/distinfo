@@ -1,7 +1,0 @@
-$NetBSD: distinfo,v 1.1 2007/11/11 23:30:17 wiz Exp $
-
-SHA1 (ruby-gnome2-all-0.16.0.tar.gz) = 488f6c1f139060e005f336c9c854c4dc5b3e6b7c
-RMD160 (ruby-gnome2-all-0.16.0.tar.gz) = c83c7cdcf633ad5cc213180f641a6c8f18002a9c
-Size (ruby-gnome2-all-0.16.0.tar.gz) = 1208856 bytes
-SHA1 (patch-aa) = e304eae9b1341db74e5bcc7e8aa51f3e6475b4fa
-SHA1 (patch-ab) = 82c0981b80df1dd5390f53561e510bf9e32575d0
