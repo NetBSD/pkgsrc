@@ -1,4 +1,4 @@
-# $NetBSD: modules.mk,v 1.22 2008/03/12 03:18:47 jlam Exp $
+# $NetBSD: modules.mk,v 1.23 2008/06/19 14:30:45 taca Exp $
 
 .if !defined(_RUBY_MODULE_MK)
 _RUBY_MODULE_MK=	# defined
@@ -26,7 +26,8 @@ CONFIGURE_ENV+=		RUBY=${RUBY:Q} RDOC=${RDOC:Q}
 
 RUBY_EXTCONF?=		extconf.rb
 INSTALL_TARGET?=	site-install
-CONFIGURE_ARGS+=	--with-opt-dir=${PREFIX:Q}
+CONFIGURE_ARGS+=	${RUBY_EXTCONF_ARGS}
+RUBY_EXTCONF_ARGS?=	--with-opt-dir=${PREFIX:Q} --vendor
 RUBY_EXTCONF_CHECK?=	yes
 RUBY_EXTCONF_MAKEFILE?=	Makefile
 
@@ -128,6 +129,15 @@ ruby-setup-install:
 RUBY_SIMPLE_INSTALL?=	install.rb
 INSTALL_TARGET?=	# empty
 
+SUBST_CLASSES+=		rinstall
+SUBST_STAGE.rinstall=	pre-install
+SUBST_FILES.rinstall=	${RUBY_SIMPLE_INSTALL}
+SUBST_SED.rinstall=	-e "s|'sitedir'|'vendordir'|g"
+SUBST_SED.rinstall+=	-e "s|'sitelibdir'|'vendorlibdir'|g"
+SUBST_SED.rinstall+=	-e 's|"sitelibdir"|"vendorlibdir"|g'
+SUBST_SED.rinstall+=	-e 's|/site_ruby/|/vendor_ruby/|g'
+SUBST_MESSAGE.rinstall=	Fixing ${RUBY_SIMPLE_INSTALL} files.
+
 .if !target(do-install)
 do-install:	ruby-simple-install
 
@@ -140,29 +150,13 @@ ruby-simple-install:
 
 .include "replace.mk"
 
-PRINT_PLIST_AWK+=	/^@dirrm lib\/ruby$$/ { next; }
-PRINT_PLIST_AWK+=	/^@dirrm lib\/ruby\/site_ruby$$/ { next; }
-PRINT_PLIST_AWK+=	/\.${RUBY_DLEXT}$$/ \
-			{ gsub(/${RUBY_DLEXT}$$/, "$${RUBY_DLEXT}") }
-PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_SITEARCHLIBDIR:S|${PREFIX}/||:S|/|\\/|g}$$/ \
+PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_SITEARCHLIB:S|/|\\/|g}$$/ \
 			{ next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_SITELIBDIR:S|${PREFIX}/||:S|/|\\/|g}$$/ \
+PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_SITELIB:S|/|\\/|g}$$/ \
 			{ next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_SITEARCHLIBDIR:S|${PREFIX}/||:S|/|\\/|g}/ \
-			{ gsub(/${RUBY_SITEARCHLIBDIR:S|${PREFIX}/||:S|/|\\/|g}/, "$${RUBY_SITEARCHLIBDIR}"); \
-			print; next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_SITELIBDIR:S|${PREFIX}/||:S|/|\\/|g}/ \
-			{ gsub(/${RUBY_SITELIBDIR:S|${PREFIX}/||:S|/|\\/|g}/, "$${RUBY_SITELIBDIR}"); \
-			print; next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_DOCDIR:S|${PREFIX}/||:S|/|\\/|g}$$/ \
+PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_VENDORARCHLIB:S|/|\\/|g}$$/ \
 			{ next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_DOCDIR:S|${PREFIX}/||:S|/|\\/|g}/ \
-			{ gsub(/${RUBY_DOCDIR:S|${PREFIX}/||:S|/|\\/|g}/, "$${RUBY_DOCDIR}"); \
-			print; next; }
-PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_EXAMPLESDIR:S|${PREFIX}/||:S|/|\\/|g}$$/ \
+PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_VENDORLIB:S|/|\\/|g}$$/ \
 			{ next; }
-PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_EXAMPLESDIR:S|${PREFIX}/||:S|/|\\/|g}/ \
-			{ gsub(/${RUBY_EXAMPLESDIR:S|${PREFIX}/||:S|/|\\/|g}/, "$${RUBY_EXAMPLESDIR}"); \
-			print; next; }
 
 .endif
