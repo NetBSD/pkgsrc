@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1309 2008/06/19 18:04:00 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1310 2008/06/19 22:43:06 epg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2181,3 +2181,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/intltool to 0.40.0 [bjs 2008-06-19]
 	Updated misc/ascii to 3.8 [bjs 2008-06-19]
 	Updated x11/pixman to 0.11.4 [bjs 2008-06-19]
+	Updated devel/subversion to 1.5.0 [epg 2008-06-19]
+	Added devel/java-subversion version 1.5.0 [epg 2008-06-19]
