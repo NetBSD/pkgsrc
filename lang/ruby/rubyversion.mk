@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.39 2008/03/21 15:07:28 jlam Exp $
+# $NetBSD: rubyversion.mk,v 1.40 2008/06/19 14:30:45 taca Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -7,10 +7,10 @@ _RUBYVERSION_MK=	# defined
 .include "../../mk/bsd.prefs.mk"
 
 # current supported Ruby's version
-RUBY18_VERSION=		1.8.6
+RUBY18_VERSION=		1.8.7
 
 # patch
-RUBY18_PATCHLEVEL=	114
+RUBY18_PATCHLEVEL=	17
 
 # RUBY_VERSION_DEFAULT defines default version for Ruby related
 #	packages and user can define in mk.conf.  (1.6 or 1.8)
@@ -63,7 +63,9 @@ _RUBY_VER=		${RUBY_VERSION:C/(-.*)//}
 _RUBY_VER_MAJOR=	${_RUBY_VER:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\1/}
 _RUBY_VER_MINOR=	${_RUBY_VER:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\2/}
 _RUBY_VER_TEENY=	${_RUBY_VER:C/([0-9]+)\.([0-9]+)\.([0-9]+)/\3/}
+.if !empty(RUBY_PATCH_LEVEL)
 _RUBY_PATCHLEVEL=	${RUBY_VERSION:C/(.*-)//}
+.endif
 
 # RUBY_VER defines Ruby base release.
 #
@@ -188,12 +190,28 @@ RUBY_SRCDIR?=	${_PKGSRC_TOPDIR}/lang/${RUBY_BASE}
 #
 # common paths
 #
-RUBY_LIBDIR?=		${PREFIX}/lib/ruby/${RUBY_VER_DIR}
-RUBY_ARCHLIBDIR?=	${RUBY_LIBDIR}/${RUBY_ARCH}
-RUBY_SITELIBDIR?=	${PREFIX}/lib/ruby/site_ruby/${RUBY_VER_DIR}
-RUBY_SITEARCHLIBDIR?=	${RUBY_SITELIBDIR}/${RUBY_ARCH}
-RUBY_DOCDIR?=		${PREFIX}/share/doc/${RUBY_NAME}
-RUBY_EXAMPLESDIR?=	${PREFIX}/share/examples/${RUBY_NAME}
+RUBY_LIB?=		lib/ruby/${RUBY_VER_DIR}
+RUBY_ARCHLIB?=		${RUBY_LIB}/${RUBY_ARCH}
+RUBY_SITELIB_BASE?=	lib/ruby/site_ruby
+RUBY_SITELIB?=		${RUBY_SITELIB_BASE}/${RUBY_VER_DIR}
+RUBY_SITEARCHLIB?=	${RUBY_SITELIB}/${RUBY_ARCH}
+RUBY_VENDORLIB_BASE?=	lib/ruby/vendor_ruby
+RUBY_VENDORLIB?=	${RUBY_VENDORLIB_BASE}/${RUBY_VER_DIR}
+RUBY_VENDORARCHLIB?=	${RUBY_VENDORLIB}/${RUBY_ARCH}
+RUBY_DOC?=		share/doc/${RUBY_NAME}
+RUBY_EG?=		share/examples/${RUBY_NAME}
+
+#
+# These will be discontinued in near future.
+#
+RUBY_LIBDIR=		${PREFIX}/${RUBY_LIB}
+RUBY_ARCHLIBDIR=	${PREFIX}/${RUBY_ARCHLIB}
+RUBY_SITELIBDIR=	${PREFIX}/${RUBY_SITELIB}
+RUBY_SITEARCHLIBDIR=	${PREFIX}/${RUBY_SITEARCHLIB}
+RUBY_VENDORLIBDIR=	${PREFIX}/${RUBY_VENDORLIB}
+RUBY_VENDORARCHLIBDIR=	${PREFIX}/${RUBY_VENDORARCHLIB}
+RUBY_DOCDIR=		${PREFIX}/${RUBY_DOC}
+RUBY_EXAMPLESDIR=	${PREFIX}/${RUBY_EG}
 
 #
 # ri database relative path
@@ -215,7 +233,17 @@ MAKEFLAGS+=		RUBY_VERSION=${RUBY_VERSION:Q} \
 
 # PLIST
 #
-PLIST_RUBY_DIRS=	RUBY_LIBDIR="${RUBY_LIBDIR}" \
+PLIST_RUBY_DIRS=	RUBY_LIB="${RUBY_LIB}" \
+			RUBY_ARCHLIB="${RUBY_ARCHLIB}" \
+			RUBY_SITELIB_BASE=${RUBY_SITELIB_BASE:Q} \
+			RUBY_SITELIB="${RUBY_SITELIB}" \
+			RUBY_SITEARCHLIB="${RUBY_SITEARCHLIB}" \
+			RUBY_VENDORLIB_BASE=${RUBY_VENDORLIB_BASE:Q} \
+			RUBY_VENDORLIB=${RUBY_VENDORLIB:Q} \
+			RUBY_VENDORARCHLIB=${RUBY_VENDORARCHLIB:Q} \
+			RUBY_DOC="${RUBY_DOC}" \
+			RUBY_EG="${RUBY_EG}" \
+			RUBY_LIBDIR="${RUBY_LIBDIR}" \
 			RUBY_ARCHLIBDIR="${RUBY_ARCHLIBDIR}" \
 			RUBY_SITELIBDIR="${RUBY_SITELIBDIR}" \
 			RUBY_SITEARCHLIBDIR="${RUBY_SITEARCHLIBDIR}" \
@@ -292,5 +320,56 @@ RUBY_GENERATE_PLIST =	( \
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .endif
+
+PRINT_PLIST_AWK+=	/\.${RUBY_DLEXT}$$/ \
+			{ gsub(/${RUBY_DLEXT}$$/, "$${RUBY_DLEXT}") }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_ARCHLIB:S|/|\\/|g}/ \
+			{ gsub(/${RUBY_ARCHLIB:S|/|\\/|g}/, "$${RUBY_ARCHLIB}"); \
+			print; next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_VENDORARCHLIB:S|/|\\/|g}/ \
+			{ gsub(/${RUBY_VENDORARCHLIB:S|/|\\/|g}/, "$${RUBY_VENDORARCHLIB}"); \
+			print; next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_VENDORLIB:S|/|\\/|g}/ \
+			{ gsub(/${RUBY_VENDORLIB:S|/|\\/|g}/, "$${RUBY_VENDORLIB}"); \
+			print; next; }
+PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_SITEARCHLIB:S|/|\\/|g}$$/ \
+			{ next; }
+PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_SITELIB:S|/|\\/|g}$$/ \
+			{ next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_SITEARCHLIB:S|/|\\/|g}/ \
+			{ gsub(/${RUBY_SITEARCHLIB:S|/|\\/|g}/, "$${RUBY_SITEARCHLIB}"); \
+			print; next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_SITELIB:S|/|\\/|g}/ \
+			{ gsub(/${RUBY_SITELIB:S|/|\\/|g}/, "$${RUBY_SITELIB}"); \
+			print; next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_SITELIB_BASE:S|/|\\/|g}$$/ \
+			{ gsub(/${RUBY_SITELIB_BASE:S|/|\\/|g}/, "$${RUBY_SITELIB_BASE}"); \
+			print; next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_VENDORLIB_BASE:S|/|\\/|g}$$/ \
+			{ gsub(/${RUBY_VENDORLIB_BASE:S|/|\\/|g}/, "$${RUBY_VENDORLIB_BASE}"); \
+			print; next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_LIB:S|/|\\/|g}/ \
+			{ gsub(/${RUBY_LIB:S|/|\\/|g}/, "$${RUBY_LIB}"); \
+			print; next; }
+PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_DOC:S|/|\\/|g}$$/ \
+			{ next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_DOC:S|/|\\/|g}/ \
+			{ gsub(/${RUBY_DOC:S|/|\\/|g}/, "$${RUBY_DOC}"); \
+			print; next; }
+PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_EG:S|/|\\/|g}$$/ \
+			{ next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_EG:S|/|\\/|g}/ \
+			{ gsub(/${RUBY_EG:S|/|\\/|g}/, "$${RUBY_EG}"); \
+			print; next; }
+PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_SITERIDIR:S|/|\\/|g}$$/ \
+			{ next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_SITERIDIR:S|/|\\/|g}/ \
+			{ gsub(/${RUBY_SITERIDIR:S|/|\\/|g}/, "$${RUBY_SITERIDIR}"); \
+			print; next; }
+PRINT_PLIST_AWK+=	/^@dirrm ${RUBY_SYSRIDIR:S|/|\\/|g}$$/ \
+			{ next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${RUBY_SYSRIDIR:S|/|\\/|g}/ \
+			{ gsub(/${RUBY_SYSRIDIR:S|/|\\/|g}/, "$${RUBY_SYSRIDIR}"); \
+			print; next; }
 
 .endif # _RUBY_MK
