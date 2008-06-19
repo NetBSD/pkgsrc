@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/05/28 13:36:18 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2008/06/19 18:36:51 joerg Exp $
 
 DISTNAME=		tnftp-20070806
 SVR4_PKGNAME=		tnftp
@@ -15,6 +15,7 @@ MAINTAINER=		lukem@NetBSD.org
 COMMENT=		The enhanced FTP client in NetBSD
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+BOOTSTRAP_PKG=	yes
 
 GNU_CONFIGURE=		yes
 NO_CHECKSUM=		yes
