@@ -1,6 +1,13 @@
-# $NetBSD: Makefile.common,v 1.15 2007/06/10 13:47:03 taca Exp $
+# $NetBSD: Makefile.common,v 1.16 2008/06/19 14:39:00 taca Exp $
 #
 # Ruby base distribution common definition
+# used by databases/ruby-gdbm
+# used by devel/ruby-curses
+# used by devel/ruby-readline
+# used by devel/ruby-mode
+# used by lang/ruby18/Makefile
+# used by lang/ruby18-base/Makefile
+# used by x11/ruby-tk
 
 #
 # Ruby distribution sites.
