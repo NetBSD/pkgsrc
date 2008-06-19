@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/03/02 02:42:03 obache Exp $
-${RUBY_SITELIBDIR}/suikyo/suikyo-composer.rb
-${RUBY_SITELIBDIR}/suikyo/suikyo-config.rb
-${RUBY_SITELIBDIR}/suikyo/suikyo.rb
+@comment $NetBSD: PLIST,v 1.2 2008/06/19 14:57:45 taca Exp $
+${RUBY_VENDORLIB}/suikyo/suikyo-composer.rb
+${RUBY_VENDORLIB}/suikyo/suikyo-config.rb
+${RUBY_VENDORLIB}/suikyo/suikyo.rb
 share/doc/suikyo/ruby/index.html
 @dirrm share/doc/suikyo/ruby
-@dirrm ${RUBY_SITELIBDIR}/suikyo
+@dirrm ${RUBY_VENDORLIB}/suikyo

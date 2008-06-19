@@ -1,47 +1,47 @@
-@comment $NetBSD: PLIST,v 1.5 2006/09/07 15:55:50 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/06/19 14:57:20 taca Exp $
 bin/rd2
 bin/rdswap
-${RUBY_SITELIBDIR}/rd/block-element.rb
-${RUBY_SITELIBDIR}/rd/complex-list-item.rb
-${RUBY_SITELIBDIR}/rd/desclist.rb
-${RUBY_SITELIBDIR}/rd/document-struct.rb
-${RUBY_SITELIBDIR}/rd/element.rb
-${RUBY_SITELIBDIR}/rd/filter.rb
-${RUBY_SITELIBDIR}/rd/inline-element.rb
-${RUBY_SITELIBDIR}/rd/labeled-element.rb
-${RUBY_SITELIBDIR}/rd/list.rb
-${RUBY_SITELIBDIR}/rd/loose-struct.rb
-${RUBY_SITELIBDIR}/rd/methodlist.rb
-${RUBY_SITELIBDIR}/rd/output-format-visitor.rb
-${RUBY_SITELIBDIR}/rd/package.rb
-${RUBY_SITELIBDIR}/rd/parser-util.rb
-${RUBY_SITELIBDIR}/rd/rbl-file.rb
-${RUBY_SITELIBDIR}/rd/rbl-suite.rb
-${RUBY_SITELIBDIR}/rd/rd-struct.rb
-${RUBY_SITELIBDIR}/rd/dot.rd2rc
-${RUBY_SITELIBDIR}/rd/rd2html-lib.rb
-${RUBY_SITELIBDIR}/rd/rd2html-opt.rb
-${RUBY_SITELIBDIR}/rd/rd2man-lib.rb
-${RUBY_SITELIBDIR}/rd/rd2rdo-lib.rb
-${RUBY_SITELIBDIR}/rd/rd2rmi-lib.rb
-${RUBY_SITELIBDIR}/rd/rdblockparser.tab.rb
-${RUBY_SITELIBDIR}/rd/rdfmt.rb
-${RUBY_SITELIBDIR}/rd/rdinlineparser.tab.rb
-${RUBY_SITELIBDIR}/rd/rdvisitor.rb
-${RUBY_SITELIBDIR}/rd/reference-resolver.rb
-${RUBY_SITELIBDIR}/rd/search-file.rb
-${RUBY_SITELIBDIR}/rd/tree.rb
-${RUBY_SITELIBDIR}/rd/version.rb
-${RUBY_SITELIBDIR}/rd/visitor.rb
-${RUBY_EXAMPLESDIR}/rd/dot.rd2rc
-${RUBY_DOCDIR}/rd/README.html
-${RUBY_DOCDIR}/rd/README.html.ja
-${RUBY_DOCDIR}/rd/README.rd
-${RUBY_DOCDIR}/rd/README.rd.ja
-${RUBY_DOCDIR}/rd/rd-draft.html
-${RUBY_DOCDIR}/rd/rd-draft.html.ja
-${RUBY_DOCDIR}/rd/rd-draft.rd
-${RUBY_DOCDIR}/rd/rd-draft.rd.ja
-@dirrm ${RUBY_SITELIBDIR}/rd
-@dirrm ${RUBY_EXAMPLESDIR}/rd
-@dirrm ${RUBY_DOCDIR}/rd
+${RUBY_VENDORLIB}/rd/block-element.rb
+${RUBY_VENDORLIB}/rd/complex-list-item.rb
+${RUBY_VENDORLIB}/rd/desclist.rb
+${RUBY_VENDORLIB}/rd/document-struct.rb
+${RUBY_VENDORLIB}/rd/element.rb
+${RUBY_VENDORLIB}/rd/filter.rb
+${RUBY_VENDORLIB}/rd/inline-element.rb
+${RUBY_VENDORLIB}/rd/labeled-element.rb
+${RUBY_VENDORLIB}/rd/list.rb
+${RUBY_VENDORLIB}/rd/loose-struct.rb
+${RUBY_VENDORLIB}/rd/methodlist.rb
+${RUBY_VENDORLIB}/rd/output-format-visitor.rb
+${RUBY_VENDORLIB}/rd/package.rb
+${RUBY_VENDORLIB}/rd/parser-util.rb
+${RUBY_VENDORLIB}/rd/rbl-file.rb
+${RUBY_VENDORLIB}/rd/rbl-suite.rb
+${RUBY_VENDORLIB}/rd/rd-struct.rb
+${RUBY_VENDORLIB}/rd/dot.rd2rc
+${RUBY_VENDORLIB}/rd/rd2html-lib.rb
+${RUBY_VENDORLIB}/rd/rd2html-opt.rb
+${RUBY_VENDORLIB}/rd/rd2man-lib.rb
+${RUBY_VENDORLIB}/rd/rd2rdo-lib.rb
+${RUBY_VENDORLIB}/rd/rd2rmi-lib.rb
+${RUBY_VENDORLIB}/rd/rdblockparser.tab.rb
+${RUBY_VENDORLIB}/rd/rdfmt.rb
+${RUBY_VENDORLIB}/rd/rdinlineparser.tab.rb
+${RUBY_VENDORLIB}/rd/rdvisitor.rb
+${RUBY_VENDORLIB}/rd/reference-resolver.rb
+${RUBY_VENDORLIB}/rd/search-file.rb
+${RUBY_VENDORLIB}/rd/tree.rb
+${RUBY_VENDORLIB}/rd/version.rb
+${RUBY_VENDORLIB}/rd/visitor.rb
+${RUBY_EG}/rd/dot.rd2rc
+${RUBY_DOC}/rd/README.html
+${RUBY_DOC}/rd/README.html.ja
+${RUBY_DOC}/rd/README.rd
+${RUBY_DOC}/rd/README.rd.ja
+${RUBY_DOC}/rd/rd-draft.html
+${RUBY_DOC}/rd/rd-draft.html.ja
+${RUBY_DOC}/rd/rd-draft.rd
+${RUBY_DOC}/rd/rd-draft.rd.ja
+@dirrm ${RUBY_VENDORLIB}/rd
+@dirrm ${RUBY_EG}/rd
+@dirrm ${RUBY_DOC}/rd

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2008/03/13 19:40:51 jlam Exp $
+# $NetBSD: Makefile,v 1.27 2008/06/19 14:57:20 taca Exp $
 
 DISTNAME=	rdtool-0.6.20
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.moonwolf.com/ruby/archive/
 
@@ -18,7 +19,14 @@ CONFLICTS+=	ruby[1-9][0-9]-rdtool-*
 USE_RUBY_SETUP=	yes
 REPLACE_RUBY=	bin/rd2 bin/rdswap
 
-CONF_FILES+=	${RUBY_SITELIBDIR}/rd/dot.rd2rc ${PKG_SYSCONFDIR}/dot.rd2rc
+CONFIGURE_ARGS+= --siteruby=${PREFIX}/${RUBY_VENDORLIB_BASE} \
+		--siterubyver=${PREFIX}/${RUBY_VENDORLIB} \
+		--siterubyverarch=${PREFIX}/${RUBY_VENDORARCHLIB}
+
+CONF_FILES+=	${PREFIX}/${RUBY_VENDORLIB}/rd/dot.rd2rc \
+		${PKG_SYSCONFDIR}/dot.rd2rc
+
+INSTALLATION_DIRS=	${RUBY_DOC}/rd ${RUBY_EG}/rd
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-configure
@@ -40,14 +48,12 @@ post-build:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/lib/rd/dot.rd2rc \
-		${DESTDIR}${RUBY_SITELIBDIR}/rd/dot.rd2rc
-	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_DOCDIR}/rd
+		${DESTDIR}${PREFIX}/${RUBY_VENDORLIB}/rd/dot.rd2rc
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${RUBY_DOCDIR}/rd
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${RUBY_DOC}/rd
 .endfor
-	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_EXAMPLESDIR}/rd
 	${INSTALL_DATA} ${WRKSRC}/lib/rd/dot.rd2rc \
-		${DESTDIR}${RUBY_EXAMPLESDIR}/rd/dot.rd2rc
+		${DESTDIR}${PREFIX}/${RUBY_EG}/rd/dot.rd2rc
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/bsd.pkg.mk"

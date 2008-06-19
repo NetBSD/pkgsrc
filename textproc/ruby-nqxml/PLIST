@@ -1,39 +1,39 @@
-@comment $NetBSD: PLIST,v 1.2 2006/09/07 15:55:50 taca Exp $
-${RUBY_SITELIBDIR}/nqxml/dispatcher.rb
-${RUBY_SITELIBDIR}/nqxml/document.rb
-${RUBY_SITELIBDIR}/nqxml/entities.rb
-${RUBY_SITELIBDIR}/nqxml/error.rb
-${RUBY_SITELIBDIR}/nqxml/info.rb
-${RUBY_SITELIBDIR}/nqxml/parser.rb
-${RUBY_SITELIBDIR}/nqxml/streamingparser.rb
-${RUBY_SITELIBDIR}/nqxml/tokenizer.rb
-${RUBY_SITELIBDIR}/nqxml/treeparser.rb
-${RUBY_SITELIBDIR}/nqxml/utils.rb
-${RUBY_SITELIBDIR}/nqxml/writer.rb
-${RUBY_DOCDIR}/nqxml/README
-${RUBY_EXAMPLESDIR}/nqxml/contrib/autodis_1.rb
-${RUBY_EXAMPLESDIR}/nqxml/contrib/autodis_2.rb
-${RUBY_EXAMPLESDIR}/nqxml/data.xml
-${RUBY_EXAMPLESDIR}/nqxml/doc.xml
-${RUBY_EXAMPLESDIR}/nqxml/dumpXML.rb
-${RUBY_EXAMPLESDIR}/nqxml/parseTestStream.rb
-${RUBY_EXAMPLESDIR}/nqxml/parseTestTree.rb
-${RUBY_EXAMPLESDIR}/nqxml/printEntityClassNames.rb
-${RUBY_EXAMPLESDIR}/nqxml/reverseTags.rb
-${RUBY_EXAMPLESDIR}/nqxml/reverseText.rb
-${RUBY_EXAMPLESDIR}/nqxml/tests/dispatchertester.rb
-${RUBY_EXAMPLESDIR}/nqxml/tests/oasis.rb
-${RUBY_EXAMPLESDIR}/nqxml/tests/streamingparsertester.rb
-${RUBY_EXAMPLESDIR}/nqxml/tests/test.rb
-${RUBY_EXAMPLESDIR}/nqxml/tests/testresource.rb
-${RUBY_EXAMPLESDIR}/nqxml/tests/tokenizertester.rb
-${RUBY_EXAMPLESDIR}/nqxml/tests/treeparsertester.rb
-${RUBY_EXAMPLESDIR}/nqxml/tests/writertester.rb
-${RUBY_EXAMPLESDIR}/nqxml/write.rb
-${RUBY_EXAMPLESDIR}/nqxml/writeManualDoc.rb
-${RUBY_EXAMPLESDIR}/nqxml/writeParsedDoc.rb
-@dirrm ${RUBY_SITELIBDIR}/nqxml
-@dirrm ${RUBY_DOCDIR}/nqxml
-@dirrm ${RUBY_EXAMPLESDIR}/nqxml/contrib
-@dirrm ${RUBY_EXAMPLESDIR}/nqxml/tests
-@dirrm ${RUBY_EXAMPLESDIR}/nqxml
+@comment $NetBSD: PLIST,v 1.3 2008/06/19 14:56:48 taca Exp $
+${RUBY_VENDORLIB}/nqxml/dispatcher.rb
+${RUBY_VENDORLIB}/nqxml/document.rb
+${RUBY_VENDORLIB}/nqxml/entities.rb
+${RUBY_VENDORLIB}/nqxml/error.rb
+${RUBY_VENDORLIB}/nqxml/info.rb
+${RUBY_VENDORLIB}/nqxml/parser.rb
+${RUBY_VENDORLIB}/nqxml/streamingparser.rb
+${RUBY_VENDORLIB}/nqxml/tokenizer.rb
+${RUBY_VENDORLIB}/nqxml/treeparser.rb
+${RUBY_VENDORLIB}/nqxml/utils.rb
+${RUBY_VENDORLIB}/nqxml/writer.rb
+${RUBY_DOC}/nqxml/README
+${RUBY_EG}/nqxml/contrib/autodis_1.rb
+${RUBY_EG}/nqxml/contrib/autodis_2.rb
+${RUBY_EG}/nqxml/data.xml
+${RUBY_EG}/nqxml/doc.xml
+${RUBY_EG}/nqxml/dumpXML.rb
+${RUBY_EG}/nqxml/parseTestStream.rb
+${RUBY_EG}/nqxml/parseTestTree.rb
+${RUBY_EG}/nqxml/printEntityClassNames.rb
+${RUBY_EG}/nqxml/reverseTags.rb
+${RUBY_EG}/nqxml/reverseText.rb
+${RUBY_EG}/nqxml/tests/dispatchertester.rb
+${RUBY_EG}/nqxml/tests/oasis.rb
+${RUBY_EG}/nqxml/tests/streamingparsertester.rb
+${RUBY_EG}/nqxml/tests/test.rb
+${RUBY_EG}/nqxml/tests/testresource.rb
+${RUBY_EG}/nqxml/tests/tokenizertester.rb
+${RUBY_EG}/nqxml/tests/treeparsertester.rb
+${RUBY_EG}/nqxml/tests/writertester.rb
+${RUBY_EG}/nqxml/write.rb
+${RUBY_EG}/nqxml/writeManualDoc.rb
+${RUBY_EG}/nqxml/writeParsedDoc.rb
+@dirrm ${RUBY_VENDORLIB}/nqxml
+@dirrm ${RUBY_DOC}/nqxml
+@dirrm ${RUBY_EG}/nqxml/contrib
+@dirrm ${RUBY_EG}/nqxml/tests
+@dirrm ${RUBY_EG}/nqxml
