@@ -1,8 +1,37 @@
-$NetBSD: patch-ac,v 1.3 2005/02/17 15:11:23 taca Exp $
+$NetBSD: patch-ac,v 1.4 2008/06/19 14:55:16 taca Exp $
 
---- configure.rb.orig	2003-02-10 12:18:10.000000000 +0900
+--- configure.rb.orig	2003-02-10 03:18:10.000000000 +0000
 +++ configure.rb
-@@ -443,27 +443,22 @@ $LIBERUBY_A = "liberuby.a"
+@@ -210,6 +210,7 @@ $bindir = CONFIG["bindir"].sub(prefix, "
+ $datadir = CONFIG["datadir"].sub(prefix, "$(prefix)").sub(drive, '')
+ $libdir = CONFIG["libdir"].sub(prefix, "$(exec_prefix)").sub(drive, '')
+ $archdir = $archdir.sub(prefix, "$(prefix)").sub(drive, '')
++$sitedir = $vendordir
+ $sitelibdir = $sitelibdir.sub(prefix, "$(prefix)").sub(drive, '')
+ $sitearchdir = $sitearchdir.sub(prefix, "$(prefix)").sub(drive, '')
+ $includedir = CONFIG["includedir"].sub(prefix, "$(prefix)").sub(drive, '')
+@@ -307,11 +308,15 @@ if $LDFLAGS.to_s.empty? && /mswin32/ =~ 
+ end
+ $LIBS = CONFIG["LIBS"]
+ $XLDFLAGS = CONFIG["XLDFLAGS"]
+-$XLDFLAGS.gsub!(/-L\./, "")
+-if /mswin32/ !~ RUBY_PLATFORM
+-  $XLDFLAGS += " -L$(libdir)"
+-elsif RUBY_VERSION >= "1.8"
+-  $XLDFLAGS += " #{CONFIG['LIBPATHFLAG'] % '$(libdir)'}"
++if $XLDFLAGS.nil?
++   $XLDFLAGS = ''
++else
++  $XLDFLAGS.gsub!(/-L\./, "")
++  if /mswin32/ !~ RUBY_PLATFORM
++    $XLDFLAGS += " -L$(libdir)"
++  elsif RUBY_VERSION >= "1.8"
++    $XLDFLAGS += " #{CONFIG['LIBPATHFLAG'] % '$(libdir)'}"
++  end
+ end
+ $DLDFLAGS = CONFIG["DLDFLAGS"]
+ $LDSHARED = CONFIG["LDSHARED"]
+@@ -443,27 +448,22 @@ $LIBERUBY_A = "liberuby.a"
  $LIBERUBY = "${LIBERUBY_A}"
  $LIBERUBYARG="$(LIBERUBY_A)"
  
