@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/09/08 21:58:01 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/19 18:14:57 joerg Exp $
 
 DISTNAME=		nbsed-20040821
 PKGREVISION=		1
@@ -9,6 +9,8 @@ DISTFILES=		# empty
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.NetBSD.org/
 COMMENT=		NetBSD-current's sed(1)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CHECKSUM=		yes
 NO_MTREE=		yes
