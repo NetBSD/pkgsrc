@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.29 2008/06/13 11:28:35 drochner Exp $
+# $NetBSD: Makefile,v 1.30 2008/06/19 01:56:44 bjs Exp $
 #
 
 DISTNAME=	dbus-1.2.1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://dbus.freedesktop.org/releases/dbus/
 
@@ -34,10 +35,17 @@ CONFIGURE_ARGS_GROUPS=	enable disable with without
 CONFIGURE_ARGS.Linux=	abstract-sockets dnotify selinux
 CONFIGURE_ARGS.docs=	doxygen-docs xml-docs
 
-CONFIGURE_ARGS.disable=		ansi asserts gcov tests
-CONFIGURE_ARGS.disable+=	console-owner-file verbose-mode
+CONFIGURE_ARGS.disable=		ansi gcov
+CONFIGURE_ARGS.disable+=	console-owner-file
 CONFIGURE_ARGS.disable+=	${CONFIGURE_ARGS.docs}
 CONFIGURE_ARGS.enable=		checks static
+###
+### XXX the spawn test hangs, and some of these tests may be bogus
+###
+#.if !empty(PKGSRC_RUN_TEST:M[Yy][Ee][Ss])
+#PKG_OPTIONS.dbus+=		debug
+#TEST_TARGET=			check
+#.endif
 
 CONFIGURE_ARGS.with=	dbus-user=${DBUS_USER}
 CONFIGURE_ARGS.with+=	test-socket-dir=${WRKDIR:Q}
