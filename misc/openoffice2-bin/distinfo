@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.13.4.1 2008/04/22 14:29:57 rtr Exp $
+$NetBSD: distinfo,v 1.13.4.2 2008/06/19 20:13:18 spz Exp $
 
-SHA1 (OOo_2.4.0_LinuxIntel_install_en-US.tar.gz) = 21a33624852ac3a1449dbb53e972cc82549c455d
-RMD160 (OOo_2.4.0_LinuxIntel_install_en-US.tar.gz) = 495a017ba547600c450ace93288f5c6c9254f622
-Size (OOo_2.4.0_LinuxIntel_install_en-US.tar.gz) = 154268807 bytes
+SHA1 (OOo_2.4.1_LinuxIntel_install_en-US.tar.gz) = d12a4958e456230b3230471352e28727b4a52d87
+RMD160 (OOo_2.4.1_LinuxIntel_install_en-US.tar.gz) = d6128bb26d5ec22819e8ebc27cdd6e63f592a730
+Size (OOo_2.4.1_LinuxIntel_install_en-US.tar.gz) = 154297731 bytes
