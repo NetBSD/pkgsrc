@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2008/03/03 17:45:37 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2008/06/19 14:47:00 taca Exp $
 
 DISTNAME=	ruby-bsearch-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-bsearch-${VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel ruby
 MASTER_SITES=	http://0xcc.net/ruby-bsearch/
 
@@ -20,17 +20,18 @@ TEST_TARGET=	check
 RD_SRCS=	bsearch.en.rd bsearch.ja.rd
 DOCS=		${RD_SRCS} bsearch.en.html bsearch.ja.html bsearch.png
 
+INSTALLATION_DIRS=	${RUBY_DOC}/bsearch
+
 do-build:
 .for f in ${RD_SRCS}
 	cd ${WRKSRC}; ${RUBY_RD} ${f} > ${f:S/.rd/.html/}
 .endfor
 
 do-install:
-	${INSTALL_LIB_DIR} ${DESTDIR}${RUBY_SITELIBDIR}
-	${INSTALL_DATA} ${WRKSRC}/bsearch.rb ${DESTDIR}${RUBY_SITELIBDIR}/bsearch.rb
-	${INSTALL_DATA_DIR} ${DESTDIR}${RUBY_DOCDIR}/bsearch
+	${INSTALL_DATA} ${WRKSRC}/bsearch.rb \
+		${DESTDIR}${PREFIX}/${RUBY_VENDORLIB}/bsearch.rb
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${RUBY_DOCDIR}/bsearch
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${RUBY_DOC}/bsearch
 .endfor
 
 .include "../../lang/ruby/modules.mk"
