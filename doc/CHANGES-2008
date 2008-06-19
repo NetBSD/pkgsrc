@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1308 2008/06/19 17:34:23 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1309 2008/06/19 18:04:00 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2180,3 +2180,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/dblatex to 0.2.9 [reed 2008-06-19]
 	Updated textproc/intltool to 0.40.0 [bjs 2008-06-19]
 	Updated misc/ascii to 3.8 [bjs 2008-06-19]
+	Updated x11/pixman to 0.11.4 [bjs 2008-06-19]
