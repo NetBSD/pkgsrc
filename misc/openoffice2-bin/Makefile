@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34.4.1 2008/04/22 14:29:56 rtr Exp $
+# $NetBSD: Makefile,v 1.34.4.2 2008/06/19 20:13:18 spz Exp $
 
 DISTNAME=		openoffice2-bin	# overridden below
 PKGNAME=		openoffice2-bin-${OO_RELEASE}
@@ -16,7 +16,7 @@ CONFLICTS+=		openoffice2-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*
 
 OO_VER=			2.4
-OO_RELEASE=		2.4.0
+OO_RELEASE=		2.4.1
 PLIST_SUBST+=		VER=${OO_VER:Q}
 MESSAGE_SUBST+=		VER=${OO_VER:Q}
 FILES_SUBST+=		VER=${OO_VER:Q}
@@ -44,7 +44,7 @@ RUN_LDCONFIG=		no
 
 .if ${EMUL_PLATFORM} == "linux-i386"
 DISTNAME=		OOo_${OO_RELEASE}_LinuxIntel_install_en-US
-WRKSRC=			${WRKDIR}/OOH680_m12_native_packed-1_en-US.9286
+WRKSRC=			${WRKDIR}/OOH680_m17_native_packed-1_en-US.9310
 .elif ${EMUL_PLATFORM} == "solaris-i386"
 DISTNAME=		OOo_${OO_RELEASE}_Solarisx86_install_en-US
 WRKSRC=			${WRKDIR}/OOG680_m5_native_packed-1_en-US.9221/packages
