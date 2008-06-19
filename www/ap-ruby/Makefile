@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.33 2008/06/12 02:14:54 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2008/06/19 15:02:17 taca Exp $
 #
 
 DISTNAME=	mod_ruby-${VERSION}
 PKGNAME=	${APACHE_PKG_PREFIX}-${RUBY_PKGPREFIX}-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	www ruby
 MASTER_SITES=	http://www.modruby.net/archive/
 
@@ -19,11 +20,11 @@ USE_APR=		yes
 VERSION=		1.2.6
 HAS_CONFIGURE=  	yes
 INSTALL_TARGET=		site-install
-INSTALLATION_DIRS=	${RUBY_DOCDIR}/mod_ruby/html ${RUBY_EXAMPLESDIR}/mod_ruby
+INSTALLATION_DIRS=	${RUBY_DOC}/mod_ruby/html ${RUBY_EG}/mod_ruby
 CONFIG_SHELL=		${RUBY}
 CONFIGURE_SCRIPT=	configure.rb
 CONFIGURE_ARGS+=	--with-apxs=${APXS:Q}
-MESSAGE_SUBST+=		RUBY_DOCDIR=${RUBY_DOCDIR}
+MESSAGE_SUBST+=		RUBY_DOC=${RUBY_DOC}
 DOCS=			ChangeLog NOTICE README.en README.ja
 REPLACE_RUBY+=		configure.rb install-rb
 
@@ -32,22 +33,26 @@ REPLACE_RUBY+=		configure.rb install-rb
 
 PKG_SYSCONFVAR=		apache
 PKG_SYSCONFSUBDIR?=	httpd
-CONF_FILES+=		${RUBY_EXAMPLESDIR}/mod_ruby/mod_ruby.conf \
+CONF_FILES+=		${PREFIX}/${RUBY_EG}/mod_ruby/mod_ruby.conf \
 			${PKG_SYSCONFDIR}/mod_ruby.conf
+
+SUBST_CLASSES+=		path
+SUBST_STAGE.path=	post-build
+SUBST_FILES.path=	examples/httpd.conf
+SUBST_SED.path=		-e 's|/usr/local/apache/libexec|${PREFIX}/lib/httpd|g'
+SUBST_MESSAGE.path=	Fixing configuration files.
 
 post-build:
 	cd ${WRKSRC}/doc; ${MAKE}
-	${SED} -e 's|/usr/local/apache/libexec|${LOCALBASE}/lib/httpd|g' \
-		${WRKSRC}/examples/httpd.conf > ${WRKDIR}/mod_ruby.conf
 
 post-install:
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${RUBY_DOCDIR}/mod_ruby
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${RUBY_DOC}/mod_ruby
 .endfor
-	${INSTALL_DATA} ${WRKSRC}/doc/*.rd  ${DESTDIR}${RUBY_DOCDIR}/mod_ruby
-	${INSTALL_DATA} ${WRKSRC}/doc/*.css  ${DESTDIR}${RUBY_DOCDIR}/mod_ruby/html
-	${INSTALL_DATA} ${WRKSRC}/doc/*.html  ${DESTDIR}${RUBY_DOCDIR}/mod_ruby/html
-	${INSTALL_DATA} ${WRKDIR}/mod_ruby.conf  ${DESTDIR}${RUBY_EXAMPLESDIR}/mod_ruby
+	${INSTALL_DATA} ${WRKSRC}/doc/*.rd  ${DESTDIR}${PREFIX}/${RUBY_DOC}/mod_ruby
+	${INSTALL_DATA} ${WRKSRC}/doc/*.css  ${DESTDIR}${PREFIX}/${RUBY_DOC}/mod_ruby/html
+	${INSTALL_DATA} ${WRKSRC}/doc/*.html  ${DESTDIR}${PREFIX}/${RUBY_DOC}/mod_ruby/html
+	${INSTALL_DATA} ${WRKSRC}/examples/httpd.conf ${DESTDIR}${PREFIX}/${RUBY_EG}/mod_ruby/mod_ruby.conf
 
 .include "../../lang/ruby/modules.mk"
 .include "../../textproc/ruby-eruby/buildlink3.mk"

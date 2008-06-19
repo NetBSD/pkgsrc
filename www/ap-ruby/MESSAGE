@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.5 2007/01/28 15:30:25 taca Exp $
+$NetBSD: MESSAGE,v 1.6 2008/06/19 15:02:17 taca Exp $
 
 In order to use this module in your Apache installation, you need to
 add the following to your httpd.conf file:
@@ -15,6 +15,6 @@ Note for apache2 (and lator):
 
 For more information, see
 
-	${RUBY_DOCDIR}/mod_ruby
+	${PREFIX}/${RUBY_DOC}/mod_ruby
 
 ===========================================================================
