@@ -1,41 +1,12 @@
-$NetBSD: patch-aa,v 1.6 2008/04/07 15:02:05 bjs Exp $
+$NetBSD: patch-aa,v 1.7 2008/06/19 17:51:27 bjs Exp $
 
---- pixman/pixman-combine.c.orig	2008-03-24 09:13:13.000000000 -0400
-+++ pixman/pixman-combine.c
-@@ -17,7 +17,7 @@
- /*
-  * Combine src and mask
-  */
--FASTCALL void
-+FASTCALL static void
- pixman_fbCombineMaskU (uint32_t *src, const uint32_t *mask, int width)
- {
-     int i;
-@@ -1165,7 +1165,7 @@ fbCombineConjointXorC (uint32_t *dest, u
-     fbCombineConjointGeneralC (dest, src, mask, width, CombineXor);
- }
- 
--CombineFuncU pixman_fbCombineFuncU[] = {
-+static CombineFuncU pixman_fbCombineFuncU[] = {
-     fbCombineClear,
-     fbCombineSrcU,
-     NULL, /* CombineDst */
-@@ -1212,7 +1212,7 @@ CombineFuncU pixman_fbCombineFuncU[] = {
-     fbCombineConjointXorU,
- };
- 
--CombineFuncC pixman_fbCombineFuncC[] = {
-+static CombineFuncC pixman_fbCombineFuncC[] = {
-     fbCombineClearC,
-     fbCombineSrcC,
-     NULL, /* Dest */
-@@ -1258,3 +1258,9 @@ CombineFuncC pixman_fbCombineFuncC[] = {
-     fbCombineConjointAtopReverseC,
-     fbCombineConjointXorC,
- };
-+
-+FbComposeFunctions pixman_composeFunctions = {
-+    pixman_fbCombineFuncU,
-+    pixman_fbCombineFuncC,
-+    pixman_fbCombineMaskU
-+};
+--- pixman/Makefile.am.orig	2008-06-09 01:56:58.000000000 -0400
++++ pixman/Makefile.am
+@@ -1,5 +1,6 @@
+ lib_LTLIBRARIES = libpixman-1.la
+-libpixman_1_la_LDFLAGS = -version-info $(LT_VERSION_INFO)
++libpixman_1_la_LDFLAGS = -version-info $(LT_VERSION_INFO) \
++	-export-symbols $(PIXMAN_SYMFILE)
+ libpixman_1_la_LIBADD = @DEP_LIBS@ -lm
+ libpixman_1_la_CFLAGS = -DPIXMAN_DISABLE_DEPRECATED
+ libpixman_1_la_SOURCES =		\

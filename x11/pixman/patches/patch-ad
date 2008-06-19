@@ -1,15 +1,26 @@
-$NetBSD: patch-ad,v 1.1 2008/04/07 15:02:05 bjs Exp $
+$NetBSD: patch-ad,v 1.2 2008/06/19 17:51:27 bjs Exp $
 
---- pixman/pixman-private.h.orig	2008-03-24 09:13:13.000000000 -0400
-+++ pixman/pixman-private.h
-@@ -332,10 +332,6 @@ union pixman_image
- };
+--- configure.ac.orig	2008-06-09 12:32:10.000000000 -0400
++++ configure.ac
+@@ -112,14 +112,14 @@ dnl ====================================
+ dnl -fvisibility stuff
  
+ have_gcc4=no
+-AC_MSG_CHECKING(for -fvisibility)
+-AC_COMPILE_IFELSE([
+-#if defined(__GNUC__) && (__GNUC__ >= 4)
+-#else
+-#error Need GCC 4.0 for visibility
+-#endif
++dnl AC_MSG_CHECKING(for -fvisibility)
++dnl AC_COMPILE_IFELSE([
++dnl #if defined(__GNUC__) && (__GNUC__ >= 4)
++dnl #else
++dnl #error Need GCC 4.0 for visibility
++dnl #endif
+ int main () { return 0; } 
+-], have_gcc4=yes)
++dnl ], have_gcc4=yes)
  
--extern CombineFuncU pixman_fbCombineFuncU[];
--extern CombineFuncC pixman_fbCombineFuncC[];
--FASTCALL void pixman_fbCombineMaskU (uint32_t *src, const uint32_t *mask, int width);
--
- #define LOG2_BITMAP_PAD 5
- #define FB_STIP_SHIFT	LOG2_BITMAP_PAD
- #define FB_STIP_UNIT	(1 << FB_STIP_SHIFT)
+ if test "x$have_gcc4" = "xyes"; then
+    CFLAGS="$CFLAGS -fvisibility=hidden"
