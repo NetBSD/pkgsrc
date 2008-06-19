@@ -1,2 +1,2 @@
-@comment $NetBSD: PLIST,v 1.2 2006/01/15 16:12:55 minskim Exp $
-${RUBY_SITEARCHLIBDIR}/libart2.${RUBY_DLEXT}
+@comment $NetBSD: PLIST,v 1.3 2008/06/19 15:13:03 taca Exp $
+${RUBY_VENDORARCHLIB}/libart2.${RUBY_DLEXT}
