@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2008/04/04 15:31:39 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/19 14:56:48 taca Exp $
 #
 
 DISTNAME=	nqxml-1.1.3p1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/p/./}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	textproc ruby
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nqxml/}
 
@@ -25,22 +25,24 @@ TESTS=		dispatchertester.rb oasis.rb streamingparsertester.rb test.rb \
 		writertester.rb
 REPLACE_RUBY_DIRS=	examples tests
 
+INSTALLATION_DIRS=	${RUBY_DOC}/nqxml ${RUBY_EG}/nqxml/contrib \
+			${RUBY_EG}/nqxml/tests
+
 post-install:
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/nqxml
 .for f in ${DOC}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/nqxml
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${RUBY_DOC}/nqxml
 .endfor
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/nqxml/contrib
 .for f in ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/examples/${f} ${RUBY_EXAMPLESDIR}/nqxml
+	${INSTALL_DATA} ${WRKSRC}/examples/${f} \
+		${DESTDIR}${PREFIX}/${RUBY_EG}/nqxml
 .endfor
 .for f in ${CONTRIB_LIB}
 	${INSTALL_DATA} ${WRKSRC}/contrib/${f} \
-		${RUBY_EXAMPLESDIR}/nqxml/contrib
+		${DESTDIR}${PREFIX}/${RUBY_EG}/nqxml/contrib
 .endfor
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/nqxml/tests
 .for f in ${TESTS}
-	${INSTALL_DATA} ${WRKSRC}/tests/${f} ${RUBY_EXAMPLESDIR}/nqxml/tests
+	${INSTALL_DATA} ${WRKSRC}/tests/${f} \
+		${DESTDIR}${PREFIX}/${RUBY_EG}/nqxml/tests
 .endfor
 
 .include "../../lang/ruby/modules.mk"

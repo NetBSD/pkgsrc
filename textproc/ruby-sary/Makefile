@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2008/03/10 03:00:18 obache Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/19 14:57:36 taca Exp $
 #
 
 DISTNAME=	sary-ruby-1.2.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:S/-ruby-/-/}
+PKGREVISION=	1
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://sary.sourceforge.net/
 
@@ -21,11 +22,11 @@ SUBST_STAGE.ruby=	post-build
 SUBST_FILES.ruby=	${DOCS}
 SUBST_SED.ruby=		-e 's|/usr/local/bin/ruby|${RUBY}|g'
 
-INSTALLATION_DIRS=	${RUBY_DOCDIR}/sary
+INSTALLATION_DIRS=	${RUBY_DOC}/sary
 
 post-install:
 .for d in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${d} ${DESTDIR}${RUBY_DOCDIR}/sary
+	${INSTALL_DATA} ${WRKSRC}/${d} ${DESTDIR}${PREFIX}/${RUBY_DOC}/sary
 .endfor
 
 .include "../../lang/ruby/modules.mk"
