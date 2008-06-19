@@ -1,14 +1,14 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/10 13:08:51 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/06/19 14:54:26 taca Exp $
 bin/migemo
 bin/migemo-client
 bin/migemo-grep
 bin/migemo-server
-lib/ruby/site_ruby/1.8/migemo-cache.rb
-lib/ruby/site_ruby/1.8/migemo-convert.rb
-lib/ruby/site_ruby/1.8/migemo-dict.rb
-lib/ruby/site_ruby/1.8/migemo-index.rb
-lib/ruby/site_ruby/1.8/migemo-regex.rb
-lib/ruby/site_ruby/1.8/migemo.rb
+${RUBY_SITELIB}/migemo-cache.rb
+${RUBY_SITELIB}/migemo-convert.rb
+${RUBY_SITELIB}/migemo-dict.rb
+${RUBY_SITELIB}/migemo-index.rb
+${RUBY_SITELIB}/migemo-regex.rb
+${RUBY_SITELIB}/migemo.rb
 share/migemo/migemo-dict
 share/migemo/migemo-dict.cache
 share/migemo/migemo-dict.cache.idx
