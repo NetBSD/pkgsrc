@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.10 2007/09/24 21:58:28 taca Exp $
+$NetBSD: patch-aa,v 1.11 2008/06/19 14:35:37 taca Exp $
 
---- configure.in.orig	2007-09-07 16:38:51.000000000 +0900
+--- configure.in.orig	2008-06-09 03:23:46.000000000 +0900
 +++ configure.in
-@@ -421,6 +421,9 @@ msdosdjgpp*)	LIBS="-lm $LIBS"
- 		;;
- bsdi*)          LIBS="-lm $LIBS"
+@@ -452,6 +452,9 @@ bsdi*)          LIBS="-lm $LIBS"
+ 		AC_DEFINE(BROKEN_SETREUID, 1)
+ 		AC_DEFINE(BROKEN_SETREGID, 1)
                  ac_cv_sizeof_rlim_t=8;;
 +interix3*)	LIBS="-lm $LIBS"
 +		ac_cv_func_getpgrp_void=yes
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.10 2007/09/24 21:58:28 taca Exp $
  freebsd*)	LIBS="-lm $LIBS"
  		AC_CACHE_CHECK([whether -lxpg4 has to be linked],
  		  rb_cv_lib_xpg4_needed,
-@@ -1026,6 +1029,13 @@ if test "$with_dln_a_out" != yes; then
+@@ -1165,6 +1168,13 @@ if test "$with_dln_a_out" != yes; then
  			    LDFLAGS="$LDFLAGS -Wl,-export-dynamic"
  			fi
  			rb_cv_dlopen=yes ;;
@@ -25,8 +25,8 @@ $NetBSD: patch-aa,v 1.10 2007/09/24 21:58:28 taca Exp $
 +			rb_cv_dlopen=yes ;;
  	interix*) 	: ${LDSHARED="$CC -shared"}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
- 			LIBPATHFLAG=" -L'%1\$-s'"
-@@ -1376,6 +1386,14 @@ if test "$enable_shared" = 'yes'; then
+ 			LIBPATHFLAG=" -L%1\$-s"
+@@ -1508,6 +1518,14 @@ if test "$enable_shared" = 'yes'; then
  	LIBRUBY_DLDFLAGS='-install_name $(libdir)/lib$(RUBY_SO_NAME).dylib -current_version $(MAJOR).$(MINOR).$(TEENY) -compatibility_version $(MAJOR).$(MINOR)'
  	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).$(MAJOR).$(MINOR).dylib lib$(RUBY_SO_NAME).dylib'
  	;;
@@ -41,7 +41,7 @@ $NetBSD: patch-aa,v 1.10 2007/09/24 21:58:28 taca Exp $
      interix*)
  	LIBRUBYARG_SHARED='-L. -L${libdir} -l$(RUBY_SO_NAME)'
  	;;
-@@ -1385,6 +1403,7 @@ if test "$enable_shared" = 'yes'; then
+@@ -1517,6 +1535,7 @@ if test "$enable_shared" = 'yes'; then
  fi
  if test "$enable_rpath" = yes; then
      LIBRUBYARG_SHARED="${linker_flag}-R ${linker_flag}\$(libdir) -L\$(libdir) $LIBRUBYARG_SHARED"
@@ -49,3 +49,22 @@ $NetBSD: patch-aa,v 1.10 2007/09/24 21:58:28 taca Exp $
  fi
  
  LDFLAGS="-L. $LDFLAGS"
+@@ -1717,14 +1736,14 @@ AC_ARG_WITH(vendordir,
+ VENDOR_DIR=`eval echo \\"${vendordir}\\"`
+ case "$target_os" in
+   cygwin*|mingw*|*djgpp*|os2-emx*)
+-    RUBY_VENDOR_LIB_PATH="`expr "$VENDOR_DIR" : "$prefix\(/.*\)"`" ||
+-    RUBY_VENDOR_LIB_PATH="$VENDOR_DIR";;
++    RUBY_VENDOR_LIB_PATH="`eval echo "$VENDOR_DIR" | sed 's|^NONE/|/|;s|^'"$prefix"'/|/|'`"
++    ;;
+   *)
+-    RUBY_VENDOR_LIB_PATH="$VENDOR_DIR";;
++    RUBY_VENDOR_LIB_PATH="`eval echo \\"$VENDOR_DIR\\" | sed 's|^NONE/|'"$prefix"'/|'`"
++    ;;
+ esac
+ RUBY_VENDOR_LIB_PATH2="${RUBY_VENDOR_LIB_PATH}/${MAJOR}.${MINOR}"
+ 
+-AC_DEFINE_UNQUOTED(RUBY_LIB, "${RUBY_LIB_PATH}")
+ AC_DEFINE_UNQUOTED(RUBY_VENDOR_LIB, "${RUBY_VENDOR_LIB_PATH}")
+ AC_DEFINE_UNQUOTED(RUBY_VENDOR_LIB2, "${RUBY_VENDOR_LIB_PATH2}")
+ 
