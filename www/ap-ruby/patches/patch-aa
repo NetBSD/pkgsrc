@@ -1,0 +1,39 @@
+$NetBSD: patch-aa,v 1.1 2008/06/19 15:02:17 taca Exp $
+
+--- configure.rb.orig	2006-05-22 22:23:36.000000000 +0000
++++ configure.rb
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env ruby
++#!/usr/pkg/bin/ruby18
+ 
+ # Generated automatically using autoconf.rb version 0.2.4
+ 
+@@ -217,6 +217,7 @@ $bindir = CONFIG["bindir"].sub(prefix, "
+ $datadir = CONFIG["datadir"].sub(prefix, "$(prefix)").sub(drive, '')
+ $libdir = CONFIG["libdir"].sub(prefix, "$(exec_prefix)").sub(drive, '')
+ $archdir = $archdir.sub(prefix, "$(prefix)").sub(drive, '')
++$sitedir = $vendordir
+ $sitelibdir = $sitelibdir.sub(prefix, "$(prefix)").sub(drive, '')
+ $sitearchdir = $sitearchdir.sub(prefix, "$(prefix)").sub(drive, '')
+ $includedir = CONFIG["includedir"].sub(prefix, "$(prefix)").sub(drive, '')
+@@ -321,11 +322,15 @@ if $LDFLAGS.to_s.empty? && /mswin32/ =~ 
+ end
+ $LIBS = CONFIG["LIBS"]
+ $XLDFLAGS = CONFIG["XLDFLAGS"]
+-$XLDFLAGS.gsub!(/-L\./, "")
+-if /mswin32/ !~ RUBY_PLATFORM
+-  $XLDFLAGS += " -L$(libdir)"
+-elsif RUBY_VERSION >= "1.8"
+-  $XLDFLAGS += " #{CONFIG['LIBPATHFLAG'] % '$(libdir)'}"
++if $XLDFLAGS.nil?
++  $XLDFLAGS = ''
++else
++  $XLDFLAGS.gsub!(/-L\./, "")
++  if /mswin32/ !~ RUBY_PLATFORM
++    $XLDFLAGS += " -L$(libdir)"
++  elsif RUBY_VERSION >= "1.8"
++    $XLDFLAGS += " #{CONFIG['LIBPATHFLAG'] % '$(libdir)'}"
++  end
+ end
+ $DLDFLAGS = CONFIG["DLDFLAGS"]
+ $LDSHARED = CONFIG["LDSHARED"]
