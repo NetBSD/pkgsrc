@@ -1,0 +1,58 @@
+$NetBSD: patch-ab,v 1.1 2008/06/19 15:19:45 taca Exp $
+
+--- qtruby/rubylib/qtruby/Qt.cpp.orig	2007-01-15 11:19:09.000000000 +0000
++++ qtruby/rubylib/qtruby/Qt.cpp
+@@ -950,7 +950,7 @@ cast_object_to(VALUE /*self*/, VALUE obj
+ const char *
+ get_VALUEtype(VALUE ruby_value)
+ {
+-	char * classname = rb_obj_classname(ruby_value);
++	const char * classname = rb_obj_classname(ruby_value);
+     const char *r = "";
+     if(ruby_value == Qnil)
+ 	r = "u";
+@@ -1395,7 +1395,7 @@ static Smoke::Index new_qvariant_qmap = 
+ }
+ 
+ static QCString *
+-find_cached_selector(int argc, VALUE * argv, VALUE klass, char * methodName)
++find_cached_selector(int argc, VALUE * argv, VALUE klass, const char * methodName)
+ {
+     // Look in the cache
+ static QCString * mcid = 0;
+@@ -1432,7 +1432,7 @@ static QCString * mcid = 0;
+ static VALUE
+ method_missing(int argc, VALUE * argv, VALUE self)
+ {
+-	char * methodName = rb_id2name(SYM2ID(argv[0]));
++	const char * methodName = rb_id2name(SYM2ID(argv[0]));
+     VALUE klass = rb_funcall(self, rb_intern("class"), 0);
+ 
+ 	// Look for 'thing?' methods, and try to match isThing() or hasThing() in the Smoke runtime
+@@ -1482,7 +1482,7 @@ static QString * pred = 0;
+ 
+ 			VALUE retval = rb_funcall2(qt_internal_module, rb_intern("do_method_missing"), argc+3, temp_stack);
+ 			if (_current_method == -1) {
+-				char * op = rb_id2name(SYM2ID(argv[0]));
++				const char * op = rb_id2name(SYM2ID(argv[0]));
+ 				if (	qstrcmp(op, "-") == 0
+ 						|| qstrcmp(op, "+") == 0
+ 						|| qstrcmp(op, "/") == 0
+@@ -1557,7 +1557,7 @@ static VALUE
+ class_method_missing(int argc, VALUE * argv, VALUE klass)
+ {
+ 	VALUE result = Qnil;
+-	char * methodName = rb_id2name(SYM2ID(argv[0]));
++	const char * methodName = rb_id2name(SYM2ID(argv[0]));
+ 	VALUE * temp_stack = (VALUE *) calloc(argc+3, sizeof(VALUE));
+     temp_stack[0] = rb_str_new2("Qt");
+     temp_stack[1] = rb_str_new2(methodName);
+@@ -1772,7 +1772,7 @@ qapplication_argv(VALUE /*self*/)
+ VALUE
+ getmetainfo(VALUE self, int &offset, int &index)
+ {
+-    char * signalname = rb_id2name(rb_frame_last_func());
++    const char * signalname = rb_id2name(rb_frame_last_func());
+     VALUE metaObject_value = rb_funcall(qt_internal_module, rb_intern("getMetaObject"), 1, self);
+ 
+     smokeruby_object *ometa = value_obj_info(metaObject_value);
