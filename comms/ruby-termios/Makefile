@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2008/04/04 15:30:00 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2008/06/19 14:39:58 taca Exp $
 
 DISTNAME=	ruby-termios-0.9.5
 PKGNAME=	${RUBY_PKGPREFIX}-${GEM_NAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	comms
 MASTER_SITES=	http://arika.org/archive/
 EXTRACT_SUFX=	.tar.gz
