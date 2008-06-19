@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/11/23 06:42:38 minskim Exp $
-${RUBY_SITEARCHLIBDIR}/mod_curia.${RUBY_DLEXT}
-${RUBY_SITEARCHLIBDIR}/mod_depot.${RUBY_DLEXT}
-${RUBY_SITEARCHLIBDIR}/mod_villa.${RUBY_DLEXT}
-${RUBY_SITELIBDIR}/curia.rb
-${RUBY_SITELIBDIR}/depot.rb
-${RUBY_SITELIBDIR}/villa.rb
+@comment $NetBSD: PLIST,v 1.2 2008/06/19 14:45:38 taca Exp $
+${RUBY_VENDORARCHLIB}/mod_curia.${RUBY_DLEXT}
+${RUBY_VENDORARCHLIB}/mod_depot.${RUBY_DLEXT}
+${RUBY_VENDORARCHLIB}/mod_villa.${RUBY_DLEXT}
+${RUBY_VENDORLIB}/curia.rb
+${RUBY_VENDORLIB}/depot.rb
+${RUBY_VENDORLIB}/villa.rb
 bin/rbcrtest
 bin/rbdptest
 bin/rbvltest

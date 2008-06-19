@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2007/02/22 19:26:19 wiz Exp $
+# $NetBSD: Makefile,v 1.27 2008/06/19 14:44:39 taca Exp $
 #
 
 DISTNAME=	mysql-ruby-2.7.3
 PKGNAME=	${RUBY_PKGPREFIX}-mysql-2.7.3
+PKGREVISION=	1
 CATEGORIES=	databases ruby
 MASTER_SITES=	http://tmtm.org/downloads/mysql/ruby/
 
@@ -15,16 +16,15 @@ RUBY_REQD=		1.8.2
 USE_RUBY_EXTCONF=	yes
 INSTALL_TARGET=		site-install
 CONFIGURE_ARGS+=	--with-mysql-config
+INSTALLATION_DIRS=	${RUBY_DOC}/mysql ${RUBY_EG}/mysql
 
 DOCS=		README.html README_ja.html tommy.css
 
 post-install:
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/mysql
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/mysql
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${RUBY_DOC}/mysql
 .endfor
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/mysql
-	${INSTALL_SCRIPT} ${WRKSRC}/test.rb ${RUBY_EXAMPLESDIR}/mysql
+	${INSTALL_SCRIPT} ${WRKSRC}/test.rb ${DESTDIR}${PREFIX}/${RUBY_EG}/mysql
 
 .include "../../lang/ruby/modules.mk"
 .include "../../mk/mysql.buildlink3.mk"

@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2007/02/22 19:01:18 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/06/19 14:46:37 taca Exp $
 
 DISTNAME=	amstd-2.0.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel ruby
 MASTER_SITES=	http://www.loveruby.net/archive/amstd/
 
@@ -12,13 +12,16 @@ COMMENT=	Collection of miscellaneous Ruby modules
 
 USE_RUBY_SETUP=	yes
 RUBY_SETUP=	install.rb
+CONFIGURE_ARGS=	--site-ruby=${PREFIX}/${RUBY_VENDORLIB} \
+		--so-dir=${PREFIX}/${RUBY_VENDORARCHLIB}
 
 DOCS=		README.en README.ja manual.rd.ja
 
+INSTALLATION_DIRS=	${RUBY_DOC}/amstd
+
 post-install:
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/amstd
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/amstd
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${RUBY_DOC}/amstd
 .endfor
 
 .include "../../lang/ruby/modules.mk"
