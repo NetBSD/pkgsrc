@@ -1,8 +1,6 @@
-# $NetBSD: Makefile.common,v 1.4 2007/05/20 15:56:44 taca Exp $
+# $NetBSD: Makefile.common,v 1.5 2008/06/19 12:38:45 taca Exp $
 #
 
-GEEKLOG_BASE=		share/geeklog
-GEEKLOG_PUB=		share/httpd/geeklog
 GEEKLOG_ADMIN=		${GEEKLOG_BASE}/admin
 GEEKLOG_TMPL=		${GEEKLOG_BASE}/default
 
@@ -19,10 +17,14 @@ GEEKLOG_EXAMPLESDIR=	${PREFIX}/share/examples/geeklog
 
 .include "../../mk/bsd.prefs.mk"
 
+# Geeklog's basic directories.
+GEEKLOG_BASE?=		share/geeklog
+GEEKLOG_PUB?=		share/httpd/geeklog
+
 # access Geeklog as its own directory?
 GEEKLOG_SITEBASE?=	geeklog
 
-BUILD_DEFS+=		GEEKLOG_SITEBASE
+BUILD_DEFS+=		GEEKLOG_BASE GEEKLOG_PUB GEEKLOG_SITEBASE
 
 .if !empty(GEEKLOG_SITEBASE)
 GEEKLOG_SITESUBDIR=	/${GEEKLOG_SITEBASE}
