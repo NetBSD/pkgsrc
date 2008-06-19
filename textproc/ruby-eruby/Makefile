@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2007/03/17 17:29:01 rillig Exp $
+# $NetBSD: Makefile,v 1.22 2008/06/19 14:55:16 taca Exp $
 
 DISTNAME=	eruby-${ERUBY_VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	textproc ruby
 MASTER_SITES=	http://www.modruby.net/archive/
 
@@ -35,17 +35,18 @@ MAN1=			eruby.1
 DOCS=			ChangeLog README.en README.ja eruby.rd eruby.html
 EXAMPLES=		e2r.rb foo.rhtml test.rb test.rhtml
 
+INSTALLATION_DIRS=	bin include lib ${RUBY_DOC}/eruby ${RUBY_EG}/eruby
+
 post-build:
 	cd ${WRKSRC}; ${RUBY_RD} eruby.rd > eruby.html
 
 post-install:
-	${INSTALL_DATA_DIR} ${RUBY_DOCDIR}/eruby
 .for f in ${DOCS}
-	${INSTALL_DATA} ${WRKSRC}/${f} ${RUBY_DOCDIR}/eruby
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${RUBY_DOC}/eruby
 .endfor
-	${INSTALL_DATA_DIR} ${RUBY_EXAMPLESDIR}/eruby
 .for f in ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/examples/${f} ${RUBY_EXAMPLESDIR}/eruby
+	${INSTALL_DATA} ${WRKSRC}/examples/${f} \
+		${DESTDIR}${PREFIX}/${RUBY_EG}/eruby
 .endfor
 
 .include "../../lang/ruby/modules.mk"
