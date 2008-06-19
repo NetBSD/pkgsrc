@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.5 2008/06/19 12:38:45 taca Exp $
+# $NetBSD: Makefile.common,v 1.6 2008/06/19 14:08:42 taca Exp $
 #
+# used by www/geeklog/Makefile
 
 GEEKLOG_ADMIN=		${GEEKLOG_BASE}/admin
 GEEKLOG_TMPL=		${GEEKLOG_BASE}/default
