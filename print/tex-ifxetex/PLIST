@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/19 16:24:49 reed Exp $
+${PKG_LOCALTEXMFPREFIX}/tex/latex/ifxetex/ifxetex.sty
+share/doc/tex-ifxetex/README
+@dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex/ifxetex
+@dirrm share/doc/tex-ifxetex
+@comment In texmf-dirs: @dirrm ${PKG_LOCALTEXMFPREFIX}/tex/latex
