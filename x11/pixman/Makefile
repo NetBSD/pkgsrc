@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/06/19 17:51:27 bjs Exp $
+# $NetBSD: Makefile,v 1.13 2008/06/19 17:59:52 bjs Exp $
 #
 
 DISTNAME=	pixman-0.11.4
@@ -20,14 +20,14 @@ USE_TOOLS+=	pkg-config perl
 PKGCONFIG_OVERRIDE+=	pixman-1.pc.in
 ###
 ### XXX The configure script is written to fail if it detects gcc<4.0
-###	for lack of -fvisibility=hidden. In keeping with the pkgsrc 
-###	tradition of portability, we'll opt to use libtool to export 
+###	for lack of -fvisibility=hidden. In keeping with the pkgsrc
+###	tradition of portability, we'll opt to use libtool to export
 ###	the desired symbols, hiding the rest.
 ###
 ###	I have verified the list of visible symbols is unchanged from
 ###	the "factory" build.
 ###
-PIXMAN_SYMFILE= 	${WRKDIR}/pixman.sym
+PIXMAN_SYMFILE=	${WRKDIR}/pixman.sym
 MAKE_ENV+=		PIXMAN_SYMFILE=${PIXMAN_SYMFILE:Q}
 
 post-extract:
