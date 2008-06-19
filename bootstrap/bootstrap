@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.131 2008/06/17 12:11:59 sketch Exp $
+# $NetBSD: bootstrap,v 1.132 2008/06/19 18:36:51 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -1056,6 +1056,10 @@ build_package() {
 	run_cmd "(cd $pkgsrcdir/$1 && $bmake -DPKG_PRESERVE MAKECONF=${BOOTSTRAP_MKCONF} install)"
 }
 
+#
+# Please make sure that the following packages and
+# only the following packages set BOOTSTRAP_PKG=yes.
+#
 echo_msg "Installing packages"
 build_package "pkgtools/bootstrap-mk-files"
 case "$need_bsd_install" in
