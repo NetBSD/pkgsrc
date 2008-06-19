@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1 2008/06/19 15:19:45 taca Exp $
+
+--- configure.orig	2008-02-13 15:00:15.000000000 +0000
++++ configure
+@@ -44789,8 +44789,8 @@ else
+   { echo "$as_me:$LINENO: checking for ruby dirs" >&5
+ echo $ECHO_N "checking for ruby dirs... $ECHO_C" >&6; }
+   RUBY_ARCHDIR=`ruby -r rbconfig -e 'printf("%s",Config::CONFIG["archdir"])'`
+-  RUBY_SITEARCHDIR=`ruby -r rbconfig -e 'printf("%s",Config::CONFIG["sitearchdir"])'`
+-  RUBY_SITEDIR=`ruby -r rbconfig -e 'printf("%s",Config::CONFIG["sitelibdir"])'`
++  RUBY_SITEARCHDIR=`ruby -r rbconfig -e 'printf("%s",Config::CONFIG["vendorarchdir"])'`
++  RUBY_SITEDIR=`ruby -r rbconfig -e 'printf("%s",Config::CONFIG["vendorlibdir"])'`
+   { echo "$as_me:$LINENO: result: archdir $RUBY_ARCHDIR, sitearchdir $RUBY_SITEARCHDIR, sitedir $RUBY_SITEDIR" >&5
+ echo "${ECHO_T}archdir $RUBY_ARCHDIR, sitearchdir $RUBY_SITEARCHDIR, sitedir $RUBY_SITEDIR" >&6; }
+ 
+@@ -54593,8 +54593,8 @@ else
+   { echo "$as_me:$LINENO: checking for ruby dirs" >&5
+ echo $ECHO_N "checking for ruby dirs... $ECHO_C" >&6; }
+   RUBY_ARCHDIR=`$RUBY -r rbconfig -e 'printf("%s",Config::CONFIG["archdir"])'`
+-  RUBY_SITEARCHDIR=`$RUBY -r rbconfig -e 'printf("%s",Config::CONFIG["sitearchdir"])'`
+-  RUBY_SITEDIR=`$RUBY -r rbconfig -e 'printf("%s",Config::CONFIG["sitelibdir"])'`
++  RUBY_SITEARCHDIR=`$RUBY -r rbconfig -e 'printf("%s",Config::CONFIG["vendorarchdir"])'`
++  RUBY_SITEDIR=`$RUBY -r rbconfig -e 'printf("%s",Config::CONFIG["vendorlibdir"])'`
+   RUBY_LIBDIR=`$RUBY -r rbconfig -e 'printf("%s",Config::CONFIG["libdir"])'`
+   RUBY_LIBRUBYARG=`$RUBY -r rbconfig -e 'printf("%s",Config::CONFIG["LIBRUBYARG_SHARED"])'`
+   { echo "$as_me:$LINENO: result: archdir $RUBY_ARCHDIR, sitearchdir $RUBY_SITEARCHDIR, sitedir $RUBY_SITEDIR, libdir $RUBY_LIBDIR, librubyarg $RUBY_LIBRUBYARG" >&5
