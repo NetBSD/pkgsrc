@@ -1,4 +1,4 @@
-/*	$NetBSD: snprintf.c,v 1.6 2008/02/14 19:14:54 tnn Exp $	*/
+/*	$NetBSD: snprintf.c,v 1.7 2008/06/19 17:28:09 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2007 Tobias Nygren <tnn@NetBSD.org>
@@ -59,9 +59,9 @@ vsnprintf(char *str, size_t size, const char *format, va_list ap)
 	char *p = buf;
 	static FILE *devnull = 0;
 
-	if (!devnull) {
+	if (devnull == NULL) {
 		devnull = fopen("/dev/null", "w");
-		if (!devnull)
+		if (devnull == NULL)
 			return -1;
 	}
 
@@ -70,13 +70,13 @@ vsnprintf(char *str, size_t size, const char *format, va_list ap)
 		return len;
 
 	if (len > 128) {
-			p = malloc(len + 1);
-			if (!p)
+		p = malloc(len + 1);
+		if (p == NULL)
 			return -1;
 	}
 
 	vsprintf(p, format, ap);
-	
+
 	if (size > 0) {
 		memcpy(str, p, MIN(len, size));
 		str[MIN(len, size - 1)] = 0;
