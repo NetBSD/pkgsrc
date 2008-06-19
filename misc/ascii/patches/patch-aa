@@ -1,0 +1,32 @@
+$NetBSD: patch-aa,v 1.1 2008/06/19 17:33:50 bjs Exp $
+
+--- Makefile.orig	2005-03-03 16:03:38.000000000 -0500
++++ Makefile
+@@ -2,10 +2,11 @@
+ 
+ VERS=$(shell sed <ascii.spec -n -e '/Version: \(.*\)/s//\1/p')
+ 
+-CFLAGS = -O
++CFLAGS ?= -O
+ 
+ ascii: ascii.c splashscreen.h nametable.h
+-	$(CC) -DREVISION=$(VERS) ascii.c -o ascii
++	$(LIBTOOL) --mode=link --tag=CC \
++		$(CC) $(CFLAGS) -DREVISION=$(VERS) ascii.c -o ascii
+ 
+ splashscreen.h: splashscreen
+ 	sed <splashscreen >splashscreen.h -e 's/\\/\\\\/g' -e 's/"/\\"/g' -e 's/.*/P("&");/' 
+@@ -23,8 +24,11 @@ clean:
+ 	rm -f ascii ascii.o splashscreen.h nametable.h *.rpm *.tar.gz MANIFEST
+ 
+ install: ascii ascii.1
+-	cp ascii $(DESTDIR)/usr/bin/ascii
+-	cp ascii.1 $(DESTDIR)/usr/share/man/man1
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(PREFIX)/bin
++	$(LIBTOOL) --mode=install \
++		$(BSD_INSTALL_PROGRAM) ascii $(DESTDIR)$(PREFIX)/bin
++	$(BSD_INSTALL_MAN_DIR) $(DESTDIR)$(PREFIX)/$(PKGMANDIR)/man1
++	$(BSD_INSTALL_MAN) ascii.1 $(DESTDIR)$(PREFIX)/$(PKGMANDIR)/man1/ascii.1
+ 
+ uninstall:
+ 	rm $(DESTDIR)/usr/bin/ascii
