@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1299 2008/06/19 08:16:22 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.1300 2008/06/19 11:30:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2155,3 +2155,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/dbus to 1.2.1nb1 [bjs 2008-06-19]
 	Updated editors/vim-share to 7.1.315 [martti 2008-06-19]
 	Updated net/Transmission to 1.22 [tnn 2008-06-19]
+	Updated mail/fetchmail to 6.3.8nb3 [obache 2008-06-19]
