@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/09/08 10:25:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/06/19 16:35:22 reed Exp $
 bin/dblatex
 ${PYSITELIB}/dbtexmf/__init__.py
 ${PYSITELIB}/dbtexmf/__init__.pyc
@@ -76,6 +76,9 @@ ${PYSITELIB}/dbtexmf/dblatex/grubber/texparser.pyo
 ${PYSITELIB}/dbtexmf/dblatex/grubber/util.py
 ${PYSITELIB}/dbtexmf/dblatex/grubber/util.pyc
 ${PYSITELIB}/dbtexmf/dblatex/grubber/util.pyo
+${PYSITELIB}/dbtexmf/dblatex/grubber/xetex.py
+${PYSITELIB}/dbtexmf/dblatex/grubber/xetex.pyc
+${PYSITELIB}/dbtexmf/dblatex/grubber/xetex.pyo
 ${PYSITELIB}/dbtexmf/dblatex/rawparse.py
 ${PYSITELIB}/dbtexmf/dblatex/rawparse.pyc
 ${PYSITELIB}/dbtexmf/dblatex/rawparse.pyo
@@ -127,11 +130,13 @@ share/dblatex/latex/graphics/warning.pdf
 share/dblatex/latex/misc/attachfile.sty
 share/dblatex/latex/misc/bibtopic.sty
 share/dblatex/latex/misc/enumitem.sty
+share/dblatex/latex/misc/lastpage.sty
 share/dblatex/latex/misc/multirow2.sty
 share/dblatex/latex/misc/passivetex/LICENSE
 share/dblatex/latex/misc/passivetex/dummyels.sty
 share/dblatex/latex/misc/passivetex/unicode.sty
 share/dblatex/latex/misc/ragged2e.sty
+share/dblatex/latex/misc/xelatex/xecyr.sty
 share/dblatex/latex/scripts/doc.ist
 share/dblatex/latex/specs/db2latex.specs
 share/dblatex/latex/specs/native.specs
@@ -307,6 +312,7 @@ man/man1/dblatex.1
 @dirrm share/dblatex/latex/style
 @dirrm share/dblatex/latex/specs
 @dirrm share/dblatex/latex/scripts
+@dirrm share/dblatex/latex/misc/xelatex
 @dirrm share/dblatex/latex/misc/passivetex
 @dirrm share/dblatex/latex/misc
 @dirrm share/dblatex/latex/graphics

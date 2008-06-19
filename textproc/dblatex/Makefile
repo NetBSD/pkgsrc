@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:48 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/19 16:35:22 reed Exp $
 #
 
-DISTNAME=	dblatex-0.2.7
+DISTNAME=	dblatex-0.2.9
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=dblatex/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,6 +16,7 @@ DEPENDS+=	ImageMagick-[0-9]*:../../graphics/ImageMagick
 DEPENDS+=	teTeX-bin-[0-9]*:../../print/teTeX3-bin
 DEPENDS+=	transfig-[0-9]*:../../print/transfig
 DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
+DEPENDS+=	tex-ifxetex-[0-9]*:../../print/tex-ifxetex
 
 PYDISTUTILSPKG=	yes
 USE_LANGUAGES=	# none
