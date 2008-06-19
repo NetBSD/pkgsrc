@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2008/06/19 15:08:23 taca Exp $
+
+--- ruby-debug-ide-0.1.10.gemspec.orig	2008-06-16 06:28:21.000000000 +0000
++++ ruby-debug-ide-0.1.10.gemspec
+@@ -17,7 +17,7 @@ dependencies: 
+   version_requirement: 
+   version_requirements: !ruby/object:Gem::Requirement 
+     requirements: 
+-    - - "="
++    - - ">="
+       - !ruby/object:Gem::Version 
+         version: 0.10.0
+     version: 
