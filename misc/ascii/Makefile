@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2008/03/04 19:21:11 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/19 17:33:50 bjs Exp $
 #
 
-DISTNAME=	ascii-3.0
+DISTNAME=	ascii-3.8
 CATEGORIES=	misc
-MASTER_SITES=	http://www.catb.org/~esr/
+MASTER_SITES=	${HOMEPAGE}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.catb.org/~esr/ascii/
@@ -11,15 +11,14 @@ COMMENT=	ASCII character table program
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BUILD_TARGET= ascii
+USE_TOOLS=		gmake
+USE_LIBTOOL=		yes
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+BUILD_TARGET= 		ascii
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/ascii ${DESTDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/ascii.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/ascii
-	${INSTALL_DATA} ${WRKSRC}/ascii.cgi \
-		${DESTDIR}${PREFIX}/share/examples/ascii
+post-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/ascii.cgi ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
