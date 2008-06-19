@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/12/17 23:37:49 minskim Exp $
+$NetBSD: distinfo,v 1.2 2008/06/19 14:51:16 taca Exp $
 
 SHA1 (rb-gsl-1.9.2.tar.gz) = 39d29abe95906b9c1b9cd28ca3df213bb4826cc8
 RMD160 (rb-gsl-1.9.2.tar.gz) = ccaea4d25d1ce7526bf17035be650e24df83bb54
 Size (rb-gsl-1.9.2.tar.gz) = 671120 bytes
+SHA1 (patch-aa) = 4da4f02514b3500a93a5af499f361346f7f9b77b
