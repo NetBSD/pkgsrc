@@ -1,13 +1,15 @@
-@comment $NetBSD: PLIST,v 1.3 2008/06/19 14:48:43 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/06/19 22:33:25 epg Exp $
 lib/libsvn_swig_ruby-1.la
 ${RUBY_VENDORARCHLIB}/svn/ext/client.${RUBY_DLEXT}
 ${RUBY_VENDORARCHLIB}/svn/ext/core.${RUBY_DLEXT}
 ${RUBY_VENDORARCHLIB}/svn/ext/delta.${RUBY_DLEXT}
+${RUBY_VENDORARCHLIB}/svn/ext/diff.${RUBY_DLEXT}
 ${RUBY_VENDORARCHLIB}/svn/ext/fs.${RUBY_DLEXT}
 ${RUBY_VENDORARCHLIB}/svn/ext/ra.${RUBY_DLEXT}
 ${RUBY_VENDORARCHLIB}/svn/ext/repos.${RUBY_DLEXT}
 ${RUBY_VENDORARCHLIB}/svn/ext/wc.${RUBY_DLEXT}
 ${RUBY_VENDORLIB}/svn/client.rb
+${RUBY_VENDORLIB}/svn/commit-mailer.rb
 ${RUBY_VENDORLIB}/svn/core.rb
 ${RUBY_VENDORLIB}/svn/delta.rb
 ${RUBY_VENDORLIB}/svn/error.rb
@@ -15,6 +17,7 @@ ${RUBY_VENDORLIB}/svn/fs.rb
 ${RUBY_VENDORLIB}/svn/info.rb
 ${RUBY_VENDORLIB}/svn/ra.rb
 ${RUBY_VENDORLIB}/svn/repos.rb
+${RUBY_VENDORLIB}/svn/synchronizer.rb
 ${RUBY_VENDORLIB}/svn/util.rb
 ${RUBY_VENDORLIB}/svn/wc.rb
 share/examples/subversion/ruby/commit-email.rb
