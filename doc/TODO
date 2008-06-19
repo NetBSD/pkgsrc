@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7339 2008/06/19 01:13:32 taca Exp $
+$NetBSD: TODO,v 1.7340 2008/06/19 16:59:49 bjs Exp $
 
 Suggested new packages
 ======================
@@ -742,7 +742,6 @@ Suggested package updates
 	o imapsync-1.252
 	o instiki-0.13
 	o intercal-0.24
-	o intltool-0.40.0
 	o iozone-3.300
 	o ircservices-5.1.11
 	o irrd-2.3.4 [pkg/36813|38002]
