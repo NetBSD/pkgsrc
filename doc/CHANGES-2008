@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1312 2008/06/20 04:28:04 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.1313 2008/06/20 04:30:55 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2185,3 +2185,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/java-subversion version 1.5.0 [epg 2008-06-19]
 	Updated devel/ruby-activesupport to 2.1.0 [minskim 2008-06-20]
 	Updated databases/ruby-activerecord to 2.1.0 [minskim 2008-06-20]
+	Updated www/ruby-actionpack to 2.1.0 [minskim 2008-06-20]
