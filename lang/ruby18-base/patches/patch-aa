@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.11 2008/06/19 14:35:37 taca Exp $
+$NetBSD: patch-aa,v 1.12 2008/06/20 15:39:29 taca Exp $
 
 --- configure.in.orig	2008-06-09 03:23:46.000000000 +0900
 +++ configure.in
@@ -49,22 +49,3 @@ $NetBSD: patch-aa,v 1.11 2008/06/19 14:35:37 taca Exp $
  fi
  
  LDFLAGS="-L. $LDFLAGS"
-@@ -1717,14 +1736,14 @@ AC_ARG_WITH(vendordir,
- VENDOR_DIR=`eval echo \\"${vendordir}\\"`
- case "$target_os" in
-   cygwin*|mingw*|*djgpp*|os2-emx*)
--    RUBY_VENDOR_LIB_PATH="`expr "$VENDOR_DIR" : "$prefix\(/.*\)"`" ||
--    RUBY_VENDOR_LIB_PATH="$VENDOR_DIR";;
-+    RUBY_VENDOR_LIB_PATH="`eval echo "$VENDOR_DIR" | sed 's|^NONE/|/|;s|^'"$prefix"'/|/|'`"
-+    ;;
-   *)
--    RUBY_VENDOR_LIB_PATH="$VENDOR_DIR";;
-+    RUBY_VENDOR_LIB_PATH="`eval echo \\"$VENDOR_DIR\\" | sed 's|^NONE/|'"$prefix"'/|'`"
-+    ;;
- esac
- RUBY_VENDOR_LIB_PATH2="${RUBY_VENDOR_LIB_PATH}/${MAJOR}.${MINOR}"
- 
--AC_DEFINE_UNQUOTED(RUBY_LIB, "${RUBY_LIB_PATH}")
- AC_DEFINE_UNQUOTED(RUBY_VENDOR_LIB, "${RUBY_VENDOR_LIB_PATH}")
- AC_DEFINE_UNQUOTED(RUBY_VENDOR_LIB2, "${RUBY_VENDOR_LIB_PATH2}")
- 
