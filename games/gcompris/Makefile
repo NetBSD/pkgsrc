@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/06 14:53:50 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/20 01:09:20 joerg Exp $
 
 DISTNAME=	gcompris-8.4.4
 PKGREVISION=	1
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gcompris/}
 MAINTAINER=	reed@reedmedia.net
 HOMEPAGE=	http://ofset.sourceforge.net/gcompris/
 COMMENT=	Educational games for children
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake intltool gtar pkg-config msgfmt texi2html
 GNU_CONFIGURE=		YES

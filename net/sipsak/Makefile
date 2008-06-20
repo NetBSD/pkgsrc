@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/03/06 14:53:53 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/20 01:09:31 joerg Exp $
 
 DISTNAME=	sipsak-0.9.6-1
 PKGNAME=	${DISTNAME:S/-1//}
@@ -9,6 +9,8 @@ MASTER_SITES=	http://download.berlios.de/sipsak/
 MAINTAINER=	schwarz@NetBSD.org
 HOMEPAGE=	http://sipsak.org/
 COMMENT=	Sipsak is a command-line SIP testing utility
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/-1//}
 

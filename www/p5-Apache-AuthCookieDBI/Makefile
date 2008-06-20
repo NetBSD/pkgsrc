@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/03/04 21:30:59 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/20 01:09:41 joerg Exp $
 #
 
 DISTNAME=	Apache-AuthCookieDBI-1.19
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~cromis/Apache-AuthCookieDBI-1.19/
 COMMENT=	Perl5 module AuthCookie backed by a DBI database
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Apache-AuthCookie>=3.05:../../www/p5-Apache-AuthCookie
 

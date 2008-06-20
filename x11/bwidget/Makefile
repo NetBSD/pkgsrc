@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/05/26 02:13:26 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/20 01:09:44 joerg Exp $
 #
 
 DISTNAME=	BWidget-1.8.0
@@ -10,16 +10,18 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://tcllib.sourceforge.net/
 COMMENT=	High-level widget set for Tcl/Tk
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_BUILD=	yes
 USE_TOOLS+=	wish:run pax
 
+INSTALLATION_DIRS=	lib/bwidget share/doc/bwidget
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/bwidget
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bwidget
-	${INSTALL_DATA} ${WRKSRC}/*.tcl ${PREFIX}/lib/bwidget
+	${INSTALL_DATA} ${WRKSRC}/*.tcl ${DESTDIR}${PREFIX}/lib/bwidget
 	cd ${WRKSRC} && \
-	pax -rw -pm lang ${PREFIX}/lib/bwidget && \
-	pax -rw -pm images ${PREFIX}/lib/bwidget
-	${INSTALL_DATA} ${WRKSRC}/BWman/*.htm* ${PREFIX}/share/doc/bwidget
+	pax -rw -pm lang ${DESTDIR}${PREFIX}/lib/bwidget && \
+	pax -rw -pm images ${DESTDIR}${PREFIX}/lib/bwidget
+	${INSTALL_DATA} ${WRKSRC}/BWman/*.htm* ${DESTDIR}${PREFIX}/share/doc/bwidget
 
 .include "../../mk/bsd.pkg.mk"

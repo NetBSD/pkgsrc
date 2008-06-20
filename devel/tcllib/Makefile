@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/05/18 10:03:31 peter Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/20 01:09:16 joerg Exp $
 #
 
 DISTNAME=		tcllib-1.8
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://tcllib.sourceforge.net/
 COMMENT=		Collection of utility modules for Tcl
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 NO_BUILD=		yes

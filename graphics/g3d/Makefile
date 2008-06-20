@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2006/10/04 21:44:46 wiz Exp $
+# $NetBSD: Makefile,v 1.25 2008/06/20 01:09:21 joerg Exp $
 #
 
 DISTNAME=	g3d-0.0.2
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	3D modeller with a view of 3D modelling
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/g3d
 USE_DIRS+=	xdg-1.1

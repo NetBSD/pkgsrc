@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2006/09/01 12:00:43 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.35 2008/06/20 01:09:08 joerg Exp $
 #
 
 DISTNAME=		geda-gsymcheck-${PKGVERSION}
@@ -8,6 +8,8 @@ CATEGORIES=		cad
 MAINTAINER=		dmcmahill@NetBSD.org
 HOMEPAGE=		http://www.geda.seul.org/
 COMMENT=		EDA (Electronic Design Automation) symbol checker
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		geda-symbols-${PKGVERSION}{,nb[0-9]*}:../../cad/geda-symbols
 

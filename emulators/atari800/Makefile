@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2007/07/20 17:45:54 adam Exp $
+# $NetBSD: Makefile,v 1.42 2008/06/20 01:09:18 joerg Exp $
 
 DISTNAME=	atari800-2.0.3
 CATEGORIES=	emulators
@@ -8,6 +8,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX} xf25.zip
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://atari800.sourceforge.net/
 COMMENT=	Atari 800, 800XL, 130XE and 5200 emulator
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=		copyrighted ROM images
 NO_BIN_ON_CDROM=	${RESTRICTED}
@@ -33,7 +35,7 @@ post-extract:
 
 post-install:
 	${INSTALL_DATA} ${WRKDIR}/*.rom ${WRKDIR}/*.xfd ${WRKDIR}/*.atr \
-		${WRKSRC}/atari800.cfg ${PREFIX}/share/atari800/
+		${WRKSRC}/atari800.cfg ${DESTDIR}${PREFIX}/share/atari800/
 
 .include "../../graphics/png/buildlink3.mk"
 .include "../../mk/oss.buildlink3.mk"

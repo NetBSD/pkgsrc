@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/01/07 09:13:46 rillig Exp $
+# $NetBSD: Makefile,v 1.26 2008/06/20 01:09:05 joerg Exp $
 #
 
 DISTNAME=		bladeenc-0.94.2-src-stable
@@ -11,12 +11,15 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bladeenc.mp3.no/
 COMMENT=		Free MPEG Audio Layer 3 encoder (not decoder)
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
 
+INSTALLATION_DIRS=	share/doc/html/bladeenc ${PKGMANDIR}/man1
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/bladeenc
-	${INSTALL_DATA} ${WRKSRC}/bladeenc.html ${PREFIX}/share/doc/html/bladeenc
-	${INSTALL_MAN} ${WRKSRC}/bladeenc.1 ${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_DATA} ${WRKSRC}/bladeenc.html ${DESTDIR}${PREFIX}/share/doc/html/bladeenc
+	${INSTALL_MAN} ${WRKSRC}/bladeenc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
 
 .include "../../mk/bsd.pkg.mk"

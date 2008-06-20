@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/04/19 06:04:56 obache Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/20 01:09:45 joerg Exp $
 
 DISTNAME=	x2x-1.27
 PKGREVISION=	2
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://gatekeeper.hpl.hp.com/pub/DEC/SRC/x2x/ \
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://x2x.dottedmag.net/
 COMMENT=	One keyboard and mouse to control multiple X displays
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	yes
 

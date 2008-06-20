@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/01/07 09:14:09 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/20 01:09:33 joerg Exp $
 
 DISTNAME=	avcheck-0.9
 CATEGORIES=	security mail
@@ -10,24 +10,24 @@ COMMENT=	Mail content filter for SMTP servers
 
 USE_TOOLS+=	gsed
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/avcheck \
+			share/examples/avcheck
+
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/avcheck ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/uchroot ${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/avcheck.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_PROGRAM} ${WRKSRC}/avcheck ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/uchroot ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/avcheck.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/avcheck
-	${INSTALL_DATA} ${WRKSRC}/README.AVP ${PREFIX}/share/doc/avcheck
-	${INSTALL_DATA} ${WRKSRC}/README.DrWeb ${PREFIX}/share/doc/avcheck
-	${INSTALL_DATA} ${WRKSRC}/README.Exim ${PREFIX}/share/doc/avcheck
-	${INSTALL_DATA} ${WRKSRC}/README.Postfix ${PREFIX}/share/doc/avcheck
-	${INSTALL_DATA} ${WRKSRC}/README.Sendmail ${PREFIX}/share/doc/avcheck
+	${INSTALL_DATA} ${WRKSRC}/README.AVP ${DESTDIR}${PREFIX}/share/doc/avcheck
+	${INSTALL_DATA} ${WRKSRC}/README.DrWeb ${DESTDIR}${PREFIX}/share/doc/avcheck
+	${INSTALL_DATA} ${WRKSRC}/README.Exim ${DESTDIR}${PREFIX}/share/doc/avcheck
+	${INSTALL_DATA} ${WRKSRC}/README.Postfix ${DESTDIR}${PREFIX}/share/doc/avcheck
+	${INSTALL_DATA} ${WRKSRC}/README.Sendmail ${DESTDIR}${PREFIX}/share/doc/avcheck
 
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/avcheck
 	${INSTALL_DATA} ${WRKSRC}/infected.ex1 \
-		${PREFIX}/share/examples/avcheck/infected.ex1
+	    ${DESTDIR}${PREFIX}/share/examples/avcheck/infected.ex1
 	${INSTALL_DATA} ${WRKSRC}/ex2/template \
-		${PREFIX}/share/examples/avcheck/infected.ex2
+	    ${DESTDIR}${PREFIX}/share/examples/avcheck/infected.ex2
 
 .include "../../mk/bsd.pkg.mk"

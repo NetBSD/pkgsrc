@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/01/07 09:14:10 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/20 01:09:33 joerg Exp $
 #
 
 DISTNAME=	gpg2dot-1.4
@@ -9,6 +9,8 @@ DISTFILES=	# empty
 MAINTAINER=	lukem@NetBSD.org
 HOMEPAGE=	ftp://ftp.NetBSD.org/pub/NetBSD/packages/pkgsrc/doc/pkgsrc.html
 COMMENT=	Converts your GnuPG keyring to a graph of associations
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 USE_TOOLS+=	perl:run
@@ -40,7 +42,7 @@ do-build:
 #.endfor
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/gpg2dot ${PREFIX}/bin/gpg2dot
+	${INSTALL_SCRIPT} ${WRKSRC}/gpg2dot ${DESTDIR}${PREFIX}/bin/gpg2dot
 #	${INSTALL_MAN} ${WRKSRC}/gpg2dot.1 ${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

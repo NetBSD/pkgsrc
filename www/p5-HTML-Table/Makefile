@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/03/04 21:31:02 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/20 01:09:42 joerg Exp $
 
 DISTNAME=		HTML-Table-2.02
 PKGNAME=		p5-${DISTNAME}
@@ -12,6 +12,7 @@ HOMEPAGE=		http://search.cpan.org/dist/HTML-Table/
 COMMENT=		Perl5 module to simplify creating HTML tables
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/HTML/Table/.packlist
 

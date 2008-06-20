@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/02/22 19:27:23 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/20 01:09:43 joerg Exp $
 
 DISTNAME=	Kwiki-UserName-0.14
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Kwiki/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kwiki.org/
 COMMENT=	Kwiki user name plugin
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Kwiki>=0.37nb1:../../www/p5-Kwiki
 DEPENDS+=	p5-Kwiki-UserPreferences>=0.13:../../www/p5-Kwiki-UserPreferences

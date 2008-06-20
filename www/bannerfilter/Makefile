@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/11/11 16:54:24 rillig Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/20 01:09:41 joerg Exp $
 #
 
 DISTNAME=	bannerfilter-1.31
@@ -8,6 +8,8 @@ MASTER_SITES=	http://phroggy.com/files/unix/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://phroggy.com/bannerfilter/
 COMMENT=	Blocks advertising banners as squid redirector script
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	YES
 USE_TOOLS+=	perl:run
@@ -26,10 +28,10 @@ INSTALLATION_DIRS=	bin ${SHAREDIR}/www ${SHAREDIR}/doc ${SHAREDIR}/data
 CHECK_PORTABILITY_SKIP+=	update.sh
 
 do-install:
-	${INSTALL_DATA} ${WRKSRC}/www/* ${SHAREDIR}/www/
-	${INSTALL_DATA} ${WRKSRC}/*.data ${SHAREDIR}/data/
-	${INSTALL_DATA} ${WRKSRC}/CHANGES ${WRKSRC}/COPYING ${WRKSRC}/README ${SHAREDIR}/doc/
-	${INSTALL_DATA} ${WRKSRC}/bannerfilter.conf ${SHAREDIR}/
-	${INSTALL_SCRIPT} ${WRKSRC}/redirector.pl ${PREFIX}/bin/bannerfilter-redirector.pl
+	${INSTALL_DATA} ${WRKSRC}/www/* ${DESTDIR}${SHAREDIR}/www/
+	${INSTALL_DATA} ${WRKSRC}/*.data ${DESTDIR}${SHAREDIR}/data/
+	${INSTALL_DATA} ${WRKSRC}/CHANGES ${WRKSRC}/COPYING ${WRKSRC}/README ${DESTDIR}${SHAREDIR}/doc/
+	${INSTALL_DATA} ${WRKSRC}/bannerfilter.conf ${DESTDIR}${SHAREDIR}/
+	${INSTALL_SCRIPT} ${WRKSRC}/redirector.pl ${DESTDIR}${PREFIX}/bin/bannerfilter-redirector.pl
 
 .include "../../mk/bsd.pkg.mk"

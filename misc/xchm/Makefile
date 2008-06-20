@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2007/04/16 23:25:52 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2008/06/20 01:09:27 joerg Exp $
 #
 
 DISTNAME=	xchm-1.13
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xchm/}
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://xchm.sourceforge.net/
 COMMENT=	CHM viewer for UNIX
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS+=		xdg-1.1
 USE_LANGUAGES=		c c++

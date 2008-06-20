@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/07/07 15:49:32 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/20 01:09:25 joerg Exp $
 
 DISTNAME=	qalculate-currency-0.9.4
 CATEGORIES=	math
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qalculate/}
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://qalculate.sourceforge.net/
 COMMENT=	Utility for conversion between currencies using Qalculate
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

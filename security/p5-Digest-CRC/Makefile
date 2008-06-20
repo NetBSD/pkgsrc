@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/03/19 16:40:28 tv Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/20 01:09:34 joerg Exp $
 #
 
 DISTNAME=	Digest-CRC-0.10
@@ -11,9 +11,10 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Digest-CRC/
 COMMENT=	Perl5 extension interface for cyclic redundancy check algorithms
 
-DEPENDS+=	p5-Digest>=1.00:../../security/p5-Digest
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+DEPENDS+=	p5-Digest>=1.00:../../security/p5-Digest
 
 PERL5_PACKLIST=		auto/Digest/CRC/.packlist
 

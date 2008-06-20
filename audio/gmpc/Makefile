@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/05/30 17:32:28 drochner Exp $
+# $NetBSD: Makefile,v 1.27 2008/06/20 01:09:05 joerg Exp $
 #
 
 DISTNAME=		gmpc-0.15.5.0
@@ -13,6 +13,8 @@ USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		intltool msgfmt pkg-config gmake
 PKGCONFIG_OVERRIDE=	data/gmpc.pc.in
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS+=		xdg-1.1
 

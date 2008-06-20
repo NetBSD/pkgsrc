@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/06 21:57:54 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/20 01:09:13 joerg Exp $
 #
 
 DISTNAME=	Cache-2.04
@@ -11,14 +11,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://perl-cache.sourceforge.net/
 COMMENT=	The Cache interface
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	p5-File-NFSLock>=1.20:../../devel/p5-File-NFSLock
 DEPENDS+=	p5-Heap>=0.01:../../devel/p5-Heap
 DEPENDS+=	p5-IO-String>=1.02:../../devel/p5-IO-String
 DEPENDS+=	p5-Storable>=1.00:../../devel/p5-Storable
 DEPENDS+=	p5-TimeDate>=1.00:../../time/p5-TimeDate
 DEPENDS+=	p5-Digest-SHA1>=2.01:../../security/p5-Digest-SHA1
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=	auto/Cache/.packlist
 

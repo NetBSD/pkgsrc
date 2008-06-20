@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/11/14 10:07:14 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/20 01:09:42 joerg Exp $
 
 DISTNAME=		libhtmlobject-perl-${VERSION}
 PKGNAME=		p5-HTMLObject-${VERSION}
@@ -10,10 +10,12 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://htmlobject.sourceforge.net/
 COMMENT=		Perl5 module to quickly and easily create Dynamic HTML pages
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	p5-Data-FormValidator>=3.59:../../textproc/p5-Data-FormValidator
 
 VERSION=	2.28
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/HTMLObject/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/02/22 19:27:23 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/20 01:09:43 joerg Exp $
 
 DISTNAME=	Kwiki-Weather-0.05
 PKGNAME=	p5-${DISTNAME}
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Kwiki/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kwiki.org/
 COMMENT=	Weather button and WAFL for your Kwiki
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Kwiki>=0.34:../../www/p5-Kwiki
 DEPENDS+=	p5-Geo-Weather>=1.41:../../misc/p5-Geo-Weather

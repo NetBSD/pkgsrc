@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/05/29 17:08:43 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/20 01:09:35 joerg Exp $
 #
 
 DISTNAME=	gnome-system-monitor-2.22.2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME 2 system monitor program
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS+=		gnome2-1.5
 USE_LIBTOOL=		yes

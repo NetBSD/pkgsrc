@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:30:33 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2008/06/20 01:09:33 joerg Exp $
 #
 
 DISTNAME=	arirang-1.6
@@ -10,11 +10,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://monkey.org/~pilot/arirang/
 COMMENT=	Powerful webserver security scanner
 
-INSTALLATION_DIRS=	sbin
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+INSTALLATION_DIRS=	sbin share/arirang
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/arirang ${PREFIX}/sbin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/arirang/
-	${INSTALL_DATA} ${WRKSRC}/scanrule/*.uxe ${PREFIX}/share/arirang
+	${INSTALL_PROGRAM} ${WRKSRC}/arirang ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_DATA} ${WRKSRC}/scanrule/*.uxe ${DESTDIR}${PREFIX}/share/arirang
 
 .include "../../mk/bsd.pkg.mk"

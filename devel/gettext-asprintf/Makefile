@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/07/26 06:53:02 adam Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/20 01:09:12 joerg Exp $
 
 DISTNAME=	gettext-0.14.6
 PKGNAME=	gettext-asprintf-0.14.6
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.gnu.org/software/gettext/gettext.html
 COMMENT=	Provides a printf-like interface for C++
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/gettext-runtime
 

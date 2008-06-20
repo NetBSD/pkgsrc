@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/12 00:18:50 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/20 01:09:24 joerg Exp $
 #
 
 DISTNAME=	libgmail-0.1.5.1
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libgmail/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/libgmail/
 COMMENT=	Python bindings to access Google mail
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_VERSIONS_ACCEPTED=	25 24
 PYDISTUTILSPKG=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2007/09/25 10:07:06 hira Exp $
+# $NetBSD: Makefile,v 1.40 2008/06/20 01:09:19 joerg Exp $
 
 DISTNAME=	asc-source-1.16.4.0
 PKGNAME=	${DISTNAME:S/-source//}
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.asc-hq.org/
 COMMENT=	Turn based strategy game
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=		asc
 DISTFILES=		${DISTNAME}${EXTRACT_SUFX} frontiers.mp3 \
@@ -34,7 +36,7 @@ post-extract:
 
 # bug in 1.16.4.0, remove on update
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/data/asc.gfx ${PREFIX}/share/games/asc
+	${INSTALL_DATA} ${WRKSRC}/data/asc.gfx ${DESTDIR}${PREFIX}/share/games/asc
 
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"

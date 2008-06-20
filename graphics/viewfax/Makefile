@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/11/12 20:05:38 heinz Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/20 01:09:23 joerg Exp $
 #
 
 DISTNAME=	viewfax-2.4
@@ -13,10 +13,11 @@ MASTER_SITES=	ftp://ftp.hylafax.org/pub/hylafax/contrib/viewfax/ \
 MAINTAINER=	rh@NetBSD.org
 COMMENT=	Tool for displaying fax files in an X Window
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_IMAKE=	yes
 
-pre-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/libdata/viewfax
+INSTALLATION_DIRS=	libdata/viewfax
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"

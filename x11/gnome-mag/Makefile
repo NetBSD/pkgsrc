@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2008/04/26 00:11:29 wiz Exp $
+# $NetBSD: Makefile,v 1.45 2008/06/20 01:09:44 joerg Exp $
 #
 
 DISTNAME=		gnome-mag-0.15.0
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME screen magnifier
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS+=		gnome2-1.5
 USE_TOOLS+=		gmake intltool msgfmt pkg-config

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/06/10 13:06:57 gdt Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/20 01:09:37 joerg Exp $
 #
 
 DISTNAME=		asciidoc-8.2.6
@@ -9,6 +9,8 @@ MASTER_SITES=		${HOMEPAGE}	\
 MAINTAINER=		gdt@NetBSD.org
 HOMEPAGE=		http://www.methods.co.nz/asciidoc/
 COMMENT=		ASCII to formatted document converter
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		docbook-xsl-[0-9]*:../../textproc/docbook-xsl
 DEPENDS+=		getopt-[0-9]*:../../misc/getopt
@@ -29,24 +31,23 @@ INSTALLATION_DIRS=	bin share/asciidoc share/asciidoc/filters \
 			share/asciidoc/docbook-xsl share/asciidoc/stylesheets \
 			share/asciidoc/javascripts \
 			share/asciidoc/images/icons/callouts \
-			${PKGMANDIR}/man1
+			${PKGMANDIR}/man1 ${DOCDIR}
 
 DOCDIR=		${PREFIX}/share/doc/asciidoc
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/asciidoc.py ${PREFIX}/bin/asciidoc
-	${INSTALL_SCRIPT} ${WRKSRC}/a2x ${PREFIX}/bin/a2x
-	${INSTALL_MAN} ${WRKSRC}/doc/asciidoc.1 ${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_MAN} ${WRKSRC}/doc/a2x.1 ${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/asciidoc.txt ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/asciidoc.html ${DOCDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/asciidoc.py ${DESTDIR}${PREFIX}/bin/asciidoc
+	${INSTALL_SCRIPT} ${WRKSRC}/a2x ${DESTDIR}${PREFIX}/bin/a2x
+	${INSTALL_MAN} ${WRKSRC}/doc/asciidoc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_MAN} ${WRKSRC}/doc/a2x.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_DATA} ${WRKSRC}/doc/asciidoc.txt ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/asciidoc.html ${DESTDIR}${DOCDIR}
 
 	cd ${WRKSRC} && pax -wr -pma *.conf filters/*.py \
 		filters/*.conf docbook-xsl/*.xsl stylesheets/*.css	\
 		javascripts/*.js images/icons/callouts/* images/icons/*.png \
 		images/icons/README \
-		${PREFIX}/share/asciidoc/.
+		${DESTDIR}${PREFIX}/share/asciidoc/.
 
 do-test:
 	cd ${WRKSRC} && ./asciidoc.py -v doc/asciidoc.txt

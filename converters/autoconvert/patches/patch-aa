@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2002/06/19 09:25:25 agc Exp $
+$NetBSD: patch-aa,v 1.2 2008/06/20 01:09:09 joerg Exp $
 
 --- Makefile.orig	Sat Apr 28 09:45:46 2001
 +++ Makefile
@@ -44,6 +44,6 @@ $NetBSD: patch-aa,v 1.1.1.1 2002/06/19 09:25:25 agc Exp $
 -	install -m 644 include/*.h  $(DESTDIR)/usr/include
 -	ln -s autogb $(DESTDIR)/usr/bin/autob5
 +	cd hzconvert;$(MAKE) install
-+	$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) autogb $(PREFIX)/bin
-+	$(BSD_INSTALL_DATA) include/*.h $(PREFIX)/include
-+	ln -fs $(PREFIX)/bin/autogb $(PREFIX)/bin/autob5
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) autogb ${DESTDIR}$(PREFIX)/bin
++	$(BSD_INSTALL_DATA) include/*.h ${DESTDIR}$(PREFIX)/include
++	ln -fs autogb ${DESTDIR}$(PREFIX)/bin/autob5

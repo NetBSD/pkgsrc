@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2007/01/14 10:19:35 joerg Exp $
+# $NetBSD: Makefile,v 1.55 2008/06/20 01:09:25 joerg Exp $
 #
 
 DISTNAME=		vatsrc-4.0b2
@@ -11,6 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www-nrg.ee.lbl.gov/vat/
 COMMENT=		The Visual Audio Tool - multicast audioconferencing
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-tcl=${PREFIX:Q} --with-tk=${PREFIX:Q}
@@ -20,6 +22,8 @@ USE_LANGUAGES=		c c++
 CPPFLAGS+=		-I${LOCALBASE}/include -I${LOCALBASE}/include/gsm
 
 INSTALL_TARGET=		install install-man
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

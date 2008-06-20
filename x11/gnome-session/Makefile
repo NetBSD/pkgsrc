@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.99 2008/05/29 16:32:23 drochner Exp $
+# $NetBSD: Makefile,v 1.100 2008/06/20 01:09:44 joerg Exp $
 #
 
 DISTNAME=		gnome-session-2.22.2
@@ -11,6 +11,8 @@ DISTFILES=		${DISTNAME}${EXTRACT_SUFX} gnome-splash-2.16.0.png
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		GNOME2 session management utilities
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		gnome-core<1.4.2nb4
 
@@ -62,6 +64,6 @@ post-extract:
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/data/gnome-splash-orig.png \
-	    ${PREFIX}/share/pixmaps/splash/gnome-splash-orig.png
+	    ${DESTDIR}${PREFIX}/share/pixmaps/splash/gnome-splash-orig.png
 
 .include "../../mk/bsd.pkg.mk"

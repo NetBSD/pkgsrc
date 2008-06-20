@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/07/24 14:29:45 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2008/06/20 01:09:37 joerg Exp $
 
 --- Makefile.in.orig	Thu Jul 13 23:32:58 2000
 +++ Makefile.in
@@ -46,9 +46,9 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/07/24 14:29:45 wiz Exp $
 -	$(CHMOD) 775 $(bindir)/bibclean
 -	$(CP) bibclean.ini $(bindir)/.bibcleanrc
 -	$(CHMOD) 664 $(bindir)/.bibcleanrc
-+	-$(INSTALL_PROGRAM_DIR) $(bindir)
-+	$(INSTALL_PROGRAM) bibclean $(bindir)/bibclean
-+	$(INSTALL_DATA) $(srcdir)/bibclean.ini $(bindir)/.bibcleanrc
++	$(INSTALL_PROGRAM_DIR) ${DESTDIR}$(bindir)
++	$(INSTALL_PROGRAM) bibclean ${DESTDIR}$(bindir)/bibclean
++	$(INSTALL_DATA) $(srcdir)/bibclean.ini ${DESTDIR}$(bindir)/.bibcleanrc
  
  install-man:	bibclean.man
 -	if test -f $(mandir)/bibclean.$(manext) ; \
@@ -60,8 +60,8 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/07/24 14:29:45 wiz Exp $
 -	-$(RM) $(mandir)/bibclean-$(VERSION).$(manext)
 -	$(LN) $(mandir)/bibclean.$(manext) $(mandir)/bibclean-$(VERSION).$(manext)
 -	$(CHMOD) 664 $(mandir)/bibclean.$(manext)
-+	-$(INSTALL_MAN_DIR) $(mandir)
-+	$(INSTALL_MAN) $(srcdir)/bibclean.man $(mandir)/bibclean.$(manext)
++	$(INSTALL_MAN_DIR) ${DESTDIR}$(mandir)
++	$(INSTALL_MAN) $(srcdir)/bibclean.man ${DESTDIR}$(mandir)/bibclean.$(manext)
  
  install-ftp:	install-ftp.time
  

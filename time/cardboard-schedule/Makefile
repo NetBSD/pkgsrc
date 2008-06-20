@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/05/26 02:13:24 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2008/06/20 01:09:38 joerg Exp $
 #
 
 DISTNAME=	cs113ins
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.exe
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cardboard.nu/docs/software.html
 COMMENT=	Project and resource management software implemented in Java/Swing
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	yes
 
@@ -35,7 +37,7 @@ CSFILES=	cs/images/Logo2.gif \
 		stage/license.txt \
 		stage/CsHelp.jar
 
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin lib/cardboard-schedule
 
 SUBST_CLASSES+=		cs
 SUBST_STAGE.cs=		do-configure
@@ -49,9 +51,8 @@ post-extract:
 	${CP} ${FILESDIR:Q}/csched.sh ${WRKDIR:Q}
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/lib/cardboard-schedule
-	cd ${WRKDIR:Q}/C:/projects && pax -rw ${CSFILES} ${PREFIX:Q}/lib/cardboard-schedule
-	${INSTALL_SCRIPT} ${WRKDIR:Q}/csched.sh ${PREFIX:Q}/bin/csched
+	cd ${WRKDIR}/C:/projects && pax -rw ${CSFILES} ${DESTDIR}${PREFIX}/lib/cardboard-schedule
+	${INSTALL_SCRIPT} ${WRKDIR:Q}/csched.sh ${DESTDIR}${PREFIX}/bin/csched
 
 .include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"

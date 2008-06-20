@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/04/22 09:22:11 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/20 01:09:27 joerg Exp $
 #
 
 DISTNAME=	visual_regexp-3.0
@@ -9,6 +9,8 @@ MASTER_SITES=	http://laurent.riesterer.free.fr/regexp/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://laurent.riesterer.free.fr/regexp/
 COMMENT=	Easily design and debug regular expressions graphically
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 USE_TOOLS+=	wish:run
@@ -29,6 +31,6 @@ INSTALLATION_DIRS=	bin
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/visual_regexp.tcl \
-	    ${PREFIX}/bin/visual_regexp
+	    ${DESTDIR}${PREFIX}/bin/visual_regexp
 
 .include "../../mk/bsd.pkg.mk"

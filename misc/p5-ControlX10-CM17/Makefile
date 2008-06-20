@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2005/08/06 06:19:23 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/20 01:09:26 joerg Exp $
 
 DISTNAME=	ControlX10-CM17-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=ControlX10/}
 MAINTAINER=	damon@brodiefamily.org
 HOMEPAGE=	http://members.aol.com/Bbirthisel/x10.d/index.html
 COMMENT=	Perl5 module for controlling the X10 CM17A controller
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Device-SerialPort>=0.07:../../comms/p5-Device-SerialPort
 

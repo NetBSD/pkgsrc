@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/09/20 21:12:57 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/20 01:09:36 joerg Exp $
 
 DISTNAME=		GTop-0.16
 PKGNAME=		p5-GTop-0.16
@@ -10,9 +10,10 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/GTop/
 COMMENT=		Perl interface to libgtop
 
-USE_TOOLS+=		pkg-config
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=		pkg-config
 
 PERL5_PACKLIST=		auto/GTop/.packlist
 

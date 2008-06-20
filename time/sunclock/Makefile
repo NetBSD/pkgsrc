@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/02/15 22:37:06 perry Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/20 01:09:39 joerg Exp $
 #
 
 DISTNAME=	sunclock-1.5
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB:=applications/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Show which portion of the Earth's surface is illuminated by the Sun
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	yes
 

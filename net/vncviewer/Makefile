@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/06/18 11:12:54 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2008/06/20 01:09:32 joerg Exp $
 
 DISTNAME=		vnc-4_1_2-unixsrc
 PKGNAME=		vncviewer-4.1.2
@@ -10,6 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.realvnc.com/
 COMMENT=		Viewer for remote X and Win32 VNC servers
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFLICTS=		tightvncviewer-[0-9]*
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/unix
@@ -20,6 +22,8 @@ USE_X11BASE=		yes
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-installed-zlib
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 # The distfile listed above is bogus, there is no direct link to download the
 # file, so a special command must be used.  I lifted this from FreeBSD Ports.
 DISTURL=http://www.realvnc.com/cgi-bin/download.cgi?product=free4/src/unix&acceptLicense=1&filever=4.1.2&filetype=tar_gz&haveDetails=1
@@ -28,12 +32,12 @@ pre-fetch:
 	 (cd ${DISTDIR} && ${FETCH_CMD} -o ${DISTNAME}.tar.gz ${DISTURL:Q})
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/vncviewer/vncviewer ${PREFIX}/bin/vncviewer
+	${INSTALL_PROGRAM} ${WRKSRC}/vncviewer/vncviewer ${DESTDIR}${PREFIX}/bin/vncviewer
 	${INSTALL_MAN} ${WRKSRC}/vncviewer/vncviewer.man \
-		${PREFIX}/${PKGMANDIR}/man1/vncviewer.1
-	${INSTALL_PROGRAM} ${WRKSRC}/vncpasswd/vncpasswd ${PREFIX}/bin/vncpasswd
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vncviewer.1
+	${INSTALL_PROGRAM} ${WRKSRC}/vncpasswd/vncpasswd ${DESTDIR}${PREFIX}/bin/vncpasswd
 	${INSTALL_MAN} ${WRKSRC}/vncpasswd/vncpasswd.man \
-		${PREFIX}/${PKGMANDIR}/man1/vncpasswd.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/vncpasswd.1
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/03 21:14:13 seb Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:13 joerg Exp $
 #
 
 DISTNAME=	App-Cmd-0.012
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=App/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/App-Cmd/
 COMMENT=	Perl 5 module to write command line apps with less suffering
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Getopt-Long-Descriptive>=0.06:../../devel/p5-Getopt-Long-Descriptive
 DEPENDS+=	p5-Module-Pluggable-[0-9]*:../../devel/p5-Module-Pluggable

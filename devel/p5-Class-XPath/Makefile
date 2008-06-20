@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/08/06 06:19:09 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/20 01:09:14 joerg Exp $
 #
 
 DISTNAME=		Class-XPath-1.4
@@ -11,6 +11,7 @@ MAINTAINER=		schmonz@NetBSD.org
 COMMENT=		Perl5 module for XPath-style matching in object trees
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Class/XPath/.packlist
 

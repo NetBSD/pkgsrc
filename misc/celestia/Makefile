@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/09/21 13:04:00 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2008/06/20 01:09:25 joerg Exp $
 
 DISTNAME=	celestia-1.4.1
 PKGREVISION=	6
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=celestia/}
 MAINTAINER=	cesar_catrian@yahoo.com
 HOMEPAGE=	http://www.shatters.net/celestia/
 COMMENT=	Free real-time 3D space simulator
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTINFO_FILE=	${.CURDIR}/../../misc/celestia/distinfo
 PATCHDIR=	${.CURDIR}/../../misc/celestia/patches
@@ -39,9 +41,10 @@ CONFIGURE_ARGS+=	--with-xinerama
 CONFIGURE_ARGS+=	--disable-threading
 .endif
 
+INSTALLATION_DIRS=	${EGDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/celestia.cfg ${EGDIR}/celestia.cfg.default
+	${INSTALL_DATA} ${WRKSRC}/celestia.cfg ${DESTDIR}${EGDIR}/celestia.cfg.default
 
 .include "options.mk"
 

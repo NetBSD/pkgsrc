@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2001/11/26 20:39:15 is Exp $
+$NetBSD: patch-aa,v 1.2 2008/06/20 01:09:39 joerg Exp $
 
 --- Makefile.orig	Fri Nov 10 20:11:03 1995
 +++ Makefile
@@ -31,8 +31,8 @@ $NetBSD: patch-aa,v 1.1 2001/11/26 20:39:15 is Exp $
 -	cp globe $(BINDIR)
 -	rm -f $(MANDIR)/man1/globe.1
 -	cp globe.1 $(MANDIR)/man1
-+	${BSD_INSTALL_PROGRAM} globe $(BINDIR)
-+	${BSD_INSTALL_MAN} globe.1 $(MANDIR)
++	${BSD_INSTALL_PROGRAM} globe ${DESTDIR}$(BINDIR)
++	${BSD_INSTALL_MAN} globe.1 ${DESTDIR}$(MANDIR)
  
  clean:
  	rm -f globe a.out core

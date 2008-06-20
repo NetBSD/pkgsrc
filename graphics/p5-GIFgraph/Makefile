@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/02/22 19:26:35 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/06/20 01:09:22 joerg Exp $
 #
 
 DISTNAME=	GIFgraph-1.20
@@ -11,6 +11,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=GIFgraph/}
 MAINTAINER=	he@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/search?module=GIFgraph
 COMMENT=	GIFgraph is a package to generate graphs, using GD::Graph
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-GDGraph>=1.33:../../graphics/p5-GDGraph
 DEPENDS+=	p5-PerlMagick>=5.3.9:../../graphics/p5-PerlMagick

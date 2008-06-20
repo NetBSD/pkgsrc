@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2006/04/18 12:56:03 tron Exp $
+# $NetBSD: Makefile,v 1.33 2008/06/20 01:09:21 joerg Exp $
 
 DISTNAME=	gif2png-2.5.1
 PKGREVISION=	2
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.catb.org/~esr/gif2png/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.catb.org/~esr/gif2png/
 COMMENT=	Convert GIF files to PNG
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 

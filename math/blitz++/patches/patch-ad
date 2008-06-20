@@ -1,0 +1,32 @@
+$NetBSD: patch-ad,v 1.3 2008/06/20 01:10:02 joerg Exp $
+
+--- doc/doxygen/Makefile.in.orig	2008-06-19 15:41:31.000000000 +0000
++++ doc/doxygen/Makefile.in
+@@ -474,22 +474,22 @@ clean-local:
+ 
+ # Install hooks
+ make-install-dirs:
+-	@if test '!' -d $(docdir) ; \
+-		then mkdir -p $(docdir) ; \
++	@if test '!' -d ${DESTDIR}$(docdir) ; \
++		then mkdir -p ${DESTDIR}$(docdir) ; \
+ 	fi
+ 
+ install-data-hook: make-install-dirs
+ 	@if test -d html; then \
+ 		echo Installing documentations into $(docdir) ; \
+-		$(INSTALL_DATA) html/* $(docdir) ; \
++		$(INSTALL_DATA) html/* ${DESTDIR}$(docdir) ; \
+ 	fi
+ 	@if test -f $(PACKAGE).pdf; then \
+ 		echo Installing PDF manual into $(docdir) ; \
+-		$(INSTALL_DATA) $(PACKAGE).pdf $(docdir) ; \
++		$(INSTALL_DATA) $(PACKAGE).pdf ${DESTDIR}$(docdir) ; \
+ 	fi
+ 	@if test -f $(PACKAGE).ps; then \
+ 		echo Installing PS manual into $(docdir) ; \
+-		$(INSTALL_DATA) $(PACKAGE).ps $(docdir) ; \
++		$(INSTALL_DATA) $(PACKAGE).ps ${DESTDIR}$(docdir) ; \
+ 	fi
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.

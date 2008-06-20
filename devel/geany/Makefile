@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/02/08 10:34:19 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/20 01:09:12 joerg Exp $
 
 DISTNAME=	geany-0.12
 CATEGORIES=	devel
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=geany/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://geany.uvena.de/
 COMMENT=	Geany integrated development environment (IDE)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

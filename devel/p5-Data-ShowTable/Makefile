@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/07/12 11:36:12 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/20 01:09:14 joerg Exp $
 #
 
 DISTNAME=		Data-ShowTable-3.3
@@ -12,6 +12,7 @@ MAINTAINER=		bad@NetBSD.org
 COMMENT=		Perl module to print arrays of data in nicely formatted listings
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Data/ShowTable/.packlist
 REPLACE_PERL+=		showtable

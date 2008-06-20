@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/04/30 13:38:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.17 2008/06/20 01:09:27 joerg Exp $
 #
 
 DISTNAME=	xdg-x11-dirs-1.4
@@ -9,6 +9,8 @@ DISTFILES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# empty
 COMMENT=	Shared XDG directories under the X11 tree
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	gnome2-dirs<=1.2
 

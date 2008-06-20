@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.141 2008/05/29 17:21:45 drochner Exp $
+# $NetBSD: Makefile,v 1.142 2008/06/20 01:09:44 joerg Exp $
 #
 
 DISTNAME=	gdm-2.20.6
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Gnome Display Manager - a re-implementation of the xdm program
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	zenity>=2.16.0:../../x11/zenity
 
@@ -151,8 +153,8 @@ PRINT_PLIST_AWK+=	/gdmopen/ { print "$${GDMOPEN}" $$0; next }
 .include "../../x11/gtk2/buildlink3.mk"
 
 post-install:
-	${INSTALL_DATA} ${FILESDIR}/NetBSD.xpm ${PREFIX}/share/pixmaps
+	${INSTALL_DATA} ${FILESDIR}/NetBSD.xpm ${DESTDIR}${PREFIX}/share/pixmaps
 	${INSTALL_DATA} ${FILESDIR}/custom.desktop \
-		${PREFIX}/share/gdm/BuiltInSessions
+		${DESTDIR}${PREFIX}/share/gdm/BuiltInSessions
 
 .include "../../mk/bsd.pkg.mk"

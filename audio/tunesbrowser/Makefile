@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/03/06 14:53:48 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2008/06/20 01:09:07 joerg Exp $
 #
 
 DISTNAME=		tunesbrowser-0.3.0
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://craz.net/programs/itunes/libopendaap.html
 COMMENT=		Front-end for DAAP client
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.9 2008/04/30 13:38:16 jmmv Exp $
+# $NetBSD: Makefile.common,v 1.10 2008/06/20 01:09:35 joerg Exp $
 #
 
 GNOME_VFS_VERSION=	2.22.0
@@ -115,13 +115,14 @@ PRINT_PLIST_AWK+=	/^@dirrm share\/examples\/gnome-vfs-2.0$$/ { next; }
 PRINT_PLIST_AWK+=	/^@dirrm share\/examples\/gnome-vfs-2.0\/modules$$/ \
 				{ print "@comment in gnome-vfs: " $$0; next; }
 
+INSTALLATION_DIRS+=	lib/gnome-vfs-2.0/modules
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/gnome-vfs-2.0/modules
 	cd ${WRKSRC}/modules && ${LIBTOOL} --mode=install \
 		${INSTALL_DATA} lib${GNOME_VFS_NAME}.la \
-			${PREFIX}/lib/gnome-vfs-2.0/modules
+			${DESTDIR}${PREFIX}/lib/gnome-vfs-2.0/modules
 	cd ${WRKSRC}/modules && ${LIBTOOL} --mode=finish \
-			${PREFIX}/lib/gnome-vfs-2.0/modules
+			${DESTDIR}${PREFIX}/lib/gnome-vfs-2.0/modules
 .endif
 
 .include "../../devel/GConf/buildlink3.mk"

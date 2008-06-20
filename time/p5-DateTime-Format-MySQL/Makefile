@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/11/22 04:13:08 jnemeth Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/20 01:09:39 joerg Exp $
 
 DISTNAME=	DateTime-Format-MySQL-0.04
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/DateTime-Format-MySQL/
 COMMENT=	Parse and format MySQL dates and times
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/DateTime/Format/MySQL/.packlist

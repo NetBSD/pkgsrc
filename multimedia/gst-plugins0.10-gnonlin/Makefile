@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/10 12:52:52 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/20 01:09:27 joerg Exp $
 #
 
 DISTNAME=	gnonlin-0.10.9
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gstreamer.freedesktop.org/modules/gnonlin.html
 COMMENT=	Non-linear editing components for gstreamer
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

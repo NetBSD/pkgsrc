@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2007/01/08 01:40:23 rillig Exp $
+# $NetBSD: Makefile,v 1.46 2008/06/20 01:09:23 joerg Exp $
 #
 
 DISTNAME=	xart19980415
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://linux01.gwdg.de/~rhohen/linux.html
 COMMENT=	Paint program (enhanced xpaint)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/19980415
 USE_IMAKE=	YES

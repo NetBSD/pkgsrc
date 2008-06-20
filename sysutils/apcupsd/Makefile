@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2008/04/28 08:28:05 sborrill Exp $
+# $NetBSD: Makefile,v 1.58 2008/06/20 01:09:35 joerg Exp $
 
 DISTNAME=		apcupsd-3.14.3
 CATEGORIES=		sysutils
@@ -7,6 +7,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=apcupsd/}
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://www.apcupsd.org/
 COMMENT=		UPS power management for APCC Products
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		msgfmt sh makedepend
 USE_LANGUAGES=		c c++
@@ -68,7 +70,8 @@ EGFILES= netbsd/apccontrol etc/changeme etc/commfailure etc/commok \
     etc/offbattery etc/onbattery etc/multimon.conf etc/hosts.conf
 MANFILES= apcupsd apctest
 
-INSTALLATION_DIRS=	share/examples/apcupsd share/examples/rc.d
+INSTALLATION_DIRS=	share/examples/apcupsd share/examples/rc.d \
+			share/doc/html/apcupsd
 
 SUBST_CLASSES+=		strip
 SUBST_STAGE.strip=	pre-configure
@@ -93,17 +96,16 @@ HTMLDOCS= apcupsd.gif bclogo.gif bugs.html bugs.wml index.html index.wml \
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/platforms/etc/apcupsd.conf \
-		${PREFIX}/share/examples/apcupsd
+		${DESTDIR}${PREFIX}/share/examples/apcupsd
 	${INSTALL_DATA} ${WRKSRC}/src/cgi/apcupsd.css \
-		${PREFIX}/share/examples/apcupsd
+		${DESTDIR}${PREFIX}/share/examples/apcupsd
 .for file in ${EGFILES}
 	${INSTALL_SCRIPT} ${WRKSRC}/platforms/${file} \
-		${PREFIX}/share/examples/apcupsd
+		${DESTDIR}${PREFIX}/share/examples/apcupsd
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/html/apcupsd
 .for file in ${HTMLDOCS}
 	${INSTALL_DATA} ${WRKSRC}/doc/home-page/${file} \
-		${PREFIX}/share/doc/html/apcupsd
+		${DESTDIR}${PREFIX}/share/doc/html/apcupsd
 .endfor
 
 .include "../../devel/gettext-lib/buildlink3.mk"

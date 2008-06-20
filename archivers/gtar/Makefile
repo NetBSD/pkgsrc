@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/05/18 01:48:58 tnn Exp $
+# $NetBSD: Makefile,v 1.35 2008/06/20 01:09:05 joerg Exp $
 
 DISTNAME=	gtar-1.20
 CATEGORIES=	archivers
@@ -13,6 +13,7 @@ DEPENDS+=	gtar-base-1.20{,nb*}:../../archivers/gtar-base
 DEPENDS+=	gtar-info-1.20{,nb*}:../../archivers/gtar-info
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_ONLY=	# empty
 NO_CHECKSUM=	yes

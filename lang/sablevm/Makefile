@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/06/13 14:25:49 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2008/06/20 01:09:23 joerg Exp $
 #
 
 DISTNAME=	sablevm-1.13
@@ -9,6 +9,8 @@ MASTER_SITES=	http://sablevm.org/download/release/1.13/
 MAINTAINER=	pancake@phreaker.net
 HOMEPAGE=	http://sablevm.org/
 COMMENT=	SableVM free Java virtual machine
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	unzip>=5.50:../../archivers/unzip
 DEPENDS+=	sablevm-classpath-1.13nb1:../../lang/sablevm-classpath

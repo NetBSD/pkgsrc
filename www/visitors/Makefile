@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/01/02 18:06:50 obache Exp $
+# $NetBSD: Makefile,v 1.7 2008/06/20 01:09:43 joerg Exp $
 #
 
 DISTNAME=		visitors-0.7
@@ -9,14 +9,14 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.hping.org/visitors/
 COMMENT=		Very fast web log analyzer
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=			${WRKDIR}/visitors_0.7
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/visitors share/doc/visitors
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/visitors ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/visitors
-	${INSTALL_DATA} ${WRKSRC}/*.png ${PREFIX}/share/visitors
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/visitors
-	${INSTALL_DATA} ${WRKSRC}/doc.html ${PREFIX}/share/doc/visitors
+	${INSTALL_PROGRAM} ${WRKSRC}/visitors ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/*.png ${DESTDIR}${PREFIX}/share/visitors
+	${INSTALL_DATA} ${WRKSRC}/doc.html ${DESTDIR}${PREFIX}/share/doc/visitors
 
 .include "../../mk/bsd.pkg.mk"

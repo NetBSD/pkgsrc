@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/04/07 16:40:26 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/20 01:09:35 joerg Exp $
 
 DISTNAME=		bcmfw-1.0
 CATEGORIES=		sysutils
@@ -10,6 +10,8 @@ SITES.bluez-firmware-1.2.tar.gz= \
 
 MAINTAINER=		plunky@rya-online.net
 COMMENT=		Broadcom 2033 Bluetooth Firmware Loader
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 LICENSE=		bcmfw-license
 
@@ -35,10 +37,10 @@ SUBST_STAGE.dir=	post-patch
 SUBST_MESSAGE.dir=	Fixing path to firmware directory.
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bcmfw ${PREFIX}/sbin
-	${INSTALL_MAN} ${WRKSRC}/bcmfw.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_DATA} ${WRKDIR}/bluez-firmware-1.2/broadcom/BCM-LEGAL.txt ${PREFIX}/${FIRMWARE_DIR}
-	${INSTALL_DATA} ${WRKDIR}/bluez-firmware-1.2/broadcom/BCM2033-FW.bin ${PREFIX}/${FIRMWARE_DIR}
-	${INSTALL_DATA} ${WRKDIR}/bluez-firmware-1.2/broadcom/BCM2033-MD.hex ${PREFIX}/${FIRMWARE_DIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/bcmfw ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_MAN} ${WRKSRC}/bcmfw.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKDIR}/bluez-firmware-1.2/broadcom/BCM-LEGAL.txt ${DESTDIR}${PREFIX}/${FIRMWARE_DIR}
+	${INSTALL_DATA} ${WRKDIR}/bluez-firmware-1.2/broadcom/BCM2033-FW.bin ${DESTDIR}${PREFIX}/${FIRMWARE_DIR}
+	${INSTALL_DATA} ${WRKDIR}/bluez-firmware-1.2/broadcom/BCM2033-MD.hex ${DESTDIR}${PREFIX}/${FIRMWARE_DIR}
 
 .include "../../mk/bsd.pkg.mk"

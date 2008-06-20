@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2008/03/06 14:53:48 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2008/06/20 01:09:09 joerg Exp $
 #
 
 DISTNAME=		gnome-pilot-2.0.15
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-pilot/2.0/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Palm Pilot synchronisation for GNOME
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		gob2-[0-9]*:../../devel/gob2
 

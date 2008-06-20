@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/01/29 18:24:30 tnn Exp $
+# $NetBSD: Makefile,v 1.32 2008/06/20 01:09:35 joerg Exp $
 
 DISTNAME=	cdrtools-2.01.01a05
 PKGNAME=	cdrtools-ossdvd-2.01.1.36
@@ -19,6 +19,7 @@ COMMENT=	Software for creating ISO9660 images and writing CDs/CD-RWs/DVDs
 CONFLICTS=	mkisofs-[0-9]* cdrecord-[0-9]* cdrtools-[a-z0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -61,6 +62,8 @@ SUBST_FILES.fix=	cdrecord/defaults.c cdrecord/cdrecord.1 \
 SUBST_SED.fix=		-e "s,@CDRECORD_CONF@,${CDRECORD_CONF},g"
 SUBST_MESSAGE.fix=	Fixing paths.
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8
+
 post-extract:
 	${LN} -s Defaults.freebsd ${WRKSRC}/DEFAULTS/Defaults.dragonfly
 	${LN} -s Defaults.freebsd ${WRKSRC}/DEFAULTS_ENG/Defaults.dragonfly
@@ -87,22 +90,22 @@ post-build:
 
 do-install:
 	cd ${WRKSRC}/cdda2wav;						\
-		${INSTALL_PROGRAM} OBJ/*/cdda2wav ${PREFIX}/bin;	\
-		${INSTALL_MAN} cdda2wav.1 ${PREFIX}/${PKGMANDIR}/man1
+		${INSTALL_PROGRAM} OBJ/*/cdda2wav ${DESTDIR}${PREFIX}/bin;	\
+		${INSTALL_MAN} cdda2wav.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	cd ${WRKSRC}/cdrecord;						\
-		${INSTALL_PROGRAM} OBJ/*/cdrecord ${PREFIX}/bin;	\
-		${INSTALL_MAN} cdrecord.1 ${PREFIX}/${PKGMANDIR}/man1
+		${INSTALL_PROGRAM} OBJ/*/cdrecord ${DESTDIR}${PREFIX}/bin;	\
+		${INSTALL_MAN} cdrecord.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	cd ${WRKSRC}/mkisofs;						\
-		${INSTALL_PROGRAM} OBJ/*/mkisofs ${PREFIX}/bin;		\
-		${INSTALL_MAN} mkisofs.8 ${PREFIX}/${PKGMANDIR}/man8
+		${INSTALL_PROGRAM} OBJ/*/mkisofs ${DESTDIR}${PREFIX}/bin;		\
+		${INSTALL_MAN} mkisofs.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	cd ${WRKSRC}/mkisofs/diag;					\
 		for f in devdump isodump isoinfo isovfy; do		\
-			${INSTALL_PROGRAM} OBJ/*/$$f ${PREFIX}/bin;	\
-			${INSTALL_MAN} isoinfo.8 ${PREFIX}/${PKGMANDIR}/man8/$$f.8; \
+			${INSTALL_PROGRAM} OBJ/*/$$f ${DESTDIR}${PREFIX}/bin;	\
+			${INSTALL_MAN} isoinfo.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/$$f.8; \
 		done
 	cd ${WRKSRC}/readcd;						\
-		${INSTALL_PROGRAM} OBJ/*/readcd ${PREFIX}/bin;		\
-		${INSTALL_MAN} readcd.1 ${PREFIX}/${PKGMANDIR}/man1
+		${INSTALL_PROGRAM} OBJ/*/readcd ${DESTDIR}${PREFIX}/bin;		\
+		${INSTALL_MAN} readcd.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/pset.h)
 LDFLAGS+=	-lrt

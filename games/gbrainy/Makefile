@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/04/27 23:09:53 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/20 01:09:19 joerg Exp $
 #
 
 DISTNAME=	gbrainy-0.60
@@ -14,9 +14,12 @@ GNU_CONFIGURE=	yes
 USE_DIRS+=	xdg-1.4
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c
-USE_TOOLS+=	intltool pkg-config
+USE_TOOLS+=	intltool pkg-config bash:run
 
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
+
+REPLACE_BASH=	src/gbrainy.in
+
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"

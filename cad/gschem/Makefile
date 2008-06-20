@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2008/02/01 02:34:22 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.45 2008/06/20 01:09:08 joerg Exp $
 #
 
 DISTNAME=		geda-gschem-${PKGVERSION}
@@ -8,6 +8,8 @@ CATEGORIES=		cad
 MAINTAINER=		dmcmahill@NetBSD.org
 HOMEPAGE=		http://www.geda.seul.org/
 COMMENT=		Schematic capture tool
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		geda-symbols-${PKGVERSION}{,nb[0-9]*}:../../cad/geda-symbols
 DEPENDS+=		gettext-tools>=0.14.6:../../devel/gettext-tools

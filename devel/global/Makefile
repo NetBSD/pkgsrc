@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/03/03 08:06:25 uebayasi Exp $
+# $NetBSD: Makefile,v 1.28 2008/06/20 01:09:12 joerg Exp $
 #
 
 DISTNAME=	global-5.4
@@ -11,6 +11,8 @@ HOMEPAGE=	http://www.gnu.org/software/global/
 COMMENT=	Source code tag system including web browser output
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 INFO_FILES=		YES

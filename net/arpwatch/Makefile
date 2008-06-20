@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.31 2008/04/04 19:42:15 jwise Exp $
+# $NetBSD: Makefile,v 1.32 2008/06/20 01:09:29 joerg Exp $
 #
 
 DISTNAME=	arpwatch-2.1a15
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	net
 MASTER_SITES=	ftp://ftp.ee.lbl.gov/
 
 MAINTAINER=	bouyer@NetBSD.org
 COMMENT=	Monitor ARP activity on a network, maintaining a database
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 RCD_SCRIPTS=	arpwatch
 
@@ -27,7 +29,9 @@ SUBST_SED.paths=	-e 's,/usr/operator/arpwatch,${VARBASE}/db/arpwatch,g'
 
 OWN_DIRS=	${VARBASE:Q}/db/arpwatch
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/examples/arpwatch share/arpwatch
+
+CONF_FILES+=	/dev/null ${VARBASE}/db/arpwatch/arp.dat
 
 pre-patch:
 	f=arpwatch.h;							\
@@ -35,15 +39,11 @@ pre-patch:
 	${SED} -e '/Header/s|\$$||g' ${WRKSRC}/$$f-prepatch > ${WRKSRC}/$$f
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/arpwatch.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/arpsnmp.8 ${PREFIX}/${PKGMANDIR}/man8
-	@${INSTALL_DATA_DIR} ${VARBASE}/db/arpwatch
-	${TOUCH} ${VARBASE}/db/arpwatch/arp.dat
-	${INSTALL_DATA_DIR} ${PREFIX}/share/arpwatch
-	${INSTALL_DATA} ${WRKSRC}/ethercodes.dat ${PREFIX}/share/arpwatch
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/arpwatch
-	${INSTALL_DATA} ${WRKSRC}/bihourly.sh ${PREFIX}/share/examples/arpwatch/bihourly.sh
-	${INSTALL_DATA} ${WRKSRC}/arpfetch ${PREFIX}/share/examples/arpwatch/arpfetch
+	${INSTALL_MAN} ${WRKSRC}/arpwatch.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/arpsnmp.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_DATA} ${WRKSRC}/ethercodes.dat ${DESTDIR}${PREFIX}/share/arpwatch
+	${INSTALL_DATA} ${WRKSRC}/bihourly.sh ${DESTDIR}${PREFIX}/share/examples/arpwatch/bihourly.sh
+	${INSTALL_DATA} ${WRKSRC}/arpfetch ${DESTDIR}${PREFIX}/share/examples/arpwatch/arpfetch
 
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

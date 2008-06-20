@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:30:47 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:38 joerg Exp $
 #
 
 DISTNAME=		Convert-PEM-0.07
@@ -11,13 +11,14 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Convert-PEM/
 COMMENT=		Perl5 module to read/write ASN.1-encoded PEM files
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=		p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-Convert-ASN1>=0.10:../../textproc/p5-Convert-ASN1
 DEPENDS+=		p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 DEPENDS+=		p5-Crypt-DES_EDE3-[0-9]*:../../security/p5-Crypt-DES_EDE3
 DEPENDS+=		p5-Class-ErrorHandler-[0-9]*:../../devel/p5-Class-ErrorHandler
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Convert/PEM/.packlist

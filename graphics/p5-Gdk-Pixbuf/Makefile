@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2006/11/08 13:40:33 obache Exp $
+# $NetBSD: Makefile,v 1.19 2008/06/20 01:09:22 joerg Exp $
 #
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/p5-gtk/Makefile.common"
 

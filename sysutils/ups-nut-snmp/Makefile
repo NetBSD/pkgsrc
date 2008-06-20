@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/08/16 13:30:35 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:36 joerg Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../sysutils/ups-nut/Makefile.common"
 

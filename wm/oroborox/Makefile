@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/05/26 02:13:25 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:40 joerg Exp $
 #
 
 DISTNAME=	OroboROX-0.9.8
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://roxos.sunsite.dk/dev-contrib/guido/
 COMMENT=	The lightweight Window Manager for the ROX Desktop
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	rox-lib>=2.0.2nb2:../../devel/rox-lib
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:37 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/20 01:09:26 joerg Exp $
 #
 
 DISTNAME=		pyqt_memaid_0.2.4
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://memaid.sourceforge.net/
 COMMENT=		MemAid flash card program (py-qt3 interface)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_VERSIONS_ACCEPTED=	25 24 23 21
 

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2007/08/31 10:32:49 drochner Exp $
+$NetBSD: patch-aa,v 1.5 2008/06/20 01:09:05 joerg Exp $
 
 --- Makefile.orig	2006-11-10 01:14:11.000000000 +0100
 +++ Makefile
@@ -34,13 +34,13 @@ $NetBSD: patch-aa,v 1.4 2007/08/31 10:32:49 drochner Exp $
 -	$(STRIP) mp3info
 -	$(INSTALL) mp3info $(bindir)/mp3info
 -	$(INSTALL) mp3info.1 $(mandir)/mp3info.1
-+	$(BSD_INSTALL_PROGRAM) mp3info $(bindir)/mp3info
-+	$(BSD_INSTALL_DATA) mp3info.1 $(mandir)/mp3info.1
++	$(BSD_INSTALL_PROGRAM) mp3info ${DESTDIR}$(bindir)/mp3info
++	$(BSD_INSTALL_DATA) mp3info.1 ${DESTDIR}$(mandir)/mp3info.1
  
  install-gmp3info: gmp3info
 -	$(STRIP) gmp3info
 -	$(INSTALL) gmp3info $(bindir)/gmp3info
-+	$(BSD_INSTALL_PROGRAM) gmp3info $(bindir)/gmp3info
++	$(BSD_INSTALL_PROGRAM) gmp3info ${DESTDIR}$(bindir)/gmp3info
  
  install: install-mp3info install-gmp3info
  

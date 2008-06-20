@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/03/08 21:24:59 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/20 01:09:13 joerg Exp $
 #
 
 DISTNAME=	App-CLI-0.07
@@ -11,6 +11,7 @@ HOMEPAGE=	http://search.cpan.org/~clkao/App-CLI-0.07/
 COMMENT=	Dispatcher module for command line interface programs
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/App/CLI/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/04/14 11:36:11 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/20 01:09:28 joerg Exp $
 #
 
 DISTNAME=		subtitleeditor-0.13.6
@@ -9,6 +9,8 @@ MASTER_SITES=		http://kitone.free.fr/subtitleeditor/files/
 MAINTAINER=		ccatrian@eml.cc
 HOMEPAGE=		http://kitone.free.fr/subtitleeditor/
 COMMENT=		GTK+2 tool to edit movie subtitles
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS+=		xdg-1.4
 USE_PKGLOCALEDIR=	yes

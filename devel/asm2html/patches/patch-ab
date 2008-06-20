@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2004/12/25 01:14:31 minskim Exp $
+$NetBSD: patch-ab,v 1.2 2008/06/20 01:09:11 joerg Exp $
 
 --- man/Makefile.in.orig	2003-04-25 13:41:31.000000000 -0500
 +++ man/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-ab,v 1.1 2004/12/25 01:14:31 minskim Exp $
  
  install:
 -		install -c -o root -g wheel -m 444 asm2html.1 ${INSDIR}/asm2html.1
-+		$(BSD_INSTALL_MAN) asm2html.1 ${INSDIR}/asm2html.1
++		$(BSD_INSTALL_MAN) asm2html.1 ${DESTDIR}${INSDIR}/asm2html.1
  
  uninstall:
  		rm -f $(INSDIR)/asm2html.1

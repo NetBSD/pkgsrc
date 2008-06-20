@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/05/05 11:17:51 xtraeme Exp $
+# $NetBSD: Makefile,v 1.25 2008/06/20 01:09:12 joerg Exp $
 #
 
 DISTNAME=		bzr-1.4
@@ -33,12 +33,13 @@ SUBST_STAGE.python=		post-extract
 SUBST_FILES.python+=		Makefile
 SUBST_SED.python+=		-e 's,=python,=${PYTHONBIN},'
 
+INSTALLATION_DIRS=	share/doc/bzr
+
 post-build:
 	cd ${WRKSRC} && ${PYTHONBIN} generate_docs.py man
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bzr
-	${INSTALL_DATA} ${WRKSRC}/doc/*.txt  ${PREFIX}/share/doc/bzr
+	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${PREFIX}/share/doc/bzr
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

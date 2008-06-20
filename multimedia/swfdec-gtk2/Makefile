@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2007/09/21 13:04:09 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/20 01:09:28 joerg Exp $
 #
 
 PKGREVISION=		10
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../multimedia/swfdec/Makefile.common"
 

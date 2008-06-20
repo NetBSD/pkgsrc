@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/02/28 11:58:47 rillig Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/20 01:09:09 joerg Exp $
 
 DISTNAME=	autoconvert-0.3.13
 PKGREVISION=	2
@@ -13,10 +13,11 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
 AUTO_MKDIRS=			yes
 
+INSTALLATION_DIRS=	share/examples/autoconvert
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/autoconvert
 	${INSTALL_DATA} ${WRKSRC}/procmailrc.example ${WRKSRC}/shed.* \
-		${PREFIX}/share/examples/autoconvert
+	    ${DESTDIR}${PREFIX}/share/examples/autoconvert
 
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

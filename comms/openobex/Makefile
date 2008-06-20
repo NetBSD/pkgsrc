@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/05/25 21:23:26 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:09 joerg Exp $
 #
 
 DISTNAME=	openobex-1.3
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openobex/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://openobex.triq.net/
 COMMENT=	Implementation of the Object Exchange (OBEX) protocol
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	autoconf gmake pkg-config

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2003/09/25 12:56:34 jmmv Exp $
+$NetBSD: patch-aa,v 1.3 2008/06/20 01:09:17 joerg Exp $
 
 --- Makefile.orig	Wed Sep 24 16:22:05 2003
 +++ Makefile	Wed Sep 24 16:26:08 2003
@@ -31,16 +31,16 @@ $NetBSD: patch-aa,v 1.2 2003/09/25 12:56:34 jmmv Exp $
  
  install : all
 -	-mkdir ${TUTORIALS}
-+	${BSD_INSTALL_DATA_DIR} ${TUTORIALS}
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${TUTORIALS}
  	for i in ${TUTS} ; do \
 -	    rm -f ${TUTORIALS}/$$i; \
 -	    install -c -m 444 $$i ${TUTORIALS}/$$i ; \
-+	    ${BSD_INSTALL_DATA} $$i ${TUTORIALS}/$$i ; \
++	    ${BSD_INSTALL_DATA} $$i ${DESTDIR}${TUTORIALS}/$$i ; \
  	done
 -	install -m 755 vilearn ${BINDIR}/vilearn
 -	install -m 444 vilearn.${SEC} ${MANDIR}/man${SEC}/vilearn.${SEC}
-+	${BSD_INSTALL_SCRIPT} vilearn ${BINDIR}/vilearn
-+	${BSD_INSTALL_MAN} vilearn.${SEC} ${MANDIR}/man${SEC}/vilearn.${SEC}
++	${BSD_INSTALL_SCRIPT} vilearn ${DESTDIR}${BINDIR}/vilearn
++	${BSD_INSTALL_MAN} vilearn.${SEC} ${DESTDIR}${MANDIR}/man${SEC}/vilearn.${SEC}
  
  clean :
  	rm -f vilearn vilearn.${SEC}

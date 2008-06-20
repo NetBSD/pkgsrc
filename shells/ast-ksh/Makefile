@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2007/01/31 00:04:12 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2008/06/20 01:09:35 joerg Exp $
 #
-.include "Makefile.common"
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-BROKEN_IN=		pkgsrc-2006Q4
+.include "Makefile.common"
 
 .include "../../mk/bsd.pkg.mk"

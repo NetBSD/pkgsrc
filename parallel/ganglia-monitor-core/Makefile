@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/01/18 05:08:53 tnn Exp $
+# $NetBSD: Makefile,v 1.20 2008/06/20 01:09:32 joerg Exp $
 #
 
 DISTNAME=		ganglia-3.0.1
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		jschauma@NetBSD.org
 HOMEPAGE=		http://ganglia.sourceforge.net/
 COMMENT=		Ganglia cluster monitor, monitoring daemon
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 
@@ -32,6 +34,8 @@ CONF_FILES+=		${EGDIR}/gmetad.conf ${PKG_SYSCONFDIR}/gmetad.conf
 
 RCD_SCRIPTS=		gmond gmetad
 
+INSTALLATION_DIRS=	${EGDIR} ${PKGMANDIR}/man1
+
 pre-patch:
 	${MKDIR} ${WRKSRC}/srclib/libmetrics/netbsd
 	${MKDIR} ${WRKSRC}/srclib/libmetrics/dragonfly
@@ -47,13 +51,12 @@ post-patch:
 .endfor
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/mans/gmetad.1 ${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_MAN} ${WRKSRC}/mans/gmetric.1 ${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_MAN} ${WRKSRC}/mans/gmond.1 ${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_MAN} ${WRKSRC}/mans/gstat.1 ${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/gmetad/gmetad.conf ${EGDIR}/
-	${PREFIX}/sbin/gmond -t > ${EGDIR}/gmond.conf
+	${INSTALL_MAN} ${WRKSRC}/mans/gmetad.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_MAN} ${WRKSRC}/mans/gmetric.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_MAN} ${WRKSRC}/mans/gmond.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_MAN} ${WRKSRC}/mans/gstat.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_DATA} ${WRKSRC}/gmetad/gmetad.conf ${DESTDIR}${EGDIR}/
+	${DESTDIR}${PREFIX}/sbin/gmond -t > ${DESTDIR}${EGDIR}/gmond.conf
 
 BUILDLINK_DEPENDS.apr+=	apr>=0.9.7.2.0.55nb3
 

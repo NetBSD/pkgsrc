@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2004/06/02 21:50:31 recht Exp $
+$NetBSD: patch-aa,v 1.2 2008/06/20 01:09:41 joerg Exp $
 
---- src/Makefile.in.orig	2004-06-02 23:33:55.000000000 +0200
-+++ src/Makefile.in	2004-06-02 23:34:13.000000000 +0200
-@@ -3,8 +3,8 @@
+--- src/Makefile.in.orig	2003-11-29 13:14:14.000000000 +0000
++++ src/Makefile.in
+@@ -3,8 +3,8 @@ PROG = bkedit#
  CC = gcc
  LD = gcc
  
@@ -13,3 +13,18 @@ $NetBSD: patch-aa,v 1.1 2004/06/02 21:50:31 recht Exp $
  
  OBJS = bk_edit.o bk_edit_menu.o bk_edit_tree.o bk_edit_edit.o bk_edit_file.o \
  	bk_edit_ccp.o bk_edit_data.o bk_edit_undo.o bk_edit_dnd.o bk_edit_misc.o \
+@@ -29,10 +29,10 @@ plugs:
+ 	cd plugins && make
+ 
+ install:
+-	$(INSTALL) -d -m 755 @PREFIX@/bin/
+-	$(INSTALL) -m 755 $(PROG) @PREFIX@/bin/
+-	$(INSTALL) -d -m 755 @PREFIX@/share/bkedit/
+-	$(INSTALL) -m 755 ./plugins/*.so @PREFIX@/share/bkedit/
++	$(INSTALL) -d -m 755 ${DESTDIR}@PREFIX@/bin/
++	$(INSTALL) -m 755 $(PROG) ${DESTDIR}@PREFIX@/bin/
++	$(INSTALL) -d -m 755 ${DESTDIR}@PREFIX@/share/bkedit/
++	$(INSTALL) -m 755 ./plugins/*.so ${DESTDIR}@PREFIX@/share/bkedit/
+ 
+ uninstall:
+ 	$(RM) @PREFIX@/bin/$(PROG)

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/02/04 20:10:35 tnn Exp $
+# $NetBSD: Makefile,v 1.35 2008/06/20 01:09:16 joerg Exp $
 #
 
 DISTNAME=	rpc2-2.7
@@ -9,6 +9,8 @@ MAINTAINER=	phil@cs.wwu.edu
 # also gdt@NetBSD.org
 HOMEPAGE=	http://www.coda.cs.cmu.edu/
 COMMENT=	CMU (Coda) remote procedure call package
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake perl pkg-config
 # Earlier we had a patch to put

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.77 2008/01/16 11:11:23 drochner Exp $
+# $NetBSD: Makefile,v 1.78 2008/06/20 01:09:18 joerg Exp $
 #
 
 DISTNAME=		vice-1.22
@@ -10,6 +10,8 @@ MASTER_SITES=		ftp://ftp.zimmers.net/pub/cbm/crossplatform/emulators/VICE/ \
 MAINTAINER=		kristerw@NetBSD.org
 HOMEPAGE=		http://www.viceteam.org/
 COMMENT=		Emulator for C64, C128, CBM-II, PET, and VIC20
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 RESTRICTED=		ROM image copyright is questionable.
 NO_BIN_ON_CDROM=	${RESTRICTED}

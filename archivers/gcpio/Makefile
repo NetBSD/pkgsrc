@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2006/10/07 16:21:39 reed Exp $
+# $NetBSD: Makefile,v 1.37 2008/06/20 01:09:05 joerg Exp $
 #
 
 DISTNAME=	cpio-2.6
@@ -14,6 +14,7 @@ COMMENT=	GNU copy-in/out (cpio) with remote magnetic tape (rmt) support
 CONFLICTS+=	gtar-base-[0-9]*
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	makeinfo

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/05/29 11:28:46 drochner Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/20 01:09:44 joerg Exp $
 #
 
 DISTNAME=	gnome-control-center-2.22.2.1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME2 configuration utility
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.6
@@ -29,6 +31,8 @@ INSTALL_MAKE_FLAGS+=	${MAKE_FLAGS}
 INSTALL_MAKE_FLAGS+=	vfsmoduleconfdir=${PREFIX}/share/examples/${PKGBASE}
 INSTALL_MAKE_FLAGS+=	menudir=${PREFIX}/share/examples/${PKGBASE}
 INSTALL_MAKE_FLAGS+=	autostartdir=${PREFIX}/share/applications
+
+INSTALLATION_DIRS=	${EGDIR}
 
 GCONF_SCHEMAS+=	control-center.schemas
 GCONF_SCHEMAS+=	themus.schemas
@@ -98,10 +102,9 @@ PLIST.evolution=	yes
 .include "../../sysutils/gnome-settings-daemon/buildlink3.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/vfs-methods/themus/theme-method.conf \
-		${EGDIR}
+	    ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/vfs-methods/fontilus/font-method.conf \
-		${EGDIR}
+	    ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
