@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2007/11/22 11:19:57 adam Exp $
+# $NetBSD: Makefile,v 1.31 2008/06/20 01:09:12 joerg Exp $
 
 DISTNAME=	gconfmm-2.20.0
 CATEGORIES=	devel
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://gtkmm.sourceforge.net/
 COMMENT=	C++ bindings for gconf
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

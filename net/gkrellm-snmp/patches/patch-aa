@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2004/02/24 23:34:11 cube Exp $
+$NetBSD: patch-aa,v 1.3 2008/06/20 01:09:30 joerg Exp $
 
 --- Makefile.orig	2003-09-21 14:47:38.000000000 +0200
 +++ Makefile
@@ -39,7 +39,8 @@ $NetBSD: patch-aa,v 1.2 2004/02/24 23:34:11 cube Exp $
  install:	gkrellm_snmp.so
 -	$(INSTALL) -m 755 -d $(PLUGIN_DIR)
 +#	$(INSTALL) -m 755 -d $(PLUGIN_DIR)
- 	$(INSTALL_PROGRAM) -m 755 gkrellm_snmp.so $(PLUGIN_DIR)
+-	$(INSTALL_PROGRAM) -m 755 gkrellm_snmp.so $(PLUGIN_DIR)
++	$(INSTALL_PROGRAM) -m 755 gkrellm_snmp.so ${DESTDIR}$(PLUGIN_DIR)
  
  gkrellm_snmp.o:	gkrellm_snmp.c
 -

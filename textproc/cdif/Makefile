@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/05/26 22:37:30 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2008/06/20 01:09:37 joerg Exp $
 #
 
 DISTNAME=		cdif-1.15
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		# empty
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.srekcah.org/~utashiro/perl/scripts/cdif/
 COMMENT=		Word context diff
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # XXX add cdif-license
 LICENSE=		cdif-license
@@ -34,6 +36,6 @@ do-patch:
 		< ${WRKSRC}/${DISTNAME}.dist > ${WRKSRC}/${DISTNAME}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${PREFIX}/bin/cdif
+	${INSTALL_SCRIPT} ${WRKSRC}/${DISTNAME} ${DESTDIR}${PREFIX}/bin/cdif
 
 .include "../../mk/bsd.pkg.mk"

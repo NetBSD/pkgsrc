@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/01/10 22:48:56 bad Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/20 01:09:16 joerg Exp $
 #
 
 DISTNAME=	List-MoreUtils-0.22
@@ -11,6 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/List-MoreUtils/
 COMMENT=	Provide the stuff missing in List::Util
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/List/MoreUtils/.packlist
 

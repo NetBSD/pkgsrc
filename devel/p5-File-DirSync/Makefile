@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/02/27 09:16:14 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/20 01:09:15 joerg Exp $
 #
 
 DISTNAME=	File-DirSync-1.14
@@ -11,6 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/File-DirSync/
 COMMENT=	Perl5 module to synchronize two directories rapidly
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/File/DirSync/.packlist
 

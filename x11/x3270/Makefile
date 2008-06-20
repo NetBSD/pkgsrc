@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/02/22 19:27:28 wiz Exp $
+# $NetBSD: Makefile,v 1.21 2008/06/20 01:09:45 joerg Exp $
 
 DISTNAME=	x3270-3213
 PKGNAME=	x3270-3.2.13
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.geocities.com/SiliconValley/Peaks/7814/
 COMMENT=	3270 Terminal emulator
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/x3270-3.2
 USE_IMAKE=	yes

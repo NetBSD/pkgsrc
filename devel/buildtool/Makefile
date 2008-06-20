@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/11/04 10:16:37 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2008/06/20 01:09:12 joerg Exp $
 #
 
 DISTNAME=	buildtool-0.16
@@ -10,6 +10,7 @@ HOMEPAGE=	http://buildtool.sourceforge.net/
 COMMENT=	Portable build infrastructure
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	yes
 
@@ -23,7 +24,6 @@ CONFIGURE_ARGS+=	-c ${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	-M ${PREFIX}/${PKGMANDIR}
 CONFIGURE_ENV+=		SH=${SH:Q}
 
-post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/buildtool/pkgflags
+REQD_DIRS+=		share/buildtool/pkgflags
 
 .include "../../mk/bsd.pkg.mk"

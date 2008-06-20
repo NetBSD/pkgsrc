@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/11/18 13:27:09 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.7 2008/06/20 01:09:13 joerg Exp $
 #
 
 DISTNAME=	Class-Fields-0.203
@@ -12,6 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Class-Fields/
 COMMENT=	Set of modules to operate with class fields and members access
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Class/Fields/.packlist
 

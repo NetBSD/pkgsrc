@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/05/21 11:11:52 drochner Exp $
+# $NetBSD: Makefile,v 1.35 2008/06/20 01:09:33 joerg Exp $
 
 DISTNAME=	transfig.3.2.5
 PKGNAME=	transfig-3.2.5
@@ -8,6 +8,8 @@ MASTER_SITES=	ftp://epb.lbl.gov/xfig/alpha/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xfig.org/
 COMMENT=	TeX document creation tool utilizing portable graphics
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=		yes
 

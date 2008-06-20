@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/07/04 20:54:54 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2008/06/20 01:09:32 joerg Exp $
 #
 
 DISTNAME=	vsftpd-2.0.4
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://vsftpd.beasts.org/users/cevans/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://vsftpd.beasts.org/
 COMMENT=	FTP server that aims to be very secure
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKG_SYSCONFSUBDIR=	vsftpd
 
@@ -32,7 +34,8 @@ CONF_FILES=	${EGDIR}/vsftpd.conf.default ${PKG_SYSCONFDIR}/vsftpd.conf
 MAKE_DIRS=	${VARBASE}/chroot
 OWN_DIRS=	${VARBASE}/chroot/vsftpd
 
-INSTALLATION_DIRS=	libexec ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
+INSTALLATION_DIRS=	libexec ${PKGMANDIR}/man5 ${PKGMANDIR}/man8 \
+			${EGDIR} ${DOCDIR}/SECURITY
 
 SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	vsftpd.8 vsftpd.conf.5 vsftpd.conf
@@ -48,15 +51,12 @@ LIBS.SunOS=	-lsocket -lnsl -lrt -lsendfile
 .include "options.mk"
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/vsftpd ${PREFIX}/libexec
-	${INSTALL_MAN} ${WRKSRC}/vsftpd.8 ${PREFIX}/${PKGMANDIR}/man8
-	${INSTALL_MAN} ${WRKSRC}/vsftpd.conf.5 ${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/vsftpd.conf ${EGDIR}/vsftpd.conf.default
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA_DIR} ${DOCDIR}/SECURITY
+	${INSTALL_PROGRAM} ${WRKSRC}/vsftpd ${DESTDIR}${PREFIX}/libexec
+	${INSTALL_MAN} ${WRKSRC}/vsftpd.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/vsftpd.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_DATA} ${WRKSRC}/vsftpd.conf ${DESTDIR}${EGDIR}/vsftpd.conf.default
 	cd ${WRKSRC} && ${INSTALL_DATA} FAQ INSTALL README README.ssl \
-		TUNING ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/SECURITY/* ${DOCDIR}/SECURITY
+		TUNING ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/SECURITY/* ${DESTDIR}${DOCDIR}/SECURITY
 
 .include "../../mk/bsd.pkg.mk"

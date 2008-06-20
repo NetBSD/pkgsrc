@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/05/26 02:13:25 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/20 01:09:41 joerg Exp $
 #
 
 DISTNAME=	blur6ex-0.1.198
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.blursoft.com/releases/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.blursoft.com/
 COMMENT=	Weblog and content framework
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.0.0:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql-[0-9]*:../../databases/php-mysql
@@ -40,18 +42,18 @@ CONF_FILES=	${PEGDIR}/db.php ${PKG_SYSCONFDIR.blur6exdb}/db.php
 CONF_FILES+=	${PEGDIR}/index.php ${PKG_SYSCONFDIR.blur6ex}/index.php
 
 pre-install:
-	${INSTALL_DATA} ${WRKSRC}/engine/core/db.php ${PEGDIR}
-	${INSTALL_DATA} ${WRKSRC}/index.php ${PEGDIR}
+	${INSTALL_DATA} ${WRKSRC}/engine/core/db.php ${DESTDIR}${PEGDIR}
+	${INSTALL_DATA} ${WRKSRC}/index.php ${DESTDIR}${PEGDIR}
 
 do-install:
 	${INSTALL_DATA}						\
 		${WRKSRC}/install/INSTALL.txt			\
 		${WRKSRC}/install/blur6ex_tables.sql		\
-		${PREFIX}/share/doc/${PKGBASE}
+		${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 	cd ${WRKSRC} && pax -rwppm '-s|.*/install.*$$||'	\
 		'-s|./index.php$$||'				\
 		'-s|./engine/core/db.php$$||' .			\
-		${PREFIX}/${HTTPD_ROOT}/blog
+		${DESTDIR}${PREFIX}/${HTTPD_ROOT}/blog
 
 .include "../../mk/apachever.mk"
 .include "../../lang/php/phpversion.mk"

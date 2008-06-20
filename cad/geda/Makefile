@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2007/10/25 22:00:40 jlam Exp $
+# $NetBSD: Makefile,v 1.54 2008/06/20 01:09:08 joerg Exp $
 #
 
 DISTNAME=	geda-${PKGVERSION}
@@ -8,6 +8,8 @@ DISTFILES=	# empty
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.geda.seul.org/
 COMMENT=	Toolset for automating electronic design
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	gattrib-${PKGVERSION}{,nb[0-9]*}:../../cad/gattrib
 DEPENDS+=	gschem-${PKGVERSION}{,nb[0-9]*}:../../cad/gschem

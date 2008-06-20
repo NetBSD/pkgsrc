@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2006/11/09 09:09:33 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:29 joerg Exp $
 
 PROG	= dip
 PROG1	= diplogin
@@ -30,7 +30,7 @@ SRCS	+= sleep.c
 .endif
 
 afterinstall:
-	@if [ ! -d ${SMPDIR} ] ; then mkdir -p ${SMPDIR} ; fi
-	${BSD_INSTALL_DATA} ${SAMPLES} ${SMPDIR}
+	@if [ ! -d ${DESTDIR}${SMPDIR} ] ; then mkdir -p ${DESTDIR}${SMPDIR} ; fi
+	${BSD_INSTALL_DATA} ${SAMPLES} ${DESTDIR}${SMPDIR}
 
 .include <bsd.prog.mk>

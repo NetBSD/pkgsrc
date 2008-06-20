@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2002/07/09 16:49:20 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2008/06/20 01:09:32 joerg Exp $
 
---- Makefile.orig	Tue Feb 15 04:41:27 2000
+--- Makefile.orig	2000-02-14 20:41:27.000000000 +0000
 +++ Makefile
 @@ -17,15 +17,16 @@
  
@@ -12,21 +12,22 @@ $NetBSD: patch-aa,v 1.2 2002/07/09 16:49:20 wiz Exp $
 -CFLAGS =
 -LIBS = -lttf -lm
 -INCLUDEDIR = 
+-
+-prefix = /usr
+-BINDIR = $(prefix)/bin
+-ETCDIR = /etc/chinese/
 +#CFLAGS =
 +LDFLAGS = -Wl,-R${LOCALBASE}/lib
 +LIBS = -lttf -lm -lintl
 +INCLUDEDIR = -L/usr/lib -L${LOCALBASE}/lib
- 
--prefix = /usr
--BINDIR = $(prefix)/bin
--ETCDIR = /etc/chinese/
++
 +#prefix = /usr
 +BINDIR = ${PREFIX}/bin
 +ETCDIR = ${PKG_SYSCONFDIR}
  
  all: ttf2psm
  
-@@ -33,13 +34,13 @@
+@@ -33,14 +34,14 @@ all: ttf2psm
  	$(CC) -c $(CFLAGS) $(INCLUDEDIR) $< -o $@
  
  ttf2psm: $(OBJS)
@@ -34,11 +35,16 @@ $NetBSD: patch-aa,v 1.2 2002/07/09 16:49:20 wiz Exp $
 +	$(CC) $(CFLAGS) $(LDFLAGS) $(INCLUDEDIR) -o ttf2psm $(OBJS) $(LIBS)
  
  install: all bg5ps bg5ps.conf
- 	mkdir -p $(ETCDIR)
- 	mkdir -p $(BINDIR)
- 	$(INSTALL) -m644 bg5ps.conf $(ETCDIR)/bg5ps.conf
+-	mkdir -p $(ETCDIR)
+-	mkdir -p $(BINDIR)
+-	$(INSTALL) -m644 bg5ps.conf $(ETCDIR)/bg5ps.conf
 -	$(INSTALL) -m755 bg5ps $(BINDIR)
-+	$(INSTALL) -m755 bg5ps.new $(BINDIR)/bg5ps
- 	$(INSTALL) -m755 ttf2psm $(BINDIR)
+-	$(INSTALL) -m755 ttf2psm $(BINDIR)
++	mkdir -p ${DESTDIR}$(ETCDIR)
++	mkdir -p ${DESTDIR}$(BINDIR)
++	$(INSTALL) -m644 bg5ps.conf ${DESTDIR}$(ETCDIR)/bg5ps.conf
++	$(INSTALL) -m755 bg5ps.new ${DESTDIR}$(BINDIR)/bg5ps
++	$(INSTALL) -m755 ttf2psm ${DESTDIR}$(BINDIR)
  
  clean:
+ 	rm -rf *.o core ttf2psm *~

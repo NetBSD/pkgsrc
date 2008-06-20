@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2008/01/18 05:09:53 tnn Exp $
+# $NetBSD: Makefile,v 1.40 2008/06/20 01:09:43 joerg Exp $
 
 DISTNAME=		sitecopy-0.16.2
 PKGREVISION=		1
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.lyra.org/sitecopy/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.lyra.org/sitecopy/
 COMMENT=		Utility for synchronizing remote and local web sites
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_FEATURES=		getopt_long
 USE_TOOLS+=		gmake msgfmt

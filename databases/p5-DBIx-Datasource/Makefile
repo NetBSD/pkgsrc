@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/10/04 20:53:45 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:11 joerg Exp $
 #
 
 DISTNAME=	DBIx-DataSource-0.02
@@ -11,6 +11,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBIx/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.420.am/dbix-datasource/
 COMMENT=	Create and drop functions for databases
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/DBIx/DataSource/.packlist
 

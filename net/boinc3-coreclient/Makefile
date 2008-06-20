@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2006/06/02 13:21:28 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/20 01:09:29 joerg Exp $
 #
 
 #DISTNAME=		boinc-3.07
@@ -12,6 +12,8 @@ MASTER_SITES=		http://boinc.berkeley.edu/source/nightly/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://boinc.berkeley.edu/
 COMMENT=		Core client for Boinc V3
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/boinc_public
 
@@ -31,6 +33,6 @@ do-build:
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/client/boinc_client \
-		${PREFIX}/bin/boinc3_coreclient
+	    ${DESTDIR}${PREFIX}/bin/boinc3_coreclient
 
 .include "../../mk/bsd.pkg.mk"

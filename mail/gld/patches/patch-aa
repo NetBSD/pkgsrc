@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.7 2006/03/02 21:03:39 wiz Exp $
+$NetBSD: patch-aa,v 1.8 2008/06/20 01:09:23 joerg Exp $
 
 --- Makefile.in.orig	2004-10-12 14:41:49.000000000 +0200
 +++ Makefile.in
@@ -22,15 +22,15 @@ $NetBSD: patch-aa,v 1.7 2006/03/02 21:03:39 wiz Exp $
 -	chmod 700 /usr/local/bin/gld
 -	cp gld.conf /etc/gld.conf.sample
 -	chmod 600 /etc/gld.conf.sample
-+	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/bin
-+	$(BSD_INSTALL_PROGRAM) gld $(PREFIX)/bin
-+	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/share/examples/gld
-+	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/share/gld
-+	$(BSD_INSTALL_DATA_DIR) $(PREFIX)/share/doc/gld
-+	$(BSD_INSTALL_DATA) gld.conf $(PREFIX)/share/examples/gld
-+	$(BSD_INSTALL_DATA) table-whitelist.sql $(PREFIX)/share/gld
-+	$(BSD_INSTALL_DATA) tables.* $(PREFIX)/share/gld
-+	$(BSD_INSTALL_DATA) README LICENCE $(PREFIX)/share/doc/gld
++	$(BSD_INSTALL_PROGRAM_DIR) ${DESTDIR}$(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM) gld ${DESTDIR}$(PREFIX)/bin
++	$(BSD_INSTALL_DATA_DIR) ${DESTDIR}$(PREFIX)/share/examples/gld
++	$(BSD_INSTALL_DATA_DIR) ${DESTDIR}$(PREFIX)/share/gld
++	$(BSD_INSTALL_DATA_DIR) ${DESTDIR}$(PREFIX)/share/doc/gld
++	$(BSD_INSTALL_DATA) gld.conf ${DESTDIR}$(PREFIX)/share/examples/gld
++	$(BSD_INSTALL_DATA) table-whitelist.sql ${DESTDIR}$(PREFIX)/share/gld
++	$(BSD_INSTALL_DATA) tables.* ${DESTDIR}$(PREFIX)/share/gld
++	$(BSD_INSTALL_DATA) README LICENCE ${DESTDIR}$(PREFIX)/share/doc/gld
  
  distclean: clean
  	rm -f Makefile config.status config.log config.cache

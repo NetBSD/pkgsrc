@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2003/04/19 08:36:39 salo Exp $
+$NetBSD: patch-aa,v 1.2 2008/06/20 01:09:17 joerg Exp $
 
 --- Makefile.orig	2002-07-18 15:20:32.000000000 +0200
 +++ Makefile	2003-04-19 10:14:12.000000000 +0200
-@@ -7,11 +7,11 @@
+@@ -7,11 +7,10 @@
  
  ############## Public section. Modify according to your needs.  ###############
  
@@ -14,7 +14,6 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/19 08:36:39 salo Exp $
 +#CP      = cp
  
 -DESTDIR = /usr/local
-+DESTDIR = ${PREFIX}
  IPATH   = 
  LPATH   = 
  OPTI    = -O3 -funroll-loops -fomit-frame-pointer #-mcpu=i686
@@ -75,11 +74,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2003/04/19 08:36:39 salo Exp $
 -	@echo ",----------------------------------."
 -	@echo "| Beaver succesfully installed ^_^ |"
 -	@echo "\`----------------------------------'"
-+	${BSD_INSTALL_PROGRAM} beaver $(DESTDIR)/bin
-+	${BSD_INSTALL_DATA_DIR} $(DESTDIR)/share/beaver/bl
-+	${BSD_INSTALL_DATA} ../bl/* $(DESTDIR)/share/beaver/bl
-+	${BSD_INSTALL_DATA} ../pixmaps/beaver.png $(DESTDIR)/share/pixmaps
-+	${BSD_INSTALL_MAN} ../beaver.1x $(DESTDIR)/man/man1/beaver.1
++	${BSD_INSTALL_PROGRAM} beaver $(DESTDIR)${PREFIX}/bin
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)${PREFIX}/share/beaver/bl
++	${BSD_INSTALL_DATA} ../bl/* $(DESTDIR)${PREFIX}/share/beaver/bl
++	${BSD_INSTALL_DATA} ../pixmaps/beaver.png $(DESTDIR)${PREFIX}/share/pixmaps
++	${BSD_INSTALL_MAN} ../beaver.1x $(DESTDIR)${PREFIX}/man/man1/beaver.1
  
  .PHONY: clean re
  

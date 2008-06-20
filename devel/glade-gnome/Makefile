@@ -1,4 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2008/03/06 14:53:49 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/20 01:09:12 joerg Exp $
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../devel/glade/Makefile.common"
 

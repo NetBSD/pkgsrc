@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/11/09 02:54:31 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/20 01:09:11 joerg Exp $
 #
 
 DISTNAME=		DBIx-ContextualFetch-1.03
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=DBIx/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/DBIx-ContextualFetch/
 COMMENT=		Perl5 module adding contextual fetches to DBI
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/DBIx/ContextualFetch/.packlist
 

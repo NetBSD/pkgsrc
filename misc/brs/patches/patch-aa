@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2004/08/16 11:54:20 salo Exp $
+$NetBSD: patch-aa,v 1.3 2008/06/20 01:09:25 joerg Exp $
 
 --- Makefile.orig	1994-12-15 02:53:00.000000000 +0100
 +++ Makefile	2004-08-16 11:08:11.000000000 +0200
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.2 2004/08/16 11:54:20 salo Exp $
  
  # where to install this stuff
 -DEST	      = /usr
-+DEST	      = $(PREFIX)
++DEST	      = ${DESTDIR}$(PREFIX)
  #DEST	      = $(HOME)/local
  DESTBIN	      = $(DEST)/bin
 -DESTLIB       = $(DEST)/lib

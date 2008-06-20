@@ -1,0 +1,29 @@
+$NetBSD: patch-aa,v 1.1 2008/06/20 01:10:02 joerg Exp $
+
+--- Makefile.orig	2008-06-19 13:38:51.000000000 +0000
++++ Makefile
+@@ -31,15 +31,15 @@ clean:	
+ 	rm -f index.html ${GENFILES} ${PKGNAME}-*.tbz *~~
+ 
+ install: ${PKGNAME}.${MANSECTION}
+-	${INSTALL_DIR} ${PREFIX}/sbin
+-	${INSTALL_SCRIPT} ${PROG} ${PREFIX}/sbin
+-	${INSTALL_DIR} ${PREFIX}/man/man${MANSECTION}
+-	${INSTALL_MAN} ${PKGNAME}.${MANSECTION} ${PREFIX}/man/man${MANSECTION}
+-	${INSTALL_DIR} ${EXAMPLEDIR}
+-	${INSTALL_SCRIPT} autonet.local ${EXAMPLEDIR}
+-	${INSTALL_SCRIPT} lid_switch ${EXAMPLEDIR}
+-	${INSTALL_DIR} ${RCDIR}
+-	${INSTALL_SCRIPT} autonet-rc.d ${RCDIR}/autonet
++	${INSTALL_DIR} ${DESTDIR}${PREFIX}/sbin
++	${INSTALL_SCRIPT} ${PROG} ${DESTDIR}${PREFIX}/sbin
++	${INSTALL_DIR} ${DESTDIR}${PREFIX}/man/man${MANSECTION}
++	${INSTALL_MAN} ${PKGNAME}.${MANSECTION} ${DESTDIR}${PREFIX}/man/man${MANSECTION}
++	${INSTALL_DIR} ${DESTDIR}${EXAMPLEDIR}
++	${INSTALL_SCRIPT} autonet.local ${DESTDIR}${EXAMPLEDIR}
++	${INSTALL_SCRIPT} lid_switch ${DESTDIR}${EXAMPLEDIR}
++	${INSTALL_DIR} ${DESTDIR}${RCDIR}
++	${INSTALL_SCRIPT} autonet-rc.d ${DESTDIR}${RCDIR}/autonet
+ 
+ # GENFILES
+ 

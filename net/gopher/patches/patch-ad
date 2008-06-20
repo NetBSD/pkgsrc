@@ -1,4 +1,4 @@
-$NetBSD: patch-ad,v 1.1 2005/08/05 12:14:51 salo Exp $
+$NetBSD: patch-ad,v 1.2 2008/06/20 01:09:31 joerg Exp $
 
 --- doc/Makefile.in.orig	2005-07-20 17:28:53.000000000 +0200
 +++ doc/Makefile.in	2005-08-05 14:04:11.000000000 +0200
@@ -11,11 +11,11 @@ $NetBSD: patch-ad,v 1.1 2005/08/05 12:14:51 salo Exp $
 -	@INSTALL@ -m 0644 gopher.1 $(MAN1DIR)
 -	@INSTALL@ -m 0644 gophfilt.1 $(MAN1DIR)
 -	@INSTALL@ -m 0644 gopherrc.5 $(MAN5DIR)
-+	$(BSD_INSTALL_MAN_DIR) $(MAN1DIR)
-+	$(BSD_INSTALL_MAN_DIR) $(MAN5DIR)
-+	$(BSD_INSTALL_MAN) gopher.1 $(MAN1DIR)/
-+	$(BSD_INSTALL_MAN) gophfilt.1 $(MAN1DIR)/
-+	$(BSD_INSTALL_MAN) gopherrc.5 $(MAN5DIR)/
++	$(BSD_INSTALL_MAN_DIR) ${DESTDIR}$(MAN1DIR)
++	$(BSD_INSTALL_MAN_DIR) ${DESTDIR}$(MAN5DIR)
++	$(BSD_INSTALL_MAN) gopher.1 ${DESTDIR}$(MAN1DIR)/
++	$(BSD_INSTALL_MAN) gophfilt.1 ${DESTDIR}$(MAN1DIR)/
++	$(BSD_INSTALL_MAN) gopherrc.5 ${DESTDIR}$(MAN5DIR)/
  
  all:
  	$(NROFF)    gopher.1       >gopher.cat

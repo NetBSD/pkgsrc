@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2008/01/18 05:08:51 tnn Exp $
+# $NetBSD: Makefile,v 1.41 2008/06/20 01:09:32 joerg Exp $
 
 DISTNAME=	vtun-2.6
 PKGREVISION=	7
@@ -12,6 +12,8 @@ PATCH_DIST_STRIP=    -p1
 MAINTAINER=	cjs@NetBSD.org
 HOMEPAGE=	http://vtun.sourceforge.net/
 COMMENT=	Virtual Tunnels over TCP/IP networks with traffic shaping
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/vtun
 
@@ -33,7 +35,7 @@ CONF_FILES_PERMS=	${EGDIR}/vtund.conf ${PKG_SYSCONFDIR}/vtund.conf \
 			${ROOT_USER} ${ROOT_GROUP} 0600
 OWN_DIRS=		${LOCKDIR} ${LOGDIR}
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin
+INSTALLATION_DIRS=	${PKGMANDIR}/man5 ${PKGMANDIR}/man8 sbin ${EGDIR} ${DOCDIR}
 
 post-build:
 	@cd ${WRKSRC}; for file in vtund.8; do				\
@@ -45,17 +47,15 @@ post-build:
 		> ${WRKDIR}/vtund.conf
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/vtund ${PREFIX}/sbin
-	${INSTALL_DATA_DIR} ${DOCDIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/README ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.Crypto ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.Setup ${DOCDIR}
-	${INSTALL_DATA} ${WRKSRC}/README.Shaper ${DOCDIR}
-	${INSTALL_DATA} ${WRKDIR}/vtund.conf ${EGDIR}/vtund.conf
-	${INSTALL_MAN} ${WRKSRC}/vtund.conf.5 ${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_MAN} ${WRKSRC}/vtund.8 ${PREFIX}/${PKGMANDIR}/man8
-	${RM} -f ${PREFIX}/${PKGMANDIR}/man8/vtun.8
-	${LN} -s vtund.8 ${PREFIX}/${PKGMANDIR}/man8/vtun.8
+	${INSTALL_PROGRAM} ${WRKSRC}/vtund ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.Crypto ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.Setup ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/README.Shaper ${DESTDIR}${DOCDIR}
+	${INSTALL_DATA} ${WRKDIR}/vtund.conf ${DESTDIR}${EGDIR}/vtund.conf
+	${INSTALL_MAN} ${WRKSRC}/vtund.conf.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_MAN} ${WRKSRC}/vtund.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
+	${LN} -s vtund.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/vtun.8
 
 .include "../../archivers/liblzo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

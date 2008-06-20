@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2006/12/01 14:03:02 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/20 01:09:22 joerg Exp $
 #
 
 DISTNAME=		opencv-1.0.0
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=opencvlibrary/}
 MAINTAINER=		anthony.mallet@laas.fr
 HOMEPAGE=		http://opencvlibrary.sourceforge.net/
 COMMENT=		Library for computer vision problems
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		gmake pkg-config

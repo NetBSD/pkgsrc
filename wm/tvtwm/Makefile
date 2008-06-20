@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/09/29 12:08:20 obache Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/20 01:09:40 joerg Exp $
 
 DISTNAME=	tvtwm.pl11
 PKGNAME=	tvtwm-11
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB:=window_managers/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Classic twm with virtual desktop support
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/tvtwm
 USE_IMAKE=	YES

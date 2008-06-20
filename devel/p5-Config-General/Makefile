@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/02/27 08:51:15 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/06/20 01:09:14 joerg Exp $
 #
 
 DISTNAME=	Config-General-2.32
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.daemon.de/ConfigGeneral
 COMMENT=	Perl Generic Config module
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Config/General/.packlist
 

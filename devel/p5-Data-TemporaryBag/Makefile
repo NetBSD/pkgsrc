@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/25 13:56:45 obache Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/20 01:09:14 joerg Exp $
 #
 
 DISTNAME=	Data-TemporaryBag-0.09
@@ -11,6 +11,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Data-TemporaryBag/
 COMMENT=	Handle long size data using temporary file
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Data/TemporaryBag/.packlist
 

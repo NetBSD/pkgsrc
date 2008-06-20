@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/01/07 09:13:47 rillig Exp $
+# $NetBSD: Makefile,v 1.23 2008/06/20 01:09:05 joerg Exp $
 #
 
 DISTNAME=	cam-1.02
@@ -13,6 +13,7 @@ COMMENT=	Cpu's Audio Mixer [curses based]
 CONFLICTS+=	feh<1.2.6nb3
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CONFIGURE=	yes
 

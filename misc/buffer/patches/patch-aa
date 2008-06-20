@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 1999/09/12 16:50:41 kim Exp $
+$NetBSD: patch-aa,v 1.7 2008/06/20 01:09:25 joerg Exp $
 
 --- Makefile.orig	Wed Jul 14 11:59:17 1993
 +++ Makefile	Sun Sep 12 12:35:57 1999
@@ -37,8 +37,8 @@ $NetBSD: patch-aa,v 1.6 1999/09/12 16:50:41 kim Exp $
 -	rm -f $(INSTMAN)/buffer.$S
 -	cp buffer.man $(INSTMAN)/buffer.$S
 -	chmod 444 $(INSTMAN)/buffer.$S
-+	${BSD_INSTALL_PROGRAM} buffer $(INSTBIN)/buffer
-+	${BSD_INSTALL_MAN} buffer.man $(INSTMAN)/buffer.$S
++	${BSD_INSTALL_PROGRAM} buffer ${DESTDIR}$(INSTBIN)/buffer
++	${BSD_INSTALL_MAN} buffer.man ${DESTDIR}$(INSTMAN)/buffer.$S
  
  buffer.tar: $(ALL)
  	$(RM) -f buffer.tar

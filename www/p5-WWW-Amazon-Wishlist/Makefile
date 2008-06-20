@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/27 13:46:32 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/20 01:09:43 joerg Exp $
 #
 
 DISTNAME=	WWW-Amazon-Wishlist-1.4
@@ -11,10 +11,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/WWW-Amazon-Wishlist/
 COMMENT=	Perl5 module to get details from your Amazon wishlist
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-Template-Extract-[0-9]*:../../www/p5-Template-Extract
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/WWW/Amazon/Wishlist/.packlist
 

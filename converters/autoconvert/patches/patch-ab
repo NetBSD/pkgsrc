@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1.1.1 2002/06/19 09:25:25 agc Exp $
+$NetBSD: patch-ab,v 1.2 2008/06/20 01:09:09 joerg Exp $
 
 --- hzconvert/Makefile.orig	Mon Jan  8 18:03:21 2001
 +++ hzconvert/Makefile
@@ -30,7 +30,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2002/06/19 09:25:25 agc Exp $
 +	$(LIBTOOL) --mode=link $(CC) -o $(LIB:.a=.la) $(OBJS:.o=.lo) -rpath $(PREFIX)/lib
 +
 +install: all
-+	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $(LIB:.a=.la) $(PREFIX)/lib
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_DATA) $(LIB:.a=.la) ${DESTDIR}$(PREFIX)/lib
  
  clean:
  	rm -f *.o *~ ../lib/lib*

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.4 2005/12/27 22:19:12 reed Exp $
+$NetBSD: patch-aa,v 1.5 2008/06/20 01:09:44 joerg Exp $
 
 --- Makefile.orig	Sat Aug 16 04:10:21 1997
 +++ Makefile	Tue Aug 15 05:58:06 2000
@@ -27,10 +27,10 @@ $NetBSD: patch-aa,v 1.4 2005/12/27 22:19:12 reed Exp $
 -	-chmod 755 $(BINDIR)/$(PROGRAM)
 -	-cp $(PROGRAM).1 $(MANDIR)
 -	-chmod 644 $(MANDIR)/$(PROGRAM).1
-+	${BSD_INSTALL_SCRIPT}	$(PROGRAM)   $(BINDIR)
-+	${BSD_INSTALL_DATA}	$(PROGRAM).1 $(MANDIR)
-+	${BSD_INSTALL_DATA_DIR}	$(LIBDIR)
-+	${BSD_INSTALL_DATA}	weblintrc    $(LIBDIR)
++	${BSD_INSTALL_SCRIPT}	$(PROGRAM)   ${DESTDIR}$(BINDIR)
++	${BSD_INSTALL_DATA}	$(PROGRAM).1 ${DESTDIR}$(MANDIR)
++	${BSD_INSTALL_DATA_DIR}	${DESTDIR}$(LIBDIR)
++	${BSD_INSTALL_DATA}	weblintrc    ${DESTDIR}$(LIBDIR)
  
  test:
  	@./test.pl

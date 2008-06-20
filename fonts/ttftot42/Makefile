@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/11/25 11:55:57 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/20 01:09:19 joerg Exp $
 #
 
 DISTNAME=	ttftot42-0.3.1
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.nih.at/ttftot42/
 MAINTAINER=	rxg@NetBSD.org
 HOMEPAGE=	http://www.nih.at/ttftot42/index.html
 COMMENT=	TrueType font to Type 42 converter
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 CPPFLAGS+=	-I${BUILDLINK_DIR}/include/freetype

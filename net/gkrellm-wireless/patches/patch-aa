@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2004/02/24 23:35:52 cube Exp $
+$NetBSD: patch-aa,v 1.3 2008/06/20 01:09:30 joerg Exp $
 
 --- Makefile.orig	2003-12-06 14:19:55.000000000 +0100
 +++ Makefile
@@ -33,6 +33,6 @@ $NetBSD: patch-aa,v 1.2 2004/02/24 23:35:52 cube Exp $
  
  install :
 -	$(INSTALL) $(INSTALL_PERMS) wireless.so $(PLUGIN_DIR)
-+	$(BSD_INSTALL_DATA) wireless.so $(PLUGIN_DIR)
++	$(BSD_INSTALL_DATA) wireless.so ${DESTDIR}$(PLUGIN_DIR)
  wireless.o: wireless.c
  

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/04/23 19:55:12 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2008/06/20 01:09:15 joerg Exp $
 
 DISTNAME=		File-Slurp-9999.13
 PKGNAME=		p5-${DISTNAME}
@@ -11,6 +11,7 @@ HOMEPAGE=		http://search.cpan.org/dist/File-Slurp/
 COMMENT=		Read/write/append files quickly
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/File/Slurp/.packlist
 

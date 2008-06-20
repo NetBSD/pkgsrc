@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/02/22 19:26:30 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2008/06/20 01:09:20 joerg Exp $
 
 DISTNAME=	gnuchess-5.07
 PKGREVISION=	3
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.gnu.org/software/chess/chess.html
 COMMENT=	GNU chess engine
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	flex gmake
@@ -30,9 +31,10 @@ SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	src/book.h
 SUBST_SED.paths=	-e 's,/usr/lib/games/,${LOCALBASE}/lib/,g' \
 
+INSTALLATION_DIRS=	${DOCDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/doc/README ${DOCDIR}
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/doc/README ${DESTDIR}${DOCDIR}
 
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

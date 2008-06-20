@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2007/10/25 22:01:09 jlam Exp $
+# $NetBSD: Makefile,v 1.36 2008/06/20 01:09:45 joerg Exp $
 
 DISTNAME=	qt3-${QTVERSION}
 CATEGORIES=	x11
@@ -6,6 +6,8 @@ MASTER_SITES=	# empty
 DISTFILES=	# empty
 
 COMMENT=	"meta-package" for the QT GUI C++ toolkit
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "./Makefile.common"
 

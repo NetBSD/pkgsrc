@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/04/25 20:39:11 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2008/06/20 01:09:31 joerg Exp $
 #
 
 DISTNAME=	nicotine-1.0.8
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://nicotine.thegraveyard.org/
 COMMENT=	Client for soulseek, a peer-to-peer network for music
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 

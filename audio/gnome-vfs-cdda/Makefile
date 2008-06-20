@@ -1,15 +1,19 @@
-# $NetBSD: Makefile,v 1.2 2007/09/20 22:51:01 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/20 01:09:05 joerg Exp $
 #
 
 GNOME_VFS_NAME=		cdda
 CATEGORIES=		audio
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CPPFLAGS+=		-I${BUILDLINK_PREFIX.cdparanoia}/include/cdparanoia
 
 EGFILES+=		modules/cdda-module.conf
 
+INSTALLATION_DIRS+=	${EGDIR}/modules
+
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/modules/cdda-module.conf ${EGDIR}/modules
+	${INSTALL_DATA} ${WRKSRC}/modules/cdda-module.conf ${DESTDIR}${EGDIR}/modules
 
 .include "../../sysutils/gnome-vfs/Makefile.common"
 

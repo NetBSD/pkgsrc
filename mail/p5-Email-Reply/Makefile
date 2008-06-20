@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/29 12:10:38 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:24 joerg Exp $
 #
 
 DISTNAME=	Email-Reply-1.202
@@ -9,6 +9,8 @@ MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/R/RJ/RJBS/
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/R/RJ/RJBS/
 COMMENT=	Reply to a Message
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Email-Abstract>=2.01:../../mail/p5-Email-Abstract
 DEPENDS+=	p5-Email-Address>=1.80:../../mail/p5-Email-Address

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2008/03/03 18:02:22 drochner Exp $
+# $NetBSD: Makefile,v 1.47 2008/06/20 01:09:12 joerg Exp $
 
 DISTNAME=	gettext-0.14.6
 PKGNAME=	gettext-lib-0.14.6
@@ -13,6 +13,7 @@ COMMENT=	Internationalized Message Handling Library (libintl)
 CONFLICTS=		gettext<=0.10.35
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/gettext-runtime
 

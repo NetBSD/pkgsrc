@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/02/22 19:27:08 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2008/06/20 01:09:34 joerg Exp $
 #
 
 DISTNAME=		Crypt-OpenPGP-1.03
@@ -11,6 +11,8 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 MAINTAINER=		heinz@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Crypt-OpenPGP/
 COMMENT=		Perl5 module for OpenPGP support
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
 DEPENDS+=		p5-Crypt-Blowfish-[0-9]*:../../security/p5-Crypt-Blowfish

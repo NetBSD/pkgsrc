@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/02/22 11:55:23 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2008/06/20 01:09:38 joerg Exp $
 #
 
 DISTNAME=	Convert-BER-1.3101
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Convert/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Convert-BER/
 COMMENT=	Perl class to encode/decode objects using Basic Encoding Rules
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Convert/BER/.packlist
 

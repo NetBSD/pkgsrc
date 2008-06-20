@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/02/22 11:53:28 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/06/20 01:09:14 joerg Exp $
 #
 
 DISTNAME=		Class-MethodMaker-2.09
@@ -11,6 +11,7 @@ HOMEPAGE=		http://search.cpan.org/dist/Class-MethodMaker/
 COMMENT=		Getter/setter OO method maker for class elements
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 PERL5_PACKLIST=		auto/Class/MethodMaker/.packlist

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2008/03/06 14:53:48 wiz Exp $
+# $NetBSD: Makefile,v 1.58 2008/06/20 01:09:09 joerg Exp $
 #
 
 DISTNAME=	gossip-0.10.2
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gossip.imendio.org/
 COMMENT=	GTK2 Jabber Instant Messaging client
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=		p5-XML-Parser>=2.31nb1:../../textproc/p5-XML-Parser
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/02/15 13:46:10 salo Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:34 joerg Exp $
 #
 
 DISTNAME=		Crypt-DES_EDE3-0.01
@@ -12,9 +12,10 @@ MAINTAINER=		heinz@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Crypt-DES_EDE3/
 COMMENT=		Perl5 module for Triple-DES EDE encryption/decryption
 
-DEPENDS+=		p5-Crypt-DES-[0-9]*:../../security/p5-Crypt-DES
-
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+DEPENDS+=		p5-Crypt-DES-[0-9]*:../../security/p5-Crypt-DES
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Crypt/DES_EDE3/.packlist

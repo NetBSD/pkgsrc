@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/29 12:08:52 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:24 joerg Exp $
 
 DISTNAME=	Email-MIME-Creator-1.41
 PKGNAME=	p5-${DISTNAME}
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Email/}
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Email-MIME-Creator/
 COMMENT=	Email::MIME constructor for starting anew
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Email-Simple>=1.92:../../mail/p5-Email-Simple
 DEPENDS+=	p5-Email-Simple-Creator>=1.4:../../mail/p5-Email-Simple-Creator

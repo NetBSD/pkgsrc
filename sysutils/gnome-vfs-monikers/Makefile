@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/06 14:53:54 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/20 01:09:36 joerg Exp $
 #
 
 DISTNAME=	gnome-vfs-monikers-2.15.3
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	VFS namespace moniker for Bonobo
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

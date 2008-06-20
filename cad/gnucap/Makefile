@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/03/10 10:33:38 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2008/06/20 01:09:08 joerg Exp $
 #
 
 DISTNAME=	gnucap-2006-07-08
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.gnucap.org/
 COMMENT=	General purpose circuit simulator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	gnucap-2006-07-[0-9]*
 
@@ -22,10 +23,11 @@ GNU_CONFIGURE=		YES
 TEX_DEPMOD=		build
 TEX_ACCEPTED=		teTeX3
 
+INSTALLATION_DIRS=	share/gnucap/manual/html
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/gnucap/manual/html
 	for f in ${WRKSRC}/man/html/*.html ${WRKSRC}/man/html/*.css ; do \
-		${INSTALL_DATA} $$f ${PREFIX}/share/gnucap/manual/html ; \
+		${INSTALL_DATA} $$f ${DESTDIR}${PREFIX}/share/gnucap/manual/html ; \
 	done
 
 .include "../../devel/readline/buildlink3.mk"

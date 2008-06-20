@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/12/02 12:05:45 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/06/20 01:09:22 joerg Exp $
 #
 
 DISTNAME=	gimp-data-extras-1.2.0
@@ -12,6 +12,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gimp.org/
 COMMENT=	GNU Image Manipulation Program (extra brushes and patterns)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	gimp<=1.2.3 gimp>=2.0.0
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/01/27 14:09:09 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:31 joerg Exp $
 
 DISTNAME=	socat-1.6.0.0
 PKGREVISION=	2
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.dest-unreach.org/socat/download/
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.dest-unreach.org/socat/
 COMMENT=	"netcat++" (extended design, new implementation)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_GNU_READLINE=	YES

@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2004/12/25 01:14:31 minskim Exp $
+$NetBSD: patch-aa,v 1.2 2008/06/20 01:09:11 joerg Exp $
 
 --- src/Makefile.in.orig	2003-04-25 13:37:51.000000000 -0500
 +++ src/Makefile.in
@@ -7,7 +7,7 @@ $NetBSD: patch-aa,v 1.1 2004/12/25 01:14:31 minskim Exp $
  
  install:
 -		install -c -s -o root -g wheel -m 555 asm2html ${INSDIR}/asm2html
-+		$(BSD_INSTALL_PROGRAM) asm2html ${INSDIR}/asm2html
++		$(BSD_INSTALL_PROGRAM) asm2html ${DESTDIR}${INSDIR}/asm2html
  
  uninstall:
  		rm -f $(INSDIR)/asm2html

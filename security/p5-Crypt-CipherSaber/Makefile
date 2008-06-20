@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/02/27 09:07:04 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/20 01:09:34 joerg Exp $
 #
 
 DISTNAME=		Crypt-CipherSaber-1.00
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/CipherSaber/
 COMMENT=		Perl5 module for the CipherSaber encryptions
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Crypt/CipherSaber/.packlist
 

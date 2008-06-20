@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/03/19 13:19:01 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/20 01:09:31 joerg Exp $
 #
 
 DISTNAME=		gopher_3.0.11
@@ -10,6 +10,8 @@ MASTER_SITES=		http://quux.org/devel/gopher/Downloads/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		gopher://quux.org/1/devel/gopher/
 COMMENT=		Distributed document delivery client
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/gopher
 PKG_SYSCONFSUBDIR?=	${PKGBASE}

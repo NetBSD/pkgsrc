@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/06/06 12:07:48 markd Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:39 joerg Exp $
 
 DISTNAME=		DateTime-Format-ICal-0.08
 PKGNAME=		p5-${DISTNAME}
@@ -9,12 +9,13 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/DateTime-Format-ICal
 COMMENT=		Parse and format iCal datetime and duration strings
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=		p5-DateTime>=0.17:../../time/p5-DateTime
 DEPENDS+=		p5-DateTime-Event-ICal>=0.03:../../time/p5-DateTime-Event-ICal
 DEPENDS+=		p5-DateTime-Set>=0.10:../../time/p5-DateTime-Set
 PERL5_MODULE_TYPE=	Module::Build
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/DateTime/Format/ICal/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/09/21 13:04:26 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2008/06/20 01:09:40 joerg Exp $
 
 DISTNAME=		obconf-2.0.1
 PKGREVISION=		1
@@ -10,6 +10,8 @@ MASTER_SITES+=		http://offload1.icculus.org/openbox/obconf/
 MAINTAINER=		snj@NetBSD.org
 HOMEPAGE=		http://icculus.org/openbox/obconf/
 COMMENT=		Tool for configuring the Openbox window manager
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 USE_DIRS+=		xdg-1.1

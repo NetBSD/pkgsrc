@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/01/20 13:06:16 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/20 01:09:45 joerg Exp $
 #
 
 DISTNAME=	worker-2.14.1
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.boomerangsworld.de/cms/worker/downloads/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.boomerangsworld.de/cms/worker/
 COMMENT=	Highly configurable two-panes file manager for X11
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 GNU_CONFIGURE=	YES

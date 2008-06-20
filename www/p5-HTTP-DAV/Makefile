@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/22 19:27:21 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/20 01:09:42 joerg Exp $
 #
 
 DISTNAME=	HTTP-DAV-0.31
@@ -11,6 +11,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://webdav.org/perldav/
 COMMENT=	HTTP::DAV interface and 'dave'
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-libwww-[0-9]*:../../www/p5-libwww
 DEPENDS+=	p5-XML-DOM-[0-9]*:../../textproc/p5-XML-DOM

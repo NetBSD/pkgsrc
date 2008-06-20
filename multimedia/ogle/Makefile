@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/08/19 06:27:10 veego Exp $
+# $NetBSD: Makefile,v 1.22 2008/06/20 01:09:28 joerg Exp $
 
 DISTNAME=	ogle-0.9.2
 PKGREVISION=	3
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.dtek.chalmers.se/groups/dvd/dist/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.dtek.chalmers.se/groups/dvd/
 COMMENT=	DVD player with menus
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	NetBSD-1.5.[23]*-i386 NetBSD-1.5[Y-Z]*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-1.6*-i386 NetBSD-[2-9]*-i386

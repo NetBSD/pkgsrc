@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/06/02 18:28:00 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2008/06/20 01:09:40 joerg Exp $
 
 DISTNAME=	apc_gui-1.0.3
 PKGNAME=	${DISTNAME:S/_/-/}
@@ -9,6 +9,8 @@ MASTER_SITES=	http://apc.neuropeans.com/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://apc.neuropeans.com/
 COMMENT=	Web interface for managing APC (php-apc)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PHP_VERSIONS_ACCEPTED=	4
 
@@ -34,14 +36,14 @@ SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@APC_GUI_DIR@,${APC_GUI_DIR},g'
 SUBST_STAGE.paths=	post-patch
 
+INSTALLATION_DIRS=	${APC_GUI_DIR} ${EGDIR}
+
 post-extract:
 	${CP} ${FILESDIR}/apc_gui.conf.dist ${WRKDIR}
 
 do-install:
-	${INSTALL_DATA_DIR} ${APC_GUI_DIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKDIR}/apc_gui.conf.dist ${EGDIR}/apc_gui.conf
-	${CP} -R ${WRKSRC}/* ${APC_GUI_DIR}
-	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${APC_GUI_DIR}
+	${INSTALL_DATA} ${WRKDIR}/apc_gui.conf.dist ${DESTDIR}${EGDIR}/apc_gui.conf
+	${CP} -R ${WRKSRC}/* ${DESTDIR}${APC_GUI_DIR}
+	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DESTDIR}${APC_GUI_DIR}
 
 .include "../../mk/bsd.pkg.mk"

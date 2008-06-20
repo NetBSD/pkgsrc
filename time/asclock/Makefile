@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/12/27 13:37:40 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2008/06/20 01:09:38 joerg Exp $
 
 DISTNAME=	asclock-classic-1.0
 PKGNAME=	asclock-1.0
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_LOCAL}	# www.asclock.org is no more
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	NeXTstep-like clock and calendar
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_SRC_ON_FTP=	Already in MASTER_SITE_LOCAL
 
@@ -20,7 +22,7 @@ PLIST_SRC=	${WRKDIR}/.PLIST_SRC
 
 .include "../../mk/bsd.prefs.mk"
 
-INSTALLATION_DIRS=	bin libexec
+INSTALLATION_DIRS=	bin libexec share/asclock-classic
 
 # Translate to two-letter abbreviations in /usr/share/misc/language.
 #
@@ -52,23 +54,22 @@ pre-configure:
 do-install:
 	${SED} -e "s,@PREFIX@,${PREFIX},g" \
 		${FILESDIR}/asclock.sh > ${WRKDIR}/asclock.sh
-	${INSTALL_SCRIPT} ${WRKDIR}/asclock.sh ${PREFIX}/bin/asclock
-	${INSTALL_PROGRAM} ${WRKSRC}/asclock ${PREFIX}/libexec/asclock-classic
+	${INSTALL_SCRIPT} ${WRKDIR}/asclock.sh ${DESTDIR}${PREFIX}/bin/asclock
+	${INSTALL_PROGRAM} ${WRKSRC}/asclock ${DESTDIR}${PREFIX}/libexec/asclock-classic
 	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
 .if (${OPSYS} == SunOS) || (${OPSYS} == "Linux") || (${OPSYS} == "Interix") || ${OPSYS} == "DragonFly" || ${OPSYS} == "Darwin"
-	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/asclock.man ${PREFIX}/${PKGMANDIR}/man1/asclock.1
+	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/asclock.man ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/asclock.1
 	@${ECHO} ${PKGMANDIR}/man1/asclock.1 >> ${PLIST_SRC}
 .else
-	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/cat1
-	${INSTALL_MAN} ${WRKSRC}/asclock.0 ${PREFIX}/${PKGMANDIR}/cat1/asclock.0
+	${INSTALL_MAN_DIR} ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1
+	${INSTALL_MAN} ${WRKSRC}/asclock.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/asclock.0
 	@${ECHO} ${PKGMANDIR}/cat1/asclock.0 >> ${PLIST_SRC}
 .endif
-	${INSTALL_DATA_DIR} ${PREFIX}/share/asclock-classic
 .for LANGUAGE in ${LANGUAGES}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/asclock-classic/${LANGUAGE}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/asclock-classic/${LANGUAGE}
 	cd ${WRKSRC}/${LANGUAGE}; ${INSTALL_DATA} month.xpm weekday.xpm \
-		${PREFIX}/share/asclock-classic/${LANGUAGE}
+		${DESTDIR}${PREFIX}/share/asclock-classic/${LANGUAGE}
 	@${ECHO} share/asclock-classic/${LANGUAGE}/month.xpm >> ${PLIST_SRC}
 	@${ECHO} share/asclock-classic/${LANGUAGE}/weekday.xpm >> ${PLIST_SRC}
 	@${ECHO} @dirrm share/asclock-classic/${LANGUAGE} >> ${PLIST_SRC}

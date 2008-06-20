@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.7 2004/06/02 20:28:59 jschauma Exp $
+$NetBSD: patch-ac,v 1.8 2008/06/20 01:09:05 joerg Exp $
 
 --- Makefile.orig	1996-09-19 13:18:29.000000000 -0400
 +++ Makefile	2004-06-02 16:31:54.000000000 -0400
@@ -36,11 +36,11 @@ $NetBSD: patch-ac,v 1.7 2004/06/02 20:28:59 jschauma Exp $
  	@echo "installing $(EFILE) in directory $(BINDIR)"
 -	@$(INSTALL) -m 755 -o root -g root $(EFILE) $(BINDIR)
 -	@$(INSTALL) -m 755 -o root -g root $(XEFILE) $(BINDIR)
-+	@$(BSD_INSTALL_PROGRAM) $(EFILE) $(BINDIR)
++	@$(BSD_INSTALL_PROGRAM) $(EFILE) ${DESTDIR}$(BINDIR)
  	@echo ""
  	@echo "installing manpages for cam"
 -	@$(INSTALL) -m 644 -o root -g root $(MANFILE) $(MANDIR)
 -	@echo ""
 -	@. installvgafont.sh
-+	@$(BSD_INSTALL_DATA) $(MANFILE) $(MANDIR)
++	@$(BSD_INSTALL_DATA) $(MANFILE) ${DESTDIR}$(MANDIR)
  	@echo ""

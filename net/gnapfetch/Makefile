@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/03/04 21:30:19 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/20 01:09:30 joerg Exp $
 
 DISTNAME=	gnapfetch-0.3
 CATEGORIES=	net
@@ -8,16 +8,17 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://entropy.atlantic.net/gnapfetch/
 COMMENT=	Update/maintain opennap servers for gnapster/TekNap
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		perl:run
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin share/doc/gnapfetch
 
 do-build:
 	${SED} -e "s,/usr/bin/perl,${PERL5},g" \
 		< ${WRKSRC}/gnapfetch > ${WRKDIR}/gnapfetch
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/gnapfetch ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/gnapfetch
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/gnapfetch
+	${INSTALL_SCRIPT} ${WRKDIR}/gnapfetch ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/gnapfetch
 
 .include "../../mk/bsd.pkg.mk"

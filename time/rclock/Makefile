@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/10/30 12:25:11 dsainty Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/20 01:09:39 joerg Exp $
 
 DISTNAME=		rxvt-2.7.10
 PKGNAME=		rclock-2.7.10
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Analog clock for X w/appointment reminder and mail notification
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=		yes
 GNU_CONFIGURE=		yes

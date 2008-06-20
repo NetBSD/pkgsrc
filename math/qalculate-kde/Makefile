@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/01/18 05:08:32 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2008/06/20 01:09:25 joerg Exp $
 
 DISTNAME=	qalculate-kde-0.9.5
 PKGREVISION=	3
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=qalculate/}
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://qalculate.sourceforge.net/
 COMMENT=	Qalculate is a modern multi-purpose desktop calculator
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	gnuplot>=3.7:../../graphics/gnuplot
 DEPENDS+=	wget>=1.8:../../net/wget

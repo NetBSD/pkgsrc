@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/03/24 19:21:23 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/20 01:09:20 joerg Exp $
 
 DISTNAME=		gnuchess-4.0.pl80
 PKGNAME=		gnuchess4-4.0.80
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_LOCAL}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnu.org/software/chess/chess.html
 COMMENT=		The "classic" GNU chess
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		gnuchess-4.*
 
@@ -23,6 +25,6 @@ post-install:
 	cd ${WRKSRC}/doc; ${INSTALL_DATA} \
 		ARTICLE ARTICLE.2 CHESSTOOL FAQ HEURISTICS MOVE-GEN \
 		README.font README.output \
-		${PREFIX}/share/doc/gnuchess4
+		${DESTDIR}${PREFIX}/share/doc/gnuchess4
 
 .include "../../mk/bsd.pkg.mk"

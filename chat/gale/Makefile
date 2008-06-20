@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2008/01/18 05:06:24 tnn Exp $
+# $NetBSD: Makefile,v 1.36 2008/06/20 01:09:09 joerg Exp $
 
 DISTNAME=	gale-0.99fruit
 PKGNAME=	gale-0.99f
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gale.org/
 COMMENT=	Secure instant messaging system
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_GNU_READLINE=	yes	# needs rl_named_function()
 USE_LIBTOOL=		yes
@@ -39,10 +41,11 @@ OWN_DIRS_PERMS=		${PKG_SYSCONFDIR}/auth/cache			\
 OWN_DIRS_PERMS+=	${PKG_SYSCONFDIR}/auth/local			\
 			${SHAREOWN} ${SHAREGRP} 1777
 
+INSTALLATION_DIRS=	${EGDIR}
+
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/kutils/ROOT ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/kutils/ROOT ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${EGDIR}
 
 .include "../../devel/boehm-gc/buildlink3.mk"
 .include "../../devel/glib/buildlink3.mk"

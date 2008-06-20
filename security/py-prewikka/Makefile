@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/06/16 15:34:30 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2008/06/20 01:09:34 joerg Exp $
 #
 
 DISTNAME=		prewikka-${VERSION}
@@ -6,6 +6,8 @@ PKGNAME=		${PYPKGPREFIX}-prewikka-${VERSION}
 CATEGORIES=		security
 MASTER_SITES=		http://www.prelude-ids.org/download/releases/ \
 			http://www.prelude-ids.org/download/releases/old/
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 VERSION=		0.9.14
 

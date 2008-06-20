@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/01/17 07:04:09 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/20 01:09:45 joerg Exp $
 
 DISTNAME=	xcolors
 PKGNAME=	xcolors-1.3
@@ -8,6 +8,8 @@ MASTER_SITES=	ftp://ftp.tut.ac.jp/X11/X11R6/contrib/programs/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Display all (ok, most of) the colors in the universe
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/xcolors
 USE_IMAKE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/05/26 02:13:23 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2008/06/20 01:09:33 joerg Exp $
 #
 
 DISTNAME=	base-1.3.9
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=secureideas/}
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://secureideas.sourceforge.net/
 COMMENT=	Analysis engine to process a database of security events
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 .include "../../mk/apachever.mk"
 .include "../../lang/php/phpversion.mk"
@@ -57,6 +59,8 @@ SUBST_SED.conf+=	-e "s|@DBTYPE@|${DBTYPE}|g"
 SUBST_SED.conf+=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.conf=	Fixing configuration files.
 
+INSTALLATION_DIRS=	${BASE_DIR} ${EGDIR} share/doc/base
+
 .include "options.mk"
 
 post-extract:
@@ -64,22 +68,18 @@ post-extract:
 	${FIND} ${WRKSRC} -name *.php | ${XARGS} ${CHMOD} ${SHAREMODE}
 
 do-install:
-	${INSTALL_DATA_DIR} ${BASE_DIR}
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/base
-
-	${INSTALL_DATA} ${WRKSRC}/base.conf ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/base_conf.php.dist ${EGDIR}/base_conf.php
-	${INSTALL_DATA} ${WRKSRC}/*.php ${BASE_DIR}
+	${INSTALL_DATA} ${WRKSRC}/base.conf ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/base_conf.php.dist ${DESTDIR}${EGDIR}/base_conf.php
+	${INSTALL_DATA} ${WRKSRC}/*.php ${DESTDIR}${BASE_DIR}
 
 .	for f in ${DOC_FILES}
-		${INSTALL_DATA} ${WRKSRC}/docs/${f:Q} ${PREFIX}/share/doc/base
+		${INSTALL_DATA} ${WRKSRC}/docs/${f:Q} ${DESTDIR}${PREFIX}/share/doc/base
 .	endfor
 
 .	for i in ${PAX_DIRS}
-		cd ${WRKSRC}/${i:Q} && pax -rw . ${BASE_DIR}/${i:Q}
+		cd ${WRKSRC}/${i:Q} && pax -rw . ${DESTDIR}${BASE_DIR}/${i:Q}
 .	endfor
 
-	${CHOWN} ${WWW_USER} ${BASE_DIR}
+	${CHOWN} ${WWW_USER} ${DESTDIR}${BASE_DIR}
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/01/18 05:08:33 tnn Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/20 01:09:25 joerg Exp $
 #
 
 DISTNAME=	gkrellflynn-0.8
@@ -14,6 +14,7 @@ COMMENT=	GKrellM2 plugin that shows system load with a DooM marine
 USE_TOOLS+=	gmake pkg-config
 BUILD_TARGET=	gkrellm2
 INSTALL_TARGET=	installgkrellm2
+INSTALLATION_DIRS=	lib/gkrellm2/plugins
 
 .include "../../sysutils/gkrellm/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

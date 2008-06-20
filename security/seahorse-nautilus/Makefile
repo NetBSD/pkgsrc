@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/05/29 16:53:20 drochner Exp $
+# $NetBSD: Makefile,v 1.22 2008/06/20 01:09:35 joerg Exp $
 
 DISTNAME=	seahorse-2.22.2
 PKGNAME=	seahorse-nautilus-2.22.2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://seahorse.sourceforge.net/
 COMMENT=	Seahorse plugin for nautilus
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PATCHDIR=	${.CURDIR}/../seahorse/patches
 DISTINFO_FILE=	${.CURDIR}/../seahorse/distinfo

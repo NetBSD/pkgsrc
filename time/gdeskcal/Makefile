@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/04/25 20:39:13 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2008/06/20 01:09:38 joerg Exp $
 #
 
 DISTNAME=		gDeskCal-0_57_1
@@ -11,21 +11,22 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pycage.de/\#gdeskcal
 COMMENT=		Desktop calendar
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/gDeskCal-0.57.1
 NO_BUILD=	yes
 
 PYTHON_PATCH_SCRIPTS=	gdeskcal
-INSTALLATION_DIRS=	bin
+INSTALLATION_DIRS=	bin lib/gdeskcal
 
 post-extract:
 	${RM} ${WRKSRC}/data/format.xml~
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/gdeskcal
-	(cd ${WRKSRC} && ${CP} -r . ${PREFIX}/lib/gdeskcal)
+	(cd ${WRKSRC} && ${CP} -r . ${DESTDIR}${PREFIX}/lib/gdeskcal)
 	${PYTHONBIN} ${LOCALBASE}/${PYLIB}/compileall.py \
-		${PREFIX}/lib/gdeskcal/code
-	${LN} -s ${PREFIX}/lib/gdeskcal/gdeskcal ${PREFIX}/bin
+		${DESTDIR}${PREFIX}/lib/gdeskcal/code
+	${LN} -s ../lib/gdeskcal/gdeskcal ${DESTDIR}${PREFIX}/bin
 
 .include "../../x11/py-gtk2/buildlink3.mk"
 .include "../../textproc/py-xml/buildlink3.mk"

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.2 2004/11/12 06:39:20 jlam Exp $
+$NetBSD: patch-aa,v 1.3 2008/06/20 01:09:30 joerg Exp $
 
---- Makefile.orig	2004-01-16 08:48:09.000000000 +0100
+--- Makefile.orig	2004-01-16 07:48:09.000000000 +0000
 +++ Makefile
-@@ -1,26 +1,27 @@
+@@ -1,28 +1,29 @@
 -INSTALLDIR = /usr/local/lib/gkrellm2/plugins
 +INSTALLDIR = $(PREFIX)/lib/gkrellm2/plugins
  VERSION = 2.0.8
@@ -32,7 +32,11 @@ $NetBSD: patch-aa,v 1.2 2004/11/12 06:39:20 jlam Exp $
  
  install: pinger multiping.so
 -	install -d $(INSTALLDIR)
+-	install -c -s -m 644 multiping.so $(INSTALLDIR)
+-	install -c -s -m 4755 pinger $(INSTALLDIR)
 +#	install -d $(INSTALLDIR)
- 	install -c -s -m 644 multiping.so $(INSTALLDIR)
- 	install -c -s -m 4755 pinger $(INSTALLDIR)
++	install -c -s -m 644 multiping.so ${DESTDIR}$(INSTALLDIR)
++	install -c -s -m 4755 pinger ${DESTDIR}$(INSTALLDIR)
  	echo "pinger helper is installed suid root"
+ 
+ dist:

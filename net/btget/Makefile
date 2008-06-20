@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/01/18 05:08:40 tnn Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/20 01:09:30 joerg Exp $
 #
 
 DISTNAME=		libbt-1.05
@@ -11,17 +11,21 @@ MAINTAINER=		reinoud@NetBSD.org
 HOMEPAGE=		http://libbt.sourceforge.net/
 COMMENT=		Fast bittorrent client and library written in C
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=		makedepend
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/btget ${PREFIX}/bin/btget
-	${INSTALL_PROGRAM} ${WRKSRC}/src/btlist ${PREFIX}/bin/btlist
-	${INSTALL_PROGRAM} ${WRKSRC}/src/btcheck ${PREFIX}/bin/btcheck
-	${INSTALL_MAN} ${WRKSRC}/man/btget.1 ${PREFIX}/${PKGMANDIR}/man1/btget.1
-	${INSTALL_MAN} ${WRKSRC}/man/btlist.1 ${PREFIX}/${PKGMANDIR}/man1/btlist.1
-	${INSTALL_MAN} ${WRKSRC}/man/btcheck.1 ${PREFIX}/${PKGMANDIR}/man1/btcheck.1
+	${INSTALL_PROGRAM} ${WRKSRC}/src/btget ${DESTDIR}${PREFIX}/bin/btget
+	${INSTALL_PROGRAM} ${WRKSRC}/src/btlist ${DESTDIR}${PREFIX}/bin/btlist
+	${INSTALL_PROGRAM} ${WRKSRC}/src/btcheck ${DESTDIR}${PREFIX}/bin/btcheck
+	${INSTALL_MAN} ${WRKSRC}/man/btget.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/btget.1
+	${INSTALL_MAN} ${WRKSRC}/man/btlist.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/btlist.1
+	${INSTALL_MAN} ${WRKSRC}/man/btcheck.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/btcheck.1
 
 .include "../../www/curl/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"

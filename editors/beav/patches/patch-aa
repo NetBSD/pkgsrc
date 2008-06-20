@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2007/11/25 12:15:53 wiz Exp $
+$NetBSD: patch-aa,v 1.3 2008/06/20 01:09:17 joerg Exp $
 
 --- Makefile.orig	2007-11-25 12:10:44.000000000 +0000
 +++ Makefile
@@ -18,10 +18,10 @@ $NetBSD: patch-aa,v 1.2 2007/11/25 12:15:53 wiz Exp $
 +	$(CC) $(CFLAGS) $(OFILES) -ltermcap -o beav
 +
 +install: beav beav.1
-+	$(BSD_INSTALL_PROGRAM) beav $(PREFIX)/bin
-+	mkdir -p $(PREFIX)/share/doc/beav
-+	$(BSD_INSTALL_DATA) beav140.txt $(PREFIX)/share/doc/beav/beav.txt
-+	$(BSD_INSTALL_MAN) beav.1 $(PREFIX)/man/man1
++	$(BSD_INSTALL_PROGRAM) beav ${DESTDIR}$(PREFIX)/bin
++	mkdir -p ${DESTDIR}$(PREFIX)/share/doc/beav
++	$(BSD_INSTALL_DATA) beav140.txt ${DESTDIR}$(PREFIX)/share/doc/beav/beav.txt
++	$(BSD_INSTALL_MAN) beav.1 ${DESTDIR}$(PREFIX)/man/man1
  
  clean:
  	rm -f *.o beav

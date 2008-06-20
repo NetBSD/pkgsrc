@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/08/03 06:57:01 seb Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:14 joerg Exp $
 #
 
 DISTNAME=	Class-XML-0.06
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Class/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Class-XML/
 COMMENT=	Perl 5 module providing a simple XML abstraction
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_MODULE_TYPE=	Module::Build

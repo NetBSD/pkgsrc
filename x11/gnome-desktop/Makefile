@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.78 2008/05/29 11:06:12 drochner Exp $
+# $NetBSD: Makefile,v 1.79 2008/06/20 01:09:44 joerg Exp $
 #
 
 DISTNAME=		gnome-desktop-2.22.2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		drochner@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Common GNOME2 desktop files and libgnome-desktop library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		gnome2-1.5
@@ -23,7 +25,7 @@ BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.0
 
 post-install:
 .for f in netbsd-logo-icon.png netbsd-logo-icon-transparent.png
-	${INSTALL_DATA} ${FILESDIR}/${f} ${PREFIX}/share/pixmaps/${f}
+	${INSTALL_DATA} ${FILESDIR}/${f} ${DESTDIR}${PREFIX}/share/pixmaps/${f}
 .endfor
 
 .include "../../devel/glib2/buildlink3.mk"

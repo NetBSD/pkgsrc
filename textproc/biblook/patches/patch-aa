@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2005/10/04 21:40:19 reed Exp $
+$NetBSD: patch-aa,v 1.3 2008/06/20 01:09:37 joerg Exp $
 
 --- Makefile.orig	1995-01-31 12:15:22.000000000 -0800
 +++ Makefile	2005-10-04 14:26:20.000000000 -0700
@@ -42,10 +42,10 @@ $NetBSD: patch-aa,v 1.2 2005/10/04 21:40:19 reed Exp $
 -	-chmod 774 $(MANDIR)/bibindex.$(MANEXT)
 -	-$(CP) biblook.man $(MANDIR)/biblook.$(MANEXT)
 -	-chmod 774 $(MANDIR)/biblook.$(MANEXT)
-+	$(INSTALL_PROGRAM) bibindex $(BINDIR)
-+	$(INSTALL_PROGRAM) biblook $(BINDIR)
-+	$(INSTALL_MAN) bibindex.man $(MANDIR)/bibindex.$(MANEXT)
-+	$(INSTALL_MAN) biblook.man $(MANDIR)/biblook.$(MANEXT)
++	$(INSTALL_PROGRAM) bibindex ${DESTDIR}$(BINDIR)
++	$(INSTALL_PROGRAM) biblook ${DESTDIR}$(BINDIR)
++	$(INSTALL_MAN) bibindex.man ${DESTDIR}$(MANDIR)/bibindex.$(MANEXT)
++	$(INSTALL_MAN) biblook.man ${DESTDIR}$(MANDIR)/biblook.$(MANEXT)
  
  install-ftp:	$(FTPFILES)
  	-for f in $? ; \

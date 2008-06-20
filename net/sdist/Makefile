@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/12/24 08:34:51 obache Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/20 01:09:31 joerg Exp $
 #
 
 DISTNAME=		sdist-1.7
@@ -8,6 +8,8 @@ MASTER_SITES=		ftp://ftp.gw.com/pub/people/kim/
 
 MAINTAINER=		kim@tac.nyc.ny.us
 COMMENT=		Invoke rdist to distribute files to a set of hosts
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		netname-[0-9]*:../../net/netname
 DEPENDS+=		osname-[0-9]*:../../sysutils/osname

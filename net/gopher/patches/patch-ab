@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.1 2005/08/05 12:14:51 salo Exp $
+$NetBSD: patch-ab,v 1.2 2008/06/20 01:09:31 joerg Exp $
 
 --- gopher/Makefile.in.orig	2005-07-20 17:28:52.000000000 +0200
 +++ gopher/Makefile.in	2005-08-05 14:01:36.000000000 +0200
@@ -14,12 +14,12 @@ $NetBSD: patch-ab,v 1.1 2005/08/05 12:14:51 salo Exp $
 -	@INSTALL@ gopher.rc $(CLIENTLIB)
 -	@INSTALL@ gopherremote.rc $(CLIENTLIB)
 -	@INSTALL@ gopher.hlp $(CLIENTLIB)
-+	$(BSD_INSTALL_PROGRAM_DIR) $(CLIENTDIR)
-+	$(BSD_INSTALL_PROGRAM) $(TARGET) $(CLIENTDIR)/
-+	$(BSD_INSTALL_DATA_DIR) $(EGDIR)/
-+	$(BSD_INSTALL_DATA) gopher.rc $(EGDIR)/
-+	$(BSD_INSTALL_DATA) gopherremote.rc $(EGDIR)/
-+	$(BSD_INSTALL_DATA) gopher.hlp $(EGDIR)/
++	$(BSD_INSTALL_PROGRAM_DIR) ${DESTDIR}$(CLIENTDIR)
++	$(BSD_INSTALL_PROGRAM) $(TARGET) ${DESTDIR}$(CLIENTDIR)/
++	$(BSD_INSTALL_DATA_DIR) ${DESTDIR}$(EGDIR)/
++	$(BSD_INSTALL_DATA) gopher.rc ${DESTDIR}$(EGDIR)/
++	$(BSD_INSTALL_DATA) gopherremote.rc ${DESTDIR}$(EGDIR)/
++	$(BSD_INSTALL_DATA) gopher.hlp ${DESTDIR}$(EGDIR)/
  
  clean:
  	-rm -f $(TARGET) $(OBJS) *.out *~ core
