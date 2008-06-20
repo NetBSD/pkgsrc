@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/02/22 19:27:21 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/20 01:09:41 joerg Exp $
 #
 
 DISTNAME=	CGI-Kwiki-0.18
@@ -11,6 +11,8 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.kwiki.org/
 COMMENT=		Quickie Wiki that's not too Tricky
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Test-Simple>=0.47:../../devel/p5-Test-Simple
 DEPENDS+=		p5-Locale-Maketext>=1.08:../../misc/p5-Locale-Maketext

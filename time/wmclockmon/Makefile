@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/02/22 19:27:17 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2008/06/20 01:09:39 joerg Exp $
 #
 
 DISTNAME=	wmclockmon-0.8.1
@@ -9,6 +9,8 @@ MASTER_SITES=	http://tnemeth.free.fr/projets/programmes/
 MAINTAINER=	poff@sixbit.org
 HOMEPAGE=	http://tnemeth.free.fr/projets/dockapps.html
 COMMENT=	Windowmaker dockapp for time/date
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.22 2007/01/07 09:14:10 rillig Exp $
+# $NetBSD: Makefile.common,v 1.23 2008/06/20 01:09:35 joerg Exp $
 
 DISTNAME=	ast-ksh-${ASTKSH_VERSION}
 PKGNAME=	ast-ksh-${ASTKSH_VERSION:S/-//g}
@@ -51,11 +51,11 @@ do-build:
 
 do-install:
 	@set -e;							\
-	arch=`${WRKSRC:Q}/bin/package host`;				\
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/arch/"$${arch}"/bin/ksh		\
-		${PREFIX:Q}/bin/ksh93;					\
-	${INSTALL_MAN} ${WRKSRC:Q}/arch/"$${arch}"/man/man1/sh.1	\
-		${PREFIX:Q}/man/man1/ksh93.1
+	arch=`${WRKSRC}/bin/package host`;				\
+	${INSTALL_PROGRAM} ${WRKSRC}/arch/"$${arch}"/bin/ksh		\
+		${DESTDIR}${PREFIX}/bin/ksh93;				\
+	${INSTALL_MAN} ${WRKSRC}/arch/"$${arch}"/man/man1/sh.1	\
+		${DESTDIR}${PREFIX}/man/man1/ksh93.1
 
 # Part of regression test
 do-test:

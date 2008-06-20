@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2008/06/15 10:33:38 gavan Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:10 joerg Exp $
 #
 
 DISTNAME=	qrencode-3.0.3
@@ -8,6 +8,8 @@ MASTER_SITES=	http://megaui.net/fukuchi/works/qrencode/
 MAINTAINER=	alaric@kitten-technologies.co.uk
 HOMEPAGE=	http://megaui.net/fukuchi/works/qrencode/index.en.html
 COMMENT=	QR Code generator
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config

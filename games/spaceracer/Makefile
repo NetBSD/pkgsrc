@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/03/04 11:02:24 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2008/06/20 01:09:20 joerg Exp $
 #
 
 DISTNAME=		spaceracer-0.2.4
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://spaceracer.sourceforge.net/
 COMMENT=		3D car racing game
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	yes

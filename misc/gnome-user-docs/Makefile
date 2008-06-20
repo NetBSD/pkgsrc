@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/05/29 17:01:27 drochner Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/20 01:09:26 joerg Exp $
 #
 
 DISTNAME=	gnome-user-docs-2.22.1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	The GNOME 2 users guide
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		gnome2-user-docs-[0-9]*
 

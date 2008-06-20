@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/01/04 06:28:55 obache Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:25 joerg Exp $
 #
 
 DISTNAME=	bbappconf-0.0.2
@@ -10,9 +10,13 @@ MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://bbtools.sourceforge.net/download.php?file=1
 COMMENT=	Configure the behaviour of an application under Blackbox
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES=		c c++
 USE_X11BASE=		YES
 GNU_CONFIGURE=		YES
+
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 post-patch:
 	${SED} -e 's,@PREFIX@,${PREFIX},' ${WRKSRC}/data/bbappconf.1.tmp > \
@@ -22,8 +26,7 @@ post-patch:
 	${MV} ${WRKSRC}/data/README.bbappconf.tmp ${WRKSRC}/data/README.bbappconf
 
 post-install:
-	${INSTALL_MAN_DIR} ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/data/bbappconf.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/data/bbappconf.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 

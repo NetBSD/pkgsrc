@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2005/08/06 06:19:35 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/20 01:09:39 joerg Exp $
 
 DISTNAME=	DateTime-Event-Cron-0.07
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DateTime/}
 MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/DateTime-Event-Cron/
 COMMENT=	DateTime extension to handle crontab entries
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-DateTime-Set>=0.19:../../time/p5-DateTime-Set
 DEPENDS+=	p5-Set-Crontab-[0-9]*:../../math/p5-Set-Crontab

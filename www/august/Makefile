@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/02/22 19:27:19 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/20 01:09:40 joerg Exp $
 #
 
 DISTNAME=	august0.63b.src
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.bostream.nu/johanb/august/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.bostream.nu/johanb/august/
 COMMENT=	Simple Tk-based HTML editor
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 USE_LANGUAGES=	# none
@@ -28,10 +30,10 @@ REPLACE_FILES.wish=	august
 # height of images, and Weblint to check html syntax.
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/august ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/license.txt ${PREFIX}/share/doc/august/
-	${INSTALL_MAN} ${WRKSRC}/readme.txt ${PREFIX}/share/doc/august/
-	${INSTALL_MAN} ${WRKSRC}/specchars.txt ${PREFIX}/share/doc/august/
-	${INSTALL_MAN} ${WRKSRC}/keyname.tcl ${PREFIX}/share/doc/august/
+	${INSTALL_SCRIPT} ${WRKSRC}/august ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/license.txt ${DESTDIR}${PREFIX}/share/doc/august/
+	${INSTALL_MAN} ${WRKSRC}/readme.txt ${DESTDIR}${PREFIX}/share/doc/august/
+	${INSTALL_MAN} ${WRKSRC}/specchars.txt ${DESTDIR}${PREFIX}/share/doc/august/
+	${INSTALL_MAN} ${WRKSRC}/keyname.tcl ${DESTDIR}${PREFIX}/share/doc/august/
 
 .include "../../mk/bsd.pkg.mk"

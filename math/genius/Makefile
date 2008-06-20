@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/03/06 14:53:52 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/20 01:09:24 joerg Exp $
 #
 
 DISTNAME=		genius-1.0.2
@@ -9,6 +9,8 @@ MASTER_SITES=		http://ftp.5z.com/pub/genius/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.jirka.org/genius.html
 COMMENT=		Calculator and math tool
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/01/07 09:14:09 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/20 01:09:33 joerg Exp $
 #
 
 DISTNAME=	bww2tex-2.00
@@ -20,8 +20,8 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:
 	${INSTALL_MAN} ${FILESDIR}/bww2tex.1 \
-		${PREFIX}/${PKGMANDIR}/man1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_PROGRAM} ${WRKSRC}/bww2tex \
-		${PREFIX}/bin
+		${DESTDIR}${PREFIX}/bin
 
 .include "../../mk/bsd.pkg.mk"

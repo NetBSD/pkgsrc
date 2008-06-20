@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/04/26 00:25:02 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/20 01:09:05 joerg Exp $
 #
 
 DISTNAME=	gnome-speech-0.4.19
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME 2 text-to-speech API
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PATCHDIR=	${.CURDIR}/../gnome-speech/patches
 DISTINFO_FILE=	${.CURDIR}/../gnome-speech/distinfo

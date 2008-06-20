@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/04/25 20:39:10 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2008/06/20 01:09:26 joerg Exp $
 #
 
 DISTNAME=	orca-2.20.3
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://live.gnome.org/Orca
 COMMENT=	Screen reader
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

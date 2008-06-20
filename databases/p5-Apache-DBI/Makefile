@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/06/08 08:35:42 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/20 01:09:10 joerg Exp $
 #
 
 DISTNAME=	Apache-DBI-1.06
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Apache-DBI/
 COMMENT=	DBI support for Apache+mod_perl
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-DBI>=1.13:../../databases/p5-DBI
 DEPENDS+=	p5-Digest-SHA1>=2.01:../../security/p5-Digest-SHA1

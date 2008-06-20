@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/02 22:58:56 hubertf Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:45 joerg Exp $
 
 DISTNAME=	xdaemon-2.1
 CATEGORIES=	games x11
@@ -8,6 +8,8 @@ DISTFILES=	${IMAGES:=.png} Daemon.README
 MAINTAINER=	hubertf@NetBSD.org
 HOMEPAGE=	http://www.NetBSD.org/
 COMMENT=	BSD Daemon sticking on your desktop (like xteddy)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	xteddy-2.*:../../x11/xteddy2
 
@@ -28,10 +30,10 @@ do-extract:
 
 do-install:
 .for img in ${IMAGES}
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${img}.png ${PREFIX}/share/xteddy/${img}.png
-	${RM} -f ${PREFIX}/bin/${img}
-	${LN} -s xteddy ${PREFIX}/bin/${img}
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/${img}.png ${DESTDIR}${PREFIX}/share/xteddy/${img}.png
+	${RM} -f ${DESTDIR}${PREFIX}/bin/${img}
+	${LN} -s xteddy ${DESTDIR}${PREFIX}/bin/${img}
 .endfor
-	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/Daemon.README ${PREFIX}/share/doc/xdaemon.README
+	${INSTALL_DATA} ${DISTDIR}/${DIST_SUBDIR}/Daemon.README ${DESTDIR}${PREFIX}/share/doc/xdaemon.README
 
 .include "../../mk/bsd.pkg.mk"

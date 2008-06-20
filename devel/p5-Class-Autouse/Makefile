@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/11/16 03:11:25 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.13 2008/06/20 01:09:13 joerg Exp $
 
 DISTNAME=	Class-Autouse-1.29
 PKGNAME=	p5-${DISTNAME}
@@ -9,10 +9,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Class-Autouse/
 COMMENT=	Run-time class loading on first method call
 
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 DEPENDS+=	p5-ExtUtils-AutoInstall>=0.61:../../devel/p5-ExtUtils-AutoInstall
 DEPENDS+=	p5-Scalar-List-Utils>=1.19:../../devel/p5-Scalar-List-Utils
-
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 PERL5_PACKLIST=		auto/Class/Autouse/.packlist
 
