@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1326 2008/06/20 15:35:29 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.1327 2008/06/20 15:42:18 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2221,3 +2221,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/p5-Class-DBI to 3.0.17 [he 2008-06-20]
 	Added databases/p5-SQL-Abstract-Limit version 0.12 [he 2008-06-20]
 	Updated math/ruby-rb-gsl to 1.10.3 [minskim 2008-06-20]
+	Updated databases/p5-Class-DBI-AbstractSearch to 0.07 [he 2008-06-20]
