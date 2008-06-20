@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/01/07 20:14:36 adam Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/06/20 07:46:49 adam Exp $
 ${PG_SUBPREFIX}bin/postgres
 ${PG_SUBPREFIX}bin/postmaster
 ${PG_SUBPREFIX}lib/postgresql/ascii_and_mic.la
@@ -123,6 +123,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/America/Argentina/La_Rioja
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Argentina/Mendoza
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Argentina/Rio_Gallegos
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Argentina/San_Juan
+${PG_SUBPREFIX}share/postgresql/timezone/America/Argentina/San_Luis
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Argentina/Tucuman
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Argentina/Ushuaia
 ${PG_SUBPREFIX}share/postgresql/timezone/America/Aruba
@@ -299,6 +300,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/Asia/Dubai
 ${PG_SUBPREFIX}share/postgresql/timezone/Asia/Dushanbe
 ${PG_SUBPREFIX}share/postgresql/timezone/Asia/Gaza
 ${PG_SUBPREFIX}share/postgresql/timezone/Asia/Harbin
+${PG_SUBPREFIX}share/postgresql/timezone/Asia/Ho_Chi_Minh
 ${PG_SUBPREFIX}share/postgresql/timezone/Asia/Hong_Kong
 ${PG_SUBPREFIX}share/postgresql/timezone/Asia/Hovd
 ${PG_SUBPREFIX}share/postgresql/timezone/Asia/Irkutsk
@@ -311,6 +313,7 @@ ${PG_SUBPREFIX}share/postgresql/timezone/Asia/Kamchatka
 ${PG_SUBPREFIX}share/postgresql/timezone/Asia/Karachi
 ${PG_SUBPREFIX}share/postgresql/timezone/Asia/Kashgar
 ${PG_SUBPREFIX}share/postgresql/timezone/Asia/Katmandu
+${PG_SUBPREFIX}share/postgresql/timezone/Asia/Kolkata
 ${PG_SUBPREFIX}share/postgresql/timezone/Asia/Krasnoyarsk
 ${PG_SUBPREFIX}share/postgresql/timezone/Asia/Kuala_Lumpur
 ${PG_SUBPREFIX}share/postgresql/timezone/Asia/Kuching
