@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2008/03/15 13:41:42 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2008/06/20 11:48:03 joerg Exp $
 #
 
 DISTNAME=	cppunit-1.10.2
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=cppunit/}
 
@@ -12,7 +12,7 @@ COMMENT=	CppUnit is a C++ unit testing framework
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BUILD_DEPENDS+=	doxygen>=1.5.1nb1:../../devel/doxygen
+BUILD_DEPENDS+=	doxygen>=1.5.6:../../devel/doxygen
 
 USE_LIBTOOL=	yes
 USE_LANGUAGES=	c c++
