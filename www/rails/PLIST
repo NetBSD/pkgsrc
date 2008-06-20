@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/04/04 15:30:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/06/20 04:35:36 minskim Exp $
 bin/rails
 ${GEM_HOME}/cache/rails-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -7,6 +7,7 @@ ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/Rakefile
 ${GEM_LIBDIR}/bin/about
 ${GEM_LIBDIR}/bin/console
+${GEM_LIBDIR}/bin/dbconsole
 ${GEM_LIBDIR}/bin/destroy
 ${GEM_LIBDIR}/bin/generate
 ${GEM_LIBDIR}/bin/performance/benchmarker
@@ -33,6 +34,7 @@ ${GEM_LIBDIR}/configs/databases/sqlite3.yml
 ${GEM_LIBDIR}/configs/empty.log
 ${GEM_LIBDIR}/configs/initializers/inflections.rb
 ${GEM_LIBDIR}/configs/initializers/mime_types.rb
+${GEM_LIBDIR}/configs/initializers/new_rails_defaults.rb
 ${GEM_LIBDIR}/configs/lighttpd.conf
 ${GEM_LIBDIR}/configs/routes.rb
 ${GEM_LIBDIR}/dispatches/dispatch.fcgi
@@ -64,6 +66,7 @@ ${GEM_LIBDIR}/lib/code_statistics.rb
 ${GEM_LIBDIR}/lib/commands.rb
 ${GEM_LIBDIR}/lib/commands/about.rb
 ${GEM_LIBDIR}/lib/commands/console.rb
+${GEM_LIBDIR}/lib/commands/dbconsole.rb
 ${GEM_LIBDIR}/lib/commands/destroy.rb
 ${GEM_LIBDIR}/lib/commands/generate.rb
 ${GEM_LIBDIR}/lib/commands/ncgi/listener
@@ -81,6 +84,7 @@ ${GEM_LIBDIR}/lib/commands/server.rb
 ${GEM_LIBDIR}/lib/commands/servers/base.rb
 ${GEM_LIBDIR}/lib/commands/servers/lighttpd.rb
 ${GEM_LIBDIR}/lib/commands/servers/mongrel.rb
+${GEM_LIBDIR}/lib/commands/servers/new_mongrel.rb
 ${GEM_LIBDIR}/lib/commands/servers/webrick.rb
 ${GEM_LIBDIR}/lib/commands/update.rb
 ${GEM_LIBDIR}/lib/console_app.rb
@@ -89,6 +93,10 @@ ${GEM_LIBDIR}/lib/console_with_helpers.rb
 ${GEM_LIBDIR}/lib/dispatcher.rb
 ${GEM_LIBDIR}/lib/fcgi_handler.rb
 ${GEM_LIBDIR}/lib/initializer.rb
+${GEM_LIBDIR}/lib/rails/gem_builder.rb
+${GEM_LIBDIR}/lib/rails/gem_dependency.rb
+${GEM_LIBDIR}/lib/rails/mongrel_server/commands.rb
+${GEM_LIBDIR}/lib/rails/mongrel_server/handler.rb
 ${GEM_LIBDIR}/lib/rails/plugin.rb
 ${GEM_LIBDIR}/lib/rails/plugin/loader.rb
 ${GEM_LIBDIR}/lib/rails/plugin/locator.rb
@@ -179,6 +187,7 @@ ${GEM_LIBDIR}/lib/tasks/annotations.rake
 ${GEM_LIBDIR}/lib/tasks/databases.rake
 ${GEM_LIBDIR}/lib/tasks/documentation.rake
 ${GEM_LIBDIR}/lib/tasks/framework.rake
+${GEM_LIBDIR}/lib/tasks/gems.rake
 ${GEM_LIBDIR}/lib/tasks/log.rake
 ${GEM_LIBDIR}/lib/tasks/misc.rake
 ${GEM_LIBDIR}/lib/tasks/rails.rb
@@ -217,6 +226,7 @@ ${GEM_HOME}/specifications/rails-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/lib/rails_generator/generators
 @dirrm ${GEM_LIBDIR}/lib/rails_generator
 @dirrm ${GEM_LIBDIR}/lib/rails/plugin
+@dirrm ${GEM_LIBDIR}/lib/rails/mongrel_server
 @dirrm ${GEM_LIBDIR}/lib/rails
 @dirrm ${GEM_LIBDIR}/lib/commands/servers
 @dirrm ${GEM_LIBDIR}/lib/commands/process
@@ -241,4 +251,4 @@ ${GEM_HOME}/specifications/rails-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/bin/performance
 @dirrm ${GEM_LIBDIR}/bin
 @dirrm ${GEM_LIBDIR}
-@exec ${MKDIR} %D/${GEM_DOCDIR}
+@exec ${MKDIR} %D/lib/ruby/gems/1.8/doc/${PKGNAME}
