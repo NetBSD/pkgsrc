@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/08/30 16:32:29 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/20 01:09:11 joerg Exp $
 #
 
 DISTNAME=	DBI-Shell-11.93
@@ -11,6 +11,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=DBI/}
 MAINTAINER=	eric@cirr.com
 HOMEPAGE=	http://search.cpan.org/dist/DBI-Shell/
 COMMENT=	Interactive command Shell for the Perl DBI
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-IO-Tee>=0.64:../../devel/p5-IO-Tee
 DEPENDS+=	p5-Text-Reform>=1.11:../../textproc/p5-Text-Reform

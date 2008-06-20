@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/12 11:51:38 abs Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:34 joerg Exp $
 #
 
 DISTNAME=		Crypt-GeneratePassword-0.03
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Crypt/}
 MAINTAINER=		abs@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Crypt-GeneratePassword/
 COMMENT=		Generate secure random pronounceable passwords
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Crypt/GeneratePassword/.packlist

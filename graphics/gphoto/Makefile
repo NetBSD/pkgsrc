@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/07/19 19:14:38 jlam Exp $
+# $NetBSD: Makefile,v 1.28 2008/06/20 01:09:22 joerg Exp $
 
 DISTNAME=	gphoto-0.4.3
 PKGREVISION=	9
@@ -8,6 +8,8 @@ CATEGORIES=	graphics
 MAINTAINER=	jmcm@cs.cmu.edu
 HOMEPAGE=	http://www.gphoto.org/
 COMMENT=	Download and view files from various digital cameras
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS+=		gnome1-1.0
 USE_X11BASE=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2007/02/22 19:27:21 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2008/06/20 01:09:42 joerg Exp $
 #
 
 NAME=			CGI-Lite-2.02
@@ -11,6 +11,8 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=CGI/}
 
 MAINTAINER=		bad@NetBSD.org
 COMMENT=		Simple perl5 module for writing forms-based CGI programs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/CGI/Lite/.packlist
 

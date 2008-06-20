@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2006/10/16 09:24:54 martti Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/20 01:09:11 joerg Exp $
 
 DISTNAME=	Data-Table-1.50
 PKGNAME=	p5-${DISTNAME}
@@ -10,6 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Data-Table/
 COMMENT=	Data type related to database tables, spreadsheets, etc
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Data/Table/.packlist
 

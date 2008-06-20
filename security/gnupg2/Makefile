@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/04/28 14:54:27 shannonjr Exp $
+# $NetBSD: Makefile,v 1.22 2008/06/20 01:09:33 joerg Exp $
 #
 
 DISTNAME=		gnupg-2.0.9
@@ -18,6 +18,7 @@ HOMEPAGE=		http://www.gnupg.org/
 COMMENT=		GNUpg with OpenPGP and S/MIME capabilities
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # ../licommon/libcommon.a
 # reported upstream, should be fixed in 2.0.6

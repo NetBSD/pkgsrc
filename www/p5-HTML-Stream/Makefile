@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2005/11/19 12:43:04 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:42 joerg Exp $
 
 DISTNAME=	HTML-Stream-1.55
 PKGNAME=	p5-${DISTNAME}
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/HTML-Stream/
 COMMENT=	Perl5 HTML output stream class, and some markup utilities
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST= auto/HTML/Stream/.packlist
 

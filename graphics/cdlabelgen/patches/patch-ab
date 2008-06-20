@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.7 2005/12/30 15:00:02 ben Exp $
+$NetBSD: patch-ab,v 1.8 2008/06/20 01:09:21 joerg Exp $
 
 --- Makefile.orig	2005-08-23 08:22:44.000000000 -0700
 +++ Makefile
@@ -40,13 +40,13 @@ $NetBSD: patch-ab,v 1.7 2005/12/30 15:00:02 ben Exp $
 -	$(INSTALL_FILE) cdlabelgen.1 $(MAN_DIR)/man1
 -	$(INSTALL_DIR) $(LIB_DIR)
 +
-+	${BSD_INSTALL_SCRIPT} cdlabelgen ${BIN_DIR}
-+	${BSD_INSTALL_MAN} cdlabelgen.1 ${MAN_DIR}/man1
-+	${BSD_INSTALL_DATA_DIR} ${LIB_DIR}
++	${BSD_INSTALL_SCRIPT} cdlabelgen ${DESTDIR}${BIN_DIR}
++	${BSD_INSTALL_MAN} cdlabelgen.1 ${DESTDIR}${MAN_DIR}/man1
++	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${LIB_DIR}
  	set -e; \
  	for file in $(POSTSCRIPT); do \
 -		$(INSTALL_FILE) postscript/$$file $(LIB_DIR)/; \
-+		${BSD_INSTALL_DATA} postscript/$$file ${LIB_DIR}; \
++		${BSD_INSTALL_DATA} postscript/$$file ${DESTDIR}${LIB_DIR}; \
  	done
  	@echo "** Done. Check $(BIN_DIR)/cdlabelgen and fix @where_is_the_template - if needed!"
  

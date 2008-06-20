@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/04/23 20:12:51 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/20 01:09:14 joerg Exp $
 #
 
 DISTNAME=		Class-ReturnValue-0.55
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Class/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Class-ReturnValue/
 COMMENT=		Perl5 module for return-value object
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Class/ReturnValue/.packlist
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.75 2007/11/28 18:25:49 joerg Exp $
+# $NetBSD: Makefile,v 1.76 2008/06/20 01:09:12 joerg Exp $
 
 DISTNAME=	gettext-0.14.6
 PKGREVISION=	1
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_GNU:=gettext/}
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.gnu.org/software/gettext/gettext.html
 COMMENT=	Tools for providing messages in different languages
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		gettext-m4-0.14.6{,nb[0-9]*}:../../devel/gettext-m4
 DEPENDS+=		gettext-tools-0.14.6{,nb[0-9]*}:../../devel/gettext-tools
@@ -31,16 +33,16 @@ BROKEN_GETTEXT_DETECTION=	yes
 USE_BUILTIN.gettext=	no # force use of pkgsrc gettext-lib
 
 do-install:
-	cd ${WRKSRC}/gettext-tools && ${MAKE} install-gettextsrcSCRIPTS
-	cd ${WRKSRC}/gettext-tools/lib && ${MAKE} install-gettextsrcDATA
-	cd ${WRKSRC}/gettext-tools/projects && ${MAKE} install
-	cd ${WRKSRC}/gettext-tools/misc && ${MAKE} install
-	cd ${WRKSRC}/gettext-tools/src && ${MAKE} install-tcl install-exec-local
-	cd ${WRKSRC}/gettext-runtime && ${MAKE} install-gettextsrcDATA
-	cd ${WRKSRC}/gettext-tools/intl && ${MAKE} install-exec install-data
-	cd ${WRKSRC}/gettext-tools/po && ${MAKE} installdirs-data install-data
-	${INSTALL_MAN} ${WRKSRC}/gettext-tools/man/autopoint.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_MAN} ${WRKSRC}/gettext-tools/man/gettextize.1 ${PREFIX}/${PKGMANDIR}/man1
+	cd ${WRKSRC}/gettext-tools && ${MAKE} install-gettextsrcSCRIPTS DESTDIR=${DESTDIR}
+	cd ${WRKSRC}/gettext-tools/lib && ${MAKE} install-gettextsrcDATA DESTDIR=${DESTDIR}
+	cd ${WRKSRC}/gettext-tools/projects && ${MAKE} install DESTDIR=${DESTDIR}
+	cd ${WRKSRC}/gettext-tools/misc && ${MAKE} install DESTDIR=${DESTDIR}
+	cd ${WRKSRC}/gettext-tools/src && ${MAKE} install-tcl install-exec-local DESTDIR=${DESTDIR}
+	cd ${WRKSRC}/gettext-runtime && ${MAKE} install-gettextsrcDATA DESTDIR=${DESTDIR}
+	cd ${WRKSRC}/gettext-tools/intl && ${MAKE} install-exec install-data DESTDIR=${DESTDIR}
+	cd ${WRKSRC}/gettext-tools/po && ${MAKE} installdirs-data install-data DESTDIR=${DESTDIR}
+	${INSTALL_MAN} ${WRKSRC}/gettext-tools/man/autopoint.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/gettext-tools/man/gettextize.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/gettext-asprintf/buildlink3.mk"

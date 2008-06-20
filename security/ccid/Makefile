@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/04 11:30:08 shannonjr Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:33 joerg Exp $
 #
 
 DISTNAME=	ccid-1.3.5
@@ -8,6 +8,8 @@ MASTER_SITES=	http://alioth.debian.org/frs/download.php/2330/
 MAINTAINER=	shannonjr@NetBSD.org
 HOMEPAGE=	http://pcsclite.alioth.debian.org/ccid.html
 COMMENT=	Middleware to access a smart card using SCard API (PC/SC)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -30,7 +32,7 @@ pre-configure:
 	cd ${WRKSRC} && ${SH} bootstrap
 
 post-install:
-	 ${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/ccid/README
+	 ${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/ccid/README
 
 .include "../../security/pcsc-lite/buildlink3.mk"
 .include "../../devel/libusb/buildlink3.mk"

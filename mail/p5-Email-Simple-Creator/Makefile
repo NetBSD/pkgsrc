@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/29 12:06:22 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:24 joerg Exp $
 
 DISTNAME=	Email-Simple-Creator-1.4
 PKGNAME=	p5-${DISTNAME}
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Email/}
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Email-Simple-Creator/
 COMMENT=	Constructor to Email::Simple for creating messages from scratch
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Email-Simple>=0:../../mail/p5-Email-Simple
 DEPENDS+=	p5-Email-Date>=0:../../mail/p5-Email-Date

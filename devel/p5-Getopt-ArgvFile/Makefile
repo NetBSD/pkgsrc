@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/03/15 22:38:21 wennmach Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:16 joerg Exp $
 #
 
 DISTNAME=		Getopt-ArgvFile-1.10
@@ -12,6 +12,8 @@ HOMEPAGE=		http://www.cpan.org/modules/by-module/Getopt/
 COMMENT=		Interpolates script options from files into @ARGV or another array
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 PERL5_PACKLIST=		auto/Getopt/ArgvFile/.packlist
 
 DEPENDS+=		p5-Getopt-Simple-[0-9]*:../../devel/p5-Getopt-Simple

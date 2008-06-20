@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/04/15 12:58:11 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/20 01:09:19 joerg Exp $
 #
 
 DISTNAME=		blobwars-1.06-2
@@ -11,11 +11,15 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.parallelrealities.co.uk/blobWars.php
 COMMENT=		Blob Wars: Metal Blob Solid (platform shooter)
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES=		c++
 WRKSRC=			${WRKDIR}/blobwars-1.06
 MAKE_FILE=		makefile
 USE_TOOLS+=		gmake
 USE_DIRS+=		xdg-1.4
+
+INSTALL_MAKE_FLAGS+=	PREFIX=${DESTDIR}${PREFIX}
 
 .include "../../audio/SDL_mixer/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"

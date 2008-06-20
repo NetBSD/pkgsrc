@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/08/10 03:21:40 minskim Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:43 joerg Exp $
 
 DISTNAME=		Template-Generate-0.04
 PKGNAME=		p5-${DISTNAME}
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Template/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/~autrijus/Template-Generate/
 COMMENT=		Perl5 module for generating TT2 templates from TT2-rendered documents
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 TEX_ACCEPTED=	teTeX3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/04/07 16:45:35 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2008/06/20 01:09:33 joerg Exp $
 
 DISTNAME=		cfs-1.4.1
 PKGREVISION=		6
@@ -9,6 +9,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.crypto.com/software/
 COMMENT=		Encrypting file system, using NFS as its interface
 
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CRYPTO=			# defined
 
@@ -99,15 +100,15 @@ do-build:
 	@cd ${WRKSRC}; ${SETENV} ${MAKE_ENV}				\
 		${SH} ${CFS_BUILD_SCRIPT} ${BUILD_TARGET}
 
-INSTALLATION_DIRS=	sbin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8 ${DOCDIR}
+INSTALLATION_DIRS=	bin sbin ${PKGMANDIR}/man1 ${PKGMANDIR}/man8 ${DOCDIR}
 
 post-install:
 	cd ${WRKSRC}; for file in *.1; do				\
-		${INSTALL_MAN} $${file} ${PREFIX}/${PKGMANDIR}/man1/$${file};	\
+		${INSTALL_MAN} $${file} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/$${file};	\
 	done
 	cd ${WRKSRC}; for file in *.8; do				\
-		${INSTALL_MAN} $${file} ${PREFIX}/${PKGMANDIR}/man8/$${file};	\
+		${INSTALL_MAN} $${file} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8/$${file};	\
 	done
-	${INSTALL_DATA} ${WRKSRC}/notes.ms ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/notes.ms ${DESTDIR}${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
