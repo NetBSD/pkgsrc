@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1310 2008/06/19 22:43:06 epg Exp $
+$NetBSD: CHANGES-2008,v 1.1311 2008/06/20 04:25:11 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2183,3 +2183,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/pixman to 0.11.4 [bjs 2008-06-19]
 	Updated devel/subversion to 1.5.0 [epg 2008-06-19]
 	Added devel/java-subversion version 1.5.0 [epg 2008-06-19]
+	Updated devel/ruby-activesupport to 2.1.0 [minskim 2008-06-20]
