@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1322 2008/06/20 14:18:46 he Exp $
+$NetBSD: CHANGES-2008,v 1.1323 2008/06/20 14:46:37 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2217,3 +2217,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/apache2 to 2.0.63nb1 [he 2008-06-20]
 	Added www/p5-Apache2-AuthCookie version 3.12 [he 2008-06-20]
 	Added www/p5-Apache2-AuthCookieDBI version 2.03 [he 2008-06-20]
+	Updated databases/p5-Apache-DBI to 1.07 [he 2008-06-20]
