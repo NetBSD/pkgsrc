@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1316 2008/06/20 04:36:00 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.1317 2008/06/20 08:34:12 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2189,3 +2189,26 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/ruby-actionmailer to 2.1.0 [minskim 2008-06-20]
 	Updated www/ruby-activeresource to 2.1.0 [minskim 2008-06-20]
 	Updated www/rails to 2.1.0 [minskim 2008-06-20]
+	Updated databases/postgresql81 to 8.1.13 [adam 2008-06-20]
+	Updated databases/postgresql81-client to 8.1.13 [adam 2008-06-20]
+	Updated databases/postgresql81-plperl to 8.1.13 [adam 2008-06-20]
+	Updated databases/postgresql81-plpython to 8.1.13 [adam 2008-06-20]
+	Updated databases/postgresql81-pltcl to 8.1.13 [adam 2008-06-20]
+	Updated databases/postgresql81-server to 8.1.13 [adam 2008-06-20]
+	Updated databases/postgresql81-tsearch2 to 8.1.13 [adam 2008-06-20]
+	Updated databases/postgresql82 to 8.2.9 [adam 2008-06-20]
+	Updated databases/postgresql82-adminpack to 8.2.9 [adam 2008-06-20]
+	Updated databases/postgresql82-client to 8.2.9 [adam 2008-06-20]
+	Updated databases/postgresql82-plperl to 8.2.9 [adam 2008-06-20]
+	Updated databases/postgresql82-plpython to 8.2.9 [adam 2008-06-20]
+	Updated databases/postgresql82-pltcl to 8.2.9 [adam 2008-06-20]
+	Updated databases/postgresql82-server to 8.2.9 [adam 2008-06-20]
+	Updated databases/postgresql82-tsearch2 to 8.2.9 [adam 2008-06-20]
+	Updated databases/postgresql83 to 8.3.3 [adam 2008-06-20]
+	Updated databases/postgresql83-adminpack to 8.3.3 [adam 2008-06-20]
+	Updated databases/postgresql83-client to 8.3.3 [adam 2008-06-20]
+	Updated databases/postgresql83-plperl to 8.3.3 [adam 2008-06-20]
+	Updated databases/postgresql83-plpython to 8.3.3 [adam 2008-06-20]
+	Updated databases/postgresql83-pltcl to 8.3.3 [adam 2008-06-20]
+	Updated databases/postgresql83-server to 8.3.3 [adam 2008-06-20]
+	Updated databases/slony1 to 1.2.14 [adam 2008-06-20]
