@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/03/19 16:36:41 tv Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/20 01:09:37 joerg Exp $
 #
 # Possible TODOs:
 # - set CH based on manual page section number, and real OS name
@@ -22,23 +22,23 @@ COMMENT=		Simplistic nroff-like formatter in C, like "awf"
 WRKSRC=			${WRKDIR}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
 CPPFLAGS+=		-DUNIX -DUSG -DSTDLIB -DCAWFLIB="\"${PREFIX}/share/cawf\""
 
-INSTALLATION_DIRS+=	bin man/man1
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1 share/cawf
 
 post-extract:
 	${RM} -f ${WRKSRC}/*.o
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bsfilt ${WRKSRC}/cawf ${PREFIX}/bin/
-	${INSTALL_MAN} ${WRKSRC}/*.1 ${PREFIX}/${PKGMANDIR}/man1/
-	${INSTALL_DATA_DIR} ${PREFIX}/share/cawf
-	${INSTALL_DATA} ${WRKSRC}/common ${PREFIX}/share/cawf/
-	${INSTALL_DATA} ${WRKSRC}/device.cf ${PREFIX}/share/cawf/
-	${INSTALL_DATA} ${WRKSRC}/*.dev ${WRKSRC}/*.mac ${PREFIX}/share/cawf/
-	${INSTALL_DATA} ${WRKSRC}/00diffs ${PREFIX}/share/cawf/DIFFS
+	${INSTALL_PROGRAM} ${WRKSRC}/bsfilt ${WRKSRC}/cawf ${DESTDIR}${PREFIX}/bin/
+	${INSTALL_MAN} ${WRKSRC}/*.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/
+	${INSTALL_DATA} ${WRKSRC}/common ${DESTDIR}${PREFIX}/share/cawf/
+	${INSTALL_DATA} ${WRKSRC}/device.cf ${DESTDIR}${PREFIX}/share/cawf/
+	${INSTALL_DATA} ${WRKSRC}/*.dev ${WRKSRC}/*.mac ${DESTDIR}${PREFIX}/share/cawf/
+	${INSTALL_DATA} ${WRKSRC}/00diffs ${DESTDIR}${PREFIX}/share/cawf/DIFFS
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.98 2008/05/26 02:13:22 joerg Exp $
+# $NetBSD: Makefile,v 1.99 2008/06/20 01:09:29 joerg Exp $
 
 DISTNAME=	bind-${BIND_VERSION}
 PKGNAME=	${DISTNAME:S/-P1/pl1/}
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.isc.org/isc/bind9/${BIND_VERSION}/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.isc.org/sw/bind/
 COMMENT=	Version 9 of the Berkeley Internet Name Daemon, implementation of DNS
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BIND_VERSION=	9.4.1-P1
 
@@ -54,24 +56,22 @@ PLIST.inet6=	yes
 PLIST_SRC=	${WRKDIR}/PLIST
 RCD_SCRIPTS=	lwresd named9
 
+INSTALLATION_DIRS=	share/doc/bind9/arm share/doc/bind9/draft \
+			share/doc/bind9/misc share/doc/bind9/rfc
+
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bind9
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bind9/arm
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bind9/draft
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bind9/misc
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/bind9/rfc
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/bind9
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/bind9
 	set -e; cd ${WRKSRC}/doc && pax -rwppm			\
 	  -s ',.*xsl.*,,' -s ',Makefile.*,,' -s ',.*\.pl,,'		\
-	  . ${PREFIX}/share/doc/bind9
-	${CHMOD} -R g-w ${PREFIX}/share/doc/bind9
-	${CHMOD} -x ${PREFIX}/share/doc/bind9/arm/Bv9ARM.pdf
+	  . ${DESTDIR}${PREFIX}/share/doc/bind9
+	${CHMOD} -R g-w ${DESTDIR}${PREFIX}/share/doc/bind9
+	${CHMOD} -x ${DESTDIR}${PREFIX}/share/doc/bind9/arm/Bv9ARM.pdf
 	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
-	(cd ${PREFIX}; ${FIND} share/doc/bind9 -type f -print ) >> ${PLIST_SRC}
-	(cd ${PREFIX}; ${FIND} share/doc/bind9 -type d -print ) | \
+	(cd ${DESTDIR}${PREFIX}; ${FIND} share/doc/bind9 -type f -print ) >> ${PLIST_SRC}
+	(cd ${DESTDIR}${PREFIX}; ${FIND} share/doc/bind9 -type d -print ) | \
 		${SED} -e 's/^/@dirrm /' | ${SORT} -r >> ${PLIST_SRC}
-	(cd ${PREFIX}; ${FIND} include/bind -type f -print ) >> ${PLIST_SRC}
-	(cd ${PREFIX}; ${FIND} include/bind -type d -print ) | \
+	(cd ${DESTDIR}${PREFIX}; ${FIND} include/bind -type f -print ) >> ${PLIST_SRC}
+	(cd ${DESTDIR}${PREFIX}; ${FIND} include/bind -type d -print ) | \
 		${SED} -e 's/^/@dirrm /' | ${SORT} -r >> ${PLIST_SRC}
 
 .include "../../mk/pthread.buildlink3.mk"

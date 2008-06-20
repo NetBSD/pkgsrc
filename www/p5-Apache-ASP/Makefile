@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2006/06/10 19:53:13 minskim Exp $
+# $NetBSD: Makefile,v 1.30 2008/06/20 01:09:41 joerg Exp $
 #
 
 DISTNAME=	Apache-ASP-2.21
@@ -11,6 +11,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.apache-asp.org/
 COMMENT=	Perl5/Apache module of Perl-coded Active Server Pages
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Apache-Filter>=1.019:../../www/p5-Apache-Filter
 DEPENDS+=	p5-Apache-SSI>=2.16:../../www/p5-Apache-SSI

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/01/07 09:14:14 rillig Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:38 joerg Exp $
 
 DISTNAME=		cal-3.5
 PKGREVISION=		1
@@ -7,6 +7,8 @@ MASTER_SITES=		${MASTER_SITE_SUNSITE:=utils/shell/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Enhanced color version of standard calendar utility
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/cal-3.5/source
 MAKE_FILE=		makefile.unx
@@ -17,13 +19,12 @@ CFLAGS+=		-DPKG_SYSCONFDIR="\"${PKG_SYSCONFDIR}\""
 EGDIR=			${PREFIX}/share/examples/cal
 # CONF_FILES not used as calcol and caldat are optional.
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${EGDIR}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/cal ${PREFIX}/bin/cal
-	${INSTALL_MAN}  ${WRKSRC}/cal.1 ${PREFIX}/${PKGMANDIR}/man1/cal.1
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKDIR}/cal-3.5/cal.col ${EGDIR}/calcol
-	${INSTALL_DATA} ${WRKDIR}/cal-3.5/cal.dat ${EGDIR}/caldat
+	${INSTALL_PROGRAM} ${WRKSRC}/cal ${DESTDIR}${PREFIX}/bin/cal
+	${INSTALL_MAN}  ${WRKSRC}/cal.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/cal.1
+	${INSTALL_DATA} ${WRKDIR}/cal-3.5/cal.col ${DESTDIR}${EGDIR}/calcol
+	${INSTALL_DATA} ${WRKDIR}/cal-3.5/cal.dat ${DESTDIR}${EGDIR}/caldat
 
 .include "../../mk/bsd.pkg.mk"

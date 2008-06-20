@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/03/02 11:45:47 grant Exp $
+# $NetBSD: Makefile,v 1.7 2008/06/20 01:09:17 joerg Exp $
 #
 
 DISTNAME=		vanessa_logger-0.0.7
@@ -9,6 +9,8 @@ MASTER_SITES=		http://www.vergenet.net/linux/vanessa/download/vanessa_logger/0.0
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.vergenet.net/linux/vanessa/
 COMMENT=		Library that provides a generic logging layer
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

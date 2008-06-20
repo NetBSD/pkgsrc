@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/14 01:01:56 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:19 joerg Exp $
 #
 
 DISTNAME=	Gate88_Mar19_05
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.queasygames.com/gate88/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.queasygames.com/gate88/
 COMMENT=	Deep space intergalactic battle
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base x11
@@ -31,21 +33,21 @@ do-build:
 	sed "s,@PREFIX@,${PREFIX}," files/gate88server > \
 		${WRKSRC}/gate88server.sh
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/gate88.sh ${PREFIX}/bin/gate88
-	${INSTALL_SCRIPT} ${WRKSRC}/gate88server.sh ${PREFIX}/bin/gate88server
-	${INSTALL_PROGRAM} ${WRKSRC}/gate88 ${PREFIX}/lib/gate88
+	${INSTALL_SCRIPT} ${WRKSRC}/gate88.sh ${DESTDIR}${PREFIX}/bin/gate88
+	${INSTALL_SCRIPT} ${WRKSRC}/gate88server.sh ${DESTDIR}${PREFIX}/bin/gate88server
+	${INSTALL_PROGRAM} ${WRKSRC}/gate88 ${DESTDIR}${PREFIX}/lib/gate88
 	for i in audio.conf colours.conf debug.conf irc_client.conf \
 		irc_connection.conf masterserver.conf multiplayer.conf \
 		practice.conf server.conf textcolours.conf video.conf; do \
-		${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/lib/gate88; \
+		${INSTALL_DATA} ${WRKSRC}/$$i ${DESTDIR}${PREFIX}/lib/gate88; \
 	done
 	for i in LGPL_license.txt license.txt readme.txt manual.html; do \
-		${INSTALL_DATA} ${WRKSRC}/$$i ${PREFIX}/share/doc/gate88; \
+		${INSTALL_DATA} ${WRKSRC}/$$i ${DESTDIR}${PREFIX}/share/doc/gate88; \
 	done
-	${INSTALL_LIB} ${WRKSRC}/lib/* ${PREFIX}/lib/gate88/lib
-	${INSTALL_DATA} ${WRKSRC}/music/*.ogg ${PREFIX}/lib/gate88/music
+	${INSTALL_LIB} ${WRKSRC}/lib/* ${DESTDIR}${PREFIX}/lib/gate88/lib
+	${INSTALL_DATA} ${WRKSRC}/music/*.ogg ${DESTDIR}${PREFIX}/lib/gate88/music
 	${INSTALL_DATA} ${WRKSRC}/music/non-ingame/*.ogg \
-		${PREFIX}/lib/gate88/music/non-ingame
-	${INSTALL_DATA} ${WRKSRC}/sound/* ${PREFIX}/lib/gate88/sound
+		${DESTDIR}${PREFIX}/lib/gate88/music/non-ingame
+	${INSTALL_DATA} ${WRKSRC}/sound/* ${DESTDIR}${PREFIX}/lib/gate88/sound
 
 .include "../../mk/bsd.pkg.mk"

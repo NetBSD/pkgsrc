@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/08/01 19:47:27 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/20 01:09:15 joerg Exp $
 #
 
 DISTNAME=	FileKGlob
@@ -12,6 +12,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Expand a Unix file glob into a list of matching file names
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/File
 PERL5_PACKLIST=		auto/File/KGlob/.packlist

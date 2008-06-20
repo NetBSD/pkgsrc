@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/06 14:53:50 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/20 01:09:17 joerg Exp $
 #
 
 DISTNAME=	obby-0.4.4
@@ -9,6 +9,8 @@ MASTER_SITES=	http://releases.0x539.de/obby/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gobby.0x539.de/
 COMMENT=	Library for distributed editing
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

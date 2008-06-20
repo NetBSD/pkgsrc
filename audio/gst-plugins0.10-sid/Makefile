@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2007/01/30 14:59:08 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/20 01:09:06 joerg Exp $
 #
 
 GST_PLUGINS0.10_NAME=	sid
 GST_PLUGINS0.10_DIRS=	ext/sidplay
 GST_PLUGINS0.10_FLAGS=	sidplay
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 

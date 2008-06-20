@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/02/15 14:52:58 rillig Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/20 01:09:45 joerg Exp $
 
 DISTNAME=		xfce-3.8.18
 PKGREVISION=		9
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.xfce.org/archive/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.xfce.org/
 COMMENT=		Lightweight desktop environment with CDE look and feel
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=		yes
 USE_PKGLOCALEDIR=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2003/07/22 04:14:39 martti Exp $
+# $NetBSD: Makefile,v 1.7 2008/06/20 01:09:43 joerg Exp $
 #
 
 DISTNAME=	waplet
@@ -11,18 +11,20 @@ MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://waplet.sourceforge.net/
 COMMENT=	Java applet-based WAP emulator and WML browser
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_BUILD=	yes
 
+INSTALLATION_DIRS=	share/httpd/htdocs/waplet share/doc/waplet \
+			share/examples/waplet
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/httpd/htdocs/waplet
-	${INSTALL_DATA} ${WRKSRC}/waplet.jar ${PREFIX}/share/httpd/htdocs/waplet
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/waplet
+	${INSTALL_DATA} ${WRKSRC}/waplet.jar ${DESTDIR}${PREFIX}/share/httpd/htdocs/waplet
 .for file in README COPYING Parser.java Tag.java waplet.java
-	${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/doc/waplet
+	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR}${PREFIX}/share/doc/waplet
 .endfor
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/waplet
 .for file in sample.html wap_content.wml
-	${INSTALL_DATA} ${WRKSRC}/${file} ${PREFIX}/share/examples/waplet
+	${INSTALL_DATA} ${WRKSRC}/${file} ${DESTDIR}${PREFIX}/share/examples/waplet
 .endfor
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/09/21 13:03:40 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/20 01:09:17 joerg Exp $
 #
 
 DISTNAME=		tea-16.0.5
@@ -11,6 +11,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://tea-editor.sourceforge.net/
 #HOMEPAGE=		http://tea.linux.kiev.ua/
 COMMENT=		Powerful, easy-to-use text editor for Gtk2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes

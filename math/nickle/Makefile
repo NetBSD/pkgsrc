@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/05/05 19:07:08 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/20 01:09:24 joerg Exp $
 #
 
 DISTNAME=	nickle-2.67
@@ -8,6 +8,8 @@ MASTER_SITES=	http://nickle.org/release/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://nickle.org/
 COMMENT=	Desk calculator language
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/02/22 19:26:16 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2008/06/20 01:09:10 joerg Exp $
 #
 
 DISTNAME=	atasm104
@@ -13,20 +13,20 @@ HOMEPAGE=	http://sourceforge.net/projects/atasm/
 COMMENT=	Cross-assembler for 6502 optimized to code for Atari 8 bit computers
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/src
 NO_CONFIGURE=	YES
 
 DOCDIR=		${PREFIX}/share/doc/atasm
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${DOCDIR}
 
 do-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/atasm ${PREFIX}/bin/atasm
+	${INSTALL_PROGRAM} ${WRKSRC}/atasm ${DESTDIR}${PREFIX}/bin/atasm
 	${SED} -e 's,%%DOCDIR%%,${DOCDIR},g' < ${WRKSRC}/atasm.1.in > ${WRKSRC}/atasm.1
-	${INSTALL_DATA} ${WRKSRC}/atasm.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/atasm.txt ${DOCDIR}
+	${INSTALL_DATA} ${WRKSRC}/atasm.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/atasm.txt ${DESTDIR}${DOCDIR}
 
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

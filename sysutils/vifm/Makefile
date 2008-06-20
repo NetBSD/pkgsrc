@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/03/04 21:30:43 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2008/06/20 01:09:36 joerg Exp $
 #
 
 DISTNAME=	vifm-0.1
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=vifm/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://vifm.sourceforge.net/
 COMMENT=	Ncurses based file manager with vi like keybindings
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake

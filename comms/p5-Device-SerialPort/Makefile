@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/01/03 23:32:57 grant Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/20 01:09:09 joerg Exp $
 #
 
 DISTNAME=	Device-SerialPort-1.04
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Device/}
 MAINTAINER=	damon@brodiefamily.org
 HOMEPAGE=	http://members.aol.com/Bbirthisel/alpha.html
 COMMENT=	POSIX-based Perl module to control your serial port
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-perl-headers-${OS_VERSION}{,nb*}:../../devel/p5-perl-headers
 

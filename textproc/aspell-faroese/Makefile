@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2006/03/04 21:30:44 jlam Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/20 01:09:37 joerg Exp $
 #
 
 DISTNAME=	aspell-fo-0.2.24
@@ -12,8 +12,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://fo.speling.org/
 COMMENT=	Faroese language support for aspell
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_TOOLS+=	perl
 REPLACE_PERL=	unsq
+
+INSTALLATION_DIRS=	lib/aspell share/aspell
 
 .include "../../textproc/aspell/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
