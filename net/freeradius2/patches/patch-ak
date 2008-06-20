@@ -1,13 +1,13 @@
-$NetBSD: patch-ak,v 1.1.1.1 2008/05/15 19:43:47 adrianp Exp $
+$NetBSD: patch-ak,v 1.2 2008/06/20 20:57:39 adrianp Exp $
 
---- raddb/radiusd.conf.in.orig	2006-04-20 19:40:29.000000000 +0100
+--- raddb/radiusd.conf.in.orig	2008-05-30 10:18:43.000000000 +0100
 +++ raddb/radiusd.conf.in
-@@ -106,8 +106,8 @@ pidfile = ${run_dir}/radiusd.pid
- #  that the debugging mode server is running as a user that can read the
- #  shadow info, and the user listed below can not.
+@@ -160,8 +160,8 @@ pidfile = ${run_dir}/radiusd.pid
+ #  It will join all groups where "user" is a member.  This can allow
+ #  for some finer-grained access controls.
  #
--#user = nobody
--#group = nobody
+-#user = radius
+-#group = radius
 +user = @@RADIUS_USER@@
 +group = @@RADIUS_GROUP@@
  
