@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/04/01 01:39:24 taca Exp $
+# $NetBSD: Makefile,v 1.20 2008/06/20 01:09:10 joerg Exp $
 #
 
 DISTNAME=		nss_ldap-260
@@ -8,6 +8,8 @@ MASTER_SITES=		http://www.padl.com/download/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.padl.com/OSS/nss_ldap.html
 COMMENT=		LDAP client for nsswitch
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # needs nsswitch
 ONLY_FOR_PLATFORM=	NetBSD-[3-9]*-*

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/06/02 18:28:00 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2008/06/20 01:09:41 joerg Exp $
 
 DISTNAME=	Apache-SSI-2.16
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Perl5 module to implement Server Side Includes
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-HTML-SimpleParse>=0.06:../../www/p5-HTML-SimpleParse
 

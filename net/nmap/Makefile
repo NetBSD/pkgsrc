@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2008/06/09 19:35:31 adrianp Exp $
+# $NetBSD: Makefile,v 1.61 2008/06/20 01:09:31 joerg Exp $
 #
 
 DISTNAME=	nmap-4.65
@@ -11,6 +11,7 @@ HOMEPAGE=	http://insecure.org/nmap/
 COMMENT=	Network/port scanner with OS detection
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_API_DEPENDS.libpcap=	libpcap>=0.9.4
 BUILDLINK_API_DEPENDS.libpcre=	libpcre>=6.7

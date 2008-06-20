@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2008/05/20 11:43:59 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2008/06/20 01:09:20 joerg Exp $
 
 DISTNAME=	wesnoth-1.4.2
 CATEGORIES=	games
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.wesnoth.org/
 COMMENT=	Fantasy turn-based strategy game
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	libxslt-[0-9]*:../../textproc/libxslt
 
@@ -44,7 +46,7 @@ REPLACE_RUBY=		data/tools/terrain2wiki.rb
 .include "../../lang/ruby/replace.mk"
 
 post-install:
-	${RM} ${PREFIX}/share/wesnoth/icons/Makefile*
+	${RM} ${DESTDIR}${PREFIX}/share/wesnoth/icons/Makefile*
 
 BUILDLINK_API_DEPENDS.SDL_mixer+=	SDL_mixer>=1.2.5nb3
 .include "../../audio/SDL_mixer/buildlink3.mk"

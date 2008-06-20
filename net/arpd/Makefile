@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/12/20 13:55:56 obache Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/20 01:09:29 joerg Exp $
 #
 
 DISTNAME=	arpd
@@ -18,7 +18,7 @@ MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}
 INSTALLATION_DIRS=	sbin share/doc ${PREFIX}/etc
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/doc/arpd.README
-	${INSTALL_DATA} ${WRKSRC}/arpd.conf ${PREFIX}/etc/arpd.conf.example
+	${INSTALL_MAN} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/arpd.README
+	${INSTALL_DATA} ${WRKSRC}/arpd.conf ${DESTDIR}${PREFIX}/etc/arpd.conf.example
 
 .include "../../mk/bsd.pkg.mk"

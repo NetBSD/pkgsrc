@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/11/19 04:56:17 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:25 joerg Exp $
 
 DISTNAME=	units-1.86
 CATEGORIES=	math
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_GNU:=units/}
 MAINTAINER=	cameron@patrick.wattle.id.au
 HOMEPAGE=	http://www.gnu.org/software/units/
 COMMENT=	GNU Units - a calculator capable of performing unit conversions
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 INFO_FILES=	YES
 

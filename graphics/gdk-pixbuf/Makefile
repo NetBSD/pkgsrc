@@ -1,5 +1,6 @@
-# $NetBSD: Makefile,v 1.36 2007/08/10 20:43:17 gdt Exp $
+# $NetBSD: Makefile,v 1.37 2008/06/20 01:09:21 joerg Exp $
 #
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
@@ -18,9 +19,6 @@ post-configure:
 	${MV} ${WRKSRC}/.tmp ${WRKSRC}/Makefile
 
 post-install:
-	${TEST} ${PREFIX} = ${LOCALBASE} || \
-	${LN} -fs ${PREFIX}/share/aclocal/gdk-pixbuf.m4 \
-		${LOCALBASE}/share/aclocal/gdk-pixbuf.m4
-	${RM} ${PREFIX}/lib/gnomecanvaspixbufConf.sh
+	${RM} ${DESTDIR}${PREFIX}/lib/gnomecanvaspixbufConf.sh
 
 .include "../../mk/bsd.pkg.mk"

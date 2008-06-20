@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/02/22 11:50:33 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/20 01:09:14 joerg Exp $
 #
 
 DISTNAME=		Class-Loader-2.03
@@ -13,6 +13,7 @@ HOMEPAGE=		http://search.cpan.org/dist/Class-Loader/
 COMMENT=		Perl5 module for module loading and on-demand object creation
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 

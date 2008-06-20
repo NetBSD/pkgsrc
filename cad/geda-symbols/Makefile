@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/09/01 12:00:43 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.21 2008/06/20 01:09:08 joerg Exp $
 #
 
 DISTNAME=	geda-symbols-${PKGVERSION}
@@ -7,6 +7,8 @@ CATEGORIES=	cad
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.geda.seul.org/
 COMMENT=	Library of symbols for gEDA
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	gEDA<19991011
 

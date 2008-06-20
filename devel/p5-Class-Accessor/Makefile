@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/11/15 07:23:16 hiramatsu Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/20 01:09:13 joerg Exp $
 #
 
 DISTNAME=	Class-Accessor-0.31
@@ -12,6 +12,7 @@ HOMEPAGE=	http://search.cpan.org/dist/Class-Accessor/
 COMMENT=	Automated accessor generation
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Class/Accessor/.packlist
 

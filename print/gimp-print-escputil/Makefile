@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/01/13 01:20:28 gdt Exp $
+# $NetBSD: Makefile,v 1.25 2008/06/20 01:09:33 joerg Exp $
 
 DISTNAME=	gimp-print-4.2.7
 PKGNAME=	gimp-print-escputil-4.2.7
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://gimp-print.sourceforge.net/
 COMMENT=	Epson Stylus inkjet printer tool
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 #the lib is not really needed, but the build system wants it
 BUILDLINK_DEPMETHOD.gimp-print-lib=	build

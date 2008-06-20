@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/11/12 00:17:17 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2008/06/20 01:09:43 joerg Exp $
 
 DISTNAME=	w3c-httpd-3.0A
 PKGREVISION=	1
@@ -8,6 +8,8 @@ MASTER_SITES=	ftp://ftp.w3.org/pub/httpd/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.w3.org/Daemon/
 COMMENT=	WWW server from the W3 Consortium (W3C)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 BUILD_TARGET=	build-all
@@ -42,7 +44,7 @@ SUBST_FILES.strcasestr=	Daemon/Implementation/HTWild.c \
 SUBST_SED.strcasestr=	-e 's,\([[:blank:]]\)\(strcasestr\),\1x\2,g'
 
 EGDIR=			${PREFIX}/share/examples/w3c-httpd
-INSTALLATION_DIRS=	bin sbin share/examples/w3c-httpd
+INSTALLATION_DIRS=	bin etc/w3c-httpd sbin share/w3c-httpd share/examples/w3c-httpd
 
 .for f in all.conf caching.conf httpd.conf prot.conf proxy.conf
 CONF_FILES+=	${EGDIR:Q}/${f:Q}	${PKG_SYSCONFDIR}/${f:Q}
@@ -63,13 +65,12 @@ pre-configure:
 .endif
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX:Q}/etc/w3c-httpd ${PREFIX:Q}/share/w3c-httpd
-	${CP} -R ${WRKSRC:Q}/server_root/icons ${PREFIX:Q}/share/w3c-httpd
-	${CP} ${WRKSRC:Q}/server_root/config/*.conf ${EGDIR:Q}
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/Daemon/${OSNAME:Q}/httpd ${PREFIX:Q}/sbin/w3c-httpd
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/Daemon/${OSNAME:Q}/htadm ${PREFIX:Q}/bin
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/Daemon/${OSNAME:Q}/htimage ${PREFIX:Q}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/Daemon/${OSNAME:Q}/cgiparse ${PREFIX:Q}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/Daemon/${OSNAME:Q}/cgiutils ${PREFIX:Q}/sbin
+	${CP} -R ${WRKSRC}/server_root/icons ${DESTDIR}${PREFIX}/share/w3c-httpd
+	${CP} ${WRKSRC}/server_root/config/*.conf ${DESTDIR}${EGDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/httpd ${DESTDIR}${PREFIX}/sbin/w3c-httpd
+	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/htadm ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/htimage ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/cgiparse ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/Daemon/${OSNAME}/cgiutils ${DESTDIR}${PREFIX}/sbin
 
 .include "../../mk/bsd.pkg.mk"

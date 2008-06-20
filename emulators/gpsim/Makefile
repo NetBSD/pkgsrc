@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2006/06/11 14:08:28 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2008/06/20 01:09:18 joerg Exp $
 #
 
 DISTNAME=	gpsim-0.21.11
@@ -9,6 +9,8 @@ MAINTAINER=	snoonan@tbearsiberians.com
 HOMEPAGE=	http://www.dattalo.com/gnupic/gpsim.html
 COMMENT=	PIC emulator with X interface
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=	YES
 USE_LANGUAGES=	c c++
 
@@ -16,10 +18,11 @@ USE_TOOLS+=	gmake pkg-config
 USE_LIBTOOL=	YES
 USE_GNU_READLINE=	YES
 
+INSTALLATION_DIRS=	share/doc/gpsim
+
 post-install:
-	${INSTALL_DATA_DIR}  ${PREFIX}/share/doc/gpsim
-	${INSTALL_DATA} ${WRKSRC}/doc/gpsim.pdf ${PREFIX}/share/doc/gpsim
-	${INSTALL_DATA} ${WRKSRC}/doc/gpsim.ps ${PREFIX}/share/doc/gpsim
+	${INSTALL_DATA} ${WRKSRC}/doc/gpsim.pdf ${DESTDIR}${PREFIX}/share/doc/gpsim
+	${INSTALL_DATA} ${WRKSRC}/doc/gpsim.ps ${DESTDIR}${PREFIX}/share/doc/gpsim
 
 .include "../../devel/popt/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"

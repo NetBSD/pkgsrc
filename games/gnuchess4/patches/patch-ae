@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.3 2005/11/03 22:01:10 rillig Exp $
+$NetBSD: patch-ae,v 1.4 2008/06/20 01:09:20 joerg Exp $
 
 --- src/Makefile.in.orig	Sun Sep 27 23:41:13 1998
 +++ src/Makefile.in	Sun Mar 26 16:15:23 2000
@@ -20,24 +20,34 @@ $NetBSD: patch-ae,v 1.3 2005/11/03 22:01:10 rillig Exp $
 -	$(INSTALL) gnuchessn $(BINDIR)/gnuchessn
 -	$(INSTALL) gnuchessx $(BINDIR)/gnuchessx
 -	$(INSTALL) gnuchessc $(BINDIR)/gnuchessc
-+	$(INSTALL) gnuchess $(BINDIR)/gnuchess4
-+	$(INSTALL) gnuchessr $(BINDIR)/gnuchessr4
-+	$(INSTALL) gnuchessn $(BINDIR)/gnuchessn4
-+	$(INSTALL) gnuchessx $(BINDIR)/gnuchessx4
-+	$(INSTALL) gnuchessc $(BINDIR)/gnuchessc4
- 	$(INSTALL) postprint $(BINDIR)/postprint
- 	$(INSTALL) gnuan $(BINDIR)/gnuan
- 	$(INSTALL) game $(BINDIR)/game
-+	mkdir $(LIBDIR)
- 	$(INSTALL) $(srcdir)/../misc/gnuchess.lang $(LIBDIR)/gnuchess.lang
- 	$(INSTALL) $(srcdir)/../book/eco.pgn $(LIBDIR)/eco.pgn
- 	$(INSTALL) gnuchess.data $(LIBDIR)/gnuchess.data
- 	$(INSTALL) gnuchess.eco $(LIBDIR)/gnuchess.eco
- 	$(INSTALL_DATA) $(srcdir)/../doc/game.6 $(MANDIR)/game.6
- 	$(INSTALL_DATA) $(srcdir)/../doc/gnuan.6 $(MANDIR)/gnuan.6
+-	$(INSTALL) postprint $(BINDIR)/postprint
+-	$(INSTALL) gnuan $(BINDIR)/gnuan
+-	$(INSTALL) game $(BINDIR)/game
+-	$(INSTALL) $(srcdir)/../misc/gnuchess.lang $(LIBDIR)/gnuchess.lang
+-	$(INSTALL) $(srcdir)/../book/eco.pgn $(LIBDIR)/eco.pgn
+-	$(INSTALL) gnuchess.data $(LIBDIR)/gnuchess.data
+-	$(INSTALL) gnuchess.eco $(LIBDIR)/gnuchess.eco
+-	$(INSTALL_DATA) $(srcdir)/../doc/game.6 $(MANDIR)/game.6
+-	$(INSTALL_DATA) $(srcdir)/../doc/gnuan.6 $(MANDIR)/gnuan.6
 -	$(INSTALL_DATA) $(srcdir)/../doc/gnuchess.6 $(MANDIR)/gnuchess.6
-+	$(INSTALL_DATA) $(srcdir)/../doc/gnuchess.6 $(MANDIR)/gnuchess4.6
- 	$(INSTALL_DATA) $(srcdir)/../doc/postprint.6 $(MANDIR)/postprint.6
+-	$(INSTALL_DATA) $(srcdir)/../doc/postprint.6 $(MANDIR)/postprint.6
++	$(INSTALL) gnuchess ${DESTDIR}$(BINDIR)/gnuchess4
++	$(INSTALL) gnuchessr ${DESTDIR}$(BINDIR)/gnuchessr4
++	$(INSTALL) gnuchessn ${DESTDIR}$(BINDIR)/gnuchessn4
++	$(INSTALL) gnuchessx ${DESTDIR}$(BINDIR)/gnuchessx4
++	$(INSTALL) gnuchessc ${DESTDIR}$(BINDIR)/gnuchessc4
++	$(INSTALL) postprint ${DESTDIR}$(BINDIR)/postprint
++	$(INSTALL) gnuan ${DESTDIR}$(BINDIR)/gnuan
++	$(INSTALL) game ${DESTDIR}$(BINDIR)/game
++	mkdir ${DESTDIR}$(LIBDIR)
++	$(INSTALL) $(srcdir)/../misc/gnuchess.lang ${DESTDIR}$(LIBDIR)/gnuchess.lang
++	$(INSTALL) $(srcdir)/../book/eco.pgn ${DESTDIR}$(LIBDIR)/eco.pgn
++	$(INSTALL) gnuchess.data ${DESTDIR}$(LIBDIR)/gnuchess.data
++	$(INSTALL) gnuchess.eco ${DESTDIR}$(LIBDIR)/gnuchess.eco
++	$(INSTALL_DATA) $(srcdir)/../doc/game.6 ${DESTDIR}$(MANDIR)/game.6
++	$(INSTALL_DATA) $(srcdir)/../doc/gnuan.6 ${DESTDIR}$(MANDIR)/gnuan.6
++	$(INSTALL_DATA) $(srcdir)/../doc/gnuchess.6 ${DESTDIR}$(MANDIR)/gnuchess4.6
++	$(INSTALL_DATA) $(srcdir)/../doc/postprint.6 ${DESTDIR}$(MANDIR)/postprint.6
  
  uninstall:
 -	rm -f $(BINDIR)/gnuchess

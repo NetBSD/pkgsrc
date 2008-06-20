@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/01/07 09:14:14 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/20 01:09:39 joerg Exp $
 #
 
 DISTNAME=	gnya
@@ -12,15 +12,17 @@ MAINTAINER=	kei@NetBSD.org
 HOMEPAGE=	http://www2.is.titech.ac.jp/~sadayosi/lab/h-takasi/h.html
 COMMENT=	Accessory with Bezier curve
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 WRKSRC=		${WRKDIR}/gnyaclock
 USE_IMAKE=	YES
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/ja_JP.EUC/man1
 
 do-install:
-		${INSTALL_PROGRAM} ${WRKSRC}/gnyaclock ${PREFIX}/bin
-		${INSTALL_MAN} ${WRKSRC}/gnyaclock.man \
-			${PREFIX}/${PKGMANDIR}/ja_JP.EUC/man1/gnyaclock.1
+	${INSTALL_PROGRAM} ${WRKSRC}/gnyaclock ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/gnyaclock.man \
+	    ${DESTDIR}${PREFIX}/${PKGMANDIR}/ja_JP.EUC/man1/gnyaclock.1
 
 .include "../../x11/libXaw/buildlink3.mk"
 .include "../../x11/libXp/buildlink3.mk"

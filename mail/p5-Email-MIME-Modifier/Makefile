@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/07/29 11:27:58 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:24 joerg Exp $
 
 DISTNAME=	Email-MIME-Modifier-1.42
 PKGNAME=	p5-${DISTNAME}
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Email/}
 MAINTAINER=	kuli0020@umn.edu
 HOMEPAGE=	http://search.cpan.org/dist/Email-MIME-Modifier/
 COMMENT=	Modify Email::MIME Objects Easily
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Email-MIME-Encodings>=1.3:../../mail/p5-Email-MIME-Encodings
 DEPENDS+=	p5-Email-MIME>=1.82:../../mail/p5-Email-MIME
