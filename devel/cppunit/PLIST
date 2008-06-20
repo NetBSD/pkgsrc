@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2007/01/20 14:29:04 joerg Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/06/20 11:48:03 joerg Exp $
 bin/DllPlugInTester
 bin/cppunit-config
 bin/simple
@@ -321,9 +321,6 @@ share/cppunit/html/_plug_in_parameters_8h__incl.md5
 share/cppunit/html/_plug_in_parameters_8h__incl.png
 share/cppunit/html/_portability_8h-source.html
 share/cppunit/html/_portability_8h.html
-share/cppunit/html/_portability_8h__dep__incl.map
-share/cppunit/html/_portability_8h__dep__incl.md5
-share/cppunit/html/_portability_8h__dep__incl.png
 share/cppunit/html/_portability_8h__incl.map
 share/cppunit/html/_portability_8h__incl.md5
 share/cppunit/html/_portability_8h__incl.png
@@ -1100,9 +1097,6 @@ share/cppunit/html/class_test_result_collector__inherit__graph.md5
 share/cppunit/html/class_test_result_collector__inherit__graph.png
 share/cppunit/html/class_test_runner-members.html
 share/cppunit/html/class_test_runner.html
-share/cppunit/html/class_test_runner__coll__graph.map
-share/cppunit/html/class_test_runner__coll__graph.md5
-share/cppunit/html/class_test_runner__coll__graph.png
 share/cppunit/html/class_test_runner_1_1_wrapping_suite-members.html
 share/cppunit/html/class_test_runner_1_1_wrapping_suite.html
 share/cppunit/html/class_test_runner_1_1_wrapping_suite__coll__graph.map
