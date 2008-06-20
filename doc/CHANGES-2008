@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1318 2008/06/20 12:00:23 hauke Exp $
+$NetBSD: CHANGES-2008,v 1.1319 2008/06/20 12:07:58 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2213,3 +2213,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/postgresql83-server to 8.3.3 [adam 2008-06-20]
 	Updated databases/slony1 to 1.2.14 [adam 2008-06-20]
 	Updated wm/icewm to 1.2.35nb1 [hauke 2008-06-20]
+	Updated sysutils/radmind to 1.11.1 [hauke 2008-06-20]
