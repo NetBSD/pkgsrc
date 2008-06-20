@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/03/13 22:04:07 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/20 15:43:14 taca Exp $
 #
 
 DISTNAME=		${RUBY_DISTNAME}
@@ -15,8 +15,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 RUBY_HAS_ARCHLIB=	yes
 USE_RUBY_EXTCONF=	yes
 DISTINFO_FILE=		${RUBY_DISTINFO_FILE}
-WRKSRC=			${RUBY_WRKSRC}/ext/gdbm
 EXTRACT_ELEMENTS=	${RUBY_DISTNAME}/ext/gdbm
+WRKSRC=			${RUBY_WRKSRC}/ext/gdbm
 
 .include "../../lang/ruby/modules.mk"
 .include "../../lang/ruby/Makefile.common"
