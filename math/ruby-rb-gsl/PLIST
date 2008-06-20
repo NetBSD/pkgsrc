@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/06/19 14:51:16 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/06/20 15:34:33 minskim Exp $
 ${RUBY_VENDORLIB}/gsl.rb
 ${RUBY_VENDORLIB}/gsl/gnuplot.rb
 ${RUBY_VENDORLIB}/gsl/oper.rb
@@ -7,11 +7,10 @@ ${RUBY_VENDORLIB}/ool.rb
 ${RUBY_VENDORLIB}/ool/conmin.rb
 ${RUBY_VENDORLIB}/rbgsl.rb
 ${RUBY_DOC}/gsl/README
-${RUBY_DOC}/gsl/airy.html
-${RUBY_DOC}/gsl/bessel.html
 ${RUBY_DOC}/gsl/blas.html
 ${RUBY_DOC}/gsl/bspline.html
 ${RUBY_DOC}/gsl/cheb.html
+${RUBY_DOC}/gsl/cholesky_complex.html
 ${RUBY_DOC}/gsl/combi.html
 ${RUBY_DOC}/gsl/complex.html
 ${RUBY_DOC}/gsl/const.html
@@ -39,6 +38,7 @@ ${RUBY_DOC}/gsl/monte.html
 ${RUBY_DOC}/gsl/multimin.html
 ${RUBY_DOC}/gsl/multiroot.html
 ${RUBY_DOC}/gsl/narray.html
+${RUBY_DOC}/gsl/ndlinear.html
 ${RUBY_DOC}/gsl/nonlinearfit.html
 ${RUBY_DOC}/gsl/ntuple.html
 ${RUBY_DOC}/gsl/odeiv.html
@@ -82,6 +82,7 @@ ${RUBY_EG}/gsl/complex/michelson.rb
 ${RUBY_EG}/gsl/complex/mul.rb
 ${RUBY_EG}/gsl/complex/oscillator.rb
 ${RUBY_EG}/gsl/complex/set.rb
+${RUBY_EG}/gsl/const/hoge.txt
 ${RUBY_EG}/gsl/const/physconst.rb
 ${RUBY_EG}/gsl/const/travel.rb
 ${RUBY_EG}/gsl/deriv/demo.rb
@@ -90,7 +91,6 @@ ${RUBY_EG}/gsl/deriv/diff.rb
 ${RUBY_EG}/gsl/dht.rb
 ${RUBY_EG}/gsl/dirac.rb
 ${RUBY_EG}/gsl/eigen/eigen.rb
-${RUBY_EG}/gsl/eigen/gensymm.rb
 ${RUBY_EG}/gsl/eigen/herm.rb
 ${RUBY_EG}/gsl/eigen/narray.rb
 ${RUBY_EG}/gsl/eigen/nonsymm.rb
@@ -98,7 +98,6 @@ ${RUBY_EG}/gsl/eigen/nonsymmv.rb
 ${RUBY_EG}/gsl/eigen/qhoscillator.gp
 ${RUBY_EG}/gsl/eigen/qhoscillator.rb
 ${RUBY_EG}/gsl/eigen/vander.rb
-${RUBY_EG}/gsl/eigen/workspace.rb
 ${RUBY_EG}/gsl/fft/fft.rb
 ${RUBY_EG}/gsl/fft/fft2.rb
 ${RUBY_EG}/gsl/fft/forward.rb
@@ -113,13 +112,13 @@ ${RUBY_EG}/gsl/fit/expdata.dat
 ${RUBY_EG}/gsl/fit/expfit.rb
 ${RUBY_EG}/gsl/fit/gaussfit.rb
 ${RUBY_EG}/gsl/fit/gaussian_2peaks.rb
-${RUBY_EG}/gsl/fit/hi.dat
 ${RUBY_EG}/gsl/fit/hillfit.rb
-${RUBY_EG}/gsl/fit/lo.dat
 ${RUBY_EG}/gsl/fit/lognormal.rb
 ${RUBY_EG}/gsl/fit/lorentzfit.rb
 ${RUBY_EG}/gsl/fit/multifit.rb
+${RUBY_EG}/gsl/fit/ndlinear.rb
 ${RUBY_EG}/gsl/fit/nonlinearfit.rb
+${RUBY_EG}/gsl/fit/plot.gp
 ${RUBY_EG}/gsl/fit/polyfit.rb
 ${RUBY_EG}/gsl/fit/powerfit.rb
 ${RUBY_EG}/gsl/fit/sigmoidfit.rb
@@ -179,8 +178,8 @@ ${RUBY_EG}/gsl/integration/qng.rb
 ${RUBY_EG}/gsl/interp/demo.gp
 ${RUBY_EG}/gsl/interp/demo.rb
 ${RUBY_EG}/gsl/interp/interp.rb
-${RUBY_EG}/gsl/interp/points
 ${RUBY_EG}/gsl/interp/spline.rb
+${RUBY_EG}/gsl/interp/points
 ${RUBY_EG}/gsl/jacobi/deriv.rb
 ${RUBY_EG}/gsl/jacobi/integrate.rb
 ${RUBY_EG}/gsl/jacobi/interp.rb
@@ -203,7 +202,6 @@ ${RUBY_EG}/gsl/linalg/chol.rb
 ${RUBY_EG}/gsl/linalg/chol_narray.rb
 ${RUBY_EG}/gsl/linalg/complex.rb
 ${RUBY_EG}/gsl/linalg/invert_narray.rb
-${RUBY_EG}/gsl/linalg/linalg.replaced
 ${RUBY_EG}/gsl/math/const.rb
 ${RUBY_EG}/gsl/math/elementary.rb
 ${RUBY_EG}/gsl/math/functions.rb
@@ -211,11 +209,9 @@ ${RUBY_EG}/gsl/math/inf_nan.rb
 ${RUBY_EG}/gsl/math/minmax.rb
 ${RUBY_EG}/gsl/math/power.rb
 ${RUBY_EG}/gsl/math/test.rb
-${RUBY_EG}/gsl/matrix/a.dat
-${RUBY_EG}/gsl/matrix/a.rb
 ${RUBY_EG}/gsl/matrix/add.rb
-${RUBY_EG}/gsl/matrix/b.dat
 ${RUBY_EG}/gsl/matrix/cat.rb
+${RUBY_EG}/gsl/matrix/colvectors.rb
 ${RUBY_EG}/gsl/matrix/complex.rb
 ${RUBY_EG}/gsl/matrix/det.rb
 ${RUBY_EG}/gsl/matrix/diagonal.rb
@@ -307,6 +303,7 @@ ${RUBY_EG}/gsl/poly/cheb.rb
 ${RUBY_EG}/gsl/poly/cheb_II.rb
 ${RUBY_EG}/gsl/poly/cubic.rb
 ${RUBY_EG}/gsl/poly/demo.rb
+${RUBY_EG}/gsl/poly/eval.rb
 ${RUBY_EG}/gsl/poly/fit.rb
 ${RUBY_EG}/gsl/poly/hermite.rb
 ${RUBY_EG}/gsl/poly/poly.rb
