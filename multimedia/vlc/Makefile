@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2008/06/14 01:06:56 obache Exp $
+# $NetBSD: Makefile,v 1.56 2008/06/20 01:09:29 joerg Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.videolan.org/
 COMMENT=		VideoLAN Client
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake perl pkg-config
@@ -43,23 +45,15 @@ CONFIGURE_ARGS+=	--enable-cddax
 CONFIGURE_ARGS+=	--enable-dvdread
 CONFIGURE_ARGS+=	--enable-flac
 
-INSTALLATION_DIRS+=	${PREFIX}/share/vlc/http/dialogs \
-			${PREFIX}/share/vlc/http/images \
-			${PREFIX}/share/vlc/http/js \
-			${PREFIX}/share/vlc/http/old \
-			${PREFIX}/share/vlc/http/old/admin \
-			${PREFIX}/share/vlc/http/old/vlm \
-			${PREFIX}/share/vlc/http/requests \
-			${PREFIX}/share/vlc/osdmenu/default \
-			${PREFIX}/share/vlc/osdmenu/default/selected \
-			${PREFIX}/share/vlc/osdmenu/default/selection \
-			${PREFIX}/share/vlc/osdmenu/default/volume \
-			${PREFIX}/share/vlc/osdmenu/dvd/selected \
-			${PREFIX}/share/vlc/osdmenu/dvd/volume \
-			${PREFIX}/share/vlc/osdmenu/dvd/unselect \
-			${PREFIX}/share/vlc/osdmenu/dvd/selection \
-			${PREFIX}/share/vlc/skins2 \
-			${PREFIX}/share/vlc/skins2/fonts
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1 share/vlc/http/dialogs \
+	share/vlc/http/images share/vlc/http/js \
+	share/vlc/http/old share/vlc/http/old/admin \
+	share/vlc/http/old/vlm share/vlc/http/requests \
+	share/vlc/osdmenu/default share/vlc/osdmenu/default/selected \
+	share/vlc/osdmenu/default/selection share/vlc/osdmenu/default/volume \
+	share/vlc/osdmenu/dvd/selected share/vlc/osdmenu/dvd/volume \
+	share/vlc/osdmenu/dvd/unselect share/vlc/osdmenu/dvd/selection \
+	share/vlc/skins2 share/vlc/skins2/fonts
 
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/vlc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1

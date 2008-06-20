@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2005/08/06 06:19:23 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/20 01:09:26 joerg Exp $
 #
 
 DISTNAME=		Business-UPS-1.13
@@ -11,6 +11,8 @@ MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Business/}
 MAINTAINER=		eric@cirr.com
 HOMEPAGE=		http://theoryx5.uwinnipeg.ca/CPAN/data/Business-UPS/README.html
 COMMENT=		Perl5 module to handle UPS rate calculation and package tracking
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-libwww>=5.48:../../www/p5-libwww
 

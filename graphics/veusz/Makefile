@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/07/04 16:15:01 drochner Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/20 01:09:23 joerg Exp $
 #
 
 DISTNAME=		veusz-0.10
@@ -8,6 +8,8 @@ MASTER_SITES=		http://download.gna.org/veusz/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://home.gna.org/veusz/
 COMMENT=		Scientific plotting package
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=		yes
 

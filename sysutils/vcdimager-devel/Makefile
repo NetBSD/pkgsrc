@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2006/12/15 14:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2008/06/20 01:09:36 joerg Exp $
 #
 
 DISTNAME=	vcdimager-0.7.23
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.vcdimager.org/pub/vcdimager/vcdimager-0.7/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.vcdimager.org/
 COMMENT=	Mastering suite for Video CDs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake pkg-config
 GNU_CONFIGURE=	YES

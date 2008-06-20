@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.9 2006/06/04 16:26:55 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/20 01:09:31 joerg Exp $
 
 MODNAME=		yp
 CATEGORIES+=		net
 COMMENT=		PHP extension for YP domain support
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	php-yp-[0-9]*
 

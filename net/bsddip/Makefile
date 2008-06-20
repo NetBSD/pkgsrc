@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/03/24 19:21:29 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/20 01:09:29 joerg Exp $
 
 DISTNAME=	bsddip-1.02
 CATEGORIES=	net
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.Z
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Dialup IP program
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NOT_FOR_PLATFORM=	Interix-*-* # no sl(4) device
 

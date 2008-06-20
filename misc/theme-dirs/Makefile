@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/04/30 13:38:15 jmmv Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/20 01:09:27 joerg Exp $
 #
 
 DISTNAME=	theme-dirs-1.1
@@ -10,6 +10,8 @@ DISTFILES=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# empty
 COMMENT=	Shared theme directories
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
 NO_CONFIGURE=	yes

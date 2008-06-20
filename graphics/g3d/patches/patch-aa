@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 1999/07/22 03:35:21 sakamoto Exp $
+$NetBSD: patch-aa,v 1.2 2008/06/20 01:09:21 joerg Exp $
 
 --- ./g3d/Makefile.in.orig	Sat Jul 17 05:29:18 1999
 +++ ./g3d/Makefile.in	Thu Jul 22 10:24:50 1999
@@ -21,7 +21,7 @@ $NetBSD: patch-aa,v 1.1.1.1 1999/07/22 03:35:21 sakamoto Exp $
  install-data-local:
 -	-mkdir /usr/local/share/pixmaps/g3d/
 -	cp $(top_srcdir)/pixmaps/*.xpm /usr/local/share/pixmaps/g3d/
-+	$(mkinstalldirs) $(prefix)/share/pixmaps/g3d/
-+	cp $(top_srcdir)/pixmaps/*.xpm $(prefix)/share/pixmaps/g3d/
++	$(mkinstalldirs) ${DESTDIR}$(prefix)/share/pixmaps/g3d/
++	cp $(top_srcdir)/pixmaps/*.xpm ${DESTDIR}$(prefix)/share/pixmaps/g3d/
  
  # Tell versions [3.59,3.63) of GNU make to not export all variables.

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2008/04/27 08:19:54 wiz Exp $
+# $NetBSD: Makefile,v 1.46 2008/06/20 01:09:07 joerg Exp $
 
 DISTNAME=	sox-14.0.1
 CATEGORIES=	audio
@@ -9,6 +9,8 @@ HOMEPAGE=	http://sox.sourceforge.net/
 COMMENT=	SOund eXchange - universal sound sample translator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 GNU_CONFIGURE=		yes
 #USE_CMAKE=		yes
 USE_LANGUAGES=		c c++

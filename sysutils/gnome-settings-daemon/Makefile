@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/06/05 10:14:54 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/20 01:09:35 joerg Exp $
 #
 
 DISTNAME=	gnome-settings-daemon-2.22.2.1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	GNOME settings daemon
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

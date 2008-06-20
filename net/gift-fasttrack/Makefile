@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/01/25 23:31:31 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/20 01:09:30 joerg Exp $
 #
 
 DISTNAME=	giFT-FastTrack-0.8.9
@@ -9,6 +9,8 @@ MASTER_SITES=	http://download.berlios.de/gift-fasttrack/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gift-fasttrack.berlios.de/
 COMMENT=	Fasttrack plugin for giFT
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 USE_PKGLOCALEDIR=	yes

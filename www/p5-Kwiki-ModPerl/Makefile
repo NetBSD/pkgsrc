@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/06/08 12:25:06 wiz Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/20 01:09:43 joerg Exp $
 
 DISTNAME=	Kwiki-ModPerl-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Kwiki/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kwiki.org/
 COMMENT=	Kwiki integration with ModPerl
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Kwiki>=0.38:../../www/p5-Kwiki
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/02/22 19:27:01 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/20 01:09:32 joerg Exp $
 #
 
 DISTNAME=	waste-source
@@ -12,6 +12,8 @@ MASTER_SITES=	http://slackerbitch.free.fr/waste/
 MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://waste.2mbit.com/index2.html
 COMMENT=	Secure file sharing network
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/waste
 
@@ -32,12 +34,11 @@ USE_LANGUAGES=	c c++
 LDFLAGS+=	-lmd
 .endif
 
-INSTALLATION_DIRS=	sbin
+INSTALLATION_DIRS=	sbin share/doc/waste
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/wastesrv ${PREFIX}/sbin/wastesrv
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/waste
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/waste
+	${INSTALL_PROGRAM} ${WRKSRC}/wastesrv ${DESTDIR}${PREFIX}/sbin/wastesrv
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/waste
 
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

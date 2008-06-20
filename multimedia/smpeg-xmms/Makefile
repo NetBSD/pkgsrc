@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/06/12 16:28:12 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/20 01:09:28 joerg Exp $
 #
 
 DISTNAME=	smpeg-xmms-0.3.5
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.xmms.org/xmms/plugins/smpeg-xmms/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xmms.org/
 COMMENT=	MPEG video plugin using SDL/smpeg as the backend
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake

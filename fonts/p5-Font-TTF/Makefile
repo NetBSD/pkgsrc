@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/06/18 02:46:27 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2008/06/20 01:09:19 joerg Exp $
 #
 
 DISTNAME=	Font-TTF-0.38.1
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Font/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~mhosken/Font-TTF/
 COMMENT=	Perl module for TrueType font hacking
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME:S/.1//}
 

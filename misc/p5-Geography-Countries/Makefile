@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2005/08/06 06:19:24 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/20 01:09:26 joerg Exp $
 #
 
 DISTNAME=		Geography-Countries-1.4
@@ -13,6 +13,7 @@ HOMEPAGE=		http://search.cpan.org/dist/Geography-Countries/
 COMMENT=		Perl5 module for mapping contry names and codes
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/Geography/Countries/.packlist

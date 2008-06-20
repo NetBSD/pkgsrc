@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2007/01/14 15:19:04 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2008/06/20 01:09:23 joerg Exp $
 #
 
 DISTNAME=		open-cobol-0.32
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=open-cobol/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.opencobol.org/
 COMMENT=		Open-source COBOL compiler
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		msgfmt

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/12/27 13:37:43 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/20 01:09:44 joerg Exp $
 
 DISTNAME=		oneko-1.1b
 PKGNAME=		oneko-1.2
@@ -12,6 +12,8 @@ PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		johnam@mail.kemper.org
 COMMENT=		Like xneko except on the desktop and with other animals
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/oneko
 USE_IMAKE=		yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/14 16:00:41 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2008/06/20 01:09:16 joerg Exp $
 
 DISTNAME=	IO-All-0.33
 PKGNAME=	p5-${DISTNAME}
@@ -10,6 +10,8 @@ AUTHOR_DIR=	authors/id/I/IN/INGY
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Spiffy OO interface to Perl IO
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-Filter-[0-9]*:../../textproc/p5-Filter
 DEPENDS+=	p5-Spiffy>=0.21:../../devel/p5-Spiffy

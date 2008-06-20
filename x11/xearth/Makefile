@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2006/12/27 13:37:44 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2008/06/20 01:09:45 joerg Exp $
 #
 
 DISTNAME=	xearth-1.1
@@ -10,6 +10,8 @@ MASTER_SITES=	ftp://cag.lcs.mit.edu/pub/tuna/ \
 MAINTAINER=	agc@NetBSD.org
 HOMEPAGE=	# AWOL
 COMMENT=	Rotating map of the Earth in X11 root window
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	yes
 INSTALL_MAKE_FLAGS=	MANPATH=${PREFIX}/${PKGMANDIR}

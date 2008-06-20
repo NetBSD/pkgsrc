@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/03 14:32:04 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:41 joerg Exp $
 #
 
 DISTNAME=	CGI-ProgressBar-0.04
@@ -9,6 +9,8 @@ MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/L/LG/LGODDARD/
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/L/LG/LGODDARD/
 COMMENT=	CGI.pm sub-class with a progress bar object
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-CGI>=3.15:../../www/p5-CGI
 

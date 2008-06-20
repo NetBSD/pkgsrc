@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2006/06/18 00:59:17 rillig Exp $
+# $NetBSD: Makefile,v 1.21 2008/06/20 01:09:21 joerg Exp $
 #
 
 DISTNAME=	aview-1.3.0rc1
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aa-project/}
 MAINTAINER=	salo@Xtrmntr.org
 HOMEPAGE=	http://aa-project.sourceforge.net/aview/
 COMMENT=	ASCII Art image viewer
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	aview-x11-[0-9]*
 
@@ -36,17 +38,18 @@ REPLACE.bash.old=	/bin/bash
 REPLACE.bash.new=	${SH}
 REPLACE_FILES.bash=	asciiview
 
+INSTALLATION_DIRS=	share/doc/aview
+
 post-install:
 	${CAT} ${PKGDIR}/PLIST > ${PLIST_SRC}
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/aview/
-	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${PREFIX}/share/doc/aview/
-	${INSTALL_DATA} ${WRKSRC}/COPYING ${PREFIX}/share/doc/aview/
-	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${PREFIX}/share/doc/aview/
-	${INSTALL_DATA} ${WRKSRC}/NEWS ${PREFIX}/share/doc/aview/
-	${INSTALL_DATA} ${WRKSRC}/README* ${PREFIX}/share/doc/aview/
-	${INSTALL_DATA} ${WRKSRC}/TODO ${PREFIX}/share/doc/aview/
+	${INSTALL_DATA} ${WRKSRC}/AUTHORS ${DESTDIR}${PREFIX}/share/doc/aview/
+	${INSTALL_DATA} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/aview/
+	${INSTALL_DATA} ${WRKSRC}/ChangeLog ${DESTDIR}${PREFIX}/share/doc/aview/
+	${INSTALL_DATA} ${WRKSRC}/NEWS ${DESTDIR}${PREFIX}/share/doc/aview/
+	${INSTALL_DATA} ${WRKSRC}/README* ${DESTDIR}${PREFIX}/share/doc/aview/
+	${INSTALL_DATA} ${WRKSRC}/TODO ${DESTDIR}${PREFIX}/share/doc/aview/
 .if (${MACHINE_ARCH} == "i386")
-	${INSTALL_PROGRAM} ${WRKSRC}/aaflip ${PREFIX}/bin/
+	${INSTALL_PROGRAM} ${WRKSRC}/aaflip ${DESTDIR}${PREFIX}/bin/
 	@${ECHO} bin/aaflip >>${PLIST_SRC}
 .endif
 
