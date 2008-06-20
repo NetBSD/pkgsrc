@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/12/07 19:43:22 martti Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/20 15:37:43 joerg Exp $
 
 .include "../../meta-pkgs/xfce4/Makefile.common"
 
@@ -6,7 +6,7 @@ XFCE4_VERSION=	0.9.0
 
 DISTNAME=	Thunar-${XFCE4_VERSION}
 PKGNAME=	xfce4-thunar-${XFCE4_VERSION}
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	sysutils
 COMMENT=	Xfce file manager
 
