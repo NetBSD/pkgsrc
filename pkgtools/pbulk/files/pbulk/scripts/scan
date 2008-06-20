@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: scan,v 1.2 2007/07/16 19:25:25 joerg Exp $
+# $NetBSD: scan,v 1.3 2008/06/20 11:51:50 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -76,7 +76,7 @@ else
 			initial=0
 		else
 			${presolve} -i ${loc}/missing -v ${loc}/presolve ${loc}/pscan > ${loc}/presolve.new
-		cmp -s ${loc}/presolve.new ${loc}/presolve && break
+			cmp -s ${loc}/presolve.new ${loc}/presolve && break
 			mv ${loc}/presolve.new ${loc}/presolve
 		fi
 	done
