@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/04/04 15:30:02 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/06/20 04:30:33 minskim Exp $
 ${GEM_HOME}/cache/actionpack-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -17,6 +17,11 @@ ${GEM_LIBDIR}/lib/action_controller/assertions/tag_assertions.rb
 ${GEM_LIBDIR}/lib/action_controller/base.rb
 ${GEM_LIBDIR}/lib/action_controller/benchmarking.rb
 ${GEM_LIBDIR}/lib/action_controller/caching.rb
+${GEM_LIBDIR}/lib/action_controller/caching/actions.rb
+${GEM_LIBDIR}/lib/action_controller/caching/fragments.rb
+${GEM_LIBDIR}/lib/action_controller/caching/pages.rb
+${GEM_LIBDIR}/lib/action_controller/caching/sql_cache.rb
+${GEM_LIBDIR}/lib/action_controller/caching/sweeping.rb
 ${GEM_LIBDIR}/lib/action_controller/cgi_ext.rb
 ${GEM_LIBDIR}/lib/action_controller/cgi_ext/cookie.rb
 ${GEM_LIBDIR}/lib/action_controller/cgi_ext/query_extension.rb
@@ -28,6 +33,7 @@ ${GEM_LIBDIR}/lib/action_controller/cookies.rb
 ${GEM_LIBDIR}/lib/action_controller/dispatcher.rb
 ${GEM_LIBDIR}/lib/action_controller/filters.rb
 ${GEM_LIBDIR}/lib/action_controller/flash.rb
+${GEM_LIBDIR}/lib/action_controller/headers.rb
 ${GEM_LIBDIR}/lib/action_controller/helpers.rb
 ${GEM_LIBDIR}/lib/action_controller/http_authentication.rb
 ${GEM_LIBDIR}/lib/action_controller/integration.rb
@@ -44,7 +50,13 @@ ${GEM_LIBDIR}/lib/action_controller/rescue.rb
 ${GEM_LIBDIR}/lib/action_controller/resources.rb
 ${GEM_LIBDIR}/lib/action_controller/response.rb
 ${GEM_LIBDIR}/lib/action_controller/routing.rb
-${GEM_LIBDIR}/lib/action_controller/routing_optimisation.rb
+${GEM_LIBDIR}/lib/action_controller/routing/builder.rb
+${GEM_LIBDIR}/lib/action_controller/routing/optimisations.rb
+${GEM_LIBDIR}/lib/action_controller/routing/recognition_optimisation.rb
+${GEM_LIBDIR}/lib/action_controller/routing/route.rb
+${GEM_LIBDIR}/lib/action_controller/routing/route_set.rb
+${GEM_LIBDIR}/lib/action_controller/routing/routing_ext.rb
+${GEM_LIBDIR}/lib/action_controller/routing/segments.rb
 ${GEM_LIBDIR}/lib/action_controller/session/active_record_store.rb
 ${GEM_LIBDIR}/lib/action_controller/session/cookie_store.rb
 ${GEM_LIBDIR}/lib/action_controller/session/drb_server.rb
@@ -75,7 +87,6 @@ ${GEM_LIBDIR}/lib/action_pack.rb
 ${GEM_LIBDIR}/lib/action_pack/version.rb
 ${GEM_LIBDIR}/lib/action_view.rb
 ${GEM_LIBDIR}/lib/action_view/base.rb
-${GEM_LIBDIR}/lib/action_view/compiled_templates.rb
 ${GEM_LIBDIR}/lib/action_view/helpers/active_record_helper.rb
 ${GEM_LIBDIR}/lib/action_view/helpers/asset_tag_helper.rb
 ${GEM_LIBDIR}/lib/action_view/helpers/atom_feed_helper.rb
@@ -101,18 +112,24 @@ ${GEM_LIBDIR}/lib/action_view/helpers/scriptaculous_helper.rb
 ${GEM_LIBDIR}/lib/action_view/helpers/tag_helper.rb
 ${GEM_LIBDIR}/lib/action_view/helpers/text_helper.rb
 ${GEM_LIBDIR}/lib/action_view/helpers/url_helper.rb
+${GEM_LIBDIR}/lib/action_view/inline_template.rb
+${GEM_LIBDIR}/lib/action_view/partial_template.rb
 ${GEM_LIBDIR}/lib/action_view/partials.rb
+${GEM_LIBDIR}/lib/action_view/template.rb
 ${GEM_LIBDIR}/lib/action_view/template_error.rb
+${GEM_LIBDIR}/lib/action_view/template_finder.rb
 ${GEM_LIBDIR}/lib/action_view/template_handler.rb
 ${GEM_LIBDIR}/lib/action_view/template_handlers/builder.rb
+${GEM_LIBDIR}/lib/action_view/template_handlers/compilable.rb
 ${GEM_LIBDIR}/lib/action_view/template_handlers/erb.rb
 ${GEM_LIBDIR}/lib/action_view/template_handlers/rjs.rb
+${GEM_LIBDIR}/lib/action_view/test_case.rb
 ${GEM_LIBDIR}/lib/actionpack.rb
 ${GEM_LIBDIR}/test/abstract_unit.rb
-${GEM_LIBDIR}/test/action_view_test.rb
 ${GEM_LIBDIR}/test/active_record_unit.rb
 ${GEM_LIBDIR}/test/activerecord/active_record_store_test.rb
 ${GEM_LIBDIR}/test/activerecord/render_partial_with_record_identification_test.rb
+${GEM_LIBDIR}/test/adv_attr_test.rb
 ${GEM_LIBDIR}/test/controller/action_pack_assertions_test.rb
 ${GEM_LIBDIR}/test/controller/addresses_render_test.rb
 ${GEM_LIBDIR}/test/controller/assert_select_test.rb
@@ -135,7 +152,7 @@ ${GEM_LIBDIR}/test/controller/fake_models.rb
 ${GEM_LIBDIR}/test/controller/filter_params_test.rb
 ${GEM_LIBDIR}/test/controller/filters_test.rb
 ${GEM_LIBDIR}/test/controller/flash_test.rb
-${GEM_LIBDIR}/test/controller/fragment_store_setting_test.rb
+${GEM_LIBDIR}/test/controller/header_test.rb
 ${GEM_LIBDIR}/test/controller/helper_test.rb
 ${GEM_LIBDIR}/test/controller/html-scanner/document_test.rb
 ${GEM_LIBDIR}/test/controller/html-scanner/node_test.rb
@@ -145,6 +162,7 @@ ${GEM_LIBDIR}/test/controller/html-scanner/text_node_test.rb
 ${GEM_LIBDIR}/test/controller/html-scanner/tokenizer_test.rb
 ${GEM_LIBDIR}/test/controller/http_authentication_test.rb
 ${GEM_LIBDIR}/test/controller/integration_test.rb
+${GEM_LIBDIR}/test/controller/integration_upload_test.rb
 ${GEM_LIBDIR}/test/controller/layout_test.rb
 ${GEM_LIBDIR}/test/controller/mime_responds_test.rb
 ${GEM_LIBDIR}/test/controller/mime_type_test.rb
@@ -170,17 +188,24 @@ ${GEM_LIBDIR}/test/controller/verification_test.rb
 ${GEM_LIBDIR}/test/controller/view_paths_test.rb
 ${GEM_LIBDIR}/test/controller/webservice_test.rb
 ${GEM_LIBDIR}/test/fixtures/addresses/list.erb
+${GEM_LIBDIR}/test/fixtures/bad_customers/_bad_customer.html.erb
 ${GEM_LIBDIR}/test/fixtures/companies.yml
 ${GEM_LIBDIR}/test/fixtures/company.rb
 ${GEM_LIBDIR}/test/fixtures/content_type/render_default_content_types_for_respond_to.rhtml
 ${GEM_LIBDIR}/test/fixtures/content_type/render_default_for_rhtml.rhtml
 ${GEM_LIBDIR}/test/fixtures/content_type/render_default_for_rjs.rjs
 ${GEM_LIBDIR}/test/fixtures/content_type/render_default_for_rxml.rxml
+${GEM_LIBDIR}/test/fixtures/customers/_customer.html.erb
 ${GEM_LIBDIR}/test/fixtures/db_definitions/sqlite.sql
 ${GEM_LIBDIR}/test/fixtures/developer.rb
 ${GEM_LIBDIR}/test/fixtures/developers.yml
 ${GEM_LIBDIR}/test/fixtures/developers_projects.yml
 ${GEM_LIBDIR}/test/fixtures/fun/games/hello_world.erb
+${GEM_LIBDIR}/test/fixtures/functional_caching/_partial.erb
+${GEM_LIBDIR}/test/fixtures/functional_caching/fragment_cached.html.erb
+${GEM_LIBDIR}/test/fixtures/functional_caching/html_fragment_cached_with_partial.html.erb
+${GEM_LIBDIR}/test/fixtures/functional_caching/js_fragment_cached_with_partial.js.rjs
+${GEM_LIBDIR}/test/fixtures/good_customers/_good_customer.html.erb
 ${GEM_LIBDIR}/test/fixtures/helpers/abc_helper.rb
 ${GEM_LIBDIR}/test/fixtures/helpers/fun/games_helper.rb
 ${GEM_LIBDIR}/test/fixtures/helpers/fun/pdf_helper.rb
@@ -191,11 +216,17 @@ ${GEM_LIBDIR}/test/fixtures/layout_tests/layouts/layout_test.rhtml
 ${GEM_LIBDIR}/test/fixtures/layout_tests/layouts/multiple_extensions.html.erb
 ${GEM_LIBDIR}/test/fixtures/layout_tests/layouts/third_party_template_library.mab
 ${GEM_LIBDIR}/test/fixtures/layout_tests/views/hello.rhtml
+${GEM_LIBDIR}/test/fixtures/layouts/block_with_layout.erb
 ${GEM_LIBDIR}/test/fixtures/layouts/builder.builder
+${GEM_LIBDIR}/test/fixtures/layouts/partial_with_layout.erb
 ${GEM_LIBDIR}/test/fixtures/layouts/standard.erb
 ${GEM_LIBDIR}/test/fixtures/layouts/talk_from_action.erb
 ${GEM_LIBDIR}/test/fixtures/layouts/yield.erb
+${GEM_LIBDIR}/test/fixtures/mascot.rb
+${GEM_LIBDIR}/test/fixtures/mascots.yml
+${GEM_LIBDIR}/test/fixtures/mascots/_mascot.html.erb
 ${GEM_LIBDIR}/test/fixtures/multipart/binary_file
+${GEM_LIBDIR}/test/fixtures/multipart/boundary_problem_file
 ${GEM_LIBDIR}/test/fixtures/multipart/bracketed_param
 ${GEM_LIBDIR}/test/fixtures/multipart/large_text_file
 ${GEM_LIBDIR}/test/fixtures/multipart/mixed_files
@@ -217,9 +248,15 @@ ${GEM_LIBDIR}/test/fixtures/public/500.html
 ${GEM_LIBDIR}/test/fixtures/public/images/rails.png
 ${GEM_LIBDIR}/test/fixtures/public/javascripts/application.js
 ${GEM_LIBDIR}/test/fixtures/public/javascripts/bank.js
+${GEM_LIBDIR}/test/fixtures/public/javascripts/controls.js
+${GEM_LIBDIR}/test/fixtures/public/javascripts/dragdrop.js
+${GEM_LIBDIR}/test/fixtures/public/javascripts/effects.js
+${GEM_LIBDIR}/test/fixtures/public/javascripts/prototype.js
 ${GEM_LIBDIR}/test/fixtures/public/javascripts/robber.js
+${GEM_LIBDIR}/test/fixtures/public/javascripts/version.1.0.js
 ${GEM_LIBDIR}/test/fixtures/public/stylesheets/bank.css
 ${GEM_LIBDIR}/test/fixtures/public/stylesheets/robber.css
+${GEM_LIBDIR}/test/fixtures/public/stylesheets/version.1.0.css
 ${GEM_LIBDIR}/test/fixtures/replies.yml
 ${GEM_LIBDIR}/test/fixtures/reply.rb
 ${GEM_LIBDIR}/test/fixtures/respond_to/all_types_with_layout.html.erb
@@ -237,11 +274,16 @@ ${GEM_LIBDIR}/test/fixtures/respond_to/using_defaults_with_type_list.html.erb
 ${GEM_LIBDIR}/test/fixtures/respond_to/using_defaults_with_type_list.js.rjs
 ${GEM_LIBDIR}/test/fixtures/respond_to/using_defaults_with_type_list.xml.builder
 ${GEM_LIBDIR}/test/fixtures/scope/test/modgreet.erb
+${GEM_LIBDIR}/test/fixtures/shared.html.erb
+${GEM_LIBDIR}/test/fixtures/symlink_parent/symlinked_layout.erb
 ${GEM_LIBDIR}/test/fixtures/test/_customer.erb
+${GEM_LIBDIR}/test/fixtures/test/_customer_counter.erb
 ${GEM_LIBDIR}/test/fixtures/test/_customer_greeting.erb
+${GEM_LIBDIR}/test/fixtures/test/_form.erb
 ${GEM_LIBDIR}/test/fixtures/test/_hash_greeting.erb
 ${GEM_LIBDIR}/test/fixtures/test/_hash_object.erb
 ${GEM_LIBDIR}/test/fixtures/test/_hello.builder
+${GEM_LIBDIR}/test/fixtures/test/_labelling_form.erb
 ${GEM_LIBDIR}/test/fixtures/test/_layout_for_partial.html.erb
 ${GEM_LIBDIR}/test/fixtures/test/_partial.erb
 ${GEM_LIBDIR}/test/fixtures/test/_partial.html.erb
@@ -249,6 +291,7 @@ ${GEM_LIBDIR}/test/fixtures/test/_partial.js.erb
 ${GEM_LIBDIR}/test/fixtures/test/_partial_for_use_in_layout.html.erb
 ${GEM_LIBDIR}/test/fixtures/test/_partial_only.erb
 ${GEM_LIBDIR}/test/fixtures/test/_person.erb
+${GEM_LIBDIR}/test/fixtures/test/_raise.html.erb
 ${GEM_LIBDIR}/test/fixtures/test/action_talk_to_layout.erb
 ${GEM_LIBDIR}/test/fixtures/test/block_content_for.erb
 ${GEM_LIBDIR}/test/fixtures/test/calling_partial_with_layout.html.erb
@@ -265,6 +308,7 @@ ${GEM_LIBDIR}/test/fixtures/test/formatted_xml_erb.builder
 ${GEM_LIBDIR}/test/fixtures/test/formatted_xml_erb.html.erb
 ${GEM_LIBDIR}/test/fixtures/test/formatted_xml_erb.xml.erb
 ${GEM_LIBDIR}/test/fixtures/test/greeting.erb
+${GEM_LIBDIR}/test/fixtures/test/greeting.js.rjs
 ${GEM_LIBDIR}/test/fixtures/test/hello.builder
 ${GEM_LIBDIR}/test/fixtures/test/hello_world.erb
 ${GEM_LIBDIR}/test/fixtures/test/hello_world_container.builder
@@ -281,11 +325,11 @@ ${GEM_LIBDIR}/test/fixtures/test/update_element_with_capture.erb
 ${GEM_LIBDIR}/test/fixtures/test/using_layout_around_block.html.erb
 ${GEM_LIBDIR}/test/fixtures/topic.rb
 ${GEM_LIBDIR}/test/fixtures/topics.yml
+${GEM_LIBDIR}/test/fixtures/topics/_topic.html.erb
 ${GEM_LIBDIR}/test/template/active_record_helper_test.rb
 ${GEM_LIBDIR}/test/template/asset_tag_helper_test.rb
 ${GEM_LIBDIR}/test/template/atom_feed_helper_test.rb
 ${GEM_LIBDIR}/test/template/benchmark_helper_test.rb
-${GEM_LIBDIR}/test/template/compiled_templates_test.rb
 ${GEM_LIBDIR}/test/template/date_helper_test.rb
 ${GEM_LIBDIR}/test/template/erb_util_test.rb
 ${GEM_LIBDIR}/test/template/form_helper_test.rb
@@ -294,16 +338,22 @@ ${GEM_LIBDIR}/test/template/form_tag_helper_test.rb
 ${GEM_LIBDIR}/test/template/javascript_helper_test.rb
 ${GEM_LIBDIR}/test/template/number_helper_test.rb
 ${GEM_LIBDIR}/test/template/prototype_helper_test.rb
+${GEM_LIBDIR}/test/template/record_tag_helper_test.rb
 ${GEM_LIBDIR}/test/template/sanitize_helper_test.rb
 ${GEM_LIBDIR}/test/template/scriptaculous_helper_test.rb
 ${GEM_LIBDIR}/test/template/tag_helper_test.rb
+${GEM_LIBDIR}/test/template/template_finder_test.rb
+${GEM_LIBDIR}/test/template/template_object_test.rb
+${GEM_LIBDIR}/test/template/test_test.rb
 ${GEM_LIBDIR}/test/template/text_helper_test.rb
 ${GEM_LIBDIR}/test/template/url_helper_test.rb
 ${GEM_LIBDIR}/test/testing_sandbox.rb
 ${GEM_HOME}/specifications/actionpack-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/test/template
+@dirrm ${GEM_LIBDIR}/test/fixtures/topics
 @dirrm ${GEM_LIBDIR}/test/fixtures/test/dot.directory
 @dirrm ${GEM_LIBDIR}/test/fixtures/test
+@dirrm ${GEM_LIBDIR}/test/fixtures/symlink_parent
 @dirrm ${GEM_LIBDIR}/test/fixtures/scope/test
 @dirrm ${GEM_LIBDIR}/test/fixtures/scope
 @dirrm ${GEM_LIBDIR}/test/fixtures/respond_to/layouts
@@ -322,6 +372,7 @@ ${GEM_HOME}/specifications/actionpack-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/test/fixtures/override/test
 @dirrm ${GEM_LIBDIR}/test/fixtures/override
 @dirrm ${GEM_LIBDIR}/test/fixtures/multipart
+@dirrm ${GEM_LIBDIR}/test/fixtures/mascots
 @dirrm ${GEM_LIBDIR}/test/fixtures/layouts
 @dirrm ${GEM_LIBDIR}/test/fixtures/layout_tests/views
 @dirrm ${GEM_LIBDIR}/test/fixtures/layout_tests/layouts/controller_name_space
@@ -330,10 +381,14 @@ ${GEM_HOME}/specifications/actionpack-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/test/fixtures/layout_tests
 @dirrm ${GEM_LIBDIR}/test/fixtures/helpers/fun
 @dirrm ${GEM_LIBDIR}/test/fixtures/helpers
+@dirrm ${GEM_LIBDIR}/test/fixtures/good_customers
+@dirrm ${GEM_LIBDIR}/test/fixtures/functional_caching
 @dirrm ${GEM_LIBDIR}/test/fixtures/fun/games
 @dirrm ${GEM_LIBDIR}/test/fixtures/fun
 @dirrm ${GEM_LIBDIR}/test/fixtures/db_definitions
+@dirrm ${GEM_LIBDIR}/test/fixtures/customers
 @dirrm ${GEM_LIBDIR}/test/fixtures/content_type
+@dirrm ${GEM_LIBDIR}/test/fixtures/bad_customers
 @dirrm ${GEM_LIBDIR}/test/fixtures/addresses
 @dirrm ${GEM_LIBDIR}/test/fixtures
 @dirrm ${GEM_LIBDIR}/test/controller/session
@@ -361,7 +416,9 @@ ${GEM_HOME}/specifications/actionpack-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/lib/action_controller/templates/rescues
 @dirrm ${GEM_LIBDIR}/lib/action_controller/templates
 @dirrm ${GEM_LIBDIR}/lib/action_controller/session
+@dirrm ${GEM_LIBDIR}/lib/action_controller/routing
 @dirrm ${GEM_LIBDIR}/lib/action_controller/cgi_ext
+@dirrm ${GEM_LIBDIR}/lib/action_controller/caching
 @dirrm ${GEM_LIBDIR}/lib/action_controller/assertions
 @dirrm ${GEM_LIBDIR}/lib/action_controller
 @dirrm ${GEM_LIBDIR}/lib
