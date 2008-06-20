@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1328 2008/06/20 15:46:40 taca Exp $
+$NetBSD: CHANGES-2008,v 1.1329 2008/06/20 15:51:25 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2228,3 +2228,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/ruby-tk to 1.8.7.22 [taca 2008-06-20]
 	Updated lang/ruby18 to 1.8.7.22 [taca 2008-06-20]
 	Updated lang/ruby to 1.8.7.22 [taca 2008-06-20]
+	Updated devel/ruby-mode to 1.8.7.22 [taca 2008-06-20]
