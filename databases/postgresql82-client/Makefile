@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/04/05 16:40:08 adam Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/20 07:46:49 adam Exp $
 
 PKGNAME=	postgresql82-client-${BASE_VERS}
 COMMENT=	PostgreSQL database client programs
@@ -36,6 +36,7 @@ CONFIGURE_ARGS+=	--enable-thread-safety
 
 INSTALL_DIRS=	src/include
 INSTALL_DIRS+=	src/interfaces
+INSTALL_DIRS+=	src/port
 INSTALL_DIRS+=	src/bin
 INSTALL_DIRS+=	doc
 
