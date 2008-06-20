@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1327 2008/06/20 15:42:18 he Exp $
+$NetBSD: CHANGES-2008,v 1.1328 2008/06/20 15:46:40 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2222,3 +2222,9 @@ Changes to the packages collection and infrastructure in 2008:
 	Added databases/p5-SQL-Abstract-Limit version 0.12 [he 2008-06-20]
 	Updated math/ruby-rb-gsl to 1.10.3 [minskim 2008-06-20]
 	Updated databases/p5-Class-DBI-AbstractSearch to 0.07 [he 2008-06-20]
+	Updated lang/ruby18-base to 1.8.7.22 [taca 2008-06-20]
+	Updated devel/ruby-curses to 1.8.7.22 [taca 2008-06-20]
+	Updated devel/ruby-readline to 1.8.7.22 [taca 2008-06-20]
+	Updated x11/ruby-tk to 1.8.7.22 [taca 2008-06-20]
+	Updated lang/ruby18 to 1.8.7.22 [taca 2008-06-20]
+	Updated lang/ruby to 1.8.7.22 [taca 2008-06-20]
