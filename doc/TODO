@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7342 2008/06/20 04:50:43 minskim Exp $
+$NetBSD: TODO,v 1.7343 2008/06/20 14:47:09 he Exp $
 
 Suggested new packages
 ======================
@@ -958,7 +958,6 @@ Suggested package updates
 	o otpCalc-0.97
 	o p5-Apache-ASP-2.59
 	o p5-Apache-AuthCookieDBI-2.02
-	o p5-Apache-DBI-1.07
 	o p5-Apache-SSI-2.17
 	o p5-Asterisk-0.09
 	o p5-Authen-PAM-0.17
