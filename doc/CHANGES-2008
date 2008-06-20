@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1321 2008/06/20 14:13:18 he Exp $
+$NetBSD: CHANGES-2008,v 1.1322 2008/06/20 14:18:46 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2216,3 +2216,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/radmind to 1.11.1 [hauke 2008-06-20]
 	Updated www/apache2 to 2.0.63nb1 [he 2008-06-20]
 	Added www/p5-Apache2-AuthCookie version 3.12 [he 2008-06-20]
+	Added www/p5-Apache2-AuthCookieDBI version 2.03 [he 2008-06-20]
