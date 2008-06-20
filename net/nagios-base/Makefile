@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2008/06/09 12:36:15 gdt Exp $
+# $NetBSD: Makefile,v 1.19 2008/06/20 15:28:11 gdt Exp $
 #
 
 DISTNAME=		nagios-2.5
 PKGNAME=		${DISTNAME:S/-/-base-/}
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		net sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nagios/}
 
@@ -31,6 +31,12 @@ USE_TOOLS+=		mail:run perl
 CONFIGURE_ARGS+=	--with-mail=${TOOLS_PLATFORM.mail}
 
 RCD_SCRIPTS+=		nagios
+FILES_SUBST+=		NAGIOS_USER=${NAGIOS_USER:Q}
+# XXX Merge this into the package proper.
+# Nagios drops permissions before creating the log file, so the
+# default location doesn't work.  In the config file, change
+# lock_file=/var/run/nagios.lock to
+# lock_file=/var/run/nagios/nagios.lock
 
 INSTALL_TARGET=		install install-config
 

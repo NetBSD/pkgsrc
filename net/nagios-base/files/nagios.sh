@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: nagios.sh,v 1.5 2008/06/09 12:36:15 gdt Exp $
+# $NetBSD: nagios.sh,v 1.6 2008/06/20 15:28:11 gdt Exp $
 #
 # PROVIDE: nagios
 # REQUIRE: DAEMON
@@ -23,7 +23,7 @@ extra_commands="test reload"
 nagios_precmd()
 {
     mkdir -p ${piddir}
-    chown nagios ${piddir}
+    chown @NAGIOS_USER@ ${piddir}
 }
 
 nagios_test()
