@@ -1,0 +1,12 @@
+$NetBSD: patch-af,v 1.1 2008/06/20 13:55:49 joerg Exp $
+
+--- gdb/gdb/arm-tdep.c.orig	2008-06-20 15:40:46.000000000 +0200
++++ gdb/gdb/arm-tdep.c
+@@ -2751,6 +2751,7 @@ arm_gdbarch_init (struct gdbarch_info in
+ 
+ 	    default:
+ 	      /* Leave it as "unknown".  */
++	      break;
+ 	    }
+ 	}
+     }

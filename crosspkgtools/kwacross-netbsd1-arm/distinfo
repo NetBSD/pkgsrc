@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2006/10/22 05:15:32 rillig Exp $
+$NetBSD: distinfo,v 1.3 2008/06/20 13:55:49 joerg Exp $
 
 SHA1 (kwacross-netbsd-1.6.2/kwacross-netbsd1-arm-20050605.tgz) = 3dc5a7a85dbc262b11c602ae280131cca5c8fbd1
 RMD160 (kwacross-netbsd-1.6.2/kwacross-netbsd1-arm-20050605.tgz) = 249a6eb652c2b6efa3a39fcec4b0566ad127f2b5
@@ -18,3 +18,6 @@ Size (kwacross-netbsd-1.6.2/syssrc.tgz) = 22986092 bytes
 SHA1 (patch-aa) = 505ff3f62f8ee12744a15c8382e36989b1de4218
 SHA1 (patch-ab) = 97b2f67cdc04e66fd55b18124fcafac6f111c403
 SHA1 (patch-ac) = 37384bf42f86a5d0787968ba6ac5c5432a9b291d
+SHA1 (patch-ad) = 85a81f66d041435e8f54a43cbf2ead6c2d8a4762
+SHA1 (patch-ae) = 35a376b7d2e20c97c1706741dc18cb72584b074b
+SHA1 (patch-af) = 62d52c6948b14d8ba0328a3cf623c4eb5b208908
