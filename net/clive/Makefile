@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:39 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/06/21 15:53:55 wiz Exp $
 #
 
-DISTNAME=	clive-0.4.14
+DISTNAME=	clive-0.4.16
 CATEGORIES=	net multimedia www
 MASTER_SITES=	http://dl.gna.org/clive/0.4/src/ \
 		${MASTER_SITE_SOURCEFORGE:=clive/}
