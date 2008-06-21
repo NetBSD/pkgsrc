@@ -1,0 +1,35 @@
+$NetBSD: patch-ad,v 1.1 2008/06/21 18:35:03 adrianp Exp $
+
+--- Makefile.in.orig	2007-07-23 22:30:00.000000000 +0100
++++ Makefile.in
+@@ -90,7 +90,7 @@ LIBOBJS = queue.o route.o waypt.o filter
+ OBJS = main.o globals.o $(LIBOBJS) @FILEINFO@
+ 
+ .c.o:
+-	$(CC)  @CPPFLAGS@ -c $(GBCFLAGS) $< $(OUTPUT_SWITCH)$@
++	$(CC)  @CPPFLAGS@ -c $(GBCFLAGS) $< $(OUTPUT_SWITCH) $@
+ 
+ 
+ 
+@@ -101,10 +101,10 @@ WEB=@DOCDIR@
+ all: gpsbabel$(EXEEXT)
+ 
+ gpsbabel$(EXEEXT): configure Makefile $(OBJS) @GPSBABEL_DEBUG@ 
+-	$(CC)  $(CFLAGS) $(LDFLAGS) $(OBJS) @LIBS@ @EXPAT_LIB@ @USB_LIBS@ $(OUTPUT_SWITCH)$@
++	$(CC)  $(CFLAGS) $(LDFLAGS) $(OBJS) @LIBS@ @EXPAT_LIB@ @USB_LIBS@ $(OUTPUT_SWITCH) $@
+ 
+ gpsbabel-debug: $(OBJS)
+-	$(CC)  $(CFLAGS) $(LDFLAGS) $(OBJS) @LIBS@ @EFENCE_LIB@ @EXPAT_LIB@ @USB_LIBS@ $(OUTPUT_SWITCH)$@
++	$(CC)  $(CFLAGS) $(LDFLAGS) $(OBJS) @LIBS@ @EFENCE_LIB@ @EXPAT_LIB@ @USB_LIBS@ $(OUTPUT_SWITCH) $@
+ 
+ Makefile gbversion.h: Makefile.in config.status xmldoc/makedoc.in gbversion.h.in
+ 	CONFIG_FILES=$@ CONFIG_HEADERS= $(SHELL) ./config.status 
+@@ -113,7 +113,7 @@ config.status: configure 
+ 	$(SHELL) config.status --recheck
+ 
+ jeeps/gpslibusb.o: 
+-	$(CC)  @CPPFLAGS@ -c $(GBCFLAGS) @USB_CFLAGS@ @srcdir@/jeeps/gpslibusb.c $(OUTPUT_SWITCH)$@
++	$(CC)  @CPPFLAGS@ -c $(GBCFLAGS) @USB_CFLAGS@ @srcdir@/jeeps/gpslibusb.c $(OUTPUT_SWITCH) $@
+ 
+ fileinfo.o: win32/gpsbabel.rc
+ 	$(RC) -o fileinfo.o win32/gpsbabel.rc
