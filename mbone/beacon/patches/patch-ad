@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2008/06/21 17:58:17 joerg Exp $
+
+--- libbeacon/Makefile.in.orig	2008-06-21 11:44:56.000000000 +0000
++++ libbeacon/Makefile.in
+@@ -78,6 +78,7 @@ AWK = @AWK@
+ CC = @CC@
+ CCDEPMODE = @CCDEPMODE@
+ CFLAGS = @CFLAGS@
++AM_CFLAGS=	-fPIC
+ CPP = @CPP@
+ CPPFLAGS = @CPPFLAGS@
+ CYGPATH_W = @CYGPATH_W@
