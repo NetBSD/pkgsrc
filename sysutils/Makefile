@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.428 2008/06/16 16:05:09 taca Exp $
+# $NetBSD: Makefile,v 1.429 2008/06/21 15:07:09 drochner Exp $
 #
 
 COMMENT=	System utilities
@@ -30,6 +30,8 @@ SUBDIR+=	bbsload
 SUBDIR+=	bchunk
 SUBDIR+=	bcmfw
 SUBDIR+=	bkpupsd
+SUBDIR+=	boxbackup-client
+SUBDIR+=	boxbackup-server
 SUBDIR+=	bsign
 SUBDIR+=	btpin-qt
 SUBDIR+=	burn
