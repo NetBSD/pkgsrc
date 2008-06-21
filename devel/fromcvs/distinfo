@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.12 2008/05/21 09:42:02 wiz Exp $
+$NetBSD: distinfo,v 1.13 2008/06/21 15:58:58 wiz Exp $
 
-SHA1 (fromcvs/d9df1a471f44.tar.bz2) = 1ce0a29eb883fce36c2a9b6fbc87f43a676c2a93
-RMD160 (fromcvs/d9df1a471f44.tar.bz2) = 1bfc64af5da3f8f2f00fe064d0ab60b38418007b
-Size (fromcvs/d9df1a471f44.tar.bz2) = 17625 bytes
+SHA1 (fromcvs/0431bbe66219.tar.bz2) = bf9cf1a0ca99cb6bcd9ca71fbadd9e7e0a369356
+RMD160 (fromcvs/0431bbe66219.tar.bz2) = b63fcc0084b1dc32bcf6da86a83d47336b8179bc
+Size (fromcvs/0431bbe66219.tar.bz2) = 17740 bytes
 SHA1 (patch-aa) = 6d3f6455bc470f5462faf4d965d5842800ae3203
