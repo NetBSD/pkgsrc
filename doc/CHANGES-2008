@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1353 2008/06/21 21:29:40 he Exp $
+$NetBSD: CHANGES-2008,v 1.1354 2008/06/21 22:07:16 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2253,3 +2253,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/qjackctl to 0.3.3 [bjs 2008-06-21]
 	Added audio/gst-plugins0.10-jack version 0.10.7 [bjs 2008-06-21]
 	Updated fonts/p5-Font-AFM to 1.20 [he 2008-06-21]
+	Added www/p5-LWP-UserAgent-Determined version 1.03 [he 2008-06-21]
