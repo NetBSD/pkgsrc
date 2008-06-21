@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1349 2008/06/21 18:55:23 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1350 2008/06/21 19:09:26 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2249,3 +2249,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated fonts/fontconfig to 2.6.0 [wiz 2008-06-21]
 	Updated sysutils/cdrtools to 2.01.01.41 [wiz 2008-06-21]
 	Updated textproc/iso-codes to 3.0 [wiz 2008-06-21]
+	Updated devel/p5-Error to 0.17014 [he 2008-06-21]
