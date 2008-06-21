@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1341 2008/06/21 16:39:08 smb Exp $
+$NetBSD: CHANGES-2008,v 1.1342 2008/06/21 17:24:46 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2241,3 +2241,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/fromcvs to 0.0.0.124 [wiz 2008-06-21]
 	Updated games/gbrainy to 0.70 [wiz 2008-06-21]
 	Added chat/pidgin-latex version 1.2.1 [smb 2008-06-21]
+	Updated math/mathomatic to 14.0.5 [minskim 2008-06-21]
