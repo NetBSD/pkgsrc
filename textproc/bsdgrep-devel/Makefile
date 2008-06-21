@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/12/06 21:43:19 cjep Exp $
+# $NetBSD: Makefile,v 1.14 2008/06/21 20:37:40 joerg Exp $
 #
 
 DISTNAME=	bsdgrep-20071201
@@ -10,8 +10,11 @@ MAINTAINER=	cjep@NetBSD.org
 HOMEPAGE=	# none
 COMMENT=	BSD version of grep as in NetBSD src/usr.bin/grep
 
-MAKE_ENV+=	BINOWN=${BINOWN} BINGRP=${BINGRP}
-MAKE_ENV+=	MANOWN=${MANOWN} MANGRP=${MANGRP}
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_BSD_MAKEFILE=	yes
+
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 post-patch:
 	@${SED} -e 's|grep|bgrep|g' ${WRKSRC}/grep.1 > ${WRKSRC}/bgrep.1
