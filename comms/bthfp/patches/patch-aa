@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2008/06/21 20:47:28 joerg Exp $
+
+--- bthfp.c.orig	2008-06-21 14:42:12.000000000 +0000
++++ bthfp.c
+@@ -480,8 +480,8 @@ accept_sco(int fd, short ev, void *arg)
+ 
+ 	/* XXX might need to up the socket buffer size? */
+ 
+-	size = sizeof(mtu);
+-	if (getsockopt(sc, BTPROTO_SCO, SO_SCO_MTU, &mtu, &size) < 0) {
++	len = sizeof(mtu);
++	if (getsockopt(sc, BTPROTO_SCO, SO_SCO_MTU, &mtu, &len) < 0) {
+ 		close(sc);
+ 		sc = -1;
+ 		return;
