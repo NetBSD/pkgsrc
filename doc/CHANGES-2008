@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1343 2008/06/21 17:27:10 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1344 2008/06/21 17:53:52 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2243,3 +2243,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added chat/pidgin-latex version 1.2.1 [smb 2008-06-21]
 	Updated math/mathomatic to 14.0.5 [minskim 2008-06-21]
 	Updated databases/shared-mime-info to 0.40 [wiz 2008-06-21]
+	Added www/py-rss2gen version 1.0.0 [tonnerre 2008-06-21]
