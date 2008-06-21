@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1348 2008/06/21 18:52:39 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1349 2008/06/21 18:55:23 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2248,3 +2248,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/mednafen to 0.8.9 [wiz 2008-06-21]
 	Updated fonts/fontconfig to 2.6.0 [wiz 2008-06-21]
 	Updated sysutils/cdrtools to 2.01.01.41 [wiz 2008-06-21]
+	Updated textproc/iso-codes to 3.0 [wiz 2008-06-21]
