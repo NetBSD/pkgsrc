@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2008/06/21 18:12:42 joerg Exp $
+
+--- lib3d/bspregion3d.C.orig	2008-06-21 12:06:10.000000000 +0000
++++ lib3d/bspregion3d.C
+@@ -97,7 +97,7 @@ void bspRegion3d::MakeBspTreePanels(BSP 
+       xpanel3d& panel= * (xpanel3d *) poly->material_index;
+ 
+       poly->material_index=
+-	(int) & *treePanels.insert(treePanels.end(),xpanel3d(*poly,pts,panel));
++	& *treePanels.insert(treePanels.end(),xpanel3d(*poly,pts,panel));
+     }
+     MakeBspTreePanels(bspt->negative);
+     MakeBspTreePanels(bspt->positive);
