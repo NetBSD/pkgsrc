@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/03 05:33:32 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/21 20:47:28 joerg Exp $
 
 DISTNAME=		bthfp-0.1
 CATEGORIES=		comms
@@ -13,6 +13,8 @@ ONLY_FOR_PLATFORM=	NetBSD-[4-9].*-*
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
+USE_BSD_MAKEFILE=	yes
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bthfp ${DESTDIR}${PREFIX}/bin
