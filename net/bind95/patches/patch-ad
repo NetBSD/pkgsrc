@@ -1,0 +1,53 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/06/21 23:15:28 adrianp Exp $
+
+--- configure.orig	2008-05-06 02:33:33.000000000 +0100
++++ configure
+@@ -6550,6 +6550,8 @@ case $host in
+ 	use_threads=false ;;
+ *-freebsd*)
+ 	use_threads=false ;;
++*-dragonfly*)
++	use_threads=false ;;
+ *-bsdi234*)
+ 	# Thread signals do not work reliably on some versions of BSD/OS.
+ 	use_threads=false ;;
+@@ -6638,7 +6640,7 @@ echo "$as_me: WARNING: linking with PTL2
+ echo "${ECHO_T}native" >&6; }
+ 				LIBS="-lpthread $LIBS"
+ 			else
+-				if test ! -d $LOCALBASE/pthreads
++				if test ! -d $LOCALBASE/pthreads -a ! -f /usr/include/pthread.h
+ 				then
+ 					{ echo "$as_me:$LINENO: result: none" >&5
+ echo "${ECHO_T}none" >&6; }
+@@ -6649,14 +6651,23 @@ echo "$as_me: error: \"could not find th
+ 
+ 				if $use_threads
+ 				then
+-					{ echo "$as_me:$LINENO: result: mit-pthreads/unproven-pthreads" >&5
++					if test -f /usr/include/pthread.h
++					then
++						{ echo "$as_me:$LINENO: result: native pthreads" >&5
++echo "${ECHO_T}native pthreads" >&6; }
++						LIBS="-lpthread $LIBS"
++						CPPFLAGS="$CPPFLAGS -I/usr/include"
++						STD_CINDLUES="$STD_CINDLUES -I/usr/include"
++					else
++						{ echo "$as_me:$LINENO: result: mit-pthreads/unproven-pthreads" >&5
+ echo "${ECHO_T}mit-pthreads/unproven-pthreads" >&6; }
+-					pkg="$LOCALBASE/pthreads"
+-					lib1="-L$pkg/lib -Wl,-R$pkg/lib"
+-					lib2="-lpthread -lm -lgcc -lpthread"
+-					LIBS="$lib1 $lib2 $LIBS"
+-					CPPFLAGS="$CPPFLAGS -I$pkg/include"
+-					STD_CINCLUDES="$STD_CINCLUDES -I$pkg/include"
++						pkg="$LOCALBASE/pthreads"
++						lib1="-L$pkg/lib -Wl,-R$pkg/lib"
++						lib2="-lpthread -lm -lgcc -lpthread"
++						LIBS="$lib1 $lib2 $LIBS"
++						CPPFLAGS="$CPPFLAGS -I$pkg/include"
++						STD_CINCLUDES="$STD_CINCLUDES -I$pkg/include"
++					fi
+ 				fi
+ 			fi
+ 		fi
