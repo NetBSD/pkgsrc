@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1336 2008/06/21 14:55:10 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1337 2008/06/21 15:17:14 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2236,3 +2236,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Class-Inspector to 1.23 [he 2008-06-21]
 	Updated net/nagios-base to 2.12 [tonnerre 2008-06-21]
 	Updated net/nagios-nrpe to 2.12 [tonnerre 2008-06-21]
+	Updated devel/mantis to 1.1.2 [adrianp 2008-06-21]
