@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.10 2008/05/25 14:34:13 tonio Exp $
+$NetBSD: patch-ae,v 1.11 2008/06/21 11:45:56 drochner Exp $
 
 --- mpeg3io.c.orig	2005-05-01 07:57:56.000000000 +0200
 +++ mpeg3io.c	2008-02-19 19:25:09.000000000 +0100
@@ -19,7 +19,7 @@ $NetBSD: patch-ae,v 1.10 2008/05/25 14:34:13 tonio Exp $
 +# if defined(__APPLE__) && defined(__MACH__)
 +#include <sys/cdefs.h>
 +# endif
-+# if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900 /* 2.99.9 */) || (defined(__APPLE__) && defined(__MACH__) && !defined(__DARWIN_64_BIT_INO_T) /* MacOSX < 10.5 */)
++# if (defined(__NetBSD__) && __NetBSD_Version__ >= 299000900 /* 2.99.9 */) || defined(__DragonFly__) || (defined(__APPLE__) && defined(__MACH__) && !defined(__DARWIN_64_BIT_INO_T) /* MacOSX < 10.5 */)
 +#  define fopen64 fopen
 +#  define fseeko64 fseek
 +#  define stat64 stat
