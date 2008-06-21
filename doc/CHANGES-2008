@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1356 2008/06/21 22:27:03 he Exp $
+$NetBSD: CHANGES-2008,v 1.1357 2008/06/21 22:34:37 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2256,3 +2256,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/p5-LWP-UserAgent-Determined version 1.03 [he 2008-06-21]
 	Updated net/bind9 to 9.4.1pl1nb4 [adrianp 2008-06-21]
 	Added security/p5-Digest-MD5-File version 0.06 [he 2008-06-21]
+	Updated net/p5-Net-Amazon-S3 to 0.44 [he 2008-06-21]
