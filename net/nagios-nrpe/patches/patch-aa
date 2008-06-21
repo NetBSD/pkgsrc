@@ -1,12 +1,12 @@
-$NetBSD: patch-aa,v 1.1 2006/06/04 11:06:51 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2008/06/21 14:52:49 tonnerre Exp $
 
---- src/nrpe.c.orig	2006-05-29 16:23:55.000000000 +0000
+--- src/nrpe.c.orig	2008-03-10 22:04:43.000000000 +0100
 +++ src/nrpe.c
-@@ -1234,7 +1234,6 @@ int my_system(char *command,int timeout,
+@@ -1320,7 +1320,6 @@ int my_system(char *command,int timeout,
          pid_t pid;
  	int status;
  	int result;
 -	extern int errno;
  	char buffer[MAX_INPUT_BUFFER];
- 	char temp_buffer[MAX_INPUT_BUFFER];
  	int fd[2];
+ 	FILE *fp;
