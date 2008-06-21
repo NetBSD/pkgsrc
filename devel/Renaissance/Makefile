@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.15 2008/01/18 05:14:31 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/21 19:13:28 joerg Exp $
 #
 
 DISTNAME=	Renaissance-0.8.0
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	devel gnustep
 MASTER_SITES=	http://www.gnustep.it/Renaissance/Download/
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.gnustep.it/Renaissance/
 COMMENT=	Structured GNUstep user interface development framework
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	objc
 
