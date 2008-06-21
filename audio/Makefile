@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.375 2008/05/09 17:01:01 drochner Exp $
+# $NetBSD: Makefile,v 1.376 2008/06/21 20:51:24 bjs Exp $
 #
 
 COMMENT=	Audio tools
@@ -111,6 +111,7 @@ SUBDIR+=	gst-plugins0.10-esound
 SUBDIR+=	gst-plugins0.10-faad
 SUBDIR+=	gst-plugins0.10-flac
 SUBDIR+=	gst-plugins0.10-fluendo-mp3
+SUBDIR+=	gst-plugins0.10-jack
 SUBDIR+=	gst-plugins0.10-libvisual
 SUBDIR+=	gst-plugins0.10-mad
 SUBDIR+=	gst-plugins0.10-musepack
