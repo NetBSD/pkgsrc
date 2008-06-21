@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2008/05/30 10:59:49 wiz Exp $
+# $NetBSD: Makefile,v 1.35 2008/06/21 18:52:23 wiz Exp $
 
-DISTNAME=	cdrtools-2.01.01a40
-PKGNAME=	cdrtools-2.01.01.40
+DISTNAME=	cdrtools-2.01.01a41
+PKGNAME=	cdrtools-2.01.01.41
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/
 EXTRACT_SUFX=	.tar.bz2
