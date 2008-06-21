@@ -1,0 +1,372 @@
+$NetBSD: patch-ag,v 1.1 2008/06/21 19:31:03 joerg Exp $
+
+Reorder some functions to ensure they are defined before used.
+
+--- src/cfft.f.orig	1996-10-19 19:55:37.000000000 +0000
++++ src/cfft.f
+@@ -13,42 +13,137 @@
+ *
+-      SUBROUTINE CFFTI(N,WSAVE)
++      SUBROUTINE CFFTF1(N,C,CH,WA,IFAC)
+ CSE
+       IMPLICIT REAL*8(A-H,O-Z)
+-C***BEGIN PROLOGUE  CFFTI
+-C***DATE WRITTEN   790601   (YYMMDD)
+-C***REVISION DATE  830401   (YYMMDD)
+-C***CATEGORY NO.  J1A2
+-C***KEYWORDS  FOURIER TRANSFORM
+-C***AUTHOR  SWARZTRAUBER, P. N., (NCAR)
+-CPS
+-C***PURPOSE  Initialize for CFFTF and CFFTB.
+-C***DESCRIPTION
+-C
+-C  Subroutine CFFTI initializes the array WSAVE which is used in
+-C  both CFFTF and CFFTB.  The prime factorization of N together with
+-C  a tabulation of the trigonometric functions are computed and
+-C  stored in WSAVE.
+-CPE
+-CAS
+-C  Input Parameter
+-C
+-C  N       the length of the sequence to be transformed
+-C
+-C  Output Parameter
+-C
+-C  WSAVE   a work array which must be dimensioned at least 4*N+15.
+-C          The same work array can be used for both CFFTF and CFFTB
+-C          as long as N remains unchanged.  Different WSAVE arrays
+-C          are required for different values of N.  The contents of
+-C          WSAVE must not be changed between calls of CFFTF or CFFTB.
+-CAE
+-C***REFERENCES  (NONE)
+-C***ROUTINES CALLED  CFFTI1
+-C***END PROLOGUE  CFFTI
+-      DIMENSION       WSAVE(1)
+-C***FIRST EXECUTABLE STATEMENT  CFFTI
+-      IF (N .EQ. 1) RETURN
+-      IW1 = N+N+1
+-      IW2 = IW1+N+N
+-      CALL CFFTI1 (N,WSAVE(IW1),WSAVE(IW2))
++C***BEGIN PROLOGUE  CFFTF1
++C***REFER TO  CFFTF
++C***ROUTINES CALLED  PASSF,PASSF2,PASSF3,PASSF4,PASSF5
++C***END PROLOGUE  CFFTF1
++      DIMENSION       CH(1)      ,C(1)       ,WA(1)      ,IFAC(2)
++C***FIRST EXECUTABLE STATEMENT  CFFTF1
++      NF = IFAC(2)
++      NA = 0
++      L1 = 1
++      IW = 1
++      DO 116 K1=1,NF
++         IP = IFAC(K1+2)
++         L2 = IP*L1
++         IDO = N/L2
++         IDOT = IDO+IDO
++         IDL1 = IDOT*L1
++         IF (IP .NE. 4) GO TO 103
++         IX2 = IW+IDOT
++         IX3 = IX2+IDOT
++         IF (NA .NE. 0) GO TO 101
++         CALL PASSF4 (IDOT,L1,C,CH,WA(IW),WA(IX2),WA(IX3))
++         GO TO 102
++  101    CALL PASSF4 (IDOT,L1,CH,C,WA(IW),WA(IX2),WA(IX3))
++  102    NA = 1-NA
++         GO TO 115
++  103    IF (IP .NE. 2) GO TO 106
++         IF (NA .NE. 0) GO TO 104
++         CALL PASSF2 (IDOT,L1,C,CH,WA(IW))
++         GO TO 105
++  104    CALL PASSF2 (IDOT,L1,CH,C,WA(IW))
++  105    NA = 1-NA
++         GO TO 115
++  106    IF (IP .NE. 3) GO TO 109
++         IX2 = IW+IDOT
++         IF (NA .NE. 0) GO TO 107
++         CALL PASSF3 (IDOT,L1,C,CH,WA(IW),WA(IX2))
++         GO TO 108
++  107    CALL PASSF3 (IDOT,L1,CH,C,WA(IW),WA(IX2))
++  108    NA = 1-NA
++         GO TO 115
++  109    IF (IP .NE. 5) GO TO 112
++         IX2 = IW+IDOT
++         IX3 = IX2+IDOT
++         IX4 = IX3+IDOT
++         IF (NA .NE. 0) GO TO 110
++         CALL PASSF5 (IDOT,L1,C,CH,WA(IW),WA(IX2),WA(IX3),WA(IX4))
++         GO TO 111
++  110    CALL PASSF5 (IDOT,L1,CH,C,WA(IW),WA(IX2),WA(IX3),WA(IX4))
++  111    NA = 1-NA
++         GO TO 115
++  112    IF (NA .NE. 0) GO TO 113
++         CALL PASSF (NAC,IDOT,IP,L1,IDL1,C,C,C,CH,CH,WA(IW))
++         GO TO 114
++  113    CALL PASSF (NAC,IDOT,IP,L1,IDL1,CH,CH,CH,C,C,WA(IW))
++  114    IF (NAC .NE. 0) NA = 1-NA
++  115    L1 = L2
++         IW = IW+(IP-1)*IDOT
++  116 CONTINUE
++      IF (NA .EQ. 0) RETURN
++      N2 = N+N
++      DO 117 I=1,N2
++         C(I) = CH(I)
++  117 CONTINUE
++      RETURN
++      END
++*
++      SUBROUTINE CFFTB1(N,C,CH,WA,IFAC)
++CSE
++      IMPLICIT REAL*8(A-H,O-Z)
++C***BEGIN PROLOGUE  CFFTB1
++C***REFER TO  CFFTB
++C***ROUTINES CALLED  PASSB,PASSB2,PASSB3,PASSB4,PASSB5
++C***END PROLOGUE  CFFTB1
++      DIMENSION       CH(1)      ,C(1)       ,WA(1)      ,IFAC(2)
++C***FIRST EXECUTABLE STATEMENT  CFFTB1
++      NF = IFAC(2)
++      NA = 0
++      L1 = 1
++      IW = 1
++      DO 116 K1=1,NF
++         IP = IFAC(K1+2)
++         L2 = IP*L1
++         IDO = N/L2
++         IDOT = IDO+IDO
++         IDL1 = IDOT*L1
++         IF (IP .NE. 4) GO TO 103
++         IX2 = IW+IDOT
++         IX3 = IX2+IDOT
++         IF (NA .NE. 0) GO TO 101
++         CALL PASSB4 (IDOT,L1,C,CH,WA(IW),WA(IX2),WA(IX3))
++         GO TO 102
++  101    CALL PASSB4 (IDOT,L1,CH,C,WA(IW),WA(IX2),WA(IX3))
++  102    NA = 1-NA
++         GO TO 115
++  103    IF (IP .NE. 2) GO TO 106
++         IF (NA .NE. 0) GO TO 104
++         CALL PASSB2 (IDOT,L1,C,CH,WA(IW))
++         GO TO 105
++  104    CALL PASSB2 (IDOT,L1,CH,C,WA(IW))
++  105    NA = 1-NA
++         GO TO 115
++  106    IF (IP .NE. 3) GO TO 109
++         IX2 = IW+IDOT
++         IF (NA .NE. 0) GO TO 107
++         CALL PASSB3 (IDOT,L1,C,CH,WA(IW),WA(IX2))
++         GO TO 108
++  107    CALL PASSB3 (IDOT,L1,CH,C,WA(IW),WA(IX2))
++  108    NA = 1-NA
++         GO TO 115
++  109    IF (IP .NE. 5) GO TO 112
++         IX2 = IW+IDOT
++         IX3 = IX2+IDOT
++         IX4 = IX3+IDOT
++         IF (NA .NE. 0) GO TO 110
++         CALL PASSB5 (IDOT,L1,C,CH,WA(IW),WA(IX2),WA(IX3),WA(IX4))
++         GO TO 111
++  110    CALL PASSB5 (IDOT,L1,CH,C,WA(IW),WA(IX2),WA(IX3),WA(IX4))
++  111    NA = 1-NA
++         GO TO 115
++  112    IF (NA .NE. 0) GO TO 113
++         CALL PASSB (NAC,IDOT,IP,L1,IDL1,C,C,C,CH,CH,WA(IW))
++         GO TO 114
++  113    CALL PASSB (NAC,IDOT,IP,L1,IDL1,CH,CH,CH,C,C,WA(IW))
++  114    IF (NAC .NE. 0) NA = 1-NA
++  115    L1 = L2
++         IW = IW+(IP-1)*IDOT
++  116 CONTINUE
++      IF (NA .EQ. 0) RETURN
++      N2 = N+N
++      DO 117 I=1,N2
++         C(I) = CH(I)
++  117 CONTINUE
+       RETURN
+@@ -124,2 +219,45 @@ C***FIRST EXECUTABLE STATEMENT  CFFTI1
+ *
++      SUBROUTINE CFFTI(N,WSAVE)
++CSE
++      IMPLICIT REAL*8(A-H,O-Z)
++C***BEGIN PROLOGUE  CFFTI
++C***DATE WRITTEN   790601   (YYMMDD)
++C***REVISION DATE  830401   (YYMMDD)
++C***CATEGORY NO.  J1A2
++C***KEYWORDS  FOURIER TRANSFORM
++C***AUTHOR  SWARZTRAUBER, P. N., (NCAR)
++CPS
++C***PURPOSE  Initialize for CFFTF and CFFTB.
++C***DESCRIPTION
++C
++C  Subroutine CFFTI initializes the array WSAVE which is used in
++C  both CFFTF and CFFTB.  The prime factorization of N together with
++C  a tabulation of the trigonometric functions are computed and
++C  stored in WSAVE.
++CPE
++CAS
++C  Input Parameter
++C
++C  N       the length of the sequence to be transformed
++C
++C  Output Parameter
++C
++C  WSAVE   a work array which must be dimensioned at least 4*N+15.
++C          The same work array can be used for both CFFTF and CFFTB
++C          as long as N remains unchanged.  Different WSAVE arrays
++C          are required for different values of N.  The contents of
++C          WSAVE must not be changed between calls of CFFTF or CFFTB.
++CAE
++C***REFERENCES  (NONE)
++C***ROUTINES CALLED  CFFTI1
++C***END PROLOGUE  CFFTI
++      DIMENSION       WSAVE(1)
++C***FIRST EXECUTABLE STATEMENT  CFFTI
++      IF (N .EQ. 1) RETURN
++      IW1 = N+N+1
++      IW2 = IW1+N+N
++      CALL CFFTI1 (N,WSAVE(IW1),WSAVE(IW2))
++      RETURN
++      END
++*
+       SUBROUTINE CFFTF(N,C,WSAVE)
+@@ -192,71 +330,2 @@ C***FIRST EXECUTABLE STATEMENT  CFFTF
+ *
+-      SUBROUTINE CFFTF1(N,C,CH,WA,IFAC)
+-CSE
+-      IMPLICIT REAL*8(A-H,O-Z)
+-C***BEGIN PROLOGUE  CFFTF1
+-C***REFER TO  CFFTF
+-C***ROUTINES CALLED  PASSF,PASSF2,PASSF3,PASSF4,PASSF5
+-C***END PROLOGUE  CFFTF1
+-      DIMENSION       CH(1)      ,C(1)       ,WA(1)      ,IFAC(2)
+-C***FIRST EXECUTABLE STATEMENT  CFFTF1
+-      NF = IFAC(2)
+-      NA = 0
+-      L1 = 1
+-      IW = 1
+-      DO 116 K1=1,NF
+-         IP = IFAC(K1+2)
+-         L2 = IP*L1
+-         IDO = N/L2
+-         IDOT = IDO+IDO
+-         IDL1 = IDOT*L1
+-         IF (IP .NE. 4) GO TO 103
+-         IX2 = IW+IDOT
+-         IX3 = IX2+IDOT
+-         IF (NA .NE. 0) GO TO 101
+-         CALL PASSF4 (IDOT,L1,C,CH,WA(IW),WA(IX2),WA(IX3))
+-         GO TO 102
+-  101    CALL PASSF4 (IDOT,L1,CH,C,WA(IW),WA(IX2),WA(IX3))
+-  102    NA = 1-NA
+-         GO TO 115
+-  103    IF (IP .NE. 2) GO TO 106
+-         IF (NA .NE. 0) GO TO 104
+-         CALL PASSF2 (IDOT,L1,C,CH,WA(IW))
+-         GO TO 105
+-  104    CALL PASSF2 (IDOT,L1,CH,C,WA(IW))
+-  105    NA = 1-NA
+-         GO TO 115
+-  106    IF (IP .NE. 3) GO TO 109
+-         IX2 = IW+IDOT
+-         IF (NA .NE. 0) GO TO 107
+-         CALL PASSF3 (IDOT,L1,C,CH,WA(IW),WA(IX2))
+-         GO TO 108
+-  107    CALL PASSF3 (IDOT,L1,CH,C,WA(IW),WA(IX2))
+-  108    NA = 1-NA
+-         GO TO 115
+-  109    IF (IP .NE. 5) GO TO 112
+-         IX2 = IW+IDOT
+-         IX3 = IX2+IDOT
+-         IX4 = IX3+IDOT
+-         IF (NA .NE. 0) GO TO 110
+-         CALL PASSF5 (IDOT,L1,C,CH,WA(IW),WA(IX2),WA(IX3),WA(IX4))
+-         GO TO 111
+-  110    CALL PASSF5 (IDOT,L1,CH,C,WA(IW),WA(IX2),WA(IX3),WA(IX4))
+-  111    NA = 1-NA
+-         GO TO 115
+-  112    IF (NA .NE. 0) GO TO 113
+-         CALL PASSF (NAC,IDOT,IP,L1,IDL1,C,C,C,CH,CH,WA(IW))
+-         GO TO 114
+-  113    CALL PASSF (NAC,IDOT,IP,L1,IDL1,CH,CH,CH,C,C,WA(IW))
+-  114    IF (NAC .NE. 0) NA = 1-NA
+-  115    L1 = L2
+-         IW = IW+(IP-1)*IDOT
+-  116 CONTINUE
+-      IF (NA .EQ. 0) RETURN
+-      N2 = N+N
+-      DO 117 I=1,N2
+-         C(I) = CH(I)
+-  117 CONTINUE
+-      RETURN
+-      END
+-*
+       SUBROUTINE PASSF(NAC,IDO,IP,L1,IDL1,CC,C1,C2,CH,CH2,WA)
+@@ -797,71 +866,2 @@ C***FIRST EXECUTABLE STATEMENT  CFFTB
+ *
+-      SUBROUTINE CFFTB1(N,C,CH,WA,IFAC)
+-CSE
+-      IMPLICIT REAL*8(A-H,O-Z)
+-C***BEGIN PROLOGUE  CFFTB1
+-C***REFER TO  CFFTB
+-C***ROUTINES CALLED  PASSB,PASSB2,PASSB3,PASSB4,PASSB5
+-C***END PROLOGUE  CFFTB1
+-      DIMENSION       CH(1)      ,C(1)       ,WA(1)      ,IFAC(2)
+-C***FIRST EXECUTABLE STATEMENT  CFFTB1
+-      NF = IFAC(2)
+-      NA = 0
+-      L1 = 1
+-      IW = 1
+-      DO 116 K1=1,NF
+-         IP = IFAC(K1+2)
+-         L2 = IP*L1
+-         IDO = N/L2
+-         IDOT = IDO+IDO
+-         IDL1 = IDOT*L1
+-         IF (IP .NE. 4) GO TO 103
+-         IX2 = IW+IDOT
+-         IX3 = IX2+IDOT
+-         IF (NA .NE. 0) GO TO 101
+-         CALL PASSB4 (IDOT,L1,C,CH,WA(IW),WA(IX2),WA(IX3))
+-         GO TO 102
+-  101    CALL PASSB4 (IDOT,L1,CH,C,WA(IW),WA(IX2),WA(IX3))
+-  102    NA = 1-NA
+-         GO TO 115
+-  103    IF (IP .NE. 2) GO TO 106
+-         IF (NA .NE. 0) GO TO 104
+-         CALL PASSB2 (IDOT,L1,C,CH,WA(IW))
+-         GO TO 105
+-  104    CALL PASSB2 (IDOT,L1,CH,C,WA(IW))
+-  105    NA = 1-NA
+-         GO TO 115
+-  106    IF (IP .NE. 3) GO TO 109
+-         IX2 = IW+IDOT
+-         IF (NA .NE. 0) GO TO 107
+-         CALL PASSB3 (IDOT,L1,C,CH,WA(IW),WA(IX2))
+-         GO TO 108
+-  107    CALL PASSB3 (IDOT,L1,CH,C,WA(IW),WA(IX2))
+-  108    NA = 1-NA
+-         GO TO 115
+-  109    IF (IP .NE. 5) GO TO 112
+-         IX2 = IW+IDOT
+-         IX3 = IX2+IDOT
+-         IX4 = IX3+IDOT
+-         IF (NA .NE. 0) GO TO 110
+-         CALL PASSB5 (IDOT,L1,C,CH,WA(IW),WA(IX2),WA(IX3),WA(IX4))
+-         GO TO 111
+-  110    CALL PASSB5 (IDOT,L1,CH,C,WA(IW),WA(IX2),WA(IX3),WA(IX4))
+-  111    NA = 1-NA
+-         GO TO 115
+-  112    IF (NA .NE. 0) GO TO 113
+-         CALL PASSB (NAC,IDOT,IP,L1,IDL1,C,C,C,CH,CH,WA(IW))
+-         GO TO 114
+-  113    CALL PASSB (NAC,IDOT,IP,L1,IDL1,CH,CH,CH,C,C,WA(IW))
+-  114    IF (NAC .NE. 0) NA = 1-NA
+-  115    L1 = L2
+-         IW = IW+(IP-1)*IDOT
+-  116 CONTINUE
+-      IF (NA .EQ. 0) RETURN
+-      N2 = N+N
+-      DO 117 I=1,N2
+-         C(I) = CH(I)
+-  117 CONTINUE
+-      RETURN
+-      END
+-*
+       SUBROUTINE PASSB(NAC,IDO,IP,L1,IDL1,CC,C1,C2,CH,CH2,WA)
