@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2008/06/21 22:13:09 joerg Exp $
+
+--- lib/erl_interface/src/connect/ei_resolve.c.orig	2008-06-20 20:15:09.000000000 +0200
++++ lib/erl_interface/src/connect/ei_resolve.c
+@@ -614,7 +614,7 @@ struct hostent *ei_gethostbyname_r(const
+ #ifndef HAVE_GETHOSTBYNAME_R
+   return my_gethostbyname_r(name,hostp,buffer,buflen,h_errnop);
+ #else
+-#ifdef __GLIBC__
++#if defined(__GLIBC__) || defined(__FreeBSD__)
+   struct hostent *result;
+ 
+   gethostbyname_r(name, hostp, buffer, buflen, &result, h_errnop);
