@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2007/11/30 22:31:16 wiz Exp $
+@comment $NetBSD: PLIST,v 1.16 2008/06/21 18:47:44 wiz Exp $
 bin/fc-cache
 bin/fc-cat
 bin/fc-list
@@ -159,6 +159,7 @@ man/man3/FcStrCmp.3
 man/man3/FcStrCmpIgnoreCase.3
 man/man3/FcStrCopy.3
 man/man3/FcStrCopyFilename.3
+man/man3/FcStrDirname.3
 man/man3/FcStrDowncase.3
 man/man3/FcStrFree.3
 man/man3/FcStrListCreate.3
@@ -345,6 +346,7 @@ share/doc/fontconfig/fontconfig-devel/r446.html
 share/doc/fontconfig/fontconfig-devel/r4484.html
 share/doc/fontconfig/fontconfig-devel/r4509.html
 share/doc/fontconfig/fontconfig-devel/r4530.html
+share/doc/fontconfig/fontconfig-devel/r4552.html
 share/doc/fontconfig/fontconfig-devel/r475.html
 share/doc/fontconfig/fontconfig-devel/r570.html
 share/doc/fontconfig/fontconfig-devel/r600.html
@@ -385,13 +387,13 @@ share/examples/fontconfig/conf.avail/50-user.conf
 share/examples/fontconfig/conf.avail/51-local.conf
 share/examples/fontconfig/conf.avail/60-latin.conf
 share/examples/fontconfig/conf.avail/65-fonts-persian.conf
+share/examples/fontconfig/conf.avail/65-khmer.conf
 share/examples/fontconfig/conf.avail/65-nonlatin.conf
 share/examples/fontconfig/conf.avail/69-unifont.conf
 share/examples/fontconfig/conf.avail/70-no-bitmaps.conf
 share/examples/fontconfig/conf.avail/70-yes-bitmaps.conf
 share/examples/fontconfig/conf.avail/80-delicious.conf
 share/examples/fontconfig/conf.avail/90-synthetic.conf
-share/examples/fontconfig/conf.avail/README
 share/examples/fontconfig/conf.d/20-fix-globaladvance.conf
 share/examples/fontconfig/conf.d/20-unhint-small-vera.conf
 share/examples/fontconfig/conf.d/30-metric-aliases.conf
@@ -407,6 +409,7 @@ share/examples/fontconfig/conf.d/65-nonlatin.conf
 share/examples/fontconfig/conf.d/69-unifont.conf
 share/examples/fontconfig/conf.d/80-delicious.conf
 share/examples/fontconfig/conf.d/90-synthetic.conf
+share/examples/fontconfig/conf.d/README
 share/examples/fontconfig/fonts.conf
 share/examples/fontconfig/fonts.dtd
 @dirrm share/examples/fontconfig/conf.d
