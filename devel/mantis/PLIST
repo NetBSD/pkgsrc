@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/05/14 21:43:06 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/06/21 15:17:00 adrianp Exp $
 share/doc/mantis/CUSTOMIZATION
 share/doc/mantis/INSTALL
 share/examples/mantis/config_inc.php
@@ -10,10 +10,7 @@ share/mantis/account_prefs_inc.php
 share/mantis/account_prefs_page.php
 share/mantis/account_prefs_reset.php
 share/mantis/account_prefs_update.php
-share/mantis/account_prof_add.php
-share/mantis/account_prof_delete.php
 share/mantis/account_prof_edit_page.php
-share/mantis/account_prof_make_default.php
 share/mantis/account_prof_menu_page.php
 share/mantis/account_prof_update.php
 share/mantis/account_sponsor_page.php
@@ -89,7 +86,6 @@ share/mantis/bug_actiongroup_page.php
 share/mantis/bug_assign.php
 share/mantis/bug_assign_reporter.php
 share/mantis/bug_change_status_page.php
-share/mantis/bug_delete.php
 share/mantis/bug_file_add.php
 share/mantis/bug_file_delete.php
 share/mantis/bug_file_upload_inc.php
@@ -319,6 +315,7 @@ share/mantis/core/email_queue_api.php
 share/mantis/core/error_api.php
 share/mantis/core/file_api.php
 share/mantis/core/filter_api.php
+share/mantis/core/form_api.php
 share/mantis/core/gpc_api.php
 share/mantis/core/graph_api.php
 share/mantis/core/graphviz_api.php
@@ -373,6 +370,7 @@ share/mantis/core/relationship_api.php
 share/mantis/core/relationship_graph_api.php
 share/mantis/core/rss_api.php
 share/mantis/core/send_emails.php
+share/mantis/core/session_api.php
 share/mantis/core/sponsorship_api.php
 share/mantis/core/string_api.php
 share/mantis/core/summary_api.php
