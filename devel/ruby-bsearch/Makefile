@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/06/19 14:47:00 taca Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/21 10:12:59 taca Exp $
 
 DISTNAME=	ruby-bsearch-${VERSION}
 PKGNAME=	${RUBY_PKGPREFIX}-bsearch-${VERSION}
@@ -20,7 +20,7 @@ TEST_TARGET=	check
 RD_SRCS=	bsearch.en.rd bsearch.ja.rd
 DOCS=		${RD_SRCS} bsearch.en.html bsearch.ja.html bsearch.png
 
-INSTALLATION_DIRS=	${RUBY_DOC}/bsearch
+INSTALLATION_DIRS=	${RUBY_DOC}/bsearch ${RUBY_VENDORLIB}
 
 do-build:
 .for f in ${RD_SRCS}
