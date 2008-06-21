@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2008/06/21 18:12:42 joerg Exp $
+
+--- bsp/polygon.C.orig	2008-06-21 12:05:25.000000000 +0000
++++ bsp/polygon.C
+@@ -130,7 +130,7 @@ void
+ PolygonPrint3f(FILE *fp, Polygon3f *p)
+ {
+ 	int i;
+-	fprintf(fp, "numverts=%d material_index=%d\n", p->numverts, p->material_index);
++	fprintf(fp, "numverts=%d material_index=%p\n", p->numverts, p->material_index);
+ 	for (i = 0; i < p->numverts; i++)
+ 		fprintf(fp, "%f %f %f\n",
+ 			p->verts[i][0], p->verts[i][1], p->verts[i][2]);

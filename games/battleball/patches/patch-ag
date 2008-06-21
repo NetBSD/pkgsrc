@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2008/06/21 18:12:42 joerg Exp $
+
+--- bsp/polygon.h.orig	2008-06-21 12:04:08.000000000 +0000
++++ bsp/polygon.h
+@@ -21,7 +21,7 @@ typedef struct {
+ 	int numverts;
+ 	Vec3f verts[MAXPOLYVERT];
+ 	Vec3f plane_normal;
+-	int material_index;
++	void *material_index;
+         int facesForward;   // true: faces same dir as BSP node's plane faces
+ } Polygon3f;
+ 
