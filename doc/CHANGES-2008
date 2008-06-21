@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1346 2008/06/21 18:38:17 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1347 2008/06/21 18:48:01 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2246,3 +2246,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/py-rss2gen version 1.0.0 [tonnerre 2008-06-21]
 	Updated x11/xinit to 1.1.0 [wiz 2008-06-21]
 	Updated emulators/mednafen to 0.8.9 [wiz 2008-06-21]
+	Updated fonts/fontconfig to 2.6.0 [wiz 2008-06-21]
