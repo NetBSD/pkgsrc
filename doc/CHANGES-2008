@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1337 2008/06/21 15:17:14 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1338 2008/06/21 15:54:16 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2237,3 +2237,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/nagios-base to 2.12 [tonnerre 2008-06-21]
 	Updated net/nagios-nrpe to 2.12 [tonnerre 2008-06-21]
 	Updated devel/mantis to 1.1.2 [adrianp 2008-06-21]
+	Updated net/clive to 0.4.16 [wiz 2008-06-21]
