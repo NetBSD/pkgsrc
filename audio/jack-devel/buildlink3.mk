@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/04/08 01:44:47 bjs Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/06/21 20:37:40 bjs Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 JACK_BUILDLINK3_MK:=	${JACK_BUILDLINK3_MK}+
@@ -15,5 +15,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}jack
 BUILDLINK_API_DEPENDS.jack+=	jack>=0.110.0
 BUILDLINK_PKGSRCDIR.jack?=	../../audio/jack-devel
 .endif	# JACK_BUILDLINK3_MK
+
+.include "../../audio/libsamplerate/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
