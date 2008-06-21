@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.551 2008/06/21 10:40:29 taca Exp $
+# $NetBSD: Makefile,v 1.552 2008/06/21 17:52:42 tonnerre Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -345,6 +345,7 @@ SUBDIR+=	py-flup
 SUBDIR+=	py-jonpy
 SUBDIR+=	py-moin
 SUBDIR+=	py-nevow
+SUBDIR+=	py-rss2gen
 SUBDIR+=	py-swish-e
 SUBDIR+=	py-webpy
 SUBDIR+=	qDecoder
