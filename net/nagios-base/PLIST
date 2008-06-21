@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2007/11/26 22:14:13 seb Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/06/21 14:35:49 tonnerre Exp $
 bin/nagios
 bin/nagiostats
 bin/p1.pl
@@ -18,11 +18,9 @@ libexec/nagios/cgi-bin/statuswrl.cgi
 libexec/nagios/cgi-bin/summary.cgi
 libexec/nagios/cgi-bin/tac.cgi
 libexec/nagios/cgi-bin/trends.cgi
-share/examples/nagios/bigger.cfg-sample
 share/examples/nagios/cgi.cfg-sample
-share/examples/nagios/checkcommands.cfg-sample
-share/examples/nagios/minimal.cfg-sample
-share/examples/nagios/misccommands.cfg-sample
+share/examples/nagios/commands.cfg-sample
+share/examples/nagios/localhost.cfg-sample
 share/examples/nagios/nagios.cfg-sample
 share/examples/nagios/nagios.conf
 share/examples/nagios/resource.cfg-sample
