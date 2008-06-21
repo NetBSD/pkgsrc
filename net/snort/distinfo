@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.43 2008/05/25 23:49:07 adrianp Exp $
+$NetBSD: distinfo,v 1.44 2008/06/21 21:44:21 joerg Exp $
 
 SHA1 (snort-2.8.1.tar.gz) = 1551ffc7bf60f5330304f3f222fa4f7c4929f5c5
 RMD160 (snort-2.8.1.tar.gz) = cb7cc76c07abbfdddcb4b3a5b5fc39371faf0a0c
@@ -9,3 +9,5 @@ SHA1 (patch-ac) = 6cdf26fcaeb8dad9cd9562b77377bd56b49c9f38
 SHA1 (patch-ad) = d4bf1dee02af1f1730263a78a868bbdae5d8846d
 SHA1 (patch-ae) = ca74cfab6d9010d037a1e72e7c39b7982888c476
 SHA1 (patch-af) = ce5129f0337514c9a2a9a482e2f1ed9a405112ec
+SHA1 (patch-ag) = 1dfcb56284528b307f44d911f84f64832d907139
+SHA1 (patch-ah) = 1dee26c42c30e60be83a5e574183f2394d23e340
