@@ -1,0 +1,19 @@
+$NetBSD: patch-ag,v 1.1 2008/06/21 21:44:21 joerg Exp $
+
+--- src/sfutil/sf_textlog.h.orig	2008-06-21 15:32:51.000000000 +0000
++++ src/sfutil/sf_textlog.h
+@@ -40,13 +40,13 @@
+ #ifndef _SF_TEXT_LOG_H
+ #define _SF_TEXT_LOG_H
+ 
++#include <stdbool.h>
+ #include <stdio.h>
+ #include <string.h>
+ #include <time.h>
+ 
+ #include "debug.h" /* for INLINE */
+ 
+-typedef int bool;
+ #define TRUE 1
+ #define FALSE 0
+ 
