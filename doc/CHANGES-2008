@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1344 2008/06/21 17:53:52 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1345 2008/06/21 18:25:28 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2244,3 +2244,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated math/mathomatic to 14.0.5 [minskim 2008-06-21]
 	Updated databases/shared-mime-info to 0.40 [wiz 2008-06-21]
 	Added www/py-rss2gen version 1.0.0 [tonnerre 2008-06-21]
+	Updated x11/xinit to 1.1.0 [wiz 2008-06-21]
