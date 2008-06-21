@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/07/20 11:53:27 tnn Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/21 13:09:09 dsainty Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -26,6 +26,8 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES
+CONFIGURE_ENV+=		ac_cv_path_DOXYGEN=no
+CONFIGURE_ENV+=		ac_cv_path_LATEX=no
 
 .include "../../mk/bsd.prefs.mk"
 
