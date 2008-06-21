@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7345 2008/06/20 15:42:47 he Exp $
+$NetBSD: TODO,v 1.7346 2008/06/21 15:38:34 wiz Exp $
 
 Suggested new packages
 ======================
@@ -382,8 +382,8 @@ Suggested package updates
 	o ZIPIdent-2.9
 	o a2ps-4.14
 	o aap-0.144
-	o abcm2ps-5.8.0
-	o abcmidi-20080104
+	o abcm2ps-5.8.1
+	o abcmidi-20080614
 	o abiword-2.6.2
 	o acme-091
 	o acr-0.5.2
@@ -503,6 +503,7 @@ Suggested package updates
 	o clearsilver-0.10.5
 	o clearsilver-base-0.10.5
 	o clisp-2.45
+	o clive-0.4.16
 	o cmake-2.6.0
 	o cocoon-2.1.10
 	o colorize-0.3.4
@@ -555,6 +556,7 @@ Suggested package updates
 	o drscheme-371
 	o dvdstyler-1.6.2
 	o dvipng-1.11
+	o dwm-5.0
 	o eagle-4.16
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
@@ -667,9 +669,10 @@ Suggested package updates
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
-	o gnustep-1.14.0
+	o gnustep-1.16.1
 	o gnustep-examples-1.2.0
 	o gnustep-objc-1.4.0
+	o gnutls-2.4.0
 	o gob2-2.0.15
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
@@ -690,6 +693,8 @@ Suggested package updates
 	o gsharutils-4.7
 	o gsm-1.0.12
 	o gss-0.0.22
+	o gst-plugins0.10-base-0.10.20
+	o gstreamer0.10-0.10.20
 	o gtexinfo-4.12
 	o gtick-0.4.2
 	o gtk-systrace-20030623
@@ -951,6 +956,7 @@ Suggested package updates
 	o openmotif-2.3.0 [pkg/38038]
 	o openssl-0.9.8h
 	o openttd-0.6.1
+	o opera-9.50
 	o orca-2.22.2
 	o oregano-0.60.0
 	o oroborus-2.0.18
@@ -1106,6 +1112,7 @@ Suggested package updates
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
+	o py-gstreamer0.10-0.10.12
 	o py-imagingtk-1.1.6
 	o py-kenosis-0.96
 	o py-ldap-2.3.4
@@ -1179,7 +1186,7 @@ Suggested package updates
 	o ruby-rbtree-0.3.0
 	o ruby-sqlite3-1.2.2
 	o rudiments-0.30
-	o rxvt-unicode-9.0
+	o rxvt-unicode-9.05 [pkg/38988]
 	o sablecc-3.2
 	o samba-3.0.30
 	o sarg-2.2.5
@@ -1248,9 +1255,10 @@ Suggested package updates
 	o streamripper-1.63.0
 	o subtitleripper-0.3.4
 	o sunbird-0.5 [ghen]
-	o suse_base-10.3
+	o suse_base-11.0
 	o swfdec-0.6.6
 	o swi-prolog-5.6.31
+	o sylpheed-2.5.0
 	o sysinfo-4.2.2
 	o systrace-1.6e
 	o tacacs-4.0.4.14
