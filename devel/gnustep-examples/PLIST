@@ -1,21 +1,18 @@
-@comment $NetBSD: PLIST,v 1.5 2004/09/27 01:14:18 rh Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/06/21 22:43:21 joerg Exp $
 share/GNUstep/Local/Applications/Calculator.app/Calculator
 share/GNUstep/Local/Applications/Calculator.app/Resources/Calculator.app.tiff
 share/GNUstep/Local/Applications/Calculator.app/Resources/Calculator.desktop
 share/GNUstep/Local/Applications/Calculator.app/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/Calculator.app/library_paths.openapp
 share/GNUstep/Local/Applications/Calculator.app/stamp.make
 share/GNUstep/Local/Applications/CurrencyConverter.app/CurrencyConverter
 share/GNUstep/Local/Applications/CurrencyConverter.app/Resources/CurrencyConverter.desktop
 share/GNUstep/Local/Applications/CurrencyConverter.app/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/CurrencyConverter.app/library_paths.openapp
 share/GNUstep/Local/Applications/CurrencyConverter.app/stamp.make
 share/GNUstep/Local/Applications/GSTest.app/GSTest
 share/GNUstep/Local/Applications/GSTest.app/Resources/GSTest.desktop
 share/GNUstep/Local/Applications/GSTest.app/Resources/Info-gnustep.plist
 share/GNUstep/Local/Applications/GSTest.app/Resources/MainMenu.gorm/data.classes
 share/GNUstep/Local/Applications/GSTest.app/Resources/MainMenu.gorm/objects.gorm
-share/GNUstep/Local/Applications/GSTest.app/library_paths.openapp
 share/GNUstep/Local/Applications/GSTest.app/stamp.make
 share/GNUstep/Local/Applications/Ink.app/Ink
 share/GNUstep/Local/Applications/Ink.app/Resources/FileIcon_rtf.tiff
@@ -24,24 +21,20 @@ share/GNUstep/Local/Applications/Ink.app/Resources/Info-gnustep.plist
 share/GNUstep/Local/Applications/Ink.app/Resources/Ink.desktop
 share/GNUstep/Local/Applications/Ink.app/Resources/Ink_app.tiff
 share/GNUstep/Local/Applications/Ink.app/Resources/Readme.rtf
-share/GNUstep/Local/Applications/Ink.app/library_paths.openapp
 share/GNUstep/Local/Applications/Ink.app/stamp.make
 share/GNUstep/Local/Applications/NSBrowserTest.app/NSBrowserTest
 share/GNUstep/Local/Applications/NSBrowserTest.app/Resources/Info-gnustep.plist
 share/GNUstep/Local/Applications/NSBrowserTest.app/Resources/NSBrowserTest.desktop
-share/GNUstep/Local/Applications/NSBrowserTest.app/library_paths.openapp
 share/GNUstep/Local/Applications/NSBrowserTest.app/stamp.make
 share/GNUstep/Local/Applications/NSPanelTest.app/NSPanelTest
 share/GNUstep/Local/Applications/NSPanelTest.app/Resources/Info-gnustep.plist
 share/GNUstep/Local/Applications/NSPanelTest.app/Resources/NSPanelTest.desktop
 share/GNUstep/Local/Applications/NSPanelTest.app/Resources/Test.strings
 share/GNUstep/Local/Applications/NSPanelTest.app/Resources/icon.tiff
-share/GNUstep/Local/Applications/NSPanelTest.app/library_paths.openapp
 share/GNUstep/Local/Applications/NSPanelTest.app/stamp.make
 share/GNUstep/Local/Applications/NSScreenTest.app/NSScreenTest
 share/GNUstep/Local/Applications/NSScreenTest.app/Resources/Info-gnustep.plist
 share/GNUstep/Local/Applications/NSScreenTest.app/Resources/NSScreenTest.desktop
-share/GNUstep/Local/Applications/NSScreenTest.app/library_paths.openapp
 share/GNUstep/Local/Applications/NSScreenTest.app/stamp.make
 share/GNUstep/Local/Library/ApplicationSupport/GSTest/Composite-test.bundle/Composite-test
 share/GNUstep/Local/Library/ApplicationSupport/GSTest/Composite-test.bundle/Resources/Info-gnustep.plist
@@ -97,6 +90,14 @@ share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSWindowStyleMask-test.bun
 share/GNUstep/Local/Library/ApplicationSupport/GSTest/StringDrawing-test.bundle/Resources/Info-gnustep.plist
 share/GNUstep/Local/Library/ApplicationSupport/GSTest/StringDrawing-test.bundle/StringDrawing-test
 share/GNUstep/Local/Library/ApplicationSupport/GSTest/StringDrawing-test.bundle/stamp.make
+share/GNUstep/Local/Tools/Calculator
+share/GNUstep/Local/Tools/CurrencyConverter
+share/GNUstep/Local/Tools/GSTest
+share/GNUstep/Local/Tools/Ink
+share/GNUstep/Local/Tools/NSBrowserTest
+share/GNUstep/Local/Tools/NSPanelTest
+share/GNUstep/Local/Tools/NSScreenTest
+@dirrm share/GNUstep/Local/Tools
 @dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/StringDrawing-test.bundle/Resources
 @dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/StringDrawing-test.bundle
 @dirrm share/GNUstep/Local/Library/ApplicationSupport/GSTest/NSWindowStyleMask-test.bundle/Resources
@@ -152,3 +153,5 @@ share/GNUstep/Local/Library/ApplicationSupport/GSTest/StringDrawing-test.bundle/
 @dirrm share/GNUstep/Local/Applications/Calculator.app/Resources
 @dirrm share/GNUstep/Local/Applications/Calculator.app
 @comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Applications
+@comment in devel/gnustep-make: @dirrm share/GNUstep/Local
+@comment in devel/gnustep-make: @dirrm share/GNUstep
