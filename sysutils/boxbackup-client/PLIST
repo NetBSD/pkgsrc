@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/21 15:05:13 drochner Exp $
+bin/bbackupctl
+bin/bbackupd
+bin/bbackupd-config
+bin/bbackupquery
