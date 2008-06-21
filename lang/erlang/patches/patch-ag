@@ -1,0 +1,18 @@
+$NetBSD: patch-ag,v 1.1 2008/06/21 22:13:09 joerg Exp $
+
+Allow the system linker to use the shared library for dynamic modules.
+
+--- lib/ssl/c_src/Makefile.in.orig	2008-06-20 19:33:40.000000000 +0200
++++ lib/ssl/c_src/Makefile.in
+@@ -87,11 +87,7 @@ PORT_PROGRAM = $(BINDIR)/ssl_esock$(exe)
+ SKIP_BUILDING_BINARIES := false
+ 
+ # Try to be BC for R10
+-ifeq ($(findstring @SSL_,@SSL_DYNAMIC_ONLY@),@SSL_)
+ DYNAMIC_CRYPTO_LIB=yes
+-else
+-DYNAMIC_CRYPTO_LIB=@SSL_DYNAMIC_ONLY@
+-endif
+ 
+ 
+ ifeq ($(DYNAMIC_CRYPTO_LIB),yes)
