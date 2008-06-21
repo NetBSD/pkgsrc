@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1330 2008/06/20 20:57:51 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1331 2008/06/21 06:38:46 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2230,3 +2230,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/ruby to 1.8.7.22 [taca 2008-06-20]
 	Updated devel/ruby-mode to 1.8.7.22 [taca 2008-06-20]
 	Updated net/freeradius2 to 2.0.5 [adrianp 2008-06-20]
+	Updated lang/camlp5 to 5.09 [tonio 2008-06-21]
