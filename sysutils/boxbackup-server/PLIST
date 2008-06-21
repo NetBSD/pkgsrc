@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/21 15:04:35 drochner Exp $
+bin/bbstoreaccounts
+bin/bbstored
+bin/bbstored-certs
+bin/bbstored-config
+bin/raidfile-config
