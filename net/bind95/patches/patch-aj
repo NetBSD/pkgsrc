@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1.1.1 2008/06/21 23:15:28 adrianp Exp $
+
+--- lib/Makefile.in.orig	2004-03-08 18:04:25.000000000 +0900
++++ lib/Makefile.in
+@@ -23,7 +23,7 @@ top_srcdir =	@top_srcdir@
+ # Attempt to disable parallel processing.
+ .NOTPARALLEL:
+ .NO_PARALLEL:
+-SUBDIRS =	isc isccc dns isccfg bind9 lwres tests
++SUBDIRS =	bind isc isccc dns isccfg bind9 lwres tests
+ TARGETS =
+ 
+ @BIND9_MAKE_RULES@
