@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.550 2008/06/20 14:17:46 he Exp $
+# $NetBSD: Makefile,v 1.551 2008/06/21 10:40:29 taca Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -426,6 +426,7 @@ SUBDIR+=	wwwoffle
 SUBDIR+=	zope-ejsplitter
 SUBDIR+=	zope-jamailhost
 SUBDIR+=	zope210
+SUBDIR+=	zope211
 SUBDIR+=	zope25
 SUBDIR+=	zope25-AbracadabraObject
 SUBDIR+=	zope25-BTreeFolder
