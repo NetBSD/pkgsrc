@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1340 2008/06/21 16:27:44 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1341 2008/06/21 16:39:08 smb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2240,3 +2240,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/clive to 0.4.16 [wiz 2008-06-21]
 	Updated devel/fromcvs to 0.0.0.124 [wiz 2008-06-21]
 	Updated games/gbrainy to 0.70 [wiz 2008-06-21]
+	Added chat/pidgin-latex version 1.2.1 [smb 2008-06-21]
