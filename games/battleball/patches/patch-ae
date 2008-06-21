@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2008/06/21 18:12:42 joerg Exp $
+
+--- bsp/bsp.C.orig	2008-06-21 12:05:00.000000000 +0000
++++ bsp/bsp.C
+@@ -1205,7 +1205,7 @@ void bsp_printf(BSP *t,int level) {
+     printf("bad_neg_parent ");
+ 
+   for (i=0; i<t->numpolys; i++)
+-    printf("%ld ", (t->polys[i]->material_index) % 100000);
++    printf("%ld ", (long)(t->polys[i]->material_index) % 100000);
+ 
+   if (t->positive)
+     if (t->negative)
