@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1351 2008/06/21 20:46:36 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1352 2008/06/21 20:51:57 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2251,3 +2251,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/iso-codes to 3.0 [wiz 2008-06-21]
 	Updated devel/p5-Error to 0.17014 [he 2008-06-21]
 	Updated audio/qjackctl to 0.3.3 [bjs 2008-06-21]
+	Added audio/gst-plugins0.10-jack version 0.10.7 [bjs 2008-06-21]
