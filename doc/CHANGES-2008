@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1355 2008/06/21 22:13:35 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1356 2008/06/21 22:27:03 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2255,3 +2255,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated fonts/p5-Font-AFM to 1.20 [he 2008-06-21]
 	Added www/p5-LWP-UserAgent-Determined version 1.03 [he 2008-06-21]
 	Updated net/bind9 to 9.4.1pl1nb4 [adrianp 2008-06-21]
+	Added security/p5-Digest-MD5-File version 0.06 [he 2008-06-21]
