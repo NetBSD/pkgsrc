@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.8 2008/04/08 13:22:06 martti Exp $
+@comment $NetBSD: PLIST.common,v 1.9 2008/06/21 22:13:09 joerg Exp $
 bin/dialyzer
 bin/epmd
 bin/erl
@@ -3499,6 +3499,14 @@ lib/erlang/lib/ssl-${VERSION.ssl}/pkix/SSL-PKIX.asn1
 lib/erlang/lib/ssl-${VERSION.ssl}/pkix/mk_ssl_pkix_oid.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/pkix/ssl_pkix_oid.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/priv/bin/ssl_esock
+lib/erlang/lib/ssl-${VERSION.ssl}/priv/obj/Makefile
+lib/erlang/lib/ssl-${VERSION.ssl}/priv/obj/debuglog.o
+lib/erlang/lib/ssl-${VERSION.ssl}/priv/obj/esock.o
+lib/erlang/lib/ssl-${VERSION.ssl}/priv/obj/esock_openssl.o
+lib/erlang/lib/ssl-${VERSION.ssl}/priv/obj/esock_osio.o
+lib/erlang/lib/ssl-${VERSION.ssl}/priv/obj/esock_poll.o
+lib/erlang/lib/ssl-${VERSION.ssl}/priv/obj/esock_posix_str.o
+lib/erlang/lib/ssl-${VERSION.ssl}/priv/obj/esock_utils.o
 lib/erlang/lib/ssl-${VERSION.ssl}/src/inet_ssl_dist.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl.erl
 lib/erlang/lib/ssl-${VERSION.ssl}/src/ssl_alert.erl
