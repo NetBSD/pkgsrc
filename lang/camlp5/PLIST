@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.3 2008/06/16 14:08:07 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/06/21 06:37:52 tonio Exp $
 bin/camlp5
 bin/camlp5o
 bin/camlp5r
 bin/camlp5sch
 bin/mkcamlp5
 bin/ocpp5
+bin/mkcamlp5
 lib/ocaml/camlp5/ast2pt.cmi
 lib/ocaml/camlp5/ast2pt.mli
 lib/ocaml/camlp5/camlp5.cma
@@ -64,6 +65,7 @@ lib/ocaml/camlp5/pa_oop.cmo
 lib/ocaml/camlp5/pa_oop.o
 lib/ocaml/camlp5/pa_op.cmo
 lib/ocaml/camlp5/pa_op.o
+lib/ocaml/camlp5/pa_o_fast.o
 lib/ocaml/camlp5/pa_pprintf.cmo
 lib/ocaml/camlp5/pa_pprintf.o
 lib/ocaml/camlp5/pa_pragma.cmo
