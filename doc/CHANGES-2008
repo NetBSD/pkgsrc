@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1333 2008/06/21 10:43:33 taca Exp $
+$NetBSD: CHANGES-2008,v 1.1334 2008/06/21 14:33:48 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2233,3 +2233,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/camlp5 to 5.09 [tonio 2008-06-21]
 	Updated www/squid to 2.6.20 [taca 2008-06-21]
 	Added www/zope211 version 2.11.0 [taca 2008-06-21]
+	Updated devel/p5-Class-Inspector to 1.23 [he 2008-06-21]
