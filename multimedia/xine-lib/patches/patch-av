@@ -1,11 +1,11 @@
-$NetBSD: patch-av,v 1.7 2008/04/10 11:48:58 drochner Exp $
+$NetBSD: patch-av,v 1.8 2008/06/21 15:45:16 drochner Exp $
 
---- src/libspudvb/Makefile.in.orig	2008-03-19 14:15:53.000000000 +0100
+--- src/libspudvb/Makefile.in.orig	2008-06-15 01:15:55.000000000 +0200
 +++ src/libspudvb/Makefile.in
-@@ -240,7 +240,7 @@ MNG_LIBS = @MNG_LIBS@
- MSGFMT = @MSGFMT@
+@@ -242,7 +242,7 @@ MSGFMT = @MSGFMT@
  MSGMERGE = @MSGMERGE@
  NET_LIBS = @NET_LIBS@
+ NMEDIT = @NMEDIT@
 -NOUNDEF = @NOUNDEF@
 +#NOUNDEF = @NOUNDEF@
  OBJC = @OBJC@
