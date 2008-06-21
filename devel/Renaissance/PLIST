@@ -1,77 +1,82 @@
-@comment $NetBSD: PLIST,v 1.2 2004/04/19 09:36:09 rh Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/06/21 19:13:28 joerg Exp $
 share/GNUstep/Local/Applications/GSMarkupBrowser.app/GSMarkupBrowser
 share/GNUstep/Local/Applications/GSMarkupBrowser.app/Resources/GSMarkupBrowser.desktop
 share/GNUstep/Local/Applications/GSMarkupBrowser.app/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/GSMarkupBrowser.app/library_paths.openapp
 share/GNUstep/Local/Applications/GSMarkupBrowser.app/stamp.make
 share/GNUstep/Local/Applications/GSMarkupLocalizableStrings.app/GSMarkupLocalizableStrings
 share/GNUstep/Local/Applications/GSMarkupLocalizableStrings.app/Resources/GSMarkupLocalizableStrings.desktop
 share/GNUstep/Local/Applications/GSMarkupLocalizableStrings.app/Resources/Info-gnustep.plist
-share/GNUstep/Local/Applications/GSMarkupLocalizableStrings.app/library_paths.openapp
 share/GNUstep/Local/Applications/GSMarkupLocalizableStrings.app/stamp.make
-share/GNUstep/System/Library/Headers/Renaissance/GNUstep.h
-share/GNUstep/System/Library/Headers/Renaissance/GSAutoLayoutDefaults.h
-share/GNUstep/System/Library/Headers/Renaissance/GSAutoLayoutManager.h
-share/GNUstep/System/Library/Headers/Renaissance/GSAutoLayoutManagerPrivate.h
-share/GNUstep/System/Library/Headers/Renaissance/GSAutoLayoutProportionalManager.h
-share/GNUstep/System/Library/Headers/Renaissance/GSAutoLayoutStandardManager.h
-share/GNUstep/System/Library/Headers/Renaissance/GSBox.h
-share/GNUstep/System/Library/Headers/Renaissance/GSHBox.h
-share/GNUstep/System/Library/Headers/Renaissance/GSHSpace.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupApplicationMain.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupAwaker.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupBundleAdditions.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupCoder.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupCoding.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupConnector.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupDecoder.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupDecoderBackend.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupDocument.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagBox.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagBoxSeparator.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagBrowser.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagButton.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagColorWell.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagControl.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagForm.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagFormItem.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagHbox.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagHspace.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagImage.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagInstance.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagLabel.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagMatrix.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagMatrixCell.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagMatrixRow.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagMenu.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagMenuItem.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagMenuSeparator.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagObject.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagObjectAdditions.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagOutlineView.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagPanel.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagPopUpButton.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagPopUpButtonItem.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagScrollView.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagSecureTextField.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagSplitView.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagTableColumn.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagTableView.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagTextField.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagTextView.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagVbox.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagView.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupTagWindow.h
-share/GNUstep/System/Library/Headers/Renaissance/GSMarkupWindowController.h
-share/GNUstep/System/Library/Headers/Renaissance/GSVBox.h
-share/GNUstep/System/Library/Headers/Renaissance/GSVSpace.h
-share/GNUstep/System/Library/Headers/Renaissance/Markup.h
-share/GNUstep/System/Library/Headers/Renaissance/NSViewSize.h
-share/GNUstep/System/Library/Headers/Renaissance/Renaissance.h
-share/GNUstep/System/Library/Libraries/libRenaissance.so
-share/GNUstep/System/Library/Libraries/libRenaissance.so.${PKGVERSION}
-@dirrm share/GNUstep/System/Library/Headers/Renaissance
+share/GNUstep/Local/Library/Headers/Renaissance/GNUstep.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSAutoLayoutDefaults.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSAutoLayoutManager.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSAutoLayoutManagerPrivate.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSAutoLayoutProportionalManager.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSAutoLayoutStandardManager.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSBox.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSHBox.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSHSpace.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupApplicationMain.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupAwaker.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupBundleAdditions.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupCoder.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupCoding.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupConnector.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupDecoder.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupDecoderBackend.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupDocument.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagBox.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagBoxSeparator.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagBrowser.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagButton.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagColorWell.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagControl.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagForm.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagFormItem.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagHbox.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagHspace.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagImage.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagInstance.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagLabel.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagMatrix.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagMatrixCell.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagMatrixRow.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagMenu.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagMenuItem.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagMenuSeparator.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagObject.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagObjectAdditions.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagOutlineView.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagPanel.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagPopUpButton.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagPopUpButtonItem.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagScrollView.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagSecureTextField.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagSplitView.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagTableColumn.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagTableView.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagTextField.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagTextView.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagVbox.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagView.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupTagWindow.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSMarkupWindowController.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSVBox.h
+share/GNUstep/Local/Library/Headers/Renaissance/GSVSpace.h
+share/GNUstep/Local/Library/Headers/Renaissance/Markup.h
+share/GNUstep/Local/Library/Headers/Renaissance/NSViewSize.h
+share/GNUstep/Local/Library/Headers/Renaissance/Renaissance.h
+share/GNUstep/Local/Library/Libraries/libRenaissance.so
+share/GNUstep/Local/Library/Libraries/libRenaissance.so.${PKGVERSION}
+share/GNUstep/Local/Tools/GSMarkupBrowser
+share/GNUstep/Local/Tools/GSMarkupLocalizableStrings
+@dirrm share/GNUstep/Local/Tools
+@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Libraries
+@dirrm share/GNUstep/Local/Library/Headers/Renaissance
+@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Library/Headers
 @dirrm share/GNUstep/Local/Applications/GSMarkupLocalizableStrings.app/Resources
 @dirrm share/GNUstep/Local/Applications/GSMarkupLocalizableStrings.app
 @dirrm share/GNUstep/Local/Applications/GSMarkupBrowser.app/Resources
 @dirrm share/GNUstep/Local/Applications/GSMarkupBrowser.app
+@comment in devel/gnustep-make: @dirrm share/GNUstep/Local/Applications
+@comment in devel/gnustep-make: @dirrm share/GNUstep/Local
