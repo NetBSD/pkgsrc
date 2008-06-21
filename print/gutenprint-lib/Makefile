@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2008/03/06 14:53:53 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/21 22:55:49 joerg Exp $
 
 VERSION=	5.0.2
 DISTNAME=	gutenprint-${VERSION}
 EXTRACT_SUFX=	.tar.bz2
 PKGNAME=	gutenprint-lib-${VERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	print
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
 
@@ -15,7 +15,7 @@ HOMEPAGE=	http://gutenprint.sourceforge.net/
 # Not sure if this works.
 #PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=		gmake lex pkg-config
+USE_TOOLS+=		gmake lex pkg-config perl:run
 USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 
