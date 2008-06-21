@@ -1,0 +1,20 @@
+$NetBSD: patch-ah,v 1.1 2008/06/21 20:00:22 joerg Exp $
+
+--- c_source/fourier.c.orig	2008-06-21 13:47:28.000000000 +0000
++++ c_source/fourier.c
+@@ -7,6 +7,7 @@
+ 
+ static split(COMPLEX*,unsigned,unsigned,COMPLEX*); 
+ static join(COMPLEX*,unsigned,unsigned,COMPLEX*); 
++static unsigned radix (unsigned);
+ 
+ 
+ 
+@@ -24,7 +25,6 @@ unsigned n;
+ COMPLEX *out;
+ {
+ 	unsigned r;
+-	unsigned radix ();
+ 
+ 	if ((r = radix (n)) < n)
+ 		split (in, r, n / r, out);

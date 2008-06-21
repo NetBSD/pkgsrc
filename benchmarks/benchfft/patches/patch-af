@@ -1,0 +1,419 @@
+$NetBSD: patch-af,v 1.5 2008/06/21 20:00:22 joerg Exp $
+
+Reorder functions in usage order to fix compilation with f2c.
+
+--- f_source/sciport/ffts.f.orig	2008-06-21 13:38:06.000000000 +0000
++++ f_source/sciport/ffts.f
+@@ -1,3 +1,190 @@
++C-----------------------------------------------  ************
++C                                                    CABLE2
++C                                                 ************
++      SUBROUTINE SPSCABLE2(NN,WORK)
++C
++      REAL WORK(2,NN),TWOPI
++      DATA TWOPI /6.28318530717958647692/
++C
++      N = 2 * NN
++      P2 = TWOPI/N
++      DO 10 I=1, NN
++         WORK(1,I) = COS(P2 * (I-1))
++         WORK(2,I) = SIN(P2 * (I-1))
++ 10        CONTINUE
++      RETURN
++      END
++
++C-----------------------------------------------  ************
++C                                                    RCONV2
++C                                                 ************
++      SUBROUTINE SPSRCONV2(N,CY,C,CH)
++C
++      COMPLEX CY(1)
++      REAL CH(N/2,2),P(2,1),C(2,N/2)
++C
++      N2 = N/2
++      P(1,1) = (C(1,1) + C(2,1)) * 2
++      P(2,1) = (C(1,1) - C(2,1)) * 2
++      CY(1) = CMPLX(P(1,1),0.)
++      CY(N2+1) = CMPLX(P(2,1),0.)
++      K = N2
++      DO 10 I=2, N2
++         X = C(1,I)+C(1,K)
++         Y = C(2,I)+C(2,K)
++         Z = C(1,I)-C(1,K)
++         Z1= C(2,I)-C(2,K)
++         P(1,1) = X + CH(I,1) * Y - CH(I,2) * Z
++         P(2,1) = Z1 - CH(I,2) * Y - CH(I,1) * Z
++         CY(I) = CMPLX(P(1,1),P(2,1))
++         K = K - 1
++ 10        CONTINUE
++      RETURN
++      END
++
++C-----------------------------------------------  ************
++C                                                    RCONV1
++C                                                 ************
++      SUBROUTINE SPSRCONV1(N,CY,C,CH)
++C
++      COMPLEX CY(1)
++      REAL CH(N/2,2),P(2,1),C(2,N/2)
++C
++      N2 = N/2
++      P(1,1) = (C(1,1) + C(2,1)) * 2
++      P(2,1) = (C(1,1) - C(2,1)) * 2
++      CY(1) = CMPLX(P(1,1),0.)
++      CY(N2+1) = CMPLX(P(2,1),0.)
++      K = N2
++      DO 10 I=2, N2
++         X = C(1,I)+C(1,K)
++         Y = C(2,I)+C(2,K)
++         Z = C(1,I)-C(1,K)
++         Z1= C(2,I)-C(2,K)
++         P(1,1) = X + CH(I,1) * Y + CH(I,2) * Z
++         P(2,1) = Z1 + CH(I,2) * Y - CH(I,1) * Z
++         CY(I) = CMPLX(P(1,1),P(2,1))
++         K = K - 1
++ 10        CONTINUE
++      RETURN
++      END
++
++C-----------------------------------------------  ************
++C                                                    CRFORM
++C                                                 ************
++      SUBROUTINE SPSRABLE1(NN,WORK)
++C
++      REAL WORK(NN,2),TWOPI
++      DATA TWOPI /6.28318530717958647692/
++C
++      N = 2 * NN
++      P2 = TWOPI/N
++      DO 10 I=1, NN
++         WORK(I,1) = COS(P2 * (I-1))
++         WORK(I,2) = SIN(P2 * (I-1))
++ 10        CONTINUE
++      RETURN
++      END
++
++C-----------------------------------------------  ************
++C                                                    RTOCK3
++C                                                 ************
++      SUBROUTINE SPSRTOCK3(LS,NS,C,CH,CH2)
++C
++      COMPLEX WYK,C(NS,LS,2),CH(NS,2,LS)
++      REAL CH2(2,NS,LS,2)
++C
++      IF (LS .GT. NS) GOTO 30
++      DO 600 I=1, LS
++         DO 600 J=1, NS
++            WYK =CONJG(CMPLX(CH2(1,1,I,1),CH2(1,1,I,2))) * CH(J,2,I)
++            C(J,I,1) = CH(J,1,I) + WYK
++            C(J,I,2) = CH(J,1,I) - WYK
++ 600          CONTINUE
++      RETURN
++ 30     CONTINUE
++      DO 800 J=1, NS
++         DO 800 I=1, LS
++            WYK =CONJG(CMPLX(CH2(1,1,I,1),CH2(1,1,I,2))) * CH(J,2,I)
++            C(J,I,1) = CH(J,1,I) + WYK
++            C(J,I,2) = CH(J,1,I) - WYK
++ 800          CONTINUE
++      RETURN
++      END
++
++C-----------------------------------------------  ************
++C                                                    RTOCK2
++C                                                 ************
++      SUBROUTINE SPSRTOCK2(LS,NS,C,CH,CH2)
++C
++      COMPLEX WYK,C(NS,LS,2),CH(NS,2,LS)
++      REAL CH2(2,NS,LS,2)
++C
++      IF (LS .GT. NS) GOTO 20
++      DO 200 I=1, LS
++         DO 200 J=1, NS
++            WYK = CMPLX(CH2(1,1,I,1),CH2(1,1,I,2)) * CH(J,2,I)
++            C(J,I,1) = CH(J,1,I) + WYK
++            C(J,I,2) = CH(J,1,I) - WYK
++ 200          CONTINUE
++      RETURN
++ 20     CONTINUE
++      DO 400 J=1, NS
++         DO 400 I=1, LS
++            WYK = CMPLX(CH2(1,1,I,1),CH2(1,1,I,2)) * CH(J,2,I)
++            C(J,I,1) = CH(J,1,I) + WYK
++            C(J,I,2) = CH(J,1,I) - WYK
++ 400          CONTINUE
++      RETURN
++      END
++
++C-----------------------------------------------  ************
++C                                                    CRBLE1
++C                                                 ************
++      SUBROUTINE SPSCRBLE1(NN,WORK)
++C
++      REAL WORK(NN,2),TWOPI
++      DATA TWOPI /6.28318530717958647692/
++C
++      N = 2 * NN
++      P2 = TWOPI/N
++      DO 10 I=1, NN
++         WORK(I,1) = COS(P2 * (I-1))
++         WORK(I,2) = SIN(P2 * (I-1))
++ 10        CONTINUE
++      RETURN
++      END
++
++C-----------------------------------------------  ************
++C                                                    CRFORM
++C                                                 ************
++      SUBROUTINE SPSCRFORM(IX,NS,NDIV2,CX,C,CH2)
++C
++      COMPLEX CX(1),WYK1,C(NS,2),WYK
++      REAL CH2(NDIV2,2)
++C
++      IF (IX .GT. 0) GOTO 50
++      K = NS + 1
++      DO 10 I=1, NS
++         WYK = CONJG(CX(NDIV2-I+2))
++         C(I,1)= CX(I)+WYK + (CX(I) - WYK) * CMPLX(CH2(I,2),CH2(I,1))
++         WYK1 = CONJG(CX(NDIV2-K+2))
++         C(I,2)= CX(K)+WYK1+ (CX(K) -WYK1) * CMPLX(CH2(K,2),CH2(K,1))
++         K = K + 1
++ 10        CONTINUE
++      RETURN
++ 50     CONTINUE
++      K = NS + 1
++      DO 20 I=1, NS
++         WYK = CONJG(CX(NDIV2-I+2))
++         C(I,1)= CX(I)+WYK + (CX(I) - WYK) * CMPLX(-CH2(I,2),CH2(I,1))
++         WYK1 = CONJG(CX(NDIV2-K+2))
++         C(I,2)= CX(K)+WYK1 +(CX(K) -WYK1) * CMPLX(-CH2(K,2),CH2(K,1))
++         K = K + 1
++ 20        CONTINUE
++      RETURN
++      END
++
+ C-------------------------------------------------------------     ************
+ C                                                                     CRFFT2
+ C                                                                  ************
+@@ -62,36 +249,6 @@ C
+       END
+ 
+ C-----------------------------------------------  ************
+-C                                                    CRFORM
+-C                                                 ************
+-      SUBROUTINE SPSCRFORM(IX,NS,NDIV2,CX,C,CH2)
+-C
+-      COMPLEX CX(1),WYK1,C(NS,2),WYK
+-      REAL CH2(NDIV2,2)
+-C
+-      IF (IX .GT. 0) GOTO 50
+-      K = NS + 1
+-      DO 10 I=1, NS
+-         WYK = CONJG(CX(NDIV2-I+2))
+-         C(I,1)= CX(I)+WYK + (CX(I) - WYK) * CMPLX(CH2(I,2),CH2(I,1))
+-         WYK1 = CONJG(CX(NDIV2-K+2))
+-         C(I,2)= CX(K)+WYK1+ (CX(K) -WYK1) * CMPLX(CH2(K,2),CH2(K,1))
+-         K = K + 1
+- 10        CONTINUE
+-      RETURN
+- 50     CONTINUE
+-      K = NS + 1
+-      DO 20 I=1, NS
+-         WYK = CONJG(CX(NDIV2-I+2))
+-         C(I,1)= CX(I)+WYK + (CX(I) - WYK) * CMPLX(-CH2(I,2),CH2(I,1))
+-         WYK1 = CONJG(CX(NDIV2-K+2))
+-         C(I,2)= CX(K)+WYK1 +(CX(K) -WYK1) * CMPLX(-CH2(K,2),CH2(K,1))
+-         K = K + 1
+- 20        CONTINUE
+-      RETURN
+-      END
+-
+-C-----------------------------------------------  ************
+ C                                                    CROCK1
+ C                                                 ************
+       SUBROUTINE SPSCROCK1(NS,C,CH)
+@@ -157,23 +314,6 @@ C
+       RETURN
+       END
+ 
+-C-----------------------------------------------  ************
+-C                                                    CRBLE1
+-C                                                 ************
+-      SUBROUTINE SPSCRBLE1(NN,WORK)
+-C
+-      REAL WORK(NN,2),TWOPI
+-      DATA TWOPI /6.28318530717958647692/
+-C
+-      N = 2 * NN
+-      P2 = TWOPI/N
+-      DO 10 I=1, NN
+-         WORK(I,1) = COS(P2 * (I-1))
+-         WORK(I,2) = SIN(P2 * (I-1))
+- 10        CONTINUE
+-      RETURN
+-      END
+-
+ C-------------------------------------------------------------     ************
+ C                                                                     RCFFT2
+ C                                                                  ************
+@@ -236,32 +376,6 @@ C
+       END
+ 
+ C-----------------------------------------------  ************
+-C                                                    RTOCK2
+-C                                                 ************
+-      SUBROUTINE SPSRTOCK2(LS,NS,C,CH,CH2)
+-C
+-      COMPLEX WYK,C(NS,LS,2),CH(NS,2,LS)
+-      REAL CH2(2,NS,LS,2)
+-C
+-      IF (LS .GT. NS) GOTO 20
+-      DO 200 I=1, LS
+-         DO 200 J=1, NS
+-            WYK = CMPLX(CH2(1,1,I,1),CH2(1,1,I,2)) * CH(J,2,I)
+-            C(J,I,1) = CH(J,1,I) + WYK
+-            C(J,I,2) = CH(J,1,I) - WYK
+- 200          CONTINUE
+-      RETURN
+- 20     CONTINUE
+-      DO 400 J=1, NS
+-         DO 400 I=1, LS
+-            WYK = CMPLX(CH2(1,1,I,1),CH2(1,1,I,2)) * CH(J,2,I)
+-            C(J,I,1) = CH(J,1,I) + WYK
+-            C(J,I,2) = CH(J,1,I) - WYK
+- 400          CONTINUE
+-      RETURN
+-      END
+-
+-C-----------------------------------------------  ************
+ C                                                    RTOCK1
+ C                                                 ************
+       SUBROUTINE SPSRTOCK1(NS,C,CH)
+@@ -275,103 +389,6 @@ C
+       RETURN
+       END
+ 
+-C-----------------------------------------------  ************
+-C                                                    RTOCK3
+-C                                                 ************
+-      SUBROUTINE SPSRTOCK3(LS,NS,C,CH,CH2)
+-C
+-      COMPLEX WYK,C(NS,LS,2),CH(NS,2,LS)
+-      REAL CH2(2,NS,LS,2)
+-C
+-      IF (LS .GT. NS) GOTO 30
+-      DO 600 I=1, LS
+-         DO 600 J=1, NS
+-            WYK =CONJG(CMPLX(CH2(1,1,I,1),CH2(1,1,I,2))) * CH(J,2,I)
+-            C(J,I,1) = CH(J,1,I) + WYK
+-            C(J,I,2) = CH(J,1,I) - WYK
+- 600          CONTINUE
+-      RETURN
+- 30     CONTINUE
+-      DO 800 J=1, NS
+-         DO 800 I=1, LS
+-            WYK =CONJG(CMPLX(CH2(1,1,I,1),CH2(1,1,I,2))) * CH(J,2,I)
+-            C(J,I,1) = CH(J,1,I) + WYK
+-            C(J,I,2) = CH(J,1,I) - WYK
+- 800          CONTINUE
+-      RETURN
+-      END
+-
+-C-----------------------------------------------  ************
+-C                                                    CRFORM
+-C                                                 ************
+-      SUBROUTINE SPSRABLE1(NN,WORK)
+-C
+-      REAL WORK(NN,2),TWOPI
+-      DATA TWOPI /6.28318530717958647692/
+-C
+-      N = 2 * NN
+-      P2 = TWOPI/N
+-      DO 10 I=1, NN
+-         WORK(I,1) = COS(P2 * (I-1))
+-         WORK(I,2) = SIN(P2 * (I-1))
+- 10        CONTINUE
+-      RETURN
+-      END
+-
+-C-----------------------------------------------  ************
+-C                                                    RCONV1
+-C                                                 ************
+-      SUBROUTINE SPSRCONV1(N,CY,C,CH)
+-C
+-      COMPLEX CY(1)
+-      REAL CH(N/2,2),P(2,1),C(2,N/2)
+-C
+-      N2 = N/2
+-      P(1,1) = (C(1,1) + C(2,1)) * 2
+-      P(2,1) = (C(1,1) - C(2,1)) * 2
+-      CY(1) = CMPLX(P(1,1),0.)
+-      CY(N2+1) = CMPLX(P(2,1),0.)
+-      K = N2
+-      DO 10 I=2, N2
+-         X = C(1,I)+C(1,K)
+-         Y = C(2,I)+C(2,K)
+-         Z = C(1,I)-C(1,K)
+-         Z1= C(2,I)-C(2,K)
+-         P(1,1) = X + CH(I,1) * Y + CH(I,2) * Z
+-         P(2,1) = Z1 + CH(I,2) * Y - CH(I,1) * Z
+-         CY(I) = CMPLX(P(1,1),P(2,1))
+-         K = K - 1
+- 10        CONTINUE
+-      RETURN
+-      END
+-
+-C-----------------------------------------------  ************
+-C                                                    RCONV2
+-C                                                 ************
+-      SUBROUTINE SPSRCONV2(N,CY,C,CH)
+-C
+-      COMPLEX CY(1)
+-      REAL CH(N/2,2),P(2,1),C(2,N/2)
+-C
+-      N2 = N/2
+-      P(1,1) = (C(1,1) + C(2,1)) * 2
+-      P(2,1) = (C(1,1) - C(2,1)) * 2
+-      CY(1) = CMPLX(P(1,1),0.)
+-      CY(N2+1) = CMPLX(P(2,1),0.)
+-      K = N2
+-      DO 10 I=2, N2
+-         X = C(1,I)+C(1,K)
+-         Y = C(2,I)+C(2,K)
+-         Z = C(1,I)-C(1,K)
+-         Z1= C(2,I)-C(2,K)
+-         P(1,1) = X + CH(I,1) * Y - CH(I,2) * Z
+-         P(2,1) = Z1 - CH(I,2) * Y - CH(I,1) * Z
+-         CY(I) = CMPLX(P(1,1),P(2,1))
+-         K = K - 1
+- 10        CONTINUE
+-      RETURN
+-      END
+-
+ C-------------------------------------------------------------     ************
+ C                                                                     CFFT2
+ C                                                                  ************
+@@ -514,23 +531,6 @@ C
+       RETURN
+       END
+ 
+-C-----------------------------------------------  ************
+-C                                                    CABLE2
+-C                                                 ************
+-      SUBROUTINE SPSCABLE2(NN,WORK)
+-C
+-      REAL WORK(2,NN),TWOPI
+-      DATA TWOPI /6.28318530717958647692/
+-C
+-      N = 2 * NN
+-      P2 = TWOPI/N
+-      DO 10 I=1, NN
+-         WORK(1,I) = COS(P2 * (I-1))
+-         WORK(2,I) = SIN(P2 * (I-1))
+- 10        CONTINUE
+-      RETURN
+-      END
+-
+ C-------------------------------------------------------------     ************
+ C                                                                      ABORT
+ C                                                                  ************
