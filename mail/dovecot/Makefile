@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.116 2008/06/03 05:52:10 ghen Exp $
+# $NetBSD: Makefile,v 1.117 2008/06/22 17:41:23 ghen Exp $
 
-DISTNAME=		dovecot-1.0.14
+DISTNAME=		dovecot-1.1.1
 CATEGORIES=		mail
-MASTER_SITES=		http://www.dovecot.org/releases/1.0/
+MASTER_SITES=		http://www.dovecot.org/releases/1.1/
 
 MAINTAINER=		ghen@NetBSD.org
 HOMEPAGE=		http://www.dovecot.org/
@@ -14,6 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
+USE_TOOLS+=		rpcgen
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}

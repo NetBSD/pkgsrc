@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.20 2008/01/03 14:06:20 ghen Exp $
+# $NetBSD: options.mk,v 1.21 2008/06/22 17:41:23 ghen Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.dovecot
 PKG_SUPPORTED_OPTIONS=	gssapi inet6 kqueue ldap mysql pam pgsql sasl sqlite
