@@ -1,4 +1,4 @@
-<!-- $NetBSD: fixes.xml,v 1.93 2008/05/29 08:34:26 abs Exp $ -->
+<!-- $NetBSD: fixes.xml,v 1.94 2008/06/22 15:22:44 wiz Exp $ -->
 
 <chapter id="fixes"> <?dbhtml filename="fixes.html"?>
 <title>Making your package work</title>
@@ -1332,7 +1332,7 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
     disabled;  setting <varname>SETGIDGAME=YES</varname> will set all
     the other variables accordingly.</para>
 
-    <para>A package should therefor never hard code file ownership or
+    <para>A package should therefore never hard code file ownership or
     access permissions but rely on <varname>INSTALL_GAME</varname> and
     <varname>INSTALL_GAME_DATA</varname> to set these
     correctly.</para>
@@ -1341,7 +1341,20 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
   <sect2 id="destdir-support">
     <title>Adding DESTDIR support to packages</title>
 
+    <para><varname>DESTDIR</varname> support means that a package
+    installs into a staging directory, not the final location of the
+    files. Then a binary package is created which can be used for
+    installation as usual. There are two ways: Either the package must
+    install as root (<quote>destdir</quote>) or the package can
+    install as non-root user (<quote>user-destdir</quote>).</para>
+
     <itemizedlist>
+      <listitem><para><varname>PKG_DESTDIR_SUPPORT</varname> has to be
+      set to <quote>destdir</quote> or <quote>user-destdir</quote>. If
+      bsd.prefs.mk is included in the Makefile,
+      <varname>PKG_DESTDIR_SUPPORT</varname> needs to be set before
+      the inclusion.</para></listitem>
+
       <listitem><para>All installation operations have to be prefixed with
       <filename>${DESTDIR}</filename>.</para></listitem>
 
