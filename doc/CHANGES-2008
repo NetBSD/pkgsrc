@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1366 2008/06/22 13:37:31 peter Exp $
+$NetBSD: CHANGES-2008,v 1.1367 2008/06/22 14:25:12 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2268,3 +2268,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/exiv2 to 0.17.1 [gdt 2008-06-22]
 	Added converters/p5-JSON-XS-VersionOneAndTwo version 0.31 [kim 2008-06-22]
 	Updated sysutils/pfstat to 2.3 [peter 2008-06-22]
+	Updated sysutils/p5-File-Remove to 1.41 [he 2008-06-22]
