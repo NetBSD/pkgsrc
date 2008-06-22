@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1361 2008/06/22 04:55:39 dmcmahill Exp $
+$NetBSD: CHANGES-2008,v 1.1362 2008/06/22 08:12:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2263,3 +2263,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/freeciv-server to 2.1.5 [adam 2008-06-22]
 	Updated devel/eet to 1.0.1 [joerg 2008-06-22]
 	Added net/inadyn version 1.96.2 [dmcmahill 2008-06-22]
+	Updated news/pan to 0.132 [wiz 2008-06-22]
