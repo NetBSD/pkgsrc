@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.4 2008/06/21 21:06:10 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/06/22 08:41:36 hira Exp $
 #
 
 DISTNAME=		ccsm-0.6.0
+PKGREVISION=		1
 CATEGORIES=		wm gnome
 MASTER_SITES=		http://releases.compiz-fusion.org/0.6.0/
 
@@ -22,6 +23,7 @@ PYTHON_PATCH_SCRIPTS+=	ccm/*.py
 MAKE_ENV+=	PYTHONBIN=${PYTHONBIN:Q}
 
 DEPENDS+=	compizconfig-backend-gconf>=0.6.0:../../devel/compizconfig-backend-gconf
+DEPENDS+=	${PYPKGPREFIX}-gtk2-[0-9]*:../../x11/py-gtk2
 
 .include "../../devel/py-compizconfig/buildlink3.mk"
 .include "../../lang/python/application.mk"
