@@ -1,18 +1,17 @@
-# $NetBSD: Makefile,v 1.17 2008/06/12 02:14:40 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/22 16:19:22 he Exp $
 
-DISTNAME=	Net-TFTP-0.10
-PKGNAME=	p5-Net-TFTP-0.10
+DISTNAME=	Net-TFTP-0.17
+PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5ntf
-PKGREVISION=	2
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://search.cpan.org/~gbarr/Net-TFTP-0.17/
 COMMENT=	Perl5 module for TFTP transfers
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}/Net-TFTP-0.10
 PERL5_PACKLIST=		auto/Net/TFTP/.packlist
 
 .include "../../lang/perl5/module.mk"
