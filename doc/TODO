@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7349 2008/06/22 13:37:31 peter Exp $
+$NetBSD: TODO,v 1.7350 2008/06/22 15:21:57 wiz Exp $
 
 Suggested new packages
 ======================
@@ -650,7 +650,6 @@ Suggested package updates
 	o glibmm-2.16.3
 	o global-5.6
 	o gmime-2.2.21
-	o gnash-0.8.3
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-2.22.1
@@ -1014,7 +1013,6 @@ Suggested package updates
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.51
 	o pam-smbpass-3.0.13
-	o pan-0.14.2.91 [pkg/33948]
 	o pari-2.3.3 [pkg/38116]
 	o pari-galdata-2.2 [pkg/38117]
 	o parrot-0.5.2
