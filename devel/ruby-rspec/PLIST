@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:18:33 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/06/22 16:05:53 taca Exp $
 bin/spec
 bin/spec_translator
 ${GEM_HOME}/cache/rspec-${PKGVERSION}.gem
@@ -90,6 +90,7 @@ ${GEM_LIBDIR}/lib/spec/example/example_group_factory.rb
 ${GEM_LIBDIR}/lib/spec/example/example_group_methods.rb
 ${GEM_LIBDIR}/lib/spec/example/example_matcher.rb
 ${GEM_LIBDIR}/lib/spec/example/example_methods.rb
+${GEM_LIBDIR}/lib/spec/example/module_inclusion_warnings.rb
 ${GEM_LIBDIR}/lib/spec/example/module_reopening_fix.rb
 ${GEM_LIBDIR}/lib/spec/example/pending.rb
 ${GEM_LIBDIR}/lib/spec/example/shared_example_group.rb
@@ -103,6 +104,7 @@ ${GEM_LIBDIR}/lib/spec/expectations/handler.rb
 ${GEM_LIBDIR}/lib/spec/extensions.rb
 ${GEM_LIBDIR}/lib/spec/extensions/class.rb
 ${GEM_LIBDIR}/lib/spec/extensions/main.rb
+${GEM_LIBDIR}/lib/spec/extensions/metaclass.rb
 ${GEM_LIBDIR}/lib/spec/extensions/object.rb
 ${GEM_LIBDIR}/lib/spec/interop/test.rb
 ${GEM_LIBDIR}/lib/spec/interop/test/unit/autorunner.rb
@@ -132,7 +134,9 @@ ${GEM_LIBDIR}/lib/spec/mocks/argument_constraint_matchers.rb
 ${GEM_LIBDIR}/lib/spec/mocks/argument_expectation.rb
 ${GEM_LIBDIR}/lib/spec/mocks/error_generator.rb
 ${GEM_LIBDIR}/lib/spec/mocks/errors.rb
+${GEM_LIBDIR}/lib/spec/mocks/extensions.rb
 ${GEM_LIBDIR}/lib/spec/mocks/extensions/object.rb
+${GEM_LIBDIR}/lib/spec/mocks/framework.rb
 ${GEM_LIBDIR}/lib/spec/mocks/message_expectation.rb
 ${GEM_LIBDIR}/lib/spec/mocks/methods.rb
 ${GEM_LIBDIR}/lib/spec/mocks/mock.rb
@@ -153,6 +157,7 @@ ${GEM_LIBDIR}/lib/spec/runner/formatter/base_text_formatter.rb
 ${GEM_LIBDIR}/lib/spec/runner/formatter/failing_example_groups_formatter.rb
 ${GEM_LIBDIR}/lib/spec/runner/formatter/failing_examples_formatter.rb
 ${GEM_LIBDIR}/lib/spec/runner/formatter/html_formatter.rb
+${GEM_LIBDIR}/lib/spec/runner/formatter/nested_text_formatter.rb
 ${GEM_LIBDIR}/lib/spec/runner/formatter/profile_formatter.rb
 ${GEM_LIBDIR}/lib/spec/runner/formatter/progress_bar_formatter.rb
 ${GEM_LIBDIR}/lib/spec/runner/formatter/snippet_extractor.rb
@@ -191,15 +196,6 @@ ${GEM_LIBDIR}/plugins/mock_frameworks/flexmock.rb
 ${GEM_LIBDIR}/plugins/mock_frameworks/mocha.rb
 ${GEM_LIBDIR}/plugins/mock_frameworks/rr.rb
 ${GEM_LIBDIR}/plugins/mock_frameworks/rspec.rb
-${GEM_LIBDIR}/pre_commit/lib/pre_commit.rb
-${GEM_LIBDIR}/pre_commit/lib/pre_commit/core.rb
-${GEM_LIBDIR}/pre_commit/lib/pre_commit/pre_commit.rb
-${GEM_LIBDIR}/pre_commit/lib/pre_commit/rspec.rb
-${GEM_LIBDIR}/pre_commit/lib/pre_commit/rspec_on_rails.rb
-${GEM_LIBDIR}/pre_commit/spec/pre_commit/pre_commit_spec.rb
-${GEM_LIBDIR}/pre_commit/spec/pre_commit/rspec_on_rails_spec.rb
-${GEM_LIBDIR}/pre_commit/spec/spec_helper.rb
-${GEM_LIBDIR}/pre_commit/spec/spec_suite.rb
 ${GEM_LIBDIR}/rake_tasks/examples.rake
 ${GEM_LIBDIR}/rake_tasks/examples_with_rcov.rake
 ${GEM_LIBDIR}/rake_tasks/failing_examples_with_html.rake
@@ -213,6 +209,8 @@ ${GEM_LIBDIR}/spec/rspec_suite.rb
 ${GEM_LIBDIR}/spec/ruby_forker.rb
 ${GEM_LIBDIR}/spec/spec.opts
 ${GEM_LIBDIR}/spec/spec/example/configuration_spec.rb
+${GEM_LIBDIR}/spec/spec/example/example_group/described_module_spec.rb
+${GEM_LIBDIR}/spec/spec/example/example_group/warning_messages_spec.rb
 ${GEM_LIBDIR}/spec/spec/example/example_group_class_definition_spec.rb
 ${GEM_LIBDIR}/spec/spec/example/example_group_factory_spec.rb
 ${GEM_LIBDIR}/spec/spec/example/example_group_methods_spec.rb
@@ -266,14 +264,15 @@ ${GEM_LIBDIR}/spec/spec/mocks/argument_expectation_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/at_least_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/at_most_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/bug_report_10260_spec.rb
-${GEM_LIBDIR}/spec/spec/mocks/bug_report_10263.rb
 ${GEM_LIBDIR}/spec/spec/mocks/bug_report_11545_spec.rb
+${GEM_LIBDIR}/spec/spec/mocks/bug_report_10263_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/bug_report_15719_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/bug_report_7611_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/bug_report_7805_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/bug_report_8165_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/bug_report_8302_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/failing_mock_argument_constraints_spec.rb
+${GEM_LIBDIR}/spec/spec/mocks/hash_including_matcher_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/mock_ordering_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/mock_space_spec.rb
 ${GEM_LIBDIR}/spec/spec/mocks/mock_spec.rb
@@ -304,6 +303,7 @@ ${GEM_LIBDIR}/spec/spec/runner/formatter/html_formatted-1.8.5.html
 ${GEM_LIBDIR}/spec/spec/runner/formatter/html_formatted-1.8.6-jruby.html
 ${GEM_LIBDIR}/spec/spec/runner/formatter/html_formatted-1.8.6.html
 ${GEM_LIBDIR}/spec/spec/runner/formatter/html_formatter_spec.rb
+${GEM_LIBDIR}/spec/spec/runner/formatter/nested_text_formatter_spec.rb
 ${GEM_LIBDIR}/spec/spec/runner/formatter/profile_formatter_spec.rb
 ${GEM_LIBDIR}/spec/spec/runner/formatter/progress_bar_formatter_spec.rb
 ${GEM_LIBDIR}/spec/spec/runner/formatter/snippet_extractor_spec.rb
@@ -327,6 +327,7 @@ ${GEM_LIBDIR}/spec/spec/runner/resources/a_bar.rb
 ${GEM_LIBDIR}/spec/spec/runner/resources/a_foo.rb
 ${GEM_LIBDIR}/spec/spec/runner/resources/a_spec.rb
 ${GEM_LIBDIR}/spec/spec/runner/spec.opts
+${GEM_LIBDIR}/spec/spec/runner/spec_drb.opts
 ${GEM_LIBDIR}/spec/spec/runner/spec_parser/spec_parser_fixture.rb
 ${GEM_LIBDIR}/spec/spec/runner/spec_parser_spec.rb
 ${GEM_LIBDIR}/spec/spec/runner/spec_spaced.opts
@@ -362,12 +363,15 @@ ${GEM_LIBDIR}/stories/helper.rb
 ${GEM_LIBDIR}/stories/interop/examples_and_tests_together
 ${GEM_LIBDIR}/stories/interop/stories.rb
 ${GEM_LIBDIR}/stories/interop/test_case_with_should_methods
+${GEM_LIBDIR}/stories/mock_framework_integration/stories.rb
+${GEM_LIBDIR}/stories/mock_framework_integration/use_flexmock.story
 ${GEM_LIBDIR}/stories/pending_stories/README
 ${GEM_LIBDIR}/stories/resources/helpers/cmdline.rb
 ${GEM_LIBDIR}/stories/resources/helpers/story_helper.rb
 ${GEM_LIBDIR}/stories/resources/matchers/smart_match.rb
 ${GEM_LIBDIR}/stories/resources/spec/example_group_with_should_methods.rb
 ${GEM_LIBDIR}/stories/resources/spec/simple_spec.rb
+${GEM_LIBDIR}/stories/resources/spec/spec_with_flexmock.rb
 ${GEM_LIBDIR}/stories/resources/steps/running_rspec.rb
 ${GEM_LIBDIR}/stories/resources/stories/failing_story.rb
 ${GEM_LIBDIR}/stories/resources/test/spec_and_test_together.rb
@@ -381,6 +385,7 @@ ${GEM_HOME}/specifications/rspec-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/stories/resources/helpers
 @dirrm ${GEM_LIBDIR}/stories/resources
 @dirrm ${GEM_LIBDIR}/stories/pending_stories
+@dirrm ${GEM_LIBDIR}/stories/mock_framework_integration
 @dirrm ${GEM_LIBDIR}/stories/interop
 @dirrm ${GEM_LIBDIR}/stories/example_groups
 @dirrm ${GEM_LIBDIR}/stories
@@ -403,16 +408,12 @@ ${GEM_HOME}/specifications/rspec-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/spec/spec/expectations/extensions
 @dirrm ${GEM_LIBDIR}/spec/spec/expectations/differs
 @dirrm ${GEM_LIBDIR}/spec/spec/expectations
+@dirrm ${GEM_LIBDIR}/spec/spec/example/example_group
 @dirrm ${GEM_LIBDIR}/spec/spec/example
 @dirrm ${GEM_LIBDIR}/spec/spec
 @dirrm ${GEM_LIBDIR}/spec/autotest
 @dirrm ${GEM_LIBDIR}/spec
 @dirrm ${GEM_LIBDIR}/rake_tasks
-@dirrm ${GEM_LIBDIR}/pre_commit/spec/pre_commit
-@dirrm ${GEM_LIBDIR}/pre_commit/spec
-@dirrm ${GEM_LIBDIR}/pre_commit/lib/pre_commit
-@dirrm ${GEM_LIBDIR}/pre_commit/lib
-@dirrm ${GEM_LIBDIR}/pre_commit
 @dirrm ${GEM_LIBDIR}/plugins/mock_frameworks
 @dirrm ${GEM_LIBDIR}/plugins
 @dirrm ${GEM_LIBDIR}/lib/spec/story/runner
