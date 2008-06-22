@@ -1,23 +1,21 @@
-# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:51 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/22 15:21:52 he Exp $
 #
 
-DISTNAME=	XML-Stream-1.15
+DISTNAME=	XML-Stream-1.22
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://sourceforge.net/projects/xmlstream/
+HOMEPAGE=	http://search.cpan.org/~reatmon/XML-Stream-1.22/
 COMMENT=	XML::Stream provides you with access to XML Stream
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
-DEPENDS+=	p5-Unicode-String-[0-9]*:../../converters/p5-Unicode-String
+DEPENDS+=	p5-Authen-SASL>0:../../security/p5-Authen-SASL
+DEPENDS+=	p5-MIME-Base64>0:../../converters/p5-MIME-Base64
 
 PERL5_PACKLIST=	auto/XML/Stream/.packlist
 
 .include "../../lang/perl5/module.mk"
-
 .include "../../mk/bsd.pkg.mk"
