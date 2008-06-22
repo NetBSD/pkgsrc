@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.23 2007/05/12 20:40:43 adam Exp $
+$NetBSD: patch-af,v 1.24 2008/06/22 23:38:18 dholland Exp $
 
---- dlls/ntdll/signal_i386.c.orig	2007-05-11 19:35:02.000000000 +0200
-+++ dlls/ntdll/signal_i386.c
-@@ -167,7 +167,7 @@ typedef struct trapframe SIGCONTEXT;
+--- dlls/ntdll/signal_i386.c.orig	2008-06-17 10:07:31.000000000 -0400
++++ dlls/ntdll/signal_i386.c	2008-06-22 13:19:30.000000000 -0400
+@@ -199,7 +199,7 @@ typedef struct trapframe SIGCONTEXT;
  
  #endif /* bsdi */
  
@@ -11,7 +11,7 @@ $NetBSD: patch-af,v 1.23 2007/05/12 20:40:43 adam Exp $
  
  typedef struct sigcontext SIGCONTEXT;
  
-@@ -290,6 +290,43 @@ typedef ucontext_t SIGCONTEXT;
+@@ -332,6 +332,39 @@ typedef ucontext_t SIGCONTEXT;
  
  #endif /* __APPLE__ */
  
@@ -29,33 +29,29 @@ $NetBSD: patch-af,v 1.23 2007/05/12 20:40:43 adam Exp $
 +#define ESI_sig(context)	((context)->uc_mcontext.__gregs[_REG_ESI])
 +#define EDI_sig(context)	((context)->uc_mcontext.__gregs[_REG_EDI])
 +#define EBP_sig(context)	((context)->uc_mcontext.__gregs[_REG_EBP])
++#define ESP_sig(context)	(*((unsigned long*)&(context)->uc_mcontext.__gregs[_REG_ESP]))
 +
 +#define CS_sig(context)		((context)->uc_mcontext.__gregs[_REG_CS])
 +#define DS_sig(context)		((context)->uc_mcontext.__gregs[_REG_DS])
 +#define ES_sig(context)		((context)->uc_mcontext.__gregs[_REG_ES])
++#define SS_sig(context)		((context)->uc_mcontext.__gregs[_REG_SS])
 +#define FS_sig(context)		((context)->uc_mcontext.__gregs[_REG_FS])
 +#define GS_sig(context)		((context)->uc_mcontext.__gregs[_REG_GS])
-+#define SS_sig(context)		((context)->uc_mcontext.__gregs[_REG_SS])
 +
 +#define EFL_sig(context)	((context)->uc_mcontext.__gregs[_REG_EFL])
-+
 +#define EIP_sig(context)	(*((unsigned long*)&(context)->uc_mcontext.__gregs[_REG_EIP]))
-+#define ESP_sig(context)	(*((unsigned long*)&(context)->uc_mcontext.__gregs[_REG_ESP]))
-+
 +#define TRAP_sig(context)	((context)->uc_mcontext.__gregs[_REG_TRAPNO])
 +#define ERROR_sig(context)	((context)->uc_mcontext.__gregs[_REG_ERR])
 +
-+#define FAULT_ADDRESS		(__siginfo->si_addr)
-+
-+#define HANDLER_DEF(name) void name( int __signal, siginfo_t *__siginfo, SIGCONTEXT *__context )
-+#define HANDLER_CONTEXT (__context)
++#define FPU_sig(context)     NULL
++#define FPUX_sig(context)    ((XMM_SAVE_AREA32 *)&((context)->uc_mcontext.__fpregs))
 +
 +#endif /* __NetBSD__ */
 +
  WINE_DEFAULT_DEBUG_CHANNEL(seh);
  
  typedef int (*wine_signal_handler)(unsigned int sig);
-@@ -322,8 +359,13 @@ enum i386_trap_code
+@@ -366,8 +399,13 @@ enum i386_trap_code
      TRAP_x86_PAGEFLT    = T_PAGEFLT,    /* Page fault */
      TRAP_x86_ARITHTRAP  = T_ARITHTRAP,  /* Floating point exception */
      TRAP_x86_ALIGNFLT   = T_ALIGNFLT,   /* Alignment check exception */
@@ -69,7 +65,7 @@ $NetBSD: patch-af,v 1.23 2007/05/12 20:40:43 adam Exp $
  #else
      TRAP_x86_DIVIDE     = 0,   /* Division by zero exception */
      TRAP_x86_TRCTRAP    = 1,   /* Single-step exception */
-@@ -1385,7 +1427,11 @@ BOOL SIGNAL_Init(void)
+@@ -1561,7 +1599,11 @@ BOOL SIGNAL_Init(void)
  #endif  /* HAVE_SIGALTSTACK */
  
      sig_act.sa_mask = server_block_set;
