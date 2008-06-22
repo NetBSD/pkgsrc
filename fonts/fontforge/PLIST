@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2008/01/29 01:06:20 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.19 2008/06/22 18:30:54 adam Exp $
 bin/fontforge
 bin/fontimage
 bin/fontlint
@@ -62,6 +62,7 @@ include/fontforge/ustring.h
 include/fontforge/utype.h
 lib/libfontforge.la
 lib/libgdraw.la
+lib/libgioftp.la
 lib/libgunicode.la
 lib/libgutils.la
 lib/pkgconfig/fontforge.pc
@@ -69,6 +70,7 @@ man/man1/fontforge.1
 man/man1/fontimage.1
 man/man1/fontlint.1
 man/man1/sfddiff.1
+share/fontforge/python/excepthook.py
 share/locale/de/LC_MESSAGES/FontForge.mo
 share/locale/el/LC_MESSAGES/FontForge.mo
 share/locale/en_GB/LC_MESSAGES/FontForge.mo
@@ -82,3 +84,4 @@ share/locale/vi/LC_MESSAGES/FontForge.mo
 share/locale/zh_CN/LC_MESSAGES/FontForge.mo
 share/locale/zh_TW/LC_MESSAGES/FontForge.mo
 @dirrm include/fontforge
+@dirrm share/fontforge
