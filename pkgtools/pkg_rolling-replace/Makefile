@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2008/06/08 17:29:01 gdt Exp $
+# $NetBSD: Makefile,v 1.21 2008/06/22 12:49:53 gdt Exp $
 
 DISTNAME=	pkg_rolling-replace-0.16
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	pkgtools
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -47,32 +47,14 @@ REPLACE_SH+=		pkg_rolling-replace.sh
 
 .include "../../mk/bsd.prefs.mk"
 
-# target exists only to force check-pkgsrc-patch prior to install
-do-extract: check-pkgsrc-patch
+do-extract:
 	cp ${FILESDIR}/pkg_rolling-replace.sh ${WRKSRC}
 	cp ${FILESDIR}/pkg_rolling-replace.8 ${WRKSRC}
 
-do-install: check-pkgsrc-patch
+do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/pkg_rolling-replace.sh \
 		${PREFIX}/sbin/pkg_rolling-replace
 	${INSTALL_MAN} ${WRKSRC}/pkg_rolling-replace.8 \
 		${PREFIX}/${PKGMANDIR}/man8/pkg_rolling-replace.8
-
-check-pkgsrc-patch:
-	@${ECHO_N} "=> Checking for unsafe_depends support in pkgsrc..."; \
-	REPLACE_MK="${PKGSRCDIR}/mk/flavor/pkg/replace.mk"; \
-	if [ -f "$$REPLACE_MK" ]; then \
-	    if [ "`${EGREP} unsafe_depends=YES $$REPLACE_MK`" ]; then \
-	        ${ECHO} "found."; \
-		${TRUE}; \
-	    else \
-	        ${ECHO}; \
-	        ${ECHO} "*** pkg_rolling replace requires pkgsrc>=2006Q3" \
-	        ${FALSE}; \
-            fi; \
-	else \
-            ${ECHO} "*** pkg_rolling replace requires pkgsrc>=2006Q3"; \
-            ${FALSE}; \
-        fi
 
 .include "../../mk/bsd.pkg.mk"
