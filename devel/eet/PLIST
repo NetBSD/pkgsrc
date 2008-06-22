@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/10/13 08:57:55 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/06/22 01:21:31 joerg Exp $
 bin/eet
-bin/eet-config
 include/Eet.h
 lib/libeet.la
 lib/pkgconfig/eet.pc
