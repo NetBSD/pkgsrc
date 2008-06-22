@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/22 04:52:39 dmcmahill Exp $
+bin/inadyn
+${PKGMANDIR}/man5/inadyn.conf.5
+${PKGMANDIR}/man8/inadyn.8
