@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1371 2008/06/22 16:14:54 he Exp $
+$NetBSD: CHANGES-2008,v 1.1372 2008/06/22 16:19:57 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2273,3 +2273,24 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-XML-Stream to 1.22 [he 2008-06-22]
 	Added net/p5-Net-XMPP version 1.02 [he 2008-06-22]
 	Updated chat/p5-Net-Jabber to 2.0 [he 2008-06-22]
+	Updated databases/ruby-DBI to 0.2.0 [taca 2008-06-22]
+	Updated databases/ruby-DBD-mysql to 0.2.0 [taca 2008-06-22]
+	Updated databases/ruby-DBD-postgresql to 0.2.0 [taca 2008-06-22]
+	Updated databases/ruby-DBD-sqlite to 0.2.0 [taca 2008-06-22]
+	Added databases/ruby-DBD-sqlite3 version 0.2.0 [taca 2008-06-22]
+	Updated databases/ruby-datamapper to 0.3.2 [taca 2008-06-22]
+	Updated databases/ruby-mysql to 2.7.6 [taca 2008-06-22]
+	Updated databases/ruby-sqlite3 to 1.2.2 [taca 2008-06-22]
+	Updated devel/ZenTest to 3.10.0 [taca 2008-06-22]
+	Updated devel/hoe to 1.6.0 [taca 2008-06-22]
+	Updated devel/ruby-debug-ide to 0.2.0 [taca 2008-06-22]
+	Updated devel/ruby-flexmock to 0.8.2 [taca 2008-06-22]
+	Updated devel/ruby-inline to 3.7.0 [taca 2008-06-22]
+	Updated devel/ruby-linecache to 0.4.3 [taca 2008-06-22]
+	Updated devel/ruby-parsetree to 2.2.0 [taca 2008-06-22]
+	Updated devel/ruby-rspec to 1.1.4 [taca 2008-06-22]
+	Updated devel/ruby2ruby to 1.1.9 [taca 2008-06-22]
+	Updated devel/rubyforge to 1.0.0 [taca 2008-06-22]
+	Updated mail/ruby-mailfactory to 1.3.5 [taca 2008-06-22]
+	Updated mail/ruby-tmail to 1.2.3.1 [taca 2008-06-22]
+	Updated misc/ruby-launchy to 0.3.2 [taca 2008-06-22]
