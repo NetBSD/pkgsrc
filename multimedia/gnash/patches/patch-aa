@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.10 2008/06/22 15:20:56 wiz Exp $
+
+--- configure.orig	2008-06-19 10:48:05.000000000 +0000
++++ configure
+@@ -53135,7 +53135,7 @@ echo "${ECHO_T}no" >&6; }
+ fi
+ 
+ 
+-    if test x"$FOP" == x; then
++    if test x"$FOP" = x; then
+         # Extract the first word of "fop", so it can be a program name with args.
+ set dummy fop; ac_word=$2
+ { echo "$as_me:$LINENO: checking for $ac_word" >&5
+@@ -58445,7 +58445,7 @@ fi
+         echo "               This version of ffmpeg may not work!" >&3
+         echo "               Version 51.27.0 or newer is highly recommended." >&3
+       else
+-	if test x"${avformat_h}" == x; then
++	if test x"${avformat_h}" = x; then
+           echo "        ERROR: FFMPEG's libavcodec header is installed but not libavformat." >&3
+           echo "               You can install FFMPEG from http://ffmpeg.mplayerhq.hu" >&3
+           echo "               or .deb users: apt-get install libavformat-dev" >&3
+@@ -58791,7 +58791,7 @@ if test x$ext_mysql = xyes; then
+   fi
+ fi
+ 
+-if test "$GMSGFMT" == ":"; then
++if test "$GMSGFMT" = ":"; then
+   echo "        WARNING: You need the gettext package installed to use translations." >&4
+   echo "                 Required for building a package or 'make distcheck'" >&4
+   echo "                 Install it from http://www.gnu.org/software/gettext/" >&4
