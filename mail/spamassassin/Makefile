@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.87 2008/05/20 05:42:46 ghen Exp $
+# $NetBSD: Makefile,v 1.88 2008/06/22 22:41:01 heinz Exp $
 
-DISTNAME=	Mail-SpamAssassin-3.2.4
-PKGNAME=	spamassassin-3.2.4
-PKGREVISION=	2
+DISTNAME=	Mail-SpamAssassin-3.2.5
+PKGNAME=	spamassassin-3.2.5
 SVR4_PKGNAME=	sa
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_APACHE:=spamassassin/source/}
@@ -27,14 +26,12 @@ DEPENDS+=	p5-Archive-Tar>=1.23:../../archivers/p5-Archive-Tar
 DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
 DEPENDS+=	p5-IO-Zlib>=1.04:../../devel/p5-IO-Zlib
 DEPENDS+=	gnupg-[0-9]*:../../security/gnupg
+DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
 
 USE_TOOLS+=	perl
 
-.if (${OPSYS} != "NetBSD") && (${OPSYS} != "DragonFly")
-DEPENDS+=	p5-DB_File-[0-9]*:../../databases/p5-DB_File
-.endif
 
-CONFLICTS=		p5-Mail-SpamAssassin-[1-9]*
+CONFLICTS=		p5-Mail-SpamAssassin-[0-9]*
 
 WRKSRC=			${WRKDIR}/${DISTNAME}
 
@@ -54,7 +51,7 @@ PLIST_SRC=		${PKGDIR}/PLIST ${PLIST_ADD}
 PERL5_PACKLIST=		auto/Mail/SpamAssassin/.packlist
 
 GNU_CONFIGURE=		YES
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_DIRS=		spamc
 BUILD_DIRS=		.
 PERL5_CONFIGURE=	NO # we need the default "do-configure" target
@@ -140,7 +137,7 @@ INTERPRETER_SUPPORT=	YES
 
 # These variables are substituted in netbsd-rc-script.sh.
 FILES_SUBST+=		INTERPRETER_SUPPORT=${INTERPRETER_SUPPORT:Q}
-FILES_SUBST+=		OPSYS=${OPSYS:Q}
+FILES_SUBST+=		OPSYS=${OPSYS}
 
 pre-configure: perl5-configure
 	# GNU configure needs version.h -> create it
@@ -158,19 +155,19 @@ post-install:
 	${ECHO} "${DOC_SUBDIR}/${f}" >> ${PLIST_ADD}
 .endfor
 
-	cd ${WRKSRC}/rules;						\
+	set -e ; cd ${WRKSRC}/rules;					\
 	for f in [0-9]*.cf; do						\
 		${ECHO} "${RULE_SUBDIR}/$$f" >> ${PLIST_ADD};		\
 	done;								\
 	for f in ${PRE_FILES}; do					\
-		${INSTALL_DATA} $$f ${DESTDIR}${EGDIR} &&		\
-		${ECHO} ${EG_SUBDIR}/$$f >> ${PLIST_ADD};		\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${EGDIR} &&		\
+		${ECHO} "${EG_SUBDIR}/$$f" >> ${PLIST_ADD};		\
 	done
 	# examples are in the static PLIST
 	${INSTALL_DATA} ${WRKSRC}/procmailrc.example ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/rules/local.cf ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${FILESDIR}/netbsd_lists.cf ${DESTDIR}${EGDIR}
-	{ for d in ${SA_INSTALLDIRS}; do				\
+	set -e ; { for d in ${SA_INSTALLDIRS}; do			\
 		${ECHO} "@dirrm $$d";					\
 	done; } | ${SORT} -r >> ${PLIST_ADD};
 
