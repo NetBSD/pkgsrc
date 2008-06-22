@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/06/22 04:52:39 dmcmahill Exp $
+
+SHA1 (inadyn.v1.96.2.zip) = d5fe03ee4cfbc8e702d38d80527264a29297b6cf
+RMD160 (inadyn.v1.96.2.zip) = f3c4d1009a2743032f28e6527aa58d6ecd0baf29
+Size (inadyn.v1.96.2.zip) = 110170 bytes
+SHA1 (patch-aa) = 399adaaaa990277b9b84175850ccdc6970c349cc
+SHA1 (patch-ab) = aed758e916a494d80da15a7d24c6244e364cfa5d
