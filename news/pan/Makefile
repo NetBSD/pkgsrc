@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.51 2008/05/30 12:29:00 wiz Exp $
+# $NetBSD: Makefile,v 1.52 2008/06/22 08:12:24 wiz Exp $
 #
 
-DISTNAME=		pan-0.14.2
-PKGREVISION=		11
+DISTNAME=		pan-0.132
 CATEGORIES=		news
-MASTER_SITES=		http://pan.rebelbase.com/download/releases/${DISTNAME:C/pan-//}/SOURCE/
+MASTER_SITES=		http://pan.rebelbase.com/download/releases/${DISTNAME:C/pan-//}/source/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		rh@NetBSD.org
+MAINTAINER=		rhialto@falu.nl
 HOMEPAGE=		http://pan.rebelbase.com/
 COMMENT=		Newsreader for GTK2
 
-USE_TOOLS+=		msgfmt perl pkg-config
+USE_TOOLS+=		gmake msgfmt perl pkg-config
 USE_DIRS+=		gnome2-1.5
 USE_LANGUAGES=		c c++
 USE_PKGLOCALEDIR=	YES
@@ -24,6 +23,7 @@ LIBS+=			-lcompat
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../mail/gmime/buildlink3.mk"
 .include "../../net/gnet/buildlink3.mk"
 .include "../../textproc/gtkspell/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
