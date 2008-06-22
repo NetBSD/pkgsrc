@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/04/27 06:44:52 wiz Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/06/22 15:20:56 wiz Exp $
 bin/dumpshm
 bin/gnash
 bin/gprocessor
@@ -6,7 +6,9 @@ bin/soldumper
 lib/gnash/libgnashamf.la
 lib/gnash/libgnashbase.la
 lib/gnash/libgnashmedia.la
+lib/gnash/libgnashnet.la
 lib/gnash/libgnashserver.la
+lib/gnash/libmozsdk.la
 man/man1/cygnal.1
 man/man1/dumpshm.1
 man/man1/gnash.1
@@ -16,6 +18,8 @@ share/doc/gnash/gnashref.html
 share/doc/gnash/gnashuser.html
 share/doc/gnash/images/car_crash.png
 share/doc/gnash/images/rtmp.png
+share/examples/gnash/gnashpluginrc
+share/examples/gnash/gnashrc
 share/${KDE}gnash/GnashG.png
 share/${KDE}gnash/gnash_128_96.ico
 share/${KDE}locale/cs/LC_MESSAGES/gnash.mo
@@ -24,8 +28,10 @@ share/${KDE}locale/es/LC_MESSAGES/gnash.mo
 share/${KDE}locale/fi/LC_MESSAGES/gnash.mo
 share/${KDE}locale/fr/LC_MESSAGES/gnash.mo
 share/${KDE}locale/it/LC_MESSAGES/gnash.mo
+share/${KDE}locale/ja/LC_MESSAGES/gnash.mo
 share/${KDE}locale/sv/LC_MESSAGES/gnash.mo
 @dirrm share/${KDE}gnash
+@dirrm share/examples/gnash
 @dirrm share/doc/gnash/images
 @dirrm share/doc/gnash
 @dirrm lib/gnash
