@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1379 2008/06/22 17:28:54 he Exp $
+$NetBSD: CHANGES-2008,v 1.1380 2008/06/22 17:42:23 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2301,3 +2301,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Params-Util to 0.33 [he 2008-06-22]
 	Updated math/p5-Spreadsheet-WriteExcel to 2.21 [he 2008-06-22]
 	Updated textproc/p5-XML-RSS to 1.33 [he 2008-06-22]
+	Updated mail/dovecot to 1.1.1 [ghen 2008-06-22]
+	Updated mail/dovecot-sieve to 1.1.5 [ghen 2008-06-22]
