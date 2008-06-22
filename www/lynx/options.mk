@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2007/03/10 09:14:09 wiz Exp $
+# $NetBSD: options.mk,v 1.11 2008/06/22 15:55:46 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lynx
 PKG_SUPPORTED_OPTIONS=	inet6
@@ -29,6 +29,9 @@ PKG_FAIL_REASON+=	"SOCKS may not be enabled together with the \"slang\"" \
 .if !empty(PKG_OPTIONS:Mslang)
 SCREENTYPE=		slang
 .  include "../../devel/libslang/buildlink3.mk"
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/samples/lynx.lss \
+		${DESTDIR}${PREFIX}/share/examples/lynx/lynx.lss
 .endif
 .if !empty(PKG_OPTIONS:Mncurses)
 SCREENTYPE=		ncurses
