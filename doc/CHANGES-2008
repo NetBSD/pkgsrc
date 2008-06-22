@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1359 2008/06/21 23:33:42 adam Exp $
+$NetBSD: CHANGES-2008,v 1.1360 2008/06/22 01:22:04 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2261,3 +2261,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/freeciv-share to 2.1.5 [adam 2008-06-22]
 	Updated games/freeciv-client to 2.1.5 [adam 2008-06-22]
 	Updated games/freeciv-server to 2.1.5 [adam 2008-06-22]
+	Updated devel/eet to 1.0.1 [joerg 2008-06-22]
