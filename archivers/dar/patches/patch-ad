@@ -1,16 +1,16 @@
-$NetBSD: patch-ad,v 1.4 2007/09/16 07:33:16 dsainty Exp $
+$NetBSD: patch-ad,v 1.5 2008/06/22 22:33:37 dsainty Exp $
 
 On Solaris 10 with SunPro, vector<> does not have a method assign().
 
---- src/libdar/mask_list.cpp.orig	2006-01-08 17:33:43.000000000 +0100
-+++ src/libdar/mask_list.cpp	2006-08-30 19:03:29.396038900 +0200
-@@ -177,7 +177,9 @@ namespace libdar
- 	    tmp.unique(); // remove duplicates
+--- src/libdar/mask_list.cpp.orig	2008-06-22 20:15:54.000000000 +1200
++++ src/libdar/mask_list.cpp	2008-06-22 20:16:37.000000000 +1200
+@@ -180,7 +180,9 @@
+ 	    my_tmp.unique(); // remove duplicates
  
  		// but we need the indexing of vectors
--	    contenu.assign(tmp.begin(), tmp.end());
+-	    contenu.assign(my_tmp.begin(), my_tmp.end());
 +	    contenu.clear();
-+	    for (list<string>::const_iterator it = tmp.begin(); it != tmp.end(); it++)
++	    for (list< basic_string<my_char> >::const_iterator it = my_tmp.begin(); it != my_tmp.end(); it++)
 +		contenu.push_back(*it);
  	    taille = contenu.size();
  	    if(taille < contenu.size())
