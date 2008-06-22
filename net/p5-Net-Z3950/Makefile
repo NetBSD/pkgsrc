@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:40 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/22 16:49:49 he Exp $
 #
 
-DISTNAME=	Net-Z3950-0.32
+DISTNAME=	Net-Z3950-0.51
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 SVR4_PKGNAME=	p5nz3
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://perl.z3950.org/
+#HOMEPAGE=	http://search.cpan.org/~mirk/Net-Z3950-0.51/
 COMMENT=	Perl interface to the Z39.50 information retrieval protocol
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	p5-MARC>=1.15:../../databases/p5-MARC
+#DEPENDS+=	p5-MARC>=1.15:../../databases/p5-MARC
 DEPENDS+=	p5-Event>=0.77:../../devel/p5-Event
 
 PERL5_PACKLIST=		auto/Net/Z3950/.packlist
