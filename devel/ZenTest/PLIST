@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.3 2008/04/04 15:30:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/06/22 15:54:37 taca Exp $
 bin/autotest
 bin/multiruby
+bin/multiruby_setup
 bin/rails_test_audit
 bin/unit_diff
 bin/zentest
@@ -14,6 +15,7 @@ ${GEM_LIBDIR}/articles/getting_started_with_autotest.html
 ${GEM_LIBDIR}/articles/how_to_use_zentest.txt
 ${GEM_LIBDIR}/bin/autotest
 ${GEM_LIBDIR}/bin/multiruby
+${GEM_LIBDIR}/bin/multiruby_setup
 ${GEM_LIBDIR}/bin/rails_test_audit
 ${GEM_LIBDIR}/bin/unit_diff
 ${GEM_LIBDIR}/bin/zentest
@@ -37,6 +39,7 @@ ${GEM_LIBDIR}/lib/autotest/kdenotify.rb
 ${GEM_LIBDIR}/lib/autotest/menu.rb
 ${GEM_LIBDIR}/lib/autotest/migrate.rb
 ${GEM_LIBDIR}/lib/autotest/notify.rb
+${GEM_LIBDIR}/lib/autotest/once.rb
 ${GEM_LIBDIR}/lib/autotest/pretty.rb
 ${GEM_LIBDIR}/lib/autotest/rails.rb
 ${GEM_LIBDIR}/lib/autotest/rcov.rb
@@ -46,6 +49,7 @@ ${GEM_LIBDIR}/lib/autotest/shame.rb
 ${GEM_LIBDIR}/lib/autotest/snarl.rb
 ${GEM_LIBDIR}/lib/autotest/timestamp.rb
 ${GEM_LIBDIR}/lib/functional_test_matrix.rb
+${GEM_LIBDIR}/lib/multiruby.rb
 ${GEM_LIBDIR}/lib/test/rails.rb
 ${GEM_LIBDIR}/lib/test/rails/controller_test_case.rb
 ${GEM_LIBDIR}/lib/test/rails/functional_test_case.rb
