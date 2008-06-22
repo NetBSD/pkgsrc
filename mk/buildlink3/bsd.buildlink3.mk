@@ -1,4 +1,4 @@
-# $NetBSD: bsd.buildlink3.mk,v 1.202 2008/03/10 20:05:59 joerg Exp $
+# $NetBSD: bsd.buildlink3.mk,v 1.203 2008/06/22 23:54:06 dholland Exp $
 #
 # Copyright (c) 2004 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -583,7 +583,7 @@ ${_BLNK_COOKIE.${_pkg_}}:
 	${RUN}					\
 	case ${BUILDLINK_PREFIX.${_pkg_}} in				\
 	*not_found)							\
-		${ERROR_MSG} "${_pkg_} is not installed; can't buildlink files."; \
+		${ERROR_MSG} "${BUILDLINK_API_DEPENDS.${_pkg_}} is not installed; can't buildlink files."; \
 		exit 1;							\
 		;;							\
 	esac
