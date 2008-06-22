@@ -1,11 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:17:28 jlam Exp $
-bin/inline_package
+@comment $NetBSD: PLIST,v 1.2 2008/06/22 16:01:43 taca Exp $
 ${GEM_HOME}/cache/RubyInline-${PKGVERSION}.gem
 ${GEM_LIBDIR}/History.txt
 ${GEM_LIBDIR}/Manifest.txt
 ${GEM_LIBDIR}/README.txt
 ${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/bin/inline_package
 ${GEM_LIBDIR}/demo/fastmath.rb
 ${GEM_LIBDIR}/demo/hello.rb
 ${GEM_LIBDIR}/example.rb
@@ -19,5 +17,4 @@ ${GEM_HOME}/specifications/RubyInline-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/test
 @dirrm ${GEM_LIBDIR}/lib
 @dirrm ${GEM_LIBDIR}/demo
-@dirrm ${GEM_LIBDIR}/bin
 @dirrm ${GEM_LIBDIR}
