@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1362 2008/06/22 08:12:38 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1363 2008/06/22 08:43:13 hira Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2264,3 +2264,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/eet to 1.0.1 [joerg 2008-06-22]
 	Added net/inadyn version 1.96.2 [dmcmahill 2008-06-22]
 	Updated news/pan to 0.132 [wiz 2008-06-22]
+	Updated wm/ccsm to 0.6.0nb1 [hira 2008-06-22]
