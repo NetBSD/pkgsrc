@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7348 2008/06/21 18:58:56 wiz Exp $
+$NetBSD: TODO,v 1.7349 2008/06/22 13:37:31 peter Exp $
 
 Suggested new packages
 ======================
@@ -1034,7 +1034,6 @@ Suggested package updates
 	o pen-0.17.3
 	o perl5-5.10.0
 	o pfqueue-0.5.6
-	o pfstat-2.3 [peter]
 	o pgadmin3-1.6.0
 	o pgpool-3.1.1
 	o phoon-20050629
