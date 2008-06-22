@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/08/27 10:40:50 ghen Exp $
+$NetBSD: patch-aa,v 1.2 2008/06/22 17:41:23 ghen Exp $
 
---- src/libsieve/Makefile.in.orig	2007-07-20 10:19:20.000000000 +0200
+--- src/libsieve/Makefile.in.orig	2007-09-23 16:59:48.000000000 +0200
 +++ src/libsieve/Makefile.in
 @@ -38,8 +38,8 @@ PRE_UNINSTALL = :
  POST_UNINSTALL = :
@@ -26,11 +26,11 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/08/27 10:40:50 ghen Exp $
  @HAVE_DOVECOT_LIBS_TRUE@	$(dovecotdir)/src/lib/liblib.a
 +@HAVE_DOVECOT_LIBS_FALSE@sievec_DEPENDENCIES = libsieve.la \
 +@HAVE_DOVECOT_LIBS_FALSE@	$(dovecotdir)/liblib.a
- am__sieved_SOURCES_DIST = sieved.c ../map.c
+ am__sieved_SOURCES_DIST = sieved.c ../map.c ../imparse.c
 -@HAVE_DOVECOT_LIBS_TRUE@am_sieved_OBJECTS = sieved.$(OBJEXT) \
--@HAVE_DOVECOT_LIBS_TRUE@	map.$(OBJEXT)
+-@HAVE_DOVECOT_LIBS_TRUE@	map.$(OBJEXT) imparse.$(OBJEXT)
 +am_sieved_OBJECTS = sieved.$(OBJEXT) \
-+	map.$(OBJEXT)
++	map.$(OBJEXT) imparse.$(OBJEXT)
  sieved_OBJECTS = $(am_sieved_OBJECTS)
  @HAVE_DOVECOT_LIBS_TRUE@sieved_DEPENDENCIES = libsieve.la \
  @HAVE_DOVECOT_LIBS_TRUE@	$(dovecotdir)/src/lib/liblib.a
@@ -39,7 +39,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/08/27 10:40:50 ghen Exp $
  DEFAULT_INCLUDES = -I. -I$(srcdir) -I$(top_builddir)
  depcomp = $(SHELL) $(top_srcdir)/depcomp
  am__depfiles_maybe = depfiles
-@@ -266,10 +270,16 @@ noinst_HEADERS = \
+@@ -267,10 +271,16 @@ noinst_HEADERS = \
  @HAVE_DOVECOT_LIBS_TRUE@sievec_LDADD = \
  @HAVE_DOVECOT_LIBS_TRUE@	libsieve.la \
  @HAVE_DOVECOT_LIBS_TRUE@	$(dovecotdir)/src/lib/liblib.a

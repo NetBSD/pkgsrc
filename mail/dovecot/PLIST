@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2007/11/28 15:11:50 ghen Exp $
+@comment $NetBSD: PLIST,v 1.20 2008/06/22 17:41:23 ghen Exp $
 include/dovecot/config.h
 include/dovecot/src/auth/auth-cache.h
 include/dovecot/src/auth/auth-client-connection.h
@@ -6,7 +6,6 @@ include/dovecot/src/auth/auth-client-interface.h
 include/dovecot/src/auth/auth-master-connection.h
 include/dovecot/src/auth/auth-master-interface.h
 include/dovecot/src/auth/auth-master-listener.h
-include/dovecot/src/auth/auth-module.h
 include/dovecot/src/auth/auth-request-handler.h
 include/dovecot/src/auth/auth-request.h
 include/dovecot/src/auth/auth-stream.h
@@ -19,11 +18,14 @@ include/dovecot/src/auth/db-passwd-file.h
 include/dovecot/src/auth/db-sql.h
 include/dovecot/src/auth/mech.h
 include/dovecot/src/auth/mycrypt.h
+include/dovecot/src/auth/otp-skey-common.h
 include/dovecot/src/auth/passdb-blocking.h
 include/dovecot/src/auth/passdb-cache.h
 include/dovecot/src/auth/passdb.h
 include/dovecot/src/auth/password-scheme.h
+include/dovecot/src/auth/plain-common.h
 include/dovecot/src/auth/userdb-blocking.h
+include/dovecot/src/auth/userdb-static.h
 include/dovecot/src/auth/userdb-vpopmail.h
 include/dovecot/src/auth/userdb.h
 include/dovecot/src/deliver/auth-client.h
@@ -40,9 +42,9 @@ include/dovecot/src/imap/imap-fetch.h
 include/dovecot/src/imap/imap-messageset.h
 include/dovecot/src/imap/imap-search.h
 include/dovecot/src/imap/imap-sort.h
+include/dovecot/src/imap/imap-status.h
 include/dovecot/src/imap/imap-sync.h
 include/dovecot/src/imap/imap-thread.h
-include/dovecot/src/imap/namespace.h
 include/dovecot/src/lib-auth/auth-client.h
 include/dovecot/src/lib-auth/auth-server-connection.h
 include/dovecot/src/lib-auth/auth-server-request.h
@@ -68,17 +70,20 @@ include/dovecot/src/lib-index/mail-index-view-private.h
 include/dovecot/src/lib-index/mail-index.h
 include/dovecot/src/lib-index/mail-transaction-log-private.h
 include/dovecot/src/lib-index/mail-transaction-log.h
-include/dovecot/src/lib-index/mail-transaction-util.h
+include/dovecot/src/lib-index/mailbox-list-index-private.h
+include/dovecot/src/lib-index/mailbox-list-index.h
 include/dovecot/src/lib-mail/istream-header-filter.h
 include/dovecot/src/lib-mail/mail-types.h
+include/dovecot/src/lib-mail/mbox-from.h
 include/dovecot/src/lib-mail/message-address.h
-include/dovecot/src/lib-mail/message-body-search.h
-include/dovecot/src/lib-mail/message-content-parser.h
 include/dovecot/src/lib-mail/message-date.h
+include/dovecot/src/lib-mail/message-decoder.h
 include/dovecot/src/lib-mail/message-header-decode.h
-include/dovecot/src/lib-mail/message-header-search.h
+include/dovecot/src/lib-mail/message-header-parser.h
+include/dovecot/src/lib-mail/message-id.h
 include/dovecot/src/lib-mail/message-parser.h
 include/dovecot/src/lib-mail/message-part-serialize.h
+include/dovecot/src/lib-mail/message-search.h
 include/dovecot/src/lib-mail/message-send.h
 include/dovecot/src/lib-mail/message-size.h
 include/dovecot/src/lib-mail/quoted-printable.h
@@ -86,30 +91,47 @@ include/dovecot/src/lib-mail/rfc822-parser.h
 include/dovecot/src/lib-settings/settings.h
 include/dovecot/src/lib-sql/sql-api-private.h
 include/dovecot/src/lib-sql/sql-api.h
+include/dovecot/src/lib-sql/sql-pool.h
+include/dovecot/src/lib-storage/index/cydir/cydir-storage.h
+include/dovecot/src/lib-storage/index/cydir/cydir-sync.h
+include/dovecot/src/lib-storage/index/dbox/dbox-file-maildir.h
 include/dovecot/src/lib-storage/index/dbox/dbox-file.h
-include/dovecot/src/lib-storage/index/dbox/dbox-format.h
-include/dovecot/src/lib-storage/index/dbox/dbox-keywords.h
+include/dovecot/src/lib-storage/index/dbox/dbox-index.h
 include/dovecot/src/lib-storage/index/dbox/dbox-storage.h
 include/dovecot/src/lib-storage/index/dbox/dbox-sync.h
-include/dovecot/src/lib-storage/index/dbox/dbox-uidlist.h
 include/dovecot/src/lib-storage/index/index-mail.h
+include/dovecot/src/lib-storage/index/index-sort-private.h
+include/dovecot/src/lib-storage/index/index-sort.h
 include/dovecot/src/lib-storage/index/index-storage.h
+include/dovecot/src/lib-storage/index/index-sync-changes.h
+include/dovecot/src/lib-storage/index/maildir/maildir-filename.h
 include/dovecot/src/lib-storage/index/maildir/maildir-keywords.h
 include/dovecot/src/lib-storage/index/maildir/maildir-storage.h
+include/dovecot/src/lib-storage/index/maildir/maildir-sync.h
 include/dovecot/src/lib-storage/index/maildir/maildir-uidlist.h
 include/dovecot/src/lib-storage/index/mbox/istream-raw-mbox.h
 include/dovecot/src/lib-storage/index/mbox/mbox-file.h
-include/dovecot/src/lib-storage/index/mbox/mbox-from.h
 include/dovecot/src/lib-storage/index/mbox/mbox-lock.h
 include/dovecot/src/lib-storage/index/mbox/mbox-md5.h
 include/dovecot/src/lib-storage/index/mbox/mbox-storage.h
 include/dovecot/src/lib-storage/index/mbox/mbox-sync-private.h
+include/dovecot/src/lib-storage/index/raw/raw-storage.h
+include/dovecot/src/lib-storage/index/raw/raw-sync.h
+include/dovecot/src/lib-storage/list/index-mailbox-list.h
+include/dovecot/src/lib-storage/list/mailbox-list-fs.h
+include/dovecot/src/lib-storage/list/mailbox-list-maildir.h
+include/dovecot/src/lib-storage/list/mailbox-list-subscriptions.h
+include/dovecot/src/lib-storage/list/subscription-file.h
 include/dovecot/src/lib-storage/mail-copy.h
+include/dovecot/src/lib-storage/mail-error.h
+include/dovecot/src/lib-storage/mail-namespace.h
 include/dovecot/src/lib-storage/mail-search.h
 include/dovecot/src/lib-storage/mail-storage-private.h
 include/dovecot/src/lib-storage/mail-storage.h
+include/dovecot/src/lib-storage/mailbox-list-private.h
+include/dovecot/src/lib-storage/mailbox-list.h
 include/dovecot/src/lib-storage/mailbox-tree.h
-include/dovecot/src/lib-storage/subscription-file/subscription-file.h
+include/dovecot/src/lib/aqueue.h
 include/dovecot/src/lib/array-decl.h
 include/dovecot/src/lib/array.h
 include/dovecot/src/lib/backtrace-string.h
@@ -118,11 +140,13 @@ include/dovecot/src/lib/bsearch-insert-pos.h
 include/dovecot/src/lib/buffer.h
 include/dovecot/src/lib/close-keep-errno.h
 include/dovecot/src/lib/compat.h
+include/dovecot/src/lib/crc32.h
 include/dovecot/src/lib/data-stack.h
 include/dovecot/src/lib/env-util.h
 include/dovecot/src/lib/failures.h
 include/dovecot/src/lib/fd-close-on-exec.h
 include/dovecot/src/lib/fd-set-nonblock.h
+include/dovecot/src/lib/fdatasync-path.h
 include/dovecot/src/lib/fdpass.h
 include/dovecot/src/lib/file-cache.h
 include/dovecot/src/lib/file-copy.h
@@ -138,28 +162,34 @@ include/dovecot/src/lib/hostpid.h
 include/dovecot/src/lib/imem.h
 include/dovecot/src/lib/ioloop-internal.h
 include/dovecot/src/lib/ioloop-iolist.h
+include/dovecot/src/lib/ioloop-notify-fd.h
 include/dovecot/src/lib/ioloop.h
 include/dovecot/src/lib/iostream-internal.h
+include/dovecot/src/lib/istream-concat.h
+include/dovecot/src/lib/istream-crlf.h
 include/dovecot/src/lib/istream-internal.h
 include/dovecot/src/lib/istream-seekable.h
+include/dovecot/src/lib/istream-tee.h
 include/dovecot/src/lib/istream.h
 include/dovecot/src/lib/lib-signals.h
 include/dovecot/src/lib/lib.h
+include/dovecot/src/lib/llist.h
 include/dovecot/src/lib/macros.h
 include/dovecot/src/lib/md4.h
 include/dovecot/src/lib/md5.h
 include/dovecot/src/lib/mempool.h
 include/dovecot/src/lib/mkdir-parents.h
 include/dovecot/src/lib/mmap-util.h
+include/dovecot/src/lib/module-context.h
 include/dovecot/src/lib/module-dir.h
 include/dovecot/src/lib/mountpoint.h
 include/dovecot/src/lib/network.h
 include/dovecot/src/lib/nfs-workarounds.h
-include/dovecot/src/lib/ostream-crlf.h
 include/dovecot/src/lib/ostream-internal.h
 include/dovecot/src/lib/ostream.h
 include/dovecot/src/lib/primes.h
-include/dovecot/src/lib/printf-upper-bound.h
+include/dovecot/src/lib/printf-format-fix.h
+include/dovecot/src/lib/priorityq.h
 include/dovecot/src/lib/process-title.h
 include/dovecot/src/lib/randgen.h
 include/dovecot/src/lib/read-full.h
@@ -167,16 +197,20 @@ include/dovecot/src/lib/restrict-access.h
 include/dovecot/src/lib/restrict-process-size.h
 include/dovecot/src/lib/safe-memset.h
 include/dovecot/src/lib/safe-mkdir.h
+include/dovecot/src/lib/safe-mkstemp.h
 include/dovecot/src/lib/sendfile-util.h
 include/dovecot/src/lib/seq-range-array.h
 include/dovecot/src/lib/sha1.h
+include/dovecot/src/lib/sha2.h
+include/dovecot/src/lib/str-find.h
 include/dovecot/src/lib/str-sanitize.h
 include/dovecot/src/lib/str.h
 include/dovecot/src/lib/strescape.h
 include/dovecot/src/lib/strfuncs.h
+include/dovecot/src/lib/unichar.h
 include/dovecot/src/lib/unix-socket-create.h
 include/dovecot/src/lib/unlink-directory.h
-include/dovecot/src/lib/unlink-lockfiles.h
+include/dovecot/src/lib/unlink-old-files.h
 include/dovecot/src/lib/utc-mktime.h
 include/dovecot/src/lib/utc-offset.h
 include/dovecot/src/lib/var-expand.h
@@ -192,32 +226,48 @@ lib/dovecot/imap/lib10_quota_plugin.so
 lib/dovecot/imap/lib11_imap_quota_plugin.la
 lib/dovecot/imap/lib11_trash_plugin.so
 lib/dovecot/imap/lib20_convert_plugin.so
+lib/dovecot/imap/lib20_expire_plugin.so
+lib/dovecot/imap/lib20_fts_plugin.so
 lib/dovecot/imap/lib20_mail_log_plugin.so
+lib/dovecot/imap/lib20_mbox_snarf_plugin.so
 lib/dovecot/imap/lib20_zlib_plugin.la
+lib/dovecot/imap/lib21_fts_squat_plugin.so
 lib/dovecot/lda/lib01_acl_plugin.so
 lib/dovecot/lda/lib10_quota_plugin.so
 lib/dovecot/lda/lib11_trash_plugin.so
 lib/dovecot/lda/lib20_convert_plugin.so
+lib/dovecot/lda/lib20_expire_plugin.so
+lib/dovecot/lda/lib20_fts_plugin.so
 lib/dovecot/lda/lib20_mail_log_plugin.so
+lib/dovecot/lda/lib21_fts_squat_plugin.so
 lib/dovecot/lib01_acl_plugin.la
 lib/dovecot/lib02_lazy_expunge_plugin.la
 lib/dovecot/lib10_quota_plugin.la
 lib/dovecot/lib11_trash_plugin.la
 lib/dovecot/lib20_convert_plugin.la
+lib/dovecot/lib20_expire_plugin.la
+lib/dovecot/lib20_fts_plugin.la
 lib/dovecot/lib20_mail_log_plugin.la
+lib/dovecot/lib20_mbox_snarf_plugin.la
+lib/dovecot/lib21_fts_squat_plugin.la
 lib/dovecot/liblib.a
 lib/dovecot/pop3/lib02_lazy_expunge_plugin.so
 lib/dovecot/pop3/lib10_quota_plugin.so
 lib/dovecot/pop3/lib20_convert_plugin.so
+lib/dovecot/pop3/lib20_expire_plugin.so
 lib/dovecot/pop3/lib20_mail_log_plugin.so
+lib/dovecot/pop3/lib20_mbox_snarf_plugin.so
 libexec/dovecot/checkpassword-reply
+libexec/dovecot/convert-tool
 libexec/dovecot/deliver
 libexec/dovecot/dict
 libexec/dovecot/dovecot-auth
+libexec/dovecot/expire-tool
 libexec/dovecot/gdbhelper
 libexec/dovecot/idxview
 libexec/dovecot/imap
 libexec/dovecot/imap-login
+libexec/dovecot/listview
 libexec/dovecot/logview
 libexec/dovecot/pop3
 libexec/dovecot/pop3-login
@@ -240,6 +290,7 @@ share/doc/dovecot/wiki/Authentication.Caching.txt
 share/doc/dovecot/wiki/Authentication.Kerberos.txt
 share/doc/dovecot/wiki/Authentication.MasterUsers.txt
 share/doc/dovecot/wiki/Authentication.Mechanisms.DigestMD5.txt
+share/doc/dovecot/wiki/Authentication.Mechanisms.NTLM.txt
 share/doc/dovecot/wiki/Authentication.Mechanisms.Winbind.txt
 share/doc/dovecot/wiki/Authentication.Mechanisms.txt
 share/doc/dovecot/wiki/Authentication.MultipleDatabases.txt
@@ -254,6 +305,7 @@ share/doc/dovecot/wiki/CommandLine.txt
 share/doc/dovecot/wiki/CompilingSource.txt
 share/doc/dovecot/wiki/Debugging.Authentication.txt
 share/doc/dovecot/wiki/Debugging.ProcessTracing.txt
+share/doc/dovecot/wiki/Debugging.Rawlog.txt
 share/doc/dovecot/wiki/Debugging.Thunderbird.txt
 share/doc/dovecot/wiki/Design.AuthProcess.txt
 share/doc/dovecot/wiki/Design.Indexes.Cache.txt
@@ -267,7 +319,10 @@ share/doc/dovecot/wiki/Design.txt
 share/doc/dovecot/wiki/FindMailLocation.txt
 share/doc/dovecot/wiki/FinishBasicConfiguration.txt
 share/doc/dovecot/wiki/HowTo.EximAndDovecotSASL.txt
+share/doc/dovecot/wiki/HowTo.PopBSMTPAndDovecot.txt
+share/doc/dovecot/wiki/HowTo.PopRelay.txt
 share/doc/dovecot/wiki/HowTo.PostfixAndDovecotSASL.txt
+share/doc/dovecot/wiki/HowTo.Rootless.txt
 share/doc/dovecot/wiki/HowTo.SimpleVirtualInstall.txt
 share/doc/dovecot/wiki/HowTo.txt
 share/doc/dovecot/wiki/IndexFiles.txt
@@ -297,12 +352,15 @@ share/doc/dovecot/wiki/MailboxFormat.mailstore.txt
 share/doc/dovecot/wiki/MailboxFormat.mbox.txt
 share/doc/dovecot/wiki/MailboxFormat.mbx.txt
 share/doc/dovecot/wiki/MailboxFormat.txt
+share/doc/dovecot/wiki/ManageSieve.txt
 share/doc/dovecot/wiki/MboxLocking.txt
 share/doc/dovecot/wiki/MboxProblems.txt
+share/doc/dovecot/wiki/Migration.BincIMAP.txt
 share/doc/dovecot/wiki/Migration.Courier.txt
 share/doc/dovecot/wiki/Migration.Cyrus.txt
 share/doc/dovecot/wiki/Migration.Linuxconf.txt
 share/doc/dovecot/wiki/Migration.MailFormat.txt
+share/doc/dovecot/wiki/Migration.Teapop.txt
 share/doc/dovecot/wiki/Migration.UW.txt
 share/doc/dovecot/wiki/Migration.Vm-pop3d.txt
 share/doc/dovecot/wiki/Migration.txt
@@ -331,17 +389,14 @@ share/doc/dovecot/wiki/Plugins.Lazyexpunge.txt
 share/doc/dovecot/wiki/Plugins.MailLog.txt
 share/doc/dovecot/wiki/Plugins.Trash.txt
 share/doc/dovecot/wiki/Plugins.txt
-share/doc/dovecot/wiki/PopBSMTPAndDovecot.txt
-share/doc/dovecot/wiki/PopRelay.txt
 share/doc/dovecot/wiki/PostLoginScripting.txt
 share/doc/dovecot/wiki/QuickConfiguration.txt
+share/doc/dovecot/wiki/Quota.1.1.txt
 share/doc/dovecot/wiki/Quota.Dict.txt
 share/doc/dovecot/wiki/Quota.Dirsize.txt
 share/doc/dovecot/wiki/Quota.FS.txt
 share/doc/dovecot/wiki/Quota.Maildir.txt
-share/doc/dovecot/wiki/Quota.New.txt
 share/doc/dovecot/wiki/Quota.txt
-share/doc/dovecot/wiki/Rootless.txt
 share/doc/dovecot/wiki/RunningDovecot.txt
 share/doc/dovecot/wiki/SSL.CertificateClientImporting.txt
 share/doc/dovecot/wiki/SSL.CertificateCreation.txt
@@ -350,6 +405,7 @@ share/doc/dovecot/wiki/SSL.txt
 share/doc/dovecot/wiki/Sasl.txt
 share/doc/dovecot/wiki/SecurityTuning.txt
 share/doc/dovecot/wiki/SharedMailboxes.txt
+share/doc/dovecot/wiki/ShellEasyConf.txt
 share/doc/dovecot/wiki/SystemUsers.txt
 share/doc/dovecot/wiki/TestInstallation.txt
 share/doc/dovecot/wiki/TestPop3Installation.txt
@@ -382,12 +438,16 @@ share/examples/rc.d/dovecot
 @dirrm lib/dovecot/pop3
 @dirrm lib/dovecot/lda
 @dirrm lib/dovecot/imap
+@exec ${MKDIR} %D/lib/dovecot/auth
+@dirrm lib/dovecot/auth
 @dirrm lib/dovecot
 @dirrm include/dovecot/src/pop3
-@dirrm include/dovecot/src/lib-storage/subscription-file
+@dirrm include/dovecot/src/lib-storage/list
+@dirrm include/dovecot/src/lib-storage/index/raw
 @dirrm include/dovecot/src/lib-storage/index/mbox
 @dirrm include/dovecot/src/lib-storage/index/maildir
 @dirrm include/dovecot/src/lib-storage/index/dbox
+@dirrm include/dovecot/src/lib-storage/index/cydir
 @dirrm include/dovecot/src/lib-storage/index
 @dirrm include/dovecot/src/lib-storage
 @dirrm include/dovecot/src/lib-sql
