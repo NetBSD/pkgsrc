@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1 2008/06/22 13:36:59 peter Exp $
+
+--- pf.h.old	2008-06-22 00:40:22.000000000 +0200
++++ pf.h	2008-06-22 00:49:15.000000000 +0200
+@@ -33,6 +33,18 @@
+ #ifndef _PF_H_
+ #define _PF_H_
+ 
++#ifdef NetBSD
++#if PF_VERSION > 36
++/* NetBSD has pf+ALTQ since 4.0 (shipped with pf version 3.7) */
++#define HAVE_ALTQ
++#endif /* PF_VERSION > 36 */
++#else
++/* Assume pf+ALTQ for non-NetBSD OS if pf version is at least 3.3 */
++#if PF_VERSION > 32
++#define HAVE_ALTQ
++#endif /* PF_VERSION > 32 */
++#endif /* !__NetBSD__ */
++
+ #define	COL_TYPE_SINCE	-1
+ #define	COL_TYPE_GLOBAL	 0
+ #define COL_TYPE_IFACE	 1
