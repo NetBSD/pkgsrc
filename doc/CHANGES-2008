@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1376 2008/06/22 16:50:53 he Exp $
+$NetBSD: CHANGES-2008,v 1.1377 2008/06/22 17:02:38 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2298,3 +2298,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/p5-Net-Google to 1.0 [he 2008-06-22]
 	Updated x11/xf86-video-intel to 2.3.2 [taca 2008-06-22]
 	Updated net/p5-Net-Z3950 to 0.51 [he 2008-06-22]
+	Updated devel/p5-Params-Util to 0.33 [he 2008-06-22]
