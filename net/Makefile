@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.716 2008/06/22 04:54:13 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.717 2008/06/22 16:06:37 he Exp $
 #
 
 COMMENT=	Networking tools
@@ -331,6 +331,7 @@ SUBDIR+=	p5-Net-TFTP
 SUBDIR+=	p5-Net-Telnet
 SUBDIR+=	p5-Net-Telnet-Cisco
 SUBDIR+=	p5-Net-Write
+SUBDIR+=	p5-Net-XMPP
 SUBDIR+=	p5-Net-XWhois
 SUBDIR+=	p5-Net-Z3950
 SUBDIR+=	p5-Net-eBay
