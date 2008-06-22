@@ -1,4 +1,8 @@
-$NetBSD: patch-ay,v 1.1 2006/03/13 21:11:57 heinz Exp $
+$NetBSD: patch-ay,v 1.2 2008/06/22 22:41:01 heinz Exp $
+
+  Change default behaviour of SpamAssassin for pkgsrc in order to shut up
+  unwanted warnings in the log files.
+  If the users want to use SPF, they can enable the plugin.
 
 --- rules/init.pre.orig	2006-03-10 20:30:02.000000000 +0100
 +++ rules/init.pre
