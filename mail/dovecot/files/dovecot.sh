@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dovecot.sh,v 1.2 2007/05/16 07:34:47 ghen Exp $
+# $NetBSD: dovecot.sh,v 1.3 2008/06/22 17:41:23 ghen Exp $
 #
 
 # PROVIDE: dovecot
