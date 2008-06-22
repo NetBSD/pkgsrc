@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2008/05/22 20:58:32 wiz Exp $
+# $NetBSD: options.mk,v 1.8 2008/06/22 15:20:56 wiz Exp $
 #
 
 #
@@ -6,10 +6,13 @@
 #
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.gnash
-PKG_SUPPORTED_OPTIONS=		gtk kde agg cairo mitshm opengl
-PKG_OPTIONS_OPTIONAL_GROUPS=    gnash-media
-PKG_OPTIONS_GROUP.gnash-media=  ffmpeg gstreamer
-PKG_SUGGESTED_OPTIONS+=         agg gstreamer gtk mitshm
+# XXX: add support for SDL or FLTK GUIs?
+PKG_SUPPORTED_OPTIONS=		gtk kde mitshm
+PKG_OPTIONS_OPTIONAL_GROUPS=	gnash-media
+PKG_OPTIONS_GROUP.gnash-media=	ffmpeg gstreamer
+PKG_OPTIONS_REQUIRED_GROUPS=	gnash-renderer
+PKG_OPTIONS_GROUP.gnash-renderer=	agg cairo opengl
+PKG_SUGGESTED_OPTIONS+=		agg gstreamer gtk mitshm
 
 .include "../../mk/bsd.options.mk"
 
@@ -32,7 +35,7 @@ PLIST_SUBST+=		KDE="kde/"
 .include "../../meta-pkgs/kde3/kde3.mk"
 
 post-install:
-	cd ${WRKSRC}/plugin/klash && make install-plugin
+	cd ${WRKSRC}/plugin/klash && ${MAKE} install-plugin
 .else
 PLIST_SUBST+=		KDE=""
 .endif
@@ -43,24 +46,26 @@ CONFIGURE_ARGS+=	--enable-gui=${GNASH_GUIS:tW:S/ /,/}
 ### Select renderers.
 ###
 .if !empty(PKG_OPTIONS:Magg)
-GNASH_RENDERS+=		agg
+GNASH_RENDER=		agg
+CONFIGURE_ARGS+=	--enable-agg
 .include "../../graphics/agg/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mcairo)
-GNASH_RENDERS+=		cairo
+GNASH_RENDER=		cairo
+CONFIGURE_ARGS+=	--enable-cairo
 .include "../../graphics/cairo/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Mopengl)
-GNASH_RENDERS+=		ogl
+GNASH_RENDER=		ogl
 .include "../../x11/glproto/buildlink3.mk"
 .if !empty(PKG_OPTIONS:Mgtk)
 .include "../../graphics/gtkglext/buildlink3.mk"
 .endif
 .endif
 
-CONFIGURE_ARGS+=	--enable-renderer=${GNASH_RENDERS:tW:S/ /,/}
+CONFIGURE_ARGS+=	--enable-renderer=${GNASH_RENDER}
 
 ###
 ### Select a media handler

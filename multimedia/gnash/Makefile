@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2008/04/29 20:16:08 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/06/22 15:20:56 wiz Exp $
 #
 
-DISTNAME=		gnash-0.8.2
-PKGREVISION=		1
+DISTNAME=		gnash-${VER}
+VER=			0.8.3
 CATEGORIES=		multimedia
-MASTER_SITES=		${MASTER_SITE_GNU:=gnash/0.8.2/}
+MASTER_SITES=		${MASTER_SITE_GNU:=gnash/${VER}/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		matias@dotbsd.org
@@ -25,12 +25,21 @@ INSTALL_TARGET=		install
 # /bin/sh finds a syntax error without line number
 CONFIG_SHELL=		${TOOLS_BASH}
 
+EGDIR=			${PREFIX}/share/examples/gnash
+INSTALLATION_DIRS=	${EGDIR}
+INSTALL_MAKE_FLAGS+=	sysconfdir=${EGDIR}
+CONF_FILES+=		${EGDIR}/gnashpluginrc ${PKG_SYSCONFDIR}/gnashpluginrc
+CONF_FILES+=		${EGDIR}/gnashrc ${PKG_SYSCONFDIR}/gnashrc
+
 .include "options.mk"
 
 PLIST_SRC+=		${PKGDIR}/PLIST
 
+.include "../../devel/atk/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libltdl/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
