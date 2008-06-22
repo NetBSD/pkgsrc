@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/09/20 20:02:53 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/22 23:05:00 joerg Exp $
 
 DISTNAME=	mozilla-rootcerts-1.0.${CERTDATA_DATE}
 CATEGORIES=	security
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	# empty
 MAINTAINER=	jlam@pkgsrc.org
 HOMEPAGE=	http://lxr.mozilla.org/mozilla/source/security/nss/lib/ckfw/builtins/certdata.txt?raw=1
 COMMENT=	root CA certificates from the Mozilla Project
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS=	awk:run echo:run expr:run ln:run ls:run openssl:run rm:run
 
@@ -33,7 +35,7 @@ do-extract:
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/mozilla-rootcerts.sh \
-		${PREFIX}/sbin/mozilla-rootcerts
-	${INSTALL_DATA} ${WRKSRC}/${CERTDATA} ${DATADIR}/certdata.txt
+		${DESTDIR}${PREFIX}/sbin/mozilla-rootcerts
+	${INSTALL_DATA} ${WRKSRC}/${CERTDATA} ${DESTDIR}${DATADIR}/certdata.txt
 
 .include "../../mk/bsd.pkg.mk"
