@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.155 2008/06/19 18:36:51 joerg Exp $
+# $NetBSD: Makefile,v 1.156 2008/06/22 22:08:05 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -52,9 +52,14 @@ CHECK_PERMS=		no
 #
 # We also use the newly built pkg_{add,create,delete} since upgrading
 # from an older pkg_install might required features of the new program. 
+# Note that the definitions are only overriden for the phases that are
+# supposed to use them.  pkg_admin pmatch might be used when looking for
+# dependencies. If that is ever changed in a incompatible way, this has to
+# be rethought.
 #
 USE_NATIVE_GCC=		yes
-.if exists(${WRKSRC}/add/pkg_add)
+
+.if defined(_PKGSRC_BARRIER)
 PKG_ADD_CMD=		${WRKSRC}/add/pkg_add
 PKG_CREATE_CMD=		${WRKSRC}/create/pkg_create
 PKG_DELETE_CMD=		${WRKSRC}/delete/pkg_delete
