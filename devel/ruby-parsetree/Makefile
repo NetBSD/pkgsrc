@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/04 15:18:14 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/22 16:05:18 taca Exp $
 
-DISTNAME=	ParseTree-2.1.1
+DISTNAME=	ParseTree-2.2.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME:tl}
 CATEGORIES=	devel
 
