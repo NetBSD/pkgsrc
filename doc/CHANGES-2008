@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1384 2008/06/22 22:42:52 heinz Exp $
+$NetBSD: CHANGES-2008,v 1.1385 2008/06/22 22:55:28 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2307,3 +2307,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/gnash to 0.8.3nb1 [wiz 2008-06-22]
 	Updated archivers/dar to 2.3.8 [dsainty 2008-06-22]
 	Updated mail/spamassassin to 3.2.5 [heinz 2008-06-22]
+	Updated www/p5-URI to 1.37 [he 2008-06-23]
