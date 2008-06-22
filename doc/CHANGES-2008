@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1373 2008/06/22 16:25:36 he Exp $
+$NetBSD: CHANGES-2008,v 1.1374 2008/06/22 16:26:13 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2295,3 +2295,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/ruby-tmail to 1.2.3.1 [taca 2008-06-22]
 	Updated misc/ruby-launchy to 0.3.2 [taca 2008-06-22]
 	Updated net/p5-Net-TFTP to 0.17 [he 2008-06-22]
+	Updated net/p5-Net-Google to 1.0 [he 2008-06-22]
