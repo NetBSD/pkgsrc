@@ -1,3 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/11/05 15:07:15 peter Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/06/22 13:36:59 peter Exp $
 bin/pfstat
+bin/pfstatd
 man/man8/pfstat.8
+man/man8/pfstatd.8
+share/examples/pfstat/pfstat.conf.example
+@dirrm share/examples/pfstat

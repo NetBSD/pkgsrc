@@ -1,0 +1,50 @@
+$NetBSD: patch-ab,v 1.1 2008/06/22 13:36:59 peter Exp $
+
+--- pf.c.old	2008-06-22 00:26:15.000000000 +0200
++++ pf.c	2008-06-22 15:10:13.000000000 +0200
+@@ -37,11 +37,17 @@
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+ #include <net/if.h>
++#ifdef __DragonFly__
++#include <net/pf/pfvar.h>
++#else
+ #include <net/pfvar.h>
++#endif /* !__DragonFly__ */
++#ifdef HAVE_ALTQ
+ #include <altq/altq.h>
+ #include <altq/altq_cbq.h>
+ #include <altq/altq_priq.h>
+ #include <altq/altq_hfsc.h>
++#endif /* HAVE_ALTQ */
+ #include <arpa/inet.h>
+ #include <err.h>
+ #include <errno.h>
+@@ -53,6 +59,7 @@
+ 
+ #include "pf.h"
+ 
++#ifdef HAVE_ALTQ
+ union altq_stats {
+ 	class_stats_t		 cbq;
+ 	struct priq_classstats	 priq;
+@@ -138,6 +145,7 @@
+ 	}
+ 	return (0);
+ }
++#endif /* HAVE_ALTQ */
+ 
+ static int
+ query_ifaces(int fd, void (*cb)(int, const char *, int, double))
+@@ -195,9 +203,11 @@
+ 		fprintf(stderr, "pf_query: query_ifaces() failed\n");
+ 		return (1);
+ 	}
++#ifdef HAVE_ALTQ
+ 	if (query_queues(fd, cb)) {
+ 		fprintf(stderr, "pf_query: query_queues() failed\n");
+ 		return (1);
+ 	}
++#endif /* HAVE_ALTQ */
+ 	return (0);
+ }
