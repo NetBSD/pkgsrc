@@ -1,22 +1,19 @@
-# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:16 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2008/06/22 16:14:08 he Exp $
 #
 
-DISTNAME=	Net-Jabber-1.26
+DISTNAME=	Net-Jabber-2.0
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
 CATEGORIES=	chat perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.jabber.org/
+HOMEPAGE=	http://search.cpan.org/~reatmon/Net-Jabber-2.0/
+#HOMEPAGE=	http://www.jabber.org/
 COMMENT=	Provide a Perl Developer access to the Jabber protocol
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	p5-Unicode-String-[0-9]*:../../converters/p5-Unicode-String
-DEPENDS+=	p5-XML-Stream-[0-9]*:../../textproc/p5-XML-Stream
-DEPENDS+=	p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
-DEPENDS+=	p5-Time-[0-9]*:../../time/p5-Time
+DEPENDS+=	p5-Net-XMPP>=1.0:../../net/p5-Net-XMPP
 
 PERL5_PACKLIST=	auto/Net/Jabber/.packlist
 
