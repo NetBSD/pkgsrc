@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.41 2008/06/20 15:38:45 taca Exp $
+# $NetBSD: rubyversion.mk,v 1.42 2008/06/22 04:15:54 minskim Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -170,6 +170,10 @@ RUBY_DLEXT=	so
 # Use pthread library with Ruby
 #
 .if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M1.[0-9].*)
+RUBY_USE_PTHREAD?=	no
+.elif !empty(MACHINE_PLATFORM:MDarwin-9.*-powerpc)
+# Workaround for Ruby Bug #193
+# http://redmine.ruby-lang.org/issues/show/193
 RUBY_USE_PTHREAD?=	no
 .else
 RUBY_USE_PTHREAD?=	yes
