@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/04 15:15:42 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/22 15:49:33 taca Exp $
 
-DISTNAME=	datamapper-0.3.0
+DISTNAME=	datamapper-0.3.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	databases
 
