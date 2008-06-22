@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/06/19 14:42:43 taca Exp $
+# $NetBSD: Makefile,v 1.15 2008/06/22 06:04:43 taca Exp $
 
 DISTNAME=	uconv-0.4.12
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.yoshidam.net/
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.yoshidam.net/Ruby.html#uconv
 COMMENT=	Unicode conversion library with Japanese codesets support
+
+PKG_DESTDIR_SUPPORT=	destdir
 
 RUBY_HAS_ARCHLIB=	yes
 USE_RUBY_EXTCONF=	yes
