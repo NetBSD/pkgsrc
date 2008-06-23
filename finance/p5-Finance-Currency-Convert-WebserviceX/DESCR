@@ -1,0 +1,10 @@
+This is a lightweight module to do currency conversion using the
+Currency Converter web service at http://www.webservicex.net/.
+
+The motivation for this module was many fold. First,
+Finance::Currency::Convert with Finance::Quote was a little too
+bulky for my needs, esp the need to download or maintain conversion
+tables. Finance::Currency::Convert::Yahoo seemed to be based on
+screen scraping. Way to fragile for my taste.
+Finance::Currency::Convert::XE has usage restrictions from XE.com.
+[No offense intended to any of the authors above]
