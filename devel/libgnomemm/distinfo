@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2007/10/13 18:07:42 adam Exp $
+$NetBSD: distinfo,v 1.8 2008/06/23 17:38:29 drochner Exp $
 
-SHA1 (libgnomemm-2.20.0.tar.bz2) = 0b870762d04ccb3e519572093049d171344e9f4c
-RMD160 (libgnomemm-2.20.0.tar.bz2) = 743307fe9efce20ed23ad5cd839947c78b6622cc
-Size (libgnomemm-2.20.0.tar.bz2) = 248837 bytes
+SHA1 (libgnomemm-2.22.0.tar.bz2) = b74c74f234415ddcc86e6f66c307ec544ee2a2b8
+RMD160 (libgnomemm-2.22.0.tar.bz2) = 7dc669089bc8e4656cd0ca9d75cafd6cb33fe29d
+Size (libgnomemm-2.22.0.tar.bz2) = 323427 bytes
