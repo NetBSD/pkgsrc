@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1394 2008/06/23 15:48:29 dmcmahill Exp $
+$NetBSD: CHANGES-2008,v 1.1395 2008/06/23 16:25:34 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2333,3 +2333,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/netsurf version 1.2 [joerg 2008-06-23]
 	Updated devel/guile-gtk to 0.60 [gdt 2008-06-23]
 	Updated sysutils/bacula to 2.2.4nb2 [dmcmahill 2008-06-23]
+	Updated databases/rrdtool to 1.3.0nb1 [he 2008-06-23]
