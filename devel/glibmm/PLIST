@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/04/15 12:36:39 drochner Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/06/23 16:44:47 drochner Exp $
 include/giomm-2.4/giomm.h
 include/giomm-2.4/giomm/appinfo.h
 include/giomm-2.4/giomm/asyncresult.h
@@ -315,9 +315,6 @@ share/doc/glibmm-2.4/docs/reference/html/classGio_1_1OutputStream__inherit__grap
 share/doc/glibmm-2.4/docs/reference/html/classGio_1_1Seekable-members.html
 share/doc/glibmm-2.4/docs/reference/html/classGio_1_1Seekable.html
 share/doc/glibmm-2.4/docs/reference/html/classGio_1_1Seekable__inherit__graph.png
-share/doc/glibmm-2.4/docs/reference/html/classGio_1_1SimpleAsyncResult-members.html
-share/doc/glibmm-2.4/docs/reference/html/classGio_1_1SimpleAsyncResult.html
-share/doc/glibmm-2.4/docs/reference/html/classGio_1_1SimpleAsyncResult__inherit__graph.png
 share/doc/glibmm-2.4/docs/reference/html/classGio_1_1ThemedIcon-members.html
 share/doc/glibmm-2.4/docs/reference/html/classGio_1_1ThemedIcon.html
 share/doc/glibmm-2.4/docs/reference/html/classGio_1_1ThemedIcon__inherit__graph.png
@@ -327,9 +324,6 @@ share/doc/glibmm-2.4/docs/reference/html/classGio_1_1UnixInputStream__inherit__g
 share/doc/glibmm-2.4/docs/reference/html/classGio_1_1UnixOutputStream-members.html
 share/doc/glibmm-2.4/docs/reference/html/classGio_1_1UnixOutputStream.html
 share/doc/glibmm-2.4/docs/reference/html/classGio_1_1UnixOutputStream__inherit__graph.png
-share/doc/glibmm-2.4/docs/reference/html/classGio_1_1Vfs-members.html
-share/doc/glibmm-2.4/docs/reference/html/classGio_1_1Vfs.html
-share/doc/glibmm-2.4/docs/reference/html/classGio_1_1Vfs__inherit__graph.png
 share/doc/glibmm-2.4/docs/reference/html/classGio_1_1Volume-members.html
 share/doc/glibmm-2.4/docs/reference/html/classGio_1_1Volume.html
 share/doc/glibmm-2.4/docs/reference/html/classGio_1_1VolumeMonitor-members.html
@@ -545,8 +539,6 @@ share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1TimeoutSource.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1TimeoutSource__inherit__graph.png
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Timer-members.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Timer.html
-share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Tree-members.html
-share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Tree.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Value-members.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Value.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1ValueBase-members.html
@@ -656,7 +648,6 @@ share/doc/glibmm-2.4/docs/reference/html/examples.html
 share/doc/glibmm-2.4/docs/reference/html/exception_8h.html
 share/doc/glibmm-2.4/docs/reference/html/exceptionhandler_8h.html
 share/doc/glibmm-2.4/docs/reference/html/file_8h.html
-share/doc/glibmm-2.4/docs/reference/html/fileattribute_8h.html
 share/doc/glibmm-2.4/docs/reference/html/fileattributeinfo_8h.html
 share/doc/glibmm-2.4/docs/reference/html/fileattributeinfolist_8h.html
 share/doc/glibmm-2.4/docs/reference/html/fileenumerator_8h.html
@@ -671,7 +662,6 @@ share/doc/glibmm-2.4/docs/reference/html/fileutils_8h.html
 share/doc/glibmm-2.4/docs/reference/html/filterinputstream_8h.html
 share/doc/glibmm-2.4/docs/reference/html/filteroutputstream_8h.html
 share/doc/glibmm-2.4/docs/reference/html/functions.html
-share/doc/glibmm-2.4/docs/reference/html/functions_0x61.html
 share/doc/glibmm-2.4/docs/reference/html/functions_0x62.html
 share/doc/glibmm-2.4/docs/reference/html/functions_0x63.html
 share/doc/glibmm-2.4/docs/reference/html/functions_0x64.html
@@ -699,7 +689,6 @@ share/doc/glibmm-2.4/docs/reference/html/functions_0x7e.html
 share/doc/glibmm-2.4/docs/reference/html/functions_enum.html
 share/doc/glibmm-2.4/docs/reference/html/functions_eval.html
 share/doc/glibmm-2.4/docs/reference/html/functions_func.html
-share/doc/glibmm-2.4/docs/reference/html/functions_func_0x61.html
 share/doc/glibmm-2.4/docs/reference/html/functions_func_0x62.html
 share/doc/glibmm-2.4/docs/reference/html/functions_func_0x63.html
 share/doc/glibmm-2.4/docs/reference/html/functions_func_0x64.html
@@ -1472,6 +1461,9 @@ share/doc/glibmm-2.4/docs/reference/html/inherit__graph__731.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__732.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__733.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__734.png
+share/doc/glibmm-2.4/docs/reference/html/inherit__graph__735.png
+share/doc/glibmm-2.4/docs/reference/html/inherit__graph__736.png
+share/doc/glibmm-2.4/docs/reference/html/inherit__graph__737.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__74.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__75.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__76.png
@@ -1549,7 +1541,6 @@ share/doc/glibmm-2.4/docs/reference/html/namespacemembers_eval_0x64.html
 share/doc/glibmm-2.4/docs/reference/html/namespacemembers_eval_0x66.html
 share/doc/glibmm-2.4/docs/reference/html/namespacemembers_eval_0x69.html
 share/doc/glibmm-2.4/docs/reference/html/namespacemembers_eval_0x6b.html
-share/doc/glibmm-2.4/docs/reference/html/namespacemembers_eval_0x6c.html
 share/doc/glibmm-2.4/docs/reference/html/namespacemembers_eval_0x6d.html
 share/doc/glibmm-2.4/docs/reference/html/namespacemembers_eval_0x6e.html
 share/doc/glibmm-2.4/docs/reference/html/namespacemembers_eval_0x6f.html
@@ -1604,7 +1595,6 @@ share/doc/glibmm-2.4/docs/reference/html/seekable_8h.html
 share/doc/glibmm-2.4/docs/reference/html/shell_8h.html
 share/doc/glibmm-2.4/docs/reference/html/signalproxy_8h.html
 share/doc/glibmm-2.4/docs/reference/html/signalproxy__connectionnode_8h.html
-share/doc/glibmm-2.4/docs/reference/html/simpleasyncresult_8h.html
 share/doc/glibmm-2.4/docs/reference/html/slisthandle_8h.html
 share/doc/glibmm-2.4/docs/reference/html/slot__async_8h.html
 share/doc/glibmm-2.4/docs/reference/html/spawn_8h.html
@@ -1633,7 +1623,6 @@ share/doc/glibmm-2.4/docs/reference/html/thread_8h.html
 share/doc/glibmm-2.4/docs/reference/html/threadpool_8h.html
 share/doc/glibmm-2.4/docs/reference/html/timer_8h.html
 share/doc/glibmm-2.4/docs/reference/html/timeval_8h.html
-share/doc/glibmm-2.4/docs/reference/html/tree_8h.html
 share/doc/glibmm-2.4/docs/reference/html/unicode_8h.html
 share/doc/glibmm-2.4/docs/reference/html/unixinputstream_8h.html
 share/doc/glibmm-2.4/docs/reference/html/unixoutputstream_8h.html
@@ -1643,7 +1632,6 @@ share/doc/glibmm-2.4/docs/reference/html/utility_8h.html
 share/doc/glibmm-2.4/docs/reference/html/value_8h.html
 share/doc/glibmm-2.4/docs/reference/html/value__basictypes_8h.html
 share/doc/glibmm-2.4/docs/reference/html/value__custom_8h.html
-share/doc/glibmm-2.4/docs/reference/html/vfs_8h.html
 share/doc/glibmm-2.4/docs/reference/html/volume_8h.html
 share/doc/glibmm-2.4/docs/reference/html/volumemonitor_8h.html
 share/doc/glibmm-2.4/docs/reference/html/wrap_8h.html
