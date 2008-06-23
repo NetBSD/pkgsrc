@@ -1,0 +1,7 @@
+HTTP::Body parses chunks of HTTP POST data and supports
+application/octet-stream, application/x-www-form-urlencoded, and
+multipart/form-data.
+
+Chunked bodies are supported by not passing a length value to new().
+
+It is currently used by Catalyst to parse POST bodies.
