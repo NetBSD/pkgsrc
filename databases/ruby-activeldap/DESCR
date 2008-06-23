@@ -1,0 +1,4 @@
+Ruby/ActiveLdap provides an object oriented interface to LDAP.  It maps
+LDAP entries to Ruby objects with LDAP attribute accessors exposed as
+methods dynamically assigned based on your LDAP server's schema and
+each object's objectClasses.
