@@ -1,9 +1,9 @@
-$NetBSD: patch-aa,v 1.4 2003/08/30 20:49:21 jtb Exp $
+$NetBSD: patch-aa,v 1.5 2008/06/23 17:55:33 drochner Exp $
 
---- src/Makefile.orig	2003-08-08 19:23:47.000000000 +0100
-+++ src/Makefile	2003-08-08 19:25:03.000000000 +0100
+--- src/Makefile.orig	2007-08-24 11:46:36.000000000 +0200
++++ src/Makefile
 @@ -4,8 +4,8 @@
- # date: 2003-06-09
+ # date: 2007-08-23
  #############################################################
  
 -CC = cc
@@ -13,16 +13,16 @@ $NetBSD: patch-aa,v 1.4 2003/08/30 20:49:21 jtb Exp $
  # for some compilers it might be necessary to remove the -O flag
  # If you have the GNU gcc compiler on your system, you may wish
  # to use gcc. Then outcomment the first two lines and activate 
-@@ -14,7 +14,7 @@
+@@ -14,7 +14,7 @@ CFLAGS = -DUNiX -O
  #CC = gcc
  #CFLAGS = -DUNiX -DPROTO -O -v
  
--MEMFLAG1 = -DMEM=6
-+#MEMFLAG1 = -DMEM=6
+-MEMFLAG1 = -DMEM=8
++#MEMFLAG1 = -DMEM=8
  # MEM may be set to any integer value from 1 to 16.
  # This is the size of the ARIBAS heap in Megabytes
  # The value should not exceed one half of the RAM of your machine
-@@ -37,14 +37,14 @@
+@@ -37,14 +37,14 @@ $(OBJECTS):	common.h
  terminal.o:	logscr.inc
  
  .c.o:
