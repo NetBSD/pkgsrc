@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1 2008/06/23 21:00:50 smb Exp $
+
+--- Makefile.orig	2008-06-23 16:53:09.000000000 -0400
++++ Makefile	2008-06-23 16:53:37.000000000 -0400
+@@ -1,5 +1,5 @@
+ #Customisable stuff here
+-LINUX32_COMPILER = i686-pc-linux-gnu-gcc
++LINUX32_COMPILER = gcc
+ LINUX64_COMPILER = x86_64-pc-linux-gnu-gcc
+ WIN32_COMPILER = /usr/bin/i586-mingw32-gcc
+ #LINUX_ARM_COMPILER = arm-pc-linux-gnu-gcc
+@@ -18,13 +18,10 @@
+ #Standard stuff here
+ .PHONY:	all clean install sourcepackage
+ 
+-all:	libfacebook.so libfacebook.dll libfacebook64.so libfacebookarm.so libfacebookppc.so installers sourcepackage
++all:	libfacebook.so
+ 
+ install:
+ 	cp libfacebook.so /usr/lib/purple-2/
+-	cp libfacebook64.so /usr/lib64/purple-2/
+-	cp libfacebookarm.so /usr/lib/pidgin/
+-	cp libfacebookppc.so /usr/lib/purple-2/
+ 	cp facebook16.png /usr/share/pixmaps/pidgin/protocols/16/facebook.png
+ 	cp facebook22.png /usr/share/pixmaps/pidgin/protocols/22/facebook.png
+ 	cp facebook48.png /usr/share/pixmaps/pidgin/protocols/48/facebook.png
