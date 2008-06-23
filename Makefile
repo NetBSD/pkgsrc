@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.83 2007/06/19 22:30:33 wiz Exp $
+# $NetBSD: Makefile,v 1.84 2008/06/23 20:34:20 kristerw Exp $
 #
 # This is the top-level Makefile of pkgsrc. It contains a list of the
 # categories of packages, as well as some targets that operate on the
@@ -58,7 +58,6 @@ SUBDIR+=	chat
 SUBDIR+=	comms
 SUBDIR+=	converters
 SUBDIR+=	cross
-SUBDIR+=	crosspkgtools
 SUBDIR+=	databases
 SUBDIR+=	devel
 SUBDIR+=	editors
