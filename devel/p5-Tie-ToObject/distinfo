@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/06/23 03:53:33 abs Exp $
+
+SHA1 (Tie-ToObject-0.03.tar.gz) = 3fba2f3691b4b82a03ba569e816cc08c8f3bb10d
+RMD160 (Tie-ToObject-0.03.tar.gz) = 430e883a4400e98ff479cdb7f592c476ca880102
+Size (Tie-ToObject-0.03.tar.gz) = 3018 bytes
