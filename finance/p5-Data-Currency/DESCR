@@ -1,0 +1,11 @@
+The Data::Currency module provides basic currency formatting and
+conversion:
+
+    my $price = 1.23;
+    my $currency = Data::Currency->new($price);
+
+    print $currency->convert('CAD')->as_string;
+
+Each Data::Currency object will stringify to the original value
+except in string context, where it stringifies to the format
+specified in format.
