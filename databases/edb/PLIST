@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.5 2006/07/20 19:00:48 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/06/23 16:14:34 joerg Exp $
 bin/edb-config
 bin/edb_ed
-bin/edb_gtk_ed
 bin/edb_vt_ed
 include/Edb.h
 lib/libedb.la
