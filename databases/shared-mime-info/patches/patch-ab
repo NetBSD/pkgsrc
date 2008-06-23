@@ -1,12 +1,12 @@
-$NetBSD: patch-ab,v 1.6 2008/06/21 17:26:53 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2008/06/23 15:58:05 drochner Exp $
 
 Don't force a build of the PO files, they need newer gettext versions.
 
---- Makefile.am.orig	2008-06-11 18:24:50.000000000 +0000
+--- Makefile.am.orig	2008-05-12 16:36:23.000000000 +0200
 +++ Makefile.am
-@@ -60,8 +60,6 @@ uninstall-hook:
- 	rm -f "$(DESTDIR)$(datadir)/mime/generic-icons"
- 	rm -f "$(DESTDIR)$(datadir)/mime/globs2"
+@@ -56,8 +56,6 @@ uninstall-hook:
+ 	rm -f "$(DESTDIR)$(datadir)/mime/mime-cache"
+ 	rm -f "$(DESTDIR)$(datadir)/mime/XMLnamespaces"
  
 -all: check
 -
