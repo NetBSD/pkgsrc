@@ -1,0 +1,3 @@
+Locale::Currency::Format is a light-weight Perl module that enables
+Perl code to display monetary values in the formats recognized
+internationally and/or locally.
