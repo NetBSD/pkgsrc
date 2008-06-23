@@ -1,0 +1,20 @@
+$NetBSD: patch-af,v 1.4 2008/06/23 11:38:51 drochner Exp $
+
+--- fontforge/cvimportdlg.c.orig	2008-04-17 14:36:53.000000000 +0200
++++ fontforge/cvimportdlg.c
+@@ -51,6 +51,7 @@ return;
+     fclose(plate);
+ }
+ 
++#ifndef _NO_LIBXML
+ static void ImportSVG(CharView *cv,char *path) {
+     SCImportSVG(cv->b.sc,CVLayer((CharViewBase *) cv),path,NULL,0,false);
+ }
+@@ -58,6 +59,7 @@ static void ImportSVG(CharView *cv,char 
+ static void ImportGlif(CharView *cv,char *path) {
+     SCImportGlif(cv->b.sc,CVLayer((CharViewBase *) cv),path,NULL,0,false);
+ }
++#endif
+ 
+ static void ImportFig(CharView *cv,char *path) {
+     SCImportFig(cv->b.sc,CVLayer((CharViewBase *) cv),path,false);
