@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.3 2007/09/07 22:12:20 jlam Exp $
+# $NetBSD: options.mk,v 1.4 2008/06/23 09:10:53 spz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.inn
-PKG_SUPPORTED_OPTIONS=	inet6 python
-PKG_SUGGESTED_OPTIONS=	# empty
+PKG_SUPPORTED_OPTIONS=	inet6 perl python uucp
+PKG_SUGGESTED_OPTIONS=	inet6 perl
 
 .include "../../mk/bsd.options.mk"
 
@@ -13,6 +13,26 @@ PKG_SUGGESTED_OPTIONS=	# empty
 CONFIGURE_ARGS+=	--enable-ipv6
 .endif
 
+###
+### uucp support (requires a group uucp to exist)
+###
+.if !empty(PKG_OPTIONS:Muucp)
+CONFIGURE_ARGS+=	--enable-uucp-rnews
+.else
+CONFIGURE_ARGS+=	--disable-uucp-rnews
+.endif
+
+###
+### perl support for INN
+###
+.if !empty(PKG_OPTIONS:Mperl)
+CONFIGURE_ARGS+=	--with-perl
+CONFIGURE_ENV+=		_PATH_PERL=${PERL5:Q}
+
+.include "../../lang/perl5/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-perl
+.endif
 ###
 ### Python support for INN
 ###
