@@ -1,0 +1,8 @@
+Perl extension for emulating troublesome interfaces.
+
+Testing is a lot easier when you can control the entire environment.
+With Test::MockObject, you can get a lot closer.
+
+Test::MockObject allows you to create objects that conform to
+particular interfaces with very little code. You don't have to
+reimplement the behavior, just the input and the output.
