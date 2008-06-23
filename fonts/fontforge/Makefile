@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2008/06/22 18:30:54 adam Exp $
+# $NetBSD: Makefile,v 1.49 2008/06/23 11:38:50 drochner Exp $
 
 DISTNAME=	fontforge_full-${VERSION}
 PKGNAME=	fontforge-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	fonts editors
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=fontforge/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,6 +24,7 @@ USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-freetype-src
 CONFIGURE_ARGS+=	--without-python
+CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 # checks for X11/Intrinsic.h
