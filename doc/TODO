@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7355 2008/06/23 07:01:51 wiz Exp $
+$NetBSD: TODO,v 1.7356 2008/06/23 07:54:13 kim Exp $
 
 Suggested new packages
 ======================
@@ -116,6 +116,10 @@ Suggested new packages
 	ices-mp3-v2
 	http://www.icecast.org/ices.php
 	Major version 2 of ices-mp3
+	Maintainer reply:
+	    The ices-mp3 package is for ices0.  There is no MP3 support
+	    in ices2.  This is why I called the package "ices-mp3" when
+	    I initially created it.  (kim@)
 
 	cricket 1.0.5
 	http://cricket.sourceforge.net
@@ -723,7 +727,7 @@ Suggested package updates
 	o hylafax-5.2.5
 	o ical-2.3.2
 	o icdprog-0.5
-	o icecast-2.3.1
+	o icecast-2.3.2 [ready and waiting for MAINTAINER response -- kim@]
 	o icon-943
 	o icsi-finger-1.0.29
 	o icu-3.8.1
