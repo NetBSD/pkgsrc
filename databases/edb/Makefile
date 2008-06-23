@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2008/06/12 02:14:17 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2008/06/23 16:14:34 joerg Exp $
 #
 
 DISTNAME=		edb-1.0.5
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=enlightenment/}
+PKGREVISION=		1
 
 MAINTAINER=		rh@NetBSD.org
 HOMEPAGE=		http://www.enlightenment.org/Libraries/Edb/
@@ -19,6 +20,5 @@ PKGCONFIG_OVERRIDE=	edb.pc.in
 
 CONFIGURE_ARGS+=	--enable-cxx
 
-.include "../../x11/gtk/buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
