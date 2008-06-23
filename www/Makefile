@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.555 2008/06/23 03:40:14 abs Exp $
+# $NetBSD: Makefile,v 1.556 2008/06/23 15:06:35 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -191,6 +191,7 @@ SUBDIR+=	mono-xsp
 SUBDIR+=	navigator
 SUBDIR+=	neon
 SUBDIR+=	netscape
+SUBDIR+=	netsurf
 SUBDIR+=	nginx
 SUBDIR+=	ns-plugger-common
 SUBDIR+=	ns-plugger-communicator
