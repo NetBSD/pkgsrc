@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1398 2008/06/23 19:34:46 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.1399 2008/06/23 20:39:13 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2353,3 +2353,11 @@ Changes to the packages collection and infrastructure in 2008:
 	Added sysutils/boxbackup-client version 0.10 [drochner 2008-06-23]
 	Added sysutils/boxbackup-server version 0.10 [drochner 2008-06-23]
 	Updated lang/clisp to 2.45 [ghen 2008-06-23]
+	Removed crosspkgtools/crosspkg-netbsd1-acorn26 [kristerw 2008-06-23]
+	Removed crosspkgtools/crosspkg-netbsd1-acorn32 [kristerw 2008-06-23]
+	Removed crosspkgtools/crosspkg-netbsd1-cats [kristerw 2008-06-23]
+	Removed crosspkgtools/crosspkg-netbsd1-evbarm [kristerw 2008-06-23]
+	Removed crosspkgtools/crosspkg-netbsd1-hpcarm [kristerw 2008-06-23]
+	Removed crosspkgtools/crosspkg-netbsd1-netwinder [kristerw 2008-06-23]
+	Removed crosspkgtools/crosspkg-netbsd1-shark [kristerw 2008-06-23]
+	Removed crosspkgtools/kwacross-netbsd1-arm [kristerw 2008-06-23]
