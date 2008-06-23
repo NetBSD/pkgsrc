@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.430 2008/06/21 15:40:00 wiz Exp $
+# $NetBSD: Makefile,v 1.431 2008/06/23 02:02:18 taca Exp $
 #
 
 COMMENT=	System utilities
@@ -226,6 +226,7 @@ SUBDIR+=	roller
 SUBDIR+=	rox
 SUBDIR+=	rsnapshot
 SUBDIR+=	rtty
+SUBDIR+=	ruby-activesambaldap
 SUBDIR+=	ruby-directory-watcher
 SUBDIR+=	ruby-facter
 SUBDIR+=	ruby-quota
