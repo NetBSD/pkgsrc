@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.554 2008/06/23 03:02:37 abs Exp $
+# $NetBSD: Makefile,v 1.555 2008/06/23 03:40:14 abs Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -229,6 +229,7 @@ SUBDIR+=	p5-CGI-Kwiki
 SUBDIR+=	p5-CGI-Minimal
 SUBDIR+=	p5-CGI-ProgressBar
 SUBDIR+=	p5-CGI-Session
+SUBDIR+=	p5-CGI-Simple
 SUBDIR+=	p5-CGI_Lite
 SUBDIR+=	p5-CSS
 SUBDIR+=	p5-CSS-Squish
@@ -262,11 +263,14 @@ SUBDIR+=	p5-HTML-Tiny
 SUBDIR+=	p5-HTML-Tree
 SUBDIR+=	p5-HTML-WikiConverter
 SUBDIR+=	p5-HTMLObject
+SUBDIR+=	p5-HTTP-Async
+SUBDIR+=	p5-HTTP-Body
 SUBDIR+=	p5-HTTP-Cache-Transparent
 SUBDIR+=	p5-HTTP-DAV
 SUBDIR+=	p5-HTTP-GHTTP
 SUBDIR+=	p5-HTTP-Lite
 SUBDIR+=	p5-HTTP-Proxy
+SUBDIR+=	p5-HTTP-Request-AsCGI
 SUBDIR+=	p5-HTTP-Request-Form
 SUBDIR+=	p5-HTTP-Server-Simple
 SUBDIR+=	p5-HTTP-Server-Simple-Kwiki
