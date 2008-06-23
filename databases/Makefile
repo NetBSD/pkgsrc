@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.251 2008/06/22 15:48:09 taca Exp $
+# $NetBSD: Makefile,v 1.252 2008/06/23 02:01:53 taca Exp $
 #
 
 COMMENT=	Databases
@@ -191,6 +191,7 @@ SUBDIR+=	ruby-DBD-postgresql
 SUBDIR+=	ruby-DBD-sqlite
 SUBDIR+=	ruby-DBD-sqlite3
 SUBDIR+=	ruby-DBI
+SUBDIR+=	ruby-activeldap
 SUBDIR+=	ruby-activerecord
 SUBDIR+=	ruby-activerecord-odbc
 SUBDIR+=	ruby-acts-as-versioned
