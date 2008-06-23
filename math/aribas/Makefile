@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.18 2008/03/04 18:12:58 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2008/06/23 17:55:33 drochner Exp $
 
-DISTNAME=	aribas-1.53
-PKGREVISION=	1
+DISTNAME=	aribas-1.63
 CATEGORIES=	math
-MASTER_SITES=	ftp://ftp.mathematik.uni-muenchen.de/pub/forster/aribas/
+MASTER_SITES=	ftp://ftp.mathematik.uni-muenchen.de/pub/forster/aribas/UNIX_LINUX/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mathematik.uni-muenchen.de/~forster/sw/aribas.html
