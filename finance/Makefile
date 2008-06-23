@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/04/04 15:33:06 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2008/06/23 01:53:05 abs Exp $
 #
 
 COMMENT=	Monetary, financial and related applications
@@ -8,6 +8,7 @@ SUBDIR+=	gnucash
 SUBDIR+=	gnucash-docs
 SUBDIR+=	kmymoney2
 SUBDIR+=	libofx
+SUBDIR+=	p5-Data-Currency
 SUBDIR+=	p5-Finance-Quote
 SUBDIR+=	ruby-activemerchant
 SUBDIR+=	tclticker
