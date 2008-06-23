@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.109 2008/06/19 05:55:44 martti Exp $
+# $NetBSD: Makefile.common,v 1.110 2008/06/23 05:07:56 martti Exp $
 
 # used by editors/vim/Makefile
 # used by editors/vim-gtk/Makefile
@@ -30,7 +30,9 @@ PATCH_SITES+=		ftp://ftp.fu-berlin.de/misc/editors/vim/patches/${VIM_VERSION}/
 PATCHFILES+=		7.1.001-100.gz 7.1.101-200.gz 7.1.201-300.gz
 PATCHFILES+=		7.1.301 7.1.302 7.1.303 7.1.304 7.1.305 7.1.306 7.1.307
 PATCHFILES+=		7.1.308 7.1.309 7.1.310 7.1.311 7.1.312 7.1.313 7.1.314
-PATCHFILES+=		7.1.315
+PATCHFILES+=		7.1.315 7.1.316 7.1.317 7.1.318 7.1.319 7.1.320 7.1.321
+PATCHFILES+=		7.1.322 7.1.323 7.1.324 7.1.325 7.1.326 7.1.327 7.1.328
+PATCHFILES+=		7.1.329 7.1.330
 
 MAINTAINER=		martti@NetBSD.org
 HOMEPAGE=		http://www.vim.org/
@@ -41,6 +43,9 @@ CONFLICTS+=		vim-kde-[0-9]*
 WRKSRC=			${WRKDIR}/${VIM_SUBDIR}/src
 GNU_CONFIGURE=		yes
 MAKE_JOBS_SAFE=		no	# At least on Solaris
+
+# http://www.netbsd.org/cgi-bin/query-pr-single.pl?number=38710
+CHECK_INTERPRETER_SKIP=	share/vim/vim71/tools/vim132
 
 .include "../../mk/bsd.prefs.mk"
 
