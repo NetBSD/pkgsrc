@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.941 2008/06/19 22:36:07 epg Exp $
+# $NetBSD: Makefile,v 1.942 2008/06/23 04:07:30 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -233,9 +233,9 @@ SUBDIR+=	intel2gas
 SUBDIR+=	isect
 SUBDIR+=	its4
 SUBDIR+=	jam
+SUBDIR+=	java-subversion
 SUBDIR+=	javacc
 SUBDIR+=	javadeps
-SUBDIR+=	java-subversion
 SUBDIR+=	jflex
 SUBDIR+=	jgrasp
 SUBDIR+=	js2-mode
@@ -600,6 +600,7 @@ SUBDIR+=	p5-Safe-Hole
 SUBDIR+=	p5-Scalar-List-Utils
 SUBDIR+=	p5-Schedule-RateLimiter
 SUBDIR+=	p5-Set-IntSpan
+SUBDIR+=	p5-Set-Object
 SUBDIR+=	p5-Set-Scalar
 SUBDIR+=	p5-Smart-Comments
 SUBDIR+=	p5-Sort-Maker
@@ -623,6 +624,7 @@ SUBDIR+=	p5-Term-Size
 SUBDIR+=	p5-Test-ClassAPI
 SUBDIR+=	p5-Test-Cmd
 SUBDIR+=	p5-Test-Deep
+SUBDIR+=	p5-Test-Differences
 SUBDIR+=	p5-Test-Exception
 SUBDIR+=	p5-Test-File-Contents
 SUBDIR+=	p5-Test-Harness
@@ -630,6 +632,7 @@ SUBDIR+=	p5-Test-Inline
 SUBDIR+=	p5-Test-LongString
 SUBDIR+=	p5-Test-Manifest
 SUBDIR+=	p5-Test-Memory-Cycle
+SUBDIR+=	p5-Test-MockObject
 SUBDIR+=	p5-Test-NoWarnings
 SUBDIR+=	p5-Test-Object
 SUBDIR+=	p5-Test-Perl-Critic
@@ -641,9 +644,15 @@ SUBDIR+=	p5-Test-Taint
 SUBDIR+=	p5-Test-Tester
 SUBDIR+=	p5-Test-Unit
 SUBDIR+=	p5-Test-Warn
+SUBDIR+=	p5-Test-use-ok
 SUBDIR+=	p5-Tie-IxHash
+SUBDIR+=	p5-Tie-RefHash
+SUBDIR+=	p5-Tie-ToObject
 SUBDIR+=	p5-Tree-DAG_Node
 SUBDIR+=	p5-Tree-Simple
+SUBDIR+=	p5-Tree-Simple-VisitorFactory
+SUBDIR+=	p5-UNIVERSAL-can
+SUBDIR+=	p5-UNIVERSAL-isa
 SUBDIR+=	p5-UNIVERSAL-moniker
 SUBDIR+=	p5-UNIVERSAL-require
 SUBDIR+=	p5-VCP
