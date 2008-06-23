@@ -1,4 +1,4 @@
-$NetBSD: README.FreeBSD,v 1.2 2004/07/31 04:06:13 xtraeme Exp $
+$NetBSD: README.FreeBSD,v 1.3 2008/06/23 21:11:39 reed Exp $
 
 Please read the general README file as well.
 
@@ -16,8 +16,5 @@ good idea to move them out of the way to avoid confusion, e.g.:
 	mv pkg_create pkg_create.orig
 	mv pkg_delete pkg_delete.orig
 	mv pkg_info pkg_info.orig
-
-3. An example /etc/mk.conf file will be placed in mk.conf.example file
-when you use the bootstrap script.
 
 bootstrap-pkgsrc has been tested on FreeBSD 4.x, 5.x and -current (i386).
