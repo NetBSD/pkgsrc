@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2008/06/23 08:43:12 hauke Exp $
+
+Since Radmind 1.11, the default server port is the IANA-registered
+6222. Clients now try to connect to port 6222 by default, failing over
+to the legacy port 6662 if necessary.
+
+If your Radmind server needs to support old clients, add
+radmind_flags="-p 6662" to /etc/rc.conf.
+
+===========================================================================
