@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1388 2008/06/23 02:03:27 taca Exp $
+$NetBSD: CHANGES-2008,v 1.1389 2008/06/23 04:09:16 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2314,3 +2314,17 @@ Changes to the packages collection and infrastructure in 2008:
 	Added finance/p5-Locale-Currency-Format version 1.25 [abs 2008-06-23]
 	Added databases/ruby-activeldap version 1.0.1 [taca 2008-06-23]
 	Added sysutils/ruby-activesambaldap version 0.0.6 [taca 2008-06-23]
+	Added devel/p5-Set-Object version 1.22 [abs 2008-06-23]
+	Added devel/p5-Test-Differences version 0.47 [abs 2008-06-23]
+	Added devel/p5-Test-MockObject version 1.09 [abs 2008-06-23]
+	Added devel/p5-Test-use-ok version 0.02 [abs 2008-06-23]
+	Added devel/p5-Tie-RefHash version 1.38 [abs 2008-06-23]
+	Added devel/p5-Tie-ToObject version 0.03 [abs 2008-06-23]
+	Added devel/p5-Tree-Simple-VisitorFactory version 0.10 [abs 2008-06-23]
+	Added devel/p5-UNIVERSAL-can version 1.12 [abs 2008-06-23]
+	Added devel/p5-UNIVERSAL-isa version 0.06 [abs 2008-06-23]
+	Added www/p5-CGI-Simple version 1.105 [abs 2008-06-23]
+	Added www/p5-HTTP-Async version 0.09 [abs 2008-06-23]
+	Added www/p5-HTTP-Body version 1.03 [abs 2008-06-23]
+	Added www/p5-HTTP-Request-AsCGI version 0.5 [abs 2008-06-23]
+	Added www/p5-Template-Timer version 0.04 [abs 2008-06-23]
