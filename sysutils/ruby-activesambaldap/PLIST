@@ -1,0 +1,230 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/23 02:00:57 taca Exp $
+bin/asl-groupadd
+bin/asl-groupdel
+bin/asl-groupmod
+bin/asl-groupshow
+bin/asl-passwd
+bin/asl-populate
+bin/asl-purge
+bin/asl-samba-computeradd
+bin/asl-samba-groupadd
+bin/asl-samba-groupdel
+bin/asl-samba-groupmod
+bin/asl-samba-useradd
+bin/asl-samba-userdel
+bin/asl-samba-usermod
+bin/asl-useradd
+bin/asl-userdel
+bin/asl-usermod
+bin/asl-usershow
+${GEM_HOME}/cache/activesambaldap-${PKGVERSION}.gem
+${GEM_LIBDIR}/NEWS.en
+${GEM_LIBDIR}/NEWS.ja
+${GEM_LIBDIR}/README.en
+${GEM_LIBDIR}/README.ja
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/bin/asl-groupadd
+${GEM_LIBDIR}/bin/asl-groupadd.help
+${GEM_LIBDIR}/bin/asl-groupdel
+${GEM_LIBDIR}/bin/asl-groupdel.help
+${GEM_LIBDIR}/bin/asl-groupmod
+${GEM_LIBDIR}/bin/asl-groupmod.help
+${GEM_LIBDIR}/bin/asl-groupshow
+${GEM_LIBDIR}/bin/asl-groupshow.help
+${GEM_LIBDIR}/bin/asl-passwd
+${GEM_LIBDIR}/bin/asl-passwd.help
+${GEM_LIBDIR}/bin/asl-populate
+${GEM_LIBDIR}/bin/asl-populate.help
+${GEM_LIBDIR}/bin/asl-purge
+${GEM_LIBDIR}/bin/asl-purge.help
+${GEM_LIBDIR}/bin/asl-samba-computeradd
+${GEM_LIBDIR}/bin/asl-samba-computeradd.help
+${GEM_LIBDIR}/bin/asl-samba-groupadd
+${GEM_LIBDIR}/bin/asl-samba-groupadd.help
+${GEM_LIBDIR}/bin/asl-samba-groupdel
+${GEM_LIBDIR}/bin/asl-samba-groupdel.help
+${GEM_LIBDIR}/bin/asl-samba-groupmod
+${GEM_LIBDIR}/bin/asl-samba-groupmod.help
+${GEM_LIBDIR}/bin/asl-samba-useradd
+${GEM_LIBDIR}/bin/asl-samba-useradd.help
+${GEM_LIBDIR}/bin/asl-samba-userdel
+${GEM_LIBDIR}/bin/asl-samba-userdel.help
+${GEM_LIBDIR}/bin/asl-samba-usermod
+${GEM_LIBDIR}/bin/asl-samba-usermod.help
+${GEM_LIBDIR}/bin/asl-useradd
+${GEM_LIBDIR}/bin/asl-useradd.help
+${GEM_LIBDIR}/bin/asl-userdel
+${GEM_LIBDIR}/bin/asl-userdel.help
+${GEM_LIBDIR}/bin/asl-usermod
+${GEM_LIBDIR}/bin/asl-usermod.help
+${GEM_LIBDIR}/bin/asl-usershow
+${GEM_LIBDIR}/bin/asl-usershow.help
+${GEM_LIBDIR}/data/locale/ja/LC_MESSAGES/active-samba-ldap.mo
+${GEM_LIBDIR}/lib/active_samba_ldap.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/account_entry.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/base.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/command.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/computer.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/computer_account_entry.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/configuration.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/dc.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/entry.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/get_text_support.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/group.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/group_entry.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/idmap.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/ou.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/populate.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/reloadable.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/samba_account_entry.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/samba_entry.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/samba_group_entry.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/unix_id_pool.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/user.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/user_account_entry.rb
+${GEM_LIBDIR}/lib/active_samba_ldap/version.rb
+${GEM_LIBDIR}/lib/samba/encrypt.rb
+${GEM_LIBDIR}/misc/rd2html.rb
+${GEM_LIBDIR}/po/ja/active-samba-ldap.po
+${GEM_LIBDIR}/rails/plugin/active_samba_ldap/README
+${GEM_LIBDIR}/rails/plugin/active_samba_ldap/generators/scaffold_active_samba_ldap/scaffold_active_samba_ldap_generator.rb
+${GEM_LIBDIR}/rails/plugin/active_samba_ldap/generators/scaffold_active_samba_ldap/templates/computer.rb
+${GEM_LIBDIR}/rails/plugin/active_samba_ldap/generators/scaffold_active_samba_ldap/templates/dc.rb
+${GEM_LIBDIR}/rails/plugin/active_samba_ldap/generators/scaffold_active_samba_ldap/templates/group.rb
+${GEM_LIBDIR}/rails/plugin/active_samba_ldap/generators/scaffold_active_samba_ldap/templates/idmap.rb
+${GEM_LIBDIR}/rails/plugin/active_samba_ldap/generators/scaffold_active_samba_ldap/templates/ldap.yml
+${GEM_LIBDIR}/rails/plugin/active_samba_ldap/generators/scaffold_active_samba_ldap/templates/ou.rb
+${GEM_LIBDIR}/rails/plugin/active_samba_ldap/generators/scaffold_active_samba_ldap/templates/samba_controller.rb
+${GEM_LIBDIR}/rails/plugin/active_samba_ldap/generators/scaffold_active_samba_ldap/templates/samba_helper.rb
+${GEM_LIBDIR}/rails/plugin/active_samba_ldap/generators/scaffold_active_samba_ldap/templates/samba_index.rhtml
+${GEM_LIBDIR}/rails/plugin/active_samba_ldap/generators/scaffold_active_samba_ldap/templates/samba_populate.rhtml
+${GEM_LIBDIR}/rails/plugin/active_samba_ldap/generators/scaffold_active_samba_ldap/templates/samba_purge.rhtml
+${GEM_LIBDIR}/rails/plugin/active_samba_ldap/generators/scaffold_active_samba_ldap/templates/unix_id_pool.rb
+${GEM_LIBDIR}/rails/plugin/active_samba_ldap/generators/scaffold_active_samba_ldap/templates/user.rb
+${GEM_LIBDIR}/rails/plugin/active_samba_ldap/init.rb
+${GEM_LIBDIR}/setup.rb
+${GEM_LIBDIR}/test-unit/History.txt
+${GEM_LIBDIR}/test-unit/README.txt
+${GEM_LIBDIR}/test-unit/Rakefile
+${GEM_LIBDIR}/test-unit/bin/testrb
+${GEM_LIBDIR}/test-unit/lib/test/unit.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/assertionfailederror.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/assertions.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/attribute.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/autorunner.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/collector.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/collector/descendant.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/collector/dir.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/collector/load.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/collector/objectspace.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/color.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/diff.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/error.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/exceptionhandler.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/failure.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/fixture.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/notification.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/omission.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/pending.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/priority.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/runner/console.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/runner/emacs.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/testcase.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/testresult.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/testsuite.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/ui/console/outputlevel.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/ui/console/testrunner.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/ui/emacs/testrunner.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/ui/testrunner.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/ui/testrunnermediator.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/ui/testrunnerutilities.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/util/backtracefilter.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/util/observable.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/util/procwrapper.rb
+${GEM_LIBDIR}/test-unit/lib/test/unit/version.rb
+${GEM_LIBDIR}/test-unit/sample/adder.rb
+${GEM_LIBDIR}/test-unit/sample/subtracter.rb
+${GEM_LIBDIR}/test-unit/sample/tc_adder.rb
+${GEM_LIBDIR}/test-unit/sample/tc_subtracter.rb
+${GEM_LIBDIR}/test-unit/sample/ts_examples.rb
+${GEM_LIBDIR}/test-unit/test/collector/test_descendant.rb
+${GEM_LIBDIR}/test-unit/test/collector/test_dir.rb
+${GEM_LIBDIR}/test-unit/test/collector/test_load.rb
+${GEM_LIBDIR}/test-unit/test/collector/test_objectspace.rb
+${GEM_LIBDIR}/test-unit/test/run-test.rb
+${GEM_LIBDIR}/test-unit/test/test_assertions.rb
+${GEM_LIBDIR}/test-unit/test/test_attribute.rb
+${GEM_LIBDIR}/test-unit/test/test_color.rb
+${GEM_LIBDIR}/test-unit/test/test_diff.rb
+${GEM_LIBDIR}/test-unit/test/test_emacs_runner.rb
+${GEM_LIBDIR}/test-unit/test/test_error.rb
+${GEM_LIBDIR}/test-unit/test/test_failure.rb
+${GEM_LIBDIR}/test-unit/test/test_fixture.rb
+${GEM_LIBDIR}/test-unit/test/test_notification.rb
+${GEM_LIBDIR}/test-unit/test/test_omission.rb
+${GEM_LIBDIR}/test-unit/test/test_pending.rb
+${GEM_LIBDIR}/test-unit/test/test_priority.rb
+${GEM_LIBDIR}/test-unit/test/test_testcase.rb
+${GEM_LIBDIR}/test-unit/test/test_testresult.rb
+${GEM_LIBDIR}/test-unit/test/test_testsuite.rb
+${GEM_LIBDIR}/test-unit/test/testunit_test_util.rb
+${GEM_LIBDIR}/test-unit/test/ui/test_testrunmediator.rb
+${GEM_LIBDIR}/test-unit/test/util/test_backtracefilter.rb
+${GEM_LIBDIR}/test-unit/test/util/test_observable.rb
+${GEM_LIBDIR}/test-unit/test/util/test_procwrapper.rb
+${GEM_LIBDIR}/test/asl-test-utils.rb
+${GEM_LIBDIR}/test/command.rb
+${GEM_LIBDIR}/test/config.yaml.sample
+${GEM_LIBDIR}/test/run-test.rb
+${GEM_LIBDIR}/test/test_asl_groupadd.rb
+${GEM_LIBDIR}/test/test_asl_groupdel.rb
+${GEM_LIBDIR}/test/test_asl_groupmod.rb
+${GEM_LIBDIR}/test/test_asl_groupshow.rb
+${GEM_LIBDIR}/test/test_asl_passwd.rb
+${GEM_LIBDIR}/test/test_asl_populate.rb
+${GEM_LIBDIR}/test/test_asl_purge.rb
+${GEM_LIBDIR}/test/test_asl_useradd.rb
+${GEM_LIBDIR}/test/test_asl_userdel.rb
+${GEM_LIBDIR}/test/test_asl_usermod.rb
+${GEM_LIBDIR}/test/test_asl_usershow.rb
+${GEM_LIBDIR}/test/test_entry.rb
+${GEM_LIBDIR}/test/test_group.rb
+${GEM_LIBDIR}/test/test_password.rb
+${GEM_LIBDIR}/test/test_samba_encrypt.rb
+${GEM_LIBDIR}/test/test_user_home_directory.rb
+${GEM_HOME}/specifications/activesambaldap-${PKGVERSION}.gemspec
+@dirrm ${GEM_LIBDIR}/test-unit/test/util
+@dirrm ${GEM_LIBDIR}/test-unit/test/ui
+@dirrm ${GEM_LIBDIR}/test-unit/test/collector
+@dirrm ${GEM_LIBDIR}/test-unit/test
+@dirrm ${GEM_LIBDIR}/test-unit/sample
+@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit/util
+@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit/ui/emacs
+@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit/ui/console
+@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit/ui
+@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit/runner
+@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit/collector
+@dirrm ${GEM_LIBDIR}/test-unit/lib/test/unit
+@dirrm ${GEM_LIBDIR}/test-unit/lib/test
+@dirrm ${GEM_LIBDIR}/test-unit/lib
+@dirrm ${GEM_LIBDIR}/test-unit/bin
+@dirrm ${GEM_LIBDIR}/test-unit
+@dirrm ${GEM_LIBDIR}/test
+@dirrm ${GEM_LIBDIR}/rails/plugin/active_samba_ldap/generators/scaffold_active_samba_ldap/templates
+@dirrm ${GEM_LIBDIR}/rails/plugin/active_samba_ldap/generators/scaffold_active_samba_ldap
+@dirrm ${GEM_LIBDIR}/rails/plugin/active_samba_ldap/generators
+@dirrm ${GEM_LIBDIR}/rails/plugin/active_samba_ldap
+@dirrm ${GEM_LIBDIR}/rails/plugin
+@dirrm ${GEM_LIBDIR}/rails
+@dirrm ${GEM_LIBDIR}/po/ja
+@dirrm ${GEM_LIBDIR}/po
+@dirrm ${GEM_LIBDIR}/misc
+@dirrm ${GEM_LIBDIR}/lib/samba
+@dirrm ${GEM_LIBDIR}/lib/active_samba_ldap
+@dirrm ${GEM_LIBDIR}/lib
+@dirrm ${GEM_LIBDIR}/data/locale/ja/LC_MESSAGES
+@dirrm ${GEM_LIBDIR}/data/locale/ja
+@dirrm ${GEM_LIBDIR}/data/locale
+@dirrm ${GEM_LIBDIR}/data
+@dirrm ${GEM_LIBDIR}/bin
+@dirrm ${GEM_LIBDIR}

@@ -1,0 +1,6 @@
+ActiveSambaLdap is a library and a management tool for Samba + LDAP
+environment.
+
+ActiveSambaLdap provides object-oriented API to manipulate LDAP entry
+for Samba.  ActiveSambaLdap also provides command-line tools to
+replace smbldap-tools written by Perl.
