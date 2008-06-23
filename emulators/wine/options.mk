@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.9 2008/06/22 23:38:18 dholland Exp $
+# $NetBSD: options.mk,v 1.10 2008/06/23 16:57:08 dholland Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.wine
 PKG_SUPPORTED_OPTIONS=	cups opengl sane esound ldap dbus ssl x11
@@ -55,7 +55,7 @@ PLIST.x11=		yes
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
 .else
-CONFIGURE_ARGS+= --without-x11
+CONFIGURE_ARGS+= --without-x --without-freetype
 .endif
 
 .if !empty(PKG_OPTIONS:Mopengl) && !empty(PKG_OPTIONS:Mx11)
