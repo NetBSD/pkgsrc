@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.8 2006/03/31 17:58:40 tron Exp $
+$NetBSD: patch-ah,v 1.9 2008/06/23 09:10:53 spz Exp $
 
---- site/Makefile.orig	2004-01-08 09:47:19.000000000 +1100
+--- site/Makefile.orig	2008-05-05 10:18:36.000000000 +0000
 +++ site/Makefile
-@@ -68,22 +68,11 @@ REST		= \
+@@ -70,22 +70,11 @@ REST		= \
  ALL		= $(MOST) $(REST)
  
  REST_INSTALLED	= \
@@ -23,7 +23,17 @@ $NetBSD: patch-ah,v 1.8 2006/03/31 17:58:40 tron Exp $
 -	$D$(PATH_NNRPAUTH) $D$(PATHETC)/news2mail.cf $D$(PATH_READERSCONF) \
 -	$D$(PATH_RADIUS_CONF) $D$(PATH_NNRPYAUTH) $D$(PATH_OVDB_CONF) \
 -	$D$(PATH_SASL_CONF) $D$(PATH_SUBSCRIPTIONS) $D$(PATH_NNRPACCESS)
-+	$D$(PATH_NNRPAUTH) $D$(PATH_NNRPYAUTH)
++	$D$(PATH_NNRPAUTH) $D$(PATH_NNRPYAUTH) $D$(PATH_NNRPACCESS)
  
  ALL_INSTALLED	= $(MOST_INSTALLED) $(REST_INSTALLED)
  
+@@ -140,7 +129,8 @@ $D$(PATH_HISTORY):
+ 	chown $(NEWSUSER) $@
+ 	chgrp $(NEWSGROUP) $@
+ 	chmod $(FILEMODE) $@
+-	$(PATHBIN)/makedbz -i -o
++	# makedbz wants ridiculous amounts of RAM for -s 0
++	$(PATHBIN)/makedbz -i -o -s 100000
+ 
+ ##  Remove files that are unchanged from the release version.
+ clean:
