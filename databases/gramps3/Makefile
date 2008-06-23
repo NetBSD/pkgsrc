@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/18 22:21:12 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/23 15:44:14 drochner Exp $
 #
 
 DISTNAME=		gramps-3.0.1
+PKGREVISION=		1
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=gramps/}
 
@@ -19,8 +20,6 @@ USE_TOOLS+=		msgfmt pkg-config intltool msgconv
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
 
-# XXX Handle desktop file specially?
-
 # XXX Why?
 CONFIGURE_ARGS+=	--disable-mime-install
 # XXX Why?
@@ -28,12 +27,12 @@ CONFIGURE_ARGS+=	--enable-packager-mode
 
 # XXX Needed still?
 CONFIGURE_ENV+=		PYTHON=${PYTHONBIN:Q}
-PYTHON_VERSIONS_ACCEPTED=	25
+PYTHON_VERSIONS_ACCEPTED=	25 24
 
 ## Dependencies are confusing:
 # From README
 # required:
-#   Python 2.5 or greater
+#   Python 2.5 or greater (works with 2.4 after minor modifications)
 #   PyGTK2 2.10 or greater
 #   Python Glade bindings (bogus; included in pygtk2)
 #   librsvg2 (svg icon view)
@@ -61,8 +60,7 @@ PYTHON_VERSIONS_ACCEPTED=	25
 .include "../../x11/py-gnome2/buildlink3.mk"
 # XXX Why, if we disable mime install?
 .include "../../databases/shared-mime-info/mimedb.mk"
-# XXX Why, if this was dropped?
-.include "../../devel/GConf/schemas.mk"
 .include "../../graphics/gnome-icon-theme/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../mk/bsd.pkg.mk"

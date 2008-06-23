@@ -1,0 +1,20 @@
+$NetBSD: patch-bc,v 1.1 2008/06/23 15:44:14 drochner Exp $
+
+--- configure.orig	2008-05-17 22:33:13.000000000 +0200
++++ configure
+@@ -6289,12 +6289,12 @@ echo "${ECHO_T}$LINGUAS" >&6; }
+ 
+         if test -n "$PYTHON"; then
+       # If the user set $PYTHON, use it and don't search something else.
+-      { echo "$as_me:$LINENO: checking whether $PYTHON version >= 2.5" >&5
+-echo $ECHO_N "checking whether $PYTHON version >= 2.5... $ECHO_C" >&6; }
++      { echo "$as_me:$LINENO: checking whether $PYTHON version >= 2.4" >&5
++echo $ECHO_N "checking whether $PYTHON version >= 2.4... $ECHO_C" >&6; }
+       prog="import sys, string
+ # split strings by '.' and convert to numeric.  Append some zeros
+ # because we need at least 4 digits for the hex conversion.
+-minver = map(int, string.split('2.5', '.')) + [0, 0, 0]
++minver = map(int, string.split('2.4', '.')) + [0, 0, 0]
+ minverhex = 0
+ for i in xrange(0, 4): minverhex = (minverhex << 8) + minver[i]
+ sys.exit(sys.hexversion < minverhex)"

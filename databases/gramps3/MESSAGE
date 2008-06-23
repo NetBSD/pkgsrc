@@ -1,7 +1,0 @@
-===========================================================================
-$NetBSD$
-
-To enable creation of graphs using the GraphViz engine, install the
-graphics/graphviz package.
-
-===========================================================================
