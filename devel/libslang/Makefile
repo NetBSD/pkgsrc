@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.64 2008/03/01 03:09:35 jlam Exp $
+# $NetBSD: Makefile,v 1.65 2008/06/23 16:15:07 joerg Exp $
 #
 
 DISTNAME=	slang-1.4.9
@@ -18,6 +18,8 @@ COMMENT=	Routines for rapid alpha-numeric terminal applications development
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
