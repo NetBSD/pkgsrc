@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1 2008/06/23 15:44:14 drochner Exp $
+
+--- src/plugins/all_relations.py.orig	2008-05-17 22:14:56.000000000 +0200
++++ src/plugins/all_relations.py
+@@ -47,7 +47,7 @@ def run(database, document, person):
+     report = AllRelReport(database, document, person)
+     report.run()
+     
+-class AllRelReport():
++class AllRelReport:
+     """
+     Obtains all relationships, displays the relations, and in details, the 
+     relation path
