@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2008/04/21 19:16:41 adam Exp $
+# $NetBSD: Makefile,v 1.30 2008/06/23 16:44:47 drochner Exp $
 
-DISTNAME=	glibmm-2.16.2
+DISTNAME=	glibmm-2.16.3
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/glibmm/2.16/}
 EXTRACT_SUFX=	.tar.bz2
