@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.12 2007/05/16 04:56:27 martti Exp $
+$NetBSD: patch-ad,v 1.13 2008/06/23 05:07:56 martti Exp $
 
---- src/Makefile.orig	2007-05-12 14:57:13.000000000 +0300
-+++ src/Makefile	2007-05-14 12:21:50.000000000 +0300
-@@ -1137,26 +1137,31 @@
+--- src/Makefile.orig	2008-06-23 07:54:04.000000000 +0300
++++ src/Makefile	2008-06-23 07:55:37.000000000 +0300
+@@ -1139,26 +1139,31 @@
  ### Athena GUI
  ### Use Xaw3d to make the menus look a little bit nicer
  #XAW_LIB = -lXaw3d
@@ -40,9 +40,9 @@ $NetBSD: patch-ad,v 1.12 2007/05/16 04:56:27 martti Exp $
 -ATHENA_LIBS1	= $(XAW_LIB)
 +ATHENA_LIBS1	= $(LIBXAW)
  ATHENA_LIBS2	= -lXt
- ATHENA_INSTALL  = install_normal
+ ATHENA_INSTALL  = install_normal install_gui_extra
  ATHENA_TARGETS	= installglinks
-@@ -1779,7 +1784,7 @@
+@@ -1786,7 +1791,7 @@
  	-$(SHELL) ./installman.sh install $(DEST_MAN) "" $(INSTALLMANARGS)
  	@echo generating help tags
  # Generate the help tags with ":helptags" to handle all languages.
@@ -51,7 +51,7 @@ $NetBSD: patch-ad,v 1.12 2007/05/16 04:56:27 martti Exp $
  	cd $(HELPSOURCE); \
  		files=`ls *.txt tags`; \
  		files="$$files `ls *.??x tags-?? 2>/dev/null || true`"; \
-@@ -1902,25 +1907,25 @@
+@@ -1913,25 +1918,25 @@
  	      fi
  	-chmod $(FILEMOD) $(DEST_TOOLS)/*
  # replace the path in some tools
