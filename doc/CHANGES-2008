@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1386 2008/06/22 23:39:35 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.1387 2008/06/23 02:01:27 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2309,3 +2309,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/spamassassin to 3.2.5 [heinz 2008-06-22]
 	Updated www/p5-URI to 1.37 [he 2008-06-23]
 	Updated emulators/wine to 1.0 [dholland 2008-06-22]
+	Added finance/p5-Data-Currency version 0.04002 [abs 2008-06-23]
+	Added finance/p5-Finance-Currency-Convert-WebserviceX version 0.07000 [abs 2008-06-23]
+	Added finance/p5-Locale-Currency-Format version 1.25 [abs 2008-06-23]
