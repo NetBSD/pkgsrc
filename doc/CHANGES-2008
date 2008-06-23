@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1399 2008/06/23 20:39:13 kristerw Exp $
+$NetBSD: CHANGES-2008,v 1.1400 2008/06/23 21:01:58 smb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2361,3 +2361,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed crosspkgtools/crosspkg-netbsd1-netwinder [kristerw 2008-06-23]
 	Removed crosspkgtools/crosspkg-netbsd1-shark [kristerw 2008-06-23]
 	Removed crosspkgtools/kwacross-netbsd1-arm [kristerw 2008-06-23]
+	Added chat/pidgin-facebookchat version 1.20 [smb 2008-06-23]
