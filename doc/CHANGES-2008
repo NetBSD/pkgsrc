@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1389 2008/06/23 04:09:16 abs Exp $
+$NetBSD: CHANGES-2008,v 1.1390 2008/06/23 05:20:29 martti Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2328,3 +2328,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/p5-HTTP-Body version 1.03 [abs 2008-06-23]
 	Added www/p5-HTTP-Request-AsCGI version 0.5 [abs 2008-06-23]
 	Added www/p5-Template-Timer version 0.04 [abs 2008-06-23]
+	Updated editors/vim-share to 7.1.330 [martti 2008-06-23]
