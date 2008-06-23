@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/23 14:51:15 joerg Exp $
+bin/lemon
+share/lemon/lempar.c
+@dirrm share/lemon
