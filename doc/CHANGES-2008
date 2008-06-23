@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1392 2008/06/23 15:06:35 joerg Exp $
+$NetBSD: CHANGES-2008,v 1.1393 2008/06/23 15:16:22 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2331,3 +2331,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated editors/vim-share to 7.1.330 [martti 2008-06-23]
 	Added devel/lemon version 1.0nb1 [joerg 2008-06-23]
 	Added www/netsurf version 1.2 [joerg 2008-06-23]
+	Updated devel/guile-gtk to 0.60 [gdt 2008-06-23]
