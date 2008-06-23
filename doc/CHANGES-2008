@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1396 2008/06/23 16:51:40 adam Exp $
+$NetBSD: CHANGES-2008,v 1.1397 2008/06/23 19:26:00 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2335,3 +2335,20 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/bacula to 2.2.4nb2 [dmcmahill 2008-06-23]
 	Updated databases/rrdtool to 1.3.0nb1 [he 2008-06-23]
 	Updated archivers/p7zip to 4.58 [adam 2008-06-23]
+	Updated math/aribas to 1.63 [drochner 2008-06-23]
+	Updated devel/libgnomeuimm to 2.22.0 [drochner 2008-06-23]
+	Updated devel/libgnomemm to 2.22.0 [drochner 2008-06-23]
+	Updated x11/py-gnome2 to 2.22.1 [drochner 2008-06-23]
+	Updated x11/gtksourceview2 to 2.2.2 [drochner 2008-06-23]
+	Updated math/genius to 1.0.3 [drochner 2008-06-23]
+	Added games/gnome-mastermind version 0.3.1 [drochner 2008-06-23]
+	Added games/xye version 0.8.0 [drochner 2008-06-23]
+	Updated audio/sonata to 1.5.2 [drochner 2008-06-23]
+	Updated cad/py-simpy to 1.9.1 [drochner 2008-06-23]
+	Updated devel/gconfmm to 2.22.0 [drochner 2008-06-23]
+	Updated devel/glibmm to 2.16.3 [drochner 2008-06-23]
+	Updated www/liferea to 1.4.16b [drochner 2008-06-23]
+	Updated multimedia/xine-lib to 1.1.13 [drochner 2008-06-23]
+	Updated sysutils/duplicity to 0.4.11 [drochner 2008-06-23]
+	Added sysutils/boxbackup-client version 0.10 [drochner 2008-06-23]
+	Added sysutils/boxbackup-server version 0.10 [drochner 2008-06-23]
