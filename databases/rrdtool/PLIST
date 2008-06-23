@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.9 2007/01/30 13:26:55 adam Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/06/23 16:24:30 he Exp $
 bin/rrdcgi
 bin/rrdtool
 bin/rrdupdate
 include/rrd.h
+include/rrd_format.h
 lib/librrd.la
 lib/librrd_th.la
 man/man1/bin_dec_hex.1
@@ -120,10 +121,7 @@ share/examples/rrdtool/perftest.pl
 share/examples/rrdtool/piped-demo.pl
 share/examples/rrdtool/shared-demo.pl
 share/examples/rrdtool/stripes.pl
-share/rrdtool/fonts/DejaVuSansMono-Roman.ttf
 @dirrm share/examples/rrdtool
-@dirrm share/rrdtool/fonts
-@dirrm share/rrdtool
 @dirrm share/doc/rrdtool-${PKGVERSION}/html
 @dirrm share/doc/rrdtool-${PKGVERSION}/txt
 @dirrm share/doc/rrdtool-${PKGVERSION}
