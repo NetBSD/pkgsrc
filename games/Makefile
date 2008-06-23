@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.304 2008/06/10 18:54:22 drochner Exp $
+# $NetBSD: Makefile,v 1.305 2008/06/23 17:01:05 drochner Exp $
 #
 
 COMMENT=	Games
@@ -110,6 +110,7 @@ SUBDIR+=	glchess
 SUBDIR+=	glickomania
 SUBDIR+=	gltron
 SUBDIR+=	gnome-games
+SUBDIR+=	gnome-mastermind
 SUBDIR+=	gnuchess
 SUBDIR+=	gnuchess-book
 SUBDIR+=	gnuchess-book-medium
@@ -286,6 +287,7 @@ SUBDIR+=	xtris
 SUBDIR+=	xtux
 SUBDIR+=	xvier
 SUBDIR+=	xworm
+SUBDIR+=	xye
 SUBDIR+=	xzip
 SUBDIR+=	zombies
 SUBDIR+=	zoom
