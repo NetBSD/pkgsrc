@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/06/23 03:35:35 abs Exp $
+
+SHA1 (HTTP-Async-0.09.tar.gz) = 4bdf206c1685f0ce372e0d50ae3241e09871ef0a
+RMD160 (HTTP-Async-0.09.tar.gz) = e810baa9ce209bceac856e8edb42f3fe930f38cd
+Size (HTTP-Async-0.09.tar.gz) = 16902 bytes
