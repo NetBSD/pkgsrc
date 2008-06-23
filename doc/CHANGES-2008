@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1387 2008/06/23 02:01:27 abs Exp $
+$NetBSD: CHANGES-2008,v 1.1388 2008/06/23 02:03:27 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2312,3 +2312,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added finance/p5-Data-Currency version 0.04002 [abs 2008-06-23]
 	Added finance/p5-Finance-Currency-Convert-WebserviceX version 0.07000 [abs 2008-06-23]
 	Added finance/p5-Locale-Currency-Format version 1.25 [abs 2008-06-23]
+	Added databases/ruby-activeldap version 1.0.1 [taca 2008-06-23]
+	Added sysutils/ruby-activesambaldap version 0.0.6 [taca 2008-06-23]
