@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/05/05 10:41:21 drochner Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/06/23 16:51:46 drochner Exp $
 bin/sonata
 ${PYSITELIB}/mmkeys.so
 ${PYSITELIB}/sonata/__init__.py
@@ -43,6 +43,7 @@ share/locale/pl/LC_MESSAGES/sonata.mo
 share/locale/pt_BR/LC_MESSAGES/sonata.mo
 share/locale/ru/LC_MESSAGES/sonata.mo
 share/locale/sv/LC_MESSAGES/sonata.mo
+share/locale/tr/LC_MESSAGES/sonata.mo
 share/locale/uk/LC_MESSAGES/sonata.mo
 share/locale/zh_CN/LC_MESSAGES/sonata.mo
 share/pixmaps/sonata-album.png
