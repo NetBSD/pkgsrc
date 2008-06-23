@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1397 2008/06/23 19:26:00 drochner Exp $
+$NetBSD: CHANGES-2008,v 1.1398 2008/06/23 19:34:46 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2352,3 +2352,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/duplicity to 0.4.11 [drochner 2008-06-23]
 	Added sysutils/boxbackup-client version 0.10 [drochner 2008-06-23]
 	Added sysutils/boxbackup-server version 0.10 [drochner 2008-06-23]
+	Updated lang/clisp to 2.45 [ghen 2008-06-23]
