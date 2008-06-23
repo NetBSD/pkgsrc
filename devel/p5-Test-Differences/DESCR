@@ -1,0 +1,18 @@
+When the code you're testing returns multiple lines, records or
+data structures and they're just plain wrong, an equivalent to the
+Unix diff utility may be just what's needed.
+
+eq_or_diff_...() compares two strings or (limited) data structures
+and either emits an ok indication or a side-by-side diff.
+Test::Differences is designed to be used with Test.pm and with
+Test::Simple, Test::More, and other Test::Builder based testing
+modules. As the SYNOPSIS shows, another testing module must be used
+as the basis for your test suite.
+
+These functions assume that you are presenting it with "flat"
+records, looking like:
+
+    - scalars composed of record-per-line
+    - arrays of scalars,
+    - arrays of arrays of scalars,
+    - arrays of hashes containing only scalars
