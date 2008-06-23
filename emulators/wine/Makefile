@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.143 2008/06/22 23:38:18 dholland Exp $
+# $NetBSD: Makefile,v 1.144 2008/06/23 16:58:20 dholland Exp $
 
 DISTNAME=	wine-1.0
 CATEGORIES=	emulators
@@ -15,6 +15,8 @@ BUILD_DEPENDS+=	fontforge-[0-9]*:../../fonts/fontforge
 ONLY_FOR_PLATFORM=	NetBSD-1.5Z*-i386 NetBSD-1.6*-i386 NetBSD-[2-9]*-i386
 ONLY_FOR_PLATFORM+=	FreeBSD-*-i386 Linux-*-i386 SunOS-*-i386 Darwin-*-i386
 ONLY_FOR_PLATFORM+=	*-*-x86_64
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS+=		xdg-1.1
 USE_LANGUAGES=		c
@@ -39,7 +41,7 @@ LIBS+=			${LDFLAGS}
 post-install:
 .for tool in fnt2bdf
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/tools/${tool} \
-		${PREFIX}/bin
+		${DESTDIR}${PREFIX}/bin
 .endfor
 
 .include "../../devel/ncurses/buildlink3.mk"
