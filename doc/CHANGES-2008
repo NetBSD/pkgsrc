@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1402 2008/06/23 21:33:07 markd Exp $
+$NetBSD: CHANGES-2008,v 1.1403 2008/06/24 06:26:33 agc Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2364,3 +2364,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added chat/pidgin-facebookchat version 1.20 [smb 2008-06-23]
 	Updated www/elinks to 0.11.4 [bjs 2008-06-23]
 	Added time/py-pytz version 2008b [markd 2008-06-23]
+	mk/bsd.pkg.mk: started freeze for pkgsrc-2008Q2 branch [agc 2008-06-23]
