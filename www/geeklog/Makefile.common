@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.4 2007/05/20 15:56:44 taca Exp $
+# $NetBSD: Makefile.common,v 1.4.8.1 2008/06/24 12:50:15 tron Exp $
 #
+# used by www/geeklog/Makefile
 
 GEEKLOG_BASE=		share/geeklog
 GEEKLOG_PUB=		share/httpd/geeklog
