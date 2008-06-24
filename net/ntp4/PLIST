@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/06/24 11:47:13 obache Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/06/24 13:57:09 obache Exp $
 bin/ntp-keygen
 bin/ntp-wait
 bin/ntpd
@@ -8,7 +8,7 @@ bin/ntpq
 ${PLIST.ntptime}bin/ntptime
 bin/ntptrace
 bin/sntp
-${PLIST.ntptime}bin/tickadj
+${PLIST.tickadj}bin/tickadj
 ${PLIST.timetrim}bin/timetrim
 man/man1/ntp-keygen.1
 man/man1/ntpd.1

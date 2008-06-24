@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.57 2008/06/24 11:47:13 obache Exp $
+# $NetBSD: Makefile,v 1.58 2008/06/24 13:57:09 obache Exp $
 #
 
 DISTNAME=	ntp-4.2.4p4
@@ -38,12 +38,15 @@ post-install:
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=	ntptime timetrim
+PLIST_VARS+=	ntptime tickadj timetrim
 
 .if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
 PLIST.ntptime=		yes
+PLIST.tickadj=		yes
 .elif ${OPSYS} == "IRIX"
 PLIST.timetrim=		yes
+.elif ${OPSYS} == "SunOS"
+PLIST.ntptime=		yes
 .endif
 
 .include "../../security/openssl/buildlink3.mk"
