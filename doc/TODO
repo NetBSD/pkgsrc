@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7356 2008/06/23 07:54:13 kim Exp $
+$NetBSD: TODO,v 1.7357 2008/06/24 05:19:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -425,7 +425,7 @@ Suggested package updates
 	o ap2-transform-0.6.0
 	o apache-ant15-1.7.0
 	o apache-tomcat55-6.0.14
-	o apr-1.3.0
+	o apr-1.3.2
 	o apsfilter-7.2.8
 	o aqsis-1.2
 	o aranym-0.9.6
@@ -555,7 +555,7 @@ Suggested package updates
 	o drscheme-371
 	o dvdstyler-1.6.2
 	o dvipng-1.11
-	o dwm-5.0
+	o dwm-5.0.1
 	o eagle-4.16
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
@@ -683,7 +683,7 @@ Suggested package updates
 	o grace-5.1.22 [pkg/38884]
 	o gramofile-1.6P
 	o granulate-0.2
-	o graphviz-2.18
+	o graphviz-2.20.0
 	o gri-2.12.8
 	o gsharutils-4.7
 	o gsm-1.0.12
@@ -741,6 +741,7 @@ Suggested package updates
 	o instiki-0.13
 	o intercal-0.24
 	o iozone-3.300
+	o ircII-20080314
 	o ircservices-5.1.11
 	o irrd-2.3.4 [pkg/36813|38002]
 	o irrtoolset-nox11-4.8.4
@@ -837,6 +838,7 @@ Suggested package updates
 	o libtool-base-2.2.4
 	o libxklavier-3.6
 	o lincvs-2.0.0 [now called CrossVC]
+	o links-gui-2.1.0.37
 	o linuxsms-0.77
 	o lmms-0.2.1
 	o loudmouth-1.4.0
@@ -942,6 +944,7 @@ Suggested package updates
 	o opencobol-1.0
 	o openh323-1.19.1
 	o openldap-2.4.10
+	o openldap-client-2.4.10
 	o openoffice-2.4.1
 	o openmortal-0.7.1
 	o openmotif-2.3.0 [pkg/38038]
@@ -999,6 +1002,7 @@ Suggested package updates
 	o p5-Text-Tabs+Wrap-2006.1117
 	o p5-XML-RAI-1.04
 	o p5-ispman-1.2
+	o p5-libwww-5.813
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.51
 	o pam-smbpass-3.0.13
@@ -1154,6 +1158,7 @@ Suggested package updates
 	o rp-l2tp-0.4
 	o rp-pppoe-3.9
 	o rpm-5.1.4
+	o rt3-3.6.7
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o ruby-clearsilver-0.10.5
@@ -1316,7 +1321,7 @@ Suggested package updates
 	o wxRemind-79
 	o wyrd-1.4.4
 	o x11perf-1.5
-	o x264-devel-20080614
+	o x264-devel-20080621
 	o xanalyser-1.30
 	o xbindkeys-1.8.2
 	o xbindkeys-tk-1.8.0
