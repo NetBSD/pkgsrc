@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1405 2008/06/24 11:47:32 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1406 2008/06/24 15:11:53 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2369,3 +2369,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/scmgit-base to 1.5.6 [bjs 2008-06-24]
 	Updated devel/scmgit-docs to 1.5.6 [bjs 2008-06-24]
 	Updated net/ntp4 to 4.2.4p4nb1 [obache 2008-06-24]
+	Added devel/p5-Class-Accessor-Grouped version 0.08001 [abs 2008-06-24]
+	Added devel/p5-Class-C3 version 0.19 [abs 2008-06-24]
+	Added devel/p5-Algorithm-C3 version 0.07 [abs 2008-06-24]
+	Added devel/p5-Class-C3-XS version 0.08 [abs 2008-06-24]
+	Added devel/p5-MRO-Compat version 0.09 [abs 2008-06-24]
