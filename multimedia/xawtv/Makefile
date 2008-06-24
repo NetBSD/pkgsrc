@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/08/05 15:04:38 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2008/06/24 11:56:54 jmcneill Exp $
 #
 
 DISTNAME=	xawtv-3.95
@@ -31,12 +31,11 @@ SUBST_SED.devoss=	-e 's|/dev/dsp|${DEVOSSAUDIO}|g'
 
 .include "../../mk/bsd.prefs.mk"
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.xawtv
 .if ${MACHINE_ARCH} == "i386"
+PKG_OPTIONS_VAR=	PKG_OPTIONS.xawtv
 PKG_SUPPORTED_OPTIONS=	mmx
-.endif
-
 .include "../../mk/bsd.options.mk"
+.endif
 
 .if !empty(PKG_OPTIONS:Mmmx)
 CONFIGURE_ARGS+=	--enable-mmx
