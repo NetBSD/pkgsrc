@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/04/21 16:34:45 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/06/24 08:21:04 bjs Exp $
 bin/git
 ${PLIST.gui}bin/gitk
 libexec/git-core/git
@@ -195,7 +195,9 @@ ${PLIST.gui}share/git-gui/lib/transport.tcl
 ${PLIST.gui}share/git-gui/lib/win32.tcl
 ${PLIST.gui}share/git-gui/lib/win32_shortcut.js
 ${PLIST.gui}share/gitk/lib/msgs/de.msg
+${PLIST.gui}share/gitk/lib/msgs/es.msg
 ${PLIST.gui}share/gitk/lib/msgs/it.msg
+${PLIST.gui}share/gitk/lib/msgs/sv.msg
 ${PLIST.gui}@dirrm share/gitk/lib/msgs
 ${PLIST.gui}@dirrm share/gitk/lib
 ${PLIST.gui}@dirrm share/gitk
