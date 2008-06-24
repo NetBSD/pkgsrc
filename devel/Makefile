@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.943 2008/06/23 15:02:20 joerg Exp $
+# $NetBSD: Makefile,v 1.944 2008/06/24 15:13:02 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -386,6 +386,7 @@ SUBDIR+=	p4d
 SUBDIR+=	p4pr
 SUBDIR+=	p4web
 SUBDIR+=	p5-Algorithm-Annotate
+SUBDIR+=	p5-Algorithm-C3
 SUBDIR+=	p5-Algorithm-Dependency
 SUBDIR+=	p5-Algorithm-Diff
 SUBDIR+=	p5-Algorithm-Merge
@@ -411,8 +412,11 @@ SUBDIR+=	p5-Carp-Assert-More
 SUBDIR+=	p5-Carp-Clan
 SUBDIR+=	p5-Class-Accessor
 SUBDIR+=	p5-Class-Accessor-Chained
+SUBDIR+=	p5-Class-Accessor-Grouped
 SUBDIR+=	p5-Class-Adapter
 SUBDIR+=	p5-Class-Autouse
+SUBDIR+=	p5-Class-C3
+SUBDIR+=	p5-Class-C3-XS
 SUBDIR+=	p5-Class-Container
 SUBDIR+=	p5-Class-Data-Inheritable
 SUBDIR+=	p5-Class-ErrorHandler
@@ -539,6 +543,7 @@ SUBDIR+=	p5-Log-Dispatch-Config
 SUBDIR+=	p5-Log-Dispatch-DBI
 SUBDIR+=	p5-Log-Dispatch-FileRotate
 SUBDIR+=	p5-Log-LogLite
+SUBDIR+=	p5-MRO-Compat
 SUBDIR+=	p5-Make
 SUBDIR+=	p5-Memoize
 SUBDIR+=	p5-Memoize-ExpireLRU
