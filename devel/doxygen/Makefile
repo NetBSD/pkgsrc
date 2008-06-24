@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.60 2008/06/07 14:32:36 joerg Exp $
+# $NetBSD: Makefile,v 1.61 2008/06/24 23:59:48 seb Exp $
 
 DISTNAME=	doxygen-1.5.6.src
 PKGNAME=	doxygen-1.5.6
@@ -14,6 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 TEX_ACCEPTED=	teTeX3
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
+UNLIMIT_RESOURCES+=	datasize
 USE_TOOLS+=		gmake gs:run perl:run bison flex
 USE_LANGUAGES=		c c++
 HAS_CONFIGURE=		yes
