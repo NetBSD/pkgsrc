@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.2 2007/01/22 15:18:50 joerg Exp $
+$NetBSD: distinfo,v 1.3 2008/06/24 06:33:11 bjs Exp $
 
 SHA1 (libXdmcp-1.0.2.tar.bz2) = 0e2fd4a0d8e8b94a4b5af85f08a2fff27bf90238
 RMD160 (libXdmcp-1.0.2.tar.bz2) = b1172f757623bd5f3671692d0ae920205404792b
