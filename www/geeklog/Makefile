@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2007/07/04 20:55:04 jlam Exp $
+# $NetBSD: Makefile,v 1.16.6.1 2008/06/24 12:50:15 tron Exp $
 #
 
 DISTNAME=	geeklog-${VER}
 PKGNAME=	geeklog-${VER:C/(sr|-)/./g}
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	http://www.geeklog.net/filemgmt/upload_dir/
 
@@ -12,6 +13,8 @@ COMMENT=	PHP/MySQL based application for managing dynamic web content
 
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.3.3:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.0:../../databases/php-mysql
+
+USE_TOOLS+=	pax:run
 
 VER=		1.4.1
 NO_BUILD=	YES
@@ -108,19 +111,19 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKDIR}/createdb.php ${GEEKLOG_DIR}
 	${INSTALL_DATA} ${WRKDIR}/geeklog.conf ${GEEKLOG_EXAMPLESDIR}
 .for f in ${GEEKLOG_SYS}
-	cd ${WRKSRC}; ${PAX} -rw ${f} ${GEEKLOG_DIR}
+	cd ${WRKSRC}; pax -rw ${f} ${GEEKLOG_DIR}
 .endfor
 	cd ${WRKSRC}/public_html; \
-		${PAX} -rw admin ${GEEKLOG_DIR}; \
+		pax -rw admin ${GEEKLOG_DIR}; \
 		${RM} -rf admin
 .for d in ${GEEKLOG_TMPL_SUB}
 	cd ${WRKSRC}/public_html; \
 		if [ -d ${d} ]; then \
-			${PAX} -rw ${d} ${GEEKLOG_TMPL_DIR}; \
+			pax -rw ${d} ${GEEKLOG_TMPL_DIR}; \
 			${RM} -rf ${d}; \
 		fi
 .endfor
-	cd ${WRKSRC}/public_html; ${PAX} -rw . ${GEEKLOG_PUBDIR}
+	cd ${WRKSRC}/public_html; pax -rw . ${GEEKLOG_PUBDIR}
 
 .include "../../mk/apache.mk"
 .include "../../lang/php/phpversion.mk"
