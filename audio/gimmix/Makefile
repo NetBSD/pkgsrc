@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:05 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/06/24 06:50:09 wiz Exp $
 #
 
 DISTNAME=	gimmix-0.4.3
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	intltool pkg-config
+USE_TOOLS+=	intltool msgfmt pkg-config
 USE_DIRS+=	xdg-1.1
 
 # XXX clean up bogus symlinks
