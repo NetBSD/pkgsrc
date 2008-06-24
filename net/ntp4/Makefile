@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2008/06/08 04:53:27 obache Exp $
+# $NetBSD: Makefile,v 1.57 2008/06/24 11:47:13 obache Exp $
 #
 
 DISTNAME=	ntp-4.2.4p4
+PKGREVISION=	1
 CATEGORIES=	net time
 MASTER_SITES=	http://www.eecis.udel.edu/~ntp/ntp_spool/ntp4/ntp-4.2/	\
 		ftp://ftp.udel.edu/pub/ntp/ntp4/
@@ -17,9 +18,10 @@ CONFLICTS+=	openntpd-[0-9]*
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES
-USE_TOOLS+=	pax perl
+USE_TOOLS+=	pax perl:run
 
 CONFIGURE_ARGS+=--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ENV+=	  PATH_PERL=${PERL5}
 
 DOCDIR=		${DESTDIR}${PREFIX}/share/doc/ntp4
 EXAMPLESDIR=	${DESTDIR}${PREFIX}/share/examples/ntp4
@@ -38,7 +40,7 @@ post-install:
 
 PLIST_VARS+=	ntptime timetrim
 
-.if ${OPSYS} == "NetBSD"
+.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly"
 PLIST.ntptime=		yes
 .elif ${OPSYS} == "IRIX"
 PLIST.timetrim=		yes
