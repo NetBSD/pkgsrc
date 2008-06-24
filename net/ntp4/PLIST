@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/06/08 04:53:27 obache Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/06/24 11:47:13 obache Exp $
 bin/ntp-keygen
 bin/ntp-wait
 bin/ntpd
@@ -33,7 +33,7 @@ share/doc/ntp4/build/hints/freebsd
 share/doc/ntp4/build/hints/hpux
 share/doc/ntp4/build/hints/linux
 share/doc/ntp4/build/hints/mpeix
-share/doc/ntp4/build/hints/${LOWER_OPSYS}
+share/doc/ntp4/build/hints/netbsd
 share/doc/ntp4/build/hints/notes-xntp-v3
 share/doc/ntp4/build/hints/parse
 share/doc/ntp4/build/hints/refclocks
