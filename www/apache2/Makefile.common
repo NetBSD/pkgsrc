@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.24 2008/01/21 14:38:29 taca Exp $
+# $NetBSD: Makefile.common,v 1.24.2.1 2008/06/25 10:35:40 tron Exp $
 
 # used by devel/apr0/Makefile
 
@@ -7,6 +7,7 @@ EXTRACT_SUFX=		.tar.bz2
 # When updating this version be sure to update the checksum and remove
 # any PKGREVISION for devel/apr also.
 APACHE_VERSION=		2.0.63
+PKGREVISION=		1
 APR_VERSION=		0.9.17
 MASTER_SITES=		${MASTER_SITE_APACHE:=httpd/} \
 			${MASTER_SITE_APACHE:=httpd/old/} \
