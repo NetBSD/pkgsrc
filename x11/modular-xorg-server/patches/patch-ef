@@ -1,7 +1,16 @@
-$NetBSD: patch-ef,v 1.1 2008/02/25 15:39:16 joerg Exp $
+$NetBSD: patch-ef,v 1.1.2.1 2008/06/25 10:20:58 tron Exp $
 
---- Xext/shm.c.orig	2008-02-25 15:43:05.000000000 +0100
+--- Xext/shm.c.orig	2008-06-20 14:39:43.000000000 +0200
 +++ Xext/shm.c
+@@ -156,7 +156,7 @@ static ShmFuncs fbFuncs = {fbShmCreatePi
+ }
+ 
+ 
+-#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__CYGWIN__)
++#if defined(__FreeBSD__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__CYGWIN__) || defined(__DragonFly__)
+ #include <sys/signal.h>
+ 
+ static Bool badSysCall = FALSE;
 @@ -723,6 +723,8 @@ ProcPanoramiXShmCreatePixmap(
      int i, j, result;
      ShmDescPtr shmdesc;
@@ -50,7 +59,27 @@ $NetBSD: patch-ef,v 1.1 2008/02/25 15:39:16 joerg Exp $
  
      if(!(newPix = (PanoramiXRes *) xalloc(sizeof(PanoramiXRes))))
  	return BadAlloc;
-@@ -1047,6 +1062,8 @@ ProcShmCreatePixmap(client)
+@@ -841,8 +856,17 @@ ProcShmPutImage(client)
+         return BadValue;
+     }
+ 
+-    VERIFY_SHMSIZE(shmdesc, stuff->offset, length * stuff->totalHeight,
+-		   client);
++    /* 
++     * There's a potential integer overflow in this check:
++     * VERIFY_SHMSIZE(shmdesc, stuff->offset, length * stuff->totalHeight,
++     *                client);
++     * the version below ought to avoid it
++     */
++    if (stuff->totalHeight != 0 && 
++	length > (shmdesc->size - stuff->offset)/stuff->totalHeight) {
++	client->errorValue = stuff->totalWidth;
++	return BadValue;
++    }
+     if (stuff->srcX > stuff->totalWidth)
+     {
+ 	client->errorValue = stuff->srcX;
+@@ -1047,6 +1071,8 @@ ProcShmCreatePixmap(client)
      register int i;
      ShmDescPtr shmdesc;
      REQUEST(xShmCreatePixmapReq);
@@ -59,7 +88,7 @@ $NetBSD: patch-ef,v 1.1 2008/02/25 15:39:16 joerg Exp $
  
      REQUEST_SIZE_MATCH(xShmCreatePixmapReq);
      client->errorValue = stuff->pid;
-@@ -1055,11 +1072,26 @@ ProcShmCreatePixmap(client)
+@@ -1055,11 +1081,26 @@ ProcShmCreatePixmap(client)
      LEGAL_NEW_RESOURCE(stuff->pid, client);
      VERIFY_GEOMETRABLE(pDraw, stuff->drawable, client);
      VERIFY_SHMPTR(stuff->shmseg, stuff->offset, TRUE, shmdesc, client);
@@ -87,7 +116,7 @@ $NetBSD: patch-ef,v 1.1 2008/02/25 15:39:16 joerg Exp $
      if (stuff->depth != 1)
      {
          pDepth = pDraw->pScreen->allowedDepths;
-@@ -1070,9 +1102,7 @@ ProcShmCreatePixmap(client)
+@@ -1070,9 +1111,7 @@ ProcShmCreatePixmap(client)
          return BadValue;
      }
  CreatePmap:
