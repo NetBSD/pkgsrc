@@ -1,8 +1,31 @@
-$NetBSD: patch-ed,v 1.1 2008/02/25 15:39:16 joerg Exp $
+$NetBSD: patch-ed,v 1.1.2.1 2008/06/25 10:20:58 tron Exp $
 
 --- Xext/security.c.orig	2006-11-16 18:39:03.000000000 +0100
 +++ Xext/security.c
-@@ -1567,9 +1567,9 @@ SecurityLoadPropertyAccessList(void)
+@@ -651,15 +651,19 @@ SProcSecurityGenerateAuthorization(
+     register char 	n;
+     CARD32 *values;
+     unsigned long nvalues;
++    int values_offset;
+ 
+     swaps(&stuff->length, n);
+     REQUEST_AT_LEAST_SIZE(xSecurityGenerateAuthorizationReq);
+     swaps(&stuff->nbytesAuthProto, n);
+     swaps(&stuff->nbytesAuthData, n);
+     swapl(&stuff->valueMask, n);
+-    values = (CARD32 *)(&stuff[1]) +
+-	((stuff->nbytesAuthProto + (unsigned)3) >> 2) +
+-	((stuff->nbytesAuthData + (unsigned)3) >> 2);
++    values_offset = ((stuff->nbytesAuthProto + (unsigned)3) >> 2) +
++		    ((stuff->nbytesAuthData + (unsigned)3) >> 2);
++    if (values_offset > 
++	stuff->length - (sz_xSecurityGenerateAuthorizationReq >> 2))
++	return BadLength;
++    values = (CARD32 *)(&stuff[1]) + values_offset;
+     nvalues = (((CARD32 *)stuff) + stuff->length) - values;
+     SwapLongs(values, nvalues);
+     return ProcSecurityGenerateAuthorization(client);
+@@ -1567,9 +1571,9 @@ SecurityLoadPropertyAccessList(void)
  	return;
  
  #ifndef __UNIXOS2__
@@ -14,7 +37,7 @@ $NetBSD: patch-ed,v 1.1 2008/02/25 15:39:16 joerg Exp $
  #endif    
      if (!f)
      {
-@@ -1653,7 +1653,7 @@ SecurityLoadPropertyAccessList(void)
+@@ -1653,7 +1657,7 @@ SecurityLoadPropertyAccessList(void)
      }
  #endif /* PROPDEBUG */
  
