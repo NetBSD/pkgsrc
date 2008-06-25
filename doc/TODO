@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7357 2008/06/24 05:19:30 wiz Exp $
+$NetBSD: TODO,v 1.7358 2008/06/25 23:49:19 obache Exp $
 
 Suggested new packages
 ======================
@@ -692,6 +692,7 @@ Suggested package updates
 	o gstreamer0.10-0.10.20
 	o gtexinfo-4.12
 	o gtick-0.4.2
+	o gtk-gnutella-0.96.5 [pkg/39040]
 	o gtk-systrace-20030623
 	o gtklife-5.1
 	o gtksee-0.6.0b
