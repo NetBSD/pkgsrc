@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/06/06 00:16:57 obache Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/25 23:42:19 obache Exp $
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -53,7 +53,7 @@ SUBST_CLASSES+=		fix-gtar
 SUBST_STAGE.fix-gtar=	pre-configure
 SUBST_MESSAGE.fix-gtar=	fixing gtar references
 SUBST_FILES.fix-gtar=	contrib/asdf-install/installer.lisp
-SUBST_SED.fix-gtar=	-e 's,@GTAR@.${GTAR},g'
+SUBST_SED.fix-gtar=	-e 's,@GTAR@,${GTAR},g'
 
 do-build:
 	export SBCL_HOME=${WRKDIR}/lib/sbcl/ \
