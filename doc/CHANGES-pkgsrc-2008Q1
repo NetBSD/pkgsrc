@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.83 2008/06/25 10:36:40 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.84 2008/06/26 19:45:34 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -198,3 +198,5 @@ Pullup ticket 2433 - requested by joerg
 modular-xorg-server: security fix
 Pullup ticket 2434 - requested by he
 apache2: security fix
+Pullup ticket 2435 - requested by adrianp
+horde: security fix
