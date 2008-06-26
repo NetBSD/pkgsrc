@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/06/22 13:36:59 peter Exp $
+# $NetBSD: Makefile,v 1.11 2008/06/26 20:59:51 peter Exp $
 
 DISTNAME=	pfstat-2.3
 CATEGORIES=	sysutils net
@@ -31,5 +31,5 @@ do-install:
 	${INSTALL_MAN} ${WRKSRC}/pfstatd/pfstatd.8 ${PREFIX}/${PKGMANDIR}/man8
 
 .include "../../graphics/gd/buildlink3.mk"
-.include "../../security/pflkm/buildlink3.mk"
+.include "../../mk/pf.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
