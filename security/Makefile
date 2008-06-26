@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.321 2008/06/21 22:25:52 he Exp $
+# $NetBSD: Makefile,v 1.322 2008/06/26 21:01:25 peter Exp $
 #
 
 COMMENT=	Security tools
@@ -199,7 +199,6 @@ SUBDIR+=	pam-pwauth_suid
 SUBDIR+=	pam-radius
 SUBDIR+=	pcsc-lite
 SUBDIR+=	pcsc-tools
-SUBDIR+=	pflkm
 SUBDIR+=	pgp2
 SUBDIR+=	pgp5
 SUBDIR+=	pgpdump
