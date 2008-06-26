@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.NetBSD,v 1.1 2008/06/26 19:46:56 jmcneill Exp $
+bin/wine-pthread
