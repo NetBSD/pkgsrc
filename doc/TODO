@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7359 2008/06/26 12:37:46 obache Exp $
+$NetBSD: TODO,v 1.7360 2008/06/26 12:59:38 taca Exp $
 
 Suggested new packages
 ======================
@@ -877,6 +877,7 @@ Suggested package updates
 	o mk-files-20061230
 	o mknmz-wwwoffle-0.7.2
 	o mkvtoolnix-2.2.0
+	o mlterm-2.9.4
 	o mlview-0.9.0
 	o mmg-2.0.2
 	o modular-xorg-server-1.4.2
@@ -1221,7 +1222,8 @@ Suggested package updates
 	o spim-7.3
 	o sqlite3-ruby-1.2.2
 	o sqlitemanager-1.1.3
-	o squid-2.7
+	o squid-2.7.3 (2.7.STABLE3)
+	o squid-3.0.7 (3.0.STABLE7)
 	o srp_client-1.7.5 [jlam]
 	o ssh-askpass-1.2.4.1
 	o star-1.5
