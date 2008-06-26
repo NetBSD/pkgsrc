@@ -1,0 +1,17 @@
+$NetBSD: patch-bb,v 1.1 2008/06/26 19:46:56 jmcneill Exp $
+
+--- loader/kthread.c.orig	2008-06-26 15:40:21.000000000 -0400
++++ loader/kthread.c	2008-06-26 15:40:35.000000000 -0400
+@@ -115,10 +115,12 @@
+     pthread_descr descr = __pthread_thread_self();
+     return &descr->thread_errno;
+ }
++#ifndef __NetBSD__
+ int *__error(void)     { return __errno_location(); }  /* FreeBSD */
+ int *__errno(void)     { return __errno_location(); }  /* NetBSD */
+ int *___errno(void)    { return __errno_location(); }  /* Solaris */
+ int *__thr_errno(void) { return __errno_location(); }  /* UnixWare */
++#endif
+ 
+ /***********************************************************************
+  *           __h_errno_location
