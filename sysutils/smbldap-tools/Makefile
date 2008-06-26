@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/16 16:04:25 taca Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/26 01:45:48 taca Exp $
 
 DISTNAME=	smbldap-tools-0.9.5
 CATEGORIES=	sysutils net databases
@@ -49,8 +49,10 @@ SUBST_SED.path+=	-e "s,@SAMBA_PIDDIR@,${SAMBA_PIDDIR},g"
 SUBST_CLASSES+=		conf
 SUBST_STAGE.conf=	pre-install
 SUBST_FILES.conf=	configure.pl
-SUBST_SED.conf+=	-e '/\$$Source: /cvsroot/pkgsrc/sysutils/smbldap-tools/Makefile,v $$]//g'
-SUBST_SED.conf+=	-e '/\$$Id: Makefile,v 1.1.1.1 2008/06/16 16:04:25 taca Exp $$]//g'
+SUBST_SED.conf+=	-e '/^\# \\.Source: /s/\\\$$//g'
+SUBST_SED.conf+=	-e '/^\# Source: /s/\$$//g'
+SUBST_SED.conf+=	-e '/^\# \\.Id: /s/\\\$$//g'
+SUBST_SED.conf+=	-e '/^\# Id: /s/\$$//g'
 
 EGDIR=			share/examples/smbldap-tools
 
