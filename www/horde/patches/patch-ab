@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.4.14.1 2008/06/26 19:44:35 tron Exp $
+
+--- services/obrowser/index.php.orig	2007-01-02 13:55:16.000000000 +0000
++++ services/obrowser/index.php
+@@ -90,10 +90,10 @@ foreach ($list as $path => $values) {
+     if (!empty($values['browseable'])) {
+         $url = Horde::applicationUrl('services/obrowser/');
+         $url = Util::addParameter($url, 'path', $path);
+-        $row['name'] = Horde::link($url) . $values['name'] . '</a>';
++	$row['name'] = Horde::link($url) . htmlspecialchars($values['name']) . '</a>';
+     } else {
+         $js = "return chooseObject('" . addslashes($path) . "');";
+-        $row['name'] = Horde::link('#', sprintf(_("Choose %s"), $values['name']), '', '', $js) . $values['name'] . '</a>';
++	$row['name'] = Horde::link('#', sprintf(_("Choose %s"), $values['name']), '', '', $js) . htmlspecialchars($values['name']) . '</a>';
+     }
+ 
+     $rows[] = $row;
