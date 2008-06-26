@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1406 2008/06/24 15:11:53 abs Exp $
+$NetBSD: CHANGES-2008,v 1.1407 2008/06/26 21:02:26 peter Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2374,3 +2374,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Algorithm-C3 version 0.07 [abs 2008-06-24]
 	Added devel/p5-Class-C3-XS version 0.08 [abs 2008-06-24]
 	Added devel/p5-MRO-Compat version 0.09 [abs 2008-06-24]
+	Removed security/pflkm [peter 2008-06-26]
