@@ -1,0 +1,32 @@
+$NetBSD: patch-bc,v 1.1 2008/06/27 02:51:11 jmcneill Exp $
+
+--- dlls/wineoss.drv/audio.c.orig	2008-06-26 22:44:15.000000000 -0400
++++ dlls/wineoss.drv/audio.c	2008-06-26 22:45:02.000000000 -0400
+@@ -75,6 +75,12 @@
+ 
+ #include "audio.h"
+ 
++#ifdef __NetBSD__
++#define SOUND_DEV	"/dev/sound"
++#else
++#define SOUND_DEV	"/dev/dsp"
++#endif
++
+ WINE_DEFAULT_DEBUG_CHANNEL(wave);
+ 
+ /* Allow 1% deviation for sample rates (some ES137x cards) */
+@@ -1167,12 +1173,12 @@
+     }
+     else
+     {
+-        WOutDev[0].ossdev.dev_name = WInDev[0].ossdev.dev_name = StrDup("/dev/dsp",NULL);
++        WOutDev[0].ossdev.dev_name = WInDev[0].ossdev.dev_name = StrDup(SOUND_DEV,NULL);
+         WOutDev[0].ossdev.mixer_name = WInDev[0].ossdev.mixer_name = StrDup("/dev/mixer",NULL);
+         for (i = 1; i < MAX_WAVEDRV; ++i)
+         {
+             WOutDev[i].ossdev.dev_name = WInDev[i].ossdev.dev_name = HeapAlloc(GetProcessHeap(),0,11);
+-            sprintf(WOutDev[i].ossdev.dev_name, "/dev/dsp%d", i);
++            sprintf(WOutDev[i].ossdev.dev_name, SOUND_DEV "%d", i);
+             WOutDev[i].ossdev.mixer_name = WInDev[i].ossdev.mixer_name = HeapAlloc(GetProcessHeap(),0,13);
+             sprintf(WOutDev[i].ossdev.mixer_name, "/dev/mixer%d", i);
+         }
