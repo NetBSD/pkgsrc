@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.9 2008/06/04 17:28:48 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.10 2008/06/27 15:25:52 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.9 2008/06/04 17:28:48 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.10 2008/06/27 15:25:52 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1330,8 +1330,11 @@ clean_find_archive:
 int
 pkg_perform(lpkg_head_t *pkgs)
 {
-	int     errors = 0;
+	int     oldcwd, errors = 0;
 	lpkg_t *lpp;
+
+	if ((oldcwd = open(".", O_RDONLY, 0)) == -1)
+		err(EXIT_FAILURE, "unable to open cwd");
 
 	while ((lpp = TAILQ_FIRST(pkgs)) != NULL) {
 		path_prepend_from_pkgname(lpp->lp_name);
@@ -1340,7 +1343,12 @@ pkg_perform(lpkg_head_t *pkgs)
 		path_prepend_clear();
 		TAILQ_REMOVE(pkgs, lpp, lp_link);
 		free_lpkg(lpp);
+
+		if (fchdir(oldcwd) == -1)
+			err(EXIT_FAILURE, "unable to restore cwd");
 	}
+
+	close(oldcwd);
 
 	return errors;
 }
