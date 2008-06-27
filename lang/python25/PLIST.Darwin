@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST.Darwin,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
-lib/libpython2.5.2.dylib
+@comment $NetBSD: PLIST.Darwin,v 1.2 2008/06/27 19:57:49 tron Exp $
+lib/libpython${PY_VER_SUFFIX}.dylib
 lib/python${PY_VER_SUFFIX}/lib-dynload/ColorPicker.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/MacOS.so
 lib/python${PY_VER_SUFFIX}/lib-dynload/Nav.so
@@ -235,9 +235,6 @@ lib/python${PY_VER_SUFFIX}/plat-mac/Carbon/TE.pyo
 lib/python${PY_VER_SUFFIX}/plat-mac/Carbon/TextEdit.py
 lib/python${PY_VER_SUFFIX}/plat-mac/Carbon/TextEdit.pyc
 lib/python${PY_VER_SUFFIX}/plat-mac/Carbon/TextEdit.pyo
-lib/python${PY_VER_SUFFIX}/plat-mac/Carbon/WASTEconst.py
-lib/python${PY_VER_SUFFIX}/plat-mac/Carbon/WASTEconst.pyc
-lib/python${PY_VER_SUFFIX}/plat-mac/Carbon/WASTEconst.pyo
 lib/python${PY_VER_SUFFIX}/plat-mac/Carbon/Win.py
 lib/python${PY_VER_SUFFIX}/plat-mac/Carbon/Win.pyc
 lib/python${PY_VER_SUFFIX}/plat-mac/Carbon/Win.pyo
@@ -259,9 +256,6 @@ lib/python${PY_VER_SUFFIX}/plat-mac/MiniAEFrame.pyo
 lib/python${PY_VER_SUFFIX}/plat-mac/PixMapWrapper.py
 lib/python${PY_VER_SUFFIX}/plat-mac/PixMapWrapper.pyc
 lib/python${PY_VER_SUFFIX}/plat-mac/PixMapWrapper.pyo
-lib/python${PY_VER_SUFFIX}/plat-mac/WASTEconst.py
-lib/python${PY_VER_SUFFIX}/plat-mac/WASTEconst.pyc
-lib/python${PY_VER_SUFFIX}/plat-mac/WASTEconst.pyo
 lib/python${PY_VER_SUFFIX}/plat-mac/aepack.py
 lib/python${PY_VER_SUFFIX}/plat-mac/aepack.pyc
 lib/python${PY_VER_SUFFIX}/plat-mac/aepack.pyo
