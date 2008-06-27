@@ -1,0 +1,12 @@
+$NetBSD: patch-aw,v 1.1 2008/06/27 13:24:39 tnn Exp $
+
+--- src/mesa/drivers/x11/glxapi.c.orig	2007-11-01 16:30:52.000000000 +0100
++++ src/mesa/drivers/x11/glxapi.c
+@@ -1358,6 +1358,7 @@ _glxapi_get_proc_address(const char *fun
+  * This function does not get dispatched through the dispatch table
+  * since it's really a "meta" function.
+  */
++PUBLIC
+ __GLXextFuncPtr
+ glXGetProcAddressARB(const GLubyte *procName)
+ {
