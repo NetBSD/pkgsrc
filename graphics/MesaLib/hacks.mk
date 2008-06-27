@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.11 2008/06/25 11:21:20 tron Exp $
+# $NetBSD: hacks.mk,v 1.12 2008/06/27 13:24:39 tnn Exp $
 
 .if !defined(MESALIBS_HACKS_MK)
 MESALIBS_HACKS_MK=	# defined
@@ -33,7 +33,7 @@ CFLAGS+=		-fno-strict-aliasing
 # Don't hide symbols for glut by default, it doesn't know how to unhide them.
 .    if empty(PKGNAME:M*glut*)
 PKG_HACKS+=		gcc-hidden-visibility
-BUILDLINK_TRANSFORM+=	rm:-fvisibility=hidden
+CFLAGS+=		-fvisibility=hidden
 .    endif
 .  endif
 ###
