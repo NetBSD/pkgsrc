@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/04/25 12:04:44 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2008/06/27 19:57:49 tron Exp $
 
 DISTNAME=	Python-2.5.2
 PKGNAME=	python25-2.5.2
@@ -72,9 +72,9 @@ IS_64BIT_PLATFORM?=	yes
 IS_64BIT_PLATFORM?=	no
 .endif
 
-# the dl module isn't built for 64 bit archs and Darwin
+# the dl module isn't built for 64 bit archs
 PLIST_VARS+=	dl
-.if empty(IS_64BIT_PLATFORM:M[yY][eE][sS]) && (${OPSYS} != "Darwin")
+.if empty(IS_64BIT_PLATFORM:M[yY][eE][sS])
 PLIST.dl=	yes
 .endif
 
@@ -149,16 +149,6 @@ REPLACE_FILES.py25+=	Lib/test/test_largefile.py Lib/test/test_optparse.py
 post-extract:
 	${MV} ${WRKSRC}/Lib/smtpd.py ${WRKSRC}/Lib/smtpd${PY_VER_SUFFIX}.py
 	${MV} ${WRKSRC}/Tools/scripts/pydoc ${WRKSRC}/Tools/scripts/pydoc${PY_VER_SUFFIX}
-
-.if ${OPSYS} == "Darwin"
-post-build:
-	cd ${WRKSRC} && \
-	${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} libpython2.5.2.dylib
-
-post-install:
-	${LN} -fs ${DESTDIR}${PREFIX}/lib/libpython2.5.2.dylib	\
-		${DESTDIR}${PREFIX}/lib/libpython2.5.dylib
-.endif
 
 .if ${OPSYS} == "HPUX"
 post-install:
