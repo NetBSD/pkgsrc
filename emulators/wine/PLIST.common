@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.1 2008/06/22 23:38:18 dholland Exp $
+@comment $NetBSD: PLIST.common,v 1.2 2008/06/28 12:34:48 sborrill Exp $
 bin/fnt2bdf
 bin/function_grep.pl
 bin/msiexec
@@ -786,7 +786,7 @@ lib/wine/libuxtheme.def
 lib/wine/libvdmdbg.def
 lib/wine/libversion.def
 lib/wine/libwinecrt0.a
-${PLIST.opengl}lib/wine/libwined3d.def
+lib/wine/libwined3d.def
 lib/wine/libwinedos.def
 lib/wine/libwininet.def
 lib/wine/libwinmm.def
@@ -979,7 +979,7 @@ lib/wine/winebrowser.exe.so
 lib/wine/winecfg.exe.so
 lib/wine/wineconsole.exe.so
 lib/wine/winecoreaudio.drv.so
-${PLIST.opengl}lib/wine/wined3d.dll.so
+lib/wine/wined3d.dll.so
 lib/wine/winedbg.exe.so
 lib/wine/winedevice.exe.so
 lib/wine/winedos.dll.so
