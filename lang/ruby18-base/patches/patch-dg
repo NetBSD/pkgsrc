@@ -1,0 +1,26 @@
+$NetBSD: patch-dg,v 1.2.6.1 2008/06/28 11:59:46 tron Exp $
+
+--- ext/openssl/ossl_hmac.c.orig	2007-03-12 13:12:32.000000000 +0900
++++ ext/openssl/ossl_hmac.c
+@@ -81,9 +81,7 @@ ossl_hmac_copy(VALUE self, VALUE other)
+     GetHMAC(self, ctx1);
+     SafeGetHMAC(other, ctx2);
+ 
+-    if (!HMAC_CTX_copy(ctx1, ctx2)) {
+-	ossl_raise(eHMACError, NULL);
+-    }
++    HMAC_CTX_copy(ctx1, ctx2);
+     return self;
+ }
+ 
+@@ -104,9 +102,7 @@ hmac_final(HMAC_CTX *ctx, char **buf, in
+ {
+     HMAC_CTX final;
+ 
+-    if (!HMAC_CTX_copy(&final, ctx)) {
+-	ossl_raise(eHMACError, NULL);
+-    }
++    HMAC_CTX_copy(&final, ctx);
+     if (!(*buf = OPENSSL_malloc(HMAC_size(&final)))) {
+ 	HMAC_CTX_cleanup(&final);
+ 	OSSL_Debug("Allocating %d mem", HMAC_size(&final));

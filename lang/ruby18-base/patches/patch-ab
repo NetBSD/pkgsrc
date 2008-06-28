@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.10 2007/09/24 21:58:28 taca Exp $
+$NetBSD: patch-ab,v 1.10.6.1 2008/06/28 11:54:07 tron Exp $
 
---- configure.orig	2007-09-23 15:19:34.000000000 +0900
+--- configure.orig	2008-06-20 18:31:19.000000000 +0900
 +++ configure
-@@ -10351,6 +10351,9 @@ msdosdjgpp*)	LIBS="-lm $LIBS"
+@@ -10353,6 +10353,9 @@ msdosdjgpp*)	LIBS="-lm $LIBS"
  		;;
  bsdi*)          LIBS="-lm $LIBS"
                  ac_cv_sizeof_rlim_t=8;;
@@ -12,7 +12,7 @@ $NetBSD: patch-ab,v 1.10 2007/09/24 21:58:28 taca Exp $
  freebsd*)	LIBS="-lm $LIBS"
  		{ echo "$as_me:$LINENO: checking whether -lxpg4 has to be linked" >&5
  echo $ECHO_N "checking whether -lxpg4 has to be linked... $ECHO_C" >&6; }
-@@ -15953,6 +15956,13 @@ echo $ECHO_N "checking whether OS depend
+@@ -16423,6 +16426,13 @@ echo $ECHO_N "checking whether OS depend
  			    LDFLAGS="$LDFLAGS -Wl,-export-dynamic"
  			fi
  			rb_cv_dlopen=yes ;;
@@ -25,8 +25,8 @@ $NetBSD: patch-ab,v 1.10 2007/09/24 21:58:28 taca Exp $
 +			rb_cv_dlopen=yes ;;
  	interix*) 	: ${LDSHARED="$CC -shared"}
  			XLDFLAGS="$XLDFLAGS -Wl,-E"
- 			LIBPATHFLAG=" -L'%1\$-s'"
-@@ -16708,6 +16718,14 @@ if test "$enable_shared" = 'yes'; then
+ 			LIBPATHFLAG=" -L%1\$-s"
+@@ -17177,6 +17187,14 @@ if test "$enable_shared" = 'yes'; then
  	LIBRUBY_DLDFLAGS='-install_name $(libdir)/lib$(RUBY_SO_NAME).dylib -current_version $(MAJOR).$(MINOR).$(TEENY) -compatibility_version $(MAJOR).$(MINOR)'
  	LIBRUBY_ALIASES='lib$(RUBY_SO_NAME).$(MAJOR).$(MINOR).dylib lib$(RUBY_SO_NAME).dylib'
  	;;
@@ -41,7 +41,7 @@ $NetBSD: patch-ab,v 1.10 2007/09/24 21:58:28 taca Exp $
      interix*)
  	LIBRUBYARG_SHARED='-L. -L${libdir} -l$(RUBY_SO_NAME)'
  	;;
-@@ -16717,6 +16735,7 @@ if test "$enable_shared" = 'yes'; then
+@@ -17186,6 +17204,7 @@ if test "$enable_shared" = 'yes'; then
  fi
  if test "$enable_rpath" = yes; then
      LIBRUBYARG_SHARED="${linker_flag}-R ${linker_flag}\$(libdir) -L\$(libdir) $LIBRUBYARG_SHARED"
@@ -49,3 +49,11 @@ $NetBSD: patch-ab,v 1.10 2007/09/24 21:58:28 taca Exp $
  fi
  
  LDFLAGS="-L. $LDFLAGS"
+@@ -17529,6 +17548,7 @@ else
+   tr -d '\015' < confdefs.h > config.h
+ fi
+ tr -d '\015' < largefile.h > confdefs.h
++rm -f largefile.h
+ 
+ ac_config_files="$ac_config_files $FIRSTMAKEFILE"
+ 
