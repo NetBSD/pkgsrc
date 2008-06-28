@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1409 2008/06/28 00:13:59 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.1410 2008/06/28 10:05:42 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2377,3 +2377,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed security/pflkm [peter 2008-06-26]
 	Updated emulators/wine to 1.0nb1 [jmcneill 2008-06-26]
 	Updated emulators/wine to 1.0nb3 [jmcneill 2008-06-27]
+	Added www/firefox3 version 3.0 [tnn 2008-06-28]
