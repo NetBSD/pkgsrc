@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1411 2008/06/28 11:13:20 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1412 2008/06/28 22:51:55 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2379,3 +2379,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/wine to 1.0nb3 [jmcneill 2008-06-27]
 	Added www/firefox3 version 3.0 [tnn 2008-06-28]
 	Updated databases/phpmyadmin to 2.11.7 [tron 2008-06-28]
+	Updated net/samba to 3.0.30 [tron 2008-06-28]
