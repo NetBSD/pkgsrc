@@ -1,0 +1,11 @@
+prefix=@PREFIX@
+exec_prefix=@PREFIX@
+libdir=@PREFIX@/lib/firefox
+includedir=@PREFIX@/include/firefox
+
+Name: XUL
+Description: There is no data. Only XUL.
+Version: 3.0
+Requires: firefox-xpcom
+Libs: -Wl,-R${libdir} -L${libdir} -lxul
+Cflags: -I${includedir}

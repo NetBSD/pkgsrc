@@ -1,0 +1,46 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/06/28 10:01:07 tnn Exp $
+
+--- configure.orig	2008-03-01 00:31:03.000000000 +0100
++++ configure
+@@ -6178,7 +6178,7 @@ rm -f conftest*
+     LDFLAGS=$_SAVE_LDFLAGS
+     ;;
+ 
+-*-freebsd*)
++*-freebsd* | *-dragonfly*)
+     if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo aout` != "elf"; then
+ 	DLL_SUFFIX=".so.1.0"
+ 	DSO_LDOPTS="-shared"
+@@ -6192,6 +6192,9 @@ rm -f conftest*
+ #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
+ #	MKSHLIB_UNFORCE_ALL=''
+ #    fi
++    if test "$LIBRUNPATH"; then
++       DSO_LDOPTS="-Wl,-R$LIBRUNPATH $DSO_LDOPTS"
++    fi
+     ;; 
+ 
+ *-hpux*)
+@@ -6766,6 +6769,13 @@ EOF
+     if test "$LIBRUNPATH"; then
+ 	DSO_LDOPTS="-R$LIBRUNPATH $DSO_LDOPTS"
+     fi
++
++    case "${target_cpu}" in
++    alpha*)
++       CFLAGS="$CFLAGS -mieee"
++       CXXFLAGS="$CXXFLAGS -mieee"
++    ;;
++    esac
+     ;;
+ 
+ *-openvms*) 
+@@ -16253,7 +16263,7 @@ rm -f conftest*
+ fi
+ 
+ if test -z "$MOZ_OPTIMIZE_FLAGS"; then
+-	MOZ_OPTIMIZE_FLAGS="-O"
++	MOZ_OPTIMIZE_FLAGS=""
+ fi
+ 
+ # Check whether --enable-optimize or --disable-optimize was given.

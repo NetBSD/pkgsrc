@@ -1,0 +1,17 @@
+- Fix SDK installation
+- Fix pkg-config files
+
+Patch status relative to firefox-2.0
+------------------------------------
+Obsolete patches(?):
+da dt af ag ah ai aj ak al an ao aq aw by cd cq
+ch ci cj ck cl cm cn db dc dd dw ec
+
+Patches from firefox 2.x that someone with clue needs to look at:
+bz ca
+
+Patches that had to be updated to apply cleanly:
+aa ab ac ba bb ap ed de
+
+Patches that are "work in progress" and need to be reviewed/revisited:
+wc wd we wf

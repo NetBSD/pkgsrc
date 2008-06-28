@@ -1,0 +1,10 @@
+prefix=@PREFIX@
+exec_prefix=@PREFIX@
+libdir=@PREFIX@/lib/firefox
+includedir=@PREFIX@/include/firefox
+
+Name: NSPR
+Description: The Netscape Portable Runtime
+Version: 4.6.8
+Libs: -Wl,-R${libdir} -L${libdir} -lplds4 -lplc4 -lnspr4 -pthread
+Cflags: -I${includedir}

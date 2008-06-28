@@ -1,0 +1,12 @@
+$NetBSD: patch-wd,v 1.1.1.1 2008/06/28 10:01:07 tnn Exp $
+
+--- browser/app/Makefile.in.orig	2008-03-01 00:24:54.000000000 +0100
++++ browser/app/Makefile.in
+@@ -131,6 +131,7 @@ LIBS += \
+ 	$(APP_XPCOM_LIBS) \
+ 	$(NSPR_LIBS) \
+ 	$(TK_LIBS) \
++	-lsmime3 -lssl3 -lnss3 -lnssutil3 -lsoftokn3 \
+ 	$(NULL)
+ 
+ # Add explicit X11 dependency when building against X11 toolkits
