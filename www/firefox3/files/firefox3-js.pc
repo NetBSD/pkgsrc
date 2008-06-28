@@ -1,11 +1,11 @@
 prefix=@PREFIX@
 exec_prefix=@PREFIX@
-libdir=@PREFIX@/lib/firefox
-includedir=@PREFIX@/include/firefox
+libdir=@PREFIX@/lib/firefox3
+includedir=@PREFIX@/include/firefox3
 
 Name: JavaScript
 Description: The Mozilla JavaScript Library
 Version: 3.0
-Requires: firefox-nspr >= 4.6.8
+Requires: firefox3-nspr >= 4.6.8
 Libs: -Wl,-R${libdir} -L${libdir} -lmozjs
 Cflags: -I${includedir}/js -DXP_UNIX -DJS_THREADSAFE
