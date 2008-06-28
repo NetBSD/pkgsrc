@@ -1,0 +1,13 @@
+$NetBSD: patch-wf,v 1.1.1.1 2008/06/28 10:01:07 tnn Exp $
+
+--- nsprpub/pr/src/md/unix/uxrng.c.orig	2005-12-24 09:25:29.000000000 +0100
++++ nsprpub/pr/src/md/unix/uxrng.c
+@@ -149,7 +149,7 @@ static PRCallOnceType coOpenDevRandom;
+ 
+ static PRStatus OpenDevRandom( void )
+ {
+-    fdDevRandom = open( "/dev/random", O_RDONLY );
++    fdDevRandom = open( "/dev/urandom", O_RDONLY );
+     return((-1 == fdDevRandom)? PR_FAILURE : PR_SUCCESS );
+ } /* end OpenDevRandom() */
+ 

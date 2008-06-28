@@ -1,0 +1,10 @@
+prefix=@PREFIX@
+exec_prefix=@PREFIX@
+libdir=@PREFIX@/lib/firefox
+includedir=@PREFIX@/include/firefox
+
+Name: Mozilla Plug-In API
+Description: Mozilla Plug-In API
+Version: 3.0
+Requires: firefox-nspr >= 4.6.8
+Cflags: -I${includedir}
