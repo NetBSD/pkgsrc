@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1.1.1 2008/06/28 10:01:07 tnn Exp $
+
+--- security/coreconf/command.mk.orig	2007-10-23 23:55:00.000000000 +0200
++++ security/coreconf/command.mk
+@@ -45,7 +45,7 @@ ASFLAGS      += $(CFLAGS)
+ CCF           = $(CC) $(CFLAGS)
+ LINK_DLL      = $(LINK) $(OS_DLLFLAGS) $(DLLFLAGS)
+ LINK_EXE      = $(LINK) $(OS_LFLAGS) $(LFLAGS)
+-CFLAGS        = $(OPTIMIZER) $(OS_CFLAGS) $(XP_DEFINE) $(DEFINES) $(INCLUDES) \
++CFLAGS        = $(OS_CFLAGS) $(XP_DEFINE) $(DEFINES) $(INCLUDES) \
+ 		$(XCFLAGS)
+ PERL          = perl
+ RANLIB        = echo
