@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/28 10:01:07 tnn Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/06/28 10:16:28 tnn Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -2769,6 +2769,7 @@ include/${MOZILLA}/fuel/fuelIApplication.h
 @dirrm lib/${MOZILLA}/defaults/pref
 @dirrm lib/${MOZILLA}/defaults/profile/chrome
 @dirrm lib/${MOZILLA}/defaults/profile
+@dirrm lib/${MOZILLA}/defaults
 @dirrm lib/${MOZILLA}/dictionaries
 @dirrm lib/${MOZILLA}/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}
 @dirrm lib/${MOZILLA}/extensions
