@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2008/06/22 15:20:56 wiz Exp $
+# $NetBSD: options.mk,v 1.9 2008/06/28 16:37:07 wiz Exp $
 #
 
 #
@@ -31,6 +31,16 @@ INSTALL_TARGET+=	install-plugin
 GNASH_GUIS+=		kde
 PLIST_SRC+=		${PKGDIR}/PLIST.kde
 PLIST_SUBST+=		KDE="kde/"
+CONFIGURE_ARGS+=	--with-kde-pluginprefix=${PREFIX}
+# XXX: next three are ignored by configure script
+CONFIGURE_ARGS+=	--with-kde-appsdatadir=${PREFIX}/share/kde/apps
+CONFIGURE_ARGS+=	--with-kde-configdir=${PREFIX}/share/kde/config
+CONFIGURE_ARGS+=	--with-kde-servicesdir=${PREFIX}/share/kde/services
+SUBST_CLASSES+=		kde
+SUBST_FILES.kde=	configure
+SUBST_STAGE.kde=	pre-configure
+SUBST_SED.kde=		-e "s,KDE_PLUGINPREFIX./share,KDE_PLUGINPREFIX\'/share/kde,"
+SUBST_MESSAGE.kde=	Fix installation paths for KDE.
 .include "../../x11/kdebase3/buildlink3.mk"
 .include "../../meta-pkgs/kde3/kde3.mk"
 
