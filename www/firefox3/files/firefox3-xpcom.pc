@@ -1,12 +1,12 @@
 prefix=@PREFIX@
 exec_prefix=@PREFIX@
-libdir=@PREFIX@/lib/firefox
-includedir=@PREFIX@/include/firefox
-idldir=@PREFIX@/share/idl/firefox
+libdir=@PREFIX@/lib/firefox3
+includedir=@PREFIX@/include/firefox3
+idldir=@PREFIX@/share/idl/firefox3
 
 Name: XPCOM
 Description: The Mozilla Cross Platform Component Library
 Version: 3.0
-Requires: firefox-nspr >= 4.6.8
+Requires: firefox3-nspr >= 4.6.8
 Libs: -Wl,-R${libdir} -L${libdir} -lxpcom
 Cflags: -I${includedir}
