@@ -1,7 +1,7 @@
 prefix=@PREFIX@
 exec_prefix=@PREFIX@
-libdir=@PREFIX@/lib/firefox
-includedir=@PREFIX@/include/firefox
+libdir=@PREFIX@/lib/firefox3
+includedir=@PREFIX@/include/firefox3
 
 Name: NSPR
 Description: The Netscape Portable Runtime
