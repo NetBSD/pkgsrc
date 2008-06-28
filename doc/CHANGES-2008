@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1408 2008/06/27 02:54:08 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.1409 2008/06/28 00:13:59 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2376,3 +2376,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-MRO-Compat version 0.09 [abs 2008-06-24]
 	Removed security/pflkm [peter 2008-06-26]
 	Updated emulators/wine to 1.0nb1 [jmcneill 2008-06-26]
+	Updated emulators/wine to 1.0nb3 [jmcneill 2008-06-27]
