@@ -1,21 +1,21 @@
-# $NetBSD: Makefile,v 1.112 2008/03/30 14:47:35 darcy Exp $
+# $NetBSD: Makefile,v 1.113 2008/06/29 11:38:32 tnn Exp $
 
-DISTNAME=	sylpheed-2.4.8
-PKGREVISION=	1
+DISTNAME=	sylpheed-2.5.0
 CATEGORIES=	mail news x11
-MASTER_SITES=	http://sylpheed.sraoss.jp/sylpheed/v2.4/
+MASTER_SITES=	http://sylpheed.sraoss.jp/sylpheed/v2.5/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	chris@NetBSD.org
 HOMEPAGE=	http://sylpheed.sraoss.jp/en/
 COMMENT=	X based e-mail and netnews client
 
-CONFLICTS=		sylpheed-claws-[0-9]* sylpheed-gtk2-[0-9]*
+PKG_DESTDIR_SUPPORT=	user-destdir
+CONFLICTS=		sylpheed-claws-[0-9]*
 
+USE_DIRS+=		xdg-1.4
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=			gmake msgfmt pkg-config
-USE_LANGUAGES+=		c c++
+USE_TOOLS+=		gmake msgfmt pkg-config
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-nls
@@ -29,8 +29,8 @@ EGDIR=		${PREFIX}/share/examples/sylpheed
 CONF_FILES=	${EGDIR}/mime.types ${PKG_SYSCONFDIR}/mime.types
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${FILESDIR}/mime.types ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/mime.types ${DESTDIR}${EGDIR}
 
 .include "options.mk"
 .include "../../converters/libiconv/buildlink3.mk"
