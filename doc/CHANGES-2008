@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1414 2008/06/29 07:48:41 kim Exp $
+$NetBSD: CHANGES-2008,v 1.1415 2008/06/29 11:42:47 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2382,3 +2382,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/samba to 3.0.30 [tron 2008-06-28]
 	Updated www/squid to 2.6.21 [taca 2008-06-29]
 	Updated mail/mailman to 2.1.10 [kim 2008-06-29]
+	Updated mail/sylpheed to 2.5.0 [tnn 2008-06-29]
+	Removed mail/sylpheed-devel successor mail/sylpheed [tnn 2008-06-29]
