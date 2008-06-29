@@ -1,8 +1,11 @@
-# $NetBSD: INSTALL,v 1.1 2004/12/25 16:55:33 kim Exp $
+# $NetBSD: INSTALL,v 1.2 2008/06/29 07:47:03 kim Exp $
 
 case ${STAGE} in
 POST-INSTALL)
     # Fix file permissions
     ${PKG_PREFIX}/lib/mailman/bin/check_perms -f
+    # Remove compiled config file to avoid the need to recompile it
+    # when it is modified.
+    ${RM} -f ${PKG_PREFIX}/lib/mailman/Mailman/mm_cfg.pyc
     ;;
 esac
