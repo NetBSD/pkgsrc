@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1413 2008/06/29 01:02:48 taca Exp $
+$NetBSD: CHANGES-2008,v 1.1414 2008/06/29 07:48:41 kim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2381,3 +2381,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/phpmyadmin to 2.11.7 [tron 2008-06-28]
 	Updated net/samba to 3.0.30 [tron 2008-06-28]
 	Updated www/squid to 2.6.21 [taca 2008-06-29]
+	Updated mail/mailman to 2.1.10 [kim 2008-06-29]
