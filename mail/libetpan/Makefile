@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/01/25 18:26:31 smb Exp $
+# $NetBSD: Makefile,v 1.18 2008/06/29 09:31:57 tnn Exp $
 #
 
 DISTNAME=		libetpan-0.52
@@ -6,7 +6,7 @@ PKGREVISION=		3
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libetpan/}
 
-MAINTAINER=		dawszy@arhea.pl
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://libetpan.sourceforge.net/
 COMMENT=		Really nice mail library
 
