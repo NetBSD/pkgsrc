@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2003/12/23 11:02:13 xtraeme Exp $
+$NetBSD: patch-ag,v 1.2 2008/06/29 07:47:03 kim Exp $
 
---- bin/check_perms.orig	Mon Mar 31 14:07:55 2003
-+++ bin/check_perms
-@@ -70,8 +70,14 @@ class State:
+--- bin/check_perms.orig	2008-04-21 21:28:22.000000000 +0300
++++ bin/check_perms	2008-06-29 09:06:30.000000000 +0300
+@@ -70,8 +70,14 @@
  
  STATE = State()
  
@@ -18,4 +18,4 @@ $NetBSD: patch-ag,v 1.1 2003/12/23 11:02:13 xtraeme Exp $
 +
  PYFILEPERMS = S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH
  ARTICLEFILEPERMS = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP
- 
+ PRIVATEPERMS = QFILEPERMS
