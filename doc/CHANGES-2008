@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1420 2008/06/30 15:44:52 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1421 2008/06/30 15:54:30 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2390,3 +2390,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/mysql5-server to 5.0.51b [martti 2008-06-30]
 	Updated graphics/GraphicsMagick to 1.2.4 [obache 2008-06-30]
 	Updated filesystems/py-fuse-bindings to 0.2pre1nb1 [wiz 2008-06-30]
+	Updated security/sudo to 1.6.9p17 [taca 2008-06-30]
