@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7364 2008/06/30 05:51:39 obache Exp $
+$NetBSD: TODO,v 1.7365 2008/06/30 11:23:58 obache Exp $
 
 Suggested new packages
 ======================
@@ -805,7 +805,8 @@ Suggested package updates
 	o libdiscid-0.1.1
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.6
-	o libevent-1.4.4
+	o libevent-1.4.4 [pkg/39069]
+	o libenevt-1.4.5
 	o libextractor-0.5.20a
 	o libflash-0.4.13
 	o libgda-3.1.4
