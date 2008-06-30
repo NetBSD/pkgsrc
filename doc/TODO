@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7363 2008/06/29 18:27:33 dholland Exp $
+$NetBSD: TODO,v 1.7364 2008/06/30 05:51:39 obache Exp $
 
 Suggested new packages
 ======================
@@ -348,6 +348,7 @@ Suggested package updates
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
 	o GridSim-3.3
+	o GraphicsMagick-1.2.4
 	o MAMEDiff-2.29
 	o PAM-0.99.7.1
 	o R-CGIwithR-0.72
