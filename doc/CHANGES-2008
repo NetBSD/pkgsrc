@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1416 2008/06/30 05:08:30 jnemeth Exp $
+$NetBSD: CHANGES-2008,v 1.1417 2008/06/30 10:38:36 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2385,3 +2385,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/sylpheed to 2.5.0 [tnn 2008-06-29]
 	Removed mail/sylpheed-devel successor mail/sylpheed [tnn 2008-06-29]
 	Updated sysutils/wbm-virtual-server to 3.572nb1 [jnemeth 2008-06-30]
+	Updated audio/sweep to 0.9.3 [wiz 2008-06-30]
