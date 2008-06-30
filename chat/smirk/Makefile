@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/04/21 15:09:07 bjs Exp $
+# $NetBSD: Makefile,v 1.4 2008/06/30 22:23:34 bjs Exp $
 #
 
 DISTNAME=	smirk-20080111
+PKGREVISION=	1
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_LOCAL}
 EXTRACT_SUFX=	.tar.bz2
@@ -13,11 +14,13 @@ COMMENT=	Revival of the curses-based Rhapsody IRC client
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
-USE_NCURSES=		yes
-USE_TOOLS+=		gmake
+CONFIGURE_ARGS+=	--datadir=${DATADIR:Q}
 
-BUILDLINK_TRANSFORM+=	l:curses:ncurses
-HELP_DIR=		${PREFIX}/share/${PKGBASE}
+USE_TOOLS+=		gmake
+USE_NCURSES=		yes
+
+DATADIR=		${PREFIX}/share/${PKGBASE}
+HELP_DIR=		${DATADIR}/help
 HELP_FILES=		clientcmnds.hlp irccmnds.hlp keys.hlp
 
 do-install:
@@ -29,5 +32,4 @@ do-install:
 .endfor
 
 .include "../../devel/ncurses/buildlink3.mk"
-.include "../../mk/curses.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
