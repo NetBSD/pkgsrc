@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.6 2007/02/07 20:18:41 drochner Exp $
+$NetBSD: distinfo,v 1.7 2008/06/30 10:38:23 wiz Exp $
 
-SHA1 (sweep-0.9.2.tar.gz) = 688075a645d5782584e5fd6e9f1a1062aeee3599
-RMD160 (sweep-0.9.2.tar.gz) = f44a27c0ce050c7871c8b6c6b32c116c968273b0
-Size (sweep-0.9.2.tar.gz) = 1177803 bytes
+SHA1 (sweep-0.9.3.tar.gz) = 1257e2c5544ca45708f8d99bf2ec0116a22708e4
+RMD160 (sweep-0.9.3.tar.gz) = 54c1e6ea94d58494dfc362150551b6a02268476d
+Size (sweep-0.9.3.tar.gz) = 1248948 bytes
 SHA1 (patch-aa) = fb4f123c1abcef93a53530961ad07bb67354aa2f
-SHA1 (patch-ab) = 42d6d165a55c19cd046672dbd91775517f79372f
+SHA1 (patch-ab) = 370e388b2d7cb6f2279e49299a01ef553226b07b
