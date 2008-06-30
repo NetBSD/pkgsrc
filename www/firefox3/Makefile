@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/28 10:01:06 tnn Exp $
+# $NetBSD: Makefile,v 1.2 2008/06/30 05:28:45 tnn Exp $
 
 MOZILLA=		firefox3	# allow coexisting with firefox2
 COMMENT=		Lightweight gecko-based web browser
@@ -79,5 +79,7 @@ CONFIGURE_ARGS+=	--without-system-png
 CONFIGURE_ARGS+=	--enable-default-toolkit=cairo-gtk2
 # Is dbus support useful for anything?
 CONFIGURE_ARGS+=	--disable-dbus
+# Avoids needing curl on Linux
+CONFIGURE_ARGS+=	--disable-crashreporter
 
 .include "../../mk/bsd.pkg.mk"
