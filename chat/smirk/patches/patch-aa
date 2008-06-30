@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2008/06/30 22:23:34 bjs Exp $
+
+--- src/screen.c.orig	2007-05-08 10:18:18.000000000 -0400
++++ src/screen.c
+@@ -2195,7 +2195,7 @@ int print_help_file(help *H, char *filen
+ 	char line[4096];
+ 	char path[4096];
+ 
+-    sprintf(path,"%s/%s/%s","DOCS_PATH","help",filename);
++    sprintf(path,"%s/%s/%s",DOCS_PATH,"help",filename);
+ 
+ 	fp = fopen(path, "rb");
+ 
