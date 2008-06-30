@@ -1,4 +1,6 @@
-$NetBSD: patch-am,v 1.5 2008/06/23 16:24:30 he Exp $
+$NetBSD: patch-am,v 1.6 2008/06/30 07:29:48 martti Exp $
+
+Prepend file name to error message.
 
 --- src/rrd_update.c.orig	2008-06-11 01:12:55.000000000 +0200
 +++ src/rrd_update.c
