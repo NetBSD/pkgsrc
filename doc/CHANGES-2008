@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1422 2008/06/30 22:24:11 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1423 2008/07/01 09:23:32 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2392,3 +2392,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated filesystems/py-fuse-bindings to 0.2pre1nb1 [wiz 2008-06-30]
 	Updated security/sudo to 1.6.9p17 [taca 2008-06-30]
 	Updated chat/smirk to 20080111nb1 [bjs 2008-06-30]
+	Updated databases/mysql5-server to 5.0.51bnb1 [tron 2008-07-01]
