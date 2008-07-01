@@ -49,6 +49,9 @@ Boston, MA 02111-1307, USA.  */
 #define START_FILES pre-crt0.o /usr/lib/crt1.o /usr/lib/crti.o /usr/lib/crtbegin.o
 #define LIB_STANDARD -L/usr/lib/gcc34 -lgcc -lc -lgcc /usr/lib/crtend.o /usr/lib/crtn.o
 #  endif
+#elif defined(__GNUC__) && __GNUC__ == 4 && __GNUC_MINOR__ == 1
+#define START_FILES pre-crt0.o /usr/lib/gcc41/crt1.o /usr/lib/gcc41/crti.o /usr/lib/gcc41/crtbegin.o
+#define LIB_STANDARD -L/usr/lib/gcc41 -lgcc -lc -lgcc /usr/lib/gcc41/crtend.o /usr/lib/gcc41/crtn.o
 #else
 #error "Add compiler version magic"
 #endif
