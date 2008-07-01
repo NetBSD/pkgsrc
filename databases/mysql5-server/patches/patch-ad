@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2007/03/11 18:42:49 adam Exp $
+$NetBSD: patch-ad,v 1.3 2008/07/01 09:22:59 tron Exp $
 
---- sql/mysqld.cc.orig	2007-03-05 20:21:11.000000000 +0100
-+++ sql/mysqld.cc
-@@ -171,7 +171,7 @@ static void getvolumeID(BYTE *volumeName
+--- sql/mysqld.cc.orig	2007-11-15 14:06:16.000000000 +0000
++++ sql/mysqld.cc	2008-06-30 15:54:35.000000000 +0100
+@@ -174,7 +174,7 @@
  int initgroups(const char *,unsigned int);
  #endif
  
@@ -11,7 +11,15 @@ $NetBSD: patch-ad,v 1.2 2007/03/11 18:42:49 adam Exp $
  #include <ieeefp.h>
  #ifdef HAVE_FP_EXCEPT				// Fix type conflict
  typedef fp_except fp_except_t;
-@@ -3431,7 +3431,7 @@ int main(int argc, char **argv)
+@@ -323,6 +323,7 @@
+ static char *default_collation_name;
+ static char compiled_default_collation_name[]= MYSQL_DEFAULT_COLLATION_NAME;
+ static char mysql_data_home_buff[2];
++char mysql_unpacked_real_data_home[FN_REFLEN];
+ static I_List<THD> thread_cache;
+ 
+ #ifndef EMBEDDED_LIBRARY
+@@ -3543,7 +3544,7 @@
    init_ssl();
  
  #ifdef HAVE_LIBWRAP
@@ -20,3 +28,13 @@ $NetBSD: patch-ad,v 1.2 2007/03/11 18:42:49 adam Exp $
    openlog(libwrapName, LOG_PID, LOG_AUTH);
  #endif
  
+@@ -7565,6 +7566,9 @@
+     pos[1]= 0;
+   }
+   convert_dirname(mysql_real_data_home,mysql_real_data_home,NullS);
++  (void) fn_format(buff, mysql_real_data_home, "", "",
++                   (MY_RETURN_REAL_PATH|MY_RESOLVE_SYMLINKS));
++  (void) unpack_dirname(mysql_unpacked_real_data_home, buff);
+   convert_dirname(language,language,NullS);
+   (void) my_load_path(mysql_home,mysql_home,""); // Resolve current dir
+   (void) my_load_path(mysql_real_data_home,mysql_real_data_home,mysql_home);
