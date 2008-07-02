@@ -1,4 +1,4 @@
-$NetBSD: patch-bh,v 1.1 2007/05/21 04:40:00 xtraeme Exp $
+$NetBSD: patch-bh,v 1.2 2008/07/02 14:10:04 obache Exp $
 
 --- client/mysql.cc.orig	2007-05-21 05:45:33.000000000 +0200
 +++ client/mysql.cc	2007-05-21 05:46:28.000000000 +0200
@@ -6,7 +6,7 @@ $NetBSD: patch-bh,v 1.1 2007/05/21 04:40:00 xtraeme Exp $
  */
  
  #if defined(USE_NEW_READLINE_INTERFACE) || defined(USE_LIBEDIT_INTERFACE)
-+#  ifdef __NetBSD__
++#  if defined(__NetBSD__) || defined(__DragonFly__)
 +int no_completion(const char *, int)
 +#  else
  char *no_completion(const char*,int)
