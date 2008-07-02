@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1424 2008/07/02 10:34:13 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1425 2008/07/02 11:12:49 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2393,4 +2393,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/sudo to 1.6.9p17 [taca 2008-06-30]
 	Updated chat/smirk to 20080111nb1 [bjs 2008-06-30]
 	Updated databases/mysql5-server to 5.0.51bnb1 [tron 2008-07-01]
+	Updated www/firefox to 2.0.0.15 [ghen 2008-07-02]
+	Updated www/firefox-bin to 2.0.0.15 [ghen 2008-07-02]
+	Updated www/firefox-gtk1 to 2.0.0.15 [ghen 2008-07-02]
 	Updated net/wireshark to 1.0.1 [tron 2008-07-02]
