@@ -156,6 +156,7 @@ ipa-without-thresholds	Disable thresholds support.
 irssi-perl		Enable Perl support in irssi.
 ispell			Add spell checking support using ispell.
 jasper			Enable JPEG 2000 support using the jasper library.
+java			Enable Java support.
 javascript		Enable Javascript support.
 jpeg			Enable JPEG support.
 jwhois-enable-cache	Enable cache support.
