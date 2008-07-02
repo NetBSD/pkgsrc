@@ -1,16 +1,16 @@
-$NetBSD: patch-aa,v 1.4 2008/01/14 23:17:27 wiz Exp $
+$NetBSD: patch-aa,v 1.5 2008/07/02 13:35:16 obache Exp $
 
---- libkexiv2/libkexiv2/kexiv2.cpp.orig	2007-05-08 15:02:40.000000000 +0000
-+++ libkexiv2/libkexiv2/kexiv2.cpp
-@@ -60,6 +60,20 @@
+--- libkexiv2/libkexiv2/kexiv2.cpp.orig	2007-09-08 02:21:16 +0300
++++ libkexiv2/libkexiv2/kexiv2.cpp	2008-06-05 14:45:19 +0300
+@@ -79,6 +79,20 @@
  
  #include "kexiv2.h"
  
-+#if defined(__NetBSD__)
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +#include <sys/param.h>
 +#endif
 +
-+#if defined(__DragonFly__) || (defined(__NetBSD__) && __NetBSD_Version__ <= 399001700)
++#if (defined(__DragonFly__) && __DragonFly_version < 190000) || (defined(__NetBSD__) && __NetBSD_Version__ <= 399001700)
 +static double trunc(double val)
 +{
 +	if (val > 0)
