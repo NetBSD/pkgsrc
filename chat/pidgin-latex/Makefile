@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1 2008/06/21 16:38:40 smb Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/02 14:24:45 smb Exp $
 
 VERSION=	1.2.1
+PKGREVISION=	1
 DISTNAME=	pidgin-latex-${VERSION}
 EXTRACT_SUFX=	.tar.bz2
 CATEGORIES=	chat print
@@ -12,6 +13,7 @@ HOMEPAGE=	http://sourceforge.net/projects/pidgin-latex/
 COMMENT=	Plugin for pidgin to render LaTeX as images
 
 USE_TOOLS+=	gmake
+USE_TOOLS+=	pkg-config
 
 #PKG_DESTDIR_SUPPORT=	user-destdir
 
