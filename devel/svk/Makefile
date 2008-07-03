@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/07/01 22:51:08 bad Exp $
+# $NetBSD: Makefile,v 1.29 2008/07/03 13:55:40 bad Exp $
 
 DISTNAME=	SVK-v2.0.2
 PKGNAME=	svk-2.0.2
@@ -47,7 +47,6 @@ DEPENDS+=	p5-URI>=1.30:../../www/p5-URI
 DEPENDS+=	p5-UNIVERSAL-require>=0.10:../../devel/p5-UNIVERSAL-require
 DEPENDS+=	p5-YAML-Syck>=0.60:../../textproc/p5-YAML-Syck
 DEPENDS+=	p5-version>=0.68:../../devel/p5-version
-BUILD_DEPENDS+=	p5-Test-More>=0.42:../../devel/p5-Test-More
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
