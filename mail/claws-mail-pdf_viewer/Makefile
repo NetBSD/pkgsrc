@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/07/03 18:04:26 smb Exp $
+# $NetBSD: Makefile,v 1.10 2008/07/03 18:40:09 smb Exp $
 #
 
 DISTNAME=	pdf_viewer-0.9.1
@@ -12,7 +12,8 @@ COMMENT=	Enables the viewing of PDF and PostScript attachments
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-RESTRICTED=gpl-version-incompatibility
+LICENSE=gplv2-and-gplv3
+RESTRICTED=gpl-incompatibility
 NO_BIN_ON_FTP=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
