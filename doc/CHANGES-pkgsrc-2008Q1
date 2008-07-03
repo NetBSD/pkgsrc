@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.89 2008/07/02 13:14:59 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.90 2008/07/03 11:29:26 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -202,11 +202,12 @@ Pullup ticket 2435 - requested by adrianp
 horde: security fix
 Pullup ticket 2436 - requested by taca
 ruby18-base: security update
-ruby18-gdbm: security update
 ruby18-curses: security updatenb1
+ruby18-gdbm: security update
 ruby18-readline: security update
 ruby18-tk: security update
 ruby18: security update
+ruby-mode: security update
 pullup ticket 2429 - requested by tron 
 nasm:  fixes bug in nasm which is a "possible" security issue
 pullup ticket 2437 requested by tron
