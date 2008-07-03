@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/23 16:59:11 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/03 10:26:18 drochner Exp $
 #
 
 DISTNAME=	gnome-mastermind-0.3.1
@@ -12,7 +12,7 @@ COMMENT=	Mastermind (the game)
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config intltool gmake
+USE_TOOLS+=	pkg-config intltool gmake msgfmt
 USE_DIRS+=	xdg-1.1 gnome2-1.5
 
 .include "../../devel/glib2/buildlink3.mk"
