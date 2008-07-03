@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7369 2008/07/03 01:19:19 taca Exp $
+$NetBSD: TODO,v 1.7370 2008/07/03 13:45:57 tron Exp $
 
 Suggested new packages
 ======================
@@ -1352,7 +1352,7 @@ Suggested package updates
 	o wpa_gui-0.5.7
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9d
-	o wxGTK-2.8.6
+	o wxGTK-2.8.8
 	o wxRemind-79
 	o wyrd-1.4.4
 	o x11perf-1.5
