@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.53 2008/06/19 22:33:25 epg Exp $
+# $NetBSD: Makefile,v 1.54 2008/07/03 20:39:44 schmonz Exp $
 
 PKGNAME=	subversion-base-${SVNVER}
 COMMENT=	Version control system, base programs and libraries
+PKGREVISION=	1
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -25,9 +26,6 @@ BROKEN_GETTEXT_DETECTION=	yes
 CONFIGURE_ARGS+=	--disable-neon-version-check
 CONFIGURE_ARGS+=	--without-apache
 CONFIGURE_ARGS+=	--without-apxs
-CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
-
-.include "../../security/cyrus-sasl/buildlink3.mk"
 
 .if !empty(PKG_OPTIONS:Mapr1)
 .  include "../../devel/apr/buildlink3.mk"
@@ -52,6 +50,13 @@ DAV_RA=				neon
 PLIST_SRC=		${PKGDIR}/PLIST ${PKGDIR}/PLIST.bdb
 .else
 CONFIGURE_ARGS+=	--without-berkeley-db
+.endif
+
+.if !empty(PKG_OPTIONS:Msasl)
+.include "../../security/cyrus-sasl/buildlink3.mk"
+CONFIGURE_ARGS+=	--with-sasl=${BUILDLINK_PREFIX.cyrus-sasl}
+.else
+CONFIGURE_ARGS+=	--without-sasl
 .endif
 
 PLIST_SUBST+=		DAV_RA=${DAV_RA:Q}
