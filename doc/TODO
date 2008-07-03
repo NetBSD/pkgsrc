@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7370 2008/07/03 13:45:57 tron Exp $
+$NetBSD: TODO,v 1.7371 2008/07/03 14:12:38 obache Exp $
 
 Suggested new packages
 ======================
@@ -933,6 +933,7 @@ Suggested package updates
 	o nelma-3.1
 	o neon-0.28.2
 	o nessus-3.2.0
+	o net6-1.3.7 [pkg/38995]
 	o netcdf-3.6.2
 	o netperf-2.4.4
 	o netpipe-3.6.2
