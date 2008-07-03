@@ -1,8 +1,8 @@
-# $NetBSD: options.mk,v 1.7 2008/07/03 20:39:44 schmonz Exp $
+# $NetBSD: options.mk,v 1.8 2008/07/03 22:01:48 schmonz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.subversion
 PKG_SUPPORTED_OPTIONS=	apache22 apr1 serf java sasl
-PKG_SUGGESTED_OPTIONS=	apr1 sasl
+PKG_SUGGESTED_OPTIONS=	apr1
 
 # Note that this file is included as part of several packages.
 # Therefore this file only defines options, but does not include the
