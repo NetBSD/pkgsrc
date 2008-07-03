@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1426 2008/07/03 20:40:04 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.1427 2008/07/03 22:17:30 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2398,3 +2398,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/firefox-gtk1 to 2.0.0.15 [ghen 2008-07-02]
 	Updated net/wireshark to 1.0.1 [tron 2008-07-02]
 	Updated devel/subversion-base to 1.5.0nb1 [schmonz 2008-07-03]
+	Updated lang/ruby18-base to 1.8.7.22nb1 [tonnerre 2008-07-03]
+	Updated multimedia/vlc to 0.8.6fnb2 [tonnerre 2008-07-03]
+	Updated databases/openldap-client to 2.4.9nb1 [tonnerre 2008-07-03]
