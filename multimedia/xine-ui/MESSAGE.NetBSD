@@ -1,9 +1,12 @@
 ===========================================================================
-$NetBSD: MESSAGE.NetBSD,v 1.1 2005/03/15 15:46:40 wiz Exp $
+$NetBSD: MESSAGE.NetBSD,v 1.2 2008/07/04 14:51:02 joerg Exp $
 
 You may need to increase the value of SHMMAXPGS in your kernel
 configuration to use ${PKGBASE}, e.g.
 
 	options SHMMAXPGS=32768
+
+For NetBSD 5.0 and -current, you can alter the limit at runtime
+by changing the sysctl kern.ipc.shmmaxpgs.
 
 ===========================================================================
