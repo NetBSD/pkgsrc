@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1430 2008/07/04 21:25:19 gdt Exp $
+$NetBSD: CHANGES-2008,v 1.1431 2008/07/04 21:31:36 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2404,3 +2404,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated filesystems/fuse-wikipediafs to 0.3nb1 [wiz 2008-07-04]
 	Updated www/ja-trac to 0.10.5.1 [obache 2008-07-04]
 	Updated www/trac to 0.10.5 [gdt 2008-07-04]
+	Updated devel/pcre to 7.7nb2 [tonnerre 2008-07-04]
