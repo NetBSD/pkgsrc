@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1428 2008/07/04 14:27:40 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1429 2008/07/04 17:33:16 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2402,3 +2402,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/vlc to 0.8.6fnb2 [tonnerre 2008-07-03]
 	Updated databases/openldap-client to 2.4.9nb1 [tonnerre 2008-07-03]
 	Updated filesystems/fuse-wikipediafs to 0.3nb1 [wiz 2008-07-04]
+	Updated www/ja-trac to 0.10.5.1 [obache 2008-07-04]
