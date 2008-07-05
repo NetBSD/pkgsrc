@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/03/03 17:45:36 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2008/07/05 12:02:54 joerg Exp $
 #
 
 DISTNAME=		TS-1.08
@@ -10,7 +10,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		${MASTER_SITES}
 COMMENT=		Library of simple token-scanning routines
 
-PKG_DESTDIR_SUPORT=	user-destdir
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/tokenscan
 INSTALLATION_DIRS=	include lib
