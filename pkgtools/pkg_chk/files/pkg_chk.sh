@@ -1,6 +1,6 @@
 #!@SH@ -e
 #
-# $Id: pkg_chk.sh,v 1.59 2008/05/26 09:25:43 tron Exp $
+# $Id: pkg_chk.sh,v 1.60 2008/07/05 22:56:40 abs Exp $
 #
 # TODO: Make -g check dependencies and tsort
 # TODO: Make -g list user-installed packages first, followed by commented
@@ -160,8 +160,9 @@ extract_pkg_vars()
 extract_variables()
     {
     extract_mk_var PKGSRCDIR ''
+    extract_mk_var LOCALBASE ''
     if [ -z "$PKGSRCDIR" ] ; then
-	for dir in . .. ../.. /usr/pkgsrc ; do
+	for dir in $LOCALBASE/pkgsrc /usr/pkgsrc . .. ../.. ; do
 	    if [ -f "${dir}/mk/bsd.pkg.mk" ]; then
 		case "${dir}" in
 		/*) PKGSRCDIR="${dir}" ;;
