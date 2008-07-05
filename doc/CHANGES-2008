@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1432 2008/07/05 12:06:04 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.1433 2008/07/05 22:29:41 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2408,3 +2408,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/seamonkey to 1.1.10 [ghen 2008-07-05]
 	Updated www/seamonkey-bin to 1.1.10 [ghen 2008-07-05]
 	Updated www/seamonkey-gtk1 to 1.1.10 [ghen 2008-07-05]
+	Updated www/nspluginwrapper to 1.0.0 [wiz 2008-07-04]
