@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.42.2.6 2008/05/20 15:00:44 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.42.2.7 2008/07/05 17:26:39 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -387,7 +387,7 @@ void pkg_sign(const char *, const char *, const char *, const char *);
 #ifdef HAVE_SSL
 /* PKCS7 signing/verification */
 int easy_pkcs7_verify(const char *, size_t, const char *, size_t,
-    const char *);
+    const char *, int);
 int easy_pkcs7_sign(const char *, size_t, char **, size_t *, const char *,
     const char *);
 #endif
