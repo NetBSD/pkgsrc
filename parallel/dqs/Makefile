@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/06/04 12:57:11 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2008/07/05 18:13:37 tnn Exp $
 #
 
 DISTNAME=	DQS-3.3.2
@@ -9,7 +9,7 @@ MASTER_SITES=	http://www.go.dlr.de/fresh/unix/src/misc/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.scri.fsu.edu/~pasko/dqs.html
+HOMEPAGE=	http://web.archive.org/web/20050305104643/http://www.scri.fsu.edu/~pasko/dqs.html
 COMMENT=	Distributed queueing system
 
 WRKSRC=		${WRKDIR}/DQS3
