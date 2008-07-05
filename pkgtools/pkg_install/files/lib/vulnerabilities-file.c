@@ -36,7 +36,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: vulnerabilities-file.c,v 1.3.4.4 2008/05/12 12:46:06 joerg Exp $");
+__RCSID("$NetBSD: vulnerabilities-file.c,v 1.3.4.5 2008/07/05 17:26:40 joerg Exp $");
 
 #if HAVE_SYS_STAT_H
 #include <sys/stat.h>
@@ -126,7 +126,7 @@ verify_signature_pkcs7(const char *input)
 	end_sig += strlen(pkcs7_end);
 
 	if (easy_pkcs7_verify(begin_pkgvul, end_pkgvul - begin_pkgvul,
-	    begin_sig, end_sig - begin_sig, certs_pkg_vulnerabilities))
+	    begin_sig, end_sig - begin_sig, certs_pkg_vulnerabilities, 0))
 		errx(EXIT_FAILURE, "Unable to verify PKCS7 signature");
 #else
 	errx(EXIT_FAILURE, "OpenSSL support is not compiled in");
