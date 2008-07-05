@@ -1,4 +1,4 @@
-/*	$NetBSD: pkcs7.c,v 1.1.2.2 2008/05/21 13:08:47 joerg Exp $	*/
+/*	$NetBSD: pkcs7.c,v 1.1.2.3 2008/07/05 17:26:40 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -7,7 +7,7 @@
 #include <sys/cdefs.h>
 #endif
 
-__RCSID("$NetBSD: pkcs7.c,v 1.1.2.2 2008/05/21 13:08:47 joerg Exp $");
+__RCSID("$NetBSD: pkcs7.c,v 1.1.2.3 2008/07/05 17:26:40 joerg Exp $");
 
 /*-
  * Copyright (c) 2004, 2008 The NetBSD Foundation, Inc.
@@ -101,7 +101,7 @@ file_to_certs(const char *file)
 int
 easy_pkcs7_verify(const char *content, size_t len,
     const char *signature, size_t signature_len,
-    const char *anchor)
+    const char *anchor, int is_pkg)
 {
 	STACK_OF(X509) *cert_chain, *signers;
 	X509_STORE *store;
@@ -154,6 +154,24 @@ easy_pkcs7_verify(const char *content, size_t len,
 	if (sk_X509_num(signers) == 0) {
 		warnx("No signers found");
 		goto cleanup;
+	}
+
+	for (i = 0; i < sk_X509_num(signers); i++) {
+		if (sk_X509_value(signers, i)->ex_flags & EXFLAG_CA) {
+			warnx("CA keys are not valid for signatures");
+			goto cleanup;
+		}
+		if (is_pkg) {
+			if (sk_X509_value(signers, i)->ex_xkusage != XKU_CODE_SIGN) {
+				warnx("Certificate must have CODE SIGNING property");
+				goto cleanup;
+			}
+		} else {
+			if (sk_X509_value(signers, i)->ex_xkusage != 0) {
+				warnx("Certificate must not have any property");
+				goto cleanup;
+			}
+		}
 	}
 
 	printf("Sigature ok, signed by:\n");
@@ -219,6 +237,15 @@ easy_pkcs7_sign(const char *content, size_t len,
 		goto cleanup;
 	}
 	certificate = sk_X509_value(c, 0);
+
+	if (certificate->ex_flags & EXFLAG_CA) {
+		warnx("CA keys are not valid for signatures");
+		goto cleanup;
+	}
+	if (certificate->ex_xkusage != XKU_CODE_SIGN) {
+		warnx("Certificate must have CODE SIGNING property");
+		goto cleanup;
+	}
 
 	if (cert_chain_file)
 		cert_chain = file_to_certs(cert_chain_file);
