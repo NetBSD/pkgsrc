@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1434 2008/07/05 22:57:50 abs Exp $
+$NetBSD: CHANGES-2008,v 1.1435 2008/07/06 05:21:22 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2410,3 +2410,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/seamonkey-gtk1 to 1.1.10 [ghen 2008-07-05]
 	Updated www/nspluginwrapper to 1.0.0 [abs 2008-07-05]
 	Updated pkgtools/pkg_chk to 1.95 [abs 2008-07-05]
+	Updated chat/bitchx to 1.1nb3 [tonnerre 2008-07-06]
