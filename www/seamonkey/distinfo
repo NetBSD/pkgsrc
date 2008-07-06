@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.31 2008/07/05 12:04:38 ghen Exp $
+$NetBSD: distinfo,v 1.32 2008/07/06 06:46:05 ghen Exp $
 
 SHA1 (seamonkey-1.1.10.source.tar.bz2) = b07b2baa95abfad282e769f734e14004300634ec
 RMD160 (seamonkey-1.1.10.source.tar.bz2) = be23ea2022b26f43e579aba32b007b0641445890
@@ -63,4 +63,6 @@ SHA1 (patch-du) = c6e66bb420ce9ea988f89b57d1c20a247704cfcf
 SHA1 (patch-dv) = a380d261d4c2771a672d2b0f4f1f23821e3e5266
 SHA1 (patch-dw) = 263a64d06c6b62041c62ed4532858339d37e1873
 SHA1 (patch-dx) = ab7606171564b6879effc3b37d9eadc6565cb74b
+SHA1 (patch-dy) = 00117db97d6615c60c3db20c62032cab3512e243
+SHA1 (patch-dz) = fa80fc396c46ea2a66e587fa015f74b7a15afb66
 SHA1 (patch-ec) = 925a6f76bbfa77661256d46b0d14e847c16a865f
