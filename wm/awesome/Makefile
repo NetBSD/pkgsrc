@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/04/23 22:11:27 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/07/07 16:42:54 ahoka Exp $
 #
 
 DISTNAME=		awesome-2.2
@@ -25,6 +25,7 @@ post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
 	${INSTALL_DATA} ${WRKSRC}/awesomerc ${DESTDIR}${EGDIR}
 
+.include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/confuse/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
