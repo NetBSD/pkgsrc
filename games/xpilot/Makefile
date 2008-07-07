@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2008/01/19 09:16:23 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/07/07 04:04:37 obache Exp $
 #
 
 DISTNAME=	xpilot-4.5.4
 PKGREVISION=	2
 CATEGORIES=	games x11
-MASTER_SITES=	ftp://ftp.xpilot.org/pub/xpilot/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=xpilotgame/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xpilot.org/
