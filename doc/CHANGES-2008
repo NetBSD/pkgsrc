@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1438 2008/07/08 20:50:19 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1439 2008/07/08 20:51:01 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2414,3 +2414,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/ghc to 6.8.2nb3 [kristerw 2008-07-07]
 	Updated lang/php5 to 5.2.6nb1 [adrianp 2008-07-08]
 	Added textproc/pear-Console_Table version 1.1.1 [adrianp 2008-07-08]
+	Added textproc/pear-File_Find version 1.3.0 [adrianp 2008-07-08]
