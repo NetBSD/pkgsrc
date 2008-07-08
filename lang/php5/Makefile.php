@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.26 2007/09/07 22:12:13 jlam Exp $
+# $NetBSD: Makefile.php,v 1.27 2008/07/08 20:28:55 adrianp Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -9,6 +9,7 @@ PATCHDIR=	${.CURDIR}/../../lang/php5/patches
 USE_LIBTOOL=		YES
 USE_LANGUAGES=		c c++
 GNU_CONFIGURE=		YES
+BUILD_DEFS+=		VARBASE
 
 CONFIGURE_ENV+=		EXTENSION_DIR="${PREFIX}/${PHP_EXTENSION_DIR}"
 
@@ -18,6 +19,8 @@ PLIST_SUBST+=		PHP_EXTENSION_DIR=${PHP_EXTENSION_DIR:Q}
 .include "../../mk/bsd.prefs.mk"
 
 CONFIGURE_ARGS+=	--with-config-file-path=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 
 CONFIGURE_ARGS+=	--with-regex=system
 
