@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.1.1.1 2001/10/15 10:12:08 agc Exp $
+$NetBSD: patch-aa,v 1.2 2008/07/09 05:02:06 bjs Exp $
 
---- Makefile	2001/10/15 09:58:02	1.1
-+++ Makefile	2001/10/15 09:58:39
+--- Makefile.orig	1994-05-01 18:51:17.000000000 -0400
++++ Makefile
 @@ -7,7 +7,7 @@
  #	name of the directory into which the binary should be installed
  #		used only when you use  'make install'
  #
 -INSDIR=/usr/local/bin
-+INSDIR=${PREFIX}
++INSDIR=${DESTDIR}${PREFIX}
  
  #
  #	choose one from each of 1) 2) and 3) below
-@@ -18,21 +18,21 @@
+@@ -18,21 +18,21 @@ INSDIR=/usr/local/bin
  #		choose a) b) or c)
  #
  # a) for BSD derivitives, enable the following line
@@ -37,7 +37,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/10/15 10:12:08 agc Exp $
  
  # b) if you are using terminfo on a XENIX machine, enable the following lines
  #TFLAG=-DM_TERMINFO
-@@ -44,8 +44,8 @@
+@@ -44,8 +44,8 @@ OSFLAG=-DATT
  #TLIB=curses
  
  # d) NONE OF THE ABOVE
@@ -48,3 +48,12 @@ $NetBSD: patch-aa,v 1.1.1.1 2001/10/15 10:12:08 agc Exp $
  
  #
  #	3) SELECTION OF WINDOW MANAGER AVAILABILITY
+@@ -80,7 +80,7 @@ MANPAGE=spiff.1
+ # disable this line iff you like being honked at.
+ DEFS = -DNOCHATTER
+ 
+-CFLAGS=-O $(OSFLAG) $(TFLAG) $(VISFLAG) $(DEFS)
++CFLAGS+=$(OSFLAG) $(TFLAG) $(VISFLAG) $(DEFS)
+ 
+ default: spiff
+ 
