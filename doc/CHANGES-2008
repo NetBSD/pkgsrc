@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1442 2008/07/09 05:04:40 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1443 2008/07/09 08:40:55 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2418,3 +2418,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/horde to 3.2.1nb1 [adrianp 2008-07-08]
 	Updated net/bind95 to 9.5.0pl1 [adrianp 2008-07-08]
 	Updated devel/spiff to 1.0nb1 [bjs 2008-07-09]
+	Updated mail/clamav to 0.93.3 [ghen 2008-07-09]
