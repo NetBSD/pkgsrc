@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.90 2008/07/03 11:29:26 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.91 2008/07/10 13:01:01 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -214,7 +214,16 @@ pullup ticket 2437 requested by tron
 phpmyadmin: bug fixes many 
 pullup ticket 2438 requested by taca
 squid: fixes security problems
-Pullup ticket 2441 - request by ghen
+Pullup ticket 2441 - requested by ghen
 firefox: security update
 firefox-bin: security update
 firefox-gtk1: security update
+Pullup ticket #2443 - requested by taca
+ruby18-base: security patch
+Pullup ticket #2444 - requested by ghen
+firefox: build fix for DragonFly
+Pullup ticket #2445 - requested by ghen
+seamonkey: security update
+seamonkey-bin: security update
+Pullup ticket #2446 - requested by ghen
+clamav: security update
