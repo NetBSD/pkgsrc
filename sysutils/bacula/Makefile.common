@@ -1,8 +1,19 @@
-# $NetBSD: Makefile.common,v 1.43 2008/01/04 14:32:49 ghen Exp $
+# $NetBSD: Makefile.common,v 1.44 2008/07/10 13:54:56 dmcmahill Exp $
 
 DISTNAME=		bacula-2.2.4
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
+
+PATCH_SITES=		${MASTER_SITE_SOURCEFORGE:=bacula/}
+PATCHFILES=		2.2.4-lost-block.patch \
+			2.2.4-parse-command.patch \
+			2.2.4-poll-mount.patch \
+			2.2.4-replace.patch \
+			2.2.4-restore.patch \
+			2.2.4-sd-auth-fail.patch \
+			2.2.4-sql.patch \
+			2.2.4-verify.patch
+DIST_SUBDIR=		${PKGNAME_NOREV}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.bacula.org/
