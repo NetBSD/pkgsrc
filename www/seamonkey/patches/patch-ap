@@ -1,6 +1,6 @@
-$NetBSD: patch-ap,v 1.4 2007/01/20 10:54:44 ghen Exp $
+$NetBSD: patch-ap,v 1.4.10.1 2008/07/10 12:20:11 tron Exp $
 
---- security/coreconf/command.mk.orig	2006-12-22 14:48:07.000000000 +0100
+--- security/coreconf/command.mk.orig	2008-06-16 00:22:15.000000000 +0200
 +++ security/coreconf/command.mk
 @@ -45,7 +45,7 @@ ASFLAGS      += $(CFLAGS)
  CCF           = $(CC) $(CFLAGS)
@@ -9,5 +9,5 @@ $NetBSD: patch-ap,v 1.4 2007/01/20 10:54:44 ghen Exp $
 -CFLAGS        = $(OPTIMIZER) $(OS_CFLAGS) $(XP_DEFINE) $(DEFINES) $(INCLUDES) \
 +CFLAGS       += $(OS_CFLAGS) $(XP_DEFINE) $(DEFINES) $(INCLUDES) \
  		$(XCFLAGS)
+ PERL          = perl
  RANLIB        = echo
- TAR           = /bin/tar
