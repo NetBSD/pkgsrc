@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.3 2008/07/10 15:11:53 joerg Exp $
+
+--- common/osdep.h.orig	2008-07-10 15:44:08.000000000 +0200
++++ common/osdep.h
+@@ -44,7 +44,7 @@
+ #define X264_VERSION "" // no configure script for msvc
+ #endif
+ 
+-#ifdef SYS_OPENBSD
++#if defined(SYS_OPENBSD) || defined(SYS_SunOS)
+ #define isfinite finite
+ #endif
+ #if defined(_MSC_VER) || defined(SYS_SunOS) || defined(SYS_MACOSX)
