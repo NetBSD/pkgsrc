@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2007/12/20 14:08:34 obache Exp $
+# $NetBSD: Makefile,v 1.10 2008/07/10 15:52:03 joerg Exp $
 #
 
 DISTNAME=	bftpd-1.0.24
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	http://bftpd.sourceforge.net/downloads/src/
 

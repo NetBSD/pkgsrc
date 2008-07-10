@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2004/12/11 08:25:48 minskim Exp $
+$NetBSD: patch-aa,v 1.3 2008/07/10 15:52:03 joerg Exp $
 
 --- Makefile.in.orig	2003-05-09 16:47:48.000000000 -0500
 +++ Makefile.in
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.2 2004/12/11 08:25:48 minskim Exp $
  mandir=@mandir@
  sbindir=@sbindir@
  DESTDIR=
-@@ -26,14 +27,14 @@ bftpd: $(OBJS)
+@@ -26,14 +27,9 @@ bftpd: $(OBJS)
  $(OBJS): $(HEADERS) Makefile
  
  install: all
@@ -25,11 +25,6 @@ $NetBSD: patch-aa,v 1.2 2004/12/11 08:25:48 minskim Exp $
 +	$(INSTALL) -m 700 bftpd $(DESTDIR)/$(prefix)/sbin
 +	$(INSTALL) -m 644 bftpd.8 $(DESTDIR)/$(mandir)/man8
 +	$(INSTALL) -m 600 bftpd.conf $(DESTDIR)/$(datadir)/examples/bftpd
-+	mkdir -p ${VARBASE}/log
-+	touch ${VARBASE}/log/bftpd.log
-+	chmod 644 ${VARBASE}/log/bftpd.log
-+	mkdir -p ${VARBASE}/run/bftpd
-+	chmod 755 ${VARBASE}/run/bftpd
  
  clean distclean:
  	rm -f *~ $(OBJS) bftpd mksources.finished
