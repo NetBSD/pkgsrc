@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2008/06/19 22:33:26 epg Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2008/07/10 15:26:11 joerg Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 SUBVERSION_BASE_BUILDLINK3_MK:=	${SUBVERSION_BASE_BUILDLINK3_MK}+
@@ -26,7 +26,9 @@ pkgbase := subversion-base
 
 .endif	# SUBVERSION_BASE_BUILDLINK3_MK
 
+.if !empty(PKG_BUILD_OPTIONS.subversion-base:Msasl)
 .include "../../security/cyrus-sasl/buildlink3.mk"
+.endif
 
 .if !empty(PKG_BUILD_OPTIONS.subversion-base:Mapr1)
 .  include "../../devel/apr/buildlink3.mk"
