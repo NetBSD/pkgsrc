@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.26.2.1 2008/06/28 11:54:07 tron Exp $
+$NetBSD: distinfo,v 1.26.2.2 2008/07/10 13:00:01 tron Exp $
 
 SHA1 (ruby-1.8.6-p230.tar.bz2) = c630222fd6b4272db84f54e68879f81e2014cd51
 RMD160 (ruby-1.8.6-p230.tar.bz2) = cdf3ea33c3fd2258c685aea634aca7e9624036ec
@@ -10,3 +10,4 @@ SHA1 (patch-ad) = 0fb90a6280afca04d881bb94963ceb7542c6212d
 SHA1 (patch-de) = 716dadc9042f81fe16a183fe03b2a63ec2598212
 SHA1 (patch-df) = 0ea1f97ad998361172f78d5cb0e1d0a5f1501b24
 SHA1 (patch-dg) = e79566ded3c82e63357966e961d7dcdfb84a03cf
+SHA1 (patch-dj) = 4f8f0a53f3d108c7e3c10de0f74ad9420d6c07a2
