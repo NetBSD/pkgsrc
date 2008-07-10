@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.124 2008/06/22 23:01:19 he Exp $
+# $NetBSD: Makefile,v 1.125 2008/07/10 15:18:23 joerg Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	apache-${APACHE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 
 HOMEPAGE=	http://httpd.apache.org/
@@ -152,6 +152,15 @@ SUBST_SED.confs+=	-e 's|/var/log/httpd/foo\.log|logs/foo.log/|g'
 SUBST_SED.confs+=	-e 's|^\(User[	 ]\).*|\1${APACHE_USER}|g'
 SUBST_SED.confs+=	-e 's|^\(Group[	 ]\).*|\1${APACHE_GROUP}|g'
 
+# abs_srcdir in config_vars.mk is used during install so needs to reference
+# the work dir path, and by other packages such as ap2-fastcgi after install,
+# so we fix after install to reference the installed path
+SUBST_CLASSES+=		abs_srcdir
+SUBST_STAGE.abs_srcdir=	post-install
+SUBST_FILES.abs_srcdir=	${PREFIX}/share/httpd/build/config_vars.mk
+SUBST_SED.abs_srcdir=	-e 's|^\(abs_srcdir =\) .*|\1 ${PREFIX}/share/httpd|'
+SUBST_MESSAGE.abs_srcdir=	Fixing abs_srcdir
+
 REPLACE_PERL=		docs/cgi-examples/printenv
 
 .include "options.mk"
@@ -235,5 +244,7 @@ post-install:
 	for file in ${FIX_MAN_PERMS}; do \
 		${CHOWN} ${MANOWN}:${MANGRP} ${PREFIX}/${PKGMANDIR}/$$file; \
 	done
+
+	${INSTALL_SCRIPT} ${WRKSRC}/build/mkdir.sh ${PREFIX}/share/httpd/build
 
 .include "../../mk/bsd.pkg.mk"
