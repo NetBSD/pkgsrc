@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/10 02:20:42 jnemeth Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/07/10 12:19:23 joerg Exp $
 share/examples/webmin/virtual-server/config
 share/webmin/virtual-server/CHANGELOG
 share/webmin/virtual-server/IDNA/Punycode.pm
@@ -239,6 +239,7 @@ share/webmin/virtual-server/images/newtmpl.gif
 share/webmin/virtual-server/images/newupdate.gif
 share/webmin/virtual-server/images/newupgrade.gif
 share/webmin/virtual-server/images/newuser.gif
+share/webmin/virtual-server/images/newvalidate.gif
 share/webmin/virtual-server/images/newweb.gif
 share/webmin/virtual-server/images/red.gif
 share/webmin/virtual-server/images/smallicon.gif
