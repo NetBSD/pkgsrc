@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7373 2008/07/10 14:06:50 dmcmahill Exp $
+$NetBSD: TODO,v 1.7374 2008/07/10 23:35:15 taca Exp $
 
 Suggested new packages
 ======================
@@ -654,6 +654,7 @@ Suggested package updates
 	o gdeskcal-1.01
 	o gdsreader-0.3.2
 	o geany-0.14
+	o geeklog-1.5.0
 	o generator-cbiere-0.35r3
 	o genius-1.0.3
 	o gettext-0.17
@@ -1208,6 +1209,8 @@ Suggested package updates
 	o rudiments-0.30
 	o rxvt-unicode-9.05 [pkg/38988]
 	o sablecc-3.2
+	o samba-3.0.31
+	o samba-3.2.0
 	o sarg-2.2.5
 	o sather-1.2.3
 	o scamper-20070201
