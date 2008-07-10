@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7372 2008/07/08 01:20:55 obache Exp $
+$NetBSD: TODO,v 1.7373 2008/07/10 14:06:50 dmcmahill Exp $
 
 Suggested new packages
 ======================
@@ -8,6 +8,13 @@ Suggested new packages
 
 	any complete, polished packages in pkgsrc-wip (ditto)
 	http://pkgsrc-wip.sourceforge.net/
+
+	bacula-rescue
+	Scripts used to help create rescue boot cd's for bare metal
+	restores with bacula.  Scripts exist for linux, solaris, and
+	FreeBSD.  Hopefully the FreeBSD one could be adapted to create
+	a NetBSD one or perhaps it could be turned into a *BSD script.
+	http://www.bacula.org/
 
 	resin
 	Fast JSP server. (I will import this when we have a native
@@ -457,6 +464,7 @@ Suggested package updates
 	o baci-20040415
 	o bacula-2.2.6 [pkg/37396]
 	o bacula-2.2.8 [pkg/38572]
+	o bacula-2.4.1
 	o bacula-doc-2.0.3
 	o balance-3.42
 	o balsa-2.4.16
