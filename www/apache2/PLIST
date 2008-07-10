@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.36 2008/04/12 22:43:13 jlam Exp $
+@comment $NetBSD: PLIST,v 1.37 2008/07/10 15:18:23 joerg Exp $
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
 include/httpd/ap_config_auto.h
@@ -92,6 +92,7 @@ share/httpd/build/instdso.sh
 share/httpd/build/library.mk
 share/httpd/build/libtool
 share/httpd/build/ltlib.mk
+share/httpd/build/mkdir.sh
 share/httpd/build/program.mk
 share/httpd/build/rules.mk
 share/httpd/build/special.mk
