@@ -1,0 +1,12 @@
+$NetBSD: patch-bb,v 1.1 2008/07/10 13:09:58 joerg Exp $
+
+--- include/FrameBuffer.hh.orig	2008-07-10 13:03:29.000000000 +0000
++++ include/FrameBuffer.hh
+@@ -1,6 +1,7 @@
+ #ifndef _FrameBuffer_hh_
+ #define _FrameBuffer_hh_
+ 
++#include "FrontBuffer.hh"
+ #include "Compat.hh"
+ #include "GraphConfig.hh"
+ #include "Transparency.hh"
