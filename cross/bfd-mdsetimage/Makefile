@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/06/16 13:33:33 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2008/07/10 15:29:29 joerg Exp $
 
 DISTNAME=	bfd-mdsetimage-1.15.1
 PKGREVISION=	1
@@ -26,6 +26,8 @@ MAKE_ENV+=	BFD_VERSION=${BFD_VERSION:Q} \
 
 FIX_RPATH+=	BFD_LIBS
 BFD_LIBS=	-L${PREFIX}/lib ${COMPILER_RPATH_FLAG}${PREFIX}/lib -lbfd -liberty -lintl
+
+USE_BSD_MAKEFILE=	yes
 
 do-extract:
 	@${MKDIR} ${WRKSRC}
