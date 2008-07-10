@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1445 2008/07/10 21:05:45 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1446 2008/07/10 21:11:17 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2421,3 +2421,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/clamav to 0.93.3 [ghen 2008-07-09]
 	Updated sysutils/bacula to 2.2.4nb3 [dmcmahill 2008-07-10]
 	Updated net/bind9 to 9.4.2pl1 [adrianp 2008-07-10]
+	Updated www/drupal to 5.8 [adrianp 2008-07-10]
