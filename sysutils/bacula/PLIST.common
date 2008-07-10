@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.5 2008/01/08 16:52:20 ghen Exp $
+@comment $NetBSD: PLIST.common,v 1.6 2008/07/10 13:54:56 dmcmahill Exp $
 libexec/bacula/bacula
 libexec/bacula/bacula-ctl-dir
 libexec/bacula/bacula-ctl-fd
@@ -31,6 +31,8 @@ man/man8/dbcheck.8
 sbin/bacula-fd
 sbin/bconsole
 sbin/btraceback
+${STATIC}sbin/static-bacula-fd
+${STATIC}sbin/static-bconsole
 share/examples/bacula/bacula-fd.conf
 share/examples/bacula/bconsole.conf
 share/examples/bacula/dvd-handler

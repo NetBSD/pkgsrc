@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.10 2007/02/15 09:08:05 ghen Exp $
+# $NetBSD: options.mk,v 1.11 2008/07/10 13:54:56 dmcmahill Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.bacula
-PKG_SUPPORTED_OPTIONS=		python
+PKG_SUPPORTED_OPTIONS=		bacula-static python 
 PKG_OPTIONS_REQUIRED_GROUPS=	database
 PKG_OPTIONS_GROUP.database=	catalog-sqlite catalog-sqlite3 catalog-pgsql catalog-mysql
 PKG_SUGGESTED_OPTIONS=		catalog-sqlite
@@ -38,3 +38,15 @@ SUBST_STAGE.python=	post-configure
 SUBST_FILES.python=	scripts/dvd-handler
 SUBST_SED.python=	-e '1s,^\#!.*,\#! ${PYTHONBIN},'
 .endif
+
+.if !empty(PKG_OPTIONS:Mbacula-static)
+CONFIGURE_ARGS+=	--enable-static-cons
+CONFIGURE_ARGS+=	--enable-static-dir
+CONFIGURE_ARGS+=	--enable-static-fd
+CONFIGURE_ARGS+=	--enable-static-sd
+CONFIGURE_ARGS+=	--enable-static-tools
+PLIST_SUBST+=		STATIC=
+.else
+PLIST_SUBST+=		STATIC="@comment "
+.endif
+
