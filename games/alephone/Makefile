@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2008/04/29 08:19:36 wiz Exp $
+# $NetBSD: Makefile,v 1.6 2008/07/10 14:55:56 joerg Exp $
 #
 
 DISTNAME=	AlephOne-20071103
 PKGNAME=	${DISTNAME:tl}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	games
 MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=marathon/}
 EXTRACT_SUFX=	.tar.bz2
@@ -16,13 +16,15 @@ GNU_CONFIGURE=		yes
 USE_LANGUAGES+=		c c++
 INSTALLATION_DIRS=	share/doc/AlephOne
 
+CONFIGURE_ARGS=	--disable-speex
+
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/share/doc/AlephOne/
 
-.include "../../devel/boost-headers/buildlink3.mk"
-.include "../../devel/SDL/buildlink3.mk"
-.include "../../net/SDL_net/buildlink3.mk"
-.include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../audio/SDL_sound/buildlink3.mk"
+.include "../../devel/SDL/buildlink3.mk"
+.include "../../devel/boost-headers/buildlink3.mk"
+.include "../../graphics/SDL_image/buildlink3.mk"
+.include "../../net/SDL_net/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
