@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.7 2008/04/09 18:33:37 tron Exp $
+$NetBSD: patch-ab,v 1.8 2008/07/10 13:40:40 joerg Exp $
 
---- Makefile.orig	2007-12-18 21:45:04.000000000 +0000
-+++ Makefile	2008-03-31 17:09:28.000000000 +0100
-@@ -26,7 +26,7 @@
+--- Makefile.orig	2008-07-10 15:34:13.000000000 +0200
++++ Makefile
+@@ -26,7 +26,7 @@ ASMSRC  = common/i386/dct-a.asm common/i
            common/i386/mc-a2.asm common/i386/predict-a.asm \
            common/i386/pixel-sse2.asm common/i386/quant-a.asm \
            common/i386/deblock-a.asm
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.7 2008/04/09 18:33:37 tron Exp $
  ASFLAGS += -Icommon/i386/
  endif
  endif
-@@ -40,31 +40,31 @@
+@@ -40,7 +40,7 @@ ASMSRC  = common/amd64/dct-a.asm common/
            common/amd64/mc-a2.asm common/amd64/predict-a.asm \
            common/amd64/pixel-sse2.asm common/amd64/quant-a.asm \
            common/amd64/deblock-a.asm
@@ -20,10 +20,7 @@ $NetBSD: patch-ab,v 1.7 2008/04/09 18:33:37 tron Exp $
  ASFLAGS += -Icommon/amd64
  endif
  endif
- 
- # AltiVec optims
- ifeq ($(ARCH),PPC)
- ALTIVECSRC += common/ppc/mc.c common/ppc/pixel.c common/ppc/dct.c \
+@@ -51,20 +51,20 @@ ALTIVECSRC += common/ppc/mc.c common/ppc
                common/ppc/quant.c common/ppc/deblock.c \
                common/ppc/predict.c
  SRCS += $(ALTIVECSRC)
@@ -47,7 +44,7 @@ $NetBSD: patch-ab,v 1.7 2008/04/09 18:33:37 tron Exp $
  OBJCLI = $(SRCCLI:%.c=%.o)
  DEP  = depend
  
-@@ -73,15 +75,17 @@
+@@ -73,15 +73,17 @@ all: default
  
  default: $(DEP) x264$(EXE)
  
@@ -70,7 +67,7 @@ $NetBSD: patch-ab,v 1.7 2008/04/09 18:33:37 tron Exp $
  
  libx264gtk.a: muxers.o libx264.a
  	$(MAKE) -C gtk
-@@ -89,10 +93,10 @@
+@@ -89,10 +91,10 @@ libx264gtk.a: muxers.o libx264.a
  checkasm: tools/checkasm.o libx264.a
  	$(CC) -o $@ $+ $(LDFLAGS)
  
@@ -85,9 +82,16 @@ $NetBSD: patch-ab,v 1.7 2008/04/09 18:33:37 tron Exp $
  # delete local/anonymous symbols, so they don't show up in oprofile
  	-@ strip -x $@
  
-@@ -153,12 +157,9 @@
- 	install -d $(DESTDIR)$(bindir) $(DESTDIR)$(includedir)
- 	install -d $(DESTDIR)$(libdir) $(DESTDIR)$(libdir)/pkgconfig
+@@ -150,15 +152,14 @@ distclean: clean
+ 	$(MAKE) -C gtk distclean
+ 
+ install: x264 $(SONAME)
+-	install -d $(DESTDIR)$(bindir) $(DESTDIR)$(includedir)
+-	install -d $(DESTDIR)$(libdir) $(DESTDIR)$(libdir)/pkgconfig
++	install -d $(DESTDIR)$(bindir)
++	install -d $(DESTDIR)$(includedir)
++	install -d $(DESTDIR)$(libdir)
++	install -d $(DESTDIR)$(libdir)/pkgconfig
  	install -m 644 x264.h $(DESTDIR)$(includedir)
 -	install -m 644 libx264.a $(DESTDIR)$(libdir)
 +	${LIBTOOL} --mode=install install -m 644 libx264.la $(DESTDIR)$(libdir)
