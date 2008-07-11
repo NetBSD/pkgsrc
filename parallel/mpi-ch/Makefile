@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.55 2008/05/29 20:25:53 tnn Exp $
+# $NetBSD: Makefile,v 1.56 2008/07/11 01:57:00 obache Exp $
 
 DISTNAME=	mpich2-1.0.7
+PKGREVISION=	1
 CATEGORIES=	parallel
 MASTER_SITES=	http://www.mcs.anl.gov/research/projects/mpich2/downloads/tarballs/
 
@@ -34,12 +35,16 @@ CONF_FILES+=		share/${PKGBASE}/examples/mpe_callstack_ldflags.conf \
 			${PKG_SYSCONFDIR}/mpe_callstack_ldflags.conf
 CONF_FILES+=		share/${PKGBASE}/examples/mpe_f77env.conf \
 			${PKG_SYSCONFDIR}/mpe_f77env.conf
+CONF_FILES+=		share/${PKGBASE}/examples/mpe_graphics.conf \
+			${PKG_SYSCONFDIR}/mpe_graphics.conf
 CONF_FILES+=		share/${PKGBASE}/examples/mpe_help.conf \
 			${PKG_SYSCONFDIR}/mpe_help.conf
 CONF_FILES+=		share/${PKGBASE}/examples/mpe_log.conf \
 			${PKG_SYSCONFDIR}/mpe_log.conf
 CONF_FILES+=		share/${PKGBASE}/examples/mpe_log_postlib.conf \
 			${PKG_SYSCONFDIR}/mpe_log_postlib.conf
+CONF_FILES+=		share/${PKGBASE}/examples/mpe_mpianim.conf \
+			${PKG_SYSCONFDIR}/mpe_mpianim.conf
 CONF_FILES+=		share/${PKGBASE}/examples/mpe_mpicheck.conf \
 			${PKG_SYSCONFDIR}/mpe_mpicheck.conf
 CONF_FILES+=		share/${PKGBASE}/examples/mpe_mpilog.conf \
@@ -55,5 +60,12 @@ CONF_FILES+=		share/${PKGBASE}/examples/mpicxx.conf \
 CONF_FILES+=		share/${PKGBASE}/examples/mpif77.conf \
 			${PKG_SYSCONFDIR}/mpif77.conf
 
+SPECIAL_PERMS+=		bin/mpdroot ${SETUID_ROOT_PERMS}
+
 .include "../../lang/python/application.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.if !defined(_X11_BUILDLINK3_MK)
+CONFIGURE_ARGS+=	--x-includes=${BUILDLINK_PREFIX.libX11}/include
+CONFIGURE_ARGS+=	--x-libraries=${BUILDLINK_PREFIX.libX11}/lib
+.endif
 .include "../../mk/bsd.pkg.mk"
