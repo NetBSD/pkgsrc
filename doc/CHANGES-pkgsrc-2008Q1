@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.91 2008/07/10 13:01:01 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q1,v 1.1.2.92 2008/07/11 06:14:40 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q1 branch:
@@ -227,3 +227,5 @@ seamonkey: security update
 seamonkey-bin: security update
 Pullup ticket #2446 - requested by ghen
 clamav: security update
+Pullup ticket 2447 - requested by adrianp
+security update for bind9
