@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2007/04/15 18:56:49 cjs Exp $
+@comment $NetBSD: PLIST,v 1.20.8.1 2008/07/11 06:14:07 ghen Exp $
 bin/dig
 bin/host
 bin/isc-config.sh
@@ -77,6 +77,7 @@ include/dst/lib.h
 include/dst/result.h
 include/isc/app.h
 include/isc/assertions.h
+include/isc/atomic.h
 include/isc/base64.h
 include/isc/bitstring.h
 include/isc/boolean.h

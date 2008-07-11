@@ -1,4 +1,4 @@
-$NetBSD: patch-ai,v 1.8 2007/08/08 18:32:45 reed Exp $
+$NetBSD: patch-ai,v 1.8.6.1 2008/07/11 06:14:07 ghen Exp $
 
 --- lib/bind/configure.orig	2005-10-14 10:44:50.000000000 +0900
 +++ lib/bind/configure
@@ -51,7 +51,7 @@ $NetBSD: patch-ai,v 1.8 2007/08/08 18:32:45 reed Exp $
 +						{ echo "$as_me:$LINENO: result: native pthreads" >&5
 +echo "${ECHO_T}native pthreads" >&6; }
 +						LIBS="-lpthread $LIBS"
-+						CPPFLAGS="$CPPFLAGS -I/usr/inclue"
++						CPPFLAGS="$CPPFLAGS -I/usr/include"
 +						STD_CINDLUES="$STD_CINDLUES -I/usr/include"
 +					else
 +						{ echo "$as_me:$LINENO: result: mit-pthreads/unproven-pthreads" >&5
