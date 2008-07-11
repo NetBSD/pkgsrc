@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1447 2008/07/10 21:12:54 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1448 2008/07/11 01:57:23 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2423,3 +2423,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/bind9 to 9.4.2pl1 [adrianp 2008-07-10]
 	Updated www/drupal to 5.8 [adrianp 2008-07-10]
 	Updated www/drupal6 to 6.3 [adrianp 2008-07-10]
+	Updated parallel/mpi-ch to 1.0.7nb1 [obache 2008-07-11]
