@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.44 2008/07/10 13:54:56 dmcmahill Exp $
+# $NetBSD: Makefile.common,v 1.45 2008/07/12 17:04:12 dmcmahill Exp $
 
 DISTNAME=		bacula-2.2.4
 CATEGORIES=		sysutils
@@ -13,7 +13,7 @@ PATCHFILES=		2.2.4-lost-block.patch \
 			2.2.4-sd-auth-fail.patch \
 			2.2.4-sql.patch \
 			2.2.4-verify.patch
-DIST_SUBDIR=		${PKGNAME_NOREV}
+DIST_SUBDIR=		${DISTNAME}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.bacula.org/
