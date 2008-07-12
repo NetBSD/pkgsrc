@@ -1,3 +1,6 @@
+# $NetBSD: test-remove_dir.sh,v 1.1.2.1 2008/07/12 06:57:49 schmonz Exp $
+#
+
 atf_test_case removedir
 removedir_head() {
     atf_set 'descr' 'Checks that undesirable link/include dirs are removed'
