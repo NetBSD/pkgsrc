@@ -1,3 +1,6 @@
+# $NetBSD: test-quoted_arg.sh,v 1.1.2.2 2008/07/12 06:57:49 schmonz Exp $
+#
+
 atf_test_case quoted_arg
 quoted_arg_head() {
     atf_set 'descr' 'Checks that quoted arguments pass unmolested'
