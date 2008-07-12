@@ -1,6 +1,0 @@
-Content-Type: application/X-atf-atffile; version="1"
-
-prop: test-suite = "regress-buildlink-transform"
-
-tp: test-remove-dir
-tp: test-lib-expand

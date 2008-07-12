@@ -1,13 +1,26 @@
 # XXX snarf and atfify the tests from regress/buildlink-transform
 
-test: Atffile test-lib-expand test-remove-dir
-	atf-run
+.SUFFIXES: .sh .atf
+.sh.atf:
+	atf-compile -o ${.TARGET} ${.IMPSRC}
+
+TESTS=		include_pkgdir_slashdot lib-expand quoted_arg remove-dir
+TESTFILES=	${TESTS:S/^/test-/g:S/$/.atf/g}
+ALLFILES=	Atffile ${TESTFILES}
 
 clean:
-	rm -f test-lib-expand test-remove-dir
+	rm -f ${ALLFILES}
 
-test-lib-expand: test-lib-expand.sh
-	atf-compile -o test-lib-expand test-lib-expand.sh
+test: all
+	atf-run
 
-test-remove-dir: test-remove-dir.sh
-	atf-compile -o test-remove-dir test-remove-dir.sh
+all: ${ALLFILES}
+
+Atffile:
+	@echo 'Content-Type: application/X-atf-atffile; version="1"' > Atffile
+	@echo >> Atffile
+	@echo 'prop: test-suite = "regress-buildlink-transform"' >> Atffile
+	@echo >> Atffile
+.	for i in ${TESTFILES}
+	@echo "tp: ${i}" >> Atffile
+.	endfor
