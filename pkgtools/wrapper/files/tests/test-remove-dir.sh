@@ -5,7 +5,7 @@ removedir_head() {
 removedir_body() {
     input='-L/opt/schily/lib -I/opt/schily/include'
     echo > expout
-    atf_check "echowrapper ${input}" 0 expout ignore
+    atf_check 'echowrapper ${input}' 0 expout ignore
 }
 
 atf_init_test_cases() {
