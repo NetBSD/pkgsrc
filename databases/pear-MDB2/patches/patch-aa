@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2008/07/13 17:55:38 tonnerre Exp $
+
+--- MDB2.php.orig	2007-05-03 20:58:15.000000000 +0200
++++ MDB2.php	2008-07-13 18:44:59.000000000 +0200
+@@ -1156,6 +1156,7 @@
+         'datatype_map' => array(),
+         'datatype_map_callback' => array(),
+         'nativetype_map_callback' => array(),
++        'lob_allow_url_include' => false,
+     );
+ 
+     /**
