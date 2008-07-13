@@ -1,0 +1,5 @@
+#!/bin/sh
+#
+# Front end to securely delete a file on *BSD and Darwin
+#
+exec rm -P "$@"

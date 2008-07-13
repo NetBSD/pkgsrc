@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2008/06/12 02:14:34 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/07/13 22:34:20 smb Exp $
 #
 
-DISTNAME=	tnef_parse-0.2.3
-PKGNAME=	claws-mail-tnef-0.2.3
+DISTNAME=	tnef_parse-0.3
+PKGNAME=	claws-mail-tnef-0.3
 CATEGORIES=	mail
 MASTER_SITES=	http://claws-mail.org/downloads/plugins/
-PKGREVISION=	1
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	Handles TNEF attachments from Outlook
@@ -14,7 +13,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 #PLIST_SRC+=	PLIST
 
-DEPENDS+=	claws-mail-3.4.0{,nb[0-9]*}:../../mail/claws-mail
+DEPENDS+=	claws-mail-3.5.0{,nb[0-9]*}:../../mail/claws-mail
 
 .include "../../mk/bsd.prefs.mk"
 
