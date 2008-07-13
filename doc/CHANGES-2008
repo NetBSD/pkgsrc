@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1469 2008/07/13 20:36:51 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1470 2008/07/13 20:58:23 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2453,3 +2453,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated editors/emacs21-nox11 to 21.4anb13 [dholland 2008-07-13]
 	Updated net/openafs to 1.4.6 [tonnerre 2008-07-13]
 	Updated www/wml to 2.0.9nb3 [tonnerre 2008-07-13]
+	Updated time/wyrd to 1.4.1nb1 [tonnerre 2008-07-13]
