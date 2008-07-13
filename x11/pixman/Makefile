@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.13 2008/06/19 17:59:52 bjs Exp $
+# $NetBSD: Makefile,v 1.14 2008/07/13 23:16:02 bjs Exp $
 #
 
-DISTNAME=	pixman-0.11.4
-PKGNAME=	${DISTNAME:C/pl[0-9]*//}
+DISTNAME=	pixman-0.11.6
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
+
 
 MAINTAINER=	bjs@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
@@ -27,8 +27,8 @@ PKGCONFIG_OVERRIDE+=	pixman-1.pc.in
 ###	I have verified the list of visible symbols is unchanged from
 ###	the "factory" build.
 ###
+MAKE_ENV+=	PIXMAN_SYMFILE=${PIXMAN_SYMFILE:Q}
 PIXMAN_SYMFILE=	${WRKDIR}/pixman.sym
-MAKE_ENV+=		PIXMAN_SYMFILE=${PIXMAN_SYMFILE:Q}
 
 post-extract:
 	${CP} ${FILESDIR}/pixman.sym ${WRKDIR}
