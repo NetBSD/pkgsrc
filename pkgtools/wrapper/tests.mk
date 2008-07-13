@@ -1,4 +1,4 @@
-# $NetBSD: tests.mk,v 1.1.2.2 2008/07/13 17:55:13 schmonz Exp $
+# $NetBSD: tests.mk,v 1.1.2.3 2008/07/13 20:46:18 schmonz Exp $
 #
 
 TEST_TARGET=	test
@@ -19,13 +19,11 @@ MAKE_ENV+=	BUILDLINK_DIR=${BUILDLINK_DIR:Q}
 MAKE_ENV+=	_USE_RPATH=${_USE_RPATH:Q}
 MAKE_ENV+=	WRAPPER_DEBUG=yes
 
-# Record transforms to be tested below. Then create corresponding ATF tests
-# in files/tests.
+# The default transforms are already available to automated tests. To
+# expose additional transforms to ATF, list them below:
 
-# Remove /opt/schily.
 .if ${LOCALBASE} != "/opt/schily"
 BUILDLINK_TRANSFORM+=	rmdir:/opt/schily
 .endif
 
-# Convert "-lreadline" into "-ledit -ltermcap -lm".
 BUILDLINK_TRANSFORM+=   l:readline:edit:termcap:m
