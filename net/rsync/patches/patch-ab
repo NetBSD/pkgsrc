@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.13 2008/04/08 11:54:31 tonnerre Exp $
+$NetBSD: patch-ab,v 1.14 2008/07/13 22:18:23 tron Exp $
 
 --- Makefile.in.orig	2008-03-21 06:30:09.000000000 +0000
 +++ Makefile.in
@@ -10,11 +10,11 @@ $NetBSD: patch-ab,v 1.13 2008/04/08 11:54:31 tonnerre Exp $
 -	${INSTALLCMD} ${INSTALL_STRIP} -m 755 rsync$(EXEEXT) ${DESTDIR}${bindir}
 -	-mkdir -p ${DESTDIR}${mandir}/man1
 -	-mkdir -p ${DESTDIR}${mandir}/man5
--	if test -f $(srcdir)/rsync.1; then ${INSTALLMAN} -m 644 $(srcdir)/rsync.1 ${DESTDIR}${mandir}/man1; fi
--	if test -f $(srcdir)/rsyncd.conf.5; then ${INSTALLMAN} -m 644 $(srcdir)/rsyncd.conf.5 ${DESTDIR}${mandir}/man5; fi
+-	if test -f rsync.1; then ${INSTALLMAN} -m 644 rsync.1 ${DESTDIR}${mandir}/man1; fi
+-	if test -f rsyncd.conf.5; then ${INSTALLMAN} -m 644 rsyncd.conf.5 ${DESTDIR}${mandir}/man5; fi
 +	${BSD_INSTALL_PROGRAM} rsync$(EXEEXT) ${DESTDIR}${bindir}
-+	if test -f $(srcdir)/rsync.1; then ${BSD_INSTALL_MAN} $(srcdir)/rsync.1 ${DESTDIR}${mandir}/man1; fi
-+	if test -f $(srcdir)/rsyncd.conf.5; then ${BSD_INSTALL_MAN} $(srcdir)/rsyncd.conf.5 ${DESTDIR}${mandir}/man5; fi
++	if test -f rsync.1; then ${BSD_INSTALL_MAN} rsync.1 ${DESTDIR}${mandir}/man1; fi
++	if test -f rsyncd.conf.5; then ${BSD_INSTALL_MAN} rsyncd.conf.5 ${DESTDIR}${mandir}/man5; fi
 +	${BSD_INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/rsync
 +	${BSD_INSTALL_DATA} README tech_report.tex ${DESTDIR}${PREFIX}/share/doc/rsync
  
