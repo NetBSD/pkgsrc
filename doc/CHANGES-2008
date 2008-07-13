@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1473 2008/07/13 22:51:45 smb Exp $
+$NetBSD: CHANGES-2008,v 1.1474 2008/07/13 23:07:57 smb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2482,3 +2482,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/claws-mail-trayicon to 3.5.0 [smb 2008-07-13]
 	Updated mail/claws-mail-vcalendar to 2.0 [smb 2008-07-13]
 	Removed mail/claws-mail-pdf_viewer [smb 2008-07-13]
+	Updated chat/pidgin-facebookchat to 1.27 [smb 2008-07-03]
