@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2006/10/16 23:39:50 seb Exp $
+$NetBSD: distinfo,v 1.5 2008/07/13 22:26:13 tron Exp $
 
-SHA1 (libsmi-0.4.5.tar.gz) = e52da95ff8d5f5497f9bdd5e7205dc9c2d1f33aa
-RMD160 (libsmi-0.4.5.tar.gz) = 4ba83e0a2196a555cb54d7b651ce1d26f3c247dc
-Size (libsmi-0.4.5.tar.gz) = 3439904 bytes
+SHA1 (libsmi-0.4.8.tar.gz) = 77c512ccbdd29667d152398b0dcde533aed57b49
+RMD160 (libsmi-0.4.8.tar.gz) = 66fbe0e0128c4134cce386aaf754a48bb2d2580e
+Size (libsmi-0.4.8.tar.gz) = 4104111 bytes
 SHA1 (patch-aa) = 0daa795492391e52cce09db2334872838ea654f3
 SHA1 (patch-ab) = 2ebd512bfa4e284eaf892a5437f0bf12ad3ff36c
 SHA1 (patch-ac) = e10b25773c6df404b74a2cd28bac06cbd6183983
