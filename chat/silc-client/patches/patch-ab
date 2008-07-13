@@ -1,22 +1,44 @@
-$NetBSD: patch-ab,v 1.12 2007/05/18 21:04:25 salo Exp $
+$NetBSD: patch-ab,v 1.13 2008/07/13 12:04:11 tonnerre Exp $
 
---- apps/irssi/Makefile.in.orig	2007-03-07 19:02:19.000000000 +0000
-+++ apps/irssi/Makefile.in	2007-05-18 20:19:04.000000000 +0000
-@@ -282,7 +282,7 @@ sysconfdir = @sysconfdir@
- target_alias = @target_alias@
- @BUILD_PLUGINS_TRUE@PLUGINS = plugins
- @BUILD_SERVERTEST_TRUE@SERVERTEST = servertest
--SUBDIRS = src docs scripts
-+SUBDIRS = src docs
- 
- #
- # INCLUDE defines
-@@ -297,7 +297,7 @@ INCLUDES = $(ADD_INCLUDES) $(SILC_CFLAGS
+--- apps/irssi/Makefile.in.orig	2007-11-06 15:45:06.000000000 +0100
++++ apps/irssi/Makefile.in	2007-12-07 17:25:54.000000000 +0100
+@@ -291,7 +291,7 @@
  #confdir = $(sysconfdir)
  confdir = $(silc_etcdir)
  conffile = silc.conf
--themedir = $(datadir)/silc/themes
-+themedir = $(datadir)/silc-client/themes
- theme_DATA = default.theme
- noinst_HEADERS = irssi-version.h.in
- EXTRA_DIST = \
+-@SILCPLUGIN_FALSE@themedir = $(datadir)/silc/themes
++@SILCPLUGIN_FALSE@themedir = $(datadir)/silc-client/themes
+ @SILCPLUGIN_TRUE@themedir = $(datadir)/irssi/themes
+ @SILCPLUGIN_FALSE@theme_DATA = default.theme plugin.theme
+ @SILCPLUGIN_TRUE@theme_DATA = plugin.theme
+@@ -815,7 +815,8 @@
+ 	-mkdir -p $(mandir)/man1
+ 
+ doc-install-client:
+-	$(INSTALL_DATA) $(silc_top_srcdir)/apps/irssi/silc.conf $(docdir)/example_silc.conf
++	$(INSTALL) -d $(examplesdir)/
++	$(INSTALL_DATA) $(silc_top_srcdir)/apps/irssi/silc.conf $(examplesdir)/silc.conf.default
+ 	-@if test -f $(silc_top_srcdir)/doc/silc.1 ; then \
+ 	 $(INSTALL_DATA) $(silc_top_srcdir)/doc/silc.1 $(mandir)/man1; \
+ 	fi
+@@ -823,16 +824,16 @@
+ etc-install-client:
+ 	-@if test -d $(silc_top_srcdir)/apps/irssi ; then \
+ 	  mkdir -p $(etcdir) ; \
+-	  if test '!' -f $(etcdir)/silc.conf ; then \
++	  if test '!' -f $(examplesdir)/silc.conf.default ; then \
+ 	    $(INSTALL_DATA) $(silc_top_srcdir)/apps/irssi/silc.conf \
+-	    	$(etcdir)/silc.conf; \
++	    	$(examplesdir)/silc.conf.default; \
+ 	  fi; \
+ 	fi
+ 
+ install-data-hook: 		\
+ 	install-dirs-client	\
+-	doc-install-client	\
+-	$(ETCINSTALL)
++	doc-install-client
++
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:

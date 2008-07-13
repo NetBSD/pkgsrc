@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2005/08/06 06:19:04 jlam Exp $
+# $NetBSD: options.mk,v 1.5 2008/07/13 12:04:11 tonnerre Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.silc-client
@@ -21,6 +21,7 @@ CONFIGURE_ARGS+=	--with-perl-lib=${PREFIX}/lib/${PKGBASE}/perl5
 DEPENDS+=		p5-File-MMagic>=1.20:../../misc/p5-File-MMagic
 PLIST_SRC+=		${PKGDIR}/PLIST.perl
 PLIST_SRC+=		${WRKDIR}/PLIST.perl
+USE_TOOLS+=		perl
 .else
 CONFIGURE_ARGS+=	--with-perl=no
 .endif

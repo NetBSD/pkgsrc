@@ -1,16 +1,7 @@
-@comment $NetBSD: PLIST,v 1.22 2007/05/18 21:04:25 salo Exp $
+@comment $NetBSD: PLIST,v 1.23 2008/07/13 12:04:11 tonnerre Exp $
 bin/silc
 lib/silc-client/libsilc.la
 lib/silc-client/libsilcclient.la
-lib/silc-client/modules/aes.sim.so
-lib/silc-client/modules/blowfish.sim.so
-lib/silc-client/modules/cast.sim.so
-lib/silc-client/modules/md5.sim.so
-lib/silc-client/modules/none.sim.so
-lib/silc-client/modules/rc5.sim.so
-lib/silc-client/modules/rsa.sim.so
-lib/silc-client/modules/sha1.sim.so
-lib/silc-client/modules/twofish.sim.so
 man/man1/silc.1
 share/doc/silc-client/CHANGES
 share/doc/silc-client/COPYING
@@ -18,6 +9,7 @@ share/doc/silc-client/CREDITS
 share/doc/silc-client/FAQ
 share/doc/silc-client/INSTALL
 share/doc/silc-client/README
+share/doc/silc-client/README.PLUGIN
 share/doc/silc-client/TODO
 share/doc/silc-client/formats.txt
 share/doc/silc-client/manual.txt
@@ -85,6 +77,7 @@ share/silc-client/help/perlflush
 share/silc-client/help/ping
 share/silc-client/help/query
 share/silc-client/help/quit
+share/silc-client/help/recode
 share/silc-client/help/reconnect
 share/silc-client/help/reload
 share/silc-client/help/rmreconns
@@ -116,6 +109,7 @@ share/silc-client/help/whowas
 share/silc-client/help/window
 share/silc-client/irssi-config
 share/silc-client/themes/default.theme
+share/silc-client/themes/plugin.theme
 @dirrm share/silc-client/themes
 @dirrm share/silc-client/help
 @dirrm share/silc-client
