@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1456 2008/07/13 14:40:06 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1457 2008/07/13 14:47:58 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2436,3 +2436,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/modular-xorg-server to 1.3.0.0nb10 [tonnerre 2008-07-13]
 	Updated mail/balsa to 2.3.10nb14 [tonnerre 2008-07-13]
 	Updated devel/pwlib to 1.8.3nb8 [tonnerre 2008-07-13]
+	Updated devel/libsmi to 0.4.5nb2 [tron 2008-07-13]
