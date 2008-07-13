@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7377 2008/07/13 11:17:58 tonnerre Exp $
+$NetBSD: TODO,v 1.7378 2008/07/13 14:22:19 dholland Exp $
 
 Suggested new packages
 ======================
@@ -660,6 +660,7 @@ Suggested package updates
 	o gettext-0.17
 	o gfract-0.33
 	o ggiterm-0.7.1
+	o ghc-6.8.3
 	o ghostscript-esp-8.15.3
 	o gifsicle-1.48
 	o gimp-docs-2.4.1
@@ -898,6 +899,7 @@ Suggested package updates
 	o matchbox-panel-0.9.3
 	o mcrypt-2.6.6
 	o meld-1.2
+	o mercury-0.13.1
 	o mergeant-0.67
 	o mesure-0.7.2
 	o metakit-lib-2.4.9.6
@@ -1325,6 +1327,7 @@ Suggested package updates
 	o twelf-1.5r1
 	o twolame-0.3.12
 	o txt2html-2.51
+	o uae-0.8.28
 	o ubs-0.20
 	o ucarp-1.4
 	o ucblogo-5.5
