@@ -1,7 +1,7 @@
-$NetBSD: patch-an,v 1.1 2008/07/13 12:37:29 tonnerre Exp $
+$NetBSD: patch-an,v 1.2 2008/07/13 20:41:46 tonnerre Exp $
 
---- work/xorg-server-1.3.0.0/render/render.c.orig	2008-07-13 14:29:02.000000000 +0200
-+++ work/xorg-server-1.3.0.0/render/render.c
+--- render/render.c.orig	2008-07-13 14:29:02.000000000 +0200
++++ render/render.c
 @@ -1917,6 +1917,8 @@ static int ProcRenderCreateLinearGradien
      LEGAL_NEW_RESOURCE(stuff->pid, client);
  
