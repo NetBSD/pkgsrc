@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1475 2008/07/13 23:16:33 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1476 2008/07/13 23:18:45 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2484,3 +2484,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed mail/claws-mail-pdf_viewer [smb 2008-07-13]
 	Updated chat/pidgin-facebookchat to 1.27 [smb 2008-07-03]
 	Updated x11/pixman to 0.11.6 [bjs 2008-07-13]
+	Updated x11/libXxf86vm to 1.0.2 [bjs 2008-07-13]
