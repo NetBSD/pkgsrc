@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1461 2008/07/13 16:14:54 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1462 2008/07/13 16:27:12 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2442,3 +2442,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/bacula-doc to 2.0.2nb1 [tonnerre 2008-07-13]
 	Updated graphics/p5-RRDTool-OO to 0.22 [rhaen 2008-07-13]
 	Updated sysutils/vobcopy to 1.1.1 [tonnerre 2008-07-13]
+	Updated mail/perdition to 1.17nb8 [tonnerre 2008-07-13]
