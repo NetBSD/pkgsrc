@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7376 2008/07/12 15:15:30 obache Exp $
+$NetBSD: TODO,v 1.7377 2008/07/13 11:17:58 tonnerre Exp $
 
 Suggested new packages
 ======================
@@ -1354,6 +1354,7 @@ Suggested package updates
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.3.1
 	o webmin-1.420
+	o websvn-2.0
 	o weewm-0.01
 	o wget-1.11.4
 	o windowlab-1.34
