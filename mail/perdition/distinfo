@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2007/03/02 11:37:33 grant Exp $
+$NetBSD: distinfo,v 1.7 2008/07/13 16:26:17 tonnerre Exp $
 
 SHA1 (perdition-1.17.tar.gz) = 5e04f172db4a7ee2af5b7a28c19c231f955243fc
 RMD160 (perdition-1.17.tar.gz) = cc3c4679390132ece6858eca6483ffddead568e4
@@ -10,3 +10,4 @@ SHA1 (patch-ad) = 7b53169a8571141016fa79e1fbf55439579c4d77
 SHA1 (patch-ae) = a3a41d06a7a63d479f4c8de29b6d7ee2a745dd87
 SHA1 (patch-af) = 0fa5a853c69ff6869e3a752fc592228d6e782079
 SHA1 (patch-ag) = 350cfc64f98611455292d4d052463e6828588338
+SHA1 (patch-ah) = 6a88d3c73cc5e5b88a58b057c58fdbe182f2d0d4
