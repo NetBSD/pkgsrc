@@ -1,4 +1,4 @@
-# $NetBSD: test-no_abspath.sh,v 1.1.2.1 2008/07/13 18:47:59 schmonz Exp $
+# $NetBSD: test-no_abspath.sh,v 1.1.2.2 2008/07/13 18:54:18 schmonz Exp $
 #
 
 atf_test_case no_abspath
@@ -7,7 +7,7 @@ no_abspath_head() {
 }
 no_abspath_body() {
     input="-L/bad/path/lib -I/bad/path/include ${COMPILER_RPATH_FLAG}/bad/path/lib"
-    echo "" > expout
+    echo > expout
     atf_check 'echowrapper ${input}' 0 expout ignore
 }
 
