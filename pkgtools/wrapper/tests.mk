@@ -1,4 +1,4 @@
-# $NetBSD: tests.mk,v 1.1.2.1 2008/07/12 04:49:17 schmonz Exp $
+# $NetBSD: tests.mk,v 1.1.2.2 2008/07/13 17:55:13 schmonz Exp $
 #
 
 TEST_TARGET=	test
@@ -13,6 +13,11 @@ _WRAP_ALIASES.ECHOWRAPPER=	echowrapper
 
 post-wrapper:
 	${RM} -f ${WRAPPER_BINDIR}/${ECHOWRAPPER}
+
+# XXX should just be TEST_ENV
+MAKE_ENV+=	BUILDLINK_DIR=${BUILDLINK_DIR:Q}
+MAKE_ENV+=	_USE_RPATH=${_USE_RPATH:Q}
+MAKE_ENV+=	WRAPPER_DEBUG=yes
 
 # Record transforms to be tested below. Then create corresponding ATF tests
 # in files/tests.
