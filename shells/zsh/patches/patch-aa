@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.7 2008/07/13 18:22:01 tonnerre Exp $
+
+--- Util/difflog.pl.orig	2002-04-18 16:35:17.000000000 +0200
++++ Util/difflog.pl
+@@ -2,10 +2,13 @@
+ 
+ use strict;
+ use IO::File;
++use File::Temp;
+ 
+ my @differ = qw(diff -bw);
+-my $oldtmp = "/tmp/difflog$$.old";
+-my $newtmp = "/tmp/difflog$$.new";
++my $oldf = new File::Temp(TEMPLATE => 'difflogXXXXX', DIR => '/tmp/', SUFFIX => '.old');
++my $newf = new File::Temp(TEMPLATE => 'difflogXXXXX', DIR => '/tmp/', SUFFIX => '.new');
++my $oldtmp = $oldf->filename;
++my $newtmp = $newf->filename;
+ 
+ my $newfn = pop(@ARGV);
+ my $oldfn = pop(@ARGV);
