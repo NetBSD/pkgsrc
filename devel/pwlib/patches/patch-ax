@@ -1,0 +1,13 @@
+$NetBSD: patch-ax,v 1.1 2008/07/13 14:38:41 tonnerre Exp $
+
+--- ptlib/common/contain.cxx.orig	2004-10-21 15:04:21.000000000 +0200
++++ ptlib/common/contain.cxx
+@@ -2454,7 +2454,7 @@ PString & PString::vsprintf(const char *
+   PAssert(SetSize(2000), POutOfMemory);
+   ::vsprintf(theArray+len, fmt, arg);
+ #else
+-  PINDEX size = 0;
++  PINDEX size = len;
+   do {
+     size += 1000;
+     PAssert(SetSize(size), POutOfMemory);
