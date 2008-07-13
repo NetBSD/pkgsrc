@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.26 2008/07/10 13:54:56 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.27 2008/07/13 15:26:36 tonnerre Exp $
 
-PKGREVISION=		3
+PKGREVISION=		4
 
 CONFLICTS+=		bacula-client-[0-9]* bacula-clientonly-[0-9]*
 
