@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1452 2008/07/13 11:16:20 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1453 2008/07/13 12:04:58 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2432,3 +2432,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/wireshark to 1.0.2 [tron 2008-07-11]
 	Updated net/net6 to 1.3.7 [obache 2008-07-12]
 	Updated www/websvn to 1.61nb8 [tonnerre 2008-07-13]
+	Updated chat/silc-client to 1.1.4 [tonnerre 2008-07-13]
