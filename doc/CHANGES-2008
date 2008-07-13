@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1464 2008/07/13 17:58:06 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1465 2008/07/13 18:06:47 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2447,3 +2447,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/pear-MDB2 to 2.4.1nb1 [tonnerre 2008-07-13]
 	Updated databases/pear-MDB2_Driver_pgsql to 1.4.1nb1 [tonnerre 2008-07-13]
 	Updated databases/pear-MDB2_Driver_mysql to 1.4.1nb1 [tonnerre 2008-07-13]
+	Updated editors/emacs21 to 21.4anb13 [dholland 2008-07-13]
