@@ -54,6 +54,7 @@ darwin			Build and/or run on Darwin and Mac OS X.
 db4			Enable db4 support.
 dbh			Enable DBH support.
 debug			Enable debugging facilities in the package.
+dbus			Enable dbus (desktop bus) support.
 deliver-suid		Install deliver executable setuid root.
 djbdns-ignoreip2	Patch to treat certain responses as NXDOMAIN.
 djbdns-tinydns64	Patch to fix tinydns-data on 64-bit platforms.
@@ -260,6 +261,7 @@ quartz			Enable Quartz support on Mac OS X.
 rsaref			Use RSAREF library.
 ruby-build-ri-db	Build and install database for Ruby's ri utility.
 samplerate		Enable libsamplerate support.
+sane			Enable support for SANE scanners.
 sane-backends-hp3900	Include HP3900 driver.
 sasl			Enable SASL support.
 saslauthd		Use the Cyrus saslauthd daemon for authentication.
