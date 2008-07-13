@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.17 2008/06/20 01:09:44 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2008/07/13 11:15:27 tonnerre Exp $
 #
 
 DISTNAME=	WebSVN_161
 PKGNAME=	websvn-1.61
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	www
 MASTER_SITES=	http://websvn.tigris.org/files/documents/1380/14334/
 
@@ -42,6 +42,7 @@ post-extract:
 
 do-install:
 	${INSTALL_DATA} ${WRKSRC}/include/distconfig.inc ${DESTDIR}${EGDIR}
+	cd ${WRKSRC} && rm -f *.orig
 	cd ${WRKSRC} && pax -rwppm . ${DESTDIR}${PREFIX}/${HTTPD_ROOT}/websvn
 	${RM} ${DESTDIR}${PREFIX}/${HTTPD_ROOT}/websvn/include/distconfig.inc
 

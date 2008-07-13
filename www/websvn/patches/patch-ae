@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2008/07/13 11:15:27 tonnerre Exp $
+
+--- listing.php.orig	2004-08-30 10:49:58.000000000 +0200
++++ listing.php
+@@ -235,7 +235,7 @@ $vars["date"] = $log['date'];
+ $vars["log"] = nl2br($bugtraq->replaceIDs(create_anchors($log['message'])));
+ $vars["rev"] = $rev;
+ $vars["lastchangedrev"] = $logrev;
+-$vars["path"] = $ppath;
++$vars["path"] = htmlentities($ppath, ENT_QUOTES, 'UTF-8');
+ 
+ if (!$showchanged)
+ {
