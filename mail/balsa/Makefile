@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2008/06/12 02:14:33 joerg Exp $
+# $NetBSD: Makefile,v 1.62 2008/07/13 13:15:29 tonnerre Exp $
 
 DISTNAME=	balsa-2.3.10
-PKGREVISION=	13
+PKGREVISION=	14
 CATEGORIES=	mail gnome
 MASTER_SITES=	http://balsa.gnome.org/
 EXTRACT_SUFX=	.tar.bz2
