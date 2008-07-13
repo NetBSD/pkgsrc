@@ -239,6 +239,7 @@ otr				Enable Off-the-record encrypted messaging
 pam			Enable PAM support.
 pcb-motif		Use Motif for the gui instead of GTK for cad/pcb.
 pcre			Enable Perl-compatible regular expressions.
+perl			Enable Perl support.
 pgsql			Enable PostgreSQL support.
 pinepwd			Enable $HOME/.pinepwd stored IMAP password file.
 pinfo-native-curses	Use NetBSD native curses rather than ncurses.
