@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.52 2008/04/22 10:41:04 tnn Exp $
+$NetBSD: distinfo,v 1.53 2008/07/13 14:30:21 obache Exp $
 
 SHA1 (TeXmacs-1.0.6.14-src.tar.gz) = bab1a969be883608f5ffbaef9994d6b86c43226e
 RMD160 (TeXmacs-1.0.6.14-src.tar.gz) = 1558176e93527367907cc461fe6075d4c508e23a
@@ -12,3 +12,4 @@ SHA1 (patch-ag) = 2b1c0ce4aa0f6b824f08f05a95beacbb1722436b
 SHA1 (patch-ai) = 7b68ab900373e21d9e45c6236609824fa46574ed
 SHA1 (patch-aj) = 8f07479a6857900b535a0fd7b1f61043164baf15
 SHA1 (patch-ak) = 114cd8f2cd27d49365bec6bd9fc920a323bf0e31
+SHA1 (patch-al) = f7deed3d692af322aebe1a4068dfd3bde9e87a0a
