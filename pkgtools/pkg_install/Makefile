@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.156 2008/06/22 22:08:05 joerg Exp $
+# $NetBSD: Makefile,v 1.157 2008/07/13 14:25:05 joerg Exp $
 
 # Notes to package maintainers:
 #
@@ -174,5 +174,7 @@ update:
 	${MAKE} deinstall _UPDATE_RUNNING=YES
 	${MAKE} ${UPDATE_TARGET}
 	${MAKE} clean
+
+.include "../../archivers/libarchive/hacks.mk"
 
 .include "../../mk/bsd.pkg.mk"
