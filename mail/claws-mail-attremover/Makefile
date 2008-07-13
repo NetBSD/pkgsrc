@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/06/12 02:14:33 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2008/07/13 22:34:20 smb Exp $
 #
 
 DISTNAME=	att_remover-1.0.8
@@ -11,7 +11,7 @@ COMMENT=	Permanently deletes attachments from mail
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	claws-mail-3.4.0{,nb[0-9]*}:../../mail/claws-mail
+DEPENDS+=	claws-mail-3.5.0{,nb[0-9]*}:../../mail/claws-mail
 
 .include "../../mk/bsd.prefs.mk"
 
