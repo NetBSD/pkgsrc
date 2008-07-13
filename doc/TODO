@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7378 2008/07/13 14:22:19 dholland Exp $
+$NetBSD: TODO,v 1.7379 2008/07/13 16:05:26 rhaen Exp $
 
 Suggested new packages
 ======================
@@ -1027,7 +1027,6 @@ Suggested package updates
 	o p5-PAR-0.90
 	o p5-PV-1.5
 	o p5-Perl-Tidy-20071205
-	o p5-RRDTool-OO-0.17
 	o p5-Regexp-Common-2.122
 	o p5-SVN-Mirror-0.73
 	o p5-SWF-File-0.42
