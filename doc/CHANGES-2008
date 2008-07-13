@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1470 2008/07/13 20:58:23 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1471 2008/07/13 22:18:40 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2454,3 +2454,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/openafs to 1.4.6 [tonnerre 2008-07-13]
 	Updated www/wml to 2.0.9nb3 [tonnerre 2008-07-13]
 	Updated time/wyrd to 1.4.1nb1 [tonnerre 2008-07-13]
+	Updated net/rsync to 3.0.3 [tron 2008-07-13]
