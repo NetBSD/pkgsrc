@@ -1,0 +1,13 @@
+$NetBSD: patch-cd,v 1.1 2008/07/13 17:28:34 dholland Exp $
+
+--- lisp/loaddefs.el.orig	2008-07-13 12:31:55.000000000 -0400
++++ lisp/loaddefs.el	2008-07-13 12:32:23.000000000 -0400
+@@ -5345,6 +5345,8 @@
+ ;;;;;;  "fast-lock.el" (14139 58050))
+ ;;; Generated autoloads from fast-lock.el
+ 
++(put (quote fast-lock-cache-directories) (quote risky-local-variable) t)
++
+ (autoload (quote fast-lock-mode) "fast-lock" "\
+ Toggle Fast Lock mode.
+ With arg, turn Fast Lock mode on if and only if arg is positive and the buffer
