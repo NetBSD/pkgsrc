@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2007/10/27 09:11:10 gendalia Exp $
+# $NetBSD: Makefile,v 1.25 2008/07/13 19:10:41 tonnerre Exp $
 
-DISTNAME=	openafs-1.4.5-src
+DISTNAME=	openafs-1.4.6-src
 PKGNAME=	${DISTNAME:C/-src//}
 CATEGORIES=	net sysutils
-MASTER_SITES=	http://www.openafs.org/dl/openafs/1.4.5/
+MASTER_SITES=	http://www.openafs.org/dl/openafs/1.4.6/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	gendalia@NetBSD.org
