@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/30 21:06:04 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/13 17:55:38 tonnerre Exp $
 
 DISTNAME=	MDB2_Driver_pgsql-1.4.1
+PKGREVISION=	1
 CATEGORIES=	databases
 
 MAINTAINER=	adrianp@NetBSD.org
