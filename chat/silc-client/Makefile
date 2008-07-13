@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2007/11/12 18:17:28 heinz Exp $
+# $NetBSD: Makefile,v 1.49 2008/07/13 12:04:11 tonnerre Exp $
 #
 
 DISTNAME=		${SILC_CLIENT_DISTNAME}
@@ -13,6 +13,7 @@ MAINTAINER=		salo@NetBSD.org
 HOMEPAGE=		http://www.silcnet.org/
 COMMENT=		Client for the Secure Internet Live Conferencing (SILC) protocol
 
+.include "../../mk/bsd.prefs.mk"
 .include "../../chat/silc-client/Makefile.common"
 
 GNU_CONFIGURE=		YES
@@ -24,21 +25,19 @@ SHLIBTOOL_OVERRIDE=	# empty
 PKG_SYSCONFSUBDIR?=	${PKGBASE}
 
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
-MAKE_ENV+=		examplesdir=${EGDIR:Q}
+MAKE_ENV+=		examplesdir=${EGDIR}
 
 CONF_FILES+=		${EGDIR}/silc.conf.default ${PKG_SYSCONFDIR}/silc.conf
 
 CONFIGURE_ARGS+=	--libdir=${PREFIX}/lib/${PKGBASE}
 CONFIGURE_ARGS+=	--with-helpdir=${PREFIX}/share/${PKGBASE}/help
 CONFIGURE_ARGS+=	--with-docdir=${PREFIX}/share/doc/${PKGBASE}
-CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--with-etcdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-simdir=${PREFIX}/lib/${PKGBASE}/modules
-CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_DIR:Q}
+CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_DIR}
 CONFIGURE_ARGS+=	--with-terminfo
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--without-libtoolfix
-
-.include "../../mk/bsd.prefs.mk"
 
 # Use native curses library.
 .if (${OPSYS} == "NetBSD") || (${OPSYS} == "SunOS")
@@ -59,12 +58,12 @@ CONFIGURE_ARGS+=	--disable-asm
 .include "options.mk"
 
 PLIST_SRC+=		${PKGDIR}/PLIST
+INSTALLATION_DIRS+=	${PREFIX}/libexec/${PKGBASE}/scripts
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/apps/irssi/config.h ${SILC_CLIENT_CONFIG_H}
 	${INSTALL_DATA} ${WRKSRC}/apps/irssi/irssi-config ${SILC_CLIENT_CONFIG}
 .if !empty(PKG_OPTIONS:Mperl)
-	${INSTALL_DATA_DIR} ${PREFIX}/libexec/${PKGBASE}/scripts
 	${INSTALL_DATA} ${WRKSRC}/apps/irssi/scripts/*.pl	\
 		${PREFIX}/libexec/${PKGBASE}/scripts
 # Create PLIST fragment for Perl modules.
