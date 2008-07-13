@@ -1,4 +1,4 @@
-# $NetBSD: test-remove_option.sh,v 1.1.2.1 2008/07/13 18:47:59 schmonz Exp $
+# $NetBSD: test-remove_option.sh,v 1.1.2.2 2008/07/13 18:54:18 schmonz Exp $
 #
 
 atf_test_case remove_option
@@ -7,7 +7,7 @@ remove_option_head() {
 }
 remove_option_body() {
     input="-O2 -O5 -O9"
-    echo "" > expout
+    echo > expout
     atf_check 'echowrapper ${input}' 0 expout ignore
 }
 

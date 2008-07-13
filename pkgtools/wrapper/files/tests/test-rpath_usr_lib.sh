@@ -1,4 +1,4 @@
-# $NetBSD: test-rpath_usr_lib.sh,v 1.1.2.1 2008/07/13 18:47:59 schmonz Exp $
+# $NetBSD: test-rpath_usr_lib.sh,v 1.1.2.2 2008/07/13 18:54:18 schmonz Exp $
 #
 
 atf_test_case rpath_usr_lib
@@ -7,7 +7,7 @@ rpath_usr_lib_head() {
 }
 rpath_usr_lib_body() {
     input="${COMPILER_RPATH_FLAG}/usr/lib"
-    echo "" > expout
+    echo > expout
     atf_check 'echowrapper ${input}' 0 expout ignore
 }
 
