@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/05/30 12:29:00 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2008/07/14 12:56:18 joerg Exp $
 #
 
 DISTNAME=	lablgtk-2.10.1
@@ -9,6 +9,8 @@ MASTER_SITES=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/dist/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://wwwfun.kurims.kyoto-u.ac.jp/soft/olabl/lablgtk.html
 COMMENT=	GTK+ 2.x bindings for Objective Caml
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config

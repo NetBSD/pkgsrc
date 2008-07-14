@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2008/01/22 02:00:42 gdt Exp $
+# $NetBSD: Makefile,v 1.27 2008/07/14 12:56:02 joerg Exp $
 #
 
 DISTNAME=	lwp-2.4
@@ -9,6 +9,8 @@ MAINTAINER=	phil@cs.wwu.edu
 # also gdt@NetBDS.org
 HOMEPAGE=	http://www.coda.cs.cmu.edu/
 COMMENT=	Light Weight Process style threads
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/05/15 18:39:36 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2008/07/14 12:55:58 joerg Exp $
 #
 
 DISTNAME=	bezier-0.0.3
@@ -9,6 +9,8 @@ MASTER_SITES=	http://yossman.net/~kuroyi/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	OpenGL XMMS plugin
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c c++

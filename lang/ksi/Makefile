@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/04/05 06:27:41 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2008/07/14 12:56:07 joerg Exp $
 
 DISTNAME=		ksi-3.4.1
 PKGREVISION=		4
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ksi/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://ksi.sourceforge.net/
 COMMENT=		Portable, embeddable Scheme implementation written in C
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CPPFLAGS+=		-Dunix
 GNU_CONFIGURE=		yes

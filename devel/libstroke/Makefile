@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2007/01/20 13:26:12 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2008/07/14 12:56:02 joerg Exp $
 #
 
 DISTNAME=		libstroke-0.5.1
@@ -11,6 +11,7 @@ HOMEPAGE=		http://www.etla.net/libstroke/
 COMMENT=		Stroke translation library
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

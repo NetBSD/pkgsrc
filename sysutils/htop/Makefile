@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/06/03 12:53:59 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2008/07/14 12:56:12 joerg Exp $
 #
 
 DISTNAME=	htop-0.6.6
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=htop/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://htop.sourceforge.net/
 COMMENT=	Enhanced version of top utility
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_NCURSES=	yes # uses ncurses mouse definitions
