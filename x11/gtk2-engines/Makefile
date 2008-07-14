@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.53 2008/05/29 11:36:10 drochner Exp $
+# $NetBSD: Makefile,v 1.54 2008/07/14 12:56:15 joerg Exp $
 
 DISTNAME=		gtk-engines-2.14.2
 PKGNAME=		${DISTNAME:S/gtk/gtk2/}
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/
 COMMENT=		Theme engines for GTK+ version 2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		gtk-engines-[0-9]*
 CONFLICTS+=		gtk2-engines-clearlooks-[0-9]*

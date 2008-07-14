@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.61 2008/04/16 05:42:46 obache Exp $
+# $NetBSD: Makefile,v 1.62 2008/07/14 12:56:19 joerg Exp $
 #
 
 DISTNAME=	xforms-1.0
@@ -9,6 +9,8 @@ MASTER_SITES=	http://download.savannah.nongnu.org/releases/xforms/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://savannah.nongnu.org/projects/xforms
 COMMENT=	Graphical user interface toolkit for X Window System
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	YES
 

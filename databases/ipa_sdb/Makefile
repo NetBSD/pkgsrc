@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/01/22 13:10:41 obache Exp $
+# $NetBSD: Makefile,v 1.3 2008/07/14 12:56:00 joerg Exp $
 
 DISTNAME=	ipa_sdb-1.0.1
 PKGREVISION=	1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	simon@comsys.ntu-kpi.kiev.ua
 HOMEPAGE=	http://ipa-system.sourceforge.net/modules/ipa_sdb/
 COMMENT=	IPA simple database module
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LANGUAGES=	c

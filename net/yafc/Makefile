@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/02/22 19:27:01 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/07/14 12:56:11 joerg Exp $
 
 DISTNAME=	yafc-0.7.10
 PKGREVISION=	2
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://yafc.sourceforge.net/
 COMMENT=	Yet another FTP client
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_GNU_READLINE=	yes

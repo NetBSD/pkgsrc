@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/04/05 21:43:34 xtraeme Exp $
+# $NetBSD: Makefile,v 1.3 2008/07/14 12:56:03 joerg Exp $
 #
 
 DISTNAME=		lyx-1.5.4
@@ -16,6 +16,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		reed@reedmedia.net
 HOMEPAGE=		http://www.lyx.org/
 COMMENT=		Document processor and graphical frontend for LaTeX
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		lyx-qt-[0-9]*
 CONFLICTS+=		lyx-xforms-[0-9]*

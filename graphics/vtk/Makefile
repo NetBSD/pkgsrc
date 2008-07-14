@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.10 2007/06/18 17:58:35 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/07/14 12:56:05 joerg Exp $
 #
 
 PKGNAME=	vtk-${VTKDIST_VERSION}
 PKGREVISION=	5
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 COMMENT=	Visualization toolkit
 

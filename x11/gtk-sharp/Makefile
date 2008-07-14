@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/04/27 09:15:32 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/14 12:56:15 joerg Exp $
 #
 
 DISTNAME=		gtk-sharp-2.12.1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.mono-project.com/GtkSharp
 COMMENT=		C\# bindings for GTK
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes

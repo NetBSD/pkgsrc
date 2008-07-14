@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/04/30 13:38:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.6 2008/07/14 12:56:02 joerg Exp $
 #
 
 DISTNAME=	libsexy-0.1.11
@@ -8,6 +8,8 @@ MASTER_SITES=	http://releases.chipx86.com/libsexy/libsexy/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.chipx86.com/wiki/Libsexy
 COMMENT=	Collection of GTK+ widgets that beautify standard widgets
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/12/09 13:57:29 obache Exp $
+# $NetBSD: Makefile,v 1.16 2008/07/14 12:56:02 joerg Exp $
 #
 
 DISTNAME=		libntlm-0.3.12
@@ -8,6 +8,8 @@ MASTER_SITES=		http://josefsson.org/libntlm/releases/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://josefsson.org/libntlm/
 COMMENT=		Library that implement Microsoft's NTLM authentication
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes

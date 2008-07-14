@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/06/19 15:04:55 taca Exp $
+# $NetBSD: Makefile,v 1.14 2008/07/14 12:56:14 joerg Exp $
 
 DISTNAME=	htmlsplit102
 PKGNAME=	${RUBY_PKGPREFIX}-htmlsplit-1.0.2
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.zip
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.moonwolf.com/ruby/htmlsplit.html
 COMMENT=	Ruby HTML split/join library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 NO_CONFIGURE=	yes

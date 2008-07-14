@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/03/04 21:30:34 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2008/07/14 12:56:11 joerg Exp $
 #
 
 DISTNAME=	gtk-systrace-2002-12-01
@@ -10,6 +10,8 @@ MASTER_SITES=	http://www.citi.umich.edu/u/provos/systrace/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.citi.umich.edu/u/provos/systrace/index.html
 COMMENT=	GTK interface to systrace(1)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 ONLY_FOR_PLATFORM=	NetBSD-1.6[H-Z]*-* NetBSD-[2-9]*-*
 

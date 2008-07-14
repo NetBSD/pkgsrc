@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:20 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2008/07/14 12:56:04 joerg Exp $
 #
 
 DISTNAME=	glchess-0.4.7
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=glchess/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://glchess.sourceforge.net/
 COMMENT=	3D chess interface
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	automake
 GNU_CONFIGURE=	YES

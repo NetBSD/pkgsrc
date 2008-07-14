@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2008/01/18 05:08:39 tnn Exp $
+# $NetBSD: Makefile,v 1.39 2008/07/14 12:56:09 joerg Exp $
 #
 
 DISTNAME=		xine-ui-0.99.5
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xine/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xinehq.de/
 COMMENT=		Skinned xlib-based xine GUI
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		msgfmt pkg-config
