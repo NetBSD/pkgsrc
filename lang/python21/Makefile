@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2008/07/11 13:17:39 obache Exp $
+# $NetBSD: Makefile,v 1.37 2008/07/14 14:42:51 joerg Exp $
 #
 
 DISTNAME=	Python-2.1.3
 PKGNAME=	python21-2.1.3
-PKGREVISION=	15
+PKGREVISION=	16
 CATEGORIES=	lang python
 MASTER_SITES=	http://www.python.org/ftp/python/2.1.3/
 EXTRACT_SUFX=	.tgz
@@ -77,6 +77,10 @@ PLIST_SUBST+=	PY_VER_SUFFIX=${PY_VER_SUFFIX:Q}
 post-extract:
 	${MV} ${WRKSRC}/Tools/scripts/pydoc ${WRKSRC}/Tools/scripts/pydoc${PY_VER_SUFFIX}
 
+USE_GNU_READLINE=	# defined
+BUILDLINK_DEPMETHOD.readline=		build
+
+.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

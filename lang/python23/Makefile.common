@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.38 2008/04/12 22:43:02 jlam Exp $
+# $NetBSD: Makefile.common,v 1.39 2008/07/14 14:42:51 joerg Exp $
 #
 
 DISTNAME=	Python-2.3.5
@@ -114,8 +114,12 @@ INSTALL_TARGET=	altinstall
 post-extract:
 	${MV} ${WRKSRC}/Tools/scripts/pydoc ${WRKSRC}/Tools/scripts/pydoc${PY_VER_SUFFIX}
 
+USE_GNU_READLINE=	# defined
+BUILDLINK_DEPMETHOD.readline=		build
+
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
