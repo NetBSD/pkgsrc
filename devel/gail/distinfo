@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.28 2008/04/10 16:22:52 drochner Exp $
+$NetBSD: distinfo,v 1.29 2008/07/14 17:06:36 drochner Exp $
 
-SHA1 (gail-1.22.1.tar.bz2) = d400bc79b0a54a1aa7b87ab0f1f4f2e48b5582cd
-RMD160 (gail-1.22.1.tar.bz2) = e3ade3b2472bd4aeaed08597b53bb066982cc948
-Size (gail-1.22.1.tar.bz2) = 674711 bytes
+SHA1 (gail-1.22.3.tar.bz2) = 275fac22693b02eb9c4c46c8d45e8259c4799bce
+RMD160 (gail-1.22.3.tar.bz2) = 7d3acf7b13e79c8941cdecdeadb99deb15339cd3
+Size (gail-1.22.3.tar.bz2) = 674611 bytes
 SHA1 (patch-aa) = 85e1fd98485e51c6f8871744fd5ba88598f00994
