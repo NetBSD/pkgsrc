@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1495 2008/07/14 19:14:36 he Exp $
+$NetBSD: CHANGES-2008,v 1.1496 2008/07/14 23:02:47 christos Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2529,3 +2529,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/p5-Net-LDAP-Server to 0.4 [he 2008-07-14]
 	Updated databases/p5-SQL-Abstract to 1.24 [he 2008-07-14]
 	Updated databases/p5-DBI to 1.605 [he 2008-07-14]
+	Updated x11/openmotif to 2.3.1 [christos 2008-07-14]
