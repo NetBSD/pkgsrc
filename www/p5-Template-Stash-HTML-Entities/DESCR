@@ -1,0 +1,2 @@
+This module is a sub class of Template::Stash, automatically escape
+all HTML strings using HTML::Entities to avoid XSS vulnerability.
