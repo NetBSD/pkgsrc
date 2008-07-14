@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2008/07/14 18:13:16 he Exp $
+
+--- Interface.xs.orig	2008-06-06 17:51:42.000000000 +0200
++++ Interface.xs
+@@ -511,6 +511,9 @@ if_netmask(sock, name, ...)
+ 	  operation = SIOCGIFNETMASK;
+      }
+      if (!Ioctl(sock,operation,&ifr)) XSRETURN_UNDEF;
++#ifdef __NetBSD__
++     ifr.ifr_addr.sa_family = AF_INET;
++#endif
+      if (ifr.ifr_addr.sa_family != AF_INET) croak ("Address is not in the AF_INET family.\n");
+      RETVAL = inet_ntoa(((struct sockaddr_in*) &ifr.ifr_addr)->sin_addr);
+ #endif
