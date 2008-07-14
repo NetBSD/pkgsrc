@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1483 2008/07/14 04:23:20 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.1484 2008/07/14 08:59:58 agc Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2455,6 +2455,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/wml to 2.0.9nb3 [tonnerre 2008-07-13]
 	Updated time/wyrd to 1.4.1nb1 [tonnerre 2008-07-13]
 	Updated net/rsync to 3.0.3 [tron 2008-07-13]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2008Q2 branch [agc 2008-07-13]
 	Updated devel/libsmi to 0.4.8 [tron 2008-07-13]
 	Updated mail/clawsker to 0.5.0 [smb 2008-07-13]
 	Updated mail/claws-mail to 3.5.0 [smb 2008-07-13]
