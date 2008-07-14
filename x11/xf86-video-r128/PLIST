@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/14 04:03:01 tnn Exp $
+lib/xorg/modules/drivers/r128_drv.la
+man/man4/r128.4
+@comment @dirrm lib/xorg/modules/drivers
+@comment @dirrm lib/xorg/modules
+@comment @dirrm lib/xorg
