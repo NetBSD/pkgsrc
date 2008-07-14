@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.2.4 2008/07/13 18:50:21 schmonz Exp $
+# $NetBSD: Makefile,v 1.1.2.5 2008/07/14 05:22:18 schmonz Exp $
 #
 
 .SUFFIXES: .sh .atf
@@ -9,11 +9,13 @@ TESTS!=		echo test-*.sh
 TESTFILES=	${TESTS:S/.sh$/.atf/g}
 ALLFILES=	Atffile ${TESTFILES}
 
+ATF_REPORT?=	atf-report
+
 clean:
 	rm -f ${ALLFILES}
 
 test: all
-	atf-run
+	atf-run | ${ATF_REPORT}
 
 all: ${ALLFILES}
 
