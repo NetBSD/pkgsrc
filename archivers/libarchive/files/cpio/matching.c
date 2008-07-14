@@ -24,7 +24,7 @@
  */
 
 #include "cpio_platform.h"
-__FBSDID("$FreeBSD$");
+__FBSDID("$FreeBSD: src/usr.bin/cpio/matching.c,v 1.2 2008/06/21 02:20:20 kientzle Exp $");
 
 #ifdef HAVE_ERRNO_H
 #include <errno.h>
@@ -107,7 +107,16 @@ include(struct cpio *cpio, const char *pattern)
 int
 include_from_file(struct cpio *cpio, const char *pathname)
 {
-	return (process_lines(cpio, pathname, &include));
+	struct line_reader *lr;
+	const char *p;
+	int ret = 0;
+
+	lr = process_lines_init(pathname, '\n');
+	while ((p = process_lines_next(lr)) != NULL)
+		if (include(cpio, p) != 0)
+			ret = -1;
+	process_lines_free(lr);
+	return (ret);
 }
 
 static void
