@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/01/19 09:16:20 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2008/07/14 12:56:03 joerg Exp $
 
 DISTNAME=		xquote-2.6.10
 PKGREVISION=		2
@@ -8,6 +8,8 @@ MASTER_SITES=		http://xinvest.sunsite.dk/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xinvest.sunsite.dk/xquote.html
 COMMENT=		WWW ticker symbol quote retrieval program
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=		YES
 NO_INSTALL_MANPAGES=	YES

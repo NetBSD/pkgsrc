@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/01/08 17:00:58 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/07/14 12:56:07 joerg Exp $
 
 DISTNAME=	kasumi-1.0.1
 CATEGORIES=	inputmethod japanese
@@ -7,6 +7,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=kasumi/20685/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://kasumi.sourceforge.jp/
 COMMENT=	Dictionary management tool for anthy
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 USE_X11=	yes

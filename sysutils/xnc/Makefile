@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/02/19 20:34:00 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2008/07/14 12:56:13 joerg Exp $
 
 DISTNAME=	xnc-5.0.4.src
 PKGNAME=	xnc-5.0.4
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.xnc.dubna.su/src-5/
 MAINTAINER=	jschauma@NetBSD.org
 HOMEPAGE=	http://xnc.dubna.su/
 COMMENT=	File manager for X Window
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${PKGNAME_NOREV}
 USE_DIRS+=	xdg-1.1

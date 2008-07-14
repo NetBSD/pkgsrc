@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/01/11 15:31:19 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2008/07/14 12:56:20 joerg Exp $
 #
 
 DISTNAME=	xtermset-0.5.2
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=clts/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# none
 COMMENT=	Change things like foreground color, size etc. on an xterm
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

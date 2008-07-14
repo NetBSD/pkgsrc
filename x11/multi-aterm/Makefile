@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/22 19:01:27 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2008/07/14 12:56:19 joerg Exp $
 #
 
 # materm is now mrxvt
@@ -8,6 +8,8 @@ CATEGORIES=	x11
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Multi-terminal for the X Window System based on aterm
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/05/03 19:58:43 tonnerre Exp $
+# $NetBSD: Makefile,v 1.26 2008/07/14 12:56:14 joerg Exp $
 #
 
 DISTNAME=	kazehakase-0.5.4
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=kazehakase/30219/}
 MAINTAINER=	tonnerre@NetBSD.org
 HOMEPAGE=	http://kazehakase.sourceforge.jp/
 COMMENT=	Web browser with multiple layout engines support
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.2

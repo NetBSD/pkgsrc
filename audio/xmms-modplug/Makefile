@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/04/12 22:42:58 jlam Exp $
+# $NetBSD: Makefile,v 1.17 2008/07/14 12:55:59 joerg Exp $
 #
 
 DISTNAME=		modplugxmms-2.05
@@ -10,6 +10,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=modplug-xmms/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://modplug-xmms.sourceforge.net/
 COMMENT=		XMMS plugin based on modplug
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
 

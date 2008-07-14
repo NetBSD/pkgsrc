@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2007/09/04 20:20:58 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/07/14 12:56:06 joerg Exp $
 
 PKGNAME=	gnuradio-audio-oss-${VERSION}
 COMMENT=	Open Sound System support for GNU Radio
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/gnuradio/Makefile.common"
 

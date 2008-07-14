@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2008/04/23 21:37:15 wiz Exp $
+# $NetBSD: Makefile,v 1.49 2008/07/14 12:56:00 joerg Exp $
 
 DISTNAME=	naim-0.11.8.3.1
 CATEGORIES=	chat
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://naim.n.ml.org/about
 COMMENT=	Ncurses-based AIM, ICQ, IRC, and Lily client
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 MAKE_JOBS_SAFE=		no

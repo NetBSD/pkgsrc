@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2008/04/15 17:53:51 drochner Exp $
+# $NetBSD: Makefile,v 1.77 2008/07/14 12:56:14 joerg Exp $
 #
 
 DISTNAME=	metacity-2.22.0
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/softwaremap/projects/Metacity/
 COMMENT=	GNOME-compliant window manager
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS+=		gnome2-1.5 theme-1.0 xdg-1.4
 USE_PKGLOCALEDIR=	YES

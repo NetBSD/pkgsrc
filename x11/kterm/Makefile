@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2008/05/11 07:18:58 obache Exp $
+# $NetBSD: Makefile,v 1.42 2008/07/14 12:56:18 joerg Exp $
 
 DISTNAME=	kterm-6.2.0
 PKGREVISION=	10
@@ -13,6 +13,8 @@ PATCH_DIST_STRIP= -p1
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	# none
 COMMENT=	Multi-lingual terminal emulator for X
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	YES
 

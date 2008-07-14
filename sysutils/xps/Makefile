@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2007/01/11 11:07:16 joerg Exp $
+# $NetBSD: Makefile,v 1.36 2008/07/14 12:56:13 joerg Exp $
 
 DISTNAME=	xps-4.2
 PKGREVISION=	2
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=motif-pstree/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://motif-pstree.sourceforge.net/
 COMMENT=	Displays the Unix process list as a hierarchical tree
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake perl
 GNU_CONFIGURE=		yes

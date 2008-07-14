@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/09/03 00:56:28 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/07/14 12:55:59 joerg Exp $
 #
 
 DISTNAME=	xmms-sid-0.7.4
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.tnsp.org/xs-files/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.tnsp.org/
 COMMENT=	XMMS plugin for SID (Commodore 64) music
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_LANGUAGES=		c c++

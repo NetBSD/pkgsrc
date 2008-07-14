@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.23 2007/10/25 22:00:44 jlam Exp $
+# $NetBSD: Makefile,v 1.24 2008/07/14 12:56:04 joerg Exp $
 
 # Needed so configure/patch rules don't get pulled in
 NO_BUILD=	yes
 NO_CONFIGURE=	yes
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../games/nethack-lib/Makefile.common"
 

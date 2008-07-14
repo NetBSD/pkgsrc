@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2008/03/02 12:33:09 drochner Exp $
+# $NetBSD: Makefile,v 1.36 2008/07/14 12:56:05 joerg Exp $
 
 DISTNAME=	kipi-plugins-0.1.4
 PKGREVISION=	7
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.kipi-plugins.org/drupal/
 COMMENT=	Kipi (KDE Image Plugin Interface) plugins
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake perl pkg-config msgfmt bash:run
 USE_LANGUAGES=		c c++

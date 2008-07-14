@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/11/12 01:44:57 rillig Exp $
+# $NetBSD: Makefile,v 1.24 2008/07/14 12:56:13 joerg Exp $
 
 DISTNAME=	kdoc-2.0a54
 PKGNAME=	kdoc-3.0
@@ -8,6 +8,8 @@ CATEGORIES=	textproc kde
 MASTER_SITES=	${MASTER_SITE_KDE:=3.0/src/}
 MAINTAINER=	wulf@NetBSD.org
 COMMENT=	C++ and IDL Class Documentation Tool
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		perl:run
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/06/20 01:09:25 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2008/07/14 12:56:08 joerg Exp $
 #
 
 DISTNAME=	gkrellflynn-0.8
@@ -10,6 +10,8 @@ MASTER_SITES=	http://horus.comlab.uni-rostock.de/flynn/
 MAINTAINER=	cube@NetBSD.org
 HOMEPAGE=	http://horus.comlab.uni-rostock.de/flynn/
 COMMENT=	GKrellM2 plugin that shows system load with a DooM marine
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	gmake pkg-config
 BUILD_TARGET=	gkrellm2

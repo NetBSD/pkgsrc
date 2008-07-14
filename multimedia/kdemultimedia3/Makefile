@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.68 2008/02/20 10:03:47 markd Exp $
+# $NetBSD: Makefile,v 1.69 2008/07/14 12:56:09 joerg Exp $
 
 DISTNAME=	kdemultimedia-${_KDE_VERSION}
 CATEGORIES=	multimedia
 COMMENT=	Multimedia tools for the KDE integrated X11 desktop
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 

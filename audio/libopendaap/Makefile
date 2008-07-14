@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/07/07 15:49:30 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2008/07/14 12:55:57 joerg Exp $
 
 DISTNAME=	libopendaap-0.4.0
 CATEGORIES=	audio
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://craz.net/programs/itunes/libopendaap.html
 COMMENT=	DAAP client library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

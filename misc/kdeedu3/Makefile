@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.49 2008/02/20 10:11:28 markd Exp $
+# $NetBSD: Makefile,v 1.50 2008/07/14 12:56:08 joerg Exp $
 
 DISTNAME=	kdeedu-${_KDE_VERSION}
 CATEGORIES=	misc
 COMMENT=	Edu{tainment,cation} tools for the KDE integrated X11 desktop
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.76 2008/03/06 14:53:51 wiz Exp $
+# $NetBSD: Makefile,v 1.77 2008/07/14 12:56:06 joerg Exp $
 
 DISTNAME=	xsane-0.994
 PKGNAME=	xsane-0.99.4
@@ -14,6 +14,8 @@ MASTER_SITES=	http://www.xsane.org/download/ \
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.xsane.org/
 COMMENT=	New improved frontend for SANE
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake msgfmt pkg-config
 USE_PKGLOCALEDIR=	YES

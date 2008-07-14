@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/03/04 11:02:25 rillig Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/14 12:56:11 joerg Exp $
 #
 
 DISTNAME=	gtklp-1.2.3
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.src.tar.gz
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gtklp.sourceforge.net/
 COMMENT=	CUPS frontend using GTK
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

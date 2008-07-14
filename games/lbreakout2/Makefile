@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2006/06/21 16:00:57 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2008/07/14 12:56:04 joerg Exp $
 
 DISTNAME=	lbreakout2-2.5.2
 PKGREVISION=	6
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lgames/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lgames.sourceforge.net/
 COMMENT=	Breakout-style arcade game
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}/games

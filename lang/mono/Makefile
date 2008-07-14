@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.67 2008/05/30 11:07:22 tnn Exp $
+# $NetBSD: Makefile,v 1.68 2008/07/14 12:56:07 joerg Exp $
 
 DISTNAME=	mono-${MONO_VERSION}
 PKGREVISION=	1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	kefren@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/
 COMMENT=	Open source implementation of the .NET Development Framework
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/10/25 22:00:39 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2008/07/14 12:55:57 joerg Exp $
 #
 
 DISTNAME=	mad-0.15.0b
@@ -10,6 +10,8 @@ DISTFILES=	# empty
 MAINTAINER=	simonb@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/mad/
 COMMENT=	Meta-package for MAD (MPEG Audio Decoder)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	libmad>=0.15.0:../../audio/libmad
 DEPENDS+=	libid3tag>=0.15.0:../../audio/libid3tag

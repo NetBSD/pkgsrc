@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/07/03 23:32:37 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/07/14 12:55:57 joerg Exp $
 #
 
 DISTNAME=		libvisual-xmms-0.2.0
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libvisual/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://localhost.nl/~synap/libvisual/
 COMMENT=		XMMS plugin for libvisual
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2007/10/09 20:13:40 hubertf Exp $
+# $NetBSD: Makefile,v 1.33 2008/07/14 12:55:57 joerg Exp $
 #
 
 DISTNAME=	madplay-0.15.2b
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mad/}
 MAINTAINER=	simonb@NetBSD.org
 HOMEPAGE=	http://sourceforge.net/projects/mad/
 COMMENT=	High-quality MPEG audio decoder
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	YES
 GNU_CONFIGURE=		YES

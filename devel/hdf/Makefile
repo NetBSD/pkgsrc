@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2007/11/18 10:39:56 wiz Exp $
+# $NetBSD: Makefile,v 1.30 2008/07/14 12:56:01 joerg Exp $
 
 DISTNAME=	HDF4.2r1
 PKGNAME=	hdf-4.2r1
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.hdfgroup.org/HDF/prev-releases/HDF4.2r1/src/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hdf.ncsa.uiuc.edu/hdf4.html
 COMMENT=	NCSA Hierarchical Data Format
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		lex gmake yacc
 USE_LANGUAGES=		c fortran

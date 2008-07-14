@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/25 15:49:30 kefren Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/14 12:56:12 joerg Exp $
 
 DISTNAME=	ndesk-dbus-glib-0.4.1
 CATEGORIES=	sysutils
@@ -7,6 +7,8 @@ MASTER_SITES=	http://www.ndesk.org/archive/ndesk-dbus/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ndesk.org/DBusSharp
 COMMENT=	C\# implementation of dbus - GLib integration
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake

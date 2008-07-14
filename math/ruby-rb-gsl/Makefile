@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/20 15:34:33 minskim Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/14 12:56:08 joerg Exp $
 
 DISTNAME=	rb-gsl-1.10.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -8,6 +8,8 @@ MASTER_SITES=	http://rubyforge.org/frs/download.php/28909/
 MAINTAINER=	minskim@NetBSD.org
 HOMEPAGE=	http://rb-gsl.rubyforge.org/
 COMMENT=	Ruby interface to the GNU Scientific Library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_RUBY_SETUP=	yes
 USE_TOOLS=	pax

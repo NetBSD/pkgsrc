@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2006/06/12 16:28:05 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2008/07/14 12:55:58 joerg Exp $
 #
 
 DISTNAME=	infinity-0.2
@@ -10,6 +10,8 @@ MASTER_SITES=	http://julien.carme.free.fr/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://julien.carme.free.fr/infinite.html
 COMMENT=	Psychedelic visualization plug-in for xmms
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES

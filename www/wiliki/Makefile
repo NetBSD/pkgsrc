@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2006/03/18 01:07:55 uebayasi Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/14 12:56:14 joerg Exp $
 #
 
 DISTNAME=	WiLiKi-0.5.3
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://wiliki.sourceforge.net/
 COMMENT=	WikiWiki clone written in Scheme
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	Gauche>=0.8.3nb1:../../lang/gauche
 

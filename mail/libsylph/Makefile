@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/01/18 05:08:26 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2008/07/14 12:56:07 joerg Exp $
 #
 
 DISTNAME=	libsylph-0.3.0
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://sylpheed.sraoss.jp/
 COMMENT=	E-Mail client library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

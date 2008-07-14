@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/10/04 20:44:20 wiz Exp $
+# $NetBSD: Makefile,v 1.23 2008/07/14 12:55:59 joerg Exp $
 #
 
 DISTNAME=	tv_scope-0.0.2
@@ -10,6 +10,8 @@ MASTER_SITES=	http://zinx.xmms.org/xmms/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://zinx.xmms.org/xmms/
 COMMENT=	3D Representation of a waveform
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/01/15 16:38:05 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2008/07/14 12:56:13 joerg Exp $
 #
 
 DISTNAME=	wmtime-1.0b2
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.alpha.alt.ru/pub/UNIX/X11/WMaker/ \
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Time/Date applet for WindowMaker
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/wmtime.app
 USE_IMAKE=	YES
