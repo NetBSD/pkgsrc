@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2008/07/13 14:25:04 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/07/14 14:56:50 joerg Exp $
 #
 
-DISTNAME=	bsdtar-2.5.4b
+DISTNAME=	bsdtar-2.5.5
 CATEGORIES=	archivers
 MASTER_SITES=	http://people.freebsd.org/~kientzle/libarchive/src/
 DISTFILES=	# empty
@@ -60,7 +60,5 @@ pre-configure:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/bsdtar ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/tar/bsdtar.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-
-.include "../../archivers/libarchive/hacks.mk"
 
 .include "../../mk/bsd.pkg.mk"
