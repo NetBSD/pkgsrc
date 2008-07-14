@@ -1,15 +1,17 @@
-# $NetBSD: Makefile,v 1.11 2008/05/25 21:23:26 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/07/14 07:01:01 plunky Exp $
 #
 
-DISTNAME=	obexapp-1.4.7
+DISTNAME=	obexapp-1.4.9
 CATEGORIES=	comms
 MASTER_SITES=	http://www.geocities.com/m_evmenkin/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	plunky@rya-online.net
 HOMEPAGE=	http://www.geocities.com/m_evmenkin/
 COMMENT=	Obex application to transfer objects to mobile equipment
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-[4-9].*-*
+
+BUILD_DEFS+=		VARBASE
 
 OWN_DIRS+=		${VARBASE}/spool/obex
 
