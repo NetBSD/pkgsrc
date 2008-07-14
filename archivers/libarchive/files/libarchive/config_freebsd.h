@@ -22,7 +22,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD: src/lib/libarchive/config_freebsd.h,v 1.8 2008/03/15 04:20:50 kientzle Exp $
+ * $FreeBSD: src/lib/libarchive/config_freebsd.h,v 1.10 2008/06/15 05:12:47 kientzle Exp $
  */
 
 /* FreeBSD 5.0 and later have ACL support. */
@@ -87,8 +87,6 @@
 #define	HAVE_STRING_H 1
 #define	HAVE_STRRCHR 1
 #define	HAVE_STRUCT_STAT_ST_MTIMESPEC_TV_NSEC 1
-#define	HAVE_STRUCT_STAT_ST_RDEV 1
-#define	HAVE_STRUCT_TM_TM_GMTOFF 1
 #define	HAVE_SYS_ACL_H 1
 #define	HAVE_SYS_IOCTL_H 1
 #define	HAVE_SYS_SELECT_H 1
@@ -108,6 +106,7 @@
 #define	HAVE_WCHAR_H 1
 #define	HAVE_WCSCPY 1
 #define	HAVE_WCSLEN 1
+#define	HAVE_WCTOMB 1
 #define	HAVE_WMEMCMP 1
 #define	HAVE_WMEMCPY 1
 #define	HAVE_ZLIB_H 1

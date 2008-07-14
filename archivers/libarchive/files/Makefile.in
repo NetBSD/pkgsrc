@@ -345,7 +345,6 @@ distcleancheck_listfiles = find . -type f -print
 ACLOCAL = @ACLOCAL@
 AMTAR = @AMTAR@
 AR = @AR@
-ARCHIVE_H_INCLUDE_INTTYPES_H = @ARCHIVE_H_INCLUDE_INTTYPES_H@
 ARCHIVE_LIBTOOL_VERSION = @ARCHIVE_LIBTOOL_VERSION@
 AUTOCONF = @AUTOCONF@
 AUTOHEADER = @AUTOHEADER@
@@ -674,7 +673,9 @@ libarchive_test_EXTRA_DIST = \
 	libarchive/test/test_read_format_gtar_sparse_1_17_posix01.tgz.uu \
 	libarchive/test/test_read_format_gtar_sparse_1_17_posix10.tgz.uu \
 	libarchive/test/test_read_format_gtar_sparse_1_17_posix10_modified.tar.uu \
-	libarchive/test/test_read_format_tar_empty_filename.tar.uu
+	libarchive/test/test_read_format_isorr_bz2.iso.bz2.uu		\
+	libarchive/test/test_read_format_tar_empty_filename.tar.uu	\
+	libarchive/test/test_read_format_zip.zip.uu
 
 
 #
