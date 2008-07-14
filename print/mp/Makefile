@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2007/02/22 19:27:03 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/07/14 12:56:11 joerg Exp $
 #
 
 DISTNAME=	mpdist-3.7.1
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpdist/}
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://mpdist.sourceforge.net/
 COMMENT=	PostScript pretty printer
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes

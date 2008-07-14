@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/12/27 13:37:47 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2008/07/14 12:56:20 joerg Exp $
 #
 
 DISTNAME=	xwit-3.4
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB:=utilities/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Utility for calling X11 functions from the shell
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	yes
 

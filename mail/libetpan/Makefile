@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/06/29 09:31:57 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2008/07/14 12:56:07 joerg Exp $
 #
 
 DISTNAME=		libetpan-0.52
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libetpan/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://libetpan.sourceforge.net/
 COMMENT=		Really nice mail library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

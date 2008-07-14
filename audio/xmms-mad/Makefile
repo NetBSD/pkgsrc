@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2006/08/07 23:46:23 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2008/07/14 12:55:59 joerg Exp $
 #
 
 DISTNAME=		xmms-mad-0.5.7
@@ -8,6 +8,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=xmms-mad/}
 MAINTAINER=		jmcneill@NetBSD.org
 HOMEPAGE=		http://sourceforge.net/projects/xmms-mad/
 COMMENT=		Input plugin for XMMS that uses libmad
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		pkg-config

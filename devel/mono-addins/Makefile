@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/04/27 09:21:27 wiz Exp $
+# $NetBSD: Makefile,v 1.7 2008/07/14 12:56:03 joerg Exp $
 
 DISTNAME=	mono-addins-0.3.1
 PKGREVISION=	1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	kefren@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/Mono.Addins
 COMMENT=	Framework for creating extensible applications
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	gmake pkg-config

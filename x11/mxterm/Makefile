@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/01/30 20:49:12 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/07/14 12:56:19 joerg Exp $
 
 DISTNAME=	mxterm_129
 PKGREVISION=	2
@@ -10,6 +10,8 @@ MAINTAINER=	inittab@unixdev.net
 #HOMEPAGE=	http://www.fh-wilhelmshaven.de/~akcaagaa/index_mxterm.html
 HOMEPAGE=	http://www.unixdev.net/projects/mxterm
 COMMENT=	Motif XTerm
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 

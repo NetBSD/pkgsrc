@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/01/18 05:06:26 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2008/07/14 12:56:00 joerg Exp $
 #
 
 DISTNAME=	libopensync-plugin-kdepim-0.22
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	dillo@NetBSD.org
 HOMEPAGE=	http://www.opensync.org/
 COMMENT=	Platform independent synchronization framework, kdepim plugin
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/09/16 20:55:31 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/07/14 12:56:10 joerg Exp $
 #
 
 DISTNAME=	libmms-0.3
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=libmms/}
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://sourceforge.net/projects/libmms
 COMMENT=	Library for parsing mms:// and mmsh:// type network streams
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

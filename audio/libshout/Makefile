@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2006/10/04 20:44:19 wiz Exp $
+# $NetBSD: Makefile,v 1.8 2008/07/14 12:55:57 joerg Exp $
 #
 
 DISTNAME=	libshout-2.1
@@ -8,6 +8,8 @@ MASTER_SITES=	http://downloads.xiph.org/releases/libshout/
 MAINTAINER=	kim@tac.nyc.ny.us
 HOMEPAGE=	http://directory.fsf.org/audio/ogg/libshout.html
 COMMENT=	Connects and sends data to icecast servers
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		YES
 PTHREAD_OPTS+=		require

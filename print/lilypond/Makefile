@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.54 2008/06/18 20:29:32 wiz Exp $
+# $NetBSD: Makefile,v 1.55 2008/07/14 12:56:11 joerg Exp $
 #
 
 DISTNAME=	lilypond-2.10.33
@@ -9,6 +9,8 @@ MASTER_SITES=	http://lilypond.org/download/sources/v2.10/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lilypond.org/web/
 COMMENT=	GNU Music Typesetter
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	ec-fonts-mftraced-[0-9]*:../../fonts/ec-fonts-mftraced
 

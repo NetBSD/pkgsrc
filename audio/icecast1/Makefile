@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/05/10 08:18:34 obache Exp $
+# $NetBSD: Makefile,v 1.23 2008/07/14 12:55:56 joerg Exp $
 #
 
 DISTNAME=	icecast-1.3.12
@@ -9,6 +9,8 @@ MASTER_SITES=	http://downloads.xiph.org/releases/icecast/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.icecast.org/
 COMMENT=	Internet broadcasting system using Mpeg Layer III streaming
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 RCD_SCRIPTS=		icecast
 PKG_SYSCONFSUBDIR=	icecast
