@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/05/20 02:42:27 heinz Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/07/14 00:02:38 bjs Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 OSSP_UUID_BUILDLINK3_MK:=	${OSSP_UUID_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}ossp-uuid
 
 .if !empty(OSSP_UUID_BUILDLINK3_MK:M+)
 BUILDLINK_API_DEPENDS.ossp-uuid+=	ossp-uuid>=1.6.0
-BUILDLINK_ABI_DEPENDS.ossp-uuid+=	ossp-uuid>=1.6.0
+BUILDLINK_ABI_DEPENDS.ossp-uuid+=	ossp-uuid>=1.6.2
 BUILDLINK_PKGSRCDIR.ossp-uuid?=		../../devel/ossp-uuid
 .endif	# OSSP_UUID_BUILDLINK3_MK
 
