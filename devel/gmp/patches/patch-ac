@@ -1,0 +1,18 @@
+$NetBSD: patch-ac,v 1.7 2008/07/14 13:06:23 tonio Exp $
+
+Apple's gcc build >5400 (since Xcode 3.0) doesn't support GNU inline in C99 mode
+
+--- gmp-h.in.orig	2007-09-03 18:05:40.000000000 +0200
++++ gmp-h.in
+@@ -423,8 +423,11 @@ typedef __mpq_struct *mpq_ptr;
+ #ifdef __GNUC_STDC_INLINE__
+ #define __GMP_EXTERN_INLINE extern __inline__ __attribute__ ((__gnu_inline__))
+ #else
++#if defined(__APPLE_CC__) && __APPLE_CC__ > 5400 && __STDC_VERSION__ >= 199901L
++#else
+ #define __GMP_EXTERN_INLINE      extern __inline__
+ #endif
++#endif
+ #define __GMP_INLINE_PROTOTYPES  1
+ #endif
+ 
