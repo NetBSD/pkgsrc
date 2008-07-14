@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/07/29 12:08:52 adrianp Exp $
+$NetBSD: distinfo,v 1.2 2008/07/14 08:59:06 abs Exp $
 
-SHA1 (Email-MIME-Creator-1.41.tar.gz) = 640757a784847d4a4a74d002cd3c298a69243db4
-RMD160 (Email-MIME-Creator-1.41.tar.gz) = 176ef49752fd758731d7e8bdcab8d04f9aa2c20f
-Size (Email-MIME-Creator-1.41.tar.gz) = 4412 bytes
+SHA1 (Email-MIME-Creator-1.454.tar.gz) = a656753383fd05c2aabea756c68e7c6b52a55301
+RMD160 (Email-MIME-Creator-1.454.tar.gz) = 5312e421723511d86edcc14ac2496fe7a8515a95
+Size (Email-MIME-Creator-1.454.tar.gz) = 12418 bytes
