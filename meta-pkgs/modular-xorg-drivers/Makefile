@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.12 2008/06/15 09:51:59 joerg Exp $
+# $NetBSD: Makefile,v 1.13 2008/07/14 04:05:33 tnn Exp $
 
 DISTNAME=	# empty
-PKGNAME=	modular-xorg-drivers-1.2
+PKGNAME=	modular-xorg-drivers-1.3
 CATEGORIES=	meta-pkgs drivers x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 DISTFILES=	# empty
@@ -32,10 +32,12 @@ DEPENDS+=	xf86-video-i128-[0-9]*:../../x11/xf86-video-i128
 DEPENDS+=	xf86-video-i740-[0-9]*:../../x11/xf86-video-i740
 DEPENDS+=	xf86-video-imstt-[0-9]*:../../x11/xf86-video-imstt
 DEPENDS+=	xf86-video-intel-[0-9]*:../../x11/xf86-video-intel
+DEPENDS+=	xf86-video-mach64-[0-9]*:../../x11/xf86-video-mach64
 DEPENDS+=	xf86-video-mga-[0-9]*:../../x11/xf86-video-mga
 DEPENDS+=	xf86-video-neomagic-[0-9]*:../../x11/xf86-video-neomagic
 DEPENDS+=	xf86-video-nsc-[0-9]*:../../x11/xf86-video-nsc
 DEPENDS+=	xf86-video-nv-[0-9]*:../../x11/xf86-video-nv
+DEPENDS+=	xf86-video-r128-[0-9]*:../../x11/xf86-video-r128
 DEPENDS+=	xf86-video-radeonhd-[0-9]*:../../x11/xf86-video-radeonhd
 DEPENDS+=	xf86-video-rendition-[0-9]*:../../x11/xf86-video-rendition
 DEPENDS+=	xf86-video-s3-[0-9]*:../../x11/xf86-video-s3
