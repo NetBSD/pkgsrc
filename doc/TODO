@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7380 2008/07/14 00:04:58 bjs Exp $
+$NetBSD: TODO,v 1.7381 2008/07/14 01:29:28 dholland Exp $
 
 Suggested new packages
 ======================
@@ -1209,7 +1209,6 @@ Suggested package updates
 	o samba-3.0.31
 	o samba-3.2.0
 	o sarg-2.2.5
-	o sather-1.2.3
 	o scamper-20070201
 	o scapy-1.1.1
 	o scew-0.4.0
