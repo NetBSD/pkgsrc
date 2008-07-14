@@ -1,0 +1,4 @@
+Sort::SQL is so simple it almost doesn't deserve to be on CPAN.
+
+Takes a scalar string of the SQL ORDER BY syntax and turns it into
+an array of key/value pair hashrefs.
