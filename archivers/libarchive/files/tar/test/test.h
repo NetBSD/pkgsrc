@@ -22,7 +22,7 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
- * $FreeBSD$
+ * $FreeBSD: src/usr.bin/tar/test/test.h,v 1.3 2008/06/15 10:07:54 kientzle Exp $
  */
 
 /* Every test program should #include "test.h" as the first thing. */
@@ -31,8 +31,18 @@
  * The goal of this file (and the matching test.c) is to
  * simplify the very repetitive test-*.c test programs.
  */
-#ifndef _FILE_OFFSET_BITS
-#define _FILE_OFFSET_BITS 64
+#if defined(HAVE_CONFIG_H)
+/* Most POSIX platforms use the 'configure' script to build config.h */
+#include "../../config.h"
+#elif defined(__FreeBSD__)
+/* Building as part of FreeBSD system requires a pre-built config.h. */
+#include "../config_freebsd.h"
+#elif defined(_WIN32)
+/* Win32 can't run the 'configure' script. */
+#include "../config_windows.h"
+#else
+/* Warn if the library hasn't been (automatically or manually) configured. */
+#error Oops: No config.h and no pre-built configuration in test.h.
 #endif
 
 #include <dirent.h>
@@ -49,20 +59,6 @@
 
 #ifdef USE_DMALLOC
 #include <dmalloc.h>
-#endif
-
-#if defined(HAVE_CONFIG_H)
-/* Most POSIX platforms use the 'configure' script to build config.h */
-#include "../../config.h"
-#elif defined(__FreeBSD__)
-/* Building as part of FreeBSD system requires a pre-built config.h. */
-#include "../config_freebsd.h"
-#elif defined(_WIN32)
-/* Win32 can't run the 'configure' script. */
-#include "../config_windows.h"
-#else
-/* Warn if the library hasn't been (automatically or manually) configured. */
-#error Oops: No config.h and no pre-built configuration in test.h.
 #endif
 
 /* No non-FreeBSD platform will have __FBSDID, so just define it here. */
@@ -108,6 +104,9 @@
 /* Assert that a file exists; supports printf-style arguments. */
 #define assertFileNotExists		\
   test_setup(__FILE__, __LINE__);test_assert_file_not_exists
+/* Assert that file contents match a string; supports printf-style arguments. */
+#define assertFileContents             \
+  test_setup(__FILE__, __LINE__);test_assert_file_contents
 
 /*
  * This would be simple with C99 variadic macros, but I don't want to
