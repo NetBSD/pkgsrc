@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/06/12 02:14:57 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2008/07/14 10:58:01 wiz Exp $
 #
 
 DISTNAME=	sip-4.3.2
@@ -15,8 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=	${PYPKGPREFIX}-qt2-sip-*
 
-# needs qmake
-BUILD_DEPENDS+=		qt3-tools-3.*:../../x11/qt3-tools
+PYTHON_VERSIONS_INCOMPATIBLE=	25 23 21
 
 USE_LIBTOOL=	yes
 USE_TOOLS+=	gmake
@@ -59,5 +58,5 @@ do-configure:
 .include "../../lang/python/extension.mk"
 .include "../../lang/python/application.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
-
+.include "../../x11/qt3-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
