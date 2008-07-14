@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/14 04:02:10 tnn Exp $
+lib/xorg/modules/drivers/mach64_drv.la
+@comment @dirrm lib/xorg/modules/drivers
+@comment @dirrm lib/xorg/modules
+@comment @dirrm lib/xorg

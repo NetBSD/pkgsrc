@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/07/14 04:02:10 tnn Exp $
+
+SHA1 (xf86-video-mach64-6.8.0.tar.bz2) = 0f130aca927ede0fd3ed7876c52817a5ef9215bb
+RMD160 (xf86-video-mach64-6.8.0.tar.bz2) = 2046c1bd05fe7bb0bbff7a69e8098e422bd47bd3
+Size (xf86-video-mach64-6.8.0.tar.bz2) = 477295 bytes
+SHA1 (patch-aa) = 2bcdb975e14cf73b283e27d63a8b2c11978c4865
