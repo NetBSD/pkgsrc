@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1478 2008/07/13 23:41:27 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1479 2008/07/14 00:03:18 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2487,3 +2487,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/libXxf86vm to 1.0.2 [bjs 2008-07-13]
 	Updated x11/libXrandr to 1.2.3 [bjs 2008-07-13]
 	Updated x11/libXft to 2.1.13 [bjs 2008-07-13]
+	Updated devel/ossp-uuid to 1.6.2 [bjs 2008-07-14]
