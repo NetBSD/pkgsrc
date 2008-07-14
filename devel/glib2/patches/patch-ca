@@ -1,6 +1,6 @@
-$NetBSD: patch-ca,v 1.2 2008/05/19 19:08:36 tnn Exp $
+$NetBSD: patch-ca,v 1.3 2008/07/14 03:54:32 tnn Exp $
 
---- gio/glocalfile.c.orig	2008-04-08 05:47:30.000000000 +0200
+--- gio/glocalfile.c.orig	2008-07-02 00:30:15.000000000 +0200
 +++ gio/glocalfile.c
 @@ -53,7 +53,7 @@
  #if defined(HAVE_STATFS) && defined(HAVE_STATVFS)
@@ -11,7 +11,7 @@ $NetBSD: patch-ca,v 1.2 2008/05/19 19:08:36 tnn Exp $
     /* on solaris, statfs doesn't even have the
        f_bavail field */
  #  define USE_STATVFS
-@@ -1004,8 +1004,12 @@ g_local_file_query_filesystem_info (GFil
+@@ -1008,8 +1008,12 @@ g_local_file_query_filesystem_info (GFil
  #if defined(HAVE_STRUCT_STATFS_F_FSTYPENAME)
    fstype = g_strdup(statfs_buffer.f_fstypename);
  #else
@@ -24,36 +24,3 @@ $NetBSD: patch-ca,v 1.2 2008/05/19 19:08:36 tnn Exp $
    if (fstype &&
        g_file_attribute_matcher_matches (attribute_matcher,
  					G_FILE_ATTRIBUTE_FILESYSTEM_TYPE))
-@@ -1580,7 +1584,8 @@ escape_trash_name (char *name)
- gboolean
- _g_local_file_has_trash_dir (const char *dirname, dev_t dir_dev)
- {
--  static gsize home_dev = 0;
-+  static gsize home_dev_set = 0;
-+  static dev_t home_dev;
-   char *topdir, *globaldir, *trashdir, *tmpname;
-   uid_t uid;
-   char uid_str[32];
-@@ -1588,18 +1593,17 @@ _g_local_file_has_trash_dir (const char 
-   gboolean res;
-   int statres;
-       
--  if (g_once_init_enter (&home_dev))
-+  if (g_once_init_enter (&home_dev_set))
-     {
--      gsize setup_value = 0;
-       struct stat home_stat;
-       
-       g_stat (g_get_home_dir (), &home_stat);
--      setup_value = home_stat.st_dev;
--      g_once_init_leave (&home_dev, setup_value);
-+      home_dev = home_stat.st_dev;
-+      g_once_init_leave (&home_dev_set, 1);
-     }
- 
-   /* Assume we can trash to the home */
--  if (dir_dev == (dev_t)home_dev)
-+  if (dir_dev == home_dev)
-     return TRUE;
- 
-   topdir = find_mountpoint_for (dirname, dir_dev);
