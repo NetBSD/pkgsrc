@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.4 2007/11/13 08:43:46 hiramatsu Exp $
+$NetBSD: distinfo,v 1.5 2008/07/14 18:13:16 he Exp $
 
-SHA1 (IO-Interface-1.03.tar.gz) = 35754a63d26eabd00c43220a7dc7e1fe9b24cf05
-RMD160 (IO-Interface-1.03.tar.gz) = 1594d63a58fcf22b255cb0cf7f0266e1ce4937d5
-Size (IO-Interface-1.03.tar.gz) = 9630 bytes
+SHA1 (IO-Interface-1.05.tar.gz) = 5b195518fbd87175a5bc4c71d426a2e360b99f98
+RMD160 (IO-Interface-1.05.tar.gz) = 540de54311e24619e748116a595c40efd3db3329
+Size (IO-Interface-1.05.tar.gz) = 10219 bytes
+SHA1 (patch-aa) = e4c694f23813fefc9b8e4e83a5286e855a38e0f6
