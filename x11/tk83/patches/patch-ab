@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.4 2005/11/05 03:27:56 rillig Exp $
+$NetBSD: patch-ab,v 1.5 2008/07/14 00:43:34 dholland Exp $
 
 --- unix/configure.orig	2001-10-20 02:24:40.000000000 +0200
 +++ unix/configure
+@@ -1688,7 +1688,7 @@ echo "configure:1679: checking system ve
+ 	    # results, and the version is kept in special file).
+ 	
+ 	    if test -r /etc/.relid -a "X`uname -n`" = "X`uname -s`" ; then
+-		system=MP-RAS-`awk '{print }' /etc/.relid'`
++		system=MP-RAS-`awk '{print }' /etc/.relid`
+ 	    fi
+ 	    if test "`uname -s`" = "AIX" ; then
+ 		system=AIX-`uname -v`.`uname -r`
 @@ -1746,6 +1746,7 @@ fi
  
      do64bit_ok=no
