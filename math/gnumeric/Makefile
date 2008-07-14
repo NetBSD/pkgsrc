@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.130 2008/05/29 17:19:14 drochner Exp $
+# $NetBSD: Makefile,v 1.131 2008/07/14 12:56:08 joerg Exp $
 #
 
 DISTNAME=		gnumeric-1.8.3
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.gnome.org/projects/gnumeric/
 COMMENT=		Spreadsheet program from the GNOME project (development version)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS+=		gnome2-1.6 xdg-1.1
 USE_PKGLOCALEDIR=	YES

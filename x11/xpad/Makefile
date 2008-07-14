@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2006/12/27 13:37:46 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2008/07/14 12:56:20 joerg Exp $
 #
 
 DISTNAME=	xpad-1.12
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://xpad.sourceforge.net/
 COMMENT=	Sticky notes application in GTK 2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_DIRS+=		xdg-1.1

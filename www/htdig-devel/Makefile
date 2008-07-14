@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/12/02 12:33:16 wiz Exp $
+# $NetBSD: Makefile,v 1.10 2008/07/14 12:56:14 joerg Exp $
 
 DISTNAME=	htdig-3.2.0b6
 CATEGORIES=	www databases
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://htdig.sourceforge.net/
 COMMENT=	WWW indexing and searching system
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

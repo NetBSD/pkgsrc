@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2007/02/05 20:38:57 tron Exp $
+# $NetBSD: Makefile,v 1.40 2008/07/14 12:56:09 joerg Exp $
 
 DISTNAME=	mjpegtools-1.8.0
 PKGREVISION=	6
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mjpeg/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://mjpeg.sourceforge.net/
 COMMENT=	Programs for compressing video streams
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		mplex-[0-9]*
 DEPENDS+=		toolame>=02l:../../audio/toolame

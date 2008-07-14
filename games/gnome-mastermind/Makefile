@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/07/03 10:26:18 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2008/07/14 12:56:04 joerg Exp $
 #
 
 DISTNAME=	gnome-mastermind-0.3.1
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.autistici.org/gnome-mastermind/
 COMMENT=	Mastermind (the game)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/10/29 04:37:51 uebayasi Exp $
+# $NetBSD: Makefile,v 1.21 2008/07/14 12:56:00 joerg Exp $
 
 DISTNAME=	navi2ch-cvs_0.0.20070423-1
 PKGNAME=	${EMACS_PKGNAME_PREFIX}navi2ch-1.7.5.99.20070423
@@ -9,6 +9,8 @@ MASTER_SITES=	http://navi2ch.sourceforge.net/snapshot/
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://navi2ch.sourceforge.net/
 COMMENT=	2ch BBS browser for Emacs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME:C/cvs_0\.0\./cvs-/:C/-1$//}
 GNU_CONFIGURE=	yes
