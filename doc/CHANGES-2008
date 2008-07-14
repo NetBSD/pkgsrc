@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1494 2008/07/14 18:34:09 he Exp $
+$NetBSD: CHANGES-2008,v 1.1495 2008/07/14 19:14:36 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2528,3 +2528,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/p5-IO-Socket-Multicast to 1.05 [he 2008-07-14]
 	Updated net/p5-Net-LDAP-Server to 0.4 [he 2008-07-14]
 	Updated databases/p5-SQL-Abstract to 1.24 [he 2008-07-14]
+	Updated databases/p5-DBI to 1.605 [he 2008-07-14]
