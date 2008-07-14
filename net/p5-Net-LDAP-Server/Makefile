@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2008/07/14 18:23:04 he Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/14 18:54:18 he Exp $
 #
 
 DISTNAME=	Net-LDAP-Server-0.4
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
-HOMEPAGE=	http://search.cpan.org/~aar/Net-LDAP-Server/
 
 MAINTAINER=	he@NetBSD.org
+HOMEPAGE=	http://search.cpan.org/dist/Net-LDAP-Server/
 COMMENT=	LDAP server side protocol handling
 
 PKG_DESTDIR_SUPPORT=	user-destdir
