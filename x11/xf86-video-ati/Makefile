@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.6 2008/05/24 21:45:17 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2008/07/14 04:01:06 tnn Exp $
 
-DISTNAME=	xf86-video-ati-6.6.3
-PKGREVISION=	1
+DISTNAME=	xf86-video-ati-6.9.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://xorg.freedesktop.org/
-COMMENT=	Modular Xorg ATI video driver
+COMMENT=	Modular Xorg ATI Radeon video driver
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
