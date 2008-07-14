@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.3 2008/07/13 23:41:02 bjs Exp $
+# $NetBSD: buildlink3.mk,v 1.4 2008/07/14 06:11:20 tnn Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
 
@@ -19,7 +19,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libXft
 
 .if ${LIBXFT_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libXft+=	libXft>=2.1.10
-BUILDLiNK_ABI_DEPENDS.libXft+=	libXft>=2.1.13
+BUILDLINK_ABI_DEPENDS.libXft+=	libXft>=2.1.13
 BUILDLINK_PKGSRCDIR.libXft?=	../../x11/libXft
 .endif	# LIBXFT_BUILDLINK3_MK
 
