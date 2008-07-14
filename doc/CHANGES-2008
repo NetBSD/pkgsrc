@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1492 2008/07/14 18:19:07 he Exp $
+$NetBSD: CHANGES-2008,v 1.1493 2008/07/14 18:23:47 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2526,3 +2526,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/glib2 to 2.16.4nb1 [tron 2008-07-14]
 	Updated net/p5-IO-Interface to 1.05 [he 2008-07-14]
 	Updated net/p5-IO-Socket-Multicast to 1.05 [he 2008-07-14]
+	Updated net/p5-Net-LDAP-Server to 0.4 [he 2008-07-14]
