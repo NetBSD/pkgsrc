@@ -23,7 +23,7 @@
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 #include "test.h"
-__FBSDID("$FreeBSD: src/lib/libarchive/test/test_write_disk_secure.c,v 1.3 2007/07/06 15:43:11 kientzle Exp $");
+__FBSDID("$FreeBSD: src/lib/libarchive/test/test_write_disk_secure.c,v 1.4 2008/06/15 10:35:22 kientzle Exp $");
 
 #define UMASK 022
 
@@ -115,7 +115,7 @@ DEFINE_TEST(test_write_disk_secure)
 	/* Test the entries on disk. */
 	assert(0 == lstat("dir", &st));
 	failure("dir: st.st_mode=%o", st.st_mode);
-	assert((st.st_mode & 07777) == 0755);
+	assert((st.st_mode & 0777) == 0755);
 
 	assert(0 == lstat("link_to_dir", &st));
 	failure("link_to_dir: st.st_mode=%o", st.st_mode);
@@ -137,7 +137,7 @@ DEFINE_TEST(test_write_disk_secure)
 	failure("link_to_dir2 should have been re-created as a true dir");
 	assert(S_ISDIR(st.st_mode));
 	failure("link_to_dir2: Implicit dir creation should obey umask, but st.st_mode=%o", st.st_mode);
-	assert((st.st_mode & 07777) == 0755);
+	assert((st.st_mode & 0777) == 0755);
 
 	assert(0 == lstat("link_to_dir2/filec", &st));
 	assert(S_ISREG(st.st_mode));
