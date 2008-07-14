@@ -1,0 +1,6 @@
+Devel::LexAlias provides the ability to alias a lexical variable
+in a subroutines scope to one of your choosing.
+
+If you don't know why you'd want to do this, I'd suggest that you
+skip this module. If you think you have a use for it, I'd insist
+on it.
