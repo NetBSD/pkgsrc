@@ -1,0 +1,19 @@
+This module implements a simple base class from which other modules
+can be derived, thereby inheriting a number of useful methods such
+as new(), init(), params(), clone(), error() and debug().
+
+For a number of years, I found myself re-writing this module for
+practically every Perl project of any significant size. Or rather,
+I would copy the module from the last project and perform a global
+search and replace to change the names. Each time it got a little
+more polished and eventually, I decided to Do The Right Thing and
+release it as a module in it's own right.
+
+It doesn't pretend to be an all-encompassing solution for every
+kind of object creation problem you might encounter. In fact, it
+only supports blessed hash references that are created using the
+popular, but by no means universal convention of calling new() with
+a list or reference to a hash array of named parameters. Constructor
+failure is indicated by returning undef and setting the $ERROR
+package variable in the module's class to contain a relevant message
+(which you can also fetch by calling error() as a class method).
