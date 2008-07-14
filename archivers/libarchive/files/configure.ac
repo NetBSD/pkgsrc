@@ -4,13 +4,13 @@ dnl First, define all of the version numbers up front.
 dnl In particular, this allows the version macro to be used in AC_INIT
 
 dnl These first two version numbers are updated automatically on each release.
-m4_define([LIBARCHIVE_VERSION_S],[2.5.4b])
-m4_define([LIBARCHIVE_VERSION_N],[2005004])
+m4_define([LIBARCHIVE_VERSION_S],[2.5.5])
+m4_define([LIBARCHIVE_VERSION_N],[2005005])
 
 dnl bsdtar versioning tracks libarchive
 m4_define([BSDTAR_VERSION_S],LIBARCHIVE_VERSION_S())
-dnl bsdcpio is still versioning separately
-m4_define([BSDCPIO_VERSION_S],[0.9.10a])
+dnl bsdcpio is still versioning separately, as it's less mature.
+m4_define([BSDCPIO_VERSION_S],[1.0.0])
 
 #
 # Now starts the "real" configure script.
@@ -163,16 +163,7 @@ AC_HEADER_STDC
 AC_HEADER_DIRENT
 AC_HEADER_SYS_WAIT
 AC_CHECK_HEADERS([bzlib.h errno.h ext2fs/ext2_fs.h fcntl.h  grp.h])
-AC_CHECK_HEADERS([inttypes.h langinfo.h limits.h linux/ext2_fs.h linux/fs.h])
-# Include inttypes.h into archive.h only if appropriate.
-# We can't use the HAVE_INTTYPES_H macro here because archive.h
-# gets installed as a system header and then included into client code
-# that doesn't define such macros.  (And we should certainly not
-# define such macros in system headers!)
-# Hence the following:
-AC_CHECK_HEADER(inttypes.h,
-	 [AC_SUBST(ARCHIVE_H_INCLUDE_INTTYPES_H,['#include <inttypes.h> /* For int64_t */'])],
-	 [AC_SUBST(ARCHIVE_H_INCLUDE_INTTYPES_H,[''])])
+AC_CHECK_HEADERS([inttypes.h langinfo.h limits.h linux/fs.h])
 AC_CHECK_HEADERS([locale.h paths.h poll.h pwd.h regex.h stdarg.h])
 AC_CHECK_HEADERS([stdint.h stdlib.h string.h sys/acl.h sys/ioctl.h])
 AC_CHECK_HEADERS([sys/param.h sys/poll.h sys/select.h sys/time.h sys/utime.h])
@@ -199,8 +190,6 @@ AC_CHECK_TYPE(off_t, [long long])
 AC_TYPE_SIZE_T
 AC_CHECK_TYPE(id_t, [unsigned long])
 AC_CHECK_TYPE(uintptr_t, [unsigned int])
-AC_CHECK_MEMBERS([struct stat.st_rdev])
-AC_CHECK_MEMBERS([struct tm.tm_gmtoff])
 # Check for high-resolution timestamps in struct stat
 AC_CHECK_MEMBERS([struct stat.st_mtimespec.tv_nsec])
 AC_CHECK_MEMBERS([struct stat.st_mtim.tv_nsec])
@@ -239,14 +228,14 @@ AC_FUNC_STAT
 AC_FUNC_STRERROR_R
 AC_FUNC_STRFTIME
 AC_FUNC_VPRINTF
-AC_CHECK_FUNCS([chflags chown fchdir fchflags fchmod fchown fcntl fstat])
-AC_CHECK_FUNCS([ftruncate futimes geteuid getopt_long getpid])
+AC_CHECK_FUNCS([chflags chown chroot fchdir fchflags fchmod fchown fcntl fork])
+AC_CHECK_FUNCS([fstat ftruncate futimes geteuid getopt_long getpid])
 AC_CHECK_FUNCS([lchflags lchmod lchown])
 AC_CHECK_FUNCS([lutimes memmove memset mkdir mkfifo mknod])
 AC_CHECK_FUNCS([nl_langinfo pipe poll select setenv setlocale])
 AC_CHECK_FUNCS([strchr strdup strerror strrchr timegm])
 AC_CHECK_FUNCS([tzset unsetenv utime utimes vfork])
-AC_CHECK_FUNCS([wcscpy wcslen wmemcmp wmemcpy])
+AC_CHECK_FUNCS([wcscpy wcslen wctomb wmemcmp wmemcpy])
 
 # FreeBSD's nl_langinfo supports an option to specify whether the
 # current locale uses month/day or day/month ordering.  It makes the
