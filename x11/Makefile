@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.554 2008/05/27 04:53:55 bjs Exp $
+# $NetBSD: Makefile,v 1.555 2008/07/14 04:03:36 tnn Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -392,11 +392,13 @@ SUBDIR+=	xf86-video-i740
 SUBDIR+=	xf86-video-i810
 SUBDIR+=	xf86-video-imstt
 SUBDIR+=	xf86-video-intel
+SUBDIR+=	xf86-video-mach64
 SUBDIR+=	xf86-video-mga
 SUBDIR+=	xf86-video-neomagic
 SUBDIR+=	xf86-video-nsc
 SUBDIR+=	xf86-video-nv
 SUBDIR+=	xf86-video-nvxbox
+SUBDIR+=	xf86-video-r128
 SUBDIR+=	xf86-video-radeonhd
 SUBDIR+=	xf86-video-rendition
 SUBDIR+=	xf86-video-s3
