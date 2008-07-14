@@ -1,0 +1,12 @@
+SQL::Translator is a group of Perl modules that converts vendor-specific
+SQL table definitions into other formats, such as other vendor-specific
+SQL, ER diagrams, documentation (POD and HTML), XML, and Class::DBI
+classes. The main focus of SQL::Translator is SQL, but parsers
+exist for other structured data formats, including Excel spreadsheets
+and arbitrarily delimited text files. Through the separation of
+the code into parsers and producers with an object model in between,
+it's possible to combine any parser with any producer, to plug in
+custom parsers or producers, or to manipulate the parsed data via
+the built-in object model. Presently only the definition parts of
+SQL are handled (CREATE, ALTER), not the manipulation of data
+(INSERT, UPDATE, DELETE).
