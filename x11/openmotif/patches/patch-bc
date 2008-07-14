@@ -1,8 +1,8 @@
-$NetBSD: patch-bc,v 1.1 2004/12/18 00:39:31 tron Exp $
+$NetBSD: patch-bc,v 1.2 2008/07/14 23:01:32 christos Exp $
 
---- lib/Xm/XpmI.h.orig	2004-12-17 23:17:51.000000000 +0000
-+++ lib/Xm/XpmI.h	2004-12-17 23:21:35.000000000 +0000
-@@ -179,6 +179,18 @@
+--- lib/Xm/XpmI.h.orig	2005-12-05 11:31:46.000000000 -0500
++++ lib/Xm/XpmI.h	2008-06-28 16:17:20.000000000 -0400
+@@ -182,6 +182,18 @@
  		boundCheckingCalloc((long)(nelem),(long) (elsize))
  #endif
  
@@ -21,16 +21,3 @@ $NetBSD: patch-bc,v 1.1 2004/12/18 00:39:31 tron Exp $
  #define XPMMAXCMTLEN BUFSIZ
  typedef struct {
      unsigned int type;
-@@ -276,9 +288,9 @@
- }      *xpmHashAtom;
- 
- typedef struct {
--    int size;
--    int limit;
--    int used;
-+    unsigned int size;
-+    unsigned int limit;
-+    unsigned int used;
-     xpmHashAtom *atomTable;
- }      xpmHashTable;
- 
