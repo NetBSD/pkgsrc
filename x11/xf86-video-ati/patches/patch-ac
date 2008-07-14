@@ -1,30 +1,29 @@
-$NetBSD: patch-ac,v 1.2 2008/01/05 20:53:18 rillig Exp $
+$NetBSD: patch-ac,v 1.3 2008/07/14 04:01:07 tnn Exp $
 
---- configure.orig	2006-10-03 17:02:18.000000000 +0200
+--- configure.orig	2008-06-27 01:39:04.000000000 +0200
 +++ configure
-@@ -20261,7 +20261,7 @@ _ACEOF
+@@ -21440,23 +21440,15 @@ _ACEOF
  fi
  
  
 -if test "$DRI" != no; then
 +if test "x$DRI" = xauto; then
  	as_ac_File=`echo "ac_cv_file_${sdkdir}/dri.h" | $as_tr_sh`
- echo "$as_me:$LINENO: checking for ${sdkdir}/dri.h" >&5
- echo $ECHO_N "checking for ${sdkdir}/dri.h... $ECHO_C" >&6
-@@ -20982,16 +20982,8 @@ echo $ECHO_N "checking for $prefix/share
- if eval "test \"\${$as_ac_File+set}\" = set"; then
+ { echo "$as_me:$LINENO: checking for ${sdkdir}/dri.h" >&5
+ echo $ECHO_N "checking for ${sdkdir}/dri.h... $ECHO_C" >&6; }
+ if { as_var=$as_ac_File; eval "test \"\${$as_var+set}\" = set"; }; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
 -  test "$cross_compiling" = yes &&
 -  { { echo "$as_me:$LINENO: error: cannot check for file existence when cross compiling" >&5
 -echo "$as_me: error: cannot check for file existence when cross compiling" >&2;}
 -   { (exit 1); exit 1; }; }
--if test -r "$prefix/share/X11/sgml/defs.ent"; then
+-if test -r "${sdkdir}/dri.h"; then
 -  eval "$as_ac_File=yes"
 -else
    eval "$as_ac_File=no"
  fi
 -fi
- echo "$as_me:$LINENO: result: `eval echo '${'$as_ac_File'}'`" >&5
- echo "${ECHO_T}`eval echo '${'$as_ac_File'}'`" >&6
- if test `eval echo '${'$as_ac_File'}'` = yes; then
+ ac_res=`eval echo '${'$as_ac_File'}'`
+ 	       { echo "$as_me:$LINENO: result: $ac_res" >&5
+ echo "${ECHO_T}$ac_res" >&6; }
