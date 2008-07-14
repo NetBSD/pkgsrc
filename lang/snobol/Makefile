@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.20 2008/03/04 16:38:13 jlam Exp $
+# $NetBSD: Makefile,v 1.21 2008/07/14 04:21:39 dholland Exp $
 #
 
-DISTNAME=	snobol-0.99.4
-PKGREVISION=	2
+DISTNAME=	snobol4-1.1
+PKGNAME=	snobol-1.1
 CATEGORIES=	lang
-MASTER_SITES=	ftp://ftp.snobol4.com/ \
+MASTER_SITES=	ftp://ftp.ultimate.com/snobol/
+SITES.vanilla.zip= ftp://ftp.snobol4.com/ \
 		ftp://ftp.snobol4.org/snobol/old/
 DISTFILES=	vanilla.zip ${DISTNAME}${EXTRACT_SUFX}
 
@@ -12,16 +13,24 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.snobol4.org/csnobol4/curr/
 COMMENT=	Macro implementation of SNOBOL4 in C
 
-BUILD_DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
-
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 EXTRACT_ONLY=	${DISTNAME}${EXTRACT_SUFX}
 
-BUILD_TARGET=	it
+SUBST_CLASSES+=			snobol-config
+SUBST_STAGE.snobol-config=	post-patch
+SUBST_FILES.snobol-config=	Makefile
+SUBST_SED.snobol-config+=	-e s\|M4=m4\|M4=${TOOLS_PATH.m4:Q}\|
 
-USE_CONFIGURE=		NO
-USE_TOOLS+=		gzip m4
+HAS_CONFIGURE=yes
+CONFIGURE_ARGS+=--prefix=${PREFIX}
+# not yet
+#CONFIGURE_ARGS+=--with-tcl
+#CONFIGURE_ARGS+=--with-tk
+
+BUILD_TARGET=	all pv
+
+USE_TOOLS+=		gzip m4 unzip
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 MAKE_JOBS_SAFE=		NO
 
@@ -31,15 +40,11 @@ post-build:
 	unzip -p -opaaqqLC ${WRKSRC}/pm.exe >> ${WRKSRC}/doc/tutorial
 	${GZIP_CMD} ${WRKSRC}/doc/tutorial
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/xsnobol4 ${DESTDIR}${PREFIX}/bin/snobol4
-	${INSTALL_MAN} ${WRKSRC}/doc/snobol4.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/snobol4
-	cd ${WRKSRC} && ${INSTALL_DATA} snolib.a snolib/bq.sno \
-		${DESTDIR}${PREFIX}/lib/snobol4
+post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/snobol4
-	cd ${WRKSRC}/doc && ${INSTALL_DATA} load.doc design.doc tutorial.gz \
+	cd ${WRKSRC} && ${INSTALL_DATA} README \
+		${DESTDIR}${PREFIX}/share/doc/snobol4
+	cd ${WRKSRC}/doc && ${INSTALL_DATA} load.txt design.txt tutorial.gz \
 		${DESTDIR}${PREFIX}/share/doc/snobol4
 	@${ECHO} ''
 	@${ECHO} '***********************************************************'
