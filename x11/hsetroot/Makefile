@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2007/01/15 17:46:13 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2008/07/14 12:56:15 joerg Exp $
 #
 
 DISTNAME=	hsetroot-1.0.2
@@ -9,6 +9,8 @@ MASTER_SITES=	http://thegraveyard.org/files/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://thegraveyard.org/hsetroot.php
 COMMENT=	Allows you to compose wallpapers for X
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

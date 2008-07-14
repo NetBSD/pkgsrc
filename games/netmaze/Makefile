@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2007/02/22 19:26:30 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/07/14 12:56:04 joerg Exp $
 
 DISTNAME=		netmaze0.81
 PKGNAME=		netmaze-0.81
@@ -8,6 +8,8 @@ MASTER_SITES=	${MASTER_SITE_XCONTRIB:=games/multiplayer/}
 
 MAINTAINER=		jdc@NetBSD.org
 COMMENT=		X windows-based multiplayer combat game (like Midi Maze)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/netmaze
 USE_IMAKE=		yes

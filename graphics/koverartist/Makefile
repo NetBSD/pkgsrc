@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/01/18 05:06:41 tnn Exp $
+# $NetBSD: Makefile,v 1.5 2008/07/14 12:56:05 joerg Exp $
 
 DISTNAME=		koverartist-0.5
 PKGREVISION=		3
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		markd@NetBSD.org
 HOMEPAGE=		http://www.kde-apps.org/content/show.php?content=38195
 COMMENT=		CD/DVD case designer
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake msgfmt perl
 USE_LANGUAGES=		c c++

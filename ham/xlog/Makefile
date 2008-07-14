@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/01/18 05:06:44 tnn Exp $
+# $NetBSD: Makefile,v 1.28 2008/07/14 12:56:07 joerg Exp $
 #
 
 DISTNAME=	xlog-1.5
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.qsl.net/pg4i/download/
 MAINTAINER=	wulf@NetBSD.org
 HOMEPAGE=	http://www.qsl.net/pg4i/linux/xlog.html
 COMMENT=	Amateur Radio logging program
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS=	xdg-1.3
 GNU_CONFIGURE=	yes

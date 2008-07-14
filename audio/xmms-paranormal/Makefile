@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/03/15 13:10:37 obache Exp $
+# $NetBSD: Makefile,v 1.22 2008/07/14 12:55:59 joerg Exp $
 #
 
 DISTNAME=	paranormal-0.2.0
@@ -10,6 +10,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=paranormal/}
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://paranormal.sourceforge.net/
 COMMENT=	Extremely customizable (pseudo-programmable) XMMS plugin
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

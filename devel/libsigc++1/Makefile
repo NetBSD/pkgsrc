@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2007/09/21 12:59:54 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/14 12:56:02 joerg Exp $
 
 DISTNAME=	libsigc++-1.2.7
 PKGNAME=	libsigc++1-1.2.7
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libsigc++/1.2/}
 MAINTAINER=	bsieker@freenet.de
 HOMEPAGE=	http://libsigc.sourceforge.net/
 COMMENT=	Type-safe callback system for C++ programs
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_LIBTOOL=		YES

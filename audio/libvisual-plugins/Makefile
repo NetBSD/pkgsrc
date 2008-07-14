@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/02/04 20:10:35 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2008/07/14 12:55:57 joerg Exp $
 #
 
 DISTNAME=		libvisual-plugins-0.4.0
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libvisual/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://localhost.nl/~synap/libvisual/
 COMMENT=		Plugins for libvisual
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		libvisual-nebulus-[0-9]* libvisual-gforce-[0-9]*
 
