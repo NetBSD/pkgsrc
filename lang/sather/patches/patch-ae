@@ -1,4 +1,4 @@
-$NetBSD: patch-ae,v 1.2 2006/01/12 00:05:04 joerg Exp $
+$NetBSD: patch-ae,v 1.3 2008/07/14 01:23:52 dholland Exp $
 
 --- Makefile.orig	Thu Nov  4 08:04:28 1999
 +++ Makefile	Thu May  2 17:09:46 2002
@@ -13,7 +13,7 @@ $NetBSD: patch-ae,v 1.2 2006/01/12 00:05:04 joerg Exp $
 +MV?=mv
 +AR?=ar
  RM=rm -f
- LN=ln -s
+ LN=ln -sf
 -CP=cp
 +CP?=cp
  
@@ -24,11 +24,11 @@ $NetBSD: patch-ae,v 1.2 2006/01/12 00:05:04 joerg Exp $
  EXEC_SUFFIX=
  # CC is only used for bootstrapping, check System/Common/CONFIG.proto if
  # you want to change it for all Sather compilations
-@@ -90,7 +90,7 @@
+@@ -91,7 +91,7 @@
  # The platform to use if not overridden by a -<platform> option
  # or the SATHER_PLATFORM environment variable
  # Should be edited for a particular system
--DEFAULT_PLATFORM=unix
+-DEFAULT_PLATFORM=linux
 +DEFAULT_PLATFORM=${LOWER_OPSYS}
  
  # The platform used to compile the boot compiler. Usually just default, but has to
