@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2007/06/04 22:19:52 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2008/07/14 12:56:20 joerg Exp $
 #
 
 DISTNAME=	xpostit3.3.1
@@ -11,6 +11,8 @@ EXTRACT_SUFX=	.tar.Z
 MAINTAINER=	pkgsrc-users@NetBSD.org
 #HOMEPAGE=
 COMMENT=	Post notes to yourself on the screen
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/xpostit
 USE_IMAKE=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1 2005/02/01 20:52:38 augustss Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/14 12:56:09 joerg Exp $
 #
 
 DISTNAME=	libquantum-0.2.4
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.enyo.de/libquantum/downloads/
 MAINTAINER=	lennart@augustsson.net
 HOMEPAGE=	http://www.enyo.de/libquantum/
 COMMENT=	Quantum computing simulation library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

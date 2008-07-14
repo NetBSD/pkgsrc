@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/07/03 13:54:45 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2008/07/14 12:56:07 joerg Exp $
 
 DISTNAME=	libspf_alt-0.4.0
 PKGREVISION=	3
@@ -8,6 +8,8 @@ MASTER_SITES=	http://libspf2.org/
 MAINTAINER=	manu@NetBSD.org
 HOMEPAGE=	http://libspf2.org/
 COMMENT=	Sender Permitted Framework (SPF) library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_API_DEPENDS.bind+=	bind>=9.2.3nb3
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/08/10 16:16:13 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/07/14 12:55:58 joerg Exp $
 #
 
 DISTNAME=		mp3splt-2.1c-src
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mp3splt/}
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://mp3splt.sourceforge.net/
 COMMENT=		Command line utility to split MP3 (VBR supported) and OGG files
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 USE_PKGLOCALEDIR=	yes

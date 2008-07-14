@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/05/25 13:16:11 dillo Exp $
+# $NetBSD: Makefile,v 1.16 2008/07/14 12:56:11 joerg Exp $
 #
 
 DISTNAME=	img2eps-0.2
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.nih.at/img2eps/
 OWNER=		dillo@NetBSD.org
 HOMEPAGE=	http://www.nih.at/img2eps/
 COMMENT=	Convert raster images to EPS files
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 TEST_TARGET=	check

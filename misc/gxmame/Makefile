@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2006/07/07 22:03:50 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2008/07/14 12:56:08 joerg Exp $
 #
 
 DISTNAME=	gxmame-0.35beta1
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gxmame/}
 MAINTAINER=	flynn@energyhq.es.eu.org
 HOMEPAGE=	http://gxmame.sourceforge.net/
 COMMENT=	Frontend for XMame using the GTK2 library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		xmame>=0.87:../../emulators/xmame
 

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/07/14 22:05:56 adrianp Exp $
+# $NetBSD: Makefile,v 1.6 2008/07/14 12:56:10 joerg Exp $
 
 #
 # Please do not update or modify this package as it has been imported only
@@ -14,6 +14,8 @@ MASTER_SITES=	http://daniel.haxx.se/projects/c-ares/
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://daniel.haxx.se/projects/c-ares/
 COMMENT=	Asynchronous resolver library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	YES

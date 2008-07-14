@@ -1,4 +1,4 @@
-#	$NetBSD: Makefile,v 1.1.1.1 2008/02/19 02:23:44 rh Exp $
+#	$NetBSD: Makefile,v 1.2 2008/07/14 12:56:13 joerg Exp $
 #
 
 DISTNAME=		highlight-2.6.8
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.andre-simon.de/
 COMMENT=		Converts source code to formatted text with syntax highlighting
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 USE_LANGUAGES=		c++

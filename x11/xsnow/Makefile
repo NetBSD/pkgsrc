@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2007/09/08 21:58:02 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2008/07/14 12:56:20 joerg Exp $
 
 DISTNAME=	xsnow-1.42
 PKGREVISION=	2
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.euronet.nl/~rja/Xsnow/
 MAINTAINER=	is@NetBSD.org
 HOMEPAGE=	http://www.euronet.nl/~rja/Xsnow/
 COMMENT=	Create a snowy and Santa-y desktop
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_FEATURES=	snprintf
 USE_IMAKE=	yes

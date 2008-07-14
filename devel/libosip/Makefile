@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2007/08/25 02:49:12 obache Exp $
+# $NetBSD: Makefile,v 1.10 2008/07/14 12:56:02 joerg Exp $
 #
 
 DISTNAME=	libosip2-3.0.3
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.gnu.org/software/osip/
 COMMENT=	Implementation of SIP
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes

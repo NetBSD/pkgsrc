@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/08/13 05:38:02 rillig Exp $
+# $NetBSD: Makefile,v 1.14 2008/07/14 12:55:58 joerg Exp $
 
 DISTNAME=		ncmpc-0.11.1
 PKGREVISION=		2
@@ -9,6 +9,8 @@ MASTER_SITES=		http://hem.bredband.net/kaw/ncmpc/files/ \
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://hem.bredband.net/kaw/ncmpc/
 COMMENT=		Curses client for Music Player Daemon
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes

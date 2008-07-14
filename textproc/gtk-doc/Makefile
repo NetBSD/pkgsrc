@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/04/25 05:26:29 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2008/07/14 12:56:13 joerg Exp $
 #
 
 DISTNAME=	gtk-doc-1.10
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gtk.org/gtk-doc/
 COMMENT=	Tools for authors of the GTK+ reference documentation
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	docbook-xml>=4.4nb1:../../textproc/docbook-xml
 DEPENDS+=	docbook-xsl>=1.68.1:../../textproc/docbook-xsl

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/04/15 17:57:15 drochner Exp $
+# $NetBSD: Makefile,v 1.11 2008/07/14 12:56:18 joerg Exp $
 #
 
 DISTNAME=	libgnomekbd-2.22.0
@@ -9,6 +9,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.gnome.org/
 COMMENT=	Gnome keyboard configuration library
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # used a library before it was created
 MAKE_JOBS_SAFE=	no

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/06/23 17:40:55 drochner Exp $
+# $NetBSD: Makefile,v 1.20 2008/07/14 12:56:02 joerg Exp $
 
 DISTNAME=	libgnomeuimm-2.22.0
 CATEGORIES=	devel
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://gtkmm.sourceforge.net/
 COMMENT=	C++ bindings for libgnomeui
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes

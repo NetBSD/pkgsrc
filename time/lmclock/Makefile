@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/12/27 13:37:40 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/07/14 12:56:13 joerg Exp $
 #
 
 DISTNAME=	lmclock-1.2
@@ -9,6 +9,8 @@ MASTER_SITES=	http://pantransit.reptiles.org/prog/
 MAINTAINER=	is@NetBSD.org
 HOMEPAGE=	http://pantransit.reptiles.org/prog/
 COMMENT=	Hard-coded Xerox Lisp machine clock clone
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 post-extract:
 	${TOUCH} ${WRKSRC}/lmclock.man

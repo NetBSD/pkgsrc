@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/06/21 22:55:49 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2008/07/14 12:56:11 joerg Exp $
 
 VERSION=	5.0.2
 DISTNAME=	gutenprint-${VERSION}
@@ -11,6 +11,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gimp-print/}
 MAINTAINER=	gdt@NetBSD.org
 COMMENT=	Drivers for Canon, Epson, Lexmark, and PCL printers
 HOMEPAGE=	http://gutenprint.sourceforge.net/
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 # Not sure if this works.
 #PKG_DESTDIR_SUPPORT=	user-destdir

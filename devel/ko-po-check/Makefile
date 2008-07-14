@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/04/25 20:39:08 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2008/07/14 12:56:01 joerg Exp $
 
 DISTNAME=	ko-po-check-0.8
 PKGREVISION=	1
@@ -8,6 +8,8 @@ MASTER_SITES=	http://kldp.net/frs/download.php/3863/
 MAINTAINER=	junyoung@mogua.com
 HOMEPAGE=	http://ko-po-check.kldp.net/
 COMMENT=	Korean .po file checker
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 

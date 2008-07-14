@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/09/10 15:32:48 xtraeme Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/14 12:56:02 joerg Exp $
 #
 
 DISTNAME=	mcs-0.4.1
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tgz
 MAINTAINER=	jfranz@bsdprojects.net
 HOMEPAGE=	http://sacredspiral.co.uk/~nenolod/mcs/
 COMMENT=	BSD licensed configuration database system
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config

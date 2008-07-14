@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/04/15 15:46:22 obache Exp $
+# $NetBSD: Makefile,v 1.21 2008/07/14 12:56:15 joerg Exp $
 
 DISTNAME=	hanterm-3.1.6
 PKGREVISION=	3
@@ -8,6 +8,8 @@ MASTER_SITES=	http://download.kldp.net/hanterm/hanterm/3.1.6/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hanterm.kldp.net/
 COMMENT=	X11R6-based xterm hacked for managing Korean languages
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	YES
 

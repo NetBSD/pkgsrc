@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/02/22 19:26:08 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2008/07/14 12:55:58 joerg Exp $
 #
 
 DISTNAME=	liveice-xmms
@@ -10,6 +10,8 @@ MASTER_SITES=	http://star.arm.ac.uk/~spm/software/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://star.arm.ac.uk/~spm/software/
 COMMENT=	Audio streaming plugin for XMMS
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/LiveIce-1.0.0
 GNU_CONFIGURE=		yes

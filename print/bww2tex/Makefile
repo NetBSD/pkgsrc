@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/06/20 01:09:33 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2008/07/14 12:56:11 joerg Exp $
 #
 
 DISTNAME=	bww2tex-2.00
@@ -9,6 +9,8 @@ DISTFILES=	bww2tex200.tar.gz
 MAINTAINER=	dgriffi@cs.csubak.edu
 HOMEPAGE=	http://www.stanford.edu/~wrinnes/bagpipe.tex/bww2tex/
 COMMENT=	Bagpipe Music Writer Gold to BagpipeTeX converter
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 

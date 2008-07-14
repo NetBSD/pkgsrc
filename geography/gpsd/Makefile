@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/05/08 00:06:51 gdt Exp $
+# $NetBSD: Makefile,v 1.11 2008/07/14 12:56:04 joerg Exp $
 
 DISTNAME=	gpsd-2.36
 PKGREVISION=	1
@@ -9,6 +9,8 @@ MAINTAINER=	tsarna@NetBSD.org
 # also gdt@NetBSD.org
 HOMEPAGE=	http://gpsd.berlios.de/
 COMMENT=	GPS information daemon
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 CONFIGURE_ARGS+=	--disable-python

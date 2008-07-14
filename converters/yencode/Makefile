@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/09/06 20:44:12 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/07/14 12:56:00 joerg Exp $
 #
 
 DISTNAME=	yencode-0.46
@@ -9,6 +9,8 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=yencode/}
 MAINTAINER=	shaun@inerd.com
 HOMEPAGE=	http://www.yencode.org/
 COMMENT=	yenc format encoder and decoder
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 

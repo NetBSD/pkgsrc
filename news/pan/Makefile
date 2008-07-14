@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2008/06/22 08:12:24 wiz Exp $
+# $NetBSD: Makefile,v 1.53 2008/07/14 12:56:11 joerg Exp $
 #
 
 DISTNAME=		pan-0.132
@@ -9,6 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		rhialto@falu.nl
 HOMEPAGE=		http://pan.rebelbase.com/
 COMMENT=		Newsreader for GTK2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake msgfmt perl pkg-config
 USE_DIRS+=		gnome2-1.5

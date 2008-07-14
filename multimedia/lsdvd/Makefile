@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/04/13 01:20:52 xtraeme Exp $
+# $NetBSD: Makefile,v 1.13 2008/07/14 12:56:09 joerg Exp $
 
 DISTNAME=	lsdvd-0.16
 PKGREVISION=	3
@@ -10,6 +10,7 @@ HOMEPAGE=	http://untrepid.com/acidrip/lsdvd.html
 COMMENT=	Application displaying the contents of DVDs
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		autoconf

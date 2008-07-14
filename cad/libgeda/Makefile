@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2008/02/01 02:34:20 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.44 2008/07/14 12:55:59 joerg Exp $
 #
 
 DISTNAME=		libgeda-${PKGVERSION}
@@ -7,6 +7,8 @@ CATEGORIES=		cad
 MAINTAINER=		dmcmahill@NetBSD.org
 HOMEPAGE=		http://www.geda.seul.org/
 COMMENT=		Library of shared modules for gEDA
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		gEDA<19991011
 

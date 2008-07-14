@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2006/12/27 13:37:45 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/07/14 12:56:19 joerg Exp $
 #
 
 DISTNAME=	xkbd-0.8.5
@@ -9,6 +9,8 @@ MASTER_SITES=	http://handhelds.org/~mallum/downloadables/xkbd/
 MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://handhelds.org/~mallum/
 COMMENT=	On-screen keyboard for X, useful for palmtops
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFIGURE_ARGS+=--enable-xpm
 

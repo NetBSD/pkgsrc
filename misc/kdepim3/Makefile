@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.81 2008/02/20 10:09:20 markd Exp $
+# $NetBSD: Makefile,v 1.82 2008/07/14 12:56:08 joerg Exp $
 
 DISTNAME=	kdepim-${_KDE_VERSION}
 CATEGORIES=	misc
 COMMENT=	Personal Information Management tools for the KDE desktop
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../meta-pkgs/kde3/Makefile.kde3"
 

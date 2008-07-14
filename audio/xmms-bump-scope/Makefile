@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2006/10/04 20:44:20 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/07/14 12:55:58 joerg Exp $
 #
 
 DISTNAME=	bump_scope-0.0.3
@@ -10,6 +10,8 @@ MASTER_SITES=	http://zinx.xmms.org/xmms/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://zinx.xmms.org/xmms/
 COMMENT=	Moving light embossing oscilloscope
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES

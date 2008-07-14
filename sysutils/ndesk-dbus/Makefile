@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/04/28 08:13:37 kefren Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/14 12:56:12 joerg Exp $
 
 DISTNAME=	ndesk-dbus-0.6.1a
 PKGREVISION=	1
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.ndesk.org/archive/ndesk-dbus/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ndesk.org/DBusSharp
 COMMENT=	C\# implementation of dbus
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config gmake

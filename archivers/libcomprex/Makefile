@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/01/18 05:06:18 tnn Exp $
+# $NetBSD: Makefile,v 1.22 2008/07/14 12:55:56 joerg Exp $
 
 DISTNAME=	libcomprex-0.3.3
 PKGREVISION=	3
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.gnupdate.org/components/libcomprex/index.xml
 COMMENT=	Library to handle (de)compression of files
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
 USE_TOOLS+=		pkg-config

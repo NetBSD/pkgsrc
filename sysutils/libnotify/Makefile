@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/04/30 13:38:16 jmmv Exp $
+# $NetBSD: Makefile,v 1.8 2008/07/14 12:56:12 joerg Exp $
 #
 
 DISTNAME=	libnotify-0.4.4
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.galago-project.org/files/releases/source/libnotify/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.galago-project.org/
 COMMENT=	Desktop notification framework
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/11/15 23:53:48 dmcmahill Exp $
+# $NetBSD: Makefile,v 1.32 2008/07/14 12:55:59 joerg Exp $
 #
 
 DISTNAME=	gwave-20060606
@@ -9,6 +9,8 @@ MASTER_SITES=	ftp://ftp.geda.seul.org/pub/geda/dist/ \
 MAINTAINER=	dmcmahill@NetBSD.org
 HOMEPAGE=	http://www.cs.unc.edu/~tell/gwave.html
 COMMENT=	Viewer for spice-like simulator output and other analog data
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 USE_LIBTOOL=	yes

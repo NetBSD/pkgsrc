@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/05/30 12:29:00 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/07/14 12:56:10 joerg Exp $
 #
 
 DISTNAME=	logjam-4.5.3
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://logjam.danga.com/download/
 COMMENT=	GTK client for LiveJournal.com
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-xmms

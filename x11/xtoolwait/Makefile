@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2006/12/27 13:37:47 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/07/14 12:56:20 joerg Exp $
 #
 
 DISTNAME=	xtoolwait-1.3
@@ -9,6 +9,8 @@ MASTER_SITES=	http://www.hacom.nl/~richard/software/
 MAINTAINER=	minoura@NetBSD.org
 HOMEPAGE=	http://www.hacom.nl/~richard/software/xtoolwait.html
 COMMENT=	Free implementation of SunOS toolwait(1)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	yes
 

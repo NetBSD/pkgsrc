@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2006/12/27 13:37:37 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2008/07/14 12:56:04 joerg Exp $
 
 DISTNAME=	xskat-3.4
 PKGREVISION=	2
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.gulu.net/xskat/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.xskat.de/xskat.html
 COMMENT=	Play the card game Skat
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_IMAKE=	yes
 
