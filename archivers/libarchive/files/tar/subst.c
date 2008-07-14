@@ -24,7 +24,7 @@
  */
 
 #include "bsdtar_platform.h"
-__FBSDID("$FreeBSD$");
+__FBSDID("$FreeBSD: src/usr.bin/tar/subst.c,v 1.4 2008/06/15 10:08:16 kientzle Exp $");
 
 #if HAVE_REGEX_H
 #include "bsdtar.h"
@@ -42,7 +42,7 @@ struct subst_rule {
 	struct subst_rule *next;
 	regex_t re;
 	char *result;
-	int global:1, print:1, symlink:1;
+	unsigned int global:1, print:1, symlink:1;
 };
 
 struct substitution {
