@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/07/13 22:34:19 smb Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/07/15 11:18:43 drochner Exp $
 bin/claws-mail
 bin/sylpheed-claws
 include/claws-mail/account.h
@@ -22,6 +22,7 @@ include/claws-mail/addritem.h
 include/claws-mail/addrquery.h
 include/claws-mail/addrselect.h
 include/claws-mail/alertpanel.h
+include/claws-mail/autofaces.h
 include/claws-mail/browseldap.h
 include/claws-mail/codeconv.h
 include/claws-mail/common/base64.h
@@ -259,4 +260,3 @@ share/locale/zh_CN/LC_MESSAGES/claws-mail.mo
 @dirrm include/claws-mail/etpan
 @dirrm include/claws-mail/common
 @dirrm include/claws-mail
-@dirrm lib/claws-mail
