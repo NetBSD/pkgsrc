@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1501 2008/07/15 09:47:27 abs Exp $
+$NetBSD: CHANGES-2008,v 1.1502 2008/07/15 12:18:03 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2580,3 +2580,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/p5-Test-WWW-Mechanize-Catalyst version 0.42 [abs 2008-07-15]
 	Added www/p5-Handel version 1.00010 [abs 2008-07-15]
 	Added security/p5-Crypt-GPG version 1.63 [abs 2008-07-15]
+	Updated textproc/p5-XML-Writer to 0.604 [rhaen 2008-07-15]
