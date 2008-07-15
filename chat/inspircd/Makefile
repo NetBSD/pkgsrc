@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/06/14 14:30:23 adrianp Exp $
+# $NetBSD: Makefile,v 1.15 2008/07/15 11:48:34 adrianp Exp $
 #
 
 DISTNAME=	InspIRCd-1.1.20
@@ -100,7 +100,7 @@ CHECK_BUILTIN.openssl:=no
 
 post-extract:
 	${MV} ${WRKDIR}/inspircd ${WRKDIR}/${DISTNAME:S/InspIRCd/inspircd/}
-.if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
+.if !empty(USE_BUILTIN.openssl:M[yY][eE][sS]) && !empty(PKG_OPTIONS:Mssl)
 	${CP} ${FILESDIR}/openssl.pc ${WRKSRC}/openssl.pc
 SUBST_FILES.conf+=	${WRKSRC}/openssl.pc
 SUBST_SED.conf+=	-e "s|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g"
@@ -108,7 +108,8 @@ SUBST_SED.conf+=	-e "s|@SSLVER@|${BUILTIN_VERSION.openssl}|g"
 .endif
 
 pre-configure:
-.if !empty(USE_BUILTIN.openssl:M[yY][eE][sS])
+.if !empty(USE_BUILTIN.openssl:M[yY][eE][sS]) && !empty(PKG_OPTIONS:Mssl)
+	${MKDIR} ${BUILDLINK_DIR}/lib/pkgconfig
 	${CP} ${WRKSRC}/openssl.pc ${BUILDLINK_DIR}/lib/pkgconfig
 .endif
 .if defined(MODULES)
