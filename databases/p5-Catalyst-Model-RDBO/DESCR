@@ -1,0 +1,4 @@
+Catalyst Model base class for Rose::DB::Object. This class provides
+convenience access to your existing Rose::DB::Object class.
+
+The assumption is one Model class per Rose::DB::Object class.
