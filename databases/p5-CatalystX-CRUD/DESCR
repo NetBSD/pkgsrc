@@ -1,0 +1,10 @@
+CatalystX::CRUD provides a simple and generic API for Catalyst CRUD
+applications. CatalystX::CRUD is agnostic with regard to data model
+and data input, instead providing a common API that different
+projects can implement for greater compatability with one another.
+
+The project was born out of a desire to make Rose::HTML::Objects
+easy to use with Rose::DB::Object and DBIx::Class ORMs, using the
+Catalyst::Controller::Rose project. However, any ORM could implement
+the CatalystX::CRUD::Model API, and any form management project
+could use the resulting CatalystX::CRUD::Model subclass.
