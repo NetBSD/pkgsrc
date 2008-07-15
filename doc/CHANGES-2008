@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1511 2008/07/15 22:43:35 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1512 2008/07/15 23:10:27 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2591,3 +2591,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Test-Deep to 0.103 [rhaen 2008-07-15]
 	Updated textproc/p5-XML-Node to 0.11 [rhaen 2008-07-15]
 	Updated devel/p5-Task-Weaken to 1.02 [rhaen 2008-07-16]
+	Added textproc/p5-XML-Elemental version 2.1 [rhaen 2008-07-16]
