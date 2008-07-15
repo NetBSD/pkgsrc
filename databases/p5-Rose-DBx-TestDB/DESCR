@@ -1,0 +1,2 @@
+Returns a new Rose::DB object using a temp sqlite database. Will
+automatically clean up all temp db files at END.
