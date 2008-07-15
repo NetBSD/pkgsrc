@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/07/15 09:18:00 abs Exp $
+
+SHA1 (Catalyst-Plugin-Authorization-Roles-0.05.tar.gz) = 0af9bd8af47cfba9b357f8bd312ead92a088b4b7
+RMD160 (Catalyst-Plugin-Authorization-Roles-0.05.tar.gz) = 49899c26480efac1ad2002df800a81eb505ca230
+Size (Catalyst-Plugin-Authorization-Roles-0.05.tar.gz) = 5282 bytes
