@@ -1,0 +1,4 @@
+Sends templated mail, based upon your default view. It captures
+the output of the rendering path, slurps in based on mime-types
+and assembles a multi-part email using Email::MIME::Creator and
+sends it out.
