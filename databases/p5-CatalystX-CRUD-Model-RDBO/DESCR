@@ -1,0 +1,2 @@
+CatalystX::CRUD::Model::RDBO is a CatalystX::CRUD implementation
+for Rose::DB::Object.
