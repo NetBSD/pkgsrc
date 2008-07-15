@@ -1,0 +1,21 @@
+Rose::URI is an alternative to URI. Important differences include:
+
+Rose::URI provides a rich set of query string manipulation methods.
+Query parameters can be added, removed, and checked for their
+existence. URI allows the entire query to be set or returned as a
+whole via the query_form or query methods, and the URI::QueryParam
+module provides a few more methods for query string manipulation.
+
+Rose::URI supports query parameters with multiple values (e.g.
+"a=1&a=2"). URI has limited support for this through query_form's
+list return value. Better methods are available in URI::QueryParam.
+
+Rose::URI uses Apache's C-based URI parsing and HTML escaping
+functions when running in a mod_perl 1.x web server environment.
+
+Rose::URI stores each URI "in pieces" (scheme, host, path, etc.)
+and then assembles those pieces when the entire URI is needed as
+a string. This technique is based on the assumption that the URI
+will be manipulated many more times than it is stringified. If this
+is not the case in your usage scenario, then URI may be a better
+alternative.
