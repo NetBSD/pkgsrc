@@ -1,0 +1,2 @@
+This DBIx::Class component uses FormValidator::Simple to valid data
+before submission to a database.
