@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/04/12 22:43:07 jlam Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/07/15 10:05:31 drochner Exp $
 bin/gst-feedback-0.10
 bin/gst-inspect-0.10
 bin/gst-launch-0.10
@@ -57,6 +57,7 @@ include/gstreamer-0.10/gst/gstpipeline.h
 include/gstreamer-0.10/gst/gstplugin.h
 include/gstreamer-0.10/gst/gstpluginfeature.h
 include/gstreamer-0.10/gst/gstpoll.h
+include/gstreamer-0.10/gst/gstpreset.h
 include/gstreamer-0.10/gst/gstquery.h
 include/gstreamer-0.10/gst/gstregistry.h
 include/gstreamer-0.10/gst/gstsegment.h
@@ -114,6 +115,7 @@ share/gtk-doc/html/gstreamer-0.10/GstPadTemplate.html
 share/gtk-doc/html/gstreamer-0.10/GstPipeline.html
 share/gtk-doc/html/gstreamer-0.10/GstPlugin.html
 share/gtk-doc/html/gstreamer-0.10/GstPluginFeature.html
+share/gtk-doc/html/gstreamer-0.10/GstPreset.html
 share/gtk-doc/html/gstreamer-0.10/GstRegistry.html
 share/gtk-doc/html/gstreamer-0.10/GstSystemClock.html
 share/gtk-doc/html/gstreamer-0.10/GstTagSetter.html
@@ -135,6 +137,7 @@ share/gtk-doc/html/gstreamer-0.10/gstreamer-GstInfo.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-GstIterator.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-GstMessage.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-GstMiniObject.html
+share/gtk-doc/html/gstreamer-0.10/gstreamer-GstParamSpec.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-GstParse.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-GstPoll.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-GstQuery.html
@@ -151,11 +154,15 @@ share/gtk-doc/html/gstreamer-0.10/gstreamer-gstconfig.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-hierarchy.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer-support.html
 share/gtk-doc/html/gstreamer-0.10/gstreamer.html
+share/gtk-doc/html/gstreamer-0.10/home.png
 share/gtk-doc/html/gstreamer-0.10/index.html
 share/gtk-doc/html/gstreamer-0.10/index.sgml
 share/gtk-doc/html/gstreamer-0.10/ix02.html
+share/gtk-doc/html/gstreamer-0.10/left.png
 share/gtk-doc/html/gstreamer-0.10/libgstreamer.html
+share/gtk-doc/html/gstreamer-0.10/right.png
 share/gtk-doc/html/gstreamer-0.10/style.css
+share/gtk-doc/html/gstreamer-0.10/up.png
 share/gtk-doc/html/gstreamer-libs-0.10/GstAdapter.html
 share/gtk-doc/html/gstreamer-libs-0.10/GstBaseSink.html
 share/gtk-doc/html/gstreamer-libs-0.10/GstBaseSrc.html
@@ -165,6 +172,8 @@ share/gtk-doc/html/gstreamer-libs-0.10/GstControlSource.html
 share/gtk-doc/html/gstreamer-libs-0.10/GstController.html
 share/gtk-doc/html/gstreamer-libs-0.10/GstInterpolationControlSource.html
 share/gtk-doc/html/gstreamer-libs-0.10/GstLFOControlSource.html
+share/gtk-doc/html/gstreamer-libs-0.10/GstNetClientClock.html
+share/gtk-doc/html/gstreamer-libs-0.10/GstNetTimeProvider.html
 share/gtk-doc/html/gstreamer-libs-0.10/GstPushSrc.html
 share/gtk-doc/html/gstreamer-libs-0.10/api-index.html
 share/gtk-doc/html/gstreamer-libs-0.10/gdp-header.png
@@ -178,18 +187,20 @@ share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstBufferStraw.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstCheck.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstControllerGObject.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstDataQueue.html
-share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstNetClientClock.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstNetTimePacket.html
-share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstNetTimeProvider.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-GstTypeFindHelper.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-gstdataprotocol.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs-hierarchy.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-libs.html
 share/gtk-doc/html/gstreamer-libs-0.10/gstreamer-net.html
+share/gtk-doc/html/gstreamer-libs-0.10/home.png
 share/gtk-doc/html/gstreamer-libs-0.10/index.html
 share/gtk-doc/html/gstreamer-libs-0.10/index.sgml
 share/gtk-doc/html/gstreamer-libs-0.10/ix02.html
+share/gtk-doc/html/gstreamer-libs-0.10/left.png
+share/gtk-doc/html/gstreamer-libs-0.10/right.png
 share/gtk-doc/html/gstreamer-libs-0.10/style.css
+share/gtk-doc/html/gstreamer-libs-0.10/up.png
 share/gtk-doc/html/gstreamer-plugins-0.10/ch01.html
 share/gtk-doc/html/gstreamer-plugins-0.10/ch02.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-0.10.devhelp
@@ -208,9 +219,13 @@ share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-plugin-coreindexers.
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-queue.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-tee.html
 share/gtk-doc/html/gstreamer-plugins-0.10/gstreamer-plugins-typefind.html
+share/gtk-doc/html/gstreamer-plugins-0.10/home.png
 share/gtk-doc/html/gstreamer-plugins-0.10/index.html
 share/gtk-doc/html/gstreamer-plugins-0.10/index.sgml
+share/gtk-doc/html/gstreamer-plugins-0.10/left.png
+share/gtk-doc/html/gstreamer-plugins-0.10/right.png
 share/gtk-doc/html/gstreamer-plugins-0.10/style.css
+share/gtk-doc/html/gstreamer-plugins-0.10/up.png
 share/locale/af/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/az/LC_MESSAGES/gstreamer-0.10.mo
 share/locale/be/LC_MESSAGES/gstreamer-0.10.mo
