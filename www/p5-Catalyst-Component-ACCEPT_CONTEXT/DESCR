@@ -1,0 +1,16 @@
+Models and Views don't usually have access to the request object,
+since they probably don't really need it. Sometimes, however, having
+the request context available outside of Controllers makes your
+application cleaner. If that's the case, just use this module as
+a base class:
+
+    package MyApp::Model::Foobar;
+    use base qw|Catalyst::Component::ACCEPT_CONTEXT Catalyst::Model|;
+
+Then, you'll be able to get the current request object from within
+your model:
+
+    sub do_something {
+	my $self = shift;
+	print "The current URL is ". $self->context->req->uri->as_string;
+    }
