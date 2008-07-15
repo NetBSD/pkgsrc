@@ -1,0 +1,3 @@
+This plugin uses a Rose::DB::Object object to authenticate an user.
+It is based on Catalyst::Plugin::Authentication::Store::DBIC. Please
+read there for a much better description.
