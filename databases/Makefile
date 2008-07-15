@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.255 2008/07/15 08:46:51 abs Exp $
+# $NetBSD: Makefile,v 1.256 2008/07/15 09:34:13 abs Exp $
 #
 
 COMMENT=	Databases
@@ -66,6 +66,10 @@ SUBDIR+=	p5-AddressBook
 SUBDIR+=	p5-Apache-DBI
 SUBDIR+=	p5-BerkeleyDB
 SUBDIR+=	p5-CDB_File
+SUBDIR+=	p5-Catalyst-Model-DBIC-Schema
+SUBDIR+=	p5-Catalyst-Model-RDBO
+SUBDIR+=	p5-CatalystX-CRUD
+SUBDIR+=	p5-CatalystX-CRUD-Model-RDBO
 SUBDIR+=	p5-Class-DBI
 SUBDIR+=	p5-Class-DBI-AbstractSearch
 SUBDIR+=	p5-Class-DBI-Pg
@@ -106,6 +110,7 @@ SUBDIR+=	p5-Palm
 SUBDIR+=	p5-Rose-DB
 SUBDIR+=	p5-Rose-DB-Object
 SUBDIR+=	p5-Rose-DBx-Garden
+SUBDIR+=	p5-Rose-DBx-Garden-Catalyst
 SUBDIR+=	p5-Rose-DBx-TestDB
 SUBDIR+=	p5-SQL-Abstract
 SUBDIR+=	p5-SQL-Abstract-Limit
