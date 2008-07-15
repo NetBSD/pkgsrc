@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.559 2008/07/15 08:47:01 abs Exp $
+# $NetBSD: Makefile,v 1.560 2008/07/15 09:35:31 abs Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -237,6 +237,30 @@ SUBDIR+=	p5-CSS
 SUBDIR+=	p5-CSS-Squish
 SUBDIR+=	p5-Captcha-reCAPTCHA
 SUBDIR+=	p5-Captcha-reCAPTCHA-Mailhide
+SUBDIR+=	p5-Catalyst-Action-RenderView
+SUBDIR+=	p5-Catalyst-Authentication-Store-DBIx-Class
+SUBDIR+=	p5-Catalyst-Component-ACCEPT_CONTEXT
+SUBDIR+=	p5-Catalyst-Controller-BindLex
+SUBDIR+=	p5-Catalyst-Controller-FormBuilder
+SUBDIR+=	p5-Catalyst-Devel
+SUBDIR+=	p5-Catalyst-Manual
+SUBDIR+=	p5-Catalyst-Plugin-Authentication
+SUBDIR+=	p5-Catalyst-Plugin-Authentication-Store-DBIC
+SUBDIR+=	p5-Catalyst-Plugin-Authentication-Store-RDBO
+SUBDIR+=	p5-Catalyst-Plugin-Authorization-Roles
+SUBDIR+=	p5-Catalyst-Plugin-ConfigLoader
+SUBDIR+=	p5-Catalyst-Plugin-Session
+SUBDIR+=	p5-Catalyst-Plugin-Session-State-Cookie
+SUBDIR+=	p5-Catalyst-Plugin-Session-Store-DBIC
+SUBDIR+=	p5-Catalyst-Plugin-Session-Store-Delegate
+SUBDIR+=	p5-Catalyst-Plugin-Session-Store-FastMmap
+SUBDIR+=	p5-Catalyst-Plugin-Session-Store-File
+SUBDIR+=	p5-Catalyst-Plugin-StackTrace
+SUBDIR+=	p5-Catalyst-Plugin-Static-Simple
+SUBDIR+=	p5-Catalyst-Runtime
+SUBDIR+=	p5-Catalyst-View-JSON
+SUBDIR+=	p5-Catalyst-View-TT
+SUBDIR+=	p5-CatalystX-CRUD-Controller-RHTMLO
 SUBDIR+=	p5-FCGI
 SUBDIR+=	p5-FCGI-ProcManager
 SUBDIR+=	p5-HTML-Clean
@@ -324,6 +348,7 @@ SUBDIR+=	p5-Template-Stash-HTML-Entities
 SUBDIR+=	p5-Template-Timer
 SUBDIR+=	p5-Template-Toolkit
 SUBDIR+=	p5-Test-WWW-Mechanize
+SUBDIR+=	p5-Test-WWW-Mechanize-Catalyst
 SUBDIR+=	p5-URI
 SUBDIR+=	p5-URI-Fetch
 SUBDIR+=	p5-VRML
