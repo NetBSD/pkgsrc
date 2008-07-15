@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1496 2008/07/14 23:02:47 christos Exp $
+$NetBSD: CHANGES-2008,v 1.1497 2008/07/15 02:03:35 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2530,3 +2530,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/p5-SQL-Abstract to 1.24 [he 2008-07-14]
 	Updated databases/p5-DBI to 1.605 [he 2008-07-14]
 	Updated x11/openmotif to 2.3.1 [christos 2008-07-14]
+	Updated net/aria2 to 0.14.0.1 [bjs 2008-07-15]
