@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/07/15 09:17:28 abs Exp $
+
+SHA1 (Catalyst-Plugin-Authentication-Store-DBIC-0.10.tar.gz) = ac9f328162a83c085cadda3e0c3c37941a09c6b7
+RMD160 (Catalyst-Plugin-Authentication-Store-DBIC-0.10.tar.gz) = 9ffcabb25b231b02d62828fe75edef44f38a23a7
+Size (Catalyst-Plugin-Authentication-Store-DBIC-0.10.tar.gz) = 31679 bytes
