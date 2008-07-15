@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.3 2005/04/05 15:34:33 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/15 15:33:46 mishka Exp $
 
 DISTNAME=		grdc-20031019
 CATEGORIES=		time
 MASTER_SITES=		ftp://ftp.terabyte.com.ua/pub/software/time/
 
-MAINTAINER=		mishka@terabyte.com.ua
+MAINTAINER=		mishka@NetBSD.org
 HOMEPAGE=		http://www.FreeBSD.org/
 COMMENT=		Grand digital clock from FreeBSD-current games
 
