@@ -1,0 +1,6 @@
+This module will attempt to load find and load a configuration file
+of various types. Currently it supports YAML, JSON, XML, INI and
+Perl formats. Special configuration for a particular driver format
+can be stored in
+
+MyApp->config->{ 'Plugin::ConfigLoader' }->{ driver }.
