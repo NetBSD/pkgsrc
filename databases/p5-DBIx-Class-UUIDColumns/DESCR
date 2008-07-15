@@ -1,0 +1,12 @@
+This DBIx::Class component resembles the behaviour of Class::DBI::UUID,
+to make some columns implicitly created as uuid.
+
+When loaded, UUIDColumns will search for a suitable uuid generation
+module from the following list of supported modules:
+
+    Data::UUID APR::UUID* UUID Win32::Guidgen Win32API::GUID
+
+If no supporting module can be found, an exception will be thrown.
+
+*APR::UUID will not be loaded under OpenBSD due to an as yet
+unidentified XS issue.

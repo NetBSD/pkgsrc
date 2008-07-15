@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/07/15 08:42:34 abs Exp $
+
+SHA1 (DBIx-Class-UUIDColumns-0.02005.tar.gz) = 145b25b2e91e954c2d6b7434789b375aca6c7b71
+RMD160 (DBIx-Class-UUIDColumns-0.02005.tar.gz) = 6ff995b4109edb64dc2cf024777d86353b6b7e38
+Size (DBIx-Class-UUIDColumns-0.02005.tar.gz) = 23323 bytes
