@@ -1,3 +1,5 @@
+$NetBSD: patch-de,v 1.6 2008/07/15 09:14:01 adam Exp $
+
 --- agent/mibgroup/mibII/ipv6.c.orig	2007-05-25 01:01:04 +0300
 +++ agent/mibgroup/mibII/ipv6.c	2008-05-26 22:26:32 +0300
 @@ -11,7 +11,7 @@

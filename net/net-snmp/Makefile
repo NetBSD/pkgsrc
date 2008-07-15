@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.71 2008/06/28 16:07:08 christos Exp $
+# $NetBSD: Makefile,v 1.72 2008/07/15 09:14:01 adam Exp $
 
-DISTNAME=	net-snmp-5.4.1
-PKGREVISION=	5
+DISTNAME=	net-snmp-5.4.1.2
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=net-snmp/}
 
@@ -17,7 +16,7 @@ GNU_CONFIGURE=		yes
 
 MAKE_JOBS_SAFE=		NO
 
-MAKE_ENV+=	OPSYS=${OPSYS:Q}
+MAKE_ENV+=	OPSYS=${OPSYS}
 
 # The self-test of Perl modules only works after installation because perl
 # can't load the shared libraries from WRKSRC/
@@ -54,7 +53,7 @@ BUILD_DEFS+=		NET_SNMP_MIBDIRS
 
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-defaults
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--with-libwrap=${BUILDLINK_PREFIX.tcp_wrappers}/lib
 CONFIGURE_ARGS+=	--with-sys-contact=${NET_SNMP_SYS_CONTACT:Q}
 CONFIGURE_ARGS+=	--with-sys-location=${NET_SNMP_SYS_LOCATION:Q}
@@ -65,7 +64,7 @@ CONFIGURE_ARGS+=	--with-sys-location=${NET_SNMP_SYS_LOCATION:Q}
 # will use '-s' to enable standard syslog logging anyway.
 #
 CONFIGURE_ARGS+=	--with-logfile=none
-CONFIGURE_ARGS+=	--with-persistent-directory=${NET_SNMP_PERSISTENTDIR:Q}
+CONFIGURE_ARGS+=	--with-persistent-directory=${NET_SNMP_PERSISTENTDIR}
 .if !empty(NET_SNMP_MIBDIRS)
 CONFIGURE_ARGS+=	--with-mibdirs=${NET_SNMP_MIBDIRS:Q}
 .endif
