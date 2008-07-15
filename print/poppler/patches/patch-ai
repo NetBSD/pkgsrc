@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.5 2008/07/15 10:34:21 drochner Exp $
+
+--- configure.orig	2008-07-02 16:30:43.000000000 +0200
++++ configure
+@@ -27984,7 +27984,7 @@ fi
+ if test x$enable_poppler_qt4 = xyes; then
+   { echo "$as_me:$LINENO: checking for Qt4 moc" >&5
+ echo $ECHO_N "checking for Qt4 moc... $ECHO_C" >&6; }
+-  MOCQT4=`which moc`
++  MOCQT4=${QTDIR}/bin/moc
+   mocversion=`$MOCQT4 -v 2>&1`
+   mocversiongrep=`echo $mocversion | grep "Qt 4"`
+   if test x"$mocversiongrep" != x"$mocversion"; then
