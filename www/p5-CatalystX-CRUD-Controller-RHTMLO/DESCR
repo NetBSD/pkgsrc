@@ -1,0 +1,3 @@
+This is an implementation of CatalystX::CRUD::Controller for
+Rose::HTML::Objects. It supercedes Catalyst::Controller::Rose for
+basic CRUD applications.
