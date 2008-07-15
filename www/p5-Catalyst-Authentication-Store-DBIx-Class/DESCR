@@ -1,0 +1,3 @@
+The Catalyst::Authentication::Store::DBIx::Class class provides
+access to authentication information stored in a database via
+DBIx::Class.
