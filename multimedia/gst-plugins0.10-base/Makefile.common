@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.14 2008/04/10 12:00:45 drochner Exp $
+# $NetBSD: Makefile.common,v 1.15 2008/07/15 10:09:40 drochner Exp $
 #
 
 GST_PLUGINS0.10_TYPE=	base
-GST_PLUGINS0.10_VER=	0.10.19
+GST_PLUGINS0.10_VER=	0.10.20
+BUILDLINK_API_DEPENDS.gstreamer0.10+= gstreamer0.10>=0.10.20
 
 # Disable all drivers and features by default.
 .for driver in	alsa \
