@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.254 2008/07/14 14:34:56 abs Exp $
+# $NetBSD: Makefile,v 1.255 2008/07/15 08:46:51 abs Exp $
 #
 
 COMMENT=	Databases
@@ -83,6 +83,12 @@ SUBDIR+=	p5-DBI
 SUBDIR+=	p5-DBI-Shell
 SUBDIR+=	p5-DBIWrapper
 SUBDIR+=	p5-DBIx-Abstract
+SUBDIR+=	p5-DBIx-Class
+SUBDIR+=	p5-DBIx-Class-DigestColumns
+SUBDIR+=	p5-DBIx-Class-Loader
+SUBDIR+=	p5-DBIx-Class-Schema-Loader
+SUBDIR+=	p5-DBIx-Class-UUIDColumns
+SUBDIR+=	p5-DBIx-Class-Validation
 SUBDIR+=	p5-DBIx-ContextualFetch
 SUBDIR+=	p5-DBIx-DBSchema
 SUBDIR+=	p5-DBIx-Datasource
@@ -99,6 +105,8 @@ SUBDIR+=	p5-Net-MySQL
 SUBDIR+=	p5-Palm
 SUBDIR+=	p5-Rose-DB
 SUBDIR+=	p5-Rose-DB-Object
+SUBDIR+=	p5-Rose-DBx-Garden
+SUBDIR+=	p5-Rose-DBx-TestDB
 SUBDIR+=	p5-SQL-Abstract
 SUBDIR+=	p5-SQL-Abstract-Limit
 SUBDIR+=	p5-SQL-ReservedWords
