@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1505 2008/07/15 17:52:42 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1506 2008/07/15 18:18:14 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2585,3 +2585,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated wm/awesome to 2.3.2 [ahoka 2008-07-15]
 	Updated devel/p5-Test-Script to 1.03 [rhaen 2008-07-15]
 	Updated textproc/p5-XML-Encoding to 2.03 [rhaen 2008-07-15]
+	Updated devel/p5-Event to 1.11 [rhaen 2008-07-15]
