@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1502 2008/07/15 12:18:03 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1503 2008/07/15 15:03:27 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2581,3 +2581,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/p5-Handel version 1.00010 [abs 2008-07-15]
 	Added security/p5-Crypt-GPG version 1.63 [abs 2008-07-15]
 	Updated textproc/p5-XML-Writer to 0.604 [rhaen 2008-07-15]
+	Updated lang/clisp to 2.46 [ahoka 2008-07-15]
+	Updated wm/awesome to 2.3.2 [ahoka 2008-07-15]
