@@ -1,0 +1,10 @@
+This DBIx::Class component can be used to automatically insert a
+message digest of selected columns. By default DigestColumns will
+use Digest::MD5 to insert a 128-bit hexadecimal message digest of
+the column value.
+
+The length of the inserted string will be 32 and it will only
+contain characters from this set: '0'..'9' and 'a'..'f'.
+
+If you would like to use a specific digest module to create your
+message digest, you can set "digest_algorithm":
