@@ -1,0 +1,11 @@
+--- Makefile.in.orig	2005-09-16 09:03:54.000000000 -0400
++++ Makefile.in	2008-06-28 18:20:25.000000000 -0400
+@@ -557,7 +557,7 @@
+ 
+ info-am:
+ 
+-install-data-am: install-data-local
++install-data-am:
+ 
+ install-exec-am:
+ 

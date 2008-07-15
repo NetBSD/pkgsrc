@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1506 2008/07/15 18:18:14 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1507 2008/07/15 19:48:15 christos Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2586,3 +2586,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Test-Script to 1.03 [rhaen 2008-07-15]
 	Updated textproc/p5-XML-Encoding to 2.03 [rhaen 2008-07-15]
 	Updated devel/p5-Event to 1.11 [rhaen 2008-07-15]
+	Added x11/xlt version 13.0.13 [christos 2008-07-15]
