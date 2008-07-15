@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/07/15 09:46:22 abs Exp $
+
+SHA1 (Crypt-GPG-1.63.tar.gz) = 514c4dbad56ee6121e8e2b7f250d45f03ea50c3a
+RMD160 (Crypt-GPG-1.63.tar.gz) = d16ab3c2f94c44551be59bab8b34bc28896076f6
+Size (Crypt-GPG-1.63.tar.gz) = 18983 bytes
