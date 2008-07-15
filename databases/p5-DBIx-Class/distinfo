@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/07/15 08:41:32 abs Exp $
+
+SHA1 (DBIx-Class-0.08010.tar.gz) = f2d5000cd42e85314c076a8cac8dd3c8bda241a5
+RMD160 (DBIx-Class-0.08010.tar.gz) = bf2343982346b88e83255915bf245ac202847875
+Size (DBIx-Class-0.08010.tar.gz) = 314731 bytes
