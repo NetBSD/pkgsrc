@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2008/04/15 17:45:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.21 2008/07/15 10:23:22 drochner Exp $
 include/evolution-data-server-2.22/camel/broken-date-parser.h
 include/evolution-data-server-2.22/camel/camel-address.h
 include/evolution-data-server-2.22/camel/camel-arg.h
@@ -172,6 +172,7 @@ include/evolution-data-server-2.22/libebook/e-contact.h
 include/evolution-data-server-2.22/libebook/e-destination.h
 include/evolution-data-server-2.22/libebook/e-name-western.h
 include/evolution-data-server-2.22/libebook/e-vcard.h
+include/evolution-data-server-2.22/libecal/e-cal-check-timezones.h
 include/evolution-data-server-2.22/libecal/e-cal-component.h
 include/evolution-data-server-2.22/libecal/e-cal-recur.h
 include/evolution-data-server-2.22/libecal/e-cal-time-util.h
