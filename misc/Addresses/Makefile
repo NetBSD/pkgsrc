@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/01/18 05:08:32 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2008/07/15 17:20:03 joerg Exp $
 #
 
 DISTNAME=		Addresses-0.4.6
@@ -13,7 +13,8 @@ COMMENT=		Address book for GNUstep
 USE_LANGUAGES=		objc
 
 NO_CONFIGURE=		yes
-MAKE_ENV+=		Addresses_OBJCFLAGS=-I..
+MAKE_ENV+=		Addresses_OBJCFLAGS=-I.. \
+			GNUSTEP_INSTALLATION_DIR=${PREFIX}/share/GNUstep/Local/
 MAKE_FILE=		GNUmakefile
 
 .include "../../devel/gnustep-base/buildlink3.mk"
