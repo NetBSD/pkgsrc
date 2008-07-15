@@ -1,0 +1,10 @@
+DBIx::Class::Loader automates the definition of DBIx::Class
+sub-classes by scanning table schemas and setting up columns and
+primary keys.
+
+This module is deprecated in favor of DBIx::Class::Schema::Loader
+for use with DBIx::Class versions 0.05 and higher. It continues to
+function as well as it ever did, even for recent DBIx::Class
+releases, and will be maintained for some time to counter bugs,
+but it doesn't use the now-preferred DBIx::Class::Schema way of
+doing things, and tends to promote bad DBIx::Class usage habits.
