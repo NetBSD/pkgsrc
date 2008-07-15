@@ -1,0 +1,7 @@
+Handel is a cart/order/checkout framework with AxKit taglib support
+, TT2 (Template Toolkit) support and Catalyst::Helper support. It
+was created for the conversion of an IIS/ASP based commerce site
+to Apache/ModPerl, but I decided that it might be useful to others
+so here it is.
+
+For the curious, Handel is German for commerce.
