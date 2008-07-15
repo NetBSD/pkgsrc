@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1497 2008/07/15 02:03:35 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1498 2008/07/15 08:48:19 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2531,3 +2531,15 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/p5-DBI to 1.605 [he 2008-07-14]
 	Updated x11/openmotif to 2.3.1 [christos 2008-07-14]
 	Updated net/aria2 to 0.14.0.1 [bjs 2008-07-15]
+	Added databases/p5-DBIx-Class version 0.08010 [abs 2008-07-15]
+	Added databases/p5-DBIx-Class-DigestColumns version 0.06000 [abs 2008-07-15]
+	Added databases/p5-DBIx-Class-Loader version 0.21 [abs 2008-07-15]
+	Added databases/p5-DBIx-Class-Schema-Loader version 0.04005 [abs 2008-07-15]
+	Added databases/p5-DBIx-Class-UUIDColumns version 0.02005 [abs 2008-07-15]
+	Added databases/p5-DBIx-Class-Validation version 0.02003 [abs 2008-07-15]
+	Added databases/p5-Rose-DBx-Garden version 0.14 [abs 2008-07-15]
+	Added databases/p5-Rose-DBx-TestDB version 0.04 [abs 2008-07-15]
+	Added www/p5-Rose-HTML-Objects version 0.554 [abs 2008-07-15]
+	Added www/p5-Rose-HTMLx-Form-Field-Autocomplete version 0.02 [abs 2008-07-15]
+	Added www/p5-Rose-HTMLx-Form-Field-Boolean version 0.03 [abs 2008-07-15]
+	Added www/p5-Rose-URI version 0.022 [abs 2008-07-15]
