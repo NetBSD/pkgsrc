@@ -1,3 +1,5 @@
+$NetBSD: patch-am,v 1.8 2008/07/15 09:14:01 adam Exp $
+
 --- agent/mibgroup/host/hr_swrun.c.orig	2007-04-02 16:51:34 +0300
 +++ agent/mibgroup/host/hr_swrun.c	2007-09-12 21:41:48 +0300
 @@ -599,6 +599,8 @@
