@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1500 2008/07/15 09:36:20 abs Exp $
+$NetBSD: CHANGES-2008,v 1.1501 2008/07/15 09:47:27 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2578,3 +2578,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/p5-Catalyst-View-TT version 0.27 [abs 2008-07-15]
 	Added www/p5-CatalystX-CRUD-Controller-RHTMLO version 0.12 [abs 2008-07-15]
 	Added www/p5-Test-WWW-Mechanize-Catalyst version 0.42 [abs 2008-07-15]
+	Added www/p5-Handel version 1.00010 [abs 2008-07-15]
+	Added security/p5-Crypt-GPG version 1.63 [abs 2008-07-15]
