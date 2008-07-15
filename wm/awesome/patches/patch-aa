@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.4 2008/07/15 14:31:12 ahoka Exp $
+
+--- configure.orig	2008-07-15 13:31:31.000000000 +0200
++++ configure
+@@ -6101,7 +6101,7 @@ if test "${with_gtk+set}" = set; then
+ fi
+ 
+ 
+-if test "x$with_gtk" == "xyes"; then
++if test "x$with_gtk" = "xyes"; then
+ 
+ pkg_failed=no
+ { echo "$as_me:$LINENO: checking for GTK" >&5
