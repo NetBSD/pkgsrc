@@ -1,0 +1,5 @@
+This Catalyst::Plugin::Session storage module saves session data
+in your database via DBIx::Class. It's actually just a wrapper
+around Catalyst::Plugin::Session::Store::Delegate; if you need
+complete control over how your sessions are stored, you probably
+want to use that instead.
