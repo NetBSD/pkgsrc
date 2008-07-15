@@ -1,0 +1,7 @@
+Rose::DBx::Garden::Catalyst extends Rose::DBx::Garden to create
+Catalyst components that use the RDBO and RHTMLO classes that the
+Garden class produces.
+
+By default this class creates stub Template Toolkit files for use
+with the RDBO and RHTMLO CRUD components. If you use a different
+templating system, just set the tt option to 0.
