@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7384 2008/07/14 18:14:14 schmonz Exp $
+$NetBSD: TODO,v 1.7385 2008/07/15 02:04:01 bjs Exp $
 
 Suggested new packages
 ======================
@@ -438,7 +438,6 @@ Suggested package updates
 	o aqsis-1.2
 	o aranym-0.9.6
 	o argtable-2.9
-	o aria2-0.14.0
 	o arla-0.90
 	o arnold-20040104
 	o arping-2.06
