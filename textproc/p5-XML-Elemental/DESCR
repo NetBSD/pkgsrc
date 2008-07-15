@@ -1,0 +1,7 @@
+XML::Elemental is a SAX-based package for easily parsing XML documents
+into a more native and mostly object-oriented perl form.
+
+The development of this package grew out of the desire for something
+more object-oriented then XML::Simple and was more simplistic and
+perlish then the various standard XML API modules such as XML::DOM.
+Easier installation of modules was also a contributing factor.
