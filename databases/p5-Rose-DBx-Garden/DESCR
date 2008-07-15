@@ -1,0 +1,7 @@
+ose::DBx::Garden bootstraps Rose::DB::Object and Rose::HTML::Form
+based projects. The idea is that you can point the module at a
+database and end up with work-able RDBO and Form classes with a
+single method call.
+
+Rose::DBx::Garden inherits from Rose::DB::Object::Loader, so all
+the magic there is also available here.
