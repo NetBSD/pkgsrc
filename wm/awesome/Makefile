@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2008/07/08 14:28:53 ahoka Exp $
+# $NetBSD: Makefile,v 1.7 2008/07/15 14:31:12 ahoka Exp $
 #
 
-DISTNAME=		awesome-2.2
-PKGREVISION=		1
+DISTNAME=		awesome-2.3.2
 CATEGORIES=		wm
 MASTER_SITES=		http://awesome.naquadah.org/download/
 
@@ -15,7 +14,6 @@ BUILD_DEPENDS+=		asciidoc-[0-9]*:../../textproc/asciidoc
 BUILD_DEPENDS+=		xmlto-[0-9]*:../../textproc/xmlto
 
 EGDIR=			${PREFIX}/share/examples/awesome
-MESSAGE_SUBST+=		EGDIR=${EGDIR}/awesomerc
 
 USE_LANGUAGES=		c99
 GNU_CONFIGURE=		yes
@@ -27,8 +25,11 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/awesomerc ${DESTDIR}${EGDIR}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../devel/confuse/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
+.include "../../devel/pango/buildlink3.mk"
+.include "../../graphics/imlib2/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
