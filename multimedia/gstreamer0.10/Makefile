@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2008/06/20 01:09:28 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2008/07/15 10:05:31 drochner Exp $
 #
 
-DISTNAME=		gstreamer-0.10.19
+DISTNAME=		gstreamer-0.10.20
 PKGNAME=		${DISTNAME:S/gstreamer/gstreamer0.10/}
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		http://gstreamer.freedesktop.org/src/gstreamer/
@@ -22,6 +22,9 @@ CONFIGURE_ARGS+=	--disable-examples
 CONFIGURE_ARGS+=	--disable-tests
 CONFIGURE_ENV+=		ac_cv_path_PYTHON=${TRUE:Q}
 CONFIGURE_ENV+=		ac_cv_path_XSLTPROC=${TRUE:Q}
+
+BUILD_DEPENDS+=		flex>=2.5.31:../../devel/flex
+TOOLS_PLATFORM.flex=	${LOCALBASE}/bin/flex
 
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-base-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	pkgconfig/gstreamer-base.pc.in
