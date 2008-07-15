@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1508 2008/07/15 20:39:02 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1509 2008/07/15 22:21:05 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2588,3 +2588,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Event to 1.11 [rhaen 2008-07-15]
 	Added x11/xlt version 13.0.13 [christos 2008-07-15]
 	Updated devel/p5-AnyEvent to 4.9 [rhaen 2008-07-15]
+	Updated devel/p5-Test-Deep to 0.103 [rhaen 2008-07-15]
