@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2008/01/18 05:09:38 tnn Exp $
+# $NetBSD: Makefile,v 1.49 2008/07/15 16:39:55 joerg Exp $
 #
 
 DISTNAME=		krb4-1.2.2
@@ -46,6 +46,19 @@ SUBST_CLASSES+=		paths
 SUBST_FILES.paths=	${WRKSRC}/lib/kafs/kafs.h
 SUBST_SED.paths+=	-e 's|/usr/arla/etc/|${PKG_SYSCONFDIR}|g'
 SUBST_STAGE.paths=	post-patch
+
+.if ${OPSYS} == "NetBSD"
+PLIST.glob=			yes
+CONFIGURE_ARGS+=	--with-readline=yes \
+	--with-readline-lib=${BUILDLINK_PREFIX.readline}/lib \
+	--with-readline-include=${BUILDLINK_PREFIX.readline}/include/readline \
+	ac_cv_funclib_bswap16=yes \
+	ac_cv_funclib_bswap32=yes
+
+.include "../../devel/readline/buildlink3.mk"
+.endif
+
+PLIST_VARS+=		glob
 
 post-install:
 	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
