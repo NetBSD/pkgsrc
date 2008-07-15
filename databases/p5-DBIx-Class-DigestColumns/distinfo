@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/07/15 08:41:47 abs Exp $
+
+SHA1 (DBIx-Class-DigestColumns-0.06000.tar.gz) = 2c30895eae69aad262439cff55a31bbe241fe65c
+RMD160 (DBIx-Class-DigestColumns-0.06000.tar.gz) = 04c6fe27f19723727a7dde23b6ceeef42a61d227
+Size (DBIx-Class-DigestColumns-0.06000.tar.gz) = 9083 bytes
