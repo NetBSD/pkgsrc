@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.22 2008/06/20 01:09:35 joerg Exp $
+# $NetBSD: Makefile,v 1.23 2008/07/15 11:13:30 drochner Exp $
 
-DISTNAME=	seahorse-2.22.2
-PKGNAME=	seahorse-nautilus-2.22.2
+DISTNAME=	seahorse-2.22.3
+PKGNAME=	seahorse-nautilus-2.22.3
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/seahorse/2.22/}
 EXTRACT_SUFX=	.tar.bz2
