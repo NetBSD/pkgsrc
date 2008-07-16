@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2008/03/27 14:24:36 bjs Exp $
+$NetBSD: patch-aa,v 1.4 2008/07/16 07:21:23 bjs Exp $
 
---- configure.orig	2008-03-16 09:09:14.000000000 -0400
+--- configure.orig	2008-07-15 11:59:07.000000000 -0400
 +++ configure
 @@ -33,7 +33,7 @@ APP_LINGUAS='ca da de es fi ga nl pl pt_
  CFG_AO=oss
@@ -20,7 +20,7 @@ $NetBSD: patch-aa,v 1.3 2008/03/27 14:24:36 bjs Exp $
  	CFG_SETPROCTITLE=yes
  	[ "$PREFIX" = "" ] && PREFIX=/usr/local
  	[ "$MANDIR" = "" ] && MANDIR=$PREFIX/man
-@@ -319,13 +319,13 @@ oss)
+@@ -320,13 +320,13 @@ oss)
  	NetBSD|OpenBSD)
  		CFLAGS="$CFLAGS -DOSS_HEADER=\\<soundcard.h\\>"
  		LDFLAGS="$LDFLAGS -lossaudio"
@@ -36,7 +36,7 @@ $NetBSD: patch-aa,v 1.3 2008/03/27 14:24:36 bjs Exp $
  		;;
  	esac
  	CFG_VOLUME=yes
-@@ -363,7 +363,7 @@ echo "- Using $CFG_AO audio output"
+@@ -364,7 +364,7 @@ echo "- Using $CFG_AO audio output"
  echo
  
  # Perform a simple compiler test
@@ -45,7 +45,7 @@ $NetBSD: patch-aa,v 1.3 2008/03/27 14:24:36 bjs Exp $
  if [ $? -ne 0 ]
  then
  	echo "Error: some dependencies are missing"
-@@ -390,13 +390,13 @@ done
+@@ -391,13 +391,13 @@ done
  all: $APP_NAME$CFG_BINEXT $APP_NAME.1.gz $SRCDIR/$APP_NAME.conf.sample $MOS
  $APP_NAME$CFG_BINEXT: $OBJS
  	# Linking $APP_NAME$CFG_BINEXT
@@ -62,7 +62,7 @@ $NetBSD: patch-aa,v 1.3 2008/03/27 14:24:36 bjs Exp $
  	${DOIT}rm -Rf *.dSYM
  distclean: clean
  	# Removing Makefile
-@@ -405,29 +405,29 @@ Makefile: $0 `dirname $0`/depends
+@@ -406,29 +406,29 @@ Makefile: $0 `dirname $0`/depends
  	# WARNING: Your Makefile is outdated. Please re-run $0!
  install: all
  	# Installing \$(DESTDIR)$BINDIR/$APP_NAME$CFG_BINEXT
@@ -104,7 +104,7 @@ $NetBSD: patch-aa,v 1.3 2008/03/27 14:24:36 bjs Exp $
  EOF
  for i in $CFG_LINGUAS
  do
-@@ -444,7 +444,7 @@ do
+@@ -445,7 +445,7 @@ do
  	done
  	echo "$i.o: Makefile $SRCDIR/src/$i.c $SRCDIR/src/stdinc.h $DEPS"
  	echo "	# Compiling $i.o"
