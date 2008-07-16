@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7387 2008/07/15 23:50:14 obache Exp $
+$NetBSD: TODO,v 1.7388 2008/07/16 07:04:02 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1275,7 +1275,6 @@ Suggested package updates
 	o sope-4.5.9
 	o sound-juicer-2.16.4 [needs nautilus-cd-burner>=2.15.3]
 	o sound-juicer-2.22.0
-	o spamdyke-4.0.0
 	o spcaview-20060501
 	o spim-7.3
 	o sqlite3-ruby-1.2.2
