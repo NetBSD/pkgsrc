@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1528 2008/07/16 14:46:57 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1529 2008/07/16 15:45:17 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2611,3 +2611,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/p5-Digest-CRC to 0.14 [rhaen 2008-07-16]
 	Updated devel/p5-Event-RPC to 1.00 [rhaen 2008-07-16]
 	Updated devel/p5-ExtUtils-F77 to 1.16 [rhaen 2008-07-16]
+	Updated www/seamonkey to 1.1.11 [ghen 2008-07-16]
+	Updated www/seamonkey-bin to 1.1.11 [ghen 2008-07-16]
+	Updated www/seamonkey-gtk1 to 1.1.11 [ghen 2008-07-16]
