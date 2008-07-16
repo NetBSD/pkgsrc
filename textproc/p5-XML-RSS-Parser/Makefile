@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:51 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/07/16 09:30:37 rhaen Exp $
 
 DISTNAME=	XML-RSS-Parser-4.0
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
+PKGREVISION=	1
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	rhaen@NetBSD.org
 COMMENT=	Liberal object-oriented parser for RSS feeds
 
 DEPENDS+=	p5-XML-SAX-[0-9]*:../../textproc/p5-XML-SAX
+DEPENDS+=	p5-XML-Elemental>=2.0:../../textproc/p5-XML-Elemental
 DEPENDS+=	p5-Class-XPath>=1.4:../../devel/p5-Class-XPath
 DEPENDS+=	p5-Class-ErrorHandler-[0-9]*:../../devel/p5-Class-ErrorHandler
 
