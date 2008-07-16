@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1520 2008/07/16 09:53:50 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.1521 2008/07/16 12:09:31 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2602,3 +2602,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/firefox to 2.0.0.16 [ghen 2008-07-16]
 	Updated www/firefox-bin to 2.0.0.16 [ghen 2008-07-16]
 	Updated www/firefox-gtk1 to 2.0.0.16 [ghen 2008-07-16]
+	Updated textproc/p5-XML-Twig to 3.32 [rhaen 2008-07-16]
