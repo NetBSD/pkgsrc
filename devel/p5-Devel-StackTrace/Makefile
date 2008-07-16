@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2008/04/06 14:53:57 heinz Exp $
+# $NetBSD: Makefile,v 1.19 2008/07/16 13:49:21 rhaen Exp $
 #
 
-DISTNAME=		Devel-StackTrace-1.18
+DISTNAME=		Devel-StackTrace-1.1901
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5dst
 CATEGORIES=		devel perl5
@@ -14,8 +14,6 @@ COMMENT=		Perl5 module for stack trace and stack trace frame objects
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Test-Simple>=0.46:../../devel/p5-Test-Simple
-
-USE_LANGUAGES=		# none
 
 PERL5_PACKLIST=		auto/Devel/StackTrace/.packlist
 
