@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.4 2008/01/07 23:15:01 abs Exp $
+$NetBSD: distinfo,v 1.5 2008/07/16 20:54:50 abs Exp $
 
-SHA1 (postgresql-8.1-411.jdbc3.jar) = be21ba73b0b651ee05e202fbf497e5f4bfb27dd0
-RMD160 (postgresql-8.1-411.jdbc3.jar) = 2c6b5a4b56fe8ccd0670de714d98ea7d0bdd8944
-Size (postgresql-8.1-411.jdbc3.jar) = 408401 bytes
-SHA1 (postgresql-jdbc-8.1-411.src.tar.gz) = 62ba3066c127f00317f8496bb21b3de4560a72f4
-RMD160 (postgresql-jdbc-8.1-411.src.tar.gz) = c067ac5d1f679eb708dffd08d9892e07e796ceb9
-Size (postgresql-jdbc-8.1-411.src.tar.gz) = 489183 bytes
+SHA1 (postgresql-8.1-412.jdbc3.jar) = e6d2500134a8868148ce9fd1d8bf02702df287a5
+RMD160 (postgresql-8.1-412.jdbc3.jar) = 40c958ff04b8a9b6b0bcbdd75177900c25d570e1
+Size (postgresql-8.1-412.jdbc3.jar) = 408785 bytes
+SHA1 (postgresql-jdbc-8.1-412.src.tar.gz) = 8f73fb87707bd6a82b5096fa6f264c2ab034354d
+RMD160 (postgresql-jdbc-8.1-412.src.tar.gz) = 47f7f0690848cd106cea0260087ead6f9eba65b7
+Size (postgresql-jdbc-8.1-412.src.tar.gz) = 491205 bytes
