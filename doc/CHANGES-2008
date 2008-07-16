@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1530 2008/07/16 19:12:06 drochner Exp $
+$NetBSD: CHANGES-2008,v 1.1531 2008/07/16 20:57:07 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2635,3 +2635,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/py-gstreamer0.10 to 0.10.12 [drochner 2008-07-16]
 	Updated multimedia/gst-plugins0.10-base to 0.10.20 [drochner 2008-07-16]
 	Updated multimedia/gstreamer0.10 to 0.10.20 [drochner 2008-07-16]
+	Added databases/jdbc-postgresql83 version 603 [abs 2008-07-16]
+	Updated databases/jdbc-postgresql81 to 412 [abs 2008-07-16]
+	Updated databases/jdbc-postgresql82 to 508 [abs 2008-07-16]
