@@ -2,7 +2,7 @@ CMus is a small and fast music player using the ncurses library.
 CMus has vi-style command interface, e.g. searching using '/' or
 '?' and adding files to playlist ':add ~/foo.ogg'.
 
-  * Plays FLAC, OGG, MP3, WAV, modules
+  * Plays FLAC, OGG, MP3, MP4, AAC, WAV, WV and modules
   * MP3 and Ogg streaming (Shoutcast/Icecast)
   * WinAmp / XMMS keys "zxcvb"
   * Can be controlled via UNIX socket
