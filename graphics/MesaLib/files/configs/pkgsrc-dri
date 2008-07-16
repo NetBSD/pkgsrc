@@ -1,4 +1,4 @@
-# $NetBSD: pkgsrc-dri,v 1.1 2008/04/24 07:40:24 bjs Exp $
+# $NetBSD: pkgsrc-dri,v 1.2 2008/07/16 06:34:00 bjs Exp $
 
 include $(TOP)/configs/pkgsrc
 
@@ -36,5 +36,5 @@ DRIVER_DIRS=	dri
 PROGRAM_DIRS=	# defined
 WINDOW_SYSTEM=	dri
 
-DRI_DIRS?=	i810 i915 i915tex i965 mach64 mga r128 r200  \
+DRI_DIRS?=	i810 i915 i965 mach64 mga r128 r200  \
 		r300 radeon tdfx unichrome savage sis
