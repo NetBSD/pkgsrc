@@ -1,13 +1,19 @@
-@comment $NetBSD: PLIST,v 1.5 2008/05/10 14:56:33 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/07/16 14:04:29 ahoka Exp $
 bin/cmus
 bin/cmus-remote
-lib/cmus/ip/flac.so
-lib/cmus/ip/mad.so
-lib/cmus/ip/modplug.so
-lib/cmus/ip/vorbis.so
+${PLIST.flac}lib/cmus/ip/flac.so
+${PLIST.mad}lib/cmus/ip/mad.so
+${PLIST.modplug}lib/cmus/ip/modplug.so
+${PLIST.mikmod}lib/cmus/ip/mikmod.so
+${PLIST.vorbis}lib/cmus/ip/vorbis.so
+${PLIST.faad}lib/cmus/ip/aac.so
+${PLIST.faad}lib/cmus/ip/mp4.so
+${PLIST.mpcdec}lib/cmus/ip/mpc.so
 lib/cmus/ip/wav.so
-lib/cmus/op/ao.so
-lib/cmus/op/oss.so
+${PLIST.wavpack}lib/cmus/ip/wavpack.so
+${PLIST.arts}lib/cmus/op/arts.so
+${PLIST.ao}lib/cmus/op/ao.so
+${PLIST.oss}lib/cmus/op/oss.so
 ${PLIST.sunaudio}lib/cmus/op/sun.so
 man/man1/cmus-remote.1
 man/man1/cmus.1
