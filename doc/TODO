@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7389 2008/07/16 07:23:08 bjs Exp $
+$NetBSD: TODO,v 1.7390 2008/07/16 09:49:52 rhaen Exp $
 
 Suggested new packages
 ======================
@@ -1047,7 +1047,6 @@ Suggested package updates
 	o p5-Test-Harness-2.64
 	o p5-Test-Unit-0.25
 	o p5-Text-Tabs+Wrap-2006.1117
-	o p5-XML-RAI-1.04
 	o p5-glib2-1.183
 	o p5-gtk2-1.183
 	o p5-ispman-1.2
