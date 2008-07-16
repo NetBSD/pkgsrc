@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.7 2006/11/06 13:40:41 obache Exp $
+$NetBSD: distinfo,v 1.8 2008/07/16 12:06:07 rhaen Exp $
 
-SHA1 (XML-Twig-3.26.tar.gz) = 48908a87f96929e1424fe525702f7e960dc72099
-RMD160 (XML-Twig-3.26.tar.gz) = 04f779fbcf14c2dcb7fc4793f48470278239398c
-Size (XML-Twig-3.26.tar.gz) = 314894 bytes
-SHA1 (patch-aa) = 6abdbfdaf5c22020b34006cf13a097ad891ca782
+SHA1 (XML-Twig-3.32.tar.gz) = f8fb38e0e088f2c56c7eb4d804d943872e6ddf98
+RMD160 (XML-Twig-3.32.tar.gz) = 922374f2e8907a13629569e8fdd9c2f86c32f412
+Size (XML-Twig-3.32.tar.gz) = 345665 bytes
+SHA1 (patch-aa) = 350c2a1529de24171bdd7772d97e87d5f156a061
 SHA1 (patch-ab) = 1f7703b0cb1218b01f5187d86c98c6266f66d8ef
