@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/07/14 09:32:12 abs Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/16 00:13:02 seb Exp $
 
 DISTNAME=	FormValidator-Simple-0.23
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/L/LY/LYOKATO/}
 
@@ -22,6 +23,7 @@ DEPENDS+=	p5-YAML>=0.39:../../textproc/p5-YAML
 DEPENDS+=	p5-List-MoreUtils>=0.16:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Scalar-List-Utils>=0:../../devel/p5-Scalar-List-Utils
 DEPENDS+=	p5-DateTime-Format-Strptime>=1.0700:../../time/p5-DateTime-Format-Strptime
+DEPENDS+=	p5-Date-Calc>=5.4:../../devel/p5-Date-Calc
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/FormValidator/Simple/.packlist
