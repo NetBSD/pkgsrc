@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2008/05/28 23:57:27 schmonz Exp $
+# $NetBSD: Makefile,v 1.14 2008/07/16 07:03:21 schmonz Exp $
 #
 
-DISTNAME=	spamdyke-3.1.8
+DISTNAME=	spamdyke-4.0.0
 CATEGORIES=	mail
 MASTER_SITES=	${HOMEPAGE}releases/
 EXTRACT_SUFX=	.tgz
@@ -25,7 +25,10 @@ SUBST_STAGE.paths=	do-configure
 
 BUILD_DEFS+=		QMAILDIR
 
-INSTALLATION_DIRS=	bin share/doc/${PKGBASE}
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
+CONF_FILES+=		${EGDIR}/spamdyke.conf.example ${PKG_SYSCONFDIR}/spamdyke.conf
+
+INSTALLATION_DIRS=	bin share/doc/${PKGBASE} share/examples/${PKGBASE}
 
 .include "options.mk"
 
@@ -35,6 +38,7 @@ do-install:
 		${INSTALL_PROGRAM} $${f} ${DESTDIR}${PREFIX}/bin;	\
 	done;								\
 	cd ../documentation;						\
+	${INSTALL_DATA} spamdyke.conf.example ${DESTDIR}${EGDIR};	\
 	for f in *.txt *.html; do					\
 		${INSTALL_DATA} $${f} ${DESTDIR}${PREFIX}/share/doc/${PKGBASE};\
 	done
