@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/28 04:14:31 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/07/16 07:14:36 bjs Exp $
 bin/gsc
 bin/gsc-cc-o.bat
 bin/gsc-script
@@ -11,6 +11,7 @@ bin/scheme-srfi-0
 bin/six
 bin/six-script
 include/gambit.h
+include/gambit-not.h
 info/gambit-c.info
 lib/_eval#.scm
 lib/_gambc.c

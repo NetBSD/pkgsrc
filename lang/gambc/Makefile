@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/05/26 22:19:40 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2008/07/16 07:14:36 bjs Exp $
 #
 
 DISTNAME=	gambc-${GAMBC_DIST_VERSION}
@@ -37,6 +37,8 @@ TEST_TARGET=		check
 
 CHECK_PORTABILITY_SKIP=	prebuilt/*/*
 DLOPEN_REQUIRE_PTHREADS=no
+
+TEST_TARGET=		check
 
 .include "../../mk/bsd.prefs.mk"
 
