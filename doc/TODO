@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7390 2008/07/16 09:49:52 rhaen Exp $
+$NetBSD: TODO,v 1.7391 2008/07/16 20:42:33 wiz Exp $
 
 Suggested new packages
 ======================
@@ -395,7 +395,7 @@ Suggested package updates
 	o a2ps-4.14
 	o aap-0.144
 	o abcm2ps-5.8.1
-	o abcmidi-20080614
+	o abcmidi-20080702
 	o abiword-2.6.2
 	o acme-091
 	o acr-0.5.2
@@ -521,7 +521,7 @@ Suggested package updates
 	o clawsker-0.5.0
 	o clearsilver-0.10.5
 	o clearsilver-base-0.10.5
-	o clive-0.4.17
+	o clive-0.4.18
 	o cmake-2.6.0
 	o cocoon-2.1.10
 	o colorize-0.3.4
@@ -558,7 +558,6 @@ Suggested package updates
 	o defendguin-0.0.11
 	o dejavu-ttf-2.24 [pkg/38212]
 	o delegate-9.7.5
-	o deskbar-applet-2.22.3
 	o devIL-1.6.7
 	o dhid-5.3
 	o dinotrace-9.3e
@@ -578,6 +577,7 @@ Suggested package updates
 	o dwm-5.0.1
 	o eagle-4.16
 	o easymenu-0.7.2p1
+	o easytag-current-2.1.6
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
 	o ede-1.2
@@ -604,6 +604,7 @@ Suggested package updates
 	o eric3-4.1.6 [now called eric4]
 	o erlang-12b3
 	o esh-0.8.5
+	o esound-0.2.39
 	o et-2.60
 	o etach-1.4.1
 	o eukleides-1.0.3
@@ -622,7 +623,6 @@ Suggested package updates
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.0
-	o firefox-3.0
 	o fisg-0.3.12
 	o flashplayer-0.4.13
 	o flightgear-1.0.0 [pkg/38160]
@@ -657,7 +657,6 @@ Suggested package updates
 	o gdal-lib-1.4.4
 	o gdb-6.7.1
 	o gdeskcal-1.01
-	o gdm-2.20.7
 	o gdsreader-0.3.2
 	o geany-0.14
 	o geeklog-1.5.0
@@ -703,11 +702,13 @@ Suggested package updates
 	o gocr-0.43
 	o goffice-0.7.0
 	o gogo-3.11p1
+	o gok-1.4.0
 	o golem-0.0.6
 	o gossip-0.29
 	o gourmet-0.13.3
 	o gpaint-0.3.3
 	o gperiodic-2.0.10
+	o gphoto-2.4.2
 	o gplcver-2.12a
 	o gpredict-0.9.0
 	o gpsdrive-2.09
@@ -854,6 +855,7 @@ Suggested package updates
 	o libgnomedb-3.1.2
 	o libgnomemm-2.22.0
 	o libgnomeuimm-2.22.0
+	o libgphoto2-2.4.2
 	o libgtop-2.22.2
 	o libgtop2-2.22.3
 	o libhangul-0.0.8
@@ -1083,7 +1085,7 @@ Suggested package updates
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
 	o php4-yp-5.2.1
-	o phpmyadmin-2.11.7
+	o phpmyadmin-2.11.7.1
 	o phppgadmin-4.2
 	o phylip-3.65
 	o picp-0.6.8
@@ -1327,6 +1329,7 @@ Suggested package updates
 	o tkpasman-2.2b
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
+	o top-3.8beta1
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trac-0.11
