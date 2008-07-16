@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1527 2008/07/16 14:10:55 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1528 2008/07/16 14:46:57 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2610,3 +2610,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Devel-StackTrace to 1.1901 [rhaen 2008-07-16]
 	Updated security/p5-Digest-CRC to 0.14 [rhaen 2008-07-16]
 	Updated devel/p5-Event-RPC to 1.00 [rhaen 2008-07-16]
+	Updated devel/p5-ExtUtils-F77 to 1.16 [rhaen 2008-07-16]
