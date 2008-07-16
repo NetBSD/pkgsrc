@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1515 2008/07/16 06:41:56 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1516 2008/07/16 07:03:37 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2595,3 +2595,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-FormValidator-Simple to 0.23nb1 [seb 2008-07-16]
 	Updated databases/p5-DBIx-Class-Validation to 0.02003nb1 [seb 2008-07-16]
 	Updated x11/libdrm to 2.3.1 [bjs 2008-07-16]
+	Updated mail/spamdyke to 4.0.0 [schmonz 2008-07-16]
