@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:15 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2008/07/16 14:45:56 rhaen Exp $
 
-DISTNAME=	ExtUtils-F77-1.15
+DISTNAME=	ExtUtils-F77-1.16
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5ext
 CATEGORIES=	devel perl5
