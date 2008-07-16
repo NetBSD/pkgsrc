@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/04/12 22:42:58 jlam Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/07/16 15:26:27 manu Exp $
 bin/c2s
 bin/jabberd
 bin/migrate.pl
@@ -10,6 +10,12 @@ bin/sm
 lib/jabberd/authreg_anon.la
 ${PLIST.db}lib/jabberd/authreg_db.la
 ${PLIST.ldap}lib/jabberd/authreg_ldap.la
+${PLIST.ldap}lib/jabberd/authreg_ldapfull.a
+${PLIST.ldap}lib/jabberd/authreg_ldapfull.la
+${PLIST.ldap}lib/jabberd/authreg_ldapfull.so
+${PLIST.ldap}lib/jabberd/storage_ldapvcard.a
+${PLIST.ldap}lib/jabberd/storage_ldapvcard.la
+${PLIST.ldap}lib/jabberd/storage_ldapvcard.so
 ${PLIST.mysql}lib/jabberd/authreg_mysql.la
 ${PLIST.pam}lib/jabberd/authreg_pam.la
 ${PLIST.pgsql}lib/jabberd/authreg_pgsql.la
