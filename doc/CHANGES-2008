@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1514 2008/07/16 00:49:02 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1515 2008/07/16 06:41:56 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2594,3 +2594,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/p5-XML-Elemental version 2.1 [rhaen 2008-07-16]
 	Updated textproc/p5-FormValidator-Simple to 0.23nb1 [seb 2008-07-16]
 	Updated databases/p5-DBIx-Class-Validation to 0.02003nb1 [seb 2008-07-16]
+	Updated x11/libdrm to 2.3.1 [bjs 2008-07-16]
