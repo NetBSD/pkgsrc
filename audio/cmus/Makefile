@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.11 2008/05/10 14:56:33 obache Exp $
+# $NetBSD: Makefile,v 1.12 2008/07/16 14:04:29 ahoka Exp $
 #
 
 DISTNAME=		cmus-2.2.0
+PKGREVISION=		1
 CATEGORIES=		audio
 MASTER_SITES=		http://mirror.greaterscope.net/cmus/
 EXTRACT_SUFX=		.tar.bz2
 
-MAINTAINER=		webmaster@deepblack24.de
+MAINTAINER=		ahoka@NetBSD.org
 HOMEPAGE=		http://cmus.sourceforge.net/
-COMMENT=		Cmus is an ncurses based mp3/ogg player with a lot of features
+COMMENT=		Cmus is an ncurses based music player with a lot of features
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -17,20 +18,27 @@ USE_TOOLS+=		gmake pkg-config
 
 CONFIGURE_ARGS+=	prefix=${PREFIX}
 CONFIGURE_ARGS+=	CONFIG_ALSA=n
-CONFIGURE_ARGS+=	CONFIG_OSS=y
 CONFIGURE_ARGS+=	mandir=${PREFIX}/${PKGMANDIR}/
-PLIST_VARS=		sunaudio
+PLIST_VARS+=		sunaudio oss
 
-.if exists(/usr/include/sys/audioio.h)
-PLIST.sunaudio=		yes
+.include "../../mk/oss.buildlink3.mk"
+.if ${OSS_TYPE} != "none"
+PLIST.oss=	yes
+CONFIGURE_ARGS+=        CONFIG_OSS=y
+.else
+CONFIGURE_ARGS+=        CONFIG_OSS=n
 .endif
 
 .include "../../mk/bsd.prefs.mk"
-.if ${OPSYS} == "SunOS"
+.if ${OPSYS} == "SunOS" || exists(/usr/include/sys/audioio.h)
 CONFIGURE_ARGS+=	CONFIG_SUN=y
+PLIST.sunaudio=		yes
+.else
+CONFIGURE_ARGS+=        CONFIG_SUN=n
 .endif
 
 .include "options.mk"
 
+.include "../../mk/dlopen.buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

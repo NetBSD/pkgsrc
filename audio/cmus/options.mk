@@ -1,13 +1,15 @@
-# $NetBSD: options.mk,v 1.4 2008/05/10 14:56:33 obache Exp $
+# $NetBSD: options.mk,v 1.5 2008/07/16 14:04:29 ahoka Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.cmus
-PKG_SUPPORTED_OPTIONS=		flac mad vorbis arts ao mpcdec	#faad alsa
+PKG_SUPPORTED_OPTIONS=		flac mad vorbis arts ao mpcdec faad wavpack #alsa
 PKG_SUPPORTED_OPTIONS+=		wide-curses
 PKG_OPTIONS_OPTIONAL_GROUPS=	mod
 PKG_OPTIONS_GROUP.mod=		modplug mikmod
 PKG_SUGGESTED_OPTIONS=		flac mad ao vorbis modplug
 
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=	${PKG_SUPPORTED_OPTIONS}
 
 ###
 ### Backends
@@ -18,6 +20,7 @@ PKG_SUGGESTED_OPTIONS=		flac mad ao vorbis modplug
 .if !empty(PKG_OPTIONS:Mao)
 .  include "../../audio/libao/buildlink3.mk"
 CONFIGURE_ARGS+=	CONFIG_AO=y
+PLIST.ao=		yes
 .else
 CONFIGURE_ARGS+=	CONFIG_AO=n
 .endif
@@ -27,6 +30,7 @@ CONFIGURE_ARGS+=	CONFIG_AO=n
 .if !empty(PKG_OPTIONS:Marts)
 .  include "../../audio/arts/buildlink3.mk"
 CONFIGURE_ARGS+=	CONFIG_ARTS=y
+PLIST.arts=		yes
 .else
 CONFIGURE_ARGS+=	CONFIG_ARTS=n
 .endif
@@ -48,6 +52,7 @@ CONFIGURE_ARGS+=	CONFIG_ARTS=n
 .if !empty(PKG_OPTIONS:Mmad)
 .include "../../audio/libmad/buildlink3.mk"
 CONFIGURE_ARGS+=	CONFIG_MAD=y
+PLIST.mad=		yes
 .else
 CONFIGURE_ARGS+=	CONFIG_MAD=n
 .endif
@@ -57,6 +62,7 @@ CONFIGURE_ARGS+=	CONFIG_MAD=n
 .if !empty(PKG_OPTIONS:Mvorbis)
 .include "../../audio/libvorbis/buildlink3.mk"
 CONFIGURE_ARGS+=	CONFIG_VORBIS=y
+PLIST.vorbis=		yes
 .else
 CONFIGURE_ARGS+=	CONFIG_VORBIS=n
 .endif
@@ -66,6 +72,7 @@ CONFIGURE_ARGS+=	CONFIG_VORBIS=n
 .if !empty(PKG_OPTIONS:Mflac)
 .include "../../audio/flac/buildlink3.mk"
 CONFIGURE_ARGS+=	CONFIG_FLAC=y
+PLIST.flac=		yes
 .else
 CONFIGURE_ARGS+=	CONFIG_FLAC=n
 .endif
@@ -75,35 +82,49 @@ CONFIGURE_ARGS+=	CONFIG_FLAC=n
 .if !empty(PKG_OPTIONS:Mmpcdec)
 .include "../../audio/libmpcdec/buildlink3.mk"
 CONFIGURE_ARGS+=	CONFIG_MPC=y
+PLIST.mpcdec=		yes
 .else
 CONFIGURE_ARGS+=	CONFIG_MPC=n
+.endif
+
+# VAWPACK support
+#
+.if !empty(PKG_OPTIONS:Mwavpack)
+.include "../../audio/wavpack/buildlink3.mk"
+CONFIGURE_ARGS+=	CONFIG_WAVPACK=y
+PLIST.wavpack=		yes
+.else
+CONFIGURE_ARGS+=	CONFIG_WAVPACK=n
 .endif
 
 # modplay support
 #
 .if !empty(PKG_OPTIONS:Mmikmod)
 .include "../../audio/libmikmod/buildlink3.mk"
+.include "../../audio/libaudiofile/buildlink3.mk"
 CONFIGURE_ARGS+=	CONFIG_MODPLUG=n
 CONFIGURE_ARGS+=	CONFIG_MIKMOD=y
+PLIST.mikmod=		yes
 .endif
 .if !empty(PKG_OPTIONS:Mmodplug)
 .include "../../audio/libmodplug/buildlink3.mk"
 CONFIGURE_ARGS+=	CONFIG_MODPLUG=y
 CONFIGURE_ARGS+=	CONFIG_MIKMOD=n
+PLIST.modplug=		yes
 .endif
 
 # FAAD support
 #
-# XXX: faad2 in pkgsrc is heavily outdated as of 2007Q3, cmus needs newer.
-#
-#.if !empty(PKG_OPTIONS:Mfaad)
-#.include "../../audio/faad2/buildlink3.mk"
-#CONFIGURE_ARGS+=	CONFIG_AAC=y
-#CONFIGURE_ARGS+=	CONFIG_MP4=y
-#.else
-#CONFIGURE_ARGS+=	CONFIG_AAC=n
-#CONFIGURE_ARGS+=	CONFIG_MP4=n
-#.endif
+.if !empty(PKG_OPTIONS:Mfaad)
+.include "../../audio/faad2/buildlink3.mk"
+.include "../../multimedia/libmp4v2/buildlink3.mk"
+CONFIGURE_ARGS+=	CONFIG_AAC=y
+CONFIGURE_ARGS+=	CONFIG_MP4=y
+PLIST.faad=		yes
+.else
+CONFIGURE_ARGS+=	CONFIG_AAC=n
+CONFIGURE_ARGS+=	CONFIG_MP4=n
+.endif
 
 ###
 ### Wide curses support; otherwise, default to using narrow curses.
