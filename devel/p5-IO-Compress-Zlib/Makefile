@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2008/05/28 22:15:20 abs Exp $
+# $NetBSD: Makefile,v 1.5 2008/07/17 18:49:47 heinz Exp $
 
-DISTNAME=		IO-Compress-Zlib-2.011
+DISTNAME=		IO-Compress-Zlib-2.012
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5icz
 CATEGORIES=		devel perl5
@@ -10,8 +10,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/IO-Compress-Zlib/
 COMMENT=		Perl module to parse gzip and zip files and buffers
 
-DEPENDS+=		p5-IO-Compress-Base>=2.008:../../devel/p5-IO-Compress-Base
-DEPENDS+=		p5-Compress-Raw-Zlib>=2.008:../../devel/p5-Compress-Raw-Zlib
+DEPENDS+=		p5-IO-Compress-Base>=2.012:../../devel/p5-IO-Compress-Base
+DEPENDS+=		p5-Compress-Raw-Zlib>=2.012:../../devel/p5-Compress-Raw-Zlib
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=		auto/IO/Compress/Zlib/.packlist
