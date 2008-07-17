@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2007/05/17 16:50:14 heinz Exp $
+# $NetBSD: Makefile,v 1.5 2008/07/17 15:36:16 heinz Exp $
 #
 
-DISTNAME=		IP-Country-2.23
+DISTNAME=		IP-Country-2.25
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5icy
 CATEGORIES=		net perl5
@@ -13,6 +13,8 @@ COMMENT=		Fast lookup of country codes from IP addresses
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+DEPENDS+=		p5-Geography-Countries-[0-9]*:../../misc/p5-Geography-Countries
 
 USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/IP/Country/.packlist
