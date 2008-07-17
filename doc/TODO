@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7392 2008/07/17 00:58:06 bjs Exp $
+$NetBSD: TODO,v 1.7393 2008/07/17 12:14:03 rhaen Exp $
 
 Suggested new packages
 ======================
@@ -1010,7 +1010,6 @@ Suggested package updates
 	o p5-Asterisk-0.09
 	o p5-Authen-PAM-0.17
 	o p5-Authen-SASL-Cyrus-0.13
-	o p5-Curses-1.15
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.007
 	o p5-Data-FormValidator-4.50
