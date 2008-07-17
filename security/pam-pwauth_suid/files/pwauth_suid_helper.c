@@ -1,4 +1,4 @@
-/* $NetBSD: pwauth_suid_helper.c,v 1.1.1.1 2007/01/08 18:39:44 drochner Exp $ */
+/* $NetBSD: pwauth_suid_helper.c,v 1.2 2008/07/17 18:00:58 drochner Exp $ */
 
 #include <pwd.h>
 #include <string.h>
@@ -36,6 +36,7 @@ main(int argc, char **argv)
 	if (buflen == 0)
 		return (ENOMEM);
 	/* pwbuf is \0-terminated here b/c pwbuf is in bss */
+	pwbuf[sizeof(pwbuf) - 1] = '\0'; /* be paranoid */
 
 	/*
 	 * Use username as key rather than uid so that it will not
@@ -49,10 +50,12 @@ main(int argc, char **argv)
 
 	/*
 	 * Forcibly eat up some wall time to prevent use of this program
-	 * to brute-force? For now assume that process startup time etc.
-	 * make it already ineffective.
+	 * to brute-force.
 	 */
+	usleep(100000);
+
 	pwhash = crypt(pwbuf, pwent->pw_passwd);
+	memset(pwbuf, 0, sizeof(pwbuf));
 	if (pwhash && strcmp(pwhash, pwent->pw_passwd) == 0)
 		return (0);
 

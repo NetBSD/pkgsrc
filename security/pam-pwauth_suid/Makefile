@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.4 2008/06/25 18:17:33 drochner Exp $
+# $NetBSD: Makefile,v 1.5 2008/07/17 18:00:58 drochner Exp $
 
-DISTNAME=	pam-pwauth_suid-1.1
+DISTNAME=	pam-pwauth_suid-1.2
 CATEGORIES=	security
 DISTFILES=	# empty
 
@@ -10,11 +10,12 @@ COMMENT=	PAM authentication module for unprivileged users
 NO_CHECKSUM=	yes
 WRKSRC=		${WRKDIR}
 
-HLPDEF+= -DPATH_HELPER=\"${PREFIX}/libexec/pwauth_suid_helper\"
+PAMDEF+= -DPATH_HELPER=\"${PREFIX}/libexec/pwauth_suid_helper\"
+PAMDEF+= -DNO_STATIC_MODULES
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-INSTALLATION_DIRS=	lib/security libexec
+INSTALLATION_DIRS=	lib/security libexec share/examples/pam-pwauth_suid
 
 do-extract:
 	${CP} ${FILESDIR}/pam_pwauth_suid.c ${FILESDIR}/pwauth_suid_helper.c \
@@ -22,18 +23,20 @@ do-extract:
 
 do-build:
 	(cd ${WRKSRC} && \
-	 ${CC} ${CFLAGS} -c -fPIC ${HLPDEF} pam_pwauth_suid.c && \
-	 ${LD} -shared pam_pwauth_suid.o -o pam_pwauth_suid.so.0 && \
+	 ${CC} ${CFLAGS} -c -fPIC ${PAMDEF} pam_pwauth_suid.c && \
+	 ${LD} -shared pam_pwauth_suid.o -o pam_pwauth_suid.so && \
 	 ${CC} ${CFLAGS} pwauth_suid_helper.c -o pwauth_suid_helper -lcrypt)
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/lib/security
-	${INSTALL_DATA} ${WRKSRC}/pam_pwauth_suid.so.0 \
+	${INSTALL_DATA} ${WRKSRC}/pam_pwauth_suid.so \
 		${DESTDIR}${PREFIX}/lib/security
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/libexec
 	${INSTALL_PROGRAM} ${WRKSRC}/pwauth_suid_helper \
 		${DESTDIR}${PREFIX}/libexec
 	${CHMOD} 04555 ${DESTDIR}${PREFIX}/libexec/pwauth_suid_helper
+	sed -e 's|@PREFIX@|${PREFIX}|g' ${FILESDIR}/xscreensaver > \
+		${DESTDIR}${PREFIX}/share/examples/pam-pwauth_suid/xscreensaver
 
 .include "../../mk/pam.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

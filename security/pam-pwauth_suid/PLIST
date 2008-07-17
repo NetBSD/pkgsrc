@@ -1,3 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/08 18:39:44 drochner Exp $
-lib/security/pam_pwauth_suid.so.0
+@comment $NetBSD: PLIST,v 1.2 2008/07/17 18:00:58 drochner Exp $
+lib/security/pam_pwauth_suid.so
 libexec/pwauth_suid_helper
+share/examples/pam-pwauth_suid/xscreensaver
+@dirrm share/examples/pam-pwauth_suid

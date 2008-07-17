@@ -1,6 +1,6 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2007/01/08 18:39:44 drochner Exp $
+$NetBSD: MESSAGE,v 1.2 2008/07/17 18:00:58 drochner Exp $
 
-The PAM authentication module "pam_pwauth_suid.so.0" needs to be
-installed into the directory "/usr/lib/security".
+A sample pam.d file for xscreensaver can be found in
+${PREFIX}/share/examples/pam-pwauth_suid
 ===========================================================================

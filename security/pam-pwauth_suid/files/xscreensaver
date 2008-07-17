@@ -1,0 +1,2 @@
+# $NetBSD: xscreensaver,v 1.1 2008/07/17 18:00:58 drochner Exp $
+auth	required	@PREFIX@/lib/security/pam_pwauth_suid.so
