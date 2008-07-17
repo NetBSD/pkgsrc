@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2008/06/20 01:09:09 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2008/07/17 09:57:10 rhaen Exp $
 
-DISTNAME=		Convert-UUlib-1.08
-PKGNAME=		p5-${DISTNAME}0
+DISTNAME=		Convert-UUlib-1.11
+PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5uul
 CATEGORIES=		converters perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Convert/}
