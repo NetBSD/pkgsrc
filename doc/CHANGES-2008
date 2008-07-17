@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1543 2008/07/17 14:33:54 he Exp $
+$NetBSD: CHANGES-2008,v 1.1544 2008/07/17 14:40:59 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2657,3 +2657,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/plone3 to 3.1.3 [taca 2008-07-17]
 	Updated databases/p5-Class-DBI-Pg to 0.09 [he 2008-07-17]
 	Updated devel/p5-Data-UUID to 1.14.8 [he 2008-07-17]
+	Updated time/p5-DateTime-Format-ICal to 0.09 [he 2008-07-17]
