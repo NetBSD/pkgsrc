@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1539 2008/07/17 13:57:33 he Exp $
+$NetBSD: CHANGES-2008,v 1.1540 2008/07/17 14:02:47 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2653,3 +2653,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/liblive to 20080706 [ahoka 2008-07-17]
 	Updated devel/p5-BSD-Resource to 1.29.01 [he 2008-07-17]
 	Updated databases/p5-BerkeleyDB to 0.34 [he 2008-07-17]
+	Updated misc/p5-Business-CreditCard to 0.30 [he 2008-07-17]
