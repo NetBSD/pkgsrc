@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1534 2008/07/17 10:02:31 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1535 2008/07/17 11:59:29 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2647,3 +2647,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Class-Std to 0.0.9 [rhaen 2008-07-17]
 	Updated devel/p5-Clone to 0.29 [rhaen 2008-07-17]
 	Updated converters/p5-Convert-UUlib to 1.11 [rhaen 2008-07-17]
+	Updated devel/p5-B-Keywords to 1.08 [he 2008-07-17]
