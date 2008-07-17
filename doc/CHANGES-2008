@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1544 2008/07/17 14:40:59 he Exp $
+$NetBSD: CHANGES-2008,v 1.1545 2008/07/17 15:55:33 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2658,3 +2658,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/p5-Class-DBI-Pg to 0.09 [he 2008-07-17]
 	Updated devel/p5-Data-UUID to 1.14.8 [he 2008-07-17]
 	Updated time/p5-DateTime-Format-ICal to 0.09 [he 2008-07-17]
+	Updated databases/phpmyadmin to 2.11.7.1 [tron 2008-07-17]
