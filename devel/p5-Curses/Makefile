@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.31 2008/06/20 01:09:14 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2008/07/17 11:28:06 rhaen Exp $
 
-DISTNAME=	Curses-1.12
+DISTNAME=	Curses-1.23
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5cur
-PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Curses/}
 EXTRACT_SUFX=	.tgz
@@ -15,9 +14,9 @@ COMMENT=	Perl5 module for terminal screen handling and optimization
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_NCURSES=	# needs libpanel
+USE_NCURSES=	YES
 
-WRKSRC=		${WRKDIR}/Curses-1.12
+WRKSRC=		${WRKDIR}/Curses-1.23
 PERL5_PACKLIST=		auto/Curses/.packlist
 
 MAKE_PARAMS+=	PANELS
