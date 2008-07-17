@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2008/04/26 11:38:43 obache Exp $
+# $NetBSD: Makefile,v 1.16 2008/07/17 10:11:19 ahoka Exp $
 #
 
-DISTNAME=	live.2008.04.09
-PKGNAME=	lib${DISTNAME:S/./-/}
+DISTNAME=	live.2008.07.06
+PKGNAME=	lib${DISTNAME:S/./-/:S/.//g}
 CATEGORIES=	net
 MASTER_SITES=	http://www.live555.com/liveMedia/public/
 
@@ -27,12 +27,12 @@ do-install:
 .for lib in BasicUsageEnvironment UsageEnvironment groupsock liveMedia
 	cd ${WRKSRC}/${lib} &&						\
 	${LIBTOOL} --mode=install ${INSTALL_LIB} lib${lib}.la ${DESTDIR}${PREFIX}/lib
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/liblive/${lib}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/${lib}
 	cd ${WRKSRC}/${lib}/include &&					\
 	for i in *.h *.hh ; do						\
 		[ ! -f $$i ] ||						\
 		${INSTALL_DATA} $$i 					\
-			${DESTDIR}${PREFIX}/include/liblive/${lib} ;	\
+			${DESTDIR}${PREFIX}/include/${lib} ;		\
 	done
 .endfor
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/examples/liblive
