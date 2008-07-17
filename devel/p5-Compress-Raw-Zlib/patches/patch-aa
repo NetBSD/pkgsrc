@@ -1,4 +1,7 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/02/02 19:08:39 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2008/07/17 17:00:24 heinz Exp $
+
+  Record the path to the zlib library in the executable/library.
+  COMPILER_RPATH_FLAG is specific to pkgsrc.
 
 --- Makefile.PL.orig	2006-07-07 16:23:00.000000000 +0000
 +++ Makefile.PL
