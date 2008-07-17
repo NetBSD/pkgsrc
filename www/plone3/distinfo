@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.5 2008/06/06 16:08:07 taca Exp $
+$NetBSD: distinfo,v 1.6 2008/07/17 14:20:57 taca Exp $
 
-SHA1 (Plone-3.1.2.tar.gz) = be8b6d1ef75664903ac13580fca4b684e91c55ae
-RMD160 (Plone-3.1.2.tar.gz) = 232f460905fce9d540f04636cebd841fd7deb9bb
-Size (Plone-3.1.2.tar.gz) = 12672636 bytes
-SHA1 (patch-ab) = efe3121f5d191ade4507129807640d820fd544fb
+SHA1 (Plone-3.1.3.tar.gz) = 756c2998e4ea13929141312f6aa8e32a86f6afe7
+RMD160 (Plone-3.1.3.tar.gz) = f616d21d844c614dbca3a2f0c3960d2ded1ddf1a
+Size (Plone-3.1.3.tar.gz) = 12715046 bytes
+SHA1 (patch-ab) = 32dc39a7a9fae18d0fa3f10164976bfb4afe090d
 SHA1 (patch-ac) = f5deb5fee5bba6c690cb62faedd3e9752a8a2848
