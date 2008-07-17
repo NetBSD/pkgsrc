@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2007/04/22 09:00:22 heinz Exp $
+# $NetBSD: Makefile,v 1.19 2008/07/17 20:50:24 heinz Exp $
 #
 
-DISTNAME=		Tie-EncryptedHash-1.21
+DISTNAME=		Tie-EncryptedHash-1.24
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5teh
 CATEGORIES=		security perl5
