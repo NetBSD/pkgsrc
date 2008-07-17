@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/06/06 16:08:07 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/07/17 14:20:57 taca Exp $
 ${PLONE_BASE}/ATContentTypes/AUTHORS.txt
 ${PLONE_BASE}/ATContentTypes/CHANGELOG.txt
 ${PLONE_BASE}/ATContentTypes/HISTORY.txt
@@ -598,6 +598,8 @@ ${PLONE_BASE}/Archetypes/interfaces/_templatemixin.py
 ${PLONE_BASE}/Archetypes/interfaces/_templatemixin.pyc
 ${PLONE_BASE}/Archetypes/interfaces/_validator.py
 ${PLONE_BASE}/Archetypes/interfaces/_validator.pyc
+${PLONE_BASE}/Archetypes/interfaces/_viewlet.py
+${PLONE_BASE}/Archetypes/interfaces/_viewlet.pyc
 ${PLONE_BASE}/Archetypes/interfaces/_vocabulary.py
 ${PLONE_BASE}/Archetypes/interfaces/_vocabulary.pyc
 ${PLONE_BASE}/Archetypes/interfaces/annotations.py
@@ -8186,13 +8188,14 @@ ${ZOPE_BASE}/lib/python/plone/app/customerize/customize.pt
 ${ZOPE_BASE}/lib/python/plone/app/customerize/dependencies.zcml
 ${ZOPE_BASE}/lib/python/plone/app/customerize/docs/__init__.py
 ${ZOPE_BASE}/lib/python/plone/app/customerize/docs/__init__.pyc
-${ZOPE_BASE}/lib/python/plone/app/customerize/docs/failing-testCustomizeView.txt
 ${ZOPE_BASE}/lib/python/plone/app/customerize/docs/testBrowserLayers.txt
+${ZOPE_BASE}/lib/python/plone/app/customerize/docs/testCustomizeView.txt
 ${ZOPE_BASE}/lib/python/plone/app/customerize/registration.py
 ${ZOPE_BASE}/lib/python/plone/app/customerize/registration.pyc
 ${ZOPE_BASE}/lib/python/plone/app/customerize/registrations.pt
 ${ZOPE_BASE}/lib/python/plone/app/customerize/tests/__init__.py
 ${ZOPE_BASE}/lib/python/plone/app/customerize/tests/__init__.pyc
+${ZOPE_BASE}/lib/python/plone/app/customerize/tests/duplicate_viewlet.zcml
 ${ZOPE_BASE}/lib/python/plone/app/customerize/tests/layer.py
 ${ZOPE_BASE}/lib/python/plone/app/customerize/tests/layer.pyc
 ${ZOPE_BASE}/lib/python/plone/app/customerize/tests/local.pt
@@ -8663,7 +8666,10 @@ ${ZOPE_BASE}/lib/python/plone/app/linkintegrity/docs/testCancelDuringMultiRemova
 ${ZOPE_BASE}/lib/python/plone/app/linkintegrity/docs/testCircularReferences.txt
 ${ZOPE_BASE}/lib/python/plone/app/linkintegrity/docs/testCircularReferencesWithHelper.txt
 ${ZOPE_BASE}/lib/python/plone/app/linkintegrity/docs/testConfirmationPageIntegration.txt
+${ZOPE_BASE}/lib/python/plone/app/linkintegrity/docs/testFileRemoval.txt
 ${ZOPE_BASE}/lib/python/plone/app/linkintegrity/docs/testInterReferences.txt
+${ZOPE_BASE}/lib/python/plone/app/linkintegrity/docs/testFileWithSpacesRemoval.txt
+${ZOPE_BASE}/lib/python/plone/app/linkintegrity/docs/testIntegrityBreachesBug.txt
 ${ZOPE_BASE}/lib/python/plone/app/linkintegrity/docs/testMultipleFilesRemoval.txt
 ${ZOPE_BASE}/lib/python/plone/app/linkintegrity/docs/testMultipleFilesRemovalWithHelper.txt
 ${ZOPE_BASE}/lib/python/plone/app/linkintegrity/docs/testMultipleReferences.txt
@@ -8906,6 +8912,9 @@ ${ZOPE_BASE}/lib/python/plone/app/redirector/tests/__init__.py
 ${ZOPE_BASE}/lib/python/plone/app/redirector/tests/__init__.pyc
 ${ZOPE_BASE}/lib/python/plone/app/redirector/tests/base.py
 ${ZOPE_BASE}/lib/python/plone/app/redirector/tests/base.pyc
+${ZOPE_BASE}/lib/python/plone/app/redirector/tests/browser.txt
+${ZOPE_BASE}/lib/python/plone/app/redirector/tests/test_doctests.py
+${ZOPE_BASE}/lib/python/plone/app/redirector/tests/test_doctests.pyc
 ${ZOPE_BASE}/lib/python/plone/app/redirector/tests/test_events.py
 ${ZOPE_BASE}/lib/python/plone/app/redirector/tests/test_events.pyc
 ${ZOPE_BASE}/lib/python/plone/app/redirector/tests/test_setup.py
