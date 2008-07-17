@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/22 21:03:05 seb Exp $
+$NetBSD: distinfo,v 1.2 2008/07/17 11:58:38 he Exp $
 
-SHA1 (B-Keywords-1.06.tar.gz) = 2219217a8cfd0173a49075811e1b0f324bd6bc2d
-RMD160 (B-Keywords-1.06.tar.gz) = 5f1e14eecdf5a1167ba57faf0a6b347d76b6c733
-Size (B-Keywords-1.06.tar.gz) = 5943 bytes
+SHA1 (B-Keywords-1.08.tar.gz) = 3ec5837316a28576e102711a6efcd18d64993bcc
+RMD160 (B-Keywords-1.08.tar.gz) = 4810ca0255115933ecd4c406a8fbf2cfee28bebb
+Size (B-Keywords-1.08.tar.gz) = 5096 bytes
