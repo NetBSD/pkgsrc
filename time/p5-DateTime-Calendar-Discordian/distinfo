@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/06/12 00:02:30 heinz Exp $
+$NetBSD: distinfo,v 1.2 2008/07/17 19:31:39 heinz Exp $
 
-SHA1 (DateTime-Calendar-Discordian-0.9.4.tar.gz) = 6a98bc4e5fdd121b269e451fcf5a8c97d865acec
-RMD160 (DateTime-Calendar-Discordian-0.9.4.tar.gz) = 8700be0f074cd2b56893279dcb3e679b2009d96b
-Size (DateTime-Calendar-Discordian-0.9.4.tar.gz) = 19400 bytes
+SHA1 (DateTime-Calendar-Discordian-0.9.6.tar.gz) = 58853fa8ee3833368ab2a7ccd79f5e04f1463aba
+RMD160 (DateTime-Calendar-Discordian-0.9.6.tar.gz) = 7dd32b7e153e22789b43cfafe24bd4c4ceaed8e2
+Size (DateTime-Calendar-Discordian-0.9.6.tar.gz) = 20432 bytes
