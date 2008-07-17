@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1537 2008/07/17 12:27:41 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.1538 2008/07/17 13:53:37 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2651,3 +2651,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/p5-Crypt-Rijndael to 1.06 [rhaen 2008-07-17]
 	Updated devel/p5-Curses to 1.23 [rhaen 2008-07-17]
 	Updated net/liblive to 20080706 [ahoka 2008-07-17]
+	Updated devel/p5-BSD-Resource to 1.29.01 [he 2008-07-17]
