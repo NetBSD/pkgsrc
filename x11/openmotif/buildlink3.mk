@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.10 2008/07/14 23:01:32 christos Exp $
+# $NetBSD: buildlink3.mk,v 1.11 2008/07/17 09:02:54 dsainty Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 OPENMOTIF_BUILDLINK3_MK:=	${OPENMOTIF_BUILDLINK3_MK}+
@@ -23,6 +23,7 @@ BUILDLINK_PKGSRCDIR.openmotif?=	../../x11/openmotif
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXp/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/xbitmaps/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
