@@ -1,6 +1,10 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.1 2008/07/14 09:04:07 agc Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.2 2008/07/17 15:45:03 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
 
 Created pkgsrc-2008Q2 branch [agc 2008-07-13 21:00 GMT]
+
+Pullup ticket #2450 - requested by ghen
+seamonkey: security update
+seamonkey-bin: security update
