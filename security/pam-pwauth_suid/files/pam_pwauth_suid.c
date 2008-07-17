@@ -1,6 +1,7 @@
-/* $NetBSD: pam_pwauth_suid.c,v 1.2 2007/09/05 20:29:05 drochner Exp $ */
+/* $NetBSD: pam_pwauth_suid.c,v 1.3 2008/07/17 18:00:58 drochner Exp $ */
 
 #include <sys/types.h>
+#define PAM_SM_AUTH
 #include <security/pam_appl.h>
 #include <security/pam_modules.h>
 
@@ -26,8 +27,10 @@ askhelper(const char *user, const char *pass)
 	/* make sure only we get the exit status of the helper */
 	sigemptyset(&chldsig);
 	sigaddset(&chldsig, SIGCHLD);
-	if (sigprocmask(SIG_BLOCK, &chldsig, &omask) < 0)
-		return errno;
+	if (sigprocmask(SIG_BLOCK, &chldsig, &omask) < 0) {
+		err = errno;
+		goto error2;
+	}
 
 	pid = vfork();
 	switch (pid) {
@@ -42,6 +45,7 @@ askhelper(const char *user, const char *pass)
 			_exit(errno);
 		default: /* parent */
 			(void)close(fd[0]);
+			fd[0] = -1;
 			break;
 	}
 
@@ -65,6 +69,10 @@ askhelper(const char *user, const char *pass)
 
 error:
 	sigprocmask(SIG_SETMASK, &omask, 0);
+error2:
+	if (fd[0] != -1)
+		(void)close(fd[0]);
+	(void)close(fd[1]);
 	return err;
 }
 
@@ -84,6 +92,14 @@ pam_sm_authenticate(pam_handle_t *pamh, int flags,
 
 	if (askhelper(user, pass) != 0)
 		return PAM_AUTH_ERR;
+
+	return PAM_SUCCESS;
+}
+
+PAM_EXTERN int
+pam_sm_setcred(pam_handle_t *pamh, int flags,
+	       int argc, const char **argv)
+{
 
 	return PAM_SUCCESS;
 }
