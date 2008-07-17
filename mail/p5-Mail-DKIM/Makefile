@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2008/01/11 20:12:24 heinz Exp $
+# $NetBSD: Makefile,v 1.12 2008/07/17 13:56:35 heinz Exp $
 #
 
-DISTNAME=		Mail-DKIM-0.30
+DISTNAME=		Mail-DKIM-0.32
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5mdk
 CATEGORIES=		mail perl5
@@ -16,8 +16,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		p5-Crypt-OpenSSL-RSA>=0.24:../../security/p5-Crypt-OpenSSL-RSA
 DEPENDS+=		p5-Digest-SHA-[0-9]*:../../security/p5-Digest-SHA
-DEPENDS+=		p5-Digest-SHA1-[0-9]*:../../security/p5-Digest-SHA1
-DEPENDS+=		p5-Error-[0-9]*:../../devel/p5-Error
 DEPENDS+=		p5-MailTools-[0-9]*:../../mail/p5-MailTools
 DEPENDS+=		p5-MIME-Base64-[0-9]*:../../converters/p5-MIME-Base64
 DEPENDS+=		p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
