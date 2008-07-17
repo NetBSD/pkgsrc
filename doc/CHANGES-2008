@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1546 2008/07/17 16:31:10 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1547 2008/07/17 20:09:30 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2660,3 +2660,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated time/p5-DateTime-Format-ICal to 0.09 [he 2008-07-17]
 	Updated databases/phpmyadmin to 2.11.7.1 [tron 2008-07-17]
 	Updated devel/p5-File-DirSync to 1.22 [rhaen 2008-07-17]
+	Updated www/firefox3 to 3.0.1 [tnn 2008-07-17]
