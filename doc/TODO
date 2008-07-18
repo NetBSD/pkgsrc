@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7398 2008/07/18 12:16:57 rhaen Exp $
+$NetBSD: TODO,v 1.7399 2008/07/18 13:09:59 rhaen Exp $
 
 Suggested new packages
 ======================
@@ -1028,7 +1028,6 @@ Suggested package updates
 	o p5-IMAP-Admin-1.6.4
 	o p5-MARC-1.38
 	o p5-MIME-tools-5.427
-	o p5-Mail-IMAPClient-3.08
 	o p5-Math-Random-0.69
 	o p5-Net-Gnats-0.05
 	o p5-Net-ICQ2000-0.2.2
