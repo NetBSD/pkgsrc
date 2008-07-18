@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1563 2008/07/18 13:56:59 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1564 2008/07/18 14:03:30 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2693,3 +2693,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Module-Install to 0.76 [rhaen 2008-07-18]
 	Updated audio/openal to 0.0.8nb3 [obache 2008-07-18]
 	Updated devel/arena to 0.9.13 [obache 2008-07-18]
+	Updated fonts/vlgothic-ttf to 20080624 [obache 2008-07-18]
