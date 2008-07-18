@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/04/22 21:01:59 seb Exp $
+$NetBSD: distinfo,v 1.2 2008/07/18 12:48:31 rhaen Exp $
 
-SHA1 (Module-Starter-1.42.tar.gz) = d3e09ec2418830c0230fe0323912d9cca66deda8
-RMD160 (Module-Starter-1.42.tar.gz) = f3daeaeaba40d27d593e40559089f591974ea3b2
-Size (Module-Starter-1.42.tar.gz) = 12499 bytes
+SHA1 (Module-Starter-1.470.tar.gz) = b3ab34fd25fe561ee24fea67eb9c57c418f5e05c
+RMD160 (Module-Starter-1.470.tar.gz) = 7827888b556250a588312ac1d62614ac0eebb1bf
+Size (Module-Starter-1.470.tar.gz) = 28008 bytes
