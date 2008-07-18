@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1565 2008/07/18 14:10:51 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1566 2008/07/18 14:21:40 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2695,3 +2695,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/arena to 0.9.13 [obache 2008-07-18]
 	Updated fonts/vlgothic-ttf to 20080624 [obache 2008-07-18]
 	Updated time/p5-Time-Duration to 1.06 [rhaen 2008-07-18]
+	Updated x11/xfce4-exo to 0.3.4nb1 [obache 2008-07-18]
