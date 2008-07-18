@@ -1,20 +1,18 @@
-# $NetBSD: Makefile,v 1.42 2006/12/15 20:32:58 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2008/07/18 17:22:47 obache Exp $
 #
 
-DISTNAME=	grace-5.1.14
-PKGREVISION=	5
+DISTNAME=	grace-5.1.22
 CATEGORIES=	math graphics x11
-MASTER_SITES=	ftp://plasma-gate.weizmann.ac.il/pub/grace/src/ \
-		ftp://linux.mathematik.tu-darmstadt.de/pub/linux/mirrors/misc/grace/src/ \
-		ftp://ftp.fu-berlin.de/unix/graphics/grace/src/ \
-		ftp://ftp.ntua.gr/pub/graphics/grace/src/ \
-		ftp://ftp.ru.xemacs.org/pub/math/grace/src/ \
-		ftp://ftp.u-aizu.ac.jp/pub/SciEng/math/grace/src/ \
-		ftp://ftp2.netmor.com/pub/mirrors/grace/src/
+MASTER_SITES=	ftp://plasma-gate.weizmann.ac.il/pub/grace/src/stable/ \
+		ftp://ftp.fu-berlin.de/unix/graphics/grace/src/stable/ \
+		ftp://ftp.ru.xemacs.org/pub/math/grace/src/stable/ \
+		ftp://ftp.u-aizu.ac.jp/pub/SciEng/math/grace/src/stable/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://plasma-gate.weizmann.ac.il/Grace/
 COMMENT=	GRaphing, Advanced Computation and Exploration of data
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=		YES
 USE_TOOLS+=		gmake
@@ -23,9 +21,14 @@ GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--enable-grace-home=${PREFIX}/grace
 CONFIGURE_ARGS+=	--without-bundled-xbae
 
+INSTALLATION_DIRS=	bin
+
+# test require X
+#TEST_TARGET=		check
+
 post-install:
-	${RM} -f ${PREFIX}/bin/xmgrace
-	${LN} -s ${PREFIX}/grace/bin/xmgrace ${PREFIX}/bin
+	${RM} -f ${DESTDIR}${PREFIX}/bin/xmgrace
+	${LN} -s ${DESTDIR}${PREFIX}/grace/bin/xmgrace ${DESTDIR}${PREFIX}/bin
 
 .include "../../devel/netcdf/buildlink3.mk"
 .include "../../fonts/t1lib/buildlink3.mk"
