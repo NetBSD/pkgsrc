@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1569 2008/07/18 17:23:08 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1570 2008/07/18 17:44:58 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2705,3 +2705,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-XML-SemanticDiff to 0.97 [rhaen 2008-07-18]
 	Updated graphics/p5-Image-Size to 3.1.1 [rhaen 2008-07-18]
 	Updated math/grace to 5.1.22 [obache 2008-07-18]
+	Updated databases/sqlite3 to 3.6.0 [adam 2008-07-18]
