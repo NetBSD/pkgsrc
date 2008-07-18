@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2006/07/06 20:51:25 adam Exp $
+$NetBSD: patch-aa,v 1.7 2008/07/18 08:41:20 adam Exp $
 
---- pngcrush.c.orig	2006-07-06 22:32:25.000000000 +0200
-+++ pngcrush.c	2006-07-06 22:41:02.000000000 +0200
-@@ -444,9 +444,6 @@
+--- pngcrush.c.orig	2008-06-13 03:50:52.000000000 +0200
++++ pngcrush.c
+@@ -624,9 +624,6 @@ void png_crc_read(png_structp png_ptr, p
  int png_crc_error(png_structp png_ptr);
  int png_crc_finish(png_structp png_ptr, png_uint_32 skip);
  
@@ -12,7 +12,7 @@ $NetBSD: patch-aa,v 1.6 2006/07/06 20:51:25 adam Exp $
  
  #ifdef PNG_USER_MEM_SUPPORTED
  png_voidp png_debug_malloc(png_structp png_ptr, png_uint_32 size);
-@@ -482,38 +479,6 @@
+@@ -662,38 +659,6 @@ void print_usage(int retval);
   * ============================================================
   */
  
