@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.946 2008/07/14 09:28:05 abs Exp $
+# $NetBSD: Makefile,v 1.947 2008/07/18 12:06:38 rhaen Exp $
 #
 
 COMMENT=	Development utilities
@@ -596,6 +596,7 @@ SUBDIR+=	p5-Perl-Critic
 SUBDIR+=	p5-Perl-Tidy
 SUBDIR+=	p5-Perl6-Export
 SUBDIR+=	p5-Perl6-Export-Attrs
+SUBDIR+=	p5-Perl6-Junction
 SUBDIR+=	p5-Perl6-Slurp
 SUBDIR+=	p5-PerlIO-eol
 SUBDIR+=	p5-PerlIO-via-dynamic
