@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/07/14 12:56:19 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/18 14:20:56 obache Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -8,16 +8,11 @@ XFCE4_VERSION=	0.3.4
 
 DISTNAME=	exo-${XFCE4_VERSION}
 PKGNAME=	xfce4-exo-${XFCE4_VERSION}
+PKGREVISION=	1
 CATEGORIES=	x11
 COMMENT=	Xfce extension library
 
 DEPENDS+=	p5-URI>=0:../../www/p5-URI
-
-.if !empty(OPSYS:MNetBSD)
-.  if exists(/usr/include/mmintrin.h)
-CFLAGS+=	-msse
-.  endif
-.endif
 
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../x11/xfce4-mcs-plugins/buildlink3.mk"
