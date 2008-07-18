@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1557 2008/07/18 12:16:11 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1558 2008/07/18 12:49:59 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2687,3 +2687,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-Data-FormValidator to 4.61 [rhaen 2008-07-18]
 	Added devel/p5-Perl6-Junction version 1.40000 [rhaen 2008-07-18]
 	Updated pkgtools/x11-links to 0.36 [tron 2008-07-18]
+	Updated devel/p5-Module-Starter to 1.470 [rhaen 2008-07-18]
