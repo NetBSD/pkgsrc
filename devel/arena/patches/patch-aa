@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1 2006/10/27 20:43:27 agc Exp $
+$NetBSD: patch-aa,v 1.2 2008/07/18 13:56:42 obache Exp $
 
 --- tests/data/library/foreign	2006/10/17 22:11:53	1.1
 +++ tests/data/library/foreign	2006/10/17 22:13:42
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.1 2006/10/27 20:43:27 agc Exp $
  
 @@ -29,9 +31,9 @@
  
- # 3) call C function that takes and returns float
+ # 3) call C function that takes and returns C double
  
 -a = dyn_call_float(libm, "fabs", -2.5);
 +#a = dyn_call_float(libm, "fabs", -2.5);
