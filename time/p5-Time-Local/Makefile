@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2007/05/06 13:52:35 heinz Exp $
+# $NetBSD: Makefile,v 1.3 2008/07/18 14:23:59 rhaen Exp $
 
-DISTNAME=	Time-Local-1.17
+DISTNAME=	Time-Local-1.18
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Time/}
@@ -12,7 +12,6 @@ COMMENT=	Efficiently compute time from local and GMT time
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=		auto/Time/Local/.packlist
-USE_LANGUAGES=		# empty
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
