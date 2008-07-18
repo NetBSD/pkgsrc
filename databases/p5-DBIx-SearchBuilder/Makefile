@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2008/06/20 01:09:11 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2008/07/18 11:17:26 rhaen Exp $
 #
 
-DISTNAME=	DBIx-SearchBuilder-1.53
+DISTNAME=	DBIx-SearchBuilder-1.54
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5dxs
 CATEGORIES=	databases perl5
@@ -15,16 +15,17 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
+BUILD_DEPENDS+=	p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
 DEPENDS+=	p5-capitalization>=0.03nb1:../../devel/p5-capitalization
 DEPENDS+=	p5-Class-Accessor-[0-9]*:../../devel/p5-Class-Accessor
 DEPENDS+=	p5-Class-ReturnValue>=0.40:../../devel/p5-Class-ReturnValue
 DEPENDS+=	p5-Clone-[0-9]*:../../devel/p5-Clone
 DEPENDS+=	p5-DBI>=1.41:../../databases/p5-DBI
 DEPENDS+=	p5-DBIx-DBSchema-[0-9]*:../../databases/p5-DBIx-DBSchema
+DEPENDS+=	p5-Encode>=1.99:../../textproc/p5-Encode
 DEPENDS+=	p5-Want-[0-9]*:../../devel/p5-Want
 DEPENDS+=	p5-Cache-Simple-TimedExpiry>=0.21:../../devel/p5-Cache-Simple-TimedExpiry
 
-USE_LANGUAGES=		# empty
 PERL5_PACKLIST=		auto/DBIx/SearchBuilder/.packlist
 
 .include "../../lang/perl5/module.mk"
