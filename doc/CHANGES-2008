@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1560 2008/07/18 13:09:15 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1561 2008/07/18 13:43:44 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2690,3 +2690,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Module-Starter to 1.470 [rhaen 2008-07-18]
 	Updated devel/p5-Module-Versions-Report 1.05 [rhaen 2008-07-18]
 	Updated mail/p5-Mail-IMAPClient to 3.08 [rhaen 2008-07-18]
+	Updated audio/openal to 0.0.8nb3 [obache 2008-07-18]
