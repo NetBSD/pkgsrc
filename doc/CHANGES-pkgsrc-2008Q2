@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.4 2008/07/18 10:05:36 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.5 2008/07/18 12:09:39 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -13,3 +13,5 @@ firefox: update for security fixes
 firefox-bin: update for security fixes
 pullup ticket #2451 requested by tron
 phpmyadmin: package update for bug and security fixes 
+pullup ticket #2452 requested by tnn
+firefox3: update for security / stability fixes
