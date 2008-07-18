@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2007/07/07 09:45:55 heinz Exp $
+# $NetBSD: Makefile,v 1.10 2008/07/18 09:43:35 rhaen Exp $
 
-DISTNAME=		CGI-Session-4.20
+DISTNAME=		CGI-Session-4.35
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5ses
 CATEGORIES=		www perl5
@@ -11,8 +11,6 @@ COMMENT=		Perl5 module providing session management across HTTP requests
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
-
-USE_LANGUAGES=		# empty
 
 PERL5_PACKLIST=		auto/CGI/Session/.packlist
 
