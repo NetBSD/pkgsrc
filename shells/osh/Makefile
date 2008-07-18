@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2008/01/19 12:08:29 obache Exp $
+# $NetBSD: Makefile,v 1.21 2008/07/18 14:58:31 obache Exp $
 
-DISTNAME=	osh-20080109
+DISTNAME=	osh-20080629
 CATEGORIES=	shells
 MASTER_SITES=	http://www.v6shell.org/src/
 
@@ -17,5 +17,6 @@ BUILD_TARGET=	oshall
 INSTALL_TARGET=	install-oshall
 
 MAKE_ENV+=	MANDIR=${PREFIX}/${PKGMANDIR}/man1
+MAKE_ENV+=	SYSCONFDIR=${PKG_SYSCONFDIR}
 
 .include "../../mk/bsd.pkg.mk"
