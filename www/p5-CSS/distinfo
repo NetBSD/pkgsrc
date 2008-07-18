@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/09/08 18:42:31 wiz Exp $
+$NetBSD: distinfo,v 1.2 2008/07/18 09:49:03 rhaen Exp $
 
-SHA1 (CSS-1.07.tar.gz) = bbc67e8d0a591168b47a7c76f5989ae7336bf53d
-RMD160 (CSS-1.07.tar.gz) = d38c9e0387ef83c2004670743c196d6cd85974cc
-Size (CSS-1.07.tar.gz) = 33782 bytes
+SHA1 (CSS-1.08.tar.gz) = 6b0dff68227cbc9acc8df87350bdfac0163741d1
+RMD160 (CSS-1.08.tar.gz) = 7b234dbc8d06ab69a7d168da0ad2c742878bac4e
+Size (CSS-1.08.tar.gz) = 34332 bytes
