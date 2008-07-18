@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1570 2008/07/18 17:44:58 adam Exp $
+$NetBSD: CHANGES-2008,v 1.1571 2008/07/18 19:03:57 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2706,3 +2706,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/p5-Image-Size to 3.1.1 [rhaen 2008-07-18]
 	Updated math/grace to 5.1.22 [obache 2008-07-18]
 	Updated databases/sqlite3 to 3.6.0 [adam 2008-07-18]
+	Updated x11/pixman to 0.11.8nb1 [bjs 2008-07-18]
