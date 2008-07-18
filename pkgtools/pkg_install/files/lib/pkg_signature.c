@@ -1,4 +1,4 @@
-/*	$NetBSD: pkg_signature.c,v 1.1.2.3 2008/07/05 17:26:40 joerg Exp $	*/
+/*	$NetBSD: pkg_signature.c,v 1.1.2.4 2008/07/18 19:10:55 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: pkg_signature.c,v 1.1.2.3 2008/07/05 17:26:40 joerg Exp $");
+__RCSID("$NetBSD: pkg_signature.c,v 1.1.2.4 2008/07/18 19:10:55 joerg Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -322,7 +322,7 @@ pkg_verify_signature(struct archive **archive, struct archive_entry **entry,
 	struct archive *a;
 	char *hash_file, *signature_file;
 	size_t hash_len, signature_len;
-	int r;
+	int r, has_sig;
 
 	*pkgname = NULL;
 	*cookie = NULL;
@@ -355,12 +355,8 @@ pkg_verify_signature(struct archive **archive, struct archive_entry **entry,
 	if (parse_hash_file(hash_file, pkgname, state))
 		goto no_valid_signature;
 
-	if (easy_pkcs7_verify(hash_file, hash_len, signature_file,
-	    signature_len, certs_packages, 1)) {
-		free(signature_file);
-		free_signature_int(state);
-		goto no_valid_signature;
-	}
+	has_sig = !easy_pkcs7_verify(hash_file, hash_len, signature_file,
+	    signature_len, certs_packages, 1);
 
 	free(signature_file);
 
@@ -393,7 +389,7 @@ pkg_verify_signature(struct archive **archive, struct archive_entry **entry,
 	*entry = NULL;
 	*cookie = state;
 
-	return 0;
+	return has_sig ? 0 : -1;
 
 no_valid_signature:
 	return -1;

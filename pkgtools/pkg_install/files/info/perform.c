@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.46.2.2 2008/05/23 15:36:48 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.46.2.3 2008/07/18 19:10:55 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -17,7 +17,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.46.2.2 2008/05/23 15:36:48 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.46.2.3 2008/07/18 19:10:55 joerg Exp $");
 #endif
 #endif
 
@@ -174,10 +174,10 @@ free_pkg_meta(struct pkg_meta *meta)
 
 #ifndef BOOTSTRAP
 static struct pkg_meta *
-read_meta_data_from_archive(struct archive *archive)
+read_meta_data_from_archive(struct archive *archive,
+    struct archive_entry *entry)
 {
 	struct pkg_meta *meta;
-	struct archive_entry *entry;
 	const char *fname;
 	const struct pkg_meta_desc *descr, *last_descr;
 	char **target;
@@ -192,7 +192,11 @@ read_meta_data_from_archive(struct archive *archive)
 	memset(meta, 0, sizeof(*meta));
 
 	last_descr = 0;
+	if (entry != NULL)
+		goto has_entry;
+
 	while ((r = archive_read_next_header(archive, &entry)) == ARCHIVE_OK) {
+has_entry:
 		fname = archive_entry_pathname(entry);
 
 		for (descr = pkg_meta_descriptors; descr->entry_filename;
@@ -308,11 +312,30 @@ pkg_do(const char *pkg)
 #else
 		struct archive *archive;
 		void *archive_cookie;
+#  ifdef HAVE_SSL
+		void *signature_cookie;
+#  endif
+		struct archive_entry *entry;
+		char *pkgname;
 
 		archive = open_archive(pkg, &archive_cookie);
+		if (archive == NULL) {
+			warnx("can't find package `%s', skipped", pkg);
+			return -1;
+		}
+		pkgname = NULL;
+		entry = NULL;
+#  ifdef HAVE_SSL
+		pkg_verify_signature(&archive, &entry, &pkgname,
+		    &signature_cookie);
+#  endif
+		free(pkgname);
 
-		meta = read_meta_data_from_archive(archive);
+		meta = read_meta_data_from_archive(archive, entry);
 		close_archive(archive_cookie);
+#  ifdef HAVE_SSL
+		pkg_free_signature(signature_cookie);
+#  endif
 		if (!IS_URL(pkg))
 			binpkgfile = pkg;
 #endif
