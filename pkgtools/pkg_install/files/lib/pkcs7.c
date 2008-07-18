@@ -1,4 +1,4 @@
-/*	$NetBSD: pkcs7.c,v 1.1.2.3 2008/07/05 17:26:40 joerg Exp $	*/
+/*	$NetBSD: pkcs7.c,v 1.1.2.4 2008/07/18 18:40:50 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -7,7 +7,7 @@
 #include <sys/cdefs.h>
 #endif
 
-__RCSID("$NetBSD: pkcs7.c,v 1.1.2.3 2008/07/05 17:26:40 joerg Exp $");
+__RCSID("$NetBSD: pkcs7.c,v 1.1.2.4 2008/07/18 18:40:50 joerg Exp $");
 
 /*-
  * Copyright (c) 2004, 2008 The NetBSD Foundation, Inc.
@@ -157,7 +157,8 @@ easy_pkcs7_verify(const char *content, size_t len,
 	}
 
 	for (i = 0; i < sk_X509_num(signers); i++) {
-		if (sk_X509_value(signers, i)->ex_flags & EXFLAG_CA) {
+		/* Check CA state and update ex_xkusage as side effect */
+		if (X509_check_ca(sk_X509_value(signers, i))) {
 			warnx("CA keys are not valid for signatures");
 			goto cleanup;
 		}
@@ -238,10 +239,12 @@ easy_pkcs7_sign(const char *content, size_t len,
 	}
 	certificate = sk_X509_value(c, 0);
 
-	if (certificate->ex_flags & EXFLAG_CA) {
+	/* Check CA state and update ex_xkusage as side effect */
+	if (X509_check_ca(certificate)) {
 		warnx("CA keys are not valid for signatures");
 		goto cleanup;
 	}
+
 	if (certificate->ex_xkusage != XKU_CODE_SIGN) {
 		warnx("Certificate must have CODE SIGNING property");
 		goto cleanup;
