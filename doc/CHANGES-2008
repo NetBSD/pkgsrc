@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1549 2008/07/18 00:13:58 gdt Exp $
+$NetBSD: CHANGES-2008,v 1.1550 2008/07/18 01:22:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2674,3 +2674,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/p5-Tie-EncryptedHash to 1.24 [heinz 2008-07-17]
 	Updated security/p5-Crypt-RSA to 1.98 [heinz 2008-07-17]
 	Updated print/gutenprint51-lib to 5.2.0b3 [gdt 2008-07-18]
+	Updated mail/spamdyke to 4.0.1 [schmonz 2008-07-18]
