@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7397 2008/07/18 08:42:19 adam Exp $
+$NetBSD: TODO,v 1.7398 2008/07/18 12:16:57 rhaen Exp $
 
 Suggested new packages
 ======================
@@ -1012,7 +1012,6 @@ Suggested package updates
 	o p5-Authen-SASL-Cyrus-0.13
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.007
-	o p5-Data-FormValidator-4.50
 	o p5-Devel-StackTrace-1.1901
 	o p5-Filter-1.33
 	o p5-Font-TTF-0.40
