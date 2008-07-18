@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/04/04 16:57:03 obache Exp $
+# $NetBSD: Makefile,v 1.3 2008/07/18 14:03:14 obache Exp $
 #
 
-DISTNAME=	VLGothic-20080327
+DISTNAME=	VLGothic-20080624
 PKGNAME=	${DISTNAME:tl:S/-/-ttf-/}
 CATEGORIES=	fonts japanese
 MASTER_SITES=	http://vinelinux.org/~daisuke/vlgothic/ \
