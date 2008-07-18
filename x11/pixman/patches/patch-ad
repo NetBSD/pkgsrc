@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.2 2008/06/19 17:51:27 bjs Exp $
+$NetBSD: patch-ad,v 1.3 2008/07/18 19:03:32 bjs Exp $
 
---- configure.ac.orig	2008-06-09 12:32:10.000000000 -0400
+--- configure.ac.orig	2008-07-17 13:38:50.000000000 -0400
 +++ configure.ac
-@@ -112,14 +112,14 @@ dnl ====================================
+@@ -109,14 +109,14 @@ dnl ====================================
  dnl -fvisibility stuff
  
  have_gcc4=no
@@ -24,3 +24,12 @@ $NetBSD: patch-ad,v 1.2 2008/06/19 17:51:27 bjs Exp $
  
  if test "x$have_gcc4" = "xyes"; then
     CFLAGS="$CFLAGS -fvisibility=hidden"
+@@ -250,7 +250,7 @@ if test $have_sse2_intrinsics = yes ; th
+ fi
+ 
+ AC_MSG_RESULT($have_sse2_intrinsics)
+-if test $enable_sse2 = yes && test $have_sse_intrinsics = no ; then
++if test $enable_sse2 = yes && test $have_sse2_intrinsics = no ; then
+    AC_MSG_ERROR([SSE2 intrinsics not detected])
+ fi
+ 
