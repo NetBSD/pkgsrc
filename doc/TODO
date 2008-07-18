@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7400 2008/07/18 13:57:38 obache Exp $
+$NetBSD: TODO,v 1.7401 2008/07/18 14:59:21 obache Exp $
 
 Suggested new packages
 ======================
@@ -1000,7 +1000,6 @@ Suggested package updates
 	o orca-2.22.3
 	o oregano-0.60.0
 	o oroborus-2.0.18
-	o osh-20080629
 	o oto-0.5
 	o otpCalc-0.97
 	o p5-Apache-ASP-2.59
