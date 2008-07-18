@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2008/07/14 05:31:57 tnn Exp $
+# $NetBSD: Makefile,v 1.16 2008/07/18 03:34:10 bjs Exp $
 #
 
-DISTNAME=	pixman-0.11.6
+DISTNAME=	pixman-0.11.8
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
@@ -18,6 +18,7 @@ USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config perl
 
 PKGCONFIG_OVERRIDE+=	pixman-1.pc.in
+PKGCONFIG_OVERRIDE+=	pixman-1-uninstalled.pc.in
 ###
 ### XXX The configure script is written to fail if it detects gcc<4.0
 ###	for lack of -fvisibility=hidden. In keeping with the pkgsrc
@@ -32,7 +33,7 @@ PIXMAN_SYMFILE=	${WRKDIR}/pixman.sym
 
 .include "../../mk/compiler.mk"
 
-.if !empty(PKGSRC_COMPILER:Msunpro)
+.if !empty(PKGSRC_COMPILER:Msunpro) || empty(CC_VERSION:Mgcc-4.1*)
 CONFIGURE_ARGS+=	--disable-sse2
 .endif
 
