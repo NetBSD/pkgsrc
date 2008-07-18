@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2003/08/12 20:32:55 seb Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/07/18 17:22:47 obache Exp $
 bin/xmgrace
 grace/auxiliary/README
 grace/auxiliary/convcal.c
@@ -52,6 +52,7 @@ grace/examples/graphs.par
 grace/examples/hilo.agr
 grace/examples/log.dat
 grace/examples/log2.agr
+grace/examples/log2log.agr
 grace/examples/logistic.agr
 grace/examples/logistic.fit
 grace/examples/logit.agr
