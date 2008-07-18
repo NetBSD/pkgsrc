@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.7 2008/07/15 11:18:43 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/07/18 19:08:43 smb Exp $
 bin/claws-mail
 bin/sylpheed-claws
+etc/claws-mail/mime.types
 include/claws-mail/account.h
 include/claws-mail/action.h
 include/claws-mail/adbookbase.h
