@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1555 2008/07/18 09:44:08 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1556 2008/07/18 12:15:57 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2680,3 +2680,9 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/pngcrush to 1.6.7 [adam 2008-07-18]
 	Updated net/wget to 1.11.4 [wiz 2008-07-18]
 	Updated devel/meld to 1.2 [wiz 2008-07-18]
+	Updated www/p5-CGI-Session to 4.35 [rhaen 2008-07-18]
+	Updated www/p5-CSS to 1.08 [rhaen 2008-07-18]
+	Updated devel/p5-Cache-FastMmap to 1.28 [rhaen 2008-07-18]
+	Updated databases/p5-DBIx-SearchBuilder to 1.54 [rhaen 2008-07-18]
+	Updated textproc/p5-Data-FormValidator to 4.61 [rhaen 2008-07-18]
+	Added devel/p5-Perl6-Junction version 1.40000 [rhaen 2008-07-18]
