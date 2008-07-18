@@ -35,11 +35,9 @@ pixman_image_unref
 pixman_line_fixed_edge_init
 pixman_rasterize_edges
 pixman_rasterize_trapezoid
-pixman_region32_append
 pixman_region32_contains_point
 pixman_region32_contains_rectangle
 pixman_region32_copy
-pixman_region32_empty
 pixman_region32_equal
 pixman_region32_extents
 pixman_region32_fini
@@ -54,17 +52,13 @@ pixman_region32_not_empty
 pixman_region32_rectangles
 pixman_region32_reset
 pixman_region32_selfcheck
-pixman_region32_set_static_pointers
 pixman_region32_subtract
 pixman_region32_translate
 pixman_region32_union
 pixman_region32_union_rect
-pixman_region32_validate
-pixman_region_append
 pixman_region_contains_point
 pixman_region_contains_rectangle
 pixman_region_copy
-pixman_region_empty
 pixman_region_equal
 pixman_region_extents
 pixman_region_fini
@@ -84,7 +78,6 @@ pixman_region_subtract
 pixman_region_translate
 pixman_region_union
 pixman_region_union_rect
-pixman_region_validate
 pixman_sample_ceil_y
 pixman_sample_floor_y
 pixman_transform_point_3d
