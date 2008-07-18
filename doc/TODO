@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7401 2008/07/18 14:59:21 obache Exp $
+$NetBSD: TODO,v 1.7402 2008/07/18 17:24:19 obache Exp $
 
 Suggested new packages
 ======================
@@ -711,7 +711,6 @@ Suggested package updates
 	o gplcver-2.12a
 	o gpredict-0.9.0
 	o gpsdrive-2.09
-	o grace-5.1.22 [pkg/38884]
 	o gramofile-1.6P
 	o granulate-0.2
 	o graphviz-2.20.2
