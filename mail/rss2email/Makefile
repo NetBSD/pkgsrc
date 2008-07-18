@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2008/04/25 20:39:10 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2008/07/18 20:28:34 schmonz Exp $
 #
 
-DISTNAME=		rss2email-2.62
+DISTNAME=		rss2email-2.63
 CATEGORIES=		mail
 MASTER_SITES=		${HOMEPAGE}
 EXTRACT_SUFX=		.py
