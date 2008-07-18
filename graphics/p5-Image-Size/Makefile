@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2008/06/12 02:14:32 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2008/07/18 15:07:13 rhaen Exp $
 #
 
-DISTNAME=	Image-Size-2.992
+DISTNAME=	Image-Size-3.1.1
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5isi
-PKGREVISION=	2
 CATEGORIES=	graphics perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Image/}
 
@@ -14,6 +13,7 @@ COMMENT=	Read the dimensions of an image in several popular formats
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
+DEPENDS+=	p5-Compress-Zlib>=2:../../devel/p5-Compress-Zlib
 
 PERL5_PACKLIST=		auto/Image/Size/.packlist
 
