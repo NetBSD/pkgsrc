@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2008/07/16 07:03:21 schmonz Exp $
+# $NetBSD: Makefile,v 1.15 2008/07/18 01:22:39 schmonz Exp $
 #
 
-DISTNAME=	spamdyke-4.0.0
+DISTNAME=	spamdyke-4.0.1
 CATEGORIES=	mail
 MASTER_SITES=	${HOMEPAGE}releases/
 EXTRACT_SUFX=	.tgz
