@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2007/03/16 20:41:22 wiz Exp $
+$NetBSD: distinfo,v 1.5 2008/07/18 09:43:35 rhaen Exp $
 
-SHA1 (CGI-Session-4.20.tar.gz) = a8bdcc63b897ce53c965a5f20b07097c8cd085bf
-RMD160 (CGI-Session-4.20.tar.gz) = 75f6a62283c884442a0408954215a32f1f0c41e6
-Size (CGI-Session-4.20.tar.gz) = 70995 bytes
+SHA1 (CGI-Session-4.35.tar.gz) = 76d43e1961ee0a31344a239a153ebc9661d2b396
+RMD160 (CGI-Session-4.35.tar.gz) = 1b41da015f7e269971be04991c0a57dd90790e85
+Size (CGI-Session-4.35.tar.gz) = 69777 bytes
