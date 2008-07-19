@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1573 2008/07/19 11:56:24 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1574 2008/07/19 15:39:42 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2709,3 +2709,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/pixman to 0.11.8nb1 [bjs 2008-07-18]
 	Updated mail/rss2email to 2.63 [schmonz 2008-07-18]
 	Updated textproc/p5-iCal-Parser to 1.16 [rhaen 2008-07-18]
+	Added textproc/hunspell-af_ZA version 20060117 [ahoka 2008-07-19]
+	Added textproc/hunspell-bg_BG version 20040405 [ahoka 2008-07-19]
+	Added textproc/hunspell-ca_ES version 20080427 [ahoka 2008-07-19]
+	Added textproc/hunspell-fr_FR version 2.3.2 [ahoka 2008-07-19]
+	Added textproc/hunspell-sv_SE version 1.27 [ahoka 2008-07-19]
