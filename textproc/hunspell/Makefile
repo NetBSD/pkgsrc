@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.7 2008/04/18 12:01:05 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2008/07/19 15:06:36 ahoka Exp $
 #
 
 DISTNAME=	hunspell-1.2.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=hunspell/}
 
-MAINTAINER=	adam.hoka@gmail.com
+MAINTAINER=	ahoka@NetBSD.org
 HOMEPAGE=	http://hunspell.sourceforge.net/
 COMMENT=	Improved spellchecker
 
