@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7402 2008/07/18 17:24:19 obache Exp $
+$NetBSD: TODO,v 1.7403 2008/07/19 08:12:30 obache Exp $
 
 Suggested new packages
 ======================
@@ -493,6 +493,7 @@ Suggested package updates
 	o boson-0.13
 	o botan-1.6.4
 	o btpd-0.13 [pkg/38144]
+	o byacc-20070509
 	o bzflag-2.0.10
 	o bzr-1.5
 	o c4-1.10 [schmonz]
