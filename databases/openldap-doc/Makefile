@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.12 2008/06/09 09:07:38 ghen Exp $
+# $NetBSD: Makefile,v 1.13 2008/07/19 21:08:42 ghen Exp $
 
-DISTNAME=		openldap-2.4.9
+DISTNAME=		openldap-2.4.11
 PKGNAME=		${DISTNAME:S/-/-doc-/}
 CATEGORIES=		databases
 MASTER_SITES=		ftp://ftp.openldap.org/pub/OpenLDAP/openldap-release/
@@ -34,9 +34,10 @@ NO_BUILD=		yes
 DOCDIR=			${PREFIX}/share/doc/openldap
 IMAGES=			allmail-en.png allusersgroup-en.png config_dit.png
 IMAGES+=		config_local.png config_ref.png config_repl.png
-IMAGES+=		dual_dc.png intro_dctree.png intro_tree.png refint.png
-IMAGES+=		set-following-references.png set-memberUid.png
-IMAGES+=		set-recursivegroup.png
+IMAGES+=		dual_dc.png intro_dctree.png intro_tree.png
+IMAGES+=		push-based-complete.png push-based-standalone.png
+IMAGES+=		refint.png set-following-references.png
+IMAGES+=		set-memberUid.png set-recursivegroup.png
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
