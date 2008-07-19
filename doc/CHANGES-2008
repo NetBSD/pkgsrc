@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1576 2008/07/19 18:43:25 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.1577 2008/07/19 21:09:45 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2719,3 +2719,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/hunspell-fo_FO version 20050307 [ahoka 2008-07-19]
 	Added textproc/hunspell-es_ES version 20050510 [ahoka 2008-07-19]
 	Added textproc/hunspell-es_MX version 20050505 [ahoka 2008-07-19]
+	Updated databases/openldap to 2.4.11 [ghen 2008-07-19]
+	Updated databases/openldap-client to 2.4.11 [ghen 2008-07-19]
+	Updated databases/openldap-doc to 2.4.11 [ghen 2008-07-19]
+	Updated databases/openldap-server to 2.4.11 [ghen 2008-07-19]
