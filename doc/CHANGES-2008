@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1574 2008/07/19 15:39:42 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.1575 2008/07/19 17:51:14 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2714,3 +2714,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/hunspell-ca_ES version 20080427 [ahoka 2008-07-19]
 	Added textproc/hunspell-fr_FR version 2.3.2 [ahoka 2008-07-19]
 	Added textproc/hunspell-sv_SE version 1.27 [ahoka 2008-07-19]
+	Added textproc/hunspell-cs_CZ version 20061030 [ahoka 2008-07-19]
+	Added textproc/hunspell-da_DK version 20070106 [ahoka 2008-07-19]
