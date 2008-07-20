@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/21 10:39:31 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/07/20 02:14:23 taca Exp $
 ${ZOPE_DOC_BASE}/zeo/README.txt
 ${ZOPE_DOC_BASE}/zeo/ZopeREADME.txt
 ${ZOPE_DOC_BASE}/zeo/cache.txt
@@ -8519,6 +8519,12 @@ ${ZOPE_BASE}/lib/python/zope/testing/loghandler.py
 ${ZOPE_BASE}/lib/python/zope/testing/loghandler.pyc
 ${ZOPE_BASE}/lib/python/zope/testing/module.py
 ${ZOPE_BASE}/lib/python/zope/testing/module.pyc
+${ZOPE_BASE}/lib/python/zope/testing/packagenormalization/__init__.py
+${ZOPE_BASE}/lib/python/zope/testing/packagenormalization/__init__.pyc
+${ZOPE_BASE}/lib/python/zope/testing/packagenormalization/packagenormalization/__init__.py
+${ZOPE_BASE}/lib/python/zope/testing/packagenormalization/packagenormalization/__init__.pyc
+${ZOPE_BASE}/lib/python/zope/testing/packagenormalization/packagenormalization/tests.py
+${ZOPE_BASE}/lib/python/zope/testing/packagenormalization/packagenormalization/tests.pyc
 ${ZOPE_BASE}/lib/python/zope/testing/renormalizing.py
 ${ZOPE_BASE}/lib/python/zope/testing/renormalizing.pyc
 ${ZOPE_BASE}/lib/python/zope/testing/server.py
@@ -8768,6 +8774,7 @@ ${ZOPE_BASE}/lib/python/zope/viewlet/README.txt
 ${ZOPE_BASE}/lib/python/zope/viewlet/__init__.py
 ${ZOPE_BASE}/lib/python/zope/viewlet/__init__.pyc
 ${ZOPE_BASE}/lib/python/zope/viewlet/configure.zcml
+${ZOPE_BASE}/lib/python/zope/viewlet/communicating-viewlets.txt
 ${ZOPE_BASE}/lib/python/zope/viewlet/css_bundle_viewlet.pt
 ${ZOPE_BASE}/lib/python/zope/viewlet/css_viewlet.pt
 ${ZOPE_BASE}/lib/python/zope/viewlet/directives.txt
@@ -8870,6 +8877,8 @@ share/examples/rc.d/zope${ZOPE_VERSION}
 @dirrm ${ZOPE_BASE}/lib/python/zope/testing/testrunner-ex-pp-lib/sample4
 @dirrm ${ZOPE_BASE}/lib/python/zope/testing/testrunner-ex-pp-lib
 @dirrm ${ZOPE_BASE}/lib/python/zope/testing/testrunner-ex
+@dirrm ${ZOPE_BASE}/lib/python/zope/testing/packagenormalization/packagenormalization
+@dirrm ${ZOPE_BASE}/lib/python/zope/testing/packagenormalization
 @dirrm ${ZOPE_BASE}/lib/python/zope/testing
 @dirrm ${ZOPE_BASE}/lib/python/zope/testbrowser/ftests
 @dirrm ${ZOPE_BASE}/lib/python/zope/testbrowser
