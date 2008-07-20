@@ -1,15 +1,14 @@
-# $NetBSD: Makefile,v 1.42 2008/07/07 14:58:00 kristerw Exp $
+# $NetBSD: Makefile,v 1.43 2008/07/20 00:26:52 kristerw Exp $
 
-DISTNAME=	ghc-6.8.2
-PKGREVISION=	3
+DISTNAME=	ghc-6.8.3
 CATEGORIES=	lang
-MASTER_SITES=	http://www.haskell.org/ghc/dist/6.8.2/
-DISTFILES=	ghc-6.8.2-src.tar.bz2 \
-		ghc-6.8.2-src-extralibs.tar.bz2 \
+MASTER_SITES=	http://www.haskell.org/ghc/dist/6.8.3/
+DISTFILES=	ghc-6.8.3-src.tar.bz2 \
+		ghc-6.8.3-src-extralibs.tar.bz2 \
 		ghc-6.4.2-src.tar.bz2 \
 		ghc-6.4.2-i386-unknown-netbsd-hc.tar.gz
 
-MAINTAINER=	kristerw@NetBSD.org
+OWNER=		kristerw@NetBSD.org
 HOMEPAGE=	http://www.haskell.org/ghc/
 COMMENT=	Compiler for the functional language Haskell
 
