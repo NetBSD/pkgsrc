@@ -1,0 +1,15 @@
+$NetBSD: patch-ac,v 1.3 2008/07/20 23:38:17 dbj Exp $
+
+--- dvdread/dvd_input.c.orig	2005-09-19 06:43:08.000000000 -0700
++++ dvdread/dvd_input.c	2007-05-09 11:14:08.000000000 -0700
+@@ -333,6 +333,10 @@
+ #else
+ 
+   dvdcss_library = dlopen("libdvdcss.so.2", RTLD_LAZY);
++#ifdef __APPLE__
++  if (!dvdcss_library)
++    dvdcss_library = dlopen("libdvdcss.2.dylib", RTLD_LAZY);
++#endif
+ 
+   if(dvdcss_library != NULL) {
+ #if defined(__OpenBSD__) && !defined(__ELF__)

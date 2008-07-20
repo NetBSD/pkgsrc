@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.8 2008/07/20 23:38:17 dbj Exp $
+
+--- dvdread/Makefile.am.orig	2006-10-06 01:12:31.000000000 -0700
++++ dvdread/Makefile.am	2007-05-09 09:53:33.000000000 -0700
+@@ -6,7 +6,7 @@
+ 	dvdread_internal.h cmd_print.c \
+ 	md5.c md5.h
+ libdvdread_la_LIBADD = @DL_LIBS@ @CSS_LIBS@
+-libdvdread_la_LDFLAGS = -version-info 5:1:2 -export-symbols-regex "(DVD.*|ifo.*|nav.*|cmd.*)"
++libdvdread_la_LDFLAGS = -version-info 5:1:2 -export-symbols-regex "(DVD.*|ifo.*|nav.*|cmd.*|UDFFindFile)"
+ 
+ pkgincludedir = $(includedir)/dvdread
+ 
