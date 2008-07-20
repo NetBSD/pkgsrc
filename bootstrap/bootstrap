@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.132 2008/06/19 18:36:51 joerg Exp $
+# $NetBSD: bootstrap,v 1.133 2008/07/20 23:54:48 dbj Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -451,6 +451,7 @@ Darwin)
 	need_awk=no
 	need_sed=no
 	set_opsys=no
+	[ -z "$fetch_cmd" ] && fetch_cmd="/usr/bin/ftp"
 	machine_arch=`uname -p`
 	CC="gcc -isystem /usr/include"; export CC
 	osrev=`uname -r`
@@ -953,10 +954,10 @@ esac
 
 case "$need_pax" in
 yes)
-	echo "TOOLS_PLATFORM.pax?=		$prefix/bin/pax" >> ${TARGET_MKCONF}
-	echo "TOOLS_PLATFORM.pax?=		$prefix/bin/pax" >> ${BOOTSTRAP_MKCONF}
-	echo "TOOLS_PLATFORM.tar?=		$prefix/bin/tar" >> ${TARGET_MKCONF}
-	echo "TOOLS_PLATFORM.tar?=		$prefix/bin/tar" >> ${BOOTSTRAP_MKCONF}
+	echo "TOOLS_PLATFORM.pax?=		$prefix/bin/\${NBPAX_PROGRAM_PREFIX}pax" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.pax?=		$prefix/bin/\${NBPAX_PROGRAM_PREFIX}pax" >> ${BOOTSTRAP_MKCONF}
+	echo "TOOLS_PLATFORM.tar?=		$prefix/bin/\${NBPAX_PROGRAM_PREFIX}tar" >> ${TARGET_MKCONF}
+	echo "TOOLS_PLATFORM.tar?=		$prefix/bin/\${NBPAX_PROGRAM_PREFIX}tar" >> ${BOOTSTRAP_MKCONF}
 	;;
 *)
 	echo "TOOLS_PLATFORM.pax?=		$paxprog" >> ${TARGET_MKCONF}
