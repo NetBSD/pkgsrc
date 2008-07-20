@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.28 2007/10/13 11:41:33 adam Exp $
+$NetBSD: patch-ab,v 1.29 2008/07/20 23:35:20 dbj Exp $
 
 --- unix/configure.orig	2007-09-21 19:04:18.000000000 +0200
 +++ unix/configure
@@ -75,7 +75,7 @@ $NetBSD: patch-ab,v 1.28 2007/10/13 11:41:33 adam Exp $
          LIB_SUFFIX=${SHARED_LIB_SUFFIX}
 -        MAKE_LIB='${SHLIB_LD} -o $@ ${OBJS} ${SHLIB_LD_LIBS} ${TCL_SHLIB_LD_EXTRAS} ${TK_SHLIB_LD_EXTRAS} ${LD_SEARCH_FLAGS}'
 -        INSTALL_LIB='$(INSTALL_LIBRARY) $(LIB_FILE) $(LIB_INSTALL_DIR)/$(LIB_FILE)'
-+        MAKE_LIB='${SHLIB_LD} -o $@ ${OBJS:.o=.lo} ${SHLIB_LD_LIBS} ${TCL_SHLIB_LD_EXTRAS} ${TK_SHLIB_LD_EXTRAS} ${LD_SEARCH_FLAGS} -version-info 1:0'
++        MAKE_LIB='${SHLIB_LD} -o $@ ${OBJS:.o=.lo} ${LDFLAGS} ${SHLIB_LD_LIBS} ${TCL_SHLIB_LD_EXTRAS} ${TK_SHLIB_LD_EXTRAS} ${LD_SEARCH_FLAGS} -version-info 1:0'
 +        INSTALL_LIB='$(INSTALL_LIBRARY) $(TK_LA_FILE) $(LIB_INSTALL_DIR)/$(LIB_FILE)'
      else
          LIB_SUFFIX=${UNSHARED_LIB_SUFFIX}
