@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/07/19 15:06:36 ahoka Exp $
+# $NetBSD: Makefile,v 1.9 2008/07/20 23:54:06 abs Exp $
 #
 
 DISTNAME=	hunspell-1.2.2
@@ -29,6 +29,9 @@ SUBST_FILES.paths=	man/hunspell.1 man/hu/hunspell.1 src/tools/hunspell.cxx
 SUBST_SED.paths+=	-e 's,/usr/share/hunspell,${PREFIX}/share/hunspell,g'
 # Trailing slash important to not change hunspell.cxx
 SUBST_SED.paths+=	-e 's,/usr/share/myspell/,${PREFIX}/share/hunspell/,g'
+
+PLIST_SRC=		PLIST
+PLIST_SUBST+=		DISTNAME=${DISTNAME}
 
 .include "options.mk"
 
