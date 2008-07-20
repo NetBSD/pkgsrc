@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7403 2008/07/19 08:12:30 obache Exp $
+$NetBSD: TODO,v 1.7404 2008/07/20 00:29:27 kristerw Exp $
 
 Suggested new packages
 ======================
@@ -666,7 +666,6 @@ Suggested package updates
 	o gettext-0.17
 	o gfract-0.33
 	o ggiterm-0.7.1
-	o ghc-6.8.3
 	o ghostscript-esp-8.15.3
 	o gifsicle-1.48
 	o gimp-docs-2.4.1

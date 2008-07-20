@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1577 2008/07/19 21:09:45 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.1578 2008/07/20 00:29:27 kristerw Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2723,3 +2723,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/openldap-client to 2.4.11 [ghen 2008-07-19]
 	Updated databases/openldap-doc to 2.4.11 [ghen 2008-07-19]
 	Updated databases/openldap-server to 2.4.11 [ghen 2008-07-19]
+	Updated lang/ghc to 6.8.3 [kristerw 2008-07-20]
