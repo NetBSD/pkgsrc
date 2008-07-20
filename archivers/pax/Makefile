@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2008/07/20 23:31:50 dbj Exp $
+# $NetBSD: Makefile,v 1.38 2008/07/20 23:49:35 dbj Exp $
 
 DISTNAME=		pax-20080110
 CATEGORIES=		archivers
@@ -20,9 +20,6 @@ USE_FEATURES=		nbcompat
 .if defined(NBPAX_PROGRAM_PREFIX) && ${NBPAX_PROGRAM_PREFIX} != ""
 CONFIGURE_ARGS+=	--program-prefix=${NBPAX_PROGRAM_PREFIX:Q}
 
-PLIST_SUBST+=		NBPAX_PROGRAM_PREFIX=${NBPAX_PROGRAM_PREFIX:Q}
-BUILD_DEFS+=		NBPAX_PROGRAM_PREFIX
-
 .else
 
 # pax installs "tar" and "cpio"
@@ -34,6 +31,9 @@ CONFLICTS+=		gtar-base-[0-9]*
 .endif
 
 .endif
+
+PLIST_SUBST+=		NBPAX_PROGRAM_PREFIX=${NBPAX_PROGRAM_PREFIX:Q}
+BUILD_DEFS+=		NBPAX_PROGRAM_PREFIX
 
 GNU_CONFIGURE=		yes
 NO_CHECKSUM=		yes
