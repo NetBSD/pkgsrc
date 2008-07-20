@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1579 2008/07/20 00:40:51 kristerw Exp $
+$NetBSD: CHANGES-2008,v 1.1580 2008/07/20 02:15:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2725,3 +2725,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/openldap-server to 2.4.11 [ghen 2008-07-19]
 	Updated lang/ghc to 6.8.3 [kristerw 2008-07-20]
 	Updated devel/darcs to 2.0.2 [kristerw 2008-07-20]
+	Updated www/zope211 to 2.11.1 [taca 2008-07-20]
