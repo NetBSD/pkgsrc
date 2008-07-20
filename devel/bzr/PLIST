@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/05/05 11:17:51 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.18 2008/07/20 09:02:51 epg Exp $
 bin/bzr
 ${PYSITELIB}/bzrlib/__init__.py
 ${PYSITELIB}/bzrlib/__init__.pyc
@@ -189,6 +189,12 @@ ${PYSITELIB}/bzrlib/deprecated_graph.pyo
 ${PYSITELIB}/bzrlib/diff.py
 ${PYSITELIB}/bzrlib/diff.pyc
 ${PYSITELIB}/bzrlib/diff.pyo
+${PYSITELIB}/bzrlib/directory_service.py
+${PYSITELIB}/bzrlib/directory_service.py
+${PYSITELIB}/bzrlib/directory_service.pyc
+${PYSITELIB}/bzrlib/directory_service.pyc
+${PYSITELIB}/bzrlib/directory_service.pyo
+${PYSITELIB}/bzrlib/directory_service.pyo
 ${PYSITELIB}/bzrlib/dirstate.py
 ${PYSITELIB}/bzrlib/dirstate.pyc
 ${PYSITELIB}/bzrlib/dirstate.pyo
@@ -381,18 +387,6 @@ ${PYSITELIB}/bzrlib/plugins/launchpad/test_lp_service.pyo
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_register.py
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_register.pyc
 ${PYSITELIB}/bzrlib/plugins/launchpad/test_register.pyo
-${PYSITELIB}/bzrlib/directory_service.py
-${PYSITELIB}/bzrlib/directory_service.pyc
-${PYSITELIB}/bzrlib/directory_service.pyo
-${PYSITELIB}/bzrlib/tests/blackbox/test_hooks.py
-${PYSITELIB}/bzrlib/tests/blackbox/test_hooks.pyc
-${PYSITELIB}/bzrlib/tests/blackbox/test_hooks.pyo
-${PYSITELIB}/bzrlib/tests/test_directory_service.py
-${PYSITELIB}/bzrlib/tests/test_directory_service.pyc
-${PYSITELIB}/bzrlib/tests/test_directory_service.pyo
-${PYSITELIB}/bzrlib/tests/tree_implementations/test_annotate_iter.py
-${PYSITELIB}/bzrlib/tests/tree_implementations/test_annotate_iter.pyc
-${PYSITELIB}/bzrlib/tests/tree_implementations/test_annotate_iter.pyo
 ${PYSITELIB}/bzrlib/progress.py
 ${PYSITELIB}/bzrlib/progress.pyc
 ${PYSITELIB}/bzrlib/progress.pyo
@@ -591,6 +585,9 @@ ${PYSITELIB}/bzrlib/tests/blackbox/test_find_merge_base.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_help.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_help.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_help.pyo
+${PYSITELIB}/bzrlib/tests/blackbox/test_hooks.py
+${PYSITELIB}/bzrlib/tests/blackbox/test_hooks.pyc
+${PYSITELIB}/bzrlib/tests/blackbox/test_hooks.pyo
 ${PYSITELIB}/bzrlib/tests/blackbox/test_ignore.py
 ${PYSITELIB}/bzrlib/tests/blackbox/test_ignore.pyc
 ${PYSITELIB}/bzrlib/tests/blackbox/test_ignore.pyo
@@ -753,6 +750,9 @@ ${PYSITELIB}/bzrlib/tests/branch_implementations/test_branch.pyo
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_break_lock.py
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_break_lock.pyc
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_break_lock.pyo
+${PYSITELIB}/bzrlib/tests/branch_implementations/test_check.py
+${PYSITELIB}/bzrlib/tests/branch_implementations/test_check.pyc
+${PYSITELIB}/bzrlib/tests/branch_implementations/test_check.pyo
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_commit.py
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_commit.pyc
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_commit.pyo
@@ -786,6 +786,9 @@ ${PYSITELIB}/bzrlib/tests/branch_implementations/test_pull.pyo
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_push.py
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_push.pyc
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_push.pyo
+${PYSITELIB}/bzrlib/tests/branch_implementations/test_reconcile.py
+${PYSITELIB}/bzrlib/tests/branch_implementations/test_reconcile.pyc
+${PYSITELIB}/bzrlib/tests/branch_implementations/test_reconcile.pyo
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_revision_history.py
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_revision_history.pyc
 ${PYSITELIB}/bzrlib/tests/branch_implementations/test_revision_history.pyo
@@ -858,6 +861,9 @@ ${PYSITELIB}/bzrlib/tests/http_utils.pyo
 ${PYSITELIB}/bzrlib/tests/interrepository_implementations/__init__.py
 ${PYSITELIB}/bzrlib/tests/interrepository_implementations/__init__.pyc
 ${PYSITELIB}/bzrlib/tests/interrepository_implementations/__init__.pyo
+${PYSITELIB}/bzrlib/tests/interrepository_implementations/test_fetch.py
+${PYSITELIB}/bzrlib/tests/interrepository_implementations/test_fetch.pyc
+${PYSITELIB}/bzrlib/tests/interrepository_implementations/test_fetch.pyo
 ${PYSITELIB}/bzrlib/tests/interrepository_implementations/test_interrepository.py
 ${PYSITELIB}/bzrlib/tests/interrepository_implementations/test_interrepository.pyc
 ${PYSITELIB}/bzrlib/tests/interrepository_implementations/test_interrepository.pyo
@@ -960,18 +966,6 @@ ${PYSITELIB}/bzrlib/tests/revisionstore_implementations/test_all.pyo
 ${PYSITELIB}/bzrlib/tests/stub_sftp.py
 ${PYSITELIB}/bzrlib/tests/stub_sftp.pyc
 ${PYSITELIB}/bzrlib/tests/stub_sftp.pyo
-${PYSITELIB}/bzrlib/tests/test_mutabletree.py
-${PYSITELIB}/bzrlib/tests/test_mutabletree.pyc
-${PYSITELIB}/bzrlib/tests/test_mutabletree.pyo
-${PYSITELIB}/bzrlib/tests/test_revisionspec.py
-${PYSITELIB}/bzrlib/tests/test_revisionspec.pyc
-${PYSITELIB}/bzrlib/tests/test_revisionspec.pyo
-${PYSITELIB}/bzrlib/tests/test_uncommit.py
-${PYSITELIB}/bzrlib/tests/test_uncommit.pyc
-${PYSITELIB}/bzrlib/tests/test_uncommit.pyo
-${PYSITELIB}/bzrlib/transport/nosmart.py
-${PYSITELIB}/bzrlib/transport/nosmart.pyc
-${PYSITELIB}/bzrlib/transport/nosmart.pyo
 ${PYSITELIB}/bzrlib/tests/test__dirstate_helpers.py
 ${PYSITELIB}/bzrlib/tests/test__dirstate_helpers.pyc
 ${PYSITELIB}/bzrlib/tests/test__dirstate_helpers.pyo
@@ -1041,6 +1035,9 @@ ${PYSITELIB}/bzrlib/tests/test_deprecated_graph.pyo
 ${PYSITELIB}/bzrlib/tests/test_diff.py
 ${PYSITELIB}/bzrlib/tests/test_diff.pyc
 ${PYSITELIB}/bzrlib/tests/test_diff.pyo
+${PYSITELIB}/bzrlib/tests/test_directory_service.py
+${PYSITELIB}/bzrlib/tests/test_directory_service.pyc
+${PYSITELIB}/bzrlib/tests/test_directory_service.pyo
 ${PYSITELIB}/bzrlib/tests/test_dirstate.py
 ${PYSITELIB}/bzrlib/tests/test_dirstate.pyc
 ${PYSITELIB}/bzrlib/tests/test_dirstate.pyo
@@ -1164,6 +1161,9 @@ ${PYSITELIB}/bzrlib/tests/test_msgeditor.pyo
 ${PYSITELIB}/bzrlib/tests/test_multiparent.py
 ${PYSITELIB}/bzrlib/tests/test_multiparent.pyc
 ${PYSITELIB}/bzrlib/tests/test_multiparent.pyo
+${PYSITELIB}/bzrlib/tests/test_mutabletree.py
+${PYSITELIB}/bzrlib/tests/test_mutabletree.pyc
+${PYSITELIB}/bzrlib/tests/test_mutabletree.pyo
 ${PYSITELIB}/bzrlib/tests/test_nonascii.py
 ${PYSITELIB}/bzrlib/tests/test_nonascii.pyc
 ${PYSITELIB}/bzrlib/tests/test_nonascii.pyo
@@ -1238,6 +1238,9 @@ ${PYSITELIB}/bzrlib/tests/test_revert.pyo
 ${PYSITELIB}/bzrlib/tests/test_revision.py
 ${PYSITELIB}/bzrlib/tests/test_revision.pyc
 ${PYSITELIB}/bzrlib/tests/test_revision.pyo
+${PYSITELIB}/bzrlib/tests/test_revisionspec.py
+${PYSITELIB}/bzrlib/tests/test_revisionspec.pyc
+${PYSITELIB}/bzrlib/tests/test_revisionspec.pyo
 ${PYSITELIB}/bzrlib/tests/test_revisiontree.py
 ${PYSITELIB}/bzrlib/tests/test_revisiontree.pyc
 ${PYSITELIB}/bzrlib/tests/test_revisiontree.pyo
@@ -1337,6 +1340,9 @@ ${PYSITELIB}/bzrlib/tests/test_tuned_gzip.pyo
 ${PYSITELIB}/bzrlib/tests/test_ui.py
 ${PYSITELIB}/bzrlib/tests/test_ui.pyc
 ${PYSITELIB}/bzrlib/tests/test_ui.pyo
+${PYSITELIB}/bzrlib/tests/test_uncommit.py
+${PYSITELIB}/bzrlib/tests/test_uncommit.pyc
+${PYSITELIB}/bzrlib/tests/test_uncommit.pyo
 ${PYSITELIB}/bzrlib/tests/test_upgrade.py
 ${PYSITELIB}/bzrlib/tests/test_upgrade.pyc
 ${PYSITELIB}/bzrlib/tests/test_upgrade.pyo
@@ -1379,6 +1385,9 @@ ${PYSITELIB}/bzrlib/tests/transport_util.pyo
 ${PYSITELIB}/bzrlib/tests/tree_implementations/__init__.py
 ${PYSITELIB}/bzrlib/tests/tree_implementations/__init__.pyc
 ${PYSITELIB}/bzrlib/tests/tree_implementations/__init__.pyo
+${PYSITELIB}/bzrlib/tests/tree_implementations/test_annotate_iter.py
+${PYSITELIB}/bzrlib/tests/tree_implementations/test_annotate_iter.pyc
+${PYSITELIB}/bzrlib/tests/tree_implementations/test_annotate_iter.pyo
 ${PYSITELIB}/bzrlib/tests/tree_implementations/test_get_file_mtime.py
 ${PYSITELIB}/bzrlib/tests/tree_implementations/test_get_file_mtime.pyc
 ${PYSITELIB}/bzrlib/tests/tree_implementations/test_get_file_mtime.pyo
@@ -1589,6 +1598,9 @@ ${PYSITELIB}/bzrlib/transport/local.pyo
 ${PYSITELIB}/bzrlib/transport/memory.py
 ${PYSITELIB}/bzrlib/transport/memory.pyc
 ${PYSITELIB}/bzrlib/transport/memory.pyo
+${PYSITELIB}/bzrlib/transport/nosmart.py
+${PYSITELIB}/bzrlib/transport/nosmart.pyc
+${PYSITELIB}/bzrlib/transport/nosmart.pyo
 ${PYSITELIB}/bzrlib/transport/readonly.py
 ${PYSITELIB}/bzrlib/transport/readonly.pyc
 ${PYSITELIB}/bzrlib/transport/readonly.pyo
@@ -1724,6 +1736,9 @@ ${PYSITELIB}/bzrlib/xml6.pyo
 ${PYSITELIB}/bzrlib/xml7.py
 ${PYSITELIB}/bzrlib/xml7.pyc
 ${PYSITELIB}/bzrlib/xml7.pyo
+${PYSITELIB}/bzrlib/xml8.py
+${PYSITELIB}/bzrlib/xml8.pyc
+${PYSITELIB}/bzrlib/xml8.pyo
 ${PYSITELIB}/bzrlib/xml_serializer.py
 ${PYSITELIB}/bzrlib/xml_serializer.pyc
 ${PYSITELIB}/bzrlib/xml_serializer.pyo
