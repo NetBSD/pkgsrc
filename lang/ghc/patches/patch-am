@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.3 2008/03/24 22:40:23 kristerw Exp $
+$NetBSD: patch-am,v 1.4 2008/07/20 00:26:52 kristerw Exp $
 
---- libraries/unix/include/HsUnix.h.orig	2008-03-24 17:06:03.000000000 +0100
-+++ libraries/unix/include/HsUnix.h	2008-03-24 17:12:35.000000000 +0100
-@@ -140,6 +140,18 @@
+--- libraries/unix/include/HsUnix.h.orig	2008-06-16 19:48:44.000000000 +0200
++++ libraries/unix/include/HsUnix.h	2008-07-19 20:06:49.000000000 +0200
+@@ -140,6 +140,28 @@
      return mknod(pathname,mode,dev);
  }
  
@@ -16,6 +16,16 @@ $NetBSD: patch-am,v 1.3 2008/03/24 22:40:23 kristerw Exp $
 +INLINE clock_t __hsunix_times(struct tms *tp)
 +{
 +    return times(tp);
++}
++
++INLINE int __hsunix_sigpending(sigset_t *set)
++{
++    return sigpending(set);
++}
++
++INLINE int __hsunix_sigsuspend(const sigset_t *sigmask)
++{
++    return sigsuspend(sigmask);
 +}
 +
  #ifdef HAVE_PTSNAME
