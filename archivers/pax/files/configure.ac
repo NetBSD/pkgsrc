@@ -33,5 +33,6 @@ AH_BOTTOM([/* Define to 1 if the user- and root-changeable masks were detected *
 AC_CHECK_FUNCS([fchroot lutimes])
 AC_CHECK_FUNCS([getrlimit setrlimit])
 
+AC_ARG_PROGRAM
 AC_CONFIG_FILES([Makefile])
 AC_OUTPUT
