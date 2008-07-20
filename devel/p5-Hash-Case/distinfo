@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/14 01:29:50 ben Exp $
+$NetBSD: distinfo,v 1.2 2008/07/20 21:47:40 he Exp $
 
-SHA1 (Hash-Case-1.003.tar.gz) = b88ba57530dcc0d797c40a8d25c3e8f12f652d0c
-RMD160 (Hash-Case-1.003.tar.gz) = 9cb8c8aaa5b614d64395c1463b4c2225b22fdd2f
-Size (Hash-Case-1.003.tar.gz) = 4683 bytes
+SHA1 (Hash-Case-1.006.tar.gz) = 8bda63643250f9888671d70253ea273026729575
+RMD160 (Hash-Case-1.006.tar.gz) = b32b657b0d0a3a4d10c284edf13f58a64726d81f
+Size (Hash-Case-1.006.tar.gz) = 6195 bytes
