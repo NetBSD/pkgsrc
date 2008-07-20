@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/03/17 15:59:05 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/07/20 00:38:44 kristerw Exp $
 bin/darcs
 man/man1/darcs.1
 share/doc/darcs/examples/darcs_completion
@@ -6,8 +6,10 @@ share/doc/darcs/examples/zsh_completion_new
 share/doc/darcs/examples/zsh_completion_old
 share/doc/darcs/manual/WARNINGS
 share/doc/darcs/manual/contents.png
+share/doc/darcs/manual/crossref.png
 share/doc/darcs/manual/darcs.css
 share/doc/darcs/manual/darcs.html
+share/doc/darcs/manual/darcs.pdf
 share/doc/darcs/manual/darcs.ps
 share/doc/darcs/manual/footnode.html
 share/doc/darcs/manual/images.aux
@@ -32,7 +34,18 @@ share/doc/darcs/manual/img22.png
 share/doc/darcs/manual/img23.png
 share/doc/darcs/manual/img24.png
 share/doc/darcs/manual/img25.png
+share/doc/darcs/manual/img26.png
+share/doc/darcs/manual/img27.png
+share/doc/darcs/manual/img28.png
+share/doc/darcs/manual/img29.png
 share/doc/darcs/manual/img3.png
+share/doc/darcs/manual/img30.png
+share/doc/darcs/manual/img31.png
+share/doc/darcs/manual/img32.png
+share/doc/darcs/manual/img33.png
+share/doc/darcs/manual/img34.png
+share/doc/darcs/manual/img35.png
+share/doc/darcs/manual/img36.png
 share/doc/darcs/manual/img4.png
 share/doc/darcs/manual/img5.png
 share/doc/darcs/manual/img6.png
@@ -55,6 +68,8 @@ share/doc/darcs/manual/node6.html
 share/doc/darcs/manual/node7.html
 share/doc/darcs/manual/node8.html
 share/doc/darcs/manual/node9.html
+share/doc/darcs/manual/nx_grp_g.png
+share/doc/darcs/manual/patch-theory.pdf
 share/doc/darcs/manual/prev.png
 share/doc/darcs/manual/prev_g.png
 share/doc/darcs/manual/up.png
