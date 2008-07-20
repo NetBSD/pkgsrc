@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2008/03/07 11:24:16 obache Exp $
+# $NetBSD: Makefile,v 1.45 2008/07/20 19:02:47 ahoka Exp $
 
 DISTNAME=		icon.v942src
 PKGNAME=		icon-9.4.2
@@ -15,6 +15,8 @@ CONFIGURE_TARGET=	X-Configure
 BUILD_TARGET=		All
 TEST_TARGET=		Test
 MAKE_JOBS_SAFE=		no
+
+INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../mk/compiler.mk"
