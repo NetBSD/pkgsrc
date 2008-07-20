@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.18 2007/10/13 11:41:34 adam Exp $
+$NetBSD: patch-ac,v 1.19 2008/07/20 23:35:20 dbj Exp $
 
---- unix/tcl.m4.orig	2007-09-21 19:04:18.000000000 +0200
-+++ unix/tcl.m4
+--- unix/tcl.m4.orig	2007-09-21 10:04:18.000000000 -0700
++++ unix/tcl.m4	2008-04-16 15:30:21.000000000 -0700
 @@ -1033,6 +1033,7 @@ AC_DEFUN([SC_CONFIG_CFLAGS], [
      # Step 3: set configuration options based on system name and version.
  
@@ -96,7 +96,7 @@ $NetBSD: patch-ac,v 1.18 2007/10/13 11:41:34 adam Exp $
          LIB_SUFFIX=${SHARED_LIB_SUFFIX}
 -        MAKE_LIB='${SHLIB_LD} -o [$]@ ${OBJS} ${SHLIB_LD_LIBS} ${TCL_SHLIB_LD_EXTRAS} ${TK_SHLIB_LD_EXTRAS} ${LD_SEARCH_FLAGS}'
 -        INSTALL_LIB='$(INSTALL_LIBRARY) $(LIB_FILE) $(LIB_INSTALL_DIR)/$(LIB_FILE)'
-+        MAKE_LIB='${SHLIB_LD} -o ${@:C/\.so.*/.la/} ${OBJS:.o=.lo} ${SHLIB_LD_LIBS} ${TCL_SHLIB_LD_EXTRAS} ${TK_SHLIB_LD_EXTRAS} ${LD_SEARCH_FLAGS} -version-info 1:0'
++        MAKE_LIB='${SHLIB_LD} -o ${@:C/\.so.*/.la/} ${OBJS:.o=.lo} ${LDFLAGS} ${SHLIB_LD_LIBS} ${TCL_SHLIB_LD_EXTRAS} ${TK_SHLIB_LD_EXTRAS} ${LD_SEARCH_FLAGS} -version-info 1:0'
 +        INSTALL_LIB='$(INSTALL_LIBRARY) $(LIB_FILE:C/\.so.*/.la/) $(LIB_INSTALL_DIR)/$(LIB_FILE)'
      else
          LIB_SUFFIX=${UNSHARED_LIB_SUFFIX}
