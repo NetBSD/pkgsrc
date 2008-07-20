@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/03/17 15:33:10 kristerw Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/07/20 00:26:52 kristerw Exp $
 bin/ghc
 bin/${PKGNAME}
 bin/ghc-pkg
@@ -395,95 +395,95 @@ lib/${PKGNAME}/include/ghcautoconf.h
 lib/${PKGNAME}/include/ghcconfig.h
 lib/${PKGNAME}/include/ghcplatform.h
 lib/${PKGNAME}/include/ieee-flpt.h
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Compat/Directory.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Compat/Directory.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Compat/Exception.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Compat/Exception.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Compat/Map.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Compat/Map.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Compat/RawSystem.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Compat/RawSystem.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Compat/ReadP.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Compat/ReadP.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Compat/TempFile.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Compat/TempFile.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Compiler.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Compiler.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Configuration.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Configuration.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Extension.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Extension.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/GetOpt.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/GetOpt.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/InstalledPackageInfo.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/InstalledPackageInfo.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/License.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/License.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Make.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Make.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Package.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Package.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/PackageDescription.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/PackageDescription.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/ParseUtils.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/ParseUtils.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Setup.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Setup.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/Build.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/Build.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/Compiler.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/Compiler.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/Configure.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/Configure.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/GHC.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/GHC.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/GHC/Makefile.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/GHC/Makefile.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/GHC/PackageConfig.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/GHC/PackageConfig.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/Haddock.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/Haddock.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/Hugs.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/Hugs.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/Install.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/Install.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/InstallDirs.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/InstallDirs.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/JHC.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/JHC.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/LocalBuildInfo.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/LocalBuildInfo.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/NHC.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/NHC.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/PreProcess.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/PreProcess.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/PreProcess/Unlit.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/PreProcess/Unlit.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/Program.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/Program.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/Register.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/Register.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/Setup.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/Setup.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/SetupWrapper.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/SetupWrapper.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/SrcDist.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/SrcDist.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/Utils.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/Utils.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/System.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/System.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Verbosity.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Verbosity.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Version.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Version.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/HSCabal-1.2.3.0.o
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Language/Haskell/Extension.hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/Language/Haskell/Extension.p_hi
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/libHSCabal-1.2.3.0.a
-lib/${PKGNAME}/lib/Cabal-1.2.3.0/libHSCabal-1.2.3.0_p.a
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Compat/Directory.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Compat/Directory.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Compat/Exception.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Compat/Exception.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Compat/Map.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Compat/Map.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Compat/RawSystem.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Compat/RawSystem.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Compat/ReadP.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Compat/ReadP.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Compat/TempFile.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Compat/TempFile.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Compiler.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Compiler.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Configuration.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Configuration.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Extension.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Extension.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/GetOpt.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/GetOpt.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/InstalledPackageInfo.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/InstalledPackageInfo.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/License.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/License.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Make.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Make.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Package.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Package.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/PackageDescription.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/PackageDescription.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/ParseUtils.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/ParseUtils.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Setup.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Setup.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/Build.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/Build.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/Compiler.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/Compiler.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/Configure.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/Configure.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/GHC.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/GHC.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/GHC/Makefile.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/GHC/Makefile.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/GHC/PackageConfig.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/GHC/PackageConfig.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/Haddock.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/Haddock.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/Hugs.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/Hugs.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/Install.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/Install.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/InstallDirs.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/InstallDirs.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/JHC.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/JHC.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/LocalBuildInfo.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/LocalBuildInfo.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/NHC.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/NHC.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/PreProcess.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/PreProcess.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/PreProcess/Unlit.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/PreProcess/Unlit.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/Program.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/Program.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/Register.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/Register.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/Setup.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/Setup.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/SetupWrapper.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/SetupWrapper.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/SrcDist.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/SrcDist.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/Utils.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/Utils.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/System.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/System.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Verbosity.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Verbosity.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Version.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Version.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/HSCabal-1.2.4.0.o
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Language/Haskell/Extension.hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/Language/Haskell/Extension.p_hi
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/libHSCabal-1.2.4.0.a
+lib/${PKGNAME}/lib/Cabal-1.2.4.0/libHSCabal-1.2.4.0_p.a
 lib/${PKGNAME}/lib/HUnit-1.2.0.0/HSHUnit-1.2.0.0.o
 lib/${PKGNAME}/lib/HUnit-1.2.0.0/Test/HUnit.hi
 lib/${PKGNAME}/lib/HUnit-1.2.0.0/Test/HUnit.p_hi
@@ -539,383 +539,385 @@ lib/${PKGNAME}/lib/array-0.1.0.0/Data/Array/Unboxed.p_hi
 lib/${PKGNAME}/lib/array-0.1.0.0/HSarray-0.1.0.0.o
 lib/${PKGNAME}/lib/array-0.1.0.0/libHSarray-0.1.0.0.a
 lib/${PKGNAME}/lib/array-0.1.0.0/libHSarray-0.1.0.0_p.a
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Applicative.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Applicative.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Arrow.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Arrow.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Concurrent.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Concurrent.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Concurrent/Chan.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Concurrent/Chan.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Concurrent/MVar.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Concurrent/MVar.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Concurrent/QSem.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Concurrent/QSem.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Concurrent/QSemN.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Concurrent/QSemN.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Concurrent/SampleVar.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Concurrent/SampleVar.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Exception.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Exception.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Monad.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Monad.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Monad/Fix.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Monad/Fix.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Monad/Instances.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Monad/Instances.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Monad/ST.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Monad/ST.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Monad/ST/Lazy.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Monad/ST/Lazy.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Monad/ST/Strict.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Control/Monad/ST/Strict.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Bits.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Bits.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Bool.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Bool.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Char.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Char.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Complex.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Complex.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Dynamic.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Dynamic.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Either.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Either.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Eq.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Eq.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Fixed.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Fixed.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Foldable.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Foldable.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Function.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Function.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Generics.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Generics.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Generics/Aliases.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Generics/Aliases.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Generics/Basics.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Generics/Basics.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Generics/Instances.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Generics/Instances.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Generics/Schemes.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Generics/Schemes.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Generics/Text.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Generics/Text.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Generics/Twins.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Generics/Twins.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/HashTable.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/HashTable.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/IORef.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/IORef.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Int.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Int.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Ix.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Ix.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/List.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/List.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Maybe.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Maybe.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Monoid.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Monoid.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Ord.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Ord.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Ratio.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Ratio.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/STRef.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/STRef.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/STRef/Lazy.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/STRef/Lazy.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/STRef/Strict.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/STRef/Strict.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/String.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/String.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Traversable.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Traversable.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Tuple.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Tuple.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Typeable.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Typeable.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Unique.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Unique.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Version.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Version.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Word.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Data/Word.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Debug/Trace.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Debug/Trace.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/C.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/C.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/C/Error.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/C/Error.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/C/String.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/C/String.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/C/Types.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/C/Types.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/Concurrent.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/Concurrent.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/ForeignPtr.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/ForeignPtr.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/Marshal.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/Marshal.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/Marshal/Alloc.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/Marshal/Alloc.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/Marshal/Array.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/Marshal/Array.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/Marshal/Error.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/Marshal/Error.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/Marshal/Pool.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/Marshal/Pool.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/Marshal/Utils.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/Marshal/Utils.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/Ptr.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/Ptr.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/StablePtr.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/StablePtr.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/Storable.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/Storable.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Arr.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Arr.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Base.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Base.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Conc.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Conc.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/ConsoleHandler.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/ConsoleHandler.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Dotnet.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Dotnet.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Enum.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Enum.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Environment.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Environment.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Err.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Err.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Exception.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Exception.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Exts.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Exts.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Float.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Float.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/ForeignPtr.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/ForeignPtr.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Handle.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Handle.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/IO.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/IO.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/IOBase.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/IOBase.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Int.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Int.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/List.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/List.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Num.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Num.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/PArr.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/PArr.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Pack.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Pack.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/PrimopWrappers.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/PrimopWrappers.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Ptr.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Ptr.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Read.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Read.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Real.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Real.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/ST.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/ST.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/STRef.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/STRef.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Show.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Show.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Stable.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Stable.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Storable.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Storable.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/TopHandler.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/TopHandler.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Unicode.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Unicode.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Weak.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Weak.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Word.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/GHC/Word.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/HSbase-3.0.1.0.o
-lib/${PKGNAME}/lib/base-3.0.1.0/Numeric.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Numeric.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Prelude.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Prelude.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/CPUTime.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/CPUTime.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/Console/GetOpt.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/Console/GetOpt.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/Environment.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/Environment.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/Exit.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/Exit.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/IO.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/IO.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/IO/Error.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/IO/Error.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/IO/Unsafe.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/IO/Unsafe.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/Info.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/Info.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/Mem.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/Mem.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/Mem/StableName.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/Mem/StableName.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/Mem/Weak.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/Mem/Weak.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/Posix/Internals.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/Posix/Internals.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/Posix/Types.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/Posix/Types.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/Timeout.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/System/Timeout.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Text/ParserCombinators/ReadP.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Text/ParserCombinators/ReadP.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Text/ParserCombinators/ReadPrec.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Text/ParserCombinators/ReadPrec.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Text/Printf.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Text/Printf.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Text/Read.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Text/Read.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Text/Read/Lex.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Text/Read/Lex.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Text/Show.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Text/Show.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Text/Show/Functions.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Text/Show/Functions.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Unsafe/Coerce.hi
-lib/${PKGNAME}/lib/base-3.0.1.0/Unsafe/Coerce.p_hi
-lib/${PKGNAME}/lib/base-3.0.1.0/include/HsBase.h
-lib/${PKGNAME}/lib/base-3.0.1.0/include/HsBaseConfig.h
-lib/${PKGNAME}/lib/base-3.0.1.0/include/Typeable.h
-lib/${PKGNAME}/lib/base-3.0.1.0/include/WCsubst.h
-lib/${PKGNAME}/lib/base-3.0.1.0/include/consUtils.h
-lib/${PKGNAME}/lib/base-3.0.1.0/include/dirUtils.h
-lib/${PKGNAME}/lib/base-3.0.1.0/libHSbase-3.0.1.0.a
-lib/${PKGNAME}/lib/base-3.0.1.0/libHSbase-3.0.1.0_p.a
-lib/${PKGNAME}/lib/bytestring-0.9.0.1/Data/ByteString.hi
-lib/${PKGNAME}/lib/bytestring-0.9.0.1/Data/ByteString.p_hi
-lib/${PKGNAME}/lib/bytestring-0.9.0.1/Data/ByteString/Char8.hi
-lib/${PKGNAME}/lib/bytestring-0.9.0.1/Data/ByteString/Char8.p_hi
-lib/${PKGNAME}/lib/bytestring-0.9.0.1/Data/ByteString/Fusion.hi
-lib/${PKGNAME}/lib/bytestring-0.9.0.1/Data/ByteString/Fusion.p_hi
-lib/${PKGNAME}/lib/bytestring-0.9.0.1/Data/ByteString/Internal.hi
-lib/${PKGNAME}/lib/bytestring-0.9.0.1/Data/ByteString/Internal.p_hi
-lib/${PKGNAME}/lib/bytestring-0.9.0.1/Data/ByteString/Lazy.hi
-lib/${PKGNAME}/lib/bytestring-0.9.0.1/Data/ByteString/Lazy.p_hi
-lib/${PKGNAME}/lib/bytestring-0.9.0.1/Data/ByteString/Lazy/Char8.hi
-lib/${PKGNAME}/lib/bytestring-0.9.0.1/Data/ByteString/Lazy/Char8.p_hi
-lib/${PKGNAME}/lib/bytestring-0.9.0.1/Data/ByteString/Lazy/Internal.hi
-lib/${PKGNAME}/lib/bytestring-0.9.0.1/Data/ByteString/Lazy/Internal.p_hi
-lib/${PKGNAME}/lib/bytestring-0.9.0.1/Data/ByteString/Unsafe.hi
-lib/${PKGNAME}/lib/bytestring-0.9.0.1/Data/ByteString/Unsafe.p_hi
-lib/${PKGNAME}/lib/bytestring-0.9.0.1/HSbytestring-0.9.0.1.o
-lib/${PKGNAME}/lib/bytestring-0.9.0.1/include/fpstring.h
-lib/${PKGNAME}/lib/bytestring-0.9.0.1/libHSbytestring-0.9.0.1.a
-lib/${PKGNAME}/lib/bytestring-0.9.0.1/libHSbytestring-0.9.0.1_p.a
-lib/${PKGNAME}/lib/cgi-3001.1.5.1/HScgi-3001.1.5.1.o
-lib/${PKGNAME}/lib/cgi-3001.1.5.1/Network/CGI.hi
-lib/${PKGNAME}/lib/cgi-3001.1.5.1/Network/CGI.p_hi
-lib/${PKGNAME}/lib/cgi-3001.1.5.1/Network/CGI/Cookie.hi
-lib/${PKGNAME}/lib/cgi-3001.1.5.1/Network/CGI/Cookie.p_hi
-lib/${PKGNAME}/lib/cgi-3001.1.5.1/Network/CGI/Monad.hi
-lib/${PKGNAME}/lib/cgi-3001.1.5.1/Network/CGI/Monad.p_hi
-lib/${PKGNAME}/lib/cgi-3001.1.5.1/Network/CGI/Multipart.hi
-lib/${PKGNAME}/lib/cgi-3001.1.5.1/Network/CGI/Multipart.p_hi
-lib/${PKGNAME}/lib/cgi-3001.1.5.1/Network/CGI/Protocol.hi
-lib/${PKGNAME}/lib/cgi-3001.1.5.1/Network/CGI/Protocol.p_hi
-lib/${PKGNAME}/lib/cgi-3001.1.5.1/Network/CGI/RFC822Headers.hi
-lib/${PKGNAME}/lib/cgi-3001.1.5.1/Network/CGI/RFC822Headers.p_hi
-lib/${PKGNAME}/lib/cgi-3001.1.5.1/libHScgi-3001.1.5.1.a
-lib/${PKGNAME}/lib/cgi-3001.1.5.1/libHScgi-3001.1.5.1_p.a
-lib/${PKGNAME}/lib/containers-0.1.0.1/Data/Graph.hi
-lib/${PKGNAME}/lib/containers-0.1.0.1/Data/Graph.p_hi
-lib/${PKGNAME}/lib/containers-0.1.0.1/Data/IntMap.hi
-lib/${PKGNAME}/lib/containers-0.1.0.1/Data/IntMap.p_hi
-lib/${PKGNAME}/lib/containers-0.1.0.1/Data/IntSet.hi
-lib/${PKGNAME}/lib/containers-0.1.0.1/Data/IntSet.p_hi
-lib/${PKGNAME}/lib/containers-0.1.0.1/Data/Map.hi
-lib/${PKGNAME}/lib/containers-0.1.0.1/Data/Map.p_hi
-lib/${PKGNAME}/lib/containers-0.1.0.1/Data/Sequence.hi
-lib/${PKGNAME}/lib/containers-0.1.0.1/Data/Sequence.p_hi
-lib/${PKGNAME}/lib/containers-0.1.0.1/Data/Set.hi
-lib/${PKGNAME}/lib/containers-0.1.0.1/Data/Set.p_hi
-lib/${PKGNAME}/lib/containers-0.1.0.1/Data/Tree.hi
-lib/${PKGNAME}/lib/containers-0.1.0.1/Data/Tree.p_hi
-lib/${PKGNAME}/lib/containers-0.1.0.1/HScontainers-0.1.0.1.o
-lib/${PKGNAME}/lib/containers-0.1.0.1/libHScontainers-0.1.0.1.a
-lib/${PKGNAME}/lib/containers-0.1.0.1/libHScontainers-0.1.0.1_p.a
-lib/${PKGNAME}/lib/directory-1.0.0.0/HSdirectory-1.0.0.0.o
-lib/${PKGNAME}/lib/directory-1.0.0.0/System/Directory.hi
-lib/${PKGNAME}/lib/directory-1.0.0.0/System/Directory.p_hi
-lib/${PKGNAME}/lib/directory-1.0.0.0/include/HsDirectory.h
-lib/${PKGNAME}/lib/directory-1.0.0.0/include/HsDirectoryConfig.h
-lib/${PKGNAME}/lib/directory-1.0.0.0/libHSdirectory-1.0.0.0.a
-lib/${PKGNAME}/lib/directory-1.0.0.0/libHSdirectory-1.0.0.0_p.a
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Basic.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Basic.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Example.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Example.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Graph.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Graph.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Graphviz.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Graphviz.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Internal/FiniteMap.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Internal/FiniteMap.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Internal/Heap.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Internal/Heap.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Internal/Queue.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Internal/Queue.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Internal/RootPath.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Internal/RootPath.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Internal/Thread.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Internal/Thread.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Monad.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Monad.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Monad/IOArray.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Monad/IOArray.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/NodeMap.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/NodeMap.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/ArtPoint.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/ArtPoint.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/BCC.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/BCC.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/BFS.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/BFS.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/DFS.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/DFS.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/Dominators.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/Dominators.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/GVD.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/GVD.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/Indep.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/Indep.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/MST.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/MST.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/MaxFlow.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/MaxFlow.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/MaxFlow2.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/MaxFlow2.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/Monad.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/Monad.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/SP.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/SP.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/TransClos.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query/TransClos.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Tree.hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Tree.p_hi
-lib/${PKGNAME}/lib/fgl-5.4.1.1/HSfgl-5.4.1.1.o
-lib/${PKGNAME}/lib/fgl-5.4.1.1/libHSfgl-5.4.1.1.a
-lib/${PKGNAME}/lib/fgl-5.4.1.1/libHSfgl-5.4.1.1_p.a
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Applicative.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Applicative.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Arrow.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Arrow.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Concurrent.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Concurrent.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Concurrent/Chan.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Concurrent/Chan.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Concurrent/MVar.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Concurrent/MVar.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Concurrent/QSem.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Concurrent/QSem.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Concurrent/QSemN.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Concurrent/QSemN.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Concurrent/SampleVar.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Concurrent/SampleVar.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Exception.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Exception.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Monad.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Monad.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Monad/Fix.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Monad/Fix.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Monad/Instances.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Monad/Instances.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Monad/ST.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Monad/ST.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Monad/ST/Lazy.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Monad/ST/Lazy.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Monad/ST/Strict.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Control/Monad/ST/Strict.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Bits.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Bits.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Bool.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Bool.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Char.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Char.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Complex.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Complex.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Dynamic.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Dynamic.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Either.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Either.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Eq.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Eq.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Fixed.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Fixed.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Foldable.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Foldable.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Function.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Function.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Generics.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Generics.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Generics/Aliases.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Generics/Aliases.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Generics/Basics.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Generics/Basics.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Generics/Instances.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Generics/Instances.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Generics/Schemes.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Generics/Schemes.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Generics/Text.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Generics/Text.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Generics/Twins.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Generics/Twins.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/HashTable.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/HashTable.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/IORef.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/IORef.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Int.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Int.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Ix.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Ix.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/List.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/List.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Maybe.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Maybe.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Monoid.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Monoid.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Ord.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Ord.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Ratio.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Ratio.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/STRef.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/STRef.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/STRef/Lazy.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/STRef/Lazy.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/STRef/Strict.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/STRef/Strict.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/String.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/String.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Traversable.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Traversable.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Tuple.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Tuple.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Typeable.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Typeable.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Unique.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Unique.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Version.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Version.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Word.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Data/Word.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Debug/Trace.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Debug/Trace.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/C.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/C.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/C/Error.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/C/Error.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/C/String.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/C/String.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/C/Types.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/C/Types.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/Concurrent.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/Concurrent.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/ForeignPtr.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/ForeignPtr.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/Marshal.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/Marshal.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/Marshal/Alloc.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/Marshal/Alloc.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/Marshal/Array.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/Marshal/Array.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/Marshal/Error.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/Marshal/Error.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/Marshal/Pool.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/Marshal/Pool.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/Marshal/Utils.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/Marshal/Utils.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/Ptr.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/Ptr.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/StablePtr.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/StablePtr.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/Storable.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/Storable.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Arr.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Arr.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Base.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Base.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Conc.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Conc.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/ConsoleHandler.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/ConsoleHandler.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Dotnet.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Dotnet.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Enum.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Enum.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Environment.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Environment.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Err.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Err.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Exception.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Exception.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Exts.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Exts.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Float.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Float.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/ForeignPtr.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/ForeignPtr.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Handle.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Handle.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/IO.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/IO.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/IOBase.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/IOBase.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Int.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Int.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/List.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/List.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Num.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Num.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/PArr.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/PArr.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Pack.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Pack.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/PrimopWrappers.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/PrimopWrappers.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Ptr.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Ptr.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Read.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Read.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Real.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Real.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/ST.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/ST.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/STRef.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/STRef.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Show.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Show.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Stable.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Stable.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Storable.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Storable.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/TopHandler.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/TopHandler.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Unicode.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Unicode.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Weak.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Weak.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Word.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/GHC/Word.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/HSbase-3.0.2.0.o
+lib/${PKGNAME}/lib/base-3.0.2.0/Numeric.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Numeric.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Prelude.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Prelude.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/CPUTime.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/CPUTime.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/Console/GetOpt.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/Console/GetOpt.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/Environment.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/Environment.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/Exit.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/Exit.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/IO.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/IO.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/IO/Error.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/IO/Error.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/IO/Unsafe.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/IO/Unsafe.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/Info.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/Info.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/Mem.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/Mem.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/Mem/StableName.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/Mem/StableName.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/Mem/Weak.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/Mem/Weak.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/Posix/Internals.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/Posix/Internals.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/Posix/Types.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/Posix/Types.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/Timeout.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/System/Timeout.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Text/ParserCombinators/ReadP.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Text/ParserCombinators/ReadP.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Text/ParserCombinators/ReadPrec.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Text/ParserCombinators/ReadPrec.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Text/Printf.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Text/Printf.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Text/Read.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Text/Read.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Text/Read/Lex.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Text/Read/Lex.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Text/Show.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Text/Show.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Text/Show/Functions.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Text/Show/Functions.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Unsafe/Coerce.hi
+lib/${PKGNAME}/lib/base-3.0.2.0/Unsafe/Coerce.p_hi
+lib/${PKGNAME}/lib/base-3.0.2.0/include/HsBase.h
+lib/${PKGNAME}/lib/base-3.0.2.0/include/HsBaseConfig.h
+lib/${PKGNAME}/lib/base-3.0.2.0/include/Typeable.h
+lib/${PKGNAME}/lib/base-3.0.2.0/include/WCsubst.h
+lib/${PKGNAME}/lib/base-3.0.2.0/include/consUtils.h
+lib/${PKGNAME}/lib/base-3.0.2.0/include/dirUtils.h
+lib/${PKGNAME}/lib/base-3.0.2.0/libHSbase-3.0.2.0.a
+lib/${PKGNAME}/lib/base-3.0.2.0/libHSbase-3.0.2.0_p.a
+lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/Data/ByteString.hi
+lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/Data/ByteString.p_hi
+lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/Data/ByteString/Char8.hi
+lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/Data/ByteString/Char8.p_hi
+lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/Data/ByteString/Fusion.hi
+lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/Data/ByteString/Fusion.p_hi
+lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/Data/ByteString/Internal.hi
+lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/Data/ByteString/Internal.p_hi
+lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/Data/ByteString/Lazy.hi
+lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/Data/ByteString/Lazy.p_hi
+lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/Data/ByteString/Lazy/Char8.hi
+lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/Data/ByteString/Lazy/Char8.p_hi
+lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/Data/ByteString/Lazy/Internal.hi
+lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/Data/ByteString/Lazy/Internal.p_hi
+lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/Data/ByteString/Unsafe.hi
+lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/Data/ByteString/Unsafe.p_hi
+lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/HSbytestring-0.9.0.1.1.o
+lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/include/fpstring.h
+lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/libHSbytestring-0.9.0.1.1.a
+lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/libHSbytestring-0.9.0.1.1_p.a
+lib/${PKGNAME}/lib/cgi-3001.1.6.0/HScgi-3001.1.6.0.o
+lib/${PKGNAME}/lib/cgi-3001.1.6.0/Network/CGI.hi
+lib/${PKGNAME}/lib/cgi-3001.1.6.0/Network/CGI.p_hi
+lib/${PKGNAME}/lib/cgi-3001.1.6.0/Network/CGI/Compat.hi
+lib/${PKGNAME}/lib/cgi-3001.1.6.0/Network/CGI/Compat.p_hi
+lib/${PKGNAME}/lib/cgi-3001.1.6.0/Network/CGI/Cookie.hi
+lib/${PKGNAME}/lib/cgi-3001.1.6.0/Network/CGI/Cookie.p_hi
+lib/${PKGNAME}/lib/cgi-3001.1.6.0/Network/CGI/Header.hi
+lib/${PKGNAME}/lib/cgi-3001.1.6.0/Network/CGI/Header.p_hi
+lib/${PKGNAME}/lib/cgi-3001.1.6.0/Network/CGI/Monad.hi
+lib/${PKGNAME}/lib/cgi-3001.1.6.0/Network/CGI/Monad.p_hi
+lib/${PKGNAME}/lib/cgi-3001.1.6.0/Network/CGI/Multipart.hi
+lib/${PKGNAME}/lib/cgi-3001.1.6.0/Network/CGI/Multipart.p_hi
+lib/${PKGNAME}/lib/cgi-3001.1.6.0/Network/CGI/Protocol.hi
+lib/${PKGNAME}/lib/cgi-3001.1.6.0/Network/CGI/Protocol.p_hi
+lib/${PKGNAME}/lib/cgi-3001.1.6.0/libHScgi-3001.1.6.0.a
+lib/${PKGNAME}/lib/cgi-3001.1.6.0/libHScgi-3001.1.6.0_p.a
+lib/${PKGNAME}/lib/containers-0.1.0.2/Data/Graph.hi
+lib/${PKGNAME}/lib/containers-0.1.0.2/Data/Graph.p_hi
+lib/${PKGNAME}/lib/containers-0.1.0.2/Data/IntMap.hi
+lib/${PKGNAME}/lib/containers-0.1.0.2/Data/IntMap.p_hi
+lib/${PKGNAME}/lib/containers-0.1.0.2/Data/IntSet.hi
+lib/${PKGNAME}/lib/containers-0.1.0.2/Data/IntSet.p_hi
+lib/${PKGNAME}/lib/containers-0.1.0.2/Data/Map.hi
+lib/${PKGNAME}/lib/containers-0.1.0.2/Data/Map.p_hi
+lib/${PKGNAME}/lib/containers-0.1.0.2/Data/Sequence.hi
+lib/${PKGNAME}/lib/containers-0.1.0.2/Data/Sequence.p_hi
+lib/${PKGNAME}/lib/containers-0.1.0.2/Data/Set.hi
+lib/${PKGNAME}/lib/containers-0.1.0.2/Data/Set.p_hi
+lib/${PKGNAME}/lib/containers-0.1.0.2/Data/Tree.hi
+lib/${PKGNAME}/lib/containers-0.1.0.2/Data/Tree.p_hi
+lib/${PKGNAME}/lib/containers-0.1.0.2/HScontainers-0.1.0.2.o
+lib/${PKGNAME}/lib/containers-0.1.0.2/libHScontainers-0.1.0.2.a
+lib/${PKGNAME}/lib/containers-0.1.0.2/libHScontainers-0.1.0.2_p.a
+lib/${PKGNAME}/lib/directory-1.0.0.1/HSdirectory-1.0.0.1.o
+lib/${PKGNAME}/lib/directory-1.0.0.1/System/Directory.hi
+lib/${PKGNAME}/lib/directory-1.0.0.1/System/Directory.p_hi
+lib/${PKGNAME}/lib/directory-1.0.0.1/include/HsDirectory.h
+lib/${PKGNAME}/lib/directory-1.0.0.1/include/HsDirectoryConfig.h
+lib/${PKGNAME}/lib/directory-1.0.0.1/libHSdirectory-1.0.0.1.a
+lib/${PKGNAME}/lib/directory-1.0.0.1/libHSdirectory-1.0.0.1_p.a
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Basic.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Basic.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Example.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Example.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Graph.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Graph.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Graphviz.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Graphviz.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Internal/FiniteMap.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Internal/FiniteMap.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Internal/Heap.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Internal/Heap.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Internal/Queue.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Internal/Queue.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Internal/RootPath.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Internal/RootPath.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Internal/Thread.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Internal/Thread.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Monad.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Monad.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Monad/IOArray.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Monad/IOArray.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/NodeMap.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/NodeMap.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/ArtPoint.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/ArtPoint.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/BCC.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/BCC.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/BFS.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/BFS.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/DFS.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/DFS.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/Dominators.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/Dominators.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/GVD.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/GVD.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/Indep.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/Indep.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/MST.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/MST.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/MaxFlow.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/MaxFlow.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/MaxFlow2.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/MaxFlow2.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/Monad.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/Monad.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/SP.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/SP.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/TransClos.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query/TransClos.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Tree.hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Tree.p_hi
+lib/${PKGNAME}/lib/fgl-5.4.2.0/HSfgl-5.4.2.0.o
+lib/${PKGNAME}/lib/fgl-5.4.2.0/libHSfgl-5.4.2.0.a
+lib/${PKGNAME}/lib/fgl-5.4.2.0/libHSfgl-5.4.2.0_p.a
 lib/${PKGNAME}/lib/filepath-1.1.0.0/HSfilepath-1.1.0.0.o
 lib/${PKGNAME}/lib/filepath-1.1.0.0/System/FilePath.hi
 lib/${PKGNAME}/lib/filepath-1.1.0.0/System/FilePath.p_hi
@@ -925,21 +927,21 @@ lib/${PKGNAME}/lib/filepath-1.1.0.0/System/FilePath/Windows.hi
 lib/${PKGNAME}/lib/filepath-1.1.0.0/System/FilePath/Windows.p_hi
 lib/${PKGNAME}/lib/filepath-1.1.0.0/libHSfilepath-1.1.0.0.a
 lib/${PKGNAME}/lib/filepath-1.1.0.0/libHSfilepath-1.1.0.0_p.a
-lib/${PKGNAME}/lib/haskell-src-1.0.1.1/HShaskell-src-1.0.1.1.o
-lib/${PKGNAME}/lib/haskell-src-1.0.1.1/Language/Haskell/Lexer.hi
-lib/${PKGNAME}/lib/haskell-src-1.0.1.1/Language/Haskell/Lexer.p_hi
-lib/${PKGNAME}/lib/haskell-src-1.0.1.1/Language/Haskell/ParseMonad.hi
-lib/${PKGNAME}/lib/haskell-src-1.0.1.1/Language/Haskell/ParseMonad.p_hi
-lib/${PKGNAME}/lib/haskell-src-1.0.1.1/Language/Haskell/ParseUtils.hi
-lib/${PKGNAME}/lib/haskell-src-1.0.1.1/Language/Haskell/ParseUtils.p_hi
-lib/${PKGNAME}/lib/haskell-src-1.0.1.1/Language/Haskell/Parser.hi
-lib/${PKGNAME}/lib/haskell-src-1.0.1.1/Language/Haskell/Parser.p_hi
-lib/${PKGNAME}/lib/haskell-src-1.0.1.1/Language/Haskell/Pretty.hi
-lib/${PKGNAME}/lib/haskell-src-1.0.1.1/Language/Haskell/Pretty.p_hi
-lib/${PKGNAME}/lib/haskell-src-1.0.1.1/Language/Haskell/Syntax.hi
-lib/${PKGNAME}/lib/haskell-src-1.0.1.1/Language/Haskell/Syntax.p_hi
-lib/${PKGNAME}/lib/haskell-src-1.0.1.1/libHShaskell-src-1.0.1.1.a
-lib/${PKGNAME}/lib/haskell-src-1.0.1.1/libHShaskell-src-1.0.1.1_p.a
+lib/${PKGNAME}/lib/haskell-src-1.0.1.2/HShaskell-src-1.0.1.2.o
+lib/${PKGNAME}/lib/haskell-src-1.0.1.2/Language/Haskell/Lexer.hi
+lib/${PKGNAME}/lib/haskell-src-1.0.1.2/Language/Haskell/Lexer.p_hi
+lib/${PKGNAME}/lib/haskell-src-1.0.1.2/Language/Haskell/ParseMonad.hi
+lib/${PKGNAME}/lib/haskell-src-1.0.1.2/Language/Haskell/ParseMonad.p_hi
+lib/${PKGNAME}/lib/haskell-src-1.0.1.2/Language/Haskell/ParseUtils.hi
+lib/${PKGNAME}/lib/haskell-src-1.0.1.2/Language/Haskell/ParseUtils.p_hi
+lib/${PKGNAME}/lib/haskell-src-1.0.1.2/Language/Haskell/Parser.hi
+lib/${PKGNAME}/lib/haskell-src-1.0.1.2/Language/Haskell/Parser.p_hi
+lib/${PKGNAME}/lib/haskell-src-1.0.1.2/Language/Haskell/Pretty.hi
+lib/${PKGNAME}/lib/haskell-src-1.0.1.2/Language/Haskell/Pretty.p_hi
+lib/${PKGNAME}/lib/haskell-src-1.0.1.2/Language/Haskell/Syntax.hi
+lib/${PKGNAME}/lib/haskell-src-1.0.1.2/Language/Haskell/Syntax.p_hi
+lib/${PKGNAME}/lib/haskell-src-1.0.1.2/libHShaskell-src-1.0.1.2.a
+lib/${PKGNAME}/lib/haskell-src-1.0.1.2/libHShaskell-src-1.0.1.2_p.a
 lib/${PKGNAME}/lib/haskell98-1.0.1.0/Array.hi
 lib/${PKGNAME}/lib/haskell98-1.0.1.0/Array.p_hi
 lib/${PKGNAME}/lib/haskell98-1.0.1.0/Bits.hi
@@ -1003,17 +1005,17 @@ lib/${PKGNAME}/lib/haskell98-1.0.1.0/Word.hi
 lib/${PKGNAME}/lib/haskell98-1.0.1.0/Word.p_hi
 lib/${PKGNAME}/lib/haskell98-1.0.1.0/libHShaskell98-1.0.1.0.a
 lib/${PKGNAME}/lib/haskell98-1.0.1.0/libHShaskell98-1.0.1.0_p.a
-lib/${PKGNAME}/lib/hpc-0.5.0.0/HShpc-0.5.0.0.o
-lib/${PKGNAME}/lib/hpc-0.5.0.0/Trace/Hpc/Mix.hi
-lib/${PKGNAME}/lib/hpc-0.5.0.0/Trace/Hpc/Mix.p_hi
-lib/${PKGNAME}/lib/hpc-0.5.0.0/Trace/Hpc/Reflect.hi
-lib/${PKGNAME}/lib/hpc-0.5.0.0/Trace/Hpc/Reflect.p_hi
-lib/${PKGNAME}/lib/hpc-0.5.0.0/Trace/Hpc/Tix.hi
-lib/${PKGNAME}/lib/hpc-0.5.0.0/Trace/Hpc/Tix.p_hi
-lib/${PKGNAME}/lib/hpc-0.5.0.0/Trace/Hpc/Util.hi
-lib/${PKGNAME}/lib/hpc-0.5.0.0/Trace/Hpc/Util.p_hi
-lib/${PKGNAME}/lib/hpc-0.5.0.0/libHShpc-0.5.0.0.a
-lib/${PKGNAME}/lib/hpc-0.5.0.0/libHShpc-0.5.0.0_p.a
+lib/${PKGNAME}/lib/hpc-0.5.0.1/HShpc-0.5.0.1.o
+lib/${PKGNAME}/lib/hpc-0.5.0.1/Trace/Hpc/Mix.hi
+lib/${PKGNAME}/lib/hpc-0.5.0.1/Trace/Hpc/Mix.p_hi
+lib/${PKGNAME}/lib/hpc-0.5.0.1/Trace/Hpc/Reflect.hi
+lib/${PKGNAME}/lib/hpc-0.5.0.1/Trace/Hpc/Reflect.p_hi
+lib/${PKGNAME}/lib/hpc-0.5.0.1/Trace/Hpc/Tix.hi
+lib/${PKGNAME}/lib/hpc-0.5.0.1/Trace/Hpc/Tix.p_hi
+lib/${PKGNAME}/lib/hpc-0.5.0.1/Trace/Hpc/Util.hi
+lib/${PKGNAME}/lib/hpc-0.5.0.1/Trace/Hpc/Util.p_hi
+lib/${PKGNAME}/lib/hpc-0.5.0.1/libHShpc-0.5.0.1.a
+lib/${PKGNAME}/lib/hpc-0.5.0.1/libHShpc-0.5.0.1_p.a
 lib/${PKGNAME}/lib/html-1.0.1.1/HShtml-1.0.1.1.o
 lib/${PKGNAME}/lib/html-1.0.1.1/Text/Html.hi
 lib/${PKGNAME}/lib/html-1.0.1.1/Text/Html.p_hi
@@ -1021,64 +1023,64 @@ lib/${PKGNAME}/lib/html-1.0.1.1/Text/Html/BlockTable.hi
 lib/${PKGNAME}/lib/html-1.0.1.1/Text/Html/BlockTable.p_hi
 lib/${PKGNAME}/lib/html-1.0.1.1/libHShtml-1.0.1.1.a
 lib/${PKGNAME}/lib/html-1.0.1.1/libHShtml-1.0.1.1_p.a
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Cont.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Cont.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Cont/Class.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Cont/Class.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Error.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Error.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Error/Class.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Error/Class.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Identity.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Identity.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/List.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/List.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/RWS.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/RWS.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/RWS/Class.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/RWS/Class.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/RWS/Lazy.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/RWS/Lazy.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/RWS/Strict.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/RWS/Strict.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Reader.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Reader.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Reader/Class.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Reader/Class.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/State.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/State.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/State/Class.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/State/Class.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/State/Lazy.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/State/Lazy.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/State/Strict.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/State/Strict.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Trans.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Trans.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Writer.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Writer.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Writer/Class.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Writer/Class.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Writer/Lazy.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Writer/Lazy.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Writer/Strict.hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Writer/Strict.p_hi
-lib/${PKGNAME}/lib/mtl-1.1.0.0/HSmtl-1.1.0.0.o
-lib/${PKGNAME}/lib/mtl-1.1.0.0/libHSmtl-1.1.0.0.a
-lib/${PKGNAME}/lib/mtl-1.1.0.0/libHSmtl-1.1.0.0_p.a
-lib/${PKGNAME}/lib/network-2.1.0.0/HSnetwork-2.1.0.0.o
-lib/${PKGNAME}/lib/network-2.1.0.0/Network.hi
-lib/${PKGNAME}/lib/network-2.1.0.0/Network.p_hi
-lib/${PKGNAME}/lib/network-2.1.0.0/Network/BSD.hi
-lib/${PKGNAME}/lib/network-2.1.0.0/Network/BSD.p_hi
-lib/${PKGNAME}/lib/network-2.1.0.0/Network/Socket.hi
-lib/${PKGNAME}/lib/network-2.1.0.0/Network/Socket.p_hi
-lib/${PKGNAME}/lib/network-2.1.0.0/Network/URI.hi
-lib/${PKGNAME}/lib/network-2.1.0.0/Network/URI.p_hi
-lib/${PKGNAME}/lib/network-2.1.0.0/include/HsNet.h
-lib/${PKGNAME}/lib/network-2.1.0.0/include/HsNetworkConfig.h
-lib/${PKGNAME}/lib/network-2.1.0.0/libHSnetwork-2.1.0.0.a
-lib/${PKGNAME}/lib/network-2.1.0.0/libHSnetwork-2.1.0.0_p.a
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Cont.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Cont.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Cont/Class.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Cont/Class.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Error.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Error.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Error/Class.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Error/Class.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Identity.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Identity.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/List.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/List.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/RWS.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/RWS.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/RWS/Class.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/RWS/Class.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/RWS/Lazy.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/RWS/Lazy.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/RWS/Strict.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/RWS/Strict.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Reader.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Reader.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Reader/Class.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Reader/Class.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/State.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/State.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/State/Class.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/State/Class.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/State/Lazy.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/State/Lazy.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/State/Strict.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/State/Strict.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Trans.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Trans.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Writer.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Writer.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Writer/Class.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Writer/Class.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Writer/Lazy.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Writer/Lazy.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Writer/Strict.hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Writer/Strict.p_hi
+lib/${PKGNAME}/lib/mtl-1.1.0.1/HSmtl-1.1.0.1.o
+lib/${PKGNAME}/lib/mtl-1.1.0.1/libHSmtl-1.1.0.1.a
+lib/${PKGNAME}/lib/mtl-1.1.0.1/libHSmtl-1.1.0.1_p.a
+lib/${PKGNAME}/lib/network-2.2.0.0/HSnetwork-2.2.0.0.o
+lib/${PKGNAME}/lib/network-2.2.0.0/Network.hi
+lib/${PKGNAME}/lib/network-2.2.0.0/Network.p_hi
+lib/${PKGNAME}/lib/network-2.2.0.0/Network/BSD.hi
+lib/${PKGNAME}/lib/network-2.2.0.0/Network/BSD.p_hi
+lib/${PKGNAME}/lib/network-2.2.0.0/Network/Socket.hi
+lib/${PKGNAME}/lib/network-2.2.0.0/Network/Socket.p_hi
+lib/${PKGNAME}/lib/network-2.2.0.0/Network/URI.hi
+lib/${PKGNAME}/lib/network-2.2.0.0/Network/URI.p_hi
+lib/${PKGNAME}/lib/network-2.2.0.0/include/HsNet.h
+lib/${PKGNAME}/lib/network-2.2.0.0/include/HsNetworkConfig.h
+lib/${PKGNAME}/lib/network-2.2.0.0/libHSnetwork-2.2.0.0.a
+lib/${PKGNAME}/lib/network-2.2.0.0/libHSnetwork-2.2.0.0_p.a
 lib/${PKGNAME}/lib/old-locale-1.0.0.0/HSold-locale-1.0.0.0.o
 lib/${PKGNAME}/lib/old-locale-1.0.0.0/System/Locale.hi
 lib/${PKGNAME}/lib/old-locale-1.0.0.0/System/Locale.p_hi
@@ -1096,36 +1098,36 @@ lib/${PKGNAME}/lib/packedstring-0.1.0.0/Data/PackedString.p_hi
 lib/${PKGNAME}/lib/packedstring-0.1.0.0/HSpackedstring-0.1.0.0.o
 lib/${PKGNAME}/lib/packedstring-0.1.0.0/libHSpackedstring-0.1.0.0.a
 lib/${PKGNAME}/lib/packedstring-0.1.0.0/libHSpackedstring-0.1.0.0_p.a
-lib/${PKGNAME}/lib/parallel-1.0.0.0/Control/Parallel.hi
-lib/${PKGNAME}/lib/parallel-1.0.0.0/Control/Parallel.p_hi
-lib/${PKGNAME}/lib/parallel-1.0.0.0/Control/Parallel/Strategies.hi
-lib/${PKGNAME}/lib/parallel-1.0.0.0/Control/Parallel/Strategies.p_hi
-lib/${PKGNAME}/lib/parallel-1.0.0.0/HSparallel-1.0.0.0.o
-lib/${PKGNAME}/lib/parallel-1.0.0.0/libHSparallel-1.0.0.0.a
-lib/${PKGNAME}/lib/parallel-1.0.0.0/libHSparallel-1.0.0.0_p.a
-lib/${PKGNAME}/lib/parsec-2.1.0.0/HSparsec-2.1.0.0.o
-lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec.hi
-lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec.p_hi
-lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec/Char.hi
-lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec/Char.p_hi
-lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec/Combinator.hi
-lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec/Combinator.p_hi
-lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec/Error.hi
-lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec/Error.p_hi
-lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec/Expr.hi
-lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec/Expr.p_hi
-lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec/Language.hi
-lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec/Language.p_hi
-lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec/Perm.hi
-lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec/Perm.p_hi
-lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec/Pos.hi
-lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec/Pos.p_hi
-lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec/Prim.hi
-lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec/Prim.p_hi
-lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec/Token.hi
-lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec/Token.p_hi
-lib/${PKGNAME}/lib/parsec-2.1.0.0/libHSparsec-2.1.0.0.a
-lib/${PKGNAME}/lib/parsec-2.1.0.0/libHSparsec-2.1.0.0_p.a
+lib/${PKGNAME}/lib/parallel-1.0.0.1/Control/Parallel.hi
+lib/${PKGNAME}/lib/parallel-1.0.0.1/Control/Parallel.p_hi
+lib/${PKGNAME}/lib/parallel-1.0.0.1/Control/Parallel/Strategies.hi
+lib/${PKGNAME}/lib/parallel-1.0.0.1/Control/Parallel/Strategies.p_hi
+lib/${PKGNAME}/lib/parallel-1.0.0.1/HSparallel-1.0.0.1.o
+lib/${PKGNAME}/lib/parallel-1.0.0.1/libHSparallel-1.0.0.1.a
+lib/${PKGNAME}/lib/parallel-1.0.0.1/libHSparallel-1.0.0.1_p.a
+lib/${PKGNAME}/lib/parsec-2.1.0.1/HSparsec-2.1.0.1.o
+lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec.hi
+lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec.p_hi
+lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec/Char.hi
+lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec/Char.p_hi
+lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec/Combinator.hi
+lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec/Combinator.p_hi
+lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec/Error.hi
+lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec/Error.p_hi
+lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec/Expr.hi
+lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec/Expr.p_hi
+lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec/Language.hi
+lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec/Language.p_hi
+lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec/Perm.hi
+lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec/Perm.p_hi
+lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec/Pos.hi
+lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec/Pos.p_hi
+lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec/Prim.hi
+lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec/Prim.p_hi
+lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec/Token.hi
+lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec/Token.p_hi
+lib/${PKGNAME}/lib/parsec-2.1.0.1/libHSparsec-2.1.0.1.a
+lib/${PKGNAME}/lib/parsec-2.1.0.1/libHSparsec-2.1.0.1_p.a
 lib/${PKGNAME}/lib/pretty-1.0.0.0/HSpretty-1.0.0.0.o
 lib/${PKGNAME}/lib/pretty-1.0.0.0/Text/PrettyPrint.hi
 lib/${PKGNAME}/lib/pretty-1.0.0.0/Text/PrettyPrint.p_hi
@@ -1133,22 +1135,31 @@ lib/${PKGNAME}/lib/pretty-1.0.0.0/Text/PrettyPrint/HughesPJ.hi
 lib/${PKGNAME}/lib/pretty-1.0.0.0/Text/PrettyPrint/HughesPJ.p_hi
 lib/${PKGNAME}/lib/pretty-1.0.0.0/libHSpretty-1.0.0.0.a
 lib/${PKGNAME}/lib/pretty-1.0.0.0/libHSpretty-1.0.0.0_p.a
-lib/${PKGNAME}/lib/process-1.0.0.0/HSprocess-1.0.0.0.o
-lib/${PKGNAME}/lib/process-1.0.0.0/System/Cmd.hi
-lib/${PKGNAME}/lib/process-1.0.0.0/System/Cmd.p_hi
-lib/${PKGNAME}/lib/process-1.0.0.0/System/Process.hi
-lib/${PKGNAME}/lib/process-1.0.0.0/System/Process.p_hi
-lib/${PKGNAME}/lib/process-1.0.0.0/System/Process/Internals.hi
-lib/${PKGNAME}/lib/process-1.0.0.0/System/Process/Internals.p_hi
-lib/${PKGNAME}/lib/process-1.0.0.0/include/HsProcessConfig.h
-lib/${PKGNAME}/lib/process-1.0.0.0/include/runProcess.h
-lib/${PKGNAME}/lib/process-1.0.0.0/libHSprocess-1.0.0.0.a
-lib/${PKGNAME}/lib/process-1.0.0.0/libHSprocess-1.0.0.0_p.a
+lib/${PKGNAME}/lib/process-1.0.0.1/HSprocess-1.0.0.1.o
+lib/${PKGNAME}/lib/process-1.0.0.1/System/Cmd.hi
+lib/${PKGNAME}/lib/process-1.0.0.1/System/Cmd.p_hi
+lib/${PKGNAME}/lib/process-1.0.0.1/System/Process.hi
+lib/${PKGNAME}/lib/process-1.0.0.1/System/Process.p_hi
+lib/${PKGNAME}/lib/process-1.0.0.1/System/Process/Internals.hi
+lib/${PKGNAME}/lib/process-1.0.0.1/System/Process/Internals.p_hi
+lib/${PKGNAME}/lib/process-1.0.0.1/include/HsProcessConfig.h
+lib/${PKGNAME}/lib/process-1.0.0.1/include/runProcess.h
+lib/${PKGNAME}/lib/process-1.0.0.1/libHSprocess-1.0.0.1.a
+lib/${PKGNAME}/lib/process-1.0.0.1/libHSprocess-1.0.0.1_p.a
 lib/${PKGNAME}/lib/random-1.0.0.0/HSrandom-1.0.0.0.o
 lib/${PKGNAME}/lib/random-1.0.0.0/System/Random.hi
 lib/${PKGNAME}/lib/random-1.0.0.0/System/Random.p_hi
 lib/${PKGNAME}/lib/random-1.0.0.0/libHSrandom-1.0.0.0.a
 lib/${PKGNAME}/lib/random-1.0.0.0/libHSrandom-1.0.0.0_p.a
+lib/${PKGNAME}/lib/readline-1.0.1.0/HSreadline-1.0.1.0.o
+lib/${PKGNAME}/lib/readline-1.0.1.0/System/Console/Readline.hi
+lib/${PKGNAME}/lib/readline-1.0.1.0/System/Console/Readline.p_hi
+lib/${PKGNAME}/lib/readline-1.0.1.0/System/Console/SimpleLineEditor.hi
+lib/${PKGNAME}/lib/readline-1.0.1.0/System/Console/SimpleLineEditor.p_hi
+lib/${PKGNAME}/lib/readline-1.0.1.0/include/HsReadline.h
+lib/${PKGNAME}/lib/readline-1.0.1.0/include/HsReadlineConfig.h
+lib/${PKGNAME}/lib/readline-1.0.1.0/libHSreadline-1.0.1.0.a
+lib/${PKGNAME}/lib/readline-1.0.1.0/libHSreadline-1.0.1.0_p.a
 lib/${PKGNAME}/lib/regex-base-0.72.0.1/HSregex-base-0.72.0.1.o
 lib/${PKGNAME}/lib/regex-base-0.72.0.1/Text/Regex/Base.hi
 lib/${PKGNAME}/lib/regex-base-0.72.0.1/Text/Regex/Base.p_hi
@@ -1176,23 +1187,23 @@ lib/${PKGNAME}/lib/regex-posix-0.72.0.2/Text/Regex/Posix/Wrap.hi
 lib/${PKGNAME}/lib/regex-posix-0.72.0.2/Text/Regex/Posix/Wrap.p_hi
 lib/${PKGNAME}/lib/regex-posix-0.72.0.2/libHSregex-posix-0.72.0.2.a
 lib/${PKGNAME}/lib/regex-posix-0.72.0.2/libHSregex-posix-0.72.0.2_p.a
-lib/${PKGNAME}/lib/stm-2.1.1.0/Control/Concurrent/STM.hi
-lib/${PKGNAME}/lib/stm-2.1.1.0/Control/Concurrent/STM.p_hi
-lib/${PKGNAME}/lib/stm-2.1.1.0/Control/Concurrent/STM/TArray.hi
-lib/${PKGNAME}/lib/stm-2.1.1.0/Control/Concurrent/STM/TArray.p_hi
-lib/${PKGNAME}/lib/stm-2.1.1.0/Control/Concurrent/STM/TChan.hi
-lib/${PKGNAME}/lib/stm-2.1.1.0/Control/Concurrent/STM/TChan.p_hi
-lib/${PKGNAME}/lib/stm-2.1.1.0/Control/Concurrent/STM/TMVar.hi
-lib/${PKGNAME}/lib/stm-2.1.1.0/Control/Concurrent/STM/TMVar.p_hi
-lib/${PKGNAME}/lib/stm-2.1.1.0/Control/Concurrent/STM/TVar.hi
-lib/${PKGNAME}/lib/stm-2.1.1.0/Control/Concurrent/STM/TVar.p_hi
-lib/${PKGNAME}/lib/stm-2.1.1.0/Control/Monad/STM.hi
-lib/${PKGNAME}/lib/stm-2.1.1.0/Control/Monad/STM.p_hi
-lib/${PKGNAME}/lib/stm-2.1.1.0/Control/Sequential/STM.hi
-lib/${PKGNAME}/lib/stm-2.1.1.0/Control/Sequential/STM.p_hi
-lib/${PKGNAME}/lib/stm-2.1.1.0/HSstm-2.1.1.0.o
-lib/${PKGNAME}/lib/stm-2.1.1.0/libHSstm-2.1.1.0.a
-lib/${PKGNAME}/lib/stm-2.1.1.0/libHSstm-2.1.1.0_p.a
+lib/${PKGNAME}/lib/stm-2.1.1.1/Control/Concurrent/STM.hi
+lib/${PKGNAME}/lib/stm-2.1.1.1/Control/Concurrent/STM.p_hi
+lib/${PKGNAME}/lib/stm-2.1.1.1/Control/Concurrent/STM/TArray.hi
+lib/${PKGNAME}/lib/stm-2.1.1.1/Control/Concurrent/STM/TArray.p_hi
+lib/${PKGNAME}/lib/stm-2.1.1.1/Control/Concurrent/STM/TChan.hi
+lib/${PKGNAME}/lib/stm-2.1.1.1/Control/Concurrent/STM/TChan.p_hi
+lib/${PKGNAME}/lib/stm-2.1.1.1/Control/Concurrent/STM/TMVar.hi
+lib/${PKGNAME}/lib/stm-2.1.1.1/Control/Concurrent/STM/TMVar.p_hi
+lib/${PKGNAME}/lib/stm-2.1.1.1/Control/Concurrent/STM/TVar.hi
+lib/${PKGNAME}/lib/stm-2.1.1.1/Control/Concurrent/STM/TVar.p_hi
+lib/${PKGNAME}/lib/stm-2.1.1.1/Control/Monad/STM.hi
+lib/${PKGNAME}/lib/stm-2.1.1.1/Control/Monad/STM.p_hi
+lib/${PKGNAME}/lib/stm-2.1.1.1/Control/Sequential/STM.hi
+lib/${PKGNAME}/lib/stm-2.1.1.1/Control/Sequential/STM.p_hi
+lib/${PKGNAME}/lib/stm-2.1.1.1/HSstm-2.1.1.1.o
+lib/${PKGNAME}/lib/stm-2.1.1.1/libHSstm-2.1.1.1.a
+lib/${PKGNAME}/lib/stm-2.1.1.1/libHSstm-2.1.1.1_p.a
 lib/${PKGNAME}/lib/template-haskell-2.2.0.0/HStemplate-haskell-2.2.0.0.o
 lib/${PKGNAME}/lib/template-haskell-2.2.0.0/Language/Haskell/TH.hi
 lib/${PKGNAME}/lib/template-haskell-2.2.0.0/Language/Haskell/TH.p_hi
@@ -1206,149 +1217,140 @@ lib/${PKGNAME}/lib/template-haskell-2.2.0.0/Language/Haskell/TH/Syntax.hi
 lib/${PKGNAME}/lib/template-haskell-2.2.0.0/Language/Haskell/TH/Syntax.p_hi
 lib/${PKGNAME}/lib/template-haskell-2.2.0.0/libHStemplate-haskell-2.2.0.0.a
 lib/${PKGNAME}/lib/template-haskell-2.2.0.0/libHStemplate-haskell-2.2.0.0_p.a
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar/Days.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar/Days.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar/Easter.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar/Easter.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar/Gregorian.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar/Gregorian.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar/Julian.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar/Julian.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar/JulianYearDay.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar/JulianYearDay.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar/MonthDay.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar/MonthDay.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar/OrdinalDate.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar/OrdinalDate.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar/Private.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar/Private.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar/WeekDate.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar/WeekDate.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Clock.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Clock.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Clock/CTimeval.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Clock/CTimeval.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Clock/POSIX.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Clock/POSIX.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Clock/Scale.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Clock/Scale.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Clock/TAI.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Clock/TAI.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Clock/UTC.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Clock/UTC.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Clock/UTCDiff.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Clock/UTCDiff.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Format.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Format.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Format/Parse.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Format/Parse.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/LocalTime.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/LocalTime.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/LocalTime/LocalTime.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/LocalTime/LocalTime.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/LocalTime/TimeOfDay.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/LocalTime/TimeOfDay.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/LocalTime/TimeZone.hi
-lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/LocalTime/TimeZone.p_hi
-lib/${PKGNAME}/lib/time-1.1.2.0/HStime-1.1.2.0.o
-lib/${PKGNAME}/lib/time-1.1.2.0/include/HsTime.h
-lib/${PKGNAME}/lib/time-1.1.2.0/include/HsTimeConfig.h
-lib/${PKGNAME}/lib/time-1.1.2.0/libHStime-1.1.2.0.a
-lib/${PKGNAME}/lib/time-1.1.2.0/libHStime-1.1.2.0_p.a
-lib/${PKGNAME}/lib/unix-2.3.0.0/HSunix-2.3.0.0.o
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Directory.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Directory.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/DynamicLinker.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/DynamicLinker.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/DynamicLinker/Module.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/DynamicLinker/Module.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/DynamicLinker/Prim.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/DynamicLinker/Prim.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Env.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Env.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Error.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Error.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Files.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Files.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/IO.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/IO.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Process.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Process.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Process/Internals.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Process/Internals.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Resource.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Resource.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Semaphore.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Semaphore.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/SharedMem.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/SharedMem.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Signals.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Signals.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Signals/Exts.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Signals/Exts.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Temp.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Temp.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Terminal.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Terminal.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Time.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Time.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Unistd.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Unistd.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/User.hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/User.p_hi
-lib/${PKGNAME}/lib/unix-2.3.0.0/include/HsUnix.h
-lib/${PKGNAME}/lib/unix-2.3.0.0/include/HsUnixConfig.h
-lib/${PKGNAME}/lib/unix-2.3.0.0/include/execvpe.h
-lib/${PKGNAME}/lib/unix-2.3.0.0/libHSunix-2.3.0.0.a
-lib/${PKGNAME}/lib/unix-2.3.0.0/libHSunix-2.3.0.0_p.a
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/HSxhtml-3000.0.2.1.o
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml.hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml.p_hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/BlockTable.hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/BlockTable.p_hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Debug.hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Debug.p_hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Extras.hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Extras.p_hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Frameset.hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Frameset.p_hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Frameset/Attributes.hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Frameset/Attributes.p_hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Frameset/Elements.hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Frameset/Elements.p_hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Internals.hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Internals.p_hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Strict.hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Strict.p_hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Strict/Attributes.hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Strict/Attributes.p_hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Strict/Elements.hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Strict/Elements.p_hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Table.hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Table.p_hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Transitional.hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Transitional.p_hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Transitional/Attributes.hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Transitional/Attributes.p_hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Transitional/Elements.hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Transitional/Elements.p_hi
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/libHSxhtml-3000.0.2.1.a
-lib/${PKGNAME}/lib/xhtml-3000.0.2.1/libHSxhtml-3000.0.2.1_p.a
-lib/${PKGNAME}/lib/readline-1.0.1.0/HSreadline-1.0.1.0.o
-lib/${PKGNAME}/lib/readline-1.0.1.0/System/Console/Readline.hi
-lib/${PKGNAME}/lib/readline-1.0.1.0/System/Console/Readline.p_hi
-lib/${PKGNAME}/lib/readline-1.0.1.0/System/Console/SimpleLineEditor.hi
-lib/${PKGNAME}/lib/readline-1.0.1.0/System/Console/SimpleLineEditor.p_hi
-lib/${PKGNAME}/lib/readline-1.0.1.0/include/HsReadline.h
-lib/${PKGNAME}/lib/readline-1.0.1.0/include/HsReadlineConfig.h
-lib/${PKGNAME}/lib/readline-1.0.1.0/libHSreadline-1.0.1.0.a
-lib/${PKGNAME}/lib/readline-1.0.1.0/libHSreadline-1.0.1.0_p.a
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar/Days.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar/Days.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar/Easter.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar/Easter.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar/Gregorian.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar/Gregorian.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar/Julian.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar/Julian.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar/JulianYearDay.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar/JulianYearDay.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar/MonthDay.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar/MonthDay.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar/OrdinalDate.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar/OrdinalDate.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar/Private.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar/Private.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar/WeekDate.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar/WeekDate.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Clock.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Clock.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Clock/CTimeval.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Clock/CTimeval.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Clock/POSIX.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Clock/POSIX.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Clock/Scale.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Clock/Scale.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Clock/TAI.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Clock/TAI.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Clock/UTC.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Clock/UTC.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Clock/UTCDiff.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Clock/UTCDiff.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Format.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Format.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Format/Parse.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Format/Parse.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/LocalTime.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/LocalTime.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/LocalTime/LocalTime.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/LocalTime/LocalTime.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/LocalTime/TimeOfDay.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/LocalTime/TimeOfDay.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/LocalTime/TimeZone.hi
+lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/LocalTime/TimeZone.p_hi
+lib/${PKGNAME}/lib/time-1.1.2.1/HStime-1.1.2.1.o
+lib/${PKGNAME}/lib/time-1.1.2.1/include/HsTime.h
+lib/${PKGNAME}/lib/time-1.1.2.1/include/HsTimeConfig.h
+lib/${PKGNAME}/lib/time-1.1.2.1/libHStime-1.1.2.1.a
+lib/${PKGNAME}/lib/time-1.1.2.1/libHStime-1.1.2.1_p.a
+lib/${PKGNAME}/lib/unix-2.3.0.1/HSunix-2.3.0.1.o
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Directory.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Directory.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/DynamicLinker.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/DynamicLinker.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/DynamicLinker/Module.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/DynamicLinker/Module.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/DynamicLinker/Prim.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/DynamicLinker/Prim.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Env.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Env.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Error.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Error.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Files.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Files.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/IO.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/IO.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Process.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Process.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Process/Internals.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Process/Internals.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Resource.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Resource.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Semaphore.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Semaphore.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/SharedMem.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/SharedMem.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Signals.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Signals.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Signals/Exts.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Signals/Exts.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Temp.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Temp.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Terminal.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Terminal.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Time.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Time.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Unistd.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Unistd.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/User.hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/User.p_hi
+lib/${PKGNAME}/lib/unix-2.3.0.1/include/HsUnix.h
+lib/${PKGNAME}/lib/unix-2.3.0.1/include/HsUnixConfig.h
+lib/${PKGNAME}/lib/unix-2.3.0.1/include/execvpe.h
+lib/${PKGNAME}/lib/unix-2.3.0.1/libHSunix-2.3.0.1.a
+lib/${PKGNAME}/lib/unix-2.3.0.1/libHSunix-2.3.0.1_p.a
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/HSxhtml-3000.2.0.0.o
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml.hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml.p_hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/BlockTable.hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/BlockTable.p_hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Debug.hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Debug.p_hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Extras.hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Extras.p_hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Frameset.hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Frameset.p_hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Frameset/Attributes.hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Frameset/Attributes.p_hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Frameset/Elements.hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Frameset/Elements.p_hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Internals.hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Internals.p_hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Strict.hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Strict.p_hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Strict/Attributes.hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Strict/Attributes.p_hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Strict/Elements.hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Strict/Elements.p_hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Table.hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Table.p_hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Transitional.hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Transitional.p_hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Transitional/Attributes.hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Transitional/Attributes.p_hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Transitional/Elements.hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Transitional/Elements.p_hi
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/libHSxhtml-3000.2.0.0.a
+lib/${PKGNAME}/lib/xhtml-3000.2.0.0/libHSxhtml-3000.2.0.0_p.a
 lib/${PKGNAME}/libHSghc.a
 lib/${PKGNAME}/libHSrts.a
 lib/${PKGNAME}/libHSrts_debug.a
@@ -1384,6 +1386,7 @@ share/doc/ghc/libraries/parsec/LICENSE
 share/doc/ghc/libraries/pretty/LICENSE
 share/doc/ghc/libraries/process/LICENSE
 share/doc/ghc/libraries/random/LICENSE
+share/doc/ghc/libraries/readline/LICENSE
 share/doc/ghc/libraries/regex-base/LICENSE
 share/doc/ghc/libraries/regex-compat/LICENSE
 share/doc/ghc/libraries/regex-posix/LICENSE
@@ -1392,7 +1395,6 @@ share/doc/ghc/libraries/template-haskell/LICENSE
 share/doc/ghc/libraries/time/LICENSE
 share/doc/ghc/libraries/unix/LICENSE
 share/doc/ghc/libraries/xhtml/LICENSE
-share/doc/ghc/libraries/readline/LICENSE
 @dirrm share/doc/ghc/libraries/xhtml
 @dirrm share/doc/ghc/libraries/unix
 @dirrm share/doc/ghc/libraries/time
@@ -1401,6 +1403,7 @@ share/doc/ghc/libraries/readline/LICENSE
 @dirrm share/doc/ghc/libraries/regex-posix
 @dirrm share/doc/ghc/libraries/regex-compat
 @dirrm share/doc/ghc/libraries/regex-base
+@dirrm share/doc/ghc/libraries/readline
 @dirrm share/doc/ghc/libraries/random
 @dirrm share/doc/ghc/libraries/process
 @dirrm share/doc/ghc/libraries/pretty
@@ -1425,40 +1428,38 @@ share/doc/ghc/libraries/readline/LICENSE
 @dirrm share/doc/ghc/libraries/QuickCheck
 @dirrm share/doc/ghc/libraries/HUnit
 @dirrm share/doc/ghc/libraries/Cabal
-@dirrm share/doc/ghc/libraries/readline
 @dirrm share/doc/ghc/libraries
-@dirrm share/doc/ghc
-@dirrm lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Transitional
-@dirrm lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Strict
-@dirrm lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml/Frameset
-@dirrm lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text/XHtml
-@dirrm lib/${PKGNAME}/lib/xhtml-3000.0.2.1/Text
-@dirrm lib/${PKGNAME}/lib/xhtml-3000.0.2.1
-@dirrm lib/${PKGNAME}/lib/unix-2.3.0.0/include
-@dirrm lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Signals
-@dirrm lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/Process
-@dirrm lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix/DynamicLinker
-@dirrm lib/${PKGNAME}/lib/unix-2.3.0.0/System/Posix
-@dirrm lib/${PKGNAME}/lib/unix-2.3.0.0/System
-@dirrm lib/${PKGNAME}/lib/unix-2.3.0.0
-@dirrm lib/${PKGNAME}/lib/time-1.1.2.0/include
-@dirrm lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/LocalTime
-@dirrm lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Format
-@dirrm lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Clock
-@dirrm lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time/Calendar
-@dirrm lib/${PKGNAME}/lib/time-1.1.2.0/Data/Time
-@dirrm lib/${PKGNAME}/lib/time-1.1.2.0/Data
-@dirrm lib/${PKGNAME}/lib/time-1.1.2.0
+@dirrm lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Transitional
+@dirrm lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Strict
+@dirrm lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml/Frameset
+@dirrm lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text/XHtml
+@dirrm lib/${PKGNAME}/lib/xhtml-3000.2.0.0/Text
+@dirrm lib/${PKGNAME}/lib/xhtml-3000.2.0.0
+@dirrm lib/${PKGNAME}/lib/unix-2.3.0.1/include
+@dirrm lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Signals
+@dirrm lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/Process
+@dirrm lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix/DynamicLinker
+@dirrm lib/${PKGNAME}/lib/unix-2.3.0.1/System/Posix
+@dirrm lib/${PKGNAME}/lib/unix-2.3.0.1/System
+@dirrm lib/${PKGNAME}/lib/unix-2.3.0.1
+@dirrm lib/${PKGNAME}/lib/time-1.1.2.1/include
+@dirrm lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/LocalTime
+@dirrm lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Format
+@dirrm lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Clock
+@dirrm lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time/Calendar
+@dirrm lib/${PKGNAME}/lib/time-1.1.2.1/Data/Time
+@dirrm lib/${PKGNAME}/lib/time-1.1.2.1/Data
+@dirrm lib/${PKGNAME}/lib/time-1.1.2.1
 @dirrm lib/${PKGNAME}/lib/template-haskell-2.2.0.0/Language/Haskell/TH
 @dirrm lib/${PKGNAME}/lib/template-haskell-2.2.0.0/Language/Haskell
 @dirrm lib/${PKGNAME}/lib/template-haskell-2.2.0.0/Language
 @dirrm lib/${PKGNAME}/lib/template-haskell-2.2.0.0
-@dirrm lib/${PKGNAME}/lib/stm-2.1.1.0/Control/Sequential
-@dirrm lib/${PKGNAME}/lib/stm-2.1.1.0/Control/Monad
-@dirrm lib/${PKGNAME}/lib/stm-2.1.1.0/Control/Concurrent/STM
-@dirrm lib/${PKGNAME}/lib/stm-2.1.1.0/Control/Concurrent
-@dirrm lib/${PKGNAME}/lib/stm-2.1.1.0/Control
-@dirrm lib/${PKGNAME}/lib/stm-2.1.1.0
+@dirrm lib/${PKGNAME}/lib/stm-2.1.1.1/Control/Sequential
+@dirrm lib/${PKGNAME}/lib/stm-2.1.1.1/Control/Monad
+@dirrm lib/${PKGNAME}/lib/stm-2.1.1.1/Control/Concurrent/STM
+@dirrm lib/${PKGNAME}/lib/stm-2.1.1.1/Control/Concurrent
+@dirrm lib/${PKGNAME}/lib/stm-2.1.1.1/Control
+@dirrm lib/${PKGNAME}/lib/stm-2.1.1.1
 @dirrm lib/${PKGNAME}/lib/regex-posix-0.72.0.2/Text/Regex/Posix
 @dirrm lib/${PKGNAME}/lib/regex-posix-0.72.0.2/Text/Regex
 @dirrm lib/${PKGNAME}/lib/regex-posix-0.72.0.2/Text
@@ -1469,22 +1470,26 @@ share/doc/ghc/libraries/readline/LICENSE
 @dirrm lib/${PKGNAME}/lib/regex-base-0.72.0.1/Text/Regex
 @dirrm lib/${PKGNAME}/lib/regex-base-0.72.0.1/Text
 @dirrm lib/${PKGNAME}/lib/regex-base-0.72.0.1
+@dirrm lib/${PKGNAME}/lib/readline-1.0.1.0/include
+@dirrm lib/${PKGNAME}/lib/readline-1.0.1.0/System/Console
+@dirrm lib/${PKGNAME}/lib/readline-1.0.1.0/System
+@dirrm lib/${PKGNAME}/lib/readline-1.0.1.0
 @dirrm lib/${PKGNAME}/lib/random-1.0.0.0/System
 @dirrm lib/${PKGNAME}/lib/random-1.0.0.0
-@dirrm lib/${PKGNAME}/lib/process-1.0.0.0/include
-@dirrm lib/${PKGNAME}/lib/process-1.0.0.0/System/Process
-@dirrm lib/${PKGNAME}/lib/process-1.0.0.0/System
-@dirrm lib/${PKGNAME}/lib/process-1.0.0.0
+@dirrm lib/${PKGNAME}/lib/process-1.0.0.1/include
+@dirrm lib/${PKGNAME}/lib/process-1.0.0.1/System/Process
+@dirrm lib/${PKGNAME}/lib/process-1.0.0.1/System
+@dirrm lib/${PKGNAME}/lib/process-1.0.0.1
 @dirrm lib/${PKGNAME}/lib/pretty-1.0.0.0/Text/PrettyPrint
 @dirrm lib/${PKGNAME}/lib/pretty-1.0.0.0/Text
 @dirrm lib/${PKGNAME}/lib/pretty-1.0.0.0
-@dirrm lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators/Parsec
-@dirrm lib/${PKGNAME}/lib/parsec-2.1.0.0/Text/ParserCombinators
-@dirrm lib/${PKGNAME}/lib/parsec-2.1.0.0/Text
-@dirrm lib/${PKGNAME}/lib/parsec-2.1.0.0
-@dirrm lib/${PKGNAME}/lib/parallel-1.0.0.0/Control/Parallel
-@dirrm lib/${PKGNAME}/lib/parallel-1.0.0.0/Control
-@dirrm lib/${PKGNAME}/lib/parallel-1.0.0.0
+@dirrm lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators/Parsec
+@dirrm lib/${PKGNAME}/lib/parsec-2.1.0.1/Text/ParserCombinators
+@dirrm lib/${PKGNAME}/lib/parsec-2.1.0.1/Text
+@dirrm lib/${PKGNAME}/lib/parsec-2.1.0.1
+@dirrm lib/${PKGNAME}/lib/parallel-1.0.0.1/Control/Parallel
+@dirrm lib/${PKGNAME}/lib/parallel-1.0.0.1/Control
+@dirrm lib/${PKGNAME}/lib/parallel-1.0.0.1
 @dirrm lib/${PKGNAME}/lib/packedstring-0.1.0.0/Data
 @dirrm lib/${PKGNAME}/lib/packedstring-0.1.0.0
 @dirrm lib/${PKGNAME}/lib/old-time-1.0.0.0/include
@@ -1492,75 +1497,75 @@ share/doc/ghc/libraries/readline/LICENSE
 @dirrm lib/${PKGNAME}/lib/old-time-1.0.0.0
 @dirrm lib/${PKGNAME}/lib/old-locale-1.0.0.0/System
 @dirrm lib/${PKGNAME}/lib/old-locale-1.0.0.0
-@dirrm lib/${PKGNAME}/lib/network-2.1.0.0/include
-@dirrm lib/${PKGNAME}/lib/network-2.1.0.0/Network
-@dirrm lib/${PKGNAME}/lib/network-2.1.0.0
-@dirrm lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Writer
-@dirrm lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/State
-@dirrm lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Reader
-@dirrm lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/RWS
-@dirrm lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Error
-@dirrm lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad/Cont
-@dirrm lib/${PKGNAME}/lib/mtl-1.1.0.0/Control/Monad
-@dirrm lib/${PKGNAME}/lib/mtl-1.1.0.0/Control
-@dirrm lib/${PKGNAME}/lib/mtl-1.1.0.0
+@dirrm lib/${PKGNAME}/lib/network-2.2.0.0/include
+@dirrm lib/${PKGNAME}/lib/network-2.2.0.0/Network
+@dirrm lib/${PKGNAME}/lib/network-2.2.0.0
+@dirrm lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Writer
+@dirrm lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/State
+@dirrm lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Reader
+@dirrm lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/RWS
+@dirrm lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Error
+@dirrm lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad/Cont
+@dirrm lib/${PKGNAME}/lib/mtl-1.1.0.1/Control/Monad
+@dirrm lib/${PKGNAME}/lib/mtl-1.1.0.1/Control
+@dirrm lib/${PKGNAME}/lib/mtl-1.1.0.1
 @dirrm lib/${PKGNAME}/lib/html-1.0.1.1/Text/Html
 @dirrm lib/${PKGNAME}/lib/html-1.0.1.1/Text
 @dirrm lib/${PKGNAME}/lib/html-1.0.1.1
-@dirrm lib/${PKGNAME}/lib/hpc-0.5.0.0/Trace/Hpc
-@dirrm lib/${PKGNAME}/lib/hpc-0.5.0.0/Trace
-@dirrm lib/${PKGNAME}/lib/hpc-0.5.0.0
+@dirrm lib/${PKGNAME}/lib/hpc-0.5.0.1/Trace/Hpc
+@dirrm lib/${PKGNAME}/lib/hpc-0.5.0.1/Trace
+@dirrm lib/${PKGNAME}/lib/hpc-0.5.0.1
 @dirrm lib/${PKGNAME}/lib/haskell98-1.0.1.0
-@dirrm lib/${PKGNAME}/lib/haskell-src-1.0.1.1/Language/Haskell
-@dirrm lib/${PKGNAME}/lib/haskell-src-1.0.1.1/Language
-@dirrm lib/${PKGNAME}/lib/haskell-src-1.0.1.1
+@dirrm lib/${PKGNAME}/lib/haskell-src-1.0.1.2/Language/Haskell
+@dirrm lib/${PKGNAME}/lib/haskell-src-1.0.1.2/Language
+@dirrm lib/${PKGNAME}/lib/haskell-src-1.0.1.2
 @dirrm lib/${PKGNAME}/lib/filepath-1.1.0.0/System/FilePath
 @dirrm lib/${PKGNAME}/lib/filepath-1.1.0.0/System
 @dirrm lib/${PKGNAME}/lib/filepath-1.1.0.0
-@dirrm lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Query
-@dirrm lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Monad
-@dirrm lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive/Internal
-@dirrm lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph/Inductive
-@dirrm lib/${PKGNAME}/lib/fgl-5.4.1.1/Data/Graph
-@dirrm lib/${PKGNAME}/lib/fgl-5.4.1.1/Data
-@dirrm lib/${PKGNAME}/lib/fgl-5.4.1.1
-@dirrm lib/${PKGNAME}/lib/directory-1.0.0.0/include
-@dirrm lib/${PKGNAME}/lib/directory-1.0.0.0/System
-@dirrm lib/${PKGNAME}/lib/directory-1.0.0.0
-@dirrm lib/${PKGNAME}/lib/containers-0.1.0.1/Data
-@dirrm lib/${PKGNAME}/lib/containers-0.1.0.1
-@dirrm lib/${PKGNAME}/lib/cgi-3001.1.5.1/Network/CGI
-@dirrm lib/${PKGNAME}/lib/cgi-3001.1.5.1/Network
-@dirrm lib/${PKGNAME}/lib/cgi-3001.1.5.1
-@dirrm lib/${PKGNAME}/lib/bytestring-0.9.0.1/include
-@dirrm lib/${PKGNAME}/lib/bytestring-0.9.0.1/Data/ByteString/Lazy
-@dirrm lib/${PKGNAME}/lib/bytestring-0.9.0.1/Data/ByteString
-@dirrm lib/${PKGNAME}/lib/bytestring-0.9.0.1/Data
-@dirrm lib/${PKGNAME}/lib/bytestring-0.9.0.1
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/include
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/Unsafe
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/Text/Show
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/Text/Read
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/Text/ParserCombinators
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/Text
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/System/Posix
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/System/Mem
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/System/IO
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/System/Console
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/System
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/GHC
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/Marshal
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/Foreign/C
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/Foreign
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/Debug
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/Data/STRef
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/Data/Generics
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/Data
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/Control/Monad/ST
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/Control/Monad
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/Control/Concurrent
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0/Control
-@dirrm lib/${PKGNAME}/lib/base-3.0.1.0
+@dirrm lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Query
+@dirrm lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Monad
+@dirrm lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive/Internal
+@dirrm lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph/Inductive
+@dirrm lib/${PKGNAME}/lib/fgl-5.4.2.0/Data/Graph
+@dirrm lib/${PKGNAME}/lib/fgl-5.4.2.0/Data
+@dirrm lib/${PKGNAME}/lib/fgl-5.4.2.0
+@dirrm lib/${PKGNAME}/lib/directory-1.0.0.1/include
+@dirrm lib/${PKGNAME}/lib/directory-1.0.0.1/System
+@dirrm lib/${PKGNAME}/lib/directory-1.0.0.1
+@dirrm lib/${PKGNAME}/lib/containers-0.1.0.2/Data
+@dirrm lib/${PKGNAME}/lib/containers-0.1.0.2
+@dirrm lib/${PKGNAME}/lib/cgi-3001.1.6.0/Network/CGI
+@dirrm lib/${PKGNAME}/lib/cgi-3001.1.6.0/Network
+@dirrm lib/${PKGNAME}/lib/cgi-3001.1.6.0
+@dirrm lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/include
+@dirrm lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/Data/ByteString/Lazy
+@dirrm lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/Data/ByteString
+@dirrm lib/${PKGNAME}/lib/bytestring-0.9.0.1.1/Data
+@dirrm lib/${PKGNAME}/lib/bytestring-0.9.0.1.1
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/include
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/Unsafe
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/Text/Show
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/Text/Read
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/Text/ParserCombinators
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/Text
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/System/Posix
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/System/Mem
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/System/IO
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/System/Console
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/System
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/GHC
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/Marshal
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/Foreign/C
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/Foreign
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/Debug
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/Data/STRef
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/Data/Generics
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/Data
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/Control/Monad/ST
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/Control/Monad
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/Control/Concurrent
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0/Control
+@dirrm lib/${PKGNAME}/lib/base-3.0.2.0
 @dirrm lib/${PKGNAME}/lib/array-0.1.0.0/Data/Array/IO
 @dirrm lib/${PKGNAME}/lib/array-0.1.0.0/Data/Array
 @dirrm lib/${PKGNAME}/lib/array-0.1.0.0/Data
@@ -1573,18 +1578,14 @@ share/doc/ghc/libraries/readline/LICENSE
 @dirrm lib/${PKGNAME}/lib/HUnit-1.2.0.0/Test/HUnit
 @dirrm lib/${PKGNAME}/lib/HUnit-1.2.0.0/Test
 @dirrm lib/${PKGNAME}/lib/HUnit-1.2.0.0
-@dirrm lib/${PKGNAME}/lib/Cabal-1.2.3.0/Language/Haskell
-@dirrm lib/${PKGNAME}/lib/Cabal-1.2.3.0/Language
-@dirrm lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/PreProcess
-@dirrm lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple/GHC
-@dirrm lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Simple
-@dirrm lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution/Compat
-@dirrm lib/${PKGNAME}/lib/Cabal-1.2.3.0/Distribution
-@dirrm lib/${PKGNAME}/lib/Cabal-1.2.3.0
-@dirrm lib/${PKGNAME}/lib/readline-1.0.1.0/include
-@dirrm lib/${PKGNAME}/lib/readline-1.0.1.0/System/Console
-@dirrm lib/${PKGNAME}/lib/readline-1.0.1.0/System
-@dirrm lib/${PKGNAME}/lib/readline-1.0.1.0
+@dirrm lib/${PKGNAME}/lib/Cabal-1.2.4.0/Language/Haskell
+@dirrm lib/${PKGNAME}/lib/Cabal-1.2.4.0/Language
+@dirrm lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/PreProcess
+@dirrm lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple/GHC
+@dirrm lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Simple
+@dirrm lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution/Compat
+@dirrm lib/${PKGNAME}/lib/Cabal-1.2.4.0/Distribution
+@dirrm lib/${PKGNAME}/lib/Cabal-1.2.4.0
 @dirrm lib/${PKGNAME}/lib
 @dirrm lib/${PKGNAME}/include
 @dirrm lib/${PKGNAME}/icons
