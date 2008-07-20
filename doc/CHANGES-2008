@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1583 2008/07/20 20:57:18 he Exp $
+$NetBSD: CHANGES-2008,v 1.1584 2008/07/20 22:23:12 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2734,3 +2734,10 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-HTTP-Cache-Transparent to 1.0 [he 2008-07-20]
 	Updated www/p5-HTTP-Proxy to 0.22 [he 2008-07-20]
 	Updated www/p5-HTTP-Request-Form to 0.9.5.1 [he 2008-07-20]
+	Updated www/p5-HTTP-Server-Simple-Static to 0.7 [he 2008-07-20]
+	Updated www/p5-HTTP-Server-Simple to 0.34 [he 2008-07-20]
+	Updated devel/p5-Hash-Case to 1.006 [he 2008-07-20]
+	Updated devel/p5-Heap to 0.80 [he 2008-07-20]
+	Updated mail/p5-IMAP-Admin to 1.6.4 [he 2008-07-20]
+	Updated devel/p5-IO-All to 0.38 [he 2008-07-20]
+	Updated devel/p5-IO-Multiplex to 1.09 [he 2008-07-20]
