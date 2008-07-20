@@ -1,10 +1,10 @@
-@comment $NetBSD: PLIST,v 1.2 2006/07/14 18:48:43 jlam Exp $
-bin/cpio
-bin/pax
-bin/tar
-man/cat1/cpio.0
-man/cat1/tar.0
-man/cat1/pax.0
-man/man1/cpio.1
-man/man1/pax.1
-man/man1/tar.1
+@comment $NetBSD: PLIST,v 1.3 2008/07/20 23:31:50 dbj Exp $
+bin/${NBPAX_PROGRAM_PREFIX}cpio
+bin/${NBPAX_PROGRAM_PREFIX}pax
+bin/${NBPAX_PROGRAM_PREFIX}tar
+man/cat1/${NBPAX_PROGRAM_PREFIX}cpio.0
+man/cat1/${NBPAX_PROGRAM_PREFIX}tar.0
+man/cat1/${NBPAX_PROGRAM_PREFIX}pax.0
+man/man1/${NBPAX_PROGRAM_PREFIX}cpio.1
+man/man1/${NBPAX_PROGRAM_PREFIX}pax.1
+man/man1/${NBPAX_PROGRAM_PREFIX}tar.1
