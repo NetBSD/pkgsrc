@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1601 2008/07/21 11:55:03 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1602 2008/07/21 12:00:07 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2759,3 +2759,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-Apache-ASP to 2.61 [rhaen 2008-07-21]
 	Updated www/p5-Apache-AuthCookieDBI to 2.1 [rhaen 2008-07-21]
 	Updated www/p5-Apache-Filter to 1.024 [rhaen 2008-07-21]
+	Updated devel/p5-App-Cmd to 0.013 [rhaen 2008-07-21]
