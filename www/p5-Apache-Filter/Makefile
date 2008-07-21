@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.18 2008/06/20 01:09:41 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2008/07/21 11:54:17 rhaen Exp $
 
-DISTNAME=	Apache-Filter-1.022
+DISTNAME=	Apache-Filter-1.024
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	5
 SVR4_PKGNAME=	p5afi
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/~kwilliams/Apache-Filter-1.022/
 COMMENT=	Perl5 module to alter the output of previous Apache handlers
 
