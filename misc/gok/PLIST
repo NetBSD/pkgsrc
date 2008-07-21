@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/01/11 16:17:12 drochner Exp $
+@comment $NetBSD: PLIST,v 1.18 2008/07/21 01:28:02 obache Exp $
 bin/create-branching-keyboard
 bin/gok
 lib/bonobo/servers/GNOME_Gok.server
@@ -7,6 +7,16 @@ share/applications/gok.desktop
 share/gconf/schemas/gok.schemas
 share/gnome/help/gok/C/gok.xml
 share/gnome/help/gok/C/legal.xml
+share/gok/C/gok-controls.kbd
+share/gok/C/hide.kbd
+share/gok/C/launcher.kbd
+share/gok/C/main.kbd
+share/gok/C/mouse.kbd
+share/gok/C/move-resize.kbd
+share/gok/C/numberpad.kbd
+share/gok/C/quit.kbd
+share/gok/C/text-operations.kbd
+share/gok/C/valuator.kbd
 share/gok/East.png
 share/gok/Keyboard.kbd
 share/gok/NE.png
@@ -46,6 +56,16 @@ share/gok/ar/numberpad.kbd
 share/gok/ar/quit.kbd
 share/gok/ar/text-operations.kbd
 share/gok/ar/valuator.kbd
+share/gok/as/gok-controls.kbd
+share/gok/as/hide.kbd
+share/gok/as/launcher.kbd
+share/gok/as/main.kbd
+share/gok/as/mouse.kbd
+share/gok/as/move-resize.kbd
+share/gok/as/numberpad.kbd
+share/gok/as/quit.kbd
+share/gok/as/text-operations.kbd
+share/gok/as/valuator.kbd
 share/gok/automatic-scanning.xam
 share/gok/az/gok-controls.kbd
 share/gok/az/hide.kbd
@@ -273,7 +293,6 @@ share/gok/gl/quit.kbd
 share/gok/gl/text-operations.kbd
 share/gok/gl/valuator.kbd
 share/gok/glade/gok.glade2
-share/gok/gok-controls.kbd
 share/gok/gok.rc
 share/gok/goklogo.png
 share/gok/goksound1.wav
@@ -288,6 +307,16 @@ share/gok/gu/numberpad.kbd
 share/gok/gu/quit.kbd
 share/gok/gu/text-operations.kbd
 share/gok/gu/valuator.kbd
+share/gok/he/gok-controls.kbd
+share/gok/he/hide.kbd
+share/gok/he/launcher.kbd
+share/gok/he/main.kbd
+share/gok/he/mouse.kbd
+share/gok/he/move-resize.kbd
+share/gok/he/numberpad.kbd
+share/gok/he/quit.kbd
+share/gok/he/text-operations.kbd
+share/gok/he/valuator.kbd
 share/gok/hi/gok-controls.kbd
 share/gok/hi/hide.kbd
 share/gok/hi/launcher.kbd
@@ -298,7 +327,6 @@ share/gok/hi/numberpad.kbd
 share/gok/hi/quit.kbd
 share/gok/hi/text-operations.kbd
 share/gok/hi/valuator.kbd
-share/gok/hide.kbd
 share/gok/hr/gok-controls.kbd
 share/gok/hr/hide.kbd
 share/gok/hr/launcher.kbd
@@ -381,7 +409,6 @@ share/gok/ku/quit.kbd
 share/gok/ku/text-operations.kbd
 share/gok/ku/valuator.kbd
 share/gok/latched.png
-share/gok/launcher.kbd
 share/gok/locked.png
 share/gok/lt/gok-controls.kbd
 share/gok/lt/hide.kbd
@@ -403,7 +430,6 @@ share/gok/lv/numberpad.kbd
 share/gok/lv/quit.kbd
 share/gok/lv/text-operations.kbd
 share/gok/lv/valuator.kbd
-share/gok/main.kbd
 share/gok/manage.kbd
 share/gok/mk/gok-controls.kbd
 share/gok/mk/hide.kbd
@@ -435,8 +461,6 @@ share/gok/mn/numberpad.kbd
 share/gok/mn/quit.kbd
 share/gok/mn/text-operations.kbd
 share/gok/mn/valuator.kbd
-share/gok/mouse.kbd
-share/gok/move-resize.kbd
 share/gok/mr/gok-controls.kbd
 share/gok/mr/hide.kbd
 share/gok/mr/launcher.kbd
@@ -487,7 +511,16 @@ share/gok/nl/numberpad.kbd
 share/gok/nl/quit.kbd
 share/gok/nl/text-operations.kbd
 share/gok/nl/valuator.kbd
-share/gok/numberpad.kbd
+share/gok/nn/gok-controls.kbd
+share/gok/nn/hide.kbd
+share/gok/nn/launcher.kbd
+share/gok/nn/main.kbd
+share/gok/nn/mouse.kbd
+share/gok/nn/move-resize.kbd
+share/gok/nn/numberpad.kbd
+share/gok/nn/quit.kbd
+share/gok/nn/text-operations.kbd
+share/gok/nn/valuator.kbd
 share/gok/oc/gok-controls.kbd
 share/gok/oc/hide.kbd
 share/gok/oc/launcher.kbd
@@ -548,7 +581,6 @@ share/gok/pt_BR/numberpad.kbd
 share/gok/pt_BR/quit.kbd
 share/gok/pt_BR/text-operations.kbd
 share/gok/pt_BR/valuator.kbd
-share/gok/quit.kbd
 share/gok/qwerty.kbd
 share/gok/ro/gok-controls.kbd
 share/gok/ro/hide.kbd
@@ -673,7 +705,6 @@ share/gok/te/numberpad.kbd
 share/gok/te/quit.kbd
 share/gok/te/text-operations.kbd
 share/gok/te/valuator.kbd
-share/gok/text-operations.kbd
 share/gok/th/gok-controls.kbd
 share/gok/th/hide.kbd
 share/gok/th/launcher.kbd
@@ -704,7 +735,6 @@ share/gok/uk/numberpad.kbd
 share/gok/uk/quit.kbd
 share/gok/uk/text-operations.kbd
 share/gok/uk/valuator.kbd
-share/gok/valuator.kbd
 share/gok/value-fast-less.png
 share/gok/value-fast-more.png
 share/gok/value-less.png
@@ -813,6 +843,7 @@ share/icons/hicolor/48x48/apps/gok.png
 share/locale/am/LC_MESSAGES/gok.mo
 share/locale/ang/LC_MESSAGES/gok.mo
 share/locale/ar/LC_MESSAGES/gok.mo
+share/locale/as/LC_MESSAGES/gok.mo
 share/locale/az/LC_MESSAGES/gok.mo
 share/locale/be/LC_MESSAGES/gok.mo
 share/locale/bg/LC_MESSAGES/gok.mo
@@ -836,6 +867,7 @@ share/locale/fr/LC_MESSAGES/gok.mo
 share/locale/ga/LC_MESSAGES/gok.mo
 share/locale/gl/LC_MESSAGES/gok.mo
 share/locale/gu/LC_MESSAGES/gok.mo
+share/locale/he/LC_MESSAGES/gok.mo
 share/locale/hi/LC_MESSAGES/gok.mo
 share/locale/hr/LC_MESSAGES/gok.mo
 share/locale/hu/LC_MESSAGES/gok.mo
@@ -855,6 +887,7 @@ share/locale/ms/LC_MESSAGES/gok.mo
 share/locale/nb/LC_MESSAGES/gok.mo
 share/locale/ne/LC_MESSAGES/gok.mo
 share/locale/nl/LC_MESSAGES/gok.mo
+share/locale/nn/LC_MESSAGES/gok.mo
 share/locale/oc/LC_MESSAGES/gok.mo
 share/locale/or/LC_MESSAGES/gok.mo
 share/locale/pa/LC_MESSAGES/gok.mo
@@ -884,9 +917,11 @@ share/omf/gok/gok-C.omf
 share/pixmaps/gok.png
 @comment in xdg-dirs: @dirrm share/pixmaps
 @dirrm share/omf/gok
-@comment in scrollkeeper: @dirrm share/omf
+@comment in rarian: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
+@comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@comment in xdg-dirs: @dirrm share/icons
 @dirrm share/gtk-doc/html/gok
 @dirrm share/gok/zh_TW
 @dirrm share/gok/zh_HK
@@ -913,6 +948,7 @@ share/pixmaps/gok.png
 @dirrm share/gok/pa
 @dirrm share/gok/or
 @dirrm share/gok/oc
+@dirrm share/gok/nn
 @dirrm share/gok/nl
 @dirrm share/gok/ne
 @dirrm share/gok/nb
@@ -932,6 +968,7 @@ share/pixmaps/gok.png
 @dirrm share/gok/hu
 @dirrm share/gok/hr
 @dirrm share/gok/hi
+@dirrm share/gok/he
 @dirrm share/gok/gu
 @dirrm share/gok/glade
 @dirrm share/gok/gl
@@ -956,13 +993,16 @@ share/pixmaps/gok.png
 @dirrm share/gok/bg
 @dirrm share/gok/be
 @dirrm share/gok/az
+@dirrm share/gok/as
 @dirrm share/gok/ar
 @dirrm share/gok/ang
 @dirrm share/gok/am
+@dirrm share/gok/C
 @dirrm share/gok
 @dirrm share/gnome/help/gok/C
 @dirrm share/gnome/help/gok
 @comment in gnome2-dirs: @dirrm share/gnome/help
+@comment in gnome2-dirs: @dirrm share/gnome
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
 @comment in libbonobo: @dirrm lib/bonobo/servers
