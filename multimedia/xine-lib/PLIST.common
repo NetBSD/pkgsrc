@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common,v 1.26 2008/04/24 12:32:22 wiz Exp $
+@comment $NetBSD: PLIST.common,v 1.27 2008/07/21 00:11:34 dholland Exp $
 bin/xine-config
 bin/xine-list-1.1
 include/xine.h
@@ -198,6 +198,10 @@ lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xshm.a
 lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xshm.so
 ${PLIST.xv}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xv.a
 ${PLIST.xv}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xv.so
+${PLIST.xvmc}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xvmc.a
+${PLIST.xvmc}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xvmc.so
+${PLIST.xvmc}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xxmc.a
+${PLIST.xvmc}lib/xine/plugins/${XINE_MOD_DIR_VER}/xineplug_vo_out_xxmc.so
 man/man1/xine-config.1
 man/man1/xine-list-1.1.1
 man/man5/xine.5
