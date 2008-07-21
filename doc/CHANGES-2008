@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1598 2008/07/21 09:41:50 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1599 2008/07/21 09:53:16 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2756,3 +2756,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated time/p5-Data-ICal-DateTime to 0.7 [rhaen 2008-07-21]
 	Updated www/p5-CGI-Application-Plugin-ValidateRM to 2.2 [rhaen 2008-07-21]
 	Updated www/p5-Catalyst-Plugin-Authentication-Store-DBIC to 0.11 [rhaen 2008-07-21]
+	Updated www/p5-Apache-ASP to 2.61 [rhaen 2008-07-21]
