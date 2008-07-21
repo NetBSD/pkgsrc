@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7404 2008/07/20 00:29:27 kristerw Exp $
+$NetBSD: TODO,v 1.7405 2008/07/21 00:38:40 tonnerre Exp $
 
 Suggested new packages
 ======================
@@ -942,7 +942,6 @@ Suggested package updates
 	o mysql-5.1.23
 	o mysql-5.2.3
 	o mysqlcc-0.9.8
-	o nagios-3.0.3
 	o nap-1.5.3
 	o nas-1.9.1
 	o nasm-2.03.01
