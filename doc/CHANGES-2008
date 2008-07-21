@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1585 2008/07/21 00:15:11 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.1586 2008/07/21 00:38:08 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2744,3 +2744,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/xine-lib to 1.1.14nb1 [dholland 2008-07-21]
 	Updated audio/xine-esound to 1.1.14nb1 [dholland 2008-07-21]
 	Updated audio/xine-arts to 1.1.14nb1 [dholland 2008-07-21]
+	Updated net/nagios-base to 3.0.3 [tonnerre 2008-07-20]
