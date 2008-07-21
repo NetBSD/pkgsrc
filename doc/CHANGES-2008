@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1593 2008/07/21 08:43:05 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1594 2008/07/21 08:47:56 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2751,3 +2751,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/gliv to 1.9.6nb1 [dholland 2008-07-21]
 	Updated devel/p5-AnyEvent to 4.22 [rhaen 2008-07-21]
 	Updated devel/p5-SVN-Notify to 2.77 [rhaen 2008-07-21]
+	Updated devel/p5-Log-Log4perl to 1.17 [rhaen 2008-07-21]
