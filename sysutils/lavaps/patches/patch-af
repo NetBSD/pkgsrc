@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2007/06/30 19:18:47 joerg Exp $
+$NetBSD: patch-af,v 1.2 2008/07/21 02:55:34 dholland Exp $
 
---- process_scan_bsd.cc.orig	2007-06-30 18:48:04.000000000 +0000
-+++ process_scan_bsd.cc
-@@ -42,7 +42,13 @@ extern "C" {
+--- src/process_scan_bsd.cc~	2003-11-30 20:04:48.000000000 -0500
++++ src/process_scan_bsd.cc	2008-07-20 21:50:04.000000000 -0400
+@@ -56,7 +56,13 @@ extern "C" {
  #include <sys/param.h>
  #include <sys/sysctl.h> // KERN_PROC_ALL
  #include <sys/types.h>
@@ -16,41 +16,17 @@ $NetBSD: patch-af,v 1.1 2007/06/30 19:18:47 joerg Exp $
  #include <fcntl.h>
  #include <kvm.h>
  #include <unistd.h>
-@@ -78,7 +84,11 @@ public:
- 	virtual void life(process_model *pm);
- 
- 	virtual int cur_pid() { return int(cur_kp_->kp_proc.p_pid); }
-+#ifdef __DragonFly__
-+	virtual int cur_uid() { return int(cur_kp_->kp_eproc.e_ucred.cr_ruid); }
-+#else
- 	virtual int cur_uid() { return int(cur_kp_->kp_eproc.e_pcred.p_ruid); }
-+#endif
- };
- 
- 
-@@ -256,7 +266,11 @@ process_scan_bsd::birth()
- {
- 	process_model *pm = new process_model(int(cur_kp_->kp_proc.p_pid));
- 	// fill in init-time only bits:
-+#ifdef __DragonFly__
-+	pm->set_uid(int(cur_kp_->kp_eproc.e_ucred.cr_ruid));
-+#else
- 	pm->set_uid(int(cur_kp_->kp_eproc.e_pcred.p_ruid));
-+#endif
- 	pm->set_nice(cur_kp_->kp_proc.p_nice);
- 	pm->set_start_time(0);  // xxx: not in bsd?
- 	life(pm);
-@@ -267,8 +281,13 @@ void
- process_scan_bsd::life(process_model *pm)
- {
- 	// OS-specific bits:
-+#ifdef __DragonFly__
-+	pm->set_utime(ticks_to_msec(cur_kp_->kp_eproc.e_uticks));
-+	pm->set_stime(ticks_to_msec(cur_kp_->kp_eproc.e_sticks));
-+#else
- 	pm->set_utime(ticks_to_msec(cur_kp_->kp_proc.p_uticks));
- 	pm->set_stime(ticks_to_msec(cur_kp_->kp_proc.p_sticks));
-+#endif
- 	// xxx: skip p_iticks
- 
- 	int size, resident;
+@@ -226,6 +232,13 @@ int process_scan_bsd::extract_uid() { re
+ int process_scan_bsd::extract_nice() { return int(cur_kp_->kp_proc.p_nice); }
+ int process_scan_bsd::extract_utime_msec() { return time_value_t_to_msec(kur_kp_->times.user_time) + time_value_t_to_msec(cur_kp_->tasks_info.user_time); }
+ int process_scan_bsd::extract_stime_msec() { return time_value_t_to_msec(kur_kp_->times.system _time) + time_value_t_to_msec(cur_kp_->tasks_info.system_time); }
++#elif defined(__DragonFly__)
++char *process_scan_bsd::extract_cmd() { return cur_kp_->kp_proc.p_comm; }
++int process_scan_bsd::extract_pid() { return int(cur_kp_->kp_proc.p_pid); }
++int process_scan_bsd::extract_uid() { return int(cur_kp_->kp_eproc.e_pcred.cr_ruid); }
++int process_scan_bsd::extract_nice() { return int(cur_kp_->kp_proc.p_nice); }
++int process_scan_bsd::extract_utime_msec() { return ticks_to_msec(cur_kp_->kp_eproc.e_uticks); }
++int process_scan_bsd::extract_stime_msec() { return ticks_to_msec(cur_kp_->kp_eproc.e_sticks); }
+ #else
+ #error unknown bsd variant
+ #endif

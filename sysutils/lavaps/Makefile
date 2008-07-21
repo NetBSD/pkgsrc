@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.27 2007/06/30 19:18:47 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2008/07/21 02:55:34 dholland Exp $
 #
 
-DISTNAME=	lavaps-1.20
-PKGREVISION=	1
+DISTNAME=	lavaps-2.7
 CATEGORIES=	sysutils x11
 MASTER_SITES=	http://www.isi.edu/~johnh/SOFTWARE/LAVAPS/
 
@@ -14,17 +13,19 @@ USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl
 
 GNU_CONFIGURE=	YES
-CONFIGURE_ARGS+=	--with-additional-includes=-I${LOCALBASE:Q}/include \
-		--with-additional-libs=-L${LOCALBASE:Q}/lib \
-		--with-tcl-ver=8.3.2 \
-		--with-tk-ver=8.3.2 \
+CONFIGURE_ARGS+=--with-tcltk \
+		--with-tcl-ver=8.4.18 \
+		--with-tk-ver=8.4.18 \
 		--with-tcltk-lib-suffix-type=nodot
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
-.include "../../x11/tk83/buildlink3.mk"
+.include "../../x11/tk/buildlink3.mk"
+.include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
+.include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
