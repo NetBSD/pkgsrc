@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.5 2008/07/21 04:50:40 dholland Exp $
+
+--- src/Makefile.in~	2006-11-18 09:21:13.000000000 -0500
++++ src/Makefile.in	2008-07-21 00:40:37.000000000 -0400
+@@ -574,7 +574,7 @@
+ 	gperf -n --multiple-iterations 64 --output $@ $<
+ 
+ help_text.c: $(top_srcdir)/README $(top_srcdir)/tools/help2c.awk
+-	awk -f $(top_srcdir)/tools/help2c.awk < $(top_srcdir)/README > $@
++	gawk -f $(top_srcdir)/tools/help2c.awk < $(top_srcdir)/README > $@
+ 
+ glade_actions.c include/glade_actions.h: $(top_srcdir)/tools/glade/actions/gliv-actions.glade
+ 	cd $(top_srcdir)/tools/glade/actions && ./make_glade_actions.sh

@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.23 2008/06/20 01:09:22 joerg Exp $
+# $NetBSD: Makefile,v 1.24 2008/07/21 04:50:40 dholland Exp $
 
 DISTNAME=	gliv-1.9.6
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://guichaz.free.fr/gliv/files/
 EXTRACT_SUFX=	.tar.bz2
@@ -13,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS+=		xdg-1.1
 USE_PKGLOCALEDIR=	yes
-USE_TOOLS+=		gmake msgfmt pkg-config
+USE_TOOLS+=		gawk gmake msgfmt pkg-config
 GNU_CONFIGURE=		yes
 
 INSTALLATION_DIRS=	share/pixmaps share/applications
