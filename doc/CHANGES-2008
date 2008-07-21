@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1592 2008/07/21 08:40:34 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1593 2008/07/21 08:43:05 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2750,3 +2750,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/librxspencer to 3.8.4 [obache 2008-07-21]
 	Updated graphics/gliv to 1.9.6nb1 [dholland 2008-07-21]
 	Updated devel/p5-AnyEvent to 4.22 [rhaen 2008-07-21]
+	Updated devel/p5-SVN-Notify to 2.77 [rhaen 2008-07-21]
