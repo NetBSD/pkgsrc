@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7405 2008/07/21 00:38:40 tonnerre Exp $
+$NetBSD: TODO,v 1.7406 2008/07/21 01:29:50 obache Exp $
 
 Suggested new packages
 ======================
@@ -701,7 +701,6 @@ Suggested package updates
 	o gocr-0.43
 	o goffice-0.7.0
 	o gogo-3.11p1
-	o gok-1.4.0
 	o golem-0.0.6
 	o gossip-0.29
 	o gourmet-0.13.3
