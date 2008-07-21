@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1587 2008/07/21 01:28:44 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1588 2008/07/21 02:40:26 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2730,7 +2730,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/hunspell-id_ID version 20040410 [ahoka 2008-07-20]
 	Updated www/p5-HTML-Table to 2.08a [he 2008-07-20]
 	Updated www/p5-HTML-WikiConverter to 0.62 [he 2008-07-20]
-	Updated www/www/p5-HTTP-Body to 1.04 [he 2008-07-20]
+	Updated www/p5-HTTP-Body to 1.04 [he 2008-07-20]
 	Updated www/p5-HTTP-Cache-Transparent to 1.0 [he 2008-07-20]
 	Updated www/p5-HTTP-Proxy to 0.22 [he 2008-07-20]
 	Updated www/p5-HTTP-Request-Form to 0.9.5.1 [he 2008-07-20]
