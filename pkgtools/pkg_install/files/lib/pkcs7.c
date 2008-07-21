@@ -1,4 +1,4 @@
-/*	$NetBSD: pkcs7.c,v 1.1.2.4 2008/07/18 18:40:50 joerg Exp $	*/
+/*	$NetBSD: pkcs7.c,v 1.1.2.5 2008/07/21 22:15:09 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -7,7 +7,7 @@
 #include <sys/cdefs.h>
 #endif
 
-__RCSID("$NetBSD: pkcs7.c,v 1.1.2.4 2008/07/18 18:40:50 joerg Exp $");
+__RCSID("$NetBSD: pkcs7.c,v 1.1.2.5 2008/07/21 22:15:09 joerg Exp $");
 
 /*-
  * Copyright (c) 2004, 2008 The NetBSD Foundation, Inc.
@@ -55,6 +55,24 @@ __RCSID("$NetBSD: pkcs7.c,v 1.1.2.4 2008/07/18 18:40:50 joerg Exp $");
 #ifndef __UNCONST
 #define __UNCONST(a)	((void *)(unsigned long)(const void *)(a))
 #endif
+
+static int
+check_ca(X509 *cert)
+{
+	if ((cert->ex_flags & EXFLAG_KUSAGE) != 0 &&
+	    (cert->ex_kusage & KU_KEY_CERT_SIGN) != KU_KEY_CERT_SIGN)
+		return 0;
+	if ((cert->ex_flags & EXFLAG_BCONS) != 0)
+		return (cert->ex_flags & EXFLAG_CA) == EXFLAG_CA;
+	if ((cert->ex_flags & (EXFLAG_V1|EXFLAG_SS)) == (EXFLAG_V1|EXFLAG_SS))
+		return 1;
+	if ((cert->ex_flags & EXFLAG_KUSAGE) != 0)
+		return 1;
+	if ((cert->ex_flags & EXFLAG_NSCERT) != 0 &&
+	    (cert->ex_nscert & NS_ANY_CA) != 0)
+		return 1;
+	return 0;
+}
 
 static STACK_OF(X509) *
 file_to_certs(const char *file)
@@ -157,8 +175,10 @@ easy_pkcs7_verify(const char *content, size_t len,
 	}
 
 	for (i = 0; i < sk_X509_num(signers); i++) {
-		/* Check CA state and update ex_xkusage as side effect */
-		if (X509_check_ca(sk_X509_value(signers, i))) {
+		/* Compute ex_xkusage */
+		X509_check_purpose(sk_X509_value(signers, i), -1, -1);
+
+		if (check_ca(sk_X509_value(signers, i))) {
 			warnx("CA keys are not valid for signatures");
 			goto cleanup;
 		}
@@ -239,8 +259,10 @@ easy_pkcs7_sign(const char *content, size_t len,
 	}
 	certificate = sk_X509_value(c, 0);
 
-	/* Check CA state and update ex_xkusage as side effect */
-	if (X509_check_ca(certificate)) {
+	/* Compute ex_kusage */
+	X509_check_purpose(certificate, -1, 0);
+
+	if (check_ca(certificate)) {
 		warnx("CA keys are not valid for signatures");
 		goto cleanup;
 	}
