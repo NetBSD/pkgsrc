@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1604 2008/07/21 13:12:17 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1605 2008/07/21 13:36:16 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2765,3 +2765,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/prelude-manager to 0.9.14 [shannonjr 2008-07-21]
 	Updated security/prelude-pflogger to 0.9.0nb3 [shannonjr 2008-07-21]
 	Updated textproc/p5-CAM-PDF to 1.20 [rhaen 2008-07-21]
+	Updated devel/p5-Data-Visitor to 0.17 [rhaen 2008-07-21]
