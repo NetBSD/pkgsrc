@@ -1,0 +1,21 @@
+$NetBSD: patch-ap,v 1.1 2008/07/21 05:35:37 dholland Exp $
+
+--- src/savecopy.c~	2005-08-18 08:49:24.000000000 -0400
++++ src/savecopy.c	2008-07-21 01:27:53.000000000 -0400
+@@ -51,6 +51,7 @@ static char rcsid[] = "@(#)$Id: savecopy
+ 
+ 
+ char *format_long();
++char *address_to_alias P_((char *address));
+ 
+ static const char *cf_english P_((const char *));
+ 
+@@ -81,7 +82,7 @@ int form;
+ 	/* if save_by_name or save_by_alias wanted */
+ 	if((strcmp(fname_dest, "=") == 0)  || (strcmp(fname_dest, "=?") == 0)) {
+ 	    if ((save_by_alias &&
+-		   (return_alias = (char *) address_to_alias(shdr->expanded_to)) != NULL))
++		   (return_alias = address_to_alias(shdr->expanded_to)) != NULL))
+ 		strcpy(buffer, return_alias);
+ 	    else
+ 	        if (save_by_name)
