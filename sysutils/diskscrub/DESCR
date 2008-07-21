@@ -1,0 +1,2 @@
+Scrub writes patterns on special files (i.e.  raw disk devices) or
+regular files to make retrieving the data more difficult.
