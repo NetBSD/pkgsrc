@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.3 2008/07/21 00:36:11 tonnerre Exp $
+
+--- include/locations.h.in.orig	2007-05-01 00:45:57.000000000 +0200
++++ include/locations.h.in
+@@ -20,7 +20,7 @@
+ 
+ #define DEFAULT_TEMP_FILE			"@localstatedir@/tempfile"
+ #define DEFAULT_TEMP_PATH                       "/tmp"
+-#define DEFAULT_CHECK_RESULT_PATH		"@localstatedir@/spool/checkresults"
++#define DEFAULT_CHECK_RESULT_PATH		"@localstatedir@/checkresults"
+ #define DEFAULT_STATUS_FILE			"@localstatedir@/status.dat"
+ #define DEFAULT_LOG_FILE			"@localstatedir@/nagios.log"
+ #define DEFAULT_LOG_ARCHIVE_PATH		"@localstatedir@/archives/"
