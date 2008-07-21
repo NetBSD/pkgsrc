@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/04/24 12:32:22 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2008/07/21 00:13:05 dholland Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -6,6 +6,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../multimedia/xine-lib/Makefile.common"
 
 PKGNAME=	${XINE_PKGNAME:S/lib/esound/}
+PKGREVISION=	1
 CATEGORIES=	audio
 COMMENT=	The esound audio output plugin for xine-lib
 
@@ -23,5 +24,6 @@ do-install:
 		${DESTDIR}${PREFIX}/lib/xine/plugins/${XINE_MOD_DIR_VER}
 
 .include "../../audio/esound/buildlink3.mk"
+.include "../../audio/libaudiofile/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
