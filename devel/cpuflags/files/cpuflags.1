@@ -1,4 +1,4 @@
-.\"	$NetBSD: cpuflags.1,v 1.19 2008/07/20 17:13:19 abs Exp $
+.\"	$NetBSD: cpuflags.1,v 1.20 2008/07/21 07:47:56 wiz Exp $
 .Dd May 31, 2001
 .Dt CPUFLAGS 1
 .Os
@@ -11,8 +11,8 @@
 .Sh DESCRIPTION
 .Nm
 determines the current CPU type and gcc version, then outputs appropriate
-compiler options to best target code for that CPU. If no options exist
-to target the current CPU then nothing is output.
+compiler options to best target code for that CPU.
+If no options exist to target the current CPU then nothing is output.
 .Pp
 In the event of the CPU not being recognised, a warning is sent to stderr.
 .Pp
@@ -46,7 +46,8 @@ Set appropriate compiler flags based on the output from
 Suitable for inclusion in /etc/mk.conf
 .It @PREFIX@/share/mk/optimize_gcc.mk
 Attempt to set additional -mXXX gcc flags based on gcc version and packages
-being compiled. Note: This is experimental and not supported.
+being compiled.
+Note: This is experimental and not supported.
 .El
 .Sh EXAMPLES
 .Nm
@@ -60,7 +61,8 @@ kernel or userland by adding the following to
 .Ed
 .Pp
 To experiment with optimisations that can break generated code there is
-optimize_gcc.mk. This is unsupported, but for full effect add the following to
+optimize_gcc.mk.
+This is unsupported, but for full effect add the following to
 .Pa /etc/mk.conf :
 .Bd -literal -offset indent
  .sinclude "@PREFIX@/share/mk/cpuflags.mk"
@@ -68,7 +70,8 @@ optimize_gcc.mk. This is unsupported, but for full effect add the following to
 .Ed
 .Pp
 On all except low memory machines compilation can be speeded up by adding the
-following to /etc/mk.conf. (Note this will not affect the binaries produced)
+following to /etc/mk.conf.
+(Note this will not affect the binaries produced)
 .Bd -literal -offset indent
 COPTS?= -pipe ${DEFCOPTS}
 CFLAGS+=-pipe
@@ -86,5 +89,5 @@ Currently
 is also gcc specific.
 .Sh NOTES
 .Nm
-is based on input from many sources. I would like to thank them all, in
-particular Yakovetsky Vladimir.
+is based on input from many sources.
+I would like to thank them all, in particular Yakovetsky Vladimir.
