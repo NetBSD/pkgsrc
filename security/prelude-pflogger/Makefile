@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2008/06/12 02:14:45 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2008/07/21 12:22:15 shannonjr Exp $
 #
 
 DISTNAME=	prelude-pflogger-0.9.0-rc2
 PKGNAME=	prelude-pflogger-0.9.0
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	security
 MASTER_SITES=	http://prelude-ids.org/download/releases/
 
@@ -44,6 +44,12 @@ FILES_SUBST+=	PRELUDE_GROUP=${PRELUDE_GROUP:Q}
 MESSAGE_SUBST+=	PRELUDE_USER=${PRELUDE_USER:Q}
 MESSAGE_SUBST+=	PRELUDE_GROUP=${PRELUDE_GROUP:Q}
 
+SUBST_CLASSES+=		code
+SUBST_STAGE.code=	post-patch
+SUBST_FILES.code=	run-prelude-pflogger.c
+SUBST_SED.code=		-e 's,@PREFIX@,${PREFIX},g'
+SUBST_SED.code+=	-e 's,@PRELUDE_USER@,${PRELUDE_USER},g'
+
 SUBST_CLASSES+=         make
 SUBST_STAGE.make=       post-patch
 SUBST_FILES.make=       Makefile.am
@@ -53,9 +59,18 @@ RCD_SCRIPTS=		pflogger
 
 INSTALLATION_DIRS=	share/examples/prelude-pflogger
 
+pre-patch:
+	${CP} ${FILESDIR}/run-prelude-pflogger.c ${WRKSRC}
+
 pre-configure:
 	set -e; cd ${WRKSRC}; \
 	aclocal; autoheader; automake -a --foreign -i; autoconf
+
+post-build:
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${CC} ${CFLAGS} -o run-prelude-pflogger run-prelude-pflogger.c
+
+post-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/run-prelude-pflogger ${PREFIX}/sbin/run-prelude-pflogger
 
 .include "../../security/libprelude/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
