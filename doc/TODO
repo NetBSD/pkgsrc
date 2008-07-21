@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7407 2008/07/21 02:57:12 dholland Exp $
+$NetBSD: TODO,v 1.7408 2008/07/21 09:24:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -567,7 +567,7 @@ Suggested package updates
 	o djvulibre-lib-4.1.2
 	o djvulibre-tools-4.1.2
 	o dnsmasq-2.41 [pkg/38186]
-	o dnsmasq-2.43
+	o dnsmasq-2.45
 	o dnstop-20070307
 	o dnstracer-1.9
 	o drraw-2.2a5
@@ -675,10 +675,11 @@ Suggested package updates
 	o gkrellm-snmp-1.0
 	o gkrellm-xmms-2.1.22
 	o glchess-1.0.5
+	o glib2-2.16.5
 	o glibmm-2.16.4
 	o global-5.6
 	o glpk-4.29
-	o gmime-2.2.21
+	o gmime-2.2.22
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-2.22.1
@@ -702,7 +703,7 @@ Suggested package updates
 	o goffice-0.7.0
 	o gogo-3.11p1
 	o golem-0.0.6
-	o gossip-0.29
+	o gossip-0.30
 	o gourmet-0.13.3
 	o gpaint-0.3.3
 	o gperiodic-2.0.10
@@ -754,7 +755,7 @@ Suggested package updates
 	o httping-1.2.9
 	o httptunnel-3.3
 	o hydrogen-0.9.3 [pkg/37424]
-	o hylafax-5.2.5
+	o hylafax-5.2.6
 	o ical-2.3.2
 	o icdprog-0.5
 	o icecast-2.3.2 [ready and waiting for MAINTAINER response -- kim@]
@@ -795,6 +796,7 @@ Suggested package updates
 	o jdb-1.14
 	o jgrasp-183
 	o jhead-2.82
+	o john-1.7.3.1
 	o jools-1.0
 	o jpilot-1.6.0
 	o jwhois-4.0 [pkg/38500]
@@ -859,6 +861,7 @@ Suggested package updates
 	o libltdl-2.2.4
 	o liblzo-2.02
 	o libmatheval-1.1.6
+	o libmpeg2-0.5.1
 	o libmusicbrainz-3.0.1
 	o libnasl-2.3.1
 	o libnids-1.21
@@ -866,6 +869,7 @@ Suggested package updates
 	o liboil-0.3.15
 	o libole2-2.2.8
 	o libopensync-0.35
+	o libprelude-0.9.18
 	o libpreludedb-0.9.14
 	o libshout-2.2.2
 	o libssh-0.2
@@ -904,7 +908,6 @@ Suggested package updates
 	o matchbox-panel-0.9.3
 	o mathomatic-14.0.7
 	o mcrypt-2.6.6
-	o meld-1.2
 	o mercury-0.13.1
 	o mergeant-0.67
 	o mesure-0.7.2
@@ -916,7 +919,7 @@ Suggested package updates
 	o mirmon-1.37
 	o mk-files-20061230
 	o mknmz-wwwoffle-0.7.2
-	o mksh-35
+	o mksh-35b
 	o mkvtoolnix-2.2.0
 	o mlterm-2.9.4
 	o mlview-0.9.0
@@ -924,6 +927,7 @@ Suggested package updates
 	o modular-xorg-server-1.4.99.905
 	o moon-buggy-1.0.51
 	o most-4.10.2
+	o mowgli-0.7.0
 	o mp3blaster-3.2.3
 	o mpeg4ip-1.6.1
 	o mpg123-1.4.3
@@ -1006,7 +1010,11 @@ Suggested package updates
 	o p5-Authen-SASL-Cyrus-0.13
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.007
-	o p5-Devel-StackTrace-1.1901
+	o p5-DateTime-TimeZone-0.78
+	o p5-Devel-StackTrace-1.1902
+	o p5-Error-0.17015
+	o p5-File-Remove-1.42
+	o p5-FileHandle-Unget-0.1622
 	o p5-Filter-1.33
 	o p5-Font-TTF-0.40
 	o p5-GMail-IMAPD-0.94
@@ -1020,6 +1028,7 @@ Suggested package updates
 	o p5-HTTP-Server-Simple-Static-0.05
 	o p5-HTTPD-User-Manage-1.62
 	o p5-IMAP-Admin-1.6.4
+	o p5-IO-Socket-SSL-1.14
 	o p5-MARC-1.38
 	o p5-MIME-tools-5.427
 	o p5-Math-Random-0.69
@@ -1028,6 +1037,7 @@ Suggested package updates
 	o p5-PAR-0.90
 	o p5-PV-1.5
 	o p5-Perl-Tidy-20071205
+	o p5-Pod-Tests-1.19
 	o p5-Regexp-Common-2.122
 	o p5-SVN-Mirror-0.73
 	o p5-SWF-File-0.42
@@ -1036,8 +1046,10 @@ Suggested package updates
 	o p5-Set-IntSpan-1.10
 	o p5-Set-Scalar-1.20
 	o p5-Term-Size-0.203
+	o p5-Test-ClassAPI-1.05
 	o p5-Test-Harness-2.64
 	o p5-Test-Unit-0.25
+	o p5-Text-Markdown-1.0.20
 	o p5-Text-Tabs+Wrap-2006.1117
 	o p5-glib2-1.183
 	o p5-gtk2-1.183
@@ -1102,7 +1114,7 @@ Suggested package updates
 	o postgresql81-postgis-1.3.3
 	o powermanga-0.90
 	o pptp-1.7.1 [pkg/38038]
-	o prelude-manager-0.9.13
+	o prelude-manager-0.9.14
 	o profit-2.5.3
 	o projclock-0.9
 	o proxsmtp-1.6
@@ -1142,7 +1154,7 @@ Suggested package updates
 	o py-m2crypto-0.18.2
 	o py-mad-0.6
 	o py-metakit-2.4.9.6
-	o py-moin-1.7.0
+	o py-moin-1.7.1
 	o py-musicbrainz-0.4.1
 	o py-mutagen-1.11
 	o py-mysqldb-1.2.2 [pkg/38090]
@@ -1211,7 +1223,7 @@ Suggested package updates
 	o rudiments-0.30
 	o rxvt-unicode-9.05 [pkg/38988]
 	o sablecc-3.2
-	o samba-3.0.31
+	o samba-3.2.0
 	o samba-3.2.0
 	o sarg-2.2.5
 	o scamper-20070201
@@ -1262,6 +1274,7 @@ Suggested package updates
 	o sope-4.5.9
 	o sound-juicer-2.16.4 [needs nautilus-cd-burner>=2.15.3]
 	o sound-juicer-2.22.0
+	o source-highlight-2.10
 	o spcaview-20060501
 	o spim-7.3
 	o sqlite3-ruby-1.2.2
@@ -1302,7 +1315,6 @@ Suggested package updates
 	o tea-18.0.0
 	o ted-2.17
 	o ted-en-us-2.17
-	o tellico-1.3.3
 	o tex-musixtex-113 [pkg/34758]
 	o texmaker-1.7.1
 	o tfmxplay-1.1.6
@@ -1362,7 +1374,6 @@ Suggested package updates
 	o webmin-1.420
 	o websvn-2.0
 	o weewm-0.01
-	o wget-1.11.4
 	o windowlab-1.34
 	o wine-1.1.1
 	o wireshark-1.0.1
@@ -1377,7 +1388,7 @@ Suggested package updates
 	o wxRemind-86
 	o wyrd-1.4.4
 	o x11perf-1.5
-	o x264-devel-20080705
+	o x264-devel-20080719
 	o xanalyser-1.30
 	o xbindkeys-1.8.2
 	o xbindkeys-tk-1.8.0
@@ -1417,7 +1428,7 @@ Suggested package updates
 	o xf86-video-trident-1.3.0
 	o xf86-video-tseng-1.2.0
 	o xf86-video-vesa-2.0.0
-	o xf86-video-vmware-10.16.2
+	o xf86-video-vmware-10.16.3
 	o xfe-1.19.1
 	o xfstt-1.7
 	o xhippo-3.5
