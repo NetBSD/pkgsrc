@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1590 2008/07/21 02:59:18 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1591 2008/07/21 04:51:34 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2748,3 +2748,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/gok to 1.4.0 [obache 2008-07-21]
 	Updated sysutils/lavaps to 2.7 [dholland 2008-07-21]
 	Updated devel/librxspencer to 3.8.4 [obache 2008-07-21]
+	Updated graphics/gliv to 1.9.6nb1 [dholland 2008-07-21]
