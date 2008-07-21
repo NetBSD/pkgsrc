@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1589 2008/07/21 02:57:12 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.1590 2008/07/21 02:59:18 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2747,3 +2747,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/nagios-base to 3.0.3 [tonnerre 2008-07-20]
 	Updated misc/gok to 1.4.0 [obache 2008-07-21]
 	Updated sysutils/lavaps to 2.7 [dholland 2008-07-21]
+	Updated devel/librxspencer to 3.8.4 [obache 2008-07-21]
