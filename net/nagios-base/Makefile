@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.20 2008/06/21 14:35:49 tonnerre Exp $
+# $NetBSD: Makefile,v 1.21 2008/07/21 00:35:42 tonnerre Exp $
 #
 
-DISTNAME=		nagios-2.12
+DISTNAME=		nagios-3.0.3
 PKGNAME=		${DISTNAME:S/-/-base-/}
 CATEGORIES=		net sysutils
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=nagios/}
@@ -14,23 +14,23 @@ COMMENT=		Network monitor
 .include "../../net/nagios-base/Makefile.common"
 .include "options.mk"
 
-CONFIGURE_ARGS+=	--with-gd-lib=${LOCALBASE}/lib
-CONFIGURE_ARGS+=	--with-gd-inc=${LOCALBASE}/include
+CONFIGURE_ARGS+=	--with-gd-lib=${PREFIX}/lib
+CONFIGURE_ARGS+=	--with-gd-inc=${PREFIX}/include
 CONFIGURE_ARGS+=	--enable-embedded-perl
 CONFIGURE_ARGS+=	--with-perlcache
 
-CONFIGURE_ARGS+=	--with-nagios-user=${NAGIOS_USER:Q}
-CONFIGURE_ARGS+=	--with-nagios-group=${NAGIOS_GROUP:Q}
-CONFIGURE_ARGS+=	--with-command-user=${NAGIOS_USER:Q}
-CONFIGURE_ARGS+=	--with-command-group=${NAGIOSCMD_GROUP:Q}
+CONFIGURE_ARGS+=	--with-nagios-user=${NAGIOS_USER}
+CONFIGURE_ARGS+=	--with-nagios-group=${NAGIOS_GROUP}
+CONFIGURE_ARGS+=	--with-command-user=${NAGIOS_USER}
+CONFIGURE_ARGS+=	--with-command-group=${NAGIOSCMD_GROUP}
 CONFIGURE_ARGS+=	--with-init-dir=${PREFIX}/share/examples/rc.d
 CONFIGURE_ARGS+=	--with-lockfile=/var/run/nagios.lock
 
 USE_TOOLS+=		mail:run perl
-CONFIGURE_ARGS+=	--with-mail=${TOOLS_PLATFORM.mail}
+CONFIGURE_ARGS+=	--with-mail=${TOOLS_PLATFORM.mail:Q}
 
 RCD_SCRIPTS+=		nagios
-FILES_SUBST+=		NAGIOS_USER=${NAGIOS_USER:Q}
+FILES_SUBST+=		NAGIOS_USER=${NAGIOS_USER}
 # XXX Merge this into the package proper.
 # Nagios drops permissions before creating the log file, so the
 # default location doesn't work.  In the config file, change
@@ -39,7 +39,8 @@ FILES_SUBST+=		NAGIOS_USER=${NAGIOS_USER:Q}
 
 INSTALL_TARGET=		install install-config
 
-BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		VARBASE NAGIOS_USER NAGIOS_GROUP NAGIOSCMD_GROUP
+BUILD_DEFS+=		NAGIOSDIR
 
 PKG_GROUPS+=		${NAGIOS_GROUP}
 PKG_GROUPS+=		${NAGIOSCMD_GROUP}
@@ -52,8 +53,13 @@ MESSAGE_SUBST+=		NAGIOS_USER=${NAGIOS_USER}
 MESSAGE_SUBST+=		NAGIOSCMD_GROUP=${NAGIOSCMD_GROUP}
 
 EGDIR=			${PREFIX}/share/examples/nagios
-EGFILES=		cgi.cfg commands.cfg localhost.cfg
-EGFILES+=		nagios.cfg resource.cfg
+EGFILES=		nagios.cfg cgi.cfg resource.cfg
+EGFILES+=		objects/templates.cfg objects/commands.cfg
+EGFILES+=		objects/contacts.cfg objects/timeperiods.cfg
+EGFILES+=		objects/localhost.cfg objects/windows.cfg
+EGFILES+=		objects/printer.cfg objects/switch.cfg
+
+INSTALLATION_DIRS+=	${PKG_SYSCONFDIR}/objects
 
 .for files in ${EGFILES}
 CONF_FILES+=		${EGDIR}/${files}-sample ${PKG_SYSCONFDIR}/${files}

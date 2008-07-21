@@ -1,5 +1,6 @@
-# $NetBSD: Makefile.common,v 1.7 2007/11/26 22:14:13 seb Exp $
+# $NetBSD: Makefile.common,v 1.8 2008/07/21 00:35:42 tonnerre Exp $
 #
+# used by net/nagios-base/Makefile
 
 PKG_GROUPS_VARS+=	NAGIOS_GROUP NAGIOSCMD_GROUP
 PKG_USERS_VARS+=	NAGIOS_USER
@@ -13,8 +14,10 @@ PERL5_REQD=		5.6
 
 CONFIGURE_ARGS+=	--libexecdir=${PREFIX}/libexec/nagios
 CONFIGURE_ARGS+=	--datadir=${PREFIX}/share/nagios
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--localstatedir=${NAGIOSDIR:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${NAGIOSDIR}
 
 CONFIGURE_ARGS+=	--with-cgiurl=/nagios/cgi-bin
 CONFIGURE_ARGS+=	--with-htmurl=/nagios
+
+BUILD_DEFS+=		NAGIOSDIR

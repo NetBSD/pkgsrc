@@ -1,17 +1,18 @@
-$NetBSD: patch-aa,v 1.5 2008/06/21 14:35:49 tonnerre Exp $
+$NetBSD: patch-aa,v 1.6 2008/07/21 00:35:42 tonnerre Exp $
 
---- Makefile.in.orig	2007-04-23 17:44:25.000000000 +0200
+--- Makefile.in.orig	2008-04-13 20:34:26.000000000 +0200
 +++ Makefile.in
-@@ -22,16 +22,16 @@ LDFLAGS=@LDFLAGS@ @LIBS@
- prefix=@prefix@
+@@ -23,17 +23,16 @@ prefix=@prefix@
  exec_prefix=@exec_prefix@
  LOGDIR=@localstatedir@
+ CHECKRESULTDIR=@CHECKRESULTDIR@
 -CFGDIR=@sysconfdir@
-+CGIDIR=@libexecdir@
- BINDIR=@bindir@
- CGIDIR=@sbindir@
- HTMLDIR=@datadir@
 +SAMPDIR=@prefix@/share/examples/nagios
+ BINDIR=@bindir@
+-CGIDIR=@sbindir@
++CGIDIR=@libexecdir@
+ LIBEXECDIR=@libexecdir@
+ HTMLDIR=@datadir@
  INSTALL=@INSTALL@
  INSTALL_OPTS=@INSTALL_OPTS@
  COMMAND_OPTS=@COMMAND_OPTS@
@@ -22,11 +23,13 @@ $NetBSD: patch-aa,v 1.5 2008/06/21 14:35:49 tonnerre Exp $
  CGICFGDIR=$(CGIDIR)
  PERLDIR=@PERLDIR@
  
-@@ -58,60 +58,7 @@ all:
+@@ -62,66 +61,6 @@ all:
  	cd $(SRC_BASE) && $(MAKE)
  	cd $(SRC_CGI) && $(MAKE)
  	cd $(SRC_HTM) && $(MAKE)
--	cd $(SRC_MODULE) && $(MAKE)
+-	if [ x$(USE_EVENTBROKER) = xyes ]; then \
+-		cd $(SRC_MODULE) && $(MAKE); \
+-	fi
 -
 -	@echo ""
 -	@echo "*** Compile finished ***"
@@ -52,6 +55,10 @@ $NetBSD: patch-aa,v 1.5 2008/06/21 14:35:49 tonnerre Exp $
 -	@echo "       on doing this.  Pay particular attention to the docs on"
 -	@echo "       object configuration files, as they determine what/how"
 -	@echo "       things get monitored!"
+-	@echo ""
+-	@echo "  make install-webconf"
+-	@echo "     - This installs the Apache config file for the Nagios"
+-	@echo "       web interface"
 -	@echo ""
 -	@echo ""
 -	@echo "*** Support Notes *******************************************"
@@ -80,41 +87,70 @@ $NetBSD: patch-aa,v 1.5 2008/06/21 14:35:49 tonnerre Exp $
 -	@echo ""
 -	@echo "Enjoy."
 -	@echo ""
-+#	cd $(SRC_MODULE) && $(MAKE)
  
  nagios:
  	cd $(SRC_BASE) && $(MAKE)
-@@ -183,12 +130,11 @@ install-unstripped: 
+@@ -193,14 +132,10 @@ install-unstripped:
  	$(MAKE) install-basic
  
  install-basic:
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(LIBEXECDIR)
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(LOGDIR)
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(LOGDIR)/archives
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(CHECKRESULTDIR)
  	if [ $(INSTALLPERLSTUFF) = yes ]; then \
 -		$(INSTALL) -m 664 $(INSTALL_OPTS) p1.pl $(DESTDIR)$(BINDIR); \
-+		${BSD_INSTALL_SCRIPT} p1.pl $(DESTDIR)$(BINDIR); \
++		$(BSD_INSTALL_SCRIPT) p1.pl $(DESTDIR)$(BINDIR); \
  	fi;
- 
-+
+-
++	
  	@echo ""
  	@echo "*** Main program, CGIs and HTML files installed ***"
  	@echo ""
-@@ -213,12 +159,12 @@ install-basic:
+@@ -220,20 +155,20 @@ install-basic:
  
  
  install-config:
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(CFGDIR)
+-	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(CFGDIR)/objects
 -	$(INSTALL) -b -m 664 $(INSTALL_OPTS) sample-config/nagios.cfg $(DESTDIR)$(CFGDIR)/nagios.cfg
 -	$(INSTALL) -b -m 664 $(INSTALL_OPTS) sample-config/cgi.cfg $(DESTDIR)$(CFGDIR)/cgi.cfg
 -	$(INSTALL) -b -m 660 $(INSTALL_OPTS) sample-config/resource.cfg $(DESTDIR)$(CFGDIR)/resource.cfg
--	$(INSTALL) -b -m 664 $(INSTALL_OPTS) sample-config/template-object/localhost.cfg $(DESTDIR)$(CFGDIR)/localhost.cfg
--	$(INSTALL) -b -m 664 $(INSTALL_OPTS) sample-config/template-object/commands.cfg $(DESTDIR)$(CFGDIR)/commands.cfg
+-	$(INSTALL) -b -m 664 $(INSTALL_OPTS) sample-config/template-object/templates.cfg $(DESTDIR)$(CFGDIR)/objects/templates.cfg
+-	$(INSTALL) -b -m 664 $(INSTALL_OPTS) sample-config/template-object/commands.cfg $(DESTDIR)$(CFGDIR)/objects/commands.cfg
+-	$(INSTALL) -b -m 664 $(INSTALL_OPTS) sample-config/template-object/contacts.cfg $(DESTDIR)$(CFGDIR)/objects/contacts.cfg
+-	$(INSTALL) -b -m 664 $(INSTALL_OPTS) sample-config/template-object/timeperiods.cfg $(DESTDIR)$(CFGDIR)/objects/timeperiods.cfg
+-	$(INSTALL) -b -m 664 $(INSTALL_OPTS) sample-config/template-object/localhost.cfg $(DESTDIR)$(CFGDIR)/objects/localhost.cfg
+-	$(INSTALL) -b -m 664 $(INSTALL_OPTS) sample-config/template-object/windows.cfg $(DESTDIR)$(CFGDIR)/objects/windows.cfg
+-	$(INSTALL) -b -m 664 $(INSTALL_OPTS) sample-config/template-object/printer.cfg $(DESTDIR)$(CFGDIR)/objects/printer.cfg
+-	$(INSTALL) -b -m 664 $(INSTALL_OPTS) sample-config/template-object/switch.cfg $(DESTDIR)$(CFGDIR)/objects/switch.cfg
+-
 +	[ -d $(DESTDIR)$(SAMPDIR) ] || ${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(SAMPDIR)
++	[ -d $(DESTDIR)$(SAMPDIR)/objects ] || ${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(SAMPDIR)/objects
 +	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/nagios.cfg $(DESTDIR)$(SAMPDIR)/nagios.cfg-sample
 +	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/cgi.cfg $(DESTDIR)$(SAMPDIR)/cgi.cfg-sample
 +	$(INSTALL) -m 640 $(INSTALL_OPTS) sample-config/resource.cfg $(DESTDIR)$(SAMPDIR)/resource.cfg-sample
-+	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/template-object/localhost.cfg $(DESTDIR)$(SAMPDIR)/localhost.cfg-sample
-+	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/template-object/commands.cfg $(DESTDIR)$(SAMPDIR)/commands.cfg-sample
++	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/template-object/templates.cfg $(DESTDIR)$(SAMPDIR)/objects/templates.cfg-sample
++	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/template-object/commands.cfg $(DESTDIR)$(SAMPDIR)/objects/commands.cfg-sample
++	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/template-object/contacts.cfg $(DESTDIR)$(SAMPDIR)/objects/contacts.cfg-sample
++	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/template-object/timeperiods.cfg $(DESTDIR)$(SAMPDIR)/objects/timeperiods.cfg-sample
++	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/template-object/localhost.cfg $(DESTDIR)$(SAMPDIR)/objects/localhost.cfg-sample
++	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/template-object/windows.cfg $(DESTDIR)$(SAMPDIR)/objects/windows.cfg-sample
++	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/template-object/printer.cfg $(DESTDIR)$(SAMPDIR)/objects/printer.cfg-sample
++	$(INSTALL) -m 644 $(INSTALL_OPTS) sample-config/template-object/switch.cfg $(DESTDIR)$(SAMPDIR)/objects/switch.cfg-sample
++	
+ 	@echo ""
+ 	@echo "*** Config files installed ***"
+ 	@echo ""
+@@ -261,7 +196,10 @@ install-daemoninit:
+ 
+ 
+ install-commandmode:
+-	$(INSTALL) -m 775 $(COMMAND_OPTS) -d $(DESTDIR)$(LOGDIR)/rw
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(LOGDIR)/archives
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(LOGDIR)/rw
++	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(CHECKRESULTDIR)
++	chmod g+s $(DESTDIR)$(LOGDIR)/archives
+ 	chmod g+s $(DESTDIR)$(LOGDIR)/rw
  
  	@echo ""
- 	@echo "*** Sample config file installed ***"
