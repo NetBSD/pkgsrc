@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.4 2008/06/21 14:35:49 tonnerre Exp $
+$NetBSD: patch-ac,v 1.5 2008/07/21 00:35:42 tonnerre Exp $
 
---- base/Makefile.in.orig	2006-05-30 18:31:44.000000000 +0200
+--- base/Makefile.in.orig	2008-02-28 20:25:45.000000000 +0100
 +++ base/Makefile.in
-@@ -29,7 +29,7 @@ exec_prefix=@exec_prefix@
+@@ -36,7 +36,7 @@ exec_prefix=@exec_prefix@
  LOGDIR=@localstatedir@
  CFGDIR=@sysconfdir@
  BINDIR=@bindir@
@@ -11,8 +11,8 @@ $NetBSD: patch-ac,v 1.4 2008/06/21 14:35:49 tonnerre Exp $
  HTMLDIR=@datadir@
  INSTALL=@INSTALL@
  INSTALL_OPTS=@INSTALL_OPTS@
-@@ -188,9 +188,8 @@ install-unstripped:
- 	 $(MAKE) install-basic
+@@ -202,9 +202,8 @@ install-unstripped:
+ 	$(MAKE) install-basic
  
  install-basic:
 -	$(INSTALL) -m 775 $(INSTALL_OPTS) -d $(DESTDIR)$(BINDIR)
