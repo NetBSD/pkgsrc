@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/07/21 12:16:46 shannonjr Exp $
+
+--- ./plugins/lua/ruleset/Makefile.in.orig	2008-07-11 06:41:49.000000000 -0600
++++ ./plugins/lua/ruleset/Makefile.in
+@@ -321,12 +321,11 @@ distclean-libtool:
+ uninstall-info-am:
+ install-rulesetDATA: $(ruleset_DATA)
+ 	@$(NORMAL_INSTALL)
+-	test -z "$(rulesetdir)" || $(mkdir_p) "$(DESTDIR)$(rulesetdir)"
+ 	@list='$(ruleset_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f=$(am__strip_dir) \
+-	  echo " $(rulesetDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(rulesetdir)/$$f'"; \
+-	  $(rulesetDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(rulesetdir)/$$f"; \
++	  echo " $(rulesetDATA_INSTALL) '$$d$$p' '$(PREFIX)/share/examples/prelude-correlator/lua-rules/$$f'"; \
++	  $(rulesetDATA_INSTALL) "$$d$$p" "$(PREFIX)/share/examples/prelude-correlator/lua-rules/$$f"; \
+ 	done
+ 
+ uninstall-rulesetDATA:
