@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1606 2008/07/21 14:41:45 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1607 2008/07/21 14:45:37 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2767,3 +2767,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-CAM-PDF to 1.20 [rhaen 2008-07-21]
 	Updated devel/p5-Data-Visitor to 0.17 [rhaen 2008-07-21]
 	Updated devel/p5-Devel-SmallProf to 2.02 [rhaen 2008-07-21]
+	Updated textproc/p5-YAML-Syck to 1.05 [rhaen 2008-07-21]
