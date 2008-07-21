@@ -1,10 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/02/21 21:06:12 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/07/21 02:56:55 obache Exp $
 include/rxspencer/regex.h
 lib/librxspencer.la
 man/man3/rxspencer.3
 man/man7/rxspencer.7
-share/doc/${PKGBASE}/COPYRIGHT
-share/doc/${PKGBASE}/INSTALL
-share/doc/${PKGBASE}/README
-share/doc/${PKGBASE}/WHATSNEW
+share/doc/librxspencer/COPYRIGHT
+share/doc/librxspencer/INSTALL
+share/doc/librxspencer/README
+share/doc/librxspencer/WHATSNEW
+@dirrm share/doc/librxspencer
 @dirrm include/rxspencer
