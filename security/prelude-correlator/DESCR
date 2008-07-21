@@ -1,0 +1,9 @@
+Prelude-Correlator serves to correlate, in real time, the multiple
+events received by Prelude. Several isolated alerts, generated
+from different sensors, can thus trigger a single correlation
+alert should the events be related. This correlation alert then
+appears within the Prewikka interface and indicates the potential
+target information via the set of correlation rules.
+
+Signature creation with Prelude-Correlator is based on the powerful
+programming language Lua.

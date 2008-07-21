@@ -1,0 +1,23 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/07/21 12:16:46 shannonjr Exp $
+
+--- Makefile.in.orig	2008-06-27 11:54:12.000000000 -0600
++++ Makefile.in
+@@ -733,17 +733,7 @@ uninstall-info: uninstall-info-recursive
+ 
+ install-data-local:
+ 	$(INSTALL) -m 700 -d $(DESTDIR)$(PRELUDE_CORRELATOR_CONTEXT_DIR)
+-	@if test -f $(DESTDIR)$(PRELUDE_CORRELATOR_CONFDIR)/prelude-correlator.conf; then                       \
+-		echo "********************************************************************************";        \
+-		echo;                                                                                           \
+-		echo "$(DESTDIR)$(configdir)/prelude-correlator.conf already exist...";                         \
+-		echo "Installing default configuration in $(DESTDIR)$(configdir)/prelude-correlator.conf-dist"; \
+-		echo;                                                                                           \
+-		echo "********************************************************************************";        \
+-		$(INSTALL) -m 600 $(top_srcdir)/prelude-correlator.conf $(DESTDIR)$(PRELUDE_CORRELATOR_CONFDIR)/prelude-correlator.conf-dist;  \
+-	else                                                                                                    \
+-		$(INSTALL) -m 600 $(top_srcdir)/prelude-correlator.conf $(DESTDIR)$(PRELUDE_CORRELATOR_CONFDIR);                \
+-	fi
++	$(BSD_INSTALL_DATA) $(top_srcdir)/prelude-correlator.conf $(PREFIX)/@EGDIR@
+ 
+ uninstall-local:
+ 	rm -f $(DESTDIR)$(configdir)/prelude-correlator.conf;

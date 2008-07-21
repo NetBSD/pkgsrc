@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/07/21 12:16:46 shannonjr Exp $
+
+--- configure.orig	2008-06-29 05:41:00.000000000 -0600
++++ configure
+@@ -25519,7 +25519,7 @@ fi
+ PRELUDE_CORRELATOR_CONF=$SYSCONFDIR/prelude-correlator/prelude-correlator.conf
+ 
+ 
+-PRELUDE_CORRELATOR_CONTEXT_DIR=$LOCALSTATEDIR/lib/prelude-correlator
++PRELUDE_CORRELATOR_CONTEXT_DIR=$LOCALSTATEDIR/prelude-correlator
+ 
+ 
+ PRELUDE_CORRELATOR_CONFDIR=$SYSCONFDIR/prelude-correlator
