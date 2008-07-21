@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 14:08:35 wiz Exp $
+$NetBSD: distinfo,v 1.4 2008/07/21 11:54:17 rhaen Exp $
 
-SHA1 (Apache-Filter-1.022.tar.gz) = 6377a8a4f85d4f57773bbfbc47fa1df809a1e4a5
-RMD160 (Apache-Filter-1.022.tar.gz) = 48a5aa6ff28213b7155f38e4983104fca4c14d14
-Size (Apache-Filter-1.022.tar.gz) = 26259 bytes
+SHA1 (Apache-Filter-1.024.tar.gz) = 957c411548ddd6a916cf04640ac0056027d42e63
+RMD160 (Apache-Filter-1.024.tar.gz) = 7e8b293f880fe052c00a30623c5db3ef9aee94ef
+Size (Apache-Filter-1.024.tar.gz) = 26566 bytes
 SHA1 (patch-aa) = f5fe220731856ca08f945f4d2ff2827fdcf90f75
