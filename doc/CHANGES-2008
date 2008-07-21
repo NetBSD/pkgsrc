@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1600 2008/07/21 10:02:59 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1601 2008/07/21 11:55:03 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2758,3 +2758,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-Catalyst-Plugin-Authentication-Store-DBIC to 0.11 [rhaen 2008-07-21]
 	Updated www/p5-Apache-ASP to 2.61 [rhaen 2008-07-21]
 	Updated www/p5-Apache-AuthCookieDBI to 2.1 [rhaen 2008-07-21]
+	Updated www/p5-Apache-Filter to 1.024 [rhaen 2008-07-21]
