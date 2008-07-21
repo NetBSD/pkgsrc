@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7406 2008/07/21 01:29:50 obache Exp $
+$NetBSD: TODO,v 1.7407 2008/07/21 02:57:12 dholland Exp $
 
 Suggested new packages
 ======================
@@ -819,7 +819,6 @@ Suggested package updates
 	o lapack-20070226
 	o latd-1.21
 	o latex2rtf-1.9.19
-	o lavaps-2.7
 	o lcab-1.0b12
 	o lcc-4.2
 	o ldapsdk-6.0.2
