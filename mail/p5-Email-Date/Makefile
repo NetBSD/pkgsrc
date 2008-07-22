@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.3 2008/07/20 16:09:34 heinz Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/22 12:34:18 rhaen Exp $
 
-DISTNAME=	Email-Date-1.03
+DISTNAME=	Email-Date-1.103
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Email/}
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://cpan.uwinnipeg.ca/dist/Email-Date
 COMMENT=	Find and Format Date Headers
 
@@ -16,6 +16,8 @@ DEPENDS+=	p5-Email-Simple>=1.9:../../mail/p5-Email-Simple
 DEPENDS+=	p5-Time-Piece>=1.08:../../time/p5-Time-Piece
 DEPENDS+=	p5-Time-Local>=1.07:../../time/p5-Time-Local
 DEPENDS+=	p5-TimeDate>=1.16:../../time/p5-TimeDate
+DEPENDS+=	p5-Email-Abstract>=2.10:../../mail/p5-Email-Abstract
+DEPENDS+=	p5-Email-Date-Format>=1.000:../../mail/p5-Email-Date-Format
 
 PERL5_PACKLIST=	auto/Email/Date/.packlist
 
