@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/07/22 08:29:06 he Exp $
+
+--- Makefile.in.orig	2008-05-28 08:12:29.000000000 +0200
++++ Makefile.in
+@@ -83,7 +83,7 @@ LINK_LIB	= $(LIBTOOL) --mode=link $(CC) 
+ .PHONY: install uninstall install-doc uninstall-doc 
+ .PHONY: install-h uninstall-h install-lib uninstall-lib 
+ 
+-all:		copy-headers lib linktest
++all:		copy-headers lib linktest manpages
+ 
+ linktest:	$(srcdir)/linktest.c $(LIBDNS_HEADERS) ldns/util.h ldns/config.h libldns.la
+ 		$(LIBTOOL) --mode=link $(CC) $(srcdir)/linktest.c $(CPPFLAGS) $(CFLAGS) -lldns -o linktest
+@@ -127,7 +127,9 @@ destclean:	uninstall
+ 
+ install-manpages:	manpages
+ 		${INSTALL} -d $(DESTDIR)$(mandir)/man3
+-		cp -Rp doc/man/man3/* $(DESTDIR)$(mandir)/man3/
++		for f in doc/man/man3/*; do \
++			${INSTALL} -c -m 444 $$f $(DESTDIR)$(mandir)/man3/; \
++		done
+ 
+ uninstall-manpages:
+ 		for i in `cat doc/ldns_manpages`; do \
