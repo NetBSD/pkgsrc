@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2008/07/22 21:25:00 tonio Exp $
+# $NetBSD: Makefile,v 1.27 2008/07/22 21:59:00 tonio Exp $
 #
 
 DISTNAME=	xmahjongg-3.7
+PKGNAME=	${DISTNAME}0
 CATEGORIES=	games x11
 MASTER_SITES=	http://www.lcdf.org/~eddietwo/xmahjongg/
 
