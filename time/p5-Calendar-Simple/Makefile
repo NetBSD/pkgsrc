@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:39 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/07/22 13:48:48 rhaen Exp $
 
-DISTNAME=	Calendar-Simple-1.17
+DISTNAME=	Calendar-Simple-1.20
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	time perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Calendar/}
 
-MAINTAINER=	tonnerre@NetBSD.org
+MAINTAINER=	rhaen@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Calendar-Simple/
 COMMENT=	Perl extension to create simple calendars
 
