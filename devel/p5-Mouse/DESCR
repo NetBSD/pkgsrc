@@ -1,0 +1,13 @@
+Mouse is Moose minus the antlers.
+
+(Moose is "A postmodern object system for Perl 5".)
+
+Moose is wonderful.
+
+Unfortunately, it's a little slow. Though significant progress has
+been made over the years, the compile time penalty is a non-starter
+for some applications.
+
+Mouse aims to alleviate this by providing a subset of Moose's
+functionality, faster. In particular, "has" in Moose is missing
+only a few expert-level features.
