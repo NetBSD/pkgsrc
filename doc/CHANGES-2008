@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1615 2008/07/22 13:26:25 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1616 2008/07/22 13:31:13 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2778,3 +2778,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/p5-Email-Date to 1.103 [rhaen 2008-07-22]
 	Updated mail/p5-Email-MIME-Modifier to 1.442 [rhaen 2008-07-22]
 	Updated mail/p5-Email-MessageID to 1.351 [rhaen 2008-07-22]
+	Updated mail/p5-Email-Send to 2.192 [rhaen 2008-07-22]
