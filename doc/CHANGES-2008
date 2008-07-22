@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1622 2008/07/22 21:26:06 tonio Exp $
+$NetBSD: CHANGES-2008,v 1.1623 2008/07/22 21:42:52 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2785,3 +2785,4 @@ Changes to the packages collection and infrastructure in 2008:
     Updated devel/p5-Graph to 0.84 [rhaen 2008-07-22]
     Updated www/p5-HTML-FillInForm to 2.00 [rhaen 2008-07-22]
 	Updated games/xmahjongg to 3.7 [tonio 2008-07-22]
+    Updated www/p5-HTML-Mason to 1.39 [rhaen 2008-07-22]
