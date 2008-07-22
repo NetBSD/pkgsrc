@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/07/22 12:28:30 rhaen Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/22 12:30:59 rhaen Exp $
 #
 
 DISTNAME=	Email-Date-Format-1.002
@@ -11,6 +11,8 @@ HOMEPAGE=	http://search.cpan.org/dist/Email-Date-Format/
 COMMENT=	Perl Module to produce RFC 2822 date strings
 
 DEPENDS+=	p5-Time-Local>=0.000:../../time/p5-Time-Local
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Email/Date/Format/.packlist
 
