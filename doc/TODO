@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7413 2008/07/22 15:45:43 reed Exp $
+$NetBSD: TODO,v 1.7414 2008/07/22 19:02:00 rhaen Exp $
 
 Suggested new packages
 ======================
@@ -1018,7 +1018,6 @@ Suggested package updates
 	o p5-Filter-1.33
 	o p5-Font-TTF-0.40
 	o p5-GMail-IMAPD-0.94
-	o p5-Graph-0.20105
 	o p5-HTML-Prototype-1.48
 	o p5-HTML-Prototype-Useful-0.05
 	o p5-HTML-Table-2.05
