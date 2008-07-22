@@ -1,0 +1,3 @@
+This module provides a simple means for generating an RFC 2822 compliant
+datetime string. (In case you care, they're not RFC 822 dates, because
+they use a four digit year, which is not allowed in RFC 822.)
