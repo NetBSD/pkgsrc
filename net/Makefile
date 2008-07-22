@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.717 2008/06/22 16:06:37 he Exp $
+# $NetBSD: Makefile,v 1.718 2008/07/22 08:41:46 he Exp $
 #
 
 COMMENT=	Networking tools
@@ -88,6 +88,7 @@ SUBDIR+=	dnstop
 SUBDIR+=	dnstracer
 SUBDIR+=	docsis
 SUBDIR+=	driftnet
+SUBDIR+=	drill
 SUBDIR+=	dtcp
 SUBDIR+=	dtcpclient
 SUBDIR+=	dynipclient
@@ -185,6 +186,7 @@ SUBDIR+=	lambdamoo
 SUBDIR+=	lambdamoo-core
 SUBDIR+=	lambdamoo-doc
 SUBDIR+=	latd
+SUBDIR+=	ldns
 SUBDIR+=	lft
 SUBDIR+=	lftp
 SUBDIR+=	libIDL
