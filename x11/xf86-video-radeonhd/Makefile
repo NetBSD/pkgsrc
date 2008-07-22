@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/05/24 21:45:19 tnn Exp $
+# $NetBSD: Makefile,v 1.8 2008/07/22 21:49:30 tnn Exp $
 #
 
 DISTNAME=	xf86-video-radeonhd-1.2.1
@@ -15,6 +15,9 @@ PKG_DESTDIR_SUPPORT=    user-destdir
 USE_LIBTOOL=	yes
 GNU_CONFIGURE=	yes
 USE_TOOLS+=     gmake pkg-config
+
+CONFIGURE_ENV+=	ac_cv_file___src_AtomBios_includes_atombios_h=yes
+CONFIGURE_ENV+=	ac_cv_file___src_AtomBios_includes_Decoder_h=yes
 
 .include "../../x11/modular-xorg-server/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
