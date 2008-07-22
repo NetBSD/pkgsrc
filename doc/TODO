@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7411 2008/07/22 08:03:19 rhaen Exp $
+$NetBSD: TODO,v 1.7412 2008/07/22 08:06:31 rhaen Exp $
 
 Suggested new packages
 ======================
@@ -1009,7 +1009,6 @@ Suggested package updates
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.007
 	o p5-DateTime-TimeZone-0.78
-	o p5-Error-0.17015
 	o p5-File-Remove-1.42
 	o p5-FileHandle-Unget-0.1622
 	o p5-Filter-1.33
