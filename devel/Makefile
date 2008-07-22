@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.950 2008/07/22 23:44:45 he Exp $
+# $NetBSD: Makefile,v 1.951 2008/07/22 23:52:57 he Exp $
 #
 
 COMMENT=	Development utilities
@@ -455,6 +455,7 @@ SUBDIR+=	p5-Contextual-Return
 SUBDIR+=	p5-Curses
 SUBDIR+=	p5-Curses-UI
 SUBDIR+=	p5-Curses-UI-POE
+SUBDIR+=	p5-Data-Alias
 SUBDIR+=	p5-Data-Buffer
 SUBDIR+=	p5-Data-Dump
 SUBDIR+=	p5-Data-Hierarchy
