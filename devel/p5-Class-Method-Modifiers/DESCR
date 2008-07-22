@@ -1,0 +1,14 @@
+Method modifiers are a powerful feature from the CLOS (Common Lisp
+Object System) world.
+
+In its most basic form, a method modifier is just a method that
+calls $self->SUPER::foo(@_). I for one have trouble remembering
+that exact invocation, so my classes seldom re-dispatch to their
+base classes. Very bad!
+
+Class::Method::Modifiers provides three modifiers: before, around,
+and after. before and after are run just before and after the method
+they modify, but can not really affect that original method. around
+is run in place of the original method, with a hook to easily call
+that original method. See the MODIFIERS section for more details
+on how the particular modifiers work.
