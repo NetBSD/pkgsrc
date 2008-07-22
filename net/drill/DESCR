@@ -1,0 +1,9 @@
+Drill is a tool ala dig from BIND. It was designed with DNSSEC in
+mind and should be a useful debugging/query tool for DNSSEC.
+
+A lot of DNS debugging is done with dig, but as dig is made with
+the same libraries as BIND8/9 (the most used DNS server out there),
+what are you actually debugging/testing? Drill has nothing in common
+with either NSD nor BIND. During the development process we are
+actually uncovering obscure bugs in NSD and BIND (and in drill
+itself).

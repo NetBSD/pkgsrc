@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/22 08:32:33 he Exp $
+bin/drill
+man/man1/drill.1
