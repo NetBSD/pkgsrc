@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.51 2008/05/27 15:06:25 kano Exp $ -->
+<!-- $NetBSD: build.xml,v 1.52 2008/07/22 10:39:36 agc Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -169,7 +169,7 @@ GTKDIR_DEFAULT= ${LOCALBASE}
   <sect1 id="build.builddirs">
     <title>Directories used during the build process</title>
 
-    <para>When building a package, a number of directories is used to store
+    <para>When building a package, various directories are used to store
     source files, temporary files, pkgsrc-internal files, and so on. These
     directories are explained here.</para>
 
@@ -210,6 +210,15 @@ GTKDIR_DEFAULT= ${LOCALBASE}
       <filename>Makefile</filename>.</para></listitem></varlistentry>
 
     </variablelist>
+
+    <para>The <varname>CREATE_WRKDIR_SYMLINK</varname> definition takes either
+    the value <emphasis>yes</emphasis> or <emphasis>no</emphasis> and defaults
+    to <emphasis>yes</emphasis>. It indicates whether a symbolic link to the
+    <varname>WRKDIR</varname> is to be created in the pksrc entry's directory.
+    Historically, the symbolic link was created by default, and this value has
+    now been restored to be the default. If users would like to have their
+    pkgsrc trees behave in a read-only manner, then the value of
+    <varname>CREATE_WRKDIR_SYMLINK</varname> shout be set to <emphasis>no</emphasis>.
   </sect1>
 
   <sect1 id="build.running">
