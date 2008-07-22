@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2008/07/17 08:57:58 rhaen Exp $
+$NetBSD: distinfo,v 1.8 2008/07/22 21:57:01 he Exp $
 
-SHA1 (Class-MethodMaker-2.11.tar.gz) = 66458d4b66016bf76062e144b36ff30f186fc58c
-RMD160 (Class-MethodMaker-2.11.tar.gz) = 49659935ef468659eb1b1f496a84c427b5c3c4a7
-Size (Class-MethodMaker-2.11.tar.gz) = 88785 bytes
+SHA1 (Class-MethodMaker-2.12.tar.gz) = 81433572fb746aa38a57c473a6795f7e469fbb6a
+RMD160 (Class-MethodMaker-2.12.tar.gz) = 93eb36f45df8e6871873245978ad0f9c80866f30
+Size (Class-MethodMaker-2.12.tar.gz) = 88865 bytes
