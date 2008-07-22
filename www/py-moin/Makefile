@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/05/07 10:02:44 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2008/07/22 20:17:24 tnn Exp $
 #
 
 DISTNAME=	moin-1.6.3
@@ -8,7 +8,7 @@ MASTER_SITES=	http://static.moinmo.in/files/
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://moinmo.in/
-COMMENT=	Python clone of WikiWiki
+COMMENT=	MoinMoin, a Python clone of WikiWiki
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
