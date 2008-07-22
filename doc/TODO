@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7414 2008/07/22 19:02:00 rhaen Exp $
+$NetBSD: TODO,v 1.7415 2008/07/22 21:26:06 tonio Exp $
 
 Suggested new packages
 ======================
@@ -1437,7 +1437,6 @@ Suggested package updates
 	o xli-2006.11.10
 	o xlog-1.7
 	o xm7-1020s
-	o xmahjongg-3.70
 	o xmbdfed-4.6
 	o xmcd-3.3.0
 	o xmlsec1-1.2.11
