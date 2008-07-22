@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7412 2008/07/22 08:06:31 rhaen Exp $
+$NetBSD: TODO,v 1.7413 2008/07/22 15:45:43 reed Exp $
 
 Suggested new packages
 ======================
@@ -340,6 +340,10 @@ Suggested new packages
 	p5-Net-Twitter [pkg/38486]
 	http://search.cpan.org/CPAN/authors/id/C/CT/CTHOM/Net-Twitter-1.10.tar.gz
 	Twitter support module for Perl.
+
+	filezilla client
+	http://filezilla-project.org
+	Featureful FTP, FTPS and SFTP client	
 
 Suggested package updates
 =========================
