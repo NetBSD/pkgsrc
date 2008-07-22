@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2008/07/17 09:10:50 tnn Exp $
+# $NetBSD: Makefile,v 1.57 2008/07/22 20:44:04 tnn Exp $
 
 PKGVER=		2.3.1
 DISTNAME=	openmotif-${PKGVER}
@@ -39,7 +39,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 CONFLICTS+=		lesstif-[0-9]*
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		flex gmake tbl
+USE_TOOLS+=		flex gmake tbl pkg-config
 GNU_CONFIGURE=		yes
 MAKE_JOBS_SAFE=		no # PR 37233
 
