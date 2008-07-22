@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2007/05/25 11:20:29 markd Exp $
+$NetBSD: distinfo,v 1.8 2008/07/22 19:04:15 rhaen Exp $
 
-SHA1 (HTML-FillInForm-1.06.tar.gz) = 1cc219adc54229715e00b9474d2e6e8a43c66e04
-RMD160 (HTML-FillInForm-1.06.tar.gz) = 25a1b4ba02d6251f30a4b3f3aa28706faf2536c1
-Size (HTML-FillInForm-1.06.tar.gz) = 12529 bytes
+SHA1 (HTML-FillInForm-2.00.tar.gz) = 9d107115e4f9e9c8e7aba53183e75744f2a8a6c4
+RMD160 (HTML-FillInForm-2.00.tar.gz) = 9645b1409d5b45c60a1c9e91f1207b425f52d534
+Size (HTML-FillInForm-2.00.tar.gz) = 15250 bytes
