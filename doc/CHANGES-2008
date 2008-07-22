@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1609 2008/07/22 08:02:42 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1610 2008/07/22 08:06:01 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2770,3 +2770,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-YAML-Syck to 1.05 [rhaen 2008-07-21]
 	Added sysutils/diskscrub version 2.0 [agc 2008-07-21]
 	Updated devel/p5-Devel-StackTrace to 1.1902 [rhaen 2008-07-22]
+	Updated devel/p5-Error to 0.17015 [rhaen 2008-07-22]
