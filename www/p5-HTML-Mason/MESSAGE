@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2007/10/01 21:29:32 heinz Exp $
+$NetBSD: MESSAGE,v 1.2 2008/07/22 21:41:55 rhaen Exp $
 
 In order to use HTML::Mason with mod_perl and Apache you have to create
 the "data directory" (aka data_dir), which is used by Mason for various
@@ -15,4 +15,11 @@ to add the following line to httpd.conf:
 
 For more details, have a look at the "Mason Administrator's Manual" at
 http://www.masonhq.com/.
+
+
+It's also possible to use HTML::Mason with lighttpd and FastCGI. There
+is a recipe for it in the Trac system of lighttpd. For more details,
+have a look at the recipe at
+
+http://trac.lighttpd.net/trac/wiki/MasonRecipe
 ===========================================================================
