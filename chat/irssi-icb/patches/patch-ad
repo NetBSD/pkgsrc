@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.1 2008/07/22 09:56:17 hubertf Exp $
+
+--- README.orig	2008-07-22 11:42:10.000000000 +0200
++++ README	2008-07-22 11:46:02.000000000 +0200
+@@ -14,6 +14,10 @@
+ 
+  icbnet = { type = "ICB"; };
+ 
+-and then:
++then run once:
+ 
+- /SERVER ADD -auto -icbnet icbnet default.icb.net
++ /SERVER ADD -auto -icbnet icbnet default.icb.net 7326
++
++plus put into your ~/.irssi/startup:
++
++ load icb
