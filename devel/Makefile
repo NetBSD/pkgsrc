@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.947 2008/07/18 12:06:38 rhaen Exp $
+# $NetBSD: Makefile,v 1.948 2008/07/22 22:58:16 he Exp $
 #
 
 COMMENT=	Development utilities
@@ -685,6 +685,7 @@ SUBDIR+=	p5-capitalization
 SUBDIR+=	p5-enum
 SUBDIR+=	p5-gettext
 SUBDIR+=	p5-glib2
+SUBDIR+=	p5-namespace-clean
 SUBDIR+=	p5-parent
 SUBDIR+=	p5-perl-headers
 SUBDIR+=	p5-prefork
