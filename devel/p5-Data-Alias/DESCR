@@ -1,0 +1,6 @@
+Data::Alias provides a comprehensive set of aliasing operations.
+
+Data::Alias is a module that allows you to apply "aliasing semantics"
+to a section of code, causing aliases to be made whereever Perl
+would normally make copies instead. You can use this to improve
+efficiency and readability, when compared to using references.
