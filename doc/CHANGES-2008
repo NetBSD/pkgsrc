@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1624 2008/07/22 21:59:40 tonio Exp $
+$NetBSD: CHANGES-2008,v 1.1625 2008/07/23 00:02:25 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2782,7 +2782,15 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/p5-Email-Simple-Creator to 1.424 [rhaen 2008-07-22]
 	Updated textproc/p5-Encode to 2.26 [rhaen 2008-07-22]
 	Updated time/p5-Calendar-Simple to 1.20 [rhaen 2008-07-22]
-    Updated devel/p5-Graph to 0.84 [rhaen 2008-07-22]
-    Updated www/p5-HTML-FillInForm to 2.00 [rhaen 2008-07-22]
+	Updated devel/p5-Graph to 0.84 [rhaen 2008-07-22]
+	Updated www/p5-HTML-FillInForm to 2.00 [rhaen 2008-07-22]
+	Updated www/p5-HTML-Mason to 1.39 [rhaen 2008-07-22]
 	Updated games/xmahjongg to 3.70 [tonio 2008-07-22]
-    Updated www/p5-HTML-Mason to 1.39 [rhaen 2008-07-22]
+	Updated devel/p5-Class-MethodMaker to 2.12 [he 2008-07-22]
+	Updated www/p5-Apache-SSI to 2.19 [he 2008-07-23]
+	Updated databases/p5-DB_File to 1.817 [he 2008-07-23]
+	Added devel/p5-namespace-clean to 0.08 [he 2008-07-23]
+	Added devel/p5-Class-Method-Modifiers to 1.01 [he 2008-07-23]
+	Added devel/p5-Mouse version 0.05 [he 2008-07-23]
+	Added devel/p5-Data-Alias version 1.07 [he 2008-07-23]
+	Updated devel/p5-Data-Visitor to 0.18 [he 2008-07-23]
