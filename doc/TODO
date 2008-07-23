@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7415 2008/07/22 21:26:06 tonio Exp $
+$NetBSD: TODO,v 1.7416 2008/07/23 05:05:59 bjs Exp $
 
 Suggested new packages
 ======================
@@ -1188,7 +1188,6 @@ Suggested package updates
 	o radiance-3.7.2
 	o raine-0.50.14
 	o randread-0.2
-	o randrproto-1.2.2
 	o rapidsvn-0.9.6
 	o raptor-1.4.18
 	o rat-4.2.25
