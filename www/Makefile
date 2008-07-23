@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.561 2008/07/15 09:43:20 abs Exp $
+# $NetBSD: Makefile,v 1.562 2008/07/23 10:27:12 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -380,6 +380,7 @@ SUBDIR+=	py-HTMLgen
 SUBDIR+=	py-clearsilver
 SUBDIR+=	py-curl
 SUBDIR+=	py-django
+SUBDIR+=	py-django-devel
 SUBDIR+=	py-flup
 SUBDIR+=	py-jonpy
 SUBDIR+=	py-moin
