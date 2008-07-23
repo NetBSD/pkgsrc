@@ -1,4 +1,4 @@
-/*	$NetBSD: pkcs7.c,v 1.1.2.5 2008/07/21 22:15:09 joerg Exp $	*/
+/*	$NetBSD: pkcs7.c,v 1.1.2.6 2008/07/23 18:59:18 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -7,7 +7,7 @@
 #include <sys/cdefs.h>
 #endif
 
-__RCSID("$NetBSD: pkcs7.c,v 1.1.2.5 2008/07/21 22:15:09 joerg Exp $");
+__RCSID("$NetBSD: pkcs7.c,v 1.1.2.6 2008/07/23 18:59:18 joerg Exp $");
 
 /*-
  * Copyright (c) 2004, 2008 The NetBSD Foundation, Inc.
@@ -55,6 +55,8 @@ __RCSID("$NetBSD: pkcs7.c,v 1.1.2.5 2008/07/21 22:15:09 joerg Exp $");
 #ifndef __UNCONST
 #define __UNCONST(a)	((void *)(unsigned long)(const void *)(a))
 #endif
+
+static const int pkg_key_usage = XKU_CODE_SIGN | XKU_SMIME;
 
 static int
 check_ca(X509 *cert)
@@ -183,8 +185,9 @@ easy_pkcs7_verify(const char *content, size_t len,
 			goto cleanup;
 		}
 		if (is_pkg) {
-			if (sk_X509_value(signers, i)->ex_xkusage != XKU_CODE_SIGN) {
-				warnx("Certificate must have CODE SIGNING property");
+			if (sk_X509_value(signers, i)->ex_xkusage != pkg_key_usage) {
+				warnx("Certificate must have CODE SIGNING "
+				    "and EMAIL PROTECTION property");
 				goto cleanup;
 			}
 		} else {
@@ -267,8 +270,9 @@ easy_pkcs7_sign(const char *content, size_t len,
 		goto cleanup;
 	}
 
-	if (certificate->ex_xkusage != XKU_CODE_SIGN) {
-		warnx("Certificate must have CODE SIGNING property");
+	if (certificate->ex_xkusage != pkg_key_usage) {
+		warnx("Certificate must have CODE SIGNING "
+		    "and EMAIL PROTECTION property");
 		goto cleanup;
 	}
 
