@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1627 2008/07/23 10:26:32 joerg Exp $
+$NetBSD: CHANGES-2008,v 1.1628 2008/07/23 15:08:34 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2796,3 +2796,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Data-Visitor to 0.18 [he 2008-07-23]
 	Updated x11/randrproto to 1.2.2 [bjs 2008-07-23]
 	Added www/py-django-devel version 1.0alpha [joerg 2008-07-23]
+	Updated mail/p5-Mail-Audit to 2.223 [rhaen 2008-07-23]
