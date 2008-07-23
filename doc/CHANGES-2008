@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1641 2008/07/23 23:18:49 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1642 2008/07/23 23:46:54 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2810,3 +2810,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/p5-SHA to 2.01 [rhaen 2008-07-24]
 	Updated databases/p5-SQL-Statement to 1.15 [rhaen 2008-07-24]
 	Updated devel/p5-Module-Install to 0.76nb1 [seb 2008-07-23]
+	Updated net/dnsmasq to 2.45 [tonnerre 2008-07-23]
