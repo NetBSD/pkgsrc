@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:37 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/07/23 15:36:01 rhaen Exp $
 #
 
-DISTNAME=		Locale-Maketext-1.10
+DISTNAME=		Locale-Maketext-1.13
 PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5lmt
 CATEGORIES=		misc perl5
