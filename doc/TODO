@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7416 2008/07/23 05:05:59 bjs Exp $
+$NetBSD: TODO,v 1.7417 2008/07/23 12:57:30 taca Exp $
 
 Suggested new packages
 ======================
@@ -994,11 +994,9 @@ Suggested package updates
 	o openafs-1.4.7
 	o opencobol-1.0
 	o openh323-1.19.1
-	o openldap-2.4.10
-	o openldap-client-2.4.10
-	o openoffice-2.4.1
 	o openmortal-0.7.1
 	o openmotif-2.3.0 [pkg/38038]
+	o openssh-5.1.1
 	o openttd-0.6.1
 	o opera-9.51
 	o orca-2.22.3
@@ -1221,7 +1219,7 @@ Suggested package updates
 	o rudiments-0.30
 	o rxvt-unicode-9.05 [pkg/38988]
 	o sablecc-3.2
-	o samba-3.2.0
+	o samba-3.0.31
 	o samba-3.2.0
 	o sarg-2.2.5
 	o scamper-20070201
