@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.install,v 1.9 2008/05/26 02:13:18 joerg Exp $
+# $NetBSD: Makefile.install,v 1.10 2008/07/23 18:00:55 seb Exp $
 
 .include "dirs.mk"
 
@@ -68,11 +68,13 @@ do-install:
 	${INSTALL_DATA_DIR} ${RT_LIB_DIR}
 	cd ${WRKSRC}/lib && ${FIND} . -type f ! -name '*.orig' 2>/dev/null | pax -rw ${RT_LIB_DIR}
 	@${ECHO} "=> Binaries"
+	${INSTALL_SCRIPT_DIR} ${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKSRC}/bin/rt-mailgate ${WRKSRC}/bin/rt-crontool		\
 		${WRKSRC}/bin/mason_handler.fcgi ${WRKSRC}/bin/mason_handler.scgi	\
 		${WRKSRC}/bin/standalone_httpd ${WRKSRC}/bin/mason_handler.svc		\
 		${WRKSRC}/bin/rt ${WRKSRC}/bin/webmux.pl 				\
 		${PREFIX}/bin
+	${INSTALL_SCRIPT_DIR} ${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/sbin/rt-dump-database		\
 		${WRKSRC}/sbin/rt-setup-database			\
 		${WRKSRC}/sbin/rt-test-dependencies ${PREFIX}/sbin
