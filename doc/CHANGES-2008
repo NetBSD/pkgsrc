@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1625 2008/07/23 00:02:25 he Exp $
+$NetBSD: CHANGES-2008,v 1.1626 2008/07/23 05:05:36 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2794,3 +2794,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Mouse version 0.05 [he 2008-07-23]
 	Added devel/p5-Data-Alias version 1.07 [he 2008-07-23]
 	Updated devel/p5-Data-Visitor to 0.18 [he 2008-07-23]
+	Updated x11/randrproto to 1.2.2 [bjs 2008-07-23]
