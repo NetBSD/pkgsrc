@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1639 2008/07/23 22:53:37 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1640 2008/07/23 22:57:57 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2808,3 +2808,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Regexp-Assemble to 0.34 [rhaen 2008-07-24]
 	Updated devel/p5-Rose-Object to 0.85 [rhaen 2008-07-24]
 	Updated security/p5-SHA to 2.01 [rhaen 2008-07-24]
+	Updated databases/p5-SQL-Statement to 1.15 [rhaen 2008-07-24]
