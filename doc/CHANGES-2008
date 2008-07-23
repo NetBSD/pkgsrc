@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1632 2008/07/23 16:09:32 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1633 2008/07/23 16:17:51 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2801,3 +2801,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Log-Dispatch-Config to 1.02 [rhaen 2008-07-23]
 	Updated misc/p5-Locale-Maketext to 1.13 [rhaen 2008-07-23]
 	Updated devel/p5-Spoon to 0.24 [rhaen 2008-07-23]
+	Updated www/p5-Kwiki to 0.39 [rhaen 2008-07-23]
