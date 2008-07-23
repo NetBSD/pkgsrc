@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.32 2008/04/30 10:20:20 cube Exp $
+# $NetBSD: Makefile,v 1.33 2008/07/23 18:00:55 seb Exp $
 
 DISTNAME=		rt-3.6.6
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
 
@@ -94,6 +94,11 @@ _RT_DB_TYPE=	Oracle
 DEPENDS+=	p5-DBD-SQLite>=1.00:../../databases/p5-DBD-SQLite
 _RT_DB_TYPE=	SQLite
 .endif
+
+# "Development" dependencies:
+# XML::Simple is required by the installed script
+# PREFIX/sbin/rt-dump-database
+DEPENDS+=	p5-XML-Simple-[0-9]*:../../textproc/p5-XML-Simple
 
 USE_PKGLOCALEDIR=	yes
 GNU_CONFIGURE=		yes
