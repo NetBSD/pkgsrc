@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7418 2008/07/23 21:12:35 tonio Exp $
+$NetBSD: TODO,v 1.7419 2008/07/23 23:53:50 tonnerre Exp $
 
 Suggested new packages
 ======================
@@ -569,8 +569,6 @@ Suggested package updates
 	o dircproxy-devel-1.2.0.2
 	o djvulibre-lib-4.1.2
 	o djvulibre-tools-4.1.2
-	o dnsmasq-2.41 [pkg/38186]
-	o dnsmasq-2.45
 	o dnstop-20070307
 	o dnstracer-1.9
 	o drraw-2.2a5
