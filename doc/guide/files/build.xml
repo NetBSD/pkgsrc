@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.53 2008/07/22 13:14:21 wiz Exp $ -->
+<!-- $NetBSD: build.xml,v 1.54 2008/07/23 15:33:44 kano Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -214,7 +214,7 @@ GTKDIR_DEFAULT= ${LOCALBASE}
     <para>The <varname>CREATE_WRKDIR_SYMLINK</varname> definition takes either
     the value <emphasis>yes</emphasis> or <emphasis>no</emphasis> and defaults
     to <emphasis>yes</emphasis>. It indicates whether a symbolic link to the
-    <varname>WRKDIR</varname> is to be created in the pksrc entry's directory.
+    <varname>WRKDIR</varname> is to be created in the pkgsrc entry's directory.
     If users would like to have their pkgsrc trees behave in a
     read-only manner, then the value of
     <varname>CREATE_WRKDIR_SYMLINK</varname> should be set to
