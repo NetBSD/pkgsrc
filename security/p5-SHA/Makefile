@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:44 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2008/07/23 22:52:39 rhaen Exp $
 #
 
-DISTNAME=		SHA-1.2
-PKGNAME=		p5-SHA-1.2
+DISTNAME=		SHA-2.01
+PKGNAME=		p5-${DISTNAME}
 SVR4_PKGNAME=		p5sha
-PKGREVISION=		2
 CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=SHA/}
 
