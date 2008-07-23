@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7417 2008/07/23 12:57:30 taca Exp $
+$NetBSD: TODO,v 1.7418 2008/07/23 21:12:35 tonio Exp $
 
 Suggested new packages
 ======================
@@ -485,7 +485,6 @@ Suggested package updates
 	o bind-9.4.2
 	o binutils-2.18
 	o bioperl-1.5.0
-	o bitlbee-1.2.1
 	o bittorrent-5.0.5
 	o blender-2.46
 	o blur6ex-0.3.462
