@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1646 2008/07/24 01:35:41 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1647 2008/07/24 01:38:33 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2815,3 +2815,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated comms/asterisk to 1.2.30 [tonnerre 2008-07-24]
 	Updated x11/libX11 to 1.1.4nb2 [bjs 2008-07-24]
 	Updated devel/libidn to 1.9 [bjs 2008-07-24]
+	Updated www/links to 2.1.0.37 [bjs 2008-07-24]
