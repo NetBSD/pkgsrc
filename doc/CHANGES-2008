@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1652 2008/07/24 09:29:47 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1653 2008/07/24 09:34:16 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2821,3 +2821,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/dovecot to 1.1.2 [ghen 2008-07-24]
 	Updated www/py-moin to 1.7.1 [joerg 2008-07-24]
 	Updated databases/p5-DBI to 1.607 [rhaen 2008-07-24]
+	Updated www/p5-FCGI-ProcManager to 0.18 [rhaen 2008-07-24]
