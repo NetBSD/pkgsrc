@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1664 2008/07/24 23:24:38 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1665 2008/07/24 23:50:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2842,3 +2842,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/scmgit to 1.5.6.4 [bjs 2008-07-24]
 	Updated devel/scmgit-base to 1.5.6.4 [bjs 2008-07-24]
 	Updated devel/scmgit-docs to 1.5.6.4 [bjs 2008-07-24]
+	Updated audio/libsndfile to 1.0.17nb4 [obache 2008-07-24]
