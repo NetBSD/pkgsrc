@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7426 2008/07/24 12:59:57 markd Exp $
+$NetBSD: TODO,v 1.7427 2008/07/24 14:04:22 obache Exp $
 
 Suggested new packages
 ======================
@@ -417,7 +417,6 @@ Suggested package updates
 	o aliados-0.2.0
 	o amanda-2.6.0p1
 	o amavis-perl-0.3.12 [called just amavis]
-	o amavisd-new-2.6.1
 	o amaya-9.54
 	o angband-3.0.9
 	o anjuta-2.4.2
