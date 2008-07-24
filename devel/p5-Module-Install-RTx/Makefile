@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:24 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/07/24 02:03:39 seb Exp $
 
-DISTNAME=	Module-Install-RTx-0.11
+DISTNAME=	Module-Install-RTx-0.23
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5mir
 CATEGORIES=	devel perl5
