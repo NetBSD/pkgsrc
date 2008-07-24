@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1658 2008/07/24 12:59:57 markd Exp $
+$NetBSD: CHANGES-2008,v 1.1659 2008/07/24 13:49:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2834,3 +2834,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/qt4-sqlite3 to 4.4.0 [markd 2008-07-24]
 	Updated x11/qt4-tiff to 4.4.0 [markd 2008-07-24]
 	Updated x11/qt4-qdbus to 4.4.0 [markd 2008-07-24]
+	Updated security/amavisd-new to 2.6.1 [obache 2008-07-24]
