@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1655 2008/07/24 10:27:53 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1656 2008/07/24 10:32:42 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2824,3 +2824,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-FCGI-ProcManager to 0.18 [rhaen 2008-07-24]
 	Updated fonts/p5-Font-TTF to 0.45 [rhaen 2008-07-24]
 	Updated mail/p5-GMail-IMAPD to 0.94 [rhaen 2008-07-24]
+	Updated www/p5-HTML-Prototype to 1.48 [rhaen 2008-07-24]
