@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7425 2008/07/24 10:40:59 rhaen Exp $
+$NetBSD: TODO,v 1.7426 2008/07/24 12:59:57 markd Exp $
 
 Suggested new packages
 ======================
@@ -1171,7 +1171,6 @@ Suggested package updates
 	o qt2-docs-2.3.2
 	o qt2-examples-2.3.2
 	o qt2-libs-2.3.2
-	o qt4-4.4.0
 	o qvplay-0.95
 	o qwspritefield-1.7
 	o radiance-3.7.2
