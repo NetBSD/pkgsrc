@@ -1,0 +1,36 @@
+$NetBSD: patch-aa,v 1.1 2008/07/24 17:30:14 bjs Exp $
+
+"Apparently pulling in Xmd.h here breaks qt, since they both define an
+INT32 type (and incompatible ones even, since Xmd's is unsigned long on
+ILP32." (from GIT)
+
+--- XI.h.orig	2008-03-05 22:05:38.000000000 -0500
++++ XI.h
+@@ -52,8 +52,6 @@ SOFTWARE.
+ #ifndef _XI_H_
+ #define _XI_H_
+ 
+-#include <X11/Xmd.h> /* CARD32 */
+-
+ #define sz_xGetExtensionVersionReq		8
+ #define sz_xGetExtensionVersionReply		32
+ #define sz_xListInputDevicesReq			4
+@@ -263,12 +261,16 @@ SOFTWARE.
+ #define XI_DeviceBusy	3
+ #define XI_BadClass	4
+ 
+-/* Make XEventClass be a CARD32 for 64 bit servers.  Don't affect client
++/*
++ * Make XEventClass be a CARD32 for 64 bit servers.  Don't affect client
+  * definition of XEventClass since that would be a library interface change.
+  * See the top of X.h for more _XSERVER64 magic.
++ *
++ * But, don't actually use the CARD32 type.  We can't get it defined here
++ * without polluting the namespace.
+  */
+ #ifdef _XSERVER64
+-typedef	CARD32		XEventClass;
++typedef unsigned int	XEventClass;
+ #else
+ typedef	unsigned long	XEventClass;
+ #endif
