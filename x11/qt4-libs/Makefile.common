@@ -1,10 +1,11 @@
-# $NetBSD: Makefile.common,v 1.9 2008/06/12 12:50:19 abs Exp $
+# $NetBSD: Makefile.common,v 1.10 2008/07/24 12:55:20 markd Exp $
 # used by x11/qt4-libs/Makefile
 
 DISTNAME=	qt-x11-opensource-src-${QTVERSION}
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.trolltech.com/qt/source/ \
 		ftp://ftp.bero.org/pub/qt/source/
+EXTRACT_SUFX=	.tar.bz2
 
 .include "../../x11/qt4/Makefile.common"
 
@@ -27,6 +28,9 @@ CONFIGURE_ARGS+=	-system-libpng
 CONFIGURE_ARGS+=	-system-zlib
 CONFIGURE_ARGS+=	-qt-gif	# qt4 does not write compressed GIFs
 CONFIGURE_ARGS+=	${CFLAGS:M-I*} ${LDFLAGS:M-L*} ${LDFLAGS:M-Wl*:S/-Wl,//}
+# current WebKit fails for missing pthread_getattr_np() in
+# src/3rdparty/webkit/JavaScriptCore/kjs/collector.cpp
+#CONFIGURE_ARGS+=	-no-webkit
 CONFIGURE_ARGS.SunOS+=	-no-xrender
 OPSYSVARS+=		CONFIGURE_ARGS
 CONFIGURE_ARGS+=	< ${FILESDIR}/license-acceptance
