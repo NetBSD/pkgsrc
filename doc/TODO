@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7421 2008/07/24 01:39:15 bjs Exp $
+$NetBSD: TODO,v 1.7422 2008/07/24 10:04:05 rhaen Exp $
 
 Suggested new packages
 ======================
@@ -1009,7 +1009,6 @@ Suggested package updates
 	o p5-File-Remove-1.42
 	o p5-FileHandle-Unget-0.1622
 	o p5-Filter-1.33
-	o p5-Font-TTF-0.40
 	o p5-GMail-IMAPD-0.94
 	o p5-HTML-Prototype-1.48
 	o p5-HTML-Prototype-Useful-0.05
