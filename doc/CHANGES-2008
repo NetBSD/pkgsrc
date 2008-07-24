@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1657 2008/07/24 10:40:21 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.1658 2008/07/24 12:59:57 markd Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2826,3 +2826,11 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/p5-GMail-IMAPD to 0.94 [rhaen 2008-07-24]
 	Updated www/p5-HTML-Prototype to 1.48 [rhaen 2008-07-24]
 	Updated www/p5-HTML-Prototype-Useful to 0.05 [rhaen 2008-07-24]
+	Updated x11/qt4 to 4.4.0 [markd 2008-07-24]
+	Updated x11/qt4-libs to 4.4.0 [markd 2008-07-24]
+	Updated x11/qt4-tools to 4.4.0 [markd 2008-07-24]
+	Updated x11/qt4-docs to 4.4.0 [markd 2008-07-24]
+	Updated x11/qt4-pgsql to 4.4.0 [markd 2008-07-24]
+	Updated x11/qt4-sqlite3 to 4.4.0 [markd 2008-07-24]
+	Updated x11/qt4-tiff to 4.4.0 [markd 2008-07-24]
+	Updated x11/qt4-qdbus to 4.4.0 [markd 2008-07-24]
