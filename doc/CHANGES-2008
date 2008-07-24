@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1648 2008/07/24 01:38:54 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1649 2008/07/24 02:04:23 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2817,3 +2817,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libidn to 1.9 [bjs 2008-07-24]
 	Updated www/links to 2.1.0.37 [bjs 2008-07-24]
 	Updated www/links-gui to 2.1.0.37 [bjs 2008-07-24]
+	Updated devel/p5-Module-Install-RTx to 0.23 [seb 2008-07-24]
