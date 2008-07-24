@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1662 2008/07/24 17:30:39 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1663 2008/07/24 17:38:28 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2838,3 +2838,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Module-Install-Substitute to 0.03 [seb 2008-07-24]
 	Updated devel/byacc to 20050813nb1 [tonnerre 2008-07-24]
 	Updated x11/inputproto to 1.4.3nb1 [bjs 2008-07-24]
+	Updated net/py-boto to 1.3a [bjs 2008-07-24]
