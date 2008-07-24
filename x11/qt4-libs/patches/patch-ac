@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1.1.1 2006/02/20 12:08:15 adam Exp $
+$NetBSD: patch-ac,v 1.2 2008/07/24 12:55:20 markd Exp $
 
---- tools/designer/src/designer/designer.pro.orig	2006-01-30 15:07:57.000000000 +0100
+--- tools/designer/src/designer/designer.pro.orig	2008-04-28 15:11:20.000000000 +0200
 +++ tools/designer/src/designer/designer.pro
-@@ -14,7 +14,7 @@ INCLUDEPATH += \
+@@ -13,7 +13,7 @@ INCLUDEPATH += \
      ../lib/uilib \
      extra
  

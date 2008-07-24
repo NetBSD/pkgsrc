@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.6 2007/10/13 12:02:14 adam Exp $
+$NetBSD: patch-aa,v 1.7 2008/07/24 12:55:20 markd Exp $
 
---- qmake/generators/unix/unixmake2.cpp.orig	2007-10-01 15:06:33.000000000 +0200
+--- qmake/generators/unix/unixmake2.cpp.orig	2008-04-28 15:11:14.000000000 +0200
 +++ qmake/generators/unix/unixmake2.cpp
-@@ -227,6 +227,8 @@ UnixMakefileGenerator::writeMakeParts(QT
+@@ -234,6 +234,8 @@ UnixMakefileGenerator::writeMakeParts(QT
          if(!project->isEmpty("QMAKE_BUNDLE")) {
              t << "TARGETD       = " << escapeFilePath(var("TARGET_x.y")) << endl;
              t << "TARGET0       = " << escapeFilePath(var("TARGET_")) << endl;
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.6 2007/10/13 12:02:14 adam Exp $
          } else if(project->isEmpty("QMAKE_HPUX_SHLIB")) {
              t << "TARGETD       = " << escapeFilePath(var("TARGET_x.y.z")) << endl;
              t << "TARGET0       = " << escapeFilePath(var("TARGET_")) << endl;
-@@ -977,8 +979,12 @@ void UnixMakefileGenerator::init2()
+@@ -984,8 +986,12 @@ void UnixMakefileGenerator::init2()
      } else if (project->isActiveConfig("staticlib")) {
          project->values("TARGET").first().prepend("lib");
          project->values("TARGET").first() += ".a";
@@ -25,12 +25,12 @@ $NetBSD: patch-aa,v 1.6 2007/10/13 12:02:14 adam Exp $
      } else {
          project->values("TARGETA").append(project->first("DESTDIR") + "lib" + project->first("TARGET") + ".a");
          if(project->isActiveConfig("compile_libtool"))
-@@ -1413,7 +1419,7 @@ UnixMakefileGenerator::writePkgConfigFil
-     else
-         libs << "QMAKE_LIBS"; //obvious one
-     libs << "QMAKE_LFLAGS_THREAD"; //not sure about this one, but what about things like -pthread?
--    t << "Libs: -L${libdir} -l" << lname.left(lname.length()-Option::libtool_ext.length()) << " ";
-+    t << "Libs: -Wl,-R${libdir} -L${libdir} -l" << lname.left(lname.length()-Option::libtool_ext.length()) << " ";
-     for(QStringList::ConstIterator it = libs.begin(); it != libs.end(); ++it)
-         t << project->values((*it)).join(" ") << " ";
-     t << endl;
+@@ -1436,7 +1442,7 @@ UnixMakefileGenerator::writePkgConfigFil
+             bundle = bundle.left(suffix);
+         pkgConfiglibName = "-framework " + bundle + " ";
+     } else {
+-        pkgConfiglibDir = "-L${libdir}";
++        pkgConfiglibDir = "-Wl,-R${libdir} -L${libdir}";
+         pkgConfiglibName = "-l" + lname.left(lname.length()-Option::libtool_ext.length());
+     }
+     t << pkgConfiglibDir << " " << pkgConfiglibName << " ";

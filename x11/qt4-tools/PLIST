@@ -1,11 +1,17 @@
-@comment $NetBSD: PLIST,v 1.11 2008/01/05 22:15:24 wiz Exp $
-lib/pkgconfig/QtTest.pc
+@comment $NetBSD: PLIST,v 1.12 2008/07/24 12:55:21 markd Exp $
+lib/pkgconfig/QtAssistantClient.pc
+lib/pkgconfig/QtCLucene.pc
+lib/pkgconfig/QtDesigner.pc
+lib/pkgconfig/QtDesignerComponents.pc
+lib/pkgconfig/QtHelp.pc
 lib/pkgconfig/QtUiTools.pc
 qt4/bin/assistant
+qt4/bin/assistant_adp
 qt4/bin/designer
 qt4/bin/linguist
 qt4/bin/lrelease
 qt4/bin/lupdate
+qt4/bin/pixeltool
 qt4/bin/qmake
 qt4/bin/qt3to4
 qt4/bin/qtconfig
@@ -13,6 +19,15 @@ qt4/include/QtAssistant/QAssistantClient
 qt4/include/QtAssistant/QtAssistant
 qt4/include/QtAssistant/qassistantclient.h
 qt4/include/QtAssistant/qassistantclient_global.h
+qt4/include/Qt/QtHelp
+qt4/include/Qt/qhelp_global.h
+qt4/include/Qt/qhelpcontentwidget.h
+qt4/include/Qt/qhelpengine.h
+qt4/include/Qt/qhelpenginecore.h
+qt4/include/Qt/qhelpindexwidget.h
+qt4/include/Qt/qhelpsearchengine.h
+qt4/include/Qt/qhelpsearchquerywidget.h
+qt4/include/Qt/qhelpsearchresultwidget.h
 qt4/include/QtDesigner/QAbstractExtensionFactory
 qt4/include/QtDesigner/QAbstractExtensionManager
 qt4/include/QtDesigner/QAbstractFormBuilder
@@ -92,42 +107,34 @@ qt4/include/QtDesigner/qextensionmanager.h
 qt4/include/QtDesigner/sdk_global.h
 qt4/include/QtDesigner/taskmenu.h
 qt4/include/QtDesigner/uilib_global.h
-qt4/include/QtTest/QEventSizeOfChecker
-qt4/include/QtTest/QSignalSpy
-qt4/include/QtTest/QSpontaneKeyEvent
-qt4/include/QtTest/QTest
-qt4/include/QtTest/QTestAccessibility
-qt4/include/QtTest/QTestAccessibilityEvent
-qt4/include/QtTest/QTestData
-qt4/include/QtTest/QTestDelayEvent
-qt4/include/QtTest/QTestEvent
-qt4/include/QtTest/QTestEventList
-qt4/include/QtTest/QTestEventLoop
-qt4/include/QtTest/QTestKeyClicksEvent
-qt4/include/QtTest/QTestKeyEvent
-qt4/include/QtTest/QTestMouseEvent
-qt4/include/QtTest/QtTest
-qt4/include/QtTest/qsignalspy.h
-qt4/include/QtTest/qtest.h
-qt4/include/QtTest/qtest_global.h
-qt4/include/QtTest/qtest_gui.h
-qt4/include/QtTest/qtestaccessible.h
-qt4/include/QtTest/qtestassert.h
-qt4/include/QtTest/qtestcase.h
-qt4/include/QtTest/qtestdata.h
-qt4/include/QtTest/qtestevent.h
-qt4/include/QtTest/qtesteventloop.h
-qt4/include/QtTest/qtestkeyboard.h
-qt4/include/QtTest/qtestmouse.h
-qt4/include/QtTest/qtestspontaneevent.h
-qt4/include/QtTest/qtestsystem.h
+qt4/include/QtHelp/QHelpContentItem
+qt4/include/QtHelp/QHelpContentModel
+qt4/include/QtHelp/QHelpContentWidget
+qt4/include/QtHelp/QHelpEngine
+qt4/include/QtHelp/QHelpEngineCore
+qt4/include/QtHelp/QHelpIndexModel
+qt4/include/QtHelp/QHelpIndexWidget
+qt4/include/QtHelp/QHelpSearchEngine
+qt4/include/QtHelp/QHelpSearchQuery
+qt4/include/QtHelp/QHelpSearchQueryWidget
+qt4/include/QtHelp/QHelpSearchResultWidget
+qt4/include/QtHelp/QtHelp
+qt4/include/QtHelp/qhelp_global.h
+qt4/include/QtHelp/qhelpcontentwidget.h
+qt4/include/QtHelp/qhelpengine.h
+qt4/include/QtHelp/qhelpenginecore.h
+qt4/include/QtHelp/qhelpindexwidget.h
+qt4/include/QtHelp/qhelpsearchengine.h
+qt4/include/QtHelp/qhelpsearchquerywidget.h
+qt4/include/QtHelp/qhelpsearchresultwidget.h
 qt4/include/QtUiTools/QUiLoader
 qt4/include/QtUiTools/QtUiTools
 qt4/include/QtUiTools/quiloader.h
 qt4/lib/libQtAssistantClient.la
+qt4/lib/libQtCLucene.la
 qt4/lib/libQtDesigner.la
 qt4/lib/libQtDesignerComponents.la
-qt4/lib/libQtTest.la
+qt4/lib/libQtHelp.la
 qt4/lib/libQtUiTools.la
 qt4/mkspecs/aix-g++-64/qmake.conf
 qt4/mkspecs/aix-g++-64/qplatformdefs.h
@@ -139,15 +146,21 @@ qt4/mkspecs/aix-xlc/qmake.conf
 qt4/mkspecs/aix-xlc/qplatformdefs.h
 qt4/mkspecs/common/g++.conf
 qt4/mkspecs/common/linux.conf
+qt4/mkspecs/common/llvm.conf
 qt4/mkspecs/common/mac-g++.conf
 qt4/mkspecs/common/mac.conf
+qt4/mkspecs/common/mac-llvm.conf
 qt4/mkspecs/common/qmake.conf
 qt4/mkspecs/common/unix.conf
+qt4/mkspecs/cygwin-g++/qmake.conf
+qt4/mkspecs/cygwin-g++/qplatformdefs.h
 qt4/mkspecs/darwin-g++/qmake.conf
 qt4/mkspecs/darwin-g++/qplatformdefs.h
 qt4/mkspecs/default
 qt4/mkspecs/features/assistant.prf
 qt4/mkspecs/features/build_pass.prf
+qt4/mkspecs/features/dbusadaptors.prf
+qt4/mkspecs/features/dbusinterfaces.prf
 qt4/mkspecs/features/debug.prf
 qt4/mkspecs/features/debug_and_release.prf
 qt4/mkspecs/features/default_post.prf
@@ -155,6 +168,7 @@ qt4/mkspecs/features/default_pre.prf
 qt4/mkspecs/features/designer.prf
 qt4/mkspecs/features/dll.prf
 qt4/mkspecs/features/exclusive_builds.prf
+qt4/mkspecs/features/help.prf
 qt4/mkspecs/features/incredibuild_xge.prf
 qt4/mkspecs/features/lex.prf
 qt4/mkspecs/features/link_pkgconfig.prf
@@ -208,6 +222,7 @@ qt4/mkspecs/features/win32/embed_manifest_exe.prf
 qt4/mkspecs/features/win32/exceptions.prf
 qt4/mkspecs/features/win32/exceptions_off.prf
 qt4/mkspecs/features/win32/opengl.prf
+qt4/mkspecs/features/win32/profiling.prf
 qt4/mkspecs/features/win32/qaxcontainer.prf
 qt4/mkspecs/features/win32/qaxserver.prf
 qt4/mkspecs/features/win32/qt_dll.prf
@@ -271,6 +286,8 @@ qt4/mkspecs/linux-icc/qmake.conf
 qt4/mkspecs/linux-icc/qplatformdefs.h
 qt4/mkspecs/linux-kcc/qmake.conf
 qt4/mkspecs/linux-kcc/qplatformdefs.h
+qt4/mkspecs/linux-llvm/qmake.conf
+qt4/mkspecs/linux-llvm/qplatformdefs.h
 qt4/mkspecs/linux-lsb-g++/qmake.conf
 qt4/mkspecs/linux-lsb-g++/qplatformdefs.h
 qt4/mkspecs/linux-pgcc/qmake.conf
@@ -283,6 +300,10 @@ qt4/mkspecs/macx-g++/qmake.conf
 qt4/mkspecs/macx-g++/qplatformdefs.h
 qt4/mkspecs/macx-icc/qmake.conf
 qt4/mkspecs/macx-icc/qplatformdefs.h
+qt4/mkspecs/macx-llvm/Info.plist.app
+qt4/mkspecs/macx-llvm/Info.plist.lib
+qt4/mkspecs/macx-llvm/qmake.conf
+qt4/mkspecs/macx-llvm/qplatformdefs.h
 qt4/mkspecs/macx-pbuilder/Info.plist.app
 qt4/mkspecs/macx-pbuilder/qmake.conf
 qt4/mkspecs/macx-pbuilder/qplatformdefs.h
@@ -301,8 +322,12 @@ qt4/mkspecs/qws/freebsd-generic-g++/qmake.conf
 qt4/mkspecs/qws/freebsd-generic-g++/qplatformdefs.h
 qt4/mkspecs/qws/linux-arm-g++/qmake.conf
 qt4/mkspecs/qws/linux-arm-g++/qplatformdefs.h
+qt4/mkspecs/qws/linux-avr32-g++/qmake.conf
+qt4/mkspecs/qws/linux-avr32-g++/qplatformdefs.h
 qt4/mkspecs/qws/linux-cellon-g++/qmake.conf
 qt4/mkspecs/qws/linux-cellon-g++/qplatformdefs.h
+qt4/mkspecs/qws/linux-dm7000-g++/qmake.conf
+qt4/mkspecs/qws/linux-dm7000-g++/qplatformdefs.h
 qt4/mkspecs/qws/linux-generic-g++-32/qmake.conf
 qt4/mkspecs/qws/linux-generic-g++-32/qplatformdefs.h
 qt4/mkspecs/qws/linux-generic-g++/qmake.conf
@@ -356,8 +381,34 @@ qt4/mkspecs/win32-msvc/features/incremental.prf
 qt4/mkspecs/win32-msvc/features/incremental_off.prf
 qt4/mkspecs/win32-msvc/qmake.conf
 qt4/mkspecs/win32-msvc/qplatformdefs.h
+qt4/mkspecs/win32-msvc2002/qmake.conf
+qt4/mkspecs/win32-msvc2002/qplatformdefs.h
+qt4/mkspecs/win32-msvc2003/qmake.conf
+qt4/mkspecs/win32-msvc2003/qplatformdefs.h
 qt4/mkspecs/win32-msvc2005/qmake.conf
 qt4/mkspecs/win32-msvc2005/qplatformdefs.h
+qt4/mkspecs/win32-msvc2008/qmake.conf
+qt4/mkspecs/win32-msvc2008/qplatformdefs.h
+qt4/mkspecs/wince50standard-armv4i-msvc2005/qmake.conf
+qt4/mkspecs/wince50standard-armv4i-msvc2005/qplatformdefs.h
+qt4/mkspecs/wince50standard-mipsii-msvc2005/qmake.conf
+qt4/mkspecs/wince50standard-mipsii-msvc2005/qplatformdefs.h
+qt4/mkspecs/wince50standard-mipsiv-msvc2005/qmake.conf
+qt4/mkspecs/wince50standard-mipsiv-msvc2005/qplatformdefs.h
+qt4/mkspecs/wince50standard-sh4-msvc2005/qmake.conf
+qt4/mkspecs/wince50standard-sh4-msvc2005/qplatformdefs.h
+qt4/mkspecs/wince50standard-x86-msvc2005/qmake.conf
+qt4/mkspecs/wince50standard-x86-msvc2005/qplatformdefs.h
+qt4/mkspecs/wince60standard-armv4i-msvc2005/qmake.conf
+qt4/mkspecs/wince60standard-armv4i-msvc2005/qplatformdefs.h
+qt4/mkspecs/wincewm50pocket-msvc2005/qmake.conf
+qt4/mkspecs/wincewm50pocket-msvc2005/qplatformdefs.h
+qt4/mkspecs/wincewm50smart-msvc2005/qmake.conf
+qt4/mkspecs/wincewm50smart-msvc2005/qplatformdefs.h
+qt4/mkspecs/wincewm60professional-msvc2005/qmake.conf
+qt4/mkspecs/wincewm60professional-msvc2005/qplatformdefs.h
+qt4/mkspecs/wincewm60standard-msvc2005/qmake.conf
+qt4/mkspecs/wincewm60standard-msvc2005/qplatformdefs.h
 qt4/phrasebooks/danish.qph
 qt4/phrasebooks/dutch.qph
 qt4/phrasebooks/finnish.qph
@@ -373,7 +424,20 @@ qt4/phrasebooks/swedish.qph
 qt4/plugins/designer/libqt3supportwidgets.la
 @dirrm qt4/plugins/designer
 @dirrm qt4/phrasebooks
+@dirrm qt4/mkspecs/wincewm60standard-msvc2005
+@dirrm qt4/mkspecs/wincewm60professional-msvc2005
+@dirrm qt4/mkspecs/wincewm50smart-msvc2005
+@dirrm qt4/mkspecs/wincewm50pocket-msvc2005
+@dirrm qt4/mkspecs/wince60standard-armv4i-msvc2005
+@dirrm qt4/mkspecs/wince50standard-x86-msvc2005
+@dirrm qt4/mkspecs/wince50standard-sh4-msvc2005
+@dirrm qt4/mkspecs/wince50standard-mipsiv-msvc2005
+@dirrm qt4/mkspecs/wince50standard-mipsii-msvc2005
+@dirrm qt4/mkspecs/wince50standard-armv4i-msvc2005
+@dirrm qt4/mkspecs/win32-msvc2008
 @dirrm qt4/mkspecs/win32-msvc2005
+@dirrm qt4/mkspecs/win32-msvc2003
+@dirrm qt4/mkspecs/win32-msvc2002
 @dirrm qt4/mkspecs/win32-msvc/features
 @dirrm qt4/mkspecs/win32-msvc.net
 @dirrm qt4/mkspecs/win32-msvc
@@ -398,9 +462,11 @@ qt4/plugins/designer/libqt3supportwidgets.la
 @dirrm qt4/mkspecs/qws/linux-mips-g++
 @dirrm qt4/mkspecs/qws/linux-lsb-g++
 @dirrm qt4/mkspecs/qws/linux-ipaq-g++
-@dirrm qt4/mkspecs/qws/linux-generic-g++
 @dirrm qt4/mkspecs/qws/linux-generic-g++-32
+@dirrm qt4/mkspecs/qws/linux-generic-g++
+@dirrm qt4/mkspecs/qws/linux-dm7000-g++
 @dirrm qt4/mkspecs/qws/linux-cellon-g++
+@dirrm qt4/mkspecs/qws/linux-avr32-g++
 @dirrm qt4/mkspecs/qws/linux-arm-g++
 @dirrm qt4/mkspecs/qws/freebsd-generic-g++
 @dirrm qt4/mkspecs/qws
@@ -409,11 +475,13 @@ qt4/plugins/designer/libqt3supportwidgets.la
 @dirrm qt4/mkspecs/macx-xlc
 @dirrm qt4/mkspecs/macx-xcode
 @dirrm qt4/mkspecs/macx-pbuilder
+@dirrm qt4/mkspecs/macx-llvm
 @dirrm qt4/mkspecs/macx-icc
 @dirrm qt4/mkspecs/macx-g++
 @dirrm qt4/mkspecs/lynxos-g++
 @dirrm qt4/mkspecs/linux-pgcc
 @dirrm qt4/mkspecs/linux-lsb-g++
+@dirrm qt4/mkspecs/linux-llvm
 @dirrm qt4/mkspecs/linux-kcc
 @dirrm qt4/mkspecs/linux-icc-64
 @dirrm qt4/mkspecs/linux-icc-32
@@ -445,6 +513,7 @@ qt4/plugins/designer/libqt3supportwidgets.la
 @dirrm qt4/mkspecs/features/mac
 @dirrm qt4/mkspecs/features
 @dirrm qt4/mkspecs/darwin-g++
+@dirrm qt4/mkspecs/cygwin-g++
 @dirrm qt4/mkspecs/common
 @dirrm qt4/mkspecs/aix-xlc-64
 @dirrm qt4/mkspecs/aix-xlc
@@ -452,6 +521,6 @@ qt4/plugins/designer/libqt3supportwidgets.la
 @dirrm qt4/mkspecs/aix-g++
 @dirrm qt4/mkspecs
 @dirrm qt4/include/QtUiTools
-@dirrm qt4/include/QtTest
+@dirrm qt4/include/QtHelp
 @dirrm qt4/include/QtDesigner
 @dirrm qt4/include/QtAssistant
