@@ -1,12 +1,13 @@
-$NetBSD: patch-ac,v 1.8 2008/06/22 17:41:23 ghen Exp $
+$NetBSD: patch-ac,v 1.9 2008/07/24 07:38:51 ghen Exp $
 
---- doc/Makefile.in.orig	2008-05-05 00:02:25.000000000 +0200
+--- doc/Makefile.in.orig	2008-07-20 23:59:55.000000000 +0200
 +++ doc/Makefile.in
-@@ -209,9 +209,7 @@ top_builddir = @top_builddir@
+@@ -212,10 +212,7 @@ top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
  SUBDIRS = wiki
  confdir = $(sysconfdir)
 -conf_DATA = \
+-	dovecot-db-example.conf \
 -	dovecot-ldap-example.conf \
 -	dovecot-sql-example.conf
 +conf_DATA =
