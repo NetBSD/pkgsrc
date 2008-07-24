@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.8 2008/07/22 08:05:15 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.9 2008/07/24 10:01:55 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -21,3 +21,5 @@ pullup ticket #2454 requested by rhaen
 icon-naming-utils: update master sites
 pullup ticket #2455 requested by drochner
 mercurial: fix for path check on patch import
+pullup ticket #2458 requested by joerg
+py-moin: update package cross-site scripting fix
