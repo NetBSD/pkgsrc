@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.8 2008/05/07 10:02:44 joerg Exp $
+# $NetBSD: Makefile,v 1.8.4.1 2008/07/24 10:01:28 rtr Exp $
 #
 
-DISTNAME=	moin-1.6.3
-PKGNAME=	${PYPKGPREFIX}-moin-1.6.3
+DISTNAME=	moin-1.7.1
+PKGNAME=	${PYPKGPREFIX}-moin-1.7.1
 CATEGORIES=	www python
 MASTER_SITES=	http://static.moinmo.in/files/
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://moinmo.in/
-COMMENT=	Python clone of WikiWiki
+COMMENT=	MoinMoin, a Python clone of WikiWiki
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
