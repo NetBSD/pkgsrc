@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1651 2008/07/24 08:38:35 joerg Exp $
+$NetBSD: CHANGES-2008,v 1.1652 2008/07/24 09:29:47 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2820,3 +2820,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Module-Install-RTx to 0.23 [seb 2008-07-24]
 	Updated mail/dovecot to 1.1.2 [ghen 2008-07-24]
 	Updated www/py-moin to 1.7.1 [joerg 2008-07-24]
+	Updated databases/p5-DBI to 1.607 [rhaen 2008-07-24]
