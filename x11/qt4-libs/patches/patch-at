@@ -1,0 +1,13 @@
+$NetBSD: patch-at,v 1.1 2008/07/24 12:55:20 markd Exp $
+
+--- ./src/3rdparty/webkit/JavaScriptCore/kjs/collector.cpp.orig	2008-04-29 01:11:16.000000000 +1200
++++ ./src/3rdparty/webkit/JavaScriptCore/kjs/collector.cpp
+@@ -347,7 +347,7 @@ static inline void* currentThreadStackBa
+     if (stackBase == 0 || thread != stackThread) {
+         pthread_attr_t sattr;
+         pthread_attr_init(&sattr);
+-#if HAVE(PTHREAD_NP_H)
++#if HAVE(PTHREAD_NP_H) || defined(__NetBSD__)
+         // e.g. on FreeBSD 5.4, neundorf@kde.org
+         pthread_attr_get_np(thread, &sattr);
+ #else

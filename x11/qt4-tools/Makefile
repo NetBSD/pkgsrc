@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.20 2008/06/03 20:14:45 abs Exp $
+# $NetBSD: Makefile,v 1.21 2008/07/24 12:55:21 markd Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../x11/qt4-libs/Makefile.common"
 
 PKGNAME=	qt4-tools-${QTVERSION}
-PKGREVISION=	3
 COMMENT=	QT GUI (WYSIWYG) builder and other tools
 
 DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
@@ -29,28 +28,24 @@ post-configure:
 	ln -s ${QTPREFIX}/bin/rcc ${WRKSRC}/bin/rcc
 
 do-install:
-.for prog in assistant lrelease lupdate qmake qt3to4
+.for prog in assistant_adp lrelease lupdate pixeltool qmake qt3to4
 	${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} ${DESTDIR}${QTPREFIX}/bin/
 .endfor
-.for prog in designer linguist qtconfig
+.for prog in assistant designer linguist qtconfig
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} \
 		${DESTDIR}${QTPREFIX}/bin
 .endfor
 	cd ${WRKSRC}/tools/assistant/lib && env ${MAKE_ENV} ${INSTALL_ENV} \
+		${MAKE_PROGRAM} install_flat_headers install_targ_headers
+	cd ${WRKSRC}/tools/assistant/compat/lib && env ${MAKE_ENV} ${INSTALL_ENV} \
 		${MAKE_PROGRAM} install_assistant_headers
 	cd ${WRKSRC}/tools/designer/src/lib && env ${MAKE_ENV} ${INSTALL_ENV} \
 		${MAKE_PROGRAM} install_designer_headers
 	cd ${WRKSRC}/tools/designer/src/uitools && env ${MAKE_ENV} ${INSTALL_ENV} \
 		${MAKE_PROGRAM} install_quitools_headers
-	cd ${WRKSRC}/tools/qtestlib/src && env ${MAKE_ENV} ${INSTALL_ENV} \
-		${MAKE_PROGRAM} install_qtestlib_headers
-.for lib in QtAssistantClient QtDesigner QtDesignerComponents QtTest
+.for lib in QtAssistantClient QtCLucene QtDesigner QtDesignerComponents QtHelp QtUiTools
 	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/lib${lib}.la \
 		${DESTDIR}${QTPREFIX}/lib/
-.endfor
-	${LIBTOOL} --mode=install ${INSTALL_LIB} ${WRKSRC}/lib/libQtUiTools.la \
-		${DESTDIR}${QTPREFIX}/lib/
-.for lib in QtUiTools QtTest
 	sed -e "s:${WRKSRC}:${QTPREFIX}:g" \
 		${WRKSRC}/lib/pkgconfig/${lib}.pc > ${WRKDIR}/${lib}.pc
 	${INSTALL_DATA} ${WRKDIR}/${lib}.pc ${DESTDIR}${PREFIX}/lib/pkgconfig/

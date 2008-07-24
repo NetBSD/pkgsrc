@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/02/18 09:49:38 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/24 12:55:20 markd Exp $
 
 .include "../../x11/qt4-libs/Makefile.common"
 
@@ -18,6 +18,7 @@ post-configure:
 	ln -s ${QTPREFIX}/bin/rcc ${WRKSRC}/bin/rcc
 
 do-build:
+	cd ${WRKSRC}/src/dbus && env ${MAKE_ENV} ${GMAKE}
 	cd ${WRKSRC}/tools/qdbus && env ${MAKE_ENV} ${GMAKE}
 
 do-install:
@@ -26,8 +27,8 @@ do-install:
 	${SED} -e "s:${WRKSRC}:${QTPREFIX}:g" \
 		${WRKSRC}/lib/pkgconfig/QtDBus.pc > ${WRKDIR}/QtDBus.pc
 	${INSTALL_DATA} ${WRKDIR}/QtDBus.pc ${PREFIX}/lib/pkgconfig/
-	cd ${WRKSRC}/tools/qdbus/src && env ${MAKE_ENV} \
-                ${MAKE_PROGRAM} install_qtdbus_headers
+	cd ${WRKSRC}/src/dbus && env ${MAKE_ENV} \
+                ${MAKE_PROGRAM} install_flat_headers install_targ_headers
 .for prog in qdbus qdbuscpp2xml qdbusviewer qdbusxml2cpp
 	${LIBTOOL} --mode=install ${INSTALL_PROGRAM} ${WRKSRC}/bin/${prog} \
 		${QTPREFIX}/bin
