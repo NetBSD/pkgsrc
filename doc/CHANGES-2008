@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1645 2008/07/24 01:08:02 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1646 2008/07/24 01:35:41 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2814,3 +2814,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/psftools to 1.0.7 [bjs 2008-07-23]
 	Updated comms/asterisk to 1.2.30 [tonnerre 2008-07-24]
 	Updated x11/libX11 to 1.1.4nb2 [bjs 2008-07-24]
+	Updated devel/libidn to 1.9 [bjs 2008-07-24]
