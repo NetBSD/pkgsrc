@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1644 2008/07/24 00:11:56 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1645 2008/07/24 01:08:02 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2813,3 +2813,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/dnsmasq to 2.45 [tonnerre 2008-07-23]
 	Updated sysutils/psftools to 1.0.7 [bjs 2008-07-23]
 	Updated comms/asterisk to 1.2.30 [tonnerre 2008-07-24]
+	Updated x11/libX11 to 1.1.4nb2 [bjs 2008-07-24]
