@@ -1,0 +1,22 @@
+$NetBSD: patch-as,v 1.1 2008/07/24 12:55:20 markd Exp $
+
+--- tools/assistant/lib/fulltextsearch/qclucene-config_p.h.orig	2008-04-29 01:11:20.000000000 +1200
++++ tools/assistant/lib/fulltextsearch/qclucene-config_p.h
+@@ -89,7 +89,7 @@ configure.
+ #define _CL_HAVE_FCNTL_H  1 
+ #endif
+ 
+-#if !defined(__xlC__) && !defined(__xlc__) && !defined (__MINGW32__) && \
++#if !defined(__xlC__) && !defined(__xlc__) && !defined (__MINGW32__) && !defined(__NetBSD__) && \
+     !defined(__HP_aCC) && !defined(__SUNPRO_C) && !defined(__SUNPRO_CC) || \
+     defined(__SUNPRO_CC) && (__SUNPRO_CC > 0x550) || (defined(__HP_aCC) && defined(__ia64))
+     /* Define to 1 if the system has the type `float_t'. */
+@@ -425,7 +425,7 @@ configure.
+ #   endif
+ #endif
+ 
+-#if defined(__SUNPRO_CC) || defined(__SUNPRO_C) || defined(__HP_aCC)
++#if defined(__SUNPRO_CC) || defined(__SUNPRO_C) || defined(__HP_aCC) || defined(__NetBSD__)
+     /* Define to 1 if you have a functioning <wchar.h> header file. */
+ #   ifndef _CL_HAVE_WCTYPE_H 
+ #   define _CL_HAVE_WCTYPE_H
