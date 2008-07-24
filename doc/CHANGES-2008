@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1660 2008/07/24 14:18:44 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1661 2008/07/24 17:15:09 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2836,3 +2836,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/qt4-qdbus to 4.4.0 [markd 2008-07-24]
 	Updated security/amavisd-new to 2.6.1 [obache 2008-07-24]
 	Updated devel/p5-Module-Install-Substitute to 0.03 [seb 2008-07-24]
+	Updated devel/byacc to 20050813nb1 [tonnerre 2008-07-24]
