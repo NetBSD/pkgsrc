@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.3 2008/07/24 17:13:00 tonnerre Exp $
+
+--- skeleton.c.orig	2005-05-05 01:39:36.000000000 +0200
++++ skeleton.c
+@@ -87,6 +87,7 @@ char *header[] =
+     "short   *yyssp;",
+     "YYSTYPE *yyvsp;",
+     "YYSTYPE  yyval;",
++    "static YYSTYPE yyvalzero;", /* no "const", must compile as C++ */
+     "YYSTYPE  yylval;",
+     "",
+     "/* variables for the parser stack */",
+@@ -275,7 +275,10 @@ char *body[] =
+     "                YYPREFIX, yystate, yyn, yyrule[yyn]);",
+     "#endif",
+     "    yym = yylen[yyn];",
+-    "    yyval = yyvsp[1-yym];",
++    "    if (yym)",
++    "        yyval = yyvsp[1-yym];",
++    "    else",
++    "        yyval = yyvalzero;",
+     "    switch (yyn)",
+     "    {",
+     0
