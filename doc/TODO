@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7419 2008/07/23 23:53:50 tonnerre Exp $
+$NetBSD: TODO,v 1.7420 2008/07/24 01:36:05 bjs Exp $
 
 Suggested new packages
 ======================
@@ -858,7 +858,6 @@ Suggested package updates
 	o libgtop2-2.22.3
 	o libhangul-0.0.8
 	o libhydrogen-0.9.2
-	o libidn-1.9
 	o libltdl-2.2.4
 	o liblzo-2.02
 	o libmatheval-1.1.6
