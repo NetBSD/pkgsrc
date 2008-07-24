@@ -1,6 +1,9 @@
-$NetBSD: patch-ac,v 1.4 2008/04/24 07:45:49 joerg Exp $
+$NetBSD: patch-ac,v 1.5 2008/07/24 01:07:31 bjs Exp $
 
---- configure.orig	2008-03-06 21:48:42.000000000 +0100
+_POSIX_THREAD_SAFE_FUNCTIONS is not used on NetBSD.  Instead,
+let's use _REENTRANT.
+
+--- configure.orig	2008-03-06 15:48:42.000000000 -0500
 +++ configure
 @@ -927,6 +927,8 @@ XKB_FALSE
  XKBPROTO_CFLAGS
@@ -115,6 +118,17 @@ $NetBSD: patch-ac,v 1.4 2008/04/24 07:45:49 joerg Exp $
   if test x$thrstubs = xyes; then
    THRSTUBS_TRUE=
    THRSTUBS_FALSE='#'
+@@ -22966,8 +22970,8 @@ if test x$xthreads = xyes ; then
+     linux*|openbsd*|gnu*|k*bsd*-gnu)
+         XTHREADLIB=-lpthread ;;
+     netbsd*)
+-	XTHREAD_CFLAGS="-D_POSIX_THREAD_SAFE_FUNCTIONS"
+-	XTHREADLIB="-lpthread" ;;
++	XTHREAD_CFLAGS="-D_REENTRANT"
++	XTHREADLIB="-pthread" ;;
+     freebsd*)
+         XTHREAD_CFLAGS="-D_THREAD_SAFE"
+         XTHREADLIB="-pthread" ;;
 @@ -23507,6 +23511,15 @@ else
  fi
  
