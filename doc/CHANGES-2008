@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1643 2008/07/23 23:47:46 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1644 2008/07/24 00:11:56 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2812,3 +2812,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Module-Install to 0.76nb1 [seb 2008-07-23]
 	Updated net/dnsmasq to 2.45 [tonnerre 2008-07-23]
 	Updated sysutils/psftools to 1.0.7 [bjs 2008-07-23]
+	Updated comms/asterisk to 1.2.30 [tonnerre 2008-07-24]
