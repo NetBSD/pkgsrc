@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/06 07:08:11 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/07/24 17:37:56 bjs Exp $
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
 ${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
@@ -21,6 +21,9 @@ ${PYSITELIB}/boto/contrib/ymlmessage.pyo
 ${PYSITELIB}/boto/ec2/__init__.py
 ${PYSITELIB}/boto/ec2/__init__.pyc
 ${PYSITELIB}/boto/ec2/__init__.pyo
+${PYSITELIB}/boto/ec2/address.py
+${PYSITELIB}/boto/ec2/address.pyc
+${PYSITELIB}/boto/ec2/address.pyo
 ${PYSITELIB}/boto/ec2/connection.py
 ${PYSITELIB}/boto/ec2/connection.pyc
 ${PYSITELIB}/boto/ec2/connection.pyo
@@ -36,12 +39,30 @@ ${PYSITELIB}/boto/ec2/keypair.pyo
 ${PYSITELIB}/boto/ec2/securitygroup.py
 ${PYSITELIB}/boto/ec2/securitygroup.pyc
 ${PYSITELIB}/boto/ec2/securitygroup.pyo
+${PYSITELIB}/boto/ec2/zone.py
+${PYSITELIB}/boto/ec2/zone.pyc
+${PYSITELIB}/boto/ec2/zone.pyo
 ${PYSITELIB}/boto/exception.py
 ${PYSITELIB}/boto/exception.pyc
 ${PYSITELIB}/boto/exception.pyo
 ${PYSITELIB}/boto/handler.py
 ${PYSITELIB}/boto/handler.pyc
 ${PYSITELIB}/boto/handler.pyo
+${PYSITELIB}/boto/mashups/__init__.py
+${PYSITELIB}/boto/mashups/__init__.pyc
+${PYSITELIB}/boto/mashups/__init__.pyo
+${PYSITELIB}/boto/mashups/interactive.py
+${PYSITELIB}/boto/mashups/interactive.pyc
+${PYSITELIB}/boto/mashups/interactive.pyo
+${PYSITELIB}/boto/mashups/iobject.py
+${PYSITELIB}/boto/mashups/iobject.pyc
+${PYSITELIB}/boto/mashups/iobject.pyo
+${PYSITELIB}/boto/mashups/order.py
+${PYSITELIB}/boto/mashups/order.pyc
+${PYSITELIB}/boto/mashups/order.pyo
+${PYSITELIB}/boto/mashups/server.py
+${PYSITELIB}/boto/mashups/server.pyc
+${PYSITELIB}/boto/mashups/server.pyo
 ${PYSITELIB}/boto/mturk/__init__.py
 ${PYSITELIB}/boto/mturk/__init__.pyc
 ${PYSITELIB}/boto/mturk/__init__.pyo
@@ -54,12 +75,33 @@ ${PYSITELIB}/boto/mturk/notification.pyo
 ${PYSITELIB}/boto/mturk/price.py
 ${PYSITELIB}/boto/mturk/price.pyc
 ${PYSITELIB}/boto/mturk/price.pyo
-${PYSITELIB}/boto/mturk/qualification.py
-${PYSITELIB}/boto/mturk/qualification.pyc
-${PYSITELIB}/boto/mturk/qualification.pyo
 ${PYSITELIB}/boto/mturk/question.py
 ${PYSITELIB}/boto/mturk/question.pyc
 ${PYSITELIB}/boto/mturk/question.pyo
+${PYSITELIB}/boto/pyami/__init__.py
+${PYSITELIB}/boto/pyami/__init__.pyc
+${PYSITELIB}/boto/pyami/__init__.pyo
+${PYSITELIB}/boto/pyami/bootstrap.py
+${PYSITELIB}/boto/pyami/bootstrap.pyc
+${PYSITELIB}/boto/pyami/bootstrap.pyo
+${PYSITELIB}/boto/pyami/config.py
+${PYSITELIB}/boto/pyami/config.pyc
+${PYSITELIB}/boto/pyami/config.pyo
+${PYSITELIB}/boto/pyami/copybot.py
+${PYSITELIB}/boto/pyami/copybot.pyc
+${PYSITELIB}/boto/pyami/copybot.pyo
+${PYSITELIB}/boto/pyami/helloworld.py
+${PYSITELIB}/boto/pyami/helloworld.pyc
+${PYSITELIB}/boto/pyami/helloworld.pyo
+${PYSITELIB}/boto/pyami/launch_ami.py
+${PYSITELIB}/boto/pyami/launch_ami.pyc
+${PYSITELIB}/boto/pyami/launch_ami.pyo
+${PYSITELIB}/boto/pyami/scriptbase.py
+${PYSITELIB}/boto/pyami/scriptbase.pyc
+${PYSITELIB}/boto/pyami/scriptbase.pyo
+${PYSITELIB}/boto/pyami/startup.py
+${PYSITELIB}/boto/pyami/startup.pyc
+${PYSITELIB}/boto/pyami/startup.pyo
 ${PYSITELIB}/boto/resultset.py
 ${PYSITELIB}/boto/resultset.pyc
 ${PYSITELIB}/boto/resultset.pyo
@@ -90,9 +132,6 @@ ${PYSITELIB}/boto/s3/user.pyo
 ${PYSITELIB}/boto/sdb/__init__.py
 ${PYSITELIB}/boto/sdb/__init__.pyc
 ${PYSITELIB}/boto/sdb/__init__.pyo
-${PYSITELIB}/boto/sdb/attribute.py
-${PYSITELIB}/boto/sdb/attribute.pyc
-${PYSITELIB}/boto/sdb/attribute.pyo
 ${PYSITELIB}/boto/sdb/connection.py
 ${PYSITELIB}/boto/sdb/connection.pyc
 ${PYSITELIB}/boto/sdb/connection.pyo
@@ -102,9 +141,21 @@ ${PYSITELIB}/boto/sdb/domain.pyo
 ${PYSITELIB}/boto/sdb/item.py
 ${PYSITELIB}/boto/sdb/item.pyc
 ${PYSITELIB}/boto/sdb/item.pyo
-${PYSITELIB}/boto/sdb/item_orig.py
-${PYSITELIB}/boto/sdb/item_orig.pyc
-${PYSITELIB}/boto/sdb/item_orig.pyo
+${PYSITELIB}/boto/sdb/persist/__init__.py
+${PYSITELIB}/boto/sdb/persist/__init__.pyc
+${PYSITELIB}/boto/sdb/persist/__init__.pyo
+${PYSITELIB}/boto/sdb/persist/checker.py
+${PYSITELIB}/boto/sdb/persist/checker.pyc
+${PYSITELIB}/boto/sdb/persist/checker.pyo
+${PYSITELIB}/boto/sdb/persist/object.py
+${PYSITELIB}/boto/sdb/persist/object.pyc
+${PYSITELIB}/boto/sdb/persist/object.pyo
+${PYSITELIB}/boto/sdb/persist/property.py
+${PYSITELIB}/boto/sdb/persist/property.pyc
+${PYSITELIB}/boto/sdb/persist/property.pyo
+${PYSITELIB}/boto/sdb/persist/test_persist.py
+${PYSITELIB}/boto/sdb/persist/test_persist.pyc
+${PYSITELIB}/boto/sdb/persist/test_persist.pyo
 ${PYSITELIB}/boto/sdb/queryresultset.py
 ${PYSITELIB}/boto/sdb/queryresultset.pyc
 ${PYSITELIB}/boto/sdb/queryresultset.pyo
@@ -117,36 +168,45 @@ ${PYSITELIB}/boto/sqs/attributes.pyo
 ${PYSITELIB}/boto/sqs/connection.py
 ${PYSITELIB}/boto/sqs/connection.pyc
 ${PYSITELIB}/boto/sqs/connection.pyo
+${PYSITELIB}/boto/sqs/jsonmessage.py
+${PYSITELIB}/boto/sqs/jsonmessage.pyc
+${PYSITELIB}/boto/sqs/jsonmessage.pyo
 ${PYSITELIB}/boto/sqs/message.py
 ${PYSITELIB}/boto/sqs/message.pyc
 ${PYSITELIB}/boto/sqs/message.pyo
 ${PYSITELIB}/boto/sqs/queue.py
 ${PYSITELIB}/boto/sqs/queue.pyc
 ${PYSITELIB}/boto/sqs/queue.pyo
+${PYSITELIB}/boto/tests/__init__.py
+${PYSITELIB}/boto/tests/__init__.pyc
+${PYSITELIB}/boto/tests/__init__.pyo
+${PYSITELIB}/boto/tests/test.py
+${PYSITELIB}/boto/tests/test.pyc
+${PYSITELIB}/boto/tests/test.pyo
+${PYSITELIB}/boto/tests/test_ec2connection.py
+${PYSITELIB}/boto/tests/test_ec2connection.pyc
+${PYSITELIB}/boto/tests/test_ec2connection.pyo
+${PYSITELIB}/boto/tests/test_s3connection.py
+${PYSITELIB}/boto/tests/test_s3connection.pyc
+${PYSITELIB}/boto/tests/test_s3connection.pyo
+${PYSITELIB}/boto/tests/test_sdbconnection.py
+${PYSITELIB}/boto/tests/test_sdbconnection.pyc
+${PYSITELIB}/boto/tests/test_sdbconnection.pyo
+${PYSITELIB}/boto/tests/test_sqsconnection.py
+${PYSITELIB}/boto/tests/test_sqsconnection.pyc
+${PYSITELIB}/boto/tests/test_sqsconnection.pyo
 ${PYSITELIB}/boto/utils.py
 ${PYSITELIB}/boto/utils.pyc
 ${PYSITELIB}/boto/utils.pyo
-${PYSITELIB}/tests/__init__.py
-${PYSITELIB}/tests/__init__.pyc
-${PYSITELIB}/tests/__init__.pyo
-${PYSITELIB}/tests/test_ec2connection.py
-${PYSITELIB}/tests/test_ec2connection.pyc
-${PYSITELIB}/tests/test_ec2connection.pyo
-${PYSITELIB}/tests/test_s3connection.py
-${PYSITELIB}/tests/test_s3connection.pyc
-${PYSITELIB}/tests/test_s3connection.pyo
-${PYSITELIB}/tests/test_sdbconnection.py
-${PYSITELIB}/tests/test_sdbconnection.pyc
-${PYSITELIB}/tests/test_sdbconnection.pyo
-${PYSITELIB}/tests/test_sqsconnection.py
-${PYSITELIB}/tests/test_sqsconnection.pyc
-${PYSITELIB}/tests/test_sqsconnection.pyo
-@dirrm ${PYSITELIB}/${EGG_INFODIR}
-@dirrm ${PYSITELIB}/tests
+@dirrm ${PYSITELIB}/boto/tests
 @dirrm ${PYSITELIB}/boto/sqs
+@dirrm ${PYSITELIB}/boto/sdb/persist
 @dirrm ${PYSITELIB}/boto/sdb
 @dirrm ${PYSITELIB}/boto/s3
+@dirrm ${PYSITELIB}/boto/pyami
 @dirrm ${PYSITELIB}/boto/mturk
+@dirrm ${PYSITELIB}/boto/mashups
 @dirrm ${PYSITELIB}/boto/ec2
 @dirrm ${PYSITELIB}/boto/contrib
+@dirrm ${PYSITELIB}/${EGG_INFODIR}
 @dirrm ${PYSITELIB}/boto
