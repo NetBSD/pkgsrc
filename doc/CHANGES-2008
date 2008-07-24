@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1650 2008/07/24 07:43:57 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.1651 2008/07/24 08:38:35 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2819,3 +2819,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/links-gui to 2.1.0.37 [bjs 2008-07-24]
 	Updated devel/p5-Module-Install-RTx to 0.23 [seb 2008-07-24]
 	Updated mail/dovecot to 1.1.2 [ghen 2008-07-24]
+	Updated www/py-moin to 1.7.1 [joerg 2008-07-24]
