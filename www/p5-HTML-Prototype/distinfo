@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/02/15 06:24:31 hiramatsu Exp $
+$NetBSD: distinfo,v 1.2 2008/07/24 10:31:52 rhaen Exp $
 
-SHA1 (HTML-Prototype-1.43.tar.gz) = 4053ca32137889c55de444c9efa92711429c7463
-RMD160 (HTML-Prototype-1.43.tar.gz) = 8f17ded89451fa69ab4e1087d3ed9b355ccaf010
-Size (HTML-Prototype-1.43.tar.gz) = 50096 bytes
+SHA1 (HTML-Prototype-1.48.tar.gz) = 984f0d1622cff6ad4638517ea1af91100a1100e5
+RMD160 (HTML-Prototype-1.48.tar.gz) = 5e41ff2ae12c1cbe0f36d7a2308d21b220e72e11
+Size (HTML-Prototype-1.48.tar.gz) = 50429 bytes
