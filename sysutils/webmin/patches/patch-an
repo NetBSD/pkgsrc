@@ -1,0 +1,24 @@
+$NetBSD: patch-an,v 1.1.2.2 2008/07/25 10:06:29 rtr Exp $
+
+--- man/search.cgi.orig	2007-09-21 23:26:43.000000000 +0200
++++ man/search.cgi
+@@ -255,7 +255,8 @@ if (@rv == 1 && !$in{'check'}) {
+ 	}
+ 
+ # Display search results
+-$for = join($in{'and'} ? " and " : " or ", map { "<tt>$_</tt>" } @for);
++$for = join($in{'and'} ? " and " : " or ", map { "<tt>" . &html_escape($_) .
++	"</tt>" } @for);
+ &ui_print_header(&text('search_for', $for), $text{'search_title'}, "");
+ if (@rv) {
+ 	#@rv = sort { $b->[4] <=> $a->[4] } @rv;
+@@ -280,7 +281,8 @@ if (@rv) {
+ 	print &ui_columns_end();
+ 	}
+ else {
+-	print "<p><b>",&text('search_none', "<tt>$in{'for'}</tt>"),"</b><p>\n";
++	print "<p><b>",&text('search_none', "<tt>" . &html_escape($in{'for'}) .
++		"</tt>"),"</b><p>\n";
+ 	}
+ 
+ &ui_print_footer("", $text{'index_return'});

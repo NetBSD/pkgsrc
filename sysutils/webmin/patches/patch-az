@@ -1,0 +1,28 @@
+$NetBSD: patch-az,v 1.1.2.2 2008/07/25 10:06:30 rtr Exp $
+
+--- mailboxes/search_form.cgi.orig	2007-09-21 23:28:31.000000000 +0200
++++ mailboxes/search_form.cgi
+@@ -12,8 +12,10 @@ require './mailboxes-lib.pl';
+ 	&folder_link($in{'user'}, $folder));
+ 
+ print "<form action=mail_search.cgi>\n";
+-print "<input type=hidden name=user value='$in{'user'}'>\n";
+-print "<input type=hidden name=ofolder value='$in{'folder'}'>\n";
++print "<input type=hidden name=user value='" . &html_escape($in{'user'}) .
++	"'>\n";
++print "<input type=hidden name=ofolder value='" . &html_escape($in{'folder'}) .
++	"'>\n";
+ print "<input type=radio name=and value=1 checked> $text{'sform_and'}\n";
+ print "<input type=radio name=and value=0> $text{'sform_or'}<p>\n";
+ 
+@@ -48,7 +50,7 @@ print " $text{'sform_folder'} ",&folder_
+ 					       $extra);
+ print "</form>\n";
+ 
+-&ui_print_footer("list_mail.cgi?folder=$in{'folder'}&user=".
+-		  &urlize($in{'user'}), $text{'mail_return'},
+-		 "", $text{'index_return'});
++&ui_print_footer("list_mail.cgi?folder=" . &urlize($in{'folder'}) . "&user=".
++		  &urlize($in{'user'}), $text{'mail_return'}, "",
++		  $text{'index_return'});
+ 

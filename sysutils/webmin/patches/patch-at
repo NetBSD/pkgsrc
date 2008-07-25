@@ -1,0 +1,38 @@
+$NetBSD: patch-at,v 1.1.2.2 2008/07/25 10:06:30 rtr Exp $
+
+--- cluster-software/software/search.cgi.orig	2007-09-21 23:27:39.000000000 +0200
++++ cluster-software/software/search.cgi
+@@ -34,9 +34,11 @@ if (@match == 1 && $in{'goto'}) {
+ if (@match) {
+ 	@match = sort { lc($packages{$a,'name'}) cmp lc($packages{$b,'name'}) }
+ 		      @match;
+-	print "<b>",&text('search_match', "<tt>$s</tt>"),"</b><p>\n";
++	print "<b>",&text('search_match', "<tt>" . &html_escape($s) . "</tt>"),
++		"</b><p>\n";
+ 	print "<form action=delete_packs.cgi method=post>\n";
+-	print "<input type=hidden name=search value='$in{'search'}'>\n";
++	print "<input type=hidden name=search value='" .
++		&html_escape($in{'search'}) . "'>\n";
+ 	print &select_all_link("del", 0, $text{'search_selall'}),"&nbsp;\n";
+ 	print &select_invert_link("del", 0, $text{'search_invert'}),"<br>\n";
+ 	print &ui_columns_start([ "",
+@@ -45,7 +47,8 @@ if (@match) {
+ 				  $text{'search_desc'} ], 100);
+ 	foreach $i (@match) {
+ 		local @cols;
+-		push(@cols, "<a href=\"edit_pack.cgi?search=$s&package=".
++		push(@cols, "<a href=\"edit_pack.cgi?search=" .
++			&urlize($s) . "&package=".
+ 		      &urlize($packages{$i,'name'})."&version=".
+ 		      &urlize($packages{$i,'version'})."\">".&html_escape(
+ 			$packages{$i,'name'}.($packages{$i,'version'} ?
+@@ -63,7 +66,8 @@ if (@match) {
+ 	print "<input type=submit value='$text{'search_delete'}'></form>\n";
+ 	}
+ else {
+-	print "<b>",&text('search_nomatch', "<tt>$s</tt>"),"</b><p>\n";
++	print "<b>",&text('search_nomatch', "<tt>" . &html_escape($s) .
++		"</tt>"),"</b><p>\n";
+ 	}
+ 
+ &ui_print_footer("", $text{'index_return'});
