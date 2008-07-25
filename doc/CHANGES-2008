@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1671 2008/07/25 11:34:16 joerg Exp $
+$NetBSD: CHANGES-2008,v 1.1672 2008/07/25 11:52:57 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2850,3 +2850,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated shells/zsh to 4.2.6nb2 [ghen 2008-07-25]
 	Updated shells/zsh-current to 4.3.4nb3 [ghen 2008-07-25]
 	Removed lang/python23-nth [joerg 2008-07-25]
+	Updated archivers/libzip to 0.9 [dillo 2008-07-25]
+	Updated emulators/ckmame to 0.10 [dillo 2008-07-25]
