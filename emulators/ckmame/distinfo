@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2007/06/06 20:56:15 wiz Exp $
+$NetBSD: distinfo,v 1.5 2008/07/25 11:50:33 dillo Exp $
 
-SHA1 (ckmame-0.9.tar.bz2) = 3a20d2ab01af4dabff9d68f3630151251fb3ff9f
-RMD160 (ckmame-0.9.tar.bz2) = 84bbf9af8fbc55e4da63d5fc258749d2848cdc29
-Size (ckmame-0.9.tar.bz2) = 215134 bytes
+SHA1 (ckmame-0.10.tar.bz2) = c2a10d5a88e569821739abfbc965032d6335a031
+RMD160 (ckmame-0.10.tar.bz2) = 7a676ef3f976ea3cbe17d83bc2539d5bf9a6d8a1
+Size (ckmame-0.10.tar.bz2) = 211619 bytes
