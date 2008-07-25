@@ -1,0 +1,14 @@
+$NetBSD: patch-ae,v 1.1.2.2 2008/07/25 09:53:56 tron Exp $
+
+--- spaw/dialogs/img_library.php.orig	2006-04-18 13:25:53.000000000 +0200
++++ spaw/dialogs/img_library.php
+@@ -15,6 +15,9 @@
+ // unset $spaw_imglib_include
+ unset($spaw_imglib_include);
+ 
++// Prevent remote file inclusion
++if (preg_match("/:\/\//i", $spaw_root)) die ("can't include external file");
++
+ // include wysiwyg config
+ include '../config/spaw_control.config.php';
+ include $spaw_root.'class/util.class.php';
