@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.769 2008/05/21 20:16:19 abs Exp $
+# $NetBSD: pkglint.pl,v 1.770 2008/07/25 14:15:44 dillo Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -4456,6 +4456,19 @@ sub checkline_mk_shellword($$$) {
 				my ($shvarname) = ($1);
 				if ($opt_warn_quoting && $check_quoting) {
 					$line->log_warning("Unquoted shell variable \"${shvarname}\".");
+					$line->explain_warning(
+"When a shell variable contains white-space, it is expanded (split into", 
+"multiple words) when it is written as \$variable in a shell script.",
+"If that is not intended, you should add quotation marks around it,",
+"like \"\$variable\". Then, the variable will always expand to a single",
+"word, preserving all white-space and other special characters.",
+"",
+"Example:",
+"\tfname=\"Curriculum vitae.doc\"",
+"\tcp \$fname /tmp",
+"\t# tries to copy the two files \"Curriculum\" and \"Vitae.doc\"",
+"\tcp \"\$fname\" /tmp",
+"\t# copies one file, as intended");
 				}
 
 			} elsif ($rest =~ s/^\$\@//) {
