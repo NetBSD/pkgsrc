@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2005/09/27 14:46:08 tonio Exp $
+$NetBSD: patch-aa,v 1.7 2008/07/25 20:03:03 tonio Exp $
 
---- Makefile.orig	2005-07-03 00:44:28.000000000 +0200
+--- Makefile.orig	2008-01-18 16:46:16.000000000 +0100
 +++ Makefile
 @@ -39,7 +39,7 @@ all:: INSTALL
  
@@ -11,15 +11,17 @@ $NetBSD: patch-aa,v 1.6 2005/09/27 14:46:08 tonio Exp $
  
  ########################################################################
  ## Miscellaneous developer-only switches
-@@ -68,16 +68,13 @@ include Makefile.OCaml
+@@ -68,7 +68,7 @@ include Makefile.OCaml
  ######################################################################
  # Installation
  
 -INSTALLDIR = $(HOME)/bin/
-+INSTALLDIR = $(PREFIX)/bin/
++INSTALLDIR = $(DESTDIR)$(PREFIX)/bin/
  
  # This has two names because on OSX the file INSTALL shadows the target 'install'!
  install: doinstall
+@@ -80,10 +80,7 @@ text: 
+ 	make -C .. text
  
  doinstall: $(NAME)$(EXEC_EXT)
 -	-mv $(INSTALLDIR)/$(NAME)$(EXEC_EXT) /tmp/$(NAME)-$(shell echo $$$$)
@@ -29,9 +31,9 @@ $NetBSD: patch-aa,v 1.6 2005/09/27 14:46:08 tonio Exp $
  
  ######################################################################
  # Demo
-@@ -355,7 +352,7 @@ testmerge:
+@@ -332,7 +329,7 @@ testmerge:
  tags:
- 	-$(ETAGS) *.mli */*.mli *.ml */*.ml *.m */*.m *.c */*.c *.txt
+ 	-$(ETAGS) *.mli */*.mli *.ml */*.ml */*.m *.c */*.c *.txt
  
 -all:: TAGS
 +#all:: TAGS
