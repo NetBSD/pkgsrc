@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.47 2008/07/13 18:22:01 tonnerre Exp $
+# $NetBSD: Makefile.common,v 1.48 2008/07/25 09:14:48 ghen Exp $
 
 DISTNAME=	zsh-${ZSH_VERSION}
 CATEGORIES=	shells
@@ -22,8 +22,6 @@ CONFIGURE_ARGS+=	--enable-etcdir=${PKG_SYSCONFDIR:Q}
 USE_TOOLS+=		makeinfo
 INFO_FILES=		# PLIST
 TEXINFO_REQD=		4.0
-
-DEPENDS+=	p5-File-Temp-[0-9]*:../../devel/p5-File-Temp
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
