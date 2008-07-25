@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2007/12/01 22:46:44 tonio Exp $
+# $NetBSD: Makefile,v 1.21 2008/07/25 19:43:13 tonio Exp $
 
-DISTNAME=	unison-2.27.48
+DISTNAME=	unison-2.30.4
 
 CATEGORIES=	net
 MASTER_SITES=	http://www.cis.upenn.edu/~bcpierce/unison/download/releases/beta/
@@ -10,6 +10,7 @@ HOMEPAGE=	http://www.cis.upenn.edu/~bcpierce/unison/
 COMMENT=	File-synchronization tool
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DIST_SUBDIR=	${PKGNAME_NOREV}
 BUILDLINK_API_DEPENDS.ocaml+=	ocaml>=3.08.2
@@ -39,13 +40,13 @@ INSTALLATION_DIRS=	bin
 INSTALLATION_DIRS+=	share/doc/unison
 
 post-install:
-	${INSTALL_MAN} ${WRKSRC}/BUGS.txt ${PREFIX}/share/doc/unison
-	${INSTALL_MAN} ${WRKSRC}/CONTRIB ${PREFIX}/share/doc/unison
-	${INSTALL_MAN} ${WRKSRC}/COPYING ${PREFIX}/share/doc/unison
-	${INSTALL_MAN} ${WRKSRC}/NEWS ${PREFIX}/share/doc/unison
-	${INSTALL_MAN} ${WRKSRC}/README ${PREFIX}/share/doc/unison
-	${INSTALL_MAN} ${WRKSRC}/ROADMAP.txt ${PREFIX}/share/doc/unison
-	${INSTALL_MAN} ${WRKSRC}/TODO.txt ${PREFIX}/share/doc/unison
+	${INSTALL_MAN} ${WRKSRC}/BUGS.txt ${DESTDIR}${PREFIX}/share/doc/unison
+	${INSTALL_MAN} ${WRKSRC}/CONTRIB ${DESTDIR}${PREFIX}/share/doc/unison
+	${INSTALL_MAN} ${WRKSRC}/COPYING ${DESTDIR}${PREFIX}/share/doc/unison
+	${INSTALL_MAN} ${WRKSRC}/NEWS ${DESTDIR}${PREFIX}/share/doc/unison
+	${INSTALL_MAN} ${WRKSRC}/README ${DESTDIR}${PREFIX}/share/doc/unison
+	${INSTALL_MAN} ${WRKSRC}/ROADMAP.txt ${DESTDIR}${PREFIX}/share/doc/unison
+	${INSTALL_MAN} ${WRKSRC}/TODO.txt ${DESTDIR}${PREFIX}/share/doc/unison
 
 .include "../../lang/ocaml/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

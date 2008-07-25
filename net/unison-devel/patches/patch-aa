@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2007/04/08 22:46:36 tonio Exp $
+$NetBSD: patch-aa,v 1.6 2008/07/25 19:43:14 tonio Exp $
 
 --- Makefile.orig	2007-04-02 05:03:20.000000000 +0200
 +++ Makefile
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.5 2007/04/08 22:46:36 tonio Exp $
  # Installation
  
 -INSTALLDIR = $(HOME)/bin/
-+INSTALLDIR = $(PREFIX)/bin/
++INSTALLDIR = ${DESTDIR}$(PREFIX)/bin/
  
  # This has two names because on OSX the file INSTALL shadows the target 'install'!
  install: doinstall
