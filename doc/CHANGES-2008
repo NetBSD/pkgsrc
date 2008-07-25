@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1672 2008/07/25 11:52:57 dillo Exp $
+$NetBSD: CHANGES-2008,v 1.1673 2008/07/25 13:59:54 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2852,3 +2852,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed lang/python23-nth [joerg 2008-07-25]
 	Updated archivers/libzip to 0.9 [dillo 2008-07-25]
 	Updated emulators/ckmame to 0.10 [dillo 2008-07-25]
+	Updated audio/libmpcdec to 1.2.6 [obache 2008-07-25]
