@@ -2,7 +2,7 @@
 #
 # Startup script for Zope @ZOPE_VERSION@ server.
 #
-# $NetBSD: zope.sh,v 1.1 2008/01/06 15:51:40 taca Exp $
+# $NetBSD: zope.sh,v 1.2 2008/07/25 08:23:23 taca Exp $
 #
 
 # PROVIDE: @ZOPE_PKG@
@@ -30,8 +30,7 @@ fi
 
 name="@ZOPE_PKG@"
 rcvar="$name@RCVAR_SUFFIX@"
-version="@ZOPE_FULL_VERSION@"
-zope_name="Zope ${version}"
+zope_name="Zope @ZOPE_FULL_VERSION@"
 start_cmd="@ZOPE_PKG@_start"
 stop_cmd="@ZOPE_PKG@_stop"
 restart_cmd="@ZOPE_PKG@_restart"
