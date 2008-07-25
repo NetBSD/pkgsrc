@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.1 2005/11/10 18:25:42 joerg Exp $
+$NetBSD: patch-ab,v 1.1.24.1 2008/07/25 09:48:35 rtr Exp $
 
---- vtmouse.c.orig	2005-11-10 18:18:59.000000000 +0000
+--- vtmouse.c.orig	2007-04-01 19:58:22.000000000 +0200
 +++ vtmouse.c
-@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
+@@ -83,7 +83,7 @@ int main(int argc, char *argv[])
  #endif
  
  /* I/O streams default to stdin and stdout. */
--FILE *xt_input=stdin, *xt_output=stdout;
-+FILE *xt_input = NULL, *xt_output = NULL;
+-static FILE *xt_input, *xt_output;
++static FILE *xt_input = NULL, *xt_output = NULL;
  static int have_xterm=0;
  static int set_title=0;
  static char *old_title=NULL;
-@@ -118,6 +118,9 @@ static char *get_xtitle()
+@@ -120,6 +120,9 @@ static char *get_xtitle()
  static void set_xtitle(titlebar)
  char *titlebar;
  {
@@ -21,7 +21,7 @@ $NetBSD: patch-ab,v 1.1 2005/11/10 18:25:42 joerg Exp $
  	fprintf(xt_output, "\033]0;%s\07", titlebar);
  	fflush(xt_output);
  }
-@@ -166,6 +169,11 @@ struct event *X_event;
+@@ -168,6 +171,11 @@ struct event *X_event;
  	window *thiswin;
  #endif
  
@@ -33,7 +33,7 @@ $NetBSD: patch-ab,v 1.1 2005/11/10 18:25:42 joerg Exp $
  	X_event->happening=0;
  
  	if ( have_xterm ) {
-@@ -277,6 +285,9 @@ struct event *X_event;
+@@ -279,6 +287,9 @@ struct event *X_event;
  
  void event_quit()
  {
