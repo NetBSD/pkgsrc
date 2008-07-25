@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:29 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2008/07/25 11:50:33 dillo Exp $
 #
 
-DISTNAME=		ckmame-0.9
+DISTNAME=		ckmame-0.10
 CATEGORIES=		emulators
 MASTER_SITES=		http://www.nih.at/ckmame/
 EXTRACT_SUFX=		.tar.bz2
@@ -16,9 +16,11 @@ USE_TOOLS+=		pkg-config
 GNU_CONFIGURE=		yes
 TEST_TARGET=		check
 
+BUILDLINK_API_DEPENDS.libzip+=  libzip>=0.9
+
 .include "../../archivers/libzip/buildlink3.mk"
+.include "../../databases/sqlite3/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
-.include "../../mk/db1.builtin.mk"
 
 .include "../../mk/bsd.pkg.mk"
