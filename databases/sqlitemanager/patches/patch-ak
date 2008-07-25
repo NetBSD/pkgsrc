@@ -1,0 +1,22 @@
+$NetBSD: patch-ak,v 1.1.2.2 2008/07/25 09:53:56 tron Exp $
+
+--- include/defined.inc.php.orig	2006-04-18 13:25:53.000000000 +0200
++++ include/defined.inc.php
+@@ -45,7 +45,7 @@ $availableTheme = array("default", "gree
+ $dbItems = array('Table', 'View', 'Trigger', 'Function');
+ 
+ if(isset($_POST['Theme'])) {
+-	$localTheme = $_POST['Theme'];
++	$localtheme = $_POST['Theme'];
+ 	setcookie('SQLiteManager_currentTheme',$_POST['Theme'],1719241200,'/');
+ 	$_COOKIE['SQLiteManager_currentTheme'] = $_POST['Theme'];
+ 	echo "<script type=\"text/javascript\">parent.location='index.php';</script>";
+@@ -55,6 +55,8 @@ if(isset($_POST['Theme'])) {
+ 	$localtheme = 'green';
+ }
+ 
++if (preg_match("/[:\/]/", $localtheme)) die("Theme must be a directory name");
++
+ // set cookie for FullText
+ if(isset($_GET['fullText'])) {
+ 	$allFullText = $_GET['fullText'];

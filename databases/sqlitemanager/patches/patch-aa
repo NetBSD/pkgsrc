@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.2.2 2008/07/25 09:53:56 tron Exp $
+
+--- spaw/dialogs/confirm.php.orig	2006-04-18 13:25:53.000000000 +0200
++++ spaw/dialogs/confirm.php
+@@ -13,4 +13,7 @@
+ // ================================================
+ 
++// Prevent remote file inclusion
++if (preg_match("/:\/\//i", $spaw_root)) die ("can't include external file");
++
+ // include wysiwyg config
+ include '../config/spaw_control.config.php';
