@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1674 2008/07/25 14:07:37 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1675 2008/07/25 14:17:07 dillo Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2857,3 +2857,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/libtunepimp to 0.5.3nb5 [obache 2008-07-25]
 	Updated audio/cmus to 2.2.0nb2 [obache 2008-07-25]
 	Updated audio/musicpd to 0.13.1nb1 [obache 2008-07-25]
+	Updated pkgtools/pkglint to 4.87 [dillo 2008-07-25]
