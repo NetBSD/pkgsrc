@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2008/03/04 19:21:12 jlam Exp $
+# $NetBSD: Makefile,v 1.19.6.1 2008/07/25 09:48:35 rtr Exp $
 
-DISTNAME=		splitvt-1.6.3
+DISTNAME=		splitvt-1.6.6
 CATEGORIES=		misc
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=utils/console/}
 
@@ -10,7 +10,6 @@ COMMENT=		Run two shells in a split window/terminal
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_TARGET=
-CONFIGURE_SCRIPT=	./Configure
 HAS_CONFIGURE=		yes
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

@@ -1,0 +1,42 @@
+$NetBSD: patch-ad,v 1.1.2.2 2008/07/25 09:48:35 rtr Exp $
+
+--- misc.c.orig	2007-04-01 19:56:30.000000000 +0200
++++ misc.c
+@@ -108,8 +108,17 @@ int win;		/* 0 for upper, 1 for lower */
+ 		/* "touch" the tty so 'w' reports proper idle times */
+ 		(void) utime(get_ttyname(), NULL);
+ 
++		/* Set our gid to our real gid if necessary */
++		if (setgid(getgid()) != 0) {
++			perror("setgid");
++			exit(EXIT_FAILURE);
++		}
++
+ 		/* Set our uid to our real uid if necessary */
+-		(void) setuid(getuid());
++		if (setuid(getuid()) != 0) {
++			perror("setgid");
++			exit(EXIT_FAILURE);
++		}
+ 			
+ 		/* Run the requested program, with possible leading dash. */
+ 		execvp(((*argv[0] == '-') ? argv[0]+1 : argv[0]), argv);
+@@ -876,8 +885,17 @@ char *type;
+ 			}
+ 			close(pipe_fds[0]); close(pipe_fds[1]); 
+ 
++			/* Set our gid to our real gid if necessary */
++			if (setgid(getgid()) != 0) {
++				perror("setgid");
++				exit(EXIT_FAILURE);
++			}
++
+ 			/* Set our uid to our real uid if necessary */
+-			(void) setuid(getuid());
++			if (setuid(getuid()) != 0) {
++				perror("setuid");
++				exit(EXIT_FAILURE);
++			}
+ 			
+ 			/* Run the requested program */
+ 			argv[0]="/bin/sh";
