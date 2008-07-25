@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2007/01/25 19:31:34 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/07/25 13:59:39 obache Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBMPCDEC_BUILDLINK3_MK:=	${LIBMPCDEC_BUILDLINK3_MK}+
@@ -13,6 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libmpcdec
 
 .if ${LIBMPCDEC_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.libmpcdec+=	libmpcdec>=1.2.4
+BUILDLINK_ABI_DEPENDS.libmpcdec+=	libmpcdec>=1.2.6
 BUILDLINK_PKGSRCDIR.libmpcdec?=	../../audio/libmpcdec
 .endif	# LIBMPCDEC_BUILDLINK3_MK
 
