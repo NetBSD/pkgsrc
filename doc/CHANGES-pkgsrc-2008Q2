@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.14 2008/07/25 09:49:05 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.15 2008/07/25 09:59:34 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -33,3 +33,5 @@ pullup ticket #2460 requested by tonnerre
 byacc: patch to fix DoS vulnerability
 pullup ticket #2463 requested by tonnerre
 splitvt: update package for security fix
+Pullup ticket #2461 - requested by tonnerre
+SQLiteManager: security update
