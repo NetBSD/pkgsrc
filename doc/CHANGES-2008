@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1669 2008/07/25 04:03:04 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1670 2008/07/25 09:15:27 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2847,3 +2847,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/webmin to 1.370nb3 [tonnerre 2008-07-25]
 	Updated misc/splitvt to 1.6.6 [tonnerre 2008-07-25]
 	Updated devel/stgit to 0.14.3 [bjs 2008-07-25]
+	Updated shells/zsh to 4.2.6nb2 [ghen 2008-07-25]
+	Updated shells/zsh-current to 4.3.4nb3 [ghen 2008-07-25]
