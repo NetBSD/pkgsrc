@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.15 2008/07/25 09:59:34 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.16 2008/07/25 10:07:07 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -35,3 +35,5 @@ pullup ticket #2463 requested by tonnerre
 splitvt: update package for security fix
 Pullup ticket #2461 - requested by tonnerre
 SQLiteManager: security update
+pullup ticket #2462 requested by tonnerre
+webmin: patch for various security vulnerabilities
