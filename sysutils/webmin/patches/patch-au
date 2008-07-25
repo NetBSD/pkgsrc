@@ -1,0 +1,14 @@
+$NetBSD: patch-au,v 1.1.2.2 2008/07/25 10:06:30 rtr Exp $
+
+--- smf/search_instance.cgi.orig	2007-09-21 23:28:42.000000000 +0200
++++ smf/search_instance.cgi
+@@ -34,7 +34,8 @@ print "</h2>";
+ 
+ print "<form  method=\"POST\" action=\"search_instance.cgi\">\n";
+ print
+-    "<input size=60 name=\"searchstring\" value=\"$original_searchstring\">\n";
++    "<input size=60 name=\"searchstring\" value=\"" .
++    &html_escape($original_searchstring) . "\">\n";
+ &print_svc_chooser("searchstring", 0, "$text{'search_instance_browse'}",
+ 	"both", "0");
+ print "&nbsp;<input type=submit value=\"$text{'search_instance_go'}\">\n";

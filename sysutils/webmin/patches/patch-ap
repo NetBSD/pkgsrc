@@ -1,0 +1,14 @@
+$NetBSD: patch-ap,v 1.1.2.2 2008/07/25 10:06:30 rtr Exp $
+
+--- webminlog/search.cgi.orig	2007-09-21 23:26:52.000000000 +0200
++++ webminlog/search.cgi
+@@ -91,7 +91,8 @@ $searchmsg = join(" ",
+ if (@match) {
+ 	if ($in{'sid'}) {
+ 		print "<b>",&text('search_sid', "<tt>$match[0]->{'user'}</tt>",
+-				  "<tt>$in{'sid'}</tt>")," ..</b><p>\n";
++				  "<tt>" . &html_escape($in{'sid'}) . "</tt>"),
++				  " ..</b><p>\n";
+ 		}
+ 	elsif ($in{'uall'} == 1 && $in{'mall'} && $in{'tall'}) {
+ 		print "<b>$text{'search_critall'} ..</b><p>\n";

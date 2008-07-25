@@ -1,0 +1,50 @@
+$NetBSD: patch-ay,v 1.1.2.2 2008/07/25 10:06:30 rtr Exp $
+
+--- mailboxes/mail_search.cgi.orig	2007-09-21 23:28:31.000000000 +0200
++++ mailboxes/mail_search.cgi
+@@ -46,7 +46,8 @@ if ($in{'simple'}) {
+ 		@searchlist = ( [ $field, $what ] );
+ 		@rv = &mailbox_search_mail(\@searchlist, 0, $folder);
+ 		print "<p><b>",&text('search_results5', scalar(@rv),
+-			    "<tt>$field</tt>", "<tt>$what</tt>")," ..</b><p>\n";
++			    "<tt>" . &html_escape($field) . "</tt>", "<tt>" .
++			    &html_escape($what) . "</tt>")," ..</b><p>\n";
+ 		}
+ 	else {
+ 		# Just search by Subject and From in one folder
+@@ -73,7 +74,8 @@ if ($in{'simple'}) {
+ 			&error($text{'search_eboolean'});
+ 			}
+ 		print "<p><b>",&text('search_results2', scalar(@rv),
+-				     "<tt>$in{'search'}</tt>")," ..</b><p>\n";
++				     "<tt>" . &html_escape($in{'search'}) .
++				     "</tt>")," ..</b><p>\n";
+ 		}
+ 	foreach $mail (@rv) {
+ 		$mail->{'folder'} = $folder;
+@@ -106,8 +108,10 @@ else {
+ $showto = $folder->{'sent'} || $folder->{'drafts'};
+ if (@rv) {
+ 	print "<form action=delete_mail.cgi method=post>\n";
+-	print "<input type=hidden name=folder value='$in{'folder'}'>\n";
+-	print "<input type=hidden name=user value='$in{'user'}'>\n";
++	print "<input type=hidden name=folder value='" .
++		&html_escape($in{'folder'}) . "'>\n";
++	print "<input type=hidden name=user value='" .
++		&html_escape($in{'user'}) . "'>\n";
+ 	if ($config{'top_buttons'}) {
+ 		if (!$multi_folder) {
+ 			&show_buttons(1, \@folders, $folder, \@rv, $in{'user'},
+@@ -200,8 +204,9 @@ else {
+ 	print "<b>$text{'search_none'}</b> <p>\n";
+ 	}
+ 
+-&ui_print_footer($in{'simple'} ? ( ) : ( "search_form.cgi?folder=$in{'folder'}",
+-				$text{'sform_return'} ),
+-	"list_mail.cgi?user=$in{'user'}&folder=$in{'folder'}", $text{'mail_return'},
++&ui_print_footer($in{'simple'} ? ( ) : ( "search_form.cgi?folder=" .
++	&urlize($in{'folder'}), $text{'sform_return'} ),
++	"list_mail.cgi?user=" . &urlize($in{'user'}) . "&folder=" .
++	&urlize($in{'folder'}), $text{'mail_return'},
+ 	"", $text{'index_return'});
+ 
