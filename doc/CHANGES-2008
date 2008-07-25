@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1676 2008/07/25 14:21:40 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1677 2008/07/25 19:44:15 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2859,3 +2859,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/musicpd to 0.13.1nb1 [obache 2008-07-25]
 	Updated pkgtools/pkglint to 4.87 [dillo 2008-07-25]
 	Updated audio/bmp-musepack to 1.2 [obache 2008-07-25]
+	Updated net/unison-devel to 2.30.4 [tonio 2008-07-25]
