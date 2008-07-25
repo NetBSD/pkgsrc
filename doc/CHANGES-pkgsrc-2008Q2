@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.12 2008/07/25 09:22:08 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.13 2008/07/25 09:29:26 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -29,3 +29,5 @@ pullup ticket #2456 requested by tonnerre
 dnsmasq: update package for fixes and CVE
 pullup ticket #2459 requested by tnn
 openssh: patch for X11 forwarding issue on HP-UX
+pullup ticket #2460 requested by tonnerre
+byacc: patch to fix DoS vulnerability
