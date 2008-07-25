@@ -2,7 +2,7 @@
 #
 # Startup script for Zeo @ZOPE_VERSION@ server.
 #
-# $NetBSD: zeo.sh,v 1.1 2008/01/06 15:51:40 taca Exp $
+# $NetBSD: zeo.sh,v 1.2 2008/07/25 08:23:11 taca Exp $
 #
 
 # PROVIDE: zeo@ZOPE_VERSION@
@@ -29,8 +29,7 @@ fi
 
 name="zeo@ZOPE_VERSION@"
 rcvar="$name@RCVAR_SUFFIX@"
-version="@ZOPE_FULL_VERSION@"
-zeo_name="Zope ${version}"
+zeo_name="Zeo @ZOPE_FULL_VERSION@"
 
 zeo@ZOPE_VERSION@ctl () {
 	cmd = $1
