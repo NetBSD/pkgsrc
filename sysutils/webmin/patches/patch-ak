@@ -1,0 +1,14 @@
+$NetBSD: patch-ak,v 1.1 2008/07/25 02:55:27 tonnerre Exp $
+
+--- sendmail/mailq_search.cgi.orig	2007-09-21 23:26:27.000000000 +0200
++++ sendmail/mailq_search.cgi
+@@ -18,7 +18,8 @@ $conf = &get_sendmailcf();
+ $fields = [ [ $in{'field'}, $in{'match'} ] ];
+ @qmails = grep { &mail_matches($fields, 1, $_) } @qmails;
+ print "<p><b>",&text($in{'field'} =~ /^\!/ ? 'search_results3' :
+-	  'search_results2', scalar(@qmails), "<tt>$in{'match'}</tt>"),"</b><p>\n";
++	  'search_results2', scalar(@qmails), "<tt>" .
++	  &html_escape($in{'match'}) . "</tt>"),"</b><p>\n";
+ 
+ if (@qmails) {
+ 	%qmails = map { $_->{'file'}, $_ } @qmails;
