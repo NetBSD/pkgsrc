@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1665 2008/07/24 23:50:49 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1666 2008/07/25 00:54:44 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2843,3 +2843,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/scmgit-base to 1.5.6.4 [bjs 2008-07-24]
 	Updated devel/scmgit-docs to 1.5.6.4 [bjs 2008-07-24]
 	Updated audio/libsndfile to 1.0.17nb4 [obache 2008-07-24]
+	Updated databases/sqlitemanager to 1.2.0 [tonnerre 2008-07-25]
