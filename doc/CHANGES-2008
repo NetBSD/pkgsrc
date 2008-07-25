@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1667 2008/07/25 02:58:02 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1668 2008/07/25 03:38:50 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2845,3 +2845,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/libsndfile to 1.0.17nb4 [obache 2008-07-24]
 	Updated databases/sqlitemanager to 1.2.0 [tonnerre 2008-07-25]
 	Updated sysutils/webmin to 1.370nb3 [tonnerre 2008-07-25]
+	Updated misc/splitvt to 1.6.6 [tonnerre 2008-07-25]
