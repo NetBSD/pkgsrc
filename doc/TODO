@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7429 2008/07/25 14:21:50 tonnerre Exp $
+$NetBSD: TODO,v 1.7430 2008/07/25 14:23:05 obache Exp $
 
 Suggested new packages
 ======================
@@ -486,7 +486,6 @@ Suggested package updates
 	o blender-2.46
 	o blur6ex-0.3.462
 	o bmon-2.1.0
-	o bmp-musepack-1.2
 	o bochs-2.3.7
 	o boolean-6.97
 	o bos-2.5
