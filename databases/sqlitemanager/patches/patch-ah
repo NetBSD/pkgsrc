@@ -1,0 +1,21 @@
+$NetBSD: patch-ah,v 1.1.2.2 2008/07/25 09:53:56 tron Exp $
+
+--- spaw/config/spaw_control.config.php.orig	2006-04-18 13:25:53.000000000 +0200
++++ spaw/config/spaw_control.config.php
+@@ -12,6 +12,9 @@
+ // v.1.0, 2003-03-27
+ // ================================================
+ 
++// Prevent remote file inclusion
++if (preg_match("/:\/\//i", $spaw_root)) die ("can't include external file");
++
+ // directory where spaw files are located
+ if(!isset($spaw_dir)) {
+ 	$spaw_dir = str_replace('\\','/',dirname(__FILE__));
+@@ -110,4 +113,4 @@ $spaw_internal_link_script = 'url to you
+ // disables style related controls in dialogs when css class is selected
+ $spaw_disable_style_controls = true;
+ 
+-?>
++?>
+\ No newline at end of file

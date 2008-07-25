@@ -1,5 +1,16 @@
-$NetBSD: distinfo,v 1.2 2005/02/23 16:33:10 agc Exp $
+$NetBSD: distinfo,v 1.2.30.1 2008/07/25 09:53:56 tron Exp $
 
-SHA1 (SQLiteManager-1.0.4.tar.gz) = fd45b6c144c2971a6df5453d198d552c2b91ba98
-RMD160 (SQLiteManager-1.0.4.tar.gz) = 61d2c437b52bf8c93e0925165307e750a16b924a
-Size (SQLiteManager-1.0.4.tar.gz) = 136147 bytes
+SHA1 (SQLiteManager-1.2.0.tar.gz) = e3e9d0109c67d4dd2d19c6980270ea87206670f4
+RMD160 (SQLiteManager-1.2.0.tar.gz) = 1971cdc8db7f2719245c645e2f014c0ca3ded24b
+Size (SQLiteManager-1.2.0.tar.gz) = 700971 bytes
+SHA1 (patch-aa) = f88d3a98cb0f1e1902d91efdd9fbbbeae86ee2ff
+SHA1 (patch-ab) = 7af9f43b8a76a40320a050b3095554e3db23d180
+SHA1 (patch-ac) = 022330065c8a8abe4fa42f9a10ccc0c7a2e05bfa
+SHA1 (patch-ad) = ecbe26abc17434f884de4bde78f04b3f492ab5d6
+SHA1 (patch-ae) = b463599a74dda1be4aa11f16c87c13e3dd56ef0d
+SHA1 (patch-af) = e1ecec86999c78c25ca38d87e0b378c71e0d4fe2
+SHA1 (patch-ag) = f3caa136048428e53f44ea708ca786fe8be526f9
+SHA1 (patch-ah) = 630306b033e609af4dbb43cf02d409a3286c4be7
+SHA1 (patch-ai) = c3cbe5032674da69e491122c1d26d9503f50604a
+SHA1 (patch-aj) = 6855d0ee5e48e36c64bf99be04aba39cf9d8a641
+SHA1 (patch-ak) = b5fcc942c28026660a2e6fd034b08cda4258c805

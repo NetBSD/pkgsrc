@@ -1,0 +1,14 @@
+$NetBSD: patch-ai,v 1.1.2.2 2008/07/25 09:53:56 tron Exp $
+
+--- spaw/class/toolbars.class.php.orig	2006-04-18 13:25:53.000000000 +0200
++++ spaw/class/toolbars.class.php
+@@ -12,6 +12,9 @@
+ // v.1.0, 2003-03-22
+ // ================================================
+ 
++// Prevent remote file inclusion
++if (preg_match("/:\/\//i", $spaw_root)) die ("can't include external file");
++
+ // toolbar item type constants
+ define("SPAW_TBI_IMAGE", "image");
+ define("SPAW_TBI_BUTTON", "button");
