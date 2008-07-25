@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1670 2008/07/25 09:15:27 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.1671 2008/07/25 11:34:16 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2849,3 +2849,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/stgit to 0.14.3 [bjs 2008-07-25]
 	Updated shells/zsh to 4.2.6nb2 [ghen 2008-07-25]
 	Updated shells/zsh-current to 4.3.4nb3 [ghen 2008-07-25]
+	Removed lang/python23-nth [joerg 2008-07-25]
