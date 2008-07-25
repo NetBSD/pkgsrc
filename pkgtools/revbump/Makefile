@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/07/11 12:52:14 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/07/25 13:08:31 obache Exp $
 
 DISTNAME=		revbump-1.8
 CATEGORIES=		pkgtools
@@ -10,6 +10,7 @@ HOMEPAGE=		http://www.pkgsrc.org/
 COMMENT=		Tools for bumping PKGREVISIONs (for pkgsrc developers)
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 NO_CHECKSUM=	yes
@@ -28,11 +29,11 @@ do-build:
 		${FILESDIR}/revbump > ${WRKDIR}/revbump
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKDIR}/blbump ${PREFIX}/bin
-	${INSTALL_MAN} ${FILESDIR}/blbump.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_SCRIPT} ${WRKDIR}/finddepends ${PREFIX}/bin
-	${INSTALL_MAN} ${FILESDIR}/finddepends.1 ${PREFIX}/${PKGMANDIR}/man1
-	${INSTALL_SCRIPT} ${WRKDIR}/revbump ${PREFIX}/bin
-	${INSTALL_MAN} ${FILESDIR}/revbump.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKDIR}/blbump ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${FILESDIR}/blbump.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKDIR}/finddepends ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${FILESDIR}/finddepends.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_SCRIPT} ${WRKDIR}/revbump ${DESTDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${FILESDIR}/revbump.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"
