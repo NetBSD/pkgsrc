@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2008/07/13 18:26:24 tonnerre Exp $
+# $NetBSD: Makefile,v 1.15 2008/07/25 09:14:48 ghen Exp $
 
 .include "../../shells/zsh/Makefile.common"
 
-PKGREVISION=	2
+PKGREVISION=	3
 
 ZSH_VERSION=	4.3.4
 ZSH_MAINTAINER=	uebayasi@NetBSD.org
