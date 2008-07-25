@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.9 2008/04/25 20:39:09 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/07/25 04:00:59 bjs Exp $
 
-DISTNAME=	stgit-0.14.2
+DISTNAME=	stgit-0.14.3
 CATEGORIES=	devel
 MASTER_SITES=	http://homepage.ntlworld.com/cmarinas/stgit/
 
@@ -24,7 +24,7 @@ PYTHON_PATCH_SCRIPTS=	*.py stgit/*.py stg
 PYDISTUTILSPKG=		yes
 PYSETUPINSTALLARGS=	--prefix=${PREFIX}
 
-MAKE_ENV+=	ASCIIDOC=${LOCALBASE}/bin/asciidoc
+MAKE_ENV+=	ASCIIDOC=${PREFIX}/bin/asciidoc
 MAKE_ENV+=	ASCIIDOC_EXTRA=${ASCIIDOC_EXTRA:M*:Q}
 
 .include "../../mk/bsd.prefs.mk"
