@@ -1,0 +1,14 @@
+$NetBSD: patch-ao,v 1.1.2.2 2008/07/25 10:06:29 rtr Exp $
+
+--- postfix/mailq_search.cgi.orig	2007-09-21 23:26:52.000000000 +0200
++++ postfix/mailq_search.cgi
+@@ -17,7 +17,8 @@ $neg = ($in{'field'} =~ s/^!//);
+ 		 $neg ? !$r : $r } @qfiles;
+ 
+ print "<p><b>",&text($in{'field'} =~ /^\!/ ? 'search_results3' :
+-	  'search_results2', scalar(@qfiles), "<tt>$in{'match'}</tt>"),"</b><p>\n";
++	  'search_results2', scalar(@qfiles), "<tt>" .
++	  &html_escape($in{'match'}) . "</tt>"),"</b><p>\n";
+ if (@qfiles) {
+ 	# Show matching messages
+ 	&mailq_table(\@qfiles);
