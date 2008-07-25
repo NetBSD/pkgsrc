@@ -1,0 +1,46 @@
+$NetBSD: patch-aj,v 1.1.2.2 2008/07/25 10:06:29 rtr Exp $
+
+--- proc/index_search.cgi.orig	2008-07-25 04:39:36.000000000 +0200
++++ proc/index_search.cgi
+@@ -22,12 +22,12 @@ printf "<input type=radio name=mode valu
+ 	$in{mode}==1 ? "checked" : "";
+ print &hlink("<b>$text{'search_match'}</b>","smatch"),"\n";
+ printf "<input name=match size=20 value=\"%s\"><br>\n",
+-	$in{mode}==1 ? $in{match} : "";
++	$in{mode}==1 ? &html_escape($in{match}) : "";
+ 
+ printf "<input type=radio name=mode value=2 %s>\n",
+ 	$in{mode}==2 ? "checked" : "";
+ $cpu = sprintf "<input name=cpu size=4 value=\"%s\">\n",
+-		$in{mode}==2 ? $in{cpu} : "";
++		$in{mode}==2 ? html_escape($in{cpu}) : "";
+ print &hlink("<b>".&text('search_cpupc', $cpu)."</b>", "scpu"),"<br>\n";
+ 
+ print "</td><td valign=top>\n";
+@@ -49,7 +49,7 @@ if ($has_fuser_command) {
+ 		}
+ 	else {
+ 		printf "<input name=fs size=15 value='%s'><br>\n",
+-			$in{'mode'}==3 ? $in{'fs'} : "";
++			$in{'mode'}==3 ? &html_escape($in{'fs'}) : "";
+ 		}
+ 
+ 	printf "<input type=radio name=mode value=4 %s>\n",
+@@ -66,7 +66,7 @@ if ($has_lsof_command) {
+ 		$in{mode}==5 ? "checked" : "";
+ 	print &hlink("<b>$text{'search_port'}</b>","ssocket"),"\n";
+ 	printf "<input name=port size=6 value='%s'>\n",
+-		$in{mode}==5 ? $in{port} : "";
++		$in{mode}==5 ? &html_escape($in{port}) : "";
+ 
+ 	# Show input for protocol and port
+ 	print &hlink("<b>$text{'search_protocol'}</b>","ssocket"),"\n";
+@@ -83,7 +83,7 @@ if ($has_lsof_command) {
+ 		$in{mode}==6 ? "checked" : "";
+ 	print &hlink("<b>$text{'search_ip'}</b>","sip"),"\n";
+ 	printf "<input name=ip size=15 value='%s'>\n",
+-		$in{mode}==6 ? $in{ip} : "";
++		$in{mode}==6 ? &html_escape($in{ip}) : "";
+ 	}
+ 
+ print "</td></tr></table>\n";

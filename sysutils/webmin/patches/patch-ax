@@ -1,0 +1,48 @@
+$NetBSD: patch-ax,v 1.1.2.2 2008/07/25 10:06:30 rtr Exp $
+
+--- htaccess-htpasswd/search.cgi.orig	2007-09-21 23:28:30.000000000 +0200
++++ htaccess-htpasswd/search.cgi
+@@ -19,7 +19,8 @@ $in{'search'} =~ /^\// && $in{'search'} 
+ 
+ @dirs = &list_directories();
+ %got = map { ( "$_->[0]/$config{'htaccess'}", 1 ) } @dirs;
+-print "<b>",&text('search_doing', "<tt>$in{'search'}</tt>"),"</b><p>\n";
++print "<b>",&text('search_doing', "<tt>" . &html_escape($in{'search'}) .
++	"</tt>"), "</b><p>\n";
+ 
+ # Use the find command
+ &switch_user();
+@@ -28,24 +29,28 @@ open(FIND, "find ".quotemeta($in{'search
+ while($f = <FIND>) {
+ 	chop($f);
+ 	if ($got{$f}) {
+-		print &text('search_already', "<tt>$f</tt>"),"<br>\n";
++		print &text('search_already', "<tt>" . &html_escape($f) .
++			"</tt>"),"<br>\n";
+ 		}
+ 	elsif (!open(TEST, $f)) {
+-		print &text('search_open', "<tt>$f</tt>", $!),"<br>\n";
++		print &text('search_open', "<tt>" . &html_escape($f) . "</tt>",
++			$!),"<br>\n";
+ 		}
+ 	else {
+ 		$conf = &foreign_call($apachemod, "get_htaccess_config", $f);
+ 		$currfile = &foreign_call($apachemod, "find_directive",
+ 					  "AuthUserFile", $conf, 1);
+ 		if ($currfile) {
+-			print &text('search_found', "<tt>$f</tt>",
+-				    "<tt>$currfile</tt>"),"<br>\n";
++			print &text('search_found', "<tt>" . &html_escape($f) .
++				"</tt>", "<tt>" . &html_escape($currfile) .
++				"</tt>"),"<br>\n";
+ 			local $d = $f;
+ 			$d =~ s/\/$config{'htaccess'}$//;
+ 			push(@dirs, [ $d, $currfile ]);
+ 			}
+ 		else {
+-			print &text('search_noprot', "<tt>$f</tt>"),"<br>\n";
++			print &text('search_noprot', "<tt>" .
++				&html_escape($f) . "</tt>"),"<br>\n";
+ 			}
+ 		}
+ 	}
