@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/06/05 13:57:09 reed Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/07/26 20:03:43 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-makerepo
 bin/ikiwiki-transition
@@ -22,7 +22,9 @@ share/ikiwiki/basewiki/ikiwiki/formatting.mdwn
 share/ikiwiki/basewiki/ikiwiki/markdown.mdwn
 share/ikiwiki/basewiki/ikiwiki/openid.mdwn
 share/ikiwiki/basewiki/ikiwiki/pagespec.mdwn
+share/ikiwiki/basewiki/ikiwiki/pagespec/attachment.mdwn
 share/ikiwiki/basewiki/ikiwiki/preprocessordirective.mdwn
+share/ikiwiki/basewiki/ikiwiki/searching.mdwn
 share/ikiwiki/basewiki/ikiwiki/subpage.mdwn
 share/ikiwiki/basewiki/ikiwiki/subpage/linkingrules.mdwn
 share/ikiwiki/basewiki/ikiwiki/wikilink.mdwn
@@ -88,6 +90,7 @@ share/ikiwiki/templates/recentchanges.tmpl
 share/ikiwiki/templates/rssitem.tmpl
 share/ikiwiki/templates/rsspage.tmpl
 share/ikiwiki/templates/searchform.tmpl
+share/ikiwiki/templates/searchquery.tmpl
 share/ikiwiki/templates/titlepage.tmpl
 share/locale/bg/LC_MESSAGES/ikiwiki.mo
 share/locale/cs/LC_MESSAGES/ikiwiki.mo
@@ -105,6 +108,7 @@ share/locale/vi/LC_MESSAGES/ikiwiki.mo
 @dirrm share/ikiwiki/basewiki/wikiicons
 @dirrm share/ikiwiki/basewiki/templates
 @dirrm share/ikiwiki/basewiki/ikiwiki/subpage
+@dirrm share/ikiwiki/basewiki/ikiwiki/pagespec
 @dirrm share/ikiwiki/basewiki/ikiwiki
 @dirrm share/ikiwiki/basewiki
 @dirrm share/ikiwiki
