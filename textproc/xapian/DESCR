@@ -1,0 +1,14 @@
+Xapian is an Open Source Search Engine Library, released under the
+GPL. It's written in C++, with bindings to allow use from Perl,
+Python, PHP, Java, Tcl, C# and Ruby (so far!)
+
+Xapian is a highly adaptable toolkit which allows developers to
+easily add advanced indexing and search facilities to their own
+applications. It supports the Probabilistic Information Retrieval
+model and also supports a rich set of boolean query operators.
+
+If you're after a packaged search engine for your website, you
+should take a look at Omega: an application we supply built upon
+Xapian. Unlike most other website search solutions, Xapian's
+versatility allows you to extend Omega to meet your needs as they
+grow.
