@@ -1,0 +1,3 @@
+CLASS and $CLASS are both synonyms for __PACKAGE__. Easier to type.
+
+$CLASS has the additional benefit of working in strings.
