@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.420 2008/07/21 19:20:39 joerg Exp $
+# $NetBSD: Makefile,v 1.421 2008/07/26 23:44:26 schmonz Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -209,6 +209,7 @@ SUBDIR+=	p5-Pod-Tests
 SUBDIR+=	p5-Pod-Tree
 SUBDIR+=	p5-Regexp-Common
 SUBDIR+=	p5-SGMLS
+SUBDIR+=	p5-Search-Xapian
 SUBDIR+=	p5-String-Approx
 SUBDIR+=	p5-String-CRC32
 SUBDIR+=	p5-String-ShellQuote
@@ -418,6 +419,8 @@ SUBDIR+=	wdiff
 SUBDIR+=	writer2latex
 SUBDIR+=	xalan-c
 SUBDIR+=	xalan-j
+SUBDIR+=	xapian
+SUBDIR+=	xapian-omega
 SUBDIR+=	xerces-c
 SUBDIR+=	xerces-j
 SUBDIR+=	xfce4-dict-plugin
