@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1686 2008/07/26 14:45:48 tonio Exp $
+$NetBSD: CHANGES-2008,v 1.1687 2008/07/26 20:07:57 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2869,3 +2869,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Class-MOP version 0.63 [seb 2008-07-26]
 	Added devel/p5-Moose version 0.54 [seb 2008-07-26]
 	Updated net/liblive to 20080725 [tonio 2008-07-26]
+	Updated www/ikiwiki to 2.54 [schmonz 2008-07-26]
