@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1679 2008/07/26 06:53:38 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1680 2008/07/26 06:59:20 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2862,3 +2862,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/unison-devel to 2.30.4 [tonio 2008-07-25]
 	Updated net/unison to 2.27.57 [tonio 2008-07-25]
 	Updated devel/p5-Smart-Comments to 1.0.3 [seb 2008-07-26]
+	Updated devel/p5-Getopt-Euclid to 0.2.0 [seb 2008-07-26]
