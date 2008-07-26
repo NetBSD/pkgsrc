@@ -1,0 +1,2 @@
+The Perl 5 module Sub::Name has only one function, subname, which
+assigns new names to subs.
