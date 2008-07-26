@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1687 2008/07/26 20:07:57 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.1688 2008/07/26 20:30:30 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2870,3 +2870,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Moose version 0.54 [seb 2008-07-26]
 	Updated net/liblive to 20080725 [tonio 2008-07-26]
 	Updated www/ikiwiki to 2.54 [schmonz 2008-07-26]
+	Updated devel/p5-ExtUtils-MakeMaker to 6.44 [he 2008-07-26]
+	Updated www/p5-Apache-AuthCookie to 3.12 [he 2008-07-26]
+	Added devel/p5-CLASS version 1.00 [he 2008-07-26]
+	Added math/p5-Math-Random-MT-Perl version 1.05 [he 2008-07-26]
+	Updated security/p5-Data-SimplePassword to 0.04 [he 2008-07-26]
