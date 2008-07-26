@@ -1,13 +1,23 @@
-# $NetBSD: options.mk,v 1.4 2008/04/07 15:36:19 bjs Exp $
+# $NetBSD: options.mk,v 1.4.4.1 2008/07/26 01:34:36 rtr Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libsndfile
 PKG_OPTIONS_OPTIONAL_GROUPS=	output
 PKG_OPTIONS_GROUP.output=	oss sun
 
-SNDFILE_OUTPUT.${OPSYS}?=	oss
 SNDFILE_OUTPUT.NetBSD=		sun
 SNDFILE_OUTPUT.OpenBSD=		sun
-SNDFILE_OUTPUT.Solaris=		sun
+SNDFILE_OUTPUT.SunOS=		sun
+
+.include "../../mk/bsd.fast.prefs.mk"
+
+.if !defined(SNDFILE_OUTPUT.${OPSYS})
+CHECK_BUILTIN.oss:=	yes
+.  include "../../mk/oss.builtin.mk"
+CHECK_BUILTIN.oss:=	no
+.  if defined(IS_BUILTIN.oss) && !empty(IS_BUILTIN.oss:M[yY][eE][sS])
+SNDFILE_OUTPUT.${OPSYS}?=	oss
+.  endif
+.endif
 
 PKG_SUGGESTED_OPTIONS=		${SNDFILE_OUTPUT.${OPSYS}}
 
