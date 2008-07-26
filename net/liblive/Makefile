@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2008/07/17 10:11:19 ahoka Exp $
+# $NetBSD: Makefile,v 1.17 2008/07/26 14:44:34 tonio Exp $
 #
 
-DISTNAME=	live.2008.07.06
+DISTNAME=	live.2008.07.25
 PKGNAME=	lib${DISTNAME:S/./-/:S/.//g}
 CATEGORIES=	net
 MASTER_SITES=	http://www.live555.com/liveMedia/public/
@@ -21,6 +21,7 @@ INSTALLATION_DIRS=	bin lib
 do-configure:
 	${CP} ${FILESDIR}/config.netbsd ${WRKSRC}
 	${CP} ${FILESDIR}/config.netbsd ${WRKSRC}/config.dragonfly
+	${CP} ${FILESDIR}/config.netbsd ${WRKSRC}/config.darwin
 	cd ${WRKSRC} && ${SH} ./genMakefiles ${LOWER_OPSYS}
 
 do-install:
