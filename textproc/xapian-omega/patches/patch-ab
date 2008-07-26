@@ -1,0 +1,20 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/07/26 23:37:29 schmonz Exp $
+
+--- omega.conf.orig	2008-07-16 00:42:17.000000000 -0400
++++ omega.conf
+@@ -1,11 +1,11 @@
+ # Directory containing Xapian databases:
+-database_dir /var/lib/omega/data
++database_dir @VARBASE@/xapian-omega/data
+ 
+ # Directory containing OmegaScript templates:
+-template_dir /var/lib/omega/templates
++template_dir @VARBASE@/xapian-omega/templates
+ 
+ # Directory to write Omega logs to:
+-log_dir /var/log/omega
++log_dir @VARBASE@/log/xapian-omega
+ 
+ # Directory containing any cdb files for the $lookup OmegaScript command:
+-cdb_dir /var/lib/omega/cdb
++cdb_dir @VARBASE@/xapian-omega/cdb
