@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1684 2008/07/26 12:25:48 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1685 2008/07/26 13:55:46 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2867,3 +2867,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Sub-Name version 0.04 [seb 2008-07-26]
 	Added devel/p5-Sub-Identify version 0.03 [seb 2008-07-26]
 	Added devel/p5-Class-MOP version 0.63 [seb 2008-07-26]
+	Added devel/p5-Moose version 0.54 [seb 2008-07-26]
