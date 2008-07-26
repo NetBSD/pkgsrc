@@ -1,0 +1,37 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/07/26 23:37:29 schmonz Exp $
+
+--- Makefile.in.orig	2008-07-16 00:46:59.000000000 -0400
++++ Makefile.in
+@@ -35,7 +35,7 @@ PRE_UNINSTALL = :
+ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+-pkglibbin_PROGRAMS = omega$(EXEEXT)
++pkglibbin_PROGRAMS = xapian-omega$(EXEEXT)
+ bin_PROGRAMS = omindex$(EXEEXT) scriptindex$(EXEEXT)
+ check_PROGRAMS = htmlparsetest$(EXEEXT) md5test$(EXEEXT) \
+ 	utf8converttest$(EXEEXT)
+@@ -332,10 +332,10 @@ EXTRA_DIST = \
+ 	xapian-omega.spec
+ 
+ AM_CPPFLAGS = -DCONFIGFILE_SYSTEM=\"$(sysconfdir)/omega.conf\"
+-pkglibbindir = $(pkglibdir)/bin
++pkglibbindir = $(libexecdir)/cgi-bin
+ dist_bin_SCRIPTS = dbi2omega htdig2omega mbox2omega
+ TESTS = htmlparsetest$(EXEEXT) md5test$(EXEEXT) utf8converttest$(EXEEXT)
+-omegadatadir = $(datadir)/omega
++omegadatadir = $(datadir)/xapian-omega
+ dist_omegadata_DATA = htdig2omega.script mbox2omega.script
+ dist_sysconf_DATA = omega.conf
+ 
+@@ -506,8 +506,8 @@ htmlparsetest$(EXEEXT): $(htmlparsetest_
+ md5test$(EXEEXT): $(md5test_OBJECTS) $(md5test_DEPENDENCIES) 
+ 	@rm -f md5test$(EXEEXT)
+ 	$(CXXLINK) $(md5test_OBJECTS) $(md5test_LDADD) $(LIBS)
+-omega$(EXEEXT): $(omega_OBJECTS) $(omega_DEPENDENCIES) 
+-	@rm -f omega$(EXEEXT)
++xapian-omega$(EXEEXT): $(omega_OBJECTS) $(omega_DEPENDENCIES) 
++	@rm -f xapian-omega$(EXEEXT)
+ 	$(CXXLINK) $(omega_OBJECTS) $(omega_LDADD) $(LIBS)
+ omindex$(EXEEXT): $(omindex_OBJECTS) $(omindex_DEPENDENCIES) 
+ 	@rm -f omindex$(EXEEXT)

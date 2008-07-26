@@ -1,0 +1,22 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/26 23:37:29 schmonz Exp $
+bin/dbi2omega
+bin/htdig2omega
+bin/mbox2omega
+bin/omindex
+bin/scriptindex
+libexec/cgi-bin/xapian-omega
+man/man1/omindex.1
+man/man1/scriptindex.1
+share/doc/xapian-omega/cgiparams.html
+share/doc/xapian-omega/omegascript.html
+share/doc/xapian-omega/overview.html
+share/doc/xapian-omega/quickstart.html
+share/doc/xapian-omega/scriptindex.html
+share/doc/xapian-omega/termprefixes.html
+share/examples/xapian-omega/omega.conf
+share/xapian-omega/htdig2omega.script
+share/xapian-omega/mbox2omega.script
+@unexec ${RMDIR} %D/libexec/cgi-bin 2>/dev/null || ${TRUE}
+@dirrm share/xapian-omega
+@dirrm share/examples/xapian-omega
+@dirrm share/doc/xapian-omega
