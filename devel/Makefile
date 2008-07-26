@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.952 2008/07/26 08:02:11 seb Exp $
+# $NetBSD: Makefile,v 1.953 2008/07/26 09:29:17 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -635,6 +635,7 @@ SUBDIR+=	p5-Spoon
 SUBDIR+=	p5-Storable
 SUBDIR+=	p5-String-Format
 SUBDIR+=	p5-Sub-Exporter
+SUBDIR+=	p5-Sub-Identify
 SUBDIR+=	p5-Sub-Install
 SUBDIR+=	p5-Sub-Installer
 SUBDIR+=	p5-Sub-Name
