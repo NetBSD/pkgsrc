@@ -1,0 +1,5 @@
+Omega operates on a set of databases. Each database is created and
+updated separately using either omindex or scriptindex. You can
+search these databases (or any other Xapian database with suitable
+contents) via a web front-end provided by omega, a CGI application.
+A search can also be done over more than one database at once.
