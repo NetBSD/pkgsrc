@@ -1,4 +1,4 @@
-# $NetBSD: default,v 1.1 2008/04/24 07:40:24 bjs Exp $
+# $NetBSD: default,v 1.2 2008/07/27 00:03:42 bjs Exp $
 
 CONFIG_NAME = default
 
@@ -10,8 +10,8 @@ MESA_TINY=	3
 GLU_CFLAGS=	# defined
 
 MKLIB_OPTIONS=
-MKDEP=	makedepend
-MKDEP_OPTIONS=	-fdepend
+MKDEP?=	makedepend
+MKDEP_OPTIONS?=	-fdepend
 INSTALL?=	$(TOP)/bin/minstall
 
 # Python and flags (generally only needed by the developers)
