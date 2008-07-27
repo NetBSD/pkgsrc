@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2008/07/27 21:44:47 dholland Exp $
+
+--- Main/Include/human.h~	2004-12-10 10:51:41.000000000 -0500
++++ Main/Include/human.h	2008-07-27 16:29:28.000000000 -0400
+@@ -130,7 +130,7 @@
+   virtual truth CheckIfEquipmentIsNotUsable(int) const;
+   virtual void AddSpecialStethoscopeInfo(felist&) const;
+   virtual item* GetPairEquipment(int) const;
+-  virtual truth HasHead() const { return truth(GetHead()); }
++  virtual truth HasHead() const { return truth(GetHead() != NULL); }
+   virtual const festring& GetStandVerb() const;
+   virtual head* Behead();
+   virtual void AddAttributeInfo(festring&) const;
