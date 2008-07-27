@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.21 2008/05/26 02:13:15 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2008/07/27 08:40:00 obache Exp $
 
 DISTNAME=	voice_ogirab_di-2.0
 PKGNAME=	festvox-ogirab-2.0
 PKGREVISION=	1
 CATEGORIES=	audio
-MASTER_SITES=	ftp://cslu.cse.ogi.edu/pub/tts/
+MASTER_SITES=	http://www.cslu.ogi.edu/tts/download/data/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cslu.cse.ogi.edu/tts/
