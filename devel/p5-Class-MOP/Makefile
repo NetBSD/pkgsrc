@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/07/26 12:21:38 seb Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/27 22:24:39 seb Exp $
 #
 
 DISTNAME=	Class-MOP-0.63
@@ -18,6 +18,8 @@ DEPENDS+=	p5-MRO-Compat>=0.05:../../devel/p5-MRO-Compat
 # Test::More
 #BUILD_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
 #BUILD_DEPENDS+=	p5-PathTools-[0-9]*:../../devel/p5-PathTools
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 PERL5_PACKLIST=	auto/Class/MOP/.packlist
 
