@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.20 2008/06/12 02:14:26 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2008/07/27 17:29:36 he Exp $
 
-DISTNAME=	Term-ReadLine-Gnu-1.16
+DISTNAME=	Term-ReadLine-Gnu-1.17a
 PKGNAME=	p5-${DISTNAME:S/-Gnu//}
 SVR4_PKGNAME=	p5trl
 CATEGORIES=	devel perl5
@@ -17,6 +17,8 @@ USE_GNU_READLINE=	yes
 PERL5_PACKLIST=		auto/Term/ReadLine/Gnu/.packlist
 
 MAKE_PARAMS+=	--includedir=${PREFIX}/include --libdir=${PREFIX}/lib
+
+WRKSRC=		${WRKDIR}/${DISTNAME:C/a$//}
 
 REPLACE_PERL+=	Gnu/XS.pm Gnu/euc_jp.pm
 
