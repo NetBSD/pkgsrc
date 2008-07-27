@@ -562,14 +562,14 @@ pkgsrc provides the following key features:
 <p>The following principles are basic to pkgsrc:</p>
 <div class="itemizedlist"><ul type="disc">
 <li><p>&#8220;<span class="quote">It should only work if it's right.</span>&#8221;
-&#8212; That means, if a package contains bugs, it's better to find
+&mdash; That means, if a package contains bugs, it's better to find
 them and to complain about them rather than to just install the package
 and hope that it works. There are numerous checks in pkgsrc that try to
 find such bugs: Static analysis tools (<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkglint/README.html" target="_top"><code class="filename">pkgtools/pkglint</code></a>), build-time checks (portability
 of shell scripts), and post-installation checks (installed files,
 references to shared libraries, script interpreters).</p></li>
 <li><p>&#8220;<span class="quote">If it works, it should work everywhere</span>&#8221;
-&#8212; Like NetBSD has been ported to many hardware architectures,
+&mdash; Like NetBSD has been ported to many hardware architectures,
 pkgsrc has been ported to many operating systems. Care is taken that
 packages behave the same on all platforms.</p></li>
 </ul></div>
@@ -1281,8 +1281,8 @@ rdiff -u
 	pkgsrc and other gcc-compiled binaries reliably, a hotfix containing
 	POSIX.EXE, PSXDLL.DLL, PSXRUN.EXE, and PSXSS.EXE (899522 or newer)
 	must be installed.  Hotfixes are available from Microsoft through a
-	support contract; however, a NetBSD developer has made most Interix
-	hotfixes available for personal use from <a class="ulink" href="http://www.duh.org/interix/hotfixes.php" target="_top">http://www.duh.org/interix/hotfixes.php</a>.</p>
+	support contract; however, Debian Interix Port has made most Interix
+	hotfixes available for personal use from <a class="ulink" href="http://www.debian-interix.net/hotfixes/" target="_top">http://www.debian-interix.net/hotfixes/</a>.</p>
 <p>In addition to the hotfix noted above, it may be necessary to
 	disable Data Execution Prevention entirely to make Interix functional.
 	This may happen only with certain types of CPUs; the cause is not fully
@@ -1751,9 +1751,9 @@ and you can still use binary packages from someone else.</p>
     other packages depend on it. Instead, they are moved to the
     <code class="filename">vulnerable</code> subdirectory. So you may need to add
     this directory to the <code class="varname">PKG_PATH</code> variable. 
-    However, you should run <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a> regularly, especially
-    after installing new packages, and verify that the vulnerabilities
-    are acceptable for your configuration.</p>
+    However, you should run <span class="command"><strong>audit-packages</strong></span>
+    regularly, especially after installing new packages, and verify
+    that the vulnerabilities are acceptable for your configuration.</p>
 <p>After you've installed packages, be sure to have
     <code class="filename">/usr/pkg/bin</code> and <code class="filename">/usr/pkg/sbin</code> in your
     <code class="varname">PATH</code> so you can actually start the just
@@ -2177,7 +2177,7 @@ works.</p>
 	    can be NFS-mounted while <code class="filename">${WRKOBJDIR}</code>
 	    is local to every architecture. (It should be noted that
 	    <code class="varname">PKGSRCDIR</code> should not be set by the user
-	    &#8212; it is an internal definition which refers to the
+	    &mdash; it is an internal definition which refers to the
 	    root of the pkgsrc tree. It is possible to have many
 	    pkgsrc tree instances.)</p></li>
 <li><p><code class="varname">LOCALPATCHES</code>:
@@ -2798,7 +2798,7 @@ fi
 </li>
 <li>
 <p><code class="filename">/usr/src</code> (system sources,
-	  e. g. for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
+	  e.&nbsp;g. for <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/sysutils/aperture/README.html" target="_top"><code class="filename">sysutils/aperture</code></a>):</p>
 <pre class="screen"><code class="prompt">#</code> <strong class="userinput"><code>ln -s ../disk1/cvs .</code></strong>
 	  <code class="prompt">#</code> <strong class="userinput"><code>ln -s cvs/src-2.0 src</code></strong></pre>
 </li>
@@ -2944,8 +2944,7 @@ nbftp% <strong class="userinput"><code>chmod 755 .</code></strong>
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="bulk.pbulk.conf"></a>7.4.1. Configuration</h3></div></div></div>
-<p>TODO; see <a class="ulink" href="http://wiki.netbsd.se/index.php/pbulk-HOWTO" target="_top">the wiki</a> for
-more information.</p>
+<p>TODO; see pkgsrc/doc/HOWTO-pbulk for more information.</p>
 </div>
 </div>
 <div class="sect1" lang="en">
@@ -3483,8 +3482,8 @@ attackers.  In an effort to lessen the exposure, the NetBSD packages team
 maintains a database of known-exploits to packages which have at one time
 been included in pkgsrc.  The database can be downloaded automatically, and
 a security audit of all packages installed on a system can take place.  To
-do this, install the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a> package.  It has two
-components:</p>
+do this, refer to the following two tools (installed as part of the
+<a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/pkgtools/pkg_install/README.html" target="_top"><code class="filename">pkgtools/pkg_install</code></a> package):</p>
 <div class="orderedlist"><ol type="1">
 <li>
 <p><span class="command"><strong>download-vulnerability-list</strong></span>, an easy way to
@@ -3499,11 +3498,10 @@ components:</p>
     including a description of the type of vulnerability, and a URL
     containing more information.</p></li>
 </ol></div>
-<p>Use of the <a href="ftp://ftp.NetBSD.org/pub/pkgsrc/current/pkgsrc/security/audit-packages/README.html" target="_top"><code class="filename">security/audit-packages</code></a>
-package is strongly recommended!  After
-&#8220;<span class="quote">audit-packages</span>&#8221; is installed, please read
+<p>Use of these tools is strongly recommended!  After
+&#8220;<span class="quote">pkg_install</span>&#8221; is installed, please read
 the package's message, which you can get by running <strong class="userinput"><code>pkg_info -D
-audit-packages</code></strong>.</p>
+pkg_install</code></strong>.</p>
 <p>If this package is installed, pkgsrc builds will use it to
 perform a security check before building any package.  See <a class="xref" href="#variables-affecting-build" title="5.2. Variables affecting the build process">Section 5.2, &#8220;Variables affecting the build process&#8221;</a> for ways to control this
 check.</p>
@@ -4241,15 +4239,22 @@ converters    games         mbone         print         x11
 <p>The third section contains the following variables.
   </p>
 <div class="itemizedlist"><ul type="disc">
-<li><p><code class="varname">MAINTAINER</code> is the email address
-    of the person who feels responsible for this package, and who is
-    most likely to look at problems or questions regarding this
-    package which have been reported with <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?send-pr+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">send-pr</span>(1)</span></a>. Other
-    developers should contact the <code class="varname">MAINTAINER</code> before
-    making major changes to the package. When packaging a new program,
-    set <code class="varname">MAINTAINER</code> to yourself. If you really can't
-    maintain the package for future updates, set it to
+<li><p><code class="varname">MAINTAINER</code> is the email
+    address of the person who feels responsible for this package,
+    and who is most likely to look at problems or questions regarding
+    this package which have been reported with <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?send-pr+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">send-pr</span>(1)</span></a>.
+    Other developers may contact the <code class="varname">MAINTAINER</code>
+    before making changes to the package, but are not required to
+    do so. When packaging a new program, set <code class="varname">MAINTAINER</code>
+    to yourself. If you really can't maintain the package for future
+    updates, set it to
     <code class="email">&lt;<a class="email" href="mailto:pkgsrc-users@NetBSD.org">pkgsrc-users@NetBSD.org</a>&gt;</code>.</p></li>
+<li><p><code class="varname">OWNER</code> should be used instead
+    of <code class="varname">MAINTAINER</code> when you do not want other
+    developers to update or change the package without contacting
+    you first. A package Makefile should contain one of
+    <code class="varname">MAINTAINER</code> or <code class="varname">OWNER</code>, but
+    not both.  </p></li>
 <li><p><code class="varname">HOMEPAGE</code> is a URL where users can
     find more information about the package.</p></li>
 <li><p><code class="varname">COMMENT</code> is a one-line
@@ -4437,7 +4442,7 @@ PATCHDIR= ${.CURDIR}/../xemacs/patches
       specific <span class="emphasis"><em>features</em></span> you need.  For example,
       instead of assuming that kqueue is available under NetBSD and
       using the <code class="varname">__NetBSD__</code> macro to conditionalize
-      kqueue support, add a check that detects kqueue itself &#8212;
+      kqueue support, add a check that detects kqueue itself &mdash;
       yes, this generally involves patching the
       <span class="command"><strong>configure</strong></span> script.  There is absolutely nothing
       that prevents some OSes from adopting interfaces from other OSes
@@ -4808,7 +4813,7 @@ correct:
     operate on the words, others operate on the string as a whole. When
     a string is split into words, it is split as you would expect
     it from <a class="citerefentry" href="http://netbsd.gw.com/cgi-bin/man-cgi?sh+1+NetBSD-current"><span class="citerefentry"><span class="refentrytitle">sh</span>(1)</span></a>.</p>
-<p>No rule without exception&#8212;the <span class="command"><strong>.for</strong></span>
+<p>No rule without exception&mdash;the <span class="command"><strong>.for</strong></span>
     loop does not follow the shell quoting rules but splits at sequences
     of whitespace.</p>
 <p>There are several types of variables that should be handled
@@ -6517,7 +6522,7 @@ GTKDIR_DEFAULT= ${LOCALBASE}
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
 <a name="build.builddirs"></a>17.3. Directories used during the build process</h2></div></div></div>
-<p>When building a package, a number of directories is used to store
+<p>When building a package, various directories are used to store
     source files, temporary files, pkgsrc-internal files, and so on. These
     directories are explained here.</p>
 <p>Some of the directory variables contain relative pathnames. There
@@ -6550,6 +6555,14 @@ GTKDIR_DEFAULT= ${LOCALBASE}
       that isn't hidden. This variable may be changed by a package
       <code class="filename">Makefile</code>.</p></dd>
 </dl></div>
+<p>The <code class="varname">CREATE_WRKDIR_SYMLINK</code> definition takes either
+    the value <span class="emphasis"><em>yes</em></span> or <span class="emphasis"><em>no</em></span> and defaults
+    to <span class="emphasis"><em>yes</em></span>. It indicates whether a symbolic link to the
+    <code class="varname">WRKDIR</code> is to be created in the pkgsrc entry's directory.
+    If users would like to have their pkgsrc trees behave in a
+    read-only manner, then the value of
+    <code class="varname">CREATE_WRKDIR_SYMLINK</code> should be set to
+    <span class="emphasis"><em>no</em></span>.</p>
 </div>
 <div class="sect1" lang="en">
 <div class="titlepage"><div><div><h2 class="title" style="clear: both">
@@ -6728,11 +6741,11 @@ ${FETCH_CMD} ${FETCH_BEFORE_ARGS} ${site}${file} ${FETCH_AFTER_ARGS}
       <code class="filename">mk/extract/extract</code>.</p></dd>
 <dt><span class="term"><code class="varname">EXTRACT_USING</code></span></dt>
 <dd><p>This variable can be set to
-      <code class="literal">gtar</code>, <code class="literal">nbtar</code> (which is the
-      default value), <code class="literal">pax</code>, or an
+      <code class="literal">bsdtar</code>, <code class="literal">gtar</code>, <code class="literal">nbtar</code>
+      (which is the default value), <code class="literal">pax</code>, or an
       absolute pathname pointing to the command with which tar
-      archives should be
-      extracted.</p></dd>
+      archives should be extracted.  It is preferred to choose bsdtar over gtar
+      if NetBSD's pax-as-tar is not good enough.</p></dd>
 </dl></div>
 <p>If the <code class="filename">extract</code> program doesn't
     serve your needs, you can also override the
@@ -7473,7 +7486,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.new"></a><a name="id2727813"></a><p><b>18.4.1.</b></p>
+<a name="tools.new"></a><a name="id1168230246568"></a><p><b>18.4.1.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I add a new tool?</p></td>
 </tr>
@@ -7483,7 +7496,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.listall"></a><a name="id2727822"></a><p><b>18.4.2.</b></p>
+<a name="tools.listall"></a><a name="id1168230246577"></a><p><b>18.4.2.</b></p>
 </td>
 <td align="left" valign="top"><p>How do I get a list of all available
 	tools?</p></td>
@@ -7494,7 +7507,7 @@ TOOLS_PLATFORM.true?=           true                    # shell builtin
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="tools.used"></a><a name="id2727833"></a><p><b>18.4.3.</b></p>
+<a name="tools.used"></a><a name="id1168230246585"></a><p><b>18.4.3.</b></p>
 </td>
 <td align="left" valign="top"><p>How can I get a list of all the tools that a
 	package is using while being built? I want to know whether it
@@ -8059,7 +8072,8 @@ DISTNAME=       foo-17.43
     changes that do not merit increasing
     <code class="varname">PKGREVISION</code> are:</p>
 <div class="itemizedlist"><ul type="disc">
-<li><p>Changing <code class="varname">HOMEPAGE</code>, <code class="varname">MAINTAINER</code>,
+<li><p>Changing <code class="varname">HOMEPAGE</code>,
+      <code class="varname">MAINTAINER</code>, <code class="varname">OWNER</code>,
       or comments in Makefile.</p></li>
 <li><p>
       Changing build variables if the resulting binary package is the same.</p></li>
@@ -8733,7 +8747,7 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
 <p>Note that per default, setgid installation of games is
     disabled;  setting <code class="varname">SETGIDGAME=YES</code> will set all
     the other variables accordingly.</p>
-<p>A package should therefor never hard code file ownership or
+<p>A package should therefore never hard code file ownership or
     access permissions but rely on <code class="varname">INSTALL_GAME</code> and
     <code class="varname">INSTALL_GAME_DATA</code> to set these
     correctly.</p>
@@ -8741,7 +8755,18 @@ ${INSTALL_DATA_DIR} ${PREFIX}/dir2
 <div class="sect2" lang="en">
 <div class="titlepage"><div><div><h3 class="title">
 <a name="destdir-support"></a>19.6.4. Adding DESTDIR support to packages</h3></div></div></div>
+<p><code class="varname">DESTDIR</code> support means that a package
+    installs into a staging directory, not the final location of the
+    files. Then a binary package is created which can be used for
+    installation as usual. There are two ways: Either the package must
+    install as root (&#8220;<span class="quote">destdir</span>&#8221;) or the package can
+    install as non-root user (&#8220;<span class="quote">user-destdir</span>&#8221;).</p>
 <div class="itemizedlist"><ul type="disc">
+<li><p><code class="varname">PKG_DESTDIR_SUPPORT</code> has to be
+      set to &#8220;<span class="quote">destdir</span>&#8221; or &#8220;<span class="quote">user-destdir</span>&#8221;. If
+      bsd.prefs.mk is included in the Makefile,
+      <code class="varname">PKG_DESTDIR_SUPPORT</code> needs to be set before
+      the inclusion.</p></li>
 <li><p>All installation operations have to be prefixed with
       <code class="filename">${DESTDIR}</code>.</p></li>
 <li><p>automake gets this DESTDIR mostly right
@@ -9496,7 +9521,7 @@ do?</a>
 <tbody>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.makeflags"></a><a name="id2733644"></a><p><b>22.1.</b></p>
+<a name="devfaq.makeflags"></a><a name="id1168230233435"></a><p><b>22.1.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKEFLAGS</code>, <code class="varname">.MAKEFLAGS</code> and
@@ -9512,7 +9537,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.make"></a><a name="id2733683"></a><p><b>22.2.</b></p>
+<a name="devfaq.make"></a><a name="id1168230233468"></a><p><b>22.2.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">MAKE</code>, <code class="varname">GMAKE</code> and
@@ -9530,7 +9555,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.cc"></a><a name="id2733723"></a><p><b>22.3.</b></p>
+<a name="devfaq.cc"></a><a name="id1168230233574"></a><p><b>22.3.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">CC</code>, <code class="varname">PKG_CC</code> and
@@ -9548,7 +9573,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3flags"></a><a name="id2733831"></a><p><b>22.4.</b></p>
+<a name="devfaq.bl3flags"></a><a name="id1168230233608"></a><p><b>22.4.</b></p>
 </td>
 <td align="left" valign="top"><p>What is the difference between
 	<code class="varname">BUILDLINK_LDFLAGS</code>,
@@ -9561,7 +9586,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.bl3prefix"></a><a name="id2733851"></a><p><b>22.5.</b></p>
+<a name="devfaq.bl3prefix"></a><a name="id1168230233626"></a><p><b>22.5.</b></p>
 </td>
 <td align="left" valign="top"><p>Why does <span class="command"><strong>make show-var
 	VARNAME=BUILDLINK_PREFIX.<em class="replaceable"><code>foo</code></em></strong></span>
@@ -9577,7 +9602,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.master_sites"></a><a name="id2733881"></a><p><b>22.6.</b></p>
+<a name="devfaq.master_sites"></a><a name="id1168230233653"></a><p><b>22.6.</b></p>
 </td>
 <td align="left" valign="top"><p>What does
 	<code class="literal">${MASTER_SITE_SOURCEFORGE:=package/}</code> mean? I
@@ -9601,7 +9626,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.mailinglists"></a><a name="id2733958"></a><p><b>22.7.</b></p>
+<a name="devfaq.mailinglists"></a><a name="id1168230233720"></a><p><b>22.7.</b></p>
 </td>
 <td align="left" valign="top"><p>Which mailing lists are there for package
 	developers?</p></td>
@@ -9626,7 +9651,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.documentation"></a><a name="id2733996"></a><p><b>22.8.</b></p>
+<a name="devfaq.documentation"></a><a name="id1168230233751"></a><p><b>22.8.</b></p>
 </td>
 <td align="left" valign="top"><p>Where is the pkgsrc
 	documentation?</p></td>
@@ -9674,7 +9699,7 @@ do?</a>
 </tr>
 <tr class="question">
 <td align="left" valign="top">
-<a name="devfaq.too-much-time"></a><a name="id2734058"></a><p><b>22.9.</b></p>
+<a name="devfaq.too-much-time"></a><a name="id1168230233805"></a><p><b>22.9.</b></p>
 </td>
 <td align="left" valign="top"><p>I have a little time to kill.  What shall I
 do?</p></td>
@@ -9690,7 +9715,7 @@ anyway.</p>
     will tell you about newer versions of installed packages that are
     available, but not yet updated in pkgsrc.</p></li>
 <li><p>Browse <code class="filename">pkgsrc/doc/TODO</code>
-    &#8212; it contains a list of suggested new packages and a list of
+    &mdash; it contains a list of suggested new packages and a list of
     cleanups and enhancements for pkgsrc that would be nice to
     have.</p></li>
 <li><p>Review packages for which review was requested on
@@ -10208,8 +10233,8 @@ CFLAGS+=                -Wall
 <a name="infr.design.intf.proc"></a>24.5.1. Procedures with parameters</h3></div></div></div>
 <p>In a traditional imperative programming language some of
 	the <code class="filename">.mk</code> files could be described as
-	procedures. They take some input parameters and&#8212;after
-	inclusion&#8212;provide a result in output parameters. Since all
+	procedures. They take some input parameters and&mdash;after
+	inclusion&mdash;provide a result in output parameters. Since all
 	variables in <code class="filename">Makefile</code>s have global scope
 	care must be taken not to use parameter names that have already
 	another meaning. For example, <code class="varname">PKGNAME</code> is a
