@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1697 2008/07/27 14:22:18 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1698 2008/07/27 21:32:33 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2890,3 +2890,21 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Getopt-Long to 2.37 [seb 2008-07-27]
 	Added devel/p5-MooseX-Getopt version 0.15 [seb 2008-07-27]
 	Added devel/p5-B-Utils version 0.05 [seb 2008-07-27]
+	Updated devel/p5-glib2 to 1.183 [he 2008-07-27]
+	Updated textproc/p5-Text-Wrapper to 1.02 [he 2008-07-27]
+	Updated textproc/p5-Text-RewriteRules to 0.13 [he 2008-07-27]
+	Updated textproc/p5-Text-Markdown to 1.0.21 [he 2008-07-27]
+	Updated textproc/p5-Text-Diff-HTML to 0.05 [he 2008-07-27]
+	Updated textproc/Text-CSV_XS to 0.52 [he 2008-07-27]
+	Updated devel/p5-Test-Warn to 0.11 [he 2008-07-27]
+	Updated devel/p5-Test-Unit to 0.25 [he 2008-07-27]
+	Updated devel/p5-Test-ClassAPI to 1.05 [he 2008-07-27]
+	Updated devel/p5-Term-ReadLine to 1.17a [he 2008-07-27]
+	Updated devel/p5-Term-Prompt to 1.04 [he 2008-07-27]
+	Updated textproc/p5-Template-Plugin-Number-Format to 1.02 [he 2008-07-27]
+	Updated www/p5-Template-Extract to 0.41 [he 2008-07-27]
+	Updated math/p5-Spreadsheet-WriteExcel to 2.22 [he 2008-07-27]
+	Updated devel/p5-Set-Scalar to 1.22 [he 2008-07-27]
+	Updated devel/p5-Set-Object to 1.25 [he 2008-07-27]
+	Updated devel/p5-SVN-Mirror to 0.74 [he 2008-07-27]
+	Updated net/p5-SOAP-Lite to 0.71.08 [he 2008-07-27]
