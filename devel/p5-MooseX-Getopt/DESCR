@@ -1,0 +1,3 @@
+The Perl 5 module MooseX::Getopt is a Moose role which provides an
+alternate constructor for creating objects using parameters passed
+in from the command line.
