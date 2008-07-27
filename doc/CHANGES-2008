@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1690 2008/07/27 00:06:20 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1691 2008/07/27 04:08:41 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2883,3 +2883,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/glut to 7.0.4.0 [bjs 2008-07-27]
 	Updated graphics/Mesa to 7.0.4.0 [bjs 2008-07-27]
 	Updated graphics/glx-utils to 7.0.4 [bjs 2008-07-27]
+	Updated textproc/xapian-omega to 1.0.7nb1 [schmonz 2008-07-27]
