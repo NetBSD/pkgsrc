@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/07/17 20:50:24 heinz Exp $
+# $NetBSD: Makefile,v 1.20 2008/07/27 16:06:09 he Exp $
 #
 
 DISTNAME=		Tie-EncryptedHash-1.24
@@ -8,7 +8,7 @@ CATEGORIES=		security perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Tie/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-#HOMEPAGE=
+HOMEPAGE=		http://search.cpan.org/dist/Tie-EncryptedHash/
 COMMENT=		Perl5 module for hashes with encrypting fields
 
 DEPENDS+=		p5-Crypt-CBC-[0-9]*:../../security/p5-Crypt-CBC
