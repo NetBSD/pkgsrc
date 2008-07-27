@@ -1168,9 +1168,9 @@ NOTE: Newer Windows service packs change the way binary execution works (via
 the Data Execution Prevention feature). In order to use pkgsrc and other
 gcc-compiled binaries reliably, a hotfix containing POSIX.EXE, PSXDLL.DLL,
 PSXRUN.EXE, and PSXSS.EXE (899522 or newer) must be installed. Hotfixes are
-available from Microsoft through a support contract; however, a NetBSD
-developer has made most Interix hotfixes available for personal use from http:/
-/www.duh.org/interix/hotfixes.php.
+available from Microsoft through a support contract; however, Debian Interix
+Port has made most Interix hotfixes available for personal use from http://
+www.debian-interix.net/hotfixes/.
 
 In addition to the hotfix noted above, it may be necessary to disable Data
 Execution Prevention entirely to make Interix functional. This may happen only
@@ -1594,9 +1594,9 @@ As mentioned above, packages for which vulnerabilities get known are not stored
 in the All subdirectory. They don't get deleted since that could be very
 frustrating if many other packages depend on it. Instead, they are moved to the
 vulnerable subdirectory. So you may need to add this directory to the PKG_PATH
-variable. However, you should run security/audit-packages regularly, especially
-after installing new packages, and verify that the vulnerabilities are
-acceptable for your configuration.
+variable. However, you should run audit-packages regularly, especially after
+installing new packages, and verify that the vulnerabilities are acceptable for
+your configuration.
 
 After you've installed packages, be sure to have /usr/pkg/bin and /usr/pkg/sbin
 in your PATH so you can actually start the just installed program.
@@ -2576,7 +2576,7 @@ nbftp% chmod 755 .
 
 7.4.1. Configuration
 
-TODO; see the wiki for more information.
+TODO; see pkgsrc/doc/HOWTO-pbulk for more information.
 
 7.5. Creating a multiple CD-ROM packages collection
 
@@ -3057,8 +3057,8 @@ of these bugs can leave a machine vulnerable to exploitation by attackers. In
 an effort to lessen the exposure, the NetBSD packages team maintains a database
 of known-exploits to packages which have at one time been included in pkgsrc.
 The database can be downloaded automatically, and a security audit of all
-packages installed on a system can take place. To do this, install the security
-/audit-packages package. It has two components:
+packages installed on a system can take place. To do this, refer to the
+following two tools (installed as part of the pkgtools/pkg_install package):
 
  1. download-vulnerability-list, an easy way to download a list of the security
     vulnerabilities information. This list is kept up to date by the NetBSD
@@ -3072,9 +3072,9 @@ packages installed on a system can take place. To do this, install the security
     be shown by output to stdout, including a description of the type of
     vulnerability, and a URL containing more information.
 
-Use of the security/audit-packages package is strongly recommended! After
-"audit-packages" is installed, please read the package's message, which you can
-get by running pkg_info -D audit-packages.
+Use of these tools is strongly recommended! After "pkg_install" is installed,
+please read the package's message, which you can get by running pkg_info -D
+pkg_install.
 
 If this package is installed, pkgsrc builds will use it to perform a security
 check before building any package. See Section 5.2, "Variables affecting the
@@ -3736,10 +3736,14 @@ The third section contains the following variables.
   * MAINTAINER is the email address of the person who feels responsible for
     this package, and who is most likely to look at problems or questions
     regarding this package which have been reported with send-pr(1). Other
-    developers should contact the MAINTAINER before making major changes to the
-    package. When packaging a new program, set MAINTAINER to yourself. If you
-    really can't maintain the package for future updates, set it to <
-    pkgsrc-users@NetBSD.org>.
+    developers may contact the MAINTAINER before making changes to the package,
+    but are not required to do so. When packaging a new program, set MAINTAINER
+    to yourself. If you really can't maintain the package for future updates,
+    set it to <pkgsrc-users@NetBSD.org>.
+
+  * OWNER should be used instead of MAINTAINER when you do not want other
+    developers to update or change the package without contacting you first. A
+    package Makefile should contain one of MAINTAINER or OWNER, but not both.
 
   * HOMEPAGE is a URL where users can find more information about the package.
 
@@ -5554,7 +5558,7 @@ When choosing which of these variables to use, follow the following rules:
 
 17.3. Directories used during the build process
 
-When building a package, a number of directories is used to store source files,
+When building a package, various directories are used to store source files,
 temporary files, pkgsrc-internal files, and so on. These directories are
 explained here.
 
@@ -5590,6 +5594,12 @@ WRKSRC
     are extracted. It is usually a direct subdirectory of WRKDIR, and often
     it's the only directory entry that isn't hidden. This variable may be
     changed by a package Makefile.
+
+The CREATE_WRKDIR_SYMLINK definition takes either the value yes or no and
+defaults to yes. It indicates whether a symbolic link to the WRKDIR is to be
+created in the pkgsrc entry's directory. If users would like to have their
+pkgsrc trees behave in a read-only manner, then the value of
+CREATE_WRKDIR_SYMLINK should be set to no.
 
 17.4. Running a phase
 
@@ -5732,9 +5742,10 @@ EXTRACT_OPTS_{BIN,LHA,PAX,RAR,TAR,ZIP,ZOO}
 
 EXTRACT_USING
 
-    This variable can be set to gtar, nbtar (which is the default value), pax,
-    or an absolute pathname pointing to the command with which tar archives
-    should be extracted.
+    This variable can be set to bsdtar, gtar, nbtar (which is the default
+    value), pax, or an absolute pathname pointing to the command with which tar
+    archives should be extracted. It is preferred to choose bsdtar over gtar if
+    NetBSD's pax-as-tar is not good enough.
 
 If the extract program doesn't serve your needs, you can also override the
 EXTRACT_CMD variable, which holds the command used for extracting the files.
@@ -6817,7 +6828,7 @@ trivial that no reasonable person would want to upgrade", and this is the rough
 test for when increasing PKGREVISION is appropriate. Examples of changes that
 do not merit increasing PKGREVISION are:
 
-  * Changing HOMEPAGE, MAINTAINER, or comments in Makefile.
+  * Changing HOMEPAGE, MAINTAINER, OWNER, or comments in Makefile.
 
   * Changing build variables if the resulting binary package is the same.
 
@@ -7335,10 +7346,20 @@ this behaviour: SETGIDGAME, GAMEDATAMODE, GAMEGRP, GAMEMODE, GAMEOWN.
 Note that per default, setgid installation of games is disabled; setting
 SETGIDGAME=YES will set all the other variables accordingly.
 
-A package should therefor never hard code file ownership or access permissions
+A package should therefore never hard code file ownership or access permissions
 but rely on INSTALL_GAME and INSTALL_GAME_DATA to set these correctly.
 
 19.6.4. Adding DESTDIR support to packages
+
+DESTDIR support means that a package installs into a staging directory, not the
+final location of the files. Then a binary package is created which can be used
+for installation as usual. There are two ways: Either the package must install
+as root ("destdir") or the package can install as non-root user
+("user-destdir").
+
+  * PKG_DESTDIR_SUPPORT has to be set to "destdir" or "user-destdir". If
+    bsd.prefs.mk is included in the Makefile, PKG_DESTDIR_SUPPORT needs to be
+    set before the inclusion.
 
   * All installation operations have to be prefixed with ${DESTDIR}.
 
