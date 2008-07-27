@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.54 2008/07/23 15:33:44 kano Exp $ -->
+<!-- $NetBSD: build.xml,v 1.55 2008/07/27 19:27:37 joerg Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -218,7 +218,7 @@ GTKDIR_DEFAULT= ${LOCALBASE}
     If users would like to have their pkgsrc trees behave in a
     read-only manner, then the value of
     <varname>CREATE_WRKDIR_SYMLINK</varname> should be set to
-    <emphasis>no</emphasis>.
+    <emphasis>no</emphasis>.</para>
   </sect1>
 
   <sect1 id="build.running">
