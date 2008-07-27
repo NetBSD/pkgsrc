@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.35 2008/04/07 16:54:53 joerg Exp $
+# $NetBSD: Makefile,v 1.36 2008/07/27 08:45:58 obache Exp $
 
 DISTNAME=	dap-2.1.5
 CATEGORIES=	audio
-MASTER_SITES=	http://www.cee.hw.ac.uk/~richardk/downloads/
+MASTER_SITES=	# http://www.cee.hw.ac.uk/~richardk/downloads/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	scw@NetBSD.org
