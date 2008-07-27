@@ -1,0 +1,4 @@
+The Perl 5 module MooseX::Object::Pluggable is meant to be loaded
+as a role from Moose-based classes. It will add methods and attributes
+to assist you with the loading and handling of plugins and extensions
+for plugins.
