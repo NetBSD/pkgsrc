@@ -1,4 +1,4 @@
-# $NetBSD: pkgsrc,v 1.1 2008/04/24 07:40:24 bjs Exp $
+# $NetBSD: pkgsrc,v 1.2 2008/07/27 00:03:42 bjs Exp $
 
 include $(TOP)/configs/default
 
@@ -30,11 +30,7 @@ GLUT_LIB_DEPS=\
 GLW_LIB_DEPS=\
 	$(TOP)/$(LIB_DIR)/lib$(GL_LIB).la -lXt -lX11
 
-# XXX this is wrong, revisit when doing MesaDemos
-APP_LIB_DEPS=	$(TOP)/$(LIB_DIR)/lib$(GLUT_LIB).la \
-		$(TOP)/$(LIB_DIR)/lib$(GLU_LIB).la \
-		$(TOP)/$(LIB_DIR)/lib$(GL_LIB).la \
-		-lXext -lXmu -lXi -lX11 -lm
+APP_LIB_DEPS=	-lGL -lGLU -lglut -lXext -lXmu -lXi -lX11 -lm
 
 SRC_DIRS=	mesa glw glu glut/glx
 DRIVER_DIRS=	x11 osmesa
