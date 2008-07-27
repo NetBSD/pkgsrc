@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.13 2007/02/22 19:01:16 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2008/07/27 09:48:50 obache Exp $
 #
 
 DISTNAME=	xaric-0.12.1
 PKGREVISION=	2
 CATEGORIES=	chat
-MASTER_SITES=	ftp://ftp.xaric.org/pub/xaric/	\
-		http://www.xaric.org/downloads/
+MASTER_SITES=	http://laeos.net/software/xaric/releases/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://rf.cx/software/xaric/
