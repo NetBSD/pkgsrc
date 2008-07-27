@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2008/06/22 17:08:54 he Exp $
+$NetBSD: distinfo,v 1.9 2008/07/27 18:33:55 he Exp $
 
-SHA1 (Spreadsheet-WriteExcel-2.21.tar.gz) = 7a86db78a851cb40d02adaac66b1aea6319aba83
-RMD160 (Spreadsheet-WriteExcel-2.21.tar.gz) = e187a4921eac37cb412f6d6f65ad7a544f4d48f8
-Size (Spreadsheet-WriteExcel-2.21.tar.gz) = 515892 bytes
+SHA1 (Spreadsheet-WriteExcel-2.22.tar.gz) = 1547ce0d66e9a1f5a6fe85eb3b9c67bdf3413dbb
+RMD160 (Spreadsheet-WriteExcel-2.22.tar.gz) = df0f47ec789a222002fa95647e2669d05c6bad57
+Size (Spreadsheet-WriteExcel-2.22.tar.gz) = 521990 bytes
