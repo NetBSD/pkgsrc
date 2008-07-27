@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/07/26 13:50:13 seb Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/27 22:14:03 seb Exp $
 #
 
 DISTNAME=	Moose-0.54
@@ -15,6 +15,8 @@ DEPENDS+=	p5-Sub-Exporter>=0.972:../../devel/p5-Sub-Exporter
 
 BUILD_DEPENDS+=	p5-Test-Exception>=0.21:../../devel/p5-Test-Exception
 BUILD_DEPENDS+=	p5-Test-LongString-[0-9]*:../../devel/p5-Test-LongString
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Moose/.packlist
