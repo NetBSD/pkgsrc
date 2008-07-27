@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1693 2008/07/27 08:13:53 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1694 2008/07/27 12:04:40 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2886,3 +2886,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/xapian-omega to 1.0.7nb1 [schmonz 2008-07-27]
 	Updated audio/p5-MusicBrainz-Queries to 0.11 [obache 2008-07-27]
 	Updated audio/p5-MusicBrainz-Client to 0.11 [obache 2008-07-27]
+	Added devel/p5-MooseX-Object-Pluggable version 0.0008 [seb 2008-07-27]
