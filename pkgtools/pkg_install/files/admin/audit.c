@@ -1,4 +1,4 @@
-/*	$NetBSD: audit.c,v 1.8.2.1 2008/05/12 12:12:07 joerg Exp $	*/
+/*	$NetBSD: audit.c,v 1.8.2.2 2008/07/27 16:22:53 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: audit.c,v 1.8.2.1 2008/05/12 12:12:07 joerg Exp $");
+__RCSID("$NetBSD: audit.c,v 1.8.2.2 2008/07/27 16:22:53 joerg Exp $");
 #endif
 
 /*-
@@ -87,7 +87,14 @@ parse_options(int argc, char **argv)
 	int ch;
 
 	optreset = 1;
-	optind = 0;
+	/*
+	 * optind == 0 is interpreted as partial reset request
+	 * by GNU getopt, so compensate against this and cleanup
+	 * at the end.
+	 */
+	optind = 1;
+	++argc;
+	--argv;
 
 	while ((ch = getopt(argc, argv, "est:")) != -1) {
 		switch (ch) {
@@ -105,6 +112,8 @@ parse_options(int argc, char **argv)
 			/* NOTREACHED */
 		}
 	}
+
+	--optind; /* See above comment. */
 }
 
 static int
