@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_add.1,v 1.28.6.5 2008/05/30 13:37:36 wiz Exp $
+.\" $NetBSD: pkg_add.1,v 1.28.6.6 2008/07/27 22:35:02 joerg Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -511,19 +511,6 @@ HTTP support.
 Rewrote most of the code base to work without external commands.
 .El
 .Sh BUGS
-Hard links between files in a distribution are only preserved if either
-(1) the staging area is on the same file system as the target directory of
-all the links to the file, or (2) all the links to the file are bracketed by
-.Cm @cwd
-directives in the contents file,
-.Em and
-and the link names are extracted with a single
-.Cm tar
-command (not split between
-invocations due to exec argument-space limitations--this depends on the
-value returned by
-.Fn sysconf _SC_ARG_MAX ) .
-.Pp
 Package upgrading needs a lot more work to be really universal.
 .Pp
 Sure to be others.
