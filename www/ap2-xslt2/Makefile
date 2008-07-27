@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/08/30 13:31:45 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2008/07/27 16:41:34 joerg Exp $
 #
 
 DISTNAME=	modxslt-${DIST_VER}
@@ -22,6 +22,7 @@ PKG_APACHE_ACCEPTED=	apache2
 
 CONFIGURE_ARGS+=	--enable-fallback-wraparound
 CONFIGURE_ARGS+=	--enable-libxslt-hack
+CONFIGURE_ARGS+=	--with-apxs=${PREFIX}/sbin/apxs
 
 REPLACE_BASH=	utils/modxslt-config.pre.in
 
