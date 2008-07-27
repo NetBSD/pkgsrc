@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/07/16 21:38:25 abs Exp $
+@comment $NetBSD: PLIST,v 1.18 2008/07/27 00:03:42 bjs Exp $
 include/GL/GLwDrawA.h
 include/GL/GLwDrawAP.h
 include/GL/GLwMDrawA.h
@@ -9,6 +9,8 @@ include/GL/glext.h
 include/GL/glx.h
 include/GL/glx_mangle.h
 include/GL/glxext.h
+include/GL/internal/dri_interface.h
+include/GL/internal/sarea.h
 include/GL/osmesa.h
 include/GL/xmesa.h
 include/GL/xmesa_x.h
@@ -33,3 +35,4 @@ lib/pkgconfig/gl.pc
 lib/pkgconfig/glw.pc
 ${PLIST.dri}@dirrm lib/dri
 @unexec ${RMDIR} %D/include/GL 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/include/GL/internal 2>/dev/null || ${TRUE}

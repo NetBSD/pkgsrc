@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/05/29 20:54:14 tnn Exp $
+# $NetBSD: Makefile,v 1.7 2008/07/27 00:03:42 bjs Exp $
 
 DISTNAME=	MesaDemos-${MESA_VERSION}
 PKGNAME=	glx-utils-${MESA_VERSION}
@@ -16,15 +16,20 @@ INSTALLATION_DIRS=	bin
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 
+###
+### XXX I don't think these are usually built with -lpthread, but
+###	I'm not sure.
+###
+
 do-build:
 	cd ${WRKSRC}/progs/xdemos && \
 	${SETENV} ${MAKE_ENV} ${CC} -I../../include ${CFLAGS} \
-		${PTHREAD_CFLAGS} glxgears.c ${LDFLAGS} ${PTHREAD_LDFLAGS} \
-		-L../../lib -lGLU -lGL -lm -lXext ${PTHREAD_LIBS} \
+		glxgears.c ${LDFLAGS} \
+		-L../../lib -lGLU -lGL -lm -lXext \
 		-o glxgears && \
 	${SETENV} ${MAKE_ENV} ${CC} -I../../include ${CFLAGS} \
-		${PTHREAD_CFLAGS} glxinfo.c ${LDFLAGS} ${PTHREAD_LDFLAGS} \
-		-L../../lib -lGLU -lGL -lm -lXext ${PTHREAD_LIBS} -o glxinfo
+		glxinfo.c ${LDFLAGS} \
+		-L../../lib -lGLU -lGL -lm -lXext -o glxinfo
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/progs/xdemos/glxgears \
