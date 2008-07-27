@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.28 2008/07/21 02:55:34 dholland Exp $
+# $NetBSD: Makefile,v 1.29 2008/07/27 16:47:46 dholland Exp $
 #
 
 DISTNAME=	lavaps-2.7
+PKGREVISION=	1
 CATEGORIES=	sysutils x11
 MASTER_SITES=	http://www.isi.edu/~johnh/SOFTWARE/LAVAPS/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.isi.edu/~johnh/SOFTWARE/LAVAPS/
 COMMENT=	Lava lamp of currently running processes
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=	c c++
 USE_TOOLS+=	perl
@@ -17,6 +20,9 @@ CONFIGURE_ARGS+=--with-tcltk \
 		--with-tcl-ver=8.4.18 \
 		--with-tk-ver=8.4.18 \
 		--with-tcltk-lib-suffix-type=nodot
+
+# prevents the GConf schema from going into / when building the tcl/tk version
+MAKE_ENV+=	PKGSRC_INSTALL_SCHEMAS=no
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
