@@ -1,0 +1,13 @@
+$NetBSD: patch-am,v 1.1 2008/07/27 21:44:47 dholland Exp $
+
+--- Main/Source/fluid.cpp~	2004-12-10 10:51:45.000000000 -0500
++++ Main/Source/fluid.cpp	2008-07-27 16:38:19.000000000 -0400
+@@ -598,7 +598,7 @@
+   if(!UseImage())
+     return;
+ 
+-  truth InitRandMap = truth(MotherItem);
++  truth InitRandMap = truth(MotherItem != NULL);
+   Image.Clear(InitRandMap);
+ 
+   if(GearImage)

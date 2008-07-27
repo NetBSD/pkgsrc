@@ -1,0 +1,40 @@
+$NetBSD: patch-an,v 1.1 2008/07/27 21:44:47 dholland Exp $
+
+--- Main/Source/script.cpp.orig	2004-10-26 15:37:05.000000000 -0400
++++ Main/Source/script.cpp	2008-07-27 16:45:49.000000000 -0400
+@@ -471,7 +471,7 @@
+   INIT_ENTRY(Flags);
+ }
+ 
+-contentscript<character>::contentscript<character>()
++contentscript<character>::contentscript()
+ : INIT(Team, DEFAULT_TEAM),
+   INIT(Flags, 0)
+ { }
+@@ -498,7 +498,7 @@
+   return Instance;
+ }
+ 
+-contentscript<item>::contentscript<item>()
++contentscript<item>::contentscript()
+ : INIT(Category, ANY_CATEGORY),
+   INIT(MinPrice, 0),
+   INIT(MaxPrice, MAX_PRICE),
+@@ -592,7 +592,7 @@
+   INIT_ENTRY(IsInside);
+ }
+ 
+-contentscript<olterrain>::contentscript<olterrain>()
++contentscript<olterrain>::contentscript()
+ : INIT(VisualEffects, 0),
+   INIT(AttachedArea, DEFAULT_ATTACHED_AREA),
+   INIT(AttachedEntry, DEFAULT_ATTACHED_ENTRY)
+@@ -679,7 +679,7 @@
+   }
+ }
+ 
+-template <class type, class contenttype> contentmap<type, contenttype>::contentmap<type, contenttype>() : ContentMap(0) { }
++template <class type, class contenttype> contentmap<type, contenttype>::contentmap() : ContentMap(0) { }
+ 
+ template <class type, class contenttype> contentmap<type, contenttype>::~contentmap<type, contenttype>()
+ {

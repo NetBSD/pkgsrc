@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2008/07/27 21:44:47 dholland Exp $
+
+--- Main/Source/lterras.cpp~	2004-12-10 10:51:47.000000000 -0500
++++ Main/Source/lterras.cpp	2008-07-27 16:35:06.000000000 -0400
+@@ -1193,7 +1193,7 @@
+ 
+ truth fountain::IsFountainWithWater() const
+ {
+-  return truth(GetSecondaryMaterial());
++  return truth(GetSecondaryMaterial() != NULL);
+ }
+ 
+ void liquidterrain::SurviveEffect(character* Survivor)
