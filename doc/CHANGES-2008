@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1694 2008/07/27 12:04:40 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1695 2008/07/27 12:54:55 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2887,3 +2887,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/p5-MusicBrainz-Queries to 0.11 [obache 2008-07-27]
 	Updated audio/p5-MusicBrainz-Client to 0.11 [obache 2008-07-27]
 	Added devel/p5-MooseX-Object-Pluggable version 0.0008 [seb 2008-07-27]
+	Updated devel/p5-Getopt-Long to 2.37 [seb 2008-07-27]
