@@ -1,10 +1,12 @@
-@comment $NetBSD: PLIST,v 1.10 2007/08/13 11:18:34 seb Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/07/27 00:03:42 bjs Exp $
 share/examples/${PKGNAME}/beos/GLInfo.cpp
 share/examples/${PKGNAME}/beos/demo.cpp
 share/examples/${PKGNAME}/beos/sample.cpp
 share/examples/${PKGNAME}/demos/README
 share/examples/${PKGNAME}/demos/arbfplight
 share/examples/${PKGNAME}/demos/arbfplight.c
+share/examples/${PKGNAME}/demos/arbfslight
+share/examples/${PKGNAME}/demos/arbfslight.c
 share/examples/${PKGNAME}/demos/arbocclude
 share/examples/${PKGNAME}/demos/arbocclude.c
 share/examples/${PKGNAME}/demos/bounce
@@ -16,14 +18,21 @@ share/examples/${PKGNAME}/demos/cubemap.c
 share/examples/${PKGNAME}/demos/descrip.mms
 share/examples/${PKGNAME}/demos/drawpix
 share/examples/${PKGNAME}/demos/drawpix.c
+share/examples/${PKGNAME}/demos/engine
+share/examples/${PKGNAME}/demos/engine.c
+share/examples/${PKGNAME}/demos/extfuncs.h
 share/examples/${PKGNAME}/demos/fire
 share/examples/${PKGNAME}/demos/fire.c
 share/examples/${PKGNAME}/demos/fogcoord
 share/examples/${PKGNAME}/demos/fogcoord.c
 share/examples/${PKGNAME}/demos/fplight
 share/examples/${PKGNAME}/demos/fplight.c
+share/examples/${PKGNAME}/demos/fslight
+share/examples/${PKGNAME}/demos/fslight.c
 share/examples/${PKGNAME}/demos/gamma
 share/examples/${PKGNAME}/demos/gamma.c
+share/examples/${PKGNAME}/demos/gearbox
+share/examples/${PKGNAME}/demos/gearbox.c
 share/examples/${PKGNAME}/demos/gears
 share/examples/${PKGNAME}/demos/gears.c
 share/examples/${PKGNAME}/demos/geartrain
@@ -33,6 +42,8 @@ share/examples/${PKGNAME}/demos/glinfo
 share/examples/${PKGNAME}/demos/glinfo.c
 share/examples/${PKGNAME}/demos/gloss
 share/examples/${PKGNAME}/demos/gloss.c
+share/examples/${PKGNAME}/demos/glslnoise
+share/examples/${PKGNAME}/demos/glslnoise.c
 share/examples/${PKGNAME}/demos/gltestperf
 share/examples/${PKGNAME}/demos/gltestperf.c
 share/examples/${PKGNAME}/demos/glutfx
@@ -48,14 +59,11 @@ share/examples/${PKGNAME}/demos/morph3d
 share/examples/${PKGNAME}/demos/morph3d.c
 share/examples/${PKGNAME}/demos/multiarb
 share/examples/${PKGNAME}/demos/multiarb.c
-share/examples/${PKGNAME}/demos/occlude
 share/examples/${PKGNAME}/demos/occlude.c
 share/examples/${PKGNAME}/demos/paltex
 share/examples/${PKGNAME}/demos/paltex.c
 share/examples/${PKGNAME}/demos/particles.cxx
 share/examples/${PKGNAME}/demos/particles.h
-share/examples/${PKGNAME}/demos/pixeltex
-share/examples/${PKGNAME}/demos/pixeltex.c
 share/examples/${PKGNAME}/demos/pointblast
 share/examples/${PKGNAME}/demos/pointblast.c
 share/examples/${PKGNAME}/demos/rain.cxx
@@ -73,12 +81,16 @@ share/examples/${PKGNAME}/demos/shadowtex
 share/examples/${PKGNAME}/demos/shadowtex.c
 share/examples/${PKGNAME}/demos/showbuffer.c
 share/examples/${PKGNAME}/demos/showbuffer.h
+share/examples/${PKGNAME}/demos/singlebuffer
+share/examples/${PKGNAME}/demos/singlebuffer.c
 share/examples/${PKGNAME}/demos/spectex
 share/examples/${PKGNAME}/demos/spectex.c
 share/examples/${PKGNAME}/demos/spriteblast
 share/examples/${PKGNAME}/demos/spriteblast.c
 share/examples/${PKGNAME}/demos/stex3d
 share/examples/${PKGNAME}/demos/stex3d.c
+share/examples/${PKGNAME}/demos/streaming_rect
+share/examples/${PKGNAME}/demos/streaming_rect.c
 share/examples/${PKGNAME}/demos/teapot
 share/examples/${PKGNAME}/demos/teapot.c
 share/examples/${PKGNAME}/demos/terrain
@@ -94,6 +106,8 @@ share/examples/${PKGNAME}/demos/texenv
 share/examples/${PKGNAME}/demos/texenv.c
 share/examples/${PKGNAME}/demos/texobj
 share/examples/${PKGNAME}/demos/texobj.c
+share/examples/${PKGNAME}/demos/trackball.c
+share/examples/${PKGNAME}/demos/trackball.h
 share/examples/${PKGNAME}/demos/trispd
 share/examples/${PKGNAME}/demos/trispd.c
 share/examples/${PKGNAME}/demos/tunnel
@@ -101,11 +115,44 @@ share/examples/${PKGNAME}/demos/tunnel.c
 share/examples/${PKGNAME}/demos/tunnel2
 share/examples/${PKGNAME}/demos/tunnel2.c
 share/examples/${PKGNAME}/demos/tunneldat.h
+share/examples/${PKGNAME}/demos/vao_demo
+share/examples/${PKGNAME}/demos/vao_demo.c
 share/examples/${PKGNAME}/demos/winpos
 share/examples/${PKGNAME}/demos/winpos.c
+share/examples/${PKGNAME}/fbdev/glfbdevtest.c
 share/examples/${PKGNAME}/ggi/asc-view.c
 share/examples/${PKGNAME}/ggi/gears.c
 share/examples/${PKGNAME}/ggi/gears2.c
+share/examples/${PKGNAME}/glsl/CH06-brick.frag.txt
+share/examples/${PKGNAME}/glsl/CH06-brick.vert.txt
+share/examples/${PKGNAME}/glsl/CH11-bumpmap.frag.txt
+share/examples/${PKGNAME}/glsl/CH11-bumpmap.vert.txt
+share/examples/${PKGNAME}/glsl/CH11-toyball.frag.txt
+share/examples/${PKGNAME}/glsl/CH11-toyball.vert.txt
+share/examples/${PKGNAME}/glsl/CH18-mandel.frag.txt
+share/examples/${PKGNAME}/glsl/CH18-mandel.vert.txt
+share/examples/${PKGNAME}/glsl/brick
+share/examples/${PKGNAME}/glsl/brick.c
+share/examples/${PKGNAME}/glsl/bump
+share/examples/${PKGNAME}/glsl/bump.c
+share/examples/${PKGNAME}/glsl/cubemap.frag.txt
+share/examples/${PKGNAME}/glsl/deriv
+share/examples/${PKGNAME}/glsl/deriv.c
+share/examples/${PKGNAME}/glsl/extfuncs.h
+share/examples/${PKGNAME}/glsl/mandelbrot
+share/examples/${PKGNAME}/glsl/mandelbrot.c
+share/examples/${PKGNAME}/glsl/noise
+share/examples/${PKGNAME}/glsl/noise.c
+share/examples/${PKGNAME}/glsl/readtex.c
+share/examples/${PKGNAME}/glsl/readtex.h
+share/examples/${PKGNAME}/glsl/reflect.vert.txt
+share/examples/${PKGNAME}/glsl/shadowtex.frag.txt
+share/examples/${PKGNAME}/glsl/simple.vert.txt
+share/examples/${PKGNAME}/glsl/texdemo1
+share/examples/${PKGNAME}/glsl/texdemo1.c
+share/examples/${PKGNAME}/glsl/toyball
+share/examples/${PKGNAME}/glsl/toyball.c
+share/examples/${PKGNAME}/images/arch.rgb
 share/examples/${PKGNAME}/images/bw.rgb
 share/examples/${PKGNAME}/images/girl.rgb
 share/examples/${PKGNAME}/images/girl2.rgb
@@ -118,6 +165,7 @@ share/examples/${PKGNAME}/images/wrs_logo.rgb
 share/examples/${PKGNAME}/osdemos/osdemo.c
 share/examples/${PKGNAME}/osdemos/osdemo16.c
 share/examples/${PKGNAME}/osdemos/osdemo32.c
+share/examples/${PKGNAME}/osdemos/ostest1.c
 share/examples/${PKGNAME}/redbook/README
 share/examples/${PKGNAME}/redbook/aaindex
 share/examples/${PKGNAME}/redbook/aaindex.c
@@ -312,6 +360,7 @@ share/examples/${PKGNAME}/samples/wave.c
 share/examples/${PKGNAME}/util/README
 share/examples/${PKGNAME}/util/dumpstate.c
 share/examples/${PKGNAME}/util/errcheck.c
+share/examples/${PKGNAME}/util/extfuncs.h
 share/examples/${PKGNAME}/util/glstate.c
 share/examples/${PKGNAME}/util/glstate.h
 share/examples/${PKGNAME}/util/glutskel.c
@@ -323,6 +372,8 @@ share/examples/${PKGNAME}/util/readtex.c
 share/examples/${PKGNAME}/util/readtex.h
 share/examples/${PKGNAME}/util/showbuffer.c
 share/examples/${PKGNAME}/util/showbuffer.h
+share/examples/${PKGNAME}/util/trackball.c
+share/examples/${PKGNAME}/util/trackball.h
 share/examples/${PKGNAME}/util/winpos.c
 share/examples/${PKGNAME}/windml/readtex.c
 share/examples/${PKGNAME}/windml/uglaccum.c
@@ -344,7 +395,6 @@ share/examples/${PKGNAME}/windml/wrs_logo.bmp
 share/examples/${PKGNAME}/xdemos/descrip.mms
 share/examples/${PKGNAME}/xdemos/glthreads
 share/examples/${PKGNAME}/xdemos/glthreads.c
-share/examples/${PKGNAME}/xdemos/glwdemo.c
 share/examples/${PKGNAME}/xdemos/glxcontexts
 share/examples/${PKGNAME}/xdemos/glxcontexts.c
 share/examples/${PKGNAME}/xdemos/glxdemo
@@ -382,7 +432,6 @@ share/examples/${PKGNAME}/xdemos/vindex.c
 share/examples/${PKGNAME}/xdemos/vtest.c
 share/examples/${PKGNAME}/xdemos/wincopy
 share/examples/${PKGNAME}/xdemos/wincopy.c
-share/examples/${PKGNAME}/xdemos/xdemo
 share/examples/${PKGNAME}/xdemos/xdemo.c
 share/examples/${PKGNAME}/xdemos/xfont
 share/examples/${PKGNAME}/xdemos/xfont.c
@@ -390,7 +439,6 @@ share/examples/${PKGNAME}/xdemos/xrotfontdemo
 share/examples/${PKGNAME}/xdemos/xrotfontdemo.c
 share/examples/${PKGNAME}/xdemos/xuserotfont.c
 share/examples/${PKGNAME}/xdemos/xuserotfont.h
-share/examples/${PKGNAME}/xdemos/yuvrect_client
 share/examples/${PKGNAME}/xdemos/yuvrect_client.c
 @dirrm share/examples/${PKGNAME}/xdemos
 @dirrm share/examples/${PKGNAME}/windml
@@ -399,7 +447,9 @@ share/examples/${PKGNAME}/xdemos/yuvrect_client.c
 @dirrm share/examples/${PKGNAME}/redbook
 @dirrm share/examples/${PKGNAME}/osdemos
 @dirrm share/examples/${PKGNAME}/images
+@dirrm share/examples/${PKGNAME}/glsl
 @dirrm share/examples/${PKGNAME}/ggi
+@dirrm share/examples/${PKGNAME}/fbdev
 @dirrm share/examples/${PKGNAME}/demos
 @dirrm share/examples/${PKGNAME}/beos
 @dirrm share/examples/${PKGNAME}
