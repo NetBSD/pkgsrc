@@ -1,0 +1,17 @@
+$NetBSD: patch-aj,v 1.1 2008/07/27 17:16:37 joerg Exp $
+
+--- src/common/ssl_auth.c.orig	2008-07-27 19:08:44.000000000 +0200
++++ src/common/ssl_auth.c
+@@ -175,7 +175,11 @@ int SSL_Initialize_ctx(
+ {
+ 	char *certpath, *certfile, *cp, *cf;
+ 	char *mycert;
+-    SSL_METHOD *meth = 0;
++#if OPENSSL_VERSION_NUMBER < 0x00909000L
++    SSL_METHOD *meth = NULL;
++#else
++    const SSL_METHOD *meth = NULL;
++#endif
+     SSL_CTX *ctx = 0;
+ 	char header[SMALLBUFFER];
+ 	char cabuf[MAXPATHLEN], certbuf[MAXPATHLEN], pwbuf[MAXPATHLEN]; 
