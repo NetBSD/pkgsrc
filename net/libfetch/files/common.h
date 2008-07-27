@@ -1,4 +1,4 @@
-/*	$NetBSD: common.h,v 1.7 2008/04/24 07:55:00 joerg Exp $	*/
+/*	$NetBSD: common.h,v 1.8 2008/07/27 13:51:27 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * All rights reserved.
@@ -62,7 +62,11 @@ struct fetchconn {
 	SSL		*ssl;		/* SSL handle */
 	SSL_CTX		*ssl_ctx;	/* SSL context */
 	X509		*ssl_cert;	/* server certificate */
-	SSL_METHOD	*ssl_meth;	/* SSL method */
+#  if OPENSSL_VERSION_NUMBER < 0x00909000L
+	SSL_METHOD *ssl_meth;		/* SSL method */
+#  else
+	const SSL_METHOD *ssl_meth;	/* SSL method */
+#  endif
 #endif
 	int		 ref;		/* reference count */
 };
