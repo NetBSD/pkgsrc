@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2007/09/07 22:12:11 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2008/07/27 09:38:06 obache Exp $
 
 DISTNAME=	sirc-2.211
 PKGREVISION=	2
 CATEGORIES=	chat
-MASTER_SITES=	http://www.iagora.com/~espel/sirc/ \
-		http://www.iagora.com/~espel/sirc/scripts/
-DISTFILES=	${DISTNAME}${EXTRACT_SUFX}	\
+MASTER_SITES=	http://www.iagora.com/~espel/sirc/
+DISTFILES=	${DEFAULT_DISTFILES} \
 		${SIRC_SCRIPTS}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -41,6 +40,10 @@ SIRC_SCRIPTS= \
 		winnuke.pl			\
 		www.pl				\
 		yiff.pl
+
+.for script in ${SIRC_SCRIPTS}
+SITES.${script:T:S/=/--/}?= ${MASTER_SITES:=scripts/}
+.endfor
 
 NO_BUILD=	yes
 DIST_SUBDIR=	sirc
