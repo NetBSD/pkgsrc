@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.lib,v 1.12 2008/05/29 12:43:39 tnn Exp $
+# $NetBSD: Makefile.lib,v 1.13 2008/07/27 00:03:42 bjs Exp $
 #
 # This Makefile fragment is included by all packages that build libraries
 # from the Mesa sources.
@@ -15,7 +15,7 @@ PKG_INSTALLATION_TYPES=	overwrite pkgviews
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
 LIBTOOL=		${PKG_SHLIBTOOL}
-USE_TOOLS+=		gmake makedepend pkg-config
+USE_TOOLS+=		gmake pkg-config
 
 PATCHDIR=		${.CURDIR}/../MesaLib/patches
 DISTINFO_FILE=		${.CURDIR}/../MesaLib/distinfo
@@ -25,6 +25,7 @@ COPTS+= 	 	-prefer-pic 	# Make sure to build PIC libraries.
 
 MAKE_ENV+=		MAKE=${GMAKE:Q}
 MAKE_ENV+=		COPTS=${COPTS:M*:Q}
+MAKE_ENV+=		MKDEP=${TRUE:Q}
 
 #.if ${X11_TYPE} == "modular"
 #.  if defined(PKG_BUILD_OPTIONS.libX11) && \
@@ -65,24 +66,32 @@ BUILD_TARGET?=		pkgsrc
 RM_PATCH_BACKUP_DIRS= 	docs src/mesa src/glut/glx \
  	 	 	progs/demos progs/xdemos progs/glsl
 pre-patch:
-	@ for fn in ${RM_PATCH_BACKUP_DIRS}; do \
+	for fn in ${RM_PATCH_BACKUP_DIRS}; do \
 		${RM} -f ${WRKSRC}/$${fn}/*.orig; \
-	 done
+	done
 
 post-patch:
 	${CP} ${.CURDIR}/../MesaLib/files/configs/[d-z]* ${WRKSRC}/configs
 
 post-install: install-headers
-
+###
+### XXX MesaLib installs headers into GL/internal, and this directory is
+###	created there by the pre-install target.  TODO: unify these targets.
+###
 .PHONY: install-headers
+.if empty(PKGNAME:M*MesaDemos*)
 install-headers:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/GL
 .for hdr in ${MESA_HEADERS}
 	if [ -f ${WRKSRC}/include/GL/${hdr:Q} ]; then \
 	    ${INSTALL_DATA} ${WRKSRC}/include/GL/${hdr:Q} \
-	    ${DESTDIR}${PREFIX}/include/GL; \
+	    ${DESTDIR}${PREFIX}/include/GL/${hdr:Q}; \
 	fi;
 .endfor
+.else
+install-headers:
+	@${DO_NADA}
+.endif
 
 SUBST_CLASSES+=                 fix-paths
 SUBST_STAGE.fix-paths=          pre-configure
@@ -90,4 +99,3 @@ SUBST_MESSAGE.fix-paths=        Fixing absolute paths.
 SUBST_FILES.fix-paths=          src/*.c
 SUBST_FILES.fix-paths+=         scripts/*.sh
 SUBST_SED.fix-paths=            -e 's,"/usr/local,"${PREFIX},g'
-SUBST_SED.fix-paths+=           -e 's,"/var/log,"${VARBASE}/log,g'

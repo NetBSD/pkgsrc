@@ -1,16 +1,22 @@
-# $NetBSD: Makefile,v 1.64 2008/07/16 06:34:00 bjs Exp $
+# $NetBSD: Makefile,v 1.65 2008/07/27 00:03:42 bjs Exp $
 
 PKGNAME=	MesaLib-${MESA_PKGVERSION}
-PKGREVISION=	4
 COMMENT=	Graphics library similar to SGI's OpenGL
 
 MESA_HEADERS=	gl.h gl_mangle.h glext.h glx.h glxext.h	\
 		glx_mangle.h osmesa.h xmesa.h xmesa_x.h	\
  		xmesa_xf86.h
 
+MESA_HEADERS+=	internal/dri_interface.h internal/sarea.h
+
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BUILD_DEFS+=		MESA_HZ MESA_EXECMEM_HEAPSIZE
+BUILD_DEFS+=		MESA_HZ
+###
+### XXX Older versions of xf86driproto installed dri_interface.h, which
+###	is now installed by Mesa.
+###
+BUILDLINK_API_DEPENDS.driproto+=	xf86driproto>=2.0.4
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -22,7 +28,7 @@ CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
 CFLAGS+=	-D__GLX_ALIGN64
 .endif
 
-.if !empty(MACHINE_ARCH:Mi386)
+.if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
 ###
 ### This is taken from <sys/arch/i386/include/npx.h>.  If we don't override
 ### it, the FPU control word will be restored to 0x037f.
@@ -43,15 +49,9 @@ CFLAGS.FreeBSD+=	-DDEFAULT_x86_FPU=0x1272
 .endif
 
 CFLAGS.FreeBSD+=	-DUSE_NATIVE_LIBM_FUNCS
-CFLAGS.FreeBSD+=	-DUSE_SSE_SYSCTL_DETECTION
-
 CFLAGS.Linux+=		-DUSE_NATIVE_LIBM_FUNCS
-
 CFLAGS.NetBSD+=		-DUSE_NATIVE_LIBM_FUNCS
-CFLAGS.NetBSD+=		-DUSE_SSE_SYSCTL_DETECTION
-
 CFLAGS.DragonFly+=	-DUSE_NATIVE_LIBM_FUNCS
-CFLAGS.DragonFly+=	-DUSE_SSE_SYSCTL_DETECTION
 
 PLIST_VARS=		dri nodri
 
@@ -80,6 +80,9 @@ post-extract:
 	for fn in ${RM_PATCH_BACKUP_DIRS}; do \
 		${RM} -f ${WRKSRC}/$${fn}/*.orig; \
 	done
+
+pre-install:
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/include/GL/internal
 
 pre-build:
 	cd ${WRKSRC} && ${RM} -fr src/glu src/glut progs

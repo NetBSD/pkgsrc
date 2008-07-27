@@ -1,4 +1,4 @@
-# $NetBSD: hacks.mk,v 1.12 2008/06/27 13:24:39 tnn Exp $
+# $NetBSD: hacks.mk,v 1.13 2008/07/27 00:03:42 bjs Exp $
 
 .if !defined(MESALIBS_HACKS_MK)
 MESALIBS_HACKS_MK=	# defined
@@ -17,7 +17,7 @@ post-wrapper:
 .include "../../mk/compiler.mk"
 ###
 ### Ordinarily, this is defined by the build.  However, in pkgsrc,
-### policy dictates that we do it here.  
+### policy dictates that we do it here.
 ###
 ### XXXbjs:  -ffast-math seems to cause instability, at least on amd64.
 ###	      I have disabled it pending further testing.
@@ -52,7 +52,7 @@ SUBST_FILES.asm-hack=	src/mesa/x86/glapi_x86.S
 SUBST_FILES.asm-hack+=	src/mesa/x86-64/glapi_x86-64.S
 SUBST_FILES.asm-hack+=	src/mesa/glapi/glthread.c
 SUBST_FILES.asm-hack+=	src/glx/x11/glxext.c
-SUBST_MESSAGE.asm-hack+=Teaching glapi about NetBSD thread stubs
+SUBST_MESSAGE.asm-hack=Teaching glapi about NetBSD thread stubs
 SUBST_SED.asm-hack=	-e 's,pthread_getspecific,__libc_thr_getspecific,g'
 SUBST_STAGE.asm-hack=	post-patch
 .  endif
