@@ -1,0 +1,2 @@
+The Perl 5 module B::Utils provides functions that make it easier
+to manipulate the op tree.
