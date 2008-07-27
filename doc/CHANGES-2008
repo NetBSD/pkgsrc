@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1692 2008/07/27 08:12:09 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1693 2008/07/27 08:13:53 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2885,3 +2885,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/glx-utils to 7.0.4 [bjs 2008-07-27]
 	Updated textproc/xapian-omega to 1.0.7nb1 [schmonz 2008-07-27]
 	Updated audio/p5-MusicBrainz-Queries to 0.11 [obache 2008-07-27]
+	Updated audio/p5-MusicBrainz-Client to 0.11 [obache 2008-07-27]
