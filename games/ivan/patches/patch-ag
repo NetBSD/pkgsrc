@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.1 2008/07/27 21:44:47 dholland Exp $
+
+--- Main/Include/char.h~	2004-12-10 10:51:40.000000000 -0500
++++ Main/Include/char.h	2008-07-27 16:27:46.000000000 -0400
+@@ -991,7 +991,7 @@
+   truth IsUsingWeaponOfCategory(int) const;
+   virtual truth IsKamikazeDwarf() const { return false; }
+   void AddRandomScienceName(festring&) const;
+-  truth IsStuck() const { return truth(TrapData); }
++  truth IsStuck() const { return truth(TrapData != NULL); }
+   festring GetTrapDescription() const;
+   truth TryToUnStickTraps(v2);
+   void RemoveTrap(ulong);

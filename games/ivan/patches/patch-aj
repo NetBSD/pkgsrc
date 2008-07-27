@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2008/07/27 21:44:47 dholland Exp $
+
+--- Main/Source/command.cpp~	2004-12-10 10:51:44.000000000 -0500
++++ Main/Source/command.cpp	2008-07-27 16:31:07.000000000 -0400
+@@ -1043,7 +1043,7 @@
+   Char->SetAction(Go);
+   Char->EditAP(Char->GetStateAPGain(100)); // gum solution
+   Char->GoOn(Go, true);
+-  return truth(Char->GetAction());
++  return truth(Char->GetAction() != NULL);
+ }
+ 
+ truth commandsystem::ShowConfigScreen(character*)

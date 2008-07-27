@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1 2008/07/27 21:44:47 dholland Exp $
+
+--- Main/Include/lsquare.h~	2004-12-10 10:51:41.000000000 -0500
++++ Main/Include/lsquare.h	2008-07-27 16:26:49.000000000 -0400
+@@ -202,7 +202,7 @@
+   void PostProcessForBone(double&, int&);
+   void DisplayEngravedInfo(festring&) const;
+   truth EngravingsCanBeReadByPlayer();
+-  truth HasEngravings() const { return truth(Engraved); }
++  truth HasEngravings() const { return truth(Engraved != NULL); }
+   void FinalProcessForBone();
+   truth IsFreezed() const { return Flags & FREEZED; }
+   truth IsDangerousToBreathe(const character*) const;
+@@ -237,7 +237,7 @@
+   void SendSunLightSignals();
+   const sunemittervector& GetSunEmitter() const { return SunEmitter; }
+   void ZeroReSunEmitatedFlags();
+-  virtual truth HasBeenSeen() const { return truth(Memorized); }
++  virtual truth HasBeenSeen() const { return truth(Memorized != NULL); }
+   truth CalculateIsTransparent();
+   void CalculateSunLightLuminance(ulong);
+   void CreateMemorized();

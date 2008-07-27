@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2006/12/15 14:34:20 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2008/07/27 21:44:47 dholland Exp $
 #
 
 DISTNAME=		ivan-0.50
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		games
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ivan/}
 
@@ -12,6 +12,7 @@ COMMENT=		Graphical roguelike featuring deep gameplay
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+USE_TOOLS+=		gmake
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--localstatedir=${PREFIX}/share
 

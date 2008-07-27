@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1 2008/07/27 21:44:47 dholland Exp $
+
+--- FeLib/Include/save.h~	2004-10-26 15:35:45.000000000 -0400
++++ FeLib/Include/save.h	2008-07-27 16:24:25.000000000 -0400
+@@ -36,7 +36,7 @@
+   void Put(char What) { fputc(What, Buffer); }
+   void Write(const char* Offset, long Size)
+   { fwrite(Offset, 1, Size, Buffer); }
+-  truth IsOpen() { return truth(Buffer); }
++  truth IsOpen() { return truth(Buffer != NULL); }
+   void Close() { fclose(Buffer); }
+   void Flush() { fflush(Buffer); }
+   void ReOpen();
+@@ -58,7 +58,7 @@
+   rect ReadRect();
+   int Get() { return fgetc(Buffer); }
+   void Read(char* Offset, long Size) { fread(Offset, 1, Size, Buffer); }
+-  truth IsOpen() { return truth(Buffer); }
++  truth IsOpen() { return truth(Buffer != NULL); }
+   truth Eof() { return feof(Buffer); }
+   void ClearFlags() { clearerr(Buffer); }
+   void SeekPosBegin(long Offset) { fseek(Buffer, Offset, SEEK_SET); }

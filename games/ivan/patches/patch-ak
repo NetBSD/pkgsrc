@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2008/07/27 21:44:47 dholland Exp $
+
+--- Main/Source/lsquare.cpp~	2004-12-10 10:51:47.000000000 -0500
++++ Main/Source/lsquare.cpp	2008-07-27 16:34:33.000000000 -0400
+@@ -1585,7 +1585,7 @@
+   character* Character = GetCharacter();
+ 
+   if(Character)
+-    DuplicatedSomething = truth(Character->DuplicateToNearestSquare(Beam.Owner, Beam.SpecialParameters));
++    DuplicatedSomething = truth(Character->DuplicateToNearestSquare(Beam.Owner, Beam.SpecialParameters) != NULL);
+ 
+   if(GetStack()->Duplicate(DuplicatedSomething ? 4 : 5, Beam.SpecialParameters))
+     DuplicatedSomething = true;
