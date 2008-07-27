@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/10 18:49:39 drochner Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/27 17:25:56 dholland Exp $
 #
 
 DISTNAME=	duckmaze-pc-0.2
 PKGNAME=	duckmaze-0.2
+PKGREVISION=	1
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=duckmaze/}
 EXTRACT_SUFX=	.zip
@@ -11,19 +12,26 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://duckmaze.sourceforge.net/
 COMMENT=	A puzzle
 
+PKG_DESTDIR_SUPPORT=user-destdir
+
 USE_LANGUAGES=	# none
+USE_TOOLS+=	pax
 
 DM= ${WRKDIR}/duckmaze
+
+REPLACE_PYTHON=level.py level_editor.py mopelib/mopelib.py duckmaze.py
 
 do-build:
 	${ECHO} "#!/bin/sh" >${DM}
 	${ECHO} "cd ${PREFIX}/share/duckmaze" >>${DM}
 	${ECHO} "exec ${PYTHONBIN} duckmaze.py" >>${DM}
+	${CHMOD} a-x ${WRKSRC}/levels/level_*
 
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/duckmaze
-	${CP} -r ${WRKSRC}/* ${PREFIX}/share/duckmaze
-	${INSTALL_SCRIPT} ${DM} ${PREFIX}/bin
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/duckmaze
+	cd ${WRKSRC}; ${PAX} -rw . ${DESTDIR}${PREFIX}/share/duckmaze
+	${INSTALL_SCRIPT} ${DM} ${DESTDIR}${PREFIX}/bin
 
 .include "../../lang/python/application.mk"
 .include "../../devel/py-game/buildlink3.mk"
