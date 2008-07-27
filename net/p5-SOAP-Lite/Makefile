@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.16 2008/06/12 02:14:40 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2008/07/27 20:56:27 he Exp $
 #
 
-DISTNAME=	SOAP-Lite-0.69
-PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+DISTNAME=	SOAP-Lite-0.710.08
+PKGNAME=	p5-${DISTNAME:S/710.08/71.08/}
 CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=SOAP/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.soaplite.com/
+#HOMEPAGE=	http://search.cpan.org/dist/SOAP-Lite/
 COMMENT=	Perl5 module providing a lightweight interface to SOAP
 
 PKG_DESTDIR_SUPPORT=	user-destdir
