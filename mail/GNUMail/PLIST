@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2004/09/25 04:50:01 rh Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/07/27 17:06:57 joerg Exp $
 share/GNUstep/Local/Applications/GNUMail.app/GNUMail
 share/GNUstep/Local/Applications/GNUMail.app/Resources/AddressBook_32.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/AddressManager_32.tiff
@@ -92,7 +92,6 @@ share/GNUstep/Local/Applications/GNUMail.app/Resources/stop_32.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/stop_48.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/up.tiff
 share/GNUstep/Local/Applications/GNUMail.app/Resources/up_15.tiff
-share/GNUstep/Local/Applications/GNUMail.app/library_paths.openapp
 share/GNUstep/Local/Applications/GNUMail.app/stamp.make
 share/GNUstep/Local/Library/GNUMail/Account.prefs/Account
 share/GNUstep/Local/Library/GNUMail/Account.prefs/Resources/Info-gnustep.plist
@@ -139,6 +138,7 @@ share/GNUstep/Local/Library/GNUMail/Viewing.prefs/Viewing
 share/GNUstep/Local/Library/GNUMail/Viewing.prefs/stamp.make
 share/GNUstep/Local/Library/Libraries/libGNUMail.so
 share/GNUstep/Local/Library/Libraries/libGNUMail.so.0.0.1
+share/GNUstep/Local/Tools/GNUMail
 @comment in gnustep-make: @dirrm share/GNUstep/Local/Library/Libraries
 @dirrm share/GNUstep/Local/Library/GNUMail/Viewing.prefs/Resources
 @dirrm share/GNUstep/Local/Library/GNUMail/Viewing.prefs
