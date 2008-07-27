@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2006/04/12 19:43:31 joerg Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/07/27 18:47:07 joerg Exp $
 bin/afslog
 bin/compile_et
 bin/k4ftp
@@ -38,6 +38,7 @@ include/kerberosIV/com_right.h
 include/kerberosIV/des.h
 include/kerberosIV/editline.h
 include/kerberosIV/getarg.h
+${PLIST.glob}include/kerberosIV/glob.h
 include/kerberosIV/kadm.h
 include/kerberosIV/kadm_err.h
 include/kerberosIV/kafs.h
