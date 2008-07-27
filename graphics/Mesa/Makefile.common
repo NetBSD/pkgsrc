@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.66 2008/07/27 00:03:42 bjs Exp $
+# $NetBSD: Makefile.common,v 1.67 2008/07/27 00:11:05 bjs Exp $
 #
 # This Makefile fragment is included either directly or indirectly (through
 # Makefile.lib) by all packages that are built from the Mesa sources.
@@ -8,7 +8,7 @@
 DISTNAME?=	MesaLib-${MESA_VERSION}
 EXTRACT_SUFX=	.tar.bz2
 CATEGORIES=	graphics
-MASTER_SITES=	${MASTER_SITE_LOCAL}
+MASTER_SITES=	${MASTER_SITE_LOCAL:=Mesa-${MESA_VERSION}/}
 
 # When changing this version, please run "make distinfo" in the following
 # package directories:
