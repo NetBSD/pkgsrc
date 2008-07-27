@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1696 2008/07/27 13:34:59 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1697 2008/07/27 14:22:18 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2889,3 +2889,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-MooseX-Object-Pluggable version 0.0008 [seb 2008-07-27]
 	Updated devel/p5-Getopt-Long to 2.37 [seb 2008-07-27]
 	Added devel/p5-MooseX-Getopt version 0.15 [seb 2008-07-27]
+	Added devel/p5-B-Utils version 0.05 [seb 2008-07-27]
