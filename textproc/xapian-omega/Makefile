@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/07/26 23:37:29 schmonz Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/27 04:06:00 schmonz Exp $
 #
 
 DISTNAME=		xapian-omega-1.0.7
+PKGREVISION=		1
 CATEGORIES=		textproc
 MASTER_SITES=		http://oligarchy.co.uk/xapian/1.0.7/
 
@@ -13,6 +14,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
+
+REPLACE_PERL=		dbi2omega htdig2omega mbox2omega
 
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	do-configure
