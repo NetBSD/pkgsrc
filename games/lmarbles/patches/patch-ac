@@ -1,0 +1,17 @@
+$NetBSD: patch-ac,v 1.1 2008/07/27 22:35:17 dholland Exp $
+
+--- src/Makefile.in.orig	2004-06-14 04:28:42.000000000 -0400
++++ src/Makefile.in	2008-07-27 17:54:33.000000000 -0400
+@@ -407,9 +407,9 @@
+ 	done
+ #profiles
+ 	$(mkinstalldirs) $(DESTDIR)$(prf_dir)
+-	if ! test -f $(DESTDIR)$(prf_dir)/lmarbles.prfs; then \
+-	$(INSTALL_DATA) -m 666 empty.prfs $(DESTDIR)$(prf_dir)/lmarbles.prfs; \
+-	fi;
++#	if ! test -f $(DESTDIR)$(prf_dir)/lmarbles.prfs; then \
++#	$(INSTALL_DATA) -m 666 empty.prfs $(DESTDIR)$(prf_dir)/lmarbles.prfs; \
++#	fi;
+ 
+ uninstall-local:
+ 	rm -rf $(DESTDIR)$(inst_dir)

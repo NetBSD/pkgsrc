@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/06/14 09:22:40 obache Exp $
+# $NetBSD: Makefile,v 1.12 2008/07/27 22:35:17 dholland Exp $
 
 DISTNAME=	lmarbles-1.0.7
 PKGREVISION=	6
@@ -43,9 +43,9 @@ CONFIGURE_ARGS+=	--enable-ascii
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOC_DIR}
-	for d in ${WRKSRC}/src/manual/*; do				\
+	(cd ${WRKSRC}/src/manual; for d in *; do			\
 		${INSTALL_DATA} $${d} ${DESTDIR}${DOC_DIR}/$${d};	\
-	done
+	done)
 	${INSTALL_DATA_DIR} ${DESTDIR}${EXAMPLES_DIR}
 	${INSTALL_DATA} ${WRKSRC}/src/empty.prfs			\
 		${DESTDIR}${EXAMPLES_DIR}/lmarbles.prfs
