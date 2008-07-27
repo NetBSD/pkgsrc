@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1689 2008/07/26 23:43:57 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.1690 2008/07/27 00:06:20 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2878,3 +2878,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/xapian version 1.0.7 [schmonz 2008-07-26]
 	Added textproc/xapian-omega version 1.0.7 [schmonz 2008-07-26]
 	Added textproc/p5-Search-Xapian version 1.0.7.0 [schmonz 2008-07-26]
+	Updated graphics/MesaLib to 7.0.4.0 [bjs 2008-07-27]
+	Updated graphics/glu to 7.0.4.0 [bjs 2008-07-27]
+	Updated graphics/glut to 7.0.4.0 [bjs 2008-07-27]
+	Updated graphics/Mesa to 7.0.4.0 [bjs 2008-07-27]
+	Updated graphics/glx-utils to 7.0.4 [bjs 2008-07-27]
