@@ -1,0 +1,31 @@
+$NetBSD: patch-ah,v 1.1 2008/07/27 16:47:46 dholland Exp $
+
+--- src/Makefile.in~	2004-12-24 21:42:03.000000000 -0500
++++ src/Makefile.in	2008-07-27 12:36:30.000000000 -0400
+@@ -471,20 +471,22 @@
+ install-schemaDATA: $(schema_DATA)
+ 	@$(NORMAL_INSTALL)
+ 	test -z "$(schemadir)" || $(mkdir_p) "$(DESTDIR)$(schemadir)"
+-	@list='$(schema_DATA)'; for p in $$list; do \
++	@if [ "$PKGSRC_INSTALL_SCHEMAS" = "yes" ]; then \
++	 list='$(schema_DATA)'; for p in $$list; do \
+ 	  if test -f "$$p"; then d=; else d="$(srcdir)/"; fi; \
+ 	  f=$(am__strip_dir) \
+ 	  echo " $(schemaDATA_INSTALL) '$$d$$p' '$(DESTDIR)$(schemadir)/$$f'"; \
+ 	  $(schemaDATA_INSTALL) "$$d$$p" "$(DESTDIR)$(schemadir)/$$f"; \
+-	done
++	done; fi
+ 
+ uninstall-schemaDATA:
+ 	@$(NORMAL_UNINSTALL)
+-	@list='$(schema_DATA)'; for p in $$list; do \
++	@if [ "$PKGSRC_INSTALL_SCHEMAS" = "yes" ]; then \
++	 list='$(schema_DATA)'; for p in $$list; do \
+ 	  f=$(am__strip_dir) \
+ 	  echo " rm -f '$(DESTDIR)$(schemadir)/$$f'"; \
+ 	  rm -f "$(DESTDIR)$(schemadir)/$$f"; \
+-	done
++	done; fi
+ 
+ # This directory's subdirectories are mostly independent; you can cd
+ # into them and run `make' without going through this Makefile.
