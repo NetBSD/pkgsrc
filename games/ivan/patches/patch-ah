@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2008/07/27 21:44:47 dholland Exp $
+
+--- Main/Include/stack.h~	2004-10-26 15:36:44.000000000 -0400
++++ Main/Include/stack.h	2008-07-27 16:28:11.000000000 -0400
+@@ -56,7 +56,7 @@
+   stackiterator(stackslot* Slot) : Slot(Slot) { }
+   stackiterator& operator++() { Slot = Slot->Next; return *this; }
+   stackiterator& operator--() { Slot = Slot->Last; return *this; }
+-  truth HasItem() const { return truth(Slot); }
++  truth HasItem() const { return truth(Slot != NULL); }
+   item* operator->() const { return Slot->Item; }
+   item* operator*() const { return Slot->Item; }
+   const stackslot& GetSlot() const { return *Slot; }
