@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1698 2008/07/27 21:32:33 he Exp $
+$NetBSD: CHANGES-2008,v 1.1699 2008/07/27 22:59:38 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2908,3 +2908,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Set-Object to 1.25 [he 2008-07-27]
 	Updated devel/p5-SVN-Mirror to 0.74 [he 2008-07-27]
 	Updated net/p5-SOAP-Lite to 0.71.08 [he 2008-07-27]
+	Updated sysutils/lavaps to 2.7nb1 [dholland 2008-07-27]
+	Updated games/duckmaze to 0.2nb1 [dholland 2008-07-27]
+	Updated games/exult to 1.2nb6 [dholland 2008-07-27]
+	Updated games/ivan to 0.50nb7 [dholland 2008-07-27]
