@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1699 2008/07/27 22:59:38 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.1700 2008/07/28 02:46:12 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2912,3 +2912,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/duckmaze to 0.2nb1 [dholland 2008-07-27]
 	Updated games/exult to 1.2nb6 [dholland 2008-07-27]
 	Updated games/ivan to 0.50nb7 [dholland 2008-07-27]
+	Updated graphics/MesaLib to 7.0.4.0nb1 [bjs 2008-07-28]
