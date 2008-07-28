@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1706 2008/07/28 17:05:58 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.1707 2008/07/28 18:20:18 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2918,3 +2918,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added sysutils/ddrescue version 1.8 [obache 2008-07-28]
 	Updated news/newsx to 1.6nb2 [cube 2008-07-28]
 	Updated x11/xf86-video-intel to 2.4.0 [tnn 2008-07-28]
+	Updated devel/p5-Mouse to 0.06 [seb 2008-07-28]
