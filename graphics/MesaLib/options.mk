@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.10 2008/07/27 00:03:42 bjs Exp $
+# $NetBSD: options.mk,v 1.11 2008/07/28 02:12:57 bjs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
 
@@ -35,8 +35,9 @@ PKG_SUGGESTED_OPTIONS+=		dri
 .include "../../mk/bsd.options.mk"
 ###
 ### XXX Yes, this is a bit overly verbose; with Mesa, that can't hurt much.
-###
-.if !empty(PKG_OPTIONS:Mi386) || !empty(PKG_OPTIONS:Mx86_64)
+###	NOTE: there is no assembler code built with libOSMesa.
+.if (!empty(PKG_OPTIONS:Mi386) || !empty(PKG_OPTIONS:Mx86_64)) && \
+     !empty(PKG_OPTIONS:Mdri)
 BUILD_TARGET_SUFFIX=	-${MACHINE_ARCH}
 .else
 BUILD_TARGET_SUFFIX=	# empty
@@ -47,7 +48,7 @@ BUILD_TARGET=	pkgsrc-dri${BUILD_TARGET_SUFFIX}
 PLIST.dri=	# empty
 .  include "../../graphics/MesaLib/dri.mk"
 .else
-BUILD_TARGET=	pkgsrc${BUILD_TARGET_SUFFIX}
+BUILD_TARGET=	pkgsrc
 PLIST.nodri=	# empty
 ###
 ### XXX building libOSMesa breaks with -j, and GNU make has no .WAIT
