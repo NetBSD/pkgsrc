@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/07/28 18:49:06 plunky Exp $
+# $NetBSD: Makefile,v 1.14 2008/07/28 19:47:08 plunky Exp $
 #
 
 DISTNAME=	obexapp-1.4.9
@@ -10,6 +10,8 @@ HOMEPAGE=	http://www.geocities.com/m_evmenkin/
 COMMENT=	Obex application to transfer objects to mobile equipment
 
 ONLY_FOR_PLATFORM=	FreeBSD-*-* NetBSD-[4-9].*-*
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEFS+=		VARBASE
 
