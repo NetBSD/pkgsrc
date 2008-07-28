@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/02/05 23:47:18 heinz Exp $
+# $NetBSD: Makefile,v 1.5 2008/07/28 18:50:00 plunky Exp $
 
 DISTNAME=		hcidump-1.5.1
 CATEGORIES=		sysutils
@@ -22,5 +22,7 @@ INSTALLATION_DIRS+=	${PKGMANDIR}/cat1
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 INSTALLATION_DIRS+=	lib
 INSTALLATION_DIRS+=	bin
+
+USE_BSD_MAKEFILE=	yes
 
 .include "../../mk/bsd.pkg.mk"
