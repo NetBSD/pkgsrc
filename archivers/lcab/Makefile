@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.8 2008/07/28 19:31:31 plunky Exp $
+# $NetBSD: Makefile,v 1.9 2008/07/28 19:42:33 plunky Exp $
 #
 
-DISTNAME=		lcab-1.0b10
+DISTNAME=		lcab-1.0b12
 CATEGORIES=		archivers
-MASTER_SITES=		http://coding.wooyayhoopla.be/lcab/sources/
+MASTER_SITES=		http://lcab.move-to-cork.com/sources/
 
 MAINTAINER=		plunky@rya-online.net
-HOMEPAGE=		http://coding.wooyayhoopla.be/lcab/
+HOMEPAGE=		http://lcab.move-to-cork.com/
 COMMENT=		Microsoft cabinet (.CAB) file creator
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
