@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1 2008/07/28 16:27:42 cube Exp $
+
+--- src/getarticle.c.orig	2003-01-21 10:47:25.000000000 +0100
++++ src/getarticle.c
+@@ -143,12 +143,12 @@ read_article(long where,char *group)
+     long len;
+     long bytecount = 0L; /* BUG: */
+ 
+-    line=linebuf;
+-    line[MAX_HEADER_SIZE] = '\0'; /* better safe than sorry */
++    linebuf[MAX_HEADER_SIZE] = '\0'; /* better safe than sorry */
+     path_line[0] = '\0';
+ 
+     /* fetch the article, header and body */
+     for (;;) {
++	line=linebuf;
+ 	if (!get_server_msg(line, MAX_HEADER_SIZE)) {
+ 	    /* timeout: simply give up */
+ 	    return 0;
