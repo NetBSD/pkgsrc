@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1708 2008/07/28 19:49:51 martti Exp $
+$NetBSD: CHANGES-2008,v 1.1709 2008/07/28 22:47:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2920,3 +2920,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xf86-video-intel to 2.4.0 [tnn 2008-07-28]
 	Updated devel/p5-Mouse to 0.06 [seb 2008-07-28]
 	Added databases/rrdtool12 version 1.2.28 [martti 2008-07-28]
+	Updated graphics/optipng to 0.6.1 [adam 2008-07-29]
