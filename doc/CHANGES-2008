@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1704 2008/07/28 14:08:32 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1705 2008/07/28 16:28:44 cube Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2916,3 +2916,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xphoon to 19910918nb3 [dholland 2008-07-28]
 	Updated security/p5-Digest-MD5-File to 0.07 [he 2008-07-28]
 	Added sysutils/ddrescue version 1.8 [obache 2008-07-28]
+	Updated news/newsx to 1.6nb2 [cube 2008-07-28]
