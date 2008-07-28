@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7432 2008/07/27 09:49:45 obache Exp $
+$NetBSD: TODO,v 1.7433 2008/07/28 19:44:22 plunky Exp $
 
 Suggested new packages
 ======================
@@ -813,7 +813,6 @@ Suggested package updates
 	o lapack-20070226
 	o latd-1.21
 	o latex2rtf-1.9.19
-	o lcab-1.0b12
 	o lcc-4.2
 	o ldapsdk-6.0.2
 	o leafnode-1.11.6
