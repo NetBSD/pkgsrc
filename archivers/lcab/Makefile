@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/07/28 19:42:33 plunky Exp $
+# $NetBSD: Makefile,v 1.10 2008/07/28 20:08:39 plunky Exp $
 #
 
 DISTNAME=		lcab-1.0b12
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 
-INSTALLATION_DIRS=	${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/lcab.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/lcab.1
