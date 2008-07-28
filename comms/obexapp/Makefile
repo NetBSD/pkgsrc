@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/07/14 07:01:01 plunky Exp $
+# $NetBSD: Makefile,v 1.13 2008/07/28 18:49:06 plunky Exp $
 #
 
 DISTNAME=	obexapp-1.4.9
@@ -26,6 +26,7 @@ SUBST_SED.paths+=	-e "s|/var|${VARBASE}|"
 
 # Sigh, this needs the GNU libiconv.
 USE_GNU_ICONV=		yes
+USE_BSD_MAKEFILE=	yes
 
 # because the directory name conflicts with the rc.d script
 post-extract:
