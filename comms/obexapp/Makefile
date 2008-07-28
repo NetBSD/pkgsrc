@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/07/28 19:47:08 plunky Exp $
+# $NetBSD: Makefile,v 1.15 2008/07/28 20:13:50 plunky Exp $
 #
 
 DISTNAME=	obexapp-1.4.9
@@ -15,6 +15,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEFS+=		VARBASE
 
+INSTALLATION_DIRS+=	bin
+INSTALLATION_DIRS+=	${PKGMANDIR}/cat1
+INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 OWN_DIRS+=		${VARBASE}/spool/obex
 
 RCD_SCRIPTS+=		obexapp
