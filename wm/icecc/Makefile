@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/12/08 12:05:05 obache Exp $
+# $NetBSD: Makefile,v 1.13 2008/07/28 18:50:48 plunky Exp $
 
 # Package version reflects icecc version, with PKGREVISION incremented
 # for any tool updates, according to the authors scheme.
@@ -61,12 +61,12 @@ post-build:
 
 post-install:
 .   for script in ${PYTHON_PATCH_SCRIPTS}
-	${INSTALL_SCRIPT} ${WRKSRC}/${script:Q} ${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKSRC}/${script:Q} ${DESTDIR}${PREFIX}/bin
 .   endfor
-	${INSTALL_PROGRAM} ${WRKSRC}/icewm4vim/icecolsel ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/icewm4vim/icefonsel ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/icewm4vim/icewm.vim ${PREFIX}/share/vim/${VIM_SUBDIR}/ftplugin/iceprefs.vim
-	${INSTALL_DATA} ${WRKSRC}/icewm4vim/syntax/icewm.vim ${PREFIX}/share/vim/${VIM_SUBDIR}/syntax/iceprefs.vim
+	${INSTALL_PROGRAM} ${WRKSRC}/icewm4vim/icecolsel ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/icewm4vim/icefonsel ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/icewm4vim/icewm.vim ${DESTDIR}${PREFIX}/share/vim/${VIM_SUBDIR}/ftplugin/iceprefs.vim
+	${INSTALL_DATA} ${WRKSRC}/icewm4vim/syntax/icewm.vim ${DESTDIR}${PREFIX}/share/vim/${VIM_SUBDIR}/syntax/iceprefs.vim
 
 .include "../../editors/vim-share/version.mk"
 .include "../../lang/python/application.mk"
