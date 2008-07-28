@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1701 2008/07/28 02:47:59 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.1702 2008/07/28 02:50:07 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2895,7 +2895,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-Text-RewriteRules to 0.13 [he 2008-07-27]
 	Updated textproc/p5-Text-Markdown to 1.0.21 [he 2008-07-27]
 	Updated textproc/p5-Text-Diff-HTML to 0.05 [he 2008-07-27]
-	Updated textproc/Text-CSV_XS to 0.52 [he 2008-07-27]
+	Updated textproc/p5-Text-CSV_XS to 0.52 [he 2008-07-27]
 	Updated devel/p5-Test-Warn to 0.11 [he 2008-07-27]
 	Updated devel/p5-Test-Unit to 0.25 [he 2008-07-27]
 	Updated devel/p5-Test-ClassAPI to 1.05 [he 2008-07-27]
