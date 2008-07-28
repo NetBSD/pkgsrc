@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.15 2007/01/17 03:11:19 rillig Exp $
+# $NetBSD: buildlink3.mk,v 1.16 2008/07/28 09:48:48 obache Exp $
 
 BUILDLINK_DEPTH:=       ${BUILDLINK_DEPTH}+
 GCC34_BUILDLINK3_MK:=  ${GCC34_BUILDLINK3_MK}+
@@ -40,9 +40,9 @@ BUILDLINK_FNAME_TRANSFORM.gcc34=	-e s:\buildlink:buildlink/gcc34:
 
 # Packages that link against shared libraries need a full dependency.
 .  if defined(_USE_GCC_SHLIB)
-BUILDLINK_DEPMETHOD.gcc+=	full
+BUILDLINK_DEPMETHOD.gcc34+=	full
 .  else
-BUILDLINK_DEPMETHOD.gcc?=	build
+BUILDLINK_DEPMETHOD.gcc34?=	build
 .  endif
 
 
