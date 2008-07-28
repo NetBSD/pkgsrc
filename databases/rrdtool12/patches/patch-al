@@ -1,0 +1,15 @@
+$NetBSD: patch-al,v 1.1.1.1 2008/07/28 19:48:03 martti Exp $
+
+Adjust for pkgsrc.
+
+--- examples/Makefile.in.orig	2008-07-23 16:56:19.000000000 +0300
++++ examples/Makefile.in	2008-07-28 22:34:47.000000000 +0300
+@@ -227,7 +227,7 @@
+ target_os = @target_os@
+ target_vendor = @target_vendor@
+ EXTRA_DIST = cgi-demo.cgi.in
+-examplesdir = $(pkgdatadir)/examples
++examplesdir = $(prefix)/share/examples/rrdtool
+ examples_SCRIPTS = cgi-demo.cgi piped-demo.pl shared-demo.pl \
+ 	stripes.pl bigtops.pl minmax.pl 4charts.pl perftest.pl
+ 
