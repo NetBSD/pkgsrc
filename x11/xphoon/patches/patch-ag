@@ -1,0 +1,33 @@
+$NetBSD: patch-ag,v 1.1 2008/07/28 02:45:56 dholland Exp $
+
+--- vroot.h.orig	1991-09-18 15:49:11.000000000 -0400
++++ vroot.h	2008-07-27 22:17:45.000000000 -0400
+@@ -50,7 +50,7 @@ VirtualRootWindowOfScreen(screen)
+ 	if (screen != save_screen) {
+ 		Display *dpy = DisplayOfScreen(screen);
+ 		Atom __SWM_VROOT = None;
+-		int i;
++		unsigned i;
+ 		Window rootReturn, parentReturn, *children;
+ 		unsigned int numChildren;
+ 
+@@ -64,14 +64,16 @@ VirtualRootWindowOfScreen(screen)
+ 				Atom actual_type;
+ 				int actual_format;
+ 				unsigned long nitems, bytesafter;
+-				Window *newRoot = (Window *)0;
++				Window *newRoot;
++				unsigned char *newRootTmp = NULL;
+ 
+ 				if (XGetWindowProperty(dpy, children[i],
+ 					__SWM_VROOT, 0, 1, False, XA_WINDOW,
+ 					&actual_type, &actual_format,
+ 					&nitems, &bytesafter,
+-					(unsigned char **) &newRoot) == Success
+-				    && newRoot) {
++					&newRootTmp) == Success
++				    && newRootTmp) {
++				    newRoot = (Window *) newRootTmp;
+ 				    root = *newRoot;
+ 				    break;
+ 				}

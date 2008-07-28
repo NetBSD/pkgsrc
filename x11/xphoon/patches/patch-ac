@@ -1,25 +1,52 @@
-$NetBSD: patch-ac,v 1.1.1.1 2001/07/18 14:27:31 nra Exp $
+$NetBSD: patch-ac,v 1.2 2008/07/28 02:45:56 dholland Exp $
 
---- xphoon.c.orig	Wed Sep 18 21:57:37 1991
-+++ xphoon.c
-@@ -31,9 +31,16 @@
+--- xphoon.c.orig	1991-09-18 15:57:37.000000000 -0400
++++ xphoon.c	2008-07-27 22:02:33.000000000 -0400
+@@ -31,22 +31,22 @@ static char rcsid[] =
  
  /* Externals. */
  
-+#include <sys/param.h>
-+
-+#if (defined(BSD) && (BSD >= 199306))
+-extern char* malloc();
+-extern long time();
+-extern long random();
+-
+-extern void getbits();
+-extern double jtime();
+-extern double phase();
 +#include <stdlib.h>
 +#include <time.h>
-+#else
- extern char* malloc();
- extern long time();
- extern long random();
-+#endif
++#include "xphoon.h"
  
- extern void getbits();
- extern double jtime();
-@@ -65,7 +72,7 @@
+ 
+ /* Forward routines. */
+ 
+-static void xinit();
+-static void make_star_tiles();
+-static void hack_bits();
+-static void set_root();
+-static void cleanup();
++static void xinit(char *display_name);
++static void make_star_tiles(void);
++static void hack_bits(struct tws *t, 
++		      int bits_w, int bits_h, 
++		      char *bits,
++		      int cx, int cy, int r,
++		      int blackflag, int demoflag);
++static void set_root(int bits_w, int bits_h, char *bits, int cx, int cy, int r);
++static void cleanup(void);
+ 
+ 
+ /* Routines. */
+@@ -54,7 +54,7 @@ static void cleanup();
+ static char* argv0;
+ static int seed;
+ 
+-void
++int
+ main( argc, argv )
+     int argc;
+     char** argv;
+@@ -65,7 +65,7 @@ main( argc, argv )
      int blackflag, demoflag;
      int printpid;
      char* display_name;
@@ -28,7 +55,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/07/18 14:27:31 nra Exp $
      int pid, tty;
      int size;
      char* mooncopy;
-@@ -190,6 +197,7 @@
+@@ -190,6 +190,7 @@ usage:
  	(void) fflush( stdout );
  
  	/* Go stealth (ditch our controlling tty). */
@@ -36,7 +63,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/07/18 14:27:31 nra Exp $
  	tty = open( "/dev/tty", 0 );
  	if ( tty < 0 )
  	    {
-@@ -207,6 +215,9 @@
+@@ -207,6 +208,9 @@ usage:
  		}
  	    (void) close( tty );
  	    }
@@ -46,3 +73,61 @@ $NetBSD: patch-ac,v 1.1.1.1 2001/07/18 14:27:31 nra Exp $
  	}
  
      size = BitmapSize( moon_w, moon_h );
+@@ -246,8 +250,7 @@ static GC copygc;
+ static GC clipgc;
+ 
+ static void
+-xinit( display_name )
+-    char* display_name;
++xinit( char *display_name )
+     {
+     Pixmap temp_pixmap;
+ 
+@@ -333,7 +336,7 @@ static Pixmap star_tile[NUM_TILES];
+ static int star_tiles_made = 0;
+ 
+ static void
+-make_star_tiles()
++make_star_tiles(void)
+     {
+     int i, j, k, r, x, y;
+     int total_prob;
+@@ -410,12 +413,11 @@ char *shades[16] = {
+ 				      Tennessee */
+ 
+ static void
+-hack_bits( t, bits_w, bits_h, bits, cx, cy, r, blackflag, demoflag )
+-    struct tws* t;
+-    int bits_w, bits_h;
+-    char* bits;
+-    int cx, cy, r;
+-    int blackflag, demoflag;
++hack_bits(struct tws *t, 
++	  int bits_w, int bits_h, 
++	  char *bits,
++	  int cx, int cy, int r,
++	  int blackflag, int demoflag)
+     {
+     double jd, angphase, cphase, aom, cdist, cangdia, csund, csuang;
+     int i;
+@@ -492,10 +494,7 @@ hack_bits( t, bits_w, bits_h, bits, cx, 
+ /* set_root - set the root bitmap */
+ 
+ static void
+-set_root( bits_w, bits_h, bits, cx, cy, r )
+-    int bits_w, bits_h;
+-    char* bits;
+-    int cx, cy, r;
++set_root(int bits_w, int bits_h, char *bits, int cx, int cy, int r)
+     {
+     Pixmap moon_bitmap;
+     Pixmap mask_bitmap;
+@@ -586,7 +585,7 @@ set_root( bits_w, bits_h, bits, cx, cy, 
+     }
+ 
+ static void
+-cleanup()
++cleanup(void)
+     {
+     int i;
+ 

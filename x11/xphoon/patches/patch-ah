@@ -1,0 +1,16 @@
+$NetBSD: patch-ah,v 1.1 2008/07/28 02:45:56 dholland Exp $
+
+--- /dev/null	2008-07-27 22:06:36.000000000 -0400
++++ xphoon.h	2008-07-27 22:00:25.000000000 -0400
+@@ -0,0 +1,11 @@
++struct tws;
++
++void getbits(int *wP, int *hP, char **moonP, int *cxP, int *cyP, int *rP);
++double jtime(struct tws *t);
++double phase(double pdate,
++	     double *pphase,
++	     double *mage,
++	     double *dist,
++	     double *angdia,
++	     double *sudist,
++	     double *suangdia);

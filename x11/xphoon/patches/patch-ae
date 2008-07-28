@@ -1,0 +1,24 @@
+$NetBSD: patch-ae,v 1.1 2008/07/28 02:45:56 dholland Exp $
+
+--- moon.c.orig	1991-09-15 20:59:28.000000000 -0400
++++ moon.c	2008-07-27 22:23:28.000000000 -0400
+@@ -14,16 +14,11 @@ static char rcsid[] =
+ #endif
+ 
+ #include <X11/Xlib.h>
+-#include <moon.xbm>
++#include "xphoon.h"
++#include "moon.xbm"
+ 
+ void
+-getbits( wP, hP, moonP, cxP, cyP, rP )
+-	int* wP;
+-	int* hP;
+-	char** moonP;
+-	int* cxP;
+-	int* cyP;
+-	int* rP;
++getbits( int *wP, int *hP, char **moonP, int *cxP, int *cyP, int *rP )
+     {
+     *wP = moon_width;
+     *hP = moon_height;

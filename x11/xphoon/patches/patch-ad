@@ -1,0 +1,70 @@
+$NetBSD: patch-ad,v 1.1 2008/07/28 02:45:56 dholland Exp $
+
+--- tws.h.orig	1991-09-13 19:32:38.000000000 -0400
++++ tws.h	2008-07-27 22:31:10.000000000 -0400
+@@ -1,5 +1,6 @@
+ /* tws.h - header file for libtws date/time library */
+ 
++#include <time.h>
+ 
+ /* Definition of the tws data structure. */
+ 
+@@ -17,7 +18,7 @@ struct tws {
+ 
+     int     tw_zone;
+ 
+-    long    tw_clock;
++    time_t  tw_clock;
+ 
+     int     tw_flags;
+ #define TW_NULL 0x0000
+@@ -33,47 +34,9 @@ struct tws {
+ 
+ /* Declarations of routines. */
+ 
+-void twscopy( );
+-	/* twscopy( &totws, &fromtws ) copies a tws */
+-int twsort( );
+-	/* twsort( &tws1, &tws2 ) compares two tws's: 1 means tws1 is
+-	   later; -1 means tws1 is earlier; 0 means they are equal */
+-long twclock( );
+-	/* twclock( &tws ) turns a tws into a time(3)-style clock value */
+-long twjuliandate( );
+-	/* twjuliandate( &tws ) returns the Julian day number of a tws */
+-long twsubtract( );
+-	/* twsubtract( &tws1, &tws2 ) returns seconds of difference */
+-
+-/* These routines are functionally similar to the ctime(3) routines
+-   in the standard Unix library. */
+-char *dctime( );
+-	/* dctime( &tws ) returns a string for the date/time passed in */
+-struct tws *dlocaltime( );
++struct tws *dlocaltime(time_t *clock);
+ 	/* dlocaltime( &clock ) turns a time(3) clock value into a tws */
+-struct tws *dgmtime( );
+-	/* dgmtime( &clock ) turns a time(3) clock value into a tws */
+-char *dasctime( );
+-	/* dasctime( &tws, flags ) turns a tws into a string */
+-char *dtimezone( );
+-	/* dtimezone( offset, flags ) returns the name of the time zone */
+ 
+-char *dtimenow( );
+-	/* dtimenow( ) returns a string for the current date/time */
+-
+-struct tws *dparsetime( );
+-	/* dparsetime( &str ) turns a string into a tws */
+-
+-struct tws *dtwstime( );
++struct tws *dtwstime(void);
+ 	/* dtwstime( ) returns a tws for the current date/time */
+ 
+-#ifdef ATZ
+-#define dtime(cl) dasctime( dlocaltime( cl ), TW_NULL )
+-#else ATZ
+-#define dtime(cl) dasctime( dlocaltime( cl ), TW_ZONE )
+-#endif ATZ
+-
+-#define dtwszone(tw) dtimezone( tw -> tw_zone, tw -> tw_flags )
+-
+-
+-extern char   *tw_dotw[], *tw_ldotw[], *tw_moty[];

@@ -1,23 +1,59 @@
-$NetBSD: patch-ab,v 1.1.1.1 2001/07/18 14:27:31 nra Exp $
+$NetBSD: patch-ab,v 1.2 2008/07/28 02:45:56 dholland Exp $
 
---- dtime.c.orig	Sat Sep 14 07:15:25 1991
-+++ dtime.c
-@@ -26,13 +26,17 @@
- #include <sys/timeb.h>
- #endif /*SYS5*/
- 
-+#include <sys/param.h>
-+
-+#if !(defined(BSD) && (BSD >= 199306))
- extern long time();
- struct tm* localtime();
-+#endif
+--- dtime.c.orig	1991-09-14 01:15:25.000000000 -0400
++++ dtime.c	2008-07-27 22:02:34.000000000 -0400
+@@ -19,36 +19,23 @@ static char rcsid[] =
+ #include <stdio.h>
+ #include <sys/types.h>
+ #include <time.h>
+-#ifdef  SYS5
+-extern int daylight;
+-extern long timezone;
+-#else /*SYS5*/
+-#include <sys/timeb.h>
+-#endif /*SYS5*/
+-
+-extern long time();
+-struct tm* localtime();
  
  struct tws*
- dtwstime()
+-dtwstime()
++dtwstime(void)
      {
 -    long clock;
 +    time_t clock;
  
      (void) time( &clock );
      return dlocaltime( &clock );
+     }
+ 
+ struct tws*
+-dlocaltime( clock )
+-    long* clock;
++dlocaltime( time_t *clock )
+     {
+     register struct tm* tm;
+-#ifndef SYS5
+-    struct timeb tb;
+-#endif not SYS5
+     static struct tws tw;
+ 
+-    if ( clock == (long*) 0 )
++    if ( clock == NULL )
+ 	return (struct tws*) 0;
+     tw.tw_flags = TW_NULL;
+ 
+@@ -63,13 +50,6 @@ dlocaltime( clock )
+     tw.tw_yday = tm->tm_yday;
+     if ( tm->tm_isdst )
+ 	tw.tw_flags |= TW_DST;
+-#ifndef  SYS5
+-    ftime( &tb );
+-    tw.tw_zone = -tb.timezone;
+-#else   SYS5
+-    tzset();
+-    tw.tw_zone = -( timezone / 60 );
+-#endif  SYS5
+     tw.tw_flags &= ~TW_SDAY;
+     tw.tw_flags |= TW_SEXP;
+     tw.tw_clock = *clock;

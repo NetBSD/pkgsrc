@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2008/07/14 12:56:20 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2008/07/28 02:45:56 dholland Exp $
 #
 
 DISTNAME=	xphoon.tar
 PKGNAME=	xphoon-19910918
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11
 MASTER_SITES=	ftp://ftp.x.org/R5contrib/
 EXTRACT_SUFX=	.Z
@@ -16,16 +16,10 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=		${WRKDIR}/xphoon
 USE_IMAKE=	yes
 
-MAKE_FLAGS+=	EXTRA_LOCAL_LIBS=${EXTRA_LOCAL_LIBS:Q}
-
 .include "../../mk/bsd.prefs.mk"
 
 .if ${MACHINE_ARCH} == "arm" || ${MACHINE_ARCH} == "arm32"
 GCC_REQD+=	2.95.3
-.endif
-
-.if ${OPSYS} == "NetBSD" || ${OPSYS} == "DragonFly" || ${OPSYS} == "FreeBSD"
-EXTRA_LOCAL_LIBS=	-lcompat
 .endif
 
 .include "../../x11/libXext/buildlink3.mk"
