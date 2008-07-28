@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/28 14:08:07 obache Exp $
+bin/ddrescue
+info/ddrescue.info
+man/man1/ddrescue.1
