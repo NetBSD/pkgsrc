@@ -1,4 +1,4 @@
-#	$NetBSD: Linux.bsd.man.mk,v 1.2 2008/05/20 12:27:23 tnn Exp $
+#	$NetBSD: Linux.bsd.man.mk,v 1.3 2008/07/28 20:18:20 tnn Exp $
 #	@(#)bsd.man.mk	8.1 (Berkeley) 6/8/93
 
 .if !target(__initialized__)
@@ -20,6 +20,8 @@ cleandir: cleanman
 
 .if exists(${DESTDIR}/usr/share/groff/1.19.2/tmac)
 TMACDIR?=	${DESTDIR}/usr/share/groff/1.19.2/tmac
+.elif exists(${DESTDIR}/usr/share/groff/1.18.1.1/tmac)
+TMACDIR?=	${DESTDIR}/usr/share/groff/1.18.1.1/tmac
 .elif exists(${DESTDIR}/usr/share/groff/1.18.1/tmac)
 TMACDIR?=	${DESTDIR}/usr/share/groff/1.18.1/tmac
 .else
