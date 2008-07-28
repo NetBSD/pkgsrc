@@ -1,0 +1,141 @@
+$NetBSD: patch-af,v 1.1 2008/07/28 02:45:56 dholland Exp $
+
+--- phase.c.orig	1991-09-14 01:15:29.000000000 -0400
++++ phase.c	2008-07-27 22:21:18.000000000 -0400
+@@ -9,8 +9,10 @@ static char rcsid[] =
+ #endif
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ #include <math.h>
+ #include "tws.h"
++#include "xphoon.h"
+ 
+ /* Astronomical constants. */
+ 
+@@ -65,8 +67,7 @@ static char rcsid[] =
+ 
+ /* jdate - convert internal GMT date and time to Julian day and fraction */
+ 
+-static long jdate(t)
+-struct tws *t;
++static long jdate(struct tws *t)
+ {
+ 	long c, m, y;
+ 
+@@ -89,8 +90,7 @@ struct tws *t;
+ **	     a double)
+ */
+ 
+-double jtime(t)
+-struct tws *t;
++double jtime(struct tws *t)
+ {
+ 	int c;
+ 
+@@ -106,6 +106,7 @@ struct tws *t;
+ **	     returned via integer pointers to integers
+ */
+ 
++#if 0 /* not used */
+ static void jyear(td, yy, mm, dd)
+ double td;
+ int *yy, *mm, *dd;
+@@ -135,6 +136,7 @@ int *yy, *mm, *dd;
+ 	*mm = m;
+ 	*dd = d;
+ }
++#endif /* 0 - not used */
+ 
+ /* meanphase - calculates mean phase of the Moon for a given base date
+ **               and desired phase:
+@@ -149,6 +151,7 @@ int *yy, *mm, *dd;
+ **		 that this calculation reveals.
+ */
+ 
++#if 0 /* not used */
+ static double meanphase(sdate, phase, usek)
+ double sdate, phase;
+ double *usek;
+@@ -173,12 +176,14 @@ double *usek;
+ 
+ 	return nt1;
+ }
++#endif /* 0 - not used */
+ 
+ /* truephase - given a K value used to determine the mean phase of the
+ **               new moon, and a phase selector (0.0, 0.25, 0.5, 0.75),
+ **               obtain the true, corrected phase time
+ */
+ 
++#if 0 /* not used */
+ static double truephase(k, phase)
+ double k, phase;
+ {
+@@ -257,12 +262,13 @@ double k, phase;
+ 	}
+ 	return pt;
+ }
++#endif /* 0 - not used */
+ 
+ /* phasehunt5 - find time of phases of the moon which surround the current
+ **                date.  Five phases are found, starting and ending with the
+ **                new moons which bound the current lunation
+ */
+-
++#if 0 /* not used */
+ void phasehunt5(sdate, phases)
+ double sdate;
+ double phases[5];
+@@ -285,12 +291,14 @@ double phases[5];
+ 	phases[3] = truephase(k1, 0.75);
+ 	phases[4] = truephase(k2, 0.0);
+ }
++#endif /* 0 - not used */
+ 
+ 
+ /* phasehunt2 - find time of phases of the moon which surround the current
+ **                date.  Two phases are found.
+ */
+ 
++#if 0 /* not used */
+ void phasehunt2(sdate, phases, which)
+ double sdate;
+ double phases[2];
+@@ -331,12 +339,12 @@ double which[2];
+ 	   }
+ 	}
+ }
++#endif /* 0 - not used */
+ 
+ 
+ /* kepler - solve the equation of Kepler */
+ 
+-static double kepler(m, ecc)
+-double m, ecc;
++static double kepler(double m, double ecc)
+ {
+ 	double e, delta;
+ #define EPSILON 1E-6
+@@ -361,14 +369,13 @@ double m, ecc;
+ **	at the centre of the Earth.
+ */
+ 
+-double phase(pdate, pphase, mage, dist, angdia, sudist, suangdia)
+-double pdate;
+-double *pphase; 		   /* illuminated fraction */
+-double *mage;			   /* age of moon in days */
+-double *dist;			   /* distance in kilometres */
+-double *angdia; 		   /* angular diameter in degrees */
+-double *sudist; 		   /* distance to Sun */
+-double *suangdia;                  /* sun's angular diameter */
++double phase(double pdate,
++	     double *pphase, 		   /* illuminated fraction */
++	     double *mage,		   /* age of moon in days */
++	     double *dist,		   /* distance in kilometres */
++	     double *angdia, 		   /* angular diameter in degrees */
++	     double *sudist, 		   /* distance to Sun */
++	     double *suangdia)                 /* sun's angular diameter */
+ {
+ 
+ 	double Day, N, M, Ec, Lambdasun, ml, MM, Ev, Ae, A3, MmP,
