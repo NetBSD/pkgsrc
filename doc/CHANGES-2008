@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1709 2008/07/28 22:47:53 adam Exp $
+$NetBSD: CHANGES-2008,v 1.1710 2008/07/29 05:04:34 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2921,3 +2921,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Mouse to 0.06 [seb 2008-07-28]
 	Added databases/rrdtool12 version 1.2.28 [martti 2008-07-28]
 	Updated graphics/optipng to 0.6.1 [adam 2008-07-29]
+	Updated www/ikiwiki to 2.55 [schmonz 2008-07-29]
