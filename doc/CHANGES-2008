@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1718 2008/07/29 14:04:46 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1719 2008/07/29 16:18:37 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2934,3 +2934,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/xchat to 2.8.6 [tron 2008-07-29]
 	Updated chat/xchat-perl to 2.8.6 [tron 2008-07-29]
 	Updated chat/xchat-python to 2.8.6 [tron 2008-07-29]
+	Removed mail/yatsvrs [taca 2008-07-29]
