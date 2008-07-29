@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1716 2008/07/29 09:59:26 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1717 2008/07/29 12:38:45 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2928,3 +2928,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated fonts/fontforge to 20080720 [adam 2008-07-29]
 	Updated multimedia/xine-lib to 1.1.14nb2 [dholland 2008-07-29]
 	Updated textproc/ruby-libxml to 0.8.3 [seb 2008-07-29]
+	Updated www/p5-MasonX-Request-WithApacheSession to 0.31 [he 2008-07-29]
+	Updated math/p5-Math-MatrixReal to 2.05 [he 2008-07-29]
+	Updated math/p5-Math-Pari to 2.010800 [he 2008-07-29]
