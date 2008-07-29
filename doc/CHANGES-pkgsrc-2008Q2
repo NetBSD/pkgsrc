@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.17 2008/07/26 01:35:03 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.18 2008/07/29 11:59:12 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -39,3 +39,5 @@ pullup ticket #2462 requested by tonnerre
 webmin: patch for various security vulnerabilities
 pullup ticket #2464 - requested by obache
 libsndfile: fix for failure on some platforms
+pullup ticket #2465 - requested by cube
+newsx: fix to make build and cvs-2008-3252
