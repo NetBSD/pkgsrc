@@ -1,8 +1,8 @@
-$NetBSD: patch-bg,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
+$NetBSD: patch-bg,v 1.2 2008/07/29 21:02:23 tnn Exp $
 
 --- pppdump/deflate.c.orig	2004-02-02 04:36:46.000000000 +0100
 +++ pppdump/deflate.c
-@@ -41,9 +41,16 @@
+@@ -41,8 +41,14 @@
  #include <stddef.h>
  #include <stdlib.h>
  #include <string.h>
@@ -10,16 +10,14 @@ $NetBSD: patch-bg,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
 +#ifdef __NetBSD__
 +#include <net/ppp_defs.h>
 +#include <net/ppp-comp.h>
-+#include <zlib.h>
 +#else
  #include "ppp_defs.h"
  #include "ppp-comp.h"
- #include "zlib.h"
 +#endif
+ #include "zlib.h"
  
  #if DO_DEFLATE
- 
-@@ -71,9 +78,8 @@ static void	*z_decomp_alloc __P((u_char 
+@@ -71,9 +77,8 @@ static void	*z_decomp_alloc __P((u_char 
  static void	z_decomp_free __P((void *state));
  static int	z_decomp_init __P((void *state, u_char *options, int opt_len,
  				     int unit, int hdrlen, int mru, int debug));
@@ -31,7 +29,7 @@ $NetBSD: patch-bg,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
  static void	z_decomp_reset __P((void *state));
  static void	z_comp_stats __P((void *state, struct compstat *stats));
  
-@@ -82,6 +88,12 @@ static void	z_comp_stats __P((void *stat
+@@ -82,6 +87,12 @@ static void	z_comp_stats __P((void *stat
   */
  struct compressor ppp_deflate = {
      CI_DEFLATE,			/* compress_proto */
@@ -44,7 +42,7 @@ $NetBSD: patch-bg,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
      z_decomp_alloc,		/* decomp_alloc */
      z_decomp_free,		/* decomp_free */
      z_decomp_init,		/* decomp_init */
-@@ -230,17 +242,17 @@ z_decomp_reset(arg)
+@@ -230,17 +241,17 @@ z_decomp_reset(arg)
   * compression, even though they are detected by inspecting the input.
   */
  static int
@@ -68,7 +66,7 @@ $NetBSD: patch-bg,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
      if (*rptr == 0)
  	++rptr;
      ++rptr;
-@@ -261,9 +273,9 @@ z_decompress(arg, mi, inlen, mo, outlenp
+@@ -261,9 +272,9 @@ z_decompress(arg, mi, inlen, mo, outlenp
      /*
       * Set up to call inflate.
       */
@@ -80,7 +78,7 @@ $NetBSD: patch-bg,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
      rlen = state->strm.avail_in + PPP_HDRLEN + DEFLATE_OVHD;
      state->strm.next_out = wptr;
      state->strm.avail_out = state->mru + 2;
-@@ -278,7 +290,7 @@ z_decompress(arg, mi, inlen, mo, outlenp
+@@ -278,7 +289,7 @@ z_decompress(arg, mi, inlen, mo, outlenp
  	return DECOMP_FATALERROR;
      }
      olen = state->mru + 2 - state->strm.avail_out;
@@ -89,7 +87,7 @@ $NetBSD: patch-bg,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
  
      if ((wptr[0] & 1) != 0)
  	++olen;			/* for suppressed protocol high byte */
-@@ -302,10 +314,9 @@ z_decompress(arg, mi, inlen, mo, outlenp
+@@ -302,10 +313,9 @@ z_decompress(arg, mi, inlen, mo, outlenp
   * Incompressible data has arrived - add it to the history.
   */
  static void
@@ -102,7 +100,7 @@ $NetBSD: patch-bg,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
  {
      struct deflate_state *state = (struct deflate_state *) arg;
      u_char *rptr;
-@@ -314,7 +325,7 @@ z_incomp(arg, mi, mlen)
+@@ -314,7 +324,7 @@ z_incomp(arg, mi, mlen)
      /*
       * Check that the protocol is one we handle.
       */
@@ -111,7 +109,7 @@ $NetBSD: patch-bg,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
      proto = rptr[0];
      if ((proto & 1) == 0)
  	proto = (proto << 8) + rptr[1];
-@@ -325,7 +336,7 @@ z_incomp(arg, mi, mlen)
+@@ -325,7 +335,7 @@ z_incomp(arg, mi, mlen)
  
      if (rptr[0] == 0)
  	++rptr;
