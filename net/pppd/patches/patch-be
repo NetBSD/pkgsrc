@@ -1,6 +1,6 @@
-$NetBSD: patch-be,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
+$NetBSD: patch-be,v 1.2 2008/07/29 21:02:23 tnn Exp $
 
---- pppdump/Makefile.netbsd.orig	2004-12-31 23:51:00.000000000 +0100
+--- pppdump/Makefile.netbsd.orig	2008-07-29 22:51:39.000000000 +0200
 +++ pppdump/Makefile.netbsd
 @@ -0,0 +1,21 @@
 +DESTDIR = @DESTDIR@
@@ -8,14 +8,14 @@ $NetBSD: patch-be,v 1.1.1.1 2005/01/02 02:51:44 cube Exp $
 +MANDIR = $(DESTDIR)/man/man8
 +
 +CFLAGS= -O -I../include/net
-+OBJS = pppdump.o bsd-comp.o deflate.o
++OBJS = pppdump.o bsd-comp.o deflate.o zlib.o
 +
 +INSTALL= install
 +
 +all:	pppdump
 +
 +pppdump: $(OBJS)
-+	$(CC) -o pppdump $(OBJS) -lz
++	$(CC) -o pppdump $(OBJS)
 +
 +clean:
 +	rm -f pppdump $(OBJS) *~
