@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7433 2008/07/28 19:44:22 plunky Exp $
+$NetBSD: TODO,v 1.7434 2008/07/29 19:50:34 tnn Exp $
 
 Suggested new packages
 ======================
@@ -963,7 +963,6 @@ Suggested package updates
 	o nullmailer-1.04
 	o nut-13.9
 	o nxtvepg-2.8.0
-	o obconf-2.0.3
 	o objc-3.2.8
 	o ocamlnet-2.2.4
 	o ocrad-0.17
