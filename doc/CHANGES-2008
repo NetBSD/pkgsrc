@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1727 2008/07/29 21:24:12 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1728 2008/07/29 21:30:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2943,3 +2943,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xf86-video-nv to 2.1.10 [wiz 2008-07-29]
 	Updated www/surfraw to 2.2.2 [wiz 2008-07-29]
 	Updated x11/libSM to 1.1.0 [wiz 2008-07-29]
+	Updated net/clive to 0.4.20 [wiz 2008-07-29]
