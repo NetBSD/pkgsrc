@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/29 05:07:46 schmonz Exp $
+lib/httpd/mod_authnz_external.so
