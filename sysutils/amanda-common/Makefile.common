@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.26 2008/02/15 16:23:09 gdt Exp $
+# $NetBSD: Makefile.common,v 1.27 2008/07/29 17:21:39 pgoyette Exp $
 
 # used by sysutils/amanda-common/Makefile
 # used by sysutils/amanda-client/Makefile
@@ -57,3 +57,5 @@ CONFIGURE_ARGS+=	--with-fqdn
 .if defined(AMANDA_SSH) && !empty(AMANDA_SSH:M[yY][eE][sS])
 CONFIGURE_ARGS+=	--with-ssh-security
 .endif
+
+.include "../../sysutils/amanda-common/options.mk"
