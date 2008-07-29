@@ -1,8 +1,18 @@
-$NetBSD: patch-ax,v 1.1.1.1 2005/01/02 02:51:42 cube Exp $
+$NetBSD: patch-ax,v 1.2 2008/07/29 21:02:23 tnn Exp $
 
 --- pppd/pppd.h.orig	2004-11-13 13:02:22.000000000 +0100
 +++ pppd/pppd.h
-@@ -213,7 +213,7 @@ struct notifier {
+@@ -85,7 +85,8 @@
+  * Option descriptor structure.
+  */
+ 
+-typedef unsigned char	bool;
++/* typedef unsigned char	bool; */
++#include <stdbool.h>
+ 
+ enum opt_type {
+ 	o_special_noarg = 0,
+@@ -213,7 +214,7 @@ struct notifier {
  extern int	hungup;		/* Physical layer has disconnected */
  extern int	ifunit;		/* Interface unit number */
  extern char	ifname[];	/* Interface name */
@@ -11,7 +21,7 @@ $NetBSD: patch-ax,v 1.1.1.1 2005/01/02 02:51:42 cube Exp $
  extern u_char	outpacket_buf[]; /* Buffer for outgoing packets */
  extern int	devfd;		/* fd of underlying device */
  extern int	fd_ppp;		/* fd for talking PPP */
-@@ -336,8 +336,13 @@ extern int       maxoctets_timeout;  /* 
+@@ -336,8 +337,13 @@ extern int       maxoctets_timeout;  /* 
  #endif
  
  #ifdef PPP_FILTER
@@ -27,7 +37,7 @@ $NetBSD: patch-ax,v 1.1.1.1 2005/01/02 02:51:42 cube Exp $
  #endif
  
  #ifdef MSLANMAN
-@@ -506,8 +511,10 @@ void print_string __P((char *, int,  voi
+@@ -506,8 +512,10 @@ void print_string __P((char *, int,  voi
  		void *));	/* Format a string for output */
  int slprintf __P((char *, int, char *, ...));		/* sprintf++ */
  int vslprintf __P((char *, int, char *, va_list));	/* vsprintf++ */
@@ -38,7 +48,7 @@ $NetBSD: patch-ax,v 1.1.1.1 2005/01/02 02:51:42 cube Exp $
  void dbglog __P((char *, ...));	/* log a debug message */
  void info __P((char *, ...));	/* log an informational message */
  void notice __P((char *, ...));	/* log a notice-level message */
-@@ -657,7 +664,8 @@ void logwtmp __P((const char *, const ch
+@@ -657,7 +665,8 @@ void logwtmp __P((const char *, const ch
  int  get_host_seed __P((void));	/* Get host-dependent random number seed */
  int  have_route_to __P((u_int32_t)); /* Check if route to addr exists */
  #ifdef PPP_FILTER
@@ -48,7 +58,7 @@ $NetBSD: patch-ax,v 1.1.1.1 2005/01/02 02:51:42 cube Exp $
  				/* Set filter programs in kernel */
  #endif
  #ifdef IPX_CHANGE
-@@ -709,6 +717,10 @@ extern int (*allowed_address_hook) __P((
+@@ -709,6 +718,10 @@ extern int (*allowed_address_hook) __P((
  extern void (*ip_up_hook) __P((void));
  extern void (*ip_down_hook) __P((void));
  extern void (*ip_choose_hook) __P((u_int32_t *));
