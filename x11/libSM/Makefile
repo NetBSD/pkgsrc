@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2008/05/24 21:45:15 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2008/07/29 21:24:01 wiz Exp $
 #
 
-DISTNAME=		libSM-1.0.3
-PKGREVISION=		1
+DISTNAME=		libSM-1.1.0
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2
@@ -19,6 +18,8 @@ GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config
 
 PKGCONFIG_OVERRIDE+=	sm.pc.in
+
+CONFIGURE_ARGS+=	--without-libuuid
 
 .include "options.mk"
 
