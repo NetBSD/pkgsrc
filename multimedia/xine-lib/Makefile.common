@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.54 2008/07/21 00:11:34 dholland Exp $
+# $NetBSD: Makefile.common,v 1.55 2008/07/29 05:58:41 dholland Exp $
 #
 
 # used by audio/xine-arts/Makefile
@@ -38,24 +38,24 @@ PKGSRC_MAKE_ENV+=	"mkdir_p"="mkdir -p"
 
 .include "../../mk/bsd.prefs.mk"
 
-PLIST_VARS+=		xv
+PLIST_VARS+=		xv xvmc
+.include "../../x11/libXv/buildlink3.mk"
+.include "../../x11/libXvMC/buildlink3.mk"
+
 .if ${X11_TYPE} == "modular"
-.  include "../../x11/libXv/buildlink3.mk"
-.endif
-.if ${X11_TYPE} == "modular" || exists(${X11BASE}/lib/libXv.so)
+PLIST.xv=		yes
+PLIST.xvmc=		yes
+.else
+.if exists(${X11BASE}/lib/libXv.so)
 CONFIGURE_ARGS+=	--with-xv-path='${X11BASE}/lib'
 PLIST.xv=		yes
 .endif
-
-PLIST_VARS+=		xvmc
-.if ${X11_TYPE} == "modular"
-.  include "../../x11/libXvMC/buildlink3.mk"
-.endif
-.if ${X11_TYPE} == "modular" || exists(${X11BASE}/lib/libXvMC.so)
+.if exists(${X11BASE}/lib/libXvMCW.so)
 CONFIGURE_ARGS+=	--with-xvmc-path='${X11BASE}/lib'
 CONFIGURE_ARGS+=	--with-xxmc-path='${X11BASE}/lib'
 PLIST.xvmc=		yes
 .endif
+.endif # X11_TYPE
 
 pre-configure:
 	cd ${WRKSRC} && autoconf
