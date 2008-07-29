@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/12/07 20:32:15 plunky Exp $
+# $NetBSD: Makefile,v 1.2 2008/07/29 15:11:42 plunky Exp $
 
-DISTNAME=		btpin-qt-1.0
+DISTNAME=		btpin-qt-1.3
 CATEGORIES=		sysutils
 MASTER_SITES=		http://homepages.rya-online.net/plunky/
 
@@ -9,16 +9,19 @@ COMMENT=		Bluetooth PIN Client
 
 ONLY_FOR_PLATFORM=	NetBSD-[4-9].*-*
 
-BUILD_DEFS+=		PKGMANDIR
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 USE_LANGUAGES=		c++
 
-INSTALLATION_DIRS+=	${PKGMANDIR}/man1
+INSTALLATION_DIRS+=	bin ${PKGMANDIR}/man1
+
+INSTALL_MAKE_FLAGS+=	INSTALL_ROOT=${DESTDIR}
 
 do-configure:
 	cd ${WRKSRC} && ${QTDIR}/bin/qmake -after	\
 		target.path=${PREFIX}/bin		\
 		man.path=${PREFIX}/${PKGMANDIR}/man1
 
-.include "../../x11/qt3-libs/buildlink3.mk"
-.include "../../x11/qt3-tools/buildlink3.mk"
+.include "../../x11/qt4-libs/buildlink3.mk"
+.include "../../x11/qt4-tools/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
