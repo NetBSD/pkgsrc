@@ -1,20 +1,100 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/04 15:21:57 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/07/29 09:58:39 seb Exp $
 ${GEM_HOME}/cache/libxml-ruby-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/LICENSE
-${GEM_LIBDIR}/MANIFEST
-${GEM_LIBDIR}/NOTES
+${GEM_LIBDIR}/RAKEFILE
 ${GEM_LIBDIR}/README
-${GEM_LIBDIR}/Rakefile
-${GEM_LIBDIR}/TODO
-${GEM_LIBDIR}/VERSION
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/Attr.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/Attributes.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/Document.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/Dtd.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/Error.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/HTMLParser.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/InputCallbacks.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/NS.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/Node.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/Node/FailedModify.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/Node/Set.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/Node/SetNamespace.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/Node/UnknownType.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/Parser.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/Parser/Context.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/Parser/ParseError.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/Reader.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/RelaxNG.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/SaxParser.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/Schema.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/State.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/Tree.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/XInclude.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/XInclude/Error.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/XMLParserOptions.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/XPath.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/XPath/Context.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/XPath/InvalidPath.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/XPath/Object.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/XPointer.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/XPointer/Context.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/XPointer/Context/InvalidPath.html
+${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/XPointer/InvalidExpression.html
+${GEM_LIBDIR}/doc/rdoc/classes/singleton.html
+${GEM_LIBDIR}/doc/rdoc/created.rid
+${GEM_LIBDIR}/doc/rdoc/files/CHANGES.html
+${GEM_LIBDIR}/doc/rdoc/files/LICENSE.html
+${GEM_LIBDIR}/doc/rdoc/files/README.html
+${GEM_LIBDIR}/doc/rdoc/files/VERSION.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/cbg_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/libxml_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_attr_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_attributes_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_document_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_dtd_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_html_parser_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_input_cbg_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_node_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_node_set_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_ns_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_parser_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_parser_context_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_reader_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_relaxng_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_sax_parser_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_schema_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_state_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_xinclude_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_xpath_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_xpath_context_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_xpath_object_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_xpointer_c.html
+${GEM_LIBDIR}/doc/rdoc/files/ext/libxml/ruby_xml_xpointer_context_c.html
+${GEM_LIBDIR}/doc/rdoc/files/lib/libxml/attr_rb.html
+${GEM_LIBDIR}/doc/rdoc/files/lib/libxml/attributes_rb.html
+${GEM_LIBDIR}/doc/rdoc/files/lib/libxml/document_rb.html
+${GEM_LIBDIR}/doc/rdoc/files/lib/libxml/node_rb.html
+${GEM_LIBDIR}/doc/rdoc/files/lib/libxml/node_set_rb.html
+${GEM_LIBDIR}/doc/rdoc/files/lib/libxml/parser_options_rb.html
+${GEM_LIBDIR}/doc/rdoc/files/lib/libxml/parser_rb.html
+${GEM_LIBDIR}/doc/rdoc/files/lib/libxml/properties_rb.html
+${GEM_LIBDIR}/doc/rdoc/files/lib/libxml/tree_rb.html
+${GEM_LIBDIR}/doc/rdoc/files/lib/libxml_rb.html
+${GEM_LIBDIR}/doc/rdoc/files/lib/xml/libxml_rb.html
+${GEM_LIBDIR}/doc/rdoc/files/lib/xml_rb.html
+${GEM_LIBDIR}/doc/rdoc/fr_class_index.html
+${GEM_LIBDIR}/doc/rdoc/fr_file_index.html
+${GEM_LIBDIR}/doc/rdoc/fr_method_index.html
+${GEM_LIBDIR}/doc/rdoc/index.html
+${GEM_LIBDIR}/doc/rdoc/rdoc-style.css
 ${GEM_LIBDIR}/ext/libxml/cbg.c
 ${GEM_LIBDIR}/ext/libxml/extconf.rb
 ${GEM_LIBDIR}/ext/libxml/libxml.c
-${GEM_LIBDIR}/ext/libxml/libxml.h
+${GEM_LIBDIR}/ext/libxml/ruby_libxml.h
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_attr.c
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_attr.h
+${GEM_LIBDIR}/ext/libxml/ruby_xml_attributes.c
+${GEM_LIBDIR}/ext/libxml/ruby_xml_attributes.h
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_document.c
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_document.h
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_dtd.c
@@ -35,14 +115,14 @@ ${GEM_LIBDIR}/ext/libxml/ruby_xml_parser_context.c
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_parser_context.h
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_reader.c
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_reader.h
+${GEM_LIBDIR}/ext/libxml/ruby_xml_relaxng.c
+${GEM_LIBDIR}/ext/libxml/ruby_xml_relaxng.h
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_sax_parser.c
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_sax_parser.h
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_schema.c
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_schema.h
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_state.c
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_state.h
-${GEM_LIBDIR}/ext/libxml/ruby_xml_tree.c
-${GEM_LIBDIR}/ext/libxml/ruby_xml_tree.h
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_xinclude.c
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_xinclude.h
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_xpath.c
@@ -57,88 +137,100 @@ ${GEM_LIBDIR}/ext/libxml/ruby_xml_xpointer_context.c
 ${GEM_LIBDIR}/ext/libxml/ruby_xml_xpointer_context.h
 ${GEM_LIBDIR}/ext/libxml/sax_parser_callbacks.inc
 ${GEM_LIBDIR}/ext/libxml/version.h
+${GEM_LIBDIR}/ext/mingw/Rakefile
+${GEM_LIBDIR}/ext/vc/libxml_ruby.sln
+${GEM_LIBDIR}/ext/vc/libxml_ruby.vcproj
 ${GEM_LIBDIR}/lib/libxml.rb
-${GEM_LIBDIR}/lib/libxml_so.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/libxml/attr.rb
+${GEM_LIBDIR}/lib/libxml/attributes.rb
+${GEM_LIBDIR}/lib/libxml/document.rb
+${GEM_LIBDIR}/lib/libxml/node.rb
+${GEM_LIBDIR}/lib/libxml/node_set.rb
+${GEM_LIBDIR}/lib/libxml/parser.rb
+${GEM_LIBDIR}/lib/libxml/parser_options.rb
+${GEM_LIBDIR}/lib/libxml/properties.rb
+${GEM_LIBDIR}/lib/libxml/tree.rb
+${GEM_LIBDIR}/lib/libxml_ruby.${RUBY_DLEXT}
+${GEM_LIBDIR}/lib/xml.rb
 ${GEM_LIBDIR}/lib/xml/libxml.rb
-${GEM_LIBDIR}/log/Changelog-0.txt
-${GEM_LIBDIR}/log/Changelog.txt
-${GEM_LIBDIR}/meta/project.yaml
-${GEM_LIBDIR}/meta/unixname
 ${GEM_LIBDIR}/setup.rb
-${GEM_LIBDIR}/site/css/normal.css
-${GEM_LIBDIR}/site/img/raze-tiny.png
-${GEM_LIBDIR}/site/img/red-cube.jpg
-${GEM_LIBDIR}/site/img/xml-ruby.png
-${GEM_LIBDIR}/site/index.xml
-${GEM_LIBDIR}/site/install.xml
-${GEM_LIBDIR}/site/layout.rhtml
-${GEM_LIBDIR}/site/layout.xsl
-${GEM_LIBDIR}/site/license.xml
-${GEM_LIBDIR}/site/log/changelog.xml
-${GEM_LIBDIR}/site/log/changelog.xsl
-${GEM_LIBDIR}/test/dtd-test.rb
 ${GEM_LIBDIR}/test/etc_doc_to_s.rb
 ${GEM_LIBDIR}/test/ets_copy_bug.rb
-${GEM_LIBDIR}/test/ets_copy_bug2.rb
+${GEM_LIBDIR}/test/ets_copy_bug3.rb
 ${GEM_LIBDIR}/test/ets_doc_file.rb
 ${GEM_LIBDIR}/test/ets_doc_to_s.rb
 ${GEM_LIBDIR}/test/ets_gpx.rb
 ${GEM_LIBDIR}/test/ets_node_gc.rb
 ${GEM_LIBDIR}/test/ets_test.xml
 ${GEM_LIBDIR}/test/ets_tsr.rb
-${GEM_LIBDIR}/test/merge_bug.rb
+${GEM_LIBDIR}/test/model/books.xml
 ${GEM_LIBDIR}/test/model/default_validation_bug.rb
 ${GEM_LIBDIR}/test/model/merge_bug_data.xml
 ${GEM_LIBDIR}/test/model/rubynet.xml
 ${GEM_LIBDIR}/test/model/rubynet_project
 ${GEM_LIBDIR}/test/model/saxtest.xml
+${GEM_LIBDIR}/test/model/shiporder.rnc
+${GEM_LIBDIR}/test/model/shiporder.rng
+${GEM_LIBDIR}/test/model/shiporder.xml
+${GEM_LIBDIR}/test/model/shiporder.xsd
 ${GEM_LIBDIR}/test/model/simple.xml
+${GEM_LIBDIR}/test/model/soap.xml
 ${GEM_LIBDIR}/test/model/xinclude.xml
-${GEM_LIBDIR}/test/schema-test.rb
-${GEM_LIBDIR}/test/tc_xml_document.rb
-${GEM_LIBDIR}/test/tc_xml_document_write.rb
-${GEM_LIBDIR}/test/tc_xml_document_write2.rb
-${GEM_LIBDIR}/test/tc_xml_document_write3.rb
-${GEM_LIBDIR}/test/tc_xml_html_parser.rb
-${GEM_LIBDIR}/test/tc_xml_node.rb
-${GEM_LIBDIR}/test/tc_xml_node2.rb
-${GEM_LIBDIR}/test/tc_xml_node3.rb
-${GEM_LIBDIR}/test/tc_xml_node4.rb
-${GEM_LIBDIR}/test/tc_xml_node5.rb
-${GEM_LIBDIR}/test/tc_xml_node6.rb
-${GEM_LIBDIR}/test/tc_xml_node7.rb
-${GEM_LIBDIR}/test/tc_xml_node8.rb
-${GEM_LIBDIR}/test/tc_xml_node9.rb
-${GEM_LIBDIR}/test/tc_xml_node_copy.rb
-${GEM_LIBDIR}/test/tc_xml_node_set.rb
-${GEM_LIBDIR}/test/tc_xml_node_set2.rb
-${GEM_LIBDIR}/test/tc_xml_node_text.rb
-${GEM_LIBDIR}/test/tc_xml_node_xlink.rb
-${GEM_LIBDIR}/test/tc_xml_parser.rb
-${GEM_LIBDIR}/test/tc_xml_parser2.rb
-${GEM_LIBDIR}/test/tc_xml_parser3.rb
-${GEM_LIBDIR}/test/tc_xml_parser4.rb
-${GEM_LIBDIR}/test/tc_xml_parser5.rb
-${GEM_LIBDIR}/test/tc_xml_parser6.rb
-${GEM_LIBDIR}/test/tc_xml_parser7.rb
-${GEM_LIBDIR}/test/tc_xml_parser8.rb
-${GEM_LIBDIR}/test/tc_xml_parser_context.rb
-${GEM_LIBDIR}/test/tc_xml_reader.rb
-${GEM_LIBDIR}/test/tc_xml_sax_parser.rb
-${GEM_LIBDIR}/test/tc_xml_xinclude.rb
-${GEM_LIBDIR}/test/tc_xml_xpath.rb
-${GEM_LIBDIR}/test/tc_xml_xpointer.rb
+${GEM_LIBDIR}/test/tc_attributes.rb
+${GEM_LIBDIR}/test/tc_deprecated_require.rb
+${GEM_LIBDIR}/test/tc_document.rb
+${GEM_LIBDIR}/test/tc_document_write.rb
+${GEM_LIBDIR}/test/tc_dtd.rb
+${GEM_LIBDIR}/test/tc_html_parser.rb
+${GEM_LIBDIR}/test/tc_node.rb
+${GEM_LIBDIR}/test/tc_node_attr.rb
+${GEM_LIBDIR}/test/tc_node_cdata.rb
+${GEM_LIBDIR}/test/tc_node_comment.rb
+${GEM_LIBDIR}/test/tc_node_copy.rb
+${GEM_LIBDIR}/test/tc_node_edit.rb
+${GEM_LIBDIR}/test/tc_node_set.rb
+${GEM_LIBDIR}/test/tc_node_set2.rb
+${GEM_LIBDIR}/test/tc_node_text.rb
+${GEM_LIBDIR}/test/tc_node_xlink.rb
+${GEM_LIBDIR}/test/tc_parser.rb
+${GEM_LIBDIR}/test/tc_parser_context.rb
+${GEM_LIBDIR}/test/tc_properties.rb
+${GEM_LIBDIR}/test/tc_reader.rb
+${GEM_LIBDIR}/test/tc_relaxng.rb
+${GEM_LIBDIR}/test/tc_sax_parser.rb
+${GEM_LIBDIR}/test/tc_schema.rb
+${GEM_LIBDIR}/test/tc_traversal.rb
+${GEM_LIBDIR}/test/tc_well_formed.rb
+${GEM_LIBDIR}/test/tc_xinclude.rb
+${GEM_LIBDIR}/test/tc_xpath.rb
+${GEM_LIBDIR}/test/tc_xpath_context.rb
+${GEM_LIBDIR}/test/tc_xpointer.rb
+${GEM_LIBDIR}/test/test_suite.rb
 ${GEM_HOME}/specifications/libxml-ruby-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/test/model
 @dirrm ${GEM_LIBDIR}/test
-@dirrm ${GEM_LIBDIR}/site/log
-@dirrm ${GEM_LIBDIR}/site/img
-@dirrm ${GEM_LIBDIR}/site/css
-@dirrm ${GEM_LIBDIR}/site
-@dirrm ${GEM_LIBDIR}/meta
-@dirrm ${GEM_LIBDIR}/log
 @dirrm ${GEM_LIBDIR}/lib/xml
+@dirrm ${GEM_LIBDIR}/lib/libxml
 @dirrm ${GEM_LIBDIR}/lib
+@dirrm ${GEM_LIBDIR}/ext/vc
+@dirrm ${GEM_LIBDIR}/ext/mingw
 @dirrm ${GEM_LIBDIR}/ext/libxml
 @dirrm ${GEM_LIBDIR}/ext
+@dirrm ${GEM_LIBDIR}/doc/rdoc/files/lib/xml
+@dirrm ${GEM_LIBDIR}/doc/rdoc/files/lib/libxml
+@dirrm ${GEM_LIBDIR}/doc/rdoc/files/lib
+@dirrm ${GEM_LIBDIR}/doc/rdoc/files/ext/libxml
+@dirrm ${GEM_LIBDIR}/doc/rdoc/files/ext
+@dirrm ${GEM_LIBDIR}/doc/rdoc/files
+@dirrm ${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/XPointer/Context
+@dirrm ${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/XPointer
+@dirrm ${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/XPath
+@dirrm ${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/XInclude
+@dirrm ${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/Parser
+@dirrm ${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML/Node
+@dirrm ${GEM_LIBDIR}/doc/rdoc/classes/LibXML/XML
+@dirrm ${GEM_LIBDIR}/doc/rdoc/classes/LibXML
+@dirrm ${GEM_LIBDIR}/doc/rdoc/classes
+@dirrm ${GEM_LIBDIR}/doc/rdoc
+@dirrm ${GEM_LIBDIR}/doc
 @dirrm ${GEM_LIBDIR}
