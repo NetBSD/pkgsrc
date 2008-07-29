@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1723 2008/07/29 19:50:34 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.1724 2008/07/29 21:09:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2939,3 +2939,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/phpmyadmin to 2.11.8.1 [tron 2008-07-29]
 	Updated pkgtools/bootstrap-mk-files to 20080728 [tnn 2008-07-29]
 	Updated wm/obconf to 2.0.3 [tnn 2008-07-29]
+	Updated x11/xwd to 1.0.2 [wiz 2008-07-29]
