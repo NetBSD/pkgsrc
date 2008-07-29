@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.24 2008/06/20 01:09:43 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2008/07/29 05:13:59 schmonz Exp $
 
 DISTNAME=	SVN-Web-0.53
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	perl5 www
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/N/NI/NIKC/}
 
@@ -10,8 +11,6 @@ HOMEPAGE=	http://search.cpan.org/dist/SVN-Web/
 COMMENT=	Unstable snapshot of Subversion repository browser
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-
-TEX_ACCEPTED=	teTeX3
 
 DEPENDS+=	p5-Apache-DBI>=0.87:../../databases/p5-Apache-DBI
 DEPENDS+=	p5-Date-Calc>=4.3:../../devel/p5-Date-Calc
@@ -50,5 +49,4 @@ PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/SVN/Web/.packlist
 
 .include "../../lang/perl5/module.mk"
-.include "../../mk/tex.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
