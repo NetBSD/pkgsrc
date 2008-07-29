@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2008/07/29 19:30:35 tnn Exp $
+
+--- src/OBPager.cc.orig	2004-09-01 16:23:44.000000000 +0200
++++ src/OBPager.cc
+@@ -1096,7 +1096,7 @@ void OBPager::gotoDesktop(int newDesktop
+ 	event.xclient.format = 32;
+ 	event.xclient.data.l[0] = newDesktop;
+ 	
+-	XSendEvent(mDisplay(), rootWindow, False, SubstructureNotifyMask, &event);
++	XSendEvent(mDisplay(), rootWindow, False, PropertyChangeMask, &event);
+ }
+ 
+ 
