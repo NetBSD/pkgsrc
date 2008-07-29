@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/04/06 01:43:32 toshii Exp $
+$NetBSD: patch-aa,v 1.1.1.1.4.1 2008/07/29 19:24:41 tron Exp $
 
---- INSTALL.orig	2008-01-16 08:47:52.000000000 +0900
-+++ INSTALL
-@@ -53,7 +53,7 @@ MkTemp()
+--- INSTALL.orig	2008-06-25 12:16:52.000000000 -0400
++++ INSTALL	2008-07-29 11:25:17.000000000 -0400
+@@ -53,7 +53,7 @@
  
      mktemp_file="/tmp/acrobat.$$.${mktemp_count}"
  
@@ -10,17 +10,17 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/04/06 01:43:32 toshii Exp $
 +    while test -e "$mktemp_file"
      do
          mktemp_count="`expr $mktemp_count + 1`"
-         mktemp_file="/tmp/adobe.$$.${mktemp_count}"
-@@ -112,6 +112,8 @@ PrintRequiredFree()
+         mktemp_file="/tmp/acrobat.$$.${mktemp_count}"
+@@ -125,6 +125,8 @@
  
          if [ `uname -s` = "Linux" ] ; then
            size=`ls -lLn "$i" | ( read perm links owner group size date ; echo $size )`
-+        elif [ `uname -s|sed -e 's|.*\(...\)|\\1|'` = "BSD" -o `uname -s` = "DragonFly" ] ; then
-+          size=`ls -lL "$i" | ( read perm links owner group size date ; echo $size )`
++	elif [ `uname -s|sed -e 's|.*\(...\)|\\1|'` = "BSD" -o `uname -s` = "DragonFly" ] ; then
++	  size=`ls -lL "$i" | ( read perm links owner group size date ; echo $size )`
          else
            size=`ls -lLon "$i" | ( read perm links owner size date ; echo $size )`
          fi
-@@ -562,6 +564,8 @@ InstallReader()
+@@ -575,6 +577,8 @@
      MakeLibGnomeSpeechLinks "$ReadInstallDir" "$ReadConfig"
    fi
  
@@ -29,23 +29,23 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/04/06 01:43:32 toshii Exp $
    rm -f /usr/bin/acroread 2>/dev/null && \
    ln -s "$ReadInstallDir/Adobe/Reader8/bin/acroread" /usr/bin/acroread 2>/dev/null && \
    record_config remove /usr/bin/acroread
-@@ -804,6 +808,20 @@ case "$OSname" in
+@@ -817,6 +821,20 @@
      ReadDefaultNum="$ReadIntelLinuxNum"
      DefaultName="Intel/Linux"
      ;;
-+  NetBSD | DragonFly)
-+    MachArch=`uname -p`
-+    case "$MachArch" in
-+      i386|x86_64)
-+        ReadDefaultNum="$ReadIntelLinuxNum"
-+        DefaultName="Intel/Linux"
-+        ;;
-+      sparc*)
-+        ReadDefaultNum="$ReadSparcSolarisNum"
-+        DefaultName="SPARC/Solaris 2.x"
-+        ;;
-+    esac
-+    ;;
++    NetBSD | DragonFly)
++      MachArch=`uname -p`
++      case "$MachArch" in
++	i386|x86_64)
++	  ReadDefaultNum="$ReadIntelLinuxNum"
++	  DefaultName="Intel/Linux"
++	  ;;
++	sparc*)
++	  ReadDefaultNum="$ReadSparcSolarisNum"
++	  DefaultName="SPARC/Solaris 2.x"
++	  ;;
++      esac
++      ;;
 +
  esac
  
