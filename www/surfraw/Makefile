@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.36 2008/03/14 19:42:38 wiz Exp $
+# $NetBSD: Makefile,v 1.37 2008/07/29 21:19:55 wiz Exp $
 #
 
-DISTNAME=	surfraw-2.2.1
+DISTNAME=	surfraw-2.2.2
 CATEGORIES=	www
 MASTER_SITES=	http://surfraw.alioth.debian.org/dist/
 
