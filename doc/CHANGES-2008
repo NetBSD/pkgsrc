@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1725 2008/07/29 21:11:39 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1726 2008/07/29 21:20:07 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2941,3 +2941,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated wm/obconf to 2.0.3 [tnn 2008-07-29]
 	Updated x11/xwd to 1.0.2 [wiz 2008-07-29]
 	Updated x11/xf86-video-nv to 2.1.10 [wiz 2008-07-29]
+	Updated www/surfraw to 2.2.2 [wiz 2008-07-29]
