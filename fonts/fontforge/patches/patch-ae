@@ -1,19 +1,19 @@
-$NetBSD: patch-ae,v 1.14 2008/06/23 11:38:51 drochner Exp $
+$NetBSD: patch-ae,v 1.15 2008/07/29 05:17:01 adam Exp $
 
---- configure.orig	2008-05-05 17:07:18.000000000 +0200
+--- configure.orig	2008-07-13 16:36:19.000000000 +0200
 +++ configure
-@@ -19201,8 +19201,8 @@ if test $ac_cv_file__usr_include_libxml2
-   CFLAGS="$CFLAGS -I/usr/include/libxml2/"
- else
+@@ -20189,8 +20189,8 @@ fi
  
-- echo "$as_me:$LINENO: checking for /usr/local/include/libxml2/libxml" >&5
--echo $ECHO_N "checking for /usr/local/include/libxml2/libxml... $ECHO_C" >&6
-+ echo "$as_me:$LINENO: checking for ${LOCALBASE}/include/libxml2/libxml" >&5
-+echo $ECHO_N "checking for ${LOCALBASE}/include/libxml2/libxml... $ECHO_C" >&6
- if test "${ac_cv_file__usr_local_include_libxml2_libxml+set}" = set; then
+ fi
+ 
+-{ echo "$as_me:$LINENO: checking for /usr/include/libxml2/libxml" >&5
+-echo $ECHO_N "checking for /usr/include/libxml2/libxml... $ECHO_C" >&6; }
++{ echo "$as_me:$LINENO: checking for ${LOCALBASE}/libxml2/libxml" >&5
++echo $ECHO_N "checking for ${LOCALBASE}/libxml2/libxml... $ECHO_C" >&6; }
+ if test "${ac_cv_file__usr_include_libxml2_libxml+set}" = set; then
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
-@@ -19210,7 +19210,7 @@ else
+@@ -20219,7 +20219,7 @@ else
    { { echo "$as_me:$LINENO: error: cannot check for file existence when cross compiling" >&5
  echo "$as_me: error: cannot check for file existence when cross compiling" >&2;}
     { (exit 1); exit 1; }; }
@@ -22,16 +22,16 @@ $NetBSD: patch-ae,v 1.14 2008/06/23 11:38:51 drochner Exp $
    ac_cv_file__usr_local_include_libxml2_libxml=yes
  else
    ac_cv_file__usr_local_include_libxml2_libxml=no
-@@ -19219,7 +19219,7 @@ fi
- echo "$as_me:$LINENO: result: $ac_cv_file__usr_local_include_libxml2_libxml" >&5
- echo "${ECHO_T}$ac_cv_file__usr_local_include_libxml2_libxml" >&6
+@@ -20228,7 +20228,7 @@ fi
+ { echo "$as_me:$LINENO: result: $ac_cv_file__usr_local_include_libxml2_libxml" >&5
+ echo "${ECHO_T}$ac_cv_file__usr_local_include_libxml2_libxml" >&6; }
  if test $ac_cv_file__usr_local_include_libxml2_libxml = yes; then
 -  CFLAGS="$CFLAGS -I/usr/local/include -I/usr/local/include/libxml2/"
 +  CFLAGS="$CFLAGS -I${LOCALBASE}/include -I${LOCALBASE}/include/libxml2/"
  else
    cat >>confdefs.h <<\_ACEOF
  #define _NO_LIBXML 1
-@@ -22082,7 +22082,7 @@ fi
+@@ -22938,7 +22938,7 @@ fi
  
  # Standard set of common directories for X headers.
  # Check X11 before X11Rn because it is often a symlink to the current release.
@@ -40,7 +40,7 @@ $NetBSD: patch-ae,v 1.14 2008/06/23 11:38:51 drochner Exp $
  /usr/X11/include
  /usr/X11R6/include
  /usr/X11R5/include
-@@ -22093,29 +22093,29 @@ ac_x_header_dirs='
+@@ -22949,29 +22949,29 @@ ac_x_header_dirs='
  /usr/include/X11R5
  /usr/include/X11R4
  
@@ -81,8 +81,8 @@ $NetBSD: patch-ae,v 1.14 2008/06/23 11:38:51 drochner Exp $
 +/usr/openwin/share/include"
  
  if test "$ac_x_includes" = no; then
-   # Guess where to find include files, by looking for Intrinsic.h.
-@@ -25099,7 +25099,7 @@ if test "$gww_has_gettext" = "yes" >/dev
+   # Guess where to find include files, by looking for Xlib.h.
+@@ -25868,7 +25868,7 @@ if test "$gww_has_gettext" = "yes" >/dev
  
   cat </dev/null >$ac_confdir/po/Makefile.in
   echo 'prefix = @prefix@' >> $ac_confdir/po/Makefile.in
