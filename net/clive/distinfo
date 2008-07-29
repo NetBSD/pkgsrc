@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2008/06/21 15:53:55 wiz Exp $
+$NetBSD: distinfo,v 1.8 2008/07/29 21:30:10 wiz Exp $
 
-SHA1 (clive-0.4.16.tar.bz2) = ab33aef9afd403736bac9fb7b4d4fce026919483
-RMD160 (clive-0.4.16.tar.bz2) = a072cd1a041f77e196f4e09b5a0da67040183e00
-Size (clive-0.4.16.tar.bz2) = 415364 bytes
+SHA1 (clive-0.4.20.tar.bz2) = 668fd72d455a324736edcfe83ab17feb4df01100
+RMD160 (clive-0.4.20.tar.bz2) = d5ffb28ff012db42cfcbe9358cc2286434660282
+Size (clive-0.4.20.tar.bz2) = 429981 bytes

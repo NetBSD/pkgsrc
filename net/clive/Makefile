@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2008/06/21 15:53:55 wiz Exp $
+# $NetBSD: Makefile,v 1.11 2008/07/29 21:30:10 wiz Exp $
 #
 
-DISTNAME=	clive-0.4.16
+DISTNAME=	clive-0.4.20
 CATEGORIES=	net multimedia www
 MASTER_SITES=	http://dl.gna.org/clive/0.4/src/ \
 		${MASTER_SITE_SOURCEFORGE:=clive/}
@@ -18,9 +18,9 @@ DEPENDS+=	${PYPKGPREFIX}-feedparser>=4.1:../../textproc/py-feedparser
 DEPENDS+=	urlgrabber>=3.1.0:../../www/urlgrabber
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ARGS+=	--without-urlgrabber
-CONFIGURE_ARGS+=	--without-feedparser
-CONFIGURE_ARGS+=	--without-newt
+CONFIGURE_ARGS+=	--with-installed-urlgrabber
+CONFIGURE_ARGS+=	--with-installed-feedparser
+CONFIGURE_ARGS+=	--with-installed-newt
 USE_LANGUAGES=	c # configure script
 PY_PATCHPLIST=			yes
 
