@@ -1,6 +1,7 @@
-# $NetBSD: options.mk,v 1.11 2008/07/28 02:12:57 bjs Exp $
+# $NetBSD: options.mk,v 1.12 2008/07/29 13:56:15 tnn Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.MesaLib
+PKG_SUPPORTED_OPTIONS=
 
 # Assembler code build configurations
 .if (${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64") && \
