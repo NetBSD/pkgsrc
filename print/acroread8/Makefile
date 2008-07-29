@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:43 joerg Exp $
+# $NetBSD: Makefile,v 1.2.4.1 2008/07/29 19:24:41 tron Exp $
 
 DISTNAME=	acroread8	# overridden below
 PKGNAME=	acroread8-8.1.2
+PKGREVISION=	1
 CATEGORIES=	print
 MASTER_SITES=	http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.2/enu/
 
@@ -34,7 +35,7 @@ EMUL_REQD=		suse>=10.0
 .include "../../mk/bsd.prefs.mk"
 
 .if ${EMUL_PLATFORM} == "linux-i386"
-DISTNAME=	AdobeReader_enu-8.1.2-1.i486
+DISTNAME=	AdobeReader_enu-8.1.2_SU1-1.i486
 PLATFORM=	intellinux
 .else
 PLATFORM=	unknown
