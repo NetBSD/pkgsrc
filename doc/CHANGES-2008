@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1717 2008/07/29 12:38:45 he Exp $
+$NetBSD: CHANGES-2008,v 1.1718 2008/07/29 14:04:46 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2931,3 +2931,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-MasonX-Request-WithApacheSession to 0.31 [he 2008-07-29]
 	Updated math/p5-Math-MatrixReal to 2.05 [he 2008-07-29]
 	Updated math/p5-Math-Pari to 2.010800 [he 2008-07-29]
+	Updated chat/xchat to 2.8.6 [tron 2008-07-29]
+	Updated chat/xchat-perl to 2.8.6 [tron 2008-07-29]
+	Updated chat/xchat-python to 2.8.6 [tron 2008-07-29]
