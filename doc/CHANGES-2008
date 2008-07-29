@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1724 2008/07/29 21:09:09 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1725 2008/07/29 21:11:39 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2940,3 +2940,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/bootstrap-mk-files to 20080728 [tnn 2008-07-29]
 	Updated wm/obconf to 2.0.3 [tnn 2008-07-29]
 	Updated x11/xwd to 1.0.2 [wiz 2008-07-29]
+	Updated x11/xf86-video-nv to 2.1.10 [wiz 2008-07-29]
