@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1713 2008/07/29 05:15:02 martti Exp $
+$NetBSD: CHANGES-2008,v 1.1714 2008/07/29 05:18:08 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2925,3 +2925,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/ap22-authnz-external version 3.1.0 [schmonz 2008-07-29]
 	Updated www/p5-SVN-Web to 0.53nb1 [schmonz 2008-07-29]
 	Updated mail/postfix to 2.5.3 [martti 2008-07-29]
+	Updated fonts/fontforge to 20080720 [adam 2008-07-29]
