@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1715 2008/07/29 05:59:55 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.1716 2008/07/29 09:59:26 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2927,3 +2927,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/postfix to 2.5.3 [martti 2008-07-29]
 	Updated fonts/fontforge to 20080720 [adam 2008-07-29]
 	Updated multimedia/xine-lib to 1.1.14nb2 [dholland 2008-07-29]
+	Updated textproc/ruby-libxml to 0.8.3 [seb 2008-07-29]
