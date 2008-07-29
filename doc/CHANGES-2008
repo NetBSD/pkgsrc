@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1729 2008/07/29 21:58:25 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1730 2008/07/29 22:05:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2945,3 +2945,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/libSM to 1.1.0 [wiz 2008-07-29]
 	Updated net/clive to 0.4.20 [wiz 2008-07-29]
 	Updated audio/esound to 0.2.39 [wiz 2008-07-29]
+	Updated sysutils/cdrtools to 2.01.01.43 [wiz 2008-07-29]
