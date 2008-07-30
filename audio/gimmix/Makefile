@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/24 06:50:09 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/30 10:57:25 drochner Exp $
 #
 
 DISTNAME=	gimmix-0.4.3
@@ -16,13 +16,6 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	intltool msgfmt pkg-config
 USE_DIRS+=	xdg-1.1
-
-# XXX clean up bogus symlinks
-post-extract:
-.for f in intltool-extract.in intltool-merge.in intltool-update.in
-	${RM} ${WRKSRC}/${f}
-	${CP} ${TOOLS_PREFIX.intltool}/share/intltool/${f} ${WRKSRC}
-.endfor
 
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../audio/libmpd/buildlink3.mk"
