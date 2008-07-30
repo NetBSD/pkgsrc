@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.42.2.7 2008/07/05 17:26:39 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.42.2.8 2008/07/30 15:02:18 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -85,8 +85,6 @@
 #ifndef DEF_UMASK
 #define DEF_UMASK 022
 #endif
-
-#define	MKDIR_CMD	"mkdir"
 
 /* Usually "rm", but often "echo" during debugging! */
 #define REMOVE_CMD	"rm"
