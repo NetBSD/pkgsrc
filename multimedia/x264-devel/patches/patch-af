@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2008/07/30 21:03:17 ahoka Exp $
+
+--- common/ppc/mc.c.orig	2007-12-18 22:45:03.000000000 +0100
++++ common/ppc/mc.c
+@@ -27,7 +27,7 @@
+ #include <stdint.h>
+ #include <stdarg.h>
+ 
+-#ifdef SYS_LINUX
++#if defined(SYS_LINUX) || defined(__NetBSD__)
+ #include <altivec.h>
+ #endif
+ 
