@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/03/15 22:38:21 wennmach Exp $
+$NetBSD: distinfo,v 1.2 2008/07/30 13:01:13 he Exp $
 
-SHA1 (Getopt-ArgvFile-1.10.tgz) = 19320df182e7b3d62f8be65982eb49ae6bf4ac48
-RMD160 (Getopt-ArgvFile-1.10.tgz) = 00a991aeb644a616d1db300ad8ff392c7ec3a40d
-Size (Getopt-ArgvFile-1.10.tgz) = 18007 bytes
+SHA1 (Getopt-ArgvFile-1.11.tar.gz) = 1c9b2b11f60617e198847876ea42fb6bd011d78e
+RMD160 (Getopt-ArgvFile-1.11.tar.gz) = e060c6ff7c177add520986d944282ee07f2570f1
+Size (Getopt-ArgvFile-1.11.tar.gz) = 19469 bytes
