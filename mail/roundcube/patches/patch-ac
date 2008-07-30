@@ -1,22 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2008/05/04 16:34:03 adrianp Exp $
+$NetBSD: patch-ac,v 1.2 2008/07/30 21:29:57 schmonz Exp $
 
---- installer/config.php.orig	2008-04-05 13:49:21.000000000 +0100
-+++ installer/config.php
-@@ -187,7 +187,7 @@ echo $select_mdnreq->show(intval($RCI->g
- <p>Database settings for read/write operations:</p>
- <?php
- 
--require_once 'DB.php';
-+require_once 'MDB2.php';
- 
- $supported_dbs = array('MySQL' => 'mysql', 'MySQLi' => 'mysqli',
-     'PgSQL' => 'pgsql', 'SQLite' => 'sqlite');
-@@ -204,7 +204,7 @@ $input_dbname = new textfield(array('nam
- $input_dbuser = new textfield(array('name' => '_dbuser', 'size' => 20, 'id' => "cfgdbuser"));
- $input_dbpass = new textfield(array('name' => '_dbpass', 'size' => 20, 'id' => "cfgdbpass"));
- 
--$dsnw = DB::parseDSN($RCI->getprop('db_dsnw'));
-+$dsnw = MDB2::parseDSN($RCI->getprop('db_dsnw'));
- 
- echo $select_dbtype->show($RCI->is_post ? $_POST['_dbtype'] : $dsnw['phptype']);
- echo '<label for="cfgdbtype">Database type</label><br />';
+--- installer/index.php.orig	2008-06-16 12:42:39.000000000 -0400
++++ installer/index.php
+@@ -59,7 +59,7 @@ function __autoload($classname)
+   if ($RCI->configured && !$RCI->getprop('enable_installer') && !$_SESSION['allowinstaller']) {
+     // header("HTTP/1.0 404 Not Found");
+     echo '<h2 class="error">The installer is disabled!</h2>';
+-    echo '<p>To enable it again, set <tt>$rcmail_config[\'enable_installer\'] = true;</tt> in config/main.inc.php</p>';
++    echo '<p>To enable it again, set <tt>$rcmail_config[\'enable_installer\'] = true;</tt> in '.RCMAIL_CONFIG_DIR.'/main.inc.php</p>';
+     echo '</div></body></html>';
+     exit;
+   }
