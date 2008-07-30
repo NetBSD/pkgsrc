@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.19 2008/01/26 09:40:56 xtraeme Exp $
+# $NetBSD: Makefile,v 1.20 2008/07/30 15:22:02 apb Exp $
 
 DISTNAME=	cvs2svn-2.0.1
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	http://cvs2svn.tigris.org/files/documents/1462/39919/
 
@@ -20,10 +20,13 @@ PYTHON_PATCH_SCRIPTS=		run-tests.py
 # to resort on GNU sort from coreutils may be required.
 
 INSTALLATION_DIRS+=	share/doc/cvs2svn
+INSTALLATION_DIRS+=	share/examples/cvs2svn
 
 post-install:
 	cd ${WRKSRC}/www && \
 	${INSTALL_DATA} *.html ${PREFIX}/share/doc/cvs2svn
+	cd ${WRKSRC} && \
+	${INSTALL_DATA} cvs2svn-example.options ${PREFIX}/share/examples/cvs2svn
 
 do-test:
 	cd ${WRKSRC} && ./run-tests.py
