@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1744 2008/07/30 17:19:06 kefren Exp $
+$NetBSD: CHANGES-2008,v 1.1745 2008/07/30 21:33:27 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2964,3 +2964,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/p5-GnuPG-Interface to 0.36 [he 2008-07-30]
 	Updated graphics/p5-GraphViz to 2.03 [he 2008-07-30]
 	Updated security/gnutls to 2.4.1 [kefren 2008-07-30]
+	Updated mail/roundcube to 0.2alpha [schmonz 2008-07-30]
