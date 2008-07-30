@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.23 2008/04/23 20:54:39 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.23.2.1 2008/07/30 15:38:37 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.15 1997/10/13 15:03:52 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.23 2008/04/23 20:54:39 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.23.2.1 2008/07/30 15:38:37 joerg Exp $");
 #endif
 #endif
 
@@ -753,6 +753,8 @@ pkg_do(char *pkg)
 		warnx("package '%s' doesn't have a prefix", pkg);
 		return 1;
 	}
+	if (Destdir != NULL)
+		setenv(PKG_DESTDIR_VNAME, Destdir, 1);
 	setenv(PKG_PREFIX_VNAME, p->name, 1);
 	setenv(PKG_METADATA_DIR_VNAME, LogDir, 1);
 	/*
@@ -786,7 +788,7 @@ pkg_do(char *pkg)
 	}
 	if (!Fake) {
 		/* Some packages aren't packed right, so we need to just ignore delete_package()'s status.  Ugh! :-( */
-		if (delete_package(FALSE, CleanDirs, &Plist, NoDeleteFiles) == FAIL)
+		if (delete_package(FALSE, CleanDirs, &Plist, NoDeleteFiles, Destdir) == FAIL)
 			warnx("couldn't entirely delete package `%s'\n", pkg);
 	}
 	else {   /* Fake means Verbose */

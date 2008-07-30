@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.42.2.8 2008/07/30 15:02:18 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.42.2.9 2008/07/30 15:38:37 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -131,6 +131,9 @@ enum {
 
 /* The name of the "prefix" environment variable given to scripts */
 #define PKG_PREFIX_VNAME	"PKG_PREFIX"
+
+/* The name of the "destdir" environment variable given to scripts */
+#define PKG_DESTDIR_VNAME	"PKG_DESTDIR"
 
 /*
  * The name of the "metadatadir" environment variable given to scripts.
@@ -337,7 +340,7 @@ void    write_plist(package_t *, FILE *, char *);
 void	stringify_plist(package_t *, char **, size_t *, const char *);
 void	parse_plist(package_t *, const char *);
 void    read_plist(package_t *, FILE *);
-int     delete_package(Boolean, Boolean, package_t *, Boolean);
+int     delete_package(Boolean, Boolean, package_t *, Boolean, const char *);
 
 /* Package Database */
 int     pkgdb_open(int);

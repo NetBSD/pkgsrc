@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_add.1,v 1.28.6.7 2008/07/27 22:36:19 joerg Exp $
+.\" $NetBSD: pkg_add.1,v 1.28.6.8 2008/07/30 15:38:37 joerg Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -17,7 +17,7 @@
 .\"
 .\"     @(#)pkg_add.1
 .\"
-.Dd July 28, 2008
+.Dd July 30, 2008
 .Dt PKG_ADD 1
 .Os
 .Sh NAME
@@ -28,6 +28,7 @@
 .Op Fl AfILnRuVv
 .Op Fl K Ar pkg_dbdir
 .Op Fl m Ar machine
+.Op Fl P Ar destdir
 .Op Fl p Ar prefix
 .Op Fl W Ar viewbase
 .Op Fl w Ar view
@@ -141,6 +142,11 @@ Override the machine architecture returned by uname with
 .It Fl n
 Don't actually install a package, just report the steps that
 would be taken if it was.
+.It Fl p Ar destdir
+Prefix all file and directory names with
+.Ar destdir .
+For packages without install scripts this has the same behavior as
+using chroot.
 .It Fl p Ar prefix
 Set
 .Ar prefix
@@ -379,6 +385,13 @@ meta-data files, and with the
 .Ev PKG_REFCOUNT_DBDIR
 environment variable set to the location of the package reference counts
 database directory.
+If the
+.Fl P
+flag was given to
+.Nm ,
+.Ev PKG_DESTDIR
+will be set to
+.Ar destdir .
 .Sh ENVIRONMENT
 .Bl -tag -width PKG_TMPDIR
 .It Ev LOCALBASE

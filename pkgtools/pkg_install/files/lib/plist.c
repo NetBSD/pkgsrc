@@ -1,4 +1,4 @@
-/*	$NetBSD: plist.c,v 1.17.4.3 2008/05/23 15:51:22 joerg Exp $	*/
+/*	$NetBSD: plist.c,v 1.17.4.4 2008/07/30 15:38:37 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: plist.c,v 1.24 1997/10/08 07:48:15 charnier Exp";
 #else
-__RCSID("$NetBSD: plist.c,v 1.17.4.3 2008/05/23 15:51:22 joerg Exp $");
+__RCSID("$NetBSD: plist.c,v 1.17.4.4 2008/07/30 15:38:37 joerg Exp $");
 #endif
 #endif
 
@@ -509,7 +509,8 @@ do {									\
  * run it too in cases of failure.
  */
 int
-delete_package(Boolean ign_err, Boolean nukedirs, package_t *pkg, Boolean NoDeleteFiles)
+delete_package(Boolean ign_err, Boolean nukedirs, package_t *pkg,
+    Boolean NoDeleteFiles, const char *destdir)
 {
 	plist_t *p;
 	char   *Where = ".", *last_file = "";
@@ -552,7 +553,9 @@ delete_package(Boolean ign_err, Boolean nukedirs, package_t *pkg, Boolean NoDele
 
 		case PLIST_FILE:
 			last_file = p->name;
-			(void) snprintf(tmp, sizeof(tmp), "%s/%s", Where, p->name);
+			(void) snprintf(tmp, sizeof(tmp), "%s%s%s/%s",
+			    destdir ? destdir : "", destdir ? "/" : "",
+			    Where, p->name);
 			if (isdir(tmp)) {
 				warnx("attempting to delete directory `%s' as a file\n"
 				    "this packing list is incorrect - ignoring delete request", tmp);
@@ -652,7 +655,9 @@ delete_package(Boolean ign_err, Boolean nukedirs, package_t *pkg, Boolean NoDele
 			if (NoDeleteFiles)
 				break;
 
-			(void) snprintf(tmp, sizeof(tmp), "%s/%s", Where, p->name);
+			(void) snprintf(tmp, sizeof(tmp), "%s%s%s/%s",
+			    destdir ? destdir : "", destdir ? "/" : "",
+			    Where, p->name);
 			if (fexists(tmp)) {
 			    if (!isdir(tmp)) {
 				warnx("cannot remove `%s' as a directory\n"

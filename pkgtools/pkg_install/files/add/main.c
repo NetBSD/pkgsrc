@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.14.4.4 2008/06/22 22:10:45 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.14.4.5 2008/07/30 15:38:37 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.16 1997/10/08 07:45:43 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.14.4.4 2008/06/22 22:10:45 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.14.4.5 2008/07/30 15:38:37 joerg Exp $");
 #endif
 #endif
 
@@ -48,8 +48,9 @@ __RCSID("$NetBSD: main.c,v 1.14.4.4 2008/06/22 22:10:45 joerg Exp $");
 #include "lib.h"
 #include "add.h"
 
-static char Options[] = "AIK:LRVW:fhm:np:t:uvw:";
+static char Options[] = "AIK:LP:RVW:fhm:np:t:uvw:";
 
+char   *Destdir = NULL;
 char   *OverrideMachine = NULL;
 char   *Prefix = NULL;
 char   *View = NULL;
@@ -64,9 +65,10 @@ int     Replace = 0;
 static void
 usage(void)
 {
-	(void) fprintf(stderr, "%s\n%s\n%s\n",
-	    "usage: pkg_add [-AfhILnRuVv] [-C config] [-K pkg_dbdir] [-m machine] [-p prefix]",
-	    "               [-s verification-type] [-W viewbase] [-w view]",
+	(void) fprintf(stderr, "%s\n%s\n%s\n%s\n",
+	    "usage: pkg_add [-AfhILnRuVv] [-C config] [-P destdir] [-K pkg_dbdir]",
+	    "               [-m machine] [-p prefix] [-s verification-type",
+	    "               [-W viewbase] [-w view]\n",
 	    "               [[ftp|http]://[user[:password]@]host[:port]][/path/]pkg-name ...");
 	exit(1);
 }
@@ -86,6 +88,10 @@ main(int argc, char **argv)
 
 		case 'C':
 			config_file = optarg;
+
+		case 'P':
+			Destdir = optarg;
+			break;
 
 		case 'f':
 			Force = TRUE;
