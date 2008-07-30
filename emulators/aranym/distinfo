@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.5 2006/04/28 14:10:12 joerg Exp $
+$NetBSD: distinfo,v 1.6 2008/07/30 14:08:59 hauke Exp $
 
-SHA1 (aranym-0.8.9beta.tar.gz) = 509ad0e79c53ace176a8acef2fb2a4f23fa87d69
-RMD160 (aranym-0.8.9beta.tar.gz) = b0b994d672f6be530e6d2f4baa0327a690972f26
-Size (aranym-0.8.9beta.tar.gz) = 1246180 bytes
-SHA1 (patch-aa) = fbb3606d92d1a30086ec3576aeb5f0f9f2d58221
-SHA1 (patch-ab) = 5d0120517eb94c0ff5fef3043b465b46fc23a0b6
-SHA1 (patch-ac) = a4ea32937e756c76d9972f0c76d1d48e05da673e
+SHA1 (aranym-0.9.6beta2.tar.gz) = 7f66d0770b58ffcbcff5b3e0c36a5e9310d8df08
+RMD160 (aranym-0.9.6beta2.tar.gz) = 512032c46a0a67ac79762ac34dd000e0f03d2231
+Size (aranym-0.9.6beta2.tar.gz) = 1527029 bytes
+SHA1 (patch-aa) = 8bf0ef529ce3cc2ff4e6436e00bdcf28e4a85905
+SHA1 (patch-ab) = 8796751780cc559acd089298f3e8a0918d36db3a
+SHA1 (patch-ac) = b9456fced8f9f89f5f9bd388f0329478f775b62f
