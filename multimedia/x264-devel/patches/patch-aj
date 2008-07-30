@@ -1,0 +1,13 @@
+$NetBSD: patch-aj,v 1.1 2008/07/30 21:46:04 ahoka Exp $
+
+--- common/cpu.c.orig	2007-12-18 22:45:03.000000000 +0100
++++ common/cpu.c
+@@ -154,7 +154,7 @@ uint32_t x264_cpu_detect( void )
+     return cpu;
+ }
+ 
+-#elif defined( SYS_LINUX )
++#elif defined(SYS_LINUX) || defined(__NetBSD__)
+ #include <signal.h>
+ #include <setjmp.h>
+ static sigjmp_buf jmpbuf;
