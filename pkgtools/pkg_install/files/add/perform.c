@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.10 2008/06/27 15:25:52 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.11 2008/07/30 15:02:18 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.10 2008/06/27 15:25:52 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.11 2008/07/30 15:02:18 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -123,7 +123,54 @@ static int pkg_do(const char *, int);
 static int
 mkdir_p(const char *path)
 {
-	return fexec(MKDIR_CMD, "-p", path, (void *)NULL);	
+	char *p, *cur_end;
+	int done;
+
+	/*
+	 * Handle the easy case of direct success or
+	 * pre-existing directory first.
+	 */
+	if (mkdir(path, 0777) == 0 || errno == EEXIST)
+		return 0;
+	if (errno != ENOENT)
+		return -1;
+
+	if ((p = strdup(path)) == NULL)
+		err(EXIT_FAILURE, "strdup failed");
+
+	cur_end = p;
+
+	for (;;) {
+		/*
+		 * First skip leading slashes either from / or
+		 * from the last iteration.
+		 */
+		cur_end += strspn(cur_end, "/");
+		/* Find end of actual directory name. */
+		cur_end += strcspn(cur_end, "/");
+
+		/*
+		 * Remember if this is the last component and
+		 * overwrite / if needed.
+		 */
+		done = (*cur_end == '\0');
+		*cur_end = '\0';
+
+		/*
+		 * ENOENT can only happen if something else races us,
+		 * in which case we should better give up.
+		 */
+		if (mkdir(p, 0777) == -1 && errno != EEXIST) {
+			free(p);
+			return -1;
+		}
+		if (done)
+			break;
+		*cur_end = '/';
+	}
+
+	free(p);
+	return 0;	
 }
 
 /*
