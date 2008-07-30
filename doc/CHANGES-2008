@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1742 2008/07/30 14:00:52 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.1743 2008/07/30 14:29:21 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2958,3 +2958,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Added news/hellanzb version 0.14.1087 [bjs 2008-07-30]
 	Updated net/ktorrent to 2.2.7 [obache 2008-07-30]
 	Added time/leapsunpack version 0.05 [schmonz 2008-07-30]
+	Updated devel/p5-Getopt-Simple to 1.49 [he 2008-07-30]
+	Updated devel/p5-Getopt-ArgvFile to 1.11 [he 2008-07-30]
+	Updated devel/p5-Getopt-Long-Descriptive to 0.074 [he 2008-07-30]
+	Updated security/p5-GnuPG-Interface to 0.36 [he 2008-07-30]
+	Updated graphics/p5-GraphViz to 2.03 [he 2008-07-30]
