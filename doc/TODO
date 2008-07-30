@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7434 2008/07/29 19:50:34 tnn Exp $
+$NetBSD: TODO,v 1.7435 2008/07/30 08:50:51 obache Exp $
 
 Suggested new packages
 ======================
@@ -799,7 +799,6 @@ Suggested package updates
 	o kdevelop-3.5.2
 	o kdevelop-base-3.5.2
 	o kdrill-6.5
-	o kid3-1.0 [pkg/38492]
 	o kinput2-3.1
 	o kismet-2007.01.1b
 	o kmess-1.5.1
