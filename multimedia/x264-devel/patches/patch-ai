@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2008/07/30 21:03:17 ahoka Exp $
+
+--- common/ppc/quant.c.orig	2007-12-18 22:45:03.000000000 +0100
++++ common/ppc/quant.c
+@@ -18,7 +18,7 @@
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111, USA.
+ *****************************************************************************/
+ 
+-#if defined SYS_LINUX
++#if defined(SYS_LINUX) || defined(__NetBSD__)
+ #include <altivec.h>
+ #endif
+ 
