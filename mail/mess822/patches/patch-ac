@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2008/07/30 10:40:56 schmonz Exp $
+
+--- leapsecs_read.c.orig	1998-09-04 22:33:37.000000000 -0400
++++ leapsecs_read.c
+@@ -2,6 +2,7 @@
+ #include <sys/stat.h>
+ #include <fcntl.h>
+ #include <errno.h>
++#include <unistd.h>
+ extern int errno;
+ #include "tai.h"
+ #include "leapsecs.h"
