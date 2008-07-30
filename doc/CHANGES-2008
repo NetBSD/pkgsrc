@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1741 2008/07/30 13:29:29 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1742 2008/07/30 14:00:52 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2957,3 +2957,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/serialmail to 0.75nb1 [schmonz 2008-07-30]
 	Added news/hellanzb version 0.14.1087 [bjs 2008-07-30]
 	Updated net/ktorrent to 2.2.7 [obache 2008-07-30]
+	Added time/leapsunpack version 0.05 [schmonz 2008-07-30]
