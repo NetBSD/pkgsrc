@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1739 2008/07/30 10:54:20 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.1740 2008/07/30 13:28:23 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2955,3 +2955,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libtai to 0.60nb1 [schmonz 2008-07-30]
 	Updated mail/mess822 to 0.58nb2 [schmonz 2008-07-30]
 	Updated mail/serialmail to 0.75nb1 [schmonz 2008-07-30]
+	Added news/hellanzb version 0.14.1087 [bjs 2008-07-30]
