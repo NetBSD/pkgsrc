@@ -1,0 +1,5 @@
+Hellanzb is a Python application designed for UNIX-like environments that
+retrieves nzb files and fully processes them; the goal is getting
+files from USENET as convenient and painless as possible. All that's
+required is moving an nzb file to the queue directory. The rest, i.e.
+fetching, par-checking, un-raring, etc. is handled by hellanzb.
