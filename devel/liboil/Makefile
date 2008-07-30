@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2008/07/14 12:56:02 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2008/07/30 09:53:36 wiz Exp $
 #
 
-DISTNAME=	liboil-0.3.14
+DISTNAME=	liboil-0.3.15
 CATEGORIES=	devel
 MASTER_SITES=	http://liboil.freedesktop.org/download/
 
@@ -16,12 +16,13 @@ USE_FEATURES=		asprintf
 USE_LIBTOOL=		yes
 
 CONFIGURE_ARGS+=	--disable-glib # Only used by examples.
-#CONFIGURE_ARGS+=	--enable-debug
 
 PKGCONFIG_OVERRIDE+=	liboil-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	liboil.pc.in
 
 TEST_TARGET=		check
+
+.include "options.mk"
 
 .include "../../mk/bsd.prefs.mk"
 
