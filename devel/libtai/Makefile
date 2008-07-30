@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/03/03 17:45:36 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2008/07/30 10:36:27 schmonz Exp $
 #
 
 DISTNAME=	libtai-0.60
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	${HOMEPAGE}
 
