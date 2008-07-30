@@ -1,31 +1,21 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/07/06 07:28:38 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/07/30 14:08:59 hauke Exp $
 bin/aranym
+man/man1/aranym-jit.1
+man/man1/aranym-mmu.1
 man/man1/aranym.1
 share/aranym/arabridge
-share/aranym/atari/aranymrc.example
-share/aranym/atari/fvdi/aranym.sys.bz2
-share/aranym/atari/fvdi/fvdi.prg.bz2
-share/aranym/atari/fvdi/fvdi.sys
 share/aranym/atari/hostfs/README
 share/aranym/atari/hostfs/bdconfig.sys
-share/aranym/atari/hostfs/hostfs.dos.bz2
-share/aranym/atari/hostfs/hostfs.xfs.bz2
 share/aranym/atari/mmusetup.cnf
 share/aranym/atari/network/README
-share/aranym/atari/network/aranym.xif.bz2
 share/aranym/atari/network/eth0-config.sh
-share/aranym/atari/network/nfeth-config.bz2
 share/aranym/atari/newdesk.inf
-share/aranym/atari/nfcdrom/nfcdrom.bos.bz2
 share/aranym/atari/sound/README
-share/aranym/atari/sound/zmagxsnd.prg.bz2
 share/aranym/atari/tools/README
-share/aranym/atari/tools/clocky.prg.bz2
-share/aranym/atari/tools/fastram.prg.bz2
 share/aranym/atari/tools/pc101us.kbd.bz2
-share/aranym/atari/tools/pcpatch.prg.bz2
-share/aranym/etos512k.img
 share/aranym/floppy.sh
+share/aranym/logo.png
+share/aranym/wm_icon.bmp
 share/doc/aranym/AUTHORS
 share/doc/aranym/BUGS
 share/doc/aranym/COPYING
@@ -35,13 +25,17 @@ share/doc/aranym/NEWS
 share/doc/aranym/README
 share/doc/aranym/TODO
 share/doc/aranym/changelog
-share/doc/aranym/documentation.txt
+share/doc/aranym/config
 @dirrm share/doc/aranym
 @dirrm share/aranym/atari/tools
 @dirrm share/aranym/atari/sound
+@exec ${MKDIR} %D/share/aranym/atari/nfosmesa
+@dirrm share/aranym/atari/nfosmesa
+@exec ${MKDIR} %D/share/aranym/atari/nfjpeg
+@dirrm share/aranym/atari/nfjpeg
+@exec ${MKDIR} %D/share/aranym/atari/nfcdrom
 @dirrm share/aranym/atari/nfcdrom
 @dirrm share/aranym/atari/network
 @dirrm share/aranym/atari/hostfs
-@dirrm share/aranym/atari/fvdi
 @dirrm share/aranym/atari
 @dirrm share/aranym

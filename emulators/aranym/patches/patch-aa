@@ -1,30 +1,74 @@
-$NetBSD: patch-aa,v 1.3 2006/03/28 20:11:34 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2008/07/30 14:08:59 hauke Exp $
 
---- configure.orig	2006-03-28 17:40:31.000000000 +0000
+--- configure.orig	2008-01-29 20:26:32.000000000 +0100
 +++ configure
-@@ -1776,6 +1776,7 @@ case "$target_os" in
+@@ -2335,7 +2335,7 @@ case "$host_os" in
+   linux*)	OS_TYPE=linux;;
    openbsd*)	OS_TYPE=openbsd;;
    netbsd*)	OS_TYPE=netbsd;;
-   freebsd*)	OS_TYPE=freebsd;;
-+  dragonfly*)	OS_TYPE=freebsd;;
+-  freebsd*|kfreebsd*-gnu)	OS_TYPE=freebsd;;
++  freebsd*|dragonfly*|kfreebsd*-gnu)	OS_TYPE=freebsd;;
    solaris*)	OS_TYPE=solaris;;
    darwin*)	OS_TYPE=darwin;;
    cygwin*)	OS_TYPE=cygwin;;
-@@ -10469,7 +10470,7 @@ _ACEOF
+@@ -5887,7 +5887,7 @@ done
+ 
+ 
+ 
+-for ac_header in linux/if.h linux/if_tun.h net/if.h net/if_tun.h
++for ac_header in linux/if.h linux/if_tun.h net/if.h net/if_tun.h net/if_tap.h
+ do
+ as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
+ { echo "$as_me:$LINENO: checking for $ac_header" >&5
+@@ -5905,6 +5905,9 @@ cat >>conftest.$ac_ext <<_ACEOF
+ #ifdef HAVE_SYS_SOCKET_H
+ #include <sys/socket.h>
+ #endif
++#ifdef HAVE_SYS_TYPES_H
++#include <sys/types.h>
++#endif
+ 
+ 
+ #include <$ac_header>
+@@ -11456,7 +11459,7 @@ _ACEOF
    irix*)
-     EXTRASYSSRCS="parameters_unix.cpp irix/unaligned.c"
+     EXTRASYSSRCS="Unix/parameters_unix.cpp Unix/irix/unaligned.c Unix/host_filesys_unix.cpp"
      ;;
--  freebsd*)
-+  freebsd* | dragonfly*)
+-  freebsd*|kfreebsd*-gnu)
++  freebsd*|dragonfly*|kfreebsd*-gnu)
  
  cat >>confdefs.h <<\_ACEOF
  #define HAVE_O_FSYNC 1
-@@ -11925,7 +11926,7 @@ echo "$as_me: error: Sorry, extended seg
+@@ -11914,8 +11917,14 @@ cat >>conftest.$ac_ext <<_ACEOF
+       #include <linux/if_tun.h>
+       #endif
+       #if defined(HAVE_NET_IF_H) && defined(HAVE_NET_IF_TUN_H)
++      #ifdef HAVE_SYS_TYPES_H
++      #include <sys/types.h>
++      #endif
+       #include <net/if.h>
+       #include <net/if_tun.h>
++      #if defined(HAVE_NET_IF_TAP_H)
++      #include <net/if_tap.h>
++      #endif
+       #endif
+ 
+ int
+@@ -13455,7 +13464,7 @@ echo "$as_me: error: Sorry, extended seg
     { (exit 1); exit 1; }; }
        fi
        ;;
--    freebsd*)
-+    freebsd* | dragonfly*)
+-    freebsd*|kfreebsd*-gnu)
++    freebsd*|dragonfly*|kfreebsd*-gnu)
        if [ "x$HAVE_I386" = "xyes" ]; then
-         SYSSRCS="$SYSSRCS xbsd/sigsegv_xbsd.cpp"
+         SYSSRCS="$SYSSRCS Unix/xbsd/sigsegv_xbsd.cpp"
        else
+@@ -14975,7 +14984,7 @@ fi
+ 
+ SDL_CFLAGS=
+ SDL_LIBS=
+-if test "x$OS_TYPE" == "xdarwin" -a "x$WITH_FINK" = "xno"; then
++if test "x$OS_TYPE" = "xdarwin" -a "x$WITH_FINK" = "xno"; then
+ 
+     { echo "$as_me:$LINENO: checking whether compiler supports framework SDL" >&5
+ echo $ECHO_N "checking whether compiler supports framework SDL... $ECHO_C" >&6; }
