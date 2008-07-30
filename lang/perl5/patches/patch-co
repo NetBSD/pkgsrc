@@ -1,0 +1,28 @@
+$NetBSD: patch-co,v 1.1 2008/07/30 23:07:52 ahoka Exp $
+
+--- hints/freebsd.sh.orig	2004-03-24 22:47:33.000000000 +0100
++++ hints/freebsd.sh
+@@ -114,7 +114,7 @@ case "$osvers" in
+ 	lddlflags="-Bshareable $lddlflags"
+ 	;;
+ 
+-*)
++3*|4*|5*|6*)
+         objformat=`/usr/bin/objformat`
+         if [ x$objformat = xelf ]; then
+             libpth="/usr/lib /usr/local/lib"
+@@ -130,6 +130,14 @@ case "$osvers" in
+         fi
+         cccdlflags='-DPIC -fPIC'
+         ;;
++
++*)
++	libpth="/usr/lib /usr/local/lib"
++	glibpth="/usr/lib /usr/local/lib"
++	ldflags="-Wl,-E "
++	lddlflags="-shared "
++	cccdlflags='-DPIC -fPIC'
++	;;
+ esac
+ 
+ case "$osvers" in
