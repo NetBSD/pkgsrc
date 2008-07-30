@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1743 2008/07/30 14:29:21 he Exp $
+$NetBSD: CHANGES-2008,v 1.1744 2008/07/30 17:19:06 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2963,3 +2963,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Getopt-Long-Descriptive to 0.074 [he 2008-07-30]
 	Updated security/p5-GnuPG-Interface to 0.36 [he 2008-07-30]
 	Updated graphics/p5-GraphViz to 2.03 [he 2008-07-30]
+	Updated security/gnutls to 2.4.1 [kefren 2008-07-30]
