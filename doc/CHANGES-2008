@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1730 2008/07/29 22:05:43 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1731 2008/07/30 01:40:50 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2946,3 +2946,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/clive to 0.4.20 [wiz 2008-07-29]
 	Updated audio/esound to 0.2.39 [wiz 2008-07-29]
 	Updated sysutils/cdrtools to 2.01.01.43 [wiz 2008-07-29]
+	Updated graphics/MesaLib to 7.0.4.0nb2 [dsainty 2008-07-30]
