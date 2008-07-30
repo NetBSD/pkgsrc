@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/05/04 16:34:03 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/07/30 21:29:57 schmonz Exp $
 share/doc/roundcube/INSTALL
 share/doc/roundcube/LICENSE
 share/doc/roundcube/README
@@ -15,9 +15,9 @@ share/examples/roundcube/db.inc.php.dist
 share/examples/roundcube/main.inc.php.dist
 share/examples/roundcube/roundcube.conf
 share/roundcube/.htaccess
-share/roundcube/index.php
 share/roundcube/config/db.inc.php.dist
 share/roundcube/config/main.inc.php.dist
+share/roundcube/index.php
 share/roundcube/installer/check.php
 share/roundcube/installer/client.js
 share/roundcube/installer/config.php
@@ -34,18 +34,27 @@ share/roundcube/installer/welcome.html
 share/roundcube/program/blank.gif
 share/roundcube/program/blocked.gif
 share/roundcube/program/include/bugs.inc
+share/roundcube/program/include/html.php
+share/roundcube/program/include/iniset.php
 share/roundcube/program/include/main.inc
-share/roundcube/program/include/rcmail_template.inc
-share/roundcube/program/include/rcube_contacts.inc
-share/roundcube/program/include/rcube_db.inc
-share/roundcube/program/include/rcube_html.inc
-share/roundcube/program/include/rcube_imap.inc
-share/roundcube/program/include/rcube_ldap.inc
-share/roundcube/program/include/rcube_mdb2.inc
+share/roundcube/program/include/rcmail.php
+share/roundcube/program/include/rcube_browser.php
+share/roundcube/program/include/rcube_config.php
+share/roundcube/program/include/rcube_contacts.php
+share/roundcube/program/include/rcube_db.php
+share/roundcube/program/include/rcube_html_page.php
+share/roundcube/program/include/rcube_imap.php
+share/roundcube/program/include/rcube_json_output.php
+share/roundcube/program/include/rcube_ldap.php
+share/roundcube/program/include/rcube_mail_mime.php
+share/roundcube/program/include/rcube_mdb2.php
+share/roundcube/program/include/rcube_message.php
+share/roundcube/program/include/rcube_result_set.php
 share/roundcube/program/include/rcube_shared.inc
 share/roundcube/program/include/rcube_smtp.inc
 share/roundcube/program/include/rcube_sqlite.inc
-share/roundcube/program/include/rcube_user.inc
+share/roundcube/program/include/rcube_template.php
+share/roundcube/program/include/rcube_user.php
 share/roundcube/program/include/session.inc
 share/roundcube/program/js/app.js
 share/roundcube/program/js/common.js
@@ -53,341 +62,280 @@ share/roundcube/program/js/editor.js
 share/roundcube/program/js/editor_images.js
 share/roundcube/program/js/googiespell.js
 share/roundcube/program/js/list.js
-share/roundcube/program/js/tiny_mce/blank.htm
 share/roundcube/program/js/tiny_mce/langs/en.js
-share/roundcube/program/js/tiny_mce/langs/readme.txt
 share/roundcube/program/js/tiny_mce/license.txt
-share/roundcube/program/js/tiny_mce/plugins/cleanup/editor_plugin.js
-share/roundcube/program/js/tiny_mce/plugins/cleanup/editor_plugin_src.js
-share/roundcube/program/js/tiny_mce/plugins/cleanup/readme.txt
+share/roundcube/program/js/tiny_mce/plugins/compat2x/editor_plugin.js
+share/roundcube/program/js/tiny_mce/plugins/compat2x/editor_plugin_src.js
+share/roundcube/program/js/tiny_mce/plugins/contextmenu/editor_plugin.js
+share/roundcube/program/js/tiny_mce/plugins/contextmenu/editor_plugin_src.js
+share/roundcube/program/js/tiny_mce/plugins/directionality/editor_plugin.js
+share/roundcube/program/js/tiny_mce/plugins/directionality/editor_plugin_src.js
 share/roundcube/program/js/tiny_mce/plugins/emotions/editor_plugin.js
 share/roundcube/program/js/tiny_mce/plugins/emotions/editor_plugin_src.js
 share/roundcube/program/js/tiny_mce/plugins/emotions/emotions.htm
-share/roundcube/program/js/tiny_mce/plugins/emotions/images/emotions.gif
-share/roundcube/program/js/tiny_mce/plugins/emotions/images/readme.txt
-share/roundcube/program/js/tiny_mce/plugins/emotions/images/smiley-cool.gif
-share/roundcube/program/js/tiny_mce/plugins/emotions/images/smiley-cry.gif
-share/roundcube/program/js/tiny_mce/plugins/emotions/images/smiley-embarassed.gif
-share/roundcube/program/js/tiny_mce/plugins/emotions/images/smiley-foot-in-mouth.gif
-share/roundcube/program/js/tiny_mce/plugins/emotions/images/smiley-frown.gif
-share/roundcube/program/js/tiny_mce/plugins/emotions/images/smiley-innocent.gif
-share/roundcube/program/js/tiny_mce/plugins/emotions/images/smiley-kiss.gif
-share/roundcube/program/js/tiny_mce/plugins/emotions/images/smiley-laughing.gif
-share/roundcube/program/js/tiny_mce/plugins/emotions/images/smiley-money-mouth.gif
-share/roundcube/program/js/tiny_mce/plugins/emotions/images/smiley-sealed.gif
-share/roundcube/program/js/tiny_mce/plugins/emotions/images/smiley-smile.gif
-share/roundcube/program/js/tiny_mce/plugins/emotions/images/smiley-surprised.gif
-share/roundcube/program/js/tiny_mce/plugins/emotions/images/smiley-tongue-out.gif
-share/roundcube/program/js/tiny_mce/plugins/emotions/images/smiley-undecided.gif
-share/roundcube/program/js/tiny_mce/plugins/emotions/images/smiley-wink.gif
-share/roundcube/program/js/tiny_mce/plugins/emotions/images/smiley-yell.gif
-share/roundcube/program/js/tiny_mce/plugins/emotions/jscripts/functions.js
-share/roundcube/program/js/tiny_mce/plugins/emotions/langs/en.js
-share/roundcube/program/js/tiny_mce/plugins/emotions/readme.txt
+share/roundcube/program/js/tiny_mce/plugins/emotions/img/smiley-cool.gif
+share/roundcube/program/js/tiny_mce/plugins/emotions/img/smiley-cry.gif
+share/roundcube/program/js/tiny_mce/plugins/emotions/img/smiley-embarassed.gif
+share/roundcube/program/js/tiny_mce/plugins/emotions/img/smiley-foot-in-mouth.gif
+share/roundcube/program/js/tiny_mce/plugins/emotions/img/smiley-frown.gif
+share/roundcube/program/js/tiny_mce/plugins/emotions/img/smiley-innocent.gif
+share/roundcube/program/js/tiny_mce/plugins/emotions/img/smiley-kiss.gif
+share/roundcube/program/js/tiny_mce/plugins/emotions/img/smiley-laughing.gif
+share/roundcube/program/js/tiny_mce/plugins/emotions/img/smiley-money-mouth.gif
+share/roundcube/program/js/tiny_mce/plugins/emotions/img/smiley-sealed.gif
+share/roundcube/program/js/tiny_mce/plugins/emotions/img/smiley-smile.gif
+share/roundcube/program/js/tiny_mce/plugins/emotions/img/smiley-surprised.gif
+share/roundcube/program/js/tiny_mce/plugins/emotions/img/smiley-tongue-out.gif
+share/roundcube/program/js/tiny_mce/plugins/emotions/img/smiley-undecided.gif
+share/roundcube/program/js/tiny_mce/plugins/emotions/img/smiley-wink.gif
+share/roundcube/program/js/tiny_mce/plugins/emotions/img/smiley-yell.gif
+share/roundcube/program/js/tiny_mce/plugins/emotions/js/emotions.js
+share/roundcube/program/js/tiny_mce/plugins/emotions/langs/en_dlg.js
 share/roundcube/program/js/tiny_mce/plugins/media/css/content.css
 share/roundcube/program/js/tiny_mce/plugins/media/css/media.css
 share/roundcube/program/js/tiny_mce/plugins/media/editor_plugin.js
 share/roundcube/program/js/tiny_mce/plugins/media/editor_plugin_src.js
-share/roundcube/program/js/tiny_mce/plugins/media/images/flash.gif
-share/roundcube/program/js/tiny_mce/plugins/media/images/media.gif
-share/roundcube/program/js/tiny_mce/plugins/media/images/quicktime.gif
-share/roundcube/program/js/tiny_mce/plugins/media/images/realmedia.gif
-share/roundcube/program/js/tiny_mce/plugins/media/images/shockwave.gif
-share/roundcube/program/js/tiny_mce/plugins/media/images/windowsmedia.gif
-share/roundcube/program/js/tiny_mce/plugins/media/jscripts/embed.js
-share/roundcube/program/js/tiny_mce/plugins/media/jscripts/media.js
-share/roundcube/program/js/tiny_mce/plugins/media/langs/en.js
+share/roundcube/program/js/tiny_mce/plugins/media/img/flash.gif
+share/roundcube/program/js/tiny_mce/plugins/media/img/flv_player.swf
+share/roundcube/program/js/tiny_mce/plugins/media/img/quicktime.gif
+share/roundcube/program/js/tiny_mce/plugins/media/img/realmedia.gif
+share/roundcube/program/js/tiny_mce/plugins/media/img/shockwave.gif
+share/roundcube/program/js/tiny_mce/plugins/media/img/trans.gif
+share/roundcube/program/js/tiny_mce/plugins/media/img/windowsmedia.gif
+share/roundcube/program/js/tiny_mce/plugins/media/js/embed.js
+share/roundcube/program/js/tiny_mce/plugins/media/js/media.js
+share/roundcube/program/js/tiny_mce/plugins/media/langs/en_dlg.js
 share/roundcube/program/js/tiny_mce/plugins/media/media.htm
 share/roundcube/program/js/tiny_mce/plugins/nonbreaking/editor_plugin.js
 share/roundcube/program/js/tiny_mce/plugins/nonbreaking/editor_plugin_src.js
-share/roundcube/program/js/tiny_mce/plugins/nonbreaking/images/nonbreaking.gif
-share/roundcube/program/js/tiny_mce/plugins/nonbreaking/langs/en.js
-share/roundcube/program/js/tiny_mce/plugins/readme.txt
+share/roundcube/program/js/tiny_mce/plugins/paste/blank.htm
+share/roundcube/program/js/tiny_mce/plugins/paste/css/blank.css
+share/roundcube/program/js/tiny_mce/plugins/paste/css/pasteword.css
+share/roundcube/program/js/tiny_mce/plugins/paste/editor_plugin.js
+share/roundcube/program/js/tiny_mce/plugins/paste/editor_plugin_src.js
+share/roundcube/program/js/tiny_mce/plugins/paste/js/pastetext.js
+share/roundcube/program/js/tiny_mce/plugins/paste/js/pasteword.js
+share/roundcube/program/js/tiny_mce/plugins/paste/langs/en_dlg.js
+share/roundcube/program/js/tiny_mce/plugins/paste/pastetext.htm
+share/roundcube/program/js/tiny_mce/plugins/paste/pasteword.htm
 share/roundcube/program/js/tiny_mce/plugins/searchreplace/css/searchreplace.css
 share/roundcube/program/js/tiny_mce/plugins/searchreplace/editor_plugin.js
 share/roundcube/program/js/tiny_mce/plugins/searchreplace/editor_plugin_src.js
-share/roundcube/program/js/tiny_mce/plugins/searchreplace/images/replace.gif
-share/roundcube/program/js/tiny_mce/plugins/searchreplace/images/replace_all_button_bg.gif
-share/roundcube/program/js/tiny_mce/plugins/searchreplace/images/replace_button_bg.gif
-share/roundcube/program/js/tiny_mce/plugins/searchreplace/images/search.gif
-share/roundcube/program/js/tiny_mce/plugins/searchreplace/jscripts/searchreplace.js
-share/roundcube/program/js/tiny_mce/plugins/searchreplace/langs/en.js
-share/roundcube/program/js/tiny_mce/plugins/searchreplace/readme.txt
+share/roundcube/program/js/tiny_mce/plugins/searchreplace/js/searchreplace.js
+share/roundcube/program/js/tiny_mce/plugins/searchreplace/langs/en_dlg.js
 share/roundcube/program/js/tiny_mce/plugins/searchreplace/searchreplace.htm
-share/roundcube/program/js/tiny_mce/plugins/spellchecker/changelog
-share/roundcube/program/js/tiny_mce/plugins/spellchecker/classes/TinyGoogleSpell.class.php
-share/roundcube/program/js/tiny_mce/plugins/spellchecker/classes/TinyPspell.class.php
-share/roundcube/program/js/tiny_mce/plugins/spellchecker/classes/TinyPspellShell.class.php
-share/roundcube/program/js/tiny_mce/plugins/spellchecker/config.php
 share/roundcube/program/js/tiny_mce/plugins/spellchecker/css/content.css
-share/roundcube/program/js/tiny_mce/plugins/spellchecker/css/spellchecker.css
 share/roundcube/program/js/tiny_mce/plugins/spellchecker/editor_plugin.js
 share/roundcube/program/js/tiny_mce/plugins/spellchecker/editor_plugin_src.js
-share/roundcube/program/js/tiny_mce/plugins/spellchecker/images/spellchecker.gif
-share/roundcube/program/js/tiny_mce/plugins/spellchecker/images/wline.gif
-share/roundcube/program/js/tiny_mce/plugins/spellchecker/langs/en.js
-share/roundcube/program/js/tiny_mce/plugins/spellchecker/tinyspell.php
+share/roundcube/program/js/tiny_mce/plugins/spellchecker/img/wline.gif
 share/roundcube/program/js/tiny_mce/plugins/table/cell.htm
 share/roundcube/program/js/tiny_mce/plugins/table/css/cell.css
 share/roundcube/program/js/tiny_mce/plugins/table/css/row.css
 share/roundcube/program/js/tiny_mce/plugins/table/css/table.css
 share/roundcube/program/js/tiny_mce/plugins/table/editor_plugin.js
 share/roundcube/program/js/tiny_mce/plugins/table/editor_plugin_src.js
-share/roundcube/program/js/tiny_mce/plugins/table/images/buttons.gif
-share/roundcube/program/js/tiny_mce/plugins/table/images/table.gif
-share/roundcube/program/js/tiny_mce/plugins/table/images/table_cell_props.gif
-share/roundcube/program/js/tiny_mce/plugins/table/images/table_delete.gif
-share/roundcube/program/js/tiny_mce/plugins/table/images/table_delete_col.gif
-share/roundcube/program/js/tiny_mce/plugins/table/images/table_delete_row.gif
-share/roundcube/program/js/tiny_mce/plugins/table/images/table_insert_col_after.gif
-share/roundcube/program/js/tiny_mce/plugins/table/images/table_insert_col_before.gif
-share/roundcube/program/js/tiny_mce/plugins/table/images/table_insert_row_after.gif
-share/roundcube/program/js/tiny_mce/plugins/table/images/table_insert_row_before.gif
-share/roundcube/program/js/tiny_mce/plugins/table/images/table_merge_cells.gif
-share/roundcube/program/js/tiny_mce/plugins/table/images/table_row_props.gif
-share/roundcube/program/js/tiny_mce/plugins/table/images/table_split_cells.gif
-share/roundcube/program/js/tiny_mce/plugins/table/jscripts/cell.js
-share/roundcube/program/js/tiny_mce/plugins/table/jscripts/merge_cells.js
-share/roundcube/program/js/tiny_mce/plugins/table/jscripts/row.js
-share/roundcube/program/js/tiny_mce/plugins/table/jscripts/table.js
-share/roundcube/program/js/tiny_mce/plugins/table/langs/en.js
+share/roundcube/program/js/tiny_mce/plugins/table/js/cell.js
+share/roundcube/program/js/tiny_mce/plugins/table/js/merge_cells.js
+share/roundcube/program/js/tiny_mce/plugins/table/js/row.js
+share/roundcube/program/js/tiny_mce/plugins/table/js/table.js
+share/roundcube/program/js/tiny_mce/plugins/table/langs/en_dlg.js
 share/roundcube/program/js/tiny_mce/plugins/table/merge_cells.htm
-share/roundcube/program/js/tiny_mce/plugins/table/readme.txt
 share/roundcube/program/js/tiny_mce/plugins/table/row.htm
 share/roundcube/program/js/tiny_mce/plugins/table/table.htm
 share/roundcube/program/js/tiny_mce/plugins/visualchars/editor_plugin.js
 share/roundcube/program/js/tiny_mce/plugins/visualchars/editor_plugin_src.js
-share/roundcube/program/js/tiny_mce/plugins/visualchars/images/visualchars.gif
-share/roundcube/program/js/tiny_mce/plugins/visualchars/langs/en.js
+share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/abbr.htm
+share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/acronym.htm
+share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/attributes.htm
+share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/cite.htm
+share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/css/attributes.css
+share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/css/popup.css
+share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/css/xhtmlxtras.css
+share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/del.htm
+share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/editor_plugin.js
+share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/editor_plugin_src.js
+share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/ins.htm
+share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/js/abbr.js
+share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/js/acronym.js
+share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/js/attributes.js
+share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/js/cite.js
+share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/js/del.js
+share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/js/element_common.js
+share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/js/ins.js
+share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/langs/en_dlg.js
 share/roundcube/program/js/tiny_mce/themes/advanced/about.htm
 share/roundcube/program/js/tiny_mce/themes/advanced/anchor.htm
 share/roundcube/program/js/tiny_mce/themes/advanced/charmap.htm
 share/roundcube/program/js/tiny_mce/themes/advanced/color_picker.htm
-share/roundcube/program/js/tiny_mce/themes/advanced/css/editor_content.css
-share/roundcube/program/js/tiny_mce/themes/advanced/css/editor_popup.css
-share/roundcube/program/js/tiny_mce/themes/advanced/docs/en/about.htm
-share/roundcube/program/js/tiny_mce/themes/advanced/docs/en/common_buttons.htm
-share/roundcube/program/js/tiny_mce/themes/advanced/docs/en/create_accessible_content.htm
-share/roundcube/program/js/tiny_mce/themes/advanced/docs/en/images/insert_anchor_window.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/docs/en/images/insert_image_window.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/docs/en/images/insert_link_window.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/docs/en/images/insert_table_window.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/docs/en/index.htm
-share/roundcube/program/js/tiny_mce/themes/advanced/docs/en/insert_anchor_button.htm
-share/roundcube/program/js/tiny_mce/themes/advanced/docs/en/insert_image_button.htm
-share/roundcube/program/js/tiny_mce/themes/advanced/docs/en/insert_link_button.htm
-share/roundcube/program/js/tiny_mce/themes/advanced/docs/en/insert_table_button.htm
-share/roundcube/program/js/tiny_mce/themes/advanced/docs/en/style.css
 share/roundcube/program/js/tiny_mce/themes/advanced/editor_template.js
 share/roundcube/program/js/tiny_mce/themes/advanced/editor_template_src.js
 share/roundcube/program/js/tiny_mce/themes/advanced/image.htm
-share/roundcube/program/js/tiny_mce/themes/advanced/images/anchor.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/anchor_symbol.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/backcolor.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/bold.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/bold_de_se.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/bold_es.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/bold_fr.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/bold_ru.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/bold_tw.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/browse.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/bullist.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/button_menu.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/buttons.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/cancel_button_bg.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/charmap.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/cleanup.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/close.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/code.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/color.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/colors.jpg
-share/roundcube/program/js/tiny_mce/themes/advanced/images/copy.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/custom_1.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/cut.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/forecolor.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/help.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/hr.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/image.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/indent.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/insert_button_bg.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/italic.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/italic_de_se.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/italic_es.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/italic_ru.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/italic_tw.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/justifycenter.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/justifyfull.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/justifyleft.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/justifyright.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/link.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/menu_check.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/newdocument.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/numlist.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/opacity.png
-share/roundcube/program/js/tiny_mce/themes/advanced/images/outdent.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/paste.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/redo.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/removeformat.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/separator.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/spacer.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/statusbar_resize.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/strikethrough.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/sub.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/sup.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/underline.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/underline_es.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/underline_fr.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/underline_ru.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/underline_tw.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/undo.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/unlink.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/visualaid.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/xp/tab_bg.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/xp/tab_end.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/xp/tab_sel_bg.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/xp/tab_sel_end.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/images/xp/tabs_bg.gif
-share/roundcube/program/js/tiny_mce/themes/advanced/jscripts/about.js
-share/roundcube/program/js/tiny_mce/themes/advanced/jscripts/anchor.js
-share/roundcube/program/js/tiny_mce/themes/advanced/jscripts/charmap.js
-share/roundcube/program/js/tiny_mce/themes/advanced/jscripts/color_picker.js
-share/roundcube/program/js/tiny_mce/themes/advanced/jscripts/image.js
-share/roundcube/program/js/tiny_mce/themes/advanced/jscripts/link.js
-share/roundcube/program/js/tiny_mce/themes/advanced/jscripts/source_editor.js
+share/roundcube/program/js/tiny_mce/themes/advanced/img/colorpicker.jpg
+share/roundcube/program/js/tiny_mce/themes/advanced/img/icons.gif
+share/roundcube/program/js/tiny_mce/themes/advanced/js/about.js
+share/roundcube/program/js/tiny_mce/themes/advanced/js/anchor.js
+share/roundcube/program/js/tiny_mce/themes/advanced/js/charmap.js
+share/roundcube/program/js/tiny_mce/themes/advanced/js/color_picker.js
+share/roundcube/program/js/tiny_mce/themes/advanced/js/image.js
+share/roundcube/program/js/tiny_mce/themes/advanced/js/link.js
+share/roundcube/program/js/tiny_mce/themes/advanced/js/source_editor.js
 share/roundcube/program/js/tiny_mce/themes/advanced/langs/en.js
+share/roundcube/program/js/tiny_mce/themes/advanced/langs/en_dlg.js
 share/roundcube/program/js/tiny_mce/themes/advanced/link.htm
+share/roundcube/program/js/tiny_mce/themes/advanced/skins/default/content.css
+share/roundcube/program/js/tiny_mce/themes/advanced/skins/default/dialog.css
+share/roundcube/program/js/tiny_mce/themes/advanced/skins/default/img/buttons.png
+share/roundcube/program/js/tiny_mce/themes/advanced/skins/default/img/items.gif
+share/roundcube/program/js/tiny_mce/themes/advanced/skins/default/img/menu_arrow.gif
+share/roundcube/program/js/tiny_mce/themes/advanced/skins/default/img/menu_check.gif
+share/roundcube/program/js/tiny_mce/themes/advanced/skins/default/img/progress.gif
+share/roundcube/program/js/tiny_mce/themes/advanced/skins/default/img/tabs.gif
+share/roundcube/program/js/tiny_mce/themes/advanced/skins/default/ui.css
+share/roundcube/program/js/tiny_mce/themes/advanced/skins/o2k7/content.css
+share/roundcube/program/js/tiny_mce/themes/advanced/skins/o2k7/dialog.css
+share/roundcube/program/js/tiny_mce/themes/advanced/skins/o2k7/img/button_bg.png
+share/roundcube/program/js/tiny_mce/themes/advanced/skins/o2k7/img/button_bg_black.png
+share/roundcube/program/js/tiny_mce/themes/advanced/skins/o2k7/img/button_bg_silver.png
+share/roundcube/program/js/tiny_mce/themes/advanced/skins/o2k7/ui.css
+share/roundcube/program/js/tiny_mce/themes/advanced/skins/o2k7/ui_black.css
+share/roundcube/program/js/tiny_mce/themes/advanced/skins/o2k7/ui_silver.css
 share/roundcube/program/js/tiny_mce/themes/advanced/source_editor.htm
+share/roundcube/program/js/tiny_mce/themes/simple/editor_template.js
+share/roundcube/program/js/tiny_mce/themes/simple/editor_template_src.js
+share/roundcube/program/js/tiny_mce/themes/simple/img/icons.gif
+share/roundcube/program/js/tiny_mce/themes/simple/langs/en.js
+share/roundcube/program/js/tiny_mce/themes/simple/skins/default/content.css
+share/roundcube/program/js/tiny_mce/themes/simple/skins/default/ui.css
+share/roundcube/program/js/tiny_mce/themes/simple/skins/o2k7/content.css
+share/roundcube/program/js/tiny_mce/themes/simple/skins/o2k7/img/button_bg.png
+share/roundcube/program/js/tiny_mce/themes/simple/skins/o2k7/ui.css
 share/roundcube/program/js/tiny_mce/tiny_mce.js
 share/roundcube/program/js/tiny_mce/tiny_mce_popup.js
 share/roundcube/program/js/tiny_mce/tiny_mce_src.js
 share/roundcube/program/js/tiny_mce/utils/editable_selects.js
 share/roundcube/program/js/tiny_mce/utils/form_utils.js
-share/roundcube/program/js/tiny_mce/utils/mclayer.js
 share/roundcube/program/js/tiny_mce/utils/mctabs.js
 share/roundcube/program/js/tiny_mce/utils/validate.js
 share/roundcube/program/lib/enriched.inc
-share/roundcube/program/lib/html2text.inc
+share/roundcube/program/lib/html2text.php
 share/roundcube/program/lib/icl_commons.inc
 share/roundcube/program/lib/imap.inc
-share/roundcube/program/lib/magic
 share/roundcube/program/lib/mime.inc
-share/roundcube/program/lib/rc_mail_mime.inc
 share/roundcube/program/lib/utf7.inc
-share/roundcube/program/localization/am/labels.inc
-share/roundcube/program/localization/am/messages.inc
-share/roundcube/program/localization/ar/labels.inc
-share/roundcube/program/localization/ar/messages.inc
-share/roundcube/program/localization/bg/labels.inc
-share/roundcube/program/localization/bg/messages.inc
+share/roundcube/program/lib/washtml.php
+share/roundcube/program/localization/ar_SA/labels.inc
+share/roundcube/program/localization/ar_SA/messages.inc
+share/roundcube/program/localization/bg_BG/labels.inc
+share/roundcube/program/localization/bg_BG/messages.inc
 share/roundcube/program/localization/bs_BA/labels.inc
 share/roundcube/program/localization/bs_BA/messages.inc
-share/roundcube/program/localization/ca/labels.inc
-share/roundcube/program/localization/ca/messages.inc
-share/roundcube/program/localization/cz/labels.inc
-share/roundcube/program/localization/cz/messages.inc
-share/roundcube/program/localization/da/labels.inc
-share/roundcube/program/localization/da/messages.inc
+share/roundcube/program/localization/ca_ES/labels.inc
+share/roundcube/program/localization/ca_ES/messages.inc
+share/roundcube/program/localization/cs_CZ/labels.inc
+share/roundcube/program/localization/cs_CZ/messages.inc
+share/roundcube/program/localization/da_DK/labels.inc
+share/roundcube/program/localization/da_DK/messages.inc
 share/roundcube/program/localization/de_CH/labels.inc
 share/roundcube/program/localization/de_CH/messages.inc
 share/roundcube/program/localization/de_DE/labels.inc
 share/roundcube/program/localization/de_DE/messages.inc
-share/roundcube/program/localization/el/labels.inc
-share/roundcube/program/localization/el/messages.inc
+share/roundcube/program/localization/el_GR/labels.inc
+share/roundcube/program/localization/el_GR/messages.inc
 share/roundcube/program/localization/en_GB/labels.inc
 share/roundcube/program/localization/en_GB/messages.inc
 share/roundcube/program/localization/en_US/labels.inc
 share/roundcube/program/localization/en_US/messages.inc
 share/roundcube/program/localization/eo/labels.inc
 share/roundcube/program/localization/eo/messages.inc
-share/roundcube/program/localization/es/labels.inc
-share/roundcube/program/localization/es/messages.inc
+share/roundcube/program/localization/es_ES/labels.inc
+share/roundcube/program/localization/es_ES/messages.inc
 share/roundcube/program/localization/et_EE/labels.inc
 share/roundcube/program/localization/et_EE/messages.inc
-share/roundcube/program/localization/eu/labels.inc
-share/roundcube/program/localization/eu/messages.inc
+share/roundcube/program/localization/eu_ES/labels.inc
+share/roundcube/program/localization/eu_ES/messages.inc
 share/roundcube/program/localization/fa/labels.inc
 share/roundcube/program/localization/fa/messages.inc
-share/roundcube/program/localization/fi/labels.inc
-share/roundcube/program/localization/fi/messages.inc
-share/roundcube/program/localization/fr/labels.inc
-share/roundcube/program/localization/fr/messages.inc
+share/roundcube/program/localization/fi_FI/labels.inc
+share/roundcube/program/localization/fi_FI/messages.inc
+share/roundcube/program/localization/fr_FR/labels.inc
+share/roundcube/program/localization/fr_FR/messages.inc
 share/roundcube/program/localization/ga_IE/labels.inc
 share/roundcube/program/localization/ga_IE/messages.inc
-share/roundcube/program/localization/ge/labels.inc
-share/roundcube/program/localization/ge/messages.inc
-share/roundcube/program/localization/gl/labels.inc
-share/roundcube/program/localization/gl/messages.inc
-share/roundcube/program/localization/he/labels.inc
-share/roundcube/program/localization/he/messages.inc
-share/roundcube/program/localization/hi/labels.inc
-share/roundcube/program/localization/hi/messages.inc
+share/roundcube/program/localization/gl_ES/labels.inc
+share/roundcube/program/localization/gl_ES/messages.inc
+share/roundcube/program/localization/he_IL/labels.inc
+share/roundcube/program/localization/he_IL/messages.inc
+share/roundcube/program/localization/hi_IN/labels.inc
+share/roundcube/program/localization/hi_IN/messages.inc
 share/roundcube/program/localization/hr/labels.inc
 share/roundcube/program/localization/hr/messages.inc
-share/roundcube/program/localization/hu/labels.inc
-share/roundcube/program/localization/hu/messages.inc
+share/roundcube/program/localization/hu_HU/labels.inc
+share/roundcube/program/localization/hu_HU/messages.inc
+share/roundcube/program/localization/hy_AM/labels.inc
+share/roundcube/program/localization/hy_AM/messages.inc
 share/roundcube/program/localization/id_ID/labels.inc
 share/roundcube/program/localization/id_ID/messages.inc
 share/roundcube/program/localization/index.inc
-share/roundcube/program/localization/is/labels.inc
-share/roundcube/program/localization/is/messages.inc
-share/roundcube/program/localization/it/labels.inc
-share/roundcube/program/localization/it/messages.inc
-share/roundcube/program/localization/ja/labels.inc
-share/roundcube/program/localization/ja/messages.inc
-share/roundcube/program/localization/kr/labels.inc
-share/roundcube/program/localization/kr/messages.inc
+share/roundcube/program/localization/is_IS/labels.inc
+share/roundcube/program/localization/is_IS/messages.inc
+share/roundcube/program/localization/it_IT/labels.inc
+share/roundcube/program/localization/it_IT/messages.inc
+share/roundcube/program/localization/ja_JP/labels.inc
+share/roundcube/program/localization/ja_JP/messages.inc
+share/roundcube/program/localization/ka_GE/labels.inc
+share/roundcube/program/localization/ka_GE/messages.inc
+share/roundcube/program/localization/ko_KR/labels.inc
+share/roundcube/program/localization/ko_KR/messages.inc
 share/roundcube/program/localization/ku/labels.inc
 share/roundcube/program/localization/ku/messages.inc
-share/roundcube/program/localization/lt/labels.inc
-share/roundcube/program/localization/lt/messages.inc
-share/roundcube/program/localization/lv/labels.inc
-share/roundcube/program/localization/lv/messages.inc
-share/roundcube/program/localization/mk/labels.inc
-share/roundcube/program/localization/mk/messages.inc
+share/roundcube/program/localization/lt_LT/labels.inc
+share/roundcube/program/localization/lt_LT/messages.inc
+share/roundcube/program/localization/lv_LV/labels.inc
+share/roundcube/program/localization/lv_LV/messages.inc
+share/roundcube/program/localization/mk_MK/labels.inc
+share/roundcube/program/localization/mk_MK/messages.inc
 share/roundcube/program/localization/ms_MY/labels.inc
 share/roundcube/program/localization/ms_MY/messages.inc
 share/roundcube/program/localization/nb_NO/labels.inc
 share/roundcube/program/localization/nb_NO/messages.inc
-share/roundcube/program/localization/ne/labels.inc
-share/roundcube/program/localization/ne/messages.inc
+share/roundcube/program/localization/ne_NP/labels.inc
+share/roundcube/program/localization/ne_NP/messages.inc
 share/roundcube/program/localization/nl_BE/labels.inc
 share/roundcube/program/localization/nl_BE/messages.inc
 share/roundcube/program/localization/nl_NL/labels.inc
 share/roundcube/program/localization/nl_NL/messages.inc
 share/roundcube/program/localization/nn_NO/labels.inc
 share/roundcube/program/localization/nn_NO/messages.inc
-share/roundcube/program/localization/pl/labels.inc
-share/roundcube/program/localization/pl/messages.inc
+share/roundcube/program/localization/pl_PL/labels.inc
+share/roundcube/program/localization/pl_PL/messages.inc
 share/roundcube/program/localization/pt_BR/labels.inc
 share/roundcube/program/localization/pt_BR/messages.inc
 share/roundcube/program/localization/pt_PT/labels.inc
 share/roundcube/program/localization/pt_PT/messages.inc
-share/roundcube/program/localization/ro/labels.inc
-share/roundcube/program/localization/ro/messages.inc
-share/roundcube/program/localization/ru/labels.inc
-share/roundcube/program/localization/ru/messages.inc
-share/roundcube/program/localization/se/labels.inc
-share/roundcube/program/localization/se/messages.inc
-share/roundcube/program/localization/si/labels.inc
-share/roundcube/program/localization/si/messages.inc
-share/roundcube/program/localization/sk/labels.inc
-share/roundcube/program/localization/sk/messages.inc
-share/roundcube/program/localization/sl/labels.inc
-share/roundcube/program/localization/sl/messages.inc
+share/roundcube/program/localization/ro_RO/labels.inc
+share/roundcube/program/localization/ro_RO/messages.inc
+share/roundcube/program/localization/ru_RU/labels.inc
+share/roundcube/program/localization/ru_RU/messages.inc
+share/roundcube/program/localization/si_LK/labels.inc
+share/roundcube/program/localization/si_LK/messages.inc
+share/roundcube/program/localization/sk_SK/labels.inc
+share/roundcube/program/localization/sk_SK/messages.inc
+share/roundcube/program/localization/sl_SI/labels.inc
+share/roundcube/program/localization/sl_SI/messages.inc
 share/roundcube/program/localization/sq_AL/labels.inc
 share/roundcube/program/localization/sq_AL/messages.inc
-share/roundcube/program/localization/sr_cyrillic/labels.inc
-share/roundcube/program/localization/sr_cyrillic/messages.inc
-share/roundcube/program/localization/sr_latin/labels.inc
-share/roundcube/program/localization/sr_latin/messages.inc
+share/roundcube/program/localization/sr_CS/labels.inc
+share/roundcube/program/localization/sr_CS/messages.inc
+share/roundcube/program/localization/sv_SE/labels.inc
+share/roundcube/program/localization/sv_SE/messages.inc
 share/roundcube/program/localization/th_TH/labels.inc
 share/roundcube/program/localization/th_TH/messages.inc
-share/roundcube/program/localization/tr/labels.inc
-share/roundcube/program/localization/tr/messages.inc
-share/roundcube/program/localization/uk/labels.inc
-share/roundcube/program/localization/uk/messages.inc
-share/roundcube/program/localization/vn/labels.inc
-share/roundcube/program/localization/vn/messages.inc
+share/roundcube/program/localization/tr_TR/labels.inc
+share/roundcube/program/localization/tr_TR/messages.inc
+share/roundcube/program/localization/uk_UA/labels.inc
+share/roundcube/program/localization/uk_UA/messages.inc
+share/roundcube/program/localization/vi_VN/labels.inc
+share/roundcube/program/localization/vi_VN/messages.inc
 share/roundcube/program/localization/zh_CN/labels.inc
 share/roundcube/program/localization/zh_CN/messages.inc
 share/roundcube/program/localization/zh_TW/labels.inc
@@ -412,7 +360,6 @@ share/roundcube/program/steps/mail/getunread.inc
 share/roundcube/program/steps/mail/list.inc
 share/roundcube/program/steps/mail/mark.inc
 share/roundcube/program/steps/mail/move_del.inc
-share/roundcube/program/steps/mail/quotadisplay.inc
 share/roundcube/program/steps/mail/rss.inc
 share/roundcube/program/steps/mail/search.inc
 share/roundcube/program/steps/mail/sendmail.inc
@@ -433,7 +380,6 @@ share/roundcube/skins/default/addresses.css
 share/roundcube/skins/default/colorpicker.css
 share/roundcube/skins/default/common.css
 share/roundcube/skins/default/editor_content.css
-share/roundcube/skins/default/editor_ui.css
 share/roundcube/skins/default/googiespell.css
 share/roundcube/skins/default/images/blank.gif
 share/roundcube/skins/default/images/buttons/add_act.png
@@ -607,68 +553,81 @@ share/roundcube/skins/default/watermark.html
 @dirrm share/roundcube/program/steps
 @dirrm share/roundcube/program/localization/zh_TW
 @dirrm share/roundcube/program/localization/zh_CN
-@dirrm share/roundcube/program/localization/vn
-@dirrm share/roundcube/program/localization/uk
-@dirrm share/roundcube/program/localization/tr
+@dirrm share/roundcube/program/localization/vi_VN
+@dirrm share/roundcube/program/localization/uk_UA
+@dirrm share/roundcube/program/localization/tr_TR
 @dirrm share/roundcube/program/localization/th_TH
-@dirrm share/roundcube/program/localization/sr_latin
-@dirrm share/roundcube/program/localization/sr_cyrillic
+@dirrm share/roundcube/program/localization/sv_SE
+@dirrm share/roundcube/program/localization/sr_CS
 @dirrm share/roundcube/program/localization/sq_AL
-@dirrm share/roundcube/program/localization/sl
-@dirrm share/roundcube/program/localization/sk
-@dirrm share/roundcube/program/localization/si
-@dirrm share/roundcube/program/localization/se
-@dirrm share/roundcube/program/localization/ru
-@dirrm share/roundcube/program/localization/ro
+@dirrm share/roundcube/program/localization/sl_SI
+@dirrm share/roundcube/program/localization/sk_SK
+@dirrm share/roundcube/program/localization/si_LK
+@dirrm share/roundcube/program/localization/ru_RU
+@dirrm share/roundcube/program/localization/ro_RO
 @dirrm share/roundcube/program/localization/pt_PT
 @dirrm share/roundcube/program/localization/pt_BR
-@dirrm share/roundcube/program/localization/pl
+@dirrm share/roundcube/program/localization/pl_PL
 @dirrm share/roundcube/program/localization/nn_NO
 @dirrm share/roundcube/program/localization/nl_NL
 @dirrm share/roundcube/program/localization/nl_BE
-@dirrm share/roundcube/program/localization/ne
+@dirrm share/roundcube/program/localization/ne_NP
 @dirrm share/roundcube/program/localization/nb_NO
 @dirrm share/roundcube/program/localization/ms_MY
-@dirrm share/roundcube/program/localization/mk
-@dirrm share/roundcube/program/localization/lv
-@dirrm share/roundcube/program/localization/lt
+@dirrm share/roundcube/program/localization/mk_MK
+@dirrm share/roundcube/program/localization/lv_LV
+@dirrm share/roundcube/program/localization/lt_LT
 @dirrm share/roundcube/program/localization/ku
-@dirrm share/roundcube/program/localization/kr
-@dirrm share/roundcube/program/localization/ja
-@dirrm share/roundcube/program/localization/it
-@dirrm share/roundcube/program/localization/is
+@dirrm share/roundcube/program/localization/ko_KR
+@dirrm share/roundcube/program/localization/ka_GE
+@dirrm share/roundcube/program/localization/ja_JP
+@dirrm share/roundcube/program/localization/it_IT
+@dirrm share/roundcube/program/localization/is_IS
 @dirrm share/roundcube/program/localization/id_ID
-@dirrm share/roundcube/program/localization/hu
+@dirrm share/roundcube/program/localization/hy_AM
+@dirrm share/roundcube/program/localization/hu_HU
 @dirrm share/roundcube/program/localization/hr
-@dirrm share/roundcube/program/localization/hi
-@dirrm share/roundcube/program/localization/he
-@dirrm share/roundcube/program/localization/gl
-@dirrm share/roundcube/program/localization/ge
+@dirrm share/roundcube/program/localization/hi_IN
+@dirrm share/roundcube/program/localization/he_IL
+@dirrm share/roundcube/program/localization/gl_ES
 @dirrm share/roundcube/program/localization/ga_IE
-@dirrm share/roundcube/program/localization/fr
-@dirrm share/roundcube/program/localization/fi
+@dirrm share/roundcube/program/localization/fr_FR
+@dirrm share/roundcube/program/localization/fi_FI
 @dirrm share/roundcube/program/localization/fa
-@dirrm share/roundcube/program/localization/eu
+@dirrm share/roundcube/program/localization/eu_ES
 @dirrm share/roundcube/program/localization/et_EE
-@dirrm share/roundcube/program/localization/es
+@dirrm share/roundcube/program/localization/es_ES
 @dirrm share/roundcube/program/localization/eo
 @dirrm share/roundcube/program/localization/en_US
 @dirrm share/roundcube/program/localization/en_GB
-@dirrm share/roundcube/program/localization/el
+@dirrm share/roundcube/program/localization/el_GR
 @dirrm share/roundcube/program/localization/de_DE
 @dirrm share/roundcube/program/localization/de_CH
-@dirrm share/roundcube/program/localization/da
-@dirrm share/roundcube/program/localization/cz
-@dirrm share/roundcube/program/localization/ca
+@dirrm share/roundcube/program/localization/da_DK
+@dirrm share/roundcube/program/localization/cs_CZ
+@dirrm share/roundcube/program/localization/ca_ES
 @dirrm share/roundcube/program/localization/bs_BA
-@dirrm share/roundcube/program/localization/bg
-@dirrm share/roundcube/program/localization/ar
-@dirrm share/roundcube/program/localization/am
+@dirrm share/roundcube/program/localization/bg_BG
+@dirrm share/roundcube/program/localization/ar_SA
 @dirrm share/roundcube/program/localization
 @dirrm share/roundcube/program/lib
 @dirrm share/roundcube/program/js/tiny_mce/utils
+@dirrm share/roundcube/program/js/tiny_mce/themes/simple/skins/o2k7/img
+@dirrm share/roundcube/program/js/tiny_mce/themes/simple/skins/o2k7
+@dirrm share/roundcube/program/js/tiny_mce/themes/simple/skins/default
+@dirrm share/roundcube/program/js/tiny_mce/themes/simple/skins
+@dirrm share/roundcube/program/js/tiny_mce/themes/simple/langs
+@dirrm share/roundcube/program/js/tiny_mce/themes/simple/img
+@dirrm share/roundcube/program/js/tiny_mce/themes/simple
+@dirrm share/roundcube/program/js/tiny_mce/themes/advanced/skins/o2k7/img
+@dirrm share/roundcube/program/js/tiny_mce/themes/advanced/skins/o2k7
+@dirrm share/roundcube/program/js/tiny_mce/themes/advanced/skins/default/img
+@dirrm share/roundcube/program/js/tiny_mce/themes/advanced/skins/default
+@dirrm share/roundcube/program/js/tiny_mce/themes/advanced/skins
 @dirrm share/roundcube/program/js/tiny_mce/themes/advanced/langs
 @dirrm share/roundcube/program/js/tiny_mce/themes/advanced/jscripts
+@dirrm share/roundcube/program/js/tiny_mce/themes/advanced/js
+@dirrm share/roundcube/program/js/tiny_mce/themes/advanced/img
 @dirrm share/roundcube/program/js/tiny_mce/themes/advanced/images/xp
 @dirrm share/roundcube/program/js/tiny_mce/themes/advanced/images
 @dirrm share/roundcube/program/js/tiny_mce/themes/advanced/docs/en/images
@@ -677,36 +636,54 @@ share/roundcube/skins/default/watermark.html
 @dirrm share/roundcube/program/js/tiny_mce/themes/advanced/css
 @dirrm share/roundcube/program/js/tiny_mce/themes/advanced
 @dirrm share/roundcube/program/js/tiny_mce/themes
+@dirrm share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/langs
+@dirrm share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/js
+@dirrm share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras/css
+@dirrm share/roundcube/program/js/tiny_mce/plugins/xhtmlxtras
 @dirrm share/roundcube/program/js/tiny_mce/plugins/visualchars/langs
 @dirrm share/roundcube/program/js/tiny_mce/plugins/visualchars/images
 @dirrm share/roundcube/program/js/tiny_mce/plugins/visualchars
 @dirrm share/roundcube/program/js/tiny_mce/plugins/table/langs
 @dirrm share/roundcube/program/js/tiny_mce/plugins/table/jscripts
+@dirrm share/roundcube/program/js/tiny_mce/plugins/table/js
 @dirrm share/roundcube/program/js/tiny_mce/plugins/table/images
 @dirrm share/roundcube/program/js/tiny_mce/plugins/table/css
 @dirrm share/roundcube/program/js/tiny_mce/plugins/table
 @dirrm share/roundcube/program/js/tiny_mce/plugins/spellchecker/langs
+@dirrm share/roundcube/program/js/tiny_mce/plugins/spellchecker/img
 @dirrm share/roundcube/program/js/tiny_mce/plugins/spellchecker/images
 @dirrm share/roundcube/program/js/tiny_mce/plugins/spellchecker/css
 @dirrm share/roundcube/program/js/tiny_mce/plugins/spellchecker/classes
 @dirrm share/roundcube/program/js/tiny_mce/plugins/spellchecker
 @dirrm share/roundcube/program/js/tiny_mce/plugins/searchreplace/langs
 @dirrm share/roundcube/program/js/tiny_mce/plugins/searchreplace/jscripts
+@dirrm share/roundcube/program/js/tiny_mce/plugins/searchreplace/js
 @dirrm share/roundcube/program/js/tiny_mce/plugins/searchreplace/images
 @dirrm share/roundcube/program/js/tiny_mce/plugins/searchreplace/css
 @dirrm share/roundcube/program/js/tiny_mce/plugins/searchreplace
+@dirrm share/roundcube/program/js/tiny_mce/plugins/paste/langs
+@dirrm share/roundcube/program/js/tiny_mce/plugins/paste/js
+@dirrm share/roundcube/program/js/tiny_mce/plugins/paste/css
+@dirrm share/roundcube/program/js/tiny_mce/plugins/paste
 @dirrm share/roundcube/program/js/tiny_mce/plugins/nonbreaking/langs
 @dirrm share/roundcube/program/js/tiny_mce/plugins/nonbreaking/images
 @dirrm share/roundcube/program/js/tiny_mce/plugins/nonbreaking
 @dirrm share/roundcube/program/js/tiny_mce/plugins/media/langs
 @dirrm share/roundcube/program/js/tiny_mce/plugins/media/jscripts
+@dirrm share/roundcube/program/js/tiny_mce/plugins/media/js
+@dirrm share/roundcube/program/js/tiny_mce/plugins/media/img
 @dirrm share/roundcube/program/js/tiny_mce/plugins/media/images
 @dirrm share/roundcube/program/js/tiny_mce/plugins/media/css
 @dirrm share/roundcube/program/js/tiny_mce/plugins/media
 @dirrm share/roundcube/program/js/tiny_mce/plugins/emotions/langs
 @dirrm share/roundcube/program/js/tiny_mce/plugins/emotions/jscripts
+@dirrm share/roundcube/program/js/tiny_mce/plugins/emotions/js
+@dirrm share/roundcube/program/js/tiny_mce/plugins/emotions/img
 @dirrm share/roundcube/program/js/tiny_mce/plugins/emotions/images
 @dirrm share/roundcube/program/js/tiny_mce/plugins/emotions
+@dirrm share/roundcube/program/js/tiny_mce/plugins/directionality
+@dirrm share/roundcube/program/js/tiny_mce/plugins/contextmenu
+@dirrm share/roundcube/program/js/tiny_mce/plugins/compat2x
 @dirrm share/roundcube/program/js/tiny_mce/plugins/cleanup
 @dirrm share/roundcube/program/js/tiny_mce/plugins
 @dirrm share/roundcube/program/js/tiny_mce/langs
@@ -716,8 +693,8 @@ share/roundcube/skins/default/watermark.html
 @dirrm share/roundcube/program
 @dirrm share/roundcube/installer/images
 @dirrm share/roundcube/installer
-@unexec ${RMDIR} %D/share/roundcube/config 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/share/roundcube 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/share/roundcube/config 2>/dev/null || ${TRUE}
 @dirrm share/examples/roundcube/SQL
 @dirrm share/examples/roundcube
 @dirrm share/doc/roundcube
