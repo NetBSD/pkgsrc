@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.19 2008/07/29 19:26:47 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.20 2008/07/30 10:04:06 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -43,4 +43,5 @@ pullup ticket #2465 - requested by cube
 newsx: fix to make build and cvs-2008-3252
 pullup ticket #2466 - requested by smb
 acroread8: security update
-
+pullup ticket #2467 - requested by tron
+phpmyadmin: update for security fixes
