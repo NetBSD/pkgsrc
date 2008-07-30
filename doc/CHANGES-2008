@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1733 2008/07/30 09:35:10 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1734 2008/07/30 09:53:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2949,3 +2949,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/MesaLib to 7.0.4.0nb2 [dsainty 2008-07-30]
 	Updated audio/kid3 to 1.0 [obache 2008-07-30]
 	Updated textproc/intltool to 0.40.3 [wiz 2008-07-30]
+	Updated devel/liboil to 0.3.15 [wiz 2008-07-30]
