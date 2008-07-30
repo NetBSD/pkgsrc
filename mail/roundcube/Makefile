@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.10 2008/05/26 02:13:22 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/07/30 21:29:57 schmonz Exp $
 #
 
-DISTNAME=	roundcubemail-${VERSION}-dep
-PKGNAME=	${DISTNAME:S/mail-${VERSION}-dep/-${VERSION}/}
+DISTNAME=	roundcubemail-${RCVERSION}-dep.1
+PKGNAME=	${DISTNAME:S/mail-${RCVERSION}-dep.1/-${VERSION}/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
 
@@ -10,10 +10,13 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://roundcube.net/
 COMMENT=	Browser-based multilingual IMAP client
 
+WRKSRC=		${WRKDIR}/${DISTNAME:S/-dep.1/-dependent/}
+
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
-VERSION=	0.1.1
+RCVERSION=	0.2-alpha
+VERSION=	${RCVERSION:S/-//}
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../lang/php/phpversion.mk"
@@ -48,13 +51,19 @@ OWN_DIRS_PERMS+=	${VARBASE}/tmp/roundcube \
 
 CONF_FILES=		${EGDIR}/roundcube.conf \
 			${PKG_SYSCONFDIR}/roundcube.conf
+CONF_FILES+=		${EGDIR}/db.inc.php.dist \
+			${PKG_SYSCONFDIR}/db.inc.php
+CONF_FILES+=		${EGDIR}/main.inc.php.dist \
+			${PKG_SYSCONFDIR}/main.inc.php
 
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	do-configure
 SUBST_FILES.files=	roundcube.conf
 SUBST_FILES.files+=	config/main.inc.php.dist
+SUBST_FILES.files+=	program/include/iniset.php
 SUBST_SED.files=	-e "s|@RCDIR@|${RCDIR}|g"
 SUBST_SED.files+=	-e "s|@VARBASE@|${VARBASE}|g"
+SUBST_SED.files+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.files=	Fixing configuration files.
 
 INSTALLATION_DIRS=	${RCDIR}/program ${RCDIR}/skins ${EGDIR}/SQL ${DOCDIR}
