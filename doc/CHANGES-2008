@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1734 2008/07/30 09:53:49 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1735 2008/07/30 09:56:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2950,3 +2950,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/kid3 to 1.0 [obache 2008-07-30]
 	Updated textproc/intltool to 0.40.3 [wiz 2008-07-30]
 	Updated devel/liboil to 0.3.15 [wiz 2008-07-30]
+	Updated x11/inputproto to 1.4.4 [wiz 2008-07-30]
