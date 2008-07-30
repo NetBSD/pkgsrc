@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.21 2007/09/08 09:58:14 rillig Exp $	*/
+/*	$NetBSD: main.c,v 1.21.8.1 2008/07/30 15:38:37 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.11 1997/10/08 07:46:48 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.21 2007/09/08 09:58:14 rillig Exp $");
+__RCSID("$NetBSD: main.c,v 1.21.8.1 2008/07/30 15:38:37 joerg Exp $");
 #endif
 #endif
 
@@ -42,8 +42,10 @@ __RCSID("$NetBSD: main.c,v 1.21 2007/09/08 09:58:14 rillig Exp $");
 #include "lib.h"
 #include "delete.h"
 
-static char Options[] = "DdFfhK:NnOp:RrVv";
+static char Options[] = "DdFfhK:NnOp:P:RrVv";
 
+char   *Destdir = NULL;
+char   *Pkgdb = NULL;
 char   *Prefix = NULL;
 char   *ProgramPath = NULL;
 Boolean NoDeleteFiles = FALSE;
@@ -58,7 +60,7 @@ lpkg_head_t pkgs;
 static void
 usage(void)
 {
-	fprintf(stderr, "usage: pkg_delete [-DdFfNnORrVv] [-K pkg_dbdir] [-p prefix] pkg-name ...\n");
+	fprintf(stderr, "usage: pkg_delete [-DdFfNnORrVv] [-K pkg_dbdir] [-P destdir] [-p prefix] pkg-name ...\n");
 	exit(1);
 }
 
@@ -92,7 +94,8 @@ main(int argc, char **argv)
 			break;
 
 		case 'K':
-			_pkgdb_setPKGDB_DIR(optarg);
+			if ((Pkgdb = strdup(optarg)) == NULL)
+				err(EXIT_FAILURE, "strdup failed");
 			break;
 
 		case 'N':
@@ -107,6 +110,10 @@ main(int argc, char **argv)
 
 		case 'O':
 			OnlyDeleteFromPkgDB = TRUE;
+			break;
+
+		case 'P':
+			Destdir = optarg;
 			break;
 
 		case 'p':
@@ -141,6 +148,20 @@ main(int argc, char **argv)
 
 	TAILQ_INIT(&pkgs);
 
+	if (Pkgdb == NULL)
+		Pkgdb = strdup(_pkgdb_getPKGDB_DIR());
+
+	if (Destdir != NULL) {
+		char *pkgdbdir;
+
+		if (asprintf(&pkgdbdir, "%s/%s", Destdir, Pkgdb) == -1)
+			err(EXIT_FAILURE, "asprintf failed");
+		_pkgdb_setPKGDB_DIR(pkgdbdir);
+		free(pkgdbdir);
+	} else {
+		_pkgdb_setPKGDB_DIR(Pkgdb);
+	}
+
 	/* Get all the remaining package names, if any */
 	if (File2Pkg && !pkgdb_open(ReadOnly)) {
 		err(EXIT_FAILURE, "cannot open pkgdb");
@@ -167,11 +188,8 @@ main(int argc, char **argv)
 				errx(EXIT_FAILURE, "error expanding '%s' ('%s' nonexistent?)", *argv, _pkgdb_getPKGDB_DIR());
 			}
 		} else {
-			const char   *dbdir;
-
-			dbdir = _pkgdb_getPKGDB_DIR();
-			if (**argv == '/' && strncmp(*argv, dbdir, strlen(dbdir)) == 0) {
-				*argv += strlen(dbdir) + 1;
+			if (**argv == '/' && strncmp(*argv, Pkgdb, strlen(Pkgdb)) == 0) {
+				*argv += strlen(Pkgdb) + 1;
 				if ((*argv)[strlen(*argv) - 1] == '/') {
 					(*argv)[strlen(*argv) - 1] = 0;
 				}
