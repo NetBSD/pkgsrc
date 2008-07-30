@@ -1,0 +1,3 @@
+leapsunpack is a program to convert D. J. Bernstein's compressed
+leapsecond table into a viable leapsecs.txt file. It is designed
+to augment D. J. Bernstein's libtai package.
