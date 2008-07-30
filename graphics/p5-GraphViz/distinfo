@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/04/20 08:42:11 seb Exp $
+$NetBSD: distinfo,v 1.5 2008/07/30 17:02:45 he Exp $
 
-SHA1 (GraphViz-2.02.tar.gz) = 02d5771ef4c24d30c20083e8f86d52606e5706a2
-RMD160 (GraphViz-2.02.tar.gz) = cd0cad4cd687198a9a8c1cd02e10320c1f07b268
-Size (GraphViz-2.02.tar.gz) = 84348 bytes
+SHA1 (GraphViz-2.03.tar.gz) = 5cf6f1d3b9a750b57272fc170ae18a6d47166165
+RMD160 (GraphViz-2.03.tar.gz) = d106167e5ac9b1f9c3e7c097fce2f964eda72c7b
+Size (GraphViz-2.03.tar.gz) = 84941 bytes
