@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.11 2008/07/30 15:02:18 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.12 2008/07/30 15:38:37 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.11 2008/07/30 15:02:18 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.12 2008/07/30 15:38:37 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -77,8 +77,10 @@ struct pkg_task {
 	char *pkgname;
 
 	const char *prefix;
+	char *install_prefix;
 
 	char *logdir;
+	char *install_logdir;
 	char *other_version;
 
 	package_t plist;
@@ -305,6 +307,13 @@ pkg_parse_plist(struct pkg_task *pkg)
 	} else
 		pkg->prefix = p->name;
 
+	if (Destdir != NULL) {
+		if (asprintf(&pkg->install_prefix, "%s/%s", Destdir,
+		    pkg->prefix) == -1)
+			err(EXIT_FAILURE, "asprintf failed");
+	} else if ((pkg->install_prefix = strdup(pkg->prefix)) == NULL)
+		err(EXIT_FAILURE, "strdup failed");
+
 	return 0;
 }
 
@@ -523,8 +532,8 @@ write_meta_data(struct pkg_task *pkg)
 	if (Fake)
 		return 0;
 
-	if (mkdir_p(pkg->logdir)) {
-		warn("Can't create pkgdb entry: %s", pkg->logdir);
+	if (mkdir_p(pkg->install_logdir)) {
+		warn("Can't create pkgdb entry: %s", pkg->install_logdir);
 		return -1;
 	}
 
@@ -533,7 +542,7 @@ write_meta_data(struct pkg_task *pkg)
 		    descr->entry_offset);
 		if (*target == NULL)
 			continue;
-		if (asprintf(&filename, "%s/%s", pkg->logdir,
+		if (asprintf(&filename, "%s/%s", pkg->install_logdir,
 		    descr->entry_filename) == -1) {
 			    warn("asprintf failed");
 			    return -1;
@@ -619,13 +628,13 @@ extract_files(struct pkg_task *pkg)
 	if (Fake)
 		return 0;
 
-	if (mkdir_p(pkg->prefix)) {
-		warn("Can't create prefix: %s", pkg->prefix);
+	if (mkdir_p(pkg->install_prefix)) {
+		warn("Can't create prefix: %s", pkg->install_prefix);
 		return -1;
 	}
 
-	if (chdir(pkg->prefix) == -1) {
-		warn("Can't change into prefix: %s", pkg->prefix);
+	if (chdir(pkg->install_prefix) == -1) {
+		warn("Can't change into prefix: %s", pkg->install_prefix);
 		return -1;
 	}
 
@@ -868,6 +877,8 @@ run_install_script(struct pkg_task *pkg, const char *argument)
 	if (pkg->meta_data.meta_install == NULL || NoInstall)
 		return 0;
 
+	if (Destdir != NULL)
+		setenv(PKG_DESTDIR_VNAME, Destdir, 1);
 	setenv(PKG_PREFIX_VNAME, pkg->prefix, 1);
 	setenv(PKG_METADATA_DIR_VNAME, pkg->logdir, 1);
 	setenv(PKG_REFCOUNT_DBDIR_VNAME, pkgdb_refcount_dir(), 1);
@@ -882,8 +893,8 @@ run_install_script(struct pkg_task *pkg, const char *argument)
 
 	ret = 0;
 
-	if (chdir(pkg->logdir) == -1) {
-		warn("Can't change to %s", pkg->logdir);
+	if (chdir(pkg->install_logdir) == -1) {
+		warn("Can't change to %s", pkg->install_logdir);
 		ret = -1;
 	}
 
@@ -1123,13 +1134,15 @@ start_replacing(struct pkg_task *pkg)
 		return -1;
 
 	if (Verbose || Fake) {
-		printf("%s/pkg_delete -K %s -p %s '%s'\n",
+		printf("%s/pkg_delete -K %s -p %s%s%s '%s'\n",
 			BINDIR, _pkgdb_getPKGDB_DIR(), pkg->prefix,
+			Destdir ? " -P ": "", Destdir ? Destdir : "",
 			pkg->other_version);
 	}
 	if (!Fake)
 		fexec(BINDIR "/pkg_delete", "-K", _pkgdb_getPKGDB_DIR(),
 		    "-p", pkg->prefix,
+		    Destdir ? "-P": "", Destdir ? Destdir : "",
 		    pkg->other_version, NULL);
 
 	/* XXX Check return value and do what? */
@@ -1245,6 +1258,13 @@ pkg_do(const char *pkgpath, int mark_automatic)
 			err(EXIT_FAILURE, "asprintf failed");
 	}
 
+	if (Destdir != NULL) {
+		if (asprintf(&pkg->install_logdir, "%s/%s", Destdir, pkg->logdir) == -1)
+			err(EXIT_FAILURE, "asprintf failed");
+		_pkgdb_setPKGDB_DIR(dirname_of(pkg->install_logdir));
+	} else if ((pkg->install_logdir = strdup(pkg->logdir)) == NULL)
+		err(EXIT_FAILURE, "strdup failed");
+
 	if (NoRecord && !Fake) {
 		const char *tmpdir;
 
@@ -1252,11 +1272,11 @@ pkg_do(const char *pkgpath, int mark_automatic)
 		if (tmpdir == NULL)
 			tmpdir = "/tmp";
 
-		free(pkg->logdir);
-		if (asprintf(&pkg->logdir, "%s/pkg_install.XXXXXX", tmpdir) == -1)
+		free(pkg->install_logdir);
+		if (asprintf(&pkg->install_logdir, "%s/pkg_install.XXXXXX", tmpdir) == -1)
 			err(EXIT_FAILURE, "asprintf failed");
 		/* XXX pkg_add -u... */
-		if (mkdtemp(pkg->logdir) == NULL) {
+		if (mkdtemp(pkg->install_logdir) == NULL) {
 			warn("mkdtemp failed");
 			goto clean_memory;
 		}
@@ -1326,7 +1346,7 @@ pkg_do(const char *pkgpath, int mark_automatic)
 	pkg_register_depends(pkg);
 
 	if (Verbose)
-		printf("Package %s registered in %s\n", pkg->pkgname, pkg->logdir);
+		printf("Package %s registered in %s\n", pkg->pkgname, pkg->install_logdir);
 
 	if (pkg->meta_data.meta_display != NULL)
 		fputs(pkg->meta_data.meta_display, stdout);
@@ -1343,19 +1363,23 @@ nuke_pkg:
 			    pkg->other_version, pkg->pkgname);
 			warnx("Remember to run pkg_admin rebuild-tree after fixing this.");
 		}
-		delete_package(FALSE, FALSE, &pkg->plist, FALSE);
+		delete_package(FALSE, FALSE, &pkg->plist, FALSE, Destdir);
 	}
 
 nuke_pkgdb:
 	if (!Fake) {
-		(void) fexec(REMOVE_CMD, "-fr", pkg->logdir, (void *)NULL);
+		(void) fexec(REMOVE_CMD, "-fr", pkg->install_logdir, (void *)NULL);
+		free(pkg->install_logdir);
 		free(pkg->logdir);
+		pkg->install_logdir = NULL;
 		pkg->logdir = NULL;
 	}
 
 clean_memory:
 	if (pkg->logdir != NULL && NoRecord && !Fake)
-		(void) fexec(REMOVE_CMD, "-fr", pkg->logdir, (void *)NULL);
+		(void) fexec(REMOVE_CMD, "-fr", pkg->install_logdir, (void *)NULL);
+	free(pkg->install_prefix);
+	free(pkg->install_logdir);
 	free(pkg->logdir);
 	free_buildinfo(pkg);
 	free_plist(&pkg->plist);
