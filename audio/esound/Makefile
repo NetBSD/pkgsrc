@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2008/07/29 21:58:13 wiz Exp $
+# $NetBSD: Makefile,v 1.70 2008/07/30 10:24:40 drochner Exp $
 
 DISTNAME=		esound-0.2.39
 CATEGORIES=		audio
@@ -18,6 +18,7 @@ PKGCONFIG_OVERRIDE=	esound.pc.in
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ENV+=		ac_cv_prog_JW=false
 
 EGDIR=			${PREFIX}/share/examples/esound
 CONF_FILES=		${EGDIR}/esd.conf ${PKG_SYSCONFDIR}/esd.conf
