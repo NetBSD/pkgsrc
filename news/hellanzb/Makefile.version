@@ -1,0 +1,4 @@
+# $NetBSD: Makefile.version,v 1.1.1.1 2008/07/30 13:26:39 bjs Exp $
+
+HELLANZB_VERSION=	0.14
+HELLANZB_SVN_REV=	1087
