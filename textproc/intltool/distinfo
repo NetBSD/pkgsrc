@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.30 2008/06/19 16:58:40 bjs Exp $
+$NetBSD: distinfo,v 1.31 2008/07/30 09:34:59 wiz Exp $
 
-SHA1 (intltool-0.40.0.tar.bz2) = 493513b66d9006e7a6a6d2fafd1e0b6560db50cc
-RMD160 (intltool-0.40.0.tar.bz2) = 02105e2baa5431be8fea55ed2134d8fea65b2070
-Size (intltool-0.40.0.tar.bz2) = 139022 bytes
+SHA1 (intltool-0.40.3.tar.bz2) = 888f0b91cae35ef7821919d681b69a6ce81fd525
+RMD160 (intltool-0.40.3.tar.bz2) = d8a29e69f90f7eac1074b670a2032cbd79925f85
+Size (intltool-0.40.3.tar.bz2) = 140253 bytes
