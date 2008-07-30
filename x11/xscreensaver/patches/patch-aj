@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.1 2008/07/30 20:18:37 drochner Exp $
+
+--- hacks/glx/skytentacles.c.orig	2008-07-16 22:19:15.000000000 +0200
++++ hacks/glx/skytentacles.c
+@@ -241,6 +241,9 @@ make_tentacle (ModeInfo *mi, int which, 
+ 
+   if (tc->tentacles_size <= tc->ntentacles)
+     {
++      if (!tc->tentacles_size)
++	tc->tentacles_size = 10;
++      else
+       tc->tentacles_size = (tc->tentacles_size * 1.2) + tc->ntentacles;
+       tc->tentacles = (tentacle **)
+         realloc (tc->tentacles, tc->tentacles_size * sizeof(*tc->tentacles));
