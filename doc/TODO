@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7437 2008/07/30 17:19:06 kefren Exp $
+$NetBSD: TODO,v 1.7438 2008/07/30 21:57:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -756,7 +756,6 @@ Suggested package updates
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imapsync-1.255
 	o imlib2-1.4.1
-	o inputproto-1.4.4
 	o instiki-0.13
 	o intercal-0.24
 	o intltool-0.40.3
@@ -766,7 +765,6 @@ Suggested package updates
 	o irrd-2.3.4 [pkg/36813|38002]
 	o irrtoolset-nox11-4.8.4
 	o iselect-1.4.0
-	o iso-codes-3.1
 	o ispell-gaeilge-4.1
 	o ispell-german-20071211
 	o ispell-slovak-0.3.2
@@ -849,7 +847,6 @@ Suggested package updates
 	o libnasl-2.3.1
 	o libnids-1.21
 	o libntlm-1.0
-	o liboil-0.3.15
 	o libole2-2.2.8
 	o libopensync-0.35
 	o libpreludedb-0.9.14
@@ -1254,9 +1251,8 @@ Suggested package updates
 	o subtitleripper-0.3.4
 	o subversion-base-1.5.1
 	o sunbird-0.5 [ghen]
-	o surfraw-2.2.2
 	o suse_base-11.0
-	o swfdec-0.7.2
+	o swfdec-0.7.4
 	o swi-prolog-5.6.31
 	o sysinfo-4.2.2
 	o systrace-1.6e
@@ -1378,7 +1374,6 @@ Suggested package updates
 	o xf86-video-intel-2.4.0
 	o xf86-video-mga-1.4.9
 	o xf86-video-neomagic-1.2.1
-	o xf86-video-nv-2.1.10
 	o xf86-video-rendition-4.2.0
 	o xf86-video-s3-0.6.0
 	o xf86-video-s3virge-1.10.1
@@ -1434,7 +1429,6 @@ Suggested package updates
 	o xtux-20030306
 	o xvidcap-1.1.7
 	o xview-3.2.1.4.21.8
-	o xwd-1.0.2
 	o xwininfo-1.0.4
 	o xwpe-1.5.30a
 	o xzgv-0.9 [pkg/38566]
