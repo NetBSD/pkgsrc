@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.12 2008/07/30 15:38:37 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.13 2008/07/30 22:26:03 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.12 2008/07/30 15:38:37 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.13 2008/07/30 22:26:03 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -785,7 +785,7 @@ pkg_register_depends(struct pkg_task *pkg)
 	for (i = 0; i < pkg->dep_length; ++i) {
 		required_by = pkgdb_pkg_file(pkg->dependencies[i], REQUIRED_BY_FNAME);
 
-		fd = open(required_by, O_WRONLY | O_APPEND | O_CREAT, 644);
+		fd = open(required_by, O_WRONLY | O_APPEND | O_CREAT, 0644);
 		if (fd == -1)
 			warn("can't open dependency file '%s',"
 			    "registration is incomplete!", required_by);
