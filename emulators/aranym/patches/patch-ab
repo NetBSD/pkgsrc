@@ -1,13 +1,10 @@
-$NetBSD: patch-ab,v 1.1 2006/03/28 20:11:34 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2008/07/30 14:08:59 hauke Exp $
 
---- ../cdrom.cpp.orig	2006-03-28 18:18:45.000000000 +0000
-+++ ../cdrom.cpp
-@@ -82,7 +82,7 @@ extern "C" {
- #include "cdrom_beos.h"
- #define BX_CD_FRAMESIZE 2048
+--- tools/arabridge.orig	2006-02-11 10:46:41.000000000 +0100
++++ tools/arabridge
+@@ -1,4 +1,4 @@
+-#!/bin/bash
++#!/bin/sh
  
--#elif (defined (OS_netbsd) || defined(OS_openbsd) || defined(OS__freebsd))
-+#elif (defined (OS_netbsd) || defined(OS_openbsd) || defined(OS_freebsd))
- // OpenBSD pre version 2.7 may require extern "C" { } structure around
- // all the includes, because the i386 sys/disklabel.h contains code which 
- // c++ considers invalid.
+ # ARAnyM - bridging network
+ # STanda (c) 2004
