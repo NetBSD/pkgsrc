@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/07/30 13:59:25 schmonz Exp $
+
+SHA1 (leapsunpack-0.05.tar.gz) = 82b692a5d7473a1f224f931df49b77557ebe1d3f
+RMD160 (leapsunpack-0.05.tar.gz) = d7d34129311c01f785b39918ebbfd9bc1d454508
+Size (leapsunpack-0.05.tar.gz) = 28320 bytes
+SHA1 (patch-aa) = 09f81e14f3dd2731c48f206e5b7b0d6c756e01bb

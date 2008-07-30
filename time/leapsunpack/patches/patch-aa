@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/07/30 13:59:25 schmonz Exp $
+
+--- leapsinstall.sh.orig	2003-12-30 16:18:29.000000000 -0500
++++ leapsinstall.sh
+@@ -1,4 +1,4 @@
+ umask 022
+-HOME/leapsunpack -a | HOME/leapsecs > ${1-/etc/leapsecs.dat}.tmp
+-mv ${1-/etc/leapsecs.dat}.tmp ${1-/etc/leapsecs.dat}
+-chmod 0644 ${1-/etc/leapsecs.dat}
++HOME/leapsunpack -a | HOME/leapsecs > ${1-@PKG_SYSCONFDIR@/leapsecs.dat}.tmp
++mv ${1-@PKG_SYSCONFDIR@/leapsecs.dat}.tmp ${1-@PKG_SYSCONFDIR@/leapsecs.dat}
++chmod 0644 ${1-@PKG_SYSCONFDIR@/leapsecs.dat}
