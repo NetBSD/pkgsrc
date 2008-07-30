@@ -1,4 +1,4 @@
-/* $NetBSD: add.h,v 1.10.8.1 2008/04/26 17:44:23 joerg Exp $ */
+/* $NetBSD: add.h,v 1.10.8.2 2008/07/30 15:38:37 joerg Exp $ */
 
 /* from FreeBSD Id: add.h,v 1.8 1997/02/22 16:09:15 peter Exp  */
 
@@ -25,6 +25,7 @@
 #ifndef _INST_ADD_H_INCLUDE
 #define _INST_ADD_H_INCLUDE
 
+extern char *Destdir;
 extern char *OverrideMachine;
 extern char *Prefix;
 extern char *View;

@@ -5,7 +5,7 @@ NNAAMMEE
      tributions
 
 SSYYNNOOPPSSIISS
-     ppkkgg__aadddd [--AAffIILLnnRRuuVVvv] [--KK _p_k_g___d_b_d_i_r] [--mm _m_a_c_h_i_n_e] [--pp _p_r_e_f_i_x]
+     ppkkgg__aadddd [--AAffIILLnnRRuuVVvv] [--KK _p_k_g___d_b_d_i_r] [--mm _m_a_c_h_i_n_e] [--PP _d_e_s_t_d_i_r] [--pp _p_r_e_f_i_x]
              [--WW _v_i_e_w_b_a_s_e] [--ww _v_i_e_w]
              [[ftp|http]://[_u_s_e_r[:_p_a_s_s_w_o_r_d_]@]_h_o_s_t[:_p_o_r_t]][/_p_a_t_h_/]pkg-name ...
 
@@ -76,6 +76,11 @@ OOPPTTIIOONNSS
 
      --nn      Don't actually install a package, just report the steps that
              would be taken if it was.
+
+     --pp _d_e_s_t_d_i_r
+             Prefix all file and directory names with _d_e_s_t_d_i_r.  For packages
+             without install scripts this has the same behavior as using
+             chroot.
 
      --pp _p_r_e_f_i_x
              Set _p_r_e_f_i_x as the directory in which to extract files from a
@@ -219,7 +224,8 @@ TTEECCHHNNIICCAALL DDEETTAAIILLSS
      change it with the --pp flag to ppkkgg__aadddd.  The scripts are also called with
      the PKG_METADATA_DIR environment variable set to the location of the _+_*
      meta-data files, and with the PKG_REFCOUNT_DBDIR environment variable set
-     to the location of the package reference counts database directory.
+     to the location of the package reference counts database directory.  If
+     the --PP flag was given to ppkkgg__aadddd, PKG_DESTDIR will be set to _d_e_s_t_d_i_r.
 
 EENNVVIIRROONNMMEENNTT
      LOCALBASE   This is the location of the _v_i_e_w_b_a_s_e directory in which all
@@ -310,4 +316,4 @@ BBUUGGSS
 
      Sure to be others.
 
-NetBSD 4.0                       July 28, 2008                      NetBSD 4.0
+NetBSD 4.0                       July 30, 2008                      NetBSD 4.0

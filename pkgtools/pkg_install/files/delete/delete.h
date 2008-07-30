@@ -1,4 +1,4 @@
-/* $NetBSD: delete.h,v 1.5 2007/07/30 07:16:21 joerg Exp $ */
+/* $NetBSD: delete.h,v 1.5.8.1 2008/07/30 15:38:37 joerg Exp $ */
 
 /* from FreeBSD Id: delete.h,v 1.4 1997/02/22 16:09:35 peter Exp */
 
@@ -25,6 +25,7 @@
 #ifndef _INST_DELETE_H_INCLUDE
 #define _INST_DELETE_H_INCLUDE
 
+extern char *Destdir;
 extern char *Prefix;
 extern char *ProgramPath;
 extern Boolean NoDeleteFiles;
