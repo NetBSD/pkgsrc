@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2008/06/12 02:14:30 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2008/07/31 00:58:53 dsainty Exp $
 
 DISTNAME=	bzflag-2.0.8
-#PKGREVISION=	1
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=bzflag/}
 
@@ -37,6 +36,7 @@ CHECK_PORTABILITY_SKIP+=	debian/*
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
+.include "../../net/libcares/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
