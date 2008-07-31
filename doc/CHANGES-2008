@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1747 2008/07/31 02:48:11 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.1748 2008/07/31 03:58:53 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2967,3 +2967,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/roundcube to 0.2alpha [schmonz 2008-07-30]
 	Updated games/bzflag to 2.0.8nb2 [dsainty 2008-07-31]
 	Updated textproc/py-html2text to 2.31 [schmonz 2008-07-31]
+	Updated audio/jack to 0.112.1 [bjs 2008-07-31]
