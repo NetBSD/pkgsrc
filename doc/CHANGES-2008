@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1750 2008/07/31 04:05:16 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1751 2008/07/31 04:13:49 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2974,3 +2974,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/qjackctl to 0.3.3nb1 [bjs 2008-07-31]
 	Updated audio/gst-plugins0.10-jack to 0.10.7nb1 [bjs 2008-07-31]
 	Updated ham/gnuradio-audio-jack to 3.0.4nb1 [bjs 2008-07-31]
+	Added textproc/p5-Text-WikiCreole version 0.05 [schmonz 2008-07-31]
