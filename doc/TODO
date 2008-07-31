@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7440 2008/07/31 12:55:01 wiz Exp $
+$NetBSD: TODO,v 1.7441 2008/07/31 21:05:03 epg Exp $
 
 Suggested new packages
 ======================
@@ -1129,7 +1129,6 @@ Suggested package updates
 	o py-reportlab-2.0
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.7
-	o py-subversion-1.5.1
 	o py-sybase-0.37
 	o py-textile-2.0.11
 	o py-twisted-8.0.1
@@ -1251,7 +1250,6 @@ Suggested package updates
 	o stratagus-2.2.2
 	o streamripper-1.63.0
 	o subtitleripper-0.3.4
-	o subversion-base-1.5.1
 	o sunbird-0.5 [ghen]
 	o suse_base-11.0
 	o swfdec-0.7.4
