@@ -1,15 +1,25 @@
-$NetBSD: patch-ab,v 1.1 2006/06/23 14:44:04 jlam Exp $
+$NetBSD: patch-ab,v 1.2 2008/07/31 03:58:05 bjs Exp $
 
---- example-clients/transport.c.orig	2005-06-02 14:31:18.000000000 -0400
-+++ example-clients/transport.c
-@@ -29,6 +29,10 @@
- #include <jack/jack.h>
- #include <jack/transport.h>
- 
-+#ifndef whitespace
-+#define whitespace(c) (((c) == ' ') || ((c) == '\t'))
-+#endif
-+
- char *package;				/* program name */
- int done = 0;
- jack_client_t *client;
+The default watchdog timeout is 10 seconds, which is too much for
+usleep().  Let's nanosleep if it's available.
+
+--- jackd/engine.c.orig	2008-07-27 08:50:30.000000000 -0400
++++ jackd/engine.c
+@@ -1383,7 +1383,7 @@ handle_external_client_request (jack_eng
+ 	if ((r = read (client->request_fd, &req, sizeof (req)))
+ 	    < (ssize_t) sizeof (req)) {
+ 		if (r == 0) {
+-#ifdef JACK_USE_MACH_THREADS
++#if defined(JACK_HOST_HAS_BSD_POLL) || defined(JACK_USE_MACH_THREADS)
+ 			/* poll is implemented using
+ 			   select (see the macosx/fakepoll
+ 			   code). When the socket is closed
+@@ -1396,7 +1396,7 @@ handle_external_client_request (jack_eng
+ 			   and remove the client.
+ 			*/
+ 			jack_mark_client_socket_error (engine, fd);
+-#endif /* JACK_USE_MACH_THREADS */
++#endif /* JACK_HOST_HAS_BSD_POLL | JACK_USE_MACH_THREADS */
+ 			return 1;
+ 		} else {
+ 			jack_error ("cannot read request from client (%d/%d/%s)",
