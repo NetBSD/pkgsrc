@@ -1,0 +1,13 @@
+$NetBSD: patch-aq,v 1.1 2008/07/31 03:58:05 bjs Exp $
+
+--- Makefile.in.orig	2008-07-27 09:01:05.000000000 -0400
++++ Makefile.in
+@@ -233,7 +233,7 @@ MAINTAINERCLEANFILES = Makefile.in acloc
+                        stamp-h.in config.log config.cache config.status
+ 
+ @HAVE_DOXYGEN_FALSE@DOC_DIR = 
+-@HAVE_DOXYGEN_TRUE@DOC_DIR = doc
++@HAVE_DOXYGEN_TRUE@DOC_DIR = 
+ SUBDIRS = jack libjack jackd drivers example-clients tools config $(DOC_DIR)
+ DIST_SUBDIRS = config jack libjack jackd drivers example-clients tools doc
+ pkgconfigdir = $(libdir)/pkgconfig
