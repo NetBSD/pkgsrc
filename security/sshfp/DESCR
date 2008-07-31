@@ -1,0 +1,6 @@
+sshfp is a small utility that generates RFC4255 SSHFP DNS records
+based on the public keys stored in a known_hosts file or obtained by
+using ssh-keyscan.  If the nameserver of the domain allows zone
+tranfers (AXFR), an entire domain can be processed for all its A
+records.  These can then be easilly added to a zone, and then secured
+by DNSSEC.

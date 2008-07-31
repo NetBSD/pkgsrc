@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/31 10:21:21 agc Exp $
+bin/sshfp
+${PKGMANDIR}/man1/sshfp.1.gz

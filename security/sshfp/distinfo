@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/07/31 10:21:21 agc Exp $
+
+SHA1 (sshfp-1.1.3.tar.gz) = bf42c956a992ac9442e9bbaa4af8f5599f321c2b
+RMD160 (sshfp-1.1.3.tar.gz) = 9b325ed30e75e0f485eea11676a420932f5c9b1e
+Size (sshfp-1.1.3.tar.gz) = 15477 bytes
+SHA1 (patch-aa) = 020c5799cf883a7de7d3ba345a2b413f10c16be1

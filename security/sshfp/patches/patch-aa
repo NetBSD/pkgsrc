@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/07/31 10:21:21 agc Exp $
+
+--- Makefile	2008/07/31 09:38:52	1.1
++++ Makefile	2008/07/31 09:37:43
+@@ -4,8 +4,8 @@
+ #
+ #
+ 
+-BIN     = $(DESTDIR)/usr/bin
+-MAN     = $(DESTDIR)/usr/share/man/man1
++BIN     = $(DESTDIR)${PREFIX}/bin
++MAN     = $(DESTDIR)${PREFIX}/${PKGMANDIR}/man1
+ 
+ all: man-page
+ 	
+@@ -14,7 +14,6 @@
+ 	install -m 0755 sshfp $(BIN)
+ 	install -d 0755 $(MAN)
+ 	install -m 0644 sshfp.1 $(MAN)
+-	gzip $(MAN)/sshfp.1
+ 
+ man-page:
+ 	nroff -man sshfp.1 > sshfp.1.txt
