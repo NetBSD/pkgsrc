@@ -1,6 +1,6 @@
 #! /bin/sh
 
-# $NetBSD: bootstrap,v 1.134 2008/07/20 23:57:36 dbj Exp $
+# $NetBSD: bootstrap,v 1.135 2008/07/31 13:42:57 joerg Exp $
 #
 #
 # Copyright (c) 2001-2002 Alistair G. Crooks.  All rights reserved.
@@ -576,7 +576,8 @@ SunOS)
 	need_sed=yes
 	need_ksh=yes
 	set_opsys=no
-	whoamiprog=/usr/ucb/whoami
+	groupsprog="/usr/xpg4/bin/id -gn"
+	whoamiprog="/usr/xpg4/bin/id -un"
 	machine_arch=`uname -p | sed -e 's/i86pc/i386/'`
 	check_compiler=yes
 	;;
