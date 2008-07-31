@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1746 2008/07/31 01:05:02 dsainty Exp $
+$NetBSD: CHANGES-2008,v 1.1747 2008/07/31 02:48:11 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2966,3 +2966,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/gnutls to 2.4.1 [kefren 2008-07-30]
 	Updated mail/roundcube to 0.2alpha [schmonz 2008-07-30]
 	Updated games/bzflag to 2.0.8nb2 [dsainty 2008-07-31]
+	Updated textproc/py-html2text to 2.31 [schmonz 2008-07-31]
