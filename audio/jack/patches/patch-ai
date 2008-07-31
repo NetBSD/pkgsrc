@@ -1,0 +1,39 @@
+$NetBSD: patch-ai,v 1.1 2008/07/31 03:58:05 bjs Exp $
+
+--- libjack/client.c.orig	2008-07-27 08:50:23.000000000 -0400
++++ libjack/client.c
+@@ -969,10 +969,7 @@ jack_client_open_aux (const char *client
+ 	}
+ 
+ 	/* parse variable arguments */
+-	if (ap)
+         jack_varargs_parse(options, ap, &va);
+-    else
+-        jack_varargs_init(&va);
+ 
+ 	/* External clients need to know where the tmpdir used for
+ 	   communication with the server lives
+@@ -1114,10 +1111,12 @@ jack_client_t* jack_client_open(const ch
+ jack_client_t *
+ jack_client_new (const char *client_name)
+ {
++	va_list ap;
++
+ 	jack_options_t options = JackUseExactName;
+ 	if (getenv("JACK_START_SERVER") == NULL)
+ 		options |= JackNoStartServer;
+-	return jack_client_open_aux (client_name, options, NULL, NULL);
++	return jack_client_open_aux (client_name, options, NULL, ap);
+ }
+ 
+ char *
+@@ -1529,7 +1528,9 @@ jack_wake_next_client (jack_client_t* cl
+ 		jack_error ("cannot continue execution of the "
+ 			    "processing graph (%s)",
+ 			    strerror(errno));
++#ifndef JACK_HOST_HAS_BSD_POLL
+ 		return -1;
++#endif
+ 	}
+ 	
+ 	DEBUG ("client sent message to next stage by %" PRIu64 "",

@@ -1,4 +1,4 @@
-/* $NetBSD: atomicity.h,v 1.2 2008/03/17 02:33:17 bjs Exp $ */
+/* $NetBSD: atomicity.h,v 1.1 2008/07/31 03:58:05 bjs Exp $ */
 
 #ifndef _NETBSD_ATOMICITY_H
 #define _NETBSD_ATOMICITY_H       1

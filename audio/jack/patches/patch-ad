@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.1.1.1 2008/03/16 09:26:46 bjs Exp $
+$NetBSD: patch-ad,v 1.1 2008/07/31 03:58:05 bjs Exp $
 
---- drivers/oss/oss_driver.h.orig	2007-06-12 16:46:40.000000000 -0400
+--- drivers/oss/oss_driver.h.orig	2008-07-27 08:50:33.000000000 -0400
 +++ drivers/oss/oss_driver.h
 @@ -34,7 +34,11 @@
  #include <jack/jack.h>
