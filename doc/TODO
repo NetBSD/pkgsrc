@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7439 2008/07/31 05:39:39 taca Exp $
+$NetBSD: TODO,v 1.7440 2008/07/31 12:55:01 wiz Exp $
 
 Suggested new packages
 ======================
@@ -682,6 +682,7 @@ Suggested package updates
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
+	o gnucash-2.2.6
 	o gnustep-1.16.1
 	o gnustep-examples-1.2.0
 	o gnustep-objc-1.4.0
@@ -1356,7 +1357,6 @@ Suggested package updates
 	o xdialog-2.3.1
 	o xdm-1.1.8
 	o xdx-2.4
-	o xedit-1.1.0
 	o xemacs-21.4.21
 	o xemacs-current-21.5.28
 	o xerces-c-2.9.0
