@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1754 2008/07/31 15:11:53 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.1755 2008/07/31 19:10:20 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2978,3 +2978,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added net/p5-Net-Amazon version 0.50 [obache 2008-07-31]
 	Added security/sshfp version 1.1.3 [agc 2008-07-31]
 	Updated textproc/xapian-omega to 1.0.7nb2 [schmonz 2008-07-31]
+	Updated www/drupal to 5.9 [adrianp 2008-07-31]
