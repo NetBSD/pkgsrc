@@ -1,10 +1,9 @@
-# $NetBSD: buildlink3.mk,v 1.3 2006/07/08 23:10:36 jlam Exp $
-#
+# $NetBSD: buildlink3.mk,v 1.4 2008/07/31 03:58:05 bjs Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 JACK_BUILDLINK3_MK:=	${JACK_BUILDLINK3_MK}+
 
-.if !empty(BUILDLINK_DEPTH:M+)
+.if ${BUILDLINK_DEPTH} == "+"
 BUILDLINK_DEPENDS+=	jack
 .endif
 
@@ -12,9 +11,13 @@ BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Njack}
 BUILDLINK_PACKAGES+=	jack
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}jack
 
-.if !empty(JACK_BUILDLINK3_MK:M+)
-BUILDLINK_API_DEPENDS.jack=	jack>=0.100.0
+.if ${JACK_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.jack+=	jack>=0.110.0
 BUILDLINK_PKGSRCDIR.jack?=	../../audio/jack
+DLOPEN_REQUIRE_PTHREADS=	yes
 .endif	# JACK_BUILDLINK3_MK
 
-BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
+.include "../../audio/libsamplerate/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}

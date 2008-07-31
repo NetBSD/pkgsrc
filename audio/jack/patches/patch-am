@@ -1,6 +1,6 @@
-$NetBSD: patch-am,v 1.1.1.1 2008/03/16 09:26:46 bjs Exp $
+$NetBSD: patch-am,v 1.1 2008/07/31 03:58:05 bjs Exp $
 
---- drivers/oss/Makefile.in.orig	2008-03-15 02:20:35.000000000 -0400
+--- drivers/oss/Makefile.in.orig	2008-07-27 09:01:08.000000000 -0400
 +++ drivers/oss/Makefile.in
 @@ -54,7 +54,7 @@ am__strip_dir = `echo $$p | sed -e 's|^.
  am__installdirs = "$(DESTDIR)$(plugindir)"

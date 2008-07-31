@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.2 2008/04/08 01:44:47 bjs Exp $
+$NetBSD: patch-af,v 1.1 2008/07/31 03:58:05 bjs Exp $
 
---- tools/transport.c.orig	2008-04-02 17:53:12.000000000 -0400
+--- tools/transport.c.orig	2008-07-27 08:50:24.000000000 -0400
 +++ tools/transport.c
 @@ -29,6 +29,10 @@
  #include <jack/jack.h>

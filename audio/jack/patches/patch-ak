@@ -1,10 +1,10 @@
-$NetBSD: patch-ak,v 1.2 2008/04/08 01:44:47 bjs Exp $
+$NetBSD: patch-ak,v 1.1 2008/07/31 03:58:05 bjs Exp $
 
 Yuck.  At least let's attempt to make this somewhat sane.
 When I have the time and figure out the Right Thing(tm)
 to do, perhaps I'll rewrite some of the shm code.
 
---- libjack/unlock.c.orig	2008-03-04 07:20:10.000000000 -0500
+--- libjack/unlock.c.orig	2008-07-27 08:50:23.000000000 -0400
 +++ libjack/unlock.c
 @@ -48,6 +48,7 @@ static char* library_roots[] = {
  	"/usr/X11R6/lib",
