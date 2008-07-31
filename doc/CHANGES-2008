@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1756 2008/07/31 19:48:39 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1757 2008/07/31 19:54:25 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2980,3 +2980,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/xapian-omega to 1.0.7nb2 [schmonz 2008-07-31]
 	Updated www/drupal to 5.9 [adrianp 2008-07-31]
 	Updated mail/imp to 4.2nb1 [adrianp 2008-07-31]
+	Updated mail/turba to 2.2.1nb1 [adrianp 2008-07-31]
