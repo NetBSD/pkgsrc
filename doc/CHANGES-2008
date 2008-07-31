@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1745 2008/07/30 21:33:27 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.1746 2008/07/31 01:05:02 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2965,3 +2965,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/p5-GraphViz to 2.03 [he 2008-07-30]
 	Updated security/gnutls to 2.4.1 [kefren 2008-07-30]
 	Updated mail/roundcube to 0.2alpha [schmonz 2008-07-30]
+	Updated games/bzflag to 2.0.8nb2 [dsainty 2008-07-31]
