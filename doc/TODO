@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7443 2008/08/01 10:11:14 hauke Exp $
+$NetBSD: TODO,v 1.7444 2008/08/01 17:24:43 wiz Exp $
 
 Suggested new packages
 ======================
@@ -860,7 +860,7 @@ Suggested package updates
 	o lincvs-2.0.0 [now called CrossVC]
 	o linuxsms-0.77
 	o lmms-0.2.1
-	o loudmouth-1.4.0
+	o loudmouth-1.4.1
 	o lout-3.31
 	o lpairs-1.0.3
 	o lq-sp-1.3.4.13
