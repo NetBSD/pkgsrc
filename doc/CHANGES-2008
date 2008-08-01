@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1761 2008/08/01 08:38:36 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1762 2008/08/01 08:47:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2985,3 +2985,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/py-pygments version 0.10 [obache 2008-08-01]
 	Added devel/py-babel version 0.9.3 [obache 2008-08-01]
 	Added www/py-genshi version 0.5.1 [obache 2008-08-01]
+	Updated www/ja-trac to 0.11pl1 [obache 2008-08-01]
