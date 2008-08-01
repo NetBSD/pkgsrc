@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1766 2008/08/01 11:25:50 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.1767 2008/08/01 12:09:16 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2990,3 +2990,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/aranym to 0.9.6beta2 [hauke 2008-08-01]
 	Updated emulators/hatari to 1.0.1 [hauke 2008-08-01]
 	Updated devel/scmgit-base to 1.5.6.4nb1 [minskim 2008-08-01]
+	Updated devel/p5-Package-Generator to 0.102 [seb 2008-08-01]
