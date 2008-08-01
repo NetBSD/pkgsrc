@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/08/01 13:01:52 seb Exp $
+
+SHA1 (Net-SNMP-Mixin-0.12.tar.gz) = 9e9596f4fbd1d073eaf59e1fdb3d1afe7d6f9a7b
+RMD160 (Net-SNMP-Mixin-0.12.tar.gz) = 5d3903d583c2499d05dcd2c9b5ac66dfa0d0fcae
+Size (Net-SNMP-Mixin-0.12.tar.gz) = 17278 bytes
