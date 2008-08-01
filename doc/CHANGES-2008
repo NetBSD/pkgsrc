@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1769 2008/08/01 17:24:04 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1770 2008/08/01 18:41:31 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2993,3 +2993,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Package-Generator to 0.102 [seb 2008-08-01]
 	Updated net/p5-Net-SNMP-Mixin to 0.12 [seb 2008-08-01]
 	Updated net/tor to 0.2.0.30 [wiz 2008-08-01]
+	Updated www/ikiwiki to 2.56 [schmonz 2008-08-01]
