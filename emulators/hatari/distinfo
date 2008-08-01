@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.9 2006/09/10 21:58:14 adam Exp $
+$NetBSD: distinfo,v 1.10 2008/08/01 10:04:09 hauke Exp $
 
-SHA1 (hatari-0.90.tar.gz) = d8f707cd5346b42aef431ce55100ca62ff229b3c
-RMD160 (hatari-0.90.tar.gz) = 914b97dd914329af858c6c0630671399b5231d78
-Size (hatari-0.90.tar.gz) = 687029 bytes
+SHA1 (hatari-1.0.1.tar.gz) = a5b55d42d169f166277fb6db267628472bb7fd21
+RMD160 (hatari-1.0.1.tar.gz) = 04ef3fb627bcdbacdb1f05a7e04ec66933170eda
+Size (hatari-1.0.1.tar.gz) = 879983 bytes
 SHA1 (patch-aa) = 1ebe2f92ee176cf5d5b1e4a7c5e2143b1d766ea8
