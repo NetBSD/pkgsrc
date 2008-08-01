@@ -1,4 +1,4 @@
-/*	$NetBSD: plist.c,v 1.17.4.4 2008/07/30 15:38:37 joerg Exp $	*/
+/*	$NetBSD: plist.c,v 1.17.4.5 2008/08/01 19:14:42 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: plist.c,v 1.24 1997/10/08 07:48:15 charnier Exp";
 #else
-__RCSID("$NetBSD: plist.c,v 1.17.4.4 2008/07/30 15:38:37 joerg Exp $");
+__RCSID("$NetBSD: plist.c,v 1.17.4.5 2008/08/01 19:14:42 joerg Exp $");
 #endif
 #endif
 
@@ -684,14 +684,6 @@ delete_package(Boolean ign_err, Boolean nukedirs, package_t *pkg,
 	return fail;
 }
 
-#ifdef DEBUG
-#define RMDIR(dir) fexec(RMDIR_CMD, dir, NULL)
-#define REMOVE(dir,ie) fexec_skipemtpy(REMOVE_CMD, (ie) ? "-f " : "", dir, NULL)
-#else
-#define RMDIR rmdir
-#define	REMOVE(file,ie) (remove(file) && !(ie))
-#endif
-
 /*
  * Selectively delete a hierarchy
  * Returns 1 on error, 0 else.
@@ -711,10 +703,10 @@ delete_hierarchy(char *dir, Boolean ign_err, Boolean nukedirs)
 		if (fexec_skipempty(REMOVE_CMD, "-r", ign_err ? "-f" : "", dir, NULL))
 			return 1;
 	} else if (isdir(dir)) {
-		if (RMDIR(dir) && !ign_err)
+		if (rmdir(dir) && !ign_err)
 			return 1;
 	} else {
-		if (REMOVE(dir, ign_err))
+		if (remove(dir) && !ign_err)
 			return 1;
 	}
 
@@ -725,7 +717,7 @@ delete_hierarchy(char *dir, Boolean ign_err, Boolean nukedirs)
 			*cp2 = '\0';
 		if (!isemptydir(dir))
 			return 0;
-		if (RMDIR(dir) && !ign_err) {
+		if (rmdir(dir) && !ign_err) {
 			if (!fexists(dir))
 				warnx("directory `%s' doesn't really exist", dir);
 			else
