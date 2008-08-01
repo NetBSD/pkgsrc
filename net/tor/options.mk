@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2007/12/16 21:51:54 rillig Exp $
+# $NetBSD: options.mk,v 1.3 2008/08/01 17:23:21 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tor
 PKG_SUPPORTED_OPTIONS=	threads
@@ -6,8 +6,8 @@ PKG_SUPPORTED_OPTIONS=	threads
 .if !empty(PTHREAD_TYPE:Mnative)
 PKG_SUGGESTED_OPTIONS+=	threads
 .endif
-.include "../../mk/bsd.options.mk"
 
+.include "../../mk/bsd.options.mk"
 
 ###
 ### This enables new code for threaded operation on NetBSD, OpenBSD, etc.
