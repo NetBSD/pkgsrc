@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7441 2008/07/31 21:05:03 epg Exp $
+$NetBSD: TODO,v 1.7442 2008/08/01 08:47:52 obache Exp $
 
 Suggested new packages
 ======================
@@ -774,7 +774,6 @@ Suggested package updates
 	o ivtools-1.2.6
 	o ja-gawk-3.1.5
 	o ja-grep-2.5.1a
-	o ja-trac-0.11.1
 	o ja-vflib-lib-3.6.10
 	o ja-vflib-utils-2.25.6
 	o ja-vfxdvik-22.40y1
