@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.20 2008/07/30 10:04:06 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.21 2008/08/01 11:19:16 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -45,3 +45,5 @@ pullup ticket #2466 - requested by smb
 acroread8: security update
 pullup ticket #2467 - requested by tron
 phpmyadmin: update for security fixes
+pullup ticket #2469 - requested by adrianp
+drupal: update for security fix
