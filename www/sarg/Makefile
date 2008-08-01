@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/07/15 15:33:46 mishka Exp $
+# $NetBSD: Makefile,v 1.15 2008/08/01 10:10:26 mishka Exp $
 
 DISTNAME=		sarg-2.1
 PKGREVISION=		3
@@ -8,7 +8,7 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sarg/}
 PATCH_SITES=		http://sarg.sourceforge.net/
 PATCHFILES=		datafile.patch lastlog.patch
 
-MAINTAINER=		mishka@NetBSD.org
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://sarg.sourceforge.net/sarg.php
 COMMENT=		Squid-Cache proxy server Analysis Report Generator
 
