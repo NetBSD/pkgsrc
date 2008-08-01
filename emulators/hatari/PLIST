@@ -1,14 +1,31 @@
-@comment $NetBSD: PLIST,v 1.7 2006/09/10 21:58:14 adam Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/08/01 10:04:09 hauke Exp $
 bin/hatari
+man/man1/hatari.1
+share/doc/hatari/alsa-midi.txt
 share/doc/hatari/authors.txt
 share/doc/hatari/changelog.txt
+share/doc/hatari/compatibility.html
+share/doc/hatari/emutos.txt
 share/doc/hatari/gpl.txt
+share/doc/hatari/images/devices.png
+share/doc/hatari/images/discs.png
+share/doc/hatari/images/fileselector.png
+share/doc/hatari/images/joystick.png
+share/doc/hatari/images/keyboard.png
+share/doc/hatari/images/main.png
+share/doc/hatari/images/memory.png
+share/doc/hatari/images/screen.png
+share/doc/hatari/images/sound.png
+share/doc/hatari/images/system.png
+share/doc/hatari/images/tos.png
 share/doc/hatari/keymap-sample.txt
 share/doc/hatari/manual.html
 share/doc/hatari/memory-usage.txt
 share/doc/hatari/readme.txt
 share/doc/hatari/release-notes.txt
 share/doc/hatari/todo.txt
+share/hatari/hatari-icon.bmp
 share/hatari/tos.img
 @dirrm share/hatari
+@dirrm share/doc/hatari/images
 @dirrm share/doc/hatari
