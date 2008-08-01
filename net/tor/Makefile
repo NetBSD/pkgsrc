@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.53 2008/04/22 18:06:09 tnn Exp $
+# $NetBSD: Makefile,v 1.54 2008/08/01 17:23:21 wiz Exp $
 #
 
-DISTNAME=		tor-0.1.2.19
-PKGREVISION=		1
+DISTNAME=		tor-0.2.0.30
 CATEGORIES=		net security
 MASTER_SITES=		http://www.torproject.org/dist/
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		athaba@inode.at
 HOMEPAGE=		http://www.torproject.org/
 COMMENT=		Anonymizing overlay network for TCP
 
@@ -33,15 +32,12 @@ PKG_USERS_VARS+=	TOR_USER
 RCD_SCRIPTS=		tor
 RCD_SCRIPT_SRC.tor=	${FILESDIR}/tor.in
 PKG_GROUPS=		${TOR_GROUP}
-PKG_USERS=		${TOR_USER}:${TOR_GROUP}
-PKG_GECOS.${TOR_USER}=	Torifier
-PKG_HOME.${TOR_USER}=	${PKG_HOME}
+PKG_USERS=		${TOR_USER}:${TOR_GROUP}::Torifier:${PKG_HOME}
 USER_GROUP=		${TOR_USER} ${TOR_GROUP}
 
 OWN_DIRS_PERMS+=	${PKG_HOME} ${USER_GROUP} 0700
 
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=	--with-libevent-dir=${BUILDLINK_PREFIX.libevent:Q}
 
 CONF_FILES+=		${PREFIX}/share/examples/tor/tor-tsocks.conf 	\
 				${PKG_SYSCONFDIR}/tor-tsocks.conf
@@ -53,19 +49,23 @@ FILES_SUBST+=		TOR_USER=${TOR_USER:Q} TOR_GROUP=${TOR_GROUP:Q}
 
 CHECK_PORTABILITY_SKIP+=contrib/*
 
+.if !empty(PKGSRC_COMPILER:Mmipspro)
+CFLAGS+=		-c99
+.endif
+
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/tor
 	${INSTALL_DATA} ${WRKSRC}/src/config/torrc.sample		\
 		${PREFIX}/share/examples/tor/torrc.sample
 	${INSTALL_DATA} ${WRKSRC}/contrib/tor-tsocks.conf		\
 		${PREFIX}/share/examples/tor/tor-tsocks.conf
+	-${RMDIR} ${PREFIX}/etc/tor/tor
 
-BUILDLINK_API_DEPENDS.libevent+= libevent>=1.1a
-
+BUILDLINK_API_DEPENDS.libevent+= libevent>=1.2
 .include "../../devel/libevent/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/pthread.buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 
 ## We include this after other b3.mk files since we use PTHREAD_TYPE.
 ##
