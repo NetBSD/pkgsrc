@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2008/07/04 17:33:00 obache Exp $
+# $NetBSD: Makefile,v 1.17 2008/08/01 08:46:55 obache Exp $
 #
 
-DISTNAME=	trac-0.10.5-ja-1
-PKGNAME=	ja-trac-0.10.5.1
+DISTNAME=	Trac-0.11.ja1
+PKGNAME=	ja-${DISTNAME:tl:S/.ja/pl/}
+EGG_NAME=	${DISTNAME}
 CATEGORIES=	www devel
 MASTER_SITES=	http://www.i-act.co.jp/project/products/downloads/
 EXTRACT_SUFX=	.zip
@@ -11,45 +12,34 @@ MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://www.i-act.co.jp/project/products/products.html
 COMMENT=	Trac issue tracking system with Japanese localization
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 CONFLICTS+=	trac-[0-9]*
 
-DEPENDS+=	${PYPKGPREFIX}-clearsilver>=0.9.14:../../www/py-clearsilver
-DEPENDS+=	${PYPKGPREFIX}-subversion>=1.1.0:../../devel/py-subversion
-DEPENDS+=	${PYPKGPREFIX}-jpCodecs>=1.4.11:../../converters/py-jpCodecs
+USE_LANGUAGES=	# none
+USE_TOOLS+=	pax
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.trac
-PKG_OPTIONS_REQUIRED_GROUPS=	db
-PKG_OPTIONS_GROUP.db=	sqlite pgsql psycopg2
-PKG_SUGGESTED_OPTIONS=	sqlite
+DEPENDS+=	${PYPKGPREFIX}-genshi>=0.5:../../www/py-genshi
 
-.include "../../mk/bsd.options.mk"
+REPLACE_PYTHON= cgi-bin/trac.cgi cgi-bin/trac.fcgi
+REPLACE_PYTHON+=contrib/*.py contrib/*-hook contrib/workflow/*.py
+REPLACE_PYTHON+=trac/admin/templates/deploy_trac.* trac/tests/functional/*.py
 
-.if !empty(PKG_OPTIONS:Msqlite)
-DEPENDS+=	${PYPKGPREFIX}-sqlite2>=2:../../databases/py-sqlite2
-.endif
-.if !empty(PKG_OPTIONS:Mpgsql)
-DEPENDS+=	${PYPKGPREFIX}-PgSQL>=2.4:../../databases/py-PgSQL
-.endif
-.if !empty(PKG_OPTIONS:Mpsycopg2)
-DEPENDS+=	${PYPKGPREFIX}-psycopg>=1.1.14:../../databases/py-psycopg2
-.endif
-# MySQL is sort of supported but not recommended by upstream and hence
-# omitted.
+.include "options.mk"
 
-PYDISTUTILSPKG=	YES
-PY_PATCHPLIST=	YES
-PYTHON_PATCH_SCRIPTS=	contrib/*.py contrib/*-hook
+EGDIR=		share/examples/trac
 
-OWN_DIRS+=	${PREFIX}/share/trac
-OWN_DIRS+=	${PREFIX}/share/trac/conf
-OWN_DIRS+=	${PREFIX}/share/trac/plugins
-
-EGDIR=		${PREFIX}/share/examples/trac
+INSTALLATION_DIRS+=	libexec/cgi-bin ${EGDIR}
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_SCRIPT} ${WRKSRC:Q}/contrib/* ${EGDIR}
+.for cgi in trac.cgi trac.fcgi
+	${INSTALL_SCRIPT} ${WRKSRC}/cgi-bin/${cgi} ${DESTDIR}${PREFIX}/libexec/cgi-bin
+.endfor
+	cd ${WRKSRC}/contrib && \
+		pax -rw -pp -pm . ${DESTDIR}${PREFIX}/${EGDIR}
+
+MESSAGE_SUBST+=	PYPKGPREFIX=${PYPKGPREFIX}
 
 .include "../../lang/python/application.mk"
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
