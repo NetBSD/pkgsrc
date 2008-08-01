@@ -1,0 +1,7 @@
+The Perl 5 module Package::Generator lets you quickly and easily
+construct new packages.  It gives them unused names and sets up
+their package data, if provided.
+Also included in this package is the Perl 5 module Package::Reaper.
+This module allows you to create simple objects which, when destroyed,
+delete a given package.  This lets you approximate lexically scoped
+packages
