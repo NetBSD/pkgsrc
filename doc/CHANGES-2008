@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1770 2008/08/01 18:41:31 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.1771 2008/08/01 19:01:03 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2994,3 +2994,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/p5-Net-SNMP-Mixin to 0.12 [seb 2008-08-01]
 	Updated net/tor to 0.2.0.30 [wiz 2008-08-01]
 	Updated www/ikiwiki to 2.56 [schmonz 2008-08-01]
+	Updated textproc/p5-Text-WikiCreole to 0.05nb1 [schmonz 2008-08-01]
