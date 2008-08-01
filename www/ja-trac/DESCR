@@ -1,11 +1,6 @@
-This is Trac with Japanese localization and own patches.
+Trac is a minimalistic web-based software project management and bug/issue
+tracking system.  It provides an interface to the Subversion revision control
+system, an integrated wiki, flexible issue tracking and convenient report
+facilities.
 
-Trac is an enhanced wiki and issue tracking system for software
-development projects.
-
-Trac provides:
-
-    * An integrated system for managing software projects
-    * An enhanced wiki
-    * A flexible web-based issue tracker
-    * An interface to the Subversion revision control system
+Japanese translated edition.
