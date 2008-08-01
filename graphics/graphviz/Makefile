@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2008/03/14 01:16:36 joerg Exp $
+# $NetBSD: Makefile,v 1.64 2008/08/01 12:02:09 gdt Exp $
 
 DISTNAME=	graphviz-2.16.1
 PKGREVISION=	2
@@ -58,14 +58,11 @@ pre-build:
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libltdl/convenience.mk"
 .include "../../devel/pango/buildlink3.mk"
-#.include "../../devel/swig/buildlink3.mk"
-#.include "../../lang/lua/buildlink3.mk"
 .include "../../graphics/gd/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../x11/libXp/buildlink3.mk"
-#.include "../../x11/tk/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
