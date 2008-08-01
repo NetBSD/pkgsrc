@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/07/29 05:04:24 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/08/01 18:41:08 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-makerepo
 bin/ikiwiki-transition
@@ -77,6 +77,7 @@ share/ikiwiki/templates/aggregatepost.tmpl
 share/ikiwiki/templates/archivepage.tmpl
 share/ikiwiki/templates/atomitem.tmpl
 share/ikiwiki/templates/atompage.tmpl
+share/ikiwiki/templates/autoindex.tmpl
 share/ikiwiki/templates/blogpost.tmpl
 share/ikiwiki/templates/change.tmpl
 share/ikiwiki/templates/editconflict.tmpl
@@ -84,7 +85,6 @@ share/ikiwiki/templates/editcreationconflict.tmpl
 share/ikiwiki/templates/editfailedsave.tmpl
 share/ikiwiki/templates/editpage.tmpl
 share/ikiwiki/templates/editpagegone.tmpl
-share/ikiwiki/templates/estseek.conf
 share/ikiwiki/templates/feedlink.tmpl
 share/ikiwiki/templates/inlinepage.tmpl
 share/ikiwiki/templates/misc.tmpl
