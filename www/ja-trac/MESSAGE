@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1.1.1 2006/02/12 13:45:43 rillig Exp $
+$NetBSD: MESSAGE,v 1.2 2008/08/01 08:46:55 obache Exp $
 
 You must upgrade existing Trac environments before using a new
 version:
@@ -11,9 +11,11 @@ upgraded to get up-to-date documentation and additional functionality:
 
   trac-admin /path/to/projectenv wiki upgrade
 
-mod_python users will need to change the name of the mod_python handler in
-the Apache HTTPD configuration to:
+For more information:
+  http://trac.edgewall.org/wiki/TracUpgrade
 
-  PythonHandler trac.web.modpython_frontend
-
+You can install following packages for feature improvements:
+	${PYPKGPREFIX}-subversion (devel/py-subversion)	Using with Subversion
+	${PYPKGPREFIX}-pygments (textproc/py-pygments)	Syntex hilighting
+	${PYPKGPREFIX}-docutils (textproc/py-docutils)	WikiRestructuredText
 ===========================================================================
