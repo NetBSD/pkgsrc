@@ -1,0 +1,15 @@
+#!@SH@
+#
+# $NetBSD: INSTALL,v 1.3 2008/08/01 17:23:46 wiz Exp $
+
+PKG_HOME="@PKG_HOME@"
+TOR_USER="@TOR_USER@"
+TOR_GROUP="@TOR_GROUP@"
+
+case "${STAGE}" in
+PRE-INSTALL)
+    ${MKDIR} ${PKG_SYSCONFDIR}/tor
+    ${MKDIR} -m 0700 ${PKG_HOME}
+    ${CHOWN} ${TOR_USER}:${TOR_GROUP} ${PKG_HOME}
+    ;;
+esac
