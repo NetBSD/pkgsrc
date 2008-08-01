@@ -1,0 +1,5 @@
+The Perl 5 module Net::SNMP::Mixin is a thin framework to access
+cooked SNMP information from SNMP agents with various mixins to
+Net::SNMP. This module provides helper functions in order to mixin
+methods into the inheritance tree of the Net::SNMP session instances
+or the Net::SNMP class itself
