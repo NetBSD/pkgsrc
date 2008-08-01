@@ -1,4 +1,4 @@
-$NetBSD: patch-ah,v 1.3 2008/07/26 09:16:20 tonio Exp $
+$NetBSD: patch-ah,v 1.4 2008/08/01 12:05:55 minskim Exp $
 
 --- git-gui/Makefile.orig	2008-07-20 02:23:11.000000000 +0200
 +++ git-gui/Makefile
@@ -32,20 +32,3 @@ $NetBSD: patch-ah,v 1.3 2008/07/26 09:16:20 tonio Exp $
  	INSTALL_A0 = src=
  	INSTALL_A1 = && echo '   ' INSTALL '   ' `basename "$$src"` && find "$$src" | cpio -pud
  
-@@ -148,11 +148,11 @@ else
- 	endif
- 	gg_libdir_sed_in := $(gg_libdir)
- endif
--ifeq ($(uname_S),Darwin)
--	ifeq ($(shell test -d $(TKFRAMEWORK) && echo y),y)
--		GITGUI_MACOSXAPP := YesPlease
--	endif
--endif
-+#ifeq ($(uname_S),Darwin)
-+#	ifeq ($(shell test -d $(TKFRAMEWORK) && echo y),y)
-+#		GITGUI_MACOSXAPP := YesPlease
-+#	endif
-+#endif
- ifneq (,$(findstring MINGW,$(uname_S)))
- 	NO_MSGFMT=1
- 	GITGUI_WINDOWS_WRAPPER := YesPlease
