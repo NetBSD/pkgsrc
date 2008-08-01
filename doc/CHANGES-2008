@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1764 2008/08/01 09:16:44 hauke Exp $
+$NetBSD: CHANGES-2008,v 1.1765 2008/08/01 10:11:14 hauke Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2988,3 +2988,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/ja-trac to 0.11pl1 [obache 2008-08-01]
 	Added emulators/emutos version 0.8.3 [hauke 2008-08-01]
 	Updated emulators/aranym to 0.9.6beta2 [hauke 2008-08-01]
+	Updated emulators/hatari to 1.0.1 [hauke 2008-08-01]
