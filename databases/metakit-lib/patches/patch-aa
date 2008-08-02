@@ -1,0 +1,23 @@
+$NetBSD
+
+--- python/PyView.cpp~	2005-04-15 02:27:22.000000000 -0400
++++ python/PyView.cpp	2008-08-02 17:32:18.000000000 -0400
+@@ -977,15 +977,15 @@ static void PyView_dealloc(PyView *o) {
+ }
+ 
+ static int PyView_print(PyView *o, FILE *f, int) {
+-  fprintf(f, "<PyView object at %x>", (int)o);
++  fprintf(f, "<PyView object at %p>", o);
+   return 0;
+ }
+ static int PyViewer_print(PyView *o, FILE *f, int) {
+-  fprintf(f, "<PyViewer object at %x>", (int)o);
++  fprintf(f, "<PyViewer object at %p>", o);
+   return 0;
+ }
+ static int PyROViewer_print(PyView *o, FILE *f, int) {
+-  fprintf(f, "<PyROViewer object at %x>", (int)o);
++  fprintf(f, "<PyROViewer object at %p>", o);
+   return 0;
+ }
+ 
