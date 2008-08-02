@@ -106,6 +106,7 @@ finger			Enable finger support.
 firefox			Use firefox as gecko rendering engine.
 flac			Enable FLAC support.
 freeradius-simul-use	Enable Simultaneous-Use.
+freetype		Enable freetype support.
 ftp			Enable File Transport Protocol (FTP) support.
 gdbm			Use the GNU gdbm database library.
 gdk-pixbuf		Use gdk-pixbuf as imaging library.
