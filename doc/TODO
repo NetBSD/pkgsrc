@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7445 2008/08/02 01:33:05 taca Exp $
+$NetBSD: TODO,v 1.7446 2008/08/02 10:07:15 tnn Exp $
 
 Suggested new packages
 ======================
@@ -510,7 +510,6 @@ Suggested package updates
 	o cgicc-3.2.7
 	o chemtool-1.6.11
 	o cherokee-0.7.0
-	o chicken-3.3.0
 	o chrony-1.23
 	o cinepaint-0.23
 	o cint-5.16
