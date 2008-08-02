@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.42.2.5 2008/06/04 11:23:13 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.42.2.6 2008/08/02 20:33:50 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.42.2.5 2008/06/04 11:23:13 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.42.2.6 2008/08/02 20:33:50 joerg Exp $");
 #endif
 
 /*-
@@ -660,7 +660,7 @@ set_unset_variable(char **argv, Boolean unset)
 		if ((eq=strchr(argv[0], '=')) == NULL)
 			usage();
 		
-		variable = malloc(eq-argv[0]+1);
+		variable = xmalloc(eq-argv[0]+1);
 		strlcpy(variable, argv[0], eq-argv[0]+1);
 		
 		arg.variable = variable;
@@ -692,8 +692,7 @@ set_unset_variable(char **argv, Boolean unset)
 				warnx("no matching pkg for `%s'", *argv);
 				ret++;
 			} else {
-				if (asprintf(&pattern, "%s-[0-9]*", *argv) == -1)
-					errx(EXIT_FAILURE, "asprintf failed");
+				pattern = xasprintf("%s-[0-9]*", *argv);
 
 				if (match_installed_pkgs(pattern, set_installed_info_var, &arg) == -1)
 					errx(EXIT_FAILURE, "Cannot process pkdbdb");

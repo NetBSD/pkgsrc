@@ -1,4 +1,4 @@
-/*	$NetBSD: pkg_io.c,v 1.1.2.2 2008/05/21 20:29:24 joerg Exp $	*/
+/*	$NetBSD: pkg_io.c,v 1.1.2.3 2008/08/02 20:33:50 joerg Exp $	*/
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
  * All rights reserved.
@@ -36,7 +36,7 @@
 #include <sys/cdefs.h>
 #endif
 
-__RCSID("$NetBSD: pkg_io.c,v 1.1.2.2 2008/05/21 20:29:24 joerg Exp $");
+__RCSID("$NetBSD: pkg_io.c,v 1.1.2.3 2008/08/02 20:33:50 joerg Exp $");
 
 #include <archive.h>
 #include <archive_entry.h>
@@ -94,9 +94,7 @@ open_archive_by_url(struct url *url, void **cookie)
 	struct fetch_archive *f;
 	struct archive *a;
 
-	f = malloc(sizeof(*f));
-	if (f == NULL)
-		err(2, "cannot allocate memory for remote archive");
+	f = xmalloc(sizeof(*f));
 	f->url = url;
 
 	a = archive_read_new();
@@ -185,10 +183,7 @@ find_best_package(struct url *url, const char *pattern, struct url **best_url)
 		    (pattern[i]) != '-')
 			break;
 	}
-	if (asprintf(&url_pattern, "%*.*s*", (int)i, (int)i, pattern) == -1) {
-		free(best_match);
-		return -1;
-	}
+	url_pattern = xasprintf("%*.*s*", (int)i, (int)i, pattern);
 
 	fetchInitURLList(&ue);
 	if (fetchList(&ue, url, url_pattern, "")) {
