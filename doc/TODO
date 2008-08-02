@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7444 2008/08/01 17:24:43 wiz Exp $
+$NetBSD: TODO,v 1.7445 2008/08/02 01:33:05 taca Exp $
 
 Suggested new packages
 ======================
@@ -479,7 +479,8 @@ Suggested package updates
 	o benchfft-3.1
 	o bftpd-2.2
 	o biew-5.6.4
-	o bind-9.4.2
+	o bind-9.4.2-P2
+	o bind-9.5.0-P2
 	o binutils-2.18
 	o bioperl-1.5.0
 	o bittorrent-5.0.5
