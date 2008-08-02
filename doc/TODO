@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7446 2008/08/02 10:07:15 tnn Exp $
+$NetBSD: TODO,v 1.7447 2008/08/02 19:26:22 dholland Exp $
 
 Suggested new packages
 ======================
@@ -344,6 +344,11 @@ Suggested new packages
 	filezilla client
 	http://filezilla-project.org
 	Featureful FTP, FTPS and SFTP client	
+
+	SpiralSynthModular (spiralmodular)
+	http://www.pawfal.org/Software/SSM/
+	Obsoletes audio/spiralloops and audio/spiralsynth, which are
+	no longer supported.
 
 Suggested package updates
 =========================
