@@ -1,0 +1,111 @@
+$NetBSD: patch-ac,v 1.1 2008/08/02 21:00:29 dholland Exp $
+
+Fix misuses of va_list to allow building on amd64.
+
+--- arg.c.orig	1999-08-31 12:49:19.000000000 -0400
++++ arg.c	2008-08-02 16:56:12.000000000 -0400
+@@ -28,5 +28,6 @@
+ 
+ #include <stdarg.h>
++#include <stdint.h>
+ #include <ctype.h>
+ #include <string.h>
+ #include <stdlib.h>
+@@ -65,7 +66,11 @@ int arg_warning = 1;		/* print warnings 
+ 
+ static Arg_form *regf;		/* advancing form ptr used by arg_find_reg */
+ 
+-va_list arg_doc_parse();
++struct va_holder {
++   va_list ap;
++};
++
++static void arg_doc_parse(Arg_form *, struct va_holder *);
+ int arg_format(Arg_form *f);
+ void arg_init(Arg_form *form);
+ int arg_done();
+@@ -180,7 +185,7 @@ Arg_form *arg_to_form1(va_list ap)
+ 	}
+ 	for (; (s = va_arg(ap, char *)) != 0;) {
+ 	    /* note that we continue (not break) in all cases except one */
+-	    switch ((int)s) {
++	    switch ((int)(intptr_t)s) {
+ 		case ARG_FLAGNEXT:		/* ptr to flag vbl */
+ 		    CHECKTYPE(form, "FLAG");
+ 		    form->type = ARG_SIMPFLAG;
+@@ -220,7 +225,12 @@ Arg_form *arg_to_form1(va_list ap)
+ 	form->doc = prevs = s;
+ 
+ 	/* skip over doc args */
+-	ap = arg_doc_parse(form, ap);
++	{
++	   struct va_holder tmp;
++	   va_copy(tmp.ap, ap);
++	   arg_doc_parse(form, &tmp);
++	   va_copy(ap, tmp.ap);
++	}
+     }
+     va_end(ap);
+     return rootform;
+@@ -289,13 +299,13 @@ int arg_format(Arg_form *f)
+  * documentation string and returns the new ap.
+  */
+ 
+-va_list arg_doc_parse(Arg_form *f, va_list ap)
++static void arg_doc_parse(Arg_form *f, struct va_holder *app)
+ {
+     char *s, buf[256];
+     int size, gotparam;
+     va_list ap0;
+ 
+-    ap0 = ap;
++    va_copy(ap0, app->ap);
+     gotparam = 0;
+     for (s=f->doc; *s; s++) {
+ 	for (; *s; s++)			/* search for next format code */
+@@ -329,22 +339,22 @@ va_list arg_doc_parse(Arg_form *f, va_li
+ 	    case 'o': case 'O':
+ 	    case 'x': case 'X':
+ 	    case 'c':
+-		if (size==2 || *s>='A' && *s<='Z') va_arg(ap, long);
+-		else va_arg(ap, int);
++		if (size==2 || *s>='A' && *s<='Z') va_arg(app->ap, long);
++		else va_arg(app->ap, int);
+ 		break;
+ 	    case 'e':
+ 	    case 'f':
+ 	    case 'g':
+ 		/* note: float args are converted to doubles by MOST compilers*/
+-		va_arg(ap, double);
++		va_arg(app->ap, double);
+ 		break;
+ 	    case 's':
+-		va_arg(ap, char *);
++		va_arg(app->ap, char *);
+ 		break;
+ 	    default:
+ 		fprintf(stderr, "arg: unknown format code %%%c in %s\n",
+ 		    *s, f->doc);
+-		va_arg(ap, int);
++		va_arg(app->ap, int);
+ 		break;
+ 	}
+     }
+@@ -354,7 +364,7 @@ va_list arg_doc_parse(Arg_form *f, va_li
+ 	strcpy(f->doc, buf);
+     }
+ 
+-    return ap;		/* varargs ptr past end of doc params */
++    /*return ap;*/		/* varargs ptr past end of doc params */
+ }
+ 
+ /*----------------------------------------------------------------------*/
+@@ -851,7 +861,7 @@ static void space(FILE *fp, int c, int c
+ 	putc('\n', fp);
+ 	c = 0;
+     }
+-    for (; c<c1&~7; c=(c+7)&~7) putc('\t', fp);
++    for (; c<(c1&~7); c=(c+7)&~7) putc('\t', fp);
+     for (; c<c1; c++) putc(' ', fp);
+ }
+ 
