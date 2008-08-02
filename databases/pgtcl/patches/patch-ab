@@ -1,7 +1,16 @@
-$NetBSD: patch-ab,v 1.1 2006/01/02 17:56:18 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2008/08/02 21:21:20 dholland Exp $
 
---- configure.orig	2004-11-20 01:05:27.000000000 +0000
-+++ configure
+--- configure.orig	2004-11-19 20:05:27.000000000 -0500
++++ configure	2008-08-02 17:15:19.000000000 -0400
+@@ -7276,7 +7276,7 @@ echo "${ECHO_T}unknown (can't find uname
+ 	    # results, and the version is kept in special file).
+ 
+ 	    if test -r /etc/.relid -a "X`uname -n`" = "X`uname -s`" ; then
+-		system=MP-RAS-`awk '{print }' /etc/.relid'`
++		system=MP-RAS-`awk '{print }' /etc/.relid`
+ 	    fi
+ 	    if test "`uname -s`" = "AIX" ; then
+ 		system=AIX-`uname -v`.`uname -r`
 @@ -8726,7 +8726,7 @@ rm -f conftest*
  	    UNSHARED_LIB_SUFFIX='${TCL_TRIM_DOTS}\$\{DBGX\}.a'
  	    TCL_LIB_VERSIONS_OK=nodots
@@ -32,3 +41,12 @@ $NetBSD: patch-ab,v 1.1 2006/01/02 17:56:18 joerg Exp $
  		    ;;
  		Rhapsody-*|Darwin-*)
  		    ;;
+@@ -9991,7 +9996,7 @@ echo "${ECHO_T}unknown (can't find uname
+ 	    # results, and the version is kept in special file).
+ 
+ 	    if test -r /etc/.relid -a "X`uname -n`" = "X`uname -s`" ; then
+-		system=MP-RAS-`awk '{print }' /etc/.relid'`
++		system=MP-RAS-`awk '{print }' /etc/.relid`
+ 	    fi
+ 	    if test "`uname -s`" = "AIX" ; then
+ 		system=AIX-`uname -v`.`uname -r`
