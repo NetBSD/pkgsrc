@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1776 2008/08/02 10:07:15 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.1777 2008/08/02 11:36:06 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3000,3 +3000,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added meta-pkgs/gstreamer0.10-plugins version 1.0 [bjs 2008-08-01]
 	Added devel/p5-Data-Dump-Streamer version 2.08.40 [seb 2008-08-02]
 	Updated lang/chicken to 3.3.0 [tnn 2008-08-02]
+	Updated converters/fribidi to 0.10.9 [bjs 2008-08-02]
