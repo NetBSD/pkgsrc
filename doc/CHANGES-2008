@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1774 2008/08/01 23:29:54 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1775 2008/08/02 08:04:38 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -2998,3 +2998,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/p5-Mail-Ezmlm to 0.07.2 [schmonz 2008-08-01]
 	Updated x11/xterm to 236 [bjs 2008-08-01]
 	Added meta-pkgs/gstreamer0.10-plugins version 1.0 [bjs 2008-08-01]
+	Added devel/p5-Data-Dump-Streamer version 2.08.40 [seb 2008-08-02]
