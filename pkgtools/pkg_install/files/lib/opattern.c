@@ -1,4 +1,4 @@
-/*	$NetBSD: opattern.c,v 1.4.6.1 2008/05/12 12:12:07 joerg Exp $	*/
+/*	$NetBSD: opattern.c,v 1.4.6.2 2008/08/02 20:33:50 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "Id: str.c,v 1.5 1997/10/08 07:48:21 charnier Exp";
 #else
-__RCSID("$NetBSD: opattern.c,v 1.4.6.1 2008/05/12 12:12:07 joerg Exp $");
+__RCSID("$NetBSD: opattern.c,v 1.4.6.2 2008/08/02 20:33:50 joerg Exp $");
 #endif
 #endif
 
@@ -178,8 +178,7 @@ pkg_match(const char *pattern, const char *pkg)
 		char *pattern_ver;
 		int retval;
 
-		if (asprintf(&pattern_ver, "%s-[0-9]*", pattern) == -1)
-			errx(EXIT_FAILURE, "Out of memory");
+		pattern_ver = xasprintf("%s-[0-9]*", pattern);
 		retval = glob_match(pattern_ver, pkg);
 		free(pattern_ver);
 		return retval;

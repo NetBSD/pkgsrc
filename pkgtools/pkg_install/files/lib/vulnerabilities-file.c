@@ -36,7 +36,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: vulnerabilities-file.c,v 1.3.4.5 2008/07/05 17:26:40 joerg Exp $");
+__RCSID("$NetBSD: vulnerabilities-file.c,v 1.3.4.6 2008/08/02 20:33:50 joerg Exp $");
 
 #if HAVE_SYS_STAT_H
 #include <sys/stat.h>
@@ -346,27 +346,21 @@ add_vulnerability(struct pkg_vulnerabilities *pv, size_t *allocated, const char 
 			*allocated *= 2;
 		else
 			errx(EXIT_FAILURE, "Too many vulnerabilities");
-		pv->vulnerability = realloc(pv->vulnerability,
+		pv->vulnerability = xrealloc(pv->vulnerability,
 		    sizeof(char *) * *allocated);
-		pv->classification = realloc(pv->classification,
+		pv->classification = xrealloc(pv->classification,
 		    sizeof(char *) * *allocated);
-		pv->advisory = realloc(pv->advisory,
+		pv->advisory = xrealloc(pv->advisory,
 		    sizeof(char *) * *allocated);
-		if (pv->vulnerability == NULL ||
-		    pv->classification == NULL || pv->advisory == NULL)
-			errx(EXIT_FAILURE, "realloc failed");
 	}
 
-	if ((pv->vulnerability[pv->entries] = malloc(len_pattern + 1)) == NULL)
-		errx(EXIT_FAILURE, "malloc failed");
+	pv->vulnerability[pv->entries] = xmalloc(len_pattern + 1);
 	memcpy(pv->vulnerability[pv->entries], start_pattern, len_pattern);
 	pv->vulnerability[pv->entries][len_pattern] = '\0';
-	if ((pv->classification[pv->entries] = malloc(len_class + 1)) == NULL)
-		errx(EXIT_FAILURE, "malloc failed");
+	pv->classification[pv->entries] = xmalloc(len_class + 1);
 	memcpy(pv->classification[pv->entries], start_class, len_class);
 	pv->classification[pv->entries][len_class] = '\0';
-	if ((pv->advisory[pv->entries] = malloc(len_url + 1)) == NULL)
-		errx(EXIT_FAILURE, "malloc failed");
+	pv->advisory[pv->entries] = xmalloc(len_url + 1);
 	memcpy(pv->advisory[pv->entries], start_url, len_url);
 	pv->advisory[pv->entries][len_url] = '\0';
 
@@ -400,8 +394,7 @@ read_pkg_vulnerabilities(const char *path, int ignore_missing, int check_sum)
 	input_len = (size_t)st.st_size;
 	if (input_len < 4)
 		err(EXIT_FAILURE, "Input too short for a pkg_vulnerability file");
-	if ((input = malloc(input_len + 1)) == NULL)
-		err(EXIT_FAILURE, "malloc failed");
+	input = xmalloc(input_len + 1);
 	if ((bytes_read = read(fd, input, input_len)) == -1)
 		err(1, "Failed to read input");
 	if (bytes_read != st.st_size)
@@ -429,9 +422,7 @@ parse_pkg_vulnerabilities(const char *input, size_t input_len, int check_sum)
 	size_t allocated_vulns;
 	int in_pgp_msg;
 
-	pv = malloc(sizeof(*pv));
-	if (pv == NULL)
-		err(EXIT_FAILURE, "malloc failed");
+	pv = xmalloc(sizeof(*pv));
 
 	allocated_vulns = pv->entries = 0;
 	pv->vulnerability = NULL;
@@ -531,15 +522,12 @@ parse_pkg_vulnerabilities(const char *input, size_t input_len, int check_sum)
 	}
 
 	if (pv->entries != allocated_vulns) {
-		pv->vulnerability = realloc(pv->vulnerability,
+		pv->vulnerability = xrealloc(pv->vulnerability,
 		    sizeof(char *) * pv->entries);
-		pv->classification = realloc(pv->classification,
+		pv->classification = xrealloc(pv->classification,
 		    sizeof(char *) * pv->entries);
-		pv->advisory = realloc(pv->advisory,
+		pv->advisory = xrealloc(pv->advisory,
 		    sizeof(char *) * pv->entries);
-		if (pv->vulnerability == NULL ||
-		    pv->classification == NULL || pv->advisory == NULL)
-			errx(EXIT_FAILURE, "realloc failed");
 	}
 
 	return pv;

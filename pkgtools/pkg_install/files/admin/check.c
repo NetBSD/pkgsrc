@@ -1,4 +1,4 @@
-/*	$NetBSD: check.c,v 1.2.4.2 2008/05/23 15:57:04 joerg Exp $	*/
+/*	$NetBSD: check.c,v 1.2.4.3 2008/08/02 20:33:50 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: check.c,v 1.2.4.2 2008/05/23 15:57:04 joerg Exp $");
+__RCSID("$NetBSD: check.c,v 1.2.4.3 2008/08/02 20:33:50 joerg Exp $");
 #endif
 
 /*-
@@ -234,8 +234,7 @@ check_pkg(const char *pkg, int *filecnt, int *pkgcnt, int allow_unmatched)
 		errx(EXIT_FAILURE, "No matching pkg for %s.", pkg);
 	}
 
-	if (asprintf(&pattern, "%s-[0-9]*", pkg) == -1)
-		errx(EXIT_FAILURE, "asprintf failed");
+	pattern = xasprintf("%s-[0-9]*", pkg);
 
 	if (match_installed_pkgs(pattern, checkpattern_fn, &arg) == -1)
 		errx(EXIT_FAILURE, "Cannot process pkdbdb");
