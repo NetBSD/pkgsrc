@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2006/03/09 14:50:31 ghen Exp $
+$NetBSD: distinfo,v 1.4 2008/08/02 11:35:41 bjs Exp $
 
-SHA1 (fribidi-0.10.4.tar.bz2) = a77f55797095ea5de6e620370f5968b891aed103
-RMD160 (fribidi-0.10.4.tar.bz2) = 9afd13f64ba8907ece99b7c04a7d4e98b23f9d92
-Size (fribidi-0.10.4.tar.bz2) = 335733 bytes
+SHA1 (fribidi-0.10.9.tar.gz) = f9aae2d2084eaccbc87760401c4521e96a92a436
+RMD160 (fribidi-0.10.9.tar.gz) = 31495fecd4318f9bd6217b015f65a936389c3204
+Size (fribidi-0.10.9.tar.gz) = 621563 bytes
