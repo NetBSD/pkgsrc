@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1 2008/08/02 16:46:56 dholland Exp $
+
+diff -urpN cs4235.orig/cs4235_ctl.h cs4235/cs4235_ctl.h
+--- cs4235_ctl.h.orig	2000-10-09 09:55:19.000000000 -0400
++++ cs4235_ctl.h	2008-08-02 12:26:36.000000000 -0400
+@@ -17,4 +17,10 @@ void	cs4235_enable_access_indirect	__P((
+ void	cs4235_enable_access_extended	__P((void));
+ void	cs4235_enable_3d		__P((void));
+ 
++#if defined(__i386__)
++#define iopl i386_iopl
++#elif defined(__x86_64__) || defined(__amd64__)
++#define iopl x86_64_iopl
++#endif
++
+ #endif /* !_CS4235_CTL_H_ */
