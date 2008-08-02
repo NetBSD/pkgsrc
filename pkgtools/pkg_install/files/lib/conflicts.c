@@ -35,17 +35,6 @@ struct package_conflict {
 	char **conflicting_pattern;
 };
 
-static void *
-nonnull(void *p)
-{
-
-	if (p == NULL) {
-		err(EXIT_FAILURE, "NullPointerException");
-		/* NOTREACHED */
-	}
-	return p;
-}
-
 static FILE *
 fopen_contents(const char *pkgname, const char *mode)
 {
@@ -88,8 +77,8 @@ check_package_conflict(const char *pkgname, void *v)
 			continue;
 
 		if (pkg_match(p->name, conflict->pkgname) == 1) {
-			*(conflict->conflicting_pkgname) = nonnull(strdup(pkgname));
-			*(conflict->conflicting_pattern) = nonnull(strdup(p->name));
+			*(conflict->conflicting_pkgname) = xstrdup(pkgname);
+			*(conflict->conflicting_pattern) = xstrdup(p->name);
 			rv = 1 /* nonzero, stop iterating */;
 			break;
 		}

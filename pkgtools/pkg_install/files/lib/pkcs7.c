@@ -1,4 +1,4 @@
-/*	$NetBSD: pkcs7.c,v 1.1.2.6 2008/07/23 18:59:18 joerg Exp $	*/
+/*	$NetBSD: pkcs7.c,v 1.1.2.7 2008/08/02 20:33:50 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -7,7 +7,7 @@
 #include <sys/cdefs.h>
 #endif
 
-__RCSID("$NetBSD: pkcs7.c,v 1.1.2.6 2008/07/23 18:59:18 joerg Exp $");
+__RCSID("$NetBSD: pkcs7.c,v 1.1.2.7 2008/08/02 20:33:50 joerg Exp $");
 
 /*-
  * Copyright (c) 2004, 2008 The NetBSD Foundation, Inc.
@@ -308,7 +308,7 @@ easy_pkcs7_sign(const char *content, size_t len,
 	out = BIO_new(BIO_s_mem());
 	PEM_write_bio_PKCS7(out, p7);
 	*signature_len = BIO_get_mem_data(out, &tmp_sig);
-	*signature = malloc(*signature_len);
+	*signature = xmalloc(*signature_len);
 	memcpy(*signature, tmp_sig, *signature_len);
 	BIO_free_all(out);
 

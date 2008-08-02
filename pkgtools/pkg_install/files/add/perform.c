@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.13 2008/07/30 22:26:03 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.14 2008/08/02 20:33:50 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.13 2008/07/30 22:26:03 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.14 2008/08/02 20:33:50 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -137,10 +137,7 @@ mkdir_p(const char *path)
 	if (errno != ENOENT)
 		return -1;
 
-	if ((p = strdup(path)) == NULL)
-		err(EXIT_FAILURE, "strdup failed");
-
-	cur_end = p;
+	cur_end = p = xstrdup(path);
 
 	for (;;) {
 		/*
@@ -231,8 +228,7 @@ skip_header:
 			warnx("package meta data too large to process");
 			return -1;
 		}
-		if ((*target = malloc(size + 1)) == NULL)
-			err(2, "cannot allocate meta data");
+		*target = xmalloc(size + 1);
 		if (archive_read_data(pkg->archive, *target, size) != size) {
 			warnx("cannot read package meta data");
 			return -1;
@@ -284,7 +280,7 @@ pkg_parse_plist(struct pkg_task *pkg)
 		return -1;
 	}
 	if (pkg->pkgname == NULL)
-		pkg->pkgname = strdup(p->name);
+		pkg->pkgname = xstrdup(p->name);
 	else if (strcmp(pkg->pkgname, p->name) != 0) {
 		warnx("Signature and PLIST differ on package name");
 		return -1;
@@ -307,12 +303,10 @@ pkg_parse_plist(struct pkg_task *pkg)
 	} else
 		pkg->prefix = p->name;
 
-	if (Destdir != NULL) {
-		if (asprintf(&pkg->install_prefix, "%s/%s", Destdir,
-		    pkg->prefix) == -1)
-			err(EXIT_FAILURE, "asprintf failed");
-	} else if ((pkg->install_prefix = strdup(pkg->prefix)) == NULL)
-		err(EXIT_FAILURE, "strdup failed");
+	if (Destdir != NULL)
+		pkg->install_prefix = xasprintf("%s/%s", Destdir, pkg->prefix);
+	else
+		pkg->install_prefix = xstrdup(pkg->prefix);
 
 	return 0;
 }
@@ -328,9 +322,7 @@ dup_value(const char *line, const char *eol)
 	char *val;
 
 	key = strchr(line, '=');
-	val = malloc(eol - key);
-	if (val == NULL)
-		err(2, "malloc failed");
+	val = xmalloc(eol - key);
 	memcpy(val, key + 1, eol - key - 1);
 	val[eol - key - 1] = '\0';
 	return val;
@@ -376,10 +368,8 @@ check_other_installed(struct pkg_task *pkg)
 	plist_t *p;
 	int status;
 
-	if ((pkgbase = strdup(pkg->pkgname)) == NULL) {
-		warnx("strdup failed");
-		return -1;
-	}
+	pkgbase = xstrdup(pkg->pkgname);
+
 	if ((iter = strrchr(pkgbase, '-')) == NULL) {
 		free(pkgbase);
 		warnx("Invalid package name %s", pkg->pkgname);
@@ -542,11 +532,8 @@ write_meta_data(struct pkg_task *pkg)
 		    descr->entry_offset);
 		if (*target == NULL)
 			continue;
-		if (asprintf(&filename, "%s/%s", pkg->install_logdir,
-		    descr->entry_filename) == -1) {
-			    warn("asprintf failed");
-			    return -1;
-		}
+		filename = xasprintf("%s/%s", pkg->install_logdir,
+		    descr->entry_filename);
 		(void)unlink(filename);
 		fd = open(filename, O_WRONLY | O_TRUNC | O_CREAT, descr->perm);
 		if (fd == -1) {
@@ -668,10 +655,7 @@ extract_files(struct pkg_task *pkg)
 				    p->name, archive_entry_pathname(pkg->entry));
 				goto out;
 			}
-			if (asprintf(&fullpath, "%s/%s", pkg->prefix, p->name) == -1) {
-				warnx("asprintf failed");
-				goto out;
-			}
+			fullpath = xasprintf("%s/%s", pkg->prefix, p->name);
 			pkgdb_store(fullpath, pkg->pkgname);
 			free(fullpath);
 			if (Verbose)
@@ -778,8 +762,7 @@ pkg_register_depends(struct pkg_task *pkg)
 	if (pkg->other_version != NULL)
 		return; /* XXX It's using the old dependencies. */
 
-	if (asprintf(&text, "%s\n", pkg->pkgname) == -1)
-		err(2, "asprintf failed");
+	text = xasprintf("%s\n", pkg->pkgname);
 	text_len = strlen(text);
 
 	for (i = 0; i < pkg->dep_length; ++i) {
@@ -972,11 +955,7 @@ check_implicit_conflict(struct pkg_task *pkg)
 		} else if (p->type != PLIST_FILE)
 			continue;
 
-		if (asprintf(&fullpath, "%s/%s", pkg->prefix, p->name) == -1) {
-			warnx("asprintf failed");
-			status = -1;
-			break;
-		}
+		fullpath = xasprintf("%s/%s", pkg->prefix, p->name);
 		existing = pkgdb_retrieve(fullpath);
 		free(fullpath);
 		if (existing == NULL)
@@ -1056,17 +1035,8 @@ check_dependencies(struct pkg_task *pkg)
 		if (pkg->dep_length + 1 >= pkg->dep_allocated) {
 			char **tmp;
 			pkg->dep_allocated = 2 * pkg->dep_allocated + 1;
-			tmp = realloc(pkg->dependencies,
+			pkg->dependencies = xrealloc(pkg->dependencies,
 			    pkg->dep_allocated * sizeof(*tmp));
-			if (tmp == NULL) {
-				warnx("realloc failed");
-				free(pkg->dependencies);
-				pkg->dependencies = NULL;
-				pkg->dep_length = pkg->dep_allocated = 0;
-				free(best_installed);
-				return -1;
-			}
-			pkg->dependencies = tmp;
 		}
 		pkg->dependencies[pkg->dep_length++] = best_installed;
 	}
@@ -1217,8 +1187,7 @@ pkg_do(const char *pkgpath, int mark_automatic)
 	void *signature_cookie;
 	struct pkg_task *pkg;
 
-	if ((pkg = calloc(1, sizeof(*pkg))) == NULL)
-		err(2, "malloc failed");
+	pkg = xcalloc(1, sizeof(*pkg));
 
 	status = -1;
 
@@ -1249,21 +1218,18 @@ pkg_do(const char *pkgpath, int mark_automatic)
 		warnx("mtree specification in pkg `%s' ignored", pkg->pkgname);
 
 	if (pkg->meta_data.meta_views != NULL) {
-		if ((pkg->logdir = strdup(pkg->prefix)) == NULL)
-			err(EXIT_FAILURE, "strdup failed");
+		pkg->logdir = xstrdup(pkg->prefix);
 		_pkgdb_setPKGDB_DIR(dirname_of(pkg->logdir));
 	} else {
-		if (asprintf(&pkg->logdir, "%s/%s", _pkgdb_getPKGDB_DIR(),
-			     pkg->pkgname) == -1)
-			err(EXIT_FAILURE, "asprintf failed");
+		pkg->logdir = xasprintf("%s/%s", _pkgdb_getPKGDB_DIR(),
+		    pkg->pkgname);
 	}
 
 	if (Destdir != NULL) {
-		if (asprintf(&pkg->install_logdir, "%s/%s", Destdir, pkg->logdir) == -1)
-			err(EXIT_FAILURE, "asprintf failed");
+		pkg->install_logdir = xasprintf("%s/%s", Destdir, pkg->logdir);
 		_pkgdb_setPKGDB_DIR(dirname_of(pkg->install_logdir));
-	} else if ((pkg->install_logdir = strdup(pkg->logdir)) == NULL)
-		err(EXIT_FAILURE, "strdup failed");
+	} else
+		pkg->install_logdir = xstrdup(pkg->logdir);
 
 	if (NoRecord && !Fake) {
 		const char *tmpdir;
@@ -1273,8 +1239,7 @@ pkg_do(const char *pkgpath, int mark_automatic)
 			tmpdir = "/tmp";
 
 		free(pkg->install_logdir);
-		if (asprintf(&pkg->install_logdir, "%s/pkg_install.XXXXXX", tmpdir) == -1)
-			err(EXIT_FAILURE, "asprintf failed");
+		pkg->install_logdir = xasprintf("%s/pkg_install.XXXXXX", tmpdir);
 		/* XXX pkg_add -u... */
 		if (mkdtemp(pkg->install_logdir) == NULL) {
 			warn("mkdtemp failed");

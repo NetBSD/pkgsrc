@@ -1,4 +1,4 @@
-/*	$NetBSD: pkg_signature.c,v 1.1.2.4 2008/07/18 19:10:55 joerg Exp $	*/
+/*	$NetBSD: pkg_signature.c,v 1.1.2.5 2008/08/02 20:33:50 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: pkg_signature.c,v 1.1.2.4 2008/07/18 19:10:55 joerg Exp $");
+__RCSID("$NetBSD: pkg_signature.c,v 1.1.2.5 2008/08/02 20:33:50 joerg Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -196,8 +196,7 @@ retry:
 		return 1;
 	}
 	*len = archive_entry_size(*entry);
-	if ((*content = malloc(*len + 1)) == NULL)
-		err(2, "cannot allocate memory for %s", fname);
+	*content = xmalloc(*len + 1);
 
 	if (archive_read_data(archive, *content, *len) != *len) {
 		warnx("cannot read complete %s from archive", fname);
@@ -230,8 +229,7 @@ parse_hash_file(const char *hash_file, char **pkgname,
 	hash_file += strlen(block1);
 
 	len = strcspn(hash_file, "\n");
-	if ((*pkgname = malloc(len + 1)) == NULL)
-		err(2, "cannot allocate pkgname");
+	*pkgname = xmalloc(len + 1);
 	memcpy(*pkgname, hash_file, len);
 	(*pkgname)[len] = '\0';
 	for (i = 0; i < len; ++i) {
@@ -277,19 +275,14 @@ parse_hash_file(const char *hash_file, char **pkgname,
 	state->sign_block_number = (state->pkg_size +
 	    state->sign_block_len - 1) / state->sign_block_len;
 
-	if ((state->sign_buf = malloc(state->sign_block_len)) == NULL)
-		err(2, "cannot allocate hash buffer");
-
-	state->sign_blocks = calloc(state->sign_block_number, sizeof(char *));
-	if (state->sign_blocks == NULL)
-		err(2, "cannot allocate signature block");
+	state->sign_buf = xmalloc(state->sign_block_len);
+	state->sign_blocks = xcalloc(state->sign_block_number, sizeof(char *));
 
 	for (i = 0; i < state->sign_block_number; ++i) {
 		len = strspn(hash_file, "01234567889abcdef");
 		if (len != SHA512_DIGEST_LENGTH * 2 || hash_file[len] != '\n')
 			goto cleanup_hashes;
-		if ((state->sign_blocks[i] = malloc(len + 1)) == NULL)
-			err(2, "cannot allocate signature block");
+		state->sign_blocks[i] = xmalloc(len + 1);
 		memcpy(state->sign_blocks[i], hash_file, len);
 		state->sign_blocks[i][len] = '\0';
 		hash_file += len + 1;
@@ -327,9 +320,7 @@ pkg_verify_signature(struct archive **archive, struct archive_entry **entry,
 	*pkgname = NULL;
 	*cookie = NULL;
 
-	if ((state = malloc(sizeof(*state))) == NULL)
-		err(2, "cannot allocate signature state");
-
+	state = xmalloc(sizeof(*state));
 	state->sign_blocks = NULL;
 	state->sign_buf = NULL;
 	state->archive = NULL;
@@ -457,8 +448,7 @@ extract_pkgname(int fd)
 	}
 
 	len = archive_entry_size(entry);
-	if ((buf = malloc(len + 1)) == NULL)
-		err(2, "Cannot allocate memory for +CONTENTS");
+	buf = xmalloc(len + 1);
 
 	if (archive_read_data(a, buf, len) != len) {
 		warnx("Short read when extracing +CONTENTS");
@@ -476,8 +466,7 @@ extract_pkgname(int fd)
 	free(buf);
 	p = find_plist(&plist, PLIST_NAME);	
 	if (p != NULL) {
-		if ((buf = strdup(p->name)) == NULL)
-			err(2, "strdup failed");
+		buf = xstrdup(p->name);
 	} else {
 		warnx("Invalid PLIST: missing @name");
 		buf = NULL;
@@ -526,9 +515,8 @@ pkg_sign(const char *name, const char *output, const char *key_file, const char 
 	archive_entry_copy_stat(entry, &sb);
 
 	pkgname = extract_pkgname(fd);
-	if (asprintf(&hash_file, hash_template, pkgname,
-	    (long long)archive_entry_size(entry)) == -1)
-		err(2, "asprintf failed");
+	hash_file = xasprintf(hash_template, pkgname,
+	    (long long)archive_entry_size(entry));
 	free(pkgname);
 
 	for (i = 0; i < archive_entry_size(entry); i += block_len) {
@@ -539,13 +527,11 @@ pkg_sign(const char *name, const char *output, const char *key_file, const char 
 		if (read(fd, block, block_len) != block_len)
 			err(2, "short read");
 		hash_block(block, block_len, hash);
-		if (asprintf(&tmp, "%s%s\n", hash_file, hash) == -1)
-			err(2, "asprintf failed");
+		tmp = xasprintf("%s%s\n", hash_file, hash);
 		free(hash_file);
 		hash_file = tmp;
 	}
-	if (asprintf(&tmp, "%s%s", hash_file, hash_trailer) == -1)
-		err(2, "asprintf failed");
+	tmp = xasprintf("%s%s", hash_file, hash_trailer);
 	free(hash_file);
 	hash_file = tmp;
 

@@ -1,4 +1,4 @@
-/*	$NetBSD: build.c,v 1.8 2008/04/23 16:58:07 joerg Exp $	*/
+/*	$NetBSD: build.c,v 1.8.2.1 2008/08/02 20:33:50 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.38 1997/10/13 15:03:51 jkh Exp";
 #else
-__RCSID("$NetBSD: build.c,v 1.8 2008/04/23 16:58:07 joerg Exp $");
+__RCSID("$NetBSD: build.c,v 1.8.2.1 2008/08/02 20:33:50 joerg Exp $");
 #endif
 #endif
 
@@ -251,8 +251,7 @@ make_dist(const char *pkg, const char *suffix, const package_t *plist)
 	else
 		archive_write_set_compression_none(archive);
 
-	if (asprintf(&archive_name, "%s.%s", pkg, suffix) == -1)
-		err(2, "cannot compute output name");
+	archive_name = xasprintf("%s.%s", pkg, suffix);
 
 	if (archive_write_open_file(archive, archive_name))
 		errx(2, "cannot create archive: %s", archive_error_string(archive));
