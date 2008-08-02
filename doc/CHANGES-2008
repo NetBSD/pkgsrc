@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1777 2008/08/02 11:36:06 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1778 2008/08/02 18:10:05 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3001,3 +3001,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Data-Dump-Streamer version 2.08.40 [seb 2008-08-02]
 	Updated lang/chicken to 3.3.0 [tnn 2008-08-02]
 	Updated converters/fribidi to 0.10.9 [bjs 2008-08-02]
+	Updated mail/getmail to 4.8.2 [schmonz 2008-08-02]
