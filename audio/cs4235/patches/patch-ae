@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2008/08/02 16:46:56 dholland Exp $
+
+diff -urpN /dev/null pio.h
+--- /dev/null	1969-12-31 19:00:00.000000000 -0500
++++ pio.h	2008-08-02 12:22:17.000000000 -0400
+@@ -0,0 +1,7 @@
++#include <sys/param.h>
++
++#if __NetBSD_Version__ < 499003100       /* NetBSD 4.99.31 */
++#include <machine/pio.h>
++#else
++#include "x86_pio.h"
++#endif

@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.1 2008/08/02 16:46:56 dholland Exp $
+
+diff -urpN Makefile.orig Makefile
+--- Makefile.orig	2000-10-09 09:55:19.000000000 -0400
++++ Makefile	2008-08-02 12:09:06.000000000 -0400
+@@ -3,7 +3,7 @@
+ PROG=	cs4235_3dctl
+ SRCS=	cs4235_3dctl.c cs4235_ctl.c
+ 
+-LDFLAGS=-li386
++LDFLAGS=-l$(MACHINE_ARCH)
+ 
+ NOMAN=	Sorry
+ 

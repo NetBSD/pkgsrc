@@ -1,0 +1,14 @@
+$NetBSD: patch-ac,v 1.1 2008/08/02 16:46:56 dholland Exp $
+
+diff -urpN cs4235_ctl.c.orig cs4235_ctl.c
+--- cs4235_ctl.c.orig	2000-10-09 09:55:19.000000000 -0400
++++ cs4235_ctl.c	2008-08-02 12:21:52.000000000 -0400
+@@ -13,7 +13,7 @@
+ #include <string.h>
+ 
+ #include <machine/sysarch.h>
+-#include <machine/pio.h>
++#include "pio.h"
+ 
+ #include "cs4235_regs.h"
+ #include "cs4235_ctl.h"
