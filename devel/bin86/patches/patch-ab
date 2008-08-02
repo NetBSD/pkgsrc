@@ -1,0 +1,44 @@
+$NetBSD: patch-ab,v 1.1 2008/08/02 21:46:33 dholland Exp $
+
+--- ld/catimage.c~	1997-07-22 17:38:12.000000000 -0400
++++ ld/catimage.c	2008-08-02 17:43:47.000000000 -0400
+@@ -39,7 +39,7 @@ main(argc, argv)
+ int argc;
+ char ** argv;
+ {
+-   long image_offset, text_off;
++   Long image_offset, text_off;
+    int  image_id;
+ 
+    if( argc < 3 || argc > 11 )
+@@ -59,8 +59,10 @@ char ** argv;
+       open_obj(argv[image_id+2]);
+ 
+       printf("File %-14s seg=0x%04lx text=0x%04lx data=0x%04lx\n",
+-              input_file, (image_offset>>4),
+-	      (header.a_text>>4), (header.a_total>>4));
++              input_file,
++              (unsigned long)(image_offset>>4),
++              (unsigned long)(header.a_text>>4),
++              (unsigned long)(header.a_total>>4));
+ 
+       text_off = image_offset;
+       if( header.a_flags & A_SEP )
+@@ -90,7 +92,7 @@ char ** argv;
+    fputc('\0', ofd);
+    fclose(ofd);
+ 
+-   printf("Output file size %ldKb\n", ((image_offset+0x3FF)>>10));
++   printf("Output file size %ldKb\n", (long)((image_offset+0x3FF)>>10));
+ 
+    if( ifd ) fclose(ifd);
+    exit(0);
+@@ -162,7 +164,7 @@ read_symtable()
+ {
+    struct nlist item;
+    int nitems;
+-   long base_off = 0;
++   Long base_off = 0;
+ 
+    if( header.a_syms == 0 )
+       fatal("Input file has been stripped!");
