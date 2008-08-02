@@ -1,0 +1,11 @@
+$NetBSD: patch-aa,v 1.4 2008/08/02 20:36:50 dholland Exp $
+
+--- format.cc~	2004-01-12 04:32:01.000000000 -0500
++++ format.cc	2008-08-02 16:35:59.000000000 -0400
+@@ -405,5 +405,5 @@ void fdisplay(char *type, int server, in
+ }
+ 
+ int fexists(const char *type) {
+-  return (int)hash_get(&formats,type);
++  return hash_get(&formats,type) != NULL;
+ }
