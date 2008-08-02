@@ -1,21 +1,21 @@
-$NetBSD: patch-ab,v 1.3 2000/01/11 11:31:19 agc Exp $
+$NetBSD: patch-ab,v 1.4 2008/08/02 18:32:15 dholland Exp $
 
 Add NetBSD and Solaris platforms
 Add inb() and outb() from XFree86 sources.
+Add NetBSD/x86_64 support.
 
---- rio.cpp	1999/12/17 17:42:31	1.1
-+++ rio.cpp	1999/12/17 17:44:25
-+++ rio.cpp	Fri Jan  7 12:43:45 2000
-@@ -109,9 +109,89 @@
+--- rio.cpp.orig	1999-06-11 12:26:46.000000000 -0400
++++ rio.cpp	2008-08-02 14:16:07.000000000 -0400
+@@ -109,11 +109,101 @@
  	#define		CLOCK_SECOND			((int)CLOCKS_PER_SEC)
  	#define		DELETEARRAY				delete
  
 +#elif defined(__NetBSD__)
-+	// NetBSD/i386 g++
++	// NetBSD/i386,amd64 g++
 +	#include	<fcntl.h>
 +	#include	<unistd.h>
 +	#include	<machine/sysarch.h>
-+	#include	<machine/cpufunc.h>
++	//#include	<machine/cpufunc.h>
 +	#define		OUTPORT(p,v)			outb( p, v )
 +	#define		INPORT(p)				inb( p )
 +	#define		CLOCK_SECOND			CLOCKS_PER_SEC
@@ -37,8 +37,8 @@ Add inb() and outb() from XFree86 sources.
  #else
  	// not supported
  	#error ! ! compiler/platform not supported ! !
-+#endif
-+
+ #endif
+ 
 +#if defined(__NetBSD__)
 +/* copied from the XFree86 sources */
 +/* xc/programs/Xserver/hw/xfree86/common/compiler.h */
@@ -66,7 +66,7 @@ Add inb() and outb() from XFree86 sources.
 + *
 + */
 +/* $XConsortium: compiler.h /main/16 1996/10/25 15:38:34 kaleb $ */
-+/* also hacked by agc to do i386_iopl */
++/* also hacked by agc to do i386_iopl, and by dholland for x86_64_iopl */
 +static int ports_enabled;
 +
 +static __inline__ unsigned int
@@ -75,7 +75,12 @@ Add inb() and outb() from XFree86 sources.
 +	unsigned char	ret;
 +
 +	if (!ports_enabled) {
++#ifdef __i386__
 +		i386_iopl(1);
++#endif
++#ifdef __x86_64__
++		x86_64_iopl(1);
++#endif
 +		ports_enabled = 1;
 +	}
 +	__asm__ __volatile__("inb %1,%0" :
@@ -88,11 +93,18 @@ Add inb() and outb() from XFree86 sources.
 +outb(unsigned short int port, unsigned char val)
 +{
 +	if (!ports_enabled) {
++#ifdef __i386__
 +		i386_iopl(1);
++#endif
++#ifdef __x86_64__
++		x86_64_iopl(1);
++#endif
 +		ports_enabled = 1;
 +	}
 +	__asm__ __volatile__("outb %0,%1" : :"a" (val), "d" (port));
 +}
- #endif
- 
++#endif
++
  // port offset constants
+ #define		OFFSET_PORT_DATA		0
+ #define		OFFSET_PORT_STATUS		1
