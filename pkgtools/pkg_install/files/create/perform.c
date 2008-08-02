@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.19.2.1 2008/04/26 17:44:23 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.19.2.2 2008/08/02 20:33:50 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.38 1997/10/13 15:03:51 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.19.2.1 2008/04/26 17:44:23 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.19.2.2 2008/08/02 20:33:50 joerg Exp $");
 #endif
 #endif
 
@@ -106,7 +106,7 @@ fileGetContents(char *fname)
 		errx(2, "can't stat '%s'", fname);
 	}
 
-	contents = (char *) malloc((size_t) (sb.st_size) + 1);
+	contents = xmalloc((size_t) (sb.st_size) + 1);
 	fd = open(fname, O_RDONLY, 0);
 	if (fd == FAIL) {
 		cleanup(0);
@@ -129,7 +129,7 @@ static void
 get_dash_string(char **s)
 {
 	if (**s == '-')
-		*s = strdup(*s + 1);
+		*s = xstrdup(*s + 1);
 	else
 		*s = fileGetContents(*s); 
 }
@@ -146,8 +146,7 @@ pkg_perform(const char *pkg)
 
 	/* Break the package name into base and desired suffix (if any) */
 	if ((cp = strrchr(pkg, '.')) != NULL) {
-		if ((allocated_pkg = malloc(cp - pkg + 1)) == NULL)
-			err(2, "malloc failed");
+		allocated_pkg = xmalloc(cp - pkg + 1);
 		memcpy(allocated_pkg, pkg, cp - pkg);
 		allocated_pkg[cp - pkg] = '\0';
 		suffix = cp + 1;

@@ -1,4 +1,4 @@
-/*	$NetBSD: plist.c,v 1.17.4.5 2008/08/01 19:14:42 joerg Exp $	*/
+/*	$NetBSD: plist.c,v 1.17.4.6 2008/08/02 20:33:50 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: plist.c,v 1.24 1997/10/08 07:48:15 charnier Exp";
 #else
-__RCSID("$NetBSD: plist.c,v 1.17.4.5 2008/08/01 19:14:42 joerg Exp $");
+__RCSID("$NetBSD: plist.c,v 1.17.4.6 2008/08/02 20:33:50 joerg Exp $");
 #endif
 #endif
 
@@ -118,7 +118,7 @@ add_plist(package_t *p, pl_ent_t type, const char *arg)
 	plist_t *tmp;
 
 	tmp = new_plist_entry();
-	tmp->name = (arg == (char *) NULL) ? (char *) NULL : strdup(arg);
+	tmp->name = (arg == NULL) ? NULL : xstrdup(arg);
 	tmp->type = type;
 	if (!p->head) {
 		p->head = p->tail = tmp;
@@ -138,7 +138,7 @@ add_plist_top(package_t *p, pl_ent_t type, const char *arg)
 	plist_t *tmp;
 
 	tmp = new_plist_entry();
-	tmp->name = (arg == (char *) NULL) ? (char *) NULL : strdup(arg);
+	tmp->name = (arg == NULL) ? NULL : xstrdup(arg);
 	tmp->type = type;
 	if (!p->head) {
 		p->head = p->tail = tmp;
@@ -239,13 +239,7 @@ delete_plist(package_t *pkg, Boolean all, pl_ent_t type, char *name)
 plist_t *
 new_plist_entry(void)
 {
-	plist_t *ret;
-
-	if ((ret = (plist_t *) malloc(sizeof(plist_t))) == (plist_t *) NULL) {
-		err(EXIT_FAILURE, "can't allocate %ld bytes", (long) sizeof(plist_t));
-	}
-	memset(ret, 0, sizeof(plist_t));
-	return ret;
+	return xcalloc(1, sizeof(plist_t));
 }
 
 /*
@@ -290,9 +284,7 @@ plist_cmd(const char *s, char **arg)
 
 	while (isspace((unsigned char)*sp))
 		++sp;
-	*arg = strdup(sp);
-	if (*arg == NULL)
-		err(2, "strdup failed");
+	*arg = xstrdup(sp);
 	if (*sp) {
 		sp2 = *arg + strlen(*arg) - 1;
 		/*
@@ -333,9 +325,7 @@ parse_plist(package_t *pkg, const char *buf)
 		if (len == 0)
 			continue;
 
-		line = malloc(len + 1);
-		if (line == NULL)
-			err(2, "malloc failed");
+		line = xmalloc(len + 1);
 		memcpy(line, buf, len);
 		line[len] = '\0';
 
@@ -460,8 +450,7 @@ stringify_plist(package_t *pkg, char **real_buf, size_t *real_len,
 	}
 
 	/* Pass Two: build actual string. */
-	if ((buf = malloc(len + 1)) == NULL)
-		err(2, "malloc failed");
+	buf = xmalloc(len + 1);
 	*real_buf = buf;
 	*real_len = len;
 	++len;

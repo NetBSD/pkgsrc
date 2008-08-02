@@ -1,4 +1,4 @@
-/*	$NetBSD: parse-config.c,v 1.1.2.3 2008/05/19 10:42:41 joerg Exp $	*/
+/*	$NetBSD: parse-config.c,v 1.1.2.4 2008/08/02 20:33:50 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: parse-config.c,v 1.1.2.3 2008/05/19 10:42:41 joerg Exp $");
+__RCSID("$NetBSD: parse-config.c,v 1.1.2.4 2008/08/02 20:33:50 joerg Exp $");
 #endif
 
 /*-
@@ -82,7 +82,6 @@ void
 pkg_install_config(void)
 {
 	char *value;
-	int ret;
 	struct config_variable *var;
 
 	for (var = config_variables; var->name != NULL; ++var) {
@@ -93,16 +92,11 @@ pkg_install_config(void)
 
 	if (pkg_vulnerabilities_dir == NULL)
 		pkg_vulnerabilities_dir = _pkgdb_getPKGDB_DIR();
-	ret = asprintf(&value, "%s/pkg-vulnerabilities", pkg_vulnerabilities_dir);
-	pkg_vulnerabilities_file = value;
-	if (ret == -1)
-		err(EXIT_FAILURE, "asprintf failed");
+	pkg_vulnerabilities_file = xasprintf("%s/pkg-vulnerabilities",
+	    pkg_vulnerabilities_dir);
 	if (pkg_vulnerabilities_url == NULL) {
-		ret = asprintf(&value, "%s/pkg-vulnerabilities.gz",
+		pkg_vulnerabilities_url = xasprintf("%s/pkg-vulnerabilities.gz",
 		    tnf_vulnerability_base);
-		pkg_vulnerabilities_url = value;
-		if (ret == -1)
-			err(EXIT_FAILURE, "asprintf failed");
 	}
 	if (verified_installation == NULL)
 		verified_installation = "never";

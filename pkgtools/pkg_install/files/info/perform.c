@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.46.2.3 2008/07/18 19:10:55 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.46.2.4 2008/08/02 20:33:50 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -17,7 +17,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.23 1997/10/13 15:03:53 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.46.2.3 2008/07/18 19:10:55 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.46.2.4 2008/08/02 20:33:50 joerg Exp $");
 #endif
 #endif
 
@@ -186,10 +186,7 @@ read_meta_data_from_archive(struct archive *archive,
 
 	found_required = 0;
 
-	if ((meta = malloc(sizeof(*meta))) == NULL)
-		err(2, "cannot allocate meta data header");
-
-	memset(meta, 0, sizeof(*meta));
+	meta = xcalloc(1, sizeof(*meta));
 
 	last_descr = 0;
 	if (entry != NULL)
@@ -227,8 +224,7 @@ has_entry:
 		size = archive_entry_size(entry);
 		if (size > SSIZE_MAX - 1)
 			errx(2, "package meta data too large to process");
-		if ((*target = malloc(size + 1)) == NULL)
-			err(2, "cannot allocate meta data");
+		*target = xmalloc(size + 1);
 		if (archive_read_data(archive, *target, size) != size)
 			errx(2, "cannot read package meta data");
 		(*target)[size] = '\0';
@@ -259,10 +255,7 @@ read_meta_data_from_pkgdb(const char *pkg)
 	int fd;
 	struct stat st;
 
-	if ((meta = malloc(sizeof(*meta))) == NULL)
-		err(2, "cannot allocate meta data header");
-
-	memset(meta, 0, sizeof(*meta));
+	meta = xcalloc(1, sizeof(*meta));
 
 	for (descr = pkg_meta_descriptors; descr->entry_filename; ++descr) {
 		if ((descr->entry_mask & desired_meta_data) == 0)
@@ -285,8 +278,7 @@ read_meta_data_from_pkgdb(const char *pkg)
 			errx(1, "meta data is not regular file");
 		if (st.st_size > SSIZE_MAX - 1)
 			err(2, "meta data file too large to process");
-		if ((*target = malloc(st.st_size + 1)) == NULL)
-			err(2, "cannot allocate meta data");
+		*target = xmalloc(st.st_size + 1);
 		if (read(fd, *target, st.st_size) != st.st_size)
 			err(2, "cannot read meta data");
 		(*target)[st.st_size] = '\0';
@@ -512,8 +504,7 @@ CheckForPkg(const char *pkgname)
 	if (arg.got_match == 0 && !ispkgpattern(pkgname)) {
 		char *pattern;
 
-		if (asprintf(&pattern, "%s-[0-9]*", pkgname) == -1)
-			errx(EXIT_FAILURE, "asprintf failed");
+		pattern = xasprintf("%s-[0-9]*", pkgname);
 
 		arg.pattern = pattern;
 		arg.got_match = 0;
@@ -548,9 +539,7 @@ CheckForBestPkg(const char *pkgname)
 		if (ispkgpattern(pkgname))
 			return 1;
 
-		if (asprintf(&pattern, "%s-[0-9]*", pkgname) == -1)
-			errx(EXIT_FAILURE, "asprintf failed");
-
+		pattern = xasprintf("%s-[0-9]*", pkgname);
 		best_match = find_best_matching_installed_pkg(pattern);
 		free(pattern);
 	}

@@ -1,4 +1,4 @@
-/*	$NetBSD: audit.c,v 1.8.2.2 2008/07/27 16:22:53 joerg Exp $	*/
+/*	$NetBSD: audit.c,v 1.8.2.3 2008/08/02 20:33:50 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: audit.c,v 1.8.2.2 2008/07/27 16:22:53 joerg Exp $");
+__RCSID("$NetBSD: audit.c,v 1.8.2.3 2008/08/02 20:33:50 joerg Exp $");
 #endif
 
 /*-
@@ -363,8 +363,7 @@ fetch_pkg_vulnerabilities(int argc, char **argv)
 		err(EXIT_FAILURE, "pkg-vulnerabilities is too large");
 
 	buf_len = st.size;
-	if ((buf = malloc(buf_len + 1)) == NULL)
-		err(EXIT_FAILURE, "malloc failed");
+	buf = xmalloc(buf_len + 1);
 
 	if (fetchIO_read(f, buf, buf_len) != buf_len)
 		err(EXIT_FAILURE, "Failure during fetch of pkg-vulnerabilities");
@@ -455,9 +454,7 @@ check_pkg_history1(const char *pkg, const char *pattern)
 		open_brace = inner_brace;
 	}
 
-	expanded_pkg = malloc(strlen(pattern)); /* {} are going away... */
-	if (expanded_pkg == NULL)
-		err(EXIT_FAILURE, "malloc failed");
+	expanded_pkg = xmalloc(strlen(pattern)); /* {} are going away... */
 
 	prefix_len = open_brace - pattern;
 	suffix = close_brace + 1;

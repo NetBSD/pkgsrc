@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.21.8.1 2008/07/30 15:38:37 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.21.8.2 2008/08/02 20:33:50 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static char *rcsid = "from FreeBSD Id: main.c,v 1.11 1997/10/08 07:46:48 charnier Exp";
 #else
-__RCSID("$NetBSD: main.c,v 1.21.8.1 2008/07/30 15:38:37 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.21.8.2 2008/08/02 20:33:50 joerg Exp $");
 #endif
 #endif
 
@@ -94,8 +94,7 @@ main(int argc, char **argv)
 			break;
 
 		case 'K':
-			if ((Pkgdb = strdup(optarg)) == NULL)
-				err(EXIT_FAILURE, "strdup failed");
+			Pkgdb = xstrdup(optarg);
 			break;
 
 		case 'N':
@@ -149,13 +148,12 @@ main(int argc, char **argv)
 	TAILQ_INIT(&pkgs);
 
 	if (Pkgdb == NULL)
-		Pkgdb = strdup(_pkgdb_getPKGDB_DIR());
+		Pkgdb = xstrdup(_pkgdb_getPKGDB_DIR());
 
 	if (Destdir != NULL) {
 		char *pkgdbdir;
 
-		if (asprintf(&pkgdbdir, "%s/%s", Destdir, Pkgdb) == -1)
-			err(EXIT_FAILURE, "asprintf failed");
+		pkgdbdir = xasprintf("%s/%s", Destdir, Pkgdb);
 		_pkgdb_setPKGDB_DIR(pkgdbdir);
 		free(pkgdbdir);
 	} else {

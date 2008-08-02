@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.42.2.9 2008/07/30 15:38:37 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.42.2.10 2008/08/02 20:33:50 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -226,7 +226,7 @@ typedef struct _lfile_t {
 TAILQ_HEAD(_lfile_head_t, _lfile_t);
 typedef struct _lfile_head_t lfile_head_t;
 #define	LFILE_ADD(lfhead,lfp,str) do {		\
-	lfp = malloc(sizeof(lfile_t));		\
+	lfp = xmalloc(sizeof(lfile_t));		\
 	lfp->lf_name = str;			\
 	TAILQ_INSERT_TAIL(lfhead,lfp,lf_link);	\
 	} while(0)
@@ -392,6 +392,12 @@ int easy_pkcs7_verify(const char *, size_t, const char *, size_t,
 int easy_pkcs7_sign(const char *, size_t, char **, size_t *, const char *,
     const char *);
 #endif
+
+char *xstrdup(const char *);
+void *xrealloc(void *, size_t);
+void *xcalloc(size_t, size_t);
+void *xmalloc(size_t);
+char *xasprintf(const char *, ...);
 
 /* Externs */
 extern Boolean Verbose;

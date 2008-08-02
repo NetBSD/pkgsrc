@@ -1,4 +1,4 @@
-/*	$NetBSD: pl.c,v 1.10.8.1 2008/05/23 15:51:22 joerg Exp $	*/
+/*	$NetBSD: pl.c,v 1.10.8.2 2008/08/02 20:33:50 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: pl.c,v 1.11 1997/10/08 07:46:35 charnier Exp";
 #else
-__RCSID("$NetBSD: pl.c,v 1.10.8.1 2008/05/23 15:51:22 joerg Exp $");
+__RCSID("$NetBSD: pl.c,v 1.10.8.2 2008/08/02 20:33:50 joerg Exp $");
 #endif
 #endif
 
@@ -98,22 +98,18 @@ reorder(package_t *pkg, int dirc)
 	char  **dirv;
 	int     i;
 
-	if ((dirv = (char **) calloc(dirc, sizeof(char *))) == (char **) NULL) {
-		warn("No directory re-ordering will be done");
-	} else {
-		for (p = pkg->head, i = 0; p; p = p->next) {
-			if (p->type == PLIST_DIR_RM) {
-				dirv[i++] = p->name;
-			}
-		}
-		qsort(dirv, dirc, sizeof(char *), dircmp);
-		for (p = pkg->head, i = 0; p; p = p->next) {
-			if (p->type == PLIST_DIR_RM) {
-				p->name = dirv[i++];
-			}
-		}
-		(void) free(dirv);
+	dirv = xcalloc(dirc, sizeof(char *));
+
+	for (p = pkg->head, i = 0; p; p = p->next) {
+		if (p->type == PLIST_DIR_RM)
+			dirv[i++] = p->name;
 	}
+	qsort(dirv, dirc, sizeof(char *), dircmp);
+	for (p = pkg->head, i = 0; p; p = p->next) {
+		if (p->type == PLIST_DIR_RM)
+			p->name = dirv[i++];
+	}
+	free(dirv);
 }
 
 /*
@@ -210,7 +206,7 @@ check_list(package_t *pkg, const char *PkgName)
 				}
 				target[SymlinkHeaderLen + cc] = 0x0;
 				tmp = new_plist_entry();
-				tmp->name = strdup(target);
+				tmp->name = xstrdup(target);
 				tmp->type = PLIST_COMMENT;
 				tmp->next = p->next;
 				tmp->prev = p;
@@ -231,7 +227,7 @@ check_list(package_t *pkg, const char *PkgName)
 				    sizeof(buf));
 				if (MD5File(name, &buf[ChecksumHeaderLen]) != (char *) NULL) {
 					tmp = new_plist_entry();
-					tmp->name = strdup(buf);
+					tmp->name = xstrdup(buf);
 					tmp->type = PLIST_COMMENT;	/* PLIST_MD5 - HF */
 					tmp->next = p->next;
 					tmp->prev = p;
