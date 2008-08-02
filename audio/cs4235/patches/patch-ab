@@ -1,0 +1,38 @@
+$NetBSD: patch-ab,v 1.1 2008/08/02 16:46:56 dholland Exp $
+
+diff -urpN cs4235_3dctl.c.orig cs4235_3dctl.c
+--- cs4235_3dctl.c.orig	2000-10-09 09:55:19.000000000 -0400
++++ cs4235_3dctl.c	2008-08-02 12:21:57.000000000 -0400
+@@ -10,9 +10,10 @@
+ #include <sys/types.h>
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ 
+ #include <machine/sysarch.h>
+-#include <machine/pio.h>
++#include "pio.h"
+ 
+ #include "cs4235_ctl.h"
+ 
+@@ -42,9 +43,9 @@ main(int argc, char *argv[])
+ 	}
+ 
+ 	/* Enable access to IO ports */
+-	if (i386_iopl(3))
++	if (iopl(3))
+ 	{
+-		perror("i386_iopl");
++		perror("iopl");
+ 		return(1);
+ 	}
+ 
+@@ -62,7 +63,7 @@ main(int argc, char *argv[])
+ 	printf("cs4235.spacectl: %i -> %i\n", old_volume / 16, new_volume / 16);
+ 
+ 	/* Disable access to IO ports */
+-	i386_iopl(0);
++	iopl(0);
+ 
+ 	/* All done */
+ 	return(0);
