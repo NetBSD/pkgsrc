@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1 2008/08/02 21:46:33 dholland Exp $
+
+--- ld/x86_aout.h~	2003-01-28 17:17:14.000000000 -0500
++++ ld/x86_aout.h	2008-08-02 17:40:03.000000000 -0400
+@@ -12,6 +12,9 @@
+ #if defined(i386) || defined(__BCC__) || defined(MSDOS)
+ typedef long Long;
+ #define __OUT_OK 1
++#elif defined(_LP64)
++typedef int Long;
++#define __OUT_OK 1
+ #else
+ typedef char Long[4];
+ #endif
+@@ -77,7 +80,7 @@ struct	exec {			/* a.out header */
+ #endif
+ 
+ struct reloc {
+-  long r_vaddr;			/* virtual address of reference */
++  Long r_vaddr;			/* virtual address of reference */
+   unsigned short r_symndx;	/* internal segnum or extern symbol num */
+   unsigned short r_type;	/* relocation type */
+ };
