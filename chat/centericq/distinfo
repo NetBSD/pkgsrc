@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.23 2007/07/19 00:43:40 lkundrak Exp $
+$NetBSD: distinfo,v 1.24 2008/08/02 20:26:21 dholland Exp $
 
 SHA1 (centericq-4.21.0.tar.bz2) = 26b07c4bdcbe8c6888ceab98140b33007bec8554
 RMD160 (centericq-4.21.0.tar.bz2) = 69207fcaf5c90b9ae4609221526b839659c5ccfc
@@ -29,3 +29,7 @@ SHA1 (patch-aw) = 20b682ce67e9d026a1253e2ce7546eea1d924282
 SHA1 (patch-ax) = a96edcc859b30fde6e6577a833005fab8d45eabf
 SHA1 (patch-ay) = 46ca8c7a9828c471aa760089f2271f21c9cf0ce6
 SHA1 (patch-az) = 4542871c64fffb311cc464bc0b25fb59ef2db3b3
+SHA1 (patch-ba) = 5535fde395fe6e77e8e8ed5f81e38e0db302c09d
+SHA1 (patch-bb) = b47e899ba23e06817afffe42d51a52025ebded13
+SHA1 (patch-bc) = 2aecc91589d53bd9a5a4331a4702b6485788f674
+SHA1 (patch-bd) = abb61646b41fed2d6bfcf28f1de0f0466569607e
