@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7448 2008/08/02 20:02:19 wiz Exp $
+$NetBSD: TODO,v 1.7449 2008/08/03 05:08:21 bjs Exp $
 
 Suggested new packages
 ======================
@@ -826,7 +826,6 @@ Suggested package updates
 	o libdvbpsi-0.1.6
 	o libevent-1.4.4 [pkg/39069]
 	o libenevt-1.4.5
-	o libextractor-0.5.20c
 	o libflash-0.4.13
 	o libgda-3.1.4
 	o libggi-2.2.2
