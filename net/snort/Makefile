@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2008/06/11 13:00:56 adrianp Exp $
+# $NetBSD: Makefile,v 1.39 2008/08/03 19:30:16 adrianp Exp $
 #
 
-DISTNAME=		snort-2.8.1
+DISTNAME=		snort-2.8.2.2
 CATEGORIES=		net security
 MASTER_SITES=		http://www.snort.org/dl/current/ \
 			http://www.snort.org/dl/old/
@@ -29,6 +29,7 @@ PKG_GROUPS_VARS+=	SNORT_GROUP
 PKG_USERS_VARS+=	SNORT_USER
 FILES_SUBST+=		SNORT_USER=${SNORT_USER:Q} SNORT_GROUP=${SNORT_GROUP:Q}
 BUILD_DEFS+=		VARBASE
+MAKE_JOBS_SAFE=		NO
 OWN_DIRS_PERMS=		${VARBASE}/log/snort ${SNORT_USER} ${SNORT_GROUP} 700
 DOC_FILES=		BUGS INSTALL NEWS PROBLEMS README TODO USAGE WISHLIST
 
@@ -55,6 +56,12 @@ SUBST_FILES.paths=	etc/snort.conf src/snort.c
 SUBST_SED.paths=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_SED.paths+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.paths=	Fixing paths.
+
+SUBST_CLASSES+=		installp
+SUBST_STAGE.installp=	post-extract
+SUBST_FILES.installp=	src/dynamic-preprocessors/ssl/Makefile.in
+SUBST_SED.installp=	-e "s|@INSTALL@|${INSTALL} -c|g"
+SUBST_MESSAGE.installp=	Fixing INSTALL options.
 
 SUBST_CLASSES+=		install
 SUBST_STAGE.install=	post-configure

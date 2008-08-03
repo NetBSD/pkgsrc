@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2008/05/25 23:49:07 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.28 2008/08/03 19:30:16 adrianp Exp $
 bin/snort
 lib/snort_dynamicengine/libsf_engine.la
 lib/snort_dynamicrules/lib_sfdynamic_example_rule.la
@@ -31,6 +31,7 @@ share/doc/snort/README.asn1
 share/doc/snort/README.csv
 share/doc/snort/README.database
 share/doc/snort/README.dcerpc
+share/doc/snort/README.decoder_preproc_rules
 share/doc/snort/README.decode
 share/doc/snort/README.dns
 share/doc/snort/README.event_queue
