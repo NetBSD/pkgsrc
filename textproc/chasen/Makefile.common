@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.8 2008/01/21 13:25:47 taca Exp $
+# $NetBSD: Makefile.common,v 1.9 2008/08/03 15:23:31 taca Exp $
 #
 
-CHASEN_VERSION=		2.4.2
+CHASEN_VERSION=		2.4.4
 
 .include "../../mk/bsd.prefs.mk"
 
