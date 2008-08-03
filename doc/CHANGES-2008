@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1786 2008/08/03 19:30:29 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1787 2008/08/03 21:38:28 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3012,3 +3012,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/bind9 to 9.4.2pl2 [adrianp 2008-08-03]
 	Updated net/bind95 to 9.5.0pl2 [adrianp 2008-08-03]
 	Updated net/snort to 2.8.2.2 [adrianp 2008-08-03]
+	Updated security/p5-Net-SSLeay to 1.35 [he 2008-08-03]
+	Updated security/p5-IO-Socket-SSL to 1.14 [he 2008-08-03]
+	Updated graphics/p5-Image-Imlib2 to 2.01 [he 2008-08-03]
