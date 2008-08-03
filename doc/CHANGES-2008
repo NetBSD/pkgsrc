@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1780 2008/08/03 05:07:27 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1781 2008/08/03 09:21:08 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3004,3 +3004,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/cs4235 to 20001009nb1 [dholland 2008-08-02]
 	Updated mail/getmail to 4.8.2 [schmonz 2008-08-02]
 	Updated devel/libextractor to 0.5.20c [bjs 2008-08-03]
+	Updated net/youtube-dl to 20080726 [tnn 2008-08-03]
