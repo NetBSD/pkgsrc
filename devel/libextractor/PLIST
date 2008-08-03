@@ -1,14 +1,16 @@
-@comment $NetBSD: PLIST,v 1.11 2007/12/22 00:22:10 joerg Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/08/03 05:07:00 bjs Exp $
 bin/extract
 include/extractor.h
 info/extractor.info
 lib/libextractor.la
+lib/libextractor/libextractor_applefile.la
 lib/libextractor/libextractor_asf.la
 lib/libextractor/libextractor_deb.la
 lib/libextractor/libextractor_dvi.la
 lib/libextractor/libextractor_elf.la
 lib/libextractor/libextractor_exiv2.la
 lib/libextractor/libextractor_filename.la
+lib/libextractor/libextractor_flv.la
 lib/libextractor/libextractor_gif.la
 lib/libextractor/libextractor_hash_md5.la
 lib/libextractor/libextractor_hash_rmd160.la
@@ -60,6 +62,7 @@ man/man1/extract.1
 man/man3/libextractor.3
 share/locale/de/LC_MESSAGES/libextractor.mo
 share/locale/ga/LC_MESSAGES/libextractor.mo
+share/locale/nl/LC_MESSAGES/libextractor.mo
 share/locale/ro/LC_MESSAGES/libextractor.mo
 share/locale/rw/LC_MESSAGES/libextractor.mo
 share/locale/sv/LC_MESSAGES/libextractor.mo
