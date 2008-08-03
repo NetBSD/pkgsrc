@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2005/03/14 15:46:47 wiz Exp $
+$NetBSD: distinfo,v 1.5 2008/08/03 21:07:21 he Exp $
 
-SHA1 (Image-Imlib2-1.04.tar.gz) = 2abf4cb04f60062c06c8f86dc981c89b253b60a3
-RMD160 (Image-Imlib2-1.04.tar.gz) = f1af86da36fb1c39b2fa8c5432570f4a292ffb5f
-Size (Image-Imlib2-1.04.tar.gz) = 16736 bytes
+SHA1 (Image-Imlib2-2.01.tar.gz) = 3d1529c188ca11e85649938ad63520118efc56f7
+RMD160 (Image-Imlib2-2.01.tar.gz) = f771cb1da69090f2428c77001fa99dec956e98af
+Size (Image-Imlib2-2.01.tar.gz) = 30239 bytes
