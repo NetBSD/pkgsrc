@@ -1,5 +1,5 @@
 #!/usr/bin/awk -f
-# $NetBSD: genreadme.awk,v 1.32 2008/04/18 14:26:37 joerg Exp $
+# $NetBSD: genreadme.awk,v 1.33 2008/08/03 16:24:53 tnn Exp $
 #
 # Copyright (c) 2002, 2003, 2005, 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -660,12 +660,12 @@ function find_all_depends(pkg, type, pkgreg, i, deps, depdir, topdep){
 # we'll distinguish things like gnome from gnome-libs
 #
 function reg2str(reg){
-	gsub(/\./, "\\\.", reg);
-	gsub(/\+/, "\\\+", reg);
-	gsub(/\*/, "\\\*", reg);
-	gsub(/\?/, "\\\?", reg);
-	gsub(/\[/, "\\\[", reg);
-	gsub(/\]/, "\\\]", reg);
+	gsub(/\./, "\\.", reg);
+	gsub(/\+/, "\\+", reg);
+	gsub(/\*/, "\\*", reg);
+	gsub(/\?/, "\\?", reg);
+	gsub(/\[/, "\\[", reg);
+	gsub(/\]/, "\\]", reg);
 	reg = " "reg" ";
 	return(reg);
 }
@@ -677,8 +677,8 @@ function reg2str(reg){
 function glob2reg(reg){
 
 	# escape some characters which are special in regular expressions
-        gsub(/\./, "\\\.", reg);
-        gsub(/\+/, "\\\+", reg);
+        gsub(/\./, "\\.", reg);
+        gsub(/\+/, "\\+", reg);
 
 	# and reformat some others
         gsub(/\*/, ".*", reg);
