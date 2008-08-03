@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1784 2008/08/03 18:42:01 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1785 2008/08/03 18:42:45 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3010,3 +3010,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/chasen to 2.4.4 [taca 2008-08-03]
 	Updated www/plone3 to 3.1.4 [taca 2008-08-03]
 	Updated net/bind9 to 9.4.2pl2 [adrianp 2008-08-03]
+	Updated net/bind95 to 9.5.0pl2 [adrianp 2008-08-03]
