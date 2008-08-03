@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/07/17 14:20:57 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/08/03 15:33:18 taca Exp $
 ${PLONE_BASE}/ATContentTypes/AUTHORS.txt
 ${PLONE_BASE}/ATContentTypes/CHANGELOG.txt
 ${PLONE_BASE}/ATContentTypes/HISTORY.txt
@@ -6495,6 +6495,7 @@ ${PLONE_BASE}/kupu/cnf/include.kupu
 ${PLONE_BASE}/kupu/cnf/toolboxes.kupu
 ${PLONE_BASE}/kupu/cnf/wire.kupu
 ${PLONE_BASE}/kupu/cnf/xmlconfig.kupu
+${PLONE_BASE}/kupu/common/diff_match_patch.js
 ${PLONE_BASE}/kupu/common/fulldoc.html
 ${PLONE_BASE}/kupu/common/kupu-pox.cgi
 ${PLONE_BASE}/kupu/common/kupu.cgi
@@ -6711,6 +6712,7 @@ ${PLONE_BASE}/kupu/common/kupustart_form.js
 ${PLONE_BASE}/kupu/common/kupustart_multi.js
 ${PLONE_BASE}/kupu/common/kupustyles.css
 ${PLONE_BASE}/kupu/common/kuputoolcollapser.js
+${PLONE_BASE}/kupu/common/kupuundo.js
 ${PLONE_BASE}/kupu/common/sarissa.js
 ${PLONE_BASE}/kupu/common/sarissa_ieemu_xpath.js
 ${PLONE_BASE}/kupu/common/spellcheck.cgi
@@ -6731,6 +6733,7 @@ ${PLONE_BASE}/kupu/default/sourceedit.kupu
 ${PLONE_BASE}/kupu/default/spellchecker.kupu
 ${PLONE_BASE}/kupu/default/toolbar.kupu
 ${PLONE_BASE}/kupu/default/toolboxes.kupu
+${PLONE_BASE}/kupu/default/undo.kupu
 ${PLONE_BASE}/kupu/default/wire.kupu
 ${PLONE_BASE}/kupu/default/xmlconfig.kupu
 ${PLONE_BASE}/kupu/dist-apache-lenya.kupu
@@ -6752,6 +6755,7 @@ ${PLONE_BASE}/kupu/doc/INSTALL.txt
 ${PLONE_BASE}/kupu/doc/JSAPI.txt
 ${PLONE_BASE}/kupu/doc/LIBRARIES.txt
 ${PLONE_BASE}/kupu/doc/LICENSE.txt
+${PLONE_BASE}/kupu/doc/LICENSE_DIFFMATCHPATCH.txt
 ${PLONE_BASE}/kupu/doc/OLDBROWSERS.txt
 ${PLONE_BASE}/kupu/doc/PLONE2.txt
 ${PLONE_BASE}/kupu/doc/README.txt
@@ -7102,6 +7106,8 @@ ${PLONE_BASE}/kupu/plone/tests/input/minimal.in
 ${PLONE_BASE}/kupu/plone/tests/input/notcaptioned.in
 ${PLONE_BASE}/kupu/plone/tests/input/notquoted.in
 ${PLONE_BASE}/kupu/plone/tests/input/simple.in
+${PLONE_BASE}/kupu/plone/tests/input/umlauts.in
+${PLONE_BASE}/kupu/plone/tests/input/umlauts2.in
 ${PLONE_BASE}/kupu/plone/tests/kuputestcase.py
 ${PLONE_BASE}/kupu/plone/tests/kuputestcase.pyc
 ${PLONE_BASE}/kupu/plone/tests/output/baduid.out
@@ -7110,6 +7116,8 @@ ${PLONE_BASE}/kupu/plone/tests/output/minimal.out
 ${PLONE_BASE}/kupu/plone/tests/output/notcaptioned.out
 ${PLONE_BASE}/kupu/plone/tests/output/notquoted.out
 ${PLONE_BASE}/kupu/plone/tests/output/simple.out
+${PLONE_BASE}/kupu/plone/tests/output/umlauts.out
+${PLONE_BASE}/kupu/plone/tests/output/umlauts2.out
 ${PLONE_BASE}/kupu/plone/tests/runalltests.py
 ${PLONE_BASE}/kupu/plone/tests/runalltests.pyc
 ${PLONE_BASE}/kupu/plone/tests/runme.cmd
@@ -7129,6 +7137,7 @@ ${PLONE_BASE}/kupu/plone/tests/test_resourcetypemapper.py
 ${PLONE_BASE}/kupu/plone/tests/test_resourcetypemapper.pyc
 ${PLONE_BASE}/kupu/plone/tests/test_urls.py
 ${PLONE_BASE}/kupu/plone/tests/test_urls.pyc
+${PLONE_BASE}/kupu/plone/tests/umlauts-testdata.txt
 ${PLONE_BASE}/kupu/plone/toolbar.kupu
 ${PLONE_BASE}/kupu/plone/util.py
 ${PLONE_BASE}/kupu/plone/util.pyc
@@ -7176,6 +7185,7 @@ ${PLONE_BASE}/kupu/widgeteer/kupuinit.js
 ${PLONE_BASE}/kupu/widgeteer/kupustart.js
 ${PLONE_BASE}/kupu/widgeteer/kupustyles.css
 ${PLONE_BASE}/kupu/widgeteer/make.bat
+${PLONE_BASE}/kupu/widgeteer/popups.kupu
 ${PLONE_BASE}/kupu/widgeteer/wire.kupu
 ${PLONE_BASE}/kupu/widgeteer/xmlconfig.kupu
 ${PLONE_BASE}/kupu/zope2/__init__.py
