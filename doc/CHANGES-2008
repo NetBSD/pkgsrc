@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1781 2008/08/03 09:21:08 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.1782 2008/08/03 15:26:55 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3005,3 +3005,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/getmail to 4.8.2 [schmonz 2008-08-02]
 	Updated devel/libextractor to 0.5.20c [bjs 2008-08-03]
 	Updated net/youtube-dl to 20080726 [tnn 2008-08-03]
+	Updated devel/darts to 0.32 [taca 2008-08-03]
+	Updated textproc/chasen-base to 2.4.4 [taca 2008-08-03]
+	Updated textproc/chasen to 2.4.4 [taca 2008-08-03]
