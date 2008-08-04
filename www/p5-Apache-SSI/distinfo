@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2008/07/22 22:23:55 he Exp $
+$NetBSD: distinfo,v 1.4 2008/08/04 21:02:44 he Exp $
 
 SHA1 (Apache-SSI-2.19.tar.gz) = c24eeb002586be0d2ef3609a218f634b1759a5fd
 RMD160 (Apache-SSI-2.19.tar.gz) = 929371ed38cb3d0aeeb16a86462e0a4c4820a522
 Size (Apache-SSI-2.19.tar.gz) = 26881 bytes
-SHA1 (patch-aa) = b526801d502ebb6bda48b03d41a5b74f7c5b0051
+SHA1 (patch-aa) = 1839fd553fd6a8cdffc930cc7de86c8286bc86b2
