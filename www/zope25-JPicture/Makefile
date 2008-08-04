@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2006/10/04 22:04:11 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/08/04 09:28:31 obache Exp $
 
 DISTNAME=	JPicture-2_0
 PKGREVISION=	3
 PKGNAME=	zope25-JPicture-2.0
 CATEGORIES=	www
-MASTER_SITES=	http://www.dataflake.org/old_stuff/jpicture/jpicture_2.0
+MASTER_SITES=	http://www.dataflake.org/old_stuff/jpicture/jpicture_2.0/${DISTNAME}${EXTRACT_SUFX}/download?file=/
 EXTRACT_SUFX=	.tgz
 
 BUILDLINK_API_DEPENDS.pyimaging+=	${PYPKGPREFIX}-imaging>=1.1.3

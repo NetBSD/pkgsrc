@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2006/03/04 21:31:05 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2008/08/04 09:28:31 obache Exp $
 
 DISTNAME=	ExternalEditor-0.7
 PKGNAME=	zope25-ExternalEditor-0.7
 CATEGORIES=	www
-MASTER_SITES=	http://www.zope.org/Members/Caseman/ExternalEditor/
+MASTER_SITES=	http://www.zope.org/Members/Caseman/ExternalEditor/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
