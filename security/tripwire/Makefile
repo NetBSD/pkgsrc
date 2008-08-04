@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.28 2008/05/26 02:13:23 joerg Exp $
+# $NetBSD: Makefile,v 1.29 2008/08/04 08:37:06 obache Exp $
 #
 
 DISTNAME=	tripwire-1.2
 PKGREVISION=	3
 CATEGORIES=	security
-MASTER_SITES=	ftp://ftp.fu-berlin.de/unix/security/tripwire/old/
+MASTER_SITES=	http://www.mirrors.wiretapped.net/security/host-intrusion-detection/tripwire/old/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.cerias.purdue.edu/about/history/coast/coast-library.html
