@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.12 2006/03/04 21:31:06 jlam Exp $
+# $NetBSD: Makefile,v 1.13 2008/08/04 09:28:31 obache Exp $
 
 DISTNAME=	XMLWidgets-0.8.5
 PKGNAME=	zope25-XMLWidgets-0.8.5
 PKGREVISION=	2
 CATEGORIES=	www
-MASTER_SITES=	http://www.zope.org/Members/faassen/XMLWidgets/
+MASTER_SITES=	http://www.zope.org/Members/faassen/XMLWidgets/${PKGVERSION_NOREV}/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
