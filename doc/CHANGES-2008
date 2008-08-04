@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1789 2008/08/04 15:11:29 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1790 2008/08/04 15:24:27 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3017,3 +3017,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/p5-Image-Imlib2 to 2.01 [he 2008-08-03]
 	Updated emulators/ia64sim to 0.5 [obache 2008-08-04]
 	Updated devel/p5-Class-MOP to 0.64 [seb 2008-08-04]
+	Updated devel/p5-Moose to 0.55 [seb 2008-08-04]
