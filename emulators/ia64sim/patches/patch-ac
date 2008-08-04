@@ -1,22 +1,22 @@
-$NetBSD: patch-ac,v 1.1 1999/12/10 13:55:15 soren Exp $
+$NetBSD: patch-ac,v 1.2 2008/08/04 08:04:30 obache Exp $
 
---- asm/assemble.c.orig	Fri Dec 10 14:50:49 1999
-+++ asm/assemble.c	Fri Dec 10 14:50:58 1999
-@@ -280,7 +280,7 @@
-             break;
+--- asm/assemble.c.orig	2000-02-14 21:06:29.000000000 +0000
++++ asm/assemble.c
+@@ -282,7 +282,7 @@ uint32 parse_operands(char *input, char 
  
           case 'i':                                   /* signed immediate */
--            imm = strtoll(inptr, &throwaway, 0);
-+            imm = strtoq(inptr, &throwaway, 0);
-             if( isdigit(refptr[3]) )
-                maxbits = (refptr[2]-'0')*10 + (refptr[3]-'0');
+             if(!isalpha(inptr[0]))
+-              imm = strtoll(inptr, &throwaway, 0);
++              imm = strtoq(inptr, &throwaway, 0);
              else
-@@ -294,7 +294,7 @@
-             break;
+               imm = get_symbol_value(inptr);  
+             if( isdigit(refptr[3]) )
+@@ -299,7 +299,7 @@ uint32 parse_operands(char *input, char 
  
           case 'u':                                 /* unsigned immediate */
--            imm = strtoll(inptr, &throwaway, 0);
-+            imm = strtoq(inptr, &throwaway, 0);
+             if(!isalpha(inptr[0]))
+-              imm = strtoll(inptr, &throwaway, 0);
++              imm = strtoq(inptr, &throwaway, 0);
+             else
+               imm = get_symbol_value(inptr);  
              maxbits = (refptr[2]-'0');
- 	    if(maxbits==6)
- 	       index = 65;	      /* <-- some ops need 1-64, not 0-63 */
