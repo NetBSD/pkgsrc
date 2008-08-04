@@ -1,0 +1,31 @@
+$NetBSD $
+
+--- src/netstatus-iface.c.orig	2007-02-13 10:39:19.000000000 +0100
++++ src/netstatus-iface.c
+@@ -1121,12 +1121,6 @@ netstatus_iface_get_device_details (Nets
+   return TRUE;
+ }
+ 
+-#if !defined(HAVE_SOCKADDR_SA_LEN)
+-#define NETSTATUS_SA_LEN(saddr) (sizeof (struct sockaddr))
+-#else
+-#define NETSTATUS_SA_LEN(saddr) (MAX ((saddr)->sa_len, sizeof (struct sockaddr)))
+-#endif /* HAVE_SOCKADDR_SA_LEN */
+-
+ /* Taken From R. Stevens Unix Network Programming Vol. 1.
+  *
+  * SIOCGIFCONF does not return an error on all systems if
+@@ -1220,7 +1214,12 @@ netstatus_list_interface_names (GError *
+       struct ifreq *if_req = (struct ifreq *) p;
+       gboolean      loopback = FALSE;
+ 
+-      p += sizeof (if_req->ifr_name) + NETSTATUS_SA_LEN (&if_req->ifr_addr);
++#ifdef HAVE_SOCKADDR_SA_LEN
++      if (if_req->ifr_addr.sa_len > sizeof(if_req->ifr_ifru))
++        p += offsetof(struct ifreq, ifr_ifru) + if_req->ifr_addr.sa_len;
++      else
++#endif /* HAVE_SOCKADDR_SA_LEN */
++        p += sizeof (*if_req);
+ 
+       if (ioctl (fd, SIOCGIFFLAGS, if_req) < 0)
+ 	{
