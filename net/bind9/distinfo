@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.37 2008/07/10 21:05:30 adrianp Exp $
+$NetBSD: distinfo,v 1.37.4.1 2008/08/04 08:20:37 rtr Exp $
 
-SHA1 (bind-9.4.2-P1.tar.gz) = 71421abc311fbbd6cc9fa7d4400dff4d82a0a6a8
-RMD160 (bind-9.4.2-P1.tar.gz) = 9771d109aaa7c340bc1af280a8ab713892604ba1
-Size (bind-9.4.2-P1.tar.gz) = 6451654 bytes
+SHA1 (bind-9.4.2-P2.tar.gz) = e6aebf6e73dfd4d8ccae397bc5cafaa17fbc5ce4
+RMD160 (bind-9.4.2-P2.tar.gz) = c0934436914cbc0963298cec326fe14a73130873
+Size (bind-9.4.2-P2.tar.gz) = 6456550 bytes
 SHA1 (patch-ab) = dd12c457791a75a8b43d9dfd0c0b236dcdbe31a5
 SHA1 (patch-ac) = 4df1ece91d59b2b36fc7a4316604f1c112cf70ba
 SHA1 (patch-ad) = 0851864c896c2f0eb63cb58da39e12cfa89f1b7c
