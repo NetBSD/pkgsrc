@@ -1,10 +1,13 @@
-# $NetBSD: Makefile,v 1.13 2008/06/20 01:09:17 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2008/08/04 21:34:39 bjs Exp $
 #
 
-DISTNAME=	beaver-0.2.6
-PKGREVISION=	5
+DISTNAME=	beaver${BEAVER_VERSION:S/./_/g}
+PKGNAME=	beaver-${BEAVER_VERSION}
 CATEGORIES=	editors
-MASTER_SITES=	http://savannah.nongnu.org/download/beaver/
+MASTER_SITES=	http://download.savannah.gnu.org/releases/beaver/0.3.0.1%20-%202008.06.26/
+EXTRACT_SUFX=	.tgz
+
+BEAVER_VERSION=	0.3.0.1
 
 MAINTAINER=	vincent.derrien@ahoup.net
 HOMEPAGE=	http://www.nongnu.org/beaver/
@@ -12,10 +15,19 @@ COMMENT=	Lightweight GTK+ text editor with syntax highlighting
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/src
-USE_DIRS+=	xdg-1.1
+BUILD_DIRS=	src
+USE_DIRS+=	xdg-1.4
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/pixmaps
+SUBST_CLASSES+=		iconpath
+SUBST_FILES.iconpath=	beaver.desktop src/interface.c
+SUBST_MESSAGE.iconpath=	Substituting hard-coded pathnames.
+SUBST_STAGE.iconpath=	pre-build
+SUBST_SED.iconpath=	-e 's,Icon=,&${PREFIX}/share/pixmaps/beaver/,'
+SUBST_VARS.iconpath=	PREFIX
 
-.include "../../x11/gtk/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+
 .include "../../mk/bsd.pkg.mk"
