@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.50 2007/12/24 10:18:22 apb Exp $
+# $NetBSD: Makefile,v 1.51 2008/08/04 06:55:39 obache Exp $
 #
 
 DISTNAME=		qemu-0.9.0
 PKGREVISION=		1
 CATEGORIES=		emulators
-MASTER_SITES=		http://fabrice.bellard.free.fr/qemu/
+MASTER_SITES=		http://bellard.org/qemu/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.qemu.org/
+HOMEPAGE=		http://bellard.org/qemu/
 COMMENT=		CPU emulator using dynamic translation
 
 PKG_DESTDIR_SUPPORT=	user-destdir
