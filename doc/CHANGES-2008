@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1787 2008/08/03 21:38:28 he Exp $
+$NetBSD: CHANGES-2008,v 1.1788 2008/08/04 08:04:50 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3015,3 +3015,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/p5-Net-SSLeay to 1.35 [he 2008-08-03]
 	Updated security/p5-IO-Socket-SSL to 1.14 [he 2008-08-03]
 	Updated graphics/p5-Image-Imlib2 to 2.01 [he 2008-08-03]
+	Updated emulators/ia64sim to 0.5 [obache 2008-08-04]
