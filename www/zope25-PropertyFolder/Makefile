@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2007/11/22 10:04:45 rillig Exp $
+# $NetBSD: Makefile,v 1.13 2008/08/04 09:28:31 obache Exp $
 
 DISTNAME=	PropertyFolder-1.3.3
 PKGNAME=	zope25-PropertyFolder-1.3.3
 CATEGORIES=	www
-MASTER_SITES=	http://www.zope.org/Members/mjablonski/PropertyFolder/
+MASTER_SITES=	http://www.zope.org/Members/mjablonski/PropertyFolder/${PKGVERSION_NOREV}/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.zope.org/Members/mjablonski/PropertyFolder
