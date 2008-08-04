@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2008/08/04 08:04:30 obache Exp $
+
+--- asm/bundle.c.orig	2000-02-19 06:53:57.000000000 +0000
++++ asm/bundle.c
+@@ -308,7 +308,7 @@ uint32 bundle_from_file( bundle *vliw, F
+                       BITS(window[maxindex[i]],13,32) <<4;
+            iprel -= seg_tbl[0].seg_length;
+            iprel >>=4;
+-           window[maxindex[i]].q &= 0x1ee00001fff;
++           window[maxindex[i]].q &= UINT64_C(0x1ee00001fff);
+            window[maxindex[i]].q |= (((iprel & 0xfffff)<< 13) |
+                                    (((iprel >> 20) & 1) << 36)) ;
+            
