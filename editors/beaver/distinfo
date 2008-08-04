@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.3 2008/06/20 01:09:17 joerg Exp $
+$NetBSD: distinfo,v 1.4 2008/08/04 21:34:39 bjs Exp $
 
-SHA1 (beaver-0.2.6.tar.gz) = 608231b84871d26133eb8c20b3ce0ec6b754434c
-RMD160 (beaver-0.2.6.tar.gz) = 1db93234f9b47c10667b16f26a8d1d61f6c8d8f0
-Size (beaver-0.2.6.tar.gz) = 133938 bytes
-SHA1 (patch-aa) = ffe1817995d7e14e7137b59f5ea520a52cc5a77e
+SHA1 (beaver0_3_0_1.tgz) = 7df51cd68367ad0f02d472647e5df23a32108f78
+RMD160 (beaver0_3_0_1.tgz) = 58b8d48340e3aee5a0ce980d74e339b12e1f9189
+Size (beaver0_3_0_1.tgz) = 142255 bytes
+SHA1 (patch-aa) = d1704ecd08ca1839050dd4d623cbc86f3d0b10f8
+SHA1 (patch-ab) = e2ce6fd1166d052b09fb042a9fcc6d35a32613e3
