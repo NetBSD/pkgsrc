@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7450 2008/08/05 14:32:56 taca Exp $
+$NetBSD: TODO,v 1.7451 2008/08/05 22:41:39 he Exp $
 
 Suggested new packages
 ======================
@@ -977,8 +977,6 @@ Suggested package updates
 	o oroborus-2.0.18
 	o oto-0.5
 	o otpCalc-0.97
-	o p5-Array-Compare-1.16 [pkg/39226]
-	o p5-Asterisk-0.09
 	o p5-Authen-PAM-0.17
 	o p5-Authen-SASL-Cyrus-0.13
 	o p5-Compress-Zlib-2.012
@@ -987,12 +985,7 @@ Suggested package updates
 	o p5-DBD-mysql-4.007
 	o p5-DateTime-TimeZone-0.78
 	o p5-File-HomeDir-0.80 [pkg/39227]
-	o p5-File-Remove-1.42
-	o p5-FileHandle-Unget-0.1622
-	o p5-Filter-1.33
-	o p5-HTTP-Request-Form-0.952
 	o p5-HTTPD-User-Manage-1.62
-	o p5-IO-Socket-SSL-1.14
 	o p5-MARC-1.38
 	o p5-MIME-tools-5.427
 	o p5-Math-Random-0.69
@@ -1010,14 +1003,9 @@ Suggested package updates
 	o p5-Safe-Hole-0.10
 	o p5-Sendmail-AccessDB-0.09
 	o p5-Set-IntSpan-1.10
-	o p5-Set-Scalar-1.20
 	o p5-Term-Size-0.203
-	o p5-Test-ClassAPI-1.05
 	o p5-Test-Harness-2.64
-	o p5-Test-Unit-0.25
-	o p5-Text-Markdown-1.0.20
 	o p5-Text-Tabs+Wrap-2006.1117
-	o p5-glib2-1.183
 	o p5-gtk2-1.183
 	o p5-ispman-1.2
 	o p5-libwww-5.813 [pkg/39230]
