@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.23.2.4 2008/08/05 19:01:27 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.23.2.5 2008/08/05 19:09:35 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.15 1997/10/13 15:03:52 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.23.2.4 2008/08/05 19:01:27 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.23.2.5 2008/08/05 19:09:35 joerg Exp $");
 #endif
 #endif
 
@@ -171,18 +171,16 @@ undepend(const char *deppkgname, void *vp)
 static int
 unview(const char *pkgname)
 {
-	char  fname[MaxPathSize], ftmp[MaxPathSize];
+	const char *dbdir;
+	char *fname, *fname_tmp;
 	char  fbuf[MaxPathSize];
-	char  dbdir[MaxPathSize];
 	FILE *fp, *fpwr;
-	int  s;
+	int  rv;
 	int  cc;
 
-	(void) snprintf(dbdir, sizeof(dbdir), "%s", _pkgdb_getPKGDB_DIR());
+	dbdir = _pkgdb_getPKGDB_DIR();
 
-	/* Get the depot directory. */
-	(void) snprintf(fname, sizeof(fname), "%s/%s/%s",
-	    dbdir, pkgname, DEPOT_FNAME);
+	fname = pkgdb_pkg_file(pkgname, DEPOT_FNAME);
 	if ((fp = fopen(fname, "r")) == NULL) {
 		warnx("unable to open `%s' file", fname);
 		return -1;
@@ -190,33 +188,32 @@ unview(const char *pkgname)
 	if (fgets(fbuf, sizeof(fbuf), fp) == NULL) {
 		(void) fclose(fp);
 		warnx("empty depot file `%s'", fname);
+		free(fname);
 		return -1;
 	}
 	if (fbuf[cc = strlen(fbuf) - 1] == '\n') {
 		fbuf[cc] = 0;
 	}
 	fclose(fp);
+	free(fname);
 
 	/*
 	 * Copy the contents of the +VIEWS file into a temp file, but
 	 * skip copying the name of the current view's package dbdir.
 	 */
-	(void) snprintf(fname, sizeof(fname), "%s/%s", fbuf, VIEWS_FNAME);
+	fname = pkgdb_pkg_file(pkgname, VIEWS_FNAME);
+	fname_tmp = pkgdb_pkg_file(pkgname, VIEWS_FNAME_TMP);
 	if ((fp = fopen(fname, "r")) == NULL) {
 		warnx("unable to open `%s' file", fname);
+		free(fname);
+		free(fname_tmp);
 		return -1;
 	}
-	(void) snprintf(ftmp, sizeof(ftmp), "%s.XXXXXX", fname);
-	if ((s = mkstemp(ftmp)) == -1) {
+	if ((fpwr = fopen(fname_tmp, "w")) == NULL) {
 		(void) fclose(fp);
-		warnx("unable to open `%s' temp file", ftmp);
-		return -1;
-	}
-	if ((fpwr = fdopen(s, "w")) == NULL) {
-		(void) close(s);
-		(void) remove(ftmp);
-		(void) fclose(fp);
-		warnx("unable to fdopen `%s' temp file", ftmp);
+		warnx("unable to fopen `%s' temporary file", fname_tmp);
+		free(fname);
+		free(fname_tmp);
 		return -1;
 	}
 	while (fgets(fbuf, sizeof(fbuf), fp) != NULL) {
@@ -229,25 +226,24 @@ unview(const char *pkgname)
 		}
 	}
 	(void) fclose(fp);
-	if (fchmod(s, 0644) == FAIL) {
-		(void) fclose(fpwr);
-		(void) remove(ftmp);
-		warnx("unable to change permissions of `%s' temp file", ftmp);
-		return -1;
-	}
+
 	if (fclose(fpwr) == EOF) {
-		(void) remove(ftmp);
-		warnx("unable to close `%s' temp file", ftmp);
+		remove(fname_tmp);
+		warnx("unable to close `%s' temp file", fname_tmp);
+		free(fname);
+		free(fname_tmp);
 		return -1;
 	}
 
 	/* Rename the temp file to the +VIEWS file */
-	if (rename(ftmp, fname) == -1) {
-		(void) remove(ftmp);
-		warnx("unable to rename `%s' to `%s'", ftmp, fname);
-		return -1;
-	}
-	return 0;
+	if ((rv = rename(fname_tmp, fname)) == -1)
+		warnx("unable to rename `%s' to `%s'", fname_tmp, fname);
+
+	remove(fname_tmp);
+	free(fname);
+	free(fname_tmp);
+
+	return rv;
 }
 
 /*
