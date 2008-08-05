@@ -1,3 +1,5 @@
+/*	$NetBSD: fexec.c,v 1.9.8.3 2008/08/05 22:32:12 joerg Exp $	*/
+
 /*-
  * Copyright (c) 2003 The NetBSD Foundation, Inc.
  * All rights reserved.
@@ -58,7 +60,7 @@
 #include "lib.h"
 
 #ifndef lint
-__RCSID("$NetBSD: fexec.c,v 1.9.8.2 2008/08/02 20:33:50 joerg Exp $");
+__RCSID("$NetBSD: fexec.c,v 1.9.8.3 2008/08/05 22:32:12 joerg Exp $");
 #endif
 
 static int	vfcexec(const char *, int, const char *, va_list);
