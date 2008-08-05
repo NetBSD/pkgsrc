@@ -1,0 +1,57 @@
+$NetBSD: patch-ab,v 1.10 2008/08/05 20:36:42 tron Exp $
+
+--- src/common/util.c.orig	2008-02-24 02:59:48.000000000 +0000
++++ src/common/util.c	2008-08-05 21:23:28.000000000 +0100
+@@ -47,8 +47,16 @@
+ #define WANTSOCKET
+ #include "inet.h"
+ 
++#if defined(__NetBSD__) && (defined(__amd64__) || defined(__i386__))
++#define	USING_NETBSD	/**/
++#endif
++
+ #if defined (USING_FREEBSD) || defined (__APPLE__)
+ #include <sys/sysctl.h>
++#elif defined(USING_NETBSD)
++#define session NetBSD_session
++#include <sys/sysctl.h>
++#undef session
+ #endif
+ #ifdef SOCKS
+ #include <socks.h>
+@@ -510,7 +518,7 @@
+ 	return len;
+ }
+ 
+-#if defined (USING_LINUX) || defined (USING_FREEBSD) || defined (__APPLE__)
++#if defined (USING_LINUX) || defined (USING_FREEBSD) || defined (__APPLE__) || defined (USING_NETBSD)
+ 
+ static void
+ get_cpu_info (double *mhz, int *cpus)
+@@ -554,7 +562,7 @@
+ 		*cpus = 1;
+ 
+ #endif
+-#ifdef USING_FREEBSD
++#if defined(USING_FREEBSD) || defined (USING_NETBSD)
+ 
+ 	int mib[2], ncpu;
+ 	u_long freq;
+@@ -656,7 +664,7 @@
+ char *
+ get_cpu_str (void)
+ {
+-#if defined (USING_LINUX) || defined (USING_FREEBSD) || defined (__APPLE__)
++#if defined (USING_LINUX) || defined (USING_FREEBSD) || defined (__APPLE__) || defined (USING_NETBSD)
+ 	double mhz;
+ #endif
+ 	int cpus = 1;
+@@ -670,7 +678,7 @@
+ 
+ 	uname (&un);
+ 
+-#if defined (USING_LINUX) || defined (USING_FREEBSD) || defined (__APPLE__)
++#if defined (USING_LINUX) || defined (USING_FREEBSD) || defined (__APPLE__) || defined (USING_NETBSD)
+ 	get_cpu_info (&mhz, &cpus);
+ 	if (mhz)
+ 	{
