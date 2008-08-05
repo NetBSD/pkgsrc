@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2008/08/05 11:33:24 he Exp $
+
+From CPAN PR#7583.
+
+--- Form.pm.orig	2001-12-01 12:05:54.000000000 +0100
++++ Form.pm
+@@ -437,7 +437,7 @@ sub checkbox_ischecked {
+ 
+ sub is_checkbox {
+    my ($self, $name) = @_;
+-   if (defined($self->{'checkboxstate'}->($name))) {
++   if (defined($self->{'checkboxstate'}->{$name})) {
+       return 1;
+    } else {
+       return undef;
