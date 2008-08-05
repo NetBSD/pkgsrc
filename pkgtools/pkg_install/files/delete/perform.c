@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.23.2.1 2008/07/30 15:38:37 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.23.2.2 2008/08/05 18:31:06 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.15 1997/10/13 15:03:52 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.23.2.1 2008/07/30 15:38:37 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.23.2.2 2008/08/05 18:31:06 joerg Exp $");
 #endif
 #endif
 
@@ -287,38 +287,15 @@ require_delete(char *home, int tryall)
 		free(best_installed);
 		best_installed = NULL;
 		
-		/* go to the db dir */
-		if (chdir(pkgdir) == FAIL) {
-			warnx("unable to change directory to %s, deinstall failed (1)",
-			    pkgdir);
-			fail = 1;
-			break;
-		}
-
 		/* look to see if package was already deleted */
-		if (ispkgpattern(lpp->lp_name)) {
-
-			best_installed = find_best_matching_installed_pkg(lpp->lp_name);
-			if (best_installed == NULL) {
-				warnx("%s appears to have been deleted", lpp->lp_name);
-				continue;
-			}
-		} else {
-			if (!fexists(lpp->lp_name)) {
-				warnx("%s appears to have been deleted", lpp->lp_name);
-				continue;
-			}
-		}
-
-		/* return home for execution of command */
-		if (chdir(home) == FAIL) {
-			warnx("unable to change directory to %s, deinstall failed (2)", home);
-			fail = 1;
-			break;
+		best_installed = find_best_matching_installed_pkg(lpp->lp_name);
+		if (best_installed == NULL) {
+			warnx("%s appears to have been deleted", lpp->lp_name);
+			continue;
 		}
 
 		if (Verbose)
-			printf("deinstalling %s\n", best_installed ? best_installed : lpp->lp_name);
+			printf("deinstalling %s\n", best_installed);
 
 		/* delete the package */
 		if (Fake)
