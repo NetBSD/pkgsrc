@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.14 2008/08/02 20:33:50 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.15 2008/08/05 18:09:01 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.14 2008/08/02 20:33:50 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.15 2008/08/05 18:09:01 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -620,13 +620,13 @@ extract_files(struct pkg_task *pkg)
 		return -1;
 	}
 
-	if (chdir(pkg->install_prefix) == -1) {
-		warn("Can't change into prefix: %s", pkg->install_prefix);
+	if (!NoRecord && !pkgdb_open(ReadWrite)) {
+		warn("Can't open pkgdb for writing");
 		return -1;
 	}
 
-	if (!NoRecord && !pkgdb_open(ReadWrite)) {
-		warn("Can't open pkgdb for writing");
+	if (chdir(pkg->install_prefix) == -1) {
+		warn("Can't change into prefix: %s", pkg->install_prefix);
 		return -1;
 	}
 
