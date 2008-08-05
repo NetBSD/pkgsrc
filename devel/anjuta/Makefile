@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.62 2008/06/12 02:14:21 joerg Exp $
+# $NetBSD: Makefile,v 1.63 2008/08/05 18:54:29 drochner Exp $
 
-DISTNAME=	anjuta-2.2.3
-PKGREVISION=	2
+DISTNAME=	anjuta-2.4.2
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=anjuta/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/anjuta/2.4/}
+#MASTER_SITES+=	${MASTER_SITE_SOURCEFORGE:=anjuta/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -29,6 +29,8 @@ USE_TOOLS+=		gmake:run pkg-config:run msgfmt:run perl:run sh:run
 USE_TOOLS+=		bash:run
 GNU_CONFIGURE=		yes
 
+CONFIGURE_ARGS+=	--disable-plugin-valgrind
+
 SUBST_CLASSES+=		unused
 SUBST_STAGE.unused=	pre-configure
 SUBST_MESSAGE.unused=	Fixing __unused__ occurrances to avoid name clash
@@ -42,8 +44,19 @@ SUBST_FILES.unused+=	tagmanager/routines.c
 SUBST_SED.unused=	-e 's/__unused__/_exctags_unused_/g'
 
 REPLACE_SH+=		scripts/anjuta_import.sh.in
-REPLACE_PERL+=		plugins/tools/scripts/*.pl
+REPLACE_PERL+=		plugins/tools/scripts/*.pl scripts/*.pl
 REPLACE_BASH+=		global-tags/create_global_tags.sh.in
+
+GCONF_SCHEMAS+=	anjuta-build-basic-autotools-plugin.schemas
+GCONF_SCHEMAS+=	anjuta-cvs-plugin.schemas
+GCONF_SCHEMAS+=	anjuta-document-manager.schemas
+GCONF_SCHEMAS+=	anjuta-editor-scintilla.schemas
+GCONF_SCHEMAS+=	anjuta-editor-sourceview.schemas
+GCONF_SCHEMAS+=	anjuta-language-cpp-java.schemas
+GCONF_SCHEMAS+=	anjuta-message-manager-plugin.schemas
+GCONF_SCHEMAS+=	anjuta-symbol-browser-plugin.schemas
+GCONF_SCHEMAS+=	anjuta-terminal-plugin.schemas
+GCONF_SCHEMAS+=	anjuta.schemas
 
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.12.0
 
@@ -53,11 +66,12 @@ BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.12.0
 .include "../../devel/gnome-build/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pcre/buildlink3.mk"
+.include "../../devel/GConf/schemas.mk"
 .include "../../graphics/graphviz/buildlink3.mk"
 .include "../../print/libgnomeprintui/buildlink3.mk"
-.include "../../textproc/scrollkeeper/omf.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
-.include "../../x11/gtksourceview/buildlink3.mk"
+.include "../../x11/gtksourceview2/buildlink3.mk"
 .include "../../x11/vte/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
