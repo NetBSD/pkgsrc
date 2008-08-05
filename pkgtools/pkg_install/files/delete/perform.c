@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.23.2.3 2008/08/05 18:41:44 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.23.2.4 2008/08/05 19:01:27 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.15 1997/10/13 15:03:52 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.23.2.3 2008/08/05 18:41:44 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.23.2.4 2008/08/05 19:01:27 joerg Exp $");
 #endif
 #endif
 
@@ -119,32 +119,25 @@ cleanup(int sig)
 static int
 undepend(const char *deppkgname, void *vp)
 {
-	char   *pkg2delname = vp;
-	char    fname[MaxPathSize], ftmp[MaxPathSize];
-	char    fbuf[MaxPathSize];
-	FILE   *fp, *fpwr;
-	int     s;
+	char *fname, *fname_tmp;
+	char fbuf[MaxPathSize];
+	const char *pkg2delname = vp;
+	FILE *fp, *fpwr;
 
-	(void) snprintf(fname, sizeof(fname), "%s/%s/%s",
-	    _pkgdb_getPKGDB_DIR(), deppkgname, REQUIRED_BY_FNAME);
-	fp = fopen(fname, "r");
-	if (fp == NULL) {
+	fname = pkgdb_pkg_file(deppkgname, REQUIRED_BY_FNAME);
+	fname_tmp = pkgdb_pkg_file(deppkgname, REQUIRED_BY_FNAME_TMP);
+
+	if ((fp = fopen(fname, "r")) == NULL) {
 		warnx("couldn't open dependency file `%s'", fname);
+		free(fname);
+		free(fname_tmp);
 		return 0;
 	}
-	(void) snprintf(ftmp, sizeof(ftmp), "%s.XXXXXX", fname);
-	s = mkstemp(ftmp);
-	if (s == -1) {
+	if ((fpwr = fopen(fname_tmp, "w")) == NULL) {
 		fclose(fp);
-		warnx("couldn't open temp file `%s'", ftmp);
-		return 0;
-	}
-	fpwr = fdopen(s, "w");
-	if (fpwr == NULL) {
-		close(s);
-		fclose(fp);
-		warnx("couldn't fdopen temp file `%s'", ftmp);
-		remove(ftmp);
+		warnx("couldn't open temporary file `%s'", fname_tmp);
+		free(fname);
+		free(fname_tmp);
 		return 0;
 	}
 	while (fgets(fbuf, sizeof(fbuf), fp) != NULL) {
@@ -154,20 +147,19 @@ undepend(const char *deppkgname, void *vp)
 			fputs(fbuf, fpwr), putc('\n', fpwr);
 	}
 	(void) fclose(fp);
-	if (fchmod(s, 0644) == FAIL) {
-		warnx("error changing permission of temp file `%s'", ftmp);
-		fclose(fpwr);
-		remove(ftmp);
-		return 0;
-	}
 	if (fclose(fpwr) == EOF) {
-		warnx("error closing temp file `%s'", ftmp);
-		remove(ftmp);
+		warnx("error closing temporary file `%s'", fname_tmp);
+		remove(fname_tmp);
+		free(fname);
+		free(fname_tmp);
 		return 0;
 	}
-	if (rename(ftmp, fname) == -1)
-		warn("error renaming `%s' to `%s'", ftmp, fname);
-	remove(ftmp);		/* just in case */
+	if (rename(fname_tmp, fname) == -1)
+		warn("error renaming `%s' to `%s'", fname_tmp, fname);
+	remove(fname_tmp);	/* just in case */
+
+	free(fname);
+	free(fname_tmp);
 
 	return 0;
 }
