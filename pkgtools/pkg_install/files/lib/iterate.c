@@ -1,3 +1,5 @@
+/*	$NetBSD: iterate.c,v 1.5.4.2 2008/08/05 22:32:12 joerg Exp $	*/
+
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
  * All rights reserved.

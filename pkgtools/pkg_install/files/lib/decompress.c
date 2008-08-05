@@ -1,3 +1,5 @@
+/*	$NetBSD: decompress.c,v 1.1.4.2 2008/08/05 22:32:12 joerg Exp $	*/
+
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
  * All rights reserved.
@@ -37,7 +39,7 @@
 #include <sys/cdefs.h>
 #endif
 
-__RCSID("$NetBSD: decompress.c,v 1.1.4.1 2008/08/02 20:33:50 joerg Exp $");
+__RCSID("$NetBSD: decompress.c,v 1.1.4.2 2008/08/05 22:32:12 joerg Exp $");
 
 #ifdef BOOTSTRAP
 #include "lib.h"
