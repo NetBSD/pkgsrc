@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.104 2008/05/06 09:54:33 dillo Exp $
+# $NetBSD: Makefile,v 1.105 2008/08/05 08:55:27 dillo Exp $
 #
 
 COMMENT=	Archivers
@@ -67,7 +67,6 @@ SUBDIR+=	rzip
 SUBDIR+=	sarab
 SUBDIR+=	squsq
 SUBDIR+=	star
-SUBDIR+=	stuffit
 SUBDIR+=	szip
 SUBDIR+=	torrentzip
 SUBDIR+=	unace
