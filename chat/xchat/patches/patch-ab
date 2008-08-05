@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.10 2008/08/05 20:36:42 tron Exp $
+$NetBSD: patch-ab,v 1.11 2008/08/05 21:05:55 tron Exp $
 
 --- src/common/util.c.orig	2008-02-24 02:59:48.000000000 +0000
 +++ src/common/util.c	2008-08-05 21:23:28.000000000 +0100
@@ -6,7 +6,7 @@ $NetBSD: patch-ab,v 1.10 2008/08/05 20:36:42 tron Exp $
  #define WANTSOCKET
  #include "inet.h"
  
-+#if defined(__NetBSD__) && (defined(__amd64__) || defined(__i386__))
++#if defined(__NetBSD__)
 +#define	USING_NETBSD	/**/
 +#endif
 +
