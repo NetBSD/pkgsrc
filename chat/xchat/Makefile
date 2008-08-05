@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.57 2008/07/29 13:57:34 tron Exp $
+# $NetBSD: Makefile,v 1.58 2008/08/05 20:36:42 tron Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
 
+PKGREVISION=	1
 OWNER=		tron@NetBSD.org
 COMMENT=	X11 (X Window System) IRC client, using the GTK2 toolkit
 
