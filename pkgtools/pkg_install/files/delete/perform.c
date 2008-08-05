@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.23.2.8 2008/08/05 20:41:04 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.23.2.9 2008/08/05 22:25:54 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.15 1997/10/13 15:03:52 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.23.2.8 2008/08/05 20:41:04 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.23.2.9 2008/08/05 22:25:54 joerg Exp $");
 #endif
 #endif
 
@@ -740,7 +740,8 @@ pkg_do(char *pkg)
 			    "(arg: %s).\n", text, target);
 		} else {
 			pkgdir = xasprintf("%s/%s", _pkgdb_getPKGDB_DIR(), pkg);
-			(void) fexec(CHMOD_CMD, "+x", fname, NULL);	/* make sure */
+			if (chmod(fname, 0555))
+				warn("chmod of %s failed", fname);
 			if (fcexec(pkgdir, fname, pkg, target, NULL)) {
 				warnx("%s script returned error status", text);
 				if (!Force) {
@@ -804,7 +805,8 @@ pkg_do(char *pkg)
 				printf("Would execute post-de-install script at this point (arg: POST-DEINSTALL).\n");
 			else {
 				pkgdir = xasprintf("%s/%s", _pkgdb_getPKGDB_DIR(), pkg);
-				(void) fexec(CHMOD_CMD, "+x", fname, NULL);	/* make sure */
+				if (chmod(fname, 0555))
+					warn("chmod of %s failed", fname);
 				if (fcexec(pkgdir, fname, pkg, "POST-DEINSTALL", NULL)) {
 					warnx("post-deinstall script returned error status");
 					if (!Force) {
