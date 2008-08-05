@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.23.2.5 2008/08/05 19:09:35 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.23.2.6 2008/08/05 19:32:46 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.15 1997/10/13 15:03:52 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.23.2.5 2008/08/05 19:09:35 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.23.2.6 2008/08/05 19:32:46 joerg Exp $");
 #endif
 #endif
 
@@ -94,9 +94,13 @@ static lpkg_head_t lpfindq;
 static lpkg_head_t lpdelq;
 
 static void
-sanity_check(char *pkg)
+sanity_check(const char *pkg)
 {
-	if (!fexists(CONTENTS_FNAME)) {
+	char *fname;
+
+	fname = pkgdb_pkg_file(fname, CONTENTS_NAME);
+
+	if (!fexists(fname)) {
 		cleanup(0);
 		errx(2, "installed package %s has no %s file!",
 		     pkg, CONTENTS_FNAME);
@@ -319,8 +323,7 @@ require_delete(int tryall)
 int
 require_find_recursive_up(lpkg_t *thislpp)
 {
-	char pkgdir[MaxPathSize];
-
+	char *fname;
 	lpkg_head_t reqq;
 	lpkg_t *lpp = NULL;
 	FILE   *cfile;
@@ -334,25 +337,23 @@ require_find_recursive_up(lpkg_t *thislpp)
 
 	TAILQ_INIT(&reqq);
 
-	(void) snprintf(pkgdir, sizeof(pkgdir), "%s/%s",
-	    _pkgdb_getPKGDB_DIR(), thislpp->lp_name);
-
-	/* change to package's dir */
-	if (chdir(pkgdir) == FAIL) {
-		warnx("unable to change directory to %s! deinstall failed", pkgdir);
-		return (1);
-	}
+	fname = pkgdb_pkg_file(thislpp->lp_name, REQUIRED_BY_FNAME);
 
 	/* terminate recursion if no required by's */
-	if (isemptyfile(REQUIRED_BY_FNAME))
+	if (isemptyfile(fname)) {
+		free(fname);
 		return (0);
+	}
 
 	/* get packages that directly require us */
-	cfile = fopen(REQUIRED_BY_FNAME, "r");
+	cfile = fopen(fname, "r");
 	if (!cfile) {
-		warnx("cannot open requirements file `%s'", REQUIRED_BY_FNAME);
+		warnx("cannot open requirements file `%s'", fname);
+		free(fname);
 		return (1);
 	}
+	free(fname);
+	
 	while (fgets(linebuf, sizeof(linebuf), cfile)) {
 		if ((nl = strrchr(linebuf, '\n')))
 			*nl = 0;
@@ -439,6 +440,7 @@ require_find_recursive_down(lpkg_t *thislpp, package_t *plist)
 	while ((lpp = TAILQ_FIRST(&reqq))) {
 		FILE   *cfile;
 		package_t rPlist;
+		char *best_installed, *fname;
 
 		/* remove a direct req from our queue */
 		TAILQ_REMOVE(&reqq, lpp, lp_link);
@@ -448,40 +450,26 @@ require_find_recursive_down(lpkg_t *thislpp, package_t *plist)
 		rPlist.tail = NULL;
 
 		/* prepare for recursion */
-		chdir(_pkgdb_getPKGDB_DIR());
-		if (ispkgpattern(lpp->lp_name)) {
-			char *best_installed;
+		best_installed = find_best_matching_installed_pkg(lpp->lp_name);
 
-			best_installed = find_best_matching_installed_pkg(lpp->lp_name);
-
-			if (best_installed == NULL) {
-				warnx("cannot remove dependency for pkg-pattern %s", lpp->lp_name);
-				fail = 1;
-				goto fail; 
-			}
-			if (chdir(best_installed) == -1) {
-				warnx("can't chdir to %s", best_installed);
-				free(best_installed);
-				fail = 1;
-				goto fail;
-			}
-			sanity_check(best_installed);
-			free(best_installed);
-		} else {
-			if (chdir(lpp->lp_name) == -1) {
-				warnx("cannot remove dependency from %s", lpp->lp_name);
-				fail = 1;
-				goto fail; 
-			}
-			sanity_check(lpp->lp_name);
+		if (best_installed == NULL) {
+			warnx("cannot remove dependency for pkg-pattern %s",
+			    lpp->lp_name);
+			fail = 1;
+			goto fail; 
 		}
+		sanity_check(best_installed);
 
-		cfile = fopen(CONTENTS_FNAME, "r");
+		fname = pkgdb_pkg_file(best_installed, CONTENTS_FNAME);
+		free(best_installed);
+		cfile = fopen(fname, "r");
 		if (!cfile) {
-			warn("unable to open '%s' file", CONTENTS_FNAME);
+			warn("unable to open '%s' file", fname;
+			free(fname);
 			fail = 1;
 			goto fail;
 		}
+		free(fname);
 		read_plist(&rPlist, cfile);
 		fclose(cfile);
 		/* If we have a prefix, replace the first @cwd. */
