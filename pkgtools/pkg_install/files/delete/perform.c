@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.23.2.6 2008/08/05 19:32:46 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.23.2.7 2008/08/05 19:37:48 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.15 1997/10/13 15:03:52 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.23.2.6 2008/08/05 19:32:46 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.23.2.7 2008/08/05 19:37:48 joerg Exp $");
 #endif
 #endif
 
@@ -98,13 +98,15 @@ sanity_check(const char *pkg)
 {
 	char *fname;
 
-	fname = pkgdb_pkg_file(fname, CONTENTS_NAME);
+	fname = pkgdb_pkg_file(pkg, CONTENTS_FNAME);
 
 	if (!fexists(fname)) {
 		cleanup(0);
 		errx(2, "installed package %s has no %s file!",
 		     pkg, CONTENTS_FNAME);
 	}
+
+	free(fname);
 }
 
 void
@@ -464,7 +466,7 @@ require_find_recursive_down(lpkg_t *thislpp, package_t *plist)
 		free(best_installed);
 		cfile = fopen(fname, "r");
 		if (!cfile) {
-			warn("unable to open '%s' file", fname;
+			warn("unable to open '%s' file", fname);
 			free(fname);
 			fail = 1;
 			goto fail;
