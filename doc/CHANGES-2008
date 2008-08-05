@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1794 2008/08/05 19:06:24 he Exp $
+$NetBSD: CHANGES-2008,v 1.1795 2008/08/05 20:36:58 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3028,3 +3028,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-HTTP-Request-Form to 0.9.5.2 [he 2008-08-05]
 	Updated devel/p5-IO-Null to 1.01 [he 2008-08-05]
 	Updated mail/p5-Mail-ClamAV to 0.22 [he 2008-08-05]
+	Updated chat/xchat to 2.8.6nb1 [tron 2008-08-05]
