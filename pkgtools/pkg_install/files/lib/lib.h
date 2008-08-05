@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.42.2.11 2008/08/05 19:01:27 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.42.2.12 2008/08/05 19:09:35 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -122,6 +122,7 @@ enum {
 #define SIZE_ALL_FNAME		"+SIZE_ALL"
 #define PRESERVE_FNAME		"+PRESERVE"
 #define VIEWS_FNAME		"+VIEWS"
+#define VIEWS_FNAME_TMP		"+VIEWS.tmp"
 #define DEPOT_FNAME		"+DEPOT"
 
 /* The names of special variables */
