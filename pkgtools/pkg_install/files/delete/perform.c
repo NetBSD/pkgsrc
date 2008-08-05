@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.23.2.2 2008/08/05 18:31:06 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.23.2.3 2008/08/05 18:41:44 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.15 1997/10/13 15:03:52 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.23.2.2 2008/08/05 18:31:06 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.23.2.3 2008/08/05 18:41:44 joerg Exp $");
 #endif
 #endif
 
@@ -81,13 +81,12 @@ typedef enum {
 static int require_find_recursive_up(lpkg_t *);
 static int require_find_recursive_down(lpkg_t *, package_t *);
 static int require_find(char *, rec_find_t);
-static int require_delete(char *, int);
+static int require_delete(int);
 static void require_print(void);
 static int undepend(const char *, void *);
 
 static char LogDir[MaxPathSize];
 static char linebuf[MaxPathSize];
-static char pkgdir[MaxPathSize];
 
 static package_t Plist;
 
@@ -263,20 +262,12 @@ unview(const char *pkgname)
  * Delete from directory 'home' all packages on lpkg_list. 
  * If tryall is set, ignore errors from pkg_delete(1).
  */
-int
-require_delete(char *home, int tryall)
+static int
+require_delete(int tryall)
 {
 	char *best_installed;
 	lpkg_t *lpp;
 	int     rv, fail;
-	int     oldcwd;
-
-	/* save cwd */
-	oldcwd = open(".", O_RDONLY, 0);
-	if (oldcwd == -1)
-		err(EXIT_FAILURE, "cannot open \".\"");
-
-	(void) snprintf(pkgdir, sizeof(pkgdir), "%s", _pkgdb_getPKGDB_DIR());
 
 	best_installed = NULL;
 
@@ -310,12 +301,12 @@ require_delete(char *home, int tryall)
 					     NoDeleteFiles ? "-N" : "",
 					     CleanDirs ? "-d" : "",
 					     Fake ? "-n" : "",
-					     best_installed ? best_installed : lpp->lp_name, NULL);
+					     best_installed, NULL);
 
 		/* check for delete failure */
 		if (rv && !tryall) {
 			fail = 1;
-			warnx("had problem removing %s%s", best_installed?best_installed:lpp->lp_name,
+			warnx("had problem removing %s%s", best_installed,
 			    Force ? ", continuing" : "");
 			if (!Force)
 				break;
@@ -330,13 +321,6 @@ require_delete(char *home, int tryall)
 		free_lpkg(lpp);
 	}
 
-	/* return to the log dir */
-	if (fchdir(oldcwd) == FAIL) {
-		warnx("unable to change to previous directory, deinstall failed");
-		fail = 1;
-	}
-	close(oldcwd);
-
 	return (fail);
 }
 
@@ -347,6 +331,8 @@ require_delete(char *home, int tryall)
 int
 require_find_recursive_up(lpkg_t *thislpp)
 {
+	char pkgdir[MaxPathSize];
+
 	lpkg_head_t reqq;
 	lpkg_t *lpp = NULL;
 	FILE   *cfile;
@@ -686,7 +672,7 @@ pkg_do(char *pkg)
 			if (!Force)
 				return 1;
 		} else
-			require_delete(home, 0);
+			require_delete(0);
 	}
 	if (!isemptyfile(VIEWS_FNAME)) {
 		/* This package has instances in other views */
@@ -799,7 +785,7 @@ pkg_do(char *pkg)
 		if (require_find(pkg, FIND_DOWN))
 			return (1);
 
-		require_delete(home, 1);
+		require_delete(1);
 	}
 	if (!NoDeInstall && fexists(DEINSTALL_FNAME) && !fexists(DEPOT_FNAME)) {
 		if (Fake)
