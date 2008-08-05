@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.42.2.12 2008/08/05 19:09:35 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.42.2.13 2008/08/05 22:56:24 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -86,23 +86,16 @@
 #define DEF_UMASK 022
 #endif
 
-/* Usually "rm", but often "echo" during debugging! */
-#define REMOVE_CMD	"rm"
-
-/* Usually "rm", but often "echo" during debugging! */
-#define RMDIR_CMD	"rmdir"
-
-#ifndef CHMOD_CMD
-#define CHMOD_CMD "chmod"
-#endif
-
-/* some operating systems don't have this */
-#ifndef MAXPATHLEN
-#define MAXPATHLEN	1024
+#ifndef	PATH_MAX
+#  ifdef MAXPATHLEN
+#    define PATH_MAX	MAXPATHLEN
+#  else
+#    define PATH_MAX	1024
+#  endif
 #endif
 
 enum {
-	MaxPathSize = MAXPATHLEN
+	MaxPathSize = PATH_MAX
 };
 
 /* The names of our "special" files */
@@ -317,6 +310,8 @@ Boolean make_preserve_name(char *, size_t, char *, char *);
 void    remove_files(const char *, const char *);
 int     delete_hierarchy(char *, Boolean, Boolean);
 int     format_cmd(char *, size_t, const char *, const char *, const char *);
+
+int	recursive_remove(const char *, int);
 
 /* pkg_io.c: Local and remote archive handling */
 struct archive;

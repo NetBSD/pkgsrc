@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.16 2008/08/05 20:38:10 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.17 2008/08/05 22:56:24 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.16 2008/08/05 20:38:10 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.17 2008/08/05 22:56:24 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1327,7 +1327,8 @@ nuke_pkg:
 
 nuke_pkgdb:
 	if (!Fake) {
-		(void) fexec(REMOVE_CMD, "-fr", pkg->install_logdir, (void *)NULL);
+		if (recursive_remove(pkg->install_logdir, 1))
+			warn("Couldn't remove %s", pkg->install_logdir);
 		free(pkg->install_logdir);
 		free(pkg->logdir);
 		pkg->install_logdir = NULL;
@@ -1335,8 +1336,10 @@ nuke_pkgdb:
 	}
 
 clean_memory:
-	if (pkg->logdir != NULL && NoRecord && !Fake)
-		(void) fexec(REMOVE_CMD, "-fr", pkg->install_logdir, (void *)NULL);
+	if (pkg->logdir != NULL && NoRecord && !Fake) {
+		if (recursive_remove(pkg->install_logdir, 1))
+			warn("Couldn't remove %s", pkg->install_logdir);
+	}
 	free(pkg->install_prefix);
 	free(pkg->install_logdir);
 	free(pkg->logdir);
