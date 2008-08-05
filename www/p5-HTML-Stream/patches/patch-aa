@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2008/08/05 11:22:13 he Exp $
+
+--- t/02-OO_Tests.t.orig	2008-08-05 12:28:40.000000000 +0200
++++ t/02-OO_Tests.t
+@@ -43,7 +43,7 @@ is_deeply (\@tags, \@historic_tags, "Tag
+ # Skip tests if we can't run them.
+ SKIP : {
+ 	skip 'Test::Output is needed for OO tests to run.', 16
+-		unless eval { require 'Test::Output' };
++		unless ! eval { use Test::Output };
+ 
+ 	# Check that some of these tags actually work as expected...
+ 	stdout_is( sub { $HTML->ABBR }, "<ABBR>" );
