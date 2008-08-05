@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1793 2008/08/05 08:05:24 dillo Exp $
+$NetBSD: CHANGES-2008,v 1.1794 2008/08/05 19:06:24 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3022,3 +3022,9 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated converters/p5-JSON-XS to 2.22.22 [he 2008-08-03]
 	Updated editors/beaver to 0.3.0.1 [bjs 2008-08-05]
 	Removed archivers/stuffit [dillo 2008-08-05]
+	Updated devel/p5-FileHandle-Unget to 0.1622 [he 2008-08-05]
+	Added devel/p5-Test-Output version 0.10 [he 2008-08-05]
+	Updated www/p5-HTML-Stream to 1.59 [he 2008-08-05]
+	Updated www/p5-HTTP-Request-Form to 0.9.5.2 [he 2008-08-05]
+	Updated devel/p5-IO-Null to 1.01 [he 2008-08-05]
+	Updated mail/p5-Mail-ClamAV to 0.22 [he 2008-08-05]
