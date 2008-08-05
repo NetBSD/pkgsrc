@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2008/07/20 16:09:35 heinz Exp $
+# $NetBSD: Makefile,v 1.4 2008/08/05 11:22:13 he Exp $
 
-DISTNAME=	HTML-Stream-1.55
+DISTNAME=	HTML-Stream-1.59
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
