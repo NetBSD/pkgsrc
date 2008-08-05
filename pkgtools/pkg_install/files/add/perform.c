@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.15 2008/08/05 18:09:01 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.16 2008/08/05 20:38:10 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.15 2008/08/05 18:09:01 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.16 2008/08/05 20:38:10 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -866,31 +866,25 @@ run_install_script(struct pkg_task *pkg, const char *argument)
 	setenv(PKG_METADATA_DIR_VNAME, pkg->logdir, 1);
 	setenv(PKG_REFCOUNT_DBDIR_VNAME, pkgdb_refcount_dir(), 1);
 
-	filename = pkgdb_pkg_file(pkg->pkgname, INSTALL_FNAME);
 	if (Verbose)
 		printf("Running install with PRE-INSTALL for %s.\n", pkg->pkgname);
-	if (Fake) {
-		free(filename);
+	if (Fake)
 		return 0;
-	}
+
+	filename = pkgdb_pkg_file(pkg->pkgname, INSTALL_FNAME);
 
 	ret = 0;
-
-	if (chdir(pkg->install_logdir) == -1) {
-		warn("Can't change to %s", pkg->install_logdir);
-		ret = -1;
-	}
-
 	errno = 0;
-	if (ret == 0 && fexec(filename, pkg->pkgname, argument, (void *)NULL)) {
+	if (fcexec(pkg->install_logdir, filename, pkg->pkgname, argument,
+	    (void *)NULL)) {
 		if (errno != 0)
 			warn("exec of install script failed");
 		else
 			warnx("install script returned error status");
 		ret = -1;
 	}
-
 	free(filename);
+
 	return ret;
 }
 
