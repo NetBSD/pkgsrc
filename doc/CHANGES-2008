@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1791 2008/08/04 17:59:02 he Exp $
+$NetBSD: CHANGES-2008,v 1.1792 2008/08/05 00:52:49 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3020,3 +3020,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Moose to 0.55 [seb 2008-08-04]
 	Updated converters/p5-JSON-Any to 1.17 [he 2008-08-03]
 	Updated converters/p5-JSON-XS to 2.22.22 [he 2008-08-03]
+	Updated editors/beaver to 0.3.0.1 [bjs 2008-08-05]
