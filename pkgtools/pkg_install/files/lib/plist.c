@@ -1,4 +1,4 @@
-/*	$NetBSD: plist.c,v 1.17.4.6 2008/08/02 20:33:50 joerg Exp $	*/
+/*	$NetBSD: plist.c,v 1.17.4.7 2008/08/05 22:56:24 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: plist.c,v 1.24 1997/10/08 07:48:15 charnier Exp";
 #else
-__RCSID("$NetBSD: plist.c,v 1.17.4.6 2008/08/02 20:33:50 joerg Exp $");
+__RCSID("$NetBSD: plist.c,v 1.17.4.7 2008/08/05 22:56:24 joerg Exp $");
 #endif
 #endif
 
@@ -689,8 +689,10 @@ delete_hierarchy(char *dir, Boolean ign_err, Boolean nukedirs)
 			    isdir(dir) ? "directory" : "file", dir);
 		return !ign_err;
 	} else if (nukedirs) {
-		if (fexec_skipempty(REMOVE_CMD, "-r", ign_err ? "-f" : "", dir, NULL))
+		if (recursive_remove(dir, ign_err)) {
+			warn("Couldn't remove %s", dir);
 			return 1;
+		}
 	} else if (isdir(dir)) {
 		if (rmdir(dir) && !ign_err)
 			return 1;
