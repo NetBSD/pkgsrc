@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1798 2008/08/06 18:07:40 he Exp $
+$NetBSD: CHANGES-2008,v 1.1799 2008/08/06 22:59:03 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3035,3 +3035,9 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/py-mysqldb to 1.2.2 [mjl 2008-08-06]
 	Added devel/p5-Data-Compare version 1.19 [he 2008-08-05]
 	Added devel/p5-Module-Load version 0.12 [he 2008-08-05]
+	Updated devel/p5-Rose-Object to 0.85.3 [he 2008-08-05]
+	Updated devel/p5-Test-Differences to 0.48.01 [he 2008-08-05]
+	Updated www/p5-WWW-Facebook-API to 0.4.13 [he 2008-08-05]
+	Updated textproc/p5-XML-SAX to 0.96 [he 2008-08-05]
+	Updated graphics/p5-SWF-File to 0.42 [he 2008-08-05]
+	Updated devel/p5-Proc-ProcessTable to 0.44 [he 2008-08-05]
