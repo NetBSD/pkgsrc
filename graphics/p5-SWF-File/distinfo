@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 08:45:11 agc Exp $
+$NetBSD: distinfo,v 1.3 2008/08/06 21:52:44 he Exp $
 
-SHA1 (SWF-File-0.22.tar.gz) = 188dd01b83460c282f435b967d7929cb766a4aef
-RMD160 (SWF-File-0.22.tar.gz) = f57b28ec67d56eff9b18eef4920034838564d66b
-Size (SWF-File-0.22.tar.gz) = 43191 bytes
+SHA1 (SWF-File-0.42.tar.gz) = d858fdbc88faec640151e90918eb3a56754e092d
+RMD160 (SWF-File-0.42.tar.gz) = b863d6dffd87f7b0671b6091373f832b9dad120a
+Size (SWF-File-0.42.tar.gz) = 51153 bytes
