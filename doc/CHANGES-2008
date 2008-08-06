@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1796 2008/08/05 22:42:29 he Exp $
+$NetBSD: CHANGES-2008,v 1.1797 2008/08/06 17:17:56 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3032,3 +3032,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Array-Compare to 1.16 [he 2008-08-05]
 	Updated textproc/p5-Filter to 1.34 [he 2008-08-05]
 	Updated sysutils/p5-File-Remove to 1.42 [he 2008-08-05]
+	Updated databases/py-mysqldb to 1.2.2 [mjl 2008-08-06]
