@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2008/06/12 02:14:32 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2008/08/06 21:52:44 he Exp $
 #
 
-DISTNAME=	SWF-File-0.22
-PKGREVISION=	2
+DISTNAME=	SWF-File-0.42
 CATEGORIES=	graphics www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/Y/YS/YSAS/}
 
@@ -11,6 +10,7 @@ HOMEPAGE=	http://search.cpan.org/dist/SWF-File/
 COMMENT=	Manipulating Flash movie (SWF) files
 
 DEPENDS+=	p5-Data-TemporaryBag-[0-9]*:../../devel/p5-Data-TemporaryBag
+DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
