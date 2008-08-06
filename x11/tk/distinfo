@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.33 2008/07/20 23:35:20 dbj Exp $
+$NetBSD: distinfo,v 1.34 2008/08/06 04:09:12 dsainty Exp $
 
 SHA1 (tk8.4.18-src.tar.gz) = c1032f3cacd40406065fc1f46ecd217f50329273
 RMD160 (tk8.4.18-src.tar.gz) = 9c01ba85575a230231793a9885457c98046e41bb
@@ -7,3 +7,4 @@ SHA1 (patch-aa) = b729957a24ce2fb6f972bbb19af27bd7d41f1846
 SHA1 (patch-ab) = a5b2a508a114b5f4d033251231b396ed68f22995
 SHA1 (patch-ac) = 5ded83db659d8918710b4b96126d20bed9ce11b8
 SHA1 (patch-ad) = 14ad16e840a825e987721f23c6308c4a011dbe01
+SHA1 (patch-ae) = 7901a53b8f2742898f837d4587be03ef66912af4
