@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.435 2008/07/30 08:44:06 obache Exp $
+# $NetBSD: Makefile,v 1.436 2008/08/06 18:13:26 drochner Exp $
 #
 
 COMMENT=	System utilities
@@ -122,6 +122,7 @@ SUBDIR+=	gnometoaster
 SUBDIR+=	gpart
 SUBDIR+=	grub
 SUBDIR+=	grun
+SUBDIR+=	gst-plugins0.10-gio
 SUBDIR+=	gst-plugins0.10-gnomevfs
 SUBDIR+=	gst-plugins0.8-gnomevfs
 SUBDIR+=	gtk-send-pr
