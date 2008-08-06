@@ -1,0 +1,2 @@
+Module::Load allows for generic loading of modules and files. Simply
+give it the name of a module or file and it will Do What You Mean (tm).
