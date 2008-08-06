@@ -1,14 +1,15 @@
-# $NetBSD: Makefile,v 1.21 2007/02/22 19:01:26 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2008/08/06 21:23:23 he Exp $
 #
 
-DISTNAME=	Text-Template-1.44
+DISTNAME=	Text-Template-1.45
 PKGNAME=	p5-${DISTNAME}
 SVR4_PKGNAME=	p5tte
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Text/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://perl.plover.com/Template/
+HOMEPAGE=	http://search.cpan.org/dist/Text-Template/
+#HOMEPAGE=	http://perl.plover.com/Template/
 COMMENT=	Perl5 library for generating form letters
 
 PKG_DESTDIR_SUPPORT=	user-destdir
