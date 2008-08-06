@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.24 2008/06/12 02:14:20 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2008/08/06 17:16:49 mjl Exp $
 
-DISTNAME=	MySQL-python-0.9.2
-PKGNAME=	${PYPKGPREFIX}-mysqldb-0.9.2
-PKGREVISION=	3
+DISTNAME=	MySQL-python-${PKGVER}
+PKGNAME=	${PYPKGPREFIX}-mysqldb-${PKGVER}
+PKGVER=	1.2.2
+# PKGREVISION=	3
 CATEGORIES=	databases python
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mysql-python/}
 
@@ -13,22 +14,14 @@ COMMENT=	MySQL interface for Python
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
+PYBINMODULE=	yes
 PY_PATCHPLIST=	yes
+PYSETUPINSTALLARGS= --single-version-externally-managed --record plist.txt
+PLIST_SUBST+=   PYVERSSUFFIX=${PYVERSSUFFIX}
 
-PYTHON_VERSIONS_ACCEPTED=	25 24 23 21
+PYTHON_VERSIONS_ACCEPTED=	25 24 23
 
 .include "../../mk/mysql.buildlink3.mk"
+
 .include "../../lang/python/extension.mk"
-
-# To pickup python version info
-pre-configure:
-	${SED} -e "s|@MYSQLPREFIX@|${BUILDLINK_PREFIX.mysql-client}|" \
-		-e "s|@MYSQLRTPREFIX@|${BUILDLINK_PREFIX.mysql-client}|" \
-		<${WRKSRC}/setup.py >${WRKSRC}/setup.py.tmp
-.if ${PYPKGPREFIX:Mpy20} == "py20"
-	${SED} -e "s|platforms = .ALL.|#platforms = \"ALL\"|" <${WRKSRC}/setup.py.tmp > ${WRKSRC}/setup.py.tmp2
-	${MV} ${WRKSRC}/setup.py.tmp2 ${WRKSRC}/setup.py.tmp
-.endif
-	${MV} ${WRKSRC}/setup.py.tmp ${WRKSRC}/setup.py
-
 .include "../../mk/bsd.pkg.mk"
