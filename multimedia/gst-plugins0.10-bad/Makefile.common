@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.5 2008/05/14 18:32:04 drochner Exp $
+# $NetBSD: Makefile.common,v 1.6 2008/08/06 18:19:45 drochner Exp $
 #
 
 GST_PLUGINS0.10_TYPE=	bad
-GST_PLUGINS0.10_VER=	0.10.7
+GST_PLUGINS0.10_VER=	0.10.8
 
 # Disable all drivers and features by default.
 .for driver in	amrwb \
