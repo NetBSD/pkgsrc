@@ -1,4 +1,4 @@
-/*	$NetBSD: remove.c,v 1.1.2.1 2008/08/05 22:56:24 joerg Exp $	*/
+/*	$NetBSD: remove.c,v 1.1.2.2 2008/08/06 12:58:52 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -28,6 +28,18 @@
  * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
  * SUCH DAMAGE.
  */
+
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+
+#include <nbcompat.h>
+
+#if HAVE_SYS_CDEFS_H
+#include <sys/cdefs.h>
+#endif
+
+__RCSID("$NetBSD: remove.c,v 1.1.2.2 2008/08/06 12:58:52 joerg Exp $");
 
 #if HAVE_DIRENT_H
 #include <dirent.h>
