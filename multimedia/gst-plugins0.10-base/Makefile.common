@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.15 2008/07/15 10:09:40 drochner Exp $
+# $NetBSD: Makefile.common,v 1.16 2008/08/06 18:07:06 drochner Exp $
 #
 
 GST_PLUGINS0.10_TYPE=	base
@@ -9,6 +9,7 @@ BUILDLINK_API_DEPENDS.gstreamer0.10+= gstreamer0.10>=0.10.20
 .for driver in	alsa \
 		cdparanoia \
 		freetypetest \
+		gio \
 		gnome_vfs \
 		gst_v4l \
 		libvisual \
