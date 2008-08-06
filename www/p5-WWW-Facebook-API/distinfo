@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/09/07 15:28:34 abs Exp $
+$NetBSD: distinfo,v 1.2 2008/08/06 21:31:13 he Exp $
 
-SHA1 (WWW-Facebook-API-v0.4.7.tar.gz) = 36da0b670c3eb74f1acd922d9a5024075b97d56b
-RMD160 (WWW-Facebook-API-v0.4.7.tar.gz) = 2421443163e88e6817b78a22c38774eb63d79e93
-Size (WWW-Facebook-API-v0.4.7.tar.gz) = 45196 bytes
+SHA1 (WWW-Facebook-API-0.4.13.tar.gz) = 68ca86486d429deac83a9829b56b688f8390b149
+RMD160 (WWW-Facebook-API-0.4.13.tar.gz) = 548a08f914bf74661f9ad3e089ace5c5eee6ba54
+Size (WWW-Facebook-API-0.4.13.tar.gz) = 51478 bytes
