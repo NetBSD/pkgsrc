@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1806 2008/08/07 18:54:22 drochner Exp $
+$NetBSD: CHANGES-2008,v 1.1807 2008/08/07 20:54:01 cegger Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3065,3 +3065,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added sysutils/gst-plugins0.10-gio version 0.10.20 [drochner 2008-08-07]
 	Updated devel/anjuta to 2.4.2 [drochner 2008-08-07]
 	Updated wm/awesome to 2.3.3 [ahoka 2008-08-07]
+	Added sysutils/xentools33 version 18261 [cegger 2008-08-07]
+	Added sysutils/xenkernel33 version 18261 [cegger 2008-08-07]
