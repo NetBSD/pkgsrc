@@ -1,0 +1,15 @@
+$NetBSD: patch-dd,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- flask/loadpolicy/Makefile.orig	2008-08-01 16:38:07.000000000 +0200
++++ flask/loadpolicy/Makefile
+@@ -51,8 +51,8 @@ print-end:
+ 
+ .PHONY: install
+ install: all
+-	$(INSTALL_DIR) $(DESTDIR)$(SBINDIR)
+-	$(INSTALL_PROG) $(CLIENTS) $(DESTDIR)$(SBINDIR)
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(SBINDIR)
++	$(BSD_INSTALL_PROGRAM) $(CLIENTS) $(DESTDIR)$(SBINDIR)
+ 
+ -include $(PROG_DEP)
+ 

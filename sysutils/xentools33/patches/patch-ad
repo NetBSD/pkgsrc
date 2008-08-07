@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- console/Makefile.orig	2008-08-01 16:38:07.000000000 +0200
++++ console/Makefile
+@@ -29,7 +29,7 @@ xenconsole: $(patsubst %.c,%.o,$(wildcar
+ 
+ .PHONY: install
+ install: $(BIN)
+-	$(INSTALL_DIR) $(DESTDIR)/$(SBINDIR)
+-	$(INSTALL_PROG) xenconsoled $(DESTDIR)/$(SBINDIR)
+-	$(INSTALL_DIR) $(DESTDIR)$(PRIVATE_BINDIR)
+-	$(INSTALL_PROG) xenconsole $(DESTDIR)$(PRIVATE_BINDIR)
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)/$(SBINDIR)
++	$(BSD_INSTALL_PROGRAM) xenconsoled $(DESTDIR)/$(SBINDIR)
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(PRIVATE_BINDIR)
++	$(BSD_INSTALL_PROGRAM) xenconsole $(DESTDIR)$(PRIVATE_BINDIR)
