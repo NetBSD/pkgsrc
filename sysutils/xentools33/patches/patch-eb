@@ -1,0 +1,13 @@
+$NetBSD: patch-eb,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- python/xen/xm/setpolicy.py.orig	2008-08-01 16:38:07.000000000 +0200
++++ python/xen/xm/setpolicy.py
+@@ -47,7 +47,7 @@ def help():
+ 
+     The filename of the policy is the policy name plus the suffic
+     '-security_policy.xml'. The location of the policy file is either
+-    the the current directory or '/etc/xen/acm-security/policies'.
++    the the current directory or '@XENDCONFDIR@/acm-security/policies'.
+ 
+     """
+ 

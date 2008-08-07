@@ -1,0 +1,23 @@
+$NetBSD: patch-ah,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- xenmon/Makefile.orig	2008-08-07 10:56:22.000000000 +0200
++++ xenmon/Makefile
+@@ -29,12 +29,12 @@ build: $(BIN)
+ 
+ .PHONY: install
+ install: build
+-	$(INSTALL_DIR) $(DESTDIR)$(SBINDIR)
+-	$(INSTALL_PROG) xenbaked $(DESTDIR)$(SBINDIR)/xenbaked
+-	$(INSTALL_PROG) xentrace_setmask  $(DESTDIR)$(SBINDIR)/xentrace_setmask
+-	$(INSTALL_PROG) xenmon.py  $(DESTDIR)$(SBINDIR)/xenmon.py
+-	$(INSTALL_DIR) $(DESTDIR)$(DOCDIR)
+-	$(INSTALL_DATA) README $(DESTDIR)$(DOCDIR)/README.xenmon
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(SBINDIR)
++	$(BSD_INSTALL_PROGRAM) xenbaked $(DESTDIR)$(SBINDIR)/xenbaked
++	$(BSD_INSTALL_PROGRAM) xentrace_setmask  $(DESTDIR)$(SBINDIR)/xentrace_setmask
++	$(BSD_INSTALL_DATA) xenmon.py  $(DESTDIR)$(SBINDIR)/xenmon.py
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(DOCDIR)
++	$(BSD_INSTALL_DATA) README $(DESTDIR)$(DOCDIR)/README.xenmon
+ 
+ .PHONY: clean
+ clean:

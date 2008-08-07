@@ -1,0 +1,104 @@
+$NetBSD: patch-de,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- examples/Makefile.orig	2008-08-07 10:56:22.000000000 +0200
++++ examples/Makefile
+@@ -7,7 +7,7 @@ XENDOMAINS_INITD = init.d/xendomains
+ XENDOMAINS_SYSCONFIG = init.d/sysconfig.xendomains
+ 
+ # Xen configuration dir and configs to go there.
+-XEN_CONFIG_DIR = /etc/xen
++XEN_CONFIG_DIR = ${PKG_SYSCONFDIR}/xen
+ XEN_READMES = README
+ XEN_READMES += README.incompatibilities
+ XEN_CONFIGS = xend-config.sxp
+@@ -25,7 +25,7 @@ XEN_CONFIGS += xend-pci-quirks.sxp
+ XEN_CONFIGS += xend-pci-permissive.sxp
+ 
+ # Xen script dir and scripts to go there.
+-XEN_SCRIPT_DIR = /etc/xen/scripts
++XEN_SCRIPT_DIR = ${PKG_SYSCONFDIR}/xen/scripts
+ XEN_SCRIPTS = network-bridge vif-bridge
+ XEN_SCRIPTS += network-route vif-route
+ XEN_SCRIPTS += network-nat vif-nat
+@@ -41,10 +41,10 @@ XEN_SCRIPT_DATA += xen-hotplug-common.sh
+ XEN_SCRIPT_DATA += block-common.sh vtpm-common.sh vtpm-hotplug-common.sh
+ XEN_SCRIPT_DATA += vtpm-migration.sh vtpm-impl
+ 
+-XEN_HOTPLUG_DIR = /etc/hotplug
++XEN_HOTPLUG_DIR = ${PKG_SYSCONFDIR}/hotplug
+ XEN_HOTPLUG_SCRIPTS = xen-backend.agent
+ 
+-UDEV_RULES_DIR = /etc/udev
++UDEV_RULES_DIR = ${PKG_SYSCONFDIR}/udev
+ UDEV_RULES = xen-backend.rules
+ 
+ DI = $(if $(DISTDIR),$(shell readlink -f $(DISTDIR)),)
+@@ -79,52 +79,47 @@ install-readmes:
+ 
+ .PHONY: install-initd
+ install-initd:
+-	[ -d $(DESTDIR)/etc/init.d ] || $(INSTALL_DIR) $(DESTDIR)/etc/init.d
+-	[ -d $(DESTDIR)/etc/sysconfig ] || $(INSTALL_DIR) $(DESTDIR)/etc/sysconfig
+-	$(INSTALL_PROG) $(XEND_INITD) $(DESTDIR)/etc/init.d
+-	$(INSTALL_PROG) $(XENDOMAINS_INITD) $(DESTDIR)/etc/init.d
+-	$(INSTALL_PROG) $(XENDOMAINS_SYSCONFIG) $(DESTDIR)/etc/sysconfig/xendomains
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/etc/init.d
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/etc/sysconfig
++	$(BSD_INSTALL_DATA) $(XEND_INITD) $(DESTDIR)/etc/init.d
++	$(BSD_INSTALL_DATA) $(XENDOMAINS_INITD) $(DESTDIR)/etc/init.d
++	$(BSD_INSTALL_DATA) $(XENDOMAINS_SYSCONFIG) $(DESTDIR)/etc/sysconfig/xendomains
+ 
+ .PHONY: install-configs
+ install-configs: $(XEN_CONFIGS)
+-	[ -d $(DESTDIR)$(XEN_CONFIG_DIR) ] || \
+-		$(INSTALL_DIR) $(DESTDIR)$(XEN_CONFIG_DIR)
+-	[ -d $(DESTDIR)$(XEN_CONFIG_DIR)/auto ] || \
+-		$(INSTALL_DIR) $(DESTDIR)$(XEN_CONFIG_DIR)/auto
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(XEN_CONFIG_DIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(XEN_CONFIG_DIR)/auto
+ 	set -e; for i in $(XEN_CONFIGS); \
+-	    do [ -e $(DESTDIR)$(XEN_CONFIG_DIR)/$$i ] || \
+-	    $(INSTALL_DATA) $$i $(DESTDIR)$(XEN_CONFIG_DIR); \
++	    do \
++	    $(BSD_INSTALL_DATA) $$i $(DESTDIR)$(XEN_CONFIG_DIR); \
+ 	done
+ 
+ .PHONY: install-scripts
+ install-scripts:
+-	[ -d $(DESTDIR)$(XEN_SCRIPT_DIR) ] || \
+-		$(INSTALL_DIR) $(DESTDIR)$(XEN_SCRIPT_DIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(XEN_SCRIPT_DIR)
+ 	set -e; for i in $(XEN_SCRIPTS); \
+ 	    do \
+-	    $(INSTALL_PROG) $$i $(DESTDIR)$(XEN_SCRIPT_DIR); \
++	    $(BSD_INSTALL_DATA) $$i $(DESTDIR)$(XEN_SCRIPT_DIR); \
+ 	done
+ 	set -e; for i in $(XEN_SCRIPT_DATA); \
+ 	    do \
+-	    $(INSTALL_DATA) $$i $(DESTDIR)$(XEN_SCRIPT_DIR); \
++	    $(BSD_INSTALL_DATA) $$i $(DESTDIR)$(XEN_SCRIPT_DIR); \
+ 	done
+ 
+ .PHONY: install-hotplug
+ install-hotplug:
+-	[ -d $(DESTDIR)$(XEN_HOTPLUG_DIR) ] || \
+-		$(INSTALL_DIR) $(DESTDIR)$(XEN_HOTPLUG_DIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(XEN_HOTPLUG_DIR)
+ 	set -e; for i in $(XEN_HOTPLUG_SCRIPTS); \
+ 	    do \
+-	    $(INSTALL_PROG) $$i $(DESTDIR)$(XEN_HOTPLUG_DIR); \
++	    $(BSD_INSTALL_DATA) $$i $(DESTDIR)$(XEN_HOTPLUG_DIR); \
+ 	done
+ 
+ .PHONY: install-udev
+ install-udev:
+-	[ -d $(DESTDIR)$(UDEV_RULES_DIR) ] || \
+-		$(INSTALL_DIR) $(DESTDIR)$(UDEV_RULES_DIR)/rules.d
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(UDEV_RULES_DIR)/rules.d
+ 	set -e; for i in $(UDEV_RULES); \
+ 	    do \
+-	    $(INSTALL_DATA) $$i $(DESTDIR)$(UDEV_RULES_DIR); \
++	    $(BSD_INSTALL_DATA) $$i $(DESTDIR)$(UDEV_RULES_DIR); \
+ 	    ln -sf ../$$i $(DESTDIR)$(UDEV_RULES_DIR)/rules.d; \
+ 	done
+ 
