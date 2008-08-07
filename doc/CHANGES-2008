@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1803 2008/08/07 13:36:31 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.1804 2008/08/07 14:56:38 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3051,3 +3051,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-Kwiki-Icons-Gnome to 0.15 [he 2008-08-05]
 	Updated www/p5-Kwiki-RecentChanges to 0.14 [he 2008-08-05]
 	Updated mail/spamdyke to 4.0.2 [schmonz 2008-08-07]
+	Updated textproc/py-feedparser to 4.2pre290 [schmonz 2008-08-07]
