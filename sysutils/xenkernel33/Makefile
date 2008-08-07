@@ -1,0 +1,55 @@
+# $NetBSD: Makefile,v 1.1.1.1 2008/08/07 20:31:34 cegger Exp $
+#
+
+VERSION=	3.3-18261
+DISTNAME=	xen-${VERSION}
+PKGNAME=	xenkernel33-${VERSION}
+CATEGORIES=	sysutils
+#MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
+MASTER_SITES=	http://www.netbsd.org/~cegger/
+EXTRACT_SUFX=	.tar.gz
+
+MAINTAINER=	cegger@NetBSD.org
+HOMEPAGE=	http://xen.org/
+COMMENT=	Xen3.3.0-rc3 Kernel
+
+ONLY_FOR_PLATFORM=	Linux-2.6*-i386 Linux-2.6*-x86_64      
+ONLY_FOR_PLATFORM+=	NetBSD-4.99.*-x86_64 NetBSD-4.99.*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-[5-9].*-x86_64 NetBSD-[5-9].*-i386
+
+CONFLICTS=	xenkernel30-* xentools30-*
+CONFLICTS+=	xenkernel3-*  xentools3-*
+CONFLICTS+=	xenkernel32-* xentools32-*
+
+WRKSRC=		${WRKDIR}/xen-${VERSION}
+
+NO_CONFIGURE=	yes
+USE_TOOLS+=	gmake
+
+PY_PATCHPLIST=		NO
+
+SUBST_CLASSES+=		py
+SUBST_STAGE.py=		pre-build
+SUBST_FILES.py+=	xen/tools/get-fields.sh
+SUBST_SED.py=		-e "s,python,${PYTHONBIN},g"
+
+#PY_PATCHPLIST doesn't work because we have NO_CONFIGURE
+SUBST_CLASSES+=		py2
+SUBST_STAGE.py2=	pre-build
+SUBST_FILES.py2=	xen/tools/compat-build-source.py
+SUBST_FILES.py2+=	xen/tools/compat-build-header.py
+SUBST_SED.py2=		-e "s,/usr/bin/env python,${PYTHONBIN},g"
+
+do-build:
+	cd ${WRKSRC} && ${GMAKE} debug=n xen
+	${CP} ${WRKSRC}/dist/install/boot/xen.gz ${WRKDIR}/xen.gz
+	cd ${WRKSRC} && ${GMAKE} clean && ${GMAKE} debug=y xen
+	${CP} ${WRKSRC}/dist/install/boot/xen.gz ${WRKDIR}/xen-debug.gz
+
+do-install:
+	${INSTALL_DATA_DIR} ${PREFIX}/xen3-kernel
+	${INSTALL_DATA} ${WRKDIR}/xen.gz ${PREFIX}/xen3-kernel/xen.gz
+	${INSTALL_DATA} ${WRKDIR}/xen-debug.gz ${PREFIX}/xen3-kernel/xen-debug.gz
+
+.include "../../lang/python/application.mk"
+.include "../../mk/bsd.pkg.mk"
