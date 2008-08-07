@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1801 2008/08/07 10:28:58 reinoud Exp $
+$NetBSD: CHANGES-2008,v 1.1802 2008/08/07 12:01:03 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3043,3 +3043,10 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Proc-ProcessTable to 0.44 [he 2008-08-05]
 	Updated sysutils/acpica-utils to 20080729 [obache 2008-08-07]
 	Updated misc/udfclient to 0.6.3 [reinoud 2008-08-07]
+	Updated www/p5-HTML-Stream to 1.60 [he 2008-08-05]
+	Updated devel/p5-ExtUtils-XSBuilder to 0.28 [he 2008-08-05]
+	Updated net/p5-Geo-IP to 1.34 [he 2008-08-05]
+	Updated chat/p5-Net-AOLIM to 1.61 [he 2008-08-05]
+	Updated www/p5-Kwiki-Archive-Cvs to 0.103 [he 2008-08-05]
+	Updated www/p5-Kwiki-Icons-Gnome to 0.15 [he 2008-08-05]
+	Updated www/p5-Kwiki-RecentChanges to 0.14 [he 2008-08-05]
