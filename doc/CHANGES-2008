@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1807 2008/08/07 20:54:01 cegger Exp $
+$NetBSD: CHANGES-2008,v 1.1808 2008/08/07 23:26:49 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3067,3 +3067,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated wm/awesome to 2.3.3 [ahoka 2008-08-07]
 	Added sysutils/xentools33 version 18261 [cegger 2008-08-07]
 	Added sysutils/xenkernel33 version 18261 [cegger 2008-08-07]
+	Updated textproc/p5-Pod-Tree to 1.15 [he 2008-08-07]
