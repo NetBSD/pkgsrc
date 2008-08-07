@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/08/07 20:31:34 cegger Exp $
+
+--- xen/include/asm-x86/page.h.orig	2008-08-01 10:54:54.000000000 +0200
++++ xen/include/asm-x86/page.h
+@@ -301,7 +301,7 @@ void setup_idle_pagetable(void);
+  * WARNING: This will need to be disabled to run OSes that use the spare PTE
+  * bits themselves (e.g., *BSD).
+  */
+-#ifndef NDEBUG
++#if 0
+ #define _PAGE_GNTTAB   _PAGE_AVAIL2
+ #else
+ #define _PAGE_GNTTAB   0
