@@ -1,0 +1,43 @@
+$NetBSD: patch-bi,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- xenstore/Makefile.orig	2008-08-01 16:38:07.000000000 +0200
++++ xenstore/Makefile
+@@ -94,24 +94,24 @@ tarball: clean
+ 
+ .PHONY: install
+ install: all
+-	$(INSTALL_DIR) $(DESTDIR)/var/run/xenstored
+-	$(INSTALL_DIR) $(DESTDIR)/var/lib/xenstored
+-	$(INSTALL_DIR) $(DESTDIR)$(BINDIR)
+-	$(INSTALL_DIR) $(DESTDIR)$(SBINDIR)
+-	$(INSTALL_DIR) $(DESTDIR)$(INCLUDEDIR)
+-	$(INSTALL_PROG) xenstored $(DESTDIR)$(SBINDIR)
+-	$(INSTALL_PROG) xenstore-control $(DESTDIR)$(BINDIR)
+-	$(INSTALL_PROG) xenstore $(DESTDIR)/usr/bin
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/var/run/xenstored
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)/var/lib/xenstored
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(SBINDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INCLUDEDIR)
++	$(BSD_INSTALL_PROGRAM) xenstored $(DESTDIR)$(SBINDIR)
++	$(BSD_INSTALL_PROGRAM) xenstore-control $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_PROGRAM) xenstore $(DESTDIR)$(BINDIR)
+ 	set -e ; for c in $(CLIENTS) ; do \
+-		ln -f $(DESTDIR)/usr/bin/xenstore $(DESTDIR)/usr/bin/$${c} ; \
++		ln -f $(DESTDIR)$(BINDIR)/xenstore $(DESTDIR)$(BINDIR)/$${c} ; \
+ 	done
+-	$(INSTALL_DIR) $(DESTDIR)$(LIBDIR)
+-	$(INSTALL_PROG) libxenstore.so.$(MAJOR).$(MINOR) $(DESTDIR)$(LIBDIR)
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(LIBDIR)
++	$(BSD_INSTALL_LIB) libxenstore.so.$(MAJOR).$(MINOR) $(DESTDIR)$(LIBDIR)
+ 	ln -sf libxenstore.so.$(MAJOR).$(MINOR) $(DESTDIR)$(LIBDIR)/libxenstore.so.$(MAJOR)
+ 	ln -sf libxenstore.so.$(MAJOR) $(DESTDIR)$(LIBDIR)/libxenstore.so
+-	$(INSTALL_DATA) libxenstore.a $(DESTDIR)$(LIBDIR)
+-	$(INSTALL_DATA) xs.h $(DESTDIR)$(INCLUDEDIR)
+-	$(INSTALL_DATA) xs_lib.h $(DESTDIR)$(INCLUDEDIR)
++	$(BSD_INSTALL_LIB) libxenstore.a $(DESTDIR)$(LIBDIR)
++	$(BSD_INSTALL_DATA) xs.h $(DESTDIR)$(INCLUDEDIR)
++	$(BSD_INSTALL_DATA) xs_lib.h $(DESTDIR)$(INCLUDEDIR)
+ 
+ -include $(DEP)
+ 

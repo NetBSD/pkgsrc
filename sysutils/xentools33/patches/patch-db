@@ -1,0 +1,22 @@
+$NetBSD: patch-db,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- pygrub/Makefile.orig	2008-08-01 16:38:07.000000000 +0200
++++ pygrub/Makefile
+@@ -10,14 +10,12 @@ build:
+ 
+ .PHONY: install
+ ifndef XEN_PYTHON_NATIVE_INSTALL
+-install: LIBPATH=$(shell PYTHONPATH=../python/xen/util python -c "import auxbin; print auxbin.libpath()")
++install: LIBPATH=$(shell PYTHONPATH=../py{}thon/xen/util python -c "import auxbin; print auxbin.libpath()")
+ install: all
+-	CC="$(CC)" CFLAGS="$(CFLAGS)" python setup.py install --home="$(DESTDIR)/usr" --prefix="" --install-lib="$(DESTDIR)$(LIBPATH)/python"
+-	$(INSTALL_DIR) $(DESTDIR)/var/run/xend/boot
++	python setup.py install --root=${DESTDIR}
+ else
+ install: all
+-	CC="$(CC)" CFLAGS="$(CFLAGS)" python setup.py install --root="$(DESTDIR)"
+-	$(INSTALL_DIR) $(DESTDIR)/var/run/xend/boot
++	python setup.py install --root=${DESTDIR}
+ endif
+ 
+ .PHONY: clean

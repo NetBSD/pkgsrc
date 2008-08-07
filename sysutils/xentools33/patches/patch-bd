@@ -1,0 +1,13 @@
+$NetBSD: patch-bd,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- python/xen/xm/addlabel.py.orig	2008-08-01 16:38:07.000000000 +0200
++++ python/xen/xm/addlabel.py
+@@ -220,7 +220,7 @@ def main(argv):
+     if argv[2].lower() == "dom":
+         configfile = argv[3]
+         if configfile[0] != '/':
+-            for prefix in [os.path.realpath(os.path.curdir), "/etc/xen"]:
++            for prefix in [os.path.realpath(os.path.curdir), "@XENDCONFDIR@"]:
+                 configfile = prefix + "/" + configfile
+                 if os.path.isfile(configfile):
+                     break

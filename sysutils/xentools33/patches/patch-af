@@ -1,0 +1,39 @@
+$NetBSD: patch-af,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- misc/Makefile.orig	2008-08-01 16:38:07.000000000 +0200
++++ misc/Makefile
+@@ -14,12 +14,14 @@ TARGETS-y := xenperf
+ TARGETS-$(CONFIG_X86) += xen-detect
+ TARGETS := $(TARGETS-y)
+ 
+-SUBDIRS-$(CONFIG_LOMOUNT) += lomount
++#SUBDIRS-$(CONFIG_LOMOUNT) += lomount
+ SUBDIRS-$(CONFIG_MINITERM) += miniterm
+ SUBDIRS := $(SUBDIRS-y)
+ 
+-INSTALL_BIN  = $(TARGETS) xencons
+-INSTALL_SBIN = netfix xm xen-bugtool xen-python-path xend xenperf xsview
++INSTALL_BIN  = $(TARGETS)
++INSTALL_BIN_SCRIPT  = xencons
++INSTALL_SBIN = xenperf
++INSTALL_SBIN_SCRIPT = netfix xm xen-bugtool xen-python-path xend xsview
+ 
+ DEFAULT_PYTHON_PATH := $(shell $(XEN_ROOT)/tools/python/get-path)
+ PYTHON_PATH ?= $(DEFAULT_PYTHON_PATH)
+@@ -35,10 +37,12 @@ build: $(TARGETS)
+ 
+ .PHONY: install
+ install: build
+-	$(INSTALL_DIR) $(DESTDIR)$(BINDIR)
+-	$(INSTALL_DIR) $(DESTDIR)$(SBINDIR)
+-	$(INSTALL_PYTHON_PROG) $(INSTALL_BIN) $(DESTDIR)$(BINDIR)
+-	$(INSTALL_PYTHON_PROG) $(INSTALL_SBIN) $(DESTDIR)$(SBINDIR)
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(SBINDIR)
++	$(BSD_INSTALL_PROGRAM) $(INSTALL_BIN) $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_SCRIPT) $(INSTALL_BIN_SCRIPT) $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_PROGRAM) $(INSTALL_SBIN) $(DESTDIR)$(SBINDIR)
++	$(BSD_INSTALL_SCRIPT) $(INSTALL_SBIN_SCRIPT) $(DESTDIR)$(SBINDIR)
+ 	set -e; for d in $(SUBDIRS); do $(MAKE) -C $$d install-recurse; done
+ 
+ .PHONY: clean

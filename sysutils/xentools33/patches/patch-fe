@@ -1,0 +1,29 @@
+$NetBSD: patch-fe,v 1.1.1.1 2008/08/07 20:26:59 cegger Exp $
+
+--- ioemu/Makefile.target.orig	2008-08-01 14:38:07.000000000 +0000
++++ ioemu/Makefile.target
+@@ -382,6 +382,7 @@ AUDIODRV += sdlaudio.o
+ endif
+ ifdef CONFIG_OSS
+ AUDIODRV += ossaudio.o
++LIBS += -lossaudio
+ endif
+ ifdef CONFIG_COREAUDIO
+ AUDIODRV += coreaudio.o
+@@ -660,12 +661,12 @@ distclean: clean
+ 	rm -rf config.mak config.h
+ 
+ install: all 
+-	mkdir -p "$(DESTDIR)$(bindir)" "$(DESTDIR)$(configdir)"
++	$(BSD_INSTALL_PROGRAM_DIR) "$(DESTDIR)$(bindir)" "$(DESTDIR)$(configdir)"
+ ifneq ($(PROGS),)
+-	$(INSTALL_PROG) $(PROGS) "$(DESTDIR)$(bindir)"
++	$(BSD_INSTALL_PROGRAM) $(PROGS) "$(DESTDIR)$(bindir)"
+ endif
+-	$(INSTALL_PROG) $(TARGET_PATH)/qemu-dm.debug "$(DESTDIR)$(bindir)"
+-	$(INSTALL_PROG) $(TARGET_PATH)/qemu-ifup "$(DESTDIR)$(configdir)"
++	$(BSD_INSTALL_DATA) $(TARGET_PATH)/qemu-dm.debug "$(DESTDIR)$(bindir)"
++	$(BSD_INSTALL_DATA) $(TARGET_PATH)/qemu-ifup "$(DESTDIR)$(configdir)"
+ 
+ ifneq ($(wildcard .depend),)
+ include .depend

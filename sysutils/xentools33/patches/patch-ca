@@ -1,0 +1,17 @@
+$NetBSD: patch-ca,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- python/xen/util/auxbin.py.orig	2008-08-01 16:38:07.000000000 +0200
++++ python/xen/util/auxbin.py
+@@ -16,9 +16,9 @@
+ #============================================================================
+ 
+ 
+-LIB_32 = "/usr/lib"
+-LIB_64 = "/usr/lib64"
+-LIB_BIN_SUFFIX = "xen/bin"
++LIB_32 = "@PREFIX@/bin"
++LIB_64 = "@PREFIX@/bin"
++LIB_BIN_SUFFIX = ""
+ 
+ ## The architectures on which the LIB_64 directory is used.  This
+ # deliberately excludes ia64 and ppc64, and Solaris.

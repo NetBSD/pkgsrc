@@ -1,0 +1,24 @@
+$NetBSD: patch-fa,v 1.1.1.1 2008/08/07 20:26:59 cegger Exp $
+
+--- firmware/Makefile.orig	2008-08-01 14:38:07.000000000 +0000
++++ firmware/Makefile
+@@ -4,7 +4,7 @@ include $(XEN_ROOT)/tools/Rules.mk
+ # hvmloader is a 32-bit protected mode binary.
+ # It belongs in /usr/lib, not /usr/lib64.
+ TARGET      := hvmloader/hvmloader
+-INST_DIR := $(DESTDIR)/usr/lib/xen/boot
++INST_DIR := $(DESTDIR)$(LIBDIR)/xen/boot
+ 
+ SUBDIRS :=
+ SUBDIRS += rombios
+@@ -27,8 +27,8 @@ all:
+ 
+ .PHONY: install
+ install: all
+-	[ -d $(INST_DIR) ] || $(INSTALL_DIR) $(INST_DIR)
+-	[ ! -e $(TARGET) ] || $(INSTALL_DATA) $(TARGET) $(INST_DIR)
++	$(BSD_INSTALL_LIB_DIR) $(INST_DIR)
++	$(BSD_INSTALL_LIB) $(TARGET) $(INST_DIR)
+ 
+ .PHONY: clean
+ clean: subdirs-clean

@@ -1,0 +1,34 @@
+$NetBSD: patch-da,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- libfsimage/common/Makefile.orig	2008-08-01 16:38:07.000000000 +0200
++++ libfsimage/common/Makefile
+@@ -4,7 +4,7 @@ include $(XEN_ROOT)/tools/Rules.mk
+ MAJOR = 1.0
+ MINOR = 0
+ 
+-CFLAGS += -Werror -Wp,-MD,.$(@F).d
++CFLAGS += -Werror -Wp,-MD,.$(@F).d -DFSIMAGE_FSDIR=\"$(LIBDIR)/fs\"
+ DEPS = .*.d
+ 
+ LDFLAGS-$(CONFIG_SunOS) = -Wl,-M -Wl,mapfile-SunOS
+@@ -22,14 +22,14 @@ all: $(LIB)
+ 
+ .PHONY: install
+ install: all
+-	$(INSTALL_DIR) $(DESTDIR)$(LIBDIR)
+-	$(INSTALL_DIR) $(DESTDIR)$(INCLUDEDIR)
+-	$(INSTALL_PROG) libfsimage.so.$(MAJOR).$(MINOR) $(DESTDIR)$(LIBDIR)
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(LIBDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INCLUDEDIR)
++	$(BSD_INSTALL_LIB) libfsimage.so.$(MAJOR).$(MINOR) $(DESTDIR)$(LIBDIR)
+ 	ln -sf libfsimage.so.$(MAJOR).$(MINOR) $(DESTDIR)$(LIBDIR)/libfsimage.so.$(MAJOR)
+ 	ln -sf libfsimage.so.$(MAJOR) $(DESTDIR)$(LIBDIR)/libfsimage.so
+-	$(INSTALL_DATA) fsimage.h $(DESTDIR)$(INCLUDEDIR)
+-	$(INSTALL_DATA) fsimage_plugin.h $(DESTDIR)$(INCLUDEDIR)
+-	$(INSTALL_DATA) fsimage_grub.h $(DESTDIR)$(INCLUDEDIR)
++	$(BSD_INSTALL_DATA) fsimage.h $(DESTDIR)$(INCLUDEDIR)
++	$(BSD_INSTALL_DATA) fsimage_plugin.h $(DESTDIR)$(INCLUDEDIR)
++	$(BSD_INSTALL_DATA) fsimage_grub.h $(DESTDIR)$(INCLUDEDIR)
+ 
+ clean distclean:
+ 	rm -f $(PIC_OBJS) $(LIB) $(DEPS)

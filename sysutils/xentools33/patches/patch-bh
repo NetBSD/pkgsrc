@@ -1,0 +1,19 @@
+$NetBSD: patch-bh,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- xenstat/xentop/Makefile.orig	2008-08-01 16:38:07.000000000 +0200
++++ xenstat/xentop/Makefile
+@@ -28,10 +28,10 @@ all: xentop
+ 
+ .PHONY: install
+ install: xentop xentop.1
+-	$(INSTALL_DIR) $(DESTDIR)$(SBINDIR)
+-	$(INSTALL_PROG) xentop $(DESTDIR)$(SBINDIR)/xentop
+-	$(INSTALL_DIR) $(DESTDIR)$(MAN1DIR)
+-	$(INSTALL_DATA) xentop.1 $(DESTDIR)$(MAN1DIR)/xentop.1
++	$(BSD_INSTALL_PROGRAM_DIR) $(DESTDIR)$(SBINDIR)
++	$(BSD_INSTALL_PROGRAM) xentop $(DESTDIR)$(SBINDIR)/xentop
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(MAN1DIR)
++	$(BSD_INSTALL_DATA) xentop.1 $(DESTDIR)$(MAN1DIR)/xentop.1
+ 
+ endif
+ 
