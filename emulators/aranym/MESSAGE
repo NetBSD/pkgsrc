@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2008/08/07 16:19:34 hauke Exp $
+
+	For a start, copy the ${PREFIX}/share/doc/aranym/config file
+	to ~/.aranym/config.
+
+	The aranym emulator can either use an image of your
+	Atari Falcon 4.0.4 ROMs, or the EmuTOS image installed
+	in ${PREFIX}/share/aranym/etos512k.img.
+
+===========================================================================
