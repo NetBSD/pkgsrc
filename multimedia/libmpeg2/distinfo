@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.11 2007/02/22 17:43:51 drochner Exp $
+$NetBSD: distinfo,v 1.12 2008/08/07 18:23:18 drochner Exp $
 
-SHA1 (mpeg2dec-0.4.1.tar.gz) = 80be8b16dff4caa4253470d1a3b563fdc0177fcb
-RMD160 (mpeg2dec-0.4.1.tar.gz) = 5377ae45abdd37fabcea6d3d0a9d74e493b84483
-Size (mpeg2dec-0.4.1.tar.gz) = 494539 bytes
-SHA1 (patch-aa) = b9dbc7b0f852851c8fecf1eae07cf762c2eec735
-SHA1 (patch-ab) = 1bd094ba6ba8a480f81945f56d5aaf597d97d2ae
+SHA1 (libmpeg2-0.5.1.tar.gz) = 0f9163d8fd52db5f577ebe45636f674252641fd7
+RMD160 (libmpeg2-0.5.1.tar.gz) = 00b2d669655ed3f7a176f5eecc925045159a0301
+Size (libmpeg2-0.5.1.tar.gz) = 524776 bytes
+SHA1 (patch-aa) = 6e6d47232ba20a307ac3a378b09fb08b50f80445
+SHA1 (patch-ab) = e732e35208eb62101f54bbf4a7800a3c4cf9adf0
