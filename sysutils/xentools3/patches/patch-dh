@@ -1,4 +1,4 @@
-$NetBSD: patch-dh,v 1.1 2008/03/03 16:45:27 hannken Exp $
+$NetBSD: patch-dh,v 1.2 2008/08/07 16:00:14 joerg Exp $
 
 --- pygrub/Makefile.orig	2008-01-31 10:06:54.000000000 +0000
 +++ pygrub/Makefile	2008-03-01 12:03:11.000000000 +0000
@@ -11,12 +11,12 @@ $NetBSD: patch-dh,v 1.1 2008/03/03 16:45:27 hannken Exp $
  install: all
 -	CC="$(CC)" CFLAGS="$(CFLAGS)" python setup.py install --home="$(DESTDIR)/usr" --prefix="" --install-lib="$(DESTDIR)$(LIBPATH)/python"
 -	$(INSTALL_DIR) $(DESTDIR)/var/run/xend/boot
-+	python setup.py install
++	python setup.py install --root=${DESTDIR}
  else
  install: all
 -	CC="$(CC)" CFLAGS="$(CFLAGS)" python setup.py install --root="$(DESTDIR)"
 -	$(INSTALL_DIR) $(DESTDIR)/var/run/xend/boot
-+	python setup.py install
++	python setup.py install --root=${DESTDIR}
  endif
  
  .PHONY: clean
