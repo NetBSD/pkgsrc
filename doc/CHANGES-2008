@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1802 2008/08/07 12:01:03 he Exp $
+$NetBSD: CHANGES-2008,v 1.1803 2008/08/07 13:36:31 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3050,3 +3050,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-Kwiki-Archive-Cvs to 0.103 [he 2008-08-05]
 	Updated www/p5-Kwiki-Icons-Gnome to 0.15 [he 2008-08-05]
 	Updated www/p5-Kwiki-RecentChanges to 0.14 [he 2008-08-05]
+	Updated mail/spamdyke to 4.0.2 [schmonz 2008-08-07]
