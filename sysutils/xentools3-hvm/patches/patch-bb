@@ -1,4 +1,4 @@
-$NetBSD: patch-bb,v 1.1.1.1 2007/06/14 19:42:12 bouyer Exp $
+$NetBSD: patch-bb,v 1.2 2008/08/07 16:00:14 joerg Exp $
 
 --- ioemu/Makefile.target.orig	2007-01-08 16:00:48.000000000 +0100
 +++ ioemu/Makefile.target	2007-04-26 21:38:21.000000000 +0200
@@ -12,8 +12,8 @@ $NetBSD: patch-bb,v 1.1.1.1 2007/06/14 19:42:12 bouyer Exp $
 -endif
 -	$(INSTALL_PROG) $(TARGET_PATH)/qemu-dm.debug "$(DESTDIR)$(bindir)"
 -	$(INSTALL_PROG) $(TARGET_PATH)/qemu-ifup "$(DESTDIR)$(configdir)"
-+	$(BSD_INSTALL_PROGRAM_DIR) "$(bindir)"
-+	$(BSD_INSTALL_PROGRAM) $(PROGS) "$(DESTDIR)$(bindir)"
++	$(BSD_INSTALL_PROGRAM_DIR) ${DESTDIR}$(bindir)
++	$(BSD_INSTALL_PROGRAM) $(PROGS) ${DESTDIR}$(bindir)
  
  ifneq ($(wildcard .depend),)
  include .depend
