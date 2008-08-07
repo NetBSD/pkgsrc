@@ -1,0 +1,58 @@
+$NetBSD: patch-aj,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- libxc/xc_netbsd.c.orig	2008-08-01 16:38:07.000000000 +0200
++++ libxc/xc_netbsd.c
+@@ -263,6 +263,53 @@ void discard_file_cache(int fd, int flus
+     }
+ }
+ 
++int xc_gnttab_open(void)
++{
++	/* implement me */
++	return -1;
++}
++
++int xc_gnttab_close(int xcg_handle)
++{
++	/* implement me */
++	return -1;
++}
++
++void *xc_gnttab_map_grant_ref(int xcg_handle, uint32_t domid,
++				uint32_t ref, int prot)
++{
++	/* implement me */
++	return NULL;
++}
++
++void *xc_gnttab_map_grant_refs(int xcg_handle, uint32_t count,
++				uint32_t *domids, uint32_t *refs, int prot)
++{
++	/* implement me */
++	return NULL;
++}
++
++void *xc_gnttab_map_domain_grant_refs(int xcg_handle,
++				uint32_t count, uint32_t domid,
++				uint32_t *refs, int prot)
++{
++	/* implement me */
++	return NULL;
++}
++
++int xc_gnttab_munmap(int xcg_handle, void *start_address, uint32_t count)
++{
++	/* implement me */
++	errno = EINVAL;
++	return -1;
++}
++
++int xc_gnttab_set_max_grants(int xcg_handle, uint32_t count)
++{
++	/* implement me */
++	return -1;
++}
++
+ /*
+  * Local variables:
+  * mode: C
