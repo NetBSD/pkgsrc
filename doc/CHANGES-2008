@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1799 2008/08/06 22:59:03 he Exp $
+$NetBSD: CHANGES-2008,v 1.1800 2008/08/07 00:12:20 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3041,3 +3041,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-XML-SAX to 0.96 [he 2008-08-05]
 	Updated graphics/p5-SWF-File to 0.42 [he 2008-08-05]
 	Updated devel/p5-Proc-ProcessTable to 0.44 [he 2008-08-05]
+	Updated sysutils/acpica-utils to 20080729 [obache 2008-08-07]
