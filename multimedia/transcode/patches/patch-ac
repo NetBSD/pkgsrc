@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2006/03/13 21:21:39 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2008/08/07 18:43:42 drochner Exp $
 
---- configure.orig	2005-11-06 06:04:59.000000000 +0000
+--- configure.orig	2008-07-26 10:06:43.000000000 +0200
 +++ configure
-@@ -8959,7 +8959,7 @@ fi
+@@ -9833,7 +9833,7 @@ fi
  
  
  case "$host_os" in
@@ -11,7 +11,7 @@ $NetBSD: patch-ac,v 1.1 2006/03/13 21:21:39 joerg Exp $
  
  cat >>confdefs.h <<\_ACEOF
  #define SYS_BSD 1
-@@ -8991,7 +8991,7 @@ case "$host" in
+@@ -9865,7 +9865,7 @@ case "$host" in
  esac
  # let user override
  if test -n "$PTHREAD_LIBS" ; then
@@ -20,3 +20,21 @@ $NetBSD: patch-ac,v 1.1 2006/03/13 21:21:39 joerg Exp $
  fi
  if test -n "$PTHREAD_CFLAGS" ; then
    pthread_cflags="$PTHREAD_CFLAGS"
+@@ -30886,7 +30886,7 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ $ac_includes_default
+-#include <libpostproc/postprocess.h>
++#include <postprocess.h>
+ _ACEOF
+ rm -f conftest.$ac_objext
+ if { (ac_try="$ac_compile"
+@@ -30926,7 +30926,7 @@ _ACEOF
+ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+-#include <libpostproc/postprocess.h>
++#include <postprocess.h>
+ _ACEOF
+ if { (ac_try="$ac_cpp conftest.$ac_ext"
+ case "(($ac_try" in
