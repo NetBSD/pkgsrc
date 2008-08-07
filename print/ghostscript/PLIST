@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/04/12 22:43:09 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/08/07 18:21:40 drochner Exp $
 bin/bdftops
 bin/dumphint
 bin/dvipdf
@@ -401,7 +401,6 @@ share/ghostscript/${PKGVERSION}/doc/README
 share/ghostscript/${PKGVERSION}/doc/Readme.htm
 share/ghostscript/${PKGVERSION}/doc/Release.htm
 share/ghostscript/${PKGVERSION}/doc/Source.htm
-share/ghostscript/${PKGVERSION}/doc/Testing.htm
 share/ghostscript/${PKGVERSION}/doc/Unix-lpr.htm
 share/ghostscript/${PKGVERSION}/doc/Use.htm
 share/ghostscript/${PKGVERSION}/doc/Xfonts.htm
