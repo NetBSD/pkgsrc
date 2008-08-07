@@ -1,0 +1,22 @@
+$NetBSD: patch-ee,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- security/xensec_ezpolicy.orig	2008-08-01 16:38:07.000000000 +0200
++++ security/xensec_ezpolicy
+@@ -935,7 +935,7 @@ class ezFrame(wx.Frame):
+         policyname = transInfo()
+         if not policyname:
+             return
+-        path="/etc/xen/acm-security/policies/"
++        path="@XENDCONFDIR@/acm-security/policies/"
+         nameparts=string.split(policyname, ".")
+         if len(nameparts) > 1:
+             path = path + "/".join(nameparts[0:len(nameparts)-1])
+@@ -1592,7 +1592,7 @@ where you merely replace &quot;NAME&quot
+ Save the policy under the name proposed by the tool in the proposed directory
+ if you are using this tool in your Xen environment. Otherwise, you need
+ to copy the resulting file into your Xen environment to the directory
+-&quot;/etc/xen/acm-security/policies/example/chwall_ste/&quot;.<BR>
++&quot;@XENDCONFDIR@/acm-security/policies/example/chwall_ste/&quot;.<BR>
+ <BR>
+ This tool creates policies for the Xen Chinese Wall and Simple Type Enforcement
+ policy. The Xen access control policy in general is more expressive and
