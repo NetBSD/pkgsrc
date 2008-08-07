@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/08/07 20:31:34 cegger Exp $
+
+SHA1 (xen-3.3-18261.tar.gz) = 25c43a6aa69b8c0867268a77b5815f27852b2b13
+RMD160 (xen-3.3-18261.tar.gz) = 184b1df67a645cecfbff4307dfb02079235c4d03
+Size (xen-3.3-18261.tar.gz) = 8040616 bytes
+SHA1 (patch-aa) = 2f29787cff46fbfb76eaa27d430e828cb1b6e0d3
