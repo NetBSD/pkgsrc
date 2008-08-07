@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- python/xen/xend/XendOptions.py.orig	2008-08-01 16:38:07.000000000 +0200
++++ python/xen/xend/XendOptions.py
+@@ -362,7 +362,7 @@ class XendOptions:
+ class XendOptionsFile(XendOptions):
+ 
+     """Default path to the config file."""
+-    config_default = "/etc/xen/xend-config.sxp"
++    config_default = "@XENDCONFDIR@/xend-config.sxp"
+ 
+     """Environment variable used to override config_default."""
+     config_var     = "XEND_CONFIG"

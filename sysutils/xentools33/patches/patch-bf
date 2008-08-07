@@ -1,0 +1,13 @@
+$NetBSD: patch-bf,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- python/xen/xm/rmlabel.py.orig	2008-08-01 16:38:07.000000000 +0200
++++ python/xen/xm/rmlabel.py
+@@ -81,7 +81,7 @@ def rm_domain_label(configfile):
+         fil = configfile
+         fd = open(fil, "rb")
+     else:
+-        for prefix in [".", "/etc/xen"]:
++        for prefix in [".", "@XENDCONFDIR@"]:
+             fil = prefix + "/" + configfile
+             if os.path.isfile(fil):
+                 fd = open(fil, "rb")

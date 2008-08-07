@@ -1,0 +1,47 @@
+$NetBSD: patch-cc,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- ../docs/man/xend-config.sxp.pod.5.orig	2008-08-01 16:38:07.000000000 +0200
++++ ../docs/man/xend-config.sxp.pod.5
+@@ -4,7 +4,7 @@ xend-config.sxp - Xen daemon configurati
+ 
+ =head1 SYNOPSIS
+ 
+-/etc/xen/xend-config.sxp
++@XENDCONFDIR@/xend-config.sxp
+ 
+ =head1 DESCRIPTION
+ 
+@@ -12,7 +12,7 @@ The xend(1) program requires xend-config
+ parameters which determine the behavior of the daemon at runtime.
+ 
+ The parameters are specified in S-expression format.  See the example
+-configuration file in I</etc/xen/xend-config.sxp> for details.
++configuration file in I<@XENDCONFDIR@/xend-config.sxp> for details.
+ 
+ =head1 OPTIONS
+ 
+@@ -82,13 +82,13 @@ Defaults to I<1024>.
+ 
+ =item I<network-script>
+ 
+-The name of the script in I</etc/xen/scripts> that will be run to
++The name of the script in I<@XENDCONFDIR@/scripts> that will be run to
+ setup the networking environment.  This can be any name, but in
+ general is either I<network-bridge> or I<network-route>.
+ 
+ =item I<vif-script>
+ 
+-The name of the script in I</etc/xen/scripts> that will be run to
++The name of the script in I<@XENDCONFDIR@/scripts> that will be run to
+ setup a virtual interface when it is created or destroyed.  This needs
+ to (in general) work in unison with the I<network-script>.
+ 
+@@ -113,7 +113,7 @@ domains should be saved when a crash occ
+ 
+ The name of an application or script that can handle external device
+ migration, such as for example virtual TPM migration. An example
+-script is I</etc/xen/scripts/external-device-migrate>.
++script is I<@XENDCONFDIR@/scripts/external-device-migrate>.
+ 
+ =back
+ 

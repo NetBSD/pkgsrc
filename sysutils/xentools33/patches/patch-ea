@@ -1,0 +1,13 @@
+$NetBSD: patch-ea,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- python/xen/util/xsm/acm/acm.py.orig	2008-08-01 16:38:07.000000000 +0200
++++ python/xen/util/xsm/acm/acm.py
+@@ -35,7 +35,7 @@ from xen.util import dictio, xsconstants
+ from xen.xend.XendConstants import *
+ 
+ #global directories and tools for security management
+-install_policy_dir_prefix = "/etc/xen/acm-security/policies"
++install_policy_dir_prefix = "@XENDCONFDIR@/acm-security/policies"
+ security_dir_prefix = XendOptions.instance().get_xend_security_path()
+ policy_dir_prefix = security_dir_prefix + "/policies"
+ res_label_filename = policy_dir_prefix + "/resource_labels"

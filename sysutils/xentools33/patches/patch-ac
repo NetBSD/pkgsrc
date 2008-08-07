@@ -1,0 +1,23 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- ../config/NetBSD.mk.orig	2008-08-01 14:38:07.000000000 +0000
++++ ../config/NetBSD.mk
+@@ -2,3 +2,18 @@ include $(XEN_ROOT)/config/StdGNU.mk
+ 
+ # Override settings for this OS
+ CURSES_LIBS = -lcurses
++
++DESTDIR ?= ""
++BINDIR = $(PREFIX)/bin
++INCLUDEDIR = $(PREFIX)/include
++LIBLEAFDIR = lib
++LIBLEAFDIR_x86_64 = lib
++LIBDIR = $(PREFIX)/$(LIBLEAFDIR)
++LIBDIR_x86_64 = $(PREFIX)/$(LIBLEAFDIR_x86_64)
++MANDIR = $(PREFIX)/man
++MAN1DIR = $(MANDIR)/man1
++MAN8DIR = $(MANDIR)/man8
++SBINDIR = $(PREFIX)/sbin
++
++PRIVATE_PREFIX = $(PREFIX)
++PRIVATE_BINDIR = $(PRIVATE_PREFIX)/bin

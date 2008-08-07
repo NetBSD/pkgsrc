@@ -1,0 +1,55 @@
+$NetBSD: patch-fd,v 1.1.1.1 2008/08/07 20:26:59 cegger Exp $
+
+--- ioemu/Makefile.orig	2008-08-01 14:38:07.000000000 +0000
++++ ioemu/Makefile
+@@ -44,10 +44,11 @@ subdir-%:
+ 
+ recurse-all: $(patsubst %,subdir-%, $(TARGET_DIRS))
+ 
+-tapdisk-ioemu: CPPFLAGS += -I$(XEN_ROOT)/tools/libxc
+-tapdisk-ioemu: CPPFLAGS += -I$(XEN_ROOT)/tools/blktap/lib
+-tapdisk-ioemu: CPPFLAGS += -I$(XEN_ROOT)/tools/xenstore
+-tapdisk-ioemu: CPPFLAGS += -I$(XEN_ROOT)/tools/include
++CPPFLAGS += -I$(XEN_ROOT)/tools/libxc
++CPPFLAGS += -I$(XEN_ROOT)/tools/blktap/lib
++CPPFLAGS += -I$(XEN_ROOT)/tools/xenstore
++CPPFLAGS += -I$(XEN_ROOT)/tools/include
++
+ tapdisk-ioemu: tapdisk-ioemu.c cutils.c block.c block-raw.c block-cow.c block-qcow.c aes.c block-vmdk.c block-cloop.c block-dmg.c block-bochs.c block-vpc.c block-vvfat.c block-qcow2.c hw/xen_blktap.c osdep.c
+ 	$(CC) -DQEMU_TOOL $(CFLAGS) $(CPPFLAGS) $(BASE_CFLAGS) $(LDFLAGS) $(BASE_LDFLAGS) -o $@ $^ -lz $(LIBS)
+ 
+@@ -78,16 +79,16 @@ ar      de     en-us  fi  fr-be  hr     
+ common  de-ch  es     fo  fr-ca  hu     ja  mk  nl-be      pt  sl     tr
+ 
+ install-doc: $(DOCS)
+-	mkdir -p "$(DESTDIR)$(docdir)"
+-	$(INSTALL_DATA) -m 644 qemu-doc.html  qemu-tech.html "$(DESTDIR)$(docdir)"
++	$(BSD_INSTALL_DATA_DIR) "$(DESTDIR)$(docdir)"
++	$(BSD_INSTALL_DATA) -m 644 qemu-doc.html  qemu-tech.html "$(DESTDIR)$(docdir)"
+ ifndef CONFIG_WIN32
+-	mkdir -p "$(DESTDIR)$(mandir)/man1"
+-	$(INSTALL_DATA) qemu.1 qemu-img.1 "$(DESTDIR)$(mandir)/man1"
++	$(BSD_INSTALL_DATA_DIR) "$(DESTDIR)$(mandir)/man1"
++	$(BSD_INSTALL_DATA) qemu.1 qemu-img.1 "$(DESTDIR)$(mandir)/man1"
+ endif
+ 
+ install: all $(if $(BUILD_DOCS),install-doc)
+-	mkdir -p "$(DESTDIR)$(bindir)"
+-	$(INSTALL) -m 755 $(TOOLS) "$(DESTDIR)$(SBINDIR)"
++	$(BSD_INSTALL_PROGRAM_DIR) "$(DESTDIR)$(bindir)"
++	$(BSD_INSTALL_PROGRAM) -m 755 $(TOOLS) "$(DESTDIR)$(SBINDIR)"
+ #	mkdir -p "$(DESTDIR)$(datadir)"
+ #	for x in bios.bin vgabios.bin vgabios-cirrus.bin ppc_rom.bin \
+ #		video.x openbios-sparc32 linux_boot.bin pxe-ne2k_pci.bin \
+@@ -95,9 +96,9 @@ install: all $(if $(BUILD_DOCS),install-
+ #		$(INSTALL) -m 644 $(SRC_PATH)/pc-bios/$$x "$(DESTDIR)$(datadir)"; \
+ #	done
+ ifndef CONFIG_WIN32
+-	mkdir -p "$(DESTDIR)$(datadir)/keymaps"
++	$(BSD_INSTALL_DATA_DIR) "$(DESTDIR)$(datadir)/keymaps"
+ 	set -e; for x in $(KEYMAPS); do \
+-		$(INSTALL_DATA) -m 644 $(SRC_PATH)/keymaps/$$x "$(DESTDIR)$(datadir)/keymaps"; \
++		$(BSD_INSTALL_DATA) -m 644 $(SRC_PATH)/keymaps/$$x "$(DESTDIR)$(datadir)/keymaps"; \
+ 	done
+ endif
+ 	for d in $(TARGET_DIRS); do \

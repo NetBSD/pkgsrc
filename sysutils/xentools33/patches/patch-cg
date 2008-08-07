@@ -1,0 +1,15 @@
+$NetBSD: patch-cg,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- libfsimage/Rules.mk.orig	2008-08-01 16:38:07.000000000 +0200
++++ libfsimage/Rules.mk
+@@ -21,8 +21,8 @@ fs-all: $(FSLIB)
+ 
+ .PHONY: fs-install
+ fs-install: fs-all
+-	$(INSTALL_DIR) $(DESTDIR)$(FSDIR)
+-	$(INSTALL_PROG) $(FSLIB) $(DESTDIR)$(FSDIR)
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(FSDIR)
++	$(BSD_INSTALL_LIB) $(FSLIB) $(DESTDIR)$(FSDIR)
+ 
+ $(FSLIB): $(PIC_OBJS)
+ 	$(CC) $(CFLAGS) $(LDFLAGS) $(SHLIB_CFLAGS) -o $@ $^ -lfsimage $(FS_LIBDEPS)

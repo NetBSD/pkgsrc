@@ -1,0 +1,23 @@
+$NetBSD: patch-dc,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- flask/libflask/Makefile.orig	2008-08-01 16:38:07.000000000 +0200
++++ flask/libflask/Makefile
+@@ -33,13 +33,13 @@ build:
+ 
+ .PHONY: install
+ install: build
+-	$(INSTALL_DIR) $(DESTDIR)$(LIBDIR)
+-	$(INSTALL_DIR) $(DESTDIR)$(INCLUDEDIR)
+-	$(INSTALL_PROG) libflask.so.$(MAJOR).$(MINOR) $(DESTDIR)$(LIBDIR)
+-	$(INSTALL_DATA) libflask.a $(DESTDIR)$(LIBDIR)
++	$(BSD_INSTALL_LIB_DIR) $(DESTDIR)$(LIBDIR)
++	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(INCLUDEDIR)
++	$(BSD_INSTALL_LIB) libflask.so.$(MAJOR).$(MINOR) $(DESTDIR)$(LIBDIR)
++	$(BSD_INSTALL_LIB) libflask.a $(DESTDIR)$(LIBDIR)
+ 	ln -sf libflask.so.$(MAJOR).$(MINOR) $(DESTDIR)$(LIBDIR)/libflask.so.$(MAJOR)
+ 	ln -sf libflask.so.$(MAJOR) $(DESTDIR)$(LIBDIR)/libflask.so
+-	$(INSTALL_DATA) include/flask.h $(DESTDIR)$(INCLUDEDIR)
++	$(BSD_INSTALL_DATA) include/flask.h $(DESTDIR)$(INCLUDEDIR)
+ 
+ .PHONY: TAGS
+ TAGS:

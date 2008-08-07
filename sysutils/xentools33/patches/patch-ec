@@ -1,0 +1,13 @@
+$NetBSD: patch-ec,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- security/Makefile.orig	2008-08-01 16:38:07.000000000 +0200
++++ security/Makefile
+@@ -21,7 +21,7 @@ ACM_EZPOLICY      = xensec_ezpolicy
+ ACM_OBJS          = $(OBJS_TOOL) $(OBJS_GETD)
+ ACM_SCRIPTS       = python/xensec_tools/acm_getlabel
+ 
+-ACM_CONFIG_DIR    = /etc/xen/acm-security
++ACM_CONFIG_DIR    = @XENDCONFDIR@/acm-security
+ ACM_POLICY_DIR    = $(ACM_CONFIG_DIR)/policies
+ ACM_SCRIPT_DIR    = $(ACM_CONFIG_DIR)/scripts
+ 
