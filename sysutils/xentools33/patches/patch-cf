@@ -1,0 +1,12 @@
+$NetBSD: patch-cf,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- misc/xen-python-path.orig	2008-08-01 16:38:07.000000000 +0200
++++ misc/xen-python-path
+@@ -32,6 +32,7 @@ usr   = os.path.dirname(os.path.dirname(
+ list  = [ os.path.join(usr,'lib64') ]
+ list += [ os.path.join(usr,'lib') ]
+ list += ['/usr/lib64', '/usr/lib']
++list += ['@PREFIX@/lib']
+ 
+ for l in list:
+     for p in ['python%s' % sys.version[:3], 'python']:

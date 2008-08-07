@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+
+--- ../Config.mk.orig	2008-08-07 10:56:22.000000000 +0200
++++ ../Config.mk
+@@ -84,7 +84,7 @@ QEMU_REMOTE=http://xenbits.xensource.com
+ 
+ # Specify which qemu-dm to use. This may be `ioemu' to use the old
+ # Mercurial in-tree version, or a local directory, or a git URL.
+-# CONFIG_QEMU   ?= ioemu
++CONFIG_QEMU   ?= ioemu
+ # CONFIG_QEMU   ?= ../qemu-xen.git
+ ifeq ($(XEN_TARGET_ARCH),ia64)
+ CONFIG_QEMU   ?= ioemu
