@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2008/04/27 19:59:40 bouyer Exp $
+# $NetBSD: Makefile,v 1.14 2008/08/07 16:00:14 joerg Exp $
 #
 
 VERSION=		3.1.4
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tar.gz
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://xen.org/
 COMMENT=		Userland Tools for Xen
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 #DEPENDS+=		${PYPKGPREFIX}-twisted-[0-9]*:../../net/py-twisted
 DEPENDS+=		${PYPKGPREFIX}-readline-[0-9]*:../../devel/py-readline
@@ -129,7 +131,7 @@ CONF_FILES=		${EGDIR}/xend-config.sxp \
 			${PKG_SYSCONFDIR}/xend-config.sxp
 .for s in ${XEND_SCRIPTS}
 CONF_FILES_PERMS+=	${EGDIR}/${s} ${PKG_SYSCONFDIR}/scripts/${s}	\
-			${ROOT_USER} ${ROOT_GROUP} 0755
+			${REAL_ROOT_USER} ${REAL_ROOT_GROUP} 0755
 .endfor
 
 OWN_DIRS=		${PKG_SYSCONFDIR}/scripts /var/log/xen
@@ -172,20 +174,20 @@ post-build:
 
 .endif
 
+INSTALLATION_DIRS=	${PKGMANDIR}/man1 ${PKGMANDIR}/man5 ${EGDIR}
+
 post-install:
-	${INSTALL_PROGRAM} ${WRKDIR}/xenbackendd.bin ${PREFIX}/sbin/xenbackendd
-	${INSTALL_DATA_DIR} ${EGDIR}
+	${INSTALL_PROGRAM} ${WRKDIR}/xenbackendd.bin ${DESTDIR}${PREFIX}/sbin/xenbackendd
 	for f in xend-config.sxp xmexample1 xmexample2 xmexample3 netbsd1; do \
-		${INSTALL_DATA} ${WRKSRC}/examples/$$f ${EGDIR}/$$f;	\
+		${INSTALL_DATA} ${WRKSRC}/examples/$$f ${DESTDIR}${EGDIR}/$$f;	\
 	done
 .for s in ${XEND_SCRIPTS}
-	${INSTALL_SCRIPT} ${WRKSRC}/examples/${s} ${EGDIR}/${s}
+	${INSTALL_SCRIPT} ${WRKSRC}/examples/${s} ${DESTDIR}${EGDIR}/${s}
 .endfor
-	${RM} -rf ${PREFIX}/lib/xen
-	${INSTALL_DATA_DIR} ${PREFIX}/man/man1 ${PREFIX}/man/man5
-	${INSTALL_DATA} ${WRKDIR}/xend-config.sxp.5 ${PREFIX}/man/man5
-	${INSTALL_DATA} ${WRKDIR}/xmdomain.cfg.5 ${PREFIX}/man/man5
-	${INSTALL_DATA} ${WRKDIR}/xm.1 ${PREFIX}/man/man1
+	${RM} -rf ${DESTDIR}${PREFIX}/lib/xen
+	${INSTALL_DATA} ${WRKDIR}/xend-config.sxp.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_DATA} ${WRKDIR}/xmdomain.cfg.5 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man5
+	${INSTALL_DATA} ${WRKDIR}/xm.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"

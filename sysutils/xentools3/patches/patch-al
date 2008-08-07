@@ -1,4 +1,4 @@
-$NetBSD: patch-al,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
+$NetBSD: patch-al,v 1.2 2008/08/07 16:00:14 joerg Exp $
 
 --- console/Makefile.orig	2007-05-18 16:45:21.000000000 +0200
 +++ console/Makefile	2007-05-27 13:45:20.000000000 +0200
@@ -21,8 +21,8 @@ $NetBSD: patch-al,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
 -	$(INSTALL_PROG) xenconsoled $(DESTDIR)/$(DAEMON_INSTALL_DIR)
 -	$(INSTALL_DIR) $(DESTDIR)/$(CLIENT_INSTALL_DIR)
 -	$(INSTALL_PROG) xenconsole $(DESTDIR)/$(CLIENT_INSTALL_DIR)
-+	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/sbin
-+	$(BSD_INSTALL_PROGRAM) xenconsoled $(PREFIX)/sbin
-+	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/bin
-+	$(BSD_INSTALL_PROGRAM) xenconsole $(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM_DIR) ${DESTDIR}$(PREFIX)/sbin
++	$(BSD_INSTALL_PROGRAM) xenconsoled ${DESTDIR}$(PREFIX)/sbin
++	$(BSD_INSTALL_PROGRAM_DIR) ${DESTDIR}$(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM) xenconsole ${DESTDIR}$(PREFIX)/bin
 +

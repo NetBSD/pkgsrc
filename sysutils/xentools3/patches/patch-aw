@@ -1,4 +1,4 @@
-$NetBSD: patch-aw,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
+$NetBSD: patch-aw,v 1.2 2008/08/07 16:00:14 joerg Exp $
 
 --- misc/Makefile.orig	2007-05-18 16:45:21.000000000 +0200
 +++ misc/Makefile	2007-05-27 13:48:51.000000000 +0200
@@ -24,12 +24,12 @@ $NetBSD: patch-aw,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
 -	$(INSTALL_PROG) $(INSTALL_BIN) $(DESTDIR)/usr/bin
 -	$(INSTALL_PROG) $(INSTALL_SBIN) $(DESTDIR)/usr/sbin
 -	$(MAKE) -C lomount install
-+	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/bin
-+	$(BSD_INSTALL_PROGRAM_DIR) $(PREFIX)/sbin
-+	$(BSD_INSTALL_PROGRAM) $(INSTALL_BIN) $(PREFIX)/bin
-+	$(BSD_INSTALL_SCRIPT) $(INSTALL_BIN_SCRIPT) $(PREFIX)/bin
-+	$(BSD_INSTALL_PROGRAM) $(INSTALL_SBIN) $(PREFIX)/sbin
-+	$(BSD_INSTALL_SCRIPT) $(INSTALL_SBIN_SCRIPT) $(PREFIX)/sbin
++	$(BSD_INSTALL_PROGRAM_DIR) ${DESTDIR}$(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM_DIR) ${DESTDIR}$(PREFIX)/sbin
++	$(BSD_INSTALL_PROGRAM) $(INSTALL_BIN) ${DESTDIR}$(PREFIX)/bin
++	$(BSD_INSTALL_SCRIPT) $(INSTALL_BIN_SCRIPT) ${DESTDIR}$(PREFIX)/bin
++	$(BSD_INSTALL_PROGRAM) $(INSTALL_SBIN) ${DESTDIR}$(PREFIX)/sbin
++	$(BSD_INSTALL_SCRIPT) $(INSTALL_SBIN_SCRIPT) ${DESTDIR}$(PREFIX)/sbin
 +#	$(MAKE) -C lomount install
  #       No sense in installing miniterm on the Xen box.
  #	$(MAKE) -C miniterm install
