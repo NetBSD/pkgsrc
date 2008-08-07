@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.36 2008/04/20 12:22:58 reinoud Exp $
+# $NetBSD: Makefile,v 1.37 2008/08/07 10:28:59 reinoud Exp $
 #
 
-DISTNAME=		UDFclient.0.6.2
-PKGNAME=		udfclient-0.6.2
+DISTNAME=		UDFclient.0.6.3
+PKGNAME=		udfclient-0.6.3
 #PKGREVISION=		1
 CATEGORIES=		misc
 MASTER_SITES=		http://www.13thmonkey.org/udfclient/releases/
 EXTRACT_SUFX=		.tgz
 
-MAINTAINER=		buzztoh@13thmonkey.org
+MAINTAINER=		reinoud@13thmonkey.org
 HOMEPAGE=		http://www.13thmonkey.org/udfclient/
 COMMENT=		UDF file system reader/writer for CD/CD-RW/DVD*RW/DVD-RAM and images
 
