@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/04/27 19:59:40 bouyer Exp $
+# $NetBSD: Makefile,v 1.8 2008/08/07 16:00:14 joerg Exp $
 #
 
 VERSION=		3.1.4
@@ -11,6 +11,8 @@ EXTRACT_SUFX=		.tar.gz
 MAINTAINER=		bouyer@NetBSD.org
 HOMEPAGE=		http://xen.org/
 COMMENT=		Tools for Virtual Machine Extensions support in Xen
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	dev86-[0-9]*:../../devel/dev86 # needed to build firmware
 
@@ -75,6 +77,8 @@ CONF_FILES_PERMS+=	${EGDIR}/qemu-ifup ${PKG_SYSCONFDIR}/scripts/qemu-ifup \
 
 OWN_DIRS=		${PKG_SYSCONFDIR}/scripts
 
+INSTALLATION_DIRS=	${EGDIR}
+
 pre-build:
 .if !exists(/usr/include/xen/xenio.h)
 	${MKDIR} ${WRKSRC}/libxc/xen
@@ -104,7 +108,7 @@ post-build:
 
 post-install:
 	for f in hvm qemu-ifup; do \
-		${INSTALL_DATA} ${WRKSRC}/examples/$$f ${EGDIR}/$$f;	\
+		${INSTALL_DATA} ${WRKSRC}/examples/$$f ${DESTDIR}${EGDIR}/$$f;	\
 	done
 
 .include "../../lang/python/application.mk"
