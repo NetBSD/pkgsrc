@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1800 2008/08/07 00:12:20 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1801 2008/08/07 10:28:58 reinoud Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3042,3 +3042,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/p5-SWF-File to 0.42 [he 2008-08-05]
 	Updated devel/p5-Proc-ProcessTable to 0.44 [he 2008-08-05]
 	Updated sysutils/acpica-utils to 20080729 [obache 2008-08-07]
+	Updated misc/udfclient to 0.6.3 [reinoud 2008-08-07]
