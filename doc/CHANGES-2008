@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1805 2008/08/07 18:51:24 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.1806 2008/08/07 18:54:22 drochner Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3052,4 +3052,16 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-Kwiki-RecentChanges to 0.14 [he 2008-08-05]
 	Updated mail/spamdyke to 4.0.2 [schmonz 2008-08-07]
 	Updated textproc/py-feedparser to 4.2pre290 [schmonz 2008-08-07]
+	Updated multimedia/transcode to 1.0.6 [drochner 2008-08-07]
+	Updated audio/libsamplerate to 0.1.4 [drochner 2008-08-07]
+	Updated multimedia/libmpeg2 to 0.5.1 [drochner 2008-08-07]
+	Updated print/ghostscript to 8.63 [drochner 2008-08-07]
+	Updated sysutils/duplicity to 0.4.12 [drochner 2008-08-07]
+	Updated www/liferea to 1.4.18 [drochner 2008-08-07]
+	Updated www/epiphany to 2.22.3 [drochner 2008-08-07]
+	Updated print/poppler to 0.8.5 [drochner 2008-08-07]
+	Updated gst-plugins0.10-bad to 0.10.8 [drochner 2008-08-07]
+	Updated multimedia/gst-plugins0.10-good to 0.10.9 [drochner 2008-08-07]
+	Added sysutils/gst-plugins0.10-gio version 0.10.20 [drochner 2008-08-07]
+	Updated devel/anjuta to 2.4.2 [drochner 2008-08-07]
 	Updated wm/awesome to 2.3.3 [ahoka 2008-08-07]
