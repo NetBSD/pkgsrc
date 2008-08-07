@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/07/30 14:08:59 hauke Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/08/07 16:19:34 hauke Exp $
 bin/aranym
 man/man1/aranym-jit.1
 man/man1/aranym-mmu.1
@@ -13,6 +13,7 @@ share/aranym/atari/newdesk.inf
 share/aranym/atari/sound/README
 share/aranym/atari/tools/README
 share/aranym/atari/tools/pc101us.kbd.bz2
+share/aranym/etos512k.img
 share/aranym/floppy.sh
 share/aranym/logo.png
 share/aranym/wm_icon.bmp
@@ -26,6 +27,13 @@ share/doc/aranym/README
 share/doc/aranym/TODO
 share/doc/aranym/changelog
 share/doc/aranym/config
+share/doc/aranym/emutos/announce.txt
+share/doc/aranym/emutos/authors.txt
+share/doc/aranym/emutos/changelog.txt
+share/doc/aranym/emutos/license.txt
+share/doc/aranym/emutos/readme.txt
+share/doc/aranym/emutos/status.txt
+@dirrm share/doc/aranym/emutos
 @dirrm share/doc/aranym
 @dirrm share/aranym/atari/tools
 @dirrm share/aranym/atari/sound

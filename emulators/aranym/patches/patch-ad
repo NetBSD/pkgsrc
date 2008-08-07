@@ -1,0 +1,20 @@
+$NetBSD: patch-ad,v 1.1 2008/08/07 16:19:34 hauke Exp $
+
+--- doc/config.orig	2008-01-26 12:01:41.000000000 +0100
++++ doc/config
+@@ -5,13 +5,13 @@
+ FastRAM = 0
+ 
+ # Atari floppy device (GEMDOS A:) is mapped to host floppy block device
+-Floppy = /dev/fd0
++Floppy = /dev/fd0a
+ 
+ # location of TOS 4.04 ROM image (full path)
+ TOS = /usr/local/share/aranym/ROM
+ 
+ # location of EmuTOS (full path)
+-EmuTOS = 
++EmuTOS = /usr/local/share/aranym/etos512k.img
+ 
+ # location of FreeMiNT kernel (full path)
+ Bootstrap =
