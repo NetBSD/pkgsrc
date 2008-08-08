@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2007/02/22 19:27:14 wiz Exp $
+# $NetBSD: Makefile,v 1.28 2008/08/08 14:57:39 joerg Exp $
 
 DISTNAME=	ISOEnts
 PKGNAME=	iso8879-1986
@@ -12,6 +12,7 @@ HOMEPAGE=	http://www.iso.org/cate/d16387.html
 COMMENT=	Character entity sets from ISO 8879:1986 (SGML)
 
 PKG_INSTALLATION_TYPES= overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}
 USE_TOOLS+=	unzip
@@ -19,12 +20,11 @@ NO_MTREE=	yes
 EXTRACT_ONLY=	# empty
 NO_BUILD=	yes
 
-INSTDIR=	${PREFIX}/share/sgml/iso8879
+INSTALLATION_DIRS=	share/sgml/iso8879
+
+INSTDIR=	${DESTDIR}${PREFIX}/share/sgml/iso8879
 
 SGML_CATALOGS=	${INSTDIR}/catalog
-
-pre-install:
-	${INSTALL_DATA_DIR} ${INSTDIR}
 
 do-install:
 	@unzip -a -q -o ${DISTDIR}/${DISTFILES} -d ${INSTDIR}
