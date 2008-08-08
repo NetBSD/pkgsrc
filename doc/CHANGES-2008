@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1808 2008/08/07 23:26:49 he Exp $
+$NetBSD: CHANGES-2008,v 1.1809 2008/08/08 01:58:17 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3060,7 +3060,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/liferea to 1.4.18 [drochner 2008-08-07]
 	Updated www/epiphany to 2.22.3 [drochner 2008-08-07]
 	Updated print/poppler to 0.8.5 [drochner 2008-08-07]
-	Updated gst-plugins0.10-bad to 0.10.8 [drochner 2008-08-07]
+	Updated multimedia/gst-plugins0.10-bad to 0.10.8 [drochner 2008-08-07]
 	Updated multimedia/gst-plugins0.10-good to 0.10.9 [drochner 2008-08-07]
 	Added sysutils/gst-plugins0.10-gio version 0.10.20 [drochner 2008-08-07]
 	Updated devel/anjuta to 2.4.2 [drochner 2008-08-07]
