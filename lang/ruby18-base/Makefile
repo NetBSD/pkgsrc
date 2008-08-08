@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.45 2008/07/03 21:06:10 tonnerre Exp $
+# $NetBSD: Makefile,v 1.45.4.1 2008/08/08 14:37:50 ghen Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION_SUFFIX}
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
-PKGREVISION=	1
+#PKGREVISION=
 
 MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	${RUBY_HOMEPAGE}
@@ -36,7 +36,7 @@ WRKSRC=		${RUBY_WRKSRC}
 .if !empty(PKGSRC_COMPILER:Msunpro)
 LIBS.SunOS+=	-B static -lsunmath -B dynamic -lm
 LDFLAGS.SunOS+=	-L${SUNWSPROBASE}/lib -Wl,-R${SUNWSPROBASE}/lib
-MAKE_FLAGS+=	LDSHARED="${CC} -G"
+CONFIGURE_ENV+=	LDSHARED="${CC} -G"
 .else
 LIBS.SunOS+=	-lm
 .endif
