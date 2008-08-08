@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:33 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/08/08 21:27:24 shannonjr Exp $
 #
 
-DISTNAME=	ccid-1.3.5
+DISTNAME=	ccid-1.3.8
 CATEGORIES=	security
-MASTER_SITES=	http://alioth.debian.org/frs/download.php/2330/
+MASTER_SITES=	http://alioth.debian.org/frs/download.php/2482/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	shannonjr@NetBSD.org
 HOMEPAGE=	http://pcsclite.alioth.debian.org/ccid.html
@@ -17,7 +18,7 @@ GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
 USE_TOOLS+=	autoconf automake aclocal autoheader
-USE_TOOLS+=	flex
+USE_TOOLS+=	flex perl
 USE_LANGUAGES=	c c++
 
 CONFIGURE_ARGS+=        --sharedstatedir=${VARBASE:Q}
