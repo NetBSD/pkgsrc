@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.13 2008/08/08 23:41:22 epg Exp $
+$NetBSD: distinfo,v 1.14 2008/08/08 23:48:01 epg Exp $
 
 SHA1 (nmh-1.3.tar.gz) = 65b52b7db727c391cae7af60ee0b888cbdc2718a
 RMD160 (nmh-1.3.tar.gz) = a862789cc8edb28c0fc3295bd12787440797da92
 Size (nmh-1.3.tar.gz) = 847614 bytes
-SHA1 (patch-ac) = 110189a119fcdbfd78a1becd1d3b83482d156192
-SHA1 (patch-af) = 90464f24d1b0b4887ee91dcd0d5be0fd82e714e2
-SHA1 (patch-ay) = 70da99e2192917180376f78e5452342df9440213
+SHA1 (patch-ac) = 81a2ebcabd8206256a1319f6a4820f5d9e25ac2b
+SHA1 (patch-af) = c5ddd4c9d4b941584a89d9986d33bdb54d28e6fd
+SHA1 (patch-ay) = e65fcea8b8cf7c6ca89a2279763d0fe21bcd4cde
 SHA1 (patch-ca) = b37804e0701ca8c144754a7aa6226f30df98c597
 SHA1 (patch-cd) = 058fdb8530ce8bdbd08779c90e675c071c7f834e

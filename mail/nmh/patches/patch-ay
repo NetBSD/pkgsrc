@@ -1,4 +1,6 @@
-$NetBSD: patch-ay,v 1.1 2006/03/02 21:28:23 joerg Exp $
+$NetBSD: patch-ay,v 1.2 2008/08/08 23:48:01 epg Exp $
+
+Committed upstream in r1.13; should be in next release.
 
 --- uip/scansbr.c.orig	2006-03-02 21:05:07.000000000 +0000
 +++ uip/scansbr.c
