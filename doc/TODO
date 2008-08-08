@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7457 2008/08/08 07:55:59 taca Exp $
+$NetBSD: TODO,v 1.7458 2008/08/08 22:45:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -400,7 +400,7 @@ Suggested package updates
 	o a2ps-4.14
 	o aap-0.144
 	o abcm2ps-5.8.1
-	o abcmidi-20080702
+	o abcmidi-20080804
 	o abiword-2.6.2
 	o acme-091
 	o acr-0.5.2
@@ -447,7 +447,7 @@ Suggested package updates
 	o arping-2.06
 	o asapm-3.1
 	o asc-2.1.0
-	o aspell-danish-1.6.15
+	o aspell-danish-1.6.16
 	o aspell-faroese-0.2.33
 	o aspell-norwegian-2.0.10
 	o aspell-ukrainian-1.3.3
@@ -504,6 +504,7 @@ Suggested package updates
 	o cdif-1.19
 	o cdlabelgen-4.0.0
 	o cdrkit-1.1.7.1
+	o cdrtools-2.01.01.45
 	o cfitsio-3.030
 	o cflow-1.2
 	o cgdb-0.6.4
@@ -562,6 +563,7 @@ Suggested package updates
 	o dinotrace-mode-9.3e
 	o dirac-1.0
 	o dircproxy-devel-1.2.0.2
+	o distcc-3.0
 	o djvulibre-lib-4.1.2
 	o djvulibre-tools-4.1.2
 	o dnstop-20070307
@@ -736,7 +738,7 @@ Suggested package updates
 	o hesiod-3.1.0
 	o hexedit-1.2.12
 	o heyu-2.3.0
-	o highlight-2.6.11
+	o highlight-2.6.12
 	o hobbitmon-4.0.4 [pkg/30484]
 	o honeyd-1.5c
 	o host-20070128
@@ -807,6 +809,7 @@ Suggested package updates
 	o kmp-0.5
 	o kmymoney2-0.9
 	o kodos-2.4.5
+	o konversation-1.1
 	o kphotobook-0.0.7
 	o krusader-1.90.0
 	o ksi-3.4.2
@@ -1104,7 +1107,7 @@ Suggested package updates
 	o py-ZODB-3.2.10
 	o py-ZopeInterface-3.3.0
 	o py-bdb-xml-2.1.8
-	o py-bsddb3-4.7.1
+	o py-bsddb3-4.7.2
 	o py-checker-0.8.17
 	o py-clearsilver-0.10.5
 	o py-curl-7.16.4
@@ -1131,6 +1134,7 @@ Suggested package updates
 	o py-reportlab-2.0
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.7
+	o py-sqlite2-2.4.1
 	o py-sybase-0.37
 	o py-textile-2.0.11
 	o py-twisted-8.0.1
