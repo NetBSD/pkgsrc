@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7456 2008/08/08 07:50:33 taca Exp $
+$NetBSD: TODO,v 1.7457 2008/08/08 07:55:59 taca Exp $
 
 Suggested new packages
 ======================
@@ -304,10 +304,6 @@ Suggested new packages
 	M+ FONTS [pkg/37614]
 	http://mplus-fonts.sourceforge.jp/
 	Small and neat Japanese bitmap fonts
-
-	Ruby RSS Parser [pkg/37766]
-	http://www.cozmixng.org/~rwiki/?cmd=view;name=RSS+Parser
-	Newer version of included in ruby18
 
 	tkimg [pkg/38026]
 	http://tkimg.sourceforge.net/
