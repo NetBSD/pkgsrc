@@ -1,10 +1,11 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/03/04 11:29:08 shannonjr Exp $
+$NetBSD: patch-ab,v 1.2 2008/08/08 21:25:49 shannonjr Exp $
 
---- src/Makefile.am.orig	2007-10-13 15:21:11.000000000 -0600
-+++ src/Makefile.am
-@@ -150,3 +150,5 @@ tokenparser.c: tokenparser.l
+--- src/Makefile.am.orig	2008-05-21 09:58:33 +0300
++++ src/Makefile.am	2008-08-07 22:16:36 +0300
+@@ -152,3 +152,6 @@ tokenparser.c: tokenparser.l
  
- EXTRA_DIST = README_INTERNALS.txt dyn_win32.c thread_win32.c winscard_scf.c
+ EXTRA_DIST = README_INTERNALS.txt winscard_scf.c
  
 +install-data-local:
 +	${INSTALL} -d ${DESTDIR}${includedir}/PCSC
++
