@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2006/10/14 08:23:29 wiz Exp $
+# $NetBSD: Makefile,v 1.39 2008/08/08 15:00:53 joerg Exp $
 
 DISTNAME=	docbook-4.4
 PKGREVISION=	2
@@ -15,6 +15,7 @@ DISTFILES=	docbk241.zip docbk30.zip docbk31.zip docbk40.zip docbk41.zip \
 		docbook-4.2.zip docbook-4.3.zip docbook-4.4.zip
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 MAINTAINER=	rh@NetBSD.org
 HOMEPAGE=	http://www.oasis-open.org/docbook/
@@ -29,8 +30,8 @@ USE_LANGUAGES=	# none
 USE_TOOLS+=	unzip
 EXTRACT_ONLY=	# nothing
 
-INSTDIR=	${PREFIX}/share/sgml/docbook
-ISOCAT=		${PREFIX}/share/sgml/iso8879/catalog
+INSTDIR=	${DESTDIR}${PREFIX}/share/sgml/docbook
+ISOCAT=		${DESTDIR}${PREFIX}/share/sgml/iso8879/catalog
 
 SGML_CATALOGS=
 .for ver in 2.4.1 3.0 3.1 4.0 4.1 4.2 4.3 4.4
