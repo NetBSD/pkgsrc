@@ -1,4 +1,6 @@
-$NetBSD: patch-af,v 1.1 2006/03/02 21:28:23 joerg Exp $
+$NetBSD: patch-af,v 1.2 2008/08/08 23:48:01 epg Exp $
+
+Committed upstream in r1.14; should be in next release.
 
 --- sbr/m_getfld.c.orig	2006-03-02 20:29:22.000000000 +0000
 +++ sbr/m_getfld.c
