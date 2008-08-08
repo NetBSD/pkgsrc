@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.27 2008/07/08 20:28:55 adrianp Exp $
+# $NetBSD: Makefile.php,v 1.28 2008/08/08 20:01:34 adrianp Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -41,7 +41,7 @@ CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX:Q}
 # Note: This expression is the same as ${PKGBASE}, but the latter is
 # not defined yet, so we cannot use it here.
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
-PKG_SUPPORTED_OPTIONS+=	inet6 ssl
+PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts
 PKG_SUGGESTED_OPTIONS+=	ssl
 
 .include "../../mk/bsd.options.mk"
@@ -57,4 +57,8 @@ CONFIGURE_ARGS+=	--disable-ipv6
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
 .else
 CONFIGURE_ARGS+=	--without-openssl
+.endif
+
+.if !empty(PKG_OPTIONS:Mmaintainer-zts)
+CONFIGURE_ARGS+=	--enable-maintainer-zts
 .endif
