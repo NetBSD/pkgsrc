@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2005/10/05 13:29:51 wiz Exp $
+# $NetBSD: options.mk,v 1.3 2008/08/08 23:41:22 epg Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.nmh
 PKG_SUPPORTED_OPTIONS=		nmh-backup-hash
@@ -10,11 +10,5 @@ PKG_SUPPORTED_OPTIONS=		nmh-backup-hash
 ### "removed" by rmm.
 ###
 .if !empty(PKG_OPTIONS:Mnmh-backup-hash)
-post-configure: nmh-hash-backup
-
-nmh-hash-backup:
-	cd ${WRKSRC}; file=config.h;					\
-	${SED} -e 's/^\(#define  *BACKUP_PREFIX\)  *.*/\1 "#"/'		\
-		$$file > $$file.new;					\
-	${MV} -f $$file.new $$file
+CONFIGURE_ARGS+=	--with-hash-backup
 .endif
