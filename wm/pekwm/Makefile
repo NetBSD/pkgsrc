@@ -1,19 +1,19 @@
-# $NetBSD: Makefile,v 1.29 2008/06/12 02:14:54 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2008/08/08 14:32:38 obache Exp $
 #
 
-DISTNAME=	pekwm-0.1.6
+DISTNAME=	pekwm-0.1.7
 CATEGORIES=	wm
-MASTER_SITES=	http://www.pekwm.org/files/
+MASTER_SITES=	http://www.pekwm.org/projects/3/files/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.pekwm.org/trac
+HOMEPAGE=	http://www.pekwm.org/
 COMMENT=	Window manager based on aewm++
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	gmake perl:run
+USE_TOOLS+=	gmake pkg-config
 USE_LANGUAGES=	c c++
 
 .include "../../mk/bsd.prefs.mk"
@@ -22,10 +22,7 @@ USE_LANGUAGES=	c c++
 CONFIGURE_ARGS+=	--enable-xinerama
 .endif
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q:S/\/pekwm//}
-
-REPLACE_PERL=		data/scripts/pekwm_themeset.pl \
-			data/scripts/pekwm_ws_menu.pl
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 
 PKG_SYSCONFSUBDIR=	pekwm
 
