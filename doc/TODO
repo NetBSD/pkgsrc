@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7458 2008/08/08 22:45:36 wiz Exp $
+$NetBSD: TODO,v 1.7459 2008/08/08 23:42:29 epg Exp $
 
 Suggested new packages
 ======================
@@ -956,7 +956,6 @@ Suggested package updates
 	o ng-1.4.4
 	o nikto-2.0.1
 	o nmap-4.68
-	o nmh-1.3 [epg]
 	o ns-plugger-common-5.1.3
 	o ns-plugger-communicator-5.1.3
 	o ns-plugger-navigator-5.1.3

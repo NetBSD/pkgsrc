@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1811 2008/08/08 21:31:36 shannonjr Exp $
+$NetBSD: CHANGES-2008,v 1.1812 2008/08/08 23:42:29 epg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3079,3 +3079,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/pcsc-lite to 1.4.102 [shannonjr 2008-08-08]
 	Updated security/ccid to 1.3.8 [shannonjr 2008-08-08]
 	Updated security/prelude-manager to 0.9.14nb1 [shannonjr 2008-08-08]
+	Updated mail/nmh to 1.3 [epg 2008-08-08]
