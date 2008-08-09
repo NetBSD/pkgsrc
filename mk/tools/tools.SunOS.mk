@@ -1,4 +1,4 @@
-# $NetBSD: tools.SunOS.mk,v 1.27 2007/11/28 07:45:50 tron Exp $
+# $NetBSD: tools.SunOS.mk,v 1.28 2008/08/09 15:14:01 ahoka Exp $
 #
 # System-supplied tools for the Solaris operating system.
 
@@ -38,7 +38,7 @@ TOOLS_PLATFORM.diff3?=		/bin/diff3
 TOOLS_PLATFORM.diff3?=		/usr/bin/diff3
 .endif
 TOOLS_PLATFORM.dirname?=	/usr/bin/dirname
-TOOLS_PLATFORM.echo?=		/usr/ucb/echo
+TOOLS_PLATFORM.echo?=		echo	# we use pdksh so this is builtin
 TOOLS_PLATFORM.egrep?=		/usr/xpg4/bin/grep -E
 TOOLS_PLATFORM.env?=		/usr/bin/env
 TOOLS_PLATFORM.expr?=		/usr/xpg4/bin/expr
@@ -55,7 +55,11 @@ TOOLS_PLATFORM.gzip?=		/usr/bin/gzip -nf ${GZIP}
 TOOLS_PLATFORM.head?=		/usr/bin/head
 TOOLS_PLATFORM.hostname?=	/bin/hostname
 TOOLS_PLATFORM.id?=		/usr/xpg4/bin/id
+.if exists(/usr/bin/ginstall)	# if we are using OpenSolaris
+TOOLS_PLATFORM.install?=	/usr/bin/ginstall
+.else
 TOOLS_PLATFORM.install?=	/usr/ucb/install
+.endif
 TOOLS_PLATFORM.ln?=		/usr/bin/ln
 TOOLS_PLATFORM.ls?=		/usr/bin/ls
 TOOLS_PLATFORM.m4?=		/usr/ccs/bin/m4
