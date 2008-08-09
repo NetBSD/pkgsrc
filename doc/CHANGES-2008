@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1818 2008/08/09 06:08:45 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1819 2008/08/09 06:15:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3086,3 +3086,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/p5-Text-Diff-Parser version 0.08 [obache 2008-08-09]
 	Added sysutils/p5-Sys-Filesystem version 1.22 [obache 2008-08-09]
 	Added devel/p5-Tie-Array-Sorted version 1.41 [obache 2008-08-09]
+	Added devel/p5-Tie-File version 0.96 [obache 2008-08-09]
