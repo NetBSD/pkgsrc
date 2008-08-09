@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/08/09 17:33:22 ahoka Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/08/09 17:52:57 ahoka Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 ONIGURUMA_BUILDLINK3_MK:=	${ONIGURUMA_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}oniguruma
 
 .if ${ONIGURUMA_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.oniguruma+=	oniguruma>=5.9.1
-BUILDLINK_PKGSRCDIR.oniguruma?=	../../wip/oniguruma
+BUILDLINK_PKGSRCDIR.oniguruma?=	../../textproc/oniguruma
 .endif	# ONIGURUMA_BUILDLINK3_MK
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
