@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1827 2008/08/09 19:59:53 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1828 2008/08/09 20:04:07 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3114,3 +3114,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/icon-naming-utils to 0.8.7 [bjs 2008-08-09]
 	Added fonts/gbdfed version 1.4 [bjs 2008-08-09]
 	Updated www/links to 2.2 [bjs 2008-08-09]
+	Updated x11/xprop to 1.0.4 [bjs 2008-08-09]
