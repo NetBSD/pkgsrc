@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.967 2008/08/09 06:09:34 obache Exp $
+# $NetBSD: Makefile,v 1.968 2008/08/09 06:16:27 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -685,6 +685,7 @@ SUBDIR+=	p5-Test-Unit
 SUBDIR+=	p5-Test-Warn
 SUBDIR+=	p5-Test-use-ok
 SUBDIR+=	p5-Tie-Array-Sorted
+SUBDIR+=	p5-Tie-File
 SUBDIR+=	p5-Tie-IxHash
 SUBDIR+=	p5-Tie-RefHash
 SUBDIR+=	p5-Tie-ToObject
