@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1830 2008/08/09 21:22:53 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1831 2008/08/09 21:33:18 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3117,3 +3117,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xprop to 1.0.4 [bjs 2008-08-09]
 	Updated x11/xrdb to 1.0.5 [bjs 2008-08-09]
 	Added devel/libslang2 version 2.1.3 [bjs 2008-08-09]
+	Updated misc/most to 5.0.0a [bjs 2008-08-09]
