@@ -1,9 +1,10 @@
-# $NetBSD: options.mk,v 1.3 2007/08/07 04:59:33 lukem Exp $
+# $NetBSD: options.mk,v 1.4 2008/08/09 22:03:52 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.tnftp
 PKG_SUPPORTED_OPTIONS=		inet6
 PKG_OPTIONS_OPTIONAL_GROUPS+=	socks
 PKG_OPTIONS_GROUP.socks=	socks5
+PKG_SUGGESTED_OPTIONS=		inet6
 
 .include "../../mk/bsd.options.mk"
 
