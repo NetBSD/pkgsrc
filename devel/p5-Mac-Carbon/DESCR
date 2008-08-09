@@ -1,0 +1,3 @@
+Mac::Carbon is a collection of perl modules for accessing the Carbon API under
+Mac OS X. It is a port of the Toolbox modules written by Matthias Neeracher for
+MacPerl.
