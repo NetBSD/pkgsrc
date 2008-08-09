@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1815 2008/08/09 02:35:40 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1816 2008/08/09 02:59:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3083,3 +3083,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-PPI to 1.203 [obache 2008-08-09]
 	Updated devel/p5-File-HomeDir to 0.80 [obache 2008-08-09]
 	Added devel/p5-Mac-Carbon version 0.77 [obache 2008-08-09]
+	Added textproc/p5-Text-Diff-Parser version 0.08 [obache 2008-08-09]
