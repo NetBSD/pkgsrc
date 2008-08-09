@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1820 2008/08/09 10:12:31 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1821 2008/08/09 13:48:43 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3052,6 +3052,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-Kwiki-RecentChanges to 0.14 [he 2008-08-05]
 	Updated mail/spamdyke to 4.0.2 [schmonz 2008-08-07]
 	Updated textproc/py-feedparser to 4.2pre290 [schmonz 2008-08-07]
+	Updated x11/xf86-input-vmmouse to 12.5.1 [tnn 2008-08-07]
 	Updated multimedia/transcode to 1.0.6 [drochner 2008-08-07]
 	Updated audio/libsamplerate to 0.1.4 [drochner 2008-08-07]
 	Updated multimedia/libmpeg2 to 0.5.1 [drochner 2008-08-07]
@@ -3088,3 +3089,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Tie-Array-Sorted version 1.41 [obache 2008-08-09]
 	Added devel/p5-Tie-File version 0.96 [obache 2008-08-09]
 	Updated x11/xcompmgr to 1.1.4nb1 [bjs 2008-08-09]
+	Updated net/Transmission to 1.32 [tnn 2008-08-09]
