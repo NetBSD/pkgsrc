@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/03/22 15:43:47 joerg Exp $
+$NetBSD: distinfo,v 1.2 2008/08/09 15:46:43 tnn Exp $
 
-SHA1 (xf86-video-neomagic-1.1.1.tar.bz2) = 45bbd2921b2fb5996fc3cdadacc87fff54132fa1
-RMD160 (xf86-video-neomagic-1.1.1.tar.bz2) = 74305baac84490cb7deab78336eb47645263e74f
-Size (xf86-video-neomagic-1.1.1.tar.bz2) = 263711 bytes
+SHA1 (xf86-video-neomagic-1.2.1.tar.bz2) = fcb919e8a78fb75654b21b2358783df14d2c8dfc
+RMD160 (xf86-video-neomagic-1.2.1.tar.bz2) = 0b563de0cd53011b89d91f66ebd3895c905e765f
+Size (xf86-video-neomagic-1.2.1.tar.bz2) = 272764 bytes
