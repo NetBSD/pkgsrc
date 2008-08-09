@@ -1,15 +1,49 @@
-$NetBSD: patch-ab,v 1.1 2001/04/20 22:20:51 jtb Exp $
+$NetBSD: patch-ab,v 1.2 2008/08/09 21:32:39 bjs Exp $
 
---- src/Makefile.in.orig	Fri Apr 20 22:18:06 2001
+--- src/Makefile.in.orig	2007-09-09 12:14:17.000000000 -0400
 +++ src/Makefile.in
-@@ -87,8 +87,8 @@
- install: all $(BIN_DIR)
- 	$(INSTALL) -s $(OBJDIR)/most $(BIN_DIR)
- 	$(INSTALL_DATA) ../most.1 $(MAN_DIR)
--	$(INSTALL) -d $(DOC_DIR) -m 755
--	$(INSTALL_DATA) $(DOC_FILES) $(DOC_DIR)
-+#	$(INSTALL) -d $(DOC_DIR) -m 755
-+#	$(INSTALL_DATA) $(DOC_FILES) $(DOC_DIR)
- $(BIN_DIR):
- 	- ../mkinsdir.sh $(BIN_DIR)
+@@ -22,7 +22,7 @@ prefix		= @prefix@
+ exec_prefix	= @exec_prefix@
+ datarootdir	= @datarootdir@
+ BIN_DIR		= $(prefix)/bin
+-MAN_DIR		= $(datarootdir)/man
++MAN_DIR		= $(PREFIX)/$(PKGMANDIR)
+ DOC_DIR		= $(datarootdir)/doc/most
+ SYS_INITFILE	= @sysconfdir@/most.conf
+ MKINSDIR	= ../autoconf/mkinsdir.sh
+@@ -79,21 +79,21 @@ clean:
+ distclean: clean
+ 	/bin/rm -rf $(OBJDIR) Makefile sysconf.h
+ installdirs:
+-	$(MKINSDIR) $(DEST_DOCDIR)
+-	$(MKINSDIR) $(DEST_MANDIR)/man1
+-	$(MKINSDIR) $(DEST_BINDIR)
++	#$(MKINSDIR) $(DEST_DOCDIR)
++	$(BSD_INSTALL_MAN_DIR) $(DEST_MANDIR)/man1
++	$(BSD_INSTALL_PROGRAM_DIR) $(DEST_BINDIR)
+ install: all installdirs
+-	$(INSTALL) -s $(OBJDIR)/most $(DEST_BINDIR)
+-	$(INSTALL_DATA) ../most.1 $(DEST_MANDIR)/man1
+-	@for i in $(DOC_FILES); \
+-	do \
+-		i=../$$i; \
+-		echo $(INSTALL_DATA) $$i $(DEST_DOCDIR); \
+-		$(INSTALL_DATA) $$i $(DEST_DOCDIR); \
+-		if [ "$$?" != "0" ]; then \
+-		  exit 1; \
+-		fi; \
+-	done
++	$(BSD_INSTALL_PROGRAM) $(OBJDIR)/most $(DEST_BINDIR)
++	$(BSD_INSTALL_MAN) ../most.1 $(DEST_MANDIR)/man1
++	#@for i in $(DOC_FILES); \
++	#do \
++	#	i=../$$i; \
++	#	echo $(INSTALL_DATA) $$i $(DEST_DOCDIR); \
++	#	$(INSTALL_DATA) $$i $(DEST_DOCDIR); \
++	#	if [ "$$?" != "0" ]; then \
++	#	  exit 1; \
++	#	fi; \
++	#done
  # The symlinks target is for my own private use.  It simply creates the object
+ # directory as a symbolic link to a local disk instead of an NFS mounted one.
+ symlinks:
