@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7460 2008/08/09 01:33:05 obache Exp $
+$NetBSD: TODO,v 1.7461 2008/08/09 01:41:27 obache Exp $
 
 Suggested new packages
 ======================
@@ -996,7 +996,6 @@ Suggested package updates
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.007
 	o p5-DateTime-TimeZone-0.79
-	o p5-File-HomeDir-0.80 [pkg/39227]
 	o p5-HTTPD-User-Manage-1.62
 	o p5-MARC-1.38
 	o p5-MIME-tools-5.427
