@@ -1,0 +1,53 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/08/09 21:22:11 bjs Exp $
+
+--- demo/Makefile.in.orig	2006-05-12 15:09:10.000000000 -0400
++++ demo/Makefile.in
+@@ -28,17 +28,17 @@ CONFIG_H = config.h
+ 
+ ALL_CFLAGS = $(CFLAGS) -Dunix -I$(SLANG_INCLUDE)
+ 
+-COMPILE_CMD = $(CC) -c $(ALL_CFLAGS)
++COMPILE_CMD = $(LIBTOOL) --mode=compile $(CC) -c $(ALL_CFLAGS)
+ EXECLIBS = -L$(SLANG_LIB) -lslang -lm $(TCAPLIB)
+-EXECDEPS = $(SLANG_LIB)/libslang.a
++EXECDEPS = $(SLANG_LIB)/libslang.la
+ DOT_O_DEPS = demolib.c
+ 
+ #---------------------------------------------------------------------------
+ all: $(CONFIG_H) $(OTHERSTUFF)
+ 
+-$(CONFIG_H) : $(SLANG_LIB)/libslang.a ../src/config.h
+-	/bin/cp ../src/config.h $(CONFIG_H)
+-$(SLANG_LIB)/libslang.a :
++$(CONFIG_H) : $(SLANG_LIB)/libslang.la ../src/config.h
++	cp ../src/config.h $(CONFIG_H)
++$(SLANG_LIB)/libslang.la :
+ 	cd ../src; $(MAKE)
+ #---------------------------------------------------------------------------
+ # Housekeeping
+@@ -49,21 +49,21 @@ distclean: clean
+ 	-/bin/rm -rf Makefile config.h
+ #
+ useropen : useropen.o $(useropen_DEPS) $(EXECDEPS)
+-	$(CC) -o useropen $(LDFLAGS) useropen.o $(useropen_LIBS) $(EXECLIBS)
++	$(LIBTOOL) --mode=link $(CC) -o useropen $(LDFLAGS) useropen.lo $(useropen_LIBS) $(EXECLIBS)
+ useropen.o : useropen.c $(DOT_O_DEPS) $(useropen_O_DEP)
+ 	$(COMPILE_CMD) $(useropen_INC) $(EXECINC) useropen.c
+ 
+ pager : pager.o $(pager_DEPS) $(EXECDEPS)
+-	$(CC) -o pager $(LDFLAGS) pager.o $(pager_LIBS) $(EXECLIBS)
++	$(LIBTOOL) --mode=link $(CC) -o pager $(LDFLAGS) pager.lo $(pager_LIBS) $(EXECLIBS)
+ pager.o : pager.c $(DOT_O_DEPS) $(pager_O_DEP)
+ 	$(COMPILE_CMD) $(pager_INC) $(EXECINC) pager.c
+ 
+ keypad : keypad.o $(keypad_DEPS) $(EXECDEPS)
+-	$(CC) -o keypad $(LDFLAGS) keypad.o $(keypad_LIBS) $(EXECLIBS)
++	$(LIBTOOL) --mode=link $(CC) -o keypad $(LDFLAGS) keypad.lo $(keypad_LIBS) $(EXECLIBS)
+ keypad.o : keypad.c $(DOT_O_DEPS) $(keypad_O_DEP)
+ 	$(COMPILE_CMD) $(keypad_INC) $(EXECINC) keypad.c
+ 
+ smgtest : smgtest.o $(smgtest_DEPS) $(EXECDEPS)
+-	$(CC) -o smgtest $(LDFLAGS) smgtest.o $(smgtest_LIBS) $(EXECLIBS)
++	$(LIBTOOL) --mode=link $(CC) -o smgtest $(LDFLAGS) smgtest.lo $(smgtest_LIBS) $(EXECLIBS)
+ smgtest.o : smgtest.c $(DOT_O_DEPS) $(smgtest_O_DEP)
+ 	$(COMPILE_CMD) $(smgtest_INC) $(EXECINC) smgtest.c
