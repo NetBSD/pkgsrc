@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7464 2008/08/09 19:29:59 bjs Exp $
+$NetBSD: TODO,v 1.7465 2008/08/09 20:00:49 bjs Exp $
 
 Suggested new packages
 ======================
@@ -866,8 +866,6 @@ Suggested package updates
 	o libtool-base-2.2.4
 	o libxklavier-3.6
 	o lincvs-2.0.0 [now called CrossVC]
-	o links-2.2
-	o links-gui-2.2
 	o linuxsms-0.77
 	o lmms-0.2.1
 	o loudmouth-1.4.1
