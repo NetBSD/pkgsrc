@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/05/24 21:45:17 tnn Exp $
+# $NetBSD: Makefile,v 1.3 2008/08/09 15:51:59 tnn Exp $
 #
 
-DISTNAME=	xf86-video-rendition-4.1.3
+DISTNAME=	xf86-video-rendition-4.2.0
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
