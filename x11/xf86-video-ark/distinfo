@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/03/20 15:37:45 joerg Exp $
+$NetBSD: distinfo,v 1.2 2008/08/09 15:11:19 tnn Exp $
 
-SHA1 (xf86-video-ark-0.6.0.tar.bz2) = 349572d92ca6cd2c8f370105c4bffc70b7034bf3
-RMD160 (xf86-video-ark-0.6.0.tar.bz2) = a61c0a115f12704ae163167f335befaf3175a8ce
-Size (xf86-video-ark-0.6.0.tar.bz2) = 231223 bytes
+SHA1 (xf86-video-ark-0.7.0.tar.bz2) = ee92db52c5ee9b35fcb3d6d7469ded272119664e
+RMD160 (xf86-video-ark-0.7.0.tar.bz2) = d69fe45cadeae43b1b746296f8b3f34c179e2c06
+Size (xf86-video-ark-0.7.0.tar.bz2) = 241897 bytes
