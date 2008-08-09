@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.965 2008/08/06 15:55:24 he Exp $
+# $NetBSD: Makefile,v 1.966 2008/08/09 02:37:17 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -562,6 +562,7 @@ SUBDIR+=	p5-Log-Dispatch-FileRotate
 SUBDIR+=	p5-Log-Log4perl
 SUBDIR+=	p5-Log-LogLite
 SUBDIR+=	p5-MRO-Compat
+SUBDIR+=	p5-Mac-Carbon
 SUBDIR+=	p5-Make
 SUBDIR+=	p5-Memoize
 SUBDIR+=	p5-Memoize-ExpireLRU
