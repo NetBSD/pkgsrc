@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7465 2008/08/09 20:00:49 bjs Exp $
+$NetBSD: TODO,v 1.7466 2008/08/09 20:05:48 bjs Exp $
 
 Suggested new packages
 ======================
@@ -1393,7 +1393,6 @@ Suggested package updates
 	o xnap-2.5r3
 	o xorp-1.5
 	o xpad-2.13
-	o xprop-1.0.4
 	o xpuyopuyo-0.9.8
 	o xrdb-1.0.5
 	o xrmap-anthems-1.2
