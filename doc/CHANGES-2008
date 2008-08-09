@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1819 2008/08/09 06:15:49 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1820 2008/08/09 10:12:31 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3087,3 +3087,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added sysutils/p5-Sys-Filesystem version 1.22 [obache 2008-08-09]
 	Added devel/p5-Tie-Array-Sorted version 1.41 [obache 2008-08-09]
 	Added devel/p5-Tie-File version 0.96 [obache 2008-08-09]
+	Updated x11/xcompmgr to 1.1.4nb1 [bjs 2008-08-09]
