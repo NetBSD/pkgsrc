@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.968 2008/08/09 06:16:27 obache Exp $
+# $NetBSD: Makefile,v 1.969 2008/08/09 21:24:15 bjs Exp $
 #
 
 COMMENT=	Development utilities
@@ -318,6 +318,7 @@ SUBDIR+=	libsigc++
 SUBDIR+=	libsigc++1
 SUBDIR+=	libsigsegv
 SUBDIR+=	libslang
+SUBDIR+=	libslang2
 SUBDIR+=	libsmi
 SUBDIR+=	libstash
 SUBDIR+=	libstatgrab
