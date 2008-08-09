@@ -1,0 +1,31 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/08/09 21:22:11 bjs Exp $
+
+--- configure.orig	2007-10-22 13:49:55.000000000 -0400
++++ configure
+@@ -10692,6 +10692,7 @@ fi
+ 
+ 
+ fi
++if false; then
+ { echo "$as_me:$LINENO: checking for terminfo" >&5
+ echo $ECHO_N "checking for terminfo... $ECHO_C" >&6; }
+ if test "$nc5config" != "no"
+@@ -10717,6 +10718,7 @@ echo "${ECHO_T}yes" >&6; }
+       break
+    fi
+ done
++fi
+ if test "$TERMCAP"; then
+   { echo "$as_me:$LINENO: result: no" >&5
+ echo "${ECHO_T}no" >&6; }
+@@ -10762,8 +10764,8 @@ then
+   fi
+ fi
+ 
+-OBJDIR=$SRCDIR/"$ARCH"objs
+-ELFDIR=$SRCDIR/elf"$ARCH"objs
++OBJDIR=$SRCDIR/
++ELFDIR=$OBJDIR
+ 
+ 
+ 
