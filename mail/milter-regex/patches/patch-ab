@@ -1,13 +1,17 @@
-$NetBSD: patch-ab,v 1.1 2006/04/30 17:11:25 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2008/08/09 17:26:36 tron Exp $
 
---- Makefile.orig	2006-04-30 17:05:50.000000000 +0000
-+++ Makefile
-@@ -6,7 +6,7 @@ MAN=	milter-regex.8
+--- Makefile.orig	2007-01-11 15:49:52.000000000 +0000
++++ Makefile	2008-07-31 11:53:15.000000000 +0100
+@@ -4,9 +4,9 @@
+ SRCS=	milter-regex.c eval.c parse.y
+ MAN=	milter-regex.8
  
- CFLAGS+=	-Wall -Wstrict-prototypes -g
- CFLAGS+=	-I/usr/src/gnu/usr.sbin/sendmail/include
--LDADD+=		-lmilter -lpthread
+-CFLAGS+=	-Wall -Wstrict-prototypes -O0 -g
+-CFLAGS+=	-I/usr/src/gnu/usr.sbin/sendmail/include -I..
+-LDADD+=		-lmilter -lpthread -g
++CFLAGS+=	-Wall -Wstrict-prototypes
++#CFLAGS+=	-I/usr/src/gnu/usr.sbin/sendmail/include -I..
 +LDADD+=		-lmilter ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
  
- .include <bsd.prog.mk>
- 
+ install:
+ 	sudo rm -rf /usr/local/libexec/milter-regex
