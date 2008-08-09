@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7467 2008/08/09 20:08:35 bjs Exp $
+$NetBSD: TODO,v 1.7468 2008/08/09 21:33:48 bjs Exp $
 
 Suggested new packages
 ======================
@@ -913,7 +913,6 @@ Suggested package updates
 	o mmg-2.0.2
 	o modular-xorg-server-1.4.99.906
 	o moon-buggy-1.0.51
-	o most-4.10.2
 	o mowgli-0.7.0
 	o mp3blaster-3.2.3
 	o mpeg4ip-1.6.1
