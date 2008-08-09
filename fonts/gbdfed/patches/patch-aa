@@ -1,0 +1,35 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/08/09 19:52:02 bjs Exp $
+
+--- Makefile.in.orig	2008-05-21 17:41:46.000000000 -0400
++++ Makefile.in
+@@ -27,9 +27,9 @@ MKINSTALLDIRS = ./mkinstalldirs
+ CC = @CC@
+ CFLAGS = @XX_CFLAGS@ @CFLAGS@
+ 
+-DEFINES = @DEFINES@ -DG_DISABLE_DEPRECATED \
+-	-DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED \
+-	-DGTK_DISABLE_DEPRECATED
++DEFINES = @DEFINES@ #-DG_DISABLE_DEPRECATED \
++	#-DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED \
++	#-DGTK_DISABLE_DEPRECATED
+ 
+ SRCS = bdf.c \
+        bdfcons.c \
+@@ -97,7 +97,7 @@ mandir = @mandir@
+ all: gbdfed
+ 
+ gbdfed: $(OBJS)
+-	$(CC) $(STATIC) $(LDFLAGS) -o gbdfed $(OBJS) $(LIBS)
++	$(LIBTOOL) --mode=link $(CC) $(LDFLAGS) -o gbdfed $(OBJS:.o=.lo) $(LIBS)
+ 
+ clean:
+ 	$(RM) -f *.o *BAK *CKP *~ core
+@@ -109,7 +109,7 @@ distclean: clean
+ 	$(RM) -rf gbdfed config.* Makefile autom4te.cache
+ 
+ .c.o:
+-	$(CC) $(DEFINES) $(CFLAGS) $(INCS) -c $< -o $@
++	$(LIBTOOL) --mode=compile $(CC) $(DEFINES) $(CFLAGS) $(INCS) -c $< -o $(@:.o=.lo)
+ 
+ install: gbdfed
+ 	$(MKINSTALLDIRS) $(DESTDIR)$(bindir) $(DESTDIR)$(mandir)/man1
