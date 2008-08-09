@@ -230,6 +230,7 @@ nox11			Do not link against x11 libraries.
 nspluginwrapper		Enable running non native netscape compatible plugins
 ocamlduce		Enable OcamlDuce support.
 ogg			Enable Ogg support.
+oniguruma		Support regular expressions via the oniguruma library.
 online-tests		Requiring Internet connectivity for "make test".
 openal			Enable OpenAL support.
 opengl			Use OpenGL as display library.
