@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2006/04/13 23:31:19 rillig Exp $
+# $NetBSD: Makefile,v 1.43 2008/08/09 09:28:19 obache Exp $
 
 DISTNAME=		tracker-5.3
 PKGREVISION=		1
@@ -15,11 +15,10 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/tracker
 MAKE_FLAGS+=		MACHINE=${LOWER_OPSYS:Q} INSTALL=${INSTALL:Q} \
-		INST_BIN_OPT="-c -s -m ${BINMODE} -o ${BINOWN} -g ${BINGRP}" \
-		INST_MAN_OPT="-c -m 644 -o ${BINOWN} -g ${BINGRP}" \
 		COMPRESSION_FILE=${PKG_SYSCONFDIR}/compression_methods \
 		COMPRESSION_FILE_EG=${EGDIR}/compression_methods
 
@@ -27,7 +26,7 @@ EGDIR=		${PREFIX}/share/examples/tracker
 CONF_FILES=	${EGDIR}/compression_methods ${PKG_SYSCONFDIR}/compression_methods
 
 USE_TOOLS+=	makeinfo
-INFO_FILES=	# PLIST
+INFO_FILES=	YES
 
 INSTALLATION_DIRS=	bin ${PKGINFODIR} ${EGDIR}
 
@@ -40,8 +39,8 @@ post-build:
 	${RM} *.orig
 
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/tracker
-	${CP} -R ${WRKSRC}/Docs/* ${PREFIX}/share/doc/tracker
-	${INSTALL_DATA} ${WRKDIR}/tracker.info* ${PREFIX}/${PKGINFODIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/tracker
+	${CP} -R ${WRKSRC}/Docs/* ${DESTDIR}${PREFIX}/share/doc/tracker
+	${INSTALL_DATA} ${WRKDIR}/tracker.info* ${DESTDIR}${PREFIX}/${PKGINFODIR}
 
 .include "../../mk/bsd.pkg.mk"

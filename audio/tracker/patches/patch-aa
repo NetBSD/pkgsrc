@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.6 2005/11/10 20:07:17 joerg Exp $
+$NetBSD: patch-aa,v 1.7 2008/08/09 09:28:19 obache Exp $
 
 --- Makefile.orig	1996-05-07 15:20:50.000000000 +0000
 +++ Makefile
@@ -66,15 +66,19 @@ $NetBSD: patch-aa,v 1.6 2005/11/10 20:07:17 joerg Exp $
  
  config.h: $(CONFIG)config.h 
  	rm -f config.h
-@@ -272,9 +290,8 @@ version.c: Makefile
+@@ -270,11 +288,10 @@ version.c: Makefile
+ 	echo >version.c char \*VERSION=\"${VERSION}\"\;
+ 
  install: 
- 	$(INSTALL) $(INST_BIN_OPT) tracker $(BIN_DIR)
- 	$(INSTALL) $(INST_BIN_OPT) randomize $(BIN_DIR)
+-	$(INSTALL) $(INST_BIN_OPT) tracker $(BIN_DIR)
+-	$(INSTALL) $(INST_BIN_OPT) randomize $(BIN_DIR)
 -	$(INSTALL) $(INST_BIN_OPT) splitmod $(BIN_DIR)
 -	[ -f ${COMPRESSION_FILE} ] || \
 -		$(INSTALL) $(INST_MAN_OPT) compression_methods ${COMPRESSION_FILE}
-+	[ -f ${COMPRESSION_FILE_EG} ] || \
-+		$(INSTALL) $(INST_MAN_OPT) Lib/compression_methods ${COMPRESSION_FILE_EG}
++	$(BSD_INSTALL_PROGRAM) tracker $(DESTDIR)$(BIN_DIR)
++	$(BSD_INSTALL_PROGRAM) randomize $(DESTDIR)$(BIN_DIR)
++	[ -f $(DESTDIR)${COMPRESSION_FILE_EG} ] || \
++		$(BSD_INSTALL_MAN) Lib/compression_methods $(DESTDIR)${COMPRESSION_FILE_EG}
  
  # no manpage available, use the texinfo manual.
  install.man:
