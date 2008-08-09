@@ -1,0 +1,102 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/09 21:22:11 bjs Exp $
+bin/slsh
+include/slang2/slang.h
+include/slang2/slcurses.h
+lib/libslang2.la
+lib/slang/v2/modules/fcntl-module.la
+lib/slang/v2/modules/iconv-module.la
+${PLIST.oniguruma}lib/slang/v2/modules/onig-module.la
+${PLIST.pcre}lib/slang/v2/modules/pcre-module.la
+${PLIST.png}lib/slang/v2/modules/png-module.la
+lib/slang/v2/modules/select-module.la
+lib/slang/v2/modules/slsmg-module.la
+lib/slang/v2/modules/socket-module.la
+lib/slang/v2/modules/termios-module.la
+lib/slang/v2/modules/varray-module.la
+man/man1/slsh.1
+share/doc/slang/v2/COPYING
+share/doc/slang/v2/changes.txt
+share/doc/slang/v2/cref.txt
+share/doc/slang/v2/cslang.txt
+share/doc/slang/v2/slang.txt
+share/doc/slang/v2/slangdoc.html
+share/doc/slang/v2/slangfun.txt
+share/doc/slsh/html/slshfun-1.html
+share/doc/slsh/html/slshfun-2.html
+share/doc/slsh/html/slshfun-3.html
+share/doc/slsh/html/slshfun-4.html
+share/doc/slsh/html/slshfun-5.html
+share/doc/slsh/html/slshfun-6.html
+share/doc/slsh/html/slshfun-7.html
+share/doc/slsh/html/slshfun.html
+share/examples/libslang2/slsh.rc
+share/slsh/arrayfuns.sl
+share/slsh/autoload.sl
+share/slsh/cmaps/cool.map
+share/slsh/cmaps/copper.map
+share/slsh/cmaps/drywet.map
+share/slsh/cmaps/gebco.map
+share/slsh/cmaps/globe.map
+share/slsh/cmaps/gray.map
+share/slsh/cmaps/haxby.map
+share/slsh/cmaps/hot.map
+share/slsh/cmaps/jet.map
+share/slsh/cmaps/no_green.map
+share/slsh/cmaps/ocean.map
+share/slsh/cmaps/polar.map
+share/slsh/cmaps/rainbow.map
+share/slsh/cmaps/red2green.map
+share/slsh/cmaps/relief.map
+share/slsh/cmaps/sealand.map
+share/slsh/cmaps/seis.map
+share/slsh/cmaps/split.map
+share/slsh/cmaps/topo.map
+share/slsh/cmaps/wysiwyg.map
+share/slsh/cmdopt.sl
+share/slsh/fcntl.sl
+share/slsh/glob.sl
+share/slsh/help
+share/slsh/iconv.sl
+share/slsh/onig.sl
+share/slsh/pcre.sl
+share/slsh/png.sl
+share/slsh/print.sl
+share/slsh/profile.sl
+share/slsh/readascii.sl
+share/slsh/require.sl
+share/slsh/rline/complete.sl
+share/slsh/rline/editfuns.sl
+share/slsh/rline/emacskeys.sl
+share/slsh/rline/history.sl
+share/slsh/rline/slrline.rc
+share/slsh/rline/vikeys.sl
+share/slsh/scripts/jpegsize
+share/slsh/scripts/lsrpm
+share/slsh/scripts/sldb
+share/slsh/scripts/slprof
+share/slsh/scripts/svnsh
+share/slsh/select.sl
+share/slsh/sldb.sl
+share/slsh/sldbcore.sl
+share/slsh/sldbsock.sl
+share/slsh/slshhelp.sl
+share/slsh/slshrl.sl
+share/slsh/slsmg.sl
+share/slsh/socket.sl
+share/slsh/stkcheck.sl
+share/slsh/structfuns.sl
+share/slsh/termios.sl
+share/slsh/varray.sl
+@dirrm share/slsh/scripts
+@dirrm share/slsh/rline
+@dirrm share/slsh/cmaps
+@dirrm share/slsh
+@dirrm share/examples/libslang2
+@dirrm share/doc/slsh/html
+@dirrm share/doc/slsh
+@dirrm share/doc/slang/v2
+@dirrm share/doc/slang
+@dirrm lib/slang/v2/modules
+@dirrm lib/slang/v2
+@dirrm lib/slang
+@dirrm include/slang2
