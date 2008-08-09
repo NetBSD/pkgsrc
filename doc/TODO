@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7459 2008/08/08 23:42:29 epg Exp $
+$NetBSD: TODO,v 1.7460 2008/08/09 01:33:05 obache Exp $
 
 Suggested new packages
 ======================
@@ -1005,7 +1005,6 @@ Suggested package updates
 	o p5-Net-Gnats-0.05
 	o p5-Net-ICQ2000-0.2.2
 	o p5-PAR-0.90
-	o p5-PPI-1.203 [pkg/39228]
 	o p5-PV-1.5
 	o p5-Perl-Tidy-20071205
 	o p5-Pod-Tests-1.19
