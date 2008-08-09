@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1824 2008/08/09 17:44:26 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.1825 2008/08/09 19:28:32 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3111,3 +3111,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xf86-video-vmware to 10.16.4 [tnn 2008-08-09]
 	Updated mail/milter-regex to 1.7 [tron 2008-08-09]
 	Added textproc/oniguruma version 5.9.1 [ahoka 2008-08-09]
+	Updated graphics/icon-naming-utils to 0.8.7 [bjs 2008-08-09]
