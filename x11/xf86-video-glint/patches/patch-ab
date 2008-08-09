@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.1 2007/08/15 20:05:01 joerg Exp $
+$NetBSD: patch-ab,v 1.2 2008/08/09 15:32:44 tnn Exp $
 
---- configure.orig	2007-08-15 21:17:50.000000000 +0200
+--- configure.orig	2008-06-30 17:56:57.000000000 +0200
 +++ configure
-@@ -20219,7 +20219,7 @@ _ACEOF
+@@ -21405,7 +21405,7 @@ _ACEOF
  fi
  
  
 -if test "$DRI" != no; then
-+if test "x$DRI" = xauto; then
++if test "$DRI" = xauto; then
          as_ac_File=`echo "ac_cv_file_${sdkdir}/dri.h" | $as_tr_sh`
- echo "$as_me:$LINENO: checking for ${sdkdir}/dri.h" >&5
- echo $ECHO_N "checking for ${sdkdir}/dri.h... $ECHO_C" >&6
+ { echo "$as_me:$LINENO: checking for ${sdkdir}/dri.h" >&5
+ echo $ECHO_N "checking for ${sdkdir}/dri.h... $ECHO_C" >&6; }
