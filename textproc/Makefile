@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.424 2008/08/09 03:00:20 obache Exp $
+# $NetBSD: Makefile,v 1.425 2008/08/09 17:35:37 ahoka Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -175,6 +175,7 @@ SUBDIR+=	nbsed
 SUBDIR+=	ndtpd
 SUBDIR+=	nxml-mode
 SUBDIR+=	o3read
+SUBDIR+=	oniguruma
 SUBDIR+=	openjade
 SUBDIR+=	opensp
 SUBDIR+=	p5-CAM-PDF
