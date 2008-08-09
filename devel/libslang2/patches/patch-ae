@@ -1,0 +1,65 @@
+$NetBSD: patch-ae,v 1.1.1.1 2008/08/09 21:22:11 bjs Exp $
+
+--- modules/Makefile.in.orig	2007-09-07 22:47:29.000000000 -0400
++++ modules/Makefile.in
+@@ -69,9 +69,10 @@ DEST_HELPDIR	= $(DESTDIR)$(HELP_DIR)
+ #---------------------------------------------------------------------------
+ RPATH = @RPATH@
+ 
+-LIBS = $(LDFLAGS) $(RPATH) $(SLANG_LIB) $(DL_LIB) -lm
++LIBS = $(LDFLAGS) -module -avoid-version -rpath $(PREFIX)/lib $(SLANG_LIB) $(DL_LIB) -lm
+ #LIBS = $(RPATH) $(DL_LIB) -lm
+ INCS = $(SLANG_INC)
++CC_SHARED:=${LIBTOOL} --mode=link ${LIBTOOL_FLAGS} ${CC} 
+ 
+ all: $(MODULES)
+ 
+@@ -79,35 +80,35 @@ config.h: ../src/config.h
+ 	cp ../src/config.h .
+ 
+ slsmg-module.so: slsmg-module.c config.h
+-	$(CC_SHARED) $(INCS) slsmg-module.c -o slsmg-module.so $(LIBS)
++	$(CC_SHARED) $(INCS) slsmg-module.c -o slsmg-module.la $(LIBS)
+ newt-module.so: newt-module.c config.h
+-	$(CC_SHARED) $(INCS) newt-module.c -o newt-module.so -lnewt $(LIBS)
++	$(CC_SHARED) $(INCS) newt-module.c -o newt-module.la -lnewt $(LIBS)
+ termios-module.so: termios-module.c config.h
+-	$(CC_SHARED) $(INCS) termios-module.c -o termios-module.so $(LIBS)
++	$(CC_SHARED) $(INCS) termios-module.c -o termios-module.la $(LIBS)
+ select-module.so: select-module.c config.h
+-	$(CC_SHARED) $(INCS) select-module.c -o select-module.so $(LIBS)
++	$(CC_SHARED) $(INCS) select-module.c -o select-module.la $(LIBS)
+ fcntl-module.so: fcntl-module.c config.h
+-	$(CC_SHARED) $(INCS) fcntl-module.c -o fcntl-module.so $(LIBS)
++	$(CC_SHARED) $(INCS) fcntl-module.c -o fcntl-module.la $(LIBS)
+ varray-module.so: varray-module.c config.h
+-	$(CC_SHARED) $(INCS) varray-module.c -o varray-module.so $(LIBS)
++	$(CC_SHARED) $(INCS) varray-module.c -o varray-module.la $(LIBS)
+ pcre-module.so: pcre-module.c config.h
+-	$(CC_SHARED) $(INCS) $(PCRE_INC) pcre-module.c -o pcre-module.so $(PCRE_LIB) $(LIBS)
++	$(CC_SHARED) $(INCS) $(PCRE_INC) pcre-module.c -o pcre-module.la $(PCRE_LIB) $(LIBS)
+ onig-module.so: onig-module.c config.h
+-	$(CC_SHARED) $(INCS) $(ONIG_INC) onig-module.c -o onig-module.so $(ONIG_LIB) $(LIBS)
++	$(CC_SHARED) $(INCS) $(ONIG_INC) onig-module.c -o onig-module.la $(ONIG_LIB) $(LIBS)
+ png-module.so: png-module.c config.h
+-	$(CC_SHARED) $(INCS) $(PNG_INC) png-module.c -o png-module.so $(PNG_LIB) $(LIBS)
++	$(CC_SHARED) $(INCS) $(PNG_INC) png-module.c -o png-module.la $(PNG_LIB) $(LIBS)
+ socket-module.so: socket-module.c config.h
+-	$(CC_SHARED) $(INCS) socket-module.c -o socket-module.so $(SOCKET_LIBS) $(LIBS)
++	$(CC_SHARED) $(INCS) socket-module.c -o socket-module.la $(SOCKET_LIBS) $(LIBS)
+ iconv-module.so: iconv-module.c config.h
+-	$(CC_SHARED) $(INCS) $(ICONV_INC) iconv-module.c -o iconv-module.so $(ICONV_LIB) $(LIBS)
++	$(CC_SHARED) $(INCS) $(ICONV_INC) iconv-module.c -o iconv-module.la $(ICONV_LIB) $(LIBS)
+ 
+ # Note that Windows/Cygwin modules need execute permissions
+ install: all
+ 	-$(MKINSDIR) $(DEST_MODULEDIR)
+-	@for i in $(MODULES); \
++	@for i in $(MODULES:.so=.la); \
+ 	do \
+ 		echo $(INSTALL_MODULE) $$i $(DEST_MODULEDIR); \
+-		$(INSTALL_MODULE) $$i $(DEST_MODULEDIR); \
++		$(LIBTOOL) --mode=install $(BSD_INSTALL_LIB) $$i $(DEST_MODULEDIR); \
+ 	done
+ 	-$(MKINSDIR) $(DEST_SLSH_DIR)
+ 	@for i in $(SLFILES); \

@@ -1,0 +1,62 @@
+$NetBSD: patch-af,v 1.1.1.1 2008/08/09 21:22:11 bjs Exp $
+
+--- slsh/Makefile.in.orig	2007-09-08 21:39:18.000000000 -0400
++++ slsh/Makefile.in
+@@ -64,7 +64,7 @@ DEST_SLSH_DOC_DIR= $(DESTDIR)$(SLSH_DOC_
+ #----------------------------------------------------------------------------
+ @SET_MAKE@
+ SHELL = /bin/sh
+-INST_LIBS = $(RPATH) $(SLANG_INST_LIB) $(DEST_LIB_DIR) -lslang $(READLINE_LIB) $(OTHER_LIBS)
++INST_LIBS = -L$(PREFIX)/lib -lslang $(READLINE_LIB) $(OTHER_LIBS)
+ DEFS = -DSLSH_CONF_DIR='"$(SLSH_CONF_DIR)"' -DSLSH_PATH='"$(SLSH_LIB_DIR)"' \
+  -DSLSH_CONF_DIR_ENV='$(SLSH_CONF_DIR_ENV)' -DSLSH_LIB_DIR_ENV='$(SLSH_LIB_DIR_ENV)' \
+  -DSLSH_PATH_ENV='$(SLSH_PATH_ENV)' 
+@@ -72,25 +72,25 @@ SRC_LIBS = $(SLANG_SRCLIB) -lslang $(REA
+ #
+ all: slsh_exe
+ slsh_exe: slsh.o readline.o
+-	$(CC) $(CFLAGS) slsh.o readline.o -o slsh_exe $(LDFLAGS) $(SRC_LIBS)
+-slsh: slsh.o readline.o
+-	$(CC) $(CFLAGS) slsh.o readline.o -o slsh $(LDFLAGS) $(INST_LIBS)
++	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) slsh.lo readline.lo -o slsh $(LDFLAGS) $(SRC_LIBS) $(INST_LIBS)
++#slsh: slsh.o readline.o
++#	$(LIBTOOL) --mode=link $(CC) $(CFLAGS) slsh.lo readline.lo -o slsh $(LDFLAGS) $(INST_LIBS)
+ slsh.o: slsh.c slsh.h config.h Makefile
+-	$(CC) -c $(CFLAGS) $(SLANG_SRCINC) $(DEFS) slsh.c
++	$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) $(SLANG_SRCINC) $(DEFS) slsh.c $(LIBTOOL_CFLAGS)
+ readline.o: readline.c slsh.h config.h Makefile
+-	$(CC) -c $(CFLAGS) $(SLANG_SRCINC) $(DEFS) -DUSE_GNU_READLINE=$(GNU_READLINE) readline.c
++	$(LIBTOOL) --mode=compile $(CC) -c $(CFLAGS) $(SLANG_SRCINC) $(DEFS) -DUSE_GNU_READLINE=$(GNU_READLINE) readline.c $(LIBTOOL_CFLAGS) -o readline.lo
+ config.h: ../src/config.h
+ 	cp ../src/config.h .
+ install_directories:
+-	$(MKINSDIR) $(DEST_BIN_DIR)
+-	$(MKINSDIR) $(DEST_MAN_DIR)
+-	$(MKINSDIR) $(DEST_SLSH_CONF_DIR)
+-	$(MKINSDIR) $(DEST_SLSH_LIB_DIR)
+-	$(MKINSDIR) $(DEST_SLSH_LIB_DIR)/rline
+-	$(MKINSDIR) $(DEST_SLSH_HELP_DIR)
+-	$(MKINSDIR) $(DEST_SLSH_LOCALLIB_DIR)
+-	$(MKINSDIR) $(DEST_SLSH_SCRIPT_DIR)
+-	$(MKINSDIR) $(DEST_SLSH_DOC_DIR)/html
++	$(BSD_INSTALL_PROGRAM_DIR) $(DEST_BIN_DIR)
++	$(BSD_INSTALL_MAN_DIR) $(DEST_MAN_DIR)
++	$(BSD_INSTALL_DATA_DIR) $(DEST_SLSH_CONF_DIR)
++	$(BSD_INSTALL_LIB_DIR) $(DEST_SLSH_LIB_DIR)
++	$(BSD_INSTALL_LIB_DIR) $(DEST_SLSH_LIB_DIR)/rline
++	$(BSD_INSTALL_DATA_DIR $(DEST_SLSH_HELP_DIR)
++	$(BSD_INSTALL_LIB_DIR $(DEST_SLSH_LOCALLIB_DIR)
++	$(BSD_INSTALL_SCRIPT_DIR) $(DEST_SLSH_SCRIPT_DIR)
++	$(BSD_INSTALL_DATA_DIR) $(DEST_SLSH_DOC_DIR)/html
+ install_lib_files:
+ 	@for X in lib/*.sl; \
+ 	do \
+@@ -139,7 +139,7 @@ install_docs:
+ 
+ install: slsh install_directories install_lib_files install_rline_files \
+  install_scripts install_help install_docs
+-	$(INSTALL) slsh $(DEST_BIN_DIR)/
++	$(LIBTOOL) --mode=install $(BSD_INSTALL_PROGRAM) slsh $(DEST_BIN_DIR)/
+ 	$(INSTALL_DATA) etc/slsh.rc $(DEST_SLSH_CONF_DIR)/
+ 	echo 'prepend_to_slang_load_path("$(SLSH_LOCALLIB_DIR)");' >> $(DEST_SLSH_CONF_DIR)/slsh.rc
+ 	$(INSTALL_DATA) doc/man/slsh.1 $(DEST_MAN_DIR)/
