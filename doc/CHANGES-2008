@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1825 2008/08/09 19:28:32 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1826 2008/08/09 19:52:56 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3112,3 +3112,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/milter-regex to 1.7 [tron 2008-08-09]
 	Added textproc/oniguruma version 5.9.1 [ahoka 2008-08-09]
 	Updated graphics/icon-naming-utils to 0.8.7 [bjs 2008-08-09]
+	Added fonts/gbdfed version 1.4 [bjs 2008-08-09]
