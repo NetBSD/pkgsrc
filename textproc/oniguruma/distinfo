@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/08/09 17:33:22 ahoka Exp $
+
+SHA1 (onig-5.9.1.tar.gz) = cb1021f20e97eb0bfa659c7f9b7300c3f8360279
+RMD160 (onig-5.9.1.tar.gz) = 4c720b4b14a451df5625a48a835066a85662315e
+Size (onig-5.9.1.tar.gz) = 586578 bytes
