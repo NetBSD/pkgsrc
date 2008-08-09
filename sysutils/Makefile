@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.437 2008/08/07 20:54:01 cegger Exp $
+# $NetBSD: Makefile,v 1.438 2008/08/09 05:45:50 obache Exp $
 #
 
 COMMENT=	System utilities
@@ -197,6 +197,7 @@ SUBDIR+=	p5-GTop
 SUBDIR+=	p5-Lchown
 SUBDIR+=	p5-Parse-Syslog
 SUBDIR+=	p5-Sys-CpuLoad
+SUBDIR+=	p5-Sys-Filesystem
 SUBDIR+=	p5-Sys-Hostname-Long
 SUBDIR+=	p5-Unix-ConfigFile
 SUBDIR+=	p5-Unix-Syslog
