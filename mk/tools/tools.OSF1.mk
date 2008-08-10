@@ -1,6 +1,8 @@
-# $NetBSD: tools.OSF1.mk,v 1.13 2007/08/05 12:38:22 tnn Exp $
+# $NetBSD: tools.OSF1.mk,v 1.14 2008/08/10 15:17:25 ahoka Exp $
 #
 # System-supplied tools for the OSF/1 operating system.
+#
+# We bootstrap a pdksh shell on this platform.
 
 TOOLS_PLATFORM.[?=		[			# shell builtin
 TOOLS_PLATFORM.awk?=		/usr/bin/awk
@@ -16,7 +18,7 @@ TOOLS_PLATFORM.cut?=		/usr/bin/cut
 TOOLS_PLATFORM.date?=		/bin/date
 TOOLS_PLATFORM.diff?=		/usr/bin/diff
 TOOLS_PLATFORM.dirname?=	/usr/bin/dirname
-TOOLS_PLATFORM.echo?=		/usr/bin/echo
+TOOLS_PLATFORM.echo?=		echo			# shell builtin
 TOOLS_PLATFORM.egrep?=		/usr/bin/grep -E
 TOOLS_PLATFORM.env?=		/usr/bin/env
 TOOLS_PLATFORM.expr?=		/bin/expr
