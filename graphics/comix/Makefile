@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/04/19 14:28:46 tonnerre Exp $
+# $NetBSD: Makefile,v 1.12 2008/08/10 16:05:28 joerg Exp $
 #
 
 DISTNAME=		comix-3.6.4
@@ -9,6 +9,8 @@ MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=comix/}
 MAINTAINER=		hugor@users.sourceforge.net
 HOMEPAGE=		http://comix.sourceforge.net/index.html
 COMMENT=		Image viewer specifically designed to handle comic books
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		unrar-[0-9]*:../../archivers/unrar
 
@@ -26,7 +28,7 @@ PYTHON_PATCH_SCRIPTS=		comix mime/comicthumb
 do-build:
 
 do-install:
-	cd ${WRKSRC} && ${PYTHONBIN} install.py install --installdir ${PREFIX}
+	cd ${WRKSRC} && ${PYTHONBIN} install.py install --installdir ${DESTDIR}${PREFIX}
 
 .include "../../databases/shared-mime-info/buildlink3.mk"
 .include "../../devel/GConf/buildlink3.mk"
