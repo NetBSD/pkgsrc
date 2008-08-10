@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2008/05/22 12:10:49 tron Exp $
+# $NetBSD: Makefile,v 1.50 2008/08/10 05:02:23 obache Exp $
 
 DISTNAME=	mtr-0.72
 PKGREVISION=	1
@@ -23,8 +23,10 @@ INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/mtr
 # -lcurses on the appropriate platforms).
 BUILDLINK_TRANSFORM+=	l:termcap:ncurses
 
+SPECIAL_PERMS=	sbin/mtr ${SETUID_ROOT_PERMS}
+
 do-install:
-	${INSTALL} -c -s -m 4755 -o ${ROOT_USER} -g ${ROOT_GROUP} ${WRKSRC}/mtr ${DESTDIR}${PREFIX}/sbin
+	${INSTALL_PROGRAM} ${WRKSRC}/mtr ${DESTDIR}${PREFIX}/sbin
 	${INSTALL_DATA} ${WRKSRC}/mtr.8 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man8
 	${INSTALL_DATA} ${WRKSRC}/SECURITY ${DESTDIR}${PREFIX}/share/doc/mtr
 
