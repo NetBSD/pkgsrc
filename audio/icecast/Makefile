@@ -1,12 +1,11 @@
-# $NetBSD: Makefile,v 1.44 2008/01/18 05:06:20 tnn Exp $
+# $NetBSD: Makefile,v 1.45 2008/08/10 11:09:01 kim Exp $
 #
 
-DISTNAME=		icecast-2.3.0
-PKGREVISION=		3
+DISTNAME=		icecast-2.3.2
 CATEGORIES=		audio
 MASTER_SITES=		http://downloads.xiph.org/releases/icecast/
 
-MAINTAINER=		pancake@phreaker.net
+MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://www.icecast.org/
 COMMENT=		Live streaming audio server
 
