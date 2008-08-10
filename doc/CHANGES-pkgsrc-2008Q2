@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.24 2008/08/08 14:39:50 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.25 2008/08/10 13:07:39 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -53,3 +53,5 @@ pullup ticket #2471 - requested by adrianp
 bind95: update package for fixes
 Pullup ticket 2473 - requested by taca
 security update for ruby
+pullup ticket #2475 - requested by tron
+libxslt: security patch fixes buffer overflow
