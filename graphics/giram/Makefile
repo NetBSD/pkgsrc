@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2006/07/19 10:08:38 joerg Exp $
+# $NetBSD: Makefile,v 1.52 2008/08/10 04:35:44 obache Exp $
 #
 
 DISTNAME=	giram-0.3.5
@@ -11,7 +11,6 @@ HOMEPAGE=	http://www.giram.org/
 COMMENT=	Giram Is Really A Modeller
 
 DEPENDS+=	povray-[0-9]*:../../graphics/povray
-BUILD_DEPENDS+=	bison-[0-9]*:../../devel/bison
 
 USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake pkg-config msgfmt intltool
