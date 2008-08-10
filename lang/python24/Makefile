@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2008/04/12 22:43:02 jlam Exp $
+# $NetBSD: Makefile,v 1.43.4.1 2008/08/10 17:02:25 tron Exp $
 
 DISTNAME=	Python-2.4.5
 PKGNAME=	python24-2.4.5
+PKGREVISION=	2
 CATEGORIES=	lang python
 MASTER_SITES=	http://www.python.org/ftp/python/2.4.5/
 EXTRACT_SUFX=	.tar.bz2
@@ -163,8 +164,12 @@ post-install:
 		${DESTDIR}${PREFIX}/lib/libpython2.4.sl.1.0
 .endif
 
+USE_GNU_READLINE=	# defined
+BUILDLINK_DEPMETHOD.readline=		build
+
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
