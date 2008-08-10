@@ -1,4 +1,4 @@
-/*	$NetBSD: plist.c,v 1.17.4.8 2008/08/10 22:08:17 joerg Exp $	*/
+/*	$NetBSD: plist.c,v 1.17.4.9 2008/08/10 22:09:38 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: plist.c,v 1.24 1997/10/08 07:48:15 charnier Exp";
 #else
-__RCSID("$NetBSD: plist.c,v 1.17.4.8 2008/08/10 22:08:17 joerg Exp $");
+__RCSID("$NetBSD: plist.c,v 1.17.4.9 2008/08/10 22:09:38 joerg Exp $");
 #endif
 #endif
 
@@ -308,6 +308,9 @@ parse_plist(package_t *pkg, const char *buf)
 	char *line, *cp;
 	const char *eol, *next;
 	size_t len;
+
+	pkg->head = NULL;
+	pkg->tail = NULL;
 
 	for (; *buf; buf = next) {
 		/* Until add_plist can deal with trailing whitespace. */
