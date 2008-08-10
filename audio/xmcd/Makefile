@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.70 2008/07/15 18:44:27 tron Exp $
+# $NetBSD: Makefile,v 1.71 2008/08/10 02:41:26 obache Exp $
 
 DISTNAME=	xmcd-3.0.2
 PKGREVISION=	10
@@ -52,11 +52,9 @@ SUBST_FILES.xmcd=	libdi_d/config.sh misc_d/start.sh install.sh
 SUBST_VARS.xmcd=	MACHINE_ARCH
 
 post-install:
-	if [ -n "${_STRIPFLAG_INSTALL}" ]; then				\
-		for file in cda xmcd gobrowser; do			\
-			strip ${ARCHBIN}/$$file;			\
-		done;							\
-	fi
+	for file in cda xmcd gobrowser; do			\
+		strip ${ARCHBIN}/$$file;			\
+	done;
 
 .if ${OPSYS} != "SunOS"
 .include "../../devel/ncurses/buildlink3.mk"
