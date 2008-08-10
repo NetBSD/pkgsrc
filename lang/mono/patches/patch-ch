@@ -1,0 +1,12 @@
+$NetBSD: patch-ch,v 1.1.2.2 2008/08/10 15:27:26 tron Exp $
+--- mcs/class/System.Web/System.Web.UI.HtmlControls/HtmlForm.cs.orig	2008-01-30 00:04:11.000000000 +0200
++++ mcs/class/System.Web/System.Web.UI.HtmlControls/HtmlForm.cs	2008-08-09 22:23:02.000000000 +0300
+@@ -276,7 +276,7 @@
+ 				w.WriteAttribute ("name", Name);
+ 
+ 			w.WriteAttribute ("method", Method);
+-			w.WriteAttribute ("action", action);
++			w.WriteAttribute ("action", action, true);
+ 
+ 			/*
+ 			 * This is a hack that guarantees the ID is set properly for HtmlControl to
