@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/09 17:33:22 ahoka Exp $
+# $NetBSD: Makefile,v 1.2 2008/08/10 01:19:46 obache Exp $
 #
 
 DISTNAME=	onig-5.9.1
@@ -14,5 +14,7 @@ COMMENT=	Regular expressions library
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
+
+TEST_TARGET=	atest
 
 .include "../../mk/bsd.pkg.mk"
