@@ -1,4 +1,4 @@
-$NetBSD: acroread.diff,v 1.5 2006/03/13 19:29:45 joerg Exp $
+$NetBSD: acroread.diff,v 1.6 2008/08/10 16:09:17 joerg Exp $
 
 --- acroread.orig	Mon Apr 17 16:30:05 2000
 +++ acroread	Mon Apr 17 16:33:30 2000
@@ -12,7 +12,7 @@ $NetBSD: acroread.diff,v 1.5 2006/03/13 19:29:45 joerg Exp $
 +        ACRO_CONFIG=alphaosf
 +        export ACRO_CONFIG
 +        ;;
-+      i386)
++      i386|amd64)
 +        ACRO_CONFIG=intellinux
 +        export ACRO_CONFIG
 +        ;;
