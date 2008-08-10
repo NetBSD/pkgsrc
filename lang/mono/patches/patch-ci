@@ -1,0 +1,12 @@
+$NetBSD: patch-ci,v 1.1.2.2 2008/08/10 15:27:26 tron Exp $
+--- mcs/class/System.Web/System.Web.UI.HtmlControls/HtmlInputButton.cs.orig	2007-11-09 00:10:32.000000000 +0200
++++ mcs/class/System.Web/System.Web.UI.HtmlControls/HtmlInputButton.cs	2008-08-09 22:23:02.000000000 +0300
+@@ -302,7 +302,7 @@
+ 				
+ 				if (oc != null) {
+ 					writer.WriteAttribute ("language", "javascript");
+-					writer.WriteAttribute ("onclick", oc);
++					writer.WriteAttribute ("onclick", oc, true);
+ 				}
+ 			}
+ #endif

@@ -1,0 +1,12 @@
+$NetBSD: patch-cj,v 1.1.2.2 2008/08/10 15:27:26 tron Exp $
+--- mcs/class/System.Web/System.Web.UI.HtmlControls/HtmlInputRadioButton.cs.orig	2007-11-09 00:10:32.000000000 +0200
++++ mcs/class/System.Web/System.Web.UI.HtmlControls/HtmlInputRadioButton.cs	2008-08-09 22:23:02.000000000 +0300
+@@ -126,7 +126,7 @@
+ 			if (Page != null)
+ 				Page.ClientScript.RegisterForEventValidation (this.UniqueID, Value);
+ #endif
+-			writer.WriteAttribute ("value", Value);
++			writer.WriteAttribute ("value", Value, true);
+ 			Attributes.Remove ("value");
+ 			base.RenderAttributes (writer);
+ 		}
