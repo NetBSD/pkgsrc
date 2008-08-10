@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.35 2008/04/25 11:23:26 kefren Exp $
+$NetBSD: distinfo,v 1.35.4.1 2008/08/10 15:27:26 tron Exp $
 
 SHA1 (mono-1.9.1.tar.bz2) = a6229bb625dcdbcc992aef3f8049bf1b27205db7
 RMD160 (mono-1.9.1.tar.bz2) = 32659841ef5de912b8064f7b1f0452304ffd35d0
@@ -27,3 +27,9 @@ SHA1 (patch-cb) = eaf041b83af24afc4d82d5088a01f98810a1de69
 SHA1 (patch-cc) = ee2b28f90034d17330910af2f6c47524a3d6d557
 SHA1 (patch-cd) = dc2afe3992c50b4201af628e12fc269d8bf893a6
 SHA1 (patch-ce) = ba1ae96ab63fe798ce781f0def5fe026d1776df0
+SHA1 (patch-cf) = 5f896a60fe1056c34237c38fb25f6dea3b5939e5
+SHA1 (patch-cg) = eb28f024bae68028fd3d047794974d04b9a59783
+SHA1 (patch-ch) = ac6f50457ac38d922394b47d6e8bd2595991fcaa
+SHA1 (patch-ci) = 3f2a817ac3bfab939d62c1053790e0c3d4a8c961
+SHA1 (patch-cj) = 0cd0f67ba1443ee1f9c55ed930208304c1dae0be
+SHA1 (patch-ck) = 31979c8d8136e3530590dd4f1118189fbbcdad68

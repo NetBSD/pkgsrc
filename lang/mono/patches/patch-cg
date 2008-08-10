@@ -1,0 +1,12 @@
+$NetBSD: patch-cg,v 1.1.2.2 2008/08/10 15:27:26 tron Exp $
+--- mcs/class/System.Web/System.Web.UI.HtmlControls/HtmlControl.cs.orig	2007-11-09 00:10:32.000000000 +0200
++++ mcs/class/System.Web/System.Web.UI.HtmlControls/HtmlControl.cs	2008-08-09 22:23:02.000000000 +0300
+@@ -90,7 +90,7 @@
+ 					catch (Exception) {
+ 						throw new HttpException(attribName + " property had malformed url");
+ 					}
+-					writer.WriteAttribute(attribName, attr);
++					writer.WriteAttribute(attribName, attr, true);
+ 					Attributes.Remove(attribName);
+ 				}
+ 			}

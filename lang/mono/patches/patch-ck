@@ -1,0 +1,12 @@
+$NetBSD: patch-ck,v 1.1.2.2 2008/08/10 15:27:26 tron Exp $
+--- mcs/class/System.Web/System.Web.UI.HtmlControls/HtmlSelect.cs.orig	2008-01-30 00:04:11.000000000 +0200
++++ mcs/class/System.Web/System.Web.UI.HtmlControls/HtmlSelect.cs	2008-08-09 22:23:02.000000000 +0300
+@@ -693,7 +693,7 @@
+ 					}
+ 				}
+ 				
+-				w.WriteAttribute ("value", item.Value);
++				w.WriteAttribute ("value", item.Value, true);
+ 				w.Write (HtmlTextWriter.TagRightChar);
+ 				
+ 				w.Write (item.Text);
