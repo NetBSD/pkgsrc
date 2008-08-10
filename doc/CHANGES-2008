@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1835 2008/08/10 16:21:23 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1836 2008/08/10 16:51:12 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3122,3 +3122,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated fonts/thaixfonts to 1.2.4 [obache 2008-08-10]
 	Updated audio/icecast to 2.3.2 [kim 2008-08-10]
 	Updated lang/mono to 1.9.1nb3 [tron 2008-08-10]
+	Updated net/mrtg to 2.16.2 [adrianp 2008-08-10]
