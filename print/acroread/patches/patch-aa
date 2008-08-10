@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2006/03/13 19:29:45 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2008/08/10 16:09:17 joerg Exp $
 
 --- INSTALL.orig	Wed Jan 26 19:40:25 2000
 +++ INSTALL	Mon Apr 17 16:20:38 2000
@@ -30,7 +30,7 @@ $NetBSD: patch-aa,v 1.5 2006/03/13 19:29:45 joerg Exp $
 +        DistDefaultNum="$DistAlphaOSFNum"
 +        DefaultName="DEC Alpha/OSF1"
 +        ;;  
-+      i386)
++      i386|amd64)
 +        AcroDefaultNum="$AcroIntelLinuxNum"
 +        ExchDefaultNum="$ExchIntelLinuxNum"
 +        ReadDefaultNum="$ReadIntelLinuxNum"
