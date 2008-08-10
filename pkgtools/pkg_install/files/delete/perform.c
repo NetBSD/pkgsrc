@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.23.2.10 2008/08/05 22:56:24 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.23.2.11 2008/08/10 22:08:16 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.15 1997/10/13 15:03:52 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.23.2.10 2008/08/05 22:56:24 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.23.2.11 2008/08/10 22:08:16 joerg Exp $");
 #endif
 #endif
 
@@ -446,10 +446,6 @@ require_find_recursive_down(lpkg_t *thislpp, package_t *plist)
 
 		/* remove a direct req from our queue */
 		TAILQ_REMOVE(&reqq, lpp, lp_link);
-
-		/* Reset some state */
-		rPlist.head = NULL;
-		rPlist.tail = NULL;
 
 		/* prepare for recursion */
 		best_installed = find_best_matching_installed_pkg(lpp->lp_name);

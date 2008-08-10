@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.19.2.2 2008/08/02 20:33:50 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.19.2.3 2008/08/10 22:08:16 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.38 1997/10/13 15:03:51 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.19.2.2 2008/08/02 20:33:50 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.19.2.3 2008/08/10 22:08:16 joerg Exp $");
 #endif
 #endif
 
@@ -171,7 +171,6 @@ pkg_perform(const char *pkg)
 		if (!pkg_in)
 			errx(2, "unable to open contents file '%s' for input", Contents);
 	}
-	plist.head = plist.tail = NULL;
 
 	/* If a SrcDir override is set, add it now */
 	if (SrcDir) {

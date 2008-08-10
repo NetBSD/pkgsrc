@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.17 2008/08/05 22:56:24 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.18 2008/08/10 22:08:16 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.17 2008/08/05 22:56:24 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.18 2008/08/10 22:08:16 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -413,7 +413,6 @@ check_other_installed(struct pkg_task *pkg)
 			fclose(f);
 			return -1;
 		}
-		plist.head = plist.tail = NULL;
 		read_plist(&plist, f_pkg);
 		fclose(f_pkg);
 		for (p = plist.head; p != NULL; p = p->next) {

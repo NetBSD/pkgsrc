@@ -1,4 +1,4 @@
-/*	$NetBSD: conflicts.c,v 1.4.6.3 2008/08/06 12:58:22 joerg Exp $	*/
+/*	$NetBSD: conflicts.c,v 1.4.6.4 2008/08/10 22:08:16 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2007 Roland Illig <rillig@NetBSD.org>.
@@ -48,7 +48,7 @@
 #include <sys/cdefs.h>
 #endif
 
-__RCSID("$NetBSD: conflicts.c,v 1.4.6.3 2008/08/06 12:58:22 joerg Exp $");
+__RCSID("$NetBSD: conflicts.c,v 1.4.6.4 2008/08/10 22:08:16 joerg Exp $");
 
 #if HAVE_ERR_H
 #include <err.h>
@@ -102,8 +102,6 @@ check_package_conflict(const char *pkgname, void *v)
 		return 0;
 
 	rv = 0;
-	pkg.head = NULL;
-	pkg.tail = NULL;
 
 	f = fopen_contents(pkgname, "r");
 	read_plist(&pkg, f);
