@@ -1,8 +1,13 @@
-$NetBSD: patch-ap,v 1.1 2006/02/17 19:25:24 wiz Exp $
+$NetBSD: patch-ap,v 1.2 2008/08/10 06:35:00 obache Exp $
 
 --- configure.orig	2001-01-14 08:25:13.000000000 +0000
 +++ configure
-@@ -830,6 +830,14 @@ case "$host" in
+@@ -826,10 +826,18 @@ case "$host" in
+ 	TARGET=sco
+ 	;;
+ 
+-   i*86-unknown-freebsd* )
++   i*86-*-freebsd* )
  	TARGET=freebsd
  	;;
  
