@@ -1,4 +1,4 @@
-/*	$NetBSD: pkg_signature.c,v 1.1.2.5 2008/08/02 20:33:50 joerg Exp $	*/
+/*	$NetBSD: pkg_signature.c,v 1.1.2.6 2008/08/10 22:09:38 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -7,7 +7,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: pkg_signature.c,v 1.1.2.5 2008/08/02 20:33:50 joerg Exp $");
+__RCSID("$NetBSD: pkg_signature.c,v 1.1.2.6 2008/08/10 22:09:38 joerg Exp $");
 
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -460,8 +460,6 @@ extract_pkgname(int fd)
 
 	archive_read_finish(a);
 
-	plist.head = NULL;
-	plist.tail = NULL;
 	parse_plist(&plist, buf);
 	free(buf);
 	p = find_plist(&plist, PLIST_NAME);	
