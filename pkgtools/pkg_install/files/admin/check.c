@@ -1,4 +1,4 @@
-/*	$NetBSD: check.c,v 1.2.4.3 2008/08/02 20:33:50 joerg Exp $	*/
+/*	$NetBSD: check.c,v 1.2.4.4 2008/08/10 22:08:16 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: check.c,v 1.2.4.3 2008/08/02 20:33:50 joerg Exp $");
+__RCSID("$NetBSD: check.c,v 1.2.4.4 2008/08/10 22:08:16 joerg Exp $");
 #endif
 
 /*-
@@ -98,7 +98,6 @@ check1pkg(const char *pkgdir, int *filecnt, int *pkgcnt)
 		err(EXIT_FAILURE, "can't open %s", content);
 	free(content);
 
-	Plist.head = Plist.tail = NULL;
 	read_plist(&Plist, f);
 	p = find_plist(&Plist, PLIST_NAME);
 	if (p == NULL)
