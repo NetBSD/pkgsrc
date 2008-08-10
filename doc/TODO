@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7468 2008/08/09 21:33:48 bjs Exp $
+$NetBSD: TODO,v 1.7469 2008/08/10 11:11:04 kim Exp $
 
 Suggested new packages
 ======================
@@ -752,7 +752,6 @@ Suggested package updates
 	o hylafax-5.2.6
 	o ical-2.3.2
 	o icdprog-0.5
-	o icecast-2.3.2 [ready and waiting for MAINTAINER response -- kim@]
 	o icon-943
 	o icsi-finger-1.0.29
 	o icu-3.8.1

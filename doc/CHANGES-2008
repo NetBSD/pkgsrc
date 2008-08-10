@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1833 2008/08/10 09:47:26 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1834 2008/08/10 11:11:04 kim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3120,3 +3120,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/most to 5.0.0a [bjs 2008-08-09]
 	Updated www/apache22 to 2.2.9nb1 [tron 2008-08-09]
 	Updated fonts/thaixfonts to 1.2.4 [obache 2008-08-10]
+	Updated audio/icecast to 2.3.2 [kim 2008-08-10]
