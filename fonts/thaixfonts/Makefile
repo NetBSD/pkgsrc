@@ -1,37 +1,27 @@
-# $NetBSD: Makefile,v 1.4 2008/05/11 05:41:58 obache Exp $
+# $NetBSD: Makefile,v 1.5 2008/08/10 09:47:05 obache Exp $
 #
 
-DISTNAME=	thaixfonts-1.1-3.noarch
-PKGNAME=	thaixfonts-1.1.3
+DISTNAME=	thaixfonts-1.2.4
 CATEGORIES=	fonts x11
-MASTER_SITES=	http://www.fedu.uec.ac.jp/ZzzThai/linux/redhat/RPMS/noarch/
-EXTRACT_SUFX=	.rpm
+MASTER_SITES=	http://linux.thai.net/pub/thailinux/software/thaixfonts/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://www.fedu.uec.ac.jp/ZzzThai/fonts.html
-COMMENT=	Various X11 Thai fonts in tis-620 encoding
-
-BUILD_DEPENDS+=	rpm-[0-9]*:../../misc/rpm
+HOMEPAGE=	http://linux.thai.net/projects/thaixfonts
+COMMENT=	The collection of Thai X fonts
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_X11BASE=	yes
+USE_TOOLS+=	automake gmake bdftopcf gzip mkfontdir
+GNU_CONFIGURE=	yes
 
-MAKE_ENV+=	FONTDIR=${FONTDIR}
+CONFIGURE_ARGS+=	--with-fontdir=${FONTDIR}
 
-FONTDIR=	${PREFIX}/lib/X11/fonts/thaixfonts/
-INSTALLATION_DIRS=	${FONTDIR}
+FONTDIR=		${PREFIX}/lib/X11/fonts/thaixfonts
+FONTS_DIRS.x11+=        ${FONTDIR}
+OWN_DIRS=		${FONTDIR}
 
-WRKSRC=		${WRKDIR}/usr/share/fonts/TIS-620/misc/
-
-NO_BUILD=	yes
-NO_CONFIGURE=	yes
-
-do-extract:
-	cd ${WRKDIR} && rpm2cpio ${_DISTDIR}/${DISTFILES} | \
-		cpio -i --make-directories \*
-
-do-install:
-	cd ${WRKSRC} && ${INSTALL_DATA} *.gz fonts.* ${DESTDIR}${FONTDIR}
+pre-configure:
+		cd ${WRKSRC} && sh autogen.sh
 
 .include "../../mk/bsd.pkg.mk"
