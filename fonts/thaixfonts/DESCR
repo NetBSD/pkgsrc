@@ -1,11 +1,3 @@
-A collection of Thai fonts for X11.  Includes:
-
-- DBThaiText family
-- DBNarai family
-- Manop's fonts
-- Voradesh fonts
-- Etl Thai
-- Phaisarn's fonts
-- Phaisarn's Linux console fonts (untested)
-
-They use tis-620 encoding. See home page for more info.
+Thai X fonts included here are dbthaitext, Phaisarn's fonts, Manop's fonts,
+Voradej's fonts, NECTEC fonts, and Poonlap's fonts. These fonts were
+collected from Internet and they are free.
