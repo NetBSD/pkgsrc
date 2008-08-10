@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2006/03/13 19:29:45 joerg Exp $
+$NetBSD: distinfo,v 1.7 2008/08/10 16:09:17 joerg Exp $
 
 SHA1 (fdec-rs-405.tar.gz) = cf38c862af69b0bd1c76e5b182f6026bfe552250
 RMD160 (fdec-rs-405.tar.gz) = 75dd87c6798d98cee412de5e35e89f4d82ebadc5
@@ -12,4 +12,4 @@ Size (sunsparc-rs-405.tar.gz) = 6557221 bytes
 SHA1 (sunx86-ar-405.tar.gz) = 87392070fb6fb9f64a90beecdd072362c6b8232c
 RMD160 (sunx86-ar-405.tar.gz) = 3c47abd00aae9bcf56adb846b9128585dcffbb77
 Size (sunx86-ar-405.tar.gz) = 5661973 bytes
-SHA1 (patch-aa) = a9f340a33b0e36fcfda52b7f125ef3c354cf7b54
+SHA1 (patch-aa) = 2c83e2a923239930302703b29a8b4ca721c7a5f4
