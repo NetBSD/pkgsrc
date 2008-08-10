@@ -1,13 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/11/03 15:33:12 rillig Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/08/10 09:47:05 obache Exp $
 lib/X11/fonts/thaixfonts/Phaisarn97-14.pcf.gz
 lib/X11/fonts/thaixfonts/PnThai.pcf.gz
-lib/X11/fonts/thaixfonts/PsMule.pcf.gz
 lib/X11/fonts/thaixfonts/PsThai.pcf.gz
 lib/X11/fonts/thaixfonts/PtBrowallia12.pcf.gz
 lib/X11/fonts/thaixfonts/PtCUFont.pcf.gz
 lib/X11/fonts/thaixfonts/PtFixed.pcf.gz
 lib/X11/fonts/thaixfonts/PtHelvB12.pcf.gz
-lib/X11/fonts/thaixfonts/PtKMFont.pcf.gz
 lib/X11/fonts/thaixfonts/PtLight.pcf.gz
 lib/X11/fonts/thaixfonts/PtMule.pcf.gz
 lib/X11/fonts/thaixfonts/PtRamaFont.pcf.gz
@@ -83,15 +81,28 @@ lib/X11/fonts/thaixfonts/etl16-thai.pcf.gz
 lib/X11/fonts/thaixfonts/etl24-thai.pcf.gz
 lib/X11/fonts/thaixfonts/fonts.alias
 lib/X11/fonts/thaixfonts/fonts.dir
+lib/X11/fonts/thaixfonts/pvemacs_20b.pcf.gz
+lib/X11/fonts/thaixfonts/pvemacs_20bi.pcf.gz
+lib/X11/fonts/thaixfonts/pvemacs_20i.pcf.gz
+lib/X11/fonts/thaixfonts/pvemacs_20r.pcf.gz
+lib/X11/fonts/thaixfonts/pvemacs_8r.pcf.gz
+lib/X11/fonts/thaixfonts/pvfixed_20b.pcf.gz
+lib/X11/fonts/thaixfonts/pvfixed_20bi.pcf.gz
+lib/X11/fonts/thaixfonts/pvfixed_20i.pcf.gz
+lib/X11/fonts/thaixfonts/pvfixed_20r.pcf.gz
+lib/X11/fonts/thaixfonts/pvfixed_8r.pcf.gz
+lib/X11/fonts/thaixfonts/thai.alias
 lib/X11/fonts/thaixfonts/thai18.pcf.gz
+lib/X11/fonts/thaixfonts/thai18_emacs.pcf.gz
 lib/X11/fonts/thaixfonts/thai18b.pcf.gz
+lib/X11/fonts/thaixfonts/thai18b_emacs.pcf.gz
 lib/X11/fonts/thaixfonts/thai18bi.pcf.gz
+lib/X11/fonts/thaixfonts/thai18bi_emacs.pcf.gz
 lib/X11/fonts/thaixfonts/thai18i.pcf.gz
+lib/X11/fonts/thaixfonts/thai18i_emacs.pcf.gz
 lib/X11/fonts/thaixfonts/thai6x14.pcf.gz
 lib/X11/fonts/thaixfonts/thai7x18.pcf.gz
 lib/X11/fonts/thaixfonts/thai8x13.pcf.gz
 lib/X11/fonts/thaixfonts/thai8x16.pcf.gz
 lib/X11/fonts/thaixfonts/thai8x20.pcf.gz
-lib/X11/fonts/thaixfonts/thai8x20nz.pcf.gz
 lib/X11/fonts/thaixfonts/thai9x13.pcf.gz
-@dirrm lib/X11/fonts/thaixfonts
