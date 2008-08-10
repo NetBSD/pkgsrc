@@ -1,6 +1,8 @@
-# $NetBSD: tools.SunOS.mk,v 1.28 2008/08/09 15:14:01 ahoka Exp $
+# $NetBSD: tools.SunOS.mk,v 1.29 2008/08/10 15:17:26 ahoka Exp $
 #
 # System-supplied tools for the Solaris operating system.
+#
+# We bootstrap a pdksh shell on this platform.
 
 TOOLS_PLATFORM.[?=		[			# shell builtin
 TOOLS_PLATFORM.awk?=		/usr/bin/nawk
@@ -38,11 +40,11 @@ TOOLS_PLATFORM.diff3?=		/bin/diff3
 TOOLS_PLATFORM.diff3?=		/usr/bin/diff3
 .endif
 TOOLS_PLATFORM.dirname?=	/usr/bin/dirname
-TOOLS_PLATFORM.echo?=		echo	# we use pdksh so this is builtin
+TOOLS_PLATFORM.echo?=		echo			# shell builtin
 TOOLS_PLATFORM.egrep?=		/usr/xpg4/bin/grep -E
 TOOLS_PLATFORM.env?=		/usr/bin/env
 TOOLS_PLATFORM.expr?=		/usr/xpg4/bin/expr
-TOOLS_PLATFORM.false?=		/usr/bin/false
+TOOLS_PLATFORM.false?=		false			# shell builtin
 TOOLS_PLATFORM.fgrep?=		/usr/xpg4/bin/fgrep
 TOOLS_PLATFORM.file?=		/usr/bin/file
 TOOLS_PLATFORM.find?=		/usr/bin/find
@@ -103,7 +105,7 @@ TOOLS_PLATFORM.tee?=		/usr/bin/tee
 TOOLS_PLATFORM.test?=		test			# shell builtin
 TOOLS_PLATFORM.touch?=		/usr/bin/touch
 TOOLS_PLATFORM.tr?=		/usr/bin/tr
-TOOLS_PLATFORM.true?=		/usr/bin/true
+TOOLS_PLATFORM.true?=		true			# shell builtin
 TOOLS_PLATFORM.tsort?=		/usr/ccs/bin/tsort
 TOOLS_PLATFORM.wc?=		/usr/bin/wc
 TOOLS_PLATFORM.xargs?=		/usr/bin/xargs
