@@ -1,4 +1,4 @@
-/* $NetBSD: lib.h,v 1.42.2.13 2008/08/05 22:56:24 joerg Exp $ */
+/* $NetBSD: lib.h,v 1.42.2.14 2008/08/11 15:58:15 joerg Exp $ */
 
 /* from FreeBSD Id: lib.h,v 1.25 1997/10/08 07:48:03 charnier Exp */
 
@@ -337,6 +337,7 @@ void    write_plist(package_t *, FILE *, char *);
 void	stringify_plist(package_t *, char **, size_t *, const char *);
 void	parse_plist(package_t *, const char *);
 void    read_plist(package_t *, FILE *);
+void    append_plist(package_t *, FILE *);
 int     delete_package(Boolean, Boolean, package_t *, Boolean, const char *);
 
 /* Package Database */
