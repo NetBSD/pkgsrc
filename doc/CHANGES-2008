@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1842 2008/08/11 14:39:14 is Exp $
+$NetBSD: CHANGES-2008,v 1.1843 2008/08/11 14:41:14 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3137,3 +3137,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-XML-Atom-SimpleFeed to 0.82 [kleink 2008-08-11]
 	Updated net/powerdns to 2.9.21nb2 [ghen 2008-08-11]
 	Updated print/acroread7 to acroread7-7.0.9nb2 [is 2008-08-11]
+	Updated net/powerdns to 2.9.21.1 [ghen 2008-08-11]
+	Updated net/powerdns-ldap to 2.9.21.1 [ghen 2008-08-11]
+	Updated net/powerdns-mysql to 2.9.21.1 [ghen 2008-08-11]
+	Updated net/powerdns-pgsql to 2.9.21.1 [ghen 2008-08-11]
+	Updated net/powerdns-sqlite to 2.9.21.1 [ghen 2008-08-11]
