@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1836 2008/08/10 16:51:12 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1837 2008/08/11 07:04:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3123,3 +3123,11 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/icecast to 2.3.2 [kim 2008-08-10]
 	Updated lang/mono to 1.9.1nb3 [tron 2008-08-10]
 	Updated net/mrtg to 2.16.2 [adrianp 2008-08-10]
+	Updated lang/ruby18-base to 1.8.7.72 [taca 2008-08-11]
+	Updated databases/ruby-gdbm to 1.8.7.72 [taca 2008-08-11]
+	Updated devel/ruby-curses to 1.8.7.72 [taca 2008-08-11]
+	Updated devel/ruby-readline to 1.8.7.72 [taca 2008-08-11]
+	Updated x11/ruby-tk to 1.8.7.72 [taca 2008-08-11]
+	Updated lang/ruby18 to 1.8.7.72 [taca 2008-08-11]
+	Updated lang/ruby to 1.8.7.72 [taca 2008-08-11]
+	Updated devel/ruby-mode to 1.8.7.72 [taca 2008-08-11]
