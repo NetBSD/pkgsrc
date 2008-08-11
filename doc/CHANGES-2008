@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1841 2008/08/11 14:00:23 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.1842 2008/08/11 14:39:14 is Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3136,3 +3136,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated editors/vim-share to 7.2.0 [martti 2008-08-11]
 	Updated textproc/p5-XML-Atom-SimpleFeed to 0.82 [kleink 2008-08-11]
 	Updated net/powerdns to 2.9.21nb2 [ghen 2008-08-11]
+	Updated print/acroread7 to acroread7-7.0.9nb2 [is 2008-08-11]
