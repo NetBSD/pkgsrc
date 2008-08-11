@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2008/06/12 02:14:50 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2008/08/11 12:36:46 kleink Exp $
 
-DISTNAME=	XML-Atom-SimpleFeed-0.8
+DISTNAME=	XML-Atom-SimpleFeed-0.82
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
 SVR4_PKGNAME=	p5xas
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=XML/}
@@ -14,10 +13,6 @@ COMMENT=	Generate simple Atom syndication feeds
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEPENDS+=	p5-Test-Simple-[0-9]*:../../devel/p5-Test-Simple
-BUILD_DEPENDS+=	p5-Test-Pod-[0-9]*:../../devel/p5-Test-Pod
-BUILD_DEPENDS+=	p5-Test-Pod-Coverage-[0-9]*:../../devel/p5-Test-Pod-Coverage
-DEPENDS+=	p5-Carp-Clan-[0-9]*:../../devel/p5-Carp-Clan
-DEPENDS+=	p5-XML-Simple>=2.10:../../textproc/p5-XML-Simple
 
 PERL5_PACKLIST=		auto/XML/Atom/SimpleFeed/.packlist
 
