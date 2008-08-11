@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2007/08/05 05:19:19 dsainty Exp $
+# $NetBSD: Makefile,v 1.5 2008/08/11 08:51:05 dsainty Exp $
 #
 
 DISTNAME=	doxymacs-1.8.0
@@ -17,14 +17,18 @@ COMMENT=	Doxygen editing support for Emacs
 # is documented as a requirement for Doxymacs, but it appears that it
 # is only used for the url-* support introduced in Emacs/W3.
 # Fortunately, the url-* support from Emacs/W3 has been integrated
-# into Emacs version 22.
+# into Emacs version 22.  The same support for XEmacs is available in
+# editors/xemacs-packages.
 #
-.if ${EMACS_VERSION_MAJOR} <= 21
+.if ${EMACS_FLAVOR} == xemacs
+DEPENDS+=	xemacs-packages-[0-9]*:../../editors/xemacs-packages
+.elif ${EMACS_VERSION_MAJOR} <= 21
 DEPENDS+=	w3-[0-9]*:../../www/w3
 .endif
 
-GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	EMACS=${EMACS_BIN:Q}
+GNU_CONFIGURE=		yes
+CONFIGURE_ENV+=		EMACS=${EMACS_BIN:Q}
+CONFIGURE_ARGS+=	--with-lispdir=${EMACS_LISPPREFIX:Q}
 
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
