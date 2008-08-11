@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.970 2008/08/11 12:28:50 he Exp $
+# $NetBSD: Makefile,v 1.971 2008/08/11 13:07:43 he Exp $
 #
 
 COMMENT=	Development utilities
@@ -400,6 +400,7 @@ SUBDIR+=	p5-Array-Compare
 SUBDIR+=	p5-Array-RefElem
 SUBDIR+=	p5-AtExit
 SUBDIR+=	p5-Attribute-Handlers
+SUBDIR+=	p5-AutoLoader
 SUBDIR+=	p5-B-Keywords
 SUBDIR+=	p5-B-Utils
 SUBDIR+=	p5-BSD-Resource
