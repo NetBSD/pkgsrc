@@ -1,7 +1,20 @@
-$NetBSD: acroread.diff,v 1.5 2007/09/13 20:19:09 wiz Exp $
+$NetBSD: acroread.diff,v 1.6 2008/08/11 14:29:20 is Exp $
 
 --- acroread.orig	2006-05-23 01:33:35.000000000 +0000
 +++ acroread	2006-06-13 13:55:00.000000000 +0000
+@@ -1,6 +1,12 @@
+ #!/bin/sh
+ #
+ 
++case `/usr/bin/uname` in
++NetBSD) case `/usr/bin/uname -p` in
++	i386) LD_LIBRARY_PATH=""; export LD_LIBRARY_PATH;;
++	x86_64) LD_LIBRARY_PATH=""; export LD_LIBRARY_PATH;;
++	esac;;
++esac
+ 
+ setLangENU()
+ {
 @@ -233,7 +233,7 @@ else
   ScriptDirectory="`/bin/pwd 2> /dev/null`"
   cd "$cwd"
