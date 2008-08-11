@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.7 2008/06/22 15:30:43 taca Exp $
+$NetBSD: distinfo,v 1.7.4.1 2008/08/11 12:32:53 rtr Exp $
 
-SHA1 (Error-0.17014.tar.gz) = 251de9accd4c72a95cba635c00e176a2238aed5a
-RMD160 (Error-0.17014.tar.gz) = 5e2099a25d74bd85a00e52b25285efba00834b31
-Size (Error-0.17014.tar.gz) = 17793 bytes
+SHA1 (Error-0.17015.tar.gz) = 0dde379f26f2d4eb91441ed613a411c534588ba3
+RMD160 (Error-0.17015.tar.gz) = 2beaaecdfaebd7d891a5d06386a024275767d1a2
+Size (Error-0.17015.tar.gz) = 18053 bytes
