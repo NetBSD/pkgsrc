@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/03/02 06:10:33 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2008/08/11 15:21:04 joerg Exp $
 
 PKGNAME=	mpg123-esound-${MPG123_VERSION}
 PKGREVISION=	7
@@ -12,6 +12,8 @@ TARGET_SUFFIX=	-esd
 
 PKG_OPTIONS_VAR=PKG_OPTIONS.mpg123-esound
 .include "../../audio/mpg123/Makefile.common"
+
+USE_TOOLS+=	pkg-config
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
