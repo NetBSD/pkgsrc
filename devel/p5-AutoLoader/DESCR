@@ -1,0 +1,8 @@
+The AutoLoader module works with the AutoSplit module and the
+__END__ token to defer the loading of some subroutines until they
+are used rather than loading them all at once.
+
+To use AutoLoader, the author of a module has to place the definitions
+of subroutines to be autoloaded after an __END__ token. (See
+perldata.) The AutoSplit module can then be run manually to extract
+the definitions into individual files auto/funcname.al.
