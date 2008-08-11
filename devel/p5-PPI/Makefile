@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2008/08/09 01:19:34 obache Exp $
+# $NetBSD: Makefile,v 1.4 2008/08/11 14:33:14 he Exp $
 #
 
 DISTNAME=	PPI-1.203
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=PPI/}
 
@@ -16,9 +17,12 @@ DEPENDS+=	p5-Clone>=0.25:../../devel/p5-Clone
 DEPENDS+=	p5-IO-String>=1.07:../../devel/p5-IO-String
 DEPENDS+=	p5-List-MoreUtils>=0.16:../../devel/p5-List-MoreUtils
 DEPENDS+=	p5-Params-Util>=0.21:../../devel/p5-Params-Util
+DEPENDS+=	p5-Digest-MD5>=2.27:../../security/p5-Digest-MD5
 
 BUILD_DEPENDS+=	p5-Task-Weaken>=0.06:../../devel/p5-Task-Weaken
 BUILD_DEPENDS+=	p5-Test-Object>=0.07:../../devel/p5-Test-Object
+BUILD_DEPENDS+=	p5-Test-ClassAPI>=1.03:../../devel/p5-Test-ClassAPI
+BUILD_DEPENDS+=	p5-Test-SubCalls>=1.07:../../devel/p5-Test-SubCalls
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/PPI/.packlist
