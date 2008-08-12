@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.2.2.2 2008/08/12 11:46:49 rtr Exp $
+
+Fix for CVE-2008-3337 taken from PowerDNS 2.9.21.1: return SERVFAIL to
+mailformed queries instead of just dropping them (as this facilitates
+DNS spoofing attacks).
+
+--- pdns/packethandler.cc.orig	2007-04-21 15:56:36.000000000 +0200
++++ pdns/packethandler.cc
+@@ -576,9 +576,11 @@ DNSPacket *PacketHandler::questionOrRecu
+ 
+     if(!validDNSName(p->qdomain)) {
+       if(arg().mustDo("log-dns-details"))
+-        L<<Logger::Error<<"Received a malformed qdomain from "<<p->getRemote()<<", '"<<p->qdomain<<"': dropping"<<endl;
++        L<<Logger::Error<<"Received a malformed qdomain from "<<p->getRemote()<<", '"<<p->qdomain<<"': sending servfail"<<endl;
+       S.inc("corrupt-packets");
+-      return 0;
++      r=p->replyPacket(); 
++      r->setRcode(RCode::ServFail);
++      return r;
+     }
+     if(p->d.opcode) { // non-zero opcode (again thanks RA!)
+       if(p->d.opcode==Opcode::Update) {
