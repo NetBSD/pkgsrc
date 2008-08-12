@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1851 2008/08/12 16:57:05 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1852 2008/08/12 17:09:18 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3175,3 +3175,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/Geomyidae to 0.12 [reed 2008-08-12]
 	Updated mail/msmtp to 1.4.16 [reed 2008-08-12]
 	Updated textproc/iso-codes to 3.2 [wiz 2008-08-12]
+	Updated net/mldonkey to 2.9.6 [wiz 2008-08-12]
