@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/06/15 11:21:43 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2008/08/12 15:11:18 joerg Exp $
 
 DISTNAME=	omega-0.90.4-src
 PKGNAME=	omega-0.90.4
@@ -20,22 +20,18 @@ BUILD_TARGET=		# empty
 
 SPECIAL_PERMS=		bin/Omega ${SETGID_GAMES_PERMS}
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man6 share/omega share/doc/omega
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/omega ${DESTDIR}${PREFIX}/bin/Omega
 	${INSTALL_MAN} ${WRKSRC}/docs/omega.6 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man6
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/omega
 	${INSTALL_DATA} ${WRKSRC}/lib/* ${DESTDIR}${PREFIX}/share/omega
 	${RM} ${DESTDIR}${PREFIX}/share/omega/license.old
 	${CHMOD} 0660 ${DESTDIR}${PREFIX}/share/omega/omega.hi
 	${CHMOD} 0660 ${DESTDIR}${PREFIX}/share/omega/omega.log
-	${CP} ${PREFIX}/share/omega/omega.hi \
+	${CP} ${DESTDIR}${PREFIX}/share/omega/omega.hi \
 		${DESTDIR}${PREFIX}/share/omega/omegahi.bak
-
-post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/omega
 	cd ${WRKSRC}; for f in						\
 		buglist.txt docs/compile.all docs/readme.1st		\
 		docs/omega.txt docs/readme3 docs/readme4;		\
