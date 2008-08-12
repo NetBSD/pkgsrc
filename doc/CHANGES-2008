@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1849 2008/08/12 16:08:31 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1850 2008/08/12 16:42:30 reed Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3172,3 +3172,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/php-mode version 1.4.0 [dsainty 2008-08-12]
 	Updated converters/p5-Jcode to 2.07 [taca 2008-08-12]
 	Updated games/orbital_eunuchs_sniper to 1.30 [wiz 2008-08-12]
+	Updated net/Geomyidae to 0.12 [reed 2008-08-12]
+	Updated mail/msmtp to 1.4.16 [reed 2008-08-12]
