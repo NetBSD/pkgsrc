@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.18 2008/01/18 05:09:36 tnn Exp $
+# $NetBSD: Makefile,v 1.19 2008/08/12 10:16:54 obache Exp $
 
 PKGNAME=	${DISTNAME:S/cyrus-sasl/cy2-ntlm/}
 PKGREVISION=	1
 COMMENT=	Cyrus SASL NTLM authentication plugin
 SASL_PLUGIN=	yes
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../security/cyrus-sasl/Makefile.common"
 
@@ -16,8 +18,8 @@ BUILD_TARGET=	libntlm.la
 .include "../../security/openssl/buildlink3.mk"
 
 do-install:
-	${INSTALL_DATA_DIR} ${PLUGINDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PLUGINDIR}
 	cd ${WRKSRC}/plugins && ${SHLIBTOOL} --mode=install \
-		${INSTALL_PROGRAM} libntlm.la ${PLUGINDIR}
+		${INSTALL_PROGRAM} libntlm.la ${DESTDIR}${PLUGINDIR}
 
 .include "../../mk/bsd.pkg.mk"
