@@ -1,14 +1,14 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/07/23 16:07:15 wiz Exp $
+$NetBSD: patch-aa,v 1.2 2008/08/12 16:08:19 wiz Exp $
 
---- src/Makefile.in.orig	2003-04-21 16:33:08.000000000 +0200
+--- src/Makefile.in.orig	2006-10-19 03:38:42.000000000 +0000
 +++ src/Makefile.in
-@@ -126,8 +126,7 @@ subdir = src
- mkinstalldirs = $(SHELL) $(top_srcdir)/mkinstalldirs
- CONFIG_HEADER = $(top_builddir)/config.h
- CONFIG_CLEAN_FILES = snipe2d
+@@ -38,8 +38,7 @@ POST_UNINSTALL = :
+ build_triplet = @build@
+ host_triplet = @host@
+ target_triplet = @target@
 -pkgdata_PROGRAMS = snipe2d.@CPU_IS@.dynamic$(EXEEXT) \
 -	snipe2d.@CPU_IS@.static$(EXEEXT)
 +pkgdata_PROGRAMS = snipe2d.@CPU_IS@.dynamic$(EXEEXT)
- PROGRAMS = $(pkgdata_PROGRAMS)
- 
- am__objects_1 = ai.$(OBJEXT) binds.$(OBJEXT) gameover.$(OBJEXT) \
+ subdir = src
+ DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
+ 	$(srcdir)/snipe2d.in
