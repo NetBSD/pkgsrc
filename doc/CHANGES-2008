@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1854 2008/08/12 19:59:29 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.1855 2008/08/12 20:15:44 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3178,3 +3178,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/mldonkey to 2.9.6 [wiz 2008-08-12]
 	Updated net/mldonkey-gui to 2.9.6 [wiz 2008-08-12]
 	Added lang/ecl version 0.9.12 [tnn 2008-08-12]
+	Updated net/unfs3 to 0.9.21 [tnn 2008-08-12]
