@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2006/07/09 13:13:00 taca Exp $
+$NetBSD: distinfo,v 1.10 2008/08/12 14:35:37 taca Exp $
 
-SHA1 (Jcode-2.06.tar.gz) = 08c085bc8776b42b8dea178e56f7b820b3b39238
-RMD160 (Jcode-2.06.tar.gz) = f7e6f1d8c0eaf05730386367e9683f6360ee74ea
-Size (Jcode-2.06.tar.gz) = 350545 bytes
+SHA1 (Jcode-2.07.tar.gz) = 1d0a695235f46c759f90a0c5e4cd196027b63f1b
+RMD160 (Jcode-2.07.tar.gz) = 27dbd3a992bd0eba90801fcc0561af32cdf3fb87
+Size (Jcode-2.07.tar.gz) = 350179 bytes
