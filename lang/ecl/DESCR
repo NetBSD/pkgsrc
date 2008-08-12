@@ -1,0 +1,17 @@
+ECL stands for Embeddable Common-Lisp. The ECL project is an effort to
+modernize Giuseppe Attardi's ECL environment to produce an implementation of
+the Common-Lisp language which complies to the ANSI X3J13 definition of the
+language.
+
+The current ECL implementation features:
+  * A bytecodes compiler and interpreter.
+  * A translator to C.
+  * An interface to foreign functions.
+  * A dynamic loader.
+  * The possibility to build standalone executables.
+  * The Common-Lisp Object System (CLOS).
+  * Conditions and restarts for handling errors.
+  * Sockets as ordinary streams.
+  * The Gnu Multiprecision library for fast bignum operations.
+  * A simple conservative mark & sweep garbage collector.
+  * The Boehm-Weiser garbage collector.
