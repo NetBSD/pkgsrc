@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2008/06/14 16:21:03 bjs Exp $
+# $NetBSD: Makefile.common,v 1.11.4.1 2008/08/12 10:00:23 tron Exp $
 #
 # used by devel/scmgit-base/Makefile
 # used by devel/scmgit-docs/Makefile
@@ -23,7 +23,10 @@ GNU_CONFIGURE?= 	yes
 USE_TOOLS+=		gmake tar perl sh
 EXTRACT_USING=		gtar
 
+PKG_SYSCONFSUBDIR=	git
+
 CONFIGURE_ARGS+= 	--with-perl=${PERL5:Q}
 CONFIGURE_ARGS+= 	--with-shell=${SH:Q}
 CONFIGURE_ARGS+= 	--with-tar=${TAR:Q}
 CONFIGURE_ARGS+= 	--mandir=${${PREFIX}/${PKGMANDIR}:L:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
