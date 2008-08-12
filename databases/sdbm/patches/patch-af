@@ -1,23 +1,27 @@
-$NetBSD: patch-af,v 1.1 2000/09/26 03:47:11 hubertf Exp $
+$NetBSD: patch-af,v 1.2 2008/08/12 13:11:30 agc Exp $
 
 --- dbe.c.orig	Mon Sep 25 23:28:28 2000
 +++ dbe.c
-@@ -1,4 +1,6 @@
+@@ -1,4 +1,10 @@
++#include <sys/types.h>
++#include <sys/param.h>
++
++#include <regex.h>
  #include <stdio.h>
 +#include <stdlib.h>
 +#include <string.h>
  #ifndef VMS
  #include <sys/file.h>
  #include <ndbm.h>
-@@ -51,6 +53,7 @@
+@@ -51,6 +57,7 @@
  #define index  strchr
  #endif
  
-+#ifndef __NetBSD__
++#if !(defined(BSD) && BSD >= 199506)
  char
  getopt(argc, argv, optstring)
  int argc;
-@@ -128,6 +131,7 @@
+@@ -128,23 +135,26 @@
  	}
  	return c;
  }
@@ -25,3 +29,74 @@ $NetBSD: patch-af,v 1.1 2000/09/26 03:47:11 hubertf Exp $
  
  
  void
+ print_datum(db)
+ datum db;
+ {
++	unsigned char	*cp;
+ 	int i;
+ 
+ 	putchar('"');
+ 	for (i = 0; i < db.dsize; i++) {
+-		if (isprint(db.dptr[i]))
+-			putchar(db.dptr[i]);
++		cp = (unsigned char *)db.dptr;
++		if (isprint(cp[i]))
++			putchar(cp[i]);
+ 		else {
+ 			putchar('\\');
+-			putchar('0' + ((db.dptr[i] >> 6) & 0x07));
+-			putchar('0' + ((db.dptr[i] >> 3) & 0x07));
+-			putchar('0' + (db.dptr[i] & 0x07));
++			putchar('0' + ((cp[i] >> 6) & 0x07));
++			putchar('0' + ((cp[i] >> 3) & 0x07));
++			putchar('0' + (cp[i] & 0x07));
+ 		}
+ 	}
+ 	putchar('"');
+@@ -171,7 +181,9 @@
+ 				*p = '\f';
+ 			else if (*s == 't')
+ 				*p = '\t';
+-			else if (isdigit(*s) && isdigit(*(s + 1)) && isdigit(*(s + 2))) {
++			else if (isdigit((unsigned char)*s) &&
++				 isdigit((unsigned char)*(s + 1)) &&
++				 isdigit((unsigned char)*(s + 2))) {
+ 				i = (*s++ - '0') << 6;
+ 				i |= (*s++ - '0') << 3;
+ 				i |= *s - '0';
+@@ -211,6 +223,8 @@
+ 	typedef enum {
+ 		YOW, FETCH, STORE, DELETE, SCAN, REGEXP
+ 	} commands;
++	regex_t	r;
++	regmatch_t	matchv[10];
+ 	char opt;
+ 	int flags;
+ 	int giveusage = 0;
+@@ -333,7 +347,8 @@
+ 			fprintf(stderr, "Missing regular expression.\n");
+ 			goto db_exit;
+ 		}
+-		if (re_comp(comarg[1])) {
++		(void) memset(&r, 0x0, sizeof(r));
++		if (regcomp(&r, comarg[1], REG_EXTENDED) != 0) {
+ 			fprintf(stderr, "Invalid regular expression\n");
+ 			goto db_exit;
+ 		}
+@@ -343,7 +358,7 @@
+ 			goto db_exit;
+ 		}
+ 		while (key.dptr != NULL) {
+-			if (re_exec(key2s(key))) {
++			if (regexec(&r, key2s(key), 10, matchv, 0) == 0) {
+ 				content = dbm_fetch(db, key);
+ 				if (dbm_error(db)) {
+ 					fprintf(stderr, "Error when fetching ");
+@@ -362,6 +377,7 @@
+ 			}
+ 			key = dbm_nextkey(db);
+ 		}
++		regfree(&r);
+ 		break;
+ 
+ 	case FETCH:
