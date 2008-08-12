@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2006/06/12 16:28:10 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/08/12 16:08:19 wiz Exp $
 #
 
-DISTNAME=		orbital_eunuchs_sniper-1.29
-PKGREVISION=		7
+DISTNAME=		orbital_eunuchs_sniper-1.30
 CATEGORIES=		games
-MASTER_SITES=		http://filesingularity.timedoctor.org/
+MASTER_SITES=		http://icculus.org/oes/
 
 MAINTAINER=		wiz@NetBSD.org
 HOMEPAGE=		http://icculus.org/oes/
@@ -18,6 +17,12 @@ REPLACE_INTERPRETER+=	bash
 REPLACE.bash.old=	.*/bin/bash
 REPLACE.bash.new=	${SH}
 REPLACE_FILES.bash=	src/snipe2d.in
+
+.if ${MACHINE_ARCH} == "x86_64"
+PLIST_SUBST+=		CPU=amd64
+.else
+PLIST_SUBST+=		CPU=${MACHINE_ARCH}
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/orbital_eunuchs_sniper
