@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2006/10/02 23:30:30 rillig Exp $
+# $NetBSD: Makefile,v 1.17 2008/08/12 17:20:19 joerg Exp $
 
 DISTNAME=	dic
 PKGNAME=	stardic-1.31
@@ -17,7 +17,7 @@ FONTS_DIRS.x11+=	${PREFIX}/share/stardic/hzfont
 REQD_DIRS+=		${PREFIX}/share/stardic ${PREFIX}/share/stardic/hzfont
 
 post-extract:
-	chmod -R u+w,go-w . ${WRKSRC}
+	chmod -R u+w,go-w ${WRKSRC}
 
 .include "../../mk/motif.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
