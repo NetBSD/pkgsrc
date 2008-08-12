@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.29 2008/08/12 10:01:07 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.30 2008/08/12 11:22:38 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -65,3 +65,5 @@ pullup ticket #2479 - requested by tron
 p5-Error: required for ticket #2472
 Pullup ticket #2472 - requested by kefren
 scmgit-base: security update
+pullup ticket #2481 - requested by taca
+ruby-curses, ruby, ruby18-base, ruby-tk: security fix
