@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1844 2008/08/11 15:10:59 he Exp $
+$NetBSD: CHANGES-2008,v 1.1845 2008/08/12 09:17:40 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3164,3 +3164,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-PerlIO-via-dynamic to 0.13 [he 2008-08-11]
 	Updated textproc/p5-Pod-Simple to 3.07 [he 2008-08-11]
 	Updated textproc/p5-Pod-Tests to 1.19 [he 2008-08-11]
+	Updated converters/p5-JSON to 2.12 [obache 2008-08-12]
