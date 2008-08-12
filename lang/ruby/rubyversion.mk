@@ -1,4 +1,4 @@
-# $NetBSD: rubyversion.mk,v 1.42.4.1 2008/08/08 14:37:50 ghen Exp $
+# $NetBSD: rubyversion.mk,v 1.42.4.2 2008/08/12 11:22:11 rtr Exp $
 #
 
 .if !defined(_RUBYVERSION_MK)
@@ -10,7 +10,7 @@ _RUBYVERSION_MK=	# defined
 RUBY18_VERSION=		1.8.7
 
 # patch
-RUBY18_PATCHLEVEL=	71
+RUBY18_PATCHLEVEL=	72
 
 # RUBY_VERSION_DEFAULT defines default version for Ruby related
 #	packages and user can define in mk.conf.  (1.6 or 1.8)
