@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7469 2008/08/10 11:11:04 kim Exp $
+$NetBSD: TODO,v 1.7470 2008/08/12 07:53:58 wiz Exp $
 
 Suggested new packages
 ======================
@@ -359,6 +359,7 @@ Suggested package updates
 	o GMT-4.2.1
 	o GUIlib-1.1.2
 	o GWLib-0.7.0
+	o Geomyidae-0.12 [pkg/39343]
 	o GridSim-3.3
 	o MAMEDiff-2.29
 	o PAM-0.99.7.1
@@ -444,7 +445,7 @@ Suggested package updates
 	o argtable-2.9
 	o arla-0.90
 	o arnold-20040104
-	o arping-2.06
+	o arping-2.07
 	o asapm-3.1
 	o asc-2.1.0
 	o aspell-danish-1.6.16
@@ -516,7 +517,7 @@ Suggested package updates
 	o classpath-0.97.2
 	o clearsilver-0.10.5
 	o clearsilver-base-0.10.5
-	o clive-0.5.0
+	o clive-1.0.0
 	o cmake-2.6.0
 	o cocoon-2.1.10
 	o colorize-0.3.4
@@ -546,6 +547,7 @@ Suggested package updates
 	o dap-3.7
 	o db4-4.7.25
 	o dbench-4.0
+	o dbus-1.2.3
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
@@ -557,6 +559,7 @@ Suggested package updates
 	o devIL-1.6.7
 	o dhid-5.3
 	o dialog-1.1.20080727
+	o diffstat-1.46
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dirac-1.0
@@ -598,7 +601,7 @@ Suggested package updates
 	o epiphany-2.22.3
 	o epsg-6.14
 	o epstool-3.08
-	o eric3-4.1.6 [now called eric4]
+	o eric3-4.2.0 [now called eric4]
 	o erlang-12b3
 	o esh-0.8.5
 	o et-2.60
@@ -657,6 +660,7 @@ Suggested package updates
 	o geeklog-1.5.0
 	o generator-cbiere-0.35r3
 	o gentoo-0.11.57
+	o getmail-4.8.3
 	o gettext-0.17
 	o gfract-0.33
 	o ggiterm-0.7.1
@@ -673,6 +677,7 @@ Suggested package updates
 	o global-5.6
 	o glpk-4.29
 	o gmime-2.2.22
+	o gmp-4.2.3
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-2.22.1
@@ -707,7 +712,7 @@ Suggested package updates
 	o granulate-0.2
 	o graphviz-2.20.2
 	o gri-2.12.8
-	o gsasl-0.2.27
+	o gsasl-0.2.27 [pkg/39330]
 	o gsharutils-4.7
 	o gsm-1.0.12
 	o gss-0.0.22
@@ -749,7 +754,7 @@ Suggested package updates
 	o httping-1.2.9
 	o httptunnel-3.3
 	o hydrogen-0.9.3 [pkg/37424]
-	o hylafax-5.2.6
+	o hylafax-5.2.7
 	o ical-2.3.2
 	o icdprog-0.5
 	o icon-943
@@ -919,7 +924,7 @@ Suggested package updates
 	o mpop-1.0.13
 	o mserv-devel-0.41
 	o msf-2.7
-	o msmtp-1.4.14
+	o msmtp-1.4.16 [pkg/39337]
 	o mtr-0.73
 	o multitail-5.2.2
 	o munin-1.3.4
@@ -1007,6 +1012,7 @@ Suggested package updates
 	o p5-Safe-Hole-0.10
 	o p5-Sendmail-AccessDB-0.09
 	o p5-Set-IntSpan-1.10
+	o p5-Spreadsheet-WriteExcel-2.23
 	o p5-Term-Size-0.203
 	o p5-Test-Harness-2.64
 	o p5-Text-Tabs+Wrap-2006.1117
@@ -1120,7 +1126,7 @@ Suggested package updates
 	o py-qt3-base-3.17.3
 	o py-qt3-modules-3.17
 	o py-qt3-qscintilla-3.17
-	o py-qt3-sip-4.7.6
+	o py-qt3-sip-4.7.7
 	o py-reportlab-2.0
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.7
@@ -1145,7 +1151,7 @@ Suggested package updates
 	o qvplay-0.95
 	o qwspritefield-1.7
 	o radiance-3.7.2
-	o raine-0.50.14
+	o raine-0.50.15
 	o randread-0.2
 	o rapidsvn-0.9.6
 	o raptor-1.4.18
@@ -1218,7 +1224,7 @@ Suggested package updates
 	o skkinput-2.06.4
 	o skype-2.0.0.43
 	o smalleiffel-0.90
-	o smalltalk-3.0.3
+	o smalltalk-3.0.4
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.67
 	o smokeping-2.3.6
@@ -1268,7 +1274,7 @@ Suggested package updates
 	o tct-1.16
 	o tdir-1.67
 	o tds-1.6.2
-	o tea-18.0.0
+	o tea-19.0.4
 	o ted-2.17
 	o ted-en-us-2.17
 	o tex-musixtex-113 [pkg/34758]
@@ -1342,7 +1348,7 @@ Suggested package updates
 	o wxRemind-86
 	o wyrd-1.4.4
 	o x11perf-1.5
-	o x264-devel-20080802
+	o x264-devel-20080809
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.2
@@ -1396,7 +1402,7 @@ Suggested package updates
 	o xrmap-base-2.33.1
 	o xrn-9.02
 	o xsane-0.99.5
-	o xscreensaver-5.06
+	o xscreensaver-5.07
 	o xskat-4.0
 	o xsoldier-1.4
 	o xtraceroute-0.9.1
@@ -1414,6 +1420,7 @@ Suggested package updates
 	o yafc-1.1
 	o yasm-0.7.1
 	o yodl-2.01.02
+	o youtube-dl-20080809
 	o ysm-2.9.9.1
 	o yudit-2.9.0
 	o zebra-0.95a
