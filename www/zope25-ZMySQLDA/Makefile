@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2006/03/04 21:31:06 jlam Exp $
+# $NetBSD: Makefile,v 1.12 2008/08/12 21:42:53 joerg Exp $
 #
 
 DISTNAME=	ZMySQLDA-2.0.8
@@ -12,6 +12,8 @@ HOMEPAGE=	http://sourceforge.net/projects/mysql-python
 COMMENT=	MySQL Database adaptor for Zope
 
 DEPENDS+=	${PYPKGPREFIX}-mysqldb-[0-9]*:../../databases/py-mysqldb
+
+PYTHON_VERSIONS_ACCEPTED=	25 24 23
 
 ZOPE_COPYPRODUCT= zope-std-copyproduct-long
 
