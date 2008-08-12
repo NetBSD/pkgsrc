@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1846 2008/08/12 09:42:08 martti Exp $
+$NetBSD: CHANGES-2008,v 1.1847 2008/08/12 10:20:34 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3169,3 +3169,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Curses-UI-POE to 0.031 [martti 2008-08-12]
 	Updated databases/p5-Data-Table to 1.54 [martti 2008-08-12]
 	Updated net/p5-POE-Component-SNMP to 1.1001 [martti 2008-08-12]
+	Added devel/php-mode version 1.4.0 [dsainty 2008-08-12]
