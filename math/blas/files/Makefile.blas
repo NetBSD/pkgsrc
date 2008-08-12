@@ -28,7 +28,7 @@ all:	libblas.la
 	${LIBTOOL} --mode=compile --tag=CC ${COMPILE.f} ${.IMPSRC}
 
 libblas.la: $(OBJS)
-	${LIBTOOL} --mode=link ${CC} -o ${.TARGET} ${OBJS:.o=.lo}	\
+	${LIBTOOL} --mode=link --tag=F77 ${FC} -o ${.TARGET} ${OBJS:.o=.lo}	\
 		-rpath $(libdir)					\
 		-version-info ${SHLIB_MAJOR}:${SHLIB_MINOR}
 
