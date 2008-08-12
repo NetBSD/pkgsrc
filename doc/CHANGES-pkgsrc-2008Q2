@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.31 2008/08/12 11:47:16 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.32 2008/08/12 19:52:55 spz Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -67,5 +67,7 @@ Pullup ticket #2472 - requested by kefren
 scmgit-base: security update
 pullup ticket #2481 - requested by taca
 ruby-curses, ruby, ruby18-base, ruby-tk: security fix
-pullup ticket #2476 - requested by ghen
+pullup ticket #2482 - requested by ghen
 powerdns: security fix
+pullup ticket #2476 - requested by tron
+apache22: security fix
