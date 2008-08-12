@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2008/05/08 13:16:13 wiz Exp $
+$NetBSD: patch-aa,v 1.7 2008/08/12 21:07:05 wiz Exp $
 
---- conf/configure.orig	2008-03-27 18:58:21.000000000 +0000
-+++ conf/configure
+--- autoconf/configure.orig	2008-03-27 18:58:21.000000000 +0000
++++ autoconf/configure
 @@ -14702,6 +14702,7 @@ fi
  
  if eval "test \"`echo '$ac_cv_func_'$ac_func`\" = yes"; then
