@@ -1,13 +1,18 @@
-$NetBSD: patch-ac,v 1.1 2000/09/26 03:47:10 hubertf Exp $
+$NetBSD: patch-ac,v 1.2 2008/08/12 13:11:30 agc Exp $
 
 --- tune.h.orig	Mon Sep 25 23:22:26 2000
 +++ tune.h
-@@ -10,7 +10,7 @@
+@@ -6,11 +6,10 @@
+ 
+ #define BYTESIZ		8
+ 
+-#ifdef SVID
  #include <unistd.h>
- #endif
+-#endif
++#include <string.h>
  
 -#ifdef BSD42
-+#if defined(BSD42) && !defined(__NetBSD__)
++#if 0
  #define SEEK_SET	L_SET
  #define	memset(s,c,n)	bzero(s, n)		/* only when c is zero */
  #define	memcpy(s1,s2,n)	bcopy(s2, s1, n)

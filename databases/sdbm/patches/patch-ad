@@ -1,20 +1,24 @@
-$NetBSD: patch-ad,v 1.1 2000/09/26 03:47:10 hubertf Exp $
+$NetBSD: patch-ad,v 1.2 2008/08/12 13:11:30 agc Exp $
 
 --- util.c.orig	Mon Sep 25 23:25:31 2000
 +++ util.c
-@@ -1,4 +1,7 @@
+@@ -1,4 +1,11 @@
++#include <sys/types.h>
++#include <sys/param.h>
++
  #include <stdio.h>
-+#ifdef __NetBSD__
++#include <stdlib.h>
++#if defined(BSD) && BSD >= 199506
 +#include <errno.h>
 +#endif
  #ifdef SDBM
  #include "sdbm.h"
  #else
-@@ -10,8 +13,10 @@
+@@ -10,8 +17,10 @@
  register char *s1;
  register char *s2;
  {
-+#ifndef __NetBSD__
++#if !(defined(BSD) && BSD >= 199506)
  	extern int errno, sys_nerr;
  	extern char *sys_errlist[];
 +#endif

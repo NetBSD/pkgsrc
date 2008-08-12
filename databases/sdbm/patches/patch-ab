@@ -1,14 +1,76 @@
-$NetBSD: patch-ab,v 1.1 1999/06/30 09:46:45 agc Exp $
+$NetBSD: patch-ab,v 1.2 2008/08/12 13:11:30 agc Exp $
 
-Use a BSD-style Makefile
-
---- /dev/null	Wed Jun 30 10:39:41 1999
-+++ Makefile	Wed Jun 30 10:39:42 1999
-@@ -0,0 +1,7 @@
-+LIB= sdbm
-+OBJS= sdbm.o pair.o hash.o
-+CPPFLAGS+= -DSDBM -DDUFF
-+SHLIB_MAJOR=1
-+SHLIB_MINOR=0
+--- makefile	2008/08/12 12:14:05	1.1
++++ makefile	2008/08/12 11:24:23
+@@ -2,37 +2,42 @@
+ # makefile for public domain ndbm-clone: sdbm
+ # DUFF: use duff's device (loop unroll) in parts of the code
+ #
+-CFLAGS = -O -DSDBM -DDUFF -DBSD42
++CFLAGS+= -DSDBM -DDUFF
+ #LDFLAGS = -p
+ 
++BINDIR=${PREFIX}/bin
++INCDIR=${PREFIX}/include
++LIBDIR=${PREFIX}/lib
++MANDIR=${PREFIX}/${PKGMANDIR}
 +
-+.include <bsd.lib.mk>
+ OBJS = sdbm.o pair.o hash.o
+ SRCS = sdbm.c pair.c hash.c dbu.c dba.c dbd.c util.c
+ HDRS = tune.h sdbm.h pair.h
+ MISC = README CHANGES COMPARE sdbm.3 dbe.c dbe.1 dbm.c dbm.h biblio \
+        readme.ms readme.ps
++LIBS = libsdbm.a
+ 
+ all: dbu dba dbd dbe
+ 
+-dbu: dbu.o sdbm util.o
+-	cc $(LDFLAGS) -o dbu dbu.o util.o libsdbm.a
++dbu: dbu.o ${LIBS} util.o
++	${LIBTOOL} --mode=link ${CC} dbu.o util.o ${LIBS:.a=.la} -o dbu
+ 
+ dba: dba.o util.o
+-	cc $(LDFLAGS) -o dba dba.o util.o
++	${LIBTOOL} --mode=link ${CC} dba.o util.o ${LIBS:.a=.la} -o dba
+ dbd: dbd.o util.o
+-	cc $(LDFLAGS) -o dbd dbd.o util.o
+-dbe: dbe.o sdbm
+-	cc $(LDFLAGS) -o dbe dbe.o libsdbm.a
+-
+-sdbm: $(OBJS)
+-	ar cr libsdbm.a $(OBJS)
+-	ranlib libsdbm.a
+-###	cp libsdbm.a /usr/lib/libsdbm.a
++	${LIBTOOL} --mode=link ${CC} dbd.o util.o ${LIBS:.a=.la} -o dbd
++dbe: dbe.o ${LIBS}
++	${LIBTOOL} --mode=link ${CC} dbe.o ${LIBS:.a=.la} -o dbe
++
++$(LIBS): $(OBJS)
++	${LIBTOOL} --mode=link cc -o ${.TARGET:.a=.la} ${OBJS:.o=.lo} -rpath ${PREFIX}/lib -version-info 1:0
+ 
+ dba.o: sdbm.h
+ dbu.o: sdbm.h
+ util.o:sdbm.h
+ 
+ $(OBJS): sdbm.h tune.h pair.h
++	${LIBTOOL} --mode=compile ${CC} ${CFLAGS} -c $<
+ 
+ #
+ # dbu using berkelezoid ndbm routines [if you have them] for testing
+@@ -53,3 +58,16 @@
+ 
+ readme:
+ 	nroff -ms readme.ms | col -b >README
++
++install: $(LIBS)
++	mkdir ${DESTDIR}$(BINDIR)
++	mkdir ${DESTDIR}$(LIBDIR)
++	mkdir ${DESTDIR}$(INCDIR)
++	mkdir ${DESTDIR}$(MANDIR)/man3
++	${LIBTOOL} --mode=install ${BSD_INSTALL_DATA} ${LIBS:.a=.la} ${DESTDIR}${PREFIX}/lib
++	${LIBTOOL} --mode=install $(BSD_INSTALL_PROGRAM) dbu ${DESTDIR}$(BINDIR)
++	${LIBTOOL} --mode=install $(BSD_INSTALL_PROGRAM) dba ${DESTDIR}$(BINDIR)
++	${LIBTOOL} --mode=install $(BSD_INSTALL_PROGRAM) dbd ${DESTDIR}$(BINDIR)
++	${LIBTOOL} --mode=install $(BSD_INSTALL_PROGRAM) dbe ${DESTDIR}$(BINDIR)
++	$(BSD_INSTALL_DATA) sdbm.h ${DESTDIR}$(INCDIR)
++	$(BSD_INSTALL_DATA) sdbm.3 ${DESTDIR}$(MANDIR)/man3

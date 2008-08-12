@@ -1,9 +1,8 @@
-@comment $NetBSD: PLIST,v 1.1 2001/11/01 00:12:51 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/08/12 13:11:30 agc Exp $
+bin/dba
+bin/dbd
+bin/dbe
+bin/dbu
 include/sdbm.h
-lib/libsdbm.a
-lib/libsdbm_p.a
-lib/libsdbm_pic.a
-lib/libsdbm.so
-lib/libsdbm.so.1
-lib/libsdbm.so.1.0
+lib/libsdbm.la
 man/man3/sdbm.3
