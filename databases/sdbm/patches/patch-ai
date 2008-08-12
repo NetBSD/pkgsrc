@@ -1,0 +1,11 @@
+--- dbd.c	2008/08/12 12:19:22	1.1
++++ dbd.c	2008/08/12 12:19:53
+@@ -3,6 +3,8 @@
+  */
+ 
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ #include <sys/file.h>
+ #include "sdbm.h"
+ 
