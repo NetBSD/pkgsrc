@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2008/01/18 05:09:36 tnn Exp $
+# $NetBSD: Makefile,v 1.37 2008/08/12 10:16:54 obache Exp $
 
 DISTNAME=	cyrus-sasl-2.1.22
 PKGNAME=	${DISTNAME:S/sasl/saslauthd/}
@@ -10,6 +10,7 @@ MASTER_SITES=	ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/ \
 CONFLICTS+=	cyrus-sasl<2.1.15nb2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -53,12 +54,12 @@ post-configure:
 
 post-install:
 	for f in saslcache testsaslauthd; do				\
-		${INSTALL_PROGRAM} ${WRKSRC}/$$f ${PREFIX}/bin/$$f;	\
+		${INSTALL_PROGRAM} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/bin/$$f; \
 	done
 .if !empty(PKG_OPTIONS:Mldap)
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/cyrus-saslauthd
+	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/cyrus-saslauthd
 	${INSTALL_DATA} ${WRKSRC}/LDAP_SASLAUTHD			\
-		${PREFIX}/share/doc/cyrus-saslauthd
+		${DESTDIR}${PREFIX}/share/doc/cyrus-saslauthd
 .endif
 
 .include "../../mk/bsd.pkg.mk"
