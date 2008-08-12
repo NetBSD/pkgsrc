@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1857 2008/08/12 22:30:15 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1858 2008/08/12 22:34:38 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3181,3 +3181,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/unfs3 to 0.9.21 [tnn 2008-08-12]
 	Updated sysutils/cdrtools to 2.01.01.45 [wiz 2008-08-12]
 	Updated finance/gnucash to 2.2.6 [wiz 2008-08-12]
+	Updated misc/dialog to 1.1.20080727 [wiz 2008-08-12]
