@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/06/16 14:54:41 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2008/08/12 14:39:12 joerg Exp $
 #
 
 DISTNAME=	mrt-2.2.2a-Aug11
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 
 PLIST_SRC=	${WRKSRC}/.PLIST_SRC
 
-INSTALLATION_DIRS=	sbin share/examples/mrt
+INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/examples/mrt
 
 # nuke yet-to-be-ready directories, configure.in is written in a strange way
 post-extract:
@@ -26,9 +26,9 @@ post-install:
 	${CAT} ${PKGDIR}/PLIST.pre >${PLIST_SRC}
 	${INSTALL_DATA} ${WRKSRC}/programs/*/*.conf \
 		${DESTDIR}${PREFIX}/share/examples/mrt
-	(cd ${PREFIX}; ${FIND} share/examples/mrt -type f -print \
+	(cd ${DESTDIR}${PREFIX}; ${FIND} share/examples/mrt -type f -print \
 		>> ${PLIST_SRC})
-	(cd ${PREFIX}; ${FIND} share/examples/mrt -type d -print | \
+	(cd ${DESTDIR}${PREFIX}; ${FIND} share/examples/mrt -type d -print | \
 		${SORT} -r | ${SED} -e "s/^/@dirrm /" >>${PLIST_SRC})
 
 .include "../../mk/bsd.pkg.mk"
