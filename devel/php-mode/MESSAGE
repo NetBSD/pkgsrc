@@ -1,0 +1,8 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2008/08/12 10:41:57 dsainty Exp $
+
+To use the Emacs PHP mode add the following to your .emacs file:
+
+  (require 'php-mode)
+
+===========================================================================
