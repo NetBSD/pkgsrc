@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/06/24 08:21:04 bjs Exp $
+# $NetBSD: Makefile,v 1.7.4.1 2008/08/12 10:00:23 tron Exp $
 #
 
 .include "${.CURDIR}/../scmgit/Makefile.common"
@@ -9,6 +9,8 @@ COMMENT=		GIT Tree History Storage Tool (base package)
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		git-[0-9]*		# misc/git
+
+DEPENDS+=		p5-Error>=0.17015:../../devel/p5-Error
 
 USE_LANGUAGES=		c99
 USE_TOOLS+=		perl:run sh:run msgfmt
@@ -28,7 +30,7 @@ PERL5_CONFIGURE= 	no
 PERL5_PACKLIST=		auto/Git/.packlist
 REPLACE_PERL+=		*.perl */*.perl */*/*.perl
 
-GITCOREDIR=		${PREFIX}/libexec/git-core/
+GITCOREDIR=		${PREFIX}/libexec/git-core
 
 CONFIGURE_ENV+=		gitexecdir=${GITCOREDIR:Q}
 
