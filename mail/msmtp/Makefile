@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.19 2008/01/18 05:08:27 tnn Exp $
+# $NetBSD: Makefile,v 1.20 2008/08/12 16:39:56 reed Exp $
 
-DISTNAME=	msmtp-1.4.13
-PKGREVISION=	1
+DISTNAME=	msmtp-1.4.16
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=msmtp/}
 EXTRACT_SUFX=	.tar.bz2
@@ -9,6 +8,10 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	bcv@hub3.net
 HOMEPAGE=	http://msmtp.sourceforge.net/
 COMMENT=	SMTP plugin for MUAs
+
+#LICENSE=	gnu-gpl-v3
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 USE_PKGLOCALEDIR=	yes
@@ -29,8 +32,8 @@ CPPFLAGS+=	-D__WINSOCK
 .include "options.mk"
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/doc/msmtprc-user.example ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/doc/msmtprc-user.example ${DESTDIR}${EGDIR}
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
