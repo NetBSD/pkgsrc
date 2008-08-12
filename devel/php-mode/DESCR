@@ -1,0 +1,4 @@
+An Emacs major mode for editing PHP code.
+
+Features: Syntax coloring and indenting; Documentation browse and search
+functions; Support for Imenu and SpeedBar; Customization options.
