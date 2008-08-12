@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2006/10/22 09:25:58 obache Exp $
+# $NetBSD: Makefile,v 1.15 2008/08/12 10:16:54 obache Exp $
 
 PKGNAME=	${DISTNAME:S/cyrus-sasl/cy2-sql/}
 COMMENT=	Cyrus SASL SQL authentication plugin
 SASL_PLUGIN=	yes
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../security/cyrus-sasl/Makefile.common"
 
@@ -39,8 +41,8 @@ BUILD_DIRS=	${WRKSRC}/plugins
 BUILD_TARGET=	libsql.la
 
 do-install:
-	${INSTALL_DATA_DIR} ${PLUGINDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${PLUGINDIR}
 	cd ${WRKSRC}/plugins && ${SHLIBTOOL} --mode=install \
-		${INSTALL_PROGRAM} libsql.la ${PLUGINDIR}
+		${INSTALL_PROGRAM} libsql.la ${DESTDIR}${PLUGINDIR}
 
 .include "../../mk/bsd.pkg.mk"
