@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1858 2008/08/12 22:34:38 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1859 2008/08/12 22:36:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3182,3 +3182,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/cdrtools to 2.01.01.45 [wiz 2008-08-12]
 	Updated finance/gnucash to 2.2.6 [wiz 2008-08-12]
 	Updated misc/dialog to 1.1.20080727 [wiz 2008-08-12]
+	Updated mail/p5-MailTools to 2.04 [wiz 2008-08-12]
