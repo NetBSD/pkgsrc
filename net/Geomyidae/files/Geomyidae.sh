@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: Geomyidae.sh,v 1.1.1.1 2008/04/06 11:50:36 obache Exp $
+# $NetBSD: Geomyidae.sh,v 1.2 2008/08/12 14:59:44 reed Exp $
 #
 
 # PROVIDE: Geomyidae
@@ -20,7 +20,7 @@ command="@PREFIX@/sbin/$name"
 #####################################################
 #
 #LOGFILE="-l /var/log/gopherd.log"
-#LOGLEVEL="-v 7"
+#LOGLEVEL="-v 15"
 #HTDOCS="-b /var/gopher"
 #PORT="-p 70"
 #SPORT="-o 70"
