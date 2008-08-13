@@ -1,6 +1,6 @@
-$NetBSD: patch-fe,v 1.1.1.1 2008/08/07 20:26:59 cegger Exp $
+$NetBSD: patch-fe,v 1.2 2008/08/13 12:36:05 cegger Exp $
 
---- ioemu/Makefile.target.orig	2008-08-01 14:38:07.000000000 +0000
+--- ioemu/Makefile.target.orig	2008-08-07 08:56:22.000000000 +0000
 +++ ioemu/Makefile.target
 @@ -382,6 +382,7 @@ AUDIODRV += sdlaudio.o
  endif
@@ -10,6 +10,15 @@ $NetBSD: patch-fe,v 1.1.1.1 2008/08/07 20:26:59 cegger Exp $
  endif
  ifdef CONFIG_COREAUDIO
  AUDIODRV += coreaudio.o
+@@ -544,7 +545,7 @@ $(QEMU_SYSTEM): $(VL_OBJS) libqemu.a
+ ifdef CONFIG_STUBDOM
+ 	$(AR) rcs $@ $(VL_OBJS)
+ else
+-	$(CC) $(VL_LDFLAGS) -o $@ $^ $(LIBS) $(SDL_LIBS) $(COCOA_LIBS) $(VL_LIBS)
++	$(CC) $(VL_LDFLAGS) -Wl,-rpath,$(LIBDIR) -o $@ $^ $(LIBS) $(SDL_LIBS) $(COCOA_LIBS) $(VL_LIBS)
+ endif
+ 
+ cocoa.o: cocoa.m
 @@ -660,12 +661,12 @@ distclean: clean
  	rm -rf config.mak config.h
  
