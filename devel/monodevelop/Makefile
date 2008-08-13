@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.11 2008/04/27 23:09:53 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/08/13 07:47:02 kefren Exp $
 
 DISTNAME=	monodevelop-1.0
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	devel
 MASTER_SITES=	http://go-mono.com/sources/monodevelop/
 EXTRACT_SUFX=	.tar.bz2
