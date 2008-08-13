@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.4 2008/07/14 12:56:01 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/08/13 13:20:14 ahoka Exp $
 #
 
 DISTNAME=	libconfig-1.3
 CATEGORIES=	devel
 MASTER_SITES=	http://www.hyperrealm.com/libconfig/
 
-MAINTAINER=	adam.hoka@gmail.com
+MAINTAINER=	ahoka@NetBSD.org
 HOMEPAGE=	http://www.hyperrealm.com/libconfig/
 COMMENT=	Simple library for manipulating structured configuration files
 
