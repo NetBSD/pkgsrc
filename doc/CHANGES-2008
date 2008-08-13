@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1866 2008/08/13 16:01:37 kleink Exp $
+$NetBSD: CHANGES-2008,v 1.1867 2008/08/13 17:16:07 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3190,3 +3190,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added x11/docker version 1.5 [ahoka 2008-08-13]
 	Updated converters/skf to 1.95.5 [obache 2008-08-13]
 	Updated textproc/p5-Text-vCard to 2.03 [kleink 2008-08-13]
+	Updated mail/getmail to 4.8.3 [schmonz 2008-08-13]
