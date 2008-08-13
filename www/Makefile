@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.565 2008/08/01 08:39:17 obache Exp $
+# $NetBSD: Makefile,v 1.566 2008/08/13 09:12:58 joerg Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -502,7 +502,6 @@ SUBDIR+=	zope25-Squishdot
 SUBDIR+=	zope25-StripoGram
 SUBDIR+=	zope25-TinyTablePlus
 SUBDIR+=	zope25-XMLWidgets
-SUBDIR+=	zope25-ZMySQLDA
 SUBDIR+=	zope25-ZNavigator
 SUBDIR+=	zope25-ZPhotoSlides
 SUBDIR+=	zope25-ZPsycopgDA
