@@ -1,5 +1,0 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:42 wiz Exp $
-
-SHA1 (zope/ZMySQLDA-2.0.8.tar.gz) = 142c3c6d0724a30ffead5cc9bb885c1b4208ec66
-RMD160 (zope/ZMySQLDA-2.0.8.tar.gz) = dccccfa2029352cfbed64dc2f8de47500d7d86f6
-Size (zope/ZMySQLDA-2.0.8.tar.gz) = 12442 bytes
