@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/13 11:42:55 ahoka Exp $
+bin/docker
