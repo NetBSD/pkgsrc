@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/23 15:05:09 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2008/08/13 13:20:14 ahoka Exp $
 #
 
 DISTNAME=	netsurf-1.2-src
@@ -6,7 +6,7 @@ PKGNAME=	${DISTNAME:S/-src$//}
 CATEGORIES=	www
 MASTER_SITES=	http://www.netsurf-browser.org/downloads/releases/
 
-MAINTAINER=	adam.hoka@gmail.com
+MAINTAINER=	ahoka@NetBSD.org
 HOMEPAGE=	http://www.netsurf-browser.org/
 COMMENT=	Web browser for RISC OS and UNIX-like platforms
 
