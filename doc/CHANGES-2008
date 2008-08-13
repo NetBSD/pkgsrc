@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1864 2008/08/13 11:48:49 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.1865 2008/08/13 14:20:23 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3188,3 +3188,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/postfix-current to 2.6.20080726 [martti 2008-08-13]
 	Updated devel/readline to 5.2nb2 [he 2008-08-13]
 	Added x11/docker version 1.5 [ahoka 2008-08-13]
+	Updated converters/skf to 1.95.5 [obache 2008-08-13]
