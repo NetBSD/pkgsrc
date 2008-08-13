@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.4 2008/08/13 11:11:38 he Exp $
+
+--- readline.h.orig	2006-08-16 21:16:59.000000000 +0200
++++ readline.h
+@@ -33,6 +33,7 @@ extern "C" {
+ #  include "keymaps.h"
+ #  include "tilde.h"
+ #else
++#  include <stdio.h>
+ #  include <readline/rlstdc.h>
+ #  include <readline/rltypedefs.h>
+ #  include <readline/keymaps.h>
