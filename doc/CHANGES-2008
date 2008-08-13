@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1862 2008/08/13 07:34:55 martti Exp $
+$NetBSD: CHANGES-2008,v 1.1863 2008/08/13 11:12:28 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3186,3 +3186,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/p5-MIME-tools to 5.427 [wiz 2008-08-12]
 	Updated devel/p5-Class-Data-Accessor to 0.04004 [he 2008-08-12]
 	Updated mail/postfix-current to 2.6.20080726 [martti 2008-08-13]
+	Updated devel/readline to 5.2nb2 [he 2008-08-13]
