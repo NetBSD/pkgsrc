@@ -1,0 +1,3 @@
+This program converts OpenType fonts to BDF fonts using the FreeType 2
+renderer.  BDF fonts can be edited using the author's "gdbfed" editor,
+also found in the pkgsrc "fonts" category.
