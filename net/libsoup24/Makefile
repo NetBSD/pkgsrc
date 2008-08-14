@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/08/13 17:20:46 mjl Exp $
+# $NetBSD: Makefile,v 1.3 2008/08/14 14:43:34 mjl Exp $
 
 DISTNAME=	libsoup-2.4.1
 PKGNAME=	libsoup24-2.4.1
@@ -19,7 +19,6 @@ GNU_CONFIGURE=		yes
 PKGCONFIG_OVERRIDE+=	libsoup.pc.in
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../devel/libgnome/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
