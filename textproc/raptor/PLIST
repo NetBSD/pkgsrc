@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/05/09 21:45:23 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/08/14 19:17:36 wiz Exp $
 bin/rapper
 bin/raptor-config
 include/raptor.h
@@ -16,6 +16,7 @@ share/doc/raptor/left.png
 share/doc/raptor/parser-grddl.html
 share/doc/raptor/parser-guess.html
 share/doc/raptor/parser-ntriples.html
+share/doc/raptor/parser-rdfa.html
 share/doc/raptor/parser-rdfxml.html
 share/doc/raptor/parser-rss-tag-soup.html
 share/doc/raptor/parser-trig.html
@@ -48,6 +49,7 @@ share/doc/raptor/restrict-parser-network-access.html
 share/doc/raptor/right.png
 share/doc/raptor/serializer-atom.html
 share/doc/raptor/serializer-dot.html
+share/doc/raptor/serializer-json.html
 share/doc/raptor/serializer-ntriples.html
 share/doc/raptor/serializer-rdfxml-abbrev.html
 share/doc/raptor/serializer-rdfxml-xmp.html
