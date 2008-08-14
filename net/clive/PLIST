@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.6 2008/07/29 21:30:10 wiz Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/08/14 19:38:27 wiz Exp $
 bin/clive
+bin/clive-passwd
 ${PYSITELIB}/clive/__init__.py
 ${PYSITELIB}/clive/__init__.pyc
 ${PYSITELIB}/clive/__init__.pyo
@@ -21,6 +22,9 @@ ${PYSITELIB}/clive/login.pyo
 ${PYSITELIB}/clive/main.py
 ${PYSITELIB}/clive/main.pyc
 ${PYSITELIB}/clive/main.pyo
+${PYSITELIB}/clive/modules.py
+${PYSITELIB}/clive/modules.pyc
+${PYSITELIB}/clive/modules.pyo
 ${PYSITELIB}/clive/nomad.py
 ${PYSITELIB}/clive/nomad.pyc
 ${PYSITELIB}/clive/nomad.pyo
@@ -30,6 +34,9 @@ ${PYSITELIB}/clive/opts.pyo
 ${PYSITELIB}/clive/parse.py
 ${PYSITELIB}/clive/parse.pyc
 ${PYSITELIB}/clive/parse.pyo
+${PYSITELIB}/clive/passwd.py
+${PYSITELIB}/clive/passwd.pyc
+${PYSITELIB}/clive/passwd.pyo
 ${PYSITELIB}/clive/path.py
 ${PYSITELIB}/clive/path.pyc
 ${PYSITELIB}/clive/path.pyo
@@ -55,4 +62,5 @@ ${PYSITELIB}/clive/util.py
 ${PYSITELIB}/clive/util.pyc
 ${PYSITELIB}/clive/util.pyo
 man/man1/clive.1
+man/man1/clive-passwd.1
 @dirrm ${PYSITELIB}/clive
