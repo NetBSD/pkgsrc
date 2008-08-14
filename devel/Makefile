@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.973 2008/08/12 10:14:20 dsainty Exp $
+# $NetBSD: Makefile,v 1.974 2008/08/14 12:53:42 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -599,6 +599,7 @@ SUBDIR+=	p5-PAR
 SUBDIR+=	p5-PAR-Dist
 SUBDIR+=	p5-POE
 SUBDIR+=	p5-PPI
+SUBDIR+=	p5-PPI-XS
 SUBDIR+=	p5-PV
 SUBDIR+=	p5-Package-Generator
 SUBDIR+=	p5-PadWalker
