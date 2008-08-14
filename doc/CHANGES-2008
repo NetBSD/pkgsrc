@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1874 2008/08/14 20:34:43 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1875 2008/08/14 20:39:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3198,3 +3198,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/clive to 1.0.0 [wiz 2008-08-14]
 	Updated devel/libgphoto2 to 2.4.2 [wiz 2008-08-14]
 	Updated graphics/gphoto2 to 2.4.2 [wiz 2008-08-14]
+	Updated mail/gmime to 2.2.22 [wiz 2008-08-14]
