@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.23 2008/05/21 15:22:56 obache Exp $
+# $NetBSD: Makefile,v 1.24 2008/08/14 10:01:03 adam Exp $
 
-DISTNAME=	gsasl-0.2.26
+DISTNAME=	gsasl-0.2.27
 CATEGORIES=	security
 MASTER_SITES=	http://josefsson.org/gsasl/releases/ \
 		ftp://alpha.gnu.org/pub/gnu/gsasl/
