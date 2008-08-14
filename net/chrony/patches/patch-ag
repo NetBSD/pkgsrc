@@ -1,8 +1,8 @@
-$NetBSD: patch-ag,v 1.1 2004/11/30 11:26:59 hannken Exp $
+$NetBSD: patch-ag,v 1.1.32.1 2008/08/14 08:19:29 rtr Exp $
 
---- sys_netbsd.c.orig	2002-02-17 23:13:49.000000000 +0100
-+++ sys_netbsd.c
-@@ -285,7 +285,7 @@ SYS_NetBSD_Initialise(void)
+--- sys_netbsd.c.orig	2007-12-02 14:53:09.000000000 +0000
++++ sys_netbsd.c	2008-08-12 17:26:28.000000000 +0100
+@@ -285,7 +285,7 @@
    kvm_t *kt;
    FILE *fp;
  
@@ -11,3 +11,12 @@ $NetBSD: patch-ag,v 1.1 2004/11/30 11:26:59 hannken Exp $
    if (!kt) {
      CROAK("Cannot open kvm\n");
    }
+@@ -299,7 +299,7 @@
+   }
+ 
+   if (kvm_read(kt, nl[1].n_value, (char *)(&kern_bigadj), sizeof(long)) < 0) {
+-    CROAK("Cannot read from _bigadj\n");
++    kern_bigadj = 1000000;
+   }
+ 
+   kvm_close(kt);
