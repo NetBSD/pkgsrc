@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1868 2008/08/14 01:49:45 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1869 2008/08/14 10:02:15 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3192,3 +3192,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/p5-Text-vCard to 2.03 [kleink 2008-08-13]
 	Updated mail/getmail to 4.8.3 [schmonz 2008-08-13]
 	Added fonts/otf2bdf version 3.1 [bjs 2008-08-14]
+	Updated security/gsasl to 0.2.27 [adam 2008-08-14]
