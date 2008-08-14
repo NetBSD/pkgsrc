@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1872 2008/08/14 19:38:40 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1873 2008/08/14 20:30:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3196,3 +3196,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-PPI-XS version 0.900 [obache 2008-08-14]
 	Updated textproc/raptor to 1.4.18 [wiz 2008-08-14]
 	Updated net/clive to 1.0.0 [wiz 2008-08-14]
+	Updated devel/libgphoto2 to 2.4.2 [wiz 2008-08-14]
