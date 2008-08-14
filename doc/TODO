@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7471 2008/08/12 07:56:49 wiz Exp $
+$NetBSD: TODO,v 1.7472 2008/08/14 10:02:15 adam Exp $
 
 Suggested new packages
 ======================
@@ -709,7 +709,6 @@ Suggested package updates
 	o granulate-0.2
 	o graphviz-2.20.2
 	o gri-2.12.8
-	o gsasl-0.2.27 [pkg/39330]
 	o gsharutils-4.7
 	o gsm-1.0.12
 	o gss-0.0.22
