@@ -1,0 +1,8 @@
+PPI::XS provides XS-based acceleration of the core PPI packages. It
+selectively replaces a (small but growing) number of methods throughout PPI
+with identical but much faster C versions.
+Once installed, it will be auto-detected and loaded in by PPI completely
+transparently.
+Because the C implementations are linked to the perl versions of the same
+function, it is preferable to upgrade PPI::XS any time you do a major upgrade
+of PPI itself.
