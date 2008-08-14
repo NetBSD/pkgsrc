@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2008/03/03 02:19:52 jlam Exp $
+# $NetBSD: Makefile,v 1.30.6.1 2008/08/14 08:31:46 rtr Exp $
 #
 
 DISTNAME=		jabber-1.4.2
@@ -23,6 +23,7 @@ USE_TOOLS+=			gmake
 
 CONFIGURE_ARGS+=	--enable-ssl
 CONFIGURE_ENV+=		prefix=${PREFIX}
+CONFIGURE_ENV+=		SSLBASE=${SSLBASE}
 
 RCD_SCRIPTS=		jabberd
 PKG_SYSCONFSUBDIR=	jabberd
