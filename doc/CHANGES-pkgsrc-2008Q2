@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.33 2008/08/14 08:20:32 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.34 2008/08/14 08:32:19 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -73,3 +73,5 @@ pullup ticket #2476 - requested by tron
 apache22: security fix
 pullup ticket #2483 - requested by sborrill
 chrony: update package for fixes
+pullup ticket #2484 - requested by obache
+jabberd: force preference on openssl (fixes pr)
