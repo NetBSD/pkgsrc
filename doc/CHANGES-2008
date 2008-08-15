@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1882 2008/08/15 16:48:26 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.1883 2008/08/15 17:25:52 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3208,3 +3208,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/drupal to 5.10 [taca 2008-08-15]
 	Updated www/drupal6 to 6.4 [taca 2008-08-15]
 	Updated mail/spamdyke to 4.0.3 [schmonz 2008-08-15]
+	Updated chat/xchat to 2.8.6nb2 [tron 2008-08-15]
