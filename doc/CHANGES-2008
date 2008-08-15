@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1879 2008/08/15 15:27:09 mjl Exp $
+$NetBSD: CHANGES-2008,v 1.1880 2008/08/15 15:33:30 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3203,3 +3203,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/dbus to 1.2.3 [wiz 2008-08-15]
 	Updated audio/amarok to 1.4.10 [wiz 2008-08-15]
 	Updated www/py-django-devel to 1.0beta1 [mjl 2008-08-15]
+	Updated lang/sun-jre15 to 5.0.16 [he 2008-08-15]
+	Updated lang/sun-jdk15 to 5.0.16 [he 2008-08-15]
