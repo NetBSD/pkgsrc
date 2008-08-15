@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1875 2008/08/14 20:39:37 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1876 2008/08/15 06:37:51 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3199,3 +3199,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libgphoto2 to 2.4.2 [wiz 2008-08-14]
 	Updated graphics/gphoto2 to 2.4.2 [wiz 2008-08-14]
 	Updated mail/gmime to 2.2.22 [wiz 2008-08-14]
+	Updated x11/xf86-video-intel to 2.4.1 [tnn 2008-08-15]
