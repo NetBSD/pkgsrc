@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/08/11 14:46:24 he Exp $
+# $NetBSD: Makefile,v 1.4 2008/08/15 16:57:07 seb Exp $
 #
 
 DISTNAME=	Perl-Critic-1.090
@@ -21,6 +21,7 @@ DEPENDS+=	p5-String-Format>=1.13:../../devel/p5-String-Format
 DEPENDS+=	p5-B-Keywords>=1.05:../../devel/p5-B-Keywords
 DEPENDS+=	p5-Exception-Class>=1.23:../../devel/p5-Exception-Class
 DEPENDS+=	p5-Readonly>=1.03:../../devel/p5-Readonly
+DEPENDS+=	p5-version-[0-9]*:../../devel/p5-version
 
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/Perl/Critic/.packlist
