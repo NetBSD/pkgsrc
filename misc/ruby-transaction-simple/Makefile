@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/04 15:20:13 jlam Exp $
+# $NetBSD: Makefile,v 1.2 2008/08/15 16:07:16 taca Exp $
 
 DISTNAME=	transaction-simple-1.4.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	misc
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://rubyforge.org/projects/trans-simple/
 COMMENT=	Mixin library for adding transaction support to objects
 
 DEPENDS+=	hoe>=1.5.1:../../devel/hoe
