@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2008/08/15 16:51:59 schmonz Exp $
+
+To enable spamdyke, set:
+
+qmailsmtpd_presmtpd="${PREFIX}/bin/spamdyke --config-file ${PKG_SYSCONFDIR}/spamdyke.conf"
+
+in /etc/rc.conf, then restart qmail-smtpd.
+
+===========================================================================
