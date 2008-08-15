@@ -1,5 +1,68 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/07/23 10:20:41 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/08/15 15:26:53 mjl Exp $
 bin/django-admin.py
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/__init__.py
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/__init__.pyc
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/__init__.pyo
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/base.py
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/base.pyc
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/base.pyo
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/client.py
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/client.pyc
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/client.pyo
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/creation.py
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/creation.pyc
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/creation.pyo
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/introspection.py
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/introspection.pyc
+${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/introspection.pyo
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/__init__.py
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/__init__.pyc
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/__init__.pyo
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/base.py
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/base.pyc
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/base.pyo
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/client.py
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/client.pyc
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/client.pyo
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/creation.py
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/creation.pyc
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/creation.pyo
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/introspection.py
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/introspection.pyc
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/introspection.pyo
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/operations.py
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/operations.pyc
+${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/operations.pyo
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/__init__.py
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/__init__.pyc
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/__init__.pyo
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.py
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.pyc
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.pyo
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.py
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.pyc
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.pyo
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.py
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.pyc
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.pyo
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.py
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.pyc
+${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.pyo
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/__init__.py
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/__init__.pyc
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/__init__.pyo
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/base.py
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/base.pyc
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/base.pyo
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/client.py
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/client.pyc
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/client.pyo
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/creation.py
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/creation.pyc
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/creation.pyo
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/introspection.py
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/introspection.pyc
+${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/introspection.pyo
 ${PYSITELIB}/django/__init__.py
 ${PYSITELIB}/django/__init__.pyc
 ${PYSITELIB}/django/__init__.pyo
@@ -326,6 +389,8 @@ ${PYSITELIB}/django/contrib/admin/media/img/admin/tooltag-add.gif
 ${PYSITELIB}/django/contrib/admin/media/img/admin/tooltag-add_over.gif
 ${PYSITELIB}/django/contrib/admin/media/img/admin/tooltag-arrowright.gif
 ${PYSITELIB}/django/contrib/admin/media/img/admin/tooltag-arrowright_over.gif
+${PYSITELIB}/django/contrib/admin/media/img/gis/move_vertex_off.png
+${PYSITELIB}/django/contrib/admin/media/img/gis/move_vertex_on.png
 ${PYSITELIB}/django/contrib/admin/media/js/SelectBox.js
 ${PYSITELIB}/django/contrib/admin/media/js/SelectFilter2.js
 ${PYSITELIB}/django/contrib/admin/media/js/admin/CollapsedFieldsets.js
@@ -370,19 +435,11 @@ ${PYSITELIB}/django/contrib/admin/templates/admin/pagination.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/search_form.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/submit_line.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/template_validator.html
-${PYSITELIB}/django/contrib/admin/templates/admin_doc/bookmarklets.html
-${PYSITELIB}/django/contrib/admin/templates/admin_doc/index.html
-${PYSITELIB}/django/contrib/admin/templates/admin_doc/missing_docutils.html
-${PYSITELIB}/django/contrib/admin/templates/admin_doc/model_detail.html
-${PYSITELIB}/django/contrib/admin/templates/admin_doc/model_index.html
-${PYSITELIB}/django/contrib/admin/templates/admin_doc/template_detail.html
-${PYSITELIB}/django/contrib/admin/templates/admin_doc/template_filter_index.html
-${PYSITELIB}/django/contrib/admin/templates/admin_doc/template_tag_index.html
-${PYSITELIB}/django/contrib/admin/templates/admin_doc/view_detail.html
-${PYSITELIB}/django/contrib/admin/templates/admin_doc/view_index.html
 ${PYSITELIB}/django/contrib/admin/templates/registration/logged_out.html
 ${PYSITELIB}/django/contrib/admin/templates/registration/password_change_done.html
 ${PYSITELIB}/django/contrib/admin/templates/registration/password_change_form.html
+${PYSITELIB}/django/contrib/admin/templates/registration/password_reset_complete.html
+${PYSITELIB}/django/contrib/admin/templates/registration/password_reset_confirm.html
 ${PYSITELIB}/django/contrib/admin/templates/registration/password_reset_done.html
 ${PYSITELIB}/django/contrib/admin/templates/registration/password_reset_email.html
 ${PYSITELIB}/django/contrib/admin/templates/registration/password_reset_form.html
@@ -425,6 +482,16 @@ ${PYSITELIB}/django/contrib/admin/widgets.pyo
 ${PYSITELIB}/django/contrib/admindocs/__init__.py
 ${PYSITELIB}/django/contrib/admindocs/__init__.pyc
 ${PYSITELIB}/django/contrib/admindocs/__init__.pyo
+${PYSITELIB}/django/contrib/admindocs/templates/admin_doc/bookmarklets.html
+${PYSITELIB}/django/contrib/admindocs/templates/admin_doc/index.html
+${PYSITELIB}/django/contrib/admindocs/templates/admin_doc/missing_docutils.html
+${PYSITELIB}/django/contrib/admindocs/templates/admin_doc/model_detail.html
+${PYSITELIB}/django/contrib/admindocs/templates/admin_doc/model_index.html
+${PYSITELIB}/django/contrib/admindocs/templates/admin_doc/template_detail.html
+${PYSITELIB}/django/contrib/admindocs/templates/admin_doc/template_filter_index.html
+${PYSITELIB}/django/contrib/admindocs/templates/admin_doc/template_tag_index.html
+${PYSITELIB}/django/contrib/admindocs/templates/admin_doc/view_detail.html
+${PYSITELIB}/django/contrib/admindocs/templates/admin_doc/view_index.html
 ${PYSITELIB}/django/contrib/admindocs/urls.py
 ${PYSITELIB}/django/contrib/admindocs/urls.pyc
 ${PYSITELIB}/django/contrib/admindocs/urls.pyo
@@ -483,6 +550,15 @@ ${PYSITELIB}/django/contrib/auth/tests/basic.pyo
 ${PYSITELIB}/django/contrib/auth/tests/forms.py
 ${PYSITELIB}/django/contrib/auth/tests/forms.pyc
 ${PYSITELIB}/django/contrib/auth/tests/forms.pyo
+${PYSITELIB}/django/contrib/auth/tests/tokens.py
+${PYSITELIB}/django/contrib/auth/tests/tokens.pyc
+${PYSITELIB}/django/contrib/auth/tests/tokens.pyo
+${PYSITELIB}/django/contrib/auth/tests/views.py
+${PYSITELIB}/django/contrib/auth/tests/views.pyc
+${PYSITELIB}/django/contrib/auth/tests/views.pyo
+${PYSITELIB}/django/contrib/auth/tokens.py
+${PYSITELIB}/django/contrib/auth/tokens.pyc
+${PYSITELIB}/django/contrib/auth/tokens.pyo
 ${PYSITELIB}/django/contrib/auth/urls.py
 ${PYSITELIB}/django/contrib/auth/urls.pyc
 ${PYSITELIB}/django/contrib/auth/urls.pyo
@@ -631,6 +707,402 @@ ${PYSITELIB}/django/contrib/formtools/tests.pyo
 ${PYSITELIB}/django/contrib/formtools/wizard.py
 ${PYSITELIB}/django/contrib/formtools/wizard.pyc
 ${PYSITELIB}/django/contrib/formtools/wizard.pyo
+${PYSITELIB}/django/contrib/gis/__init__.py
+${PYSITELIB}/django/contrib/gis/__init__.pyc
+${PYSITELIB}/django/contrib/gis/__init__.pyo
+${PYSITELIB}/django/contrib/gis/admin/__init__.py
+${PYSITELIB}/django/contrib/gis/admin/__init__.pyc
+${PYSITELIB}/django/contrib/gis/admin/__init__.pyo
+${PYSITELIB}/django/contrib/gis/admin/options.py
+${PYSITELIB}/django/contrib/gis/admin/options.pyc
+${PYSITELIB}/django/contrib/gis/admin/options.pyo
+${PYSITELIB}/django/contrib/gis/admin/widgets.py
+${PYSITELIB}/django/contrib/gis/admin/widgets.pyc
+${PYSITELIB}/django/contrib/gis/admin/widgets.pyo
+${PYSITELIB}/django/contrib/gis/db/__init__.py
+${PYSITELIB}/django/contrib/gis/db/__init__.pyc
+${PYSITELIB}/django/contrib/gis/db/__init__.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/__init__.py
+${PYSITELIB}/django/contrib/gis/db/backend/__init__.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/__init__.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/adaptor.py
+${PYSITELIB}/django/contrib/gis/db/backend/adaptor.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/adaptor.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/base.py
+${PYSITELIB}/django/contrib/gis/db/backend/base.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/base.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/mysql/__init__.py
+${PYSITELIB}/django/contrib/gis/db/backend/mysql/__init__.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/mysql/__init__.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/mysql/creation.py
+${PYSITELIB}/django/contrib/gis/db/backend/mysql/creation.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/mysql/creation.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/mysql/field.py
+${PYSITELIB}/django/contrib/gis/db/backend/mysql/field.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/mysql/field.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/mysql/query.py
+${PYSITELIB}/django/contrib/gis/db/backend/mysql/query.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/mysql/query.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/oracle/__init__.py
+${PYSITELIB}/django/contrib/gis/db/backend/oracle/__init__.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/oracle/__init__.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/oracle/adaptor.py
+${PYSITELIB}/django/contrib/gis/db/backend/oracle/adaptor.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/oracle/adaptor.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/oracle/creation.py
+${PYSITELIB}/django/contrib/gis/db/backend/oracle/creation.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/oracle/creation.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/oracle/field.py
+${PYSITELIB}/django/contrib/gis/db/backend/oracle/field.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/oracle/field.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/oracle/models.py
+${PYSITELIB}/django/contrib/gis/db/backend/oracle/models.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/oracle/models.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/oracle/query.py
+${PYSITELIB}/django/contrib/gis/db/backend/oracle/query.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/oracle/query.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/__init__.py
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/__init__.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/__init__.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/adaptor.py
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/adaptor.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/adaptor.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/creation.py
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/creation.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/creation.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/field.py
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/field.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/field.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/management.py
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/management.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/management.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/models.py
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/models.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/models.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/query.py
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/query.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/postgis/query.pyo
+${PYSITELIB}/django/contrib/gis/db/backend/util.py
+${PYSITELIB}/django/contrib/gis/db/backend/util.pyc
+${PYSITELIB}/django/contrib/gis/db/backend/util.pyo
+${PYSITELIB}/django/contrib/gis/db/models/__init__.py
+${PYSITELIB}/django/contrib/gis/db/models/__init__.pyc
+${PYSITELIB}/django/contrib/gis/db/models/__init__.pyo
+${PYSITELIB}/django/contrib/gis/db/models/fields/__init__.py
+${PYSITELIB}/django/contrib/gis/db/models/fields/__init__.pyc
+${PYSITELIB}/django/contrib/gis/db/models/fields/__init__.pyo
+${PYSITELIB}/django/contrib/gis/db/models/manager.py
+${PYSITELIB}/django/contrib/gis/db/models/manager.pyc
+${PYSITELIB}/django/contrib/gis/db/models/manager.pyo
+${PYSITELIB}/django/contrib/gis/db/models/mixin.py
+${PYSITELIB}/django/contrib/gis/db/models/mixin.pyc
+${PYSITELIB}/django/contrib/gis/db/models/mixin.pyo
+${PYSITELIB}/django/contrib/gis/db/models/proxy.py
+${PYSITELIB}/django/contrib/gis/db/models/proxy.pyc
+${PYSITELIB}/django/contrib/gis/db/models/proxy.pyo
+${PYSITELIB}/django/contrib/gis/db/models/query.py
+${PYSITELIB}/django/contrib/gis/db/models/query.pyc
+${PYSITELIB}/django/contrib/gis/db/models/query.pyo
+${PYSITELIB}/django/contrib/gis/db/models/sql/__init__.py
+${PYSITELIB}/django/contrib/gis/db/models/sql/__init__.pyc
+${PYSITELIB}/django/contrib/gis/db/models/sql/__init__.pyo
+${PYSITELIB}/django/contrib/gis/db/models/sql/query.py
+${PYSITELIB}/django/contrib/gis/db/models/sql/query.pyc
+${PYSITELIB}/django/contrib/gis/db/models/sql/query.pyo
+${PYSITELIB}/django/contrib/gis/db/models/sql/where.py
+${PYSITELIB}/django/contrib/gis/db/models/sql/where.pyc
+${PYSITELIB}/django/contrib/gis/db/models/sql/where.pyo
+${PYSITELIB}/django/contrib/gis/forms/__init__.py
+${PYSITELIB}/django/contrib/gis/forms/__init__.pyc
+${PYSITELIB}/django/contrib/gis/forms/__init__.pyo
+${PYSITELIB}/django/contrib/gis/forms/fields.py
+${PYSITELIB}/django/contrib/gis/forms/fields.pyc
+${PYSITELIB}/django/contrib/gis/forms/fields.pyo
+${PYSITELIB}/django/contrib/gis/gdal/__init__.py
+${PYSITELIB}/django/contrib/gis/gdal/__init__.pyc
+${PYSITELIB}/django/contrib/gis/gdal/__init__.pyo
+${PYSITELIB}/django/contrib/gis/gdal/datasource.py
+${PYSITELIB}/django/contrib/gis/gdal/datasource.pyc
+${PYSITELIB}/django/contrib/gis/gdal/datasource.pyo
+${PYSITELIB}/django/contrib/gis/gdal/driver.py
+${PYSITELIB}/django/contrib/gis/gdal/driver.pyc
+${PYSITELIB}/django/contrib/gis/gdal/driver.pyo
+${PYSITELIB}/django/contrib/gis/gdal/envelope.py
+${PYSITELIB}/django/contrib/gis/gdal/envelope.pyc
+${PYSITELIB}/django/contrib/gis/gdal/envelope.pyo
+${PYSITELIB}/django/contrib/gis/gdal/error.py
+${PYSITELIB}/django/contrib/gis/gdal/error.pyc
+${PYSITELIB}/django/contrib/gis/gdal/error.pyo
+${PYSITELIB}/django/contrib/gis/gdal/feature.py
+${PYSITELIB}/django/contrib/gis/gdal/feature.pyc
+${PYSITELIB}/django/contrib/gis/gdal/feature.pyo
+${PYSITELIB}/django/contrib/gis/gdal/field.py
+${PYSITELIB}/django/contrib/gis/gdal/field.pyc
+${PYSITELIB}/django/contrib/gis/gdal/field.pyo
+${PYSITELIB}/django/contrib/gis/gdal/geometries.py
+${PYSITELIB}/django/contrib/gis/gdal/geometries.pyc
+${PYSITELIB}/django/contrib/gis/gdal/geometries.pyo
+${PYSITELIB}/django/contrib/gis/gdal/geomtype.py
+${PYSITELIB}/django/contrib/gis/gdal/geomtype.pyc
+${PYSITELIB}/django/contrib/gis/gdal/geomtype.pyo
+${PYSITELIB}/django/contrib/gis/gdal/layer.py
+${PYSITELIB}/django/contrib/gis/gdal/layer.pyc
+${PYSITELIB}/django/contrib/gis/gdal/layer.pyo
+${PYSITELIB}/django/contrib/gis/gdal/libgdal.py
+${PYSITELIB}/django/contrib/gis/gdal/libgdal.pyc
+${PYSITELIB}/django/contrib/gis/gdal/libgdal.pyo
+${PYSITELIB}/django/contrib/gis/gdal/prototypes/__init__.py
+${PYSITELIB}/django/contrib/gis/gdal/prototypes/__init__.pyc
+${PYSITELIB}/django/contrib/gis/gdal/prototypes/__init__.pyo
+${PYSITELIB}/django/contrib/gis/gdal/prototypes/ds.py
+${PYSITELIB}/django/contrib/gis/gdal/prototypes/ds.pyc
+${PYSITELIB}/django/contrib/gis/gdal/prototypes/ds.pyo
+${PYSITELIB}/django/contrib/gis/gdal/prototypes/errcheck.py
+${PYSITELIB}/django/contrib/gis/gdal/prototypes/errcheck.pyc
+${PYSITELIB}/django/contrib/gis/gdal/prototypes/errcheck.pyo
+${PYSITELIB}/django/contrib/gis/gdal/prototypes/generation.py
+${PYSITELIB}/django/contrib/gis/gdal/prototypes/generation.pyc
+${PYSITELIB}/django/contrib/gis/gdal/prototypes/generation.pyo
+${PYSITELIB}/django/contrib/gis/gdal/prototypes/geom.py
+${PYSITELIB}/django/contrib/gis/gdal/prototypes/geom.pyc
+${PYSITELIB}/django/contrib/gis/gdal/prototypes/geom.pyo
+${PYSITELIB}/django/contrib/gis/gdal/prototypes/srs.py
+${PYSITELIB}/django/contrib/gis/gdal/prototypes/srs.pyc
+${PYSITELIB}/django/contrib/gis/gdal/prototypes/srs.pyo
+${PYSITELIB}/django/contrib/gis/gdal/srs.py
+${PYSITELIB}/django/contrib/gis/gdal/srs.pyc
+${PYSITELIB}/django/contrib/gis/gdal/srs.pyo
+${PYSITELIB}/django/contrib/gis/geos/__init__.py
+${PYSITELIB}/django/contrib/gis/geos/__init__.pyc
+${PYSITELIB}/django/contrib/gis/geos/__init__.pyo
+${PYSITELIB}/django/contrib/gis/geos/base.py
+${PYSITELIB}/django/contrib/gis/geos/base.pyc
+${PYSITELIB}/django/contrib/gis/geos/base.pyo
+${PYSITELIB}/django/contrib/gis/geos/collections.py
+${PYSITELIB}/django/contrib/gis/geos/collections.pyc
+${PYSITELIB}/django/contrib/gis/geos/collections.pyo
+${PYSITELIB}/django/contrib/gis/geos/coordseq.py
+${PYSITELIB}/django/contrib/gis/geos/coordseq.pyc
+${PYSITELIB}/django/contrib/gis/geos/coordseq.pyo
+${PYSITELIB}/django/contrib/gis/geos/error.py
+${PYSITELIB}/django/contrib/gis/geos/error.pyc
+${PYSITELIB}/django/contrib/gis/geos/error.pyo
+${PYSITELIB}/django/contrib/gis/geos/geometries.py
+${PYSITELIB}/django/contrib/gis/geos/geometries.pyc
+${PYSITELIB}/django/contrib/gis/geos/geometries.pyo
+${PYSITELIB}/django/contrib/gis/geos/libgeos.py
+${PYSITELIB}/django/contrib/gis/geos/libgeos.pyc
+${PYSITELIB}/django/contrib/gis/geos/libgeos.pyo
+${PYSITELIB}/django/contrib/gis/geos/prototypes/__init__.py
+${PYSITELIB}/django/contrib/gis/geos/prototypes/__init__.pyc
+${PYSITELIB}/django/contrib/gis/geos/prototypes/__init__.pyo
+${PYSITELIB}/django/contrib/gis/geos/prototypes/coordseq.py
+${PYSITELIB}/django/contrib/gis/geos/prototypes/coordseq.pyc
+${PYSITELIB}/django/contrib/gis/geos/prototypes/coordseq.pyo
+${PYSITELIB}/django/contrib/gis/geos/prototypes/errcheck.py
+${PYSITELIB}/django/contrib/gis/geos/prototypes/errcheck.pyc
+${PYSITELIB}/django/contrib/gis/geos/prototypes/errcheck.pyo
+${PYSITELIB}/django/contrib/gis/geos/prototypes/geom.py
+${PYSITELIB}/django/contrib/gis/geos/prototypes/geom.pyc
+${PYSITELIB}/django/contrib/gis/geos/prototypes/geom.pyo
+${PYSITELIB}/django/contrib/gis/geos/prototypes/misc.py
+${PYSITELIB}/django/contrib/gis/geos/prototypes/misc.pyc
+${PYSITELIB}/django/contrib/gis/geos/prototypes/misc.pyo
+${PYSITELIB}/django/contrib/gis/geos/prototypes/predicates.py
+${PYSITELIB}/django/contrib/gis/geos/prototypes/predicates.pyc
+${PYSITELIB}/django/contrib/gis/geos/prototypes/predicates.pyo
+${PYSITELIB}/django/contrib/gis/geos/prototypes/topology.py
+${PYSITELIB}/django/contrib/gis/geos/prototypes/topology.pyc
+${PYSITELIB}/django/contrib/gis/geos/prototypes/topology.pyo
+${PYSITELIB}/django/contrib/gis/management/__init__.py
+${PYSITELIB}/django/contrib/gis/management/__init__.pyc
+${PYSITELIB}/django/contrib/gis/management/__init__.pyo
+${PYSITELIB}/django/contrib/gis/management/base.py
+${PYSITELIB}/django/contrib/gis/management/base.pyc
+${PYSITELIB}/django/contrib/gis/management/base.pyo
+${PYSITELIB}/django/contrib/gis/management/commands/__init__.py
+${PYSITELIB}/django/contrib/gis/management/commands/__init__.pyc
+${PYSITELIB}/django/contrib/gis/management/commands/__init__.pyo
+${PYSITELIB}/django/contrib/gis/management/commands/inspectdb.py
+${PYSITELIB}/django/contrib/gis/management/commands/inspectdb.pyc
+${PYSITELIB}/django/contrib/gis/management/commands/inspectdb.pyo
+${PYSITELIB}/django/contrib/gis/management/commands/ogrinspect.py
+${PYSITELIB}/django/contrib/gis/management/commands/ogrinspect.pyc
+${PYSITELIB}/django/contrib/gis/management/commands/ogrinspect.pyo
+${PYSITELIB}/django/contrib/gis/maps/__init__.py
+${PYSITELIB}/django/contrib/gis/maps/__init__.pyc
+${PYSITELIB}/django/contrib/gis/maps/__init__.pyo
+${PYSITELIB}/django/contrib/gis/maps/google/__init__.py
+${PYSITELIB}/django/contrib/gis/maps/google/__init__.pyc
+${PYSITELIB}/django/contrib/gis/maps/google/__init__.pyo
+${PYSITELIB}/django/contrib/gis/maps/google/gmap.py
+${PYSITELIB}/django/contrib/gis/maps/google/gmap.pyc
+${PYSITELIB}/django/contrib/gis/maps/google/gmap.pyo
+${PYSITELIB}/django/contrib/gis/maps/google/overlays.py
+${PYSITELIB}/django/contrib/gis/maps/google/overlays.pyc
+${PYSITELIB}/django/contrib/gis/maps/google/overlays.pyo
+${PYSITELIB}/django/contrib/gis/maps/google/zoom.py
+${PYSITELIB}/django/contrib/gis/maps/google/zoom.pyc
+${PYSITELIB}/django/contrib/gis/maps/google/zoom.pyo
+${PYSITELIB}/django/contrib/gis/maps/openlayers/__init__.py
+${PYSITELIB}/django/contrib/gis/maps/openlayers/__init__.pyc
+${PYSITELIB}/django/contrib/gis/maps/openlayers/__init__.pyo
+${PYSITELIB}/django/contrib/gis/measure.py
+${PYSITELIB}/django/contrib/gis/measure.pyc
+${PYSITELIB}/django/contrib/gis/measure.pyo
+${PYSITELIB}/django/contrib/gis/models.py
+${PYSITELIB}/django/contrib/gis/models.pyc
+${PYSITELIB}/django/contrib/gis/models.pyo
+${PYSITELIB}/django/contrib/gis/shortcuts.py
+${PYSITELIB}/django/contrib/gis/shortcuts.pyc
+${PYSITELIB}/django/contrib/gis/shortcuts.pyo
+${PYSITELIB}/django/contrib/gis/sitemaps.py
+${PYSITELIB}/django/contrib/gis/sitemaps.pyc
+${PYSITELIB}/django/contrib/gis/sitemaps.pyo
+${PYSITELIB}/django/contrib/gis/templates/gis/admin/openlayers.html
+${PYSITELIB}/django/contrib/gis/templates/gis/admin/openlayers.js
+${PYSITELIB}/django/contrib/gis/templates/gis/admin/osm.html
+${PYSITELIB}/django/contrib/gis/templates/gis/admin/osm.js
+${PYSITELIB}/django/contrib/gis/templates/gis/google/js/google-map.js
+${PYSITELIB}/django/contrib/gis/templates/gis/kml/base.kml
+${PYSITELIB}/django/contrib/gis/templates/gis/kml/placemarks.kml
+${PYSITELIB}/django/contrib/gis/tests/__init__.py
+${PYSITELIB}/django/contrib/gis/tests/__init__.pyc
+${PYSITELIB}/django/contrib/gis/tests/__init__.pyo
+${PYSITELIB}/django/contrib/gis/tests/data/test_point/test_point.dbf
+${PYSITELIB}/django/contrib/gis/tests/data/test_point/test_point.prj
+${PYSITELIB}/django/contrib/gis/tests/data/test_point/test_point.shp
+${PYSITELIB}/django/contrib/gis/tests/data/test_point/test_point.shx
+${PYSITELIB}/django/contrib/gis/tests/data/test_poly/test_poly.dbf
+${PYSITELIB}/django/contrib/gis/tests/data/test_poly/test_poly.prj
+${PYSITELIB}/django/contrib/gis/tests/data/test_poly/test_poly.shp
+${PYSITELIB}/django/contrib/gis/tests/data/test_poly/test_poly.shx
+${PYSITELIB}/django/contrib/gis/tests/data/test_vrt/test_vrt.csv
+${PYSITELIB}/django/contrib/gis/tests/data/test_vrt/test_vrt.vrt
+${PYSITELIB}/django/contrib/gis/tests/distapp/__init__.py
+${PYSITELIB}/django/contrib/gis/tests/distapp/__init__.pyc
+${PYSITELIB}/django/contrib/gis/tests/distapp/__init__.pyo
+${PYSITELIB}/django/contrib/gis/tests/distapp/data.py
+${PYSITELIB}/django/contrib/gis/tests/distapp/data.pyc
+${PYSITELIB}/django/contrib/gis/tests/distapp/data.pyo
+${PYSITELIB}/django/contrib/gis/tests/distapp/models.py
+${PYSITELIB}/django/contrib/gis/tests/distapp/models.pyc
+${PYSITELIB}/django/contrib/gis/tests/distapp/models.pyo
+${PYSITELIB}/django/contrib/gis/tests/distapp/tests.py
+${PYSITELIB}/django/contrib/gis/tests/distapp/tests.pyc
+${PYSITELIB}/django/contrib/gis/tests/distapp/tests.pyo
+${PYSITELIB}/django/contrib/gis/tests/geoapp/__init__.py
+${PYSITELIB}/django/contrib/gis/tests/geoapp/__init__.pyc
+${PYSITELIB}/django/contrib/gis/tests/geoapp/__init__.pyo
+${PYSITELIB}/django/contrib/gis/tests/geoapp/models.py
+${PYSITELIB}/django/contrib/gis/tests/geoapp/models.pyc
+${PYSITELIB}/django/contrib/gis/tests/geoapp/models.pyo
+${PYSITELIB}/django/contrib/gis/tests/geoapp/sql/city.mysql.sql
+${PYSITELIB}/django/contrib/gis/tests/geoapp/sql/city.oracle.sql
+${PYSITELIB}/django/contrib/gis/tests/geoapp/sql/city.postgresql_psycopg2.sql
+${PYSITELIB}/django/contrib/gis/tests/geoapp/sql/co.wkt
+${PYSITELIB}/django/contrib/gis/tests/geoapp/sql/country.mysql.sql
+${PYSITELIB}/django/contrib/gis/tests/geoapp/sql/country.postgresql_psycopg2.sql
+${PYSITELIB}/django/contrib/gis/tests/geoapp/sql/ks.wkt
+${PYSITELIB}/django/contrib/gis/tests/geoapp/sql/nz.wkt
+${PYSITELIB}/django/contrib/gis/tests/geoapp/sql/state.mysql.sql
+${PYSITELIB}/django/contrib/gis/tests/geoapp/sql/state.postgresql_psycopg2.sql
+${PYSITELIB}/django/contrib/gis/tests/geoapp/sql/tx.wkt
+${PYSITELIB}/django/contrib/gis/tests/geoapp/tests.py
+${PYSITELIB}/django/contrib/gis/tests/geoapp/tests.pyc
+${PYSITELIB}/django/contrib/gis/tests/geoapp/tests.pyo
+${PYSITELIB}/django/contrib/gis/tests/geoapp/tests_mysql.py
+${PYSITELIB}/django/contrib/gis/tests/geoapp/tests_mysql.pyc
+${PYSITELIB}/django/contrib/gis/tests/geoapp/tests_mysql.pyo
+${PYSITELIB}/django/contrib/gis/tests/geometries.py
+${PYSITELIB}/django/contrib/gis/tests/geometries.pyc
+${PYSITELIB}/django/contrib/gis/tests/geometries.pyo
+${PYSITELIB}/django/contrib/gis/tests/layermap/__init__.py
+${PYSITELIB}/django/contrib/gis/tests/layermap/__init__.pyc
+${PYSITELIB}/django/contrib/gis/tests/layermap/__init__.pyo
+${PYSITELIB}/django/contrib/gis/tests/layermap/cities/cities.dbf
+${PYSITELIB}/django/contrib/gis/tests/layermap/cities/cities.prj
+${PYSITELIB}/django/contrib/gis/tests/layermap/cities/cities.shp
+${PYSITELIB}/django/contrib/gis/tests/layermap/cities/cities.shx
+${PYSITELIB}/django/contrib/gis/tests/layermap/counties/counties.dbf
+${PYSITELIB}/django/contrib/gis/tests/layermap/counties/counties.shp
+${PYSITELIB}/django/contrib/gis/tests/layermap/counties/counties.shx
+${PYSITELIB}/django/contrib/gis/tests/layermap/interstates/interstates.dbf
+${PYSITELIB}/django/contrib/gis/tests/layermap/interstates/interstates.prj
+${PYSITELIB}/django/contrib/gis/tests/layermap/interstates/interstates.shp
+${PYSITELIB}/django/contrib/gis/tests/layermap/interstates/interstates.shx
+${PYSITELIB}/django/contrib/gis/tests/layermap/models.py
+${PYSITELIB}/django/contrib/gis/tests/layermap/models.pyc
+${PYSITELIB}/django/contrib/gis/tests/layermap/models.pyo
+${PYSITELIB}/django/contrib/gis/tests/layermap/tests.py
+${PYSITELIB}/django/contrib/gis/tests/layermap/tests.pyc
+${PYSITELIB}/django/contrib/gis/tests/layermap/tests.pyo
+${PYSITELIB}/django/contrib/gis/tests/relatedapp/__init__.py
+${PYSITELIB}/django/contrib/gis/tests/relatedapp/__init__.pyc
+${PYSITELIB}/django/contrib/gis/tests/relatedapp/__init__.pyo
+${PYSITELIB}/django/contrib/gis/tests/relatedapp/models.py
+${PYSITELIB}/django/contrib/gis/tests/relatedapp/models.pyc
+${PYSITELIB}/django/contrib/gis/tests/relatedapp/models.pyo
+${PYSITELIB}/django/contrib/gis/tests/relatedapp/tests.py
+${PYSITELIB}/django/contrib/gis/tests/relatedapp/tests.pyc
+${PYSITELIB}/django/contrib/gis/tests/relatedapp/tests.pyo
+${PYSITELIB}/django/contrib/gis/tests/relatedapp/tests_mysql.py
+${PYSITELIB}/django/contrib/gis/tests/relatedapp/tests_mysql.pyc
+${PYSITELIB}/django/contrib/gis/tests/relatedapp/tests_mysql.pyo
+${PYSITELIB}/django/contrib/gis/tests/test_gdal.py
+${PYSITELIB}/django/contrib/gis/tests/test_gdal.pyc
+${PYSITELIB}/django/contrib/gis/tests/test_gdal.pyo
+${PYSITELIB}/django/contrib/gis/tests/test_gdal_driver.py
+${PYSITELIB}/django/contrib/gis/tests/test_gdal_driver.pyc
+${PYSITELIB}/django/contrib/gis/tests/test_gdal_driver.pyo
+${PYSITELIB}/django/contrib/gis/tests/test_gdal_ds.py
+${PYSITELIB}/django/contrib/gis/tests/test_gdal_ds.pyc
+${PYSITELIB}/django/contrib/gis/tests/test_gdal_ds.pyo
+${PYSITELIB}/django/contrib/gis/tests/test_gdal_envelope.py
+${PYSITELIB}/django/contrib/gis/tests/test_gdal_envelope.pyc
+${PYSITELIB}/django/contrib/gis/tests/test_gdal_envelope.pyo
+${PYSITELIB}/django/contrib/gis/tests/test_gdal_geom.py
+${PYSITELIB}/django/contrib/gis/tests/test_gdal_geom.pyc
+${PYSITELIB}/django/contrib/gis/tests/test_gdal_geom.pyo
+${PYSITELIB}/django/contrib/gis/tests/test_gdal_srs.py
+${PYSITELIB}/django/contrib/gis/tests/test_gdal_srs.pyc
+${PYSITELIB}/django/contrib/gis/tests/test_gdal_srs.pyo
+${PYSITELIB}/django/contrib/gis/tests/test_geoip.py
+${PYSITELIB}/django/contrib/gis/tests/test_geoip.pyc
+${PYSITELIB}/django/contrib/gis/tests/test_geoip.pyo
+${PYSITELIB}/django/contrib/gis/tests/test_geos.py
+${PYSITELIB}/django/contrib/gis/tests/test_geos.pyc
+${PYSITELIB}/django/contrib/gis/tests/test_geos.pyo
+${PYSITELIB}/django/contrib/gis/tests/test_measure.py
+${PYSITELIB}/django/contrib/gis/tests/test_measure.pyc
+${PYSITELIB}/django/contrib/gis/tests/test_measure.pyo
+${PYSITELIB}/django/contrib/gis/tests/test_spatialrefsys.py
+${PYSITELIB}/django/contrib/gis/tests/test_spatialrefsys.pyc
+${PYSITELIB}/django/contrib/gis/tests/test_spatialrefsys.pyo
+${PYSITELIB}/django/contrib/gis/tests/utils.py
+${PYSITELIB}/django/contrib/gis/tests/utils.pyc
+${PYSITELIB}/django/contrib/gis/tests/utils.pyo
+${PYSITELIB}/django/contrib/gis/utils/__init__.py
+${PYSITELIB}/django/contrib/gis/utils/__init__.pyc
+${PYSITELIB}/django/contrib/gis/utils/__init__.pyo
+${PYSITELIB}/django/contrib/gis/utils/geoip.py
+${PYSITELIB}/django/contrib/gis/utils/geoip.pyc
+${PYSITELIB}/django/contrib/gis/utils/geoip.pyo
+${PYSITELIB}/django/contrib/gis/utils/layermapping.py
+${PYSITELIB}/django/contrib/gis/utils/layermapping.pyc
+${PYSITELIB}/django/contrib/gis/utils/layermapping.pyo
+${PYSITELIB}/django/contrib/gis/utils/ogrinfo.py
+${PYSITELIB}/django/contrib/gis/utils/ogrinfo.pyc
+${PYSITELIB}/django/contrib/gis/utils/ogrinfo.pyo
+${PYSITELIB}/django/contrib/gis/utils/ogrinspect.py
+${PYSITELIB}/django/contrib/gis/utils/ogrinspect.pyc
+${PYSITELIB}/django/contrib/gis/utils/ogrinspect.pyo
+${PYSITELIB}/django/contrib/gis/utils/srs.py
+${PYSITELIB}/django/contrib/gis/utils/srs.pyc
+${PYSITELIB}/django/contrib/gis/utils/srs.pyo
+${PYSITELIB}/django/contrib/gis/utils/wkt.py
+${PYSITELIB}/django/contrib/gis/utils/wkt.pyc
+${PYSITELIB}/django/contrib/gis/utils/wkt.pyo
 ${PYSITELIB}/django/contrib/humanize/__init__.py
 ${PYSITELIB}/django/contrib/humanize/__init__.pyc
 ${PYSITELIB}/django/contrib/humanize/__init__.pyo
@@ -652,6 +1124,15 @@ ${PYSITELIB}/django/contrib/localflavor/ar/ar_provinces.pyo
 ${PYSITELIB}/django/contrib/localflavor/ar/forms.py
 ${PYSITELIB}/django/contrib/localflavor/ar/forms.pyc
 ${PYSITELIB}/django/contrib/localflavor/ar/forms.pyo
+${PYSITELIB}/django/contrib/localflavor/at/__init__.py
+${PYSITELIB}/django/contrib/localflavor/at/__init__.pyc
+${PYSITELIB}/django/contrib/localflavor/at/__init__.pyo
+${PYSITELIB}/django/contrib/localflavor/at/at_states.py
+${PYSITELIB}/django/contrib/localflavor/at/at_states.pyc
+${PYSITELIB}/django/contrib/localflavor/at/at_states.pyo
+${PYSITELIB}/django/contrib/localflavor/at/forms.py
+${PYSITELIB}/django/contrib/localflavor/at/forms.pyc
+${PYSITELIB}/django/contrib/localflavor/at/forms.pyo
 ${PYSITELIB}/django/contrib/localflavor/au/__init__.py
 ${PYSITELIB}/django/contrib/localflavor/au/__init__.pyc
 ${PYSITELIB}/django/contrib/localflavor/au/__init__.pyo
@@ -817,9 +1298,9 @@ ${PYSITELIB}/django/contrib/localflavor/pe/__init__.pyo
 ${PYSITELIB}/django/contrib/localflavor/pe/forms.py
 ${PYSITELIB}/django/contrib/localflavor/pe/forms.pyc
 ${PYSITELIB}/django/contrib/localflavor/pe/forms.pyo
-${PYSITELIB}/django/contrib/localflavor/pe/pe_department.py
-${PYSITELIB}/django/contrib/localflavor/pe/pe_department.pyc
-${PYSITELIB}/django/contrib/localflavor/pe/pe_department.pyo
+${PYSITELIB}/django/contrib/localflavor/pe/pe_region.py
+${PYSITELIB}/django/contrib/localflavor/pe/pe_region.pyc
+${PYSITELIB}/django/contrib/localflavor/pe/pe_region.pyo
 ${PYSITELIB}/django/contrib/localflavor/pl/__init__.py
 ${PYSITELIB}/django/contrib/localflavor/pl/__init__.pyc
 ${PYSITELIB}/django/contrib/localflavor/pl/__init__.pyo
@@ -937,7 +1418,15 @@ ${PYSITELIB}/django/contrib/sessions/tests.pyo
 ${PYSITELIB}/django/contrib/sitemaps/__init__.py
 ${PYSITELIB}/django/contrib/sitemaps/__init__.pyc
 ${PYSITELIB}/django/contrib/sitemaps/__init__.pyo
+${PYSITELIB}/django/contrib/sitemaps/management/__init__.py
+${PYSITELIB}/django/contrib/sitemaps/management/__init__.pyc
+${PYSITELIB}/django/contrib/sitemaps/management/__init__.pyo
+${PYSITELIB}/django/contrib/sitemaps/management/commands/__init__.py
+${PYSITELIB}/django/contrib/sitemaps/management/commands/__init__.pyc
+${PYSITELIB}/django/contrib/sitemaps/management/commands/__init__.pyo
 ${PYSITELIB}/django/contrib/sitemaps/management/commands/ping_google.py
+${PYSITELIB}/django/contrib/sitemaps/management/commands/ping_google.pyc
+${PYSITELIB}/django/contrib/sitemaps/management/commands/ping_google.pyo
 ${PYSITELIB}/django/contrib/sitemaps/templates/sitemap.xml
 ${PYSITELIB}/django/contrib/sitemaps/templates/sitemap_index.xml
 ${PYSITELIB}/django/contrib/sitemaps/views.py
@@ -1024,12 +1513,24 @@ ${PYSITELIB}/django/core/exceptions.pyo
 ${PYSITELIB}/django/core/files/__init__.py
 ${PYSITELIB}/django/core/files/__init__.pyc
 ${PYSITELIB}/django/core/files/__init__.pyo
+${PYSITELIB}/django/core/files/base.py
+${PYSITELIB}/django/core/files/base.pyc
+${PYSITELIB}/django/core/files/base.pyo
+${PYSITELIB}/django/core/files/images.py
+${PYSITELIB}/django/core/files/images.pyc
+${PYSITELIB}/django/core/files/images.pyo
 ${PYSITELIB}/django/core/files/locks.py
 ${PYSITELIB}/django/core/files/locks.pyc
 ${PYSITELIB}/django/core/files/locks.pyo
 ${PYSITELIB}/django/core/files/move.py
 ${PYSITELIB}/django/core/files/move.pyc
 ${PYSITELIB}/django/core/files/move.pyo
+${PYSITELIB}/django/core/files/storage.py
+${PYSITELIB}/django/core/files/storage.pyc
+${PYSITELIB}/django/core/files/storage.pyo
+${PYSITELIB}/django/core/files/temp.py
+${PYSITELIB}/django/core/files/temp.pyc
+${PYSITELIB}/django/core/files/temp.pyo
 ${PYSITELIB}/django/core/files/uploadedfile.py
 ${PYSITELIB}/django/core/files/uploadedfile.pyc
 ${PYSITELIB}/django/core/files/uploadedfile.pyo
@@ -1222,78 +1723,12 @@ ${PYSITELIB}/django/db/backends/dummy/__init__.pyo
 ${PYSITELIB}/django/db/backends/dummy/base.py
 ${PYSITELIB}/django/db/backends/dummy/base.pyc
 ${PYSITELIB}/django/db/backends/dummy/base.pyo
-${PYSITELIB}/django/db/backends/dummy/client.py
-${PYSITELIB}/django/db/backends/dummy/client.pyc
-${PYSITELIB}/django/db/backends/dummy/client.pyo
-${PYSITELIB}/django/db/backends/dummy/creation.py
-${PYSITELIB}/django/db/backends/dummy/creation.pyc
-${PYSITELIB}/django/db/backends/dummy/creation.pyo
-${PYSITELIB}/django/db/backends/dummy/introspection.py
-${PYSITELIB}/django/db/backends/dummy/introspection.pyc
-${PYSITELIB}/django/db/backends/dummy/introspection.pyo
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/__init__.py
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/__init__.pyc
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/__init__.pyo
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/base.py
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/base.pyc
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/base.pyo
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/client.py
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/client.pyc
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/client.pyo
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/creation.py
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/creation.pyc
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/creation.pyo
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/introspection.py
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/introspection.pyc
-${PLIST.mysql}${PYSITELIB}/django/db/backends/mysql/introspection.pyo
-${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/__init__.py
-${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/__init__.pyc
-${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/__init__.pyo
-${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/base.py
-${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/base.pyc
-${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/base.pyo
-${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/client.py
-${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/client.pyc
-${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/client.pyo
-${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/creation.py
-${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/creation.pyc
-${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/creation.pyo
-${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/introspection.py
-${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/introspection.pyc
-${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/introspection.pyo
-${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/operations.py
-${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/operations.pyc
-${PLIST.psycopg1}${PYSITELIB}/django/db/backends/postgresql/operations.pyo
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/__init__.py
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/__init__.pyc
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/__init__.pyo
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.py
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.pyc
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.pyo
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.py
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.pyc
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.pyo
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.py
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.pyc
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.pyo
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.py
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.pyc
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.pyo
-${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/__init__.py
-${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/__init__.pyc
-${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/__init__.pyo
-${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/base.py
-${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/base.pyc
-${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/base.pyo
-${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/client.py
-${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/client.pyc
-${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/client.pyo
-${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/creation.py
-${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/creation.pyc
-${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/creation.pyo
-${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/introspection.py
-${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/introspection.pyc
-${PLIST.sqlite}${PYSITELIB}/django/db/backends/sqlite3/introspection.pyo
+${PYSITELIB}/django/db/backends/mysql/validation.py
+${PYSITELIB}/django/db/backends/mysql/validation.pyc
+${PYSITELIB}/django/db/backends/mysql/validation.pyo
+${PYSITELIB}/django/db/backends/postgresql/version.py
+${PYSITELIB}/django/db/backends/postgresql/version.pyc
+${PYSITELIB}/django/db/backends/postgresql/version.pyo
 ${PYSITELIB}/django/db/backends/util.py
 ${PYSITELIB}/django/db/backends/util.pyc
 ${PYSITELIB}/django/db/backends/util.pyo
@@ -1306,6 +1741,9 @@ ${PYSITELIB}/django/db/models/base.pyo
 ${PYSITELIB}/django/db/models/fields/__init__.py
 ${PYSITELIB}/django/db/models/fields/__init__.pyc
 ${PYSITELIB}/django/db/models/fields/__init__.pyo
+${PYSITELIB}/django/db/models/fields/files.py
+${PYSITELIB}/django/db/models/fields/files.pyc
+${PYSITELIB}/django/db/models/fields/files.pyo
 ${PYSITELIB}/django/db/models/fields/proxy.py
 ${PYSITELIB}/django/db/models/fields/proxy.pyc
 ${PYSITELIB}/django/db/models/fields/proxy.pyo
@@ -1366,15 +1804,6 @@ ${PYSITELIB}/django/dispatch/__init__.pyo
 ${PYSITELIB}/django/dispatch/dispatcher.py
 ${PYSITELIB}/django/dispatch/dispatcher.pyc
 ${PYSITELIB}/django/dispatch/dispatcher.pyo
-${PYSITELIB}/django/dispatch/errors.py
-${PYSITELIB}/django/dispatch/errors.pyc
-${PYSITELIB}/django/dispatch/errors.pyo
-${PYSITELIB}/django/dispatch/robust.py
-${PYSITELIB}/django/dispatch/robust.pyc
-${PYSITELIB}/django/dispatch/robust.pyo
-${PYSITELIB}/django/dispatch/robustapply.py
-${PYSITELIB}/django/dispatch/robustapply.pyc
-${PYSITELIB}/django/dispatch/robustapply.pyo
 ${PYSITELIB}/django/dispatch/saferef.py
 ${PYSITELIB}/django/dispatch/saferef.pyc
 ${PYSITELIB}/django/dispatch/saferef.pyo
@@ -1438,9 +1867,6 @@ ${PYSITELIB}/django/middleware/locale.pyo
 ${PYSITELIB}/django/middleware/transaction.py
 ${PYSITELIB}/django/middleware/transaction.pyc
 ${PYSITELIB}/django/middleware/transaction.pyo
-${PYSITELIB}/django/newforms/__init__.py
-${PYSITELIB}/django/newforms/__init__.pyc
-${PYSITELIB}/django/newforms/__init__.pyo
 ${PYSITELIB}/django/oldforms/__init__.py
 ${PYSITELIB}/django/oldforms/__init__.pyc
 ${PYSITELIB}/django/oldforms/__init__.pyo
@@ -1558,21 +1984,18 @@ ${PYSITELIB}/django/utils/feedgenerator.pyo
 ${PYSITELIB}/django/utils/functional.py
 ${PYSITELIB}/django/utils/functional.pyc
 ${PYSITELIB}/django/utils/functional.pyo
+${PYSITELIB}/django/utils/hashcompat.py
+${PYSITELIB}/django/utils/hashcompat.pyc
+${PYSITELIB}/django/utils/hashcompat.pyo
 ${PYSITELIB}/django/utils/html.py
 ${PYSITELIB}/django/utils/html.pyc
 ${PYSITELIB}/django/utils/html.pyo
 ${PYSITELIB}/django/utils/http.py
 ${PYSITELIB}/django/utils/http.pyc
 ${PYSITELIB}/django/utils/http.pyo
-${PYSITELIB}/django/utils/images.py
-${PYSITELIB}/django/utils/images.pyc
-${PYSITELIB}/django/utils/images.pyo
 ${PYSITELIB}/django/utils/itercompat.py
 ${PYSITELIB}/django/utils/itercompat.pyc
 ${PYSITELIB}/django/utils/itercompat.pyo
-${PYSITELIB}/django/utils/maxlength.py
-${PYSITELIB}/django/utils/maxlength.pyc
-${PYSITELIB}/django/utils/maxlength.pyo
 ${PYSITELIB}/django/utils/safestring.py
 ${PYSITELIB}/django/utils/safestring.pyc
 ${PYSITELIB}/django/utils/safestring.pyo
@@ -1585,12 +2008,12 @@ ${PYSITELIB}/django/utils/simplejson/decoder.pyo
 ${PYSITELIB}/django/utils/simplejson/encoder.py
 ${PYSITELIB}/django/utils/simplejson/encoder.pyc
 ${PYSITELIB}/django/utils/simplejson/encoder.pyo
-${PYSITELIB}/django/utils/simplejson/jsonfilter.py
-${PYSITELIB}/django/utils/simplejson/jsonfilter.pyc
-${PYSITELIB}/django/utils/simplejson/jsonfilter.pyo
 ${PYSITELIB}/django/utils/simplejson/scanner.py
 ${PYSITELIB}/django/utils/simplejson/scanner.pyc
 ${PYSITELIB}/django/utils/simplejson/scanner.pyo
+${PYSITELIB}/django/utils/simplejson/tool.py
+${PYSITELIB}/django/utils/simplejson/tool.pyc
+${PYSITELIB}/django/utils/simplejson/tool.pyo
 ${PYSITELIB}/django/utils/stopwords.py
 ${PYSITELIB}/django/utils/stopwords.pyc
 ${PYSITELIB}/django/utils/stopwords.pyo
@@ -1687,7 +2110,6 @@ ${PYSITELIB}/django/views/static.pyo
 @dirrm ${PYSITELIB}/django/template
 @dirrm ${PYSITELIB}/django/shortcuts
 @dirrm ${PYSITELIB}/django/oldforms
-@dirrm ${PYSITELIB}/django/newforms
 @dirrm ${PYSITELIB}/django/middleware
 @dirrm ${PYSITELIB}/django/http
 @dirrm ${PYSITELIB}/django/forms/extras
@@ -1696,10 +2118,10 @@ ${PYSITELIB}/django/views/static.pyo
 @dirrm ${PYSITELIB}/django/db/models/sql
 @dirrm ${PYSITELIB}/django/db/models/fields
 @dirrm ${PYSITELIB}/django/db/models
-@dirrm ${PYSITELIB}/django/db/backends/sqlite3
-@dirrm ${PYSITELIB}/django/db/backends/postgresql_psycopg2
-@dirrm ${PYSITELIB}/django/db/backends/postgresql
-@dirrm ${PYSITELIB}/django/db/backends/mysql
+@unexec ${RMDIR} %D/${PYSITELIB}/django/db/backends/sqlite3 || ${TRUE}
+@unexec ${RMDIR} %D/${PYSITELIB}/django/db/backends/postgresql_psycopg2 || ${TRUE}
+@unexec ${RMDIR} %D/${PYSITELIB}/django/db/backends/postgresql || ${TRUE}
+@unexec ${RMDIR} %D/${PYSITELIB}/django/db/backends/mysql || ${TRUE}
 @dirrm ${PYSITELIB}/django/db/backends/dummy
 @dirrm ${PYSITELIB}/django/db/backends
 @dirrm ${PYSITELIB}/django/db
@@ -1750,6 +2172,7 @@ ${PYSITELIB}/django/views/static.pyo
 @dirrm ${PYSITELIB}/django/contrib/localflavor/br
 @dirrm ${PYSITELIB}/django/contrib/localflavor/au
 @dirrm ${PYSITELIB}/django/contrib/localflavor/ar
+@dirrm ${PYSITELIB}/django/contrib/localflavor/at
 @dirrm ${PYSITELIB}/django/contrib/localflavor
 @dirrm ${PYSITELIB}/django/contrib/humanize/templatetags
 @dirrm ${PYSITELIB}/django/contrib/humanize
@@ -1775,24 +2198,66 @@ ${PYSITELIB}/django/views/static.pyo
 @dirrm ${PYSITELIB}/django/contrib/auth/handlers
 @dirrm ${PYSITELIB}/django/contrib/auth/fixtures
 @dirrm ${PYSITELIB}/django/contrib/auth
-@dirrm ${PYSITELIB}/django/contrib/admindocs
 @dirrm ${PYSITELIB}/django/contrib/admin/views
-@dirrm ${PYSITELIB}/django/contrib/admin/templatetags
-@dirrm ${PYSITELIB}/django/contrib/admin/templates/registration
-@dirrm ${PYSITELIB}/django/contrib/admin/templates/admin_doc
-@dirrm ${PYSITELIB}/django/contrib/admin/templates/admin/includes
-@dirrm ${PYSITELIB}/django/contrib/admin/templates/admin/edit_inline
 @dirrm ${PYSITELIB}/django/contrib/admin/templates/admin/auth/user
 @dirrm ${PYSITELIB}/django/contrib/admin/templates/admin/auth
+@dirrm ${PYSITELIB}/django/contrib/admin/templates/admin/edit_inline
+@dirrm ${PYSITELIB}/django/contrib/admin/templates/admin/includes
+@dirrm ${PYSITELIB}/django/contrib/admin/templates/registration
 @dirrm ${PYSITELIB}/django/contrib/admin/templates/admin
+@dirrm ${PYSITELIB}/django/contrib/admin/templatetags
+@dirrm ${PYSITELIB}/django/contrib/admindocs/templates/admin_doc
+@dirrm ${PYSITELIB}/django/contrib/admindocs/templates
+@dirrm ${PYSITELIB}/django/contrib/admindocs
 @dirrm ${PYSITELIB}/django/contrib/admin/templates
 @dirrm ${PYSITELIB}/django/contrib/admin/media/js/admin
 @dirrm ${PYSITELIB}/django/contrib/admin/media/js
 @dirrm ${PYSITELIB}/django/contrib/admin/media/img/admin
+@dirrm ${PYSITELIB}/django/contrib/admin/media/img/gis
 @dirrm ${PYSITELIB}/django/contrib/admin/media/img
 @dirrm ${PYSITELIB}/django/contrib/admin/media/css
 @dirrm ${PYSITELIB}/django/contrib/admin/media
 @dirrm ${PYSITELIB}/django/contrib/admin
+@dirrm ${PYSITELIB}/django/contrib/gis/admin
+@dirrm ${PYSITELIB}/django/contrib/gis/db/backend/mysql
+@dirrm ${PYSITELIB}/django/contrib/gis/db/backend/oracle
+@dirrm ${PYSITELIB}/django/contrib/gis/db/backend/postgis
+@dirrm ${PYSITELIB}/django/contrib/gis/db/backend
+@dirrm ${PYSITELIB}/django/contrib/gis/db/models/fields
+@dirrm ${PYSITELIB}/django/contrib/gis/db/models/sql
+@dirrm ${PYSITELIB}/django/contrib/gis/db/models
+@dirrm ${PYSITELIB}/django/contrib/gis/db
+@dirrm ${PYSITELIB}/django/contrib/gis/forms
+@dirrm ${PYSITELIB}/django/contrib/gis/gdal/prototypes
+@dirrm ${PYSITELIB}/django/contrib/gis/gdal
+@dirrm ${PYSITELIB}/django/contrib/gis/geos/prototypes
+@dirrm ${PYSITELIB}/django/contrib/gis/geos
+@dirrm ${PYSITELIB}/django/contrib/gis/management/commands
+@dirrm ${PYSITELIB}/django/contrib/gis/management
+@dirrm ${PYSITELIB}/django/contrib/gis/maps/google
+@dirrm ${PYSITELIB}/django/contrib/gis/maps/openlayers
+@dirrm ${PYSITELIB}/django/contrib/gis/maps
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/distapp
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/geoapp/sql
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/geoapp
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/layermap/cities
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/layermap/counties
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/layermap/interstates
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/layermap
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/relatedapp
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/data/test_point
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/data/test_poly
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/data/test_vrt
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/data
+@dirrm ${PYSITELIB}/django/contrib/gis/tests
+@dirrm ${PYSITELIB}/django/contrib/gis/utils
+@dirrm ${PYSITELIB}/django/contrib/gis/templates/gis/admin
+@dirrm ${PYSITELIB}/django/contrib/gis/templates/gis/google/js
+@dirrm ${PYSITELIB}/django/contrib/gis/templates/gis/google
+@dirrm ${PYSITELIB}/django/contrib/gis/templates/gis/kml
+@dirrm ${PYSITELIB}/django/contrib/gis/templates/gis
+@dirrm ${PYSITELIB}/django/contrib/gis/templates
+@dirrm ${PYSITELIB}/django/contrib/gis
 @dirrm ${PYSITELIB}/django/contrib
 @dirrm ${PYSITELIB}/django/conf/urls
 @dirrm ${PYSITELIB}/django/conf/project_template
