@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/07 20:31:34 cegger Exp $
+# $NetBSD: Makefile,v 1.2 2008/08/15 13:04:25 cegger Exp $
 #
 
-VERSION=	3.3-18261
+VERSION=	3.3-18331
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenkernel33-${VERSION}
 CATEGORIES=	sysutils
@@ -11,9 +11,9 @@ EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	cegger@NetBSD.org
 HOMEPAGE=	http://xen.org/
-COMMENT=	Xen3.3.0-rc3 Kernel
+COMMENT=	Xen3.3.0-rc4 Kernel
 
-ONLY_FOR_PLATFORM=	Linux-2.6*-i386 Linux-2.6*-x86_64      
+ONLY_FOR_PLATFORM=	Linux-2.6*-i386 Linux-2.6*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-4.99.*-x86_64 NetBSD-4.99.*-i386
 ONLY_FOR_PLATFORM+=	NetBSD-[5-9].*-x86_64 NetBSD-[5-9].*-i386
 
