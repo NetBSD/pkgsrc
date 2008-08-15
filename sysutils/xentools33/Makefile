@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/08/15 14:06:54 cegger Exp $
+# $NetBSD: Makefile,v 1.4 2008/08/15 20:12:52 cegger Exp $
 #
 
 VERSION=		3.3-18331
@@ -101,6 +101,7 @@ SUBST_FILES.conf+=	python/xen/xm/create.py
 SUBST_FILES.conf+=	python/xen/xm/addlabel.py
 SUBST_FILES.conf+=	python/xen/xm/getlabel.py
 SUBST_FILES.conf+=	python/xen/xm/rmlabel.py
+SUBST_FILES.conf+=	xentrace/Makefile
 SUBST_FILES.conf+=	ioemu/configure
 SUBST_FILES.conf+=	ioemu/vl.c
 SUBST_SED.conf=		-e "s,@XENDCONFDIR@,${PKG_SYSCONFDIR},g"

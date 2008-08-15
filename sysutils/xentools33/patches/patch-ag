@@ -1,8 +1,16 @@
-$NetBSD: patch-ag,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
+$NetBSD: patch-ag,v 1.2 2008/08/15 20:12:52 cegger Exp $
 
---- xentrace/Makefile.orig	2008-08-01 16:38:07.000000000 +0200
+--- xentrace/Makefile.orig	2008-08-14 15:26:06.000000000 +0000
 +++ xentrace/Makefile
-@@ -35,14 +35,15 @@ build: $(BIN) $(LIBBIN)
+@@ -14,6 +14,7 @@ LIBBIN   = 
+ SCRIPTS  = xentrace_format
+ MAN1     = $(wildcard *.1)
+ MAN8     = $(wildcard *.8)
++CONFIGDIR = /usr/pkg/etc/xen
+ 
+ ifeq ($(XEN_TARGET_ARCH),x86_32)
+ LIBBIN  += xenctx
+@@ -35,14 +36,16 @@ build: $(BIN) $(LIBBIN)
  
  .PHONY: install
  install: build
@@ -19,10 +27,11 @@ $NetBSD: patch-ag,v 1.1.1.1 2008/08/07 20:26:58 cegger Exp $
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(MAN1DIR)
 +	$(BSD_INSTALL_DATA_DIR) $(DESTDIR)$(MAN8DIR)
 +	$(BSD_INSTALL_PROGRAM) $(BIN) $(DESTDIR)$(BINDIR)
-+	$(BSD_INSTALL_DATA) $(SCRIPTS) $(DESTDIR)$(BINDIR)
++	$(BSD_INSTALL_LIB) $(SCRIPTS) $(DESTDIR)$(BINDIR)
 +	$(BSD_INSTALL_PROGRAM) $(LIBBIN) $(DESTDIR)$(PRIVATE_BINDIR)
 +	$(BSD_INSTALL_DATA) $(MAN1) $(DESTDIR)$(MAN1DIR)
 +	$(BSD_INSTALL_DATA) $(MAN8) $(DESTDIR)$(MAN8DIR)
++	$(BSD_INSTALL_DATA) formats $(DESTDIR)$(CONFIGDIR)
  
  .PHONY: clean
  clean:
