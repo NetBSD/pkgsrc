@@ -1,14 +1,12 @@
-# $NetBSD: Makefile.common,v 1.14 2008/05/20 19:14:21 tnn Exp $
+# $NetBSD: Makefile.common,v 1.15 2008/08/15 02:43:50 obache Exp $
 #
 
 DISTNAME=	FreeWnn-1.10
-MASTER_SITES=	ftp://ftp.freewnn.org/pub/FreeWnn/	\
-		ftp://etlport.etl.go.jp/pub/FreeWnn/	\
-		ftp://ftp.st.ryukoku.ac.jp/pub/japanese-im/FreeWnn/	\
-		ftp://ftp.kddlabs.co.jp/Japan/Wnn/FreeWnn/	\
-		ftp://ftp.tomo.gr.jp/pub/FreeWnn/
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=freewnn/11067/}	\
+		ftp://ftp.st.ryukoku.ac.jp/pub/japanese-im/FreeWnn/
 
-PATCH_SITES=	${MASTER_SITES}
+PATCH_SITES=	${MASTER_SITE_SOURCEFORGE_JP:=freewnn/11075/}	\
+		ftp://ftp.st.ryukoku.ac.jp/pub/japanese-im/FreeWnn/
 PATCHFILES=	patch-1.1.0-a01.gz
 PATCH_DIST_STRIP=	-p2
 DIST_SUBDIR=	freewnn
