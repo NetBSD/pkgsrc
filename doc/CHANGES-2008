@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1878 2008/08/15 12:53:14 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1879 2008/08/15 15:27:09 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3202,3 +3202,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xf86-video-intel to 2.4.1 [tnn 2008-08-15]
 	Updated sysutils/dbus to 1.2.3 [wiz 2008-08-15]
 	Updated audio/amarok to 1.4.10 [wiz 2008-08-15]
+	Updated www/py-django-devel to 1.0beta1 [mjl 2008-08-15]
