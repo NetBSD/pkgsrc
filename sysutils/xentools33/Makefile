@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/08/15 13:05:10 cegger Exp $
+# $NetBSD: Makefile,v 1.3 2008/08/15 14:06:54 cegger Exp $
 #
 
 VERSION=		3.3-18331
@@ -132,7 +132,7 @@ FILES_SUBST+=		PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
 BLKTAP_FILES=		blk_netbsd.c blktapctrl_netbsd.c
 
-XEND_SCRIPTS=		block vif-bridge vif-ip
+XEND_SCRIPTS=		block vif-bridge vif-ip qemu-ifup
 
 CONF_FILES=		${EGDIR}/xend-config.sxp \
 			${PKG_SYSCONFDIR}/xend-config.sxp

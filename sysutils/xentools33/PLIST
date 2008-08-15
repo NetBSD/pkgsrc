@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/07 20:26:57 cegger Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/08/15 14:06:54 cegger Exp $
 bin/lsevtchn
 bin/pygrub
 bin/readnotes
@@ -21,7 +21,6 @@ bin/xenstore-write
 bin/xentrace
 bin/xentrace_format
 bin/xentrace_setsize
-etc/xen/qemu-ifup
 include/blktaplib.h
 include/flask.h
 include/fsimage.h
