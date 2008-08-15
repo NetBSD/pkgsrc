@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7472 2008/08/14 10:02:15 adam Exp $
+$NetBSD: TODO,v 1.7473 2008/08/15 16:18:36 taca Exp $
 
 Suggested new packages
 ======================
@@ -497,6 +497,7 @@ Suggested package updates
 	o cadaver-0.23.0
 	o cal3d-0.11.0
 	o calamaris-2.59
+	o capistrano-2.4.3
 	o cardboard-schedule-1.14c [at http://www.bright-green.com/downloads/]
 	o cddbd-1.5.2
 	o cdif-1.19
@@ -600,6 +601,7 @@ Suggested package updates
 	o epstool-3.08
 	o eric3-4.2.0 [now called eric4]
 	o erlang-12b3
+	o erubis-2.6.2
 	o esh-0.8.5
 	o et-2.60
 	o etach-1.4.1
@@ -737,6 +739,7 @@ Suggested package updates
 	o heyu-2.3.0
 	o highlight-2.6.12
 	o hobbitmon-4.0.4 [pkg/30484]
+	o hoe-1.7.0
 	o honeyd-1.5c
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
@@ -889,6 +892,7 @@ Suggested package updates
 	o matchbox-panel-0.9.3
 	o mathomatic-14.0.7
 	o mcrypt-2.6.6
+	o merb-0.9.4 (and related plugins)
 	o mercury-0.13.1
 	o mergeant-0.67
 	o mesure-0.7.2
@@ -908,6 +912,7 @@ Suggested package updates
 	o mlview-0.9.0
 	o mmg-2.0.2
 	o modular-xorg-server-1.4.99.906
+	o mongrel-1.1.5
 	o moon-buggy-1.0.51
 	o mowgli-0.7.0
 	o mp3blaster-3.2.3
@@ -1035,6 +1040,7 @@ Suggested package updates
 	o pgpool-3.1.1
 	o phoon-20050629
 	o photopc-3.05
+	o php-4.4.9
 	o php4-domxml-5.2.1
 	o php4-filepro-5.2.1
 	o php4-xslt-5.2.1
@@ -1059,6 +1065,7 @@ Suggested package updates
 	o po4a-0.29
 	o poedit-1.4.1
 	o polsms-2.1.0
+	o poppass-4.0.14
 	o poppy-4.01
 	o poptop-1.3.0
 	o posh-0.5.5
@@ -1073,6 +1080,7 @@ Suggested package updates
 	o pspp-0.6.0
 	o pstoedit-3.45
 	o puf-0.93.3
+	o puppet-0.24.5
 	o puzzle-5.2
 	o pv-1.1.4
 	o pwlib-1.10.10
@@ -1126,6 +1134,7 @@ Suggested package updates
 	o qbrew-0.3.9
 	o qemu-0.9.1
 	o qnetwalk-1.3
+	o qpopper-4.0.14
 	o qt1-1.45
 	o qt2-designer-2.3.2
 	o qt2-docs-2.3.2
@@ -1133,6 +1142,7 @@ Suggested package updates
 	o qt2-libs-2.3.2
 	o qvplay-0.95
 	o qwspritefield-1.7
+	o rabbit-0.5.7
 	o radiance-3.7.2
 	o raine-0.50.15
 	o randread-0.2
@@ -1163,9 +1173,45 @@ Suggested package updates
 	o rt3-3.8.0
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
+	o rubigen-1.3.2
+	o ruby-DBI-0.2.1
 	o ruby-RMagick-2.5.2
+	o ruby-SDL-2.0.1b
+	o ruby-actionmailer-2.1.0
+	o ruby-actionpack-2.1.0
+	o ruby-activeresource-2.1.0
+	o ruby-activesupport-2.1.0
 	o ruby-clearsilver-0.10.5
+	o ruby-cmd-0.8.0
+	o ruby-cssmin-1.0.1
+	o ruby-debug-ide-0.2.1
+	o ruby-eventmachine-0.12.0
+	o ruby-facter-1.5
+	o ruby-gd-0.8.0
+	o ruby-gettext-1.92.0
+	o ruby-haml-2.0.2
+	o ruby-htree-0.7
+	o ruby-inline-3.7.0
+	o ruby-itex2MML-1.3.5
+	o ruby-logging-0.9.1
+	o ruby-mailfactory-1.4.0
+	o ruby-maruku-0.5.9
+	o ruby-mecab-0.97
+	o ruby-mechanize-0.7.7
+	o ruby-ming-0.2.0
+	o ruby-mocha-0.9.0
+	o ruby-net-ssh-1.1.4
+	o ruby-parsetree-2.2.0
+	o ruby-rb-gsl-1.10.3
+	o ruby-rcairo-1.6.3
+	o ruby-rd-mode-0.6.22
+	o ruby-rdtool-0.6.22
+	o ruby-sqlite3-1.2.2
+	o ruby-test-spec-0.9.0
+	o ruby-tmail-1.2.3.1
+	o ruby-tzinfo-0.3.9
 	o ruby-rbtree-0.3.0
+	o rubygems-1.2.0
 	o rudiments-0.30
 	o rxvt-unicode-9.05 [pkg/38988]
 	o sablecc-3.2
@@ -1261,6 +1307,8 @@ Suggested package updates
 	o tex-musixtex-113 [pkg/34758]
 	o texmaker-1.7.1
 	o tfmxplay-1.1.6
+	o thin-1.0.0
+	o thoth-0.2.0
 	o tig-0.11
 	o tile-0.7.4
 	o tinyproxy-1.7.0
@@ -1313,7 +1361,8 @@ Suggested package updates
 	o wap-utils-1.4.1
 	o wbm-cyrus-imapd-1.6.2
 	o wcalc-2.3.1
-	o webmin-1.420
+	o webby-0.8.4
+	o webmin-1.430
 	o websvn-2.0
 	o weewm-0.01
 	o windowlab-1.34
