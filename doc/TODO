@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7477 2008/08/16 19:01:01 wiz Exp $
+$NetBSD: TODO,v 1.7478 2008/08/16 19:01:59 wiz Exp $
 
 Suggested new packages
 ======================
@@ -464,7 +464,6 @@ Suggested package updates
 	o avr-libc-1.4.5
 	o avrdude-5.3.1
 	o baci-20040415
-	o bacula-2.2.6 [pkg/37396]
 	o bacula-2.2.8 [pkg/38572]
 	o bacula-2.4.1
 	o bacula-doc-2.0.3
@@ -518,7 +517,6 @@ Suggested package updates
 	o classpath-0.97.2
 	o clearsilver-0.10.5
 	o clearsilver-base-0.10.5
-	o clive-1.0.0
 	o cmake-2.6.0
 	o cocoon-2.1.10
 	o colorize-0.3.4
@@ -548,7 +546,6 @@ Suggested package updates
 	o dap-3.7
 	o db4-4.7.25
 	o dbench-4.0
-	o dbus-1.2.3
 	o dbxml-2.1.8
 	o dc_gui2-0.80
 	o dctc-0.85.9
@@ -559,7 +556,6 @@ Suggested package updates
 	o deskbar-applet-2.22.3.1
 	o devIL-1.6.7
 	o dhid-5.3
-	o dialog-1.1.20080727
 	o diffstat-1.46
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
@@ -677,11 +673,10 @@ Suggested package updates
 	o glibmm-2.16.4
 	o global-5.6
 	o glpk-4.30
-	o gmime-2.2.22
 	o gmp-4.2.3
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-2.22.1
+	o gnome-2.22.3
 	o gnome-build-0.2.4
 	o gnome-games-2.22.3
 	o gnome-mag-0.15.2
@@ -691,7 +686,6 @@ Suggested package updates
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
-	o gnucash-2.2.6
 	o gnustep-1.16.1
 	o gnustep-examples-1.2.0
 	o gnustep-objc-1.4.0
@@ -705,7 +699,6 @@ Suggested package updates
 	o gourmet-0.13.3
 	o gpaint-0.3.3
 	o gperiodic-2.0.10
-	o gphoto-2.4.2
 	o gplcver-2.12a
 	o gpredict-0.9.0
 	o gpsdrive-2.09
@@ -775,7 +768,6 @@ Suggested package updates
 	o irrd-2.3.4 [pkg/36813|38002]
 	o irrtoolset-nox11-4.8.4
 	o iselect-1.4.0
-	o iso-codes-3.2
 	o ispell-gaeilge-4.1
 	o ispell-german-20071211
 	o ispell-slovak-0.3.2
@@ -843,9 +835,7 @@ Suggested package updates
 	o libgiigic-1.1.2
 	o libgnomecups-0.2.3
 	o libgnomedb-3.1.2
-	o libgphoto2-2.4.2
-	o libgtop-2.22.2
-	o libgtop2-2.22.3
+	o libgtop-2.22.3
 	o libhangul-0.0.8
 	o libhydrogen-0.9.2
 	o libltdl-2.2.4
@@ -910,8 +900,6 @@ Suggested package updates
 	o mknmz-wwwoffle-0.7.2
 	o mksh-35b
 	o mkvtoolnix-2.2.0
-	o mldonkey-2.9.6
-	o mldonkey-gui-2.9.6
 	o mlterm-2.9.4
 	o mlview-0.9.0
 	o mmg-2.0.2
@@ -984,7 +972,6 @@ Suggested package updates
 	o openssh-5.1.1
 	o openttd-0.6.1
 	o opera-9.51 [pkg/39269]
-	o orbital_eunuchs_sniper-1.30
 	o orca-2.22.3
 	o oregano-0.60.0
 	o oroborus-2.0.18
@@ -999,8 +986,6 @@ Suggested package updates
 	o p5-DateTime-TimeZone-0.79
 	o p5-HTTPD-User-Manage-1.62
 	o p5-MARC-1.38
-	o p5-MIME-tools-5.427
-	o p5-MailTools-2.04
 	o p5-Math-Random-0.69
 	o p5-Net-Gnats-0.05
 	o p5-Net-ICQ2000-0.2.2
@@ -1156,7 +1141,6 @@ Suggested package updates
 	o raine-0.50.15
 	o randread-0.2
 	o rapidsvn-0.9.6
-	o raptor-1.4.18
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
