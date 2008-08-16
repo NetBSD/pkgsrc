@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7475 2008/08/16 03:10:47 taca Exp $
+$NetBSD: TODO,v 1.7476 2008/08/16 03:21:57 taca Exp $
 
 Suggested new packages
 ======================
@@ -1204,13 +1204,12 @@ Suggested package updates
 	o ruby-net-ssh-1.1.4
 	o ruby-parsetree-2.2.0
 	o ruby-rb-gsl-1.10.3
+	o ruby-rbtree-0.3.0
 	o ruby-rcairo-1.6.3
 	o ruby-rd-mode-0.6.22
 	o ruby-rdtool-0.6.22
 	o ruby-test-spec-0.9.0
 	o ruby-tmail-1.2.3.1
-	o ruby-tzinfo-0.3.9
-	o ruby-rbtree-0.3.0
 	o rubygems-1.2.0
 	o rudiments-0.30
 	o rxvt-unicode-9.05 [pkg/38988]
