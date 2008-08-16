@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/04/04 15:22:35 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/08/16 03:19:14 taca Exp $
 ${GEM_HOME}/cache/tzinfo-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/LICENSE
@@ -612,6 +612,7 @@ ${GEM_LIBDIR}/test/tc_timezone_period.rb
 ${GEM_LIBDIR}/test/tc_timezone_proxy.rb
 ${GEM_LIBDIR}/test/tc_timezone_transition_info.rb
 ${GEM_LIBDIR}/test/tc_timezone_utc.rb
+${GEM_LIBDIR}/test/test_utils.rb
 ${GEM_LIBDIR}/test/ts_all.rb
 ${GEM_HOME}/specifications/tzinfo-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/test
