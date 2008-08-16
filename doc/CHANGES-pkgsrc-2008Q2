@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.34 2008/08/14 08:32:19 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.35 2008/08/16 08:52:35 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -75,3 +75,5 @@ pullup ticket #2483 - requested by sborrill
 chrony: update package for fixes
 pullup ticket #2484 - requested by obache
 jabberd: force preference on openssl (fixes pr)
+Pullup ticket #2485 - requested by wiz
+amarok: security update
