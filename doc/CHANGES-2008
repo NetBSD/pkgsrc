@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1883 2008/08/15 17:25:52 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1884 2008/08/16 02:47:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3209,3 +3209,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/drupal6 to 6.4 [taca 2008-08-15]
 	Updated mail/spamdyke to 4.0.3 [schmonz 2008-08-15]
 	Updated chat/xchat to 2.8.6nb2 [tron 2008-08-15]
+	Updated databases/ruby-DBI to 0.2.2 [taca 2008-08-16]
+	Updated databases/ruby-DBD-mysql to 0.2.2 [taca 2008-08-16]
+	Updated databases/ruby-DBD-postgresql to 0.2.2 [taca 2008-08-16]
+	Updated databases/ruby-DBD-sqlite to 0.2.2 [taca 2008-08-16]
+	Updated databases/ruby-DBD-sqlite3 to 0.2.2 [taca 2008-08-16]
