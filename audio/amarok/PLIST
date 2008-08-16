@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.28 2008/04/23 18:23:33 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28.4.1 2008/08/16 08:50:56 tron Exp $
 bin/amarok
 bin/amarok_daapserver.rb
 bin/amarok_libvisual
@@ -345,37 +345,7 @@ share/doc/kde/HTML/pt_BR/amarok/index.docbook
 share/doc/kde/HTML/pt_BR/amarok/quick.docbook
 share/doc/kde/HTML/pt_BR/amarok/requirements.docbook
 share/doc/kde/HTML/pt_BR/amarok/using.docbook
-share/doc/kde/HTML/ru/amarok/advanced.docbook
-share/doc/kde/HTML/ru/amarok/collection.png
-share/doc/kde/HTML/ru/amarok/common
-share/doc/kde/HTML/ru/amarok/config.docbook
-share/doc/kde/HTML/ru/amarok/config_appearance.png
-share/doc/kde/HTML/ru/amarok/config_collection.png
-share/doc/kde/HTML/ru/amarok/config_engine.png
-share/doc/kde/HTML/ru/amarok/config_general.png
-share/doc/kde/HTML/ru/amarok/config_osd.png
-share/doc/kde/HTML/ru/amarok/config_playback.png
-share/doc/kde/HTML/ru/amarok/config_scrobbler.png
-share/doc/kde/HTML/ru/amarok/context.png
-share/doc/kde/HTML/ru/amarok/coverman.png
-share/doc/kde/HTML/ru/amarok/dynamic_mode1.png
-share/doc/kde/HTML/ru/amarok/equalizer.png
-share/doc/kde/HTML/ru/amarok/faq.docbook
-share/doc/kde/HTML/ru/amarok/feature_guide.docbook
-share/doc/kde/HTML/ru/amarok/file_browser.png
-share/doc/kde/HTML/ru/amarok/index.cache.bz2
-share/doc/kde/HTML/ru/amarok/index.docbook
-share/doc/kde/HTML/ru/amarok/menubar.png
-share/doc/kde/HTML/ru/amarok/pl_browser.png
-share/doc/kde/HTML/ru/amarok/pl_tip1.png
-share/doc/kde/HTML/ru/amarok/play_list.png
-share/doc/kde/HTML/ru/amarok/playlist_window.png
-share/doc/kde/HTML/ru/amarok/queue_manager.png
-share/doc/kde/HTML/ru/amarok/quick.docbook
 share/doc/kde/HTML/ru/amarok/requirements.docbook
-share/doc/kde/HTML/ru/amarok/rmb_menu.png
-share/doc/kde/HTML/ru/amarok/status_bar.png
-share/doc/kde/HTML/ru/amarok/using.docbook
 share/doc/kde/HTML/sv/amarok/add_dynamic.png
 share/doc/kde/HTML/sv/amarok/advanced.docbook
 share/doc/kde/HTML/sv/amarok/amarok_playlist.png
@@ -996,6 +966,7 @@ share/locale/id/LC_MESSAGES/amarok.mo
 share/locale/is/LC_MESSAGES/amarok.mo
 share/locale/it/LC_MESSAGES/amarok.mo
 share/locale/ja/LC_MESSAGES/amarok.mo
+share/locale/ka/LC_MESSAGES/amarok.mo
 share/locale/km/LC_MESSAGES/amarok.mo
 share/locale/ko/LC_MESSAGES/amarok.mo
 share/locale/ku/LC_MESSAGES/amarok.mo
@@ -1029,6 +1000,7 @@ share/locale/th/LC_MESSAGES/amarok.mo
 share/locale/tr/LC_MESSAGES/amarok.mo
 share/locale/uk/LC_MESSAGES/amarok.mo
 share/locale/uz/LC_MESSAGES/amarok.mo
+share/locale/uz@cyrillic/LC_MESSAGES/amarok.mo
 share/locale/zh_CN/LC_MESSAGES/amarok.mo
 share/locale/zh_TW/LC_MESSAGES/amarok.mo
 @comment in kde: @dirrm share/kde/servicetypes
