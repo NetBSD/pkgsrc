@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1898 2008/08/17 14:14:24 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1899 2008/08/17 14:52:49 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3237,3 +3237,12 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/smokeping to 2.4.2 [adrianp 2008-08-17]
 	Updated www/drupal6-translations to 20080817 [taca 2008-08-17]
 	Updated chat/loudmouth to 1.4.1 [wiz 2008-08-17]
+	Updated www/p5-Catalyst-Plugin-ConfigLoader to 0.21 [he 2008-08-17]
+	Updated databases/p5-CatalystX-CRUD to 0.28 [he 2008-08-17]
+	Updated www/p5-CatalystX-CRUD-Controller-RHTMLO to 0.14 [he 2008-08-17]
+	Updated time/p5-DateTime-Format-Pg to 0.16002 [he 2008-08-17]
+	Updated net/p5-Net-Amazon-S3 to 0.44 [he 2008-08-17]
+	Updated math/p5-Spreadsheet-WriteExcel to 2.23 [he 2008-08-17]
+	Updated devel/p5-Set-IntSpan to 1.13 [he 2008-08-17]
+	Added time/p5-DateTime-Precise version 1.05 [he 2008-08-17]
+	Updated net/p5-Net-eBay to 0.50 [he 2008-08-17]
