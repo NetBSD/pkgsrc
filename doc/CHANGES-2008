@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1888 2008/08/17 05:38:53 taca Exp $
+$NetBSD: CHANGES-2008,v 1.1889 2008/08/17 07:56:37 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3218,3 +3218,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updates security/ipsec-tools to 0.7.1 [manu 2008-08-16]
 	Updated graphics/png to 1.2.30 [wiz 2008-08-16]
 	Added www/drupal6-translations version 20080816 [taca 2008-08-17]
+	Updated devel/gmp to 4.2.3 [bjs 2008-08-17]
