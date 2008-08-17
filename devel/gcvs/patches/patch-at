@@ -1,0 +1,148 @@
+$NetBSD: patch-at,v 1.1 2008/08/17 04:01:37 dholland Exp $
+
+--- rf/uwidget.cpp~	2003-01-14 13:07:42.000000000 -0500
++++ rf/uwidget.cpp	2008-08-16 23:58:08.000000000 -0400
+@@ -231,23 +231,23 @@ extern "C"
+ 
+ 	static void gtkclicked(GtkButton *button, gpointer user_data)
+ 	{
+-		int widid = ULOWORD((int)user_data);
+-		int cmdid = UHIWORD((int)user_data);
++		int widid = ULOWORD((int)(intptr_t)user_data);
++		int cmdid = UHIWORD((int)(intptr_t)user_data);
+ 		UEventSendMessage(widid, EV_CMD, cmdid, 0L);
+ 	}
+ 	
+ 	static void gtkmenuitemactivate(GtkMenuItem *menuitem, gpointer user_data)
+ 	{
+-		int widid = ULOWORD((int)user_data);
+-		int cmdid = UHIWORD((int)user_data);
++		int widid = ULOWORD((int)(intptr_t)user_data);
++		int cmdid = UHIWORD((int)(intptr_t)user_data);
+ 		UEventSendMessage(widid, EV_CMD, cmdid, 0L);
+ 	}
+ 
+ 	static void gtkselectclist(GtkWidget *clist, gint row, gint column,
+ 							   GdkEventButton *event, gpointer user_data)
+ 	{
+-		int widid = ULOWORD((int)user_data);
+-		int cmdid = UHIWORD((int)user_data);
++		int widid = ULOWORD((int)(intptr_t)user_data);
++		int cmdid = UHIWORD((int)(intptr_t)user_data);
+ 		gchar *text;
+ 		gtk_clist_get_text(GTK_CLIST(clist), row, column, &text);
+ 		UEventSendMessage(widid, EV_LIST_SELECTING, UMAKEINT(cmdid, row), text);
+@@ -255,15 +255,15 @@ extern "C"
+ 
+ 	static void gtkselectclistcolumn(GtkCList *clist, gint column, gpointer user_data)
+ 	{
+-		int widid = ULOWORD((int)user_data);
+-		int cmdid = UHIWORD((int)user_data);
++		int widid = ULOWORD((int)(intptr_t)user_data);
++		int cmdid = UHIWORD((int)(intptr_t)user_data);
+ 		UEventSendMessage(widid, EV_LIST_SELCOLUMN, UMAKEINT(cmdid, column), 0L);
+ 	}
+ 
+ 	static gint gtkclistdblclick(GtkWidget *widget, GdkEventButton *event, gpointer data)
+ 	{
+-		int widid = ULOWORD((int)data);
+-		int cmdid = UHIWORD((int)data);
++		int widid = ULOWORD((int)(intptr_t)data);
++		int cmdid = UHIWORD((int)(intptr_t)data);
+ 		if (event->type == GDK_2BUTTON_PRESS)
+ 		{
+ 			UEventSendMessage(widid, EV_LIST_DBLCLICK, cmdid, 0L);
+@@ -274,8 +274,8 @@ extern "C"
+ 
+ 	static void gtkcomboclicked(GtkWidget *widget, gpointer user_data)
+ 	{
+-		int widid = ULOWORD((int)user_data);
+-		int cmdid = UHIWORD((int)user_data);
++		int widid = ULOWORD((int)(intptr_t)user_data);
++		int cmdid = UHIWORD((int)(intptr_t)user_data);
+ 
+ 		GtkList *list = GTK_LIST(widget->parent);
+ 		GList *selection = list->selection;
+@@ -320,8 +320,8 @@ extern "C"
+ 
+ 	static void gtkmenuactivated(GtkWidget *widget, gpointer user_data)
+ 	{
+-		int widid = ULOWORD((int)user_data);
+-		int cmdid = UHIWORD((int)user_data);
++		int widid = ULOWORD((int)(intptr_t)user_data);
++		int cmdid = UHIWORD((int)(intptr_t)user_data);
+ 
+ 		UStr selTxt;
+ 
+@@ -392,7 +392,7 @@ extern "C"
+ 	static void dataForeach(GQuark key_id, gpointer data, gpointer user_data)
+ 	{
+ 		const char *str = g_quark_to_string(key_id);
+-		int id = (int)user_data;
++		int id = (int)(intptr_t)user_data;
+ 		int cmd;
+ 		if(matchToken(str, cmd))
+ 		{
+@@ -514,32 +514,32 @@ extern "C"
+ 
+ 	static void gtktreeexpand(GtkWidget *item, gpointer user_data)
+ 	{
+-		int widid = ULOWORD((int)user_data);
+-		int cmdid = UHIWORD((int)user_data);
++		int widid = ULOWORD((int)(intptr_t)user_data);
++		int cmdid = UHIWORD((int)(intptr_t)user_data);
+ 		g_assert(GTK_IS_TREE_ITEM(item));
+ 		UEventSendMessage(widid, EV_TREE_EXPANDING, UMAKEINT(cmdid, 0), item);
+ 	}
+ 
+ 	static void gtktreecollapse(GtkWidget *item, gpointer user_data)
+ 	{
+-		int widid = ULOWORD((int)user_data);
+-		int cmdid = UHIWORD((int)user_data);
++		int widid = ULOWORD((int)(intptr_t)user_data);
++		int cmdid = UHIWORD((int)(intptr_t)user_data);
+ 		g_assert(GTK_IS_TREE_ITEM(item));
+ 		UEventSendMessage(widid, EV_TREE_EXPANDING, UMAKEINT(cmdid, 1), item);
+ 	}
+ 
+ 	static void gtktreeselect(GtkWidget *item, gpointer user_data)
+ 	{
+-		int widid = ULOWORD((int)user_data);
+-		int cmdid = UHIWORD((int)user_data);
++		int widid = ULOWORD((int)(intptr_t)user_data);
++		int cmdid = UHIWORD((int)(intptr_t)user_data);
+ 		g_assert(GTK_IS_TREE_ITEM(item));
+ 		UEventSendMessage(widid, EV_TREE_SELECTING, UMAKEINT(cmdid, 0), item);
+ 	}
+ 
+ 	static void gtktreedeselect(GtkWidget *item, gpointer user_data)
+ 	{
+-		int widid = ULOWORD((int)user_data);
+-		int cmdid = UHIWORD((int)user_data);
++		int widid = ULOWORD((int)(intptr_t)user_data);
++		int cmdid = UHIWORD((int)(intptr_t)user_data);
+ 		g_assert(GTK_IS_TREE_ITEM(item));
+ 		UEventSendMessage(widid, EV_TREE_SELECTING, UMAKEINT(cmdid, 1), item);
+ 	}
+@@ -661,8 +661,8 @@ extern "C"
+ 				  gint             page_num,
+ 				  gpointer         data)
+ 	{
+-		int widid = ULOWORD((int)data);
+-		int cmdid = UHIWORD((int)data);
++		int widid = ULOWORD((int)(intptr_t)data);
++		int cmdid = UHIWORD((int)(intptr_t)data);
+ 		
+ 		UEventSendMessage(widid, EV_PAGE_CHANGED, UMAKEINT(cmdid, page_num), 0L);
+ 	}
+@@ -682,8 +682,8 @@ extern "C"
+ 
+ 	static gint gtkexposeevent(GtkWidget *widget, GdkEvent *event, gpointer user_data)
+ 	{
+-		int widid = ULOWORD((int)user_data);
+-		int cmdid = UHIWORD((int)user_data);
++		int widid = ULOWORD((int)(intptr_t)user_data);
++		int cmdid = UHIWORD((int)(intptr_t)user_data);
+ 		
+ 		UEventSendMessage(widid, EV_CUSTOM_DRAW, cmdid, event);
+ 		return TRUE;
