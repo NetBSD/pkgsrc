@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.php,v 1.28 2008/08/08 20:01:34 adrianp Exp $
+# $NetBSD: Makefile.php,v 1.29 2008/08/17 18:36:50 adrianp Exp $
 #
 
 .include "../../lang/php5/Makefile.common"
@@ -43,6 +43,13 @@ CONFIGURE_ARGS+=	--with-libxml-dir=${PREFIX:Q}
 PKG_OPTIONS_VAR=	PKG_OPTIONS.${PKGNAME:C/-[0-9].*//}
 PKG_SUPPORTED_OPTIONS+=	inet6 ssl maintainer-zts
 PKG_SUGGESTED_OPTIONS+=	ssl
+
+SUBST_CLASSES+=		ini
+SUBST_STAGE.ini=	post-patch
+SUBST_FILES.ini=	php.ini-dist
+SUBST_FILES.ini+=	php.ini-recommended
+SUBST_SED.ini=		-e "s|\;include_path = \".:/php/includes\"|include_path = \".:${PREFIX}/lib/php\"|g"
+SUBST_MESSAGE.ini=	Fixing default ini files.
 
 .include "../../mk/bsd.options.mk"
 
