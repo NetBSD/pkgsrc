@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2008/08/17 10:03:22 adrianp Exp $
+
+--- Makefile.in.orig	2006-03-27 15:45:16.000000000 +0100
++++ Makefile.in
+@@ -133,7 +133,7 @@ sharedstatedir = @sharedstatedir@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ 
+-SUBDIRS = utils src
++SUBDIRS = src
+ 
+ bin_SCRIPTS = libol-config
+ 
