@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2007/12/02 12:20:43 wiz Exp $
+# $NetBSD: Makefile,v 1.26 2008/08/17 05:52:30 dholland Exp $
 
 DISTNAME=	lyx-${LYX_VERS}
 PKGNAME=	cjk-${DISTNAME}
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	print
 MASTER_SITES=	ftp://ftp.lyx.org/pub/lyx/stable/ \
 		ftp://gd.tuwien.ac.at/publishing/tex/lyx/stable/
@@ -28,6 +28,10 @@ USE_TOOLS+=		perl:run msgfmt
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
 
+REPLACE_PERL+=		lib/reLyX/reLyXmain.pl
+REPLACE_PYTHON+=	lib/scripts/*.py lib/scripts/listerrors
+
+.include "../../lang/python/application.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
