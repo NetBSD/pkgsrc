@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1901 2008/08/17 18:29:47 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1902 2008/08/17 18:37:06 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3250,3 +3250,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/zope210 to 2.10.6nb1 [taca 2008-08-17]
 	Updated www/zope211 to 2.11.1nb1 [taca 2008-08-17]
 	Updated www/php4 to 4.4.9 [adrianp 2008-08-17]
+	Updated lang/php5 to 5.2.6nb2 [adrianp 2008-08-17]
