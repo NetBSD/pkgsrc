@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2006/05/15 11:57:14 markd Exp $
+$NetBSD: distinfo,v 1.2 2008/08/17 21:09:12 markd Exp $
 
-SHA1 (GSSAPI-0.21.tar.gz) = 06b6ea72757290125d71576a7636457af35cbd1a
-RMD160 (GSSAPI-0.21.tar.gz) = 59b4afa783e4ffdb4ce54deff8d87f9ad50890ba
-Size (GSSAPI-0.21.tar.gz) = 26393 bytes
+SHA1 (GSSAPI-0.26.tar.gz) = ac03ee0a3889d19cae8716f372529b1bf7090841
+RMD160 (GSSAPI-0.26.tar.gz) = 504975c0f9c239b254f46d11c0f70f9905d85c0a
+Size (GSSAPI-0.26.tar.gz) = 28003 bytes
