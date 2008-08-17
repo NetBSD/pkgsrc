@@ -1,0 +1,19 @@
+$NetBSD: patch-aa,v 1.10 2008/08/17 09:41:35 bjs Exp $
+
+--- src/mesa/drivers/dri/mach64/mach64_context.h.orig	2008-07-18 10:39:12.000000000 -0400
++++ src/mesa/drivers/dri/mach64/mach64_context.h
+@@ -296,7 +296,14 @@ extern GLboolean mach64UnbindContext( __
+ #define LE32_OUT( x, y )	do { *(GLuint *)(x) = (y); } while (0)
+ #define LE32_OUT_FLOAT( x, y )	do { *(GLfloat *)(x) = (y); } while (0)
+ #else
++/* XXX mesa should handle many more platforms here [properly] */
++#if defined(__NetBSD__)
++#include <sys/types.h>
++#include <machine/byteswap.h>
++#define bswap_32 bswap32
++#else
+ #include <byteswap.h>
++#endif
+ #define LE32_IN( x )		bswap_32( *(GLuint *)(x) )
+ #define LE32_IN_FLOAT( x )						\
+ ({									\
