@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1896 2008/08/17 11:09:24 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1897 2008/08/17 14:08:05 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3235,3 +3235,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/bugzilla3 to 3.0.5 [adrianp 2008-08-17]
 	Updated sysutils/libol to 0.3.18nb2 [adrianp 2008-08-17]
 	Updated net/smokeping to 2.4.2 [adrianp 2008-08-17]
+	Updated www/drupal6-translations to 20080817 [taca 2008-08-17]
