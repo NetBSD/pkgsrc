@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/17 05:35:04 taca Exp $
+# $NetBSD: Makefile,v 1.2 2008/08/17 14:07:04 taca Exp $
 #
 
-DISTNAME=	drupal6-translations-${STAMP}
+DISTNAME=	drupal6-translations-20080817
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.drupal.org/files/projects/
 DISTFILES=	ar-6.x-1.x-dev.tar.gz \
@@ -9,7 +9,7 @@ DISTFILES=	ar-6.x-1.x-dev.tar.gz \
 		zh-hant-6.x-1.1.tar.gz cs-6.x-1.8.tar.gz \
 		da-6.x-1.x-dev.tar.gz nl-6.x-1.1.tar.gz \
 		fi-6.x-1.0-rc.tar.gz \
-		fr-6.x-1.x-dev.tar.gz de-6.x-1.x-dev.tar.gz \
+		fr-6.x-1.x-dev.tar.gz de-6.x-1.0-rc1.tar.gz \
 		el-6.x-1.0-beta1.tar.gz gu-6.x-1.x-dev.tar.gz \
 		he-6.x-1.0.tar.gz hu-6.x-1.0.tar.gz ja-6.x-1.2.tar.gz \
 		lt-6.x-1.2.tar.gz nb-6.x-1.x-dev.tar.gz \
@@ -26,6 +26,8 @@ COMMENT=	Langate translation files for drupal 6.x
 
 DEPENDS+=	drupal>=6.3:../../www/drupal6
 
+#
+# update STAMP when any distfile's content changed without its filename.
 STAMP=		20080816
 USE_TOOLS+=	pax
 NO_CONFIGURE=	yes
