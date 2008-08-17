@@ -1,0 +1,30 @@
+$NetBSD: patch-ac,v 1.1 2008/08/17 22:40:26 dholland Exp $
+
+--- fastlock.h.orig	2008-08-17 18:36:52.000000000 -0400
++++ fastlock.h	2008-08-17 18:36:55.000000000 -0400
+@@ -77,6 +77,11 @@ inline static int tsl(fl_lock_t* lock)
+ 		" xchg %b1, %0" : "=q" (val), "=m" (*lock) : "0" (val) : "memory"
+ 	);
+ #endif /*NOSMP*/
++#elif defined __CPU_amd64
++	val=1;
++	asm volatile( 
++		" xchg %b1, %0" : "=q" (val), "=m" (*lock) : "0" (val) : "memory"
++	);
+ #elif defined __CPU_sparc64
+ 	asm volatile(
+ 			"ldstub [%1], %0 \n\t"
+@@ -142,6 +147,13 @@ inline static void release_lock(fl_lock_
+ 		" movb $0, (%0)" : /*no output*/ : "r"(lock): "memory"
+ 		/*" xchg %b0, %1" : "=q" (val), "=m" (*lock) : "0" (val) : "memory"*/
+ 	); 
++#elif defined __CPU_amd64
++	char val;
++	val=0;
++	asm volatile(
++		" movb $0, (%0)" : /*no output*/ : "r"(lock): "memory"
++		/*" xchg %b0, %1" : "=q" (val), "=m" (*lock) : "0" (val) : "memory"*/
++	); 
+ #elif defined __CPU_sparc64
+ 	asm volatile(
+ #ifndef NOSMP
