@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:40 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2008/08/17 04:11:47 dholland Exp $
 #
 
 DISTNAME=	OroboROX-0.9.8
@@ -73,13 +73,15 @@ post-build:
 	@${ECHO} "#!/bin/sh" >> ${WRKDIR:Q}/oroborox
 	@${ECHO} ${PREFIX:Q}"/share/rox/OroboROX/AppRun \"\$$@\"" >> ${WRKDIR:Q}/oroborox
 
+INSTALLATION_DIRS=	bin libexec/rox share/rox/OroboROX
+
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC:Q}/${PLATFORM:Q}/OroboROX ${PREFIX:Q}/libexec/rox
+	${INSTALL_PROGRAM} ${WRKSRC:Q}/${PLATFORM:Q}/OroboROX ${DESTDIR:Q}${PREFIX:Q}/libexec/rox
 	cd ${WRKSRC:Q} && pax -rw	\
 		-s ',^\./${PLATFORM}$$,,' -s ',^\./${PLATFORM}/.*,,'	\
 		-s ',^\./src$$,,' -s ',^\./src/.*,,'	\
-		. ${PREFIX:Q}/share/rox/OroboROX
-	${INSTALL_SCRIPT} ${WRKDIR:Q}/oroborox ${PREFIX:Q}/bin
+		. ${DESTDIR:Q}${PREFIX:Q}/share/rox/OroboROX
+	${INSTALL_SCRIPT} ${WRKDIR:Q}/oroborox ${DESTDIR:Q}${PREFIX:Q}/bin
 
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
