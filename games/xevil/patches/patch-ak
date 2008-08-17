@@ -1,7 +1,7 @@
-$NetBSD: patch-ak,v 1.1.1.1 2005/01/25 15:59:27 xtraeme Exp $
+$NetBSD: patch-ak,v 1.2 2008/08/17 23:50:06 dholland Exp $
 
---- cmn/physical.cpp.orig	2000-01-19 20:38:14.000000000 -0800
-+++ cmn/physical.cpp	2003-11-22 11:29:34.000000000 -0800
+--- cmn/physical.cpp.orig	2000-01-19 20:38:14.000000000 -0500
++++ cmn/physical.cpp	2008-08-17 19:15:00.000000000 -0400
 @@ -33,10 +33,11 @@
  // Include Files
  #include "xdata.h"
@@ -16,3 +16,12 @@ $NetBSD: patch-ak,v 1.1.1.1 2005/01/25 15:59:27 xtraeme Exp $
  #endif
  #if WIN32
  #include <strstrea.h>
+@@ -1844,7 +1845,7 @@ void* Moving::compute_key(Dir dir,int an
+   }
+ 
+   // Use the pixmap resource id as the base.
+-  u_int cmnBitsId = (unsigned int)mc->pixmapBits[baseDir][animNum];
++  u_int cmnBitsId = (unsigned int)(uintptr_t)mc->pixmapBits[baseDir][animNum];
+ 
+   // It is ok to call OneTransform::compute_key() even if there is no 
+   // transformation, will just return 0x0.  
