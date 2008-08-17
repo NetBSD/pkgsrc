@@ -1,10 +1,41 @@
-@comment $NetBSD: PLIST,v 1.9 2008/04/06 21:47:00 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/08/17 11:09:10 adrianp Exp $
 bin/smokeping
 bin/tSmoke
 lib/smokeping/BER.pm
+lib/smokeping/CGI/Session.pm
+lib/smokeping/CGI/Session/Driver.pm
+lib/smokeping/CGI/Session/Driver/DBI.pm
+lib/smokeping/CGI/Session/Driver/db_file.pm
+lib/smokeping/CGI/Session/Driver/file.pm
+lib/smokeping/CGI/Session/Driver/mysql.pm
+lib/smokeping/CGI/Session/Driver/postgresql.pm
+lib/smokeping/CGI/Session/Driver/sqlite.pm
+lib/smokeping/CGI/Session/ErrorHandler.pm
+lib/smokeping/CGI/Session/ID/incr.pm
+lib/smokeping/CGI/Session/ID/md5.pm
+lib/smokeping/CGI/Session/ID/static.pm
+lib/smokeping/CGI/Session/Serialize/default.pm
+lib/smokeping/CGI/Session/Serialize/freezethaw.pm
+lib/smokeping/CGI/Session/Serialize/json.pm
+lib/smokeping/CGI/Session/Serialize/storable.pm
+lib/smokeping/CGI/Session/Serialize/yaml.pm
+lib/smokeping/CGI/Session/Test/Default.pm
+lib/smokeping/CGI/Session/Tutorial.pm
 lib/smokeping/Config/Grammar.pm
 lib/smokeping/Config/Grammar/Document.pm
 lib/smokeping/Config/Grammar/Dynamic.pm
+lib/smokeping/Digest/HMAC.LICENSE
+lib/smokeping/Digest/HMAC.pm
+lib/smokeping/Digest/HMAC_MD5.pm
+lib/smokeping/Digest/HMAC_SHA1.pm
+lib/smokeping/JSON.pm
+lib/smokeping/JSON/Converter.pm
+lib/smokeping/JSON/PP.pm
+lib/smokeping/JSON/PP5005.pm
+lib/smokeping/JSON/PP56.pm
+lib/smokeping/JSON/Parser.pm
+lib/smokeping/Qooxdoo/JSONRPC.pm
+lib/smokeping/Qooxdoo/Services/Tr.pm
 lib/smokeping/SNMP_Session.pm
 lib/smokeping/SNMP_util.pm
 lib/smokeping/Smokeping.pm
@@ -18,11 +49,11 @@ lib/smokeping/Smokeping/RRDtools.pm
 lib/smokeping/Smokeping/Slave.pm
 lib/smokeping/Smokeping/ciscoRttMonMIB.pm
 lib/smokeping/Smokeping/matchers/Avgratio.pm
-lib/smokeping/Smokeping/matchers/Median.pm
-lib/smokeping/Smokeping/matchers/base.pm
 lib/smokeping/Smokeping/matchers/CheckLatency.pm
 lib/smokeping/Smokeping/matchers/CheckLoss.pm
+lib/smokeping/Smokeping/matchers/Median.pm
 lib/smokeping/Smokeping/matchers/Medratio.pm
+lib/smokeping/Smokeping/matchers/base.pm
 lib/smokeping/Smokeping/probes/AnotherDNS.pm
 lib/smokeping/Smokeping/probes/AnotherSSH.pm
 lib/smokeping/Smokeping/probes/CiscoRTTMonDNS.pm
@@ -65,6 +96,36 @@ lib/smokeping/Smokeping/sorters/Median.pm
 lib/smokeping/Smokeping/sorters/StdDev.pm
 lib/smokeping/Smokeping/sorters/base.pm
 libexec/cgi-bin/smokeping.cgi
+libexec/cgi-bin/tr.cgi
+share/doc/smokeping/CHANGES
+share/doc/smokeping/CONTRIBUTORS
+share/doc/smokeping/COPYING
+share/doc/smokeping/COPYRIGHT
+share/doc/smokeping/README
+share/doc/smokeping/Smokeping.txt
+share/doc/smokeping/TODO
+share/doc/smokeping/smokeping.cgi.txt
+share/doc/smokeping/smokeping.txt
+share/doc/smokeping/smokeping_config.txt
+share/doc/smokeping/smokeping_examples.txt
+share/doc/smokeping/smokeping_extend.txt
+share/doc/smokeping/smokeping_install.txt
+share/doc/smokeping/smokeping_master_slave.txt
+share/doc/smokeping/smokeping_upgrade.txt
+share/doc/smokeping/smoketrace.txt
+share/doc/smokeping/tSmoke.txt
+share/examples/rc.d/smokeping
+share/examples/smokeping/basepage.html.dist
+share/examples/smokeping/config.dist
+share/examples/smokeping/config.echoping
+share/examples/smokeping/config.fping-instances
+share/examples/smokeping/config.multiple-probes
+share/examples/smokeping/config.simple
+share/examples/smokeping/config.targetvars-with-Curl
+share/examples/smokeping/config.template
+share/examples/smokeping/smokemail.dist
+share/examples/smokeping/smokeping.conf
+share/examples/smokeping/tmail.dist
 share/smokeping/cropper/cropper.css
 share/smokeping/cropper/cropper.js
 share/smokeping/cropper/cropper.uncompressed.js
@@ -81,43 +142,74 @@ share/smokeping/cropper/licence.txt
 share/smokeping/cropper/marqueeHoriz.gif
 share/smokeping/cropper/marqueeVert.gif
 share/smokeping/cropper/smokeping-zoom.js
-share/doc/smokeping/CHANGES
-share/doc/smokeping/CONTRIBUTORS
-share/doc/smokeping/COPYING
-share/doc/smokeping/COPYRIGHT
-share/doc/smokeping/README
-share/doc/smokeping/Smokeping.txt
-share/doc/smokeping/TODO
-share/doc/smokeping/smokeping.cgi.txt
-share/doc/smokeping/smokeping.txt
-share/doc/smokeping/smokeping_config.txt
-share/doc/smokeping/smokeping_examples.txt
-share/doc/smokeping/smokeping_extend.txt
-share/doc/smokeping/smokeping_install.txt
-share/doc/smokeping/smokeping_master_slave.txt
-share/doc/smokeping/smokeping_upgrade.txt
-share/doc/smokeping/tSmoke.txt
-share/examples/rc.d/smokeping
-share/examples/smokeping/basepage.html.dist
-share/examples/smokeping/config.dist
-share/examples/smokeping/config.echoping
-share/examples/smokeping/config.fping-instances
-share/examples/smokeping/config.multiple-probes
-share/examples/smokeping/config.simple
-share/examples/smokeping/config.targetvars-with-Curl
-share/examples/smokeping/config.template
-share/examples/smokeping/smokeping.conf
-share/examples/smokeping/smokemail.dist
-share/examples/smokeping/tmail.dist
-@dirrm share/examples/smokeping
-@dirrm share/doc/smokeping
+share/smokeping/resource/Tr/image/ajax-loader.gif
+share/smokeping/resource/qx/icon/CrystalClear/16/actions/view-refresh.png
+share/smokeping/resource/qx/icon/Nuvola/16/actions/view-refresh.png
+share/smokeping/resource/qx/static/image/blank.gif
+share/smokeping/resource/qx/static/image/dotted_white.gif
+share/smokeping/resource/qx/widget/Windows/arrows/down.gif
+share/smokeping/resource/qx/widget/Windows/arrows/down_small.gif
+share/smokeping/resource/qx/widget/Windows/arrows/next.gif
+share/smokeping/resource/qx/widget/Windows/arrows/up.gif
+share/smokeping/resource/qx/widget/Windows/arrows/up_small.gif
+share/smokeping/resource/qx/widget/Windows/cursors/alias.gif
+share/smokeping/resource/qx/widget/Windows/cursors/copy.gif
+share/smokeping/resource/qx/widget/Windows/cursors/move.gif
+share/smokeping/resource/qx/widget/Windows/cursors/nodrop.gif
+share/smokeping/resource/qx/widget/Windows/menu/checkbox.gif
+share/smokeping/resource/qx/widget/Windows/menu/radiobutton.gif
+share/smokeping/resource/qx/widget/Windows/splitpane/knob-horizontal.png
+share/smokeping/resource/qx/widget/Windows/splitpane/knob-vertical.png
+share/smokeping/resource/qx/widget/Windows/table/ascending.png
+share/smokeping/resource/qx/widget/Windows/table/descending.png
+share/smokeping/resource/qx/widget/Windows/table/selectColumnOrder.png
+share/smokeping/resource/qx/widget/Windows/window/close.gif
+share/smokeping/resource/qx/widget/Windows/window/maximize.gif
+share/smokeping/resource/qx/widget/Windows/window/minimize.gif
+share/smokeping/resource/qx/widget/Windows/window/restore.gif
+share/smokeping/script/Tr.js
+share/smokeping/tr.html
+@dirrm share/smokeping/script
+@dirrm share/smokeping/resource/qx/widget/Windows/window
+@dirrm share/smokeping/resource/qx/widget/Windows/table
+@dirrm share/smokeping/resource/qx/widget/Windows/splitpane
+@dirrm share/smokeping/resource/qx/widget/Windows/menu
+@dirrm share/smokeping/resource/qx/widget/Windows/cursors
+@dirrm share/smokeping/resource/qx/widget/Windows/arrows
+@dirrm share/smokeping/resource/qx/widget/Windows
+@dirrm share/smokeping/resource/qx/widget
+@dirrm share/smokeping/resource/qx/static/image
+@dirrm share/smokeping/resource/qx/static
+@dirrm share/smokeping/resource/qx/icon/Nuvola/16/actions
+@dirrm share/smokeping/resource/qx/icon/Nuvola/16
+@dirrm share/smokeping/resource/qx/icon/Nuvola
+@dirrm share/smokeping/resource/qx/icon/CrystalClear/16/actions
+@dirrm share/smokeping/resource/qx/icon/CrystalClear/16
+@dirrm share/smokeping/resource/qx/icon/CrystalClear
+@dirrm share/smokeping/resource/qx/icon
+@dirrm share/smokeping/resource/qx
+@dirrm share/smokeping/resource/Tr/image
+@dirrm share/smokeping/resource/Tr
+@dirrm share/smokeping/resource
 @dirrm share/smokeping/cropper/lib
 @dirrm share/smokeping/cropper
 @dirrm share/smokeping
+@dirrm share/examples/smokeping
+@dirrm share/doc/smokeping
+@dirrm lib/smokeping/Smokeping/sorters
 @dirrm lib/smokeping/Smokeping/probes
 @dirrm lib/smokeping/Smokeping/matchers
-@dirrm lib/smokeping/Smokeping/sorters
 @dirrm lib/smokeping/Smokeping
+@dirrm lib/smokeping/Qooxdoo/Services
+@dirrm lib/smokeping/Qooxdoo
+@dirrm lib/smokeping/JSON
+@dirrm lib/smokeping/Digest
 @dirrm lib/smokeping/Config/Grammar
 @dirrm lib/smokeping/Config
+@dirrm lib/smokeping/CGI/Session/Test
+@dirrm lib/smokeping/CGI/Session/Serialize
+@dirrm lib/smokeping/CGI/Session/ID
+@dirrm lib/smokeping/CGI/Session/Driver
+@dirrm lib/smokeping/CGI/Session
+@dirrm lib/smokeping/CGI
 @dirrm lib/smokeping

@@ -1,18 +1,18 @@
-$NetBSD: patch-ad,v 1.4 2008/04/06 21:47:00 adrianp Exp $
+$NetBSD: patch-ad,v 1.5 2008/08/17 11:09:10 adrianp Exp $
 
---- bin/tSmoke.dist.orig	2008-03-29 07:47:19.000000000 +0000
+--- bin/tSmoke.dist.orig	2008-07-24 18:37:05.000000000 +0100
 +++ bin/tSmoke.dist
-@@ -50,8 +50,7 @@ use strict;
+@@ -51,8 +51,7 @@ use warnings;
  # -- Getopt::Long
  #
  # Point the lib variables to your implementation
 -use lib qw(lib);
--use lib "/usr/local/rrdtool-1.0.39/lib/perl";
+-use lib qw(/usr/local/rrdtool-1.0.39/lib/perl);
 +use lib "@PREFIX@/lib/smokeping";
  
- use Smokeping 2.003005;
+ use Smokeping 2.004002;
  use Net::SMTP;
-@@ -60,7 +59,7 @@ use Pod::Usage;
+@@ -61,7 +60,7 @@ use Pod::Usage;
  use RRDs;
  
  # Point to your Smokeping config file
@@ -21,7 +21,7 @@ $NetBSD: patch-ad,v 1.4 2008/04/06 21:47:00 adrianp Exp $
  
  # global variables
  my $cfg;
-@@ -475,9 +474,9 @@ past week and past month including an ov
+@@ -476,9 +475,9 @@ past week and past month including an ov
  Typical crontab used to invoke this are
  
   # Quick morning alert to see what's down
@@ -33,7 +33,7 @@ $NetBSD: patch-ad,v 1.4 2008/04/06 21:47:00 adrianp Exp $
  
  =head1 SETUP
  
-@@ -497,17 +496,16 @@ We need to use the following B<libraries
+@@ -498,17 +497,16 @@ We need to use the following B<libraries
  
  Set up your libraries:
  

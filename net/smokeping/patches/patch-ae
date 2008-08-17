@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1 2008/08/17 11:09:10 adrianp Exp $
+
+--- htdocs/tr.cgi.dist.orig	2008-07-24 19:25:28.000000000 +0100
++++ htdocs/tr.cgi.dist
+@@ -1,6 +1,6 @@
+-#!/usr/sepp/bin/speedy-5.8.8 -w
++#!@PREFIX@/@INTERP@ -w
+ use strict;
+-use lib qw(/home/oposs/smokeping/software/lib);
++use lib qw(@PREFIX@/lib/smokeping);
+ use lib qw(perl);
+ 
+ use CGI;
