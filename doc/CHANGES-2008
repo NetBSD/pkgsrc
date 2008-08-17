@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1899 2008/08/17 14:52:49 he Exp $
+$NetBSD: CHANGES-2008,v 1.1900 2008/08/17 15:15:26 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3246,3 +3246,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Set-IntSpan to 1.13 [he 2008-08-17]
 	Added time/p5-DateTime-Precise version 1.05 [he 2008-08-17]
 	Updated net/p5-Net-eBay to 0.50 [he 2008-08-17]
+	Updated www/zope29 to 2.9.9nb1 [taca 2008-08-17]
+	Updated www/zope210 to 2.10.6nb1 [taca 2008-08-17]
+	Updated www/zope211 to 2.11.1nb1 [taca 2008-08-17]
