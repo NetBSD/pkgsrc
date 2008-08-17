@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1892 2008/08/17 09:22:01 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1893 2008/08/17 09:24:55 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3225,3 +3225,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/glu to 7.0.4.1 [bjs 2008-08-17]
 	Updated graphics/glut to 7.0.4.1 [bjs 2008-08-17]
 	Updated devel/bugzilla to 2.22.5 [adrianp 2008-08-17]
+	Updated devel/bugzilla3 to 3.0.5 [adrianp 2008-08-17]
