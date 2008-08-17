@@ -1,0 +1,33 @@
+$NetBSD: patch-ac,v 1.1 2008/08/17 06:45:48 dholland Exp $
+
+--- lsh/libc/shell.lsh~	2005-03-08 15:14:44.000000000 -0500
++++ lsh/libc/shell.lsh	2008-08-17 02:40:12.000000000 -0400
+@@ -241,7 +241,18 @@
+ 
+ #? shell-home
+ ;; user home directory
+-(defvar shell-home (getenv "HOME"))
++(defvar shell-home nil)
++
++;; get-shell-home
++;; fetch user home directory
++;; (merely initializing shell-home gets the compile-time $HOME, which is wrong)
++;; If shell-home isn't set, set it from $HOME; otherwise return it.
++;; This is suboptimal because shell-home will be nil until (cd) is run,
++;; but it's better than having shell-home contain the pkgsrc dummy homedir.
++(de shell.get-shell-home ()
++  (if (not shell-home)
++      (setq shell-home (getenv "HOME"))
++    shell-home))
+ 
+ #? shell-dirstack
+ ;; directory stack manipulated by pushd and popd
+@@ -262,7 +273,7 @@
+ #? (cd [<d>])
+ ;; change current directory to <d>, or to 
+ ;; user home if <p> is not present.
+-(de cd (&optional p) (if p (chdir p) (chdir shell-home)))
++(de cd (&optional p) (if p (chdir p) (chdir (get-shell-home))))
+ 
+ #? (pushd <d>)
+ ;; Temporarily change current directory to <d>. 
