@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.29 2008/05/26 02:13:19 joerg Exp $
+# $NetBSD: Makefile,v 1.30 2008/08/17 02:59:45 dholland Exp $
 #
 
 DISTNAME=		mirrormagic-2.0.2
@@ -21,7 +21,7 @@ PLIST_SRC=		${WRKDIR}/PLIST PLIST
 SCORE_PATH=		/var/games/mirrormagic
 
 SETGIDGAME=		yes
-OWN_DIRS_PERMS=		${SCORE_PATH} ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE} 
+OWN_DIRS_PERMS=		${SCORE_PATH} ${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 OWN_DIRS_PERMS+=	${SCORE_PATH}/scores				\
 				${GAMES_USER} ${GAMES_GROUP} ${GAMEDIRMODE}
 OWN_DIRS_PERMS+=	${SCORE_PATH}/scores/classic_deflektor		\
@@ -40,12 +40,12 @@ do-install:
 
 	${RM} -f ${WRKDIR}/PLIST
 .for levdir in Classic_Games
-	cd ${PREFIX} && \
+	cd ${DESTDIR}${PREFIX} && \
 	${FIND} share/mirrormagic/levels/${levdir} -type f -print \
 		>>${WRKDIR}/PLIST
 .endfor
 .for directory in graphics music sounds
-	cd ${PREFIX} && \
+	cd ${DESTDIR}${PREFIX} && \
 	${FIND} share/mirrormagic/${directory} -type f -print \
 		>>${WRKDIR}/PLIST
 .endfor
