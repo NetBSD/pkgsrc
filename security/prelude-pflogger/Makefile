@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/07/21 12:22:15 shannonjr Exp $
+# $NetBSD: Makefile,v 1.7 2008/08/17 03:21:45 dholland Exp $
 #
 
 DISTNAME=	prelude-pflogger-0.9.0-rc2
@@ -57,7 +57,7 @@ SUBST_SED.make=         -e 's,@EGDIR@,${EGDIR},g'
 
 RCD_SCRIPTS=		pflogger
 
-INSTALLATION_DIRS=	share/examples/prelude-pflogger
+INSTALLATION_DIRS=	share/examples/prelude-pflogger sbin
 
 pre-patch:
 	${CP} ${FILESDIR}/run-prelude-pflogger.c ${WRKSRC}
@@ -70,7 +70,7 @@ post-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${CC} ${CFLAGS} -o run-prelude-pflogger run-prelude-pflogger.c
 
 post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/run-prelude-pflogger ${PREFIX}/sbin/run-prelude-pflogger
+	${INSTALL_PROGRAM} ${WRKSRC}/run-prelude-pflogger ${DESTDIR}${PREFIX}/sbin/run-prelude-pflogger
 
 .include "../../security/libprelude/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
