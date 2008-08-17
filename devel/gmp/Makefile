@@ -1,14 +1,13 @@
-# $NetBSD: Makefile,v 1.51 2008/04/01 00:57:09 bjs Exp $
+# $NetBSD: Makefile,v 1.52 2008/08/17 07:56:11 bjs Exp $
 
-DISTNAME=	gmp-4.2.2
-PKGREVISION=	1
+DISTNAME=	gmp-4.2.3
 CATEGORIES=	devel math
 MASTER_SITES=	${MASTER_SITE_GNU:=gmp/}
 EXTRACT_SUFX=	.tar.bz2
 
-PATCHFILES=		mpf_set_str.c.diff
-PATCH_SITES+=		http://www.gmplib.org/patches/
-PATCH_DIST_STRIP=	-p0
+#PATCHFILES=
+#PATCH_SITES+=		http://www.gmplib.org/patches/
+#PATCH_DIST_STRIP=	-p0
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://gmplib.org/
@@ -18,12 +17,13 @@ COMMENT=	Library for arbitrary precision arithmetic
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
-USE_LANGUAGES=		c c++ c99
-USE_TOOLS+=		gm4 autoconf
-USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
+INFO_FILES=		yes
+USE_LANGUAGES=		c c++ c99
+USE_LIBTOOL=		yes
+USE_TOOLS+=		gm4 autoconf
+
 CONFIGURE_ARGS+=	--enable-cxx --without-readline
-INFO_FILES=		# PLIST
 
 TEST_TARGET=		check
 
