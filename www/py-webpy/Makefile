@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.4 2008/06/12 02:14:56 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/08/17 22:57:04 darcy Exp $
 #
 
-DISTNAME=		web.py-0.2
+DISTNAME=		web.py-0.23
 PKGNAME=		${PYPKGPREFIX}-${DISTNAME}
-PKGREVISION=		1
 CATEGORIES=		www python
-MASTER_SITES=		http://webpy.org/
+MASTER_SITES=		http://webpy.org/static/
 
 MAINTAINER=		darcy@NetBSD.org
 HOMEPAGE=		http://webpy.org/
@@ -15,8 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYTHON_VERSIONS_ACCEPTED=	25 24
 
-WRKSRC=			${WRKDIR}/${DISTNAME}
-#PY_PATCHPLIST=		yes
+WRKSRC=			${WRKDIR}/webpy
 PYDISTUTILSPKG=		yes
 
 .include "../../lang/python/extension.mk"
