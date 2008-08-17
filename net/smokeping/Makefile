@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.25 2008/05/26 02:13:23 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2008/08/17 11:09:10 adrianp Exp $
 
-DISTNAME=	smokeping-2.3.5
+DISTNAME=	smokeping-2.4.2
 CATEGORIES=	net
 MASTER_SITES=	http://oss.oetiker.ch/smokeping/pub/
 
@@ -38,7 +38,7 @@ SUBST_CLASSES+=		files
 SUBST_STAGE.files=	post-patch
 SUBST_FILES.files=	bin/smokeping.dist htdocs/smokeping.cgi.dist \
 			etc/config.dist etc/smokemail.dist bin/tSmoke.dist \
-			etc/basepage.html.dist smokeping.conf
+			etc/basepage.html.dist smokeping.conf htdocs/tr.cgi.dist
 SUBST_SED.files=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_SED.files+=	-e "s|@VARBASE@|${VARBASE}|g"
 SUBST_SED.files+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
@@ -62,16 +62,12 @@ post-extract:
 
 do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/lib/smokeping
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/smokeping/Config
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/smokeping/Config/Grammar
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/smokeping/Smokeping
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/smokeping/Smokeping/matchers
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/smokeping/Smokeping/probes
-	${INSTALL_DATA_DIR} ${PREFIX}/lib/smokeping/Smokeping/sorters
 	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/smokeping
 	${INSTALL_DATA_DIR} ${EGDIR}
 	${INSTALL_DATA_DIR} ${SPDIR}
 	${INSTALL_DATA_DIR} ${SPDIR}/cropper
+	${INSTALL_DATA_DIR} ${SPDIR}/resource
+	${INSTALL_DATA_DIR} ${SPDIR}/script
 
 	for FILE in CHANGES CONTRIBUTORS COPYING COPYRIGHT README TODO; do \
 		${INSTALL_DATA} \
@@ -91,39 +87,14 @@ do-install:
 
 	${INSTALL_SCRIPT} ${WRKSRC}/htdocs/smokeping.cgi.dist \
 		${PREFIX}/libexec/cgi-bin/smokeping.cgi
-
-	for FILE in ${WRKSRC}/lib/*.pm; do \
-		${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping; \
-	done
-
-	for FILE in ${WRKSRC}/lib/Config/*.pm; do \
-		${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/Config; \
-	done
-
-	for FILE in ${WRKSRC}/lib/Config/Grammar/*.pm; do \
-		${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/Config/Grammar; \
-	done
-
-	for FILE in ${WRKSRC}/lib/Smokeping/*.pm; do \
-		${INSTALL_DATA} $$FILE ${PREFIX}/lib/smokeping/Smokeping; \
-	done
-
-	for FILE in ${WRKSRC}/lib/Smokeping/matchers/*.pm; do \
-		${INSTALL_DATA} \
-			$$FILE ${PREFIX}/lib/smokeping/Smokeping/matchers; \
-	done
-
-	for FILE in ${WRKSRC}/lib/Smokeping/probes/*.pm; do \
-		${INSTALL_DATA} \
-			$$FILE ${PREFIX}/lib/smokeping/Smokeping/probes; \
-	done
-
-	for FILE in ${WRKSRC}/lib/Smokeping/sorters/*.pm; do \
-		${INSTALL_DATA} \
-			$$FILE ${PREFIX}/lib/smokeping/Smokeping/sorters; \
-	done
+	${INSTALL_SCRIPT} ${WRKSRC}/htdocs/tr.cgi.dist \
+		${PREFIX}/libexec/cgi-bin/tr.cgi
 
 	cd ${WRKSRC}/htdocs/cropper && pax -rw -pm . ${SPDIR}/cropper
+	cd ${WRKSRC}/htdocs/resource && pax -rw -pm . ${SPDIR}/resource
+	cd ${WRKSRC}/htdocs/script && pax -rw -pm . ${SPDIR}/script
+	cd ${WRKSRC}/lib && pax -rw -pm . ${PREFIX}/lib/smokeping
+	${INSTALL_DATA} ${WRKSRC}/htdocs/tr.html ${SPDIR}
 
 	for FILE in ${WRKSRC}/etc/config.dist \
 		${WRKSRC}/etc/basepage.html.dist \
@@ -133,5 +104,8 @@ do-install:
 		${WRKSRC}/etc/smokemail.dist; do \
 		${INSTALL_DATA} $$FILE ${EGDIR}; \
 	done
+
+	${CHMOD} ${SHAREMODE} ${PREFIX}/lib/smokeping/JSON/*.pm
+	${CHMOD} ${SHAREMODE} ${PREFIX}/lib/smokeping/JSON.pm
 
 .include "../../mk/bsd.pkg.mk"
