@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/08/17 14:43:13 he Exp $
+
+SHA1 (DateTime-Precise-1.05.tar.gz) = bdb50b4c74d4954c2a584100c7ae6e1fe38c8745
+RMD160 (DateTime-Precise-1.05.tar.gz) = dd8f2cf57d541bd27ef17a02754f47eba98a0f62
+Size (DateTime-Precise-1.05.tar.gz) = 35599 bytes

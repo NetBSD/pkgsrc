@@ -1,0 +1,23 @@
+The purpose of this library was to replace our dependence on Unix
+epoch time, which, being limited to a range of about 1970 to 2030,
+is inadequate for our purposes (we have data as old as 1870). This
+date library effectively handles dates from A.D. 1000 to infinity,
+and would probably work all the way back to 0 (ignoring, of course,
+the switch-over to the Gregorian calendar). The useful features of
+Unix epoch time (ease of date difference calculation and date
+comparison, strict ordering) are preserved, and elements such as
+human-legibility are added. The library handles fractional seconds
+and some date/time manipulations used for the Global Positioning
+Satellite system.
+
+The operators +/-, <=>, cmp, stringify are overloaded. Addition
+handles seconds and fractions of seconds, subtraction handles
+seconds or date differences, compares work, and stringification
+returns the a representation of the date.
+
+The US Geological Survey (USGS) likes midnight to be 24:00:00 of
+the previous day, not 00:00:00 of the day people expect. If
+$DateTime::Precise::USGSMidnight is set, dprintf will always print
+midnight as 24:00:00 and the date returned from dprintf will have
+the previous day's date. Regardless, time is always stored internally
+as 00:00:00.
