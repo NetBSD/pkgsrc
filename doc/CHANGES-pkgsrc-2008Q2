@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.37 2008/08/16 12:29:15 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.38 2008/08/17 21:50:46 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -81,3 +81,6 @@ pullup ticket #2487 - requested by taca
 drupal: update package for security fixes
 pullup ticket #2488 - requested by taca
 drupal6: update for security fixes
+Pullup ticket #2494 - requeste by gdt
+blobwars: remove at request of upstream author
+starfighter: remove at request of upstream author
