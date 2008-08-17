@@ -1,0 +1,66 @@
+$NetBSD: patch-ab,v 1.6 2008/08/17 21:00:20 dholland Exp $
+
+--- egtb.cpp~	2008-04-15 18:41:49.000000000 -0400
++++ egtb.cpp	2008-08-17 16:21:19.000000000 -0400
+@@ -332,7 +332,7 @@ static void* PvMalloc
+     pv = malloc (cb);
+     if (NULL == pv)
+         {
+-        printf ("*** Cannot allocate %d bytes of memory\n", cb);
++        printf ("*** Cannot allocate %zu bytes of memory\n", cb);
+         exit (1);
+         }
+     cbAllocated += cb;
+@@ -1268,24 +1268,24 @@ static void VInitEnumerations (void)
+     if (fPrint)
+         {
+         for (pi1 = x_pieceNone; pi1 <= x_pieceQueen; pi1 = (piece) (pi1 + 1))
+-            printf ("%c - %d enumerated positions\n", "pPNBRQ"[pi1], rgcSinglePawnPresent[pi1]);
++            printf ("%c - %ld enumerated positions\n", "pPNBRQ"[pi1], rgcSinglePawnPresent[pi1]);
+         for (pi1 = x_pieceNone; pi1 <= x_pieceQueen; pi1 = (piece) (pi1 + 1))
+             {
+             if (0 != rgcSinglePawnless[pi1])
+-                printf ("pawnless %c - %d enumerated positions\n", "pPNBRQ"[pi1], rgcSinglePawnless[pi1]);
++                printf ("pawnless %c - %ld enumerated positions\n", "pPNBRQ"[pi1], rgcSinglePawnless[pi1]);
+             }
+         for (pi1 = x_pieceNone; pi1 <= x_pieceQueen; pi1 = (piece) (pi1 + 1))
+             for (pi2 = x_pieceNone; pi2 <= pi1; pi2 = (piece) (pi2 + 1))
+                 {
+                 if (0 != rgcPairPawnPresent[pi1][pi2])
+-                    printf ("%c%c - %d enumerated positions\n", "pPNBRQ"[pi1], "pPNBRQ"[pi2],
++                    printf ("%c%c - %ld enumerated positions\n", "pPNBRQ"[pi1], "pPNBRQ"[pi2],
+                             rgcPairPawnPresent[pi1][pi2]);
+                 }
+         for (pi1 = x_pieceNone; pi1 <= x_pieceQueen; pi1 = (piece) (pi1 + 1))
+             for (pi2 = x_pieceNone; pi2 <= pi1; pi2 = (piece) (pi2 + 1))
+                 {
+                 if (0 != rgcPairPawnless[pi1][pi2])
+-                    printf ("pawnless %c%c - %d enumerated positions\n", "pPNBRQ"[pi1], "pPNBRQ"[pi2],
++                    printf ("pawnless %c%c - %ld enumerated positions\n", "pPNBRQ"[pi1], "pPNBRQ"[pi2],
+                             rgcPairPawnless[pi1][pi2]);
+                 }
+ #if defined (T41_INCLUDE) || defined (T42_INCLUDE)
+@@ -1294,7 +1294,7 @@ static void VInitEnumerations (void)
+                 for (pi3 = x_pieceNone; pi3 <= pi2; pi3 = (piece) (pi3 + 1))
+                     {
+                     if (0 != rgcTriplePawnPresent[pi1][pi2][pi3])
+-                        printf ("%c%c%c - %d enumerated positions\n",
++                        printf ("%c%c%c - %ld enumerated positions\n",
+                                 "pPNBRQ"[pi1], "pPNBRQ"[pi2], "pPNBRQ"[pi3],
+                                 rgcTriplePawnPresent[pi1][pi2][pi3]);
+                     }
+@@ -1303,12 +1303,12 @@ static void VInitEnumerations (void)
+                 for (pi3 = x_pieceNone; pi3 <= pi2; pi3 = (piece) (pi3 + 1))
+                     {
+                     if (0 != rgcTriplePawnless[pi1][pi2][pi3])
+-                        printf ("pawnless %c%c%c - %d enumerated positions\n",
++                        printf ("pawnless %c%c%c - %ld enumerated positions\n",
+                                 "pPNBRQ"[pi1], "pPNBRQ"[pi2], "pPNBRQ"[pi3],
+                                 rgcTriplePawnless[pi1][pi2][pi3]);
+                     }
+ #endif
+-        printf ("\nAllocated %dk\n\n", (cbAllocated + 1023)/1024);
++        printf ("\nAllocated %zuk\n\n", (cbAllocated + 1023)/1024);
+         }
+     }
+ 
