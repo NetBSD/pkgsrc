@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:35 wiz Exp $
+$NetBSD: distinfo,v 1.3 2008/08/17 18:24:19 he Exp $
 
-SHA1 (HTML-LinkExtractor-0.121.tar.gz) = 85fe068b2c660e0d24a5440315cca3a6840e6fab
-RMD160 (HTML-LinkExtractor-0.121.tar.gz) = 0d6d12a09f060e2ab690429b7a4d9680628e91c0
-Size (HTML-LinkExtractor-0.121.tar.gz) = 18088 bytes
+SHA1 (HTML-LinkExtractor-0.13.tar.gz) = f76464bd7ada970bd696b1986f5ccc92d952d84d
+RMD160 (HTML-LinkExtractor-0.13.tar.gz) = fca996664d276f30725790ce4f37e2a1a115ff6f
+Size (HTML-LinkExtractor-0.13.tar.gz) = 15709 bytes
