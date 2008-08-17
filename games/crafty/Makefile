@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2008/05/25 15:55:27 joerg Exp $
+# $NetBSD: Makefile,v 1.43 2008/08/17 21:00:20 dholland Exp $
 
 DISTNAME=		crafty-22.1
+PKGREVISION=		1
 CATEGORIES=		games
 MASTER_SITES=		ftp://ftp.cis.uab.edu/pub/hyatt/source/ \
 			http://www.craftychess.com/
