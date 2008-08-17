@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1903 2008/08/17 19:00:26 he Exp $
+$NetBSD: CHANGES-2008,v 1.1904 2008/08/17 21:10:32 markd Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3261,3 +3261,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/p5-Email-MIME-Attachment-Stripper to 1.315 [he 2008-08-17]
 	Updated www/p5-HTML-LinkExtractor to 0.13 [he 2008-08-17]
 	Updated net/p5-Socket6 to 0.21 [he 2008-08-17]
+	Updated security/p5-GSSAPI to 0.26 [markd 2008-08-17]
