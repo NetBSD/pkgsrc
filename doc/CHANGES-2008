@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1902 2008/08/17 18:37:06 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1903 2008/08/17 19:00:26 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3251,3 +3251,13 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/zope211 to 2.11.1nb1 [taca 2008-08-17]
 	Updated www/php4 to 4.4.9 [adrianp 2008-08-17]
 	Updated lang/php5 to 5.2.6nb2 [adrianp 2008-08-17]
+	Updated time/p5-DateTime-Locale to 0.41 [he 2008-08-17]
+	Updated time/p5-DateTime-TimeZone to 0.79 [he 2008-08-17]
+	Updated time/p5-DateTime to 0.4304 [he 2008-08-17]
+	Updated mail/p5-MIME-Lite-HTML to 1.22 [he 2008-08-17]
+	Updated math/p5-Set-Crontab to 1.02 [he 2008-08-17]
+	Updated math/p5-Set-Infinite to 0.63 [he 2008-08-17]
+	Updated security/p5-Authen-SASL to 2.11 [he 2008-08-17]
+	Updated mail/p5-Email-MIME-Attachment-Stripper to 1.315 [he 2008-08-17]
+	Updated www/p5-HTML-LinkExtractor to 0.13 [he 2008-08-17]
+	Updated net/p5-Socket6 to 0.21 [he 2008-08-17]
