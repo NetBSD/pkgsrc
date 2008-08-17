@@ -1,13 +1,35 @@
-$NetBSD: patch-ag,v 1.1 2006/08/14 22:36:47 wiz Exp $
+$NetBSD: patch-ag,v 1.2 2008/08/17 20:09:12 dholland Exp $
 
---- src/Modules/Makefile.orig	2004-09-16 22:05:58.000000000 +0000
-+++ src/Modules/Makefile
-@@ -22,7 +22,7 @@ hsmlexec:
+--- src/Modules/Makefile.orig	2004-09-16 18:05:58.000000000 -0400
++++ src/Modules/Makefile	2008-08-17 15:31:09.000000000 -0400
+@@ -5,6 +5,7 @@ HSMLEXEC_MOD=HsmlExec.so
+ HSMLEXEC_OBJS=HsmlExec.o ../Hsml/Cache.o ../Hsml/Headers.o ../Hsml/SubLang.o
+ CFLAGS+=${DEFS}
+ CFLAGS+=-I/usr/pkg/include 
++PICFLAGS?=-fPIC
+ #libscrews.a
+ LDFLAGS+=-Wl,-R${PREFIX}/lib -L${PREFIX}/lib -L. 
+ #-lscrews
+@@ -13,7 +14,7 @@ all: hsmlexec
+ 	@if [ "${DLOPEN}" = "1" ]; then \
+ 	for A in $(MODS); do  \
+ 		echo "[modules] $$A.so";  \
+-		$(CC) ${CFLAGS} -fPIC -c $$A.c ; \
++		$(CC) ${CFLAGS} ${PICFLAGS} -c $$A.c ; \
+ 		$(CC) ${LDFLAGS} -o $$A.so -shared $$A.o ; done ; fi
+ 	@echo "** BUILD MODULES ** OK"
+ 
+@@ -21,10 +22,10 @@ hsmlexec:
+ 	@rm -f HsmlExec.o
  	@if [ "${INCORE_LUA}" = "1" ]; then \
             echo "[modules] HsmlExec.so << injecting lua into the core." ;\
- 	   ${CC} ${CFLAGS} -DINCORE_LUA=1 -fPIC -c HsmlExec.c ;\
+-	   ${CC} ${CFLAGS} -DINCORE_LUA=1 -fPIC -c HsmlExec.c ;\
 -	   ${CC} ${LDFLAGS} -lm -llua -llualib ${HSMLEXEC_OBJS} -shared -o ${HSMLEXEC_MOD} ;\
++	   ${CC} ${CFLAGS} ${PICFLAGS} -DINCORE_LUA=1 -c HsmlExec.c ;\
 +	   ${CC} ${LDFLAGS} -lm -llua ${HSMLEXEC_OBJS} -shared -o ${HSMLEXEC_MOD} ;\
  	else \
- 	$(CC) ${CFLAGS} -c HsmlExec.c ;\
+-	$(CC) ${CFLAGS} -c HsmlExec.c ;\
++	$(CC) ${CFLAGS} ${PICFLAGS} -c HsmlExec.c ;\
  	$(CC) ${LDFLAGS} ${HSMLEXEC_OBJS} -shared -o ${HSMLEXEC_MOD} ;\
+ 	fi
+ 	
