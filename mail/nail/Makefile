@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.39 2008/03/28 13:26:00 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2008/08/17 12:24:19 cjep Exp $
 
 DISTNAME=	nail-11.25
 PKGREVISION=	1
@@ -6,7 +6,7 @@ CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nail/}
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	cjep@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://nail.sourceforge.net/
 COMMENT=	BSD mail utility with MIME extensions
 
