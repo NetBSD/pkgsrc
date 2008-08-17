@@ -1,17 +1,20 @@
-# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:34 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/08/17 16:54:10 he Exp $
 
-DISTNAME=	MIME-Lite-HTML-1.21
+DISTNAME=	MIME-Lite-HTML-1.22
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	mail perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=MIME/}
 
-MAINTAINER=	cube@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://search.cpan.org/dist/MIME-Lite-HTML/
 COMMENT=	Perl5 module to transform a HTML page into a MIME-Lite mail
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=	p5-MIME-Lite>=3.01:../../mail/p5-MIME-Lite
 DEPENDS+=	p5-libwww>=5.805:../../www/p5-libwww
+DEPENDS+=	p5-HTML-Parser-[0-9]*:../../www/p5-HTML-Parser
+DEPENDS+=	p5-URI-[0-9]*:../../www/p5-URI
 
 PERL5_PACKLIST=	auto/MIME/Lite/HTML/.packlist
 
