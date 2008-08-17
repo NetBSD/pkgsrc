@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1893 2008/08/17 09:24:55 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.1894 2008/08/17 09:29:00 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3217,7 +3217,14 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated time/ruby-tzinfo to 0.3.9 [taca 2008-08-16]
 	Updates security/ipsec-tools to 0.7.1 [manu 2008-08-16]
 	Updated graphics/png to 1.2.30 [wiz 2008-08-16]
+	Updated lang/squeak to 3.9.8nb2 [dholland 2008-08-17]
+	Updated textproc/p5-PDF-Create to 1.02nb1 [dholland 2008-08-17]
+	Updated devel/libtecla to 1.6.1nb2 [dholland 2008-08-17]
+	Updated security/lsh to 2.0.2nb1 [dholland 2008-08-17]
 	Added www/drupal6-translations version 20080816 [taca 2008-08-17]
+	Updated print/cjk-lyx to 1.2.0nb7 [dholland 2008-08-17]
+	Updated sysutils/gentoo to 0.11.56nb1 [dholland 2008-08-17]
+	Updated lang/lush to 1.1nb1 [dholland 2008-08-17]
 	Updated devel/gmp to 4.2.3 [bjs 2008-08-17]
 	Updated math/mpfr to 2.3.1 [bjs 2008-08-17]
 	Updated graphics/Mesa to 7.0.4.1 [bjs 2008-08-17]
