@@ -1,8 +1,8 @@
-$NetBSD: patch-ar,v 1.1.1.1 2005/01/25 15:59:27 xtraeme Exp $
+$NetBSD: patch-ar,v 1.2 2008/08/17 23:50:06 dholland Exp $
 
---- x11/viewport.cpp.orig	2003-11-27 15:28:43.000000000 -0800
-+++ x11/viewport.cpp	2003-11-27 15:28:54.000000000 -0800
-@@ -44,7 +44,8 @@
+--- x11/viewport.cpp.orig	2000-01-19 12:54:14.000000000 -0500
++++ x11/viewport.cpp	2008-08-17 19:18:13.000000000 -0400
+@@ -44,7 +44,8 @@ extern "C" {
  #include <X11/Xos.h>
  #include <X11/keysym.h>
  }
@@ -12,3 +12,12 @@ $NetBSD: patch-ar,v 1.1.1.1 2005/01/25 15:59:27 xtraeme Exp $
  
  
  #define TICK_BORDER_WIDTH 5 // border width big enough for a tick mark.
+@@ -1632,7 +1633,7 @@ void Viewport::panel_callback(Panel* pan
+   // Would be much better to put the radio-button logic in the Panel classes.
+   if (pClosure->radio) {
+     // SGI compiler says you can't cast void* to Boolean.
+-    Boolean bValue = (Boolean)(int)value;
++    Boolean bValue = (Boolean)(intptr_t)value;
+     if (!bValue) {
+       ((TogglePanel*)panel)->set_value(True);
+     }

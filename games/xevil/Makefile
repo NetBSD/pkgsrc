@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2008/03/04 06:59:06 jlam Exp $
+# $NetBSD: Makefile,v 1.20 2008/08/17 23:50:06 dholland Exp $
 
 DISTNAME=	xevilsrc2.02r2
 PKGNAME=	xevil-2.02
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	games x11
 MASTER_SITES=	http://www.xevil.com/download/stable/
 EXTRACT_SUFX=	.zip
@@ -35,4 +35,5 @@ SUBST_FILES.uname=	cmn/utils.cpp
 SUBST_SED.uname=	-e 's,@UNAME@,${UNAME},g'
 
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

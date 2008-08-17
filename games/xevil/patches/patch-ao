@@ -1,7 +1,7 @@
-$NetBSD: patch-ao,v 1.1.1.1 2005/01/25 15:59:27 xtraeme Exp $
+$NetBSD: patch-ao,v 1.2 2008/08/17 23:50:06 dholland Exp $
 
---- cmn/game_style.cpp.orig	2003-11-27 15:21:04.000000000 -0800
-+++ cmn/game_style.cpp	2003-11-27 15:21:34.000000000 -0800
+--- cmn/game_style.cpp.orig	2003-03-22 20:47:42.000000000 -0500
++++ cmn/game_style.cpp	2008-08-17 19:16:52.000000000 -0400
 @@ -29,12 +29,11 @@
  
  // Include Files
@@ -18,3 +18,12 @@ $NetBSD: patch-ao,v 1.1.1.1 2005/01/25 15:59:27 xtraeme Exp $
  #endif
  
  #if WIN32
+@@ -2680,7 +2679,7 @@ int ZigZag::new_level_check(int,WorldP w
+     HumanP human = locator->get_human(n);
+     if (human) {
+       // previous depth
+-      int depthOld = (int)human->get_data();
++      int depthOld = (int)(intptr_t)human->get_data();
+       Id id = human->get_id();
+ 
+       // Get physical for intelligence
