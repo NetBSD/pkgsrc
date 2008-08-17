@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.2 2007/11/07 14:00:54 rillig Exp $
+$NetBSD: patch-ag,v 1.3 2008/08/17 23:50:06 dholland Exp $
 
 --- cmn/utils.cpp.orig	2007-11-07 14:55:38.000000000 +0100
 +++ cmn/utils.cpp	2007-11-07 14:57:57.000000000 +0100
@@ -29,15 +29,36 @@ $NetBSD: patch-ag,v 1.2 2007/11/07 14:00:54 rillig Exp $
  #ifdef WIN32
  // For file manipulation routines.
  #include <direct.h>
-@@ -475,7 +477,7 @@ char* Utils::get_OS_info() {
+@@ -483,11 +483,7 @@
  #endif
  
  
--#define UNAME_PATH "@UNAME@"
-+#define UNAME_PATH "/usr/bin/uname"
+-#ifdef UNAME_USR_BIN
+-#define UNAME_PATH "/usr/bin/uname"
+-#else
+-#define UNAME_PATH "/bin/uname"
+-#endif
++#define UNAME_PATH "@UNAME@"
  
  #ifdef X11
    FILE* fp = popen(UNAME_PATH " -a","r");
+@@ -596,7 +598,7 @@
+ }
+ 
+ 
+-
++#if 0 /* unused and broken */
+ void PtrList::write(OutStreamP out) const{
+   // Not tested.
+   out->write_int(len);
+@@ -604,6 +606,7 @@
+     out->write_int((int)data[n]);
+   }
+ }
++#endif
+ 
+ 
+ 
 @@ -757,7 +759,7 @@ public:
  
  
@@ -47,3 +68,12 @@ $NetBSD: patch-ag,v 1.2 2007/11/07 14:00:54 rillig Exp $
    /* MODIFIES: index */
    /* EFFECTS: Internal helper function.  Return the Bucket containing key
       or NULL if not found.  Set index to the bucket list for key whether
+@@ -942,7 +942,7 @@
+ // Pretty crappy hash function, I know.
+ // Careful if bucketsNum is a power of 2.
+ int HashTable::defaultHash(void* key,int bucketsNum) {
+-  return ((unsigned int)key) % bucketsNum;
++  return ((unsigned long)key) % bucketsNum;
+ }
+ 
+ 
