@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/12/31 07:05:00 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/08/17 20:09:12 dholland Exp $
 bin/hsml
 lib/screws/BasicExec.so
 lib/screws/CleanLog.so
@@ -91,6 +91,7 @@ share/screws/mime.types
 @dirrm share/screws/hsml-inc
 @dirrm share/screws
 @dirrm share/examples/screws
+@dirrm share/doc/screws/examples
 @dirrm share/doc/screws
 @dirrm libexec/screws/sh
 @dirrm libexec/screws/perl/htdocs/example.xslt
