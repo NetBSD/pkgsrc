@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.36 2008/02/06 18:45:32 reed Exp $
+# $NetBSD: Makefile,v 1.37 2008/08/17 04:36:28 dholland Exp $
 #
 
 DISTNAME=	Squeak-3.9-8
 PKGNAME=	squeak-3.9.8
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang
 MASTER_SITES=	http://ftp.squeak.org/3.9/unix-linux/
 DISTFILES=	Squeak-3.9-8.src.tar.gz
@@ -17,7 +17,8 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	automake14 gmake gzip
+USE_TOOLS+=	automake14 gmake gzip bash:run
+REPLACE_BASH+=	platforms/unix/npsqueak/npsqueakrun.in
 
 AUTOCONF_REQD=	2.57
 AUTOMAKE_REQD=	1.4.6
