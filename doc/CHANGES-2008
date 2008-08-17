@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1897 2008/08/17 14:08:05 taca Exp $
+$NetBSD: CHANGES-2008,v 1.1898 2008/08/17 14:14:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3236,3 +3236,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/libol to 0.3.18nb2 [adrianp 2008-08-17]
 	Updated net/smokeping to 2.4.2 [adrianp 2008-08-17]
 	Updated www/drupal6-translations to 20080817 [taca 2008-08-17]
+	Updated chat/loudmouth to 1.4.1 [wiz 2008-08-17]
