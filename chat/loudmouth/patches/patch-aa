@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.3 2008/08/17 14:14:11 wiz Exp $
+
+--- loudmouth/asyncns.c.orig	2008-02-24 21:41:25.000000000 +0000
++++ loudmouth/asyncns.c
+@@ -154,6 +154,7 @@ typedef struct res_query_response {
+     int ret;
+ } res_response_t;
+ 
++#define HAVE_STRNDUP
+ #ifndef HAVE_STRNDUP
+ 
+ static char *strndup(const char *s, size_t l) {

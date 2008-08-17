@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2008/08/17 14:14:11 wiz Exp $
+
+--- loudmouth/lm-sock.c.orig	2008-07-27 09:21:48.000000000 +0000
++++ loudmouth/lm-sock.c
+@@ -29,6 +29,7 @@
+ #include <unistd.h>
+ #include <sys/socket.h>
+ #include <fcntl.h>
++#include <netinet/in_systm.h>
+ #include <netinet/in.h>
+ #include <netinet/ip.h>
+ #include <netinet/tcp.h>
