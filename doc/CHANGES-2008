@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1887 2008/08/16 18:53:58 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1888 2008/08/17 05:38:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3217,3 +3217,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated time/ruby-tzinfo to 0.3.9 [taca 2008-08-16]
 	Updates security/ipsec-tools to 0.7.1 [manu 2008-08-16]
 	Updated graphics/png to 1.2.30 [wiz 2008-08-16]
+	Added www/drupal6-translations version 20080816 [taca 2008-08-17]
