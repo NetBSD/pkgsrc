@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1913 2008/08/18 21:42:52 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1914 2008/08/18 21:47:38 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3273,3 +3273,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added mail/p5-Email-FolderType version 0.813 [seb 2008-08-18]
 	Updated devel/doxygen to 1.5.6nb1 [tron 2008-08-18]
 	Added mail/p5-Email-Folder version 0.854 [seb 2008-08-18]
+	Updated chat/xchat to 2.8.6nb3 [tron 2008-08-18]
