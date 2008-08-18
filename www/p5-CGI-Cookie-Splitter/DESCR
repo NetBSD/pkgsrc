@@ -1,0 +1,3 @@
+The Perl 5 module CGI::Cookie::Splitter provides a pretty simple
+interface to generate small cookies that are under a certain limit,
+without wasting too much effort.
