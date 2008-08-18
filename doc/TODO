@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7481 2008/08/18 07:20:11 martti Exp $
+$NetBSD: TODO,v 1.7482 2008/08/18 23:35:14 bjs Exp $
 
 Suggested new packages
 ======================
@@ -1436,7 +1436,6 @@ Suggested package updates
 	o yabause-0.9.6
 	o yacas-1.2.0
 	o yafc-1.1
-	o yasm-0.7.1
 	o yodl-2.01.02
 	o youtube-dl-20080809
 	o ysm-2.9.9.1
