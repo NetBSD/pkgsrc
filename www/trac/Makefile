@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/07/04 16:30:53 gdt Exp $
+# $NetBSD: Makefile,v 1.33 2008/08/18 00:55:48 epg Exp $
 #
 
 DISTNAME=	trac-0.10.5
@@ -6,7 +6,7 @@ CATEGORIES=	devel www
 MASTER_SITES=	http://ftp.edgewall.org/pub/trac/ \
 		ftp://ftp.edgewall.org/pub/trac/
 
-MAINTAINER=	epg@NetBSD.org
+MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://trac.edgewall.org/
 COMMENT=	Subversion repository browser, wiki, and issue tracking system
 
