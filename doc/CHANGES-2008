@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1908 2008/08/18 07:19:49 martti Exp $
+$NetBSD: CHANGES-2008,v 1.1909 2008/08/18 12:30:40 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3268,3 +3268,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/xevil to 2.02nb2 [dholland 2008-08-17]
 	Updated mail/postfix to 2.5.4 [martti 2008-08-18]
 	Updated mail/postfix-current to 2.6.20080814 [martti 2008-08-18]
+	Updated databases/sqlite3 to 3.6.1 [adam 2008-08-18]
