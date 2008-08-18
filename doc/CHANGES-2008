@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1907 2008/08/18 00:42:45 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.1908 2008/08/18 07:19:49 martti Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3266,3 +3266,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/p5-GSSAPI to 0.26 [markd 2008-08-17]
 	Updated www/py-webpy to 0.23 [darcy 2008-08-17]
 	Updated games/xevil to 2.02nb2 [dholland 2008-08-17]
+	Updated mail/postfix to 2.5.4 [martti 2008-08-18]
+	Updated mail/postfix-current to 2.6.20080814 [martti 2008-08-18]
