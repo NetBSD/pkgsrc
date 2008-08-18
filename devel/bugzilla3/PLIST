@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/05/06 19:45:54 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.2.4.1 2008/08/18 23:27:06 rtr Exp $
 share/bugzilla/Bugzilla.pm
 share/bugzilla/Bugzilla/Attachment.pm
 share/bugzilla/Bugzilla/Attachment/PatchReader.pm
@@ -173,7 +173,7 @@ share/bugzilla/docs/html/trbl-relogin-everyone.html
 share/bugzilla/docs/html/trbl-relogin-some.html
 share/bugzilla/docs/html/trbl-testserver.html
 share/bugzilla/docs/html/troubleshooting.html
-share/bugzilla/docs/html/upgrading.html
+share/bugzilla/docs/html/upgrade.html
 share/bugzilla/docs/html/useradmin.html
 share/bugzilla/docs/html/userpreferences.html
 share/bugzilla/docs/html/using-intro.html
