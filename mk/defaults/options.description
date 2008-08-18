@@ -188,6 +188,7 @@ liferea-seamonkey	Use Seamonkey to render HTML.
 links-zlib		Enable zlib support for the links WWW browser.
 lprng-priv-ports	Connections must be made from privileged ports.
 lprng-suid		Install LPRng executables setuid root.
+lua			Enable Lua support.
 m68060-optimized	Optimize for m68060 (only).
 mad			Enable usage of the mad library to play MP3 files.
 maintainer-zts		Enable the Zend Thread Safety option for PHP
