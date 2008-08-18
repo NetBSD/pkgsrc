@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1905 2008/08/17 23:05:06 darcy Exp $
+$NetBSD: CHANGES-2008,v 1.1906 2008/08/18 00:41:37 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3261,5 +3261,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/p5-Email-MIME-Attachment-Stripper to 1.315 [he 2008-08-17]
 	Updated www/p5-HTML-LinkExtractor to 0.13 [he 2008-08-17]
 	Updated net/p5-Socket6 to 0.21 [he 2008-08-17]
+	Updated www/screws to 0.56nb6 [dholland 2008-08-17]
+	Updated games/crafty to 22.1nb1 [dholland 2008-08-17]
 	Updated security/p5-GSSAPI to 0.26 [markd 2008-08-17]
 	Updated web/py-webpy to 0.23 [darcy 2008-08-17]
+	Updated games/xevil to 2.02nb2 [dholland 2008-08-17]
