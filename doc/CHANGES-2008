@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1916 2008/08/18 22:30:25 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1917 2008/08/18 23:34:31 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3276,3 +3276,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/xchat to 2.8.6nb3 [tron 2008-08-18]
 	Added devel/p5-File-Path-Expand version 1.02 [seb 2008-08-18]
 	Added mail/p5-Email-LocalDelivery version 0.217 [seb 2008-08-18]
+	Updated devel/yasm to 0.7.1 [bjs 2008-08-18]
