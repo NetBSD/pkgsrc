@@ -1,0 +1,2 @@
+The Perl 5 module Email::Folder provides a class for reading all
+the messages from a folder as Email::Simple objects.
