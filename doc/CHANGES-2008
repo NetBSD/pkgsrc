@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1910 2008/08/18 13:47:42 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1911 2008/08/18 14:09:12 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3270,3 +3270,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/postfix-current to 2.6.20080814 [martti 2008-08-18]
 	Updated databases/sqlite3 to 3.6.1 [adam 2008-08-18]
 	Added www/p5-CGI-Cookie-Splitter version 0.02 [seb 2008-08-18]
+	Added mail/p5-Email-FolderType version 0.813 [seb 2008-08-18]
