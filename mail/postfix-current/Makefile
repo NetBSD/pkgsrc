@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.97 2008/03/17 07:11:42 martti Exp $
+# $NetBSD: Makefile,v 1.97.6.1 2008/08/18 09:57:49 rtr Exp $
 
-DISTNAME=	postfix-2.6-20080221
-PKGNAME=	postfix-2.6.20080221
+DISTNAME=	postfix-2.6-20080726
+PKGNAME=	postfix-2.6.20080726
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.porcupine.org/mirrors/postfix-release/experimental/
 DIST_SUBDIR=	postfix
@@ -89,7 +89,7 @@ LIBEXECDIR=		${PREFIX}/libexec/postfix
 DOCDIR=			${PREFIX}/share/doc/postfix
 EXAMPLEDIR=		${PREFIX}/share/examples/postfix
 
-FILES_SUBST+=		EXAMPLEDIR=${EXAMPLEDIR:Q}
+FILES_SUBST+=		EXAMPLEDIR=${EXAMPLEDIR}
 MESSAGE_SUBST+=		EXAMPLEDIR=${EXAMPLEDIR}
 MESSAGE_SUBST+=		DOCDIR=${DOCDIR}
 
