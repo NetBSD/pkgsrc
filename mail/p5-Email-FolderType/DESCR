@@ -1,0 +1,2 @@
+The Perl 5 module Email::FolderType provides a utility subroutine
+for detecting the type of a given mail folder
