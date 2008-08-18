@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1906 2008/08/18 00:41:37 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.1907 2008/08/18 00:42:45 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3264,5 +3264,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/screws to 0.56nb6 [dholland 2008-08-17]
 	Updated games/crafty to 22.1nb1 [dholland 2008-08-17]
 	Updated security/p5-GSSAPI to 0.26 [markd 2008-08-17]
-	Updated web/py-webpy to 0.23 [darcy 2008-08-17]
+	Updated www/py-webpy to 0.23 [darcy 2008-08-17]
 	Updated games/xevil to 2.02nb2 [dholland 2008-08-17]
