@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.42 2008/08/18 23:15:18 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.43 2008/08/18 23:27:36 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -92,3 +92,5 @@ pullup ticket #2497 - requested by kefren
 gnutls: update package for fixes
 pullup ticket #2490 - requested by adrianp
 bugzilla: update for security issue
+pullup ticket #2493 - requested by adrianp
+bugzilla3: update package for security issues
