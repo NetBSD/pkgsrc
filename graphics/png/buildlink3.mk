@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2007/10/26 03:53:39 bjs Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2008/08/18 21:35:37 tron Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PNG_BUILDLINK3_MK:=	${PNG_BUILDLINK3_MK}+
@@ -27,6 +27,13 @@ BUILDLINK_PKGSRCDIR.png?=	../../graphics/png
 CPPFLAGS+=	-DPNG_NO_ASSEMBLER_CODE
 .  endif
 .endif	# PNG_BUILDLINK3_MK
+
+# Work around broken libtool archive "/usr/X11/lib/libpng12.la" under
+# Mac OS 10.5.4 or newer which references a non-existing version of the
+# PNG shared library.
+.if !empty(MACHINE_PLATFORM:MDarwin-9.*-*)
+BUILDLINK_TRANSFORM+=	rename:-lpng12.0.26.0:-lpng
+.endif
 
 .include "../../devel/zlib/buildlink3.mk"
 
