@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.39 2008/08/18 09:46:49 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.40 2008/08/18 09:58:13 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -86,3 +86,5 @@ blobwars: remove at request of upstream author
 starfighter: remove at request of upstream author
 pullup ticket #2495 - requested by martti
 postfix: update package for security fixes
+pullup ticket #2496 - requested by martti
+postfix-current: update package for fixes
