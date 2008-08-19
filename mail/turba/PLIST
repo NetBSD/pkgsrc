@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/06/17 21:29:59 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.11.4.1 2008/08/19 01:55:43 rtr Exp $
 share/doc/turba/INSTALL
 share/doc/turba/LDAP
 share/doc/turba/README
@@ -20,6 +20,22 @@ share/horde/turba/delete.php
 share/horde/turba/deletefile.php
 share/horde/turba/edit.php
 share/horde/turba/index.php
+share/horde/turba/js/QuickFinder.js
+share/horde/turba/js/contact_tabs.js
+share/horde/turba/js/dragdrop.js
+share/horde/turba/js/effects.js
+share/horde/turba/js/prototype.js
+share/horde/turba/js/redbox.js
+share/horde/turba/js/scriptaculous.js
+share/horde/turba/js/src/QuickFinder.js
+share/horde/turba/js/src/contact_tabs.js
+share/horde/turba/js/src/dragdrop.js
+share/horde/turba/js/src/effects.js
+share/horde/turba/js/src/prototype.js
+share/horde/turba/js/src/redbox.js
+share/horde/turba/js/src/scriptaculous.js
+share/horde/turba/js/src/tables.js
+share/horde/turba/js/tables.js
 share/horde/turba/lib/Block/minisearch.php
 share/horde/turba/lib/Block/tree_menu.php
 share/horde/turba/lib/Data/ldif.php
@@ -269,6 +285,8 @@ share/horde/turba/view.php
 @dirrm share/horde/turba/scripts/ldap
 @dirrm share/horde/turba/scripts
 @dirrm share/horde/turba/po
+@dirrm share/horde/turba/js/src
+@dirrm share/horde/turba/js
 @dirrm share/horde/turba/locale/zh_TW/LC_MESSAGES
 @dirrm share/horde/turba/locale/zh_TW
 @dirrm share/horde/turba/locale/zh_CN/LC_MESSAGES
