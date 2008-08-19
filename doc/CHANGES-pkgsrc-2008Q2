@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.44 2008/08/19 00:26:50 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.45 2008/08/19 01:27:47 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -96,3 +96,5 @@ pullup ticket #2493 - requested by adrianp
 bugzilla3: update package for security issues
 pullup ticket #2489 - requested by manu
 ipsec-tools: update package for cve
+pullup ticket #2491 - requested by adrianp
+imp: fix package plist
