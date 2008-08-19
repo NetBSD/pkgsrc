@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1925 2008/08/19 18:51:19 heinz Exp $
+$NetBSD: CHANGES-2008,v 1.1926 2008/08/19 19:30:51 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3292,3 +3292,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/pidgin-otr to 3.2.0nb1 [bjs 2008-08-19]
 	Updated chat/pidgin-sametime to 2.5.0 [bjs 2008-08-19]
 	Updated chat/pidgin-silc to 2.5.0 [bjs 2008-08-19]
+	Added devel/p5-Sub-Override version 0.08 [seb 2008-08-19]
