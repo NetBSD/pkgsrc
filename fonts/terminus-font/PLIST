@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/09/06 14:01:17 obache Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/08/19 09:52:01 bjs Exp $
+lib/X11/fonts/misc/ter-112b.pcf.gz
 lib/X11/fonts/misc/ter-112n.pcf.gz
 lib/X11/fonts/misc/ter-114b.pcf.gz
 lib/X11/fonts/misc/ter-114n.pcf.gz
@@ -12,6 +13,7 @@ lib/X11/fonts/misc/ter-128b.pcf.gz
 lib/X11/fonts/misc/ter-128n.pcf.gz
 lib/X11/fonts/misc/ter-132b.pcf.gz
 lib/X11/fonts/misc/ter-132n.pcf.gz
+lib/X11/fonts/misc/ter-212b.pcf.gz
 lib/X11/fonts/misc/ter-212n.pcf.gz
 lib/X11/fonts/misc/ter-214b.pcf.gz
 lib/X11/fonts/misc/ter-214n.pcf.gz
@@ -25,6 +27,7 @@ lib/X11/fonts/misc/ter-228b.pcf.gz
 lib/X11/fonts/misc/ter-228n.pcf.gz
 lib/X11/fonts/misc/ter-232b.pcf.gz
 lib/X11/fonts/misc/ter-232n.pcf.gz
+lib/X11/fonts/misc/ter-512b.pcf.gz
 lib/X11/fonts/misc/ter-512n.pcf.gz
 lib/X11/fonts/misc/ter-514b.pcf.gz
 lib/X11/fonts/misc/ter-514n.pcf.gz
@@ -38,6 +41,21 @@ lib/X11/fonts/misc/ter-528b.pcf.gz
 lib/X11/fonts/misc/ter-528n.pcf.gz
 lib/X11/fonts/misc/ter-532b.pcf.gz
 lib/X11/fonts/misc/ter-532n.pcf.gz
+lib/X11/fonts/misc/ter-712b.pcf.gz
+lib/X11/fonts/misc/ter-712n.pcf.gz
+lib/X11/fonts/misc/ter-714b.pcf.gz
+lib/X11/fonts/misc/ter-714n.pcf.gz
+lib/X11/fonts/misc/ter-716b.pcf.gz
+lib/X11/fonts/misc/ter-716n.pcf.gz
+lib/X11/fonts/misc/ter-720b.pcf.gz
+lib/X11/fonts/misc/ter-720n.pcf.gz
+lib/X11/fonts/misc/ter-724b.pcf.gz
+lib/X11/fonts/misc/ter-724n.pcf.gz
+lib/X11/fonts/misc/ter-728b.pcf.gz
+lib/X11/fonts/misc/ter-728n.pcf.gz
+lib/X11/fonts/misc/ter-732b.pcf.gz
+lib/X11/fonts/misc/ter-732n.pcf.gz
+lib/X11/fonts/misc/ter-912b.pcf.gz
 lib/X11/fonts/misc/ter-912n.pcf.gz
 lib/X11/fonts/misc/ter-914b.pcf.gz
 lib/X11/fonts/misc/ter-914n.pcf.gz
@@ -51,6 +69,7 @@ lib/X11/fonts/misc/ter-928b.pcf.gz
 lib/X11/fonts/misc/ter-928n.pcf.gz
 lib/X11/fonts/misc/ter-932b.pcf.gz
 lib/X11/fonts/misc/ter-932n.pcf.gz
+lib/X11/fonts/misc/ter-c12b.pcf.gz
 lib/X11/fonts/misc/ter-c12n.pcf.gz
 lib/X11/fonts/misc/ter-c14b.pcf.gz
 lib/X11/fonts/misc/ter-c14n.pcf.gz
@@ -64,6 +83,7 @@ lib/X11/fonts/misc/ter-c28b.pcf.gz
 lib/X11/fonts/misc/ter-c28n.pcf.gz
 lib/X11/fonts/misc/ter-c32b.pcf.gz
 lib/X11/fonts/misc/ter-c32n.pcf.gz
+lib/X11/fonts/misc/ter-d12b.pcf.gz
 lib/X11/fonts/misc/ter-d12n.pcf.gz
 lib/X11/fonts/misc/ter-d14b.pcf.gz
 lib/X11/fonts/misc/ter-d14n.pcf.gz
@@ -77,6 +97,7 @@ lib/X11/fonts/misc/ter-d28b.pcf.gz
 lib/X11/fonts/misc/ter-d28n.pcf.gz
 lib/X11/fonts/misc/ter-d32b.pcf.gz
 lib/X11/fonts/misc/ter-d32n.pcf.gz
+lib/X11/fonts/misc/ter-f12b.pcf.gz
 lib/X11/fonts/misc/ter-f12n.pcf.gz
 lib/X11/fonts/misc/ter-f14b.pcf.gz
 lib/X11/fonts/misc/ter-f14n.pcf.gz
@@ -90,6 +111,7 @@ lib/X11/fonts/misc/ter-f28b.pcf.gz
 lib/X11/fonts/misc/ter-f28n.pcf.gz
 lib/X11/fonts/misc/ter-f32b.pcf.gz
 lib/X11/fonts/misc/ter-f32n.pcf.gz
+lib/X11/fonts/misc/ter-g12b.pcf.gz
 lib/X11/fonts/misc/ter-g12n.pcf.gz
 lib/X11/fonts/misc/ter-g14b.pcf.gz
 lib/X11/fonts/misc/ter-g14n.pcf.gz
@@ -103,6 +125,7 @@ lib/X11/fonts/misc/ter-g28b.pcf.gz
 lib/X11/fonts/misc/ter-g28n.pcf.gz
 lib/X11/fonts/misc/ter-g32b.pcf.gz
 lib/X11/fonts/misc/ter-g32n.pcf.gz
+lib/X11/fonts/misc/ter-k12b.pcf.gz
 lib/X11/fonts/misc/ter-k12n.pcf.gz
 lib/X11/fonts/misc/ter-k14b.pcf.gz
 lib/X11/fonts/misc/ter-k14n.pcf.gz
@@ -116,6 +139,7 @@ lib/X11/fonts/misc/ter-k28b.pcf.gz
 lib/X11/fonts/misc/ter-k28n.pcf.gz
 lib/X11/fonts/misc/ter-k32b.pcf.gz
 lib/X11/fonts/misc/ter-k32n.pcf.gz
+lib/X11/fonts/misc/ter-p12b.pcf.gz
 lib/X11/fonts/misc/ter-p12n.pcf.gz
 lib/X11/fonts/misc/ter-p14b.pcf.gz
 lib/X11/fonts/misc/ter-p14n.pcf.gz
@@ -129,6 +153,7 @@ lib/X11/fonts/misc/ter-p28b.pcf.gz
 lib/X11/fonts/misc/ter-p28n.pcf.gz
 lib/X11/fonts/misc/ter-p32b.pcf.gz
 lib/X11/fonts/misc/ter-p32n.pcf.gz
+lib/X11/fonts/misc/ter-u12b.pcf.gz
 lib/X11/fonts/misc/ter-u12n.pcf.gz
 lib/X11/fonts/misc/ter-u14b.pcf.gz
 lib/X11/fonts/misc/ter-u14n.pcf.gz
@@ -142,6 +167,7 @@ lib/X11/fonts/misc/ter-u28b.pcf.gz
 lib/X11/fonts/misc/ter-u28n.pcf.gz
 lib/X11/fonts/misc/ter-u32b.pcf.gz
 lib/X11/fonts/misc/ter-u32n.pcf.gz
+lib/X11/fonts/misc/ter-x12b.pcf.gz
 lib/X11/fonts/misc/ter-x12n.pcf.gz
 lib/X11/fonts/misc/ter-x14b.pcf.gz
 lib/X11/fonts/misc/ter-x14n.pcf.gz
