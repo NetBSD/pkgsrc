@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.5 2004/05/16 18:52:11 minskim Exp $
+$NetBSD: patch-ac,v 1.6 2008/08/19 16:14:24 joerg Exp $
 
---- configure.orig	2002-11-01 20:48:14.000000000 -0600
+--- configure.orig	2002-11-02 03:48:14.000000000 +0100
 +++ configure
 @@ -799,6 +799,7 @@ echo "configure:794: checking for existe
          echo "$ac_t""file not found" 1>&6
@@ -18,6 +18,15 @@ $NetBSD: patch-ac,v 1.5 2004/05/16 18:52:11 minskim Exp $
  
  
  # These are substituted into the run scripts
+@@ -1677,7 +1679,7 @@ echo "configure:1668: checking system ve
+ 	    # results, and the version is kept in special file).
+ 	
+ 	    if test -r /etc/.relid -a "X`uname -n`" = "X`uname -s`" ; then
+-		system=MP-RAS-`awk '{print }' /etc/.relid'`
++		system=MP-RAS-`awk '{print }' /etc/.relid`
+ 	    fi
+ 	    if test "`uname -s`" = "AIX" ; then
+ 		system=AIX-`uname -v`.`uname -r`
 @@ -1894,7 +1896,7 @@ fi
  	    DL_LIBS=""
  	    LDFLAGS="-Wl,-D,08000000"
