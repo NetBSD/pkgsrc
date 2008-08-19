@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1922 2008/08/19 17:52:20 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1923 2008/08/19 18:11:51 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3280,3 +3280,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xclip to 0.11 [obache 2008-08-19]
 	Updated net/aria2 to 0.15.2 [bjs 2008-08-19]
 	Added graphics/babl version 0.0.22 [bjs 2008-08-19]
+	Updated devel/pango to 1.20.5nb1 [tron 2008-08-19]
