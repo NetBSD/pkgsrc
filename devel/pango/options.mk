@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2008/04/22 12:15:38 tron Exp $
+# $NetBSD: options.mk,v 1.8 2008/08/19 18:10:22 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.pango
 PKG_SUPPORTED_OPTIONS=	x11
@@ -20,6 +20,14 @@ PLIST.x11=		yes
 .include "../../x11/libX11/buildlink3.mk"
 BUILDLINK_DEPMETHOD.libXt?=	build # only for configure
 .include "../../x11/libXt/buildlink3.mk"
+
+.if ${OPSYS} == "Darwin"
+CONFIGURE_ENV+=	ac_cv_header_Carbon_Carbon_h=no
+.endif
 .else
 CONFIGURE_ARGS+=	--without-x
+
+.if ${OPSYS} == "Darwin"
+PLIST.carbon=	yes
+.endif
 .endif
