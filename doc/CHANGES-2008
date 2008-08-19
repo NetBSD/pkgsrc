@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1919 2008/08/19 13:33:25 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1920 2008/08/19 14:42:19 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3279,3 +3279,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/yasm to 0.7.1 [bjs 2008-08-18]
 	Updated fonts/terminus-font to 4.26 [bjs 2008-08-19]
 	Updated x11/xclip to 0.11 [obache 2008-08-19]
+	Updated net/aria2 to 0.15.2 [bjs 2008-08-19]
