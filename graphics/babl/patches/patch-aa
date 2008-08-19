@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/08/19 17:51:14 bjs Exp $
+
+Don't build the RSS changelog, as doing so requires Ruby.
+
+--- docs/Makefile.in.orig	2008-06-12 17:50:53.000000000 -0400
++++ docs/Makefile.in
+@@ -547,7 +547,7 @@ uninstall-info: uninstall-info-recursive
+ 
+ .SILENT:
+ 
+-all: $(HTML_FILES) rss
++all: $(HTML_FILES)
+ 
+ BablFishPath.html: $(babl_fish_path_dhtml)
+ 	echo -n "HTML:"

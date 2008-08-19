@@ -1,0 +1,19 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/08/19 17:51:14 bjs Exp $
+
+Only build documentation if BUILD_DOCS is defined in MAKE_ENV.
+
+--- Makefile.am.orig	2008-06-12 17:05:58.000000000 -0400
++++ Makefile.am
+@@ -3,8 +3,11 @@ AUTOMAKE_OPTIONS = foreign dist-bzip2
+ SUBDIRS = \
+ 	babl		\
+ 	extensions	\
+-	tests		\
++	tests 		
++ifdef BUILD_DOCS
++SUBDIRS+= \
+ 	docs
++endif
+ 
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = babl.pc
