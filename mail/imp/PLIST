@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/05/26 12:55:02 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.11.4.1 2008/08/19 01:27:09 rtr Exp $
 share/doc/imp/CHANGES
 share/doc/imp/COPYING
 share/doc/imp/CREDITS
@@ -30,6 +30,56 @@ share/horde/imp/filterprefs.php
 share/horde/imp/folders.php
 share/horde/imp/imple.php
 share/horde/imp/index.php
+share/horde/imp/js/KeyNavList.js
+share/horde/imp/js/SpellChecker.js
+share/horde/imp/js/acl.js
+share/horde/imp/js/addressesBlocks.js
+share/horde/imp/js/builder.js
+share/horde/imp/js/compose.js
+share/horde/imp/js/contacts.js
+share/horde/imp/js/controls.js
+share/horde/imp/js/dragdrop.js
+share/horde/imp/js/effects.js
+share/horde/imp/js/fetchmailprefs.js
+share/horde/imp/js/folders.js
+share/horde/imp/js/ieEscGuard.js
+share/horde/imp/js/login.js
+share/horde/imp/js/mailbox.js
+share/horde/imp/js/message.js
+share/horde/imp/js/popup.js
+share/horde/imp/js/prototype.js
+share/horde/imp/js/redbox.js
+share/horde/imp/js/scriptaculous.js
+share/horde/imp/js/search.js
+share/horde/imp/js/slider.js
+share/horde/imp/js/src/KeyNavList.js
+share/horde/imp/js/src/SpellChecker.js
+share/horde/imp/js/src/acl.js
+share/horde/imp/js/src/addressesBlocks.js
+share/horde/imp/js/src/builder.js
+share/horde/imp/js/src/compose.js
+share/horde/imp/js/src/contacts.js
+share/horde/imp/js/src/controls.js
+share/horde/imp/js/src/dragdrop.js
+share/horde/imp/js/src/effects.js
+share/horde/imp/js/src/fetchmailprefs.js
+share/horde/imp/js/src/folders.js
+share/horde/imp/js/src/ieEscGuard.js
+share/horde/imp/js/src/login.js
+share/horde/imp/js/src/mailbox.js
+share/horde/imp/js/src/message.js
+share/horde/imp/js/src/popup.js
+share/horde/imp/js/src/prototype.js
+share/horde/imp/js/src/redbox.js
+share/horde/imp/js/src/scriptaculous.js
+share/horde/imp/js/src/search.js
+share/horde/imp/js/src/slider.js
+share/horde/imp/js/src/stripe.js
+share/horde/imp/js/src/tables.js
+share/horde/imp/js/src/unblockImages.js
+share/horde/imp/js/stripe.js
+share/horde/imp/js/tables.js
+share/horde/imp/js/unblockImages.js
 share/horde/imp/lib/Auth/imp.php
 share/horde/imp/lib/Block/summary.php
 share/horde/imp/lib/Block/tree_folders.php
@@ -558,6 +608,8 @@ share/horde/imp/view.php
 @dirrm share/horde/imp/scripts/sql
 @dirrm share/horde/imp/scripts
 @dirrm share/horde/imp/po
+@dirrm share/horde/imp/js/src
+@dirrm share/horde/imp/js
 @dirrm share/horde/imp/locale/zh_TW/LC_MESSAGES
 @dirrm share/horde/imp/locale/zh_TW
 @dirrm share/horde/imp/locale/zh_CN/LC_MESSAGES
