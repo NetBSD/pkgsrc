@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/05/30 12:29:00 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/08/19 18:18:11 bjs Exp $
 
 DISTNAME=	pidgin-icb-20070505
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	http://nic.com.pl/~alek/pidgin-icb/
 
