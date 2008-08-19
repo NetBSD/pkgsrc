@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.4 2006/05/09 18:20:18 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2008/08/19 14:34:29 joerg Exp $
 
---- itcl/configure.orig	2004-09-08 01:23:50.000000000 +0000
+--- itcl/configure.orig	2004-09-08 03:23:50.000000000 +0200
 +++ itcl/configure
 @@ -1,9 +1,8 @@
  #! /bin/sh
@@ -2733,6 +2733,15 @@ $NetBSD: patch-aa,v 1.4 2006/05/09 18:20:18 joerg Exp $
  	TCL_GENERIC_DIR_NATIVE='${TCL_TOP_DIR_NATIVE}/generic'
  	TCL_UNIX_DIR_NATIVE='${TCL_TOP_DIR_NATIVE}/unix'
  	TCL_WIN_DIR_NATIVE='${TCL_TOP_DIR_NATIVE}/win'
+@@ -6045,7 +6407,7 @@ echo "${ECHO_T}unknown (can't find uname
+ 	    # results, and the version is kept in special file).
+ 
+ 	    if test -r /etc/.relid -a "X`uname -n`" = "X`uname -s`" ; then
+-		system=MP-RAS-`awk '{print }' /etc/.relid'`
++		system=MP-RAS-`awk '{print }' /etc/.relid`
+ 	    fi
+ 	    if test "`uname -s`" = "AIX" ; then
+ 		system=AIX-`uname -v`.`uname -r`
 @@ -6069,7 +6431,6 @@ else
    ac_check_lib_save_LIBS=$LIBS
  LIBS="-ldl  $LIBS"

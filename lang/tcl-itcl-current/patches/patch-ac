@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.4 2006/05/09 18:20:18 joerg Exp $
+$NetBSD: patch-ac,v 1.5 2008/08/19 14:34:29 joerg Exp $
 
---- itk/configure.orig	2004-09-08 01:23:51.000000000 +0000
+--- itk/configure.orig	2004-09-08 03:23:51.000000000 +0200
 +++ itk/configure
 @@ -1,9 +1,8 @@
  #! /bin/sh
@@ -2884,6 +2884,15 @@ $NetBSD: patch-ac,v 1.4 2006/05/09 18:20:18 joerg Exp $
  LIBS=$ac_check_lib_save_LIBS
  fi
  echo "$as_me:$LINENO: result: $ac_cv_lib_Xwindow_XCreateWindow" >&5
+@@ -6784,7 +7166,7 @@ echo "${ECHO_T}unknown (can't find uname
+ 	    # results, and the version is kept in special file).
+ 
+ 	    if test -r /etc/.relid -a "X`uname -n`" = "X`uname -s`" ; then
+-		system=MP-RAS-`awk '{print }' /etc/.relid'`
++		system=MP-RAS-`awk '{print }' /etc/.relid`
+ 	    fi
+ 	    if test "`uname -s`" = "AIX" ; then
+ 		system=AIX-`uname -v`.`uname -r`
 @@ -6808,7 +7190,6 @@ else
    ac_check_lib_save_LIBS=$LIBS
  LIBS="-ldl  $LIBS"
