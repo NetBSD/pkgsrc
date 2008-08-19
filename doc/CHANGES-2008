@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1920 2008/08/19 14:42:19 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1921 2008/08/19 16:35:25 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3271,7 +3271,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/sqlite3 to 3.6.1 [adam 2008-08-18]
 	Added www/p5-CGI-Cookie-Splitter version 0.02 [seb 2008-08-18]
 	Added mail/p5-Email-FolderType version 0.813 [seb 2008-08-18]
-	Updated devel/doxygen to 1.5.6nb1 [tron 2008-08-18]
 	Added mail/p5-Email-Folder version 0.854 [seb 2008-08-18]
 	Updated chat/xchat to 2.8.6nb3 [tron 2008-08-18]
 	Added devel/p5-File-Path-Expand version 1.02 [seb 2008-08-18]
