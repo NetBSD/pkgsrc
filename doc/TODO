@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7484 2008/08/19 14:43:16 bjs Exp $
+$NetBSD: TODO,v 1.7485 2008/08/19 15:06:33 taca Exp $
 
 Suggested new packages
 ======================
@@ -1191,7 +1191,7 @@ Suggested package updates
 	o ruby-parsetree-2.2.0
 	o ruby-rb-gsl-1.10.3
 	o ruby-rbtree-0.3.0
-	o ruby-rcairo-1.6.3
+	o ruby-rcairo-1.7.0
 	o ruby-rd-mode-0.6.22
 	o ruby-rdtool-0.6.22
 	o ruby-test-spec-0.9.0
@@ -1201,7 +1201,7 @@ Suggested package updates
 	o rxvt-unicode-9.05 [pkg/38988]
 	o sablecc-3.2
 	o samba-3.0.31
-	o samba-3.2.1
+	o samba-3.2.2
 	o sarg-2.2.5
 	o scamper-20070201
 	o scapy-1.1.1
