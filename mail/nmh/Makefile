@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.68 2008/08/08 23:41:22 epg Exp $
+# $NetBSD: Makefile,v 1.69 2008/08/19 19:22:46 epg Exp $
 
 DISTNAME=		nmh-1.3
 CATEGORIES=		mail
@@ -9,6 +9,8 @@ HOMEPAGE=		http://www.nongnu.org/nmh/
 COMMENT=		Cleaned up MH mailer suite
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 CONFLICTS=		ja-mh-[0-9]*
 CONFLICTS+=		ja-mh6-[0-9]*
