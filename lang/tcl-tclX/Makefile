@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2007/01/07 09:13:57 rillig Exp $
+# $NetBSD: Makefile,v 1.37 2008/08/19 16:14:24 joerg Exp $
 #
 
 DISTNAME=	tclx8.3.5-src
@@ -17,10 +17,11 @@ CONFLICTS+=		tclX-[0-9]*
 BUILDLINK_API_DEPENDS.tcl+=	tcl>=8.4.7
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME:S/-src//}/unix
-USE_TOOLS+=		gtar
 USE_LIBTOOL=		yes
+USE_TOOLS+=		pax
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared \
 			--with-tcl=${BUILDLINK_PREFIX.tcl}/lib \
@@ -36,10 +37,10 @@ WRKSRC.tcl_cmd=		\
 PKGSRC_TCL_SRC_DIR=	${WRKSRC.tcl_cmd:sh}
 CONFIGURE_ENV+=		PKGSRC_TCL_SRC_DIR=${PKGSRC_TCL_SRC_DIR:Q}
 
-MAKE_ENV+=		GTAR=${GTAR:Q} CHOWN=${CHOWN:Q} CHMOD=${CHMOD:Q} \
+MAKE_ENV+=		CHOWN=${CHOWN:Q} CHMOD=${CHMOD:Q} \
 			SHAREMODE=${SHAREMODE:Q} SHAREOWN=${SHAREOWN:Q} \
-			SHAREGRP=${SHAREGRP:Q} \
-			TCLX_PREFIX=${PREFIX:Q}
+			SHAREGRP=${SHAREGRP:Q} TCLX_PREFIX=${PREFIX:Q} \
+			INSTALL_ROOT=${DESTDIR}
 
 INSTALLATION_DIRS=	bin include
 
@@ -55,10 +56,10 @@ post-build:
 	cd ${WRKSRC}/../tcl/unix && ${MAKE_ENV} ${MAKE} buildhelp
 
 post-install:
-	${FIND} ${PREFIX}/lib/tcl/tclX8.3/help -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
-	${FIND} ${PREFIX}/lib/tcl/tclX8.3/help -type f -print | ${XARGS} ${CHMOD} ${DOCMODE}
-	@${RM} ${PREFIX}/${PKGMANDIR}/man3/TkX_Main.3
-	@${RM} ${PREFIX}/${PKGMANDIR}/man3/Tkx_Init.3
+	${FIND} ${DESTDIR}${PREFIX}/lib/tcl/tclX8.3/help -type d -print | ${XARGS} ${CHMOD} ${PKGDIRMODE}
+	${FIND} ${DESTDIR}${PREFIX}/lib/tcl/tclX8.3/help -type f -print | ${XARGS} ${CHMOD} ${DOCMODE}
+	@${RM} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/TkX_Main.3
+	@${RM} ${DESTDIR}${PREFIX}/${PKGMANDIR}/man3/Tkx_Init.3
 # the above links are installed based on the contents of the man page.
 # we don't want to modify the man page, as it is also used by ../tk-tclX,
 # so...
