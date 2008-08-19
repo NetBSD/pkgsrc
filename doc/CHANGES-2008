@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1921 2008/08/19 16:35:25 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1922 2008/08/19 17:52:20 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3279,3 +3279,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated fonts/terminus-font to 4.26 [bjs 2008-08-19]
 	Updated x11/xclip to 0.11 [obache 2008-08-19]
 	Updated net/aria2 to 0.15.2 [bjs 2008-08-19]
+	Added graphics/babl version 0.0.22 [bjs 2008-08-19]
