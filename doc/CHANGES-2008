@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1918 2008/08/19 09:52:48 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1919 2008/08/19 13:33:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3278,3 +3278,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added mail/p5-Email-LocalDelivery version 0.217 [seb 2008-08-18]
 	Updated devel/yasm to 0.7.1 [bjs 2008-08-18]
 	Updated fonts/terminus-font to 4.26 [bjs 2008-08-19]
+	Updated x11/xclip to 0.11 [obache 2008-08-19]
