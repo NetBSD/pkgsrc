@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2008/03/15 20:29:35 joerg Exp $
+# $NetBSD: Makefile,v 1.48 2008/08/19 13:53:27 bjs Exp $
 
 DISTNAME=	jade-1.2.1
 PKGREVISION=	12
@@ -12,6 +12,8 @@ HOMEPAGE=	http://www.jclark.com/jade/
 COMMENT=	Object-oriented SGML/XML parser toolkit and DSSSL engine
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+MAKE_JOBS_SAFE=		no
 
 PATCH_SITES=		${MASTER_SITE_LOCAL}
 PATCHFILES=		jade_1.2.1-18.diff.gz
