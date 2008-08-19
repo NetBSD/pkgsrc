@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1923 2008/08/19 18:11:51 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1924 2008/08/19 18:21:31 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3281,3 +3281,12 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/aria2 to 0.15.2 [bjs 2008-08-19]
 	Added graphics/babl version 0.0.22 [bjs 2008-08-19]
 	Updated devel/pango to 1.20.5nb1 [tron 2008-08-19]
+	Updated chat/pidgin to 2.5.0 [bjs 2008-08-19]
+	Updated chat/libpurple to 2.5.0 [bjs 2008-08-19]
+	Updated chat/finch to 2.5.0 [bjs 2008-08-19]
+	Updated chat/pidgin-facebookchat to 1.27nb1 [bjs 2008-08-19]
+	Updated chat/pidgin-icb to 20070505nb2 [bjs 2008-08-19]
+	Updated chat/pidgin-latex to 1.2.1nb2 [bjs 2008-08-19]
+	Updated chat/pidgin-otr to 3.2.0nb1 [bjs 2008-08-19]
+	Updated chat/pidgin-sametime to 2.5.0 [bjs 2008-08-19]
+	Updated chat/pidgin-silc to 2.5.0 [bjs 2008-08-19]
