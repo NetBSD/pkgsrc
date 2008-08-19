@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/02/04 19:52:54 tnn Exp $
+# $NetBSD: Makefile,v 1.10 2008/08/19 23:41:05 epg Exp $
 #
 
 DISTNAME=		mkcmd-8.14
@@ -10,9 +10,10 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		epg@NetBSD.org
 COMMENT=		Command-line parser and manual page generator
 
-USE_TOOLS+=		m4
-
+PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
+USE_TOOLS+=		m4
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
 
@@ -33,12 +34,12 @@ do-build:
 do-install:
 .for _mkcmd_dir in bin/mkcmd lib/mkcmd
 	cd ${WRKSRC}/${_mkcmd_dir} && HOSTTYPE= ${SH} ${FILESDIR}/makeme \
-		ROOT=${PREFIX} BIN=${PREFIX}/bin LIB=${PREFIX}/lib/mkcmd \
+		ROOT=${DESTDIR}${PREFIX} BIN=${DESTDIR}${PREFIX}/bin LIB=${DESTDIR}${PREFIX}/lib/mkcmd \
 		install
 .endfor
 	${INSTALL_MAN} ${WRKSRC}/bin/mkcmd/mkcmd.man \
-		${PREFIX}/${PKGMANDIR}/man1/mkcmd.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/mkcmd.1
 	${INSTALL_MAN} ${WRKSRC}/lib/mkcmd/mkcmd.man \
-		${PREFIX}/${PKGMANDIR}/man5/mkcmd.5
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man5/mkcmd.5
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/01/07 09:14:13 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2008/08/19 23:41:05 epg Exp $
 #
 
 DISTNAME=		xapply-3.4
@@ -10,10 +10,12 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		epg@NetBSD.org
 COMMENT=		Parallel Execution tool a la xargs/apply
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+
 BUILD_DEPENDS+=		mkcmd>=8.14:../../devel/mkcmd
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
 do-build:
 	cd ${WRKSRC}/bin/xapply && \
@@ -22,8 +24,8 @@ do-build:
 		ROOT=${PREFIX} BIN=${PREFIX}/bin
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/bin/xapply/xapply ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/bin/xapply/xapply ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/bin/xapply/xapply.man \
-		${PREFIX}/${PKGMANDIR}/man1/xapply.1
+		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/xapply.1
 
 .include "../../mk/bsd.pkg.mk"
