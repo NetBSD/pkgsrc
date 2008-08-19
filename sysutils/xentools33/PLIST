@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/08/15 20:12:52 cegger Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/08/19 17:38:09 cegger Exp $
 bin/lsevtchn
 bin/pygrub
 bin/readnotes
@@ -502,6 +502,8 @@ sbin/xentop
 sbin/xentrace_setmask
 sbin/xm
 sbin/xsview
+share/doc/xen/README.xenmon
+share/doc/xen/README.blktap
 share/examples/rc.d/xenbackendd
 share/examples/rc.d/xend
 share/examples/rc.d/xendomains
@@ -555,6 +557,7 @@ share/xen/qemu/keymaps/tr
 @dirrm share/xen/qemu
 @dirrm share/xen
 @dirrm share/examples/xen
+@dirrm share/doc/xen
 @dirrm lib/xen/boot
 @dirrm lib/xen
 @dirrm ${PYSITELIB}/xen/xsview
