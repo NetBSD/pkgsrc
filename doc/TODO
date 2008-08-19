@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7483 2008/08/19 13:40:05 obache Exp $
+$NetBSD: TODO,v 1.7484 2008/08/19 14:43:16 bjs Exp $
 
 Suggested new packages
 ======================
@@ -441,7 +441,6 @@ Suggested package updates
 	o apsfilter-7.2.8
 	o aqsis-1.2
 	o argtable-2.9
-	o aria2-0.15.2
 	o arla-0.90
 	o arnold-20040104
 	o arping-2.08
