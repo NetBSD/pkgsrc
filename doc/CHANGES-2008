@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1943 2008/08/20 22:32:30 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1944 2008/08/20 23:47:17 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3311,3 +3311,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/p5-HTML-RewriteAttributes version 0.03 [tonnerre 2008-08-20]
 	Added devel/p5-File-ShareDir version 1.00 [tonnerre 2008-08-20]
 	Added devel/p5-Data-Denter version 0.15 [seb 2008-08-20]
+	Updated x11/gnome-themes-extras to 2.22.0nb1 [bjs 2008-08-20]
