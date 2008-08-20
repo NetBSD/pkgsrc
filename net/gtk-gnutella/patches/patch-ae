@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2007/10/14 08:32:19 adam Exp $
+$NetBSD: patch-ae,v 1.6 2008/08/20 10:03:32 adam Exp $
 
---- src/if/gnet_property.c.orig	2007-07-07 06:21:34.000000000 +0200
+--- src/if/gnet_property.c.orig	2008-04-02 01:19:44.000000000 +0200
 +++ src/if/gnet_property.c
-@@ -743,7 +743,7 @@ gnet_prop_init(void) {
+@@ -778,7 +778,7 @@ gnet_prop_init(void) {
      gnet_property->props[3].vector_size = 1;
  
      /* Type specific data: */
@@ -11,97 +11,106 @@ $NetBSD: patch-ae,v 1.5 2007/10/14 08:32:19 adam Exp $
      gnet_property->props[3].data.string.def    = (void *) &gnet_property_variable_new_version_str_default;
      gnet_property->props[3].data.string.value  = (void *) &gnet_property_variable_new_version_str;
      if (gnet_property->props[3].data.string.def) {
-@@ -2836,7 +2836,7 @@ gnet_prop_init(void) {
-     gnet_property->props[112].vector_size = 1;
- 
-     /* Type specific data: */
--    gnet_property->props[112].type               = PROP_TYPE_STRING;
-+    gnet_property->props[112].type               = gg_PROP_TYPE_STRING;
-     gnet_property->props[112].data.string.def    = (void *) &gnet_property_variable_socks_user_default;
-     gnet_property->props[112].data.string.value  = (void *) &gnet_property_variable_socks_user;
-     if (gnet_property->props[112].data.string.def) {
-@@ -2857,7 +2857,7 @@ gnet_prop_init(void) {
+@@ -2888,7 +2888,7 @@ gnet_prop_init(void) {
      gnet_property->props[113].vector_size = 1;
  
      /* Type specific data: */
 -    gnet_property->props[113].type               = PROP_TYPE_STRING;
 +    gnet_property->props[113].type               = gg_PROP_TYPE_STRING;
-     gnet_property->props[113].data.string.def    = (void *) &gnet_property_variable_socks_pass_default;
-     gnet_property->props[113].data.string.value  = (void *) &gnet_property_variable_socks_pass;
+     gnet_property->props[113].data.string.def    = (void *) &gnet_property_variable_socks_user_default;
+     gnet_property->props[113].data.string.value  = (void *) &gnet_property_variable_socks_user;
      if (gnet_property->props[113].data.string.def) {
-@@ -2894,7 +2894,7 @@ gnet_prop_init(void) {
-     gnet_property->props[115].vector_size = 1;
+@@ -2909,7 +2909,7 @@ gnet_prop_init(void) {
+     gnet_property->props[114].vector_size = 1;
  
      /* Type specific data: */
--    gnet_property->props[115].type               = PROP_TYPE_STRING;
-+    gnet_property->props[115].type               = gg_PROP_TYPE_STRING;
-     gnet_property->props[115].data.string.def    = (void *) &gnet_property_variable_proxy_hostname_default;
-     gnet_property->props[115].data.string.value  = (void *) &gnet_property_variable_proxy_hostname;
-     if (gnet_property->props[115].data.string.def) {
-@@ -3485,7 +3485,7 @@ gnet_prop_init(void) {
-     gnet_property->props[145].vector_size = 1;
+-    gnet_property->props[114].type               = PROP_TYPE_STRING;
++    gnet_property->props[114].type               = gg_PROP_TYPE_STRING;
+     gnet_property->props[114].data.string.def    = (void *) &gnet_property_variable_socks_pass_default;
+     gnet_property->props[114].data.string.value  = (void *) &gnet_property_variable_socks_pass;
+     if (gnet_property->props[114].data.string.def) {
+@@ -2946,7 +2946,7 @@ gnet_prop_init(void) {
+     gnet_property->props[116].vector_size = 1;
  
      /* Type specific data: */
--    gnet_property->props[145].type               = PROP_TYPE_STRING;
-+    gnet_property->props[145].type               = gg_PROP_TYPE_STRING;
-     gnet_property->props[145].data.string.def    = (void *) &gnet_property_variable_scan_extensions_default;
-     gnet_property->props[145].data.string.value  = (void *) &gnet_property_variable_scan_extensions;
-     if (gnet_property->props[145].data.string.def) {
-@@ -3540,7 +3540,7 @@ gnet_prop_init(void) {
-     gnet_property->props[148].vector_size = 1;
+-    gnet_property->props[116].type               = PROP_TYPE_STRING;
++    gnet_property->props[116].type               = gg_PROP_TYPE_STRING;
+     gnet_property->props[116].data.string.def    = (void *) &gnet_property_variable_proxy_hostname_default;
+     gnet_property->props[116].data.string.value  = (void *) &gnet_property_variable_proxy_hostname;
+     if (gnet_property->props[116].data.string.def) {
+@@ -3537,7 +3537,7 @@ gnet_prop_init(void) {
+     gnet_property->props[146].vector_size = 1;
  
      /* Type specific data: */
--    gnet_property->props[148].type               = PROP_TYPE_STRING;
-+    gnet_property->props[148].type               = gg_PROP_TYPE_STRING;
-     gnet_property->props[148].data.string.def    = (void *) &gnet_property_variable_save_file_path_default;
-     gnet_property->props[148].data.string.value  = (void *) &gnet_property_variable_save_file_path;
-     if (gnet_property->props[148].data.string.def) {
-@@ -3561,7 +3561,7 @@ gnet_prop_init(void) {
+-    gnet_property->props[146].type               = PROP_TYPE_STRING;
++    gnet_property->props[146].type               = gg_PROP_TYPE_STRING;
+     gnet_property->props[146].data.string.def    = (void *) &gnet_property_variable_scan_extensions_default;
+     gnet_property->props[146].data.string.value  = (void *) &gnet_property_variable_scan_extensions;
+     if (gnet_property->props[146].data.string.def) {
+@@ -3592,7 +3592,7 @@ gnet_prop_init(void) {
      gnet_property->props[149].vector_size = 1;
  
      /* Type specific data: */
 -    gnet_property->props[149].type               = PROP_TYPE_STRING;
 +    gnet_property->props[149].type               = gg_PROP_TYPE_STRING;
-     gnet_property->props[149].data.string.def    = (void *) &gnet_property_variable_move_file_path_default;
-     gnet_property->props[149].data.string.value  = (void *) &gnet_property_variable_move_file_path;
+     gnet_property->props[149].data.string.def    = (void *) &gnet_property_variable_save_file_path_default;
+     gnet_property->props[149].data.string.value  = (void *) &gnet_property_variable_save_file_path;
      if (gnet_property->props[149].data.string.def) {
-@@ -3582,7 +3582,7 @@ gnet_prop_init(void) {
+@@ -3613,7 +3613,7 @@ gnet_prop_init(void) {
      gnet_property->props[150].vector_size = 1;
  
      /* Type specific data: */
 -    gnet_property->props[150].type               = PROP_TYPE_STRING;
 +    gnet_property->props[150].type               = gg_PROP_TYPE_STRING;
-     gnet_property->props[150].data.string.def    = (void *) &gnet_property_variable_bad_file_path_default;
-     gnet_property->props[150].data.string.value  = (void *) &gnet_property_variable_bad_file_path;
+     gnet_property->props[150].data.string.def    = (void *) &gnet_property_variable_move_file_path_default;
+     gnet_property->props[150].data.string.value  = (void *) &gnet_property_variable_move_file_path;
      if (gnet_property->props[150].data.string.def) {
-@@ -3603,7 +3603,7 @@ gnet_prop_init(void) {
+@@ -3634,7 +3634,7 @@ gnet_prop_init(void) {
      gnet_property->props[151].vector_size = 1;
  
      /* Type specific data: */
 -    gnet_property->props[151].type               = PROP_TYPE_STRING;
 +    gnet_property->props[151].type               = gg_PROP_TYPE_STRING;
-     gnet_property->props[151].data.string.def    = (void *) &gnet_property_variable_shared_dirs_paths_default;
-     gnet_property->props[151].data.string.value  = (void *) &gnet_property_variable_shared_dirs_paths;
+     gnet_property->props[151].data.string.def    = (void *) &gnet_property_variable_bad_file_path_default;
+     gnet_property->props[151].data.string.value  = (void *) &gnet_property_variable_bad_file_path;
      if (gnet_property->props[151].data.string.def) {
-@@ -3624,7 +3624,7 @@ gnet_prop_init(void) {
+@@ -3655,7 +3655,7 @@ gnet_prop_init(void) {
      gnet_property->props[152].vector_size = 1;
  
      /* Type specific data: */
 -    gnet_property->props[152].type               = PROP_TYPE_STRING;
 +    gnet_property->props[152].type               = gg_PROP_TYPE_STRING;
-     gnet_property->props[152].data.string.def    = (void *) &gnet_property_variable_local_netmasks_string_default;
-     gnet_property->props[152].data.string.value  = (void *) &gnet_property_variable_local_netmasks_string;
+     gnet_property->props[152].data.string.def    = (void *) &gnet_property_variable_shared_dirs_paths_default;
+     gnet_property->props[152].data.string.value  = (void *) &gnet_property_variable_shared_dirs_paths;
      if (gnet_property->props[152].data.string.def) {
-@@ -4702,7 +4702,7 @@ gnet_prop_init(void) {
-     gnet_property->props[210].vector_size = 1;
+@@ -3676,7 +3676,7 @@ gnet_prop_init(void) {
+     gnet_property->props[153].vector_size = 1;
  
      /* Type specific data: */
--    gnet_property->props[210].type               = PROP_TYPE_STRING;
-+    gnet_property->props[210].type               = gg_PROP_TYPE_STRING;
-     gnet_property->props[210].data.string.def    = (void *) &gnet_property_variable_server_hostname_default;
-     gnet_property->props[210].data.string.value  = (void *) &gnet_property_variable_server_hostname;
-     if (gnet_property->props[210].data.string.def) {
-@@ -6327,7 +6327,7 @@ gnet_prop_shutdown(void) {
+-    gnet_property->props[153].type               = PROP_TYPE_STRING;
++    gnet_property->props[153].type               = gg_PROP_TYPE_STRING;
+     gnet_property->props[153].data.string.def    = (void *) &gnet_property_variable_local_netmasks_string_default;
+     gnet_property->props[153].data.string.value  = (void *) &gnet_property_variable_local_netmasks_string;
+     if (gnet_property->props[153].data.string.def) {
+@@ -4774,7 +4774,7 @@ gnet_prop_init(void) {
+     gnet_property->props[212].vector_size = 1;
+ 
+     /* Type specific data: */
+-    gnet_property->props[212].type               = PROP_TYPE_STRING;
++    gnet_property->props[212].type               = gg_PROP_TYPE_STRING;
+     gnet_property->props[212].data.string.def    = (void *) &gnet_property_variable_server_hostname_default;
+     gnet_property->props[212].data.string.value  = (void *) &gnet_property_variable_server_hostname;
+     if (gnet_property->props[212].data.string.def) {
+@@ -6489,7 +6489,7 @@ gnet_prop_init(void) {
+     gnet_property->props[303].vector_size = 1;
+ 
+     /* Type specific data: */
+-    gnet_property->props[303].type               = PROP_TYPE_STRING;
++    gnet_property->props[303].type               = gg_PROP_TYPE_STRING;
+     gnet_property->props[303].data.string.def    = (void *) &gnet_property_variable_latest_svn_release_signature_default;
+     gnet_property->props[303].data.string.value  = (void *) &gnet_property_variable_latest_svn_release_signature;
+     if (gnet_property->props[303].data.string.def) {
+@@ -6687,7 +6687,7 @@ gnet_prop_shutdown(void) {
      }
  
      for (n = 0; n < GNET_PROPERTY_NUM; n ++) {
