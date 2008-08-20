@@ -1,8 +1,6 @@
-$NetBSD: patch-aa,v 1.6 2008/04/07 19:44:19 tnn Exp $
-
---- config.lib.orig	2008-04-01 00:31:33.000000000 +0200
-+++ config.lib
-@@ -392,9 +392,9 @@ check_params() {
+--- ./config.lib.orig	2008-08-02 02:52:22.000000000 +0300
++++ ./config.lib	2008-08-05 13:34:05.000000000 +0300
+@@ -392,9 +392,9 @@
  		exit 1
  	fi
  	# OS only allows DETECT, UNIX, OSX, FREEBSD, OPENBSD, MORPHOS, BEOS, SUNOS, CYGWIN, MINGW, OS2, WINCE, and PSP
@@ -14,7 +12,7 @@ $NetBSD: patch-aa,v 1.6 2008/04/07 19:44:19 tnn Exp $
  		exit 1
  	fi
  	# cpu_type can be either 32 or 64
-@@ -1000,6 +1000,10 @@ make_cflags_and_ldflags() {
+@@ -1003,6 +1003,10 @@
  		LIBS="$LIBS -pthread"
  	fi
  
@@ -25,7 +23,7 @@ $NetBSD: patch-aa,v 1.6 2008/04/07 19:44:19 tnn Exp $
  	if [ "$os" = "FREEBSD" ]; then
  		LIBS="$LIBS -lpthread"
  	fi
-@@ -1016,7 +1020,7 @@ make_cflags_and_ldflags() {
+@@ -1019,7 +1023,7 @@
  	fi
  
  	# Most targets act like UNIX, just with some additions
@@ -34,7 +32,7 @@ $NetBSD: patch-aa,v 1.6 2008/04/07 19:44:19 tnn Exp $
  		CFLAGS="$CFLAGS -DUNIX"
  	fi
  	# And others like Windows
-@@ -1511,7 +1515,7 @@ detect_awk() {
+@@ -1542,7 +1546,7 @@
  
  detect_os() {
  	if [ "$os" = "DETECT" ]; then
@@ -43,23 +41,24 @@ $NetBSD: patch-aa,v 1.6 2008/04/07 19:44:19 tnn Exp $
  
  		# Try first via dumpmachine, then via uname
  		os=`echo "$host" | tr '[A-Z]' '[a-z]' | $awk '
-@@ -1519,6 +1523,7 @@ detect_os() {
+@@ -1550,6 +1554,8 @@
  					/darwin/       { print "OSX";     exit}
  					/freebsd/      { print "FREEBSD"; exit}
  					/openbsd/      { print "OPENBSD"; exit}
 +					/netbsd/       { print "NETBSD";  exit}
- 					/morphos/      { print "MORPHOS"; exit}
- 					/beos/         { print "BEOS";    exit}
- 					/sunos/        { print "SUNOS";   exit}
-@@ -1536,6 +1541,7 @@ detect_os() {
- 					/darwin/       { print "OSX";     exit}
- 					/freebsd/      { print "FREEBSD"; exit}
- 					/openbsd/      { print "OPENBSD"; exit}
 +					/netbsd/       { print "NETBSD";  exit}
  					/morphos/      { print "MORPHOS"; exit}
  					/beos/         { print "BEOS";    exit}
  					/sunos/        { print "SUNOS";   exit}
-@@ -1548,7 +1554,7 @@ detect_os() {
+@@ -1566,6 +1572,7 @@
+ 					/linux/        { print "UNIX";    exit}
+ 					/darwin/       { print "OSX";     exit}
+ 					/freebsd/      { print "FREEBSD"; exit}
++					/netbsd/       { print "NETBSD";  exit}
+ 					/openbsd/      { print "OPENBSD"; exit}
+ 					/morphos/      { print "MORPHOS"; exit}
+ 					/beos/         { print "BEOS";    exit}
+@@ -1579,7 +1586,7 @@
  		if [ -z "$os" ]; then
  			log 1 "detecting OS... none detected"
  			log 1 "I couldn't detect your OS. Please use --os=OS to force one"
@@ -68,7 +67,7 @@ $NetBSD: patch-aa,v 1.6 2008/04/07 19:44:19 tnn Exp $
  			exit 1
  		fi
  
-@@ -2296,7 +2302,7 @@ showhelp() {
+@@ -2320,7 +2327,7 @@
  	echo "  --awk=AWK                      the awk to use in configure [awk]"
  	echo "  --lipo=LIPO                    the lipo to use (OSX ONLY) [HOST-lipo]"
  	echo "  --os=OS                        the OS we are compiling for [DETECT]"
