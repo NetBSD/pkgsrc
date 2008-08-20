@@ -1,0 +1,4 @@
+The Perl 5 module Data::Denter is an (deprecated) alternative to
+Data::Dumper and Storable.
+
+use YAML; # Instead!!!
