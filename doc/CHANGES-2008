@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1927 2008/08/19 20:33:12 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1928 2008/08/20 02:53:13 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3294,3 +3294,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/pidgin-silc to 2.5.0 [bjs 2008-08-19]
 	Added devel/p5-Sub-Override version 0.08 [seb 2008-08-19]
 	Added audio/jack-rack version 1.4.7 [bjs 2008-08-19]
+	Updated textproc/docbook-xsl to 1.74.0 [bjs 2008-08-20]
