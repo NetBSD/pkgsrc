@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1928 2008/08/20 02:53:13 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1929 2008/08/20 03:05:33 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3295,3 +3295,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Sub-Override version 0.08 [seb 2008-08-19]
 	Added audio/jack-rack version 1.4.7 [bjs 2008-08-19]
 	Updated textproc/docbook-xsl to 1.74.0 [bjs 2008-08-20]
+	Updated devel/scmgit-base to 1.6.0 [bjs 2008-08-20]
+	Updated devel/scmgit-docs to 1.6.0 [bjs 2008-08-20]
+	Updated devel/scmgit to 1.6.0 [bjs 2008-08-20]
