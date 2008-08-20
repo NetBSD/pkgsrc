@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.linux-i386,v 1.7 2008/04/12 22:43:03 jlam Exp $
+@comment $NetBSD: PLIST.linux-i386,v 1.7.4.1 2008/08/20 09:30:43 tron Exp $
 bin/sun15-java
 bin/sun15-javaws
 bin/sun15-keytool
@@ -258,6 +258,7 @@ java/sun-1.5/lib/zi/America/Argentina/La_Rioja
 java/sun-1.5/lib/zi/America/Argentina/Mendoza
 java/sun-1.5/lib/zi/America/Argentina/Rio_Gallegos
 java/sun-1.5/lib/zi/America/Argentina/San_Juan
+java/sun-1.5/lib/zi/America/Argentina/San_Luis
 java/sun-1.5/lib/zi/America/Argentina/Tucuman
 java/sun-1.5/lib/zi/America/Argentina/Ushuaia
 java/sun-1.5/lib/zi/America/Aruba
@@ -400,7 +401,6 @@ java/sun-1.5/lib/zi/Asia/Bangkok
 java/sun-1.5/lib/zi/Asia/Beirut
 java/sun-1.5/lib/zi/Asia/Bishkek
 java/sun-1.5/lib/zi/Asia/Brunei
-java/sun-1.5/lib/zi/Asia/Calcutta
 java/sun-1.5/lib/zi/Asia/Choibalsan
 java/sun-1.5/lib/zi/Asia/Chongqing
 java/sun-1.5/lib/zi/Asia/Colombo
@@ -411,6 +411,7 @@ java/sun-1.5/lib/zi/Asia/Dubai
 java/sun-1.5/lib/zi/Asia/Dushanbe
 java/sun-1.5/lib/zi/Asia/Gaza
 java/sun-1.5/lib/zi/Asia/Harbin
+java/sun-1.5/lib/zi/Asia/Ho_Chi_Minh
 java/sun-1.5/lib/zi/Asia/Hong_Kong
 java/sun-1.5/lib/zi/Asia/Hovd
 java/sun-1.5/lib/zi/Asia/Irkutsk
@@ -422,6 +423,7 @@ java/sun-1.5/lib/zi/Asia/Kamchatka
 java/sun-1.5/lib/zi/Asia/Karachi
 java/sun-1.5/lib/zi/Asia/Kashgar
 java/sun-1.5/lib/zi/Asia/Katmandu
+java/sun-1.5/lib/zi/Asia/Kolkata
 java/sun-1.5/lib/zi/Asia/Krasnoyarsk
 java/sun-1.5/lib/zi/Asia/Kuala_Lumpur
 java/sun-1.5/lib/zi/Asia/Kuching
@@ -445,7 +447,6 @@ java/sun-1.5/lib/zi/Asia/Riyadh
 java/sun-1.5/lib/zi/Asia/Riyadh87
 java/sun-1.5/lib/zi/Asia/Riyadh88
 java/sun-1.5/lib/zi/Asia/Riyadh89
-java/sun-1.5/lib/zi/Asia/Saigon
 java/sun-1.5/lib/zi/Asia/Sakhalin
 java/sun-1.5/lib/zi/Asia/Samarkand
 java/sun-1.5/lib/zi/Asia/Seoul
