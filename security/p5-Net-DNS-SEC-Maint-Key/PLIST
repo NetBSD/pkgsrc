@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/20 09:55:38 he Exp $
+bin/dnssecmaint-config
+bin/dnssecmaint-copyprivate
+bin/maintkeydb

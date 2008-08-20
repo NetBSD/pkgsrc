@@ -1,0 +1,37 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/08/20 09:55:38 he Exp $
+
+--- t/02-rollover.t.orig	2005-06-24 10:39:30.000000000 +0200
++++ t/02-rollover.t
+@@ -44,12 +44,18 @@ rmdir "t/keydb/bla.foo";
+ 
+ diag ("The tests depend on dnssec-keygen and the openssl command to be in your path");
+ 
++our $nokeygen;
++our $openssl_path;
++our $dnssec_keygen_path;
+ 
+-my $nokeygen=0;
++BEGIN {
++
++
++our $nokeygen=0;
+ my $noopenssl=0;
+ 
+-my $dnssec_keygen_path;
+-my $openssl_path;
++our $dnssec_keygen_path;
++our $openssl_path;
+ use Shell qw (which);
+ $dnssec_keygen_path = which("dnssec-keygen");
+ $dnssec_keygen_path =~ s/\s+$//;
+@@ -105,8 +111,9 @@ if ($nokeygen){
+     plan skip_all =>  "critical programs not found";
+     exit;
+ }else{
+-    plan tests=>20;
++    plan tests=>22;
+ }
++};
+ 
+ 
+ 
