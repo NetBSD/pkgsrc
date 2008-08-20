@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1933 2008/08/20 10:04:40 adam Exp $
+$NetBSD: CHANGES-2008,v 1.1934 2008/08/20 11:55:57 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3302,3 +3302,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated math/glpk to 4.30 [adam 2008-08-20]
 	Added net/p5-DNS-SEC-Maint-Key version 0.013 [he 2008-08-20]
 	Updated net/gtk-gnutella to 0.96.5 [adam 2008-08-20]
+	Added www/p5-HTML-TokeParser-Simple version 3.15 [seb 2008-08-20]
