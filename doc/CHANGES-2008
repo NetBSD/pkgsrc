@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1942 2008/08/20 22:24:16 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1943 2008/08/20 22:32:30 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3310,3 +3310,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Data-Taxi version 0.94 [seb 2008-08-20]
 	Added www/p5-HTML-RewriteAttributes version 0.03 [tonnerre 2008-08-20]
 	Added devel/p5-File-ShareDir version 1.00 [tonnerre 2008-08-20]
+	Added devel/p5-Data-Denter version 0.15 [seb 2008-08-20]
