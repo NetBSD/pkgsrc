@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.6 2008/08/01 10:48:11 minskim Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/08/20 03:04:20 bjs Exp $
 bin/git
+bin/git-receive-pack
+bin/git-upload-archive
+bin/git-upload-pack
 ${PLIST.gui}bin/gitk
-libexec/git-core/git
 libexec/git-core/git-add
 libexec/git-core/git-add--interactive
 libexec/git-core/git-am
@@ -75,7 +77,6 @@ libexec/git-core/git-merge-one-file
 libexec/git-core/git-merge-ours
 libexec/git-core/git-merge-recursive
 libexec/git-core/git-merge-resolve
-libexec/git-core/git-merge-stupid
 libexec/git-core/git-merge-subtree
 libexec/git-core/git-merge-tree
 libexec/git-core/git-mergetool
@@ -132,26 +133,26 @@ libexec/git-core/git-unpack-objects
 libexec/git-core/git-update-index
 libexec/git-core/git-update-ref
 libexec/git-core/git-update-server-info
-libexec/git-core/git-upload-archive
 libexec/git-core/git-upload-pack
+libexec/git-core/git-upload-archive
 libexec/git-core/git-var
 libexec/git-core/git-verify-pack
 libexec/git-core/git-verify-tag
 libexec/git-core/git-web--browse
 libexec/git-core/git-whatchanged
 libexec/git-core/git-write-tree
-share/git-core/templates/description
-share/git-core/templates/hooks/applypatch-msg
-share/git-core/templates/hooks/commit-msg
-share/git-core/templates/hooks/post-commit
-share/git-core/templates/hooks/post-receive
-share/git-core/templates/hooks/post-update
-share/git-core/templates/hooks/pre-applypatch
-share/git-core/templates/hooks/pre-commit
-share/git-core/templates/hooks/pre-rebase
-share/git-core/templates/hooks/prepare-commit-msg
-share/git-core/templates/hooks/update
-share/git-core/templates/info/exclude
+share/examples/scmgit/templates/description
+share/examples/scmgit/templates/hooks/applypatch-msg.sample
+share/examples/scmgit/templates/hooks/commit-msg.sample
+share/examples/scmgit/templates/hooks/post-commit.sample
+share/examples/scmgit/templates/hooks/post-receive.sample
+share/examples/scmgit/templates/hooks/post-update.sample
+share/examples/scmgit/templates/hooks/pre-applypatch.sample
+share/examples/scmgit/templates/hooks/pre-commit.sample
+share/examples/scmgit/templates/hooks/pre-rebase.sample
+share/examples/scmgit/templates/hooks/prepare-commit-msg.sample
+share/examples/scmgit/templates/hooks/update.sample
+share/examples/scmgit/templates/info/exclude
 ${PLIST.gui}share/git-gui/lib/about.tcl
 ${PLIST.gui}share/git-gui/lib/blame.tcl
 ${PLIST.gui}share/git-gui/lib/branch.tcl
@@ -203,6 +204,10 @@ ${PLIST.gui}share/gitk/lib/msgs/de.msg
 ${PLIST.gui}share/gitk/lib/msgs/es.msg
 ${PLIST.gui}share/gitk/lib/msgs/it.msg
 ${PLIST.gui}share/gitk/lib/msgs/sv.msg
+@dirrm share/examples/scmgit/templates/hooks
+@dirrm share/examples/scmgit/templates/info
+@dirrm share/examples/scmgit/templates
+@dirrm share/examples/scmgit
 ${PLIST.gui}@dirrm share/gitk/lib/msgs
 ${PLIST.gui}@dirrm share/gitk/lib
 ${PLIST.gui}@dirrm share/gitk
@@ -214,10 +219,4 @@ ${PLIST.macosx}@dirrm share/git-gui/lib/Git Gui.app/Contents
 ${PLIST.macosx}@dirrm share/git-gui/lib/Git Gui.app
 ${PLIST.gui}@dirrm share/git-gui/lib
 ${PLIST.gui}@dirrm share/git-gui
-@dirrm share/git-core/templates/info
-@dirrm share/git-core/templates/hooks
-@exec ${MKDIR} %D/share/git-core/templates/branches
-@dirrm share/git-core/templates/branches
-@dirrm share/git-core/templates
-@dirrm share/git-core
 @dirrm libexec/git-core
