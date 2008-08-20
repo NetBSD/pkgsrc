@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1929 2008/08/20 03:05:33 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1930 2008/08/20 07:58:18 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3298,3 +3298,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/scmgit-base to 1.6.0 [bjs 2008-08-20]
 	Updated devel/scmgit-docs to 1.6.0 [bjs 2008-08-20]
 	Updated devel/scmgit to 1.6.0 [bjs 2008-08-20]
+	Added net/p5-Net-Twitter version 1.17 [obache 2008-08-20]
