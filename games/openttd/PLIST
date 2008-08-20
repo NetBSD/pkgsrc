@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.10 2008/04/12 22:43:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.10.4.1 2008/08/20 09:43:10 tron Exp $
 bin/openttd
-share/openttd/data/generictrams_v0.4.grf
 share/openttd/data/openttdd.grf
 share/openttd/data/openttdw.grf
 share/openttd/data/opntitle.dat

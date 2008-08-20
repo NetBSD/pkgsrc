@@ -1,8 +1,10 @@
-$NetBSD: distinfo,v 1.12 2008/04/07 19:44:19 tnn Exp $
+$NetBSD: distinfo,v 1.12.4.1 2008/08/20 09:43:10 tron Exp $
 
-SHA1 (openttd-0.6.0-source.tar.bz2) = 94c55f80e3869decb5b613d78f3b889f7168b6e5
-RMD160 (openttd-0.6.0-source.tar.bz2) = 9ba4d63d4613779ae57a96fa25d4bb897c558976
-Size (openttd-0.6.0-source.tar.bz2) = 3688002 bytes
+SHA1 (openttd-0.6.2-source.tar.bz2) = c53ec5515729613fe55bbb714af48b908e70af39
+RMD160 (openttd-0.6.2-source.tar.bz2) = 6e6d8864773138ed2f588b19c0a7f399607cf6ea
+Size (openttd-0.6.2-source.tar.bz2) = 3670638 bytes
+SHA1 (patch-aa) = 389ff1a447804e53df12072184c99b6ca3d70d62
+SHA1 (patch-ab) = ae1ff320072c65f68f09a34df55514c2be122b79
 SHA1 (ttd/gm_tt00.gm) = 79d21ad066867e9d737fb7b2fb1fbec9a7e3ff67
 RMD160 (ttd/gm_tt00.gm) = 682df44d2080f78d26bfc7095b1da4b026c24e31
 Size (ttd/gm_tt00.gm) = 29714 bytes
@@ -87,5 +89,3 @@ Size (ttd/trgir.grf) = 342377 bytes
 SHA1 (ttd/trgtr.grf) = 436d0ff41b3e2e0229960d56a50c68a871077a10
 RMD160 (ttd/trgtr.grf) = a73cb82dd0e18baf5142fa10fa9a90e8f9de1c8c
 Size (ttd/trgtr.grf) = 559392 bytes
-SHA1 (patch-aa) = 0301945e21a84d263ff087623b06eb6622eea46e
-SHA1 (patch-ab) = ae1ff320072c65f68f09a34df55514c2be122b79
