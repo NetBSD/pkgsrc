@@ -1,0 +1,19 @@
+$NetBSD: patch-ak,v 1.1.2.2 2008/08/20 10:05:24 tron Exp $
+
+Patch #1 corresponding to security advisory 2008-08-12.
+
+--- lib/python/Products/PythonScripts/PythonScript.py.orig	2008-05-10 15:35:03.000000000 +0900
++++ lib/python/Products/PythonScripts/PythonScript.py
+@@ -323,7 +323,11 @@ class PythonScript(Script, Historical, C
+         g['__file__'] = getattr(self, '_filepath', None) or self.get_filepath()
+         f = new.function(fcode, g, None, fadefs)
+ 
+-        result = f(*args, **kw)
++        try:
++            result = f(*args, **kw)
++        except SystemExit:
++            raise ValueError('SystemExit cannot be raised within a PythonScript')
++
+         if keyset is not None:
+             # Store the result in the cache.
+             self.ZCacheable_set(result, keywords=keyset)
