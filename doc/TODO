@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7485 2008/08/19 15:06:33 taca Exp $
+$NetBSD: TODO,v 1.7486 2008/08/20 08:20:14 adam Exp $
 
 Suggested new packages
 ======================
@@ -671,7 +671,6 @@ Suggested package updates
 	o glchess-1.0.5
 	o glibmm-2.16.4
 	o global-5.6
-	o glpk-4.30
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-2.22.3
