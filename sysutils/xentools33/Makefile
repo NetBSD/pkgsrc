@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2008/08/20 09:52:43 cegger Exp $
+# $NetBSD: Makefile,v 1.7 2008/08/20 15:07:16 cegger Exp $
 #
 
-VERSION=		3.3-18349
+VERSION=		3.3-18353
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools33-${VERSION}
 CATEGORIES=		sysutils
