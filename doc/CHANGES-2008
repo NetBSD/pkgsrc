@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1939 2008/08/20 21:21:30 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.1940 2008/08/20 21:25:45 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3307,3 +3307,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Test-Assertions version 1.054 [seb 2008-08-20]
 	Added devel/p5-File-Policy version 1.005 [seb 2008-08-20]
 	Updated www/awstats to 6.7nb1 [minskim 2008-08-20]
+	Added devel/p5-Data-Taxi version 0.94 [seb 2008-08-20]
