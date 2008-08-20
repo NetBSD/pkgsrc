@@ -1,0 +1,10 @@
+The Perl 5 module Data::Taxi is a data serializer with several handy features:
+Taint aware
+  The data to be serialized does not have to be trusted.  None of
+  the input data is executed.
+Human readable
+  Data::Taxi produces a human-readable string that simplifies checking
+  the output of objects.
+XML-ish
+  Without begin fully XML compliant, Data::Taxi produces a block of
+  XML-ish data that could probably be read in by other XML parsers.
