@@ -1,0 +1,10 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/08/20 09:55:38 he Exp $
+
+--- apps/maintkeydb.orig	2005-05-24 16:35:47.000000000 +0200
++++ apps/maintkeydb
+@@ -1,4 +1,3 @@
+-#!/usr/local/bin/perl  -Iblib/lib
+-#!/usr/local/bin/perl -wT -Iblib/lib
++#!/usr/local/bin/perl
+ 
+ 

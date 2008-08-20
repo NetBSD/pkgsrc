@@ -1,0 +1,194 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/08/20 09:55:38 he Exp $
+
+--- t/01-key.t.orig	2005-06-24 16:44:01.000000000 +0200
++++ t/01-key.t
+@@ -75,8 +75,11 @@ if (!defined $gid){
+ 
+ diag ("The tests depend on dnssec-keygen and the openssl command to be in your path");
+ 
++our $nokeygen;
+ 
+-my $nokeygen=0;
++BEGIN {
++
++our $nokeygen=0;
+ my $noopenssl=0;
+ 
+ my $dnssec_keygen_path;
+@@ -136,19 +139,16 @@ if ($nokeygen){
+     plan skip_all =>  "critical programs not found";
+     exit;
+ }else{
+-    plan tests=>70;
+-
+-    ok(1,"Ready to test");  # test 1  (otherwise the numbering is messed up).
+-
++    plan tests=>71;
+ }
+ 
+-
++};
+ 
+ 
+ 
+ BEGIN {use_ok('Net::DNS::SEC::Maint::Key');                                 
+      };
+-
++								# test 1
+ 
+ 
+ 
+@@ -337,35 +337,35 @@ is ( $activekeys[0]->get_keypath,"t/keyd
+ 
+ 
+ # More state tests
+-$key->fetch("dacht.net","RSASHA1","21827"),0,"key fetched succesful";
++is ($key->fetch("dacht.net","RSASHA1","21827"),0,"key fetched succesful");	# test 39
+ 
+ is ($key->get_keypath,"t/keydb/dacht.net/Kdacht.net.+005+21827.private","get_keypath returns the proper path");
+-     			                                        #test 39
++     			                                        #test 40
+ 
+ 
+ ok ($key->is_ksk,"Key is key signing key");
+-     			                                        #test 40
+-ok ($key->is_inactive,"Key is inactive");
+      			                                        #test 41
++ok ($key->is_inactive,"Key is inactive");
++     			                                        #test 42
+ 
+ is ($key->set_active,1,"Toggling worked");
+-     			                                        #test 42
++     			                                        #test 43
+ 
+ ok ( $key->is_active,"Key is active");
+-     			                                        #test 43
++     			                                        #test 44
+ 
+ ok (! $key->is_inactive,"Key is active, thus not inactive");
+-     			                                        #test 44
++     			                                        #test 45
+ 
+ ok (! $key->is_published,"Key is active, thus not published");
+ 
+-     			                                        #test 45
++     			                                        #test 46
+ 
+ is ($key->set_inactive,1,"Set inactive");
+-     			                                        #test 46
++     			                                        #test 47
+ 
+ ok (! $key->is_active,"Key is  active");
+-     			                                        #test 47
++     			                                        #test 48
+ 
+ 
+ 
+@@ -373,22 +373,22 @@ ok (! $key->is_active,"Key is  active");
+ 
+ is ($key->set_published,1,"Toggling worked");
+ 
+-     			                                        #test 48
++     			                                        #test 49
+ 
+ ok ( $key->is_published,"Key is  published");
+-     			                                        #test 49
++     			                                        #test 50
+ 
+ ok (! $key->is_active,"Key is  published, thus not active");
+-     			                                        #test 50
++     			                                        #test 51
+ 
+ ok (! $key->is_inactive,"Key is  published, thus not published");
+-     			                                        #test 51
++     			                                        #test 52
+ 
+ is ($key->set_inactive,1,"Set inactive");
+-     			                                        #test 52
++     			                                        #test 53
+ 
+ ok ($key->is_inactive,"Key is not active");
+-     			                                        #test 53
++     			                                        #test 54
+ 
+ my $keyset1="dacht.net.	3600	IN	KEY	256  3  3 ( 
+ 			ANkBgSfpnbjsgbjKibnBAB3OYb2r7EblxCKF
+@@ -422,9 +422,9 @@ dacht.net.	3600	IN	KEY	256  3  5 ( 
+ 
+ 
+ is( $key->get_keyset("dacht.net"), $keyset1, "getkeyset returns expected keys as well");
+-     			                                        #test 54
+-is ($key->set_published,1,"Non trivial toggling worked again");
+      			                                        #test 55
++is ($key->set_published,1,"Non trivial toggling worked again");
++     			                                        #test 56
+ 
+ my $keyset2="dacht.net.	3600	IN	KEY	256  3  3 ( 
+ 			ANkBgSfpnbjsgbjKibnBAB3OYb2r7EblxCKF
+@@ -462,28 +462,28 @@ dacht.net.	3600	IN	KEY	256  3  5 ( 
+ 			) ; Key ID = 21827
+ ";
+ is( $key->get_keyset("dacht.net"), $keyset2, "getkeyset returns published keys as well");
+-     			                                        #test 56
++     			                                        #test 57
+ 
+ 
+ 
+ 
+ is ($key->set_inactive,1,"Non trivial toggling worked again");
+-     			                                        #test 57
++     			                                        #test 58
+ 
+ ok ( $key->is_inactive,"Key is inactive");
+-     			                                        #test 58
++     			                                        #test 59
+ 
+ ok (! $key->is_active,"Key is inactive, thus not active");
+-     			                                        #test 59
++     			                                        #test 60
+ 
+ ok (! $key->is_published,"Key is inactive, thus not published");
+-     			                                        #test 60
++     			                                        #test 61
+ 
+-ok ( $key->is_algorithm("RSASHA1"),"Key is proper algorithm");  # test 61
+-ok ( $key->is_algorithm(5),"Key is proper algorithm");	        # test 62
+-ok ( ! $key->is_algorithm("RSA"),"is_algorithm (\"RSA\")");     # test 63
+-ok ( ! $key->is_algorithm("DSA"),"is_algorithm (\"DSA\")");     # test 64
+-ok ( ! $key->is_algorithm("CRYPTSAM"),"is_algorithm (\"CRYPTSAM\")"); # test 65
++ok ( $key->is_algorithm("RSASHA1"),"Key is proper algorithm");  # test 62
++ok ( $key->is_algorithm(5),"Key is proper algorithm");	        # test 63
++ok ( ! $key->is_algorithm("RSA"),"is_algorithm (\"RSA\")");     # test 64
++ok ( ! $key->is_algorithm("DSA"),"is_algorithm (\"DSA\")");     # test 65
++ok ( ! $key->is_algorithm("CRYPTSAM"),"is_algorithm (\"CRYPTSAM\")"); # test 66
+ 
+ 
+ 
+@@ -496,22 +496,22 @@ SKIP: {
+   $key3->create("bla.foo","RSASHA1",768,"zonesigning");
+   my @keyarray2;
+   is (@keyarray2=$key3->get_all("bla.foo"),2,"two keys for bla.foo returned");
+-     			                                        #test 66
++     			                                        #test 67
+   my @activekeys;
+   is ( @activekeys=$key3->get_active("bla.foo"),1,"One activekey for bla.foo");
+-     			                                        #test 67
++     			                                        #test 68
+ 
+   $activekeys[0]->set_rollover;
+   ok ( $activekeys[0]->is_rollover,"Key has rollover attribute set");
+ 
+-     			                                        #test 68
++     			                                        #test 69
+ 
+   $activekeys[0]->set_inactive;
+   ok ( $activekeys[0]->is_inactive,"Key is inactive");
+-     			                                        #test 69
++     			                                        #test 70
+   $activekeys[0]->set_active;
+   ok ( $activekeys[0]->is_active,"Key is active");
+-     			                                        #test 70
++     			                                        #test 71
+ }
+ 
+ 
