@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1934 2008/08/20 11:55:57 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1935 2008/08/20 12:45:14 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3300,6 +3300,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/scmgit to 1.6.0 [bjs 2008-08-20]
 	Added net/p5-Net-Twitter version 1.17 [obache 2008-08-20]
 	Updated math/glpk to 4.30 [adam 2008-08-20]
-	Added net/p5-DNS-SEC-Maint-Key version 0.013 [he 2008-08-20]
+	Added security/p5-Net-DNS-SEC-Maint-Key version 0.013 [he 2008-08-20]
 	Updated net/gtk-gnutella to 0.96.5 [adam 2008-08-20]
 	Added www/p5-HTML-TokeParser-Simple version 3.15 [seb 2008-08-20]
