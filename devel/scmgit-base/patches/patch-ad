@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2008/03/15 05:09:07 bjs Exp $
+$NetBSD: patch-ad,v 1.2 2008/08/20 03:04:20 bjs Exp $
 
---- date.c.orig	2008-03-09 06:18:13.000000000 -0400
+--- date.c.orig	2008-08-17 16:43:06.000000000 -0400
 +++ date.c
-@@ -831,13 +832,19 @@ unsigned long approxidate(const char *da
+@@ -832,13 +832,19 @@ unsigned long approxidate(const char *da
  	int number = 0;
  	struct tm tm, now;
  	struct timeval tv;
