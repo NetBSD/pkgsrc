@@ -1,0 +1,2 @@
+This class implements an interface to a database of private keys used
+during DNSSEC administration. The class implements the Key object.
