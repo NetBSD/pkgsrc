@@ -1,0 +1,6 @@
+The Perl 5 module File::Policy purpose is to allow systems
+administrators to define locations and restrictions for
+applications' file I/O and give app developers a policy to follow.
+Note that the module doesn't ENFORCE the policy - application
+developers can choose to ignore it (and systems administrators can
+choose not to install their applications if they do!).
