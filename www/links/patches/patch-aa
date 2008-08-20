@@ -1,18 +1,3 @@
-$NetBSD: patch-aa,v 1.3 2008/07/24 01:38:13 bjs Exp $
+$NetBSD: patch-aa,v 1.4 2008/08/20 09:26:45 is Exp $
 
---- session.c.orig	2008-06-21 12:12:07.000000000 -0400
-+++ session.c
-@@ -2631,6 +2631,13 @@ void goto_url_f(struct session *ses, voi
- /* this doesn't send referer */
- void goto_url(struct session *ses, unsigned char *url)
- {
-+	char *p;
-+	p = url + strlen(url);
-+	do {
-+		--p;
-+	} while (isspace(*p));
-+	*++p = 0;
-+
- 	goto_url_f(ses, NULL, url, NULL, NULL, -1, 0, 1, 0);
- }
- 
+(Kept here to allow for pulling up to 8Q2).
