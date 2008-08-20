@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.49 2008/05/26 02:13:24 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2008/08/20 02:52:45 bjs Exp $
 #
 
-DISTNAME=	docbook-xsl-1.73.2
-PKGREVISION=	1
+DISTNAME=	docbook-xsl-1.74.0
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=docbook/}
 EXTRACT_SUFX=	.tar.bz2
@@ -23,13 +22,16 @@ REPLACE_PERL+=	fo/pdf2index
 
 EGDIR=		${PREFIX}/share/examples/docbook-xsl
 XSLDIR=		${PREFIX}/share/xsl/docbook
-XSLMODS=	common eclipse fo highlighting html \
+XSLMODS=	common eclipse epub fo highlighting html \
 		htmlhelp images javahelp lib manpages params \
-		profiling roundtrip slides website xhtml
+		profiling roundtrip slides website xhtml xhtml-1_1
 
 XML_CATALOGS=	${XSLDIR}/catalog.xml
 
 INSTALLATION_DIRS=	${EGDIR} ${XSLDIR}
+
+post-extract:
+	${RUN} ${RM} -f ${${FIND} ${WRKSRC} -type d:L:sh:=/.gitignore}
 
 do-install:
 	cd ${WRKSRC}/template && pax -rw -pp -pm . ${DESTDIR}${EGDIR}
@@ -40,7 +42,7 @@ do-install:
 	    ${ECHO} "cd ${WRKSRC} && pax -rw -pp -pm $$d ${DESTDIR}${XSLDIR}/"; \
 	    cd ${WRKSRC} && pax -rw -pp -pm $$d ${DESTDIR}${XSLDIR}/; \
 	done
-	for f in `${FIND} ${DESTDIR}${XSLDIR} -name \*.orig -print` ; do \
+	for f in `${FIND} ${DESTDIR}${XSLDIR} -name \\*.orig -print` ; do \
 		${ECHO} "Remove .orig file $$f" ; \
 		${RM} $$f ; \
 	done
