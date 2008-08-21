@@ -1,4 +1,4 @@
-/*	$NetBSD: pkg_io.c,v 1.1.2.3 2008/08/02 20:33:50 joerg Exp $	*/
+/*	$NetBSD: pkg_io.c,v 1.1.2.4 2008/08/21 16:04:39 joerg Exp $	*/
 /*-
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
  * All rights reserved.
@@ -36,7 +36,7 @@
 #include <sys/cdefs.h>
 #endif
 
-__RCSID("$NetBSD: pkg_io.c,v 1.1.2.3 2008/08/02 20:33:50 joerg Exp $");
+__RCSID("$NetBSD: pkg_io.c,v 1.1.2.4 2008/08/21 16:04:39 joerg Exp $");
 
 #include <archive.h>
 #include <archive_entry.h>
@@ -62,7 +62,7 @@ fetch_archive_open(struct archive *a, void *client_data)
 {
 	struct fetch_archive *f = client_data;
 
-	f->fetch = fetchGet(f->url, "");
+	f->fetch = fetchGet(f->url, fetch_flags);
 	if (f->fetch == NULL)
 		return ENOENT;
 	return 0;
@@ -186,7 +186,12 @@ find_best_package(struct url *url, const char *pattern, struct url **best_url)
 	url_pattern = xasprintf("%*.*s*", (int)i, (int)i, pattern);
 
 	fetchInitURLList(&ue);
-	if (fetchList(&ue, url, url_pattern, "")) {
+	if (fetchList(&ue, url, url_pattern, fetch_flags)) {
+		char *base_url;
+		base_url = fetchStringifyURL(url);
+		warnx("Can't process %s%s: %s", base_url, url_pattern,
+		    fetchLastErrString);
+		free(base_url);
 		free(url_pattern);
 		fetchFreeURLList(&ue);
 		return -1;

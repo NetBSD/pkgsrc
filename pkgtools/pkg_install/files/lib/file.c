@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.23.8.1 2008/04/26 17:44:23 joerg Exp $	*/
+/*	$NetBSD: file.c,v 1.23.8.2 2008/08/21 16:04:39 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -17,7 +17,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: file.c,v 1.29 1997/10/08 07:47:54 charnier Exp";
 #else
-__RCSID("$NetBSD: file.c,v 1.23.8.1 2008/04/26 17:44:23 joerg Exp $");
+__RCSID("$NetBSD: file.c,v 1.23.8.2 2008/08/21 16:04:39 joerg Exp $");
 #endif
 #endif
 
@@ -190,6 +190,7 @@ typedef struct url_t {
 
 /* A table of valid leading strings for URLs */
 static const url_t urls[] = {
+	{"file://", 7},
 	{"ftp://", 6},
 	{"http://", 7},
 	{NULL}

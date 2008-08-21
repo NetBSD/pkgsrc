@@ -14,6 +14,9 @@ DDEESSCCRRIIPPTTIIOONN
 
      The following variables are supported:
 
+     ACTIVE_FTP
+             Force the use of active FTP.
+
      CERTIFICATE_ANCHOR_PKGS
              Path to the file containing the certificates used for validating
              binary packages.  A package is trusted when a certificate chain
@@ -36,6 +39,9 @@ DDEESSCCRRIIPPTTIIOONN
              or
                    ppkkgg__aaddmmiinn ffeettcchh--ppkkgg--vvuullnneerraabbiilliittiieess --ss
 
+     IGNORE_PROXY
+             Use direct connections and ignore _F_T_P___P_R_O_X_Y and _H_T_T_P___P_R_O_X_Y.
+
      IGNORE_URL
              One line per advisory which should be ignored when running
                    ppkkgg__aaddmmiinn aauuddiitt
@@ -55,6 +61,9 @@ DDEESSCCRRIIPPTTIIOONN
              _N_o_t_e: Usually, only the compression type should be changed.  Cur-
              rently supported are uncompressed files and files compressed by
              bzip2(1) (_._b_z_2) or gzip(1) (_._g_z).
+
+     VERBOSE_NETIO
+             Log details of network IO to stderr.
 
      VERIFIED_INSTALLATION
              Set trust level used when installation.  Supported values are:
@@ -79,4 +88,4 @@ FFIILLEESS
 SSEEEE AALLSSOO
      pkg_add(1), pkg_admin(1)
 
-NetBSD 4.0                       May 26, 2008                       NetBSD 4.0
+NetBSD 4.0                      August 21, 2008                     NetBSD 4.0

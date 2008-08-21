@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_install.conf.5,v 1.1.2.1 2008/05/26 15:29:03 joerg Exp $
+.\"	$NetBSD: pkg_install.conf.5,v 1.1.2.2 2008/08/21 16:04:39 joerg Exp $
 .\"
 .\" Copyright (c) 2008 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -27,7 +27,7 @@
 .\" ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 .\" POSSIBILITY OF SUCH DAMAGE.
 .\"
-.Dd May 26, 2008
+.Dd August 21, 2008
 .Dt PKG_INSTALL.CONF 5
 .Os
 .Sh NAME
@@ -48,6 +48,8 @@ The current value of a variable can be checked by running
 .Pp
 The following variables are supported:
 .Bl -tag -width indent
+.It Dv ACTIVE_FTP
+Force the use of active FTP.
 .It Dv CERTIFICATE_ANCHOR_PKGS
 Path to the file containing the certificates used for validating
 binary packages.
@@ -75,6 +77,11 @@ file when running
 .Dl Ic pkg_admin check-pkg-vulnerabilities -s
 or
 .Dl Ic pkg_admin fetch-pkg-vulnerabilities -s
+.It Dv IGNORE_PROXY
+Use direct connections and ignore
+.Pa FTP_PROXY
+and 
+.Pa HTTP_PROXY .
 .It Dv IGNORE_URL
 One line per advisory which should be ignored when running
 .Dl Ic pkg_admin audit
@@ -102,6 +109,8 @@ Currently supported are uncompressed files and files compressed by
 or
 .Xr gzip 1
 .Pq Pa .gz .
+.It Dv VERBOSE_NETIO
+Log details of network IO to stderr.
 .It Dv VERIFIED_INSTALLATION
 Set trust level used when installation.
 Supported values are:

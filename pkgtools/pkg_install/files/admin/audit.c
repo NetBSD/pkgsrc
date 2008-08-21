@@ -1,4 +1,4 @@
-/*	$NetBSD: audit.c,v 1.8.2.3 2008/08/02 20:33:50 joerg Exp $	*/
+/*	$NetBSD: audit.c,v 1.8.2.4 2008/08/21 16:04:39 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: audit.c,v 1.8.2.3 2008/08/02 20:33:50 joerg Exp $");
+__RCSID("$NetBSD: audit.c,v 1.8.2.4 2008/08/21 16:04:39 joerg Exp $");
 #endif
 
 /*-
@@ -355,18 +355,21 @@ fetch_pkg_vulnerabilities(int argc, char **argv)
 	if (verbose >= 2)
 		fprintf(stderr, "Fetching %s\n", pkg_vulnerabilities_url);
 
-	f = fetchXGetURL(pkg_vulnerabilities_url, &st, "");
+	f = fetchXGetURL(pkg_vulnerabilities_url, &st, fetch_flags);
 	if (f == NULL)
-		err(EXIT_FAILURE, "Could not fetch vulnerability file");
+		errx(EXIT_FAILURE, "Could not fetch vulnerability file: %s",
+		    fetchLastErrString);
 
 	if (st.size > SSIZE_MAX - 1)
-		err(EXIT_FAILURE, "pkg-vulnerabilities is too large");
+		errx(EXIT_FAILURE, "pkg-vulnerabilities is too large");
 
 	buf_len = st.size;
 	buf = xmalloc(buf_len + 1);
 
 	if (fetchIO_read(f, buf, buf_len) != buf_len)
-		err(EXIT_FAILURE, "Failure during fetch of pkg-vulnerabilities");
+		errx(EXIT_FAILURE,
+		    "Failure during fetch of pkg-vulnerabilities: %s",
+		    fetchLastErrString);
 	buf[buf_len] = '\0';
 
 	if (decompress_buffer(buf, buf_len, &decompressed_input,
