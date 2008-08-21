@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.47 2008/08/20 10:07:24 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.48 2008/08/21 11:25:16 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -107,3 +107,5 @@ Pullup ticket #2498 - requested by kefren
 openttd: security update
 Pullup ticket #2499 - requested by taca
 zope29: security patch
+pullup ticket #2500 - requested by taca
+zope210: patch for security fixes
