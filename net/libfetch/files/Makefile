@@ -31,12 +31,12 @@ CPPFLAGS+=	-DFTP_COMBINE_CWDS
 
 WARNS?=		4
 
-ftperr.h: ${.CURDIR}/ftp.errors ${.CURDIR}/Makefile ${.CURDIR}/errlist.awk
-	awk -v variable=ftp_errlist -v protocol=FTP \
-	    -f ${.CURDIR}/errlist.awk ${.CURDIR}/ftp.errors > ${.TARGET}
+ftperr.h: ${.CURDIR}/ftp.errors ${.CURDIR}/Makefile ${.CURDIR}/errlist.sh
+	${.CURDIR}/errlist.sh ftp_errlist FTP \
+	    ${.CURDIR}/ftp.errors > ${.TARGET}
 
-httperr.h: ${.CURDIR}/http.errors ${.CURDIR}/Makefile ${.CURDIR}/errlist.awk
-	awk -v variable=http_errlist -v protocol=HTTP \
-	    -f ${.CURDIR}/errlist.awk ${.CURDIR}/http.errors > ${.TARGET}
+httperr.h: ${.CURDIR}/http.errors ${.CURDIR}/Makefile ${.CURDIR}/errlist.sh
+	${.CURDIR}/errlist.sh http_errlist HTTP \
+	    ${.CURDIR}/http.errors > ${.TARGET}
 
 .include <bsd.lib.mk>
