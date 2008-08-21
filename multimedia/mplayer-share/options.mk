@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.31 2008/03/25 15:35:36 wiz Exp $
+# $NetBSD: options.mk,v 1.32 2008/08/21 11:37:53 abs Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -31,7 +31,7 @@ PKG_SUPPORTED_OPTIONS+=	aalib esound ggi mplayer-menu nas sdl
 PKG_SUPPORTED_OPTIONS+=	arts
 .  endif
 .elif !empty(PKGNAME:M*mencoder*)
-PKG_SUPPORTED_OPTIONS+=	lame
+PKG_SUPPORTED_OPTIONS+=	faac lame
 .endif
 
 # OS-specific options.
@@ -142,6 +142,11 @@ CONFIGURE_ARGS+=	--enable-esd
 CONFIGURE_ARGS+=	--disable-esd
 .endif
 
+.if !empty(PKG_OPTIONS:Mfaac)
+.  include "../../audio/faac/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-faac
+.endif
 
 .if empty(PKG_OPTIONS:Mfaad) && empty(PKG_OPTIONS:Mmplayer-internal-faad)
 CONFIGURE_ARGS+=	--disable-faad-external
