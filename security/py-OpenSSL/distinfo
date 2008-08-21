@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2005/02/24 13:10:12 agc Exp $
+$NetBSD: distinfo,v 1.4 2008/08/21 10:29:32 tonnerre Exp $
 
-SHA1 (pyOpenSSL-0.6.tar.gz) = a9626095db201eeac979d0624101f5afa888f9b6
-RMD160 (pyOpenSSL-0.6.tar.gz) = cea4f15671eeb721883a741dd01877550a4a4f5c
-Size (pyOpenSSL-0.6.tar.gz) = 281910 bytes
+SHA1 (pyOpenSSL-0.7.tar.gz) = bd072fef8eb36241852d25a9161282a051f0a63e
+RMD160 (pyOpenSSL-0.7.tar.gz) = a3d208705bd9d495eb7c20f9306e568b71fe95fc
+Size (pyOpenSSL-0.7.tar.gz) = 189022 bytes
