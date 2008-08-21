@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.69 2008/08/19 19:22:46 epg Exp $
+# $NetBSD: Makefile,v 1.70 2008/08/21 20:35:36 epg Exp $
 
 DISTNAME=		nmh-1.3
 CATEGORIES=		mail
@@ -61,6 +61,7 @@ CONFIGURE_ARGS+=	--without-krb4
 
 DOCDIR=			share/doc/nmh
 EGDIR=			${PREFIX}/share/examples/nmh
+INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}
 
 BUILD_DEFS+=		NMH_MTA NMH_EDITOR NMH_PAGER NMH_HASH_BACKUP
 
@@ -95,12 +96,7 @@ CONF_FILES=		# empty
 CONF_FILES+=		${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
 .endfor
 
-# This hopefully makes sure the permissions and ownership are right.
-pre-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
-
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/${DOCDIR}
 	for f in `${GREP} '^${DOCDIR}/' ${PKGDIR}/PLIST`; do \
 	    ${INSTALL_DATA} ${WRKSRC}/docs/`${BASENAME} $$f` \
 		${DESTDIR}${PREFIX}/${DOCDIR}; \
