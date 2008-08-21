@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/08/12 13:11:30 agc Exp $
+# $NetBSD: Makefile,v 1.16 2008/08/21 19:12:53 tnn Exp $
 #
 
 DISTNAME=		sdbm
@@ -14,6 +14,8 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 COMMENT=		Substitute DBM, an implementation of the "real" ndbm library
 
 WRKSRC=			${WRKDIR}
+MAKE_FILE=		makefile
+MAKE_JOBS_SAFE=		no
 
 USE_LIBTOOL=		yes
 PKG_DESTDIR_SUPPORT=	user-destdir
