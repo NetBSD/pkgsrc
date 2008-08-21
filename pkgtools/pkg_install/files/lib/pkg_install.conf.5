@@ -1,4 +1,4 @@
-.\"	$NetBSD: pkg_install.conf.5,v 1.1.2.2 2008/08/21 16:04:39 joerg Exp $
+.\"	$NetBSD: pkg_install.conf.5,v 1.1.2.3 2008/08/21 16:10:01 joerg Exp $
 .\"
 .\" Copyright (c) 2008 The NetBSD Foundation, Inc.
 .\" All rights reserved.
@@ -79,9 +79,9 @@ or
 .Dl Ic pkg_admin fetch-pkg-vulnerabilities -s
 .It Dv IGNORE_PROXY
 Use direct connections and ignore
-.Pa FTP_PROXY
+.Ev FTP_PROXY
 and 
-.Pa HTTP_PROXY .
+.Ev HTTP_PROXY .
 .It Dv IGNORE_URL
 One line per advisory which should be ignored when running
 .Dl Ic pkg_admin audit
