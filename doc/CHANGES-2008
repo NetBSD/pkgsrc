@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1945 2008/08/21 10:30:10 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1946 2008/08/21 16:27:01 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3313,3 +3313,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Data-Denter version 0.15 [seb 2008-08-20]
 	Updated x11/gnome-themes-extras to 2.22.0nb1 [bjs 2008-08-20]
 	Updated security/py-OpenSSL to 0.7 [tonnerre 2008-08-21]
+	Updated devel/py-setuptools to 0.6c8 [joerg 2008-08-21]
