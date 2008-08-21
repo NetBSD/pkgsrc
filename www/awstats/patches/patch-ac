@@ -1,0 +1,27 @@
+$NetBSD: patch-ac,v 1.1.2.2 2008/08/21 11:17:03 tron Exp $
+
+XSS (http://secunia.com/advisories/31519/) fix. Not needed in 6.9.
+
+--- wwwroot/cgi-bin/awstats.pl.orig	2008-08-20 14:17:04.000000000 -0700
++++ wwwroot/cgi-bin/awstats.pl
+@@ -4380,6 +4380,7 @@ sub EncodeString {
+ sub DecodeEncodedString {
+ 	my $stringtodecode=shift;
+ 	$stringtodecode =~ tr/\+/ /s;
++	$stringtodecode =~ s/%22//g;
+ 	$stringtodecode =~ s/%([A-F0-9][A-F0-9])/pack("C", hex($1))/ieg;
+ 	return $stringtodecode;
+ }
+@@ -4432,9 +4433,12 @@ sub Sanitize {
+ #------------------------------------------------------------------------------
+ sub CleanXSS {
+ 	my $stringtoclean=shift;
++	# To avoid html tags and javascript
+ 	$stringtoclean =~ s/</&lt;/g;
+ 	$stringtoclean =~ s/>/&gt;/g;
+ 	$stringtoclean =~ s/|//g;
++	# To avoid onload="
++	$stringtoclean =~ s/onload//g;
+ 	return $stringtoclean;
+ }
+ 
