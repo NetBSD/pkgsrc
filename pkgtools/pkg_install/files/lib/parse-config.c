@@ -1,4 +1,4 @@
-/*	$NetBSD: parse-config.c,v 1.1.2.4 2008/08/02 20:33:50 joerg Exp $	*/
+/*	$NetBSD: parse-config.c,v 1.1.2.5 2008/08/21 16:04:39 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: parse-config.c,v 1.1.2.4 2008/08/02 20:33:50 joerg Exp $");
+__RCSID("$NetBSD: parse-config.c,v 1.1.2.5 2008/08/21 16:04:39 joerg Exp $");
 #endif
 
 /*-
@@ -51,6 +51,10 @@ __RCSID("$NetBSD: parse-config.c,v 1.1.2.4 2008/08/02 20:33:50 joerg Exp $");
 
 const char     *config_file = SYSCONFDIR"/pkg_install.conf";
 
+char fetch_flags[10];
+static const char *active_ftp;
+static const char *verbose_netio;
+static const char *ignore_proxy;
 const char *cert_chain_file;
 const char *certs_packages;
 const char *certs_pkg_vulnerabilities;
@@ -67,13 +71,16 @@ static struct config_variable {
 	const char *name;
 	const char **var;
 } config_variables[] = {
+	{ "ACTIVE_FTP", &active_ftp },
 	{ "CERTIFICATE_ANCHOR_PKGS", &certs_packages },
 	{ "CERTIFICATE_ANCHOR_PKGVULN", &certs_pkg_vulnerabilities },
 	{ "CERTIFICATE_CHAIN", &cert_chain_file },
 	{ "GPG", &gpg_cmd },
+	{ "IGNORE_PROXY", &ignore_proxy },
+	{ "IGNORE_URL", &ignore_advisories },
 	{ "PKGVULNDIR", &pkg_vulnerabilities_dir },
 	{ "PKGVULNURL", &pkg_vulnerabilities_url },
-	{ "IGNORE_URL", &ignore_advisories },
+	{ "VERBOSE_NETIO", &verbose_netio },
 	{ "VERIFIED_INSTALLATION", &verified_installation },
 	{ NULL, NULL }
 };
@@ -100,6 +107,11 @@ pkg_install_config(void)
 	}
 	if (verified_installation == NULL)
 		verified_installation = "never";
+
+	snprintf(fetch_flags, sizeof(fetch_flags), "%s%s%s",
+	    (verbose_netio && *verbose_netio) ? "v" : "",
+	    (active_ftp && *active_ftp) ? "" : "p",
+	    (ignore_proxy && *ignore_proxy) ? "d" : "");
 }
 
 void
