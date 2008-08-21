@@ -1,14 +1,24 @@
-@comment $NetBSD: PLIST,v 1.2 2004/12/27 23:35:54 minskim Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/08/21 10:29:32 tonnerre Exp $
 ${PYSITELIB}/OpenSSL/SSL.so
 ${PYSITELIB}/OpenSSL/__init__.py
 ${PYSITELIB}/OpenSSL/__init__.pyc
 ${PYSITELIB}/OpenSSL/__init__.pyo
 ${PYSITELIB}/OpenSSL/crypto.so
 ${PYSITELIB}/OpenSSL/rand.so
+${PYSITELIB}/OpenSSL/test/__init__.py
+${PYSITELIB}/OpenSSL/test/__init__.pyc
+${PYSITELIB}/OpenSSL/test/__init__.pyo
+${PYSITELIB}/OpenSSL/test/test_crypto.py
+${PYSITELIB}/OpenSSL/test/test_crypto.pyc
+${PYSITELIB}/OpenSSL/test/test_crypto.pyo
+${PYSITELIB}/OpenSSL/test/test_ssl.py
+${PYSITELIB}/OpenSSL/test/test_ssl.pyc
+${PYSITELIB}/OpenSSL/test/test_ssl.pyo
 ${PYSITELIB}/OpenSSL/tsafe.py
 ${PYSITELIB}/OpenSSL/tsafe.pyc
 ${PYSITELIB}/OpenSSL/tsafe.pyo
 ${PYSITELIB}/OpenSSL/version.py
 ${PYSITELIB}/OpenSSL/version.pyc
 ${PYSITELIB}/OpenSSL/version.pyo
+@dirrm ${PYSITELIB}/OpenSSL/test
 @dirrm ${PYSITELIB}/OpenSSL
