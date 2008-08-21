@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2007/08/09 13:22:14 joerg Exp $
+$NetBSD: distinfo,v 1.4 2008/08/21 16:26:35 joerg Exp $
 
-SHA1 (setuptools-0.6c6-py2.4.egg) = 37cc2f344820fa44476375c4c71a1ec0d1eba46d
-RMD160 (setuptools-0.6c6-py2.4.egg) = dc70ff53d9a808b6ed8377903785afae7c2eaef4
-Size (setuptools-0.6c6-py2.4.egg) = 326207 bytes
+SHA1 (setuptools-0.6c8-py2.4.egg) = 3012fdf12af4d43639fa1b36339c1b38934a6993
+RMD160 (setuptools-0.6c8-py2.4.egg) = f9dd1719e3ef0f8923ec7947e3c9b6ea496efdcc
+Size (setuptools-0.6c8-py2.4.egg) = 328977 bytes
