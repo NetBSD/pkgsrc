@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.49 2008/08/21 11:36:18 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.50 2008/08/21 12:03:01 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -111,3 +111,7 @@ pullup ticket #2500 - requested by taca
 zope210: patch for security fixes
 pullup ticket #2503 - requested by is
 transfig: pullup workaround fix for pr
+Pullup ticket #2501 - requested by taca
+zope211: security fix
+Pullup ticket #2504 - requested by minskim
+awstats: security fix
