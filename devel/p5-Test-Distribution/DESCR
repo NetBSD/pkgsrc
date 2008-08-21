@@ -1,0 +1,10 @@
+When using this module in a test script, it goes through all the modules
+in your distribution, checks their POD, checks that they compile ok and
+checks that they all define a $VERSION.
+
+This module also performs a numer of test on the distribution itself. It
+checks that your files match your SIGNATURE file if you have one. It
+checks that your distribution isn't missing certain 'core' description
+files. It checks to see you havent' missed out listing any
+pre-requisites in Makefile.PL.
+
