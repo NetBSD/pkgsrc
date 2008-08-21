@@ -7,4 +7,3 @@ checks that your files match your SIGNATURE file if you have one. It
 checks that your distribution isn't missing certain 'core' description
 files. It checks to see you havent' missed out listing any
 pre-requisites in Makefile.PL.
-
