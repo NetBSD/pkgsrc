@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.10 2005/11/10 14:29:01 itohy Exp $
+$NetBSD: patch-aa,v 1.10.24.1 2008/08/21 11:35:30 rtr Exp $
 
 --- fig2dev/Imakefile.orig	Fri Oct 28 01:56:02 2005
 +++ fig2dev/Imakefile	Wed Nov  9 22:49:57 2005
@@ -16,7 +16,7 @@ $NetBSD: patch-aa,v 1.10 2005/11/10 14:29:01 itohy Exp $
  XCOMM the display will be a bit faster in complex figures
  
 -XCOMM USEINLINE = -DUSE_INLINE
-+USEINLINE = -DUSE_INLINE
++USEINLINE = 
  
  XCOMM ****************
  XCOMM Change RGB if necessary, to point to your rgb.txt color database
