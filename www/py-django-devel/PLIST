@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/08/21 12:57:13 joerg Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/08/21 16:20:49 joerg Exp $
 bin/django-admin.py
 ${PYSITELIB}/django/__init__.py
 ${PYSITELIB}/django/__init__.pyc
@@ -1705,12 +1705,6 @@ ${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/__init__.py
 ${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.py
 ${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.pyc
 ${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/base.pyo
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.py
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.pyc
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/client.pyo
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.py
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.pyc
-${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/creation.pyo
 ${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.py
 ${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.pyc
 ${PLIST.psycopg2}${PYSITELIB}/django/db/backends/postgresql_psycopg2/introspection.pyo
