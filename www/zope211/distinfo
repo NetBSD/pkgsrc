@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/06/21 10:39:31 taca Exp $
+$NetBSD: distinfo,v 1.1.1.1.4.1 2008/08/21 12:01:04 tron Exp $
 
 SHA1 (Zope-2.11.0-final.tar.gz) = 1954c2833bdbe159bc71e23ea51de89d72ddb66f
 RMD160 (Zope-2.11.0-final.tar.gz) = d2f4393c8c52ce6c0e7c63f3d6c23037d9a34266
@@ -12,3 +12,5 @@ SHA1 (patch-af) = 3b352c8bd6cc8f7360025d3d27267a0319cd6b17
 SHA1 (patch-ag) = dffc88b9d087e01bf853441c4a9064a9184a310f
 SHA1 (patch-ah) = 360c8f69e1f23a9f0dec666d509e03e4ef55d93b
 SHA1 (patch-ai) = d7987483068b677aeab5ceb59dd8261e204065d7
+SHA1 (patch-aj) = a69e08c7f9a705056d13c5c7bff0dbfef1d53da6
+SHA1 (patch-ak) = 95633060bc99be604b75ac49e37e6483168bc362
