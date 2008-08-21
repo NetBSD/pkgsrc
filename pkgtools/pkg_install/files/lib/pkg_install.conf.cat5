@@ -40,7 +40,7 @@ DDEESSCCRRIIPPTTIIOONN
                    ppkkgg__aaddmmiinn ffeettcchh--ppkkgg--vvuullnneerraabbiilliittiieess --ss
 
      IGNORE_PROXY
-             Use direct connections and ignore _F_T_P___P_R_O_X_Y and _H_T_T_P___P_R_O_X_Y.
+             Use direct connections and ignore FTP_PROXY and HTTP_PROXY.
 
      IGNORE_URL
              One line per advisory which should be ignored when running
