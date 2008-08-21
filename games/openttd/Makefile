@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.28 2008/08/05 12:38:22 kefren Exp $
+# $NetBSD: Makefile,v 1.29 2008/08/21 11:37:01 abs Exp $
 
 DISTNAME=	openttd-0.6.2-source
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:S/-source//}
 CATEGORIES=	games x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=openttd/}
@@ -10,14 +11,16 @@ HOMEPAGE=	http://www.openttd.com/
 COMMENT=	Open source clone of Transport Tycoon Deluxe
 EXTRACT_SUFX=	.tar.bz2
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
 HAS_CONFIGURE=		yes
 USE_LANGUAGES+=		c c++
 USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		gmake pkg-config
 
-CONFIGURE_ARGS+=	--prefix-dir=${DESTDIR}${PREFIX}
+# Setting the below results in binaries looking in ${DESTDIR} for datafiles
+# CONFIGURE_ARGS+=	--prefix-dir=${DESTDIR}${PREFIX}
+# PKG_DESTDIR_SUPPORT=	user-destdir
+
+CONFIGURE_ARGS+=	--prefix-dir=${PREFIX}
 CONFIGURE_ARGS+=	--binary-dir=bin
 CONFIGURE_ARGS+=	--data-dir=share/openttd
 
