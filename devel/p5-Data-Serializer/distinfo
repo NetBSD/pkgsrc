@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/08/22 20:48:15 seb Exp $
+
+SHA1 (Data-Serializer-0.47.tar.gz) = 3f946ce62feab1440d0d6af348b296f5117508cb
+RMD160 (Data-Serializer-0.47.tar.gz) = 28bc9185b7887eb345f7d21cf0f94f87b9b47f18
+Size (Data-Serializer-0.47.tar.gz) = 28857 bytes
