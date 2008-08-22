@@ -1,0 +1,24 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2008/08/22 20:48:15 seb Exp $
+
+Recommended packages (Perl 5 modules) for use with the Perl 5 module
+Data::Serializer:
+
+converters/p5-JSON
+converters/p5-JSON-XS
+converters/p5-MIME-Base64
+devel/p5-Compress-PPMd
+devel/p5-Compress-Zlib
+devel/p5-Config-General
+devel/p5-Data-Denter
+devel/p5-Data-Taxi
+devel/p5-FreezeThaw
+devel/p5-PHP-Serialization
+security/p5-Crypt-Blowfish
+security/p5-Crypt-CBC
+textproc/p5-XML-Dumper
+textproc/p5-XML-Simple
+textproc/p5-YAML
+textproc/p5-YAML-Syck
+
+===========================================================================
