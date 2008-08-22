@@ -1,0 +1,3 @@
+The Perl 5 module PHP::Serialization provides simple flexible means
+of converting the output of PHP's serialize() into the equivalent
+Perl memory structure, and vice versa.
