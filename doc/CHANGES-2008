@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1947 2008/08/22 06:37:53 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1948 2008/08/22 07:45:34 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3315,3 +3315,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/py-OpenSSL to 0.7 [tonnerre 2008-08-21]
 	Updated devel/py-setuptools to 0.6c8 [joerg 2008-08-21]
 	Updated chat/xchat to 2.8.6pl1 [tron 2008-08-22]
+	Updated shells/eltclsh to 1.9 [obache 2008-08-22]
