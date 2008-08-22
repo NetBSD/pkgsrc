@@ -1,0 +1,5 @@
+Ultraviolet is a syntax highlighting engine based on Textpow. Since it uses
+Textmate syntax files, it offers out of the box syntax highlighting for more
+than 50 languages and 20 themes.
+Ultraviolet is at the same time a stand-alone command line utility and a Ruby
+library.
