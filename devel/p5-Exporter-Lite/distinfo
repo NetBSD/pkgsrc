@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/08/22 21:28:11 seb Exp $
+
+SHA1 (Exporter-Lite-0.02.tar.gz) = b96e3dc2efcdd93bdd2e5ecdcb61828937bea539
+RMD160 (Exporter-Lite-0.02.tar.gz) = 2a0ff483d7b719d2b295653d4e0e24497c58f212
+Size (Exporter-Lite-0.02.tar.gz) = 4864 bytes
