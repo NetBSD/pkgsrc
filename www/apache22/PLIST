@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/06/18 21:38:01 tron Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/08/22 04:36:00 obache Exp $
 ${PLIST.suexec}sbin/suexec
 include/httpd/ap_compat.h
 include/httpd/ap_config.h
@@ -1053,7 +1053,9 @@ share/httpd/manual/vhosts/name-based.html.ko.euc-kr
 share/httpd/manual/vhosts/name-based.html.tr.utf8
 @unexec ${RMDIR} %D/libexec/cgi-bin 2>/dev/null || ${TRUE}
 @dirrm share/httpd/manual/vhosts
+@exec ${MKDIR} %D/share/httpd/manual/style/xsl/util
 @dirrm share/httpd/manual/style/xsl/util
+@exec ${MKDIR} %D/share/httpd/manual/style/xsl
 @dirrm share/httpd/manual/style/xsl
 @dirrm share/httpd/manual/style/latex
 @exec ${MKDIR} %D/share/httpd/manual/style/lang
