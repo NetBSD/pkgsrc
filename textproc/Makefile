@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.425 2008/08/09 17:35:37 ahoka Exp $
+# $NetBSD: Makefile,v 1.426 2008/08/22 16:10:54 ahoka Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -376,6 +376,8 @@ SUBDIR+=	ruby-maruku
 SUBDIR+=	ruby-mecab
 SUBDIR+=	ruby-native-hyperestraier
 SUBDIR+=	ruby-nqxml
+SUBDIR+=	ruby-oniguruma
+SUBDIR+=	ruby-plist
 SUBDIR+=	ruby-pure-hyperestraier
 SUBDIR+=	ruby-rdtool
 SUBDIR+=	ruby-redcloth
@@ -385,6 +387,8 @@ SUBDIR+=	ruby-sary
 SUBDIR+=	ruby-simple-rss
 SUBDIR+=	ruby-suikyo
 SUBDIR+=	ruby-syntax
+SUBDIR+=	ruby-textpow
+SUBDIR+=	ruby-ultraviolet
 SUBDIR+=	ruby-will-paginate
 SUBDIR+=	ruby-xmlparser
 SUBDIR+=	ruby-xmlscan
