@@ -1,0 +1,4 @@
+The Perl 5 module Exporter::Lite is an alternative to the module
+Exporter intended to provide a lightweight subset of its functionality.
+It supports import(), @EXPORT and @EXPORT_OK and not a whole lot
+else.
