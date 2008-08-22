@@ -1,0 +1,3 @@
+Plist is a library to manipulate Property List files, also known as plists. It
+can parse plist files into native Ruby data structures as well as generating
+new plist files from your Ruby objects.

@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/22 15:39:43 ahoka Exp $
+${GEM_HOME}/cache/plist-${PKGVERSION}.gem
+${GEM_LIBDIR}/MIT-LICENSE
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/docs/USAGE
+${GEM_LIBDIR}/lib/plist.rb
+${GEM_LIBDIR}/lib/plist/generator.rb
+${GEM_LIBDIR}/lib/plist/parser.rb
+${GEM_LIBDIR}/test/assets/AlbumData.xml
+${GEM_LIBDIR}/test/assets/Cookies.plist
+${GEM_LIBDIR}/test/assets/commented.plist
+${GEM_LIBDIR}/test/assets/example_data.bin
+${GEM_LIBDIR}/test/assets/example_data.jpg
+${GEM_LIBDIR}/test/assets/example_data.plist
+${GEM_LIBDIR}/test/assets/test_data_elements.plist
+${GEM_LIBDIR}/test/assets/test_empty_key.plist
+${GEM_LIBDIR}/test/test_data_elements.rb
+${GEM_LIBDIR}/test/test_generator.rb
+${GEM_LIBDIR}/test/test_generator_basic_types.rb
+${GEM_LIBDIR}/test/test_generator_collections.rb
+${GEM_LIBDIR}/test/test_parser.rb
+${GEM_HOME}/specifications/plist-${PKGVERSION}.gemspec
+@dirrm ${GEM_LIBDIR}/test/assets
+@dirrm ${GEM_LIBDIR}/test
+@dirrm ${GEM_LIBDIR}/lib/plist
+@dirrm ${GEM_LIBDIR}/lib
+@dirrm ${GEM_LIBDIR}/docs
+@dirrm ${GEM_LIBDIR}
