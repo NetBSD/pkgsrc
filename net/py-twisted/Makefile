@@ -1,25 +1,17 @@
-# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:42 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/08/22 21:49:08 epg Exp $
 #
 
-DISTNAME=		${TWISTED_DISTNAME}
-PKGNAME=		${PYPKGPREFIX}-${TWISTED_PKGNAME}
-PKGREVISION=		1
-CATEGORIES=		net python
-MASTER_SITES=		${TWISTED_MASTER_SITES}
-
-MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.twistedmatrix.com/
+PKGNAME=		${PYPKGPREFIX}-twisted-${TWISTED_VERSION}
 COMMENT=		Framework for writing networked applications
-
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-PY_PATCHPLIST=		yes
-PYDISTUTILSPKG=		yes
-PLIST_SUBST+=		PYVERSSUFFIX="-${PYVERSSUFFIX}"
-MAKE_ENV+=		PKGSRC="1" PYVERSSUFFIX="-${PYVERSSUFFIX}"
-
-PYTHON_VERSIONS_ACCEPTED=	25 24 23
-
 .include "../../net/py-twisted/Makefile.common"
+
+DEPENDS+=		${PYPKGPREFIX}-OpenSSL>=0.7:../../security/py-OpenSSL
+DEPENDS+=		${PYPKGPREFIX}-ZopeInterface>=3.0.1:../../devel/py-ZopeInterface
+
+PYDISTUTILSPKG=		yes
+
+do-test:
+	cd ${WRKSRC} && ./build/scripts-${PYVERSSUFFIX}/trial twisted
+
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
