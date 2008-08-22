@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.7 2008/07/29 21:19:55 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/08/22 13:50:51 is Exp $
 bin/opensearch-discover
 bin/opensearch-genquery
-bin/sr
 bin/surfraw
 bin/surfraw-update-path
 lib/surfraw/W
@@ -86,7 +85,6 @@ lib/surfraw/yubnub
 man/man1/elvi.1
 man/man1/opensearch-discover.1
 man/man1/opensearch-genquery.1
-man/man1/sr.1
 man/man1/surfraw-update-path.1
 man/man1/surfraw.1
 share/doc/surfraw/README
