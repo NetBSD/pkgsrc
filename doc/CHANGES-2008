@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1953 2008/08/22 16:10:54 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.1954 2008/08/22 16:11:26 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3325,3 +3325,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/ruby-plist version 3.0.0 [ahoka 2008-08-22]
 	Added textproc/ruby-textpow version 0.10.1 [ahoka 2008-08-22]
 	Added textproc/ruby-ultraviolet version 0.10.2 [ahoka 2008-08-22]
+	Added devel/p5-PHP-Serialization version 0.27 [seb 2008-08-22]
