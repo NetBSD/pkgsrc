@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1952 2008/08/22 15:34:39 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1953 2008/08/22 16:10:54 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3321,3 +3321,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/x11-links to 0.37 [tron 2008-08-22]
 	Updated www/surfraw to 2.2.2nb1 [is 2008-08-22]
 	Added devel/p5-Compress-PPMd version 0.11 [seb 2008-08-22]
+	Added textproc/ruby-oniguruma version 1.1.0 [ahoka 2008-08-22]
+	Added textproc/ruby-plist version 3.0.0 [ahoka 2008-08-22]
+	Added textproc/ruby-textpow version 0.10.1 [ahoka 2008-08-22]
+	Added textproc/ruby-ultraviolet version 0.10.2 [ahoka 2008-08-22]
