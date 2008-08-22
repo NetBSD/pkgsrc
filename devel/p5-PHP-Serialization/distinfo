@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/08/22 16:07:49 seb Exp $
+
+SHA1 (PHP-Serialization-0.27.tar.gz) = 7d0742356b071a768862f1a2485864b1c4bdba1e
+RMD160 (PHP-Serialization-0.27.tar.gz) = bba47438bdbbb0f7a4436c1c49094b3b0a3f4019
+Size (PHP-Serialization-0.27.tar.gz) = 4169 bytes
