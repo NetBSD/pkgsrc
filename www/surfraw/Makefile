@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2008/07/29 21:19:55 wiz Exp $
+# $NetBSD: Makefile,v 1.38 2008/08/22 13:50:50 is Exp $
 #
 
 DISTNAME=	surfraw-2.2.2
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	http://surfraw.alioth.debian.org/dist/
 
@@ -13,7 +14,7 @@ CONFLICTS+=	surfaw-[0-9]*
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl sed
 REPLACE_PERL+=		surfraw-update-path.IN opensearch-discover \
 			opensearch-genquery
 
@@ -26,8 +27,12 @@ CONF_FILES+=		${EGDIR}/surfraw.bookmarks ${PKG_SYSCONFDIR}/surfraw.bookmarks
 
 # avoid installing useless manpage links
 post-patch:
-	${MV} ${WRKSRC}/links.IN ${WRKSRC}/links.IN.orig
-	${GREP} -v elvi.1sr.gz ${WRKSRC}/links.IN.orig > ${WRKSRC}/links.IN
+	-${GREP} -v elvi.1sr.gz ${WRKSRC}/links.IN > ${WRKSRC}/links.IN.new
+	${MV} ${WRKSRC}/links.IN.new ${WRKSRC}/links.IN
+	${SED} -e s/sr/surfraw/g ${WRKSRC}/surfraw.1.IN > ${WRKSRC}/surfraw.1.IN.new
+	${MV} ${WRKSRC}/surfraw.1.IN.new ${WRKSRC}/surfraw.1.IN
+	${SED} -e s/sr/surfraw/g ${WRKSRC}/elvi.1sr.IN > ${WRKSRC}/elvi.1sr.IN.new
+	${MV} ${WRKSRC}/elvi.1sr.IN.new ${WRKSRC}/elvi.1sr.IN
 
 # Override installation to install config files in example dir
 do-install:
