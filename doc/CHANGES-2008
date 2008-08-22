@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1954 2008/08/22 16:11:26 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1955 2008/08/22 17:04:59 cegger Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3326,3 +3326,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/ruby-textpow version 0.10.1 [ahoka 2008-08-22]
 	Added textproc/ruby-ultraviolet version 0.10.2 [ahoka 2008-08-22]
 	Added devel/p5-PHP-Serialization version 0.27 [seb 2008-08-22]
+	Updated sysutils/xenkernel33 to 3.3.0 [cegger 2008-08-22]
+	Updated sysutils/xentools33 to 3.3.0 [cegger 2008-08-22]
