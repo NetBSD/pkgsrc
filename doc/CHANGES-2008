@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1948 2008/08/22 07:45:34 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1949 2008/08/22 09:43:41 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3316,3 +3316,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/py-setuptools to 0.6c8 [joerg 2008-08-21]
 	Updated chat/xchat to 2.8.6pl1 [tron 2008-08-22]
 	Updated shells/eltclsh to 1.9 [obache 2008-08-22]
+	Updated mail/thunderbird to 2.0.0.16 [ghen 2008-08-22]
+	Updated mail/thunderbird-gtk1 to 2.0.0.16 [ghen 2008-08-22]
