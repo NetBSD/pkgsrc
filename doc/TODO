@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7487 2008/08/20 10:04:40 adam Exp $
+$NetBSD: TODO,v 1.7488 2008/08/22 07:46:08 obache Exp $
 
 Suggested new packages
 ======================
@@ -587,7 +587,6 @@ Suggested package updates
 	o elinks-0.12
 	o elm-me-2.4pl124b
 	o elscreen-1.4.6
-	o eltclsh-1.8 [pkg/37283]
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.12
