@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1950 2008/08/22 13:35:14 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1951 2008/08/22 13:54:35 is Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3319,3 +3319,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/thunderbird to 2.0.0.16 [ghen 2008-08-22]
 	Updated mail/thunderbird-gtk1 to 2.0.0.16 [ghen 2008-08-22]
 	Updated pkgtools/x11-links to 0.37 [tron 2008-08-22]
+	Updated www/surfraw to 2.2.2nb1 [is 2008-08-22]
