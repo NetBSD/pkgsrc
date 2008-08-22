@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.984 2008/08/22 15:33:58 seb Exp $
+# $NetBSD: Makefile,v 1.985 2008/08/22 16:10:33 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -604,6 +604,7 @@ SUBDIR+=	p5-Object-Realize-Later
 SUBDIR+=	p5-Object-Signature
 SUBDIR+=	p5-PAR
 SUBDIR+=	p5-PAR-Dist
+SUBDIR+=	p5-PHP-Serialization
 SUBDIR+=	p5-POE
 SUBDIR+=	p5-PPI
 SUBDIR+=	p5-PPI-XS
