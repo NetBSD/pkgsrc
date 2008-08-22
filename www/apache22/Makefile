@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/08/09 22:16:44 tron Exp $
+# $NetBSD: Makefile,v 1.29 2008/08/22 04:36:00 obache Exp $
 
 .include "Makefile.common"
 
@@ -8,6 +8,8 @@ CATEGORIES=	www
 
 HOMEPAGE=	http://httpd.apache.org/
 COMMENT=	Apache HTTP (Web) server, version 2
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=	apache-{,*ssl}-[0-9]* apache6-[0-9]*
 
@@ -178,7 +180,7 @@ SUBST_SED.confs+=	-e 's|^\(Group[	 ]\).*|\1${APACHE_GROUP}|g'
 # so we fix after install to reference the installed path
 SUBST_CLASSES+=		abs_srcdir
 SUBST_STAGE.abs_srcdir=	post-install
-SUBST_FILES.abs_srcdir=	${PREFIX}/share/httpd/build/config_vars.mk
+SUBST_FILES.abs_srcdir=	${DESTDIR}${PREFIX}/share/httpd/build/config_vars.mk
 SUBST_SED.abs_srcdir=	-e 's|^\(abs_srcdir =\) .*|\1 ${PREFIX}/share/httpd|'
 SUBST_MESSAGE.abs_srcdir=	Fixing abs_srcdir
 
@@ -221,13 +223,12 @@ post-build:
 	${SED} "s#@PKG_SYSCONFDIR@#${PKG_SYSCONFDIR}#g"			\
 		< ${FILESDIR}/mkcert.sh > ${WRKDIR}/mkcert
 
-pre-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV}				\
-		${MAKE_PROGRAM} install-conf sysconfdir="${EGDIR}"
+INSTALL_TARGET=		install-conf install
+INSTALL_MAKE_FLAGS+=	sysconfdir="${EGDIR}"
 
 post-install:
-	${LN} -sf ${LOCALBASE}/libexec/apr/libtool ${PREFIX}/share/httpd/build
-	cd ${EGDIR} &&							\
+	${LN} -sf ${LOCALBASE}/libexec/apr/libtool ${DESTDIR}${PREFIX}/share/httpd/build
+	cd ${DESTDIR}${EGDIR} &&					\
 	for file in							\
 		httpd.conf						\
 		extra/httpd-ssl.conf;					\
@@ -246,26 +247,26 @@ post-install:
 		${MV} -f $${file}.new $${file};				\
 	done
 
-	${LN} -sf ${SBINDIR}/envvars-std ${SBINDIR}/envvars
+	${LN} -sf ${SBINDIR}/envvars-std ${DESTDIR}${SBINDIR}/envvars
 
-	${INSTALL_SCRIPT} ${WRKDIR}/mkcert ${PREFIX}/sbin
+	${INSTALL_SCRIPT} ${WRKDIR}/mkcert ${DESTDIR}${PREFIX}/sbin
 
 	for file in ${FIX_PERMS}; do \
-		${CHOWN} ${BINOWN}:${BINGRP} ${PREFIX}/sbin/$$file && \
-		${CHMOD} ${BINMODE} ${PREFIX}/sbin/$$file; \
+		${CHOWN} ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/sbin/$$file && \
+		${CHMOD} ${BINMODE} ${DESTDIR}${PREFIX}/sbin/$$file; \
 	done
 
-	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/share/httpd
-	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/include/httpd
-	${CHOWN} -R ${BINOWN}:${BINGRP} ${PREFIX}/lib/httpd
-	${CHOWN} ${BINOWN}:${BINGRP} ${PREFIX}/libexec/cgi-bin/test-cgi
-	${CHOWN} ${BINOWN}:${BINGRP} ${PREFIX}/libexec/cgi-bin/printenv
+	${CHOWN} -R ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/share/httpd
+	${CHOWN} -R ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/include/httpd
+	${CHOWN} -R ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/lib/httpd
+	${CHOWN} ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/libexec/cgi-bin/test-cgi
+	${CHOWN} ${BINOWN}:${BINGRP} ${DESTDIR}${PREFIX}/libexec/cgi-bin/printenv
 
 	for file in ${FIX_MAN_PERMS}; do \
-		${CHOWN} ${MANOWN}:${MANGRP} ${PREFIX}/${PKGMANDIR}/$$file; \
+		${CHOWN} ${MANOWN}:${MANGRP} ${DESTDIR}${PREFIX}/${PKGMANDIR}/$$file; \
 	done
 
-	${CHMOD} -x ${PREFIX}/sbin/envvars-std
-	${TEST} ! -f ${PREFIX}/sbin/suexec || ${CHMOD} -w ${PREFIX}/sbin/suexec
+	${CHMOD} -x ${DESTDIR}${PREFIX}/sbin/envvars-std
+	${TEST} ! -f ${DESTDIR}${PREFIX}/sbin/suexec || ${CHMOD} -w ${DESTDIR}${PREFIX}/sbin/suexec
 
 .include "../../mk/bsd.pkg.mk"
