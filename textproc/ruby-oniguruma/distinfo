@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/08/22 15:37:13 ahoka Exp $
+
+SHA1 (oniguruma-1.1.0.gem) = 36acce9ba77830983ec6bf1438368f1aa5ac86b8
+RMD160 (oniguruma-1.1.0.gem) = 1c5353dc5785fc23c6c7b38fcf9190117da19982
+Size (oniguruma-1.1.0.gem) = 24064 bytes
