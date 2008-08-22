@@ -1,17 +1,16 @@
-# $NetBSD: Makefile,v 1.4 2008/08/20 15:06:49 cegger Exp $
+# $NetBSD: Makefile,v 1.5 2008/08/22 17:03:30 cegger Exp $
 #
 
-VERSION=	3.3-18353
+VERSION=	3.3.0
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenkernel33-${VERSION}
 CATEGORIES=	sysutils
-#MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
-MASTER_SITES=	http://www.netbsd.org/~cegger/
+MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
 EXTRACT_SUFX=	.tar.gz
 
 MAINTAINER=	cegger@NetBSD.org
 HOMEPAGE=	http://xen.org/
-COMMENT=	Xen3.3.0-rc7 Kernel
+COMMENT=	Xen 3.3.0 Kernel
 
 ONLY_FOR_PLATFORM=	Linux-2.6*-i386 Linux-2.6*-x86_64
 ONLY_FOR_PLATFORM+=	NetBSD-4.99.*-x86_64 NetBSD-4.99.*-i386
