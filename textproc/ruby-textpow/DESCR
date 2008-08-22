@@ -1,0 +1,4 @@
+Textpow is a library to parse and process Textmate bundles. Although created
+created for their use in a word processor, these bundles have many other uses.
+For example, we have used them to create a syntax highligting utility and also
+the markup rendering engine used to render this documentation.
