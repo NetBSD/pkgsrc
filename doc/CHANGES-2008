@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1957 2008/08/22 20:51:40 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1958 2008/08/22 21:31:37 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3331,3 +3331,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/xenkernel33 to 3.3.0 [cegger 2008-08-22]
 	Updated sysutils/xentools33 to 3.3.0 [cegger 2008-08-22]
 	Added devel/p5-Data-Serializer version 0.47 [seb 2008-08-22]
+	Added devel/p5-Exporter-Lite version 0.02 [seb 2008-08-22]
