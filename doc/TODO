@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7488 2008/08/22 07:46:08 obache Exp $
+$NetBSD: TODO,v 1.7489 2008/08/22 21:50:33 epg Exp $
 
 Suggested new packages
 ======================
@@ -1110,7 +1110,6 @@ Suggested package updates
 	o py-sqlite2-2.4.1
 	o py-sybase-0.37
 	o py-textile-2.0.11
-	o py-twisted-8.0.1
 	o py-urwid-0.9.8.2
 	o py-zconfig-2.3.1
 	o pygopherd-2.0.13

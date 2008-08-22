@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1958 2008/08/22 21:31:37 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1959 2008/08/22 21:50:33 epg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3332,3 +3332,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/xentools33 to 3.3.0 [cegger 2008-08-22]
 	Added devel/p5-Data-Serializer version 0.47 [seb 2008-08-22]
 	Added devel/p5-Exporter-Lite version 0.02 [seb 2008-08-22]
+	Updated net/py-twisted to 8.1.0 [epg 2008-08-22]
+	Updated net/py-twisted-docs to 8.1.0 [epg 2008-08-22]
