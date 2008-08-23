@@ -1,0 +1,2 @@
+The Perl 5 module FileHandle::Fmode provides functions to determine
+whether a filehandle is opened for reading, writing, or both.
