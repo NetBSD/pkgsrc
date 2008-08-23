@@ -1,0 +1,2 @@
+The Perl 5 module IPC::PubSub provides a simple API for publishing
+messages to channels and for subscribing to them.
