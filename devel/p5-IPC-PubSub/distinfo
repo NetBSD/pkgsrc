@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/08/23 20:36:28 seb Exp $
+
+SHA1 (IPC-PubSub-0.28.tar.gz) = e1128d671b9c4c119f4bf8fbd3d320e699e80b8b
+RMD160 (IPC-PubSub-0.28.tar.gz) = 0eeb01fe3e2b20d570c38bd23e2951b9f0489d99
+Size (IPC-PubSub-0.28.tar.gz) = 20673 bytes
