@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.68 2008/08/17 08:25:50 bjs Exp $
+# $NetBSD: Makefile.common,v 1.69 2008/08/23 02:51:19 dsainty Exp $
 #
 # This Makefile fragment is included either directly or indirectly (through
 # Makefile.lib) by all packages that are built from the Mesa sources.
@@ -34,7 +34,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/Mesa-${MESA_VERSION}
 BUILDING_MESA=		yes
 NO_CONFIGURE=		yes
-DIST_SUBDIR=		Mesa-${MESA_VERSION}
+DIST_SUBDIR=		Mesa-${MESA_PKGVERSION}
 
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
