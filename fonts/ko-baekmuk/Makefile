@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.18 2007/04/12 22:10:14 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2008/08/23 07:47:00 obache Exp $
 #
 
 DISTNAME=	baekmuk-2.1
 PKGNAME=	ko-${DISTNAME}
 CATEGORIES=	fonts x11 korean
-MASTER_SITES+=	ftp://ftp.mizi.com/pub/baekmuk/ \
-		http://zinc.skku.ac.kr/~wkpark/baekmuk/
+MASTER_SITES+=	ftp://ftp.mizi.com/pub/baekmuk/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	X11 fonts for KSX 1001 Korean standard (baekmuk foundry)
