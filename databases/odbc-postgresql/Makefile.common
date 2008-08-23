@@ -1,15 +1,8 @@
-# $NetBSD: Makefile.common,v 1.14 2006/10/04 20:53:45 wiz Exp $
+# $NetBSD: Makefile.common,v 1.15 2008/08/23 11:23:15 obache Exp $
 
 DISTNAME=		postgresql-${DIST_VERS}
 CATEGORIES=		databases
-PGSQL_SITES=		http://www.postgresql.org/ftpsite/ \
-			ftp://ftp.postgresql.org/pub/ \
-			ftp://ftp.de.postgresql.org/pub/ \
-			ftp://ch.postgresql.org/mirror/postgresql/ \
-			ftp://gd.tuwien.ac.at/db/www.postgresql.org/pub/ \
-			ftp://looking-glass.usask.ca/pub/postgresql/ \
-			ftp://ftp.sunsite.auc.dk/mirrors/postgresql/ \
-			ftp://ftp.jaist.ac.jp/pub/dbms/postgres95/
+PGSQL_SITES=		ftp://ftp-archives.postgresql.org/pub/
 MASTER_SITES?=		${PGSQL_SITES:=source/v${DIST_VERS}/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
