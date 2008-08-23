@@ -1,0 +1,32 @@
+$NetBSD: patch-ak,v 1.1 2008/08/23 16:07:51 wiz Exp $
+
+--- lib/math.in.h.orig  2008-04-01 11:59:24.000000000 +0900
++++ lib/math.in.h       2008-07-05 06:07:06.000000000 +0900
+@@ -34,8 +34,11 @@
+ 
+ /* POSIX allows platforms that don't support NAN.  But all major
+    machines in the past 15 years have supported something close to
+-   IEEE NaN, so we define this unconditionally.  */
+-#ifndef NAN
++   IEEE NaN, so we define this unconditionally.  We also must define
++   it on platforms like Solaris 10, where NAN is present but defined
++   as a function pointer rather than a floating point constant.  */
++#if !defined NAN || @REPLACE_NAN@
++# undef NAN
+   /* The Compaq (ex-DEC) C 6.4 compiler chokes on the expression 0.0 / 0.0.  */
+ # ifdef __DECC
+ static float
+@@ -50,6 +53,13 @@
+ # endif
+ #endif
+ 
++/* Solaris 10 defines HUGE_VAL, but as a function pointer rather
++   than a floating point constant.  */
++#if @REPLACE_HUGE_VAL@
++# undef HUGE_VAL
++# define HUGE_VAL (1.0 / 0.0)
++#endif
++
+ /* Write x as
+      x = mantissa * 2^exp
+    where
