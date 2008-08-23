@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1960 2008/08/23 00:20:28 obache Exp $
+$NetBSD: CHANGES-2008,v 1.1961 2008/08/23 00:25:42 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3335,3 +3335,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/py-twisted to 8.1.0 [epg 2008-08-22]
 	Updated net/py-twisted-docs to 8.1.0 [epg 2008-08-22]
 	Updated www/ja-trac to 0.11.1pl1 [obache 2008-08-23]
+	Updated devel/qconf to 1.4 [bjs 2008-08-23]
