@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.14 2007/02/22 19:01:26 wiz Exp $
+# $NetBSD: Makefile,v 1.15 2008/08/23 07:47:00 obache Exp $
 #
 
 DISTNAME=	mod_mp3-0.35
 PKGNAME=	${DISTNAME:C|mod_|ap13-|}
 CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.tangent.org/pub/apache/ \
-		http://www.tangent.org/download/
+MASTER_SITES=	http://www.tangent.org/download/
 
 MAINTAINER=	grant@NetBSD.org
 HOMEPAGE=	http://tangent.org/index.pl?lastnode_id=478&node_id=380
