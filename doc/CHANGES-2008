@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1975 2008/08/23 21:44:20 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1976 2008/08/23 22:00:38 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3350,3 +3350,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-IPC-PubSub version 0.28 [seb 2008-08-23]
 	Added devel/p5-Object-Declare version 0.22 [seb 2008-08-23]
 	Added devel/p5-Class-InsideOut version 1.09 [seb 2008-08-23]
+	Added devel/p5-Scalar-Defer version 0.18 [seb 2008-08-23]
