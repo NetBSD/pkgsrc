@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1963 2008/08/23 08:37:57 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1964 2008/08/23 09:36:28 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3338,3 +3338,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/qconf to 1.4 [bjs 2008-08-23]
 	Updated graphics/MesaLib to 7.0.4.1nb1 [dsainy 2008-08-23]
 	Updated devel/libtar to 1.2.11nb2 [bjs 2008-08-23]
+	Added www/p5-HTML-Lint version 2.04 [seb 2008-08-23]
