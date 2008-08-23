@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1965 2008/08/23 09:49:28 tnn Exp $
+$NetBSD: CHANGES-2008,v 1.1966 2008/08/23 10:23:53 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3340,3 +3340,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libtar to 1.2.11nb2 [bjs 2008-08-23]
 	Added www/p5-HTML-Lint version 2.04 [seb 2008-08-23]
 	Updated net/Transmission to 1.33 [tnn 2008-08-23]
+	Updated graphics/png to 1.2.31 [wiz 2008-08-23]
