@@ -1,0 +1,3 @@
+The Perl 5 module Object::Declare provides a declare() function
+for building named objects with a declarative syntax, similar to
+how Jifty::DBI::Schema defines its columns.
