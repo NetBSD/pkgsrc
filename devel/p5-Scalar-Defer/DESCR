@@ -1,0 +1,3 @@
+The Perl 5 module Scalar::Defer exports functions for constructing
+values that are evaluated on demand and to force evaluation of a
+deferred value.
