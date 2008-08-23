@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1970 2008/08/23 18:31:20 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1971 2008/08/23 19:43:08 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3345,3 +3345,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/p5-HTTP-Server-Simple-Recorder version 0.02 [seb 2008-08-23]
 	Updated devel/libsigsegv to 2.5nb1 [wiz 2008-08-23]
 	Added devel/p5-Hash-Merge version 0.10 [seb 2008-08-23]
+	Added devel/p5-FileHandle-Fmode version 0.10 [seb 2008-08-23]
