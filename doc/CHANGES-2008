@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1967 2008/08/23 12:48:02 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1968 2008/08/23 12:58:09 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3342,3 +3342,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/Transmission to 1.33 [tnn 2008-08-23]
 	Updated graphics/png to 1.2.31 [wiz 2008-08-23]
 	Added www/p5-Test-HTTP-Server-Simple version 0.09 [seb 2008-08-23]
+	Added www/p5-HTTP-Server-Simple-Recorder version 0.02 [seb 2008-08-23]
