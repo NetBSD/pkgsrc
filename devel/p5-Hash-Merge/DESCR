@@ -1,0 +1,4 @@
+The Perl 5 module Hash::Merge merges two arbitrarily deep hashes
+into a single hash. That is, at any level, it will add non-conflicting
+key-value pairs from one hash to the other, and follows a set of
+specific rules when there are key value conflicts.
