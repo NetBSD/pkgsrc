@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.40 2008/08/23 15:28:59 wiz Exp $
+# $NetBSD: Makefile,v 1.41 2008/08/23 20:41:09 tnn Exp $
 
 DISTNAME=	cdrtools-2.01.01a45
 PKGNAME=	cdrtools-2.01.01.45
@@ -18,6 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
+MAKE_JOBS_SAFE=	no
 WRKSRC=		${WRKDIR}/cdrtools-2.01.01
 USE_TOOLS+=	gm4 gmake tbl
 
