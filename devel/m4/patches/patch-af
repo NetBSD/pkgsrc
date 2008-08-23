@@ -1,0 +1,166 @@
+$NetBSD: patch-af,v 1.1 2008/08/23 16:07:51 wiz Exp $
+
+--- configure.orig      2008-04-02 21:45:03.000000000 +0900
++++ configure   2008-07-05 06:46:20.000000000 +0900
+@@ -790,8 +790,10 @@
+ REPLACE_FLOORL
+ REPLACE_FREXP
+ REPLACE_FREXPL
++REPLACE_HUGE_VAL
+ REPLACE_ISFINITE
+ REPLACE_LDEXPL
++REPLACE_NAN
+ REPLACE_ROUND
+ REPLACE_ROUNDF
+ REPLACE_ROUNDL
+@@ -7366,8 +7368,10 @@
+   REPLACE_FLOORL=0;
+   REPLACE_FREXP=0;
+   REPLACE_FREXPL=0;
++  REPLACE_HUGE_VAL=0;
+   REPLACE_ISFINITE=0;
+   REPLACE_LDEXPL=0;
++  REPLACE_NAN=0;
+   REPLACE_ROUND=0;
+   REPLACE_ROUNDF=0;
+   REPLACE_ROUNDL=0;
+@@ -16379,6 +16383,119 @@
+ 
+ 
+ 
++  { echo "$as_me:$LINENO: checking whether NAN macro works" >&5
++echo $ECHO_N "checking whether NAN macro works... $ECHO_C" >&6; }
++if test "${gl_cv_header_math_nan_works+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++#include <math.h>
++int
++main ()
++{
++/* Solaris 10 has a broken definition of NAN.  Other platforms
++        fail to provide NAN, or provide it only in C99 mode; this
++        test only needs to fail when NAN is provided but wrong.  */
++         float f = 1.0f;
++#ifdef NAN
++        f = NAN;
++#endif
++        return f == 0;
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext
++if { (ac_try="$ac_compile"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_compile") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++        test -z "$ac_c_werror_flag" ||
++        test ! -s conftest.err
++       } && test -s conftest.$ac_objext; then
++  gl_cv_header_math_nan_works=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++       gl_cv_header_math_nan_works=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++fi
++{ echo "$as_me:$LINENO: result: $gl_cv_header_math_nan_works" >&5
++echo "${ECHO_T}$gl_cv_header_math_nan_works" >&6; }
++  if test $gl_cv_header_math_nan_works = no; then
++    REPLACE_NAN=1
++  fi
++  { echo "$as_me:$LINENO: checking whether HUGE_VAL works" >&5
++echo $ECHO_N "checking whether HUGE_VAL works... $ECHO_C" >&6; }
++if test "${gl_cv_header_math_huge_val_works+set}" = set; then
++  echo $ECHO_N "(cached) $ECHO_C" >&6
++else
++  cat >conftest.$ac_ext <<_ACEOF
++/* confdefs.h.  */
++_ACEOF
++cat confdefs.h >>conftest.$ac_ext
++cat >>conftest.$ac_ext <<_ACEOF
++/* end confdefs.h.  */
++#include <math.h>
++int
++main ()
++{
++/* Solaris 10 has a broken definition of HUGE_VAL.  */
++        double d = HUGE_VAL;
++        return d == 0;
++  ;
++  return 0;
++}
++_ACEOF
++rm -f conftest.$ac_objext
++if { (ac_try="$ac_compile"
++case "(($ac_try" in
++  *\"* | *\`* | *\\*) ac_try_echo=\$ac_try;;
++  *) ac_try_echo=$ac_try;;
++esac
++eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++  (eval "$ac_compile") 2>conftest.er1
++  ac_status=$?
++  grep -v '^ *+' conftest.er1 >conftest.err
++  rm -f conftest.er1
++  cat conftest.err >&5
++  echo "$as_me:$LINENO: \$? = $ac_status" >&5
++  (exit $ac_status); } && {
++        test -z "$ac_c_werror_flag" ||
++        test ! -s conftest.err
++       } && test -s conftest.$ac_objext; then
++  gl_cv_header_math_huge_val_works=yes
++else
++  echo "$as_me: failed program was:" >&5
++sed 's/^/| /' conftest.$ac_ext >&5
++
++       gl_cv_header_math_huge_val_works=no
++fi
++
++rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
++fi
++{ echo "$as_me:$LINENO: result: $gl_cv_header_math_huge_val_works" >&5
++echo "${ECHO_T}$gl_cv_header_math_huge_val_works" >&6; }
++  if test $gl_cv_header_math_huge_val_works = no; then
++    REPLACE_HUGE_VAL=1
++  fi
+ 
+ 
+ 
+@@ -27058,8 +27175,10 @@
+ REPLACE_FLOORL!$REPLACE_FLOORL$ac_delim
+ REPLACE_FREXP!$REPLACE_FREXP$ac_delim
+ REPLACE_FREXPL!$REPLACE_FREXPL$ac_delim
++REPLACE_HUGE_VAL!$REPLACE_HUGE_VAL$ac_delim
+ REPLACE_ISFINITE!$REPLACE_ISFINITE$ac_delim
+ REPLACE_LDEXPL!$REPLACE_LDEXPL$ac_delim
++REPLACE_NAN!$REPLACE_NAN$ac_delim
+ REPLACE_ROUND!$REPLACE_ROUND$ac_delim
+ REPLACE_ROUNDF!$REPLACE_ROUNDF$ac_delim
+ REPLACE_ROUNDL!$REPLACE_ROUNDL$ac_delim
+@@ -27081,7 +27200,7 @@
+ GNULIB_FCHDIR!$GNULIB_FCHDIR$ac_delim
+ _ACEOF
+ 
+-  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 97; then
++  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 99; then
+     break
+   elif $ac_last_try; then
+     { { echo "$as_me:$LINENO: error: could not make $CONFIG_STATUS" >&5
