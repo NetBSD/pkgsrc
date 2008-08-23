@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1959 2008/08/22 21:50:33 epg Exp $
+$NetBSD: CHANGES-2008,v 1.1960 2008/08/23 00:20:28 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3334,3 +3334,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Exporter-Lite version 0.02 [seb 2008-08-22]
 	Updated net/py-twisted to 8.1.0 [epg 2008-08-22]
 	Updated net/py-twisted-docs to 8.1.0 [epg 2008-08-22]
+	Updated www/ja-trac to 0.11.1pl1 [obache 2008-08-23]
