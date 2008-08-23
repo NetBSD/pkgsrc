@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.1.1.1 2004/08/03 15:33:50 cube Exp $
+$NetBSD: patch-aa,v 1.2 2008/08/23 23:58:29 tonnerre Exp $
+
+Adds the pkgsrc layout.
 
 --- config.layout.orig	2004-01-02 23:55:55.000000000 +0100
 +++ config.layout
