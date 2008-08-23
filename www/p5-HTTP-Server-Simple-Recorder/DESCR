@@ -1,0 +1,3 @@
+The Perl 5 module HTTP::Server::Simple::Recorder allows you to
+record all HTTP communication between an HTTP::Server::Simple-derived
+server and its clients.

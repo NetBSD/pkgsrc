@@ -1,0 +1,22 @@
+# $NetBSD: Makefile,v 1.1.1.1 2008/08/23 12:55:58 seb Exp $
+
+DISTNAME=	HTTP-Server-Simple-Recorder-0.02
+PKGNAME=	p5-${DISTNAME}
+CATEGORIES=	www perl5
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTTP/}
+
+MAINTAINER=	pkgsrc-users@NetBSD.org
+HOMEPAGE=	http://search.cpan.org/dist/HTTP-Server-Simple-Recorder/
+COMMENT=	Perl 5 module mixin to record HTTP::Server::Simple's sockets
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_LANGUAGES=	# empty
+PERL5_PACKLIST= auto/HTTP/Server/Simple/Recorder/.packlist
+
+BUILD_DEPENDS+=	p5-Test-HTTP-Server-Simple>=0.02:../../www/p5-Test-HTTP-Server-Simple
+DEPENDS+=	p5-HTTP-Server-Simple>=0.10:../../www/p5-HTTP-Server-Simple
+DEPENDS+=	p5-IO-Tee-[0-9]*:../../devel/p5-IO-Tee
+
+.include "../../lang/perl5/module.mk"
+.include "../../mk/bsd.pkg.mk"
