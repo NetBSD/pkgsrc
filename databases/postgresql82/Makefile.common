@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.11 2008/06/20 07:46:49 adam Exp $
+# $NetBSD: Makefile.common,v 1.12 2008/08/23 15:42:18 joerg Exp $
 #
 # This Makefile fragment is included by all PostgreSQL packages built from
 # the main sources of the PostgreSQL distribution except jdbc-postgresql.
@@ -55,7 +55,6 @@ SUBST_SED.pglocale=	-e 's|\( localedir[	 :]*=\).*|\1${PG_LOCALE_DIR}|'
 .include "../../mk/bsd.prefs.mk"
 
 PGSQL_TEMPLATE.SunOS=		solaris
-PGSQL_TEMPLATE.IRIX=		irix5
 .if !defined(PGSQL_TEMPLATE.${OPSYS})
 PGSQL_TEMPLATE.${OPSYS}=	${LOWER_OPSYS}
 .endif
