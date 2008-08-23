@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1972 2008/08/23 20:13:52 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1973 2008/08/23 20:42:24 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3347,3 +3347,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Hash-Merge version 0.10 [seb 2008-08-23]
 	Added devel/p5-FileHandle-Fmode version 0.10 [seb 2008-08-23]
 	Added databases/p5-DBM-Deep version 1.0013 [seb 2008-08-23]
+	Added devel/p5-IPC-PubSub version 0.28 [seb 2008-08-23]
