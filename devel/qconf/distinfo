@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.3 2007/10/07 00:12:27 rillig Exp $
+$NetBSD: distinfo,v 1.4 2008/08/23 00:24:53 bjs Exp $
 
-SHA1 (qconf-1.3.tar.bz2) = 8a70b46a098f63ee3fb97ba428dfda5f1587a149
-RMD160 (qconf-1.3.tar.bz2) = 60721c3fb46b84c341e3e87148189121d2e91dfa
-Size (qconf-1.3.tar.bz2) = 26772 bytes
+SHA1 (qconf-1.4.tar.bz2) = ebc3c505a1afc9308c306fca6a6c2c206b8aedf8
+RMD160 (qconf-1.4.tar.bz2) = d9bbcb027c9148414d03bfaca4557cf23f7b4748
+Size (qconf-1.4.tar.bz2) = 27344 bytes
 SHA1 (patch-aa) = 97df58dc70b8f7be2c2794d40f35a4a1f6e82a6d
