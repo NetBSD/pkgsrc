@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.988 2008/08/23 18:30:22 seb Exp $
+# $NetBSD: Makefile,v 1.989 2008/08/23 19:42:24 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -525,6 +525,7 @@ SUBDIR+=	p5-File-Tempdir
 SUBDIR+=	p5-File-Type
 SUBDIR+=	p5-File-Which
 SUBDIR+=	p5-File-chdir
+SUBDIR+=	p5-FileHandle-Fmode
 SUBDIR+=	p5-FileHandle-Unget
 SUBDIR+=	p5-FileKGlob
 SUBDIR+=	p5-FreezeThaw
