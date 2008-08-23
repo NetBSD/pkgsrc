@@ -1,11 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2008/05/26 02:13:25 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2008/08/23 07:47:00 obache Exp $
 #
 
 DISTNAME=	mod_layout-3.2
 PKGNAME=	${DISTNAME:C|mod_|ap13-|}
 CATEGORIES=	www
-MASTER_SITES=	ftp://ftp.tangent.org/pub/apache/ \
-		http://software.tangent.org/download/
+MASTER_SITES=	http://software.tangent.org/download/
 
 MAINTAINER=	grant@NetBSD.org
 HOMEPAGE=	http://tangent.org/

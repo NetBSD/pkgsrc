@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.134 2008/04/15 17:26:23 drochner Exp $
+# $NetBSD: Makefile,v 1.135 2008/08/23 07:47:00 obache Exp $
 #
 # The CUPS author is very good about taking back changes into the main
 # CUPS distribution.  The correct place to send patches or bug-fixes is:
@@ -12,11 +12,8 @@ DIST_VERS=	${BASE_VERS}
 VERS=		${DIST_VERS:S/-/./g}
 CATEGORIES=	print
 MASTER_SITES=	http://ftp.easysw.com/pub/cups/${BASE_VERS}/ \
-		ftp://ftp2.easysw.com/pub/cups/${BASE_VERS}/ \
-		ftp://ftp3.easysw.com/pub/cups/${BASE_VERS}/ \
 		ftp://ftp.ntua.gr/pub/gnu/cups/${BASE_VERS}/ \
 		ftp://ftp.funet.fi/pub/mirrors/ftp.easysw.com/pub/cups/${BASE_VERS}/ \
-		ftp://ftp.mpg.goe.ni.schule.de/pub/internet/printing/cups/${BASE_VERS}/ \
 		ftp://ftp.fisek.com.tr/pub/cups/${BASE_VERS}/
 EXTRACT_SUFX=	.tar.bz2
 
