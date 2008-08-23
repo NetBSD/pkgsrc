@@ -1,6 +1,9 @@
-# $NetBSD: Makefile.install,v 1.10 2008/07/23 18:00:55 seb Exp $
+# $NetBSD: Makefile.install,v 1.11 2008/08/23 23:58:29 tonnerre Exp $
 
 .include "dirs.mk"
+
+BUILD_DEFS+=		APACHE_USER APACHE_GROUP
+INSTALLATION_DIRS+=	sbin
 
 OWN_DIRS+=		${RT_VAR_DIR} ${RT_LOCAL_DIR} ${RT_LOCAL_DIR}/etc
 OWN_DIRS+=		${RT_LOCAL_DIR}/lib ${RT_LOCAL_DIR}/po
@@ -41,7 +44,8 @@ CONF_FILES_PERMS+=	${RT_EXAMPLE_DIR}/${_file_}	\
 RT_ETC_FILES=		acl.Oracle acl.Pg acl.mysql constraints.mysql	\
 			drop.Oracle initialdata schema.Oracle schema.Pg	\
 			schema.SQLite schema.mysql
-RT_UPGRADE_DIRS=	3.3.0 3.3.11 3.5.1
+RT_UPGRADE_DIRS=	3.3.0 3.3.11 3.5.1 3.7.1 3.7.3 3.7.10 3.7.15	\
+			3.7.19 3.7.81 3.7.82 3.7.85 3.7.86 3.7.87
 
 MESSAGE_SUBST+=		RTVARDIR=${RT_VAR_DIR:Q} RTSHAREDIR=${RT_SHARE_DIR:Q}
 
@@ -74,13 +78,12 @@ do-install:
 		${WRKSRC}/bin/standalone_httpd ${WRKSRC}/bin/mason_handler.svc		\
 		${WRKSRC}/bin/rt ${WRKSRC}/bin/webmux.pl 				\
 		${PREFIX}/bin
-	${INSTALL_SCRIPT_DIR} ${PREFIX}/sbin
 	${INSTALL_SCRIPT} ${WRKSRC}/sbin/rt-dump-database		\
 		${WRKSRC}/sbin/rt-setup-database			\
 		${WRKSRC}/sbin/rt-test-dependencies ${PREFIX}/sbin
 	@${ECHO} "=> HTML documents"
 	${INSTALL_DATA_DIR} ${RT_HTML_DIR}
-	cd ${WRKSRC}/html && ${FIND} . -type f ! -name '*.orig' 2>/dev/null | pax -rw ${RT_HTML_DIR}
+	cd ${WRKSRC}/share/html && ${FIND} . -type f ! -name '*.orig' 2>/dev/null | pax -rw ${RT_HTML_DIR}
 	@${ECHO} "=> Documentation"
 	${INSTALL_DATA_DIR} ${RT_DOC_DIR}
 	${INSTALL_DATA} ${WRKSRC}/README ${RT_DOC_DIR}
