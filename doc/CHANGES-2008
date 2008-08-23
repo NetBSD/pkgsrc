@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1968 2008/08/23 12:58:09 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1969 2008/08/23 15:56:41 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3343,3 +3343,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/png to 1.2.31 [wiz 2008-08-23]
 	Added www/p5-Test-HTTP-Server-Simple version 0.09 [seb 2008-08-23]
 	Added www/p5-HTTP-Server-Simple-Recorder version 0.02 [seb 2008-08-23]
+	Updated devel/libsigsegv to 2.5nb1 [wiz 2008-08-23]
