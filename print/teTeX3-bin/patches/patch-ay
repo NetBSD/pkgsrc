@@ -1,0 +1,13 @@
+$NetBSD: patch-ay,v 1.1 2008/08/24 20:35:37 tonnerre Exp $
+
+--- texk/dviljk/Makefile.in.orig	2008-08-24 22:14:59.000000000 +0200
++++ texk/dviljk/Makefile.in
+@@ -9,7 +9,7 @@ ac_include ../make/programs.mk
+ 
+ prog_cflags = -DKPATHSEA
+ 
+-common_objects = tfm.o
++common_objects = tfm.o mkdtemp.o
+ 
+ program = dvilj
+ objects = dvilj.o $(common_objects)
