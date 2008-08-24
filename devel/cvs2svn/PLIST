@@ -1,8 +1,14 @@
-@comment $NetBSD: PLIST,v 1.8 2008/07/30 15:22:02 apb Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/08/24 17:02:24 tonnerre Exp $
 bin/cvs2svn
 ${PYSITELIB}/cvs2svn_lib/__init__.py
 ${PYSITELIB}/cvs2svn_lib/__init__.pyc
 ${PYSITELIB}/cvs2svn_lib/__init__.pyo
+${PYSITELIB}/cvs2svn_lib/apple_single_filter.py
+${PYSITELIB}/cvs2svn_lib/apple_single_filter.pyc
+${PYSITELIB}/cvs2svn_lib/apple_single_filter.pyo
+${PYSITELIB}/cvs2svn_lib/artifact.py
+${PYSITELIB}/cvs2svn_lib/artifact.pyc
+${PYSITELIB}/cvs2svn_lib/artifact.pyo
 ${PYSITELIB}/cvs2svn_lib/artifact_manager.py
 ${PYSITELIB}/cvs2svn_lib/artifact_manager.pyc
 ${PYSITELIB}/cvs2svn_lib/artifact_manager.pyo
@@ -57,12 +63,27 @@ ${PYSITELIB}/cvs2svn_lib/cvs_item.pyo
 ${PYSITELIB}/cvs2svn_lib/cvs_item_database.py
 ${PYSITELIB}/cvs2svn_lib/cvs_item_database.pyc
 ${PYSITELIB}/cvs2svn_lib/cvs_item_database.pyo
+${PYSITELIB}/cvs2svn_lib/cvs_revision_manager.py
+${PYSITELIB}/cvs2svn_lib/cvs_revision_manager.pyc
+${PYSITELIB}/cvs2svn_lib/cvs_revision_manager.pyo
 ${PYSITELIB}/cvs2svn_lib/database.py
 ${PYSITELIB}/cvs2svn_lib/database.pyc
 ${PYSITELIB}/cvs2svn_lib/database.pyo
 ${PYSITELIB}/cvs2svn_lib/dumpfile_delegate.py
 ${PYSITELIB}/cvs2svn_lib/dumpfile_delegate.pyc
 ${PYSITELIB}/cvs2svn_lib/dumpfile_delegate.pyo
+${PYSITELIB}/cvs2svn_lib/fill_source.py
+${PYSITELIB}/cvs2svn_lib/fill_source.pyc
+${PYSITELIB}/cvs2svn_lib/fill_source.pyo
+${PYSITELIB}/cvs2svn_lib/fulltext_revision_recorder.py
+${PYSITELIB}/cvs2svn_lib/fulltext_revision_recorder.pyc
+${PYSITELIB}/cvs2svn_lib/fulltext_revision_recorder.pyo
+${PYSITELIB}/cvs2svn_lib/git_output_option.py
+${PYSITELIB}/cvs2svn_lib/git_output_option.pyc
+${PYSITELIB}/cvs2svn_lib/git_output_option.pyo
+${PYSITELIB}/cvs2svn_lib/git_revision_recorder.py
+${PYSITELIB}/cvs2svn_lib/git_revision_recorder.pyc
+${PYSITELIB}/cvs2svn_lib/git_revision_recorder.pyo
 ${PYSITELIB}/cvs2svn_lib/key_generator.py
 ${PYSITELIB}/cvs2svn_lib/key_generator.pyc
 ${PYSITELIB}/cvs2svn_lib/key_generator.pyo
@@ -72,6 +93,9 @@ ${PYSITELIB}/cvs2svn_lib/log.pyo
 ${PYSITELIB}/cvs2svn_lib/main.py
 ${PYSITELIB}/cvs2svn_lib/main.pyc
 ${PYSITELIB}/cvs2svn_lib/main.pyo
+${PYSITELIB}/cvs2svn_lib/metadata.py
+${PYSITELIB}/cvs2svn_lib/metadata.pyc
+${PYSITELIB}/cvs2svn_lib/metadata.pyo
 ${PYSITELIB}/cvs2svn_lib/metadata_database.py
 ${PYSITELIB}/cvs2svn_lib/metadata_database.pyc
 ${PYSITELIB}/cvs2svn_lib/metadata_database.pyo
@@ -99,6 +123,9 @@ ${PYSITELIB}/cvs2svn_lib/project.pyo
 ${PYSITELIB}/cvs2svn_lib/property_setters.py
 ${PYSITELIB}/cvs2svn_lib/property_setters.pyc
 ${PYSITELIB}/cvs2svn_lib/property_setters.pyo
+${PYSITELIB}/cvs2svn_lib/rcs_revision_manager.py
+${PYSITELIB}/cvs2svn_lib/rcs_revision_manager.pyc
+${PYSITELIB}/cvs2svn_lib/rcs_revision_manager.pyo
 ${PYSITELIB}/cvs2svn_lib/rcs_stream.py
 ${PYSITELIB}/cvs2svn_lib/rcs_stream.pyc
 ${PYSITELIB}/cvs2svn_lib/rcs_stream.pyo
@@ -108,15 +135,9 @@ ${PYSITELIB}/cvs2svn_lib/record_table.pyo
 ${PYSITELIB}/cvs2svn_lib/repository_delegate.py
 ${PYSITELIB}/cvs2svn_lib/repository_delegate.pyc
 ${PYSITELIB}/cvs2svn_lib/repository_delegate.pyo
-${PYSITELIB}/cvs2svn_lib/revision_excluder.py
-${PYSITELIB}/cvs2svn_lib/revision_excluder.pyc
-${PYSITELIB}/cvs2svn_lib/revision_excluder.pyo
-${PYSITELIB}/cvs2svn_lib/revision_reader.py
-${PYSITELIB}/cvs2svn_lib/revision_reader.pyc
-${PYSITELIB}/cvs2svn_lib/revision_reader.pyo
-${PYSITELIB}/cvs2svn_lib/revision_recorder.py
-${PYSITELIB}/cvs2svn_lib/revision_recorder.pyc
-${PYSITELIB}/cvs2svn_lib/revision_recorder.pyo
+${PYSITELIB}/cvs2svn_lib/revision_manager.py
+${PYSITELIB}/cvs2svn_lib/revision_manager.pyc
+${PYSITELIB}/cvs2svn_lib/revision_manager.pyo
 ${PYSITELIB}/cvs2svn_lib/run_options.py
 ${PYSITELIB}/cvs2svn_lib/run_options.pyc
 ${PYSITELIB}/cvs2svn_lib/run_options.pyo
@@ -141,6 +162,9 @@ ${PYSITELIB}/cvs2svn_lib/svn_commit_creator.pyo
 ${PYSITELIB}/cvs2svn_lib/svn_commit_item.py
 ${PYSITELIB}/cvs2svn_lib/svn_commit_item.pyc
 ${PYSITELIB}/cvs2svn_lib/svn_commit_item.pyo
+${PYSITELIB}/cvs2svn_lib/svn_output_option.py
+${PYSITELIB}/cvs2svn_lib/svn_output_option.pyc
+${PYSITELIB}/cvs2svn_lib/svn_output_option.pyo
 ${PYSITELIB}/cvs2svn_lib/svn_repository_mirror.py
 ${PYSITELIB}/cvs2svn_lib/svn_repository_mirror.pyc
 ${PYSITELIB}/cvs2svn_lib/svn_repository_mirror.pyo
@@ -153,9 +177,6 @@ ${PYSITELIB}/cvs2svn_lib/symbol.pyo
 ${PYSITELIB}/cvs2svn_lib/symbol_database.py
 ${PYSITELIB}/cvs2svn_lib/symbol_database.pyc
 ${PYSITELIB}/cvs2svn_lib/symbol_database.pyo
-${PYSITELIB}/cvs2svn_lib/symbol_filling_guide.py
-${PYSITELIB}/cvs2svn_lib/symbol_filling_guide.pyc
-${PYSITELIB}/cvs2svn_lib/symbol_filling_guide.pyo
 ${PYSITELIB}/cvs2svn_lib/symbol_statistics.py
 ${PYSITELIB}/cvs2svn_lib/symbol_statistics.pyc
 ${PYSITELIB}/cvs2svn_lib/symbol_statistics.pyo
@@ -183,11 +204,19 @@ ${PYSITELIB}/cvs2svn_rcsparse/debug.pyo
 ${PYSITELIB}/cvs2svn_rcsparse/default.py
 ${PYSITELIB}/cvs2svn_rcsparse/default.pyc
 ${PYSITELIB}/cvs2svn_rcsparse/default.pyo
+${PYSITELIB}/cvs2svn_rcsparse/parse_rcs_file.py
+${PYSITELIB}/cvs2svn_rcsparse/parse_rcs_file.pyc
+${PYSITELIB}/cvs2svn_rcsparse/parse_rcs_file.pyo
+${PYSITELIB}/cvs2svn_rcsparse/run-tests.py
+${PYSITELIB}/cvs2svn_rcsparse/run-tests.pyc
+${PYSITELIB}/cvs2svn_rcsparse/run-tests.pyo
 ${PYSITELIB}/cvs2svn_rcsparse/texttools.py
 ${PYSITELIB}/cvs2svn_rcsparse/texttools.pyc
 ${PYSITELIB}/cvs2svn_rcsparse/texttools.pyo
+share/doc/cvs2svn/cvs2git.html
 share/doc/cvs2svn/cvs2svn.html
 share/doc/cvs2svn/faq.html
+share/doc/cvs2svn/features.html
 share/doc/cvs2svn/index.html
 share/doc/cvs2svn/issue_tracker.html
 share/doc/cvs2svn/project_license.html
@@ -195,5 +224,5 @@ share/doc/cvs2svn/project_tools.html
 share/examples/cvs2svn/cvs2svn-example.options
 @dirrm share/examples/cvs2svn
 @dirrm share/doc/cvs2svn
-@dirrm ${PYSITELIB}/cvs2svn_lib
 @dirrm ${PYSITELIB}/cvs2svn_rcsparse
+@dirrm ${PYSITELIB}/cvs2svn_lib
