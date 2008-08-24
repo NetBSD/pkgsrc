@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.327 2008/08/20 09:56:28 he Exp $
+# $NetBSD: Makefile,v 1.328 2008/08/24 09:10:52 obache Exp $
 #
 
 COMMENT=	Security tools
@@ -152,6 +152,7 @@ SUBDIR+=	p5-Crypt-GPG
 SUBDIR+=	p5-Crypt-GeneratePassword
 SUBDIR+=	p5-Crypt-IDEA
 SUBDIR+=	p5-Crypt-OpenPGP
+SUBDIR+=	p5-Crypt-OpenSSL-AES
 SUBDIR+=	p5-Crypt-OpenSSL-Bignum
 SUBDIR+=	p5-Crypt-OpenSSL-DSA
 SUBDIR+=	p5-Crypt-OpenSSL-RSA
