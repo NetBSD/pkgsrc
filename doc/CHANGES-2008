@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1982 2008/08/24 17:03:14 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1983 2008/08/24 20:36:54 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3357,3 +3357,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/mtr to 0.74 [tron 2008-08-24]
 	Updated www/p5-CGI to 3.40 [tonnerre 2008-08-24]
 	Updated devel/cvs2svn to 2.1.1 [tonnerre 2008-08-24]
+	Updated print/teTeX3-bin to 3.0nb18 [tonnerre 2008-08-24]
