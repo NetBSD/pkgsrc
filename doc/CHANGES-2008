@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1977 2008/08/23 23:59:29 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1978 2008/08/24 09:10:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3352,3 +3352,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Class-InsideOut version 1.09 [seb 2008-08-23]
 	Added devel/p5-Scalar-Defer version 0.18 [seb 2008-08-23]
 	Updated devel/rt3 to 3.8.1 [tonnerre 2008-08-23]
+	Added security/p5-Crypt-OpenSSL-AES version 0.02 [obache 2008-08-24]
