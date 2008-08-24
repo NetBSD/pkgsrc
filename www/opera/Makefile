@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.81 2008/04/07 14:39:14 xtraeme Exp $
+# $NetBSD: Makefile,v 1.82 2008/08/24 02:08:32 ahoka Exp $
 
 DISTNAME=		opera-${OPERA_PKG_VERSION:S/u/pl/}
 #PKGREVISION=		1
@@ -9,7 +9,7 @@ MASTER_SITES+=		ftp://ftp.task.gda.pl/pub/opera/${OPERA_DIR}/
 MASTER_SITES+=		ftp://ftp.tuwien.ac.at/infosys/browsers/opera/${OPERA_DIR}/
 MASTER_SITES+=		ftp://opera.nsc.no/pub/nsc.no/mirrors/operasoftware/${OPERA_DIR}/
 MASTER_SITES+=		ftp://ftp.opera.com/pub/opera/${OPERA_DIR}/
-DISTFILES=		opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}${EXTRACT_SUFX}
+DISTFILES=		opera-${OPERA_DIST_VERSION}${OPERA_ARCH}${EXTRACT_SUFX}
 
 MAINTAINER=		jdolecek@NetBSD.org
 HOMEPAGE=		http://www.opera.com/
@@ -27,9 +27,10 @@ USE_LANGUAGES=		# empty
 BUILD_DIRS=		# empty
 
 OPERA_LANG=		en
-OPERA_VER_DATE=		20080331
-OPERA_PKG_VERSION=	9.27
-OPERA_PKG_VERSION_DIR=	927
+OPERA_VER_DATE=		20080630
+OPERA_PKG_BUILD=	2091
+OPERA_PKG_VERSION=	9.52
+OPERA_PKG_VERSION_DIR=	952
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 

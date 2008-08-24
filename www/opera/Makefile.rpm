@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.rpm,v 1.1 2007/08/23 22:22:07 jlam Exp $
+# $NetBSD: Makefile.rpm,v 1.2 2008/08/24 02:08:32 ahoka Exp $
 
 # This package installs from an RPM directly into "/usr" on a Linux
 # system, which can't be managed by pkgsrc.
@@ -11,7 +11,7 @@ EMUL_REQD=		suse>=7.3
 EXTRACT_SUFX=		.rpm
 OPERA_ARCH=		.i386
 OPERA_DIR=		linux/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}/${OPERA_ARCH:S/.//}/static
-OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/beta.*//:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
+OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/beta.*//:C/u.*//}-${OPERA_PKG_BUILD}.gcc4-static-qt3
 
 WRKSRC=			${WRKDIR}
 BUILD_DIRS=		# empty
