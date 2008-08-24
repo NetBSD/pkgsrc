@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.7 2008/06/11 13:27:31 obache Exp $
+# $NetBSD: Makefile,v 1.8 2008/08/24 21:52:29 obache Exp $
 #
 
-DISTNAME=		darkstat-3.0.708
+DISTNAME=		darkstat-3.0.711
 CATEGORIES=		net
 MASTER_SITES=		http://dmr.ath.cx/net/darkstat/
 DIST_SUBDIR=		darkstat
