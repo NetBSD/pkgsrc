@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1981 2008/08/24 14:01:51 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1982 2008/08/24 17:03:14 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3356,3 +3356,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/skype to 1.4.0.118 [wiz 2008-08-24]
 	Updated net/mtr to 0.74 [tron 2008-08-24]
 	Updated www/p5-CGI to 3.40 [tonnerre 2008-08-24]
+	Updated devel/cvs2svn to 2.1.1 [tonnerre 2008-08-24]
