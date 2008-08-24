@@ -1,0 +1,17 @@
+$NetBSD: patch-aw,v 1.1 2008/08/24 20:35:37 tonnerre Exp $
+
+--- texk/dviljk/c-auto.in.orig	2008-08-24 21:24:31.000000000 +0200
++++ texk/dviljk/c-auto.in
+@@ -7,3 +7,12 @@
+ 
+ /* The number of bytes in a long.  */
+ #undef SIZEOF_LONG
++
++/* Presence of the rmdir() function.  */
++#undef HAVE_RMDIR
++
++/* Presence of the unlink() function.  */
++#undef HAVE_UNLINK
++
++/* Presence of the mkdtemp() function.  */
++#undef HAVE_MKDTEMP
