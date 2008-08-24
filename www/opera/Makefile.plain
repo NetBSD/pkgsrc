@@ -1,11 +1,11 @@
-# $NetBSD: Makefile.plain,v 1.2 2007/10/01 23:40:17 dmcmahill Exp $
+# $NetBSD: Makefile.plain,v 1.3 2008/08/24 02:08:32 ahoka Exp $
 
 .if ${EMUL_PLATFORM} == "freebsd-i386"
 ONLY_FOR_PLATFORM+=	FreeBSD-*-i386
 EXTRACT_SUFX=		.tar.bz2
-OPERA_ARCH=		.i386.freebsd
-OPERA_DIR=		unix/freebsd/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}/static
-OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
+OPERA_ARCH=		.i386
+OPERA_DIR=		unix/freebsd/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}/intel/static
+OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/u.*//}-${OPERA_PKG_BUILD}.freebsd5-static-qt3
 
 WRKSRC=			${WRKDIR}/opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}-660
 
@@ -15,9 +15,9 @@ OWN_DIRS=		${PREFIX}/share/opera/plugins
 ONLY_FOR_PLATFORM+=	SunOS-*-sparc*
 EXTRACT_SUFX=		.tar.bz2
 SOLARIS_VERSION_REQD=	8
-OPERA_ARCH=		-sol8-sparc
+OPERA_ARCH=
 OPERA_DIR=		unix/solaris/${OPERA_PKG_VERSION_DIR}/final/${OPERA_LANG}/sparc/static
-OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/u.*//}-${OPERA_VER_DATE}.1-static-qt
+OPERA_DIST_VERSION=	${OPERA_PKG_VERSION:C/u.*//}-${OPERA_PKG_BUILD}.gcc295-static-qt3
 
 WRKSRC=			${WRKDIR}/opera-${OPERA_DIST_VERSION}${OPERA_ARCH}-${OPERA_LANG}-660
 
@@ -45,4 +45,3 @@ do-install:
 		./install.sh --prefix=${PREFIX:Q} --mandir=${FULLMANDIR:Q}
 	@${ECHO} "=> You can ignore any previous lines about opera6rc"
 	@${ECHO}
-
