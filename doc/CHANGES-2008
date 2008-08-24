@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1979 2008/08/24 10:08:59 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.1980 2008/08/24 12:36:59 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3354,3 +3354,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/rt3 to 3.8.1 [tonnerre 2008-08-23]
 	Added security/p5-Crypt-OpenSSL-AES version 0.02 [obache 2008-08-24]
 	Updated net/skype to 1.4.0.118 [wiz 2008-08-24]
+	Updated net/mtr to 0.74 [tron 2008-08-24]
