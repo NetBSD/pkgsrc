@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2007/07/26 12:29:37 ghen Exp $
+@comment $NetBSD: PLIST,v 1.13.10.1 2008/08/24 11:10:27 rtr Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -2102,6 +2102,7 @@ include/${MOZILLA}/pipnss/nsITokenDialogs.h
 include/${MOZILLA}/pipnss/nsITokenPasswordDialogs.h
 include/${MOZILLA}/pipnss/nsIUserCertPicker.h
 include/${MOZILLA}/pipnss/nsIX509Cert.h
+include/${MOZILLA}/pipnss/nsIX509Cert18Branch.h
 include/${MOZILLA}/pipnss/nsIX509Cert3.h
 include/${MOZILLA}/pipnss/nsIX509CertDB.h
 include/${MOZILLA}/pipnss/nsIX509CertDB2.h
