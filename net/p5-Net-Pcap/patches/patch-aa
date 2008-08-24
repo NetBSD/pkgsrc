@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1 2008/08/24 20:07:42 he Exp $
+
+--- t/03-openlive.t.orig	2007-12-22 20:46:39.000000000 +0100
++++ t/03-openlive.t
+@@ -64,7 +64,7 @@ eval { $pcap = Net::Pcap::open_live($fak
+ is(   $@,   '', "open_live()" );
+ if($^O eq 'MSWin32' or $^O eq 'cygwin') {
+     like( $err, '/^Error opening adapter:/', " - \$err must be set: $err" );
+-} elsif($^O eq 'darwin' or $^O eq 'freebsd' or $^O eq 'openbsd') {
++} elsif($^O eq 'darwin' or $^O =~ '.*bsd') {
+     like( $err, "/^(?:BIOCSETIF: )?$fakedev: Device not configured/", " - \$err must be set: $err" );
+ } else {
+     like( $err, '/^(?:bind|ioctl|SIOCGIFHWADDR): (?:No such device)/', " - \$err must be set: $err" );
