@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.55 2008/07/29 05:58:41 dholland Exp $
+# $NetBSD: Makefile.common,v 1.56 2008/08/24 22:59:10 dholland Exp $
 #
 
 # used by audio/xine-arts/Makefile
@@ -27,7 +27,7 @@ USE_PKGLOCALEDIR=	YES
 USE_LIBTOOL=		YES
 LIBTOOL_OVERRIDE=	libtool libtool-nofpic
 PKGCONFIG_OVERRIDE=	misc/libxine.pc.in
-USE_TOOLS+=		autoconf gmake msgfmt pkg-config
+USE_TOOLS+=		autoconf gmake msgfmt pkg-config xmkmf
 
 CONFIGURE_ARGS+=	--with-w32-path='${PREFIX}/lib/win32'
 CONFIGURE_ARGS+=	--without-external-ffmpeg --disable-ffmpegtest
