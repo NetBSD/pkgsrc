@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.43 2008/04/17 18:21:40 abs Exp $
+# $NetBSD: Makefile,v 1.44 2008/08/24 14:00:59 tonnerre Exp $
 
-VERS=		3.35
+VERS=		3.40
 DISTNAME=	CGI.pm-${VERS}
 PKGNAME=	p5-CGI-${VERS}
 SVR4_PKGNAME=	p5cgi
@@ -20,6 +20,7 @@ REPLACE_PERL+=		examples/*.pl
 REPLACE_PERL+=		examples/*.cgi
 
 HTMLDIR=		${PREFIX}/share/doc/p5-CGI
+DEPENDS+=		p5-FCGI>=0.67:../../www/p5-FCGI
 
 post-build:
 	cd ${WRKSRC}/examples && chmod +x *.cgi && perl make_links.pl
