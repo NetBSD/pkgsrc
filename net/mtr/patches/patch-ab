@@ -1,40 +1,8 @@
-$NetBSD: patch-ab,v 1.14 2006/10/03 19:15:20 wiz Exp $
+$NetBSD: patch-ab,v 1.15 2008/08/24 12:36:34 tron Exp $
 
---- dns.c.orig	2006-03-26 06:54:11.000000000 +0000
-+++ dns.c
-@@ -28,13 +28,20 @@
- #include <sys/time.h>
- #include <sys/select.h>
- #include <sys/stat.h>
--#include <sys/errno.h>
- #include <sys/socket.h>
- #include <netinet/in.h>
- #include <arpa/inet.h>
-+#ifdef __APPLE__
-+#include <arpa/nameser8_compat.h>
-+#else
- #include <arpa/nameser.h>
-+#endif
- #include <netdb.h>
-+#ifdef __APPLE__
-+#include <resolv8_compat.h>
-+#else
- #include <resolv.h>
-+#endif
- #include <unistd.h>
- #include <fcntl.h>
- #include <ctype.h>
-@@ -54,9 +61,6 @@ extern char *sys_errlist[];
- #define strerror(errno) (((errno) >= 0 && (errno) < sys_nerr) ? sys_errlist[errno] : "unlisted error")
- #endif
- 
--/*  Hmm, it seems Irix requires this  */
--extern int errno;
--
- extern int af;
- 
- /* Defines */
-@@ -294,6 +298,17 @@ char nullstring[] = "";
+--- dns.c.orig	2008-08-19 18:07:33.000000000 +0100
++++ dns.c	2008-08-24 13:22:55.000000000 +0100
+@@ -310,6 +310,17 @@
  
  int use_dns = 1;
  
@@ -52,7 +20,7 @@ $NetBSD: patch-ab,v 1.14 2006/10/03 19:15:20 wiz Exp $
  
  /* Code */
  #ifdef CorruptCheck
-@@ -468,14 +483,14 @@ void dns_open(void)
+@@ -484,14 +495,14 @@
  {
    int option,i;
  
@@ -72,7 +40,7 @@ $NetBSD: patch-ab,v 1.14 2006/10/03 19:15:20 wiz Exp $
    resfd = socket(AF_INET, SOCK_DGRAM, 0);
    if (resfd == -1) {
      fprintf(stderr,"Unable to allocate socket for nameserver communication: %s\n",
-@@ -858,17 +873,17 @@ void dorequest(char *s,int type,word id)
+@@ -874,17 +885,17 @@
  {
    packetheader *hp;
    int r,i;
@@ -94,7 +62,7 @@ $NetBSD: patch-ab,v 1.14 2006/10/03 19:15:20 wiz Exp $
  		 sizeof(struct sockaddr));
  }
  
-@@ -1224,18 +1239,18 @@ void dns_ack(void)
+@@ -1240,18 +1251,18 @@
      /* Check to see if this server is actually one we sent to */
      if ( addrcmp( (void *) &(from4->sin_addr), (void *) &localhost,
                    (int) AF_INET ) == 0 ) {
