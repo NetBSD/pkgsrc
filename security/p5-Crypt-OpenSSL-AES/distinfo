@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/08/24 09:09:38 obache Exp $
+
+SHA1 (Crypt-OpenSSL-AES-0.02.tar.gz) = 978a81dcde6c66203da0ac5aeb7d3a22c8114df4
+RMD160 (Crypt-OpenSSL-AES-0.02.tar.gz) = de73f4a6c39f81c60eeee5a1e66426382ad5adac
+Size (Crypt-OpenSSL-AES-0.02.tar.gz) = 12487 bytes

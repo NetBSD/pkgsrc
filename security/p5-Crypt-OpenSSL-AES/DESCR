@@ -1,0 +1,11 @@
+This module implements a wrapper around OpenSSL. Specifically, it wraps the
+methods related to the US Government's Advanced Encryption Standard (the
+Rijndael algorithm).
+This module is compatible with Crypt::CBC (and likely other modules that
+utilize a block cipher to make a stream cipher).
+This module is an alternative to the implementation provided by Crypt::Rijndael
+which implements AES itself. In contrast, this module is simply a wrapper
+around the OpenSSL library.
+The Crypt::Rijndael implementation seems to produce inaccurate results on
+64-bit x86 machines. By using OpenSSL, this module aims to avoid architecture
+specific problems, allowing the OpenSSL maintainers to overcome such issues.
