@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1983 2008/08/24 20:36:54 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.1984 2008/08/24 22:22:02 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3357,4 +3357,10 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/mtr to 0.74 [tron 2008-08-24]
 	Updated www/p5-CGI to 3.40 [tonnerre 2008-08-24]
 	Updated devel/cvs2svn to 2.1.1 [tonnerre 2008-08-24]
+	Updated net/p5-Net-Pcap to 0.16 [he 2008-08-24]
+	Updated net/p5-Net-Write to 1.03 [he 2008-08-24]
+	Updated net/p5-Nmap-Parser to 1.16 [he 2008-08-24]
+	Updated net/p5-POE-Component-Client-DNS to 1.00 [he 2008-08-24]
 	Updated print/teTeX3-bin to 3.0nb18 [tonnerre 2008-08-24]
+	Added devel/p5-Term-Cap version 1.12 [he 2008-08-25]
+	Updated devel/p5-POE to 1.003 [he 2008-08-25]
