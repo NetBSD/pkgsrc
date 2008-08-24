@@ -1,4 +1,4 @@
-# $NetBSD: sites.mk,v 1.46 2008/08/23 12:37:48 obache Exp $
+# $NetBSD: sites.mk,v 1.47 2008/08/24 05:46:43 obache Exp $
 #
 # This Makefile fragment defines read-only MASTER_SITE_* variables
 # representing some well-known master distribution sites for software.
@@ -132,8 +132,7 @@ MASTER_SITE_SUSE+=	\
 
 MASTER_SITE_MOZILLA_ALL+=   \
 	http://ftp.mozilla.org/pub/mozilla.org/ \
-	ftp://ftp.mozilla.org/pub/mozilla.org/ \
-	ftp://ftp.belnet.be/mirror/ftp.mozilla.org/
+	ftp://ftp.mozilla.org/pub/mozilla.org/
 
 MASTER_SITE_MOZILLA+=	\
 	http://ftp.mozilla.org/pub/mozilla.org/ \
@@ -141,21 +140,30 @@ MASTER_SITE_MOZILLA+=	\
 	http://releases.mozilla.org/pub/mozilla.org/ \
 	ftp://releases.mozilla.org/pub/mozilla.org/ \
 	http://mozilla.isc.org/pub/mozilla.org/ \
-	ftp://mozilla.isc.org/pub/mozilla.org/ \
 	http://mozilla.ussg.indiana.edu/pub/mozilla.org/ \
-	ftp://mozilla.ussg.indiana.edu/pub/mozilla.org/ \
-	http://mozilla.osuosl.org/pub/mozilla.org/ \
-	ftp://ftp.osuosl.org/pub/mozilla.org/ \
-	http://mozilla.cs.utah.edu/pub/mozilla.org/ \
-	ftp://mozilla.cs.utah.edu/pub/mozilla.org/ \
 	http://mozilla.mirrors.tds.net/pub/mozilla.org/ \
-	ftp://mozilla.mirrors.tds.net/pub/mozilla.org/ \
-	ftp://ftp.scarlet.be/pub/mozilla.org/ \
-	http://ftp.scarlet.be/pub/mozilla.org/ \
-	ftp://ftp.uni-erlangen.de/pub/mozilla.org/ \
-	http://ftp.uni-erlangen.de/pub/mozilla.org/ \
+	http://pv-mirror02.mozilla.org/pub/mozilla.org/ \
+	http://pv-mirror01.mozilla.org/pub/mozilla.org/ \
+	http://mozilla.mirrors.easynews.com/mozilla/ \
+	http://mozilla-east.superbhosting.net/ \
+	http://www.gtlib.gatech.edu/pub/mozilla.org/ \
+	http://mirror.cc.vt.edu/pub/mozilla/ \
+	http://kyoto-mz-dl.sinet.ad.jp/pub/mozilla.org/ \
+	http://ftp.twaren.net/Unix/Mozilla/ \
+	http://mozilla.mtk.nao.ac.jp/pub/mozilla.org/ \
+	http://mozilla.ftp.iij.ad.jp/pub/mozilla/mozilla.org/ \
+	http://mirror.internode.on.net/pub/mozilla/ \
+	http://mirror.waia.asn.au/pub/mozilla/ \
+	http://ftp.snt.utwente.nl/pub/software/mozilla.org/ \
+	http://mozmirror01.true.nl/pub/mozilla.org/ \
+	http://www.mirrorservice.org/sites/releases.mozilla.org/pub/mozilla.org/ \
+	http://laotzu.acc.umu.se/pub/mozilla.org/ \
+	http://rebecka.jiddernet.se/ \
 	http://sunsite.rediris.es/pub/mozilla.org/ \
-	ftp://sunsite.rediris.es/pub/mozilla.org/
+	http://mirror.yandex.ru/mozilla/ \
+	http://ftp.df.lth.se/mozilla/ \
+	http://mozilla.c3sl.ufpr.br/releases/ \
+	http://mozilla.mirror.pop-sc.rnp.br/mirror/mozilla.org/ \
 
 MASTER_SITE_XEMACS+=    \
 	ftp://ftp.xemacs.org/pub/xemacs/ \
