@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.51 2008/08/23 10:47:24 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.52 2008/08/24 11:11:17 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -117,3 +117,5 @@ Pullup ticket #2504 - requested by minskim
 awstats: security fix
 pullup ticket #2505 - requested by tron
 x11-links: update package for newer library version on mac os x
+pullup ticket #2506 - requested by ghen 
+thunderbird, thunderbird-gtk1: update package for security fixes
