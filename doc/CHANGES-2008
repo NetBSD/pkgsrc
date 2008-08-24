@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1980 2008/08/24 12:36:59 tron Exp $
+$NetBSD: CHANGES-2008,v 1.1981 2008/08/24 14:01:51 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3355,3 +3355,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added security/p5-Crypt-OpenSSL-AES version 0.02 [obache 2008-08-24]
 	Updated net/skype to 1.4.0.118 [wiz 2008-08-24]
 	Updated net/mtr to 0.74 [tron 2008-08-24]
+	Updated www/p5-CGI to 3.40 [tonnerre 2008-08-24]
