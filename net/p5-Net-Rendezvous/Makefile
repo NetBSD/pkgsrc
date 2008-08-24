@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:40 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/08/24 20:12:42 he Exp $
 #
 
 DISTNAME=		Net-Rendezvous-0.90
@@ -7,7 +7,7 @@ CATEGORIES=		net
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=		adrianp@NetBSD.org
-HOMEPAGE=		http://search.cpan.org/~chlige/${DISTNAME}/
+HOMEPAGE=		http://search.cpan.org/dist/Net-Rendezvous/
 COMMENT=		Module for DNS service discovery (Apple's Rendezvous)
 
 DEPENDS+=		p5-Net-DNS-[0-9]*:../../net/p5-Net-DNS
