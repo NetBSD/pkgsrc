@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.34 2008/08/23 23:58:29 tonnerre Exp $
+# $NetBSD: Makefile,v 1.35 2008/08/24 14:05:16 tonnerre Exp $
 
 DISTNAME=		rt-3.8.1
+PKGREVISION=		1
 CATEGORIES=		devel
 MASTER_SITES=		http://download.bestpractical.com/pub/rt/release/
 
@@ -19,7 +20,7 @@ DEPENDS+=	p5-Digest-MD5>=2.27:../../security/p5-Digest-MD5
 DEPENDS+=	p5-DBI>=1.37:../../databases/p5-DBI
 DEPENDS+=	p5-Class-ReturnValue>=0.40:../../devel/p5-Class-ReturnValue
 DEPENDS+=	p5-TimeDate-[0-9]*:../../time/p5-TimeDate
-DEPENDS+=	p5-DBIx-SearchBuilder>=1.50:../../databases/p5-DBIx-SearchBuilder
+DEPENDS+=	p5-DBIx-SearchBuilder>=1.54:../../databases/p5-DBIx-SearchBuilder
 DEPENDS+=	p5-Text-Template>=1.43:../../textproc/p5-Text-Template
 DEPENDS+=	p5-HTML-Parser>=3.35:../../www/p5-HTML-Parser
 DEPENDS+=	p5-HTML-Scrubber>=0.08:../../www/p5-HTML-Scrubber
@@ -40,14 +41,15 @@ DEPENDS+=	p5-Text-Autoformat>=1.04:../../textproc/p5-Text-Autoformat
 DEPENDS+=	p5-Text-Quoted>=2.02:../../textproc/p5-Text-Quoted
 DEPENDS+=	p5-Tree-Simple>=1.04:../../devel/p5-Tree-Simple
 DEPENDS+=	p5-Regexp-Common>=2.113:../../textproc/p5-Regexp-Common
-DEPENDS+=	p5-Module-Versions-Report>=1.03:../../devel/p5-Module-Versions-Report
+DEPENDS+=	p5-Module-Versions-Report>=1.05:../../devel/p5-Module-Versions-Report
 DEPENDS+=	p5-Cache-Simple-TimedExpiry-[0-9]*:../../devel/p5-Cache-Simple-TimedExpiry
 DEPENDS+=	p5-UNIVERSAL-require>=0.11:../../devel/p5-UNIVERSAL-require
 DEPENDS+=	p5-Calendar-Simple>=1.00:../../time/p5-Calendar-Simple
 DEPENDS+=	p5-CSS-Squish>=0.07:../../www/p5-CSS-Squish
+DEPENDS+=	p5-File-ShareDir>=1.00:../../devel/p5-File-ShareDir
 
 # Mason dependencies:
-DEPENDS+=	p5-HTML-Mason>=1.31:../../www/p5-HTML-Mason
+DEPENDS+=	p5-HTML-Mason>=1.36:../../www/p5-HTML-Mason
 DEPENDS+=	p5-Apache-Session>=1.53:../../www/p5-Apache-Session
 DEPENDS+=	p5-XML-RSS>=1.05:../../textproc/p5-XML-RSS
 DEPENDS+=	p5-GD-[0-9]*:../../graphics/p5-GD
@@ -55,6 +57,7 @@ DEPENDS+=	p5-GDGraph-[0-9]*:../../graphics/p5-GDGraph
 DEPENDS+=	p5-GDTextUtil-[0-9]*:../../graphics/p5-GDTextUtil
 DEPENDS+=	p5-Text-WikiFormat>=0.76:../../textproc/p5-Text-WikiFormat
 DEPENDS+=	p5-Module-Refresh>=0.03:../../devel/p5-Module-Refresh
+DEPENDS+=	p5-Encode>=2.13:../../textproc/p5-Encode
 
 # Mailgate dependencies:
 DEPENDS+=	p5-HTML-Tree>=3.18:../../www/p5-HTML-Tree
@@ -81,6 +84,7 @@ DEPENDS+=	p5-Apache-DBI>=0.92:../../databases/p5-Apache-DBI
 DEPENDS+=	p5-Apache-DBI>=0.92:../../databases/p5-Apache-DBI
 .elif !empty(PKG_OPTIONS:Mfastcgi)
 DEPENDS+=	p5-FCGI>=0.67:../../www/p5-FCGI
+DEPENDS+=	p5-CGI>=3.38:../../www/p5-CGI
 .endif
 PLIST_VARS+=	speedycgi
 .if !empty(PKG_OPTIONS:Mspeedycgi)
