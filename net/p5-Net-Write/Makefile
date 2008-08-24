@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:40 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/08/24 20:18:52 he Exp $
 #
 
-DISTNAME=	Net-Write-1.00
+DISTNAME=	Net-Write-1.03
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	net
-MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/G/GO/GOMOR/
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	adrianp@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/CPAN/authors/id/G/GO/GOMOR/
+HOMEPAGE=	http://search.cpan.org/dist/Net-Write/
 COMMENT=	Portable interface to open and send raw data to network
 
 PKG_DESTDIR_SUPPORT=	user-destdir
