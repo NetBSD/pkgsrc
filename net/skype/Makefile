@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2008/05/26 02:13:23 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2008/08/24 10:08:39 wiz Exp $
 #
 
-DISTNAME=		skype_static-1.4.0.99
-PKGNAME=		${DISTNAME:S/_static//}
-PKGREVISION=		2
+DISTNAME=		skype_static-1.4.0.118-oss
+PKGNAME=		skype-1.4.0.118
 CATEGORIES=		net
 MASTER_SITES=		http://download.skype.com/linux/
 EXTRACT_SUFX=		.tar.bz2
@@ -21,13 +20,12 @@ NO_BIN_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
 EMUL_PLATFORMS=		linux-i386
-EMUL_MODULES.linux=	alsa base compat fontconfig freetype2 glx \
+EMUL_MODULES.linux=	base compat fontconfig freetype2 glx \
 			libsigc++2 resmgr x11
 
 USE_DIRS+=		xdg-1.1
+USE_TOOLS+=		pax
 WRKSRC=			${WRKDIR}/${DISTNAME}
-
-USE_TOOLS+=	pax
 
 DATADIR=		${PREFIX}/share/skype
 DOCDIR=			${PREFIX}/share/doc/skype
@@ -35,8 +33,10 @@ DOCDIR=			${PREFIX}/share/doc/skype
 INSTALLATION_DIRS=	bin
 
 do-build:
-	@${ECHO} "#!${SH}" > ${WRKSRC}/skype.sh
-	@${ECHO} 'cd ${DATADIR} && exec ./skype $$@' >> ${WRKSRC}/skype.sh
+	set -e; \
+	{ ${ECHO} "#!${SH}"; \
+	  ${ECHO} 'exec ${DATADIR}/skype --resources=${DATADIR} "$$@"'; \
+	} > ${WRKSRC}/skype.sh
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/skype.sh ${PREFIX}/bin/skype
