@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.484 2008/08/19 17:51:56 bjs Exp $
+# $NetBSD: Makefile,v 1.485 2008/08/25 18:18:56 bjs Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -322,6 +322,7 @@ SUBDIR+=	vcg
 SUBDIR+=	veusz
 SUBDIR+=	vid
 SUBDIR+=	viewfax
+SUBDIR+=	vigra
 SUBDIR+=	vnc2swf
 SUBDIR+=	vp
 SUBDIR+=	vtk
