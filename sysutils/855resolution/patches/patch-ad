@@ -1,0 +1,56 @@
+$NetBSD: patch-ad,v 1.1 2008/08/25 14:46:29 joerg Exp $
+
+--- vbios.c.orig	2005-05-08 19:47:08.000000000 +0000
++++ vbios.c
+@@ -18,7 +18,6 @@
+ #include <string.h>
+ #include <sys/mman.h>
+ #include <fcntl.h>
+-#include <sys/io.h>
+ 
+ #include "vbios.h"
+ 
+@@ -34,6 +33,43 @@
+ #define VBIOS_OFFSET_IN_FILE 0
+ #endif
+ 
++static uint8_t
++asm_inb(unsigned port)
++{
++	uint8_t data;
++	__asm volatile("inb %w1,%0" : "=a" (data) : "d" (port));
++	return data;
++}
++
++static __inline void
++asm_outb(uint8_t data, unsigned port)
++{
++	__asm volatile("outb %0,%w1" : : "a" (data), "d" (port));
++}
++
++static uint32_t
++asm_inl(unsigned port)
++{
++	uint32_t data;
++	__asm volatile("inl %w1,%0" : "=a" (data) : "d" (port));
++	return data;
++}
++
++static __inline void
++asm_outl(uint32_t data, unsigned port)
++{
++	__asm volatile("outl %0,%w1" : : "a" (data), "d" (port));
++}
++
++#undef	inb
++#undef	outb
++#define	inb asm_inb
++#define	outb asm_outb
++#undef	inl
++#undef	outl
++#define	inl asm_inl
++#define	outl asm_outl
++
+ unsigned char *bios = 0;
+ 
+ static int biosfd = 0;

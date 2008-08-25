@@ -1,0 +1,25 @@
+$NetBSD: patch-ac,v 1.1 2008/08/25 14:46:29 joerg Exp $
+
+--- vbios.h.orig	2005-05-08 19:47:45.000000000 +0000
++++ vbios.h
+@@ -16,6 +16,20 @@
+ 
+ #define VBIOS_SIZE 0x10000
+ 
++#include <sys/types.h>
++#ifdef __linux__
++#include <sys/io.h>
++#endif
++#ifdef __NetBSD__
++#include <machine/pio.h>
++#include <machine/sysarch.h>
++# if defined(__i386__)
++#define iopl(a) i386_iopl(a)
++# elif defined(__x86_64__)
++#define iopl(a) x86_64_iopl(a)
++# endif
++#endif
++
+ struct vbios_mode {
+     unsigned char mode;
+     unsigned char bits_per_pixel;
