@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7489 2008/08/22 21:50:33 epg Exp $
+$NetBSD: TODO,v 1.7490 2008/08/25 19:37:12 bjs Exp $
 
 Suggested new packages
 ======================
@@ -757,7 +757,6 @@ Suggested package updates
 	o imlib2-1.4.1
 	o instiki-0.13
 	o intercal-0.24
-	o iozone-3.300
 	o ircII-20080314
 	o ircservices-5.1.11
 	o irrd-2.3.4 [pkg/36813|38002]
