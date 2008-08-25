@@ -1,4 +1,4 @@
-/*	$NetBSD: main.c,v 1.42.2.7 2008/08/10 22:08:16 joerg Exp $	*/
+/*	$NetBSD: main.c,v 1.42.2.8 2008/08/25 18:31:14 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: main.c,v 1.42.2.7 2008/08/10 22:08:16 joerg Exp $");
+__RCSID("$NetBSD: main.c,v 1.42.2.8 2008/08/25 18:31:14 joerg Exp $");
 #endif
 
 /*-
@@ -98,10 +98,6 @@ usage(void)
 	    " delete pkg ...              - delete file entries for pkg in database\n"
 	    " set variable=value pkg ...  - set installation variable for package\n"
 	    " unset variable pkg ...      - unset installation variable for package\n"
-#ifdef PKGDB_DEBUG
-	    " addkey key value            - add key and value\n"
-	    " delkey key                  - delete reference to key\n"
-#endif
 	    " lsall /path/to/pkgpattern   - list all pkgs matching the pattern\n"
 	    " lsbest /path/to/pkgpattern  - list pkgs matching the pattern best\n"
 	    " dump                        - dump database\n"
@@ -564,48 +560,6 @@ main(int argc, char *argv[])
 #else
 		errx(EXIT_FAILURE, "OpenSSL support is not included");
 #endif
-	}
-#endif
-#ifdef PKGDB_DEBUG
-	else if (strcasecmp(argv[0], "delkey") == 0) {
-		int     rc;
-
-		if (!pkgdb_open(ReadWrite))
-			err(EXIT_FAILURE, "cannot open pkgdb");
-
-		rc = pkgdb_remove(argv[2]);
-		if (rc) {
-			if (errno)
-				perror("pkgdb_remove");
-			else
-				printf("Key not present in pkgdb.\n");
-		}
-		
-		pkgdb_close();
-
-	} else if (strcasecmp(argv[0], "addkey") == 0) {
-
-		int     rc;
-
-		if (!pkgdb_open(ReadWrite)) {
-			err(EXIT_FAILURE, "cannot open pkgdb");
-		}
-
-		rc = pkgdb_store(argv[2], argv[3]);
-		switch (rc) {
-		case -1:
-			perror("pkgdb_store");
-			break;
-		case 1:
-			printf("Key already present.\n");
-			break;
-		default:
-			/* 0: everything ok */
-			break;
-		}
-
-		pkgdb_close();
-
 	}
 #endif
 	else {

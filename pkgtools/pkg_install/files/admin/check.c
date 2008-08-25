@@ -1,4 +1,4 @@
-/*	$NetBSD: check.c,v 1.2.4.4 2008/08/10 22:08:16 joerg Exp $	*/
+/*	$NetBSD: check.c,v 1.2.4.5 2008/08/25 18:31:14 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: check.c,v 1.2.4.4 2008/08/10 22:08:16 joerg Exp $");
+__RCSID("$NetBSD: check.c,v 1.2.4.5 2008/08/25 18:31:14 joerg Exp $");
 #endif
 
 /*-
@@ -119,10 +119,6 @@ check1pkg(const char *pkgdir, int *filecnt, int *pkgcnt)
 					if (strncmp(p->next->name, CHECKSUM_HEADER, ChecksumHeaderLen) == 0) {
 						if ((md5file = MD5File(file, NULL)) != NULL) {
 							/* Mismatch? */
-#ifdef PKGDB_DEBUG
-							printf("%s: md5 should=<%s>, is=<%s>\n",
-							    file, p->next->name + ChecksumHeaderLen, md5file);
-#endif
 							if (strcmp(md5file, p->next->name + ChecksumHeaderLen) != 0)
 								printf("%s fails MD5 checksum\n", file);
 

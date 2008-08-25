@@ -1,4 +1,4 @@
-/*	$NetBSD: plist.c,v 1.17.4.10 2008/08/11 15:58:15 joerg Exp $	*/
+/*	$NetBSD: plist.c,v 1.17.4.11 2008/08/25 18:31:14 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: plist.c,v 1.24 1997/10/08 07:48:15 charnier Exp";
 #else
-__RCSID("$NetBSD: plist.c,v 1.17.4.10 2008/08/11 15:58:15 joerg Exp $");
+__RCSID("$NetBSD: plist.c,v 1.17.4.11 2008/08/25 18:31:14 joerg Exp $");
 #endif
 #endif
 
@@ -634,19 +634,9 @@ delete_package(Boolean ign_err, Boolean nukedirs, package_t *pkg,
 
 				if (!Fake) {
 					if (!restored) {
-#ifdef PKGDB_DEBUG
-						printf("pkgdb_remove(\"%s\")\n", tmp);	/* HF */
-#endif
 						errno = 0;
-						if (pkgdb_remove(tmp)) {
-							if (errno) {
-								perror("pkgdb_remove");
-							}
-						} else {
-#ifdef PKGDB_DEBUG
-							printf("pkgdb_remove: ok\n");
-#endif
-						}
+						if (pkgdb_remove(tmp) && errno)
+							perror("pkgdb_remove");
 					}
 				}
 			}
