@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1984 2008/08/24 22:22:02 he Exp $
+$NetBSD: CHANGES-2008,v 1.1985 2008/08/25 02:45:21 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3364,3 +3364,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated print/teTeX3-bin to 3.0nb18 [tonnerre 2008-08-24]
 	Added devel/p5-Term-Cap version 1.12 [he 2008-08-25]
 	Updated devel/p5-POE to 1.003 [he 2008-08-25]
+	Updated devel/cmake to 2.6.1 [bjs 2008-08-25]
