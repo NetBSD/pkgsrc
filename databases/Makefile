@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.259 2008/08/23 20:12:35 seb Exp $
+# $NetBSD: Makefile,v 1.260 2008/08/25 21:40:05 seb Exp $
 #
 
 COMMENT=	Databases
@@ -104,6 +104,7 @@ SUBDIR+=	p5-DB_File
 SUBDIR+=	p5-DB_File-Lock
 SUBDIR+=	p5-Data-Table
 SUBDIR+=	p5-Ima-DBI
+SUBDIR+=	p5-Jifty-DBI
 SUBDIR+=	p5-MARC
 SUBDIR+=	p5-MLDBM
 SUBDIR+=	p5-MLDBM-Sync
