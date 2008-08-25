@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1987 2008/08/25 18:19:22 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.1988 2008/08/25 19:35:55 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3367,3 +3367,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/cmake to 2.6.1 [bjs 2008-08-25]
 	Updated www/drupal6-translations to 20080826 [taca 2008-08-25]
 	Added graphics/vigra version 1.6.0 [bjs 2008-08-25]
+	Updated benchmarks/iozone to 3.308 [bjs 2008-08-25]
