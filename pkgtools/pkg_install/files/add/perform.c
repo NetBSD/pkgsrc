@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.70.4.18 2008/08/10 22:08:16 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.70.4.19 2008/08/25 19:15:11 joerg Exp $	*/
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -6,7 +6,7 @@
 #if HAVE_SYS_CDEFS_H
 #include <sys/cdefs.h>
 #endif
-__RCSID("$NetBSD: perform.c,v 1.70.4.18 2008/08/10 22:08:16 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.70.4.19 2008/08/25 19:15:11 joerg Exp $");
 
 /*-
  * Copyright (c) 2003 Grant Beattie <grant@NetBSD.org>
@@ -1067,7 +1067,7 @@ preserve_meta_data_file(struct pkg_task *pkg, const char *name)
 	char *old_file, *new_file;
 	int rv;
 
-	if (!Fake)
+	if (Fake)
 		return 0;
 
 	old_file = pkgdb_pkg_file(pkg->other_version, name);
@@ -1103,7 +1103,7 @@ start_replacing(struct pkg_task *pkg)
 			pkg->other_version);
 	}
 	if (!Fake)
-		fexec(BINDIR "/pkg_delete", "-K", _pkgdb_getPKGDB_DIR(),
+		fexec_skipempty(BINDIR "/pkg_delete", "-K", _pkgdb_getPKGDB_DIR(),
 		    "-p", pkg->prefix,
 		    Destdir ? "-P": "", Destdir ? Destdir : "",
 		    pkg->other_version, NULL);
