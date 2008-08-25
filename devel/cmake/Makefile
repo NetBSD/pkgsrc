@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2008/08/25 02:44:05 bjs Exp $
+# $NetBSD: Makefile,v 1.39 2008/08/25 02:45:12 bjs Exp $
 
 DISTNAME=	cmake-${CMAKE_API}.1
 CATEGORIES=	devel
@@ -39,7 +39,7 @@ SUBST_FILES.cmake=	${REPLACE_CMAKE.Modules:@m@Modules/${m}.cmake@}
 SUBST_FILES.cmake+=	Modules/FindCURL.cmake
 SUBST_SED.cmake=	-e 's|/usr/X11R6|${X11BASE}|g'
 SUBST_SED.cmake+=	-e 's|/usr/local|${X11BASE}|g'
-SUBST_VARS.cmake=	PREFIX	
+SUBST_VARS.cmake=	PREFIX
 
 REPLACE_CMAKE.Modules=\
 	CMakeDetermineJavaCompiler CMakeDetermineSystem 		\
