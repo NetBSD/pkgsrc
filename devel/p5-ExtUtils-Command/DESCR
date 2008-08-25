@@ -1,0 +1,7 @@
+The Perl 5 module ExtUtils::Command is used to replace common UNIX
+commands. In all cases the provided functions work from @ARGV rather
+than taking arguments. This makes them easier to deal with in
+Makefiles. Call them like this:
+  perl -MExtUtils::Command -e some_command some files to work on
+The module Shell::Command is also included in this package: it
+provides the same functions but take arguments normally.
