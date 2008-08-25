@@ -1,0 +1,3 @@
+Time::Duration::Parse is a Perl 5 module to parse human readable
+duration strings like 2 minutes and 3 seconds to seconds.  It does
+the opposite of duration_exact function in Time::Duration.
