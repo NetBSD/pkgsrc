@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2008/03/03 00:51:44 jlam Exp $
+# $NetBSD: Makefile,v 1.39 2008/08/25 19:35:30 bjs Exp $
 
-DISTNAME=	iozone3_263
-PKGNAME=	iozone-3.263
+DISTNAME=	iozone3_308
+PKGNAME=	iozone-3.308
 CATEGORIES=	benchmarks
 MASTER_SITES=	http://www.iozone.org/src/current/
 EXTRACT_SUFX=	.tar
@@ -20,6 +20,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/src/current
 MAKE_FILE=		makefile
+USE_TOOLS+=		tee
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -42,6 +43,13 @@ BUILD_TARGET=		generic
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
+.include "options.mk"
+
+IOZONE_TEST_ARGS=		-Ea
+.if !empty(PKG_OPTIONS:Mthreads)
+IOZONE_TEST_ARGS+=		-T -t4
+.endif
+
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/iozone ${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKDIR}/${DISTNAME}/docs/iozone.1 \
@@ -51,10 +59,11 @@ do-install:
 		${DESTDIR}${PREFIX}/share/doc/IOzone
 
 benchmark:
-	cd ${WRKSRC}; ./iozone -Ea | ${TEE} iozone.out
+	cd ${WRKSRC}; ./iozone ${IOZONE_TEST_ARGS} | ${TEE} iozone.out
 
 results:
 	${MKDIR} /tmp/benches/`domainname`
 	${CP} ${WRKSRC}/iozone.out /tmp/benches/`domainname`/iozone.`uname`-`uname -m`-`uname -r`.`hostname`
 
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
