@@ -1,4 +1,4 @@
-/*	$NetBSD: plist.c,v 1.17.4.11 2008/08/25 18:31:14 joerg Exp $	*/
+/*	$NetBSD: plist.c,v 1.17.4.12 2008/08/25 18:43:04 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: plist.c,v 1.24 1997/10/08 07:48:15 charnier Exp";
 #else
-__RCSID("$NetBSD: plist.c,v 1.17.4.11 2008/08/25 18:31:14 joerg Exp $");
+__RCSID("$NetBSD: plist.c,v 1.17.4.12 2008/08/25 18:43:04 joerg Exp $");
 #endif
 #endif
 
@@ -574,7 +574,7 @@ delete_package(Boolean ign_err, Boolean nukedirs, package_t *pkg,
 								    Force ? "deleting anyway" : "not deleting", tmp);
 								if (!Force) {
 									fail = FAIL;
-									continue;
+									goto pkgdb_cleanup;
 								}
 							}
 						}
@@ -587,7 +587,7 @@ delete_package(Boolean ign_err, Boolean nukedirs, package_t *pkg,
 						if ((cc = readlink(tmp, &buf[SymlinkHeaderLen],
 							  sizeof(buf) - SymlinkHeaderLen - 1)) < 0) {
 							warn("can't readlink `%s'", tmp);
-							continue;
+							goto pkgdb_cleanup;
 						}
 						buf[SymlinkHeaderLen + cc] = 0x0;
 						if (strcmp(buf, p->next->name) != 0) {
@@ -597,7 +597,7 @@ delete_package(Boolean ign_err, Boolean nukedirs, package_t *pkg,
 								    buf, Force ? "deleting anyway" : "not deleting", tmp);
 								if (!Force) {
 									fail = FAIL;
-									continue;
+									goto pkgdb_cleanup;
 								}
 							}
 							buf[SymlinkHeaderLen + cc] = 0x0;
@@ -606,7 +606,7 @@ delete_package(Boolean ign_err, Boolean nukedirs, package_t *pkg,
 								    buf, Force ? "deleting anyway" : "not deleting", tmp);
 								if (!Force) {
 									fail = FAIL;
-									continue;
+									goto pkgdb_cleanup;
 								}
 							}
 						}
@@ -632,6 +632,7 @@ delete_package(Boolean ign_err, Boolean nukedirs, package_t *pkg,
 					}
 				}
 
+pkgdb_cleanup:
 				if (!Fake) {
 					if (!restored) {
 						errno = 0;
