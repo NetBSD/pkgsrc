@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/08/25 23:06:17 seb Exp $
+
+SHA1 (ExtUtils-Command-1.14.tar.gz) = 0c164c7a0ee8dcfc505d5899dc3abd9d94304b77
+RMD160 (ExtUtils-Command-1.14.tar.gz) = ee40ed4f66842304939b32bcf593f1142d709e60
+Size (ExtUtils-Command-1.14.tar.gz) = 11391 bytes
