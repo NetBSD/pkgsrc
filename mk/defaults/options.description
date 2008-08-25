@@ -102,6 +102,7 @@ fam			Support using File Alteration Monitor (FAM).
 fastcgi			Use FastCGI as the CGI manager.
 fd-small		Build smaller misc/fd package.
 ffmpeg			Enable ffmpeg support.
+fftw			Use the fftw library for Discrete Fourier Transforms.
 finger			Enable finger support.
 firefox			Use firefox as gecko rendering engine.
 flac			Enable FLAC support.
@@ -311,6 +312,7 @@ syncdir			Force synchronous link() and related syscalls.
 syslog			Enable syslog support.
 syslogng-spoof		Spoof the original source address of forwarded packets
 theora			Use the theora codecs.
+threads			Enable threads support.
 tin-use-inn-spool	Use the INN spool directories.
 tls			Enable TLS support.
 trn-inn			Use INN as NNTP client.
