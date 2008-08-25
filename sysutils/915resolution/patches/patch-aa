@@ -1,15 +1,13 @@
-$NetBSD: patch-aa,v 1.2 2006/11/13 04:15:02 obache Exp $
+$NetBSD: patch-aa,v 1.3 2008/08/25 15:11:47 joerg Exp $
 
---- 915resolution.c.orig	2006-02-02 23:28:34.000000000 +0900
+--- 915resolution.c.orig	2006-02-02 15:28:34.000000000 +0100
 +++ 915resolution.c
-@@ -22,7 +22,22 @@
+@@ -22,11 +22,57 @@
  #include <string.h>
  #include <sys/mman.h>
  #include <fcntl.h>
 +#ifdef __linux__
  #include <sys/io.h>
-+#define OUTL(a, b)     outl(a, b)
-+#define OUTB(a, b)     outb(a, b)
 +#endif
 +#ifdef __NetBSD__
 +#include <machine/pio.h>
@@ -19,75 +17,47 @@ $NetBSD: patch-aa,v 1.2 2006/11/13 04:15:02 obache Exp $
 +# elif defined(__x86_64__)
 +#define iopl(a) x86_64_iopl(a)
 +# endif
-+#define OUTL(a, b)     outl(b, a)
-+#define OUTB(a, b)     outb(b, a)
 +#endif
  #include <unistd.h>
  #include <assert.h>
  
-@@ -169,7 +184,7 @@ void initialize_system(char * filename) 
- }
+-
++static uint8_t
++asm_inb(unsigned port)
++{
++	uint8_t data;
++	__asm volatile("inb %w1,%0" : "=a" (data) : "d" (port));
++	return data;
++}
++
++static __inline void
++asm_outb(uint8_t data, unsigned port)
++{
++	__asm volatile("outb %0,%w1" : : "a" (data), "d" (port));
++}
++
++static uint32_t
++asm_inl(unsigned port)
++{
++	uint32_t data;
++	__asm volatile("inl %w1,%0" : "=a" (data) : "d" (port));
++	return data;
++}
++
++static __inline void
++asm_outl(uint32_t data, unsigned port)
++{
++	__asm volatile("outl %0,%w1" : : "a" (data), "d" (port));
++}
++
++#undef	inb
++#undef	outb
++#define	inb asm_inb
++#define	outb asm_outb
++#undef	inl
++#undef	outl
++#define	inl asm_inl
++#define	outl asm_outl
  
- cardinal get_chipset_id(void) {
--    outl(0x80000000, 0xcf8);
-+    OUTL(0x80000000, 0xcf8);
-     return inl(0xcfc);
- }
- 
-@@ -476,11 +491,11 @@ void unlock_vbios(vbios_map * map) {
-         case CT_UNKWN:
-             break;
-         case CT_855GM:
--            outl(0x8000005a, 0xcf8);
-+            OUTL(0x8000005a, 0xcf8);
-             map->b1 = inb(0xcfe);
-             
--            outl(0x8000005a, 0xcf8);
--            outb(0x33, 0xcfe);
-+            OUTL(0x8000005a, 0xcf8);
-+            OUTB(0x33, 0xcfe);
-             break;
-         case CT_845G:
-         case CT_865G:
-@@ -488,13 +503,13 @@ void unlock_vbios(vbios_map * map) {
-         case CT_915GM:
-         case CT_945G:
-         case CT_945GM:
--            outl(0x80000090, 0xcf8);
-+            OUTL(0x80000090, 0xcf8);
-             map->b1 = inb(0xcfd);
-             map->b2 = inb(0xcfe);
-             
--            outl(0x80000090, 0xcf8);
--            outb(0x33, 0xcfd);
--            outb(0x33, 0xcfe);
-+            OUTL(0x80000090, 0xcf8);
-+            OUTB(0x33, 0xcfd);
-+            OUTB(0x33, 0xcfe);
-             break;
-         }
-     }
-@@ -526,8 +541,8 @@ void relock_vbios(vbios_map * map) {
-         case CT_UNKWN:
-             break;
-         case CT_855GM:
--            outl(0x8000005a, 0xcf8);
--            outb(map->b1, 0xcfe);
-+            OUTL(0x8000005a, 0xcf8);
-+            OUTB(map->b1, 0xcfe);
-             break;
-         case CT_845G:
-         case CT_865G:
-@@ -535,9 +550,9 @@ void relock_vbios(vbios_map * map) {
-         case CT_915GM:
-         case CT_945G:
-         case CT_945GM:
--            outl(0x80000090, 0xcf8);
--            outb(map->b1, 0xcfd);
--            outb(map->b2, 0xcfe);
-+            OUTL(0x80000090, 0xcf8);
-+            OUTB(map->b1, 0xcfd);
-+            OUTB(map->b2, 0xcfe);
-             break;
-         }
-     }
+ #define NEW(a) ((a *)(calloc(1, sizeof(a))))
+ #define FREE(a) (free(a))
