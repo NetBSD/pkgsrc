@@ -1,0 +1,27 @@
+$NetBSD: patch-ad,v 1.5 2008/08/25 15:36:18 joerg Exp $
+
+--- src/cairo-png.c.orig	2008-04-11 23:07:25.000000000 +0200
++++ src/cairo-png.c
+@@ -119,6 +119,13 @@ png_simple_warning_callback (png_structp
+ }
+ 
+ 
++/* Starting with libpng-1.2.30, we must explicitly specify an output_flush_fn.
++ * Otherwise, we will segfault if we are writing to a stream. */
++static void
++png_simple_output_flush_fn (png_structp png_ptr)
++{
++}
++
+ static cairo_status_t
+ write_png (cairo_surface_t	*surface,
+ 	   png_rw_ptr		write_func,
+@@ -179,7 +186,7 @@ write_png (cairo_surface_t	*surface,
+ 	goto BAIL3;
+ #endif
+ 
+-    png_set_write_fn (png, closure, write_func, NULL);
++    png_set_write_fn (png, closure, write_func, png_simple_output_flush_fn);
+ 
+     switch (image->format) {
+     case CAIRO_FORMAT_ARGB32:
