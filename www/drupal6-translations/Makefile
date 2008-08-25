@@ -1,23 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2008/08/17 14:07:04 taca Exp $
+# $NetBSD: Makefile,v 1.3 2008/08/25 12:50:52 taca Exp $
 #
 
-DISTNAME=	drupal6-translations-20080817
+DISTNAME=	drupal6-translations-20080826
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.drupal.org/files/projects/
-DISTFILES=	ar-6.x-1.x-dev.tar.gz \
-		zh-hans-6.x-1.0.tar.gz \
-		zh-hant-6.x-1.1.tar.gz cs-6.x-1.8.tar.gz \
-		da-6.x-1.x-dev.tar.gz nl-6.x-1.1.tar.gz \
-		fi-6.x-1.0-rc.tar.gz \
-		fr-6.x-1.x-dev.tar.gz de-6.x-1.0-rc1.tar.gz \
-		el-6.x-1.0-beta1.tar.gz gu-6.x-1.x-dev.tar.gz \
+DISTFILES=	zh-hans-6.x-1.0.tar.gz zh-hant-6.x-1.1.tar.gz \
+		cs-6.x-1.8.tar.gz nl-6.x-1.1.tar.gz fi-6.x-1.0-rc.tar.gz \
+		de-6.x-1.0-rc1.tar.gz el-6.x-1.0-beta1.tar.gz \
 		he-6.x-1.0.tar.gz hu-6.x-1.0.tar.gz ja-6.x-1.2.tar.gz \
-		lt-6.x-1.2.tar.gz nb-6.x-1.x-dev.tar.gz \
-		nn-6.x-1.x-dev.tar.gz pt-br-6.x-1.0-rc1.tar.gz \
-		pt-pt-6.x-1.x-dev.tar.gz ro-6.x-1.1.tar.gz \
-		sk-6.x-1.0-beta5.tar.gz es-6.x-1.0.tar.gz \
-		sv-6.x-1.x-dev.tar.gz th-6.x-1.x-dev.tar.gz \
-		tr-6.x-1.x-dev.tar.gz
+		lt-6.x-1.2.tar.gz pt-br-6.x-1.0-rc1.tar.gz ro-6.x-1.1.tar.gz \
+		sk-6.x-1.0-beta5.tar.gz es-6.x-1.0.tar.gz
 DIST_SUBDIR=	drupal6-${STAMP}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -37,10 +29,10 @@ WRKSRC=		${WRKDIR}/drupal
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-# Translation files for Esperanto(eo) and Vietnam(vi) also exist,
-# but contain wrong directory names.
-LANG_SUPPORTED=	ar cs da de el es fi fr gu he hu ja lt nb nl nn \
-		pt-br pt-pt ro sk sv th tr zh-hans zh-hant
+# Broken directory structure: eo vi
+# development version only: ar da fr gu nb nn pt-pt sv th tr
+LANG_SUPPORTED=	cs de el es fi he hu ja lt nl nn \
+		pt-br ro sk sv th tr zh-hans zh-hant
 PLIST_SUBST+=	DRUPAL_BASE=${DRUPAL_BASE:Q}
 
 .for l in ${LANG_SUPPORTED}
