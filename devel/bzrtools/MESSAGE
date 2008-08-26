@@ -1,0 +1,10 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2008/08/26 01:17:51 epg Exp $
+
+Certain bzrtools plugins use or can use tools from the following packages:
+
+- devel/rsync		(rspush)
+- graphics/graphviz	(graph-ancestry)
+- graphics/librsvg	(for antialiasing in graph-ancestry)
+
+===========================================================================
