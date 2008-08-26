@@ -1,4 +1,4 @@
-/* $NetBSD: awk.h,v 1.1 2006/07/14 14:23:06 jlam Exp $ */
+/* $NetBSD: awk.h,v 1.2 2008/08/26 14:46:21 joerg Exp $ */
 
 /****************************************************************
 Copyright (C) Lucent Technologies 1997
@@ -68,7 +68,6 @@ extern int	lineno;		/* line number in awk program */
 extern int	errorflag;	/* 1 if error has occurred */
 extern int	donefld;	/* 1 if record broken into fields */
 extern int	donerec;	/* 1 if record is valid (no fld has changed */
-extern char	inputFS[];	/* FS at time of input, for field splitting */
 
 extern int	dbg;
 
