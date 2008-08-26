@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2007/09/08 09:02:38 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/08/26 22:21:55 shannonjr Exp $
 bin/libprelude-config
 bin/prelude-adduser
 bin/prelude-admin
@@ -9,6 +9,7 @@ include/libprelude/idmef-class.h
 include/libprelude/idmef-criteria.h
 include/libprelude/idmef-criterion-value.h
 include/libprelude/idmef-data.h
+include/libprelude/idmef-message-helpers.h
 include/libprelude/idmef-message-id.h
 include/libprelude/idmef-message-print.h
 include/libprelude/idmef-message-read.h
