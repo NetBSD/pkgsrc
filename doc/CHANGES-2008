@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1996 2008/08/26 15:03:25 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1997 2008/08/26 17:19:03 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3378,3 +3378,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/bzr-svn version 0.4.11~rc1 [epg 2008-08-26]
 	Updated databases/py-psycopg2 to 2.0.7 [joerg 2008-08-26]
 	Added mbone/dbeacon version 0.3.9.1 [seb 2008-08-26]
+	Updated mbone/dbeacon to 0.3.9.1nb1 [seb 2008-08-26]
