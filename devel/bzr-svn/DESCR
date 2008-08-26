@@ -1,0 +1,4 @@
+bzr-svn is a plugin that allows Bazaar direct access to Subversion
+repositories. It allows most bzr commands to work directly against
+Subversion repositories, as if you were using bzr with a native
+bzr repository.
