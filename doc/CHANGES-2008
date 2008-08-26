@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1997 2008/08/26 17:19:03 seb Exp $
+$NetBSD: CHANGES-2008,v 1.1998 2008/08/26 22:28:43 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3379,3 +3379,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/py-psycopg2 to 2.0.7 [joerg 2008-08-26]
 	Added mbone/dbeacon version 0.3.9.1 [seb 2008-08-26]
 	Updated mbone/dbeacon to 0.3.9.1nb1 [seb 2008-08-26]
+	Updated security/libprelude to 0.9.19 [shannonjr 2008-08-26]
+	Updated security/prelude-lml to 0.9.13 [shannonjr 2008-08-26]
+	Updated security/prelude-manager to 0.9.14.2 [shannonjr 2008-08-26]
