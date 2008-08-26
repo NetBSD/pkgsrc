@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1994 2008/08/26 01:46:11 epg Exp $
+$NetBSD: CHANGES-2008,v 1.1995 2008/08/26 13:17:16 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3376,3 +3376,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/bzrtools version 1.6.0 [epg 2008-08-26]
 	Added devel/bzr-gtk version 0.95.0 [epg 2008-08-26]
 	Added devel/bzr-svn version 0.4.11~rc1 [epg 2008-08-26]
+	Updated databases/py-psycopg2 to 2.0.7 [joerg 2008-08-26]
