@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.27 2008/07/20 09:02:51 epg Exp $
-#
+# $NetBSD: Makefile,v 1.28 2008/08/26 01:12:07 epg Exp $
 
-DISTNAME=		bzr-1.5
+DISTNAME=		bzr-${VER}
 CATEGORIES=		devel scm
-MASTER_SITES=		http://bazaar-vcs.org/releases/src/
+MASTER_SITES=		http://launchpad.net/bzr/${VER}/${VER}/+download/
+VER=			1.6
 
-MAINTAINER=		pkgsrc-users@NetBSD.org
+MAINTAINER=		epg@NetBSD.org
 HOMEPAGE=		http://bazaar-vcs.org/
 COMMENT=		Bazaar open source distributed version control system
 
@@ -18,7 +18,6 @@ USE_TOOLS+=		gmake
 
 PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
-TEST_TARGET=		check
 
 PYTHON_VERSIONS_ACCEPTED=	25 24
 PYTHON_PATCH_SCRIPTS=		bzr bzrlib/weave.py
@@ -35,13 +34,12 @@ SUBST_STAGE.python=		post-extract
 SUBST_FILES.python+=		Makefile
 SUBST_SED.python+=		-e 's,=python,=${PYTHONBIN},'
 
-INSTALLATION_DIRS=	share/doc/bzr
-
 post-build:
 	cd ${WRKSRC} && ${PYTHONBIN} generate_docs.py man
 
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${PREFIX}/share/doc/bzr
+do-test:
+#	XXX shouldn't HOME=FAKEHOME already be set?
+	HOME=${FAKEHOMEDIR}; cd ${WRKSRC} && ./bzr selftest -v
 
 .include "../../lang/python/application.mk"
 .include "../../lang/python/extension.mk"
