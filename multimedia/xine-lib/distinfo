@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.58 2008/07/17 17:00:35 drochner Exp $
+$NetBSD: distinfo,v 1.59 2008/08/26 13:12:30 drochner Exp $
 
-SHA1 (xine-lib-1.1.14.tar.bz2) = 8dfe071865ebdb0cfe2f5ce287485bb5ed7c6978
-RMD160 (xine-lib-1.1.14.tar.bz2) = 518b4e90d55971154d78af71f6987f0930ed937c
-Size (xine-lib-1.1.14.tar.bz2) = 7455590 bytes
+SHA1 (xine-lib-1.1.15.tar.bz2) = bcb567ea2a11c5f26b2384d5400b8466ea9048c6
+RMD160 (xine-lib-1.1.15.tar.bz2) = 5c64dd51c05a6e17cb6dfcbb8a9009ba8571c75f
+Size (xine-lib-1.1.15.tar.bz2) = 7478750 bytes
 SHA1 (patch-aa) = e09d34a121080b03bc67b2d8a3ca27463b771acc
 SHA1 (patch-ab) = ef13b60c2bea54f354acf1b2d70c04594dac36c9
 SHA1 (patch-ad) = 94aaac03f74c72a1ca753d1320aac07d1bb8a846
