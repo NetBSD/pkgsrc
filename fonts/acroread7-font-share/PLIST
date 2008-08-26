@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/11 13:36:27 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/08/26 12:57:38 joerg Exp $
 Acrobat7/Resource/CMap/83pv-RKSJ-H
 Acrobat7/Resource/CMap/90ms-RKSJ-H
 Acrobat7/Resource/CMap/90ms-RKSJ-UCS2
@@ -110,6 +110,8 @@ Acrobat7/Resource/CMap/HKm471-B5-H
 Acrobat7/Resource/CMap/HKm471-B5-V
 Acrobat7/Resource/CMap/HKscs-B5-H
 Acrobat7/Resource/CMap/HKscs-B5-V
+Acrobat7/Resource/CMap/Identity-H
+Acrobat7/Resource/CMap/Identity-V
 Acrobat7/Resource/CMap/UniCNS-UTF16-H
 Acrobat7/Resource/CMap/UniCNS-UTF16-V
 Acrobat7/Resource/CMap/UniGB-UTF16-H
