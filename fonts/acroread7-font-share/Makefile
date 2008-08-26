@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2006/03/04 21:29:38 jlam Exp $
+# $NetBSD: Makefile,v 1.4 2008/08/26 12:57:38 joerg Exp $
 #
 
 DISTNAME=	font-share
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	fonts
 DISTFILES=	korfont${EXTRACT_SUFX}
 
