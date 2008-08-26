@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.29 2008/08/22 04:36:00 obache Exp $
+# $NetBSD: Makefile,v 1.30 2008/08/26 20:42:38 epg Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	apache-${APACHE_VERSION}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 
 HOMEPAGE=	http://httpd.apache.org/
@@ -102,7 +102,12 @@ DFLT_APACHE_MODULES+=	ldap authnz_ldap
 # APACHE_MODULES are the modules that are linked statically into the
 # apache httpd executable.
 #
+.if ${APACHE_MODULES} == "all-shared"
+CONFIGURE_ARGS+=	--enable-mods-shared=all
+PLIST_SRC+=		${PKGDIR}/PLIST.all-shared
+.else
 CONFIGURE_ARGS+=	--enable-modules=${APACHE_MODULES:Q}
+.endif
 BUILD_DEFS+=		APACHE_MODULES
 
 APACHE_USER?=		www
@@ -200,6 +205,11 @@ AP_DEPENDS.deflate=	../../devel/zlib/buildlink3.mk
 AP_CFG_ARGS.ssl=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 AP_CFG_ARGS.deflate=	--with-z=${BUILDLINK_PREFIX.zlib}
 
+.if ${APACHE_MODULES} == "all-shared"
+.include "${AP_DEPENDS.ssl}"
+.include "${AP_DEPENDS.deflate}"
+CONFIGURE_ARGS+=	${AP_CFG_ARGS.ssl} ${AP_CFG_ARGS.deflate}
+.else
 .for ap_mod in ${APACHE_MODULES}
 .  if defined(AP_DEPENDS.${ap_mod}) && !empty(AP_DEPENDS.${ap_mod})
 .    for ap_depend in ${AP_DEPENDS.${ap_mod}}
@@ -214,6 +224,7 @@ DEPENDS+=		${ap_depend}
 CONFIGURE_ARGS+=	${AP_CFG_ARGS.${ap_mod}}
 .  endif
 .endfor
+.endif
 
 post-extract:
 	${TOUCH} ${WRKSRC}/build/libtool
