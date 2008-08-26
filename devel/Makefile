@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.995 2008/08/25 23:10:39 seb Exp $
+# $NetBSD: Makefile,v 1.996 2008/08/26 01:47:07 epg Exp $
 #
 
 COMMENT=	Development utilities
@@ -77,6 +77,9 @@ SUBDIR+=	buildtool
 SUBDIR+=	buildtool-doc
 SUBDIR+=	byacc
 SUBDIR+=	bzr
+SUBDIR+=	bzr-gtk
+SUBDIR+=	bzr-svn
+SUBDIR+=	bzrtools
 SUBDIR+=	c-cpp-reference
 SUBDIR+=	c4
 SUBDIR+=	cbrowser
