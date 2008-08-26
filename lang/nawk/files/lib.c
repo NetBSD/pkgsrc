@@ -1,4 +1,4 @@
-/* $NetBSD: lib.c,v 1.2 2008/08/26 14:46:21 joerg Exp $ */
+/* $NetBSD: lib.c,v 1.3 2008/08/26 20:26:25 joerg Exp $ */
 
 /****************************************************************
 Copyright (C) Lucent Technologies 1997
@@ -193,6 +193,8 @@ int readrec(char **pbuf, int *pbufsize, FILE *inf)	/* read one record into buf *
 	if ((len = strlen(*FS)) <= len_inputFS) {
 		strcpy(inputFS, *FS);	/* for subsequent field splitting */
 	} else {
+		if (inputFS != static_inputFS)
+			free(inputFS);
 		inputFS = malloc(len + 1);
 		if (inputFS == NULL)
 			FATAL("field separator %.10s... is too long", *FS);
