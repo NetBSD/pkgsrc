@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7490 2008/08/25 19:37:12 bjs Exp $
+$NetBSD: TODO,v 1.7491 2008/08/26 13:34:40 taca Exp $
 
 Suggested new packages
 ======================
@@ -1195,7 +1195,7 @@ Suggested package updates
 	o rudiments-0.30
 	o rxvt-unicode-9.05 [pkg/38988]
 	o sablecc-3.2
-	o samba-3.0.31
+	o samba-3.0.32
 	o samba-3.2.2
 	o sarg-2.2.5
 	o scamper-20070201
