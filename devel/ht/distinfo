@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.7 2007/09/29 12:54:13 rillig Exp $
+$NetBSD: distinfo,v 1.8 2008/08/26 23:00:01 ahoka Exp $
 
-SHA1 (ht-0.9.1.tar.bz2) = f77723739a929ad48ba5381fd6882d1d54a7cd55
-RMD160 (ht-0.9.1.tar.bz2) = dd14227fe5c7d93f5db2965fcd61e832f2f1bbd9
-Size (ht-0.9.1.tar.bz2) = 737690 bytes
-SHA1 (patch-aa) = 9ce77ee200a8f96e55397bde6a5600880a13072c
+SHA1 (ht-2.0.14.tar.bz2) = f461e4e74f89bb8f5fdbf9eb37ad1d287db757e4
+RMD160 (ht-2.0.14.tar.bz2) = deab4eec0fd2aedbe77ac116627cdcaa0c1b0200
+Size (ht-2.0.14.tar.bz2) = 869714 bytes
