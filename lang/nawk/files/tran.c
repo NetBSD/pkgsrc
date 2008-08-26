@@ -1,4 +1,4 @@
-/* $NetBSD: tran.c,v 1.1 2006/07/14 14:23:06 jlam Exp $ */
+/* $NetBSD: tran.c,v 1.2 2008/08/26 14:46:21 joerg Exp $ */
 
 /****************************************************************
 Copyright (C) Lucent Technologies 1997
@@ -405,7 +405,6 @@ char *tostring(const char *s)	/* make a copy of string s */
 	p = (char *) malloc(strlen(s)+1);
 	if (p == NULL)
 		FATAL("out of space in tostring on %s", s);
-	strcpy(p, s);
 	return(p);
 }
 
