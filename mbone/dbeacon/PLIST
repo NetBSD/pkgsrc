@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/26 15:01:54 seb Exp $
+bin/dbeacon
+man/man1/dbeacon.1
+share/doc/dbeacon/FAQ
+share/doc/dbeacon/PROTOCOL
+share/doc/dbeacon/large_scale_beaconing.txt
+share/examples/dbeacon/apache-matrix-conf
+share/examples/dbeacon/checkmatrix.sh
+share/examples/dbeacon/dbeacon.conf.sample
+share/examples/dbeacon/matrix.conf.5
+share/examples/dbeacon/matrix.conf.sample
+share/examples/dbeacon/matrix.pl
+share/examples/dbeacon/xml2txt.pl
+@dirrm share/examples/dbeacon
+@dirrm share/doc/dbeacon

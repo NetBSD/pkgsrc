@@ -1,0 +1,8 @@
+dbeacon is a Multicast Beacon written in C++. The main purpose of
+a beacon is to monitor other beacon's reachability and collect
+statistics such as loss, delay and jitter between beacons. dbeacon
+supports both IPv4 and IPv6 multicast, collecting information via
+ASM and SSM.
+
+dbeacon was originally only IPv6 capable, designed to be used in
+the m6bone.
