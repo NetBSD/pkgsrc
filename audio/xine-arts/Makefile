@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/07/21 00:13:43 dholland Exp $
+# $NetBSD: Makefile,v 1.32 2008/08/26 13:14:48 drochner Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -6,7 +6,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../multimedia/xine-lib/Makefile.common"
 
 PKGNAME=	${XINE_PKGNAME:S/lib/arts/}
-PKGREVISION=	1
 CATEGORIES=	audio
 COMMENT=	The aRts audio output plugin for xine-lib
 
