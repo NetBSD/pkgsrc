@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1993 2008/08/26 01:13:04 epg Exp $
+$NetBSD: CHANGES-2008,v 1.1994 2008/08/26 01:46:11 epg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3373,3 +3373,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated math/maxima to 5.16.3 [ahoka 2008-08-25]
 	Added devel/p5-ExtUtils-Command version 1.14 [seb 2008-08-25]
 	Updated devel/bzr to 1.6 [epg 2008-08-26]
+	Added devel/bzrtools version 1.6.0 [epg 2008-08-26]
+	Added devel/bzr-gtk version 0.95.0 [epg 2008-08-26]
+	Added devel/bzr-svn version 0.4.11~rc1 [epg 2008-08-26]
