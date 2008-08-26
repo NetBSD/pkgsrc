@@ -1,0 +1,4 @@
+This is a plugin for bzr that contains various GTK+ frontends to Bazaar
+commands. It currently contains a tool to see the history and
+relationships between the revisions visually and one to view
+annotated files.
