@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.1998 2008/08/26 22:28:43 shannonjr Exp $
+$NetBSD: CHANGES-2008,v 1.1999 2008/08/26 23:19:10 hubertf Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3382,3 +3382,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/libprelude to 0.9.19 [shannonjr 2008-08-26]
 	Updated security/prelude-lml to 0.9.13 [shannonjr 2008-08-26]
 	Updated security/prelude-manager to 0.9.14.2 [shannonjr 2008-08-26]
+	Updated x11/xlockmore to 5.26.1 [hubertf 2008-08-26]
