@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/26 15:01:54 seb Exp $
+# $NetBSD: Makefile,v 1.2 2008/08/26 17:18:14 seb Exp $
 #
 
 DISTNAME=	dbeacon-0.3.9.1
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	mbone
 MASTER_SITES=	http://fivebits.net/files/dbeacon/
 
