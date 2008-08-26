@@ -1,8 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/07/12 16:34:39 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/08/26 13:16:19 joerg Exp $
 ${PYSITELIB}/psycopg2/__init__.py
 ${PYSITELIB}/psycopg2/__init__.pyc
 ${PYSITELIB}/psycopg2/__init__.pyo
 ${PYSITELIB}/psycopg2/_psycopg.so
+${PYSITELIB}/psycopg2/errorcodes.py
+${PYSITELIB}/psycopg2/errorcodes.pyc
+${PYSITELIB}/psycopg2/errorcodes.pyo
 ${PYSITELIB}/psycopg2/extensions.py
 ${PYSITELIB}/psycopg2/extensions.pyc
 ${PYSITELIB}/psycopg2/extensions.pyo
