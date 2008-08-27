@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.common_end,v 1.4 2008/06/06 16:08:07 taca Exp $
+@comment $NetBSD: PLIST.common_end,v 1.5 2008/08/27 15:39:58 taca Exp $
 @dirrm ${ZOPE_BASE}/lib/python/wicked/testing
 @dirrm ${ZOPE_BASE}/lib/python/wicked/plone
 @dirrm ${ZOPE_BASE}/lib/python/wicked/fieldevent
@@ -664,6 +664,7 @@
 @dirrm ${PLONE_BASE}/CMFPlone/profiles/default
 @dirrm ${PLONE_BASE}/CMFPlone/profiles
 @dirrm ${PLONE_BASE}/CMFPlone/patches
+@dirrm ${PLONE_BASE}/CMFPlone/migrations/v3_1/profiles/three13_three14
 @dirrm ${PLONE_BASE}/CMFPlone/migrations/v3_1/profiles/three11_three12
 @dirrm ${PLONE_BASE}/CMFPlone/migrations/v3_1/profiles/three0_beta1
 @dirrm ${PLONE_BASE}/CMFPlone/migrations/v3_1/profiles
