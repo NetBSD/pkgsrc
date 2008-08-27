@@ -76,6 +76,7 @@ dts			Enable DTS Coherent Acoustics support.
 dv			Enable usage of the libdv library.
 dvdread			Enable reproduction of DVDs.
 eb			Enable EB dictionary library support.
+ecl			Use Embeddable Common Lisp.
 efnet			Enable tweaks to support EFNet.
 elinks-exmode		Enable vi-like command entry.
 elinks-fastmem		Allow direct use of system memory allocation functions.
