@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.50 2008/04/12 22:43:14 jlam Exp $
+@comment $NetBSD: PLIST,v 1.51 2008/08/27 12:05:02 markd Exp $
 bin/appletproxy
 bin/drkonqi
 bin/extensionproxy
@@ -17,6 +17,7 @@ bin/kcminit_startup
 bin/kcontrol
 bin/kcontroledit
 bin/kdcop
+bin/kde3
 bin/kdebugdialog
 bin/kdeeject
 bin/kdeinstallktheme

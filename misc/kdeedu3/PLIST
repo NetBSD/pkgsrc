@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.22 2008/02/20 10:11:28 markd Exp $
+@comment $NetBSD: PLIST,v 1.23 2008/08/27 12:16:42 markd Exp $
 bin/apmount
 bin/blinken
 bin/celestrongps
@@ -35,8 +35,6 @@ bin/pykig.py
 bin/skycommander
 bin/spotlight2kvtml
 bin/temma
-bin/test_extdate
-bin/test_extdatepicker
 include/kstarsinterface.h
 include/libkdeedu/kdeeduglossary.h
 include/libkdeedu/keduvocdata.h
@@ -2257,6 +2255,7 @@ share/kde/apps/ktouch/hungarian_expert.ktouch.xml
 share/kde/apps/ktouch/it.keyboard
 share/kde/apps/ktouch/italian.ktouch.xml
 share/kde/apps/ktouch/ktouchui.rc
+share/kde/apps/ktouch/nb.keyboard
 share/kde/apps/ktouch/nederlands.ktouch.xml
 share/kde/apps/ktouch/nederlands_junior.ktouch.xml
 share/kde/apps/ktouch/norwegian.ktouch.xml
