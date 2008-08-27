@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/08/03 15:33:18 taca Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/08/27 15:39:58 taca Exp $
 ${PLONE_BASE}/ATContentTypes/AUTHORS.txt
 ${PLONE_BASE}/ATContentTypes/CHANGELOG.txt
 ${PLONE_BASE}/ATContentTypes/HISTORY.txt
@@ -2724,6 +2724,7 @@ ${PLONE_BASE}/CMFPlone/migrations/v3_1/profiles/three0_beta1/kssregistry.xml
 ${PLONE_BASE}/CMFPlone/migrations/v3_1/profiles/three0_beta1/metadata.xml
 ${PLONE_BASE}/CMFPlone/migrations/v3_1/profiles/three0_beta1/portlets.xml
 ${PLONE_BASE}/CMFPlone/migrations/v3_1/profiles/three11_three12/jsregistry.xml
+${PLONE_BASE}/CMFPlone/migrations/v3_1/profiles/three13_three14/propertiestool.xml
 ${PLONE_BASE}/CMFPlone/overrides.zcml
 ${PLONE_BASE}/CMFPlone/patches/__init__.py
 ${PLONE_BASE}/CMFPlone/patches/__init__.pyc
@@ -3826,8 +3827,6 @@ ${PLONE_BASE}/CMFPlone/tests/testTranslationServiceTool.py
 ${PLONE_BASE}/CMFPlone/tests/testTranslationServiceTool.pyc
 ${PLONE_BASE}/CMFPlone/tests/testURLTool.py
 ${PLONE_BASE}/CMFPlone/tests/testURLTool.pyc
-${PLONE_BASE}/CMFPlone/tests/testUnicodeNormalizer.py
-${PLONE_BASE}/CMFPlone/tests/testUnicodeNormalizer.pyc
 ${PLONE_BASE}/CMFPlone/tests/testUnicodeSplitter.py
 ${PLONE_BASE}/CMFPlone/tests/testUnicodeSplitter.pyc
 ${PLONE_BASE}/CMFPlone/tests/testUserFolderBasics.py
@@ -5743,6 +5742,7 @@ ${PLONE_BASE}/PloneTranslations/locales/plonefrontpage.pot
 ${PLONE_BASE}/PloneTranslations/locales/plonelocales.pot
 ${PLONE_BASE}/PloneTranslations/locales/pt/LC_MESSAGES/plonefrontpage.po
 ${PLONE_BASE}/PloneTranslations/locales/pt/LC_MESSAGES/plonelocales.po
+${PLONE_BASE}/PloneTranslations/locales/pt_BR/LC_MESSAGES/plonefrontpage.po
 ${PLONE_BASE}/PloneTranslations/locales/pt_BR/LC_MESSAGES/plonelocales.po
 ${PLONE_BASE}/PloneTranslations/locales/rm/LC_MESSAGES/plonelocales.po
 ${PLONE_BASE}/PloneTranslations/locales/ro/LC_MESSAGES/plonelocales.po
@@ -5767,15 +5767,8 @@ ${PLONE_BASE}/PloneTranslations/locales/zh/LC_MESSAGES/plonelocales.po
 ${PLONE_BASE}/PloneTranslations/locales/zh_CN/LC_MESSAGES/plonelocales.po
 ${PLONE_BASE}/PloneTranslations/locales/zh_HK/LC_MESSAGES/plonelocales.po
 ${PLONE_BASE}/PloneTranslations/locales/zh_TW/LC_MESSAGES/plonelocales.po
-${PLONE_BASE}/PloneTranslations/tests/README.txt
 ${PLONE_BASE}/PloneTranslations/tests/__init__.py
 ${PLONE_BASE}/PloneTranslations/tests/__init__.pyc
-${PLONE_BASE}/PloneTranslations/tests/framework.py
-${PLONE_BASE}/PloneTranslations/tests/framework.pyc
-${PLONE_BASE}/PloneTranslations/tests/i18ngenerator.py
-${PLONE_BASE}/PloneTranslations/tests/i18ngenerator.pyc
-${PLONE_BASE}/PloneTranslations/tests/runalltests.py
-${PLONE_BASE}/PloneTranslations/tests/runalltests.pyc
 ${PLONE_BASE}/PloneTranslations/tests/test_i18n.py
 ${PLONE_BASE}/PloneTranslations/tests/test_i18n.pyc
 ${PLONE_BASE}/PloneTranslations/utils/admix.py
@@ -5786,8 +5779,6 @@ ${PLONE_BASE}/PloneTranslations/utils/fillmsgstr.py
 ${PLONE_BASE}/PloneTranslations/utils/fillmsgstr.pyc
 ${PLONE_BASE}/PloneTranslations/utils/filter.py
 ${PLONE_BASE}/PloneTranslations/utils/filter.pyc
-${PLONE_BASE}/PloneTranslations/utils/i18ngenerate.py
-${PLONE_BASE}/PloneTranslations/utils/i18ngenerate.pyc
 ${PLONE_BASE}/PloneTranslations/utils/list.py
 ${PLONE_BASE}/PloneTranslations/utils/list.pyc
 ${PLONE_BASE}/PloneTranslations/utils/rebuild-pot.py
@@ -7331,6 +7322,7 @@ ${ZOPE_BASE}/lib/python/borg/localrole/configure.zcml
 ${ZOPE_BASE}/lib/python/borg/localrole/default.zcml
 ${ZOPE_BASE}/lib/python/borg/localrole/default_adapter.py
 ${ZOPE_BASE}/lib/python/borg/localrole/default_adapter.pyc
+${ZOPE_BASE}/lib/python/borg/localrole/exportimport.zcml
 ${ZOPE_BASE}/lib/python/borg/localrole/factory_adapter.py
 ${ZOPE_BASE}/lib/python/borg/localrole/factory_adapter.pyc
 ${ZOPE_BASE}/lib/python/borg/localrole/interfaces.py
@@ -8273,6 +8265,8 @@ ${ZOPE_BASE}/lib/python/plone/app/form/widgets/datecomponents.py
 ${ZOPE_BASE}/lib/python/plone/app/form/widgets/datecomponents.pyc
 ${ZOPE_BASE}/lib/python/plone/app/form/widgets/interfaces.py
 ${ZOPE_BASE}/lib/python/plone/app/form/widgets/interfaces.pyc
+${ZOPE_BASE}/lib/python/plone/app/form/widgets/multicheckboxwidget.py
+${ZOPE_BASE}/lib/python/plone/app/form/widgets/multicheckboxwidget.pyc
 ${ZOPE_BASE}/lib/python/plone/app/form/widgets/overrides.zcml
 ${ZOPE_BASE}/lib/python/plone/app/form/widgets/selectionwidget.py
 ${ZOPE_BASE}/lib/python/plone/app/form/widgets/selectionwidget.pyc
@@ -8740,6 +8734,8 @@ ${ZOPE_BASE}/lib/python/plone/app/openid/setuphandlers.py
 ${ZOPE_BASE}/lib/python/plone/app/openid/setuphandlers.pyc
 ${ZOPE_BASE}/lib/python/plone/app/openid/skins/ploneopenid/logged_out.cpt
 ${ZOPE_BASE}/lib/python/plone/app/openid/skins/ploneopenid/logged_out.cpt.metadata
+${ZOPE_BASE}/lib/python/plone/app/openid/skins/ploneopenid/login_failed.cpt
+${ZOPE_BASE}/lib/python/plone/app/openid/skins/ploneopenid/login_failed.cpt.metadata
 ${ZOPE_BASE}/lib/python/plone/app/openid/skins/ploneopenid/login_form.cpt
 ${ZOPE_BASE}/lib/python/plone/app/openid/skins/ploneopenid/login_form.cpt.metadata
 ${ZOPE_BASE}/lib/python/plone/app/openid/skins/ploneopenid/openid-icon.gif
@@ -9395,6 +9391,8 @@ ${ZOPE_BASE}/lib/python/plone/i18n/negotiator/negotiator.py
 ${ZOPE_BASE}/lib/python/plone/i18n/negotiator/negotiator.pyc
 ${ZOPE_BASE}/lib/python/plone/i18n/negotiator/path.py
 ${ZOPE_BASE}/lib/python/plone/i18n/negotiator/path.pyc
+${ZOPE_BASE}/lib/python/plone/i18n/negotiator/subdomain.py
+${ZOPE_BASE}/lib/python/plone/i18n/negotiator/subdomain.pyc
 ${ZOPE_BASE}/lib/python/plone/i18n/negotiator/tests/__init__.py
 ${ZOPE_BASE}/lib/python/plone/i18n/negotiator/tests/__init__.pyc
 ${ZOPE_BASE}/lib/python/plone/i18n/negotiator/tests/test_cookie.py
@@ -9403,6 +9401,8 @@ ${ZOPE_BASE}/lib/python/plone/i18n/negotiator/tests/test_negotiator.py
 ${ZOPE_BASE}/lib/python/plone/i18n/negotiator/tests/test_negotiator.pyc
 ${ZOPE_BASE}/lib/python/plone/i18n/negotiator/tests/test_path.py
 ${ZOPE_BASE}/lib/python/plone/i18n/negotiator/tests/test_path.pyc
+${ZOPE_BASE}/lib/python/plone/i18n/negotiator/tests/test_subdomain.py
+${ZOPE_BASE}/lib/python/plone/i18n/negotiator/tests/test_subdomain.pyc
 ${ZOPE_BASE}/lib/python/plone/i18n/negotiator/tests/test_tld.py
 ${ZOPE_BASE}/lib/python/plone/i18n/negotiator/tests/test_tld.pyc
 ${ZOPE_BASE}/lib/python/plone/i18n/negotiator/tld.py
@@ -9418,6 +9418,8 @@ ${ZOPE_BASE}/lib/python/plone/i18n/normalizer/de.py
 ${ZOPE_BASE}/lib/python/plone/i18n/normalizer/de.pyc
 ${ZOPE_BASE}/lib/python/plone/i18n/normalizer/el.py
 ${ZOPE_BASE}/lib/python/plone/i18n/normalizer/el.pyc
+${ZOPE_BASE}/lib/python/plone/i18n/normalizer/fr.py
+${ZOPE_BASE}/lib/python/plone/i18n/normalizer/fr.pyc
 ${ZOPE_BASE}/lib/python/plone/i18n/normalizer/interfaces.py
 ${ZOPE_BASE}/lib/python/plone/i18n/normalizer/interfaces.pyc
 ${ZOPE_BASE}/lib/python/plone/i18n/normalizer/pl.py
