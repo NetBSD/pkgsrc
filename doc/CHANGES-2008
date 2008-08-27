@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2003 2008/08/27 18:57:14 apb Exp $
+$NetBSD: CHANGES-2008,v 1.2004 2008/08/27 22:39:10 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3473,3 +3473,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/kdevelop to 3.5.3 [markd 2008-08-27]
 	Updated www/plone3 to 3.1.5.1 [taca 2008-08-27]
 	Added math/py-networkx version 0.37 [apb 2008-08-27]
+	Updated security/libpreludedb to 0.9.15 [shannonjr 2008-08-26]
