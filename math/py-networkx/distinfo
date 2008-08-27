@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1 2008/08/27 18:53:42 apb Exp $
+
+SHA1 (networkx-0.37.tar.gz) = 2ba05ae15606a444d0e5f1318a3562812e768202
+RMD160 (networkx-0.37.tar.gz) = a9539b6696a8813d274c0af37aa994dda1dbe766
+Size (networkx-0.37.tar.gz) = 971848 bytes
