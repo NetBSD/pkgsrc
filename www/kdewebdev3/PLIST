@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/02/20 09:57:47 markd Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/08/27 12:10:37 markd Exp $
 bin/kfilereplace
 bin/kimagemapeditor
 bin/klinkstatus
@@ -220,6 +220,7 @@ share/doc/kde/HTML/en/xsldbg/index.docbook
 share/doc/kde/HTML/en/xsldbg/introduction.docbook
 share/doc/kde/HTML/en/xsldbg/usage.docbook
 share/doc/kde/HTML/en/xsldbg/xsldbghelp.xml
+share/doc/kde/HTML/en/xsldbg/xsldbghelp.xsl
 share/icons/crystalsvg/128x128/apps/kommander.png
 share/icons/crystalsvg/16x16/actions/bug.png
 share/icons/crystalsvg/16x16/apps/kommander.png

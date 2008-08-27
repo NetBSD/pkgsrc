@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2008/03/10 12:37:12 drochner Exp $
+@comment $NetBSD: PLIST,v 1.32 2008/08/27 12:18:13 markd Exp $
 bin/kbanner.kss
 bin/kblob.kss
 bin/kclock.kss
@@ -1841,6 +1841,7 @@ share/icons/kdeclassic/16x16/actions/view_split.png
 share/icons/kdeclassic/16x16/actions/view_text.png
 share/icons/kdeclassic/16x16/actions/view_top_bottom.png
 share/icons/kdeclassic/16x16/actions/view_tree.png
+share/icons/kdeclassic/16x16/actions/view.png
 share/icons/kdeclassic/16x16/actions/viewmag+.png
 share/icons/kdeclassic/16x16/actions/viewmag-.png
 share/icons/kdeclassic/16x16/actions/viewmag.png
@@ -2983,6 +2984,7 @@ share/icons/kdeclassic/22x22/actions/view_sidetree.png
 share/icons/kdeclassic/22x22/actions/view_text.png
 share/icons/kdeclassic/22x22/actions/view_top_bottom.png
 share/icons/kdeclassic/22x22/actions/view_tree.png
+share/icons/kdeclassic/22x22/actions/view.png
 share/icons/kdeclassic/22x22/actions/viewmag+.png
 share/icons/kdeclassic/22x22/actions/viewmag-.png
 share/icons/kdeclassic/22x22/actions/viewmag.png
@@ -3274,6 +3276,7 @@ share/icons/kdeclassic/32x32/actions/view_right.png
 share/icons/kdeclassic/32x32/actions/view_text.png
 share/icons/kdeclassic/32x32/actions/view_top_bottom.png
 share/icons/kdeclassic/32x32/actions/view_tree.png
+share/icons/kdeclassic/32x32/actions/view.png
 share/icons/kdeclassic/32x32/actions/viewmag+.png
 share/icons/kdeclassic/32x32/actions/viewmag-.png
 share/icons/kdeclassic/32x32/actions/viewmag.png

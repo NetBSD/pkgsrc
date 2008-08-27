@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.31 2008/04/12 22:43:04 jlam Exp $
+@comment $NetBSD: PLIST,v 1.32 2008/08/27 12:15:15 markd Exp $
 bin/akregator
 bin/egroupwarewizard
 bin/exchangewizard
@@ -320,6 +320,7 @@ lib/kde3/libkaddrbk_cardview.la
 lib/kde3/libkaddrbk_cryptosettings.la
 lib/kde3/libkaddrbk_csv_xxport.la
 lib/kde3/libkaddrbk_distributionlist.la
+lib/kde3/libkaddrbk_distributionlistng.la
 lib/kde3/libkaddrbk_eudora_xxport.la
 lib/kde3/libkaddrbk_iconview.la
 lib/kde3/libkaddrbk_kde2_xxport.la
@@ -1036,6 +1037,8 @@ share/kde/apps/kmail/kmail_part.rc
 share/kde/apps/kmail/kmcomposerui.rc
 share/kde/apps/kmail/kmmainwin.rc
 share/kde/apps/kmail/kmreadermainwin.rc
+share/kde/apps/kmail/pics/attachmentQuicklistClosed.png
+share/kde/apps/kmail/pics/attachmentQuicklistOpened.png
 share/kde/apps/kmail/pics/enterprise_bottom.png
 share/kde/apps/kmail/pics/enterprise_bottom_left.png
 share/kde/apps/kmail/pics/enterprise_bottom_right.png
@@ -1321,6 +1324,7 @@ share/kde/apps/libical/zoneinfo/America/Argentina/La_Rioja.ics
 share/kde/apps/libical/zoneinfo/America/Argentina/Mendoza.ics
 share/kde/apps/libical/zoneinfo/America/Argentina/Rio_Gallegos.ics
 share/kde/apps/libical/zoneinfo/America/Argentina/San_Juan.ics
+share/kde/apps/libical/zoneinfo/America/Argentina/San_Luis.ics
 share/kde/apps/libical/zoneinfo/America/Argentina/Tucuman.ics
 share/kde/apps/libical/zoneinfo/America/Argentina/Ushuaia.ics
 share/kde/apps/libical/zoneinfo/America/Aruba.ics
@@ -1387,6 +1391,7 @@ share/kde/apps/libical/zoneinfo/America/Los_Angeles.ics
 share/kde/apps/libical/zoneinfo/America/Maceio.ics
 share/kde/apps/libical/zoneinfo/America/Managua.ics
 share/kde/apps/libical/zoneinfo/America/Manaus.ics
+share/kde/apps/libical/zoneinfo/America/Marigot.ics
 share/kde/apps/libical/zoneinfo/America/Martinique.ics
 share/kde/apps/libical/zoneinfo/America/Mazatlan.ics
 share/kde/apps/libical/zoneinfo/America/Menominee.ics
@@ -1424,6 +1429,7 @@ share/kde/apps/libical/zoneinfo/America/Santo_Domingo.ics
 share/kde/apps/libical/zoneinfo/America/Sao_Paulo.ics
 share/kde/apps/libical/zoneinfo/America/Scoresbysund.ics
 share/kde/apps/libical/zoneinfo/America/Shiprock.ics
+share/kde/apps/libical/zoneinfo/America/St_Barthelemy.ics
 share/kde/apps/libical/zoneinfo/America/St_Johns.ics
 share/kde/apps/libical/zoneinfo/America/St_Kitts.ics
 share/kde/apps/libical/zoneinfo/America/St_Lucia.ics
@@ -1477,6 +1483,7 @@ share/kde/apps/libical/zoneinfo/Asia/Dubai.ics
 share/kde/apps/libical/zoneinfo/Asia/Dushanbe.ics
 share/kde/apps/libical/zoneinfo/Asia/Gaza.ics
 share/kde/apps/libical/zoneinfo/Asia/Harbin.ics
+share/kde/apps/libical/zoneinfo/Asia/Ho_Chi_Minh.ics
 share/kde/apps/libical/zoneinfo/Asia/Hong_Kong.ics
 share/kde/apps/libical/zoneinfo/Asia/Hovd.ics
 share/kde/apps/libical/zoneinfo/Asia/Irkutsk.ics
@@ -1489,6 +1496,7 @@ share/kde/apps/libical/zoneinfo/Asia/Kamchatka.ics
 share/kde/apps/libical/zoneinfo/Asia/Karachi.ics
 share/kde/apps/libical/zoneinfo/Asia/Kashgar.ics
 share/kde/apps/libical/zoneinfo/Asia/Katmandu.ics
+share/kde/apps/libical/zoneinfo/Asia/Kolkata.ics
 share/kde/apps/libical/zoneinfo/Asia/Krasnoyarsk.ics
 share/kde/apps/libical/zoneinfo/Asia/Kuala_Lumpur.ics
 share/kde/apps/libical/zoneinfo/Asia/Kuching.ics
@@ -1680,12 +1688,14 @@ share/kde/apps/libkdepim/about/kde_infopage.css
 share/kde/apps/libkdepim/about/kde_infopage_rtl.css
 share/kde/apps/libkdepim/about/top-left.png
 share/kde/apps/libkdepim/about/top-middle.png
+share/kde/apps/libkholidays/holiday_BelgiumDutch
+share/kde/apps/libkholidays/holiday_BelgiumFrench
+share/kde/apps/libkholidays/holiday_BelgiumWalloon
 share/kde/apps/libkholidays/holiday_Suedtirol
 share/kde/apps/libkholidays/holiday_ar
 share/kde/apps/libkholidays/holiday_at
 share/kde/apps/libkholidays/holiday_au
 share/kde/apps/libkholidays/holiday_bavarian
-share/kde/apps/libkholidays/holiday_be
 share/kde/apps/libkholidays/holiday_br
 share/kde/apps/libkholidays/holiday_ca
 share/kde/apps/libkholidays/holiday_catalan
@@ -1785,7 +1795,7 @@ share/kde/services/kaddressbook/bookmark_xxport.desktop
 share/kde/services/kaddressbook/cardview.desktop
 share/kde/services/kaddressbook/cryptosettings.desktop
 share/kde/services/kaddressbook/csv_xxport.desktop
-share/kde/services/kaddressbook/distributionlist.desktop
+share/kde/services/kaddressbook/distributionlistng.desktop
 share/kde/services/kaddressbook/eudora_xxport.desktop
 share/kde/services/kaddressbook/gaduprotocol.desktop
 share/kde/services/kaddressbook/gnokii_xxport.desktop

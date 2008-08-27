@@ -1,9 +1,9 @@
-$NetBSD: patch-bv,v 1.4 2003/03/11 13:10:38 markd Exp $
+$NetBSD: patch-bv,v 1.5 2008/08/27 12:02:32 markd Exp $
 
---- mimetypes/application/x-core.desktop.orig	Wed Nov 20 10:23:58 2002
+--- mimetypes/application/x-core.desktop.orig	2008-08-20 06:18:10.000000000 +1200
 +++ mimetypes/application/x-core.desktop
-@@ -2,7 +2,7 @@
- Encoding=UTF-8
+@@ -1,7 +1,7 @@
+ [Desktop Entry]
  Type=MimeType
  Icon=core
 -Patterns=core;
