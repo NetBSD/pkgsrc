@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2008/02/20 10:36:08 markd Exp $
+@comment $NetBSD: PLIST,v 1.24 2008/08/27 12:37:41 markd Exp $
 share/doc/kde/HTML/sv/KRegExpEditor/altntool.png
 share/doc/kde/HTML/sv/KRegExpEditor/anychartool.png
 share/doc/kde/HTML/sv/KRegExpEditor/boundarytools.png
@@ -1383,6 +1383,7 @@ share/doc/kde/HTML/sv/kommander/introduction.docbook
 share/doc/kde/HTML/sv/kommander/parser.docbook
 share/doc/kde/HTML/sv/kommander/q-and-a.docbook
 share/doc/kde/HTML/sv/kommander/specials.docbook
+share/doc/kde/HTML/sv/kommander/translating.docbook
 share/doc/kde/HTML/sv/kommander/tutorials.docbook
 share/doc/kde/HTML/sv/kommander/widgets.docbook
 share/doc/kde/HTML/sv/kompare/common
