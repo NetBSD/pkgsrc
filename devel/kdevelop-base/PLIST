@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2008/04/12 22:42:59 jlam Exp $
+@comment $NetBSD: PLIST,v 1.25 2008/08/27 12:29:05 markd Exp $
 bin/kdevassistant
 bin/kdevdesigner
 bin/kdevelop
@@ -1139,6 +1139,8 @@ share/kde/apps/kdevelop/licenses/BSD
 share/kde/apps/kdevelop/licenses/GPL
 share/kde/apps/kdevelop/licenses/GPL+Qt-Exception
 share/kde/apps/kdevelop/licenses/LGPL
+share/kde/apps/kdevelop/licenses/MIT
+share/kde/apps/kdevelop/licenses/NCSA
 share/kde/apps/kdevelop/licenses/QPL
 share/kde/apps/kdevelop/pics/kdevassistant-splash.png
 share/kde/apps/kdevelop/pics/kdevdesigner-splash.png
