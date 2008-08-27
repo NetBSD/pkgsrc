@@ -1,4 +1,4 @@
-# $NetBSD: zopeversion.mk,v 1.7 2008/07/25 08:21:48 taca Exp $
+# $NetBSD: zopeversion.mk,v 1.8 2008/08/27 15:35:57 taca Exp $
 #
 
 .if !defined(_ZOPEVERSION_MK)
@@ -191,6 +191,10 @@ PLIST_SUBST+=	ZOPE_VERSION=${ZOPE_VERSION} \
 		ZOPE_COMMON=${ZOPE_COMMON} \
 		ZOPE_DOC_BASE=${ZOPE_DOC_BASE} \
 		ZOPE_PRODUCTS_BASE=${ZOPE_PRODUCTS_BASE}
+
+PRINT_PLIST_AWK+=	/^(@dirrm )?${ZOPE_BASE:S|/|\\/|g}/ \
+		{ gsub(/${ZOPE_BASE:S|/|\\/|g}/, "$${ZOPE_BASE}"); \
+		print; next; }
 
 #
 ZOPE_PY_COMPILE= ${PYTHONBIN} ${ZOPE_DIR}/bin/compilezpy.py
