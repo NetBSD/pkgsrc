@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2008/02/20 10:36:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.22 2008/08/27 12:37:40 markd Exp $
 share/doc/kde/HTML/nl/KRegExpEditor/common
 share/doc/kde/HTML/nl/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/nl/KRegExpEditor/index.docbook
@@ -1914,7 +1914,6 @@ share/locale/nl/LC_MESSAGES/libkscan.mo
 share/locale/nl/LC_MESSAGES/libkscreensaver.mo
 share/locale/nl/LC_MESSAGES/libksieve.mo
 share/locale/nl/LC_MESSAGES/libksirtet.mo
-share/locale/nl/LC_MESSAGES/libksync.mo
 share/locale/nl/LC_MESSAGES/libtaskbar.mo
 share/locale/nl/LC_MESSAGES/libtaskmanager.mo
 share/locale/nl/LC_MESSAGES/lockout.mo
@@ -1931,7 +1930,6 @@ share/locale/nl/LC_MESSAGES/nsplugin.mo
 share/locale/nl/LC_MESSAGES/pitchablespeed.mo
 share/locale/nl/LC_MESSAGES/ppdtranslations.mo
 share/locale/nl/LC_MESSAGES/privacy.mo
-share/locale/nl/LC_MESSAGES/qeditor.mo
 share/locale/nl/LC_MESSAGES/quanta.mo
 share/locale/nl/LC_MESSAGES/quicklauncher.mo
 share/locale/nl/LC_MESSAGES/rellinks.mo
