@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29 2008/02/20 10:36:05 markd Exp $
+@comment $NetBSD: PLIST,v 1.30 2008/08/27 12:37:39 markd Exp $
 share/doc/kde/HTML/it/KRegExpEditor/common
 share/doc/kde/HTML/it/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/it/KRegExpEditor/index.docbook
@@ -419,11 +419,13 @@ share/doc/kde/HTML/it/kdeprint/cupsaddprinterwizard3_networkscan.png
 share/doc/kde/HTML/it/kdeprint/cupsaddprinterwizard4_networkscan_config.png
 share/doc/kde/HTML/it/kdeprint/extensions.docbook
 share/doc/kde/HTML/it/kdeprint/external-command.docbook
+share/doc/kde/HTML/it/kdeprint/final-word.docbook
 share/doc/kde/HTML/it/kdeprint/getting-started.docbook
 share/doc/kde/HTML/it/kdeprint/lpd.docbook
 share/doc/kde/HTML/it/kdeprint/lpr-bsd.docbook
 share/doc/kde/HTML/it/kdeprint/lprng.docbook
 share/doc/kde/HTML/it/kdeprint/rlpr.docbook
+share/doc/kde/HTML/it/kdeprint/tech-overview.docbook
 share/doc/kde/HTML/it/kdesu/common
 share/doc/kde/HTML/it/kdesu/index.cache.bz2
 share/doc/kde/HTML/it/kdesu/index.docbook

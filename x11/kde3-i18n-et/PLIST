@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2008/02/20 10:36:04 markd Exp $
+@comment $NetBSD: PLIST,v 1.24 2008/08/27 12:37:39 markd Exp $
 share/doc/kde/HTML/et/KRegExpEditor/common
 share/doc/kde/HTML/et/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/et/KRegExpEditor/index.docbook
@@ -926,8 +926,10 @@ share/doc/kde/HTML/et/kommander/index.cache.bz2
 share/doc/kde/HTML/et/kommander/index.docbook
 share/doc/kde/HTML/et/kommander/installation.docbook
 share/doc/kde/HTML/et/kommander/introduction.docbook
+share/doc/kde/HTML/et/kommander/parser.docbook
 share/doc/kde/HTML/et/kommander/q-and-a.docbook
 share/doc/kde/HTML/et/kommander/specials.docbook
+share/doc/kde/HTML/et/kommander/translating.docbook
 share/doc/kde/HTML/et/kommander/tutorials.docbook
 share/doc/kde/HTML/et/kommander/widgets.docbook
 share/doc/kde/HTML/et/kompare/common

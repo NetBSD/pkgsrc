@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2008/02/20 10:36:07 markd Exp $
+@comment $NetBSD: PLIST,v 1.27 2008/08/27 12:37:40 markd Exp $
 share/doc/kde/HTML/pl/KRegExpEditor/common
 share/doc/kde/HTML/pl/KRegExpEditor/index.cache.bz2
 share/doc/kde/HTML/pl/KRegExpEditor/index.docbook
@@ -1451,6 +1451,7 @@ share/locale/pl/LC_MESSAGES/kio_nntp.mo
 share/locale/pl/LC_MESSAGES/kio_pop3.mo
 share/locale/pl/LC_MESSAGES/kio_print.mo
 share/locale/pl/LC_MESSAGES/kio_remote.mo
+share/locale/pl/LC_MESSAGES/kio_scalix.mo
 share/locale/pl/LC_MESSAGES/kio_settings.mo
 share/locale/pl/LC_MESSAGES/kio_sftp.mo
 share/locale/pl/LC_MESSAGES/kio_sieve.mo
@@ -1564,6 +1565,7 @@ share/locale/pl/LC_MESSAGES/kres_groupware.mo
 share/locale/pl/LC_MESSAGES/kres_groupwise.mo
 share/locale/pl/LC_MESSAGES/kres_kolab.mo
 share/locale/pl/LC_MESSAGES/kres_remote.mo
+share/locale/pl/LC_MESSAGES/kres_scalix.mo
 share/locale/pl/LC_MESSAGES/kres_tvanytime.mo
 share/locale/pl/LC_MESSAGES/kres_xmlrpc.mo
 share/locale/pl/LC_MESSAGES/kreversi.mo
@@ -1697,6 +1699,7 @@ share/locale/pl/LC_MESSAGES/privacy.mo
 share/locale/pl/LC_MESSAGES/quanta.mo
 share/locale/pl/LC_MESSAGES/quicklauncher.mo
 share/locale/pl/LC_MESSAGES/rellinks.mo
+share/locale/pl/LC_MESSAGES/scalixadmin.mo
 share/locale/pl/LC_MESSAGES/searchbarplugin.mo
 share/locale/pl/LC_MESSAGES/secpolicy.mo
 share/locale/pl/LC_MESSAGES/spy.mo
