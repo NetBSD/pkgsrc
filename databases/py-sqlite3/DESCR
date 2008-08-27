@@ -1,0 +1,2 @@
+This is the interface to the SQLite library built into Python starting
+with version 2.5.  It allows Python programs to access SQLite databases.
