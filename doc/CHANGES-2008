@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2004 2008/08/27 22:39:10 shannonjr Exp $
+$NetBSD: CHANGES-2008,v 1.2005 2008/08/28 01:25:18 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3474,3 +3474,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/plone3 to 3.1.5.1 [taca 2008-08-27]
 	Added math/py-networkx version 0.37 [apb 2008-08-27]
 	Updated security/libpreludedb to 0.9.15 [shannonjr 2008-08-26]
+	Added misc/teseq version 1.0.0 [bjs 2008-08-28]
