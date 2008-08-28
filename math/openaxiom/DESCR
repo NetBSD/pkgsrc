@@ -1,0 +1,11 @@
+OpenAxiom is an open source platform for symbolic, algebraic,
+and numerical computations. It offers an interactive environment,
+an expressive programming language, a compiler, a large set of
+mathematical libraries of interest to researchers and practitioners
+of computational sciences.
+
+OpenAxiom strives to support ubiquitous, advanced, high quality
+open source computer algebra on major operating systems,
+in particular major Unix variants, GNU/Linux variants, Windows,
+and handheld devices. It aims at being the open source computer
+algebra system of choice for research, teaching, engineering, etc.
