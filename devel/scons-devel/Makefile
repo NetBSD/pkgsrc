@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2007/01/02 14:05:59 rillig Exp $
+# $NetBSD: Makefile,v 1.6 2008/08/28 14:42:31 tonnerre Exp $
 #
 
 DISTNAME=		scons-${SCONSVER}
-PKGREVISION=		2
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=scons/}
 
@@ -10,7 +9,7 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.scons.org/
 COMMENT=		Build system, written in Python
 
-SCONSVER=		0.96.91
+SCONSVER=		1.0.0
 PLIST_SUBST+=		SCONSVER=${SCONSVER}
 INSTALLATION_DIRS=	${PKGMANDIR}/man1
 
