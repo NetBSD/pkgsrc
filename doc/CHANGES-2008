@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2006 2008/08/28 14:43:13 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.2007 2008/08/28 16:48:46 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3476,3 +3476,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/libpreludedb to 0.9.15 [shannonjr 2008-08-26]
 	Added misc/teseq version 1.0.0 [bjs 2008-08-28]
 	Updated devel/scons-devel to 1.0.0 [tonnerre 2008-08-28]
+	Updated devel/p5-Test-MockObject to 1.09nb1 [seb 2008-08-28]
