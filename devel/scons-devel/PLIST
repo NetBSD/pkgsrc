@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/29 15:43:09 cube Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/08/28 14:42:31 tonnerre Exp $
 bin/scons
 bin/scons-${SCONSVER}
 bin/sconsign
@@ -9,6 +9,9 @@ lib/${PKGNAME}/SCons/Action.pyo
 lib/${PKGNAME}/SCons/Builder.py
 lib/${PKGNAME}/SCons/Builder.pyc
 lib/${PKGNAME}/SCons/Builder.pyo
+lib/${PKGNAME}/SCons/CacheDir.py
+lib/${PKGNAME}/SCons/CacheDir.pyc
+lib/${PKGNAME}/SCons/CacheDir.pyo
 lib/${PKGNAME}/SCons/Conftest.py
 lib/${PKGNAME}/SCons/Conftest.pyc
 lib/${PKGNAME}/SCons/Conftest.pyo
@@ -45,18 +48,6 @@ lib/${PKGNAME}/SCons/Node/Python.pyo
 lib/${PKGNAME}/SCons/Node/__init__.py
 lib/${PKGNAME}/SCons/Node/__init__.pyc
 lib/${PKGNAME}/SCons/Node/__init__.pyo
-lib/${PKGNAME}/SCons/Optik/__init__.py
-lib/${PKGNAME}/SCons/Optik/__init__.pyc
-lib/${PKGNAME}/SCons/Optik/__init__.pyo
-lib/${PKGNAME}/SCons/Optik/errors.py
-lib/${PKGNAME}/SCons/Optik/errors.pyc
-lib/${PKGNAME}/SCons/Optik/errors.pyo
-lib/${PKGNAME}/SCons/Optik/option.py
-lib/${PKGNAME}/SCons/Optik/option.pyc
-lib/${PKGNAME}/SCons/Optik/option.pyo
-lib/${PKGNAME}/SCons/Optik/option_parser.py
-lib/${PKGNAME}/SCons/Optik/option_parser.pyc
-lib/${PKGNAME}/SCons/Optik/option_parser.pyo
 lib/${PKGNAME}/SCons/Options/BoolOption.py
 lib/${PKGNAME}/SCons/Options/BoolOption.pyc
 lib/${PKGNAME}/SCons/Options/BoolOption.pyo
@@ -75,6 +66,9 @@ lib/${PKGNAME}/SCons/Options/PathOption.pyo
 lib/${PKGNAME}/SCons/Options/__init__.py
 lib/${PKGNAME}/SCons/Options/__init__.pyc
 lib/${PKGNAME}/SCons/Options/__init__.pyo
+lib/${PKGNAME}/SCons/PathList.py
+lib/${PKGNAME}/SCons/PathList.pyc
+lib/${PKGNAME}/SCons/PathList.pyo
 lib/${PKGNAME}/SCons/Platform/__init__.py
 lib/${PKGNAME}/SCons/Platform/__init__.pyc
 lib/${PKGNAME}/SCons/Platform/__init__.pyo
@@ -126,30 +120,36 @@ lib/${PKGNAME}/SCons/Scanner/Fortran.pyo
 lib/${PKGNAME}/SCons/Scanner/IDL.py
 lib/${PKGNAME}/SCons/Scanner/IDL.pyc
 lib/${PKGNAME}/SCons/Scanner/IDL.pyo
+lib/${PKGNAME}/SCons/Scanner/LaTeX.py
+lib/${PKGNAME}/SCons/Scanner/LaTeX.pyc
+lib/${PKGNAME}/SCons/Scanner/LaTeX.pyo
 lib/${PKGNAME}/SCons/Scanner/Prog.py
 lib/${PKGNAME}/SCons/Scanner/Prog.pyc
 lib/${PKGNAME}/SCons/Scanner/Prog.pyo
 lib/${PKGNAME}/SCons/Scanner/__init__.py
 lib/${PKGNAME}/SCons/Scanner/__init__.pyc
 lib/${PKGNAME}/SCons/Scanner/__init__.pyo
+lib/${PKGNAME}/SCons/Script/Interactive.py
+lib/${PKGNAME}/SCons/Script/Interactive.pyc
+lib/${PKGNAME}/SCons/Script/Interactive.pyo
 lib/${PKGNAME}/SCons/Script/Main.py
 lib/${PKGNAME}/SCons/Script/Main.pyc
 lib/${PKGNAME}/SCons/Script/Main.pyo
+lib/${PKGNAME}/SCons/Script/SConsOptions.py
+lib/${PKGNAME}/SCons/Script/SConsOptions.pyc
+lib/${PKGNAME}/SCons/Script/SConsOptions.pyo
 lib/${PKGNAME}/SCons/Script/SConscript.py
 lib/${PKGNAME}/SCons/Script/SConscript.pyc
 lib/${PKGNAME}/SCons/Script/SConscript.pyo
 lib/${PKGNAME}/SCons/Script/__init__.py
 lib/${PKGNAME}/SCons/Script/__init__.pyc
 lib/${PKGNAME}/SCons/Script/__init__.pyo
-lib/${PKGNAME}/SCons/Sig/MD5.py
-lib/${PKGNAME}/SCons/Sig/MD5.pyc
-lib/${PKGNAME}/SCons/Sig/MD5.pyo
-lib/${PKGNAME}/SCons/Sig/TimeStamp.py
-lib/${PKGNAME}/SCons/Sig/TimeStamp.pyc
-lib/${PKGNAME}/SCons/Sig/TimeStamp.pyo
-lib/${PKGNAME}/SCons/Sig/__init__.py
-lib/${PKGNAME}/SCons/Sig/__init__.pyc
-lib/${PKGNAME}/SCons/Sig/__init__.pyo
+lib/${PKGNAME}/SCons/Sig.py
+lib/${PKGNAME}/SCons/Sig.pyc
+lib/${PKGNAME}/SCons/Sig.pyo
+lib/${PKGNAME}/SCons/Subst.py
+lib/${PKGNAME}/SCons/Subst.pyc
+lib/${PKGNAME}/SCons/Subst.pyo
 lib/${PKGNAME}/SCons/Taskmaster.py
 lib/${PKGNAME}/SCons/Taskmaster.pyc
 lib/${PKGNAME}/SCons/Taskmaster.pyo
@@ -162,6 +162,9 @@ lib/${PKGNAME}/SCons/Tool/BitKeeper.pyo
 lib/${PKGNAME}/SCons/Tool/CVS.py
 lib/${PKGNAME}/SCons/Tool/CVS.pyc
 lib/${PKGNAME}/SCons/Tool/CVS.pyo
+lib/${PKGNAME}/SCons/Tool/FortranCommon.py
+lib/${PKGNAME}/SCons/Tool/FortranCommon.pyc
+lib/${PKGNAME}/SCons/Tool/FortranCommon.pyo
 lib/${PKGNAME}/SCons/Tool/JavaCommon.py
 lib/${PKGNAME}/SCons/Tool/JavaCommon.pyc
 lib/${PKGNAME}/SCons/Tool/JavaCommon.pyo
@@ -222,6 +225,9 @@ lib/${PKGNAME}/SCons/Tool/default.pyo
 lib/${PKGNAME}/SCons/Tool/dmd.py
 lib/${PKGNAME}/SCons/Tool/dmd.pyc
 lib/${PKGNAME}/SCons/Tool/dmd.pyo
+lib/${PKGNAME}/SCons/Tool/dvi.py
+lib/${PKGNAME}/SCons/Tool/dvi.pyc
+lib/${PKGNAME}/SCons/Tool/dvi.pyo
 lib/${PKGNAME}/SCons/Tool/dvipdf.py
 lib/${PKGNAME}/SCons/Tool/dvipdf.pyc
 lib/${PKGNAME}/SCons/Tool/dvipdf.pyo
@@ -237,6 +243,9 @@ lib/${PKGNAME}/SCons/Tool/f90.pyo
 lib/${PKGNAME}/SCons/Tool/f95.py
 lib/${PKGNAME}/SCons/Tool/f95.pyc
 lib/${PKGNAME}/SCons/Tool/f95.pyo
+lib/${PKGNAME}/SCons/Tool/filesystem.py
+lib/${PKGNAME}/SCons/Tool/filesystem.pyc
+lib/${PKGNAME}/SCons/Tool/filesystem.pyo
 lib/${PKGNAME}/SCons/Tool/fortran.py
 lib/${PKGNAME}/SCons/Tool/fortran.pyc
 lib/${PKGNAME}/SCons/Tool/fortran.pyo
@@ -252,6 +261,9 @@ lib/${PKGNAME}/SCons/Tool/gas.pyo
 lib/${PKGNAME}/SCons/Tool/gcc.py
 lib/${PKGNAME}/SCons/Tool/gcc.pyc
 lib/${PKGNAME}/SCons/Tool/gcc.pyo
+lib/${PKGNAME}/SCons/Tool/gfortran.py
+lib/${PKGNAME}/SCons/Tool/gfortran.pyc
+lib/${PKGNAME}/SCons/Tool/gfortran.pyo
 lib/${PKGNAME}/SCons/Tool/gnulink.py
 lib/${PKGNAME}/SCons/Tool/gnulink.pyc
 lib/${PKGNAME}/SCons/Tool/gnulink.pyo
@@ -285,6 +297,9 @@ lib/${PKGNAME}/SCons/Tool/ilink.pyo
 lib/${PKGNAME}/SCons/Tool/ilink32.py
 lib/${PKGNAME}/SCons/Tool/ilink32.pyc
 lib/${PKGNAME}/SCons/Tool/ilink32.pyo
+lib/${PKGNAME}/SCons/Tool/install.py
+lib/${PKGNAME}/SCons/Tool/install.pyc
+lib/${PKGNAME}/SCons/Tool/install.pyo
 lib/${PKGNAME}/SCons/Tool/intelc.py
 lib/${PKGNAME}/SCons/Tool/intelc.pyc
 lib/${PKGNAME}/SCons/Tool/intelc.pyo
@@ -342,6 +357,39 @@ lib/${PKGNAME}/SCons/Tool/mwld.pyo
 lib/${PKGNAME}/SCons/Tool/nasm.py
 lib/${PKGNAME}/SCons/Tool/nasm.pyc
 lib/${PKGNAME}/SCons/Tool/nasm.pyo
+lib/${PKGNAME}/SCons/Tool/packaging/__init__.py
+lib/${PKGNAME}/SCons/Tool/packaging/__init__.pyc
+lib/${PKGNAME}/SCons/Tool/packaging/__init__.pyo
+lib/${PKGNAME}/SCons/Tool/packaging/ipk.py
+lib/${PKGNAME}/SCons/Tool/packaging/ipk.pyc
+lib/${PKGNAME}/SCons/Tool/packaging/ipk.pyo
+lib/${PKGNAME}/SCons/Tool/packaging/msi.py
+lib/${PKGNAME}/SCons/Tool/packaging/msi.pyc
+lib/${PKGNAME}/SCons/Tool/packaging/msi.pyo
+lib/${PKGNAME}/SCons/Tool/packaging/rpm.py
+lib/${PKGNAME}/SCons/Tool/packaging/rpm.pyc
+lib/${PKGNAME}/SCons/Tool/packaging/rpm.pyo
+lib/${PKGNAME}/SCons/Tool/packaging/src_tarbz2.py
+lib/${PKGNAME}/SCons/Tool/packaging/src_tarbz2.pyc
+lib/${PKGNAME}/SCons/Tool/packaging/src_tarbz2.pyo
+lib/${PKGNAME}/SCons/Tool/packaging/src_targz.py
+lib/${PKGNAME}/SCons/Tool/packaging/src_targz.pyc
+lib/${PKGNAME}/SCons/Tool/packaging/src_targz.pyo
+lib/${PKGNAME}/SCons/Tool/packaging/src_zip.py
+lib/${PKGNAME}/SCons/Tool/packaging/src_zip.pyc
+lib/${PKGNAME}/SCons/Tool/packaging/src_zip.pyo
+lib/${PKGNAME}/SCons/Tool/packaging/tarbz2.py
+lib/${PKGNAME}/SCons/Tool/packaging/tarbz2.pyc
+lib/${PKGNAME}/SCons/Tool/packaging/tarbz2.pyo
+lib/${PKGNAME}/SCons/Tool/packaging/targz.py
+lib/${PKGNAME}/SCons/Tool/packaging/targz.pyc
+lib/${PKGNAME}/SCons/Tool/packaging/targz.pyo
+lib/${PKGNAME}/SCons/Tool/packaging/zip.py
+lib/${PKGNAME}/SCons/Tool/packaging/zip.pyc
+lib/${PKGNAME}/SCons/Tool/packaging/zip.pyo
+lib/${PKGNAME}/SCons/Tool/pdf.py
+lib/${PKGNAME}/SCons/Tool/pdf.pyc
+lib/${PKGNAME}/SCons/Tool/pdf.pyo
 lib/${PKGNAME}/SCons/Tool/pdflatex.py
 lib/${PKGNAME}/SCons/Tool/pdflatex.pyc
 lib/${PKGNAME}/SCons/Tool/pdflatex.pyo
@@ -357,6 +405,9 @@ lib/${PKGNAME}/SCons/Tool/rmic.pyo
 lib/${PKGNAME}/SCons/Tool/rpcgen.py
 lib/${PKGNAME}/SCons/Tool/rpcgen.pyc
 lib/${PKGNAME}/SCons/Tool/rpcgen.pyo
+lib/${PKGNAME}/SCons/Tool/rpm.py
+lib/${PKGNAME}/SCons/Tool/rpm.pyc
+lib/${PKGNAME}/SCons/Tool/rpm.pyo
 lib/${PKGNAME}/SCons/Tool/sgiar.py
 lib/${PKGNAME}/SCons/Tool/sgiar.pyc
 lib/${PKGNAME}/SCons/Tool/sgiar.pyo
@@ -378,6 +429,15 @@ lib/${PKGNAME}/SCons/Tool/sunc++.pyo
 lib/${PKGNAME}/SCons/Tool/suncc.py
 lib/${PKGNAME}/SCons/Tool/suncc.pyc
 lib/${PKGNAME}/SCons/Tool/suncc.pyo
+lib/${PKGNAME}/SCons/Tool/sunf77.py
+lib/${PKGNAME}/SCons/Tool/sunf77.pyc
+lib/${PKGNAME}/SCons/Tool/sunf77.pyo
+lib/${PKGNAME}/SCons/Tool/sunf90.py
+lib/${PKGNAME}/SCons/Tool/sunf90.pyc
+lib/${PKGNAME}/SCons/Tool/sunf90.pyo
+lib/${PKGNAME}/SCons/Tool/sunf95.py
+lib/${PKGNAME}/SCons/Tool/sunf95.pyc
+lib/${PKGNAME}/SCons/Tool/sunf95.pyo
 lib/${PKGNAME}/SCons/Tool/sunlink.py
 lib/${PKGNAME}/SCons/Tool/sunlink.pyc
 lib/${PKGNAME}/SCons/Tool/sunlink.pyo
@@ -393,6 +453,9 @@ lib/${PKGNAME}/SCons/Tool/tex.pyo
 lib/${PKGNAME}/SCons/Tool/tlib.py
 lib/${PKGNAME}/SCons/Tool/tlib.pyc
 lib/${PKGNAME}/SCons/Tool/tlib.pyo
+lib/${PKGNAME}/SCons/Tool/wix.py
+lib/${PKGNAME}/SCons/Tool/wix.pyc
+lib/${PKGNAME}/SCons/Tool/wix.pyo
 lib/${PKGNAME}/SCons/Tool/yacc.py
 lib/${PKGNAME}/SCons/Tool/yacc.pyc
 lib/${PKGNAME}/SCons/Tool/yacc.pyo
@@ -402,12 +465,66 @@ lib/${PKGNAME}/SCons/Tool/zip.pyo
 lib/${PKGNAME}/SCons/Util.py
 lib/${PKGNAME}/SCons/Util.pyc
 lib/${PKGNAME}/SCons/Util.pyo
+lib/${PKGNAME}/SCons/Variables/BoolVariable.py
+lib/${PKGNAME}/SCons/Variables/BoolVariable.pyc
+lib/${PKGNAME}/SCons/Variables/BoolVariable.pyo
+lib/${PKGNAME}/SCons/Variables/EnumVariable.py
+lib/${PKGNAME}/SCons/Variables/EnumVariable.pyc
+lib/${PKGNAME}/SCons/Variables/EnumVariable.pyo
+lib/${PKGNAME}/SCons/Variables/ListVariable.py
+lib/${PKGNAME}/SCons/Variables/ListVariable.pyc
+lib/${PKGNAME}/SCons/Variables/ListVariable.pyo
+lib/${PKGNAME}/SCons/Variables/PackageVariable.py
+lib/${PKGNAME}/SCons/Variables/PackageVariable.pyc
+lib/${PKGNAME}/SCons/Variables/PackageVariable.pyo
+lib/${PKGNAME}/SCons/Variables/PathVariable.py
+lib/${PKGNAME}/SCons/Variables/PathVariable.pyc
+lib/${PKGNAME}/SCons/Variables/PathVariable.pyo
+lib/${PKGNAME}/SCons/Variables/__init__.py
+lib/${PKGNAME}/SCons/Variables/__init__.pyc
+lib/${PKGNAME}/SCons/Variables/__init__.pyo
 lib/${PKGNAME}/SCons/Warnings.py
 lib/${PKGNAME}/SCons/Warnings.pyc
 lib/${PKGNAME}/SCons/Warnings.pyo
 lib/${PKGNAME}/SCons/__init__.py
 lib/${PKGNAME}/SCons/__init__.pyc
 lib/${PKGNAME}/SCons/__init__.pyo
+lib/${PKGNAME}/SCons/compat/__init__.py
+lib/${PKGNAME}/SCons/compat/__init__.pyc
+lib/${PKGNAME}/SCons/compat/__init__.pyo
+lib/${PKGNAME}/SCons/compat/_scons_UserString.py
+lib/${PKGNAME}/SCons/compat/_scons_UserString.pyc
+lib/${PKGNAME}/SCons/compat/_scons_UserString.pyo
+lib/${PKGNAME}/SCons/compat/_scons_hashlib.py
+lib/${PKGNAME}/SCons/compat/_scons_hashlib.pyc
+lib/${PKGNAME}/SCons/compat/_scons_hashlib.pyo
+lib/${PKGNAME}/SCons/compat/_scons_itertools.py
+lib/${PKGNAME}/SCons/compat/_scons_itertools.pyc
+lib/${PKGNAME}/SCons/compat/_scons_itertools.pyo
+lib/${PKGNAME}/SCons/compat/_scons_optparse.py
+lib/${PKGNAME}/SCons/compat/_scons_optparse.pyc
+lib/${PKGNAME}/SCons/compat/_scons_optparse.pyo
+lib/${PKGNAME}/SCons/compat/_scons_sets.py
+lib/${PKGNAME}/SCons/compat/_scons_sets.pyc
+lib/${PKGNAME}/SCons/compat/_scons_sets.pyo
+lib/${PKGNAME}/SCons/compat/_scons_sets15.py
+lib/${PKGNAME}/SCons/compat/_scons_sets15.pyc
+lib/${PKGNAME}/SCons/compat/_scons_sets15.pyo
+lib/${PKGNAME}/SCons/compat/_scons_shlex.py
+lib/${PKGNAME}/SCons/compat/_scons_shlex.pyc
+lib/${PKGNAME}/SCons/compat/_scons_shlex.pyo
+lib/${PKGNAME}/SCons/compat/_scons_subprocess.py
+lib/${PKGNAME}/SCons/compat/_scons_subprocess.pyc
+lib/${PKGNAME}/SCons/compat/_scons_subprocess.pyo
+lib/${PKGNAME}/SCons/compat/_scons_textwrap.py
+lib/${PKGNAME}/SCons/compat/_scons_textwrap.pyc
+lib/${PKGNAME}/SCons/compat/_scons_textwrap.pyo
+lib/${PKGNAME}/SCons/compat/builtins.py
+lib/${PKGNAME}/SCons/compat/builtins.pyc
+lib/${PKGNAME}/SCons/compat/builtins.pyo
+lib/${PKGNAME}/SCons/cpp.py
+lib/${PKGNAME}/SCons/cpp.pyc
+lib/${PKGNAME}/SCons/cpp.pyo
 lib/${PKGNAME}/SCons/dblite.py
 lib/${PKGNAME}/SCons/dblite.pyc
 lib/${PKGNAME}/SCons/dblite.pyo
@@ -416,13 +533,14 @@ lib/${PKGNAME}/SCons/exitfuncs.pyc
 lib/${PKGNAME}/SCons/exitfuncs.pyo
 man/man1/scons.1
 man/man1/sconsign.1
-@dirrm lib/${PKGNAME}/SCons/Node
-@dirrm lib/${PKGNAME}/SCons/Optik
-@dirrm lib/${PKGNAME}/SCons/Options
-@dirrm lib/${PKGNAME}/SCons/Platform
-@dirrm lib/${PKGNAME}/SCons/Scanner
-@dirrm lib/${PKGNAME}/SCons/Script
-@dirrm lib/${PKGNAME}/SCons/Sig
+@dirrm lib/${PKGNAME}/SCons/compat
+@dirrm lib/${PKGNAME}/SCons/Variables
+@dirrm lib/${PKGNAME}/SCons/Tool/packaging
 @dirrm lib/${PKGNAME}/SCons/Tool
+@dirrm lib/${PKGNAME}/SCons/Script
+@dirrm lib/${PKGNAME}/SCons/Scanner
+@dirrm lib/${PKGNAME}/SCons/Platform
+@dirrm lib/${PKGNAME}/SCons/Options
+@dirrm lib/${PKGNAME}/SCons/Node
 @dirrm lib/${PKGNAME}/SCons
 @dirrm lib/${PKGNAME}
