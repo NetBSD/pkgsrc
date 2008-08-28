@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.770 2008/07/25 14:15:44 dillo Exp $
+# $NetBSD: pkglint.pl,v 1.771 2008/08/28 20:38:39 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5857,7 +5857,11 @@ sub checkline_mk_varassign($$$$$) {
 
 	# If the variable is not used and is untyped, it may be a
 	# spelling mistake.
-	if (!var_is_used($varname)) {
+	if ($op eq ":=" && $varname eq lc($varname)) {
+		$opt_warn_unchecked and $line->log_warning("${varname} might be unused unless it is an argument to a procedure file.");
+		# TODO: check $varname against the list of "procedure files".
+
+	} elsif (!var_is_used($varname)) {
 		my $vartypes = get_vartypes_map();
 		my $deprecated = get_deprecated_map();
 
@@ -6746,6 +6750,15 @@ sub checkfile_buildlink3_mk($) {
 		$lines->[$lineno - 1]->log_warning("Definition of BUILDLINK_API_DEPENDS is missing.");
 	}
 	expect_empty_line($lines, \$lineno);
+
+	# Before the fifth paragraph, it may be necessary to resolve the build
+	# options of other packages.
+	if (expect($lines, \$lineno, qr"^pkgbase\s*:=\s*(\S+)$")) {
+		do {
+			expect_text($lines, \$lineno, ".include \"../../mk/pkg-build-options.mk\"");
+		} while (expect($lines, \$lineno, qr"^pkgbase\s*:=\s*(\S+)$"));
+		expect_empty_line($lines, \$lineno);
+	}
 
 	# Fifth paragraph (optional): Dependencies.
 	my $have_dependencies = false;
