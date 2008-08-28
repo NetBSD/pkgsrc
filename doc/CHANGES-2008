@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2005 2008/08/28 01:25:18 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2006 2008/08/28 14:43:13 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3475,3 +3475,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added math/py-networkx version 0.37 [apb 2008-08-27]
 	Updated security/libpreludedb to 0.9.15 [shannonjr 2008-08-26]
 	Added misc/teseq version 1.0.0 [bjs 2008-08-28]
+	Updated devel/scons-devel to 1.0.0 [tonnerre 2008-08-28]
