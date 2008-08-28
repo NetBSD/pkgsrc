@@ -1,10 +1,10 @@
-$NetBSD: patch-aa,v 1.4 2006/01/11 21:54:06 joerg Exp $
+$NetBSD: patch-aa,v 1.5 2008/08/28 13:15:27 ahoka Exp $
 
 NetBSD definition for makefile, and make solaris into SunOS so
 that we can use ${OPSYS}.
 
---- makefile	1999/08/06 09:16:57	1.1
-+++ makefile	1999/08/06 09:20:34
+--- makefile.orig	1998-02-20 15:52:04.000000000 +0300
++++ makefile	2008-08-26 01:43:42.000000000 +0400
 @@ -19,10 +19,10 @@
  #
  # 
@@ -20,7 +20,7 @@ that we can use ${OPSYS}.
  LIBSIODDIR=$(LIBDIR)/siod
  CP_F=cp -f
  # -Wmissing-prototypes
-@@ -137,16 +137,27 @@
+@@ -137,10 +137,9 @@
  #       from /usr/lib/libSYBxxx.so -> /sybase/lib/libxxx.so
  #       for each shared library in /sybase/lib.
  
@@ -32,12 +32,10 @@ that we can use ${OPSYS}.
  	LD=ld \
  	CFLAGS="$(GCCW) $(CDEBUG) -DSUN5 -O2 $(SLD)" \
  	LD_EXE_FLAGS="-R $(LIBDIR) -R $(LIBSIODDIR)" \
- 	LD_EXE_LIBS="-lm -lsocket -lnsl -lposix4 -dl" \
- 	LD_LIB_FLAGS="-G" \
- 	LD_LIB_LIBS="$(LD_EXE_LIBS)" \
-+	SO="so" \
-+        build_driver
-+
+@@ -150,6 +149,18 @@
+ 	SO="so" \
+         build_driver
+ 
 +NetBSD DragonFly:
 +	$(MAKE) $(LDLP) \
 +	PROGS="siod ndbm.so tar.so parser_pratt.so ss.so regex.so" \
@@ -47,6 +45,51 @@ that we can use ${OPSYS}.
 +	LD_EXE_LIBS="-lm" \
 +	LD_LIB_FLAGS="-G" \
 +	LD_LIB_LIBS="$(LD_EXE_LIBS) -lm -lcrypt" \
- 	SO="so" \
-         build_driver
++	SO="so" \
++        build_driver
++
+ sybsolaris:
+ 	$(MAKE) $(LDLP) \
+ 	PROGS="siod ndbm.so tar.so parser_pratt.so ss.so regex.so\
+@@ -419,30 +430,30 @@
+ install: $(DISTFILES)
+ 	@echo "Note: This does not do a build. Only installs what already"
+ 	@echo "      sits in the directory."
+-	-mkdir -p $(MANDIR)
+-	-mkdir -p $(BINDIR)
+-	-mkdir -p $(LIBDIR)
+-	-mkdir -p $(INCDIR)
+-	-mkdir -p $(LIBSIODDIR)
++	-mkdir -p $(DESTDIR)$(MANDIR)
++	-mkdir -p $(DESTDIR)$(BINDIR)
++	-mkdir -p $(DESTDIR)$(LIBDIR)
++	-mkdir -p $(DESTDIR)$(INCDIR)
++	-mkdir -p $(DESTDIR)$(LIBSIODDIR)
+ 	-for X in $(INTO_BINDIR)  ; do \
+-	 $(CP_F) $$X $(BINDIR) ;\
++	 $(CP_F) $$X $(DESTDIR)$(BINDIR) ;\
+ 	done
+ 	-for X in $(LIBFILES) ; do \
+-	 $(CP_F) $$X $(LIBSIODDIR) ;\
++	 $(CP_F) $$X $(DESTDIR)$(LIBSIODDIR) ;\
+ 	done
+ 	-for X in $(SOLIBFILES) ; do \
+ 	  for E in so sl ; do \
+-	   $(CP_F) $$X.$$E $(LIBSIODDIR) ;\
++	   $(CP_F) $$X.$$E $(DESTDIR)$(LIBSIODDIR) ;\
+ 	  done ;\
+ 	done
+ 	-for X in $(INTO_LIBDIR) ; do \
+-	 $(CP_F) $$X $(LIBDIR) ;\
++	 $(CP_F) $$X $(DESTDIR)$(LIBDIR) ;\
+ 	done
+ 	-for X in $(MANPAGES) ; do \
+-	 $(CP_F) $$X.man $(MANDIR)/$$X.$(MANSEC) ;\
++	 $(CP_F) $$X.man $(DESTDIR)$(MANDIR)/$$X.$(MANSEC) ;\
+ 	done
+ 	-for X in $(PUBINCS) ; do \
+-	 $(CP_F) $$X $(INCDIR) ;\
++	 $(CP_F) $$X $(DESTDIR)$(INCDIR) ;\
+ 	done
+ 	@echo "Install done."
  
