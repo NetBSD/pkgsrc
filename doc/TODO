@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7494 2008/08/27 15:43:13 taca Exp $
+$NetBSD: TODO,v 1.7495 2008/08/28 03:49:32 obache Exp $
 
 Suggested new packages
 ======================
@@ -1188,7 +1188,7 @@ Suggested package updates
 	o ruby-rcairo-1.7.0
 	o ruby-rd-mode-0.6.22
 	o ruby-rdtool-0.6.22
-	o ruby-sqlite3-1.2.3
+	o ruby-sqlite3-1.2.4
 	o ruby-test-spec-0.9.0
 	o ruby-tmail-1.2.3.1
 	o rubygems-1.2.0
