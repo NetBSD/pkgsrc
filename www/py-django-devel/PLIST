@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/08/21 16:20:49 joerg Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/08/29 14:56:59 joerg Exp $
 bin/django-admin.py
 ${PYSITELIB}/django/__init__.py
 ${PYSITELIB}/django/__init__.pyc
@@ -271,6 +271,9 @@ ${PYSITELIB}/django/contrib/admin/__init__.pyo
 ${PYSITELIB}/django/contrib/admin/filterspecs.py
 ${PYSITELIB}/django/contrib/admin/filterspecs.pyc
 ${PYSITELIB}/django/contrib/admin/filterspecs.pyo
+${PYSITELIB}/django/contrib/admin/helpers.py
+${PYSITELIB}/django/contrib/admin/helpers.pyc
+${PYSITELIB}/django/contrib/admin/helpers.pyo
 ${PYSITELIB}/django/contrib/admin/media/css/base.css
 ${PYSITELIB}/django/contrib/admin/media/css/changelists.css
 ${PYSITELIB}/django/contrib/admin/media/css/dashboard.css
@@ -351,6 +354,7 @@ ${PYSITELIB}/django/contrib/admin/sites.pyc
 ${PYSITELIB}/django/contrib/admin/sites.pyo
 ${PYSITELIB}/django/contrib/admin/templates/admin/404.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/500.html
+${PYSITELIB}/django/contrib/admin/templates/admin/app_index.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/auth/user/add_form.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/auth/user/change_password.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/base.html
@@ -369,6 +373,7 @@ ${PYSITELIB}/django/contrib/admin/templates/admin/invalid_setup.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/login.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/object_history.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/pagination.html
+${PYSITELIB}/django/contrib/admin/templates/admin/prepopulated_fields_js.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/search_form.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/submit_line.html
 ${PYSITELIB}/django/contrib/admin/templates/admin/template_validator.html
@@ -487,6 +492,7 @@ ${PYSITELIB}/django/contrib/auth/tests/basic.pyo
 ${PYSITELIB}/django/contrib/auth/tests/forms.py
 ${PYSITELIB}/django/contrib/auth/tests/forms.pyc
 ${PYSITELIB}/django/contrib/auth/tests/forms.pyo
+${PYSITELIB}/django/contrib/auth/tests/templates/registration/login.html
 ${PYSITELIB}/django/contrib/auth/tests/tokens.py
 ${PYSITELIB}/django/contrib/auth/tests/tokens.pyc
 ${PYSITELIB}/django/contrib/auth/tests/tokens.pyo
@@ -511,38 +517,53 @@ ${PYSITELIB}/django/contrib/comments/admin.pyo
 ${PYSITELIB}/django/contrib/comments/feeds.py
 ${PYSITELIB}/django/contrib/comments/feeds.pyc
 ${PYSITELIB}/django/contrib/comments/feeds.pyo
+${PYSITELIB}/django/contrib/comments/forms.py
+${PYSITELIB}/django/contrib/comments/forms.pyc
+${PYSITELIB}/django/contrib/comments/forms.pyo
+${PYSITELIB}/django/contrib/comments/managers.py
+${PYSITELIB}/django/contrib/comments/managers.pyc
+${PYSITELIB}/django/contrib/comments/managers.pyo
 ${PYSITELIB}/django/contrib/comments/models.py
 ${PYSITELIB}/django/contrib/comments/models.pyc
 ${PYSITELIB}/django/contrib/comments/models.pyo
+${PYSITELIB}/django/contrib/comments/signals.py
+${PYSITELIB}/django/contrib/comments/signals.pyc
+${PYSITELIB}/django/contrib/comments/signals.pyo
+${PYSITELIB}/django/contrib/comments/templates/comments/400-debug.html
+${PYSITELIB}/django/contrib/comments/templates/comments/approve.html
+${PYSITELIB}/django/contrib/comments/templates/comments/approved.html
+${PYSITELIB}/django/contrib/comments/templates/comments/base.html
+${PYSITELIB}/django/contrib/comments/templates/comments/delete.html
+${PYSITELIB}/django/contrib/comments/templates/comments/deleted.html
+${PYSITELIB}/django/contrib/comments/templates/comments/flag.html
+${PYSITELIB}/django/contrib/comments/templates/comments/flagged.html
 ${PYSITELIB}/django/contrib/comments/templates/comments/form.html
-${PYSITELIB}/django/contrib/comments/templates/comments/freeform.html
+${PYSITELIB}/django/contrib/comments/templates/comments/moderation_queue.html
+${PYSITELIB}/django/contrib/comments/templates/comments/posted.html
+${PYSITELIB}/django/contrib/comments/templates/comments/preview.html
+${PYSITELIB}/django/contrib/comments/templates/comments/reply.html
+${PYSITELIB}/django/contrib/comments/templates/comments/reply_preview.html
 ${PYSITELIB}/django/contrib/comments/templatetags/__init__.py
 ${PYSITELIB}/django/contrib/comments/templatetags/__init__.pyc
 ${PYSITELIB}/django/contrib/comments/templatetags/__init__.pyo
 ${PYSITELIB}/django/contrib/comments/templatetags/comments.py
 ${PYSITELIB}/django/contrib/comments/templatetags/comments.pyc
 ${PYSITELIB}/django/contrib/comments/templatetags/comments.pyo
-${PYSITELIB}/django/contrib/comments/tests.py
-${PYSITELIB}/django/contrib/comments/tests.pyc
-${PYSITELIB}/django/contrib/comments/tests.pyo
-${PYSITELIB}/django/contrib/comments/urls/__init__.py
-${PYSITELIB}/django/contrib/comments/urls/__init__.pyc
-${PYSITELIB}/django/contrib/comments/urls/__init__.pyo
-${PYSITELIB}/django/contrib/comments/urls/comments.py
-${PYSITELIB}/django/contrib/comments/urls/comments.pyc
-${PYSITELIB}/django/contrib/comments/urls/comments.pyo
+${PYSITELIB}/django/contrib/comments/urls.py
+${PYSITELIB}/django/contrib/comments/urls.pyc
+${PYSITELIB}/django/contrib/comments/urls.pyo
 ${PYSITELIB}/django/contrib/comments/views/__init__.py
 ${PYSITELIB}/django/contrib/comments/views/__init__.pyc
 ${PYSITELIB}/django/contrib/comments/views/__init__.pyo
 ${PYSITELIB}/django/contrib/comments/views/comments.py
 ${PYSITELIB}/django/contrib/comments/views/comments.pyc
 ${PYSITELIB}/django/contrib/comments/views/comments.pyo
-${PYSITELIB}/django/contrib/comments/views/karma.py
-${PYSITELIB}/django/contrib/comments/views/karma.pyc
-${PYSITELIB}/django/contrib/comments/views/karma.pyo
-${PYSITELIB}/django/contrib/comments/views/userflags.py
-${PYSITELIB}/django/contrib/comments/views/userflags.pyc
-${PYSITELIB}/django/contrib/comments/views/userflags.pyo
+${PYSITELIB}/django/contrib/comments/views/moderation.py
+${PYSITELIB}/django/contrib/comments/views/moderation.pyc
+${PYSITELIB}/django/contrib/comments/views/moderation.pyo
+${PYSITELIB}/django/contrib/comments/views/utils.py
+${PYSITELIB}/django/contrib/comments/views/utils.pyc
+${PYSITELIB}/django/contrib/comments/views/utils.pyo
 ${PYSITELIB}/django/contrib/contenttypes/__init__.py
 ${PYSITELIB}/django/contrib/contenttypes/__init__.pyc
 ${PYSITELIB}/django/contrib/contenttypes/__init__.pyo
@@ -641,6 +662,9 @@ ${PYSITELIB}/django/contrib/formtools/test_urls.pyo
 ${PYSITELIB}/django/contrib/formtools/tests.py
 ${PYSITELIB}/django/contrib/formtools/tests.pyc
 ${PYSITELIB}/django/contrib/formtools/tests.pyo
+${PYSITELIB}/django/contrib/formtools/utils.py
+${PYSITELIB}/django/contrib/formtools/utils.pyc
+${PYSITELIB}/django/contrib/formtools/utils.pyo
 ${PYSITELIB}/django/contrib/formtools/wizard.py
 ${PYSITELIB}/django/contrib/formtools/wizard.pyc
 ${PYSITELIB}/django/contrib/formtools/wizard.pyo
@@ -749,6 +773,9 @@ ${PYSITELIB}/django/contrib/gis/db/models/sql/query.pyo
 ${PYSITELIB}/django/contrib/gis/db/models/sql/where.py
 ${PYSITELIB}/django/contrib/gis/db/models/sql/where.pyc
 ${PYSITELIB}/django/contrib/gis/db/models/sql/where.pyo
+${PYSITELIB}/django/contrib/gis/feeds.py
+${PYSITELIB}/django/contrib/gis/feeds.pyc
+${PYSITELIB}/django/contrib/gis/feeds.pyo
 ${PYSITELIB}/django/contrib/gis/forms/__init__.py
 ${PYSITELIB}/django/contrib/gis/forms/__init__.pyc
 ${PYSITELIB}/django/contrib/gis/forms/__init__.pyo
@@ -893,9 +920,18 @@ ${PYSITELIB}/django/contrib/gis/models.pyo
 ${PYSITELIB}/django/contrib/gis/shortcuts.py
 ${PYSITELIB}/django/contrib/gis/shortcuts.pyc
 ${PYSITELIB}/django/contrib/gis/shortcuts.pyo
-${PYSITELIB}/django/contrib/gis/sitemaps.py
-${PYSITELIB}/django/contrib/gis/sitemaps.pyc
-${PYSITELIB}/django/contrib/gis/sitemaps.pyo
+${PYSITELIB}/django/contrib/gis/sitemaps/__init__.py
+${PYSITELIB}/django/contrib/gis/sitemaps/__init__.pyc
+${PYSITELIB}/django/contrib/gis/sitemaps/__init__.pyo
+${PYSITELIB}/django/contrib/gis/sitemaps/georss.py
+${PYSITELIB}/django/contrib/gis/sitemaps/georss.pyc
+${PYSITELIB}/django/contrib/gis/sitemaps/georss.pyo
+${PYSITELIB}/django/contrib/gis/sitemaps/kml.py
+${PYSITELIB}/django/contrib/gis/sitemaps/kml.pyc
+${PYSITELIB}/django/contrib/gis/sitemaps/kml.pyo
+${PYSITELIB}/django/contrib/gis/sitemaps/views.py
+${PYSITELIB}/django/contrib/gis/sitemaps/views.pyc
+${PYSITELIB}/django/contrib/gis/sitemaps/views.pyo
 ${PYSITELIB}/django/contrib/gis/templates/gis/admin/openlayers.html
 ${PYSITELIB}/django/contrib/gis/templates/gis/admin/openlayers.js
 ${PYSITELIB}/django/contrib/gis/templates/gis/admin/osm.html
@@ -903,6 +939,7 @@ ${PYSITELIB}/django/contrib/gis/templates/gis/admin/osm.js
 ${PYSITELIB}/django/contrib/gis/templates/gis/google/js/google-map.js
 ${PYSITELIB}/django/contrib/gis/templates/gis/kml/base.kml
 ${PYSITELIB}/django/contrib/gis/templates/gis/kml/placemarks.kml
+${PYSITELIB}/django/contrib/gis/templates/gis/sitemaps/geo_sitemap.xml
 ${PYSITELIB}/django/contrib/gis/tests/__init__.py
 ${PYSITELIB}/django/contrib/gis/tests/__init__.pyc
 ${PYSITELIB}/django/contrib/gis/tests/__init__.pyo
@@ -931,9 +968,15 @@ ${PYSITELIB}/django/contrib/gis/tests/distapp/tests.pyo
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/__init__.py
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/__init__.pyc
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/__init__.pyo
+${PYSITELIB}/django/contrib/gis/tests/geoapp/feeds.py
+${PYSITELIB}/django/contrib/gis/tests/geoapp/feeds.pyc
+${PYSITELIB}/django/contrib/gis/tests/geoapp/feeds.pyo
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/models.py
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/models.pyc
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/models.pyo
+${PYSITELIB}/django/contrib/gis/tests/geoapp/sitemaps.py
+${PYSITELIB}/django/contrib/gis/tests/geoapp/sitemaps.pyc
+${PYSITELIB}/django/contrib/gis/tests/geoapp/sitemaps.pyo
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/sql/city.mysql.sql
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/sql/city.oracle.sql
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/sql/city.postgresql_psycopg2.sql
@@ -945,12 +988,21 @@ ${PYSITELIB}/django/contrib/gis/tests/geoapp/sql/nz.wkt
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/sql/state.mysql.sql
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/sql/state.postgresql_psycopg2.sql
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/sql/tx.wkt
+${PYSITELIB}/django/contrib/gis/tests/geoapp/test_feeds.py
+${PYSITELIB}/django/contrib/gis/tests/geoapp/test_feeds.pyc
+${PYSITELIB}/django/contrib/gis/tests/geoapp/test_feeds.pyo
+${PYSITELIB}/django/contrib/gis/tests/geoapp/test_sitemaps.py
+${PYSITELIB}/django/contrib/gis/tests/geoapp/test_sitemaps.pyc
+${PYSITELIB}/django/contrib/gis/tests/geoapp/test_sitemaps.pyo
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/tests.py
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/tests.pyc
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/tests.pyo
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/tests_mysql.py
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/tests_mysql.pyc
 ${PYSITELIB}/django/contrib/gis/tests/geoapp/tests_mysql.pyo
+${PYSITELIB}/django/contrib/gis/tests/geoapp/urls.py
+${PYSITELIB}/django/contrib/gis/tests/geoapp/urls.pyc
+${PYSITELIB}/django/contrib/gis/tests/geoapp/urls.pyo
 ${PYSITELIB}/django/contrib/gis/tests/geometries.py
 ${PYSITELIB}/django/contrib/gis/tests/geometries.pyc
 ${PYSITELIB}/django/contrib/gis/tests/geometries.pyo
@@ -1016,6 +1068,9 @@ ${PYSITELIB}/django/contrib/gis/tests/test_measure.pyo
 ${PYSITELIB}/django/contrib/gis/tests/test_spatialrefsys.py
 ${PYSITELIB}/django/contrib/gis/tests/test_spatialrefsys.pyc
 ${PYSITELIB}/django/contrib/gis/tests/test_spatialrefsys.pyo
+${PYSITELIB}/django/contrib/gis/tests/urls.py
+${PYSITELIB}/django/contrib/gis/tests/urls.pyc
+${PYSITELIB}/django/contrib/gis/tests/urls.pyo
 ${PYSITELIB}/django/contrib/gis/tests/utils.py
 ${PYSITELIB}/django/contrib/gis/tests/utils.pyc
 ${PYSITELIB}/django/contrib/gis/tests/utils.pyo
@@ -1504,9 +1559,6 @@ ${PYSITELIB}/django/core/management/color.pyo
 ${PYSITELIB}/django/core/management/commands/__init__.py
 ${PYSITELIB}/django/core/management/commands/__init__.pyc
 ${PYSITELIB}/django/core/management/commands/__init__.pyo
-${PYSITELIB}/django/core/management/commands/adminindex.py
-${PYSITELIB}/django/core/management/commands/adminindex.pyc
-${PYSITELIB}/django/core/management/commands/adminindex.pyo
 ${PYSITELIB}/django/core/management/commands/cleanup.py
 ${PYSITELIB}/django/core/management/commands/cleanup.pyc
 ${PYSITELIB}/django/core/management/commands/cleanup.pyo
@@ -1639,9 +1691,6 @@ ${PYSITELIB}/django/core/template_loader.pyo
 ${PYSITELIB}/django/core/urlresolvers.py
 ${PYSITELIB}/django/core/urlresolvers.pyc
 ${PYSITELIB}/django/core/urlresolvers.pyo
-${PYSITELIB}/django/core/validators.py
-${PYSITELIB}/django/core/validators.pyc
-${PYSITELIB}/django/core/validators.pyo
 ${PYSITELIB}/django/core/xheaders.py
 ${PYSITELIB}/django/core/xheaders.pyc
 ${PYSITELIB}/django/core/xheaders.pyo
@@ -1753,9 +1802,6 @@ ${PYSITELIB}/django/db/models/loading.pyo
 ${PYSITELIB}/django/db/models/manager.py
 ${PYSITELIB}/django/db/models/manager.pyc
 ${PYSITELIB}/django/db/models/manager.pyo
-${PYSITELIB}/django/db/models/manipulators.py
-${PYSITELIB}/django/db/models/manipulators.pyc
-${PYSITELIB}/django/db/models/manipulators.pyo
 ${PYSITELIB}/django/db/models/options.py
 ${PYSITELIB}/django/db/models/options.pyc
 ${PYSITELIB}/django/db/models/options.pyo
@@ -1861,9 +1907,6 @@ ${PYSITELIB}/django/middleware/locale.pyo
 ${PYSITELIB}/django/middleware/transaction.py
 ${PYSITELIB}/django/middleware/transaction.pyc
 ${PYSITELIB}/django/middleware/transaction.pyo
-${PYSITELIB}/django/oldforms/__init__.py
-${PYSITELIB}/django/oldforms/__init__.pyc
-${PYSITELIB}/django/oldforms/__init__.pyo
 ${PYSITELIB}/django/shortcuts/__init__.py
 ${PYSITELIB}/django/shortcuts/__init__.pyc
 ${PYSITELIB}/django/shortcuts/__init__.pyo
@@ -2103,7 +2146,6 @@ ${PYSITELIB}/django/views/static.pyo
 @dirrm ${PYSITELIB}/django/template/loaders
 @dirrm ${PYSITELIB}/django/template
 @dirrm ${PYSITELIB}/django/shortcuts
-@dirrm ${PYSITELIB}/django/oldforms
 @dirrm ${PYSITELIB}/django/middleware
 @dirrm ${PYSITELIB}/django/http
 @dirrm ${PYSITELIB}/django/forms/extras
@@ -2112,10 +2154,10 @@ ${PYSITELIB}/django/views/static.pyo
 @dirrm ${PYSITELIB}/django/db/models/sql
 @dirrm ${PYSITELIB}/django/db/models/fields
 @dirrm ${PYSITELIB}/django/db/models
-@unexec ${RMDIR} %D/${PYSITELIB}/django/db/backends/sqlite3 || ${TRUE}
-@unexec ${RMDIR} %D/${PYSITELIB}/django/db/backends/postgresql_psycopg2 || ${TRUE}
-@unexec ${RMDIR} %D/${PYSITELIB}/django/db/backends/postgresql || ${TRUE}
-@unexec ${RMDIR} %D/${PYSITELIB}/django/db/backends/mysql || ${TRUE}
+${PLIST.sqlite}@dirrm ${PYSITELIB}/django/db/backends/sqlite3
+${PLIST.psycopg2}@dirrm ${PYSITELIB}/django/db/backends/postgresql_psycopg2
+${PLIST.psycopg1}@dirrm ${PYSITELIB}/django/db/backends/postgresql
+${PLIST.mysql}@dirrm ${PYSITELIB}/django/db/backends/mysql
 @dirrm ${PYSITELIB}/django/db/backends/dummy
 @dirrm ${PYSITELIB}/django/db/backends
 @dirrm ${PYSITELIB}/django/db
@@ -2165,11 +2207,53 @@ ${PYSITELIB}/django/views/static.pyo
 @dirrm ${PYSITELIB}/django/contrib/localflavor/ca
 @dirrm ${PYSITELIB}/django/contrib/localflavor/br
 @dirrm ${PYSITELIB}/django/contrib/localflavor/au
-@dirrm ${PYSITELIB}/django/contrib/localflavor/ar
 @dirrm ${PYSITELIB}/django/contrib/localflavor/at
+@dirrm ${PYSITELIB}/django/contrib/localflavor/ar
 @dirrm ${PYSITELIB}/django/contrib/localflavor
 @dirrm ${PYSITELIB}/django/contrib/humanize/templatetags
 @dirrm ${PYSITELIB}/django/contrib/humanize
+@dirrm ${PYSITELIB}/django/contrib/gis/utils
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/relatedapp
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/layermap/interstates
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/layermap/counties
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/layermap/cities
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/layermap
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/geoapp/sql
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/geoapp
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/distapp
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/data/test_vrt
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/data/test_poly
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/data/test_point
+@dirrm ${PYSITELIB}/django/contrib/gis/tests/data
+@dirrm ${PYSITELIB}/django/contrib/gis/tests
+@dirrm ${PYSITELIB}/django/contrib/gis/templates/gis/sitemaps
+@dirrm ${PYSITELIB}/django/contrib/gis/templates/gis/kml
+@dirrm ${PYSITELIB}/django/contrib/gis/templates/gis/google/js
+@dirrm ${PYSITELIB}/django/contrib/gis/templates/gis/google
+@dirrm ${PYSITELIB}/django/contrib/gis/templates/gis/admin
+@dirrm ${PYSITELIB}/django/contrib/gis/templates/gis
+@dirrm ${PYSITELIB}/django/contrib/gis/templates
+@dirrm ${PYSITELIB}/django/contrib/gis/sitemaps
+@dirrm ${PYSITELIB}/django/contrib/gis/maps/openlayers
+@dirrm ${PYSITELIB}/django/contrib/gis/maps/google
+@dirrm ${PYSITELIB}/django/contrib/gis/maps
+@dirrm ${PYSITELIB}/django/contrib/gis/management/commands
+@dirrm ${PYSITELIB}/django/contrib/gis/management
+@dirrm ${PYSITELIB}/django/contrib/gis/geos/prototypes
+@dirrm ${PYSITELIB}/django/contrib/gis/geos
+@dirrm ${PYSITELIB}/django/contrib/gis/gdal/prototypes
+@dirrm ${PYSITELIB}/django/contrib/gis/gdal
+@dirrm ${PYSITELIB}/django/contrib/gis/forms
+@dirrm ${PYSITELIB}/django/contrib/gis/db/models/sql
+@dirrm ${PYSITELIB}/django/contrib/gis/db/models/fields
+@dirrm ${PYSITELIB}/django/contrib/gis/db/models
+@dirrm ${PYSITELIB}/django/contrib/gis/db/backend/postgis
+@dirrm ${PYSITELIB}/django/contrib/gis/db/backend/oracle
+@dirrm ${PYSITELIB}/django/contrib/gis/db/backend/mysql
+@dirrm ${PYSITELIB}/django/contrib/gis/db/backend
+@dirrm ${PYSITELIB}/django/contrib/gis/db
+@dirrm ${PYSITELIB}/django/contrib/gis/admin
+@dirrm ${PYSITELIB}/django/contrib/gis
 @dirrm ${PYSITELIB}/django/contrib/formtools/templates/formtools
 @dirrm ${PYSITELIB}/django/contrib/formtools/templates
 @dirrm ${PYSITELIB}/django/contrib/formtools
@@ -2181,77 +2265,38 @@ ${PYSITELIB}/django/views/static.pyo
 @dirrm ${PYSITELIB}/django/contrib/csrf
 @dirrm ${PYSITELIB}/django/contrib/contenttypes
 @dirrm ${PYSITELIB}/django/contrib/comments/views
-@dirrm ${PYSITELIB}/django/contrib/comments/urls
 @dirrm ${PYSITELIB}/django/contrib/comments/templatetags
 @dirrm ${PYSITELIB}/django/contrib/comments/templates/comments
 @dirrm ${PYSITELIB}/django/contrib/comments/templates
 @dirrm ${PYSITELIB}/django/contrib/comments
+@dirrm ${PYSITELIB}/django/contrib/auth/tests/templates/registration
+@dirrm ${PYSITELIB}/django/contrib/auth/tests/templates
 @dirrm ${PYSITELIB}/django/contrib/auth/tests
 @dirrm ${PYSITELIB}/django/contrib/auth/management/commands
 @dirrm ${PYSITELIB}/django/contrib/auth/management
 @dirrm ${PYSITELIB}/django/contrib/auth/handlers
 @dirrm ${PYSITELIB}/django/contrib/auth/fixtures
 @dirrm ${PYSITELIB}/django/contrib/auth
-@dirrm ${PYSITELIB}/django/contrib/admin/views
-@dirrm ${PYSITELIB}/django/contrib/admin/templates/admin/auth/user
-@dirrm ${PYSITELIB}/django/contrib/admin/templates/admin/auth
-@dirrm ${PYSITELIB}/django/contrib/admin/templates/admin/edit_inline
-@dirrm ${PYSITELIB}/django/contrib/admin/templates/admin/includes
-@dirrm ${PYSITELIB}/django/contrib/admin/templates/registration
-@dirrm ${PYSITELIB}/django/contrib/admin/templates/admin
-@dirrm ${PYSITELIB}/django/contrib/admin/templatetags
 @dirrm ${PYSITELIB}/django/contrib/admindocs/templates/admin_doc
 @dirrm ${PYSITELIB}/django/contrib/admindocs/templates
 @dirrm ${PYSITELIB}/django/contrib/admindocs
+@dirrm ${PYSITELIB}/django/contrib/admin/views
+@dirrm ${PYSITELIB}/django/contrib/admin/templatetags
+@dirrm ${PYSITELIB}/django/contrib/admin/templates/registration
+@dirrm ${PYSITELIB}/django/contrib/admin/templates/admin/includes
+@dirrm ${PYSITELIB}/django/contrib/admin/templates/admin/edit_inline
+@dirrm ${PYSITELIB}/django/contrib/admin/templates/admin/auth/user
+@dirrm ${PYSITELIB}/django/contrib/admin/templates/admin/auth
+@dirrm ${PYSITELIB}/django/contrib/admin/templates/admin
 @dirrm ${PYSITELIB}/django/contrib/admin/templates
 @dirrm ${PYSITELIB}/django/contrib/admin/media/js/admin
 @dirrm ${PYSITELIB}/django/contrib/admin/media/js
-@dirrm ${PYSITELIB}/django/contrib/admin/media/img/admin
 @dirrm ${PYSITELIB}/django/contrib/admin/media/img/gis
+@dirrm ${PYSITELIB}/django/contrib/admin/media/img/admin
 @dirrm ${PYSITELIB}/django/contrib/admin/media/img
 @dirrm ${PYSITELIB}/django/contrib/admin/media/css
 @dirrm ${PYSITELIB}/django/contrib/admin/media
 @dirrm ${PYSITELIB}/django/contrib/admin
-@dirrm ${PYSITELIB}/django/contrib/gis/admin
-@dirrm ${PYSITELIB}/django/contrib/gis/db/backend/mysql
-@dirrm ${PYSITELIB}/django/contrib/gis/db/backend/oracle
-@dirrm ${PYSITELIB}/django/contrib/gis/db/backend/postgis
-@dirrm ${PYSITELIB}/django/contrib/gis/db/backend
-@dirrm ${PYSITELIB}/django/contrib/gis/db/models/fields
-@dirrm ${PYSITELIB}/django/contrib/gis/db/models/sql
-@dirrm ${PYSITELIB}/django/contrib/gis/db/models
-@dirrm ${PYSITELIB}/django/contrib/gis/db
-@dirrm ${PYSITELIB}/django/contrib/gis/forms
-@dirrm ${PYSITELIB}/django/contrib/gis/gdal/prototypes
-@dirrm ${PYSITELIB}/django/contrib/gis/gdal
-@dirrm ${PYSITELIB}/django/contrib/gis/geos/prototypes
-@dirrm ${PYSITELIB}/django/contrib/gis/geos
-@dirrm ${PYSITELIB}/django/contrib/gis/management/commands
-@dirrm ${PYSITELIB}/django/contrib/gis/management
-@dirrm ${PYSITELIB}/django/contrib/gis/maps/google
-@dirrm ${PYSITELIB}/django/contrib/gis/maps/openlayers
-@dirrm ${PYSITELIB}/django/contrib/gis/maps
-@dirrm ${PYSITELIB}/django/contrib/gis/tests/distapp
-@dirrm ${PYSITELIB}/django/contrib/gis/tests/geoapp/sql
-@dirrm ${PYSITELIB}/django/contrib/gis/tests/geoapp
-@dirrm ${PYSITELIB}/django/contrib/gis/tests/layermap/cities
-@dirrm ${PYSITELIB}/django/contrib/gis/tests/layermap/counties
-@dirrm ${PYSITELIB}/django/contrib/gis/tests/layermap/interstates
-@dirrm ${PYSITELIB}/django/contrib/gis/tests/layermap
-@dirrm ${PYSITELIB}/django/contrib/gis/tests/relatedapp
-@dirrm ${PYSITELIB}/django/contrib/gis/tests/data/test_point
-@dirrm ${PYSITELIB}/django/contrib/gis/tests/data/test_poly
-@dirrm ${PYSITELIB}/django/contrib/gis/tests/data/test_vrt
-@dirrm ${PYSITELIB}/django/contrib/gis/tests/data
-@dirrm ${PYSITELIB}/django/contrib/gis/tests
-@dirrm ${PYSITELIB}/django/contrib/gis/utils
-@dirrm ${PYSITELIB}/django/contrib/gis/templates/gis/admin
-@dirrm ${PYSITELIB}/django/contrib/gis/templates/gis/google/js
-@dirrm ${PYSITELIB}/django/contrib/gis/templates/gis/google
-@dirrm ${PYSITELIB}/django/contrib/gis/templates/gis/kml
-@dirrm ${PYSITELIB}/django/contrib/gis/templates/gis
-@dirrm ${PYSITELIB}/django/contrib/gis/templates
-@dirrm ${PYSITELIB}/django/contrib/gis
 @dirrm ${PYSITELIB}/django/contrib
 @dirrm ${PYSITELIB}/django/conf/urls
 @dirrm ${PYSITELIB}/django/conf/project_template
