@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2009 2008/08/29 08:10:04 hira Exp $
+$NetBSD: CHANGES-2008,v 1.2010 2008/08/29 13:30:24 tonio Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3479,3 +3479,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Test-MockObject to 1.09nb1 [seb 2008-08-28]
 	Added math/openaxiom version 1.2.0 [ahoka 2008-08-28]
 	Updated misc/openoffice2 to 2.4.1nb1 [hira 2008-08-29]
+	Updated chat/bitlbee to 1.2.2 [tonio 2008-08-29]
