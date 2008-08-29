@@ -1,12 +1,10 @@
-# $NetBSD: Makefile,v 1.19 2006/11/11 16:53:10 rillig Exp $
+# $NetBSD: Makefile,v 1.20 2008/08/29 16:43:58 sborrill Exp $
 #
 
-DISTNAME=		Xdialog-2.1.1
+DISTNAME=		Xdialog-2.3.1
 PKGNAME=		${DISTNAME:S/^X/x/}
-PKGREVISION=		3
 CATEGORIES=		x11 misc
-MASTER_SITES=		http://thgodef.nerim.net/xdialog/	\
-			http://thgodef.nerim.net/xdialog/archives/
+MASTER_SITES=		http://xdialog.free.fr/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -34,5 +32,6 @@ post-install:
 		${INSTALL_SCRIPT} ${WRKSRC}/samples/$${f} ${EGDIR};	\
 	done
 
-.include "../../x11/gtk/buildlink3.mk"
+.include "options.mk"
+
 .include "../../mk/bsd.pkg.mk"
