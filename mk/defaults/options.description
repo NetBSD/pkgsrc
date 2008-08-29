@@ -128,6 +128,7 @@ graphicsmagick		Use GraphicsMagick as imaging library.
 groff-docs		Install documentation images.
 gstreamer		Enable gstreamer support.
 gtk			Enable support for GTK.
+gtk2			Enable support for GTK2.
 gtkspell		Enable gtkspell support.	
 gzip			Enable compression using gzip
 halfops			Halfops are similar to plain ops, but can't kick/deop plain ops.
