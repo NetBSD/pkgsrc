@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2006/04/17 07:07:49 jlam Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/08/29 16:43:58 sborrill Exp $
 bin/Xdialog
 man/man1/Xdialog.1
 share/doc/html/xdialog/2ranges.png
@@ -78,12 +78,18 @@ share/examples/xdialog/textbox
 share/examples/xdialog/timebox
 share/examples/xdialog/treeview
 share/examples/xdialog/yesno
+share/locale/ca/LC_MESSAGES/Xdialog.mo
 share/locale/de/LC_MESSAGES/Xdialog.mo
 share/locale/es/LC_MESSAGES/Xdialog.mo
 share/locale/fr/LC_MESSAGES/Xdialog.mo
 share/locale/hu/LC_MESSAGES/Xdialog.mo
+share/locale/id/LC_MESSAGES/Xdialog.mo
+share/locale/it/LC_MESSAGES/Xdialog.mo
+share/locale/nl/LC_MESSAGES/Xdialog.mo
 share/locale/no_NO/LC_MESSAGES/Xdialog.mo
+share/locale/pl/LC_MESSAGES/Xdialog.mo
 share/locale/pt_BR/LC_MESSAGES/Xdialog.mo
 share/locale/ru/LC_MESSAGES/Xdialog.mo
+share/locale/sv_SE/LC_MESSAGES/Xdialog.mo
 @dirrm share/examples/xdialog
 @dirrm share/doc/html/xdialog
