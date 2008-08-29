@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/01/03 17:43:15 rillig Exp $
+# $NetBSD: Makefile,v 1.2 2008/08/29 15:33:01 abs Exp $
 #
 
 DISTNAME=	lintpkgsrc-4.82
@@ -36,16 +36,18 @@ SUBST_SED.lp+=	-e s\|@PREFIX@\|${PREFIX}\|g
 SUBST_SED.lp+=	-e s\|@MAKE@\|${MAKE:Q}\|g
 SUBST_SED.lp+=	-e s\|@PERL@\|${PERL5:Q}\|g
 
+PKG_DESTDIR_SUPPORT=    user-destdir
+
 .include "../../mk/bsd.prefs.mk"
 
 do-extract:
 	cd ${FILESDIR} && cp lintpkgsrc.* ${WRKSRC}/
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/lintpkgsrc.pl ${PREFIX}/bin/lintpkgsrc
-	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.0 ${PREFIX}/${PKGMANDIR}/cat1
+	${INSTALL_SCRIPT} ${WRKSRC}/lintpkgsrc.pl ${DESTDIR}${PREFIX}/bin/lintpkgsrc
+	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.0 ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1
 .if !empty(MANINSTALL:Mmaninstall)
-	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.1 ${PREFIX}/${PKGMANDIR}/man1
+	${INSTALL_MAN} ${WRKSRC}/lintpkgsrc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 .endif
 
 .include "../../mk/bsd.pkg.mk"
