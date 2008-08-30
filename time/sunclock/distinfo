@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2005/02/23 19:14:55 wiz Exp $
+$NetBSD: distinfo,v 1.6 2008/08/30 08:25:26 dholland Exp $
 
 SHA1 (sunclock-1.5.tar.gz) = 4be620bdff39da118b26e6de256b8dfc71b4d5df
 RMD160 (sunclock-1.5.tar.gz) = 92d6fe7a695f517ccf7583c63e1a2a202deeb295
 Size (sunclock-1.5.tar.gz) = 29360 bytes
-SHA1 (patch-aa) = 1e315cb6a68bf7d97a849ef9437aff277d3a4862
+SHA1 (patch-aa) = 775b77c0bd2ebbdcaa114b8be95af553521a7ec7
+SHA1 (patch-ab) = e3432958d8e302643bb751717d3a8462bd0a841b
