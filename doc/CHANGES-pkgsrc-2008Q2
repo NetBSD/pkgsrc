@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.52 2008/08/24 11:11:17 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.53 2008/08/30 12:11:23 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -119,3 +119,7 @@ pullup ticket #2505 - requested by tron
 x11-links: update package for newer library version on mac os x
 pullup ticket #2506 - requested by ghen 
 thunderbird, thunderbird-gtk1: update package for security fixes
+Pullup ticket #2507 - requested by drochner
+yelp: security patch
+Pullup ticket #2509 - requested by joerg
+mk/platform/NetBSD.mk: portability fix
