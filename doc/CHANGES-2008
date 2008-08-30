@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2022 2008/08/30 20:09:25 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.2023 2008/08/30 20:51:55 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3496,3 +3496,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xview-clients to 3.2.1nb3 [dholland 2008-08-30]
 	Updated wm/olvwm to 4.4nb3 [dholland 2008-08-30]
 	Updated x11/xview to 3.2.1nb2 [dholland 2008-08-30]
+	Updated x11/xlt to 13.0.13nb1 [dholland 2008-08-30]
