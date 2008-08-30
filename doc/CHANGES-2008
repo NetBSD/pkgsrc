@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2016 2008/08/30 08:12:17 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.2017 2008/08/30 08:13:03 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3486,3 +3486,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/mercurial to 1.0.2 [bjs 2008-08-29]
 	Updated lang/parrot to 0.4.11nb1 [dholland 2008-08-30]
 	Updated sysutils/lilo to 22.8nb1 [dholland 2008-08-30]
+	Updated graphics/tiff to 3.8.2nb4 [tron 2008-08-30]
