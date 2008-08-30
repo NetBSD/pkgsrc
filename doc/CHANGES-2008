@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2021 2008/08/30 12:18:56 tron Exp $
+$NetBSD: CHANGES-2008,v 1.2022 2008/08/30 20:09:25 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3491,3 +3491,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/python25 to 2.5.2nb3 [tron 2008-08-30]
 	Updated graphics/gimp to 2.4.7 [adam 2008-08-30]
 	Updated net/samba to 3.0.32 [tron 2008-08-30]
+	Updated x11/xview-config to 3.2.1nb4 [dholland 2008-08-30]
+	Updated x11/xview-lib to 3.2.1nb7 [dholland 2008-08-30]
+	Updated x11/xview-clients to 3.2.1nb3 [dholland 2008-08-30]
+	Updated wm/olvwm to 4.4nb3 [dholland 2008-08-30]
+	Updated x11/xview to 3.2.1nb2 [dholland 2008-08-30]
