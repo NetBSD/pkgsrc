@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/08/07 16:00:14 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2008/08/30 16:05:30 bouyer Exp $
 #
 
 VERSION=		3.1.4
@@ -24,7 +24,7 @@ ONLY_FOR_PLATFORM+=	NetBSD-*-i386 NetBSD-*-x86_64
 
 CONFLICTS+=		libxen-[0-9]*
 CONFLICTS+=		xentools20-[0-9]*
-CONFLICTS=		xentools30-*
+CONFLICTS+=		xentools30-* xentools33-*
 
 WRKSRC=			${WRKDIR}/xen-${VERSION}/tools
 CHECK_PORTABILITY_SKIP=	examples/* xm-test/ramdisk/make-release.sh
