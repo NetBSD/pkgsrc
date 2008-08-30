@@ -1,8 +1,8 @@
-$NetBSD: patch-cj,v 1.1 2001/12/20 09:20:03 tron Exp $
+$NetBSD: patch-cj,v 1.2 2008/08/30 20:01:28 dholland Exp $
 
---- lib/libxview/ttysw/tty_init.c.orig	Tue Jun 29 07:17:19 1993
-+++ lib/libxview/ttysw/tty_init.c	Thu Dec 20 10:09:17 2001
-@@ -14,6 +14,7 @@
+--- lib/libxview/ttysw/tty_init.c.orig	1993-06-29 01:17:19.000000000 -0400
++++ lib/libxview/ttysw/tty_init.c	2008-08-30 14:57:05.000000000 -0400
+@@ -14,6 +14,7 @@ static char     sccsid[] = "@(#)tty_init
   * Ttysw initialization, destruction and error procedures
   */
  
@@ -10,7 +10,7 @@ $NetBSD: patch-cj,v 1.1 2001/12/20 09:20:03 tron Exp $
  #include <sys/time.h>
  #include <sys/types.h>
  #include <sys/stat.h>
-@@ -82,7 +83,11 @@
+@@ -82,7 +83,11 @@ static char     sccsid[] = "@(#)tty_init
  
  extern char    *strncpy();
  extern char    *strcpy();
@@ -22,7 +22,7 @@ $NetBSD: patch-cj,v 1.1 2001/12/20 09:20:03 tron Exp $
  char           *textsw_checkpoint_undo();
  
  /* static */ void ttysw_parseargs();
-@@ -106,6 +111,7 @@
+@@ -106,6 +111,7 @@ Xv_private char *xv_font_monospace();
  
  extern int      ttysel_use_seln_service;
  
@@ -30,7 +30,68 @@ $NetBSD: patch-cj,v 1.1 2001/12/20 09:20:03 tron Exp $
  
  struct ttysw_createoptions {
      int             becomeconsole;	/* be the console */
-@@ -518,6 +524,9 @@
+@@ -432,10 +438,8 @@ ttysw_fork_it(ttysw0, argv, wfd)
+     char	    appname[20];
+     char	    *p;
+     unsigned        ttysw_error_sleep = 1;
+-#ifndef SVR4
+-    struct sigvec   vec, ovec;
+-#else
+     struct sigaction	vec, ovec;
++#ifdef SVR4
+     extern char *ptsname();
+ 
+ #define BSD_TTY_COMPAT /* yank this if csh ever gets ported properly */
+@@ -461,27 +465,6 @@ ttysw_fork_it(ttysw0, argv, wfd)
+     }
+ 
+     /* Set up the child characteristics */
+-#ifndef SVR4  	/* SunOS4.x code */
+-    vec.sv_handler = SIG_DFL;
+-    vec.sv_mask = vec.sv_onstack = 0;
+-    sigvec(SIGWINCH, &vec, 0);
+-    /*
+-     * Become session leader, change process group of child 
+-     * process (me at this point in code) so
+-     * its signal stuff doesn't affect the terminal emulator.
+-     */
+-    setsid();
+-    vec.sv_handler = SIG_IGN;
+-    vec.sv_mask = vec.sv_onstack = 0;
+-    sigvec(SIGTTOU, &vec, &ovec);
+-
+-    close(ttysw->ttysw_tty);
+-
+-    /* Make the following file descriptor be my controlling terminal */
+-    ttysw->ttysw_tty = open("/dev/tty", O_RDWR, 0);  /* open master tty* */
+-    sigvec(SIGTTOU, &ovec, 0);
+-
+-#else  		/* SVR4 code */
+     vec.sa_handler = SIG_DFL;
+     sigemptyset(&vec.sa_mask);
+     vec.sa_flags = SA_RESTART;
+@@ -497,13 +480,19 @@ ttysw_fork_it(ttysw0, argv, wfd)
+     vec.sa_flags = SA_RESTART;
+     sigaction(SIGTTOU, &vec, &ovec);
+ 
++#ifndef SVR4  	/* SunOS4.x code */
++    close(ttysw->ttysw_tty);
++
++    /* Make the following file descriptor be my controlling terminal */
++    ttysw->ttysw_tty = open("/dev/tty", O_RDWR, 0);  /* open master tty* */
++#else  		/* SVR4 code */
+     if (unlockpt(ttysw->ttysw_pty) == -1)
+         perror("unlockpt (2)");
+     if ((ttysw->ttysw_tty = open(ptsname(ttysw->ttysw_pty),O_RDWR))<0)
+         return -1;
++#endif /* SVR4 */
+ 
+     sigaction(SIGTTOU, &ovec, (struct sigaction *) 0);
+-#endif /* SVR4 */
+ 
+     /*
+      * Initialize file descriptors. Connections to servers are marked as
+@@ -518,6 +507,9 @@ ttysw_fork_it(ttysw0, argv, wfd)
      (void) dup2(ttysw->ttysw_tty, 2);
      (void) close(ttysw->ttysw_tty);
  
@@ -40,7 +101,7 @@ $NetBSD: patch-cj,v 1.1 2001/12/20 09:20:03 tron Exp $
      if (*argv == (char *) NULL || strcmp("-c", *argv) == 0) {
  	/* Process arg list */
  	int             argc;
-@@ -955,7 +964,11 @@
+@@ -955,7 +947,11 @@ updateutmp(username, ttyslotuse, ttyfd)
      struct utmpx     utmp;
  #endif
      struct passwd  *passwdent;
@@ -52,7 +113,7 @@ $NetBSD: patch-cj,v 1.1 2001/12/20 09:20:03 tron Exp $
      int             f;
      char           *ttyn;
      extern char    *ttyname();
-@@ -1007,13 +1020,22 @@
+@@ -1007,13 +1003,22 @@ updateutmp(username, ttyslotuse, ttyfd)
  		XV_MSG("Add tty[qrs][0-f] to /etc/ttys file.\n"));
  	return (0);
      }

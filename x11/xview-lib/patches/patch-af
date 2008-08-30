@@ -1,7 +1,7 @@
-$NetBSD: patch-af,v 1.3 2001/12/20 09:19:55 tron Exp $
+$NetBSD: patch-af,v 1.4 2008/08/30 20:01:28 dholland Exp $
 
---- lib/libxview/base/base.h.orig	Tue Jun 29 07:14:42 1993
-+++ lib/libxview/base/base.h	Thu Dec 20 10:09:16 2001
+--- lib/libxview/base/base.h.orig	1993-06-29 01:14:42.000000000 -0400
++++ lib/libxview/base/base.h	2008-08-30 14:37:00.000000000 -0400
 @@ -6,10 +6,15 @@
   *	file for terms of the license.
   */
@@ -18,7 +18,7 @@ $NetBSD: patch-af,v 1.3 2001/12/20 09:19:55 tron Exp $
  
  #include <xview/xv_c_types.h>
  
-@@ -54,10 +59,12 @@
+@@ -54,12 +59,14 @@
   * non-SVR4 systems.
   */
  #ifndef SUNOS41
@@ -26,9 +26,12 @@ $NetBSD: patch-af,v 1.3 2001/12/20 09:19:55 tron Exp $
  #define XV_OS_SVR4
 -#define XV_USE_TTCOMPAT
  #define SYSV_WAIT 
- #define SYSV_UCONTEXT 
+-#define SYSV_UCONTEXT 
 +#endif
 +#define XV_USE_TTCOMPAT
  #define XV_USE_XVFCNTL 
  #endif
++#define SYSV_UCONTEXT 
   
+ /*
+  * 	These alloc macros should be functions someday with an error call out
