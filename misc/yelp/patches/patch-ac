@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.2.2.1 2008/08/30 12:10:41 tron Exp $
+
+--- src/yelp-window.c.orig	2008-04-07 20:16:39.000000000 +0200
++++ src/yelp-window.c
+@@ -1152,9 +1152,9 @@ window_error (YelpWindow *window, gchar 
+ 	 GTK_DIALOG_MODAL | GTK_DIALOG_DESTROY_WITH_PARENT,
+ 	 GTK_MESSAGE_ERROR,
+ 	 GTK_BUTTONS_OK,
+-	 title);
++	 "%s", title);
+     gtk_message_dialog_format_secondary_markup
+-	(GTK_MESSAGE_DIALOG (dialog), message);
++	(GTK_MESSAGE_DIALOG (dialog), "%s", message);
+ 	 gtk_dialog_run (GTK_DIALOG (dialog));
+ 
+     gtk_widget_destroy (dialog);
