@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.53 2008/08/30 12:11:23 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.54 2008/08/30 18:46:53 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -123,3 +123,5 @@ Pullup ticket #2507 - requested by drochner
 yelp: security patch
 Pullup ticket #2509 - requested by joerg
 mk/platform/NetBSD.mk: portability fix
+Pullup ticket #2508 - requested by hira
+openoffice2: security patch
