@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1 2008/07/15 19:45:40 christos Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/08/30 20:51:07 dholland Exp $
+include/Xlt/AnimatedButton.h
 include/Xlt/AnimatedButtonP.h
 include/Xlt/AppShell.h
 include/Xlt/AppShellP.h
@@ -32,6 +33,8 @@ include/Xlt/Stroke.h
 include/Xlt/Timer.h
 include/Xlt/Xlt.h
 lib/libXlt.la
+man/man3/StrokeInstall.3
+man/man3/Strokes.3
 man/man3/Xlt.3
 man/man3/XltAnimatedButton.3
 man/man3/XltAppAddTimeOut.3
@@ -73,4 +76,18 @@ man/man3/XltToolBarConfigure.3
 man/man3/XltWaitTillMapped.3
 man/man3/XltWorking.3
 man/man3/XltYesNo.3
+share/doc/html/Xlt/ListTree.gif
+share/doc/html/Xlt/ListTree.html
+share/doc/html/Xlt/ListTreeProg.html
+share/doc/html/Xlt/ListTreeTitle.gif
+share/doc/html/Xlt/LiteClue.html
+share/doc/html/Xlt/SciPlot.html
+share/doc/html/Xlt/SciPlotDemo.gif
+share/doc/html/Xlt/SciPlotDemo.html
+share/doc/html/Xlt/SciPlotExample.gif
+share/doc/html/Xlt/SciPlotProg.html
+share/doc/html/Xlt/SciPlotTitle.gif
+share/doc/html/Xlt/TreeFSel.gif
+share/doc/html/Xlt/new.gif
+@dirrm share/doc/html/Xlt
 @dirrm include/Xlt
