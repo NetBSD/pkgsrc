@@ -1,11 +1,56 @@
-$NetBSD: patch-ad,v 1.6 2001/05/02 21:46:08 dmcmahill Exp $
+$NetBSD: patch-ad,v 1.7 2008/08/30 19:52:50 dholland Exp $
+
+--- ./XView.rules.orig	1993-06-29 01:13:20.000000000 -0400
++++ ./XView.rules	2008-08-30 12:12:24.000000000 -0400
+@@ -69,7 +69,7 @@ name::									@@\
+ 	for i in dirs ;\						@@\
+ 	do \								@@\
+ 		(cd $$i ; echo "making name in $$i"; \			@@\
+-			$(MAKE) PassCDebugFlags $(MFLAGS) name); \	@@\
++		  $(MAKE) PassCDebugFlags $(MFLAGS) name) || exit $?; \	@@\
+ 	done
  
---- ./XView.rules.orig	Tue Jun 29 01:13:20 1993
-+++ ./XView.rules	Tue May  1 22:40:32 2001
-@@ -142,4 +142,21 @@
+ #endif /* MakeAnythingSubdirs */
+@@ -110,7 +110,7 @@ AllTarget(lib/**/libname.so.rev)					@@\
+ lib/**/libname.so.rev::  solist						@@\
+ 	-@if [ ! -d dir ]; then mkdir dir; else exit 0; fi		@@\
+ 	@case '${MFLAGS}' in *[i]*) set +e;; esac; \			@@\
+-	for i in solist; do (set -x; $(CP) sub/$$i dir; $(CP) sub/$$i .); done
++	for i in solist; do (set -x; $(CP) sub/$$i dir; $(CP) sub/$$i .) || exit $?; done
+ 
+ #endif /* SubdirNormalSharedLibraryTarget */
+ 
+@@ -128,7 +128,7 @@ lib/**/libname.sa.rev::  salist						@@\
+ 	-@if [ ! -d dir ]; then mkdir dir; else exit 0; fi		@@\
+ 	@case '${MFLAGS}' in *[i]*) set +e;; esac; \			@@\
+ 	for i in salist; do \						@@\
+-	(set -x; $(CP) sub/$$i dir; $(CP) shared/$$i $(SHARED_DIR)); done
++	(set -x; $(CP) sub/$$i dir; $(CP) shared/$$i $(SHARED_DIR)) || exit $?; done
+ 
+ #endif /* SubdirNormalSharedLibraryDataTarget */
+ 
+@@ -141,6 +141,7 @@ lib/**/libname.sa.rev::  salist						@@\
+  * included in both the .so and the .sa parts of the library.
   */
  #ifndef SubdirBuildNormalSharedLibraryTarget
 +#if UseElfFormat == YES
+ #define SubdirBuildNormalSharedLibraryTarget(libname,rev,solist,sodir)		@@\
+ AllTarget(lib/**/libname.so.rev)					@@\
+ 									@@\
+@@ -148,7 +149,7 @@ lib/**/libname.so.rev:: solist 						@@\
+ 	$(RM) $@~ sodir/lib/**/libname.so.xs.o				@@\
+ 	@if [ -f xstrings ]; then \                                     @@\
+         	$(RM) strings; $(CP) xstrings strings; fi               @@\
+-	(cd sodir; $(LD) -o ../$@~ $(SHLIBLDFLAGS) ?*.o)		@@\
++	(cd sodir; $(CC) -o ../$@~ $(SHLIBLDFLAGS) ?*.o) || exit $?	@@\
+ 	-@if [ -f strings~ ]; then $(RM) strings~; else exit 0; fi	@@\
+ 	$(RM) $@  							@@\
+ 	$(MV) $@~ $@							@@\
+@@ -156,6 +157,23 @@ lib/**/libname.so.rev:: solist 						@@\
+ clean::									@@\
+ 	$(RM) lib/**/libname.so.rev sodir/?*.o strings*
+ 
++#else
 +#define SubdirBuildNormalSharedLibraryTarget(libname,rev,solist,sodir)		@@\
 +AllTarget(lib/**/libname.so.rev)					@@\
 +									@@\
@@ -13,7 +58,7 @@ $NetBSD: patch-ad,v 1.6 2001/05/02 21:46:08 dmcmahill Exp $
 +	$(RM) $@~ sodir/lib/**/libname.so.xs.o				@@\
 +	@if [ -f xstrings ]; then \                                     @@\
 +        	$(RM) strings; $(CP) xstrings strings; fi               @@\
-+	(cd sodir; $(CC) -o ../$@~ $(SHLIBLDFLAGS) ?*.o)		@@\
++	(cd sodir; $(LD) -o ../$@~ $(SHLIBLDFLAGS) ?*.o) || exit $?	@@\
 +	-@if [ -f strings~ ]; then $(RM) strings~; else exit 0; fi	@@\
 +	$(RM) $@  							@@\
 +	$(MV) $@~ $@							@@\
@@ -21,16 +66,30 @@ $NetBSD: patch-ad,v 1.6 2001/05/02 21:46:08 dmcmahill Exp $
 +clean::									@@\
 +	$(RM) lib/**/libname.so.rev sodir/?*.o strings*
 +
-+#else
- #define SubdirBuildNormalSharedLibraryTarget(libname,rev,solist,sodir)		@@\
- AllTarget(lib/**/libname.so.rev)					@@\
-@@ -157,4 +174,5 @@
- 	$(RM) lib/**/libname.so.rev sodir/?*.o strings*
- 
 +#endif
  #endif /* SubdirBuildNormalSharedLibraryTarget */
  
-@@ -246,6 +264,7 @@
+ /*
+@@ -199,7 +217,7 @@ AllTarget(lib/**/libname.sa.rev)					@@\
+ 									@@\
+ lib/**/libname.sa.rev::  						@@\
+ 	$(RM) $@~							@@\
+-	(cd sadir; $(AR) ../$@~ ?*.o)					@@\
++	(cd sadir; $(AR) ../$@~ ?*.o) || exit $?			@@\
+ 	$(RM) $@ 							@@\
+ 	$(MV) $@~ $@							@@\
+ 	$(RANLIB) $@							@@\
+@@ -217,7 +235,7 @@ AllTarget(lib/**/libname.sa.rev)					@@\
+ 									@@\
+ lib/**/libname.sa.rev::  						@@\
+ 	$(RM) $@~							@@\
+-	(cd sadir; $(AR) ../$@~ ?*.o)					@@\
++	(cd sadir; $(AR) ../$@~ ?*.o) || exit $?			@@\
+ 	$(RM) $@ 							@@\
+ 	$(MV) $@~ $@							@@\
+ 									@@\
+@@ -245,8 +263,9 @@ all::									@@\
+ 									@@\
  .c.o:									@@\
  	$(RM) $@ shared/$@						@@\
 -	$(CC) $(PIC) $(SHAREDCODEDEF) $(SHLIBDEF) $(CFLAGS) $(STRCONST) -c $*.c \	@@\
@@ -40,7 +99,9 @@ $NetBSD: patch-ad,v 1.6 2001/05/02 21:46:08 dmcmahill Exp $
 +	$(CP) $*.o shared/$*.o						@@\
  									@@\
  clean::									@@\
-@@ -257,22 +276,24 @@
+ 	$(RM) strings*							@@\
+@@ -256,24 +275,26 @@ clean::									@@\
+ #endif /* SubdirSharedLibraryObjectRule */
  
  /*
 - * SubdirSharedAndDebuggedLibraryObjectRule - generate make rules to build shared,
@@ -72,13 +133,43 @@ $NetBSD: patch-ad,v 1.6 2001/05/02 21:46:08 dmcmahill Exp $
 +	$(CP) $*.o shared/$*.o						@@\
  									@@\
  clean::									@@\
-@@ -367,7 +388,7 @@
+ 	$(RM) strings*                                                  @@\
+@@ -366,9 +387,9 @@ install:: 								@@\
+ #ifndef InstallSharedLibraryNoBuild
  #define	InstallSharedLibraryNoBuild(libname,rev,dest)				@@\
  install::  								@@\
 -        $(RM) /dest/lib/**/libname.so                                   @@\
 +	$(RM) /dest/lib/**/libname.so                                   @@\
  	$(INSTALL) -c $(INSTSHAREDLIBFLAGS) lib/**/libname.so.rev dest	@@\
 -        (cd dest; $(LN) lib/**/libname.so.rev lib/**/libname.so)
-+	(cd dest; $(LN) lib/**/libname.so.rev lib/**/libname.so)
++	(cd dest; $(LN) lib/**/libname.so.rev lib/**/libname.so) || exit $?
  
  #endif /* InstallSharedLibraryNoBuild */
+ 
+@@ -450,7 +471,7 @@ step:: filename								@@\
+ 	-@if [ ! -f dir/linkname ]; then \				@@\
+ 		echo "linking dir/linkname to filename..." \		@@\
+ 		echo "  cd" dir; cd dir ; $(RM) linkname ; \		@@\
+-		(set -x; $(LN) filename linkname); \			@@\
++		(set -x; $(LN) filename linkname) || exit $?; \		@@\
+ 	else \								@@\
+ 		echo "dir/linkname exists, no link made." ; \		@@\
+ 	fi
+@@ -462,7 +483,7 @@ step:: filename								@@\
+ #ifndef StartNamedTarget
+ #define StartNamedTarget(step,dir,flags)				@@\
+ step:: 									@@\
+-	(cd dir ; $(MAKE) $(MFLAGS) flags step );
++	(cd dir ; $(MAKE) $(MFLAGS) flags step ) || exit $?;
+ #endif /* StartNamedTarget */
+ 
+ /*
+@@ -477,7 +498,7 @@ install::								@@\
+ 		echo "installing $$i"; \				@@\
+ 		$(RM) dest/$$i dest/.$$i; \				@@\
+ 		$(INSTALL) -c $(INSTDATFLAGS) $$i dest ; \ 		@@\
+-		( cd dest; $(MV) $$i .$$i; $(LN) .$$i $$i ); \		@@\
++		( cd dest; $(MV) $$i .$$i; $(LN) .$$i $$i ) || exit $?; \ @@\
+ 	done
+ #endif /* InstallSupportList */
+ 
