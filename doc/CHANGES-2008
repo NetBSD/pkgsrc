@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2020 2008/08/30 11:12:59 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2021 2008/08/30 12:18:56 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3490,3 +3490,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated time/sunclock to 1.5nb2 [dholland 2008-08-30]
 	Updated lang/python25 to 2.5.2nb3 [tron 2008-08-30]
 	Updated graphics/gimp to 2.4.7 [adam 2008-08-30]
+	Updated net/samba to 3.0.32 [tron 2008-08-30]
