@@ -1,0 +1,13 @@
+$NetBSD: patch-em,v 1.1 2008/08/30 20:01:28 dholland Exp $
+
+--- lib/libxview/notify/notify.h~	1993-06-29 01:18:15.000000000 -0400
++++ lib/libxview/notify/notify.h	2008-08-30 13:56:48.000000000 -0400
+@@ -273,7 +273,7 @@ EXTERN_FUNCTION (Notify_func	notify_get_
+ EXTERN_FUNCTION (Notify_func 	notify_get_output_func, (Notify_client nclient, int fd));
+ EXTERN_FUNCTION (Notify_func 	notify_get_prioritizer_func, (Notify_client nclient));
+ EXTERN_FUNCTION (Notify_func 	notify_get_scheduler_func, (void));
+-EXTERN_FUNCTION (int 		notify_get_signal_code, (void));
++EXTERN_FUNCTION (siginfo_t *	notify_get_signal_code, (void));
+ 
+ #ifndef SYSV_UCONTEXT
+ EXTERN_FUNCTION (struct sigcontext *notify_get_signal_context, (void));
