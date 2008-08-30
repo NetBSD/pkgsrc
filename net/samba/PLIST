@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.40 2008/06/28 22:51:21 tron Exp $
+@comment $NetBSD: PLIST,v 1.41 2008/08/30 12:18:38 tron Exp $
 bin/eventlogadm
 bin/findsmb
 bin/net
@@ -282,7 +282,7 @@ share/samba/swat/help/Samba3-HOWTO/apa.html
 share/samba/swat/help/Samba3-HOWTO/bugreport.html
 share/samba/swat/help/Samba3-HOWTO/cfgsmarts.html
 share/samba/swat/help/Samba3-HOWTO/ch-ldap-tls.html
-share/samba/swat/help/Samba3-HOWTO/ch46.html
+share/samba/swat/help/Samba3-HOWTO/ch47.html
 share/samba/swat/help/Samba3-HOWTO/classicalprinting.html
 share/samba/swat/help/Samba3-HOWTO/compiling.html
 share/samba/swat/help/Samba3-HOWTO/diagnosis.html
@@ -403,7 +403,6 @@ share/samba/swat/help/manpages/smbmnt.8.html
 share/samba/swat/help/manpages/smbmount.8.html
 share/samba/swat/help/manpages/smbpasswd.5.html
 share/samba/swat/help/manpages/smbpasswd.8.html
-share/samba/swat/help/manpages/smbsh.1.html
 share/samba/swat/help/manpages/smbspool.8.html
 share/samba/swat/help/manpages/smbstatus.1.html
 share/samba/swat/help/manpages/smbtar.1.html
