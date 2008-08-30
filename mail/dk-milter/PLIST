@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/07/20 19:42:50 tv Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/08/30 05:42:40 erh Exp $
 man/man8/dk-milter.8
 sbin/dk-milter
+sbin/gentxt.csh
 share/doc/dk-milter/FEATURES
 share/doc/dk-milter/INSTALL
 share/doc/dk-milter/KNOWNBUGS
