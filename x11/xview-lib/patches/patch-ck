@@ -1,8 +1,8 @@
-$NetBSD: patch-ck,v 1.1 2001/12/20 09:20:03 tron Exp $
+$NetBSD: patch-ck,v 1.2 2008/08/30 20:01:28 dholland Exp $
 
---- lib/libxview/ttysw/tty_main.c.orig	Tue Jun 29 07:17:22 1993
-+++ lib/libxview/ttysw/tty_main.c	Thu Dec 20 10:09:17 2001
-@@ -75,6 +75,11 @@
+--- lib/libxview/ttysw/tty_main.c.orig	1993-06-29 01:17:22.000000000 -0400
++++ lib/libxview/ttysw/tty_main.c	2008-08-30 15:06:22.000000000 -0400
+@@ -75,6 +75,11 @@ static char     sccsid[] = "@(#)tty_main
  int     committed_left = 0;
  #endif
  
@@ -14,7 +14,7 @@ $NetBSD: patch-ck,v 1.1 2001/12/20 09:20:03 tron Exp $
  extern Textsw_index textsw_insert();
  #ifdef OW_I18N
  extern Textsw_index textsw_insert_wcs();
-@@ -906,8 +911,12 @@
+@@ -906,8 +911,12 @@ ttysw_pty_input(ttysw, pty)
  
  	    if (int_ucntl == (tiocsti & 0xff))
  		ttysw_process_STI(ttysw, owbp, cc - 1);
@@ -27,3 +27,73 @@ $NetBSD: patch-ck,v 1.1 2001/12/20 09:20:03 tron Exp $
  	    ttysw_getp(TTY_VIEW_HANDLE_FROM_TTY_FOLIO(ttysw));	/* jcb for nng */
  	} else
  #ifdef OW_I18N
+@@ -1491,11 +1500,12 @@ xv_tty_new_size(ttysw, cols, lines)
+ 
+     struct ttysize  ts;
+ #ifndef SVR4
+-    struct sigvec vec, ovec;
++    struct sigaction vec, ovec;
+  
++    (void) sigaction(SIGTTOU, NULL, &ovec);
++    vec = ovec;
++    vec.sa_handler = SIG_IGN;
+-    vec.sv_handler = SIG_IGN;
+-    vec.sv_mask = vec.sv_onstack = 0;
+-    (void) sigvec(SIGTTOU, &vec, &ovec);
++    (void) sigaction(SIGTTOU, &vec, NULL);
+ #endif
+  
+     ts.ts_lines = lines;
+@@ -1504,7 +1514,7 @@ xv_tty_new_size(ttysw, cols, lines)
+ 	perror(XV_MSG("ttysw-TIOCSSIZE"));
+ 
+ #ifndef SVR4
+-    (void) sigvec(SIGTTOU, &ovec, 0);
++    (void) sigaction(SIGTTOU, &ovec, NULL);
+ #endif
+ #else /* sun */
+     /*
+@@ -1512,11 +1522,12 @@ xv_tty_new_size(ttysw, cols, lines)
+      */
+     struct winsize  ws;
+ #ifndef SVR4
+-    struct sigvec vec, ovec;
++    struct sigaction vec, ovec;
+ 
++    (void) sigaction(SIGTTOU, NULL, &ovec);
++    vec = ovec;
++    vec.sa_handler = SIG_IGN;
+-    vec.sv_handler = SIG_IGN;
+-    vec.sv_mask = vec.sv_onstack = 0;
+-    (void) sigvec(SIGTTOU, &vec, &ovec);
++    (void) sigaction(SIGTTOU, &vec, NULL);
+ #endif
+ 
+     ws.ws_row = lines;
+@@ -1525,7 +1536,7 @@ xv_tty_new_size(ttysw, cols, lines)
+ 	perror(XV_MSG("ttysw-TIOCSWINSZ"));
+ 
+ #ifndef SVR4
+-    (void) sigvec(SIGTTOU, &ovec, 0);
++    (void) sigaction(SIGTTOU, &ovec, NULL);
+ #endif
+ #endif /* sun */
+ }
+@@ -1624,7 +1635,7 @@ Pkg_private void
+ ttysw_flush_input(ttysw)
+     Ttysw_folio     ttysw;
+ {
+-#ifndef SVR4
++#if 0 /*ndef SVR4*/
+     struct sigvec   vec, ovec;	/* Sys V compatibility */
+     int flushf = 0;
+ 
+@@ -1655,7 +1666,7 @@ ttysw_flush_input(ttysw)
+ #   endif /* XV_USE_TERMIOS */
+ 	perror(XV_MSG("TIOCFLUSH"));
+ 
+-#ifndef SVR4
++#if 0 /*ndef SVR4*/
+     (void) sigvec(SIGTTOU, &ovec, (struct sigvec *) 0);
+ #else
+     sigaction(SIGTTOU, &ovec, (struct sigaction *) 0);
