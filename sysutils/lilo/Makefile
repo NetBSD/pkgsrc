@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.3 2008/03/14 16:16:12 reed Exp $
+# $NetBSD: Makefile,v 1.4 2008/08/30 08:10:29 dholland Exp $
 
 DISTNAME=		lilo-22.8.src
+PKGREVISION=		1
 PKGNAME=		${DISTNAME:S/.src//}
 CATEGORIES=		sysutils
 MASTER_SITES=		${MASTER_SITE_SUNSITE:=system/boot/lilo/} \
@@ -25,7 +26,7 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 BUILD_DEPENDS+=		bin86>=0.16.10:../../devel/bin86
 BUILD_DEPENDS+=		nasm>=0.98:../../devel/nasm
 
-USE_TOOLS+=		gmake
+USE_TOOLS+=		gmake perl:run
 MAKE_ENV+=		ROOT=${PREFIX:Q}
 
 CONF_FILES=		${PREFIX}/share/lilo/lilo.conf.example	${PKG_SYSCONFDIR}/lilo.conf
