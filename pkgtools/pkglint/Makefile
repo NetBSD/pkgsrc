@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.375 2008/07/25 14:15:44 dillo Exp $
+# $NetBSD: Makefile,v 1.376 2008/08/30 06:54:10 rillig Exp $
 #
 
 # Please don't increase the version number if you are not rillig.
@@ -36,7 +36,7 @@ SUBST_SED.pkglint+=	-e s\|@PKGSRCDIR@\|/usr/pkgsrc\|g
 SUBST_SED.pkglint+=	-e s\|@PKGSRCDIR@\|${PKGSRCDIR}\|g
 .endif
 SUBST_SED.pkglint+=	-e s\|@PREFIX@\|${PREFIX}\|g
-SUBST_SED.pkglint+=	-e s\|@DISTVER@\|${DISTNAME:S/pkglint-//:Q}\|g
+SUBST_SED.pkglint+=	-e s\|@DISTVER@\|${DISTNAME:S/pkglint-//}\|g
 SUBST_SED.pkglint+=	-e s\|@MAKE@\|${MAKE:Q}\|g
 SUBST_SED.pkglint+=	-e s\|@PERL@\|${PERL5:Q}\|g
 SUBST_SED.pkglint+=	-e s\|@DATADIR@\|${PREFIX}/share/pkglint\|g
@@ -64,6 +64,6 @@ do-install:
 	${INSTALL_DATA} ${FILESDIR}/deprecated.map ${DESTDIR}${PREFIX}/share/pkglint/
 
 selftest: .PHONY
-	${LOCALBASE}/bin/pkglint
+	${PREFIX}/bin/pkglint
 
 .include "../../mk/bsd.pkg.mk"
