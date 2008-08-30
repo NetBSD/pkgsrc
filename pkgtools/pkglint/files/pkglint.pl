@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.771 2008/08/28 20:38:39 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.772 2008/08/30 06:50:37 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5858,7 +5858,7 @@ sub checkline_mk_varassign($$$$$) {
 	# If the variable is not used and is untyped, it may be a
 	# spelling mistake.
 	if ($op eq ":=" && $varname eq lc($varname)) {
-		$opt_warn_unchecked and $line->log_warning("${varname} might be unused unless it is an argument to a procedure file.");
+		$opt_debug_unchecked and $line->log_debug("${varname} might be unused unless it is an argument to a procedure file.");
 		# TODO: check $varname against the list of "procedure files".
 
 	} elsif (!var_is_used($varname)) {
