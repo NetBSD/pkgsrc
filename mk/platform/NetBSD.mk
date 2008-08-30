@@ -1,4 +1,4 @@
-# $NetBSD: NetBSD.mk,v 1.30 2008/04/03 14:07:51 joerg Exp $
+# $NetBSD: NetBSD.mk,v 1.30.6.1 2008/08/30 10:40:00 tron Exp $
 #
 # Variable definitions for the NetBSD operating system.
 
@@ -87,7 +87,7 @@ _OPSYS_PERL_REQD=		# no base version of perl required
 _OPSYS_PTHREAD_AUTO=	no	# -lpthread needed for pthreads
 _OPSYS_SHLIB_TYPE=	ELF/a.out	# shared lib type
 _PATCH_CAN_BACKUP=	yes	# native patch(1) can make backups
-_PATCH_BACKUP_ARG?=	-V simple -b 	# switch to patch(1) for backup suffix
+_PATCH_BACKUP_ARG?=	-V simple --suffix # switch to patch(1) for backup suffix
 _USE_RPATH=		yes	# add rpath to LDFLAGS
 
 # flags passed to the linker to extract all symbols from static archives.
