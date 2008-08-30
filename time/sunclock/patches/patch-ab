@@ -1,0 +1,38 @@
+$NetBSD: patch-ab,v 1.1 2008/08/30 08:25:27 dholland Exp $
+
+--- sunclock.c~	1999-04-07 10:00:49.000000000 -0400
++++ sunclock.c	2008-08-30 04:24:42.000000000 -0400
+@@ -102,13 +102,13 @@ struct sunclock {
+ 	short *		s_wtab1;	/* current width table (?) */
+ 	short *		s_wtab;		/* previous width table (?) */
+ 	long		s_increm;	/* increment for fake time */
+-	long		s_time;		/* time - real or fake, see flags */
++	time_t		s_time;		/* time - real or fake, see flags */
+ 	GC		s_gc;		/* GC for writing text into window */
+ 	char *		(*s_tfunc)();	/* function to return the text */
+ 	char		s_text[80];	/* and the current text that's there */
+ 	int		s_textx;	/* where to draw the text */
+ 	int		s_texty;	/* where to draw the text */
+-	long		s_projtime;	/* last time we projected illumination */
++	time_t		s_projtime;	/* last time we projected illumination */
+ 	int		s_timeout;	/* time until next image update */
+ 	int		s_win_offset;	/* offset for drawing into window */
+ 	struct sunclock * s_next;	/* pointer to next clock context */
+@@ -720,7 +720,7 @@ void
+ setTimeout(s)
+ register struct sunclock *	s;
+ {
+-	long			t;
++	time_t			t;
+ 
+ 	if (s->s_flags & S_ICON) {
+ 		if(!AnimateIcon) {
+@@ -1297,7 +1297,7 @@ SetIconName()
+    */
+ 
+     char name[128];/* Used to change icon name */
+-    long c;	/* Current time on the clock */
++    time_t c;	/* Current time on the clock */
+     struct tm *lt; /* Used to get timezone name */
+ 
+     /* Change the timezone displayed in the icon */ 
