@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.16 2007/10/09 19:19:16 martti Exp $
+# $NetBSD: Makefile,v 1.17 2008/08/30 20:04:53 dholland Exp $
 #
 
 DISTNAME=	olvwm4.src4
 PKGNAME=	olvwm-4.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	x11 wm
 MASTER_SITES=	http://home.nyc.rr.com/twopks/olvwm/
 
