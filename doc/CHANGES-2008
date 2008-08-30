@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2014 2008/08/29 21:11:20 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2015 2008/08/30 08:07:40 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3484,3 +3484,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xdialog to 2.3.1 [sborrill 2008-08-29]
 	Added databases/p5-DBIx-Class-Fixtures version 1.001001 [seb 2008-08-29]
 	Updated devel/mercurial to 1.0.2 [bjs 2008-08-29]
+	Updated lang/parrot to 0.4.11nb1 [dholland 2008-08-30]
