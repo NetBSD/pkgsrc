@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7498 2008/08/31 12:40:03 markd Exp $
+$NetBSD: TODO,v 1.7499 2008/08/31 13:21:56 obache Exp $
 
 Suggested new packages
 ======================
@@ -1003,7 +1003,6 @@ Suggested package updates
 	o pcal-4.8
 	o pciutils-2.2.9
 	o pcmanfm-0.5
-	o pcre-ocaml-5.15.0 [pkg/39348]
 	o pdmenu-1.2.87
 	o pear-1.6.2
 	o pear-DB-1.7.10
