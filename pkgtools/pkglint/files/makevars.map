@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.183 2008/05/25 20:36:12 joerg Exp $
+# $NetBSD: makevars.map,v 1.184 2008/08/31 21:03:16 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -678,6 +678,7 @@ UNWRAP_FILES		List of Pathmask [$package_list]
 UPDATE_TARGET		List of Identifier [$user]
 USE_BSD_MAKEFILE	Yes [$package]
 USE_BUILTIN.*		YesNo_Indirectly [builtin.mk:s]
+USE_CMAKE		Yes [$package]
 USE_CROSSBASE		Yes [m:s]
 USE_DIRS		List of {					\
 				gnome1-1.0 gnome1-1.5			\
