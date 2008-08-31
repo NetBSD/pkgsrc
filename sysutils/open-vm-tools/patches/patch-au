@@ -1,13 +1,37 @@
-$NetBSD: patch-au,v 1.1.1.1 2007/10/17 21:35:53 agc Exp $
+$NetBSD: patch-au,v 1.2 2008/08/31 06:36:48 scottr Exp $
 
---- guestd/foreignVMToolsDaemon.c	2007/09/29 13:01:02	1.1
-+++ guestd/foreignVMToolsDaemon.c	2007/09/29 13:01:37
-@@ -56,7 +56,7 @@
- #include <netinet/tcp.h>
- #include <arpa/inet.h>
- #include <fcntl.h>
--#if defined(__FreeBSD__) || defined(sun)
-+#if defined(__FreeBSD__) || defined(sun) || defined(__NetBSD__)
+--- lib/include/su.h.orig	2008-08-08 02:01:52.000000000 -0500
++++ lib/include/su.h
+@@ -51,7 +51,7 @@ Bool Id_AuthSet(void const *buf, size_t 
+ Bool Id_AuthCheck(char const *right,
+                   char const *localizedDescription);
+ 
+-#elif (defined(__linux__) || defined(sun) || defined(__FreeBSD__)) && !defined(N_PLAT_NLM)
++#elif (defined(__linux__) || defined(sun) || defined(__FreeBSD__) || defined(__NetBSD__)) && !defined(N_PLAT_NLM)
+ 
+ #include <sys/types.h>
  #include <unistd.h>
- #else
- #include <linux/unistd.h>
+@@ -87,7 +87,11 @@ int Id_SetRESGid(gid_t rgid, gid_t egid,
+ static INLINE int
+ Id_SetEUid(uid_t euid)
+ {
++#if defined(__NetBSD__)
++   return seteuid(euid);
++#else
+    return Id_SetRESUid((uid_t)-1, euid, (uid_t)-1);
++#endif
+ }
+ 
+ 
+@@ -111,7 +115,11 @@ Id_SetEUid(uid_t euid)
+ static INLINE int
+ Id_SetEGid(gid_t egid)
+ {
++#if defined(__NetBSD__)
++   return setegid(egid);
++#else
+    return Id_SetRESGid((gid_t)-1, egid, (gid_t)-1);
++#endif
+ }
+ 
+ #define IsSuperUser()	(0 == geteuid())

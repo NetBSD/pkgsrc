@@ -1,0 +1,13 @@
+$NetBSD: patch-bi,v 1.1 2008/08/31 06:36:48 scottr Exp $
+
+--- lib/unicode/unicodeSimpleTypes.c.orig	2008-08-08 02:01:55.000000000 -0500
++++ lib/unicode/unicodeSimpleTypes.c
+@@ -2198,7 +2198,7 @@ UnicodeNormalizeEncodingName(const char 
+ 
+    for (currentResult = result; *encodingName != '\0'; encodingName++) {
+       if (isalnum((int) *encodingName)) {
+-         *currentResult = tolower(*encodingName);
++         *currentResult = tolower((int)(*encodingName));
+          currentResult++;
+       }
+    }

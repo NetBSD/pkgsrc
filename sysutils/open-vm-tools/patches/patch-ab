@@ -1,13 +1,45 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/10/17 21:35:53 agc Exp $
+$NetBSD: patch-ab,v 1.2 2008/08/31 06:36:47 scottr Exp $
 
---- lib/include/vm_product.h	2007/09/28 18:47:13	1.1
-+++ lib/include/vm_product.h	2007/09/28 18:47:55
-@@ -416,6 +416,8 @@
- #  define PRODUCT_NAME_PLATFORM         PRODUCT_NAME " for Windows"
- #elif defined(__FreeBSD__)
- #  define PRODUCT_NAME_PLATFORM         PRODUCT_NAME " for FreeBSD"
-+#elif defined(__NetBSD__)
-+#  define PRODUCT_NAME_PLATFORM         PRODUCT_NAME " for NetBSD"
- #elif defined(sun)
- #  define PRODUCT_NAME_PLATFORM         PRODUCT_NAME " for Solaris"
- #else
+--- guestd/Makefile.in.orig	2008-08-08 02:02:07.000000000 -0500
++++ guestd/Makefile.in
+@@ -144,6 +144,7 @@ ECHO = @ECHO@
+ ECHO_C = @ECHO_C@
+ ECHO_N = @ECHO_N@
+ ECHO_T = @ECHO_T@
++EGDIR = @datarootdir@/examples
+ EGREP = @EGREP@
+ EXEEXT = @EXEEXT@
+ F77 = @F77@
+@@ -559,7 +560,7 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-pamSCRIPTS
++install-data-am:
+ 
+ install-dvi: install-dvi-am
+ 
+@@ -597,7 +598,7 @@ ps: ps-am
+ 
+ ps-am:
+ 
+-uninstall-am: uninstall-pamSCRIPTS uninstall-sbinPROGRAMS
++uninstall-am: uninstall-sbinPROGRAMS
+ 	@$(NORMAL_INSTALL)
+ 	$(MAKE) $(AM_MAKEFLAGS) uninstall-hook
+ 
+@@ -620,11 +621,11 @@ uninstall-am: uninstall-pamSCRIPTS unins
+ 
+ 
+ install-exec-hook:
+-	$(INSTALL) -d $(DESTDIR)/etc/vmware-tools
+-	echo 'disable-tools-version = "true"' > $(DESTDIR)/etc/vmware-tools/tools.conf
++	$(MKDIR_P) $(DESTDIR)${EGDIR}/vmware-tools
++	echo 'disable-tools-version = "true"' > $(DESTDIR)${EGDIR}/vmware-tools/tools.conf
+ 
+ uninstall-hook:
+-	$(RM) -rf $(DESTDIR)/etc/vmware-tools
++	$(RM) -rf $(DESTDIR)${EGDIR}/vmware-tools
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
