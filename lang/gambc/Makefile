@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/07/16 07:14:36 bjs Exp $
+# $NetBSD: Makefile,v 1.7 2008/08/31 09:17:56 obache Exp $
 #
 
 DISTNAME=	gambc-${GAMBC_DIST_VERSION}
@@ -13,6 +13,9 @@ COMMENT=	GambitC Scheme System
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 NOT_FOR_BULK_PLATFORM+=	SunOS-*-*
+
+# bin/scheme-r5rs
+CONFLICTS+=	scheme48>=1.2
 
 GNU_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
