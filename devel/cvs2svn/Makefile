@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2008/08/24 17:02:24 tonnerre Exp $
+# $NetBSD: Makefile,v 1.22 2008/08/31 06:50:47 dsainty Exp $
 
 DISTNAME=	cvs2svn-2.1.1
 CATEGORIES=	devel scm
-MASTER_SITES=	http://cvs2svn.tigris.org/files/documents/1462/39919/
+MASTER_SITES=	http://cvs2svn.tigris.org/files/documents/1462/42521/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://cvs2svn.tigris.org/
