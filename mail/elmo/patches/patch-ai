@@ -1,0 +1,107 @@
+$NetBSD: patch-ai,v 1.1 2008/08/31 20:09:12 dholland Exp $
+
+--- src/bayes.c~	2004-04-29 04:06:13.000000000 -0400
++++ src/bayes.c	2008-08-31 15:56:54.000000000 -0400
+@@ -32,6 +32,7 @@
+  *    IMPLEMENTATION HEADERS
+  ****************************************************************************/
+ 
++#include <stdint.h>
+ #include <string.h>
+ #include <stdio.h>
+ #include <errno.h>
+@@ -222,7 +223,7 @@ static void
+ print_list_txt (FILE *fp, entry_t *l)
+ {
+         while (l){
+-                fprintf (fp, "%d %s %d ", strlen (l->key), l->key, (int)l->content);
++                fprintf (fp, "%zu %s %ld ", strlen (l->key), l->key, (long)l->content);
+                 l = l->next;
+         }
+ }
+@@ -300,7 +301,7 @@ load_table (FILE *fp, htable_t **table)
+                 fread (&key_len, 1, sizeof (key_len), fp);
+                 fread (key, 1, key_len + 1, fp);
+                 fread (&content, 1, sizeof (content), fp);
+-                htable_insert (*table, key, (void *) content);
++                htable_insert (*table, key, (void *)(intptr_t) content);
+         }
+         xfree (key);
+ }
+@@ -340,7 +341,7 @@ heap_value (int i)
+         if (word_heap[i] == NULL)
+                 return PROB_NEUTRAL;
+ 
+-        return (int) word_heap[i]->content;
++        return (int)(intptr_t) word_heap[i]->content;
+ }
+ 
+ 
+@@ -374,10 +375,10 @@ heap_internal_value (int i)
+         if (word_heap[i] == NULL)
+                 return 0;
+ 
+-        if (((int) word_heap[i]->content) > PROB_HALF)
+-                return ((int) word_heap[i]->content) - PROB_HALF;
++        if (((int)(intptr_t) word_heap[i]->content) > PROB_HALF)
++                return ((int)(intptr_t) word_heap[i]->content) - PROB_HALF;
+         else
+-                return PROB_HALF - (int) word_heap[i]->content;
++                return PROB_HALF - (int)(intptr_t) word_heap[i]->content;
+ }
+ 
+ 
+@@ -541,9 +542,9 @@ collect_insert_bad (char *word)
+         entry_t *entry;
+ 
+         entry = htable_insert (bad_table, word, (void *) 0);
+-        entry->content = (void *) ((int) entry->content + collect_change);
++        entry->content = (void *) ((intptr_t) entry->content + collect_change);
+ 
+-        if ((int) entry->content < 0)
++        if ((intptr_t) entry->content < 0)
+                 entry->content = (void *) 0;
+ }
+ 
+@@ -555,9 +556,9 @@ collect_insert_good (char *word)
+         entry_t *entry;
+   
+         entry = htable_insert (good_table, word, (void *) 0);
+-        entry->content = (void *) ((int) entry->content + collect_change);
++        entry->content = (void *) ((intptr_t) entry->content + collect_change);
+ 
+-        if ((int) entry->content < 0)
++        if ((intptr_t) entry->content < 0)
+                 entry->content = (void *) 0;
+ }
+ 
+@@ -609,9 +610,9 @@ prob_word (char *word)
+         int      result;
+ 
+         if (good_e)
+-                good_occur = 2 * (int) good_e->content;
++                good_occur = 2 * (int)(intptr_t) good_e->content;
+         if (bad_e)
+-                bad_occur = (int) bad_e->content;
++                bad_occur = (int)(intptr_t) bad_e->content;
+ 
+         if (bad_occur + good_occur < PROB_MIN_OCCUR)
+                 return PROB_NEUTRAL;
+@@ -652,7 +653,7 @@ prob_heap (void)
+         for (i = 1; i < HEAP_SIZE; i++){
+                 if (word_heap[i])
+                         debug_msg (DEBUG_INFO, "    %s: %d", word_heap[i]->key,
+-                                   (int) word_heap[i]->content);
++                                   (int)(intptr_t) word_heap[i]->content);
+                 prod     *= (heap_value (i) / (float) PROB_CERTAIN);
+                 opp_prod *= 1.0 - (heap_value (i) / (float) PROB_CERTAIN);
+         }
+@@ -669,7 +670,7 @@ prob_insert_word (entry_t *entry)
+ {
+         int value = prob_word (entry->key);
+ 
+-        htable_insert (prob_table, entry->key, (void *) value);
++        htable_insert (prob_table, entry->key, (void *)(intptr_t) value);
+ }
+ 
+ 

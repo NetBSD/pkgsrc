@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2008/08/31 20:09:12 dholland Exp $
+
+--- src/mbox.c~	2004-02-22 16:58:59.000000000 -0500
++++ src/mbox.c	2008-08-31 15:28:12.000000000 -0400
+@@ -248,7 +248,7 @@ mbox_box_mail_count (const char *box, in
+ {
+         FILE       *fp;
+         int         ret;
+-        int         size;
++        size_t      size;
+         int         count;
+         char       *body;
+         char       *seek;

@@ -1,0 +1,53 @@
+$NetBSD: patch-ad,v 1.1 2008/08/31 20:09:12 dholland Exp $
+
+--- src/mail.c.orig	2004-04-19 16:48:58.000000000 -0400
++++ src/mail.c	2008-08-31 15:41:26.000000000 -0400
+@@ -28,6 +28,7 @@
+  *    IMPLEMENTATION HEADERS
+  ****************************************************************************/
+ 
++#include <stdint.h>
+ #include <string.h>
+ #include <errno.h>
+ 
+@@ -101,8 +102,9 @@ find_parent (mail_array_t *marray, htabl
+         }
+ 
+         if (entry){
+-                parent       = mail_array_get (marray, (int) entry->content);
+-                mail->parent = (int) entry->content;
++		int index = (int)(intptr_t) entry->content;
++                parent       = mail_array_get (marray, index);
++                mail->parent = index;
+                 parent->child_count++;
+         }
+         else {
+@@ -124,8 +126,8 @@ put_msgid_into_hash (mail_array_t *marra
+         if (! mail->msg_id)
+                 return;
+ 
+-        entry = htable_insert (table, mail->msg_id, (void *) index);
+-        if (entry->content != (void *) index)
++        entry = htable_insert (table, mail->msg_id, (void *)(intptr_t) index);
++        if (entry->content != (void *)(intptr_t) index)
+                 mail->flags |= FLAG_DUPLICATE;
+ }
+ 
+@@ -878,7 +880,7 @@ prepare_nodes_array (mail_array_t *marra
+         for (i = 0; i < marray->count; i++){
+                 mail                 = mail_array_get (marray, i);
+                 nodes_array[i]       = multree_create (mail->child_count);
+-                nodes_array[i]->data = (void *) i;
++                nodes_array[i]->data = (void *)(intptr_t) i;
+         }
+ }
+ 
+@@ -886,7 +888,7 @@ prepare_nodes_array (mail_array_t *marra
+ static void
+ insert_mail (multree_t *node)
+ {
+-        mail_t    *mail = mail_array_get (sorted_array, (int) node->data);
++        mail_t    *mail = mail_array_get (sorted_array, (int)(intptr_t) node->data);
+         multree_t *parent_node;
+   
+         if (node == root)
