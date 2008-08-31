@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2008/01/18 05:09:45 tnn Exp $
+# $NetBSD: Makefile,v 1.6 2008/08/31 06:36:47 scottr Exp $
 
-DISTNAME=	open-vm-tools-2007.09.04-56574
-PKGNAME=	open-vm-tools-2007.09.04.56574
-PKGREVISION=	1
+DISTNAME=	open-vm-tools-2008.08.08-109361
+PKGNAME=	open-vm-tools-2008.08.08.109361
 CATEGORIES=	sysutils
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=open-vm-tools/}
 
@@ -16,16 +15,34 @@ GNU_CONFIGURE=	yes
 USE_LANGUAGES+=	c c++
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config
+USE_DIRS+=	xdg-1.4
 
-post-install:
-	${INSTALL_PROGRAM_DIR} ${PREFIX}/sbin
-	${INSTALL_PROGRAM} ${WRKSRC}/guestd/guestd ${PREFIX}/sbin/vmware-guestd
+PLIST_SRC=	PLIST.common
 
+CONFIGURE_ARGS+=		--disable-unity
+
+INSTALLATION_DIRS+=		${PKG_SYSCONFDIR} share/examples/vmware-tools
+
+PKG_SYSCONFSUBDIR=		vmware-tools
+EGDIR=				${PREFIX}/share/examples/vmware-tools
+CONF_FILES_PERMS+=		${EGDIR}/poweroff-vm-default ${PKG_SYSCONFDIR}/poweroff-vm-default ${ROOT_USER} ${ROOT_GROUP} 755
+CONF_FILES_PERMS+=		${EGDIR}/poweron-vm-default ${PKG_SYSCONFDIR}/poweron-vm-default ${ROOT_USER} ${ROOT_GROUP} 755
+CONF_FILES_PERMS+=		${EGDIR}/resume-vm-default ${PKG_SYSCONFDIR}/resume-vm-default ${ROOT_USER} ${ROOT_GROUP} 755
+CONF_FILES_PERMS+=		${EGDIR}/suspend-vm-default ${PKG_SYSCONFDIR}/suspend-vm-default ${ROOT_USER} ${ROOT_GROUP} 755
+CONF_FILES_PERMS+=		${EGDIR}/tools.conf ${PKG_SYSCONFDIR}/tools.conf ${ROOT_USER} ${ROOT_GROUP} 755
+RCD_SCRIPTS=			vmtools
+
+SUBST_CLASSES+=			fix-paths
+SUBST_STAGE.fix-paths=		pre-configure
+SUBST_MESSAGE.fix-paths=	Fixing absolute paths.
+SUBST_FILES.fix-paths=		scripts/Makefile.in
+SUBST_SED.fix-paths=		-e 's|/etc/vmware-tools|${EGDIR}|g'
+SUBST_SED.fix-paths+=		-e '/^conf_SCRIPTS/s|./common/vm-support ||'
+
+.include "../../net/libdnet/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
-.include "../../x11/libXinerama/buildlink3.mk"
-.include "../../x11/libXrandr/buildlink3.mk"
-.include "../../x11/libXrender/buildlink3.mk"
-.include "../../x11/libXtst/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
+
+.include "options.mk"
 
 .include "../../mk/bsd.pkg.mk"

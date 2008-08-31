@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2008/08/31 06:36:47 scottr Exp $
+$NetBSD: patch-bv,v 1.1 2008/08/31 06:36:49 scottr Exp $
 
---- guestd/foreignVMToolsDaemon.c.orig	2008-08-08 02:01:56.000000000 -0500
-+++ guestd/foreignVMToolsDaemon.c
+--- vmware-user/foreignVMToolsDaemon.c.orig	2008-08-08 02:01:56.000000000 -0500
++++ vmware-user/foreignVMToolsDaemon.c
 @@ -55,7 +55,7 @@
  #include <netinet/tcp.h>
  #include <arpa/inet.h>

@@ -1,7 +1,7 @@
-$NetBSD: patch-ad,v 1.2 2008/08/31 06:36:47 scottr Exp $
+$NetBSD: patch-bw,v 1.1 2008/08/31 06:36:49 scottr Exp $
 
---- guestd/foreignVMToolsDaemon.h.orig	2008-08-08 02:01:56.000000000 -0500
-+++ guestd/foreignVMToolsDaemon.h
+--- vmware-user/foreignVMToolsDaemon.h.orig	2008-08-08 02:01:56.000000000 -0500
++++ vmware-user/foreignVMToolsDaemon.h
 @@ -59,7 +59,7 @@ VixError VIX_INIT_LOCK(VixLockType *lock
  
  #ifdef __APPLE__

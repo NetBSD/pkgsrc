@@ -1,0 +1,13 @@
+@comment $NetBSD: PLIST.common,v 1.1 2008/08/31 06:36:47 scottr Exp $
+bin/vmware-checkvm
+bin/vmware-hgfsclient
+bin/vmware-toolbox-cmd
+bin/vmware-xferlogs
+lib/libguestlib.la
+sbin/vmware-guestd
+share/examples/rc.d/vmtools
+share/examples/vmware-tools/poweroff-vm-default
+share/examples/vmware-tools/poweron-vm-default
+share/examples/vmware-tools/resume-vm-default
+share/examples/vmware-tools/suspend-vm-default
+share/examples/vmware-tools/tools.conf
