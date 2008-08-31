@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.99 2008/08/31 12:33:53 markd Exp $
+# $NetBSD: Makefile,v 1.100 2008/08/31 12:37:27 markd Exp $
 
-DISTNAME=		R-2.7.0
-PKGREVISION=		1
+DISTNAME=		R-2.7.2
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=base/R-2/}
 
@@ -49,8 +48,10 @@ CONFIGURE_ARGS+=	--without-dxml
 CONFIGURE_ARGS+=	--without-libmoto
 
 # Work around missing MAIN__() definition used in -lF77 by AC_CHECK_LIB.
+# and other failures due to not linking to support libs during testing
 CONFIGURE_ENV+=		ac_cv_lib_blas_dgemm=yes
 CONFIGURE_ENV+=		ac_cv_lib_blas_dgemm_=yes
+CONFIGURE_ENV+=		r_cv_complete_blas=yes
 
 # Broken test for bzlib >= 1.0.5 in R 2.7.0
 CONFIGURE_ENV+=		r_cv_have_bzlib=yes
