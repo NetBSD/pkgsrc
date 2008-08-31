@@ -1,0 +1,22 @@
+$NetBSD: patch-af,v 1.1 2008/08/31 20:09:12 dholland Exp $
+
+--- configure~	2004-08-14 08:28:07.000000000 -0400
++++ configure	2008-08-31 15:39:09.000000000 -0400
+@@ -11282,7 +11282,7 @@ fi
+ 
+ 
+ have_gpgme=no
+-if test "$GPGME4" == "no" ; then
++if test "$GPGME4" = "no" ; then
+ 
+ # Check whether --with-gpgme-prefix or --without-gpgme-prefix was given.
+ if test "${with_gpgme_prefix+set}" = set; then
+@@ -11398,7 +11398,7 @@ cat >>confdefs.h <<\_ACEOF
+ _ACEOF
+ 
+ 	fi
+-else if test "$GPGME4" == "yes" ; then
++else if test "$GPGME4" = "yes" ; then
+ 	echo "$as_me:$LINENO: checking for gpgme_check_version in -lgpgme4" >&5
+ echo $ECHO_N "checking for gpgme_check_version in -lgpgme4... $ECHO_C" >&6
+ if test "${ac_cv_lib_gpgme4_gpgme_check_version+set}" = set; then
