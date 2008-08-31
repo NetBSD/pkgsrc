@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2028 2008/08/31 07:39:36 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.2029 2008/08/31 10:55:08 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3502,3 +3502,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/open-vm-tools to 2008.08.08.109361 [scottr 2008-08-31]
 	Updated x11/xmx to 2.1a7nb1 [dholland 2008-08-31]
 	Updated x11/xfstt to 1.6nb5 [dholland 2008-08-31]
+	Updated security/hydra to 5.4 [adrianp 2008-08-31]
