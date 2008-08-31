@@ -1,0 +1,44 @@
+$NetBSD: patch-ef,v 1.1 2008/08/31 06:52:29 dholland Exp $
+
+--- clients/xmxinit/xmxinit.c~	1995-04-19 23:05:04.000000000 -0400
++++ clients/xmxinit/xmxinit.c	2008-08-31 02:38:46.000000000 -0400
+@@ -30,7 +30,6 @@ Modified from X11R6 MIT source for xinit
+ #include <sys/wait.h>
+ #endif
+ #include <errno.h>
+-extern int sys_nerr;
+ #include <setjmp.h>
+ 
+ #ifndef X_NOT_STDC_ENV
+@@ -86,8 +85,8 @@ char **client = clientargv + 2;		/* make
+ char *displayNum;
+ char *program;
+ Display *xd;			/* server connection */
+-#ifndef SYSV
+-#if defined(SVR4) || defined(_POSIX_SOURCE)
++#if 1 /*ndef SYSV*/
++#if 1 /*defined(SVR4) || defined(_POSIX_SOURCE)*/
+ int status;
+ #else
+ union wait	status;
+@@ -350,7 +349,7 @@ processTimeout(timeout, string)
+ 			break;
+ 		alarm(0);
+ #else /* SYSV */
+-#if defined(SVR4) || defined(_POSIX_SOURCE)
++#if 1 /*defined(SVR4) || defined(_POSIX_SOURCE)*/
+ 		if ((pidfound = waitpid(serverpid, &status, WNOHANG)) == serverpid)
+ 			break;
+ #else
+@@ -588,10 +587,8 @@ Fatal(fmt, x0,x1,x2,x3,x4,x5,x6,x7,x8,x9
+ Error(fmt, x0,x1,x2,x3,x4,x5,x6,x7,x8,x9)
+ 	char	*fmt;
+ {
+-	extern char	*sys_errlist[];
+-
+ 	fprintf(stderr, "%s:  ", program);
+ 	if (errno > 0 && errno < sys_nerr)
+-	  fprintf (stderr, "%s (errno %d):  ", sys_errlist[errno], errno);
++	  fprintf (stderr, "%s (errno %d):  ", strerror(errno), errno);
+ 	fprintf(stderr, fmt, x0,x1,x2,x3,x4,x5,x6,x7,x8,x9);
+ }

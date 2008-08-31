@@ -1,0 +1,28 @@
+$NetBSD: patch-ed,v 1.1 2008/08/31 06:52:29 dholland Exp $
+
+--- clients/xmtg/ui.c.orig	1998-04-01 18:55:00.000000000 -0500
++++ clients/xmtg/ui.c	2008-08-31 02:40:34.000000000 -0400
+@@ -22,10 +22,14 @@
+  */
+ /* next line is debugging...TODO */
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ #ifdef __STDC__
++#include <stdint.h>
+ #include <stdarg.h>
+ #else
+ #include <varargs.h>
++typedef long intptr_t; /* best guess... */
+ #endif
+ #include <X11/Xlib.h>
+ 
+@@ -440,7 +444,7 @@ ui_get_add_info(adp, strp, modep)
+ {
+    
+    XtVaGetValues(adp->input, XtNstring, strp, 0);
+-   *modep = (int)XawToggleGetCurrent(adp->mode_radio);
++   *modep = (int)(intptr_t)XawToggleGetCurrent(adp->mode_radio);
+ }
+ 
+ void

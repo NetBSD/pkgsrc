@@ -1,0 +1,15 @@
+$NetBSD: patch-ba,v 1.1 2008/08/31 06:52:29 dholland Exp $
+
+--- server/args.c~	1998-03-27 10:11:58.000000000 -0500
++++ server/args.c	2008-08-31 00:25:23.000000000 -0400
+@@ -686,6 +686,9 @@ tok
+                buf[i++] = (char)ch;
+             break;
+       }
+-   return (char *)err(0, "tok: token too long\n");
++   /* this err() returns its first arg */
++   /*return (char *)err(0, "tok: token too long\n");*/
++   err(0, "tok: token too long\n");
++   return NULL;
+ }
+ #undef MAXTOKLEN

@@ -1,0 +1,14 @@
+$NetBSD: patch-ah,v 1.1 2008/08/31 06:52:29 dholland Exp $
+
+--- lib/Xmc/Open.c~	1998-02-12 09:13:22.000000000 -0500
++++ lib/Xmc/Open.c	2008-08-31 00:19:40.000000000 -0400
+@@ -32,6 +32,9 @@
+ #ifdef SVR4
+ #include <sys/filio.h>
+ #endif
++#include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ #include <fcntl.h>
+ #include <netdb.h>
+ #include <xmc.h>

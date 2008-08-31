@@ -1,0 +1,12 @@
+$NetBSD: patch-cr,v 1.1 2008/08/31 06:52:29 dholland Exp $
+
+--- server/request.c~	1998-04-29 14:54:43.000000000 -0400
++++ server/request.c	2008-08-31 01:48:49.000000000 -0400
+@@ -31,6 +31,7 @@
+ #ifdef _AIX
+ #include <sys/select.h>
+ #endif
++#include <stdlib.h>
+ #define NEED_REPLIES
+ #define NEED_EVENTS
+ #include <X11/Xproto.h>
