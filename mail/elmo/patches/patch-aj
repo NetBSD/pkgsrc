@@ -1,0 +1,14 @@
+$NetBSD: patch-aj,v 1.1 2008/08/31 20:09:12 dholland Exp $
+
+--- src/procmail.c~	2004-08-13 07:18:23.000000000 -0400
++++ src/procmail.c	2008-08-31 16:00:25.000000000 -0400
+@@ -111,6 +111,9 @@ static char *logfile = NULL;
+  *    IMPLEMENTATION PRIVATE FUNCTION PROTOTYPES
+  ****************************************************************************/
+ 
++/* avoid name conflict with log() in math.h, which gcc knows about */
++#define log logit
++
+ static void log (FILE *fp, const char *fmt, ...) FORMAT_2;
+ 
+ /****************************************************************************
