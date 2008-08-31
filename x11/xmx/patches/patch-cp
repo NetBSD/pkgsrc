@@ -1,0 +1,12 @@
+$NetBSD: patch-cp,v 1.1 2008/08/31 06:52:29 dholland Exp $
+
+--- server/es.h~	1997-09-27 17:10:13.000000000 -0400
++++ server/es.h	2008-08-31 01:42:57.000000000 -0400
+@@ -25,5 +25,5 @@
+ *   es.h								*
+ *									*
+ ************************************************************************/
+-#define es_set(chp, n)	(chp)->dptr = (void *)(n)
+-#define es_get(chp)	((int)chp->dptr)
++#define es_set(chp, n)	(chp)->dptr = (void *)(intptr_t)(n)
++#define es_get(chp)	((int)(intptr_t)chp->dptr)
