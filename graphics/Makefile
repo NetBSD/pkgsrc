@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.485 2008/08/25 18:18:56 bjs Exp $
+# $NetBSD: Makefile,v 1.486 2008/08/31 00:10:33 gdt Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -140,6 +140,7 @@ SUBDIR+=	gst-plugins0.8-png
 SUBDIR+=	gthumb
 SUBDIR+=	gtkam
 SUBDIR+=	gtkglext
+SUBDIR+=	gtkimageview
 SUBDIR+=	gtksee
 SUBDIR+=	guile-cairo
 SUBDIR+=	gwenview
