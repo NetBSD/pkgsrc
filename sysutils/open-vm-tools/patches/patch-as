@@ -1,72 +1,57 @@
-$NetBSD: patch-as,v 1.1.1.1 2007/10/17 21:35:53 agc Exp $
+$NetBSD: patch-as,v 1.2 2008/08/31 06:36:48 scottr Exp $
 
---- lib/wiper/wiperPosix.c	2007/09/29 12:46:28	1.1
-+++ lib/wiper/wiperPosix.c	2007/09/29 12:48:36
-@@ -23,7 +23,7 @@
-  *
-  */
- 
--#if !defined(__linux__) && !defined(sun) && !defined(__FreeBSD__) && !defined(__APPLE__)
-+#if !defined(__linux__) && !defined(sun) && !defined(__FreeBSD__) && !defined(__APPLE__) && !defined(__NetBSD__)
- #error This file should not be compiled on this platform.
- #endif
- 
-@@ -31,12 +31,12 @@
- #include <sys/stat.h>
- #if defined(__linux__) || defined(sun)
- # include <sys/vfs.h>
--#elif defined(__FreeBSD__) || defined(__APPLE__)
-+#elif defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__)
- # include <sys/param.h>
- # include <sys/ucred.h>
+--- lib/include/mntinfo.h.orig	2008-08-08 02:01:52.000000000 -0500
++++ lib/include/mntinfo.h
+@@ -34,7 +34,7 @@
+ # include <limits.h>
+ #elif defined(__linux__)
+ # include <mntent.h>
+-#elif defined(__FreeBSD__)
++#elif defined(__FreeBSD__) || defined(__NetBSD__)
  # include <sys/mount.h>
- # include <fstab.h>
--# if BSD_VERSION >= 50
-+# if defined(__FreeBSD__) && BSD_VERSION >= 50
- #  include <libgen.h>
- # endif /* BSD_VERSION < 50 */
  #endif
-@@ -65,7 +65,7 @@
- 
- #if defined(sun) || defined(__linux__)
- # define PROCFS "proc"
+ #include "posix.h"
+@@ -106,17 +106,27 @@
+ # define MNTINFO_FSTYPE(mnt)            mnt->mnt_type
+ # define MNTINFO_MNTPT(mnt)             mnt->mnt_dir
+ # define MNTINFO_MNT_IS_RO(mnt)         (hasmntopt((mnt), "rw") == NULL)
 -#elif defined(__FreeBSD__) || defined(__APPLE__)
 +#elif defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__)
- # define PROCFS "procfs"
- #endif
+ struct mntHandle {
++#  if defined(__NetBSD__)
++   struct statvfs *mountPoints;  // array of mountpoints per getmntinfo(3)
++#  else
+    struct statfs *mountPoints;  // array of mountpoints per getmntinfo(3)
++#  endif
+    int numMountPoints;          // number of elements in mntArray
+    int mountIndex;              // current location within mountPoints array
+ };
+ # define MNTFILE                        _PATH_FSTAB
+ # define MNTHANDLE                      struct mntHandle *
+-# define MNTINFO                        struct statfs
+-# define DECLARE_MNTINFO(name)          struct statfs __ ## name; \
++# if defined(__NetBSD__)
++#   define MNTINFO                        struct statvfs
++#   define DECLARE_MNTINFO(name)          struct statvfs __ ## name; \
++                                        struct statvfs *name = &__ ## name
++# else
++#   define MNTINFO                        struct statfs
++#   define DECLARE_MNTINFO(name)          struct statfs __ ## name; \
+                                         struct statfs *name = &__ ## name
++# endif
  
-@@ -195,7 +195,7 @@
-    return TRUE;
- }
- 
--#elif defined(__FreeBSD__) || defined(__APPLE__) /* } FreeBSD { */
-+#elif defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__) /* } FreeBSD { */
- 
- static INLINE Bool
- WiperIsDiskDevice(MNTINFO *mnt,         // IN: file system being considered
-@@ -209,7 +209,7 @@
-     * function, as a whole, does not even apply to OS X, so this caveat is
-     * only minor.
-     */
--#if BSD_VERSION < 50
-+#if defined(__NetBSD__) || BSD_VERSION < 50
-    /*
-     * Before FreeBSD 5, device nodes had static major/minor numbers.
-     * (FreeBSD 5 included devfs which got rid of this concept.)  So
-@@ -509,14 +509,14 @@
-                               uint64 *free,       // OUT
-                               uint64 *total)      // OUT
- {
--#ifdef sun
-+#if defined(sun) || defined(__NetBSD__)
-    struct statvfs statfsbuf;
+ # define OPEN_MNTFILE(mode)                                             \
+ ({                                                                      \
+@@ -155,7 +165,11 @@ struct mntHandle {
+ # define MNTINFO_NAME(mnt)              mnt->f_mntfromname
+ # define MNTINFO_FSTYPE(mnt)            mnt->f_fstypename
+ # define MNTINFO_MNTPT(mnt)             mnt->f_mntonname
+-# define MNTINFO_MNT_IS_RO(mnt)         ((mnt)->f_flags & MNT_RDONLY)
++# if defined(__NetBSD__)
++#   define MNTINFO_MNT_IS_RO(mnt)         ((mnt)->f_flag & MNT_RDONLY)
++# else
++#   define MNTINFO_MNT_IS_RO(mnt)         ((mnt)->f_flags & MNT_RDONLY)
++# endif
  #else
-    struct statfs statfsbuf;
+ # error "Define mount information macros for your OS type"
  #endif
-    ASSERT(p);
- 
--#ifdef sun
-+#if defined(sun) || defined(__NetBSD__)
-    if (statvfs(p->mountPoint, &statfsbuf) < 0) {
- #else
-    if (statfs(p->mountPoint, &statfsbuf) < 0) {

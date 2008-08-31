@@ -1,14 +1,58 @@
-$NetBSD: patch-ak,v 1.1.1.1 2007/10/17 21:35:53 agc Exp $
+$NetBSD: patch-ak,v 1.2 2008/08/31 06:36:48 scottr Exp $
 
---- lib/include/osNames.h	2007/09/28 19:25:17	1.1
-+++ lib/include/osNames.h	2007/09/28 19:25:53
-@@ -127,6 +127,9 @@
- /* FreeBSD */
- #define STR_OS_FREEBSD "FreeBSD"
+--- lib/file/filePosix.c.orig	2008-08-08 02:01:54.000000000 -0500
++++ lib/file/filePosix.c
+@@ -24,7 +24,7 @@
  
-+/* NetBSD */
-+#define STR_OS_NETBSD "NetBSD"
-+
- /* Solaris */
- #define STR_OS_SOLARIS "Solaris"
+ #include <sys/types.h> /* Needed before sys/vfs.h with glibc 2.0 --hpreg */
  
+-#if !__FreeBSD__
++#if !__FreeBSD__ && !__NetBSD__
+ # if !__APPLE__
+ #  include <sys/vfs.h>
+ # endif
+@@ -64,7 +64,7 @@
+ 
+ #include "unicodeOperations.h"
+ 
+-#if !defined(__FreeBSD__) && !defined(sun)
++#if !defined(__FreeBSD__) && !defined(sun) && !defined(__NetBSD__)
+ #if !defined(__APPLE__)
+ static char *FilePosixLookupMountPoint(char const *canPath, Bool *bind);
+ #endif
+@@ -320,7 +320,7 @@ FileAttributes(ConstUnicode pathName,  /
+  *----------------------------------------------------------------------
+  */
+ 
+-#if !defined(__FreeBSD__) && !defined(sun)
++#if !defined(__FreeBSD__) && !defined(sun) && !defined(__NetBSD__)
+ Bool
+ File_IsRemote(ConstUnicode pathName)  // IN: Path name
+ {
+@@ -626,7 +626,7 @@ File_GetTimes(ConstUnicode pathName,    
+     * XXX atime is almost always MAX.
+     */
+ 
+-#if defined(__FreeBSD__)
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+    /*
+     * FreeBSD: All supported versions have timestamps with nanosecond resolution.
+     *          FreeBSD 5+ has also file creation time.
+@@ -788,7 +788,7 @@ File_SetTimes(ConstUnicode pathName,    
+ }
+ 
+ 
+-#if !defined(__FreeBSD__) && !defined(sun)
++#if !defined(__FreeBSD__) && !defined(sun) && !defined(__NetBSD__)
+ /*
+  *-----------------------------------------------------------------------------
+  *
+@@ -1747,7 +1747,7 @@ File_IsSameFile(ConstUnicode path1,  // 
+ }
+ 
+ 
+-#endif /* !FreeBSD && !sun */
++#endif /* !FreeBSD && !sun && !NetBSD */
+ 
+ 
+ /*
