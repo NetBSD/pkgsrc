@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.3 2008/08/31 10:54:52 adrianp Exp $
+
+--- pw-inspector.c.orig	2007-03-22 14:04:29.000000000 +0000
++++ pw-inspector.c
+@@ -140,7 +140,7 @@ main(int argc, char *argv[])
+         if (set_print) {
+           j = 0;
+           for (k = 0; k < strlen(buf); k++)
+-            if (isprint(buf[k]) && isalnum(buf[k]) == 0)
++            if (isprint((unsigned char)buf[k]) && isalnum((unsigned char)buf[k]) == 0)
+               j = 1;
+           if (j)
+             i++;
+@@ -148,7 +148,7 @@ main(int argc, char *argv[])
+         if (set_other) {
+           j = 0;
+           for (k = 0; k < strlen(buf); k++)
+-            if (isprint(buf[k]) == 0 && isalnum(buf[k]) == 0)
++            if (isprint((unsigned char)buf[k]) == 0 && isalnum((unsigned char)buf[k]) == 0)
+               j = 1;
+           if (j)
+             i++;
