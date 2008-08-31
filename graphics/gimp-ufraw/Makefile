@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.48 2008/06/20 01:09:21 joerg Exp $
+# $NetBSD: Makefile,v 1.49 2008/08/31 23:35:25 gdt Exp $
 
 DISTNAME=		ufraw-0.13
 PKGNAME=		gimp-${DISTNAME}
-PKGREVISION=		3
+PKGREVISION=		4
 CATEGORIES=		graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ufraw/}
 
@@ -33,6 +33,7 @@ BUILDLINK_TRANSFORM+=	rm:-std=gnu99
 .include "../../devel/GConf/schemas.mk"
 .include "../../graphics/exiv2/buildlink3.mk"
 .include "../../graphics/gimp/buildlink3.mk"
+.include "../../graphics/gtkimageview/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
