@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2008/05/26 02:13:17 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2008/08/31 13:20:34 obache Exp $
 #
 
-DISTNAME=		pcre-ocaml-5.11.2
+DISTNAME=		pcre-ocaml-5.15.0
 CATEGORIES=		devel
 MASTER_SITES=		http://www.ocaml.info/ocaml_sources/
 EXTRACT_SUFX=		.tar.bz2
@@ -17,7 +17,7 @@ DEPENDS+=		ocaml-findlib-[0-9]*:../../devel/ocaml-findlib
 USE_TOOLS+=		gmake pax
 .if (${MACHINE_ARCH} == "i386") || (${MACHINE_ARCH} == "powerpc") || \
     (${MACHINE_ARCH} == "sparc") || (${MACHINE_ARCH} == "x86_64")
-PLIST_SRC=		PLIST PLIST.opt
+PLIST_SRC=		PLIST.opt PLIST
 .else
 BUILD_TARGET=		byte
 .endif
