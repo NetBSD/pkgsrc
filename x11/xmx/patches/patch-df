@@ -1,0 +1,12 @@
+$NetBSD: patch-df,v 1.1 2008/08/31 06:52:29 dholland Exp $
+
+--- server/tptr.c~	1998-05-04 16:54:58.000000000 -0400
++++ server/tptr.c	2008-08-31 02:24:39.000000000 -0400
+@@ -31,6 +31,7 @@
+ #ifdef _AIX
+ #include <sys/select.h>
+ #endif
++#include <stdlib.h>
+ #define NEED_REPLIES
+ #define NEED_EVENTS
+ #include <X11/X.h>
