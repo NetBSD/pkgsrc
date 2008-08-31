@@ -1,13 +1,22 @@
-$NetBSD: patch-ba,v 1.1.1.1 2007/10/17 21:35:53 agc Exp $
+$NetBSD: patch-ba,v 1.2 2008/08/31 06:36:48 scottr Exp $
 
---- vmware-user/foreignVMToolsDaemon.h	2007/09/30 10:16:08	1.1
-+++ vmware-user/foreignVMToolsDaemon.h	2007/09/30 10:16:49
-@@ -60,7 +60,7 @@
+--- lib/misc/codesetOld.c.orig	2008-08-08 02:01:54.000000000 -0500
++++ lib/misc/codesetOld.c
+@@ -70,7 +70,7 @@
+ #endif
  
- #ifdef __APPLE__
- #define PTHREAD_MUTEX_RECURSIVE_NP PTHREAD_MUTEX_RECURSIVE
--#elif defined(__FreeBSD__) || defined(sun)
-+#elif defined(__FreeBSD__) || defined(sun) || defined(__NetBSD__)
- #include <unistd.h>
- #define PTHREAD_MUTEX_RECURSIVE_NP PTHREAD_MUTEX_RECURSIVE
+ 
+-#if defined(__FreeBSD__) || defined(sun)
++#if defined(__FreeBSD__) || defined(sun) || defined(__NetBSD__)
+ static const char nul[] = {'\0', '\0'};
  #else
+ static const wchar_t nul = L'\0';
+@@ -735,7 +735,7 @@ CodeSetOldGetCodeSetFromLocale(void)
+    codeset = Util_SafeStrdup(nl_langinfo_l(CODESET, new));
+    freelocale(new);
+ 
+-#elif defined(sun)
++#elif defined(sun) || defined(__NetBSD__)
+ 
+    char *locale = setlocale(LC_CTYPE, NULL);
+    if (!setlocale(LC_CTYPE, "")) {

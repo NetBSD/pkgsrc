@@ -1,0 +1,16 @@
+$NetBSD: patch-br,v 1.1 2008/08/31 06:36:49 scottr Exp $
+
+--- toolbox/toolbox-cmd.c.orig	2008-08-08 02:01:57.000000000 -0500
++++ toolbox/toolbox-cmd.c
+@@ -43,7 +43,10 @@ typedef void (*ToolboxHelpFunc)(char *pr
+  * Local Data
+  */
+ 
+-const typedef struct CmdTable {
++#if !defined(__NetBSD__) || __NetBSD_Version__ >= 400000000 // Work around gcc? const-const issue
++const
++#endif
++typedef struct CmdTable {
+    const char *command;		/* The name of the command. */
+    ToolboxCmdFunc func;		/* The function to execute. */
+    Bool requireRoot;		/* Indicates whether root is required. */

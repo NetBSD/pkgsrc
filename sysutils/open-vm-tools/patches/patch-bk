@@ -1,0 +1,31 @@
+$NetBSD: patch-bk,v 1.1 2008/08/31 06:36:48 scottr Exp $
+
+--- lib/user/utilPosix.c.orig	2008-08-08 02:01:55.000000000 -0500
++++ lib/user/utilPosix.c
+@@ -35,7 +35,7 @@
+ #include <errno.h>
+ #include <dirent.h>
+ 
+-#if !__FreeBSD__ && !sun
++#if !__FreeBSD__ && !sun && !__NetBSD__
+ #   include <pwd.h>
+ #endif
+ 
+@@ -85,7 +85,7 @@
+ 
+ 
+ 
+-#if !__FreeBSD__ && !sun
++#if !__FreeBSD__ && !sun && !__NetBSD__
+ 
+ /*
+  *-----------------------------------------------------------------------------
+@@ -624,7 +624,7 @@ Util_GetSafeTmpDir(Bool useConf) // IN
+ #endif // __linux__
+ 
+ 
+-#if defined(__linux__) || defined(__FreeBSD__) || defined(sun)
++#if defined(__linux__) || defined(__FreeBSD__) || defined(sun) || defined(__NetBSD__)
+ /*
+  *----------------------------------------------------------------------------
+  *

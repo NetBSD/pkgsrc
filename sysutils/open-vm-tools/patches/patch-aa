@@ -1,14 +1,14 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/10/17 21:35:53 agc Exp $
+$NetBSD: patch-aa,v 1.2 2008/08/31 06:36:47 scottr Exp $
 
---- configure	2007/09/28 13:16:03	1.1
-+++ configure	2007/09/28 13:17:22
-@@ -2171,6 +2171,9 @@
-    freebsd*)
-       os="freebsd"
+--- configure.orig	2008-08-08 02:02:06.000000000 -0500
++++ configure
+@@ -2251,6 +2251,9 @@ case "$host_os" in
+    linux*)
+       os="linux"
        ;;
 +   netbsd*)
 +      os="netbsd"
 +      ;;
-    solaris*)
-       os="solaris"
-       case "$host_os" in
+    freebsd*)
+       os="freebsd"
+       ;;

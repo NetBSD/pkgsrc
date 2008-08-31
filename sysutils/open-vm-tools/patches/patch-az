@@ -1,7 +1,7 @@
-$NetBSD: patch-az,v 1.1.1.1 2007/10/17 21:35:53 agc Exp $
+$NetBSD: patch-az,v 1.2 2008/08/31 06:36:48 scottr Exp $
 
---- lib/include/vmblock.h	2007/09/29 13:18:10	1.1
-+++ lib/include/vmblock.h	2007/09/29 13:19:22
+--- lib/include/vmblock.h.orig	2008-08-08 02:01:52.000000000 -0500
++++ lib/include/vmblock.h
 @@ -25,12 +25,13 @@
  #ifndef _VMBLOCK_H_
  #define _VMBLOCK_H_
@@ -18,7 +18,7 @@ $NetBSD: patch-az,v 1.1.1.1 2007/10/17 21:35:53 agc Exp $
  #endif
  
  #define VMBLOCK_FS_NAME                "vmblock"
-@@ -53,7 +54,7 @@
+@@ -54,7 +55,7 @@
  # define VMBLOCK_DEVICE_MODE            O_WRONLY
  # define VMBLOCK_CONTROL(fd, op, path)  write(fd, path, op)
  
@@ -27,7 +27,7 @@ $NetBSD: patch-az,v 1.1.1.1 2007/10/17 21:35:53 agc Exp $
  # define VMBLOCK_MOUNT_POINT            "/var/run/" VMBLOCK_FS_NAME
  # define VMBLOCK_DEVICE                 VMBLOCK_MOUNT_POINT
  # define VMBLOCK_DEVICE_MODE            O_RDONLY
-@@ -70,7 +71,7 @@
+@@ -71,7 +72,7 @@
  #  endif
  #  define VMBLOCK_CONTROL(fd, op, path)  ioctl(fd, op, path)
  

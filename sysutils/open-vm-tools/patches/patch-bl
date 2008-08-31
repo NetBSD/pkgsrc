@@ -1,0 +1,67 @@
+$NetBSD: patch-bl,v 1.1 2008/08/31 06:36:48 scottr Exp $
+
+--- lib/vixTools/vixTools.c.orig	2008-08-08 02:01:53.000000000 -0500
++++ lib/vixTools/vixTools.c
+@@ -74,7 +74,7 @@
+ #endif
+ 
+ /* Only Windows and Linux use impersonation functions. */
+-#if !defined(__FreeBSD__) && !defined(sun)
++#if !defined(__FreeBSD__) && !defined(sun) && !defined(__NetBSD__)
+ #include "impersonate.h"
+ #endif
+ 
+@@ -702,7 +702,7 @@ VixTools_GetToolsPropertiesImpl(GuestApp
+    VixPropertyListImpl propList;
+    char *serializedBuffer = NULL;
+    size_t serializedBufferLength = 0;
+-#if !defined(__FreeBSD__) && !defined(sun)
++#if !defined(__FreeBSD__) && !defined(sun) && !defined(__NetBSD__)
+    char guestName[512];
+    int osFamily;
+    char *packageList = NULL;
+@@ -937,7 +937,7 @@ VixToolsSetProperties(VixCommandRequestH
+                       GuestApp_Dict **confDictRef)            // IN
+ {
+    VixError err = VIX_OK;
+-#if !defined(__FreeBSD__) && !defined(sun)
++#if !defined(__FreeBSD__) && !defined(sun) && !defined(__NetBSD__)
+    size_t serialBufferLength;
+    char *serialBuffer = NULL;
+    VixPropertyListImpl propList;
+@@ -1734,7 +1734,7 @@ VixToolsMoveFile(VixCommandRequestHeader
+     * Be careful. Renaming a file to itself can cause it to be deleted.
+     * This should be a no-op anyway.
+     */
+-#if !defined(sun) && !defined(__FreeBSD__)
++#if !defined(sun) && !defined(__FreeBSD__) && !defined(__NetBSD__)
+    if (File_IsSameFile(srcFilePathName, destFilePathName)) {
+       err = VIX_OK;
+       goto abort;
+@@ -2716,7 +2716,7 @@ VixToolsImpersonateUserImplEx(char const
+    }
+ 
+ ///////////////////////////////////////////////////////////////////////
+-#if defined(__FreeBSD__) || defined(sun)
++#if defined(__FreeBSD__) || defined(sun) || defined(__NetBSD__)
+    err = VIX_E_NOT_SUPPORTED;
+ ///////////////////////////////////////////////////////////////////////
+ #elif defined(_WIN32) || defined(linux)
+@@ -2913,7 +2913,7 @@ VixToolsLogoutUser(void *userToken)    /
+       return;
+    }
+ 
+-#if !defined(__FreeBSD__) && !defined(sun)
++#if !defined(__FreeBSD__) && !defined(sun) && !defined(__NetBSD__)
+    if (NULL != userToken) {
+       AuthToken authToken = (AuthToken) userToken;
+       Auth_CloseToken(authToken);
+@@ -3105,7 +3105,7 @@ VixToolsProcessHgfsPacket(VixCommandHgfs
+    hgfsPacket = ((char *) requestMsg) + sizeof(*requestMsg);
+    hgfsPacketSize = requestMsg->hgfsPacketSize;
+ 
+-#if !defined(N_PLAT_NLM) && !defined(__FreeBSD__)
++#if !defined(N_PLAT_NLM) && !defined(__FreeBSD__) && !defined(__NetBSD__)
+    /*
+     * Impersonation was okay, so let's give our packet to
+     * the HGFS server and forward the reply packet back.
