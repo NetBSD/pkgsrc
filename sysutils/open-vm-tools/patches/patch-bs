@@ -1,0 +1,13 @@
+$NetBSD: patch-bs,v 1.1 2008/08/31 06:36:49 scottr Exp $
+
+--- vmware-user-suid-wrapper/locationsdb.c.orig	2008-08-08 02:01:56.000000000 -0500
++++ vmware-user-suid-wrapper/locationsdb.c
+@@ -26,7 +26,7 @@
+  *    link against lib/unixinstall.
+  */
+ 
+-#if !defined(sun) && !defined(__FreeBSD__) && !defined(linux)
++#if !defined(sun) && !defined(__FreeBSD__) && !defined(linux) && !defined(__NetBSD__)
+ # error This program is not supported on your platform.
+ #endif
+ 

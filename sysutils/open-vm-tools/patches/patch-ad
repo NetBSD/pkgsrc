@@ -1,13 +1,13 @@
-$NetBSD: patch-ad,v 1.1.1.1 2007/10/17 21:35:53 agc Exp $
+$NetBSD: patch-ad,v 1.2 2008/08/31 06:36:47 scottr Exp $
 
---- lib/include/su.h	2007/09/28 19:00:23	1.1
-+++ lib/include/su.h	2007/09/28 19:00:48
-@@ -49,7 +49,7 @@
- Bool Id_AuthSet(void const *buf, size_t size);
- Bool Id_AuthCheck(char const *right);
+--- guestd/foreignVMToolsDaemon.h.orig	2008-08-08 02:01:56.000000000 -0500
++++ guestd/foreignVMToolsDaemon.h
+@@ -59,7 +59,7 @@ VixError VIX_INIT_LOCK(VixLockType *lock
  
--#elif (defined(__linux__) || defined(sun) || defined(__FreeBSD__)) && !defined(N_PLAT_NLM)
-+#elif (defined(__linux__) || defined(sun) || defined(__FreeBSD__) || defined(__NetBSD__)) && !defined(N_PLAT_NLM)
- 
- #include <sys/types.h>
+ #ifdef __APPLE__
+ #define PTHREAD_MUTEX_RECURSIVE_NP PTHREAD_MUTEX_RECURSIVE
+-#elif defined(__FreeBSD__) || defined(sun)
++#elif defined(__FreeBSD__) || defined(sun) || defined(__NetBSD__)
  #include <unistd.h>
+ #define PTHREAD_MUTEX_RECURSIVE_NP PTHREAD_MUTEX_RECURSIVE
+ #else

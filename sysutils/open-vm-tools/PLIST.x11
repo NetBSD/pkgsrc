@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.x11,v 1.1 2008/08/31 06:36:47 scottr Exp $
+bin/vmware-toolbox
+bin/vmware-user
+bin/vmware-user-suid-wrapper
+share/applications/vmware-user.desktop

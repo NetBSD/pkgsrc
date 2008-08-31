@@ -1,15 +1,14 @@
-$NetBSD: patch-ap,v 1.1.1.1 2007/10/17 21:35:53 agc Exp $
+$NetBSD: patch-ap,v 1.2 2008/08/31 06:36:48 scottr Exp $
 
---- lib/string/str.c	2007/09/28 21:47:18	1.1
-+++ lib/string/str.c	2007/09/28 21:48:13
-@@ -37,6 +37,10 @@
- #include "bsd_output.h"
- #endif
+--- lib/include/guest_os.h.orig	2008-08-08 02:01:52.000000000 -0500
++++ lib/include/guest_os.h
+@@ -298,6 +298,9 @@ typedef enum GuestOSFamilyType {
+ /* FreeBSD */
+ #define STR_OS_FREEBSD "FreeBSD"
  
-+#ifdef __NetBSD__
-+#include <wchar.h>
-+#endif
++/* NetBSD */
++#define STR_OS_NETBSD "NetBSD"
 +
- #if defined _WIN32 && !defined HAS_BSD_PRINTF
- #define vsnprintf _vsnprintf
- #endif
+ /* Solaris */
+ #define STR_OS_SOLARIS "Solaris"
+ 

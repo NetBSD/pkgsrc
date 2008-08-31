@@ -1,0 +1,22 @@
+$NetBSD: patch-bd,v 1.1 2008/08/31 06:36:48 scottr Exp $
+
+--- lib/misc/util_misc.c.orig	2008-08-08 02:01:54.000000000 -0500
++++ lib/misc/util_misc.c
+@@ -47,7 +47,7 @@
+ #  include <pwd.h>
+ #endif
+ 
+-#if defined(__APPLE__) || defined(__FreeBSD__)
++#if defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__)
+ #include <pthread.h>
+ #endif
+ 
+@@ -481,7 +481,7 @@ Util_GetCurrentThreadId(void)
+    tid = getpid();
+    ASSERT(tid != (pid_t)-1);
+    return tid;
+-#elif defined(__APPLE__) || defined(__FreeBSD__)
++#elif defined(__APPLE__) || defined(__FreeBSD__) || defined(__NetBSD__)
+    ASSERT_ON_COMPILE(sizeof(Util_ThreadID) == sizeof(pthread_t));
+    return pthread_self();
+ #elif defined(_WIN32)

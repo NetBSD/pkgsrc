@@ -1,0 +1,38 @@
+$NetBSD: patch-bj,v 1.1 2008/08/31 06:36:48 scottr Exp $
+
+--- lib/user/hostinfoPosix.c.orig	2008-08-08 02:01:55.000000000 -0500
++++ lib/user/hostinfoPosix.c
+@@ -894,8 +894,8 @@ HostinfoGetCpuInfo(int nCpu,         // 
+          e = s + strlen(s);
+ 
+          /* Skip leading and trailing while spaces */
+-         for (; s < e && isspace(*s); s++);
+-         for (; s < e && isspace(e[-1]); e--);
++         for (; s < e && isspace((unsigned)*s); s++);
++         for (; s < e && isspace((unsigned)e[-1]); e--);
+          *e = 0;
+          
+          /* Free previous value */
+@@ -1224,7 +1224,9 @@ Hostinfo_ResetProcessState(const int *ke
+ {
+    int s, fd;
+    struct sigaction sa;
++#ifdef RLIMIT_AS
+    struct rlimit rlim;
++#endif
+ #ifdef __linux__
+    int err;
+    uid_t euid;
+@@ -1260,10 +1262,12 @@ Hostinfo_ResetProcessState(const int *ke
+       }
+    }
+ 
++#ifdef RLIMIT_AS
+    if (getrlimit(RLIMIT_AS, &rlim) == 0) {
+       rlim.rlim_cur = rlim.rlim_max;
+       setrlimit(RLIMIT_AS, &rlim);
+    }
++#endif
+ 
+ #ifdef __linux__
+    /*

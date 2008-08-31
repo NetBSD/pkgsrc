@@ -1,13 +1,62 @@
-$NetBSD: patch-bb,v 1.1.1.1 2007/10/17 21:35:53 agc Exp $
+$NetBSD: patch-bb,v 1.2 2008/08/31 06:36:48 scottr Exp $
 
---- vmware-user/foreignVMToolsDaemon.c	2007/09/30 12:24:28	1.1
-+++ vmware-user/foreignVMToolsDaemon.c	2007/09/30 12:25:01
-@@ -56,7 +56,7 @@
- #include <netinet/tcp.h>
- #include <arpa/inet.h>
- #include <fcntl.h>
--#if defined(__FreeBSD__) || defined(sun)
-+#if defined(__FreeBSD__) || defined(sun) || defined(__NetBSD__)
- #include <unistd.h>
+--- lib/misc/idLinux.c.orig	2008-08-08 02:01:54.000000000 -0500
++++ lib/misc/idLinux.c
+@@ -99,7 +99,7 @@ static AuthorizationRef IdAuthCreateWith
+ #endif
+ 
+ 
+-#if !defined(__APPLE__) && !defined(sun) && !defined(__FreeBSD__)
++#if !defined(__APPLE__) && !defined(sun) && !defined(__FreeBSD__) && !defined(__NetBSD__)
+ /*
+  *----------------------------------------------------------------------------
+  *
+@@ -163,6 +163,9 @@ Id_SetGid(gid_t egid)		// IN: new egid
+ #elif defined(__FreeBSD__)
+    Warning("XXXFreeBSD: implement %s\n", __FUNCTION__);
+    return -1;
++#elif defined(__NetBSD__)
++   Warning("XXXNetBSD: implement %s\n", __FUNCTION__);
++   return -1;
  #else
- #include <linux/unistd.h>
+    if (uid32) {
+       int r = syscall(SYS_setgid32, egid);
+@@ -207,6 +210,9 @@ Id_SetRESUid(uid_t uid,		// IN: new uid
+ #elif defined(__FreeBSD__)
+    Warning("XXXFreeBSD: implement %s\n", __FUNCTION__);
+    return -1;
++#elif defined(__NetBSD__)
++   Warning("XXXNetBSD: implement %s\n", __FUNCTION__);
++   return -1;
+ #else
+    if (uid32) {
+       int r = syscall(SYS_setresuid32, uid, euid, suid);
+@@ -249,6 +255,9 @@ Id_SetRESGid(gid_t gid,		// IN: new gid
+ #elif defined(__FreeBSD__)
+    Warning("XXXFreeBSD: implement %s\n", __FUNCTION__);
+    return -1;
++#elif defined(__NetBSD__)
++   Warning("XXXNetBSD: implement %s\n", __FUNCTION__);
++   return -1;
+ #else
+    if (uid32) {
+       int r = syscall(SYS_setresgid32, gid, egid, sgid);
+@@ -295,6 +304,9 @@ Id_SetREUid(uid_t uid,		// IN: new uid
+ #elif defined(__FreeBSD__)
+    Warning("XXXFreeBSD: implement %s\n", __FUNCTION__);
+    return -1;
++#elif defined(__NetBSD__)
++   Warning("XXXNetBSD: implement %s\n", __FUNCTION__);
++   return -1;
+ #else
+    if (uid32) {
+       int r = syscall(SYS_setreuid32, uid, euid);
+@@ -308,7 +320,7 @@ Id_SetREUid(uid_t uid,		// IN: new uid
+ }
+ 
+ 
+-#if !defined(__APPLE__) && !defined(sun) && !defined(__FreeBSD__)
++#if !defined(__APPLE__) && !defined(sun) && !defined(__FreeBSD__) && !defined(__NetBSD__)
+ /*
+  *----------------------------------------------------------------------------
+  *

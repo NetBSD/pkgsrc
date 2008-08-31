@@ -1,0 +1,13 @@
+$NetBSD: patch-bw,v 1.1 2008/08/31 06:36:49 scottr Exp $
+
+--- vmware-user/foreignVMToolsDaemon.h.orig	2008-08-08 02:01:56.000000000 -0500
++++ vmware-user/foreignVMToolsDaemon.h
+@@ -59,7 +59,7 @@ VixError VIX_INIT_LOCK(VixLockType *lock
+ 
+ #ifdef __APPLE__
+ #define PTHREAD_MUTEX_RECURSIVE_NP PTHREAD_MUTEX_RECURSIVE
+-#elif defined(__FreeBSD__) || defined(sun)
++#elif defined(__FreeBSD__) || defined(sun) || defined(__NetBSD__)
+ #include <unistd.h>
+ #define PTHREAD_MUTEX_RECURSIVE_NP PTHREAD_MUTEX_RECURSIVE
+ #else

@@ -1,0 +1,72 @@
+$NetBSD: patch-bm,v 1.1 2008/08/31 06:36:49 scottr Exp $
+
+--- lib/wiper/wiperPosix.c.orig	2008-08-08 02:01:55.000000000 -0500
++++ lib/wiper/wiperPosix.c
+@@ -23,7 +23,7 @@
+  *
+  */
+ 
+-#if !defined(__linux__) && !defined(sun) && !defined(__FreeBSD__) && !defined(__APPLE__)
++#if !defined(__linux__) && !defined(sun) && !defined(__FreeBSD__) && !defined(__APPLE__) && !defined(__NetBSD__)
+ #error This file should not be compiled on this platform.
+ #endif
+ 
+@@ -31,12 +31,12 @@
+ #include <sys/stat.h>
+ #if defined(__linux__) || defined(sun)
+ # include <sys/vfs.h>
+-#elif defined(__FreeBSD__) || defined(__APPLE__)
++#elif defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__)
+ # include <sys/param.h>
+ # include <sys/ucred.h>
+ # include <sys/mount.h>
+ # include <fstab.h>
+-# if __FreeBSD_version >= 500000
++# if defined(__FreeBSD__) && __FreeBSD_version >= 500000
+ #  include <libgen.h>
+ # endif /* __FreeBSD_version < 500000 */
+ #endif
+@@ -66,7 +66,7 @@
+ 
+ #if defined(sun) || defined(__linux__)
+ # define PROCFS "proc"
+-#elif defined(__FreeBSD__) || defined(__APPLE__)
++#elif defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__)
+ # define PROCFS "procfs"
+ #endif
+ 
+@@ -196,7 +196,7 @@ WiperIsDiskDevice(MNTINFO *mnt,         
+    return TRUE;
+ }
+ 
+-#elif defined(__FreeBSD__) || defined(__APPLE__) /* } FreeBSD { */
++#elif defined(__FreeBSD__) || defined(__APPLE__) || defined(__NetBSD__) /* } FreeBSD { */
+ 
+ static INLINE Bool
+ WiperIsDiskDevice(MNTINFO *mnt,         // IN: file system being considered
+@@ -210,7 +210,7 @@ WiperIsDiskDevice(MNTINFO *mnt,         
+     * function, as a whole, does not even apply to OS X, so this caveat is
+     * only minor.
+     */
+-#if __FreeBSD_version < 500000
++#if defined(__NetBSD__) || __FreeBSD_version < 500000
+    /*
+     * Before FreeBSD 5, device nodes had static major/minor numbers.
+     * (FreeBSD 5 included devfs which got rid of this concept.)  So
+@@ -511,14 +511,14 @@ WiperSinglePartition_GetSpace(const Wipe
+                               uint64 *free,       // OUT
+                               uint64 *total)      // OUT
+ {
+-#ifdef sun
++#if defined(sun) || defined(__NetBSD__)
+    struct statvfs statfsbuf;
+ #else
+    struct statfs statfsbuf;
+ #endif
+    ASSERT(p);
+ 
+-#ifdef sun
++#if defined(sun) || defined(__NetBSD__)
+    if (statvfs(p->mountPoint, &statfsbuf) < 0) {
+ #else
+    if (Posix_Statfs(p->mountPoint, &statfsbuf) < 0) {
