@@ -1,4 +1,4 @@
-$NetBSD: patch-ab,v 1.4 2006/05/12 23:35:55 adrianp Exp $
+$NetBSD: patch-ab,v 1.5 2008/08/31 10:54:52 adrianp Exp $
 
 --- configure.orig	2006-01-20 13:44:15.000000000 +0000
 +++ configure
@@ -21,25 +21,95 @@ $NetBSD: patch-ab,v 1.4 2006/05/12 23:35:55 adrianp Exp $
  do
      if [ "X" = "X$SSL_IPATH" ]; then
          if [ -f "$i/openssl/ssl.h" ]; then
-@@ -97,7 +98,7 @@ if [ "$SSL_IPATH" = "/usr/include" ]; th
+@@ -96,50 +97,52 @@ if [ "$SSL_IPATH" = "/usr/include" ]; th
+     SSL_IPATH=""
  fi
  
- echo "Checking for Postgres (libpq) ..."
+-echo "Checking for Postgres (libpq) ..."
 -for i in  $LIBDIRS /lib  /usr/lib /usr/local/lib /opt/local/lib .
-+for i in  $LIBDIRS /lib  /usr/lib /usr/local/lib /opt/local/lib @PREFIX@/lib .
- do
+-do
+-    if [ "X" = "X$POSTGRES_PATH" ]; then
+-        if [ -f "$i/libpq.so" -o -f "$i/libpq.dylib" ]; then
+-            POSTGRES_PATH="$i"
++if [ "X$WITH_PGSQL" = "X1" ]; then
++    echo "Checking for Postgres (libpq) ..."
++    for i in  $LIBDIRS /lib  /usr/lib /usr/local/lib /opt/local/lib @PREFIX@/lib .
++    do
++        if [ "X" = "X$POSTGRES_PATH" ]; then
++            if [ -f "$i/libpq.so" -o -f "$i/libpq.dylib" ]; then
++                POSTGRES_PATH="$i"
++            fi
+         fi
++        if [ "X" = "X$POSTGRES_PATH" ]; then
++            TMP_LIB=`/bin/ls $i/libpq.so* /bin/cygpq*.dll 2> /dev/null | grep pq`
++            if [ -n "$TMP_LIB" ]; then
++              POSTGRES_PATH="$i"
++            fi
++        fi
++    done
++    if [ -n "$POSTGRES_PATH" ]; then
++        echo "                              ... found"
+     fi
      if [ "X" = "X$POSTGRES_PATH" ]; then
-         if [ -f "$i/libpq.so" -o -f "$i/libpq.dylib" ]; then
-@@ -119,7 +120,7 @@ if [ "X" = "X$POSTGRES_PATH" ]; then
+-        TMP_LIB=`/bin/ls $i/libpq.so* /bin/cygpq*.dll 2> /dev/null | grep pq`
+-        if [ -n "$TMP_LIB" ]; then
+-          POSTGRES_PATH="$i"
+-        fi
++        echo "                              ... NOT found, module postgres disabled"
+     fi
+-done
+-if [ -n "$POSTGRES_PATH" ]; then
+-    echo "                              ... found"
+-fi
+-if [ "X" = "X$POSTGRES_PATH" ]; then
+-    echo "                              ... NOT found, module postgres disabled"
  fi
  
- echo "Checking for SVN (ibsvn_client-1 libapr-0.so libaprutil-0.so) ..."
+-echo "Checking for SVN (ibsvn_client-1 libapr-0.so libaprutil-0.so) ..."
 -for i in  $LIBDIRS /lib  /usr/lib /usr/local/lib /opt/local/lib .
-+for i in  $LIBDIRS /lib  /usr/lib /usr/local/lib /opt/local/lib @PREFIX@/lib .
- do
+-do
+-    if [ "X" = "X$SVN_PATH" ]; then
+-        if [ -f "$i/libsvn_client-1.so" ]&&[ -f "$i/libapr-0.so" ]&&[ -f "$i/libaprutil-0.so" ]; then
+-            SVN_PATH="$i"
+-        fi
++if [ "X$WITH_SVN" = "X1" ]; then
++    echo "Checking for SVN (ibsvn_client-1 libapr-0.so libaprutil-0.so) ..."
++    for i in  $LIBDIRS /lib  /usr/lib /usr/local/lib /opt/local/lib @PREFIX@/lib .
++    do
++       if [ "X" = "X$SVN_PATH" ]; then
++           if [ -f "$i/libsvn_client-1.so" ]&&[ -f "$i/libapr-0.so" ]&&[ -f "$i/libaprutil-0.so" ]; then
++               SVN_PATH="$i"
++           fi
++       fi
++       if [ "X" = "X$SVN_PATH" ]; then
++           TMP_LIB=`/bin/ls $i/libsvn_client*.so* 2> /dev/null | grep libsvn_client.`
++           if [ -n "$TMP_LIB" ]; then
++             SVN_PATH="$i"
++           fi
++       fi
++    done
++    if [ -n "$SVN_PATH" ]; then
++       echo "                              ... found"
+     fi
      if [ "X" = "X$SVN_PATH" ]; then
-         if [ -f "$i/libsvn_client-1.so" ]&&[ -f "$i/libapr-0.so" ]&&[ -f "$i/libaprutil-0.so" ]; then
-@@ -183,7 +184,7 @@ if [ "$SAPR3_IPATH" = "/usr/include" ]; 
+-        TMP_LIB=`/bin/ls $i/libsvn_client*.so* 2> /dev/null | grep libsvn_client.`
+-        if [ -n "$TMP_LIB" ]; then
+-          SVN_PATH="$i"
+-        fi
++       echo "                              ... NOT found, module svn disabled"
+     fi
+-    
+-    
+-done
+-if [ -n "$SVN_PATH" ]; then
+-    echo "                              ... found"
+-fi
+-if [ "X" = "X$SVN_PATH" ]; then
+-    echo "                              ... NOT found, module svn disabled"
+ fi
+ 
+ echo "Checking for SAP/R3 (librfc/saprfc.h) ..."
+@@ -183,7 +186,7 @@ if [ "$SAPR3_IPATH" = "/usr/include" ]; 
  fi
  
  echo "Checking for libssh (libssh/libssh.h) ..."
@@ -48,7 +118,25 @@ $NetBSD: patch-ab,v 1.4 2006/05/12 23:35:55 adrianp Exp $
  do
      if [ "X" = "X$SSH_PATH" ]; then
          if [ -f "$i/libssh.so" -o -f "$i/libssh.dylib" ]; then
-@@ -207,7 +208,7 @@ do
+@@ -196,29 +199,33 @@ do
+           SSH_PATH="$i"
+         fi
+     fi
+-    if [ "X" = "X$SVN_IPATH" ]; then
+-        if [ -d "$i/subversion-1" ]; then
+-            SVN_IPATH="$i/subversion-1"
+-        fi
+-    fi  
++    if [ "X$WITH_SVN" = "X1" ]; then
++        if [ "X" = "X$SVN_IPATH" ]; then
++            if [ -d "$i/subversion-1" ]; then
++                SVN_IPATH="$i/subversion-1"
++            fi
++        fi  
++    fi
+     if [ "X" = "X$APR_IPATH" ]; then
+         if [ -d "$i/apr-0" ]; then
+             APR_IPATH="$i/apr-0"
          fi
      fi  
  done
@@ -57,7 +145,25 @@ $NetBSD: patch-ab,v 1.4 2006/05/12 23:35:55 adrianp Exp $
  do
      if [ "X" = "X$SSH_IPATH" ]; then
          if [ -f "$i/libssh/libssh.h" ]; then
-@@ -451,9 +452,3 @@ cat Makefile.unix > Makefile
+             SSH_IPATH="$i"
+         fi
+     fi
+-    if [ "X" = "X$SVN_IPATH" ]; then
+-        if [ -d "$i/subversion-1" ]; then
+-            SVN_IPATH="$i/subversion-1"
+-        fi
+-    fi  
++    if [ "X$WITH_SVN" = "X1" ]; then
++        if [ "X" = "X$SVN_IPATH" ]; then
++            if [ -d "$i/subversion-1" ]; then
++                SVN_IPATH="$i/subversion-1"
++            fi
++        fi  
++    fi
+     if [ "X" = "X$APR_IPATH" ]; then
+         if [ -d "$i/apr-0" ]; then
+             APR_IPATH="$i/apr-0"
+@@ -451,9 +458,3 @@ cat Makefile.unix > Makefile
  cat Makefile.in >> Makefile
  cat Makefile.am >> Makefile
  
