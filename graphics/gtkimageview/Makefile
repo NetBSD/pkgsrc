@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/31 00:09:13 gdt Exp $
+# $NetBSD: Makefile,v 1.2 2008/08/31 23:22:21 gdt Exp $
 
-DISTNAME=	gtkimageview-1.3.0
+DISTNAME=	gtkimageview-1.6.1
 CATEGORIES=	graphics
-MASTER_SITES=	http://trac.bjourne.webfactional.com/attachment/wiki/WikiStart/gtkimageview-1.3.0.tar.gz
+# See ticket:27 on trac, and until then, download by hand.
+MASTER_SITES=	http://trac.bjourne.webfactional.com/attachment/wiki/WikiStart/broken
 
 MAINTAINER=	gdt@NetBSD.org
-HOMEPAGE=	http://trac.bjourne.webfactional.com/wiki
+HOMEPAGE=	http://trac.bjourne.webfactional.com/
 COMMENT=	Image viewer widget for GTK
 
 GNU_CONFIGURE=	yes
