@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7497 2008/08/30 12:18:56 tron Exp $
+$NetBSD: TODO,v 1.7498 2008/08/31 12:40:03 markd Exp $
 
 Suggested new packages
 ======================
@@ -362,7 +362,6 @@ Suggested package updates
 	o GridSim-3.3
 	o MAMEDiff-2.29
 	o PAM-0.99.7.1
-	o R-2.7.1
 	o R-CGIwithR-0.72
 	o R-DAAG-0.91
 	o R-Matrix-0.9975.11
