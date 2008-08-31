@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1 2001/10/31 22:12:24 zuntum Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/08/31 06:52:29 dholland Exp $
 include/XMC/xmc.h
 include/XMC/xmcp.h
 lib/libXmc.so
@@ -8,6 +8,6 @@ lib/libXmc_d.a
 bin/xmx
 bin/xmtg
 bin/xmxinit
-man/man1/xmxinit.1x
-man/man1/xmx.1x
+${IMAKE_MAN_DIR}/xmxinit.${IMAKE_MANNEWSUFFIX}
+${IMAKE_MAN_DIR}/xmx.${IMAKE_MANNEWSUFFIX}
 @dirrm include/XMC
