@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/08/29 21:11:00 bjs Exp $
+# $NetBSD: Makefile,v 1.21 2008/08/31 13:12:23 drochner Exp $
 #
 
 DISTNAME=	mercurial-1.0.2
@@ -19,8 +19,6 @@ PYDISTUTILSPKG=	yes
 USE_TOOLS+=	gmake
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 ${PKGMANDIR}/man5
-
-MAKE_ENV+=	PYTHONBIN=${PYTHONBIN:Q}
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.1  ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
