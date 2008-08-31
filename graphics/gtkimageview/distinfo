@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/08/31 00:09:13 gdt Exp $
+
+SHA1 (gtkimageview-1.3.0.tar.gz) = 28e1c40c57462446edbd0eb968f6eb9ce1ebdded
+RMD160 (gtkimageview-1.3.0.tar.gz) = c393ef7c070f7c5031f98f9f85d5b245430dac19
+Size (gtkimageview-1.3.0.tar.gz) = 844294 bytes
