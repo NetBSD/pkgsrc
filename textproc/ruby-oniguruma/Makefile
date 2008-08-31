@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/08/22 20:01:25 ahoka Exp $
+# $NetBSD: Makefile,v 1.3 2008/08/31 21:46:40 ahoka Exp $
 
 DISTNAME=	oniguruma-1.1.0
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
@@ -10,6 +10,7 @@ COMMENT=	Fast regular expression library
 
 PKG_DESTDIR_SUPPORT=	destdir
 
+USE_TOOLS+=	pax
 GEM_BUILD=	gemspec
 
 .include "../../textproc/oniguruma/buildlink3.mk"
