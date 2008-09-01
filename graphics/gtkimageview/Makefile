@@ -1,9 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2008/08/31 23:22:21 gdt Exp $
+# $NetBSD: Makefile,v 1.3 2008/09/01 13:29:53 gdt Exp $
 
 DISTNAME=	gtkimageview-1.6.1
+PKGREVISION=	1
 CATEGORIES=	graphics
-# See ticket:27 on trac, and until then, download by hand.
-MASTER_SITES=	http://trac.bjourne.webfactional.com/attachment/wiki/WikiStart/broken
+# See http://trac.bjourne.webfactional.com/ticket/27
+# MASTER_SITES=	http://trac.bjourne.webfactional.com/attachment/wiki/WikiStart/broken
+MASTER_SITES=	http://www.lexort.com/pkgsrc/distfiles/
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://trac.bjourne.webfactional.com/
