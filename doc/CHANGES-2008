@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2039 2008/09/01 21:50:00 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2040 2008/09/01 22:31:02 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3514,3 +3514,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/drupal6-translations to 20080901 [taca 2008-09-01]
 	Updated devel/gtexinfo to 4.12 [obache 2008-09-01]
 	Added devel/p5-Test-Fixture-DBIC-Schema version 0.02 [seb 2008-09-01]
+	Added textproc/p5-String-Koremutake version 0.30 [seb 2008-09-01]
