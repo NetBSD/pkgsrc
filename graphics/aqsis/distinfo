@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.6 2006/05/11 19:00:26 joerg Exp $
+$NetBSD: distinfo,v 1.7 2008/09/01 08:02:23 dholland Exp $
 
 SHA1 (aqsis-0.6.4.tar.gz) = 7a8e10db5502907840d8d2f4269eb3b489875dd4
 RMD160 (aqsis-0.6.4.tar.gz) = d2b034e05d47e31aa040471be37b34750154e6e5
@@ -17,3 +17,6 @@ SHA1 (patch-ak) = 45ee2a15967b5c0f75ed4ba7ecc3790373f5e44d
 SHA1 (patch-al) = 3f721b5a28714c7ed601aace984096ef142c105b
 SHA1 (patch-am) = 8227295b85018e5294ab1c8ca5c415dbe0371282
 SHA1 (patch-an) = 2a0dead7923ce600b70577f9f476bc0bab527131
+SHA1 (patch-ao) = 8776ff34346420d34a0ccfa1f952815c7a0328b8
+SHA1 (patch-ap) = b8659e4027114c1f1ecd0e8ab9d9c4eed61575a1
+SHA1 (patch-aq) = e4e2aef5e57f58e2f5f02d00277084c73ce4fe74
