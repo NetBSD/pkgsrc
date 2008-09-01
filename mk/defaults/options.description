@@ -175,6 +175,39 @@ kqueue			Enable support for kernel event notification mechanism
 lablgtk			Use lablgtk.
 lablgtk1		Use lablgtk1 (GTK1).
 lame			Use the lame encoder to create MP3 files.
+lang-af			Add Afrikaans language support.
+lang-bg			Add Bulgarian language support.
+lang-ca			Add Catalan language support.
+lang-cs			Add Czech language support.
+lang-da			Add Danish language support.
+lang-de			Add German language support.
+lang-el			Add Greek language support.
+lang-es			Add Spanish language support.
+lang-fa			Add Persian language support.
+lang-fi			Add Finnish language support.
+lang-fr			Add French language support.
+lang-gu			Add Gujarati language support.
+lang-he			Add Hebrew language support.
+lang-hu			Add Hungarian language support.
+lang-is			Add Icelandic language support.
+lang-it			Add Italian language support.
+lang-ja			Add Japanese language support.
+lang-lt			Add Lithuanian language support.
+lang-lv			Add Latvian language support.
+lang-nl			Add Dutch language support.
+lang-no			Add Norwegian language support.
+lang-pl			Add Polish language support.
+lang-pt			Add Portuguese language support.
+lang-pt-br		Add Brazilian Portuguese language support.
+lang-ro			Add Romanian language support.
+lang-ru			Add Russian language support.
+lang-sk			Add Slovak language support.
+lang-sq			Add Albanian language support.
+lang-sr			Add Serbian language support.
+lang-sv			Add Swedish language support.
+lang-uk			Add Ukrainian language support.
+lang-zh-cn		Add Chinese Simplified language support.
+lang-zh-tw		Add Chinese Traditional language support.
 lcms			Enable Light Color Management System support.
 ldap			Enable LDAP support.
 libao			Enable libao support.
