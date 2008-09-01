@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.157 2008/05/26 02:13:20 joerg Exp $
+# $NetBSD: Makefile,v 1.158 2008/09/01 09:04:19 dholland Exp $
 
 DISTNAME=	netpbm-10.34
 PKGREVISION=	1
@@ -13,6 +13,7 @@ COMMENT=	Toolkit for conversion of images between different formats
 MAKE_JOBS_SAFE=	no
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=	bash:run gmake lex pax perl
 USE_FEATURES=	snprintf
@@ -92,12 +93,12 @@ post-install:
 	${FIND} * \! -type d -print | ${SORT} >${PLIST_SRC} &&	\
 	${FIND} * -type d -print | 				\
 	while read DIR; do					\
-		${TEST} -d "${PREFIX}/$${DIR}" ||		\
+		${TEST} -d "${DESTDIR}${PREFIX}/$${DIR}" ||	\
 			${ECHO} "@dirrm $${DIR}";		\
 	done >>${PLIST_SRC} &&					\
-	pax -rwpppm . ${PREFIX}
+	pax -rwpppm . ${DESTDIR}${PREFIX}
 	${RM} -fr ${STAGEDIR}
-	${FIND} ${PREFIX}/share/doc/netpbm -type f -print |	\
+	${FIND} ${DESTDIR}${PREFIX}/share/doc/netpbm -type f -print |	\
 		${XARGS} ${CHMOD} ${NONBINMODE}
 
 .include "../../mk/bsd.pkg.mk"
