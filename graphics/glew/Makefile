@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2007/02/15 14:58:20 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/09/01 10:06:33 dholland Exp $
 #
 
+DISTNAME=	glew-1.3.4-src
 PKGNAME=	glew-1.3.4
-DISTNAME=	${PKGNAME}-src
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=glew/}
 EXTRACT_SUFX=	.tgz
@@ -18,8 +19,11 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://glew.sourceforge.net/
 COMMENT=	OpenGL Extension Wrangler Library
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 post-extract:
 	${LN} -s Makefile.netbsdelf ${WRKSRC}/config/Makefile.dragonfly
+	${LN} -s Makefile.netbsdelf ${WRKSRC}/config/Makefile.netbsd
 
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
