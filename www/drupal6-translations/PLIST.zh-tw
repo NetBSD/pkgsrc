@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.zh-hant,v 1.1.1.1 2008/08/17 05:35:07 taca Exp $
+@comment $NetBSD: PLIST.zh-tw,v 1.1 2008/09/01 15:16:25 taca Exp $
 ${DRUPAL_BASE}/LICENSE.zh-hant.txt
 ${DRUPAL_BASE}/STATUS.zh-hant.txt
 ${DRUPAL_BASE}/modules/system/translations/general.zh-hant.po
