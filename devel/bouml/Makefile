@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:21 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/09/01 12:24:54 tonnerre Exp $
 #
 
 DISTNAME=		bouml_${BOUMLVERSION}
@@ -12,7 +12,7 @@ COMMENT=		UML modeling tool, generates C++, JAVA, and IDL
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-BOUMLVERSION=		2.27
+BOUMLVERSION=		4.5
 
 USE_LIBTOOL=		YES
 USE_TOOLS+=		gmake pax
