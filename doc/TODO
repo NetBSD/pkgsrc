@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7500 2008/09/01 08:26:39 dholland Exp $
+$NetBSD: TODO,v 1.7501 2008/09/01 20:49:36 wiz Exp $
 
 Suggested new packages
 ======================
@@ -361,6 +361,7 @@ Suggested package updates
 	o GWLib-0.7.0
 	o GridSim-3.3
 	o MAMEDiff-2.29
+	o ORBit2-2.14.14
 	o PAM-0.99.7.1
 	o R-CGIwithR-0.72
 	o R-DAAG-0.91
@@ -393,13 +394,14 @@ Suggested package updates
 	o RTx-Shredder-0.05
 	o RealPlayer-11
 	o SmartEiffel-2.3
+	o TeXmacs-1.0.6.15
 	o TiffIO-130e
 	o YoSucker-81
 	o ZIPIdent-2.9
 	o a2ps-4.14
 	o aap-0.144
 	o abcm2ps-5.8.1
-	o abcmidi-20080804
+	o abcmidi-20080813
 	o abiword-2.6.2
 	o acme-091
 	o acr-0.5.2
@@ -461,6 +463,7 @@ Suggested package updates
 	o avr-binutils-2.17
 	o avr-libc-1.4.5
 	o avrdude-5.3.1
+	o awesome-2.3.4
 	o baci-20040415
 	o bacula-2.2.8 [pkg/38572]
 	o bacula-2.4.1
@@ -483,6 +486,7 @@ Suggested package updates
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bochs-2.3.7
+	o bonnie++-1.94
 	o boolean-6.97
 	o boost-1.36.0
 	o bos-2.5
@@ -491,8 +495,10 @@ Suggested package updates
 	o btpd-0.13 [pkg/38144]
 	o byacc-20070509
 	o bzflag-2.0.10
+	o bzr-1.6
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
+	o cairomm-1.6.2
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o capistrano-2.4.3
@@ -501,7 +507,7 @@ Suggested package updates
 	o cdif-1.19
 	o cdlabelgen-4.0.0
 	o cdrkit-1.1.7.1
-	o cdrtools-2.01.01.46
+	o cdrtools-2.01.01.47 (pre)
 	o cfitsio-3.030
 	o cflow-1.2
 	o cgdb-0.6.4
@@ -554,6 +560,7 @@ Suggested package updates
 	o deskbar-applet-2.22.3.1
 	o devIL-1.6.7
 	o dhid-5.3
+	o dialog-1.1.20080819
 	o diffstat-1.46
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
@@ -574,6 +581,7 @@ Suggested package updates
 	o easytag-current-2.1.6
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
+	o ed-1.0
 	o ede-1.2
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o eggdrop-1.6.19
@@ -607,6 +615,7 @@ Suggested package updates
 	o f2c-20061008
 	o faces-1.7.7
 	o fakeroot-1.6.5
+	o fcrackzip-1.0
 	o fd-2.09c
 	o fdgw-20040609
 	o festival-1.96
@@ -637,7 +646,7 @@ Suggested package updates
 	o frozen-bubble-2.1.0
 	o ftplibpp-2.0.2
 	o fugu-1.2.3
-	o fuse-ntfs-3g-1.2712
+	o fuse-ntfs-3g-1.2812
 	o fvwm2-themes-0.7.0
 	o gap-4r4p9
 	o gated-3.6
@@ -687,7 +696,7 @@ Suggested package updates
 	o gob2-2.0.15
 	o gobo-eiffel-3.3 [does not work with smarteiffel-2.0; perhaps 2.1?]
 	o gocr-0.43
-	o goffice-0.7.0
+	o goffice-0.7.1
 	o gogo-3.11p1
 	o golem-0.0.6
 	o gossip-0.31
@@ -701,13 +710,18 @@ Suggested package updates
 	o granulate-0.2
 	o graphviz-2.20.2
 	o gri-2.12.8
+	o gsasl-0.2.28
 	o gsharutils-4.7
 	o gsm-1.0.12
 	o gss-0.0.22
+	o gst-plugins0.10-good-0.10.10
+	o gst-plugins0.10-ugly-0.10.9
 	o gtexinfo-4.12
 	o gthumb-2.10.9
 	o gtick-0.4.2
+	o gtk-sharp-2.12.2
 	o gtk-systrace-20030623
+	o gtkglarea-2.0.0
 	o gtklife-5.1
 	o gtksee-0.6.0b
 	o gtkspell-2.0.14
@@ -750,6 +764,7 @@ Suggested package updates
 	o ifile-1.3.8
 	o ifp-line-0.3 [pkg/38038]
 	o ike-2.0.1 [pkg/37032]
+	o ikiwiki-2.62.1
 	o imap-uw-2007b
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imapsync-1.255
@@ -761,6 +776,7 @@ Suggested package updates
 	o irrd-2.3.4 [pkg/36813|38002]
 	o irrtoolset-nox11-4.8.4
 	o iselect-1.4.0
+	o iso-codes-3.3
 	o ispell-gaeilge-4.1
 	o ispell-german-20071211
 	o ispell-slovak-0.3.2
@@ -807,6 +823,7 @@ Suggested package updates
 	o lft-2.5 [at http://pwhois.org/]
 	o lftp-3.7.3
 	o libFoundation-1.1.3
+	o libIDL-0.8.11
 	o libXau-1.0.4
 	o libast-0.7
 	o libcares-1.5.2
@@ -827,9 +844,11 @@ Suggested package updates
 	o libgiigic-1.1.2
 	o libgnomecups-0.2.3
 	o libgnomedb-3.1.2
+	o libgsf-1.14.9
 	o libgtop-2.22.3
 	o libhangul-0.0.8
 	o libhydrogen-0.9.2
+	o libidn-1.10
 	o libltdl-2.2.4
 	o liblzo-2.02
 	o libmatheval-1.1.6
@@ -840,8 +859,8 @@ Suggested package updates
 	o libole2-2.2.8
 	o libopensync-0.35
 	o libprelude-0.9.19
-	o libpreludedb-0.9.14
 	o libshout-2.2.2
+	o libsigsegv-2.6
 	o libssh-0.2
 	o libstatgrab-0.16
 	o libstree-0.4.2
@@ -849,15 +868,18 @@ Suggested package updates
 	o libtool-2.2.4
 	o libtool-base-2.2.4
 	o libxklavier-3.6
-	o lincvs-2.0.0 [now called CrossVC]
+	o libxml2-2.7.0
+	o lincvs-2.1.0 [now called CrossVC]
 	o linuxsms-0.77
 	o lmms-0.2.1
+	o loudmouth-1.4.2
 	o lout-3.31
 	o lpairs-1.0.3
 	o lq-sp-1.3.4.13
 	o lsh-2.0.3
 	o ltm-0.40
 	o ltris-1.0.12
+	o lua-5.1.4
 	o lucy-1.19p
 	o lzma-4.57
 	o maelstrom-sdl-3.0.6
@@ -922,7 +944,7 @@ Suggested package updates
 	o ncview-1.93b
 	o ne-2.01
 	o nelma-3.1
-	o neon-0.28.2
+	o neon-0.28.3
 	o nessus-3.2.0
 	o netcdf-4.0
 	o netperf-2.4.4
@@ -942,6 +964,8 @@ Suggested package updates
 	o nslint-2.1a7
 	o nspr-4.7.1
 	o nss-3.11.7
+	o ntop-3.3.7
+	o ntp-4.2.4p5
 	o nulib2-220
 	o nullmailer-1.04
 	o nut-13.9
@@ -974,8 +998,12 @@ Suggested package updates
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.007
 	o p5-DateTime-TimeZone-0.79
+	o p5-ExtUtils-CBuilder-0.24
 	o p5-HTTPD-User-Manage-1.62
+	o p5-IO-Socket-SSL-1.15
+	o p5-Locale-Maketext-Lexicon-0.68
 	o p5-MARC-1.38
+	o p5-Mail-IMAPClient-3.10
 	o p5-Math-Random-0.69
 	o p5-Net-Gnats-0.05
 	o p5-Net-ICQ2000-0.2.2
@@ -985,6 +1013,7 @@ Suggested package updates
 	o p5-Safe-Hole-0.10
 	o p5-Sendmail-AccessDB-0.09
 	o p5-Set-IntSpan-1.10
+	o p5-Socket6-0.22
 	o p5-Spreadsheet-WriteExcel-2.23
 	o p5-Term-Size-0.203
 	o p5-Test-Harness-2.64
@@ -1028,6 +1057,7 @@ Suggested package updates
 	o php4-yp-5.2.1
 	o phppgadmin-4.2
 	o phylip-3.65
+	o physfs-1.1.1
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
@@ -1077,6 +1107,7 @@ Suggested package updates
 	o py-ZopeInterface-3.3.0
 	o py-bdb-xml-2.1.8
 	o py-bsddb3-4.7.2
+	o py-cairo-1.6.4
 	o py-checker-0.8.17
 	o py-clearsilver-0.10.5
 	o py-curl-7.16.4
@@ -1084,10 +1115,11 @@ Suggested package updates
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
+	o py-html2text-2.32
 	o py-imagingtk-1.1.6
 	o py-kenosis-0.96
 	o py-ldap-2.3.4
-	o py-libxml2-2.6.32
+	o py-libxml2-2.7.0
 	o py-logging-0.4.9.6
 	o py-m2crypto-0.18.2
 	o py-mad-0.6
@@ -1103,6 +1135,7 @@ Suggested package updates
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.7
 	o py-sqlite2-2.4.1
+	o py-subversion-1.5.2
 	o py-sybase-0.37
 	o py-textile-2.0.11
 	o py-urwid-0.9.8.2
@@ -1194,11 +1227,13 @@ Suggested package updates
 	o sablecc-3.2
 	o samba-3.2.2
 	o sarg-2.2.5
+	o sawfish-1.3.4
 	o scamper-20070201
 	o scapy-1.1.1
 	o scew-0.4.0
 	o sch-3.8.3
 	o scm-5e5
+	o scmgit-1.6.0
 	o scons-0.98.1
 	o scribus-1.3.3.12
 	o scrollz-1.9.99
@@ -1259,6 +1294,7 @@ Suggested package updates
 	o streamripper-1.63.0
 	o subtitleeditor-0.22.3
 	o subtitleripper-0.3.4
+	o subversion-base-1.5.2
 	o sunbird-0.5 [ghen]
 	o suse_base-11.0
 	o swfdec-0.7.4
@@ -1267,7 +1303,7 @@ Suggested package updates
 	o systrace-1.6e
 	o tacacs-4.0.4.14
 	o taskjuggler-2.4.1
-	o tcl-8.5.3
+	o tcl-8.5.4
 	o tcl83-8.3.5
 	o tcpdpriv-0.9
 	o tcpdstat-0.9
@@ -1289,7 +1325,7 @@ Suggested package updates
 	o tig-0.11
 	o tile-0.7.4
 	o tinyproxy-1.7.0
-	o tk-8.5.3
+	o tk-8.5.4
 	o tk83-8.3.5
 	o tkcvs-8.1
 	o tkgate-1.8.7
@@ -1354,7 +1390,7 @@ Suggested package updates
 	o wxRemind-86
 	o wyrd-1.4.4
 	o x11perf-1.5
-	o x264-devel-20080809
+	o x264-devel-20080830
 	o xanalyser-1.30
 	o xaric-0.13.2
 	o xbindkeys-1.8.2
@@ -1374,7 +1410,7 @@ Suggested package updates
 	o xeukleides-1.0.1
 	o xf86-video-amd-2.10.1 [now xf86-video-geode]
 	o xf86-video-nsc-2.8.3
-	o xf86-video-nv-2.1.11
+	o xf86-video-nv-2.1.12
 	o xf86-video-tdfx-1.4.0
 	o xfe-1.19.1
 	o xfstt-1.7
