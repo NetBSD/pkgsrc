@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/09/01 13:29:53 gdt Exp $
+# $NetBSD: Makefile,v 1.4 2008/09/01 14:31:53 gdt Exp $
 
 DISTNAME=	gtkimageview-1.6.1
 PKGREVISION=	1
@@ -6,6 +6,10 @@ CATEGORIES=	graphics
 # See http://trac.bjourne.webfactional.com/ticket/27
 # MASTER_SITES=	http://trac.bjourne.webfactional.com/attachment/wiki/WikiStart/broken
 MASTER_SITES=	http://www.lexort.com/pkgsrc/distfiles/
+# This package has no NEWS, and it is very difficult to find the summary of changes.
+# See http://trac.bjourne.webfactional.com/ticket/28 in which the author points
+# to the following URL for the content that would normally be in NEWS:
+# http://trac.bjourne.webfactional.com/chrome/common/gtkimageview-docs/releasehistory.html
 
 MAINTAINER=	gdt@NetBSD.org
 HOMEPAGE=	http://trac.bjourne.webfactional.com/
