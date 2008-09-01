@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2006/04/20 18:34:07 is Exp $
+$NetBSD: patch-aa,v 1.2.20.1 2008/09/01 06:08:43 spz Exp $
 
 --- session.c.orig	Sat Jun 29 21:27:04 2002
 +++ session.c
@@ -20,17 +20,3 @@ $NetBSD: patch-aa,v 1.2 2006/04/20 18:34:07 is Exp $
  		else add_chr_to_str(&u, &l, (unhx(url[1]) << 4) + unhx(url[2])), url += 2;
  	}
  	return u;
-@@ -2047,6 +2047,13 @@ void goto_url_f(struct session *ses, voi
- /* this doesn't send referer */
- void goto_url(struct session *ses, unsigned char *url)
- {
-+	char *p;
-+	p = url + strlen(url);
-+	do {
-+		--p;
-+	} while (isspace(*p));
-+	*++p = 0;
-+
- 	goto_url_f(ses, NULL, url, NULL, NULL, -1, 0, 1, 0);
- }
- 
