@@ -1,14 +1,15 @@
-$NetBSD: patch-aa,v 1.1.1.1 2006/08/15 15:21:27 abs Exp $
+$NetBSD: patch-aa,v 1.2 2008/09/01 10:06:33 dholland Exp $
 
 --- config/Makefile.netbsdelf.orig	2006-02-03 13:24:33.000000000 +0000
 +++ config/Makefile.netbsdelf
-@@ -0,0 +1,21 @@
+@@ -0,0 +1,23 @@
 +NAME = $(GLEW_NAME)
 +CC = cc
 +LD = ld
 +ifneq (undefined, $(origin GLEW_MX))
 +CFLAGS.EXTRA = -DGLEW_MX
 +endif
++PICFLAG = -fPIC
 +X11 ?= /usr/X11R6
 +LDFLAGS.SO = -shared -soname $(LIB.SONAME)
 +LDFLAGS.EXTRA ?= -L${X11}/lib
@@ -24,3 +25,4 @@ $NetBSD: patch-aa,v 1.1.1.1 2006/08/15 15:21:27 abs Exp $
 +LIB.DEVLNK = lib$(NAME).so
 +LIB.SHARED = lib$(NAME).so.$(SO_VERSION)
 +LIB.STATIC = lib$(NAME).a
++SHARED_OBJ_EXT = pic_o
