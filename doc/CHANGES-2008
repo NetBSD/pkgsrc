@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2034 2008/09/01 10:07:07 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.2035 2008/09/01 12:25:31 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3509,3 +3509,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/elmo to 1.3.2nb3 [dholland 2008-08-31]
 	Updated graphics/rayshade to 4.0nb4 [dholland 2008-09-01]
 	Updated graphics/glew to 1.3.4nb1 [dholland 2008-09-01]
+	Updated devel/bouml to 4.5 [tonnerre 2008-09-01]
