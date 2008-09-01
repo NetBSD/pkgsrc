@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1 2008/01/30 08:19:26 obache Exp $
+$NetBSD: patch-am,v 1.2 2008/09/01 17:53:47 christos Exp $
 
---- util/texi2dvi.orig	2007-09-10 00:36:30.000000000 +0000
-+++ util/texi2dvi
-@@ -1037,7 +1037,7 @@ uncomment_iftex='s/^@c texi2dvi//'
+--- util/texi2dvi.orig	2008-04-17 21:45:49.000000000 +0300
++++ util/texi2dvi	2008-09-01 19:43:58.000000000 +0300
+@@ -1094,7 +1094,7 @@
  # main info output, the user asked to run TeX, not makeinfo.
  run_makeinfo ()
  {
