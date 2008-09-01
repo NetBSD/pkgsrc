@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/01 21:45:58 seb Exp $
+
+SHA1 (Test-Fixture-DBIC-Schema-0.02.tar.gz) = 863782e9c35d507d4f9b9ace8e9612bc9f0551c7
+RMD160 (Test-Fixture-DBIC-Schema-0.02.tar.gz) = 0f32721142da265e0c1b78a38fd42fecc27f756e
+Size (Test-Fixture-DBIC-Schema-0.02.tar.gz) = 35637 bytes
