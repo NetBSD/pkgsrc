@@ -1,0 +1,6 @@
+The Perl 5 module String::Koremutake convert to/from Koremutake
+Memorable Random Strings. The term "Memorable Random String" was
+thought up by Sean B. Palmer as a name for those strings like
+dopynl, glargen, glonknic, spoopwiddle, and kebble etc. that don't
+have any conventional sense, but can be used as random identifiers,
+especially in URIs to keep them persistent.
