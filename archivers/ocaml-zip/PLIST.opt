@@ -1,0 +1,6 @@
+@comment $NetBSD: PLIST.opt,v 1.1.1.1 2008/09/02 11:45:32 obache Exp $
+lib/ocaml/site-lib/zip/gzip.cmx
+lib/ocaml/site-lib/zip/zip.a
+lib/ocaml/site-lib/zip/zip.cmx
+lib/ocaml/site-lib/zip/zip.cmxa
+lib/ocaml/site-lib/zip/zlib.cmx
