@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2047 2008/09/02 21:09:26 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.2048 2008/09/02 21:52:00 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3522,3 +3522,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added archivers/ocaml-zip version 1.03 [obache 2008-09-02]
 	Updated textproc/uriparser to 0.7.2 [bjs 2008-09-02]
 	Updated chat/inspircd to 1.1.21 [adrianp 2008-09-02]
+	Added databases/p5-DBIx-Class-InflateColumn-IP version 0.02001 [seb 2008-09-02]
