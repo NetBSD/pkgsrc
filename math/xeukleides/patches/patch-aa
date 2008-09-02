@@ -1,31 +1,30 @@
-$NetBSD: patch-aa,v 1.2 2004/12/31 13:13:32 kristerw Exp $
+$NetBSD: patch-aa,v 1.3 2008/09/02 05:33:32 obache Exp $
 
---- Makefile.orig	Wed May 12 21:20:31 2004
-+++ Makefile	Fri Dec 31 14:06:58 2004
-@@ -6,10 +6,9 @@
- OBJECTS = lex.yy.o parser.tab.o main.o geometry.o drawing.o
- LEX = flex
- YACC = bison -d
--PREFIX = /usr/local/
--BIN = $(PREFIX)bin/
--MAN = $(PREFIX)man/man1/
--INFO = $(PREFIX)info/
-+BIN = $(PREFIX)/bin/
-+MAN = $(PREFIX)/man/man1/
-+INFO = $(PREFIX)/info/
+eukleides.info is already installed with eukleides package
+
+--- Makefile.orig	2005-05-27 15:08:29.000000000 +0000
++++ Makefile
+@@ -10,7 +10,7 @@ YACC = bison -d
+ include Config
+ 
+ BINDIR = $(PREFIX)/bin
+-MANDIR = $(PREFIX)/man/man1
++MANDIR = $(PREFIX)/${PKGMANDIR}/man1
+ INFODIR = $(PREFIX)/info
  PAPER = --texinfo=@afourpaper
  DOC = eukleides.info eukleides.dvi eukleides.ps
- 
-@@ -40,11 +39,9 @@
+@@ -43,12 +43,9 @@ dvi : eukleides.texi
  book : dvi
  	dvips -f eukleides.dvi > eukleides.ps
  
--install : xeukleides man info
-+install : xeukleides man
- 	strip xeukleides ; \
- 	cp -f xeukleides $(BIN)xeukleides ; \
--	install-info eukleides.info $(INFO)dir ; \
--	cp -f eukleides.info $(INFO)eukleides.info
+-install : $(BIN) man info
++install : $(BIN) man
+ 	install -d $(BINDIR) ; \
+-	install -s $(BIN) $(BINDIR) ; \
+-	install -d $(INFODIR) ; \
+-	install-info eukleides.info $(INFODIR)/dir ; \
+-	install -m 0644 eukleides.info $(INFODIR)
++	install -s $(BIN) $(BINDIR)
  
  uninstall :
- 	rm -f $(BIN)xeukleides ; \
+ 	rm -f $(BINDIR)/$(BIN) ; \
