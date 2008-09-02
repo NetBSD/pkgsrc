@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/09/02 07:18:26 tonnerre Exp $
+
+--- configure.orig	2008-09-01 23:56:40.000000000 +0200
++++ configure
+@@ -1256,7 +1256,7 @@ myexec=$exec_prefix
+ test "x$myprefix" = xNONE && myprefix=$ac_default_prefix
+ test "x$myexec" = xNONE && myexec=${myprefix}
+ ABSEXECDIR=$myexec
+-ABSSHRDDIR=$myprefix
++ABSSHRDDIR=$myprefix/share
+ cat >> confdefs.h <<EOF
+ #define ABSEXECDIR "$myexec"
+ EOF

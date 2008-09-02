@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/02 07:18:26 tonnerre Exp $
+
+SHA1 (mico-2.3.12.tar.gz) = e1885362d559ea97c62a2437a1d3a94114ef5b05
+RMD160 (mico-2.3.12.tar.gz) = 2f45ace5044233f171ac8e4fd389d523befaca51
+Size (mico-2.3.12.tar.gz) = 2837502 bytes
+SHA1 (patch-aa) = 1a69df4063234d956ab10bf2cbbcaa34508923ad
+SHA1 (patch-ab) = 7b7b9bd7af7690f8b3340dca7bfb9a136fd1f292
+SHA1 (patch-ac) = a9f063059daec082ff9813b3d15020272770c14c

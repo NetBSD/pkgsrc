@@ -1,0 +1,28 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/02 07:18:26 tonnerre Exp $
+
+--- admin/Makefile.orig	2005-11-25 12:15:45.000000000 +0100
++++ admin/Makefile
+@@ -33,9 +33,9 @@ mkdepend: mkdepend.o
+ 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $< $(CONFLIBS) -o $@
+ 
+ install:
+-	$(IDIRCMD) $(INSTDIR)/lib
+-	$(ISCRIPTCMD) mico-setup.sh $(INSTDIR)/lib
+-	$(ISCRIPTCMD) mico-setup.csh $(INSTDIR)/lib
++	$(IDIRCMD) $(SHARED_INSTDIR)/mico
++	$(ISCRIPTCMD) mico-setup.sh $(SHARED_INSTDIR)/mico
++	$(ISCRIPTCMD) mico-setup.csh $(SHARED_INSTDIR)/mico
+ 	$(IDIRCMD) $(INSTDIR)/bin
+ 	test -f mico-c++   && $(ISCRIPTCMD) mico-c++   $(INSTDIR)/bin
+ 	test -f mico-ld    && $(ISCRIPTCMD) mico-ld    $(INSTDIR)/bin
+@@ -48,8 +48,8 @@ endif
+ 	test -f mico-config && $(ISCRIPTCMD) mico-config $(INSTDIR)/bin
+ 
+ install-cd: install
+-	$(ISCRIPTCMD) mico-setup.sh.in $(INSTDIR)/lib
+-	$(ISCRIPTCMD) mico-setup.csh.in $(INSTDIR)/lib
++	$(ISCRIPTCMD) mico-setup.sh.in $(SHARED_INSTDIR)/mico
++	$(ISCRIPTCMD) mico-setup.csh.in $(SHARED_INSTDIR)/mico
+ 
+ clean:
+ #	rm -f mico-setup.sh mico-setup.csh
