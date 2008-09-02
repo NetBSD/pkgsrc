@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7501 2008/09/01 20:49:36 wiz Exp $
+$NetBSD: TODO,v 1.7502 2008/09/02 02:43:11 obache Exp $
 
 Suggested new packages
 ======================
@@ -1466,6 +1466,7 @@ Suggested package updates
 	o youtube-dl-20080809
 	o ysm-2.9.9.1
 	o yudit-2.9.0
+	o yorick-2.1.05
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
 	o zile-2.2.61
