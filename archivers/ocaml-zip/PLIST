@@ -1,0 +1,14 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/02 11:45:32 obache Exp $
+@unexec %D/libexec/ocaml-findlib-register del %D/lib/ocaml/site-lib/zip
+lib/ocaml/site-lib/zip/META
+lib/ocaml/site-lib/zip/dllcamlzip.so
+lib/ocaml/site-lib/zip/gzip.cmi
+lib/ocaml/site-lib/zip/gzip.mli
+lib/ocaml/site-lib/zip/libcamlzip.a
+lib/ocaml/site-lib/zip/zip.cma
+lib/ocaml/site-lib/zip/zip.cmi
+lib/ocaml/site-lib/zip/zip.mli
+lib/ocaml/site-lib/zip/zlib.cmi
+lib/ocaml/site-lib/zip/zlib.mli
+@exec %D/libexec/ocaml-findlib-register add %D/lib/ocaml/site-lib/zip
+@dirrm lib/ocaml/site-lib/zip

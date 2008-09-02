@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/02 11:45:32 obache Exp $
+
+SHA1 (camlzip-1.03.tar.gz) = ecb4cbbdeb673d0aacdc961f38e4a14d5cf1627b
+RMD160 (camlzip-1.03.tar.gz) = fc773c0e351863538817f5c803a1b1d6cf9bc6e5
+Size (camlzip-1.03.tar.gz) = 24562 bytes
+SHA1 (patch-aa) = 1065dd91a8482d283db81e1fa24353f55eb1861f
