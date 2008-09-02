@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/06/27 19:57:49 tron Exp $
+# $NetBSD: Makefile,v 1.6.4.1 2008/09/02 14:13:33 rtr Exp $
 
 DISTNAME=	Python-2.5.2
 PKGNAME=	python25-2.5.2
-PKGREVISION=	1
+PKGREVISION=	3
 CATEGORIES=	lang python
 MASTER_SITES=	ftp://ftp.python.org/pub/python/2.5.2/ \
 		http://www.python.org/ftp/python/2.5.2/
@@ -156,8 +156,12 @@ post-install:
 		${DESTDIR}${PREFIX}/lib/libpython2.5.sl.1.0
 .endif
 
+USE_GNU_READLINE=			yes
+BUILDLINK_DEPMETHOD.readline=		build
+
 .include "../../archivers/bzip2/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/readline/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
