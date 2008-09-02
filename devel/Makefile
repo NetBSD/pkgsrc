@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.999 2008/09/02 11:21:23 obache Exp $
+# $NetBSD: Makefile,v 1.1000 2008/09/02 23:11:32 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -688,6 +688,7 @@ SUBDIR+=	p5-Term-ReadPassword
 SUBDIR+=	p5-Term-Screen
 SUBDIR+=	p5-Term-Size
 SUBDIR+=	p5-Test-Assertions
+SUBDIR+=	p5-Test-Base
 SUBDIR+=	p5-Test-ClassAPI
 SUBDIR+=	p5-Test-Cmd
 SUBDIR+=	p5-Test-Deep
