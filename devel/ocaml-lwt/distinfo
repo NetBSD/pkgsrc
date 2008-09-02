@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/02 11:19:35 obache Exp $
+
+SHA1 (lwt-1.1.0.tar.gz) = 838d99ce53accb4d0a393c4dd0f757d130a6bc2c
+RMD160 (lwt-1.1.0.tar.gz) = e7359a29af3c91ac006dfb3fc1150264aa27927b
+Size (lwt-1.1.0.tar.gz) = 32844 bytes
+SHA1 (patch-aa) = 84e614fd2734309a4dc83fbda25a5cad175a3e0b

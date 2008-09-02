@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST.opt,v 1.1.1.1 2008/09/02 11:19:35 obache Exp $
+lib/ocaml/site-lib/lwt/lwt.a
+lib/ocaml/site-lib/lwt/lwt.cmx
+lib/ocaml/site-lib/lwt/lwt.cmxa
+lib/ocaml/site-lib/lwt/lwt_chan.cmx
+lib/ocaml/site-lib/lwt/lwt_extra.a
+lib/ocaml/site-lib/lwt/lwt_extra.cmxa
+lib/ocaml/site-lib/lwt/lwt_lib.cmx
+lib/ocaml/site-lib/lwt/lwt_mutex.cmx
+lib/ocaml/site-lib/lwt/lwt_pool.cmx
+lib/ocaml/site-lib/lwt/lwt_preemptive.a
+lib/ocaml/site-lib/lwt/lwt_preemptive.cmx
+lib/ocaml/site-lib/lwt/lwt_preemptive.cmxa
+lib/ocaml/site-lib/lwt/lwt_ssl.a
+lib/ocaml/site-lib/lwt/lwt_ssl.cmx
+lib/ocaml/site-lib/lwt/lwt_ssl.cmxa
+lib/ocaml/site-lib/lwt/lwt_timeout.cmx
+lib/ocaml/site-lib/lwt/lwt_unix.cmx
+lib/ocaml/site-lib/lwt/lwt_util.cmx
+lib/ocaml/site-lib/lwt/pqueue.cmx

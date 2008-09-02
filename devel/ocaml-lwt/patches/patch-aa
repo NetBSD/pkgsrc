@@ -1,0 +1,20 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/02 11:19:35 obache Exp $
+
+--- Makefile.orig	2008-07-07 11:24:41.000000000 +0200
++++ Makefile	2008-07-07 11:24:56.000000000 +0200
+@@ -36,13 +36,13 @@
+ all: META byte opt doc
+ 
+ byte:
+-	$(OCAMLBUILD) $(ARCHIVES_BYTE)
++	$(OCAMLBUILD) -byte-plugin $(ARCHIVES_BYTE)
+ 
+ opt:
+ 	$(OCAMLBUILD) $(ARCHIVES_OPT)
+ 
+ doc:
+-	$(OCAMLBUILD) lwt.docdir/index.html
++	$(OCAMLBUILD) -byte-plugin lwt.docdir/index.html
+ 
+ examples:
+ 	$(MAKE) -C examples
