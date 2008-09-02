@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.56 2008/09/02 12:02:36 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.57 2008/09/02 14:18:05 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -129,3 +129,5 @@ Pullup ticket #2502 - requested by is
 links and links-gui: pullup fix for pr
 Pullup ticket #2512 - requested by tonio
 bitlbee: security update
+pullup ticket #2511 - requested by tron
+python25: update for security fixes
