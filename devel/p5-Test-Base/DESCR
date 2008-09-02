@@ -1,0 +1,5 @@
+The Perl 5 module Test::Base provides a way to trivially write a
+test framework base class.
+Test::Base concentrates on offering reusable data driven patterns,
+it provides some clean ways to express input and expected output
+data.
