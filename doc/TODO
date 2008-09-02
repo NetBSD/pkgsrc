@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7502 2008/09/02 02:43:11 obache Exp $
+$NetBSD: TODO,v 1.7503 2008/09/02 03:00:43 obache Exp $
 
 Suggested new packages
 ======================
@@ -1112,6 +1112,7 @@ Suggested package updates
 	o py-clearsilver-0.10.5
 	o py-curl-7.16.4
 	o py-docutils-0.5
+	o py-fpconst-0.7.3
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
