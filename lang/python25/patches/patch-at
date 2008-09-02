@@ -1,8 +1,19 @@
-$NetBSD: patch-at,v 1.1.1.1 2008/04/24 01:50:58 tnn Exp $
+$NetBSD: patch-at,v 1.1.1.1.4.1 2008/09/02 14:13:33 rtr Exp $
 
---- Modules/mmapmodule.c.orig	2006-08-22 09:57:07.000000000 -0400
-+++ Modules/mmapmodule.c
-@@ -449,6 +449,9 @@ mmap_resize_method(mmap_object *self,
+The first change is part of the fix for CVE-2008-2315 taken from Gentto.
+
+--- Modules/mmapmodule.c.orig	2006-08-22 14:57:07.000000000 +0100
++++ Modules/mmapmodule.c	2008-08-30 10:16:13.000000000 +0100
+@@ -223,7 +223,7 @@
+ 		return(NULL);
+ 
+ 	/* silently 'adjust' out-of-range requests */
+-	if ((self->pos + num_bytes) > self->size) {
++	if (num_bytes > self->size - self->pos) {
+ 		num_bytes -= (self->pos+num_bytes) - self->size;
+ 	}
+ 	result = Py_BuildValue("s#", self->data+self->pos, num_bytes);
+@@ -449,6 +449,9 @@
  
  #ifdef MREMAP_MAYMOVE
  		newmap = mremap(self->data, self->size, new_size, MREMAP_MAYMOVE);
