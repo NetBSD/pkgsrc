@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7504 2008/09/02 03:12:22 obache Exp $
+$NetBSD: TODO,v 1.7505 2008/09/02 05:34:46 obache Exp $
 
 Suggested new packages
 ======================
@@ -607,7 +607,6 @@ Suggested package updates
 	o esh-0.8.5
 	o et-2.60
 	o etach-1.4.1
-	o eukleides-1.0.3
 	o evolution-exchange-2.22.1.2
 	o ex-20050325
 	o ezmlm-idx-5.1.2 [schmonz]
@@ -1409,7 +1408,6 @@ Suggested package updates
 	o xerces-c-2.9.0
 	o xerces-j-2.4.0 [pkg/21725]
 	o xerces-j-2.9.0
-	o xeukleides-1.0.1
 	o xf86-video-amd-2.10.1 [now xf86-video-geode]
 	o xf86-video-nsc-2.8.3
 	o xf86-video-nv-2.1.12
