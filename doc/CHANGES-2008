@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2041 2008/09/02 05:28:58 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2042 2008/09/02 05:34:04 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3516,3 +3516,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Test-Fixture-DBIC-Schema version 0.02 [seb 2008-09-01]
 	Added textproc/p5-String-Koremutake version 0.30 [seb 2008-09-01]
 	Updated math/eukleides to 1.0.3 [obache 2008-09-02]
+	Updated math/xeukleides to 1.0.1 [obache 2008-09-02]
