@@ -1,5 +1,5 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.3 2006/05/06 22:38:27 wiz Exp $
+$NetBSD: MESSAGE,v 1.4 2008/09/02 23:13:43 epg Exp $
 
 To run Zope, you need to make a new Zope instance home.
 
@@ -21,7 +21,7 @@ To run Zope, you need to make a new Zope instance home.
 If you want to run Zope with following protocols, you need to
 install corresponding packages.
 
-  HTTPS: security/py-OpsnSSL
+  HTTPS: security/py-OpenSSL
   SFTP: security/py-amkCrypto
 
 ===========================================================================
