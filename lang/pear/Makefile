@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2007/09/05 19:46:55 jdolecek Exp $
+# $NetBSD: Makefile,v 1.6 2008/09/02 17:37:59 adrianp Exp $
 #
 
 DISTNAME=	PEAR-1.5.4
@@ -53,7 +53,8 @@ DISTFILES+=		${STRUCTURES_SRCS}
 SUBST_CLASSES+=		config
 SUBST_STAGE.config=	post-patch
 SUBST_FILES.config=	install/go-pear.php
-SUBST_SED.config=	-e "s|@PREFIX@|${PREFIX}|g"
+SUBST_SED.config=	-e "s|@WRKSRC@|${WRKSRC}|g"
+SUBST_SED.config+=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_SED.config+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.config=	Fixing configuration files.
 
