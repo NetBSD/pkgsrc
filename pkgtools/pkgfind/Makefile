@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2007/12/27 23:19:06 minskim Exp $
+# $NetBSD: Makefile,v 1.21 2008/09/02 11:09:59 obache Exp $
 
 DISTNAME=	pkgfind-20050804
 CATEGORIES=	pkgtools
@@ -9,6 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Find packages by package name in pkgsrc
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CHECKSUM=	yes
 
@@ -17,15 +18,15 @@ USE_FEATURES=	err getprogname setprogname snprintf warn
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-extract:
-	@${CP} -R ${FILESDIR} ${WRKSRC}
+	${CP} -R ${FILESDIR} ${WRKSRC}
 
 do-build:
 	${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS} -o ${WRKSRC}/pkgfind	\
 		${WRKSRC}/pkgfind.c ${LIBS}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/pkgfind ${PREFIX}/bin/pkgfind
-	${INSTALL_MAN} ${WRKSRC}/pkgfind.1 ${PREFIX}/${PKGMANDIR}/man1/pkgfind.1
+	${INSTALL_PROGRAM} ${WRKSRC}/pkgfind ${DESTDIR}${PREFIX}/bin/pkgfind
+	${INSTALL_MAN} ${WRKSRC}/pkgfind.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/pkgfind.1
 
 SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
