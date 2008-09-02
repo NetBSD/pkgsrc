@@ -1,10 +1,5 @@
-$NetBSD: distinfo,v 1.20 2008/04/20 09:31:05 tonio Exp $
+$NetBSD: distinfo,v 1.20.4.1 2008/09/02 11:58:48 tron Exp $
 
-SHA1 (bitlbee-1.2.tar.gz) = 71dc24e9025375460e999345db70fb5dff7d45d8
-RMD160 (bitlbee-1.2.tar.gz) = c48c5f8af418ba4fe7310732ced6290521cc656e
-Size (bitlbee-1.2.tar.gz) = 469482 bytes
-SHA1 (patch-aa) = 98777f99f0c7b6c85ed4378e21e297fcd3bde469
-SHA1 (patch-ab) = 3809cd770ccd1f24a8fade2ab34b78eac0a7833b
-SHA1 (patch-ac) = af439858786aba85e16fbcb6ff5149a87ee0a295
-SHA1 (patch-ad) = 6168115d6a990a7cd29d665864a9212a6efc5344
-SHA1 (patch-ae) = 0c4ccfe673c7829d8a4f163af2262fcc59dbc35c
+SHA1 (bitlbee-1.2.2.tar.gz) = 3dd2e9fcfa149d7731ead73592247de90d3de33c
+RMD160 (bitlbee-1.2.2.tar.gz) = e18fb4b6e9092cdd546ef12207c49352c42a21d3
+Size (bitlbee-1.2.2.tar.gz) = 475550 bytes
