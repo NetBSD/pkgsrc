@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2048 2008/09/02 21:52:00 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2049 2008/09/02 22:39:04 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3523,3 +3523,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/uriparser to 0.7.2 [bjs 2008-09-02]
 	Updated chat/inspircd to 1.1.21 [adrianp 2008-09-02]
 	Added databases/p5-DBIx-Class-InflateColumn-IP version 0.02001 [seb 2008-09-02]
+	Added textproc/p5-Template-Declare version 0.29 [seb 2008-09-02]
