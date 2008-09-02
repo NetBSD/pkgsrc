@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.1.1.1 2007/05/05 21:21:47 adrianp Exp $
+$NetBSD: patch-aa,v 1.2 2008/09/02 17:37:59 adrianp Exp $
 
 --- install/go-pear.php.orig	2007-04-15 23:09:15.000000000 +0100
 +++ install/go-pear.php
@@ -120,7 +120,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2007/05/05 21:21:47 adrianp Exp $
 -        $test_dir  = '$php_dir/tests';
 -        $temp_dir   = '$prefix/temp';
 +        $test_dir  = '$php_dir/test';
-+        $temp_dir  = '/tmp';
++        $temp_dir  = '@WRKSRC@/tmp';
 +
 +/*
  
