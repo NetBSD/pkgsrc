@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.262 2008/08/29 20:17:08 seb Exp $
+# $NetBSD: Makefile,v 1.263 2008/09/02 21:51:00 seb Exp $
 #
 
 COMMENT=	Databases
@@ -91,6 +91,7 @@ SUBDIR+=	p5-DBIx-Abstract
 SUBDIR+=	p5-DBIx-Class
 SUBDIR+=	p5-DBIx-Class-DigestColumns
 SUBDIR+=	p5-DBIx-Class-Fixtures
+SUBDIR+=	p5-DBIx-Class-InflateColumn-IP
 SUBDIR+=	p5-DBIx-Class-Loader
 SUBDIR+=	p5-DBIx-Class-Schema-Loader
 SUBDIR+=	p5-DBIx-Class-UUIDColumns
