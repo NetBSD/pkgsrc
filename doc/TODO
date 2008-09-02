@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7506 2008/09/02 13:06:49 taca Exp $
+$NetBSD: TODO,v 1.7507 2008/09/02 22:23:30 epg Exp $
 
 Suggested new packages
 ======================
@@ -495,7 +495,6 @@ Suggested package updates
 	o btpd-0.13 [pkg/38144]
 	o byacc-20070509
 	o bzflag-2.0.10
-	o bzr-1.6
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
 	o cairomm-1.6.2
