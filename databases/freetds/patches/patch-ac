@@ -1,0 +1,16 @@
+$NetBSD: patch-ac,v 1.6 2008/09/02 00:58:07 grant Exp $
+
+--- doc/Makefile.in.orig	2008-05-08 08:59:15.000000000 +1000
++++ doc/Makefile.in
+@@ -627,8 +627,9 @@ install-data-local: installdirs $(DOCDIR
+ 	if test -r $(DOCDIR)/reference ; then d=.; else d="$(srcdir)"; fi; \
+ 	find $$d/$(DOCDIR)/reference \( -type f -o -type l \) -exec \
+ 		$(INSTALL_DATA) {} $(TARGET_DOCDIR)/reference ';'
+-	cd $(srcdir) && find images -name \*.gif -exec \
+-		$(INSTALL_DATA) {} $(TARGET_DOCDIR)/{} ';'
++	cd $(srcdir) && for f in `find images -name \*.gif`; do \
++		$(INSTALL_DATA) $$f $(TARGET_DOCDIR)/$$f; \
++	done
+ 
+ uninstall-local:
+ 	rm -rf $(TARGET_DOCDIR)
