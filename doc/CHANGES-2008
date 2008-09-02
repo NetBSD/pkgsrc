@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2040 2008/09/01 22:31:02 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2041 2008/09/02 05:28:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3515,3 +3515,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/gtexinfo to 4.12 [obache 2008-09-01]
 	Added devel/p5-Test-Fixture-DBIC-Schema version 0.02 [seb 2008-09-01]
 	Added textproc/p5-String-Koremutake version 0.30 [seb 2008-09-01]
+	Updated math/eukleides to 1.0.3 [obache 2008-09-02]
