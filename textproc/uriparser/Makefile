@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/06/13 05:06:52 bjs Exp $
+# $NetBSD: Makefile,v 1.3 2008/09/02 12:53:42 bjs Exp $
 #
 
-DISTNAME=	uriparser-0.7.1
+DISTNAME=	uriparser-0.7.2
 CATEGORIES=	textproc
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=uriparser/}
 EXTRACT_SUFX=	.tar.bz2
