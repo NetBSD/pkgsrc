@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2043 2008/09/02 07:19:27 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.2044 2008/09/02 11:19:58 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3518,3 +3518,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated math/eukleides to 1.0.3 [obache 2008-09-02]
 	Updated math/xeukleides to 1.0.1 [obache 2008-09-02]
 	Added devel/mico version 2.3.12 [tonnerre 2008-09-02]
+	Added devel/ocaml-lwt version 1.1.0 [obache 2008-09-02]
