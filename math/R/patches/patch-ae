@@ -1,0 +1,41 @@
+$NetBSD: patch-ae,v 1.14.18.1 2008/09/02 19:39:45 tron Exp $
+
+From SVN revision r46461
+
+--- src/scripts/javareconf.orig	2008-03-26 01:26:44.000000000 +1300
++++ src/scripts/javareconf
+@@ -125,16 +125,28 @@ fi
+ javac_works='not present'
+ if test -n "$JAVAC"; then
+     javac_works='not functional'
+-    rm -rf /tmp/A.java /tmp/A.class
+-    echo "public class A { }" > /tmp/A.java
+-    if test -e /tmp/A.java; then
+-	if "${JAVAC}" /tmp/A.java >/dev/null; then
+-	    if test -e /tmp/A.class; then
++#    tempdir=`mktemp -d`
++
++    : ${TMPDIR=/tmp}
++    { tempdir=`(mktemp -d -q "${TMPDIR}/RJRECONF.XXXXXX") 2>/dev/null` \
++	&& test -n "${tempdir}" && test -d "${tempdir}" ; } ||
++    { test -n "${RANDOM}" && tempdir=${TMPDIR}/RJRECONF$$-${RANDOM} \
++	&& (mkdir "${tempdir}") ; } ||
++    { tempdir=${TMPDIR}/RJRECONF.$$-`date +%m%d%H%M%S` \
++	&& (mkdir "${tempdir}"); } ||
++    { tempdir=${TMPDIR}/RJRECONF.$$ && (mkdir "${tempdir}") ; } ||
++    (error "cannot create temporary directory" && exit 1)
++
++    echo "public class A { }" > ${tempdir}/A.java
++    if test -e ${tempdir}/A.java; then
++	if "${JAVAC}" ${tempdir}/A.java >/dev/null; then
++           if test -e ${tempdir}/A.class; then
+ 		javac_works=yes
+ 	    fi
+ 	fi
+     fi
+-    rm -rf /tmp/A.java /tmp/A.class
++    rm -rf ${tempdir}
++
+ fi
+ if test "${javac_works}" = yes; then
+     echo "Java compiler    : ${JAVAC}"
