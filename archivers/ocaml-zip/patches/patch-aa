@@ -1,0 +1,26 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/02 11:45:32 obache Exp $
+
+--- Makefile.orig	2002-04-22 17:28:57.000000000 +0200
++++ Makefile	2008-02-18 14:25:56.000000000 +0100
+@@ -55,18 +55,9 @@
+ 	rm -f *.o *.a
+ 
+ install:
+-	mkdir -p $(INSTALLDIR)
+-	cp zip.cma zip.cmi gzip.cmi zip.mli gzip.mli libcamlzip.a $(INSTALLDIR)
+-	if test -f dllcamlzip.so; then \
+-	  cp dllcamlzip.so $(INSTALLDIR); \
+-          ldconf=`$(OCAMLC) -where`/ld.conf; \
+-          installdir=$(INSTALLDIR); \
+-          if test `grep -s -c $$installdir'$$' $$ldconf || :` = 0; \
+-          then echo $$installdir >> $$ldconf; fi \
+-        fi
+-
+-installopt:
+-	cp zip.cmxa zip.a zip.cmx gzip.cmx $(INSTALLDIR)
++	ocamlfind install -optional zip META zip.cma zip.cmi gzip.cmi zip.mli \
++	gzip.mli libcamlzip.a dllcamlzip.so zip.cmxa zip.a zip.cmx gzip.cmx \
++	zlib.mli zlib.cmi zlib.cmx
+ 
+ depend:
+ 	gcc -MM -I$(ZLIB_INCLUDE) *.c > .depend
