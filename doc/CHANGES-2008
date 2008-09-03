@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2050 2008/09/02 23:12:13 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2051 2008/09/03 08:26:32 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3525,3 +3525,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added databases/p5-DBIx-Class-InflateColumn-IP version 0.02001 [seb 2008-09-02]
 	Added textproc/p5-Template-Declare version 0.29 [seb 2008-09-02]
 	Added devel/p5-Test-Base version 0.54 [seb 2008-09-02]
+	Updated time/planner to 0.14.3 [dsainty 2008-09-03]
