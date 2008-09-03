@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1 2008/09/03 17:47:03 drochner Exp $
+
+--- ./src/console_output.c.orig	2008-09-03 12:15:36.000000000 +0200
++++ ./src/console_output.c
+@@ -78,7 +78,7 @@ console_output_init (void)
+ {
+   const char *cset;
+   g_get_charset (&cset);
+-  char *dest = g_strconcat (cset, "//TRANSLIT", NULL);
++  char *dest = g_strconcat (cset, /*"//TRANSLIT",*/ NULL);
+   xlate = g_iconv_open (dest, "utf-8");
+   g_free (dest);
+   g_set_print_handler (xlate_g_print);
