@@ -1,0 +1,18 @@
+$NetBSD: patch-af,v 1.3 2008/09/03 21:31:12 markd Exp $
+
+--- src/unix-dll.mak.orig	2007-11-28 11:58:40.000000000 +1300
++++ src/unix-dll.mak
+@@ -79,11 +79,11 @@ $(GS_SO_MAJOR): $(GS_SO_MAJOR_MINOR)
+ # Build the small Ghostscript loaders, with Gtk+ and without
+ 
+ $(GSSOC_XE): $(GS_SO) $(GLSRC)$(SOC_LOADER)
+-	$(GLCC) -g -o $(GSSOC_XE) $(GLSRC)dxmainc.c -L$(BINDIR) -l$(GS)
++	$(GLCC) -g -o $(GSSOC_XE) $(GLSRC)dxmainc.c -L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS)
+ 
+ $(GSSOX_XE): $(GS_SO) $(GLSRC)$(SOC_LOADER)
+ 	$(GLCC) -g $(SOC_CFLAGS) -o $(GSSOX_XE) $(GLSRC)$(SOC_LOADER) \
+-	-L$(BINDIR) -l$(GS) $(SOC_LIBS)
++	-L$(BINDIR) -Wl,-R$(PREFIX)/lib -l$(GS) $(SOC_LIBS)
+ 
+ # ------------------------- Recursive make targets ------------------------- #
+ 
