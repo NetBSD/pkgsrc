@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/09/03 06:34:32 spz Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/09/03 21:33:29 spz Exp $
 include/inn/config.h
 include/inn/dbz.h
 include/inn/libinn.h
@@ -44,7 +44,10 @@ ${INN_PATHBIN}/filter/filter_innd.py
 ${INN_PATHBIN}/filter/filter_nnrpd.pl
 ${INN_PATHBIN}/filter/nnrpd_access.pl
 ${INN_PATHBIN}/filter/nnrpd_auth.pl
+${INN_PATHBIN}/filter/nnrpd.py
+${INN_PATHBIN}/filter/nnrpd_access.py
 ${INN_PATHBIN}/filter/nnrpd_auth.py
+${INN_PATHBIN}/filter/nnrpd_dynamic.py
 ${INN_PATHBIN}/filter/startup.tcl
 ${INN_PATHBIN}/filter/startup_innd.pl
 ${INN_PATHBIN}/getlist
@@ -295,6 +298,8 @@ share/examples/inn/news2mail.cf
 share/examples/inn/newsfeeds
 share/examples/inn/newsgroups.minimal
 share/examples/inn/nnrpd.py
+share/examples/inn/nnrpd_access.py
+share/examples/inn/nnrpd_dynamic.py
 share/examples/inn/nnrpd.track
 share/examples/inn/nnrpd_access.pl
 share/examples/inn/nnrpd_access_wrapper.pl

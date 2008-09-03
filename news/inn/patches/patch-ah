@@ -1,8 +1,8 @@
-$NetBSD: patch-ah,v 1.9 2008/06/23 09:10:53 spz Exp $
+$NetBSD: patch-ah,v 1.10 2008/09/03 21:33:29 spz Exp $
 
---- site/Makefile.orig	2008-05-05 10:18:36.000000000 +0000
+--- site/Makefile.orig	2008-06-29 17:56:57.000000000 +0000
 +++ site/Makefile
-@@ -70,22 +70,11 @@ REST		= \
+@@ -74,23 +74,12 @@
  ALL		= $(MOST) $(REST)
  
  REST_INSTALLED	= \
@@ -19,21 +19,22 @@ $NetBSD: patch-ah,v 1.9 2008/06/23 09:10:53 spz Exp $
 +	$D$(PATH_PERL_STARTUP_INND) \
  	$D$(PATH_PERL_FILTER_INND) $D$(PATH_PERL_FILTER_NNRPD) \
  	$D$(PATH_PYTHON_FILTER_INND) $D$(PATH_PYTHON_INN_MODULE) \
- 	$D$(PATH_TCL_STARTUP) $D$(PATH_TCL_FILTER) \
+ 	$D$(PATH_TCL_STARTUP) $D$(PATH_TCL_FILTER) $D$(PATH_PYTHON_NNRPD_MODULE) \
 -	$D$(PATH_NNRPAUTH) $D$(PATHETC)/news2mail.cf $D$(PATH_READERSCONF) \
 -	$D$(PATH_RADIUS_CONF) $D$(PATH_NNRPYAUTH) $D$(PATH_OVDB_CONF) \
+	$D$(PATH_NNRPYACCESS) $D$(PATH_NNRPYDYNAMIC) \
 -	$D$(PATH_SASL_CONF) $D$(PATH_SUBSCRIPTIONS) $D$(PATH_NNRPACCESS)
-+	$D$(PATH_NNRPAUTH) $D$(PATH_NNRPYAUTH) $D$(PATH_NNRPACCESS)
++	$D$(PATH_NNRPAUTH) $D$(PATH_NNRPYAUTH) $D$(PATH_NNRPACCESS) 
  
  ALL_INSTALLED	= $(MOST_INSTALLED) $(REST_INSTALLED)
  
-@@ -140,7 +129,8 @@ $D$(PATH_HISTORY):
+@@ -145,7 +133,8 @@
  	chown $(NEWSUSER) $@
  	chgrp $(NEWSGROUP) $@
  	chmod $(FILEMODE) $@
 -	$(PATHBIN)/makedbz -i -o
 +	# makedbz wants ridiculous amounts of RAM for -s 0
-+	$(PATHBIN)/makedbz -i -o -s 100000
++	$(PATHBIN)/makedbz -i -o -s 10000
  
  ##  Remove files that are unchanged from the release version.
  clean:
