@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.89 2008/09/03 06:34:32 spz Exp $
+# $NetBSD: Makefile,v 1.90 2008/09/03 20:19:39 spz Exp $
 
 DISTNAME=		inn-2.4.4
 CATEGORIES=		news
@@ -22,6 +22,18 @@ FILES_SUBST+=		INN_PATHBIN=${PREFIX}/${INN_PATHBIN:Q}
 MESSAGE_SUBST+=		INN_PATHBIN=${INN_PATHBIN:Q}
 
 PLIST_SUBST+=		INN_PATHBIN=${INN_PATHBIN:Q}
+
+SUBST_CLASSES+=		BADPATHBIN
+SUBST_STAGE.BADPATHBIN=	post-patch
+SUBST_MESSAGE.BADPATHBIN=	"fixing up unfortunate pathbin paths"
+SUBST_FILES.BADPATHBIN= Makefile.global.in \
+			samples/inn.conf.in samples/newsfeeds.in \
+			scripts/innshellvars.in scripts/innshellvars.pl.in \
+			scripts/innshellvars.tcl.in backends/news2mail.in \
+			control/controlbatch.in control/controlchan.in
+SUBST_SED.BADPATHBIN=	-e 's,@prefix@/bin,${PREFIX}/${INN_PATHBIN:Q},g' \
+			-e 's,$$(PATHNEWS)/bin,${PREFIX}/${INN_PATHBIN:Q},g'
+
 
 GNU_CONFIGURE=		YES
 GNU_CONFIGURE_PREFIX=	${INN_PREFIX}
@@ -108,21 +120,6 @@ GCC_REQD+=		2.95.3
 .endif
 
 .include "options.mk"
-
-post-patch:
-	${RM} -f ${WRKSRC}/samples/inn.conf.in.orig_dist
-	${SED} -e "s#^PATHBIN.*#PATHBIN	= ${PREFIX}/${INN_PATHBIN}#"	\
-		${WRKSRC}/Makefile.global.in			\
-		> ${WRKSRC}/Makefile.global.in.patch;		\
-	${MV} ${WRKSRC}/Makefile.global.in.patch		\
-		${WRKSRC}/Makefile.global.in;			\
-	for FILE in innshellvars.in innshellvars.pl.in innshellvars.tcl.in ; do \
-		${SED} -e "s#@prefix@/bin/innconfval #${PREFIX}/${INN_PATHBIN}/innconfval #" \
-			${WRKSRC}/scripts/$$FILE			\
-			> ${WRKSRC}/scripts/$$FILE.patch ;		\
-		${MV} ${WRKSRC}/scripts/$$FILE.patch			\
-			${WRKSRC}/scripts/$$FILE ;			\
-	done
 
 pre-install:
 	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
