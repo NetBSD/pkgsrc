@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7507 2008/09/02 22:23:30 epg Exp $
+$NetBSD: TODO,v 1.7508 2008/09/03 08:26:32 dsainty Exp $
 
 Suggested new packages
 ======================
@@ -1063,7 +1063,6 @@ Suggested package updates
 	o pioneers-0.12.2
 	o pircbot-1.4.4
 	o pkg_select-20051209
-	o planner-0.14.3
 	o ploticus-2.40
 	o ploticus-examples-230
 	o plotutils-2.5
