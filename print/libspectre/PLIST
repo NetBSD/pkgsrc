@@ -1,0 +1,12 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/03 21:36:46 markd Exp $
+include/libspectre/spectre-document.h
+include/libspectre/spectre-exporter.h
+include/libspectre/spectre-macros.h
+include/libspectre/spectre-page.h
+include/libspectre/spectre-render-context.h
+include/libspectre/spectre-status.h
+include/libspectre/spectre-version.h
+include/libspectre/spectre.h
+lib/libspectre.la
+lib/pkgconfig/libspectre.pc
+@dirrm include/libspectre
