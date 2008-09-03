@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2054 2008/09/03 09:29:36 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2055 2008/09/03 09:32:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3529,3 +3529,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/suse100_freetype2 to 10.0nb5 [obache 2008-09-03]
 	Updated emulators/suse100_libcups to 10.0nb4 [obache 2008-09-03]
 	Updated emulators/suse100_libpng to 10.0nb4 [obache 2008-09-03]
+	Updated emulators/suse100_openssl to 10.0nb5 [obache 2008-09-03]
