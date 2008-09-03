@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/04/12 22:43:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.11.4.1 2008/09/03 12:12:11 tron Exp $
 bin/mason_handler.fcgi
 ${PLIST.speedycgi}bin/mason_handler.scgi
 bin/mason_handler.svc
@@ -88,6 +88,7 @@ lib/rt3/RT/I18N/nl.po
 lib/rt3/RT/I18N/no.po
 lib/rt3/RT/I18N/pl.po
 lib/rt3/RT/I18N/pt_br.po
+lib/rt3/RT/I18N/pt_pt.po
 lib/rt3/RT/I18N/ru.po
 lib/rt3/RT/I18N/sv.po
 lib/rt3/RT/I18N/tr.po
@@ -225,7 +226,9 @@ lib/rt3/t/regression/18custom_frontpage.t
 lib/rt3/t/regression/18stale_delegations_cleanup.t
 lib/rt3/t/regression/19-rtname.t
 lib/rt3/t/regression/19quicksearch.t
+lib/rt3/t/regression/20-sort-by-queue.t
 lib/rt3/t/regression/20-sort-by-requestor.t
+lib/rt3/t/regression/20-sort-by-user.t
 lib/rt3/t/regression/20savedsearch.t
 lib/rt3/t/regression/21query-builder.t
 lib/rt3/t/regression/22search_tix_by_txn.t
@@ -233,7 +236,10 @@ lib/rt3/t/regression/22search_tix_by_watcher.t
 lib/rt3/t/regression/23-batch-upload-csv.t
 lib/rt3/t/regression/23-web_attachments.t
 lib/rt3/t/regression/23cfsort.t
+lib/rt3/t/regression/23cfsort-freeform-multiple.t
+lib/rt3/t/regression/23cfsort-freeform-single.t
 lib/rt3/t/regression/24pawsort.t
+lib/rt3/t/regression/24-watchers.t
 lib/rt3/t/regression/25scrip_order.t
 lib/rt3/t/regression/26command_line.t
 lib/rt3/t/regression/27verp.t
