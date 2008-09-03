@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/08/19 17:38:09 cegger Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/09/03 09:36:16 cegger Exp $
 bin/lsevtchn
 bin/pygrub
 bin/readnotes
@@ -37,10 +37,10 @@ include/xen/arch-x86/cpuid.h
 include/xen/arch-x86/hvm/save.h
 include/xen/arch-x86/xen-mca.h
 include/xen/arch-x86/xen-x86_32.h
-include/xen/arch-x86/xen-${MACHINE_ARCH}.h
+include/xen/arch-x86/xen-x86_64.h
 include/xen/arch-x86/xen.h
 include/xen/arch-x86_32.h
-include/xen/arch-${MACHINE_ARCH}.h
+include/xen/arch-x86_64.h
 include/xen/callback.h
 include/xen/dom0_ops.h
 include/xen/domctl.h
@@ -50,7 +50,7 @@ include/xen/event_channel.h
 include/xen/features.h
 include/xen/foreign/ia64.h
 include/xen/foreign/x86_32.h
-include/xen/foreign/${MACHINE_ARCH}.h
+include/xen/foreign/x86_64.h
 include/xen/grant_table.h
 include/xen/hvm/e820.h
 include/xen/hvm/hvm_info_table.h
