@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.2 2006/12/06 10:35:58 wiz Exp $
+$NetBSD: distinfo,v 1.3 2008/09/03 09:29:22 obache Exp $
 
-SHA1 (suse100/i586/libpng-1.2.8-5.2.i586.rpm) = 60a3268fa9f0f3fe6c7ca89b9983f20d6b221b28
-RMD160 (suse100/i586/libpng-1.2.8-5.2.i586.rpm) = ecf710d86f18e62dc11afe4bede78e0193f76c84
-Size (suse100/i586/libpng-1.2.8-5.2.i586.rpm) = 189013 bytes
-SHA1 (suse100/ppc/libpng-1.2.8-5.2.ppc.rpm) = 66a2de20037acb111421dfc2a210bad1b13e8f12
-RMD160 (suse100/ppc/libpng-1.2.8-5.2.ppc.rpm) = 2f18c07b35263c1286531dc62f19e329dbfa5806
-Size (suse100/ppc/libpng-1.2.8-5.2.ppc.rpm) = 181701 bytes
-SHA1 (suse100/x86_64/libpng-1.2.8-5.2.x86_64.rpm) = c7755c8f984f14d81ed7d212309fdad1ee9acda3
-RMD160 (suse100/x86_64/libpng-1.2.8-5.2.x86_64.rpm) = 25677555570873da38502094f611d636d5286b00
-Size (suse100/x86_64/libpng-1.2.8-5.2.x86_64.rpm) = 193089 bytes
+SHA1 (suse100/i586/libpng-1.2.8-5.6.i586.rpm) = 2f554696873b14f578a1a52b5115478a95d80f1c
+RMD160 (suse100/i586/libpng-1.2.8-5.6.i586.rpm) = 516d28aa11a894ba623c84fbd1aab4f9504e6324
+Size (suse100/i586/libpng-1.2.8-5.6.i586.rpm) = 189385 bytes
+SHA1 (suse100/ppc/libpng-1.2.8-5.6.ppc.rpm) = e04095e49c37f8d58101d9880c142350f21268a6
+RMD160 (suse100/ppc/libpng-1.2.8-5.6.ppc.rpm) = b2480fcfc8829f5890c652bc4f567f69d967babc
+Size (suse100/ppc/libpng-1.2.8-5.6.ppc.rpm) = 182082 bytes
+SHA1 (suse100/x86_64/libpng-1.2.8-5.6.x86_64.rpm) = de9999d6eaa6226c1d888007be09d8d4b0d49fb1
+RMD160 (suse100/x86_64/libpng-1.2.8-5.6.x86_64.rpm) = 2fa031d173afbdb0fc6c8f831162f8d5f4688ef5
+Size (suse100/x86_64/libpng-1.2.8-5.6.x86_64.rpm) = 193413 bytes
