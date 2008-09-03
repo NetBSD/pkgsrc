@@ -1,11 +1,11 @@
-$NetBSD: distinfo,v 1.3 2006/08/02 14:26:13 salo Exp $
+$NetBSD: distinfo,v 1.4 2008/09/03 09:13:05 obache Exp $
 
-SHA1 (suse100/i586/freetype2-2.1.10-4.4.i586.rpm) = cff22fb3c07c583c39eefaa627f2309e0ae7ff54
-RMD160 (suse100/i586/freetype2-2.1.10-4.4.i586.rpm) = 570824f1beab968b34dc60883c9cf6cb32c24355
-Size (suse100/i586/freetype2-2.1.10-4.4.i586.rpm) = 563709 bytes
-SHA1 (suse100/ppc/freetype2-2.1.10-4.4.ppc.rpm) = 1cd8b4576b8e528e48051b723e6858c198505e80
-RMD160 (suse100/ppc/freetype2-2.1.10-4.4.ppc.rpm) = 13d8989f9c23d078ff7de591f5d77b26fe305959
-Size (suse100/ppc/freetype2-2.1.10-4.4.ppc.rpm) = 579915 bytes
-SHA1 (suse100/x86_64/freetype2-2.1.10-4.4.x86_64.rpm) = a4710ed4062a96cbaad625cdb0e6772def79f880
-RMD160 (suse100/x86_64/freetype2-2.1.10-4.4.x86_64.rpm) = 9583fd004574549acbf1e38aa5303a68ab3db06f
-Size (suse100/x86_64/freetype2-2.1.10-4.4.x86_64.rpm) = 581398 bytes
+SHA1 (suse100/i586/freetype2-2.1.10-4.9.i586.rpm) = 405cb40591deb3a3140c57fa49f06a4dc719cb03
+RMD160 (suse100/i586/freetype2-2.1.10-4.9.i586.rpm) = ba1cb86eba3ff89b83f9246616c99d9f05788b01
+Size (suse100/i586/freetype2-2.1.10-4.9.i586.rpm) = 563200 bytes
+SHA1 (suse100/ppc/freetype2-2.1.10-4.9.ppc.rpm) = 1a396dc2f5f20792bdfbc55494b4e2821e42a9ca
+RMD160 (suse100/ppc/freetype2-2.1.10-4.9.ppc.rpm) = 81c4736fe3ebd4221ac1231357c5b37bb8fdb13b
+Size (suse100/ppc/freetype2-2.1.10-4.9.ppc.rpm) = 580232 bytes
+SHA1 (suse100/x86_64/freetype2-2.1.10-4.9.x86_64.rpm) = b837aa0e298a5d160dfadd64d88aa67377f08c73
+RMD160 (suse100/x86_64/freetype2-2.1.10-4.9.x86_64.rpm) = 92686ba1143d44372dbe9062493ab3c346a6f55a
+Size (suse100/x86_64/freetype2-2.1.10-4.9.x86_64.rpm) = 581280 bytes
