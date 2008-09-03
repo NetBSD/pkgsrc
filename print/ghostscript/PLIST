@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/08/07 18:21:40 drochner Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/09/03 21:31:12 markd Exp $
 bin/bdftops
 bin/dumphint
 bin/dvipdf
@@ -8,10 +8,12 @@ bin/font2c
 bin/gs
 bin/gsbj
 bin/gsdj
+bin/gsc
 bin/gsdj500
 bin/gslj
 bin/gslp
 bin/gsnd
+bin/gsx
 bin/lprsetup.sh
 bin/pdf2dsc
 bin/pdf2ps
@@ -31,6 +33,12 @@ bin/ps2ps2
 bin/pv.sh
 bin/unix-lpr.sh
 bin/wftopfa
+include/ghostscript/gdevdsp.h
+include/ghostscript/iapi.h
+include/ghostscript/ierrors.h
+lib/libgs.so
+lib/libgs.so.8
+lib/libgs.so.${PKGVERSION}
 ${PLIST.cups}libexec/cups/filter/pstopxl
 ${PLIST.cups}libexec/cups/filter/pstoraster
 man/de/man1/dvipdf.1
@@ -687,3 +695,4 @@ share/ghostscript/${PKGVERSION}/lib/zeroline.ps
 @dirrm share/ghostscript/${PKGVERSION}/Resource
 @dirrm share/ghostscript/${PKGVERSION}
 @unexec ${RMDIR} %D/share/ghostscript 2>/dev/null || ${TRUE}
+@dirrm include/ghostscript
