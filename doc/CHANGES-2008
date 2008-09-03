@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2051 2008/09/03 08:26:32 dsainty Exp $
+$NetBSD: CHANGES-2008,v 1.2052 2008/09/03 09:13:23 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3526,3 +3526,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added textproc/p5-Template-Declare version 0.29 [seb 2008-09-02]
 	Added devel/p5-Test-Base version 0.54 [seb 2008-09-02]
 	Updated time/planner to 0.14.3 [dsainty 2008-09-03]
+	Updated emulators/suse100_freetype2 to 10.0nb5 [obache 2008-09-03]
