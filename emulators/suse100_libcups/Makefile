@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2007/07/29 05:18:50 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2008/09/03 09:26:13 obache Exp $
 
 DISTNAME=	suse_libcups-${SUSE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	emulators
-DISTFILES=	cups-libs-1.1.23-21.6.${SUSE_ARCH}.rpm
+DISTFILES=	cups-libs-1.1.23-21.16.${SUSE_ARCH}.rpm
 
 MAINTAINER=	markd@NetBSD.org
 COMMENT=	Linux compatibility package for CUPS
