@@ -1,0 +1,21 @@
+# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/09/03 21:36:46 markd Exp $
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
+LIBSPECTRE_BUILDLINK3_MK:=	${LIBSPECTRE_BUILDLINK3_MK}+
+
+.if ${BUILDLINK_DEPTH} == "+"
+BUILDLINK_DEPENDS+=	libspectre
+.endif
+
+BUILDLINK_PACKAGES:=	${BUILDLINK_PACKAGES:Nlibspectre}
+BUILDLINK_PACKAGES+=	libspectre
+BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libspectre
+
+.if ${LIBSPECTRE_BUILDLINK3_MK} == "+"
+BUILDLINK_API_DEPENDS.libspectre+=	libspectre>=0.2.1
+BUILDLINK_PKGSRCDIR.libspectre?=	../../print/libspectre
+.endif	# LIBSPECTRE_BUILDLINK3_MK
+
+.include "../../print/ghostscript/buildlink3.mk"
+
+BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
