@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.1 2006/05/01 09:38:08 cube Exp $
+$NetBSD: patch-ac,v 1.1.20.1 2008/09/03 12:12:11 tron Exp $
 
---- configure.orig	2006-04-19 19:37:22.000000000 +0200
+--- configure.orig	2008-06-16 23:37:53.000000000 +0200
 +++ configure
-@@ -2039,7 +2039,7 @@ if test "${with_my_user_group+set}" = se
- fi;
+@@ -2514,7 +2514,7 @@ fi
+ 
  
  # Test for valid database names
 -if  test "$DB_TYPE" == "mysql" ; then
 +if  test "$DB_TYPE" = "mysql" ; then
-    echo "$as_me:$LINENO: checking if database name is valid" >&5
- echo $ECHO_N "checking if database name is valid... $ECHO_C" >&6
+    { echo "$as_me:$LINENO: checking if database name is valid" >&5
+ echo $ECHO_N "checking if database name is valid... $ECHO_C" >&6; }
            if  echo $DB_DATABASE | $AWK '/-/ { exit 1 }' ; then
