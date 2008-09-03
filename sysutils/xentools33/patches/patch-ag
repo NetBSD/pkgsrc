@@ -1,12 +1,12 @@
-$NetBSD: patch-ag,v 1.2 2008/08/15 20:12:52 cegger Exp $
+$NetBSD: patch-ag,v 1.3 2008/09/03 09:38:07 cegger Exp $
 
---- xentrace/Makefile.orig	2008-08-14 15:26:06.000000000 +0000
+--- xentrace/Makefile.orig	2008-08-22 09:49:09.000000000 +0000
 +++ xentrace/Makefile
 @@ -14,6 +14,7 @@ LIBBIN   = 
  SCRIPTS  = xentrace_format
  MAN1     = $(wildcard *.1)
  MAN8     = $(wildcard *.8)
-+CONFIGDIR = /usr/pkg/etc/xen
++CONFIGDIR = @XENDCONFDIR@
  
  ifeq ($(XEN_TARGET_ARCH),x86_32)
  LIBBIN  += xenctx
