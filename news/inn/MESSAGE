@@ -1,10 +1,10 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.4 2008/06/23 09:10:53 spz Exp $
+$NetBSD: MESSAGE,v 1.5 2008/09/03 06:34:32 spz Exp $
 
 The following programs have been installed suid root on your machine:
 
-	${INN_PATHBIN}/inndstart
-	${INN_PATHBIN}/startinnfeed
+	${PREFIX}/${INN_PATHBIN}/inndstart
+	${PREFIX}/${INN_PATHBIN}/startinnfeed
 
 ---------------------------------------------------------------------------
 UPDATE WARNING - UPDATE WARNING - UPDATE WARNING - UPDATE WARNING
@@ -12,7 +12,7 @@ UPDATE WARNING - UPDATE WARNING - UPDATE WARNING - UPDATE WARNING
 The directory structure of the package has changed.
 
 INNs etc is now in ${PREFIX}/etc/inn
-the binaries are now in ${INN_PATHBIN}
+the binaries are now in ${PREFIX}/${INN_PATHBIN}
 
 UPDATE WARNING - UPDATE WARNING - UPDATE WARNING - UPDATE WARNING
 ---------------------------------------------------------------------------

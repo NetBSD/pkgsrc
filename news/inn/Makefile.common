@@ -1,7 +1,7 @@
-# $NetBSD: Makefile.common,v 1.3 2008/06/23 09:10:53 spz Exp $
+# $NetBSD: Makefile.common,v 1.4 2008/09/03 06:34:32 spz Exp $
 #
 
 INN_PREFIX?=	${PREFIX}
-INN_PATHBIN?=	${PREFIX}/libexec/inn
+INN_PATHBIN?=	libexec/inn
 INN_DATA_DIR?=	${VARBASE}/news
 INN_SPOOL?=	${INN_DATA_DIR}/spool
