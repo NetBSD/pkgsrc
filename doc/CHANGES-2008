@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2058 2008/09/03 09:46:12 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2059 2008/09/03 15:05:10 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3533,3 +3533,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/suse100_resmgr to 10.0nb1 [obache 2008-09-03]
 	Updated emulators/suse100_x11 to 10.0nb4 [obache 2008-09-03]
 	Updated emulators/suse100_glx to 10.0nb4 [obache 2008-09-03]
+	Updated mail/dovecot to 1.1.3 [ghen 2008-09-03]
