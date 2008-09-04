@@ -1,0 +1,17 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/09/04 12:21:20 obache Exp $
+
+--- configure.orig	2008-07-30 09:05:10.000000000 +0000
++++ configure
+@@ -1724,9 +1724,9 @@ MYDOCUMENTFILES="COPYING ChangeLog THANK
+ MYPCFILES="tokyodystopia.pc"
+ 
+ # Building flags
+-MYCFLAGS="-std=c99 -Wall -fPIC -fsigned-char -O2"
+-MYCPPFLAGS="-I. -I\$(INCLUDEDIR) -L$HOME/include -L/usr/local/include -DNDEBUG -D_GNU_SOURCE=1"
+-MYLDFLAGS="-L. -L\$(LIBDIR) -L$HOME/lib -L/usr/local/lib"
++MYCFLAGS="-std=c99 -Wall -fPIC -fsigned-char"
++MYCPPFLAGS="-I. -I\$(INCLUDEDIR) -DNDEBUG -D_GNU_SOURCE=1"
++MYLDFLAGS="-L. -L\$(LIBDIR)"
+ MYRUNPATH="\$(LIBDIR)"
+ MYLDLIBPATHENV="LD_LIBRARY_PATH"
+ MYPOSTCMD="true"
