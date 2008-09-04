@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/04 12:11:00 obache Exp $
+share/tokyocabinet/doc/perl/index.html
+@dirrm share/tokyocabinet/doc/perl
