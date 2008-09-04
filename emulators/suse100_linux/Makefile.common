@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2007/11/06 18:03:31 rillig Exp $
+# $NetBSD: Makefile.common,v 1.20 2008/09/04 11:53:48 obache Exp $
 
 SUSE_PKG=		yes
 SUSE_VERSION=		10.0
@@ -32,16 +32,43 @@ _SUSE_FTP_SUBDIR=	distribution/SL-${SUSE_VERSION}-OSS/inst-source/suse/${SUSE_AR
 _SUSE_FTP_SUBDIR_UPD=	suse/update/${SUSE_VERSION}/rpm/${SUSE_ARCH}/
 
 MASTER_SITE_SUSE_${SUSE_VERSION}=	\
-	ftp://suse.inode.at/opensuse/${_SUSE_FTP_SUBDIR} \
-	http://suse.inode.at/opensuse/${_SUSE_FTP_SUBDIR} \
-	ftp://suse.inode.at/pub/update/${SUSE_VERSION}/rpm/${SUSE_ARCH}/ \
-	http://suse.inode.at/pub/update/${SUSE_VERSION}/rpm/${SUSE_ARCH}/ \
-	ftp://ftp.gwdg.de/pub/opensuse/${_SUSE_FTP_SUBDIR} \
+	http://ftp.hosteurope.de/mirror/ftp.opensuse.org/discontinued/10.0/suse/${SUSE_ARCH}/ \
+	http://suse.bifi.unizar.es/opensuse/${_SUSE_FTP_SUBDIR} \
+	ftp://mirror.colorado.edu/pub/opensuse/${_SUSE_FTP_SUBDIR} \
+	http://opensuse.berkeley.edu/opensuse/${_SUSE_FTP_SUBDIR} \
+	http://opensuse.intergenia.de/${_SUSE_FTP_SUBDIR} \
+	ftp://ftp.uniroma2.it/Linux/opensuse/${_SUSE_FTP_SUBDIR}
+
+MASTER_SITE_SUSE_${SUSE_VERSION}_UPD=	\
+	ftp://gd.tuwien.ac.at/opsys/linux/suse.com/${_SUSE_FTP_SUBDIR_UPD} \
+	http://gd.tuwien.ac.at/opsys/linux/suse.com/${_SUSE_FTP_SUBDIR_UPD} \
+	ftp://mirror.karneval.cz/pub/linux/suse/ftp.suse.com/${_SUSE_FTP_SUBDIR_UPD} \
+	ftp://ftp.funet.fi/pub/linux/mirrors/suse/ftp.suse.com/${_SUSE_FTP_SUBDIR_UPD} \
+	http://ftp5.gwdg.de/pub/${_SUSE_FTP_SUBDIR_UPD} \
+	ftp://sunsite.informatik.rwth-aachen.de/pub/linux/${_SUSE_FTP_SUBDIR_UPD} \
+	ftp://ftp.uni-erlangen.de/pub/mirrors/suse/pub/${_SUSE_FTP_SUBDIR_UPD} \
+	ftp://ftp.hs.uni-hamburg.de/pub/mirrors/suse/${_SUSE_FTP_SUBDIR_UPD:S/suse/SuSE/} \
+	ftp://ftp.tu-chemnitz.de/pub/linux/suse/ftp.suse.com/${_SUSE_FTP_SUBDIR_UPD} \
+	http://ftp.novell.hu/pub/mirrors/ftp.suse.com/${_SUSE_FTP_SUBDIR_UPD} \
+	http://ftp.isr.ist.utl.pt/pub/MIRRORS/ftp.suse.com/${_SUSE_FTP_SUBDIR_UPD} \
+	ftp://ftp.chg.ru/pub/Linux/SuSE/${_SUSE_FTP_SUBDIR_UPD} \
+	http://suse.bifi.unizar.es/${_SUSE_FTP_SUBDIR_UPD} \
+	http://www.mirrorservice.org/sites/ftp.suse.com/pub/${_SUSE_FTP_SUBDIR_UPD} \
+	ftp://ftp.mirrorservice.org/sites/ftp.suse.com/pub/${_SUSE_FTP_SUBDIR_UPD} \
+	http://ftp.jaist.ac.jp/pub/Linux/SuSE/${_SUSE_FTP_SUBDIR_UPD} \
+	ftp://ftp.jaist.ac.jp/pub/Linux/SuSE/${_SUSE_FTP_SUBDIR_UPD} \
+	ftp://ftp.kddilabs.jp/Linux/packages/SuSE/${_SUSE_FTP_SUBDIR_UPD} \
+	http://ftp.kddilabs.jp/Linux/packages/SuSE/${_SUSE_FTP_SUBDIR_UPD} \
+	ftp://ftp.riken.jp/Linux/suse/${_SUSE_FTP_SUBDIR_UPD} \
+	http://ftp.riken.jp/Linux/suse/${_SUSE_FTP_SUBDIR_UPD} \
+	ftp://ftp.novell.co.jp/pub/suse/${_SUSE_FTP_SUBDIR_UPD} \
+	http://ftp.novell.co.jp/pub/suse/${_SUSE_FTP_SUBDIR_UPD} \
+	ftp://ftp.twaren.net/pub/Linux/${_SUSE_FTP_SUBDIR_UPD:S/suse/SuSE/} \
+	http://ftp.twaren.net/Linux/${_SUSE_FTP_SUBDIR_UPD:S/suse/SuSE/} \
+	ftp://ftp.cs.pu.edu.tw/Linux/SuSE/${_SUSE_FTP_SUBDIR_UPD} \
+	ftp://mirror.pacific.net.au/${_SUSE_FTP_SUBDIR_UPD} \
+	http://mirror.pacific.net.au/linux/${_SUSE_FTP_SUBDIR_UPD} \
 	ftp://ftp.gwdg.de/pub/linux/suse/ftp.suse.com/${_SUSE_FTP_SUBDIR_UPD} \
-	ftp://gd.tuwien.ac.at/linux/opensuse/${_SUSE_FTP_SUBDIR} \
-	http://gd.tuwien.ac.at/linux/suse.com/${_SUSE_FTP_SUBDIR_UPD} \
-	ftp://gd.tuwien.ac.at/linux/suse.com/${_SUSE_FTP_SUBDIR_UPD} \
-	ftp://mirror.karneval.cz/pub/opensuse/${_SUSE_FTP_SUBDIR:S,distribution/,,} \
 	ftp://ftp.suse.com/pub/${_SUSE_FTP_SUBDIR_UPD}
 
 MASTER_SITES?=		${MASTER_SITE_SUSE_${SUSE_VERSION}}
@@ -81,3 +108,11 @@ FILES_SUBST+=		LINUX_LIBSUBDIR=${LINUX_LIBSUBDIR:Q}
 # Makefile fragment if it exists.
 #
 .sinclude "${SUSE_PKGSRCDIR}/suse.${EMUL_ARCH}.mk"
+
+.if defined(DISTFILES) && !empty(DISTFILES)
+.  for fetchfile in ${DISTFILES}
+.    if "${fetchfile:C/.[^.]*\.rpm$//:C/^.*-//g:M*.*}" != ""
+SITES.${fetchfile:T:S/=/--/}?=	${MASTER_SITE_SUSE_${SUSE_VERSION}_UPD}
+.    endif
+.  endfor
+.endif
