@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.11 2008/05/20 13:46:49 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2008/09/04 22:04:17 tonnerre Exp $
 
-DISTNAME=	Django-0.96.1
-PKGNAME=	${PYPKGPREFIX}-django-0.96.1
-PKGREVISION=	1
+DJANGOVERS=	1.0
+DISTNAME=	Django-${DJANGOVERS}
+PKGNAME=	${PYPKGPREFIX}-django-${DJANGOVERS}
 CATEGORIES=	www python
-MASTER_SITES=	http://media.djangoproject.com/releases/0.96/
+MASTER_SITES=	http://media.djangoproject.com/releases/${DJANGOVERS}/
 
 MAINTAINER=	joerg@NetBSD.org
 HOMEPAGE=	http://www.djangoproject.com/
@@ -22,7 +22,6 @@ DEPENDS+=	${PYPKGPREFIX}-flup-[0-9]*:../../www/py-flup
 .include "options.mk"
 
 post-extract:
-	rm -r ${WRKSRC}/django/db/backends/ado_mssql
 	rm -r ${WRKSRC}/django/db/backends/oracle
 .if empty(PKG_OPTIONS:Mmysql)
 	rm -r ${WRKSRC}/django/db/backends/mysql
