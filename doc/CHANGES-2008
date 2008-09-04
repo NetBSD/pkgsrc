@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2061 2008/09/04 06:44:20 martti Exp $
+$NetBSD: CHANGES-2008,v 1.2062 2008/09/04 06:45:51 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3536,3 +3536,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/dovecot to 1.1.3 [ghen 2008-09-03]
 	Added print/libspectre version 0.2.1 [markd 2008-09-03]
 	Updated mail/clamav to 0.94 [martti 2008-09-04]
+	Updated graphics/gri to 2.12.17 [dholland 2008-09-04]
