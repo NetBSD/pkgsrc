@@ -1,0 +1,26 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/04 16:53:58 epg Exp $
+${PYSITELIB}/simpletal/DummyLogger.py
+${PYSITELIB}/simpletal/DummyLogger.pyc
+${PYSITELIB}/simpletal/DummyLogger.pyo
+${PYSITELIB}/simpletal/FixedHTMLParser.py
+${PYSITELIB}/simpletal/FixedHTMLParser.pyc
+${PYSITELIB}/simpletal/FixedHTMLParser.pyo
+${PYSITELIB}/simpletal/__init__.py
+${PYSITELIB}/simpletal/__init__.pyc
+${PYSITELIB}/simpletal/__init__.pyo
+${PYSITELIB}/simpletal/sgmlentitynames.py
+${PYSITELIB}/simpletal/sgmlentitynames.pyc
+${PYSITELIB}/simpletal/sgmlentitynames.pyo
+${PYSITELIB}/simpletal/simpleElementTree.py
+${PYSITELIB}/simpletal/simpleElementTree.pyc
+${PYSITELIB}/simpletal/simpleElementTree.pyo
+${PYSITELIB}/simpletal/simpleTAL.py
+${PYSITELIB}/simpletal/simpleTAL.pyc
+${PYSITELIB}/simpletal/simpleTAL.pyo
+${PYSITELIB}/simpletal/simpleTALES.py
+${PYSITELIB}/simpletal/simpleTALES.pyc
+${PYSITELIB}/simpletal/simpleTALES.pyo
+${PYSITELIB}/simpletal/simpleTALUtils.py
+${PYSITELIB}/simpletal/simpleTALUtils.pyc
+${PYSITELIB}/simpletal/simpleTALUtils.pyo
+@dirrm ${PYSITELIB}/simpletal
