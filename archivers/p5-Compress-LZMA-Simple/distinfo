@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/04 12:08:42 obache Exp $
+
+SHA1 (Compress-LZMA-Simple-0.2.tar.gz) = 1edf11b9ed61889c8e9adf31d6baabc09b5268d7
+RMD160 (Compress-LZMA-Simple-0.2.tar.gz) = 00dbd5ecdd16dac8a5c0b21c7a8b971712d2650a
+Size (Compress-LZMA-Simple-0.2.tar.gz) = 2257 bytes
