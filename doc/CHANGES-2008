@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2063 2008/09/04 08:25:44 martti Exp $
+$NetBSD: CHANGES-2008,v 1.2064 2008/09/04 11:15:14 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3539,3 +3539,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/gri to 2.12.17 [dholland 2008-09-04]
 	Updated mail/postfix to 2.5.5 [martti 2008-09-04]
 	Updated mail/postfix-current to 2.6.20080903 [martti 2008-09-04]
+	Added time/tdl version 1.5.2 [tonnerre 2008-09-04]
