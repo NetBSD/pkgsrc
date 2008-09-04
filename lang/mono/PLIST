@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2008/04/19 18:42:10 kefren Exp $
+@comment $NetBSD: PLIST,v 1.24.4.1 2008/09/04 21:37:19 tron Exp $
 bin/al
 bin/al2
 bin/caspol
@@ -967,4 +967,5 @@ share/mono-1.0/mono/cil/cil-opcodes.xml
 @dirrm include/mono-1.0/mono/io-layer
 @dirrm include/mono-1.0/mono/interpreter
 @dirrm include/mono-1.0/mono/cil
+@dirrm include/mono-1.0/mono
 @dirrm include/mono-1.0
