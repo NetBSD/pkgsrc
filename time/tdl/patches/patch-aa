@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/04 11:13:29 tonnerre Exp $
+
+--- Makefile.in.orig	2004-01-07 01:09:05.000000000 +0100
++++ Makefile.in
+@@ -24,6 +24,7 @@
+ # Select C compiler and compile options
+ CC=@cc@
+ CFLAGS=@cflags@ @defines@
++LDFLAGS=-Wl,-rpath -Wl,@prefix@/lib
+ READLINE_DEFINE=@readline_define@
+ INC_READLINE=@inc_readline@
+ LIB_READLINE=@lib_readline@
+@@ -52,7 +53,7 @@ OBJ = main.o io.o add.o done.o remove.o 
+ all : tdl
+ 
+ tdl : $(OBJ)
+-	$(CC) $(CFLAGS) -o tdl $(OBJ) $(LIB_READLINE)
++	$(CC) $(LDFLAGS) -o tdl $(OBJ) $(LIB_READLINE)
+ 
+ %.o : %.c
+ 	$(CC) $(CFLAGS) -c $<
