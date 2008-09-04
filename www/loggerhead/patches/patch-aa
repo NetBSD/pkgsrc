@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/04 17:20:26 epg Exp $
+
+--- setup.py.orig	2008-08-15 09:25:26.000000000 -0700
++++ setup.py
+@@ -19,6 +19,7 @@
+ """Loggerhead is a web viewer for projects in bazaar"""
+ 
+ 
++import os
+ from distutils.core import setup
+ import loggerhead
+ 
+@@ -40,7 +41,8 @@ setup(
+                                   "static/javascript/*", 
+                                   "static/images/*"]},
+     data_files = [
+-        ('share/man/man1',['start-loggerhead.1', 'stop-loggerhead.1', 
++        (os.getenv('PKGMANDIR', 'man') + '/man1',
++         ['start-loggerhead.1', 'stop-loggerhead.1', 
+                            'serve-branches.1']),
+         ('share/doc/loggerhead', ['loggerhead.conf.example']),
+         ],
