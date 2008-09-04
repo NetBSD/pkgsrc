@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2008/08/01 18:41:08 schmonz Exp $
+# $NetBSD: Makefile,v 1.18 2008/09/04 15:34:30 schmonz Exp $
 #
 
-DISTNAME=	ikiwiki_2.56
+DISTNAME=	ikiwiki_2.62.1
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	www textproc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/i/ikiwiki/}
@@ -72,8 +72,8 @@ USE_TOOLS+=	gmake perl:run xgettext
 REPLACE_PERL+=	IkiWiki.pm ikiwiki-w3m.cgi mdwn2man pm_filter
 REPLACE_PERL+=	ikiwiki.in ikiwiki-mass-rebuild ikiwiki-update-wikilist
 REPLACE_PERL+=	ikiwiki-transition
-REPLACE_PERL+=	t/*.t IkiWiki/*.pm IkiWiki/*/*.pm
-REPLACE_PERL+=	doc/ikiwiki.setup doc/w3mmode/ikiwiki.setup
+REPLACE_PERL+=	t/*.t IkiWiki/*.pm IkiWiki/*/*.pm*
+REPLACE_PERL+=	auto.setup doc/w3mmode/ikiwiki.setup
 #REPLACE_PERL+=	plugins/externaldemo	# not installed anymore
 
 # not installed anymore
@@ -87,9 +87,15 @@ SUBST_STAGE.makefile=	post-patch
 SUBST_FILES.makefile=	Makefile.PL
 SUBST_SED.makefile+=	-e 's,share/man/man,${PKGMANDIR}/man,g'
 
+PKG_SYSCONFSUBDIR=	${PKGBASE}
+EGDIR=			$(PREFIX)/share/examples/${PKGBASE}
+CONF_FILES+=		${EGDIR}/auto.setup ${PKG_SYSCONFDIR}/auto.setup
+CONF_FILES+=		${EGDIR}/wikilist ${PKG_SYSCONFDIR}/wikilist
+
+pre-configure:
+	find ${WRKSRC} -type f -name '*.orig' -print | xargs rm -f
+
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/html/ikiwiki.setup \
-		${PREFIX}/share/doc/ikiwiki/
 .if !empty(PKG_OPTIONS:Mw3m)
 	${INSTALL_DATA} ${WRKSRC}/html/w3mmode.html \
 		${PREFIX}/share/doc/ikiwiki/
