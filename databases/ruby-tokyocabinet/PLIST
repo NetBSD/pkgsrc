@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/04 12:11:41 obache Exp $
+${RUBY_VENDORARCHLIB}/tokyocabinet.${RUBY_DLEXT}

@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/04 12:11:41 obache Exp $
+
+--- test.rb.orig	2008-06-20 14:47:36.000000000 +0000
++++ test.rb
+@@ -24,7 +24,7 @@ commands = [
+            ]
+ num = 1
+ commands.each do |command|
+-  rv = system("/usr/bin/ruby #{command} >/dev/null")
++  rv = system("ruby #{command} >/dev/null")
+   if(rv)
+     printf("%03d/%03d: %s: ok\n", num, commands.size, command)
+   else
