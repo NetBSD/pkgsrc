@@ -1,0 +1,21 @@
+$NetBSD: patch-cm,v 1.1.2.2 2008/09/04 21:37:19 tron Exp $
+--- mcs/class/System.Web/System.Web.Configuration/HttpRuntimeConfig.cs	2008/08/21 16:19:17	111275
++++ mcs/class/System.Web/System.Web.Configuration/HttpRuntimeConfig.cs	2008/08/21 16:51:54	111276
+@@ -55,7 +55,8 @@
+ 		public int IdleTimeout = 20; // minutes
+ 		public bool Enable = true;
+ 		public string VersionHeader;
+-
++		public bool EnableHeaderChecking = true;
++		
+ 		/* Only the config. handler should create instances of this. Use GetInstance (context) */
+ 		public HttpRuntimeConfig (object p)
+ 		{
+@@ -92,6 +93,7 @@
+ 			RequireRootSaveAsPath = parent.RequireRootSaveAsPath;
+ 			IdleTimeout = parent.IdleTimeout;
+ 			Enable = parent.Enable;
++			EnableHeaderChecking = parent.EnableHeaderChecking;
+ 		}
+ 	}
+ }
