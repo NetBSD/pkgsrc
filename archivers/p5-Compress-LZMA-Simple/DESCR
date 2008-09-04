@@ -1,0 +1,2 @@
+This module is a Perl interface of "lzmalib", which is a tiny wrapper
+of the LZMA SDK.
