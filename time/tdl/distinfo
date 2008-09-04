@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/04 11:13:29 tonnerre Exp $
+
+SHA1 (tdl-1.5.2.tar.gz) = 273c15eafa0a856532865ac4ccfee6685f88e1ad
+RMD160 (tdl-1.5.2.tar.gz) = 5bf21e214faa208c85e72b67b2f0d21bd279a4fe
+Size (tdl-1.5.2.tar.gz) = 66057 bytes
+SHA1 (patch-aa) = 1b0243f02526905ad74643d817aca6b117bfd03c
