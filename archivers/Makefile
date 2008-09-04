@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.106 2008/09/02 11:46:39 obache Exp $
+# $NetBSD: Makefile,v 1.107 2008/09/04 12:27:53 obache Exp $
 #
 
 COMMENT=	Archivers
@@ -38,6 +38,7 @@ SUBDIR+=	libcomprex
 SUBDIR+=	liblzo
 SUBDIR+=	libzip
 SUBDIR+=	lzma
+SUBDIR+=	lzmalib
 SUBDIR+=	lzo
 SUBDIR+=	lzop
 SUBDIR+=	macutil
@@ -50,6 +51,7 @@ SUBDIR+=	ocaml-zip
 SUBDIR+=	p5-Archive-Tar
 SUBDIR+=	p5-Archive-Zip
 SUBDIR+=	p5-Compress-Bzip2
+SUBDIR+=	p5-Compress-LZMA-Simple
 SUBDIR+=	p7zip
 SUBDIR+=	par2
 SUBDIR+=	pax
