@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2066 2008/09/04 12:26:28 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2067 2008/09/04 15:34:42 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3547,3 +3547,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added databases/p5-tokyocabinet version 1.16 [obache 2008-09-04]
 	Added databases/ruby-tokyocabinet version 1.14 [obache 2008-09-04]
 	Added textproc/tokyodystopia version 0.9.5 [obache 2008-09-04]
+	Updated www/ikiwiki to 2.62.1 [schmonz 2008-09-04]
