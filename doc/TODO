@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7510 2008/09/04 08:25:44 martti Exp $
+$NetBSD: TODO,v 1.7511 2008/09/04 13:48:27 taca Exp $
 
 Suggested new packages
 ======================
@@ -912,7 +912,7 @@ Suggested package updates
 	o mlterm-2.9.4
 	o mlview-0.9.0
 	o mmg-2.0.2
-	o modular-xorg-server-1.4.99.906
+	o modular-xorg-server-1.5.0
 	o mongrel-1.1.5
 	o moon-buggy-1.0.51
 	o mowgli-0.7.0
@@ -1409,6 +1409,7 @@ Suggested package updates
 	o xf86-video-nsc-2.8.3
 	o xf86-video-nv-2.1.12
 	o xf86-video-tdfx-1.4.0
+	o xf86-video-tga-1.2.0
 	o xfe-1.19.1
 	o xfstt-1.7
 	o xhippo-3.5
