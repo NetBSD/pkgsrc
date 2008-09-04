@@ -1,0 +1,53 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/04 12:10:28 obache Exp $
+
+--- configure.orig	2008-08-25 01:32:42.000000000 +0000
++++ configure
+@@ -1737,9 +1737,9 @@ MYDOCUMENTFILES="COPYING ChangeLog THANK
+ MYPCFILES="tokyocabinet.pc"
+ 
+ # Building flags
+-MYCFLAGS="-std=c99 -Wall -fPIC -fsigned-char -O2"
+-MYCPPFLAGS="-I. -I\$(INCLUDEDIR) -L$HOME/include -L/usr/local/include -DNDEBUG -D_GNU_SOURCE=1"
+-MYLDFLAGS="-L. -L\$(LIBDIR) -L$HOME/lib -L/usr/local/lib"
++MYCFLAGS="-std=c99 -Wall -fPIC -fsigned-char"
++MYCPPFLAGS="-I. -I\$(INCLUDEDIR) -DNDEBUG -D_GNU_SOURCE=1"
++MYLDFLAGS="-L. -L\$(LIBDIR)"
+ MYRUNPATH="\$(LIBDIR)"
+ MYLDLIBPATHENV="LD_LIBRARY_PATH"
+ MYPOSTCMD="true"
+@@ -4074,7 +4074,7 @@ _ACEOF
+ fi
+ 
+ fi
+-if test "$enable_exlzma" == "yes"
++if test "$enable_exlzma" = "yes"
+ then
+ 
+ { echo "$as_me:$LINENO: checking for main in -llzma" >&5
+@@ -4142,7 +4142,7 @@ _ACEOF
+ fi
+ 
+ fi
+-if test "$enable_exlzo" == "yes"
++if test "$enable_exlzo" = "yes"
+ then
+ 
+ { echo "$as_me:$LINENO: checking for main in -llzo2" >&5
+@@ -5427,7 +5427,7 @@ fi
+ 
+ 
+ fi
+-if test "$enable_exlzma" == "yes"
++if test "$enable_exlzma" = "yes"
+ then
+   if test "${ac_cv_header_lzmalib_h+set}" = set; then
+   { echo "$as_me:$LINENO: checking for lzmalib.h" >&5
+@@ -5564,7 +5564,7 @@ fi
+ 
+ 
+ fi
+-if test "$enable_exlzo" == "yes"
++if test "$enable_exlzo" = "yes"
+ then
+   if test "${ac_cv_header_lzo_lzo1x_h+set}" = set; then
+   { echo "$as_me:$LINENO: checking for lzo/lzo1x.h" >&5

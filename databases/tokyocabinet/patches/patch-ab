@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/09/04 12:10:28 obache Exp $
+
+--- Makefile.in.orig	2008-08-26 13:39:59.000000000 +0000
++++ Makefile.in
+@@ -50,8 +50,8 @@ CPPFLAGS = @MYCPPFLAGS@ \
+   -D_TC_PREFIX="\"$(prefix)\"" -D_TC_INCLUDEDIR="\"$(INCLUDEDIR)\"" \
+   -D_TC_LIBDIR="\"$(LIBDIR)\"" -D_TC_BINDIR="\"$(BINDIR)\"" -D_TC_LIBEXECDIR="\"$(LIBEXECDIR)\"" \
+   -D_TC_APPINC="\"-I$(INCLUDEDIR)\"" -D_TC_APPLIBS="\"-L$(LIBDIR) -ltokyocabinet @LIBS@\""
+-CFLAGS = @MYCFLAGS@
+-LDFLAGS = @MYLDFLAGS@
++CFLAGS = @CFLAGS@ @MYCFLAGS@
++LDFLAGS = @LDFLAGS@ @MYLDFLAGS@
+ LIBS = @LIBS@
+ LDENV = LD_RUN_PATH=/lib:/usr/lib:$(LIBDIR):$(HOME)/lib:/usr/local/lib:@MYRUNPATH@:.
+ RUNENV = @MYLDLIBPATHENV@=.:/lib:/usr/lib:$(LIBDIR):$(HOME)/lib:/usr/local/lib:@MYRUNPATH@
