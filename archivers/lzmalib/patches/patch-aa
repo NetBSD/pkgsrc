@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/04 12:07:15 obache Exp $
+
+Link with c++ instead of cc -lstdc++ to depended package easy to link.
+
+--- Makefile.in.orig	2008-07-23 08:40:09.000000000 +0000
++++ Makefile.in
+@@ -125,7 +125,7 @@ liblzma.a : $(LIBOBJFILES)
+ 
+ 
+ liblzma.so.$(LIBVER).$(LIBREV).0 : $(LIBOBJFILES)
+-	$(CC) -shared -Wl,-soname,liblzma.so.$(LIBVER) -o $@ $(LIBOBJFILES) \
++	$(CXX) -shared -Wl,-soname,liblzma.so.$(LIBVER) -o $@ $(LIBOBJFILES) \
+ 	  $(LDFLAGS) $(LIBS)
+ 
+ 
+@@ -138,7 +138,7 @@ liblzma.so : liblzma.so.$(LIBVER).$(LIBR
+ 
+ 
+ liblzma.$(LIBVER).$(LIBREV).0.dylib : $(LIBOBJFILES)
+-	$(CC) -dynamiclib -o $@ \
++	$(CXX) -dynamiclib -o $@ \
+ 	  -install_name $(LIBDIR)/liblzma.$(LIBVER).dylib \
+ 	  -current_version $(LIBVER).$(LIBREV).0 -compatibility_version $(LIBVER) \
+ 	  $(LIBOBJFILES) $(LDFLAGS) $(LIBS)
