@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/08/26 01:44:50 epg Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/09/04 22:44:01 epg Exp $
 ${PYSITELIB}/bzrlib/plugins/svn/__init__.py
 ${PYSITELIB}/bzrlib/plugins/svn/__init__.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/__init__.pyo
@@ -86,6 +86,9 @@ ${PYSITELIB}/bzrlib/plugins/svn/revspec.pyo
 ${PYSITELIB}/bzrlib/plugins/svn/svk.py
 ${PYSITELIB}/bzrlib/plugins/svn/svk.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/svk.pyo
+${PYSITELIB}/bzrlib/plugins/svn/tags.py
+${PYSITELIB}/bzrlib/plugins/svn/tags.pyc
+${PYSITELIB}/bzrlib/plugins/svn/tags.pyo
 ${PYSITELIB}/bzrlib/plugins/svn/tests/__init__.py
 ${PYSITELIB}/bzrlib/plugins/svn/tests/__init__.pyc
 ${PYSITELIB}/bzrlib/plugins/svn/tests/__init__.pyo
