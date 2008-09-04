@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2068 2008/09/04 17:24:54 epg Exp $
+$NetBSD: CHANGES-2008,v 1.2069 2008/09/04 20:45:53 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3551,3 +3551,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/py-paste version 1.7.1 [epg 2008-09-04]
 	Added www/py-simpletal version 4.1 [epg 2008-09-04]
 	Added www/loggerhead version 1.6 [epg 2008-09-04]
+	Added databases/py-sqlalchemy version 0.4.7p1 [tonnerre 2008-09-04]
