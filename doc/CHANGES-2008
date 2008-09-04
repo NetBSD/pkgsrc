@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2067 2008/09/04 15:34:42 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.2068 2008/09/04 17:24:54 epg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3548,3 +3548,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Added databases/ruby-tokyocabinet version 1.14 [obache 2008-09-04]
 	Added textproc/tokyodystopia version 0.9.5 [obache 2008-09-04]
 	Updated www/ikiwiki to 2.62.1 [schmonz 2008-09-04]
+	Added www/py-paste version 1.7.1 [epg 2008-09-04]
+	Added www/py-simpletal version 4.1 [epg 2008-09-04]
+	Added www/loggerhead version 1.6 [epg 2008-09-04]
