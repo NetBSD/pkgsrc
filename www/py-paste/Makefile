@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/04 16:49:17 epg Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/04 17:17:15 epg Exp $
 
 DISTNAME=	Paste-1.7.1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
@@ -11,9 +11,14 @@ COMMENT=	Middleware for Python WSGI applications
 
 PKG_DESTDIR_SUPPORT=		user-destdir
 
-PYDISTUTILSPKG=			yes
-# Requires setuptools; if adding other versions, fix PLIST, too.
-PYTHON_VERSIONS_ACCEPTED=	25
+DEPENDS+=	${PYPKGPREFIX}-setuptools>=0.6c8:../../devel/py-setuptools
+
+PYDISTUTILSPKG=	yes
+
+PLIST_SUBST+=	PYVERSSUFFIX=${PYVERSSUFFIX}
 
 .include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"
+
+# XXX I think this can't work because of the 'next;' in pyversion.mk.
+PRINT_PLIST_AWK+=	{ gsub(/py${PYVERSSUFFIX}/, "py$${PYVERSSUFFIX}") }
