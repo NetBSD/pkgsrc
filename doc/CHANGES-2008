@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2070 2008/09/04 22:04:42 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.2071 2008/09/04 22:51:35 epg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3553,3 +3553,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/loggerhead version 1.6 [epg 2008-09-04]
 	Added databases/py-sqlalchemy version 0.4.7p1 [tonnerre 2008-09-04]
 	Updated www/py-django to 1.0 [tonnerre 2008-09-04]
+	Updated devel/bzr-svn to 0.4.12 [epg 2008-09-04]
