@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2008/09/04 16:15:34 is Exp $
+
+--- po/Makefile.in.in.orig	2008-02-11 19:04:23.000000000 +0100
++++ po/Makefile.in.in
+@@ -46,7 +46,7 @@ INSTALL_DATA = @INSTALL_DATA@
+ # versions, $(mkinstalldirs) and $(install_sh) are unused.
+ #mkinstalldirs = $(SHELL) @install_sh@ -d
+ #install_sh = $(SHELL) @install_sh@
+-mkdir_p = @mkdir_p@
++mkdir_p = $(INSTALL_DATA) -m 755 -d
+ 
+ GMSGFMT_ = @GMSGFMT@
+ GMSGFMT_no = @GMSGFMT@
