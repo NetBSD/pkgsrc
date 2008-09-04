@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.263 2008/09/02 21:51:00 seb Exp $
+# $NetBSD: Makefile,v 1.264 2008/09/04 12:30:46 obache Exp $
 #
 
 COMMENT=	Databases
@@ -128,6 +128,7 @@ SUBDIR+=	p5-perl-ldap
 SUBDIR+=	p5-postgresql
 SUBDIR+=	p5-qdbm
 SUBDIR+=	p5-sybperl
+SUBDIR+=	p5-tokyocabinet
 SUBDIR+=	palm-db-tools
 SUBDIR+=	pear-DB
 SUBDIR+=	pear-MDB2
@@ -227,6 +228,7 @@ SUBDIR+=	ruby-qdbm
 SUBDIR+=	ruby-sequel
 SUBDIR+=	ruby-sequel-core
 SUBDIR+=	ruby-sqlite3
+SUBDIR+=	ruby-tokyocabinet
 SUBDIR+=	ruby-vapor
 SUBDIR+=	sdbm
 SUBDIR+=	shared-mime-info
@@ -244,6 +246,7 @@ SUBDIR+=	tcl-fbsql
 SUBDIR+=	tcl-gdbm
 SUBDIR+=	tdb
 SUBDIR+=	tinycdb
+SUBDIR+=	tokyocabinet
 SUBDIR+=	unixodbc
 SUBDIR+=	unixodbc-DataManager
 SUBDIR+=	unixodbc-ODBCConfig
