@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/04 17:20:26 epg Exp $
+
+SHA1 (loggerhead-1.6.tar.gz) = c37f2aab7ce4894745e247222533abaccba59f5a
+RMD160 (loggerhead-1.6.tar.gz) = 1ccf28b4bad04cc26d275e4665525c895d5c30e3
+Size (loggerhead-1.6.tar.gz) = 95065 bytes
+SHA1 (patch-aa) = dfdb406645765713564910deb30af22c7534b6eb
