@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.67.4.1 2008/08/10 15:27:26 tron Exp $
+# $NetBSD: Makefile,v 1.67.4.2 2008/09/04 21:37:19 tron Exp $
 
 DISTNAME=	mono-${MONO_VERSION}
-PKGREVISION=	2
+PKGREVISION=	4
 CATEGORIES=	lang
 MASTER_SITES=	http://go-mono.com/sources/mono/
 EXTRACT_SUFX=	.tar.bz2
