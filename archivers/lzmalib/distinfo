@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/04 12:07:15 obache Exp $
+
+SHA1 (lzmalib-0.0.1.tar.gz) = 638e511d1c6c5018f071b0f145bdfb242c34b6ce
+RMD160 (lzmalib-0.0.1.tar.gz) = caad5a009f3247ee1d0ee1500b90db5469ce1bd4
+Size (lzmalib-0.0.1.tar.gz) = 112202 bytes
+SHA1 (patch-aa) = 475d43320384887faf6d14c13d2f7b941327299e
