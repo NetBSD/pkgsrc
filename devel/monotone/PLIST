@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.15 2007/12/14 08:58:00 bjs Exp $
+@comment $NetBSD: PLIST,v 1.16 2008/09/05 20:48:46 bjs Exp $
 bin/mtn
+bin/mtnopt
 info/monotone.info
 share/doc/monotone/figures/branch-heads.png
 share/doc/monotone/figures/cert.png
@@ -44,6 +45,7 @@ share/monotone/contrib/monoprof.sh
 share/monotone/contrib/monotone-buildbot-notification.lua
 share/monotone/contrib/monotone-cluster-push.lua
 share/monotone/contrib/monotone-cvs-ignore.lua
+share/monotone/contrib/monotone-inotify.lua
 share/monotone/contrib/monotone-log-of-pulled-revs-hook.lua
 share/monotone/contrib/monotone-mail-notify.lua
 share/monotone/contrib/monotone-mirror.lua

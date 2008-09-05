@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.54 2008/05/25 21:42:21 joerg Exp $
+# $NetBSD: Makefile,v 1.55 2008/09/05 20:48:46 bjs Exp $
 #
 
-DISTNAME=	monotone-0.40
-PKGREVISION=	1
+DISTNAME=	monotone-0.41
 CATEGORIES=	devel scm
-MASTER_SITES=	http://monotone.ca/downloads/0.40/
+MASTER_SITES=	http://monotone.ca/downloads/0.41/
 
 MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://monotone.ca/
@@ -27,6 +26,8 @@ PKG_SUPPORTED_OPTIONS=	inet6
 
 CHECK_INTERPRETER_SKIP+=	share/monotone/contrib/*
 CHECK_PORTABILITY_SKIP+=	debian/*
+
+REPLACE_SH=			mtnopt
 
 .include "../../mk/bsd.options.mk"
 
