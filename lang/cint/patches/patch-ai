@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2008/09/05 05:27:31 dholland Exp $
+
+--- lib/posix/posix.h~	2005-05-06 04:48:49.000000000 -0400
++++ lib/posix/posix.h	2008-09-05 00:02:39.000000000 -0400
+@@ -272,7 +272,7 @@ extern char *getwd(char *buf);
+ extern int setpgrp(pid_t _pid,pid_t _pgrp);
+ #elif defined(G__SUN) || defined(__sun)
+ extern long setpgrp(void);
+-#elif defined(G__FBSD)||defined(__FreeBSD__)||defined(G__OBSD)||defined(__OpenBSD__)||((defined(G__alpha)||defined(__alpha))&&defined(G__GNUC))||((defined(G__alpha)||defined(__alpha))&&defined(G__GNUC))
++#elif defined(G__FBSD)||defined(__FreeBSD__)||defined(G__NBSD)||defined(__NetBSD__)||defined(G__OBSD)||defined(__OpenBSD__)||((defined(G__alpha)||defined(__alpha))&&defined(G__GNUC))||((defined(G__alpha)||defined(__alpha))&&defined(G__GNUC))
+ extern int setpgrp(pid_t _pid, pid_t _pgrp);
+ #elif defined(G__KCC) || defined(__KCC)
+ extern pid_t setpgrp(void);

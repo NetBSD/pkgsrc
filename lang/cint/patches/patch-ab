@@ -1,0 +1,63 @@
+$NetBSD: patch-ab,v 1.5 2008/09/05 05:27:30 dholland Exp $
+
+--- Makefile~	2005-05-06 04:49:09.000000000 -0400
++++ Makefile	2008-09-04 23:42:47.000000000 -0400
+@@ -91,7 +91,7 @@ include/iosenum.h : cint include/stdio.h
+ 	then \
+ 		touch include/iosenum.h; \
+ 	else \
+-		(cd include;rm -f stdfunc.dll;../cint -I. iosenum.cxx); \
++		(cd include;rm -f stdfunc.dll;../cint -I. iosenum.cxx) || exit 1; \
+ 	fi
+ 	echo > done
+ 
+@@ -110,10 +110,10 @@ makecint : tool/makecint.c
+ include/stdio.h : include/mkincld.c
+ 	$(CC) -I.. $(MACRO) -c -o include/mkincld.o include/mkincld.c
+ 	$(LD) $(OPTIMIZE) include/mkincld.o $(LDOPT) -o include/mkincld
+-	(cd include;./mkincld)
++	(cd include;./mkincld) || exit 1
+ 
+ #	$(CC) -I.. $(MACRO) -o include/mkincld include/mkincld.c
+-#	(cd include;./mkincld)
++#	(cd include;./mkincld) || exit 1
+ 
+ ##############################################################
+ # Link cint executable
+@@ -134,22 +134,22 @@ main/G__setup.o : main/G__setup.c G__ci.
+ # dependency file
+ ##############################################################
+ $(CINTSYSDIR)/readline/libreadline.a : readline/*.c readline/*.h
+-	(cd readline ; make)
++	(cd readline ; make) || exit 1
+ 
+ ##############################################################
+ # Compile cint interpreter core library
+ ##############################################################
+ $(CINTSYSDIR)/src/G__ci.a : G__ci.h src/*.c src/*.cxx *.h src/*.h $(READLINEA)
+-	(cd src ; make CINTSYSDIR=$(CINTSYSDIR) )
++	(cd src ; make CINTSYSDIR=$(CINTSYSDIR) ) || exit 1
+ 
+ $(CINTSYSDIR)/libcint.so : G__ci.h src/*.c src/*.cxx *.h src/*.h $(READLINEA)
+-	(cd src ; make CINTSYSDIR=$(CINTSYSDIR) $(CINTSYSDIR)/libcint.so)
++	(cd src ; make CINTSYSDIR=$(CINTSYSDIR) $(CINTSYSDIR)/libcint.so) || exit 1
+ 
+ $(CINTSYSDIR)/libcint.sl : G__ci.h src/*.c src/*.cxx *.h src/*.h $(READLINEA)
+-	(cd src ; make CINTSYSDIR=$(CINTSYSDIR) $(CINTSYSDIR)/libcint.sl)
++	(cd src ; make CINTSYSDIR=$(CINTSYSDIR) $(CINTSYSDIR)/libcint.sl) || exit 1
+ 
+ $(CINTSYSDIR)/libcint.dll : G__ci.h src/*.c src/*.cxx *.h src/*.h $(READLINEA)
+-	(cd src ; make CINTSYSDIR=$(CINTSYSDIR) $(CINTSYSDIR)/libcint.dll)
++	(cd src ; make CINTSYSDIR=$(CINTSYSDIR) $(CINTSYSDIR)/libcint.dll) || exit 1
+ 
+ ##############################################################
+ # Compile cint main function. 
+@@ -164,7 +164,7 @@ $(CINTSYSDIR)/main/G__main.o : main/G__m
+ # Cleanup
+ ##############################################################
+ clean :
+-	$(RM) main/*.o cint done core include/mkincld include/stdio.h makecint include/iosenum.h ; (cd src; make clean) ; (cd readline; make clean)
++	$(RM) main/*.o cint done core include/mkincld include/stdio.h makecint include/iosenum.h ; (cd src; make clean) || exit 1 ; (cd readline; make clean) || exit 1
+ 
+ cleanbin :
+ 	$(RM) main/*.o src/*.o $(CINTLIB) $(CINT_V6)

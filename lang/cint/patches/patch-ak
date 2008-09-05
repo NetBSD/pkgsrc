@@ -1,0 +1,24 @@
+$NetBSD: patch-ak,v 1.1 2008/09/05 05:27:31 dholland Exp $
+
+--- readline/readline.h~	2005-05-06 04:48:54.000000000 -0400
++++ readline/readline.h	2008-09-05 00:22:54.000000000 -0400
+@@ -138,7 +138,8 @@ extern Function *rl_ignore_some_completi
+    If this function exists and returns NULL then call the value of
+    rl_completion_entry_function to try to match, otherwise use the
+    array of strings returned. */
+-extern Function *rl_attempted_completion_function;
++/*extern Function *rl_attempted_completion_function;*/
++extern char **(*rl_attempted_completion_function)();
+ 
+ /* If non-zero, then this is the address of a function to call just
+    before readline_internal () prints the first prompt. */
+@@ -164,7 +165,8 @@ extern int rl_show_star;
+    standard meaning for expanding a tilde fails.  The function is called
+    with the text (sans tilde, as in "foo"), and returns a malloc()'ed string
+    which is the expansion, or a NULL pointer if there is no expansion. */
+-extern Function *tilde_expansion_failure_hook;
++/*extern Function *tilde_expansion_failure_hook;*/
++extern char *(*tilde_expansion_failure_hook)(char *);
+ 
+ /* When non-null, this is a NULL terminated array of strings which
+    are duplicates for a tilde prefix.  Bash uses this to expand
