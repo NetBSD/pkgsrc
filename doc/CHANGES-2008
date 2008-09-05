@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2084 2008/09/05 20:50:22 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2085 2008/09/05 21:23:56 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3567,3 +3567,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/spamdyke to 4.0.4 [schmonz 2008-09-05]
 	Updated devel/monotone to 0.41 [bjs 2008-09-05]
 	Updated devel/monotone-server to 0.41 [bjs 2008-09-05]
+	Added devel/p5-Test-Mock-LWP version 0.05 [seb 2008-09-05]
