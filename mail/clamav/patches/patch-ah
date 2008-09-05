@@ -1,10 +1,10 @@
-$NetBSD: patch-ah,v 1.15 2008/06/10 08:23:54 martti Exp $
+$NetBSD: patch-ah,v 1.15.4.1 2008/09/05 11:41:53 ghen Exp $
 
 Build fixes.
 
---- clamav-milter/clamav-milter.c.orig	2008-05-27 13:40:29.000000000 +0300
-+++ clamav-milter/clamav-milter.c	2008-06-10 10:42:12.000000000 +0300
-@@ -3830,7 +3830,7 @@
+--- clamav-milter/clamav-milter.c.orig	2008-09-01 20:19:44.000000000 +0300
++++ clamav-milter/clamav-milter.c	2008-09-04 08:28:44.000000000 +0300
+@@ -3926,7 +3926,7 @@
  						 * the postmaster, so include
  						 * some useful information
  						 */
@@ -13,7 +13,7 @@ Build fixes.
  							sendmailId, privdata->from);
  					else
  						fprintf(sendmail, _("A message sent from %s to\n"),
-@@ -3844,7 +3844,7 @@
+@@ -3940,7 +3940,7 @@
  						fprintf(sendmail, _("\nThe message in question has been quarantined as %s\n"), privdata->filename);
  
  					if(hflag) {
@@ -22,7 +22,7 @@ Build fixes.
  							smfi_getsymval(ctx, "j"), privdata->from,
  							smfi_getsymval(ctx, "_"));
  						fputs(_("For your information, the original message headers were:\n\n"), sendmail);
-@@ -5034,7 +5034,7 @@
+@@ -5129,7 +5129,7 @@
  	cli_dbgmsg("qfile move '%s' to '%s'\n", privdata->filename, newname);
  
  	if(move(privdata->filename, newname) < 0) {

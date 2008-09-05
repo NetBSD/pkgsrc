@@ -1,14 +1,14 @@
-$NetBSD: patch-af,v 1.5 2008/04/15 07:56:06 martti Exp $
+$NetBSD: patch-af,v 1.5.4.1 2008/09/05 11:41:53 ghen Exp $
 
 Installation fixes.
 
---- database/Makefile.in.orig	2008-04-09 18:55:29.000000000 +0300
-+++ database/Makefile.in	2008-04-15 10:31:57.000000000 +0300
-@@ -365,17 +365,6 @@
- 	$(mkinstalldirs) $(DESTDIR)$(DBINST)
- 	@test -f $(DESTDIR)$(DBINST)/main.cvd || test -d $(DESTDIR)$(DBINST)/main.inc || $(INSTALL_DATA) $(srcdir)/main.cvd $(DESTDIR)$(DBINST)
- 	@test -f $(DESTDIR)$(DBINST)/daily.cvd || test -d $(DESTDIR)$(DBINST)/daily.inc || $(INSTALL_DATA) $(srcdir)/daily.cvd $(DESTDIR)$(DBINST)
--	@if test `id|sed -e 's/^.[^(]*(\([^)]*\)).*/\1/'` = "root" && test -n "${CLAMAVUSER}" && test -n "${CLAMAVGROUP}"; then \
+--- database/Makefile.in.orig	2008-09-01 21:49:47.000000000 +0300
++++ database/Makefile.in	2008-09-04 08:28:24.000000000 +0300
+@@ -375,17 +375,6 @@
+ 	$(mkinstalldirs) $(DESTDIR)$(DBINST);\
+ 	test -f $(DESTDIR)$(DBINST)/main.cvd || test -f $(DESTDIR)$(DBINST)/main.cld || $(INSTALL_DATA) $(srcdir)/main.cvd $(DESTDIR)$(DBINST);\
+ 	test -f $(DESTDIR)$(DBINST)/daily.cvd || test -f $(DESTDIR)$(DBINST)/daily.cld || $(INSTALL_DATA) $(srcdir)/daily.cvd $(DESTDIR)$(DBINST);\
+-	if test `id|sed -e 's/^.[^(]*(\([^)]*\)).*/\1/'` = "root" && test -n "${CLAMAVUSER}" && test -n "${CLAMAVGROUP}"; then \
 -	    chmod 775 $(DESTDIR)$(DBINST); \
 -	    chown ${CLAMAVUSER} $(DESTDIR)$(DBINST); \
 -	    chgrp ${CLAMAVGROUP} $(DESTDIR)$(DBINST); \
