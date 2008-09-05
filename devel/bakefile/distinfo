@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/05 06:33:21 bjs Exp $
+
+SHA1 (bakefile-0.2.3.tar.gz) = 07eeece36ac81211654b3039566fc583a6d3c50a
+RMD160 (bakefile-0.2.3.tar.gz) = 16dcde277d9a79867a32f5e2175ddf59a99707ff
+Size (bakefile-0.2.3.tar.gz) = 699595 bytes
