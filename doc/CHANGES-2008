@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2082 2008/09/05 20:36:30 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.2083 2008/09/05 20:49:12 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3565,3 +3565,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/wireshark to 1.0.3 [tron 2008-09-05]
 	Updated games/scummvm to 0.12.0 [adam 2008-09-05]
 	Updated mail/spamdyke to 4.0.4 [schmonz 2008-09-05]
+	Updated devel/monotone to 0.41 [bjs 2008-09-05]
