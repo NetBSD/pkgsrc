@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2076 2008/09/05 05:27:59 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.2077 2008/09/05 06:34:39 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3559,3 +3559,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added x11/dri2proto version 1.1 [bjs 2008-09-05]
 	Updated sysutils/open-vm-tools to 2008.08.08.109361nb1 [bjs 2008-09-05]
 	Updated lang/cint to 5.15.174nb2 [dholland 2008-09-05]
+	Added devel/bakefile version 0.2.3 [bjs 2008-09-05]
