@@ -1,0 +1,31 @@
+$NetBSD: patch-am,v 1.1 2008/09/05 02:07:51 dholland Exp $
+
+destdir support.
+
+--- runtime/Makefile~	1997-06-10 08:24:35.000000000 -0400
++++ runtime/Makefile	2008-09-04 21:29:09.000000000 -0400
+@@ -50,17 +50,17 @@ clean:
+ 	rm -f primitives prims.c opnames.h jumptbl.h
+ 
+ install:
+-	cp camlrun $(BINDIR)
+-	strip $(BINDIR)/camlrun
+-	cp libcaml.a $(LIBDIR)
+-	if $(RANLIBTEST); then cd $(LIBDIR); $(RANLIB) libcaml.a; else true; fi
+-	cp mlvalues.h alloc.h misc.h $(LIBDIR)
++	cp camlrun $(DESTDIR)$(BINDIR)
++	strip $(DESTDIR)$(BINDIR)/camlrun
++	cp libcaml.a $(DESTDIR)$(LIBDIR)
++	if $(RANLIBTEST); then cd $(DESTDIR)$(LIBDIR); $(RANLIB) libcaml.a; else true; fi
++	cp mlvalues.h alloc.h misc.h $(DESTDIR)$(LIBDIR)
+ 	sed -e '/#include ".*\/m.h/r ../../config/m.h' \
+             -e '/#include ".*\/s.h/r ../../config/s.h' \
+-            -e '/#include "/d' config.h > $(LIBDIR)/config.h
++            -e '/#include "/d' config.h > $(DESTDIR)$(LIBDIR)/config.h
+ 	sed -e '/#include ".*gc\.h"/d' \
+ 	    -e '/#define Alloc_small/,/^}/d' \
+-	    -e '/Modify/,/^}/d' memory.h > $(LIBDIR)/memory.h
++	    -e '/Modify/,/^}/d' memory.h > $(DESTDIR)$(LIBDIR)/memory.h
+ 
+ primitives : $(PRIMS)
+ 	sed -n -e '/\/\* ML \*\//s/.* \([a-z0-9_][a-z0-9_]*\) *(.*/\1/p' \
