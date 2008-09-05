@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2078 2008/09/05 07:15:40 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2079 2008/09/05 07:24:03 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3561,3 +3561,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/cint to 5.15.174nb2 [dholland 2008-09-05]
 	Added devel/bakefile version 0.2.3 [bjs 2008-09-05]
 	Updated databases/tokyocabinet to 1.3.8 [obache 2008-09-05]
+	Added mail/enma version 1.0.0 [obache 2008-09-05]
