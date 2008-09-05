@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.39 2008/04/12 14:35:28 jmmv Exp $
+# $NetBSD: Makefile,v 1.40 2008/09/05 20:50:04 bjs Exp $
 #
 
-DISTNAME=	monotone-server-0.40
+DISTNAME=	monotone-server-0.41
 CATEGORIES=	devel scm
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -10,7 +10,7 @@ MAINTAINER=	jmmv@NetBSD.org
 HOMEPAGE=	http://monotone.ca/
 COMMENT=	Simplifies the configuration of a dedicated Monotone server
 
-DEPENDS+=	monotone>=0.40:../../devel/monotone
+DEPENDS+=	monotone>=0.41:../../devel/monotone
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
