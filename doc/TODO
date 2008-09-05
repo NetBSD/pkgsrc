@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7511 2008/09/04 13:48:27 taca Exp $
+$NetBSD: TODO,v 1.7512 2008/09/05 21:28:25 bjs Exp $
 
 Suggested new packages
 ======================
@@ -684,7 +684,6 @@ Suggested package updates
 	o gnome-mag-0.15.2
 	o gnome-pilot-2.0.16
 	o gnome-speech-0.4.21
-	o gnome-terminal-2.22.3
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
