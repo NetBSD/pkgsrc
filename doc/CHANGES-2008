@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2071 2008/09/04 22:51:35 epg Exp $
+$NetBSD: CHANGES-2008,v 1.2072 2008/09/05 01:04:23 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3554,3 +3554,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added databases/py-sqlalchemy version 0.4.7p1 [tonnerre 2008-09-04]
 	Updated www/py-django to 1.0 [tonnerre 2008-09-04]
 	Updated devel/bzr-svn to 0.4.12 [epg 2008-09-04]
+	Added devel/p5-Test-Log4perl version 0.1001 [seb 2008-09-05]
