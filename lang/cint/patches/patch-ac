@@ -1,0 +1,38 @@
+$NetBSD: patch-ac,v 1.1 2008/09/05 05:27:31 dholland Exp $
+
+--- readline/readline.c.orig	2005-05-06 04:48:54.000000000 -0400
++++ readline/readline.c	2008-09-05 00:23:42.000000000 -0400
+@@ -31,11 +31,13 @@ static char *xmalloc (), *xrealloc ();
+ #endif /* STATIC_MALLOC */
+ 
+ /* patched by gotom for Linux */
+-#ifdef __linux__
++#if defined(__linux__) || defined(__NetBSD__) || defined(__OpenBSD__) || defined(__FreeBSD__) || defined(__DragonFly__)
+ #define VOID_SIGHANDLER
+ #endif
+ 
+ #include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
+ #include <sys/types.h>
+ #include <fcntl.h>
+ #include <sys/file.h>
+@@ -2631,7 +2633,7 @@ alphabetic (c)
+     return (1);
+ 
+   if (allow_pathname_alphabetic_chars)
+-    return ((int)rindex (pathname_alphabetic_chars, c));
++    return (rindex (pathname_alphabetic_chars, c) != NULL);
+   else
+     return (0);
+ }
+@@ -3555,7 +3557,8 @@ Function *rl_completion_entry_function =
+    If this function exists and returns NULL then call the value of
+    rl_completion_entry_function to try to match, otherwise use the
+    array of strings returned. */
+-Function *rl_attempted_completion_function = (Function *)NULL;
++/*Function *rl_attempted_completion_function = (Function *)NULL;*/
++char **(*rl_attempted_completion_function)() = NULL;
+ 
+ /* Local variable states what happened during the last completion attempt. */
+ static int completion_changed_buffer = 0;

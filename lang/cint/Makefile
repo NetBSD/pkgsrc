@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2008/04/12 22:43:02 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2008/09/05 05:27:30 dholland Exp $
 
 DISTNAME=		cint5.15
 PKGNAME=		cint-5.15.174
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		ftp://root.cern.ch/root/
 #MASTER_SITES=		${MASTER_SITE_BACKUP}
@@ -96,5 +96,13 @@ do-install:
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
 	${INSTALL_MAN} ${WRKSRC}/doc/man3/statistics.h.3 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man3
+
+# The library seems to want these but the pertinent parts still don't
+# build, so I'm reluctant to bother.
+#
+#.include "../../graphics/glu/buildlink3.mk"
+#.include "../../graphics/MesaLib/buildlink3.mk"
+#.include "../../x11/xproto/buildlink3.mk"
+#.include "../../x11/libX11/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
