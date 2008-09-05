@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2008/09/05 02:07:51 dholland Exp $
+
+Fix 64-bit build.
+
+--- runtime/signals.c~	1995-11-10 10:10:32.000000000 -0500
++++ runtime/signals.c	2008-09-04 21:10:48.000000000 -0400
+@@ -5,6 +5,8 @@
+ #include "signals.h"
+ #include "stacks.h"
+ 
++value callback(value closure, value argument);
++
+ Volatile int async_signal_mode = 0;
+ Volatile code_t pending_signal_handler;
+ Volatile int pending_signal = 0;

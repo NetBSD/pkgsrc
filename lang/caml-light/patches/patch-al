@@ -1,0 +1,15 @@
+$NetBSD: patch-al,v 1.1 2008/09/05 02:07:51 dholland Exp $
+
+Fix 64-bit build.
+
+--- runtime/config.h~	1995-10-03 09:55:32.000000000 -0400
++++ runtime/config.h	2008-09-04 21:04:48.000000000 -0400
+@@ -12,6 +12,8 @@
+ 
+ /* Library dependencies */
+ 
++#include <string.h>
++
+ #ifdef HAS_MEMMOVE
+ #define bcopy(src,dst,len) memmove((dst), (src), (len))
+ #else
