@@ -1,5 +1,8 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/03/12 09:22:07 wiz Exp $
+$NetBSD: distinfo,v 1.1.1.1.6.1 2008/09/05 11:35:15 ghen Exp $
 
 SHA1 (WordNet-3.0.tar.gz) = 8dd56763280d9ed8bc13f62e2fb24c0fe030c763
 RMD160 (WordNet-3.0.tar.gz) = 62cdcd483cbfc1f456691f4fd8e7ba150801577e
 Size (WordNet-3.0.tar.gz) = 11537239 bytes
+SHA1 (wordnet.patch) = fc27501f9c6305ec0becae9350977d58d9598b47
+RMD160 (wordnet.patch) = 4f569fe28a5decbbd4a75f3b02b49bf407700893
+Size (wordnet.patch) = 23851 bytes
