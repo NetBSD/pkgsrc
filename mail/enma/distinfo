@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/05 07:23:44 obache Exp $
+
+SHA1 (enma-1.0.0.tar.gz) = a792ea302df81aec7940dae8665584086145ec15
+RMD160 (enma-1.0.0.tar.gz) = 35a9ff9ad0594561d9597788ddaca2b7d1ef8721
+Size (enma-1.0.0.tar.gz) = 161566 bytes
+SHA1 (patch-aa) = 0ab42bca38fbc52a1fffe00f9809da67ffb76eda
+SHA1 (patch-ab) = 2f6413b6c167198de118741c41f29c6bf76b1f06
