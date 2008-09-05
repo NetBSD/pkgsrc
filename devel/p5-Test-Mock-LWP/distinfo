@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/05 21:20:29 seb Exp $
+
+SHA1 (Test-Mock-LWP-0.05.tar.gz) = 0cf7c72b0830aadd2adac3dcdb4f1bf982ff74e8
+RMD160 (Test-Mock-LWP-0.05.tar.gz) = 1425c75db7704a405b3f5cb126958f54ce575382
+Size (Test-Mock-LWP-0.05.tar.gz) = 19384 bytes
