@@ -1,2 +1,2 @@
-PySQLite is a Python interace to the SQLite library,
+PySQLite is a Python interface to the SQLite library,
 allowing Python programs to access SQLite databases.
