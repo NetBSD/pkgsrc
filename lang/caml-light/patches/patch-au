@@ -1,0 +1,15 @@
+$NetBSD: patch-au,v 1.1 2008/09/05 02:07:51 dholland Exp $
+
+destdir support.
+
+--- man/Makefile~	1994-11-01 12:36:06.000000000 -0500
++++ man/Makefile	2008-09-04 21:37:35.000000000 -0400
+@@ -1,6 +1,6 @@
+ MAN=camlc.m camllex.m camllibr.m camllight.m camlmktop.m camlrun.m camlyacc.m
+ MANEXT=1
+-MANDIR=/usr/man/man$(MANEXT)
++MANDIR=$(PREFIX)/$(PKGMANDIR)/man$(MANEXT)
+ 
+ install:
+-	for f in $(MAN); do cp $$f $(MANDIR)/`basename $$f .m`.$(MANEXT); done
++	for f in $(MAN); do cp $$f $(DESTDIR)$(MANDIR)/`basename $$f .m`.$(MANEXT); done

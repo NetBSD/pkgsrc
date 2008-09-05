@@ -1,15 +1,19 @@
-$NetBSD: patch-ab,v 1.1 2007/02/15 14:34:09 rillig Exp $
+$NetBSD: patch-ab,v 1.2 2008/09/05 02:07:51 dholland Exp $
 
 cp(1) cannot overwrite read-only files.
 
---- lib/Makefile.orig	1997-11-12 17:49:46.000000000 +0100
-+++ lib/Makefile	2007-01-18 21:05:00.000000000 +0100
-@@ -31,7 +31,7 @@ clean:
+Add destdir support.
+
+--- lib/Makefile.orig	1997-11-12 11:49:46.000000000 -0500
++++ lib/Makefile	2008-09-04 21:39:14.000000000 -0400
+@@ -31,8 +31,8 @@ clean:
  	rm -f filename.ml genlex.ml
  
  install:
 -	cp stdlib.zo *.zi *.zix *.mli *.ml $(LIBDIR)
-+	pax -wr stdlib.zo *.zi *.zix *.mli *.ml $(LIBDIR)
- 	rm $(LIBDIR)/iparsing.mli
+-	rm $(LIBDIR)/iparsing.mli
++	pax -wr stdlib.zo *.zi *.zix *.mli *.ml $(DESTDIR)$(LIBDIR)
++	rm $(DESTDIR)$(LIBDIR)/iparsing.mli
  
  .SUFFIXES :
+ .SUFFIXES : .ml .mli .zi .zo .mlp
