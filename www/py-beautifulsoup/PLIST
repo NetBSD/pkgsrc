@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1 2008/09/05 15:46:51 darcy Exp $
+${PYSITELIB}/BeautifulSoup.py
+${PYSITELIB}/BeautifulSoup.pyc
+${PYSITELIB}/BeautifulSoup.pyo
+${PYSITELIB}/BeautifulSoupTests.py
+${PYSITELIB}/BeautifulSoupTests.pyc
+${PYSITELIB}/BeautifulSoupTests.pyo
