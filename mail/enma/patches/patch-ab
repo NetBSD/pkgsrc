@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/09/05 07:23:44 obache Exp $
+
+--- enma/etc/Makefile.in.orig	2008-08-21 14:22:29.000000000 +0000
++++ enma/etc/Makefile.in
+@@ -29,8 +29,8 @@ OBJS :=			$(patsubst %.c,%.o,$(SRCS))
+ all:
+ 
+ install:
+-	$(INSTALL) -d $(sysconfdir)
+-	$(INSTALL_DATA) -c enma.conf.sample $(sysconfdir)
++	$(INSTALL) -d $(DESTDIR)$(sysconfdir)
++	$(INSTALL_DATA) -c enma.conf.sample $(DESTDIR)$(sysconfdir)
+ 
+ clean:
+ 	rm -rf *~
