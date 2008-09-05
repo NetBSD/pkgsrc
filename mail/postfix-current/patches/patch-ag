@@ -1,4 +1,6 @@
-$NetBSD: patch-ag,v 1.16 2007/04/03 07:35:47 martti Exp $
+$NetBSD: patch-ag,v 1.16.14.1 2008/09/05 11:55:45 ghen Exp $
+
+Only define HAS_DB if it hasn't been defined.
 
 --- src/util/sys_defs.h.orig	2007-03-25 00:45:33.000000000 +0200
 +++ src/util/sys_defs.h	2007-04-03 08:51:26.000000000 +0300
