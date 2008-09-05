@@ -1,4 +1,6 @@
-$NetBSD: patch-aa,v 1.18 2008/01/17 14:03:05 martti Exp $
+$NetBSD: patch-aa,v 1.18.6.1 2008/09/05 11:55:45 ghen Exp $
+
+Make this pkgsrc friendly.
 
 --- postfix-install.orig	2007-12-05 02:16:40.000000000 +0200
 +++ postfix-install	2008-01-17 15:59:23.000000000 +0200

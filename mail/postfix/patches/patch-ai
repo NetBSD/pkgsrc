@@ -1,4 +1,6 @@
-$NetBSD: patch-ai,v 1.21 2008/02/18 17:45:34 ghen Exp $
+$NetBSD: patch-ai,v 1.21.6.1 2008/09/05 11:55:45 ghen Exp $
+
+Make this pkgsrc friendly.
 
 --- makedefs.orig	2007-08-19 14:28:11.000000000 +0000
 +++ makedefs	2007-10-22 05:50:31.000000000 +0000
