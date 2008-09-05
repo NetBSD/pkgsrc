@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2008/09/03 21:31:12 markd Exp $
+# $NetBSD: Makefile,v 1.52 2008/09/05 15:50:03 tron Exp $
 
 DISTNAME=	ghostscript-8.63
 PKGREVISION=	1
@@ -48,6 +48,10 @@ SUBST_SED.resdir=	-e "s|/Resource/|${GS_RESOURCEDIR}/|g"
 
 .if ${OPSYS} == "HPUX"
 CONFIGURE_ENV+=		ac_cv_func_fopen64=no
+.endif
+
+.if ${OPSYS} == "NetBSD"
+CFLAGS+=		-fPIC
 .endif
 
 # Interim IRIX build fix, the real problem is that fontconfig.pc doesn't
