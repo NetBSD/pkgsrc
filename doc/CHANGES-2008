@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2081 2008/09/05 20:17:11 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2082 2008/09/05 20:36:30 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3564,3 +3564,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added mail/enma version 1.0.0 [obache 2008-09-05]
 	Updated net/wireshark to 1.0.3 [tron 2008-09-05]
 	Updated games/scummvm to 0.12.0 [adam 2008-09-05]
+	Updated mail/spamdyke to 4.0.4 [schmonz 2008-09-05]
