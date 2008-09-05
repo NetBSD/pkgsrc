@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/05 01:01:14 seb Exp $
+
+SHA1 (Test-Log4perl-0.1001.tar.gz) = 4541b60cef49876dffdd07494e1a9f3838deff22
+RMD160 (Test-Log4perl-0.1001.tar.gz) = 0ff67eb8c5b9b2d45bd3f54c65c4652325c2f174
+Size (Test-Log4perl-0.1001.tar.gz) = 9394 bytes
