@@ -1,0 +1,3 @@
+Bakefile is cross-platform, cross-compiler native makefiles generator.
+It takes compiler-independent description of build tasks as input and
+generates native makefiles which use your preferred tools.
