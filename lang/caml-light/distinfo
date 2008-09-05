@@ -1,7 +1,26 @@
-$NetBSD: distinfo,v 1.5 2007/02/15 14:33:56 rillig Exp $
+$NetBSD: distinfo,v 1.6 2008/09/05 02:07:51 dholland Exp $
 
 SHA1 (cl74unix.tar.gz) = feae4a53af78b6c500a03c618dc11444e8b5dc47
 RMD160 (cl74unix.tar.gz) = a00a8de15e042080041076fcf3ad2592d9deb469
 Size (cl74unix.tar.gz) = 999170 bytes
-SHA1 (patch-aa) = e9a564183d445a61c00e0f6e134dee9029856bea
-SHA1 (patch-ab) = de97223ec671c8b04313c80fe4275c7ade087030
+SHA1 (patch-aa) = 6d3bc6249267789806ad4eef1b36aa809277a930
+SHA1 (patch-ab) = 3098db9faa0cd60931c781b4b24f796ac23ef52d
+SHA1 (patch-ac) = 6b268ddd007f73a8bb4085df4826627425eb9658
+SHA1 (patch-ad) = 22c97a5a2ee4a45cd85ae4c886b61cdcf833703a
+SHA1 (patch-ae) = 8de237bfb4b9a1c17e1cf4ad9c4abb7b1b456698
+SHA1 (patch-af) = 196fb2ace8ab078bccb2c8dba8b8cff211e6e95c
+SHA1 (patch-ag) = fce329f96d369f86c6fe7e3a30d78bed003d7043
+SHA1 (patch-ah) = 6a83f924ba49ae7121e070dc75432b2009643d9a
+SHA1 (patch-ai) = d9b663b4be634ccb64259c6fe0ddcda193dbbe50
+SHA1 (patch-aj) = 0e9ebfb02fb5efa06e393cf3e0ea3db6acd56acd
+SHA1 (patch-ak) = c24484f6dc1978c8bd04ff125f6fd86812fe68bc
+SHA1 (patch-al) = d4274b118eacf8f6f2a61ddaa8fde7468f45aefc
+SHA1 (patch-am) = a158d8553a85467955394b169ace0081eab65317
+SHA1 (patch-an) = 1bb3d4a32ae15f5639ab7575f50452764cf1d9a5
+SHA1 (patch-ao) = 59ec322fd19a9139fd329a9a36c0640a12306adf
+SHA1 (patch-ap) = e573c67efe96d159b3ab5bedc2ca1a319633a227
+SHA1 (patch-aq) = 00285a3f4cd6beea7a5b1b8f9c7c6810540dc5d8
+SHA1 (patch-ar) = aba9a829916af887d1115b51a57b449aced8535f
+SHA1 (patch-as) = 5d462ae1a1bf72ae1a0f19ff73d4b1b4226dbb32
+SHA1 (patch-at) = 83c69c1635a0c8f038bcd23d00acc4dc406c0684
+SHA1 (patch-au) = 4fe5ac20d7526e782143874b0ce9c7367716dbce

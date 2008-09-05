@@ -1,0 +1,17 @@
+$NetBSD: patch-at,v 1.1 2008/09/05 02:07:51 dholland Exp $
+
+destdir support.
+
+--- yacc/Makefile~	1994-11-01 12:36:18.000000000 -0500
++++ yacc/Makefile	2008-09-04 21:36:59.000000000 -0400
+@@ -16,8 +16,8 @@ clean:
+ 	rm -f *.o camlyacc
+ 
+ install:
+-	cp camlyacc $(BINDIR)/camlyacc
+-	strip $(BINDIR)/camlyacc
++	cp camlyacc $(DESTDIR)$(BINDIR)/camlyacc
++	strip $(DESTDIR)$(BINDIR)/camlyacc
+ 
+ depend:
+ 

@@ -1,0 +1,15 @@
+$NetBSD: patch-ah,v 1.1 2008/09/05 02:07:51 dholland Exp $
+
+Fix 64-bit build.
+
+--- runtime/lexing.c~	1994-11-01 12:36:10.000000000 -0500
++++ runtime/lexing.c	2008-09-04 21:13:59.000000000 -0400
+@@ -4,6 +4,8 @@
+ #include "stacks.h"
+ #include "str.h"
+ 
++value callback(value closure, value argument);
++
+ struct lexer_buffer {
+   value refill_buff;
+   value lex_buffer;

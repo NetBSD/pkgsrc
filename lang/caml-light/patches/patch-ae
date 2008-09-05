@@ -1,0 +1,15 @@
+$NetBSD: patch-ae,v 1.1 2008/09/05 02:07:51 dholland Exp $
+
+Fix 64-bit build.
+
+--- runtime/debugcom.c~	1997-06-27 09:59:02.000000000 -0400
++++ runtime/debugcom.c	2008-09-04 21:11:39.000000000 -0400
+@@ -2,6 +2,8 @@
+ 
+ #include <stdio.h>
+ #include <string.h>
++#include <unistd.h>
++#include <arpa/inet.h> /* for inet_addr() */
+ #include "misc.h"
+ #include "debugger.h"
+ #include "mlvalues.h"
