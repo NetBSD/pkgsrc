@@ -1,10 +1,12 @@
-# $NetBSD: Makefile,v 1.13 2008/06/12 02:14:20 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2008/09/06 16:09:35 wiz Exp $
 
 DISTNAME=	pysqlite-1.0.1
 PKGNAME=	${PYPKGPREFIX}-sqlite-1.0.1
 PKGREVISION=	1
 CATEGORIES=	databases python
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pysqlite/}
+MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=pysqlite/} \
+		http://oss.itsystementwicklung.de/download/pysqlite/1.0/1.0.1/ \
+		http://initd.org/pub/software/pysqlite/releases/1.0/1.0.1/
 
 MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://pysqlite.org/
