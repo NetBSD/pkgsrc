@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2007/01/22 14:56:56 joerg Exp $
+$NetBSD: distinfo,v 1.3 2008/09/06 14:39:56 wiz Exp $
 
-SHA1 (libXau-1.0.3.tar.bz2) = e365d2b9c781ab8d07f79c85bbc48480d1574199
-RMD160 (libXau-1.0.3.tar.bz2) = 6ce63b9c1b352c2bc8f49adce15b921ead29a1e4
-Size (libXau-1.0.3.tar.bz2) = 229619 bytes
+SHA1 (libXau-1.0.4.tar.bz2) = d73880b97fc7ddb8d8f59e1cd968337427e20ec2
+RMD160 (libXau-1.0.4.tar.bz2) = 9ca0318c62b6bcf97b8460fd89b0788b07f459ca
+Size (libXau-1.0.4.tar.bz2) = 227753 bytes
