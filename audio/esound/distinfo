@@ -1,8 +1,7 @@
-$NetBSD: distinfo,v 1.26 2008/07/31 14:03:16 drochner Exp $
+$NetBSD: distinfo,v 1.27 2008/09/06 14:42:53 wiz Exp $
 
-SHA1 (esound-0.2.39.tar.bz2) = 71dd61502224309784f1d9c274914731cde7c628
-RMD160 (esound-0.2.39.tar.bz2) = 1f719fdefe2bb9bc38d7dbf178d84e45451d8249
-Size (esound-0.2.39.tar.bz2) = 423581 bytes
+SHA1 (esound-0.2.40.tar.bz2) = 98cef3b8dbf8c4b664eca94d3c1b2f98736b0b88
+RMD160 (esound-0.2.40.tar.bz2) = 6b435a01bc8c5a22df31622c27f6a83be798aea2
+Size (esound-0.2.40.tar.bz2) = 423798 bytes
 SHA1 (patch-aa) = d734a1004026287071e571ceb3fd346b809a6a30
-SHA1 (patch-ab) = cb6d32ce121e46d53286c1d9bdb9b15c411d0c6c
-SHA1 (patch-ac) = e36246569d85f0baf957d2faa5f787a214054894
+SHA1 (patch-ab) = 05b3d084546394fc47cdd21f40ce81b9d0e8f671
