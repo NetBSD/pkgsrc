@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.41 2008/06/13 10:34:26 drochner Exp $
+$NetBSD: distinfo,v 1.42 2008/09/06 15:10:18 wiz Exp $
 
-SHA1 (ORBit2-2.14.13.tar.bz2) = eb565df83480ccab606821a7d1942c0c23a4e8d7
-RMD160 (ORBit2-2.14.13.tar.bz2) = 917d5011af564b84653166ecd490823bfc0ae277
-Size (ORBit2-2.14.13.tar.bz2) = 739650 bytes
+SHA1 (ORBit2-2.14.14.tar.bz2) = 263ab65c72133775306f2279e666245ad8fad9da
+RMD160 (ORBit2-2.14.14.tar.bz2) = c09b43e7b66380f25857f7e2570c51958108f3e5
+Size (ORBit2-2.14.14.tar.bz2) = 739599 bytes
 SHA1 (patch-aa) = 6e87e28e3634908f35c219f81a47d0353cfaf551
 SHA1 (patch-ab) = 1661eaaa0119895a860e0c667990ea71b80e8ace
 SHA1 (patch-ac) = 075a11883b9d0a3ec7d5d93b37007ba64e1baf41
