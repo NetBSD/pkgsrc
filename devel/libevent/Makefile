@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/04/22 17:25:42 tnn Exp $
+# $NetBSD: Makefile,v 1.29 2008/09/06 16:30:43 wiz Exp $
 #
 # WARNING: updating this package (as of the 1.1/1.2 releases) means
 # updating BUILDLINK_ABI_DEPENDS in buildlink3.mk and a PKGREVISION
@@ -7,7 +7,7 @@
 # from being ABI compatible across releases until this is fixed.
 # [tvierling 20070210]
 
-DISTNAME=	libevent-1.4.3-stable
+DISTNAME=	libevent-1.4.5-stable
 PKGNAME=	${DISTNAME:S/-stable//}
 CATEGORIES=	devel
 MASTER_SITES=	http://monkey.org/~provos/
