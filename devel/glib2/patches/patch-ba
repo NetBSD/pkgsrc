@@ -1,8 +1,8 @@
-$NetBSD: patch-ba,v 1.2 2008/05/29 12:41:35 tnn Exp $
+$NetBSD: patch-ba,v 1.3 2008/09/06 11:07:20 obache Exp $
 
---- gio/gunixmounts.c.orig	2008-04-08 05:47:30.000000000 +0200
+--- gio/gunixmounts.c.orig	2008-09-02 15:09:19.000000000 +0000
 +++ gio/gunixmounts.c
-@@ -561,7 +561,11 @@ get_mtab_monitor_file (void)
+@@ -563,7 +563,11 @@ get_mtab_monitor_file (void)
  static GList *
  _g_get_unix_mounts (void)
  {
@@ -14,7 +14,7 @@ $NetBSD: patch-ba,v 1.2 2008/05/29 12:41:35 tnn Exp $
    int num_mounts, i;
    GUnixMountEntry *mount_entry;
    GList *return_list;
-@@ -578,8 +582,18 @@ _g_get_unix_mounts (void)
+@@ -580,8 +584,18 @@ _g_get_unix_mounts (void)
        
        mount_entry->mount_path = g_strdup (mntent[i].f_mntonname);
        mount_entry->device_path = g_strdup (mntent[i].f_mntfromname);

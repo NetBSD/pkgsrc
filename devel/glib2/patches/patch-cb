@@ -1,8 +1,8 @@
-$NetBSD: patch-cb,v 1.1 2008/05/10 17:13:12 jmcneill Exp $
+$NetBSD: patch-cb,v 1.2 2008/09/06 11:07:21 obache Exp $
 
---- gio/xdgmime/xdgmime.c.orig	2008-05-10 13:00:48.000000000 -0400
-+++ gio/xdgmime/xdgmime.c	2008-05-10 13:01:28.000000000 -0400
-@@ -236,7 +236,7 @@
+--- gio/xdgmime/xdgmime.c.orig	2008-09-02 15:09:17.000000000 +0000
++++ gio/xdgmime/xdgmime.c
+@@ -254,7 +254,7 @@ xdg_run_command_on_dirs (XdgDirectoryFun
  
    xdg_data_dirs = getenv ("XDG_DATA_DIRS");
    if (xdg_data_dirs == NULL)
