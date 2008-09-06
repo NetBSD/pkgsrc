@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.14 2008/04/22 18:06:09 tnn Exp $
+# $NetBSD: Makefile,v 1.15 2008/09/06 21:39:53 wiz Exp $
 
 DISTNAME=	fragroute-1.2
-PKGREVISION=	7
+PKGREVISION=	8
 CATEGORIES=	security net
 MASTER_SITES=	http://monkey.org/~dugsong/fragroute/
 
