@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2119 2008/09/06 20:09:36 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2120 2008/09/06 20:54:08 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3605,3 +3605,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/apr-util to 1.3.4 [wiz 2008-09-06]
 	Updated editors/vim-share to 7.2.10 [martti 2008-09-06]
 	Updated x11/pixman to 0.11.10 [bjs 2008-09-06]
+	Updated databases/db4 to 4.7.25.1 [wiz 2008-09-06]
