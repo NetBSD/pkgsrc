@@ -1,0 +1,25 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/06 23:24:08 wiz Exp $
+bin/mtp-albumart
+bin/mtp-albums
+bin/mtp-connect
+bin/mtp-delfile
+bin/mtp-detect
+bin/mtp-emptyfolders
+bin/mtp-files
+bin/mtp-folders
+bin/mtp-format
+bin/mtp-getfile
+bin/mtp-getplaylist
+bin/mtp-hotplug
+bin/mtp-newfolder
+bin/mtp-newplaylist
+bin/mtp-playlists
+bin/mtp-sendfile
+bin/mtp-sendtr
+bin/mtp-reset
+bin/mtp-thumb
+bin/mtp-tracks
+bin/mtp-trexist
+include/libmtp.h
+lib/libmtp.la
+lib/pkgconfig/libmtp.pc
