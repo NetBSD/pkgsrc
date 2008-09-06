@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/05/30 12:28:42 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/09/06 14:32:46 wiz Exp $
 include/gtkspell-2.0/gtkspell/gtkspell.h
 lib/libgtkspell.la
 lib/pkgconfig/gtkspell-2.0.pc
@@ -22,6 +22,7 @@ share/locale/ga/LC_MESSAGES/gtkspell.mo
 share/locale/gl/LC_MESSAGES/gtkspell.mo
 share/locale/hu/LC_MESSAGES/gtkspell.mo
 share/locale/hy/LC_MESSAGES/gtkspell.mo
+share/locale/id/LC_MESSAGES/gtkspell.mo
 share/locale/it/LC_MESSAGES/gtkspell.mo
 share/locale/ja/LC_MESSAGES/gtkspell.mo
 share/locale/ky/LC_MESSAGES/gtkspell.mo
