@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7512 2008/09/05 21:28:25 bjs Exp $
+$NetBSD: TODO,v 1.7513 2008/09/06 05:33:24 epg Exp $
 
 Suggested new packages
 ======================
@@ -1131,7 +1131,6 @@ Suggested package updates
 	o py-soappy-0.11.6
 	o py-sqlite-1.1.7
 	o py-sqlite2-2.4.1
-	o py-subversion-1.5.2
 	o py-sybase-0.37
 	o py-textile-2.0.11
 	o py-urwid-0.9.8.2
@@ -1290,7 +1289,6 @@ Suggested package updates
 	o streamripper-1.63.0
 	o subtitleeditor-0.22.3
 	o subtitleripper-0.3.4
-	o subversion-base-1.5.2
 	o sunbird-0.5 [ghen]
 	o suse_base-11.0
 	o swfdec-0.7.4
