@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/06 23:24:08 wiz Exp $
+
+SHA1 (libmtp-0.3.1.tar.gz) = 416510e65018cc50b10883b1fc893e2a05387439
+RMD160 (libmtp-0.3.1.tar.gz) = f9b3eac1b6b69771ef123edf76b8a6242f96c6f5
+Size (libmtp-0.3.1.tar.gz) = 556206 bytes
+SHA1 (patch-aa) = 8d962323f099efec2bf2f3ac0ef3109151d5d57d
