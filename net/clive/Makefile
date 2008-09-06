@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.12 2008/08/14 19:38:27 wiz Exp $
+# $NetBSD: Makefile,v 1.13 2008/09/06 14:28:43 wiz Exp $
 #
 
-DISTNAME=	clive-1.0.0
+DISTNAME=	clive-1.0.1
 CATEGORIES=	net multimedia www
-MASTER_SITES=	http://dl.gna.org/clive/0.4/src/ \
+MASTER_SITES=	http://download.gna.org/clive/1.0.x/ \
 		${MASTER_SITE_SOURCEFORGE:=clive/}
 EXTRACT_SUFX=	.tar.bz2
 
