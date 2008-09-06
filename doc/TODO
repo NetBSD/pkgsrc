@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7518 2008/09/06 19:59:51 wiz Exp $
+$NetBSD: TODO,v 1.7519 2008/09/06 21:01:13 wiz Exp $
 
 Suggested new packages
 ======================
@@ -545,7 +545,6 @@ Suggested package updates
 	o cxref-1.6b
 	o cygwin_lib-1.5.24.2
 	o dap-3.7
-	o db4-4.7.25
 	o dbench-4.0
 	o dbxml-2.1.8
 	o dc_gui2-0.80
@@ -1048,7 +1047,6 @@ Suggested package updates
 	o pinfo-0.6.9
 	o pioneers-0.12.2
 	o pircbot-1.4.4
-	o pixman-0.11.10
 	o pkg_select-20051209
 	o ploticus-2.40
 	o ploticus-examples-230
