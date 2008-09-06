@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.42 2008/09/06 13:31:07 wiz Exp $
+# $NetBSD: Makefile,v 1.43 2008/09/06 23:44:39 wiz Exp $
 
 DISTNAME=	cdrtools-2.01.01a48
 PKGNAME=	cdrtools-2.01.01.48
@@ -31,6 +31,9 @@ MAKE_ENV+=	MAKEPROG="gmake"
 MAKE_ENV+=	COPTX=${CFLAGS:Q}
 MAKE_ENV+=	LDOPTX=${LDFLAGS:Q}
 MAKE_ENV+=	INS_BASE=${PREFIX:Q}
+# do we want to compile shared libraries?
+# needs changes in the install target and PLIST
+#MAKE_ENV+=	LINKMODE=dynamic
 
 # if we're using a gcc which is named gcc, we need to set CCOM=gcc
 # in MAKE_ENV so the make infrastructure picks the right options.
