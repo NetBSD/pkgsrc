@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.43 2008/08/01 23:14:47 bjs Exp $
+# $NetBSD: Makefile,v 1.44 2008/09/06 09:00:32 wiz Exp $
 
 DISTNAME=	xterm-236
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	ftp://invisible-island.net/xterm/ \
 		http://www.sfr-fresh.com/unix/misc/
@@ -55,6 +56,8 @@ post-install:
 		${DESTDIR}${PREFIX}/share/applications && \
 	 ${INSTALL_DATA} ${WRKSRC}/uxterm.desktop \
 		${DESTDIR}${PREFIX}/share/applications
+	cd ${PREFIX}/${PKGMANDIR}/man1 && tbl xterm.1 > xterm.1.tbl && \
+		mv xterm.1.tbl xterm.1
 
 .include "options.mk"
 
