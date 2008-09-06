@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2089 2008/09/06 09:19:13 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2090 2008/09/06 11:07:40 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3573,3 +3573,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/bzr to 1.6.1 [epg 2008-09-06]
 	Updated x11/xterm to 236nb1 [wiz 2008-09-06]
 	Updated textproc/subtitleripper to 0.3.4 [wiz 2008-09-06]
+	Updated devel/glib2 to 2.18.0 [obache 2008-09-06]
