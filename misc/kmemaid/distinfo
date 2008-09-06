@@ -1,6 +1,0 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/10/12 22:21:55 wiz Exp $
-
-SHA1 (kmemaid-0.4.7.0.tar.bz2) = de52329044b654ba5175b678f7ed5466422f639e
-RMD160 (kmemaid-0.4.7.0.tar.bz2) = 3ee21c6fd1ca918da838700a58e3b9ef1969508b
-Size (kmemaid-0.4.7.0.tar.bz2) = 715756 bytes
-SHA1 (patch-aa) = 3489521673e0d737986780f9449b5ffa863a0898
