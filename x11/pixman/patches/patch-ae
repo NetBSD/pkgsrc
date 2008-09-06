@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.6 2008/07/18 19:03:32 bjs Exp $
+$NetBSD: patch-ae,v 1.7 2008/09/06 20:09:16 bjs Exp $
 
---- configure.orig	2008-07-17 13:39:07.000000000 -0400
+--- configure.orig	2008-09-06 06:07:45.000000000 -0400
 +++ configure
-@@ -19773,6 +19773,7 @@ fi
+@@ -20218,6 +20218,7 @@ fi
  
  
  have_gcc4=no
@@ -10,7 +10,7 @@ $NetBSD: patch-ae,v 1.6 2008/07/18 19:03:32 bjs Exp $
  { echo "$as_me:$LINENO: checking for -fvisibility" >&5
  echo $ECHO_N "checking for -fvisibility... $ECHO_C" >&6; }
  cat >conftest.$ac_ext <<_ACEOF
-@@ -19810,7 +19811,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
+@@ -20255,7 +20256,7 @@ sed 's/^/| /' conftest.$ac_ext >&5
  fi
  
  rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
@@ -19,12 +19,3 @@ $NetBSD: patch-ae,v 1.6 2008/07/18 19:03:32 bjs Exp $
  if test "x$have_gcc4" = "xyes"; then
     CFLAGS="$CFLAGS -fvisibility=hidden"
  fi
-@@ -20057,7 +20058,7 @@ fi
- 
- { echo "$as_me:$LINENO: result: $have_sse2_intrinsics" >&5
- echo "${ECHO_T}$have_sse2_intrinsics" >&6; }
--if test $enable_sse2 = yes && test $have_sse_intrinsics = no ; then
-+if test $enable_sse2 = yes && test $have_sse2_intrinsics = no ; then
-    { { echo "$as_me:$LINENO: error: SSE2 intrinsics not detected" >&5
- echo "$as_me: error: SSE2 intrinsics not detected" >&2;}
-    { (exit 1); exit 1; }; }

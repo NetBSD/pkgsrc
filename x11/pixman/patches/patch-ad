@@ -1,6 +1,6 @@
-$NetBSD: patch-ad,v 1.3 2008/07/18 19:03:32 bjs Exp $
+$NetBSD: patch-ad,v 1.4 2008/09/06 20:09:16 bjs Exp $
 
---- configure.ac.orig	2008-07-17 13:38:50.000000000 -0400
+--- configure.ac.orig	2008-09-06 06:06:45.000000000 -0400
 +++ configure.ac
 @@ -109,14 +109,14 @@ dnl ====================================
  dnl -fvisibility stuff
@@ -10,13 +10,13 @@ $NetBSD: patch-ad,v 1.3 2008/07/18 19:03:32 bjs Exp $
 -AC_COMPILE_IFELSE([
 -#if defined(__GNUC__) && (__GNUC__ >= 4)
 -#else
--#error Need GCC 4.0 for visibility
+-error Need GCC 4.0 for visibility
 -#endif
 +dnl AC_MSG_CHECKING(for -fvisibility)
 +dnl AC_COMPILE_IFELSE([
 +dnl #if defined(__GNUC__) && (__GNUC__ >= 4)
 +dnl #else
-+dnl #error Need GCC 4.0 for visibility
++dnl error Need GCC 4.0 for visibility
 +dnl #endif
  int main () { return 0; } 
 -], have_gcc4=yes)
@@ -24,12 +24,3 @@ $NetBSD: patch-ad,v 1.3 2008/07/18 19:03:32 bjs Exp $
  
  if test "x$have_gcc4" = "xyes"; then
     CFLAGS="$CFLAGS -fvisibility=hidden"
-@@ -250,7 +250,7 @@ if test $have_sse2_intrinsics = yes ; th
- fi
- 
- AC_MSG_RESULT($have_sse2_intrinsics)
--if test $enable_sse2 = yes && test $have_sse_intrinsics = no ; then
-+if test $enable_sse2 = yes && test $have_sse2_intrinsics = no ; then
-    AC_MSG_ERROR([SSE2 intrinsics not detected])
- fi
- 

@@ -24,7 +24,7 @@ pixman_image_set_accessors
 pixman_image_set_alpha_map
 pixman_image_set_clip_region
 pixman_image_set_clip_region32
-pixman_image_set_component_alpha  
+pixman_image_set_component_alpha
 pixman_image_set_filter
 pixman_image_set_has_client_clip
 pixman_image_set_indexed

@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2008/07/18 19:03:32 bjs Exp $
+# $NetBSD: Makefile,v 1.18 2008/09/06 20:09:15 bjs Exp $
 #
 
-DISTNAME=	pixman-0.11.8
-PKGREVISION=	1
+DISTNAME=	pixman-0.11.10
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
@@ -15,9 +14,16 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config perl
-
-CONFIGURE_ENV+=	AUTOMAKE=${TRUE:Q}	# XXX quiet!
+USE_TOOLS+=	pkg-config perl diff awk
+###
+### XXX Quiet, please!
+###
+.if empty(USE_TOOLS:Mauto*)
+CONFIGURE_ENV+=	AUTOCONF=true
+CONFIGURE_ENV+=	AUTOHEADER=true
+CONFIGURE_ENV+=	ACLOCAL=true
+CONFIGURE_ENV+=	AUTOMAKE=${TRUE:Q}
+.endif
 
 PKGCONFIG_OVERRIDE+=	pixman-1.pc.in
 PKGCONFIG_OVERRIDE+=	pixman-1-uninstalled.pc.in
@@ -27,19 +33,23 @@ PKGCONFIG_OVERRIDE+=	pixman-1-uninstalled.pc.in
 ###	tradition of portability, we'll opt to use libtool to export
 ###	the desired symbols, hiding the rest.
 ###
-###	I have verified the list of visible symbols is unchanged from
-###	the "factory" build.
+###	To regenerate the libtool symfile, invoke the 'gen-symfile'
+###	target, making sure to define PKG_DEVELOPER.  This target
+###	requires nm, awk, and tee.  The new symfile will be in
+###	${WRKDIR}.
 ###
 MAKE_ENV+=	PIXMAN_SYMFILE=${PIXMAN_SYMFILE:Q}
 PIXMAN_SYMFILE=	${WRKDIR}/pixman.sym
 
-.include "../../mk/compiler.mk"
-
-.if !empty(PKGSRC_COMPILER:Msunpro) || empty(CC_VERSION:Mgcc-4.1*)
-CONFIGURE_ARGS+=	--disable-sse2
-.endif
-
 post-extract:
 	${CP} ${FILESDIR}/pixman.sym ${WRKDIR}
+
+.if defined(NM) && defined(PKG_DEVELOPER)
+gen-symfile: build
+	${NM} -DP ${WRKSRC}/pixman/.libs/libpixman-1.so | 	\
+	${AWK} '/^pixman/ { print $$1 }' | 			\
+	${TOOLS_PLATFORM.tee} > ${WRKDIR}/pixman.sym &&		\
+	${DIFF} ${FILESDIR}/pixman.sym ${WRKDIR}/pixman.sym
+.endif
 
 .include "../../mk/bsd.pkg.mk"
