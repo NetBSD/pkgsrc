@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/03 16:30:48 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/09/06 16:29:11 wiz Exp $
 include/X11/fonts/fontenc.h
 lib/libfontenc.la
 lib/pkgconfig/fontenc.pc
-@comment @dirrm include/X11/fonts
+@unexec ${RMDIR} %D/include/X11/fonts 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/include/X11 2>/dev/null || ${TRUE}
