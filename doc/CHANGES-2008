@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2088 2008/09/06 09:00:45 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2089 2008/09/06 09:19:13 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3572,3 +3572,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/subversion to 1.5.2 [epg 2008-09-06]
 	Updated devel/bzr to 1.6.1 [epg 2008-09-06]
 	Updated x11/xterm to 236nb1 [wiz 2008-09-06]
+	Updated textproc/subtitleripper to 0.3.4 [wiz 2008-09-06]
