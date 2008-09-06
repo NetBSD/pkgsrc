@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.42 2008/05/29 08:03:58 wiz Exp $
+@comment $NetBSD: PLIST,v 1.43 2008/09/06 11:07:20 obache Exp $
 bin/glib-genmarshal
 bin/glib-gettextize
 bin/glib-mkenums
@@ -18,6 +18,8 @@ include/glib/glib-2.0/gio/gcontenttype.h
 include/glib/glib-2.0/gio/gdatainputstream.h
 include/glib/glib-2.0/gio/gdataoutputstream.h
 include/glib/glib-2.0/gio/gdrive.h
+include/glib/glib-2.0/gio/gemblem.h
+include/glib/glib-2.0/gio/gemblemedicon.h
 include/glib/glib-2.0/gio/gfile.h
 include/glib/glib-2.0/gio/gfileattribute.h
 include/glib/glib-2.0/gio/gfileenumerator.h
@@ -32,10 +34,12 @@ include/glib/glib-2.0/gio/gfilteroutputstream.h
 include/glib/glib-2.0/gio/gicon.h
 include/glib/glib-2.0/gio/ginputstream.h
 include/glib/glib-2.0/gio/gio.h
+include/glib/glib-2.0/gio/gioenums.h
 include/glib/glib-2.0/gio/gioenumtypes.h
 include/glib/glib-2.0/gio/gioerror.h
 include/glib/glib-2.0/gio/giomodule.h
 include/glib/glib-2.0/gio/gioscheduler.h
+include/glib/glib-2.0/gio/giotypes.h
 include/glib/glib-2.0/gio/gloadableicon.h
 include/glib/glib-2.0/gio/gmemoryinputstream.h
 include/glib/glib-2.0/gio/gmemoryoutputstream.h
@@ -147,6 +151,8 @@ man/man1/glib-genmarshal.1
 man/man1/glib-gettextize.1
 man/man1/glib-mkenums.1
 man/man1/gobject-query.1
+man/man1/gtester-report.1
+man/man1/gtester.1
 share/aclocal/glib-2.0.m4
 share/aclocal/glib-gettext.m4
 share/glib-2.0/gettext/mkinstalldirs
@@ -159,6 +165,8 @@ share/gtk-doc/html/gio/GCancellable.html
 share/gtk-doc/html/gio/GDataInputStream.html
 share/gtk-doc/html/gio/GDataOutputStream.html
 share/gtk-doc/html/gio/GDrive.html
+share/gtk-doc/html/gio/GEmblem.html
+share/gtk-doc/html/gio/GEmblemedIcon.html
 share/gtk-doc/html/gio/GFile.html
 share/gtk-doc/html/gio/GFileEnumerator.html
 share/gtk-doc/html/gio/GFileIcon.html
@@ -194,6 +202,7 @@ share/gtk-doc/html/gio/ch14.html
 share/gtk-doc/html/gio/ch15.html
 share/gtk-doc/html/gio/ch15s02.html
 share/gtk-doc/html/gio/ch15s03.html
+share/gtk-doc/html/gio/extending-gio.html
 share/gtk-doc/html/gio/extending.html
 share/gtk-doc/html/gio/file_mon.html
 share/gtk-doc/html/gio/file_ops.html
@@ -204,7 +213,6 @@ share/gtk-doc/html/gio/gio-GFileAttribute.html
 share/gtk-doc/html/gio/gio-GIOError.html
 share/gtk-doc/html/gio/gio-GIOScheduler.html
 share/gtk-doc/html/gio/gio-Unix-Mounts.html
-share/gtk-doc/html/gio/gio-extension-points.html
 share/gtk-doc/html/gio/gio-hierarchy.html
 share/gtk-doc/html/gio/gio.devhelp
 share/gtk-doc/html/gio/gio.devhelp2
@@ -214,6 +222,7 @@ share/gtk-doc/html/gio/icons.html
 share/gtk-doc/html/gio/index.html
 share/gtk-doc/html/gio/index.sgml
 share/gtk-doc/html/gio/ix01.html
+share/gtk-doc/html/gio/ix02.html
 share/gtk-doc/html/gio/left.png
 share/gtk-doc/html/gio/migrating.html
 share/gtk-doc/html/gio/pt01.html
@@ -306,6 +315,8 @@ share/gtk-doc/html/glib/glib-utilities.html
 share/gtk-doc/html/glib/glib.devhelp
 share/gtk-doc/html/glib/glib.devhelp2
 share/gtk-doc/html/glib/glib.html
+share/gtk-doc/html/glib/gtester-report.html
+share/gtk-doc/html/glib/gtester.html
 share/gtk-doc/html/glib/home.png
 share/gtk-doc/html/glib/index.html
 share/gtk-doc/html/glib/index.sgml
@@ -319,6 +330,7 @@ share/gtk-doc/html/glib/ix07.html
 share/gtk-doc/html/glib/ix08.html
 share/gtk-doc/html/glib/ix09.html
 share/gtk-doc/html/glib/ix10.html
+share/gtk-doc/html/glib/ix11.html
 share/gtk-doc/html/glib/left.png
 share/gtk-doc/html/glib/mainloop-states.gif
 share/gtk-doc/html/glib/right.png
@@ -329,8 +341,6 @@ share/gtk-doc/html/gobject/GTypeModule.html
 share/gtk-doc/html/gobject/GTypePlugin.html
 share/gtk-doc/html/gobject/ch01s02.html
 share/gtk-doc/html/gobject/ch06s03.html
-share/gtk-doc/html/gobject/ch07s02.html
-share/gtk-doc/html/gobject/ch07s03.html
 share/gtk-doc/html/gobject/chapter-gobject.html
 share/gtk-doc/html/gobject/chapter-gtype.html
 share/gtk-doc/html/gobject/chapter-intro.html
@@ -380,6 +390,7 @@ share/gtk-doc/html/gobject/ix06.html
 share/gtk-doc/html/gobject/ix07.html
 share/gtk-doc/html/gobject/ix08.html
 share/gtk-doc/html/gobject/ix09.html
+share/gtk-doc/html/gobject/ix10.html
 share/gtk-doc/html/gobject/left.png
 share/gtk-doc/html/gobject/pr01.html
 share/gtk-doc/html/gobject/pt01.html
@@ -394,6 +405,7 @@ share/gtk-doc/html/gobject/tools-ginspector.html
 share/gtk-doc/html/gobject/tools-gob.html
 share/gtk-doc/html/gobject/tools-gtkdoc.html
 share/gtk-doc/html/gobject/tools-refdb.html
+share/gtk-doc/html/gobject/tools-vala.html
 share/gtk-doc/html/gobject/up.png
 share/locale/am/LC_MESSAGES/glib20.mo
 share/locale/ar/LC_MESSAGES/glib20.mo
@@ -439,6 +451,7 @@ share/locale/ko/LC_MESSAGES/glib20.mo
 share/locale/ku/LC_MESSAGES/glib20.mo
 share/locale/lt/LC_MESSAGES/glib20.mo
 share/locale/lv/LC_MESSAGES/glib20.mo
+share/locale/mai/LC_MESSAGES/glib20.mo
 share/locale/mg/LC_MESSAGES/glib20.mo
 share/locale/mk/LC_MESSAGES/glib20.mo
 share/locale/ml/LC_MESSAGES/glib20.mo
@@ -453,6 +466,7 @@ share/locale/oc/LC_MESSAGES/glib20.mo
 share/locale/or/LC_MESSAGES/glib20.mo
 share/locale/pa/LC_MESSAGES/glib20.mo
 share/locale/pl/LC_MESSAGES/glib20.mo
+share/locale/ps/LC_MESSAGES/glib20.mo
 share/locale/pt/LC_MESSAGES/glib20.mo
 share/locale/pt_BR/LC_MESSAGES/glib20.mo
 share/locale/ro/LC_MESSAGES/glib20.mo
@@ -463,8 +477,8 @@ share/locale/sk/LC_MESSAGES/glib20.mo
 share/locale/sl/LC_MESSAGES/glib20.mo
 share/locale/sq/LC_MESSAGES/glib20.mo
 share/locale/sr/LC_MESSAGES/glib20.mo
-share/locale/sr@Latn/LC_MESSAGES/glib20.mo
 share/locale/sr@ije/LC_MESSAGES/glib20.mo
+share/locale/sr@latin/LC_MESSAGES/glib20.mo
 share/locale/sv/LC_MESSAGES/glib20.mo
 share/locale/ta/LC_MESSAGES/glib20.mo
 share/locale/te/LC_MESSAGES/glib20.mo
