@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.2 2007/11/08 19:52:21 drochner Exp $
+$NetBSD: patch-ak,v 1.3 2008/09/06 11:07:20 obache Exp $
 
---- configure.in.orig	2007-11-07 06:12:00.000000000 +0100
+--- configure.in.orig	2008-09-02 17:47:31.000000000 +0000
 +++ configure.in
-@@ -1202,6 +1202,7 @@ fi
+@@ -1304,6 +1304,7 @@ fi
  dnl G_MODULE_IMPL= don't reset, so cmd-line can override
  G_MODULE_NEED_USCORE=0
  G_MODULE_BROKEN_RTLD_GLOBAL=0
@@ -10,7 +10,7 @@ $NetBSD: patch-ak,v 1.2 2007/11/08 19:52:21 drochner Exp $
  G_MODULE_HAVE_DLERROR=0
  dnl *** force native WIN32 shared lib loader 
  if test -z "$G_MODULE_IMPL"; then
-@@ -1326,6 +1327,38 @@ dnl *** check for having dlerror()
+@@ -1428,6 +1429,38 @@ dnl *** check for having dlerror()
  		[G_MODULE_HAVE_DLERROR=0])
  	LIBS="$LIBS_orig"
  fi
@@ -49,7 +49,7 @@ $NetBSD: patch-ak,v 1.2 2007/11/08 19:52:21 drochner Exp $
  dnl *** done, have we got an implementation?
  if test -z "$G_MODULE_IMPL"; then
  	G_MODULE_IMPL=0
-@@ -1355,6 +1388,8 @@ AC_SUBST(G_MODULE_PLUGIN_LIBS)
+@@ -1457,6 +1490,8 @@ AC_SUBST(G_MODULE_PLUGIN_LIBS)
  AC_SUBST(G_MODULE_LDFLAGS)
  AC_SUBST(G_MODULE_HAVE_DLERROR)
  AC_SUBST(G_MODULE_BROKEN_RTLD_GLOBAL)
@@ -58,7 +58,7 @@ $NetBSD: patch-ak,v 1.2 2007/11/08 19:52:21 drochner Exp $
  AC_SUBST(G_MODULE_NEED_USCORE)
  AC_SUBST(GLIB_DEBUG_FLAGS)
  
-@@ -1598,22 +1633,8 @@ if test x"$have_threads" != xno; then
+@@ -1844,22 +1879,8 @@ if test x"$have_threads" != xno; then
          G_THREAD_LIBS="-lpthread -lthread"
          ;;
        *)
@@ -83,7 +83,7 @@ $NetBSD: patch-ak,v 1.2 2007/11/08 19:52:21 drochner Exp $
           ;;
      esac 
    fi
-@@ -1970,6 +1991,10 @@ case $host in
+@@ -2255,6 +2276,10 @@ case $host in
    *) 	 
      G_THREAD_LIBS_FOR_GTHREAD="$G_THREAD_LIBS" 	 
      ;;
