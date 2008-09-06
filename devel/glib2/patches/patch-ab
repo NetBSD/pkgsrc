@@ -1,10 +1,10 @@
-$NetBSD: patch-ab,v 1.12 2007/11/08 19:52:21 drochner Exp $
+$NetBSD: patch-ab,v 1.13 2008/09/06 11:07:20 obache Exp $
 
 http://bugzilla.gnome.org/show_bug.cgi?id=140329
 
---- gmodule/gmodule.c.orig	2007-10-16 07:44:43.000000000 +0200
+--- gmodule/gmodule.c.orig	2008-09-02 15:09:12.000000000 +0000
 +++ gmodule/gmodule.c
-@@ -599,6 +599,31 @@ g_module_error (void)
+@@ -604,6 +604,31 @@ g_module_error (void)
    return g_static_private_get (&module_error_private);
  }
  
@@ -36,7 +36,7 @@ http://bugzilla.gnome.org/show_bug.cgi?id=140329
  gboolean
  g_module_symbol (GModule	*module,
  		 const gchar	*symbol_name,
-@@ -616,17 +641,28 @@ g_module_symbol (GModule	*module,
+@@ -621,17 +646,28 @@ g_module_symbol (GModule	*module,
    
    g_static_rec_mutex_lock (&g_module_global_lock);
  

@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.42 2008/07/14 03:54:32 tnn Exp $
+$NetBSD: patch-aa,v 1.43 2008/09/06 11:07:20 obache Exp $
 
---- configure.orig	2008-07-02 03:31:24.000000000 +0200
+--- configure.orig	2008-09-02 19:29:47.000000000 +0000
 +++ configure
-@@ -984,6 +984,7 @@ G_MODULE_PLUGIN_LIBS
+@@ -986,6 +986,7 @@ G_MODULE_PLUGIN_LIBS
  G_MODULE_LDFLAGS
  G_MODULE_HAVE_DLERROR
  G_MODULE_BROKEN_RTLD_GLOBAL
@@ -10,7 +10,7 @@ $NetBSD: patch-aa,v 1.42 2008/07/14 03:54:32 tnn Exp $
  G_MODULE_NEED_USCORE
  GLIB_DEBUG_FLAGS
  GSPAWN
-@@ -37456,6 +37457,7 @@ else
+@@ -37197,6 +37198,7 @@ else
  fi
  G_MODULE_NEED_USCORE=0
  G_MODULE_BROKEN_RTLD_GLOBAL=0
@@ -18,7 +18,7 @@ $NetBSD: patch-aa,v 1.42 2008/07/14 03:54:32 tnn Exp $
  G_MODULE_HAVE_DLERROR=0
  if test -z "$G_MODULE_IMPL"; then
    case "$host" in
-@@ -38289,6 +38291,87 @@ fi
+@@ -38030,6 +38032,87 @@ fi
  
  	LIBS="$LIBS_orig"
  fi
@@ -106,7 +106,7 @@ $NetBSD: patch-aa,v 1.42 2008/07/14 03:54:32 tnn Exp $
  if test -z "$G_MODULE_IMPL"; then
  	G_MODULE_IMPL=0
          G_MODULE_SUPPORTED=false
-@@ -38325,6 +38408,8 @@ fi
+@@ -38066,6 +38149,8 @@ fi
  
  
  
@@ -115,7 +115,7 @@ $NetBSD: patch-aa,v 1.42 2008/07/14 03:54:32 tnn Exp $
  { $as_echo "$as_me:$LINENO: checking for gspawn implementation" >&5
  $as_echo_n "checking for gspawn implementation... " >&6; }
  case "$host" in
-@@ -40036,117 +40121,8 @@ if test x"$have_threads" != xno; then
+@@ -39807,117 +39892,8 @@ if test x"$have_threads" != xno; then
          G_THREAD_LIBS="-lpthread -lthread"
          ;;
        *)
@@ -235,7 +235,7 @@ $NetBSD: patch-aa,v 1.42 2008/07/14 03:54:32 tnn Exp $
           ;;
      esac
    fi
-@@ -42335,6 +42311,10 @@ case $host in
+@@ -42106,6 +42082,10 @@ case $host in
    *)
      G_THREAD_LIBS_FOR_GTHREAD="$G_THREAD_LIBS"
      ;;
@@ -246,7 +246,7 @@ $NetBSD: patch-aa,v 1.42 2008/07/14 03:54:32 tnn Exp $
  esac
  
  
-@@ -47568,9 +47548,9 @@ cat >>$CONFIG_STATUS <<_ACEOF || ac_writ
+@@ -47398,9 +47378,9 @@ cat >>$CONFIG_STATUS <<_ACEOF || ac_writ
    }
    split(mac1, mac2, "(") #)
    macro = mac2[1]
@@ -257,7 +257,7 @@ $NetBSD: patch-aa,v 1.42 2008/07/14 03:54:32 tnn Exp $
      print prefix "define", macro P[macro] D[macro]
      next
    } else {
-@@ -47578,7 +47558,7 @@ cat >>$CONFIG_STATUS <<_ACEOF || ac_writ
+@@ -47408,7 +47388,7 @@ cat >>$CONFIG_STATUS <<_ACEOF || ac_writ
      # in the case of _POSIX_SOURCE, which is predefined and required
      # on some systems where configure will not decide to define it.
      if (defundef == "undef") {
