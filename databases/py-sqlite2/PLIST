@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/09/06 16:03:09 wiz Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/09/06 16:12:44 wiz Exp $
 ${PYSITELIB}/pysqlite2/__init__.py
 ${PYSITELIB}/pysqlite2/__init__.pyc
 ${PYSITELIB}/pysqlite2/__init__.pyo
@@ -6,12 +6,18 @@ ${PYSITELIB}/pysqlite2/_sqlite.so
 ${PYSITELIB}/pysqlite2/dbapi2.py
 ${PYSITELIB}/pysqlite2/dbapi2.pyc
 ${PYSITELIB}/pysqlite2/dbapi2.pyo
+${PYSITELIB}/pysqlite2/dump.py
+${PYSITELIB}/pysqlite2/dump.pyc
+${PYSITELIB}/pysqlite2/dump.pyo
 ${PYSITELIB}/pysqlite2/test/__init__.py
 ${PYSITELIB}/pysqlite2/test/__init__.pyc
 ${PYSITELIB}/pysqlite2/test/__init__.pyo
 ${PYSITELIB}/pysqlite2/test/dbapi.py
 ${PYSITELIB}/pysqlite2/test/dbapi.pyc
 ${PYSITELIB}/pysqlite2/test/dbapi.pyo
+${PYSITELIB}/pysqlite2/test/dump.py
+${PYSITELIB}/pysqlite2/test/dump.pyc
+${PYSITELIB}/pysqlite2/test/dump.pyo
 ${PYSITELIB}/pysqlite2/test/factory.py
 ${PYSITELIB}/pysqlite2/test/factory.pyc
 ${PYSITELIB}/pysqlite2/test/factory.pyo
