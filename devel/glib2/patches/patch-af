@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.10 2008/04/10 12:13:49 drochner Exp $
+$NetBSD: patch-af,v 1.11 2008/09/06 11:07:20 obache Exp $
 
---- glib/libcharset/Makefile.in.orig	2008-03-11 01:41:07.000000000 +0100
+--- glib/libcharset/Makefile.in.orig	2008-09-02 19:29:43.000000000 +0000
 +++ glib/libcharset/Makefile.in
-@@ -598,18 +598,6 @@ test-report perf-report full-report:	${T
+@@ -601,18 +601,6 @@ test-report perf-report full-report:	${T
  # run make test as part of make check
  check-local: test
  install-exec-local: all-local
