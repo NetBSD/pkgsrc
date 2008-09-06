@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2008/07/27 00:03:42 bjs Exp $
+@comment $NetBSD: PLIST,v 1.19 2008/09/06 13:00:31 wiz Exp $
 include/GL/GLwDrawA.h
 include/GL/GLwDrawAP.h
 include/GL/GLwMDrawA.h
@@ -34,5 +34,5 @@ ${PLIST.dri}lib/dri/unichrome_dri.la
 lib/pkgconfig/gl.pc
 lib/pkgconfig/glw.pc
 ${PLIST.dri}@dirrm lib/dri
-@unexec ${RMDIR} %D/include/GL 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/include/GL/internal 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/include/GL 2>/dev/null || ${TRUE}
