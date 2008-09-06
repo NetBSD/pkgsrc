@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2112 2008/09/06 16:03:23 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2113 2008/09/06 16:12:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3598,3 +3598,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/p5-IO-Socket-SSL to 1.15 [wiz 2008-09-06]
 	Updated misc/goffice0.6 to 0.6.5 [wiz 2008-09-06]
 	Updated databases/py-sqlite2 to 2.4.1 [wiz 2008-09-06]
+	Updated databases/py-sqlite2 to 2.5.0 [wiz 2008-09-06]
