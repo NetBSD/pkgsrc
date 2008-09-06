@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2094 2008/09/06 13:46:13 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2095 2008/09/06 13:52:43 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3580,3 +3580,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/gtexinfo to 4.12nb1 [wiz 2008-09-06]
 	Updated sysutils/cdrtools to 2.01.01.48 [wiz 2008-09-06]
 	Updated misc/cksfv to 1.3.13 [wiz 2008-09-06]
+	Updated devel/libsigsegv to 2.6 [wiz 2008-09-06]
