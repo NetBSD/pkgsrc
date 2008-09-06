@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2008/06/16 14:44:47 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/09/06 20:54:33 wiz Exp $
 #
 
 DISTNAME=	totem-2.22.2
 PKGNAME=	totem-nautilus-2.22.2
+PKGREVISION=	1
 CATEGORIES=	multimedia gnome
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/totem/2.22/}
 
