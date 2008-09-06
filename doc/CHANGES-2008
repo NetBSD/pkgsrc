@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2122 2008/09/06 22:44:44 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2123 2008/09/06 23:29:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3608,3 +3608,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/db4 to 4.7.25.1 [wiz 2008-09-06]
 	Updated textproc/WordNet to 3.0nb2 [wiz 2008-09-06]
 	Updated sysutils/rename to 1.3nb2 [bjs 2008-09-06]
+	Added devel/libmtp version 0.3.1 [wiz 2008-09-06]
