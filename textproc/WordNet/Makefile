@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.3 2008/09/01 14:58:53 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/09/06 21:27:53 wiz Exp $
 #
 
 DISTNAME=		WordNet-3.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		textproc
 MASTER_SITES=		http://wordnet.princeton.edu/3.0/ \
 			ftp://ftp.cogsci.princeton.edu/pub/wordnet/3.0/
 
-PATCHFILES=		wordnet.patch
+PATCHFILES=		wordnet.patch.2
 PATCH_SITES=		http://www.ocert.org/analysis/2008-014/
 PATCH_DIST_STRIP=	-p1
 
