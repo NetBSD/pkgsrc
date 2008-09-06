@@ -1,10 +1,14 @@
-# $NetBSD: Makefile,v 1.54 2008/05/31 13:18:24 tnn Exp $
+# $NetBSD: Makefile,v 1.55 2008/09/06 20:53:51 wiz Exp $
 
-DISTNAME=	db-4.6.21
-PKGNAME=	${DISTNAME:S/db/db4/}
+DISTNAME=	db-4.7.25
+PKGNAME=	${DISTNAME:S/db/db4/}.1
 CATEGORIES=	databases
 MASTER_SITES=	http://download.oracle.com/berkeley-db/ \
 		http://download-uk.oracle.com/berkeley-db/
+
+# doesn't apply due to line endings, included as patch-ba
+#PATCHFILES=	patch.4.7.25.1
+#PATCH_SITES=	http://www.oracle.com/technology/products/berkeley-db/db/update/4.7.25/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.oracle.com/database/berkeley-db/db/index.html
