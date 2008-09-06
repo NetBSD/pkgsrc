@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/08/14 19:38:27 wiz Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/09/06 14:28:43 wiz Exp $
 bin/clive
 bin/clive-passwd
 ${PYSITELIB}/clive/__init__.py
@@ -52,6 +52,9 @@ ${PYSITELIB}/clive/rss.pyo
 ${PYSITELIB}/clive/scan.py
 ${PYSITELIB}/clive/scan.pyc
 ${PYSITELIB}/clive/scan.pyo
+${PYSITELIB}/clive/singleton.py
+${PYSITELIB}/clive/singleton.pyc
+${PYSITELIB}/clive/singleton.pyo
 ${PYSITELIB}/clive/unicode.py
 ${PYSITELIB}/clive/unicode.pyc
 ${PYSITELIB}/clive/unicode.pyo
