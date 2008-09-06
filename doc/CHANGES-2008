@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2105 2008/09/06 15:07:06 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2106 2008/09/06 15:10:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3591,3 +3591,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/libxml2 to 2.7.1 [wiz 2008-09-06]
 	Updated textproc/iso-codes to 3.3 [wiz 2008-09-06]
 	Updated net/libIDL to 0.8.11 [wiz 2008-09-06]
+	Updated net/ORBit2 to 2.14.14 [wiz 2008-09-06]
