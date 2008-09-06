@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2108 2008/09/06 15:20:31 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2109 2008/09/06 15:23:24 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3594,3 +3594,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/ORBit2 to 2.14.14 [wiz 2008-09-06]
 	Updated devel/libidn to 1.10 [wiz 2008-09-06]
 	Updated devel/libgsf to 1.14.9 [wiz 2008-09-06]
+	Updated textproc/rarian to 0.8.1 [wiz 2008-09-06]
