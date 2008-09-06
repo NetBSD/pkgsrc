@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2086 2008/09/05 21:27:54 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2087 2008/09/06 05:32:47 epg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3569,3 +3569,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/monotone-server to 0.41 [bjs 2008-09-05]
 	Added devel/p5-Test-Mock-LWP version 0.05 [seb 2008-09-05]
 	Updated x11/gnome-terminal to 2.22.3 [bjs 2008-09-05]
+	Updated devel/subversion to 1.5.2 [epg 2008-09-06]
+	Updated devel/bzr to 1.6.1 [epg 2008-09-06]
