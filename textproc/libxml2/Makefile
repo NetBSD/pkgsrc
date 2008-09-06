@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.93 2008/05/04 06:59:51 dsainty Exp $
+# $NetBSD: Makefile,v 1.94 2008/09/06 14:58:34 wiz Exp $
 
-DISTNAME=	libxml2-2.6.32
+DISTNAME=	libxml2-2.7.1
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://xmlsoft.org/libxml2/ \
 		http://xmlsoft.org/sources/
-#MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml2/2.6/}
+#MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libxml2/2.7/}
 
 MAINTAINER=	recht@NetBSD.org
 HOMEPAGE=	http://xmlsoft.org/
