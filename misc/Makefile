@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.306 2008/08/28 01:24:53 bjs Exp $
+# $NetBSD: Makefile,v 1.307 2008/09/06 12:52:29 wiz Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -98,7 +98,6 @@ SUBDIR+=	kdeedu3
 SUBDIR+=	kdepim3
 SUBDIR+=	kdeutils3
 SUBDIR+=	kdrill
-SUBDIR+=	kmemaid
 SUBDIR+=	kodos
 SUBDIR+=	koffice
 SUBDIR+=	koffice-l10n-da
@@ -126,6 +125,7 @@ SUBDIR+=	m17n-db
 SUBDIR+=	m17n-docs
 SUBDIR+=	mirmon
 SUBDIR+=	mmv
+SUBDIR+=	mnemosyne
 SUBDIR+=	molden
 SUBDIR+=	most
 SUBDIR+=	mtail
@@ -168,7 +168,6 @@ SUBDIR+=	ppower
 SUBDIR+=	proj
 SUBDIR+=	proj-doc
 SUBDIR+=	pty-redir
-SUBDIR+=	pyqt_memaid
 SUBDIR+=	qbrew
 SUBDIR+=	qterm
 SUBDIR+=	reed
