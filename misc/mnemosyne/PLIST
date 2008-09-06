@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/06 12:51:39 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/09/06 13:06:07 wiz Exp $
 bin/mnemosyne
 ${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
 ${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
@@ -154,6 +154,8 @@ ${PYSITELIB}/mnemosyne/version.pyc
 ${PYSITELIB}/mnemosyne/version.pyo
 share/applications/mnemosyne.desktop
 share/icons/mnemosyne.png
+@comment in xdg-dirs: @dirrm share/icons
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm ${PYSITELIB}/mnemosyne/pyqt_ui/locale
 @dirrm ${PYSITELIB}/mnemosyne/pyqt_ui
 @dirrm ${PYSITELIB}/mnemosyne/core
