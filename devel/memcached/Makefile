@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.16 2008/04/22 18:06:09 tnn Exp $
+# $NetBSD: Makefile,v 1.17 2008/09/06 21:39:52 wiz Exp $
 #
 
 DISTNAME=	memcached-1.2.2
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel
 MASTER_SITES=	http://www.danga.com/memcached/dist/
 

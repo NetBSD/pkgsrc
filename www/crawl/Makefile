@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2008/04/22 18:06:09 tnn Exp $
+# $NetBSD: Makefile,v 1.11 2008/09/06 21:39:53 wiz Exp $
 
 DISTNAME=	crawl-0.4
-PKGREVISION=	4
+PKGREVISION=	5
 CATEGORIES=	www
 MASTER_SITES=	http://monkey.org/~provos/
 
