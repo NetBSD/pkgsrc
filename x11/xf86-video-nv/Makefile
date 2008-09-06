@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.11 2008/07/29 21:11:24 wiz Exp $
+# $NetBSD: Makefile,v 1.12 2008/09/06 16:20:56 wiz Exp $
 
-DISTNAME=	xf86-video-nv-2.1.10
+DISTNAME=	xf86-video-nv-2.1.12
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
