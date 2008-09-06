@@ -1,9 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2006/11/14 13:30:57 joerg Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/09/06 12:59:58 wiz Exp $
 include/GL/glxint.h
 include/GL/glxmd.h
 include/GL/glxproto.h
 include/GL/glxtokens.h
 include/GL/internal/glcore.h
 lib/pkgconfig/glproto.pc
-@dirrm include/GL/internal
+@unexec ${RMDIR} %D/include/GL/internal 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/include/GL >/dev/null 2>&1 || ${TRUE}
