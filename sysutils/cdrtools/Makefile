@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.41 2008/08/23 20:41:09 tnn Exp $
+# $NetBSD: Makefile,v 1.42 2008/09/06 13:31:07 wiz Exp $
 
-DISTNAME=	cdrtools-2.01.01a45
-PKGNAME=	cdrtools-2.01.01.45
-PKGREVISION=	3
+DISTNAME=	cdrtools-2.01.01a48
+PKGNAME=	cdrtools-2.01.01.48
 CATEGORIES=	sysutils
 MASTER_SITES=	ftp://ftp.berlios.de/pub/cdrecord/alpha/
 EXTRACT_SUFX=	.tar.bz2
@@ -71,10 +70,6 @@ SUBST_STAGE.oss=	post-patch
 SUBST_FILES.oss=	cdda2wav/local.cnf.in
 SUBST_SED.oss=		-e "s,/dev/dsp,${DEVOSSSOUND},g"
 SUBST_MESSAGE.oss=	Fixing OSS sound device path.
-
-post-extract:
-	ln -s Defaults.freebsd ${WRKSRC}/DEFAULTS/Defaults.dragonfly
-	ln -s Defaults.freebsd ${WRKSRC}/DEFAULTS_ENG/Defaults.dragonfly
 
 do-configure:
 	cd ${WRKSRC}/RULES;						\
