@@ -1,15 +1,7 @@
-$NetBSD: patch-ab,v 1.6 2008/07/29 21:58:13 wiz Exp $
+$NetBSD: patch-ab,v 1.7 2008/09/06 14:42:53 wiz Exp $
 
 --- audio_oss.c.orig	2008-07-15 16:00:03.000000000 +0000
 +++ audio_oss.c
-@@ -1,5 +1,7 @@
- #include "config.h"
- 
-+#include <errno.h>
-+
- #ifdef HAVE_MACHINE_SOUNDCARD_H
- #  include <machine/soundcard.h>
- #else
 @@ -19,7 +21,7 @@
  #define ARCH_esd_audio_devices
  const char *esd_audio_devices()
