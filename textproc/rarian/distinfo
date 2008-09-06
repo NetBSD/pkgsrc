@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2008/04/11 18:41:53 drochner Exp $
+$NetBSD: distinfo,v 1.3 2008/09/06 15:23:10 wiz Exp $
 
-SHA1 (rarian-0.8.0.tar.bz2) = ee19a6c1300a51adec765f02351b1779477fc462
-RMD160 (rarian-0.8.0.tar.bz2) = 28545ad9afbef3f0c6e1b80ee294833c31a32d56
-Size (rarian-0.8.0.tar.bz2) = 338724 bytes
-SHA1 (patch-aa) = 3b1d8601672cb52ccee9deb240c3cf5e64721b38
+SHA1 (rarian-0.8.1.tar.bz2) = 9b3f1bad1cdbb0de51d6f74431b20eb3647edc5a
+RMD160 (rarian-0.8.1.tar.bz2) = 2e4c0a4d22a4e0c41d4d3dc8e4a5ad080ee3b6ce
+Size (rarian-0.8.1.tar.bz2) = 324441 bytes
+SHA1 (patch-aa) = a5b9892ccd1977c10a155435be25dbbde49bae40
