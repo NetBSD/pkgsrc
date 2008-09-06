@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.42 2007/09/03 13:36:28 obache Exp $
+# $NetBSD: Makefile,v 1.43 2008/09/06 17:54:15 ahoka Exp $
 
 DISTNAME=	smalltalk-2.3.5
+PKGREVISION=	1
 CATEGORIES=	lang
 MASTER_SITES=	${MASTER_SITE_GNU:=smalltalk/}
 
@@ -23,6 +24,14 @@ CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}/lib
 CONFIGURE_ARGS+=	--without-emacs
 #CONFIGURE_ARGS+=	--without-glib --without-gtk
 #CONFIGURE_ENV+=		CFLAGS="-O2 -fsigned-char"
+
+SUBST_CLASSES+=		sed
+SUBST_STAGE.sed=	pre-configure
+SUBST_MESSAGE.sed=	Replacing sed interpreter.
+SUBST_FILES.sed=	examples/*.sed
+SUBST_SED.sed=		-e "s|/bin/sed|${SED}|"
+
+REPLACE_PERL+=		vfs/mailfs vfs/deb
 
 IGNORE_LIBTOOLIZE=	lib/smalltalk/libc.la
 INFO_FILES=		YES
