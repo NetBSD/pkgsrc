@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/09/06 20:09:15 bjs Exp $
+# $NetBSD: Makefile,v 1.19 2008/09/06 20:13:13 bjs Exp $
 #
 
 DISTNAME=	pixman-0.11.10
@@ -19,9 +19,9 @@ USE_TOOLS+=	pkg-config perl diff awk
 ### XXX Quiet, please!
 ###
 .if empty(USE_TOOLS:Mauto*)
-CONFIGURE_ENV+=	AUTOCONF=true
-CONFIGURE_ENV+=	AUTOHEADER=true
-CONFIGURE_ENV+=	ACLOCAL=true
+CONFIGURE_ENV+=	AUTOCONF=${TRUE:Q}
+CONFIGURE_ENV+=	AUTOHEADER=${TRUE:Q}
+CONFIGURE_ENV+=	ACLOCAL=${TRUE:Q}
 CONFIGURE_ENV+=	AUTOMAKE=${TRUE:Q}
 .endif
 
