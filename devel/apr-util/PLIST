@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/01/24 19:37:20 epg Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/09/06 16:39:58 wiz Exp $
 bin/apu-1-config
 include/apr-1/apr_anylock.h
 include/apr-1/apr_base64.h
@@ -10,9 +10,11 @@ include/apr-1/apr_hooks.h
 include/apr-1/apr_ldap.h
 include/apr-1/apr_ldap_init.h
 include/apr-1/apr_ldap_option.h
+include/apr-1/apr_ldap_rebind.h
 include/apr-1/apr_ldap_url.h
 include/apr-1/apr_md4.h
 include/apr-1/apr_md5.h
+include/apr-1/apr_memcache.h
 include/apr-1/apr_optional.h
 include/apr-1/apr_optional_hooks.h
 include/apr-1/apr_queue.h
@@ -21,6 +23,7 @@ include/apr-1/apr_rmm.h
 include/apr-1/apr_sdbm.h
 include/apr-1/apr_sha1.h
 include/apr-1/apr_strmatch.h
+include/apr-1/apr_thread_pool.h
 include/apr-1/apr_uri.h
 include/apr-1/apr_uuid.h
 include/apr-1/apr_xlate.h
