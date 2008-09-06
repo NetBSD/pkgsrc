@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2008/06/12 02:14:20 joerg Exp $
+# $NetBSD: Makefile,v 1.12 2008/09/06 16:03:09 wiz Exp $
 
-DISTNAME=	pysqlite-2.3.5
-PKGNAME=	${PYPKGPREFIX}-sqlite2-2.3.5
+DISTNAME=	pysqlite-2.4.1
+PKGNAME=	${PYPKGPREFIX}-sqlite2-2.4.1
 CATEGORIES=	databases python
-MASTER_SITES=	http://initd.org/pub/software/pysqlite/releases/2.3/2.3.5/
+MASTER_SITES=	http://initd.org/pub/software/pysqlite/releases/2.4/2.4.1/
 
 MAINTAINER=	tsarna@NetBSD.org
 HOMEPAGE=	http://initd.org/tracker/pysqlite
