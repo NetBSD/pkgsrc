@@ -1,13 +1,13 @@
-$NetBSD: patch-ac,v 1.6 2008/06/19 17:51:27 bjs Exp $
+$NetBSD: patch-ac,v 1.7 2008/09/06 20:09:16 bjs Exp $
 
---- pixman/pixman-private.h.orig	2008-06-09 01:56:34.000000000 -0400
+--- pixman/pixman-private.h.orig	2008-08-21 21:47:50.000000000 -0400
 +++ pixman/pixman-private.h
-@@ -701,7 +701,7 @@ pixman_compute_composite_region32 (pixma
+@@ -727,7 +727,7 @@ pixman_compute_composite_region32 (pixma
  				   uint16_t		height);
  
  /* GCC visibility */
 -#if defined(__GNUC__) && __GNUC__ >= 4
 +#if 0
  #define PIXMAN_EXPORT __attribute__ ((visibility("default")))
- #else
- #define PIXMAN_EXPORT
+ /* Sun Studio 8 visibility */
+ #elif defined(__SUNPRO_C) && (__SUNPRO_C >= 0x550)
