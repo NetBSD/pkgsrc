@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2092 2008/09/06 13:13:42 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2093 2008/09/06 13:31:20 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3578,3 +3578,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed misc/kmemaid successor misc/mnemosyne [wiz 2008-09-06]
 	Removed misc/pyqt_memaid successor misc/mnemosyne [wiz 2008-09-06]
 	Updated devel/gtexinfo to 4.12nb1 [wiz 2008-09-06]
+	Updated sysutils/cdrtools to 2.01.01.48 [wiz 2008-09-06]
