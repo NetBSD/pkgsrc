@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2126 2008/09/07 02:41:31 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2127 2008/09/07 06:45:05 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3612,3 +3612,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/STk to 4.0.1nb2 [dholland 2008-09-07]
 	Updated lang/g95 to 0.91nb2 [dholland 2008-09-07]
 	Updated security/libassuan to 1.0.5 [bjs 2008-09-07]
+	Updated lang/jamvm to 1.5.1 [dholland 2008-09-07]
