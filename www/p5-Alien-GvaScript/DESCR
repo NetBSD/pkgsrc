@@ -1,0 +1,7 @@
+GvaScript is a javascript framework, built on top of the prototype
+object-oriented javascript framework (http://prototype.conio.net)
+and offers a number of extensions and widgets, such as keymap
+handling, application-specific events, autocompletion on input
+field, and a tree navigator.
+GvaScript is distributed using Perl tools, but the actual content
+of the library is pure javascript.
