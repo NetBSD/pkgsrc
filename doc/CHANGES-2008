@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2131 2008/09/07 10:15:56 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.2132 2008/09/07 12:01:46 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3617,3 +3617,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-HTML-Mason to 1.40 [rhaen 2008-09-07]
 	Removed sysutils/cfengine2-doc [rhaen 2008-09-07]
 	Updated sysutils/cfengine2 to 2.2.8 [rhaen 2008-09-07]
+	Updated net/ez-ipupdate to 3.0.11b7nb1 [ghen 2008-09-07]
