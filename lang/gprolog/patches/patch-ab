@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.6 2008/09/07 04:35:41 dholland Exp $
+
+--- src/configure~	2007-01-05 07:13:28.000000000 -0500
++++ src/configure	2008-09-06 23:58:51.000000000 -0400
+@@ -3554,6 +3554,10 @@ _ACEOF
+ #define M_x86_64_linux 1
+ _ACEOF
+ ;;
++        x86_64*bsd*)   cat >>confdefs.h <<\_ACEOF
++#define M_x86_64_bsd 1
++_ACEOF
++;;
+         i*86*linux*)     cat >>confdefs.h <<\_ACEOF
+ #define M_ix86_linux 1
+ _ACEOF
