@@ -1,7 +1,16 @@
-$NetBSD: patch-aa,v 1.3 2006/06/04 13:52:57 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2008/09/07 07:31:35 dholland Exp $
 
---- configure.orig	1999-03-16 02:03:46.000000000 +0000
-+++ configure
+--- configure.orig	1999-03-15 21:03:46.000000000 -0500
++++ configure	2008-09-07 02:58:26.000000000 -0400
+@@ -3250,7 +3250,7 @@ esac
+ 
+ if test x"${JNITYPES_HOST+set}"x != x"set"x; then
+     case "${host}" in
+-    i?86-* | alpha-* | sparc-* | mips-* | hppa1*)
++    i?86-* | x86_64-* | alpha-* | sparc-* | mips-* | hppa1*)
+ 	JNITYPES_HOST="${srcdir}/lib/libjni/include/jnitypes.frag";;
+     *)
+       { echo "configure: error: Unsupported platform.\n  Check ${srcdir}/lib/libjni/include/jnitypes.frag to see if types are correct, and\n  update configure.in." 1>&2; exit 1; }
 @@ -3498,6 +3498,7 @@ case "$host" in
    mips-sgi-irix5.* | mips-sgi-irix6.*) can_use_libffi=true;;
    i*86-pc-linux*) can_use_libffi=true;;
@@ -46,7 +55,7 @@ $NetBSD: patch-aa,v 1.3 2006/06/04 13:52:57 joerg Exp $
  
  
  trap '' 1 2 15
-@@ -6707,7 +6712,7 @@ if test "$no_recursion" != yes; then
+@@ -6707,7 +6710,7 @@ if test "$no_recursion" != yes; then
      esac
    done
  
