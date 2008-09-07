@@ -1,7 +1,7 @@
-$NetBSD: patch-ao,v 1.1 2007/02/15 21:19:00 joerg Exp $
+$NetBSD: patch-ao,v 1.2 2008/09/07 00:23:58 dholland Exp $
 
---- Src/Makefile.in.orig	2007-02-15 20:52:32.000000000 +0000
-+++ Src/Makefile.in
+--- Src/Makefile.in.orig	1999-09-03 16:21:32.000000000 -0400
++++ Src/Makefile.in	2008-09-06 20:03:00.000000000 -0400
 @@ -47,7 +47,7 @@ TCLLIB		= ../Tcl/libtcl.a
  EVTCLLIB	= ../Tcl/libevtcl.a
  MPLIB		= ../Mp/$(MP).a
@@ -11,3 +11,21 @@ $NetBSD: patch-ao,v 1.1 2007/02/15 21:19:00 joerg Exp $
  
  ALLIBS	 = $(MPLIB) $(STACKLIB) $(TKLIB) $(TCLLIB) $(EVTCLLIB)
  SALLLIBS = $(MPLIB) $(STACKLIB) $(TCLLIB) 
+@@ -111,7 +111,7 @@ install.stk: stk
+ 	-if [ ! -d $(root)$(bindir) ] ; then mkdir -p $(root)$(bindir); fi
+ 	/bin/rm -f $(root)$(bindir)/stk $(root)$(bindir)/stk-$(VERSION) 
+ 	ln -s $(execdir)/stk $(root)$(bindir)/stk-$(VERSION) 
+-	ln -s $(execdir)/stk $(root)$(bindir)/stk 
++	ln -s stk-$(VERSION) $(root)$(bindir)/stk 
+ 	-if [ ! -d $(root)$(execdir) ] ; then mkdir -p $(root)$(execdir); fi
+ 	$(CP) stk $(root)$(execdir)
+ 	chmod 0755 $(root)$(execdir)/stk
+@@ -127,7 +127,7 @@ install.snow: snow
+ 	-if [ ! -d $(root)$(bindir) ] ; then mkdir -p $(root)$(bindir); fi
+ 	/bin/rm -f $(root)$(bindir)/snow-$(VERSION) $(root)$(bindir)/snow
+ 	ln -s $(execdir)/snow $(root)$(bindir)/snow-$(VERSION) 
+-	ln -s $(execdir)/snow $(root)$(bindir)/snow 
++	ln -s snow-$(VERSION) $(root)$(bindir)/snow 
+ 	-if [ ! -d $(root)$(execdir) ] ; then mkdir -p $(root)$(execdir); fi
+ 	$(CP) snow $(root)$(execdir)
+ 	chmod 0755 $(root)$(execdir)/snow

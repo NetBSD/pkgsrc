@@ -1,0 +1,13 @@
+$NetBSD: patch-ap,v 1.1 2008/09/07 00:23:58 dholland Exp $
+
+--- Tcl/configure~	2008-09-06 18:51:25.000000000 -0400
++++ Tcl/configure	2008-09-06 19:11:07.000000000 -0400
+@@ -3219,7 +3219,7 @@ else
+ 	# results, and the version is kept in special file).
+     
+ 	if test -r /etc/.relid -a "X`uname -n`" = "X`uname -s`" ; then
+-	    system=MP-RAS-`awk '{print $3}' /etc/.relid'`
++	    system=MP-RAS-`awk '{print $3}' /etc/.relid`
+ 	fi
+ 	if test "`uname -s`" = "AIX" ; then
+ 	    system=AIX-`uname -v`.`uname -r`
