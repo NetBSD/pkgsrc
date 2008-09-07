@@ -1,0 +1,49 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/07 22:43:00 jmcneill Exp $
+
+--- configure.ac.orig	2008-06-29 12:17:43.000000000 -0400
++++ configure.ac
+@@ -17,8 +17,9 @@ AM_PROG_LIBTOOL
+ 
+ CFLAGS="${CFLAGS} -Wall"
+ 
+-GNOME_MAINTAINER_MODE_DEFINES
+-GNOME_COMPILE_WARNINGS
++dnl If you can find where these come from, use them! ;)
++dnl GNOME_MAINTAINER_MODE_DEFINES
++dnl GNOME_COMPILE_WARNINGS
+ 
+ #*******************************************************************************
+ # Expanded dirs
+@@ -83,18 +84,30 @@ PKG_CHECK_MODULES(CHEESE, \ 
+   libebook-1.2 >= $LIBEBOOK_REQUIRED \
+   cairo >= $CAIRO_REQUIRED \
+   dbus-1 >= $DBUS_REQUIRED \
+-  hal >= $HAL_REQUIRED \
+   dbus-glib-1 >= $DBUS_GLIB_REQUIRED \
+   pangocairo >= $PANGOCAIRO_REQUIRED \
+   librsvg-2.0 >= $LIBRSVG_REQUIRED \
+   xxf86vm)
+-
+ AC_SUBST(CHEESE_CFLAGS)
+ 
+ CHEESE_LIBS="$CHEESE_LIBS -lgstinterfaces-0.10"
+ 
+ AC_SUBST(CHEESE_LIBS)
+ 
++AC_ARG_ENABLE(hal, AS_HELP_STRING([--enable-hal], [Use the HAL library (default=no)]),, enable_hal=no)
++
++if test "x$enable_hal" = "xyes"; then
++  PKG_CHECK_MODULES([HAL], hal >= $HAL_REQUIRED, ac_have_hal=yes, ac_have_hal=no)
++else
++  enable_hal=no
++fi
++
++if test "x$ac_have_hal" = "xyes"; then
++  AC_DEFINE(HAVE_HAL, 1, define to 1 if HAL is used)
++else
++  AC_DEFINE(HAVE_HAL, 0, define to 1 if HAL is used)
++fi
++
+ AC_PATH_PROG(GCONFTOOL, gconftool-2)
+ AM_GCONF_SOURCE_2
+ 
