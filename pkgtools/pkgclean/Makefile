@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.13 2007/05/18 10:03:31 peter Exp $
+# $NetBSD: Makefile,v 1.14 2008/09/07 01:41:39 obache Exp $
 
 DISTNAME=	pkgclean-20051116
 CATEGORIES=	pkgtools
@@ -9,6 +9,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Quickly clean up all work directories in pkgsrc
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_CHECKSUM=	yes
 NO_CONFIGURE=	yes
@@ -17,13 +18,13 @@ NO_BUILD=	yes
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-extract:
-	@${CP} -R ${FILESDIR} ${WRKSRC}
+	${RUN}${CP} -R ${FILESDIR} ${WRKSRC}
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/pkgclean.sh ${PREFIX}/bin/pkgclean
-	${INSTALL_MAN} ${WRKSRC}/pkgclean.1 ${PREFIX}/${PKGMANDIR}/man1/pkgclean.1
+	${INSTALL_SCRIPT} ${WRKSRC}/pkgclean.sh ${DESTDIR}${PREFIX}/bin/pkgclean
+	${INSTALL_MAN} ${WRKSRC}/pkgclean.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1/pkgclean.1
 
-SUBST_CLASSES+=          path
+SUBST_CLASSES+=		path
 SUBST_STAGE.path=	post-patch
 SUBST_FILES.path=	pkgclean.sh pkgclean.1
 SUBST_SED.path+=	-e 's,@SH@,${SH},g'
