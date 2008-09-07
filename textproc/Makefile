@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.430 2008/09/04 12:34:48 obache Exp $
+# $NetBSD: Makefile,v 1.431 2008/09/07 16:27:15 seb Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -203,6 +203,7 @@ SUBDIR+=	p5-Number-Format
 SUBDIR+=	p5-PDF
 SUBDIR+=	p5-PDF-API2
 SUBDIR+=	p5-PDF-Create
+SUBDIR+=	p5-PPI-HTML
 SUBDIR+=	p5-Pod-Coverage
 SUBDIR+=	p5-Pod-Escapes
 SUBDIR+=	p5-Pod-POM
