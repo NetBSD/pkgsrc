@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.6 2008/09/07 01:33:51 dholland Exp $
+# $NetBSD: Makefile,v 1.7 2008/09/07 01:59:26 dholland Exp $
 
 DISTNAME=		g95_source
 VERSION=		0.91
 PKGNAME=		g95-${VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 EXTRACT_SUFX.g95_source=	.tgz
 DIST_SUBDIR=		${PKGNAME_NOREV}

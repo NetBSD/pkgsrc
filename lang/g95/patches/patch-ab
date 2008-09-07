@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.3 2008/09/07 01:33:51 dholland Exp $
+$NetBSD: patch-ab,v 1.4 2008/09/07 01:59:26 dholland Exp $
 
 --- Makefile.in.orig	2008-01-29 00:01:26.000000000 -0500
-+++ Makefile.in	2008-09-06 20:55:28.000000000 -0400
-@@ -1329,7 +1329,7 @@ clean-local:
++++ Makefile.in	2008-09-06 21:47:38.000000000 -0400
+@@ -1329,30 +1329,31 @@ clean-local:
  	rm -f options.tmp options.c options.h version.c
  
  install-exec-hook:
@@ -10,10 +10,17 @@ $NetBSD: patch-ab,v 1.3 2008/09/07 01:33:51 dholland Exp $
 +	mv ${DESTDIR}$(bindir)/g95$(EXEEXT) ${DESTDIR}$(bindir)/$(host)-g95$(EXEEXT)
  
  install-data-hook:
- 	-ln -sf f951$(EXEEXT) @DEST_LIBDIR@/cc1
-@@ -1340,19 +1340,20 @@ install-data-hook:
- 	  ranlib @DEST_LIBDIR@/libgcc_eh.a ; \
- 	  ranlib @DEST_LIBDIR@/libgcc.a ; \
+-	-ln -sf f951$(EXEEXT) @DEST_LIBDIR@/cc1
++	-ln -sf f951$(EXEEXT) ${DESTDIR}@DEST_LIBDIR@/cc1
+ 	if test "`uname`" = "Darwin" ; then \
+ 	  ar x /usr/lib/libgcc.a darwin-fpsave.o ; \
+-	  ar rs @DEST_LIBDIR@/libgcc.a darwin-fpsave.o ; \
++	  ar rs ${DESTDIR}@DEST_LIBDIR@/libgcc.a darwin-fpsave.o ; \
+ 	  rm ./darwin-fpsave.o ; \
+-	  ranlib @DEST_LIBDIR@/libgcc_eh.a ; \
+-	  ranlib @DEST_LIBDIR@/libgcc.a ; \
++	  ranlib ${DESTDIR}@DEST_LIBDIR@/libgcc_eh.a ; \
++	  ranlib ${DESTDIR}@DEST_LIBDIR@/libgcc.a ; \
  	fi
 -	cp INSTALL @DEST_LIBDIR@/../../../..
 -	cp G95Manual.pdf @DEST_LIBDIR@/../../../..
@@ -22,7 +29,8 @@ $NetBSD: patch-ab,v 1.3 2008/09/07 01:33:51 dholland Exp $
 +	$(INSTALL_DATA) G95Manual.pdf $(DESTDIR)$(docdir)
  	if test -n "`ls @GCC_DIR@/g95/gcc/libgcc_s.*`" ; then \
  	   (cd @GCC_DIR@/g95/gcc; tar cf - libgcc_s.*) | \
-            (cd @DEST_LIBDIR@; tar xf -) ; \
+-           (cd @DEST_LIBDIR@; tar xf -) ; \
++           (cd ${DESTDIR}@DEST_LIBDIR@; tar xf -) ; \
  	fi
  	if test -n "`ls @GCC_DIR@/g95/gcc/libunwind.*`" ; then \
  	   (cd @GCC_DIR@/g95/gcc; tar cf - libunwind.*) | \
