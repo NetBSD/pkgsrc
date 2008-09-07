@@ -1,43 +1,63 @@
-# $NetBSD: Makefile,v 1.36 2008/09/01 00:00:10 tonnerre Exp $
+# $NetBSD: Makefile,v 1.37 2008/09/07 23:39:37 ahoka Exp $
 
-DISTNAME=	ffmpeg-0.4.9-pre1
-PKGNAME=	ffmpeg-0.4.9pre1
-PKGREVISION=	4
+DISTNAME=	ffmpeg-${DISTVERSION}
+PKGNAME=	ffmpeg-${DISTVERSION:S/-//g}
 CATEGORIES=	multimedia
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ffmpeg/}
+MASTER_SITES=	${MASTER_SITE_FREEBSD}
+EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	zul@NetBSD-fr.org
+MAINTAINER=	ahoka@NetBSD.org
 HOMEPAGE=	http://ffmpeg.mplayerhq.hu/
 COMMENT=	MPEG decoding, encoding and streaming software
 
-# The `sparc' code in libavcode/sparc is only suitable for sparc64
-NOT_FOR_PLATFORM=	*-*-sparc
-
+DISTVERSION=	2008-07-27
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=	YES
-CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR}
-USE_TOOLS+=	gmake texi2html pod2man
 USE_LIBTOOL=	YES
-
-CONFLICTS+=	ffmpeg-devel-[0-9]*
+USE_TOOLS+=	gmake texi2html pod2man
 
 REPLACE_PERL+=	doc/texi2pod.pl
 
-CONF_FILES=	${PREFIX}/share/examples/ffmpeg/ffserver.conf \
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	post-patch
+SUBST_FILES.conf=	ffserver.c
+SUBST_SED.conf=		-e 's,/etc/ffserver.conf,${PKG_SYSCONFDIR}/ffserver.conf,g'
+SUBST_MESSAGE.conf=	Fixing configuration path.
+
+CONFLICTS+=	ffmpeg-devel-[0-9]*
+
+PLIST_SRC+=	${PKGDIR}/PLIST
+
+CONF_FILES+=	${PREFIX}/share/examples/ffmpeg/ffserver.conf \
 		${PKG_SYSCONFDIR}/ffserver.conf
 
-MAKE_ENV+=	EXTRA_LIBS=${LIBGETOPT:Q} \
-		FFSERVER_CONF=${PKG_SYSCONFDIR}/ffserver.conf \
-		LOCALBASE=${LOCALBASE:Q}
+MAKE_ENV+=	EXTRA_LIBS=${LIBGETOPT:Q}
+# LOCALBASE=${LOCALBASE:Q}
 
-CONFIGURE_ARGS+=	--cc=${CC:Q} --prefix=${PREFIX:Q}
-CONFIGURE_ARGS+=	--enable-pp --disable-vhook --disable-debug
-CONFIGURE_ARGS+=	--enable-gpl
-CONFIGURE_ARGS+=	--enable-ffplay
+# Let's not put garbage into /tmp
+CONFIGURE_ENV+=		TMPDIR=${WRKDIR:Q}
 
-INSTALLATION_DIRS=	include/ffmpeg/libpostproc lib \
-			share/examples/ffmpeg share/doc/ffmpeg
+CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR} \
+			--cc=${CC:Q} \
+			--prefix=${PREFIX:Q} \
+			--disable-debug \
+			--disable-vhook \
+			--enable-avfilter \
+			--enable-swscale \
+			--enable-gpl \
+			--enable-postproc \
+			--enable-pthreads \
+			--enable-shared \
+			--enable-libvorbis \
+			--enable-libmp3lame
+
+# Doesn't work without memalign and memalign looks buggy.
+.if !empty(MACHINE_ARCH:Mi386)
+CONFIGURE_ARGS+=	--disable-mmx
+.endif
+
+INSTALLATION_DIRS=	lib share/examples/ffmpeg share/doc/ffmpeg
 
 .include "options.mk"
 
@@ -49,8 +69,9 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/*.txt ${DESTDIR}${PREFIX}/share/doc/ffmpeg
 	${INSTALL_DATA} ${WRKSRC}/doc/ffserver.conf \
 		${DESTDIR}${PREFIX}/share/examples/ffmpeg
-	${INSTALL_DATA} ${WRKSRC}/libavcodec/libpostproc/postprocess.h \
-		${DESTDIR}${PREFIX}/include/ffmpeg/libpostproc
 
+.include "../../audio/lame/buildlink3.mk"
+.include "../../audio/libvorbis/buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
