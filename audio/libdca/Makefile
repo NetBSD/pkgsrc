@@ -1,14 +1,14 @@
-# $NetBSD: Makefile,v 1.7 2008/07/14 12:55:56 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2008/09/07 13:54:43 wiz Exp $
 #
 
-DISTNAME=	libdts-0.0.2
-PKGNAME=	${DISTNAME:S/ts/ca/}
+DISTNAME=	libdca-0.0.5
 CATEGORIES=	audio
-MASTER_SITES=	http://debian.unnet.nl/pub/videolan/libdts/0.0.2/
+MASTER_SITES=	http://download.videolan.org/pub/videolan/libdca/0.0.5/
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	shattered@users.sourceforge.net
-HOMEPAGE=	http://developers.videolan.org/libdca.html
-COMMENT=	Free DTS Coherent Acoustics decoder
+HOMEPAGE=	http://www.videolan.org/developers/libdca.html
+COMMENT=	DTS Coherent Acoustics decoder
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -20,5 +20,6 @@ NO_SRC_ON_FTP=	${RESTRICTED}
 
 GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
+USE_LIBTOOL=	yes
 
 .include "../../mk/bsd.pkg.mk"
