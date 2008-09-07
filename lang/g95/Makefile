@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/04/16 18:47:18 wennmach Exp $
+# $NetBSD: Makefile,v 1.6 2008/09/07 01:33:51 dholland Exp $
 
 DISTNAME=		g95_source
 VERSION=		0.91
@@ -15,6 +15,8 @@ SITES.gcc-core-4.0.3.tar.gz= ftp://gcc.gnu.org/pub/gcc/releases/gcc-4.0.3/
 MAINTAINER=		wennmach@NetBSD.org
 HOMEPAGE=		http://www.g95.org/
 COMMENT=		Fortran 95 compiler from g95.org
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake gtar
@@ -40,8 +42,8 @@ post-build:
 	cd ${WRKSRC}/libf95.a-${VERSION} && ${CONFIGURE_SCRIPT} ${CONFIGURE_ARGS} && ${GMAKE}
 
 post-install:
-	cd ${WRKSRC}/libf95.a-${VERSION} && ${GMAKE} install
-	cd ${PREFIX}/bin && ${LN} -sf ${MACHINE_GNU_PLATFORM:Q}-g95 g95
-	cd ${PREFIX}/bin && ${LN} -sf ${MACHINE_GNU_PLATFORM:Q}-g95 f95
+	cd ${WRKSRC}/libf95.a-${VERSION} && ${GMAKE} install DESTDIR=${DESTDIR:Q}
+	cd ${DESTDIR}${PREFIX}/bin && ${LN} -sf ${MACHINE_GNU_PLATFORM:Q}-g95 g95
+	cd ${DESTDIR}${PREFIX}/bin && ${LN} -sf ${MACHINE_GNU_PLATFORM:Q}-g95 f95
 
 .include "../../mk/bsd.pkg.mk"
