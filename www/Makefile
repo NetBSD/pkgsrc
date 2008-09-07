@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.576 2008/09/07 15:08:08 seb Exp $
+# $NetBSD: Makefile,v 1.577 2008/09/07 16:12:46 seb Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -240,6 +240,7 @@ SUBDIR+=	p5-CGI-Simple
 SUBDIR+=	p5-CGI_Lite
 SUBDIR+=	p5-CSS
 SUBDIR+=	p5-CSS-Squish
+SUBDIR+=	p5-CSS-Tiny
 SUBDIR+=	p5-Captcha-reCAPTCHA
 SUBDIR+=	p5-Captcha-reCAPTCHA-Mailhide
 SUBDIR+=	p5-Catalyst-Action-RenderView
