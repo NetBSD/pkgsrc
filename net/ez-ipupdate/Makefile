@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2008/01/04 12:18:27 ghen Exp $
+# $NetBSD: Makefile,v 1.5 2008/09/07 12:01:16 ghen Exp $
 
 DISTNAME=		ez-ipupdate-3.0.11b7
+PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		http://www.ez-ipupdate.com/dist/
 
