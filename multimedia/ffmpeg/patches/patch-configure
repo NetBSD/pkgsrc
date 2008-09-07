@@ -1,0 +1,21 @@
+$NetBSD: patch-configure,v 1.1 2008/09/07 23:39:38 ahoka Exp $
+
+--- configure.orig	2008-07-24 12:53:32.000000000 +0200
++++ configure
+@@ -891,7 +891,7 @@ rtp_muxer_deps="network rtp_protocol"
+ rtsp_demuxer_deps="sdp_demuxer"
+ sdp_demuxer_deps="rtp_protocol mpegts_demuxer"
+ v4l_demuxer_deps="linux_videodev_h"
+-v4l2_demuxer_deps="linux_videodev2_h"
++v4l2_demuxer_deps_any="linux_videodev2_h sys_videoio_h"
+ vfwcap_demuxer_deps="capCreateCaptureWindow"
+ vfwcap_demuxer_extralibs="-lvfw32"
+ x11_grab_device_demuxer_deps="x11grab XShmCreateImage"
+@@ -1789,6 +1789,7 @@ EOF
+ 
+ check_header linux/videodev.h
+ check_header linux/videodev2.h
++check_header sys/videoio.h
+ 
+ check_func2 "windows.h vfw.h" capCreateCaptureWindow -lvfw32
+ 

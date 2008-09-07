@@ -1,97 +1,73 @@
-# $NetBSD: options.mk,v 1.6 2007/08/02 21:53:05 dbj Exp $
+# $NetBSD: options.mk,v 1.7 2008/09/07 23:39:37 ahoka Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg
-PKG_SUPPORTED_OPTIONS=	bktr lame mmx vorbis faac faad a52
+PKG_SUPPORTED_OPTIONS=	sdl theora xvid faad faac #x264
+PKG_SUGGESTED_OPTIONS=	faac theora xvid
+#PKG_OPTIONS_OPTIONAL_GROUPS=	aac-decoder
+#PKG_OPTIONS_GROUP.aac-decoder=	faad faac
 
 .include "../../mk/bsd.options.mk"
-
 .include "../../mk/bsd.prefs.mk"
-
-###
-### MMX support
-###
-
-.include "../../mk/compiler.mk"
-
-.if !empty(MACHINE_ARCH:Mi386)
-.  if !empty(PKG_OPTIONS:Mmmx) && !empty(CC_VERSION:Mgcc*)
-CFLAGS+=		-fomit-frame-pointer
-.  else
-CONFIGURE_ARGS+=	--disable-mmx
-.  endif
-.else
-CONFIGURE_ARGS+=	--disable-mmx
-.endif
-
-###
-### bktr options
-###
-
-.if !empty(PKG_OPTIONS:Mbktr)
-post-extract:
-	${CP} ${FILESDIR}/grab_bsdbktr.c ${WRKSRC}/libavformat
-
-post-patch:
-	${PATCH} -p0 --quiet -d ${WRKSRC} < ${FILESDIR}/bktr.diff
-#TODO
-#Update the documentation
-#	${PATCH} --quiet -d ${WRKSRC} < ${FILESDIR}/ffmpeg.1.diff
-.endif
-
-###
-### using lame option
-###
-
-.if !empty(PKG_OPTIONS:Mlame)
-CONFIGURE_ARGS+= --enable-mp3lame
-.include "../../audio/lame/buildlink3.mk"
-.else
-CONFIGURE_ARGS+= --disable-mp3lame
-.endif
-
-###
-### using vorbis option
-###
-
-.if !empty(PKG_OPTIONS:Mvorbis)
-CONFIGURE_ARGS+= --enable-vorbis
-.include "../../audio/libvorbis/buildlink3.mk"
-.else
-CONFIGURE_ARGS+= --disable-vorbis
-.endif
 
 ###
 ### faad option
 ###
 
 .if !empty(PKG_OPTIONS:Mfaad)
-CONFIGURE_ARGS+=  --enable-faad
+CONFIGURE_ARGS+=  --enable-libfaad
 .include "../../audio/faad2/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=  --disable-faad
 .endif
+
 
 ###
 ### faac option
 ###
 
 .if !empty(PKG_OPTIONS:Mfaac)
-CONFIGURE_ARGS+=  --enable-faac
+CONFIGURE_ARGS+=  --enable-libfaac
 .include "../../audio/faac/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=  --disable-faac
 .endif
 
 ###
-### a52 option
+### SDL support
+###
+### You can build the frontend with SDL support enabled
 ###
 
-.if !empty(PKG_OPTIONS:Ma52)
-CONFIGURE_ARGS+=  --enable-a52
-# XXX this pkg currently compiles its own liba52 into libavcodec
-#.include "../../audio/liba52/buildlink3.mk"
-.else
-CONFIGURE_ARGS+=  --disable-a52
+.if !empty(PKG_OPTIONS:Msdl)
+
+CONFIGURE_ARGS+=	--enable-ffplay
+PLIST_SRC+=		${PKGDIR}/PLIST.sdl
+
+.include "../../devel/SDL/buildlink3.mk"
+.endif
+
+###
+### OGG Theora support
+###
+
+.if !empty(PKG_OPTIONS:Mtheora)
+CONFIGURE_ARGS+=  --enable-libtheora
+.include "../../multimedia/libtheora/buildlink3.mk"
+.endif
+
+###
+### XviD support
+###
+
+.if !empty(PKG_OPTIONS:Mxvid)
+CONFIGURE_ARGS+=  --enable-libxvid
+.include "../../multimedia/xvidcore/buildlink3.mk"
+.endif
+
+###
+### x264 support
+###
+
+.if !empty(PKG_OPTIONS:Mx264)
+BUILDLINK_API_DEPENDS.x264-devel+=	x264-devel>=20071218
+CONFIGURE_ARGS+=  --enable-libx264
+.include "../../multimedia/x264-devel/buildlink3.mk"
 .endif

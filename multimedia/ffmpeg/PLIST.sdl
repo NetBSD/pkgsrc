@@ -1,0 +1,2 @@
+@comment $NetBSD: PLIST.sdl,v 1.1 2008/09/07 23:39:37 ahoka Exp $
+bin/ffplay
