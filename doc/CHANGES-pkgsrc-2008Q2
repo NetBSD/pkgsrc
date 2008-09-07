@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.62 2008/09/06 02:18:31 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.63 2008/09/07 11:55:20 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -149,3 +149,5 @@ Pullup ticket 2520 - requested by tron
 security update for wireshark
 pullup ticket #2510 - requested by tron
 tiff: security patch
+Pullup ticket 2521 - requested by martti
+security update for vim
