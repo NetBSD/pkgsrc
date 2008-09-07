@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.8 2008/05/14 18:28:36 drochner Exp $
+$NetBSD: patch-ab,v 1.9 2008/09/07 17:28:23 jmcneill Exp $
 
---- configure.orig	2008-04-23 04:05:02.000000000 +0200
-+++ configure
-@@ -30644,7 +30644,7 @@ rm -f conftest.mmap
+--- configure.orig	2008-04-22 22:05:02.000000000 -0400
++++ configure	2008-09-07 12:02:20.000000000 -0400
+@@ -30644,7 +30644,7 @@
  
  
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.8 2008/05/14 18:28:36 drochner Exp $
    GST_HAVE_MMAP_TRUE=
    GST_HAVE_MMAP_FALSE='#'
  else
-@@ -31937,7 +31937,7 @@ rm -f core conftest.err conftest.$ac_obj
+@@ -31937,7 +31937,7 @@
  echo "${ECHO_T}$flag_ok" >&6; }
  
  
@@ -20,7 +20,25 @@ $NetBSD: patch-ab,v 1.8 2008/05/14 18:28:36 drochner Exp $
      then
  
    { echo "$as_me:$LINENO: checking to see if compiler understands -errwarn=%all" >&5
-@@ -40419,9 +40419,9 @@ if test x$USE_FLAC = xyes; then
+@@ -36126,6 +36126,8 @@
+ #ifdef __sun /* Solaris */
+ #include <sys/types.h>
+ #include <sys/videodev2.h>
++#elif defined(__NetBSD__)
++#include <sys/videoio.h>
+ #else /* Linux */
+ #include <linux/types.h>
+ #define _LINUX_TIME_H
+@@ -36481,6 +36483,8 @@
+ #ifdef __sun /* Solaris */
+ #include <sys/types.h>
+ #include <sys/videodev2.h>
++#elif defined(__NetBSD__)
++#include <sys/videoio.h>
+ #else /* Linux */
+ #include <linux/types.h>
+ #define _LINUX_TIME_H
+@@ -40419,9 +40423,9 @@
    HAVE_FLAC=no
  
  
@@ -33,7 +51,7 @@ $NetBSD: patch-ab,v 1.8 2008/05/14 18:28:36 drochner Exp $
    echo $ECHO_N "(cached) $ECHO_C" >&6
  else
    ac_check_lib_save_LIBS=$LIBS
-@@ -40439,11 +40439,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -40439,11 +40443,11 @@
  #ifdef __cplusplus
  extern "C"
  #endif
@@ -47,3 +65,12 @@ $NetBSD: patch-ab,v 1.8 2008/05/14 18:28:36 drochner Exp $
    ;
    return 0;
  }
+@@ -47603,6 +47607,8 @@
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     echo "$ac_cs_version"; exit ;;
