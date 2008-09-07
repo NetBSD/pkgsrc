@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2146 2008/09/07 22:42:43 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2147 2008/09/07 22:44:35 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3632,3 +3632,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added databases/p5-DBICx-Deploy version 0.02 [seb 2008-09-07]
 	Added databases/p5-DBICx-TestDatabase version 0.02 [seb 2008-09-07]
 	Added databases/p5-DBICx-MapMaker version 0.01 [seb 2008-09-07]
+	Added graphics/cheese version 2.22.3 [jmcneill 2008-09-07]
