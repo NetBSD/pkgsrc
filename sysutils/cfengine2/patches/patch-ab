@@ -1,17 +1,17 @@
-$NetBSD: patch-ab,v 1.5 2007/12/10 14:12:41 rhaen Exp $
+$NetBSD: patch-ab,v 1.6 2008/09/07 10:14:31 rhaen Exp $
 
---- configure.orig	2007-12-01 13:42:22.000000000 +0100
-+++ configure	2007-12-08 11:14:08.000000000 +0100
-@@ -25141,7 +25141,7 @@
-   return 0;
- }
- _ACEOF
--for ac_lib in '' db-4 db4 db-4.6 db-4.5 db-4.4 db-4.3 db-4.2 db-4.1 db-4.0; do
-+for ac_lib in '' db4 db-4 db4 db-4.6 db-4.5 db-4.4 db-4.3 db-4.2 db-4.1 db-4.0; do
-   if test -z "$ac_lib"; then
-     ac_res="none required"
-   else
-@@ -25273,7 +25273,7 @@
+--- configure.orig	2008-08-26 10:26:51.000000000 +0200
++++ configure	2008-08-26 10:27:42.000000000 +0200
+@@ -24254,7 +24254,7 @@
+     elif test -d "$BERKELEY_DB_DIR"; then
+ 
+         BERKELEY_DB_CFLAGS="-I$BERKELEY_DB_DIR/include"
+-        for v in . db46 db45 db44 db43 db42 db41 db40 db4 db33 db32 db3 db; do
++        for v in . db46 db45 db44 db43 db42 db41 db40 db4 db33 db32 db3 db db4; do
+             if test -f "$BERKELEY_DB_DIR/include/$v/db.h"; then
+                 BERKELEY_DB_CFLAGS="-I$BERKELEY_DB_DIR/include/$v"
+ 		break
+@@ -24262,7 +24262,7 @@
          done
  
          BERKELEY_DB_LIB="-ldb"
