@@ -1,0 +1,2 @@
+The Perl 5 package Devel::GlobalDestruction provides a predicate
+method to test if global destruction is in effect.
