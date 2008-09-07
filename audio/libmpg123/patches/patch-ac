@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/09/07 00:56:15 bjs Exp $
+
+--- src/term.c.orig	2008-08-29 02:43:56.000000000 -0400
++++ src/term.c
+@@ -196,7 +196,7 @@ static void term_handle_input(mpg123_han
+   while(n > 0) {
+     fd_set r;
+     struct timeval t;
+-    char val;
++    unsigned char val;
+ 
+     t.tv_sec=0;
+     t.tv_usec=(do_delay) ? 10*1000 : 0;
