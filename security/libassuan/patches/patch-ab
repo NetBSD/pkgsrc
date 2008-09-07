@@ -1,0 +1,44 @@
+$NetBSD: patch-ab,v 1.1 2008/09/07 02:40:53 bjs Exp $
+
+--- src/Makefile.am.orig	2007-08-24 01:29:48.000000000 -0400
++++ src/Makefile.am
+@@ -23,7 +23,7 @@ BUILT_SOURCES = assuan-errors.c
+ MOSTLYCLEANFILES = assuan-errors.c
+ 
+ if HAVE_PTH
+-libassuan_pth = libassuan-pth.a
++libassuan_pth = libassuan-pth.la
+ else
+ libassuan_pth = 
+ endif
+@@ -31,7 +31,7 @@ endif
+ bin_SCRIPTS = libassuan-config
+ m4datadir = $(datadir)/aclocal
+ m4data_DATA = libassuan.m4
+-lib_LIBRARIES = libassuan.a $(libassuan_pth)
++lib_LTLIBRARIES = libassuan.la $(libassuan_pth)
+ include_HEADERS = assuan.h
+ 
+ 
+@@ -51,15 +51,15 @@ common_sources = \
+ 	assuan-socket-connect.c \
+ 	assuan-uds.c \
+ 	assuan-logging.c \
+-	assuan-socket.c
++	assuan-socket.c 
+ 
+-libassuan_a_SOURCES = $(common_sources) assuan-io.c
+-libassuan_a_LIBADD = @LIBOBJS@
++libassuan_la_SOURCES = $(common_sources) assuan-io.c 
++libassuan_la_LIBADD = @LTLIBOBJS@
+ 
+ if HAVE_PTH
+-libassuan_pth_a_SOURCES = $(common_sources) assuan-io-pth.c
+-libassuan_pth_a_CFLAGS = $(AM_CFLAGS) $(PTH_CFLAGS)
+-libassuan_pth_a_LIBADD = @LIBOBJS@
++libassuan_pth_la_SOURCES = $(common_sources) assuan-io-pth.c
++libassuan_pth_la_CFLAGS = $(AM_CFLAGS) $(PTH_CFLAGS)
++libassuan_pth_la_LIBADD = @LTLIBOBJS@
+ endif
+ 
+ assuan-errors.c : assuan.h mkerrors
