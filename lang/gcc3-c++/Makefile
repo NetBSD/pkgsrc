@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/09/07 02:10:15 dholland Exp $
+# $NetBSD: Makefile,v 1.20 2008/09/07 05:19:33 dholland Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-c++-${GCC_VERSION}
 COMMENT=	GNU Compiler Collection, v3 - C++ compiler
@@ -25,12 +25,10 @@ post-build:
 do-install:
 	${INSTALL_PROGRAM_DIR} ${DESTDIR}${GCC_ARCHDIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/gcc/cc1plus ${DESTDIR}${GCC_ARCHDIR}
-	cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} \
-		c++.install-common c++.install-man \
-		DESTDIR=${DESTDIR:Q}
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} \
-		install-target-libstdc++-v3 \
-		DESTDIR=${DESTDIR:Q}
+	cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${GMAKE} \
+		c++.install-common c++.install-man
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${GMAKE} \
+		install-target-libstdc++-v3
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR:Q}${GCC_PREFIX}/mk
