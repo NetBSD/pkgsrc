@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.378 2008/08/19 20:34:16 bjs Exp $
+# $NetBSD: Makefile,v 1.379 2008/09/07 00:57:08 bjs Exp $
 #
 
 COMMENT=	Audio tools
@@ -171,6 +171,7 @@ SUBDIR+=	libmodplug
 SUBDIR+=	libmp3splt
 SUBDIR+=	libmpcdec
 SUBDIR+=	libmpd
+SUBDIR+=	libmpg123
 SUBDIR+=	libmusepack
 SUBDIR+=	libmusicbrainz
 SUBDIR+=	libofa
