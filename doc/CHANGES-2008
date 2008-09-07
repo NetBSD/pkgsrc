@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2148 2008/09/07 23:32:38 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2149 2008/09/07 23:58:50 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3634,3 +3634,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added databases/p5-DBICx-MapMaker version 0.01 [seb 2008-09-07]
 	Added graphics/cheese version 2.22.3 [jmcneill 2008-09-07]
 	Added devel/p5-Devel-GlobalDestruction version 0.02 [seb 2008-09-07]
+	Updated multimedia/ffmpeg to 20080727 [ahoka 2008-09-08]
