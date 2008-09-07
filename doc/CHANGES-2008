@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2124 2008/09/07 00:25:24 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.2125 2008/09/07 02:08:01 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3610,3 +3610,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/rename to 1.3nb2 [bjs 2008-09-06]
 	Added devel/libmtp version 0.3.1 [wiz 2008-09-06]
 	Updated lang/STk to 4.0.1nb2 [dholland 2008-09-07]
+	Updated lang/g95 to 0.91nb2 [dholland 2008-09-07]
