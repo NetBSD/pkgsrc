@@ -1,0 +1,4 @@
+Pod::POM::Web is a Web application for browsing the documentation
+of Perl components installed on your local machine. Since pages
+are dynamically generated, they are always in sync with code actually
+installed.
