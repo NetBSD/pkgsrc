@@ -1,0 +1,95 @@
+$NetBSD: patch-aa,v 1.1 2008/09/07 02:40:53 bjs Exp $
+
+--- configure.ac.orig	2008-05-25 03:58:25.000000000 -0400
++++ configure.ac
+@@ -18,7 +18,7 @@
+ 
+ # Process this file with autoconf to produce a configure script.
+ 
+-AC_PREREQ(2.61)
++AC_PREREQ(2.62)
+ min_automake_version="1.10"
+ 
+ # Remember to change the version number immediately *after* a release.
+@@ -27,10 +27,7 @@ min_automake_version="1.10"
+ m4_define([my_version], [1.0.5])
+ m4_define([my_issvn], [no])
+ 
+-m4_define([svn_revision], m4_esyscmd([echo -n $( (svn info 2>/dev/null \
+-            || echo 'Revision: 0')|sed -n '/^Revision:/ {s/[^0-9]//gp;q;}')]))
+-AC_INIT([libassuan], my_version[]m4_if(my_issvn,[yes],[-svn[]svn_revision]),
+-        [bug-libassuan@gnupg.org])
++AC_INIT([libassuan],[1.0.5],[bug-libassuan@gnupg.org])
+ # Note, that this is not yet available as a shared library.
+ 
+ PACKAGE=$PACKAGE_NAME
+@@ -39,11 +36,11 @@ VERSION=$PACKAGE_VERSION
+ AM_INIT_AUTOMAKE
+ AM_MAINTAINER_MODE
+ AC_CONFIG_SRCDIR(src/assuan.h)
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS([config.h])
+ AC_CANONICAL_HOST
+ AB_INIT
+ 
+-AC_GNU_SOURCE
++AC_USE_SYSTEM_EXTENSIONS
+ 
+ 
+ AC_SUBST(PACKAGE)
+@@ -72,7 +69,7 @@ fi
+ AC_PROG_INSTALL
+ AC_PROG_LN_S
+ AC_PROG_MAKE_SET
+-AC_PROG_RANLIB
++AC_PROG_LIBTOOL
+ #AC_ARG_PROGRAM
+ 
+ if test "$GCC" = yes; then
+@@ -106,11 +103,11 @@ AH_BOTTOM([
+ have_dosish_system=no
+ have_w32_system=no
+ case "${host}" in
+-    *-linux*)
+-        if test "$GCC" = yes; then
+-          CFLAGS="$CFLAGS -fPIC -DPIC"
+-        fi
+-        ;;
++dnl    *-linux*)
++dnl        if test "$GCC" = yes; then
++dnl          CFLAGS="$CFLAGS -fPIC -DPIC"
++dnl        fi
++dnl        ;;
+     *-mingw32*)
+         have_dosish_system=yes
+         have_w32_system=yes
+@@ -177,7 +174,13 @@ AC_C_CONST
+ AC_C_INLINE
+ AC_TYPE_SIZE_T
+ AC_TYPE_SIGNAL
+-AC_DECL_SYS_SIGLIST
++AC_CHECK_DECLS([sys_siglist],[],[],[#include <signal.h>
++/* NetBSD declares sys_siglist in unistd.h.  */
++#ifdef HAVE_UNISTD_H
++# include <unistd.h>
++#endif
++])
++
+ 
+ gl_HEADER_SYS_SOCKET
+ gl_TYPE_SOCKLEN_T
+@@ -243,12 +246,9 @@ AC_REPLACE_FUNCS(setenv)
+ #
+ AC_MSG_CHECKING(for SO_PEERCRED)
+ AC_CACHE_VAL(assuan_cv_sys_so_peercred,
+-      [AC_TRY_COMPILE([#include <sys/socket.h>], 
+-         [struct ucred cr; 
++      [AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[#include <sys/socket.h>]], [[struct ucred cr; 
+           int cl = sizeof cr;
+-          getsockopt (1, SOL_SOCKET, SO_PEERCRED, &cr, &cl);],
+-          assuan_cv_sys_so_peercred=yes,
+-          assuan_cv_sys_so_peercred=no)
++          getsockopt (1, SOL_SOCKET, SO_PEERCRED, &cr, &cl);]])],[assuan_cv_sys_so_peercred=yes],[assuan_cv_sys_so_peercred=no])
+        ])
+ AC_MSG_RESULT($assuan_cv_sys_so_peercred) 
+ if test $assuan_cv_sys_so_peercred = yes; then
