@@ -234,7 +234,7 @@ memtesplus-serialconsole	Enable use of serial console for memtest+
 mex			Enable matlab mex support (Linux and Solaris only).
 mikmod			Enable MikMod sound library.
 mitshm			Enable MIT-SHM X extension support.
-mjpegtools-simd		Enable MMX/3DNOW/SSE/Altivec support.
+simd			Enable MMX/3DNOW/SSE/Altivec support.
 mlib			Enable usage of medialib (SunOS only).
 mmx			Enable MMX support (i386 only).
 modperl1		Use modperl 1.x as the CGI manager (with Apache 1.x).
