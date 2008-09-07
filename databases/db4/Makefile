@@ -1,4 +1,10 @@
-# $NetBSD: Makefile,v 1.55 2008/09/06 20:53:51 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2008/09/07 11:27:08 wiz Exp $
+#
+# NOTE:
+# When updating this package, a change in the minor (4.n -> 4.(n+1))
+# usually incurs a shlib name change. Please make sure to update the
+# ABI depends in buildlink3.mk and bump PKGREVISIONs for all dependencies.
+# In particular, take care to include BDB_ACCEPTED=db4 packages.
 
 DISTNAME=	db-4.7.25
 PKGNAME=	${DISTNAME:S/db/db4/}.1
