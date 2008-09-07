@@ -1,7 +1,9 @@
-# $NetBSD: Makefile,v 1.23 2006/12/07 11:24:28 markd Exp $
+# $NetBSD: Makefile,v 1.24 2008/09/07 03:14:04 dholland Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-java-${GCC_VERSION}
 COMMENT=	GNU Compiler Collection, v3 - Java compiler
+
+#PKG_DESTDIR_SUPPORT=	user-destdir	# untested
 
 BUILDLINK_API_DEPENDS.gcc3cxx+=	gcc3${GCC3_PKGMODIF}-c++-${GCC_VERSION}{,nb*}
 BUILDLINK_DEPMETHOD.gcc3cxx+=	full
@@ -32,14 +34,14 @@ do-build:
 		${GMAKE} all-target-libjava
 
 do-install:
-	${INSTALL_PROGRAM_DIR} ${GCC_ARCHDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/gcc/jc1 ${GCC_ARCHDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/gcc/gcj ${GCC_ARCHDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/gcc/jvgenmain ${GCC_ARCHDIR}
-	${INSTALL_PROGRAM} ${WRKSRC}/gcc/gcjh ${GCC_ARCHDIR}
-	cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} \
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${GCC_ARCHDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/gcc/jc1 ${DESTDIR}${GCC_ARCHDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/gcc/gcj ${DESTDIR}${GCC_ARCHDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/gcc/jvgenmain ${DESTDIR}${GCC_ARCHDIR}
+	${INSTALL_PROGRAM} ${WRKSRC}/gcc/gcjh ${DESTDIR}${GCC_ARCHDIR}
+	cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${GMAKE} \
 		java.install-common java.install-info
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} \
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${INSTALL_ENV} ${GMAKE} \
 		install-target-libjava
 
 .include "../../devel/zlib/buildlink3.mk"
