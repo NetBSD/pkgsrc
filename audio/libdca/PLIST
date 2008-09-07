@@ -1,9 +1,15 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2005/12/09 17:21:02 salo Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/09/07 13:54:43 wiz Exp $
+bin/dcadec
 bin/dtsdec
+bin/extract_dca
 bin/extract_dts
+include/dca.h
 include/dts.h
+lib/libdca.la
 lib/libdts.a
-lib/libdts_pic.a
+lib/pkgconfig/libdca.pc
 lib/pkgconfig/libdts.pc
+man/man1/dcadec.1
 man/man1/dtsdec.1
+man/man1/extract_dca.1
 man/man1/extract_dts.1
