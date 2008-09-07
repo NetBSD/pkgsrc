@@ -1,13 +1,15 @@
-# $NetBSD: Makefile,v 1.6 2007/06/05 14:08:43 rillig Exp $
+# $NetBSD: Makefile,v 1.7 2008/09/07 06:41:44 dholland Exp $
 #
 
-DISTNAME=		jamvm-1.4.5
+DISTNAME=		jamvm-1.5.1
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=jamvm/}
 
 MAINTAINER=		pancake@phreaker.net
 HOMEPAGE=		http://jamvm.sourceforge.net/
 COMMENT=		Compact Java Virtual Machine
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+=		classpath>=0.19:../../lang/classpath
 
