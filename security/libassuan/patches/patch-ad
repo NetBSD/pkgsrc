@@ -1,0 +1,11 @@
+$NetBSD: patch-ad,v 1.1 2008/09/07 02:40:53 bjs Exp $
+
+--- tests/Makefile.am.orig	2007-07-05 13:10:06.000000000 -0400
++++ tests/Makefile.am
+@@ -35,5 +35,5 @@ AM_CFLAGS = # $(GPG_ERROR_CFLAGS)
+ 
+ noinst_HEADERS = common.h
+ noinst_PROGRAMS = $(TESTS)
+-LDADD =  ../src/libassuan.a  $(NETLIBS) # $(GPG_ERROR_LIBS)
++LDADD =  ../src/libassuan.la  $(NETLIBS) # $(GPG_ERROR_LIBS)
+ 
