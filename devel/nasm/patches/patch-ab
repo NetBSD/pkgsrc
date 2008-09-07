@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2008/03/12 21:16:12 drochner Exp $
+$NetBSD: patch-ab,v 1.5 2008/09/07 14:09:40 wiz Exp $
 
---- doc/Makefile.in.orig	2008-02-19 20:08:57.000000000 +0100
+--- doc/Makefile.in.orig	2008-06-17 06:31:16.000000000 +0200
 +++ doc/Makefile.in
 @@ -8,7 +8,8 @@ prefix		= @prefix@
  exec_prefix	= @exec_prefix@
@@ -23,12 +23,12 @@ $NetBSD: patch-ab,v 1.4 2008/03/12 21:16:12 drochner Exp $
  PS2PDF          = ps2pdf		# Part of GhostScript
  
  SRCS		= nasmdoc.src
--OUT		= nasm.info nasmdoc.ps nasmdoc.pdf
-+OUT		= nasm.info nasmdoc.ps # nasmdoc.pdf
+-OUT		= info html nasmdoc.txt nasmdoc.ps nasmdoc.pdf
++OUT		= info html nasmdoc.txt nasmdoc.ps # nasmdoc.pdf
  
  # exports
  export srcdir
-@@ -79,7 +79,8 @@ spotless: clean
+@@ -88,7 +88,8 @@ spotless: clean
  	-rm -f nasmdoc*.ps inslist.src
  
  install: all
