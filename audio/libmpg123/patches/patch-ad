@@ -1,0 +1,33 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/09/07 00:56:15 bjs Exp $
+
+--- src/xfermem.c.orig	2008-08-29 02:43:56.000000000 -0400
++++ src/xfermem.c
+@@ -37,6 +37,13 @@ void xfermem_init (txfermem **xf, size_t
+ 
+ #ifdef HAVE_MMAP
+ #  ifdef MAP_ANON
++
++#if defined(__NetBSD__) && (__NetBSD_Version__ >= 104030000)
++	if(madvise((void *)xf, (regsize - sizeof(txfermem)), 
++		    MADV_SEQUENTIAL) < 0)
++		fprintf(stderr,"madvise failed, continuing anyway...\n");
++#endif
++
+ 	if ((*xf = (txfermem *) mmap(0, regsize, PROT_READ | PROT_WRITE,
+ 			MAP_ANON | MAP_SHARED, -1, 0)) == (txfermem *) -1) {
+ 		perror ("mmap()");
+@@ -92,7 +99,13 @@ void xfermem_done (txfermem *xf)
+ 	if(!xf)
+ 		return;
+ #ifdef HAVE_MMAP
+-	munmap ((caddr_t) xf, xf->size + xf->metasize + sizeof(txfermem));
++	munmap ((void *) xf, xf->size + xf->metasize + sizeof(txfermem));
++
++#if defined(__NetBSD__) && (__NetBSD_Version__ >= 104030000)
++	if(madvise((void *)xf, (xf->size + xf->metasize), MADV_FREE) < 0)
++		fprintf(stderr,"madvise failed, continuing anyways..\n");
++#endif
++
+ #else
+ 	if (shmdt((void *) xf) == -1) {
+ 		perror ("shmdt()");
