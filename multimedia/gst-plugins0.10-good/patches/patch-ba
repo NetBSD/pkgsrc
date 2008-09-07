@@ -1,0 +1,23 @@
+$NetBSD: patch-ba,v 1.1 2008/09/07 17:28:23 jmcneill Exp $
+
+--- sys/v4l2/gstv4l2object.h.orig	2008-09-07 12:07:01.000000000 -0400
++++ sys/v4l2/gstv4l2object.h	2008-09-07 12:08:10.000000000 -0400
+@@ -37,13 +37,17 @@
+  * errors here, check your linux/time.h && sys/time.h header setup.
+  */
+ #include <sys/types.h>
+-#ifndef __sun
++#if !defined(__sun) && !defined(__NetBSD__)
+ #include <linux/types.h>
+ #define _LINUX_TIME_H
+ #define __user
+ #include <linux/videodev2.h>
+ #else
++#ifdef __sun
+ #include <sys/videodev2.h>
++#else
++#include <sys/videoio.h>
++#endif
+ #endif
+ 
+ #include <gst/gst.h>
