@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2143 2008/09/07 16:28:05 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2144 2008/09/07 19:13:57 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3629,3 +3629,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/p5-Pod-POM-Web version 1.09 [seb 2008-09-07]
 	Added www/p5-CSS-Tiny version 1.15 [seb 2008-09-07]
 	Added textproc/p5-PPI-HTML version 1.07 [seb 2008-09-07]
+	Added databases/p5-DBICx-Deploy version 0.02 [seb 2008-09-07]
