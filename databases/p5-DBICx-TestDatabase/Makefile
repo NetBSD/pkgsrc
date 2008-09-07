@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/07 20:40:52 seb Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/07 20:52:42 seb Exp $
 
 DISTNAME=	DBICx-TestDatabase-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -16,7 +16,7 @@ PERL5_PACKLIST=	auto/DBICx/TestDatabase/.packlist
 
 BUILD_DEPENDS+=	p5-DBIx-Class-[0-9]*:../../databases/p5-DBIx-Class
 BUILD_DEPENDS+=	p5-Test-use-ok-[0-9]*:../../devel/p5-Test-use-ok
-DEPENDS+=	p5-DBD-SQLite:../../databases/p5-DBD-SQLite
+DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
 DEPENDS+=	p5-SQL-Translator-[0-9]*:../../databases/p5-SQL-Translator
 
 .include "../../lang/perl5/module.mk"
