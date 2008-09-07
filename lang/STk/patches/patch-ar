@@ -1,0 +1,13 @@
+$NetBSD: patch-ar,v 1.1 2008/09/07 00:23:58 dholland Exp $
+
+--- Tk/generic/tkCursor.c~	1998-01-03 07:46:25.000000000 -0500
++++ Tk/generic/tkCursor.c	2008-09-06 19:26:43.000000000 -0400
+@@ -288,7 +288,7 @@ Tk_NameOfCursor(display, cursor)
+ 
+     if (!initialized) {
+ 	printid:
+-	sprintf(string, "cursor id 0x%x", (unsigned int) cursor);
++	sprintf(string, "cursor id 0x%lx", (unsigned long) cursor);
+ 	return string;
+     }
+     idKey.display = display;
