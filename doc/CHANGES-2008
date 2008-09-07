@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2138 2008/09/07 14:11:59 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2139 2008/09/07 14:15:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3624,3 +3624,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/sqlite3 to 3.6.2 [adam 2008-09-07]
 	Updated devel/nasm to 2.03.01 [wiz 2008-09-07]
 	Updated devel/p5-ExtUtils-CBuilder to 0.24 [wiz 2008-09-07]
+	Updated x11/xtrans to 1.2.1 [wiz 2008-09-07]
