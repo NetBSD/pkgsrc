@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7519 2008/09/06 21:01:13 wiz Exp $
+$NetBSD: TODO,v 1.7520 2008/09/07 00:25:24 dholland Exp $
 
 Suggested new packages
 ======================
@@ -345,6 +345,10 @@ Suggested new packages
 	http://www.pawfal.org/Software/SSM/
 	Obsoletes audio/spiralloops and audio/spiralsynth, which are
 	no longer supported.
+
+	STklos
+	http://www.stklos.org/
+	Scheme system. Obsoletes (I think) lang/STk.
 
 Suggested package updates
 =========================
