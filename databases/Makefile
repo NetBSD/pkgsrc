@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.265 2008/09/04 20:43:39 tonnerre Exp $
+# $NetBSD: Makefile,v 1.266 2008/09/07 19:13:19 seb Exp $
 #
 
 COMMENT=	Databases
@@ -86,6 +86,7 @@ SUBDIR+=	p5-DBD-mysql
 SUBDIR+=	p5-DBD-postgresql
 SUBDIR+=	p5-DBI
 SUBDIR+=	p5-DBI-Shell
+SUBDIR+=	p5-DBICx-Deploy
 SUBDIR+=	p5-DBIWrapper
 SUBDIR+=	p5-DBIx-Abstract
 SUBDIR+=	p5-DBIx-Class
