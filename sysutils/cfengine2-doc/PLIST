@@ -1,8 +1,0 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/07 19:54:16 jlam Exp $
-info/cfengine-Anomalies.info
-info/cfengine-Reference.info
-info/cfengine-Tutorial.info
-share/doc/html/cfengine/cfengine-Anomalies.html
-share/doc/html/cfengine/cfengine-Reference.html
-share/doc/html/cfengine/cfengine-Tutorial.html
-@dirrm share/doc/html/cfengine
