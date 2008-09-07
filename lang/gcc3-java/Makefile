@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/09/07 03:14:04 dholland Exp $
+# $NetBSD: Makefile,v 1.25 2008/09/07 03:23:16 dholland Exp $
 
 PKGNAME=	gcc3${GCC3_PKGMODIF}-java-${GCC_VERSION}
 COMMENT=	GNU Compiler Collection, v3 - Java compiler
@@ -30,6 +30,9 @@ REPLACE_FILES.awk+=	libjava/addr2name.awk
 
 do-build:
 	cd ${WRKSRC}/gcc && ${SETENV} ${MAKE_ENV} ${GMAKE} java
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
+		${GMAKE} configure-target-libjava
+	[ -f ${WRKSRC}/libjava/Makefile ] || ${FALSE}
 	${ULIMIT_CMD_datasize}; cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} \
 		${GMAKE} all-target-libjava
 
