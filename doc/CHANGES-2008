@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2133 2008/09/07 13:42:37 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2134 2008/09/07 13:54:57 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3619,3 +3619,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/cfengine2 to 2.2.8 [rhaen 2008-09-07]
 	Updated net/ez-ipupdate to 3.0.11b7nb1 [ghen 2008-09-07]
 	Updated audio/easytag-current to 2.1.6 [wiz 2008-09-07]
+	Updated audio/libdca to 0.0.5 [wiz 2008-09-07]
