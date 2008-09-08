@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2156 2008/09/08 07:15:53 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2157 2008/09/08 07:43:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3642,3 +3642,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated editors/vim-gtk2 to 7.2.10nb1 [bjs 2008-09-08]
 	Added x11/openbsd-input-ws version 1.2 [bjs 2008-09-08]
 	Updated math/glpk to 4.31 [adam 2008-09-08]
+	Updated emulators/generator-cbiere to 0.35r4 [wiz 2008-09-08]
