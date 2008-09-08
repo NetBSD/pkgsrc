@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2151 2008/09/08 01:07:49 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2152 2008/09/08 01:50:40 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3637,3 +3637,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/ffmpeg to 20080727 [ahoka 2008-09-08]
 	Added devel/p5-SUPER version 1.16 [seb 2008-09-08]
 	Added misc/p5-Locale-US version 1.2 [seb 2008-09-08]
+	Added devel/p5-Params-Coerce version 0.14 [seb 2008-09-08]
