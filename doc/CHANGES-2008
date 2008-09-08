@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2160 2008/09/08 09:12:25 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.2161 2008/09/08 10:07:39 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3652,3 +3652,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/GlutKit to 0.3.1r2nb15 [dholland 2008-09-08]
 	Updated graphics/RenderKit to 0.3.1r2nb13 [dholland 2008-09-08]
 	Updated graphics/SDLKit to 0.3.1r2nb18 [dholland 2008-09-08]
+	Updated mail/milter-greylist to 4.0.1 [tron 2008-09-08]
