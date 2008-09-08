@@ -1,9 +1,11 @@
-# $NetBSD: options.mk,v 1.1.1.1 2007/01/24 19:37:20 epg Exp $
+# $NetBSD: options.mk,v 1.2 2008/09/08 09:58:43 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.apr-util
-PKG_SUPPORTED_OPTIONS=	db4 ldap
+PKG_SUPPORTED_OPTIONS=	db4 ldap mysql pgsql sqlite3
 
 .include "../../mk/bsd.options.mk"
+
+PLIST_VARS+=		ldap mysql pgsql sqlite3
 
 .if !empty(PKG_OPTIONS:Mdb4)
 CONFIGURE_ARGS+=	\
@@ -14,7 +16,25 @@ CONFIGURE_ARGS+=	--with-dbm=sdbm
 .endif
 
 .if !empty(PKG_OPTIONS:Mldap)
-CONFIGURE_ARGS+=	--with-ldap
+PLIST.ldap=		yes
 CONFIGURE_ARGS+=	--with-ldap
 .  include "../../databases/openldap-client/buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mmysql)
+PLIST.mysql=		yes
+CONFIGURE_ARGS+=	--with-mysql
+.  include "../../mk/mysql.buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Mpgsql)
+PLIST.pgsql=		yes
+CONFIGURE_ARGS+=	--with-pgsql
+.  include "../../mk/pgsql.buildlink3.mk"
+.endif
+
+.if !empty(PKG_OPTIONS:Msqlite3)
+PLIST.sqlite3=		yes
+CONFIGURE_ARGS+=	--with-sqlite3
+.  include "../../databases/sqlite3/buildlink3.mk"
 .endif
