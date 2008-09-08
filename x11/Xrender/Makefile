@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2007/01/03 22:12:25 wiz Exp $
+# $NetBSD: Makefile,v 1.34 2008/09/08 07:02:52 dholland Exp $
 
 DISTNAME=	libXrender-0.9.0
 PKGNAME=	${DISTNAME:S/lib//}
@@ -12,6 +12,9 @@ HOMEPAGE=	http://fontconfig.org/
 COMMENT=	Client library for the X Rendering Extension protocol
 
 CONFLICTS+=	libXrender-[0-9]*
+.if "${X11_TYPE}" != "native"
+PKG_FAIL_REASON+="This package is for native X11 only; use libXrender instead."
+.endif
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
