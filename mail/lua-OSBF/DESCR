@@ -1,0 +1,21 @@
+OSBF-Lua (Orthogonal Sparse Bigrams with confidence Factor) is a Lua C module
+for text classification. It is a port of the OSBF classifier implemented in
+the CRM114 project. This implementation attempts to put focus on the
+classification task itself by using Lua as the scripting language, a powerful
+yet light-weight and fast language, which makes it easier to build and test
+more elaborated filters and training methods.
+
+The OSBF algorithm is a typical Bayesian classifier but enhanced with two
+techniques originally developed for the CRM114 project: Orthogonal Sparse
+Bigrams - OSB, for feature extraction, and Exponential Differential Document
+Count - EDDC (a.k.a Confidence Factor), for automatic feature selection.
+Combined, these two techniques produce a highly accurate classifier. OSBF
+was developed focused on two classes, SPAM and NON-SPAM, so the performance
+for more than two classes may not be the same.
+
+spamfilter.lua is an anti-spam filter written in Lua using the OSBF-lua
+module.  It takes special advantage of EDDC to introduce TONE-HR, a highly
+effective training method. The combination of OSB, EDDC and TONE-HR to
+enhance a classical Bayesian classifier resulted in the best spam filtering
+performance in TREC's Spam Track 2006 and the CEAS 2008 Live Spam Filter
+Challenge.
