@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2164 2008/09/08 12:59:17 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2165 2008/09/08 17:39:56 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3656,3 +3656,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/avenger to 0.7.9 [shannonjr 2008-09-08]
 	Added mail/lua-OSBF version 2.0.4 [shannonjr 2008-09-08]
 	Updated net/net-snmp to 5.4.2 [adam 2008-09-08]
+	Added net/libnipper version 0.12.1 [adrianp 2008-09-08]
