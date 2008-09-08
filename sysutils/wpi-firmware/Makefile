@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/07/02 13:35:55 rpaulo Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/08 13:37:33 joerg Exp $
 #
 
 DISTNAME=		ipw3945-ucode-1.13
@@ -11,13 +11,16 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://bughost.org/ipw3945/
 COMMENT=		Firmware binary images for wpi(4) driver
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 NO_CONFIGURE=		yes
 NO_BUILD=		yes
 
+INSTALLATION_DIRS=	libdata/if_wpi
+
 do-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/libdata/if_wpi
-	${INSTALL_DATA} ${WRKSRC}/LICENSE.ipw3945-ucode ${PREFIX}/libdata/if_wpi
-	${INSTALL_DATA} ${WRKSRC}/README.ipw3945-ucode ${PREFIX}/libdata/if_wpi
-	${INSTALL_DATA} ${WRKSRC}/ipw3945.ucode ${PREFIX}/libdata/if_wpi
+	${INSTALL_DATA} ${WRKSRC}/LICENSE.ipw3945-ucode ${DESTDIR}${PREFIX}/libdata/if_wpi
+	${INSTALL_DATA} ${WRKSRC}/README.ipw3945-ucode ${DESTDIR}${PREFIX}/libdata/if_wpi
+	${INSTALL_DATA} ${WRKSRC}/ipw3945.ucode ${DESTDIR}${PREFIX}/libdata/if_wpi
 
 .include "../../mk/bsd.pkg.mk"
