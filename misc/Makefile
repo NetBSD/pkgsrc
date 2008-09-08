@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.308 2008/09/08 01:07:03 seb Exp $
+# $NetBSD: Makefile,v 1.309 2008/09/08 08:42:02 he Exp $
 #
 
 COMMENT=	Miscellaneous utilities
@@ -146,6 +146,7 @@ SUBDIR+=	p5-ControlX10-CM17
 SUBDIR+=	p5-File-MMagic
 SUBDIR+=	p5-File-Tail
 SUBDIR+=	p5-Geo-Coordinates-UTM
+SUBDIR+=	p5-Geo-Mercator
 SUBDIR+=	p5-Geo-Weather
 SUBDIR+=	p5-Geography-Countries
 SUBDIR+=	p5-I18N-LangTags
