@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.3 2008/09/08 18:42:21 ahoka Exp $
+
+--- configure.orig	2007-11-27 20:22:58.000000000 +0100
++++ configure
+@@ -64116,7 +64116,7 @@ fi
+ 
+ if test "${enable_java_bindings}" = "yes"
+ then
+-  if test "x${JAVA_HOME}" == "x"; then
++  if test "x${JAVA_HOME}" = "x"; then
+   { { echo "$as_me:$LINENO: error: Please set the JAVA_HOME variable to your JDK environment" >&5
+ echo "$as_me: error: Please set the JAVA_HOME variable to your JDK environment" >&2;}
+    { (exit 1); exit 1; }; }
