@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/08 10:31:23 shannonjr Exp $
+lib/lua/5.1/libosbf.so.${PKGVERSION}
+lib/lua/5.1/osbf.so
+osbf-lua/cache_report.lua
+osbf-lua/classify.sample
+osbf-lua/create_databases.lua
+osbf-lua/database_status.lua
+osbf-lua/getopt.lua
+osbf-lua/promailrc.sample
+osbf-lua/random.lua
+osbf-lua/roc.lua
+osbf-lua/spamfilter.help
+osbf-lua/spamfilter.lua
+osbf-lua/spamfilter_commands.lua
+osbf-lua/spamfilter_config.lua
+osbf-lua/toer.lua
+osbf-lua/train.sample
+@dirrm osbf-lua
+@dirrm lib/lua/5.1
+@dirrm lib/lua
