@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/09/08 09:58:43 adam Exp $
+# $NetBSD: Makefile,v 1.7 2008/09/08 10:04:46 adam Exp $
 
 DISTNAME=	apr-util-1.3.4
 CATEGORIES=	devel
@@ -18,7 +18,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--with-apr=${BUILDLINK_PREFIX.apr}/bin/apr-1-config
 CONFIGURE_ARGS+=	--with-expat=${BUILDLINK_PREFIX.expat}
 CONFIGURE_ARGS+=	--without-gdbm
-CONFIGURE_ARGS+=	--without-sqlite3
 PKGCONFIG_OVERRIDE+=	apr-util.pc.in
 
 MAKE_ENV+=	WRAPPER_DIR=${WRAPPER_DIR:Q}
