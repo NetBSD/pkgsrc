@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2008/09/07 23:39:37 ahoka Exp $
+# $NetBSD: Makefile,v 1.38 2008/09/08 00:16:35 ahoka Exp $
 
 DISTNAME=	ffmpeg-${DISTVERSION}
 PKGNAME=	ffmpeg-${DISTVERSION:S/-//g}
@@ -54,7 +54,9 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR} \
 
 # Doesn't work without memalign and memalign looks buggy.
 .if !empty(MACHINE_ARCH:Mi386)
-CONFIGURE_ARGS+=	--disable-mmx
+CONFIGURE_ARGS+=	--disable-mmx \
+			--disable-mmx2 \
+			--disable-ssse3
 .endif
 
 INSTALLATION_DIRS=	lib share/examples/ffmpeg share/doc/ffmpeg
