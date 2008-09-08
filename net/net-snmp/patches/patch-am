@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.8 2008/07/15 09:14:01 adam Exp $
+$NetBSD: patch-am,v 1.9 2008/09/08 12:58:09 adam Exp $
 
---- agent/mibgroup/host/hr_swrun.c.orig	2007-04-02 16:51:34 +0300
-+++ agent/mibgroup/host/hr_swrun.c	2007-09-12 21:41:48 +0300
-@@ -599,6 +599,8 @@
+--- agent/mibgroup/host/hr_swrun.c.orig	2008-08-22 02:18:50.000000000 +0200
++++ agent/mibgroup/host/hr_swrun.c
+@@ -599,6 +599,8 @@ var_hrswrun(struct variable * vp,
  #elif HAVE_KVM_GETPROCS
      #if defined(freebsd5) && __FreeBSD_version >= 500014
          strcpy(string, proc_table[LowProcIndex].ki_comm);
@@ -11,7 +11,7 @@ $NetBSD: patch-am,v 1.8 2008/07/15 09:14:01 adam Exp $
      #else
          strcpy(string, proc_table[LowProcIndex].kp_proc.p_comm);
      #endif
-@@ -722,6 +724,8 @@
+@@ -722,6 +724,8 @@ var_hrswrun(struct variable * vp,
  #elif HAVE_KVM_GETPROCS
      #if defined(freebsd5) && __FreeBSD_version >= 500014
          strcpy(string, proc_table[LowProcIndex].ki_comm);
@@ -20,7 +20,7 @@ $NetBSD: patch-am,v 1.8 2008/07/15 09:14:01 adam Exp $
      #else
          strcpy(string, proc_table[LowProcIndex].kp_proc.p_comm);
      #endif
-@@ -921,11 +925,17 @@
+@@ -929,11 +933,17 @@ var_hrswrun(struct variable * vp,
  	} else
  	    long_return = 4;	/* application */
      #else
@@ -38,7 +38,7 @@ $NetBSD: patch-am,v 1.8 2008/07/15 09:14:01 adam Exp $
  #else
  	long_return = 4;	/* application */
  #endif
-@@ -962,6 +972,8 @@
+@@ -970,6 +980,8 @@ var_hrswrun(struct variable * vp,
  #if HAVE_KVM_GETPROCS
      #if defined(freebsd5) && __FreeBSD_version >= 500014
          switch (proc_table[LowProcIndex].ki_stat) {
@@ -47,7 +47,7 @@ $NetBSD: patch-am,v 1.8 2008/07/15 09:14:01 adam Exp $
      #else
          switch (proc_table[LowProcIndex].kp_proc.p_stat) {
      #endif
-@@ -1069,6 +1081,14 @@
+@@ -1077,6 +1089,14 @@ var_hrswrun(struct variable * vp,
          long_return = 0;
      #elif defined(freebsd5)
          long_return = proc_table[LowProcIndex].ki_runtime / 100000;
@@ -62,7 +62,7 @@ $NetBSD: patch-am,v 1.8 2008/07/15 09:14:01 adam Exp $
      #else
          long_return = proc_table[LowProcIndex].kp_proc.p_uticks +
              proc_table[LowProcIndex].kp_proc.p_sticks +
-@@ -1157,6 +1177,8 @@
+@@ -1169,6 +1189,8 @@ var_hrswrun(struct variable * vp,
          long_return =
      #if defined(freebsd5)
              proc_table[LowProcIndex].ki_size / 1024;
@@ -71,7 +71,7 @@ $NetBSD: patch-am,v 1.8 2008/07/15 09:14:01 adam Exp $
      #else
              proc_table[LowProcIndex].kp_eproc.e_vm.vm_map.size / 1024;
      #endif
-@@ -1477,6 +1499,9 @@
+@@ -1489,6 +1511,9 @@ Get_Next_HR_SWRun(void)
      #if defined(freebsd5) && __FreeBSD_version >= 500014
          if (proc_table[current_proc_entry].ki_stat != 0)
              return proc_table[current_proc_entry++].ki_pid;

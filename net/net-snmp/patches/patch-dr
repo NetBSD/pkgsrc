@@ -1,8 +1,8 @@
-$NetBSD: patch-dr,v 1.1 2006/03/19 22:03:29 joerg Exp $
+$NetBSD: patch-dr,v 1.2 2008/09/08 12:58:09 adam Exp $
 
---- agent/mibgroup/mibII/tcpTable.c.orig	2006-03-19 21:24:04.000000000 +0000
+--- agent/mibgroup/mibII/tcpTable.c.orig	2007-10-14 14:12:58.000000000 +0200
 +++ agent/mibgroup/mibII/tcpTable.c
-@@ -711,7 +711,11 @@ tcpTable_load(netsnmp_cache *cache, void
+@@ -719,7 +719,11 @@ tcpTable_load(netsnmp_cache *cache, void
      size_t   len;
      int      sname[] = { CTL_NET, PF_INET, IPPROTO_TCP, TCPCTL_PCBLIST };
      char     *tcpcb_buf = NULL;
@@ -14,7 +14,7 @@ $NetBSD: patch-dr,v 1.1 2006/03/19 22:03:29 joerg Exp $
      netsnmp_inpcb  *nnew;
      int      StateMap[] = { 1, 2, 3, 4, 5, 8, 6, 10, 9, 7, 11 };
  
-@@ -733,10 +737,18 @@ tcpTable_load(netsnmp_cache *cache, void
+@@ -741,10 +745,18 @@ tcpTable_load(netsnmp_cache *cache, void
       *  Unpick this into the constituent 'xinpgen' structures, and extract
       *     the 'inpcb' elements into a linked list (built in reverse)
       */
@@ -33,7 +33,7 @@ $NetBSD: patch-dr,v 1.1 2006/03/19 22:03:29 joerg Exp $
          nnew = SNMP_MALLOC_TYPEDEF(netsnmp_inpcb);
          if (!nnew)
              break;
-@@ -749,7 +761,11 @@ tcpTable_load(netsnmp_cache *cache, void
+@@ -757,7 +769,11 @@ tcpTable_load(netsnmp_cache *cache, void
  
  	nnew->inp_next = tcp_head;
  	tcp_head   = nnew;
