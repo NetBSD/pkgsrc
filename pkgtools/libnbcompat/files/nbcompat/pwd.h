@@ -1,4 +1,4 @@
-/*	$NetBSD: pwd.h,v 1.2 2008/04/29 05:46:08 martin Exp $	*/
+/*	$NetBSD: pwd.h,v 1.3 2008/09/08 20:20:23 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -50,6 +50,10 @@ const char *user_from_uid(uid_t, int);
 
 #if !HAVE_UID_FROM_USER
 int uid_from_user(const char *, uid_t *);
+#endif
+
+#if !HAVE_DECL_ENDPWENT
+void endpwent(void);
 #endif
 
 #endif	/* !_NBCOMPAT_PWD_H_ */
