@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2154 2008/09/08 03:10:39 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2155 2008/09/08 05:32:24 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3640,3 +3640,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Params-Coerce version 0.14 [seb 2008-09-08]
 	Updated net/aria2 to 0.15.3 [bjs 2008-09-08]
 	Updated editors/vim-gtk2 to 7.2.10nb1 [bjs 2008-09-08]
+	Added x11/openbsd-input-ws version 1.2 [bjs 2008-09-08]
