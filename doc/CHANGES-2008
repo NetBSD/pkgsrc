@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2173 2008/09/08 19:28:44 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2174 2008/09/08 21:59:53 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3666,3 +3666,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Moved multimedia/ffmpeg-devel to multimedia/ffmpeg [ahoka 2008-09-08]
 	Removed multimedia/vlc07 [ahoka 2008-09-08]
 	Updated net/tor to 0.2.0.31 [wiz 2008-09-08]
+	Added devel/p5-aliased version 0.22 [seb 2008-09-08]
