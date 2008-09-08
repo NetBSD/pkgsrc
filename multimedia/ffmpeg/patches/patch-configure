@@ -1,4 +1,4 @@
-$NetBSD: patch-configure,v 1.1 2008/09/07 23:39:38 ahoka Exp $
+$NetBSD: patch-configure,v 1.2 2008/09/08 00:16:35 ahoka Exp $
 
 --- configure.orig	2008-07-24 12:53:32.000000000 +0200
 +++ configure
@@ -11,7 +11,25 @@ $NetBSD: patch-configure,v 1.1 2008/09/07 23:39:38 ahoka Exp $
  vfwcap_demuxer_deps="capCreateCaptureWindow"
  vfwcap_demuxer_extralibs="-lvfw32"
  x11_grab_device_demuxer_deps="x11grab XShmCreateImage"
-@@ -1789,6 +1789,7 @@ EOF
+@@ -1586,10 +1586,14 @@ enabled vis && add_cflags "-mcpu=ultrasp
+ 
+ # ---
+ # big/little-endian test
+-check_cc <<EOF || die "endian test failed"
+-unsigned int endian = 'B' << 24 | 'I' << 16 | 'G' << 8 | 'E';
++check_exec <<EOF || enable bigendian
++int main()
++{
++ long one= 1;
++ return !(*((char *)(&one)));
++}
+ EOF
+-od -A n -t x1 $TMPO | grep -q '42 *49 *47 *45' && enable bigendian
++
+ 
+ # ---
+ # check availability of some header files
+@@ -1789,6 +1793,7 @@ EOF
  
  check_header linux/videodev.h
  check_header linux/videodev2.h
