@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2155 2008/09/08 05:32:24 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2156 2008/09/08 07:15:53 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3641,3 +3641,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/aria2 to 0.15.3 [bjs 2008-09-08]
 	Updated editors/vim-gtk2 to 7.2.10nb1 [bjs 2008-09-08]
 	Added x11/openbsd-input-ws version 1.2 [bjs 2008-09-08]
+	Updated math/glpk to 4.31 [adam 2008-09-08]
