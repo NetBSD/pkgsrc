@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2008/08/10 11:09:01 kim Exp $
+# $NetBSD: Makefile,v 1.46 2008/09/08 05:32:26 dholland Exp $
 #
 
 DISTNAME=		icecast-2.3.2
@@ -8,6 +8,8 @@ MASTER_SITES=		http://downloads.xiph.org/releases/icecast/
 MAINTAINER=		kim@tac.nyc.ny.us
 HOMEPAGE=		http://www.icecast.org/
 COMMENT=		Live streaming audio server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_PKGLOCALEDIR=	yes
 USE_LIBTOOL=		yes
@@ -48,8 +50,8 @@ post-install:
 		-e "s,@ICECAST_USER@,${ICECAST_USER},g" \
 		-e "s,@ICECAST_GROUP@,${ICECAST_GROUP},g" \
 		${WRKSRC}/conf/icecast.fixme > ${WRKSRC}/conf/icecast.xml
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/conf/icecast.xml ${EGDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_DATA} ${WRKSRC}/conf/icecast.xml ${DESTDIR}${EGDIR}
 
 .include "../../audio/libvorbis/buildlink3.mk"
 .include "../../audio/speex/buildlink3.mk"
