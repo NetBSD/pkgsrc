@@ -1,4 +1,4 @@
-/*	$NetBSD: statvfs.c,v 1.4 2008/04/29 05:46:08 martin Exp $	*/
+/*	$NetBSD: statvfs.c,v 1.5 2008/09/08 20:20:23 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -39,10 +39,12 @@ static void
 fs2vfs(struct statvfs *vfs, const struct statfs *sfs)
 {
 	vfs->f_flag = 0;
+#if HAVE_STRUCT_STATFS_F_FLAGS
 	if (sfs->f_flags & MNT_RDONLY)	
 		vfs->f_flag |= ST_RDONLY;
 	if (sfs->f_flags & MNT_NOSUID)	
 		vfs->f_flag |= ST_NOSUID;
+#endif
 
 #if HAVE_STRUCT_STATFS_F_FSIZE
 	vfs->f_bsize = sfs->f_fsize

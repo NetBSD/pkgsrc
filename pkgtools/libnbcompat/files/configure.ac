@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.63 2008/05/19 12:52:57 joerg Exp $
+dnl $NetBSD: configure.ac,v 1.64 2008/09/08 20:20:23 joerg Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -260,9 +260,8 @@ AC_CHECK_FUNCS([getmode setmode], [:], [
 	break
 ])
 
-AC_CHECK_FUNCS([gid_from_group group_from_gid pwcache_groupdb \
-	pwcache_userdb uid_from_user user_from_uid \
-])
+AC_CHECK_DECLS([endgrent, endpwent])
+
 AC_CHECK_FUNCS([gid_from_group group_from_gid pwcache_groupdb \
 	pwcache_userdb uid_from_user user_from_uid \
 ], [:], [
@@ -326,6 +325,8 @@ AC_CHECK_FUNCS([getpassphrase getpgrp memmove select])
 
 AC_CHECK_FUNC(getpgrp, [AC_FUNC_GETPGRP])
 
+AC_CHECK_MEMBERS([struct statfs.f_flags], [:], [:],
+	[ #include <sys/statfs.h> ])
 AC_CHECK_MEMBERS([struct statfs.f_fsize], [:], [:],
 	[ #include <sys/statfs.h> ])
 AC_CHECK_MEMBERS([struct statfs.f_iosize], [:], [:],
