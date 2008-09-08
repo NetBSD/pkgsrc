@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/07 00:56:15 bjs Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/08 23:26:18 joerg Exp $
 #
 
 .include "../../audio/libmpg123/Makefile.version"
 
 DISTNAME=	mpg123-${MPG123_VERSION}
+PKGREVISION=	
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpg123/}
 EXTRACT_SUFX=	.tar.bz2
@@ -40,10 +41,10 @@ MPG123_XFERMEM?=	yes
 BUILDLINK_TRANSFORM+=	rm:-DNO_XFERMEM
 .endif
 
-LIBMPG123_PCDIR=	${PREFIX}/lib/pkgconfig
+INSTALLATION_DIRS=	lib/pkgconfig
+
 post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${LIBMPG123_PCDIR}
-	${INSTALL_DATA} ${WRKSRC}/libmpg123.pc ${DESTDIR}${LIBMPG123_PCDIR}
+	${INSTALL_DATA} ${WRKSRC}/libmpg123.pc ${DESTDIR}${PREFIX}/lib/pkgconfig
 
 .include "options.mk"
 
