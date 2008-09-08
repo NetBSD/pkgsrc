@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2008/08/19 14:41:58 bjs Exp $
+# $NetBSD: Makefile,v 1.14 2008/09/08 03:07:48 bjs Exp $
 #
 
-DISTNAME=	aria2c-0.15.2
+DISTNAME=	aria2c-0.15.3
 PKGNAME=	${DISTNAME:S/+/./:S/2c-/2-/}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=aria2/}
