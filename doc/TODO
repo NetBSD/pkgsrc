@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7521 2008/09/08 07:15:53 adam Exp $
+$NetBSD: TODO,v 1.7522 2008/09/08 09:00:49 adam Exp $
 
 Suggested new packages
 ======================
@@ -676,7 +676,6 @@ Suggested package updates
 	o gkrellm-xmms-2.1.22
 	o glabels-2.2.3
 	o glchess-1.0.5
-	o glibmm-2.16.4
 	o global-5.6
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -709,7 +708,6 @@ Suggested package updates
 	o gramofile-1.6P
 	o granulate-0.2
 	o graphviz-2.20.2
-	o gsasl-0.2.28
 	o gsharutils-4.7
 	o gsm-1.0.12
 	o gss-0.0.22
