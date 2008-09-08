@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2166 2008/09/08 17:40:16 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.2167 2008/09/08 19:02:47 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3658,3 +3658,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/net-snmp to 5.4.2 [adam 2008-09-08]
 	Added net/libnipper version 0.12.1 [adrianp 2008-09-08]
 	Updated net/nipper to 0.12.0 [adrianp 2008-09-08]
+	Moved multimedia/vlc to multimedia/vlc08 [ahoka 2008-09-08]
+	Updated multimedia/vlc to 0.9.1 [ahoka 2008-09-08]
