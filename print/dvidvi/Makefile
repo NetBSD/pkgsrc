@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/05/25 13:16:11 dillo Exp $
+# $NetBSD: Makefile,v 1.10 2008/09/08 14:25:49 joerg Exp $
 #
 
 DISTNAME=	dvidvi-1.0
@@ -8,11 +8,11 @@ MASTER_SITES=	ftp://sunsite.univie.ac.at/pub/distfiles/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 COMMENT=	Select and/or rearrange pages in a TeX dvi file
 
-
-NO_SRC_ON_FTP=	Unable to determine distribution license
-NO_SRC_ON_CDROM=Unable to determine distribution license
-NO_BIN_ON_FTP=	Unable to determine distribution license
-NO_BIN_ON_CDROM=Unable to determine distribution license
+RESTRICTED=	Unable to determine distribution license
+NO_SRC_ON_FTP=	${RESTRICTED}
+NO_SRC_ON_CDROM=${RESTRICTED}
+NO_BIN_ON_FTP=	${RESTRICTED}
+NO_BIN_ON_CDROM=${RESTRICTED}
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
