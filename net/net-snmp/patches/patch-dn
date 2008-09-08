@@ -1,6 +1,6 @@
-$NetBSD: patch-dn,v 1.1 2006/03/19 22:03:29 joerg Exp $
+$NetBSD: patch-dn,v 1.2 2008/09/08 12:58:09 adam Exp $
 
---- agent/mibgroup/ucd-snmp/memory_freebsd2.c.orig	2006-03-19 20:27:45.000000000 +0000
+--- agent/mibgroup/ucd-snmp/memory_freebsd2.c.orig	2008-02-12 18:40:48.000000000 +0100
 +++ agent/mibgroup/ucd-snmp/memory_freebsd2.c
 @@ -10,8 +10,12 @@
   */
@@ -66,5 +66,5 @@ $NetBSD: patch-dn,v 1.1 2006/03/19 22:03:29 joerg Exp $
 +#elif defined(dragonfly)
 +        long_ret = ptok(vmstats.v_cache_count);
  #else
-         long_ret = ptok(mem.v_cache_count);
+         long_ret = ptok(mem.v_cache_count) + ptok(mem.v_inactive_count);
  #endif
