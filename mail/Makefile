@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.359 2008/09/05 07:25:18 obache Exp $
+# $NetBSD: Makefile,v 1.360 2008/09/08 10:33:01 shannonjr Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -119,6 +119,7 @@ SUBDIR+=	libspf-alt
 SUBDIR+=	libspf2
 SUBDIR+=	libsylph
 SUBDIR+=	libytnef
+SUBDIR+=	lua-OSBF
 SUBDIR+=	mail-notification
 SUBDIR+=	mailagent
 SUBDIR+=	mailcrypt
