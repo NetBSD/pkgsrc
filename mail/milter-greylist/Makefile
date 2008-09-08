@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.35 2008/05/25 20:49:39 tron Exp $
+# $NetBSD: Makefile,v 1.36 2008/09/08 10:07:19 tron Exp $
 
-DISTNAME=	milter-greylist-4.0
+DISTNAME=	milter-greylist-4.0.1
 CATEGORIES=	mail
 MASTER_SITES=	ftp://ftp.espci.fr/pub/milter-greylist/
 EXTRACT_SUFX=	.tgz
