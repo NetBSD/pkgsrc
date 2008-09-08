@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1 2008/09/08 17:39:29 adrianp Exp $
+
+--- CMakeLists.txt.orig	2008-08-30 18:06:30.000000000 +0100
++++ CMakeLists.txt
+@@ -7,5 +7,5 @@ SET_TARGET_PROPERTIES(nipper-cli PROPERT
+ TARGET_LINK_LIBRARIES(nipper-cli nipper)
+ 
+ # Install...
+-INSTALL(TARGETS nipper-cli DESTINATION /usr/bin)
+-INSTALL(FILES man/nipper.1 DESTINATION /usr/share/man/man1)
++INSTALL(TARGETS nipper-cli DESTINATION @@PREFIX@@/bin)
++INSTALL(FILES man/nipper.1 DESTINATION @@PREFIX@@/@@PKGMANDIR@@/man1)
