@@ -1,3 +1,5 @@
+$NetBSD: patch-ab,v 1.2 2008/09/08 19:10:20 jmcneill Exp $
+
 --- libv4lconvert/libv4lconvert.c.orig	2008-09-08 14:34:57.000000000 -0400
 +++ libv4lconvert/libv4lconvert.c	2008-09-08 14:38:17.000000000 -0400
 @@ -19,7 +19,11 @@
