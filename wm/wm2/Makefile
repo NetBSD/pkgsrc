@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/02/02 15:13:03 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2008/09/08 09:41:40 dholland Exp $
 
 DISTNAME=	wm2-4
 PKGNAME=	wm2-4.0
@@ -10,6 +10,8 @@ MAINTAINER=	kuebart@mathematik.uni-ulm.de
 HOMEPAGE=	http://www.all-day-breakfast.com/wm2/
 COMMENT=	Minimalist window manager for X
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+
 BUILD_TARGET=	depend wm2
 
 USE_TOOLS+=	makedepend
@@ -20,8 +22,8 @@ MAKE_ENV+=	CCC=${CXX:Q}
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/wm2 ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/README ${PREFIX}/${PKGMANDIR}/cat1/wm2.0
+	${INSTALL_PROGRAM} ${WRKSRC}/wm2 ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/README ${DESTDIR}${PREFIX}/${PKGMANDIR}/cat1/wm2.0
 
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
