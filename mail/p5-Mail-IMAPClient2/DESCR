@@ -1,0 +1,19 @@
+  Mail::IMAPClient module provides perl routines that simplify a
+sockets connection to and an IMAP conversation with an IMAP server.
+
+  This module was developed on Solaris 2.5.1 and 2.6 against Netscape
+IMAP servers versions 3.6 and 4.1.  However, since it is written in
+perl and designed for flexibility, it should run on any OS with a
+TCP/IP stack and a version of perl that includes Socket.pm and
+IO::Socket.pm. It also should be able to talk to any IMAP server,
+even those that have, um, proprietary features (assuming that the
+programmer knows what those features are).
+
+  To date, the test suite runs successfully with the following IMAP
+servers:
+
+-Netscape Messenger v3.6
+-Netscape Messenger v4.1
+-UW-IMAP (I think it was 4.5)
+-Cyrus IMAP4 v1.5.19
+-Mirapoint Message Server Appliances (OS versions 1.6.1 and 1.7.1)
