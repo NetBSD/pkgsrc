@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2008/06/20 01:09:05 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/09/08 08:59:22 adam Exp $
 
-DISTNAME=	szip-2.0
+DISTNAME=	szip-2.1
 CATEGORIES=	archivers
-MASTER_SITES=	ftp://ftp.hdfgroup.org/lib-external/szip/2.0/src/
+MASTER_SITES=	ftp://ftp.hdfgroup.org/lib-external/szip/2.1/src/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://hdf.ncsa.uiuc.edu/doc_resource/SZIP/
@@ -20,7 +20,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
 
 INSTALLATION_DIRS=	include lib
 
