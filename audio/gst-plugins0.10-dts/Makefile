@@ -1,5 +1,7 @@
-# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:06 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/09/08 07:48:49 wiz Exp $
 #
+
+PKGREVISION=		1
 
 GST_PLUGINS0.10_NAME=	dts
 GST_PLUGINS0.10_DIRS=	ext/dts
