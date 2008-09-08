@@ -6,3 +6,6 @@ and rendering sets of them.
 
 This package contains the client library for connecting to a Xserver that
 supports the Xrender extension.
+
+This package is for use with older native X11 versions. The modular
+X.org version is in x11/libXrender.
