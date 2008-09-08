@@ -1,4 +1,4 @@
-/* $NetBSD: tran.c,v 1.2 2008/08/26 14:46:21 joerg Exp $ */
+/* $NetBSD: tran.c,v 1.3 2008/09/08 13:47:55 joerg Exp $ */
 
 /****************************************************************
 Copyright (C) Lucent Technologies 1997
@@ -400,11 +400,14 @@ char *getpssval(Cell *vp)     /* get string val of a Cell for print */
 
 char *tostring(const char *s)	/* make a copy of string s */
 {
+	size_t len;
 	char *p;
 
-	p = (char *) malloc(strlen(s)+1);
+	len = strlen(s) + 1;
+	p = (char *) malloc(len);
 	if (p == NULL)
 		FATAL("out of space in tostring on %s", s);
+	memcpy(p, s, len); 
 	return(p);
 }
 
