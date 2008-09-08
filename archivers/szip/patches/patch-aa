@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.1 2005/10/03 20:31:26 joerg Exp $
+$NetBSD: patch-aa,v 1.2 2008/09/08 08:59:22 adam Exp $
 
---- examples/Makefile.in.orig	2005-07-22 15:00:42.000000000 +0000
+--- examples/Makefile.in.orig	2007-05-14 22:51:22.000000000 +0200
 +++ examples/Makefile.in
-@@ -144,7 +144,7 @@ AM_CPPFLAGS = -I$(top_srcdir)/src  -I$(t
- noinst_PROGRAMS = burst_szip example
- 
+@@ -175,7 +175,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ AM_CPPFLAGS = -I$(top_srcdir)/src  -I$(top_srcdir)/test
  burst_szip_SOURCES = burst_szip.c
 -burst_szip_LDADD = ../test/libmcgill.la ../src/libsz.la
 +burst_szip_LDADD = ../test/libmcgill.la ../src/libsz.la -lm
  burst_szip_DEPENDENCIES = ../test/libmcgill.la ../src/libsz.la
- 
  example_SOURCES = example.c
+ example_LDADD = ../src/libsz.la
