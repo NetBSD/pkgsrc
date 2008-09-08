@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/08 05:31:01 bjs Exp $
+
+--- src/ws.c.orig	2007-08-23 15:10:33.000000000 -0400
++++ src/ws.c
+@@ -139,6 +139,7 @@ InputDriverRec WS = {
+ 	NULL,
+ 	wsPreInit,
+ 	NULL,
++	NULL,
+ 	0
+ };
+ 

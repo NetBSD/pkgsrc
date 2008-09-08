@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/08 05:31:01 bjs Exp $
+
+SHA1 (openbsd-input-ws-1.2.tar.gz) = a313e27f8c3ce999e71b23eab9102e6332d16f9d
+RMD160 (openbsd-input-ws-1.2.tar.gz) = 39d3244c5e11a3902fc385d68ece8704faf305bf
+Size (openbsd-input-ws-1.2.tar.gz) = 318780 bytes
+SHA1 (patch-aa) = 4de8a3514d7dc5f3d90cfdc0b228aababf4f2fe2

@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/08 05:31:01 bjs Exp $
+lib/xorg/modules/input/ws_drv.la
+man/man4/ws.4
+@comment @dirrm lib/xorg/modules/input
