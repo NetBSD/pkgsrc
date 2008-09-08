@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2158 2008/09/08 08:43:17 he Exp $
+$NetBSD: CHANGES-2008,v 1.2159 2008/09/08 09:00:49 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3644,3 +3644,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated math/glpk to 4.31 [adam 2008-09-08]
 	Updated emulators/generator-cbiere to 0.35r4 [wiz 2008-09-08]
 	Added misc/p5-Geo-Mercator version 1.01 [he 2008-09-08]
+	Updated archivers/szip to 2.1 [adam 2008-09-08]
+	Updated security/gsasl to 0.2.28 [adam 2008-09-08]
