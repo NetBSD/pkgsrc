@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2007/02/22 19:27:25 wiz Exp $
+# $NetBSD: Makefile,v 1.24 2008/09/08 07:02:52 dholland Exp $
 #
 
 DISTNAME=		libXfixes-2.0.1
@@ -13,6 +13,9 @@ HOMEPAGE=		http://freedesktop.org/
 COMMENT=		X Fixes extension of X RandR
 
 CONFLICTS+=		libXfixes-[0-9]*
+.if "${X11_TYPE}" != "native"
+PKG_FAIL_REASON+="This package is for native X11 only; use libXfixes instead."
+.endif
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
