@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2176 2008/09/08 22:36:29 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2177 2008/09/08 23:15:41 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3670,3 +3670,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added mail/p5-Mail-IMAPClient2 version 2.2.9 [abs 2008-09-08]
 	Updated mail/imapsync to 1.264 [abs 2008-09-08]
 	Added devel/p5-Declare-Constraints-Simple version 0.03 [seb 2008-09-08]
+	Updated devel/p5-Class-MOP to 0.65 [seb 2008-09-08]
+	Updated devel/p5-Moose to 0.57 [seb 2008-09-08]
