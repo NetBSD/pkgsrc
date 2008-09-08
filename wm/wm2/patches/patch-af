@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2008/09/08 09:41:50 dholland Exp $
+
+--- Client.C~	1997-03-21 06:12:30.000000000 -0500
++++ Client.C	2008-09-08 05:39:59.000000000 -0400
+@@ -410,7 +410,7 @@ int Client::getAtomProperty(Atom a, Atom
+ 
+     x = *p;
+     XFree((void *)p);
+-    return (int)x;
++    return (int)(intptr_t)x;
+ }
+ 
+ 
