@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/08 17:27:56 adrianp Exp $
+include/libnipper/config.h
+include/libnipper/libnipper.h
+lib/libnipper.so
+share/examples/nipper.conf
+man/man5/nipper.conf.5
+@dirrm include/libnipper
