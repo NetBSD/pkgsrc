@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2169 2008/09/08 19:11:57 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.2170 2008/09/08 19:14:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3662,3 +3662,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/vlc to 0.9.1 [ahoka 2008-09-08]
 	Updated devel/exempi to 2.0.2 [wiz 2008-09-08]
 	Added graphics/libv4l version 0.4.3 [jmcneill 2008-09-08]
+	Updated games/bluemoon to 1.3.2 [wiz 2008-09-08]
