@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.119 2008/04/28 17:21:45 drochner Exp $
+# $NetBSD: Makefile,v 1.120 2008/09/08 19:21:17 ahoka Exp $
 #
 
 COMMENT=	Multimedia utilities
@@ -18,7 +18,6 @@ SUBDIR+=	dvdrip
 SUBDIR+=	dvdstyler
 SUBDIR+=	dvdview
 SUBDIR+=	ffmpeg
-SUBDIR+=	ffmpeg-devel
 SUBDIR+=	flashplayer
 SUBDIR+=	fxtv
 SUBDIR+=	ggrab
@@ -112,7 +111,7 @@ SUBDIR+=	totem-pl-parser
 SUBDIR+=	totem-xine
 SUBDIR+=	transcode
 SUBDIR+=	vlc
-SUBDIR+=	vlc07
+SUBDIR+=	vlc08
 SUBDIR+=	vls
 SUBDIR+=	win32-codecs
 SUBDIR+=	x264-devel
