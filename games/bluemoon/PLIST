@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/25 22:48:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/09/08 19:13:42 wiz Exp $
 bin/bluemoon
 bin/do_matchup
 share/bluemoon/cards.txt
@@ -282,6 +282,7 @@ share/bluemoon/image/vulca27.jpg
 share/bluemoon/image/vulca28.jpg
 share/bluemoon/image/vulca29.jpg
 share/bluemoon/image/vulca30.jpg
+share/bluemoon/networks/bluemoon.net.Aqua.Buka
 share/bluemoon/networks/bluemoon.net.Aqua.Flit
 share/bluemoon/networks/bluemoon.net.Aqua.Hoax
 share/bluemoon/networks/bluemoon.net.Aqua.Khind
@@ -289,7 +290,16 @@ share/bluemoon/networks/bluemoon.net.Aqua.Mimix
 share/bluemoon/networks/bluemoon.net.Aqua.Pillar
 share/bluemoon/networks/bluemoon.net.Aqua.Terrah
 share/bluemoon/networks/bluemoon.net.Aqua.Vulca
+share/bluemoon/networks/bluemoon.net.Buka.Aqua
+share/bluemoon/networks/bluemoon.net.Buka.Flit
+share/bluemoon/networks/bluemoon.net.Buka.Hoax
+share/bluemoon/networks/bluemoon.net.Buka.Khind
+share/bluemoon/networks/bluemoon.net.Buka.Mimix
+share/bluemoon/networks/bluemoon.net.Buka.Pillar
+share/bluemoon/networks/bluemoon.net.Buka.Terrah
+share/bluemoon/networks/bluemoon.net.Buka.Vulca
 share/bluemoon/networks/bluemoon.net.Flit.Aqua
+share/bluemoon/networks/bluemoon.net.Flit.Buka
 share/bluemoon/networks/bluemoon.net.Flit.Hoax
 share/bluemoon/networks/bluemoon.net.Flit.Khind
 share/bluemoon/networks/bluemoon.net.Flit.Mimix
@@ -297,6 +307,7 @@ share/bluemoon/networks/bluemoon.net.Flit.Pillar
 share/bluemoon/networks/bluemoon.net.Flit.Terrah
 share/bluemoon/networks/bluemoon.net.Flit.Vulca
 share/bluemoon/networks/bluemoon.net.Hoax.Aqua
+share/bluemoon/networks/bluemoon.net.Hoax.Buka
 share/bluemoon/networks/bluemoon.net.Hoax.Flit
 share/bluemoon/networks/bluemoon.net.Hoax.Khind
 share/bluemoon/networks/bluemoon.net.Hoax.Mimix
@@ -304,6 +315,7 @@ share/bluemoon/networks/bluemoon.net.Hoax.Pillar
 share/bluemoon/networks/bluemoon.net.Hoax.Terrah
 share/bluemoon/networks/bluemoon.net.Hoax.Vulca
 share/bluemoon/networks/bluemoon.net.Khind.Aqua
+share/bluemoon/networks/bluemoon.net.Khind.Buka
 share/bluemoon/networks/bluemoon.net.Khind.Flit
 share/bluemoon/networks/bluemoon.net.Khind.Hoax
 share/bluemoon/networks/bluemoon.net.Khind.Mimix
@@ -311,6 +323,7 @@ share/bluemoon/networks/bluemoon.net.Khind.Pillar
 share/bluemoon/networks/bluemoon.net.Khind.Terrah
 share/bluemoon/networks/bluemoon.net.Khind.Vulca
 share/bluemoon/networks/bluemoon.net.Mimix.Aqua
+share/bluemoon/networks/bluemoon.net.Mimix.Buka
 share/bluemoon/networks/bluemoon.net.Mimix.Flit
 share/bluemoon/networks/bluemoon.net.Mimix.Hoax
 share/bluemoon/networks/bluemoon.net.Mimix.Khind
@@ -318,6 +331,7 @@ share/bluemoon/networks/bluemoon.net.Mimix.Pillar
 share/bluemoon/networks/bluemoon.net.Mimix.Terrah
 share/bluemoon/networks/bluemoon.net.Mimix.Vulca
 share/bluemoon/networks/bluemoon.net.Pillar.Aqua
+share/bluemoon/networks/bluemoon.net.Pillar.Buka
 share/bluemoon/networks/bluemoon.net.Pillar.Flit
 share/bluemoon/networks/bluemoon.net.Pillar.Hoax
 share/bluemoon/networks/bluemoon.net.Pillar.Khind
@@ -325,6 +339,7 @@ share/bluemoon/networks/bluemoon.net.Pillar.Mimix
 share/bluemoon/networks/bluemoon.net.Pillar.Terrah
 share/bluemoon/networks/bluemoon.net.Pillar.Vulca
 share/bluemoon/networks/bluemoon.net.Terrah.Aqua
+share/bluemoon/networks/bluemoon.net.Terrah.Buka
 share/bluemoon/networks/bluemoon.net.Terrah.Flit
 share/bluemoon/networks/bluemoon.net.Terrah.Hoax
 share/bluemoon/networks/bluemoon.net.Terrah.Khind
@@ -332,6 +347,7 @@ share/bluemoon/networks/bluemoon.net.Terrah.Mimix
 share/bluemoon/networks/bluemoon.net.Terrah.Pillar
 share/bluemoon/networks/bluemoon.net.Terrah.Vulca
 share/bluemoon/networks/bluemoon.net.Vulca.Aqua
+share/bluemoon/networks/bluemoon.net.Vulca.Buka
 share/bluemoon/networks/bluemoon.net.Vulca.Flit
 share/bluemoon/networks/bluemoon.net.Vulca.Hoax
 share/bluemoon/networks/bluemoon.net.Vulca.Khind
