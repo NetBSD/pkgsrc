@@ -1,0 +1,14 @@
+--- include/libv4l2.h.orig	2008-09-08 14:42:22.000000000 -0400
++++ include/libv4l2.h	2008-09-08 14:43:43.000000000 -0400
+@@ -22,6 +22,11 @@
+ #include <stdio.h>
+ #include <unistd.h>
+ 
++#ifdef __NetBSD__
++#include <sys/types.h>
++typedef off_t __off64_t;
++#endif
++
+ #ifdef __cplusplus
+ extern "C" {
+ #endif /* __cplusplus */
