@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/08 17:27:56 adrianp Exp $
+
+--- CMakeLists.txt.orig	2008-09-05 21:01:55.000000000 +0100
++++ CMakeLists.txt
+@@ -319,7 +319,6 @@ SET(libnipper_SRC
+ ADD_LIBRARY(nipper SHARED ${libnipper_SRC})
+ 
+ # Install...
+-INSTALL(TARGETS nipper LIBRARY DESTINATION /usr/lib)
+-INSTALL(FILES nipper.conf DESTINATION /etc)
+-INSTALL(FILES libnipper.h config.h DESTINATION /usr/include/libnipper/)
+-INSTALL(FILES man/nipper.conf.5 DESTINATION /usr/share/man/man5)
+\ No newline at end of file
++INSTALL(TARGETS nipper LIBRARY DESTINATION @@PREFIX@@/lib)
++INSTALL(FILES libnipper.h config.h DESTINATION @@PREFIX@@/include/libnipper/)
++INSTALL(FILES man/nipper.conf.5 DESTINATION @@PREFIX@@/@@PKGMANDIR@@/man5)
