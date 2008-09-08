@@ -1,0 +1,4 @@
+Nipper performs security audits of network device configuration
+files. The report produced by Nipper includes; detailed security-related
+issues with recommendations, a configuration report and various
+appendices. Nipper has a large number of configuration options.

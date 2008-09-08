@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/08 17:27:56 adrianp Exp $
+
+SHA1 (libnipper-0.12.1.tgz) = 0999540d127588d1be1b9f3baecb25603511e448
+RMD160 (libnipper-0.12.1.tgz) = 3ff9bdae5e41a1b1549103c6bea030f662d0d19c
+Size (libnipper-0.12.1.tgz) = 450651 bytes
+SHA1 (patch-aa) = c4d245196cd901b9f11826bd163df701e1b447a2
