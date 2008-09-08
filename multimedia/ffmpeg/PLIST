@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.7 2008/09/07 23:39:37 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/09/08 17:57:02 ahoka Exp $
 bin/ffmpeg
-bin/ffplay
 bin/ffserver
+${PLIST.sdl}bin/ffplay
+${PLIST.sdl}man/man1/ffplay.1
 include/libavcodec/avcodec.h
 include/libavcodec/opt.h
 include/libavdevice/avdevice.h
@@ -65,7 +66,6 @@ lib/pkgconfig/libavutil.pc
 lib/pkgconfig/libpostproc.pc
 lib/pkgconfig/libswscale.pc
 man/man1/ffmpeg.1
-man/man1/ffplay.1
 man/man1/ffserver.1
 share/doc/ffmpeg/README
 share/doc/ffmpeg/TODO
