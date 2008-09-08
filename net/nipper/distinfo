@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2007/09/01 22:33:53 adrianp Exp $
+$NetBSD: distinfo,v 1.2 2008/09/08 17:39:29 adrianp Exp $
 
-SHA1 (nipper-0.10.5.tgz) = f99faf8e0731b81463f82d7ff64f86a9d5f762e2
-RMD160 (nipper-0.10.5.tgz) = 40322e68376ec19a01a5654d2792aff0a98b0fee
-Size (nipper-0.10.5.tgz) = 198770 bytes
+SHA1 (nipper-cli-0.12.0.tgz) = 8e5717e5891d4ecdd3a4d73cde2c97f75dc3fb71
+RMD160 (nipper-cli-0.12.0.tgz) = c0a83f4c21941556bacee777801288d162b4fdea
+Size (nipper-cli-0.12.0.tgz) = 34157 bytes
+SHA1 (patch-aa) = 0ffd30ecd32ccb32746b03942e9b47df38508540
