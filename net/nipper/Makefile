@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/09/01 22:33:53 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/08 17:39:29 adrianp Exp $
 #
 
-DISTNAME=	nipper-0.10.5
+DISTNAME=	nipper-cli-0.12.0
+PKGNAME=	${DISTNAME:S/-cli//}
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nipper/}
 EXTRACT_SUFX=	.tgz
@@ -10,14 +11,17 @@ MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://nipper.sourceforge.net/
 COMMENT=	Performs security audits of network device configuration
 
-INSTALLATION_DIRS=	${PREFIX}/share/doc/nipper
+USE_LANGUAGES=	c++ c
+USE_CMAKE=	yes
 
-do-build:
-	cd ${WRKSRC} && \
-		${CC} ${CFLAGS} ${CPPFLAGS} ${LDFLAGS} -o nipper nipper.c
+SUBST_CLASSES+=		config
+SUBST_STAGE.config=	post-patch
+SUBST_FILES.config=	CMakeLists.txt nipper.cpp
+SUBST_SED.config=	-e "s|@@PREFIX@@|${PREFIX}|g"
+SUBST_SED.config+=	-e "s|@@PKGMANDIR@@|${PKGMANDIR}|g"
+SUBST_SED.config+=	-e "s|/etc|${PKG_SYSCONFDIR}|g"
+SUBST_MESSAGE.config=	Fixing configuration files.
 
-do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/nipper ${PREFIX}/bin
-	${INSTALL_DATA} ${WRKSRC}/docs/*.txt ${PREFIX}/share/doc/nipper
-
+.include "../../net/libnipper/buildlink3.mk"
+.include "../../devel/cmake/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
