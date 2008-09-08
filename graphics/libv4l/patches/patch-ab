@@ -1,0 +1,14 @@
+--- libv4lconvert/libv4lconvert.c.orig	2008-09-08 14:34:57.000000000 -0400
++++ libv4lconvert/libv4lconvert.c	2008-09-08 14:38:17.000000000 -0400
+@@ -19,7 +19,11 @@
+ #include <errno.h>
+ #include <string.h>
+ #include <stdlib.h>
++#ifdef __linux__
+ #include <syscall.h>
++#else
++#include <sys/syscall.h>
++#endif
+ #include <unistd.h>
+ #include "libv4lconvert.h"
+ #include "libv4lconvert-priv.h"
