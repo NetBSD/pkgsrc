@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2165 2008/09/08 17:39:56 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.2166 2008/09/08 17:40:16 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3657,3 +3657,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added mail/lua-OSBF version 2.0.4 [shannonjr 2008-09-08]
 	Updated net/net-snmp to 5.4.2 [adam 2008-09-08]
 	Added net/libnipper version 0.12.1 [adrianp 2008-09-08]
+	Updated net/nipper to 0.12.0 [adrianp 2008-09-08]
