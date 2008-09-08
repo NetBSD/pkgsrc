@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/07 19:11:41 seb Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/08 03:25:43 joerg Exp $
 
 DISTNAME=	DBICx-Deploy-0.02
 PKGNAME=	p5-${DISTNAME}
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 USE_LANGUAGES=	# empty
 PERL5_PACKLIST=	auto/DBICx/Deploy/.packlist
 
-BUILD_DEPENDS+=	p5-DBD-SQLite:../../databases/p5-DBD-SQLite
+BUILD_DEPENDS+=	p5-DBD-SQLite-[0-9]*:../../databases/p5-DBD-SQLite
 DEPENDS+=	p5-DBIx-Class-[0-9]*:../../databases/p5-DBIx-Class
 DEPENDS+=	p5-SQL-Translator-[0-9]*:../../databases/p5-SQL-Translator
 
