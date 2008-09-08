@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.17 2008/03/04 15:39:09 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2008/09/08 06:38:56 dholland Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../graphics/3DKit/Makefile.common"
-PKGREVISION=	13
+PKGREVISION=	14
 
 DISTFILES=	DevManual.pdf
 
