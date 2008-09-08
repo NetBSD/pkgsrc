@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.50 2008/04/12 22:43:13 jlam Exp $
+# $NetBSD: Makefile,v 1.51 2008/09/08 08:03:15 dholland Exp $
 
 DISTNAME=	amaya-fullsrc-9.2.1
 PKGNAME=	${DISTNAME:S/-fullsrc//}
-PKGREVISION=	5
+PKGREVISION=	6
 CATEGORIES=	www
 MASTER_SITES=	http://www.w3.org/Amaya/Distribution/ \
 		ftp://ftp.w3.org/pub/amaya/ \
@@ -44,10 +44,17 @@ post-configure:
 	${CP} ${WRKSRC}/Options.orig ${WRKSRC}/Options
 	${TOUCH} ${WRKSRC}/Makefile
 
+# currently uses its own copy of these
+#.include "../../graphics/jpeg/buildlink3.mk"
+#.include "../../graphics/png/buildlink3.mk"
+
 .include "../../graphics/imlib/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/x11.buildlink3.mk"
+.include "../../x11/libXft/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/xproto/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
