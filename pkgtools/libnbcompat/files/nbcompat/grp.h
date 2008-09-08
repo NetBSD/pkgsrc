@@ -1,4 +1,4 @@
-/*	$NetBSD: grp.h,v 1.2 2008/04/29 05:46:08 martin Exp $	*/
+/*	$NetBSD: grp.h,v 1.3 2008/09/08 20:20:23 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -50,6 +50,10 @@ const char *group_from_gid(gid_t, int);
 
 #if !HAVE_GID_FROM_GROUP
 int gid_from_group(const char *, gid_t *);
+#endif
+
+#if !HAVE_DECL_ENDGRENT
+void endgrent(void);
 #endif
 
 #endif	/* !_NBCOMPAT_GRP_H_ */
