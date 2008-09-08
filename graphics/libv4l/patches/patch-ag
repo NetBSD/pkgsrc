@@ -1,0 +1,11 @@
+--- Makefile.orig	2008-09-08 14:50:17.000000000 -0400
++++ Makefile	2008-09-08 14:50:32.000000000 -0400
+@@ -4,7 +4,7 @@
+ all clean install:
+ 	$(MAKE) -C libv4lconvert V4L2_LIB_VERSION=$(V4L2_LIB_VERSION) $@
+ 	$(MAKE) -C libv4l2 V4L2_LIB_VERSION=$(V4L2_LIB_VERSION) $@
+-	$(MAKE) -C libv4l1 V4L2_LIB_VERSION=$(V4L2_LIB_VERSION) $@
++	#$(MAKE) -C libv4l1 V4L2_LIB_VERSION=$(V4L2_LIB_VERSION) $@
+ 
+ export: clean
+ 	mkdir /tmp/libv4l-$(V4L2_LIB_VERSION)

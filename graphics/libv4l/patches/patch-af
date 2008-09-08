@@ -1,0 +1,38 @@
+--- libv4l2/v4l2convert.c.orig	2008-09-08 14:48:19.000000000 -0400
++++ libv4l2/v4l2convert.c	2008-09-08 14:50:00.000000000 -0400
+@@ -24,11 +24,16 @@
+ 
+ #include <stdarg.h>
+ #include <stdlib.h>
++#ifdef __linux__
+ #include <syscall.h>
++#else
++#include <sys/syscall.h>
++#endif
+ #include <fcntl.h>
+ #include <string.h>
+ #include <sys/ioctl.h>
+ #include <sys/mman.h>
++#ifdef __linux__
+ /* These headers are not needed by us, but by linux/videodev2.h,
+    which is broken on some systems and doesn't include them itself :( */
+ #include <sys/time.h>
+@@ -36,8 +41,18 @@
+ #include <linux/ioctl.h>
+ /* end broken header workaround includes */
+ #include <linux/videodev2.h>
++#else
++#include <sys/types.h>
++#include <sys/time.h>
++#include <sys/ioctl.h>
++#include <sys/videoio.h>
++#endif
+ #include <libv4l2.h>
+ 
++#ifndef O_LARGEFILE
++#define O_LARGEFILE 0
++#endif
++
+ /* Check that open/read/mmap is not a define */
+ #if defined open || defined read || defined mmap
+ #error open/read/mmap is a prepocessor macro !!
