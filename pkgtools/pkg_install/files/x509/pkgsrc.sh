@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: pkgsrc.sh,v 1.1.2.1 2008/08/06 23:51:32 joerg Exp $
+# $NetBSD: pkgsrc.sh,v 1.1.2.2 2008/09/08 23:06:41 joerg Exp $
 #
 
 CA="openssl ca -config pkgsrc.cnf"
@@ -28,16 +28,16 @@ new_ca() {
 
 new_pkgkey() {
 	$REQ -new -keyout pkgkey_key.pem -out pkgkey_req.pem
-	$CA -extensions pkgkey -policy policy_match -out pkgkey_cert.pem.pem -infiles pkgkey_req.pem
+	$CA -extensions pkgkey -policy policy_match -out pkgkey_cert.pem -infiles pkgkey_req.pem
 	rm pkgkey_req.pem
-	echo "Signed certificate is in pkgkey_cert.pem.pem, key in pkgkey_key.pem"
+	echo "Signed certificate is in pkgkey_cert.pem, key in pkgkey_key.pem"
 }
 
 new_pkgsec() {
 	$REQ -new -keyout pkgsec_key.pem -out pkgsec_req.pem
-	$CA -extensions pkgsec -policy policy_match -out pkgsec_cert.pem.pem -infiles pkgsec_req.pem
+	$CA -extensions pkgsec -policy policy_match -out pkgsec_cert.pem -infiles pkgsec_req.pem
 	rm pkgsec_req.pem
-	echo "Signed certificate is in pkgsec_cert.pem.pem, key in pkgsec_key.pem"
+	echo "Signed certificate is in pkgsec_cert.pem, key in pkgsec_key.pem"
 }
 
 usage() {
