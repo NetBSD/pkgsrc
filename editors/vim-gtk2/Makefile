@@ -1,20 +1,28 @@
-# $NetBSD: Makefile,v 1.30 2008/03/11 10:55:03 martti Exp $
+# $NetBSD: Makefile,v 1.31 2008/09/08 03:10:21 bjs Exp $
 
 PKGNAME=		vim-gtk2-${VIM_VERSION}.${VIM_PATCHLEVEL}
-#PKGREVISION=		1
+PKGREVISION=		1
 
 COMMENT=		Vim editor (vi clone) with X11 GTK2 GUI
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+PKG_SUPPORTED_OPTIONS+=	gnome
+
 .include		"../../editors/vim-share/Makefile.common"
+
 
 DEPENDS+=		vim-share-${VIM_VERSION}.${VIM_PATCHLEVEL}{,nb*}:../../editors/vim-share
 CONFLICTS+=		vim-[0-9]* vim-gtk-[0-9]* vim-motif-[0-9]*
 CONFLICTS+=		vim-xaw-[0-9]* vim-kde-[0-9]*
 
-CONFIGURE_ARGS+=	--enable-gui=gtk2
 CONFIGURE_ARGS+=	--with-tlib=${BUILDLINK_LIBNAME.termcap}
+
+.if !empty(PKG_OPTIONS:Mgnome)
+CONFIGURE_ARGS+=	--enable-gui=gnome2
+.else
+CONFIGURE_ARGS+=	--enable-gui=gtk2
+.endif
 
 USE_TOOLS+=		pkg-config
 
@@ -38,6 +46,9 @@ post-install:
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.if !empty(PKG_OPTIONS:Mgnome)
+.  include "../../devel/libgnomeui/buildlink3.mk"
+.endif
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
