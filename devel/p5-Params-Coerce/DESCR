@@ -1,0 +1,4 @@
+The Perl 5 module Params::Coerce attempts to encourage flexible
+ways to pass parameters to functions, by making it easier to take
+a variety of different arguments, while adding negligable additional
+complexity to your code.
