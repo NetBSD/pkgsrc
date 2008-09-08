@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2008/09/07 23:39:37 ahoka Exp $
+# $NetBSD: options.mk,v 1.8 2008/09/08 17:57:02 ahoka Exp $
 
 # Global and legacy options
 
@@ -10,6 +10,8 @@ PKG_SUGGESTED_OPTIONS=	faac theora xvid
 
 .include "../../mk/bsd.options.mk"
 .include "../../mk/bsd.prefs.mk"
+
+PLIST_VARS+=	sdl
 
 ###
 ### faad option
@@ -37,11 +39,11 @@ CONFIGURE_ARGS+=  --enable-libfaac
 ###
 
 .if !empty(PKG_OPTIONS:Msdl)
-
 CONFIGURE_ARGS+=	--enable-ffplay
-PLIST_SRC+=		${PKGDIR}/PLIST.sdl
-
+PLIST.sdl=		yes
 .include "../../devel/SDL/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--disable-ffplay
 .endif
 
 ###
