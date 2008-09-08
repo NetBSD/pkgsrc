@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.7 2008/03/03 19:21:38 jlam Exp $
+# $NetBSD: Makefile,v 1.8 2008/09/08 07:42:49 wiz Exp $
 #
 
-DISTNAME=	generator-0.35-cbiere-r2
-PKGNAME=	generator-cbiere-0.35r2
-PKGREVISION=	3
+DISTNAME=	generator-0.35-cbiere-r4
+PKGNAME=	generator-cbiere-0.35r4
 CATEGORIES=	emulators
 MASTER_SITES=	http://www.ghostwhitecrab.de/generator/
 EXTRACT_SUFX=	.tar.bz2
