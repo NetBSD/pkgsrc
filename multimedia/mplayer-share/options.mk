@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.32 2008/08/21 11:37:53 abs Exp $
+# $NetBSD: options.mk,v 1.33 2008/09/09 01:11:53 jmcneill Exp $
 
 .if defined(PKGNAME) && empty(PKGNAME:Mmplayer-share*)
 
@@ -42,6 +42,11 @@ PKG_SUPPORTED_OPTIONS+=	mlib
 .endif
 .if ${OPSYS} == "Linux"
 PKG_SUPPORTED_OPTIONS+=	vidix
+.endif
+
+.if ${OPSYS} == "NetBSD" && exists(/usr/include/sys/videoio.h)
+PKG_SUPPORTED_OPTIONS+=	v4l2
+PKG_SUGGESTED_OPTIONS+=	v4l2
 .endif
 
 # Platform-specific options.
@@ -263,6 +268,12 @@ CONFIGURE_ARGS+=	--enable-theora
 .  include "../../multimedia/libtheora/buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-theora
+.endif
+
+.if !empty(PKG_OPTIONS:Mv4l2)
+CONFIGURE_ARGS+=	--enable-tv-v4l2
+.else
+CONFIGURE_ARGS+=	--disable-tv-v4l2
 .endif
 
 # disable vidix if not in options
