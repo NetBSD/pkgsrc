@@ -1,0 +1,3 @@
+The Perl 5 module Test::WWW::Selenium is a subclass of the provided
+module WWW::Selenium, a perl client for the Selenium Remote Control
+test tool. Test::WWW::Selenium provides convenient testing functions.
