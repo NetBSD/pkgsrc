@@ -1,20 +1,7 @@
-$NetBSD: patch-aa,v 1.6 2008/05/09 22:53:21 dsainty Exp $
-
-Disable HAVE_ABSTRACT_SOCKETS as a workaround for bugs in the abstract socket
-implementation, see:
-  http://bugs.freedesktop.org/show_bug.cgi?id=15884
+$NetBSD: patch-aa,v 1.7 2008/09/09 13:59:13 dsainty Exp $
 
 --- Xtranssock.c.orig	2008-05-09 02:23:07.000000000 +1200
 +++ Xtranssock.c	2008-05-10 09:41:28.000000000 +1200
-@@ -159,7 +159,7 @@
- #endif
- 
- #ifdef linux
--#define HAVE_ABSTRACT_SOCKETS
-+/*#define HAVE_ABSTRACT_SOCKETS*/
- #endif
- 
- #define MIN_BACKLOG 128
 @@ -294,11 +294,6 @@
   * that don't have IPv6 support.
   */
