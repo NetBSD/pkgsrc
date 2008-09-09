@@ -1,0 +1,76 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
+include/unicap/ucil.h
+include/unicap/ucil_png.h
+include/unicap/ucil_version.h
+include/unicap/unicap.h
+include/unicap/unicap_status.h
+include/unicap/unicap_version.h
+include/unicap/unicapgtk.h
+include/unicap/unicapgtk_device_property.h
+include/unicap/unicapgtk_device_selection.h
+include/unicap/unicapgtk_property_dialog.h
+include/unicap/unicapgtk_version.h
+include/unicap/unicapgtk_video_display.h
+include/unicap/unicapgtk_video_format_selection.h
+lib/libucil.la
+lib/libunicap.la
+lib/libunicapgtk.la
+lib/pkgconfig/libucil.pc
+lib/pkgconfig/libunicap.pc
+lib/pkgconfig/libunicapgtk.pc
+lib/unicap2/cpi/libv4l2.la
+share/gtk-doc/html/libucil/ch01.html
+share/gtk-doc/html/libucil/home.png
+share/gtk-doc/html/libucil/index.html
+share/gtk-doc/html/libucil/index.sgml
+share/gtk-doc/html/libucil/left.png
+share/gtk-doc/html/libucil/libucil-colorspace.html
+share/gtk-doc/html/libucil/libucil-draw.html
+share/gtk-doc/html/libucil/libucil-mpeg.html
+share/gtk-doc/html/libucil/libucil-queue.html
+share/gtk-doc/html/libucil/libucil-ucil-theora.html
+share/gtk-doc/html/libucil/libucil-ucil-version.html
+share/gtk-doc/html/libucil/libucil-ucil.html
+share/gtk-doc/html/libucil/libucil-yuvops.html
+share/gtk-doc/html/libucil/libucil.devhelp
+share/gtk-doc/html/libucil/libucil.devhelp2
+share/gtk-doc/html/libucil/right.png
+share/gtk-doc/html/libucil/style.css
+share/gtk-doc/html/libucil/up.png
+share/gtk-doc/html/libunicap/ch01.html
+share/gtk-doc/html/libunicap/home.png
+share/gtk-doc/html/libunicap/index.html
+share/gtk-doc/html/libunicap/index.sgml
+share/gtk-doc/html/libunicap/left.png
+share/gtk-doc/html/libunicap/libunicap-unicap.html
+share/gtk-doc/html/libunicap/libunicap.devhelp
+share/gtk-doc/html/libunicap/libunicap.devhelp2
+share/gtk-doc/html/libunicap/right.png
+share/gtk-doc/html/libunicap/style.css
+share/gtk-doc/html/libunicap/up.png
+share/gtk-doc/html/libunicapgtk/UnicapgtkDeviceProperty.html
+share/gtk-doc/html/libunicapgtk/UnicapgtkDeviceSelection.html
+share/gtk-doc/html/libunicapgtk/UnicapgtkPropertyDialog.html
+share/gtk-doc/html/libunicapgtk/UnicapgtkVideoDisplay.html
+share/gtk-doc/html/libunicapgtk/ch01.html
+share/gtk-doc/html/libunicapgtk/home.png
+share/gtk-doc/html/libunicapgtk/index.html
+share/gtk-doc/html/libunicapgtk/index.sgml
+share/gtk-doc/html/libunicapgtk/left.png
+share/gtk-doc/html/libunicapgtk/libunicapgtk-UnicapgtkVideoFormatSelection.html
+share/gtk-doc/html/libunicapgtk/libunicapgtk-unicapgtk-version.html
+share/gtk-doc/html/libunicapgtk/libunicapgtk-unicapgtk.html
+share/gtk-doc/html/libunicapgtk/libunicapgtk.devhelp
+share/gtk-doc/html/libunicapgtk/libunicapgtk.devhelp2
+share/gtk-doc/html/libunicapgtk/right.png
+share/gtk-doc/html/libunicapgtk/style.css
+share/gtk-doc/html/libunicapgtk/up.png
+share/locale/de/LC_MESSAGES/unicap.mo
+share/locale/fr/LC_MESSAGES/unicap.mo
+share/locale/ru/LC_MESSAGES/unicap.mo
+@dirrm share/gtk-doc/html/libunicapgtk
+@dirrm share/gtk-doc/html/libunicap
+@dirrm share/gtk-doc/html/libucil
+@dirrm lib/unicap2/cpi
+@dirrm lib/unicap2
+@dirrm include/unicap

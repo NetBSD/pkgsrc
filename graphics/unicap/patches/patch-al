@@ -1,0 +1,18 @@
+$NetBSD: patch-al,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
+
+
+--- cpi/v4l2/uvc_compat.h.orig	2008-09-08 23:16:59.000000000 -0400
++++ cpi/v4l2/uvc_compat.h	2008-09-08 23:18:15.000000000 -0400
+@@ -1,7 +1,12 @@
+ #ifndef _UVC_COMPAT_H
+ #define _UVC_COMPAT_H
+ 
++#ifdef __linux__
+ #include <linux/version.h>
++#elif defined(__NetBSD__)
++#define KERNEL_VERSION(a,b,c) (((a) << 16) + ((b) << 8) + (c))
++#define LINUX_VERSION_CODE KERNEL_VERSION(2,6,17)
++#endif
+ 
+ #ifndef __KERNEL__
+ #ifndef __user

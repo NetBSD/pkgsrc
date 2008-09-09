@@ -1,0 +1,46 @@
+$NetBSD: patch-ah,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
+
+
+--- cpi/v4l2/v4l2.c.orig	2008-07-30 01:25:30.000000000 -0400
++++ cpi/v4l2/v4l2.c	2008-09-09 00:00:02.000000000 -0400
+@@ -43,8 +43,12 @@
+ #include <errno.h>
+ #include <pthread.h>
+ 
++#ifdef __linux__
+ #include <linux/types.h>
+ #include <linux/videodev2.h>
++#elif defined(__NetBSD__)
++#include <sys/videoio.h>
++#endif
+ #include "v4l2.h"
+ 
+ #include "tisuvccam.h"
+@@ -2288,11 +2292,15 @@
+ 
+       old_index = handle->dqindex;
+ 
++#ifdef __NetBSD__
++      sem_wait( &handle->sema );
++#else
+       if( sem_timedwait( &handle->sema, &abs_timeout ) )
+       {
+ 	 TRACE( "SEM_WAIT FAILED\n" );
+ 	 continue;
+       }
++#endif
+ 
+       if( ( ( handle->dqindex + 1 ) % handle->buffer_count ) == handle->qindex )
+       {
+@@ -2395,7 +2403,11 @@
+ 	 
+ 	 if( handle->io_method == CPI_V4L2_IO_METHOD_MMAP )
+ 	 {
++#ifdef __NetBSD__
++            while( sem_wait( &handle->sema ) )
++#else
+ 	    while( sem_timedwait( &handle->sema, &abs_timeout ) )
++#endif
+ 	    {
+ 	       TRACE( "SEM_WAIT FAILED!\n" );
+ 	       gettimeofday( &ctime, NULL );
