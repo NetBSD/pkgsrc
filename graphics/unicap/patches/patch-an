@@ -1,0 +1,17 @@
+$NetBSD: patch-an,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
+
+
+--- cpi/v4l2/isight.h.orig	2008-09-08 23:19:54.000000000 -0400
++++ cpi/v4l2/isight.h	2008-09-08 23:20:08.000000000 -0400
+@@ -8,7 +8,11 @@
+ # define   	ISIGHT_H_
+ 
+ #include <unicap.h>
++#ifdef __linux__
+ #include <linux/videodev2.h>
++#elif defined(__NetBSD__)
++#include <sys/videoio.h>
++#endif
+ 
+ int isight_probe( int fd, const char *path );
+ int isight_count_ext_property( int fd );
