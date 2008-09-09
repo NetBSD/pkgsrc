@@ -1,0 +1,10 @@
+UCView is a video capture and display program based on the unicap video
+imaging library. Features:
+
+ * High performance live video display utilizing XVideo hardware
+   acceleration where possible.
+ * Support of a broad range of video capture devices via the unicap library.
+ * Audio/Video recording and encoding using the free Ogg Vorbis and Theora
+   high performance codecs.
+ * Extensible via a plugins.
+ * Remote controllable via DBus interface.

@@ -1,0 +1,53 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/09 11:52:36 jmcneill Exp $
+bin/ucview
+include/ucview/ucview.h
+include/ucview/ucview_plugin.h
+lib/ucview/plugins/libhistogram.la
+share/applications/ucview.desktop
+share/dbus-1/services/org.unicap-imaging.UCView.service
+share/gconf/schemas/ucview.schemas
+share/icons/hicolor/16x16/apps/ucview.png
+share/icons/hicolor/48x48/apps/ucview.png
+share/locale/de/LC_MESSAGES/ucview.mo
+share/locale/fr/LC_MESSAGES/ucview.mo
+share/ucview/icons/asus/41x41/ucview-device-settings.png
+share/ucview/icons/asus/41x41/ucview-pause.png
+share/ucview/icons/asus/41x41/ucview-play-video.png
+share/ucview/icons/asus/41x41/ucview-preferences.png
+share/ucview/icons/asus/41x41/ucview-record-video.png
+share/ucview/icons/asus/41x41/ucview-save-still-image.png
+share/ucview/icons/hicolor/16x16/ucview-device-settings.png
+share/ucview/icons/hicolor/16x16/ucview-play-video.png
+share/ucview/icons/hicolor/16x16/ucview-record-video.png
+share/ucview/icons/hicolor/16x16/ucview-save-still-image.png
+share/ucview/icons/hicolor/24x24/ucview-device-settings.png
+share/ucview/icons/hicolor/24x24/ucview-play-video.png
+share/ucview/icons/hicolor/24x24/ucview-record-video.png
+share/ucview/icons/hicolor/24x24/ucview-save-still-image.png
+share/ucview/icons/hicolor/32x32/ucview-device-settings.png
+share/ucview/icons/hicolor/32x32/ucview-play-video.png
+share/ucview/icons/hicolor/32x32/ucview-record-video.png
+share/ucview/icons/hicolor/32x32/ucview-save-still-image.png
+share/ucview/icons/hicolor/48x48/ucview-device-settings.png
+share/ucview/icons/hicolor/48x48/ucview-play-video.png
+share/ucview/icons/hicolor/48x48/ucview-record-video.png
+share/ucview/icons/hicolor/48x48/ucview-save-still-image.png
+share/ucview/logo/ucview-logo.png
+share/ucview/ucview.glade
+@dirrm share/ucview/logo
+@dirrm share/ucview/icons/hicolor/48x48
+@dirrm share/ucview/icons/hicolor/32x32
+@dirrm share/ucview/icons/hicolor/24x24
+@dirrm share/ucview/icons/hicolor/16x16
+@dirrm share/ucview/icons/hicolor
+@dirrm share/ucview/icons/asus/41x41
+@dirrm share/ucview/icons/asus
+@dirrm share/ucview/icons
+@exec ${MKDIR} %D/share/ucview/glade
+@dirrm share/ucview/glade
+@dirrm share/ucview
+@comment in GConf: @dirrm share/gconf/schemas
+@comment in dbus: @dirrm share/dbus-1/services
+@dirrm lib/ucview/plugins
+@dirrm lib/ucview
+@dirrm include/ucview
