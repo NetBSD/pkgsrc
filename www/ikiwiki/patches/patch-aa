@@ -1,17 +1,17 @@
-$NetBSD: patch-aa,v 1.6 2008/09/04 15:34:30 schmonz Exp $
+$NetBSD: patch-aa,v 1.7 2008/09/09 17:19:13 schmonz Exp $
 
---- Makefile.PL.orig	2008-08-27 15:25:08.000000000 -0400
+--- Makefile.PL.orig	2008-09-08 11:51:42.000000000 -0400
 +++ Makefile.PL
-@@ -50,9 +50,9 @@ extra_clean:
- 	$(MAKE) -C po clean
+@@ -95,9 +95,9 @@ extra_install:
+ 	
+ 	# These might fail if a regular user is installing into a home
+ 	# directory.
+-	-install -d $(DESTDIR)/etc/ikiwiki
+-	-install -m 0644 wikilist $(DESTDIR)/etc/ikiwiki
+-	-install -m 0644 auto.setup $(DESTDIR)/etc/ikiwiki
++	-install -d $(DESTDIR)$(PREFIX)/share/examples/ikiwiki
++	-install -m 0644 wikilist $(DESTDIR)$(PREFIX)/share/examples/ikiwiki
++	-install -m 0644 auto.setup $(DESTDIR)$(PREFIX)/share/examples/ikiwiki
+ }
+ }
  
- extra_install:
--	install -d $(DESTDIR)/etc/ikiwiki
--	install -m 0644 wikilist $(DESTDIR)/etc/ikiwiki
--	install -m 0644 auto.setup $(DESTDIR)/etc/ikiwiki
-+	install -d $(DESTDIR)$(PREFIX)/share/examples/ikiwiki
-+	install -m 0644 wikilist $(DESTDIR)$(PREFIX)/share/examples/ikiwiki
-+	install -m 0644 auto.setup $(DESTDIR)$(PREFIX)/share/examples/ikiwiki
- 
- 	install -d $(DESTDIR)$(PREFIX)/share/ikiwiki
- 	for dir in `cd underlays && find . -follow -type d ! -regex '.*\.svn.*'`; do \

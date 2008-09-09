@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2008/09/04 15:34:30 schmonz Exp $
+# $NetBSD: Makefile,v 1.19 2008/09/09 17:19:13 schmonz Exp $
 #
 
-DISTNAME=	ikiwiki_2.62.1
+DISTNAME=	ikiwiki_2.63
 PKGNAME=	${DISTNAME:S/_/-/}
 CATEGORIES=	www textproc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/i/ikiwiki/}
@@ -88,7 +88,7 @@ SUBST_FILES.makefile=	Makefile.PL
 SUBST_SED.makefile+=	-e 's,share/man/man,${PKGMANDIR}/man,g'
 
 PKG_SYSCONFSUBDIR=	${PKGBASE}
-EGDIR=			$(PREFIX)/share/examples/${PKGBASE}
+EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 CONF_FILES+=		${EGDIR}/auto.setup ${PKG_SYSCONFDIR}/auto.setup
 CONF_FILES+=		${EGDIR}/wikilist ${PKG_SYSCONFDIR}/wikilist
 
