@@ -1,0 +1,11 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/09 12:46:36 kefren Exp $
+
+SHA1 (ufoai-2.2.1-data.tar) = eb071333478bd6860179e12d8655301980f87d60
+RMD160 (ufoai-2.2.1-data.tar) = af91dd473f59c73e705181759059bd37ba215f62
+Size (ufoai-2.2.1-data.tar) = 390502400 bytes
+SHA1 (ufoai-2.2.1-mappack.tar.bz2) = c7e3bcccdbbb125659eb9d5423bf421f649e75a6
+RMD160 (ufoai-2.2.1-mappack.tar.bz2) = b8254b2497e7d830c4b839ce37884d86ee4a738d
+Size (ufoai-2.2.1-mappack.tar.bz2) = 72880186 bytes
+SHA1 (ufoai-2.2.1-source.tar.bz2) = 6ad1b8c357fdbbe9a31839b3bf8de46ad17a40eb
+RMD160 (ufoai-2.2.1-source.tar.bz2) = 980405a5d38bcbb5ae2cea4e25c54374c7dd8e99
+Size (ufoai-2.2.1-source.tar.bz2) = 7640531 bytes
