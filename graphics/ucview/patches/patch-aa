@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/09 11:52:36 jmcneill Exp $
+
+--- configure.orig	2008-09-08 23:54:36.000000000 -0400
++++ configure	2008-09-08 23:54:42.000000000 -0400
+@@ -21007,7 +21007,7 @@
+ 
+ 
+ 
+-if test x$ENABLE_DBUS == "xyes" ; then
++if test x$ENABLE_DBUS = "xyes" ; then
+   HAVE_DBUS_TRUE=
+   HAVE_DBUS_FALSE='#'
+ else
