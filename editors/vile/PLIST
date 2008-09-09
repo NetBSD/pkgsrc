@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/01/05 14:58:42 agc Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/09/09 10:14:30 bjs Exp $
 bin/vile
 bin/vile-pager
 bin/vileget
@@ -47,11 +47,9 @@ libexec/vile/vile-nr-filt
 libexec/vile/vile-pas-filt
 libexec/vile/vile-perl-filt
 libexec/vile/vile-php-filt
-libexec/vile/vile-pl-filt
 libexec/vile/vile-pot-filt
 libexec/vile/vile-ps-filt
 libexec/vile/vile-py-filt
-libexec/vile/vile-rb-filt
 libexec/vile/vile-rc-filt
 libexec/vile/vile-rcs-filt
 libexec/vile/vile-rexx-filt
@@ -182,6 +180,7 @@ share/vile/rexx.keywords
 share/vile/rpm.keywords
 share/vile/rtf.keywords
 share/vile/sccs.keywords
+share/vile/scheme.keywords
 share/vile/search.rc
 share/vile/sh.keywords
 share/vile/shifts.rc
@@ -210,9 +209,9 @@ share/vile/xml.keywords
 share/vile/xres.keywords
 share/vile/xs.keywords
 share/vile/yacc.keywords
-@dirrm share/vile/doc
 @dirrm share/vile/perl/Vile
 @dirrm share/vile/perl
+@dirrm share/vile/doc
 @dirrm share/vile
 @dirrm share/examples/vile
 @dirrm libexec/vile
