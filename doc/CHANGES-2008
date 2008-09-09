@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2183 2008/09/09 12:49:32 kefren Exp $
+$NetBSD: CHANGES-2008,v 1.2184 2008/09/09 14:01:46 dsainty Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3680,3 +3680,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added graphics/unicap version 0.9.1 [jmcneill 2008-09-09]
 	Added graphics/ucview version 0.21 [jmcneill 2008-09-09]
 	Added games/ufoai version version 2.2.1 [kefren 2008-09-09]
+	Updated x11/xtrans to 1.2.1nb1 [dsainty 2008-09-09]
