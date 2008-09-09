@@ -1,4 +1,4 @@
-<!-- $NetBSD: build.xml,v 1.55 2008/07/27 19:27:37 joerg Exp $ -->
+<!-- $NetBSD: build.xml,v 1.56 2008/09/09 00:59:51 obache Exp $ -->
 
 <chapter id="build">
   <title>The build process</title>
@@ -213,7 +213,7 @@ GTKDIR_DEFAULT= ${LOCALBASE}
 
     <para>The <varname>CREATE_WRKDIR_SYMLINK</varname> definition takes either
     the value <emphasis>yes</emphasis> or <emphasis>no</emphasis> and defaults
-    to <emphasis>yes</emphasis>. It indicates whether a symbolic link to the
+    to <emphasis>no</emphasis>. It indicates whether a symbolic link to the
     <varname>WRKDIR</varname> is to be created in the pkgsrc entry's directory.
     If users would like to have their pkgsrc trees behave in a
     read-only manner, then the value of
