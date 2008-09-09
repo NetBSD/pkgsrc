@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2182 2008/09/09 11:54:00 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.2183 2008/09/09 12:49:32 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3679,3 +3679,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated editors/xvile to 9.7 [bjs 2008-09-09]
 	Added graphics/unicap version 0.9.1 [jmcneill 2008-09-09]
 	Added graphics/ucview version 0.21 [jmcneill 2008-09-09]
+	Added games/ufoai version version 2.2.1 [kefren 2008-09-09]
