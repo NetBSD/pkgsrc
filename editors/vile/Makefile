@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.52 2008/02/21 21:40:44 jlam Exp $
+# $NetBSD: Makefile,v 1.53 2008/09/09 10:14:30 bjs Exp $
 
-DISTNAME=		vile-9.6
-PKGREVISION=		1
+DISTNAME=		vile-9.7
 CATEGORIES=		editors
 MASTER_SITES=		ftp://invisible-island.net/vile/ \
 			ftp://ftp.phred.org/pub/vile/

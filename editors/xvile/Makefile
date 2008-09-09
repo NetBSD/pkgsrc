@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.56 2008/01/05 14:59:47 agc Exp $
+# $NetBSD: Makefile,v 1.57 2008/09/09 10:14:30 bjs Exp $
 
-DISTNAME=		vile-9.6
+DISTNAME=		vile-9.7
 PKGNAME=		x${DISTNAME}
 CATEGORIES=		editors
 MASTER_SITES=		ftp://invisible-island.net/vile/ \
@@ -10,6 +10,8 @@ EXTRACT_SUFX=		.tgz
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://invisible-island.net/vile/
 COMMENT=		VI Like Emacs, X11 version -- a fully "X aware" vi work-alike
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 DISTINFO_FILE=		${.CURDIR}/../../editors/vile/distinfo
 PATCHDIR=		${.CURDIR}/../../editors/vile/patches
@@ -41,15 +43,17 @@ CONFIGURE_ARGS+=	--with-screen=Xaw
 CONFIGURE_ARGS+=	--with-xpm
 
 post-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/perl/vileget ${PREFIX}/bin/xvileget
-	${INSTALL_DATA_DIR} ${EGDIR}
-	set -e;							\
-	for f in filters/spell.rc filters/filters.rc		\
-		macros/digraphs.rc macros/pictmode.rc		\
-		macros/manpage.rc visvile/visvile.rc; do	\
-		${INSTALL_DATA} ${WRKSRC}/$$f ${EGDIR};		\
+	${INSTALL_SCRIPT} ${WRKSRC}/perl/vileget 			\
+		${DESTDIR}${PREFIX}/bin/xvileget
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	set -e;								\
+	for f in filters/spell.rc filters/filters.rc			\
+		macros/digraphs.rc macros/pictmode.rc			\
+		macros/manpage.rc visvile/visvile.rc; do		\
+		${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${EGDIR};	\
 	done
 
+.include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"

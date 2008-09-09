@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/01/05 14:59:47 agc Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/09/09 10:14:30 bjs Exp $
 bin/xshell.sh
 bin/xvile
 bin/xvile-pager
@@ -48,11 +48,9 @@ libexec/xvile/vile-nr-filt
 libexec/xvile/vile-pas-filt
 libexec/xvile/vile-perl-filt
 libexec/xvile/vile-php-filt
-libexec/xvile/vile-pl-filt
 libexec/xvile/vile-pot-filt
 libexec/xvile/vile-ps-filt
 libexec/xvile/vile-py-filt
-libexec/xvile/vile-rb-filt
 libexec/xvile/vile-rc-filt
 libexec/xvile/vile-rcs-filt
 libexec/xvile/vile-rexx-filt
@@ -183,6 +181,7 @@ share/xvile/rexx.keywords
 share/xvile/rpm.keywords
 share/xvile/rtf.keywords
 share/xvile/sccs.keywords
+share/xvile/scheme.keywords
 share/xvile/search.rc
 share/xvile/sh.keywords
 share/xvile/shifts.rc
