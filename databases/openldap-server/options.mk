@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2007/08/28 14:33:27 tron Exp $
+# $NetBSD: options.mk,v 1.6 2008/09/09 22:25:02 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap-server
 PKG_SUPPORTED_OPTIONS=	bdb kerberos sasl slp inet6 smbk5pwd
@@ -16,8 +16,14 @@ PKG_SUGGESTED_OPTIONS=	bdb
 ###
 
 .if !empty(PKG_OPTIONS:Mbdb)
+.  if !empty(MACHINE_PLATFORM:MNetBSD-[0-4].*-*) && \
+      empty(MACHINE_PLATFORM:MNetBSD-4.99.*-*)
+.    include "../../databases/db46/buildlink3.mk"
+BDB_TYPE=	db46
+.  else
 BDB_ACCEPTED=		db4 # db3?
-.  include "../../mk/bdb.buildlink3.mk"
+.    include "../../mk/bdb.buildlink3.mk"
+.  endif
 .endif
 BDB_TYPE?=		none
 .if ${BDB_TYPE} != "none"
