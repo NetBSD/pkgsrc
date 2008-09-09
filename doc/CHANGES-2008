@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2180 2008/09/09 00:35:35 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2181 2008/09/09 10:15:13 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3675,3 +3675,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Test-WWW-Selenium version 1.15 [seb 2008-09-09]
 	Updated devel/p5-subversion to 1.5.2nb2 [seb 2008-09-09]
 	Added devel/p5-Test-MockModule version 0.05 [seb 2008-09-09]
+	Updated editors/vile to 9.7 [bjs 2008-09-09]
+	Updated editors/xvile to 9.7 [bjs 2008-09-09]
