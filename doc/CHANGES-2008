@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2185 2008/09/09 14:35:25 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2186 2008/09/09 17:19:26 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3682,3 +3682,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added games/ufoai version version 2.2.1 [kefren 2008-09-09]
 	Updated x11/xtrans to 1.2.1nb1 [dsainty 2008-09-09]
 	Updated www/geeklog to 1.4.1nb3 [taca 2008-09-09]
+	Updated www/ikiwiki to 2.63 [schmonz 2008-09-09]
