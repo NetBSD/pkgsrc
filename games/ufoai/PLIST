@@ -1,0 +1,555 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/09 12:46:36 kefren Exp $
+bin/ufo
+bin/ufoded
+share/ufoai/base/game.so
+share/ufoai/base/i18n/cs/LC_MESSAGES/ufoai.mo
+share/ufoai/base/i18n/da/LC_MESSAGES/ufoai.mo
+share/ufoai/base/i18n/de/LC_MESSAGES/ufoai.mo
+share/ufoai/base/i18n/el/LC_MESSAGES/ufoai.mo
+share/ufoai/base/i18n/en/LC_MESSAGES/ufoai.mo
+share/ufoai/base/i18n/es/LC_MESSAGES/ufoai.mo
+share/ufoai/base/i18n/es_ES/LC_MESSAGES/ufoai.mo
+share/ufoai/base/i18n/est/LC_MESSAGES/ufoai.mo
+share/ufoai/base/i18n/fi/LC_MESSAGES/ufoai.mo
+share/ufoai/base/i18n/fr/LC_MESSAGES/ufoai.mo
+share/ufoai/base/i18n/it/LC_MESSAGES/ufoai.mo
+share/ufoai/base/i18n/ja/LC_MESSAGES/ufoai.mo
+share/ufoai/base/i18n/pl/LC_MESSAGES/ufoai.mo
+share/ufoai/base/i18n/pt_BR/LC_MESSAGES/ufoai.mo
+share/ufoai/base/i18n/ru/LC_MESSAGES/ufoai.mo
+share/ufoai/base/i18n/slo/LC_MESSAGES/ufoai.mo
+share/ufoai/base/i18n/sv/LC_MESSAGES/ufoai.mo
+share/ufoai/base/i18n/th/LC_MESSAGES/ufoai.mo
+share/ufoai/base/0base.pk3
+share/ufoai/base/0maps.pk3
+share/ufoai/base/0media.pk3
+share/ufoai/base/0models.pk3
+share/ufoai/base/0music.pk3
+share/ufoai/base/0pics.pk3
+share/ufoai/base/0snd.pk3
+share/ufoai/base/0ufos.pk3
+share/ufoai/ufo
+share/ufoai/ufo2map
+share/ufoai/ufoded
+share/ufoai/base/maps/italy05d.bsp
+share/ufoai/base/maps/mine_crash05n.bsp
+share/ufoai/base/maps/iced.ump
+share/ufoai/base/maps/japan06n.bsp
+share/ufoai/base/maps/farm08n.bsp
+share/ufoai/base/maps/pdi08n.bsp
+share/ufoai/base/maps/lake03n.bsp
+share/ufoai/base/maps/bridge01n.bsp
+share/ufoai/base/maps/lake02d.bsp
+share/ufoai/base/maps/terrain08d.bsp
+share/ufoai/base/maps/condor_crash04d.bsp
+share/ufoai/base/maps/excavation06n.bsp
+share/ufoai/base/maps/industrial06n.bsp
+share/ufoai/base/maps/corrupt_city04d.bsp
+share/ufoai/base/maps/check_map.pl
+share/ufoai/base/maps/const05d.bsp
+share/ufoai/base/maps/mine01d.bsp
+share/ufoai/base/maps/oriental05n.bsp
+share/ufoai/base/maps/countryd/c_c02.bsp
+share/ufoai/base/maps/countryd/c_re02.bsp
+share/ufoai/base/maps/countryd/c_r04_2.bsp
+share/ufoai/base/maps/countryd/c_re01.bsp
+share/ufoai/base/maps/countryd/c_r02.bsp
+share/ufoai/base/maps/countryd/c_r04.bsp
+share/ufoai/base/maps/countryd/c_s06_2.bsp
+share/ufoai/base/maps/countryd/c_r05_2.bsp
+share/ufoai/base/maps/countryd/c_re01_2.bsp
+share/ufoai/base/maps/countryd/c_r05.bsp
+share/ufoai/base/maps/countryd/c_d01.bsp
+share/ufoai/base/maps/countryd/c_s01_2.bsp
+share/ufoai/base/maps/countryd/c_ufo_harvester.bsp
+share/ufoai/base/maps/countryd/c_s02_2.bsp
+share/ufoai/base/maps/countryd/c_s05_2.bsp
+share/ufoai/base/maps/countryd/c_h01.bsp
+share/ufoai/base/maps/countryd/c_s04_2.bsp
+share/ufoai/base/maps/countryd/c_r01_2.bsp
+share/ufoai/base/maps/countryd/c_h02.bsp
+share/ufoai/base/maps/countryd/c_re04.bsp
+share/ufoai/base/maps/countryd/c_v01_2.bsp
+share/ufoai/base/maps/countryd/c_re02_2.bsp
+share/ufoai/base/maps/countryd/c_v01.bsp
+share/ufoai/base/maps/countryd/c_s02.bsp
+share/ufoai/base/maps/countryd/c_d10.bsp
+share/ufoai/base/maps/countryd/c_c01.bsp
+share/ufoai/base/maps/countryd/c_d05.bsp
+share/ufoai/base/maps/countryd/c_re03_2.bsp
+share/ufoai/base/maps/countryd/c_s03.bsp
+share/ufoai/base/maps/countryd/c_d08.bsp
+share/ufoai/base/maps/countryd/c_d09.bsp
+share/ufoai/base/maps/countryd/c_h03.bsp
+share/ufoai/base/maps/countryd/c_re04_2.bsp
+share/ufoai/base/maps/countryd/c_d07.bsp
+share/ufoai/base/maps/countryd/c_d06.bsp
+share/ufoai/base/maps/countryd/c_s03_2.bsp
+share/ufoai/base/maps/countryd/c_drop_firebird.bsp
+share/ufoai/base/maps/countryd/c_r01.bsp
+share/ufoai/base/maps/countryd/c_h06.bsp
+share/ufoai/base/maps/countryd/c_ufo_fighter.bsp
+share/ufoai/base/maps/countryd/c_s04.bsp
+share/ufoai/base/maps/countryd/c_r02_2.bsp
+share/ufoai/base/maps/countryd/c_h05.bsp
+share/ufoai/base/maps/countryd/c_d03.bsp
+share/ufoai/base/maps/countryd/c_d04.bsp
+share/ufoai/base/maps/countryd/c_s01.bsp
+share/ufoai/base/maps/countryd/c_d02.bsp
+share/ufoai/base/maps/countryd/c_h04.bsp
+share/ufoai/base/maps/countryd/c_re03.bsp
+share/ufoai/base/maps/countryd/c_r03.bsp
+share/ufoai/base/maps/countryd/c_s07.bsp
+share/ufoai/base/maps/countryd/c_r03_2.bsp
+share/ufoai/base/maps/countryd/c_s06.bsp
+share/ufoai/base/maps/countryd/c_s05.bsp
+share/ufoai/base/maps/orientaln.ump
+share/ufoai/base/maps/shelterd.ump
+share/ufoai/base/maps/terrain02d.bsp
+share/ufoai/base/maps/estate01n.bsp
+share/ufoai/base/maps/harvestercrash04d.bsp
+share/ufoai/base/maps/terrain08n.bsp
+share/ufoai/base/maps/harbor07d.bsp
+share/ufoai/base/maps/transport06n.bsp
+share/ufoai/base/maps/ufocrashd.ump
+share/ufoai/base/maps/office06n.bsp
+share/ufoai/base/maps/iced/ice_r03.bsp
+share/ufoai/base/maps/iced/ice_r01.bsp
+share/ufoai/base/maps/iced/ice_r02.bsp
+share/ufoai/base/maps/iced/ice_drop.bsp
+share/ufoai/base/maps/iced/ice_r04.bsp
+share/ufoai/base/maps/tower06d.bsp
+share/ufoai/base/maps/convoy01d.bsp
+share/ufoai/base/maps/tropicd.ump
+share/ufoai/base/maps/pdi08d.bsp
+share/ufoai/base/maps/lake03d.bsp
+share/ufoai/base/maps/orientald/or_h11.bsp
+share/ufoai/base/maps/orientald/or_h08.bsp
+share/ufoai/base/maps/orientald/or_h04.bsp
+share/ufoai/base/maps/orientald/or_h05.bsp
+share/ufoai/base/maps/orientald/or_h09.bsp
+share/ufoai/base/maps/orientald/or_h12.bsp
+share/ufoai/base/maps/orientald/or_h14.bsp
+share/ufoai/base/maps/orientald/or_h01.bsp
+share/ufoai/base/maps/orientald/or_h13.bsp
+share/ufoai/base/maps/orientald/or_h03.bsp
+share/ufoai/base/maps/orientald/or_h10.bsp
+share/ufoai/base/maps/orientald/or_h15.bsp
+share/ufoai/base/maps/orientald/or_drop.bsp
+share/ufoai/base/maps/orientald/or_h07.bsp
+share/ufoai/base/maps/orientald/or_h06.bsp
+share/ufoai/base/maps/orientald/or_h02.bsp
+share/ufoai/base/maps/orientald.ump
+share/ufoai/base/maps/corrupt_city04n.bsp
+share/ufoai/base/maps/condor04.bsp
+share/ufoai/base/maps/harvester05.bsp
+share/ufoai/base/maps/harvestercrash04n.bsp
+share/ufoai/base/maps/corrupt04.bsp
+share/ufoai/base/maps/terrain02n.bsp
+share/ufoai/base/maps/harbor07n.bsp
+share/ufoai/base/maps/spedition06n.bsp
+share/ufoai/base/maps/africa04d.bsp
+share/ufoai/base/maps/druglord07d.bsp
+share/ufoai/base/maps/orientaln/or_h11.bsp
+share/ufoai/base/maps/orientaln/or_h08.bsp
+share/ufoai/base/maps/orientaln/or_h04.bsp
+share/ufoai/base/maps/orientaln/or_h05.bsp
+share/ufoai/base/maps/orientaln/or_h09.bsp
+share/ufoai/base/maps/orientaln/or_h12.bsp
+share/ufoai/base/maps/orientaln/or_h14.bsp
+share/ufoai/base/maps/orientaln/or_h01.bsp
+share/ufoai/base/maps/orientaln/or_h13.bsp
+share/ufoai/base/maps/orientaln/or_h03.bsp
+share/ufoai/base/maps/orientaln/or_h10.bsp
+share/ufoai/base/maps/orientaln/or_h15.bsp
+share/ufoai/base/maps/orientaln/or_drop.bsp
+share/ufoai/base/maps/orientaln/or_h07.bsp
+share/ufoai/base/maps/orientaln/or_h06.bsp
+share/ufoai/base/maps/orientaln/or_h02.bsp
+share/ufoai/base/maps/const05n.bsp
+share/ufoai/base/maps/city04d.bsp
+share/ufoai/base/maps/village07n.bsp
+share/ufoai/base/maps/tropicn.ump
+share/ufoai/base/maps/sheltern/shelter_hallnorth_b.bsp
+share/ufoai/base/maps/sheltern/shelter_corridor_nw.bsp
+share/ufoai/base/maps/sheltern/shelter_entrance.bsp
+share/ufoai/base/maps/sheltern/shelter_hallsouth_b.bsp
+share/ufoai/base/maps/sheltern/shelter_corridor_ne.bsp
+share/ufoai/base/maps/sheltern/shelter_room_e_b.bsp
+share/ufoai/base/maps/sheltern/shelter_room_n_b.bsp
+share/ufoai/base/maps/sheltern/shelter_room_n_a.bsp
+share/ufoai/base/maps/sheltern/shelter_hallsouth_a.bsp
+share/ufoai/base/maps/sheltern/shelter_room_e_a.bsp
+share/ufoai/base/maps/sheltern/shelter_room_w_b.bsp
+share/ufoai/base/maps/sheltern/shelter_solid.bsp
+share/ufoai/base/maps/sheltern/shelter_room_w_a.bsp
+share/ufoai/base/maps/sheltern/shelter_hallnorth_a.bsp
+share/ufoai/base/maps/sheltern.ump
+share/ufoai/base/maps/villagen/vil_d02.bsp
+share/ufoai/base/maps/villagen/vil_drop.bsp
+share/ufoai/base/maps/villagen/vil_r02.bsp
+share/ufoai/base/maps/villagen/vil_h01.bsp
+share/ufoai/base/maps/villagen/vil_s01.bsp
+share/ufoai/base/maps/villagen/vil_d06.bsp
+share/ufoai/base/maps/villagen/vil_s05.bsp
+share/ufoai/base/maps/villagen/vil_r03.bsp
+share/ufoai/base/maps/villagen/vil_s10.bsp
+share/ufoai/base/maps/villagen/vil_s09.bsp
+share/ufoai/base/maps/villagen/vil_s04.bsp
+share/ufoai/base/maps/villagen/vil_d05.bsp
+share/ufoai/base/maps/villagen/vil_s06.bsp
+share/ufoai/base/maps/villagen/vil_d07.bsp
+share/ufoai/base/maps/villagen/vil_s07.bsp
+share/ufoai/base/maps/villagen/vil_s14.bsp
+share/ufoai/base/maps/villagen/vil_s02.bsp
+share/ufoai/base/maps/villagen/vil_h02.bsp
+share/ufoai/base/maps/villagen/vil_s12.bsp
+share/ufoai/base/maps/villagen/vil_d01.bsp
+share/ufoai/base/maps/villagen/vil_s13.bsp
+share/ufoai/base/maps/villagen/vil_s11.bsp
+share/ufoai/base/maps/villagen/vil_c02.bsp
+share/ufoai/base/maps/villagen/vil_d04.bsp
+share/ufoai/base/maps/villagen/vil_h04.bsp
+share/ufoai/base/maps/villagen/vil_c04.bsp
+share/ufoai/base/maps/villagen/vil_s08.bsp
+share/ufoai/base/maps/villagen/vil_c03.bsp
+share/ufoai/base/maps/villagen/vil_d03.bsp
+share/ufoai/base/maps/villagen/vil_c01.bsp
+share/ufoai/base/maps/villagen/vil_s03.bsp
+share/ufoai/base/maps/villagen/vil_s15.bsp
+share/ufoai/base/maps/villagen/vil_r01.bsp
+share/ufoai/base/maps/villagen/vil_h03.bsp
+share/ufoai/base/maps/tower06n.bsp
+share/ufoai/base/maps/industrial06d.bsp
+share/ufoai/base/maps/druglord07n.bsp
+share/ufoai/base/maps/dam01d.bsp
+share/ufoai/base/maps/icen/ice_r03.bsp
+share/ufoai/base/maps/icen/ice_r01.bsp
+share/ufoai/base/maps/icen/ice_r02.bsp
+share/ufoai/base/maps/icen/ice_drop.bsp
+share/ufoai/base/maps/icen/ice_r04.bsp
+share/ufoai/base/maps/icen.ump
+share/ufoai/base/maps/gasstation05n.bsp
+share/ufoai/base/maps/bridge01d.bsp
+share/ufoai/base/maps/stadium06d.bsp
+share/ufoai/base/maps/villagen.ump
+share/ufoai/base/maps/frozenn.ump
+share/ufoai/base/maps/ufocrashn.ump
+share/ufoai/base/maps/subway07n.bsp
+share/ufoai/base/maps/excavation06d.bsp
+share/ufoai/base/maps/rivertown01n.bsp
+share/ufoai/base/maps/tropicd/tr_h02.bsp
+share/ufoai/base/maps/tropicd/tr_h04.bsp
+share/ufoai/base/maps/tropicd/tr_h01.bsp
+share/ufoai/base/maps/tropicd/tr_r03.bsp
+share/ufoai/base/maps/tropicd/tr_h03.bsp
+share/ufoai/base/maps/tropicd/tr_p02.bsp
+share/ufoai/base/maps/tropicd/tr_r01.bsp
+share/ufoai/base/maps/tropicd/tr_r02.bsp
+share/ufoai/base/maps/tropicd/tr_f04.bsp
+share/ufoai/base/maps/tropicd/tr_f02.bsp
+share/ufoai/base/maps/tropicd/tr_f03.bsp
+share/ufoai/base/maps/tropicd/tr_p01.bsp
+share/ufoai/base/maps/tropicd/tr_drop.bsp
+share/ufoai/base/maps/tropicd/tr_f01.bsp
+share/ufoai/base/maps/tropicd/tr_r05.bsp
+share/ufoai/base/maps/tropicd/tr_f06.bsp
+share/ufoai/base/maps/tropicd/tr_f05.bsp
+share/ufoai/base/maps/tropicd/tr_r04.bsp
+share/ufoai/base/maps/tropicd/tr_f07.bsp
+share/ufoai/base/maps/pipes_const01d.bsp
+share/ufoai/base/maps/frozend/st_i04.bsp
+share/ufoai/base/maps/frozend/st_i06.bsp
+share/ufoai/base/maps/frozend/st_h03.bsp
+share/ufoai/base/maps/frozend/st_i03.bsp
+share/ufoai/base/maps/frozend/st_i01.bsp
+share/ufoai/base/maps/frozend/st_n01.bsp
+share/ufoai/base/maps/frozend/st_h01.bsp
+share/ufoai/base/maps/frozend/st_n02.bsp
+share/ufoai/base/maps/frozend/st_ufofighter.bsp
+share/ufoai/base/maps/frozend/st_n05.bsp
+share/ufoai/base/maps/frozend/st_h02.bsp
+share/ufoai/base/maps/frozend/st_i07.bsp
+share/ufoai/base/maps/frozend/st_h04.bsp
+share/ufoai/base/maps/frozend/st_i02.bsp
+share/ufoai/base/maps/frozend/st_n04.bsp
+share/ufoai/base/maps/frozend/st_i05.bsp
+share/ufoai/base/maps/frozend/st_n03.bsp
+share/ufoai/base/maps/frozend/st_mp_t2.bsp
+share/ufoai/base/maps/frozend/st_drop.bsp
+share/ufoai/base/maps/frozend/st_h05.bsp
+share/ufoai/base/maps/shelterd/shelter_hallnorth_b.bsp
+share/ufoai/base/maps/shelterd/shelter_corridor_nw.bsp
+share/ufoai/base/maps/shelterd/shelter_entrance.bsp
+share/ufoai/base/maps/shelterd/shelter_hallsouth_b.bsp
+share/ufoai/base/maps/shelterd/shelter_corridor_ne.bsp
+share/ufoai/base/maps/shelterd/shelter_room_e_b.bsp
+share/ufoai/base/maps/shelterd/shelter_room_n_b.bsp
+share/ufoai/base/maps/shelterd/shelter_room_n_a.bsp
+share/ufoai/base/maps/shelterd/shelter_hallsouth_a.bsp
+share/ufoai/base/maps/shelterd/shelter_room_e_a.bsp
+share/ufoai/base/maps/shelterd/shelter_room_w_b.bsp
+share/ufoai/base/maps/shelterd/shelter_solid.bsp
+share/ufoai/base/maps/shelterd/shelter_room_w_a.bsp
+share/ufoai/base/maps/shelterd/shelter_hallnorth_a.bsp
+share/ufoai/base/maps/countryn.ump
+share/ufoai/base/maps/countryd.ump
+share/ufoai/base/maps/farm08d.bsp
+share/ufoai/base/maps/mine_crash05d.bsp
+share/ufoai/base/maps/compile.py
+share/ufoai/base/maps/stadium06n.bsp
+share/ufoai/base/maps/village07d.bsp
+share/ufoai/base/maps/villaged/vil_d02.bsp
+share/ufoai/base/maps/villaged/vil_drop.bsp
+share/ufoai/base/maps/villaged/vil_r02.bsp
+share/ufoai/base/maps/villaged/vil_h01.bsp
+share/ufoai/base/maps/villaged/vil_s01.bsp
+share/ufoai/base/maps/villaged/vil_d06.bsp
+share/ufoai/base/maps/villaged/vil_s05.bsp
+share/ufoai/base/maps/villaged/vil_r03.bsp
+share/ufoai/base/maps/villaged/vil_s10.bsp
+share/ufoai/base/maps/villaged/vil_s09.bsp
+share/ufoai/base/maps/villaged/vil_s04.bsp
+share/ufoai/base/maps/villaged/vil_d05.bsp
+share/ufoai/base/maps/villaged/vil_s06.bsp
+share/ufoai/base/maps/villaged/vil_d07.bsp
+share/ufoai/base/maps/villaged/vil_s07.bsp
+share/ufoai/base/maps/villaged/vil_s14.bsp
+share/ufoai/base/maps/villaged/vil_s02.bsp
+share/ufoai/base/maps/villaged/vil_h02.bsp
+share/ufoai/base/maps/villaged/vil_s12.bsp
+share/ufoai/base/maps/villaged/vil_d01.bsp
+share/ufoai/base/maps/villaged/vil_s13.bsp
+share/ufoai/base/maps/villaged/vil_s11.bsp
+share/ufoai/base/maps/villaged/vil_c02.bsp
+share/ufoai/base/maps/villaged/vil_d04.bsp
+share/ufoai/base/maps/villaged/vil_h04.bsp
+share/ufoai/base/maps/villaged/vil_c04.bsp
+share/ufoai/base/maps/villaged/vil_s08.bsp
+share/ufoai/base/maps/villaged/vil_c03.bsp
+share/ufoai/base/maps/villaged/vil_d03.bsp
+share/ufoai/base/maps/villaged/vil_c01.bsp
+share/ufoai/base/maps/villaged/vil_s03.bsp
+share/ufoai/base/maps/villaged/vil_s15.bsp
+share/ufoai/base/maps/villaged/vil_r01.bsp
+share/ufoai/base/maps/villaged/vil_h03.bsp
+share/ufoai/base/maps/spedition06d.bsp
+share/ufoai/base/maps/frozenn/st_i04.bsp
+share/ufoai/base/maps/frozenn/st_i06.bsp
+share/ufoai/base/maps/frozenn/st_h03.bsp
+share/ufoai/base/maps/frozenn/st_i03.bsp
+share/ufoai/base/maps/frozenn/st_i01.bsp
+share/ufoai/base/maps/frozenn/st_n01.bsp
+share/ufoai/base/maps/frozenn/st_h01.bsp
+share/ufoai/base/maps/frozenn/st_n02.bsp
+share/ufoai/base/maps/frozenn/st_ufofighter.bsp
+share/ufoai/base/maps/frozenn/st_n05.bsp
+share/ufoai/base/maps/frozenn/st_h02.bsp
+share/ufoai/base/maps/frozenn/st_i07.bsp
+share/ufoai/base/maps/frozenn/st_h04.bsp
+share/ufoai/base/maps/frozenn/st_i02.bsp
+share/ufoai/base/maps/frozenn/st_n04.bsp
+share/ufoai/base/maps/frozenn/st_i05.bsp
+share/ufoai/base/maps/frozenn/st_n03.bsp
+share/ufoai/base/maps/frozenn/st_mp_t2.bsp
+share/ufoai/base/maps/frozenn/st_drop.bsp
+share/ufoai/base/maps/frozenn/st_h05.bsp
+share/ufoai/base/maps/estate01d.bsp
+share/ufoai/base/maps/gasstation05d.bsp
+share/ufoai/base/maps/convoy01n.bsp
+share/ufoai/base/maps/rivertown01d.bsp
+share/ufoai/base/maps/transport06d.bsp
+share/ufoai/base/maps/city04n.bsp
+share/ufoai/base/maps/mart05d.bsp
+share/ufoai/base/maps/b/ufohangar.bsp
+share/ufoai/base/maps/b/entrance.bsp
+share/ufoai/base/maps/b/storage.bsp
+share/ufoai/base/maps/b/powerplant.bsp
+share/ufoai/base/maps/b/drop.bsp
+share/ufoai/base/maps/b/drop_iso.bsp
+share/ufoai/base/maps/b/workshop.bsp
+share/ufoai/base/maps/b/aliencont.bsp
+share/ufoai/base/maps/b/radar.bsp
+share/ufoai/base/maps/b/commando.bsp
+share/ufoai/base/maps/b/teamroom.bsp
+share/ufoai/base/maps/b/ufohangar_l.bsp
+share/ufoai/base/maps/b/drop_b.bsp
+share/ufoai/base/maps/b/quarters.bsp
+share/ufoai/base/maps/b/ufohangar_b.bsp
+share/ufoai/base/maps/b/intercept.bsp
+share/ufoai/base/maps/b/hospital.bsp
+share/ufoai/base/maps/b/empty.bsp
+share/ufoai/base/maps/b/base_empty.bsp
+share/ufoai/base/maps/b/lab.bsp
+share/ufoai/base/maps/b/missile.bsp
+share/ufoai/base/maps/b/antimatter.bsp
+share/ufoai/base/maps/oriental06n.bsp
+share/ufoai/base/maps/check_ump.pl
+share/ufoai/base/maps/japan06d.bsp
+share/ufoai/base/maps/africa04n.bsp
+share/ufoai/base/maps/ucn/uc_ufo_scout.bsp
+share/ufoai/base/maps/ucn/uc_h06.bsp
+share/ufoai/base/maps/ucn/uc_h04.bsp
+share/ufoai/base/maps/ucn/uc_drop_firebird.bsp
+share/ufoai/base/maps/ucn/uc_h02.bsp
+share/ufoai/base/maps/ucn/uc_ufo_supply.bsp
+share/ufoai/base/maps/ucn/uc_ufo_harvester.bsp
+share/ufoai/base/maps/ucn/uc_h03.bsp
+share/ufoai/base/maps/ucn/uc_h05.bsp
+share/ufoai/base/maps/ucn/uc_h01.bsp
+share/ufoai/base/maps/ucn/uc_ufo_fighter.bsp
+share/ufoai/base/maps/office06d.bsp
+share/ufoai/base/maps/oriental05d.bsp
+share/ufoai/base/maps/mart05n.bsp
+share/ufoai/base/maps/subway07d.bsp
+share/ufoai/base/maps/villaged.ump
+share/ufoai/base/maps/bunker01d.bsp
+share/ufoai/base/maps/countryn/c_c02.bsp
+share/ufoai/base/maps/countryn/c_re02.bsp
+share/ufoai/base/maps/countryn/c_r04_2.bsp
+share/ufoai/base/maps/countryn/c_re01.bsp
+share/ufoai/base/maps/countryn/c_r02.bsp
+share/ufoai/base/maps/countryn/c_r04.bsp
+share/ufoai/base/maps/countryn/c_s06_2.bsp
+share/ufoai/base/maps/countryn/c_r05_2.bsp
+share/ufoai/base/maps/countryn/c_re01_2.bsp
+share/ufoai/base/maps/countryn/c_r05.bsp
+share/ufoai/base/maps/countryn/c_d01.bsp
+share/ufoai/base/maps/countryn/c_s01_2.bsp
+share/ufoai/base/maps/countryn/c_ufo_harvester.bsp
+share/ufoai/base/maps/countryn/c_s02_2.bsp
+share/ufoai/base/maps/countryn/c_s05_2.bsp
+share/ufoai/base/maps/countryn/c_h01.bsp
+share/ufoai/base/maps/countryn/c_s04_2.bsp
+share/ufoai/base/maps/countryn/c_r01_2.bsp
+share/ufoai/base/maps/countryn/c_h02.bsp
+share/ufoai/base/maps/countryn/c_re04.bsp
+share/ufoai/base/maps/countryn/c_v01_2.bsp
+share/ufoai/base/maps/countryn/c_re02_2.bsp
+share/ufoai/base/maps/countryn/c_v01.bsp
+share/ufoai/base/maps/countryn/c_s02.bsp
+share/ufoai/base/maps/countryn/c_d10.bsp
+share/ufoai/base/maps/countryn/c_c01.bsp
+share/ufoai/base/maps/countryn/c_d05.bsp
+share/ufoai/base/maps/countryn/c_re03_2.bsp
+share/ufoai/base/maps/countryn/c_s03.bsp
+share/ufoai/base/maps/countryn/c_d08.bsp
+share/ufoai/base/maps/countryn/c_d09.bsp
+share/ufoai/base/maps/countryn/c_h03.bsp
+share/ufoai/base/maps/countryn/c_re04_2.bsp
+share/ufoai/base/maps/countryn/c_d07.bsp
+share/ufoai/base/maps/countryn/c_d06.bsp
+share/ufoai/base/maps/countryn/c_s03_2.bsp
+share/ufoai/base/maps/countryn/c_drop_firebird.bsp
+share/ufoai/base/maps/countryn/c_r01.bsp
+share/ufoai/base/maps/countryn/c_h06.bsp
+share/ufoai/base/maps/countryn/c_ufo_fighter.bsp
+share/ufoai/base/maps/countryn/c_s04.bsp
+share/ufoai/base/maps/countryn/c_r02_2.bsp
+share/ufoai/base/maps/countryn/c_h05.bsp
+share/ufoai/base/maps/countryn/c_d03.bsp
+share/ufoai/base/maps/countryn/c_d04.bsp
+share/ufoai/base/maps/countryn/c_s01.bsp
+share/ufoai/base/maps/countryn/c_d02.bsp
+share/ufoai/base/maps/countryn/c_h04.bsp
+share/ufoai/base/maps/countryn/c_re03.bsp
+share/ufoai/base/maps/countryn/c_r03.bsp
+share/ufoai/base/maps/countryn/c_s07.bsp
+share/ufoai/base/maps/countryn/c_r03_2.bsp
+share/ufoai/base/maps/countryn/c_s06.bsp
+share/ufoai/base/maps/countryn/c_s05.bsp
+share/ufoai/base/maps/oriental06d.bsp
+share/ufoai/base/maps/lake02n.bsp
+share/ufoai/base/maps/dam01n.bsp
+share/ufoai/base/maps/italy05n.bsp
+share/ufoai/base/maps/compile.pl
+share/ufoai/base/maps/tropicn/tr_h02.bsp
+share/ufoai/base/maps/tropicn/tr_h04.bsp
+share/ufoai/base/maps/tropicn/tr_h01.bsp
+share/ufoai/base/maps/tropicn/tr_r03.bsp
+share/ufoai/base/maps/tropicn/tr_h03.bsp
+share/ufoai/base/maps/tropicn/tr_p02.bsp
+share/ufoai/base/maps/tropicn/tr_r01.bsp
+share/ufoai/base/maps/tropicn/tr_r02.bsp
+share/ufoai/base/maps/tropicn/tr_f04.bsp
+share/ufoai/base/maps/tropicn/tr_f02.bsp
+share/ufoai/base/maps/tropicn/tr_f03.bsp
+share/ufoai/base/maps/tropicn/tr_p01.bsp
+share/ufoai/base/maps/tropicn/tr_drop.bsp
+share/ufoai/base/maps/tropicn/tr_f01.bsp
+share/ufoai/base/maps/tropicn/tr_r05.bsp
+share/ufoai/base/maps/tropicn/tr_f06.bsp
+share/ufoai/base/maps/tropicn/tr_f05.bsp
+share/ufoai/base/maps/tropicn/tr_r04.bsp
+share/ufoai/base/maps/tropicn/tr_f07.bsp
+share/ufoai/base/maps/ucd/uc_ufo_scout.bsp
+share/ufoai/base/maps/ucd/uc_h06.bsp
+share/ufoai/base/maps/ucd/uc_h04.bsp
+share/ufoai/base/maps/ucd/uc_drop_firebird.bsp
+share/ufoai/base/maps/ucd/uc_h02.bsp
+share/ufoai/base/maps/ucd/uc_ufo_supply.bsp
+share/ufoai/base/maps/ucd/uc_ufo_harvester.bsp
+share/ufoai/base/maps/ucd/uc_h03.bsp
+share/ufoai/base/maps/ucd/uc_h05.bsp
+share/ufoai/base/maps/ucd/uc_h01.bsp
+share/ufoai/base/maps/ucd/uc_ufo_fighter.bsp
+share/ufoai/base/maps/bunker01n.bsp
+share/ufoai/base/maps/mine01n.bsp
+share/ufoai/base/maps/frozend.ump
+@dirrm share/ufoai/base/i18n/th/LC_MESSAGES
+@dirrm share/ufoai/base/i18n/sv/LC_MESSAGES
+@dirrm share/ufoai/base/i18n/slo/LC_MESSAGES
+@dirrm share/ufoai/base/i18n/ru/LC_MESSAGES
+@dirrm share/ufoai/base/i18n/pt_BR/LC_MESSAGES
+@dirrm share/ufoai/base/i18n/pl/LC_MESSAGES
+@dirrm share/ufoai/base/i18n/ja/LC_MESSAGES
+@dirrm share/ufoai/base/i18n/it/LC_MESSAGES
+@dirrm share/ufoai/base/i18n/fr/LC_MESSAGES
+@dirrm share/ufoai/base/i18n/fi/LC_MESSAGES
+@dirrm share/ufoai/base/i18n/est/LC_MESSAGES
+@dirrm share/ufoai/base/i18n/es_ES/LC_MESSAGES
+@dirrm share/ufoai/base/i18n/es/LC_MESSAGES
+@dirrm share/ufoai/base/i18n/en/LC_MESSAGES
+@dirrm share/ufoai/base/i18n/el/LC_MESSAGES
+@dirrm share/ufoai/base/i18n/de/LC_MESSAGES
+@dirrm share/ufoai/base/i18n/da/LC_MESSAGES
+@dirrm share/ufoai/base/i18n/cs/LC_MESSAGES
+@dirrm share/ufoai/base/i18n/th
+@dirrm share/ufoai/base/i18n/sv
+@dirrm share/ufoai/base/i18n/slo
+@dirrm share/ufoai/base/i18n/ru
+@dirrm share/ufoai/base/i18n/pt_BR
+@dirrm share/ufoai/base/i18n/pl
+@dirrm share/ufoai/base/i18n/ja
+@dirrm share/ufoai/base/i18n/it
+@dirrm share/ufoai/base/i18n/fr
+@dirrm share/ufoai/base/i18n/fi
+@dirrm share/ufoai/base/i18n/est
+@dirrm share/ufoai/base/i18n/es_ES
+@dirrm share/ufoai/base/i18n/es
+@dirrm share/ufoai/base/i18n/en
+@dirrm share/ufoai/base/i18n/el
+@dirrm share/ufoai/base/i18n/de
+@dirrm share/ufoai/base/i18n/da
+@dirrm share/ufoai/base/i18n/cs
+@dirrm share/ufoai/base/maps/countryd
+@dirrm share/ufoai/base/maps/iced
+@dirrm share/ufoai/base/maps/icen
+@dirrm share/ufoai/base/maps/orientald
+@dirrm share/ufoai/base/maps/orientaln
+@dirrm share/ufoai/base/maps/shelterd
+@dirrm share/ufoai/base/maps/sheltern
+@dirrm share/ufoai/base/maps/villagen
+@dirrm share/ufoai/base/maps/tropicd
+@dirrm share/ufoai/base/maps/frozend
+@dirrm share/ufoai/base/maps/villaged
+@dirrm share/ufoai/base/maps/frozenn
+@dirrm share/ufoai/base/maps/b
+@dirrm share/ufoai/base/maps/ucn
+@dirrm share/ufoai/base/maps/countryn
+@dirrm share/ufoai/base/maps/tropicn
+@dirrm share/ufoai/base/maps/ucd
+@dirrm share/ufoai/base/maps
+@dirrm share/ufoai/base/i18n
+@dirrm share/ufoai/base
+@dirrm share/ufoai
