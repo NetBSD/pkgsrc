@@ -1,0 +1,113 @@
+$NetBSD: patch-ap,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
+
+
+--- configure.orig	2008-09-08 23:50:50.000000000 -0400
++++ configure	2008-09-08 23:50:52.000000000 -0400
+@@ -23068,7 +23068,7 @@
+ fi
+ 
+ 
+-if test x$UCIL_AVCODEC == "xavcodec" ; then
++if test x$UCIL_AVCODEC = "xavcodec" ; then
+   HAVE_AVCODEC_TRUE=
+   HAVE_AVCODEC_FALSE='#'
+ else
+@@ -23190,7 +23190,7 @@
+ fi
+ 
+ 
+-if test x$UCIL_THEORA == "xogg/theora" ; then
++if test x$UCIL_THEORA = "xogg/theora" ; then
+   HAVE_THEORA_TRUE=
+   HAVE_THEORA_FALSE='#'
+ else
+@@ -23312,7 +23312,7 @@
+ fi
+ 
+ 
+-if test x$UCIL_ALSA == "xalsa" ; then
++if test x$UCIL_ALSA = "xalsa" ; then
+   HAVE_ALSA_TRUE=
+   HAVE_ALSA_FALSE='#'
+ else
+@@ -23434,7 +23434,7 @@
+ fi
+ 
+ 
+-if test x$UCIL_PNG == "xpng" ; then
++if test x$UCIL_PNG = "xpng" ; then
+   HAVE_PNG_TRUE=
+   HAVE_PNG_FALSE='#'
+ else
+@@ -25322,7 +25322,7 @@
+ echo "${ECHO_T}yes" >&6; }
+ 	HAVE_LIBRAW1394="yes";LIBRAW1394_VERSION="RAW1394_1_1_API"
+ fi
+-    if( test "$HAVE_LIBRAW1394" == "yes" ); then
++    if( test "$HAVE_LIBRAW1394" = "yes" ); then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define RAW1394_1_1_API 1
+@@ -25719,7 +25719,7 @@
+ 	fi
+ fi
+ 
+-if test "x$VID21394" == "xyes"; then
++if test "x$VID21394" = "xyes"; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define BUILD_VID21394 1
+@@ -25748,7 +25748,7 @@
+ 	fi
+ fi
+ 
+-if test "x$DCAM" == "xyes"; then
++if test "x$DCAM" = "xyes"; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define BUILD_DCAM 1
+@@ -25771,7 +25771,7 @@
+ fi
+ 
+ 
+-if test "x$V4L" == "xyes"; then
++if test "x$V4L" = "xyes"; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define BUILD_V4L 1
+@@ -25794,7 +25794,7 @@
+ fi
+ 
+ 
+-if test "x$V4L2" == "xyes"; then
++if test "x$V4L2" = "xyes"; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define BUILD_V4L2 1
+@@ -25820,7 +25820,7 @@
+ # Check whether --enable-static-cpi was given.
+ if test "${enable_static_cpi+set}" = set; then
+   enableval=$enable_static_cpi; {
+-	        if test "x$enableval" == "xyes"; then
++	        if test "x$enableval" = "xyes"; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define ENABLE_STATIC_CPI 1
+@@ -25848,7 +25848,7 @@
+ # Check whether --enable-thread-locking was given.
+ if test "${enable_thread_locking+set}" = set; then
+   enableval=$enable_thread_locking; {
+-	         if test "x$enableval" == "xyes"; then
++	         if test "x$enableval" = "xyes"; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define UNICAP_THREAD_LOCKING 1
+@@ -25868,7 +25868,7 @@
+ # Check whether --enable-unicap-threads was given.
+ if test "${enable_unicap_threads+set}" = set; then
+   enableval=$enable_unicap_threads; {
+-	         if test "x$enableval" == "xyes"; then
++	         if test "x$enableval" = "xyes"; then
+ 
+ cat >>confdefs.h <<\_ACEOF
+ #define UNICAP_THREADS 1

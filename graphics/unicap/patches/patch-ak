@@ -1,0 +1,18 @@
+$NetBSD: patch-ak,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
+
+
+--- cpi/v4l2/uvcvideo.h.orig	2008-09-08 23:16:20.000000000 -0400
++++ cpi/v4l2/uvcvideo.h	2008-09-08 23:16:37.000000000 -0400
+@@ -1,8 +1,12 @@
+ #ifndef _USB_VIDEO_H_
+ #define _USB_VIDEO_H_
+ 
++#ifdef __linux__
+ #include <linux/kernel.h>
+ #include <linux/videodev.h>
++#elif defined(__NetBSD__)
++#include <sys/videoio.h>
++#endif
+ 
+ #include "uvc_compat.h"
+ 

@@ -1,0 +1,23 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
+
+SHA1 (unicap-0.9.1.tar.gz) = d0e8265ab5dd924626f59ce421798081e92d833f
+RMD160 (unicap-0.9.1.tar.gz) = bfb5a8659fd4b76be86c8c31fd2de7615c7f235e
+Size (unicap-0.9.1.tar.gz) = 1320764 bytes
+SHA1 (patch-aa) = daafd02550b56a538b81669b5e792238e7d739a9
+SHA1 (patch-ab) = 7731b1dbd1f6dd8bf640e20bb70a2fbf231b3088
+SHA1 (patch-ac) = 30f65b1c48aade6d2515b54e55fbc89bfc252c2d
+SHA1 (patch-ad) = d7b60e7c54c6ac9e9160bae089fb2b44ffc61818
+SHA1 (patch-ae) = 83d0f86b305f732effa45e609c3e4b067796e331
+SHA1 (patch-af) = 13e400f7197dfdf69fa253a50618c3152566df8e
+SHA1 (patch-ag) = 5e5bd6fbbc0eb9263a2aa5eb2641bb16ee58a413
+SHA1 (patch-ah) = 554dfb541809d4c54fd155cd2fe263330b3f5b3d
+SHA1 (patch-ai) = ced51a4b5b98793375c8a024a076e56006d3dfc6
+SHA1 (patch-aj) = 1bbe0b055538adb99a4ec29ce3a53b95c17e4fe7
+SHA1 (patch-ak) = 1bfdf9e4b989ea847c1971956860128afd17cdb5
+SHA1 (patch-al) = 007aec2cb6c9b7fcaea70ba48a52a50d48d767c1
+SHA1 (patch-am) = b11ef1b3f8133e88142ea89361370d9791fa3a10
+SHA1 (patch-an) = 9cd622733b177b6cfc39f73a518686ecb7c39e54
+SHA1 (patch-ao) = d88378597bff3a535fdcb5d3bce5e4b7700800fd
+SHA1 (patch-ap) = 37678ec66287b172cefddbb11677753f2ca5abef
+SHA1 (patch-aq) = b3f2a2f63e18578567a343824cbdd0e9d4e955e9
+SHA1 (patch-ar) = 1ff2ae9191573022fe716053990aed0726c1318f

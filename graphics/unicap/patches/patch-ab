@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/09/09 11:50:18 jmcneill Exp $
+
+
+--- libucil/colorspace.h.orig	2008-09-08 23:02:38.000000000 -0400
++++ libucil/colorspace.h	2008-09-08 23:02:51.000000000 -0400
+@@ -21,7 +21,9 @@
+ #define __COLORSPACE_H__
+ 
+ #include <sys/types.h>
++#ifdef __linux__
+ #include <linux/types.h>
++#endif
+ 
+ #include "unicap.h"
+ 
