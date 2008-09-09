@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2178 2008/09/09 00:09:42 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2179 2008/09/09 00:14:53 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3673,3 +3673,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Class-MOP to 0.65 [seb 2008-09-08]
 	Updated devel/p5-Moose to 0.57 [seb 2008-09-08]
 	Added devel/p5-Test-WWW-Selenium version 1.15 [seb 2008-09-09]
+	Updated devel/p5-subversion to 1.5.2nb2 [seb 2008-09-09]
