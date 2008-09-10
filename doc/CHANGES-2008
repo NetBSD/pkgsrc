@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2198 2008/09/10 20:18:50 he Exp $
+$NetBSD: CHANGES-2008,v 1.2199 2008/09/10 20:30:41 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3705,3 +3705,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Parse-RecDescent to 1.95.1nb1 [he 2008-09-10]
 	Updated net/p5-X500-DN to 0.29 [he 2008-09-10]
 	Updated devel/p5-Object-Realize-Later to 0.18 [he 2008-09-10]
+	Updated devel/p5-Test-Harness to 3.13 [he 2008-09-10]
