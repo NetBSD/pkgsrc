@@ -1,0 +1,84 @@
+$NetBSD: patch-au,v 1.1 2008/09/10 13:32:48 taca Exp $
+
+--- image/rlelib.c.orig	2007-05-18 01:47:33.000000000 +0900
++++ image/rlelib.c
+@@ -428,6 +428,7 @@ register struct sv_globals * globals;
+  */
+ void
+ RunSkipBlankLines(nblank, globals)
++int nblank;
+ register struct sv_globals * globals;
+ {
+ }
+@@ -439,6 +440,7 @@ register struct sv_globals * globals;
+  */
+ void
+ RunSetColor(c, globals)
++int c;
+ register struct sv_globals * globals;
+ {
+ }
+@@ -451,6 +453,7 @@ register struct sv_globals * globals;
+ /* ARGSUSED */
+ void
+ RunSkipPixels(nskip, last, wasrun, globals)
++int nskip, last, wasrun;
+ register struct sv_globals * globals;
+ {
+ }
+@@ -462,6 +465,7 @@ register struct sv_globals * globals;
+  */
+ void
+ RunNewScanLine(flag, globals)
++int flag;
+ register struct sv_globals * globals;
+ {
+ }
+@@ -473,6 +477,7 @@ register struct sv_globals * globals;
+ void
+ Runputdata(buf, n, globals)
+ rle_pixel * buf;
++int n;
+ register struct sv_globals * globals;
+ {
+ }
+@@ -485,6 +490,7 @@ register struct sv_globals * globals;
+ /* ARGSUSED */
+ void
+ Runputrun(color, n, last, globals)
++int color, n, last;
+ register struct sv_globals * globals;
+ {
+ }
+@@ -1391,6 +1397,7 @@ int dith_size = 16;
+  */
+ void
+ dithermap(levels, gamma, rgbmap, divN, modN, magic)
++int levels;
+ double gamma;
+ int rgbmap[][3];
+ int divN[256];
+@@ -1451,6 +1458,7 @@ int magic[16][16];
+  */
+ void
+ bwdithermap(levels, gamma, bwmap, divN, modN, magic)
++int levels;
+ double gamma;
+ int bwmap[];
+ int divN[256];
+@@ -1677,6 +1685,7 @@ int gammamap[256];
+  */
+ int
+ dithergb(x, y, r, g, b, levels, divN, modN, magic)
++int x, y, r, g, b, levels;
+ int divN[256];
+ int modN[256];
+ int magic[16][16];
+@@ -1708,6 +1717,7 @@ int magic[16][16];
+  */
+ int
+ ditherbw(x, y, val, divN, modN, magic)
++int x, y, val;
+ int divN[256];
+ int modN[256];
+ int magic[16][16];

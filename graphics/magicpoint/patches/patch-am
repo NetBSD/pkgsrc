@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.1 2006/02/23 20:49:49 joerg Exp $
+$NetBSD: patch-am,v 1.2 2008/09/10 13:32:47 taca Exp $
 
---- image/path.c.orig	2006-02-23 20:30:55.000000000 +0000
+--- image/path.c.orig	2004-07-29 00:47:31.000000000 +0900
 +++ image/path.c
-@@ -24,8 +24,6 @@
+@@ -27,8 +27,6 @@
  /* SUPPRESS 530 */
  /* SUPPRESS 560 */
  
