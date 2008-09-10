@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7527 2008/09/10 09:35:01 obache Exp $
+$NetBSD: TODO,v 1.7528 2008/09/10 13:37:16 taca Exp $
 
 Suggested new packages
 ======================
@@ -875,7 +875,6 @@ Suggested package updates
 	o lzma-4.57
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
-	o magicpoint-1.13a [pkg/38552]
 	o mail-notification-5.3
 	o mailfront-1.11 [pkg/34765]
 	o mailgraph-1.14
@@ -1265,6 +1264,7 @@ Suggested package updates
 	o smtpfeed-1.20
 	o snd-10.0
 	o snes9x-1.51
+	o snort-2.8.3
 	o snownews-1.5.10
 	o socat-1.6.0.1
 	o solfege-3.10.4 [schmonz]
