@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.57 2008/07/08 21:14:18 adrianp Exp $
+# $NetBSD: Makefile,v 1.58 2008/09/10 18:47:29 adrianp Exp $
 
-DISTNAME=	horde-3.2.1
-PKGREVISION=	1
+DISTNAME=	horde-3.2.2
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.horde.org/pub/horde/ \
 		ftp://ftp.horde.org/pub/horde/
