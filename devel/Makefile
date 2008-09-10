@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1011 2008/09/09 00:34:16 seb Exp $
+# $NetBSD: Makefile,v 1.1012 2008/09/10 11:04:58 joerg Exp $
 #
 
 COMMENT=	Development utilities
@@ -367,6 +367,7 @@ SUBDIR+=	mph
 SUBDIR+=	nana
 SUBDIR+=	nasm
 SUBDIR+=	nbitools
+SUBDIR+=	nbpatch
 SUBDIR+=	ncurses
 SUBDIR+=	ncursesw
 SUBDIR+=	netbeans-ide
