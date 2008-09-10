@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2007/10/13 23:35:54 heinz Exp $
+# $NetBSD: Makefile,v 1.23 2008/09/10 21:01:15 he Exp $
 #
 
 DISTNAME=	Net-SNMP-5.2.0
@@ -8,7 +8,7 @@ CATEGORIES=	net perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/author/DTOWN/Net-SNMP-4.1.2/
+HOMEPAGE=	http://search.cpan.org/dist/Net-SNMP/
 COMMENT=	Perl5 module for SNMP queries
 
 PKG_DESTDIR_SUPPORT=	user-destdir
