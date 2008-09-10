@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/05/26 22:25:25 tnn Exp $
+# $NetBSD: Makefile,v 1.25 2008/09/10 00:14:33 uebayasi Exp $
 #
 
 DISTNAME=		xm71010s
@@ -19,7 +19,9 @@ NOT_FOR_BULK_PLATFORM=	Linux-*-*
 
 RESTRICTED=		source archive is not redistributable
 LICENSE=		no-commercial-use
+NO_BIN_ON_CDROM=	${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_FTP=		${RESTRICTED}
 
 EXTRACT_OPTS_LHA=	qt	# convert CRLF to LF
