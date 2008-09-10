@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/03/02 06:10:32 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2008/09/10 00:28:43 gdt Exp $
 #
 
 DISTNAME=		gogo239b
@@ -20,10 +20,12 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_TOOLS+=		gmake
 
+LICENSE=		unclear-patent-claims
 RESTRICTED=		Source based on patent protected Fraunhofer code
-NO_SRC_ON_FTP=	${RESTRICTED}
+NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
-LICENSE=		fee-based-commercial-use
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 .include "../../mk/bsd.prefs.mk"
 
