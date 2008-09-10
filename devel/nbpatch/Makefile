@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/10 11:03:21 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/10 18:48:56 joerg Exp $
 #
 
 DISTNAME=	nbpatch-20080910
@@ -17,6 +17,8 @@ CHECK_PERMS=		no
 
 USE_BSD_MAKEFILE=	yes
 USE_FEATURES=		nbcompat
+
+NBCOMPAT_CONFIGURE_ARGS+=	--enable-bsd-getopt
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/cat1 ${PKGMANDIR}/man1
 
