@@ -1,0 +1,7 @@
+'patch' takes a patch file containing a difference listing
+produced by diff and applies those differences to one or
+more original files, producing patched versions.
+
+This is the BSD licensed version derived from Larry Wall's original
+version.  It differs from the GPL version in less hard-coded limits
+and more intelligent reject files.
