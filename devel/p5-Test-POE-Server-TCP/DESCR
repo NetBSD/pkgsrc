@@ -1,0 +1,9 @@
+Test::POE::Server::TCP is a POE component that provides a TCP server
+framework for inclusion in client component test cases, instead of
+having to roll your own.
+
+Once registered with the component, a session will receive events
+related to client connects, disconnects, input and flushed output. Each
+of these events will refer to a unique client ID which may be used in
+communication with the component when sending data to the client or
+disconnecting a client connection.
