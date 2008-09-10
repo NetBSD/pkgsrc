@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2193 2008/09/10 14:02:46 mjl Exp $
+$NetBSD: CHANGES-2008,v 1.2194 2008/09/10 16:18:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3691,3 +3691,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/nbpatch version 20080910 [joerg 2008-09-10]
 	Updated graphics/magicpoint to 1.13a [taca 2008-09-10]
 	Added converters/py-simplejson version 1.9.2 [mjl 2008-09-10]
+	Updated graphics/png to 1.2.32beta01 [wiz 2008-09-10]
