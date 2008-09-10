@@ -1,13 +1,13 @@
-@comment $NetBSD: PLIST,v 1.2 2008/09/04 17:17:15 epg Exp $
-${PYSITELIB}/Paste-1.7.1-py${PYVERSSUFFIX}-nspkg.pth
-${PYSITELIB}/Paste-1.7.1-py${PYVERSSUFFIX}.egg-info/PKG-INFO
-${PYSITELIB}/Paste-1.7.1-py${PYVERSSUFFIX}.egg-info/SOURCES.txt
-${PYSITELIB}/Paste-1.7.1-py${PYVERSSUFFIX}.egg-info/dependency_links.txt
-${PYSITELIB}/Paste-1.7.1-py${PYVERSSUFFIX}.egg-info/entry_points.txt
-${PYSITELIB}/Paste-1.7.1-py${PYVERSSUFFIX}.egg-info/namespace_packages.txt
-${PYSITELIB}/Paste-1.7.1-py${PYVERSSUFFIX}.egg-info/not-zip-safe
-${PYSITELIB}/Paste-1.7.1-py${PYVERSSUFFIX}.egg-info/requires.txt
-${PYSITELIB}/Paste-1.7.1-py${PYVERSSUFFIX}.egg-info/top_level.txt
+@comment $NetBSD: PLIST,v 1.3 2008/09/10 16:34:51 epg Exp $
+${PYSITELIB}/${EGG_NAME}-nspkg.pth
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/namespace_packages.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/paste/auth/__init__.py
 ${PYSITELIB}/paste/auth/__init__.pyc
 ${PYSITELIB}/paste/auth/__init__.pyo
@@ -273,4 +273,4 @@ ${PYSITELIB}/paste/wsgiwrappers.pyo
 @dirrm ${PYSITELIB}/paste/debug
 @dirrm ${PYSITELIB}/paste/auth
 @dirrm ${PYSITELIB}/paste
-@dirrm ${PYSITELIB}/Paste-${PKGVERSION}-py${PYVERSSUFFIX}.egg-info
+@dirrm ${PYSITELIB}/${EGG_INFODIR}
