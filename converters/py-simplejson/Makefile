@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/09/10 13:56:40 mjl Exp $
+# $NetBSD: Makefile,v 1.3 2008/09/10 14:01:35 mjl Exp $
 #
 
 PKGNAME=        ${PYPKGPREFIX}-${DISTNAME}
@@ -10,7 +10,7 @@ MAINTAINER=	pkgsrc@NetBSD.org
 HOMEPAGE=	http://undefined.org/python/#simplejson
 COMMENT=	Simplejson is a simple, fast, extensible JSON encoder/decoder
 
-USE_LANGUAGES=  # none
+USE_LANGUAGES=  c
 
 PYDISTUTILSPKG=         yes
 PYBINMODULE=    yes
