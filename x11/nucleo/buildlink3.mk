@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/05/07 02:53:41 bjs Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/09/10 16:41:55 ahoka Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 NUCLEO_BUILDLINK3_MK:=	${NUCLEO_BUILDLINK3_MK}+
@@ -31,7 +31,7 @@ pkgbase:=nucleo
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
-.include "../../multimedia/ffmpeg-devel/buildlink3.mk"
+.include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../net/mDNSResponder/buildlink3.mk"
 
 .include "../../mk/pthread.buildlink3.mk"
