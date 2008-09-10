@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2201 2008/09/10 23:29:04 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2202 2008/09/10 23:52:38 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3708,3 +3708,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Test-Harness to 3.13 [he 2008-09-10]
 	Added databases/p5-DBIx-Class-TimeStamp version 0.06 [seb 2008-09-10]
 	Added www/p5-Test-WWW-Declare version 0.01 [seb 2008-09-10]
+	Added devel/p5-Class-Accessor-Named version 0.008 [seb 2008-09-10]
