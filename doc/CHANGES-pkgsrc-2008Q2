@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.63 2008/09/07 11:55:20 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.64 2008/09/10 11:18:39 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -151,3 +151,9 @@ pullup ticket #2510 - requested by tron
 tiff: security patch
 Pullup ticket 2521 - requested by martti
 security update for vim
+Pullup ticket #2522 - requested by taca
+geeklog: security patch
+Pullup - ticket #2523 - requested by is
+tk: make this package work with modular X.org
+Pullup ticket #2524 - requested by martti
+rrdtool: update package to avoid data corruption
