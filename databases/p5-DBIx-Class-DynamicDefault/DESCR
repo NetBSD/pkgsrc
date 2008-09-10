@@ -1,0 +1,3 @@
+The Perl 5 module DBIx::Class::DynamicDefault is a DBIx::Class
+component for automatically setting and updating fields with values
+calculated at runtime.
