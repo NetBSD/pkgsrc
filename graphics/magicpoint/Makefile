@@ -1,8 +1,6 @@
-# $NetBSD: Makefile,v 1.61 2008/05/24 13:53:33 tnn Exp $
+# $NetBSD: Makefile,v 1.62 2008/09/10 13:32:47 taca Exp $
 
-DISTNAME=		magicpoint-1.10a
-PKGREVISION=		11
-#DISTNAME=		magicpoint-1.11b.tar.gz
+DISTNAME=		magicpoint-1.13a
 CATEGORIES=		x11 graphics
 MASTER_SITES=		ftp://sh.wide.ad.jp/WIDE/free-ware/mgp/
 
@@ -18,21 +16,27 @@ USE_LANGUAGES+=		c99
 USE_TOOLS+=		perl
 USE_TOOLS+=		pkg-config
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.magicpoint
-PKG_SUPPORTED_OPTIONS=	freetype vflib xft2
-PKG_SUGGESTED_OPTIONS=	xft2
-
-.include "../../mk/bsd.options.mk"
-
 CONFIGURE_ARGS+=	--enable-freetype-charset16
 CONFIGURE_ARGS+=	--enable-locale
 CONFIGURE_ARGS+=	--enable-gif
+CONFIGURE_ARGS+=	--with-searchpath=${BUILDLINK_DIR:Q}
 CONFIGURE_ENV+=		BUILDLINK_DIR=${BUILDLINK_DIR:Q}
 CONFIGURE_ENV+=		mgp_cv_path_perl=${TOOLS_PERL5:Q}
 
-MGP_RENDERING_ENGINES=	freetype	graphics/freetype-lib \
-			xft2		x11/libXft \
-			vflib		print/ja-vflib-lib
+DOCDIR=			share/doc/mgp
+EGDIR=			share/examples/mgp
+INSTALLATION_DIRS+=	${DOCDIR} ${EGDIR}
+
+DOCS=			COPYRIGHT COPYRIGHT.jp FAQ README README.fonts	\
+			README.fonts.jp README.lang SYNTAX USAGE USAGE.jp
+EXAMPLES=		README README.jp cloud.jpg dad.eps dad.jpg \
+			default.mgp embed-jp.mgp embed.mgp gradation-jp.mgp \
+			gradation.mgp m17n-lib.mgp mgp-old1.jpg mgp-old2.jpg \
+			mgp-old3.jpg mgp1.jpg mgp2.jpg mgp3.jpg mgp3.xbm \
+			mgprc-sample multilingual.mgp sample-fr.mgp \
+			sample-jp-xft.mgp sample-jp.mgp sample.mgp \
+			sendmail6-jp.mgp sendmail6.mgp tutorial-jp.mgp \
+			tutorial.mgp v6-jp.mgp v6.mgp v6header.eps v6header.jpg
 
 # We need to perform the steps normally done by ``xmkmf -a'' since some
 # files need to be created before ``make depend''.
@@ -42,42 +46,29 @@ XMKMF=			${XMKMF_CMD} ${XMKMF_FLAGS}
 MGP_PRE_STAGE=		ctlwords.h grammar.c scanner.c tokdefs.h \
 			Makefiles includes depend
 
+.include "options.mk"
+
+SUBST_CLASSES+=		conf
+SUBST_FILES.conf+=	sample/default.mgp
+SUBST_SED.conf+=	-e 's|@MGP_TFONT@|${MGP_TFONT}|g'
+SUBST_SED.conf+=	-e 's|@MGP_VFONT@|${MGP_VFONT}|g'
+SUBST_SED.conf+=	-e 's|@MGP_XFONT@|${MGP_XFONT}|g'
+SUBST_STAGE.conf=	post-configure
+
 post-configure:
 .for s in ${MGP_PRE_STAGE}
 	cd ${WRKSRC}; \
 		${SETENV} ${MAKE_ENV} ${MAKE_PROGRAM} ${MAKE_FLAGS} ${s}
 .endfor
 
-pre-install:
-	${SED} -e "/^%% Default.*${PKG_OPTIONS}\./,/^%%%/s/^%% %/%/" \
-		${WRKSRC}/sample/default.mgp.template > \
-		${WRKSRC}/sample/default.mgp
-
 post-install:
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/mgp
-	cd ${WRKSRC};							\
-		for f in COPYRIGHT COPYRIGHT.jp FAQ README README.fonts	\
-			README.fonts.jp README.lang SYNTAX USAGE USAGE.jp; do \
-			${INSTALL_DATA} $$f ${PREFIX}/share/doc/mgp;	\
-		done
-	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/mgp
-	cd ${WRKSRC}/sample;						\
-		for f in README* *.jpg *.eps *.mgp *.xbm mgprc-sample; do \
-			${INSTALL_DATA} $$f ${PREFIX}/share/examples/mgp; \
-		done
-
-.for engine pkg in ${MGP_RENDERING_ENGINES}
-.  if !empty(PKG_OPTIONS:M${engine})
-CONFIGURE_ARGS+=	--enable-${engine}
-.include "../../${pkg}/buildlink3.mk"
-.  else
-CONFIGURE_ARGS+=	--disable-${engine}
-.  endif
+.for f in ${DOCS}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${DOCDIR}
+.endfor
+.for f in ${EXAMPLES}
+	${INSTALL_DATA} ${WRKSRC}/sample/${f} ${DESTDIR}${PREFIX}/${EGDIR}
 .endfor
 
-.if !empty(PKG_OPTIONS:Mxft2)
-.include "../../graphics/freetype2/buildlink3.mk"
-.endif
 .include "../../graphics/libungif/buildlink3.mk"
 .include "../../graphics/mng/buildlink3.mk"
 .include "../../graphics/netpbm/buildlink3.mk"
