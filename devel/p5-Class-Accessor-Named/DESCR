@@ -1,0 +1,3 @@
+The Perl 5 module Class::Accessor::Named is a development aid to
+talk your Class::Accessor generated accessors into identifying
+themselves (eg for profiling).
