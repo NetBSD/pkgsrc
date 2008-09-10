@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2191 2008/09/10 11:04:58 joerg Exp $
+$NetBSD: CHANGES-2008,v 1.2192 2008/09/10 13:35:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3689,3 +3689,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated fonts/dejavu-ttf to 2.26 [jakllsch 2008-09-10]
 	Updated www/apache-tomcat55 to 5.5.27 [abs 2008-09-10]
 	Added devel/nbpatch version 20080910 [joerg 2008-09-10]
+	Updated graphics/magicpoint to 1.13a [taca 2008-09-10]
