@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2192 2008/09/10 13:35:09 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2193 2008/09/10 14:02:46 mjl Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3690,3 +3690,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/apache-tomcat55 to 5.5.27 [abs 2008-09-10]
 	Added devel/nbpatch version 20080910 [joerg 2008-09-10]
 	Updated graphics/magicpoint to 1.13a [taca 2008-09-10]
+	Added converters/py-simplejson version 1.9.2 [mjl 2008-09-10]
