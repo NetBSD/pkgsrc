@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/10 23:02:36 seb Exp $
+
+SHA1 (DBIx-Class-TimeStamp-0.06.tar.gz) = db0d3a4c4bd9fe8817dbde4a1e11a8fc6f4ee5cd
+RMD160 (DBIx-Class-TimeStamp-0.06.tar.gz) = 7f2a0b999998844ffe372a2d0039179303ad5ca3
+Size (DBIx-Class-TimeStamp-0.06.tar.gz) = 22183 bytes
