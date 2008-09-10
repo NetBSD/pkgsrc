@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/06/23 21:30:12 markd Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/10 13:05:11 abs Exp $
 #
 
 DISTNAME=	pytz-2008b
+PKGREVISION=	1
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
+EGG_NAME=	${DISTNAME}
 CATEGORIES=	time python
 MASTER_SITES=	http://pypi.python.org/packages/source/p/pytz/
 EXTRACT_SUFX=	.tar.bz2
@@ -15,5 +17,5 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PYDISTUTILSPKG=	yes
 
-.include "../../lang/python/extension.mk"
+.include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
