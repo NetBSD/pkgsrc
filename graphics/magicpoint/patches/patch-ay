@@ -1,0 +1,16 @@
+$NetBSD: patch-ay,v 1.1 2008/09/10 13:32:48 taca Exp $
+
+--- image/zio.c.orig	2004-07-29 00:47:31.000000000 +0900
++++ image/zio.c
+@@ -134,11 +134,7 @@ void zreset(filename)
+   }
+ }
+ 
+-#ifdef __APPLE__
+ ZFILE *zzopen(name)
+-#else
+-ZFILE *zopen(name)
+-#endif
+      char *name;
+ { int    a;
+   ZFILE *zf;

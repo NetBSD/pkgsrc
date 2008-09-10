@@ -1,0 +1,44 @@
+$NetBSD: patch-ba,v 1.1 2008/09/10 13:32:48 taca Exp $
+
+--- sample/default.mgp.orig	2001-08-11 01:40:54.000000000 +0900
++++ sample/default.mgp
+@@ -1,20 +1,24 @@
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%
+-%% This default.mgp is "TrueType fonts" oriented.
+-%% First, you should create "~/.mgprc" whose contents are:
+-%%	tfdir "/path/to/truetype/fonts"
+-%%
+-%% To visualize English, install "standard.ttf", "thick.ttf", and 
+-%% "typewriter.ttf" into the "tfdir" directory above:
+-%%	ftp://ftp.mew.org/pub/mgp/ttf-us.tar.gz
+-%%
+-%% To visualize Japanese, install "kochi-mincho.ttf" and "goth.ttf"
+-%% into the "tfdir" directory above:
+-%%	ftp://ftp.mew.org/pub/mgp/ttf-jp.tar.gz
+-%%
+-%deffont "standard"   tfont "standard.ttf",   tmfont "kochi-mincho.ttf"
+-%deffont "thick"      tfont "thick.ttf",      tmfont "goth.ttf"
+-%deffont "typewriter" tfont "typewriter.ttf", tmfont "goth.ttf"
++%% Default font settings for xft2.
++%%
++%@MGP_XFONT@deffont "standard"   xfont "serif" "iso8859-1", xfont "serif" "jisx0208.1983"
++%@MGP_XFONT@deffont "thick"      xfont "sans-serif" "iso8859-1", xfont "sans-serif" "jisx0208.1983"
++%% %ddeffont "typewriter" xfont "sans-serif" "iso8859-1", xfont "sans-serif" "jisx0208.1983"
++%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
++%%
++%% Default font settings for vflib.
++%%
++%@MGP_VFONT@deffont "standard"   vfont "min"
++%@MGP_VFONT@deffont "thick"      vfont "goth"
++%@MGP_VFONT@deffont "typewriter" vfont "goth"
++%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
++%%
++%% Default font settings for freetype.
++%%
++%@MGP_TFONT@deffont "standard"   tfont "standard.ttf",   tmfont "kochi-mincho.ttf"
++%@MGP_TFONT@deffont "thick"      tfont "thick.ttf",      tmfont "goth.ttf"
++%@MGP_TFONT@deffont "typewriter" tfont "typewriter.ttf", tmfont "goth.ttf"
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%
+ %% Default settings per each line numbers.

@@ -1,0 +1,73 @@
+$NetBSD: patch-ar,v 1.1 2008/09/10 13:32:48 taca Exp $
+
+--- contrib/xwintoppm/xwintoppm.c.orig	1998-08-26 14:30:16.000000000 +0900
++++ contrib/xwintoppm/xwintoppm.c
+@@ -136,8 +136,10 @@ Bool silent = False;
+ Bool use_installed = False;
+ long add_pixel_value = 0;
+ 
+-extern int (*_XErrorFunction)();
+-extern int _XDefaultError();
++void Error(char *);
++void Window_Dump(Window, FILE *);
++int Image_Size(XImage *);
++int Get_XColors(XWindowAttributes *, XColor **);
+ 
+ static long parse_long (s)
+     char *s;
+@@ -155,11 +157,12 @@ static long parse_long (s)
+     return (thesign * retval);
+ }
+ 
++int
+ main(argc, argv)
+     int argc;
+     char **argv;
+ {
+-    register i;
++    register int i;
+     Window target_win;
+     FILE *out_file = stdout;
+     Bool frame_only = False;
+@@ -280,7 +283,7 @@ XColor **colors ;
+  * Window_Dump: dump a window to a file which must already be open for
+  *              writting.
+  */
+-
++void
+ Window_Dump(window, out)
+      Window window;
+      FILE *out;
+@@ -609,6 +612,7 @@ Window_Dump(window, out)
+ /*
+  * Report the syntax for calling xwd.
+  */
++void
+ usage()
+ {
+     fprintf (stderr,
+@@ -622,7 +626,7 @@ usage()
+ /*
+  * Error - Fatal xwd error.
+  */
+-
++void
+ Error(string)
+ 	char *string;	/* Error description string. */
+ {
+@@ -716,6 +720,7 @@ int Get_XColors(win_info, colors)
+     return ncolors ;
+ }
+ 
++void
+ _swapshort (bp, n)
+     register char *bp;
+     register unsigned n;
+@@ -731,6 +736,7 @@ _swapshort (bp, n)
+     }
+ }
+ 
++void
+ _swaplong (bp, n)
+     register char *bp;
+     register unsigned n;
