@@ -1,10 +1,10 @@
-$NetBSD: patch-al,v 1.12 2008/06/30 07:29:48 martti Exp $
+$NetBSD: patch-al,v 1.12.4.1 2008/09/10 11:17:56 tron Exp $
 
 Correct examples directory.
 
---- examples/Makefile.in.orig	2007-11-20 02:15:30.000000000 +0200
-+++ examples/Makefile.in	2007-11-20 12:57:37.000000000 +0200
-@@ -224,7 +224,7 @@
+--- examples/Makefile.in.orig	2008-09-06 17:26:10.000000000 +0300
++++ examples/Makefile.in	2008-09-07 08:37:18.000000000 +0300
+@@ -284,7 +284,7 @@
  target_os = @target_os@
  target_vendor = @target_vendor@
  EXTRA_DIST = cgi-demo.cgi.in
