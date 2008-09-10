@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.577 2008/09/07 16:12:46 seb Exp $
+# $NetBSD: Makefile,v 1.578 2008/09/10 23:28:09 seb Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -360,6 +360,7 @@ SUBDIR+=	p5-Template-Stash-HTML-Entities
 SUBDIR+=	p5-Template-Timer
 SUBDIR+=	p5-Template-Toolkit
 SUBDIR+=	p5-Test-HTTP-Server-Simple
+SUBDIR+=	p5-Test-WWW-Declare
 SUBDIR+=	p5-Test-WWW-Mechanize
 SUBDIR+=	p5-Test-WWW-Mechanize-Catalyst
 SUBDIR+=	p5-URI
