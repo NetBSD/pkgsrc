@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2197 2008/09/10 18:47:43 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.2198 2008/09/10 20:18:50 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3695,3 +3695,13 @@ Changes to the packages collection and infrastructure in 2008:
 	Added databases/p5-DBIx-Class-DynamicDefault version 0.01 [seb 2008-09-10]
 	Added time/p5-Time-Warp version 0.5 [seb 2008-09-10]
 	Updated www/horde to 3.2.2 [adrianp 2008-09-10]
+	Added devel/p5-Test-POE-Server-TCP version 0.12 [he 2008-09-10]
+	Updated net/p5-POE-Component-Client-Ident to 1.14 [he 2008-09-10]
+	Updated chat/p5-POE-Filter-IRCD to 2.38 [he 2008-09-10]
+	Added devel/p5-POE-Component-Pluggable version 1.10 [he 2008-09-10]
+	Updated chat/p5-POE-Component-IRC to 5.88 [he 2008-09-10]
+	Updated time/p5-Time-Format to 1.09 [he 2008-09-10]
+	Updated mail/p5-User-Identity to 0.92 [he 2008-09-10]
+	Updated devel/p5-Parse-RecDescent to 1.95.1nb1 [he 2008-09-10]
+	Updated net/p5-X500-DN to 0.29 [he 2008-09-10]
+	Updated devel/p5-Object-Realize-Later to 0.18 [he 2008-09-10]
