@@ -1,7 +1,7 @@
 /*
  * $OpenBSD: backupfile.c,v 1.19 2006/03/11 19:41:30 otto Exp $
  * $DragonFly: src/usr.bin/patch/backupfile.c,v 1.5 2008/08/11 00:05:06 joerg Exp $
- * $NetBSD: backupfile.c,v 1.1.1.1 2008/09/10 11:03:21 joerg Exp $
+ * $NetBSD: backupfile.c,v 1.2 2008/09/10 18:48:01 joerg Exp $
  */
 
 /*
@@ -116,7 +116,7 @@ max_backup_version(const char *file, const char *dir)
 	file_name_length = strlen(file);
 
 	while ((dp = readdir(dirp)) != NULL) {
-		if (dp->d_namlen <= file_name_length)
+		if (strlen(dp->d_name) <= file_name_length)
 			continue;
 
 		this_version = version_number(file, dp->d_name, file_name_length);
