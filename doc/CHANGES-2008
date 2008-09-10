@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2189 2008/09/10 05:46:20 jakllsch Exp $
+$NetBSD: CHANGES-2008,v 1.2190 2008/09/10 09:54:28 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3687,3 +3687,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/openldap-server to 2.4.11nb2 [tron 2008-09-09]
 	Updated databases/rrdtool to 1.3.2 [martti 2008-09-10]
 	Updated fonts/dejavu-ttf to 2.26 [jakllsch 2008-09-10]
+	Updated www/apache-tomcat55 to 5.5.27 [abs 2008-09-10]
