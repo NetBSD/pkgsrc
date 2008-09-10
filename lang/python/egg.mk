@@ -1,4 +1,4 @@
-# $NetBSD: egg.mk,v 1.4 2008/04/26 15:37:21 joerg Exp $
+# $NetBSD: egg.mk,v 1.5 2008/09/10 16:33:38 epg Exp $
 #
 # Common logic to handle Python Eggs
 #
@@ -11,6 +11,10 @@ PYTHON_VERSIONS_ACCEPTED?=	25 24
 
 PLIST_SUBST+=	EGG_NAME=${EGG_NAME}-py${PYVERSSUFFIX}
 PLIST_SUBST+=	EGG_INFODIR=${EGG_NAME}-py${PYVERSSUFFIX}.egg-info
+PRINT_PLIST_AWK+=	{ gsub(/${EGG_NAME}-py${PYVERSSUFFIX}.egg-info/, \
+			       "$${EGG_INFODIR}") }
+PRINT_PLIST_AWK+=	{ gsub(/${EGG_NAME}-py${PYVERSSUFFIX}-nspkg.pth/, \
+			       "$${EGG_NAME}-nspkg.pth") }
 
 _PYSETUPTOOLSINSTALLARGS=	--single-version-externally-managed
 .if ${_USE_DESTDIR} == "no"
