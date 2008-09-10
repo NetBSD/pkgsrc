@@ -1,4 +1,9 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/06/23 21:30:12 markd Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/09/10 13:05:11 abs Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/${EGG_INFODIR}/zip-safe
 ${PYSITELIB}/pytz/__init__.py
 ${PYSITELIB}/pytz/__init__.pyc
 ${PYSITELIB}/pytz/__init__.pyo
