@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2194 2008/09/10 16:18:12 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2195 2008/09/10 16:20:48 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3692,3 +3692,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/magicpoint to 1.13a [taca 2008-09-10]
 	Added converters/py-simplejson version 1.9.2 [mjl 2008-09-10]
 	Updated graphics/png to 1.2.32beta01 [wiz 2008-09-10]
+	Added databases/p5-DBIx-Class-DynamicDefault version 0.01 [seb 2008-09-10]
