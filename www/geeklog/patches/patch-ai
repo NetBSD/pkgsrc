@@ -1,0 +1,17 @@
+$NetBSD: patch-ai,v 1.1.2.2 2008/09/10 10:30:49 tron Exp $
+
+Security fix for FCKeditor uploading files.
+
+--- public_html/fckeditor/editor/filemanager/upload/php/upload.php.orig	2006-06-18 06:25:36.000000000 +0900
++++ public_html/fckeditor/editor/filemanager/upload/php/upload.php
+@@ -18,6 +18,10 @@
+  * 		Frederico Caldeira Knabben (fredck@fckeditor.net)
+  */
+ 
++if (strpos($_SERVER['PHP_SELF'], 'upload.php') !== false) {
++    die('This file can not be used on its own!');
++}
++
+ require('config.php') ;
+ require('util.php') ;
+ 
