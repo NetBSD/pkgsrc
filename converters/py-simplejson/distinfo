@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/10 13:53:29 mjl Exp $
+
+SHA1 (simplejson-1.9.2.tar.gz) = d761af80c38b80d8bc2a8e7cdcc8ffd9730e7788
+RMD160 (simplejson-1.9.2.tar.gz) = eb20847b093851026db995f0a451b8088f35041a
+Size (simplejson-1.9.2.tar.gz) = 70928 bytes
