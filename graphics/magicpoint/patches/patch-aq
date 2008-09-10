@@ -1,0 +1,101 @@
+$NetBSD: patch-aq,v 1.1 2008/09/10 13:32:48 taca Exp $
+
+--- contrib/xwintoppm/dsimple.c.orig	1998-02-13 16:48:29.000000000 +0900
++++ contrib/xwintoppm/dsimple.c
+@@ -35,6 +35,8 @@ from the X Consortium.
+ #include <X11/Xutil.h>
+ #include <X11/cursorfont.h>
+ #include <stdio.h>
++#include <stdarg.h>
++
+ /*
+  * Other_stuff.h: Definitions of routines in other_stuff.
+  *
+@@ -47,14 +49,9 @@ char *malloc(), realloc();
+ #include <stdlib.h>
+ #endif
+ 
++#include "dsimple.h"
++
+ extern Bool silent;
+-unsigned long Resolve_Color();
+-Pixmap Bitmap_To_Pixmap();
+-Window Select_Window();
+-void out();
+-void blip();
+-Window Window_With_Name();
+-void Fatal_Error();
+ 
+ /*
+  * Just_display: A group of routines designed to make the writting of simple
+@@ -68,16 +65,16 @@ void Fatal_Error();
+ 
+ 
+ /* This stuff is defined in the calling program by just_display.h */
+-extern char *program_name;
+-extern Display *dpy;
+-extern int screen;
++char *program_name = "unknown_program";       /* Name of this program */
++Display *dpy;                                 /* The current display */
++int screen;                                   /* The current screen */
+ 
+ 
+ /*
+  * Malloc: like malloc but handles out of memory using Fatal_Error.
+  */
+ char *Malloc(size)
+-     unsigned size;
++     unsigned int size;
+ {
+ 	char *data;
+ 
+@@ -401,7 +398,7 @@ Pixmap Bitmap_To_Pixmap(dpy, d, gc, bitm
+ /*
+  * blip: a debugging routine.  Prints Blip! on stderr with flushing. 
+  */
+-void blip()
++void blip(void)
+ {
+   outl("blip!");
+ }
+@@ -495,12 +492,15 @@ Window Window_With_Name(dpy, top, name)
+  *       printf with up to 7 arguments.
+  */
+ /* VARARGS1 */
+-outl(msg, arg0,arg1,arg2,arg3,arg4,arg5,arg6)
+-     char *msg;
+-     char *arg0, *arg1, *arg2, *arg3, *arg4, *arg5, *arg6;
++void
++outl(char *msg, ...)
+ {
++	va_list ap;
++
++	va_start(ap, msg);
+ 	fflush(stdout);
+-	fprintf(stderr, msg, arg0, arg1, arg2, arg3, arg4, arg5, arg6);
++	fprintf(stderr, msg, ap);
++	va_end(ap);
+ 	fprintf(stderr, "\n");
+ 	fflush(stderr);
+ }
+@@ -511,14 +511,16 @@ outl(msg, arg0,arg1,arg2,arg3,arg4,arg5,
+  * Does not require dpy or screen defined.
+  */
+ /* VARARGS1 */
+-void Fatal_Error(msg, arg0,arg1,arg2,arg3,arg4,arg5,arg6)
+-char *msg;
+-char *arg0, *arg1, *arg2, *arg3, *arg4, *arg5, *arg6;
++void Fatal_Error(char *msg, ...)
+ {
++	va_list ap;
++
++	va_start(ap, msg);
+ 	fflush(stdout);
+ 	fflush(stderr);
+ 	fprintf(stderr, "%s: error: ", program_name);
+-	fprintf(stderr, msg, arg0, arg1, arg2, arg3, arg4, arg5, arg6);
++	vfprintf(stderr, msg, ap);
++	va_end(ap);
+ 	fprintf(stderr, "\n");
+ 	exit(1);
+ }

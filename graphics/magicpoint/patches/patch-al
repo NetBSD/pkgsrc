@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.1 2006/02/23 20:49:49 joerg Exp $
+$NetBSD: patch-al,v 1.2 2008/09/10 13:32:47 taca Exp $
 
---- image/imagetypes.c.orig	2006-02-23 20:28:04.000000000 +0000
+--- image/imagetypes.c.orig	2001-01-18 18:07:14.000000000 +0900
 +++ image/imagetypes.c
 @@ -50,7 +50,6 @@ static struct imagetypes {
  };

@@ -1,13 +1,26 @@
-$NetBSD: patch-ad,v 1.1 2004/01/12 15:19:28 wennmach Exp $
+$NetBSD: patch-ad,v 1.2 2008/09/10 13:32:47 taca Exp $
 
---- parse.c.orig	2003-11-24 21:49:38.000000000 +0900
-+++ parse.c	2003-11-24 21:50:13.000000000 +0900
-@@ -848,7 +848,7 @@
- 	tmpint[2]->cti_value = DEFAULT_VGAP;
- 	tmpint[3] = ctlalloc1(CTL_QUALITY);
- 	tmpint[3]->cti_value = DEFAULT_BQUALITY;
--#ifdef XFT2
-+#ifdef USE_XFT2
- 	tmpint[4] = ctlalloc1(CTL_OPAQUE);
- 	tmpint[4]->cti_value = DEFAULT_OPAQUE;
- #endif
+--- parse.c.orig	2007-11-25 02:35:28.000000000 +0900
++++ parse.c
+@@ -470,13 +470,14 @@ read_file(fp, filename, page, line, prea
+ 		case CTL_TAB:
+ 		    {
+ 			int i = root->cti_value;
+-			if (i < 0) {
+-				fprintf(stderr, "%s:%d: "
+-					"invalid tab index %d\n",
+-					filename, lineno, root->cti_value);
+-				exit(-1);
+-			}
+-			if (i >= MAXTAB) {	/*XXX*/
++			if (root->ct_type == CTRL_INT) {
++			    if (i < 0 || i >= MAXTAB ) {
++				    fprintf(stderr, "%s:%d: "
++					    "invalid tab index %d\n",
++					    filename, lineno, root->cti_value);
++				    exit(-1);
++			    }
++			} else {
+ 				/* must be a string */
+ 				/* find a free entry */
+ 				for (i = MAXTAB ; i < MAXTAB + MAXSTYLE ; i++) {
