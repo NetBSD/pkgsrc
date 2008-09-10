@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2008/05/26 02:13:19 joerg Exp $
+# $NetBSD: Makefile,v 1.32 2008/09/10 00:39:55 gdt Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
 PKGREVISION=	3
@@ -17,8 +17,12 @@ CONFLICTS=	quake3arena-demo-[0-9]*
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base x11 glx
 
-NO_SRC_ON_FTP=	no
-NO_BIN_ON_FTP=	no
+LICENSE=	generic-nonlicense
+RESTRICTED=	Unclear terms
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
