@@ -1,0 +1,12 @@
+$NetBSD: patch-aw,v 1.1 2008/09/10 13:32:48 taca Exp $
+
+--- image/smooth.c.orig	1998-02-13 16:49:04.000000000 +0900
++++ image/smooth.c
+@@ -74,6 +74,7 @@ static Image *doSmooth(image)
+ 
+ Image *smooth(image, iterations, verbose)
+      Image *image;
++     int    iterations;
+      int    verbose;
+ { int a;
+   Image *old, *new;

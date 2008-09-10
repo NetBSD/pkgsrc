@@ -1,0 +1,12 @@
+$NetBSD: patch-az,v 1.1 2008/09/10 13:32:48 taca Exp $
+
+--- image/zoom.c.orig	2003-08-23 15:22:09.000000000 +0900
++++ image/zoom.c
+@@ -39,6 +39,7 @@ static unsigned int *buildIndex(width, z
+ Image *zoom(oimage, xzoom, yzoom, verbose)
+      Image        *oimage;
+      float        xzoom, yzoom;
++     int	  verbose;
+ { char          buf[BUFSIZ];
+   Image        *image=NULL;
+   unsigned int *xindex, *yindex;

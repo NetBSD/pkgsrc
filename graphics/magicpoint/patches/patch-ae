@@ -1,14 +1,8 @@
-$NetBSD: patch-ae,v 1.2 2005/04/07 23:11:57 hira Exp $
+$NetBSD: patch-ae,v 1.3 2008/09/10 13:32:47 taca Exp $
 
---- draw.c.orig	2003-05-14 16:45:35.000000000 +0900
-+++ draw.c	2005-04-08 07:31:28.000000000 +0900
-@@ -4498,12 +4498,12 @@
- 	struct ctrl *cp;
- 	char *fontname = NULL;
- 	int i;
--	static char etab[3][20] = { "iso2022jp", "gb2312", "ksc5601"};
-+	static char etab[3][20] = { "iso-2022-jp", "gb2312", "ksc5601"};
- 	static char rtab[3][20] = { "jisx208", "gb2312", "ksc5601"};
+--- draw.c.orig	2008-01-25 00:43:17.000000000 +0900
++++ draw.c
+@@ -5243,7 +5243,7 @@ xft_draw_fragment(state, p, len, registr
  	static char prefix[3][20] = { "\033$B", "\033$A", "\033$(C"};
  	char buf16[1024], *p16;
  	char out16[1024], *o16;
@@ -17,14 +11,18 @@ $NetBSD: patch-ae,v 1.2 2005/04/07 23:11:57 hira Exp $
  #ifdef HAVE_ICONV
  	static iconv_t icv[3];
  #endif
-@@ -4529,8 +4529,8 @@
- 		}
- 		if (i == 3) return NULL; /* cannot find codeset */
- 		sprintf(buf16, "%s%s\0", prefix[i], p);  	
--		if (!icv[i]) icv[i] = iconv_open("UTF8", etab[i]);
--		if (icv[i] < 0){
-+		if (icv[i] == (iconv_t)0) icv[i] = iconv_open("UTF-8", etab[i]);
-+		if (icv[i] == (iconv_t)-1){
- 			fprintf(stderr, "your iconv doesn't support %s\n", etab[i]);
- 			return NULL;
- 		}
+@@ -5471,12 +5471,12 @@ xft_setfont(xfontarg, csize, registry)
+ 		    XFT_FAMILY, XftTypeString, font,
+ 		    XFT_ENCODING, XftTypeString, registry,
+ 		    XFT_STYLE, XftTypeString, style,
+-		    XFT_PIXEL_SIZE, XftTypeDouble, (float)csize, 0);
++		    XFT_PIXEL_SIZE, XftTypeDouble, (double)csize, NULL);
+ 	} else {
+ 		xftfont = XftFontOpen(display, screen,
+ 		    XFT_FAMILY, XftTypeString, font,
+ 		    XFT_ENCODING, XftTypeString, registry,
+-		    XFT_PIXEL_SIZE, XftTypeDouble, (float)csize, 0);
++		    XFT_PIXEL_SIZE, XftTypeDouble, (double)csize, NULL);
+ 	}
+ 	if (xftfont == 0) {
+ 		free(xfont);

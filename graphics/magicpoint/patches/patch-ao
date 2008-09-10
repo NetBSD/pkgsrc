@@ -1,0 +1,158 @@
+$NetBSD: patch-ao,v 1.1 2008/09/10 13:32:47 taca Exp $
+
+--- grammar.y.orig	2008-01-19 02:43:20.000000000 +0900
++++ grammar.y
+@@ -130,6 +130,7 @@ gen_void(op)
+ 		yyerror("cannot allocate void node");
+ 		return ct;
+ 	}
++	ct->ct_type = CTRL_VOID;
+ 	return ct;
+ }
+ 
+@@ -145,6 +146,7 @@ gen_double_int(op, v)
+ 		return ct;
+ 	}
+ 	ct->ctf_value = (double)v;
++	ct->ct_type = CTRL_DOUBLE;
+ 	return ct;
+ }
+ 
+@@ -160,6 +162,7 @@ gen_double(op, v)
+ 		return ct;
+ 	}
+ 	ct->ctf_value = v;
++	ct->ct_type = CTRL_DOUBLE;
+ 	return ct;
+ }
+ 
+@@ -175,6 +178,7 @@ gen_int(op, v)
+ 		return ct;
+ 	}
+ 	ct->cti_value = v;
++	ct->ct_type = CTRL_INT;
+ 	return ct;
+ }
+ 
+@@ -192,6 +196,7 @@ gen_int2(op, v1, v2)
+        }
+        ct->cti2_value1 = v1;
+        ct->cti2_value2 = v2;
++       ct->ct_type = CTRL_INT2;
+        return ct;
+ }
+ 
+@@ -210,7 +215,8 @@ gen_int3(op, v1, v2, v3)
+        }
+        ct->cti3_value1 = v1;
+        ct->cti3_value2 = v2;
+-       ct->cti3_value3 = v3;   
++       ct->cti3_value3 = v3;
++       ct->ct_type = CTRL_INT3;
+        return ct;
+ }
+ 
+@@ -226,6 +232,7 @@ gen_str(op, str)
+ 		return ct;
+ 	}
+ 	ct->ctc_value = strdup(str);
++	ct->ct_type = CTRL_CHAR;
+ 	return ct;
+ }
+ 
+@@ -243,6 +250,7 @@ gen_str2(op, str1, str2)
+ 	}
+ 	ct->ctc2_value1 = strdup(str1);
+ 	ct->ctc2_value2 = strdup(str2);
++	ct->ct_type = CTRL_CHAR2;
+ 	return ct;
+ }
+ 
+@@ -259,6 +267,7 @@ gen_color(op, color)
+ 	}
+ 	if (get_color(color, &ct->ctl_value) < 0)
+ 		yyerror("cannot allocate color \"%s\"", color);
++	ct->ct_type = CTRL_LONG;
+ 	return ct;
+ }
+ 
+@@ -284,6 +293,7 @@ gen_bgrad(w, h, colors, dir, zoomflg, ex
+ 	ct->ctd_numcolor = colors;
+ 	ct->ctd_dir = dir;
+ 	ct->ctd_zoomflag = zoomflg;
++	ct->ct_type = CTRL_GRAD;
+ 
+ 	/* process color list. */
+ 	siz = ct->ctd_g_colors = 0;
+@@ -353,6 +363,7 @@ gen_newimage(arg)
+ 	}
+ 
+ 	/* default setting */
++	ct->ct_type = CTRL_IMAGE;
+ 	ct->ctm_ximagesize = 100;
+ 	ct->ctm_yimagesize = 100;
+ 	ct->ctm_zoomflag = Z_NORMAL | (Z_NORMAL << Z_YSHIFT);
+@@ -463,6 +474,7 @@ gen_image(op, fname, colors, xsiz, ysiz,
+ 		yyerror("cannot allocate node (op=IMAGE)");
+ 		return ct;
+ 	}
++	ct->ct_type = CTRL_IMAGE;
+ 	ct->ctm_fname = embed_fname(fname);
+ 	ct->ctm_numcolor = colors;
+ 	ct->ctm_ximagesize = xsiz;
+@@ -511,6 +523,7 @@ gen_bar(color, thick, start, len)
+ 	}
+ 	if (get_color(color, &ct->ctb_color) < 0)
+ 		yyerror("cannot allocate color %s", color);
++	ct->ct_type = CTRL_BAR;
+ 	ct->ctb_width = thick;
+ 	ct->ctb_start = start;
+ 	ct->ctb_length = len;
+@@ -542,6 +555,7 @@ gen_icon(n, color, siz)
+ 		yyerror("cannot allocate node (op=ICON)");
+ 		return ct;
+ 	}
++	ct->ct_type = CTRL_ICON;
+ 	ct->ctic_value = n;
+ 	if (get_color(color, &ct->ctic_color) < 0)
+ 		yyerror("cannot allocate color %s", color);
+@@ -562,6 +576,7 @@ gen_pcache(flag, mode, effect, value)
+ 		yyerror("cannot allocate node (op=PCACHE)");
+ 		return ct;
+ 	}
++	ct->ct_type = CTRL_PCACHE;
+ 	ct->ctch_flag = flag;
+ 	ct->ctch_mode = mode;
+ 	ct->ctch_effect = effect;
+@@ -580,6 +595,7 @@ gen_valign(align)
+ 		yyerror("cannot allocate node (op=VALIGN)");
+ 		return ct;
+ 	}
++	ct->ct_type = CTRL_INT;
+ 	if (!strcmp(align, "center")) 
+ 		ct->cti_value = VL_CENTER;
+ 	else { 
+@@ -629,6 +645,7 @@ gen_area(width, height, xoff, yoff)
+ 	ct->ctar_height = height;
+ 	ct->ctar_xoff = xoff;
+ 	ct->ctar_yoff = yoff;
++	ct->ct_type = CTRL_AREA;
+ 	return ct;
+ }
+ 
+@@ -663,6 +680,7 @@ gen_argsfromnid(op, nid)
+ 		siz++;
+ 	}
+ 	ct->cta_argv[siz] = NULL;
++	ct->ct_type = CTRL_ARGS;
+ 
+ 	if (nid)
+ 		ctlfree(nid);
+@@ -712,6 +730,7 @@ gen_argsfromstr(op, str, flag)
+ 		}
+ 	}
+ 	ct->cta_argv[ct->cta_argc] = NULL;
++	ct->ct_type = CTRL_ARGS;
+ 
+ 	return ct;
+ }

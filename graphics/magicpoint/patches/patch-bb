@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1 2008/09/10 13:32:48 taca Exp $
+
+--- x11.c.orig	2008-01-25 00:43:17.000000000 +0900
++++ x11.c
+@@ -355,7 +355,7 @@ init_win3()
+ void
+ toggle_fullscreen()
+ {
+-	static fullscreen = 0;
++	static int fullscreen = 0;
+ 	XClientMessageEvent  xev;
+ 
+ 	fullscreen = ++fullscreen % 2;

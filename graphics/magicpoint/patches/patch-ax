@@ -1,0 +1,22 @@
+$NetBSD: patch-ax,v 1.1 2008/09/10 13:32:48 taca Exp $
+
+--- image/window.c.orig	2004-07-29 00:47:31.000000000 +0900
++++ image/window.c
+@@ -16,7 +16,7 @@
+ #include <signal.h>
+ #include <errno.h>
+ #include <sys/types.h>
+-#ifdef SYSV
++#if HAVE_UNISTD_H
+ #include <unistd.h>
+ #endif
+ #if TIME_WITH_SYS_TIME
+@@ -224,7 +224,7 @@ void setViewportColormap(disp, scrn, vis
+      int scrn;
+      Visual *visual;
+ { XSetWindowAttributes swa;
+-  static cmap_atom= None;
++  static int cmap_atom= None;
+   Window cmap_windows[2];
+ 
+   if (cmap_atom == None)

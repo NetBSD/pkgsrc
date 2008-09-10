@@ -1,19 +1,79 @@
-$NetBSD: patch-aa,v 1.10 2004/01/12 15:19:28 wennmach Exp $
+$NetBSD: patch-aa,v 1.11 2008/09/10 13:32:47 taca Exp $
 
---- configure.orig	2003-05-28 14:34:23.000000000 +0900
-+++ configure	2004-01-11 04:18:35.000000000 +0900
-@@ -4108,7 +4108,7 @@
+--- configure.orig	2007-12-29 05:31:26.000000000 +0900
++++ configure
+@@ -5090,7 +5090,7 @@ if test "$mgp_use_freetype" = "yes"; the
    # XXX: freetype2 may use freetype-config
-  	echo "$as_me:$LINENO: checking for freetype1 library/header" >&5
- echo $ECHO_N "checking for freetype1 library/header... $ECHO_C" >&6
-- 	for dir in /usr/local/freetype /usr/local /opt/freetype /usr/pkg /usr /usr/include/freetype1 ; do
+  	{ echo "$as_me:$LINENO: checking for freetype1 library/header" >&5
+ echo $ECHO_N "checking for freetype1 library/header... $ECHO_C" >&6; }
+- 	for dir in $SEARCHPATH /usr/local/freetype /usr/local /opt/freetype /usr/pkg /usr /usr/include/freetype1 /sw; do
 + 	for dir in ${BUILDLINK_DIR}; do
   		ac_cv_ft_lib=no
   		ac_cv_ft_include=no
- 		shlib1=`echo $dir/lib/libttf.so* | head -1 | sed -e 's/.*\///'`
-@@ -4379,15 +4379,13 @@
- echo "$as_me:$LINENO: result: $mgp_use_xft2" >&5
- echo "${ECHO_T}$mgp_use_xft2" >&6
+ 		shlib=`echo $dir/lib/libttf.$SHLIBEXT* | head -n 1 | sed -e 's/.*\///'`
+@@ -5384,7 +5384,7 @@ echo "${ECHO_T}$mgp_use_vflib" >&6; }
+ if test "$mgp_use_vflib" = "yes"; then
+ 	{ echo "$as_me:$LINENO: checking for VFlib library/header" >&5
+ echo $ECHO_N "checking for VFlib library/header... $ECHO_C" >&6; }
+-	for dir in $SEARCHPATH /usr/local/VFlib /usr/local/vflib /usr/local /usr/pkg /usr; do
++	for dir in ${BUILDLINK_DIR}; do
+ 		ac_cv_vf_libname=VFlib
+ 		ac_cv_vf_libdir=no
+ 		ac_cv_vf_hdrdir=no
+@@ -5562,12 +5562,7 @@ fi
+ 	if test -f "$with_vfontcap"; then
+ 		ac_cv_vf_fontcap=$with_vfontcap;
+ 	else
+-		for ac_dir in /usr/local/lib /usr/local/lib/tex \
+-		    /usr/local/lib/VFlib /usr/local/lib/fonts/vf \
+-		    /usr/local/lib /usr/local/etc /etc \
+-		    /usr/local/libdata/vflib /usr/local/share/VFlib \
+-		    /usr/local/share/VFlib/* \
+-		    ../../VFlib* ../VFlib* VFlib*; do
++		for ac_dir in ${prefix}/share/VFlib/*; do
+ 			if test -d $ac_dir -a -f $ac_dir/vfontcap; then
+ 				ac_cv_vf_fontcap=$ac_dir/vfontcap;
+ 				break
+@@ -5609,22 +5604,17 @@ _ACEOF
+ 	fi
+ fi
+ 
+-if type pkg-config > /dev/null 2>&1; then
+-  for pnglib in libpng libpng12 libpng10
+-  do
+-     if pkg-config $pnglib; then
+-       LIBS="$LIBS `pkg-config --libs $pnglib`"
+-       OPTFLAGS="$OPTFLAGS `pkg-config --cflags $pnglib`"
+-       cat >>confdefs.h <<\_ACEOF
++if type pkg-config > /dev/null 2>&1 && pkg-config libpng; then
++  LIBS="$LIBS `pkg-config --libs libpng`"
++  OPTFLAGS="$OPTFLAGS `pkg-config --cflags libpng`"
++  cat >>confdefs.h <<\_ACEOF
+ #define USE_PNG 1
+ _ACEOF
+ 
+        break
+-     fi
+-  done
+ fi
+ if test "$use_libpng" = ""; then
+-for i in $SEARCHPATH /usr/pkg /usr/local /usr; do
++for i in ${BUILDLINK_DIR}; do
+ 	if test -f $i/include/png.h; then
+ 		if test -f $i/lib/libpng.a ; then
+ 			DEPLIBS="$DEPLIBS $i/lib/libpng.a"
+@@ -5779,7 +5769,7 @@ fi
+   done
+ fi
+ 
+-for i in /usr/pkg /usr/local /usr; do
++for i in ${BUILDLINK_DIR}; do
+ 	if test -f $i/include/libmng.h; then
+ 		if test -f $i/lib/libmng.a ; then
+ 			DEPLIBS="$DEPLIBS $i/lib/libmng.a"
+@@ -6193,23 +6183,19 @@ fi
+ { echo "$as_me:$LINENO: result: $mgp_use_xft2" >&5
+ echo "${ECHO_T}$mgp_use_xft2" >&6; }
  if test "$mgp_use_xft2" = "yes"; then
 -  if type pkg-config > /dev/null 2>&1; then
 -     if pkg-config xft; then
@@ -27,60 +87,20 @@ $NetBSD: patch-aa,v 1.10 2004/01/12 15:19:28 wennmach Exp $
  #define USE_XFT2 1
  _ACEOF
  
+ 		mgp_xft2_found="yes";
 -     fi
-   else
- 	echo "$as_me:$LINENO: checking for xft2 and ft2 and fc header.." >&5
- echo $ECHO_N "checking for xft2 and ft2 and fc header..... $ECHO_C" >&6
-@@ -4643,7 +4641,7 @@
- if test "$mgp_use_vflib" = "yes"; then
- 	echo "$as_me:$LINENO: checking for VFlib library/header" >&5
- echo $ECHO_N "checking for VFlib library/header... $ECHO_C" >&6
--	for dir in /usr/local/VFlib /usr/local/vflib /usr/local /usr/pkg /usr; do
+   fi
+   if test "$mgp_xft2_found" != "yes"; then
+ 	{ echo "$as_me:$LINENO: checking for xft2 and ft2 and fc header.." >&5
+ echo $ECHO_N "checking for xft2 and ft2 and fc header..... $ECHO_C" >&6; }
+-	for dir in /usr/include /usr/include/Xft2 /usr/X11R6/include \
+-			    /usr/X11R6/include/freetype2					\
+-				/usr/local/include /usr/include/freetype2; do
 +	for dir in ${BUILDLINK_DIR}; do
- 		ac_cv_vf_libname=VFlib
- 		ac_cv_vf_libdir=no
- 		ac_cv_vf_hdrdir=no
-@@ -4815,6 +4813,7 @@
- 		    /usr/local/lib /usr/local/etc /etc \
- 		    /usr/local/libdata/vflib /usr/local/share/VFlib \
- 		    /usr/local/share/VFlib/* \
-+		    ${prefix}/share/VFlib/* \
- 		    ../../VFlib* ../VFlib* VFlib*; do
- 			if test -d $ac_dir -a -f $ac_dir/vfontcap; then
- 				ac_cv_vf_fontcap=$ac_dir/vfontcap;
-@@ -4857,17 +4856,15 @@
- 	fi
- fi
- 
--if type pkg-config > /dev/null 2>&1; then
--  if pkg-config libpng; then
--     LIBS="$LIBS `pkg-config --libs libpng`"
--     OPTFLAGS="$OPTFLAGS `pkg-config --cflags libpng`"
--     cat >>confdefs.h <<\_ACEOF
-+if type pkg-config > /dev/null 2>&1 && pkg-config libpng; then
-+  LIBS="$LIBS `pkg-config --libs libpng`"
-+  OPTFLAGS="$OPTFLAGS `pkg-config --cflags libpng`"
-+  cat >>confdefs.h <<\_ACEOF
- #define USE_PNG 1
- _ACEOF
- 
--  fi
- else
--  for i in /usr/pkg /usr/local /usr; do
-+  for i in ${BUILDLINK_DIR}; do
- 	if test -f $i/include/png.h; then
- 		if test -f $i/lib/libpng.a ; then
- 			DEPLIBS="$DEPLIBS $i/lib/libpng.a"
-@@ -5010,7 +5007,7 @@
-   done
- fi
- 
--for i in /usr/pkg /usr/local /usr; do
-+for i in ${BUILDLINK_DIR}; do
- 	if test -f $i/include/libmng.h; then
- 		if test -f $i/lib/libmng.a ; then
- 			DEPLIBS="$DEPLIBS $i/lib/libmng.a"
-@@ -5647,7 +5644,7 @@
+ 		if test -f $dir/X11/Xft/Xft.h; then
+ 			ac_cv_xft2_hdrdir="$dir"
+ 		fi
+@@ -6984,7 +6970,7 @@ fi
  		echo 'FATAL: You need libungif to use gif images.  pass proper LIBS to configure.'
  		exit 1
  	fi
@@ -89,9 +109,9 @@ $NetBSD: patch-aa,v 1.10 2004/01/12 15:19:28 wennmach Exp $
  		if test -f $i/include/gif_lib.h; then
  			gif_h_ok=yes
  			OPTFLAGS="$OPTFLAGS -I$i/include"
-@@ -5677,16 +5674,14 @@
- echo "$as_me:$LINENO: result: $mgp_imlib" >&5
- echo "${ECHO_T}$mgp_imlib" >&6
+@@ -7146,16 +7132,14 @@ fi
+ { echo "$as_me:$LINENO: result: $mgp_imlib" >&5
+ echo "${ECHO_T}$mgp_imlib" >&6; }
  if test $mgp_imlib = "yes"; then
 -  if type pkg-config > /dev/null 2>&1; then
 -     if pkg-config imlib; then
@@ -108,9 +128,9 @@ $NetBSD: patch-aa,v 1.10 2004/01/12 15:19:28 wennmach Exp $
  	USE_IMLIB=1
 -     fi
    else
- 	echo "$as_me:$LINENO: checking for Imlib_init in -lImlib" >&5
- echo $ECHO_N "checking for Imlib_init in -lImlib... $ECHO_C" >&6
-@@ -5757,7 +5752,7 @@
+ 	{ echo "$as_me:$LINENO: checking for Imlib_init in -lImlib" >&5
+ echo $ECHO_N "checking for Imlib_init in -lImlib... $ECHO_C" >&6; }
+@@ -7232,7 +7216,7 @@ fi
  		echo 'FATAL: You need libImlib to use Imlib loading.  pass proper LIBS to configure.'
  		exit 1
  	fi
