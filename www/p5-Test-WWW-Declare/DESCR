@@ -1,0 +1,5 @@
+Often in web apps, tests are very dependent on the state set up by
+previous tests. If one test fails (e.g. "follow the link to the
+admin page") then it's likely there will be many more failures.
+The Perl 5 module Test::WWW::Declare module aims to alleviate this
+problem, as well as provide a nicer interface to Test::WWW::Mechanize.
