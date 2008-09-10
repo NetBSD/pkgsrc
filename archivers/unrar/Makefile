@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.55 2007/11/25 23:16:14 wiz Exp $
+# $NetBSD: Makefile,v 1.56 2008/09/10 00:25:14 gdt Exp $
 
 DISTNAME=	unrarsrc-3.7.8
 PKGNAME=	${DISTNAME:S/src//}
@@ -20,6 +20,7 @@ MAKE_FILE=	makefile.unix
 
 LICENSE=	unrar-license
 RESTRICTED=	Do not modify. Do not charge a fee for redistribution.
+NO_BIN_ON_FTP=	${RESTRICTED}
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
