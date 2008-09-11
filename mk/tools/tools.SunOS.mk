@@ -1,4 +1,4 @@
-# $NetBSD: tools.SunOS.mk,v 1.29 2008/08/10 15:17:26 ahoka Exp $
+# $NetBSD: tools.SunOS.mk,v 1.30 2008/09/11 23:00:31 adrianp Exp $
 #
 # System-supplied tools for the Solaris operating system.
 #
@@ -44,7 +44,11 @@ TOOLS_PLATFORM.echo?=		echo			# shell builtin
 TOOLS_PLATFORM.egrep?=		/usr/xpg4/bin/grep -E
 TOOLS_PLATFORM.env?=		/usr/bin/env
 TOOLS_PLATFORM.expr?=		/usr/xpg4/bin/expr
+.if exists(/usr/gnu/bin/false)	# if we are using OpenSolaris
+TOOLS_PLATFORM.false?=		/usr/gnu/bin/false
+.else
 TOOLS_PLATFORM.false?=		false			# shell builtin
+.endif
 TOOLS_PLATFORM.fgrep?=		/usr/xpg4/bin/fgrep
 TOOLS_PLATFORM.file?=		/usr/bin/file
 TOOLS_PLATFORM.find?=		/usr/bin/find
