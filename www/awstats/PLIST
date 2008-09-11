@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/04/07 07:21:00 adam Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/09/11 10:37:11 adam Exp $
 awstats/bin/awstats_buildstaticpages.pl
 awstats/bin/awstats_configure.pl
 awstats/bin/awstats_exportlib.pl
@@ -11,6 +11,7 @@ awstats/cgi-bin/awstats.pl
 awstats/cgi-bin/lang/awstats-al.txt
 awstats/cgi-bin/lang/awstats-ar.txt
 awstats/cgi-bin/lang/awstats-ba.txt
+awstats/cgi-bin/lang/awstats-be.txt
 awstats/cgi-bin/lang/awstats-bg.txt
 awstats/cgi-bin/lang/awstats-br.txt
 awstats/cgi-bin/lang/awstats-ca.txt
@@ -56,11 +57,13 @@ awstats/cgi-bin/lang/awstats-ua.txt
 awstats/cgi-bin/lang/tooltips_f/awstats-tt-br.txt
 awstats/cgi-bin/lang/tooltips_f/awstats-tt-cz.txt
 awstats/cgi-bin/lang/tooltips_f/awstats-tt-en.txt
+awstats/cgi-bin/lang/tooltips_f/awstats-tt-gr.txt
 awstats/cgi-bin/lang/tooltips_f/awstats-tt-is.txt
 awstats/cgi-bin/lang/tooltips_f/awstats-tt-it.txt
 awstats/cgi-bin/lang/tooltips_m/awstats-tt-br.txt
 awstats/cgi-bin/lang/tooltips_m/awstats-tt-en.txt
 awstats/cgi-bin/lang/tooltips_m/awstats-tt-fr.txt
+awstats/cgi-bin/lang/tooltips_m/awstats-tt-gr.txt
 awstats/cgi-bin/lang/tooltips_m/awstats-tt-is.txt
 awstats/cgi-bin/lang/tooltips_m/awstats-tt-it.txt
 awstats/cgi-bin/lang/tooltips_w/awstats-tt-al.txt
@@ -77,6 +80,7 @@ awstats/cgi-bin/lang/tooltips_w/awstats-tt-es.txt
 awstats/cgi-bin/lang/tooltips_w/awstats-tt-fi.txt
 awstats/cgi-bin/lang/tooltips_w/awstats-tt-fr.txt
 awstats/cgi-bin/lang/tooltips_w/awstats-tt-gl.txt
+awstats/cgi-bin/lang/tooltips_w/awstats-tt-gr.txt
 awstats/cgi-bin/lang/tooltips_w/awstats-tt-hu.txt
 awstats/cgi-bin/lang/tooltips_w/awstats-tt-is.txt
 awstats/cgi-bin/lang/tooltips_w/awstats-tt-it.txt
@@ -100,6 +104,7 @@ awstats/cgi-bin/lib/browsers_phone.pm
 awstats/cgi-bin/lib/domains.pm
 awstats/cgi-bin/lib/mime.pm
 awstats/cgi-bin/lib/operating_systems.pm
+awstats/cgi-bin/lib/referer_spam.pm
 awstats/cgi-bin/lib/robots.pm
 awstats/cgi-bin/lib/search_engines.pm
 awstats/cgi-bin/lib/status_http.pm
