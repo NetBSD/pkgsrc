@@ -1,14 +1,14 @@
-$NetBSD: patch-ag,v 1.6 2006/10/07 19:16:57 schwarz Exp $
+$NetBSD: patch-ag,v 1.7 2008/09/11 04:22:50 dholland Exp $
 
---- ../tools/cextract-1.7/xtract.h.orig	2006-10-07 20:26:18.000000000 +0200
-+++ ../tools/cextract-1.7/xtract.h	2006-10-07 20:29:52.000000000 +0200
-@@ -15,7 +15,8 @@
+--- ../tools/cextract-1.7/xtract.h.orig	2005-05-30 10:21:42.000000000 -0400
++++ ../tools/cextract-1.7/xtract.h	2008-09-08 05:20:38.000000000 -0400
+@@ -15,9 +15,7 @@
  #include <stdio.h>
  #include <ctype.h>
  #include <time.h>
 -#ifdef _POSIX_SOURCE
-+#if defined(_POSIX_SOURCE) || defined(__APPLE__)
-+/* Darwin defines malloc() in stdlib.h. */
  #include <stdlib.h>
- #endif /* _POSIX_SOURCE_ */
+-#endif /* _POSIX_SOURCE_ */
  #if __STDC__ 
+ #ifndef VMS
+ #include <unistd.h>
