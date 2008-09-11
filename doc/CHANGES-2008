@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2204 2008/09/11 05:05:23 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2205 2008/09/11 10:29:28 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3711,3 +3711,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Class-Accessor-Named version 0.008 [seb 2008-09-10]
 	Updated www/amaya to 10.0.1 [dholland 2008-09-11]
 	Added devel/cvsutils version 0.2.5 [bjs 2008-09-11]
+	Updated sysutils/estd to 0.6 [adam 2008-09-11]
+	Updated devel/hdf5 to 1.6.7 [adam 2008-09-11]
+	Updated math/octave to 3.0.2 [adam 2008-09-11]
