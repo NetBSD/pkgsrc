@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.16 2008/04/12 22:42:59 jlam Exp $
+@comment $NetBSD: PLIST,v 1.17 2008/09/11 10:27:52 adam Exp $
 bin/gif2h5
 bin/h52gif
 ${PLIST.cxx}bin/h5c++
@@ -31,7 +31,6 @@ include/H5FDpublic.h
 include/H5FDsec2.h
 include/H5FDsrb.h
 include/H5FDstdio.h
-include/H5FDstream.h
 include/H5Fpublic.h
 include/H5Gpublic.h
 include/H5HGpublic.h
