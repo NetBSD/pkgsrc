@@ -1,0 +1,13 @@
+SQL Sharp for GTK# is a GUI client for entering and running SQL commands and
+scripts. Database objects, such as, tables and table columns can be browsed.
+
+Databases are supported via their providers listed in the sqlsharpgtk.exe.config
+file. This includes:
+MySQL
+PostgreSQL
+Microsoft SQL Server
+Oracle
+Sybase ASE
+SQL Lite
+ODBC
+Firebird SQL
