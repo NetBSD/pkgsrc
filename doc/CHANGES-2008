@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2212 2008/09/11 21:59:47 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2213 2008/09/11 22:36:30 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3731,3 +3731,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-B-Utils to 0.06 [he 2008-09-11]
 	Updated devel/p5-Compress-Raw-Zlib to 2.015 [he 2008-09-11]
 	Updated chat/ircd-hybrid to 7.2.3nb2 [wiz 2008-09-11]
+	Updated devel/p5-String-Format to 1.14 [he 2008-09-11]
+	Updated databases/p5-DBI-Shell to 11.95 [he 2008-09-11]
+	Updated net/p5-Net-Daemon to 0.43 [he 2008-09-11]
+	Updated devel/p5-Safe-Hole to 0.10 [he 2008-09-11]
