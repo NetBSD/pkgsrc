@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.272 2008/09/11 11:54:15 he Exp $
+# $NetBSD: Makefile,v 1.273 2008/09/11 13:13:54 kefren Exp $
 #
 
 COMMENT=	Databases
@@ -247,6 +247,7 @@ SUBDIR+=	sqlite3-tcl
 SUBDIR+=	sqlitebrowser
 SUBDIR+=	sqlitemanager
 SUBDIR+=	sqlrelay
+SUBDIR+=	sqlsharpgtk
 SUBDIR+=	sqsh
 SUBDIR+=	sqsh-motif
 SUBDIR+=	sqsh-x11
