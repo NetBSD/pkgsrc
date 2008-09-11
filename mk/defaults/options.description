@@ -338,6 +338,19 @@ spamassassin-test-prefork	Enable spamd prefork test (kills processes containing 
 speex			Enable speex support.
 spf			Enable Sender Policy Framework support.
 sqlite			Enable SQLite support.
+squid-arp-acl		Enable use of ARP ACL lists (ether address).
+squid-backend-aufs	Enable use of with Posix AIO.
+squid-backend-coss	Enable use of COSS I/O with Posix AIO.
+squid-backend-diskd	Enable use of diskd process to write to cache.
+squid-backend-null	Enable use of null backend; using only memory.
+squid-backend-ufs	Enable use of UFS (Unix File System).
+squid-carp		Enable use of CARP (Cache Array Routing Protocol).
+squid-ipf		Enable use of transparent proxy with IP Filter.
+squid-ldap-helper	Enable use of LDAP helper support.
+squid-netfilter		Enable use of transparent proxy with Linux Net Filter.
+squid-pam-helper	Enable use of PAM helper support.
+squid-pf		Enable use of transparent proxy with Packet Filter.
+squid-unlinkd		Enable use of unlinkd.
 squirrelmail-japanese	Add experimental Japanese fix to squirrelmail.
 squirrelmail-lite	Add experimental none-frame support to squirrelmail.
 ssl			Enable SSL support.
@@ -372,6 +385,7 @@ unrealircd-showlistmodes	Show the modes a channel has set in the /list output.
 unrealircd-shunnotices	Notify a user when they are no longer shunned.
 unrealircd-topicisnuhost	/topic command to show the nick!user@host of the person who set the topic.
 unrealircd-ziplinks	Compress data before transmitting it between servers.
+vflib			Enable support for Japanese vector font library.
 via-padlock		Enable support for the VIA PadLock Security Engine.
 viewvc-php		Use php to colorize .php and .inc files.
 vorbis			Enable Ogg Vorbis support.
@@ -388,6 +402,7 @@ winbind			Enable name-service switch daemon support using Windows Servers.
 wnn4			Use wnn for Kana-to-Kanji conversion.
 x11			Enable X11 support.
 xaw			Enable Xaw support.
+xft2			Enable Xft support.
 xblast-mini		Use a 480x392 window instead a 960x784 window in xblast
 xlockmore-allow-root	Allow root to get access.
 xlockmore-dpms		Use DPMS.
