@@ -1,13 +1,13 @@
-$NetBSD: patch-ai,v 1.1 2006/10/07 19:16:57 schwarz Exp $
+$NetBSD: patch-ai,v 1.2 2008/09/11 04:22:50 dholland Exp $
 
---- ../amaya/Makefile.in.orig	2006-10-07 20:38:11.000000000 +0200
-+++ ../amaya/Makefile.in	2006-10-07 20:38:40.000000000 +0200
-@@ -615,7 +615,7 @@
- 	fi)
+--- ../batch/script_install_macosxbundle.in~	2007-03-29 09:24:04.000000000 -0400
++++ ../batch/script_install_macosxbundle.in	2008-09-08 04:50:37.000000000 -0400
+@@ -44,7 +44,7 @@ fi
+ $ECHO "-- Creating a MacOSX bundle for $AMAYA_INSTALLDIR into $PREFIX/Amaya.app --"
  
  # MACOSX bundelization
--	@(if test $(AMAYAOS) = "MACOSX" ; then \
-+	@(if test $(AMAYAOS) = "XXXXXX" ; then \
- 			$(RM) -r $(prefix)/Amaya.app ; \
- 			$(MKDIR) $(prefix)/Amaya.app ; \
- 			$(MKDIR) $(prefix)/Amaya.app/Contents ; \
+-if test $AMAYAOS = "MACOSX" ; then
++if test $AMAYAOS = "XXXXXX" ; then
+   $RM -r $PREFIX/Amaya.app
+   $MKDIR $PREFIX/Amaya.app
+   $MKDIR $PREFIX/Amaya.app/Contents

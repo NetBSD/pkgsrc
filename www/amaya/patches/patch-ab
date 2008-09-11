@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.12 2005/07/14 08:06:58 adam Exp $
+$NetBSD: patch-ab,v 1.13 2008/09/11 04:22:50 dholland Exp $
 
---- ../configure.orig	2005-07-12 13:50:46.000000000 +0000
-+++ ../configure
-@@ -4944,7 +4944,7 @@ done
+--- ../configure.orig	2008-01-31 09:07:46.000000000 -0500
++++ ../configure	2008-09-09 20:44:33.000000000 -0400
+@@ -4939,7 +4939,7 @@ done
  
  
  
@@ -11,12 +11,37 @@ $NetBSD: patch-ab,v 1.12 2005/07/14 08:06:58 adam Exp $
  do
  as_ac_Header=`echo "ac_cv_header_$ac_header" | $as_tr_sh`
  if eval "test \"\${$as_ac_Header+set}\" = set"; then
-@@ -13927,8 +13927,6 @@ if test "$with_debug" = "yes" ; then
+@@ -13574,11 +13574,11 @@ echo "$as_me: error: wxWidgets library s
+     #   --enable-unicode        compile wxString with Unicode support
+     #   --with-gtk              use GTK+
+     #   --with-opengl           use OpenGL (or Mesa)
+-    WXCONFIGURE_OPTION="--build=$build_alias --host=$host_alias --target=$target_alias --with-opengl --with-gtk --enable-gtk2 --enable-unicode --enable-ipc --disable-shared  --with-libpng=builtin --with-libjpeg=builtin --with-libtiff=builtin  --with-libxpm=builtin $WXCONFIGURE_TUNNING_OPTION"
++    WXCONFIGURE_OPTION="--build=$build_alias --host=$host_alias --target=$target_alias --with-opengl --with-gtk --enable-gtk2 --enable-unicode --enable-ipc --disable-shared  --with-libpng=sys --with-libjpeg=sys --with-libtiff=sys  --with-libxpm=sys --disable-precomp-headers $WXCONFIGURE_TUNNING_OPTION"
+   fi
+   if test "$AMAYAOS" = "MACOSX" ; then
+     # MACOSX
+-    WXCONFIGURE_OPTION="--with-opengl --disable-shared --disable-tga --enable-unicode --with-libpng=builtin --with-libjpeg=builtin"
++    WXCONFIGURE_OPTION="--with-opengl --disable-shared --disable-tga --enable-unicode --with-libpng=sys --with-libjpeg=sys --with-libtiff=sys --with-libxpm=sys"
+   fi
+   if test $with_wxdebug = yes ; then
+     WXCONFIGURE_OPTION="$WXCONFIGURE_OPTION --enable-debug"
+@@ -13696,8 +13696,8 @@ if test "$with_debug" = "yes" ; then
    CXXFLAGS="-g"
  else
    with_debug="no"
 -  CFLAGS="-O2"
 -  CXXFLAGS="-O2"
++  #CFLAGS="-O2"
++  #CXXFLAGS="-O2"
  fi
  
  if test "${CC}" = "gcc" ; then
+@@ -14510,7 +14510,7 @@ if test "${VPATHOPT}" = "" ; then
+ 	VPATHOPT="VPATH"
+ fi
+ 
+-AMAYA_INSTALLDIR="Amaya"
++AMAYA_INSTALLDIR="share/Amaya"
+ 
+ 
+ 

@@ -1,22 +1,13 @@
-$NetBSD: patch-ae,v 1.9 2006/04/20 22:54:53 wiz Exp $
+$NetBSD: patch-ae,v 1.10 2008/09/11 04:22:50 dholland Exp $
 
---- ../thotlib/image/pnghandler.c.orig	2005-05-31 11:50:35.000000000 +0200
-+++ ../thotlib/image/pnghandler.c
-@@ -217,8 +217,6 @@ static unsigned char *ReadPng (FILE *pfF
-     png_read_end(png_ptr, NULL);
-     TtaFreeMemory (ppbRowPointers);
-     ppbRowPointers = NULL; 
--    /* clean up after the read, and free any memory allocated */
--    png_read_destroy (png_ptr, info_ptr, (png_info*) NULL);
-     /* Free all of the memory associated with the png_ptr and info_ptr */
-     png_destroy_read_struct (&png_ptr, &info_ptr, (png_infopp)NULL);
-     return pixels;
-@@ -586,8 +584,6 @@ static unsigned char *ReadPng (FILE *inf
-       *bg = -1;
+--- ../thotlib/image/pnghandler.c~	2007-03-02 05:33:21.000000000 -0500
++++ ../thotlib/image/pnghandler.c	2008-09-08 04:47:23.000000000 -0400
+@@ -587,7 +587,7 @@ static unsigned char *ReadPng (FILE *inf
      }
  
--  /* clean up after the read, and free any memory allocated */
+   /* clean up after the read, and free any memory allocated */
 -  png_read_destroy (png_ptr, info_ptr, (png_info*) NULL);
++  //png_read_destroy (png_ptr, info_ptr, (png_info*) NULL);
    /* Free all of the memory associated with the png_ptr and info_ptr */
    png_destroy_read_struct (&png_ptr, &info_ptr, (png_infopp)NULL);
    /* free the structures */
