@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2208 2008/09/11 12:12:41 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2209 2008/09/11 13:15:29 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3717,3 +3717,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/awstats to 6.8 [adam 2008-09-11]
 	Updated www/drraw to 2.2a5 [kleink 2008-09-11]
 	Updated net/xorp to 1.5 [obache 2008-09-11]
+	Added databases/sqlsharpgtk version 0.4 [kefren 2008-09-11]
