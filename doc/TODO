@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7531 2008/09/11 12:04:52 kleink Exp $
+$NetBSD: TODO,v 1.7532 2008/09/11 12:13:48 obache Exp $
 
 Suggested new packages
 ======================
@@ -1433,7 +1433,6 @@ Suggested package updates
 	o xmp-2.5.1 [pkg/38499]
 	o xmule-1.12.2
 	o xnap-2.5r3
-	o xorp-1.5 [pkg/39503]
 	o xpad-2.13
 	o xpuyopuyo-0.9.8
 	o xrmap-anthems-1.2
