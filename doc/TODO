@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7532 2008/09/11 12:13:48 obache Exp $
+$NetBSD: TODO,v 1.7533 2008/09/11 13:31:02 adam Exp $
 
 Suggested new packages
 ======================
@@ -499,7 +499,6 @@ Suggested package updates
 	o bzflag-2.0.10
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
-	o cairomm-1.6.4
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o capistrano-2.4.3
