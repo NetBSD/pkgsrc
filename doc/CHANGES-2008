@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2202 2008/09/10 23:52:38 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2203 2008/09/11 04:23:25 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3709,3 +3709,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added databases/p5-DBIx-Class-TimeStamp version 0.06 [seb 2008-09-10]
 	Added www/p5-Test-WWW-Declare version 0.01 [seb 2008-09-10]
 	Added devel/p5-Class-Accessor-Named version 0.008 [seb 2008-09-10]
+	Updated www/amaya to 10.0.1 [dholland 2008-09-11]
