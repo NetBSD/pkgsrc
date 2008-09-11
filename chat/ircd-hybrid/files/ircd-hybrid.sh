@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: ircd-hybrid.sh,v 1.4 2007/02/01 23:19:56 wiz Exp $
+# $NetBSD: ircd-hybrid.sh,v 1.5 2008/09/11 21:59:33 wiz Exp $
 #
 # PROVIDE: ircdhybrid
 # REQUIRE: DAEMON
@@ -16,6 +16,7 @@ piddir="@VARBASE@/run/ircd-hybrid"
 pidfile="$piddir/ircd.pid"
 command="@PREFIX@/bin/ircd"
 conffile="@PKG_SYSCONFDIR@/ircd.conf"
+command_args="-configfile $conffile"
 required_files="$conffile"
 ircdhybrid_user="@IRCD_HYBRID_IRC_USER@"
 ircdhybrid_group="@IRCD_HYBRID_IRC_GROUP@"
