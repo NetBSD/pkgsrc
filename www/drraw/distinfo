@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.4 2007/06/03 16:40:48 kleink Exp $
+$NetBSD: distinfo,v 1.5 2008/09/11 12:03:20 kleink Exp $
 
-SHA1 (drraw-2.2a4.tgz) = 29888b8cadf157f59cfb26e41f96cc56ba61db71
-RMD160 (drraw-2.2a4.tgz) = 1c08296a1b4fa72ec9af8f3c099155e07745d536
-Size (drraw-2.2a4.tgz) = 51737 bytes
+SHA1 (drraw-2.2a5.tar.gz) = e611b069f9f1f0f3f0db844df4dd9652014c09e7
+RMD160 (drraw-2.2a5.tar.gz) = 38454b559836fad43b32a60878ae24f03072b429
+Size (drraw-2.2a5.tar.gz) = 52892 bytes
 SHA1 (patch-aa) = d6d9ac805ff302ea2f3570014e1d2146ec3040d6
