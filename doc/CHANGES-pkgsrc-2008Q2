@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.64 2008/09/10 11:18:39 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.65 2008/09/11 12:23:30 ghen Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -157,3 +157,5 @@ Pullup - ticket #2523 - requested by is
 tk: make this package work with modular X.org
 Pullup ticket #2524 - requested by martti
 rrdtool: update package to avoid data corruption
+Pullup ticket 2527 - requested by wiz
+security update for libxml2
