@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.47 2008/09/07 23:55:36 ahoka Exp $
+# $NetBSD: Makefile,v 1.48 2008/09/11 18:21:49 ahoka Exp $
 #
 
 DISTNAME=	transcode-1.0.6
@@ -19,7 +19,7 @@ USE_LANGUAGES=	c c++
 CONFIGURE_ENV+=		PATH_TO_AWK=${AWK:Q}
 CONFIGURE_ARGS+=	--enable-libpostproc
 CONFIGURE_ARGS+=	\
-	--with-libavcodec-prefix=${BUILDLINK_PREFIX.ffmpeg-devel}
+	--with-libavcodec-prefix=${BUILDLINK_PREFIX.ffmpeg}
 CONFIGURE_ARGS+=	--enable-oss
 CONFIGURE_ARGS+=	--disable-xio
 CONFIGURE_ARGS+=	--enable-ogg
