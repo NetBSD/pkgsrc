@@ -1,13 +1,13 @@
-$NetBSD: patch-aa,v 1.22 2005/09/05 07:37:50 recht Exp $
+$NetBSD: patch-aa,v 1.22.26.1 2008/09/11 12:22:36 ghen Exp $
 
---- Makefile.in.orig	2005-09-04 23:50:49.000000000 +0200
-+++ Makefile.in	2005-09-05 08:32:11.000000000 +0200
-@@ -554,7 +554,7 @@
+--- Makefile.in.orig	2008-08-30 16:50:47.000000000 +0200
++++ Makefile.in
+@@ -657,7 +657,7 @@ pkgconfig_DATA = libxml-2.0.pc
  #
  BASE_DIR = $(datadir)/doc
  DOC_MODULE = libxml2-$(VERSION)
 -EXAMPLES_DIR = $(BASE_DIR)/$(DOC_MODULE)/examples
 +EXAMPLES_DIR = $(datadir)/examples/libxml2
- all: config.h
- 	$(MAKE) $(AM_MAKEFLAGS) all-recursive
  
+ #
+ # Coverage support, largely borrowed from libvirt
