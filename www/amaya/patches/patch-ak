@@ -1,0 +1,43 @@
+$NetBSD: patch-ak,v 1.1 2008/09/11 04:22:50 dholland Exp $
+
+--- ../amaya/Makefile.in.orig	2008-02-05 05:31:51.000000000 -0500
++++ ../amaya/Makefile.in	2008-09-08 15:33:36.000000000 -0400
+@@ -17,7 +17,7 @@ INCLUDES= -DHAVE_CONFIG_H $(AMAYA_INCLUD
+ LIBS	=  $(AMAYA_ANNOT_LIBS) $(AMAYA_DAV_LIBS) \
+ 	   @AMAYA_RAPTOR_LIBS@ \
+ 	   $(AMAYA_MATH_LIBS) $(AMAYA_GRAPH_LIBS) \
+-           -L../thotlib -L.. -lThotEditor \
++           ../thotlib/libThotEditor.a \
+           $(AMAYA_OPTION_EXTRA_LIBS) $(IMGLIBS) $(EXPAT_LIBRARIES) \
+ 	  $(AMAYA_LIBWWW_LIBS) \
+ 	  @LIBS@ $(GL_LIBRARIES) $(GTK_GL_LIBRARIES) $(FREETYPE_LIBRARIES) $(XFT_LIBRARIES) \
+@@ -73,14 +73,14 @@ force :
+ ../thotlib/libThotEditor.a : force
+ 	@(cd ../thotlib ; $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" libThotEditor)
+ 
+-../libjpeg.a : @MAKEJPEG@ force
+-	@(cd ../libjpeg ; $(MAKE) CC="$(CC)" CFLAGS="-O -x c")
++#../libjpeg.a : @MAKEJPEG@ force
++#	@(cd ../libjpeg ; $(MAKE) CC="$(CC)" CFLAGS="-O -x c")
+ 
+-../libpng.a : @MAKEPNG@ force
+-	@(cd ../libpng ; $(MAKE) CC="$(CC)" CFLAGS="-O -x c")
++#../libpng.a : @MAKEPNG@ force
++#	@(cd ../libpng ; $(MAKE) CC="$(CC)" CFLAGS="-O -x c")
+ 
+-../libz.a : @MAKEPNG@ force
+-	@(cd ../libpng/zlib ; $(MAKE) CC="$(CC)" CFLAGS="-O -x c")
++#../libz.a : @MAKEPNG@ force
++#	@(cd ../libpng/zlib ; $(MAKE) CC="$(CC)" CFLAGS="-O -x c")
+ 
+ ../tools/mkdep/mkdep : 
+ 	@(cd ../tools/mkdep ; $(MAKE) CC="$(CC)" CFLAGS="-O -x c")
+@@ -169,7 +169,7 @@ AMAYA_LIBS= ../thotlib/libThotEditor.a \
+             libCSS.a $(AMAYA_OPTION_LIBS) \
+              $(WX_LINKDEPS)
+ 
+-HTML2THOT_LIBS= -L../thotlib/ -lThotKernel -L.. -lz
++HTML2THOT_LIBS= ../thotlib/libThotKernel.a -lz
+ 
+ amaya_schemas : compHTML compHTMLP compHTMLT compTextFile  compTextFileP compTextFileT compXLink compXLinkP compXLinkT compXML compXMLP compXMLT compHTMLA compTextFileA compXLinkA compXMLA $(svg_schema) $(math_schema) $(annot_schema) compEDITORA $(template_schema)
+ 

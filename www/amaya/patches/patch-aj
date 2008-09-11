@@ -1,0 +1,208 @@
+$NetBSD: patch-aj,v 1.1 2008/09/11 04:22:50 dholland Exp $
+
+--- ../Makefile.in.orig	2007-12-06 08:09:56.000000000 -0500
++++ ../Makefile.in	2008-09-08 14:19:26.000000000 -0400
+@@ -37,44 +37,44 @@ force :
+ 
+ batch: rebuild force
+ 	@(if test -d batch ; then cd batch ; \
+-	  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" ; fi)
++	  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" ; fi) || exit 1
+ 
+ tools: rebuild force
+ 	@(if test -d tools ; then cd tools ; \
+-	  $(MAKE) CC="$(CC)" CFLAGS="-O -x c" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" all ; fi)
++	  $(MAKE) CC="$(CC)" CFLAGS="-O -x c" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" all ; fi) || exit 1
+ 
+ thotlib: rebuild force
+ 	@(if test -d thotlib ; then cd thotlib ; \
+-	  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" all ; fi)
++	  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" all ; fi) || exit 1
+ 
+ amaya_prog: rebuild force bin/str
+ 	@(if test -d amaya ; then cd amaya ; \
+-	  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" amaya ; fi)
++	  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" amaya ; fi) || exit 1
+ 
+ wxwidgets: rebuild force
+ 	@(if test -d "$(WX_BUILDDIR)" ; then cd "$(WX_BUILDDIR)" ; \
+-	  $(MAKE) ; fi)
++	  $(MAKE) ; fi) || exit 1
+ 
+ gl: rebuild force
+ 	@(if test -d "$(GL_BUILDDIR)" ; then cd "$(GL_BUILDDIR)" ; \
+-	  $(MAKE) ; fi)
++	  $(MAKE) ; fi) || exit 1
+ 
+ print_prog: rebuild force bin/str
+ 	@(if test -d thotlib ; then cd thotlib ; \
+-  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" print ; fi)
++  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" print ; fi) || exit 1
+ 
+ all : rebuild
+ 	@(for dir in $(EXTRA_SUBDIRS) $(SUBDIRS) ;\
+ 	  do if test -d $$dir ; then cd $$dir ; \
+-	  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" all ; \
+-	  cd .. ; fi ;done )
++	  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" all || exit 1; \
++	  cd .. ; fi ;done ) || exit 1
+ 
+ clean : rebuild
+ 	$(RM) libpng.a libz.a libjpeg.a
+ 	@(for dir in $(SUBDIRS) $(EXTRA_SUBDIRS) ;\
+ 	  do if test -d $$dir ; then cd $$dir ; \
+-	  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" clean ; \
+-	  cd .. ; fi ;done )
++	  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" clean || exit 1; \
++	  cd .. ; fi ;done ) || exit 1
+ 
+ reallyclean : clean
+ 	$(RM) config.cache config.h config.log config.status
+@@ -87,14 +87,14 @@ tempclean : 
+ install : rebuild
+ 	@(for dir in $(SUBDIRS) ;\
+ 	  do if test -d $$dir ; then cd $$dir ; \
+-	  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" install ; \
+-	  cd .. ; fi ;done )
++	  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" install || exit 1; \
++	  cd .. ; fi ;done ) || exit 1
+ 
+ uninstall : 
+ 	@(for dir in $(SUBDIRS) ;\
+ 	  do if test -d $$dir ; then cd $$dir ; \
+-	  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" uninstall ; \
+-	  cd .. ; fi ;done )
++	  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" uninstall || exit 1; \
++	  cd .. ; fi ;done ) || exit 1
+ 
+ update :
+ 	@(cd $(THOTDIR) ; cvs update -dP)
+@@ -105,26 +105,26 @@ commit :
+ 	@(cd $(THOTDIR) ; cvs commit)
+ 
+ tools/mkdep/mkdep :
+-	@(cd tools/mkdep ; $(MAKE) CC="$(CC)" CFLAGS="-O -x c" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" mkdep)
++	@(cd tools/mkdep ; $(MAKE) CC="$(CC)" CFLAGS="-O -x c" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" mkdep) || exit 1
+ 
+ depend depends : rebuild tools/mkdep/mkdep
+ 	@(for dir in $(SUBDIRS) ;\
+ 	  do if test -d $$dir ; then cd $$dir ; \
+-	  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" depend ; \
+-	  cd .. ; fi ;done )
++	  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" depend || exit 1; \
++	  cd .. ; fi ;done ) || exit 1
+ 
+ bin/cextract :
+-	@(cd tools/cextract-$(CEXTRACT_VER) ; $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" cextract)
++	@(cd tools/cextract-$(CEXTRACT_VER) ; $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" cextract) || exit 1
+ 
+ proto : rebuild bin/cextract
+ 	@(for dir in $(SUBDIRS) ;\
+ 	  do if test -d $$dir ; then cd $$dir ; \
+-	  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" proto ; \
+-	  cd .. ; fi ;done )
++	  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS)" CXX="$(CXX)" CXXFLAGS="$(CXXFLAGS)" proto || exit 1; \
++	  cd .. ; fi ;done ) || exit 1
+ 
+ mkid : 
+ 	@(echo rebuilding $(THOTDIR)/ID reference file)
+-	@(cd $(THOTDIR); mkid --lang-map=makes/id-lang.map . classes/org/w3c/*)
++	@(cd $(THOTDIR); mkid --lang-map=makes/id-lang.map . classes/org/w3c/*) || exit 1
+ 
+ #
+ # Rules to rebuild the libWWW package
+@@ -150,11 +150,11 @@ AMAYA_LIBWWW_STANDARD_LIBS = \
+ 
+ libwww_config :
+ 	@(if [ ! -d $(THOTDIR)/../$(LIBWWW) ] ; then \
+-	      $(ECHO) "Error libwww dir not found at $(THOTDIR)/../$(LIBWWW)" ; \
+-	  fi)
++	      $(ECHO) "Error libwww dir not found at $(THOTDIR)/../$(LIBWWW)" ; exit 1; \
++	  fi) || exit 1
+ 	@(if [ ! -d $(LIBWWW) ] ; then \
+ 		$(MKDIR) $(LIBWWW) ; \
+-          fi)
++          fi) || exit 1
+ #MKP: adding --with-dav
+ 	@(localdir=`pwd` ; libwwwdir="$$localdir/../../$(LIBWWW)" ; \
+ 	  cd $(LIBWWW) ; unset LANG; \
+@@ -170,7 +170,7 @@ libwww_config :
+ 		$(SED) "s/\(\#define HAVE_APPKIT_APPKIT_H 1\)/\/* \1 *\//" \
+ 			wwwconf.h.orig > wwwconf.h ; \
+                 $(ECHO) "wwwconf.h patched !" ; \
+-	  fi)
++	  fi) || exit 1
+ 
+ libwww_make_module_md5 \
+ libmd5 : force
+@@ -178,7 +178,7 @@ libmd5 : force
+ 		 cd $(LIBWWW)/modules/md5 ; \
+ 		 $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS) $(EXPAT_OPTIONS)" \
+ 		 CPPFLAGS="$(CPPFLAGS) $(THOTINCLUDES) $(EXTRA_INCLUDES)" \
+-	        	    libmd5.la)
++	        	    libmd5.la) || exit 1
+ 
+ libwww_install_module_md5 : force
+ 		@(if [ -e libmd5.a -a ! -L libmd5.a ] ; then \
+@@ -194,7 +194,7 @@ libexpat : force
+ 		  cd $(LIBWWW)/modules/expat/ ; \
+ 		  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS) $(EXPAT_OPTIONS) -DXML_AMAYA" \
+ 		  CPPFLAGS="$(CPPFLAGS)" \
+-	        	    )
++	        	    ) || exit 1
+ 
+ libwww_install_module_expat : force
+ 		@(if [ -e libexpat.a -a ! -L libexpat.a ] ; then \
+@@ -230,7 +230,7 @@ $(AMAYA_LIBWWW_STANDARD_LIBS) : force
+ 		  cd $(LIBWWW)/Library/src ; \
+ 		  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS) $(EXPAT_OPTIONS)" \
+ 		  CPPFLAGS="$(CPPFLAGS) $(THOTINCLUDES) $(EXTRA_INCLUDES)" \
+-			     $$all_libs)
++			     $$all_libs) || exit 1
+ 
+ libwww_install_standard : force
+ 		@(for lib in $(AMAYA_LIBWWW_STANDARD_LIBS) ; do \
+@@ -299,7 +299,7 @@ redland_config: @MAKEREDLAND@ force
+ redland_make: @MAKEREDLAND@ force
+ 	@(cd $(REDLAND) ; \
+ 	  $(MAKE) CC="$(CC)" CFLAGS="$(CFLAGS) -DLIBRDF_INTERNAL=1"; \
+-	)
++	) || exit 1
+ 
+ redland: @MAKEREDLAND@ redland_config redland_make
+ 	@($(ECHO) "redland is installed")
+@@ -308,25 +308,25 @@ redland: @MAKEREDLAND@ redland_config re
+ # Rules to rebuild the libjpeg package
+ #
+ 
+-libjpeg libjpeg.a : force
+-	@($(RM) $(THOTDIR)/libjpeg/*.o)
+-	@(cd libjpeg ; $(MAKE) CC="$(CC)" CFLAGS="-O -x c")
++#libjpeg libjpeg.a : force
++#	@($(RM) $(THOTDIR)/libjpeg/*.o)
++#	@(cd libjpeg ; $(MAKE) CC="$(CC)" CFLAGS="-O -x c") || exit 1
+ 
+ #
+ # Rules to rebuild the libpng package
+ #
+ 
+-libpng libpng.a : force
+-	@($(RM) $(THOTDIR)/libpng/*.o)
+-	@(cd libpng ; $(MAKE) CC="$(CC)" CFLAGS="-O -x c")
++#libpng libpng.a : force
++#	@($(RM) $(THOTDIR)/libpng/*.o)
++#	@(cd libpng ; $(MAKE) CC="$(CC)" CFLAGS="-O -x c") || exit 1
+ 
+ #
+ # Rules to rebuild the libpng package
+ #
+ 
+-libz libz.a : force
+-	@($(RM) $(THOTDIR)/libpng/libz/*.o)
+-	@(cd libpng/zlib ; $(MAKE) CC="$(CC)" CFLAGS="-O -x c")
++#libz libz.a : force
++#	@($(RM) $(THOTDIR)/libpng/libz/*.o)
++#	@(cd libpng/zlib ; $(MAKE) CC="$(CC)" CFLAGS="-O -x c") || exit 1
+ 
+ #
+ # This section try to maintain the Makefile(s) up-to-date in
