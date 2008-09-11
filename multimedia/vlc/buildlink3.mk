@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.21 2008/02/25 16:38:00 sborrill Exp $
+# $NetBSD: buildlink3.mk,v 1.22 2008/09/11 18:21:07 ahoka Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 VLC_BUILDLINK3_MK:=	${VLC_BUILDLINK3_MK}+
@@ -38,7 +38,7 @@ pkgbase:= vlc
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../misc/libcdio/buildlink3.mk"
-.include "../../multimedia/ffmpeg-devel/buildlink3.mk"
+.include "../../multimedia/ffmpeg/buildlink3.mk"
 .include "../../multimedia/libdvdplay/buildlink3.mk"
 .include "../../multimedia/libdvbpsi/buildlink3.mk"
 .include "../../multimedia/libdvdnav/buildlink3.mk"
