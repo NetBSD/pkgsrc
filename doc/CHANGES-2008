@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2206 2008/09/11 10:38:03 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2207 2008/09/11 12:04:28 kleink Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3715,3 +3715,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/hdf5 to 1.6.7 [adam 2008-09-11]
 	Updated math/octave to 3.0.2 [adam 2008-09-11]
 	Updated www/awstats to 6.8 [adam 2008-09-11]
+	Updated www/drraw to 2.2a5 [kleink 2008-09-11]
