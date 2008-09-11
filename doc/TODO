@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7530 2008/09/11 10:38:03 adam Exp $
+$NetBSD: TODO,v 1.7531 2008/09/11 12:04:52 kleink Exp $
 
 Suggested new packages
 ======================
@@ -571,7 +571,6 @@ Suggested package updates
 	o djvulibre-tools-4.1.2
 	o dnstop-20070307
 	o dnstracer-1.9
-	o drraw-2.2a5
 	o drscheme-4.0.2
 	o drupal-6.4
 	o duplicity-0.5.00
