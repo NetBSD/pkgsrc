@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/11 05:01:08 bjs Exp $
+
+--- Makefile.in.orig	2005-03-28 23:24:38.000000000 -0500
++++ Makefile.in
+@@ -137,11 +137,9 @@ noinst_DATA = cvsutils.spec
+ 
+ # The idea of the scripts below in taken from Autoconf
+ editsh = sed \
+-	-e '1s,/bin/sh,$(SHELL),g' \
+ 	-e 's,@''VERSION''@,$(VERSION),g'
+ 
+ editpl = sed \
+-	-e '1s,/usr/bin/perl,$(PERL),g' \
+ 	-e 's,-VERSION-,$(VERSION),g'
+ 
+ all: all-am

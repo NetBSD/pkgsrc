@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/11 05:01:08 bjs Exp $
+
+SHA1 (cvsutils-0.2.5.tar.gz) = 294599ce431be50ad1da7295e8b6a65a17fbf531
+RMD160 (cvsutils-0.2.5.tar.gz) = 98b8af82f1ab61b8fcfe5973af703a25cb992936
+Size (cvsutils-0.2.5.tar.gz) = 79596 bytes
+SHA1 (patch-aa) = 514bbdea8f14c85b1ed25fa2ba4546ab77028577
