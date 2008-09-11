@@ -1,0 +1,125 @@
+$NetBSD: patch-ap,v 1.1 2008/09/11 04:22:50 dholland Exp $
+
+--- ../../wxWidgets/configure.orig	2007-05-14 05:08:25.000000000 -0400
++++ ../../wxWidgets/configure	2008-09-08 06:27:09.000000000 -0400
+@@ -23470,43 +23470,8 @@ ac_compiler_gnu=$ac_cv_c_compiler_gnu
+ 
+ 
+ SEARCH_INCLUDE="\
+-    /usr/local/include        \
+-                              \
+-    /usr/Motif-2.1/include    \
+-    /usr/Motif-1.2/include    \
+-    /usr/include/Motif1.2     \
+-                              \
+-    /usr/dt/include           \
+-    /usr/openwin/include      \
+-                              \
+-    /usr/include/Xm           \
+-                              \
+-    /usr/X11R6/include        \
+-    /usr/X11R6.4/include      \
+-    /usr/X11R5/include        \
+-    /usr/X11R4/include        \
+-                              \
+-    /usr/include/X11R6        \
+-    /usr/include/X11R5        \
+-    /usr/include/X11R4        \
+-                              \
+-    /usr/local/X11R6/include  \
+-    /usr/local/X11R5/include  \
+-    /usr/local/X11R4/include  \
+-                              \
+-    /usr/local/include/X11R6  \
+-    /usr/local/include/X11R5  \
+-    /usr/local/include/X11R4  \
+-                              \
+-    /usr/X11/include          \
+-    /usr/include/X11          \
+-    /usr/local/X11/include    \
+-    /usr/local/include/X11    \
+-                              \
+-    /usr/XFree86/include/X11  \
+-    /usr/pkg/include          \
+-                              \
+-    /usr/openwin/share/include"
++    ${BUILDLINK_DIR}/include  \
++"
+ 
+ echo "$as_me:$LINENO: checking for libraries directory" >&5
+ echo $ECHO_N "checking for libraries directory... $ECHO_C" >&6
+@@ -23596,16 +23561,16 @@ esac
+ echo "$as_me:$LINENO: result: $wx_cv_std_libpath" >&5
+ echo "${ECHO_T}$wx_cv_std_libpath" >&6
+ 
+-SEARCH_LIB="`echo "$SEARCH_INCLUDE" | sed s@include@$wx_cv_std_libpath@g` /usr/$wx_cv_std_libpath"
++SEARCH_LIB="${BUILDLINK_DIR}/lib"
+ 
+ if test "$build" != "$host" -a "$GCC" = yes; then
+                     if cross_root=`$CC -print-prog-name=ld 2>/dev/null`; then
+         cross_root=`dirname $cross_root`
+         cross_root=`dirname $cross_root`
+ 
+-                        SEARCH_LIB=`for x in $SEARCH_LIB; do echo $x; done | sed -ne "s|^/usr|$cross_root|p"`
+-        SEARCH_INCLUDE=`for x in $SEARCH_INCLUDE; do echo $x; done | sed -ne "s|^/usr|$cross_root|p"`
+-        SEARCH_INCLUDE="$SEARCH_INCLUDE $cross_root/include"
++#                        SEARCH_LIB=`for x in $SEARCH_LIB; do echo $x; done | sed -ne "s|^/usr|$cross_root|p"`
++#        SEARCH_INCLUDE=`for x in $SEARCH_INCLUDE; do echo $x; done | sed -ne "s|^/usr|$cross_root|p"`
++#        SEARCH_INCLUDE="$SEARCH_INCLUDE $cross_root/include"
+ 
+                 if test -z "$PKG_CONFIG_PATH"; then
+             PKG_CONFIG_PATH="$cross_root/local/lib/pkgconfig:$cross_root/lib/pkgconfig"
+@@ -23615,7 +23580,7 @@ if test "$build" != "$host" -a "$GCC" = 
+                                 if test -z "$x_includes" -o "$x_includes" = NONE; then
+ 
+ ac_find_includes=
+-for ac_dir in $SEARCH_INCLUDE /usr/include;
++for ac_dir in $SEARCH_INCLUDE;
+   do
+     if test -f "$ac_dir/X11/Intrinsic.h"; then
+       ac_find_includes=$ac_dir
+@@ -30134,7 +30099,7 @@ echo "$as_me: error: Unicode configurati
+ echo $ECHO_N "checking for Motif/Lesstif headers... $ECHO_C" >&6
+ 
+ ac_find_includes=
+-for ac_dir in $SEARCH_INCLUDE /usr/include;
++for ac_dir in $SEARCH_INCLUDE;
+   do
+     if test -f "$ac_dir/Xm/Xm.h"; then
+       ac_find_includes=$ac_dir
+@@ -31685,7 +31650,7 @@ echo "$as_me: WARNING: wxGLCanvas not im
+ echo $ECHO_N "checking for OpenGL headers... $ECHO_C" >&6
+ 
+ ac_find_includes=
+-for ac_dir in $SEARCH_INCLUDE /opt/graphics/OpenGL/include /usr/include;
++for ac_dir in $SEARCH_INCLUDE;
+   do
+     if test -f "$ac_dir/GL/gl.h"; then
+       ac_find_includes=$ac_dir
+@@ -31908,7 +31873,7 @@ if test $ac_cv_header_GL_glu_h = yes; th
+ echo $ECHO_N "checking for -lGL... $ECHO_C" >&6
+ 
+   ac_find_libraries=
+-  for ac_dir in $SEARCH_LIB /opt/graphics/OpenGL/lib;
++  for ac_dir in $SEARCH_LIB;
+   do
+     for ac_extension in a so sl dylib dll.a; do
+       if test -f "$ac_dir/libGL.$ac_extension"; then
+@@ -45541,7 +45506,7 @@ fi
+ 
+ if test "$wxUSE_MAC" = 1 ; then
+     if test "x$wxUSE_UNIVERSAL_BINARY" != xno ; then
+-                        if test "x$wxUSE_UNIVERSAL_BINARY" == xyes; then
++                        if test "x$wxUSE_UNIVERSAL_BINARY" = xyes; then
+             OSX_UNIV_OPTS="-isysroot /Developer/SDKs/MacOSX10.4u.sdk"
+         else
+                                     OSX_UNIV_OPTS=${wxUSE_UNIVERSAL_BINARY:+"-isysroot '$wxUSE_UNIVERSAL_BINARY'"}
+@@ -46566,7 +46531,7 @@ echo "${ECHO_T}$bakefile_cv_gcc31" >&6
+             SHARED_LD_CXX="\${CXX} -dynamiclib -single_module -headerpad_max_install_names -o"
+         fi
+ 
+-        if test "x$GCC" == "xyes"; then
++        if test "x$GCC" = "xyes"; then
+             PIC_FLAG="-dynamic -fPIC"
+         fi
+         if test "x$XLCC" = "xyes"; then
