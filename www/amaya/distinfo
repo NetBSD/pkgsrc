@@ -1,14 +1,19 @@
-$NetBSD: distinfo,v 1.18 2006/10/07 19:16:57 schwarz Exp $
+$NetBSD: distinfo,v 1.19 2008/09/11 04:22:50 dholland Exp $
 
-SHA1 (amaya-fullsrc-9.2.1.tgz) = 1736bc9a7ad997b128fa435bc99594f9f4b60b05
-RMD160 (amaya-fullsrc-9.2.1.tgz) = 74b8ce30c6c85c05b0ab94b6f950f214cbe0f512
-Size (amaya-fullsrc-9.2.1.tgz) = 23112083 bytes
-SHA1 (patch-aa) = daa3b4ad4e00d6e6ca855bb638cc8ec8d2565791
-SHA1 (patch-ab) = 942957562f8b607227812d8b377b4be61685af32
-SHA1 (patch-ac) = 5d9df3fc894f06c981b26d82f216ff223a821954
-SHA1 (patch-ad) = 405499e719944030e131c0815e4472efeed5df64
-SHA1 (patch-ae) = e479ca874e3c2f33545e692997743f85956d9aa6
-SHA1 (patch-af) = f8a60d26788fddd66d65331105e6bfd5fe2873b6
-SHA1 (patch-ag) = fc437e97392f91d26309da3b977add6485b9656c
-SHA1 (patch-ah) = a0ea86df77bc1afa1db9e4f012f25d5c84c2b093
-SHA1 (patch-ai) = cea93adfb159c1a3ddd603d0052cb7a8e46d0365
+SHA1 (amaya-fullsrc-10.0.1.tgz) = a2dcceedaa2c0256f04aaa86e3dc319d4ff26ade
+RMD160 (amaya-fullsrc-10.0.1.tgz) = d1a20a03a18ef3b06cf9dcbab907fb412de0ad6b
+Size (amaya-fullsrc-10.0.1.tgz) = 28608680 bytes
+SHA1 (patch-aa) = 9e4eff617bc0304aa85e711c264ca78ab9578fce
+SHA1 (patch-ab) = 2a745ed9e857482cc0383d082050b02ea3a3333d
+SHA1 (patch-ac) = 6fa5063a186ac8bfbb8763a7914d57a552b4d39c
+SHA1 (patch-ae) = d8748493ab506c8a47c9c57a7c8f9f8d30375940
+SHA1 (patch-ag) = ad4caeca06a5fb3769cfd625d63c1b06ec7f4a84
+SHA1 (patch-ai) = 0d1c9d5f2dc4208fa93adc9abc9b939073719c1e
+SHA1 (patch-aj) = 747e2c3dc8636f3c1f9b51a8533ceee1d13804fe
+SHA1 (patch-ak) = 493e1ca8849571d582201fd0c7f15189c179599a
+SHA1 (patch-al) = 172ab5106ecdc8fac825bcca8e57202010c980a3
+SHA1 (patch-am) = 152800baf4b750dbfe1bfa731313222b471d28ab
+SHA1 (patch-an) = 5d2e98d7046394960d7c172ed7d491ecb0f0992e
+SHA1 (patch-ao) = 34f6b0fe289d966c2a7553799be8bf59426091b4
+SHA1 (patch-ap) = d4ba3426bbeffc5f9f8f30002d4bb75e0c3816c6
+SHA1 (patch-aq) = 3885a77d86fa1c3892a6aab7c9538d119951cd4a
