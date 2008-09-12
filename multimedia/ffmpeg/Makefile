@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.40 2008/09/11 12:08:41 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2008/09/12 12:21:07 ahoka Exp $
 
 DISTNAME=	ffmpeg-${DISTVERSION}
 PKGNAME=	ffmpeg-${DISTVERSION:S/-//g}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_FREEBSD}
 EXTRACT_SUFX=	.tar.bz2
