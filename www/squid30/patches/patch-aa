@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/12 15:05:57 taca Exp $
+
+--- Makefile.in.orig	2008-07-18 19:02:45.000000000 +0900
++++ Makefile.in
+@@ -768,8 +768,8 @@ dist-hook:
+ 	fi
+ 
+ install-pinger:
+-	chown root $(DEFAULT_PINGER) 
+-	chmod 4711 $(DEFAULT_PINGER)
++	chown root $(DESTDIR)$(DEFAULT_PINGER) 
++	chmod 4511 $(DESTDIR)$(DEFAULT_PINGER)
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
