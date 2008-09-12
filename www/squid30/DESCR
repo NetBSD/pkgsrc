@@ -1,0 +1,27 @@
+Squid is a fully-featured HTTP/1.0 proxy which is almost (but not
+quite - we're getting there!) HTTP/1.1 compliant. Squid offers a rich
+access control, authorization and logging environment to develop web
+proxy and content serving applications.
+
+Major new features from Squid 2.6:
+
+* Code converted to C++, with significant internal restructuring and rewrites.
+* ICAP implementation (RFC 3507 and www.icap-forum.org)
+* Edge Side Includes (ESI) implementation (www.esi.org)
+
+This Squid 3.0 is stable release but some functinality lacks from 2.6.
+
+* refresh_stale_hit option. Not yet ported.
+* ability to follow X-Forwarded-For. Not yet ported.
+* Full caching of Vary/ETag using If-None-Match. Only basic Vary cache
+  supported. Not yet ported.
+* Mapping of server error messages. Not yet ported.
+* http_access2 access directive. Not yet ported.
+* Location header rewrites. Not yet ported.
+* wais_relay. Feature dropped as it's equivalent to cache_peer +
+  cache_peer_access.
+* urlgroup. Not yet ported.
+* collapsed forwarding. Not yet ported.
+* stable Windows support. Irregularly maintained.
+
+And COSS backend dosen't supported now.
