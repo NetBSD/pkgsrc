@@ -1,8 +1,10 @@
-# $NetBSD: egg.mk,v 1.5 2008/09/10 16:33:38 epg Exp $
+# $NetBSD: egg.mk,v 1.6 2008/09/12 05:32:38 epg Exp $
 #
 # Common logic to handle Python Eggs
 #
 .include "../../mk/bsd.prefs.mk"
+
+EGG_NAME?=	${DISTNAME}
 
 PYDISTUTILSPKG=	yes
 PY_PATCHPLIST=	yes
