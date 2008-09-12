@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2008/09/08 18:42:21 ahoka Exp $
+# $NetBSD: Makefile,v 1.12 2008/09/12 14:47:39 sborrill Exp $
 #
 
 DISTNAME=		vlc-${VLC_VER}
 PKGNAME=		vlc08-${VLC_VER}
-VLC_VER=		0.8.6f
+VLC_VER=		0.8.6i
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VER}/
 EXTRACT_SUFX=		.tar.bz2
@@ -118,6 +118,7 @@ CONFIGURE_ARGS+=	x_libraries=${PREFIX}/lib
 .include "../../multimedia/libmatroska/buildlink3.mk"
 .include "../../multimedia/libmpeg2/buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
+.include "../../multimedia/x264-devel/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
