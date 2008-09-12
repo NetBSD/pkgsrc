@@ -1,0 +1,10 @@
+GNU libsigsegv is a library for handling page faults in user mode. A page
+fault occurs when a program tries to access a region of memory that is
+currently unavailable. Catching and handling a page fault is a useful
+technique for implementing:
+
+* Pageable virtual memory
+* Memory-mapped access to persistent databases
+* Generational garbage collectors
+* Stack overflow handlers
+* Distributed shared memory
