@@ -1,0 +1,76 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/12 11:09:49 joerg Exp $
+
+--- configure.orig	2008-06-20 11:07:14.000000000 +0200
++++ configure
+@@ -1962,7 +1962,7 @@ _ACEOF
+ 
+     DEFAULT_DEFAULT_wxUSE_MOTIF=1
+   ;;
+-  *-*-freebsd*)
++  *-*-freebsd* | *-*-dragonfly*)
+     USE_BSD=1
+     USE_FREEBSD=1
+     cat >>confdefs.h <<\_ACEOF
+@@ -15805,7 +15805,7 @@ retest_macosx_linking=no
+ 
+ #if test "$wxUSE_MAC" = 1; then
+     if test "x$wxUSE_UNIVERSAL_BINARY" != xno ; then
+-                        if test "x$wxUSE_UNIVERSAL_BINARY" == xyes; then
++                        if test "x$wxUSE_UNIVERSAL_BINARY" = xyes; then
+             # Implicitly turn on the new --with-macosx-sdk using the default
+             # SDK which provides the behavior this option has always had.
+             if test "x$wxUSE_MACOSX_SDK" = "x"; then
+@@ -15887,7 +15887,7 @@ echo $ECHO_N "checking SDK deployment ve
+         MACOSX_SDK_PLIST_VERSION_MIN=`defaults read "$wxUSE_MACOSX_SDK/SDKSettings" buildSettings | grep '^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}[^"]*"\{0,1\}; *$' | sed 's/^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}\([^"]*\)"\{0,1\} *; *$/\1/'`
+ 
+         # If that failed, try again with the new key
+-        if test "x$MACOSX_SDK_PLIST_VERSION_MIN" == "x"; then
++        if test "x$MACOSX_SDK_PLIST_VERSION_MIN" = "x"; then
+ 
+             MACOSX_SDK_PLIST_VERSION_MIN=`defaults read "$wxUSE_MACOSX_SDK/SDKSettings" DefaultProperties | grep '^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}[^"]*"\{0,1\}; *$' | sed 's/^ *"\{0,1\}MACOSX_DEPLOYMENT_TARGET"\{0,1\} *= *"\{0,1\}\([^"]*\)"\{0,1\} *; *$/\1/'`
+ 
+@@ -38671,6 +38671,9 @@ echo "$as_me: WARNING: BeOS threads are 
+                     THREAD_OPTS="-mt $THREAD_OPTS"
+                 fi
+                 ;;
++	  *-*-dragonfly*)
++                THREAD_OPTS="-pthread $THREAD_OPTS"
++		;;
+           *-*-freebsd*)
+                                                 THREAD_OPTS="-kthread lthread $THREAD_OPTS c_r"
+                 ;;
+@@ -38804,7 +38807,7 @@ echo $ECHO_N "checking if more special f
+                                                                                                                 LDFLAGS="-L/usr/lib/threads $LDFLAGS"
+                 flag="-D_THREAD_SAFE"
+                 ;;
+-            *-freebsd*)
++            *-freebsd*|*-*-dragonfly*)
+                 flag="-D_THREAD_SAFE"
+                 ;;
+             *-hp-hpux* )
+@@ -47714,7 +47717,7 @@ echo "${ECHO_T}$bakefile_cv_gcc31" >&6
+             SHARED_LD_CXX="\${CXX} -dynamiclib -single_module -headerpad_max_install_names -o"
+         fi
+ 
+-        if test "x$GCC" == "xyes"; then
++        if test "x$GCC" = "xyes"; then
+             PIC_FLAG="-dynamic -fPIC"
+         fi
+         if test "x$XLCC" = "xyes"; then
+@@ -48281,6 +48284,7 @@ EOF
+ 
+       powerpc-apple-macos* | \
+       *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-k*bsd*-gnu | \
++      *-*-dragonfly* | \
+       *-*-mirbsd* | \
+       *-*-sunos4* | \
+       *-*-osf* | \
+@@ -48324,7 +48328,7 @@ echo "$as_me: error: unknown system type
+ 
+     case "${BAKEFILE_HOST}" in
+       *-*-linux* | *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | \
+-      *-*-k*bsd*-gnu | *-*-mirbsd* )
++      *-*-k*bsd*-gnu | *-*-mirbsd* | *-*-dragonfly*)
+         if test "x$SUNCXX" = "xyes"; then
+             SONAME_FLAG="-h "
+         else

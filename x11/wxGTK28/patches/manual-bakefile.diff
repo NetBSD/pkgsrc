@@ -1,0 +1,228 @@
+diff -ur ../bakefile-0.2.3.orig/rules/autoconf.bkl ./rules/autoconf.bkl
+--- ../bakefile-0.2.3.orig/rules/autoconf.bkl	2008-01-06 15:43:17.000000000 +0100
++++ ./rules/autoconf.bkl	2008-09-08 19:43:18.000000000 +0200
+@@ -195,67 +195,19 @@
+ 
+         <set var="__linkname1">$(__linkname)</set>
+         
+-        <set var="__targetsuf2">
+-            <if cond="USE_SOVERSION=='1' and PLATFORM_MACOSX=='0'">
+-                $(DLLEXT).$(__soversion1)
+-            </if>
+-            <if cond="USE_SOVERSION=='1' and PLATFORM_MACOSX=='1'">
+-                .$(__soversion1)$(DLLEXT)
+-            </if>
+-            <if cond="USE_SOVERSION=='0'">$(DLLEXT)</if>
+-        </set>
++	<set var="__targetsuf2">$(DLLEXT)</set>
+         <set var="__linkname2" eval="0">
+             $(DLLPREFIX)$(__dllname)$(__targetsuf2)
+         </set>
+         
+-        <set var="__targetsuf3">
+-            <if cond="USE_SOVERSION=='1' and PLATFORM_MACOSX=='0' and USE_SOVERCYGWIN=='0'">
+-                $(DLLEXT).$(__soversion1).$(__soversion2).$(__soversion3)
+-            </if>
+-            <if cond="USE_SOVERSION=='1' and PLATFORM_MACOSX=='1'">
+-                .$(__soversion1).$(__soversion2).$(__soversion3)$(DLLEXT)
+-            </if>
+-            <if cond="USE_SOVERSION=='1' and USE_SOVERCYGWIN=='1'">
+-                -$(__soversion1)$(DLLEXT)
+-            </if>
+-            <if cond="USE_SOVERSION=='0'">$(DLLEXT)</if>
+-        </set>
++	<set var="__targetsuf3">$(DLLEXT)</set>
+         <set var="__targetname" eval="0">
+             $(DLLPREFIX)$(__dllname)$(__targetsuf3)
+         </set>
+         
+-        <set var="__soname_flags">
+-            <if cond="USE_SOVERLINUX=='1'"> <!-- Linux -->
+-                $(SONAME_FLAG)$(__linkname2)
+-            </if>
+-            <if cond="USE_SOVERSOLARIS=='1'"> <!-- Solaris -->
+-                $(SONAME_FLAG)$(__targetname)
+-            </if>
+-        </set>
++        <set var="__soname_flags">-version-number $(__soversion1):$(__soversion2):$(__soversion3)</set>
+         <ldflags>$(__soname_flags)</ldflags>
+ 
+-        <set var="__so_symlinks_cmd">
+-            <if cond="USE_SOSYMLINKS=='1'">
+-                (cd $(pathPrefixToPath(__targetdir));
+-                $(RM) $(__linkname1) $(__linkname2);
+-                $(LN_S) $(__targetname) $(__linkname2);
+-                $(LN_S) $(__linkname2) $(__linkname1))
+-            </if>
+-        </set>
+-        <set var="__so_symlinks_inst_cmd">
+-            <if cond="USE_SOSYMLINKS=='1'">
+-                $(RM) $(__linkname1) $(__linkname2);
+-                $(LN_S) $(__targetname) $(__linkname2);
+-                $(LN_S) $(__linkname2) $(__linkname1)
+-            </if>
+-        </set>
+-        <set var="__so_symlinks_uninst_cmd">
+-            <if cond="USE_SOSYMLINKS=='1'">
+-                $(RM) $(__linkname2) $(__linkname1)
+-            </if>
+-        </set>
+-        <__command>$(LF)$(__so_symlinks_cmd)</__command>
+-    
+         <set var="__mac_instname">$(__linkname2)</set>
+    
+         <clean-files>
+@@ -278,12 +230,6 @@
+         <set var="__macinstname" eval="0">
+             $(ifthenelse(__mac_instname=='',ref('__targetname',id),ref('__mac_instname',id)))
+         </set>
+-        <set var="__macinstnamecmd">
+-            <if cond="PLATFORM_MACOSX=='1'">
+-                -install_name $(value)/$(__macinstname)
+-            </if>
+-        </set>
+-        <ldflags>$(__macinstnamecmd)</ldflags>
+ 
+         <modify-target target="install_$(id)">
+             <command>(cd $(DESTDIR)$(value) ; $(ref('__so_symlinks_inst_cmd',id)))</command>
+diff -ur ../bakefile-0.2.3.orig/rules/makefile.bkl ./rules/makefile.bkl
+--- ../bakefile-0.2.3.orig/rules/makefile.bkl	2008-01-06 15:43:17.000000000 +0100
++++ ./rules/makefile.bkl	2008-09-08 19:46:12.000000000 +0200
+@@ -663,7 +663,7 @@
+         <define-tag name="install-to" rules="exe">
+             <modify-target target="install_$(id)">
+                 <command>
+-                    $(INSTALL_PROGRAM) $(ref('__targetdir',id))$(ref('__targetname',id)) $(DESTDIR)$(nativePaths(value))
++                    ${LIBTOOL} --mode=install $(INSTALL_PROGRAM) $(ref('__targetdir',id))$(ref('__targetname',id)) $(DESTDIR)$(nativePaths(value))
+                 </command>
+             </modify-target>
+             <modify-target target="uninstall_$(id)">
+@@ -676,8 +676,7 @@
+         <define-tag name="install-to" rules="dll">
+             <modify-target target="install_$(id)">
+                 <command>
+-                    $(INSTALL_DATA) $(ref('__targetdir',id))$(ref('__linkname',id)) $(DESTDIR)$(nativePaths(value))
+-                    $(INSTALL_PROGRAM) $(ref('__targetdir',id))$(ref('__targetname',id)) $(DESTDIR)$(nativePaths(value))
++                    ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} $(ref('__targetdir',id))$(ref('__targetname',id)) $(DESTDIR)$(nativePaths(value))
+                 </command>
+             </modify-target>
+             <modify-target target="uninstall_$(id)">
+@@ -691,7 +690,7 @@
+         <define-tag name="install-to" rules="module">
+             <modify-target target="install_$(id)">
+                 <command>
+-                    $(INSTALL_PROGRAM) $(ref('__targetdir',id))$(ref('__targetname',id)) $(DESTDIR)$(nativePaths(value))
++                    ${LIBTOOL} --mode=install ${BSD_INSTALL_LIB} $(ref('__targetdir',id))$(ref('__targetname',id)) $(DESTDIR)$(nativePaths(value))
+                 </command>
+             </modify-target>
+             <modify-target target="uninstall_$(id)">
+diff -ur ../bakefile-0.2.3.orig/rules/makefile_defs_gnu.bkl ./rules/makefile_defs_gnu.bkl
+--- ../bakefile-0.2.3.orig/rules/makefile_defs_gnu.bkl	2008-01-06 15:43:17.000000000 +0100
++++ ./rules/makefile_defs_gnu.bkl	2008-09-08 19:43:18.000000000 +0200
+@@ -62,12 +62,12 @@
+ 
+             <template id="__commands_templ_C">
+                 <set var="__COMPILE_C_CMD" eval="0">
+-                    $(CCC) -c -o $@ $(__cflags) $(CPPDEPS) $&lt;
++                    ${LIBTOOL} --mode=compile --tag=CC $(CCC) -c -o $@ $(__cflags) $(CPPDEPS) $&lt;
+                 </set>
+             </template>
+             <template id="__commands_templ_CXX">
+                 <set var="__COMPILE_CXX_CMD" eval="0">
+-                    $(CXXC) -c -o $@ $(__cxxflags) $(CPPDEPS) $&lt;
++                    ${LIBTOOL} --mode=compile --tag=CXX $(CXXC) -c -o $@ $(__cxxflags) $(CPPDEPS) $&lt;
+                 </set>
+             </template>
+ 
+diff -ur ../bakefile-0.2.3.orig/rules/makefile_defs_unix.bkl ./rules/makefile_defs_unix.bkl
+--- ../bakefile-0.2.3.orig/rules/makefile_defs_unix.bkl	2008-01-06 15:43:17.000000000 +0100
++++ ./rules/makefile_defs_unix.bkl	2008-09-08 19:43:18.000000000 +0200
+@@ -39,22 +39,23 @@
+ 
+     <set var="DIRSEP">/</set>
+ 
+-    <set var="OBJEXT">.o</set>
++    <set var="LIBTOOL">${LIBTOOL}</set>
++    <set var="OBJEXT">.lo</set>
+     <set var="LIBEXT" overwrite="0">.a</set>
+     <set var="LIBPREFIX" overwrite="0">lib</set>
+     <set var="EXEEXT" overwrite="0"></set>
+-    <set var="DLLEXT" overwrite="0">.so</set>
++    <set var="DLLEXT" overwrite="1">.la</set>
+     <set var="DLLEXT_MODULE" overwrite="0">$(DLLEXT)</set>
+     <set var="DLLIMPEXT" overwrite="0">$(DLLEXT)</set>
+     <set var="DLLPREFIX" overwrite="0">$(LIBPREFIX)</set>
+     <set var="DLLPREFIX_MODULE" overwrite="0">$(DLLPREFIX)</set>
+-    <set var="PIC_CFLAGS" overwrite="0">-fPIC -DPIC</set>
++    <set var="PIC_CFLAGS" overwrite="0"></set>
+ 
+    <set var="RM">rm -f</set>
+ 
+-    <set var="INSTALL_PROGRAM" overwrite="0">install -c</set>
+-    <set var="INSTALL_DATA" overwrite="0">$(INSTALL) -m 644</set>
+-    <set var="INSTALL_DIR" overwrite="0">$(INSTALL) -d</set>
++    <set var="INSTALL_PROGRAM" overwrite="1">${BSD_INSTALL_PROGRAM}</set>
++    <set var="INSTALL_DATA" overwrite="1">${BSD_INSTALL_DATA}</set>
++    <set var="INSTALL_DIR" overwrite="1">${BSD_INSTALL_DATA_DIR}</set>
+ 
+     <set var="UNINSTALL_PROGRAM" overwrite="0">$(RM)</set>
+     <set var="UNINSTALL_DATA" overwrite="0">$(RM)</set>
+@@ -120,12 +121,12 @@
+     <if cond="FORMAT!='gnu'">
+         <template id="__commands_templ_C">
+             <set var="__COMPILE_C_CMD" eval="0">
+-                $(CCC) -c -o $@ $(__cflags) $(src)
++                $(LIBTOOL) --mode=compile --tag=CC $(CCC) -c -o $@ $(__cflags) $(src)
+             </set>
+         </template>
+         <template id="__commands_templ_CXX">
+             <set var="__COMPILE_CXX_CMD" eval="0">
+-                $(CXXC) -c -o $@ $(__cxxflags) $(src)
++                $(LIBTOOL) --mode=compile --tag=CXX $(CXXC) -c -o $@ $(__cxxflags) $(src)
+             </set>
+         </template>
+     </if>
+@@ -133,18 +134,16 @@
+ 
+     <template id="__commands_templ">
+         <set var="__LINK_EXE_CMD" eval="0">
+-            $(__linker) -o $@ $(__objects_var) $(__ldflags) $(__ldlibs)
++            $(LIBTOOL) --mode=link $(__linker) -o $@ $(__objects_var) $(__ldflags) $(__ldlibs)
+         </set>        
+         <set var="__LINK_LIB_CMD" eval="0">
+-            $(RM) $@
+-            $(AR) $(AROPTIONS) $@ $(__objects_var)
+-            $(RANLIB) $@
++            $(LIBTOOL) --mode=link --tag=CC $(__linker) -o $@ $(__objects_var) $(__ldflags) $(__ldlibs)
+         </set>
+         <set var="__LINK_DLL_CMD" eval="0">
+-            $(__dll_linker) $@ $(__objects_var) $(__ldflags) $(__ldlibs)
++            $(LIBTOOL) --mode=link --tag=CC $(__linker) -rpath $(libdir) -o $@ $(__objects_var) $(__ldflags) $(__ldlibs)
+         </set>
+         <set var="__LINK_MODULE_CMD" eval="0">
+-            $(__module_linker) $@ $(__objects_var) $(__ldflags) $(__ldlibs)
++            $(LIBTOOL) --mode=link --tag=CC $(__linker) -rpath $(libdir) -o $@ $(__objects_var) $(__ldflags) $(__ldlibs)
+         </set>
+     </template>
+     
+$NetBSD: manual-bakefile.diff,v 1.1.1.1 2008/09/12 11:09:49 joerg Exp $
+
+--- src/bottlenecks_wrap.c.orig	2008-09-08 20:08:03.000000000 +0200
++++ src/bottlenecks_wrap.c
+@@ -270,6 +270,16 @@
+ #define SWIG_DelTmpMask(r)         (SWIG_IsOK(r) ? (r & ~SWIG_TMPOBJMASK) : r)
+ #define SWIG_IsTmpObj(r)           (SWIG_IsOK(r) && (r & SWIG_TMPOBJMASK))
+ 
++const char *doEvalExpr(const char *expr,
++                       PyObject *varCallb,
++                       PyObject *textCallb,
++                       PyObject *moreArgs,
++                       PyObject *use_options,
++                       PyObject *target,
++                       PyObject *add_dict);
++
++PyObject *proxydict_create(void);
++
+ 
+ /* Cast-Rank Mode */
+ #if defined(SWIG_CASTRANK_MODE)
