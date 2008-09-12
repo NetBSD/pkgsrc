@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/12 22:11:28 ahoka Exp $
+
+SHA1 (libsigsegv-2.5.tar.gz) = 84cf08a9aae4c4d884333421018d8127592e8c2b
+RMD160 (libsigsegv-2.5.tar.gz) = 1776563a76de4286461a779cfd2b3b47533db05e
+Size (libsigsegv-2.5.tar.gz) = 380512 bytes
+SHA1 (patch-aa) = 4786b1362d9277d4b654e8978514a7cd454eeaaa
+SHA1 (patch-ab) = eb0ca641f4355add51c5f599318ba78463a70046
