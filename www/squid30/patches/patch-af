@@ -1,0 +1,24 @@
+$NetBSD: patch-af,v 1.1.1.1 2008/09/12 15:05:57 taca Exp $
+
+--- include/autoconf.h.in.orig	2008-06-22 12:35:50.000000000 +0900
++++ include/autoconf.h.in
+@@ -294,6 +294,9 @@
+ /* Define to 1 if you have the `lrand48' function. */
+ #undef HAVE_LRAND48
+ 
++/* Define if you have the <machine/byte_swap.h> header file.  */
++#undef HAVE_MACHINE_BYTE_SWAP_H
++
+ /* Define to 1 if you have the `mallinfo' function. */
+ #undef HAVE_MALLINFO
+ 
+@@ -381,6 +384,9 @@
+ /* Define to 1 if you have the <net/pfvar.h> header file. */
+ #undef HAVE_NET_PFVAR_H
+ 
++/* Define to 1 if you have the <net/pf/pfvar.h> header file. */
++#undef HAVE_NET_PF_PFVAR_H
++
+ /* Define to 1 if you have the <nss_common.h> header file. */
+ #undef HAVE_NSS_COMMON_H
+ 

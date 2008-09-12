@@ -1,0 +1,22 @@
+$NetBSD: patch-ak,v 1.1.1.1 2008/09/12 15:05:57 taca Exp $
+
+--- src/ssl_support.cc.orig	2008-07-18 19:02:54.000000000 +0900
++++ src/ssl_support.cc
+@@ -535,7 +535,7 @@ SSL_CTX *
+ sslCreateServerContext(const char *certfile, const char *keyfile, int version, const char *cipher, const char *options, const char *flags, const char *clientCA, const char *CAfile, const char *CApath, const char *CRLfile, const char *dhfile, const char *context)
+ {
+     int ssl_error;
+-    SSL_METHOD *method;
++    const SSL_METHOD *method;
+     SSL_CTX *sslContext;
+     long fl = ssl_parse_flags(flags);
+ 
+@@ -732,7 +732,7 @@ SSL_CTX *
+ sslCreateClientContext(const char *certfile, const char *keyfile, int version, const char *cipher, const char *options, const char *flags, const char *CAfile, const char *CApath, const char *CRLfile)
+ {
+     int ssl_error;
+-    SSL_METHOD *method;
++    const SSL_METHOD *method;
+     SSL_CTX *sslContext;
+     long fl = ssl_parse_flags(flags);
+ 

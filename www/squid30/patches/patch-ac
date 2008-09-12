@@ -1,0 +1,40 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/09/12 15:05:57 taca Exp $
+
+--- configure.orig	2008-06-22 12:35:54.000000000 +0900
++++ configure
+@@ -24288,6 +24288,7 @@ for ac_header in \
+ 	ipl.h \
+ 	libc.h \
+ 	limits.h \
++  	machine/byte_swap.h \
+ 	malloc.h \
+ 	math.h \
+ 	memory.h \
+@@ -24602,6 +24603,7 @@ done
+ 
+ for ac_header in \
+ 	net/if.h \
++	net/pf/pfvar.h \
+ 	net/pfvar.h \
+ 	netinet/if_ether.h\
+ 	netinet/ip.h\
+@@ -42932,8 +42928,8 @@ if test "$GCC" = "yes"; then
+ 	GCCVER=`$CC -v 2>&1 | awk '$2 ==  "version" {print $3}'`
+ 	case "$GCCVER" in
+ 	2.95.[123])
+-		echo "Removing -O for gcc on $host with GCC $GCCVER"
+-		CFLAGS="`echo $CFLAGS | sed -e 's/-O[0-9]*//'`"
++		echo "Making -O\[[2-9\]] to -O for gcc on $host with GCC $GCCVER"
++		CFLAGS="`echo $CFLAGS | sed -e 's/-O[[0-9]]*/-O/'`"
+ 		;;
+ 	esac
+ fi
+@@ -44220,7 +44216,7 @@ if test "$PF_TRANSPARENT" ; then
+     { echo "$as_me:$LINENO: checking if PF header file is installed" >&5
+ echo $ECHO_N "checking if PF header file is installed... $ECHO_C" >&6; }
+     # hold on to your hats...
+-    if test "$ac_cv_header_net_pfvar_h" = "yes"; then
++    if test "$ac_cv_header_net_pfvar_h" = "yes" || test "$ac_cv_header_net_pf_pfvar_h" = "yes"; then
+         PF_TRANSPARENT="yes"
+         cat >>confdefs.h <<\_ACEOF
+ #define PF_TRANSPARENT 1
