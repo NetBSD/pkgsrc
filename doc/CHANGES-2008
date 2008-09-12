@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2219 2008/09/12 14:54:27 he Exp $
+$NetBSD: CHANGES-2008,v 1.2220 2008/09/12 15:14:59 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3749,3 +3749,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-POE to 1.003nb1 [he 2008-09-12]
 	Updated devel/p5-Curses to 1.24 [he 2008-09-12]
 	Updated databases/p5-DBIx-Class-DynamicDefault to 0.03 [he 2008-09-12]
+	Updated www/squid26 to 2.6.21nb1 [taca 2008-09-12]
+	Added www/squid27 version 2.7.4 [taca 2008-09-12]
+	Added www/squid30 version 3.0.9 [taca 2008-09-12]
