@@ -1,0 +1,16 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/09/12 15:02:47 taca Exp $
+
+--- helpers/basic_auth/MSNT/Makefile.in.orig	2007-11-12 10:13:58.000000000 +0900
++++ helpers/basic_auth/MSNT/Makefile.in
+@@ -530,9 +530,9 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-data-local
++install-data-am:
+ 
+-install-exec-am: install-libexecPROGRAMS install-sysconfDATA
++install-exec-am: install-libexecPROGRAMS
+ 
+ install-info: install-info-am
+ 
