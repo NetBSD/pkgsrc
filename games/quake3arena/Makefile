@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/09/10 00:39:55 gdt Exp $
+# $NetBSD: Makefile,v 1.33 2008/09/12 22:04:18 gdt Exp $
 
 DISTNAME=	linuxq3apoint-1.32b.x86
 PKGREVISION=	3
@@ -17,8 +17,8 @@ CONFLICTS=	quake3arena-demo-[0-9]*
 EMUL_PLATFORMS=		linux-i386
 EMUL_MODULES.linux=	base x11 glx
 
-LICENSE=	generic-nonlicense
-RESTRICTED=	Unclear terms
+LICENSE=	quake3arena-license
+RESTRICTED=	Terms are too complicated to evaluate.
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
