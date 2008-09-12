@@ -1,0 +1,77 @@
+# $NetBSD: Makefile.squid,v 1.1 2008/09/12 16:03:05 taca Exp $
+
+.include "Makefile.common"
+
+PKG_SYSCONFSUBDIR?=		squid
+
+SQUID_USER?=			squid
+SQUID_GROUP?=			squid
+
+PKG_GROUPS_VARS+=		SQUID_GROUP
+PKG_USERS_VARS+=		SQUID_USER
+
+PKG_GROUPS=			${SQUID_GROUP}
+PKG_USERS=			${SQUID_USER}:${SQUID_GROUP}
+PKG_GECOS.${SQUID_USER}=	Squid Web-Cache pseudo-user
+
+#
+PLIST_SRC=	${WRKDIR}/PLIST
+
+MESSAGE_SRC=		../squid/MESSAGE
+RCD_SCRIPTS=		squid
+RCD_SCRIPT_SRC.squid?=	../squid/files/squid.sh
+
+CONFS=		cachemgr.conf mime.conf squid.conf msntauth.conf
+.for f in ${CONFS}
+CONF_FILES+=	${PREFIX}/${EGDIR}/${f} ${PKG_SYSCONFDIR}/${f}
+.endfor
+OWN_DIRS=	${SQUID_DATADIR}
+OWN_DIRS_PERMS+= \
+		${SQUID_DATADIR}/cache ${SQUID_USER} ${SQUID_GROUP} 0750 \
+		${SQUID_DATADIR}/logs ${SQUID_USER} ${SQUID_GROUP} 0750
+
+DOCFILES=	ChangeLog RELEASENOTES.html doc/debug-sections.txt
+READMES=	README.FreeBSD README.NetBSD README.OpenBSD README.Solaris
+EGFILES=	src/mime.conf.default src/squid.conf.default \
+		helpers/basic_auth/MSNT/msntauth.conf.default \
+		tools/cachemgr.conf
+
+SUBST_CLASSES+=		confs
+SUBST_STAGE.confs=	pre-configure
+SUBST_FILES.confs=	src/cf.data.pre
+SUBST_SED.confs=	-e "s/@USER@/${SQUID_USER}/"
+SUBST_MESSAGE.confs=	Fixing configuration files.
+
+CHECK_PORTABILITY_SKIP+=	icons/icons.shar
+
+INSTALL_TARGET=		install install-pinger
+INSTALLATION_DIRS=	bin libexec ${PKGMANDIR}/man8 sbin ${DOCDIR} \
+			${EGDIR} share/squid/errors share/squid/icons
+
+post-install:
+.for f in ${EGFILES}
+	${INSTALL_DATA}	${WRKSRC}/${f} \
+		${DESTDIR}${PREFIX}/${EGDIR}/`basename ${f} .default`
+.endfor
+.for f in ${DOCFILES}
+	${INSTALL_DATA} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/${DOCDIR}
+.endfor
+.for f in ${READMES}
+	${INSTALL_DATA} ${PKGDIR}/../squid/files/${f} \
+		${DESTDIR}${PREFIX}/${DOCDIR}
+.endfor
+	${CP} ${PKGDIR}/PLIST ${PLIST_SRC}
+	(							\
+	cd ${WRKSRC}/errors;					\
+	for i in *; do						\
+		${TEST} -d $$i &&				\
+		(${LS} $$i/ERR_* |				\
+		${SED} -e 's@^@share/squid/errors/@';		\
+		${ECHO} "@dirrm share/squid/errors/$$i");	\
+	done; 							\
+	${ECHO} "@dirrm share/squid/errors";			\
+	cd ${WRKSRC}/icons;					\
+	${LS} anthony-*.gif |					\
+		${SED} -e 's@^@share/squid/icons/@';		\
+	) >>${PLIST_SRC}
+	${CAT} ${PKGDIR}/PLIST.common_end >>${PLIST_SRC}
