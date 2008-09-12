@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1018 2008/09/12 12:48:23 he Exp $
+# $NetBSD: Makefile,v 1.1019 2008/09/12 12:54:47 he Exp $
 #
 
 COMMENT=	Development utilities
@@ -628,6 +628,7 @@ SUBDIR+=	p5-PAR-Dist
 SUBDIR+=	p5-PHP-Serialization
 SUBDIR+=	p5-POE
 SUBDIR+=	p5-POE-Component-Pluggable
+SUBDIR+=	p5-POE-Test-Loops
 SUBDIR+=	p5-PPI
 SUBDIR+=	p5-PPI-XS
 SUBDIR+=	p5-PV
