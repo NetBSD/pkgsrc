@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/09/12 13:18:26 jmcneill Exp $
+
+--- src/ptlib/unix/tlib.cxx.orig	2008-09-08 15:34:39.000000000 -0400
++++ src/ptlib/unix/tlib.cxx	2008-09-08 15:34:54.000000000 -0400
+@@ -400,7 +400,7 @@
+ {
+   if (PProcessInstance != NULL) {
+     PWaitAndSignal m(PProcessInstance->threadMutex);
+-    PThread & thread = PProcessInstance->activeThreads[(unsigned)id];
++    PThread & thread = PProcessInstance->activeThreads[(uintptr_t)id];
+     return thread.GetThreadName();
+   }
+   return psprintf("%08x", id);
