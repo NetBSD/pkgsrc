@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2008/09/12 12:21:07 ahoka Exp $
+# $NetBSD: Makefile,v 1.42 2008/09/12 13:44:23 sborrill Exp $
 
 DISTNAME=	ffmpeg-${DISTVERSION}
 PKGNAME=	ffmpeg-${DISTVERSION:S/-//g}
@@ -45,7 +45,6 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR} \
 			--disable-debug \
 			--disable-vhook \
 			--enable-avfilter \
-			--enable-swscale \
 			--enable-gpl \
 			--enable-postproc \
 			--enable-pthreads \
