@@ -1,0 +1,40 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/09/12 15:05:57 taca Exp $
+
+--- configure.in.orig	2008-06-22 12:35:54.000000000 +0900
++++ configure.in
+@@ -1868,6 +1868,7 @@ AC_CHECK_HEADERS( \
+ 	ipl.h \
+ 	libc.h \
+ 	limits.h \
++  	machine/byte_swap.h \
+ 	malloc.h \
+ 	math.h \
+ 	memory.h \
+@@ -1949,6 +1950,7 @@ dnl *BSD dont include the depenencies fo
+ dnl We must include a few basic type headers for them to work.
+ AC_CHECK_HEADERS( \
+ 	net/if.h \
++	net/pf/pfvar.h \
+ 	net/pfvar.h \
+ 	netinet/if_ether.h\
+ 	netinet/ip.h\
+@@ -2434,8 +2444,8 @@ if test "$GCC" = "yes"; then
+ 	GCCVER=`$CC -v 2>&1 | awk '$2 ==  "version" {print $3}'`
+ 	case "$GCCVER" in
+ 	[2.95.[123]])
+-		echo "Removing -O for gcc on $host with GCC $GCCVER"
+-		CFLAGS="`echo $CFLAGS | sed -e 's/-O[[0-9]]*//'`"
++		echo "Making -O\[[2-9\]] to -O for gcc on $host with GCC $GCCVER"
++		CFLAGS="`echo $CFLAGS | sed -e 's/-O[[0-9]]*/-O/'`"
+ 		;;
+ 	esac
+ fi
+@@ -2819,7 +2829,7 @@ dnl PF support requires a header file.
+ if test "$PF_TRANSPARENT" ; then
+     AC_MSG_CHECKING(if PF header file is installed)
+     # hold on to your hats...
+-    if test "$ac_cv_header_net_pfvar_h" = "yes"; then
++    if test "$ac_cv_header_net_pfvar_h" = "yes" || test "$ac_cv_header_net_pf_pfvar_h" = "yes"; then
+         PF_TRANSPARENT="yes"
+         AC_DEFINE(PF_TRANSPARENT, 1)
+     else
