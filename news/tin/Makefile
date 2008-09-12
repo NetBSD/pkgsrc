@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2007/12/02 12:20:12 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2008/09/12 11:33:44 gdt Exp $
 #
 
 DISTNAME=	tin-1.8.3
@@ -16,6 +16,8 @@ COMMENT=	TIN newsreader (termcap based)
 # See src/nntplib.c, vms/vms.c
 LICENSE=	tin-license
 RESTRICTED=	Profit from use, sale, trade, or reproduction disallowed
+NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 GNU_CONFIGURE=	yes
 USE_PKGLOCALEDIR=yes
