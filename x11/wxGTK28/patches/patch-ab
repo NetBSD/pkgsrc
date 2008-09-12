@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/09/12 11:09:49 joerg Exp $
+
+--- utils/wxrc/Makefile.in.orig	2008-09-08 23:43:35.000000000 +0200
++++ utils/wxrc/Makefile.in
+@@ -114,11 +114,8 @@ distclean: clean
+ 
+ @COND_USE_XRC_1@install_wxrc: 
+ @COND_USE_XRC_1@	${BSD_INSTALL_DATA_DIR} $(DESTDIR)$(bindir)
+-@COND_USE_XRC_1@	${LIBTOOL} --mode=install ${BSD_INSTALL_PROGRAM} wxrc$(EXEEXT) $(DESTDIR)$(bindir)
+-@COND_USE_XRC_1@	rm -f $(DESTDIR)$(bindir)/wxrc$(EXEEXT) $(DESTDIR)$(bindir)/wxrc-$(WX_RELEASE)
+-@COND_USE_XRC_1@	${BSD_INSTALL_PROGRAM} wxrc$(EXEEXT) $(DESTDIR)$(bindir)
+-@COND_USE_XRC_1@	mv -f $(DESTDIR)$(bindir)/wxrc$(EXEEXT) $(DESTDIR)$(bindir)/wxrc-$(WX_RELEASE)
+-@COND_USE_XRC_1@	(cd $(DESTDIR)$(bindir) && $(LN_S) wxrc-$(WX_RELEASE) wxrc$(EXEEXT))
++@COND_USE_XRC_1@	${BSD_INSTALL_SCRIPT} wxrc$(EXEEXT) $(DESTDIR)$(bindir)/wxrc-$(WX_RELEASE)
++@COND_USE_XRC_1@	cd $(DESTDIR)$(bindir) && $(LN_S) wxrc-$(WX_RELEASE) wxrc$(EXEEXT)
+ 
+ @COND_USE_XRC_1@uninstall_wxrc: 
+ @COND_USE_XRC_1@	rm -f $(DESTDIR)$(bindir)/wxrc$(EXEEXT)
