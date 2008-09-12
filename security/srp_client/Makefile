@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2007/12/02 11:37:53 wiz Exp $
+# $NetBSD: Makefile,v 1.36 2008/09/12 11:49:57 gdt Exp $
 
 DISTNAME=		srp-1.4.4
 PKGNAME=		srp-client-1.4.4
@@ -11,7 +11,7 @@ HOMEPAGE=		http://srp.stanford.edu/
 COMMENT=		Client programs using Secure Remote Password protocol
 
 LICENSE=		srp_client-license
-RESTRICTED=		Vague patent claims.
+RESTRICTED=		Licensor makes vague patent claims.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
