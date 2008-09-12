@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2008/06/05 17:19:52 ghen Exp $
+# $NetBSD: Makefile,v 1.36 2008/09/12 12:06:06 gdt Exp $
 
 DISTNAME=	glimpse-4.18.5
 CATEGORIES=	textproc databases
@@ -11,7 +11,7 @@ COMMENT=	Text search engine
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 LICENSE=	glimpse-license
-RESTRICTED=	Restrictive copyright (don't sell for profit)
+RESTRICTED=	Redistribution only on non-profit basis.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
