@@ -1,0 +1,26 @@
+$NetBSD: patch-ai,v 1.1.1.1 2008/09/12 15:09:19 taca Exp $
+
+--- src/Makefile.in.orig	2007-09-06 06:57:25.000000000 +0900
++++ src/Makefile.in
+@@ -629,7 +629,7 @@ DEFAULT_LOG_PREFIX = $(localstatedir)/lo
+ DEFAULT_CACHE_LOG = $(DEFAULT_LOG_PREFIX)/cache.log
+ DEFAULT_ACCESS_LOG = $(DEFAULT_LOG_PREFIX)/access.log
+ DEFAULT_STORE_LOG = $(DEFAULT_LOG_PREFIX)/store.log
+-DEFAULT_PID_FILE = $(DEFAULT_LOG_PREFIX)/squid.pid
++DEFAULT_PID_FILE = $(VARBASE)/run/squid.pid
+ DEFAULT_SWAP_DIR = $(localstatedir)/cache
+ DEFAULT_PINGER = $(libexecdir)/`echo pinger | sed '$(transform);s/$$/$(EXEEXT)/'`
+ DEFAULT_UNLINKD = $(libexecdir)/`echo unlinkd | sed '$(transform);s/$$/$(EXEEXT)/'`
+@@ -1148,10 +1148,9 @@ info: info-recursive
+ 
+ info-am:
+ 
+-install-data-am: install-data-local install-dataDATA
++install-data-am: install-dataDATA
+ 
+-install-exec-am: install-libexecPROGRAMS install-sbinPROGRAMS \
+-	install-sysconfDATA
++install-exec-am: install-libexecPROGRAMS install-sbinPROGRAMS
+ 
+ install-info: install-info-recursive
+ 
