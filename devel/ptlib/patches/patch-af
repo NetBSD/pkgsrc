@@ -1,0 +1,51 @@
+$NetBSD: patch-af,v 1.1.1.1 2008/09/12 13:18:26 jmcneill Exp $
+
+--- make/unix.mak.orig	2008-09-07 17:00:16.000000000 -0400
++++ make/unix.mak	2008-09-08 15:40:22.000000000 -0400
+@@ -196,7 +196,7 @@
+ ifeq ($(OSTYPE),OpenBSD)
+ 
+ ifeq ($(MACHTYPE),x86)
+-STDCCFLAGS	+= -m486
++#STDCCFLAGS	+= -m486
+ endif
+ 
+ LDLIBS		+= -lossaudio
+@@ -220,6 +220,14 @@
+ 
+ STDCCFLAGS += -I$(UNIX_INC_DIR) -I$(PTLIBDIR)/include
+ 
++ifeq ($(MACHTYPE),x86_64)
++STDCCFLAGS     += -DP_64BIT
++endif
++
++ifndef PROG
++STDCCFLAGS    += -fPIC -DPIC
++endif # PROG
++
+ # enable the USE_PTH line to compile using pth
+ # enable the USE_NATIVE_THREADS line to compile using native threads
+ # enable the USE_UNPROVEN_THREADS line to compile using unproven threads
+@@ -601,11 +609,11 @@
+ LIB_TYPE	=
+ else   
+ LIB_SUFFIX	= a 
+-LIB_TYPE	= _s
++LIB_TYPE	=
+ endif # P_SHAREDLIB
+ 
+ ifndef INSTALL_DIR
+-INSTALL_DIR	= /usr/local
++INSTALL_DIR	= ${PREFIX}
+ endif
+ 
+ ifndef INSTALLBIN_DIR
+@@ -670,7 +678,7 @@
+   ifeq ($(OSTYPE),solaris)
+     OPTCCFLAGS	+= -O3 
+   else
+-    OPTCCFLAGS	+= -Os 
++    OPTCCFLAGS	+=
+   endif
+ else
+   OPTCCFLAGS	+= -O2

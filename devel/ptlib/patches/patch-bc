@@ -1,0 +1,13 @@
+$NetBSD: patch-bc,v 1.1.1.1 2008/09/12 13:18:26 jmcneill Exp $
+
+--- plugins/sound_oss/sound_oss.cxx.orig	2008-09-08 18:02:28.000000000 -0400
++++ plugins/sound_oss/sound_oss.cxx	2008-09-08 18:03:34.000000000 -0400
+@@ -145,7 +145,7 @@
+         // When adding these to the 'dsp' string array, only the first one
+         // found is used.
+ 
+-#if !defined P_NETBSD || !defined P_OPENBSD
++#if !defined P_NETBSD && !defined P_OPENBSD
+         // Look for dsp
+         if (filename == "dsp") {
+           dsp.SetAt(0, devname);

@@ -1,0 +1,4 @@
+PTLib is a multi-platform C++ class library. Programs based on PTLib can run
+on both Microsoft Windows and Unix/Linux. The library contains both the
+"basic" classes (strings, arrays, lists) and the higher-level functionality
+(networking, multi-threading).
