@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.64 2008/09/08 20:20:23 joerg Exp $
+dnl $NetBSD: configure.ac,v 1.65 2008/09/12 13:47:26 joerg Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -254,20 +254,22 @@ AC_CHECK_FUNCS([mkdtemp mkstemp], [:], [
 ])
 
 AC_CHECK_FUNCS([bcopy bzero memset memcpy setlocale])
-AC_CHECK_FUNCS([getmode setmode])
-AC_CHECK_FUNCS([getmode setmode], [:], [
+AC_CHECK_FUNCS([getmode setmode], [:], [need_setmode=yes])
+
+if test $need_setmode = yes; then
 	AC_LIBOBJ(setmode)
-	break
-])
+fi
 
 AC_CHECK_DECLS([endgrent, endpwent])
 
+need_pwcache=no
 AC_CHECK_FUNCS([gid_from_group group_from_gid pwcache_groupdb \
 	pwcache_userdb uid_from_user user_from_uid \
-], [:], [
+], [:], [need_pwcache=yes])
+
+if test $need_pwcache = yes; then
 	AC_LIBOBJ(pwcache)
-	break
-])
+fi
 
 AC_CHECK_FUNC(fts_open, [:], [
 	AC_DEFINE(HAVE_NBCOMPAT_FTS, 1)
