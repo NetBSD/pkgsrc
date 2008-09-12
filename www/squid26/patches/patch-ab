@@ -1,0 +1,56 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/09/12 15:09:19 taca Exp $
+
+--- configure.in.orig	2008-06-28 06:55:39.000000000 +0900
++++ configure.in
+@@ -1609,11 +1609,13 @@ AC_CHECK_HEADERS(
+ 	linux/netfilter_ipv4.h \
+ 	linux/netfilter_ipv4/ip_tproxy.h \
+ 	malloc.h \
++  	machine/byte_swap.h \
+ 	math.h \
+ 	memory.h \
+ 	mount.h \
+ 	net/if.h \
+ 	net/pfvar.h \
++	net/pf/pfvar.h \
+ 	netdb.h \
+ 	netinet/if_ether.h \
+ 	netinet/tcp.h \
+@@ -1975,7 +1977,16 @@ AC_CHECK_SYSTYPE(size_t, unsigned int)
+ AC_CHECK_SYSTYPE(ssize_t, int)
+ AC_CHECK_SYSTYPE(off_t, int)
+ AC_CHECK_SYSTYPE(mode_t, unsigned short)
+-AC_CHECK_SYSTYPE(fd_mask, int)
++
++dnl Check for type fd_mask
++AC_CACHE_CHECK(for fd_set,ac_cv_have_fd_mask, [
++  AC_TRY_COMPILE([#include <sys/types.h>
++#include <sys/time.h>
++#include <sys/unistd.h>],
++    [fd_mask fds;],
++    ac_cv_have_fd_mask="yes",
++    ac_cv_have_fd_mask="no")
++])
+ 
+ AC_CHECK_SIZEOF_SYSTYPE(off_t, 4)
+ AC_CHECK_SIZEOF_SYSTYPE(size_t, 4)
+@@ -2254,8 +2265,8 @@ if test "$GCC" = "yes"; then
+ 	GCCVER=`$CC -v 2>&1 | awk '$2 ==  "version" {print $3}'`
+ 	case "$GCCVER" in
+ 	[2.95.[123]])
+-		echo "Removing -O for gcc on $host with GCC $GCCVER"
+-		CFLAGS="`echo $CFLAGS | sed -e 's/-O[[0-9]]*//'`"
++		echo "Making -O\[[2-9\]] to -O for gcc on $host with GCC $GCCVER"
++		CFLAGS="`echo $CFLAGS | sed -e 's/-O[[0-9]]*/-O/'`"
+ 		;;
+ 	esac
+ fi
+@@ -2649,7 +2660,7 @@ dnl PF support requires a header file.
+ if test "$PF_TRANSPARENT" ; then
+     AC_MSG_CHECKING(if PF header file is installed)
+     # hold on to your hats...
+-    if test "$ac_cv_header_net_pfvar_h" = "yes"; then
++    if test "$ac_cv_header_net_pfvar_h" = "yes" || test "$ac_cv_header_net_pf_pfvar_h" = "yes"; then
+ 	PF_TRANSPARENT="yes"
+ 	AC_DEFINE(PF_TRANSPARENT, 1, [Enable support for Transparent Proxy on systems using PF address
+ 	redirection. This provides "masquerading" support for OpenBSD.])
