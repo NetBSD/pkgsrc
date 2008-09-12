@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/12 13:18:26 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2008/09/12 20:46:29 sborrill Exp $
 
 SHA1 (ptlib-snapshot-20080907.tar.gz) = 60f398886de64efba3d85054bab2e63342265e0e
 RMD160 (ptlib-snapshot-20080907.tar.gz) = eac6fde099180239d497c3736fdd169b06efd4dd
@@ -15,3 +15,4 @@ SHA1 (patch-ai) = 47a7d53e52f5a28b0f25baaf1782a4152e6c6927
 SHA1 (patch-ba) = 056a69dc2358eab34a3e5913a535cf02ce832974
 SHA1 (patch-bb) = 14d6237ffb5003e0e8fde4ad71f0062f2e546720
 SHA1 (patch-bc) = 503faaf484d310d2bed51b211182245eb9542a83
+SHA1 (patch-configure) = 77b513242cf0834d3d3d6fca744404a4c1206d78
