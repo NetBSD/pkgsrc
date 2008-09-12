@@ -1,10 +1,10 @@
-# $NetBSD: options.mk,v 1.8 2008/09/08 17:57:02 ahoka Exp $
+# $NetBSD: options.mk,v 1.9 2008/09/12 12:21:07 ahoka Exp $
 
 # Global and legacy options
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.ffmpeg
-PKG_SUPPORTED_OPTIONS=	sdl theora xvid faad faac #x264
-PKG_SUGGESTED_OPTIONS=	faac theora xvid
+PKG_SUPPORTED_OPTIONS=	sdl theora xvid faad faac x264
+PKG_SUGGESTED_OPTIONS=	faac theora xvid x264
 #PKG_OPTIONS_OPTIONAL_GROUPS=	aac-decoder
 #PKG_OPTIONS_GROUP.aac-decoder=	faad faac
 
