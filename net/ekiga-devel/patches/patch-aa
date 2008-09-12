@@ -1,0 +1,31 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/12 13:24:51 jmcneill Exp $
+
+--- configure.ac.orig	2008-09-08 17:12:23.000000000 -0400
++++ configure.ac	2008-09-08 17:12:52.000000000 -0400
+@@ -96,7 +96,7 @@
+     gm_platform="linux"
+     ;;
+ 
+-  FreeBSD* | freebsd* )
++  FreeBSD* | freebsd* | NetBSD* | netbsd* )
+     gm_platform="freebsd"
+     ;;
+ 
+@@ -112,7 +112,7 @@
+     ;;
+ 
+   *)
+-    AC_MSG_ERROR([Only Linux, FreeBSD, Solaris and Mac OS X are supported. Please contact the author to know how you can add more OS types.])
++    AC_MSG_ERROR([Only Linux, FreeBSD, NetBSD, Solaris and Mac OS X are supported. Please contact the author to know how you can add more OS types.])
+     ;;
+ esac
+ AC_MSG_RESULT([yes])
+@@ -132,7 +132,7 @@
+     ARCH_OPAL_LIBS="-lpt -lopal -ldl -lpthread"
+     ;;
+ 
+-  FreeBSD* | freebsd* )
++  FreeBSD* | freebsd* | NetBSD* | netbsd* )
+     ARCH_PTLIB_CFLAGS="-DPTRACING -DNDEBUG -Os -g"
+     ARCH_OPAL_LIBS="-lpt -lopal -lpthread"
+     ;;
