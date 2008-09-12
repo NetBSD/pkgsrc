@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.44 2007/10/31 21:45:02 gdt Exp $
+# $NetBSD: Makefile,v 1.45 2008/09/12 00:48:05 gdt Exp $
 
 DISTNAME=	socks5-v1_0r2
 PKGNAME=	socks5-1.0.2
@@ -16,6 +16,9 @@ CONFLICTS=	socks4-[0-9]*
 # XXX missing
 LICENSE=		socks5-license
 RESTRICTED=		no commercial use
+# Set all pending someone looking at the license.
+NO_SRC_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
