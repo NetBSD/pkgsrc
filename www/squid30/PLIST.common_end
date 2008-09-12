@@ -1,0 +1,5 @@
+@comment $NetBSD: PLIST.common_end,v 1.1.1.1 2008/09/12 15:05:57 taca Exp $
+@dirrm share/squid/icons
+@dirrm share/squid
+@dirrm share/doc/squid
+@dirrm share/examples/squid

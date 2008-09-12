@@ -1,0 +1,14 @@
+$NetBSD: patch-ag,v 1.1.1.1 2008/09/12 15:05:57 taca Exp $
+
+--- include/squid_endian.h.orig	2008-06-22 12:35:50.000000000 +0900
++++ include/squid_endian.h
+@@ -68,6 +68,9 @@
+ #if HAVE_BYTESWAP_H
+ #  include <byteswap.h>
+ #endif /* HAVE_BYTESWAP_H */
++#ifdef HAVE_MACHINE_BYTE_SWAP_H
++#include <machine/byte_swap.h>
++#endif	/* HAVE_MACHINE_BYTE_SWAP_H */
+ #if HAVE_SYS_BSWAP_H
+ #  include <sys/bswap.h>
+ #endif /* HAVE_MACHINE_BSWAP_H */
