@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.43 2008/03/17 11:33:35 obache Exp $
+# $NetBSD: Makefile,v 1.44 2008/09/12 00:42:13 gdt Exp $
 
 DISTNAME=		xfmail-1.5.5
 PKGREVISION=		1
@@ -10,9 +10,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://xfmail.slappy.org/
 COMMENT=		Xforms based mail application for Unix operating systems
 
-RESTRICTED=		Selling this software requires permission of the authors.
-NO_SRC_ON_CDROM=	${RESTRICTED}
-NO_BIN_ON_CDROM=	${RESTRICTED}
+#LICENSE=		gpl-gnu-v2
+# A few files are.
+#LICENSE+=		mit-license
 
 USE_X11BASE=		YES
 USE_LANGUAGES=		c c++
