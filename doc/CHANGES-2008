@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2218 2008/09/12 14:48:36 sborrill Exp $
+$NetBSD: CHANGES-2008,v 1.2219 2008/09/12 14:54:27 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3743,3 +3743,9 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/opal-devel version 3.3.0.20080907 [jmcneill 2008-09-12]
 	Added net/ekiga-devel version 2.9.90.20080907 [jmcneill 2008-09-12]
 	Updated multimedia/vlc08 to 0.8.6i [sborrill 2008-09-12]
+	Updated security/p5-Crypt-Rijndael to 1.07 [he 2008-09-12]
+	Added devel/p5-IO version 1.2301 [he 2008-09-12]
+	Added devel/p5-POE-Test-Loops version 1.002 [he 2008-09-12]
+	Updated devel/p5-POE to 1.003nb1 [he 2008-09-12]
+	Updated devel/p5-Curses to 1.24 [he 2008-09-12]
+	Updated databases/p5-DBIx-Class-DynamicDefault to 0.03 [he 2008-09-12]
