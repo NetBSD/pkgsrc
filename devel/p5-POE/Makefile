@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2008/08/24 22:19:38 he Exp $
+# $NetBSD: Makefile,v 1.10 2008/09/12 13:14:41 he Exp $
 
 DISTNAME=	POE-1.003
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=POE/}
 
@@ -14,6 +15,8 @@ DEPENDS+=	p5-Compress-Zlib>=1.33:../../devel/p5-Compress-Zlib
 DEPENDS+=	p5-Curses>=1.08:../../devel/p5-Curses
 DEPENDS+=	p5-Event>=1.00:../../devel/p5-Event
 DEPENDS+=	p5-IO-tty>=1.02:../../devel/p5-IO-Tty
+DEPENDS+=	p5-IO>=1.2301:../../devel/p5-IO
+DEPENDS+=	p5-POE-Test-Loops>=1.002:../../devel/p5-POE-Test-Loops
 DEPENDS+=	p5-Socket6>=0.14:../../net/p5-Socket6
 DEPENDS+=	p5-Term-ReadKey>=2.21:../../devel/p5-Term-ReadKey
 DEPENDS+=	p5-Term-Cap>=1.09:../../devel/p5-Term-Cap
