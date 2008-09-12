@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/06/12 02:14:44 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/09/12 11:42:02 gdt Exp $
 #
 
 DISTNAME=	AiSSLtelnet-0.15
@@ -14,9 +14,13 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
 
+# License unreadable due to unfetchable distfile.
+LICENSE=		generic-nonlicense
 RESTRICTED=		Source code redistribution is not permitted.consult okuno@mars.elcom.nitech.ac.jp.
 NO_SRC_ON_FTP=		${RESTRICTED}
 NO_SRC_ON_CDROM=	${RESTRICTED}
+NO_BIN_ON_FTP=		${RESTRICTED}
+NO_BIN_ON_CDROM=	${RESTRICTED}
 
 WRKSRC=		${WRKDIR}/AiSSLtelnet
 
