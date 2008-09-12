@@ -1,0 +1,64 @@
+$NetBSD: patch-aj,v 1.1.1.1 2008/09/12 15:09:19 taca Exp $
+
+--- src/access_log.c.orig	2008-03-18 11:58:47.000000000 +0900
++++ src/access_log.c
+@@ -90,6 +90,8 @@ log_quote(const char *header)
+ {
+     int c;
+     int i;
++    int log_all, check_name, log_this;
++    const struct _wordlist *wl;
+     char *buf;
+     char *buf_cursor;
+     if (header == NULL) {
+@@ -99,13 +101,41 @@ log_quote(const char *header)
+     }
+     buf = xcalloc(1, (strlen(header) * 3) + 1);
+     buf_cursor = buf;
++
++    /* if empty or first keyword is "all", log all mime headers */
++    log_all = (!Config.log_mime_hdrs_list
++		|| strcasecmp(Config.log_mime_hdrs_list->key, "all") == 0);
++
+     /*
+      * We escape: \x00-\x1F"#%;<>?{}|\\\\^~`\[\]\x7F-\xFF 
+      * which is the default escape list for the CPAN Perl5 URI module
+      * modulo the inclusion of space (x40) to make the raw logs a bit
+      * more readable.
+      */
+-    while ((c = *(const unsigned char *) header++) != '\0') {
++    check_name = 1;
++    log_this = 1;
++    for(; (c = *(const unsigned char *) header) != '\0'; header++) {
++	if (!log_all && check_name) {
++		/* loop over configured header names and only continue
++		 * if the current header is on the list */
++		wl = Config.log_mime_hdrs_list;
++		log_this = 0;
++		for(; wl; wl = wl->next) {
++			if (strncasecmp(wl->key, header, strlen(wl->key)) == 0){
++				log_this = 1;
++				break;
++			}
++		}
++		check_name = 0;
++	}
++	if (!log_this) {
++		if (c == '\n') {
++			/* check header name in next iteration */
++			check_name = 1;
++		}
++		continue;
++	}
++ 
+ #if !OLD_LOG_MIME
+ 	if (c == '\r') {
+ 	    *buf_cursor++ = '\\';
+@@ -113,6 +143,7 @@ log_quote(const char *header)
+ 	} else if (c == '\n') {
+ 	    *buf_cursor++ = '\\';
+ 	    *buf_cursor++ = 'n';
++	    check_name = 1;
+ 	} else
+ #endif
+ 	    if (c <= 0x1F
