@@ -1,0 +1,20 @@
+$NetBSD: patch-ae,v 1.1.1.1 2008/09/12 15:09:19 taca Exp $
+
+--- helpers/ntlm_auth/SMB/smbval/smblib-util.c.orig	2005-05-18 01:56:33.000000000 +0900
++++ helpers/ntlm_auth/SMB/smbval/smblib-util.c
+@@ -60,6 +60,7 @@ static char *SMB_Prots[] =
+     "NT LANMAN 1.0",
+     NULL};
+ 
++#if 0
+ /* Print out an SMB pkt in all its gory detail ... */
+ 
+ void
+@@ -78,6 +79,7 @@ SMB_Print_Pkt(FILE fd, RFCNB_Pkt * pkt, 
+     /* etc                                                 */
+ 
+ }
++#endif
+ 
+ /* Convert a DOS Date_Time to a local host type date time for printing */
+ 

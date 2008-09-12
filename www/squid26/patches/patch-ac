@@ -1,0 +1,109 @@
+$NetBSD: patch-ac,v 1.1.1.1 2008/09/12 15:09:19 taca Exp $
+
+--- configure.orig	2008-06-28 06:55:39.000000000 +0900
++++ configure
+@@ -8040,11 +8040,13 @@ for ac_header in sys/types.h \
+ 	linux/netfilter_ipv4.h \
+ 	linux/netfilter_ipv4/ip_tproxy.h \
+ 	malloc.h \
++  	machine/byte_swap.h \
+ 	math.h \
+ 	memory.h \
+ 	mount.h \
+ 	net/if.h \
+ 	net/pfvar.h \
++	net/pf/pfvar.h \
+ 	netdb.h \
+ 	netinet/if_ether.h \
+ 	netinet/tcp.h \
+@@ -21448,11 +21450,13 @@ _ACEOF
+ fi
+ 
+ 
+-{ echo "$as_me:$LINENO: checking for fd_mask" >&5
+-echo $ECHO_N "checking for fd_mask... $ECHO_C" >&6; }
+-if test "${ac_cv_type_fd_mask+set}" = set; then
++
++{ echo "$as_me:$LINENO: checking for fd_set" >&5
++echo $ECHO_N "checking for fd_set... $ECHO_C" >&6; }
++if test "${ac_cv_have_fd_mask+set}" = set; then
+   echo $ECHO_N "(cached) $ECHO_C" >&6
+ else
++
+   cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
+ _ACEOF
+@@ -21460,35 +21464,14 @@ cat confdefs.h >>conftest.$ac_ext
+ cat >>conftest.$ac_ext <<_ACEOF
+ /* end confdefs.h.  */
+ 
+-/* What a mess.. many systems have added the (now standard) bit types
+- * in their own ways, so we need to scan a wide variety of headers to
+- * find them..
+- */
+-#include <sys/types.h>
+-#if STDC_HEADERS
+-#include <stdlib.h>
+-#include <stddef.h>
+-#endif
+-#if HAVE_INTTYPES_H
+-#include <inttypes.h>
+-#endif
+-#if HAVE_SYS_TYPES_H
+ #include <sys/types.h>
+-#endif
+-#if HAVE_SYS_BITYPES_H
+-#include <sys/bitypes.h>
+-#endif
+-
+-
++#include <sys/time.h>
++#include <sys/unistd.h>
+ typedef fd_mask ac__type_new_;
+ int
+ main ()
+ {
+-if ((ac__type_new_ *) 0)
+-  return 0;
+-if (sizeof (ac__type_new_))
+-  return 0;
+-  ;
++ac__type_new_ fds;
+   return 0;
+ }
+ _ACEOF
+@@ -21509,30 +21492,19 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+ 	 test -z "$ac_c_werror_flag" ||
+ 	 test ! -s conftest.err
+        } && test -s conftest.$ac_objext; then
+-  ac_cv_type_fd_mask=yes
++  ac_cv_have_fd_mask=yes
+ else
+   echo "$as_me: failed program was:" >&5
+ sed 's/^/| /' conftest.$ac_ext >&5
+ 
+-	ac_cv_type_fd_mask=no
++	ac_cv_have_fd_mask=no
+ fi
+ 
+ rm -f core conftest.err conftest.$ac_objext conftest.$ac_ext
+-fi
+-{ echo "$as_me:$LINENO: result: $ac_cv_type_fd_mask" >&5
+-echo "${ECHO_T}$ac_cv_type_fd_mask" >&6; }
+-if test $ac_cv_type_fd_mask = yes; then
+-  :
+-else
+-
+-cat >>confdefs.h <<_ACEOF
+-#define fd_mask int
+-_ACEOF
+ 
+ fi
+-
+-
+-
++{ echo "$as_me:$LINENO: result: $ac_cv_have_fd_mask" >&5
++echo "${ECHO_T}$ac_cv_have_fd_mask" >&6; }
+ 
+ { echo "$as_me:$LINENO: checking for off_t" >&5
+ echo $ECHO_N "checking for off_t... $ECHO_C" >&6; }
