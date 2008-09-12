@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2217 2008/09/12 13:27:24 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.2218 2008/09/12 14:48:36 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3742,3 +3742,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/ptlib version 2.3.0.20080907 [jmcneill 2008-09-12]
 	Added devel/opal-devel version 3.3.0.20080907 [jmcneill 2008-09-12]
 	Added net/ekiga-devel version 2.9.90.20080907 [jmcneill 2008-09-12]
+	Updated multimedia/vlc08 to 0.8.6i [sborrill 2008-09-12]
