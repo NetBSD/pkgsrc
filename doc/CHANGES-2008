@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2216 2008/09/12 11:38:48 joerg Exp $
+$NetBSD: CHANGES-2008,v 1.2217 2008/09/12 13:27:24 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3739,3 +3739,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/trac to 0.11.1 [abs 2008-09-12]
 	Added x11/wxGTK28 version 2.8.8 [joerg 2008-09-12]
 	Added x11/wxGTK28-contrib version 2.8.8 [joerg 2008-09-12]
+	Added devel/ptlib version 2.3.0.20080907 [jmcneill 2008-09-12]
+	Added devel/opal-devel version 3.3.0.20080907 [jmcneill 2008-09-12]
+	Added net/ekiga-devel version 2.9.90.20080907 [jmcneill 2008-09-12]
