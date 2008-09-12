@@ -1,0 +1,12 @@
+$NetBSD: patch-am,v 1.1.1.1 2008/09/12 15:09:19 taca Exp $
+
+--- src/structs.h.orig	2008-06-28 06:07:15.000000000 +0900
++++ src/structs.h
+@@ -600,6 +600,7 @@ struct _SquidConfig {
+     wordlist *mcast_group_list;
+     wordlist *dns_testname_list;
+     wordlist *dns_nameservers;
++    wordlist *log_mime_hdrs_list;
+     peer *peers;
+     int npeers;
+     struct {

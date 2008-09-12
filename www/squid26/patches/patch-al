@@ -1,0 +1,17 @@
+$NetBSD: patch-al,v 1.1.1.1 2008/09/12 15:09:19 taca Exp $
+
+--- src/client_side.c.orig	2008-06-28 06:06:39.000000000 +0900
++++ src/client_side.c
+@@ -88,8 +88,12 @@
+ #include <sys/fcntl.h>
+ #include <net/if.h>
+ #include <netinet/in.h>
++#ifdef __DragonFly__
++#include <net/pf/pfvar.h>
++#else
+ #include <net/pfvar.h>
+ #endif
++#endif
+ 
+ #if LINUX_NETFILTER
+ #include <linux/netfilter_ipv4.h>

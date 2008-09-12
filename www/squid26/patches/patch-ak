@@ -1,0 +1,38 @@
+$NetBSD: patch-ak,v 1.1.1.1 2008/09/12 15:09:19 taca Exp $
+
+--- src/cf.data.pre.orig	2008-06-28 06:05:08.000000000 +0900
++++ src/cf.data.pre
+@@ -2292,6 +2292,18 @@ DOC_START
+ 	formats).  To enable this logging set log_mime_hdrs to 'on'.
+ DOC_END
+ 
++NAME: log_mime_hdrs_list
++TYPE: wordlist
++LOC: Config.log_mime_hdrs_list
++DEFAULT: all
++DOC_START
++	This list specifies which headers should be passed when
++	header logging is enabled by 'log_mime_hdrs on'.  You can
++	specify list of header names or 'all'.
++
++log_mime_hdrs_list all
++DOC_END
++
+ NAME: useragent_log
+ TYPE: string
+ LOC: Config.Log.useragent
+@@ -3392,12 +3404,12 @@ DOC_END
+ 
+ NAME: cache_effective_user
+ TYPE: string
+-DEFAULT: nobody
++DEFAULT: @USER@
+ LOC: Config.effectiveUser
+ DOC_START
+ 	If you start Squid as root, it will change its effective/real
+ 	UID/GID to the user specified below.  The default is to change
+-	to UID to nobody.  If you define cache_effective_user, but not
++	to UID to @USER@.  If you define cache_effective_user, but not
+ 	cache_effective_group, Squid sets the GID to the effective
+ 	user's default group ID (taken from the password file) and
+ 	supplementary group list from the from groups membership of
