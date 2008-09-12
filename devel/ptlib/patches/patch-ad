@@ -1,0 +1,49 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/09/12 13:18:26 jmcneill Exp $
+
+--- src/ptlib/unix/tlibthrd.cxx.orig	2008-09-08 15:35:17.000000000 -0400
++++ src/ptlib/unix/tlibthrd.cxx	2008-09-08 15:36:17.000000000 -0400
+@@ -216,7 +216,7 @@
+ {
+   PWaitAndSignal m(threadMutex);
+ 
+-  if (!activeThreads.Contains((unsigned)id)) 
++  if (!activeThreads.Contains((uintptr_t)id)) 
+     return PFalse;
+ 
+   return pthread_kill(id, sig) == 0;
+@@ -254,7 +254,7 @@
+ #endif
+ 
+   ((PProcess *)this)->activeThreads.DisallowDeleteObjects();
+-  ((PProcess *)this)->activeThreads.SetAt((unsigned)PX_threadId, this);
++  ((PProcess *)this)->activeThreads.SetAt((uintptr_t)PX_threadId, this);
+ 
+   PX_firstTimeStart = PFalse;
+ }
+@@ -366,7 +366,7 @@
+   PAssertPTHREAD(pthread_create, (&PX_threadId, &threadAttr, PX_ThreadStart, this));
+ 
+   // put the thread into the thread list
+-  process.activeThreads.SetAt((unsigned)PX_threadId, this);
++  process.activeThreads.SetAt((uintptr_t)PX_threadId, this);
+   if (process.activeThreads.GetSize() > highWaterMark)
+     newHighWaterMark = highWaterMark = process.activeThreads.GetSize();
+ 
+@@ -689,7 +689,7 @@
+ {
+   PProcess & process = PProcess::Current();
+   process.threadMutex.Wait();
+-  PThread * thread = process.activeThreads.GetAt((unsigned)pthread_self());
++  PThread * thread = process.activeThreads.GetAt((uintptr_t)pthread_self());
+   process.threadMutex.Signal();
+   return thread;
+ }
+@@ -830,7 +830,7 @@
+   }  
+ 
+  // remove this thread from the active thread list
+-  process.activeThreads.SetAt((unsigned)id, NULL);
++  process.activeThreads.SetAt((uintptr_t)id, NULL);
+ 
+   // delete the thread if required, note this is done this way to avoid
+   // a race condition, the thread ID cannot be zeroed before the if!

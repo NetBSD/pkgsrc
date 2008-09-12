@@ -1,0 +1,13 @@
+$NetBSD: patch-bb,v 1.1.1.1 2008/09/12 13:18:26 jmcneill Exp $
+
+--- plugins/vidinput_v4l2/vidinput_names.cxx.orig	2008-09-08 17:55:13.000000000 -0400
++++ plugins/vidinput_v4l2/vidinput_names.cxx	2008-09-08 17:55:33.000000000 -0400
+@@ -36,7 +36,7 @@
+   if (!devdir.Open())
+     return;
+ 
+-#ifdef SOLARIS
++#if defined(SOLARIS) || defined(__NetBSD__)
+   int devnum = 0;
+   do {
+     PString filename = devdir.GetEntryName();

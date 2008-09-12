@@ -1,0 +1,40 @@
+$NetBSD: patch-ai,v 1.1.1.1 2008/09/12 13:18:26 jmcneill Exp $
+
+--- ./src/ptclib/pdns.cxx.orig	2008-09-12 09:00:39.000000000 -0400
++++ ./src/ptclib/pdns.cxx	2008-09-12 09:02:36.000000000 -0400
+@@ -195,13 +195,20 @@
+                      PDNS_RECORD * results,
+                             void *)
+ {
++#if defined(P_NETBSD)
++  struct __res_state myRes;
++#endif
+   if (results == NULL)
+     return -1;
+ 
+   *results = NULL;
+ 
+ #if P_HAS_RES_NINIT
++#if defined(P_NETBSD)
++  res_ninit(&myRes);
++#else
+   res_ninit(&_res);
++#endif
+ #else
+   res_init();
+   GetDNSMutex().Wait();
+@@ -213,7 +220,13 @@
+   } reply;
+ 
+ #if P_HAS_RES_NINIT
+-  int replyLen = res_nsearch(&_res, service, C_IN, requestType, (BYTE *)&reply, sizeof(reply));
++  int replyLen = res_nsearch(
++#if defined(P_NETBSD)
++      &myRes,
++#else
++      &_res,
++#endif
++      service, C_IN, requestType, (BYTE *)&reply, sizeof(reply));
+ #else
+   int replyLen = res_search(service, C_IN, requestType, (BYTE *)&reply, sizeof(reply));
+   GetDNSMutex().Signal();
