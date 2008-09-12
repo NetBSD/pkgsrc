@@ -1,0 +1,29 @@
+$NetBSD: patch-ae,v 1.1.1.1 2008/09/12 13:18:26 jmcneill Exp $
+
+--- src/ptlib/common/osutils.cxx.orig	2008-09-08 15:37:04.000000000 -0400
++++ src/ptlib/common/osutils.cxx	2008-09-08 15:37:31.000000000 -0400
+@@ -2091,21 +2091,21 @@
+ PReadWriteMutex::Nest * PReadWriteMutex::GetNest() const
+ {
+   PWaitAndSignal mutex(nestingMutex);
+-  return nestedThreads.GetAt(POrdinalKey((PINDEX)PThread::GetCurrentThreadId()));
++  return nestedThreads.GetAt(POrdinalKey((INT)PThread::GetCurrentThreadId()));
+ }
+ 
+ 
+ void PReadWriteMutex::EndNest()
+ {
+   nestingMutex.Wait();
+-  nestedThreads.RemoveAt(POrdinalKey((PINDEX)PThread::GetCurrentThreadId()));
++  nestedThreads.RemoveAt(POrdinalKey((INT)PThread::GetCurrentThreadId()));
+   nestingMutex.Signal();
+ }
+ 
+ 
+ PReadWriteMutex::Nest & PReadWriteMutex::StartNest()
+ {
+-  POrdinalKey threadId = (PINDEX)PThread::GetCurrentThreadId();
++  POrdinalKey threadId = (INT)PThread::GetCurrentThreadId();
+ 
+   nestingMutex.Wait();
+ 
