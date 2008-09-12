@@ -1,0 +1,22 @@
+$NetBSD: patch-ag,v 1.1.1.1 2008/09/12 15:02:47 taca Exp $
+
+--- include/ntlmauth.h.orig	2007-03-04 03:25:31.000000000 +0900
++++ include/ntlmauth.h
+@@ -70,6 +70,9 @@
+ #define bswap16(x) bswap_16(x)
+ #define bswap32(x) bswap_32(x)
+ #else	 /* HAVE_BISTWAP_H */
++#ifdef HAVE_MACHINE_BYTE_SWAP_H
++#include <machine/byte_swap.h>
++#else	/* HAVE_MACHINE_BYTE_SWAP_H */
+ #ifndef bswap16
+ #define bswap16(x) (((((u_int16_t)x) >> 8) & 0xff) | ((((u_int16_t)x) & 0xff) << 8))
+ #endif
+@@ -78,6 +81,7 @@
+     (((((u_int32_t)x) & 0xff000000) >> 24) | ((((u_int32_t)x) & 0x00ff0000) >>  8) | \
+      ((((u_int32_t)x) & 0x0000ff00) <<  8) | ((((u_int32_t)x) & 0x000000ff) << 24))
+ #endif
++#endif	/* HAVE_MACHINE_BYTE_SWAP_H */
+ #endif /* HAVE_BITSWAP_H */
+ 
+ /* Used internally. Microsoft seems to think this is right, I believe them.
