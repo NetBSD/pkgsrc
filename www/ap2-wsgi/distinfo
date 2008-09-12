@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.5 2008/09/12 05:41:59 epg Exp $
+$NetBSD: distinfo,v 1.6 2008/09/12 08:13:10 epg Exp $
 
 SHA1 (mod_wsgi-2.3.tar.gz) = 7a28710b1ce02a48e4dc77189e37dcbffa0ed26b
 RMD160 (mod_wsgi-2.3.tar.gz) = fde91c1a092eafd505ddc5d36616a8c2c6940f84
 Size (mod_wsgi-2.3.tar.gz) = 96872 bytes
-SHA1 (patch-aa) = 3bd148f1d279c9f66cf29af64935b030aac9eaba
+SHA1 (patch-aa) = 716e1c8932f4563bd7d93344884bceb2300d3735
