@@ -1,0 +1,46 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2008/09/12 11:09:49 joerg Exp $
+#
+
+DISTNAME=		wxGTK-2.8.8
+CATEGORIES=		x11
+MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=wxwindows/}
+EXTRACT_SUFX=		.tar.bz2
+
+MAINTAINER=		joerg@NetBSD.org
+HOMEPAGE=		http://www.wxwidgets.org/
+
+PATCHDIR=		${.CURDIR}/../../x11/wxGTK28/patches
+DISTINFO_FILE=		${.CURDIR}/../../x11/wxGTK28/distinfo
+
+PATCHFILES=		${DISTNAME}-libtool.diff.bz2
+PATCH_SITES=		${MASTER_SITE_LOCAL}
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+USE_TOOLS+=		pkg-config msgfmt
+USE_LIBTOOL=		yes
+USE_PKGLOCALEDIR=	YES
+USE_LANGUAGES=		c c++
+GNU_CONFIGURE=		YES
+USE_GNU_CONFIGURE_HOST=	no
+CONFIGURE_ARGS+=	--with-gtk=2
+CONFIGURE_ARGS+=	--with-libjpeg=sys
+CONFIGURE_ARGS+=	--with-libpng=sys
+CONFIGURE_ARGS+=	--with-libtiff=sys
+CONFIGURE_ARGS+=	--with-opengl
+CONFIGURE_ARGS+=	--with-zlib=sys
+CONFIGURE_ARGS+=	--with-regex=builtin
+
+DOCDIR=			${PREFIX}/share/doc/wxGTK
+
+.include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/glu/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../graphics/png/buildlink3.mk"
+.include "../../graphics/tiff/buildlink3.mk"
+.include "../../x11/gtk2/buildlink3.mk"
+.include "../../x11/libSM/buildlink3.mk"
+
+.include "../../mk/pthread.buildlink3.mk"
