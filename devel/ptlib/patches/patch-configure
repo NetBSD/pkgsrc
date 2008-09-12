@@ -1,0 +1,12 @@
+$NetBSD: patch-configure,v 1.1 2008/09/12 20:46:29 sborrill Exp $
+--- configure.orig	2008-09-12 21:43:29.000000000 +0100
++++ configure	2008-09-12 21:44:03.000000000 +0100
+@@ -7154,7 +7154,7 @@
+   fi
+ fi
+ 
+-if test "${P_HAS_SEMAPHORES}x" == "x" ; then
++if test "${P_HAS_SEMAPHORES}x" = "x" ; then
+ 
+   cat >conftest.$ac_ext <<_ACEOF
+ /* confdefs.h.  */
