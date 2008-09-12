@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.31 2007/01/07 09:14:08 rillig Exp $
+# $NetBSD: Makefile,v 1.32 2008/09/12 00:49:36 gdt Exp $
 
 DISTNAME=	nntpclnt-1.6.1
 PKGREVISION=	6
@@ -12,6 +12,8 @@ CONFLICTS+=	inn-[0-9]*
 
 LICENSE=	nntpclnt-license
 RESTRICTED=	Do not sell, rent, trade, market, or use for monetary profit
+# No permission granted for derivative works.
+NO_BIN_ON_FTP=	${RESTRICTED}
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
