@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/12 13:24:51 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/09/12 13:41:20 jmcneill Exp $
 bin/ekiga
 bin/ekiga-config-tool
 bin/ekiga-helper
@@ -213,7 +213,6 @@ share/icons/hicolor/22x22/apps/ekiga.png
 share/icons/hicolor/32x32/apps/ekiga.png
 share/icons/hicolor/48x48/apps/ekiga.png
 share/icons/hicolor/72x72/apps/ekiga.png
-share/icons/hicolor/icon-theme.cache
 share/locale/am/LC_MESSAGES/ekiga.mo
 share/locale/ar/LC_MESSAGES/ekiga.mo
 share/locale/az/LC_MESSAGES/ekiga.mo
