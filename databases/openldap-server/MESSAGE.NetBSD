@@ -1,0 +1,14 @@
+===========================================================================
+$NetBSD: MESSAGE.NetBSD,v 1.1 2008/09/12 11:29:23 ghen Exp $
+
+On 64-bit NetBSD platforms it may be necessary to increase your stacksize
+resource limit prior to starting slapd.  This can be achieved automatically
+by creating the following /etc/rc.conf.d/slapd file:
+
+start_precmd="set_limits"
+
+set_limits()
+{
+	ulimit -s 4096
+}
+===========================================================================
