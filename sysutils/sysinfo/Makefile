@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2007/06/14 18:37:19 gdt Exp $
+# $NetBSD: Makefile,v 1.13 2008/09/12 11:58:50 gdt Exp $
 #
 
 DISTNAME=		sysinfo-3.5.1
@@ -9,7 +9,6 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.magnicomp.com/
 COMMENT=		Displays system hardware and software information and configuration
 
-# XXX add sysinfo-license
 LICENSE=		sysinfo-license
 RESTRICTED=		May not be sold for profit or used for commercial gain.
 NO_SRC_ON_CDROM=	${RESTRICTED}
