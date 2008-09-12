@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2007/10/31 21:48:58 gdt Exp $
+# $NetBSD: Makefile,v 1.19 2008/09/12 20:02:17 gdt Exp $
 #
 
 DISTNAME=		titrax-1.98
@@ -13,8 +13,10 @@ COMMENT=		Little X11 tool to track project times
 USE_IMAKE=		YES
 USE_TOOLS+=		perl:run
 
-LICENSE=		titrax-license # missing
-RESTRICTED=		Do not sell for profit
+LICENSE=		titrax-license
+RESTRICTED=		Do not sell for "real money".
+# XXX Arguably NO_*_ON_CDROM is not necessary, because "real money" seems
+# to exclude CDROM distribution charges.
 NO_SRC_ON_CDROM=	${RESTRICTED}
 NO_BIN_ON_CDROM=	${RESTRICTED}
 
