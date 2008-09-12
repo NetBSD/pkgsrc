@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1.1.1 2008/09/12 15:02:47 taca Exp $
+
+--- scripts/Makefile.in.orig	2007-11-12 10:14:20.000000000 +0900
++++ scripts/Makefile.in
+@@ -386,7 +386,7 @@ info-am:
+ 
+ install-data-am:
+ 
+-install-exec-am: install-binSCRIPTS
++install-exec-am:
+ 
+ install-info: install-info-am
+ 
