@@ -1,4 +1,4 @@
-$NetBSD: patch-af,v 1.1.1.1 2008/09/12 13:18:26 jmcneill Exp $
+$NetBSD: patch-af,v 1.2 2008/09/13 18:09:06 jmcneill Exp $
 
 --- make/unix.mak.orig	2008-09-07 17:00:16.000000000 -0400
 +++ make/unix.mak	2008-09-08 15:40:22.000000000 -0400
@@ -40,12 +40,3 @@ $NetBSD: patch-af,v 1.1.1.1 2008/09/12 13:18:26 jmcneill Exp $
  endif
  
  ifndef INSTALLBIN_DIR
-@@ -670,7 +678,7 @@
-   ifeq ($(OSTYPE),solaris)
-     OPTCCFLAGS	+= -O3 
-   else
--    OPTCCFLAGS	+= -Os 
-+    OPTCCFLAGS	+=
-   endif
- else
-   OPTCCFLAGS	+= -O2
