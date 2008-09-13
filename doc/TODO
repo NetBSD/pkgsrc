@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7534 2008/09/11 17:22:28 darcy Exp $
+$NetBSD: TODO,v 1.7535 2008/09/13 15:16:01 dholland Exp $
 
 Suggested new packages
 ======================
@@ -1100,7 +1100,6 @@ Suggested package updates
 	o py-ZopeInterface-3.3.0
 	o py-bdb-xml-2.1.8
 	o py-boto-1.4a
-	o py-bsddb3-4.7.2
 	o py-cairo-1.6.4
 	o py-checker-0.8.17
 	o py-clearsilver-0.10.5
