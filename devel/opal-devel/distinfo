@@ -1,4 +1,7 @@
-$NetBSD: distinfo,v 1.3 2008/09/13 18:12:43 jmcneill Exp $
+$NetBSD: distinfo,v 1.4 2008/09/13 19:51:42 jmcneill Exp $
 
+SHA1 (opal-snapshot-20080912.tar.gz) = d0c8359a1406ab2da3e354c944a7cefde7858a3a
+RMD160 (opal-snapshot-20080912.tar.gz) = 15e32b8479547e4b9fc7674fd172f5f4dfd4c9a8
+Size (opal-snapshot-20080912.tar.gz) = 22973261 bytes
 SHA1 (patch-configure) = 9c4cf98787f0f6505ba419e101fed5677cb14456
 SHA1 (patch-configure.tmp) = c0601b8974f53d455f3016806c6875afe1cd809f
