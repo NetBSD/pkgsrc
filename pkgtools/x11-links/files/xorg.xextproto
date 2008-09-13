@@ -1,4 +1,4 @@
-# $NetBSD: xorg.xextproto,v 1.1 2006/04/19 15:56:38 reed Exp $
+# $NetBSD: xorg.xextproto,v 1.1.22.1 2008/09/13 15:53:04 cube Exp $
 include/X11/extensions/MITMisc.h
 include/X11/extensions/XEVI.h
 include/X11/extensions/XEVIstr.h
@@ -21,6 +21,7 @@ include/X11/extensions/Xcupstr.h
 include/X11/extensions/Xdbe.h
 include/X11/extensions/Xdbeproto.h
 include/X11/extensions/Xext.h
+include/X11/extensions/Xge.h
 include/X11/extensions/Xv.h
 include/X11/extensions/XvMC.h
 include/X11/extensions/XvMCproto.h
@@ -29,6 +30,8 @@ include/X11/extensions/bigreqstr.h
 include/X11/extensions/dpms.h
 include/X11/extensions/dpmsstr.h
 include/X11/extensions/extutil.h
+include/X11/extensions/ge.h
+include/X11/extensions/geproto.h
 include/X11/extensions/lbxbuf.h
 include/X11/extensions/lbxbufstr.h
 include/X11/extensions/lbxdeltastr.h
@@ -52,3 +55,4 @@ include/X11/extensions/xcmiscstr.h
 include/X11/extensions/xtestext1.h
 include/X11/extensions/xteststr.h
 lib/pkgconfig/xextensions.pc
+lib/pkgconfig/xextproto.pc
