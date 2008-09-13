@@ -1,11 +1,9 @@
-# $NetBSD: Makefile,v 1.11 2008/04/28 21:35:25 jmmv Exp $
+# $NetBSD: Makefile,v 1.12 2008/09/13 16:14:13 jmmv Exp $
 #
 
 BOOST_PACKAGE=		headers
 BOOST_COMMENT=		(build-time headers)
 BOOST_CONFIG=		generate
-
-PKGREVISION=		1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
