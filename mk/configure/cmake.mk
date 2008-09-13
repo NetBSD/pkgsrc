@@ -1,4 +1,4 @@
-# $NetBSD: cmake.mk,v 1.5 2008/02/13 09:13:31 rillig Exp $
+# $NetBSD: cmake.mk,v 1.6 2008/09/13 11:09:58 markd Exp $
 #
 # This file handles packages that use CMake as their primary build
 # system. For more information about CMake, see http://www.cmake.org/.
@@ -20,6 +20,7 @@ _CMAKE_DIR=	${BUILDLINK_DIR}/cmake-Modules
 
 CMAKE_ARGS+=	-DCMAKE_INSTALL_PREFIX:PATH=${PREFIX}
 CMAKE_ARGS+=	-DCMAKE_MODULE_PATH:PATH=${_CMAKE_DIR}
+CMAKE_ARGS+=	-DCMAKE_SKIP_RPATH:BOOL=TRUE
 
 CMAKE_MODULE_PATH_OVERRIDE+=	CMakeLists.txt
 
