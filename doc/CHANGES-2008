@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2230 2008/09/13 13:42:24 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.2231 2008/09/13 13:48:41 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3764,3 +3764,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-CGI-Application to 4.11 [rhaen 2008-09-13]
 	Updated devel/p5-IPC-Run3 to 0.042 [rhaen 2008-09-13]
 	Updated devel/p5-Log-Log4perl to 1.18 [rhaen 2008-09-13]
+	Updated textproc/p5-XML-Encoding to 2.05 [rhaen 2008-09-13]
