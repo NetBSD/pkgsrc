@@ -1,0 +1,13 @@
+$NetBSD: patch-aq,v 1.1 2008/09/13 16:14:13 jmmv Exp $
+
+--- boost/test/impl/execution_monitor.ipp.orig	2007-11-25 11:07:19.000000000 -0700
++++ boost/test/impl/execution_monitor.ipp
+@@ -139,7 +139,7 @@
+ #   define BOOST_TEST_USE_ALT_STACK
+ #  endif
+ 
+-#  if !defined(__CYGWIN__) && !(defined(macintosh) || defined(__APPLE__) || defined(__APPLE_CC__))
++#  if !defined(__CYGWIN__) && !(defined(macintosh) || defined(__APPLE__) || defined(__APPLE_CC__)) && !defined(__NetBSD__)
+ #    define BOOST_TEST_CATCH_SIGPOLL
+ #  endif
+ 
