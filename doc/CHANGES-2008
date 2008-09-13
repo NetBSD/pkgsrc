@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2234 2008/09/13 18:54:56 he Exp $
+$NetBSD: CHANGES-2008,v 1.2235 2008/09/13 19:16:29 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3780,3 +3780,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/p5-Jemplate to 0.23 [he 2008-09-13]
 	Updated www/p5-Apache-Reload to 0.10 [he 2008-09-13]
 	Updated devel/p5-Class-Trigger to 0.13 [he 2008-09-13]
+	Updated devel/ptlib to 2.3.0.20080912 [jmcneill 2008-09-13]
+	Updated devel/opal-devel to 3.3.0.20080912 [jmcneill 2008-09-13]
+	Updated net/ekiga-devel to 2.9.90.20080912 [jmcneil 2008-09-13]
