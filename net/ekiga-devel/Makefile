@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/12 13:24:51 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/13 18:15:02 jmcneill Exp $
 #
 
-DISTNAME=		ekiga-snapshot-20080907
-PKGNAME=		ekiga-2.9.90.20080907
+DISTNAME=		ekiga-snapshot-20080912
+PKGNAME=		ekiga-2.9.90.20080912
 COMMENT=		VoIP and video conferencing application for GNOME
 CATEGORIES=		net comms
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -49,6 +49,7 @@ BUILD_DEPENDS+=gnome-common>=2.20.0:../../devel/gnome-common
 .include "../../devel/opal-devel/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
+.include "../../sysutils/libnotify/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../x11/libXv/buildlink3.mk"

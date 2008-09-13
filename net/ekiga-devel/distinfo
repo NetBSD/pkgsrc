@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/12 13:24:51 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2008/09/13 18:15:02 jmcneill Exp $
 
-SHA1 (ekiga-snapshot-20080907.tar.gz) = 4887d0e3f658d812fb62fbb3d49675cc6bf26102
-RMD160 (ekiga-snapshot-20080907.tar.gz) = 8615012d2450de702a62e49201d298cd97a6de78
-Size (ekiga-snapshot-20080907.tar.gz) = 17197153 bytes
-SHA1 (patch-aa) = af13929c7b4eef1606308473b954f19459d3bd28
+SHA1 (ekiga-snapshot-20080912.tar.gz) = a76702928b959c4d5e5894f99c01d066a831c3a8
+RMD160 (ekiga-snapshot-20080912.tar.gz) = 58a9f53bbef37044bf2c5a3c077a1e7234016f3d
+Size (ekiga-snapshot-20080912.tar.gz) = 17655175 bytes
