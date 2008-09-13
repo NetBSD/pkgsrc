@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2221 2008/09/12 22:23:43 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2222 2008/09/13 00:31:34 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3753,3 +3753,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/squid27 version 2.7.4 [taca 2008-09-12]
 	Added www/squid30 version 3.0.9 [taca 2008-09-12]
 	Removed devel/bakefile [bjs 2008-09-12]
+	Removed x11/dri2proto [bjs 2008-09-13]
