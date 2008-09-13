@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2233 2008/09/13 16:15:55 jmmv Exp $
+$NetBSD: CHANGES-2008,v 1.2234 2008/09/13 18:54:56 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3773,3 +3773,10 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/boost-python to 1.36.0 [jmmv 2008-09-13]
 	Updated devel/boost-docs to 1.36.0 [jmmv 2008-09-13]
 	Updated meta-pkgs/boost to 1.36.0 [jmmv 2008-09-13]
+	Updated devel/p5-File-chdir to 0.1002 [he 2008-09-13]
+	Updated time/p5-DateTime-Format-Epoch to 0.11 [he 2008-09-13]
+	Updated net/p5-Net-RawIP to 0.23 [he 2008-09-13]
+	Updated net/p5-SNMP-Info to 2.00 [he 2008-09-13]
+	Updated www/p5-Jemplate to 0.23 [he 2008-09-13]
+	Updated www/p5-Apache-Reload to 0.10 [he 2008-09-13]
+	Updated devel/p5-Class-Trigger to 0.13 [he 2008-09-13]
