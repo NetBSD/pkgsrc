@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/07/25 09:53:49 rhaen Exp $
+# $NetBSD: Makefile,v 1.3 2008/09/13 13:51:54 he Exp $
 
 DISTNAME=	Catalyst-Plugin-Session-State-Cookie-0.09
 PKGNAME=	p5-${DISTNAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Catalyst/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/perldoc?Catalyst::Plugin::Session::State::Cookie
+HOMEPAGE=	http://search.cpan.org/dist/Catalyst-Plugin-Session-State-Cookie/
 COMMENT=	Maintain session IDs using cookies
 
 DEPENDS+=	p5-Catalyst-Runtime>=5.7010:../../www/p5-Catalyst-Runtime
