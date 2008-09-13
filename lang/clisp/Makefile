@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.70 2008/09/12 22:12:44 ahoka Exp $
+# $NetBSD: Makefile,v 1.71 2008/09/13 09:23:15 ahoka Exp $
 #
 
 DISTNAME=		clisp-2.46
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		lang
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=clisp/}
 #EXTRACT_SUFX=		.tar.bz2
@@ -34,10 +34,10 @@ UNLIMIT_RESOURCES=	stacksize
 CONFIGURE_ARGS+=	--fsstnd=netbsd
 CONFIGURE_ARGS+=	--without-included-regex
 CONFIGURE_ARGS+=	--with-gettext
-MAKE_FLAGS+=		docdir=${PREFIX}/share/doc/${PKGNAME}
+MAKE_FLAGS+=		docdir=${PREFIX}/share/doc/${PKGBASE}
 MAKE_FLAGS+=		mandir=${PREFIX}/${PKGMANDIR}
-MAKE_FLAGS+=		elispdir="${PREFIX}/share/${PKGNAME}/emacs"
-MAKE_FLAGS+=		vimdir="${PREFIX}/share/${PKGNAME}/vim"
+MAKE_FLAGS+=		elispdir="${PREFIX}/share/${PKGBASE}/emacs"
+MAKE_FLAGS+=		vimdir="${PREFIX}/share/${PKGBASE}/vim"
 
 TEST_TARGET=		check
 
