@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1022 2008/09/12 22:27:07 bjs Exp $
+# $NetBSD: Makefile,v 1.1023 2008/09/13 09:06:47 ahoka Exp $
 #
 
 COMMENT=	Development utilities
@@ -322,6 +322,7 @@ SUBDIR+=	libsexymm
 SUBDIR+=	libsigc++
 SUBDIR+=	libsigc++1
 SUBDIR+=	libsigsegv
+SUBDIR+=	libsigsegv25
 SUBDIR+=	libslang
 SUBDIR+=	libslang2
 SUBDIR+=	libsmi
