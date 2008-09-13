@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2232 2008/09/13 15:14:24 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.2233 2008/09/13 16:15:55 jmmv Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3766,3 +3766,10 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-IPC-Run3 to 0.042 [rhaen 2008-09-13]
 	Updated devel/p5-Log-Log4perl to 1.18 [rhaen 2008-09-13]
 	Updated textproc/p5-XML-Encoding to 2.05 [rhaen 2008-09-13]
+	Updated devel/boost-jam to 1.36.0 [jmmv 2008-09-13]
+	Updated devel/boost-build to 1.36.0 [jmmv 2008-09-13]
+	Updated devel/boost-headers to 1.36.0 [jmmv 2008-09-13]
+	Updated devel/boost-libs to 1.36.0 [jmmv 2008-09-13]
+	Updated devel/boost-python to 1.36.0 [jmmv 2008-09-13]
+	Updated devel/boost-docs to 1.36.0 [jmmv 2008-09-13]
+	Updated meta-pkgs/boost to 1.36.0 [jmmv 2008-09-13]
