@@ -1,7 +1,7 @@
-$NetBSD: patch-aa,v 1.5 2008/04/21 20:11:58 drochner Exp $
+$NetBSD: patch-aa,v 1.6 2008/09/13 12:38:09 dholland Exp $
 
---- setup.py.orig	2008-03-25 14:50:51.000000000 +0100
-+++ setup.py
+--- setup2.py.orig	2008-03-25 14:50:51.000000000 +0100
++++ setup2.py
 @@ -7,10 +7,7 @@ import re
  import sys
  import glob
