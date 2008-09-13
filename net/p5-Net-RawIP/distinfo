@@ -1,5 +1,7 @@
-$NetBSD: distinfo,v 1.2 2007/03/07 16:46:39 gson Exp $
+$NetBSD: distinfo,v 1.3 2008/09/13 15:25:25 he Exp $
 
-SHA1 (Net-RawIP-0.21_03.tar.gz) = ee21c712193f5854df53a5ffda7e9cf7da12aecc
-RMD160 (Net-RawIP-0.21_03.tar.gz) = fa23811d7d9b5e75da51769d585b37599f4e5111
-Size (Net-RawIP-0.21_03.tar.gz) = 36878 bytes
+SHA1 (Net-RawIP-0.23.tar.gz) = 51ea4fb73bf4e4e78a53f108c0de3d8f43fd4af2
+RMD160 (Net-RawIP-0.23.tar.gz) = b90e082e53e8c4d96fe710824e1d34e266bd7152
+Size (Net-RawIP-0.23.tar.gz) = 41851 bytes
+SHA1 (patch-aa) = 418814696960cfa43c794d1fb0edc8c277373c8c
+SHA1 (patch-ab) = 2e50640ab1941c6199babb3ce8118b97fca87acf
