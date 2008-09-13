@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.1 2007/12/16 23:08:05 tron Exp $
+# $NetBSD: builtin.mk,v 1.1.10.1 2008/09/13 04:44:41 cube Exp $
 
 BUILTIN_PKG:=	libXinerama
 
 BUILTIN_FIND_FILES_VAR:=	LIB_XINERAMA
-BUILTIN_FIND_FILES.LIB_XINERAMA=${X11BASE}/lib/libXinerama.la
+BUILTIN_FIND_FILES.LIB_XINERAMA=${X11BASE}/lib/pkgconfig/xinerama.pc
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
