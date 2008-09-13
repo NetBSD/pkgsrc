@@ -1,4 +1,4 @@
-# $NetBSD: xorg.fixesproto,v 1.1 2006/04/19 15:56:38 reed Exp $
+# $NetBSD: xorg.fixesproto,v 1.1.22.1 2008/09/13 15:20:34 cube Exp $
 include/X11/extensions/xfixesproto.h
 include/X11/extensions/xfixeswire.h
-lib/pkgconfig/fixesext.pc
+lib/pkgconfig/fixesproto.pc
