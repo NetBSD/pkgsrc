@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2226 2008/09/13 13:19:54 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.2227 2008/09/13 13:25:04 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3760,3 +3760,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/libsigsegv25 version 2.5 [ahoka 2008-09-13]
 	Updated lang/python25 to 2.5.2nb4 [adrianp 2008-09-13]
 	Updated devel/p5-AnyEvent to 4.233 [rhaen 2008-09-13]
+	Updated textproc/p5-CAM-PDF to 1.21 [rhaen 2008-09-13]
