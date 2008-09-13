@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.4 2008/01/04 19:58:39 jmmv Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/09/13 16:14:13 jmmv Exp $
 share/boost-build/boost-build.jam
 share/boost-build/boost.css
+share/boost-build/boost_build.png
 share/boost-build/bootstrap.jam
 share/boost-build/build-system.jam
 share/boost-build/build/alias.jam
@@ -19,6 +20,8 @@ share/boost-build/build/type.jam
 share/boost-build/build/version.jam
 share/boost-build/build/virtual-target.jam
 share/boost-build/changes.txt
+share/boost-build/contrib/boost.jam
+share/boost-build/contrib/tntnet.jam
 share/boost-build/debian/boost-build.docs
 share/boost-build/debian/boost-build.examples
 share/boost-build/debian/changelog
@@ -160,6 +163,8 @@ share/boost-build/test/composite.py
 share/boost-build/test/conditionals.py
 share/boost-build/test/conditionals2.py
 share/boost-build/test/conditionals3.py
+share/boost-build/test/conditionals_multiple.py
+share/boost-build/test/configuration.py
 share/boost-build/test/core_d12.py
 share/boost-build/test/core_delete_module.py
 share/boost-build/test/core_dependencies.py
@@ -170,6 +175,7 @@ share/boost-build/test/core_varnames.py
 share/boost-build/test/custom_generator.py
 share/boost-build/test/default_build.py
 share/boost-build/test/default_features.py
+share/boost-build/test/default_toolset.py
 share/boost-build/test/dependency-test/Jamfile
 share/boost-build/test/dependency-test/a.cpp
 share/boost-build/test/dependency-test/a.h
@@ -209,6 +215,8 @@ share/boost-build/test/example_make.py
 share/boost-build/test/example_qt4.py
 share/boost-build/test/expansion.py
 share/boost-build/test/explicit.py
+share/boost-build/test/file_name_handling.py
+share/boost-build/test/free_features_request.py
 share/boost-build/test/gcc_runtime.py
 share/boost-build/test/generators-test/Jamfile
 share/boost-build/test/generators-test/a.cpp
@@ -310,6 +318,23 @@ share/boost-build/test/project_test1.py
 share/boost-build/test/project_test3.py
 share/boost-build/test/project_test4.py
 share/boost-build/test/property_expansion.py
+share/boost-build/test/qt4.py
+share/boost-build/test/qt4/Jamroot
+share/boost-build/test/qt4/phonon.cpp
+share/boost-build/test/qt4/qt3support.cpp
+share/boost-build/test/qt4/qtassistant.cpp
+share/boost-build/test/qt4/qtcore.cpp
+share/boost-build/test/qt4/qtcorefail.cpp
+share/boost-build/test/qt4/qtgui.cpp
+share/boost-build/test/qt4/qthelp.cpp
+share/boost-build/test/qt4/qtnetwork.cpp
+share/boost-build/test/qt4/qtscript.cpp
+share/boost-build/test/qt4/qtsql.cpp
+share/boost-build/test/qt4/qtsvg.cpp
+share/boost-build/test/qt4/qttest.cpp
+share/boost-build/test/qt4/qtwebkit.cpp
+share/boost-build/test/qt4/qtxml.cpp
+share/boost-build/test/qt4/qtxmlpatterns.cpp
 share/boost-build/test/railsys.py
 share/boost-build/test/railsys/libx/include/test_libx.h
 share/boost-build/test/railsys/libx/project-root.jam
@@ -331,6 +356,7 @@ share/boost-build/test/remove_requirement.py
 share/boost-build/test/resolution.py
 share/boost-build/test/searched_lib.py
 share/boost-build/test/skipping.py
+share/boost-build/test/sort_rule.py
 share/boost-build/test/source_locations.py
 share/boost-build/test/stage.py
 share/boost-build/test/standalone.py
@@ -421,6 +447,7 @@ share/boost-build/tools/gfortran.jam
 share/boost-build/tools/hp_cxx.jam
 share/boost-build/tools/hpfortran.jam
 share/boost-build/tools/ifort.jam
+share/boost-build/tools/intel-darwin.jam
 share/boost-build/tools/intel-linux.jam
 share/boost-build/tools/intel-win.jam
 share/boost-build/tools/intel.jam
@@ -428,12 +455,15 @@ share/boost-build/tools/lex.jam
 share/boost-build/tools/make.jam
 share/boost-build/tools/mc.jam
 share/boost-build/tools/midl.jam
+share/boost-build/tools/mipspro.jam
 share/boost-build/tools/mpi.jam
 share/boost-build/tools/msvc-config.jam
 share/boost-build/tools/msvc.jam
 share/boost-build/tools/notfile.jam
 share/boost-build/tools/package.jam
+share/boost-build/tools/pathscale.jam
 share/boost-build/tools/pch.jam
+share/boost-build/tools/pgi.jam
 share/boost-build/tools/python-config.jam
 share/boost-build/tools/python.jam
 share/boost-build/tools/qcc.jam
@@ -454,6 +484,7 @@ share/boost-build/tools/types/exe.jam
 share/boost-build/tools/types/html.jam
 share/boost-build/tools/types/lib.jam
 share/boost-build/tools/types/obj.jam
+share/boost-build/tools/types/objc.jam
 share/boost-build/tools/types/qt.jam
 share/boost-build/tools/types/register.jam
 share/boost-build/tools/types/rsp.jam
@@ -508,6 +539,7 @@ share/examples/boost-build/site-config.jam
 @dirrm share/boost-build/test/railsys/libx/include
 @dirrm share/boost-build/test/railsys/libx
 @dirrm share/boost-build/test/railsys
+@dirrm share/boost-build/test/qt4
 @dirrm share/boost-build/test/project-test4/lib2
 @dirrm share/boost-build/test/project-test4/lib
 @dirrm share/boost-build/test/project-test4
@@ -566,5 +598,6 @@ share/examples/boost-build/site-config.jam
 @dirrm share/boost-build/doc/src
 @dirrm share/boost-build/doc
 @dirrm share/boost-build/debian
+@dirrm share/boost-build/contrib
 @dirrm share/boost-build/build
 @dirrm share/boost-build

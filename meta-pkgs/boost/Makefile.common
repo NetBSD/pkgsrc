@@ -1,10 +1,10 @@
-# $NetBSD: Makefile.common,v 1.14 2008/05/26 02:13:22 joerg Exp $
+# $NetBSD: Makefile.common,v 1.15 2008/09/13 16:14:13 jmmv Exp $
 #
 
 BOOST_PACKAGE?=		undefined
 BOOST_COMMENT?=		undefined
 
-BOOST_VERSION=		1.34.1
+BOOST_VERSION=		1.36.0
 BOOST_SHORT_VERSION=	${BOOST_VERSION:S/./_/:C/\..*$//}
 
 DISTNAME=		boost_${BOOST_VERSION:S/./_/g}
@@ -25,7 +25,7 @@ MAINTAINER=		jmmv@NetBSD.org
 HOMEPAGE=		http://www.boost.org/
 COMMENT=		Free, peer-reviewed portable C++ source libraries ${BOOST_COMMENT}
 
-CONFLICTS+=		boost<1.34.0
+CONFLICTS+=		boost<1.36.0
 
 DISTINFO_FILE=		${.CURDIR}/../../meta-pkgs/boost/distinfo
 PATCHDIR=		${.CURDIR}/../../meta-pkgs/boost/patches
@@ -33,6 +33,21 @@ PATCHDIR=		${.CURDIR}/../../meta-pkgs/boost/patches
 USE_TOOLS+=		pax
 USE_LANGUAGES=		c c++
 GCC_REQD+=		3.2 # if using gcc; ignored otherwise
+
+SUBST_CLASSES+=                 fix-prefix
+SUBST_STAGE.fix-prefix=         pre-configure
+SUBST_MESSAGE.fix-prefix=       Fixing prefix.
+SUBST_FILES.fix-prefix=         Jamroot
+SUBST_VARS.fix-prefix=          PREFIX
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "Darwin"
+# Prevent using a pkgsrc libtool in OS X because the darwin toolset needs
+# the native libtool from /usr/bin.
+post-wrapper:
+	@ln -s /usr/bin/libtool ${WRAPPER_BINDIR}/libtool
+.endif
 
 # We can't do this at post-extract because the extract cookie will get a
 # future timestamp than the sources.  If this happens, print-PLIST does
