@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2005/02/24 14:08:35 wiz Exp $
+$NetBSD: distinfo,v 1.3 2008/09/13 18:17:17 he Exp $
 
-SHA1 (Apache-Reload-0.07.tar.gz) = 7f7faf9b349000a01bd309c5b75d5181d56cf5a5
-RMD160 (Apache-Reload-0.07.tar.gz) = 1ebcfe5e6f6d9c6d93d8ca680fecd25e7e20f35e
-Size (Apache-Reload-0.07.tar.gz) = 3266 bytes
+SHA1 (Apache-Reload-0.10.tar.gz) = dcac8fcc6d28adef88a8bfc205f2a035d0370618
+RMD160 (Apache-Reload-0.10.tar.gz) = db46e221523d25a9dfc0df2ef52266f00a0f5e1b
+Size (Apache-Reload-0.10.tar.gz) = 17441 bytes
