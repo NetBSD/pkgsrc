@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/12 13:22:05 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/09/13 18:12:43 jmcneill Exp $
 include/opal.h
 include/opal/asn/gcc.h
 include/opal/asn/h225.h
@@ -128,25 +128,30 @@ lib/libopal_${OPSYS}_${MACHINE_ARCH}.so
 lib/libopal_${OPSYS}_${MACHINE_ARCH}.so.3
 lib/libopal_${OPSYS}_${MACHINE_ARCH}.so.3.3
 lib/libopal_${OPSYS}_${MACHINE_ARCH}.so.3.3-beta1
-lib/${PKGNAME}/codecs/audio/g726_audio_pwplugin.so
-lib/${PKGNAME}/codecs/audio/gsm0610_audio_pwplugin.so
-lib/${PKGNAME}/codecs/audio/gsmamrcodec_pwplugin.so
-lib/${PKGNAME}/codecs/audio/ilbc_audio_pwplugin.so
-lib/${PKGNAME}/codecs/audio/ima_adpcm_audio_pwplugin.so
-lib/${PKGNAME}/codecs/audio/lpc10_audio_pwplugin.so
-lib/${PKGNAME}/codecs/audio/speex_audio_pwplugin.so
-lib/${PKGNAME}/codecs/video/h261-vic_video_pwplugin.so
-lib/${PKGNAME}/codecs/video/h263-ffmpeg_video_pwplugin.so
-lib/${PKGNAME}/lid/vpb_lid_pwplugin.so
+lib/opal-3.3.1/codecs/audio/g726_audio_pwplugin.so
+lib/opal-3.3.1/codecs/audio/gsm0610_audio_pwplugin.so
+lib/opal-3.3.1/codecs/audio/gsmamrcodec_pwplugin.so
+lib/opal-3.3.1/codecs/audio/ilbc_audio_pwplugin.so
+lib/opal-3.3.1/codecs/audio/ima_adpcm_audio_pwplugin.so
+lib/opal-3.3.1/codecs/audio/lpc10_audio_pwplugin.so
+lib/opal-3.3.1/codecs/audio/speex_audio_pwplugin.so
+lib/opal-3.3.1/codecs/video/h261-vic_video_pwplugin.so
+lib/opal-3.3.1/codecs/video/h263-1998_video_pwplugin.so
+lib/opal-3.3.1/codecs/video/h263-ffmpeg_video_pwplugin.so
+lib/opal-3.3.1/codecs/video/h264_video_pwplugin.so
+lib/opal-3.3.1/codecs/video/h264_video_pwplugin_helper
+lib/opal-3.3.1/codecs/video/mpeg4-ffmpeg_video_pwplugin.so
+lib/opal-3.3.1/codecs/video/theora_video_pwplugin.so
+lib/opal-3.3.1/lid/vpb_lid_pwplugin.so
 lib/pkgconfig/opal.pc
 share/opal/opal_inc.mak
 share/opal/version.h
 @dirrm share/opal
-@dirrm lib/${PKGNAME}/lid
-@dirrm lib/${PKGNAME}/codecs/video
-@dirrm lib/${PKGNAME}/codecs/audio
-@dirrm lib/${PKGNAME}/codecs
-@dirrm lib/${PKGNAME}
+@dirrm lib/opal-3.3.1/lid
+@dirrm lib/opal-3.3.1/codecs/video
+@dirrm lib/opal-3.3.1/codecs/audio
+@dirrm lib/opal-3.3.1/codecs
+@dirrm lib/opal-3.3.1
 @dirrm include/opal/zrtp
 @dirrm include/opal/t38
 @dirrm include/opal/t120
