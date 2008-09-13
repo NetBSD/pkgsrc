@@ -1,0 +1,21 @@
+$NetBSD: patch-ah,v 1.1 2008/09/13 17:59:27 jmcneill Exp $
+
+--- libv4l2/Makefile.orig	2008-09-13 13:39:08.000000000 -0400
++++ libv4l2/Makefile	2008-09-13 13:40:07.000000000 -0400
+@@ -3,6 +3,7 @@
+ CFLAGS := -g -O1
+ CFLAGS += -Wall -Wno-unused -Wpointer-arith -Wstrict-prototypes -Wmissing-prototypes
+ 
++LDFLAGS = -Wl,-R$(LIBDIR)
+ LIBS = -lpthread
+ 
+ V4L2_OBJS     = libv4l2.o log.o
+@@ -46,7 +47,7 @@
+ 	@echo 'Description: v4l2 device access library' >> libv4l2.pc
+ 	@echo 'Version: '$(V4L2_LIB_VERSION) >> libv4l2.pc
+ 	@echo 'Requires: libv4lconvert' >> libv4l2.pc
+-	@echo 'Libs: -L$${libdir} -lv4l2' >> libv4l2.pc
++	@echo 'Libs: -L$${libdir} -Wl,-R$${libdir} -lv4l2' >> libv4l2.pc
+ 	@echo 'Libs.private: -lpthread' >> libv4l2.pc
+ 	@echo 'Cflags: -I$${prefix}/include' >> libv4l2.pc
+ 
