@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2008/06/21 21:14:48 joerg Exp $
+# $NetBSD: Makefile,v 1.63 2008/09/13 11:00:45 markd Exp $
 
 DISTNAME=	blender-2.45
 PKGREVISION=	3
@@ -23,8 +23,8 @@ LDFLAGS+=		-lcrypto
 
 INSTALLATION_DIRS=	bin
 
-CMAKE_ARGS+=	-DFREETYPE_INC=${BUILDLINK_PREFIX.freetype2}/include/freetype2
-CMAKE_ARGS+=	-DSDL_INCLUDE_DIR=${BUILDLINK_PREFIX.SDL}/include/SDL
+CMAKE_ARGS+=	-DFREETYPE_INC:PATH=${BUILDLINK_PREFIX.freetype2}/include/freetype2
+CMAKE_ARGS+=	-DSDL_INCLUDE_DIR:PATH=${BUILDLINK_PREFIX.SDL}/include/SDL
 
 CHECK_INTERPRETER_SKIP= share/blender/scripts/*.py share/blender/scripts/*/*.py
 
