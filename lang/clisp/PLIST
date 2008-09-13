@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2008/06/23 19:34:00 ghen Exp $
+@comment $NetBSD: PLIST,v 1.16 2008/09/13 09:23:15 ahoka Exp $
 bin/clisp
 lib/clisp/base/calls.o
 lib/clisp/base/gettext.o
@@ -50,32 +50,32 @@ lib/clisp/linkkit/clisp.h
 lib/clisp/linkkit/modprep.lisp
 lib/clisp/linkkit/modules.c
 man/man1/clisp.1
-share/${PKGNAME}/emacs/clhs.el
-share/${PKGNAME}/emacs/clisp-coding.el
-share/${PKGNAME}/emacs/clisp-ffi.el
-share/${PKGNAME}/emacs/clisp-indent.el
-share/${PKGNAME}/emacs/clisp-indent.lisp
-share/${PKGNAME}/vim/lisp.vim
-share/doc/${PKGNAME}/ANNOUNCE
-share/doc/${PKGNAME}/CLOS-guide.txt
-share/doc/${PKGNAME}/COPYRIGHT
-share/doc/${PKGNAME}/GNU-GPL
-share/doc/${PKGNAME}/LISP-tutorial.txt
-share/doc/${PKGNAME}/MAGIC.add
-share/doc/${PKGNAME}/NEWS
-share/doc/${PKGNAME}/README
-share/doc/${PKGNAME}/README.de
-share/doc/${PKGNAME}/README.es
-share/doc/${PKGNAME}/SUMMARY
-share/doc/${PKGNAME}/clisp.1
-share/doc/${PKGNAME}/clisp.dvi
-share/doc/${PKGNAME}/clisp.html
-share/doc/${PKGNAME}/clisp.pdf
-share/doc/${PKGNAME}/clisp.png
-share/doc/${PKGNAME}/clisp.ps
-share/doc/${PKGNAME}/editors.txt
-share/doc/${PKGNAME}/impnotes.css
-share/doc/${PKGNAME}/impnotes.html
+share/${PKGBASE}/emacs/clhs.el
+share/${PKGBASE}/emacs/clisp-coding.el
+share/${PKGBASE}/emacs/clisp-ffi.el
+share/${PKGBASE}/emacs/clisp-indent.el
+share/${PKGBASE}/emacs/clisp-indent.lisp
+share/${PKGBASE}/vim/lisp.vim
+share/doc/${PKGBASE}/ANNOUNCE
+share/doc/${PKGBASE}/CLOS-guide.txt
+share/doc/${PKGBASE}/COPYRIGHT
+share/doc/${PKGBASE}/GNU-GPL
+share/doc/${PKGBASE}/LISP-tutorial.txt
+share/doc/${PKGBASE}/MAGIC.add
+share/doc/${PKGBASE}/NEWS
+share/doc/${PKGBASE}/README
+share/doc/${PKGBASE}/README.de
+share/doc/${PKGBASE}/README.es
+share/doc/${PKGBASE}/SUMMARY
+share/doc/${PKGBASE}/clisp.1
+share/doc/${PKGBASE}/clisp.dvi
+share/doc/${PKGBASE}/clisp.html
+share/doc/${PKGBASE}/clisp.pdf
+share/doc/${PKGBASE}/clisp.png
+share/doc/${PKGBASE}/clisp.ps
+share/doc/${PKGBASE}/editors.txt
+share/doc/${PKGBASE}/impnotes.css
+share/doc/${PKGBASE}/impnotes.html
 share/locale/da/LC_MESSAGES/clisp.mo
 share/locale/da/LC_MESSAGES/clisplow.mo
 share/locale/de/LC_MESSAGES/clisp.mo
@@ -90,10 +90,10 @@ share/locale/nl/LC_MESSAGES/clisp.mo
 share/locale/nl/LC_MESSAGES/clisplow.mo
 share/locale/ru/LC_MESSAGES/clisp.mo
 share/locale/ru/LC_MESSAGES/clisplow.mo
-@dirrm share/doc/${PKGNAME}
-@dirrm share/${PKGNAME}/vim
-@dirrm share/${PKGNAME}/emacs
-@dirrm share/${PKGNAME}
+@dirrm share/doc/${PKGBASE}
+@dirrm share/${PKGBASE}/vim
+@dirrm share/${PKGBASE}/emacs
+@dirrm share/${PKGBASE}
 @dirrm lib/clisp/linkkit
 @dirrm lib/clisp/full
 @dirrm lib/clisp/data
