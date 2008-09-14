@@ -1,0 +1,3 @@
+The Perl 5 module MooseX::AttributeHelpers provides commonly used
+attribute helper methods for more specific types of data as Moose
+attributes.
