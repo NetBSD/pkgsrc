@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1028 2008/09/14 23:03:16 seb Exp $
+# $NetBSD: Makefile,v 1.1029 2008/09/14 23:36:31 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -743,6 +743,7 @@ SUBDIR+=	p5-Tie-Array-Sorted
 SUBDIR+=	p5-Tie-File
 SUBDIR+=	p5-Tie-IxHash
 SUBDIR+=	p5-Tie-RefHash
+SUBDIR+=	p5-Tie-RefHash-Weak
 SUBDIR+=	p5-Tie-ToObject
 SUBDIR+=	p5-Tree-DAG_Node
 SUBDIR+=	p5-Tree-Simple
