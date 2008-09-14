@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/14 09:06:54 abs Exp $
+
+--- lib/class/vainfo.class.php.orig	2008-08-31 07:20:41.000000000 +0100
++++ lib/class/vainfo.class.php
+@@ -498,11 +498,14 @@ class vainfo { 
+ 		if ($this->_iconv) { 
+ 			/* Guess that it's UTF-8 */
+ 			if (!$encoding) { $encoding = $this->_getID3->encoding; }
++			/* Try GNU iconv //TRANSLIT extension first */
+ 			$charset = $this->encoding . '//TRANSLIT';
+-			$tag = iconv($encoding,$charset,$tag);
++			$newtag = iconv($encoding,$charset,$tag);
++			if (strcmp($newtag, "") == 0)
++				$newtag = iconv($encoding,$this->encoding,$tag);
+ 		}
+ 
+-		return $tag;
++		return $newtag;
+ 
+ 
+ 
