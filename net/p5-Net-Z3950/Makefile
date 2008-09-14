@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/06/22 16:49:49 he Exp $
+# $NetBSD: Makefile,v 1.17 2008/09/14 19:07:46 he Exp $
 #
 
 DISTNAME=	Net-Z3950-0.51
@@ -9,7 +9,7 @@ MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Net/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://perl.z3950.org/
-#HOMEPAGE=	http://search.cpan.org/~mirk/Net-Z3950-0.51/
+#HOMEPAGE=	http://search.cpan.org/dist/Net-Z3950/
 COMMENT=	Perl interface to the Z39.50 information retrieval protocol
 
 PKG_DESTDIR_SUPPORT=	user-destdir
