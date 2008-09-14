@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1027 2008/09/14 22:19:00 seb Exp $
+# $NetBSD: Makefile,v 1.1028 2008/09/14 23:03:16 seb Exp $
 #
 
 COMMENT=	Development utilities
@@ -753,6 +753,7 @@ SUBDIR+=	p5-UNIVERSAL-moniker
 SUBDIR+=	p5-UNIVERSAL-require
 SUBDIR+=	p5-VCP
 SUBDIR+=	p5-VCP-Dest-svk
+SUBDIR+=	p5-Variable-Magic
 SUBDIR+=	p5-Want
 SUBDIR+=	p5-WeakRef
 SUBDIR+=	p5-aliased
