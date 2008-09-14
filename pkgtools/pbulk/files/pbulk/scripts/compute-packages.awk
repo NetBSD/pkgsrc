@@ -1,5 +1,5 @@
 #!@AWK@ -f
-# $NetBSD: compute-packages.awk,v 1.2 2007/06/29 22:43:26 joerg Exp $
+# $NetBSD: compute-packages.awk,v 1.3 2008/09/14 18:59:02 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -30,11 +30,23 @@
 # OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
 # SUCH DAMAGE.
 
+function mark_restricted(PKG, dep, depend_list) {
+	if (PKG in restricted)
+		return
+
+	restricted[PKG] = 1
+
+	split(reverse_depends[PKG], depend_list, "[ \t]+")
+	for (dep in depend_list)
+		mark_restricted(depend_list[dep])
+}
+
 BEGIN {
 	meta_dir = ARGV[1]
-	report_file = meta_dir "/report"
+	success_file = meta_dir "/success"
+	presolve_file = meta_dir "/presolve"
 
-	while ((getline < report_file) > 0) {
+	while ((getline < presolve_file) > 0) {
 		if ($0 ~ "^PKGNAME=") {
 			cur = substr($0, 9)
 			pkgs[cur] = cur
@@ -46,19 +58,30 @@ BEGIN {
 		if ($0 ~ "^BUILD_STATUS=")
 			status[cur] = substr($0, 14)
 
-		if ($0 ~ "^RESTRICTED_SUBSET=")
-			subset[cur] = substr($0, 19)
+		if ($0 ~ "^NO_BIN_ON_FTP=.")
+			initial_restricted[cur] = 1
+
+		if ($0 ~ "^DEPENDS=")
+			depends[cur] = substr($0, 9)
 	}
 	close(presolve_file)
 
-	for (pkg in pkgs) {
-		# skip failed build
-		if (status[pkg] != "done")
-			continue;
+	for (pkg in depends) {
+		split(depends[pkg], depend_list, "[ \t]+")
+		for (dep in depend_list) {
+			cur_dep = depend_list[dep]
+			reverse_depends[cur_dep] = pkg " " cur_dep
+		}
+	}
+
+	for (pkg in initial_restricted)
+		mark_restricted(pkg)
+
+	while ((getline pkg < success_file) > 0) {
 		# skip restricted packages
-		if (subset[pkg] != "no")
+		if (pkg in restricted)
 			continue;
-		# for the rest, build category/file list
+		# build category/file list
 		split(categories[pkg], cats, "[ \t]+")
 		cats[0] = "All"
 		for (cat_idx in cats) {
@@ -70,4 +93,5 @@ BEGIN {
 			print "+ " cat "/" pkg ".tgz"
 		}
 	}
+	close(success_file)
 }
