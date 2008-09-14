@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/09/07 17:28:22 jmcneill Exp $
+# $NetBSD: Makefile,v 1.17 2008/09/14 13:10:11 drochner Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -18,12 +18,6 @@ CONFIGURE_ARGS+=	--enable-zlib
 # doesn't hurt. Just make it explicite.
 CONFIGURE_ARGS+=	--enable-annodex
 .include "../../textproc/libxml2/buildlink3.mk"
-
-PLIST_VARS+=		v4l2
-.if exists(/usr/include/sys/videoio.h)
-CONFIGURE_ARGS+=	--enable-gst_v4l2
-PLIST.v4l2=		yes
-.endif
 
 GCONF_SCHEMAS=		gstreamer-0.10.schemas
 
