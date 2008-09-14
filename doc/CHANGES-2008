@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2243 2008/09/14 18:09:19 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2244 2008/09/14 20:00:45 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3792,3 +3792,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/raggle to 0.4.4nb3 [taca 2008-09-14]
 	Updated sysutils/open-vm-tools to 2008.08.08.109361nb2 [bjs 2008-09-14]
 	Added devel/p5-Devel-Cover version 0.64 [seb 2008-09-14]
+	Added devel/p5-Devel-EvalContext version 0.09 [seb 2008-09-14]
