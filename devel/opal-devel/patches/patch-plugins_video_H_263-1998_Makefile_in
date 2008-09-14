@@ -1,0 +1,13 @@
+$NetBSD: patch-plugins_video_H_263-1998_Makefile_in,v 1.1 2008/09/14 13:41:38 jmcneill Exp $
+
+--- plugins/video/H.263-1998/Makefile.in.orig	2008-09-14 09:22:08.000000000 -0400
++++ plugins/video/H.263-1998/Makefile.in	2008-09-14 09:22:17.000000000 -0400
+@@ -62,7 +62,7 @@
+ OBJECTS = $(addprefix $(OBJDIR)/,$(patsubst %.cxx,%.o,$(notdir $(SRCS))))
+ 
+ $(PLUGIN): $(OBJECTS)
+-	$(CXX) $(LDSO) $(DL_LIBS) -o $@ $^
++	$(CXX) $(LDSO) $(DL_LIBS) $(LDFLAGS) -o $@ $^
+ 
+ install:
+ 	mkdir -p $(DESTDIR)$(libdir)/$(VC_PLUGIN_DIR)
