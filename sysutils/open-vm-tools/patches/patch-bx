@@ -1,0 +1,15 @@
+$NetBSD: patch-bx,v 1.1 2008/09/14 16:15:05 bjs Exp $
+
+--- xferlogs/xferlogs.c.orig	2008-08-08 03:01:57.000000000 -0400
++++ xferlogs/xferlogs.c
+@@ -200,8 +200,8 @@ extractFile(char *filename) //IN: vmx lo
+              * Ignore the filename in the log, for obvious security reasons
+              * and create a new filename consiting of time and enumerator.
+              */
+-            Str_Sprintf(fname, sizeof fname, "%d_%"FMTTIME".log",
+-                        filenu++, time(NULL));
++            Str_Sprintf(fname, sizeof fname, "%d_%lld.log",
++                        filenu++, (long long)time(NULL));
+ 
+             /* 
+              * Read the version information, if they dont match just warn
