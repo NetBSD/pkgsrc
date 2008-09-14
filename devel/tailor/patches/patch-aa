@@ -1,0 +1,23 @@
+$NetBSD: patch-aa,v 1.1 2008/09/14 10:20:38 tonio Exp $
+
+python 2.4 support
+
+--- vcpx/repository/bzr.py.orig	2008-09-14 12:15:29.000000000 +0200
++++ vcpx/repository/bzr.py
+@@ -274,10 +274,14 @@ class BzrWorkingDir(UpdatableSourceWorki
+ 
+                 for id, revision in revisions:
+                     yield self._changesetFromRevision(parent_branch, revision)
+-            finally:
++            except:
+                 parent_branch.unlock()
+-        finally:
++                raise
++            parent_branch.unlock()
++        except:
+             branch.unlock()
++            raise
++        branch.unlock()
+ 
+         self.log.info("Fetching concrete changesets")
+         branch.lock_write()
