@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2240 2008/09/14 13:17:25 he Exp $
+$NetBSD: CHANGES-2008,v 1.2241 2008/09/14 14:00:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3789,3 +3789,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added math/fricas version 1.0.3 [ahoka 2008-09-14]
 	Updated textproc/p5-Encode-Detect to 1.01 [he 2008-09-14]
 	Updated time/p5-Time-Piece to 1.13 [he 2008-09-14]
+	Updated www/raggle to 0.4.4nb3 [taca 2008-09-14]
