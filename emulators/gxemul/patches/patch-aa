@@ -1,0 +1,42 @@
+--- src/promemul/arcbios.c.orig	2007-08-30 05:36:35.000000000 +0900
++++ src/promemul/arcbios.c	2008-02-02 12:13:18.000000000 +0900
+@@ -2211,7 +2211,10 @@
+ 	}
+ 
+ 	if (machine->machine_type == MACHINE_ARC)
+-		strlcat(init_bootpath, "\\", bootpath_len);
++		snprintf(init_bootpath + strlen(init_bootpath),
++		    bootpath_len - strlen(init_bootpath),
++		    "scsi(0)disk(%i)rdisk(0)partition(1)",
++		    machine->bootdev_id);
+ 
+ 	CHECK_ALLOCATION(machine->bootstr = malloc(ARC_BOOTSTR_BUFLEN));
+ 
+@@ -2362,20 +2365,17 @@
+ 		add_environment_string(cpu, "kernname=unix", &addr);
+ 	} else {
+ 		char *tmp;
+-		size_t mlen = strlen(machine->bootarg) +
+-		    strlen("OSLOADOPTIONS=") + 2;
++		size_t mlen = ARC_BOOTSTR_BUFLEN;
+ 		CHECK_ALLOCATION(tmp = malloc(mlen));
+ 		snprintf(tmp, mlen, "OSLOADOPTIONS=%s", machine->bootarg);
+ 		store_pointer_and_advance(cpu, &addr2, addr, is64bit);
+ 		add_environment_string(cpu, tmp, &addr);
+-
+-		store_pointer_and_advance(cpu, &addr2, addr, is64bit);
+-		add_environment_string(cpu, "OSLOADPARTITION=scsi(0)cdrom(6)"
+-		    "fdisk(0);scsi(0)disk(0)rdisk(0)partition(1)", &addr);
+-
+ 		store_pointer_and_advance(cpu, &addr2, addr, is64bit);
+-		add_environment_string(cpu, "SYSTEMPARTITION=scsi(0)cdrom(6)"
+-		    "fdisk(0);scsi(0)disk(0)rdisk(0)partition(1)", &addr);
++		snprintf(tmp, mlen,
++		    "OSLOADPARTITION=scsi(0)disk(%d)rdisk(0)partition(1)",
++		    machine->bootdev_id);
++		add_environment_string(cpu, tmp, &addr);
++		free(tmp);
+ 	}
+ 
+ 	/*  End the environment strings with an empty zero-terminated
+

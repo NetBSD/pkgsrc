@@ -1,5 +1,6 @@
-$NetBSD: distinfo,v 1.24 2008/06/18 21:30:15 minskim Exp $
+$NetBSD: distinfo,v 1.25 2008/09/14 06:15:35 tsutsui Exp $
 
 SHA1 (gxemul-0.4.6.5.tar.gz) = 9eaee8a7f0ce811199e206b736e87208b0b6fe29
 RMD160 (gxemul-0.4.6.5.tar.gz) = edc2a51d13e5c0e85a6cd5ac54d63aa605b22275
 Size (gxemul-0.4.6.5.tar.gz) = 2187357 bytes
+SHA1 (patch-aa) = 0274334a1ef8e348ee39194331c3e92660dbda7c
