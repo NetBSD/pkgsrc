@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.6 2007/10/03 14:45:41 heinz Exp $
+# $NetBSD: Makefile,v 1.7 2008/09/14 13:58:57 taca Exp $
 
 DISTNAME=	raggle-0.4.4
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	http://www.raggle.org/files/
 
