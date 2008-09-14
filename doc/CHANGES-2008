@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2239 2008/09/14 12:29:56 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.2240 2008/09/14 13:17:25 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3787,3 +3787,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/gxemul to 0.4.6.5nb1 [tsutsui 2008-09-14]
 	Added audio/ampache version 3.4.3 [abs 2008-09-14]
 	Added math/fricas version 1.0.3 [ahoka 2008-09-14]
+	Updated textproc/p5-Encode-Detect to 1.01 [he 2008-09-14]
+	Updated time/p5-Time-Piece to 1.13 [he 2008-09-14]
