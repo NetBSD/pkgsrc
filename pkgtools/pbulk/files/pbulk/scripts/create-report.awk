@@ -1,5 +1,5 @@
 #!@AWK@ -f
-# $NetBSD: create-report.awk,v 1.3 2007/08/16 13:02:05 joerg Exp $
+# $NetBSD: create-report.awk,v 1.4 2008/09/14 18:59:02 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -83,10 +83,6 @@ BEGIN {
 	for (p in pkg) {
 		print pkg[p] > full_pbuild_file
 		print "PKG_DEPTH=" depth[p] > full_pbuild_file
-		if (restricted[p] == "restricted")
-			print "RESTRICTED_SUBSET=yes" > full_pbuild_file
-		else
-			print "RESTRICTED_SUBSET=no" > full_pbuild_file
 		print "BUILD_STATUS=" status[p] > full_pbuild_file
 	}
 	close(full_pbuild_file)

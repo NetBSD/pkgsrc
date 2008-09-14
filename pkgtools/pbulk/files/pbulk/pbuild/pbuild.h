@@ -1,4 +1,4 @@
-/* $NetBSD: pbuild.h,v 1.4 2007/11/28 11:34:20 rillig Exp $ */
+/* $NetBSD: pbuild.h,v 1.5 2008/09/14 18:59:02 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -95,13 +95,6 @@ struct build_job {
 
 	enum job_state state;
 	int pkg_depth;
-
-	/**
-	 * Iff this is 1, this package and all its dependencies do not
-	 * have any definition for RESTRICTED or NO_BIN_ON_FTP, and thus
-	 * may be uploaded on a public FTP server.
-	 */
-	int unrestricted_subset;
 
 	/**
 	 * The number of direct dependencies that must be built before
