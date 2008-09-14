@@ -1,0 +1,2 @@
+The Perl 5 module Tie::RefHash::Weak is a  subclass of Tie::RefHash
+with weak keys, instead of strong ones.
