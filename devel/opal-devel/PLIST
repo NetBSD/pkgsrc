@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/09/14 11:27:51 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/09/14 13:41:38 jmcneill Exp $
 include/opal.h
 include/opal/asn/gcc.h
 include/opal/asn/h225.h
@@ -137,7 +137,6 @@ lib/${OPALLIBDIR}/codecs/audio/lpc10_audio_pwplugin.so
 lib/${OPALLIBDIR}/codecs/audio/speex_audio_pwplugin.so
 lib/${OPALLIBDIR}/codecs/video/h261-vic_video_pwplugin.so
 lib/${OPALLIBDIR}/codecs/video/h263-1998_video_pwplugin.so
-lib/${OPALLIBDIR}/codecs/video/h263-ffmpeg_video_pwplugin.so
 lib/${OPALLIBDIR}/codecs/video/h264_video_pwplugin.so
 lib/${OPALLIBDIR}/codecs/video/h264_video_pwplugin_helper
 lib/${OPALLIBDIR}/codecs/video/mpeg4-ffmpeg_video_pwplugin.so
