@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/14 13:13:33 drochner Exp $
+lib/gstreamer-0.10/libgstvideo4linux2.la
+@comment in gstreamer0.10: @dirrm lib/gstreamer-0.10
