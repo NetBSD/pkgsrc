@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2008/09/14 13:41:38 jmcneill Exp $
+$NetBSD: distinfo,v 1.6 2008/09/14 14:19:14 jmcneill Exp $
 
 SHA1 (opal-snapshot-20080912.tar.gz) = d0c8359a1406ab2da3e354c944a7cefde7858a3a
 RMD160 (opal-snapshot-20080912.tar.gz) = 15e32b8479547e4b9fc7674fd172f5f4dfd4c9a8
@@ -8,5 +8,6 @@ SHA1 (patch-configure.tmp) = c0601b8974f53d455f3016806c6875afe1cd809f
 SHA1 (patch-plugins_configure) = a41ea74bbec80c12a2361b646810a8e6a5b24588
 SHA1 (patch-plugins_video_H_263-1998_Makefile_in) = 384002e69862d690f02609843f0103c878626ed9
 SHA1 (patch-plugins_video_H_264_Makefile_in) = f31d2554bc84c640936cded8e03e69d6529a2ed0
+SHA1 (patch-plugins_video_H_264_gpl_Makefile_in) = ac9ec46e18a1ab3e925396befd3d16adc9edec9f
 SHA1 (patch-plugins_video_MPEG4-ffmpeg_Makefile_in) = 7bae6bfc8c4cce9b7d70cff244176462032ba236
 SHA1 (patch-plugins_video_common_dyna_cxx) = 5a82442434ba455197361e1da27c1b83db6716d8
