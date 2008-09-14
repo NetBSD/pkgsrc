@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.112 2008/09/06 17:05:47 martti Exp $
+# $NetBSD: Makefile.common,v 1.113 2008/09/14 20:16:40 martti Exp $
 
 # used by editors/vim/Makefile
 # used by editors/vim-gtk/Makefile
@@ -41,7 +41,7 @@ GNU_CONFIGURE=		yes
 MAKE_JOBS_SAFE=		no	# At least on Solaris
 
 # http://www.netbsd.org/cgi-bin/query-pr-single.pl?number=38710
-CHECK_INTERPRETER_SKIP=	share/vim/vim71/tools/vim132
+CHECK_INTERPRETER_SKIP=	share/vim/vim72/tools/vim132
 
 .include "../../mk/bsd.prefs.mk"
 
