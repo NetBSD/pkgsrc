@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/09/13 18:12:43 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/09/14 11:27:51 sborrill Exp $
 include/opal.h
 include/opal/asn/gcc.h
 include/opal/asn/h225.h
@@ -124,34 +124,34 @@ include/opal/t38/t38proto.h
 include/opal/zrtp/opalzrtp.h
 include/opal/zrtp/zrtpeventproc.h
 lib/libopal.so
-lib/libopal_${OPSYS}_${MACHINE_ARCH}.so
-lib/libopal_${OPSYS}_${MACHINE_ARCH}.so.3
-lib/libopal_${OPSYS}_${MACHINE_ARCH}.so.3.3
-lib/libopal_${OPSYS}_${MACHINE_ARCH}.so.3.3-beta1
-lib/opal-3.3.1/codecs/audio/g726_audio_pwplugin.so
-lib/opal-3.3.1/codecs/audio/gsm0610_audio_pwplugin.so
-lib/opal-3.3.1/codecs/audio/gsmamrcodec_pwplugin.so
-lib/opal-3.3.1/codecs/audio/ilbc_audio_pwplugin.so
-lib/opal-3.3.1/codecs/audio/ima_adpcm_audio_pwplugin.so
-lib/opal-3.3.1/codecs/audio/lpc10_audio_pwplugin.so
-lib/opal-3.3.1/codecs/audio/speex_audio_pwplugin.so
-lib/opal-3.3.1/codecs/video/h261-vic_video_pwplugin.so
-lib/opal-3.3.1/codecs/video/h263-1998_video_pwplugin.so
-lib/opal-3.3.1/codecs/video/h263-ffmpeg_video_pwplugin.so
-lib/opal-3.3.1/codecs/video/h264_video_pwplugin.so
-lib/opal-3.3.1/codecs/video/h264_video_pwplugin_helper
-lib/opal-3.3.1/codecs/video/mpeg4-ffmpeg_video_pwplugin.so
-lib/opal-3.3.1/codecs/video/theora_video_pwplugin.so
-lib/opal-3.3.1/lid/vpb_lid_pwplugin.so
+lib/libopal_${OPSYS}_${LIBARCH}.so
+lib/libopal_${OPSYS}_${LIBARCH}.so.3
+lib/libopal_${OPSYS}_${LIBARCH}.so.3.3
+lib/libopal_${OPSYS}_${LIBARCH}.so.3.3-beta1
+lib/${OPALLIBDIR}/codecs/audio/g726_audio_pwplugin.so
+lib/${OPALLIBDIR}/codecs/audio/gsm0610_audio_pwplugin.so
+lib/${OPALLIBDIR}/codecs/audio/gsmamrcodec_pwplugin.so
+lib/${OPALLIBDIR}/codecs/audio/ilbc_audio_pwplugin.so
+lib/${OPALLIBDIR}/codecs/audio/ima_adpcm_audio_pwplugin.so
+lib/${OPALLIBDIR}/codecs/audio/lpc10_audio_pwplugin.so
+lib/${OPALLIBDIR}/codecs/audio/speex_audio_pwplugin.so
+lib/${OPALLIBDIR}/codecs/video/h261-vic_video_pwplugin.so
+lib/${OPALLIBDIR}/codecs/video/h263-1998_video_pwplugin.so
+lib/${OPALLIBDIR}/codecs/video/h263-ffmpeg_video_pwplugin.so
+lib/${OPALLIBDIR}/codecs/video/h264_video_pwplugin.so
+lib/${OPALLIBDIR}/codecs/video/h264_video_pwplugin_helper
+lib/${OPALLIBDIR}/codecs/video/mpeg4-ffmpeg_video_pwplugin.so
+lib/${OPALLIBDIR}/codecs/video/theora_video_pwplugin.so
+lib/${OPALLIBDIR}/lid/vpb_lid_pwplugin.so
 lib/pkgconfig/opal.pc
 share/opal/opal_inc.mak
 share/opal/version.h
 @dirrm share/opal
-@dirrm lib/opal-3.3.1/lid
-@dirrm lib/opal-3.3.1/codecs/video
-@dirrm lib/opal-3.3.1/codecs/audio
-@dirrm lib/opal-3.3.1/codecs
-@dirrm lib/opal-3.3.1
+@dirrm lib/${OPALLIBDIR}/lid
+@dirrm lib/${OPALLIBDIR}/codecs/video
+@dirrm lib/${OPALLIBDIR}/codecs/audio
+@dirrm lib/${OPALLIBDIR}/codecs
+@dirrm lib/${OPALLIBDIR}
 @dirrm include/opal/zrtp
 @dirrm include/opal/t38
 @dirrm include/opal/t120
