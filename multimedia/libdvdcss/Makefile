@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/09/12 13:57:20 gdt Exp $
+# $NetBSD: Makefile,v 1.21 2008/09/14 13:54:45 drochner Exp $
 #
 # In order to ensure compliance with U.S. and international law, please
 # do not modify this file to provide pointers to the source or homepage
@@ -15,7 +15,7 @@ HOMEPAGE=	${LIBDVDCSS_HOMEPAGE}
 COMMENT=	Simple library designed for accessing DVDs
 
 PKG_DESTDIR_SUPPORT=	user-destdir
-PKGCONFIG_OVERRIDE=	libdvdcss.pc.in
+PKGCONFIG_OVERRIDE=	src/libdvdcss.pc.in
 
 # XXX missing
 LICENSE=	libdvdcss-license
