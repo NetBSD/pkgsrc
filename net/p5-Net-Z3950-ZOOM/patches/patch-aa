@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/14 19:32:55 he Exp $
+
+--- t/26-packages.t.orig	2006-06-07 11:58:56.000000000 +0200
++++ t/26-packages.t
+@@ -5,7 +5,7 @@
+ 
+ use strict;
+ use warnings;
+-use Test::More tests => 40;
++use Test::More tests => 41;
+ 
+ BEGIN { use_ok('ZOOM') };
+ 

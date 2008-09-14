@@ -1,0 +1,4 @@
+The Net::Z3950::ZOOM distribution contains three Perl modules for the
+price of one.  They all provide facilities for building information
+retrieval clients using the standard Z39.50 and SRW/U protocols, but
+do so using different APIs.
