@@ -1,8 +1,8 @@
-# $NetBSD: Makefile.common,v 1.6 2008/05/30 17:36:50 drochner Exp $
+# $NetBSD: Makefile.common,v 1.7 2008/09/14 13:21:58 drochner Exp $
 #
 
 GST_PLUGINS0.10_TYPE=	ugly
-GST_PLUGINS0.10_VER=	0.10.8
+GST_PLUGINS0.10_VER=	0.10.9
 
 # Disable all drivers and features by default.
 .for driver in	a52dec \
