@@ -1,0 +1,5 @@
+Magic is Perl way of enhancing objects. This mechanism let the user
+add extra data to any variable and overload syntaxical operations
+(such as access, assignation or destruction) that can be applied
+to it. With the module Variable::Magic , you can add your own magic
+to any variable without the pain of the C API.
