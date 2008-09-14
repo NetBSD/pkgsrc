@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2008/09/05 04:34:46 bjs Exp $
+$NetBSD: distinfo,v 1.4 2008/09/14 16:15:05 bjs Exp $
 
 SHA1 (open-vm-tools-2008.08.08-109361.tar.gz) = 1c44c3524cd9cbc5870f1c6065b03a6b31859a25
 RMD160 (open-vm-tools-2008.08.08-109361.tar.gz) = 4ea0a6aa2edda2bc404c865dc5b58f3a177ae411
@@ -26,7 +26,7 @@ SHA1 (patch-at) = 659b97c50168fa74f3e6a8ffe2bafae0420f0d49
 SHA1 (patch-au) = 31eeee4521020952ef51b29351802efd9fe4297f
 SHA1 (patch-av) = b61f165fd9a6e5241795e2e69aa73caba32539a8
 SHA1 (patch-aw) = 82788d7ab312ee07abf3e159028b440d41912a14
-SHA1 (patch-ax) = 4906da20bc5ce40fe273b8cc008381dfdda544fe
+SHA1 (patch-ax) = 2649c492f501143098e41601d9ae1bc6c9ddf9cc
 SHA1 (patch-ay) = c9c7a7f9871fdc3213bafce05a7433db862ac4a4
 SHA1 (patch-az) = 2a8494c8cbfb0270a5fdd46e0c5ccaf19fc5f94f
 SHA1 (patch-ba) = cb0433af4a7c5c9a9010edbc15998577c44c92ae
@@ -52,3 +52,4 @@ SHA1 (patch-bt) = 34c85d8d994c33fb4e18f76bb8b6baa41098f23e
 SHA1 (patch-bu) = 9e2533d967cfb1cdc780516359ab8e7c373b70f5
 SHA1 (patch-bv) = c15eadcf4968703c9bf4c16d368f7f7b5b39b046
 SHA1 (patch-bw) = 002f3a78a5d0f52d1e1a2cd62f6ad8136f531939
+SHA1 (patch-bx) = acdb1d8f25d4353e0d95ea613ea83580679b4d9f
