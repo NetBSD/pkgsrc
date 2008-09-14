@@ -1,0 +1,17 @@
+$NetBSD: patch-plugins_video_common_dyna_cxx,v 1.1 2008/09/14 13:41:38 jmcneill Exp $
+
+--- plugins/video/common/dyna.cxx.orig	2008-07-28 17:01:45.000000000 -0400
++++ plugins/video/common/dyna.cxx	2008-09-13 17:27:40.000000000 -0400
+@@ -136,6 +136,12 @@
+   return true;
+ #else
+   void * p = dlsym(_hDLL, (const char *)name);
++# ifdef __NetBSD__
++  if (p == NULL) {
++    (void)dlerror(); /* clear error */
++    p = dlsym(RTLD_NEXT, (const char *)name);
++  }
++# endif /* __NetBSD__ */
+   if (p == NULL)
+     return false;
+   func = (Function &)p;
