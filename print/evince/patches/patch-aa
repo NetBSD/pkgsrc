@@ -1,0 +1,41 @@
+$NetBSD: patch-aa,v 1.7 2008/09/14 14:35:27 drochner Exp $
+
+--- backend/pdf/ev-poppler.cc.orig	2008-08-29 19:38:51.000000000 +0200
++++ backend/pdf/ev-poppler.cc
+@@ -885,9 +885,11 @@ ev_link_dest_from_dest (PdfDocument *pdf
+ 			g_object_unref (poppler_page);
+ 		}
+ 			break;
+-	        case POPPLER_DEST_FIT:
++	        case POPPLER_DEST_FITB:
++		case POPPLER_DEST_FIT:
+ 			ev_dest = ev_link_dest_new_fit (dest->page_num - 1);
+ 			break;
++		case POPPLER_DEST_FITBH:
+ 	        case POPPLER_DEST_FITH: {
+ 			PopplerPage *poppler_page;
+ 			double height;
+@@ -901,6 +903,7 @@ ev_link_dest_from_dest (PdfDocument *pdf
+ 			g_object_unref (poppler_page);
+ 		}
+ 			break;
++		case POPPLER_DEST_FITBV:
+ 	        case POPPLER_DEST_FITV:
+ 			ev_dest = ev_link_dest_new_fitv (dest->page_num - 1,
+ 							 dest->left,
+@@ -921,6 +924,7 @@ ev_link_dest_from_dest (PdfDocument *pdf
+ 			g_object_unref (poppler_page);
+ 		}
+ 			break;
++#if 0
+ 	        case POPPLER_DEST_FITB:
+ 			unimplemented_dest = "POPPLER_DEST_FITB";
+ 			break;
+@@ -930,6 +934,7 @@ ev_link_dest_from_dest (PdfDocument *pdf
+ 	        case POPPLER_DEST_FITBV:
+ 			unimplemented_dest = "POPPLER_DEST_FITBV";
+ 			break;
++#endif
+ 	        case POPPLER_DEST_NAMED:
+ 			ev_dest = ev_link_dest_new_named (dest->named_dest);
+ 			break;
