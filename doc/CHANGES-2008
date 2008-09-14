@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2246 2008/09/14 20:59:33 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2247 2008/09/14 22:20:02 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3795,3 +3795,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Devel-EvalContext version 0.09 [seb 2008-09-14]
 	Updated editors/vim-share to 7.2.18 [martti 2008-09-14]
 	Added devel/p5-MooseX-AttributeHelpers version 0.13 [seb 2008-09-14]
+	Added devel/p5-Devel-Events version 0.06 [seb 2008-09-14]
