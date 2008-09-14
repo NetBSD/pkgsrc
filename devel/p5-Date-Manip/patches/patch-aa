@@ -1,0 +1,267 @@
+$NetBSD: patch-aa,v 1.1 2008/09/14 21:40:54 he Exp $
+
+--- lib/Date/Manip.pm.orig	2008-05-09 15:56:41.000000000 +0200
++++ lib/Date/Manip.pm
+@@ -549,24 +549,44 @@ sub Date_Init {
+     #    tz2z       = hash of all tzdata timezones to full timezone (EST#EDT)
+ 
+     $zonesrfc=
++      "gmt+12 -1200 ".	# Etc/GMT+12
+       "idlw   -1200 ".  # International Date Line West
++      "gmt+11 -1100 ".	# Etc/GMT+11
+       "nt     -1100 ".  # Nome
++      "nut    -1100 ".	# Pacific/Niue
+       "hst    -1000 ".  # Hawaii Standard
+       "cat    -1000 ".  # Central Alaska
++      "ckt    -1000 ".	# Pacific/Rarotonga
+       "ahst   -1000 ".  # Alaska-Hawaii Standard
++      "hast   -1000 ".	# America/Adak America/Atka US/Aleutian
++      "taht   -1000 ".	# Pacific/Tahiti
++      "gmt+10 -1000 ".	# Etc/GMT+10
++      "tkt    -1000 ".	# Pacific/Fakaofo
++      "mart   -0930 ".	# Pacific/Marquesas
+       "akst   -0900 ".  # Alaska Standard
++      "gamt   -0900 ".	# SystemV/YST9 Pacific/Gambier
++      "gmt+9  -0900 ".	# Etc/GMT+9
++      "hadt   -0900 ".	# (DST) America/Adak America/Atka US/Aleutian
+       "yst    -0900 ".  # Yukon Standard
+       "hdt    -0900 ".  # Hawaii Daylight
+       "akdt   -0800 ".  # Alaska Daylight
++       "gmt+8 -0800 ".	# Etc/GMT+8
+       "ydt    -0800 ".  # Yukon Daylight
+       "pst    -0800 ".  # Pacific Standard
++      "gmt+7  -0700 ".	# Etc/GMT+7
+       "pdt    -0700 ".  # Pacific Daylight
+       "mst    -0700 ".  # Mountain Standard
++      "gmt+6  -0600 ".	# Etc/GMT+6
+       "mdt    -0600 ".  # Mountain Daylight
+       "cst    -0600 ".  # Central Standard
++      "galt   -0600 ".	# Pacific/Galapagos
+       "cdt    -0500 ".  # Central Daylight
++      "cot    -0500 ".	# America/Bogota
+       "est    -0500 ".  # Eastern Standard
+       "act    -0500 ".  # Brazil, Acre
++      "gmt+5  -0500 ".	# Etc/GMT+5
++      "easst  -0500 ".	# (DST) Pacific/Easter Chile/EasterIsland
++      "ect    -0500 ".	# America/Guayaquil
+       "pet    -0500 ".  # Peruvian time
+       "vet    -0430 ".  # Venezuela
+       "sat    -0400 ".  # Chile
+@@ -574,30 +594,53 @@ sub Date_Init {
+       "clst   -0400 ".  # Chile Standard
+       "bot    -0400 ".  # Bolivia
+       "amt    -0400 ".  # Brazil, Amazon
++      "fkt    -0400 ".	# Atlantic/Stanley
+       "acst   -0400 ".  # Brazil, Acre Daylight
+       "edt    -0400 ".  # Eastern Daylight
++      "gmt+4  -0400 ".	# Etc/GMT+4
++      "gyt    -0400 ".	# America/Guyana
++      "pyt    -0400 ".	# America/Asuncion
+       "ast    -0400 ".  # Atlantic Standard
+       #"nst   -0330 ".  # Newfoundland Standard      nst=North Sumatra    +0630
+       "nft    -0330 ".  # Newfoundland
+       #"gst   -0300 ".  # Greenland Standard         gst=Guam Standard    +1000
++      "clst   -0300 ".	# (DST) America/Santiago Antarctica/Palmer Chile/Continental
+       "cldt   -0300 ".  # Chile Daylight
+       #"bst   -0300 ".  # Brazil Standard            bst=British Summer   +0100
+       "brt    -0300 ".  # Brazil Standard (official time)
+       #"brst   -0300 ".  # Brazil Standard
+       "adt    -0300 ".  # Atlantic Daylight
+       "art    -0300 ".  # Argentina
++      "gft    -0300 ".	# America/Cayenne
+       "arst   -0200 ".  # Argentina, Daylight
+       "amst   -0300 ".  # Brazil, Amazon Daylight
++      "fkst   -0300 ".	# (DST) Atlantic/Stanley
++      "gmt+3  -0300 ".	# Etc/GMT+3
++      "pmst   -0300 ".	# America/Miquelon
++      "pyst   -0300 ".	# (DST) America/Asuncion
++      "rott   -0300 ".	# Antarctica/Rothera
++      "srt    -0300 ".	# America/Paramaribo
+       "uyt    -0300 ".  # Uruguay
++      "wgt    -0300 ".	# America/Godthab
+       "ndt    -0230 ".  # Newfoundland Daylight
+       "brst   -0200 ".  # Brazil Daylight (official time)
+       "fnt    -0200 ".  # Brazil, Fernando de Noronha
++      "gmt+2  -0200 ".	# Etc/GMT+2
+       "at     -0200 ".  # Azores
++      "pmdt   -0200 ".	# (DST) America/Miquelon
+       "uyst   -0200 ".  # Uruguay
++      "wgst   -0200 ".	# (DST) America/Godthab
++      "azot   -0100 ".	# Atlantic/Azores
++      "gmt+1  -0100 ".	# Etc/GMT+1
++      "cvt    -0100 ".	# Atlantic/Cape_Verde
++      "egt    -0100 ".	# America/Scoresbysund
+       "wat    -0100 ".  # West Africa
+       "fnst   -0100 ".  # Brazil, Fernando de Noronha Daylight
++      "azost  +0000 ".	# (DST) Atlantic/Azores
++      "egst   +0000 ".	# (DST) America/Scoresbysund
+       "gmt    +0000 ".  # Greenwich Mean
+       "ut     +0000 ".  # Universal
++      "uct    +0000 ".	# Etc/UCT UCT
+       "utc    +0000 ".  # Universal (Coordinated)
+       "wet    +0000 ".  # Western European
+       "cet    +0100 ".  # Central European
+@@ -608,64 +651,163 @@ sub Date_Init {
+       "swt    +0100 ".  # Swedish Winter
+       "bst    +0100 ".  # British Summer             bst=Brazil standard  -0300
+       "gb     +0100 ".  # GMT with daylight savings
++      "gmt-1  +0100 ".	# Etc/GMT-1
+       "west   +0100 ".  # Western European Daylight
+       "eet    +0200 ".  # Eastern Europe, USSR Zone 1
+       "cest   +0200 ".  # Central European Summer
+       "fst    +0200 ".  # French Summer
++      "gmt-2  +0200 ".	# Etc/GMT-2
+       "ist    +0200 ".  # Israel standard
+       "mest   +0200 ".  # Middle European Summer
+       "mesz   +0200 ".  # Middle European Summer
+       "metdst +0200 ".  # An alias for mest used by HP-UX
+       "sast   +0200 ".  # South African Standard
+       "sst    +0200 ".  # Swedish Summer             sst=South Sumatra    +0700
++      "wast   +0200 ".	# (DST) Africa/Windhoek
+       "bt     +0300 ".  # Baghdad, USSR Zone 2
+       "eest   +0300 ".  # Eastern Europe Summer
+       "eetdst +0300 ".  # An alias for eest used by HP-UX
+       "eetedt +0300 ".  # Eastern Europe, USSR Zone 1
++      "get    +0300 ".	# Asia/Tbilisi
++      "gmt-3  +0300 ".	# Etc/GMT-3
+       "idt    +0300 ".  # Israel Daylight
+       "msk    +0300 ".  # Moscow
+       "eat    +0300 ".  # East Africa
++      "syot   +0300 ".	# Antarctica/Syowa
++      "zzz    +0307 ".	# Asia/Riyadh87 Asia/Riyadh89 Asia/Riyadh88 Mideast/Riyadh88 Mideast/Riyadh87 Mideast/Riyadh89
+       "it     +0330 ".  # Iran
++      "irst   +0330 ".	# Asia/Tehran Iran
++      "aqtt   +0400 ".	# Asia/Aqtau
++      "azt    +0400 ".	# Asia/Baku
++      "gest   +0400 ".	# (DST) Asia/Tbilisi
++      "gmt-4  +0400 ".	# Etc/GMT-4
++      "mut    +0400 ".	# Indian/Mauritius
+       "zp4    +0400 ".  # USSR Zone 3
+       "msd    +0400 ".  # Moscow Daylight
++      "orat   +0400 ".	# Asia/Oral
++      "ret    +0400 ".	# Indian/Reunion
++      "samt   +0400 ".	# Europe/Samara
++      "sct    +0400 ".	# Indian/Mahe
++      "aft    +0430 ".	# Asia/Kabul
++      "irdt   +0430 ".	# (DST) Asia/Tehran Iran
++      "gmt-5  +0500 ".	# Etc/GMT-5
++      "kgt    +0500 ".	# Asia/Bishkek
++      "mvt    +0500 ".	# Indian/Maldives
++      "pkt    +0500 ".	# Asia/Karachi
++      "samst  +0500 ".	# (DST) Europe/Samara
++      "tjt    +0500 ".	# Asia/Dushanbe
++      "tft    +0500 ".	# Indian/Kerguelen
++      "tmt    +0500 ".	# Asia/Ashkhabad Asia/Ashgabat
++      "uzt    +0500 ".	# Asia/Tashkent Asia/Samarkand
+       "zp5    +0500 ".  # USSR Zone 4
+       "yekt   +0500 ".  # Yeakaterinburg time zone, Russia
+       "yekst  +0500 ".  # Yeakaterinburg summer time zone, Russia
+       "ist    +0530 ".  # Indian Standard
++      "npt    +0545 ".	# Asia/Katmandu
++      "almt   +0600 ".	# Asia/Almaty
++      "bdt    +0600 ".	# Asia/Dacca Asia/Dhaka
++      "btt    +0600 ".	# Asia/Thimbu Asia/Thimphu
++      "gmt-6  +0600 ".	# Etc/GMT-6
++      "kgst   +0600 ".	# (DST) Asia/Bishkek
++      "iot    +0600 ".	# Indian/Chagos
++      "lkt    +0600 ".	# Asia/Colombo
+       "zp6    +0600 ".  # USSR Zone 5
++      "mawt   +0600 ".	# Antarctica/Mawson
+       "novt   +0600 ".  # Novosibirsk winter time zone, Russia
+       "omst   +0600 ".  # Omsk time zone, Russia
++      "qyzt   +0600 ".	# Asia/Qyzylorda
++      "vost   +0600 ".	# Antarctica/Vostok
++      "mmt    +0630 ".	# Asia/Rangoon
+       "nst    +0630 ".  # North Sumatra              nst=Newfoundland Std -0330
+       #"sst   +0700 ".  # South Sumatra, USSR Zone 6 sst=Swedish Summer   +0200
++      "cxt    +0700 ".	# Indian/Christmas
++      "davt   +0700 ".	# Antarctica/Davis
++      "gmt-7  +0700 ".	# Etc/GMT-7
+       "javt   +0700 ".  # Java
++      "hovt   +0700 ".	# Asia/Hovd
+       "ict    +0700 ".  # Indo China Time
+       "novst  +0700 ".  # Novosibirsk summer time zone, Russia
+       "krat   +0700 ".  # Krasnoyarsk, Russia
++      "omsst  +0700 ".	# (DST) Asia/Omsk
++      "wit    +0700 ".	# Asia/Pontianak Asia/Jakarta
++      "bnt    +0800 ".	# Asia/Brunei
++      "gmt-8  +0800 ".	# Etc/GMT-8
++      "hovst  +0800 ".	# (DST) Asia/Hovd
+       "myt    +0800 ".  # Malaysia
+       "hkt    +0800 ".  # Hong Kong
+       "sgt    +0800 ".  # Singapore
++      "cit    +0800 ".	# Asia/Makassar Asia/Ujung_Pandang
+       "cct    +0800 ".  # China Coast, USSR Zone 7
+       "krast  +0800 ".  # Krasnoyarsk, Russia Daylight
++      "irkt   +0800 ".	# Asia/Irkutsk
+       "awst   +0800 ".  # Australian Western Standard
+       "wst    +0800 ".  # West Australian Standard
+       "pht    +0800 ".  # Asia Manila
++      "ulat   +0800 ".	# Asia/Ulan_Bator Asia/Ulaanbaatar
++      "chot   +0900 ".	# Asia/Choibalsan
++      "eit    +0900 ".	# Asia/Jayapura
++      "gmt-9  +0900 ".	# Etc/GMT-9
++      "irkst  +0900 ".	# (DST) Asia/Irkutsk
+       "kst    +0900 ".  # Republic of Korea
+       "jst    +0900 ".  # Japan Standard, USSR Zone 8
++      "pwt    +0900 ".	# Pacific/Palau
+       "rok    +0900 ".  # Republic of Korea
++      "tlt    +0900 ".	# Asia/Dili
++      "ulast  +0900 ".	# (DST) Asia/Ulan_Bator Asia/Ulaanbaatar
++      "yakt   +0900 ".	# Asia/Yakutsk
+       "acst   +0930 ".  # Australian Central Standard
+       "cast   +0930 ".  # Central Australian Standard
+       "aest   +1000 ".  # Australian Eastern Standard
++      "chost  +1000 ".	# (DST) Asia/Choibalsan
++      "ddut   +1000 ".	# Antarctica/DumontDUrville
++      #"east   -0600 ".	# Pacific/Easter Chile/EasterIsland
+       "east   +1000 ".  # Eastern Australian Standard
++      "gmt-10 +1000 ".	# Etc/GMT-10
+       "gst    +1000 ".  # Guam Standard, USSR Zone 9 gst=Greenland Std    -0300
+       "chst   +1000 ".  # Guam Standard, USSR Zone 9 gst=Greenland Std    -0300
++      "pgt    +1000 ".	# Pacific/Port_Moresby
++      "sakt   +1000 ".	# Asia/Sakhalin
++      "trut   +1000 ".	# Pacific/Yap Pacific/Truk
++      "vlat   +1000 ".	# Asia/Vladivostok
++      "yakst  +1000 ".	# (DST) Asia/Yakutsk
+       "acdt   +1030 ".  # Australian Central Daylight
+       "cadt   +1030 ".  # Central Australian Daylight
++      "lhst   +1030 ".	# Australia/LHI Australia/Lord_Howe
+       "aedt   +1100 ".  # Australian Eastern Daylight
+       "eadt   +1100 ".  # Eastern Australian Daylight
++      "gmt-11 +1100 ".	# Etc/GMT-11
++      "kost   +1100 ".	# Pacific/Kosrae
++      "magt   +1100 ".	# Asia/Magadan
++      "nct    +1100 ".	# Pacific/Noumea
++      "pont   +1100 ".	# Pacific/Ponape
++      "sakst  +1100 ".	# (DST) Asia/Sakhalin
++      "sbt    +1100 ".	# Pacific/Guadalcanal
++      "vlast  +1100 ".	# (DST) Asia/Vladivostok
++      "vut    +1100 ".	# Pacific/Efate
++      "anat   +1200 ".	# Asia/Anadyr
++      "fjt    +1200 ".  # Fiji Standard
++      "gmt-12 +1200 ".	# Etc/GMT-12
++      "gilt   +1200 ".	# Pacific/Tarawa
+       "idle   +1200 ".  # International Date Line East
++      "magst  +1200 ".	# (DST) Asia/Magadan
++      "mht    +1200 ".	# Pacific/Majuro Pacific/Kwajalein Kwajalein
++      "nrt    +1200 ".	# Pacific/Nauru
+       "nzst   +1200 ".  # New Zealand Standard
+       "nzt    +1200 ".  # New Zealand
++      "pett   +1200 ".	# Asia/Kamchatka
++      "tvt    +1200 ".	# Pacific/Funafuti
++      "wakt   +1200 ".	# Pacific/Wake
++      "wft    +1200 ".	# Pacific/Wallis
++      "chast  +1245 ".	# Pacific/Chatham NZ-CHAT
++      "anast  +1300 ".	# (DST) Asia/Anadyr
++      "gmt-13 +1300 ".	# Etc/GMT-13
+       "nzdt   +1300 ".  # New Zealand Daylight
++      "petst  +1300 ".	# (DST) Asia/Kamchatka
++      "phot   +1300 ".	# Pacific/Enderbury
++      "tot    +1300 ".	# Pacific/Tongatapu
++      "chadt  +1345 ".	# (DST) Pacific/Chatham NZ-CHAT
++      "gmt-14 +1400 ".	# Etc/GMT-14
++      "lint   +1400 ".	# Pacific/Kiritimati
+       "z +0000 ".
+       "a +0100 b +0200 c +0300 d +0400 e +0500 f +0600 g +0700 h +0800 ".
+       "i +0900 k +1000 l +1100 m +1200 ".
