@@ -1,12 +1,12 @@
-# $NetBSD: Makefile,v 1.2 2007/05/28 15:32:51 heinz Exp $
+# $NetBSD: Makefile,v 1.3 2008/09/14 12:46:32 he Exp $
 #
 
-DISTNAME=		Encode-Detect-1.00
+DISTNAME=		Encode-Detect-1.01
 PKGNAME=		p5-${DISTNAME}
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Encode/}
 
-MAINTAINER=		hiramatu@boreas.dti.ne.jp
+MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://search.cpan.org/dist/Encode-Detect/
 COMMENT=		Perl module that detects the encoding of data
 
