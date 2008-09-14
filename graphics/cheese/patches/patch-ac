@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2008/09/14 13:25:07 drochner Exp $
+
+--- data/Makefile.am.orig	2008-09-13 12:39:37.000000000 +0200
++++ data/Makefile.am
+@@ -6,7 +6,7 @@ desktop_in_files = cheese.desktop.in
+ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
+ 
+ @INTLTOOL_SCHEMAS_RULE@
+-schemadir = $(sysconfdir)/gconf/schemas
++schemadir = $(GCONF_SCHEMA_FILE_DIR)
+ schema_in_files = cheese.schemas.in
+ schema_DATA = $(schema_in_files:.schemas.in=.schemas)
+ 

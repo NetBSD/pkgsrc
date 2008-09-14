@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/07 22:43:00 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/14 13:25:07 drochner Exp $
 
 DISTNAME=	cheese-2.22.3
 CATEGORIES=	graphics
@@ -22,11 +22,6 @@ GCONF_SCHEMAS+=	cheese.schemas
 pre-configure:
 	cd ${WRKSRC} && autoreconf -vi # -f breaks it
 
-post-install:
-.for schema in ${GCONF_SCHEMAS}
-	${INSTALL_DATA} ${WRKSRC}/data/${schema} ${PREFIX}/share/gconf/schemas
-.endfor
-
 .include "options.mk"
 
 .include "../../devel/GConf/schemas.mk"
@@ -36,6 +31,7 @@ post-install:
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/librsvg/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mail/evolution-data-server/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-good/buildlink3.mk"
@@ -48,4 +44,6 @@ DEPENDS+= gst-plugins0.10-vorbis>=0.10.1:../../audio/gst-plugins0.10-vorbis
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXxf86vm/buildlink3.mk"
+.include "../../sysutils/desktop-file-utils/desktopdb.mk"
+.include "../../mk/omf-scrollkeeper.mk"
 .include "../../mk/bsd.pkg.mk"
