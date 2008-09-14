@@ -1,0 +1,20 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2008/09/14 09:06:54 abs Exp $
+
+Please refer to the following file on how to setup your Ampache
+installation.
+
+	${INSTDIR}/docs/INSTALL
+
+You will need to make Ampache accessible through your HTTP server.
+If you are running Apache and ap-php, then you can add the following
+lines to httpd.conf:
+
+	Include ${PKG_SYSCONFDIR}/ampache.conf
+
+You will also need to ensure php.ini has the following enabled:
+
+	extension=mysql.so
+	extension=iconv.so
+
+===========================================================================
