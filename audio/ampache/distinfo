@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/14 09:06:54 abs Exp $
+
+SHA1 (ampache-3.4.3.tar.gz) = 87fd031f0e424a273f4e4bb7f2405cc72a5e0d00
+RMD160 (ampache-3.4.3.tar.gz) = e11eeac971c1f6e52c5d1ed85fc043244ffb5c59
+Size (ampache-3.4.3.tar.gz) = 1414765 bytes
+SHA1 (patch-aa) = 30c57f3b5e0b8d79af13632745227a81b262f4c8
