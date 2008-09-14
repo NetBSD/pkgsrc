@@ -1,4 +1,4 @@
-/* $NetBSD: jobs.c,v 1.8 2008/02/24 15:35:42 tnn Exp $ */
+/* $NetBSD: jobs.c,v 1.9 2008/09/14 18:59:02 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -174,35 +174,6 @@ compute_tree_depth(struct build_job *job)
 	compute_tree_depth_rec(job, job, &head, &job->pkg_depth);
 }
 
-static void
-mark_restricted_rec(struct build_job *job)
-{
-	struct dependency_list *iter;
-
-	if (job->unrestricted_subset == 0)
-		return;
-
-	job->unrestricted_subset = 0;
-
-	SLIST_FOREACH(iter, &job->depending_pkgs, depends_link)
-		mark_restricted_rec(iter->dependency);
-}
-
-static void
-mark_restricted(void)
-{
-	size_t i;
-	const char *restricted, *no_bin_on_ftp;
-
-	for (i = 0; i < len_jobs; ++i) {
-		restricted = find_content(&jobs[i], "RESTRICTED=");
-		no_bin_on_ftp = find_content(&jobs[i], "NO_BIN_ON_FTP=");
-		if ((restricted != NULL && *restricted != '\0' && *restricted != '\n') ||
-		    (no_bin_on_ftp != NULL && *no_bin_on_ftp != '\0' && *no_bin_on_ftp != '\n'))
-			mark_restricted_rec(&jobs[i]);
-	}
-}
-
 void
 init_jobs(const char *scan_output, const char *success_file, const char *error_file)
 {
@@ -236,7 +207,6 @@ init_jobs(const char *scan_output, const char *success_file, const char *error_f
 		jobs[len_jobs].end = pbulk_item_end(input_iter);
 		jobs[len_jobs].state = JOB_INIT;
 		jobs[len_jobs].open_depends = 0;
-		jobs[len_jobs].unrestricted_subset = 1;
 		SLIST_INIT(&jobs[len_jobs].depending_pkgs);
 		if (jobs[len_jobs].end == NULL)
 			errx(1, "Invalid input");
@@ -259,7 +229,6 @@ init_jobs(const char *scan_output, const char *success_file, const char *error_f
 		compute_tree_depth(&jobs[i]);
 
 	mark_initial();
-	mark_restricted();
 
 	for (i = 0; i < len_jobs; ++i) {
 		if (jobs[i].state == JOB_INIT)
@@ -538,8 +507,7 @@ finish_build(const char *report_file)
 		default:
 			errx(1, "internal error");
 		}
-		fprintf(report, "%s|%s|%s|%d\n", jobs[i].pkgname, status,
-		    jobs[i].unrestricted_subset == 0 ? "restricted" : "",
+		fprintf(report, "%s|%s||%d\n", jobs[i].pkgname, status,
 		    jobs[i].pkg_depth);
 	}
 }
