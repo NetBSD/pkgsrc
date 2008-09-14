@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/14 19:56:11 seb Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/14 20:05:34 seb Exp $
 #
 
 DISTNAME=	Devel-EvalContext-0.09
@@ -7,7 +7,7 @@ CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Devel/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	http://search.cpan.org/Devel-EvalContext/
+HOMEPAGE=	http://search.cpan.org/dist/Devel-EvalContext/
 COMMENT=	Perl 5 module to save lexicals and hints between calls to eval
 
 PKG_DESTDIR_SUPPORT=	user-destdir
