@@ -1,8 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2008/09/13 18:12:43 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2008/09/14 11:27:51 sborrill Exp $
 #
 
 DISTNAME=		opal-snapshot-20080912
 PKGNAME=		opal-3.3.0.20080912
+OPALLIBDIR=		opal-3.3.1
+
 CATEGORIES=		devel net comms
 MASTER_SITES=		http://snapshots.ekiga.net/snapshots/sources/archives/
 
@@ -22,6 +24,14 @@ USE_TOOLS+=		gmake
 USE_TOOLS+=		pkg-config
 
 WRKSRC=			${WRKDIR}/opal
+
+PLIST_SUBST+=		OPALLIBDIR=${OPALLIBDIR:Q}
+
+.if "${MACHINE_ARCH}" == "i386"
+PLIST_SUBST+=		LIBARCH=x86
+.else
+PLIST_SUBST+=		LIBARCH=${MACHINE_ARCH:Q}
+.endif
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/version.h ${PREFIX}/share/opal
