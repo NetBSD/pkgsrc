@@ -1,0 +1,6 @@
+The Perl 5 module Devel::Cover provides code coverage metrics for
+Perl. Code coverage metrics describe how thoroughly tests exercise
+code. By using Devel::Cover you can discover areas of code not
+exercised by your tests and determine which tests to create to
+increase coverage. Code coverage can be considered as an indirect
+measure of quality.
