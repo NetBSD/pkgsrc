@@ -1,0 +1,2 @@
+The Perl 5 module Devel::EvalContext provides the capability
+to use Perl's eval primitive in a specified environment.

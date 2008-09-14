@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/14 19:56:11 seb Exp $
+
+SHA1 (Devel-EvalContext-0.09.tar.gz) = c5ff983a9af479cacd8763b682866b2d8a9dd301
+RMD160 (Devel-EvalContext-0.09.tar.gz) = 8256144f75683c02384dde428c546dbdd9e5ef37
+Size (Devel-EvalContext-0.09.tar.gz) = 5162 bytes
