@@ -1,0 +1,11 @@
+FriCAS is a fork of Axiom.
+
+FriCAS algebra library is written in a high level strongly typed
+language (Spad), which allows natural expression of mathematical
+algorithms.
+
+FriCAS uses lightweight developement methodology.  Compared to Axiom
+FriCAS is significantly restructured -- it is more portable and fixed
+several defects.  FriCAS removed rather large unused parts (without
+removing functionality).  It is expected that FriCAS will be much
+easier to maintain than original Axiom.
