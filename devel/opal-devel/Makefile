@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/09/14 11:27:51 sborrill Exp $
+# $NetBSD: Makefile,v 1.4 2008/09/14 13:41:38 jmcneill Exp $
 #
 
 DISTNAME=		opal-snapshot-20080912
@@ -18,6 +18,10 @@ GNU_CONFIGURE=		yes
 BUILD_TARGET=		opt
 
 CONFIGURE_ARGS+=	--enable-h264
+# ekiga developers say that the ffmpeg-h263 plugin is
+# not used and should be disabled in favour of the
+# h263+ plugin, so do so
+CONFIGURE_ARGS+=	--disable-ffmpeg-h263
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
