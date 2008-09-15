@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2269 2008/09/15 13:17:57 jmcneill Exp $
+$NetBSD: CHANGES-2008,v 1.2270 2008/09/15 15:12:14 martti Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3841,3 +3841,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-POE-Test-Loops to 1.002nb1 [he 2008-09-15]
 	Updated devel/p5-POE-Test-Loops to 1.002nb2 [he 2008-09-15]
 	Added multimedia/tvtime version 1.0.1 [jmcneill 2008-09-15]
+	Updated databases/rrdtool to 1.3.3 [martti 2008-09-15]
