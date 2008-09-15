@@ -1,0 +1,87 @@
+@comment $NetBSD: PLIST.sk,v 1.1.1.1 2008/09/15 09:59:10 taca Exp $
+${TL_WEBDIR}/system/modules/backend/languages/sk/.htaccess
+${TL_WEBDIR}/system/modules/backend/languages/sk/default.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/countries.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/explain.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/languages.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/modules.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/tl_article.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/tl_content.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/tl_files.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/tl_flash.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/tl_form.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/tl_form_field.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/tl_layout.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/tl_log.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/tl_maintenance.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/tl_member.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/tl_member_group.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/tl_module.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/tl_page.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/tl_settings.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/tl_style.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/tl_style_sheet.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/tl_undo.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/tl_user.php
+${TL_WEBDIR}/system/modules/backend/languages/sk/tl_user_group.php
+${TL_WEBDIR}/system/modules/development/languages/sk/.htaccess
+${TL_WEBDIR}/system/modules/development/languages/sk/modules.php
+${TL_WEBDIR}/system/modules/development/languages/sk/tl_extension.php
+${TL_WEBDIR}/system/modules/development/languages/sk/tl_labels.php
+${TL_WEBDIR}/system/modules/frontend/languages/sk/.htaccess
+${TL_WEBDIR}/system/modules/frontend/languages/sk/default.php
+${TL_WEBDIR}/system/modules/frontend/languages/sk/modules.php
+${TL_WEBDIR}/system/modules/frontend/languages/sk/stopwords.txt
+${TL_WEBDIR}/system/modules/news/languages/sk/.htaccess
+${TL_WEBDIR}/system/modules/news/languages/sk/default.php
+${TL_WEBDIR}/system/modules/news/languages/sk/modules.php
+${TL_WEBDIR}/system/modules/news/languages/sk/tl_module.php
+${TL_WEBDIR}/system/modules/news/languages/sk/tl_news.php
+${TL_WEBDIR}/system/modules/news/languages/sk/tl_news_archive.php
+${TL_WEBDIR}/system/modules/registration/languages/sk/.htaccess
+${TL_WEBDIR}/system/modules/registration/languages/sk/default.php
+${TL_WEBDIR}/system/modules/registration/languages/sk/modules.php
+${TL_WEBDIR}/system/modules/registration/languages/sk/tl_module.php
+${TL_WEBDIR}/system/modules/rss_reader/languages/sk/.htaccess
+${TL_WEBDIR}/system/modules/rss_reader/languages/sk/modules.php
+${TL_WEBDIR}/system/modules/rss_reader/languages/sk/tl_module.php
+${TL_WEBDIR}/system/modules/calendar/languages/sk/.htaccess
+${TL_WEBDIR}/system/modules/calendar/languages/sk/default.php
+${TL_WEBDIR}/system/modules/calendar/languages/sk/modules.php
+${TL_WEBDIR}/system/modules/calendar/languages/sk/tl_calendar.php
+${TL_WEBDIR}/system/modules/calendar/languages/sk/tl_calendar_events.php
+${TL_WEBDIR}/system/modules/calendar/languages/sk/tl_module.php
+${TL_WEBDIR}/system/modules/comments/languages/sk/.htaccess
+${TL_WEBDIR}/system/modules/comments/languages/sk/default.php
+${TL_WEBDIR}/system/modules/comments/languages/sk/modules.php
+${TL_WEBDIR}/system/modules/comments/languages/sk/tl_comments.php
+${TL_WEBDIR}/system/modules/comments/languages/sk/tl_content.php
+${TL_WEBDIR}/system/modules/newsletter/languages/sk/.htaccess
+${TL_WEBDIR}/system/modules/newsletter/languages/sk/default.php
+${TL_WEBDIR}/system/modules/newsletter/languages/sk/modules.php
+${TL_WEBDIR}/system/modules/newsletter/languages/sk/tl_module.php
+${TL_WEBDIR}/system/modules/newsletter/languages/sk/tl_newsletter.php
+${TL_WEBDIR}/system/modules/newsletter/languages/sk/tl_newsletter_channel.php
+${TL_WEBDIR}/system/modules/newsletter/languages/sk/tl_newsletter_recipients.php
+${TL_WEBDIR}/system/modules/newsletter/languages/sk/tl_member.php
+${TL_WEBDIR}/system/modules/tpl_editor/languages/sk/.htaccess
+${TL_WEBDIR}/system/modules/tpl_editor/languages/sk/modules.php
+${TL_WEBDIR}/system/modules/tpl_editor/languages/sk/tl_templates.php
+${TL_WEBDIR}/system/modules/listing/languages/sk/.htaccess
+${TL_WEBDIR}/system/modules/listing/languages/sk/default.php
+${TL_WEBDIR}/system/modules/listing/languages/sk/modules.php
+${TL_WEBDIR}/system/modules/listing/languages/sk/tl_module.php
+${TL_WEBDIR}/system/modules/pun_bridge/languages/sk/.htaccess
+${TL_WEBDIR}/system/modules/pun_bridge/languages/sk/modules.php
+@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages/sk
+@dirrm ${TL_WEBDIR}/system/modules/listing/languages/sk
+@dirrm ${TL_WEBDIR}/system/modules/tpl_editor/languages/sk
+@dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/sk
+@dirrm ${TL_WEBDIR}/system/modules/comments/languages/sk
+@dirrm ${TL_WEBDIR}/system/modules/calendar/languages/sk
+@dirrm ${TL_WEBDIR}/system/modules/rss_reader/languages/sk
+@dirrm ${TL_WEBDIR}/system/modules/registration/languages/sk
+@dirrm ${TL_WEBDIR}/system/modules/news/languages/sk
+@dirrm ${TL_WEBDIR}/system/modules/frontend/languages/sk
+@dirrm ${TL_WEBDIR}/system/modules/development/languages/sk
+@dirrm ${TL_WEBDIR}/system/modules/backend/languages/sk

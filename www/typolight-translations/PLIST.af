@@ -1,0 +1,98 @@
+@comment $NetBSD: PLIST.af,v 1.1.1.1 2008/09/15 09:59:08 taca Exp $
+${TL_WEBDIR}/system/modules/backend/languages/af/.htaccess
+${TL_WEBDIR}/system/modules/backend/languages/af/default.php
+${TL_WEBDIR}/system/modules/backend/languages/af/countries.php
+${TL_WEBDIR}/system/modules/backend/languages/af/explain.php
+${TL_WEBDIR}/system/modules/backend/languages/af/languages.php
+${TL_WEBDIR}/system/modules/backend/languages/af/modules.php
+${TL_WEBDIR}/system/modules/backend/languages/af/tl_article.php
+${TL_WEBDIR}/system/modules/backend/languages/af/tl_content.php
+${TL_WEBDIR}/system/modules/backend/languages/af/tl_files.php
+${TL_WEBDIR}/system/modules/backend/languages/af/tl_flash.php
+${TL_WEBDIR}/system/modules/backend/languages/af/tl_form.php
+${TL_WEBDIR}/system/modules/backend/languages/af/tl_form_field.php
+${TL_WEBDIR}/system/modules/backend/languages/af/tl_layout.php
+${TL_WEBDIR}/system/modules/backend/languages/af/tl_log.php
+${TL_WEBDIR}/system/modules/backend/languages/af/tl_maintenance.php
+${TL_WEBDIR}/system/modules/backend/languages/af/tl_member.php
+${TL_WEBDIR}/system/modules/backend/languages/af/tl_member_group.php
+${TL_WEBDIR}/system/modules/backend/languages/af/tl_module.php
+${TL_WEBDIR}/system/modules/backend/languages/af/tl_page.php
+${TL_WEBDIR}/system/modules/backend/languages/af/tl_settings.php
+${TL_WEBDIR}/system/modules/backend/languages/af/tl_style.php
+${TL_WEBDIR}/system/modules/backend/languages/af/tl_style_sheet.php
+${TL_WEBDIR}/system/modules/backend/languages/af/tl_undo.php
+${TL_WEBDIR}/system/modules/backend/languages/af/tl_user.php
+${TL_WEBDIR}/system/modules/backend/languages/af/tl_user_group.php
+${TL_WEBDIR}/system/modules/backend/languages/af/tl_task.php
+${TL_WEBDIR}/system/modules/development/languages/af/.htaccess
+${TL_WEBDIR}/system/modules/development/languages/af/modules.php
+${TL_WEBDIR}/system/modules/development/languages/af/tl_extension.php
+${TL_WEBDIR}/system/modules/development/languages/af/tl_labels.php
+${TL_WEBDIR}/system/modules/frontend/languages/af/.htaccess
+${TL_WEBDIR}/system/modules/frontend/languages/af/default.php
+${TL_WEBDIR}/system/modules/frontend/languages/af/modules.php
+${TL_WEBDIR}/system/modules/news/languages/af/.htaccess
+${TL_WEBDIR}/system/modules/news/languages/af/default.php
+${TL_WEBDIR}/system/modules/news/languages/af/modules.php
+${TL_WEBDIR}/system/modules/news/languages/af/tl_module.php
+${TL_WEBDIR}/system/modules/news/languages/af/tl_news.php
+${TL_WEBDIR}/system/modules/news/languages/af/tl_news_archive.php
+${TL_WEBDIR}/system/modules/news/languages/af/tl_news_comments.php
+${TL_WEBDIR}/system/modules/news/languages/af/tl_user.php
+${TL_WEBDIR}/system/modules/news/languages/af/tl_user_group.php
+${TL_WEBDIR}/system/modules/registration/languages/af/.htaccess
+${TL_WEBDIR}/system/modules/registration/languages/af/default.php
+${TL_WEBDIR}/system/modules/registration/languages/af/modules.php
+${TL_WEBDIR}/system/modules/registration/languages/af/tl_module.php
+${TL_WEBDIR}/system/modules/rss_reader/languages/af/.htaccess
+${TL_WEBDIR}/system/modules/rss_reader/languages/af/modules.php
+${TL_WEBDIR}/system/modules/rss_reader/languages/af/tl_module.php
+${TL_WEBDIR}/system/modules/calendar/languages/af/.htaccess
+${TL_WEBDIR}/system/modules/calendar/languages/af/default.php
+${TL_WEBDIR}/system/modules/calendar/languages/af/modules.php
+${TL_WEBDIR}/system/modules/calendar/languages/af/tl_calendar.php
+${TL_WEBDIR}/system/modules/calendar/languages/af/tl_calendar_events.php
+${TL_WEBDIR}/system/modules/calendar/languages/af/tl_module.php
+${TL_WEBDIR}/system/modules/calendar/languages/af/tl_user.php
+${TL_WEBDIR}/system/modules/calendar/languages/af/tl_user_group.php
+${TL_WEBDIR}/system/modules/comments/languages/af/.htaccess
+${TL_WEBDIR}/system/modules/comments/languages/af/modules.php
+${TL_WEBDIR}/system/modules/comments/languages/af/tl_comments.php
+${TL_WEBDIR}/system/modules/comments/languages/af/tl_content.php
+${TL_WEBDIR}/system/modules/newsletter/languages/af/.htaccess
+${TL_WEBDIR}/system/modules/newsletter/languages/af/default.php
+${TL_WEBDIR}/system/modules/newsletter/languages/af/modules.php
+${TL_WEBDIR}/system/modules/newsletter/languages/af/tl_module.php
+${TL_WEBDIR}/system/modules/newsletter/languages/af/tl_newsletter.php
+${TL_WEBDIR}/system/modules/newsletter/languages/af/tl_newsletter_channel.php
+${TL_WEBDIR}/system/modules/newsletter/languages/af/tl_newsletter_recipients.php
+${TL_WEBDIR}/system/modules/newsletter/languages/af/tl_member.php
+${TL_WEBDIR}/system/modules/newsletter/languages/af/tl_user.php
+${TL_WEBDIR}/system/modules/newsletter/languages/af/tl_user_group.php
+${TL_WEBDIR}/system/modules/tpl_editor/languages/af/.htaccess
+${TL_WEBDIR}/system/modules/tpl_editor/languages/af/modules.php
+${TL_WEBDIR}/system/modules/tpl_editor/languages/af/tl_templates.php
+${TL_WEBDIR}/system/modules/listing/languages/af/.htaccess
+${TL_WEBDIR}/system/modules/listing/languages/af/default.php
+${TL_WEBDIR}/system/modules/listing/languages/af/modules.php
+${TL_WEBDIR}/system/modules/listing/languages/af/tl_module.php
+${TL_WEBDIR}/system/modules/pun_bridge/languages/af/.htaccess
+${TL_WEBDIR}/system/modules/pun_bridge/languages/af/modules.php
+${TL_WEBDIR}/system/modules/dfGallery/languages/af/.htaccess
+${TL_WEBDIR}/system/modules/dfGallery/languages/af/default.php
+${TL_WEBDIR}/system/modules/dfGallery/languages/af/modules.php
+${TL_WEBDIR}/system/modules/dfGallery/languages/af/tl_content.php
+@dirrm ${TL_WEBDIR}/system/modules/dfGallery/languages/af
+@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages/af
+@dirrm ${TL_WEBDIR}/system/modules/listing/languages/af
+@dirrm ${TL_WEBDIR}/system/modules/tpl_editor/languages/af
+@dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/af
+@dirrm ${TL_WEBDIR}/system/modules/comments/languages/af
+@dirrm ${TL_WEBDIR}/system/modules/calendar/languages/af
+@dirrm ${TL_WEBDIR}/system/modules/rss_reader/languages/af
+@dirrm ${TL_WEBDIR}/system/modules/registration/languages/af
+@dirrm ${TL_WEBDIR}/system/modules/news/languages/af
+@dirrm ${TL_WEBDIR}/system/modules/frontend/languages/af
+@dirrm ${TL_WEBDIR}/system/modules/development/languages/af
+@dirrm ${TL_WEBDIR}/system/modules/backend/languages/af
