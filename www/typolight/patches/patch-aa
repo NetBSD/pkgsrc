@@ -1,0 +1,25 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/15 09:57:48 taca Exp $
+
+Ad hoc cope with assuming gnu libc / GNU iconv.
+
+--- system/mbstring.php.orig	2007-12-13 21:53:56.000000000 +0900
++++ system/mbstring.php
+@@ -114,8 +114,16 @@ function utf8_convert_encoding($str, $to
+ 	if ($from == 'ISO-8859-1' && $to == 'UTF-8')
+ 		return utf8_encode($str);
+ 
+-	if (function_exists('iconv'))
+-		return @iconv($from, $to . '//IGNORE', $str);
++	if (function_exists('iconv')) {
++        if (strlen($str) > 0) {
++            $s = @iconv($from, $to . '//IGNORE', $str);
++            if (strlen($s) == 0) {
++                $s = @iconv($from, $to, $str);
++            }
++            return $s;
++        }
++        return $str;
++    }
+ 
+ 	if (!USE_MBSTRING)
+ 		return $str;

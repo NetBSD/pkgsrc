@@ -1,0 +1,31 @@
+# $NetBSD: Makefile.common,v 1.1.1.1 2008/09/15 09:57:48 taca Exp $
+#
+# used by www/typolight-example/Makefile
+
+TL_VERSION=	2.6.0
+
+FILES_SUBST+=	PAX=${PAX} TL_EGDIR=${TL_EGDIR:Q} TL_WEBDIR=${TL_WEBDIR:Q} \
+		WWWGRP=${APACHE_GROUP:Q} WWWOWN=${APACHE_USER:Q}
+PLIST_SUBST+=	TL_EGDIR=${TL_EGDIR:Q} TL_WEBDIR=${TL_WEBDIR:Q}
+
+PRINT_PLIST_AWK+=	/@dirrm ${TL_WEBDIR:S|/|\\/|g}\/templates$$/ \
+			{ next; }
+PRINT_PLIST_AWK+=	/@dirrm ${TL_WEBDIR:S|/|\\/|g}\/system\/(tmp|log)$$/ \
+			{ next; }
+PRINT_PLIST_AWK+=	/@dirrm ${TL_WEBDIR:S|/|\\/|g}\/system$$/ \
+			{ next; }
+PRINT_PLIST_AWK+=	/@dirrm ${TL_WEBDIR:S|/|\\/|g}$$/ \
+			{ next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${TL_WEBDIR:S|/|\\/|g}/ \
+			{ gsub(/${TL_WEBDIR:S|/|\\/|g}/, "$${TL_WEBDIR}"); \
+			print; next; }
+PRINT_PLIST_AWK+=	/^(@dirrm )?${TL_EGDIR:S|/|\\/|g}/ \
+			{ gsub(/${TL_EGDIR:S|/|\\/|g}/, "$${TL_EGDIR}"); \
+			print; next; }
+
+.include "../../mk/bsd.prefs.mk"
+
+TL_EGDIR?=	share/examples/typolight
+TL_WEBDIR?=	share/httpd/typolight
+
+BUILD_DEFS+=	APACHE_GROUP APACHE_USER TL_EGDIR TL_WEBDIR

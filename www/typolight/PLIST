@@ -1,0 +1,1781 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/15 09:57:48 taca Exp $
+${TL_EGDIR}/basic.css
+${TL_EGDIR}/news.xml
+${TL_EGDIR}/print.css
+${TL_EGDIR}/system/config/config.php
+${TL_EGDIR}/system/config/countries.php
+${TL_EGDIR}/system/config/dcaconfig.php
+${TL_EGDIR}/system/config/languages.php
+${TL_EGDIR}/system/config/localconfig.php
+${TL_EGDIR}/system/config/tcpdf.php
+${TL_EGDIR}/system/config/timezones.php
+${TL_EGDIR}/system/config/tinyFlash.php
+${TL_EGDIR}/system/config/tinyMCE.php
+${TL_EGDIR}/system/config/tinyNews.php
+${TL_EGDIR}/tl_files/tiny_templates/index.html
+${TL_EGDIR}/tl_files/xBrowser_style_sheets/xBasic.css
+${TL_EGDIR}/tl_files/xBrowser_style_sheets/xElements.css
+${TL_EGDIR}/tl_files/xBrowser_style_sheets/xForm.css
+${TL_EGDIR}/tl_files/xBrowser_style_sheets/xNavigation.css
+${TL_WEBDIR}/._htaccess
+${TL_WEBDIR}/CHANGELOG.txt
+${TL_WEBDIR}/INSTALL.txt
+${TL_WEBDIR}/LICENSE.txt
+${TL_WEBDIR}/cron.php
+${TL_WEBDIR}/flash.php
+${TL_WEBDIR}/index.php
+${TL_WEBDIR}/plugins/calendar/calendar-icon.gif
+${TL_WEBDIR}/plugins/calendar/calendar-next.gif
+${TL_WEBDIR}/plugins/calendar/calendar-prev.gif
+${TL_WEBDIR}/plugins/calendar/calendar-td.gif
+${TL_WEBDIR}/plugins/calendar/calendar-valid.gif
+${TL_WEBDIR}/plugins/calendar/calendar.css
+${TL_WEBDIR}/plugins/calendar/calendar.js
+${TL_WEBDIR}/plugins/calendar/calendar.png
+${TL_WEBDIR}/plugins/calendar/calendar_src.css
+${TL_WEBDIR}/plugins/calendar/calendar_src.js
+${TL_WEBDIR}/plugins/dompdf/dompdf_config.inc.php
+${TL_WEBDIR}/plugins/dompdf/include/abstract_renderer.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/attribute_translator.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/block_frame_decorator.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/block_frame_reflower.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/block_positioner.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/block_renderer.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/cached_pdf_decorator.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/canvas.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/canvas_factory.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/cellmap.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/cpdf_adapter.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/dompdf.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/dompdf_exception.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/dompdf_internal_exception.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/font_metrics.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/frame.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/frame_decorator.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/frame_factory.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/frame_reflower.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/frame_tree.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/functions.inc.php
+${TL_WEBDIR}/plugins/dompdf/include/gd_adapter.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/generated_frame_reflower.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/image_cache.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/image_frame_decorator.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/image_frame_reflower.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/image_renderer.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/inline_frame_decorator.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/inline_frame_reflower.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/inline_positioner.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/inline_renderer.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/list_bullet_frame_decorator.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/list_bullet_frame_reflower.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/list_bullet_image_frame_decorator.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/list_bullet_positioner.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/list_bullet_renderer.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/null_frame_decorator.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/null_frame_reflower.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/null_positioner.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/page_cache.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/page_frame_decorator.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/page_frame_reflower.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/pdflib_adapter.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/php_evaluator.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/positioner.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/renderer.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/style.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/stylesheet.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/table_cell_frame_decorator.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/table_cell_frame_reflower.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/table_cell_positioner.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/table_cell_renderer.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/table_frame_decorator.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/table_frame_reflower.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/table_row_frame_decorator.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/table_row_frame_reflower.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/table_row_group_frame_decorator.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/table_row_group_frame_reflower.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/table_row_positioner.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/tcpdf_adapter.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/text_frame_decorator.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/text_frame_reflower.cls.php
+${TL_WEBDIR}/plugins/dompdf/include/text_renderer.cls.php
+${TL_WEBDIR}/plugins/dompdf/lib/class.pdf.php
+${TL_WEBDIR}/plugins/dompdf/lib/fonts/Courier-Bold.afm
+${TL_WEBDIR}/plugins/dompdf/lib/fonts/Courier-BoldOblique.afm
+${TL_WEBDIR}/plugins/dompdf/lib/fonts/Courier-Oblique.afm
+${TL_WEBDIR}/plugins/dompdf/lib/fonts/Courier.afm
+${TL_WEBDIR}/plugins/dompdf/lib/fonts/Helvetica-Bold.afm
+${TL_WEBDIR}/plugins/dompdf/lib/fonts/Helvetica-BoldOblique.afm
+${TL_WEBDIR}/plugins/dompdf/lib/fonts/Helvetica-Oblique.afm
+${TL_WEBDIR}/plugins/dompdf/lib/fonts/Helvetica.afm
+${TL_WEBDIR}/plugins/dompdf/lib/fonts/Times-Bold.afm
+${TL_WEBDIR}/plugins/dompdf/lib/fonts/Times-BoldItalic.afm
+${TL_WEBDIR}/plugins/dompdf/lib/fonts/Times-Italic.afm
+${TL_WEBDIR}/plugins/dompdf/lib/fonts/Times-Roman.afm
+${TL_WEBDIR}/plugins/dompdf/lib/fonts/ZapfDingbats.afm
+${TL_WEBDIR}/plugins/dompdf/lib/fonts/dompdf_font_family_cache
+${TL_WEBDIR}/plugins/dompdf/lib/fonts/dompdf_font_family_cache.dist
+${TL_WEBDIR}/plugins/dompdf/lib/res/broken_image.png
+${TL_WEBDIR}/plugins/dompdf/lib/res/html.css
+${TL_WEBDIR}/plugins/dpsyntax/bg.gif
+${TL_WEBDIR}/plugins/dpsyntax/clipboard.swf
+${TL_WEBDIR}/plugins/dpsyntax/dpsyntax.css
+${TL_WEBDIR}/plugins/dpsyntax/dpsyntax_src.css
+${TL_WEBDIR}/plugins/dpsyntax/iefixes.css
+${TL_WEBDIR}/plugins/dpsyntax/shBrushCSharp.js
+${TL_WEBDIR}/plugins/dpsyntax/shBrushCpp.js
+${TL_WEBDIR}/plugins/dpsyntax/shBrushCss.js
+${TL_WEBDIR}/plugins/dpsyntax/shBrushDelphi.js
+${TL_WEBDIR}/plugins/dpsyntax/shBrushJScript.js
+${TL_WEBDIR}/plugins/dpsyntax/shBrushJava.js
+${TL_WEBDIR}/plugins/dpsyntax/shBrushPhp.js
+${TL_WEBDIR}/plugins/dpsyntax/shBrushPython.js
+${TL_WEBDIR}/plugins/dpsyntax/shBrushRuby.js
+${TL_WEBDIR}/plugins/dpsyntax/shBrushSql.js
+${TL_WEBDIR}/plugins/dpsyntax/shBrushVb.js
+${TL_WEBDIR}/plugins/dpsyntax/shBrushXml.js
+${TL_WEBDIR}/plugins/dpsyntax/shCore.js
+${TL_WEBDIR}/plugins/dpsyntax/shCore.uncompressed.js
+${TL_WEBDIR}/plugins/mootools/mootools.js
+${TL_WEBDIR}/plugins/phpmailer/class.phpmailer.php
+${TL_WEBDIR}/plugins/phpmailer/class.smtp.php
+${TL_WEBDIR}/plugins/phpmailer/language/phpmailer.lang-en.php
+${TL_WEBDIR}/plugins/simplepie/idna_convert.class.php
+${TL_WEBDIR}/plugins/simplepie/npdata.ser
+${TL_WEBDIR}/plugins/simplepie/simplepie.inc
+${TL_WEBDIR}/plugins/slimbox/css/closelabel.gif
+${TL_WEBDIR}/plugins/slimbox/css/loading.gif
+${TL_WEBDIR}/plugins/slimbox/css/nextlabel.gif
+${TL_WEBDIR}/plugins/slimbox/css/prevlabel.gif
+${TL_WEBDIR}/plugins/slimbox/css/slimbox.css
+${TL_WEBDIR}/plugins/slimbox/css/slimbox_src.css
+${TL_WEBDIR}/plugins/slimbox/js/slimbox.js
+${TL_WEBDIR}/plugins/tablesort/css/tablesort.css
+${TL_WEBDIR}/plugins/tablesort/css/tablesort_src.css
+${TL_WEBDIR}/plugins/tablesort/js/tablesort.js
+${TL_WEBDIR}/plugins/tablesort/js/tablesort_src.js
+${TL_WEBDIR}/plugins/tablesort/media/asc.gif
+${TL_WEBDIR}/plugins/tablesort/media/default.gif
+${TL_WEBDIR}/plugins/tablesort/media/desc.gif
+${TL_WEBDIR}/plugins/tcpdf/cache/.htaccess
+${TL_WEBDIR}/plugins/tcpdf/config/lang/eng.php
+${TL_WEBDIR}/plugins/tcpdf/config/tcpdf_config.php
+${TL_WEBDIR}/plugins/tcpdf/fonts/ttf-bitstream-vera-1.10/COPYRIGHT.TXT
+${TL_WEBDIR}/plugins/tcpdf/fonts/ttf-bitstream-vera-1.10/README.TXT
+${TL_WEBDIR}/plugins/tcpdf/fonts/ttf-bitstream-vera-1.10/RELEASENOTES.TXT
+${TL_WEBDIR}/plugins/tcpdf/fonts/ttf-bitstream-vera-1.10/local.conf
+${TL_WEBDIR}/plugins/tcpdf/fonts/vera.ctg.z
+${TL_WEBDIR}/plugins/tcpdf/fonts/vera.php
+${TL_WEBDIR}/plugins/tcpdf/fonts/vera.z
+${TL_WEBDIR}/plugins/tcpdf/fonts/verab.ctg.z
+${TL_WEBDIR}/plugins/tcpdf/fonts/verab.php
+${TL_WEBDIR}/plugins/tcpdf/fonts/verab.z
+${TL_WEBDIR}/plugins/tcpdf/fonts/verabi.ctg.z
+${TL_WEBDIR}/plugins/tcpdf/fonts/verabi.php
+${TL_WEBDIR}/plugins/tcpdf/fonts/verabi.z
+${TL_WEBDIR}/plugins/tcpdf/fonts/verai.ctg.z
+${TL_WEBDIR}/plugins/tcpdf/fonts/verai.php
+${TL_WEBDIR}/plugins/tcpdf/fonts/verai.z
+${TL_WEBDIR}/plugins/tcpdf/fonts/veramo.ctg.z
+${TL_WEBDIR}/plugins/tcpdf/fonts/veramo.php
+${TL_WEBDIR}/plugins/tcpdf/fonts/veramo.z
+${TL_WEBDIR}/plugins/tcpdf/fonts/veramob.ctg.z
+${TL_WEBDIR}/plugins/tcpdf/fonts/veramob.php
+${TL_WEBDIR}/plugins/tcpdf/fonts/veramob.z
+${TL_WEBDIR}/plugins/tcpdf/fonts/veramobi.ctg.z
+${TL_WEBDIR}/plugins/tcpdf/fonts/veramobi.php
+${TL_WEBDIR}/plugins/tcpdf/fonts/veramobi.z
+${TL_WEBDIR}/plugins/tcpdf/fonts/veramoi.ctg.z
+${TL_WEBDIR}/plugins/tcpdf/fonts/veramoi.php
+${TL_WEBDIR}/plugins/tcpdf/fonts/veramoi.z
+${TL_WEBDIR}/plugins/tcpdf/fonts/verase.ctg.z
+${TL_WEBDIR}/plugins/tcpdf/fonts/verase.php
+${TL_WEBDIR}/plugins/tcpdf/fonts/verase.z
+${TL_WEBDIR}/plugins/tcpdf/fonts/veraseb.ctg.z
+${TL_WEBDIR}/plugins/tcpdf/fonts/veraseb.php
+${TL_WEBDIR}/plugins/tcpdf/fonts/veraseb.z
+${TL_WEBDIR}/plugins/tcpdf/htmlcolors.php
+${TL_WEBDIR}/plugins/tcpdf/images/_blank.png
+${TL_WEBDIR}/plugins/tcpdf/tcpdf.php
+${TL_WEBDIR}/plugins/tcpdf/unicode_data.php
+${TL_WEBDIR}/plugins/tinyMCE/blank.htm
+${TL_WEBDIR}/plugins/tinyMCE/langs/bg.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/ca.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/cs.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/da.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/de.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/el.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/en.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/es.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/et.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/fa.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/fi.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/fr.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/hr.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/hu.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/it.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/ja.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/lt.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/lv.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/mk.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/nl.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/nn.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/pl.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/pt.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/ro.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/ru.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/sk.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/sl.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/sr.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/sv.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/tr.js
+${TL_WEBDIR}/plugins/tinyMCE/langs/uk.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/css/advimage.css
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/editor_plugin.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/editor_plugin_src.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/image.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/img/sample.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/js/image.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/bg_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/ca_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/cs_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/da_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/de_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/el_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/en_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/es_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/et_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/fa_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/fi_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/fr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/hr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/hu_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/it_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/ja_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/lt_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/lv_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/mk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/nl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/nn_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/pl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/pt_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/ro_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/ru_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/sk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/sl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/sr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/sv_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/tr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs/uk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/autosave/editor_plugin.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/autosave/editor_plugin_src.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/contextmenu/editor_plugin.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/contextmenu/editor_plugin_src.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/directionality/editor_plugin.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/directionality/editor_plugin_src.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/editor_plugin.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/editor_plugin_src.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/emotions.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/img/smiley-cool.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/img/smiley-cry.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/img/smiley-embarassed.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/img/smiley-foot-in-mouth.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/img/smiley-frown.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/img/smiley-innocent.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/img/smiley-kiss.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/img/smiley-laughing.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/img/smiley-money-mouth.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/img/smiley-sealed.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/img/smiley-smile.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/img/smiley-surprised.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/img/smiley-tongue-out.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/img/smiley-undecided.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/img/smiley-wink.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/img/smiley-yell.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/js/emotions.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/bg_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/ca_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/cs_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/da_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/de_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/el_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/en_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/es_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/et_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/fa_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/fi_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/fr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/hr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/hu_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/it_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/ja_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/lt_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/lv_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/mk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/nl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/nn_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/pl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/pt_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/ro_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/ru_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/sk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/sl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/sr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/sv_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/tr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs/uk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/inlinepopups/editor_plugin.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/inlinepopups/editor_plugin_src.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/inlinepopups/skins/clearlooks2/img/alert.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/inlinepopups/skins/clearlooks2/img/button.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/inlinepopups/skins/clearlooks2/img/buttons.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/inlinepopups/skins/clearlooks2/img/confirm.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/inlinepopups/skins/clearlooks2/img/corners.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/inlinepopups/skins/clearlooks2/img/horizontal.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/inlinepopups/skins/clearlooks2/img/vertical.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/inlinepopups/skins/clearlooks2/window.css
+${TL_WEBDIR}/plugins/tinyMCE/plugins/inlinepopups/template.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/blank.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/css/blank.css
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/css/pasteword.css
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/editor_plugin.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/editor_plugin_src.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/js/pastetext.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/js/pasteword.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/bg_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/ca_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/cs_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/da_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/de_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/el_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/en_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/es_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/et_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/fa_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/fi_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/fr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/hr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/hu_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/it_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/ja_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/lt_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/lv_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/mk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/nl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/nn_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/pl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/pt_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/ro_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/ru_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/sk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/sl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/sr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/sv_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/tr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs/uk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/pastetext.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/pasteword.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/safari/blank.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/safari/editor_plugin.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/safari/editor_plugin_src.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/save/editor_plugin.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/save/editor_plugin_src.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/css/searchreplace.css
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/editor_plugin.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/editor_plugin_src.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/js/searchreplace.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/bg_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/ca_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/cs_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/da_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/de_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/el_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/en_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/es_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/et_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/fa_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/fi_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/fr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/hr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/hu_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/it_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/ja_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/lt_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/lv_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/mk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/nl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/nn_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/pl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/pt_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/ro_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/ru_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/sk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/sl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/sr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/sv_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/tr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs/uk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/searchreplace.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/classes/EnchantSpell.php
+${TL_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/classes/GoogleSpell.php
+${TL_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/classes/PSpell.php
+${TL_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/classes/PSpellShell.php
+${TL_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/classes/SpellChecker.php
+${TL_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/classes/utils/JSON.php
+${TL_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/classes/utils/Logger.php
+${TL_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/config.php
+${TL_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/css/content.css
+${TL_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/editor_plugin.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/editor_plugin_src.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/img/wline.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/includes/general.php
+${TL_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/rpc.php
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/css/props.css
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/editor_plugin.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/editor_plugin_src.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/js/props.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/bg_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/ca_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/cs_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/da_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/de_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/el_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/en_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/es_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/et_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/fa_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/fi_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/fr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/hr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/hu_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/it_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/ja_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/lt_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/lv_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/mk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/nl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/nn_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/pl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/pt_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/ro_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/ru_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/sk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/sl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/sr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/sv_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/tr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs/uk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/style/props.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/cell.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/css/cell.css
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/css/row.css
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/css/table.css
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/editor_plugin.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/editor_plugin_src.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/js/cell.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/js/merge_cells.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/js/row.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/js/table.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/bg_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/ca_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/cs_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/da_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/de_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/el_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/en_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/es_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/et_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/fa_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/fi_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/fr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/hr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/hu_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/it_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/ja_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/lt_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/lv_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/mk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/nl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/nn_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/pl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/pt_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/ro_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/ru_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/sk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/sl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/sr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/sv_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/tr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs/uk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/merge_cells.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/row.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/table/table.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/blank.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/css/template.css
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/editor_plugin.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/editor_plugin_src.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/js/template.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/bg_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/ca_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/cs_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/da_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/de_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/el_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/en_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/es_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/et_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/fa_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/fi_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/fr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/hr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/hu_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/it_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/ja_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/lt_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/lv_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/mk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/nl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/nn_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/pl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/pt_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/ro_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/ru_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/sk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/sl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/sr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/sv_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/tr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs/uk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/template/template.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/editor_plugin.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/editor_plugin_src.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/images/link.gif
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/de.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/de_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/en.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/en_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/readme.txt
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/typoimages.php
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/typolib.php
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/typolinks.php
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/typotemplates.php
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/abbr.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/acronym.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/attributes.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/cite.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/css/attributes.css
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/css/popup.css
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/del.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/editor_plugin.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/editor_plugin_src.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/ins.htm
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/js/abbr.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/js/acronym.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/js/attributes.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/js/cite.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/js/del.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/js/element_common.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/js/ins.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/bg_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/ca_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/cs_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/da_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/de_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/el_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/en_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/es_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/et_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/fa_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/fi_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/fr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/hr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/hu_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/it_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/ja_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/lt_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/lv_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/mk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/nl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/nn_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/pl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/pt_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/ro_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/ru_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/sk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/sl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/sr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/sv_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/tr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs/uk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/about.htm
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/anchor.htm
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/charmap.htm
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/color_picker.htm
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/editor_template.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/editor_template_src.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/image.htm
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/img/colorpicker.jpg
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/img/icons.gif
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/js/about.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/js/anchor.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/js/charmap.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/js/color_picker.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/js/image.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/js/link.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/js/source_editor.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/bg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/bg_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/ca.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/ca_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/cs.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/cs_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/da.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/da_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/de.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/de_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/el.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/el_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/en.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/en_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/es.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/es_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/et.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/et_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/fa.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/fa_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/fi.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/fi_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/fr.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/fr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/hr.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/hr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/hu.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/hu_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/it.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/it_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/ja.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/ja_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/lt.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/lt_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/lv.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/lv_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/mk.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/mk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/nl.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/nl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/nn.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/nn_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/pl.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/pl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/pt.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/pt_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/ro.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/ro_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/ru.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/ru_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/sk.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/sk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/sl.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/sl_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/sr.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/sr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/sv.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/sv_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/tr.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/tr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/uk.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs/uk_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/link.htm
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/default/content.css
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/default/dialog.css
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/default/img/buttons.png
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/default/img/items.gif
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/default/img/menu_arrow.gif
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/default/img/menu_check.gif
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/default/img/progress.gif
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/default/img/tabs.gif
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/default/ui.css
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/o2k7/content.css
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/o2k7/dialog.css
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/o2k7/img/button_bg.png
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/o2k7/img/button_bg_black.png
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/o2k7/img/button_bg_silver.png
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/o2k7/ui.css
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/o2k7/ui_black.css
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/o2k7/ui_silver.css
+${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/source_editor.htm
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/editor_template.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/editor_template_src.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/img/icons.gif
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/bg.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/ca.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/cs.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/da.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/de.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/el.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/en.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/es.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/et.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/fa.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/fi.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/fr.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/hr.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/hu.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/it.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/ja.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/lt.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/lv.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/mk.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/nl.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/nn.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/pl.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/pt.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/ro.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/ru.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/sk.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/sl.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/sr.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/sv.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/tr.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs/uk.js
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/skins/default/content.css
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/skins/default/ui.css
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/skins/o2k7/content.css
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/skins/o2k7/img/button_bg.png
+${TL_WEBDIR}/plugins/tinyMCE/themes/simple/skins/o2k7/ui.css
+${TL_WEBDIR}/plugins/tinyMCE/tiny_mce.js
+${TL_WEBDIR}/plugins/tinyMCE/tiny_mce_gzip.js
+${TL_WEBDIR}/plugins/tinyMCE/tiny_mce_gzip.php
+${TL_WEBDIR}/plugins/tinyMCE/tiny_mce_popup.js
+${TL_WEBDIR}/plugins/tinyMCE/utils/editable_selects.js
+${TL_WEBDIR}/plugins/tinyMCE/utils/form_utils.js
+${TL_WEBDIR}/plugins/tinyMCE/utils/mctabs.js
+${TL_WEBDIR}/plugins/tinyMCE/utils/validate.js
+${TL_WEBDIR}/plugins/ufo/ufo.js
+${TL_WEBDIR}/robots.txt
+${TL_WEBDIR}/system/config/.htaccess
+${TL_WEBDIR}/system/constants.php
+${TL_WEBDIR}/system/drivers/.htaccess
+${TL_WEBDIR}/system/drivers/DB_Mssql.php
+${TL_WEBDIR}/system/drivers/DB_Mysql.php
+${TL_WEBDIR}/system/drivers/DB_Mysqli.php
+${TL_WEBDIR}/system/drivers/DB_Oracle.php
+${TL_WEBDIR}/system/drivers/DB_Postgresql.php
+${TL_WEBDIR}/system/drivers/DB_Sybase.php
+${TL_WEBDIR}/system/drivers/DC_File.php
+${TL_WEBDIR}/system/drivers/DC_Folder.php
+${TL_WEBDIR}/system/drivers/DC_Table.php
+${TL_WEBDIR}/system/functions.php
+${TL_WEBDIR}/system/html/index.html
+${TL_WEBDIR}/system/iefixes.css
+${TL_WEBDIR}/system/initialize.php
+${TL_WEBDIR}/system/interface.php
+${TL_WEBDIR}/system/libraries/.htaccess
+${TL_WEBDIR}/system/libraries/Config.php
+${TL_WEBDIR}/system/libraries/Controller.php
+${TL_WEBDIR}/system/libraries/Database.php
+${TL_WEBDIR}/system/libraries/Date.php
+${TL_WEBDIR}/system/libraries/Email.php
+${TL_WEBDIR}/system/libraries/Encryption.php
+${TL_WEBDIR}/system/libraries/Environment.php
+${TL_WEBDIR}/system/libraries/FTP.php
+${TL_WEBDIR}/system/libraries/Feed.php
+${TL_WEBDIR}/system/libraries/File.php
+${TL_WEBDIR}/system/libraries/Files.php
+${TL_WEBDIR}/system/libraries/Folder.php
+${TL_WEBDIR}/system/libraries/Input.php
+${TL_WEBDIR}/system/libraries/Model.php
+${TL_WEBDIR}/system/libraries/Request.php
+${TL_WEBDIR}/system/libraries/Search.php
+${TL_WEBDIR}/system/libraries/Session.php
+${TL_WEBDIR}/system/libraries/String.php
+${TL_WEBDIR}/system/libraries/System.php
+${TL_WEBDIR}/system/libraries/Template.php
+${TL_WEBDIR}/system/libraries/User.php
+${TL_WEBDIR}/system/libraries/Widget.php
+${TL_WEBDIR}/system/libraries/ZipReader.php
+${TL_WEBDIR}/system/libraries/ZipWriter.php
+${TL_WEBDIR}/system/logs/.htaccess
+${TL_WEBDIR}/system/mbstring.php
+${TL_WEBDIR}/system/modules/backend/Ajax.php
+${TL_WEBDIR}/system/modules/backend/Automator.php
+${TL_WEBDIR}/system/modules/backend/Backend.php
+${TL_WEBDIR}/system/modules/backend/BackendModule.php
+${TL_WEBDIR}/system/modules/backend/BackendTemplate.php
+${TL_WEBDIR}/system/modules/backend/BackendUser.php
+${TL_WEBDIR}/system/modules/backend/CheckBox.php
+${TL_WEBDIR}/system/modules/backend/CheckBoxWizard.php
+${TL_WEBDIR}/system/modules/backend/ChmodTable.php
+${TL_WEBDIR}/system/modules/backend/DataContainer.php
+${TL_WEBDIR}/system/modules/backend/FileTree.php
+${TL_WEBDIR}/system/modules/backend/InputUnit.php
+${TL_WEBDIR}/system/modules/backend/ListWizard.php
+${TL_WEBDIR}/system/modules/backend/ModuleMaintenance.php
+${TL_WEBDIR}/system/modules/backend/ModuleTasks.php
+${TL_WEBDIR}/system/modules/backend/ModuleUser.php
+${TL_WEBDIR}/system/modules/backend/ModuleWizard.php
+${TL_WEBDIR}/system/modules/backend/OptionWizard.php
+${TL_WEBDIR}/system/modules/backend/PageTree.php
+${TL_WEBDIR}/system/modules/backend/Password.php
+${TL_WEBDIR}/system/modules/backend/RadioButton.php
+${TL_WEBDIR}/system/modules/backend/RadioTable.php
+${TL_WEBDIR}/system/modules/backend/SelectMenu.php
+${TL_WEBDIR}/system/modules/backend/StyleSheets.php
+${TL_WEBDIR}/system/modules/backend/TableWizard.php
+${TL_WEBDIR}/system/modules/backend/TextArea.php
+${TL_WEBDIR}/system/modules/backend/TextField.php
+${TL_WEBDIR}/system/modules/backend/TrblField.php
+${TL_WEBDIR}/system/modules/backend/config/.htaccess
+${TL_WEBDIR}/system/modules/backend/config/config.php
+${TL_WEBDIR}/system/modules/backend/config/database.sql
+${TL_WEBDIR}/system/modules/backend/dca/.htaccess
+${TL_WEBDIR}/system/modules/backend/dca/tl_article.php
+${TL_WEBDIR}/system/modules/backend/dca/tl_content.php
+${TL_WEBDIR}/system/modules/backend/dca/tl_files.php
+${TL_WEBDIR}/system/modules/backend/dca/tl_flash.php
+${TL_WEBDIR}/system/modules/backend/dca/tl_form.php
+${TL_WEBDIR}/system/modules/backend/dca/tl_form_field.php
+${TL_WEBDIR}/system/modules/backend/dca/tl_layout.php
+${TL_WEBDIR}/system/modules/backend/dca/tl_log.php
+${TL_WEBDIR}/system/modules/backend/dca/tl_member.php
+${TL_WEBDIR}/system/modules/backend/dca/tl_member_group.php
+${TL_WEBDIR}/system/modules/backend/dca/tl_module.php
+${TL_WEBDIR}/system/modules/backend/dca/tl_page.php
+${TL_WEBDIR}/system/modules/backend/dca/tl_settings.php
+${TL_WEBDIR}/system/modules/backend/dca/tl_style.php
+${TL_WEBDIR}/system/modules/backend/dca/tl_style_sheet.php
+${TL_WEBDIR}/system/modules/backend/dca/tl_undo.php
+${TL_WEBDIR}/system/modules/backend/dca/tl_user.php
+${TL_WEBDIR}/system/modules/backend/dca/tl_user_group.php
+${TL_WEBDIR}/system/modules/backend/languages/de/.htaccess
+${TL_WEBDIR}/system/modules/backend/languages/de/countries.php
+${TL_WEBDIR}/system/modules/backend/languages/de/default.php
+${TL_WEBDIR}/system/modules/backend/languages/de/explain.php
+${TL_WEBDIR}/system/modules/backend/languages/de/languages.php
+${TL_WEBDIR}/system/modules/backend/languages/de/modules.php
+${TL_WEBDIR}/system/modules/backend/languages/de/tl_article.php
+${TL_WEBDIR}/system/modules/backend/languages/de/tl_content.php
+${TL_WEBDIR}/system/modules/backend/languages/de/tl_files.php
+${TL_WEBDIR}/system/modules/backend/languages/de/tl_flash.php
+${TL_WEBDIR}/system/modules/backend/languages/de/tl_form.php
+${TL_WEBDIR}/system/modules/backend/languages/de/tl_form_field.php
+${TL_WEBDIR}/system/modules/backend/languages/de/tl_layout.php
+${TL_WEBDIR}/system/modules/backend/languages/de/tl_log.php
+${TL_WEBDIR}/system/modules/backend/languages/de/tl_maintenance.php
+${TL_WEBDIR}/system/modules/backend/languages/de/tl_member.php
+${TL_WEBDIR}/system/modules/backend/languages/de/tl_member_group.php
+${TL_WEBDIR}/system/modules/backend/languages/de/tl_module.php
+${TL_WEBDIR}/system/modules/backend/languages/de/tl_page.php
+${TL_WEBDIR}/system/modules/backend/languages/de/tl_settings.php
+${TL_WEBDIR}/system/modules/backend/languages/de/tl_style.php
+${TL_WEBDIR}/system/modules/backend/languages/de/tl_style_sheet.php
+${TL_WEBDIR}/system/modules/backend/languages/de/tl_task.php
+${TL_WEBDIR}/system/modules/backend/languages/de/tl_undo.php
+${TL_WEBDIR}/system/modules/backend/languages/de/tl_user.php
+${TL_WEBDIR}/system/modules/backend/languages/de/tl_user_group.php
+${TL_WEBDIR}/system/modules/backend/languages/en/.htaccess
+${TL_WEBDIR}/system/modules/backend/languages/en/countries.php
+${TL_WEBDIR}/system/modules/backend/languages/en/default.php
+${TL_WEBDIR}/system/modules/backend/languages/en/explain.php
+${TL_WEBDIR}/system/modules/backend/languages/en/languages.php
+${TL_WEBDIR}/system/modules/backend/languages/en/modules.php
+${TL_WEBDIR}/system/modules/backend/languages/en/tl_article.php
+${TL_WEBDIR}/system/modules/backend/languages/en/tl_content.php
+${TL_WEBDIR}/system/modules/backend/languages/en/tl_files.php
+${TL_WEBDIR}/system/modules/backend/languages/en/tl_flash.php
+${TL_WEBDIR}/system/modules/backend/languages/en/tl_form.php
+${TL_WEBDIR}/system/modules/backend/languages/en/tl_form_field.php
+${TL_WEBDIR}/system/modules/backend/languages/en/tl_layout.php
+${TL_WEBDIR}/system/modules/backend/languages/en/tl_log.php
+${TL_WEBDIR}/system/modules/backend/languages/en/tl_maintenance.php
+${TL_WEBDIR}/system/modules/backend/languages/en/tl_member.php
+${TL_WEBDIR}/system/modules/backend/languages/en/tl_member_group.php
+${TL_WEBDIR}/system/modules/backend/languages/en/tl_module.php
+${TL_WEBDIR}/system/modules/backend/languages/en/tl_page.php
+${TL_WEBDIR}/system/modules/backend/languages/en/tl_settings.php
+${TL_WEBDIR}/system/modules/backend/languages/en/tl_style.php
+${TL_WEBDIR}/system/modules/backend/languages/en/tl_style_sheet.php
+${TL_WEBDIR}/system/modules/backend/languages/en/tl_task.php
+${TL_WEBDIR}/system/modules/backend/languages/en/tl_undo.php
+${TL_WEBDIR}/system/modules/backend/languages/en/tl_user.php
+${TL_WEBDIR}/system/modules/backend/languages/en/tl_user_group.php
+${TL_WEBDIR}/system/modules/backend/templates/.htaccess
+${TL_WEBDIR}/system/modules/backend/templates/be_color.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_error.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_files.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_ftp.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_help.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_index.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_install.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_login.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_main.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_maintenance.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_navigation.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_pagepicker.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_popup.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_preview.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_switch.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_task_create.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_task_edit.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_tasks.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_welcome.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_widget.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_widget_chk.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_widget_pw.tpl
+${TL_WEBDIR}/system/modules/backend/templates/be_wildcard.tpl
+${TL_WEBDIR}/system/modules/calendar/Calendar.php
+${TL_WEBDIR}/system/modules/calendar/Events.php
+${TL_WEBDIR}/system/modules/calendar/ModuleCalendar.php
+${TL_WEBDIR}/system/modules/calendar/ModuleEventReader.php
+${TL_WEBDIR}/system/modules/calendar/ModuleEventlist.php
+${TL_WEBDIR}/system/modules/calendar/ModuleMiniCalendar.php
+${TL_WEBDIR}/system/modules/calendar/ModuleUpcomingEvents.php
+${TL_WEBDIR}/system/modules/calendar/TimePeriod.php
+${TL_WEBDIR}/system/modules/calendar/config/.htaccess
+${TL_WEBDIR}/system/modules/calendar/config/config.php
+${TL_WEBDIR}/system/modules/calendar/config/database.sql
+${TL_WEBDIR}/system/modules/calendar/dca/.htaccess
+${TL_WEBDIR}/system/modules/calendar/dca/tl_calendar.php
+${TL_WEBDIR}/system/modules/calendar/dca/tl_calendar_events.php
+${TL_WEBDIR}/system/modules/calendar/dca/tl_module.php
+${TL_WEBDIR}/system/modules/calendar/dca/tl_user.php
+${TL_WEBDIR}/system/modules/calendar/dca/tl_user_group.php
+${TL_WEBDIR}/system/modules/calendar/html/icon.gif
+${TL_WEBDIR}/system/modules/calendar/languages/de/.htaccess
+${TL_WEBDIR}/system/modules/calendar/languages/de/default.php
+${TL_WEBDIR}/system/modules/calendar/languages/de/modules.php
+${TL_WEBDIR}/system/modules/calendar/languages/de/tl_calendar.php
+${TL_WEBDIR}/system/modules/calendar/languages/de/tl_calendar_events.php
+${TL_WEBDIR}/system/modules/calendar/languages/de/tl_module.php
+${TL_WEBDIR}/system/modules/calendar/languages/de/tl_user.php
+${TL_WEBDIR}/system/modules/calendar/languages/de/tl_user_group.php
+${TL_WEBDIR}/system/modules/calendar/languages/en/.htaccess
+${TL_WEBDIR}/system/modules/calendar/languages/en/default.php
+${TL_WEBDIR}/system/modules/calendar/languages/en/modules.php
+${TL_WEBDIR}/system/modules/calendar/languages/en/tl_calendar.php
+${TL_WEBDIR}/system/modules/calendar/languages/en/tl_calendar_events.php
+${TL_WEBDIR}/system/modules/calendar/languages/en/tl_module.php
+${TL_WEBDIR}/system/modules/calendar/languages/en/tl_user.php
+${TL_WEBDIR}/system/modules/calendar/languages/en/tl_user_group.php
+${TL_WEBDIR}/system/modules/calendar/templates/.htaccess
+${TL_WEBDIR}/system/modules/calendar/templates/event_default.tpl
+${TL_WEBDIR}/system/modules/calendar/templates/event_list.tpl
+${TL_WEBDIR}/system/modules/calendar/templates/event_teaser.tpl
+${TL_WEBDIR}/system/modules/calendar/templates/event_upcoming.tpl
+${TL_WEBDIR}/system/modules/calendar/templates/mod_calendar.tpl
+${TL_WEBDIR}/system/modules/calendar/templates/mod_event.tpl
+${TL_WEBDIR}/system/modules/calendar/templates/mod_eventlist.tpl
+${TL_WEBDIR}/system/modules/calendar/templates/mod_minicalendar.tpl
+${TL_WEBDIR}/system/modules/comments/ContentComments.php
+${TL_WEBDIR}/system/modules/comments/config/.htaccess
+${TL_WEBDIR}/system/modules/comments/config/config.php
+${TL_WEBDIR}/system/modules/comments/config/database.sql
+${TL_WEBDIR}/system/modules/comments/dca/.htaccess
+${TL_WEBDIR}/system/modules/comments/dca/tl_comments.php
+${TL_WEBDIR}/system/modules/comments/dca/tl_content.php
+${TL_WEBDIR}/system/modules/comments/html/approved.gif
+${TL_WEBDIR}/system/modules/comments/html/icon.gif
+${TL_WEBDIR}/system/modules/comments/html/pending.gif
+${TL_WEBDIR}/system/modules/comments/html/style.css
+${TL_WEBDIR}/system/modules/comments/languages/de/.htaccess
+${TL_WEBDIR}/system/modules/comments/languages/de/modules.php
+${TL_WEBDIR}/system/modules/comments/languages/de/tl_comments.php
+${TL_WEBDIR}/system/modules/comments/languages/de/tl_content.php
+${TL_WEBDIR}/system/modules/comments/languages/en/.htaccess
+${TL_WEBDIR}/system/modules/comments/languages/en/modules.php
+${TL_WEBDIR}/system/modules/comments/languages/en/tl_comments.php
+${TL_WEBDIR}/system/modules/comments/languages/en/tl_content.php
+${TL_WEBDIR}/system/modules/comments/templates/.htaccess
+${TL_WEBDIR}/system/modules/comments/templates/ce_comments.tpl
+${TL_WEBDIR}/system/modules/comments/templates/com_default.tpl
+${TL_WEBDIR}/system/modules/development/ModuleExtension.php
+${TL_WEBDIR}/system/modules/development/ModuleLabels.php
+${TL_WEBDIR}/system/modules/development/config/.htaccess
+${TL_WEBDIR}/system/modules/development/config/config.php
+${TL_WEBDIR}/system/modules/development/config/database.sql
+${TL_WEBDIR}/system/modules/development/dca/.htaccess
+${TL_WEBDIR}/system/modules/development/dca/tl_extension.php
+${TL_WEBDIR}/system/modules/development/html/apply.gif
+${TL_WEBDIR}/system/modules/development/html/extension.gif
+${TL_WEBDIR}/system/modules/development/html/labels.css
+${TL_WEBDIR}/system/modules/development/html/labels.gif
+${TL_WEBDIR}/system/modules/development/languages/de/.htaccess
+${TL_WEBDIR}/system/modules/development/languages/de/modules.php
+${TL_WEBDIR}/system/modules/development/languages/de/tl_extension.php
+${TL_WEBDIR}/system/modules/development/languages/de/tl_labels.php
+${TL_WEBDIR}/system/modules/development/languages/en/.htaccess
+${TL_WEBDIR}/system/modules/development/languages/en/modules.php
+${TL_WEBDIR}/system/modules/development/languages/en/tl_extension.php
+${TL_WEBDIR}/system/modules/development/languages/en/tl_labels.php
+${TL_WEBDIR}/system/modules/development/templates/.htaccess
+${TL_WEBDIR}/system/modules/development/templates/dev_beClass.tpl
+${TL_WEBDIR}/system/modules/development/templates/dev_config.tpl
+${TL_WEBDIR}/system/modules/development/templates/dev_database.tpl
+${TL_WEBDIR}/system/modules/development/templates/dev_dca.tpl
+${TL_WEBDIR}/system/modules/development/templates/dev_default.tpl
+${TL_WEBDIR}/system/modules/development/templates/dev_extension.tpl
+${TL_WEBDIR}/system/modules/development/templates/dev_feClass.tpl
+${TL_WEBDIR}/system/modules/development/templates/dev_htaccess.tpl
+${TL_WEBDIR}/system/modules/development/templates/dev_labels.tpl
+${TL_WEBDIR}/system/modules/development/templates/dev_modules.tpl
+${TL_WEBDIR}/system/modules/development/templates/dev_table.tpl
+${TL_WEBDIR}/system/modules/dfGallery/ContentDfGallery.php
+${TL_WEBDIR}/system/modules/dfGallery/config/.htaccess
+${TL_WEBDIR}/system/modules/dfGallery/config/config.php
+${TL_WEBDIR}/system/modules/dfGallery/config/database.sql
+${TL_WEBDIR}/system/modules/dfGallery/dca/.htaccess
+${TL_WEBDIR}/system/modules/dfGallery/dca/tl_content.php
+${TL_WEBDIR}/system/modules/dfGallery/df/Strippers/Flickr.php
+${TL_WEBDIR}/system/modules/dfGallery/df/Strippers/Fotki.php
+${TL_WEBDIR}/system/modules/dfGallery/df/Strippers/ImageFetcher.php
+${TL_WEBDIR}/system/modules/dfGallery/df/Strippers/Photobucket.php
+${TL_WEBDIR}/system/modules/dfGallery/df/Strippers/Picasa.php
+${TL_WEBDIR}/system/modules/dfGallery/df/Strippers/TYPOlight.php
+${TL_WEBDIR}/system/modules/dfGallery/df/gallery.php
+${TL_WEBDIR}/system/modules/dfGallery/gallery.swf
+${TL_WEBDIR}/system/modules/dfGallery/languages/de/.htaccess
+${TL_WEBDIR}/system/modules/dfGallery/languages/de/default.php
+${TL_WEBDIR}/system/modules/dfGallery/languages/de/modules.php
+${TL_WEBDIR}/system/modules/dfGallery/languages/de/tl_content.php
+${TL_WEBDIR}/system/modules/dfGallery/languages/en/.htaccess
+${TL_WEBDIR}/system/modules/dfGallery/languages/en/default.php
+${TL_WEBDIR}/system/modules/dfGallery/languages/en/modules.php
+${TL_WEBDIR}/system/modules/dfGallery/languages/en/tl_content.php
+${TL_WEBDIR}/system/modules/dfGallery/templates/.htaccess
+${TL_WEBDIR}/system/modules/dfGallery/templates/ce_dfgallery.tpl
+${TL_WEBDIR}/system/modules/dfGallery/templates/df_default.tpl
+${TL_WEBDIR}/system/modules/faq/ModuleFaq.php
+${TL_WEBDIR}/system/modules/faq/ModuleFaqList.php
+${TL_WEBDIR}/system/modules/faq/ModuleFaqReader.php
+${TL_WEBDIR}/system/modules/faq/config/.htaccess
+${TL_WEBDIR}/system/modules/faq/config/config.php
+${TL_WEBDIR}/system/modules/faq/config/database.sql
+${TL_WEBDIR}/system/modules/faq/dca/.htaccess
+${TL_WEBDIR}/system/modules/faq/dca/tl_faq.php
+${TL_WEBDIR}/system/modules/faq/dca/tl_faq_category.php
+${TL_WEBDIR}/system/modules/faq/dca/tl_module.php
+${TL_WEBDIR}/system/modules/faq/html/icon.gif
+${TL_WEBDIR}/system/modules/faq/languages/de/.htaccess
+${TL_WEBDIR}/system/modules/faq/languages/de/default.php
+${TL_WEBDIR}/system/modules/faq/languages/de/modules.php
+${TL_WEBDIR}/system/modules/faq/languages/de/tl_faq.php
+${TL_WEBDIR}/system/modules/faq/languages/de/tl_faq_category.php
+${TL_WEBDIR}/system/modules/faq/languages/de/tl_module.php
+${TL_WEBDIR}/system/modules/faq/languages/en/.htaccess
+${TL_WEBDIR}/system/modules/faq/languages/en/default.php
+${TL_WEBDIR}/system/modules/faq/languages/en/modules.php
+${TL_WEBDIR}/system/modules/faq/languages/en/tl_faq.php
+${TL_WEBDIR}/system/modules/faq/languages/en/tl_faq_category.php
+${TL_WEBDIR}/system/modules/faq/languages/en/tl_module.php
+${TL_WEBDIR}/system/modules/faq/templates/.htaccess
+${TL_WEBDIR}/system/modules/faq/templates/mod_faqlist.tpl
+${TL_WEBDIR}/system/modules/faq/templates/mod_faqreader.tpl
+${TL_WEBDIR}/system/modules/frontend/ContentAccordion.php
+${TL_WEBDIR}/system/modules/frontend/ContentAlias.php
+${TL_WEBDIR}/system/modules/frontend/ContentCode.php
+${TL_WEBDIR}/system/modules/frontend/ContentDownload.php
+${TL_WEBDIR}/system/modules/frontend/ContentDownloads.php
+${TL_WEBDIR}/system/modules/frontend/ContentElement.php
+${TL_WEBDIR}/system/modules/frontend/ContentGallery.php
+${TL_WEBDIR}/system/modules/frontend/ContentHeadline.php
+${TL_WEBDIR}/system/modules/frontend/ContentHtml.php
+${TL_WEBDIR}/system/modules/frontend/ContentHyperlink.php
+${TL_WEBDIR}/system/modules/frontend/ContentImage.php
+${TL_WEBDIR}/system/modules/frontend/ContentList.php
+${TL_WEBDIR}/system/modules/frontend/ContentModule.php
+${TL_WEBDIR}/system/modules/frontend/ContentTable.php
+${TL_WEBDIR}/system/modules/frontend/ContentTeaser.php
+${TL_WEBDIR}/system/modules/frontend/ContentText.php
+${TL_WEBDIR}/system/modules/frontend/ContentToplink.php
+${TL_WEBDIR}/system/modules/frontend/Form.php
+${TL_WEBDIR}/system/modules/frontend/FormCaptcha.php
+${TL_WEBDIR}/system/modules/frontend/FormCheckBox.php
+${TL_WEBDIR}/system/modules/frontend/FormExplanation.php
+${TL_WEBDIR}/system/modules/frontend/FormFileUpload.php
+${TL_WEBDIR}/system/modules/frontend/FormHeadline.php
+${TL_WEBDIR}/system/modules/frontend/FormHidden.php
+${TL_WEBDIR}/system/modules/frontend/FormHtml.php
+${TL_WEBDIR}/system/modules/frontend/FormPassword.php
+${TL_WEBDIR}/system/modules/frontend/FormRadioButton.php
+${TL_WEBDIR}/system/modules/frontend/FormSelectMenu.php
+${TL_WEBDIR}/system/modules/frontend/FormSubmit.php
+${TL_WEBDIR}/system/modules/frontend/FormTextArea.php
+${TL_WEBDIR}/system/modules/frontend/FormTextField.php
+${TL_WEBDIR}/system/modules/frontend/Frontend.php
+${TL_WEBDIR}/system/modules/frontend/FrontendTemplate.php
+${TL_WEBDIR}/system/modules/frontend/FrontendUser.php
+${TL_WEBDIR}/system/modules/frontend/Hybrid.php
+${TL_WEBDIR}/system/modules/frontend/Module.php
+${TL_WEBDIR}/system/modules/frontend/ModuleArticle.php
+${TL_WEBDIR}/system/modules/frontend/ModuleArticleList.php
+${TL_WEBDIR}/system/modules/frontend/ModuleBreadcrumb.php
+${TL_WEBDIR}/system/modules/frontend/ModuleCustomnav.php
+${TL_WEBDIR}/system/modules/frontend/ModuleFlash.php
+${TL_WEBDIR}/system/modules/frontend/ModuleHtml.php
+${TL_WEBDIR}/system/modules/frontend/ModuleLogin.php
+${TL_WEBDIR}/system/modules/frontend/ModuleLogout.php
+${TL_WEBDIR}/system/modules/frontend/ModuleNavigation.php
+${TL_WEBDIR}/system/modules/frontend/ModuleNavigationMain.php
+${TL_WEBDIR}/system/modules/frontend/ModuleNavigationSub.php
+${TL_WEBDIR}/system/modules/frontend/ModulePersonalData.php
+${TL_WEBDIR}/system/modules/frontend/ModuleQuicklink.php
+${TL_WEBDIR}/system/modules/frontend/ModuleQuicknav.php
+${TL_WEBDIR}/system/modules/frontend/ModuleRandomImage.php
+${TL_WEBDIR}/system/modules/frontend/ModuleSearch.php
+${TL_WEBDIR}/system/modules/frontend/ModuleSitemap.php
+${TL_WEBDIR}/system/modules/frontend/PageError403.php
+${TL_WEBDIR}/system/modules/frontend/PageError404.php
+${TL_WEBDIR}/system/modules/frontend/PageForward.php
+${TL_WEBDIR}/system/modules/frontend/PageRedirect.php
+${TL_WEBDIR}/system/modules/frontend/PageRegular.php
+${TL_WEBDIR}/system/modules/frontend/PageRoot.php
+${TL_WEBDIR}/system/modules/frontend/Pagination.php
+${TL_WEBDIR}/system/modules/frontend/config/.htaccess
+${TL_WEBDIR}/system/modules/frontend/config/config.php
+${TL_WEBDIR}/system/modules/frontend/languages/de/.htaccess
+${TL_WEBDIR}/system/modules/frontend/languages/de/default.php
+${TL_WEBDIR}/system/modules/frontend/languages/de/modules.php
+${TL_WEBDIR}/system/modules/frontend/languages/en/.htaccess
+${TL_WEBDIR}/system/modules/frontend/languages/en/default.php
+${TL_WEBDIR}/system/modules/frontend/languages/en/modules.php
+${TL_WEBDIR}/system/modules/frontend/templates/.htaccess
+${TL_WEBDIR}/system/modules/frontend/templates/ce_accordion.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_accordion_image.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_accordion_image_fullsize.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_accordion_image_link.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_accordion_start.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_accordion_stop.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_code.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_download.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_downloads.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_gallery.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_gallery_fullsize.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_headline.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_html.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_hyperlink.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_hyperlink_image.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_image.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_image_fullsize.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_image_link.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_list.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_table.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_teaser.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_text.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_text_image.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_text_image_fullsize.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_text_image_link.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/ce_toplink.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/fe_page.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/form.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/form_captcha.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/form_explanation.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/form_headline.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/form_hidden.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/form_html.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/form_message.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/form_password.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/form_submit.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/form_widget.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/form_xml.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/member_default.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/member_grouped.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_article.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_article_list.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_article_teaser.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_breadcrumb.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_flash.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_flash_content.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_html.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_login_1cl.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_login_2cl.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_logout_1cl.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_logout_2cl.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_navigation.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_quicklink.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_quicknav.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_random_image.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_search.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_search_advanced.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_search_simple.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_sitemap.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/moo_close_all.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/moo_default.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/moo_modify_foreground.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/nav_default.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/pagination.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/search_default.tpl
+${TL_WEBDIR}/system/modules/listing/ModuleListing.php
+${TL_WEBDIR}/system/modules/listing/config/.htaccess
+${TL_WEBDIR}/system/modules/listing/config/config.php
+${TL_WEBDIR}/system/modules/listing/config/database.sql
+${TL_WEBDIR}/system/modules/listing/dca/.htaccess
+${TL_WEBDIR}/system/modules/listing/dca/tl_module.php
+${TL_WEBDIR}/system/modules/listing/html/details.gif
+${TL_WEBDIR}/system/modules/listing/languages/de/.htaccess
+${TL_WEBDIR}/system/modules/listing/languages/de/default.php
+${TL_WEBDIR}/system/modules/listing/languages/de/modules.php
+${TL_WEBDIR}/system/modules/listing/languages/de/tl_module.php
+${TL_WEBDIR}/system/modules/listing/languages/en/.htaccess
+${TL_WEBDIR}/system/modules/listing/languages/en/default.php
+${TL_WEBDIR}/system/modules/listing/languages/en/modules.php
+${TL_WEBDIR}/system/modules/listing/languages/en/tl_module.php
+${TL_WEBDIR}/system/modules/listing/templates/.htaccess
+${TL_WEBDIR}/system/modules/listing/templates/info_default.tpl
+${TL_WEBDIR}/system/modules/listing/templates/list_default.tpl
+${TL_WEBDIR}/system/modules/news/Comments.php
+${TL_WEBDIR}/system/modules/news/ModuleNews.php
+${TL_WEBDIR}/system/modules/news/ModuleNewsArchive.php
+${TL_WEBDIR}/system/modules/news/ModuleNewsList.php
+${TL_WEBDIR}/system/modules/news/ModuleNewsMenu.php
+${TL_WEBDIR}/system/modules/news/ModuleNewsReader.php
+${TL_WEBDIR}/system/modules/news/News.php
+${TL_WEBDIR}/system/modules/news/config/.htaccess
+${TL_WEBDIR}/system/modules/news/config/config.php
+${TL_WEBDIR}/system/modules/news/config/database.sql
+${TL_WEBDIR}/system/modules/news/dca/.htaccess
+${TL_WEBDIR}/system/modules/news/dca/tl_module.php
+${TL_WEBDIR}/system/modules/news/dca/tl_news.php
+${TL_WEBDIR}/system/modules/news/dca/tl_news_archive.php
+${TL_WEBDIR}/system/modules/news/dca/tl_news_comments.php
+${TL_WEBDIR}/system/modules/news/dca/tl_user.php
+${TL_WEBDIR}/system/modules/news/dca/tl_user_group.php
+${TL_WEBDIR}/system/modules/news/html/approved.gif
+${TL_WEBDIR}/system/modules/news/html/comments.gif
+${TL_WEBDIR}/system/modules/news/html/comments_.gif
+${TL_WEBDIR}/system/modules/news/html/pending.gif
+${TL_WEBDIR}/system/modules/news/html/style.css
+${TL_WEBDIR}/system/modules/news/languages/de/.htaccess
+${TL_WEBDIR}/system/modules/news/languages/de/default.php
+${TL_WEBDIR}/system/modules/news/languages/de/modules.php
+${TL_WEBDIR}/system/modules/news/languages/de/tl_module.php
+${TL_WEBDIR}/system/modules/news/languages/de/tl_news.php
+${TL_WEBDIR}/system/modules/news/languages/de/tl_news_archive.php
+${TL_WEBDIR}/system/modules/news/languages/de/tl_news_comments.php
+${TL_WEBDIR}/system/modules/news/languages/de/tl_user.php
+${TL_WEBDIR}/system/modules/news/languages/de/tl_user_group.php
+${TL_WEBDIR}/system/modules/news/languages/en/.htaccess
+${TL_WEBDIR}/system/modules/news/languages/en/default.php
+${TL_WEBDIR}/system/modules/news/languages/en/modules.php
+${TL_WEBDIR}/system/modules/news/languages/en/tl_module.php
+${TL_WEBDIR}/system/modules/news/languages/en/tl_news.php
+${TL_WEBDIR}/system/modules/news/languages/en/tl_news_archive.php
+${TL_WEBDIR}/system/modules/news/languages/en/tl_news_comments.php
+${TL_WEBDIR}/system/modules/news/languages/en/tl_user.php
+${TL_WEBDIR}/system/modules/news/languages/en/tl_user_group.php
+${TL_WEBDIR}/system/modules/news/templates/.htaccess
+${TL_WEBDIR}/system/modules/news/templates/mod_newsarchive.tpl
+${TL_WEBDIR}/system/modules/news/templates/mod_newsarchive_empty.tpl
+${TL_WEBDIR}/system/modules/news/templates/mod_newslist.tpl
+${TL_WEBDIR}/system/modules/news/templates/mod_newsmenu.tpl
+${TL_WEBDIR}/system/modules/news/templates/mod_newsreader.tpl
+${TL_WEBDIR}/system/modules/news/templates/news_full.tpl
+${TL_WEBDIR}/system/modules/news/templates/news_latest.tpl
+${TL_WEBDIR}/system/modules/news/templates/news_short.tpl
+${TL_WEBDIR}/system/modules/news/templates/news_simple.tpl
+${TL_WEBDIR}/system/modules/newsletter/ModuleNewsletterList.php
+${TL_WEBDIR}/system/modules/newsletter/ModuleNewsletterReader.php
+${TL_WEBDIR}/system/modules/newsletter/ModuleSubscribe.php
+${TL_WEBDIR}/system/modules/newsletter/ModuleUnsubscribe.php
+${TL_WEBDIR}/system/modules/newsletter/Newsletter.php
+${TL_WEBDIR}/system/modules/newsletter/config/.htaccess
+${TL_WEBDIR}/system/modules/newsletter/config/config.php
+${TL_WEBDIR}/system/modules/newsletter/config/database.sql
+${TL_WEBDIR}/system/modules/newsletter/dca/.htaccess
+${TL_WEBDIR}/system/modules/newsletter/dca/tl_member.php
+${TL_WEBDIR}/system/modules/newsletter/dca/tl_module.php
+${TL_WEBDIR}/system/modules/newsletter/dca/tl_newsletter.php
+${TL_WEBDIR}/system/modules/newsletter/dca/tl_newsletter_channel.php
+${TL_WEBDIR}/system/modules/newsletter/dca/tl_newsletter_recipients.php
+${TL_WEBDIR}/system/modules/newsletter/dca/tl_user.php
+${TL_WEBDIR}/system/modules/newsletter/dca/tl_user_group.php
+${TL_WEBDIR}/system/modules/newsletter/html/icon.gif
+${TL_WEBDIR}/system/modules/newsletter/html/style.css
+${TL_WEBDIR}/system/modules/newsletter/languages/de/.htaccess
+${TL_WEBDIR}/system/modules/newsletter/languages/de/default.php
+${TL_WEBDIR}/system/modules/newsletter/languages/de/modules.php
+${TL_WEBDIR}/system/modules/newsletter/languages/de/tl_member.php
+${TL_WEBDIR}/system/modules/newsletter/languages/de/tl_module.php
+${TL_WEBDIR}/system/modules/newsletter/languages/de/tl_newsletter.php
+${TL_WEBDIR}/system/modules/newsletter/languages/de/tl_newsletter_channel.php
+${TL_WEBDIR}/system/modules/newsletter/languages/de/tl_newsletter_recipients.php
+${TL_WEBDIR}/system/modules/newsletter/languages/de/tl_user.php
+${TL_WEBDIR}/system/modules/newsletter/languages/de/tl_user_group.php
+${TL_WEBDIR}/system/modules/newsletter/languages/en/.htaccess
+${TL_WEBDIR}/system/modules/newsletter/languages/en/default.php
+${TL_WEBDIR}/system/modules/newsletter/languages/en/modules.php
+${TL_WEBDIR}/system/modules/newsletter/languages/en/tl_member.php
+${TL_WEBDIR}/system/modules/newsletter/languages/en/tl_module.php
+${TL_WEBDIR}/system/modules/newsletter/languages/en/tl_newsletter.php
+${TL_WEBDIR}/system/modules/newsletter/languages/en/tl_newsletter_channel.php
+${TL_WEBDIR}/system/modules/newsletter/languages/en/tl_newsletter_recipients.php
+${TL_WEBDIR}/system/modules/newsletter/languages/en/tl_user.php
+${TL_WEBDIR}/system/modules/newsletter/languages/en/tl_user_group.php
+${TL_WEBDIR}/system/modules/newsletter/templates/.htaccess
+${TL_WEBDIR}/system/modules/newsletter/templates/mail_default.tpl
+${TL_WEBDIR}/system/modules/newsletter/templates/mod_newsletter.tpl
+${TL_WEBDIR}/system/modules/newsletter/templates/mod_newsletter_list.tpl
+${TL_WEBDIR}/system/modules/newsletter/templates/mod_newsletter_reader.tpl
+${TL_WEBDIR}/system/modules/newsletter/templates/nl_default.tpl
+${TL_WEBDIR}/system/modules/pun_bridge/._htaccess
+${TL_WEBDIR}/system/modules/pun_bridge/PunBridge.php
+${TL_WEBDIR}/system/modules/pun_bridge/README.txt
+${TL_WEBDIR}/system/modules/pun_bridge/config/.htaccess
+${TL_WEBDIR}/system/modules/pun_bridge/config/config.php
+${TL_WEBDIR}/system/modules/pun_bridge/dca/.htaccess
+${TL_WEBDIR}/system/modules/pun_bridge/dca/tl_member.php
+${TL_WEBDIR}/system/modules/pun_bridge/languages/de/.htaccess
+${TL_WEBDIR}/system/modules/pun_bridge/languages/de/modules.php
+${TL_WEBDIR}/system/modules/pun_bridge/languages/en/.htaccess
+${TL_WEBDIR}/system/modules/pun_bridge/languages/en/modules.php
+${TL_WEBDIR}/system/modules/registration/ModulePassword.php
+${TL_WEBDIR}/system/modules/registration/ModuleRegistration.php
+${TL_WEBDIR}/system/modules/registration/config/.htaccess
+${TL_WEBDIR}/system/modules/registration/config/config.php
+${TL_WEBDIR}/system/modules/registration/config/database.sql
+${TL_WEBDIR}/system/modules/registration/dca/.htaccess
+${TL_WEBDIR}/system/modules/registration/dca/tl_module.php
+${TL_WEBDIR}/system/modules/registration/languages/de/.htaccess
+${TL_WEBDIR}/system/modules/registration/languages/de/default.php
+${TL_WEBDIR}/system/modules/registration/languages/de/modules.php
+${TL_WEBDIR}/system/modules/registration/languages/de/tl_module.php
+${TL_WEBDIR}/system/modules/registration/languages/en/.htaccess
+${TL_WEBDIR}/system/modules/registration/languages/en/default.php
+${TL_WEBDIR}/system/modules/registration/languages/en/modules.php
+${TL_WEBDIR}/system/modules/registration/languages/en/tl_module.php
+${TL_WEBDIR}/system/modules/registration/templates/.htaccess
+${TL_WEBDIR}/system/modules/registration/templates/mod_message.tpl
+${TL_WEBDIR}/system/modules/registration/templates/mod_password.tpl
+${TL_WEBDIR}/system/modules/rss_reader/ModuleRssReader.php
+${TL_WEBDIR}/system/modules/rss_reader/config/.htaccess
+${TL_WEBDIR}/system/modules/rss_reader/config/config.php
+${TL_WEBDIR}/system/modules/rss_reader/config/database.sql
+${TL_WEBDIR}/system/modules/rss_reader/dca/.htaccess
+${TL_WEBDIR}/system/modules/rss_reader/dca/tl_module.php
+${TL_WEBDIR}/system/modules/rss_reader/languages/de/.htaccess
+${TL_WEBDIR}/system/modules/rss_reader/languages/de/modules.php
+${TL_WEBDIR}/system/modules/rss_reader/languages/de/tl_module.php
+${TL_WEBDIR}/system/modules/rss_reader/languages/en/.htaccess
+${TL_WEBDIR}/system/modules/rss_reader/languages/en/modules.php
+${TL_WEBDIR}/system/modules/rss_reader/languages/en/tl_module.php
+${TL_WEBDIR}/system/modules/rss_reader/templates/.htaccess
+${TL_WEBDIR}/system/modules/rss_reader/templates/rss_default.tpl
+${TL_WEBDIR}/system/modules/rss_reader/templates/rss_items_only.tpl
+${TL_WEBDIR}/system/modules/tpl_editor/config/.htaccess
+${TL_WEBDIR}/system/modules/tpl_editor/config/config.php
+${TL_WEBDIR}/system/modules/tpl_editor/dca/.htaccess
+${TL_WEBDIR}/system/modules/tpl_editor/dca/tl_templates.php
+${TL_WEBDIR}/system/modules/tpl_editor/html/icon.gif
+${TL_WEBDIR}/system/modules/tpl_editor/languages/de/.htaccess
+${TL_WEBDIR}/system/modules/tpl_editor/languages/de/modules.php
+${TL_WEBDIR}/system/modules/tpl_editor/languages/de/tl_templates.php
+${TL_WEBDIR}/system/modules/tpl_editor/languages/en/.htaccess
+${TL_WEBDIR}/system/modules/tpl_editor/languages/en/modules.php
+${TL_WEBDIR}/system/modules/tpl_editor/languages/en/tl_templates.php
+${TL_WEBDIR}/system/themes/default/basic.css
+${TL_WEBDIR}/system/themes/default/color.css
+${TL_WEBDIR}/system/themes/default/help.css
+${TL_WEBDIR}/system/themes/default/hover.js
+${TL_WEBDIR}/system/themes/default/iefixes.css
+${TL_WEBDIR}/system/themes/default/images/1c.gif
+${TL_WEBDIR}/system/themes/default/images/1cl.gif
+${TL_WEBDIR}/system/themes/default/images/2cll.gif
+${TL_WEBDIR}/system/themes/default/images/2clr.gif
+${TL_WEBDIR}/system/themes/default/images/3cl.gif
+${TL_WEBDIR}/system/themes/default/images/about.gif
+${TL_WEBDIR}/system/themes/default/images/above.gif
+${TL_WEBDIR}/system/themes/default/images/admin.gif
+${TL_WEBDIR}/system/themes/default/images/admin_.gif
+${TL_WEBDIR}/system/themes/default/images/alias.gif
+${TL_WEBDIR}/system/themes/default/images/all.gif
+${TL_WEBDIR}/system/themes/default/images/all_big.gif
+${TL_WEBDIR}/system/themes/default/images/article.gif
+${TL_WEBDIR}/system/themes/default/images/articles.gif
+${TL_WEBDIR}/system/themes/default/images/articles_.gif
+${TL_WEBDIR}/system/themes/default/images/back.gif
+${TL_WEBDIR}/system/themes/default/images/below.gif
+${TL_WEBDIR}/system/themes/default/images/cache.gif
+${TL_WEBDIR}/system/themes/default/images/changelog.gif
+${TL_WEBDIR}/system/themes/default/images/clipboard.gif
+${TL_WEBDIR}/system/themes/default/images/collapse.gif
+${TL_WEBDIR}/system/themes/default/images/copy.gif
+${TL_WEBDIR}/system/themes/default/images/copy_.gif
+${TL_WEBDIR}/system/themes/default/images/copychilds.gif
+${TL_WEBDIR}/system/themes/default/images/copychilds_.gif
+${TL_WEBDIR}/system/themes/default/images/css.gif
+${TL_WEBDIR}/system/themes/default/images/cssimport.gif
+${TL_WEBDIR}/system/themes/default/images/current.gif
+${TL_WEBDIR}/system/themes/default/images/cut.gif
+${TL_WEBDIR}/system/themes/default/images/cut_.gif
+${TL_WEBDIR}/system/themes/default/images/delete.gif
+${TL_WEBDIR}/system/themes/default/images/deleteAll.gif
+${TL_WEBDIR}/system/themes/default/images/delete_.gif
+${TL_WEBDIR}/system/themes/default/images/down.gif
+${TL_WEBDIR}/system/themes/default/images/edit.gif
+${TL_WEBDIR}/system/themes/default/images/edit_.gif
+${TL_WEBDIR}/system/themes/default/images/editor.gif
+${TL_WEBDIR}/system/themes/default/images/editor_.gif
+${TL_WEBDIR}/system/themes/default/images/error.gif
+${TL_WEBDIR}/system/themes/default/images/error_403.gif
+${TL_WEBDIR}/system/themes/default/images/error_403_1.gif
+${TL_WEBDIR}/system/themes/default/images/error_404.gif
+${TL_WEBDIR}/system/themes/default/images/error_404_1.gif
+${TL_WEBDIR}/system/themes/default/images/expand.gif
+${TL_WEBDIR}/system/themes/default/images/expand_.gif
+${TL_WEBDIR}/system/themes/default/images/filemanager.gif
+${TL_WEBDIR}/system/themes/default/images/filemounts.gif
+${TL_WEBDIR}/system/themes/default/images/files.gif
+${TL_WEBDIR}/system/themes/default/images/flash.gif
+${TL_WEBDIR}/system/themes/default/images/folMinus.gif
+${TL_WEBDIR}/system/themes/default/images/folPlus.gif
+${TL_WEBDIR}/system/themes/default/images/folderC.gif
+${TL_WEBDIR}/system/themes/default/images/folderCP.gif
+${TL_WEBDIR}/system/themes/default/images/folderO.gif
+${TL_WEBDIR}/system/themes/default/images/folderOP.gif
+${TL_WEBDIR}/system/themes/default/images/form.gif
+${TL_WEBDIR}/system/themes/default/images/forward.gif
+${TL_WEBDIR}/system/themes/default/images/forward_1.gif
+${TL_WEBDIR}/system/themes/default/images/forward_4.gif
+${TL_WEBDIR}/system/themes/default/images/forward_5.gif
+${TL_WEBDIR}/system/themes/default/images/group.gif
+${TL_WEBDIR}/system/themes/default/images/group_.gif
+${TL_WEBDIR}/system/themes/default/images/hbg.jpg
+${TL_WEBDIR}/system/themes/default/images/headline.gif
+${TL_WEBDIR}/system/themes/default/images/help.gif
+${TL_WEBDIR}/system/themes/default/images/home.gif
+${TL_WEBDIR}/system/themes/default/images/iconAUDIO.gif
+${TL_WEBDIR}/system/themes/default/images/iconBMP.gif
+${TL_WEBDIR}/system/themes/default/images/iconCSS.gif
+${TL_WEBDIR}/system/themes/default/images/iconGIF.gif
+${TL_WEBDIR}/system/themes/default/images/iconHTML.gif
+${TL_WEBDIR}/system/themes/default/images/iconJPG.gif
+${TL_WEBDIR}/system/themes/default/images/iconJS.gif
+${TL_WEBDIR}/system/themes/default/images/iconJSP.gif
+${TL_WEBDIR}/system/themes/default/images/iconOFFICE.gif
+${TL_WEBDIR}/system/themes/default/images/iconPDF.gif
+${TL_WEBDIR}/system/themes/default/images/iconPHP.gif
+${TL_WEBDIR}/system/themes/default/images/iconPLAIN.gif
+${TL_WEBDIR}/system/themes/default/images/iconRAR.gif
+${TL_WEBDIR}/system/themes/default/images/iconSWF.gif
+${TL_WEBDIR}/system/themes/default/images/iconTIF.gif
+${TL_WEBDIR}/system/themes/default/images/iconVIDEO.gif
+${TL_WEBDIR}/system/themes/default/images/important.gif
+${TL_WEBDIR}/system/themes/default/images/index.gif
+${TL_WEBDIR}/system/themes/default/images/install.gif
+${TL_WEBDIR}/system/themes/default/images/invisible.gif
+${TL_WEBDIR}/system/themes/default/images/layout.gif
+${TL_WEBDIR}/system/themes/default/images/left.gif
+${TL_WEBDIR}/system/themes/default/images/loading.gif
+${TL_WEBDIR}/system/themes/default/images/log.gif
+${TL_WEBDIR}/system/themes/default/images/login.gif
+${TL_WEBDIR}/system/themes/default/images/logo.gif
+${TL_WEBDIR}/system/themes/default/images/member.gif
+${TL_WEBDIR}/system/themes/default/images/member_.gif
+${TL_WEBDIR}/system/themes/default/images/mgroup.gif
+${TL_WEBDIR}/system/themes/default/images/mgroup_.gif
+${TL_WEBDIR}/system/themes/default/images/modMinus.gif
+${TL_WEBDIR}/system/themes/default/images/modPlus.gif
+${TL_WEBDIR}/system/themes/default/images/modules.gif
+${TL_WEBDIR}/system/themes/default/images/movel.gif
+${TL_WEBDIR}/system/themes/default/images/mover.gif
+${TL_WEBDIR}/system/themes/default/images/new.gif
+${TL_WEBDIR}/system/themes/default/images/newfolder.gif
+${TL_WEBDIR}/system/themes/default/images/news.gif
+${TL_WEBDIR}/system/themes/default/images/ok.gif
+${TL_WEBDIR}/system/themes/default/images/page.gif
+${TL_WEBDIR}/system/themes/default/images/pagemounts.gif
+${TL_WEBDIR}/system/themes/default/images/pasteafter.gif
+${TL_WEBDIR}/system/themes/default/images/pasteafter_.gif
+${TL_WEBDIR}/system/themes/default/images/pasteinto.gif
+${TL_WEBDIR}/system/themes/default/images/pasteinto_.gif
+${TL_WEBDIR}/system/themes/default/images/pickcolor.gif
+${TL_WEBDIR}/system/themes/default/images/pickpage.gif
+${TL_WEBDIR}/system/themes/default/images/preview.gif
+${TL_WEBDIR}/system/themes/default/images/protect.gif
+${TL_WEBDIR}/system/themes/default/images/protect_.gif
+${TL_WEBDIR}/system/themes/default/images/published.gif
+${TL_WEBDIR}/system/themes/default/images/redirect.gif
+${TL_WEBDIR}/system/themes/default/images/redirect_1.gif
+${TL_WEBDIR}/system/themes/default/images/redirect_4.gif
+${TL_WEBDIR}/system/themes/default/images/redirect_5.gif
+${TL_WEBDIR}/system/themes/default/images/regular.gif
+${TL_WEBDIR}/system/themes/default/images/regular_1.gif
+${TL_WEBDIR}/system/themes/default/images/regular_2.gif
+${TL_WEBDIR}/system/themes/default/images/regular_3.gif
+${TL_WEBDIR}/system/themes/default/images/regular_4.gif
+${TL_WEBDIR}/system/themes/default/images/regular_5.gif
+${TL_WEBDIR}/system/themes/default/images/regular_6.gif
+${TL_WEBDIR}/system/themes/default/images/regular_7.gif
+${TL_WEBDIR}/system/themes/default/images/right.gif
+${TL_WEBDIR}/system/themes/default/images/root.gif
+${TL_WEBDIR}/system/themes/default/images/root_1.gif
+${TL_WEBDIR}/system/themes/default/images/settings.gif
+${TL_WEBDIR}/system/themes/default/images/show.gif
+${TL_WEBDIR}/system/themes/default/images/su.gif
+${TL_WEBDIR}/system/themes/default/images/tablewizard.gif
+${TL_WEBDIR}/system/themes/default/images/taskcenter.gif
+${TL_WEBDIR}/system/themes/default/images/undo.gif
+${TL_WEBDIR}/system/themes/default/images/unpublished.gif
+${TL_WEBDIR}/system/themes/default/images/up.gif
+${TL_WEBDIR}/system/themes/default/images/update.gif
+${TL_WEBDIR}/system/themes/default/images/user.gif
+${TL_WEBDIR}/system/themes/default/images/user_.gif
+${TL_WEBDIR}/system/themes/default/images/visible.gif
+${TL_WEBDIR}/system/themes/default/images/wrap.gif
+${TL_WEBDIR}/system/themes/default/install.css
+${TL_WEBDIR}/system/themes/default/login.css
+${TL_WEBDIR}/system/themes/default/macfixes.css
+${TL_WEBDIR}/system/themes/default/main.css
+${TL_WEBDIR}/system/themes/default/page.css
+${TL_WEBDIR}/system/themes/default/popup.css
+${TL_WEBDIR}/system/themes/default/src/basic.css
+${TL_WEBDIR}/system/themes/default/src/color.css
+${TL_WEBDIR}/system/themes/default/src/help.css
+${TL_WEBDIR}/system/themes/default/src/iefixes.css
+${TL_WEBDIR}/system/themes/default/src/install.css
+${TL_WEBDIR}/system/themes/default/src/login.css
+${TL_WEBDIR}/system/themes/default/src/macfixes.css
+${TL_WEBDIR}/system/themes/default/src/main.css
+${TL_WEBDIR}/system/themes/default/src/page.css
+${TL_WEBDIR}/system/themes/default/src/popup.css
+${TL_WEBDIR}/system/themes/default/src/switch.css
+${TL_WEBDIR}/system/themes/default/switch.css
+${TL_WEBDIR}/system/themes/tinymce.css
+${TL_WEBDIR}/system/tmp/.htaccess
+${TL_WEBDIR}/system/typolight.css
+${TL_WEBDIR}/templates/.htaccess
+${TL_WEBDIR}/typolight/color.php
+${TL_WEBDIR}/typolight/files.php
+${TL_WEBDIR}/typolight/ftp.php
+${TL_WEBDIR}/typolight/help.php
+${TL_WEBDIR}/typolight/index.php
+${TL_WEBDIR}/typolight/install.php
+${TL_WEBDIR}/typolight/main.php
+${TL_WEBDIR}/typolight/page.php
+${TL_WEBDIR}/typolight/popup.php
+${TL_WEBDIR}/typolight/preview.php
+${TL_WEBDIR}/typolight/switch.php
+${TL_WEBDIR}/typolight/typolight.js
+${TL_WEBDIR}/typolight/typolight_src.js
+@dirrm ${TL_WEBDIR}/typolight
+@unexec ${RMDIR} %D/${TL_WEBDIR}/templates 2>/dev/null || ${TRUE}
+@dirrm ${TL_WEBDIR}/system/themes/default/src
+@dirrm ${TL_WEBDIR}/system/themes/default/images
+@dirrm ${TL_WEBDIR}/system/themes/default
+@dirrm ${TL_WEBDIR}/system/themes
+@dirrm ${TL_WEBDIR}/system/modules/tpl_editor/languages/en
+@dirrm ${TL_WEBDIR}/system/modules/tpl_editor/languages/de
+@dirrm ${TL_WEBDIR}/system/modules/tpl_editor/languages
+@dirrm ${TL_WEBDIR}/system/modules/tpl_editor/html
+@dirrm ${TL_WEBDIR}/system/modules/tpl_editor/dca
+@dirrm ${TL_WEBDIR}/system/modules/tpl_editor/config
+@dirrm ${TL_WEBDIR}/system/modules/tpl_editor
+@dirrm ${TL_WEBDIR}/system/modules/rss_reader/templates
+@dirrm ${TL_WEBDIR}/system/modules/rss_reader/languages/en
+@dirrm ${TL_WEBDIR}/system/modules/rss_reader/languages/de
+@dirrm ${TL_WEBDIR}/system/modules/rss_reader/languages
+@dirrm ${TL_WEBDIR}/system/modules/rss_reader/dca
+@dirrm ${TL_WEBDIR}/system/modules/rss_reader/config
+@dirrm ${TL_WEBDIR}/system/modules/rss_reader
+@dirrm ${TL_WEBDIR}/system/modules/registration/templates
+@dirrm ${TL_WEBDIR}/system/modules/registration/languages/en
+@dirrm ${TL_WEBDIR}/system/modules/registration/languages/de
+@dirrm ${TL_WEBDIR}/system/modules/registration/languages
+@dirrm ${TL_WEBDIR}/system/modules/registration/dca
+@dirrm ${TL_WEBDIR}/system/modules/registration/config
+@dirrm ${TL_WEBDIR}/system/modules/registration
+@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages/en
+@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages/de
+@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages
+@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/dca
+@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/config
+@dirrm ${TL_WEBDIR}/system/modules/pun_bridge
+@dirrm ${TL_WEBDIR}/system/modules/newsletter/templates
+@dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/en
+@dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/de
+@dirrm ${TL_WEBDIR}/system/modules/newsletter/languages
+@dirrm ${TL_WEBDIR}/system/modules/newsletter/html
+@dirrm ${TL_WEBDIR}/system/modules/newsletter/dca
+@dirrm ${TL_WEBDIR}/system/modules/newsletter/config
+@dirrm ${TL_WEBDIR}/system/modules/newsletter
+@dirrm ${TL_WEBDIR}/system/modules/news/templates
+@dirrm ${TL_WEBDIR}/system/modules/news/languages/en
+@dirrm ${TL_WEBDIR}/system/modules/news/languages/de
+@dirrm ${TL_WEBDIR}/system/modules/news/languages
+@dirrm ${TL_WEBDIR}/system/modules/news/html
+@dirrm ${TL_WEBDIR}/system/modules/news/dca
+@dirrm ${TL_WEBDIR}/system/modules/news/config
+@dirrm ${TL_WEBDIR}/system/modules/news
+@dirrm ${TL_WEBDIR}/system/modules/listing/templates
+@dirrm ${TL_WEBDIR}/system/modules/listing/languages/en
+@dirrm ${TL_WEBDIR}/system/modules/listing/languages/de
+@dirrm ${TL_WEBDIR}/system/modules/listing/languages
+@dirrm ${TL_WEBDIR}/system/modules/listing/html
+@dirrm ${TL_WEBDIR}/system/modules/listing/dca
+@dirrm ${TL_WEBDIR}/system/modules/listing/config
+@dirrm ${TL_WEBDIR}/system/modules/listing
+@dirrm ${TL_WEBDIR}/system/modules/frontend/templates
+@dirrm ${TL_WEBDIR}/system/modules/frontend/languages/en
+@dirrm ${TL_WEBDIR}/system/modules/frontend/languages/de
+@dirrm ${TL_WEBDIR}/system/modules/frontend/languages
+@dirrm ${TL_WEBDIR}/system/modules/frontend/config
+@dirrm ${TL_WEBDIR}/system/modules/frontend
+@dirrm ${TL_WEBDIR}/system/modules/faq/templates
+@dirrm ${TL_WEBDIR}/system/modules/faq/languages/en
+@dirrm ${TL_WEBDIR}/system/modules/faq/languages/de
+@dirrm ${TL_WEBDIR}/system/modules/faq/languages
+@dirrm ${TL_WEBDIR}/system/modules/faq/html
+@dirrm ${TL_WEBDIR}/system/modules/faq/dca
+@dirrm ${TL_WEBDIR}/system/modules/faq/config
+@dirrm ${TL_WEBDIR}/system/modules/faq
+@dirrm ${TL_WEBDIR}/system/modules/dfGallery/templates
+@dirrm ${TL_WEBDIR}/system/modules/dfGallery/languages/en
+@dirrm ${TL_WEBDIR}/system/modules/dfGallery/languages/de
+@dirrm ${TL_WEBDIR}/system/modules/dfGallery/languages
+@dirrm ${TL_WEBDIR}/system/modules/dfGallery/df/Strippers
+@dirrm ${TL_WEBDIR}/system/modules/dfGallery/df
+@dirrm ${TL_WEBDIR}/system/modules/dfGallery/dca
+@dirrm ${TL_WEBDIR}/system/modules/dfGallery/config
+@dirrm ${TL_WEBDIR}/system/modules/dfGallery
+@dirrm ${TL_WEBDIR}/system/modules/development/templates
+@dirrm ${TL_WEBDIR}/system/modules/development/languages/en
+@dirrm ${TL_WEBDIR}/system/modules/development/languages/de
+@dirrm ${TL_WEBDIR}/system/modules/development/languages
+@dirrm ${TL_WEBDIR}/system/modules/development/html
+@dirrm ${TL_WEBDIR}/system/modules/development/dca
+@dirrm ${TL_WEBDIR}/system/modules/development/config
+@dirrm ${TL_WEBDIR}/system/modules/development
+@dirrm ${TL_WEBDIR}/system/modules/comments/templates
+@dirrm ${TL_WEBDIR}/system/modules/comments/languages/en
+@dirrm ${TL_WEBDIR}/system/modules/comments/languages/de
+@dirrm ${TL_WEBDIR}/system/modules/comments/languages
+@dirrm ${TL_WEBDIR}/system/modules/comments/html
+@dirrm ${TL_WEBDIR}/system/modules/comments/dca
+@dirrm ${TL_WEBDIR}/system/modules/comments/config
+@dirrm ${TL_WEBDIR}/system/modules/comments
+@dirrm ${TL_WEBDIR}/system/modules/calendar/templates
+@dirrm ${TL_WEBDIR}/system/modules/calendar/languages/en
+@dirrm ${TL_WEBDIR}/system/modules/calendar/languages/de
+@dirrm ${TL_WEBDIR}/system/modules/calendar/languages
+@dirrm ${TL_WEBDIR}/system/modules/calendar/html
+@dirrm ${TL_WEBDIR}/system/modules/calendar/dca
+@dirrm ${TL_WEBDIR}/system/modules/calendar/config
+@dirrm ${TL_WEBDIR}/system/modules/calendar
+@dirrm ${TL_WEBDIR}/system/modules/backend/templates
+@dirrm ${TL_WEBDIR}/system/modules/backend/languages/en
+@dirrm ${TL_WEBDIR}/system/modules/backend/languages/de
+@dirrm ${TL_WEBDIR}/system/modules/backend/languages
+@dirrm ${TL_WEBDIR}/system/modules/backend/dca
+@dirrm ${TL_WEBDIR}/system/modules/backend/config
+@dirrm ${TL_WEBDIR}/system/modules/backend
+@dirrm ${TL_WEBDIR}/system/modules
+@unexec ${RMDIR} %D/${TL_WEBDIR}/system/logs 2>/dev/null || ${TRUE}
+@dirrm ${TL_WEBDIR}/system/libraries
+@unexec ${RM} -fr %D/${TL_WEBDIR}/system/html
+@dirrm ${TL_WEBDIR}/system/drivers
+@unexec ${RMDIR} %D/${TL_WEBDIR}/system/config 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/${TL_WEBDIR}/system 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/${TL_WEBDIR} 2>/dev/null || ${TRUE}
+@dirrm ${TL_WEBDIR}/plugins/ufo
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/utils
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/themes/simple/skins/o2k7/img
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/themes/simple/skins/o2k7
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/themes/simple/skins/default
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/themes/simple/skins
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/themes/simple/langs
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/themes/simple/img
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/themes/simple
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/o2k7/img
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/o2k7
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/default/img
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins/default
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/skins
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/langs
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/js
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/themes/advanced/img
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/themes/advanced
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/themes
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/langs
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/js
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras/css
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/xhtmlxtras
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/images
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/template/langs
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/template/js
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/template/css
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/template
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/table/langs
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/table/js
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/table/css
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/table
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/style/langs
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/style/js
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/style/css
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/style
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/includes
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/img
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/css
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/classes/utils
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/spellchecker/classes
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/spellchecker
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/langs
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/js
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace/css
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/searchreplace
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/save
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/safari
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/langs
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/js
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/paste/css
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/paste
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/inlinepopups/skins/clearlooks2/img
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/inlinepopups/skins/clearlooks2
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/inlinepopups/skins
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/inlinepopups
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/langs
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/js
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions/img
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/emotions
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/directionality
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/contextmenu
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/autosave
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/langs
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/js
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/img
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage/css
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins/advimage
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/plugins
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE/langs
+@dirrm ${TL_WEBDIR}/plugins/tinyMCE
+@dirrm ${TL_WEBDIR}/plugins/tcpdf/images
+@dirrm ${TL_WEBDIR}/plugins/tcpdf/fonts/ttf-bitstream-vera-1.10
+@dirrm ${TL_WEBDIR}/plugins/tcpdf/fonts
+@dirrm ${TL_WEBDIR}/plugins/tcpdf/config/lang
+@dirrm ${TL_WEBDIR}/plugins/tcpdf/config
+@dirrm ${TL_WEBDIR}/plugins/tcpdf/cache
+@dirrm ${TL_WEBDIR}/plugins/tcpdf
+@dirrm ${TL_WEBDIR}/plugins/tablesort/media
+@dirrm ${TL_WEBDIR}/plugins/tablesort/js
+@dirrm ${TL_WEBDIR}/plugins/tablesort/css
+@dirrm ${TL_WEBDIR}/plugins/tablesort
+@dirrm ${TL_WEBDIR}/plugins/slimbox/js
+@dirrm ${TL_WEBDIR}/plugins/slimbox/css
+@dirrm ${TL_WEBDIR}/plugins/slimbox
+@dirrm ${TL_WEBDIR}/plugins/simplepie
+@dirrm ${TL_WEBDIR}/plugins/phpmailer/language
+@dirrm ${TL_WEBDIR}/plugins/phpmailer
+@dirrm ${TL_WEBDIR}/plugins/mootools
+@dirrm ${TL_WEBDIR}/plugins/dpsyntax
+@dirrm ${TL_WEBDIR}/plugins/dompdf/lib/res
+@dirrm ${TL_WEBDIR}/plugins/dompdf/lib/fonts
+@dirrm ${TL_WEBDIR}/plugins/dompdf/lib
+@dirrm ${TL_WEBDIR}/plugins/dompdf/include
+@dirrm ${TL_WEBDIR}/plugins/dompdf
+@dirrm ${TL_WEBDIR}/plugins/calendar
+@dirrm ${TL_WEBDIR}/plugins
+@dirrm ${TL_EGDIR}/tl_files/xBrowser_style_sheets
+@dirrm ${TL_EGDIR}/tl_files/tiny_templates
+@dirrm ${TL_EGDIR}/tl_files
+@dirrm ${TL_EGDIR}/system/config
+@dirrm ${TL_EGDIR}/system
+@dirrm ${TL_EGDIR}
