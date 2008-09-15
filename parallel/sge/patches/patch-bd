@@ -1,0 +1,38 @@
+$NetBSD: patch-bd,v 1.3 2008/09/15 16:30:57 ahoka Exp $
+
+Exclude Java files.
+DESTDIR support.
+
+--- source/scripts/distinst.orig	Tue Nov 20 12:16:24 2007
++++ source/scripts/distinst	Fri May 30 12:14:08 2008
+@@ -75,12 +75,12 @@
+ # The last number listed here will be the verson linked from libdrmaa.so
+ DRMAA_SHARED_LIB_VERSIONS="0.95 1.0"
+ DRMAA_HEADER_FILES="libs/japi/drmaa.h"
+-DRMAAJ_FILES="CLASSES/drmaa"
++#DRMAAJ_FILES="CLASSES/drmaa"
+ 
+ JNI_SHARED_LIBRARIES="libdrmaa libjuti libjgdi"
+ 
+-JUTIJ_FILES="CLASSES/juti/juti"
+-JGDIJ_FILES="libs/jgdi/build/jgdi"
++#JUTIJ_FILES="CLASSES/juti/juti"
++#JGDIJ_FILES="libs/jgdi/build/jgdi"
+ 
+ PVMSOURCES="start_pvm.c stop_pvm.c slave.c master.c spmd.c Makefile"
+ PVMSRCSCRIPTS="install.sh aimk"
+@@ -517,11 +517,11 @@
+          echo Please set variable SGE_ROOT. Installation failed.
+          exit 1
+       fi
+-      if [ ! -d $SGE_ROOT ]; then
+-         echo Please create directory \"$SGE_ROOT\" first. Installation failed.
++      if [ ! -d "$DESTDIR$SGE_ROOT" ]; then
++         echo Please create directory \"$DESTDIR$SGE_ROOT\" first. Installation failed.
+          exit 1
+       fi
+-      DEST_SGE_ROOT=$SGE_ROOT
++      DEST_SGE_ROOT=$DESTDIR$SGE_ROOT
+       localinst=true
+       ;;
+    -mansrc)

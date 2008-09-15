@@ -1,17 +1,18 @@
-# $NetBSD: Makefile,v 1.31 2008/09/06 20:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2008/09/15 16:30:57 ahoka Exp $
 #
 
-PKGNAME=		sge-6.0.11
-DISTNAME=		sge-V60u11_TAG-src
-PKGREVISION=		3
+PKGNAME=		sge-6.1.3
+DISTNAME=		ge-V61u3_TAG-src
 CATEGORIES=		parallel sysutils
-MASTER_SITES=		http://gridengine.sunsource.net/files/documents/7/142/
+MASTER_SITES=		http://gridengine.sunsource.net/files/documents/7/161/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://gridengine.sunsource.net/
 COMMENT=		Sun Grid Engine distributed resource management system
 
 BUILD_DEPENDS+=		{standalone-tcsh,tcsh}-[0-9]*:../../shells/tcsh
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		YES
 USE_TOOLS+=		gmake perl:run
@@ -111,30 +112,32 @@ do-configure:
 .endfor
 
 do-build:
-	cd ${WRKSRC}/source && ${AIMK} -no-jni -only-depend
+	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni -only-depend
 	cd ${WRKSRC}/source && ${SETENV} ${MAKE_ENV} ./scripts/zerodepend
-	cd ${WRKSRC}/source && ${AIMK} -no-jni -no-qmake -no-qtcsh depend
-	cd ${WRKSRC}/source && ${AIMK} -no-jni
-	cd ${WRKSRC}/source && ${AIMK} -no-jni -man
+	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni -no-qmake -no-qtcsh depend
+	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni
+	cd ${WRKSRC}/source && ${AIMK} -no-java -no-jni -man
 
 do-install:
-	${MKDIR} ${SGE_ROOT}
-	${CHOWN} ${SGE_USER} ${SGE_ROOT}
-	${CHGRP} ${SGE_GROUP} ${SGE_ROOT}
+	${MKDIR} ${DESTDIR}${SGE_ROOT}
+	#${CHOWN} ${SGE_USER} ${DESTDIR}${SGE_ROOT}
+	#${CHGRP} ${SGE_GROUP} ${DESTDIR}${SGE_ROOT}
 	cd ${WRKSRC}/source && \
-		${ECHO} "Y" | ${SETENV} LOCALBASE=${LOCALBASE} SGE_ROOT=${SGE_ROOT} ./scripts/distinst -local -allall -nobdb -noopenssl ${SGE_ARCH}
+		${ECHO} "Y" | ${SETENV} LOCALBASE=${LOCALBASE} DESTDIR=${DESTDIR} SGE_ROOT=${SGE_ROOT} ./scripts/distinst -local -allall -nobdb -noopenssl ${SGE_ARCH}
 	for f in archive checkpoint deadlock dump load printlog recover stat upgrade verify ; do \
-		ln -s ${LOCALBASE}/bin/db4_$${f} ${SGE_ROOT}/utilbin/${SGE_ARCH}/db_$${f} ; done
-	ln -s ${LOCALBASE}/bin/berkeley_db4_svc ${SGE_ROOT}/utilbin/${SGE_ARCH}/berkeley_db_svc
-	ln -s ${SSL_PREFIX}/bin/openssl ${SGE_ROOT}/utilbin/${SGE_ARCH}/openssl
-	cd ${SGE_ROOT} && ${SETENV} SGE_ROOT=${SGE_ROOT} ./util/setfileperm.sh -auto \
+		ln -s ${DESTDIR}${LOCALBASE}/bin/db4_$${f} ${DESTDIR}${SGE_ROOT}/utilbin/${SGE_ARCH}/db_$${f} ; done
+	ln -s ${DESTDIR}${LOCALBASE}/bin/berkeley_db4_svc ${DESTDIR}${SGE_ROOT}/utilbin/${SGE_ARCH}/berkeley_db_svc
+	ln -s ${DESTDIR}${SSL_PREFIX}/bin/openssl ${DESTDIR}${SGE_ROOT}/utilbin/${SGE_ARCH}/openssl
+	cd ${DESTDIR}${SGE_ROOT} && ${SETENV} SGE_ROOT=${SGE_ROOT} DESTDIR=${DESTDIR} ./util/setfileperm.sh -auto \
 		${SGE_ROOT}
-	for f in ${SGE_ROOT}/bin/${SGE_ARCH}/q* ; do \
-		cd ${PREFIX}/bin && ln -fs $$f ; done
+	for f in ${DESTDIR}${SGE_ROOT}/bin/${SGE_ARCH}/q* ; do \
+		cd ${DESTDIR}${PREFIX}/bin && ln -fs $$f ; done
 
 #% scripts/distinst -local"
 
-.include "../../databases/db4/buildlink3.mk"
+PLIST_SUBST+=	SGE_ARCH=${SGE_ARCH}
+
+.include "../../databases/db4/buildlink3.mk" # 4.2 at least
 .include "../../x11/libXpm/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../mk/motif.buildlink3.mk"
