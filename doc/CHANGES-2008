@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2268 2008/09/15 13:06:33 he Exp $
+$NetBSD: CHANGES-2008,v 1.2269 2008/09/15 13:17:57 jmcneill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3840,3 +3840,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated cad/gerbv to 2.1.0 [dmcmahill 2008-09-14]
 	Updated devel/p5-POE-Test-Loops to 1.002nb1 [he 2008-09-15]
 	Updated devel/p5-POE-Test-Loops to 1.002nb2 [he 2008-09-15]
+	Added multimedia/tvtime version 1.0.1 [jmcneill 2008-09-15]
