@@ -1,5 +1,5 @@
-@comment $NetBSD: PLIST,v 1.5 2008/04/04 15:30:01 jlam Exp $
-${GEM_HOME}/cache/ruby-gd-0.7.4.gem
+@comment $NetBSD: PLIST,v 1.6 2008/09/15 15:28:58 taca Exp $
+${GEM_HOME}/cache/ruby-gd-${PKGVERSION}.gem
 ${GEM_LIBDIR}/Changes
 ${GEM_LIBDIR}/GD.c
 ${GEM_LIBDIR}/doc/INSTALL.en
@@ -15,7 +15,7 @@ ${GEM_LIBDIR}/sample/example.rb
 ${GEM_LIBDIR}/sample/gdtestttf.png
 ${GEM_LIBDIR}/sample/gdtestttf.rb
 ${GEM_LIBDIR}/sample/webpng.rb
-${GEM_HOME}/specifications/ruby-gd-0.7.4.gemspec
+${GEM_HOME}/specifications/ruby-gd-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/sample
 @dirrm ${GEM_LIBDIR}/lib
 @dirrm ${GEM_LIBDIR}/doc
