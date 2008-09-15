@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2257 2008/09/15 05:39:00 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.2258 2008/09/15 05:44:12 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3808,3 +3808,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/rake to 0.8.2 [minskim 2008-09-15]
 	Updated devel/ruby-activesupport to 2.1.1 [minskim 2008-09-15]
 	Updated databases/ruby-activerecord to 2.1.1 [minskim 2008-09-15]
+	Updated www/ruby-activeresource to 2.1.1 [minskim 2008-09-15]
