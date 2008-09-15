@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2276 2008/09/15 18:16:15 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2277 2008/09/15 18:18:15 rhaen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3854,3 +3854,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Regexp-Parser version 0.20 [he 2008-09-15]
 	Updated devel/ruby-gettext to 1.93.0 [taca 2008-09-15]
 	Added www/typo3 version 4.2.1 [taca 2008-09-15]
+	Added net/p5-Net-Jifty version 0.07 [rhaen 2008-09-15]
