@@ -1,20 +1,20 @@
-# $NetBSD: Makefile,v 1.21 2008/06/19 15:24:36 taca Exp $
+# $NetBSD: Makefile,v 1.22 2008/09/15 08:36:24 taca Exp $
 #
 
 DISTNAME=	rdtool-${RUBY_RD_VERSION}
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${RUBY_PKGPREFIX}-rd-mode-${RUBY_RD_VERSION}
 CATEGORIES=	devel ruby
-MASTER_SITES=	http://www.moonwolf.com/ruby/archive/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/33346/
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://www2.pos.to/~tosh/ruby/rdtool/
+HOMEPAGE=	http://rubyforge.org/projects/rdtool/
 COMMENT=	Editing mode for RD (Ruby Document Format)
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}/${DISTNAME}/utils
 EXTRACT_ELEMENTS=	${DISTNAME}/utils/rd-mode.el
-RUBY_RD_VERSION=	0.6.20
+RUBY_RD_VERSION=	0.6.22
 RUBY_VERSION=		${RUBY18_VERSION}
 RUBY_NOVERSION=		yes
 NO_CONFIGURE=		yes
