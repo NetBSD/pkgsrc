@@ -1,0 +1,105 @@
+@comment $NetBSD: PLIST.ca,v 1.1.1.1 2008/09/15 09:59:09 taca Exp $
+${TL_WEBDIR}/system/modules/tpl_editor/languages/ca/modules.php
+${TL_WEBDIR}/system/modules/tpl_editor/languages/ca/.htaccess
+${TL_WEBDIR}/system/modules/tpl_editor/languages/ca/tl_templates.php
+${TL_WEBDIR}/system/modules/frontend/languages/ca/modules.php
+${TL_WEBDIR}/system/modules/frontend/languages/ca/default.php
+${TL_WEBDIR}/system/modules/frontend/languages/ca/.htaccess
+${TL_WEBDIR}/system/modules/listing/languages/ca/modules.php
+${TL_WEBDIR}/system/modules/listing/languages/ca/default.php
+${TL_WEBDIR}/system/modules/listing/languages/ca/tl_module.php
+${TL_WEBDIR}/system/modules/listing/languages/ca/.htaccess
+${TL_WEBDIR}/system/modules/rss_reader/languages/ca/modules.php
+${TL_WEBDIR}/system/modules/rss_reader/languages/ca/tl_module.php
+${TL_WEBDIR}/system/modules/rss_reader/languages/ca/.htaccess
+${TL_WEBDIR}/system/modules/pun_bridge/languages/ca/modules.php
+${TL_WEBDIR}/system/modules/pun_bridge/languages/ca/.htaccess
+${TL_WEBDIR}/system/modules/calendar/languages/ca/modules.php
+${TL_WEBDIR}/system/modules/calendar/languages/ca/tl_user.php
+${TL_WEBDIR}/system/modules/calendar/languages/ca/default.php
+${TL_WEBDIR}/system/modules/calendar/languages/ca/tl_user_group.php
+${TL_WEBDIR}/system/modules/calendar/languages/ca/tl_module.php
+${TL_WEBDIR}/system/modules/calendar/languages/ca/.htaccess
+${TL_WEBDIR}/system/modules/calendar/languages/ca/tl_calendar.php
+${TL_WEBDIR}/system/modules/calendar/languages/ca/tl_calendar_events.php
+${TL_WEBDIR}/system/modules/dfGallery/languages/ca/modules.php
+${TL_WEBDIR}/system/modules/dfGallery/languages/ca/default.php
+${TL_WEBDIR}/system/modules/dfGallery/languages/ca/.htaccess
+${TL_WEBDIR}/system/modules/dfGallery/languages/ca/tl_content.php
+${TL_WEBDIR}/system/modules/comments/languages/ca/tl_comments.php
+${TL_WEBDIR}/system/modules/comments/languages/ca/modules.php
+${TL_WEBDIR}/system/modules/comments/languages/ca/.htaccess
+${TL_WEBDIR}/system/modules/comments/languages/ca/tl_content.php
+${TL_WEBDIR}/system/modules/development/languages/ca/modules.php
+${TL_WEBDIR}/system/modules/development/languages/ca/tl_labels.php
+${TL_WEBDIR}/system/modules/development/languages/ca/.htaccess
+${TL_WEBDIR}/system/modules/development/languages/ca/tl_extension.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/tl_style_sheet.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/modules.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/tl_user.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/tl_member_group.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/explain.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/default.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/countries.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/tl_style.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/tl_user_group.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/tl_member.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/tl_article.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/languages.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/tl_page.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/tl_settings.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/tl_module.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/.htaccess
+${TL_WEBDIR}/system/modules/backend/languages/ca/tl_form.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/tl_maintenance.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/tl_undo.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/tl_files.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/tl_flash.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/tl_task.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/tl_layout.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/tl_form_field.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/tl_content.php
+${TL_WEBDIR}/system/modules/backend/languages/ca/tl_log.php
+${TL_WEBDIR}/system/modules/news/languages/ca/modules.php
+${TL_WEBDIR}/system/modules/news/languages/ca/tl_user.php
+${TL_WEBDIR}/system/modules/news/languages/ca/tl_news_archive.php
+${TL_WEBDIR}/system/modules/news/languages/ca/default.php
+${TL_WEBDIR}/system/modules/news/languages/ca/tl_user_group.php
+${TL_WEBDIR}/system/modules/news/languages/ca/tl_news_comments.php
+${TL_WEBDIR}/system/modules/news/languages/ca/tl_news.php
+${TL_WEBDIR}/system/modules/news/languages/ca/tl_module.php
+${TL_WEBDIR}/system/modules/news/languages/ca/.htaccess
+${TL_WEBDIR}/system/modules/newsletter/languages/ca/modules.php
+${TL_WEBDIR}/system/modules/newsletter/languages/ca/tl_newsletter.php
+${TL_WEBDIR}/system/modules/newsletter/languages/ca/tl_user.php
+${TL_WEBDIR}/system/modules/newsletter/languages/ca/default.php
+${TL_WEBDIR}/system/modules/newsletter/languages/ca/tl_user_group.php
+${TL_WEBDIR}/system/modules/newsletter/languages/ca/tl_member.php
+${TL_WEBDIR}/system/modules/newsletter/languages/ca/tl_newsletter_channel.php
+${TL_WEBDIR}/system/modules/newsletter/languages/ca/tl_module.php
+${TL_WEBDIR}/system/modules/newsletter/languages/ca/.htaccess
+${TL_WEBDIR}/system/modules/newsletter/languages/ca/tl_newsletter_recipients.php
+${TL_WEBDIR}/system/modules/faq/languages/ca/modules.php
+${TL_WEBDIR}/system/modules/faq/languages/ca/default.php
+${TL_WEBDIR}/system/modules/faq/languages/ca/tl_faq.php
+${TL_WEBDIR}/system/modules/faq/languages/ca/tl_module.php
+${TL_WEBDIR}/system/modules/faq/languages/ca/.htaccess
+${TL_WEBDIR}/system/modules/faq/languages/ca/tl_faq_category.php
+${TL_WEBDIR}/system/modules/registration/languages/ca/modules.php
+${TL_WEBDIR}/system/modules/registration/languages/ca/default.php
+${TL_WEBDIR}/system/modules/registration/languages/ca/tl_module.php
+${TL_WEBDIR}/system/modules/registration/languages/ca/.htaccess
+@dirrm ${TL_WEBDIR}/system/modules/registration/languages/ca
+@dirrm ${TL_WEBDIR}/system/modules/faq/languages/ca
+@dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/ca
+@dirrm ${TL_WEBDIR}/system/modules/news/languages/ca
+@dirrm ${TL_WEBDIR}/system/modules/backend/languages/ca
+@dirrm ${TL_WEBDIR}/system/modules/development/languages/ca
+@dirrm ${TL_WEBDIR}/system/modules/comments/languages/ca
+@dirrm ${TL_WEBDIR}/system/modules/dfGallery/languages/ca
+@dirrm ${TL_WEBDIR}/system/modules/calendar/languages/ca
+@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages/ca
+@dirrm ${TL_WEBDIR}/system/modules/rss_reader/languages/ca
+@dirrm ${TL_WEBDIR}/system/modules/listing/languages/ca
+@dirrm ${TL_WEBDIR}/system/modules/frontend/languages/ca
+@dirrm ${TL_WEBDIR}/system/modules/tpl_editor/languages/ca
