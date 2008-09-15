@@ -8,10 +8,3 @@ and display it. It can also be used to display video read locally on
 the computer : DVDs, VCDs, MPEG and DivX files and from a satellite
 card. It is multi-plaform : Linux, Windows, Mac OS X, BeOS, BSD, Solaris,
 QNX, iPaq... The VideoLAN Client and Server now have a full IPv6 support.
-
-*** Please note: ffmpeg must NOT be built with the swscale option ***
-For more information see: http://trac.videolan.org/vlc/ticket/1594
-
-To disable swscale, please add the following to your /etc/mk.conf before
-building ffmpeg:
-PKG_OPTIONS.ffmpeg=-swscale
