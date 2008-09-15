@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1 2008/03/31 15:40:43 jlam Exp $
+$NetBSD: patch-af,v 1.2 2008/09/15 08:43:44 taca Exp $
 
---- lib/rubygems/commands/uninstall_command.rb.orig	2008-02-23 21:26:47.000000000 -0500
+--- lib/rubygems/commands/uninstall_command.rb.orig	2008-02-24 11:26:47.000000000 +0900
 +++ lib/rubygems/commands/uninstall_command.rb
 @@ -40,6 +40,11 @@ module Gem
            options[:bin_dir] = File.expand_path(value)
