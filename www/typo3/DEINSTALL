@@ -1,0 +1,15 @@
+# $NetBSD: DEINSTALL,v 1.1.1.1 2008/09/15 18:13:38 taca Exp $
+
+DIR="@PREFIX@/@TYPO3DIR@/@SITEDIR@"
+TYPO3DIRS="uploads/tf uploads/pics uploads/media uploads typo3temp \
+	typo3conf/l10n typo3conf/ext typo3conf \
+	fileadmin/user_upload/_temp_ fileadmin/user_upload fileadmin/_temp_ \
+	fileadmin ${DIR}"
+
+case ${STAGE} in
+DEINSTALL)
+	for d in ${TYPO3DIRS}; do
+		${RMDIR} $d 2>/dev/null
+	done
+	;;
+esac
