@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $NetBSD: fetch,v 1.9 2007/08/04 15:00:29 obache Exp $
+# $NetBSD: fetch,v 1.10 2008/09/15 21:07:46 rillig Exp $
 #
 # Copyright (c) 2006 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -43,7 +43,7 @@
 #	fetch -- fetch files via URLs
 #
 # SYNOPSIS
-#	fetch [-c] [-d dir] [-f distinfo] file site ..."
+#	fetch [-c] [-d dir] [-f distinfo] [-r] [-v] file site ...
 #
 # DESCRIPTION
 #	fetch will attempt to fetch the file from the list of specified
@@ -118,7 +118,7 @@
 self="${0##*/}"
 
 usage() {
-	${ECHO} 1>&2 "usage: $self [-c] [-f distinfo] [-r] file site ..."
+	${ECHO} 1>&2 "usage: $self [-c] [-d dir] [-f distinfo] [-r] [-v] file site ..."
 }
 
 # Process optional arguments
