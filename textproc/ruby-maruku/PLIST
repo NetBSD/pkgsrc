@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/04/04 15:22:09 jlam Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/09/15 06:05:47 minskim Exp $
 bin/maruku
 bin/marutex
 ${GEM_HOME}/cache/maruku-${PKGVERSION}.gem
@@ -27,6 +27,7 @@ ${GEM_LIBDIR}/lib/maruku.rb
 ${GEM_LIBDIR}/lib/maruku/attributes.rb
 ${GEM_LIBDIR}/lib/maruku/defaults.rb
 ${GEM_LIBDIR}/lib/maruku/errors_management.rb
+${GEM_LIBDIR}/lib/maruku/ext/div.rb
 ${GEM_LIBDIR}/lib/maruku/ext/math.rb
 ${GEM_LIBDIR}/lib/maruku/ext/math/elements.rb
 ${GEM_LIBDIR}/lib/maruku/ext/math/latex_fix.rb
@@ -70,8 +71,11 @@ ${GEM_LIBDIR}/lib/maruku/usage/example1.rb
 ${GEM_LIBDIR}/lib/maruku/version.rb
 ${GEM_LIBDIR}/lib/sort_prof.rb
 ${GEM_LIBDIR}/maruku_gem.rb
+${GEM_LIBDIR}/tests/bugs/abbrev.md
 ${GEM_LIBDIR}/tests/bugs/code_in_links.md
 ${GEM_LIBDIR}/tests/bugs/complex_escaping.md
+${GEM_LIBDIR}/tests/bugs/html.md
+${GEM_LIBDIR}/tests/bugs/links.md
 ${GEM_LIBDIR}/tests/diagrams/diagrams.md
 ${GEM_LIBDIR}/tests/math/syntax.md
 ${GEM_LIBDIR}/tests/math_usage/document.md
@@ -121,6 +125,9 @@ ${GEM_LIBDIR}/tests/unittest/code.md
 ${GEM_LIBDIR}/tests/unittest/code2.md
 ${GEM_LIBDIR}/tests/unittest/code3.md
 ${GEM_LIBDIR}/tests/unittest/data_loss.md
+${GEM_LIBDIR}/tests/unittest/divs/div1.md
+${GEM_LIBDIR}/tests/unittest/divs/div2.md
+${GEM_LIBDIR}/tests/unittest/divs/div3_nest.md
 ${GEM_LIBDIR}/tests/unittest/easy.md
 ${GEM_LIBDIR}/tests/unittest/email.md
 ${GEM_LIBDIR}/tests/unittest/encoding/iso-8859-1.md
@@ -206,6 +213,7 @@ ${GEM_HOME}/specifications/maruku-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/tests/unittest/notyet
 @dirrm ${GEM_LIBDIR}/tests/unittest/math
 @dirrm ${GEM_LIBDIR}/tests/unittest/encoding
+@dirrm ${GEM_LIBDIR}/tests/unittest/divs
 @dirrm ${GEM_LIBDIR}/tests/unittest/attributes
 @dirrm ${GEM_LIBDIR}/tests/unittest
 @dirrm ${GEM_LIBDIR}/tests/s5
