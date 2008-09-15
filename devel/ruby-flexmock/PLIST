@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.2 2008/06/22 16:00:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/09/15 08:55:18 taca Exp $
 ${GEM_HOME}/cache/flexmock-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/TAGS
 ${GEM_LIBDIR}/doc/GoogleExample.rdoc
 ${GEM_LIBDIR}/doc/releases/flexmock-0.4.0.rdoc
 ${GEM_LIBDIR}/doc/releases/flexmock-0.4.1.rdoc
