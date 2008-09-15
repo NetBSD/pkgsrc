@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/04/04 15:30:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/09/15 15:32:00 taca Exp $
 bin/facter
 ${GEM_HOME}/cache/facter-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
@@ -12,14 +12,49 @@ ${GEM_LIBDIR}/bin/facter
 ${GEM_LIBDIR}/etc/facter.conf
 ${GEM_LIBDIR}/install.rb
 ${GEM_LIBDIR}/lib/facter.rb
+${GEM_LIBDIR}/lib/facter/Cfkey.rb
+${GEM_LIBDIR}/lib/facter/architecture.rb
+${GEM_LIBDIR}/lib/facter/domain.rb
+${GEM_LIBDIR}/lib/facter/facterversion.rb
+${GEM_LIBDIR}/lib/facter/fqdn.rb
+${GEM_LIBDIR}/lib/facter/hardwareisa.rb
+${GEM_LIBDIR}/lib/facter/hardwaremodel.rb
+${GEM_LIBDIR}/lib/facter/hostname.rb
+${GEM_LIBDIR}/lib/facter/id.rb
+${GEM_LIBDIR}/lib/facter/ipaddress.rb
+${GEM_LIBDIR}/lib/facter/iphostnumber.rb
 ${GEM_LIBDIR}/lib/facter/ipmess.rb
+${GEM_LIBDIR}/lib/facter/kernel.rb
+${GEM_LIBDIR}/lib/facter/kernelrelease.rb
+${GEM_LIBDIR}/lib/facter/lsb.rb
+${GEM_LIBDIR}/lib/facter/lsbmajdistrelease.rb
+${GEM_LIBDIR}/lib/facter/macaddress.rb
 ${GEM_LIBDIR}/lib/facter/macosx.rb
 ${GEM_LIBDIR}/lib/facter/manufacturer.rb
 ${GEM_LIBDIR}/lib/facter/memory.rb
+${GEM_LIBDIR}/lib/facter/netmask.rb
+${GEM_LIBDIR}/lib/facter/operatingsystem.rb
+${GEM_LIBDIR}/lib/facter/operatingsystemrelease.rb
 ${GEM_LIBDIR}/lib/facter/processor.rb
+${GEM_LIBDIR}/lib/facter/ps.rb
+${GEM_LIBDIR}/lib/facter/puppetversion.rb
+${GEM_LIBDIR}/lib/facter/rubysitedir.rb
+${GEM_LIBDIR}/lib/facter/rubyversion.rb
+${GEM_LIBDIR}/lib/facter/ssh.rb
+${GEM_LIBDIR}/lib/facter/uniqueid.rb
+${GEM_LIBDIR}/lib/facter/util/collection.rb
+${GEM_LIBDIR}/lib/facter/util/confine.rb
+${GEM_LIBDIR}/lib/facter/util/fact.rb
+${GEM_LIBDIR}/lib/facter/util/ip.rb
+${GEM_LIBDIR}/lib/facter/util/loader.rb
+${GEM_LIBDIR}/lib/facter/util/macosx.rb
+${GEM_LIBDIR}/lib/facter/util/manufacturer.rb
+${GEM_LIBDIR}/lib/facter/util/memory.rb
+${GEM_LIBDIR}/lib/facter/util/netmask.rb
 ${GEM_LIBDIR}/lib/facter/util/plist.rb
 ${GEM_LIBDIR}/lib/facter/util/plist/generator.rb
 ${GEM_LIBDIR}/lib/facter/util/plist/parser.rb
+${GEM_LIBDIR}/lib/facter/util/resolution.rb
 ${GEM_HOME}/specifications/facter-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/lib/facter/util/plist
 @dirrm ${GEM_LIBDIR}/lib/facter/util
