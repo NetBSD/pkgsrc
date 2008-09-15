@@ -1,11 +1,11 @@
-$NetBSD: patch-ag,v 1.1 2008/03/31 15:40:43 jlam Exp $
+$NetBSD: patch-ag,v 1.2 2008/09/15 08:43:44 taca Exp $
 
---- lib/rubygems/uninstaller.rb.orig	2008-02-23 22:05:54.000000000 -0500
+--- lib/rubygems/uninstaller.rb.orig	2008-06-21 03:34:46.000000000 +0900
 +++ lib/rubygems/uninstaller.rb
 @@ -31,6 +31,11 @@ class Gem::Uninstaller
      @force_all = options[:all]
      @force_ignore = options[:ignore]
-     @bin_dir = options[:bin_dir] 
+     @bin_dir = options[:bin_dir]
 +    install_root = options[:install_root]
 +    unless install_root.nil? or install_root == ""
 +      @install_root = File.expand_path install_root
