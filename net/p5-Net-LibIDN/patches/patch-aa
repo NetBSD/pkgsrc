@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/15 14:57:28 he Exp $
+
+--- Makefile.PL.orig	2008-08-26 19:39:22.000000000 +0200
++++ Makefile.PL
+@@ -1,6 +1,7 @@
+ use strict;
+ use ExtUtils::MakeMaker;
+ use Getopt::Long;
++use Config;
+ 
+ # See lib/ExtUtils/MakeMaker.pm for details of how to influence
+ # the contents of the Makefile that is written.
+@@ -48,7 +49,7 @@ sub InitMakeParams
+ 
+ 	if ($libdir)
+ 	{
+-		$Params{LIBS} = "-L$libdir -lidn";
++		$Params{LIBS} = $Config{ldflags} . " -lidn";
+ 	}
+ 	else
+ 	{
