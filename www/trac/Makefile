@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.36 2008/09/15 14:53:12 joerg Exp $
+# $NetBSD: Makefile,v 1.37 2008/09/15 17:44:03 abs Exp $
 #
 
 DISTNAME=	Trac-0.11.1
+PKGREVISION=	1
 PKGNAME=	${DISTNAME:tl}
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	devel www
@@ -17,17 +18,18 @@ DEPENDS+=	${PYPKGPREFIX}-subversion>=1.1.0:../../devel/py-subversion
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.trac
 PKG_OPTIONS_REQUIRED_GROUPS=	db
-PKG_OPTIONS_GROUP.db=	sqlite2 sqlite3 pgsql psycopg2
-PKG_SUGGESTED_OPTIONS=	sqlite3
+PKG_OPTIONS_GROUP.db=	sqlite pgsql psycopg2
+PKG_SUGGESTED_OPTIONS=	sqlite
 
 .include "../../mk/bsd.options.mk"
+.include "../../lang/python/application.mk"
 
-.if !empty(PKG_OPTIONS:Msqlite2)
+.if !empty(PKG_OPTIONS:Msqlite)
+.if !empty(PYPKGPREFIX:M2*[1234])
 DEPENDS+=	${PYPKGPREFIX}-sqlite2>=2:../../databases/py-sqlite2
-.endif
-.if !empty(PKG_OPTIONS:Msqlite3)
+.else
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
-PYTHON_VERSIONS_ACCEPTED=	25
+.endif
 .endif
 .if !empty(PKG_OPTIONS:Mpgsql)
 DEPENDS+=	${PYPKGPREFIX}-PgSQL>=2.4:../../databases/py-PgSQL
@@ -51,6 +53,5 @@ post-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/contrib/[A-qs-v]* ${EGDIR}
 	${INSTALL_SCRIPT} ${WRKSRC}/cgi-bin/trac.* ${CGIBINDIR}
 
-.include "../../lang/python/application.mk"
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
