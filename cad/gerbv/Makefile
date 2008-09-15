@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.33 2008/06/20 01:09:08 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2008/09/15 02:25:54 dmcmahill Exp $
 #
 
-DISTNAME=	gerbv-2.0.1
+DISTNAME=	gerbv-2.1.0
 CATEGORIES=	cad
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gerbv/}
 
@@ -13,10 +13,11 @@ PKG_INSTALLATION_TYPES= overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	YES
+USE_LIBTOOL=	YES
 USE_TOOLS+=	gmake pkg-config
-#CONFIGURE_ARGS+=	--disable-update-desktop-database
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
