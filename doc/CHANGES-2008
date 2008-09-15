@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2280 2008/09/15 21:21:31 abs Exp $
+$NetBSD: CHANGES-2008,v 1.2281 2008/09/15 21:25:14 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3859,3 +3859,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/freeciv-client to 2.1.6 [adam 2008-09-15]
 	Updated games/freeciv-server to 2.1.6 [adam 2008-09-15]
 	Updated www/ap2-python to 3.3.1 [abs 2008-09-15]
+	Updated multimedia/ffmpeg to 20080727nb4 [sborrill 2008-09-15]
