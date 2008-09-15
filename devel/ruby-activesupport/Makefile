@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.16 2008/06/20 04:23:56 minskim Exp $
+# $NetBSD: Makefile,v 1.17 2008/09/15 05:31:53 minskim Exp $
 
-DISTNAME=	activesupport-2.1.0
+DISTNAME=	activesupport-2.1.1
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 
