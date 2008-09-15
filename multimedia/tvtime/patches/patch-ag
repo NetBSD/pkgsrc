@@ -1,0 +1,16 @@
+$NetBSD: patch-ag,v 1.1.1.1 2008/09/15 13:15:46 jmcneill Exp $
+
+--- plugins/tomsmocomp/TomsMoCompAll2.inc.orig	2004-10-20 11:31:05.000000000 -0400
++++ plugins/tomsmocomp/TomsMoCompAll2.inc
+@@ -5,9 +5,9 @@
+ #endif
+ 
+ #ifdef USE_STRANGE_BOB
+-#define SEARCH_EFFORT_FUNC(n) DScalerFilterTomsMoComp::SEFUNC(n##_SB)
++#define SEARCH_EFFORT_FUNC(n) SEFUNC(n##_SB)
+ #else
+-#define SEARCH_EFFORT_FUNC(n) DScalerFilterTomsMoComp::SEFUNC(n)
++#define SEARCH_EFFORT_FUNC(n) SEFUNC(n)
+ #endif
+ 
+ int SEARCH_EFFORT_FUNC(0)		// we don't try at all ;-)
