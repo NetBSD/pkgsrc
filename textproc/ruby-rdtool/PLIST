@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/06/19 14:57:20 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/09/15 08:34:44 taca Exp $
 bin/rd2
 bin/rdswap
 ${RUBY_VENDORLIB}/rd/block-element.rb
@@ -24,8 +24,10 @@ ${RUBY_VENDORLIB}/rd/rd2html-opt.rb
 ${RUBY_VENDORLIB}/rd/rd2man-lib.rb
 ${RUBY_VENDORLIB}/rd/rd2rdo-lib.rb
 ${RUBY_VENDORLIB}/rd/rd2rmi-lib.rb
+${RUBY_VENDORLIB}/rd/rdblockparser.ry
 ${RUBY_VENDORLIB}/rd/rdblockparser.tab.rb
 ${RUBY_VENDORLIB}/rd/rdfmt.rb
+${RUBY_VENDORLIB}/rd/rdinlineparser.ry
 ${RUBY_VENDORLIB}/rd/rdinlineparser.tab.rb
 ${RUBY_VENDORLIB}/rd/rdvisitor.rb
 ${RUBY_VENDORLIB}/rd/reference-resolver.rb
