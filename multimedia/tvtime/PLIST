@@ -1,0 +1,47 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/15 13:15:46 jmcneill Exp $
+bin/tvtime
+bin/tvtime-command
+bin/tvtime-configure
+bin/tvtime-scanner
+@comment etc/tvtime/tvtime.xml
+man/de/man1/tvtime-command.1
+man/de/man1/tvtime-configure.1
+man/de/man1/tvtime-scanner.1
+man/de/man1/tvtime.1
+man/de/man5/stationlist.xml.5
+man/de/man5/tvtime.xml.5
+man/es/man1/tvtime-command.1
+man/es/man1/tvtime-configure.1
+man/es/man1/tvtime-scanner.1
+man/es/man1/tvtime.1
+man/es/man5/stationlist.xml.5
+man/es/man5/tvtime.xml.5
+man/man1/tvtime-command.1
+man/man1/tvtime-configure.1
+man/man1/tvtime-scanner.1
+man/man1/tvtime.1
+man/man5/stationlist.xml.5
+man/man5/tvtime.xml.5
+share/applications/net-tvtime.desktop
+share/icons/hicolor/16x16/apps/tvtime.png
+share/icons/hicolor/32x32/apps/tvtime.png
+share/icons/hicolor/48x48/apps/tvtime.png
+share/locale/cs/LC_MESSAGES/tvtime.mo
+share/locale/de/LC_MESSAGES/tvtime.mo
+share/locale/es/LC_MESSAGES/tvtime.mo
+share/locale/fi/LC_MESSAGES/tvtime.mo
+share/locale/hu/LC_MESSAGES/tvtime.mo
+share/locale/pl/LC_MESSAGES/tvtime.mo
+share/locale/pt/LC_MESSAGES/tvtime.mo
+share/locale/sv/LC_MESSAGES/tvtime.mo
+share/pixmaps/tvtime.png
+share/pixmaps/tvtime.xpm
+share/tvtime/FreeMonoBold.ttf
+share/tvtime/filmstrip_0000.png
+share/tvtime/filmstrip_0001.png
+share/tvtime/filmstrip_0002.png
+share/tvtime/filmstrip_0003.png
+share/tvtime/filmstrip_0004.png
+share/tvtime/infoicon_0000.png
+share/tvtime/tvtimeSansBold.ttf
+@dirrm share/tvtime
