@@ -1,13 +1,12 @@
-# $NetBSD: Makefile,v 1.27 2008/06/19 14:57:20 taca Exp $
+# $NetBSD: Makefile,v 1.28 2008/09/15 08:34:44 taca Exp $
 
-DISTNAME=	rdtool-0.6.20
+DISTNAME=	rdtool-0.6.22
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
-PKGREVISION=	1
 CATEGORIES=	textproc ruby
-MASTER_SITES=	http://www.moonwolf.com/ruby/archive/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/33346/
 
 MAINTAINER=	taca@NetBSD.org
-HOMEPAGE=	http://trac.moonwolf.com/rdtool/wiki/
+HOMEPAGE=	http://rubyforge.org/projects/rdtool/
 COMMENT=	RD (Ruby Document) converter to HTML/man/etc
 
 PKG_DESTDIR_SUPPORT=	user-destdir
