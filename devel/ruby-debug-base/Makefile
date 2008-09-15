@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2008/04/14 21:33:01 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2008/09/15 09:03:58 taca Exp $
 
-DISTNAME=	ruby-debug-base-0.10.1
+DISTNAME=	ruby-debug-base-0.10.2
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 
