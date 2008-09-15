@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.2 2008/06/22 16:00:58 taca Exp $
+# $NetBSD: Makefile,v 1.3 2008/09/15 08:55:18 taca Exp $
 
-DISTNAME=	flexmock-0.8.2
+DISTNAME=	flexmock-0.8.3
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 
