@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2008/09/15 11:50:06 joerg Exp $
+# $NetBSD: Makefile,v 1.36 2008/09/15 14:53:12 joerg Exp $
 #
 
 DISTNAME=	Trac-0.11.1
@@ -27,7 +27,7 @@ DEPENDS+=	${PYPKGPREFIX}-sqlite2>=2:../../databases/py-sqlite2
 .endif
 .if !empty(PKG_OPTIONS:Msqlite3)
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
-PKG_VERSIONS_ACCEPTED=	25
+PYTHON_VERSIONS_ACCEPTED=	25
 .endif
 .if !empty(PKG_OPTIONS:Mpgsql)
 DEPENDS+=	${PYPKGPREFIX}-PgSQL>=2.4:../../databases/py-PgSQL
