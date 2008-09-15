@@ -1,0 +1,111 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/15 13:15:46 jmcneill Exp $
+
+--- src/rtctimer.c.orig	2003-10-27 09:49:39.000000000 -0500
++++ src/rtctimer.c
+@@ -27,7 +27,9 @@
+ #include <fcntl.h>
+ #include <math.h>
+ #include <sys/ioctl.h>
++#ifdef __linux__
+ #include <linux/rtc.h>
++#endif
+ #include "rtctimer.h"
+ 
+ struct rtctimer_s
+@@ -41,6 +43,7 @@ struct rtctimer_s
+ 
+ rtctimer_t *rtctimer_new( int verbose )
+ {
++#ifdef __linux__
+     rtctimer_t *rtctimer = malloc( sizeof( rtctimer_t ) );
+     if( !rtctimer ) return 0;
+ 
+@@ -74,17 +77,23 @@ rtctimer_t *rtctimer_new( int verbose )
+     rtctimer->current_hz = 0;
+     rtctimer->usecs = 0;
+     return rtctimer;
++#else
++    return NULL;
++#endif
+ }
+ 
+ void rtctimer_delete( rtctimer_t *rtctimer )
+ {
++#ifdef __linux__
+     rtctimer_stop_clock( rtctimer );
+     close( rtctimer->rtc_fd );
+     free( rtctimer );
++#endif
+ }
+ 
+ int rtctimer_next_tick( rtctimer_t *rtctimer )
+ {
++#ifdef __linux__
+     unsigned long rtc_data;
+     struct pollfd pfd;
+     pfd.fd = rtctimer->rtc_fd;
+@@ -108,11 +117,13 @@ again:
+     }
+ 
+     read( rtctimer->rtc_fd, &rtc_data, sizeof( rtc_data ) );
++#endif
+     return 1;
+ }
+ 
+ int rtctimer_set_interval( rtctimer_t *rtctimer, int hz )
+ {
++#ifdef __linux__
+     int restart;
+ 
+     if( hz == rtctimer->current_hz ) {
+@@ -136,11 +147,13 @@ int rtctimer_set_interval( rtctimer_t *r
+         rtctimer_start_clock( rtctimer );
+     }
+ 
++#endif
+     return 1;
+ }
+ 
+ int rtctimer_start_clock( rtctimer_t *rtctimer )
+ {
++#ifdef __linux__
+     if( !rtctimer->rtc_running ) {
+         if( ioctl( rtctimer->rtc_fd, RTC_PIE_ON, 0 ) < 0 ) {
+             if( rtctimer->verbose ) {
+@@ -152,10 +165,12 @@ int rtctimer_start_clock( rtctimer_t *rt
+         rtctimer->rtc_running = 1;
+     }
+     return rtctimer->rtc_running;
++#endif
+ }
+ 
+ int rtctimer_stop_clock( rtctimer_t *rtctimer )
+ {
++#ifdef __linux__
+     int was_running = rtctimer->rtc_running;
+ 
+     if( rtctimer->rtc_running ) {
+@@ -170,16 +185,23 @@ int rtctimer_stop_clock( rtctimer_t *rtc
+     }
+ 
+     return was_running;
++#else
++    return 0;
++#endif
+ }
+ 
+ int rtctimer_get_resolution( rtctimer_t *rtctimer )
+ {
++#ifdef __linux__
+     return rtctimer->current_hz;
++#endif
+ }
+ 
+ int rtctimer_get_usecs( rtctimer_t *rtctimer )
+ {
++#ifdef __linux__
+     return rtctimer->usecs;
++#endif
+ }
+ 
+ int set_realtime_priority( int max )
