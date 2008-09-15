@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2265 2008/09/15 10:13:22 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2266 2008/09/15 11:54:44 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3836,3 +3836,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/typolight version 2.6.0 [taca 2008-09-15]
 	Added www/typolight-example version 2.6.0 [taca 2008-09-15]
 	Added www/typolight-translations version 20080915 [taca 2008-09-15]
+	Updated lang/pear to 1.5.4nb2 [adrianp 2008-09-15]
