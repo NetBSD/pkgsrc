@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.43 2008/09/13 21:19:34 jmcneill Exp $
+# $NetBSD: Makefile,v 1.44 2008/09/15 21:24:00 sborrill Exp $
 
 DISTNAME=	ffmpeg-${DISTVERSION}
 PKGNAME=	ffmpeg-${DISTVERSION:S/-//g}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	multimedia
 MASTER_SITES=	${MASTER_SITE_FREEBSD}
 EXTRACT_SUFX=	.tar.bz2
@@ -49,6 +49,7 @@ CONFIGURE_ARGS+=	--mandir=${PREFIX}/${PKGMANDIR} \
 			--enable-postproc \
 			--enable-pthreads \
 			--enable-shared \
+			--enable-swscale \
 			--enable-libvorbis \
 			--enable-libmp3lame \
 			--disable-stripping

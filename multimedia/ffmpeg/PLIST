@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/09/12 13:44:23 sborrill Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/09/15 21:24:00 sborrill Exp $
 bin/ffmpeg
 bin/ffserver
 ${PLIST.sdl}bin/ffplay
@@ -28,8 +28,8 @@ include/libavutil/random.h
 include/libavutil/rational.h
 include/libavutil/sha1.h
 include/libpostproc/postprocess.h
-${PLIST.swscale}include/libswscale/rgb2rgb.h
-${PLIST.swscale}include/libswscale/swscale.h
+include/libswscale/rgb2rgb.h
+include/libswscale/swscale.h
 lib/libavcodec.a
 lib/libavcodec.so
 lib/libavcodec.so.51
@@ -54,17 +54,17 @@ lib/libpostproc.a
 lib/libpostproc.so
 lib/libpostproc.so.51
 lib/libpostproc.so.51.1.0
-${PLIST.swscale}lib/libswscale.a
-${PLIST.swscale}lib/libswscale.so
-${PLIST.swscale}lib/libswscale.so.0
-${PLIST.swscale}lib/libswscale.so.0.5.1
+lib/libswscale.a
+lib/libswscale.so
+lib/libswscale.so.0
+lib/libswscale.so.0.5.1
 lib/pkgconfig/libavcodec.pc
 lib/pkgconfig/libavdevice.pc
 lib/pkgconfig/libavfilter.pc
 lib/pkgconfig/libavformat.pc
 lib/pkgconfig/libavutil.pc
 lib/pkgconfig/libpostproc.pc
-${PLIST.swscale}lib/pkgconfig/libswscale.pc
+lib/pkgconfig/libswscale.pc
 man/man1/ffmpeg.1
 man/man1/ffserver.1
 share/doc/ffmpeg/README
