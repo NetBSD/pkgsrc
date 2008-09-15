@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.13 2008/06/20 04:30:33 minskim Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/09/15 05:50:42 minskim Exp $
 ${GEM_HOME}/cache/actionpack-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGELOG
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -318,6 +318,7 @@ ${GEM_LIBDIR}/test/fixtures/test/hello_xml_world.builder
 ${GEM_LIBDIR}/test/fixtures/test/list.erb
 ${GEM_LIBDIR}/test/fixtures/test/non_erb_block_content_for.builder
 ${GEM_LIBDIR}/test/fixtures/test/potential_conflicts.erb
+${GEM_LIBDIR}/test/fixtures/test/render_file_from_template.html.erb
 ${GEM_LIBDIR}/test/fixtures/test/render_file_with_ivar.erb
 ${GEM_LIBDIR}/test/fixtures/test/render_file_with_locals.erb
 ${GEM_LIBDIR}/test/fixtures/test/render_to_string_test.erb
@@ -331,6 +332,7 @@ ${GEM_LIBDIR}/test/template/asset_tag_helper_test.rb
 ${GEM_LIBDIR}/test/template/atom_feed_helper_test.rb
 ${GEM_LIBDIR}/test/template/benchmark_helper_test.rb
 ${GEM_LIBDIR}/test/template/date_helper_test.rb
+${GEM_LIBDIR}/test/template/deprecated_erb_variable_test.rb
 ${GEM_LIBDIR}/test/template/erb_util_test.rb
 ${GEM_LIBDIR}/test/template/form_helper_test.rb
 ${GEM_LIBDIR}/test/template/form_options_helper_test.rb
