@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2008/04/04 15:30:00 jlam Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/09/15 04:54:48 minskim Exp $
 bin/rake
-man/man1/rake.1
 ${GEM_HOME}/cache/rake-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/MIT-LICENSE
@@ -29,6 +28,8 @@ ${GEM_LIBDIR}/doc/release_notes/rake-0.7.0.rdoc
 ${GEM_LIBDIR}/doc/release_notes/rake-0.7.1.rdoc
 ${GEM_LIBDIR}/doc/release_notes/rake-0.7.2.rdoc
 ${GEM_LIBDIR}/doc/release_notes/rake-0.7.3.rdoc
+${GEM_LIBDIR}/doc/release_notes/rake-0.8.0.rdoc
+${GEM_LIBDIR}/doc/release_notes/rake-0.8.2.rdoc
 ${GEM_LIBDIR}/install.rb
 ${GEM_LIBDIR}/lib/rake.rb
 ${GEM_LIBDIR}/lib/rake/classic_namespace.rb
@@ -49,7 +50,8 @@ ${GEM_LIBDIR}/lib/rake/runtest.rb
 ${GEM_LIBDIR}/lib/rake/tasklib.rb
 ${GEM_LIBDIR}/lib/rake/testtask.rb
 ${GEM_LIBDIR}/test/capture_stdout.rb
-${GEM_LIBDIR}/test/contrib/testsys.rb
+${GEM_LIBDIR}/test/check_expansion.rb
+${GEM_LIBDIR}/test/contrib/test_sys.rb
 ${GEM_LIBDIR}/test/data/chains/Rakefile
 ${GEM_LIBDIR}/test/data/default/Rakefile
 ${GEM_LIBDIR}/test/data/dryrun/Rakefile
@@ -65,6 +67,7 @@ ${GEM_LIBDIR}/test/data/statusreturn/Rakefile
 ${GEM_LIBDIR}/test/data/unittest/Rakefile
 ${GEM_LIBDIR}/test/filecreation.rb
 ${GEM_LIBDIR}/test/functional.rb
+${GEM_LIBDIR}/test/in_environment.rb
 ${GEM_LIBDIR}/test/rake_test_setup.rb
 ${GEM_LIBDIR}/test/reqfile.rb
 ${GEM_LIBDIR}/test/reqfile2.rb
@@ -91,10 +94,12 @@ ${GEM_LIBDIR}/test/test_require.rb
 ${GEM_LIBDIR}/test/test_rules.rb
 ${GEM_LIBDIR}/test/test_task_arguments.rb
 ${GEM_LIBDIR}/test/test_task_manager.rb
+${GEM_LIBDIR}/test/test_tasklib.rb
 ${GEM_LIBDIR}/test/test_tasks.rb
 ${GEM_LIBDIR}/test/test_test_task.rb
 ${GEM_LIBDIR}/test/test_top_level_functions.rb
 ${GEM_HOME}/specifications/rake-${PKGVERSION}.gemspec
+man/man1/rake.1
 @dirrm ${GEM_LIBDIR}/test/data/unittest
 @dirrm ${GEM_LIBDIR}/test/data/statusreturn
 @dirrm ${GEM_LIBDIR}/test/data/rbext
