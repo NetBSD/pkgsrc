@@ -1,0 +1,98 @@
+@comment $NetBSD: PLIST.sr,v 1.1.1.1 2008/09/15 09:59:10 taca Exp $
+${TL_WEBDIR}/system/modules/backend/languages/sr/.htaccess
+${TL_WEBDIR}/system/modules/backend/languages/sr/default.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/countries.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/explain.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/languages.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/modules.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/tl_article.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/tl_content.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/tl_files.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/tl_flash.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/tl_form.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/tl_form_field.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/tl_layout.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/tl_log.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/tl_maintenance.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/tl_member.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/tl_member_group.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/tl_module.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/tl_page.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/tl_settings.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/tl_style.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/tl_style_sheet.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/tl_undo.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/tl_user.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/tl_user_group.php
+${TL_WEBDIR}/system/modules/backend/languages/sr/tl_task.php
+${TL_WEBDIR}/system/modules/development/languages/sr/.htaccess
+${TL_WEBDIR}/system/modules/development/languages/sr/modules.php
+${TL_WEBDIR}/system/modules/development/languages/sr/tl_extension.php
+${TL_WEBDIR}/system/modules/development/languages/sr/tl_labels.php
+${TL_WEBDIR}/system/modules/frontend/languages/sr/.htaccess
+${TL_WEBDIR}/system/modules/frontend/languages/sr/default.php
+${TL_WEBDIR}/system/modules/frontend/languages/sr/modules.php
+${TL_WEBDIR}/system/modules/news/languages/sr/.htaccess
+${TL_WEBDIR}/system/modules/news/languages/sr/default.php
+${TL_WEBDIR}/system/modules/news/languages/sr/modules.php
+${TL_WEBDIR}/system/modules/news/languages/sr/tl_module.php
+${TL_WEBDIR}/system/modules/news/languages/sr/tl_news.php
+${TL_WEBDIR}/system/modules/news/languages/sr/tl_news_archive.php
+${TL_WEBDIR}/system/modules/news/languages/sr/tl_news_comments.php
+${TL_WEBDIR}/system/modules/news/languages/sr/tl_user.php
+${TL_WEBDIR}/system/modules/news/languages/sr/tl_user_group.php
+${TL_WEBDIR}/system/modules/registration/languages/sr/.htaccess
+${TL_WEBDIR}/system/modules/registration/languages/sr/default.php
+${TL_WEBDIR}/system/modules/registration/languages/sr/modules.php
+${TL_WEBDIR}/system/modules/registration/languages/sr/tl_module.php
+${TL_WEBDIR}/system/modules/rss_reader/languages/sr/.htaccess
+${TL_WEBDIR}/system/modules/rss_reader/languages/sr/modules.php
+${TL_WEBDIR}/system/modules/rss_reader/languages/sr/tl_module.php
+${TL_WEBDIR}/system/modules/calendar/languages/sr/.htaccess
+${TL_WEBDIR}/system/modules/calendar/languages/sr/default.php
+${TL_WEBDIR}/system/modules/calendar/languages/sr/modules.php
+${TL_WEBDIR}/system/modules/calendar/languages/sr/tl_calendar.php
+${TL_WEBDIR}/system/modules/calendar/languages/sr/tl_calendar_events.php
+${TL_WEBDIR}/system/modules/calendar/languages/sr/tl_module.php
+${TL_WEBDIR}/system/modules/calendar/languages/sr/tl_user.php
+${TL_WEBDIR}/system/modules/calendar/languages/sr/tl_user_group.php
+${TL_WEBDIR}/system/modules/comments/languages/sr/.htaccess
+${TL_WEBDIR}/system/modules/comments/languages/sr/modules.php
+${TL_WEBDIR}/system/modules/comments/languages/sr/tl_comments.php
+${TL_WEBDIR}/system/modules/comments/languages/sr/tl_content.php
+${TL_WEBDIR}/system/modules/newsletter/languages/sr/.htaccess
+${TL_WEBDIR}/system/modules/newsletter/languages/sr/default.php
+${TL_WEBDIR}/system/modules/newsletter/languages/sr/modules.php
+${TL_WEBDIR}/system/modules/newsletter/languages/sr/tl_module.php
+${TL_WEBDIR}/system/modules/newsletter/languages/sr/tl_newsletter.php
+${TL_WEBDIR}/system/modules/newsletter/languages/sr/tl_newsletter_channel.php
+${TL_WEBDIR}/system/modules/newsletter/languages/sr/tl_newsletter_recipients.php
+${TL_WEBDIR}/system/modules/newsletter/languages/sr/tl_member.php
+${TL_WEBDIR}/system/modules/newsletter/languages/sr/tl_user.php
+${TL_WEBDIR}/system/modules/newsletter/languages/sr/tl_user_group.php
+${TL_WEBDIR}/system/modules/tpl_editor/languages/sr/.htaccess
+${TL_WEBDIR}/system/modules/tpl_editor/languages/sr/modules.php
+${TL_WEBDIR}/system/modules/tpl_editor/languages/sr/tl_templates.php
+${TL_WEBDIR}/system/modules/listing/languages/sr/.htaccess
+${TL_WEBDIR}/system/modules/listing/languages/sr/default.php
+${TL_WEBDIR}/system/modules/listing/languages/sr/modules.php
+${TL_WEBDIR}/system/modules/listing/languages/sr/tl_module.php
+${TL_WEBDIR}/system/modules/pun_bridge/languages/sr/.htaccess
+${TL_WEBDIR}/system/modules/pun_bridge/languages/sr/modules.php
+${TL_WEBDIR}/system/modules/dfGallery/languages/sr/.htaccess
+${TL_WEBDIR}/system/modules/dfGallery/languages/sr/default.php
+${TL_WEBDIR}/system/modules/dfGallery/languages/sr/modules.php
+${TL_WEBDIR}/system/modules/dfGallery/languages/sr/tl_content.php
+@dirrm ${TL_WEBDIR}/system/modules/dfGallery/languages/sr
+@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages/sr
+@dirrm ${TL_WEBDIR}/system/modules/listing/languages/sr
+@dirrm ${TL_WEBDIR}/system/modules/tpl_editor/languages/sr
+@dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/sr
+@dirrm ${TL_WEBDIR}/system/modules/comments/languages/sr
+@dirrm ${TL_WEBDIR}/system/modules/calendar/languages/sr
+@dirrm ${TL_WEBDIR}/system/modules/rss_reader/languages/sr
+@dirrm ${TL_WEBDIR}/system/modules/registration/languages/sr
+@dirrm ${TL_WEBDIR}/system/modules/news/languages/sr
+@dirrm ${TL_WEBDIR}/system/modules/frontend/languages/sr
+@dirrm ${TL_WEBDIR}/system/modules/development/languages/sr
+@dirrm ${TL_WEBDIR}/system/modules/backend/languages/sr
