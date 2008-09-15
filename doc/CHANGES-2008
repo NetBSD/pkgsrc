@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2264 2008/09/15 09:33:01 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2265 2008/09/15 10:13:22 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3833,3 +3833,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/ruby-eventmachine to 0.12.0 [taca 2008-09-15]
 	Updated databases/ruby-datamapper to 0.9.5 [taca 2008-09-15]
 	Updated databases/ruby-sqlite3 to 1.2.4 [taca 2008-09-15]
+	Added www/typolight version 2.6.0 [taca 2008-09-15]
+	Added www/typolight-example version 2.6.0 [taca 2008-09-15]
+	Added www/typolight-translations version 20080915 [taca 2008-09-15]
