@@ -1,0 +1,6 @@
+Jifty is a full-stack web framework. It provides an optional REST
+interface for applications. Using this module, you can interact with
+that REST interface to write client-side utilities.  You can use this
+module directly, but you'll be better off subclassing it, such as what
+we've done for Net::Hiveminder.  This module also provides a number of
+convenient methods for writing short scripts.
