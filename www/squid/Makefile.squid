@@ -1,4 +1,8 @@
-# $NetBSD: Makefile.squid,v 1.2 2008/09/15 17:30:24 taca Exp $
+# $NetBSD: Makefile.squid,v 1.3 2008/09/15 17:33:26 taca Exp $
+#
+# used by www/squid26/Makefile
+# used by www/squid27/Makefile
+# used by www/squid30/Makefile
 
 .include "Makefile.common"
 
