@@ -1,24 +1,23 @@
-$NetBSD: patch-ah,v 1.3 2007/08/15 02:03:06 markd Exp $
+$NetBSD: patch-ah,v 1.4 2008/09/15 16:30:57 ahoka Exp $
 
---- source/aimk.site.orig	2007-01-30 22:41:51.000000000 +1300
-+++ source/aimk.site
-@@ -51,7 +51,7 @@ setenv TMPDIR /tmp
- # OPENSSL_HOME the directory where the include and lib directory of openssl
+--- source/aimk.site.orig	Fri Feb 16 17:02:44 2007
++++ source/aimk.site	Fri May 30 11:07:25 2008
+@@ -72,7 +72,7 @@
  # is installed
  #
--set OPENSSL_HOME = /vol2/tools/SW/openssl-0.9.7l/$buildarch
+ set OPENSSL_SOVERSION = 0.9.7l
+-set OPENSSL_HOME = /vol2/tools/SW/openssl-0.9.7l-origin/$buildarch
 +set OPENSSL_HOME = @ssl_prefix@
  
+ 
  # 
- # POSTGRES_HOME the directory where the include and lib directory of 
-@@ -63,11 +63,11 @@ set POSTGRES_HOME = /vol2/tools/SW/postg
+@@ -85,10 +85,10 @@
  # BERKELEYDB_HOME the directory where the include and lib directory of
  # Berkeley DB is installed
  #
--set BERKELEYDB_HOME = /vol2/SW/db-4.2.52/$buildarch
-+set BERKELEYDB_HOME = @db4_prefix@
- #set BERKELEYDB_HOME = /vol2/SW/db-4.3.3/$buildarch
+-set BERKELEYDB_HOME = /vol2/SW/db-4.4.20/$buildarch
 -set BDB_INCLUDE_SUBDIR =
++set BERKELEYDB_HOME = @db4_prefix@
 +set BDB_INCLUDE_SUBDIR = db4
  set BDB_LIB_SUBDIR =
 -set BDB_LIB_SUFFIX =
@@ -26,7 +25,7 @@ $NetBSD: patch-ah,v 1.3 2007/08/15 02:03:06 markd Exp $
  
  # 
  # KRB_HOME the directory where the include and lib directory of kerberos is
-@@ -96,7 +96,7 @@ set SWIG = /vol2/tools/SW/swig-1.3.22/$b
+@@ -117,7 +117,7 @@
  #
  # PERL path
  #
