@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2008/06/20 04:35:36 minskim Exp $
+$NetBSD: distinfo,v 1.10 2008/09/15 05:58:42 minskim Exp $
 
-SHA1 (rails-2.1.0.gem) = 7c5ab9edba65923d7332d842217e0e7fc6b66404
-RMD160 (rails-2.1.0.gem) = 321cf6fc1eee86183eaa45aa098631d3ea20bad6
-Size (rails-2.1.0.gem) = 204288 bytes
+SHA1 (rails-2.1.1.gem) = df16906481cd5602ff62df61254f28ab7e485882
+RMD160 (rails-2.1.1.gem) = 68f05b543dd67a1efcfb0e7834395b689d67383d
+Size (rails-2.1.1.gem) = 205312 bytes
