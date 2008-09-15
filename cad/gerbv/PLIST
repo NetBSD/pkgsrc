@@ -1,5 +1,8 @@
-@comment $NetBSD: PLIST,v 1.6 2008/02/18 22:40:36 dmcmahill Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/09/15 02:25:54 dmcmahill Exp $
 bin/gerbv
+include/gerbv-2.1.0/gerbv.h
+lib/libgerbv.la
+lib/pkgconfig/libgerbv.pc
 man/man1/gerbv.1
 share/applications/gerbv.desktop
 share/gerbv/scheme/gerb-debug.scm
