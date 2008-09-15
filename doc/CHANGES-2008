@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2250 2008/09/14 23:37:55 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2251 2008/09/15 00:09:44 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3801,3 +3801,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Date-Manip to 5.54nb1 [he 2008-09-14]
 	Updated www/p5-libwww to 5.814 [he 2008-09-15]
 	Added devel/p5-Tie-RefHash-Weak version 0.08 [seb 2008-09-14]
+	Added devel/p5-Devel-Events-Objects version 0.05 [seb 2008-09-15]
