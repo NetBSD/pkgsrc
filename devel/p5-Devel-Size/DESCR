@@ -1,0 +1,2 @@
+The Perl 5 module Devel::Size figures out the real size of Perl
+variables in bytes, as accurately as possible.
