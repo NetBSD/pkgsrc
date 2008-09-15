@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/15 18:13:29 taca Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/15 18:14:15 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -7,7 +7,7 @@ CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typo3/}
 DISTFILES=	${TYPO3NAME}${EXTRACT_SUFX} ${SITESRC}${EXTRACT_SUFX}
 
-MAINTAINER=	pkg-users@NetBSD.org
+MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://typo3.com/
 COMMENT=	The typo3 content management system
 
