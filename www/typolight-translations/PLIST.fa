@@ -1,0 +1,105 @@
+@comment $NetBSD: PLIST.fa,v 1.1.1.1 2008/09/15 09:59:09 taca Exp $
+${TL_WEBDIR}/system/modules/tpl_editor/languages/fa/modules.php
+${TL_WEBDIR}/system/modules/tpl_editor/languages/fa/.htaccess
+${TL_WEBDIR}/system/modules/tpl_editor/languages/fa/tl_templates.php
+${TL_WEBDIR}/system/modules/frontend/languages/fa/modules.php
+${TL_WEBDIR}/system/modules/frontend/languages/fa/default.php
+${TL_WEBDIR}/system/modules/frontend/languages/fa/.htaccess
+${TL_WEBDIR}/system/modules/listing/languages/fa/modules.php
+${TL_WEBDIR}/system/modules/listing/languages/fa/default.php
+${TL_WEBDIR}/system/modules/listing/languages/fa/tl_module.php
+${TL_WEBDIR}/system/modules/listing/languages/fa/.htaccess
+${TL_WEBDIR}/system/modules/rss_reader/languages/fa/modules.php
+${TL_WEBDIR}/system/modules/rss_reader/languages/fa/tl_module.php
+${TL_WEBDIR}/system/modules/rss_reader/languages/fa/.htaccess
+${TL_WEBDIR}/system/modules/pun_bridge/languages/fa/modules.php
+${TL_WEBDIR}/system/modules/pun_bridge/languages/fa/.htaccess
+${TL_WEBDIR}/system/modules/calendar/languages/fa/modules.php
+${TL_WEBDIR}/system/modules/calendar/languages/fa/tl_user.php
+${TL_WEBDIR}/system/modules/calendar/languages/fa/default.php
+${TL_WEBDIR}/system/modules/calendar/languages/fa/tl_user_group.php
+${TL_WEBDIR}/system/modules/calendar/languages/fa/tl_module.php
+${TL_WEBDIR}/system/modules/calendar/languages/fa/.htaccess
+${TL_WEBDIR}/system/modules/calendar/languages/fa/tl_calendar.php
+${TL_WEBDIR}/system/modules/calendar/languages/fa/tl_calendar_events.php
+${TL_WEBDIR}/system/modules/dfGallery/languages/fa/modules.php
+${TL_WEBDIR}/system/modules/dfGallery/languages/fa/default.php
+${TL_WEBDIR}/system/modules/dfGallery/languages/fa/.htaccess
+${TL_WEBDIR}/system/modules/dfGallery/languages/fa/tl_content.php
+${TL_WEBDIR}/system/modules/comments/languages/fa/tl_comments.php
+${TL_WEBDIR}/system/modules/comments/languages/fa/modules.php
+${TL_WEBDIR}/system/modules/comments/languages/fa/.htaccess
+${TL_WEBDIR}/system/modules/comments/languages/fa/tl_content.php
+${TL_WEBDIR}/system/modules/development/languages/fa/modules.php
+${TL_WEBDIR}/system/modules/development/languages/fa/tl_labels.php
+${TL_WEBDIR}/system/modules/development/languages/fa/.htaccess
+${TL_WEBDIR}/system/modules/development/languages/fa/tl_extension.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/tl_style_sheet.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/modules.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/tl_user.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/tl_member_group.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/explain.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/default.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/countries.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/tl_style.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/tl_user_group.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/tl_member.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/tl_article.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/languages.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/tl_page.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/tl_settings.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/tl_module.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/.htaccess
+${TL_WEBDIR}/system/modules/backend/languages/fa/tl_form.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/tl_maintenance.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/tl_undo.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/tl_files.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/tl_flash.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/tl_task.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/tl_layout.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/tl_form_field.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/tl_content.php
+${TL_WEBDIR}/system/modules/backend/languages/fa/tl_log.php
+${TL_WEBDIR}/system/modules/news/languages/fa/modules.php
+${TL_WEBDIR}/system/modules/news/languages/fa/tl_user.php
+${TL_WEBDIR}/system/modules/news/languages/fa/tl_news_archive.php
+${TL_WEBDIR}/system/modules/news/languages/fa/default.php
+${TL_WEBDIR}/system/modules/news/languages/fa/tl_user_group.php
+${TL_WEBDIR}/system/modules/news/languages/fa/tl_news_comments.php
+${TL_WEBDIR}/system/modules/news/languages/fa/tl_news.php
+${TL_WEBDIR}/system/modules/news/languages/fa/tl_module.php
+${TL_WEBDIR}/system/modules/news/languages/fa/.htaccess
+${TL_WEBDIR}/system/modules/newsletter/languages/fa/modules.php
+${TL_WEBDIR}/system/modules/newsletter/languages/fa/tl_newsletter.php
+${TL_WEBDIR}/system/modules/newsletter/languages/fa/tl_user.php
+${TL_WEBDIR}/system/modules/newsletter/languages/fa/default.php
+${TL_WEBDIR}/system/modules/newsletter/languages/fa/tl_user_group.php
+${TL_WEBDIR}/system/modules/newsletter/languages/fa/tl_member.php
+${TL_WEBDIR}/system/modules/newsletter/languages/fa/tl_newsletter_channel.php
+${TL_WEBDIR}/system/modules/newsletter/languages/fa/tl_module.php
+${TL_WEBDIR}/system/modules/newsletter/languages/fa/.htaccess
+${TL_WEBDIR}/system/modules/newsletter/languages/fa/tl_newsletter_recipients.php
+${TL_WEBDIR}/system/modules/faq/languages/fa/modules.php
+${TL_WEBDIR}/system/modules/faq/languages/fa/default.php
+${TL_WEBDIR}/system/modules/faq/languages/fa/tl_faq.php
+${TL_WEBDIR}/system/modules/faq/languages/fa/tl_module.php
+${TL_WEBDIR}/system/modules/faq/languages/fa/.htaccess
+${TL_WEBDIR}/system/modules/faq/languages/fa/tl_faq_category.php
+${TL_WEBDIR}/system/modules/registration/languages/fa/modules.php
+${TL_WEBDIR}/system/modules/registration/languages/fa/default.php
+${TL_WEBDIR}/system/modules/registration/languages/fa/tl_module.php
+${TL_WEBDIR}/system/modules/registration/languages/fa/.htaccess
+@dirrm ${TL_WEBDIR}/system/modules/registration/languages/fa
+@dirrm ${TL_WEBDIR}/system/modules/faq/languages/fa
+@dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/fa
+@dirrm ${TL_WEBDIR}/system/modules/news/languages/fa
+@dirrm ${TL_WEBDIR}/system/modules/backend/languages/fa
+@dirrm ${TL_WEBDIR}/system/modules/development/languages/fa
+@dirrm ${TL_WEBDIR}/system/modules/comments/languages/fa
+@dirrm ${TL_WEBDIR}/system/modules/dfGallery/languages/fa
+@dirrm ${TL_WEBDIR}/system/modules/calendar/languages/fa
+@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages/fa
+@dirrm ${TL_WEBDIR}/system/modules/rss_reader/languages/fa
+@dirrm ${TL_WEBDIR}/system/modules/listing/languages/fa
+@dirrm ${TL_WEBDIR}/system/modules/frontend/languages/fa
+@dirrm ${TL_WEBDIR}/system/modules/tpl_editor/languages/fa
