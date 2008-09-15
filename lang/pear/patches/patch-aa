@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.2 2008/09/02 17:37:59 adrianp Exp $
+$NetBSD: patch-aa,v 1.3 2008/09/15 11:54:21 adrianp Exp $
 
---- install/go-pear.php.orig	2007-04-15 23:09:15.000000000 +0100
+--- install/go-pear.php.orig	2008-09-15 12:40:50.000000000 +0100
 +++ install/go-pear.php
 @@ -311,6 +311,8 @@ if (WEBINSTALLER) {
      $install_pfc = $_SESSION['go-pear']['install_pfc'];
@@ -79,11 +79,20 @@ $NetBSD: patch-aa,v 1.2 2008/09/02 17:37:59 adrianp Exp $
  
  if (WEBINSTALLER || isset($_SERVER['argv'][1]) && $_SERVER['argv'][1] == 'local') {
 -    $config = &PEAR_Config::singleton($prefix."/pear.conf", '');
-+    $config = &PEAR_Config::singleton("@PKG_SYSCONFDIR@"."/pear.conf", '');
++    $config = &PEAR_Config::singleton("@WRKSRC@"."/pear.conf", '');
  } else {
      $config = &PEAR_Config::singleton();
  }
-@@ -814,6 +830,8 @@ displayHTMLProgress($progress = 99);
+@@ -810,10 +826,17 @@ foreach ($tarball as $pkg => $src) {
+     displayHTMLProgress($progress += round(29 / count($tarball)));
+ }
+ 
++$config->set('download_dir', '/tmp' . '/download');
++$config->set('temp_dir', '/tmp');
++$config->store();
++$install = &PEAR_Command::factory('install', $config);
++
+ displayHTMLProgress($progress = 99);
  
  // Base installation finished
  
@@ -92,7 +101,7 @@ $NetBSD: patch-aa,v 1.2 2008/09/02 17:37:59 adrianp Exp $
  ini_restore("include_path");
  
  if (!WEBINSTALLER) {
-@@ -971,6 +989,9 @@ if ( WINDOWS ) {
+@@ -971,6 +994,9 @@ if ( WINDOWS ) {
  if (WINDOWS && !WEBINSTALLER) {
      win32CreateRegEnv();
  }
@@ -102,7 +111,7 @@ $NetBSD: patch-aa,v 1.2 2008/09/02 17:37:59 adrianp Exp $
  // Set of functions following
  
  // {{{ download_url()
-@@ -1367,16 +1388,18 @@ function detect_install_dirs($_prefix = 
+@@ -1367,16 +1393,18 @@ function detect_install_dirs($_prefix = 
          }
      } else {
          if ($_prefix === null) {
@@ -126,7 +135,7 @@ $NetBSD: patch-aa,v 1.2 2008/09/02 17:37:59 adrianp Exp $
  
          // check if the user has installed PHP with PHP or GNU layout
          if (@is_dir("$prefix/lib/php/.registry")) {
-@@ -1389,6 +1412,9 @@ function detect_install_dirs($_prefix = 
+@@ -1389,6 +1417,9 @@ function detect_install_dirs($_prefix = 
          } elseif (@is_dir("$prefix/share/php/.registry")) {
              $php_dir = '$prefix/share/php';
          }
@@ -136,7 +145,7 @@ $NetBSD: patch-aa,v 1.2 2008/09/02 17:37:59 adrianp Exp $
      }
  }
  
-@@ -2494,3 +2520,4 @@ php.ini <$pathIni> include_path updated.
+@@ -2494,3 +2525,4 @@ php.ini <$pathIni> include_path updated.
      }
      return true;
  }

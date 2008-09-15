@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/09/02 17:37:59 adrianp Exp $
+# $NetBSD: Makefile,v 1.7 2008/09/15 11:54:21 adrianp Exp $
 #
 
 DISTNAME=	PEAR-1.5.4
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${PHP_PKG_PREFIX}-${DISTNAME:S/PEAR/pear/}
 CATEGORIES=	lang
 MASTER_SITES=	http://download.pear.php.net/package/
@@ -55,7 +55,6 @@ SUBST_STAGE.config=	post-patch
 SUBST_FILES.config=	install/go-pear.php
 SUBST_SED.config=	-e "s|@WRKSRC@|${WRKSRC}|g"
 SUBST_SED.config+=	-e "s|@PREFIX@|${PREFIX}|g"
-SUBST_SED.config+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.config=	Fixing configuration files.
 
 SUBST_CLASSES+=		pear
@@ -91,8 +90,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${PREFIX}/share/examples/pear
 	${PREFIX}/bin/php ${WRKSRC}/install/go-pear.php local
 	${INSTALL_SCRIPT} ${WRKSRC}/pear.sh ${PREFIX}/bin/pear
-	${CP} ${PKG_SYSCONFDIR}/pear.conf ${PREFIX}/share/examples/pear
-	${RM} ${PKG_SYSCONFDIR}/pear.conf
+	${CP} ${WRKSRC}/pear.conf ${PREFIX}/share/examples/pear/pear.conf
 
 .include "${PHPPKGSRCDIR}/buildlink3.mk"
 
