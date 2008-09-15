@@ -1,51 +1,38 @@
-$NetBSD: patch-ab,v 1.7 2008/04/13 06:01:59 jlam Exp $
+$NetBSD: patch-ab,v 1.8 2008/09/15 08:43:44 taca Exp $
 
---- lib/rubygems/dependency_installer.rb.orig	2008-04-04 21:10:11.000000000 -0400
+--- lib/rubygems/dependency_installer.rb.orig	2008-06-21 04:55:40.000000000 +0900
 +++ lib/rubygems/dependency_installer.rb
-@@ -33,6 +33,7 @@ class Gem::DependencyInstaller
+@@ -37,6 +37,7 @@ class Gem::DependencyInstaller
    # :format_executable:: See Gem::Installer#initialize.
-   # :ignore_dependencies: Don't install any dependencies.
-   # :install_dir: See Gem::Installer#install.
+   # :ignore_dependencies:: Don't install any dependencies.
+   # :install_dir:: See Gem::Installer#install.
 +  # :install_root: See Gem::Installer#install.
-   # :security_policy: See Gem::Installer::new and Gem::Security.
-   # :wrappers: See Gem::Installer::new
-   def initialize(options = {})
-@@ -43,6 +44,7 @@ class Gem::DependencyInstaller
-     @format_executable = options[:format_executable]
-     @ignore_dependencies = options[:ignore_dependencies]
+   # :security_policy:: See Gem::Installer::new and Gem::Security.
+   # :wrappers:: See Gem::Installer::new
+ 
+@@ -56,10 +57,15 @@ class Gem::DependencyInstaller
+     @installed_gems = []
+ 
      @install_dir = options[:install_dir] || Gem.dir
+-    @cache_dir = options[:cache_dir] || @install_dir
 +    @install_root = options[:install_root]
-     @security_policy = options[:security_policy]
-     @wrappers = options[:wrappers]
-     @bin_dir = options[:bin_dir]
-@@ -177,7 +179,12 @@ class Gem::DependencyInstaller
- 
-     gather_dependencies
- 
--    spec_dir = File.join @install_dir, 'specifications'
 +    install_dir = @install_dir
 +    unless @install_root.nil? or @install_root == ""
 +      install_dir = File.join(@install_root, @install_dir)
 +    end
-+
-+    spec_dir = File.join install_dir, 'specifications'
-     source_index = Gem::SourceIndex.from_gems_in spec_dir
++    @cache_dir = options[:cache_dir] || install_dir
  
-     @gems_to_install.each do |spec|
-@@ -191,7 +198,7 @@ class Gem::DependencyInstaller
-       _, source_uri = @specs_and_sources.assoc spec
-       begin
-         local_gem_path = Gem::RemoteFetcher.fetcher.download spec, source_uri,
--                                                             @install_dir
-+                                                             install_dir
-       rescue Gem::RemoteFetcher::FetchError
-         next if @force
-         raise
-@@ -203,6 +210,7 @@ class Gem::DependencyInstaller
+     if options[:install_dir] then
+-      spec_dir = File.join @install_dir, 'specifications'
++      spec_dir = File.join install_dir, 'specifications'
+       @source_index = Gem::SourceIndex.from_gems_in spec_dir
+     else
+       @source_index = Gem.source_index
+@@ -237,6 +243,7 @@ class Gem::DependencyInstaller
                                  :format_executable => @format_executable,
                                  :ignore_dependencies => @ignore_dependencies,
                                  :install_dir => @install_dir,
 +                                :install_root => @install_root,
                                  :security_policy => @security_policy,
                                  :wrappers => @wrappers,
-                                 :bin_dir => @bin_dir
+                                 :bin_dir => @bin_dir,

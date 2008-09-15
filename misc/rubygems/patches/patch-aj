@@ -1,6 +1,6 @@
-$NetBSD: patch-aj,v 1.1 2008/06/19 14:52:36 taca Exp $
+$NetBSD: patch-aj,v 1.2 2008/09/15 08:43:44 taca Exp $
 
---- lib/rubygems/defaults.rb.orig	2008-03-09 12:42:07.000000000 +0900
+--- lib/rubygems/defaults.rb.orig	2008-06-05 11:34:47.000000000 +0900
 +++ lib/rubygems/defaults.rb
 @@ -9,7 +9,7 @@ module Gem
    # specified in the environment.

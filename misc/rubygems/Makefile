@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.21 2008/06/19 14:52:36 taca Exp $
+# $NetBSD: Makefile,v 1.22 2008/09/15 08:43:44 taca Exp $
 
-DISTNAME=	rubygems-1.1.1
-PKGREVISION=	2
+DISTNAME=	rubygems-1.2.0
 CATEGORIES=	misc ruby
-MASTER_SITES=	http://rubyforge.org/frs/download.php/35283/
+MASTER_SITES=	http://rubyforge.org/frs/download.php/38646/
 EXTRACT_SUFX=	.tgz
 
 MAINTAINER=	minskim@NetBSD.org
@@ -31,6 +30,13 @@ REQD_DIRS+=	${GEM_HOME}/doc
 REQD_DIRS+=	${GEM_HOME}/gems
 REQD_DIRS+=	${GEM_HOME}/specifications
 
+SUBST_CLASSES+=		conf
+SUBST_STAGE.conf=	pre-install
+SUBST_FILES.conf=	lib/rubygems/config_file.rb
+SUBST_SED.conf=		-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
+SUBST_MESSAGE.conf=	Fixing configuration files.
+
+
 # Generate a dynamic PLIST for the rubygems documentation directory.
 GENERATE_PLIST+=	\
 	${ECHO} "@comment The following lines are automatically generated." && \
@@ -48,9 +54,10 @@ GENERATE_PLIST+=	\
 INSTALL_ENV+=		GEM_HOME=${DESTDIR}${GEM_HOME}
 
 INSTALL_TARGET=		install
+INSTALL_TARGET+=	--vendor
 INSTALL_TARGET+=	--no-format-executable	# "bin/gem", not "bin/gem18"
 .if ${_USE_DESTDIR} != "no"
-INSTALL_TARGET+=	--install-root=${DESTDIR:Q}
+INSTALL_TARGET+=	--destdir=${DESTDIR:Q}
 .endif
 
 # rubygem's setup.rb is not the typical setup.rb -- manually run the
