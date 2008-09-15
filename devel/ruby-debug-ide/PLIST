@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/06/22 15:59:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/09/15 09:05:24 taca Exp $
 bin/rdebug-ide
 ${GEM_HOME}/cache/ruby-debug-ide-${PKGVERSION}.gem
 ${GEM_LIBDIR}/bin/rdebug-ide
@@ -14,7 +14,6 @@ ${GEM_LIBDIR}/lib/ruby-debug/commands/frame.rb
 ${GEM_LIBDIR}/lib/ruby-debug/commands/inspect.rb
 ${GEM_LIBDIR}/lib/ruby-debug/commands/load.rb
 ${GEM_LIBDIR}/lib/ruby-debug/commands/stepping.rb
-${GEM_LIBDIR}/lib/ruby-debug/commands/tags
 ${GEM_LIBDIR}/lib/ruby-debug/commands/threads.rb
 ${GEM_LIBDIR}/lib/ruby-debug/commands/variables.rb
 ${GEM_LIBDIR}/lib/ruby-debug/event_processor.rb
@@ -22,7 +21,6 @@ ${GEM_LIBDIR}/lib/ruby-debug/helper.rb
 ${GEM_LIBDIR}/lib/ruby-debug/interface.rb
 ${GEM_LIBDIR}/lib/ruby-debug/printers.rb
 ${GEM_LIBDIR}/lib/ruby-debug/processor.rb
-${GEM_LIBDIR}/lib/ruby-debug/tags
 ${GEM_LIBDIR}/lib/ruby-debug/xml_printer.rb
 ${GEM_HOME}/specifications/ruby-debug-ide-${PKGVERSION}.gemspec
 @dirrm ${GEM_LIBDIR}/lib/ruby-debug/commands
