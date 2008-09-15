@@ -1,26 +1,16 @@
-# $NetBSD: Makefile.common,v 1.2 2008/09/12 14:59:52 taca Exp $
-
-BUILD_DEFS+=	LOGDIR VARBASE
-DOCDIR=		share/doc/squid
-EGDIR=		share/examples/squid
+# $NetBSD: Makefile.common,v 1.3 2008/09/15 17:30:24 taca Exp $
 
 SQUID_DATADIR=	${VARBASE}/squid
-
 LOGDIR?=	${SQUID_DATADIR}/logs
 
-#
-MAKE_ENV+=	INSTALL_SCRIPT=${INSTALL_SCRIPT:Q}
-MAKE_ENV+=	PKG_PREFIX=${PREFIX:Q} VARBASE=${VARBASE:Q}
+PKG_SYSCONFSUBDIR?=		squid
 
-CONFIGURE_ARGS=	--sysconfdir=${PKG_SYSCONFDIR:Q} \
-		--localstatedir=${SQUID_DATADIR:Q} \
-		--datarootdir=${PREFIX}/share/squid \
-		--enable-auth=basic,digest,ntlm \
-		--enable-cachemgr-hostname=localhost \
-		--enable-delay-pools \
-		--enable-icmp \
-		--enable-removal-policies=lru,heap \
-		--enable-poll \
-		--enable-underscores \
-		--enable-storeio=${SQUID_BACKENDS:Q} \
-		--with-aio
+SQUID_USER?=			squid
+SQUID_GROUP?=			squid
+
+PKG_GROUPS_VARS+=		SQUID_GROUP
+PKG_USERS_VARS+=		SQUID_USER
+
+PKG_GROUPS=			${SQUID_GROUP}
+PKG_USERS=			${SQUID_USER}:${SQUID_GROUP}
+PKG_GECOS.${SQUID_USER}=	Squid Web-Cache pseudo-user
