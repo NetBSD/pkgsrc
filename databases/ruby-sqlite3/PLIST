@@ -1,11 +1,13 @@
-@comment $NetBSD: PLIST,v 1.5 2008/06/22 15:52:59 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/09/15 09:26:50 taca Exp $
 ${GEM_HOME}/cache/sqlite3-ruby-${PKGVERSION}.gem
 ${GEM_LIBDIR}/README.rdoc
 ${GEM_LIBDIR}/doc/faq/faq.html
 ${GEM_LIBDIR}/doc/faq/faq.rb
 ${GEM_LIBDIR}/doc/faq/faq.yml
 ${GEM_LIBDIR}/ext/sqlite3_api/MANIFEST
+${GEM_LIBDIR}/ext/sqlite3_api/Makefile
 ${GEM_LIBDIR}/ext/sqlite3_api/extconf.rb
+${GEM_LIBDIR}/ext/sqlite3_api/mkmf.log
 ${GEM_LIBDIR}/ext/sqlite3_api/sqlite3_api.i
 ${GEM_LIBDIR}/ext/sqlite3_api/sqlite3_api_wrap.c
 ${GEM_LIBDIR}/ext/sqlite3_api/win32/build.bat
