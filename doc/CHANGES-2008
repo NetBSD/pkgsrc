@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2272 2008/09/15 16:32:26 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.2273 2008/09/15 17:36:09 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3849,3 +3849,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/ruby-cssmin to 1.0.2 [taca 2008-09-15]
 	Updated mail/ruby-mailfactory to 1.4.0 [taca 2008-09-15]
 	Updated parallel/sge to 6.1.3 [ahoka 2008-09-15]
+	Updated www/squidGuard to 1.3nb2 [taca 2008-09-15]
