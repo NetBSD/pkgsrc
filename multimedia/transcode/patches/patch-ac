@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.2 2008/08/07 18:43:42 drochner Exp $
+$NetBSD: patch-ac,v 1.3 2008/09/15 12:46:44 abs Exp $
 
 --- configure.orig	2008-07-26 10:06:43.000000000 +0200
 +++ configure
@@ -20,21 +20,3 @@ $NetBSD: patch-ac,v 1.2 2008/08/07 18:43:42 drochner Exp $
  fi
  if test -n "$PTHREAD_CFLAGS" ; then
    pthread_cflags="$PTHREAD_CFLAGS"
-@@ -30886,7 +30886,7 @@ cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
- $ac_includes_default
--#include <libpostproc/postprocess.h>
-+#include <postprocess.h>
- _ACEOF
- rm -f conftest.$ac_objext
- if { (ac_try="$ac_compile"
-@@ -30926,7 +30926,7 @@ _ACEOF
- cat confdefs.h >>conftest.$ac_ext
- cat >>conftest.$ac_ext <<_ACEOF
- /* end confdefs.h.  */
--#include <libpostproc/postprocess.h>
-+#include <postprocess.h>
- _ACEOF
- if { (ac_try="$ac_cpp conftest.$ac_ext"
- case "(($ac_try" in

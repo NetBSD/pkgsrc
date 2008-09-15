@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.5 2008/09/15 12:47:04 abs Exp $
+
+--- filter/pp/filter_pp.c.orig	2005-07-04 08:23:01.000000000 +0100
++++ filter/pp/filter_pp.c
+@@ -35,7 +35,7 @@
+ #include <ctype.h>
+ #include <inttypes.h>
+ 
+-#include "postprocess.h"
++#include "libpostproc/postprocess.h"
+ 
+ static pp_mode_t *mode[MAX_FILTER];
+ static pp_context_t *context[MAX_FILTER];
