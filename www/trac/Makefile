@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.37 2008/09/15 17:44:03 abs Exp $
+# $NetBSD: Makefile,v 1.38 2008/09/15 20:57:55 abs Exp $
 #
 
 DISTNAME=	Trac-0.11.1
-PKGREVISION=	1
+PKGREVISION=	2
 PKGNAME=	${DISTNAME:tl}
 EGG_NAME=	${DISTNAME}
 CATEGORIES=	devel www
@@ -22,6 +22,11 @@ PKG_OPTIONS_GROUP.db=	sqlite pgsql psycopg2
 PKG_SUGGESTED_OPTIONS=	sqlite
 
 .include "../../mk/bsd.options.mk"
+
+PYDISTUTILSPKG=	YES
+PY_PATCHPLIST=	YES
+PYTHON_PATCH_SCRIPTS=	cgi-bin/trac.* contrib/*.py contrib/*-hook
+
 .include "../../lang/python/application.mk"
 
 .if !empty(PKG_OPTIONS:Msqlite)
@@ -39,10 +44,6 @@ DEPENDS+=	${PYPKGPREFIX}-psycopg2>=2:../../databases/py-psycopg2
 .endif
 # MySQL is sort of supported but not recommended by upstream and hence
 # omitted.
-
-PYDISTUTILSPKG=	YES
-PY_PATCHPLIST=	YES
-PYTHON_PATCH_SCRIPTS=	cgi-bin/trac.* contrib/*.py contrib/*-hook
 
 EGDIR=		${PREFIX}/share/examples/trac
 CGIBINDIR=	${PREFIX}/libexec/trac
