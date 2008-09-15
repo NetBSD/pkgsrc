@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2277 2008/09/15 18:18:15 rhaen Exp $
+$NetBSD: CHANGES-2008,v 1.2278 2008/09/15 19:05:19 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3855,3 +3855,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/ruby-gettext to 1.93.0 [taca 2008-09-15]
 	Added www/typo3 version 4.2.1 [taca 2008-09-15]
 	Added net/p5-Net-Jifty version 0.07 [rhaen 2008-09-15]
+	Updated games/freeciv-share to 2.1.6 [adam 2008-09-15]
+	Updated games/freeciv-client to 2.1.6 [adam 2008-09-15]
+	Updated games/freeciv-serwer to 2.1.6 [adam 2008-09-15]
