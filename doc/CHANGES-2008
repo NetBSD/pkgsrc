@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2253 2008/09/15 02:46:41 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2254 2008/09/15 03:31:32 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3804,3 +3804,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Devel-Events-Objects version 0.05 [seb 2008-09-15]
 	Added devel/p5-Devel-Size version 0.71 [seb 2008-09-15]
 	Updated devel/fromcvs to 0.0.0.124nb1 [taca 2008-09-15]
+	Updated lang/ruby18-base to 1.8.7.72nb2 [taca 2008-09-15]
