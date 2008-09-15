@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2274 2008/09/15 17:42:53 he Exp $
+$NetBSD: CHANGES-2008,v 1.2275 2008/09/15 18:10:53 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3852,3 +3852,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/squidGuard to 1.3nb2 [taca 2008-09-15]
 	Added net/p5-Net-LibIDN version 0.11 [he 2008-09-15]
 	Added devel/p5-Regexp-Parser version 0.20 [he 2008-09-15]
+	Updated devel/ruby-gettext to 1.93.0 [taca 2008-09-15]
