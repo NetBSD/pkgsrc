@@ -1,19 +1,8 @@
-$NetBSD: patch-ah,v 1.3 2008/06/19 14:52:36 taca Exp $
+$NetBSD: patch-ah,v 1.4 2008/09/15 08:43:44 taca Exp $
 
---- lib/rubygems.rb.orig	2008-04-10 06:18:31.000000000 +0900
+--- lib/rubygems.rb.orig	2008-06-21 04:54:57.000000000 +0900
 +++ lib/rubygems.rb
-@@ -71,7 +71,9 @@ module Gem
-     :ruby_install_name => RbConfig::CONFIG["ruby_install_name"],
-     :ruby_version => RbConfig::CONFIG["ruby_version"],
-     :sitedir => RbConfig::CONFIG["sitedir"],
--    :sitelibdir => RbConfig::CONFIG["sitelibdir"]
-+    :sitelibdir => RbConfig::CONFIG["sitelibdir"],
-+    :vendordir => RbConfig::CONFIG["vendordir"],
-+    :vendorlibdir => RbConfig::CONFIG["vendorlibdir"]
-   )
- 
-   DIRECTORIES = %w[cache doc gems specifications] unless defined?(DIRECTORIES)
-@@ -213,7 +215,13 @@ module Gem
+@@ -230,7 +230,13 @@ module Gem
    ##
    # The path where gem executables are to be installed.
  
@@ -28,7 +17,13 @@ $NetBSD: patch-ah,v 1.3 2008/06/19 14:52:36 taca Exp $
      return File.join(install_dir, 'bin') unless
        install_dir.to_s == Gem.default_dir
      Gem.default_bindir
-@@ -389,7 +397,7 @@ module Gem
+@@ -435,12 +441,12 @@ module Gem
+   ##
+   # The index to insert activated gem paths into the $LOAD_PATH.
+   #
+-  # Defaults to the site lib directory unless gem_prelude.rb has loaded paths,
++  # Defaults to the vendor lib directory unless gem_prelude.rb has loaded paths,
+   # then it inserts the activated gem's paths before the gem_prelude.rb paths
    # so you can override the gem_prelude.rb default $LOAD_PATH paths.
  
    def self.load_path_insert_index
@@ -37,7 +32,7 @@ $NetBSD: patch-ah,v 1.3 2008/06/19 14:52:36 taca Exp $
  
      $LOAD_PATH.each_with_index do |path, i|
        if path.instance_variables.include?(:@gem_prelude_index) or
-@@ -474,7 +482,8 @@ module Gem
+@@ -529,7 +535,8 @@ module Gem
    def self.prefix
      prefix = File.dirname File.expand_path(__FILE__)
  
