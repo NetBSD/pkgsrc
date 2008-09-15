@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.47 2008/09/14 05:17:18 taca Exp $
+# $NetBSD: Makefile,v 1.48 2008/09/15 03:30:22 taca Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
 PKGNAME=	${RUBY_PKGPREFIX}-base-${RUBY_VERSION_SUFFIX}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	lang ruby
 MASTER_SITES=	${MASTER_SITE_RUBY}
 #PKGREVISION=
@@ -98,6 +98,7 @@ OPENSSL_EXAMPLES=	c_rehash.rb cert2text.rb cert_store_view.rb \
 PTY_EXAMPLES=		expect_sample.rb script.rb shl.rb
 
 REPLACE_RUBY_DIRS=	bin ext lib sample
+REPLACE_RUBY=		ext/dl/h2rb
 INSTALLATION_DIRS=	bin ${RUBY_ARCHLIB} ${RUBY_DOC}/irb ${RUBY_DOC}/pty \
 			${RUBY_EG}/bigdecimal ${RUBY_EG}/dl \
 			${RUBY_EG}/openssl ${RUBY_EG}/pty
