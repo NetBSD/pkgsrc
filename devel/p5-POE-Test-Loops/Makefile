@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/09/15 12:27:45 he Exp $
+# $NetBSD: Makefile,v 1.3 2008/09/15 13:05:20 he Exp $
 
 DISTNAME=	POE-Test-Loops-1.002
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=POE/}
 
@@ -24,6 +24,11 @@ TESTS_TO_FIX= comp_tcp_concurrent.pm all_errors.pm comp_tcp.pm \
 .for t in ${TESTS_TO_FIX}
 REPLACE_PERL+= lib/POE/Test/Loops/${t}
 .endfor
+
+SUBST_CLASSES+=		perl
+SUBST_STAGE.perl=	post-configure
+SUBST_FILES.perl=	lib/POE/Test/Loops.pm
+SUBST_SED.perl=		-e 's,\#!/usr/bin/perl,\#!${PERL5},g'
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
