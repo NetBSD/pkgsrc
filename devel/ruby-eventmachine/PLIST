@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:16:56 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/09/15 09:08:19 taca Exp $
 ${GEM_HOME}/cache/eventmachine-${PKGVERSION}.gem
 ${GEM_LIBDIR}/COPYING
 ${GEM_LIBDIR}/DEFERRABLES
@@ -44,6 +44,7 @@ ${GEM_LIBDIR}/lib/em/deferrable.rb
 ${GEM_LIBDIR}/lib/em/eventable.rb
 ${GEM_LIBDIR}/lib/em/future.rb
 ${GEM_LIBDIR}/lib/em/messages.rb
+${GEM_LIBDIR}/lib/em/processes.rb
 ${GEM_LIBDIR}/lib/em/spawnable.rb
 ${GEM_LIBDIR}/lib/em/streamer.rb
 ${GEM_LIBDIR}/lib/eventmachine.rb
@@ -69,6 +70,7 @@ ${GEM_LIBDIR}/lib/protocols/stomp.rb
 ${GEM_LIBDIR}/lib/protocols/tcptest.rb
 ${GEM_LIBDIR}/lib/rubyeventmachine.${RUBY_DLEXT}
 ${GEM_LIBDIR}/tests/test_basic.rb
+${GEM_LIBDIR}/tests/test_defer.rb
 ${GEM_LIBDIR}/tests/test_epoll.rb
 ${GEM_LIBDIR}/tests/test_errors.rb
 ${GEM_LIBDIR}/tests/test_eventables.rb
@@ -81,8 +83,10 @@ ${GEM_LIBDIR}/tests/test_kb.rb
 ${GEM_LIBDIR}/tests/test_ltp.rb
 ${GEM_LIBDIR}/tests/test_ltp2.rb
 ${GEM_LIBDIR}/tests/test_next_tick.rb
+${GEM_LIBDIR}/tests/test_processes.rb
 ${GEM_LIBDIR}/tests/test_pure.rb
 ${GEM_LIBDIR}/tests/test_running.rb
+${GEM_LIBDIR}/tests/test_sasl.rb
 ${GEM_LIBDIR}/tests/test_send_file.rb
 ${GEM_LIBDIR}/tests/test_servers.rb
 ${GEM_LIBDIR}/tests/test_smtpclient.rb
