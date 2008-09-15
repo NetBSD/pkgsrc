@@ -1,0 +1,5 @@
+This module parses regular expressions (regexes). Its default "grammar" is Perl
+5.8.4's regex set. Grammar is quoted because the module does not so much define
+a grammar as let each matched node state what it expects to match next, but
+there is not currently a way of extracting a complete grammar. This may change
+in future versions.
