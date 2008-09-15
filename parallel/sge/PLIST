@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/08/15 02:03:06 markd Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/09/15 16:30:57 ahoka Exp $
 bin/qacct
 bin/qalter
 bin/qconf
@@ -10,6 +10,7 @@ bin/qmake
 bin/qmod
 bin/qmon
 bin/qping
+bin/qquota
 bin/qresub
 bin/qrls
 bin/qrsh
@@ -19,7 +20,6 @@ bin/qstat
 bin/qsub
 bin/qtcsh
 sge/3rd_party/3rd_party_licscopyrights
-sge/3rd_party/qmon/copyrights
 sge/3rd_party/qmon/ltree_changed.tar.gz
 sge/bin/${SGE_ARCH}/qacct
 sge/bin/${SGE_ARCH}/qalter
@@ -32,6 +32,7 @@ sge/bin/${SGE_ARCH}/qmake
 sge/bin/${SGE_ARCH}/qmod
 sge/bin/${SGE_ARCH}/qmon
 sge/bin/${SGE_ARCH}/qping
+sge/bin/${SGE_ARCH}/qquota
 sge/bin/${SGE_ARCH}/qresub
 sge/bin/${SGE_ARCH}/qrls
 sge/bin/${SGE_ARCH}/qrsh
@@ -63,6 +64,7 @@ sge/catman/cat/cat1/qmake.1
 sge/catman/cat/cat1/qmod.1
 sge/catman/cat/cat1/qmon.1
 sge/catman/cat/cat1/qping.1
+sge/catman/cat/cat1/qquota.1
 sge/catman/cat/cat1/qresub.1
 sge/catman/cat/cat1/qrls.1
 sge/catman/cat/cat1/qrsh.1
@@ -138,6 +140,7 @@ sge/catman/cat/cat5/sge_pe.5
 sge/catman/cat/cat5/sge_priority.5
 sge/catman/cat/cat5/sge_qstat.5
 sge/catman/cat/cat5/sge_request.5
+sge/catman/cat/cat5/sge_resource_quota.5
 sge/catman/cat/cat5/sgepasswd.5
 sge/catman/cat/cat5/share_tree.5
 sge/catman/cat/cat5/user.5
@@ -166,15 +169,19 @@ sge/ckpt/sx6_ckpt_command
 sge/ckpt/sx6_clean_command
 sge/ckpt/sx6_migration_command
 sge/ckpt/sx6_restart_command
-sge/doc/README-ARCo.txt
 sge/doc/README-Autoinstall.txt
 sge/doc/README-DRMAA.txt
+sge/doc/README-Upgrade.txt
 sge/doc/arc_depend_irix.asc
 sge/doc/arc_depend_solaris.asc
 sge/doc/load_parameters.asc
 sge/doc/logfile-trimming.asc
+sge/dtrace/README-dtrace.txt
+sge/dtrace/monitor.d
+sge/dtrace/monitor.sh
 sge/examples/drmaa/example.c
 sge/examples/drmaa/howto1.c
+sge/examples/drmaa/howto1_1.c
 sge/examples/drmaa/howto2.c
 sge/examples/drmaa/howto2_1.c
 sge/examples/drmaa/howto3.c
@@ -184,6 +191,7 @@ sge/examples/drmaa/howto4.c
 sge/examples/drmaa/howto5.c
 sge/examples/drmaa/howto6.c
 sge/examples/jobs/array_submitter.sh
+sge/examples/jobs/hello.bat
 sge/examples/jobs/jobnet_submitter.sh
 sge/examples/jobs/pascal.sh
 sge/examples/jobs/pminiworm.sh
@@ -191,6 +199,7 @@ sge/examples/jobs/simple.sh
 sge/examples/jobs/sleeper.sh
 sge/examples/jobs/step_A_array_submitter.sh
 sge/examples/jobs/step_B_array_submitter.sh
+sge/examples/jobs/worker.exe
 sge/examples/jobs/worker.sh
 sge/examples/jobsbin/${SGE_ARCH}/work
 sge/include/drmaa.h
@@ -201,6 +210,7 @@ sge/lib/${SGE_ARCH}/libXltree.so
 sge/lib/${SGE_ARCH}/libdrmaa.so
 sge/lib/${SGE_ARCH}/libdrmaa.so.0.95
 sge/lib/${SGE_ARCH}/libdrmaa.so.1.0
+sge/lib/${SGE_ARCH}/libjuti.so
 sge/lib/${SGE_ARCH}/libspoolb.so
 sge/lib/${SGE_ARCH}/libspoolc.so
 sge/man/man1/gethostbyaddr.1
@@ -219,6 +229,7 @@ sge/man/man1/qmake.1
 sge/man/man1/qmod.1
 sge/man/man1/qmon.1
 sge/man/man1/qping.1
+sge/man/man1/qquota.1
 sge/man/man1/qresub.1
 sge/man/man1/qrls.1
 sge/man/man1/qrsh.1
@@ -294,6 +305,7 @@ sge/man/man5/sge_pe.5
 sge/man/man5/sge_priority.5
 sge/man/man5/sge_qstat.5
 sge/man/man5/sge_request.5
+sge/man/man5/sge_resource_quota.5
 sge/man/man5/sgepasswd.5
 sge/man/man5/share_tree.5
 sge/man/man5/user.5
@@ -357,6 +369,7 @@ sge/qmon/PIXMAPS/big/toolbar_job.xpm
 sge/qmon/PIXMAPS/big/toolbar_pe.xpm
 sge/qmon/PIXMAPS/big/toolbar_prj.xpm
 sge/qmon/PIXMAPS/big/toolbar_queue.xpm
+sge/qmon/PIXMAPS/big/toolbar_rqs.xpm
 sge/qmon/PIXMAPS/big/toolbar_sched.xpm
 sge/qmon/PIXMAPS/big/toolbar_submit.xpm
 sge/qmon/PIXMAPS/big/toolbar_ticket.xpm
@@ -438,6 +451,7 @@ sge/qmon/PIXMAPS/toolbar_job.xpm
 sge/qmon/PIXMAPS/toolbar_pe.xpm
 sge/qmon/PIXMAPS/toolbar_prj.xpm
 sge/qmon/PIXMAPS/toolbar_queue.xpm
+sge/qmon/PIXMAPS/toolbar_rqs.xpm
 sge/qmon/PIXMAPS/toolbar_sched.xpm
 sge/qmon/PIXMAPS/toolbar_submit.xpm
 sge/qmon/PIXMAPS/toolbar_ticket.xpm
@@ -463,6 +477,7 @@ sge/util/arch
 sge/util/arch_variables
 sge/util/arch_variables.orig
 sge/util/bdb_checkpoint.sh
+sge/util/certtool.sh
 sge/util/create_settings.sh
 sge/util/dl.csh
 sge/util/dl.sh
@@ -494,6 +509,7 @@ sge/util/resources/calendars/night_s
 sge/util/resources/centry/arch
 sge/util/resources/centry/calendar
 sge/util/resources/centry/cpu
+sge/util/resources/centry/display_win_gui
 sge/util/resources/centry/h_core
 sge/util/resources/centry/h_cpu
 sge/util/resources/centry/h_data
@@ -547,6 +563,8 @@ sge/util/resources/loadsensors/sgi_tty_sensor.sh
 sge/util/resources/loadsensors/solaris-iidle.sh
 sge/util/resources/pe/make
 sge/util/resources/pe/make.sge_pqs_api
+sge/util/resources/schemas/qhost/qhost.xsd
+sge/util/resources/schemas/qquota/qquota.xsd
 sge/util/resources/schemas/qstat/detailed_job_info.xsd
 sge/util/resources/schemas/qstat/message.xsd
 sge/util/resources/schemas/qstat/qstat.xsd
@@ -554,14 +572,17 @@ sge/util/resources/starter_methods/settaskid.sh
 sge/util/resources/usersets/deadlineusers
 sge/util/resources/usersets/defaultdepartment
 sge/util/setfileperm.sh
+sge/util/setfileperm.sh.orig
 sge/util/sgeCA/renew_all_certs.csh
 sge/util/sgeCA/sge_ca
+sge/util/sgeCA/sge_ca.cnf
 sge/util/sgeCA/sge_ssl.cnf
 sge/util/sgeCA/sge_ssl_template.cnf
 sge/util/sge_aliases
 sge/util/sge_request
 sge/util/sgeremoterun
 sge/utilbin/${SGE_ARCH}/adminrun
+sge/utilbin/${SGE_ARCH}/authuser
 sge/utilbin/${SGE_ARCH}/berkeley_db_svc
 sge/utilbin/${SGE_ARCH}/checkprog
 sge/utilbin/${SGE_ARCH}/checkuser
@@ -601,6 +622,8 @@ sge/utilbin/${SGE_ARCH}/uidgid
 @dirrm sge/util/resources/usersets
 @dirrm sge/util/resources/starter_methods
 @dirrm sge/util/resources/schemas/qstat
+@dirrm sge/util/resources/schemas/qquota
+@dirrm sge/util/resources/schemas/qhost
 @dirrm sge/util/resources/schemas
 @dirrm sge/util/resources/pe
 @dirrm sge/util/resources/loadsensors
@@ -631,6 +654,7 @@ sge/utilbin/${SGE_ARCH}/uidgid
 @dirrm sge/examples/jobs
 @dirrm sge/examples/drmaa
 @dirrm sge/examples
+@dirrm sge/dtrace
 @dirrm sge/doc
 @dirrm sge/ckpt
 @dirrm sge/catman/cat/cat8
@@ -643,5 +667,4 @@ sge/utilbin/${SGE_ARCH}/uidgid
 @dirrm sge/bin
 @dirrm sge/3rd_party/qmon
 @dirrm sge/3rd_party
-@comment the various queue setups get created in this directory
-@unexec ${RMDIR} %D/sge 2>/dev/null || ${TRUE}
+@dirrm sge
