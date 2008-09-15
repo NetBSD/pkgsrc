@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/06/12 02:14:54 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2008/09/15 21:20:23 abs Exp $
 
 DISTNAME=	mod_python-${VERSION}
 PKGNAME=	${APACHE_PKG_PREFIX}-${PYPKGPREFIX}-python-${VERSION}
@@ -16,7 +16,7 @@ MAKE_JOBS_SAFE=	no
 
 USE_LIBTOOL=	YES
 APACHE_MODULE=	YES
-VERSION=	3.2.10
+VERSION=	3.3.1
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-apxs=${APXS:Q}
