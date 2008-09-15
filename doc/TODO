@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7539 2008/09/15 19:05:19 adam Exp $
+$NetBSD: TODO,v 1.7540 2008/09/15 21:17:10 ahoka Exp $
 
 Suggested new packages
 ======================
@@ -1209,7 +1209,6 @@ Suggested package updates
 	o sendfile-20010424
 	o ser-0.9.6
 	o sessreg-1.0.4
-	o sge-6.1.2
 	o shared-mime-info-0.51
 	o sharity-3.6
 	o sharity-light-1.3
