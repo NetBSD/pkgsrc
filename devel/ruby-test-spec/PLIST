@@ -1,9 +1,10 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/04 15:18:41 jlam Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/09/15 08:47:52 taca Exp $
 bin/specrb
 ${GEM_HOME}/cache/test-spec-${PKGVERSION}.gem
 ${GEM_LIBDIR}/README
 ${GEM_LIBDIR}/ROADMAP
 ${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/SPECS
 ${GEM_LIBDIR}/TODO
 ${GEM_LIBDIR}/bin/specrb
 ${GEM_LIBDIR}/examples/stack.rb
