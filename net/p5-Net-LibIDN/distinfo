@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/15 14:57:28 he Exp $
+
+SHA1 (Net-LibIDN-0.11.tar.gz) = 702671498230e7f1da2046fb000bd7fcabb2cbdb
+RMD160 (Net-LibIDN-0.11.tar.gz) = 00b5714590527e9ef2d7ce94f88d937ffe414067
+Size (Net-LibIDN-0.11.tar.gz) = 14133 bytes
+SHA1 (patch-aa) = 663abae5d8a7aa7cb653da343160c058dcd11602
