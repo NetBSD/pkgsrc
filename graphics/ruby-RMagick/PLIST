@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2008/04/04 15:30:01 jlam Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/09/15 08:45:01 taca Exp $
 ${GEM_HOME}/cache/rmagick-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/ChangeLog
 ${GEM_LIBDIR}/README-Mac-OSX.txt
 ${GEM_LIBDIR}/README.html
-${GEM_LIBDIR}/README.txt
 ${GEM_LIBDIR}/build_tarball.rake
 ${GEM_LIBDIR}/doc/comtasks.html
 ${GEM_LIBDIR}/doc/constants.html
@@ -26,6 +25,8 @@ ${GEM_LIBDIR}/doc/ex/adaptive_threshold.rb
 ${GEM_LIBDIR}/doc/ex/add_noise.rb
 ${GEM_LIBDIR}/doc/ex/affine.rb
 ${GEM_LIBDIR}/doc/ex/affine_transform.rb
+${GEM_LIBDIR}/doc/ex/affinity.rb
+${GEM_LIBDIR}/doc/ex/affinity_images.rb
 ${GEM_LIBDIR}/doc/ex/arc.rb
 ${GEM_LIBDIR}/doc/ex/arcpath.rb
 ${GEM_LIBDIR}/doc/ex/arcs01.rb
@@ -56,8 +57,10 @@ ${GEM_LIBDIR}/doc/ex/color_histogram.rb
 ${GEM_LIBDIR}/doc/ex/color_reset.rb
 ${GEM_LIBDIR}/doc/ex/colorize.rb
 ${GEM_LIBDIR}/doc/ex/colors.rb
+${GEM_LIBDIR}/doc/ex/compose_mask.rb
 ${GEM_LIBDIR}/doc/ex/composite.rb
 ${GEM_LIBDIR}/doc/ex/composite_layers.rb
+${GEM_LIBDIR}/doc/ex/composite_tiled.rb
 ${GEM_LIBDIR}/doc/ex/contrast.rb
 ${GEM_LIBDIR}/doc/ex/crop.rb
 ${GEM_LIBDIR}/doc/ex/crop_with_gravity.rb
@@ -91,6 +94,7 @@ ${GEM_LIBDIR}/doc/ex/gravity.rb
 ${GEM_LIBDIR}/doc/ex/group.rb
 ${GEM_LIBDIR}/doc/ex/hatchfill.rb
 ${GEM_LIBDIR}/doc/ex/image.rb
+${GEM_LIBDIR}/doc/ex/images/Apple.miff
 ${GEM_LIBDIR}/doc/ex/images/Ballerina.jpg
 ${GEM_LIBDIR}/doc/ex/images/Ballerina3.jpg
 ${GEM_LIBDIR}/doc/ex/images/Button_0.gif
@@ -135,12 +139,15 @@ ${GEM_LIBDIR}/doc/ex/images/Flower_Hat.jpg
 ${GEM_LIBDIR}/doc/ex/images/Gold_Statue.jpg
 ${GEM_LIBDIR}/doc/ex/images/Hot_Air_Balloons.jpg
 ${GEM_LIBDIR}/doc/ex/images/Hot_Air_Balloons_H.jpg
+${GEM_LIBDIR}/doc/ex/images/Leaf.miff
 ${GEM_LIBDIR}/doc/ex/images/No.wmf
 ${GEM_LIBDIR}/doc/ex/images/Polynesia.jpg
 ${GEM_LIBDIR}/doc/ex/images/Red_Rocks.jpg
+${GEM_LIBDIR}/doc/ex/images/Rocks_On_Beach.miff
 ${GEM_LIBDIR}/doc/ex/images/Shorts.jpg
 ${GEM_LIBDIR}/doc/ex/images/Snake.wmf
 ${GEM_LIBDIR}/doc/ex/images/Violin.jpg
+${GEM_LIBDIR}/doc/ex/images/Yellow_Rose.miff
 ${GEM_LIBDIR}/doc/ex/images/big-duck.gif
 ${GEM_LIBDIR}/doc/ex/images/duck.gif
 ${GEM_LIBDIR}/doc/ex/images/duck0.gif
@@ -167,10 +174,9 @@ ${GEM_LIBDIR}/doc/ex/images/smile.miff
 ${GEM_LIBDIR}/doc/ex/images/spin.gif
 ${GEM_LIBDIR}/doc/ex/implode.rb
 ${GEM_LIBDIR}/doc/ex/level.rb
+${GEM_LIBDIR}/doc/ex/level_colors.rb
 ${GEM_LIBDIR}/doc/ex/line.rb
 ${GEM_LIBDIR}/doc/ex/line01.rb
-${GEM_LIBDIR}/doc/ex/map.rb
-${GEM_LIBDIR}/doc/ex/map_f.rb
 ${GEM_LIBDIR}/doc/ex/mask.rb
 ${GEM_LIBDIR}/doc/ex/matte_fill_to_border.rb
 ${GEM_LIBDIR}/doc/ex/matte_floodfill.rb
