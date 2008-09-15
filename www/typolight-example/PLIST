@@ -1,0 +1,21 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/15 10:06:41 taca Exp $
+${TL_EGDIR}/music_academy.css
+${TL_EGDIR}/tl_files/music_academy/admin.gif
+${TL_EGDIR}/tl_files/music_academy/background.gif
+${TL_EGDIR}/tl_files/music_academy/frontendmodules.gif
+${TL_EGDIR}/tl_files/music_academy/image.png
+${TL_EGDIR}/tl_files/music_academy/james-wilson.jpg
+${TL_EGDIR}/tl_files/music_academy/layout.gif
+${TL_EGDIR}/tl_files/music_academy/modules.gif
+${TL_EGDIR}/tl_files/music_academy/news.gif
+${TL_EGDIR}/tl_files/music_academy/pagemounts.gif
+${TL_EGDIR}/tl_files/music_academy/permissions.gif
+${TL_EGDIR}/tl_files/music_academy/protect.gif
+${TL_EGDIR}/tl_files/music_academy/campus/campus_building.jpg
+${TL_EGDIR}/tl_files/music_academy/campus/campus_hall.jpg
+${TL_EGDIR}/tl_files/music_academy/campus/campus_library.jpg
+${TL_EGDIR}/tl_files/music_academy/campus/campus_overview.jpg
+${TL_EGDIR}/tl_files/music_academy/campus/meta.txt
+${TL_WEBDIR}/templates/example_website.sql
+@dirrm ${TL_EGDIR}/tl_files/music_academy/campus
+@dirrm ${TL_EGDIR}/tl_files/music_academy
