@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.9 2008/06/19 14:52:36 taca Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/09/15 08:43:44 taca Exp $
 bin/gem
 ${RUBY_VENDORLIB}/rbconfig/datadir.rb
-${RUBY_VENDORLIB}/rubygems.rb
 ${RUBY_VENDORLIB}/rubygems/builder.rb
 ${RUBY_VENDORLIB}/rubygems/command.rb
 ${RUBY_VENDORLIB}/rubygems/command_manager.rb
@@ -27,6 +26,7 @@ ${RUBY_VENDORLIB}/rubygems/commands/search_command.rb
 ${RUBY_VENDORLIB}/rubygems/commands/server_command.rb
 ${RUBY_VENDORLIB}/rubygems/commands/sources_command.rb
 ${RUBY_VENDORLIB}/rubygems/commands/specification_command.rb
+${RUBY_VENDORLIB}/rubygems/commands/stale_command.rb
 ${RUBY_VENDORLIB}/rubygems/commands/uninstall_command.rb
 ${RUBY_VENDORLIB}/rubygems/commands/unpack_command.rb
 ${RUBY_VENDORLIB}/rubygems/commands/update_command.rb
@@ -43,33 +43,28 @@ ${RUBY_VENDORLIB}/rubygems/digest/sha1.rb
 ${RUBY_VENDORLIB}/rubygems/digest/sha2.rb
 ${RUBY_VENDORLIB}/rubygems/doc_manager.rb
 ${RUBY_VENDORLIB}/rubygems/exceptions.rb
-${RUBY_VENDORLIB}/rubygems/ext.rb
 ${RUBY_VENDORLIB}/rubygems/ext/builder.rb
 ${RUBY_VENDORLIB}/rubygems/ext/configure_builder.rb
 ${RUBY_VENDORLIB}/rubygems/ext/ext_conf_builder.rb
 ${RUBY_VENDORLIB}/rubygems/ext/rake_builder.rb
+${RUBY_VENDORLIB}/rubygems/ext.rb
 ${RUBY_VENDORLIB}/rubygems/format.rb
 ${RUBY_VENDORLIB}/rubygems/gem_openssl.rb
 ${RUBY_VENDORLIB}/rubygems/gem_path_searcher.rb
 ${RUBY_VENDORLIB}/rubygems/gem_runner.rb
 ${RUBY_VENDORLIB}/rubygems/indexer.rb
-${RUBY_VENDORLIB}/rubygems/indexer/abstract_index_builder.rb
-${RUBY_VENDORLIB}/rubygems/indexer/latest_index_builder.rb
-${RUBY_VENDORLIB}/rubygems/indexer/marshal_index_builder.rb
-${RUBY_VENDORLIB}/rubygems/indexer/master_index_builder.rb
-${RUBY_VENDORLIB}/rubygems/indexer/quick_index_builder.rb
 ${RUBY_VENDORLIB}/rubygems/install_update_options.rb
 ${RUBY_VENDORLIB}/rubygems/installer.rb
 ${RUBY_VENDORLIB}/rubygems/local_remote_options.rb
 ${RUBY_VENDORLIB}/rubygems/old_format.rb
-${RUBY_VENDORLIB}/rubygems/package.rb
 ${RUBY_VENDORLIB}/rubygems/package/f_sync_dir.rb
 ${RUBY_VENDORLIB}/rubygems/package/tar_header.rb
 ${RUBY_VENDORLIB}/rubygems/package/tar_input.rb
 ${RUBY_VENDORLIB}/rubygems/package/tar_output.rb
-${RUBY_VENDORLIB}/rubygems/package/tar_reader.rb
 ${RUBY_VENDORLIB}/rubygems/package/tar_reader/entry.rb
+${RUBY_VENDORLIB}/rubygems/package/tar_reader.rb
 ${RUBY_VENDORLIB}/rubygems/package/tar_writer.rb
+${RUBY_VENDORLIB}/rubygems/package.rb
 ${RUBY_VENDORLIB}/rubygems/platform.rb
 ${RUBY_VENDORLIB}/rubygems/remote_fetcher.rb
 ${RUBY_VENDORLIB}/rubygems/require_paths_builder.rb
@@ -80,17 +75,19 @@ ${RUBY_VENDORLIB}/rubygems/server.rb
 ${RUBY_VENDORLIB}/rubygems/source_index.rb
 ${RUBY_VENDORLIB}/rubygems/source_info_cache.rb
 ${RUBY_VENDORLIB}/rubygems/source_info_cache_entry.rb
+${RUBY_VENDORLIB}/rubygems/spec_fetcher.rb
 ${RUBY_VENDORLIB}/rubygems/specification.rb
+${RUBY_VENDORLIB}/rubygems/test_utilities.rb
 ${RUBY_VENDORLIB}/rubygems/timer.rb
 ${RUBY_VENDORLIB}/rubygems/uninstaller.rb
 ${RUBY_VENDORLIB}/rubygems/user_interaction.rb
 ${RUBY_VENDORLIB}/rubygems/validator.rb
 ${RUBY_VENDORLIB}/rubygems/version.rb
 ${RUBY_VENDORLIB}/rubygems/version_option.rb
+${RUBY_VENDORLIB}/rubygems.rb
 ${RUBY_VENDORLIB}/ubygems.rb
 @dirrm ${RUBY_VENDORLIB}/rubygems/package/tar_reader
 @dirrm ${RUBY_VENDORLIB}/rubygems/package
-@dirrm ${RUBY_VENDORLIB}/rubygems/indexer
 @dirrm ${RUBY_VENDORLIB}/rubygems/ext
 @dirrm ${RUBY_VENDORLIB}/rubygems/digest
 @dirrm ${RUBY_VENDORLIB}/rubygems/commands
