@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.18 2008/06/21 15:58:58 wiz Exp $
+# $NetBSD: Makefile,v 1.19 2008/09/15 02:45:21 taca Exp $
 
 DISTNAME=	0431bbe66219
 # Last part of PKGNAME is changeset number
 PKGNAME=	fromcvs-0.0.0.124
+PKGREVISION=	1
 CATEGORIES=	devel scm
 MASTER_SITES=	http://ww2.fs.ei.tum.de/~corecode/hg/fromcvs/archive/
 EXTRACT_SUFX=	.tar.bz2
@@ -32,9 +33,9 @@ INSTALLATION_DIRS=	bin
 
 do-build:
 	${ECHO} "#!/bin/sh" > ${WRKSRC}/togit
-	${ECHO} "${RUBY} -I${PREFIX}/share/fromcvs ${PREFIX}/share/fromcvs/togit.rb \"\$$@\"" >> ${WRKSRC}/togit
+	${ECHO} "${RUBY} -rubygems -I${PREFIX}/share/fromcvs ${PREFIX}/share/fromcvs/togit.rb \"\$$@\"" >> ${WRKSRC}/togit
 	${ECHO} "#!/bin/sh" > ${WRKSRC}/tohg
-	${ECHO} "${RUBY} -I${PREFIX}/share/fromcvs ${PREFIX}/share/fromcvs/tohg.rb \"\$$@\"" >> ${WRKSRC}/tohg
+	${ECHO} "${RUBY} -rubygems -I${PREFIX}/share/fromcvs ${PREFIX}/share/fromcvs/tohg.rb \"\$$@\"" >> ${WRKSRC}/tohg
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/fromcvs
