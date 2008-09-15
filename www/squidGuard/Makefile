@@ -1,13 +1,13 @@
-# $NetBSD: Makefile,v 1.15 2008/09/07 11:24:28 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/09/15 17:34:48 taca Exp $
 #
 
 DISTNAME=	squidGuard-1.3
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
-MASTER_SITES=	http://www.squidguard.org/Downloads/ \
-		http://www.squidguard.org/Downloads/Patches/1.3/
+MASTER_SITES=	http://www.squidguard.org/Downloads/Patches/1.3/ \
+		http://www.squidguard.org/Downloads/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX} \
-		squidGuard-1.3-patch-20071117${EXTRACT_SUFX}
+		squidGuard-1.3-patch-20080714${EXTRACT_SUFX}
 
 MAINTAINER=	zuntum@NetBSD.org
 HOMEPAGE=	http://www.squidguard.org/
@@ -17,11 +17,13 @@ BDB_ACCEPTED=	db4
 GNU_CONFIGURE=	YES
 USE_TOOLS+=	lex yacc perl
 
-DEPENDS+=	squid>=1.0:../../www/squid
+DEPENDS+=	squid>=1.0:../../www/squid27
 
-#DOCDIR=	${PREFIX}/share/doc/squidGuard
-EXAMPLESDIR=	${PREFIX}/share/examples/squidGuard
+#DOCDIR= 	share/doc/squidGuard
+EGDIR=		share/examples/squidGuard
 DBDIR=		${VARBASE}/squidGuard
+
+PLIST_SUBST+=	EGDIR=${EGDIR}
 
 EXAMPLES=	squidGuard-simple.cgi squidGuard-simple-de.cgi squidGuard.cgi
 
@@ -33,9 +35,9 @@ CONFIGURE_ARGS+=	--with-sg-logdir=${LOGDIR}
 CONFIGURE_ARGS+=	--with-sg-dbhome=${DBDIR}
 CONFIGURE_ARGS+=	--squiduser=${SQUID_USER}
 
-CONF_FILES_PERMS+=	${EXAMPLESDIR}/squidGuard-simple.cgi \
+CONF_FILES_PERMS+=	${PREFIX}/${EGDIR}/squidGuard-simple.cgi \
 			${CGIBINDIR}/squidGuard.cgi ${BINOWN} ${BINGRP} 0755
-CONF_FILES_PERMS+=	${EXAMPLESDIR}/squidGuard.conf \
+CONF_FILES_PERMS+=	${PREFIX}/${EGDIR}/squidGuard.conf \
 			${PKG_SYSCONFDIR}/squidGuard.conf \
 			${BINOWN} ${SQUID_GROUP} 0640
 MAKE_DIRS+=		${CGIBINDIR}
@@ -43,7 +45,7 @@ OWN_DIRS+=		${DBDIR}
 OWN_DIRS_PERMS+= 	${DBDIR} ${SQUID_USER} ${SQUID_GROUP} 0750
 
 BUILD_DEFS+=		VARBASE
-INSTALLATION_DIRS+=	bin ${DOCDIR} ${EXAMPLESDIR}
+INSTALLATION_DIRS+=	bin ${DOCDIR} ${EGDIR}
 
 .include "../../mk/bsd.prefs.mk"
 .include "../../www/squid/Makefile.common"
@@ -52,14 +54,15 @@ CGIBINDIR?=		${PREFIX}/libexec/cgi-bin/
 PKG_SYSCONFSUBDIR?=	squidguard
 
 post-extract:
-	${MV} ${WRKDIR}/squidGuard-1.3-patch-20071117/sgDb.c ${WRKSRC}/src
+	cd ${WRKDIR}/squidGuard-1.3-patch-20080714/src/; \
+		${MV} sgDb.c sgDiv.c.in ${WRKSRC}/src
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/src/squidGuard ${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/src/squidGuard ${DESTDIR}${PREFIX}/bin
 	${INSTALL_DATA} ${WRKSRC}/samples/sample.conf \
-		${EXAMPLESDIR}/squidGuard.conf
+		${DESTDIR}${PREFIX}/${EGDIR}/squidGuard.conf
 .for f in ${EXAMPLES}
-	${INSTALL_DATA} ${WRKSRC}/samples/${f} ${EXAMPLESDIR}
+	${INSTALL_DATA} ${WRKSRC}/samples/${f} ${DESTDIR}${PREFIX}/${EGDIR}
 .endfor
 
 .include "../../mk/bdb.buildlink3.mk"
