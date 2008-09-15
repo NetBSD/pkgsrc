@@ -1,11 +1,13 @@
-$NetBSD: distinfo,v 1.8 2007/08/15 02:03:06 markd Exp $
+$NetBSD: distinfo,v 1.9 2008/09/15 16:30:57 ahoka Exp $
 
-SHA1 (sge-V60u11_TAG-src.tar.gz) = 65953f0738935234027b51de2e0910dc6901fdc2
-RMD160 (sge-V60u11_TAG-src.tar.gz) = 06747d75dc6c87f710da3e51aaed2404a972e205
-Size (sge-V60u11_TAG-src.tar.gz) = 7509896 bytes
-SHA1 (patch-ah) = a54cb0d2d970e1e7563a6a5d1df73fa6c1751ac3
-SHA1 (patch-ai) = 9ed4476290c659bd1981fbbc67e908ccc7cdfded
-SHA1 (patch-ak) = 24493f9294bebaf41f08830da7b8fb5f1bd48eec
-SHA1 (patch-am) = 9dee10fdf12a6424070daa9109fbdb1a6849777a
+SHA1 (ge-V61u3_TAG-src.tar.gz) = 10dd4ae1d930f691acb7c14445293393ffc9e221
+RMD160 (ge-V61u3_TAG-src.tar.gz) = c1125fb6000b1addb52a9c623994a9cd55689c07
+Size (ge-V61u3_TAG-src.tar.gz) = 8559414 bytes
+SHA1 (patch-ah) = f3485710b3f4ab5e09f396f7760fbb84150c8542
+SHA1 (patch-ai) = 1d6dc93df47ab2dccffe5fb6751f26d51352e7be
+SHA1 (patch-ak) = 75ccac72140aaf788d6d7da65e5dc39c8cbcd378
+SHA1 (patch-am) = 69a89aa18036894c1e729394b722b07643be1395
 SHA1 (patch-at) = d29e29e4915f8015618a4ebc5b17231c2bcc4bf5
-SHA1 (patch-bl) = 9e0780aeb592810a834316b82a9b16929084f39f
+SHA1 (patch-bd) = 6043e9a12bdf161514a92cf87a8b1ad51e163f7b
+SHA1 (patch-bl) = 37f5bbaeedccc0889fd3e23b2dd2ec283e2cd778
+SHA1 (patch-bm) = 4a558bb3bcdd35686eff5bf61bf749bffb0f25ca

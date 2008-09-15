@@ -1,42 +1,35 @@
-$NetBSD: patch-bl,v 1.2 2007/08/15 02:03:09 markd Exp $
+$NetBSD: patch-bl,v 1.3 2008/09/15 16:30:57 ahoka Exp $
 
---- source/libs/comm/cl_ssl_framework.c.orig	2006-07-17 20:25:05.000000000 +1200
-+++ source/libs/comm/cl_ssl_framework.c
-@@ -988,7 +988,7 @@ static int cl_com_ssl_build_symbol_table
+--- source/libs/comm/cl_ssl_framework.c.orig	Fri Jun 15 12:34:16 2007
++++ source/libs/comm/cl_ssl_framework.c	Fri May 30 11:17:47 2008
+@@ -1025,7 +1025,7 @@
     {
        char* func_name = NULL;
        int had_errors = 0;
--#if defined(FREEBSD)
-+#if defined(FREEBSD) || defined(NETBSD)
+-#if defined(FREEBSD) || defined(DARWIN)
++#if defined(NETBSD) || defined(FREEBSD) || defined(DARWIN)
        void* cl_com_ssl_crypto_handle_saved = NULL;
  #endif
  
-@@ -1004,12 +1004,12 @@ static int cl_com_ssl_build_symbol_table
- 
- #if defined(DARWIN)
- #ifdef RTLD_NODELETE
--      cl_com_ssl_crypto_handle = dlopen ("libssl.bundle", RTLD_NOW | RTLD_GLOBAL | RTLD_NODELETE);
-+      cl_com_ssl_crypto_handle = dlopen ("libssl.dylib", RTLD_NOW | RTLD_GLOBAL | RTLD_NODELETE);
- #else
--      cl_com_ssl_crypto_handle = dlopen ("libssl.bundle", RTLD_NOW | RTLD_GLOBAL );
-+      cl_com_ssl_crypto_handle = dlopen ("libssl.dylib", RTLD_NOW | RTLD_GLOBAL );
+@@ -1047,7 +1047,7 @@
+       cl_com_ssl_crypto_handle = dlopen ("libssl.dylib", RTLD_NOW | RTLD_GLOBAL );
  #endif /* RTLD_NODELETE */
  
 -#elif defined(FREEBSD)
-+#elif defined(FREEBSD) || defined(NETBSD)
++#elif defined(NETBSD) || defined(FREEBSD)
  #ifdef RTLD_NODELETE
        cl_com_ssl_crypto_handle = dlopen ("libssl.so", RTLD_LAZY | RTLD_GLOBAL | RTLD_NODELETE);
  #else
-@@ -1038,7 +1038,7 @@ static int cl_com_ssl_build_symbol_table
+@@ -1076,7 +1076,7 @@
           return CL_RETVAL_SSL_DLOPEN_SSL_LIB_FAILED;
        }
        
--#if defined(FREEBSD)
-+#if defined(FREEBSD) || defined(NETBSD)
+-#if defined(FREEBSD) || defined(DARWIN)
++#if defined(NETBSD) || defined(FREEBSD) || defined(DARWIN)
        cl_com_ssl_crypto_handle_saved = cl_com_ssl_crypto_handle;
        cl_com_ssl_crypto_handle = RTLD_DEFAULT;
  #endif
-@@ -1661,7 +1661,7 @@ static int cl_com_ssl_build_symbol_table
+@@ -1784,7 +1784,7 @@
           return CL_RETVAL_SSL_CANT_LOAD_ALL_FUNCTIONS;
        }
  

@@ -1,0 +1,73 @@
+$NetBSD: patch-bm,v 1.1 2008/09/15 16:30:57 ahoka Exp $
+
+DESTDIR support.
+
+--- source/dist/util/setfileperm.sh.orig	Fri Jul  1 12:45:13 2005
++++ source/dist/util/setfileperm.sh	Fri May 30 13:48:16 2008
+@@ -81,7 +81,7 @@
+ 
+ instauto=false
+ 
+-if [ -z "$SGE_ROOT" -o ! -d "$SGE_ROOT" ]; then
++if [ -z "$SGE_ROOT" -o ! -d "$DESTDIR$SGE_ROOT" ]; then
+    echo 
+    echo ERROR: Please set your \$SGE_ROOT environment variable
+    echo and start this script again. Exit.
+@@ -89,7 +89,7 @@
+    exit 1
+ fi
+ 
+-if [ ! -f "$SGE_ROOT/util/arch" ]; then
++if [ ! -f "$DESTDIR$SGE_ROOT/util/arch" ]; then
+    echo 
+    echo ERROR: The shell script \"$SGE_ROOT/util/arch\" does not exist.
+    echo Please verify your distribution and restart this script. Exit.
+@@ -97,7 +97,7 @@
+    exit 1
+ fi
+ 
+-if [ ! -f $SGE_ROOT/util/arch_variables ]; then
++if [ ! -f "$DESTDIR$SGE_ROOT"/util/arch_variables ]; then
+    echo
+    echo ERROR: Missing shell script \"$SGE_ROOT/util/arch_variables\".
+    echo Please verify your distribution and restart this script. Exit.
+@@ -105,7 +105,7 @@
+    exit 1
+ fi
+ 
+-. $SGE_ROOT/util/arch_variables
++. "$DESTDIR$SGE_ROOT"/util/arch_variables
+ 
+ if [ $ARCH = "win32-x86" ]; then
+    echo
+@@ -182,7 +182,7 @@
+    done
+ fi
+ 
+-cd $1
++cd $DESTDIR$1
+ if [ $? != 0 ]; then
+    $ECHO "ERROR: can't change to directory \"$1\". Exiting."
+    exit 1
+@@ -203,17 +203,17 @@
+ done
+ 
+ for f in $FILELIST $OPTFILES; do
+-   if [ -d $f -o -f $f ]; then
+-      SetFilePerm $f 
++   if [ -d $DESTDIR$f -o -f $DESTDIR$f ]; then
++      SetFilePerm $DESTDIR$f 
+    fi
+ done
+ 
+ for file in $SUIDFILES; do
+    # Windows NFS Server does not like suid files
+    if [ "`echo $file | grep win32-x86`" != "" ]; then
+-      chmod 511 $file
++      chmod 511 $DESTDIR$file
+    else
+-      chmod 4511 $file
++      chmod 4511 $DESTDIR$file
+    fi
+ done
+ 
