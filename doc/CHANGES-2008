@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2267 2008/09/15 12:30:58 dmcmahill Exp $
+$NetBSD: CHANGES-2008,v 1.2268 2008/09/15 13:06:33 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3838,3 +3838,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/typolight-translations version 20080915 [taca 2008-09-15]
 	Updated lang/pear to 1.5.4nb2 [adrianp 2008-09-15]
 	Updated cad/gerbv to 2.1.0 [dmcmahill 2008-09-14]
+	Updated devel/p5-POE-Test-Loops to 1.002nb1 [he 2008-09-15]
+	Updated devel/p5-POE-Test-Loops to 1.002nb2 [he 2008-09-15]
