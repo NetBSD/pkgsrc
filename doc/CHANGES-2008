@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2262 2008/09/15 06:06:27 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.2263 2008/09/15 09:08:37 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3813,3 +3813,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/ruby-actionmailer to 2.1.1 [minskim 2008-09-15]
 	Updated www/rails to 2.1.1 [minskim 2008-09-15]
 	Updated textproc/ruby-maruku to 0.5.9 [minskim 2008-09-15]
+	Updated graphics/ruby-rcairo to 1.7.0 [obache 2008-09-15]
