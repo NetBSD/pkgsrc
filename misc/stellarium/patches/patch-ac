@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2008/09/16 13:23:42 drochner Exp $
+
+--- src/stel_ui_conf.cpp.orig	2008-09-15 14:05:32.000000000 +0200
++++ src/stel_ui_conf.cpp
+@@ -620,7 +620,7 @@ void StelUI::load_cities(const string& p
+ 	{
+ 		fileName = StelApp::getInstance().getFileMgr().findFile(QString("data/cities_") + planetEnglishName.c_str() + ".fab");
+ 	}
+-	catch (exception& e)
++	catch (std::exception& e)
+ 	{
+ 		cerr << "INFO StelUI::load_cities " << e.what() << endl;
+ 		return;
