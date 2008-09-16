@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2008/05/29 16:44:53 drochner Exp $
+# $NetBSD: Makefile,v 1.85 2008/09/16 15:49:39 drochner Exp $
 #
 
 DISTNAME=		gedit-2.22.3
@@ -20,9 +20,8 @@ GNU_CONFIGURE=		YES
 
 PKGCONFIG_OVERRIDE+=	data/gedit.pc.in
 
-GCONF_SCHEMAS=		gedit.schemas
+GCONF_SCHEMAS=		gedit.schemas gedit-file-browser.schemas
 
-CONFIGURE_ARGS+=	--enable-schemas-install
 # XXX option?
 .include "../../textproc/enchant/buildlink3.mk"
 .include "../../textproc/iso-codes/buildlink3.mk"
