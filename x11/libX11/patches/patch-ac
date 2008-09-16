@@ -1,11 +1,11 @@
-$NetBSD: patch-ac,v 1.5 2008/07/24 01:07:31 bjs Exp $
+$NetBSD: patch-ac,v 1.6 2008/09/16 21:57:09 bjs Exp $
 
 _POSIX_THREAD_SAFE_FUNCTIONS is not used on NetBSD.  Instead,
 let's use _REENTRANT.
 
---- configure.orig	2008-03-06 15:48:42.000000000 -0500
+--- configure.orig	2008-09-04 17:48:46.000000000 -0400
 +++ configure
-@@ -927,6 +927,8 @@ XKB_FALSE
+@@ -929,6 +929,8 @@ XKB_FALSE
  XKBPROTO_CFLAGS
  XKBPROTO_LIBS
  XKBPROTO_REQUIRES
@@ -14,7 +14,7 @@ let's use _REENTRANT.
  LINT
  LINT_FLAGS
  LINT_TRUE
-@@ -22885,43 +22887,38 @@ esac
+@@ -23393,43 +23395,38 @@ esac
  
  
  
@@ -70,7 +70,7 @@ let's use _REENTRANT.
    ac_status=$?
    grep -v '^ *+' conftest.er1 >conftest.err
    rm -f conftest.er1
-@@ -22930,28 +22927,35 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
+@@ -23438,28 +23435,35 @@ eval "echo \"\$as_me:$LINENO: $ac_try_ec
    (exit $ac_status); } && {
  	 test -z "$ac_c_werror_flag" ||
  	 test ! -s conftest.err
@@ -118,7 +118,7 @@ let's use _REENTRANT.
   if test x$thrstubs = xyes; then
    THRSTUBS_TRUE=
    THRSTUBS_FALSE='#'
-@@ -22966,8 +22970,8 @@ if test x$xthreads = xyes ; then
+@@ -23474,8 +23478,8 @@ if test x$xthreads = xyes ; then
      linux*|openbsd*|gnu*|k*bsd*-gnu)
          XTHREADLIB=-lpthread ;;
      netbsd*)
@@ -129,7 +129,7 @@ let's use _REENTRANT.
      freebsd*)
          XTHREAD_CFLAGS="-D_THREAD_SAFE"
          XTHREADLIB="-pthread" ;;
-@@ -23507,6 +23511,15 @@ else
+@@ -24006,6 +24010,15 @@ else
  fi
  
  
@@ -145,7 +145,7 @@ let's use _REENTRANT.
  
  
  for ac_header in stdlib.h unistd.h
-@@ -24641,6 +24654,13 @@ echo "$as_me: error: conditional \"XKB\"
+@@ -25140,6 +25153,13 @@ echo "$as_me: error: conditional \"XKB\"
  Usually this means the macro was only invoked conditionally." >&2;}
     { (exit 1); exit 1; }; }
  fi
@@ -159,7 +159,7 @@ let's use _REENTRANT.
  if test -z "${LINT_TRUE}" && test -z "${LINT_FALSE}"; then
    { { echo "$as_me:$LINENO: error: conditional \"LINT\" was never defined.
  Usually this means the macro was only invoked conditionally." >&5
-@@ -25466,6 +25486,8 @@ XKB_FALSE!$XKB_FALSE$ac_delim
+@@ -25967,6 +25993,8 @@ XKB_FALSE!$XKB_FALSE$ac_delim
  XKBPROTO_CFLAGS!$XKBPROTO_CFLAGS$ac_delim
  XKBPROTO_LIBS!$XKBPROTO_LIBS$ac_delim
  XKBPROTO_REQUIRES!$XKBPROTO_REQUIRES$ac_delim
@@ -168,12 +168,12 @@ let's use _REENTRANT.
  LINT!$LINT$ac_delim
  LINT_FLAGS!$LINT_FLAGS$ac_delim
  LINT_TRUE!$LINT_TRUE$ac_delim
-@@ -25490,7 +25512,7 @@ LIBOBJS!$LIBOBJS$ac_delim
+@@ -25991,7 +26019,7 @@ LIBOBJS!$LIBOBJS$ac_delim
  LTLIBOBJS!$LTLIBOBJS$ac_delim
  _ACEOF
  
--  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 83; then
-+  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 85; then
+-  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 85; then
++  if test `sed -n "s/.*$ac_delim\$/X/p" conf$$subs.sed | grep -c X` = 87; then
      break
    elif $ac_last_try; then
      { { echo "$as_me:$LINENO: error: could not make $CONFIG_STATUS" >&5
