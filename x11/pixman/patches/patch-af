@@ -1,0 +1,19 @@
+$NetBSD: patch-af,v 1.4 2008/09/16 21:22:34 bjs Exp $
+
+git ref:00f3d6ef22b5a062323208fd540a17ca65dca42b (to vers 0.11.10)
+ 
+Fix bug in pixman_image_is_opaque().
+
+--- pixman/pixman-image.c.orig	2008-06-13 15:51:00.000000000 -0400
++++ pixman/pixman-image.c
+@@ -818,6 +818,10 @@ pixman_image_is_opaque(pixman_image_t *i
+ 
+         if (image->common.transform)
+             return FALSE;
++
++	/* Gradients do not necessarily cover the entire compositing area */
++	if (image->type == LINEAR || image->type == CONICAL || image->type == RADIAL)
++	    return FALSE;
+     }
+ 
+      return TRUE;
