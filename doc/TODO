@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7540 2008/09/15 21:17:10 ahoka Exp $
+$NetBSD: TODO,v 1.7541 2008/09/16 13:02:02 taca Exp $
 
 Suggested new packages
 ======================
@@ -968,7 +968,7 @@ Suggested package updates
 	o opencobol-1.0
 	o openh323-1.19.1
 	o openmortal-0.7.1
-	o openssh-5.1.1
+	o openssl-0.9.8i
 	o openttd-0.6.1
 	o opera-9.51 [pkg/39269]
 	o opera-9.52
