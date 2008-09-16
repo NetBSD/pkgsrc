@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.91 2008/09/03 21:33:29 spz Exp $
+# $NetBSD: Makefile,v 1.92 2008/09/16 23:06:19 spz Exp $
 
 DISTNAME=		inn-2.4.5
 CATEGORIES=		news
@@ -72,24 +72,29 @@ PKG_SHELL.${INN_USER}=	${SH}
 
 PKG_SYSCONFDIR.inn=	${PREFIX}/etc/inn
 EXAMPLEDIR=		${PREFIX}/share/examples/inn
-INN_DATADIRS=		log log/OLD run tmp
+INN_DATADIRS=		log log/OLD run tmp db spool
 INN_SPOOLDIRS=		archive articles overview incoming incoming/bad	\
 			outgoing uniover innfeed
 
-OWN_DIRS+=		${PREFIX}/etc/nntp
-OWN_DIRS+=		${PREFIX}/etc/inn
-OWN_DIRS+=		${INN_DATA_DIR}
-OWN_DIRS+=		${INN_DATA_DIR}/db
-OWN_DIRS+=		${INN_DATA_DIR}/spool
+MAKE_DIRS+=		${PREFIX}/bin
+MAKE_DIRS+=		${PREFIX}/sbin
+MAKE_DIRS+=		${PREFIX}/lib
 
-.for dir in ${OWN_DIRS}
+INN_DIRS+=		${PREFIX}/etc/nntp
+INN_DIRS+=		${PREFIX}/etc/inn
+INN_DIRS+=		${INN_DATA_DIR}
+
+OWN_DIRS+=		${PREFIX}/${INN_PATHBIN}
+OWN_DIRS+=		${EXAMPLEDIR}
+
+.for dir in ${INN_DIRS}
 OWN_DIRS_PERMS+=	${dir}	${INN_USER} ${INN_GROUP} 0775
 .endfor
 .for dir in ${INN_DATADIRS}
 MAKE_DIRS_PERMS+=	${INN_DATA_DIR}/${dir}	${INN_USER} ${INN_GROUP} 0775
 .endfor
 .for dir in ${INN_SPOOLDIRS}
-OWN_DIRS_PERMS+=	${INN_DATA_DIR}/spool/${dir} \
+MAKE_DIRS_PERMS+=	${INN_DATA_DIR}/spool/${dir} \
 						${INN_USER} ${INN_GROUP} 0775
 .endfor
 
@@ -129,21 +134,22 @@ pre-install:
 	done
 	# makedbz needs these earlier than pkgsrc will install them normally
 	if [ ! -f ${PKG_SYSCONFDIR}/inn.conf ] ; then			\
-		${INSTALL_DATA} ${EXAMPLEDIR}/inn.conf			\
+		${INSTALL} ${COPY} -o ${INN_USER} -g ${INN_GROUP} -m 0664 \
+				${EXAMPLEDIR}/inn.conf			\
 				${PKG_SYSCONFDIR}/inn.conf ;		\
 	fi
 	if [ ! -d ${INN_DATA_DIR}/db ] ; then				\
-		${MKDIR} ${INN_DATA_DIR}/db ;		\
+		${INSTALL} -d -o ${INN_USER} ${INN_DATA_DIR}/db ;	\
 	fi
-	${CHOWN} ${INN_USER} ${INN_DATA_DIR}/db
 	
 
 post-install:
 	for FILE in cnfsstat ctlinnd inndstart makehistory ; do		\
-		${LN} -s ${PREFIX}/${INN_PATHBIN}/$$FILE ${PREFIX}/sbin/$$FILE ; \
+		${INSTALL} -l rs ${PREFIX}/${INN_PATHBIN}/$$FILE     \
+				${PREFIX}/sbin/$$FILE ;                 \
 	done
-	${LN} -s ${PREFIX}/${INN_PATHBIN}/inews ${PREFIX}/bin/inews
-	${LN} -s ${PREFIX}/${INN_PATHBIN}/rnews ${PREFIX}/bin/rnews
+	${INSTALL} -l rs ${PREFIX}/${INN_PATHBIN}/inews ${PREFIX}/bin/inews
+	${INSTALL} -l rs ${PREFIX}/${INN_PATHBIN}/rnews ${PREFIX}/bin/rnews
 	for FILE in libinn.a libstorage.a libinnhist.a ; do		\
 		${CHMOD} 644 ${PREFIX}/lib/$$FILE ;			\
 	done
