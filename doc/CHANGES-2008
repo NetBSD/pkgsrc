@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2295 2008/09/16 21:23:42 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2296 2008/09/16 21:57:33 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3890,3 +3890,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed security/AiSSLtelnet [gdt 2008-09-16]
 	Removed security/smimemsg [gdt 2008-09-16]
 	Updated x11/pixman to 0.11.10nb1 [bjs 2008-09-16]
+	Updated x11/libX11 to 1.1.5 [bjs 2008-09-16]
