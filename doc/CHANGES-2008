@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2290 2008/09/16 17:53:53 jakllsch Exp $
+$NetBSD: CHANGES-2008,v 1.2291 2008/09/16 18:09:14 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3880,3 +3880,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/rabbit to 0.5.7 [obache 2008-09-16]
 	Added security/p5-Authen-CAS-Client version 0.03 [seb 2008-09-16]
 	Updated wm/openbox to 3.4.7.2nb1 [jakllsch 2008-09-16]
+	Added databases/p5-MARC-Record version 2.0.0 [he 2008-09-16]
+	Updated net/p5-Net-Z3950-ZOOM to 1.24nb1 [he 2008-09-16]
