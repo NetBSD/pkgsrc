@@ -1,7 +1,7 @@
-$NetBSD: patch-ac,v 1.2 2008/09/04 06:43:06 dholland Exp $
+$NetBSD: patch-ac,v 1.3 2008/09/16 22:47:41 dholland Exp $
 
---- doc/Makefile.in.orig	2008-05-29 07:56:19.000000000 -0400
-+++ doc/Makefile.in	2008-09-04 02:29:22.000000000 -0400
+--- doc/Makefile.in.orig	2008-09-08 12:35:24.000000000 -0400
++++ doc/Makefile.in	2008-09-16 18:35:52.000000000 -0400
 @@ -179,31 +179,13 @@ target_alias = @target_alias@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
@@ -41,7 +41,7 @@ $NetBSD: patch-ac,v 1.2 2008/09/04 06:43:06 dholland Exp $
  RM = rm -f
  #           REFCARD = refcard
  #       CMD_REFCARD = cmdrefcard
-@@ -821,7 +803,7 @@ html-install:
+@@ -822,7 +804,7 @@ html-install:
  	$(INSTALL_DATA) $(srcdir)/examples/*.gri      $(EXAMPLES_DIR)
  	$(INSTALL_DATA) $(srcdir)/examples/e*.ps      $(EXAMPLES_DIR)
  	$(INSTALL_SCRIPT) $(srcdir)/examples/FEM.pl  $(EXAMPLES_DIR)
@@ -50,21 +50,16 @@ $NetBSD: patch-ac,v 1.2 2008/09/04 06:43:06 dholland Exp $
  
  # Sun Jun  8 11:40:52 UTC 2003  [Dan Kelley]
  # This is commented-out because it's not used.  Later it will be deleted.
-@@ -892,11 +874,12 @@ all-local: refcard.ps cmdrefcard.ps
- 
- install-data-local:
- 	${MAKE} html-install
-+	$(MKDIR_P)                                         $(DOC_DIR)
- 	$(INSTALL) -m 644 $(srcdir)/../license.txt         $(DOC_DIR)
+@@ -898,7 +880,7 @@ install-data-local:
  #       This is handled by gri.spec [2003-may-31 Dan Kelley]
  @OS_IS_LINUX_REDHAT_FALSE@	$(INSTALL_DATA) refcard.ps                       $(DOC_DIR)
  @OS_IS_LINUX_REDHAT_FALSE@	$(INSTALL_DATA) cmdrefcard.ps                    $(DOC_DIR)
 -	mkdir -m 755 -p                                    $(MAN_DIR)
-+	$(MKDIR_P)                                         $(MAN_DIR)
++	$(MKDIR_P)                                       $(MAN_DIR)
  	cat $(srcdir)/../doc/$(gri_manpage_name) | sed -e s,VERSION,${PACKAGE_VERSION}, > tmp
  	$(INSTALL_DATA)    tmp                             $(MAN_DIR)/gri.1
  	$(RM) tmp
-@@ -904,7 +887,7 @@ install-data-local:
+@@ -906,7 +888,7 @@ install-data-local:
  #	they are supposed to go, at least on linux/redhat systems [2003-jun-8 Dan Kelley]
  	$(INSTALL_DATA) $(srcdir)/../doc/gri_merge.1-skel  $(MAN_DIR)/gri_merge.1
  	$(INSTALL_DATA) $(srcdir)/../doc/gri_unpage.1-skel $(MAN_DIR)/gri_unpage.1
