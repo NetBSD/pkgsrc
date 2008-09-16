@@ -1,9 +1,15 @@
 #!@SH@
-# $NetBSD: client-clean,v 1.8 2008/01/26 23:44:08 joerg Exp $
+# $NetBSD: client-clean,v 1.9 2008/09/16 18:21:30 joerg Exp $
 
 . @PBULK_CONFIG@
 
 set -e
+
+if [ "${config_version}" != "@PBULK_CONFIG_VERSION@" ]; then
+	echo "Your configuration has version ${config_version}."
+	echo "This version of pbulk expects version @PBULK_CONFIG_VERSION@."
+	exit 1
+fi
 
 if [ "$cross_compile" != "no" ]; then
 	cur_destdir=${target_destdir}

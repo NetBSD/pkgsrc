@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: scan,v 1.3 2008/06/20 11:51:50 joerg Exp $
+# $NetBSD: scan,v 1.4 2008/09/16 18:21:30 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -34,6 +34,12 @@
 
 set -e
 
+if [ "${config_version}" != "@PBULK_CONFIG_VERSION@" ]; then
+	echo "Your configuration has version ${config_version}."
+	echo "This version of pbulk expects version @PBULK_CONFIG_VERSION@."
+	exit 1
+fi
+
 if [ -z "${limited_list}" ]; then
 	echo "Scanning..."
 	case "${master_mode}" in
@@ -49,7 +55,20 @@ if [ -z "${limited_list}" ]; then
 		;;
 	esac
 	echo "Resolving..."
-	${presolve} -v ${loc}/pscan > ${loc}/presolve 2> ${loc}/presolve.log
+	if ! ${presolve} -v ${loc}/pscan > ${loc}/presolve 2> ${loc}/presolve-err.log; then
+		echo "Global dependency resolution failed, check ${loc}/presolve-err.log for details" >&2
+		case "${ignore_missing_dependencies}" in
+		[nN][oO])
+			exit 1
+			;;
+		[yY][eE][sS])
+			${presolve} -p -v ${loc}/pscan > ${loc}/presolve 2> /dev/null
+			;;
+		*)
+			echo "Unsupported value for ignore_missing_dependencies."
+			;;
+		esac
+	fi
 else
 	initial=1
 	mkdir -p ${loc}

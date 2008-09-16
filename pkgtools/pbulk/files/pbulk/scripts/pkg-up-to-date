@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-up-to-date,v 1.2 2008/01/26 23:44:09 joerg Exp $
+# $NetBSD: pkg-up-to-date,v 1.3 2008/09/16 18:21:30 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -33,6 +33,12 @@
 . @PBULK_CONFIG@
 
 set -e
+
+if [ "${config_version}" != "@PBULK_CONFIG_VERSION@" ]; then
+	echo "Your configuration has version ${config_version}."
+	echo "This version of pbulk expects version @PBULK_CONFIG_VERSION@."
+	exit 1
+fi
 
 pkg="${packages}/All/$1.tgz"
 [ -f ${pkg} ]

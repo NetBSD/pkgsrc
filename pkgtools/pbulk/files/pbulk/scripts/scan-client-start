@@ -1,9 +1,15 @@
 #!@SH@
-# $NetBSD: scan-client-start,v 1.1.1.1 2007/06/19 19:49:59 joerg Exp $
+# $NetBSD: scan-client-start,v 1.2 2008/09/16 18:21:30 joerg Exp $
 
 . @PBULK_CONFIG@
 
 set -e
+
+if [ "${config_version}" != "@PBULK_CONFIG_VERSION@" ]; then
+	echo "Your configuration has version ${config_version}."
+	echo "This version of pbulk expects version @PBULK_CONFIG_VERSION@."
+	exit 1
+fi
 
 for client in ${scan_clients}; do
 	ssh $client "${pscan_prepare} && ${pscan} -c ${master_port_scan} -M ${make} ${pkgsrc}" &
