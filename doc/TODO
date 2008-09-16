@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7542 2008/09/16 15:30:37 joerg Exp $
+$NetBSD: TODO,v 1.7543 2008/09/16 21:57:53 bjs Exp $
 
 Suggested new packages
 ======================
@@ -813,7 +813,6 @@ Suggested package updates
 	o lft-2.5 [at http://pwhois.org/]
 	o lftp-3.7.3
 	o libFoundation-1.1.3
-	o libX11-1.1.5
 	o libast-0.7
 	o libcares-1.5.2
 	o libchewing-0.3.0
