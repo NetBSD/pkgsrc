@@ -136,6 +136,7 @@ gtkspell		Enable gtkspell support.
 gzip			Enable compression using gzip
 halfops			Halfops are similar to plain ops, but can't kick/deop plain ops.
 hping-suid		Install hping executable setuid root.
+hpn-patch		High Performance Enabled SSH/SCP for OpenSSH.
 hunspell		Add spell checking support using hunspell.
 i586-optimized		Optimize for i586 (only).
 icu			Enable icu support.
