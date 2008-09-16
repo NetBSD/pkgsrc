@@ -1,10 +1,9 @@
-@comment $NetBSD: PLIST.pl,v 1.1.1.1 2008/09/15 09:59:10 taca Exp $
+@comment $NetBSD: PLIST.pl,v 1.2 2008/09/16 13:15:28 taca Exp $
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/pl/modules.php
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/pl/.htaccess
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/pl/tl_templates.php
 ${TL_WEBDIR}/system/modules/frontend/languages/pl/modules.php
 ${TL_WEBDIR}/system/modules/frontend/languages/pl/default.php
-${TL_WEBDIR}/system/modules/frontend/languages/pl/stopwords.txt
 ${TL_WEBDIR}/system/modules/frontend/languages/pl/.htaccess
 ${TL_WEBDIR}/system/modules/listing/languages/pl/modules.php
 ${TL_WEBDIR}/system/modules/listing/languages/pl/default.php

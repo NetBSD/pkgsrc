@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.nl,v 1.1.1.1 2008/09/15 09:59:10 taca Exp $
+@comment $NetBSD: PLIST.nl,v 1.2 2008/09/16 13:15:28 taca Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/nl/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/nl/default.php
 ${TL_WEBDIR}/system/modules/backend/languages/nl/countries.php
@@ -32,7 +32,6 @@ ${TL_WEBDIR}/system/modules/development/languages/nl/tl_labels.php
 ${TL_WEBDIR}/system/modules/frontend/languages/nl/.htaccess
 ${TL_WEBDIR}/system/modules/frontend/languages/nl/default.php
 ${TL_WEBDIR}/system/modules/frontend/languages/nl/modules.php
-${TL_WEBDIR}/system/modules/frontend/languages/nl/stopwords.txt
 ${TL_WEBDIR}/system/modules/news/languages/nl/.htaccess
 ${TL_WEBDIR}/system/modules/news/languages/nl/default.php
 ${TL_WEBDIR}/system/modules/news/languages/nl/modules.php
