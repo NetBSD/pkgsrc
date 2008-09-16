@@ -1,7 +1,7 @@
 /*
  * $OpenBSD: inp.c,v 1.34 2006/03/11 19:41:30 otto Exp $
  * $DragonFly: src/usr.bin/patch/inp.c,v 1.6 2007/09/29 23:11:10 swildner Exp $
- * $NetBSD: inp.c,v 1.1.1.1 2008/09/10 11:03:21 joerg Exp $
+ * $NetBSD: inp.c,v 1.2 2008/09/16 11:59:29 joerg Exp $
  */
 
 /*
@@ -273,8 +273,13 @@ plan_a(const char *filename)
 	}
 
 	close(ifd);
+#ifdef MADV_SEQUENTIAL
 	if (i_size)
 		madvise(i_womp, i_size, MADV_SEQUENTIAL);
+#elif defined(POSIX_MADV_SEQUENTIAL)
+	if (i_size)
+		posix_madvise(i_womp, i_size, POSIX_MADV_SEQUENTIAL);
+#endif
 
 	/* estimate the number of lines */
 	lines_allocated = i_size / 25;
