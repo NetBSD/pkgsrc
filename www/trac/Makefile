@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.38 2008/09/15 20:57:55 abs Exp $
+# $NetBSD: Makefile,v 1.39 2008/09/16 19:29:59 joerg Exp $
 #
 
 DISTNAME=	Trac-0.11.1
@@ -30,7 +30,8 @@ PYTHON_PATCH_SCRIPTS=	cgi-bin/trac.* contrib/*.py contrib/*-hook
 .include "../../lang/python/application.mk"
 
 .if !empty(PKG_OPTIONS:Msqlite)
-.if !empty(PYPKGPREFIX:M2*[1234])
+.if defined(PYPACKAGE) && \
+    (${PYPACKAGE} == "python23" || ${PYPACKAGE} == "python24")
 DEPENDS+=	${PYPKGPREFIX}-sqlite2>=2:../../databases/py-sqlite2
 .else
 DEPENDS+=	${PYPKGPREFIX}-sqlite3>=0:../../databases/py-sqlite3
