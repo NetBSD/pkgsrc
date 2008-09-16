@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2283 2008/09/16 06:31:54 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2284 2008/09/16 12:39:02 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3860,3 +3860,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/ap2-python to 3.3.1 [abs 2008-09-15]
 	Updated multimedia/ffmpeg to 20080727nb4 [sborrill 2008-09-15]
 	Updated devel/p5-Proc-ProcessTable to 0.45 [seb 2008-09-15]
+	Updated pkgtools/x11-links to 0.38 [tron 2008-09-16]
