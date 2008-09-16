@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2286 2008/09/16 15:33:32 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2287 2008/09/16 16:07:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3863,3 +3863,17 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/x11-links to 0.38 [tron 2008-09-16]
 	Updated security/openssh to 5.1.1 [taca 2008-09-16]
 	Added www/p5-Catalyst-View-Jemplate version 0.06 [seb 2008-09-16]
+	Removed audio/musicbox [wiz 2008-09-16]
+	Removed audio/xamp [wiz 2008-09-16]
+	Removed wm/bbconf [wiz 2008-09-16]
+	Removed x11/ebuilder [wiz 2008-09-16]
+	Removed x11/py-qt2 [wiz 2008-09-16]
+	Removed x11/py-qt2-sip [wiz 2008-09-16]
+	Removed x11/qt1 [wiz 2008-09-16]
+	Removed x11/qt2 [wiz 2008-09-16]
+	Removed x11/qt2-designer [wiz 2008-09-16]
+	Removed x11/qt2-docs [wiz 2008-09-16]
+	Removed x11/qt2-examples [wiz 2008-09-16]
+	Removed x11/qt2-libs [wiz 2008-09-16]
+	Removed x11/qtarch [wiz 2008-09-16]
+	Removed x11/qwspritefield [wiz 2008-09-16]

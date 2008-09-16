@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.562 2008/09/13 00:33:14 bjs Exp $
+# $NetBSD: Makefile,v 1.563 2008/09/16 16:07:31 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -34,7 +34,6 @@ SUBDIR+=	dmenu
 SUBDIR+=	docker
 SUBDIR+=	dtx11session
 SUBDIR+=	dxpc
-SUBDIR+=	ebuilder
 SUBDIR+=	ede
 SUBDIR+=	editres
 SUBDIR+=	efltk
@@ -259,19 +258,11 @@ SUBDIR+=	py-gnome2
 SUBDIR+=	py-gnome2-desktop
 SUBDIR+=	py-gnome2-extras
 SUBDIR+=	py-gtk2
-SUBDIR+=	py-qt2
-SUBDIR+=	py-qt2-sip
 SUBDIR+=	py-qt3-base
 SUBDIR+=	py-qt3-modules
 SUBDIR+=	py-qt3-qscintilla
 SUBDIR+=	py-qt3-sip
 SUBDIR+=	py-wxWidgets
-SUBDIR+=	qt1
-SUBDIR+=	qt2
-SUBDIR+=	qt2-designer
-SUBDIR+=	qt2-docs
-SUBDIR+=	qt2-examples
-SUBDIR+=	qt2-libs
 SUBDIR+=	qt3
 SUBDIR+=	qt3-docs
 SUBDIR+=	qt3-libs
@@ -287,8 +278,6 @@ SUBDIR+=	qt4-qdbus
 SUBDIR+=	qt4-sqlite3
 SUBDIR+=	qt4-tiff
 SUBDIR+=	qt4-tools
-SUBDIR+=	qtarch
-SUBDIR+=	qwspritefield
 SUBDIR+=	qwt
 SUBDIR+=	randrproto
 SUBDIR+=	ratmen
