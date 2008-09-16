@@ -1,0 +1,3 @@
+The Perl 5 module Authen::CAS::Client provides a simple interface
+for authenticating users using JA-SIG's CAS protocol. Both CAS v1.0
+and v2.0 are supported.
