@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.16 2006/10/31 03:31:20 taca Exp $
+$NetBSD: patch-ac,v 1.17 2008/09/16 12:53:08 taca Exp $
 
---- defines.h.orig	2006-09-21 22:13:30.000000000 +0900
+--- defines.h.orig	2008-07-04 22:10:49.000000000 +0900
 +++ defines.h
 @@ -30,6 +30,15 @@
  
@@ -18,18 +18,7 @@ $NetBSD: patch-ac,v 1.16 2006/10/31 03:31:20 taca Exp $
  #if defined(HAVE_DECL_SHUT_RD) && HAVE_DECL_SHUT_RD == 0
  enum
  {
-@@ -437,10 +446,6 @@ struct winsize {
- # define __attribute__(x)
- #endif /* !defined(__GNUC__) || (__GNUC__ < 2) */
- 
--#ifndef __dead
--# define __dead	__attribute__((noreturn))
--#endif
--
- #if !defined(HAVE_ATTRIBUTE__SENTINEL__) && !defined(__sentinel__)
- # define __sentinel__
- #endif
-@@ -643,6 +648,24 @@ struct winsize {
+@@ -645,6 +654,24 @@ struct winsize {
  #    endif
  #  endif
  #endif
