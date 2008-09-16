@@ -1,4 +1,4 @@
-/*	$NetBSD: check.c,v 1.3 2008/04/29 05:46:08 martin Exp $	*/
+/*	$NetBSD: check.c,v 1.4 2008/09/16 13:32:58 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: check.c,v 1.3 2008/04/29 05:46:08 martin Exp $");
+__RCSID("$NetBSD: check.c,v 1.4 2008/09/16 13:32:58 joerg Exp $");
 #endif
 
 /*-
@@ -58,7 +58,9 @@ __RCSID("$NetBSD: check.c,v 1.3 2008/04/29 05:46:08 martin Exp $");
 #if HAVE_FCNTL_H
 #include <fcntl.h>
 #endif
-#if HAVE_MD5_H
+#ifndef NETBSD
+#include <nbcompat/md5.h>
+#else
 #include <md5.h>
 #endif
 #if HAVE_LIMITS_H

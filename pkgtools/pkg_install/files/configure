@@ -4625,9 +4625,8 @@ done
 
 
 
-
 for ac_header in assert.h ctype.h dirent.h err.h errno.h fnctl.h \
-	fnmatch.h glob.h grp.h inttypes.h limits.h md5.h netdb.h \
+	fnmatch.h glob.h grp.h inttypes.h limits.h netdb.h \
 	pwd.h regex.h signal.h stdarg.h stdio.h stdlib.h string.h \
 	termcap.h termios.h time.h unistd.h vis.h
 do

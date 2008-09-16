@@ -1,4 +1,4 @@
-/*	$NetBSD: plist.c,v 1.19 2008/04/26 17:40:01 joerg Exp $	*/
+/*	$NetBSD: plist.c,v 1.20 2008/09/16 13:32:58 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: plist.c,v 1.24 1997/10/08 07:48:15 charnier Exp";
 #else
-__RCSID("$NetBSD: plist.c,v 1.19 2008/04/26 17:40:01 joerg Exp $");
+__RCSID("$NetBSD: plist.c,v 1.20 2008/09/16 13:32:58 joerg Exp $");
 #endif
 #endif
 
@@ -71,7 +71,9 @@ __RCSID("$NetBSD: plist.c,v 1.19 2008/04/26 17:40:01 joerg Exp $");
 #if HAVE_ERR_H
 #include <err.h>
 #endif
-#if HAVE_MD5_H
+#ifndef NETBSD
+#include <nbcompat/md5.h>
+#else
 #include <md5.h>
 #endif
 
