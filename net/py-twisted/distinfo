@@ -1,6 +1,7 @@
-$NetBSD: distinfo,v 1.5 2008/08/22 21:49:08 epg Exp $
+$NetBSD: distinfo,v 1.6 2008/09/16 01:59:07 epg Exp $
 
 SHA1 (Twisted-8.1.0.tar.bz2) = b10e523ab96032f5055ee02687b22bcd7cb02951
 RMD160 (Twisted-8.1.0.tar.bz2) = 1348f5e384a7d9d8591bd67e6b1f0d54aa18700e
 Size (Twisted-8.1.0.tar.bz2) = 2371422 bytes
 SHA1 (patch-ab) = 26495e5abd57025e915b923cc7089704bbd85629
+SHA1 (patch-ac) = 3881dec501db0913a600bde78e6d96a106c33156

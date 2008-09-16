@@ -1,0 +1,52 @@
+$NetBSD: patch-ac,v 1.1 2008/09/16 01:59:07 epg Exp $
+
+Even though this file isn't run for 2.4, it's still compiled and installed,
+where it fails due to new generator syntax.
+
+--- twisted/test/generator_failure_tests.py.orig	2007-11-23 10:27:03.000000000 -0800
++++ twisted/test/generator_failure_tests.py
+@@ -63,7 +63,7 @@ class TwoPointFiveFailureTests(TestCase)
+         stuff = []
+         def generator():
+             try:
+-                yield
++                yield 1
+             except:
+                 stuff.append(sys.exc_info())
+             else:
+@@ -91,7 +91,7 @@ class TwoPointFiveFailureTests(TestCase)
+         foundFailures = []
+         def generator():
+             try:
+-                yield
++                yield 1
+             except:
+                 foundFailures.append(Failure._findFailure())
+             else:
+@@ -118,7 +118,7 @@ class TwoPointFiveFailureTests(TestCase)
+ 
+         def generator():
+             try:
+-                yield
++                yield 1
+             except:
+                 newFailures.append(Failure())
+             else:
+@@ -139,7 +139,7 @@ class TwoPointFiveFailureTests(TestCase)
+         def generator():
+             try:
+                 try:
+-                    yield
++                    yield 1
+                 except:
+                     [][1]
+             except:
+@@ -157,7 +157,7 @@ class TwoPointFiveFailureTests(TestCase)
+         """
+         def generator():
+             try:
+-                yield
++                yield 1
+             except:
+                 [][1]
+         g = generator()
