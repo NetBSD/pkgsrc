@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.56 2008/09/10 00:25:14 gdt Exp $
+# $NetBSD: Makefile,v 1.57 2008/09/16 11:59:02 gdt Exp $
 
 DISTNAME=	unrarsrc-3.7.8
 PKGNAME=	${DISTNAME:S/src//}
+PKGREVISION=	1
 CATEGORIES=	archivers
 MASTER_SITES=	http://www.rarlab.com/rar/ \
 		ftp://ftp.rarlab.com/rar/
@@ -19,8 +20,14 @@ USE_LANGUAGES=	c++
 MAKE_FILE=	makefile.unix
 
 LICENSE=	unrar-license
-RESTRICTED=	Do not modify. Do not charge a fee for redistribution.
-NO_BIN_ON_FTP=	${RESTRICTED}
+RESTRICTED=	Do not charge a fee for redistribution.  Do not use to develop a rar archiver.
+# Reading the license implies NO_BIN_ON_FTP should be set because no
+# permission is granted to distribute derived works (e.g., binaries).
+# From private mail addressed to pkgsrc maintainers:
+#
+# Date: Wed, 10 Sep 2008 18:27:35 +0600
+# From: Eugene Roshal <roshal@rarlab.com>
+# You can redistribute either original or modified binaries or sources.
 NO_SRC_ON_CDROM=${RESTRICTED}
 NO_BIN_ON_CDROM=${RESTRICTED}
 
