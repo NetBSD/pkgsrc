@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: report,v 1.7 2008/01/15 21:43:32 joerg Exp $
+# $NetBSD: report,v 1.8 2008/09/16 18:21:30 joerg Exp $
 #
 # Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -33,6 +33,12 @@
 . @PBULK_CONFIG@
 
 set -e
+
+if [ "${config_version}" != "@PBULK_CONFIG_VERSION@" ]; then
+	echo "Your configuration has version ${config_version}."
+	echo "This version of pbulk expects version @PBULK_CONFIG_VERSION@."
+	exit 1
+fi
 
 echo "Build reports..."
 ${report_script} ${loc}
