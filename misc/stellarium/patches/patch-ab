@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1 2008/09/16 13:23:42 drochner Exp $
+
+--- src/stel_command_interface.cpp.orig	2008-09-15 14:03:46.000000000 +0200
++++ src/stel_command_interface.cpp
+@@ -436,7 +436,7 @@ int StelCommandInterface::execute_comman
+ 					image_filename = stapp->getFileMgr().findFile(image_filename);
+ 					script_images->load_image(image_filename, args["name"].c_str(), img_pos);
+ 				}
+-				catch(exception& e)
++				catch(std::exception& e)
+ 				{
+ 					cerr << "ERROR finding script: " << e.what() << endl;
+ 					debug_message = _("Unable to open file: ") + image_filename.toStdWString();
+@@ -511,7 +511,7 @@ int StelCommandInterface::execute_comman
+ 					audio = new Audio(QFile::encodeName(audioFilePath).constData(), "default track", StelUtils::stringToLong(args["output_rate"]));
+ 					audio->play(args["loop"]=="on");
+ 				}
+-				catch(exception& e)
++				catch(std::exception& e)
+ 				{
+ 					cerr << "ERROR while trying to play audio file: " << args["filename"] << " : " << e.what() << endl;
+ 				}
