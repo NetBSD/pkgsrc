@@ -1,7 +1,7 @@
 /*
  * $OpenBSD: util.c,v 1.32 2006/03/11 19:41:30 otto Exp $
  * $DragonFly: src/usr.bin/patch/util.c,v 1.9 2007/09/29 23:11:10 swildner Exp $
- * $NetBSD: util.c,v 1.1.1.1 2008/09/10 11:03:22 joerg Exp $
+ * $NetBSD: util.c,v 1.2 2008/09/16 11:59:29 joerg Exp $
  */
 
 /*
@@ -289,7 +289,7 @@ ask(const char *fmt, ...)
 void
 set_signals(int reset)
 {
-	static sig_t	hupval, intval;
+	static void (*hupval)(int), (*intval)(int);
 
 	if (!reset) {
 		hupval = signal(SIGHUP, SIG_IGN);
