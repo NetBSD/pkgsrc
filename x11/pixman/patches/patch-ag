@@ -1,0 +1,23 @@
+$NetBSD: patch-ag,v 1.1 2008/09/16 21:22:34 bjs Exp $
+
+Fix for bug 17477.
+
+over_2x128 was changing the alphaLo and alphaHi arguments, causing
+stripes.
+
+--- pixman/pixman-sse2.c.orig	2008-09-03 19:29:40.000000000 -0400
++++ pixman/pixman-sse2.c
+@@ -244,9 +244,11 @@ invertColors_2x128 (__m128i dataLo, __m1
+ static inline void
+ over_2x128 (__m128i* srcLo, __m128i* srcHi, __m128i* alphaLo, __m128i* alphaHi, __m128i* dstLo, __m128i* dstHi)
+ {
+-    negate_2x128 (*alphaLo, *alphaHi, alphaLo, alphaHi);
++    __m128i t1, t2;
+ 
+-    pixMultiply_2x128 (dstLo, dstHi, alphaLo, alphaHi, dstLo, dstHi);
++    negate_2x128 (*alphaLo, *alphaHi, &t1, &t2);
++
++    pixMultiply_2x128 (dstLo, dstHi, &t1, &t2, dstLo, dstHi);
+ 
+     *dstLo = _mm_adds_epu8 (*srcLo, *dstLo);
+     *dstHi = _mm_adds_epu8 (*srcHi, *dstHi);
