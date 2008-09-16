@@ -1,18 +1,18 @@
-$NetBSD: patch-ag,v 1.9 2006/10/31 03:31:20 taca Exp $
+$NetBSD: patch-ag,v 1.10 2008/09/16 12:53:08 taca Exp $
 
---- config.h.in.orig	2006-09-26 20:03:33.000000000 +0900
+--- config.h.in.orig	2008-07-21 17:30:49.000000000 +0900
 +++ config.h.in
-@@ -32,6 +32,9 @@
-    */
- #undef BROKEN_ONE_BYTE_DIRENT_D_NAME
+@@ -506,6 +506,9 @@
+ /* define if you have int64_t data type */
+ #undef HAVE_INT64_T
  
 +/* Define if you are on Interix */
 +#undef HAVE_INTERIX
 +
- /* Define if you have a broken realpath. */
- #undef BROKEN_REALPATH
+ /* Define to 1 if you have the <inttypes.h> header file. */
+ #undef HAVE_INTTYPES_H
  
-@@ -573,6 +576,9 @@
+@@ -623,6 +626,9 @@
  /* Define to 1 if you have the <net/if_tun.h> header file. */
  #undef HAVE_NET_IF_TUN_H
  
