@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.1.1.1 2007/06/14 19:39:45 bouyer Exp $
+$NetBSD: patch-ac,v 1.2 2008/09/16 19:39:06 bouyer Exp $
 
 --- libxc/xc_domain_save.c.orig	2007-05-27 13:35:43.000000000 +0200
 +++ libxc/xc_domain_save.c	2007-05-27 13:35:53.000000000 +0200
@@ -7,7 +7,7 @@ $NetBSD: patch-ac,v 1.1.1.1 2007/06/14 19:39:45 bouyer Exp $
  
      if ( (m2p = mmap(NULL, m2p_size, prot,
 -                     MAP_SHARED, xc_handle, 0)) == MAP_FAILED )
-+                     MAP_ANON | MAP_SHARED, xc_handle, 0)) == MAP_FAILED )
++                     MAP_ANON | MAP_SHARED, -1, 0)) == MAP_FAILED )
      {
          ERROR("failed to mmap m2p");
          return NULL;
