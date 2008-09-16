@@ -1,0 +1,9 @@
+# $NetBSD: xorg.pixman,v 1.1.2.1 2008/09/16 03:05:36 cube Exp $
+#
+include/pixman-1/pixman.h
+include/pixman-1/pixman-version.h
+lib/libpixman-1.a
+lib/libpixman-1.so
+lib/libpixman-1.so.0
+lib/libpixman-1.so.0.11.2
+lib/pkgconfig/pixman-1.pc
