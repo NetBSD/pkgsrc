@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2284 2008/09/16 12:39:02 tron Exp $
+$NetBSD: CHANGES-2008,v 1.2285 2008/09/16 12:57:28 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3861,3 +3861,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/ffmpeg to 20080727nb4 [sborrill 2008-09-15]
 	Updated devel/p5-Proc-ProcessTable to 0.45 [seb 2008-09-15]
 	Updated pkgtools/x11-links to 0.38 [tron 2008-09-16]
+	Updated security/openssh to 5.1.1 [taca 2008-09-16]
