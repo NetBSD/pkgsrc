@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2005/07/28 16:31:13 reed Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/09/16 12:53:08 taca Exp $
 bin/scp
 bin/sftp
 bin/slogin
@@ -17,6 +17,7 @@ man/man1/ssh-agent.1
 man/man1/ssh-keygen.1
 man/man1/ssh-keyscan.1
 man/man1/ssh.1
+man/man5/moduli.5
 man/man5/ssh_config.5
 man/man5/sshd_config.5
 man/man8/sftp-server.8
