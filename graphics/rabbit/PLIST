@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/06/19 15:16:28 taca Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/09/16 16:16:40 obache Exp $
 bin/rabbit
 bin/rabbit-theme-manager
 bin/rabrick
@@ -38,8 +38,8 @@ ${RUBY_VENDORLIB}/rabbit/element/container-element.rb
 ${RUBY_VENDORLIB}/rabbit/element/description-list.rb
 ${RUBY_VENDORLIB}/rabbit/element/enum-list.rb
 ${RUBY_VENDORLIB}/rabbit/element/footnote.rb
-${RUBY_VENDORLIB}/rabbit/element/image.rb
 ${RUBY_VENDORLIB}/rabbit/element/image-title-slide.rb
+${RUBY_VENDORLIB}/rabbit/element/image.rb
 ${RUBY_VENDORLIB}/rabbit/element/index-slide.rb
 ${RUBY_VENDORLIB}/rabbit/element/item-list.rb
 ${RUBY_VENDORLIB}/rabbit/element/method-list.rb
@@ -50,6 +50,7 @@ ${RUBY_VENDORLIB}/rabbit/element/preformatted.rb
 ${RUBY_VENDORLIB}/rabbit/element/slide-element.rb
 ${RUBY_VENDORLIB}/rabbit/element/slide.rb
 ${RUBY_VENDORLIB}/rabbit/element/table.rb
+${RUBY_VENDORLIB}/rabbit/element/tag.rb
 ${RUBY_VENDORLIB}/rabbit/element/text-container-element.rb
 ${RUBY_VENDORLIB}/rabbit/element/text-element.rb
 ${RUBY_VENDORLIB}/rabbit/element/text-renderer.rb
@@ -175,10 +176,14 @@ ${RUBY_VENDORLIB}/rabbit/theme/auto-slide/auto-slide.rb
 ${RUBY_VENDORLIB}/rabbit/theme/auto-slide/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/base/base.rb
 ${RUBY_VENDORLIB}/rabbit/theme/base/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/blue-bar/blue-bar.rb
+${RUBY_VENDORLIB}/rabbit/theme/blue-bar/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/blue-circle/blue-circle.rb
 ${RUBY_VENDORLIB}/rabbit/theme/blue-circle/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/centering-rabbit/centering-rabbit.rb
 ${RUBY_VENDORLIB}/rabbit/theme/centering-rabbit/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/clear-blue/clear-blue.rb
+${RUBY_VENDORLIB}/rabbit/theme/clear-blue/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/clock/clock.rb
 ${RUBY_VENDORLIB}/rabbit/theme/clock/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/color-circle-block-quote/color-circle-block-quote.rb
@@ -206,42 +211,47 @@ ${RUBY_VENDORLIB}/rabbit/theme/color-circle-title-text/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/color-circle/color-circle.rb
 ${RUBY_VENDORLIB}/rabbit/theme/color-circle/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/comment/comment.rb
+${RUBY_VENDORLIB}/rabbit/theme/comment/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/cozmixng-powered-by/cozmixng-powered-by.rb
 ${RUBY_VENDORLIB}/rabbit/theme/cozmixng-powered-by/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/cozmixng/cozmixng.rb
 ${RUBY_VENDORLIB}/rabbit/theme/cozmixng/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/day-white/day-white.rb
 ${RUBY_VENDORLIB}/rabbit/theme/day-white/property.rb
-${RUBY_VENDORLIB}/rabbit/theme/default-block-quote/property.rb
-${RUBY_VENDORLIB}/rabbit/theme/default-foot-text/property.rb
-${RUBY_VENDORLIB}/rabbit/theme/default-item-mark-setup/default-item-mark-setup.rb
-${RUBY_VENDORLIB}/rabbit/theme/default-item-mark-setup/property.rb
-${RUBY_VENDORLIB}/rabbit/theme/default-method-list/property.rb
-${RUBY_VENDORLIB}/rabbit/theme/default-preformatted/property.rb
-${RUBY_VENDORLIB}/rabbit/theme/default-slide/property.rb
-${RUBY_VENDORLIB}/rabbit/theme/default-text/property.rb
-${RUBY_VENDORLIB}/rabbit/theme/default-title-text/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/default-block-quote/default-block-quote.rb
+${RUBY_VENDORLIB}/rabbit/theme/default-block-quote/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/default-description/default-description.rb
 ${RUBY_VENDORLIB}/rabbit/theme/default-description/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/default-foot-text/default-foot-text.rb
+${RUBY_VENDORLIB}/rabbit/theme/default-foot-text/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/default-icon/default-icon.rb
 ${RUBY_VENDORLIB}/rabbit/theme/default-icon/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/default-item-mark-setup/default-item-mark-setup.rb
+${RUBY_VENDORLIB}/rabbit/theme/default-item-mark-setup/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/default-item-mark/default-item-mark.rb
 ${RUBY_VENDORLIB}/rabbit/theme/default-item-mark/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/default-method-list/default-method-list.rb
+${RUBY_VENDORLIB}/rabbit/theme/default-method-list/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/default-preformatted/default-preformatted.rb
+${RUBY_VENDORLIB}/rabbit/theme/default-preformatted/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/default-slide/default-slide.rb
+${RUBY_VENDORLIB}/rabbit/theme/default-slide/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/default-text/default-text.rb
+${RUBY_VENDORLIB}/rabbit/theme/default-text/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/default-title-slide/default-title-slide.rb
 ${RUBY_VENDORLIB}/rabbit/theme/default-title-slide/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/default-title-text/default-title-text.rb
+${RUBY_VENDORLIB}/rabbit/theme/default-title-text/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/default/default.rb
 ${RUBY_VENDORLIB}/rabbit/theme/default/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/document.erb
+${RUBY_VENDORLIB}/rabbit/theme/edge-info-toolkit/edge-info-toolkit.rb
+${RUBY_VENDORLIB}/rabbit/theme/edge-info-toolkit/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/emphasize-keyword/emphasize-keyword.rb
 ${RUBY_VENDORLIB}/rabbit/theme/emphasize-keyword/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/entry.rb
+${RUBY_VENDORLIB}/rabbit/theme/footer-logo/footer-logo.rb
+${RUBY_VENDORLIB}/rabbit/theme/footer-logo/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/green-circle/green-circle.rb
 ${RUBY_VENDORLIB}/rabbit/theme/green-circle/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/headline-logo/headline-logo.rb
@@ -267,14 +277,16 @@ ${RUBY_VENDORLIB}/rabbit/theme/lightning-talk/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/manager.rb
 ${RUBY_VENDORLIB}/rabbit/theme/mirror-effect/mirror-effect.rb
 ${RUBY_VENDORLIB}/rabbit/theme/mirror-effect/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/newline-in-title/newline-in-title.rb
+${RUBY_VENDORLIB}/rabbit/theme/newline-in-title/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/night-black/night-black.rb
 ${RUBY_VENDORLIB}/rabbit/theme/night-black/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/pdf/pdf.rb
 ${RUBY_VENDORLIB}/rabbit/theme/pdf/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/powered-by/powered-by.rb
 ${RUBY_VENDORLIB}/rabbit/theme/powered-by/property.rb
-${RUBY_VENDORLIB}/rabbit/theme/rabbit-block-quote/rabbit-block-quote.rb
 ${RUBY_VENDORLIB}/rabbit/theme/rabbit-block-quote/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/rabbit-block-quote/rabbit-block-quote.rb
 ${RUBY_VENDORLIB}/rabbit/theme/rabbit-headline-logo/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/rabbit-headline-logo/rabbit-headline-logo.rb
 ${RUBY_VENDORLIB}/rabbit/theme/rabbit-icon/property.rb
@@ -289,26 +301,26 @@ ${RUBY_VENDORLIB}/rabbit/theme/rabbit/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/rabbit/rabbit.rb
 ${RUBY_VENDORLIB}/rabbit/theme/red-frame/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/red-frame/red-frame.rb
-${RUBY_VENDORLIB}/rabbit/theme/rotate-zoom-effect/rotate-zoom-effect.rb
 ${RUBY_VENDORLIB}/rabbit/theme/rotate-zoom-effect/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/rotate-zoom-effect/rotate-zoom-effect.rb
 ${RUBY_VENDORLIB}/rabbit/theme/ruby-gnome2-description/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/ruby-gnome2-description/ruby-gnome2-description.rb
-${RUBY_VENDORLIB}/rabbit/theme/ruby-gnome2-foot-text/ruby-gnome2-foot-text.rb
 ${RUBY_VENDORLIB}/rabbit/theme/ruby-gnome2-foot-text/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/ruby-gnome2-foot-text/ruby-gnome2-foot-text.rb
 ${RUBY_VENDORLIB}/rabbit/theme/ruby-gnome2-headline/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/ruby-gnome2-headline/ruby-gnome2-headline.rb
 ${RUBY_VENDORLIB}/rabbit/theme/ruby-gnome2-icon/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/ruby-gnome2-icon/ruby-gnome2-icon.rb
 ${RUBY_VENDORLIB}/rabbit/theme/ruby-gnome2-item-mark/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/ruby-gnome2-item-mark/ruby-gnome2-item-mark.rb
-${RUBY_VENDORLIB}/rabbit/theme/ruby-gnome2-preformatted/ruby-gnome2-preformatted.rb
 ${RUBY_VENDORLIB}/rabbit/theme/ruby-gnome2-preformatted/property.rb
-${RUBY_VENDORLIB}/rabbit/theme/ruby-gnome2-slide/ruby-gnome2-slide.rb
+${RUBY_VENDORLIB}/rabbit/theme/ruby-gnome2-preformatted/ruby-gnome2-preformatted.rb
 ${RUBY_VENDORLIB}/rabbit/theme/ruby-gnome2-slide/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/ruby-gnome2-slide/ruby-gnome2-slide.rb
 ${RUBY_VENDORLIB}/rabbit/theme/ruby-gnome2/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/ruby-gnome2/ruby-gnome2.rb
-${RUBY_VENDORLIB}/rabbit/theme/scroll-effect/scroll-effect.rb
 ${RUBY_VENDORLIB}/rabbit/theme/scroll-effect/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/scroll-effect/scroll-effect.rb
 ${RUBY_VENDORLIB}/rabbit/theme/searcher.rb
 ${RUBY_VENDORLIB}/rabbit/theme/show-frame/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/show-frame/show-frame.rb
@@ -318,10 +330,14 @@ ${RUBY_VENDORLIB}/rabbit/theme/slide-background-image/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/slide-background-image/slide-background-image.rb
 ${RUBY_VENDORLIB}/rabbit/theme/slide-background/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/slide-background/slide-background.rb
+${RUBY_VENDORLIB}/rabbit/theme/slide-footer-info/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/slide-footer-info/slide-footer-info.rb
+${RUBY_VENDORLIB}/rabbit/theme/slide-header-info/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/slide-header-info/slide-header-info.rb
+${RUBY_VENDORLIB}/rabbit/theme/slide-logo/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/slide-logo/slide-logo.rb
 ${RUBY_VENDORLIB}/rabbit/theme/slide-number/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/slide-number/slide-number.rb
-${RUBY_VENDORLIB}/rabbit/theme/slide-logo/slide-logo.rb
 ${RUBY_VENDORLIB}/rabbit/theme/slide-show/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/slide-show/slide-show.rb
 ${RUBY_VENDORLIB}/rabbit/theme/table/property.rb
@@ -347,6 +363,10 @@ ${RUBY_VENDORLIB}/rwiki/soap/servant.rb
 share/locale/en/LC_MESSAGES/rabbit.mo
 share/locale/fr/LC_MESSAGES/rabbit.mo
 share/locale/ja/LC_MESSAGES/rabbit.mo
+share/rabbit/image/clear-blue-images/clear-blue-headline-background.png
+share/rabbit/image/clear-blue-images/clear-blue-icon.png
+share/rabbit/image/clear-blue-images/clear-blue-images.rb
+share/rabbit/image/clear-blue-images/property.rb
 share/rabbit/image/cozmixng-images/cozmixchu.png
 share/rabbit/image/cozmixng-images/cozmixng-images.rb
 share/rabbit/image/cozmixng-images/powered-by-cozmixng.png
@@ -354,6 +374,7 @@ share/rabbit/image/cozmixng-images/property.rb
 share/rabbit/image/rabbit-images/blue-item.png
 share/rabbit/image/rabbit-images/close-quote-blue.png
 share/rabbit/image/rabbit-images/close-quote-brown.png
+share/rabbit/image/rabbit-images/close-quote-light-blue.png
 share/rabbit/image/rabbit-images/goal-flag.png
 share/rabbit/image/rabbit-images/green-item.png
 share/rabbit/image/rabbit-images/kame.png
@@ -362,11 +383,13 @@ share/rabbit/image/rabbit-images/lavie-with-logo.png
 share/rabbit/image/rabbit-images/lavie.png
 share/rabbit/image/rabbit-images/mini-alice.png
 share/rabbit/image/rabbit-images/mini-kame-taro.png
+share/rabbit/image/rabbit-images/mini-tanu-kitaro.png
 share/rabbit/image/rabbit-images/mini-usa-taro.png
 share/rabbit/image/rabbit-images/mini-usagi.png
 share/rabbit/image/rabbit-images/mini-yukidaru-taro.png
 share/rabbit/image/rabbit-images/open-quote-blue.png
 share/rabbit/image/rabbit-images/open-quote-brown.png
+share/rabbit/image/rabbit-images/open-quote-light-blue.png
 share/rabbit/image/rabbit-images/property.rb
 share/rabbit/image/rabbit-images/rabbit-banner-blue.png
 share/rabbit/image/rabbit-images/rabbit-banner-green.png
@@ -397,6 +420,7 @@ share/rabbit/image/ruby-images/ruby-pink-polygon.png
 @dirrm share/rabbit/image/ruby-images
 @dirrm share/rabbit/image/rabbit-images
 @dirrm share/rabbit/image/cozmixng-images
+@dirrm share/rabbit/image/clear-blue-images
 @dirrm share/rabbit/image
 @dirrm share/rabbit
 @dirrm ${RUBY_VENDORLIB}/rwiki/soap
@@ -408,9 +432,10 @@ share/rabbit/image/ruby-images/ruby-pink-polygon.png
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/title-background-color
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/timer
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/table
-@dirrm ${RUBY_VENDORLIB}/rabbit/theme/slide-logo
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/slide-show
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/slide-number
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/slide-logo
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/slide-header-info
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/slide-footer-info
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/slide-background-image
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/slide-background
@@ -437,6 +462,7 @@ share/rabbit/image/ruby-images/ruby-pink-polygon.png
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/powered-by
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/pdf
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/night-black
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/newline-in-title
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/mirror-effect
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/lightning-talk-toolkit
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/lightning-talk
@@ -449,7 +475,9 @@ share/rabbit/image/ruby-images/ruby-pink-polygon.png
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/icon
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/headline-logo
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/green-circle
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/footer-logo
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/emphasize-keyword
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/edge-info-toolkit
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/default-title-text
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/default-title-slide
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/default-text
@@ -466,22 +494,24 @@ share/rabbit/image/ruby-images/ruby-pink-polygon.png
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/day-white
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/cozmixng-powered-by
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/cozmixng
-@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-block-quote
-@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-common
-@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-description
-@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-foot-text
-@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-item-mark
-@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-method-list
-@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-preformatted
-@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-slide
-@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-text
-@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-title-slide
-@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-title-text
-@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/comment
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-title-text
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-title-slide
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-text
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-slide
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-preformatted
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-method-list
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-item-mark
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-foot-text
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-description
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-common
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle-block-quote
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/color-circle
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/clock
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/clear-blue
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/centering-rabbit
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/blue-circle
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/blue-bar
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/base
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/auto-slide
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme-browser/ext
@@ -512,3 +542,6 @@ share/rabbit/image/ruby-images/ruby-pink-polygon.png
 @dirrm ${RUBY_VENDORLIB}/rabbit/comment
 @dirrm ${RUBY_VENDORLIB}/rabbit/action
 @dirrm ${RUBY_VENDORLIB}/rabbit
+@dirrm ${RUBY_VENDORLIB}
+@dirrm ${RUBY_VENDORLIB_BASE}
+@dirrm lib/ruby
