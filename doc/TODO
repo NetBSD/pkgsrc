@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7543 2008/09/16 21:57:53 bjs Exp $
+$NetBSD: TODO,v 1.7544 2008/09/16 22:30:15 bjs Exp $
 
 Suggested new packages
 ======================
@@ -1172,7 +1172,6 @@ Suggested package updates
 	o rp-l2tp-0.4
 	o rp-pppoe-3.10
 	o rpm-5.1.4
-	o rsync-3.0.4
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o ruby-SDL-2.0.1b
