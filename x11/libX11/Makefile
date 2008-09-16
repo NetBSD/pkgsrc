@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.15 2008/07/24 01:07:31 bjs Exp $
+# $NetBSD: Makefile,v 1.16 2008/09/16 21:57:09 bjs Exp $
 #
 
-DISTNAME=		libX11-1.1.4
-PKGREVISION=		2
+DISTNAME=		libX11-1.1.5
 CATEGORIES=		x11 devel
 MASTER_SITES=		${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=		.tar.bz2

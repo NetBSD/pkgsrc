@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2008/07/24 01:07:31 bjs Exp $
+$NetBSD: patch-aa,v 1.6 2008/09/16 21:57:09 bjs Exp $
 
 Include pthread.h as thread stubs might be macros like on NetBSD.
 
@@ -7,7 +7,7 @@ Define conditional for cross-compiling support.
 Also, don't look for keysmydef.h, as this could break cross
 builds (from GIT).
 
---- configure.ac.orig	2008-03-06 15:48:26.000000000 -0500
+--- configure.ac.orig	2008-09-04 17:38:59.000000000 -0400
 +++ configure.ac
 @@ -180,7 +180,7 @@ esac
  AC_SUBST(XTHREADS)
@@ -29,45 +29,7 @@ builds (from GIT).
      freebsd*)
          XTHREAD_CFLAGS="-D_THREAD_SAFE"
          XTHREADLIB="-pthread" ;;
-@@ -220,31 +220,14 @@ AC_CHECK_FUNC(poll, [AC_DEFINE(USE_POLL,
- #
- # Find keysymdef.h
- #
--KEYSYMDEF=""
- AC_MSG_CHECKING([keysymdef.h])
--for flag in $XPROTO_CFLAGS -I/usr/include; do
--	case "$KEYSYMDEF" in
--	"")
--		case "$flag" in
--		*-I*)
--			dir=`echo "$flag" | sed 's/ *-I//'`
--			file="$dir/X11/keysymdef.h"
--			if test -f "$file"; then
--				KEYSYMDEF="$file"
--			fi
--			;;
--		esac
--		;;
--	esac
--done
--case "$KEYSYMDEF" in
--"")
--	AC_MSG_ERROR([Cannot find keysymdef.h])
--	;;
--*)
-+dir=`pkg-config --variable=includedir xproto`
-+KEYSYMDEF="$dir/X11/keysymdef.h"
-+if test -f "$KEYSYMDEF"; then
- 	AC_MSG_RESULT([$KEYSYMDEF])
--        ;;
--esac
-+else
-+	AC_MSG_ERROR([Cannot find keysymdef.h])
-+fi
- AC_SUBST(KEYSYMDEF)
- 
- AM_CONDITIONAL(UDC, test xfalse = xtrue)
-@@ -322,6 +305,8 @@ else
+@@ -305,6 +305,8 @@ else
  fi
  AC_SUBST(XKBPROTO_REQUIRES)
  
