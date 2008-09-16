@@ -1,9 +1,15 @@
 #!@SH@
-# $NetBSD: bulkbuild-restart,v 1.1 2008/04/04 17:58:59 joerg Exp $
+# $NetBSD: bulkbuild-restart,v 1.2 2008/09/16 18:21:30 joerg Exp $
 
 . @PBULK_CONFIG@
 
 set -e
+
+if [ "${config_version}" != "@PBULK_CONFIG_VERSION@" ]; then
+	echo "Your configuration has version ${config_version}."
+	echo "This version of pbulk expects version @PBULK_CONFIG_VERSION@."
+	exit 1
+fi
 
 check_list() {
 	while read pkg

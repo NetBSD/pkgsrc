@@ -1,4 +1,4 @@
-/* $NetBSD: presolve.c,v 1.3 2007/07/20 19:39:34 joerg Exp $ */
+/* $NetBSD: presolve.c,v 1.4 2008/09/16 18:21:30 joerg Exp $ */
 
 /*-
  * Copyright (c) 2007 Joerg Sonnenberger <joerg@NetBSD.org>.
@@ -46,13 +46,13 @@
 
 #include "pbulk.h"
 
-static int verbosity;
+static int partial, verbosity;
 static FILE *incremental = NULL;
 
 static void
 usage(void)
 {
-	(void)fprintf(stderr, "usage: pbulk-resolve [ -i <missing> ] [ -v ] <pscan output> [ ... ]\n");
+	(void)fprintf(stderr, "usage: pbulk-resolve [ -pv ] [ -i <missing> ] <pscan output> [ ... ]\n");
 	exit(1);
 }
 
@@ -63,6 +63,7 @@ struct pkg_entry {
 	char *depends;
 	char *pkglocation;
 	int active;
+	int broken; /* Entry has missing dependencies */
 	const char *begin;
 	const char *end;
 	SLIST_ENTRY(pkg_entry) hash_link;
@@ -86,13 +87,16 @@ main(int argc, char **argv)
 
 	setprogname("pbulk-resolve");
 
-	while ((ch = getopt(argc, argv, "i:v")) != -1) {
+	while ((ch = getopt(argc, argv, "i:pv")) != -1) {
 		switch (ch) {
 		case 'i':
 			if (incremental != NULL)
 				(void)fclose(incremental);
 			if ((incremental = fopen(optarg, "w")) == NULL)
 				err(1, "Cannot open output file");
+			break;
+		case 'p':
+			++partial;
 			break;
 		case 'v':
 			++verbosity;
@@ -106,6 +110,9 @@ main(int argc, char **argv)
 	argv += optind;
 
 	if (argc == 0 || (incremental == NULL && argc > 1))
+		usage();
+
+	if (partial && incremental != NULL)
 		usage();
 
 	read_entries(argv[0], 1);
@@ -301,7 +308,7 @@ resolve_entry(struct pkg_entry *pkg)
 	if (ret == 1) {
 		free(pkg->depends);
 		pkg->depends = NULL;
-		if (incremental != NULL)
+		if (incremental != NULL || partial)
 			return 0;
 		else
 			return 1;
