@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2285 2008/09/16 12:57:28 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2286 2008/09/16 15:33:32 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3862,3 +3862,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Proc-ProcessTable to 0.45 [seb 2008-09-15]
 	Updated pkgtools/x11-links to 0.38 [tron 2008-09-16]
 	Updated security/openssh to 5.1.1 [taca 2008-09-16]
+	Added www/p5-Catalyst-View-Jemplate version 0.06 [seb 2008-09-16]
