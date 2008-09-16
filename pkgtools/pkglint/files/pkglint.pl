@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.772 2008/08/30 06:50:37 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.773 2008/09/16 14:24:25 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -5900,9 +5900,9 @@ sub checkline_mk_varassign($$$$$) {
 	if ($varname eq "EVAL_PREFIX" && $value =~ qr"^([\w_]+)=") {
 		my ($eval_varname) = ($1);
 
-		# This assignment will define the variable named
-		# $eval_varname. It is marked as known in the current
-		# file.
+		# The variables mentioned in EVAL_PREFIX will later be
+		# defined by find-prefix.mk. Therefore, they are marked
+		# as known in the current file.
 		$mkctx_vardef->{$eval_varname} = $line;
 	}
 
