@@ -1,0 +1,58 @@
+$NetBSD: patch-ad,v 1.1 2008/09/16 13:23:42 drochner Exp $
+
+--- src/stel_ui_tuiconf.cpp.orig	2008-09-15 14:07:22.000000000 +0200
++++ src/stel_ui_tuiconf.cpp
+@@ -155,7 +155,7 @@ void StelUI::init_tui(void)
+ 	{
+ 		tui_time_settmz = new s_tui::Time_zone_item(QFile::encodeName(app->getFileMgr().findFile("data/zone.tab")).constData(), wstring(L"2.2 "));
+ 	}
+-	catch(exception &e)
++	catch(std::exception &e)
+ 	{
+ 		cerr << "ERROR locating zone file: " << e.what() << endl;
+ 	}
+@@ -520,7 +520,7 @@ int StelUI::handle_keys_tui(Uint16 key, 
+ 					cmd = "script action play filename \"" + SelectedScript 
+ 						+ "\" path \"" + QFile::encodeName(theParent).constData() + "/\"";
+ 				}
+-				catch(exception& e)
++				catch(std::exception& e)
+ 				{
+ 					cerr << "ERROR while executing script " << SelectedScript << ": " << e.what() << endl;
+ 				}
+@@ -677,7 +677,7 @@ void StelUI::tui_cb_admin_save_default(v
+ 	{
+ 		saveCurrentConfig(app->getConfigFilePath());
+ 	}
+-	catch(exception& e)
++	catch(std::exception& e)
+ 	{
+ 		cerr << "ERROR: could not save config.ini file: " << e.what() << endl;
+ 	}
+@@ -686,7 +686,7 @@ void StelUI::tui_cb_admin_save_default(v
+ 	{
+ 		system( QFile::encodeName(app->getFileMgr().findFile("data/script_save_config ")).constData());
+ 	}
+-	catch(exception& e)
++	catch(std::exception& e)
+ 	{
+ 		cerr << "ERROR while calling script_save_config: " << e.what() << endl;
+ 	}
+@@ -699,7 +699,7 @@ void StelUI::tui_cb_admin_updateme(void)
+ 	{
+ 		system( QFile::encodeName(app->getFileMgr().findFile("data/script_internet_update ")).constData());
+ 	}
+-	catch(exception& e)
++	catch(std::exception& e)
+ 	{
+ 		cerr << "ERROR while calling script_internet_update: " << e.what() << endl;
+ 	}
+@@ -713,7 +713,7 @@ void StelUI::tui_cb_admin_shutdown(void)
+ 	{
+ 		system( QFile::encodeName(app->getFileMgr().findFile("data/script_shutdown ")).constData());
+ 	}
+-	catch(exception& e)
++	catch(std::exception& e)
+ 	{
+ 		cerr << "ERROR while calling script_shutdown: " << e.what() << endl;
+ 	}
