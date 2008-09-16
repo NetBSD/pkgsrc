@@ -1,5 +1,5 @@
-<!-- $NetBSD: chap.defs.xml,v 1.1 2006/02/26 23:38:07 rillig Exp $ -->
-
+<!-- $NetBSD: chap.defs.xml,v 1.2 2008/09/16 14:19:11 rillig Exp $ -->
+<!-- don't include useless definitions.
 <chapter id="defs">
 <title>Definitions</title>
 
@@ -23,3 +23,4 @@
 	</variablelist>
 
 </chapter>
+-->
