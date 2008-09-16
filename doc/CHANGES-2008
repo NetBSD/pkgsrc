@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2288 2008/09/16 16:32:46 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2289 2008/09/16 17:05:17 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3878,3 +3878,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed x11/qtarch [wiz 2008-09-16]
 	Removed x11/qwspritefield [wiz 2008-09-16]
 	Updated graphics/rabbit to 0.5.7 [obache 2008-09-16]
+	Added security/p5-Authen-CAS-Client version 0.03 [seb 2008-09-16]
