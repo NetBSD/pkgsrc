@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: pkg-build,v 1.16 2008/07/14 13:02:00 joerg Exp $
+# $NetBSD: pkg-build,v 1.17 2008/09/16 18:21:30 joerg Exp $
 #
 # Copyright (c) 2007, 2008 Joerg Sonnenberger <joerg@NetBSD.org>.
 # All rights reserved.
@@ -31,6 +31,12 @@
 # SUCH DAMAGE.
 
 . @PBULK_CONFIG@
+
+if [ "${config_version}" != "@PBULK_CONFIG_VERSION@" ]; then
+	echo "Your configuration has version ${config_version}."
+	echo "This version of pbulk expects version @PBULK_CONFIG_VERSION@."
+	exit 1
+fi
 
 cleanup() {
 	if [ "$keep_wrkdir" = yes ]; then
