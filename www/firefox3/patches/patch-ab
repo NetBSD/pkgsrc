@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/06/28 10:01:07 tnn Exp $
+$NetBSD: patch-ab,v 1.2 2008/09/16 11:24:58 tnn Exp $
 
---- configure.orig	2008-03-01 00:31:03.000000000 +0100
-+++ configure
-@@ -6178,7 +6178,7 @@ rm -f conftest*
+--- configure.in.orig	2008-06-25 00:51:17.000000000 +0200
++++ configure.in
+@@ -1682,7 +1682,7 @@ case "$target" in
      LDFLAGS=$_SAVE_LDFLAGS
      ;;
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/06/28 10:01:07 tnn Exp $
      if test `test -x /usr/bin/objformat && /usr/bin/objformat || echo aout` != "elf"; then
  	DLL_SUFFIX=".so.1.0"
  	DSO_LDOPTS="-shared"
-@@ -6192,6 +6192,9 @@ rm -f conftest*
+@@ -1696,6 +1696,9 @@ case "$target" in
  #	MKSHLIB_FORCE_ALL='-Wl,-Bforcearchive'
  #	MKSHLIB_UNFORCE_ALL=''
  #    fi
@@ -21,11 +21,10 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/06/28 10:01:07 tnn Exp $
      ;; 
  
  *-hpux*)
-@@ -6766,6 +6769,13 @@ EOF
+@@ -2212,8 +2215,15 @@ case "$target" in
      if test "$LIBRUNPATH"; then
  	DSO_LDOPTS="-R$LIBRUNPATH $DSO_LDOPTS"
      fi
-+
 +    case "${target_cpu}" in
 +    alpha*)
 +       CFLAGS="$CFLAGS -mieee"
@@ -34,13 +33,16 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/06/28 10:01:07 tnn Exp $
 +    esac
      ;;
  
++
  *-openvms*) 
-@@ -16253,7 +16263,7 @@ rm -f conftest*
- fi
- 
+     AC_DEFINE(NO_PW_GECOS)
+     AC_DEFINE(NO_UDSOCK)
+@@ -6116,7 +6126,7 @@ dnl ====================================
+ dnl = Enable code optimization. ON by default.
+ dnl ========================================================
  if test -z "$MOZ_OPTIMIZE_FLAGS"; then
 -	MOZ_OPTIMIZE_FLAGS="-O"
 +	MOZ_OPTIMIZE_FLAGS=""
  fi
  
- # Check whether --enable-optimize or --disable-optimize was given.
+ MOZ_ARG_ENABLE_STRING(optimize,
