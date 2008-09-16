@@ -1,4 +1,4 @@
-/*	$NetBSD: audit.c,v 1.8 2008/04/16 00:53:06 joerg Exp $	*/
+/*	$NetBSD: audit.c,v 1.9 2008/09/16 13:32:58 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -8,7 +8,7 @@
 #include <sys/cdefs.h>
 #endif
 #ifndef lint
-__RCSID("$NetBSD: audit.c,v 1.8 2008/04/16 00:53:06 joerg Exp $");
+__RCSID("$NetBSD: audit.c,v 1.9 2008/09/16 13:32:58 joerg Exp $");
 #endif
 
 /*-
@@ -87,7 +87,14 @@ parse_options(int argc, char **argv)
 	int ch;
 
 	optreset = 1;
-	optind = 0;
+	/*
+	 * optind == 0 is interpreted as partial reset request
+	 * by GNU getopt, so compensate against this and cleanup
+	 * at the end.
+	 */
+	optind = 1;
+	++argc;
+	--argv;
 
 	while ((ch = getopt(argc, argv, "est:")) != -1) {
 		switch (ch) {
@@ -105,6 +112,8 @@ parse_options(int argc, char **argv)
 			/* NOTREACHED */
 		}
 	}
+
+	--optind; /* See above comment. */
 }
 
 static int
@@ -348,17 +357,20 @@ fetch_pkg_vulnerabilities(int argc, char **argv)
 
 	f = fetchXGetURL(pkg_vulnerabilities_url, &st, "");
 	if (f == NULL)
-		err(EXIT_FAILURE, "Could not fetch vulnerability file");
+		errx(EXIT_FAILURE, "Could not fetch vulnerability file: %s",
+		    fetchLastErrString);
 
 	if (st.size > SSIZE_MAX - 1)
-		err(EXIT_FAILURE, "pkg-vulnerabilities is too large");
+		errx(EXIT_FAILURE, "pkg-vulnerabilities is too large");
 
 	buf_len = st.size;
 	if ((buf = malloc(buf_len + 1)) == NULL)
 		err(EXIT_FAILURE, "malloc failed");
 
 	if (fetchIO_read(f, buf, buf_len) != buf_len)
-		err(EXIT_FAILURE, "Failure during fetch of pkg-vulnerabilities");
+		errx(EXIT_FAILURE,
+		    "Failure during fetch of pkg-vulnerabilities: %s",
+		    fetchLastErrString);
 	buf[buf_len] = '\0';
 
 	if (decompress_buffer(buf, buf_len, &decompressed_input,

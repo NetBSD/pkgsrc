@@ -74,7 +74,7 @@ AC_SEARCH_LIBS(tgetent, [termcap termlib curses ncurses])
 dnl Checks for header files.
 AC_HEADER_STDC
 AC_CHECK_HEADERS([assert.h ctype.h dirent.h err.h errno.h fnctl.h \
-	fnmatch.h glob.h grp.h inttypes.h limits.h md5.h netdb.h \
+	fnmatch.h glob.h grp.h inttypes.h limits.h netdb.h \
 	pwd.h regex.h signal.h stdarg.h stdio.h stdlib.h string.h \
 	termcap.h termios.h time.h unistd.h vis.h])
 AC_CHECK_HEADERS([db1/db.h db_185.h db.h])
