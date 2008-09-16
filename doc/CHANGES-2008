@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2293 2008/09/16 20:00:23 abs Exp $
+$NetBSD: CHANGES-2008,v 1.2294 2008/09/16 20:03:19 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3886,3 +3886,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated chat/libpurple to 2.5.1 [abs 2008-09-16]
 	Updated chat/finch to 2.5.1 [abs 2008-09-16]
 	Updated chat/pidgin to 2.5.1 [abs 2008-09-16]
+	Removed security/AiCA [gdt 2008-09-16]
+	Removed security/AiSSLtelnet [gdt 2008-09-16]
+	Removed security/smimemsg [gdt 2008-09-16]
