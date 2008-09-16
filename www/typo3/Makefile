@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/09/15 18:14:15 taca Exp $
+# $NetBSD: Makefile,v 1.3 2008/09/16 13:31:26 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
@@ -11,9 +11,9 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://typo3.com/
 COMMENT=	The typo3 content management system
 
-DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.3.3:../../www/ap-php
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.3:../../databases/php-mysql
-DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=4.3.3:../../archivers/php-zlib/
+DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=5.2.0:../../www/ap-php
+DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.2.0:../../databases/php-mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib/
 
 #PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -23,6 +23,16 @@ USE_TOOLS=	pax
 
 TYPO3NAME=	typo3_src-${VER}
 SITESRC=	dummy-${VER}
+
+PHP_VERSIONS_ACCEPTED=	5
+
+# maybe resides in lang/php/phpversion.mk
+REPLACE_INTERPRETER+=	php
+REPLACE.php.old=	.*php[^ ]*
+REPLACE.php.new=	${PREFIX}/bin/php
+REPLACE_FILES.php=	typo3/cli_dispatch.phpsh \
+			typo3/mod/user/ws/cli/ws_cli.phpsh \
+			typo3/sysext/indexed_search/cli/indexer_cli.phpsh
 
 TYPO3DATA=	fileadmin typo3conf typo3temp uploads
 
