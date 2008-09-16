@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.329 2008/09/16 17:04:36 seb Exp $
+# $NetBSD: Makefile,v 1.330 2008/09/16 20:00:35 gdt Exp $
 #
 
 COMMENT=	Security tools
 
-SUBDIR+=	AiCA
-SUBDIR+=	AiSSLtelnet
 SUBDIR+=	Bastille
 SUBDIR+=	CSP
 SUBDIR+=	CoolKey
@@ -261,7 +259,6 @@ SUBDIR+=	secpanel
 SUBDIR+=	sfs
 SUBDIR+=	sign
 SUBDIR+=	skey
-SUBDIR+=	smimemsg
 SUBDIR+=	smtpd
 SUBDIR+=	sniff
 SUBDIR+=	snortsnarf
