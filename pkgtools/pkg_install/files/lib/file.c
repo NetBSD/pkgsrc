@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.23.8.2 2008/08/21 16:04:39 joerg Exp $	*/
+/*	$NetBSD: file.c,v 1.23.8.3 2008/09/16 19:03:54 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -17,7 +17,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: file.c,v 1.29 1997/10/08 07:47:54 charnier Exp";
 #else
-__RCSID("$NetBSD: file.c,v 1.23.8.2 2008/08/21 16:04:39 joerg Exp $");
+__RCSID("$NetBSD: file.c,v 1.23.8.3 2008/09/16 19:03:54 joerg Exp $");
 #endif
 #endif
 
@@ -300,57 +300,80 @@ remove_files(const char *path, const char *pattern)
 int
 format_cmd(char *buf, size_t size, const char *fmt, const char *dir, const char *name)
 {
-	char    scratch[MaxPathSize * 2];
-	char   *bufp;
+	size_t  remaining, quoted;
+	char   *bufp, *tmp;
 	char   *cp;
 
-	for (bufp = buf; (int) (bufp - buf) < size && *fmt;) {
-		if (*fmt == '%') {
-			if (*++fmt != 'D' && name == NULL) {
-				warnx("no last file available for '%s' command", buf);
+	for (bufp = buf, remaining = size; remaining > 1 && *fmt;) {
+		if (*fmt != '%') {
+			*bufp++ = *fmt++;
+			--remaining;
+			continue;
+		}
+
+		if (*++fmt != 'D' && name == NULL) {
+			warnx("no last file available for '%s' command", buf);
+			return -1;
+		}
+		switch (*fmt) {
+		case 'F':
+			quoted = shquote(name, bufp, remaining);
+			if (quoted >= remaining) {
+				warnx("overflow during quoting");
 				return -1;
 			}
-			switch (*fmt) {
-			case 'F':
-				strlcpy(bufp, name, size - (int) (bufp - buf));
-				bufp += strlen(bufp);
-				break;
+			bufp += quoted;
+			remaining -= quoted;
+			break;
 
-			case 'D':
-				strlcpy(bufp, dir, size - (int) (bufp - buf));
-				bufp += strlen(bufp);
-				break;
-
-			case 'B':
-				(void) snprintf(scratch, sizeof(scratch), "%s/%s", dir, name);
-				if ((cp = strrchr(scratch, '/')) == (char *) NULL) {
-					cp = scratch;
-				}
-				*cp = '\0';
-				strlcpy(bufp, scratch, size - (int) (bufp - buf));
-				bufp += strlen(bufp);
-				break;
-
-			case 'f':
-				(void) snprintf(scratch, sizeof(scratch), "%s/%s", dir, name);
-				if ((cp = strrchr(scratch, '/')) == (char *) NULL) {
-					cp = scratch;
-				} else {
-					cp++;
-				}
-				strlcpy(bufp, cp, size - (int) (bufp - buf));
-				bufp += strlen(bufp);
-				break;
-
-			default:
-				*bufp++ = '%';
-				*bufp++ = *fmt;
-				break;
+		case 'D':
+			quoted = shquote(dir, bufp, remaining);
+			if (quoted >= remaining) {
+				warnx("overflow during quoting");
+				return -1;
 			}
-			++fmt;
-		} else {
-			*bufp++ = *fmt++;
+			bufp += quoted;
+			remaining -= quoted;
+			break;
+
+		case 'B':
+			tmp = xasprintf("%s/%s", dir, name);
+			cp = strrchr(tmp, '/');
+			*cp = '\0';
+			quoted = shquote(tmp, bufp, remaining);
+			free(tmp);
+			if (quoted >= remaining) {
+				warnx("overflow during quoting");
+				return -1;
+			}
+			bufp += quoted;
+			remaining -= quoted;
+			break;
+
+		case 'f':
+			tmp = xasprintf("%s/%s", dir, name);
+			cp = strrchr(tmp, '/') + 1;
+			quoted = shquote(cp, bufp, remaining);
+			free(tmp);
+			if (quoted >= remaining) {
+				warnx("overflow during quoting");
+				return -1;
+			}
+			bufp += quoted;
+			remaining -= quoted;
+			break;
+
+		default:
+			if (remaining == 1) {
+				warnx("overflow during quoting");
+				return -1;
+			}
+			*bufp++ = '%';
+			*bufp++ = *fmt;
+			remaining -= 2;
+			break;
 		}
+		++fmt;
 	}
 	*bufp = '\0';
 	return 0;
