@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7541 2008/09/16 13:02:02 taca Exp $
+$NetBSD: TODO,v 1.7542 2008/09/16 15:30:37 joerg Exp $
 
 Suggested new packages
 ======================
@@ -316,10 +316,6 @@ Suggested new packages
 	tDOM [pkg/38028]
 	http://www.tdom.org/
 	C based XML extension for Tcl
-
-	fricas [pkg/38155]
-	http://fricas.sourceforge.net/
-	Fricas is a fork of the Axiom computer algebra system
 
 	xdriinfo [pkg/38157]
 	http://xorg.freedesktop.org/
