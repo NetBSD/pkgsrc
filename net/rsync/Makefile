@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.76 2008/07/13 22:18:23 tron Exp $
+# $NetBSD: Makefile,v 1.77 2008/09/16 22:29:23 bjs Exp $
 
-DISTNAME=	rsync-3.0.3
+DISTNAME=	rsync-3.0.4
 CATEGORIES=	net
 MASTER_SITES=	http://rsync.samba.org/ftp/rsync/ \
 		http://rsync.samba.org/ftp/rsync/old-versions/  \
@@ -27,7 +27,7 @@ SUBST_CLASSES+=		paths
 SUBST_MESSAGE.paths=	Fixing hardcoded paths.
 SUBST_STAGE.paths=	post-patch
 SUBST_FILES.paths=	rsync.h rsync.1 rsyncd.conf.5
-SUBST_SED.paths=	-e 's|/etc/rsyncd|${PKG_SYSCONFDIR}/rsyncd|g' \
-			-e 's|/usr/bin/rsync|${PREFIX}/bin/rsync|g'
+SUBST_SED.paths=	-e 's|/etc/rsyncd|${PKG_SYSCONFDIR}/rsyncd|g'
+SUBST_SED.paths+=	-e 's|/usr/bin/rsync|${PREFIX}/bin/rsync|g'
 
 .include "../../mk/bsd.pkg.mk"
