@@ -8,6 +8,7 @@ anthy			Use Anthy as Japanese conversion program.
 anthy-2ch-dict		Include the 2ch dictionary.
 anthy-okinawa-dict	Include the okinawa dictionary.
 ao			Enable the platform-independent 'ao' audio library.
+apache-shared-modules	Build all modules as shared for apache22.
 ares			Use the ares library for asynchronous name resolution.
 aria2-metalink		Enable Metalink support.
 arts			Use the aRts audio daemon.
