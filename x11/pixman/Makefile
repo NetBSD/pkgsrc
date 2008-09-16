@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2008/09/06 20:13:13 bjs Exp $
+# $NetBSD: Makefile,v 1.20 2008/09/16 21:22:34 bjs Exp $
 #
 
 DISTNAME=	pixman-0.11.10
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=lib/}
 EXTRACT_SUFX=	.tar.bz2
@@ -14,7 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config perl diff awk
+USE_TOOLS+=	pkg-config perl diff
 ###
 ### XXX Quiet, please!
 ###
@@ -45,6 +46,7 @@ post-extract:
 	${CP} ${FILESDIR}/pixman.sym ${WRKDIR}
 
 .if defined(NM) && defined(PKG_DEVELOPER)
+.PHONY: gen-symfile
 gen-symfile: build
 	${NM} -DP ${WRKSRC}/pixman/.libs/libpixman-1.so | 	\
 	${AWK} '/^pixman/ { print $$1 }' | 			\
