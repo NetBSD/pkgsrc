@@ -1,4 +1,4 @@
-# $NetBSD: xorg,v 1.7 2008/08/22 13:34:39 tron Exp $
+# $NetBSD: xorg,v 1.8 2008/09/16 12:38:38 tron Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported Xorg (and some XFree) distributions, minus the set of files
@@ -354,6 +354,9 @@ lib/libXaw.6.dylib
 lib/libXaw.7.0.dylib
 lib/libXaw.7.dylib
 lib/libXaw.8.dylib
+lib/libXaw6.6.dylib
+lib/libXaw7.7.dylib
+lib/libXaw8.8.dylib
 lib/libXaw.a
 lib/libXaw.dylib
 lib/libXaw.so

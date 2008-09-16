@@ -1,0 +1,9 @@
+# $NetBSD: xorg.pixman,v 1.2 2008/09/16 12:38:38 tron Exp $
+#
+include/pixman-1/pixman.h
+include/pixman-1/pixman-version.h
+lib/libpixman-1.0.11.8.dylib
+lib/libpixman-1.0.dylib
+lib/libpixman-1.dylib
+lib/libpixman-1.la
+lib/pkgconfig/pixman-1.pc
