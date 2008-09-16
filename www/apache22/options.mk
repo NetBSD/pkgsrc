@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.4 2008/08/22 04:36:00 obache Exp $
+# $NetBSD: options.mk,v 1.5 2008/09/16 01:47:06 epg Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.apache
-PKG_SUPPORTED_OPTIONS=	suexec
+PKG_SUPPORTED_OPTIONS=	apache-shared-modules suexec
 
 .include "../../mk/bsd.options.mk"
 

@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.31 2008/09/06 20:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.32 2008/09/16 01:47:06 epg Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	apache-${APACHE_VERSION}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 
 HOMEPAGE=	http://httpd.apache.org/
@@ -64,8 +64,6 @@ BUILD_DEFS+=		APACHE_MPM
 PLIST_SRC+=		${PKGDIR}/PLIST.worker
 .endif
 
-CONFIGURE_ARGS+=	--disable-access
-CONFIGURE_ARGS+=	--disable-auth
 CONFIGURE_ARGS+=	--disable-include
 CONFIGURE_ARGS+=	--disable-log-config
 CONFIGURE_ARGS+=	--disable-env
@@ -77,7 +75,6 @@ CONFIGURE_ARGS+=	--disable-asis
 CONFIGURE_ARGS+=	--disable-cgi
 CONFIGURE_ARGS+=	--disable-negotiation
 CONFIGURE_ARGS+=	--disable-dir
-CONFIGURE_ARGS+=	--disable-imap
 CONFIGURE_ARGS+=	--disable-actions
 CONFIGURE_ARGS+=	--disable-userdir
 CONFIGURE_ARGS+=	--disable-alias
@@ -91,6 +88,7 @@ DFLT_APACHE_MODULES+=	actions userdir alias isapi file_cache
 DFLT_APACHE_MODULES+=	cache disk_cache mem_cache bucketeer echo
 DFLT_APACHE_MODULES+=	example case_filter case_filter_in
 DFLT_APACHE_MODULES+=	charset_lite
+DFLT_APACHE_MODULES+=	cgid dav_lock proxy_ajp proxy_balancer
 
 PLIST_SRC+=		${PKGDIR}/PLIST
 
@@ -99,11 +97,15 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 DFLT_APACHE_MODULES+=	ldap authnz_ldap
 .endif
 
+.include "options.mk"
+
 # APACHE_MODULES are the modules that are linked statically into the
 # apache httpd executable.
 #
-.if ${APACHE_MODULES} == "all-shared"
-CONFIGURE_ARGS+=	--enable-mods-shared=all
+#.if ${APACHE_MODULES} == "all-shared"
+.if !empty(PKG_OPTIONS:Mapache-shared-modules)
+# XXX ldap and suexec?
+CONFIGURE_ARGS+=	--enable-mods-shared=${DFLT_APACHE_MODULES:Q}
 PLIST_SRC+=		${PKGDIR}/PLIST.all-shared
 .else
 CONFIGURE_ARGS+=	--enable-modules=${APACHE_MODULES:Q}
@@ -191,8 +193,6 @@ SUBST_MESSAGE.abs_srcdir=	Fixing abs_srcdir
 
 REPLACE_PERL=		docs/cgi-examples/printenv
 
-.include "options.mk"
-
 # Add dependencies for the modules that will be built.  For each module
 # ap_mod listed in ${APACHE_MODULES}, _AP_DEPENDS.ap_mod is a whitespace
 # separated list of dependencies or buildlink3.mk files needed to build
@@ -205,7 +205,8 @@ AP_DEPENDS.deflate=	../../devel/zlib/buildlink3.mk
 AP_CFG_ARGS.ssl=	--with-ssl=${BUILDLINK_PREFIX.openssl}
 AP_CFG_ARGS.deflate=	--with-z=${BUILDLINK_PREFIX.zlib}
 
-.if ${APACHE_MODULES} == "all-shared"
+#.if ${APACHE_MODULES} == "all-shared"
+.if !empty(PKG_OPTIONS:Mapache-shared-modules)
 .include "${AP_DEPENDS.ssl}"
 .include "${AP_DEPENDS.deflate}"
 CONFIGURE_ARGS+=	${AP_CFG_ARGS.ssl} ${AP_CFG_ARGS.deflate}
