@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/09/14 13:25:07 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2008/09/16 10:36:31 jmcneill Exp $
 
 DISTNAME=	cheese-2.22.3
 CATEGORIES=	graphics
@@ -38,6 +38,7 @@ pre-configure:
 DEPENDS+= gst-plugins0.10-theora>=0.10.1:../../multimedia/gst-plugins0.10-theora
 DEPENDS+= gst-plugins0.10-ogg>=0.10.1:../../multimedia/gst-plugins0.10-ogg
 DEPENDS+= gst-plugins0.10-vorbis>=0.10.1:../../audio/gst-plugins0.10-vorbis
+DEPENDS+= gst-plugins0.10-v4l2>=0.10.10:../../multimedia/gst-plugins0.10-v4l2
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../sysutils/dbus/buildlink3.mk"
 .include "../../sysutils/dbus-glib/buildlink3.mk"
