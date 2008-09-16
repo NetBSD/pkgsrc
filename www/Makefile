@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.582 2008/09/15 18:14:46 taca Exp $
+# $NetBSD: Makefile,v 1.583 2008/09/16 15:32:24 seb Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -265,6 +265,7 @@ SUBDIR+=	p5-Catalyst-Plugin-StackTrace
 SUBDIR+=	p5-Catalyst-Plugin-Static-Simple
 SUBDIR+=	p5-Catalyst-Runtime
 SUBDIR+=	p5-Catalyst-View-JSON
+SUBDIR+=	p5-Catalyst-View-Jemplate
 SUBDIR+=	p5-Catalyst-View-TT
 SUBDIR+=	p5-CatalystX-CRUD-Controller-RHTMLO
 SUBDIR+=	p5-FCGI
