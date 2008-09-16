@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.189 2008/07/24 16:25:47 tnn Exp $
+# $NetBSD: Makefile,v 1.190 2008/09/16 12:53:08 taca Exp $
 
-DISTNAME=		openssh-5.0p1
-PKGNAME=		openssh-5.0.1
-PKGREVISION=		1
+DISTNAME=		openssh-5.1p1
+PKGNAME=		openssh-5.1.1
 SVR4_PKGNAME=		ossh
 CATEGORIES=		security
 MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
@@ -12,7 +11,7 @@ MASTER_SITES=		ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/ \
 			ftp://ftp.openssh.com/pub/OpenBSD/OpenSSH/portable/old/
 # Don't delete the last entry -- it's there if the pkgsrc version is not
 # up-to-date and the mirrors already removed the old distfile.
-DIST_SUBDIR=		${PKGBASE}-5.0.1-20080427
+DIST_SUBDIR=		${PKGBASE}-5.1.1-20080916
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.openssh.com/
