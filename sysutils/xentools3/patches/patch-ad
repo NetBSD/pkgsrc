@@ -1,7 +1,5 @@
-$NetBSD: patch-ad,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
-
---- libxc/xc_private.c.orig	2007-05-18 16:45:21.000000000 +0200
-+++ libxc/xc_private.c	2007-05-27 13:43:06.000000000 +0200
+--- libxc/xc_private.c.orig	2008-04-25 15:03:12.000000000 +0200
++++ libxc/xc_private.c	2008-09-14 23:37:40.000000000 +0200
 @@ -10,7 +10,12 @@
  #include <stdarg.h>
  #include <pthread.h>
@@ -78,7 +76,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
  }
  
  void xc_set_error(int code, const char *fmt, ...)
-@@ -84,23 +119,29 @@
+@@ -84,13 +119,19 @@
  
      errno = saved_errno;
  
@@ -93,14 +91,14 @@ $NetBSD: patch-ad,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
  int lock_pages(void *addr, size_t len)
  {
        int e = 0;
-+      void *laddr = (void *)((u_long)addr & ~0xfffUL);
-+      size_t llen = (len + 0xfffUL) & ~0xfffUL;
++      size_t offset = (u_long)addr & 0xfffUL;
++      addr -= offset;
++      len  += offset;
++      len   = (len + 0xfffUL) & ~0xfffUL; /* round up */
  #ifndef __sun__
--      e = mlock(addr, len);
-+      e = mlock(laddr, llen);
+       e = mlock(addr, len);
  #endif
-       return (e);
- }
+@@ -99,8 +140,10 @@
  
  void unlock_pages(void *addr, size_t len)
  {
@@ -112,7 +110,7 @@ $NetBSD: patch-ad,v 1.1.1.1 2007/06/14 19:39:46 bouyer Exp $
  #endif
  }
  
-@@ -466,20 +507,43 @@
+@@ -466,20 +509,43 @@
      return new_mfn;
  }
  
