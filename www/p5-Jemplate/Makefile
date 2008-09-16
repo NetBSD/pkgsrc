@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2008/09/13 15:59:37 he Exp $
+# $NetBSD: Makefile,v 1.9 2008/09/16 15:01:52 seb Exp $
 
 DISTNAME=	Jemplate-0.23
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	www perl5
-MASTER_SITES=	${MASTER_SITES_PERL_CPAN:=../by-authors/id/I/IN/INGY/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/R/RK/RKRIMEN/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Jemplate/
