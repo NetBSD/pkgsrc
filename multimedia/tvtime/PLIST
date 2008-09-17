@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/15 13:15:46 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/09/17 23:00:05 joerg Exp $
 bin/tvtime
 bin/tvtime-command
 bin/tvtime-configure
@@ -23,6 +23,7 @@ man/man1/tvtime.1
 man/man5/stationlist.xml.5
 man/man5/tvtime.xml.5
 share/applications/net-tvtime.desktop
+share/examples/tvtime/tvtime.xml
 share/icons/hicolor/16x16/apps/tvtime.png
 share/icons/hicolor/32x32/apps/tvtime.png
 share/icons/hicolor/48x48/apps/tvtime.png
@@ -45,3 +46,4 @@ share/tvtime/filmstrip_0004.png
 share/tvtime/infoicon_0000.png
 share/tvtime/tvtimeSansBold.ttf
 @dirrm share/tvtime
+@dirrm share/examples/tvtime

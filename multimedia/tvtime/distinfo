@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/15 13:15:46 jmcneill Exp $
+$NetBSD: distinfo,v 1.2 2008/09/17 23:00:05 joerg Exp $
 
 SHA1 (tvtime-1.0.1.tar.gz) = 0f5785803049877d35d4648abb3bb182799fa34c
 RMD160 (tvtime-1.0.1.tar.gz) = 854daa7dabc8b17c09acac362e8d7eb2ea11a977
@@ -13,3 +13,4 @@ SHA1 (patch-ag) = 1872b404615f54736b5cc143fb4f783d3f2e6709
 SHA1 (patch-ah) = eba4315dc77956fcbe648c0d3b2ee1c6e9046334
 SHA1 (patch-ai) = 3b8519579d1afe2f73ca70a30a640c43a27f3c2a
 SHA1 (patch-aj) = 4200e919df91d2a29e577459a9056203b2074254
+SHA1 (patch-ak) = 1b0bc021387b6ab31ff32b173b6897364dc7fa4c
