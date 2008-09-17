@@ -1,4 +1,4 @@
-# $NetBSD: xorg.freetype2,v 1.1 2007/12/15 17:53:40 tron Exp $
+# $NetBSD: xorg.freetype2,v 1.1.10.1 2008/09/17 16:11:40 cube Exp $
 #
 bin/freetype-config
 include/freetype2/freetype/config/ftconfig.h
@@ -50,5 +50,8 @@ lib/libfreetype.la
 lib/libfreetype.6.3.16.dylib
 lib/libfreetype.6.dylib
 lib/libfreetype.dylib
+lib/libfreetype.so
+lib/libfreetype.so.6
+lib/libfreetype.so.6.3.17
 lib/pkgconfig/freetype2.pc
 share/aclocal/freetype2.m4
