@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2008/08/20 03:04:20 bjs Exp $
+# $NetBSD: Makefile,v 1.11 2008/09/17 01:18:42 bjs Exp $
 #
 
-.include "${.CURDIR}/../scmgit/Makefile.common"
+.include "../../devel/scmgit/Makefile.common"
 
 PKGNAME=		scmgit-base-${GIT_VERSION}
 COMMENT=		GIT Tree History Storage Tool (base package)
