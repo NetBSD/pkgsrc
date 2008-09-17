@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2298 2008/09/16 22:48:14 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.2299 2008/09/17 00:32:02 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3893,3 +3893,28 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/libX11 to 1.1.5 [bjs 2008-09-16]
 	Updated x11/xterm to 237 [bjs 2008-09-16]
 	Updated graphics/gri to 2.12.18 [dholland 2008-09-16]
+	Updated meta-pkgs/ruby-gnome2 to 0.17.0 [obache 2008-09-17]
+	Updated devel/ruby-gnome2-atk to 0.17.0 [obache 2008-09-17]
+	Added devel/ruby-gnome2-bonobo version 0.17.0 [obache 2008-09-17]
+	Added devel/ruby-gnome2-bonoboui version 0.17.0 [obache 2008-09-17]
+	Added devel/ruby-gnome2-gconf version 0.17.0 [obache 2008-09-17]
+	Updated devel/ruby-gnome2-glib to 0.17.0 [obache 2008-09-17]
+	Added devel/ruby-gnome2-libglade version 0.17.0 [obache 2008-09-17]
+	Updated devel/ruby-gnome2-pango to 0.17.0 [obache 2008-09-17]
+	Updated graphics/ruby-gnome2-gdkpixbuf to 0.17.0 [obache 2008-09-17]
+	Updated graphics/ruby-gnome2-gnomecanvas to 0.17.0 [obache 2008-09-17]
+	Added graphics/ruby-gnome2-gtkglext version 0.17.0 [obache 2008-09-17]
+	Updated graphics/ruby-gnome2-libart to 0.17.0 [obache 2008-09-17]
+	Updated graphics/ruby-gnome2-rsvg to 0.17.0 [obache 2008-09-17]
+	Added multimedia/ruby-gnome2-gstreamer version 0.17.0 [obache 2008-09-17]
+	Updated print/ruby-gnome2-gnomeprint to 0.17.0 [obache 2008-09-17]
+	Added print/ruby-gnome2-gnomeprintui version 0.17.0 [obache 2008-09-17]
+	Updated print/ruby-gnome2-poppler to 0.17.0 [obache 2008-09-17]
+	Added sysutils/ruby-gnome2-gnomevfs version 0.17.0 [obache 2008-09-17]
+	Added www/ruby-gnome2-gtkhtml2 version 0.17.0 [obache 2008-09-17]
+	Added www/ruby-gnome2-gtkmozembed version 0.17.0 [obache 2008-09-17]
+	Updated x11/ruby-gnome2-gnome to 0.17.0 [obache 2008-09-17]
+	Updated x11/ruby-gnome2-gtk to 0.17.0 [obache 2008-09-17]
+	Added x11/ruby-gnome2-gtksourceview version 0.17.0 [obache 2008-09-17]
+	Updated x11/ruby-gnome2-panelapplet to 0.17.0 [obache 2008-09-17]
+	Added x11/ruby-gnome2-vte version 0.17.0 [obache 2008-09-17]
