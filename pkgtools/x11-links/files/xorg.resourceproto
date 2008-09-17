@@ -1,0 +1,3 @@
+# $NetBSD: xorg.resourceproto,v 1.1.2.1 2008/09/17 17:35:11 cube Exp $
+#
+lib/pkgconfig/resourceproto.pc
