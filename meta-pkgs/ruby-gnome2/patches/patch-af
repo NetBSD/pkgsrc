@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1 2008/06/19 15:10:28 taca Exp $
+$NetBSD: patch-af,v 1.2 2008/09/17 00:21:48 obache Exp $
 
---- libart/src/depend.orig	2008-06-06 23:03:45.000000000 +0900
+--- libart/src/depend.orig	2008-01-03 03:01:59.000000000 +0000
 +++ libart/src/depend
 @@ -1,2 +1,2 @@
  install:
 -	@$(RUBY) -run -e install -- -m 0644 -v $(srcdir)/rbart.h $(sitearchdir)$(target_prefix)
-+	@$(RUBY) -run -e install -- -m 0644 -v $(srcdir)/rbart.h $(vendorarchdir)$(target_prefix)
++	$(INSTALL_DATA) $(srcdir)/rbart.h $(RUBYARCHDIR)

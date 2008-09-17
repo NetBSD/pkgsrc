@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1 2008/09/17 00:21:49 obache Exp $
+bin/ruby-glade-create-template
+${RUBY_VENDORLIB}/libglade2.rb
+${RUBY_VENDORARCHLIB}/libglade2.${RUBY_DLEXT}
