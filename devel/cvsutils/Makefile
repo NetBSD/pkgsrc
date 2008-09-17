@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/11 05:01:08 bjs Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/17 00:14:23 bjs Exp $
 #
 
 DISTNAME=		cvsutils-0.2.5
@@ -16,9 +16,5 @@ USE_TOOLS+=		perl:run
 
 REPLACE_PERL=		*.pl
 REPLACE_SH=		*.sh
-
-post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR} &&\ cd ${WRKSRC} &&	\
-		${INSTALL_DATA} README NEWS ${DESTDIR}${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
