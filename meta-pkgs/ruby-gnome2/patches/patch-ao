@@ -1,0 +1,17 @@
+$NetBSD: patch-ao,v 1.1 2008/09/17 00:21:48 obache Exp $
+
+--- gtk/src/lib/gtk2/base.rb.orig	2008-04-10 14:18:40.000000000 +0000
++++ gtk/src/lib/gtk2/base.rb
+@@ -13,7 +13,12 @@ require 'glib2'
+ require 'atk'
+ require 'pango'
+ begin
++ begin
+   require 'cairo'
++ rescue LoadError
++  require 'rubygems'
++  require 'cairo'
++ end
+ rescue LoadError
+ end
+ require 'gtk2.so'
