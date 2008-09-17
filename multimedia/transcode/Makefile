@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.49 2008/09/15 12:46:44 abs Exp $
+# $NetBSD: Makefile,v 1.50 2008/09/17 18:52:10 joerg Exp $
 #
 
 DISTNAME=	transcode-1.0.6
@@ -10,6 +10,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.transcoding.org/
 COMMENT=	Command line video-stream processing tool
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
@@ -29,6 +31,15 @@ CONFIGURE_ARGS+=	--enable-vorbis
 PTHREAD_AUTO_VARS=	yes
 PTHREAD_OPTS=		require
 LIBS+=			${LIBOSSAUDIO}
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${MACHINE_ARCH} == "i386"
+PLIST.i386=	yes
+.endif
+
+PLIST_VARS+=	i386
+
 
 .include "options.mk"
 .include "../../audio/faac/buildlink3.mk"
