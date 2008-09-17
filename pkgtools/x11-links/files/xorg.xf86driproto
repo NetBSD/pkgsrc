@@ -1,0 +1,5 @@
+# $NetBSD: xorg.xf86driproto,v 1.1.2.1 2008/09/17 18:31:02 cube Exp $
+#
+include/X11/dri/xf86dri.h
+include/X11/dri/xf86dristr.h
+lib/pkgconfig/xf86driproto.pc
