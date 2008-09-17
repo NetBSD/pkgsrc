@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2006/10/21 07:47:25 adrianp Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/17 16:15:54 joerg Exp $
 #
 
 # System-specific configuration.
@@ -33,6 +33,6 @@ ${p}: ${SRCS.${p}}
 
 install: install-${p}
 install-${p}:
-	${BSD_INSTALL_PROGRAM} ${p} ${PREFIX}/bin/${p}
+	${BSD_INSTALL_PROGRAM} ${p} ${DESTDIR}${PREFIX}/bin/${p}
 
 .endfor
