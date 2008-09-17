@@ -1,0 +1,3 @@
+# $NetBSD: xorg.xf86dgaproto,v 1.1.2.1 2008/09/17 18:31:02 cube Exp $
+#
+lib/pkgconfig/xf86dgaproto.pc
