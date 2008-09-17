@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.65 2008/09/11 12:23:30 ghen Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.66 2008/09/17 10:41:56 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -159,3 +159,7 @@ Pullup ticket #2524 - requested by martti
 rrdtool: update package to avoid data corruption
 Pullup ticket 2527 - requested by wiz
 security update for libxml2
+Pullup ticket #2525 - requested by abs
+apache-tomcat55: security update
+Pullup ticket #2528 - requested by taca
+ruby18-base: security patch
