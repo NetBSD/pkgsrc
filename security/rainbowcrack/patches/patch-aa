@@ -1,0 +1,13 @@
+--- src/Public.cpp.orig	2008-06-02 16:30:03 +0300
++++ src/Public.cpp	2008-06-02 16:31:17 +0300
+@@ -16,6 +16,10 @@
+ 	#include <sys/param.h>
+ 	#include <sys/sysctl.h>
+ 	#include <unistd.h>
++	#ifdef __DragonFly__
++	#include <vm/vm_param.h>
++	#include <sys/vmmeter.h>
++	#endif
+ 
+ 	static int      pageshift;
+ 	#define pagetok(size) ((size) << pageshift)
