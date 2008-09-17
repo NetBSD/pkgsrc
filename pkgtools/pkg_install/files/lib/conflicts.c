@@ -71,8 +71,6 @@ check_package_conflict(const char *pkgname, void *v)
 	int rv;
 
 	rv = 0;
-	pkg.head = NULL;
-	pkg.tail = NULL;
 
 	f = fopen_contents(pkgname, "r");
 	read_plist(&pkg, f);

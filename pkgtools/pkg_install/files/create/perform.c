@@ -1,4 +1,4 @@
-/*	$NetBSD: perform.c,v 1.21 2008/04/26 17:40:01 joerg Exp $	*/
+/*	$NetBSD: perform.c,v 1.22 2008/09/17 15:21:30 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: perform.c,v 1.38 1997/10/13 15:03:51 jkh Exp";
 #else
-__RCSID("$NetBSD: perform.c,v 1.21 2008/04/26 17:40:01 joerg Exp $");
+__RCSID("$NetBSD: perform.c,v 1.22 2008/09/17 15:21:30 joerg Exp $");
 #endif
 #endif
 
@@ -177,7 +177,7 @@ pkg_perform(const char *pkg)
 	}
 
 	/* Slurp in the packing list */
-	read_plist(&plist, pkg_in);
+	append_plist(&plist, pkg_in);
 
 	if (pkg_in != stdin)
 		fclose(pkg_in);
