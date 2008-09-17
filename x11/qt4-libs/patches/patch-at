@@ -1,8 +1,20 @@
-$NetBSD: patch-at,v 1.1 2008/07/24 12:55:20 markd Exp $
+$NetBSD: patch-at,v 1.2 2008/09/17 12:23:01 joerg Exp $
 
---- ./src/3rdparty/webkit/JavaScriptCore/kjs/collector.cpp.orig	2008-04-29 01:11:16.000000000 +1200
-+++ ./src/3rdparty/webkit/JavaScriptCore/kjs/collector.cpp
-@@ -347,7 +347,7 @@ static inline void* currentThreadStackBa
+--- src/3rdparty/webkit/JavaScriptCore/kjs/collector.cpp.orig	2008-04-28 15:11:16.000000000 +0200
++++ src/3rdparty/webkit/JavaScriptCore/kjs/collector.cpp
+@@ -72,10 +72,9 @@ extern int *__libc_stack_end;
+ #include <thread.h>
+ #endif
+ 
++#include <pthread.h>
+ #if HAVE(PTHREAD_NP_H)
+ #include <pthread_np.h>
+-#else
+-#include <pthread.h>
+ #endif
+ 
+ #endif
+@@ -347,7 +346,7 @@ static inline void* currentThreadStackBa
      if (stackBase == 0 || thread != stackThread) {
          pthread_attr_t sattr;
          pthread_attr_init(&sattr);
