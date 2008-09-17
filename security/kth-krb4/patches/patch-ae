@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.5 2008/09/17 16:11:28 joerg Exp $
+
+--- lib/roken/roken.awk.orig	2008-09-17 17:44:57.000000000 +0200
++++ lib/roken/roken.awk
+@@ -15,7 +15,7 @@ BEGIN {
+ 	print "puts(\"\");"
+ }
+ 
+-$1 == "\#ifdef" || $1 == "\#ifndef" || $1 == "\#if" || $1 == "\#else" || $1 == "\#elif" || $1 == "\#endif" || $1 == "#ifdef" || $1 == "#ifndef" || $1 == "#if" || $1 == "#else" || $1 == "#elif" || $1 == "#endif" {
++$1 == "#ifdef" || $1 == "#ifndef" || $1 == "#if" || $1 == "#else" || $1 == "#elif" || $1 == "#endif" || $1 == "#ifdef" || $1 == "#ifndef" || $1 == "#if" || $1 == "#else" || $1 == "#elif" || $1 == "#endif" {
+ 	print $0;
+ 	next
+ }
