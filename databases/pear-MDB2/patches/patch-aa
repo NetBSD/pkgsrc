@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.1 2008/07/13 17:55:38 tonnerre Exp $
+$NetBSD: patch-aa,v 1.2 2008/09/17 22:49:24 adrianp Exp $
 
---- MDB2.php.orig	2007-05-03 20:58:15.000000000 +0200
-+++ MDB2.php	2008-07-13 18:44:59.000000000 +0200
-@@ -1156,6 +1156,7 @@
+--- MDB2.php.orig	2007-05-03 19:58:15.000000000 +0100
++++ MDB2.php
+@@ -1156,6 +1156,7 @@ class MDB2_Driver_Common extends PEAR
          'datatype_map' => array(),
          'datatype_map_callback' => array(),
          'nativetype_map_callback' => array(),
@@ -10,3 +10,10 @@ $NetBSD: patch-aa,v 1.1 2008/07/13 17:55:38 tonnerre Exp $
      );
  
      /**
+@@ -4268,4 +4269,4 @@ function MDB2_defaultDebugOutput(&$db, $
+ }
+ 
+ // }}}
+-?>
+\ No newline at end of file
++?>
