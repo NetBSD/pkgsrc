@@ -1,0 +1,15 @@
+$NetBSD: patch-dh,v 1.2.8.1 2008/09/17 10:41:38 tron Exp $
+
+Fix for http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-3790.
+(http://www.ruby-lang.org/en/news/2008/08/23/dos-vulnerability-in-rexml/)
+
+--- lib/rexml/entity.rb.orig	2008-04-18 16:22:13.000000000 +0900
++++ lib/rexml/entity.rb
+@@ -73,6 +73,7 @@ module REXML
+ 		# all entities -- both %ent; and &ent; entities.  This differs from
+ 		# +value()+ in that +value+ only replaces %ent; entities.
+ 		def unnormalized
++                        document.record_entity_expansion
+ 			v = value()
+ 			return nil if v.nil?
+ 			@unnormalized = Text::unnormalize(v, parent)
