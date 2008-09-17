@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2008/09/17 00:21:49 obache Exp $
+${RUBY_VENDORLIB}/gconf2.rb
+${RUBY_VENDORARCHLIB}/gconf2.${RUBY_DLEXT}

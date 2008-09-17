@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.583 2008/09/16 15:32:24 seb Exp $
+# $NetBSD: Makefile,v 1.584 2008/09/17 00:21:48 obache Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -416,6 +416,8 @@ SUBDIR+=	ruby-borges
 SUBDIR+=	ruby-clearsilver
 SUBDIR+=	ruby-cssmin
 SUBDIR+=	ruby-fcgi
+SUBDIR+=	ruby-gnome2-gtkhtml2
+SUBDIR+=	ruby-gnome2-gtkmozembed
 SUBDIR+=	ruby-htmlsplit
 SUBDIR+=	ruby-jsmin
 SUBDIR+=	ruby-mechanize

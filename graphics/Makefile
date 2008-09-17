@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.491 2008/09/14 13:20:04 drochner Exp $
+# $NetBSD: Makefile,v 1.492 2008/09/17 00:21:48 obache Exp $
 #
 
 COMMENT=	Graphics tools and libraries
@@ -297,6 +297,7 @@ SUBDIR+=	ruby-color
 SUBDIR+=	ruby-gd
 SUBDIR+=	ruby-gnome2-gdkpixbuf
 SUBDIR+=	ruby-gnome2-gnomecanvas
+SUBDIR+=	ruby-gnome2-gtkglext
 SUBDIR+=	ruby-gnome2-libart
 SUBDIR+=	ruby-gnome2-rsvg
 SUBDIR+=	ruby-gnuplot
