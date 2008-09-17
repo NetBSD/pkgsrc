@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/04/12 22:43:08 jlam Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/09/17 18:52:10 joerg Exp $
 bin/avifix
 bin/aviindex
 bin/avimerge
@@ -105,7 +105,7 @@ lib/transcode/filter_tc_video.la
 lib/transcode/filter_test.la
 lib/transcode/filter_testframe.la
 ${PLIST.freetype2}lib/transcode/filter_text.la
-lib/transcode/filter_tomsmocomp.la
+${PLIST.i386}lib/transcode/filter_tomsmocomp.la
 lib/transcode/filter_unsharp.la
 lib/transcode/filter_videocore.la
 lib/transcode/filter_whitebalance.la
