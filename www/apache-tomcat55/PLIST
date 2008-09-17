@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/03/12 20:41:48 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.5.6.1 2008/09/17 09:41:40 tron Exp $
 share/examples/rc.d/tomcat
 tomcat/LICENSE
 tomcat/NOTICE
@@ -68,6 +68,7 @@ tomcat/server/webapps/host-manager/images/void.gif
 tomcat/server/webapps/host-manager/manager.xml
 tomcat/server/webapps/manager/WEB-INF/lib/catalina-manager.jar
 tomcat/server/webapps/manager/WEB-INF/lib/commons-fileupload-1.2.jar
+tomcat/server/webapps/manager/WEB-INF/lib/commons-io-1.4.jar
 tomcat/server/webapps/manager/WEB-INF/web.xml
 tomcat/server/webapps/manager/html-manager-howto.html
 tomcat/server/webapps/manager/images/add.gif
@@ -528,11 +529,13 @@ tomcat/webapps/tomcat-docs/config/printer/realm.html
 tomcat/webapps/tomcat-docs/config/printer/resources.html
 tomcat/webapps/tomcat-docs/config/printer/server.html
 tomcat/webapps/tomcat-docs/config/printer/service.html
+tomcat/webapps/tomcat-docs/config/printer/systemprops.html
 tomcat/webapps/tomcat-docs/config/printer/valve.html
 tomcat/webapps/tomcat-docs/config/realm.html
 tomcat/webapps/tomcat-docs/config/resources.html
 tomcat/webapps/tomcat-docs/config/server.html
 tomcat/webapps/tomcat-docs/config/service.html
+tomcat/webapps/tomcat-docs/config/systemprops.html
 tomcat/webapps/tomcat-docs/config/valve.html
 tomcat/webapps/tomcat-docs/connectors.html
 tomcat/webapps/tomcat-docs/default-servlet.html
