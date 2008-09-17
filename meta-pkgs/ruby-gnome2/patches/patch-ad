@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.1 2008/06/19 15:10:28 taca Exp $
+$NetBSD: patch-ad,v 1.2 2008/09/17 00:21:48 obache Exp $
 
---- gtk/src/depend.orig	2008-06-06 23:03:41.000000000 +0900
+--- gtk/src/depend.orig	2008-01-03 03:01:59.000000000 +0000
 +++ gtk/src/depend
 @@ -1,2 +1,2 @@
  install:
 -	@$(RUBY) -run -e install -- -m 0644 -v $(srcdir)/rbgtk.h $(sitearchdir)$(target_prefix)
-+	@$(RUBY) -run -e install -- -m 0644 -v $(srcdir)/rbgtk.h $(vendorarchdir)$(target_prefix)
++	$(INSTALL_DATA) $(srcdir)/rbgtk.h $(RUBYARCHDIR)
