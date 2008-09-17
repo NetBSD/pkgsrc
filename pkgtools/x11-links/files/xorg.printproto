@@ -1,0 +1,3 @@
+# $NetBSD: xorg.printproto,v 1.1.2.1 2008/09/17 16:38:58 cube Exp $
+#
+lib/pkgconfig/printproto.pc
