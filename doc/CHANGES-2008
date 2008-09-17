@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2299 2008/09/17 00:32:02 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2300 2008/09/17 01:20:51 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3918,3 +3918,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Added x11/ruby-gnome2-gtksourceview version 0.17.0 [obache 2008-09-17]
 	Updated x11/ruby-gnome2-panelapplet to 0.17.0 [obache 2008-09-17]
 	Added x11/ruby-gnome2-vte version 0.17.0 [obache 2008-09-17]
+	Updated devel/scmgit to 1.6.0.2 [bjs 2008-09-17]
+	Updated devel/scmgit-base to 1.6.0.2 [bjs 2008-09-17]
+	Updated devel/scmgit-docs to 1.6.0.2 [bjs 2008-09-17]
