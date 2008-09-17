@@ -1,0 +1,3 @@
+# $NetBSD: xorg.trapproto,v 1.1.2.1 2008/09/17 18:31:02 cube Exp $
+#
+lib/pkgconfig/trapproto.pc

@@ -1,0 +1,4 @@
+# $NetBSD: xorg.videoproto,v 1.1.2.1 2008/09/17 18:31:02 cube Exp $
+#
+include/X11/extensions/vldXvMC.h
+lib/pkgconfig/videoproto.pc
