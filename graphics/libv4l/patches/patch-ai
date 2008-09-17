@@ -1,0 +1,13 @@
+$NetBSD: patch-ai,v 1.1 2008/09/17 14:04:54 joerg Exp $
+
+--- libv4lconvert/Makefile.orig	2008-08-26 14:32:39.000000000 +0200
++++ libv4lconvert/Makefile
+@@ -1,8 +1,5 @@
+ override CPPFLAGS += -I../include -I../../../../linux/include -fvisibility=hidden
+ 
+-CFLAGS := -g -O1
+-CFLAGS += -Wall -Wno-unused -Wpointer-arith -Wstrict-prototypes -Wmissing-prototypes
+-
+ ifeq ($(LINKTYPE),static)
+ CONVERT_LIB   = libv4lconvert.a
+ else

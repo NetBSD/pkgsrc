@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/08 19:07:41 jmcneill Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/09/17 14:04:54 joerg Exp $
 include/libv4l2.h
 include/libv4lconvert.h
+${PLIST.needs_videoio}include/sys/videoio.h
 lib/libv4l/v4l2convert.so
 lib/libv4l2.so
 lib/libv4l2.so.0
