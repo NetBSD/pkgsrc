@@ -1,0 +1,23 @@
+$NetBSD: patch-am,v 1.1 2008/09/17 00:21:48 obache Exp $
+
+--- pango/extconf.rb.orig	2008-06-10 23:46:00.000000000 +0000
++++ pango/extconf.rb
+@@ -29,16 +29,8 @@ have_func("pango_attr_iterator_get_attrs
+ have_func("pango_itemize_with_base_dir", pango_header)
+ have_func("pango_font_family_is_monospace", pango_header)
+ 
+-PKGConfig.have_package('pangocairo')
+-if have_header('rb_cairo.h')
+-  if /mingw|cygwin|mswin32/ =~ RUBY_PLATFORM
+-    unless ENV["CAIRO_PATH"]
+-      puts "Error! Set CAIRO_PATH."
+-      exit 1
+-    end
+-    add_depend_package("cairo", "src", ENV["CAIRO_PATH"])
+-    $defs << "-DRUBY_CAIRO_PLATFORM_WIN32"
+-  end
++if PKGConfig.have_package('pangocairo')
++  check_cairo
+ end
+ 
+ add_depend_package("glib2", "glib/src", TOPDIR)

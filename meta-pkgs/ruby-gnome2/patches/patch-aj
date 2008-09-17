@@ -1,0 +1,22 @@
+$NetBSD: patch-aj,v 1.1 2008/09/17 00:21:48 obache Exp $
+
+--- poppler/extconf.rb.orig	2008-06-11 00:27:07.000000000 +0000
++++ poppler/extconf.rb
+@@ -20,16 +20,7 @@ poppler_header = "poppler.h"
+ have_func("poppler_page_render_selection_to_pixbuf", poppler_header)
+ have_struct_member("PopplerImageMapping", "image_id", poppler_header)
+ 
+-if PKGConfig.have_package('cairo') and have_header('rb_cairo.h')
+-  if /mingw|cygwin|mswin32/ =~ RUBY_PLATFORM
+-    unless ENV["CAIRO_PATH"]
+-      puts "Error! Set CAIRO_PATH."
+-      exit 1
+-    end
+-    add_depend_package("cairo", "src", ENV["CAIRO_PATH"])
+-    $defs << "-DRUBY_CAIRO_PLATFORM_WIN32"
+-  end
+-end
++check_cairo
+ 
+ add_depend_package("glib2", "glib/src", TOPDIR)
+ add_depend_package("gtk2", "gtk/src", TOPDIR)

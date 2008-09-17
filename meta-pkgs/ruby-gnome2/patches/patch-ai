@@ -1,0 +1,23 @@
+$NetBSD: patch-ai,v 1.1 2008/09/17 00:21:48 obache Exp $
+
+--- gtk/extconf.rb.orig	2008-07-23 23:51:22.000000000 +0000
++++ gtk/extconf.rb
+@@ -65,17 +65,7 @@ end
+ 
+ have_func("rb_errinfo")
+ 
+-PKGConfig.have_package('cairo')
+-if have_header('rb_cairo.h')
+-  if /mingw|cygwin|mswin32/ =~ RUBY_PLATFORM
+-    unless ENV["CAIRO_PATH"]
+-      puts "Error! Set CAIRO_PATH."
+-      exit 1
+-    end
+-    add_depend_package("cairo", "src", ENV["CAIRO_PATH"])
+-    $defs << "-DRUBY_CAIRO_PLATFORM_WIN32"
+-  end
+-end
++check_cairo
+ 
+ add_depend_package("glib2", "glib/src", TOPDIR)
+ add_depend_package("pango", "pango/src", TOPDIR)

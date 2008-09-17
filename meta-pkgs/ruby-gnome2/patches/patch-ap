@@ -1,0 +1,17 @@
+$NetBSD: patch-ap,v 1.1 2008/09/17 00:21:48 obache Exp $
+
+--- pango/src/lib/pango.rb.orig	2007-12-28 09:04:22.000000000 +0000
++++ pango/src/lib/pango.rb
+@@ -8,7 +8,12 @@
+ 
+ require 'glib2'
+ begin
++ begin
+   require 'cairo'
++ rescue LoadError
++  require 'rubygems'
++  require 'cairo'
++ end
+ rescue LoadError
+ end
+ require 'pango.so'

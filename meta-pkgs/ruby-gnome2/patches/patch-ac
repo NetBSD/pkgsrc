@@ -1,12 +1,55 @@
-$NetBSD: patch-ac,v 1.1 2008/06/19 15:10:28 taca Exp $
+$NetBSD: patch-ac,v 1.2 2008/09/17 00:21:48 obache Exp $
 
---- glib/src/lib/mkmf-gnome2.rb.orig	2008-06-06 23:03:39.000000000 +0900
+--- glib/src/lib/mkmf-gnome2.rb.orig	2008-06-23 10:00:00.000000000 +0000
 +++ glib/src/lib/mkmf-gnome2.rb
-@@ -241,6 +241,7 @@ end
+@@ -257,7 +257,7 @@ def make_version_header(app_name, pkgnam
+ end
  
  def check_ruby_func
-   $CPPFLAGS << " -I$(sitearchdir) "
+-  $CPPFLAGS << " -I$(sitearchdir) "
 +  $CPPFLAGS << " -I$(vendorarchdir) "
  
    #Other options
-   have_func("rb_define_alloc_func") # for ruby-1.8
+   ruby_header = "ruby.h"
+@@ -296,6 +296,41 @@ def glib_mkenums(prefix, files, g_type_p
+   GLib::MkEnums.create(prefix, files, g_type_prefix, include_files)
+ end
+ 
++def check_cairo
++  return false unless PKGConfig.have_package('cairo')
++
++  have_rb_cairo_h = have_header('rb_cairo.h')
++  unless have_rb_cairo_h
++    begin
++      require 'rubygems'
++      gem 'cairo'
++      require 'cairo'
++      rcairo_src_gem_path_re =
++        /\A#{Regexp.escape(Gem.dir)}\/gems\/cairo-[\d.]+\/src\z/
++      $:.each do |path|
++        if rcairo_src_gem_path_re =~ path
++          $CFLAGS += " -I#{path} "
++          have_rb_cairo_h = have_header('rb_cairo.h')
++          break
++        end
++      end
++    rescue LoadError
++    end
++  end
++
++  if have_rb_cairo_h
++    if /mingw|cygwin|mswin32/ =~ RUBY_PLATFORM
++      unless ENV["CAIRO_PATH"]
++        puts "Error! Set CAIRO_PATH."
++        exit 1
++      end
++      add_depend_package("cairo", "src", ENV["CAIRO_PATH"])
++      $defs << "-DRUBY_CAIRO_PLATFORM_WIN32"
++    end
++  end
++  have_rb_cairo_h
++end
++
+ check_ruby_func
+ 
+ if /mingw/ =~ RUBY_PLATFORM

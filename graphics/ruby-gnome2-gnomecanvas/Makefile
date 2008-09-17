@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/06/19 15:12:35 taca Exp $
+# $NetBSD: Makefile,v 1.10 2008/09/17 00:21:49 obache Exp $
 #
 
 PKGNAME=		${RUBY_PKGPREFIX}-gnome2-gnomecanvas-${VERSION}
@@ -7,12 +7,16 @@ CATEGORIES=		graphics gnome
 
 CONFLICTS+=		ruby-gnome2-gnomecanvas-[0-9]*
 
-RUBY_EXTCONF_SUBDIRS=	glib gnomecanvas
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+RUBY_EXTCONF_SUBDIRS=	gnomecanvas
 
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-libart>=${VERSION}:../../graphics/ruby-gnome2-libart
 DEPENDS+=		${RUBY_PKGPREFIX}-gnome2-gtk>=${VERSION}:../../x11/ruby-gnome2-gtk
 
 USE_TOOLS+=		pkg-config
 
+BUILDLINK_DEPMETHOD.ruby-gnome2-glib=	build
+.include "../../devel/ruby-gnome2-glib/buildlink3.mk"
 .include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../meta-pkgs/ruby-gnome2/Makefile.common"

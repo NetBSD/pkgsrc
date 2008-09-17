@@ -1,0 +1,16 @@
+$NetBSD: patch-an,v 1.1 2008/09/17 00:21:48 obache Exp $
+
+--- gdkpixbuf/lib/gdk_pixbuf2.rb.orig	2006-12-17 08:30:40.000000000 +0000
++++ gdkpixbuf/lib/gdk_pixbuf2.rb
+@@ -1,6 +1,11 @@
+ require 'glib2'
+ begin
++ begin
+   require 'cairo'
++ rescue LoadError
++  require 'rubygems'
++  require 'cairo'
++ end
+ rescue LoadError
+ end
+ require 'gdk_pixbuf2.so'

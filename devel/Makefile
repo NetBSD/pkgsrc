@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1032 2008/09/15 15:15:25 he Exp $
+# $NetBSD: Makefile,v 1.1033 2008/09/17 00:21:48 obache Exp $
 #
 
 COMMENT=	Development utilities
@@ -881,7 +881,11 @@ SUBDIR+=	ruby-eventmachine
 SUBDIR+=	ruby-flexmock
 SUBDIR+=	ruby-gettext
 SUBDIR+=	ruby-gnome2-atk
+SUBDIR+=	ruby-gnome2-bonobo
+SUBDIR+=	ruby-gnome2-bonoboui
+SUBDIR+=	ruby-gnome2-gconf
 SUBDIR+=	ruby-gnome2-glib
+SUBDIR+=	ruby-gnome2-libglade
 SUBDIR+=	ruby-gnome2-pango
 SUBDIR+=	ruby-heckle
 SUBDIR+=	ruby-highline

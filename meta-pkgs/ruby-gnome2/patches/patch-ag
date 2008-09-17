@@ -1,10 +1,10 @@
-$NetBSD: patch-ag,v 1.1 2008/06/19 15:10:28 taca Exp $
+$NetBSD: patch-ag,v 1.2 2008/09/17 00:21:48 obache Exp $
 
---- pango/src/depend.orig	2008-06-06 23:03:45.000000000 +0900
+--- pango/src/depend.orig	2008-01-03 03:01:59.000000000 +0000
 +++ pango/src/depend
 @@ -1,3 +1,3 @@
  install:
 -	@$(RUBY) -run -e install -- -m 0644 -v $(srcdir)/rbpango.h $(sitearchdir)$(target_prefix)
 -	@$(RUBY) -run -e install -- -m 0644 -v rbpangoversion.h $(sitearchdir)$(target_prefix)
-+	@$(RUBY) -run -e install -- -m 0644 -v $(srcdir)/rbpango.h $(vendorarchdir)$(target_prefix)
-+	@$(RUBY) -run -e install -- -m 0644 -v rbpangoversion.h $(vendorarchdir)$(target_prefix)
++	$(INSTALL_DATA) $(srcdir)/rbpango.h $(RUBYARCHDIR)
++	$(INSTALL_DATA) rbpangoversion.h $(RUBYARCHDIR)

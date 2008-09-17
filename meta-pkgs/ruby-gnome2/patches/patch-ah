@@ -1,0 +1,24 @@
+$NetBSD: patch-ah,v 1.1 2008/09/17 00:21:48 obache Exp $
+
+--- gdkpixbuf/extconf.rb.orig	2008-06-11 00:11:07.000000000 +0000
++++ gdkpixbuf/extconf.rb
+@@ -21,17 +21,8 @@ have_func("gdk_pixbuf_set_option", "gdk-
+ end
+ have_header("gdk-pixbuf/gdk-pixbuf-io.h")
+ 
+-if PKGConfig.have_package('cairo') and
+-    PKGConfig.have_package('gdk-2.0') and
+-    have_header('rb_cairo.h')
+-  if /mingw|cygwin|mswin32/ =~ RUBY_PLATFORM
+-    unless ENV["CAIRO_PATH"]
+-      puts "Error! Set CAIRO_PATH."
+-      exit 1
+-    end
+-    add_depend_package("cairo", "src", ENV["CAIRO_PATH"])
+-    $defs << "-DRUBY_CAIRO_PLATFORM_WIN32"
+-  end
++if PKGConfig.have_package('gdk-2.0')
++  check_cairo
+ end
+ 
+ add_depend_package("glib2", "glib/src", TOPDIR)
