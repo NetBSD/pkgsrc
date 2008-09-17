@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2008/09/11 12:03:20 kleink Exp $
+# $NetBSD: Makefile,v 1.12 2008/09/17 15:48:16 kleink Exp $
 #
 
 DISTNAME=		drraw-2.2a5
+PKGREVISION=		1
 CATEGORIES=		databases graphics www
 MASTER_SITES=		http://web.taranis.org/drraw/dist/
 
@@ -23,7 +24,7 @@ DRRAW_CONF_FILES=	drraw.conf
 DRRAW_ICONS=		bomb.gif folder.gif folder.open.gif generic.gif \
 			link.gif text.gif unknown.gif
 
-DRRAW_DOCS=		CHANGES INSTALL README.EVENTS WISHLIST
+DRRAW_DOCS=		CHANGES INSTALL README.EVENTS
 
 CONF_FILES=		${EGDIR}/drraw.conf ${PKG_SYSCONFDIR}/drraw.conf
 
