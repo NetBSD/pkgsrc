@@ -1,10 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2006/12/27 12:23:15 joerg Exp $
-
-.include "../../mk/bsd.fast.prefs.mk"
-
-.if ${X11_TYPE} != "modular"
-.include "../../mk/x11.buildlink3.mk"
-.else
+# $NetBSD: buildlink3.mk,v 1.1.1.1.18.1 2008/09/17 20:46:48 cube Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBXSCRNSAVER_BUILDLINK3_MK:=	${LIBXSCRNSAVER_BUILDLINK3_MK}+
@@ -27,5 +21,3 @@ BUILDLINK_PKGSRCDIR.libXScrnSaver?=	../../x11/libXScrnSaver
 .include "../../x11/scrnsaverproto/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
-
-.endif

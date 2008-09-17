@@ -1,4 +1,4 @@
-# $NetBSD: xorg.mk,v 1.9.8.12 2008/09/17 18:31:02 cube Exp $
+# $NetBSD: xorg.mk,v 1.9.8.13 2008/09/17 20:46:48 cube Exp $
 #
 # This is for X.org, but use "xfree" files also.
 
@@ -21,9 +21,11 @@ FILES_LIST=	${FILESDIR}/xorg
 .include "../../x11/fontsproto/buildlink3.mk"
 .include "../../x11/glproto/buildlink3.mk"
 .include "../../x11/inputproto/buildlink3.mk"
+.include "../../x11/libFS/buildlink3.mk"
 .include "../../x11/libICE/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXScrnSaver/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
