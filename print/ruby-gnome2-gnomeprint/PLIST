@@ -1,3 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/06/19 15:13:54 taca Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/09/17 00:21:49 obache Exp $
 ${RUBY_VENDORLIB}/gnomeprint2.rb
 ${RUBY_VENDORARCHLIB}/gnomeprint2.${RUBY_DLEXT}
+${RUBY_VENDORARCHLIB}/rblibgnomeprintversion.h

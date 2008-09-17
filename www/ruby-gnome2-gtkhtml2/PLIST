@@ -1,0 +1,3 @@
+@comment $NetBSD: PLIST,v 1.1 2008/09/17 00:21:50 obache Exp $
+${RUBY_VENDORLIB}/gtkhtml2.rb
+${RUBY_VENDORARCHLIB}/gtkhtml2.${RUBY_DLEXT}
