@@ -1,4 +1,4 @@
-/*	$NetBSD: plist.c,v 1.20 2008/09/16 13:32:58 joerg Exp $	*/
+/*	$NetBSD: plist.c,v 1.21 2008/09/17 15:21:30 joerg Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "from FreeBSD Id: plist.c,v 1.24 1997/10/08 07:48:15 charnier Exp";
 #else
-__RCSID("$NetBSD: plist.c,v 1.20 2008/09/16 13:32:58 joerg Exp $");
+__RCSID("$NetBSD: plist.c,v 1.21 2008/09/17 15:21:30 joerg Exp $");
 #endif
 #endif
 
@@ -360,7 +360,7 @@ parse_plist(package_t *pkg, const char *buf)
  * Read a packing list from a file
  */
 void
-read_plist(package_t *pkg, FILE * fp)
+append_plist(package_t *pkg, FILE * fp)
 {
 	char    pline[MaxPathSize];
 	char   *cp;
@@ -394,6 +394,15 @@ read_plist(package_t *pkg, FILE * fp)
 		if (free_cp)
 			free(cp);
 	}
+}
+
+void
+read_plist(package_t *pkg, FILE * fp)
+{
+	pkg->head = NULL;
+	pkg->tail = NULL;
+
+	append_plist(pkg, fp);
 }
 
 /*
