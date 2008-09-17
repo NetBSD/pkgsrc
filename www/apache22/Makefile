@@ -1,11 +1,14 @@
-# $NetBSD: Makefile,v 1.32 2008/09/16 01:47:06 epg Exp $
+# $NetBSD: Makefile,v 1.33 2008/09/17 15:39:06 epg Exp $
 
-.include "Makefile.common"
-
-PKGNAME=	apache-${APACHE_VERSION}
+DISTNAME=	httpd-2.2.9
+PKGNAME=	${DISTNAME:S/httpd/apache/}
 PKGREVISION=	4
 CATEGORIES=	www
+MASTER_SITES=	${MASTER_SITE_APACHE:=httpd/} \
+		${MASTER_SITE_APACHE:=httpd/old/}
+EXTRACT_SUFX=	.tar.bz2
 
+MAINTAINER=	tron@NetBSD.org
 HOMEPAGE=	http://httpd.apache.org/
 COMMENT=	Apache HTTP (Web) server, version 2
 
