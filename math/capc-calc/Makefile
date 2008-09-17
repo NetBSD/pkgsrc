@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2008/06/20 01:09:24 joerg Exp $
+# $NetBSD: Makefile,v 1.38 2008/09/17 15:23:19 bjs Exp $
 #
 
 DISTNAME=	calc-2.12.3.3
@@ -19,6 +19,7 @@ MAKE_JOBS_SAFE=	no
 USE_TOOLS+=	gmake
 BUILD_TARGET=	calc-static-only
 MAKE_ENV+=	BLD_TYPE=calc-static-only target=pkgsrc
+MAKE_ENV+=	DEBUG=${CFLAGS:M*:Q}
 
 INSTALL_MAKE_FLAGS+=	T=${DESTDIR}
 
