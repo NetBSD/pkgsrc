@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:40 joerg Exp $
+# $NetBSD: Makefile,v 1.16.4.1 2008/09/17 09:41:40 tron Exp $
 
 DISTNAME=	apache-tomcat-${TOMCAT_VERSION}
 CATEGORIES=	www java
@@ -11,7 +11,7 @@ COMMENT=	The Apache Project's Java Servlet 2.4 and JSP 2.0 server
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-TOMCAT_VERSION=	5.5.26
+TOMCAT_VERSION=	5.5.27
 
 USE_JAVA=	run
 # This needs java 1.5 or higher.
@@ -61,7 +61,7 @@ FILES_SUBST+=	JAVA_HOME=${PKG_JAVA_HOME:Q} TOMCAT_LIB=${TOMCAT_LIB:Q}
 # 	@(cd ${WRKSRC}/jsvc-src ; ${SH} ./configure)
 
 do-build:
-	@${MV} ${WRKSRC}/conf ${WRKDIR}
+	${MV} ${WRKSRC}/conf ${WRKDIR}
 
 INSTALLATION_DIRS+=	${EGDIR2} ${TOMCAT_LIB}
 
