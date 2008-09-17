@@ -1,0 +1,29 @@
+$NetBSD: patch-ak,v 1.1 2008/09/17 23:00:05 joerg Exp $
+
+--- docs/Makefile.am.orig	2004-10-30 17:20:27.000000000 +0200
++++ docs/Makefile.am
+@@ -50,23 +50,8 @@ install-data-local:
+ 
+ .PHONY: install-exec-hook
+ install-exec-hook:
+-	-mkdir -p -- '$(DESTDIR)$(pkgsysconfdir)' || touch noconfdir
+-	@if [ -f noconfdir ]; then (                                         \
+-	  echo 'Warning: I could not create the directory'                   \
+-	       '`$(DESTDIR)$(pkgsysconfdir)'"'"                             ;\
+-	  echo '         because you do not have the required permissions.' ;\
+-	); fi
+-	-if [ -f noconfdir ]; then                                           \
+-	   rm -f noconfdir;                                                  \
+-	 else                                                                \
+ 	   $(INSTALL) -m 'u=rw,go=r' 'html/default.tvtime.xml'               \
+-	     '$(DESTDIR)$(pkgsysconfdir)/tvtime.xml' || touch noconfdir;     \
+-	 fi
+-	@if [ -f noconfdir ]; then rm -f noconfdir; (                        \
+-	  echo 'Warning: I could not create the default tvtime'              \
+-	       'configuration file'                                         ;\
+-	  echo '         because you do not have the required permissions.' ;\
+-	); fi
++	     '$(DESTDIR)$(datadir)/examples/tvtime/tvtime.xml'
+ 
+ uninstall-hook:
+ 	-rmdir -p '$(DESTDIR)$(pkgsysconfdir)'
