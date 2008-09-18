@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2008/09/08 09:58:43 adam Exp $
+# $NetBSD: options.mk,v 1.3 2008/09/18 21:30:52 adrianp Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.apr-util
 PKG_SUPPORTED_OPTIONS=	db4 ldap mysql pgsql sqlite3
@@ -37,4 +37,6 @@ CONFIGURE_ARGS+=	--with-pgsql
 PLIST.sqlite3=		yes
 CONFIGURE_ARGS+=	--with-sqlite3
 .  include "../../databases/sqlite3/buildlink3.mk"
+.else
+CONFIGURE_ARGS+=	--without-sqlite3
 .endif
