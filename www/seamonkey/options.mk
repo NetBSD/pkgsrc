@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.12 2008/09/15 18:22:15 adrianp Exp $
+# $NetBSD: options.mk,v 1.13 2008/09/18 21:14:59 adrianp Exp $
 # used by www/firefox/Makefile.common
 # used by www/firefox3/Makefile.common
 # used by www/seamonkey/Makefile.common
@@ -21,7 +21,7 @@ PKG_SUGGESTED_OPTIONS  += mozilla-jemalloc
 # so expose an option to allow users to build FF without it.
 # NOTE: This currently has only been known to happen on SunOS 5.11 x86
 #       as a full list of systems is unknown the default is to still use it
-.if !empty(PKG_OPTIONS:Mmozilla-jemalloc)
+.if empty(PKG_OPTIONS:Mmozilla-jemalloc)
 CONFIGURE_ARGS+=	--disable-jemalloc
 .endif
 
