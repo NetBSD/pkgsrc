@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.3 2007/02/01 17:56:11 drochner Exp $
+$NetBSD: patch-ab,v 1.4 2008/09/18 16:56:55 drochner Exp $
 
---- src/GrampsDb/_GrampsBSDDB.py.orig	2007-01-31 21:10:04.000000000 +0100
-+++ src/GrampsDb/_GrampsBSDDB.py
+--- ./src/GrampsDb/_GrampsBSDDB.py.orig	2008-01-02 17:04:53.000000000 +0100
++++ ./src/GrampsDb/_GrampsBSDDB.py
 @@ -35,7 +35,7 @@ import shutil
  import re
  import time
@@ -11,3 +11,12 @@ $NetBSD: patch-ab,v 1.3 2007/02/01 17:56:11 drochner Exp $
  import logging
  log = logging.getLogger(".GrampsDb")
  
+@@ -337,7 +337,7 @@ class GrampsBSDDB(GrampsDbBase,UpdateCal
+             # These env settings are only needed for Txn environment
+             self.env.set_lk_max_locks(25000)
+             self.env.set_lk_max_objects(25000)
+-            self.env.set_flags(db.DB_LOG_AUTOREMOVE,1)  # clean up unused logs
++            self.env.set_flags(db.DB_LOG_AUTO_REMOVE,1)  # clean up unused logs
+ 
+             # The DB_PRIVATE flag must go if we ever move to multi-user setup
+             env_flags = db.DB_CREATE|db.DB_PRIVATE|\
