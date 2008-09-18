@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.72 2008/09/06 13:00:31 wiz Exp $
+# $NetBSD: Makefile,v 1.73 2008/09/18 21:10:28 bjs Exp $
 
 PKGNAME=	MesaLib-${MESA_PKGVERSION}
 COMMENT=	Graphics library similar to SGI's OpenGL
@@ -13,60 +13,9 @@ MESA_HEADERS+=	internal/dri_interface.h internal/sarea.h
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILD_DEFS+=		MESA_HZ
-###
-### XXX Older versions of xf86driproto installed dri_interface.h, which
-###	is now installed by Mesa.
-###
-BUILDLINK_API_DEPENDS.driproto+=	xf86driproto>=2.0.4
-
-.include "../../mk/bsd.prefs.mk"
-
-CFLAGS.NetBSD+=	-D_NETBSD_SOURCE
-CFLAGS.NetBSD+=	${ATOMIC_OPS_CHECK}HAVE_NETBSD_ATOMIC_OPS
-
-.if ${OPSYS} == "NetBSD" && !target(netbsd-atomic-ops-check)
-netbsd-atomic-ops-check:
-ATOMIC_OPS_CHECK!=\
-  if ( ${NM} /usr/lib/libc.so | ${GREP} -q atomic_cas_uint ); then	\
-    ${ECHO} "-D";	\
-  else	\
-    ${ECHO} "-U";	\
-  fi
-.endif
-
-.if (${MACHINE_ARCH} == "x86_64" || \
-    ${MACHINE_ARCH} == "sparc64" || \
-    ${MACHINE_ARCH} == "alpha")
-CFLAGS+=	-D__GLX_ALIGN64
-.endif
-
-.if !empty(MACHINE_ARCH:Mi386) || !empty(MACHINE_ARCH:Mx86_64)
-###
-### This is taken from <sys/arch/i386/include/npx.h>.  If we don't override
-### it, the FPU control word will be restored to 0x037f.
-###
-### Also, see patch-aq about the libm functions required (float functions
-### such as floorf).  Proper configuration of this should be a goal of
-### the Mesa developers; alas, it obviously is not.
-###
-### XXX We need a reliable check for these functions.
-###
-#/* NetBSD uses IEEE double precision. */
-CFLAGS.NetBSD+=		-DDEFAULT_X86_FPU=0x127f
-###
-###
-#/* FreeBSD leaves some exceptions unmasked as well. */
-###
-CFLAGS.FreeBSD+=	-DDEFAULT_x86_FPU=0x1272
-.endif
-
-CFLAGS.FreeBSD+=	-DUSE_NATIVE_LIBM_FUNCS
-CFLAGS.Linux+=		-DUSE_NATIVE_LIBM_FUNCS
-CFLAGS.NetBSD+=		-DUSE_NATIVE_LIBM_FUNCS
-CFLAGS.DragonFly+=	-DUSE_NATIVE_LIBM_FUNCS
-
 PLIST_VARS=		dri nodri
 
+.include "glx-config.mk"
 .include "../../graphics/Mesa/Makefile.lib"
 .include "options.mk"
 

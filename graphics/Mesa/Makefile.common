@@ -1,15 +1,16 @@
-# $NetBSD: Makefile.common,v 1.69 2008/08/23 02:51:19 dsainty Exp $
+# $NetBSD: Makefile.common,v 1.70 2008/09/18 21:10:28 bjs Exp $
 #
 # This Makefile fragment is included either directly or indirectly (through
 # Makefile.lib) by all packages that are built from the Mesa sources.
 #
 # used by graphics/Mesa/Makefile.lib
 
-DISTNAME?=	MesaLib-${MESA_VERSION}
+.include "../../graphics/Mesa/Makefile.version"
+
+DISTNAME?=	${MESA_DISTNAME}
 EXTRACT_SUFX=	.tar.bz2
 CATEGORIES=	graphics
-#MASTER_SITES=	${MASTER_SITE_LOCAL:=Mesa-${MESA_VERSION}/}
-MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mesa3d/}
+MASTER_SITES=	${MESA_SITES}
 
 # When changing this version, please run "make distinfo" in the following
 # package directories:
@@ -17,15 +18,6 @@ MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mesa3d/}
 #	graphics/MesaLib
 #	graphics/glx-utils
 #
-MESA_VERSION=		7.0.4
-MESA_PKGVERSION=	${MESA_VERSION}${MESA_PATCHLEVEL}
-#MESA_PATCHFILES=	001 002 003
-MESA_PATCHLEVEL=	.1
-
-#PATCHFILES=		${MESA_PATCHFILES:@.p.@Mesa-${MESA_VERSION}-${.p.}@}
-#PATCH_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/patchfiles/
-#PATCH_DIST_STRIP=	-p1
-
 MAINTAINER=		bjs@NetBSD.org
 HOMEPAGE=		http://www.mesa3d.org/
 
