@@ -1,0 +1,13 @@
+$NetBSD: patch-ao,v 1.1 2008/09/18 12:33:44 taca Exp $
+
+--- lib/RK/ncache.c.orig	2002-10-19 17:27:45.000000000 +0900
++++ lib/RK/ncache.c
+@@ -27,7 +27,7 @@ static char rcsid[]="$Id: ncache.c,v 1.1
+ #include	"RKintern.h"
+ 
+ #define	NCHASH		101
+-#define	hash(x)		((int)((x)%NCHASH))
++#define	hash(x)		((int)(((unsigned long)(x))%NCHASH))
+ 
+ static struct ncache	Nchash[NCHASH];
+ static struct ncache	Ncfree;
