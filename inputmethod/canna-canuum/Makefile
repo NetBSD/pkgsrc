@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2007/01/07 09:13:56 rillig Exp $
+# $NetBSD: Makefile,v 1.8 2008/09/18 12:35:27 taca Exp $
 
-PKGREVISION=	1
+PKGREVISION=	2
 CANNA_MODULE=	canuum
 
 .include "../../inputmethod/canna/Makefile.common"
