@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2302 2008/09/17 15:49:26 kleink Exp $
+$NetBSD: CHANGES-2008,v 1.2303 2008/09/18 00:11:48 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3923,3 +3923,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/scmgit-docs to 1.6.0.2 [bjs 2008-09-17]
 	mk/bsd.pkg.mk: started freeze for pkgsrc-3008Q2 branch [agc 2008-09-17]
 	Updated www/drraw to 2.2a5nb1 [kleink 2008-09-17]
+	Updated x11/x11vnc to 0.9.4 [obache 2008-09-18]
