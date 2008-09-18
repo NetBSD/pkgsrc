@@ -1,4 +1,4 @@
-# $NetBSD: xorg.mk,v 1.9.8.17 2008/09/18 17:33:27 cube Exp $
+# $NetBSD: xorg.mk,v 1.9.8.18 2008/09/18 19:30:37 cube Exp $
 #
 # This is for X.org, but use "xfree" files also.
 
@@ -64,6 +64,7 @@ FILES_LIST=	${FILESDIR}/xorg
 .include "../../x11/xf86vidmodeproto/buildlink3.mk"
 .include "../../x11/xproto/buildlink3.mk"
 .include "../../x11/xproxymanagementprotocol/buildlink3.mk"
+.include "../../x11/xtrans/buildlink3.mk"
 
 # XXX  what is ${X11_MODULES} ?
 
