@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7546 2008/09/17 01:20:51 bjs Exp $
+$NetBSD: TODO,v 1.7547 2008/09/18 11:55:17 taca Exp $
 
 Suggested new packages
 ======================
@@ -351,6 +351,7 @@ Suggested package updates
 
 	o 9base-20060125
 	o CSP-0.34
+	o Canna-3.7p3
 	o Chinput-3.0.1
 	o ClanLib-0.8.1
 	o Coin-2.4.5
