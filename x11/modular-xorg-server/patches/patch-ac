@@ -1,34 +1,15 @@
-$NetBSD: patch-ac,v 1.3 2008/06/20 13:34:40 joerg Exp $
+$NetBSD: patch-ac,v 1.4 2008/09/18 20:56:01 bjs Exp $
 
-CVE-2008-2360
-
---- render/glyph.c.orig	2006-09-18 08:04:18.000000000 +0200
-+++ render/glyph.c
-@@ -42,6 +42,12 @@
- #include "picturestr.h"
- #include "glyphstr.h"
+--- hw/xfree86/common/Makefile.am.orig	2008-08-02 04:52:04.000000000 -0400
++++ hw/xfree86/common/Makefile.am
+@@ -23,8 +23,8 @@ BUSSOURCES = xf86isaBus.c xf86pciBus.c x
  
-+#if HAVE_STDINT_H
-+#include <stdint.h>
-+#elif !defined(UINT32_MAX)
-+#define UINT32_MAX 0xffffffffU
-+#endif
-+
- /*
-  * From Knuth -- a good choice for hash/rehash values is p, p-2 where
-  * p and p-2 are both prime.  These tables are sized to have an extra 10%
-@@ -626,8 +632,12 @@ AllocateGlyph (xGlyphInfo *gi, int fdept
-     int		     size;
-     GlyphPtr	     glyph;
-     int		     i;
--
--    size = gi->height * PixmapBytePad (gi->width, glyphDepths[fdepth]);
-+    size_t	     padded_width;
-+    
-+    padded_width = PixmapBytePad (gi->width, glyphDepths[fdepth]);
-+    if (gi->height && padded_width > (UINT32_MAX - sizeof(GlyphRec))/gi->height)
-+	return 0;
-+    size = gi->height * padded_width;
-     glyph = (GlyphPtr) xalloc (size + sizeof (GlyphRec));
-     if (!glyph)
- 	return 0;
+ MODEDEFSOURCES = $(srcdir)/vesamodes $(srcdir)/extramodes
+ 
+-xf86DefModeSet.c: $(srcdir)/modeline2c.pl $(MODEDEFSOURCES)
+-	cat $(MODEDEFSOURCES) | $(PERL) $(srcdir)/modeline2c.pl > $@
++xf86DefModeSet.c: $(srcdir)/modeline2c.awk $(MODEDEFSOURCES)
++	cat $(MODEDEFSOURCES) | $(AWK) -f $(srcdir)/modeline2c.awk > $@
+ 
+ BUILT_SOURCES = xf86DefModeSet.c
+ 
