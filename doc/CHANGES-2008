@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2305 2008/09/18 11:53:47 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2306 2008/09/18 12:18:36 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3927,3 +3927,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/ns to 2.33 [minskim 2008-09-18]
 	Updated databases/mysql5-client to 5.0.67 [taca 2008-09-18]
 	Updated databases/mysql5-server to 5.0.67 [taca 2008-09-18]
+	Updated audio/easyh10 to 1.5nb1 [ghen 2008-09-18]
