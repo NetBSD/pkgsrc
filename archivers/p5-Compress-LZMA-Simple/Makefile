@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/04 12:08:42 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/18 15:42:11 obache Exp $
 #
 
 DISTNAME=	Compress-LZMA-Simple-0.2
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	archivers
-MASTER_SITES=	${MASTER_SITE_CPAN:=Compress/}
+MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Compress/}
 
 MAINTAINER=	obache@NetBSD.org
 HOMEPAGE=	http://search.cpan.org/dist/Compress-LZMA-Simple/
