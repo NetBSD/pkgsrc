@@ -1,0 +1,22 @@
+# $NetBSD: Makefile.version,v 1.1 2008/09/18 21:10:28 bjs Exp $
+#
+# When changing this version, please run "make distinfo" in the following
+# package directories:
+#
+#	graphics/MesaLib
+#	graphics/glx-utils
+#
+# used by graphics/Mesa/Makefile.common
+# used by x11/modular-xorg-server/options.mk
+
+MESA_DISTNAME= 		MesaLib-${MESA_VERSION}
+MESA_SITES=		${MASTER_SITE_SOURCEFORGE:=mesa3d/}
+
+MESA_VERSION=		7.0.4
+MESA_PKGVERSION=	${MESA_VERSION}${MESA_PATCHLEVEL}
+#MESA_PATCHFILES=	001 002 003
+MESA_PATCHLEVEL=	.1
+
+#PATCHFILES=		${MESA_PATCHFILES:@.p.@Mesa-${MESA_VERSION}-${.p.}@}
+#PATCH_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/bjs/patchfiles/
+#PATCH_DIST_STRIP=	-p1
