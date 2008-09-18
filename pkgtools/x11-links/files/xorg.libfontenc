@@ -1,0 +1,3 @@
+# $NetBSD: xorg.libfontenc,v 1.1.2.1 2008/09/18 17:33:27 cube Exp $
+#
+lib/pkgconfig/fontenc.pc
