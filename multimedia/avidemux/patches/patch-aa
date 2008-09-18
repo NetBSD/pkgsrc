@@ -1,10 +1,13 @@
-$NetBSD: patch-aa,v 1.7 2008/02/20 15:46:53 xtraeme Exp $
+$NetBSD: patch-aa,v 1.8 2008/09/18 13:23:03 joerg Exp $
 
---- avidemux/ADM_audiodevice/ADM_deviceoss.cpp.orig	2007-09-25 21:01:54.000000000 +0200
-+++ avidemux/ADM_audiodevice/ADM_deviceoss.cpp	2008-02-20 16:32:29.000000000 +0100
-@@ -28,7 +28,8 @@
+--- avidemux/ADM_audiodevice/ADM_deviceoss.cpp.orig	2007-09-25 22:01:54 +0300
++++ avidemux/ADM_audiodevice/ADM_deviceoss.cpp	2008-09-18 14:08:20 +0300
+@@ -26,9 +26,10 @@
+ #include <fcntl.h>
+ #include <sys/ioctl.h>
  
- #if defined(ADM_BSD_FAMILY) && !defined(__FreeBSD__) && !defined(__OpenBSD__)
+-#if defined(ADM_BSD_FAMILY) && !defined(__FreeBSD__) && !defined(__OpenBSD__)
++#if defined(ADM_BSD_FAMILY) && !defined(__FreeBSD__) && !defined(__OpenBSD__) && !defined(__DragonFly__)
  	#include <soundcard.h>
 -	const char *dsp = DEVOSSAUDIO;;
 +	const char *dsp = "/dev/dsp";

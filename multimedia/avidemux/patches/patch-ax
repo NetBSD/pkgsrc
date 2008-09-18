@@ -1,4 +1,4 @@
-$NetBSD: patch-ax,v 1.1 2008/02/19 09:11:43 xtraeme Exp $
+$NetBSD: patch-ax,v 1.2 2008/09/18 13:23:03 joerg Exp $
 
 --- avidemux/ADM_videoFilter/ADM_vidParticle.cpp.orig	2008-02-19 09:16:00.000000000 +0100
 +++ avidemux/ADM_videoFilter/ADM_vidParticle.cpp	2008-02-19 09:21:40.000000000 +0100
@@ -6,7 +6,7 @@ $NetBSD: patch-ax,v 1.1 2008/02/19 09:11:43 xtraeme Exp $
  
      if (my_outImage)
      {
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +	uint32_t px = static_cast <uint32_t> (rintf (my_particle.centroidX));
 +	uint32_t py = static_cast <uint32_t> (rintf (my_particle.centroidY));
 +#else
@@ -20,7 +20,7 @@ $NetBSD: patch-ax,v 1.1 2008/02/19 09:11:43 xtraeme Exp $
  char & pixel_char (vector <string> & grid, int16_t xbase, int16_t ybase,
                     float cX, float cY, float dX, float dY)
  {
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +    uint16_t x = static_cast <uint16_t> (rintf (cX + dX));
 +    uint16_t y = static_cast <uint16_t> (rintf (cY + dY));
 +#else
@@ -34,7 +34,7 @@ $NetBSD: patch-ax,v 1.1 2008/02/19 09:11:43 xtraeme Exp $
              ++plit;
          }
  
-+#ifdef __NetBSD__
++#if defined(__NetBSD__) || defined(__DragonFly__)
 +	uint32_t px = static_cast <uint32_t> (rintf (my_particle.centroidX));
 +	uint32_t py = static_cast <uint32_t> (rintf (my_particle.centroidY));
 +#else
