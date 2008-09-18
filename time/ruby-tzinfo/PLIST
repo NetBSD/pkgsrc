@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.4 2008/08/16 03:19:14 taca Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/09/18 12:42:47 taca Exp $
 ${GEM_HOME}/cache/tzinfo-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/LICENSE
@@ -192,6 +192,7 @@ ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Regina.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Resolute.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Rio_Branco.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Rosario.rb
+${GEM_LIBDIR}/lib/tzinfo/definitions/America/Santarem.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Santiago.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Santo_Domingo.rb
 ${GEM_LIBDIR}/lib/tzinfo/definitions/America/Sao_Paulo.rb
