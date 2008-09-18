@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2307 2008/09/18 12:40:44 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2308 2008/09/18 12:44:54 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3932,3 +3932,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated inputmethod/canna-server to 3.6pl4nb3 [taca 2008-09-18]
 	Updated inputmethod/canna to 3.6pl4nb2 [taca 2008-09-18]
 	Updated inputmethod/canna-canuum to 3.6pl4nb2 [taca 2008-09-18]
+	Updated time/ruby-tzinfo to 0.3.10 [taca 2008-09-18]
