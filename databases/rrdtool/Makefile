@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.70 2008/09/15 15:11:46 martti Exp $
+# $NetBSD: Makefile,v 1.71 2008/09/18 13:56:13 joerg Exp $
 
 DISTNAME=	rrdtool-1.3.3
-#PKGREVISION=	1
+PKGREVISION=	1
 CATEGORIES=	databases graphics net
 MASTER_SITES=	http://oss.oetiker.ch/rrdtool/pub/
 
@@ -13,7 +13,7 @@ COMMENT=	Data analysis tool generating graphical representations
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake pkg-config perl
+USE_TOOLS+=		gmake pkg-config perl msgfmt intltool
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--enable-shared
 CONFIGURE_ARGS+=	--with-perl-options=${MAKE_PARAMS:Q}
@@ -28,8 +28,6 @@ PERL5_PACKLIST+=	auto/RRDs/.packlist
 
 # rrdtool explicitly forbids any use of -ffast-math
 BUILDLINK_TRANSFORM+=	rm:-ffast-math
-# rrdtool wants libintl_gettext, which at least NetBSD's lib doesn't have
-USE_BUILTIN.gettext=	no
 
 SUBST_CLASSES+=		prefix
 SUBST_STAGE.prefix=	post-build
