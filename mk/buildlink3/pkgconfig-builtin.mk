@@ -1,16 +1,22 @@
-# $NetBSD: pkgconfig-builtin.mk,v 1.1.2.2 2008/09/16 03:24:58 cube Exp $
+# $NetBSD: pkgconfig-builtin.mk,v 1.1.2.3 2008/09/18 02:18:33 cube Exp $
 
 # This file is used to factor out a common pattern in builtin.mk files backed
 # up by the existence of a pkgconfig file.
 #
 # Caller has to define BUILTIN_PKG and PKGCONFIG_FILE.<BUILTIN_PKG>.
+#
+# Optionally, caller may define PKGCONFIG_BASE.<BUILTIN_PKG> as the base
+# location for a native implementation of the package.  It conveniently
+# defaults to X11BASE.
 
 BUILTIN_FIND_FILES_VAR:=			FIND_FILES_${BUILTIN_PKG}
 BUILTIN_FIND_FILES.FIND_FILES_${BUILTIN_PKG}=	${PKGCONFIG_FILE.${BUILTIN_PKG}}
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
-.if ${X11BASE} == ${LOCALBASE}
+PKGCONFIG_BASE.${BUILTIN_PKG}?=	${X11BASE}
+
+.if ${PKGCONFIG_BASE.${BUILTIN_PKG}} == ${LOCALBASE}
 IS_BUILTIN.${BUILTIN_PKG}=	no
 .elif !defined(IS_BUILTIN.${BUILTIN_PKG})
 IS_BUILTIN.${BUILTIN_PKG}=	no
@@ -22,10 +28,10 @@ MAKEVARS:=	${MAKEVARS} IS_BUILTIN.${BUILTIN_PKG}
 
 .if !defined(BUILTIN_PKG.${BUILTIN_PKG}) && \
     !empty(IS_BUILTIN.${BUILTIN_PKG}:M[yY][eE][sS]) && \
-    empty(FIND_FILES_${BUILTIN_PKG}:M__nonexistent__)
+    !empty(FIND_FILES_${BUILTIN_PKG}:M*.pc)
 BUILTIN_VERSION.${BUILTIN_PKG}!= \
 	${SED} -n -e 's/Version: //p' ${FIND_FILES_${BUILTIN_PKG}}
-BUILTIN_PKG.${BUILTIN_PKG}= ${BUILTIN_PKG}-${BUILTIN_VERSION.${BUILTIN_PKG}}
+BUILTIN_PKG.${BUILTIN_PKG}:= ${BUILTIN_PKG}-${BUILTIN_VERSION.${BUILTIN_PKG}}
 .endif
 MAKEVARS:=      ${MAKEVARS} BUILTIN_PKG.${BUILTIN_PKG}
 
