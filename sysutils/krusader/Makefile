@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/01/18 05:09:44 tnn Exp $
+# $NetBSD: Makefile,v 1.21 2008/09/18 09:12:09 joerg Exp $
 #
 
 DISTNAME=	krusader-1.80.0
@@ -10,7 +10,7 @@ MAINTAINER=	ianzag@mail.ru
 HOMEPAGE=	http://krusader.sourceforge.net/
 COMMENT=	Advanced twin-panel (commander-style) file-manager for KDE 3.x
 
-USE_TOOLS+=	gmake perl
+USE_TOOLS+=	gmake perl msgfmt
 USE_LANGUAGES=	c c++
 USE_LIBTOOL=	YES
 GNU_CONFIGURE=	YES
