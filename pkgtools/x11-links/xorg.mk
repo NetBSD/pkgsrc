@@ -1,4 +1,4 @@
-# $NetBSD: xorg.mk,v 1.9.8.16 2008/09/18 03:09:51 cube Exp $
+# $NetBSD: xorg.mk,v 1.9.8.17 2008/09/18 17:33:27 cube Exp $
 #
 # This is for X.org, but use "xfree" files also.
 
@@ -8,6 +8,7 @@ FILES_LIST=	${FILESDIR}/xorg
 # XXX: what about xaw?
 
 .include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../fonts/libfontenc/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
@@ -34,13 +35,17 @@ FILES_LIST=	${FILESDIR}/xorg
 .include "../../x11/libXevie/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/libXfixes/buildlink3.mk"
+.include "../../x11/libXfont/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXpm/buildlink3.mk"
+.include "../../x11/libXprintUtil/buildlink3.mk"
 .include "../../x11/libXrandr/buildlink3.mk"
 .include "../../x11/libXrender/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libdrm/buildlink3.mk"
+.include "../../x11/liblbxutil/buildlink3.mk"
 .include "../../x11/pixman/buildlink3.mk"
 .include "../../x11/printproto/buildlink3.mk"
 .include "../../x11/randrproto/buildlink3.mk"
