@@ -1,0 +1,14 @@
+$NetBSD: patch-da,v 1.1 2008/09/18 13:23:03 joerg Exp $
+
+--- ConfigureChecks.cmake.orig	2008-09-18 13:18:17 +0300
++++ ConfigureChecks.cmake	2008-09-18 13:18:51 +0300
+@@ -122,6 +122,9 @@ IF(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
+ 	SET(ADM_BSD_FAMILY 1)
+ ENDIF(CMAKE_SYSTEM_NAME STREQUAL "FreeBSD")
+ 
++IF(CMAKE_SYSTEM_NAME STREQUAL "DragonFly")
++	SET(ADM_BSD_FAMILY 1)
++ENDIF(CMAKE_SYSTEM_NAME STREQUAL "DragonFly")
+ 
+ 
+ ########################################
