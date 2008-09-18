@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.29 2007/04/26 16:11:50 minskim Exp $
+# $NetBSD: Makefile,v 1.30 2008/09/18 04:48:12 minskim Exp $
 
-DISTNAME=	ns-src-2.31
-PKGNAME=	${DISTNAME:S/-src//}
+DISTNAME=	ns-2.33
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=nsnam/}
 
@@ -16,6 +15,7 @@ BUILDLINK_API_DEPENDS.tk+=	tk>=8.4.12nb2
 
 WRKSRC=		${WRKDIR}/${PKGNAME}
 USE_LANGUAGES=	c c++
+USE_TOOLS+=	gmake
 GNU_CONFIGURE=	yes
 PTHREAD_OPTS+=	require
 # Perl is only needed if you want to run the validation tests.
@@ -28,6 +28,8 @@ CONFIGURE_ARGS+=	--with-tk=${BUILDLINK_PREFIX.tk}
 CONFIGURE_ARGS+=	--with-tk-ver=8.4
 CONFIGURE_ARGS+=	--with-otcl=${BUILDLINK_PREFIX.tcl-otcl}
 CONFIGURE_ARGS+=	--with-tclcl=${BUILDLINK_PREFIX.tcl-tclcl}
+CONFIGURE_ENV+=		X11LIBDIR=${X11PREFIX}/lib${LIBABISUFFIX}
+CONFIGURE_ENV+=		X11INCDIR=${X11PREFIX}/include
 
 MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE}
 
@@ -37,6 +39,8 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../lang/tcl-otcl/buildlink3.mk"
 .include "../../net/libpcap/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 

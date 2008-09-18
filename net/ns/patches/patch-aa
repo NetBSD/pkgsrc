@@ -1,0 +1,14 @@
+$NetBSD: patch-aa,v 1.6 2008/09/18 04:48:12 minskim Exp $
+
+--- conf/configure.in.x11.orig	2008-03-31 19:00:27.000000000 -0700
++++ conf/configure.in.x11
+@@ -3,3 +3,3 @@ dnl $Header: /cvsroot/nsnam/conf/configu
+ 
+-xlibdirs="\
++xlibdirs="${X11LIBDIR} \
+ 	/usr/openwin/lib \
+@@ -18,3 +18,3 @@ xlibdirs="\
+ 
+-xincdirs="\
++xincdirs="${X11INCDIR} \
+ 	/usr/openwin/include \
