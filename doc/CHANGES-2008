@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2304 2008/09/18 04:49:18 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.2305 2008/09/18 11:53:47 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3925,3 +3925,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/drraw to 2.2a5nb1 [kleink 2008-09-17]
 	Updated x11/x11vnc to 0.9.4 [obache 2008-09-18]
 	Updated net/ns to 2.33 [minskim 2008-09-18]
+	Updated databases/mysql5-client to 5.0.67 [taca 2008-09-18]
+	Updated databases/mysql5-server to 5.0.67 [taca 2008-09-18]
