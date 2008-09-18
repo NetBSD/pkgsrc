@@ -1,0 +1,17 @@
+$NetBSD: patch-aa,v 1.1 2008/09/18 12:17:59 ghen Exp $
+
+Use standard names for encodings to avoid dependency on GNU iconv on NetBSD 3.
+
+--- libucs2/ucs2char_iconv.c.orig	2006-07-27 03:42:35.000000000 +0200
++++ libucs2/ucs2char_iconv.c
+@@ -69,8 +69,8 @@ static int is_bigendian(void)
+ 
+ static const char *get_ucs2encoding(void)
+ {
+-	static const char *unicode_big = "UNICODEBIG";
+-	static const char *unicode_little = "UNICODELITTLE";
++	static const char *unicode_big = "UCS-2BE";
++	static const char *unicode_little = "UCS-2LE";
+ 	return is_bigendian() ? unicode_big : unicode_little;
+ }
+ 
