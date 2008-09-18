@@ -1,0 +1,22 @@
+$NetBSD: patch-ae,v 1.1 2008/09/18 13:04:30 joerg Exp $
+
+--- pdns/dnspacket.cc.orig	2008-09-18 14:28:48.000000000 +0200
++++ pdns/dnspacket.cc
+@@ -320,7 +320,7 @@ void DNSPacket::wrapup(void)
+       }
+       pw.commit();
+     }
+-    catch(exception& e) {
++    catch(std::exception& e) {
+       L<<Logger::Error<<"Exception: "<<e.what()<<endl;
+       throw;
+     }
+@@ -424,7 +424,7 @@ try
+   qclass=mdp.d_qclass;
+   return 0;
+ }
+-catch(exception& e) {
++catch(std::exception& e) {
+   return -1;
+ }
+ 
