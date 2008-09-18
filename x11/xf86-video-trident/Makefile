@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/08/09 16:15:04 tnn Exp $
+# $NetBSD: Makefile,v 1.4 2008/09/18 20:57:52 bjs Exp $
 #
 
 DISTNAME=	xf86-video-trident-1.3.0
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_XORG:=driver/}
 EXTRACT_SUFX=	.tar.bz2
