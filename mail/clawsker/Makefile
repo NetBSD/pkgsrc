@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/07/13 22:34:20 smb Exp $
+# $NetBSD: Makefile,v 1.6 2008/09/18 09:13:39 joerg Exp $
 
 DISTNAME=	clawsker-0.5.0
 CATEGORIES=	mail
@@ -10,8 +10,7 @@ COMMENT=	Edit Claws-Mail hidden preferences
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-USE_TOOLS+=	gmake
-USE_TOOLS+=	perl
+USE_TOOLS+=	gmake msgfmt perl
 REPLACE_PERL=	clawsker
 
 DEPENDS+=	p5-gtk2>=1.182:../../x11/p5-gtk2
