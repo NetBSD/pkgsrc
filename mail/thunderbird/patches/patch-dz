@@ -1,0 +1,13 @@
+$NetBSD: patch-dz,v 1.1 2008/09/18 13:01:45 joerg Exp $
+
+--- security/nss-fips/lib/freebl/Makefile.orig	2008-09-17 20:50:24 +0300
++++ security/nss-fips/lib/freebl/Makefile	2008-09-17 20:50:53 +0300
+@@ -192,7 +192,7 @@ endif
+ # to bind the blapi function references in FREEBLVector vector
+ # (ldvector.c) to the blapi functions defined in the freebl
+ # shared libraries.
+-ifeq (,$(filter-out BSD_OS FreeBSD Linux NetBSD, $(OS_TARGET)))
++ifeq (,$(filter-out BSD_OS DragonFly FreeBSD Linux NetBSD, $(OS_TARGET)))
+     MKSHLIB += -Wl,-Bsymbolic
+ endif
+ 
