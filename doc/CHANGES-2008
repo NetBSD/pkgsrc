@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2303 2008/09/18 00:11:48 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2304 2008/09/18 04:49:18 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3924,3 +3924,4 @@ Changes to the packages collection and infrastructure in 2008:
 	mk/bsd.pkg.mk: started freeze for pkgsrc-3008Q2 branch [agc 2008-09-17]
 	Updated www/drraw to 2.2a5nb1 [kleink 2008-09-17]
 	Updated x11/x11vnc to 0.9.4 [obache 2008-09-18]
+	Updated net/ns to 2.33 [minskim 2008-09-18]
