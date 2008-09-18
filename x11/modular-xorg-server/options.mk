@@ -1,47 +1,45 @@
-# $NetBSD: options.mk,v 1.3 2008/04/12 22:43:15 jlam Exp $
+# $NetBSD: options.mk,v 1.4 2008/09/18 20:56:01 bjs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.modular-xorg-server
 PKG_SUPPORTED_OPTIONS=	dri inet6
-# remove after 2007Q4
-PKG_OPTIONS_LEGACY_OPTS=glx:dri
-.if defined(PKG_OPTIONS.xorg-server)
-PKG_LEGACY_OPTIONS+=	${PKG_OPTIONS.xorg-server}
-PKG_OPTIONS_DEPRECATED_WARNINGS+="Deprecated variable PKG_OPTIONS.xorg-server used, use "${PKG_OPTIONS_VAR:Q}" instead."
-.endif
 
 .include "../../mk/bsd.options.mk"
 
 PLIST_VARS+=		dri
-.if !empty(PKG_OPTIONS:Mdri)
-DISTFILES=		${DISTNAME}${EXTRACT_SUFX}
-DISTFILES+=		MesaLib-6.5.2.tar.bz2
-SITES.MesaLib-6.5.2.tar.bz2= ${MASTER_SITE_SOURCEFORGE:=mesa3d/}
-MESA_SRC=		${WRKDIR}/Mesa-6.5.2
-CONFIGURE_ARGS+=	--enable-glx
-CONFIGURE_ARGS+=	--with-mesa-source=${MESA_SRC}
-.if ${MACHINE_ARCH} == "x86_64" || ${MACHINE_ARCH} == "sparc64" || \
-    ${MACHINE_ARCH} == "alpha"
-GLX_DEFINES+=		-D__GLX_ALIGN64
-.endif
-CONFIGURE_ENV+=		GLX_DEFINES=${GLX_DEFINES:M*:Q}
-# glcore.h and dri_interface.h shipped with *proto are older than
-# those in Mesa-6.5.2. Either patch them or trick the build into using
-# the newer ones.
-#BUILDLINK_API_DEPENDS.glproto+= glproto>=1.4.8nb1
-#BUILDLINK_API_DEPENDS.xf86driproto+= xf86driproto>=2.0.3nb1
-PLIST.dri=		yes
 
+.if !empty(PKG_OPTIONS:Mdri)
+PLIST.dri=		yes
+.  include "../../graphics/Mesa/Makefile.version"
+.  include "../../graphics/MesaLib/glx-config.mk"
+
+DISTFILES=		${DEFAULT_DISTFILES}
+MESA_DISTFILE=		${MESA_DISTNAME}${EXTRACT_SUFX} # .tar.bz2
+DISTFILES+=		${MESA_DISTFILE}
+SITES.${MESA_DISTFILE}= ${MESA_SITES}
+MESA_SRC=		${WRKDIR}/Mesa-${MESA_VERSION}
+###
+### XXX Is there a better way to do this?  For now, when updating these
+###	patches (don't forget about Mesa updates!), please ensure that
+###	the relative path in the patch matches "Mesa-${MESA_VERSION}".
+###
+_PKGSRC_PATCHES+=	${FILESDIR}/mesalib-patch-aq
+
+CONFIGURE_ARGS+=	--enable-glx
+CONFIGURE_ARGS+=	--enable-aiglx
+CONFIGURE_ARGS+=	--with-mesa-source=${MESA_SRC}
 dri-post-extract:
 	${LN} -s ${MESA_SRC:Q}/include/GL ${WRKSRC:Q}/GL/glx/GL
-
 .else
+###
+### XXX Perhaps we should allow for a built-in glx without dri enabled?
+###
 CONFIGURE_ARGS+=	--disable-glx
 
 dri-post-extract:
 	@${DO_NADA}
 
 # for GLX we already have the Mesa source
-.include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../graphics/MesaLib/buildlink3.mk"
 .endif
 
 .if !empty(PKG_OPTIONS:Minet6)
