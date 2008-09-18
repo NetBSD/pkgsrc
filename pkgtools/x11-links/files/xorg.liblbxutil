@@ -1,0 +1,6 @@
+# $NetBSD: xorg.liblbxutil,v 1.1.2.1 2008/09/18 17:33:27 cube Exp $
+#
+lib/liblbxutil.so
+lib/liblbxutil.so.1
+lib/liblbxutil.so.1.0
+lib/pkgconfig/lbxutil.pc
