@@ -1,0 +1,13 @@
+$NetBSD: patch-db,v 1.1 2008/09/18 13:23:03 joerg Exp $
+
+--- avidemux/ADM_script/DirectorySearch.cpp.orig	2008-09-18 13:48:08 +0300
++++ avidemux/ADM_script/DirectorySearch.cpp	2008-09-18 13:48:39 +0300
+@@ -29,7 +29,7 @@ int CDirectorySearch::_findnext(unsigned
+ 	strncpy(pfdData->name,pEntry->d_name,pEntry->d_reclen);
+ 	// append NULL terminator
+ 	pfdData->name[pEntry->d_reclen] = '\0';
+-#elif defined(__FreeBSD__) || defined(__OpenBSD__)
++#elif defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__DragonFly__)
+ 	strncpy(pfdData->name,pEntry->d_name,pEntry->d_namlen);
+ 	// append NULL terminator
+ 	pfdData->name[pEntry->d_namlen] = '\0';
