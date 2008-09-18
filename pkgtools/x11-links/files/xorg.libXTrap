@@ -1,0 +1,3 @@
+# $NetBSD: xorg.libXTrap,v 1.1.2.1 2008/09/18 02:40:26 cube Exp $
+#
+lib/pkgconfig/xtrap.pc
