@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2008/09/18 13:04:30 joerg Exp $
+
+--- pdns/backends/bind/zone2sql.cc.orig	2008-09-18 14:27:23.000000000 +0200
++++ pdns/backends/bind/zone2sql.cc
+@@ -302,7 +302,7 @@ int main(int argc, char **argv)
+     cerr<<"\nFatal error: "<<ae.reason<<endl;
+     return 0;
+   }
+-  catch(exception &e) {
++  catch(std::exception &e) {
+     cerr<<"died because of STL error: "<<e.what()<<endl;
+     exit(0);
+   }

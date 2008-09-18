@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.3 2008/09/18 13:04:30 joerg Exp $
+
+--- pdns/backends/bind/bindbackend2.cc.orig	2008-09-18 14:20:43.000000000 +0200
++++ pdns/backends/bind/bindbackend2.cc
+@@ -600,7 +600,7 @@ void Bind2Backend::loadConfig(string* st
+ 	    L<<Logger::Warning<<d_logprefix<<msg.str()<<endl;
+ 	    rejected++;
+ 	  }
+-	  catch(exception &ae) {
++	  catch(std::exception &ae) {
+ 	    ostringstream msg;
+ 	    msg<<" error at "+nowTime()+" parsing '"<<i->name<<"' from file '"<<i->filename<<"': "<<ae.what();
+ 
+@@ -715,7 +715,7 @@ void Bind2Backend::queueReload(BB2Domain
+     msg<<" error at "+nowTime()+" parsing '"<<bbd->d_name<<"' from file '"<<bbd->d_filename<<"': "<<ae.reason;
+     bbd->d_status=msg.str();
+   }
+-  catch(exception &ae) {
++  catch(std::exception &ae) {
+     ostringstream msg;
+     msg<<" error at "+nowTime()+" parsing '"<<bbd->d_name<<"' from file '"<<bbd->d_filename<<"': "<<ae.what();
+     bbd->d_status=msg.str();

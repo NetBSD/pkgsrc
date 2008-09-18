@@ -1,0 +1,15 @@
+$NetBSD: patch-ag,v 1.1 2008/09/18 13:04:30 joerg Exp $
+
+--- pdns/receiver.cc.orig	2008-09-18 14:51:59.000000000 +0200
++++ pdns/receiver.cc
+@@ -566,8 +566,8 @@ int main(int argc, char **argv)
+     if(!arg().mustDo("daemon"))
+       cerr<<"Exiting because: "<<AE.reason<<endl;
+     L<<Logger::Error<<"Exiting because: "<<AE.reason<<endl;
+-  }      
+-  catch(exception &e) {
++  }
++  catch(std::exception &e) {
+     if(!arg().mustDo("daemon"))
+       cerr<<"Exiting because of STL error: "<<e.what()<<endl;
+     L<<Logger::Error<<"Exiting because of STL error: "<<e.what()<<endl;

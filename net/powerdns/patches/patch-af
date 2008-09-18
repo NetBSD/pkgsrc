@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2008/09/18 13:04:30 joerg Exp $
+
+--- pdns/tcpreceiver.cc.orig	2008-09-18 14:49:07.000000000 +0200
++++ pdns/tcpreceiver.cc
+@@ -322,7 +322,7 @@ void *TCPNameserver::doConnection(void *
+     s_P = 0; // on next call, backend will be recycled
+     L<<Logger::Error<<"TCP nameserver had error, cycling backend: "<<ae.reason<<endl;
+   }
+-  catch(exception &e) {
++  catch(std::exception &e) {
+     L<<Logger::Error<<"TCP Connection Thread died because of STL error: "<<e.what()<<endl;
+   }
+   catch( ... )
