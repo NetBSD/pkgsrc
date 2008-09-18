@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2310 2008/09/18 14:27:39 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2311 2008/09/18 14:34:09 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3935,3 +3935,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated time/ruby-tzinfo to 0.3.10 [taca 2008-09-18]
 	Updated databases/mysql5-client to 5.0.67nb1 [tron 2008-09-18]
 	Removed databases/unixodbc-DataManager [wiz 2008-09-18]
+	Updated databases/phpmyadmin to 2.11.9.1 [tron 2008-09-18]
