@@ -1,0 +1,16 @@
+$NetBSD: patch-ai,v 1.1 2008/09/19 20:02:23 joerg Exp $
+
+--- str.c.orig	2008-09-19 21:59:39.000000000 +0200
++++ str.c
+@@ -21,7 +21,11 @@ extern char *strv(const char *fmt, va_li
+ 	gcdisable();
+ 	buf = openbuffer(0);
+ 	format.u.p	= buf;
++#if 1
++	va_copy(format.args, args);
++#else
+ 	format.args	= args;
++#endif
+ 	format.buf	= buf->str;
+ 	format.bufbegin	= buf->str;
+ 	format.bufend	= buf->str + buf->len;

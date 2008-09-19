@@ -1,0 +1,13 @@
+$NetBSD: patch-ah,v 1.1 2008/09/19 20:02:23 joerg Exp $
+
+--- gc.c.orig	2008-09-19 21:53:44.000000000 +0200
++++ gc.c
+@@ -294,7 +294,7 @@ extern void globalroot(void *addr) {
+ 
+ /* not portable to word addressed machines */
+ #define	TAG(p)		(((Tag **) p)[-1])
+-#define	FORWARDED(tagp)	(((int) tagp) & 1)
++#define	FORWARDED(tagp)	(((size_t) tagp) & 1)
+ #define	FOLLOWTO(p)	((Tag *) (((char *) p) + 1))
+ #define	FOLLOW(tagp)	((void *) (((char *) tagp) - 1))
+ 
