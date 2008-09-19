@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.440 2008/09/17 00:21:48 obache Exp $
+# $NetBSD: Makefile,v 1.441 2008/09/19 19:06:17 joerg Exp $
 #
 
 COMMENT=	System utilities
@@ -142,6 +142,7 @@ SUBDIR+=	ir-account
 SUBDIR+=	isapnptools
 SUBDIR+=	iwi-firmware
 SUBDIR+=	iwi-firmware3
+SUBDIR+=	iwn-firmware
 SUBDIR+=	k3b
 SUBDIR+=	kdirstat
 SUBDIR+=	krusader
