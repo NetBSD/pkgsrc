@@ -1,0 +1,24 @@
+$NetBSD: patch-aa,v 1.1 2008/09/19 23:59:52 joerg Exp $
+
+--- include/lcdf/permstr.hh.orig	2008-09-20 01:51:20.000000000 +0200
++++ include/lcdf/permstr.hh
+@@ -5,6 +5,10 @@
+ #include <cstddef>
+ #include <cstdarg>
+ 
++class PermString;
++
++PermString permprintf(const char *, ...);
++
+ class PermString { struct Doodad; public:
+   
+     typedef Doodad *Capsule;
+@@ -91,7 +95,7 @@ operator!=(const char *a, PermString b)
+ inline int
+ hashcode(PermString s)
+ {
+-    return (int)(s.cc());
++    return (int)(size_t)(s.cc());
+ }
+ 
+ #endif
