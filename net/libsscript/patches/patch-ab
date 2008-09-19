@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.1 2005/11/07 21:42:22 tv Exp $
+$NetBSD: patch-ab,v 1.2 2008/09/19 23:26:09 joerg Exp $
 
---- sscript.c.orig	2000-02-01 20:21:05.000000000 -0500
+--- sscript.c.orig	2000-02-02 02:21:05.000000000 +0100
 +++ sscript.c
 @@ -10,7 +10,9 @@
  #include <sys/socket.h>
@@ -12,3 +12,25 @@ $NetBSD: patch-ab,v 1.1 2005/11/07 21:42:22 tv Exp $
  #include <strings.h>
  #include <sys/file.h>
  #include <signal.h>
+@@ -34,8 +36,8 @@ char *sscript_lindex(char *input_string,
+  static char tmpstring[1024];
+  int i;
+  strncpy(tmpstring,input_string,1024);
+- (char *)tokens[i=0] = (char *)strtok(tmpstring, " ");
+- while (((char *)tokens[++i] = (char *)strtok(NULL, " ")));
++ tokens[i=0] = strtok(tmpstring, " ");
++ while ((tokens[++i] = strtok(NULL, " ")));
+  tokens[i] = NULL;
+  return(tokens[word_number]);
+ }
+@@ -231,8 +233,8 @@ char *sscript_lrange(char *input_string,
+   strcpy(global_var[1],out_string);
+   return global_var[1]; }
+  strcpy(tmpstring,input_string);
+- (char *)tokens[i=0] = (char *)strtok(tmpstring, " ");
+- while(((char *)tokens[++i] = (char *)strtok(NULL, " ")));
++ tokens[i=0] = strtok(tmpstring, " ");
++ while((tokens[++i] = strtok(NULL, " ")));
+  tokens[i] = NULL;
+  i++;
+  if(i<starting_at) return (int)NULL;
