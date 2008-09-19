@@ -1,8 +1,17 @@
-$NetBSD: patch-ag,v 1.1 2006/01/08 20:59:05 joerg Exp $
+$NetBSD: patch-ag,v 1.2 2008/09/19 20:02:23 joerg Exp $
 
---- print.c.orig	2006-01-08 20:57:49.000000000 +0000
+--- print.c.orig	1995-05-30 13:13:51.000000000 +0200
 +++ print.c
-@@ -90,7 +90,7 @@ static void intconv(Format *format, unsi
+@@ -3,6 +3,8 @@
+ #include "es.h"
+ #include "print.h"
+ 
++#include <stdarg.h>
++
+ #define	MAXCONV 256
+ 
+ /*
+@@ -90,7 +92,7 @@ static void intconv(Format *format, unsi
  	if (flags & FMT_long)
  		n = va_arg(format->args, long);
  	else if (flags & FMT_short)
@@ -11,3 +20,28 @@ $NetBSD: patch-ag,v 1.1 2006/01/08 20:59:05 joerg Exp $
  	else
  		n = va_arg(format->args, int);
  
+@@ -267,12 +269,23 @@ extern int printfmt(Format *format, cons
+ 
+ extern int fmtprint VARARGS2(Format *, format, const char *, fmt) {
+ 	int n = -format->flushed;
+-	va_list saveargs = format->args;
++	va_list saveargs;
++
++#if 1
++	va_copy(saveargs, format->args);
++#else
++	saveargs = format->args;
++#endif
+ 
+ 	VA_START(format->args, fmt);
+ 	n += printfmt(format, fmt);
+ 	va_end(format->args);
++
++#if 1
++	va_copy(format->args, saveargs);
++#else
+ 	format->args = saveargs;
++#endif
+ 
+ 	return n + format->flushed;
+ }
