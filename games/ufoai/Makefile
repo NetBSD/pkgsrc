@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/09 12:46:36 kefren Exp $
+# $NetBSD: Makefile,v 1.2 2008/09/19 18:24:15 joerg Exp $
 
 DISTNAME=		ufoai-2.2.1
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=ufoai/}
@@ -17,18 +17,23 @@ HOMEPAGE=	http://ufoai.sourceforge.net/
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-USE_TOOLS+=	tar gmake
+USE_TOOLS+=	tar gmake bzip2
 MAKE_JOBS_SAFE=	no
 
+INSTALLATION_DIRS=	share/ufoai
+INSTALL_MAKE_FLAGS+=	prefix=${DESTDIR}${PREFIX}
+
+CHECK_INTERPRETER_SKIP+=	share/ufoai/base/maps/*
+
 do-extract:
-	cd ${WRKDIR} && ${TAR} jxf ${DISTDIR}/${DISTNAME}-source.tar.bz2
+	cd ${WRKDIR} && ${BZIP2} -d -c ${DISTDIR}/${DISTNAME}-source.tar.bz2 | ${TAR} -xf -
 
 post-build:
 	cd ${WRKSRC} && ${GMAKE} lang # && ${GMAKE} maps
 
 post-install:
-	${TAR} xf ${DISTDIR}/${DISTNAME}-data.tar -C ${PREFIX}/share/ufoai
-	${TAR} jxf ${DISTDIR}/${DISTNAME}-mappack.tar.bz2 -C ${PREFIX}/share/ufoai
+	${TAR} -xf ${DISTDIR}/${DISTNAME}-data.tar -C ${DESTDIR}${PREFIX}/share/ufoai
+	${BZIP2} -d -c ${DISTDIR}/${DISTNAME}-mappack.tar.bz2 | ${TAR} -xf - -C ${DESTDIR}${PREFIX}/share/ufoai
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
