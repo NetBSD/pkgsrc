@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2008/09/19 19:39:22 joerg Exp $
+
+--- dtop/dtop.c.orig	2008-09-19 21:36:01.000000000 +0200
++++ dtop/dtop.c
+@@ -102,6 +102,8 @@ void sig_handler(int i);
+ #define TOP_PROCPS 1
+ #define TOP_NORMAL_THR 2
+ 
++#define dehumanize_number dehumanize_number_local
++
+ /* globals */
+ int debug, exclusion, grouping, interval;
+ int testflag, rshport, porttimeout, batchflag;
