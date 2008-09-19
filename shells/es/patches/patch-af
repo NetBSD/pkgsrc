@@ -1,6 +1,6 @@
-$NetBSD: patch-af,v 1.1 2005/03/10 15:18:31 tv Exp $
+$NetBSD: patch-af,v 1.2 2008/09/19 20:02:23 joerg Exp $
 
---- config.h.orig	1995-05-30 07:13:53.000000000 -0400
+--- config.h.orig	1995-05-30 13:13:53.000000000 +0200
 +++ config.h
 @@ -378,6 +378,15 @@
  #endif
@@ -18,3 +18,9 @@ $NetBSD: patch-af,v 1.1 2005/03/10 15:18:31 tv Exp $
  
  /*
   * default defaults -- don't change this section
+@@ -533,3 +542,5 @@
+ #undef	SYSV_SIGNALS
+ #define	SYSV_SIGNALS		0
+ #endif
++
++#include <stdlib.h>
