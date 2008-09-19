@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2314 2008/09/18 21:07:58 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2315 2008/09/19 09:27:33 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3978,3 +3978,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xf86-video-via to 0.2.2nb1 [bjs 2008-09-18]
 	Updated x11/xf86-video-vmware to 10.16.4nb1 [bjs 2008-09-18]
 	Updated x11/xf86-video-wsfb to 0.2.1nb1 [bjs 2008-09-18]
+	Removed databases/unixodbc-ODBCConfig [wiz 2008-09-19]
