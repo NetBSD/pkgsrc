@@ -1,0 +1,24 @@
+$NetBSD: patch-ae,v 1.1 2008/09/19 19:47:07 joerg Exp $
+
+--- smime.c.orig	2007-06-11 19:40:21.000000000 +0200
++++ smime.c
+@@ -41,6 +41,7 @@
+ #include <openssl/pem.h>
+ #include <openssl/pkcs7.h>
+ #include <openssl/rand.h>
++#include <openssl/opensslv.h>
+ #else /* OPENSSL */
+ #include <asn1.h>
+ #include <err.h>
+@@ -1003,7 +1004,11 @@ smime_encrypt(struct state *state)
+ 				buf = q;
+ 				buflen = len;
+ 			}
++#if OPENSSL_VERSION_NUMBER >= 0x00909000L
++			len = EVP_PKEY_encrypt_old(buf, key, keylen, pkey);
++#else
+ 			len = EVP_PKEY_encrypt(buf, key, keylen, pkey);
++#endif
+ 			ASN1_OCTET_STRING_set(ri->enc_key, buf, len);
+ 		}
+ 		if (buf)
