@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.52 2008/09/11 04:22:50 dholland Exp $
+# $NetBSD: Makefile,v 1.53 2008/09/19 19:08:10 joerg Exp $
 
 DISTNAME=	amaya-fullsrc-10.0.1
 PKGNAME=	${DISTNAME:S/-fullsrc//}
@@ -16,7 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_DIRS+=		xdg-1.1
 USE_LANGUAGES=		c c++
-USE_TOOLS+=		gmake perl
+USE_TOOLS+=		gmake perl pkg-config
 GNU_CONFIGURE=		yes
 
 WRKSRC=			${WRKDIR}/Amaya/work
@@ -125,7 +125,7 @@ EXTRACT_ELEMENTS+=	libwww
 # Use pkgsrc's libpng, jpeg, and zlib instead.
 CONFIGURE_ARGS+=	--without-graphic-libs	# Use pkgsrc libraries
 # link correctly with pkgsrc zlib (XXX: is this needed or correct?)
-LIBS+=			${COMPILER_RPATH_FLAG}${LOCALBASE}/lib
+LIBS+=			${COMPILER_RPATH_FLAG}${PREFIX}/lib
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
