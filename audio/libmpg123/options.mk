@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2008/09/07 00:56:15 bjs Exp $
+# $NetBSD: options.mk,v 1.2 2008/09/19 17:49:26 ahoka Exp $
 #
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.libmp123
@@ -12,7 +12,7 @@ PKG_SUPPORTED_OPTIONS+=	simd
 PKG_SUPPORTED_OPTIONS+=	mpg123-arm-fixed64
 .endif
 
-PKG_SUGGESTED_OPTIONS=	${PKG_SUPPORTED_OPTIONS}
+PKG_SUGGESTED_OPTIONS=	${PKG_SUPPORTED_OPTIONS:S/debug//}
 
 .include "../../mk/bsd.options.mk"
 
