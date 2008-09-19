@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.26 2008/09/07 10:14:31 rhaen Exp $
+# $NetBSD: Makefile,v 1.27 2008/09/19 07:38:56 rhaen Exp $
 #
 
 DISTNAME=		cfengine-2.2.8
+PKGREVISION=	1
 CATEGORIES=		sysutils net
 MASTER_SITES=		http://www.cfengine.org/downloads/ \
 			http://ftp.osuosl.org/pub/cfengine/ \
@@ -16,9 +17,8 @@ BUILD_DEFS+=		IPV6_READY
 
 CONFIGURE_ARGS+=	--with-berkeleydb=${BUILDLINK_PREFIX.db4}
 CONFIGURE_ARGS+=	--with-openssl=${BUILDLINK_PREFIX.openssl}
-USE_TOOLS+=		flex
+USE_TOOLS+=		flex perl:run
 USE_LIBTOOL=		yes
-#USE_TOOLS+=		flex perl:run
 REPLACE_PERL=		contrib/cfdoc
 PKG_DESTDIR_SUPPORT=	user-destdir
 
