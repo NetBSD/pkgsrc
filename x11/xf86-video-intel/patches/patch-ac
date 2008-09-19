@@ -1,0 +1,54 @@
+$NetBSD: patch-ac,v 1.3 2008/09/19 14:56:00 tnn Exp $
+
+https://bugs.freedesktop.org/show_bug.cgi?id=17405
+
+--- src/i830_crt.c
++++ src/i830_crt.c
+@@ -352,10 +352,9 @@ i830_crt_detect(xf86OutputPtr output)
+     xf86OutputStatus	    status;
+     Bool		    connected;
+ 
+-    crtc = i830GetLoadDetectPipe (output, NULL, &dpms_mode);
+-    if (!crtc)
+-	return XF86OutputStatusUnknown;
+-
++    /*
++     * Try hotplug detection where supported
++     */
+     if (IS_I945G(pI830) || IS_I945GM(pI830) || IS_I965G(pI830) ||
+ 	    IS_G33CLASS(pI830)) {
+ 	if (i830_crt_detect_hotplug(output))
+@@ -363,12 +362,19 @@ i830_crt_detect(xf86OutputPtr output)
+ 	else
+ 	    status = XF86OutputStatusDisconnected;
+ 
+-	goto out;
++	goto done;
+     }
+ 
++    /*
++     * DDC is next best, no flicker
++     */
++    crtc = i830GetLoadDetectPipe (output, NULL, &dpms_mode);
++    if (!crtc)
++	return XF86OutputStatusUnknown;
++
+     if (i830_crt_detect_ddc(output)) {
+ 	status = XF86OutputStatusConnected;
+-	goto out;
++	goto out_release_pipe;
+     }
+ 
+     /* Use the load-detect method if we have no other way of telling. */
+@@ -378,9 +384,10 @@ i830_crt_detect(xf86OutputPtr output)
+     else
+ 	status = XF86OutputStatusDisconnected;
+ 
+-out:
++out_release_pipe:
+     i830ReleaseLoadDetectPipe (output, dpms_mode);
+ 
++done:
+     return status;
+ }
+ 
