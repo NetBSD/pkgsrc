@@ -1,6 +1,6 @@
-$NetBSD: patch-ab,v 1.4 2006/10/07 08:19:08 obache Exp $
+$NetBSD: patch-ab,v 1.5 2008/09/19 19:47:07 joerg Exp $
 
---- pgp.c.orig	2006-03-27 16:24:40.000000000 +0900
+--- pgp.c.orig	2007-06-11 19:40:21.000000000 +0200
 +++ pgp.c
 @@ -37,6 +37,7 @@
  
@@ -10,3 +10,27 @@ $NetBSD: patch-ab,v 1.4 2006/10/07 08:19:08 obache Exp $
  #include <openssl/rsa.h>
  #include <openssl/evp.h>
  #include <openssl/rand.h>
+@@ -987,7 +988,11 @@ pgp_decrypt_seskey(struct pgp_pkt *pkt, 
+ 			return -1;
+ 		if ((buf = malloc(len)) == NULL)
+ 			return -1;
++#if OPENSSL_VERSION_NUMBER >= 0x00909000L
++		len = EVP_PKEY_decrypt_old(buf, p, len, seckey->un.pubkey.key);
++#else
+ 		len = EVP_PKEY_decrypt(buf, p, len, seckey->un.pubkey.key);
++#endif
+ 		break;
+ 	case PGP_PUB_ELGAMAL_ENC:
+ 	    {
+@@ -1073,7 +1078,11 @@ pgp_encrypt_seskey(struct pgp_pkt *pkt, 
+ 	case PGP_PUB_RSA:
+ 		if ((buf = malloc(EVP_PKEY_size(pubkey->un.pubkey.key) + 2)) == NULL)
+ 			break;
++#if OPENSSL_VERSION_NUMBER >= 0x00909000L
++		len = EVP_PKEY_encrypt_old(buf + 2, pkt->un.pubses.seskey, pkt->un.pubses.seslen, pubkey->un.pubkey.key);
++#else
+ 		len = EVP_PKEY_encrypt(buf + 2, pkt->un.pubses.seskey, pkt->un.pubses.seslen, pubkey->un.pubkey.key);
++#endif
+ 		n = BN_bin2bn(buf + 2, len, NULL);
+ 		i = BN_num_bits(n);
+ 		BN_free(n);
