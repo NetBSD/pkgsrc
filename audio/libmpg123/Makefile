@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.2 2008/09/08 23:26:18 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/09/19 17:49:26 ahoka Exp $
 #
 
 .include "../../audio/libmpg123/Makefile.version"
 
 DISTNAME=	mpg123-${MPG123_VERSION}
-PKGREVISION=	
+PKGREVISION=	1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=mpg123/}
 EXTRACT_SUFX=	.tar.bz2
