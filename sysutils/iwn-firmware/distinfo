@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/09/19 19:04:36 joerg Exp $
+
+SHA1 (iwlwifi-4965-ucode-4.44.1.20.tgz) = 34731f1855ea69751f5e357e95b51019430816b3
+RMD160 (iwlwifi-4965-ucode-4.44.1.20.tgz) = 775d4379f99ef8f731f596fc5a28a73b63a05fe7
+Size (iwlwifi-4965-ucode-4.44.1.20.tgz) = 80030 bytes
