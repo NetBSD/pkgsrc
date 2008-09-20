@@ -1,8 +1,9 @@
-# $NetBSD: Makefile.common,v 1.20 2008/09/16 19:54:21 abs Exp $
+# $NetBSD: Makefile.common,v 1.21 2008/09/20 16:13:00 obache Exp $
 #
 # used by chat/finch/Makefile
 # used by chat/libpurple/Makefile
 # used by chat/pidgin/Makefile
+# used by chat/pidgin-silc/Makefile
 
 PIDGIN_VERSION=	2.5.1
 DISTNAME=	pidgin-${PIDGIN_VERSION}
