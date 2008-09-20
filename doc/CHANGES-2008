@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2318 2008/09/19 19:23:36 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.2319 2008/09/20 14:16:40 hira Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3982,3 +3982,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xf86-video-intel to 2.4.2 [tnn 2008-09-19]
 	Added sysutils/iwn-firmware version 4.44.1.20 [joerg 2008-09-19]
 	Updated net/httping to 1.2.9 [adrianp 2008-09-19]
+	Updated misc/openoffice2 to 2.4.1nb3 [hira 2008-09-20]
