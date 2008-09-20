@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.4 2008/09/18 16:58:01 joerg Exp $
+# $NetBSD: Makefile,v 1.5 2008/09/20 00:15:53 joerg Exp $
 #
 
 DISTNAME=	m17n-db-1.5.1
@@ -21,7 +21,7 @@ PKGCONFIG_OVERRIDE+=	m17n-db.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M[1234]*)
+.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M4.99*)
 USE_TOOLS+=		gawk
 .endif
 
