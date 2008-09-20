@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2008/09/08 18:58:24 ahoka Exp $
+# $NetBSD: Makefile,v 1.59 2008/09/20 22:33:02 ahoka Exp $
 #
 
 DISTNAME=		vlc-0.9.1
+PKGREVISION=		1
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/0.9.1/
 EXTRACT_SUFX=		.tar.bz2
@@ -19,6 +20,7 @@ GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 USE_LANGUAGES=		c99 c++
 USE_DIRS+=		xdg-1.4
+PLIST_VARS+=		x86simd altivec
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -41,6 +43,16 @@ CONFIGURE_ARGS+=	--enable-cddax \
 			--enable-live555 \
 			--enable-snapshot
 
+# Build optimalized modules
+.if ${MACHINE_ARCH} == "i386" || ${MACHINE_ARCH} == "x86_64"
+PLIST.x86simd=		yes
+CONFIGURE_ARGS+=	--enable-mmx \
+			--enable-sse
+.endif
+.if ${MACHINE_ARCH} == "powerpc"
+PLIST.altivec=		yes
+CONFIGURE_ARGS+=	--enable-altivec
+.endif
 
 INSTALLATION_DIRS+=	${PREFIX}/share/vlc/http/dialogs \
 			${PREFIX}/share/vlc/http/images \
