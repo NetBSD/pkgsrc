@@ -1,8 +1,24 @@
-$NetBSD: patch-ab,v 1.3 2007/04/06 11:44:34 obache Exp $
+$NetBSD: patch-ab,v 1.4 2008/09/20 19:55:01 adrianp Exp $
 
---- Makefile.config.in.orig	2006-09-28 02:15:55.000000000 +0000
+--- Makefile.config.in.orig	2006-09-28 03:15:55.000000000 +0100
 +++ Makefile.config.in
-@@ -204,12 +204,22 @@ ifeq ($(HOST_OS),osf)
+@@ -168,6 +168,15 @@ ifeq ($(findstring solaris,$(HOST_OS)),F
+   CFLAGS_SHLIB = -Kpic
+ endif
+ 
++ifeq ($(HOST_OS),solaris2)
++  SHARED_LIB_TYPE = unix
++  SHLIB_SUFFIX = so
++  shlibfn = $(1:%=%.$(SHLIB_SUFFIX).$(MAJ).$(MIN))
++  shliblefn = $(1:%=%.$(SHLIB_SUFFIX))
++  LDFLAGS_SHLIB = -Wl,-Bdynamic,-G,-h,$(SONAME)
++  CFLAGS_SHLIB = -Kpic
++endif
++
+ ifeq ($(HOST_OS),aix)
+   SHARED_LIB_TYPE = unix
+   SHLIB_SUFFIX = a
+@@ -204,12 +213,22 @@ ifeq ($(HOST_OS),osf)
    LDFLAGS_SHLIB = -shared -expect_unresolved
  endif
  
