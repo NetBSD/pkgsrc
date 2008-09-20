@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.49 2008/09/06 20:54:33 wiz Exp $
+# $NetBSD: Makefile,v 1.50 2008/09/20 14:14:47 hira Exp $
 #
 
 OO_VER=			2.4.1
-PKGREVISION=		2
+PKGREVISION=		3
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice2-${OO_VER}
 CATEGORIES=		misc
@@ -37,6 +37,7 @@ CONFIGURE_DIRS=		config_office
 GCC_REQD+=		3.4
 USE_LANGUAGES+=		c c++
 
+USE_DIRS+=		xdg-1.1
 USE_TOOLS+=		bash gmake imake perl pkg-config tar
 PTHREAD_OPTS+=		require
 PTHREAD_AUTO_VARS=	yes
@@ -110,7 +111,8 @@ CONFIGURE_ARGS+=	--with-lang=${OO_LANGS:Q}
 UNLIMIT_RESOURCES+=	datasize
 
 OO_RELEASE=		OpenOffice.org${OO_VER}
-PLIST_SRC+=		${WRKDIR}/.PLIST_SRC
+PLIST_SRC=		${PKGDIR}/PLIST
+PLIST_SRC+=		${WRKDIR}/PLIST
 MESSAGE_SUBST+=		OO_RELEASE=${OO_RELEASE}
 INSTALLATION_DIRS=	bin ${OO_RELEASE}
 
@@ -136,6 +138,9 @@ post-build:
 			tar xpfk $$f;				\
 		done;						\
 	done
+	cd ${WRKDIR} &&						\
+	rm -fr xdg &&						\
+	mv opt/${OO_UNXNAME}/share/xdg .
 	cd ${WRKDIR}${OO_PKGROOT} &&				\
 	chmod ${SHAREMODE} program/hid.lst program/testtoolrc
 	${ECHO} "#!${SH}" > ${WRKDIR}/${OO_UNXNAME}
@@ -152,6 +157,7 @@ do-install:
 		ln -sf ${DESTDIR}${PREFIX}/${OO_RELEASE}/program/$$f	\
 			${DESTDIR}${PREFIX}/bin/$$f;			\
 	done
+	${INSTALL_DATA} ${WRKDIR}/xdg/* ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME}-printeradmin	\
 		${DESTDIR}${PREFIX}/bin
@@ -159,14 +165,11 @@ do-install:
 post-install:
 	cd ${DESTDIR}${PREFIX} &&				\
 	find ${OO_RELEASE} \! -type d -print |			\
-	sort > ${PLIST_SRC} &&					\
+	sort > ${WRKDIR}/PLIST &&				\
 	find ${OO_RELEASE} -type d -print | sort -r |		\
-	awk '{print("@dirrm "$$1)}' >> ${PLIST_SRC}
-	for f in ${OO_PROGRAMS}; do				\
-		${ECHO} bin/$$f >> ${PLIST_SRC};		\
-	done
-	${ECHO} bin/${OO_UNXNAME} >> ${PLIST_SRC}
-	${ECHO} bin/${OO_UNXNAME}-printeradmin >> ${PLIST_SRC}
+	awk '{print("@dirrm "$$1)}' >> ${WRKDIR}/PLIST
+	${ECHO} bin/${OO_UNXNAME} >> ${WRKDIR}/PLIST
+	${ECHO} bin/${OO_UNXNAME}-printeradmin >> ${WRKDIR}/PLIST
 
 # OS specific Makefile
 .if exists(Makefile.${OPSYS})

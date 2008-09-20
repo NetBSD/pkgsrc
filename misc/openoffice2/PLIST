@@ -1,0 +1,15 @@
+@comment $NetBSD: PLIST,v 1.3 2008/09/20 14:14:47 hira Exp $
+bin/scalc
+bin/sdraw
+bin/simpress
+bin/soffice
+bin/swriter
+bin/unopkg
+share/applications/base.desktop
+share/applications/calc.desktop
+share/applications/draw.desktop
+share/applications/impress.desktop
+share/applications/math.desktop
+share/applications/printeradmin.desktop
+share/applications/qstart.desktop
+share/applications/writer.desktop
