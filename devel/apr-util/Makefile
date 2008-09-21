@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/09/08 10:04:46 adam Exp $
+# $NetBSD: Makefile,v 1.8 2008/09/21 02:39:28 minskim Exp $
 
 DISTNAME=	apr-util-1.3.4
 CATEGORIES=	devel
@@ -26,6 +26,7 @@ MAKE_ENV+=	WRAPPER_DIR=${WRAPPER_DIR:Q}
 .include "options.mk"
 
 .include "../../converters/libiconv/buildlink3.mk"
+BUILDLINK_API_DEPENDS.apr+=	apr>=1.3.0
 .include "../../devel/apr/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
