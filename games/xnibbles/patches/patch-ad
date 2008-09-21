@@ -1,0 +1,216 @@
+$NetBSD: patch-ad,v 1.1 2008/09/21 08:17:40 dholland Exp $
+
+--- statusBar.c.orig	1998-03-02 13:22:25.000000000 -0500
++++ statusBar.c	2008-09-21 02:17:18.000000000 -0400
+@@ -52,159 +52,159 @@ statusBar::statusBar(char theName[], int
+     theName[foo]=tolower(theName[foo]);
+     switch (theName[foo]) {
+       case 'a':
+-        strcpy (a_xpm[2],colors[6*which+2]);
++        a_xpm[2] = strdup(colors[6*which+2]);
+         a_xpm[2][0]='a';
+-        strcpy (a_xpm[3],colors[6*which+5]);
++        a_xpm[3] = colors[6*which+5];
+         makePixmap(a_xpm, &letters[foo]);
+         break;
+       case 'b':
+-        strcpy (b_xpm[2],colors[6*which+2]);
++        b_xpm[2] = strdup(colors[6*which+2]);
+         b_xpm[2][0]='a';
+-        strcpy (b_xpm[3],colors[6*which+5]);
++        b_xpm[3] = colors[6*which+5];
+         makePixmap(b_xpm, &letters[foo]);
+         break;
+       case 'c':
+-        strcpy (c_xpm[2],colors[6*which+2]);
++        c_xpm[2] = strdup(colors[6*which+2]);
+         c_xpm[2][0]='a';
+-        strcpy (c_xpm[3],colors[6*which+5]);
++        c_xpm[3] = colors[6*which+5];
+         makePixmap(c_xpm, &letters[foo]);
+         break;
+       case 'd':
+-        strcpy (d_xpm[2],colors[6*which+2]);
++        d_xpm[2] = strdup(colors[6*which+2]);
+         d_xpm[2][0]='a';
+-        strcpy (d_xpm[3],colors[6*which+5]);
++        d_xpm[3] = colors[6*which+5];
+         makePixmap(d_xpm, &letters[foo]);
+         break;
+       case 'e':
+-        strcpy (e_xpm[2],colors[6*which+2]);
++        e_xpm[2] = strdup(colors[6*which+2]);
+         e_xpm[2][0]='a';
+-        strcpy (e_xpm[3],colors[6*which+5]);
++        e_xpm[3] = colors[6*which+5];
+         makePixmap(e_xpm, &letters[foo]);
+         break;
+       case 'f':
+-        strcpy (f_xpm[2],colors[6*which+2]);
++        f_xpm[2] = strdup(colors[6*which+2]);
+         f_xpm[2][0]='a';
+-        strcpy (f_xpm[3],colors[6*which+5]);
++        f_xpm[3] = colors[6*which+5];
+         makePixmap(f_xpm, &letters[foo]);
+         break;
+       case 'g':
+-        strcpy (g_xpm[2],colors[6*which+2]);
++        g_xpm[2] = strdup(colors[6*which+2]);
+         g_xpm[2][0]='a';
+-        strcpy (g_xpm[3],colors[6*which+5]);
++        g_xpm[3] = colors[6*which+5];
+         makePixmap(g_xpm, &letters[foo]);
+         break;
+       case 'h':
+-        strcpy (h_xpm[2],colors[6*which+2]);
++        h_xpm[2] = strdup(colors[6*which+2]);
+         h_xpm[2][0]='a';
+-        strcpy (h_xpm[3],colors[6*which+5]);
++        h_xpm[3] = colors[6*which+5];
+         makePixmap(h_xpm, &letters[foo]);
+         break;
+       case 'i':
+-        strcpy (i_xpm[2],colors[6*which+2]);
++        i_xpm[2] = strdup(colors[6*which+2]);
+         i_xpm[2][0]='a';
+-        strcpy (i_xpm[3],colors[6*which+5]);
++        i_xpm[3] = colors[6*which+5];
+         makePixmap(i_xpm, &letters[foo]);
+         break;
+       case 'j':
+-        strcpy (j_xpm[2],colors[6*which+2]);
++        j_xpm[2] = strdup(colors[6*which+2]);
+         j_xpm[2][0]='a';
+-        strcpy (j_xpm[3],colors[6*which+5]);
++        j_xpm[3] = colors[6*which+5];
+         makePixmap(j_xpm, &letters[foo]);
+         break;
+       case 'k':
+-        strcpy (k_xpm[2],colors[6*which+2]);
++        k_xpm[2] = strdup(colors[6*which+2]);
+         k_xpm[2][0]='a';
+-        strcpy (k_xpm[3],colors[6*which+5]);
++        k_xpm[3] = colors[6*which+5];
+         makePixmap(k_xpm, &letters[foo]);
+         break;
+       case 'l':
+-        strcpy (l_xpm[2],colors[6*which+2]);
++        l_xpm[2] = strdup(colors[6*which+2]);
+         l_xpm[2][0]='a';
+-        strcpy (l_xpm[3],colors[6*which+5]);
++        l_xpm[3] = colors[6*which+5];
+         makePixmap(l_xpm, &letters[foo]);
+         break;
+       case 'm':
+-        strcpy (m_xpm[2],colors[6*which+2]);
++        m_xpm[2] = strdup(colors[6*which+2]);
+         m_xpm[2][0]='a';
+-        strcpy (m_xpm[3],colors[6*which+5]);
++        m_xpm[3] = colors[6*which+5];
+         makePixmap(m_xpm, &letters[foo]);
+         break;
+       case 'n':
+-        strcpy (n_xpm[2],colors[6*which+2]);
++        n_xpm[2] = strdup(colors[6*which+2]);
+         n_xpm[2][0]='a';
+-        strcpy (n_xpm[3],colors[6*which+5]);
++        n_xpm[3] = colors[6*which+5];
+         makePixmap(n_xpm, &letters[foo]);
+         break;
+       case 'o':
+-        strcpy (o_xpm[2],colors[6*which+2]);
++        o_xpm[2] = strdup(colors[6*which+2]);
+         o_xpm[2][0]='a';
+-        strcpy (o_xpm[3],colors[6*which+5]);
++        o_xpm[3] = colors[6*which+5];
+         makePixmap(o_xpm, &letters[foo]);
+         break;
+       case 'p':
+-        strcpy (p_xpm[2],colors[6*which+2]);
++        p_xpm[2] = strdup(colors[6*which+2]);
+         p_xpm[2][0]='a';
+-        strcpy (p_xpm[3],colors[6*which+5]);
++        p_xpm[3] = colors[6*which+5];
+         makePixmap(p_xpm, &letters[foo]);
+         break;
+       case 'q':
+-        strcpy (q_xpm[2],colors[6*which+2]);
++        q_xpm[2] = strdup(colors[6*which+2]);
+         q_xpm[2][0]='a';
+-        strcpy (q_xpm[3],colors[6*which+5]);
++        q_xpm[3] = colors[6*which+5];
+         makePixmap(q_xpm, &letters[foo]);
+         break;
+       case 'r':
+-        strcpy (r_xpm[2],colors[6*which+2]);
++        r_xpm[2] = strdup(colors[6*which+2]);
+         r_xpm[2][0]='a';
+-        strcpy (r_xpm[3],colors[6*which+5]);
++        r_xpm[3] = colors[6*which+5];
+         makePixmap(r_xpm, &letters[foo]);
+         break;
+       case 's':
+-        strcpy (s_xpm[2],colors[6*which+2]);
++        s_xpm[2] = strdup(colors[6*which+2]);
+         s_xpm[2][0]='a';
+-        strcpy (s_xpm[3],colors[6*which+5]);
++        s_xpm[3] = colors[6*which+5];
+         makePixmap(s_xpm, &letters[foo]);
+         break;
+       case 't':
+-        strcpy (t_xpm[2],colors[6*which+2]);
++        t_xpm[2] = strdup(colors[6*which+2]);
+         t_xpm[2][0]='a';
+-        strcpy (t_xpm[3],colors[6*which+5]);
++        t_xpm[3] = colors[6*which+5];
+         makePixmap(t_xpm, &letters[foo]);
+         break;
+       case 'u':
+-        strcpy (u_xpm[2],colors[6*which+2]);
++        u_xpm[2] = strdup(colors[6*which+2]);
+         u_xpm[2][0]='a';
+-        strcpy (u_xpm[3],colors[6*which+5]);
++        u_xpm[3] = colors[6*which+5];
+         makePixmap(u_xpm, &letters[foo]);
+         break;
+       case 'v':
+-        strcpy (v_xpm[2],colors[6*which+2]);
++        v_xpm[2] = strdup(colors[6*which+2]);
+         v_xpm[2][0]='a';
+-        strcpy (v_xpm[3],colors[6*which+5]);
++        v_xpm[3] = colors[6*which+5];
+         makePixmap(v_xpm, &letters[foo]);
+         break;
+       case 'w':
+-        strcpy (w_xpm[2],colors[6*which+2]);
++        w_xpm[2] = strdup(colors[6*which+2]);
+         w_xpm[2][0]='a';
+-        strcpy (w_xpm[3],colors[6*which+5]);
++        w_xpm[3] = colors[6*which+5];
+         makePixmap(w_xpm, &letters[foo]);
+         break;
+       case 'x':
+-        strcpy (x_xpm[2],colors[6*which+2]);
++        x_xpm[2] = strdup(colors[6*which+2]);
+         x_xpm[2][0]='a';
+-        strcpy (x_xpm[3],colors[6*which+5]);
++        x_xpm[3] = colors[6*which+5];
+         makePixmap(x_xpm, &letters[foo]);
+         break;
+       case 'y':
+-        strcpy (y_xpm[2],colors[6*which+2]);
++        y_xpm[2] = strdup(colors[6*which+2]);
+         y_xpm[2][0]='a';
+-        strcpy (y_xpm[3],colors[6*which+5]);
++        y_xpm[3] = colors[6*which+5];
+         makePixmap(y_xpm, &letters[foo]);
+         break;
+       case 'z':
+-        strcpy (z_xpm[2],colors[6*which+2]);
++        z_xpm[2] = strdup(colors[6*which+2]);
+         z_xpm[2][0]='a';
+-        strcpy (z_xpm[3],colors[6*which+5]);
++        z_xpm[3] = colors[6*which+5];
+         makePixmap(z_xpm, &letters[foo]);
+         break;
+     }

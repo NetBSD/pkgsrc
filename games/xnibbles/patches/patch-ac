@@ -1,0 +1,19 @@
+$NetBSD: patch-ac,v 1.1 2008/09/21 08:17:40 dholland Exp $
+
+--- make-LEVELS~	1998-02-23 13:37:57.000000000 -0500
++++ make-LEVELS	2008-09-21 02:04:01.000000000 -0400
+@@ -1,6 +1,6 @@
+ #!/bin/sh
+ 
+-if [ $2"X" != "OOGAX" ]; then
++if [ $3"X" != "OOGAX" ]; then
+   echo "You shouldn't run this script yourself!  Let the Makefile do it!"
+   exit 1
+ fi
+@@ -9,5 +9,5 @@ cd levels
+ rm -f $1"/levels/LEVELS"
+ touch $1"/levels/LEVELS"
+ for i in level???.xnl ; do
+-  echo $1"/levels/"$i >> $1"/levels/LEVELS"
++  echo $2"/levels/"$i >> $1"/levels/LEVELS"
+ done
