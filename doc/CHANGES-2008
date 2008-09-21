@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2323 2008/09/21 18:31:20 martti Exp $
+$NetBSD: CHANGES-2008,v 1.2324 2008/09/21 21:54:52 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3987,3 +3987,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/xnibbles to 1.0b4nb3 [dholland 2008-09-21]
 	Removed www/py-django-devel [joerg 2008-09-21]
 	Updated mail/mailman to 2.1.10nb2 [martti 2008-09-21]
+	Updated www/rails to 2.1.1nb1 [minskim 2008-09-21]
