@@ -146,14 +146,7 @@ AH_BOTTOM(
 #endif
 )
 
-AC_CONFIG_FILES([Makefile add/Makefile admin/Makefile 
-	audit-packages/Makefile audit-packages/audit-packages.1 \
-	audit-packages/audit-packages.cat1 audit-packages/audit-packages.conf \
-	audit-packages/audit-packages.conf.5 \
-	audit-packages/audit-packages.conf.cat5 \
-	audit-packages/download-vulnerability-list.1 \
-	audit-packages/download-vulnerability-list.cat1 \
-	audit-packages/download-vulnerability-list.sh bpm/bpm.sh \
-	create/Makefile delete/Makefile info/Makefile lib/Makefile \
-	view/Makefile view/linkfarm.sh view/pkg_view.sh])
+AC_CONFIG_FILES([Makefile add/Makefile admin/Makefile bpm/bpm.sh \
+	create/Makefile delete/Makefile info/Makefile \
+	lib/Makefile])
 AC_OUTPUT
