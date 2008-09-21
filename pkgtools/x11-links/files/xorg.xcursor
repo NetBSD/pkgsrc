@@ -1,8 +1,12 @@
-# $NetBSD: xorg.xcursor,v 1.1 2007/12/17 18:20:21 tron Exp $
+# $NetBSD: xorg.xcursor,v 1.1.10.1 2008/09/21 16:52:20 cube Exp $
 #
 include/X11/Xcursor/Xcursor.h
 lib/libXcursor.1.0.2.dylib
 lib/libXcursor.1.dylib
+lib/libXcursor.a
 lib/libXcursor.dylib
 lib/libXcursor.la
+lib/libXcursor.so
+lib/libXcursor.so.1
+lib/libXcursor.so.1.0.2
 lib/pkgconfig/xcursor.pc
