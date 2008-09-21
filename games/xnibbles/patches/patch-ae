@@ -1,0 +1,21 @@
+$NetBSD: patch-ae,v 1.1 2008/09/21 08:17:40 dholland Exp $
+
+--- worm.c~	1998-03-03 20:48:43.000000000 -0500
++++ worm.c	2008-09-21 02:15:07.000000000 -0400
+@@ -52,11 +52,11 @@ worm::worm(int aup, int adown, int aleft
+   score = 0;
+   dscore = 0;
+   numCuts = 0;
+-  strcpy (worm_xpm[2],colors[6*which]);
+-  strcpy (worm_xpm[3],colors[6*which+1]);
+-  strcpy (worm_xpm[4],colors[6*which+2]);
+-  strcpy (worm_xpm[5],colors[6*which+3]);
+-  strcpy (worm_xpm[6],colors[6*which+4]);
++  worm_xpm[2] = colors[6*which];
++  worm_xpm[3] = colors[6*which+1];
++  worm_xpm[4] = colors[6*which+2];
++  worm_xpm[5] = colors[6*which+3];
++  worm_xpm[6] = colors[6*which+4];
+   makePixmap (worm_xpm, &wormImage);
+   meltCount = MELTSIZE;
+   meltFlag = meltDelay;

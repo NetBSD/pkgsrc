@@ -1,0 +1,17 @@
+$NetBSD: patch-af,v 1.1 2008/09/21 08:17:40 dholland Exp $
+
+--- xnibbles.6~	1998-03-05 18:34:29.000000000 -0500
++++ xnibbles.6	2008-09-21 02:25:22.000000000 -0400
+@@ -95,7 +95,11 @@ This bonus reverses the direction of you
+ .SH GAME PLAY
+ Each player has five keys.  Worm controls for the first player are the arrow
+ keys, sometimes the numeric keypad :), and for the second player control is
+-'w' up, 's' down, 'a' left, and 'd' right.  Each player also has an action key,
++   'w' up,
++   's' down,
++   'a' left, and
++   'd' right.
++Each player also has an action key,
+ which activates the cyan bonus described in section [4].  For the first player,
+ the action key is Right Control, and for the second, the action key is Left
+ Control.
