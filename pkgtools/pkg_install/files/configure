@@ -6916,7 +6916,7 @@ esac
 
 
 
-ac_config_files="$ac_config_files Makefile add/Makefile admin/Makefile audit-packages/Makefile audit-packages/audit-packages.1 audit-packages/audit-packages.cat1 audit-packages/audit-packages.conf audit-packages/audit-packages.conf.5 audit-packages/audit-packages.conf.cat5 audit-packages/download-vulnerability-list.1 audit-packages/download-vulnerability-list.cat1 audit-packages/download-vulnerability-list.sh bpm/bpm.sh create/Makefile delete/Makefile info/Makefile lib/Makefile view/Makefile view/linkfarm.sh view/pkg_view.sh"
+ac_config_files="$ac_config_files Makefile add/Makefile admin/Makefile bpm/bpm.sh create/Makefile delete/Makefile info/Makefile lib/Makefile"
 
 cat >confcache <<\_ACEOF
 # This file is a shell script that caches the results of configure
@@ -7506,23 +7506,11 @@ do
     "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
     "add/Makefile") CONFIG_FILES="$CONFIG_FILES add/Makefile" ;;
     "admin/Makefile") CONFIG_FILES="$CONFIG_FILES admin/Makefile" ;;
-    "audit-packages/Makefile") CONFIG_FILES="$CONFIG_FILES audit-packages/Makefile" ;;
-    "audit-packages/audit-packages.1") CONFIG_FILES="$CONFIG_FILES audit-packages/audit-packages.1" ;;
-    "audit-packages/audit-packages.cat1") CONFIG_FILES="$CONFIG_FILES audit-packages/audit-packages.cat1" ;;
-    "audit-packages/audit-packages.conf") CONFIG_FILES="$CONFIG_FILES audit-packages/audit-packages.conf" ;;
-    "audit-packages/audit-packages.conf.5") CONFIG_FILES="$CONFIG_FILES audit-packages/audit-packages.conf.5" ;;
-    "audit-packages/audit-packages.conf.cat5") CONFIG_FILES="$CONFIG_FILES audit-packages/audit-packages.conf.cat5" ;;
-    "audit-packages/download-vulnerability-list.1") CONFIG_FILES="$CONFIG_FILES audit-packages/download-vulnerability-list.1" ;;
-    "audit-packages/download-vulnerability-list.cat1") CONFIG_FILES="$CONFIG_FILES audit-packages/download-vulnerability-list.cat1" ;;
-    "audit-packages/download-vulnerability-list.sh") CONFIG_FILES="$CONFIG_FILES audit-packages/download-vulnerability-list.sh" ;;
     "bpm/bpm.sh") CONFIG_FILES="$CONFIG_FILES bpm/bpm.sh" ;;
     "create/Makefile") CONFIG_FILES="$CONFIG_FILES create/Makefile" ;;
     "delete/Makefile") CONFIG_FILES="$CONFIG_FILES delete/Makefile" ;;
     "info/Makefile") CONFIG_FILES="$CONFIG_FILES info/Makefile" ;;
     "lib/Makefile") CONFIG_FILES="$CONFIG_FILES lib/Makefile" ;;
-    "view/Makefile") CONFIG_FILES="$CONFIG_FILES view/Makefile" ;;
-    "view/linkfarm.sh") CONFIG_FILES="$CONFIG_FILES view/linkfarm.sh" ;;
-    "view/pkg_view.sh") CONFIG_FILES="$CONFIG_FILES view/pkg_view.sh" ;;
 
   *) { { $as_echo "$as_me:$LINENO: error: invalid argument: $ac_config_target" >&5
 $as_echo "$as_me: error: invalid argument: $ac_config_target" >&2;}

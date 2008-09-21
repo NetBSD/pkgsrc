@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.8.8.3 2008/05/24 21:54:22 joerg Exp $
+# $NetBSD: Makefile.in,v 1.8.8.4 2008/09/21 13:02:58 joerg Exp $
 
 BOOTSTRAP=	@bootstrap@
 
@@ -22,5 +22,4 @@ distclean: clean
 	rm -f config.log config.status configure.lineno
 	rm -f Makefile */Makefile
 	rm -f lib/config.h
-	rm -f view/linkfarm.sh
-	rm -f view/pkg_view.sh
+	rm -f bmp/bmp.sh
