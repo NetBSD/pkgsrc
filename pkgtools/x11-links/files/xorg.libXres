@@ -1,0 +1,8 @@
+# $NetBSD: xorg.libXres,v 1.1.2.1 2008/09/21 21:36:41 cube Exp $
+#
+include/X11/extensions/XRes.h
+lib/libXres.a
+lib/libXres.so
+lib/libXres.so.1
+lib/libXres.so.1.0
+lib/pkgconfig/xres.pc
