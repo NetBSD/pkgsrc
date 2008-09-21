@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2320 2008/09/21 02:02:40 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.2321 2008/09/21 08:18:21 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3984,3 +3984,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/httping to 1.2.9 [adrianp 2008-09-19]
 	Updated misc/openoffice2 to 2.4.1nb3 [hira 2008-09-20]
 	Updated devel/scmgit-base to 1.6.0.2nb1 [minskim 2008-09-21]
+	Updated games/xnibbles to 1.0b4nb3 [dholland 2008-09-21]
