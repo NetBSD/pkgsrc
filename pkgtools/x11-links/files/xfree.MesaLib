@@ -1,4 +1,4 @@
-# $NetBSD: xfree.MesaLib,v 1.4 2003/12/19 19:19:15 veego Exp $
+# $NetBSD: xfree.MesaLib,v 1.4.40.1 2008/09/21 16:32:06 cube Exp $
 #
 include/GL/GLwDrawA.h
 include/GL/GLwDrawAP.h
@@ -16,6 +16,7 @@ include/GL/osmesa.h
 lib/libGL.a
 lib/libGL.so
 lib/libGL.so.1
+lib/libGL.so.1.0.2
 lib/libGL.so.1.2
 lib/libGL.dylib
 lib/libGL.1.dylib
@@ -31,6 +32,8 @@ lib/libOSMesa.a
 lib/libOSMesa.so
 lib/libOSMesa.so.4
 lib/libOSMesa.so.4.0
+lib/libOSMesa.so.6
+lib/libOSMesa.so.6.5.3
 lib/libOSMesa.dylib
 lib/libOSMesa.4.dylib
 lib/libOSMesa.4.0.dylib
