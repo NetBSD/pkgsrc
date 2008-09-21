@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.10 2008/09/15 08:40:55 taca Exp $
+# $NetBSD: replace.mk,v 1.11 2008/09/21 21:50:31 minskim Exp $
 #
 
 .if !defined(_RUBY_REPLACE_MK)
@@ -46,8 +46,8 @@ replace-ruby-dirs:
 	    ${FIND} $$dirs \
 		-type f ${_REPLACE_RUBY_FIND_ARGS} -print | \
 	    while read f; do \
-		${SED}	-e '1s| *[a-z0-9_/\.-][a-z0-9_/\.-]*/env *||g' \
-			-e '1s| *[a-z0-9_/\.-]*ruby|${RUBY}|' $$f > $$f.tmp; \
+		${SED}	-e '1s|^#! *[a-z0-9_/\.-][a-z0-9_/\.-]*/env *|#!|g' \
+			-e '1s|^#! *[a-z0-9_/\.-]*ruby|#!${RUBY}|' $$f > $$f.tmp; \
 		if ${CMP} -s $$f $$f.tmp; then \
 			${RM} $$f.tmp; \
 		else \
