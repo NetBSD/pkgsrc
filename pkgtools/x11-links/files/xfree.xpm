@@ -1,4 +1,4 @@
-# $NetBSD: xfree.xpm,v 1.2 2003/09/07 21:53:03 jlam Exp $
+# $NetBSD: xfree.xpm,v 1.2.42.1 2008/09/21 23:10:26 cube Exp $
 #
 include/X11/xpm.h
 lib/libXpm.a
@@ -8,3 +8,4 @@ lib/libXpm.so.4.11
 lib/libXpm.dylib
 lib/libXpm.4.dylib
 lib/libXpm.4.11.dylib
+lib/pkgconfig/xpm.pc
