@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2008/09/15 05:58:42 minskim Exp $
+# $NetBSD: Makefile,v 1.14 2008/09/21 21:54:01 minskim Exp $
 
 DISTNAME=	rails-2.1.1
+PKGREVISION=	1
 CATEGORIES=	www
 
 MAINTAINER=	minskim@NetBSD.org
