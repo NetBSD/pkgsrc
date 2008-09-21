@@ -1,10 +1,14 @@
-# $NetBSD: xorg.libXrandr,v 1.3 2008/08/22 13:34:39 tron Exp $
+# $NetBSD: xorg.libXrandr,v 1.3.2.1 2008/09/21 23:06:24 cube Exp $
 #
 include/X11/extensions/Xrandr.h
 lib/libXrandr.2.1.0.dylib
 lib/libXrandr.2.0.0.dylib
 lib/libXrandr.2.1.0.dylib
 lib/libXrandr.2.dylib
+lib/libXrandr.a
 lib/libXrandr.dylib
 lib/libXrandr.la
+lib/libXrandr.so
+lib/libXrandr.so.2
+lib/libXrandr.so.2.1
 lib/pkgconfig/xrandr.pc
