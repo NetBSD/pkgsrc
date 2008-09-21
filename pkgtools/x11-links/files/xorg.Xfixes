@@ -1,4 +1,4 @@
-# $NetBSD: xorg.Xfixes,v 1.2 2007/12/17 18:20:19 tron Exp $
+# $NetBSD: xorg.Xfixes,v 1.2.10.1 2008/09/21 22:10:05 cube Exp $
 #
 include/X11/extensions/Xfixes.h
 lib/libXfixes.3.1.0.dylib
@@ -9,4 +9,5 @@ lib/libXfixes.la
 lib/libXfixes.so
 lib/libXfixes.so.3
 lib/libXfixes.so.3.0
+lib/libXfixes.so.3.1
 lib/pkgconfig/xfixes.pc
