@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.3 2002/06/26 21:03:00 abs Exp $
+$NetBSD: patch-aa,v 1.4 2008/09/21 19:41:43 abs Exp $
 
---- Makefile.in.orig	Thu Feb 18 11:14:57 1999
+--- Makefile.in.orig	1999-02-18 11:14:57.000000000 +0000
 +++ Makefile.in
-@@ -27,6 +27,7 @@
+@@ -27,6 +27,7 @@ exec_prefix = @exec_prefix@
  bindir = @bindir@
  sbindir = @sbindir@
  libdir = @libdir@
@@ -10,7 +10,12 @@ $NetBSD: patch-aa,v 1.3 2002/06/26 21:03:00 abs Exp $
  sysconfdir = @sysconfdir@
  
  PROGS=test_io test_func test_name workmanir lirmand
-@@ -125,7 +126,7 @@
+@@ -121,11 +122,11 @@ install-dirs:
+ 	$(top_srcdir)/mkinstalldirs $(sysconfdir)
+ 	$(top_srcdir)/mkinstalldirs `echo $(LIRC_DRIVER_DEVICE) | sed 's|/[^/]*$$||'`
+ 
+-install: @NORMAL@ install-dirs mkdev
++install: @NORMAL@ install-dirs
  	$(INSTALL) -m 755 workmanir $(bindir)/workmanir
  	$(INSTALL) -m 755 lirmand $(sbindir)/lirmand
  	$(INSTALL) -m 755 libirman.a $(libdir)/libirman.a
