@@ -1,10 +1,6 @@
-# $NetBSD: buildlink3.mk,v 1.2 2006/12/17 23:02:25 joerg Exp $
+# $NetBSD: buildlink3.mk,v 1.2.18.1 2008/09/21 17:04:13 cube Exp $
 
 .include "../../mk/bsd.fast.prefs.mk"
-
-.if ${X11_TYPE} != "modular"
-.include "../../mk/x11.buildlink3.mk"
-.else
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBXDAMAGE_BUILDLINK3_MK:=	${LIBXDAMAGE_BUILDLINK3_MK}+
@@ -28,5 +24,3 @@ BUILDLINK_PKGSRCDIR.libXdamage?=	../../x11/libXdamage
 .include "../../x11/xproto/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
-
-.endif
