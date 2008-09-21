@@ -1,4 +1,4 @@
-# $NetBSD: xorg,v 1.7 2008/08/22 13:34:39 tron Exp $
+# $NetBSD: xorg,v 1.7.2.1 2008/09/21 17:04:13 cube Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported Xorg (and some XFree) distributions, minus the set of files
@@ -250,7 +250,6 @@ include/X11/extensions/XKM.h
 include/X11/extensions/XKMformat.h
 include/X11/extensions/XRes.h
 include/X11/extensions/XResproto.h
-include/X11/extensions/Xdamage.h
 include/X11/extensions/Xevie.h
 include/X11/extensions/Xeviestr.h
 include/X11/extensions/Xinerama.h
@@ -362,11 +361,6 @@ lib/libXaw.so.6.1
 lib/libXaw.so.7
 lib/libXaw.so.7.0
 lib/libXaw.so.8.0
-lib/libXdamage.1.0.0.dylib
-lib/libXdamage.1.dylib
-lib/libXdamage.dylib
-lib/libXdamage.a
-lib/libXdamage.so.1.0
 lib/libXevie.1.0.0.dylib
 lib/libXevie.1.dylib
 lib/libXevie.dylib
@@ -530,5 +524,4 @@ lib/libxkbui.a
 lib/libxkbui.so
 lib/libxkbui.so.1
 lib/libxkbui.so.1.0
-lib/pkgconfig/xdamage.pc
 lib/pkgconfig/xevie.pc
