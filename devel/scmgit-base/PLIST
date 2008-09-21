@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/08/20 03:04:20 bjs Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/09/21 02:00:37 minskim Exp $
 bin/git
 bin/git-receive-pack
 bin/git-upload-archive
@@ -206,6 +206,7 @@ ${PLIST.gui}share/gitk/lib/msgs/it.msg
 ${PLIST.gui}share/gitk/lib/msgs/sv.msg
 @dirrm share/examples/scmgit/templates/hooks
 @dirrm share/examples/scmgit/templates/info
+@dirrm share/examples/scmgit/templates/branches
 @dirrm share/examples/scmgit/templates
 @dirrm share/examples/scmgit
 ${PLIST.gui}@dirrm share/gitk/lib/msgs
