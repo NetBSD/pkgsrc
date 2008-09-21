@@ -1,4 +1,4 @@
-# $NetBSD: xfree.Xft2,v 1.1 2004/02/17 16:50:26 jlam Exp $
+# $NetBSD: xfree.Xft2,v 1.1.40.1 2008/09/21 22:02:56 cube Exp $
 #
 include/X11/Xft/Xft.h
 include/X11/Xft/XftCompat.h
@@ -7,6 +7,8 @@ lib/libXft.so
 lib/libXft.so.2
 lib/libXft.so.2.0
 lib/libXft.so.2.1
+lib/libXft.so.2.1.2
 lib/libXft.dylib
 lib/libXft.2.dylib
 lib/libXft.2.0.dylib
+lib/pkgconfig/xft.pc
