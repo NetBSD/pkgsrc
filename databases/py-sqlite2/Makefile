@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/09/10 12:40:58 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2008/09/21 09:24:52 obache Exp $
 
 DISTNAME=	pysqlite-2.5.0
 PKGNAME=	${PYPKGPREFIX}-sqlite2-2.5.0
@@ -27,7 +27,7 @@ PLIST.python25=	yes
 PLIST_VARS+=	python25
 
 do-postinstall-test: .PHONY
-	${PYTHONBIN} -c "from pysqlite2 import test;test.test()"
+	cd ${WRKDIR} && ${PYTHONBIN} -c "from pysqlite2 import test;test.test()"
 
 .include "../../databases/sqlite3/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
