@@ -1,10 +1,9 @@
-# $NetBSD: xorg.mk,v 1.9.8.18 2008/09/18 19:30:37 cube Exp $
+# $NetBSD: xorg.mk,v 1.9.8.19 2008/09/21 17:04:13 cube Exp $
 #
 # This is for X.org, but use "xfree" files also.
 
 FILES_LIST=	${FILESDIR}/xorg
 
-# libXdamage and damageext only in pkgsrc-wip so not used here
 # XXX: what about xaw?
 
 .include "../../fonts/fontconfig/buildlink3.mk"
@@ -31,6 +30,7 @@ FILES_LIST=	${FILESDIR}/xorg
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
+.include "../../x11/libXdamage/buildlink3.mk"
 .include "../../x11/libXdmcp/buildlink3.mk"
 .include "../../x11/libXevie/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
