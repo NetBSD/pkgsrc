@@ -1,9 +1,11 @@
-$NetBSD: distinfo,v 1.14 2008/03/07 22:40:29 tron Exp $
+$NetBSD: distinfo,v 1.15 2008/09/21 16:16:06 joerg Exp $
 
 SHA1 (e2fsprogs-1.40.7.tar.gz) = 56ff55add64c34bddf9cf15c3825811d230dd8b1
 RMD160 (e2fsprogs-1.40.7.tar.gz) = bfab47555ff31b8ae8d72d2e4de54c099bfc3b18
 Size (e2fsprogs-1.40.7.tar.gz) = 4087067 bytes
 SHA1 (patch-aa) = 446233b75bd23227c5c7d003cce0a19017f3f71b
+SHA1 (patch-ab) = f18d86265be543bab68813200fb49099ad8af909
+SHA1 (patch-ac) = 8f47354ee719d4b933eccc8c8f0a0c7fb7b0feff
 SHA1 (patch-af) = c2c8b373fcba36f031005d364c0de2fbae97106f
 SHA1 (patch-al) = e976de195735cf1f96aaceff1b978b1be405dfc9
 SHA1 (patch-am) = 05a547a48b02d267e200d6161e982e5cf1226d3b
