@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.20 2008/06/12 02:14:58 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2008/09/22 20:21:04 joerg Exp $
 #
 
 DISTNAME=	wxPython-src-2.6.3.3
@@ -36,6 +36,6 @@ PLIST_SUBST+=            GTKVER=2
 .include "../../graphics/MesaLib/buildlink3.mk"
 .include "../../lang/python/extension.mk"
 .include "../../graphics/glu/buildlink3.mk"
-.include "../../x11/wxGTK/buildlink3.mk"
-.include "../../x11/wxGTK-contrib/buildlink3.mk"
+.include "../../x11/wxGTK26/buildlink3.mk"
+.include "../../x11/wxGTK26-contrib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
