@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2008/09/16 13:31:26 taca Exp $
+# $NetBSD: Makefile,v 1.4 2008/09/22 15:42:56 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
 PKGNAME=	typo3-${VER}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typo3/}
 DISTFILES=	${TYPO3NAME}${EXTRACT_SUFX} ${SITESRC}${EXTRACT_SUFX}
@@ -12,7 +13,7 @@ HOMEPAGE=	http://typo3.com/
 COMMENT=	The typo3 content management system
 
 DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=5.2.0:../../www/ap-php
-DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=5.2.0:../../databases/php-mysql
+DEPENDS+=	${PHP_PKG_PREFIX}-{mysql,pgsql}>=5.1.0:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib/
 
 #PKG_DESTDIR_SUPPORT=	user-destdir
@@ -34,30 +35,49 @@ REPLACE_FILES.php=	typo3/cli_dispatch.phpsh \
 			typo3/mod/user/ws/cli/ws_cli.phpsh \
 			typo3/sysext/indexed_search/cli/indexer_cli.phpsh
 
-TYPO3DATA=	fileadmin typo3conf typo3temp uploads
+TYPO3DATADIR=	fileadmin fileadmin/_temp_ fileadmin/user_upload \
+		typo3conf typo3conf/ext typo3conf/l10n typo3temp uploads \
+		uploads/media uploads/pics uploads/tf
 
 BUILD_DEFS+=	APACHE_GROUP
 
 FILES_SUBST+=	TYPO3DIR=${TYPO3DIR:Q} SITEDIR=${SITEDIR:Q}
-PLIST_SUBST+=	SITEDIR=${SITEDIR:Q} TYPO3DIR=${TYPO3DIR:Q} \
-		TYPO3NAME=${TYPO3NAME:Q}
+PLIST_SUBST+=	EGDIR=${EGDIR:Q} SITEDIR=${SITEDIR:Q} \
+		TYPO3DIR=${TYPO3DIR:Q} TYPO3NAME=${TYPO3NAME:Q}
 
-INSTALLATION_DIRS+= ${TYPO3DIR}/${SITEDIR} ${TYPO3DIR}/${TYPO3NAME}
+EGDIR=		share/examples/typo3
 
-.for d in ${TYPO3DATA}
-SPECIAL_PERMS+=	${TYPO3DIR}/${SITEDIR}/${d} ${BINOWN} ${APACHE_GROUP} 0770
+INSTALLATION_DIRS+= ${EGDIR} ${TYPO3DIR}/${SITEDIR} ${TYPO3DIR}/${TYPO3NAME}
+
+CONF_FILES_PERMS+=	${EGDIR}/localconf.php \
+			${TYPO3DIR}/${SITEDIR}/typo3conf/localconf.php \
+			${BINOWN} ${APACHE_GROUP} 0660
+
+.for d in ${TYPO3DATADIR}
+OWN_DIRS_PERMS+= ${TYPO3DIR}/${SITEDIR}/${d} ${BINOWN} ${APACHE_GROUP} 0770
 CHECK_PERMS_SKIP+= ${TYPO3DIR}/${SITEDIR}/${d}
 .endfor
+
+SUBST_CLASSES+=		conf
+SUBST_FILES.conf+=	${WRKDIR}/README
+SUBST_SED.conf+=        -e 's|@PREFIX@|${PREFIX:Q}|g'
+SUBST_SED.conf+=        -e 's|@TYPO3DIR@|${TYPO3DIR:Q}|g'
+SUBST_SED.conf+=        -e 's|@SITEDIR@|${SITEDIR:Q}|g'
+SUBST_STAGE.conf=	post-configure
 
 .include "../../mk/bsd.prefs.mk"
 
 SITEDIR?=	www
 TYPO3DIR?=	share/typo3
 
+post-extract:
+	${CP} ${FILESDIR}/README ${WRKDIR}
+
 do-install:
 	cd ${WRKSRC}; pax -rw . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${TYPO3NAME}
 	cd ${WRKDIR}/${SITESRC}; \
 		pax -rw . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${SITEDIR}
+	${INSTALL_DATA} ${WRKDIR}/localconf.php ${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../mk/apachever.mk"
 .include "../../lang/php/phpversion.mk"
