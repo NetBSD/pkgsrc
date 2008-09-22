@@ -1,5 +1,5 @@
-$NetBSD: patch-af,v 1.4 2006/01/13 18:12:46 wiz Exp $
---- vsftpd.conf.5.orig	2006-01-07 20:35:50.000000000 +0100
+$NetBSD: patch-af,v 1.5 2008/09/22 11:02:21 abs Exp $
+--- vsftpd.conf.5.orig	2008-07-30 02:56:30.000000000 +0100
 +++ vsftpd.conf.5
 @@ -4,7 +4,7 @@ vsftpd.conf \- config file for vsftpd
  .SH DESCRIPTION
@@ -10,7 +10,7 @@ $NetBSD: patch-af,v 1.4 2006/01/13 18:12:46 wiz Exp $
  However, you may override this by specifying a command line argument to
  vsftpd. The command line argument is the pathname of the configuration file
  for vsftpd. This behaviour is useful because you may wish to use an advanced
-@@ -136,7 +136,7 @@ chroot() jail in their home directory up
+@@ -138,7 +138,7 @@ chroot() jail in their home directory up
  different if chroot_local_user is set to YES. In this case, the list becomes
  a list of users which are NOT to be placed in a chroot() jail.
  By default, the file containing this list is
@@ -19,7 +19,7 @@ $NetBSD: patch-af,v 1.4 2006/01/13 18:12:46 wiz Exp $
  .BR chroot_list_file
  setting.
  
-@@ -164,7 +164,7 @@ Default: NO (but the sample config file 
+@@ -177,7 +177,7 @@ Default: NO
  .B deny_email_enable
  If activated, you may provide a list of anonymous password e-mail responses
  which cause login to be denied. By default, the file containing this list is
@@ -28,7 +28,7 @@ $NetBSD: patch-af,v 1.4 2006/01/13 18:12:46 wiz Exp $
  .BR banned_email_file
  setting.
  
-@@ -392,7 +392,7 @@ anonymous logins are prevented unless th
+@@ -416,7 +416,7 @@ anonymous logins are prevented unless th
  file specified by the
  .BR email_password_file
  setting. The file format is one password per line, no extra whitespace. The
@@ -37,7 +37,7 @@ $NetBSD: patch-af,v 1.4 2006/01/13 18:12:46 wiz Exp $
  
  Default: NO
  .TP
-@@ -672,7 +672,7 @@ passwords which are not permitted. This 
+@@ -747,7 +747,7 @@ passwords which are not permitted. This 
  .BR deny_email_enable
  is enabled.
  
@@ -46,7 +46,7 @@ $NetBSD: patch-af,v 1.4 2006/01/13 18:12:46 wiz Exp $
  .TP
  .B banner_file
  This option is the name of a file containing text to display when someone
-@@ -701,7 +701,7 @@ is enabled. If the option
+@@ -784,7 +784,7 @@ is enabled. If the option
  is enabled, then the list file becomes a list of users to NOT place in a
  chroot() jail.
  
@@ -55,7 +55,7 @@ $NetBSD: patch-af,v 1.4 2006/01/13 18:12:46 wiz Exp $
  .TP
  .B cmds_allowed
  This options specifies a comma separated list of allowed FTP commands (post
-@@ -753,7 +753,7 @@ This option can be used to provide an al
+@@ -836,7 +836,7 @@ This option can be used to provide an al
  .BR secure_email_list_enable
  setting.
  
@@ -64,7 +64,7 @@ $NetBSD: patch-af,v 1.4 2006/01/13 18:12:46 wiz Exp $
  .TP
  .B ftp_username
  This is the name of the user we use for handling anonymous FTP. The home
-@@ -858,7 +858,7 @@ This option should be the name of a dire
+@@ -941,7 +941,7 @@ This option should be the name of a dire
  directory should not be writable by the ftp user. This directory is used
  as a secure chroot() jail at times vsftpd does not require filesystem access.
  
@@ -73,7 +73,7 @@ $NetBSD: patch-af,v 1.4 2006/01/13 18:12:46 wiz Exp $
  .TP
  .B ssl_ciphers
  This option can be used to select which SSL ciphers vsftpd will allow for
-@@ -876,10 +876,10 @@ the manual page, on a per-user basis. Us
+@@ -959,10 +959,10 @@ the manual page, on a per-user basis. Us
  with an example. If you set
  .BR user_config_dir
  to be
@@ -86,7 +86,7 @@ $NetBSD: patch-af,v 1.4 2006/01/13 18:12:46 wiz Exp $
  for the duration of the session. The format of this file is as detailed in
  this manual page! PLEASE NOTE that not all settings are effective on a
  per-user basis. For example, many settings only prior to the user's session
-@@ -915,7 +915,7 @@ This option is the name of the file load
+@@ -998,7 +998,7 @@ This option is the name of the file load
  .BR userlist_enable
  option is active.
  
