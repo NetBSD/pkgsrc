@@ -1,4 +1,4 @@
-# $NetBSD: BSDOS.mk,v 1.25 2008/09/14 09:51:30 ahoka Exp $
+# $NetBSD: BSDOS.mk,v 1.26 2008/09/22 17:11:02 ahoka Exp $
 #
 # Variable definitions for the BSD/OS operating system.
 
@@ -24,7 +24,7 @@ EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
 .else
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,--export-dynamic
 .endif
-MOTIF_TYPE_DEFAULT?=	lesstif	# openmotif is not for closed platforms
+MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 NOLOGIN?=		/sbin/nologin
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		${SU} - root -c
