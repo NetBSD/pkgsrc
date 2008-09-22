@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/03/03 05:51:08 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2008/09/22 20:21:03 joerg Exp $
 
 DISTNAME=		tex2rtf-2.01-source
 PKGNAME=		tex2rtf-2.01
@@ -24,5 +24,5 @@ post-patch:
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/tex2rtf ${DESTDIR}${PREFIX}/bin/tex2rtf
 
-.include "../../x11/wxGTK/buildlink3.mk"
+.include "../../x11/wxGTK26/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
