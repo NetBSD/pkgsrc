@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7548 2008/09/18 14:34:39 tron Exp $
+$NetBSD: TODO,v 1.7549 2008/09/22 12:17:27 abs Exp $
 
 Suggested new packages
 ======================
@@ -1325,7 +1325,6 @@ Suggested package updates
 	o vmware-module-3.2.2
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vp-1.6
-	o vsftpd-2.0.6
 	o vte-0.16.14
 	o vttest-20071216
 	o vym-1.12.0 [pkg/39455]
