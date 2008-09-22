@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2332 2008/09/22 15:34:21 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2333 2008/09/22 15:44:48 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3996,3 +3996,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Downgraded devel/exempi to 2.0.0 [wiz 2008-09-22]
 	Updated www/ikiwiki to 2.64 [schmonz 2008-09-22]
 	Updated www/drupal6-translations to 20080922 [taca 2008-09-22]
+	Updated www/typo3 to 4.2.1nb1 [taca 2008-09-22]
