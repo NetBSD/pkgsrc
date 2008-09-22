@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/15 18:13:38 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/09/22 15:42:56 taca Exp $
+${EGDIR}/localconf.php
 ${TYPO3DIR}/${TYPO3NAME}/ChangeLog
 ${TYPO3DIR}/${TYPO3NAME}/GPL.txt
 ${TYPO3DIR}/${TYPO3NAME}/INSTALL.txt
@@ -3884,25 +3885,11 @@ ${TYPO3DIR}/${SITEDIR}/fileadmin/_temp_/.htaccess
 ${TYPO3DIR}/${SITEDIR}/fileadmin/_temp_/index.html
 ${TYPO3DIR}/${SITEDIR}/typo3conf/extTables.php
 ${TYPO3DIR}/${SITEDIR}/typo3conf/index.html
-${TYPO3DIR}/${SITEDIR}/typo3conf/localconf.php
 ${TYPO3DIR}/${SITEDIR}/typo3_src
 ${TYPO3DIR}/${SITEDIR}/typo3
 ${TYPO3DIR}/${SITEDIR}/t3lib
 ${TYPO3DIR}/${SITEDIR}/index.php
 ${TYPO3DIR}/${SITEDIR}/uploads/index.html
-@dirrm ${TYPO3DIR}/${SITEDIR}/uploads/tf
-@dirrm ${TYPO3DIR}/${SITEDIR}/uploads/pics
-@dirrm ${TYPO3DIR}/${SITEDIR}/uploads/media
-@dirrm ${TYPO3DIR}/${SITEDIR}/uploads
-@dirrm ${TYPO3DIR}/${SITEDIR}/typo3temp
-@dirrm ${TYPO3DIR}/${SITEDIR}/typo3conf/l10n
-@dirrm ${TYPO3DIR}/${SITEDIR}/typo3conf/ext
-@dirrm ${TYPO3DIR}/${SITEDIR}/typo3conf
-@dirrm ${TYPO3DIR}/${SITEDIR}/fileadmin/user_upload/_temp_
-@dirrm ${TYPO3DIR}/${SITEDIR}/fileadmin/user_upload
-@dirrm ${TYPO3DIR}/${SITEDIR}/fileadmin/_temp_
-@dirrm ${TYPO3DIR}/${SITEDIR}/fileadmin
-@dirrm ${TYPO3DIR}/${SITEDIR}
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/templates
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/wizard_sortpages/cshimages
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/typo3/sysext/wizard_sortpages
@@ -4288,3 +4275,4 @@ ${TYPO3DIR}/${SITEDIR}/uploads/index.html
 @dirrm ${TYPO3DIR}/${TYPO3NAME}/misc
 @dirrm ${TYPO3DIR}/${TYPO3NAME}
 @unexec ${RMDIR} %D/${TYPO3DIR} >/dev/null 2>&1
+@dirrm ${EGDIR}
