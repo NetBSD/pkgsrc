@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:38 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2008/09/22 20:21:03 joerg Exp $
 #
 
 DISTNAME=	DVDStyler-1.5.1
@@ -28,5 +28,5 @@ CONFIGURE_ARGS+=	--disable-libgnomeui
 .include "../../graphics/netpbm/buildlink3.mk"
 .include "../../graphics/wxsvg/buildlink3.mk"
 .include "../../multimedia/mjpegtools/buildlink3.mk"
-.include "../../x11/wxGTK/buildlink3.mk"
+.include "../../x11/wxGTK26/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

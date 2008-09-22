@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1 2008/09/08 18:42:21 ahoka Exp $
+# $NetBSD: options.mk,v 1.2 2008/09/22 20:21:04 joerg Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.vlc
 PKG_SUPPORTED_OPTIONS=		skins wxwidgets faad arts
@@ -16,7 +16,7 @@ CONFIGURE_ARGS+=	--disable-skins2
 .endif
 
 .if !empty(PKG_OPTIONS:Mwxwidgets)
-.include "../../x11/wxGTK/buildlink3.mk"
+.include "../../x11/wxGTK26/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-wxwidgets
 PLIST.wxwidgets=	yes
 .else
