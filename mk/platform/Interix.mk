@@ -1,4 +1,4 @@
-# $NetBSD: Interix.mk,v 1.57 2008/09/14 09:51:30 ahoka Exp $
+# $NetBSD: Interix.mk,v 1.58 2008/09/22 17:11:02 ahoka Exp $
 #
 # Variable definitions for the Interix operating system.
 
@@ -96,7 +96,7 @@ CONFIG_RPATH_OVERRIDE?=	config.rpath */config.rpath */*/config.rpath
 DEF_UMASK?=		002
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-E	# add symbols to the dynamic symbol table
 
-MOTIF_TYPE_DEFAULT?=	lesstif # openmotif is not for closed platforms
+MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 NOLOGIN?=		/bin/false
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 PKGDIRMODE?=		775
