@@ -1,4 +1,4 @@
-# $NetBSD: OSF1.mk,v 1.24 2008/09/14 09:51:30 ahoka Exp $
+# $NetBSD: OSF1.mk,v 1.25 2008/09/22 17:11:02 ahoka Exp $
 #
 # Variable definitions for the OSF1 operating system.
 
@@ -16,7 +16,7 @@ GROUPADD?=	/usr/sbin/groupadd
 CPP_PRECOMP_FLAGS?=	# unset
 DEF_UMASK?=		0022
 EXPORT_SYMBOLS_LDFLAGS?=-Wl,-non_hidden	# add symbols to the dynamic symbol table
-MOTIF_TYPE_DEFAULT?=	lesstif # openmotif is not for closed platforms
+MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 NOLOGIN?=		/etc/nologin
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		${SU} - root -c
