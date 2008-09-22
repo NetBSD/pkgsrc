@@ -1,10 +1,6 @@
-@comment $NetBSD: PLIST.ja,v 1.1.1.1 2008/08/17 05:35:06 taca Exp $
+@comment $NetBSD: PLIST.ja,v 1.2 2008/09/22 15:31:10 taca Exp $
 ${DRUPAL_BASE}/LICENSE.ja.txt
 ${DRUPAL_BASE}/STATUS.ja.txt
-${DRUPAL_BASE}/modules/system/translations/general.ja.po
-${DRUPAL_BASE}/modules/system/translations/includes.ja.po
-${DRUPAL_BASE}/profiles/default/translations/ja.po
-${DRUPAL_BASE}/modules/system/translations/misc.ja.po
 ${DRUPAL_BASE}/modules/aggregator/translations/modules-aggregator.ja.po
 ${DRUPAL_BASE}/modules/block/translations/modules-block.ja.po
 ${DRUPAL_BASE}/modules/blog/translations/modules-blog.ja.po
@@ -29,6 +25,9 @@ ${DRUPAL_BASE}/modules/profile/translations/modules-profile.ja.po
 ${DRUPAL_BASE}/modules/search/translations/modules-search.ja.po
 ${DRUPAL_BASE}/modules/statistics/translations/modules-statistics.ja.po
 ${DRUPAL_BASE}/modules/syslog/translations/modules-syslog.ja.po
+${DRUPAL_BASE}/modules/system/translations/general.ja.po
+${DRUPAL_BASE}/modules/system/translations/includes.ja.po
+${DRUPAL_BASE}/modules/system/translations/misc.ja.po
 ${DRUPAL_BASE}/modules/system/translations/modules-system.ja.po
 ${DRUPAL_BASE}/modules/taxonomy/translations/modules-taxonomy.ja.po
 ${DRUPAL_BASE}/modules/throttle/translations/modules-throttle.ja.po
@@ -38,6 +37,7 @@ ${DRUPAL_BASE}/modules/trigger/translations/modules-trigger.ja.po
 ${DRUPAL_BASE}/modules/update/translations/modules-update.ja.po
 ${DRUPAL_BASE}/modules/upload/translations/modules-upload.ja.po
 ${DRUPAL_BASE}/modules/user/translations/modules-user.ja.po
+${DRUPAL_BASE}/profiles/default/translations/ja.po
 ${DRUPAL_BASE}/themes/chameleon/translations/themes-chameleon.ja.po
 ${DRUPAL_BASE}/themes/garland/translations/themes-garland.ja.po
 ${DRUPAL_BASE}/themes/pushbutton/translations/themes-pushbutton.ja.po
