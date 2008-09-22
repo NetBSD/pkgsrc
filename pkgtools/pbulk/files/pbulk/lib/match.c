@@ -1,4 +1,4 @@
-/* $NetBSD: match.c,v 1.2 2007/06/25 21:38:44 joerg Exp $ */
+/* $NetBSD: match.c,v 1.3 2008/09/22 11:31:16 joerg Exp $ */
 
 /*
  * Copyright © 2002 Alistair G. Crooks.  All rights reserved.
@@ -456,11 +456,35 @@ simple_match(const char *pattern, const char *pkg)
 }
 
 /*
+ * Performs a fast check if pattern can ever match pkg.
+ * Returns 1 if a match is possible and 0 otherwise.
+ */
+static int
+quick_pkg_match(const char *pattern, const char *pkg)
+{
+#define simple(x) (isalnum((unsigned char)(x)) || (x) == '-')
+	if (!simple(pattern[0]))
+		return 1;
+	if (pattern[0] != pkg[0])
+		return 0;
+
+	if (!simple(pattern[1]))
+		return 1;
+	if (pattern[1] != pkg[1])
+		return 0;
+	return 1;
+#undef simple
+}
+
+/*
  * Match pkg against pattern, return 1 if matching, 0 else
  */
 int
 pkg_match(const char *pattern, const char *pkg)
 {
+	if (quick_pkg_match(pattern, pkg) == 0)
+		return 0;
+
 	if (strchr(pattern, '{') != (char *) NULL) {
 		/* emulate csh-type alternates */
 		return alternate_match(pattern, pkg);
