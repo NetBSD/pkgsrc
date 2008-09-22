@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2008/09/10 12:43:18 wiz Exp $
+# $NetBSD: options.mk,v 1.9 2008/09/22 08:46:32 tron Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.openldap-server
 PKG_SUPPORTED_OPTIONS=	bdb kerberos sasl slp inet6 smbk5pwd
@@ -16,20 +16,9 @@ PKG_SUGGESTED_OPTIONS=	bdb
 ###
 
 .if !empty(PKG_OPTIONS:Mbdb)
-.  if !empty(MACHINE_PLATFORM:MNetBSD-[0-4].*-*) && \
-      empty(MACHINE_PLATFORM:MNetBSD-4.99.*-*)
-.    include "../../databases/db46/buildlink3.mk"
-# "slapd" locks up when used with Berkeley DB 4.7.x on a NetBSD system which
-# uses SA based POSIX threads. We therefore use the "db46" package with
-# version 4.6.x of Berkeley DB. Please look at PR pkg/39500 for more details.
-BDB_TYPE=	db46
-.  else
-BDB_ACCEPTED=		db4 # db3?
-.    include "../../mk/bdb.buildlink3.mk"
-.  endif
-.endif
-BDB_TYPE?=		none
-.if ${BDB_TYPE} != "none"
+# "slapd" locks up when used with Berkeley DB 4.7.x. We therefore use the
+# "db46" package with version 4.6.x of Berkeley DB.
+.  include "../../databases/db46/buildlink3.mk"
 CONFIGURE_ARGS+=	--enable-bdb --enable-hdb
 TEST_TARGET=		test
 .else
