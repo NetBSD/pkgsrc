@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.11 2008/09/21 21:50:31 minskim Exp $
+# $NetBSD: replace.mk,v 1.12 2008/09/22 16:42:06 minskim Exp $
 #
 
 .if !defined(_RUBY_REPLACE_MK)
@@ -38,7 +38,9 @@ _REPLACE_RUBY_FIND_ARGS=\( ${_REPLACE_RUBY_PAT:S/-o//1} \)
 replace-ruby-dirs:
 	${RUN} cd ${WRKSRC} && \
 	    for d in ${REPLACE_RUBY_DIRS}; do \
-		test -d $$d && dirs="$$dirs $$d"; \
+		if [ -d $$d ]; then \
+		    dirs="$$dirs $$d"; \
+		fi; \
 	    done; \
 	    if [ -z "$$dirs" ]; then \
 		exit 0; \
