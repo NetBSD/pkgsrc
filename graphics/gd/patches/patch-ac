@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.7 2008/09/22 17:44:49 adam Exp $
+
+--- configure.orig	2008-09-22 17:26:32.000000000 +0200
++++ configure
+@@ -23117,7 +23117,7 @@ if test "${with_xpm+set}" = set; then
+      CPPFLAGS="$CPPFLAGS -I$withval/include"
+    fi
+ else
+-  withval=yes
++  withval=no
+ fi
+ 
+ 
+@@ -24163,6 +24163,8 @@ do
+   case $ac_option in
+   # Handling of the options.
+   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
++	: Avoid regenerating within pkgsrc
++	exit 0
+     ac_cs_recheck=: ;;
+   --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
+     echo "$ac_cs_version"; exit ;;
