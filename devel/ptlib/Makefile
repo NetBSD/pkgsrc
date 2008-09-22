@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2008/09/13 18:09:06 jmcneill Exp $
+# $NetBSD: Makefile,v 1.3 2008/09/22 23:36:54 jmcneill Exp $
 
-DISTNAME=	ptlib-snapshot-20080912
-PKGNAME=	ptlib-2.3.0.20080912
+DISTNAME=	ptlib-2.4.1
 CATEGORIES=	devel
-MASTER_SITES=	http://snapshots.ekiga.net/snapshots/sources/archives/
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/ptlib/2.4/}
+EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.ekiga.net/
@@ -13,7 +13,6 @@ CONFLICTS+=	pwlib-[0-9]*
 
 BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
 
-WRKSRC=			${WRKDIR}/ptlib
 USE_TOOLS+=		gmake tar pkg-config
 BUILD_TARGET=		optshared
 USE_LANGUAGES=		c c++
