@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.NetBSD,v 1.1 2008/02/05 19:17:24 hira Exp $
+# $NetBSD: Makefile.NetBSD,v 1.1.8.1 2008/09/22 19:02:13 cube Exp $
 #
 
 # systray quickstarter is broken with mutex handling?
@@ -6,10 +6,11 @@ CONFIGURE_ARGS+=	--disable-systray
 
 # *.pc files are required, but these don't exist on NetBSD.
 .if defined(X11_TYPE) && !empty(X11_TYPE:Mnative)
-USE_BUILTIN.freetype2=  no
-USE_BUILTIN.Xfixes=     no
-USE_BUILTIN.Xrandr=     no
-USE_BUILTIN.Xrender=    no
+. for _pkg_ in freetype2 Xfixes Xrandr Xrender
+.  if !exists(${X11BASE}/lib/pkgconfig/${_pkg_:tl}.pc)
+USE_BUILTIN.${_pkg_}=	no
+.  endif
+. endfor
 .endif
 
 .if ${MACHINE_ARCH} == "i386"
