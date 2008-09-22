@@ -1,0 +1,78 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/09/22 19:44:05 joerg Exp $
+
+--- configure.orig	2006-03-22 00:42:05.000000000 +0100
++++ configure	2006-10-08 06:26:28.000000000 +0200
+@@ -1820,7 +1820,7 @@ _ACEOF
+ 
+     DEFAULT_DEFAULT_wxUSE_MOTIF=1
+   ;;
+-  *-*-freebsd*)
++  *-*-freebsd* | *-*-dragonfly*)
+     USE_BSD=1
+     USE_FREEBSD=1
+     cat >>confdefs.h <<\_ACEOF
+@@ -23445,7 +23445,8 @@ SEARCH_INCLUDE="\
+     /usr/XFree86/include/X11  \
+     /usr/pkg/include          \
+                               \
+-    /usr/openwin/share/include"
++    /usr/openwin/share/include\
++    ${BUILDLINK_DIR}/include"
+ 
+ echo "$as_me:$LINENO: checking for libraries directory" >&5
+ echo $ECHO_N "checking for libraries directory... $ECHO_C" >&6
+@@ -36663,6 +36664,9 @@ echo "$as_me: WARNING: BeOS threads are 
+                     THREAD_OPTS="-mt $THREAD_OPTS"
+                 fi
+                 ;;
++	  *-*-dragonfly*)
++                THREAD_OPTS="-pthread $THREAD_OPTS"
++		;;
+           *-*-freebsd*)
+                                                 THREAD_OPTS="-kthread lthread $THREAD_OPTS c_r"
+                 ;;
+@@ -36797,7 +36801,7 @@ echo $ECHO_N "checking if more special f
+                                                                                                                 LDFLAGS="-L/usr/lib/threads $LDFLAGS"
+                 flag="-D_THREAD_SAFE"
+                 ;;
+-            *-freebsd*)
++            *-freebsd*|*-*-dragonfly*)
+                 flag="-D_THREAD_SAFE"
+                 ;;
+             *-hp-hpux* )
+@@ -42959,7 +42963,7 @@ echo "$as_me: WARNING: GStreamer install
+ 
+ 
+ 
+-        if test "x$GST_INSPECT" == "x"; then
++        if test "x$GST_INSPECT" = "x"; then
+             # Extract the first word of "gst-inspect", so it can be a program name with args.
+ set dummy gst-inspect; ac_word=$2
+ echo "$as_me:$LINENO: checking for $ac_word" >&5
+@@ -44788,7 +44792,7 @@ echo "${ECHO_T}$bakefile_cv_gcc31" >&6
+             SHARED_LD_CXX="\${CXX} -dynamiclib -single_module -headerpad_max_install_names -o"
+         fi
+ 
+-        if test "x$GCC" == "xyes"; then
++        if test "x$GCC" = "xyes"; then
+             PIC_FLAG="-dynamic -fPIC"
+         fi
+         if test "x$XLCC" = "xyes"; then
+@@ -45354,7 +45358,7 @@ EOF
+       ;;
+ 
+       powerpc-apple-macos* | \
+-      *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-k*bsd*-gnu | \
++      *-*-dragonfly* | *-*-freebsd* | *-*-openbsd* | *-*-netbsd* | *-*-k*bsd*-gnu | \
+       *-*-sunos4* | \
+       *-*-osf* | \
+       *-*-dgux5* | \
+@@ -45396,7 +45400,7 @@ echo "$as_me: error: unknown system type
+     SONAME_FLAG=
+ 
+     case "${BAKEFILE_HOST}" in
+-      *-*-linux* | *-*-freebsd* | *-*-k*bsd*-gnu )
++      *-*-linux* | *-*-freebsd* | *-*-k*bsd*-gnu | *-*-dragonfly*)
+         SONAME_FLAG="-Wl,-soname,"
+         USE_SOVERSION=1
+         USE_SOVERLINUX=1
