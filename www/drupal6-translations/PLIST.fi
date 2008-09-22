@@ -1,10 +1,6 @@
-@comment $NetBSD: PLIST.fi,v 1.1.1.1 2008/08/17 05:35:05 taca Exp $
+@comment $NetBSD: PLIST.fi,v 1.2 2008/09/22 15:31:10 taca Exp $
 ${DRUPAL_BASE}/LICENSE.fi.txt
 ${DRUPAL_BASE}/STATUS.fi.txt
-${DRUPAL_BASE}/modules/system/translations/general.fi.po
-${DRUPAL_BASE}/modules/system/translations/includes.fi.po
-${DRUPAL_BASE}/profiles/default/translations/fi.po
-${DRUPAL_BASE}/modules/system/translations/misc.fi.po
 ${DRUPAL_BASE}/modules/aggregator/translations/modules-aggregator.fi.po
 ${DRUPAL_BASE}/modules/block/translations/modules-block.fi.po
 ${DRUPAL_BASE}/modules/blog/translations/modules-blog.fi.po
@@ -29,6 +25,9 @@ ${DRUPAL_BASE}/modules/profile/translations/modules-profile.fi.po
 ${DRUPAL_BASE}/modules/search/translations/modules-search.fi.po
 ${DRUPAL_BASE}/modules/statistics/translations/modules-statistics.fi.po
 ${DRUPAL_BASE}/modules/syslog/translations/modules-syslog.fi.po
+${DRUPAL_BASE}/modules/system/translations/general.fi.po
+${DRUPAL_BASE}/modules/system/translations/includes.fi.po
+${DRUPAL_BASE}/modules/system/translations/misc.fi.po
 ${DRUPAL_BASE}/modules/system/translations/modules-system.fi.po
 ${DRUPAL_BASE}/modules/taxonomy/translations/modules-taxonomy.fi.po
 ${DRUPAL_BASE}/modules/throttle/translations/modules-throttle.fi.po
@@ -38,5 +37,6 @@ ${DRUPAL_BASE}/modules/trigger/translations/modules-trigger.fi.po
 ${DRUPAL_BASE}/modules/update/translations/modules-update.fi.po
 ${DRUPAL_BASE}/modules/upload/translations/modules-upload.fi.po
 ${DRUPAL_BASE}/modules/user/translations/modules-user.fi.po
+${DRUPAL_BASE}/profiles/default/translations/fi.po
 ${DRUPAL_BASE}/themes/chameleon/translations/themes-chameleon.fi.po
 ${DRUPAL_BASE}/themes/pushbutton/translations/themes-pushbutton.fi.po
