@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.39 2008/09/16 19:29:59 joerg Exp $
+# $NetBSD: Makefile,v 1.40 2008/09/22 04:40:56 obache Exp $
 #
 
 DISTNAME=	Trac-0.11.1
-PKGREVISION=	2
+PKGREVISION=	3
 PKGNAME=	${DISTNAME:tl}
-EGG_NAME=	${DISTNAME}
 CATEGORIES=	devel www
 MASTER_SITES=	http://ftp.edgewall.org/pub/trac/ \
 		ftp://ftp.edgewall.org/pub/trac/
@@ -13,8 +12,12 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://trac.edgewall.org/
 COMMENT=	Subversion repository browser, wiki, and issue tracking system
 
-DEPENDS+=	${PYPKGPREFIX}-genshi>=0:../../www/py-genshi
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+DEPENDS+=	${PYPKGPREFIX}-genshi>=0.5:../../www/py-genshi
 DEPENDS+=	${PYPKGPREFIX}-subversion>=1.1.0:../../devel/py-subversion
+
+USE_TOOLS+=	pax
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.trac
 PKG_OPTIONS_REQUIRED_GROUPS=	db
@@ -26,6 +29,7 @@ PKG_SUGGESTED_OPTIONS=	sqlite
 PYDISTUTILSPKG=	YES
 PY_PATCHPLIST=	YES
 PYTHON_PATCH_SCRIPTS=	cgi-bin/trac.* contrib/*.py contrib/*-hook
+PYTHON_PATCH_SCRIPTS+=	trac/tests/functional/*.py
 
 .include "../../lang/python/application.mk"
 
@@ -50,10 +54,11 @@ EGDIR=		${PREFIX}/share/examples/trac
 CGIBINDIR=	${PREFIX}/libexec/trac
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_PROGRAM_DIR} ${CGIBINDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/contrib/[A-qs-v]* ${EGDIR}
-	${INSTALL_SCRIPT} ${WRKSRC}/cgi-bin/trac.* ${CGIBINDIR}
+	${INSTALL_DATA_DIR} ${DESTDIR}${EGDIR}
+	${INSTALL_PROGRAM_DIR} ${DESTDIR}${CGIBINDIR}
+	${INSTALL_SCRIPT} ${WRKSRC}/cgi-bin/trac.* ${DESTDIR}${CGIBINDIR}
+	cd ${WRKSRC}/contrib && pax -rwppm -s ',./rpm/.*$$,,' -s ',./rpm$$,,' \
+		. ${DESTDIR}${EGDIR}
 
 .include "../../lang/python/egg.mk"
 .include "../../mk/bsd.pkg.mk"
