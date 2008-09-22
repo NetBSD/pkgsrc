@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.1.1.1 2008/09/22 19:44:05 joerg Exp $
+# $NetBSD: Makefile.common,v 1.2 2008/09/22 19:58:52 joerg Exp $
 #
 
 DISTNAME=		wxGTK-2.6.3
@@ -9,8 +9,8 @@ EXTRACT_SUFX=		.tar.bz2
 MAINTAINER=		joerg@NetBSD.org
 HOMEPAGE=		http://www.wxwidgets.org/
 
-PATCHDIR=		${.CURDIR}/../../x11/wxGTK/patches
-DISTINFO_FILE=		${.CURDIR}/../../x11/wxGTK/distinfo
+PATCHDIR=		${.CURDIR}/../../x11/wxGTK26/patches
+DISTINFO_FILE=		${.CURDIR}/../../x11/wxGTK26/distinfo
 
 PATCHFILES=		${DISTNAME}-libtool.diff3.bz2
 PATCH_SITES=		${MASTER_SITE_LOCAL}
