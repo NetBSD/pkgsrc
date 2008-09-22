@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2008/09/22 15:09:05 schmonz Exp $
+
+--- IkiWiki/Plugin/editdiff.pm.orig	2008-09-08 12:30:11.000000000 -0400
++++ IkiWiki/Plugin/editdiff.pm
+@@ -56,7 +56,7 @@ sub formbuilder_setup { #{{{
+ 	my %params=@_;
+ 	my $form=$params{form};
+ 
+-	return if defined ! $form->field("do") || $form->field("do") ne "edit";
++	return if ! defined $form->field("do") || $form->field("do") ne "edit";
+ 
+ 	my $page=$form->field("page");
+ 	$page = IkiWiki::possibly_foolish_untaint($page);
