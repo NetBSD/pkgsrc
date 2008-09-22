@@ -1,0 +1,51 @@
+$NetBSD: patch-ac,v 1.1 2008/09/22 15:09:05 schmonz Exp $
+
+--- IkiWiki/Plugin/aggregate.pm.orig	2008-09-08 12:30:11.000000000 -0400
++++ IkiWiki/Plugin/aggregate.pm
+@@ -421,7 +421,7 @@ sub expire () { #{{{
+ 		my $count=0;
+ 		my %seen;
+ 		foreach my $item (sort { $IkiWiki::pagectime{$b->{page}} <=> $IkiWiki::pagectime{$a->{page}} }
+-		                  grep { exists $_->{page} && $_->{feed} eq $feed->{name} && $IkiWiki::pagectime{$_->{page}} }
++		                  grep { exists $_->{page} && $_->{feed} eq $feed->{name} }
+ 		                  values %guids) {
+ 			if ($feed->{expireage}) {
+ 				my $days_old = (time - $IkiWiki::pagectime{$item->{page}}) / 60 / 60 / 24;
+@@ -520,12 +520,18 @@ sub aggregate (@) { #{{{
+ 		}
+ 
+ 		foreach my $entry ($f->entries) {
++			my $content=$content=$entry->content->body;
++			# atom feeds may have no content, only a summary
++			if (! defined $content && ref $entry->summary) {
++				$content=$entry->summary->body;
++			}
++
+ 			add_page(
+ 				feed => $feed,
+ 				copyright => $f->copyright,
+ 				title => defined $entry->title ? decode_entities($entry->title) : "untitled",
+ 				link => $entry->link,
+-				content => defined $entry->content->body ? $entry->content->body : "",
++				content => defined $content ? $content : "",
+ 				guid => defined $entry->id ? $entry->id : time."_".$feed->{name},
+ 				ctime => $entry->issued ? ($entry->issued->epoch || time) : time,
+ 			);
+@@ -612,10 +618,13 @@ sub add_page (@) { #{{{
+ 	writefile(htmlfn($guid->{page}), $config{srcdir},
+ 		$template->output);
+ 
+-	# Set the mtime, this lets the build process get the right creation
+-	# time on record for the new page.
+-	utime $mtime, $mtime, pagefile($guid->{page})
+-		if defined $mtime && $mtime <= time;
++	if (defined $mtime && $mtime <= time) {
++		# Set the mtime, this lets the build process get the right
++		# creation time on record for the new page.
++		utime $mtime, $mtime, pagefile($guid->{page});
++		# Store it in pagectime for expiry code to use also.
++		$IkiWiki::pagectime{$guid->{page}}=$mtime;
++	}
+ } #}}}
+ 
+ sub htmlescape ($) { #{{{
