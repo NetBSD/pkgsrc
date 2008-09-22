@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2331 2008/09/22 15:09:18 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.2332 2008/09/22 15:34:21 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3995,3 +3995,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/vsftpd to 2.0.7 [abs 2008-09-22]
 	Downgraded devel/exempi to 2.0.0 [wiz 2008-09-22]
 	Updated www/ikiwiki to 2.64 [schmonz 2008-09-22]
+	Updated www/drupal6-translations to 20080922 [taca 2008-09-22]
