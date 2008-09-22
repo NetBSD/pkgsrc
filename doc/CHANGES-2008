@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2325 2008/09/22 04:41:12 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2326 2008/09/22 08:34:22 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3989,3 +3989,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/mailman to 2.1.10nb2 [martti 2008-09-21]
 	Updated www/rails to 2.1.1nb1 [minskim 2008-09-21]
 	Updated www/trac to 0.11.1nb3 [obache 2008-09-22]
+	Updated databases/sqlite3 to 3.6.2nb1 [obache 2008-09-22]
