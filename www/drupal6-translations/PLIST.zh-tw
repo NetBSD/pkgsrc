@@ -1,10 +1,6 @@
-@comment $NetBSD: PLIST.zh-tw,v 1.1 2008/09/01 15:16:25 taca Exp $
+@comment $NetBSD: PLIST.zh-tw,v 1.2 2008/09/22 15:31:10 taca Exp $
 ${DRUPAL_BASE}/LICENSE.zh-hant.txt
 ${DRUPAL_BASE}/STATUS.zh-hant.txt
-${DRUPAL_BASE}/modules/system/translations/general.zh-hant.po
-${DRUPAL_BASE}/modules/system/translations/includes.zh-hant.po
-${DRUPAL_BASE}/profiles/default/translations/zh-hant.po
-${DRUPAL_BASE}/modules/system/translations/misc.zh-hant.po
 ${DRUPAL_BASE}/modules/aggregator/translations/modules-aggregator.zh-hant.po
 ${DRUPAL_BASE}/modules/block/translations/modules-block.zh-hant.po
 ${DRUPAL_BASE}/modules/blog/translations/modules-blog.zh-hant.po
@@ -29,6 +25,9 @@ ${DRUPAL_BASE}/modules/profile/translations/modules-profile.zh-hant.po
 ${DRUPAL_BASE}/modules/search/translations/modules-search.zh-hant.po
 ${DRUPAL_BASE}/modules/statistics/translations/modules-statistics.zh-hant.po
 ${DRUPAL_BASE}/modules/syslog/translations/modules-syslog.zh-hant.po
+${DRUPAL_BASE}/modules/system/translations/general.zh-hant.po
+${DRUPAL_BASE}/modules/system/translations/includes.zh-hant.po
+${DRUPAL_BASE}/modules/system/translations/misc.zh-hant.po
 ${DRUPAL_BASE}/modules/system/translations/modules-system.zh-hant.po
 ${DRUPAL_BASE}/modules/taxonomy/translations/modules-taxonomy.zh-hant.po
 ${DRUPAL_BASE}/modules/throttle/translations/modules-throttle.zh-hant.po
@@ -38,6 +37,7 @@ ${DRUPAL_BASE}/modules/trigger/translations/modules-trigger.zh-hant.po
 ${DRUPAL_BASE}/modules/update/translations/modules-update.zh-hant.po
 ${DRUPAL_BASE}/modules/upload/translations/modules-upload.zh-hant.po
 ${DRUPAL_BASE}/modules/user/translations/modules-user.zh-hant.po
+${DRUPAL_BASE}/profiles/default/translations/zh-hant.po
 ${DRUPAL_BASE}/themes/chameleon/translations/themes-chameleon.zh-hant.po
 ${DRUPAL_BASE}/themes/garland/translations/themes-garland.zh-hant.po
 ${DRUPAL_BASE}/themes/pushbutton/translations/themes-pushbutton.zh-hant.po
