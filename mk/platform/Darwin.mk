@@ -1,4 +1,4 @@
-# $NetBSD: Darwin.mk,v 1.32 2008/09/14 09:51:30 ahoka Exp $
+# $NetBSD: Darwin.mk,v 1.33 2008/09/22 17:11:02 ahoka Exp $
 #
 # Variable definitions for the Darwin operating system.
 
@@ -42,7 +42,7 @@ CPP_PRECOMP_FLAGS?=	-no-cpp-precomp	-isystem /usr/include
 DEF_UMASK?=		0022
 DEFAULT_SERIAL_DEVICE?=	/dev/null
 EXPORT_SYMBOLS_LDFLAGS?=	# Don't add symbols to the dynamic symbol table
-MOTIF_TYPE_DEFAULT?=	lesstif # openmotif is not for closed platforms
+MOTIF_TYPE_DEFAULT?=	openmotif	# default 2.0 compatible libs type
 NOLOGIN?=		/usr/bin/false
 PKG_TOOLS_BIN?=		${LOCALBASE}/sbin
 ROOT_CMD?=		/usr/bin/sudo ${SH} -c
