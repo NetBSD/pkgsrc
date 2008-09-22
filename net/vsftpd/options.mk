@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2007/12/22 23:07:37 minskim Exp $
+# $NetBSD: options.mk,v 1.6 2008/09/22 11:02:21 abs Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.vsftpd
 PKG_SUPPORTED_OPTIONS=	pam ssl tcpwrappers
@@ -20,11 +20,12 @@ LIBS+=		-L${PAMBASE}
 LIBS+=		${COMPILER_RPATH_FLAG}${PAMBASE}
 LIBS+=		-lpam
 .else
+LIBS.Linux=		-lcrypt
+#
 SUBST_CLASSES+=		pam
 SUBST_FILES.pam=	builddefs.h
 SUBST_SED.pam+=		-e 's,define VSF_BUILD_PAM,undef VSF_BUILD_PAM,g'
 SUBST_STAGE.pam=	pre-configure
-LIBS.Linux=		-lcrypt
 .endif
 
 .if !empty(PKG_OPTIONS:Mssl)
