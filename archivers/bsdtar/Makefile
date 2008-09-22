@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/07/14 14:56:50 joerg Exp $
+# $NetBSD: Makefile,v 1.11 2008/09/22 20:19:18 joerg Exp $
 #
 
 DISTNAME=	bsdtar-2.5.5
@@ -36,7 +36,7 @@ FILESDIR.bzip2?=	${.CURDIR}/../../archivers/bzip2/files
 FILESDIR.libarchive?=	${.CURDIR}/../../archivers/libarchive/files
 FILESDIR.zlib?=		${.CURDIR}/../../devel/zlib/files
 
-CONFIGURE_ARGS+=	--enable-bsdtar=static
+CONFIGURE_ARGS+=	--enable-bsdtar=static --disable-shared
 
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
