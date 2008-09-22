@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.84 2008/07/31 19:47:10 manu Exp $
+# $NetBSD: Makefile,v 1.85 2008/09/22 18:19:41 minskim Exp $
 
 DISTNAME=	curl-7.18.0
 PKGREVISION=	3
@@ -31,7 +31,7 @@ TEST_TARGET=		check
 USE_TOOLS+=		perl
 .endif
 
-.if (${OPSYS} == "Darwin" || ${OPSYS} == "NetBSD") && ${_USE_DESTDIR} == "no"
+.if ${_USE_DESTDIR} == "no"
 PRIVILEGED_STAGES+=	clean
 .endif
 
