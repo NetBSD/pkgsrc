@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/09/04 15:34:30 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/09/22 15:09:05 schmonz Exp $
 bin/ikiwiki
 bin/ikiwiki-makerepo
 bin/ikiwiki-transition
@@ -14,9 +14,8 @@ ${PLIST.w3m}share/doc/ikiwiki/w3mmode.html
 ${PLIST.w3m}share/doc/ikiwiki/w3mmode/ikiwiki.setup
 share/examples/ikiwiki/auto.setup
 share/examples/ikiwiki/wikilist
-share/ikiwiki/basewiki/blog.mdwn
+share/ikiwiki/basewiki/directive.mdwn
 share/ikiwiki/basewiki/favicon.ico
-share/ikiwiki/basewiki/helponformatting.mdwn
 share/ikiwiki/basewiki/ikiwiki.mdwn
 share/ikiwiki/basewiki/ikiwiki/blog.mdwn
 share/ikiwiki/basewiki/ikiwiki/directive.mdwn
@@ -32,22 +31,57 @@ share/ikiwiki/basewiki/ikiwiki/subpage/linkingrules.mdwn
 share/ikiwiki/basewiki/ikiwiki/wikilink.mdwn
 share/ikiwiki/basewiki/index.mdwn
 share/ikiwiki/basewiki/local.css
-share/ikiwiki/basewiki/markdown.mdwn
-share/ikiwiki/basewiki/openid.mdwn
-share/ikiwiki/basewiki/pagespec.mdwn
-share/ikiwiki/basewiki/preprocessordirective.mdwn
 share/ikiwiki/basewiki/recentchanges.mdwn
 share/ikiwiki/basewiki/sandbox.mdwn
 share/ikiwiki/basewiki/shortcuts.mdwn
 share/ikiwiki/basewiki/style.css
-share/ikiwiki/basewiki/subpage.mdwn
 share/ikiwiki/basewiki/templates.mdwn
 share/ikiwiki/basewiki/templates/note.mdwn
 share/ikiwiki/basewiki/templates/popup.mdwn
 share/ikiwiki/basewiki/wikiicons/diff.png
 share/ikiwiki/basewiki/wikiicons/openidlogin-bg.gif
 share/ikiwiki/basewiki/wikiicons/search-bg.gif
-share/ikiwiki/basewiki/wikilink.mdwn
+share/ikiwiki/directives/ikiwiki/directive/aggregate.mdwn
+share/ikiwiki/directives/ikiwiki/directive/brokenlinks.mdwn
+share/ikiwiki/directives/ikiwiki/directive/calendar.mdwn
+share/ikiwiki/directives/ikiwiki/directive/color.mdwn
+share/ikiwiki/directives/ikiwiki/directive/copy.mdwn
+share/ikiwiki/directives/ikiwiki/directive/cut.mdwn
+share/ikiwiki/directives/ikiwiki/directive/cutpaste.mdwn
+share/ikiwiki/directives/ikiwiki/directive/edittemplate.mdwn
+share/ikiwiki/directives/ikiwiki/directive/fortune.mdwn
+share/ikiwiki/directives/ikiwiki/directive/graph.mdwn
+share/ikiwiki/directives/ikiwiki/directive/haiku.mdwn
+share/ikiwiki/directives/ikiwiki/directive/if.mdwn
+share/ikiwiki/directives/ikiwiki/directive/img.mdwn
+share/ikiwiki/directives/ikiwiki/directive/inline.mdwn
+share/ikiwiki/directives/ikiwiki/directive/linkmap.mdwn
+share/ikiwiki/directives/ikiwiki/directive/listdirectives.mdwn
+share/ikiwiki/directives/ikiwiki/directive/map.mdwn
+share/ikiwiki/directives/ikiwiki/directive/meta.mdwn
+share/ikiwiki/directives/ikiwiki/directive/more.mdwn
+share/ikiwiki/directives/ikiwiki/directive/orphans.mdwn
+share/ikiwiki/directives/ikiwiki/directive/pagecount.mdwn
+share/ikiwiki/directives/ikiwiki/directive/pagestats.mdwn
+share/ikiwiki/directives/ikiwiki/directive/pagetemplate.mdwn
+share/ikiwiki/directives/ikiwiki/directive/paste.mdwn
+share/ikiwiki/directives/ikiwiki/directive/ping.mdwn
+share/ikiwiki/directives/ikiwiki/directive/poll.mdwn
+share/ikiwiki/directives/ikiwiki/directive/polygen.mdwn
+share/ikiwiki/directives/ikiwiki/directive/postsparkline.mdwn
+share/ikiwiki/directives/ikiwiki/directive/progress.mdwn
+share/ikiwiki/directives/ikiwiki/directive/shortcut.mdwn
+share/ikiwiki/directives/ikiwiki/directive/sparkline.mdwn
+share/ikiwiki/directives/ikiwiki/directive/table.mdwn
+share/ikiwiki/directives/ikiwiki/directive/tag.mdwn
+share/ikiwiki/directives/ikiwiki/directive/taglink.mdwn
+share/ikiwiki/directives/ikiwiki/directive/template.mdwn
+share/ikiwiki/directives/ikiwiki/directive/testpagespec.mdwn
+share/ikiwiki/directives/ikiwiki/directive/teximg.mdwn
+share/ikiwiki/directives/ikiwiki/directive/toc.mdwn
+share/ikiwiki/directives/ikiwiki/directive/toggle.mdwn
+share/ikiwiki/directives/ikiwiki/directive/toggleable.mdwn
+share/ikiwiki/directives/ikiwiki/directive/version.mdwn
 share/ikiwiki/smiley/smileys.mdwn
 share/ikiwiki/smiley/smileys/alert.png
 share/ikiwiki/smiley/smileys/angry.png
@@ -113,6 +147,9 @@ share/locale/vi/LC_MESSAGES/ikiwiki.mo
 @dirrm share/ikiwiki/templates
 @dirrm share/ikiwiki/smiley/smileys
 @dirrm share/ikiwiki/smiley
+@dirrm share/ikiwiki/directives/ikiwiki/directive
+@dirrm share/ikiwiki/directives/ikiwiki
+@dirrm share/ikiwiki/directives
 @dirrm share/ikiwiki/basewiki/wikiicons
 @dirrm share/ikiwiki/basewiki/templates
 @dirrm share/ikiwiki/basewiki/ikiwiki/subpage
