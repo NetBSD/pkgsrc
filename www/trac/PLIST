@@ -1,8 +1,15 @@
-@comment $NetBSD: PLIST,v 1.14 2008/09/12 10:18:11 abs Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/09/22 04:40:56 obache Exp $
 bin/trac-admin
 bin/tracd
 libexec/trac/trac.cgi
 libexec/trac/trac.fcgi
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/entry_points.txt
+${PYSITELIB}/${EGG_INFODIR}/not-zip-safe
+${PYSITELIB}/${EGG_INFODIR}/requires.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
 ${PYSITELIB}/trac/__init__.py
 ${PYSITELIB}/trac/__init__.pyc
 ${PYSITELIB}/trac/__init__.pyo
@@ -569,15 +576,45 @@ share/examples/trac/sourceforge2trac.py
 share/examples/trac/trac-post-commit-hook
 share/examples/trac/trac-post-commit-hook.cmd
 share/examples/trac/trac-pre-commit-hook
+share/examples/trac/workflow/README
+share/examples/trac/workflow/enterprise-workflow.ini
+share/examples/trac/workflow/migrate_original_to_basic.py
+share/examples/trac/workflow/opensource-workflow.ini
+share/examples/trac/workflow/showworkflow
+share/examples/trac/workflow/simple-workflow.ini
+share/examples/trac/workflow/trivial-workflow.ini
+share/examples/trac/workflow/workflow_parser.py
 @dirrm libexec/trac
+@dirrm share/examples/trac/workflow
 @dirrm share/examples/trac
+@dirrm ${PYSITELIB}/trac/wiki/templates
+@dirrm ${PYSITELIB}/trac/wiki/default-pages
 @dirrm ${PYSITELIB}/trac/wiki
 @dirrm ${PYSITELIB}/trac/web
 @dirrm ${PYSITELIB}/trac/versioncontrol/web_ui
+@dirrm ${PYSITELIB}/trac/versioncontrol/templates
 @dirrm ${PYSITELIB}/trac/versioncontrol
 @dirrm ${PYSITELIB}/trac/util
 @dirrm ${PYSITELIB}/trac/upgrades
+@dirrm ${PYSITELIB}/trac/timeline/templates
+@dirrm ${PYSITELIB}/trac/timeline
+@dirrm ${PYSITELIB}/trac/ticket/workflows
+@dirrm ${PYSITELIB}/trac/ticket/templates
 @dirrm ${PYSITELIB}/trac/ticket
+@dirrm ${PYSITELIB}/trac/tests/functional
+@dirrm ${PYSITELIB}/trac/tests
+@dirrm ${PYSITELIB}/trac/templates
+@dirrm ${PYSITELIB}/trac/search/templates
+@dirrm ${PYSITELIB}/trac/search
+@dirrm ${PYSITELIB}/trac/prefs/templates
+@dirrm ${PYSITELIB}/trac/prefs
 @dirrm ${PYSITELIB}/trac/mimeview
+@dirrm ${PYSITELIB}/trac/htdocs/js
+@dirrm ${PYSITELIB}/trac/htdocs/guide
+@dirrm ${PYSITELIB}/trac/htdocs/css
+@dirrm ${PYSITELIB}/trac/htdocs
 @dirrm ${PYSITELIB}/trac/db
+@dirrm ${PYSITELIB}/trac/admin/templates
+@dirrm ${PYSITELIB}/trac/admin
 @dirrm ${PYSITELIB}/trac
+@dirrm ${PYSITELIB}/${EGG_INFODIR}
