@@ -1,11 +1,7 @@
-@comment $NetBSD: PLIST.lt,v 1.1.1.1 2008/08/17 05:35:06 taca Exp $
+@comment $NetBSD: PLIST.lt,v 1.2 2008/09/22 15:31:10 taca Exp $
 ${DRUPAL_BASE}/LICENSE.lt.txt
 ${DRUPAL_BASE}/README.lt.txt
 ${DRUPAL_BASE}/STATUS.lt.txt
-${DRUPAL_BASE}/modules/system/translations/general.lt.po
-${DRUPAL_BASE}/modules/system/translations/includes.lt.po
-${DRUPAL_BASE}/profiles/default/translations/lt.po
-${DRUPAL_BASE}/modules/system/translations/misc.lt.po
 ${DRUPAL_BASE}/modules/block/translations/modules-block.lt.po
 ${DRUPAL_BASE}/modules/blog/translations/modules-blog.lt.po
 ${DRUPAL_BASE}/modules/blogapi/translations/modules-blogapi.lt.po
@@ -28,7 +24,11 @@ ${DRUPAL_BASE}/modules/profile/translations/modules-profile.lt.po
 ${DRUPAL_BASE}/modules/search/translations/modules-search.lt.po
 ${DRUPAL_BASE}/modules/statistics/translations/modules-statistics.lt.po
 ${DRUPAL_BASE}/modules/syslog/translations/modules-syslog.lt.po
+${DRUPAL_BASE}/modules/system/translations/general.lt.po
+${DRUPAL_BASE}/modules/system/translations/includes.lt.po
+${DRUPAL_BASE}/modules/system/translations/misc.lt.po
 ${DRUPAL_BASE}/modules/system/translations/modules-system.lt.po
+${DRUPAL_BASE}/modules/system/translations/root.lt.po
 ${DRUPAL_BASE}/modules/taxonomy/translations/modules-taxonomy.lt.po
 ${DRUPAL_BASE}/modules/throttle/translations/modules-throttle.lt.po
 ${DRUPAL_BASE}/modules/tracker/translations/modules-tracker.lt.po
@@ -36,6 +36,6 @@ ${DRUPAL_BASE}/modules/translation/translations/modules-translation.lt.po
 ${DRUPAL_BASE}/modules/trigger/translations/modules-trigger.lt.po
 ${DRUPAL_BASE}/modules/update/translations/modules-update.lt.po
 ${DRUPAL_BASE}/modules/user/translations/modules-user.lt.po
-${DRUPAL_BASE}/modules/system/translations/root.lt.po
+${DRUPAL_BASE}/profiles/default/translations/lt.po
 ${DRUPAL_BASE}/themes/chameleon/translations/themes-chameleon.lt.po
 ${DRUPAL_BASE}/themes/garland/translations/themes-garland.lt.po
