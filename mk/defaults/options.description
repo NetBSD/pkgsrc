@@ -55,8 +55,8 @@ dar-int64		Use 64-bit integers for file lengths in Dar.
 darwin			Build and/or run on Darwin and Mac OS X.
 db4			Enable db4 support.
 dbh			Enable DBH support.
-debug			Enable debugging facilities in the package.
 dbus			Enable dbus (desktop bus) support.
+debug			Enable debugging facilities in the package.
 deliver-suid		Install deliver executable setuid root.
 djbdns-ignoreip2	Patch to treat certain responses as NXDOMAIN.
 djbdns-tinydns64	Patch to fix tinydns-data on 64-bit platforms.
@@ -218,6 +218,7 @@ libao			Enable libao support.
 libgpod			Enable libgpod support.
 libiconv-cp932		Add supplemental support for CP932
 libmodplug		Use libmodplug for MOD and MOD-like music formats.
+libmtp			Enable MTP via libmtp support.
 libofx			Enable OFX support.
 libspiff		Use libspiff for XML shareable playlist support.
 libssh2 	 	Use libssh2 for SSHv2 protocol support.
@@ -238,7 +239,6 @@ memtesplus-serialconsole	Enable use of serial console for memtest+
 mex			Enable matlab mex support (Linux and Solaris only).
 mikmod			Enable MikMod sound library.
 mitshm			Enable MIT-SHM X extension support.
-simd			Enable MMX/3DNOW/SSE/Altivec support.
 mlib			Enable usage of medialib (SunOS only).
 mmx			Enable MMX support (i386 only).
 modperl1		Use modperl 1.x as the CGI manager (with Apache 1.x).
@@ -246,7 +246,6 @@ modperl2		Use modperl 2.x as the CGI manager (with Apache 2.x).
 modplug			Use for decoding mod-like music formats.
 motif			Enable motif support.
 mozilla			Use mozilla as gecko rendering engine.
-official-mozilla-branding	Use official Mozilla reg. trademarks and logos.
 mozilla-jemalloc	Enable building with Mozilla'a jemalloc
 mozilla-single-profile	Enable single profiles on mozilla browsers
 mpcdec			Enable the portable Musepack decoder library.
@@ -272,6 +271,7 @@ nntpcache-pgp		Enable pgp signed nocem support.
 nox11			Do not link against x11 libraries.	
 nspluginwrapper		Enable running non native netscape compatible plugins
 ocamlduce		Enable OcamlDuce support.
+official-mozilla-branding	Use official Mozilla reg. trademarks and logos.
 ogg			Enable Ogg support.
 oniguruma		Support regular expressions via the oniguruma library.
 online-tests		Requiring Internet connectivity for "make test".
@@ -320,6 +320,7 @@ sdl			Use SDL as display library.
 seamonkey		Use seamonkey as gecko rendering engine.
 sendmail-socketmap	Enable Sendmail SOCKETMAP support.
 sieve			Enable sieve support.
+simd			Enable MMX/3DNOW/SSE/Altivec support.
 sj3			Use SJ3 for Kana-to-Kanji conversion.
 skey			Enable S/Key support.
 slang			Enable S-Lang support.
@@ -405,8 +406,8 @@ winbind			Enable name-service switch daemon support using Windows Servers.
 wnn4			Use wnn for Kana-to-Kanji conversion.
 x11			Enable X11 support.
 xaw			Enable Xaw support.
-xft2			Enable Xft support.
 xblast-mini		Use a 480x392 window instead a 960x784 window in xblast
+xft2			Enable Xft support.
 xlockmore-allow-root	Allow root to get access.
 xlockmore-dpms		Use DPMS.
 xml			Enable XML support.
