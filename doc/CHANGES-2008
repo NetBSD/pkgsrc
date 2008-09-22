@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2327 2008/09/22 08:47:07 tron Exp $
+$NetBSD: CHANGES-2008,v 1.2328 2008/09/22 08:53:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3991,3 +3991,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/trac to 0.11.1nb3 [obache 2008-09-22]
 	Updated databases/sqlite3 to 3.6.2nb1 [obache 2008-09-22]
 	Updated databases/openldap-server to 2.4.11nb3 [tron 2008-09-22]
+	Updated textproc/aspell to 0.60.6nb1 [wiz 2008-09-22]
