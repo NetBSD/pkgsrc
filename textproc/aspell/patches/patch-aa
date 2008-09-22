@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.11 2008/09/22 08:53:14 wiz Exp $
+
+http://sourceforge.net/tracker/index.php?func=detail&aid=2016300&group_id=245&atid=100245
+
+--- gen/mk-static-filter.pl.orig	2007-12-03 06:43:09.000000000 +0000
++++ gen/mk-static-filter.pl
+@@ -159,7 +159,7 @@ while ($filter = shift @filterhashes) {
+   printf STATICFILTERS "\n  const KeyInfo * ".${$filter}{"NAME"}."_options_begin = ".
+                                               ${$filter}{"NAME"}."_options;\n";
+   # If structure is empty, set options_end to same as options_begin.
+-  if (%{$filter}) {
++  if ($firstopt) {
+     printf STATICFILTERS "\n  const KeyInfo * ".${$filter}{"NAME"}."_options_end = ".
+                                                 ${$filter}{"NAME"}."_options;\n";
+   } else {
