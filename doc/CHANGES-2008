@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2335 2008/09/23 07:01:00 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2336 2008/09/23 15:50:45 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4003,3 +4003,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Moved net/ekiga-devel to net/ekiga [jmcneill 2008-09-22]
 	Updated net/ekiga to 3.0.0 [jmcneill 2008-09-22]
 	Updated www/typolight-translations to 20080922 [taca 2008-09-23]
+	Updated net/msdl to 1.2.2 [obache 2008-09-23]
