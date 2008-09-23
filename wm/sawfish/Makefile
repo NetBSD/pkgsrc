@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.48 2008/04/04 21:55:51 tnn Exp $
+# $NetBSD: Makefile,v 1.49 2008/09/23 19:10:52 tnn Exp $
 #
 
-DISTNAME=		sawfish-${SF_VERS}
-SF_VERS=		1.3.3
+DISTNAME=		sawfish-1.3.4
 CATEGORIES=		x11 wm
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sawmill/}
 
@@ -29,7 +28,6 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 
 INFO_FILES=		YES
-PLIST_SUBST+=		SF_VERS=${SF_VERS:Q}
 
 SUBST_CLASSES+=		env
 SUBST_STAGE.env=	pre-configure
