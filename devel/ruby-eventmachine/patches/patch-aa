@@ -1,22 +1,28 @@
-$NetBSD: patch-aa,v 1.1 2008/09/15 09:08:19 taca Exp $
+$NetBSD: patch-aa,v 1.2 2008/09/23 08:06:04 taca Exp $
 
---- ext/em.cpp.orig	2008-09-15 14:10:15.000000000 +0900
+--- ext/em.cpp.orig	2008-09-19 21:55:47.000000000 +0900
 +++ ext/em.cpp
-@@ -1417,7 +1417,7 @@ void EventMachine_t::ArmKqueueWriter (Ev
+@@ -1417,7 +1417,11 @@ void EventMachine_t::ArmKqueueWriter (Ev
  		if (!ed)
  			throw std::runtime_error ("added bad descriptor");
  		struct kevent k;
--		EV_SET (&k, ed->GetSocket(), EVFILT_WRITE, EV_ADD | EV_ONESHOT, 0, 0, ed);
++#ifdef __NetBSD__
 +		EV_SET (&k, ed->GetSocket(), EVFILT_WRITE, EV_ADD | EV_ONESHOT, 0, 0, (intptr_t)ed);
++#else
+ 		EV_SET (&k, ed->GetSocket(), EVFILT_WRITE, EV_ADD | EV_ONESHOT, 0, 0, ed);
++#endif
  		int t = kevent (kqfd, &k, 1, NULL, 0, NULL);
  		assert (t == 0);
  	}
-@@ -1435,7 +1435,7 @@ void EventMachine_t::ArmKqueueReader (Ev
+@@ -1435,7 +1439,11 @@ void EventMachine_t::ArmKqueueReader (Ev
  		if (!ed)
  			throw std::runtime_error ("added bad descriptor");
  		struct kevent k;
--		EV_SET (&k, ed->GetSocket(), EVFILT_READ, EV_ADD, 0, 0, ed);
++#ifdef __NetBSD__
 +		EV_SET (&k, ed->GetSocket(), EVFILT_READ, EV_ADD, 0, 0, (intptr_t)ed);
++#else
+ 		EV_SET (&k, ed->GetSocket(), EVFILT_READ, EV_ADD, 0, 0, ed);
++#endif
  		int t = kevent (kqfd, &k, 1, NULL, 0, NULL);
  		assert (t == 0);
  	}
