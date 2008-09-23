@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.ro,v 1.1.1.1 2008/09/15 09:59:10 taca Exp $
+@comment $NetBSD: PLIST.ro,v 1.2 2008/09/23 06:52:12 taca Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/ro/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/ro/default.php
 ${TL_WEBDIR}/system/modules/backend/languages/ro/countries.php
@@ -24,27 +24,6 @@ ${TL_WEBDIR}/system/modules/backend/languages/ro/tl_style_sheet.php
 ${TL_WEBDIR}/system/modules/backend/languages/ro/tl_undo.php
 ${TL_WEBDIR}/system/modules/backend/languages/ro/tl_user.php
 ${TL_WEBDIR}/system/modules/backend/languages/ro/tl_user_group.php
-${TL_WEBDIR}/system/modules/development/languages/ro/.htaccess
-${TL_WEBDIR}/system/modules/development/languages/ro/modules.php
-${TL_WEBDIR}/system/modules/development/languages/ro/tl_extension.php
-${TL_WEBDIR}/system/modules/development/languages/ro/tl_labels.php
-${TL_WEBDIR}/system/modules/frontend/languages/ro/.htaccess
-${TL_WEBDIR}/system/modules/frontend/languages/ro/default.php
-${TL_WEBDIR}/system/modules/frontend/languages/ro/modules.php
-${TL_WEBDIR}/system/modules/frontend/languages/ro/stopwords.txt
-${TL_WEBDIR}/system/modules/news/languages/ro/.htaccess
-${TL_WEBDIR}/system/modules/news/languages/ro/default.php
-${TL_WEBDIR}/system/modules/news/languages/ro/modules.php
-${TL_WEBDIR}/system/modules/news/languages/ro/tl_module.php
-${TL_WEBDIR}/system/modules/news/languages/ro/tl_news.php
-${TL_WEBDIR}/system/modules/news/languages/ro/tl_news_archive.php
-${TL_WEBDIR}/system/modules/registration/languages/ro/.htaccess
-${TL_WEBDIR}/system/modules/registration/languages/ro/default.php
-${TL_WEBDIR}/system/modules/registration/languages/ro/modules.php
-${TL_WEBDIR}/system/modules/registration/languages/ro/tl_module.php
-${TL_WEBDIR}/system/modules/rss_reader/languages/ro/.htaccess
-${TL_WEBDIR}/system/modules/rss_reader/languages/ro/modules.php
-${TL_WEBDIR}/system/modules/rss_reader/languages/ro/tl_module.php
 ${TL_WEBDIR}/system/modules/calendar/languages/ro/.htaccess
 ${TL_WEBDIR}/system/modules/calendar/languages/ro/default.php
 ${TL_WEBDIR}/system/modules/calendar/languages/ro/modules.php
@@ -56,6 +35,24 @@ ${TL_WEBDIR}/system/modules/comments/languages/ro/default.php
 ${TL_WEBDIR}/system/modules/comments/languages/ro/modules.php
 ${TL_WEBDIR}/system/modules/comments/languages/ro/tl_comments.php
 ${TL_WEBDIR}/system/modules/comments/languages/ro/tl_content.php
+${TL_WEBDIR}/system/modules/development/languages/ro/.htaccess
+${TL_WEBDIR}/system/modules/development/languages/ro/modules.php
+${TL_WEBDIR}/system/modules/development/languages/ro/tl_extension.php
+${TL_WEBDIR}/system/modules/development/languages/ro/tl_labels.php
+${TL_WEBDIR}/system/modules/frontend/languages/ro/.htaccess
+${TL_WEBDIR}/system/modules/frontend/languages/ro/default.php
+${TL_WEBDIR}/system/modules/frontend/languages/ro/modules.php
+${TL_WEBDIR}/system/modules/frontend/languages/ro/stopwords.txt
+${TL_WEBDIR}/system/modules/listing/languages/ro/.htaccess
+${TL_WEBDIR}/system/modules/listing/languages/ro/default.php
+${TL_WEBDIR}/system/modules/listing/languages/ro/modules.php
+${TL_WEBDIR}/system/modules/listing/languages/ro/tl_module.php
+${TL_WEBDIR}/system/modules/news/languages/ro/.htaccess
+${TL_WEBDIR}/system/modules/news/languages/ro/default.php
+${TL_WEBDIR}/system/modules/news/languages/ro/modules.php
+${TL_WEBDIR}/system/modules/news/languages/ro/tl_module.php
+${TL_WEBDIR}/system/modules/news/languages/ro/tl_news.php
+${TL_WEBDIR}/system/modules/news/languages/ro/tl_news_archive.php
 ${TL_WEBDIR}/system/modules/newsletter/languages/ro/.htaccess
 ${TL_WEBDIR}/system/modules/newsletter/languages/ro/default.php
 ${TL_WEBDIR}/system/modules/newsletter/languages/ro/modules.php
@@ -64,21 +61,24 @@ ${TL_WEBDIR}/system/modules/newsletter/languages/ro/tl_newsletter.php
 ${TL_WEBDIR}/system/modules/newsletter/languages/ro/tl_newsletter_channel.php
 ${TL_WEBDIR}/system/modules/newsletter/languages/ro/tl_newsletter_recipients.php
 ${TL_WEBDIR}/system/modules/newsletter/languages/ro/tl_member.php
+${TL_WEBDIR}/system/modules/registration/languages/ro/.htaccess
+${TL_WEBDIR}/system/modules/registration/languages/ro/default.php
+${TL_WEBDIR}/system/modules/registration/languages/ro/modules.php
+${TL_WEBDIR}/system/modules/registration/languages/ro/tl_module.php
+${TL_WEBDIR}/system/modules/rss_reader/languages/ro/.htaccess
+${TL_WEBDIR}/system/modules/rss_reader/languages/ro/modules.php
+${TL_WEBDIR}/system/modules/rss_reader/languages/ro/tl_module.php
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/ro/.htaccess
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/ro/modules.php
 ${TL_WEBDIR}/system/modules/tpl_editor/languages/ro/tl_templates.php
-${TL_WEBDIR}/system/modules/listing/languages/ro/.htaccess
-${TL_WEBDIR}/system/modules/listing/languages/ro/default.php
-${TL_WEBDIR}/system/modules/listing/languages/ro/modules.php
-${TL_WEBDIR}/system/modules/listing/languages/ro/tl_module.php
-@dirrm ${TL_WEBDIR}/system/modules/listing/languages/ro
 @dirrm ${TL_WEBDIR}/system/modules/tpl_editor/languages/ro
-@dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/ro
-@dirrm ${TL_WEBDIR}/system/modules/comments/languages/ro
-@dirrm ${TL_WEBDIR}/system/modules/calendar/languages/ro
 @dirrm ${TL_WEBDIR}/system/modules/rss_reader/languages/ro
 @dirrm ${TL_WEBDIR}/system/modules/registration/languages/ro
+@dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/ro
 @dirrm ${TL_WEBDIR}/system/modules/news/languages/ro
+@dirrm ${TL_WEBDIR}/system/modules/listing/languages/ro
 @dirrm ${TL_WEBDIR}/system/modules/frontend/languages/ro
 @dirrm ${TL_WEBDIR}/system/modules/development/languages/ro
+@dirrm ${TL_WEBDIR}/system/modules/comments/languages/ro
+@dirrm ${TL_WEBDIR}/system/modules/calendar/languages/ro
 @dirrm ${TL_WEBDIR}/system/modules/backend/languages/ro
