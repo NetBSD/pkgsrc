@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.uk,v 1.1.1.1 2008/09/15 09:59:11 taca Exp $
+@comment $NetBSD: PLIST.uk,v 1.2 2008/09/23 06:52:12 taca Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/uk/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/uk/default.php
 ${TL_WEBDIR}/system/modules/backend/languages/uk/countries.php
@@ -25,30 +25,6 @@ ${TL_WEBDIR}/system/modules/backend/languages/uk/tl_undo.php
 ${TL_WEBDIR}/system/modules/backend/languages/uk/tl_user.php
 ${TL_WEBDIR}/system/modules/backend/languages/uk/tl_user_group.php
 ${TL_WEBDIR}/system/modules/backend/languages/uk/tl_task.php
-${TL_WEBDIR}/system/modules/development/languages/uk/.htaccess
-${TL_WEBDIR}/system/modules/development/languages/uk/modules.php
-${TL_WEBDIR}/system/modules/development/languages/uk/tl_extension.php
-${TL_WEBDIR}/system/modules/development/languages/uk/tl_labels.php
-${TL_WEBDIR}/system/modules/frontend/languages/uk/.htaccess
-${TL_WEBDIR}/system/modules/frontend/languages/uk/default.php
-${TL_WEBDIR}/system/modules/frontend/languages/uk/modules.php
-${TL_WEBDIR}/system/modules/frontend/languages/uk/stopwords.txt
-${TL_WEBDIR}/system/modules/news/languages/uk/.htaccess
-${TL_WEBDIR}/system/modules/news/languages/uk/default.php
-${TL_WEBDIR}/system/modules/news/languages/uk/modules.php
-${TL_WEBDIR}/system/modules/news/languages/uk/tl_module.php
-${TL_WEBDIR}/system/modules/news/languages/uk/tl_news.php
-${TL_WEBDIR}/system/modules/news/languages/uk/tl_news_archive.php
-${TL_WEBDIR}/system/modules/news/languages/uk/tl_news_comments.php
-${TL_WEBDIR}/system/modules/news/languages/uk/tl_user.php
-${TL_WEBDIR}/system/modules/news/languages/uk/tl_user_group.php
-${TL_WEBDIR}/system/modules/registration/languages/uk/.htaccess
-${TL_WEBDIR}/system/modules/registration/languages/uk/default.php
-${TL_WEBDIR}/system/modules/registration/languages/uk/modules.php
-${TL_WEBDIR}/system/modules/registration/languages/uk/tl_module.php
-${TL_WEBDIR}/system/modules/rss_reader/languages/uk/.htaccess
-${TL_WEBDIR}/system/modules/rss_reader/languages/uk/modules.php
-${TL_WEBDIR}/system/modules/rss_reader/languages/uk/tl_module.php
 ${TL_WEBDIR}/system/modules/calendar/languages/uk/.htaccess
 ${TL_WEBDIR}/system/modules/calendar/languages/uk/default.php
 ${TL_WEBDIR}/system/modules/calendar/languages/uk/modules.php
@@ -61,25 +37,10 @@ ${TL_WEBDIR}/system/modules/comments/languages/uk/.htaccess
 ${TL_WEBDIR}/system/modules/comments/languages/uk/modules.php
 ${TL_WEBDIR}/system/modules/comments/languages/uk/tl_comments.php
 ${TL_WEBDIR}/system/modules/comments/languages/uk/tl_content.php
-${TL_WEBDIR}/system/modules/newsletter/languages/uk/.htaccess
-${TL_WEBDIR}/system/modules/newsletter/languages/uk/default.php
-${TL_WEBDIR}/system/modules/newsletter/languages/uk/modules.php
-${TL_WEBDIR}/system/modules/newsletter/languages/uk/tl_module.php
-${TL_WEBDIR}/system/modules/newsletter/languages/uk/tl_newsletter.php
-${TL_WEBDIR}/system/modules/newsletter/languages/uk/tl_newsletter_channel.php
-${TL_WEBDIR}/system/modules/newsletter/languages/uk/tl_newsletter_recipients.php
-${TL_WEBDIR}/system/modules/newsletter/languages/uk/tl_member.php
-${TL_WEBDIR}/system/modules/newsletter/languages/uk/tl_user.php
-${TL_WEBDIR}/system/modules/newsletter/languages/uk/tl_user_group.php
-${TL_WEBDIR}/system/modules/tpl_editor/languages/uk/.htaccess
-${TL_WEBDIR}/system/modules/tpl_editor/languages/uk/modules.php
-${TL_WEBDIR}/system/modules/tpl_editor/languages/uk/tl_templates.php
-${TL_WEBDIR}/system/modules/listing/languages/uk/.htaccess
-${TL_WEBDIR}/system/modules/listing/languages/uk/default.php
-${TL_WEBDIR}/system/modules/listing/languages/uk/modules.php
-${TL_WEBDIR}/system/modules/listing/languages/uk/tl_module.php
-${TL_WEBDIR}/system/modules/pun_bridge/languages/uk/.htaccess
-${TL_WEBDIR}/system/modules/pun_bridge/languages/uk/modules.php
+${TL_WEBDIR}/system/modules/development/languages/uk/.htaccess
+${TL_WEBDIR}/system/modules/development/languages/uk/modules.php
+${TL_WEBDIR}/system/modules/development/languages/uk/tl_extension.php
+${TL_WEBDIR}/system/modules/development/languages/uk/tl_labels.php
 ${TL_WEBDIR}/system/modules/dfGallery/languages/uk/.htaccess
 ${TL_WEBDIR}/system/modules/dfGallery/languages/uk/default.php
 ${TL_WEBDIR}/system/modules/dfGallery/languages/uk/modules.php
@@ -90,17 +51,56 @@ ${TL_WEBDIR}/system/modules/faq/languages/uk/modules.php
 ${TL_WEBDIR}/system/modules/faq/languages/uk/tl_faq.php
 ${TL_WEBDIR}/system/modules/faq/languages/uk/tl_faq_category.php
 ${TL_WEBDIR}/system/modules/faq/languages/uk/tl_module.php
-@dirrm ${TL_WEBDIR}/system/modules/faq/languages/uk
-@dirrm ${TL_WEBDIR}/system/modules/dfGallery/languages/uk
-@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages/uk
-@dirrm ${TL_WEBDIR}/system/modules/listing/languages/uk
+${TL_WEBDIR}/system/modules/frontend/languages/uk/.htaccess
+${TL_WEBDIR}/system/modules/frontend/languages/uk/default.php
+${TL_WEBDIR}/system/modules/frontend/languages/uk/modules.php
+${TL_WEBDIR}/system/modules/frontend/languages/uk/stopwords.txt
+${TL_WEBDIR}/system/modules/listing/languages/uk/.htaccess
+${TL_WEBDIR}/system/modules/listing/languages/uk/default.php
+${TL_WEBDIR}/system/modules/listing/languages/uk/modules.php
+${TL_WEBDIR}/system/modules/listing/languages/uk/tl_module.php
+${TL_WEBDIR}/system/modules/news/languages/uk/.htaccess
+${TL_WEBDIR}/system/modules/news/languages/uk/default.php
+${TL_WEBDIR}/system/modules/news/languages/uk/modules.php
+${TL_WEBDIR}/system/modules/news/languages/uk/tl_module.php
+${TL_WEBDIR}/system/modules/news/languages/uk/tl_news.php
+${TL_WEBDIR}/system/modules/news/languages/uk/tl_news_archive.php
+${TL_WEBDIR}/system/modules/news/languages/uk/tl_news_comments.php
+${TL_WEBDIR}/system/modules/news/languages/uk/tl_user.php
+${TL_WEBDIR}/system/modules/news/languages/uk/tl_user_group.php
+${TL_WEBDIR}/system/modules/newsletter/languages/uk/.htaccess
+${TL_WEBDIR}/system/modules/newsletter/languages/uk/default.php
+${TL_WEBDIR}/system/modules/newsletter/languages/uk/modules.php
+${TL_WEBDIR}/system/modules/newsletter/languages/uk/tl_module.php
+${TL_WEBDIR}/system/modules/newsletter/languages/uk/tl_newsletter.php
+${TL_WEBDIR}/system/modules/newsletter/languages/uk/tl_newsletter_channel.php
+${TL_WEBDIR}/system/modules/newsletter/languages/uk/tl_newsletter_recipients.php
+${TL_WEBDIR}/system/modules/newsletter/languages/uk/tl_member.php
+${TL_WEBDIR}/system/modules/newsletter/languages/uk/tl_user.php
+${TL_WEBDIR}/system/modules/newsletter/languages/uk/tl_user_group.php
+${TL_WEBDIR}/system/modules/pun_bridge/languages/uk/.htaccess
+${TL_WEBDIR}/system/modules/pun_bridge/languages/uk/modules.php
+${TL_WEBDIR}/system/modules/registration/languages/uk/.htaccess
+${TL_WEBDIR}/system/modules/registration/languages/uk/default.php
+${TL_WEBDIR}/system/modules/registration/languages/uk/modules.php
+${TL_WEBDIR}/system/modules/registration/languages/uk/tl_module.php
+${TL_WEBDIR}/system/modules/rss_reader/languages/uk/.htaccess
+${TL_WEBDIR}/system/modules/rss_reader/languages/uk/modules.php
+${TL_WEBDIR}/system/modules/rss_reader/languages/uk/tl_module.php
+${TL_WEBDIR}/system/modules/tpl_editor/languages/uk/.htaccess
+${TL_WEBDIR}/system/modules/tpl_editor/languages/uk/modules.php
+${TL_WEBDIR}/system/modules/tpl_editor/languages/uk/tl_templates.php
 @dirrm ${TL_WEBDIR}/system/modules/tpl_editor/languages/uk
-@dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/uk
-@dirrm ${TL_WEBDIR}/system/modules/comments/languages/uk
-@dirrm ${TL_WEBDIR}/system/modules/calendar/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/rss_reader/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/registration/languages/uk
+@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages/uk
+@dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/news/languages/uk
+@dirrm ${TL_WEBDIR}/system/modules/listing/languages/uk
+@dirrm ${TL_WEBDIR}/system/modules/faq/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/frontend/languages/uk
+@dirrm ${TL_WEBDIR}/system/modules/dfGallery/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/development/languages/uk
+@dirrm ${TL_WEBDIR}/system/modules/comments/languages/uk
+@dirrm ${TL_WEBDIR}/system/modules/calendar/languages/uk
 @dirrm ${TL_WEBDIR}/system/modules/backend/languages/uk
