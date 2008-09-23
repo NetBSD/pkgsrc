@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.32 2008/09/18 20:56:01 bjs Exp $
+# $NetBSD: Makefile,v 1.33 2008/09/23 11:23:56 joerg Exp $
 #
 
 DISTNAME=	xorg-server-1.4.2
@@ -19,7 +19,7 @@ SPECIAL_PERMS+=		bin/Xorg ${SETUID_ROOT_PERMS}
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	autoconf automake autoreconf gm4 gmake pkg-config
+USE_TOOLS+=	gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	xorg-server.pc.in
 SHLIBTOOL_OVERRIDE=	# empty
@@ -83,10 +83,6 @@ BUILDLINK_API_DEPENDS.xf86driproto+=	xf86driproto>=2.0.4
 post-extract: dri-post-extract
 	${CP} ${FILESDIR}/modeline2c.awk ${WRKSRC}/hw/xfree86/common
 	${RM} -f ${WRKSRC}/Mesa-${MESA_VERSION}/docs/README.MINGW32.orig
-
-pre-configure:
-	cd ${WRKSRC} && \
-	${SETENV} ${CONFIGURE_ENV} autoreconf -v --install
 
 .include "options.mk"
 
