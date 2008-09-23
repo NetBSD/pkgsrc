@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.no,v 1.2 2008/09/16 13:15:28 taca Exp $
+@comment $NetBSD: PLIST.no,v 1.3 2008/09/23 06:52:11 taca Exp $
 ${TL_WEBDIR}/system/modules/backend/languages/no/.htaccess
 ${TL_WEBDIR}/system/modules/backend/languages/no/default.php
 ${TL_WEBDIR}/system/modules/backend/languages/no/countries.php
@@ -25,29 +25,6 @@ ${TL_WEBDIR}/system/modules/backend/languages/no/tl_undo.php
 ${TL_WEBDIR}/system/modules/backend/languages/no/tl_user.php
 ${TL_WEBDIR}/system/modules/backend/languages/no/tl_user_group.php
 ${TL_WEBDIR}/system/modules/backend/languages/no/tl_task.php
-${TL_WEBDIR}/system/modules/development/languages/no/.htaccess
-${TL_WEBDIR}/system/modules/development/languages/no/modules.php
-${TL_WEBDIR}/system/modules/development/languages/no/tl_extension.php
-${TL_WEBDIR}/system/modules/development/languages/no/tl_labels.php
-${TL_WEBDIR}/system/modules/frontend/languages/no/.htaccess
-${TL_WEBDIR}/system/modules/frontend/languages/no/default.php
-${TL_WEBDIR}/system/modules/frontend/languages/no/modules.php
-${TL_WEBDIR}/system/modules/news/languages/no/.htaccess
-${TL_WEBDIR}/system/modules/news/languages/no/default.php
-${TL_WEBDIR}/system/modules/news/languages/no/modules.php
-${TL_WEBDIR}/system/modules/news/languages/no/tl_module.php
-${TL_WEBDIR}/system/modules/news/languages/no/tl_news.php
-${TL_WEBDIR}/system/modules/news/languages/no/tl_news_archive.php
-${TL_WEBDIR}/system/modules/news/languages/no/tl_news_comments.php
-${TL_WEBDIR}/system/modules/news/languages/no/tl_user.php
-${TL_WEBDIR}/system/modules/news/languages/no/tl_user_group.php
-${TL_WEBDIR}/system/modules/registration/languages/no/.htaccess
-${TL_WEBDIR}/system/modules/registration/languages/no/default.php
-${TL_WEBDIR}/system/modules/registration/languages/no/modules.php
-${TL_WEBDIR}/system/modules/registration/languages/no/tl_module.php
-${TL_WEBDIR}/system/modules/rss_reader/languages/no/.htaccess
-${TL_WEBDIR}/system/modules/rss_reader/languages/no/modules.php
-${TL_WEBDIR}/system/modules/rss_reader/languages/no/tl_module.php
 ${TL_WEBDIR}/system/modules/calendar/languages/no/.htaccess
 ${TL_WEBDIR}/system/modules/calendar/languages/no/default.php
 ${TL_WEBDIR}/system/modules/calendar/languages/no/modules.php
@@ -60,25 +37,10 @@ ${TL_WEBDIR}/system/modules/comments/languages/no/.htaccess
 ${TL_WEBDIR}/system/modules/comments/languages/no/modules.php
 ${TL_WEBDIR}/system/modules/comments/languages/no/tl_comments.php
 ${TL_WEBDIR}/system/modules/comments/languages/no/tl_content.php
-${TL_WEBDIR}/system/modules/newsletter/languages/no/.htaccess
-${TL_WEBDIR}/system/modules/newsletter/languages/no/default.php
-${TL_WEBDIR}/system/modules/newsletter/languages/no/modules.php
-${TL_WEBDIR}/system/modules/newsletter/languages/no/tl_module.php
-${TL_WEBDIR}/system/modules/newsletter/languages/no/tl_newsletter.php
-${TL_WEBDIR}/system/modules/newsletter/languages/no/tl_newsletter_channel.php
-${TL_WEBDIR}/system/modules/newsletter/languages/no/tl_newsletter_recipients.php
-${TL_WEBDIR}/system/modules/newsletter/languages/no/tl_member.php
-${TL_WEBDIR}/system/modules/newsletter/languages/no/tl_user.php
-${TL_WEBDIR}/system/modules/newsletter/languages/no/tl_user_group.php
-${TL_WEBDIR}/system/modules/tpl_editor/languages/no/.htaccess
-${TL_WEBDIR}/system/modules/tpl_editor/languages/no/modules.php
-${TL_WEBDIR}/system/modules/tpl_editor/languages/no/tl_templates.php
-${TL_WEBDIR}/system/modules/listing/languages/no/.htaccess
-${TL_WEBDIR}/system/modules/listing/languages/no/default.php
-${TL_WEBDIR}/system/modules/listing/languages/no/modules.php
-${TL_WEBDIR}/system/modules/listing/languages/no/tl_module.php
-${TL_WEBDIR}/system/modules/pun_bridge/languages/no/.htaccess
-${TL_WEBDIR}/system/modules/pun_bridge/languages/no/modules.php
+${TL_WEBDIR}/system/modules/development/languages/no/.htaccess
+${TL_WEBDIR}/system/modules/development/languages/no/modules.php
+${TL_WEBDIR}/system/modules/development/languages/no/tl_extension.php
+${TL_WEBDIR}/system/modules/development/languages/no/tl_labels.php
 ${TL_WEBDIR}/system/modules/dfGallery/languages/no/.htaccess
 ${TL_WEBDIR}/system/modules/dfGallery/languages/no/default.php
 ${TL_WEBDIR}/system/modules/dfGallery/languages/no/modules.php
@@ -89,17 +51,55 @@ ${TL_WEBDIR}/system/modules/faq/languages/no/modules.php
 ${TL_WEBDIR}/system/modules/faq/languages/no/tl_faq.php
 ${TL_WEBDIR}/system/modules/faq/languages/no/tl_faq_category.php
 ${TL_WEBDIR}/system/modules/faq/languages/no/tl_module.php
-@dirrm ${TL_WEBDIR}/system/modules/faq/languages/no
-@dirrm ${TL_WEBDIR}/system/modules/dfGallery/languages/no
-@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages/no
-@dirrm ${TL_WEBDIR}/system/modules/listing/languages/no
+${TL_WEBDIR}/system/modules/frontend/languages/no/.htaccess
+${TL_WEBDIR}/system/modules/frontend/languages/no/default.php
+${TL_WEBDIR}/system/modules/frontend/languages/no/modules.php
+${TL_WEBDIR}/system/modules/listing/languages/no/.htaccess
+${TL_WEBDIR}/system/modules/listing/languages/no/default.php
+${TL_WEBDIR}/system/modules/listing/languages/no/modules.php
+${TL_WEBDIR}/system/modules/listing/languages/no/tl_module.php
+${TL_WEBDIR}/system/modules/news/languages/no/.htaccess
+${TL_WEBDIR}/system/modules/news/languages/no/default.php
+${TL_WEBDIR}/system/modules/news/languages/no/modules.php
+${TL_WEBDIR}/system/modules/news/languages/no/tl_module.php
+${TL_WEBDIR}/system/modules/news/languages/no/tl_news.php
+${TL_WEBDIR}/system/modules/news/languages/no/tl_news_archive.php
+${TL_WEBDIR}/system/modules/news/languages/no/tl_news_comments.php
+${TL_WEBDIR}/system/modules/news/languages/no/tl_user.php
+${TL_WEBDIR}/system/modules/news/languages/no/tl_user_group.php
+${TL_WEBDIR}/system/modules/newsletter/languages/no/.htaccess
+${TL_WEBDIR}/system/modules/newsletter/languages/no/default.php
+${TL_WEBDIR}/system/modules/newsletter/languages/no/modules.php
+${TL_WEBDIR}/system/modules/newsletter/languages/no/tl_module.php
+${TL_WEBDIR}/system/modules/newsletter/languages/no/tl_newsletter.php
+${TL_WEBDIR}/system/modules/newsletter/languages/no/tl_newsletter_channel.php
+${TL_WEBDIR}/system/modules/newsletter/languages/no/tl_newsletter_recipients.php
+${TL_WEBDIR}/system/modules/newsletter/languages/no/tl_member.php
+${TL_WEBDIR}/system/modules/newsletter/languages/no/tl_user.php
+${TL_WEBDIR}/system/modules/newsletter/languages/no/tl_user_group.php
+${TL_WEBDIR}/system/modules/pun_bridge/languages/no/.htaccess
+${TL_WEBDIR}/system/modules/pun_bridge/languages/no/modules.php
+${TL_WEBDIR}/system/modules/registration/languages/no/.htaccess
+${TL_WEBDIR}/system/modules/registration/languages/no/default.php
+${TL_WEBDIR}/system/modules/registration/languages/no/modules.php
+${TL_WEBDIR}/system/modules/registration/languages/no/tl_module.php
+${TL_WEBDIR}/system/modules/rss_reader/languages/no/.htaccess
+${TL_WEBDIR}/system/modules/rss_reader/languages/no/modules.php
+${TL_WEBDIR}/system/modules/rss_reader/languages/no/tl_module.php
+${TL_WEBDIR}/system/modules/tpl_editor/languages/no/.htaccess
+${TL_WEBDIR}/system/modules/tpl_editor/languages/no/modules.php
+${TL_WEBDIR}/system/modules/tpl_editor/languages/no/tl_templates.php
 @dirrm ${TL_WEBDIR}/system/modules/tpl_editor/languages/no
-@dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/no
-@dirrm ${TL_WEBDIR}/system/modules/comments/languages/no
-@dirrm ${TL_WEBDIR}/system/modules/calendar/languages/no
 @dirrm ${TL_WEBDIR}/system/modules/rss_reader/languages/no
 @dirrm ${TL_WEBDIR}/system/modules/registration/languages/no
+@dirrm ${TL_WEBDIR}/system/modules/pun_bridge/languages/no
+@dirrm ${TL_WEBDIR}/system/modules/newsletter/languages/no
 @dirrm ${TL_WEBDIR}/system/modules/news/languages/no
+@dirrm ${TL_WEBDIR}/system/modules/listing/languages/no
 @dirrm ${TL_WEBDIR}/system/modules/frontend/languages/no
+@dirrm ${TL_WEBDIR}/system/modules/faq/languages/no
+@dirrm ${TL_WEBDIR}/system/modules/dfGallery/languages/no
 @dirrm ${TL_WEBDIR}/system/modules/development/languages/no
+@dirrm ${TL_WEBDIR}/system/modules/comments/languages/no
+@dirrm ${TL_WEBDIR}/system/modules/calendar/languages/no
 @dirrm ${TL_WEBDIR}/system/modules/backend/languages/no
