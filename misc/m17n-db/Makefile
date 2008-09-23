@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/09/20 00:15:53 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2008/09/23 01:44:07 obache Exp $
 #
 
 DISTNAME=	m17n-db-1.5.1
@@ -21,7 +21,9 @@ PKGCONFIG_OVERRIDE+=	m17n-db.pc.in
 
 .include "../../mk/bsd.prefs.mk"
 
-.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M4.99*)
+#XXX: FS size of one-true-awk 20070501 is limited to 10.  Use gawk instead.
+.if ${OPSYS} == "NetBSD" && !empty(OS_VERSION:M4.99*) || \
+    ${OPSYS} == "DragonFly" && (!empty(OS_VERSION:M1.1[0-9]*) || !empty(OS_VERSION:M2.*))
 USE_TOOLS+=		gawk
 .endif
 
