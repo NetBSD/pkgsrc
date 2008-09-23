@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2008/07/01 09:22:59 tron Exp $
+# $NetBSD: Makefile,v 1.24.4.1 2008/09/23 11:15:53 tron Exp $
 
 PKGNAME=		${DISTNAME:S/-/-server-/}
-PKGREVISION=		1
+#PKGREVISION=		1
 SVR4_PKGNAME=		mysqs
 COMMENT=		MySQL 5, a free SQL database (server)
 
@@ -17,7 +17,7 @@ CONFIGURE_ARGS+=	--with-libwrap
 CONFIGURE_ARGS+=	--with-raid
 CONFIGURE_ARGS+=	--without-berkeley-db
 CONFIGURE_ARGS+=	--without-mysqlfs
-CONFIGURE_ARGS+=	--with-mysqld-user=${MYSQL_USER:Q}
+CONFIGURE_ARGS+=	--with-mysqld-user=${MYSQL_USER}
 
 PTHREAD_OPTS+=		require
 CONFIGURE_ARGS+=	--with-pthreads
@@ -32,8 +32,8 @@ PKG_SHELL.${MYSQL_USER}=	${SH}
 RCD_SCRIPTS=		mysqld
 
 FILES_SUBST+=		HOSTNAME_CMD=${HOSTNAME_CMD:Q} \
-			MYSQL_DATADIR=${MYSQL_DATADIR:Q} \
-			MYSQL_USER=${MYSQL_USER:Q} MYSQL_GROUP=${MYSQL_GROUP:Q}
+			MYSQL_DATADIR=${MYSQL_DATADIR} \
+			MYSQL_USER=${MYSQL_USER} MYSQL_GROUP=${MYSQL_GROUP}
 MESSAGE_SUBST+=		MYSQL_DATADIR=${MYSQL_DATADIR} \
 			MYSQL_USER=${MYSQL_USER} MYSQL_GROUP=${MYSQL_GROUP}
 BUILD_DEFS+=		MYSQL_DATADIR
@@ -80,8 +80,8 @@ post-install:
 		${DESTDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/man/mysqld_multi.1 \
 		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
-	#${INSTALL_MAN} ${WRKSRC}/man/mysqld_safe.1 \
-		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
+#	${INSTALL_MAN} ${WRKSRC}/man/mysqld_safe.1 \
+#		${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/mysql_secure_installation.sh \
 		${DESTDIR}${PREFIX}/bin/mysql_secure_installation
 

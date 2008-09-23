@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.2 2007/03/11 18:42:28 adam Exp $
+$NetBSD: patch-al,v 1.2.14.1 2008/09/23 11:15:53 tron Exp $
 
---- include/Makefile.in.orig	2007-03-11 09:24:33.000000000 +0100
-+++ include/Makefile.in
-@@ -360,6 +360,7 @@ zlib_dir = @zlib_dir@
+--- include/Makefile.in.orig	2008-08-04 15:22:05.000000000 +0300
++++ include/Makefile.in	2008-09-16 12:19:22.000000000 +0300
+@@ -366,6 +366,7 @@
  BUILT_SOURCES = $(HEADERS_GEN) abi_check
  HEADERS_GEN = mysql_version.h my_config.h
  HEADERS_ABI = mysql.h mysql_com.h mysql_time.h \

@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.2 2007/03/11 18:42:28 adam Exp $
+$NetBSD: patch-ab,v 1.2.14.1 2008/09/23 11:15:53 tron Exp $
 
---- sql/mysqld.cc.orig	2007-03-05 20:21:11.000000000 +0100
-+++ sql/mysqld.cc
-@@ -171,7 +171,7 @@ static void getvolumeID(BYTE *volumeName
+--- sql/mysqld.cc.orig	2008-08-04 15:20:07.000000000 +0300
++++ sql/mysqld.cc	2008-09-16 12:16:20.000000000 +0300
+@@ -181,7 +181,7 @@
  int initgroups(const char *,unsigned int);
  #endif
  
