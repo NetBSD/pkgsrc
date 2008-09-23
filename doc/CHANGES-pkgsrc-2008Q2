@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.67 2008/09/21 13:19:42 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q2,v 1.1.2.68 2008/09/23 11:19:53 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q2 branch:
@@ -165,3 +165,6 @@ Pullup ticket #2528 - requested by taca
 ruby18-base: security patch
 pullup ticket #2530 - requested by tron
 phpmyadmin: update package for security fixes
+Pullup ticket #2532 - requested by taca
+mysql5-client: security update
+mysql5-server: security update
