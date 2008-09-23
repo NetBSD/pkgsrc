@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.18 2008/06/30 12:01:47 martti Exp $
+# $NetBSD: Makefile,v 1.18.4.1 2008/09/23 11:15:53 tron Exp $
 
 PKGNAME=		${DISTNAME:S/-/-client-/}
+PKGREVISION=		1
 SVR4_PKGNAME=		mysqc
 COMMENT=		MySQL 5, a free SQL database (client)
 
@@ -17,6 +18,12 @@ UNWRAP_FILES+=		scripts/mysql_config
 INFO_FILES=		yes
 
 AUTO_MKDIRS=	yes
+
+REPLACE_PERL=	scripts/mysql_convert_table_format.sh \
+		scripts/mysql_explain_log.sh \
+		scripts/mysql_tableinfo.sh \
+		scripts/mysqldumpslow.sh \
+		scripts/mysqlhotcopy.sh
 
 post-install:
 	cd ${WRKSRC}; for f in mysql.info mysql.info-[0-9]*; do		\

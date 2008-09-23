@@ -1,6 +1,10 @@
-# $NetBSD: Makefile.common,v 1.32 2008/06/30 12:01:47 martti Exp $
+# $NetBSD: Makefile.common,v 1.32.4.1 2008/09/23 11:15:53 tron Exp $
+#
+# used by databases/mysql5-client/Makefile
+# used by databases/mysql5-server/Makefile
+#
 
-DISTNAME=		mysql-5.0.51b
+DISTNAME=		mysql-5.0.67
 CATEGORIES=		databases
 MASTER_SITES=		${MASTER_SITE_MYSQL:=MySQL-5.0/}
 
@@ -41,6 +45,8 @@ CFLAGS+=		-DIRIX5 -DNEEDS_BSTRING_H
 # libgen is incorrectly detected
 CONFIGURE_ENV+=		ac_cv_lib_gen_p2open="no"
 .endif
+
+BUILD_DEFS+=		VARBASE
 
 # We always use our own readline.  Note that these --without-* settings
 # are confusing, but they just mean "don't use the included readline
