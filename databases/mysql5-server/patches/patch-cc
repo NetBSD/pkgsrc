@@ -1,10 +1,10 @@
-$NetBSD: patch-cc,v 1.1 2008/01/22 00:42:00 rillig Exp $
+$NetBSD: patch-cc,v 1.1.6.1 2008/09/23 11:15:53 tron Exp $
 
 See patch-ca.
 
---- sql/stacktrace.c.orig	2007-11-15 15:06:35.000000000 +0100
-+++ sql/stacktrace.c	2008-01-22 01:17:08.000000000 +0100
-@@ -251,7 +251,7 @@ void write_core(int sig)
+--- sql/stacktrace.c.orig	2008-08-04 15:20:12.000000000 +0300
++++ sql/stacktrace.c	2008-09-16 13:53:45.000000000 +0300
+@@ -252,7 +252,7 @@
    __gcov_flush();
  #endif
    pthread_kill(pthread_self(), sig);
