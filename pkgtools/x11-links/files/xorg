@@ -1,4 +1,4 @@
-# $NetBSD: xorg,v 1.7.2.3 2008/09/21 21:43:38 cube Exp $
+# $NetBSD: xorg,v 1.7.2.4 2008/09/23 21:12:28 cube Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported Xorg (and some XFree) distributions, minus the set of files
@@ -362,6 +362,9 @@ lib/libXaw.so.7
 lib/libXaw.so.7.0
 lib/libXaw.so.8
 lib/libXaw.so.8.0
+lib/libXaw6.6.dylib
+lib/libXaw7.7.dylib
+lib/libXaw8.8.dylib
 lib/libXevie.1.0.0.dylib
 lib/libXevie.1.dylib
 lib/libXevie.dylib
