@@ -1,0 +1,9 @@
+# $NetBSD: INSTALL,v 1.1 2008/09/24 11:37:31 taca Exp $
+
+DBUS_UUIDGEN="@PREFIX@/bin/dbus-uuidgen"
+
+case ${STAGE} in
+POST-INSTALL)
+	${DBUS_UUIDGEN} --ensure
+	;;
+esac
