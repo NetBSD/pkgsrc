@@ -648,7 +648,7 @@ write_hierarchy(struct bsdtar *bsdtar, struct archive *a, const char *path)
 	dev_t first_dev = 0;
 	int dev_recorded = 0;
 	int tree_ret;
-#ifdef __linux
+#ifdef HAVE_EXT2FS_EXT2_FS_H
 	int	 fd, r;
 	unsigned long fflags;
 #endif
@@ -720,7 +720,7 @@ write_hierarchy(struct bsdtar *bsdtar, struct archive *a, const char *path)
 			continue;
 #endif
 
-#ifdef __linux
+#ifdef HAVE_EXT2FS_EXT2_FS_H
 		/*
 		 * Linux has a nodump flag too but to read it
 		 * we have to open() the file/dir and do an ioctl on it...
@@ -850,7 +850,7 @@ write_entry(struct bsdtar *bsdtar, struct archive *a, const struct stat *st,
 {
 	struct archive_entry	*entry, *sparse_entry;
 	int			fd;
-#ifdef __linux
+#ifdef HAVE_EXT2FS_EXT2_FS_H
 	int			 r;
 	unsigned long		 stflags;
 #endif
@@ -909,7 +909,7 @@ write_entry(struct bsdtar *bsdtar, struct archive *a, const struct stat *st,
 		archive_entry_set_fflags(entry, st->st_flags, 0);
 #endif
 
-#ifdef __linux
+#ifdef HAVE_EXT2FS_EXT2_FS_H
 	if ((S_ISREG(st->st_mode) || S_ISDIR(st->st_mode)) &&
 	    ((fd = open(accpath, O_RDONLY|O_NONBLOCK)) >= 0) &&
 	    ((r = ioctl(fd, EXT2_IOC_GETFLAGS, &stflags)), close(fd), (fd = -1), r) >= 0 &&
