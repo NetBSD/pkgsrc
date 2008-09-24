@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.2 2006/01/02 17:32:13 joerg Exp $
+$NetBSD: patch-aa,v 1.3 2008/09/24 19:32:00 minskim Exp $
 
 --- ../dist/configure.orig	2004-01-27 16:12:02.000000000 +0000
 +++ ../dist/configure
@@ -7,17 +7,17 @@ $NetBSD: patch-aa,v 1.2 2006/01/02 17:32:13 joerg Exp $
  	with_berkeleydb="/usr/local/BerkeleyDB.4.2"
  fi
 -if test `ls "$with_berkeleydb"/lib/libdb_cxx-*.la 2>/dev/null | wc -l` -gt 0 ; then
-+if test `ls "$with_berkeleydb"/lib/libdb4_cxx-*.la 2>/dev/null | wc -l` -gt 0 ; then
++if test `ls "$with_berkeleydb"/lib/libdb46_cxx-*.la 2>/dev/null | wc -l` -gt 0 ; then
  	echo "$as_me:$LINENO: checking for Berkeley DB version from install tree" >&5
  echo $ECHO_N "checking for Berkeley DB version from install tree... $ECHO_C" >&6
 -	db_version=`ls "$with_berkeleydb"/lib/libdb_cxx-*.la | sed 's/.*db_cxx-\(.*\).la/\1/'`
-+	db_version=`ls "$with_berkeleydb"/lib/libdb4_cxx-*.la | sed 's/.*db4_cxx-\(.*\).la/\1/'`
++	db_version=`ls "$with_berkeleydb"/lib/libdb46_cxx-*.la | sed 's/.*db46_cxx-\(.*\).la/\1/'`
  	echo "$as_me:$LINENO: result: $db_version" >&5
  echo "${ECHO_T}$db_version" >&6
 -	echo "$CPPFLAGS" | grep "$with_berkeleydb/include" >/dev/null 2>&1 || CPPFLAGS="$CPPFLAGS -I$with_berkeleydb/include"
 -	LIBS="$LIBS $with_berkeleydb/lib/libdb_cxx-$db_version.la"
-+	echo "$CPPFLAGS" | grep "$with_berkeleydb/include/db4" >/dev/null 2>&1 || CPPFLAGS="$CPPFLAGS -I$with_berkeleydb/include/db4"
-+	LIBS="$LIBS $with_berkeleydb/lib/libdb4_cxx-$db_version.la"
++	echo "$CPPFLAGS" | grep "$with_berkeleydb/include/db46" >/dev/null 2>&1 || CPPFLAGS="$CPPFLAGS -I$with_berkeleydb/include/db46"
++	LIBS="$LIBS $with_berkeleydb/lib/libdb46_cxx-$db_version.la"
  
  	# find test lib locations, if specified, and possible
  	# it could be safer to require that --with-berkelydb point to a build
