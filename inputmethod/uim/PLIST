@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/06/08 13:01:48 obache Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/09/24 03:03:45 obache Exp $
 ${PLIST.qt}bin/uim-chardict-qt
 ${PLIST.uim-dict-gtk}bin/uim-dict-gtk
 bin/uim-fep
@@ -35,7 +35,7 @@ lib/pkgconfig/uim.pc
 ${PLIST.anthy}lib/uim/plugin/libuim-anthy.la
 ${PLIST.canna}lib/uim/plugin/libuim-canna.la
 lib/uim/plugin/libuim-custom-enabler.la
-lib/uim/plugin/libuim-editline.la
+${PLIST.editline}lib/uim/plugin/libuim-editline.la
 lib/uim/plugin/libuim-look.la
 ${PLIST.m17nlib}lib/uim/plugin/libuim-m17nlib.la
 ${PLIST.prime}lib/uim/plugin/libuim-prime.la
