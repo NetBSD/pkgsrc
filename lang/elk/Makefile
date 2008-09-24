@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2008/04/12 22:43:02 jlam Exp $
+# $NetBSD: Makefile,v 1.38 2008/09/24 22:34:45 ahoka Exp $
 
 DISTNAME=	elk-3.99.7
 CATEGORIES=	lang
@@ -10,6 +10,7 @@ HOMEPAGE=	http://sam.zoy.org/elk/
 COMMENT=	Embeddable Scheme interpreter
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+MAKE_JOBS_SAFE=		no
 
 USE_LANGUAGES=		c c++
 USE_LIBTOOL=		yes
