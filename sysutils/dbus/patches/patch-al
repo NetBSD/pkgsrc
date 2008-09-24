@@ -1,0 +1,24 @@
+$NetBSD: patch-al,v 1.1 2008/09/24 11:37:31 taca Exp $
+
+--- tools/Makefile.in.orig	2008-08-07 04:43:39.000000000 +0900
++++ tools/Makefile.in
+@@ -301,7 +301,7 @@ target_vendor = @target_vendor@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ configdir = $(sysconfdir)/dbus-1
+-INCLUDES = -I$(top_srcdir) $(DBUS_CLIENT_CFLAGS) $(DBUS_X_CFLAGS) -DDBUS_LOCALEDIR=\"@EXPANDED_DATADIR@/locale\" -DDBUS_COMPILATION -DDBUS_DAEMONDIR=\"@DBUS_DAEMONDIR@\" -DDBUS_MACHINE_UUID_FILE=\""$(localstatedir)/lib/dbus/machine-id"\"
++INCLUDES = -I$(top_srcdir) $(DBUS_CLIENT_CFLAGS) $(DBUS_X_CFLAGS) -DDBUS_LOCALEDIR=\"@EXPANDED_DATADIR@/locale\" -DDBUS_COMPILATION -DDBUS_DAEMONDIR=\"@DBUS_DAEMONDIR@\" -DDBUS_MACHINE_UUID_FILE=\""$(localstatedir)/db/dbus/machine-id"\"
+ dbus_send_SOURCES = \
+ 	dbus-print-message.c			\
+ 	dbus-print-message.h			\
+@@ -337,8 +337,8 @@ CLEANFILES = \
+ 	run-with-tmp-session-bus.conf
+ 
+ 
+-#create the /var/lib/data directory for dbus-uuidgen
+-localstatelibdir = $(localstatedir)/lib/dbus
++#create the /var/db/dbus directory for dbus-uuidgen
++localstatelibdir = $(localstatedir)/db/dbus
+ localstatelib_DATA = 
+ all: all-am
+ 
