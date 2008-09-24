@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dbus.sh,v 1.7 2006/12/15 19:06:00 drochner Exp $
+# $NetBSD: dbus.sh,v 1.8 2008/09/24 11:37:31 taca Exp $
 #
 # PROVIDE: dbus
 # REQUIRE: DAEMON
@@ -16,12 +16,12 @@ pidfile="@VARBASE@/run/dbus/pid"
 start_precmd=dbus_prestart
 
 dbus_prestart() {
-	for f in "@VARBASE@/lib/dbus" "@VARBASE@/run/dbus"; do
-		if @TEST@ ! -d $f; then
-			@MKDIR@ $f
-			@CHMOD@ 0755 $f
-			@CHOWN@ @DBUS_USER@:@DBUS_GROUP@ $f
-		fi
+	dir="@VARBASE@/run/dbus"
+	if @TEST@ ! -d $dir; then
+		@MKDIR@ $dir
+		@CHMOD@ 0755 $dir
+		@CHOWN@ @DBUS_USER@:@DBUS_GROUP@ $dir
+	fi
 	done
 	@PREFIX@/bin/dbus-uuidgen --ensure
 }
