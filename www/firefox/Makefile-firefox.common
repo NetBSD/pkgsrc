@@ -1,8 +1,8 @@
-# $NetBSD: Makefile-firefox.common,v 1.59 2008/07/16 09:52:56 ghen Exp $
+# $NetBSD: Makefile-firefox.common,v 1.60 2008/09/24 14:34:36 ghen Exp $
 # used by www/firefox/Makefile
 
 MOZILLA_BIN=		firefox-bin
-MOZ_VER=		2.0.0.16
+MOZ_VER=		2.0.0.17
 EXTRACT_SUFX=		.tar.bz2
 
 DISTNAME=		firefox-${MOZ_VER}-source
