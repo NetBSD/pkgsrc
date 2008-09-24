@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/06/08 13:01:48 obache Exp $
+# $NetBSD: Makefile,v 1.34 2008/09/24 03:03:45 obache Exp $
 #
 
 DISTNAME=		uim-1.5.1
@@ -25,6 +25,17 @@ CONFIGURE_ARGS+=	--disable-emacs
 CONFIGURE_ARGS+=	--with-libgcroots=installed
 
 .include "options.mk"
+
+PLIST_VARS+=		editline
+CHECK_BUILTIN.readline:=	yes
+.include "../../devel/readline/builtin.mk"
+CHECK_BUILTIN.readline:=	no
+
+.if !empty(BUILTIN_LIB_FOUND.edit:M[yY][eE][sS])
+PLIST.editline=		yes
+.else
+CONFIGURE_ARGS+=	--with-libedit=no
+.endif
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/doc/uim
