@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2342 2008/09/24 19:32:43 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.2343 2008/09/24 22:26:56 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4012,3 +4012,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/firefox-gtk1 to 2.0.0.17 [ghen 2008-09-24]
 	Updated www/firefox3-bin to 3.0.2 [ghen 2008-09-24]
 	Updated databases/bdb-xml to 1.2.1nb9 [minskim 2008-09-24]
+	Updated audio/faad2 to 2.6.1nb1 [tonnerre 2008-09-24]
