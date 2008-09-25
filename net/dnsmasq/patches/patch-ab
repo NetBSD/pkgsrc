@@ -1,0 +1,27 @@
+$NetBSD: patch-ab,v 1.1 2008/09/25 20:33:53 ahoka Exp $
+
+--- src/config.h.orig	2008-07-20 20:26:32.000000000 +0200
++++ src/config.h
+@@ -38,17 +38,19 @@
+ #  define RESOLVFILE "/etc/resolv.conf"
+ #endif
+ #define RUNFILE "/var/run/dnsmasq.pid"
+-#if defined(__FreeBSD__) || defined (__OpenBSD__) || defined(__DragonFly__)
++#if defined(__FreeBSD__) || defined (__OpenBSD__) || defined(__DragonFly__) || defined(__NetBSD__)
+ #   define LEASEFILE "/var/db/dnsmasq.leases"
+ #elif defined(__sun__) || defined (__sun)
+ #   define LEASEFILE "/var/cache/dnsmasq.leases"
+ #else
+ #   define LEASEFILE "/var/lib/misc/dnsmasq.leases"
+ #endif
+-#if defined(__FreeBSD__)
++#ifndef CONFFILE
++# if defined(__FreeBSD__)
+ #   define CONFFILE "/usr/local/etc/dnsmasq.conf"
+-#else
++# else
+ #   define CONFFILE "/etc/dnsmasq.conf"
++# endif
+ #endif
+ #define DEFLEASE 3600 /* default lease time, 1 hour */
+ #define CHUSER "nobody"
