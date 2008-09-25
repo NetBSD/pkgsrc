@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.41 2008/06/15 11:21:43 joerg Exp $
+# $NetBSD: Makefile,v 1.42 2008/09/25 14:02:09 wiz Exp $
 
 DISTNAME=		battalion
 PKGNAME=		battalion-1.4
-PKGREVISION=		6
+PKGREVISION=		7
 CATEGORIES=		games x11
 MASTER_SITES=		http://www.evl.uic.edu/aej/BATTALION/
 DISTFILES=		battalionSource1.4.tar.Z battalionSUN4.tar.gz

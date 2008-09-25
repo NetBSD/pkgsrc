@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.25 2007/03/24 19:21:24 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2008/09/25 14:02:09 wiz Exp $
 #
 
 .include		"../../games/nethack-lib/Makefile.common"
 
 PKGNAME=		nethack-lib-${NETHACK_VERSION}
-PKGREVISION=		1
+PKGREVISION=		2
 
 COMMENT=		Data files for Nethack
 
