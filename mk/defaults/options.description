@@ -210,6 +210,7 @@ lang-sq			Add Albanian language support.
 lang-sr			Add Serbian language support.
 lang-sv			Add Swedish language support.
 lang-uk			Add Ukrainian language support.
+lang-uk-ua		Add Ukrainian/UKRAINE language support.
 lang-zh-cn		Add Chinese Simplified language support.
 lang-zh-tw		Add Chinese Traditional language support.
 lcms			Enable Light Color Management System support.
