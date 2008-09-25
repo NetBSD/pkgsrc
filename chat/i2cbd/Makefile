@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2007/09/02 10:50:42 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2008/09/25 14:02:08 wiz Exp $
 #
 
 DISTNAME=	i2cbd-2.0_BETA5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	chat
 MASTER_SITES=	${MASTER_SITE_LOCAL} \
 		http://www.draga.com/~jwise/i2cb/
