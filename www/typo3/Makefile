@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2008/09/22 15:42:56 taca Exp $
+# $NetBSD: Makefile,v 1.5 2008/09/25 02:22:12 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
 PKGNAME=	typo3-${VER}
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typo3/}
 DISTFILES=	${TYPO3NAME}${EXTRACT_SUFX} ${SITESRC}${EXTRACT_SUFX}
@@ -16,7 +16,7 @@ DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=5.2.0:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-{mysql,pgsql}>=5.1.0:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib/
 
-#PKG_DESTDIR_SUPPORT=	user-destdir
+PKG_DESTDIR_SUPPORT=	destdir
 
 VER=		4.2.1
 NO_BUILD=	yes
@@ -60,6 +60,7 @@ CHECK_PERMS_SKIP+= ${TYPO3DIR}/${SITEDIR}/${d}
 
 SUBST_CLASSES+=		conf
 SUBST_FILES.conf+=	${WRKDIR}/README
+SUBST_FILES.conf+=	${WRKSRC}/t3lib/config_default.php
 SUBST_SED.conf+=        -e 's|@PREFIX@|${PREFIX:Q}|g'
 SUBST_SED.conf+=        -e 's|@TYPO3DIR@|${TYPO3DIR:Q}|g'
 SUBST_SED.conf+=        -e 's|@SITEDIR@|${SITEDIR:Q}|g'
@@ -73,11 +74,15 @@ TYPO3DIR?=	share/typo3
 post-extract:
 	${CP} ${FILESDIR}/README ${WRKDIR}
 
+pre-install:
+	${FIND} ${WRKSRC:Q} -name "*.orig*" -exec ${RM} -f {} \;
+
 do-install:
 	cd ${WRKSRC}; pax -rw . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${TYPO3NAME}
 	cd ${WRKDIR}/${SITESRC}; \
 		pax -rw . ${DESTDIR}${PREFIX}/${TYPO3DIR}/${SITEDIR}
-	${INSTALL_DATA} ${WRKDIR}/localconf.php ${DESTDIR}${PREFIX}/${EGDIR}
+	${INSTALL_DATA} ${WRKDIR}/${SITESRC}/typo3conf/localconf.php \
+		${DESTDIR}${PREFIX}/${EGDIR}
 
 .include "../../mk/apachever.mk"
 .include "../../lang/php/phpversion.mk"
