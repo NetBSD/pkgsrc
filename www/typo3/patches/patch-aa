@@ -1,0 +1,15 @@
+$NetBSD: patch-aa,v 1.1 2008/09/25 02:22:13 taca Exp $
+
+--- t3lib/config_default.php.orig	2008-06-11 17:14:58.000000000 +0900
++++ t3lib/config_default.php
+@@ -36,8 +36,8 @@ $TYPO3_CONF_VARS = Array(
+ 		'gdlib_2' => 0,							// String/Boolean. Set this if you are using the new GDlib 2.0.1+. If you don't set this flag and still use GDlib2, you might encounter strange behaviours like black images etc. This feature might take effect only if ImageMagick is installed and working as well! You can also use the value "no_imagecopyresized_fix" - in that case it will NOT try to fix a known issue where "imagecopyresized" does not work correctly.
+ 
+ 		'im' => 1,								// Boolean. Enables the use of IM.
+-		'im_path' => '/usr/X11R6/bin/',			// Path to the IM tools 'convert', 'combine', 'identify'. Version 4.2.9 of ImageMagick is highly recommended due to features and speed!
+-		'im_path_lzw' => '/usr/bin/',			// Path to the IM tool 'convert' with LZW enabled! See 'gif_compress'. If your version 4.2.9 of ImageMagick is compiled with LZW you may leave this field blank AND disable the flag 'gif_compress'! Tip: You can call LZW 'convert' with a prefix like 'myver_convert' by setting this path with it, eg. '/usr/bin/myver_' instead of just '/usr/bin/'.
++		'im_path' => '@PREFIX@/bin/',			// Path to the IM tools 'convert', 'combine', 'identify'. Version 4.2.9 of ImageMagick is highly recommended due to features and speed!
++		'im_path_lzw' => '@PREFIX@/bin/',			// Path to the IM tool 'convert' with LZW enabled! See 'gif_compress'. If your version 4.2.9 of ImageMagick is compiled with LZW you may leave this field blank AND disable the flag 'gif_compress'! Tip: You can call LZW 'convert' with a prefix like 'myver_convert' by setting this path with it, eg. '/usr/bin/myver_' instead of just '/usr/bin/'.
+ 
+ 		'im_version_5' => '',					// String. Set this if you're using ImageMagick/GraphicsMagick but not IM 4.x. Setting this value will automatically configure some settings for use with the specified program version. Allowed values are: "im4", "im5", "im6" and "gm" (uses GraphicsMagick instead of ImageMagick).
+ 		'im_negate_mask' => 0,					// Boolean. Indicates if the mask images should be inverted first. This depends of the ImageMagick version. Below ver. 5.1 this should be false. Above ImageMagick version 5.2+ it should be true. Just set the flag if the masks works opposite the intension!
