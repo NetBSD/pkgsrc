@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2343 2008/09/24 22:26:56 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.2344 2008/09/25 02:23:11 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4013,3 +4013,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/firefox3-bin to 3.0.2 [ghen 2008-09-24]
 	Updated databases/bdb-xml to 1.2.1nb9 [minskim 2008-09-24]
 	Updated audio/faad2 to 2.6.1nb1 [tonnerre 2008-09-24]
+	Updated www/typo3 to 4.2.1nb2 [taca 2008-09-25]
