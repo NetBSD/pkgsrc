@@ -1,6 +1,8 @@
-$NetBSD: distinfo,v 1.4 2008/07/23 23:46:08 tonnerre Exp $
+$NetBSD: distinfo,v 1.5 2008/09/25 20:33:53 ahoka Exp $
 
 SHA1 (dnsmasq-2.45.tar.gz) = 12f8cffd657f674fbf4bf4f670a0dcb65ea4a5ae
 RMD160 (dnsmasq-2.45.tar.gz) = b8ebf9dfeff26c18664a917cd32cb9b6a53852cb
 Size (dnsmasq-2.45.tar.gz) = 380877 bytes
 SHA1 (patch-aa) = f6d1d9d80a283d4270950031ec67c0b4e37920d7
+SHA1 (patch-ab) = 7bb6cb585f813a5fe9eddfdedda71a14740d8c4d
+SHA1 (patch-ac) = a07c71502399a7835cbb8b8e5136553305113e6e
