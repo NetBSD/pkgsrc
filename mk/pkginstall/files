@@ -1,4 +1,4 @@
-# $NetBSD: files,v 1.5 2008/01/04 21:50:27 heinz Exp $
+# $NetBSD: files,v 1.6 2008/09/25 14:01:46 wiz Exp $
 #
 # Generate a +FILES script that reference counts config files that are
 # required for the proper functioning of the package.
@@ -152,14 +152,14 @@ ADD)
 		"")	;;
 	 	*)	${ECHO} "$f_mode $f_user $f_group" > $perms ;;
 		esac
-		if ${TEST} ! -f "$file" -a ! -f "$f_eg"; then
+		if ${TEST} ! -f "$file" -a ! -f "$f_eg" -a ! -c "$f_eg"; then
 			:
 		else
 			case "$f_flags:$_PKG_CONFIG:$_PKG_RCD_SCRIPTS" in
 			*f*:*:*|[!r]:yes:*|[!r][!r]:yes:*|[!r][!r][!r]:yes:*|*r*:yes:yes)
 				if ${TEST} -f "$file"; then
 					${ECHO} "${PKGNAME}: $file already exists"
-				elif ${TEST} -f "$f_eg"; then
+				elif ${TEST} -f "$f_eg" -o -c "$f_eg"; then
 					${ECHO} "${PKGNAME}: copying $f_eg to $file"
 					${CP} $f_eg $file
 					case $f_user in
@@ -209,7 +209,7 @@ REMOVE)
 			"")
 				if ${TEST} -f "$preexist"; then
 					:
-				elif ${TEST} -f "$file" -a -f "$f_eg" && \
+				elif ${TEST} -f "$file" -a \( -f "$f_eg" -o -c "$f_eg" \) && \
 				     ${CMP} -s "$file" "$f_eg"; then
 					case "$f_flags:$_PKG_CONFIG:$_PKG_RCD_SCRIPTS" in
 					*f*:*:*|[!r]:yes:*|[!r][!r]:yes:*|[!r][!r][!r]:yes:*|*r*:yes:yes)
