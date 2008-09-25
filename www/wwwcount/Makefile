@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2007/02/22 19:27:24 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/09/25 14:02:09 wiz Exp $
 
 DISTNAME=	wwwcount2.5
 PKGNAME=	wwwcount-2.5
-PKGREVISION=	1
+PKGREVISION=	2
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_BACKUP}
 
