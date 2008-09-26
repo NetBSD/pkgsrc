@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2007/12/16 20:19:11 tron Exp $
+# $NetBSD: builtin.mk,v 1.1.10.1 2008/09/26 21:15:19 cube Exp $
 
 BUILTIN_PKG:=	libXrandr
 
@@ -47,3 +47,5 @@ USE_BUILTIN.libXrandr!=							\
 .  endif  # PREFER.libXrandr
 .endif
 MAKEVARS+=	USE_BUILTIN.libXrandr
+
+.include "../../mk/x11.builtin.mk"

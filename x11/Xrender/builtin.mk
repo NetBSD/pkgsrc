@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.17 2006/04/06 06:22:57 reed Exp $
+# $NetBSD: builtin.mk,v 1.17.22.1 2008/09/26 21:15:18 cube Exp $
 
 BUILTIN_PKG:=	Xrender
 
@@ -96,6 +96,9 @@ MAKEVARS+=	USE_BUILTIN.Xrender
 ### The section below only applies if we are not including this file
 ### solely to determine whether a built-in implementation exists.
 ###
+
+.include "../../mk/x11.builtin.mk"
+
 CHECK_BUILTIN.Xrender?=	no
 .if !empty(CHECK_BUILTIN.Xrender:M[nN][oO])
 

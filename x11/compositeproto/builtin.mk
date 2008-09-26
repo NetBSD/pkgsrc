@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2006/12/16 01:04:43 joerg Exp $
+# $NetBSD: builtin.mk,v 1.4.18.1 2008/09/26 21:15:18 cube Exp $
 
 BUILTIN_PKG:=	compositeproto
 
@@ -56,6 +56,8 @@ USE_BUILTIN.compositeproto!=						\
 .  endif  # PREFER.compositeproto
 .endif
 MAKEVARS+=	USE_BUILTIN.compositeproto
+
+.include "../../mk/x11.builtin.mk"
 
 CHECK_BUILTIN.compositeproto?=		no
 .if !empty(CHECK_BUILTIN.compositeproto:M[nN][oO])

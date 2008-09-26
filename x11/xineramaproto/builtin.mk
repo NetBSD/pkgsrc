@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2008/01/05 16:05:52 tron Exp $
+# $NetBSD: builtin.mk,v 1.2.8.1 2008/09/26 21:15:20 cube Exp $
 
 BUILTIN_PKG:=	xineramaproto
 
@@ -59,3 +59,5 @@ USE_BUILTIN.xineramaproto!=							\
 .  endif  # PREFER.xineramaproto
 .endif
 MAKEVARS+=	USE_BUILTIN.xineramaproto
+
+.include "../../mk/x11.builtin.mk"
