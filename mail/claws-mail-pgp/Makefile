@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/07/13 22:34:20 smb Exp $
+# $NetBSD: Makefile,v 1.12 2008/09/26 17:51:17 smb Exp $
 #
 META_PACKAGE=	yes
 
@@ -7,6 +7,7 @@ META_PACKAGE=	yes
 DISTNAME=	claws-mail-pgp-${CLAWS_VERSION}
 CATEGORIES=	mail security
 MASTER_SITES=	# none
+PKGREVISION=	1
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	Metapackage for the PGP plug-in for Claws-mail

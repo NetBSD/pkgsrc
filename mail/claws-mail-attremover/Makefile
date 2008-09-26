@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.8 2008/07/13 22:34:20 smb Exp $
+# $NetBSD: Makefile,v 1.9 2008/09/26 17:51:17 smb Exp $
 #
 
 DISTNAME=	att_remover-1.0.8
 PKGNAME=	claws-mail-att_remover-1.0.8
 CATEGORIES=	mail
 MASTER_SITES=	http://claws-mail.org/downloads/plugins/
+PKGREVISION=	1
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	Permanently deletes attachments from mail
@@ -22,5 +23,6 @@ USE_LANGUAGES+=	c
 
 .include "../../mail/claws-mail/Makefile.vers"
 .include "../../mail/claws-mail/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
