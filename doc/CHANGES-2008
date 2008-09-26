@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2344 2008/09/25 02:23:11 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2345 2008/09/26 12:09:22 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4014,3 +4014,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/bdb-xml to 1.2.1nb9 [minskim 2008-09-24]
 	Updated audio/faad2 to 2.6.1nb1 [tonnerre 2008-09-24]
 	Updated www/typo3 to 4.2.1nb2 [taca 2008-09-25]
+	Updated mail/thunderbird to 2.0.0.17 [ghen 2008-09-26]
+	Updated mail/thunderbird-gtk1 to 2.0.0.17 [ghen 2008-09-26]
