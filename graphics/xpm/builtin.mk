@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.15 2007/09/21 15:17:14 rillig Exp $
+# $NetBSD: builtin.mk,v 1.15.12.1 2008/09/26 19:59:46 cube Exp $
 
 BUILTIN_PKG:=	xpm
 
@@ -84,13 +84,5 @@ MAKEVARS+=	USE_BUILTIN.xpm
 ### The section below only applies if we are not including this file
 ### solely to determine whether a built-in implementation exists.
 ###
-CHECK_BUILTIN.xpm?=	no
-.if !empty(CHECK_BUILTIN.xpm:M[nN][oO])
 
-.  if !empty(USE_BUILTIN.xpm:M[yY][eE][sS])
-BUILDLINK_PREFIX.xpm=	${X11BASE}
-.    include "../../mk/x11.buildlink3.mk"
-.    include "../../mk/x11.builtin.mk"
-.  endif
-
-.endif	# CHECK_BUILTIN.xpm
+.include "../../mk/x11.builtin.mk"

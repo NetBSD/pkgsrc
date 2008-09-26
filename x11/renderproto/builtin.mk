@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.8 2006/12/17 16:06:31 joerg Exp $
+# $NetBSD: builtin.mk,v 1.8.18.1 2008/09/26 19:59:46 cube Exp $
 
 BUILTIN_PKG:=	renderproto
 
@@ -74,17 +74,14 @@ MAKEVARS+=	USE_BUILTIN.renderproto
 ### The section below only applies if we are not including this file
 ### solely to determine whether a built-in implementation exists.
 ###
+
+.include "../../mk/x11.builtin.mk"
+
 CHECK_BUILTIN.renderproto?=	no
 .if !empty(CHECK_BUILTIN.renderproto:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.renderproto:M[nN][oO])
 BUILDLINK_API_DEPENDS.renderproto+=	renderproto>=0.9
-.  endif
-
-.  if !empty(USE_BUILTIN.renderproto:M[yY][eE][sS])
-BUILDLINK_PREFIX.renderproto=	${X11BASE}
-.    include "../../mk/x11.buildlink3.mk"
-.    include "../../mk/x11.builtin.mk"
 .  endif
 
 .endif	# CHECK_BUILTIN.renderproto

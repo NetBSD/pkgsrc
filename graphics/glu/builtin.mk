@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.11 2006/04/06 06:22:02 reed Exp $
+# $NetBSD: builtin.mk,v 1.11.22.1 2008/09/26 19:59:46 cube Exp $
 
 BUILTIN_PKG:=	glu
 
@@ -64,17 +64,14 @@ MAKEVARS+=	USE_BUILTIN.glu
 ### The section below only applies if we are not including this file
 ### solely to determine whether a built-in implementation exists.
 ###
+
+.include "../../mk/x11.builtin.mk"
+
 CHECK_BUILTIN.glu?=	no
 .if !empty(CHECK_BUILTIN.glu:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.glu:M[nN][oO])
 BUILDLINK_API_DEPENDS.glu+=	glu>=6.0
-.  endif
-
-.  if !empty(USE_BUILTIN.glu:M[yY][eE][sS])
-BUILDLINK_PREFIX.glu=	${X11BASE}
-.    include "../../mk/x11.buildlink3.mk"
-.    include "../../mk/x11.builtin.mk"
 .  endif
 
 .endif	# CHECK_BUILTIN.glu
