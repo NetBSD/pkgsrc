@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2007/12/16 19:04:28 tron Exp $
+# $NetBSD: builtin.mk,v 1.1.10.1 2008/09/26 21:15:19 cube Exp $
 
 BUILTIN_PKG:=	libXmu
 
@@ -47,3 +47,5 @@ USE_BUILTIN.libXmu!=							\
 .  endif  # PREFER.libXmu
 .endif
 MAKEVARS+=	USE_BUILTIN.libXmu
+
+.include "../../mk/x11.builtin.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2007/12/17 13:27:29 tron Exp $
+# $NetBSD: builtin.mk,v 1.1.10.1 2008/09/26 21:15:18 cube Exp $
 
 BUILTIN_PKG:=	libICE
 
@@ -47,3 +47,5 @@ USE_BUILTIN.libICE!=							\
 .  endif  # PREFER.libICE
 .endif
 MAKEVARS+=	USE_BUILTIN.libICE
+
+.include "../../mk/x11.builtin.mk"

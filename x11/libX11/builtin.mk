@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.3 2008/04/01 13:46:13 tron Exp $
+# $NetBSD: builtin.mk,v 1.3.8.1 2008/09/26 21:15:18 cube Exp $
 
 BUILTIN_PKG:=	libX11
 
@@ -48,7 +48,4 @@ USE_BUILTIN.libX11!=							\
 .endif
 MAKEVARS+=	USE_BUILTIN.libX11
 
-.if !empty(USE_BUILTIN.libX11:M[yY][eE][sS])
-BUILDLINK_PREFIX.libX11=	${X11BASE}
-BUILDLINK_PASSTHRU_DIRS+=	${X11BASE}/include ${X11BASE}/lib
-.endif
+.include "../../mk/x11.builtin.mk"

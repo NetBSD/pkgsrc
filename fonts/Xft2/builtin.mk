@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.16 2008/01/05 17:24:12 tron Exp $
+# $NetBSD: builtin.mk,v 1.16.8.1 2008/09/26 21:15:18 cube Exp $
 
 BUILTIN_PKG:=	Xft2
 
@@ -86,16 +86,14 @@ MAKEVARS+=	USE_BUILTIN.Xft2
 ### The section below only applies if we are not including this file
 ### solely to determine whether a built-in implementation exists.
 ###
+
+.include "../../mk/x11.builtin.mk"
+
 CHECK_BUILTIN.Xft2?=	no
 .if !empty(CHECK_BUILTIN.Xft2:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.Xft2:M[nN][oO])
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1nb2
-.  endif
-
-.  if !empty(USE_BUILTIN.Xft2:M[yY][eE][sS])
-BUILDLINK_PREFIX.Xft2=	${X11BASE}
-BUILDLINK_FILES.Xft2+=	lib/pkgconfig/xft.pc
 .  endif
 
 .endif	# CHECK_BUILTIN.Xft2
