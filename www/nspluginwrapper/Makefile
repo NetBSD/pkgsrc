@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/07/05 22:27:51 abs Exp $
+# $NetBSD: Makefile,v 1.8.6.1 2008/09/26 22:48:13 jmcneill Exp $
 #
 
 DISTNAME=       nspluginwrapper-1.0.0
@@ -18,7 +18,8 @@ NOT_FOR_PLATFORM=	Linux-*-*
 HAS_CONFIGURE=		yes
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake pkg-config
-CONFIGURE_ARGS+=	--prefix=${PREFIX} --x11=${X11BASE}
+CONFIGURE_ARGS+=	--prefix=${PREFIX}
+CONFIGURE_ARGS+=	--with-x11-prefix=${X11BASE}
 
 PLUGIN_SUBDIR=		lib/nspluginwrapper/i386/linux
 PLUGIN_INSTDIR=		${PREFIX}/${PLUGIN_SUBDIR}
