@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.4 2007/02/22 19:27:27 wiz Exp $
+# $NetBSD: builtin.mk,v 1.4.16.1 2008/09/26 19:59:46 cube Exp $
 
 # TODO: builtin.mk failed to use native on XFree86
 # the two headers are identical with native XFree86
@@ -76,17 +76,14 @@ MAKEVARS+=	USE_BUILTIN.randrproto
 ### The section below only applies if we are not including this file
 ### solely to determine whether a built-in implementation exists.
 ###
+
+.include "../../mk/x11.builtin.mk"
+
 CHECK_BUILTIN.randrproto?=	no
 .if !empty(CHECK_BUILTIN.randrproto:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.randrproto:M[nN][oO])
 BUILDLINK_API_DEPENDS.randrproto+=	randrproto>=1.0
-.  endif
-
-.  if !empty(USE_BUILTIN.randrproto:M[yY][eE][sS])
-BUILDLINK_PREFIX.randrproto=	${X11BASE}
-.    include "../../mk/x11.buildlink3.mk"
-.    include "../../mk/x11.builtin.mk"
 .  endif
 
 .endif	# CHECK_BUILTIN.randrproto
