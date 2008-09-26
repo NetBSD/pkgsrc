@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.14 2008/09/20 16:18:36 obache Exp $
+$NetBSD: distinfo,v 1.15 2008/09/26 00:45:33 obache Exp $
 
 SHA1 (pidgin-2.5.1.tar.bz2) = 8b7be1be4d549d9c0e34c820c8a285aab5e116d7
 RMD160 (pidgin-2.5.1.tar.bz2) = d9f927db55ecc55a2e66b064612774575b82b062
@@ -6,6 +6,6 @@ Size (pidgin-2.5.1.tar.bz2) = 8952067 bytes
 SHA1 (silc-toolkit-1.1.7.tar.gz) = a25918e83d5070ff75b7d6f296698dada76a92ca
 RMD160 (silc-toolkit-1.1.7.tar.gz) = 783297f44d577d5ec7dcff7952996944e4b1d5c6
 Size (silc-toolkit-1.1.7.tar.gz) = 2678989 bytes
-SHA1 (patch-aa) = a64f525462056178653e5b7548862773a1fdce32
+SHA1 (patch-aa) = b8b0ecb358cc053c1034768b3f80e0e1ae523aa2
 SHA1 (patch-ae) = ff4f2d738656c6f23c423046f746b9ed2878c415
 SHA1 (patch-ag) = fa71295e848f1b06f318f06fab8fcc90110c20a3
