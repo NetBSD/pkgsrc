@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/02/29 23:01:03 xtraeme Exp $
+$NetBSD: distinfo,v 1.1.1.1.6.1 2008/09/26 19:57:54 tron Exp $
 
-SHA1 (firefox/releases/3.0b3/linux-i686/en-US/firefox-3.0b3.tar.bz2) = fdabc2c88cecc0207d225c5fbbbb04c3446aa2c9
-RMD160 (firefox/releases/3.0b3/linux-i686/en-US/firefox-3.0b3.tar.bz2) = edf5dea48420c744cb867cf494c4b3f9994589f8
-Size (firefox/releases/3.0b3/linux-i686/en-US/firefox-3.0b3.tar.bz2) = 8997010 bytes
+SHA1 (firefox/releases/3.0.2/linux-i686/en-US/firefox-3.0.2.tar.bz2) = 3d0663cbb81e86cc8675dd715a5ace3cbfa9ec50
+RMD160 (firefox/releases/3.0.2/linux-i686/en-US/firefox-3.0.2.tar.bz2) = 859b0be9bb43dab0a558e3bad6b7e0196cfdc1e4
+Size (firefox/releases/3.0.2/linux-i686/en-US/firefox-3.0.2.tar.bz2) = 9087486 bytes
