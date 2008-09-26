@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.11 2008/04/24 11:18:13 tron Exp $
+# $NetBSD: builtin.mk,v 1.11.6.1 2008/09/26 19:59:46 cube Exp $
 
 BUILTIN_PKG:=	freetype2
 
@@ -70,17 +70,14 @@ MAKEVARS+=	USE_BUILTIN.freetype2
 ### The section below only applies if we are not including this file
 ### solely to determine whether a built-in implementation exists.
 ###
+
+.include "../../mk/x11.builtin.mk"
+
 CHECK_BUILTIN.freetype2?=	no
 .if !empty(CHECK_BUILTIN.freetype2:M[nN][oO])
 
 .  if !empty(USE_BUILTIN.freetype2:M[nN][oO])
 BUILDLINK_API_DEPENDS.freetype2+=	freetype2>=2.1.3
-.  endif
-
-.  if !empty(USE_BUILTIN.freetype2:M[yY][eE][sS])
-BUILDLINK_PREFIX.freetype2=	${X11BASE}
-.    include "../../mk/x11.buildlink3.mk"
-.    include "../../mk/x11.builtin.mk"
 .  endif
 
 .endif	# CHECK_BUILTIN.freetype2

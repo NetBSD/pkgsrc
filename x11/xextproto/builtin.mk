@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.5 2007/02/22 19:27:28 wiz Exp $
+# $NetBSD: builtin.mk,v 1.5.16.1 2008/09/26 19:59:46 cube Exp $
 
 BUILTIN_PKG:=	xextproto
 
@@ -58,14 +58,11 @@ MAKEVARS+=	USE_BUILTIN.xextproto
 ### The section below only applies if we are not including this file
 ### solely to determine whether a built-in implementation exists.
 ###
+
+.include "../../mk/x11.builtin.mk"
+
 CHECK_BUILTIN.xextproto?=	no
 .if !empty(CHECK_BUILTIN.xextproto:M[nN][oO])
-
-.  if !empty(USE_BUILTIN.xextproto:M[yY][eE][sS])
-BUILDLINK_PREFIX.xextproto=	${X11BASE}
-.    include "../../mk/x11.buildlink3.mk"
-.    include "../../mk/x11.builtin.mk"
-.  endif
 
 # If we are using the builtin version, check whether it has a xextproto.pc
 # file or not.  If the latter, generate a fake one.
