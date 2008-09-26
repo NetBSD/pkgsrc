@@ -1,8 +1,17 @@
-$NetBSD: patch-at,v 1.1 2007/12/09 10:55:37 drochner Exp $
+$NetBSD: patch-at,v 1.1.8.1 2008/09/26 14:42:13 tron Exp $
 
---- frontend/main.c.orig	2007-12-08 17:49:45.000000000 +0100
+--- frontend/main.c.orig	2007-11-01 13:33:29.000000000 +0100
 +++ frontend/main.c
-@@ -1189,11 +1189,13 @@ int main(int argc, char *argv[])
+@@ -914,6 +914,8 @@ int decodeMP4file(char *mp4file, char *s
+                 sample_count = frameInfo.samples;
+             } else {
+                 sample_count = (unsigned int)(dur * frameInfo.channels);
++		if (sample_count > frameInfo.samples)
++			sample_count = frameInfo.samples;
+ 
+                 if (!useAacLength && !initial && (sampleId < numSamples/2) && (sample_count != frameInfo.samples))
+                 {
+@@ -1189,11 +1191,13 @@ int main(int argc, char *argv[])
          return 1;
      }
  
