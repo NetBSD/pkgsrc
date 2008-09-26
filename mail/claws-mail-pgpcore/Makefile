@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.10 2008/07/13 22:32:05 smb Exp $
+# $NetBSD: Makefile,v 1.11 2008/09/26 17:51:17 smb Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLUGIN_NAME=	pgpcore
 PLUG_VER=	3.5.0
+PKGREVISION=	1
 .include "../../mail/claws-mail/plugins.mk"
 
 MAINTAINER=	smb@NetBSD.org
@@ -26,5 +27,6 @@ DEPENDS+=	gpgme>=1.1.4nb2:../../security/gpgme
 .include "../../mail/claws-mail/Makefile.vers"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"
