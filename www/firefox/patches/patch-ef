@@ -1,0 +1,37 @@
+$NetBSD: patch-ef,v 1.1.4.2 2008/09/26 19:52:40 tron Exp $
+
+This is align.patch from https://bugzilla.mozilla.org/show_bug.cgi?id=161826
+(https://bugzilla.mozilla.org/attachment.cgi?id=294965)
+
+It is needed to make firefox work on CPUs requiring strict alignment.
+
+(Part 2 of 3 [patch-ee .. patch-eg])
+
+Index: intl/unicharutil/util/nsUnicharUtils.h
+===================================================================
+RCS file: /cvsroot/mozilla/intl/unicharutil/util/nsUnicharUtils.h,v
+retrieving revision 1.19
+diff -u -b -B -u -8 -p -r1.19 nsUnicharUtils.h
+--- intl/unicharutil/util/nsUnicharUtils.h	24 Feb 2005 15:50:57 -0000	1.19
++++ intl/unicharutil/util/nsUnicharUtils.h	31 Dec 2007 16:07:40 -0000
+@@ -77,16 +77,20 @@ inline PRBool CaseInsensitiveFindInReada
+                         aHay.BeginReading(searchBegin),
+                         aHay.EndReading(searchEnd),
+                         nsCaseInsensitiveStringComparator());
+ }
+ 
+ PRUnichar ToUpperCase(PRUnichar);
+ PRUnichar ToLowerCase(PRUnichar);
+ 
++#define NEED_STRICT_ALIGNMENT defined(__sparc__) || defined(__alpha__) || defined(__mips__)
++
++void SetUnichar(void *, PRUnichar);
++
+ inline PRBool IsUpperCase(PRUnichar c) {
+     return ToLowerCase(c) != c;
+ }
+ 
+ inline PRBool IsLowerCase(PRUnichar c) {
+     return ToUpperCase(c) != c;
+ }
+ 
