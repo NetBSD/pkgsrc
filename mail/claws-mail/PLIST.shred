@@ -1,1 +1,2 @@
+@comment $NetBSD: PLIST.shred,v 1.2 2008/09/26 17:51:17 smb Exp $
 bin/claws-mail-shred

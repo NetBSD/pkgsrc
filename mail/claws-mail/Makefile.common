@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.6 2008/01/09 03:55:09 smb Exp $
+# $NetBSD: Makefile.common,v 1.7 2008/09/26 17:51:17 smb Exp $
 
 # used by mail/claws-mail/plugins.mk
 DISTNAME=	claws-mail-${CLAWS_VERSION}
@@ -41,6 +41,7 @@ CONFIGURE_ARGS+=	--disable-gnomeprint
 BUILDLINK_ABI_DEPENDS.libetpan+=	libetpan>=0.49
 CONFIGURE_ARGS+=	--enable-libetpan
 .include "../../mail/libetpan/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 
 #.if !empty(PKG_BUILD_OPTIONS.claws-mail:Mbogofilter)
 #CONFIGURE_ARGS+=	--enable-bogofilter-plugin
