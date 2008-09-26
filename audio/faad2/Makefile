@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2007/12/09 10:55:30 drochner Exp $
+# $NetBSD: Makefile,v 1.40.8.1 2008/09/26 14:42:13 tron Exp $
 
 DISTNAME=	faad2-2.6.1
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=faac/}
+PKGREVISION=	1
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.audiocoding.com/
