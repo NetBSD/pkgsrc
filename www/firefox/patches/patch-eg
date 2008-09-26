@@ -1,0 +1,99 @@
+$NetBSD: patch-eg,v 1.1.4.2 2008/09/26 19:52:40 tron Exp $
+
+This is align.patch from https://bugzilla.mozilla.org/show_bug.cgi?id=161826
+(https://bugzilla.mozilla.org/attachment.cgi?id=294965)
+
+It is needed to make firefox work on CPUs requiring strict alignment.
+
+(Part 3 of 3 [patch-ee .. patch-eg])
+
+Index: layout/generic/nsTextFrame.cpp
+===================================================================
+RCS file: /cvsroot/mozilla/layout/generic/Attic/nsTextFrame.cpp,v
+retrieving revision 1.513.4.17
+diff -u -b -B -u -8 -p -r1.513.4.17 nsTextFrame.cpp
+--- layout/generic/nsTextFrame.cpp	19 Sep 2007 01:45:40 -0000	1.513.4.17
++++ layout/generic/nsTextFrame.cpp	31 Dec 2007 16:07:41 -0000
+@@ -5118,28 +5118,37 @@ struct TextRun {
+     mSegments[mNumSegments].mIsWhitespace = aIsWhitespace;
+     mTotalContentLen += aContentLen;
+     mSegments[mNumSegments].mContentLen = PRUint32(mTotalContentLen);
+     mNumSegments++;
+   }
+ };
+ 
+ // Transforms characters in place from ascii to Unicode
+-static void
++static PRUnichar *
+ TransformTextToUnicode(char* aText, PRInt32 aNumChars)
+ {
+   // Go backwards over the characters and convert them.
+   unsigned char*  cp1 = (unsigned char*)aText + aNumChars - 1;
+-  PRUnichar*      cp2 = (PRUnichar*)aText + (aNumChars - 1);
++  PRUnichar*      cp2;
++  PRUnichar*      ret;
+   
+-  while (aNumChars-- > 0) {
+-    // XXX: If you crash here then you may see the issue described
+-    // in http://bugzilla.mozilla.org/show_bug.cgi?id=36146#c44
+-    *cp2-- = PRUnichar(*cp1--);
+-  }
++  if ((unsigned long) aText & 0x1)
++    cp2 = ((PRUnichar*)(aText + 1));
++  else
++    cp2 = (PRUnichar*)aText;
++  
++  ret = cp2;
++
++  cp2 += (aNumChars - 1);
++
++  while (aNumChars-- > 0)
++    SetUnichar(cp2--, PRUnichar(*cp1--));
++
++  return ret;
+ }
+  
+ PRUint32
+ nsTextFrame::EstimateNumChars(PRUint32 aAvailableWidth,
+                               PRUint32 aAverageCharWidth)
+ {
+   // Estimate the number of characters that will fit. Use 105% of the available
+   // width divided by the average character width.
+@@ -5697,17 +5706,17 @@ nsTextFrame::MeasureText(nsPresContext* 
+           PRUnichar* pWordBuf = lastWordPtr;
+           PRUint32   wordBufLen = aTx.GetWordBufferLength() -
+                                   (lastWordPtr - aTx.GetWordBuffer());
+ 
+           if (aTx.TransformedTextIsAscii()) {
+             // The text transform buffer contains ascii characters, so
+             // transform it to Unicode
+             NS_ASSERTION(wordBufLen >= PRUint32(lastWordLen), "no room to transform in place");
+-            TransformTextToUnicode((char*)lastWordPtr, lastWordLen);
++            pWordBuf = TransformTextToUnicode((char*)lastWordPtr, lastWordLen);
+           }
+ 
+           // Look ahead in the text-run and compute the final word
+           // width, taking into account any style changes and stopping
+           // at the first breakable point.
+           if (!aTextData.mMeasureText || (lastWordDimensions.width == -1)) {
+             // We either didn't measure any text or we measured multiple words
+             // at once so either way we don't know lastWordDimensions. We'll have to
+@@ -6227,17 +6236,17 @@ nsTextFrame::TrimTrailingWhiteSpace(nsPr
+ 
+ static void
+ RevertSpacesToNBSP(PRUnichar* aBuffer, PRInt32 aWordLen)
+ {
+   PRUnichar* end = aBuffer + aWordLen;
+   for (; aBuffer < end; aBuffer++) {
+     PRUnichar ch = *aBuffer;
+     if (ch == ' ') {
+-      *aBuffer = CH_NBSP;
++      SetUnichar(aBuffer, CH_NBSP);
+     }
+   }
+ }
+ 
+ nsTextDimensions
+ nsTextFrame::ComputeTotalWordDimensions(nsPresContext* aPresContext,
+                                    nsILineBreaker* aLineBreaker,
+                                    nsLineLayout& aLineLayout,

@@ -1,0 +1,37 @@
+$NetBSD: patch-ee,v 1.1.4.2 2008/09/26 19:52:40 tron Exp $
+
+This is align.patch from https://bugzilla.mozilla.org/show_bug.cgi?id=161826
+(https://bugzilla.mozilla.org/attachment.cgi?id=294965)
+
+It is needed to make firefox work on CPUs requiring strict alignment.
+
+(Part 1 of 3 [patch-ee .. patch-eg])
+
+Index: intl/unicharutil/util/nsUnicharUtils.cpp
+===================================================================
+RCS file: /cvsroot/mozilla/intl/unicharutil/util/nsUnicharUtils.cpp,v
+retrieving revision 1.27.8.1
+diff -u -b -B -u -8 -p -r1.27.8.1 nsUnicharUtils.cpp
+--- intl/unicharutil/util/nsUnicharUtils.cpp	22 Jun 2006 19:13:00 -0000	1.27.8.1
++++ intl/unicharutil/util/nsUnicharUtils.cpp	31 Dec 2007 16:07:40 -0000
+@@ -343,8 +343,20 @@ ToUpperCase(PRUnichar aChar)
+         if (aChar < 256)
+             result = toupper(char(aChar));
+         else
+             result = aChar;
+     }
+     return result;
+ }
+ 
++void
++SetUnichar(void *ptr, PRUnichar aChar)
++{
++#if NEED_STRICT_ALIGNMENT
++    *((char *) ptr) = *((char *) &aChar);
++    *((char *) ptr + 1) = *((char *) &aChar + 1);
++#else
++    *((PRUnichar *) ptr) = aChar;
++#endif
++}
++
++
