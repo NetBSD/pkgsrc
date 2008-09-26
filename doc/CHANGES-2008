@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2345 2008/09/26 12:09:22 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.2346 2008/09/26 13:39:41 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4016,3 +4016,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/typo3 to 4.2.1nb2 [taca 2008-09-25]
 	Updated mail/thunderbird to 2.0.0.17 [ghen 2008-09-26]
 	Updated mail/thunderbird-gtk1 to 2.0.0.17 [ghen 2008-09-26]
+	Updated www/seamonkey to 1.1.12 [ghen 2008-09-26]
+	Updated www/seamonkey-bin to 1.1.12 [ghen 2008-09-26]
+	Updated www/seamonkey-gtk1 to 1.1.12 [ghen 2008-09-26]
