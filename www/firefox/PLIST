@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.29.4.1 2008/07/18 09:13:31 rtr Exp $
+@comment $NetBSD: PLIST,v 1.29.4.2 2008/09/26 19:52:40 tron Exp $
 bin/${MOZILLA}
 @comment begin PROGRAMS
 lib/${MOZILLA}/${MOZILLA_BIN}
@@ -117,6 +117,7 @@ lib/${MOZILLA}/chrome/comm.manifest
 lib/${MOZILLA}/chrome/en-US.jar
 lib/${MOZILLA}/chrome/en-US.manifest
 lib/${MOZILLA}/chrome/icons/default/default.xpm
+lib/${MOZILLA}/chrome/installed-chrome.txt
 lib/${MOZILLA}/chrome/pippki.jar
 lib/${MOZILLA}/chrome/pippki.manifest
 lib/${MOZILLA}/chrome/reporter.jar
