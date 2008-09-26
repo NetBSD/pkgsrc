@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.24 2008/07/16 15:44:19 ghen Exp $
+# $NetBSD: Makefile,v 1.25 2008/09/26 13:38:47 ghen Exp $
 
 MOZILLA=		seamonkey
-MOZ_VER=		1.1.11
+MOZ_VER=		1.1.12
 MOZ_DISTVER=		${MOZ_VER}
 
 HOMEPAGE=		http://www.mozilla.org/projects/seamonkey/
