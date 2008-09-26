@@ -1,10 +1,9 @@
 ===========================================================================
-$NetBSD: MESSAGE,v 1.1 2008/02/29 23:48:15 tnn Exp $
+$NetBSD: MESSAGE,v 1.1.6.1 2008/09/26 19:57:54 tron Exp $
 
-Because firefox3 is still beta software, it is recommended that you make a
-backup of your firefox2 profile incase anything goes wrong.
-It is stored in ~/.mozilla/firefox .
+If you experience font rendering problems with this package, try increasing
+the process's limit for open file descriptors by running e.g.:
 
-If you plan to use both firefox2 and firefox3, it is recommended to create
-and use a separate profile for each, by running "firefox -ProfileManager".
+    $ ulimit -n 256
+
 ===========================================================================
