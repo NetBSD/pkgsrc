@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2007/12/17 14:24:06 tron Exp $
+# $NetBSD: builtin.mk,v 1.1.10.1 2008/09/26 21:15:18 cube Exp $
 
 BUILTIN_PKG:=	libSM
 
@@ -47,3 +47,5 @@ USE_BUILTIN.libSM!=							\
 .  endif  # PREFER.libSM
 .endif
 MAKEVARS+=	USE_BUILTIN.libSM
+
+.include "../../mk/x11.builtin.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.6 2007/02/22 19:27:26 wiz Exp $
+# $NetBSD: builtin.mk,v 1.6.16.1 2008/09/26 21:15:18 cube Exp $
 
 BUILTIN_PKG:=	fixesproto
 
@@ -56,6 +56,8 @@ USE_BUILTIN.fixesproto!=						\
 .  endif  # PREFER.fixesproto
 .endif
 MAKEVARS+=	USE_BUILTIN.fixesproto
+
+.include "../../mk/x11.builtin.mk"
 
 CHECK_BUILTIN.fixesproto?=	no
 .if !empty(CHECK_BUILTIN.fixesproto:M[nN][oO])

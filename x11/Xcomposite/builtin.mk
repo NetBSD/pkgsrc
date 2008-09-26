@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.12 2006/04/19 15:39:06 reed Exp $
+# $NetBSD: builtin.mk,v 1.12.22.1 2008/09/26 21:15:18 cube Exp $
 
 BUILTIN_PKG:=	Xcomposite
 
@@ -48,3 +48,5 @@ USE_BUILTIN.Xcomposite!=						\
 .  endif  # PREFER.Xcomposite
 .endif
 MAKEVARS+=	USE_BUILTIN.Xcomposite
+
+.include "../../mk/x11.builtin.mk"
