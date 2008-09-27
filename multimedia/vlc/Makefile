@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.59 2008/09/20 22:33:02 ahoka Exp $
+# $NetBSD: Makefile,v 1.60 2008/09/27 22:33:20 ahoka Exp $
 #
 
-DISTNAME=		vlc-0.9.1
-PKGREVISION=		1
+DISTNAME=		vlc-0.9.2
 CATEGORIES=		multimedia
-MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/0.9.1/
+MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/0.9.2/
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		ahoka@NetBSD.org
@@ -20,7 +19,7 @@ GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 USE_LANGUAGES=		c99 c++
 USE_DIRS+=		xdg-1.4
-PLIST_VARS+=		x86simd altivec
+PLIST_VARS+=		x86simd altivec v4l2
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
@@ -54,6 +53,14 @@ PLIST.altivec=		yes
 CONFIGURE_ARGS+=	--enable-altivec
 .endif
 
+# Enable when cleanly builds
+.if exists(/usr/include/linux/videodev2.h) # || exists(/usr/include/sys/videoio.h)
+CONFIGURE_ARGS+=	--enable-v4l2
+PLIST.v4l2=		yes
+.else
+CONFIGURE_ARGS+=	--disable-v4l2
+.endif
+
 INSTALLATION_DIRS+=	${PREFIX}/share/vlc/http/dialogs \
 			${PREFIX}/share/vlc/http/images \
 			${PREFIX}/share/vlc/http/js \
@@ -71,6 +78,9 @@ INSTALLATION_DIRS+=	${PREFIX}/share/vlc/http/dialogs \
 			${PREFIX}/share/vlc/osdmenu/dvd/selection \
 			${PREFIX}/share/vlc/skins2 \
 			${PREFIX}/share/vlc/skins2/fonts
+
+pre-configure:
+	cd ${WRKSRC} && autoconf
 
 pre-install:
 	${INSTALL_DATA} ${WRKSRC}/doc/vlc.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
