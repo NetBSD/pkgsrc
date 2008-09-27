@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.7 2008/09/27 23:11:37 tonnerre Exp $
+
+--- lgl/strverscmp.c.orig	2008-06-19 12:00:10.000000000 +0200
++++ lgl/strverscmp.c
+@@ -58,7 +58,7 @@
+ */
+ 
+ int
+-__strverscmp (const char *s1, const char *s2)
++gnutls_strverscmp (const char *s1, const char *s2)
+ {
+   const unsigned char *p1 = (const unsigned char *) s1;
+   const unsigned char *p2 = (const unsigned char *) s2;
