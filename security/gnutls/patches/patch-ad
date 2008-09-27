@@ -1,0 +1,17 @@
+$NetBSD: patch-ad,v 1.4 2008/09/27 23:11:37 tonnerre Exp $
+
+--- lgl/strverscmp.h.orig	2008-06-19 12:00:10.000000000 +0200
++++ lgl/strverscmp.h
+@@ -19,6 +19,12 @@
+ #ifndef STRVERSCMP_H_
+ # define STRVERSCMP_H_
+ 
++#ifdef HAVE_STRVERSCMP
+ int strverscmp (const char *, const char *);
++#else
++int gnutls_strverscmp (const char *, const char *);
++#define __strverscmp gnutls_strverscmp
++#define strverscmp gnutls_strverscmp
++#endif
+ 
+ #endif /* not STRVERSCMP_H_ */
