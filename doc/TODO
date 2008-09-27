@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7555 2008/09/25 10:29:34 wiz Exp $
+$NetBSD: TODO,v 1.7556 2008/09/27 15:02:25 taca Exp $
 
 Suggested new packages
 ======================
@@ -501,6 +501,7 @@ Suggested package updates
 	o bzflag-2.0.10
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
+	o cairo-1.8.0
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o capistrano-2.4.3
@@ -634,6 +635,7 @@ Suggested package updates
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.0
+	o firefox3-3.0.3
 	o fisg-0.3.12
 	o flashplayer-0.4.13
 	o flightgear-1.0.0 [pkg/38160]
@@ -1239,6 +1241,7 @@ Suggested package updates
 	o ruby-mechanize-0.7.7
 	o ruby-ming-0.2.0
 	o ruby-net-ssh-1.1.4
+	o ruby-rcairo-1.8.0
 	o rudiments-0.30
 	o rxvt-unicode-9.05 [pkg/38988]
 	o sablecc-3.2
