@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/09/20 22:33:02 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.18 2008/09/27 22:33:20 ahoka Exp $
 ${PLIST.faad}lib/vlc/codec/libfaad_plugin.la
 ${PLIST.dbus}lib/vlc/control/libdbus_plugin.la
 ${PLIST.dbus}lib/vlc/misc/libinhibit_plugin.la
@@ -29,6 +29,8 @@ ${PLIST.x86simd}lib/vlc/video_chroma/libi422_yuy2_mmx_plugin.la
 ${PLIST.x86simd}lib/vlc/video_chroma/libi420_rgb_sse2_plugin.la
 ${PLIST.x86simd}lib/vlc/video_chroma/libi420_yuy2_sse2_plugin.la
 ${PLIST.x86simd}lib/vlc/video_chroma/libi422_yuy2_sse2_plugin.la
+${PLIST.gnome}lib/vlc/access/libaccess_gnomevfs_plugin.la
+${PLIST.v4l2}lib/vlc/access/libaccess_v4l2_plugin.la
 bin/cvlc
 bin/rvlc
 bin/vlc
