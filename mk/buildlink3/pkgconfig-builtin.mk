@@ -1,4 +1,4 @@
-# $NetBSD: pkgconfig-builtin.mk,v 1.1.2.3 2008/09/18 02:18:33 cube Exp $
+# $NetBSD: pkgconfig-builtin.mk,v 1.1.2.4 2008/09/27 20:23:28 cube Exp $
 
 # This file is used to factor out a common pattern in builtin.mk files backed
 # up by the existence of a pkgconfig file.
@@ -39,7 +39,7 @@ MAKEVARS:=      ${MAKEVARS} BUILTIN_PKG.${BUILTIN_PKG}
 .  if ${PREFER.${BUILTIN_PKG}} == "pkgsrc"
 USE_BUILTIN.${BUILTIN_PKG}=	no
 .  else
-USE_BUILTIN.${BUILTIN_PKG}=	${IS_BUILTIN.${BUILTIN_PKG}}
+USE_BUILTIN.${BUILTIN_PKG}:=	${IS_BUILTIN.${BUILTIN_PKG}}
 .    if defined(BUILTIN_PKG.${BUILTIN_PKG}) && \
 	!empty(IS_BUILTIN.${BUILTIN_PKG}:M[Yy][Ee][Ss])
 USE_BUILTIN.${BUILTIN_PKG}=	yes
