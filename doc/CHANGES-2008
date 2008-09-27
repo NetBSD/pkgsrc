@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2347 2008/09/27 00:11:47 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.2348 2008/09/27 23:14:53 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4020,3 +4020,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/seamonkey-bin to 1.1.12 [ghen 2008-09-26]
 	Updated www/seamonkey-gtk1 to 1.1.12 [ghen 2008-09-26]
 	Updated mail/getmail to 4.8.4 [schmonz 2008-09-27]
+	Updated security/gnutls to 2.4.1nb1 [tonnerre 2008-09-27]
