@@ -1,0 +1,19 @@
+$NetBSD: patch-v4l2,v 1.1 2008/09/27 22:33:20 ahoka Exp $
+
+--- modules/access/v4l2/v4l2.c.orig	2008-09-25 01:46:12.000000000 +0200
++++ modules/access/v4l2/v4l2.c
+@@ -55,7 +55,13 @@
+ #include <sys/ioctl.h>
+ #include <sys/mman.h>
+ 
+-#include <linux/videodev2.h>
++#if defined(HAVE_LINUX_VIDEODEV2_H)
++#   include <linux/videodev2.h>
++#elif defined(HAVE_SYS_VIDEOIO_H)
++#   include <sys/videoio.h>
++#else
++#   error "No Video4Linux2 headers found."
++#endif
+ 
+ #include <sys/soundcard.h>
+ 
