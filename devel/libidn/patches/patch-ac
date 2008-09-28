@@ -1,0 +1,22 @@
+$NetBSD: patch-ac,v 1.1 2008/09/28 00:43:39 tonnerre Exp $
+
+--- lib/gl/string.in.h.orig	2008-08-25 17:33:33.000000000 +0200
++++ lib/gl/string.in.h
+@@ -578,14 +578,15 @@ extern char *strsignal (int __sig);
+ 
+ #if @GNULIB_STRVERSCMP@
+ # if !@HAVE_STRVERSCMP@
+-extern int strverscmp (const char *, const char *);
++#define strverscmp libidn_strverscmp
++extern int libidn_strverscmp (const char *, const char *);
+ # endif
+ #elif defined GNULIB_POSIXCHECK
+ # undef strverscmp
+ # define strverscmp(a, b) \
+     (GL_LINK_WARNING ("strverscmp is unportable - " \
+                       "use gnulib module strverscmp for portability"), \
+-     strverscmp (a, b))
++     libidn_strverscmp (a, b))
+ #endif
+ 
+ 
