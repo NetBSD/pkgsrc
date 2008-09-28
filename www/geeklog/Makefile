@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2008/09/09 14:34:13 taca Exp $
+# $NetBSD: Makefile,v 1.21 2008/09/28 02:25:26 taca Exp $
 #
 
 DISTNAME=	geeklog-${VER}
 PKGNAME=	geeklog-${VER:C/(sr|-)/./g}
-PKGREVISION=	3
+PKGREVISION=	4
 CATEGORIES=	www
 MASTER_SITES=	http://www.geeklog.net/filemgmt/upload_dir/
 
@@ -13,7 +13,6 @@ COMMENT=	PHP/MySQL based application for managing dynamic web content
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.3.3:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-mysql>=4.3.0:../../databases/php-mysql
 
 USE_TOOLS+=	pax:run
@@ -126,6 +125,5 @@ do-install:
 .endfor
 	cd ${WRKSRC}/public_html; pax -rw . ${DESTDIR}${GEEKLOG_PUBDIR}
 
-.include "../../mk/apache.mk"
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
