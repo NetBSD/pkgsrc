@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2352 2008/09/28 04:31:58 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2353 2008/09/28 13:56:07 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4027,3 +4027,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/roundup to 1.4.6 [tonnerre 2008-09-28]
 	Updated www/drupal6-translations to 20080928 [taca 2008-09-28]
 	Updated www/typolight-translations to 20080928 [taca 2008-09-28]
+	Updated www/php-apc to 5.2.6.3.0.19 [tonnerre 2008-09-28]
