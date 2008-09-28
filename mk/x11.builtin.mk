@@ -1,12 +1,13 @@
-# $NetBSD: x11.builtin.mk,v 1.2.20.2 2008/09/28 03:56:26 cube Exp $
+# $NetBSD: x11.builtin.mk,v 1.2.20.3 2008/09/28 06:03:44 cube Exp $
 #
 # x11.builtin.mk will include the builtin.mk file from the appropriate
 # X11 distribution.
 #
 # BUILTIN_PKG and USE_BUILTIN.<BUILTIN_PKG> must be defined by the caller
 
-# XXX make bug
-# 'CHECK_BUILTIN.${BUILTIN_PKG}?= no' will overwrite the value
+# XXX make(1) idiosyncrasy
+# 'CHECK_BUILTIN.${BUILTIN_PKG}?= no' will overwrite the value on older
+# version of make (in NetBSD's base system, prior to 20080331).
 .if !defined(CHECK_BUILTIN.${BUILTIN_PKG})
 CHECK_BUILTIN.${BUILTIN_PKG}=	no
 .endif
