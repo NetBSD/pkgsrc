@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7559 2008/09/28 13:36:01 wiz Exp $
+$NetBSD: TODO,v 1.7560 2008/09/28 14:41:41 taca Exp $
 
 Suggested new packages
 ======================
@@ -912,7 +912,6 @@ Suggested package updates
 	o libtool-2.2.6a
 	o libtool-base-2.2.6a
 	o libxklavier-3.7
-	o lighttpd-1.4.19
 	o lincvs-2.1.0 [now called CrossVC]
 	o linuxsms-0.77
 	o lmms-0.2.1
