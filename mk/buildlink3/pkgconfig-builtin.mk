@@ -1,4 +1,4 @@
-# $NetBSD: pkgconfig-builtin.mk,v 1.1.2.4 2008/09/27 20:23:28 cube Exp $
+# $NetBSD: pkgconfig-builtin.mk,v 1.1.2.5 2008/09/28 06:04:57 cube Exp $
 
 # This file is used to factor out a common pattern in builtin.mk files backed
 # up by the existence of a pkgconfig file.
@@ -14,9 +14,7 @@ BUILTIN_FIND_FILES.FIND_FILES_${BUILTIN_PKG}=	${PKGCONFIG_FILE.${BUILTIN_PKG}}
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
-PKGCONFIG_BASE.${BUILTIN_PKG}?=	${X11BASE}
-
-.if ${PKGCONFIG_BASE.${BUILTIN_PKG}} == ${LOCALBASE}
+.if ${PKGCONFIG_BASE.${BUILTIN_PKG}:U${X11BASE}} == ${LOCALBASE}
 IS_BUILTIN.${BUILTIN_PKG}=	no
 .elif !defined(IS_BUILTIN.${BUILTIN_PKG})
 IS_BUILTIN.${BUILTIN_PKG}=	no
