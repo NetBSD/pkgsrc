@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.26 2008/05/27 12:40:37 martti Exp $
+@comment $NetBSD: PLIST,v 1.27 2008/09/28 17:32:26 martti Exp $
 man/man8/squirrelmail-conf.pl.8
 share/examples/squirrelmail/squirrelmail.conf
 share/squirrelmail/AUTHORS
@@ -59,6 +59,7 @@ share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.10a.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.11.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.12.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.13.txt
+share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.15.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.2.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.3.txt
 share/squirrelmail/doc/ReleaseNotes/1.4/Notes-1.4.3a.txt
@@ -194,10 +195,6 @@ share/squirrelmail/locale/README.locales
 share/squirrelmail/locale/index.php
 share/squirrelmail/locale/timezones.cfg
 share/squirrelmail/plugins/README.plugins
-share/squirrelmail/plugins/abook_take/README
-share/squirrelmail/plugins/abook_take/index.php
-share/squirrelmail/plugins/abook_take/setup.php
-share/squirrelmail/plugins/abook_take/take.php
 share/squirrelmail/plugins/administrator/INSTALL
 share/squirrelmail/plugins/administrator/auth.php
 share/squirrelmail/plugins/administrator/defines.php
@@ -474,7 +471,6 @@ share/squirrelmail/themes/wood_theme.php
 @dirrm share/squirrelmail/plugins/calendar
 @dirrm share/squirrelmail/plugins/bug_report
 @dirrm share/squirrelmail/plugins/administrator
-@dirrm share/squirrelmail/plugins/abook_take
 @dirrm share/squirrelmail/plugins
 @dirrm share/squirrelmail/locale
 @dirrm share/squirrelmail/include/options
