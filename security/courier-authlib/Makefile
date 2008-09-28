@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.28 2008/02/18 20:26:33 jlam Exp $
+# $NetBSD: Makefile,v 1.29 2008/09/28 22:15:30 tonnerre Exp $
 
 .include "Makefile.common"
 
-DISTNAME=	courier-authlib-0.60.2
-PKGREVISION=	1
+DISTNAME=	courier-authlib-0.61.0
 CATEGORIES=	security
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=courier/}
 EXTRACT_SUFX=	.tar.bz2
@@ -22,17 +21,21 @@ CONFLICTS+=	courier-authpgsql-[0-9]*
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LIBTOOL=		yes
+LIBTOOLIZE_PLIST=	yes
 PKG_SYSCONFSUBDIR=	authlib
 
 REPLACE_PERL=		samplepipe.pl sysconftool
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		cat:run gmake perl:run
-CONFIGURE_ENV+=		CAT=${TOOLS_CAT:Q}		# makedat
+CONFIGURE_ENV+=		CAT=${TOOLS_CAT}		# makedat
 
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=	--with-pkgconfdir=${PKG_SYSCONFDIR:Q}
+BUILD_DEFS+=		VARBASE
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--with-pkgconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--without-stdheaderdir
+
+.include "../../mk/bsd.prefs.mk"
 
 AUTHDAEMONVAR?=		${VARBASE}/authdaemon
 CONFIGURE_ARGS+=	--with-authdaemonvar=${AUTHDAEMONVAR:Q}
@@ -43,15 +46,15 @@ FILES_SUBST+=		AUTHDAEMONVAR=${AUTHDAEMONVAR:Q}
 # application (sqwebmail).  Assume that it's installed in the same prefix
 # as courier-authlib.
 #
-CONFIGURE_ENV+=		EXPECT=${PREFIX:Q}/bin/expect
+CONFIGURE_ENV+=		EXPECT=${PREFIX}/bin/expect
 CHECK_INTERPRETER_SKIP=	libexec/courier-authlib/authsystem.passwd
 
 AUTHLIBDIR=		lib/courier-authlib
 AUTHLIBEXECDIR=		libexec/courier-authlib
 AUTHEXAMPLEDIR=		share/examples/courier-authlib
 AUTHDOCDIR=		share/doc/courier-authlib
-FILES_SUBST+=		AUTHLIBEXECDIR=${AUTHLIBEXECDIR:Q}
-FILES_SUBST+=		AUTHEXAMPLEDIR=${AUTHEXAMPLEDIR:Q}
+FILES_SUBST+=		AUTHLIBEXECDIR=${AUTHLIBEXECDIR}
+FILES_SUBST+=		AUTHEXAMPLEDIR=${AUTHEXAMPLEDIR}
 
 PKG_SYSCONFSUBDIR?=	courier
 
@@ -75,14 +78,14 @@ POST_INSTALL_TARGETS=	post-install-common post-install-authdaemon
 .include "options.mk"
 .include "../../devel/libltdl/buildlink3.mk"
 
-.for _file_ in ${GEN_FILES}
-CONF_FILES_PERMS+=	${EGDIR}/${_file_}.dist ${PKG_SYSCONFDIR}/${_file_} \
+.for file in ${GEN_FILES}
+CONF_FILES_PERMS+=	${EGDIR}/${file}.dist ${PKG_SYSCONFDIR}/${file} \
 			${COURIER_USER} ${COURIER_GROUP} 0660
 .endfor
 
-.for _file_ in ${AUTHLIB_PLIST}
-GENERATE_PLIST+=	${TEST} -f ${DESTDIR}${PREFIX}/${_file_} &&	\
-			${ECHO} "${_file_}";
+.for file in ${AUTHLIB_PLIST}
+GENERATE_PLIST+=	${TEST} -f ${DESTDIR}${PREFIX}/${file} &&	\
+			${ECHO} "${file}";
 .endfor
 .if !empty(AUTHLIB_PLIST:M${AUTHEXAMPLEDIR}/*)
 GENERATE_PLIST+=	${ECHO} "@dirrm ${AUTHEXAMPLEDIR}";
