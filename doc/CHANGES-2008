@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2350 2008/09/28 02:27:17 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2351 2008/09/28 02:48:12 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4024,3 +4024,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libidn to 1.10nb1 [tonnerre 2008-09-28]
 	Updated www/typo3 to 4.2.1nb3 [taca 2008-09-28]
 	Updated www/geeklog to 1.4.1nb4 [taca 2008-09-28]
+	Updated devel/roundup to 1.4.6 [tonnerre 2008-09-28]
