@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2354 2008/09/28 17:32:53 martti Exp $
+$NetBSD: CHANGES-2008,v 1.2355 2008/09/28 19:55:44 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4029,3 +4029,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/typolight-translations to 20080928 [taca 2008-09-28]
 	Updated www/php-apc to 5.2.6.3.0.19 [tonnerre 2008-09-28]
 	Updated mail/squirrelmail to 1.4.16 [martti 2008-09-28]
+	Updated www/firefox3 to 3.0.3 [tnn 2008-09-28]
