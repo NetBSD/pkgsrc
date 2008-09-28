@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2008/09/22 15:31:10 taca Exp $
+# $NetBSD: options.mk,v 1.3 2008/09/28 04:20:02 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.drupal-translations
 
@@ -23,7 +23,7 @@ DL_TRANSLATIONS.pl=	pl-6.x-0.3.tar.gz
 DL_TRANSLATIONS.pt-br=	pt-br-6.x-1.0-rc5.tar.gz
 DL_TRANSLATIONS.ro=	ro-6.x-1.1.tar.gz
 DL_TRANSLATIONS.sk=	sk-6.x-1.0-beta5.tar.gz
-DL_TRANSLATIONS.sv=	sv-6.x-1.0.tar.gz
+DL_TRANSLATIONS.sv=	sv-6.x-1.1.tar.gz
 DL_TRANSLATIONS.uk-ua=	uk-ua-6.x-1.2-beta2.tar.gz
 DL_TRANSLATIONS.zh-cn=	zh-hans-6.x-1.0.tar.gz
 DL_TRANSLATIONS.zh-tw=	zh-hant-6.x-1.1.tar.gz
