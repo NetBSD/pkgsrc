@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2008/09/25 02:22:12 taca Exp $
+# $NetBSD: Makefile,v 1.6 2008/09/28 02:24:27 taca Exp $
 #
 
 DISTNAME=	${TYPO3NAME}
 PKGNAME=	typo3-${VER}
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typo3/}
 DISTFILES=	${TYPO3NAME}${EXTRACT_SUFX} ${SITESRC}${EXTRACT_SUFX}
@@ -12,7 +12,6 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://typo3.com/
 COMMENT=	The typo3 content management system
 
-DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=5.2.0:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-{mysql,pgsql}>=5.1.0:../../databases/php-mysql
 DEPENDS+=	${PHP_PKG_PREFIX}-zlib>=5.2.0:../../archivers/php-zlib/
 
@@ -84,6 +83,5 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/${SITESRC}/typo3conf/localconf.php \
 		${DESTDIR}${PREFIX}/${EGDIR}
 
-.include "../../mk/apachever.mk"
 .include "../../lang/php/phpversion.mk"
 .include "../../mk/bsd.pkg.mk"
