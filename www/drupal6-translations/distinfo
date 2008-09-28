@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2008/09/22 15:31:10 taca Exp $
+$NetBSD: distinfo,v 1.6 2008/09/28 04:20:02 taca Exp $
 
 SHA1 (drupal6-20080816/cs-6.x-1.8.tar.gz) = 9c91966431b805e6f8e934ff3a6622b85954d941
 RMD160 (drupal6-20080816/cs-6.x-1.8.tar.gz) = cb954a82bd65fa3e794a559d9def62bc2f32b2d3
@@ -48,9 +48,9 @@ Size (drupal6-20080816/ro-6.x-1.1.tar.gz) = 134248 bytes
 SHA1 (drupal6-20080816/sk-6.x-1.0-beta5.tar.gz) = b6936e3232b90944dd60d7fa59eb7d99afa94b31
 RMD160 (drupal6-20080816/sk-6.x-1.0-beta5.tar.gz) = 0339f705f0f5a37e8ea33386ad702ab957483bde
 Size (drupal6-20080816/sk-6.x-1.0-beta5.tar.gz) = 217583 bytes
-SHA1 (drupal6-20080816/sv-6.x-1.0.tar.gz) = e54c54a3fe19095f8003ff3d796be48b7ea85b97
-RMD160 (drupal6-20080816/sv-6.x-1.0.tar.gz) = b298d5490002d6a7a42c0a34c79838e14dbd0459
-Size (drupal6-20080816/sv-6.x-1.0.tar.gz) = 208606 bytes
+SHA1 (drupal6-20080816/sv-6.x-1.1.tar.gz) = abb90031787e793399702c67255ed22bc143b28c
+RMD160 (drupal6-20080816/sv-6.x-1.1.tar.gz) = b1c1239dce67653585498f4e6bf7d45ed49eeae2
+Size (drupal6-20080816/sv-6.x-1.1.tar.gz) = 208615 bytes
 SHA1 (drupal6-20080816/uk-ua-6.x-1.2-beta2.tar.gz) = 9be47ec1b1163971e44c4a05fd7b76a42d21660a
 RMD160 (drupal6-20080816/uk-ua-6.x-1.2-beta2.tar.gz) = fd5a86ac4e3f88a147c798229bb5a41a58755691
 Size (drupal6-20080816/uk-ua-6.x-1.2-beta2.tar.gz) = 176240 bytes
