@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2008/07/14 12:56:08 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/09/29 12:04:50 obache Exp $
 #
 
 DISTNAME=		netbiff-0.9.18
@@ -24,5 +24,6 @@ post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/CONFIG ${DOCDIR}
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../x11/gtk/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
