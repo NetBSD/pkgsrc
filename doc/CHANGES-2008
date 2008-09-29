@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2357 2008/09/29 12:40:11 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2358 2008/09/29 14:30:33 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4032,3 +4032,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/firefox3 to 3.0.3 [tnn 2008-09-28]
 	Updated security/courier-authlib to 0.61.0 [tonnerre 2008-09-28]
 	Updated mail/netbiff to 0.9.18nb1 [obache 2008-09-29]
+	Updated graphics/ruby-RMagick to 2.7.0 [taca 2008-09-29]
