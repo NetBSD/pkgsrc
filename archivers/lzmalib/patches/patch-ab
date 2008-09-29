@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2008/09/29 07:55:47 obache Exp $
+
+Common/String.h confounds with case insensitive filesystem.
+Remove "Common" from include path.
+
+--- configure.orig	2008-07-23 15:28:16.000000000 +0900
++++ configure
+@@ -1671,7 +1671,7 @@ MYVPATH="`find . -type d | tr '\n' ':'`"
+ # Building flags
+ MYCFLAGS="-Wall -fPIC -fsigned-char -O2"
+ MYCXXFLAGS="-Wall -fPIC -fsigned-char -O2"
+-MYCPPFLAGS="-I. -I./Common -I./7zip/Common -I./7zip/Compress/LZMA -I./7zip/Compress/LZMA_Alone"
++MYCPPFLAGS="-I. -I./7zip/Common -I./7zip/Compress/LZMA -I./7zip/Compress/LZMA_Alone"
+ MYLDFLAGS="-L."
+ 
+ 
