@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2008/09/29 01:28:50 jmcneill Exp $
+
+--- plugins/video/H.264/gpl/Makefile.in.orig	2008-09-28 21:07:24.000000000 -0400
++++ plugins/video/H.264/gpl/Makefile.in
+@@ -137,9 +137,9 @@ OBJECTS = $(addprefix $(OBJDIR)/,$(patsu
+ 
+ $(PLUGIN): $(OBJECTS)
+ ifeq (,$(findstring solaris,$(target_os)))
+-	$(CXX) $(X264_LIBS) -o $@ $^
++	$(CXX) $(LDFLAGS) $(X264_LIBS) -o $@ $^
+ else
+-	$(CXX) $(X264_LIBS) $@ -o $@ $^
++	$(CXX) $(LDFLAGS) $(X264_LIBS) $@ -o $@ $^
+ endif
+ 
+ install:
