@@ -1,62 +1,33 @@
-$NetBSD: patch-aa,v 1.2 2003/07/10 08:27:39 jtb Exp $
+$NetBSD: patch-aa,v 1.2.40.1 2008/09/29 13:47:18 tron Exp $
 
---- configure.in.orig
-+++ configure.in
-@@ -274,56 +274,14 @@
- dnl	in one of several places, so check
- dnl	several locations, reporting location
- dnl	if found.
--AC_MSG_CHECKING(for netcdf library)
+--- configure.ac~	2008-03-16 10:18:52.000000000 -0400
++++ configure.ac	2008-09-04 01:45:01.000000000 -0400
+@@ -302,28 +302,13 @@ GRI_DETERMINE_ENDIAN
+ 
+ AC_CHECK_HEADERS(unistd.h)
+ 
+-
+-dnl Check for netcdf library.  It might be in one of several places,
+-dnl so check several locations, reporting the location if found.
 -define(CHECK_FOR_NETCDF, [
--    if test -d /opt/netcdf/include ; then
--	#
--	# Solaris often has it here
--	CXXFLAGS="$CXXFLAGS -I/opt/netcdf/include"
--        LIBS="$LIBS -L/opt/netcdf/lib -lnetcdf"
--	if test $gri_cv_is_sun = yes ; then
+-  AC_MSG_CHECKING(for netcdf library)
+-  for d in /opt/netcdf /usr/local /usr; do
+-      if test -f $d/include/netcdf.h; then
+-	 AM_CXXFLAGS="$AM_CXXFLAGS -I$d/include"
+-	 EXTRA_CFLAGS_TEMPLATE="$EXTRA_CFLAGS_TEMPLATE -I$d/include"
+-	 DEFS="$DEFS -I$d/include"
+-	 LIBS="$LIBS -L$d/lib -lnetcdf"
+-	 if test $gri_cv_is_sun = yes ; then
 -	    LIBS="$LIBS -lnsl"
--	fi
--	AC_DEFINE(HAVE_LIBNETCDF)
--        echo "yes (in /opt/netcdf/include/netcdf.h and /opt/netcdf/lib/libnetcdf.a)"
--    else
--	if test -f /usr/local/include/netcdf.h ; then
--	    CXXFLAGS="$CPPFLAGS -I/usr/local/include"
--	    LIBS="$LIBS -L/usr/local/lib -lnetcdf"
--            if test $gri_cv_is_sun = yes ; then
--		LIBS="$LIBS -lnsl"
--	    fi
--	    AC_DEFINE(HAVE_LIBNETCDF)
--            echo "yes (in /usr/local/include/netcdf.h and /usr/local/lib/libnetcdf.a)"
--	else
--	    #
--	    # Linux/debian often has it here.
--	    if test -f /usr/include/netcdf.h ; then
--                CXXFLAGS="$CPPFLAGS -I/usr/include/netcdf"
--                LIBS="$LIBS -L/usr/lib/netcdf -lnetcdf"
--                if test $gri_cv_is_sun = yes ; then
--                    LIBS="$LIBS -lnsl"
--                fi
--                AC_DEFINE(HAVE_LIBNETCDF)
--                echo "yes (in /usr/include/netcdf.h and /usr/lib/libnetcdf.a)"
--            else
--		if test -f /boot/home/lib/netcdf ; then
--		    CXXFLAGS="$CPPFLAGS -I/boot/home/include/netcdf"
--		    LIBS="$LIBS -L/boot/home/lib/netcdf -lnetcdf"
--                    if test $gri_cv_is_sun = yes ; then
--			LIBS="$LIBS -lnsl"
--		    fi
--                    echo "yes (in /boot/home/netcdf)"
--		    AC_DEFINE(HAVE_LIBNETCDF)
--		else
--	            echo "no"
--		fi
--            fi
--        fi
--    fi
+-	 fi
+-	 AC_DEFINE(HAVE_LIBNETCDF)
+-	 AC_MSG_RESULT(yes, in $d/include/netcdf.h and $d/lib/libnetcdf.a)
+-      fi
+-  done
+-  AC_MSG_RESULT(done)
 -])dnl
 -dnl
 -CHECK_FOR_NETCDF
-+
 +AC_CHECK_LIB(netcdf, nc_open, HAVE_LIBNETCDF="YES", HAVE_LIBNETCDF="")
 +[
 +if test -n "$HAVE_LIBNETCDF" ; then
@@ -65,5 +36,5 @@ $NetBSD: patch-aa,v 1.2 2003/07/10 08:27:39 jtb Exp $
 +fi
 +]
  
- dnl gri3 AC_CHECK_LIB(m,sin)
- dnl gri3 AC_CHECK_LIB(popt,poptGetNextOpt,[
+ dnl use this??
+ dnl AC_SUBST(EXTRA_CXXFLAGS)

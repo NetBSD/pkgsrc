@@ -1,9 +1,17 @@
-@comment $NetBSD: PLIST,v 1.7 2006/04/04 14:45:45 jlam Exp $
+@comment $NetBSD: PLIST,v 1.7.20.1 2008/09/29 13:47:18 tron Exp $
 bin/gri
-bin/${PKGNAME}
 bin/gri_merge
 bin/gri_unpage
 info/gri.info
+info/gri.info-1
+info/gri.info-2
+info/gri.info-3
+man/man1/gri.1
+man/man1/gri_merge.1
+man/man1/gri_unpage.1
+share/doc/gri/cmdrefcard.ps
+share/doc/gri/license.txt
+share/doc/gri/refcard.ps
 share/doc/html/gri/AboutGriMode.html
 share/doc/html/gri/Acknowledgments.html
 share/doc/html/gri/AdjustingCharacterPosition.html
@@ -217,9 +225,6 @@ share/doc/html/gri/example5.png
 share/doc/html/gri/example6-tiny.png
 share/doc/html/gri/example6.html
 share/doc/html/gri/example6.png
-share/doc/html/gri/example6color-tiny.png
-share/doc/html/gri/example6color.html
-share/doc/html/gri/example6color.png
 share/doc/html/gri/example6histogram-tiny.png
 share/doc/html/gri/example6histogram.html
 share/doc/html/gri/example6histogram.png
@@ -232,6 +237,23 @@ share/doc/html/gri/example8.png
 share/doc/html/gri/example9-tiny.png
 share/doc/html/gri/example9.html
 share/doc/html/gri/example9.png
+share/doc/html/gri/FEM.gri
+share/doc/html/gri/example1.gri
+share/doc/html/gri/example10.gri
+share/doc/html/gri/example10color.gri
+share/doc/html/gri/example11.gri
+share/doc/html/gri/example12.gri
+share/doc/html/gri/example13.gri
+share/doc/html/gri/example2.gri
+share/doc/html/gri/example3.gri
+share/doc/html/gri/example4.gri
+share/doc/html/gri/example5.gri
+share/doc/html/gri/example6.gri
+share/doc/html/gri/example6histogram.gri
+share/doc/html/gri/example7.gri
+share/doc/html/gri/example8.gri
+share/doc/html/gri/example9.gri
+share/doc/html/gri/logo.gri
 share/doc/html/gri/examples
 share/doc/html/gri/index.html
 share/doc/html/gri/linux-install.html
@@ -263,7 +285,6 @@ share/doc/html/gri/uncompiled-unix.html
 share/emacs/site-lisp/gri-mode.el
 share/examples/gri/FEM.gri
 share/examples/gri/FEM.pl
-share/examples/gri/FEM.ps
 share/examples/gri/example1.dat
 share/examples/gri/example1.gri
 share/examples/gri/example1.ps
@@ -292,8 +313,6 @@ share/examples/gri/example5.gri
 share/examples/gri/example5.ps
 share/examples/gri/example6.gri
 share/examples/gri/example6.ps
-share/examples/gri/example6color.gri
-share/examples/gri/example6color.ps
 share/examples/gri/example6histogram.gri
 share/examples/gri/example6histogram.ps
 share/examples/gri/example6image.dat
@@ -316,16 +335,14 @@ share/examples/gri/example9.ps
 share/examples/gri/example9a.dat
 share/examples/gri/example9b.dat
 share/examples/gri/logo.gri
-share/examples/gri/logo.ps
 share/examples/gri/model.elements
 share/examples/gri/model.nodes
-share/gri/${PKGVERSION}/gri.cmd
-share/gri/${PKGVERSION}/license.txt
-share/gri/${PKGVERSION}/logo.dat
-share/gri/${PKGVERSION}/startup.msg
-@dirrm share/gri/2.12.5
+share/gri/gri.cmd
+share/gri/logo.dat
+share/gri/startup.msg
 @dirrm share/gri
 @dirrm share/examples/gri
+@dirrm share/doc/gri
 @dirrm share/doc/html/gri/tst_suite
 @dirrm share/doc/html/gri/screenshots
 @dirrm share/doc/html/gri/resources
