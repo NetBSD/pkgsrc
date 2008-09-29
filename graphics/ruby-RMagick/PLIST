@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/09/15 08:45:01 taca Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/09/29 14:28:45 taca Exp $
 ${GEM_HOME}/cache/rmagick-${PKGVERSION}.gem
 ${GEM_LIBDIR}/.require_paths
 ${GEM_LIBDIR}/ChangeLog
@@ -25,8 +25,6 @@ ${GEM_LIBDIR}/doc/ex/adaptive_threshold.rb
 ${GEM_LIBDIR}/doc/ex/add_noise.rb
 ${GEM_LIBDIR}/doc/ex/affine.rb
 ${GEM_LIBDIR}/doc/ex/affine_transform.rb
-${GEM_LIBDIR}/doc/ex/affinity.rb
-${GEM_LIBDIR}/doc/ex/affinity_images.rb
 ${GEM_LIBDIR}/doc/ex/arc.rb
 ${GEM_LIBDIR}/doc/ex/arcpath.rb
 ${GEM_LIBDIR}/doc/ex/arcs01.rb
@@ -215,6 +213,8 @@ ${GEM_LIBDIR}/doc/ex/rect01.rb
 ${GEM_LIBDIR}/doc/ex/rect02.rb
 ${GEM_LIBDIR}/doc/ex/rectangle.rb
 ${GEM_LIBDIR}/doc/ex/reduce_noise.rb
+${GEM_LIBDIR}/doc/ex/remap.rb
+${GEM_LIBDIR}/doc/ex/remap_images.rb
 ${GEM_LIBDIR}/doc/ex/resize_to_fill.rb
 ${GEM_LIBDIR}/doc/ex/resize_to_fit.rb
 ${GEM_LIBDIR}/doc/ex/roll.rb
