@@ -1,198 +1,70 @@
-$NetBSD: patch-ac,v 1.1.1.1 2002/05/03 23:45:17 jtb Exp $
+$NetBSD: patch-ac,v 1.1.1.1.48.1 2008/09/29 13:47:18 tron Exp $
 
---- doc/Makefile.orig	Wed Apr  3 20:09:30 2002
-+++ doc/Makefile	Wed May  1 23:00:29 2002
-@@ -1,8 +1,8 @@
- # Makefile for Gri documentation files.
- 
--            DOC_DIR = $(prefix)/share/gri/doc
--           HTML_DIR = $(DOC_DIR)/html
--       EXAMPLES_DIR = $(DOC_DIR)/examples
-+            DOC_DIR = $(prefix)/share/doc/gri
-+           HTML_DIR = $(prefix)/share/doc/html/gri
-+       EXAMPLES_DIR = $(prefix)/share/examples/gri
-                  RM = rm -f
-             REFCARD = refcard
-         CMD_REFCARD = cmdrefcard
-@@ -13,12 +13,12 @@
- FORCE:
- 
- all:
--	make info
--	make html
-+	$(MAKE) info
-+	$(MAKE) html
- 
- install:
--	make info-install
--	make html-install
-+	$(MAKE) info-install
-+	$(MAKE) html-install
- 
- read:
- 	chmod a+r Makefile
-@@ -31,25 +31,25 @@
- 	lynx -dump FAQ.html > FAQ
- 
- the_resources:
--	cd resources ; make
-+	cd resources ; $(MAKE)
- 
- test:
- 	cat test.texi | texinfo2HTML > test.html
- 
- html: gri.texi gri.info texinfo2HTML HTML_subdivide
--	cd examples ; make png
-+	cd examples ; $(MAKE) png
- 	-cp examples/*.png ./
--	cd examples ; make html
-+	cd examples ; $(MAKE) html
- 	cp examples/*.html ./
--	cd tst_suite ; make html
--	cd screenshots; make png
-+	cd tst_suite ; $(MAKE) html
-+	cd screenshots; $(MAKE) png
- 	cat gri.texi     		>  TMP
- 	perl make_html_index		>> TMP
- 	perl make_html_commandindex	>> TMP
- 	perl make_html_builtinindex	>> TMP
- 	cat TMP | perl texinfo2HTML	>  $(HTML_LONG_NAME)
- 	rm -f TMP
--	make read
-+	$(MAKE) read
- 	rm -f gri[1-9]*.html
- 	perl HTML_subdivide  $(HTML_LONG_NAME) "The Gri graphing language"
- 	rm -f $(HTML_LONG_NAME)
-@@ -63,43 +63,28 @@
- 	$(INSTALL) -m 644 cmdrefcard.ps $(CARD_DIR)
- 
- html-tar: html
--	make html-install DOC_DIR=./gridoc
-+	$(MAKE) html-install DOC_DIR=./gridoc
- 	tar -c -f gridoc.tar ./gridoc
- 	gzip -f --best gridoc.tar
- 
- html-install:	html
--	$(INSTALL) -d          $(HTML_DIR)
--	chmod a+rx             $(HTML_DIR)
--	$(INSTALL) -d          $(HTML_DIR)/resources
--	chmod a+rx             $(HTML_DIR)/resources
--	cp resources/*.gif     $(HTML_DIR)/resources
--	chmod 644              $(HTML_DIR)/resources/*.gif
--	$(INSTALL) -d          $(HTML_DIR)/tst_suite
--	chmod a+rx             $(HTML_DIR)/tst_suite
--	cp tst_suite/*html     $(HTML_DIR)/tst_suite
--	-cp examples/*.png     $(HTML_DIR)/
--	-chmod 644             $(HTML_DIR)/*.png
--	$(INSTALL) -d          $(HTML_DIR)/screenshots
--	chmod a+rx             $(HTML_DIR)/screenshots
--	cp screenshots/*.png   $(HTML_DIR)/screenshots
--	chmod a+rx             $(HTML_DIR)/screenshots
--	chmod 644              $(HTML_DIR)/screenshots/*.png
--	cp *.html              $(HTML_DIR)
--	chmod 644              $(HTML_DIR)/*.html
-+	$(BSD_INSTALL_DATA_DIR) $(HTML_DIR)
-+	$(BSD_INSTALL_DATA_DIR) $(HTML_DIR)/resources
-+	$(BSD_INSTALL_DATA) resources/*.gif $(HTML_DIR)/resources
-+	$(BSD_INSTALL_DATA_DIR) $(HTML_DIR)/tst_suite
-+	$(BSD_INSTALL_DATA) tst_suite/*html $(HTML_DIR)/tst_suite
-+	$(BSD_INSTALL_DATA) examples/*.png $(HTML_DIR)/
-+	$(BSD_INSTALL_DATA_DIR) $(HTML_DIR)/screenshots
-+	$(BSD_INSTALL_DATA) screenshots/*.png $(HTML_DIR)/screenshots
-+	$(BSD_INSTALL_DATA) *.html $(HTML_DIR)
- #       Now install the examples
--	$(INSTALL) -d          $(EXAMPLES_DIR)
--	chmod a+rx             $(EXAMPLES_DIR)
--	cp examples/model*     $(EXAMPLES_DIR)
--	chmod 644              $(EXAMPLES_DIR)/model*
--	cp examples/*.dat      $(EXAMPLES_DIR)
--	chmod 644              $(EXAMPLES_DIR)/*.dat
--	cp examples/*.gri      $(EXAMPLES_DIR)
--	chmod 644              $(EXAMPLES_DIR)/*.gri
--	cp examples/*.ps       $(EXAMPLES_DIR)
--	chmod 644              $(EXAMPLES_DIR)/*.ps
--	cp examples/FEM.pl     $(EXAMPLES_DIR)
--	chmod 755              $(EXAMPLES_DIR)/FEM.pl
+--- doc/Makefile.in.orig	2008-09-08 12:35:24.000000000 -0400
++++ doc/Makefile.in	2008-09-16 18:35:52.000000000 -0400
+@@ -179,31 +179,13 @@ target_alias = @target_alias@
+ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ info_TEXINFOS = gri.texi
+-@OS_IS_FINK_FALSE@@OS_IS_FREEBSD_FALSE@@OS_IS_LINUX_DEBIAN_FALSE@@OS_IS_LINUX_REDHAT_FALSE@MAN_DIR = $(DESTDIR)$(prefix)/share/man/man1
+-@OS_IS_FINK_FALSE@@OS_IS_FREEBSD_TRUE@@OS_IS_LINUX_DEBIAN_FALSE@@OS_IS_LINUX_REDHAT_FALSE@MAN_DIR = $(DESTDIR)$(prefix)/man/man1
+-@OS_IS_FINK_TRUE@@OS_IS_LINUX_DEBIAN_FALSE@@OS_IS_LINUX_REDHAT_FALSE@MAN_DIR = $(DESTDIR)$(prefix)/share/man/man1
+-@OS_IS_LINUX_DEBIAN_TRUE@@OS_IS_LINUX_REDHAT_FALSE@MAN_DIR = $(DESTDIR)$(prefix)/share/man/man1
+-@OS_IS_LINUX_REDHAT_TRUE@MAN_DIR = $(DESTDIR)$(prefix)/share/man/man1
+-@OS_IS_FINK_FALSE@@OS_IS_FREEBSD_FALSE@@OS_IS_LINUX_DEBIAN_FALSE@@OS_IS_LINUX_REDHAT_FALSE@INFO_DIR = $(DESTDIR)$(prefix)/share/info
+-@OS_IS_FINK_FALSE@@OS_IS_FREEBSD_TRUE@@OS_IS_LINUX_DEBIAN_FALSE@@OS_IS_LINUX_REDHAT_FALSE@INFO_DIR = $(DESTDIR)$(prefix)/info
+-@OS_IS_FINK_TRUE@@OS_IS_LINUX_DEBIAN_FALSE@@OS_IS_LINUX_REDHAT_FALSE@INFO_DIR = $(DESTDIR)$(prefix)/share/info
+-@OS_IS_LINUX_DEBIAN_TRUE@@OS_IS_LINUX_REDHAT_FALSE@INFO_DIR = $(DESTDIR)$(prefix)/share/info
+-@OS_IS_LINUX_REDHAT_TRUE@INFO_DIR = $(DESTDIR)$(prefix)/share/info
+-@OS_IS_FINK_FALSE@@OS_IS_FREEBSD_FALSE@@OS_IS_LINUX_DEBIAN_FALSE@@OS_IS_LINUX_REDHAT_FALSE@DOC_DIR = $(DESTDIR)$(prefix)/share/gri/doc
+-@OS_IS_FINK_FALSE@@OS_IS_FREEBSD_TRUE@@OS_IS_LINUX_DEBIAN_FALSE@@OS_IS_LINUX_REDHAT_FALSE@DOC_DIR = $(DESTDIR)$(prefix)/share/doc/gri
+-@OS_IS_FINK_TRUE@@OS_IS_LINUX_DEBIAN_FALSE@@OS_IS_LINUX_REDHAT_FALSE@DOC_DIR = $(DESTDIR)$(prefix)/share/doc/gri-${PACKAGE_VERSION}
+-@OS_IS_LINUX_DEBIAN_TRUE@@OS_IS_LINUX_REDHAT_FALSE@DOC_DIR = $(DESTDIR)$(prefix)/share/doc/gri
+-@OS_IS_LINUX_REDHAT_TRUE@DOC_DIR = $(DESTDIR)$(prefix)/share/doc/gri-${PACKAGE_VERSION}
+-@OS_IS_FINK_FALSE@@OS_IS_FREEBSD_FALSE@@OS_IS_LINUX_DEBIAN_FALSE@@OS_IS_LINUX_REDHAT_FALSE@HTML_DIR = $(DOC_DIR)/html
+-@OS_IS_FINK_FALSE@@OS_IS_FREEBSD_TRUE@@OS_IS_LINUX_DEBIAN_FALSE@@OS_IS_LINUX_REDHAT_FALSE@HTML_DIR = $(DOC_DIR)/html
+-@OS_IS_FINK_TRUE@@OS_IS_LINUX_DEBIAN_FALSE@@OS_IS_LINUX_REDHAT_FALSE@HTML_DIR = $(DOC_DIR)/html
+-@OS_IS_LINUX_DEBIAN_TRUE@@OS_IS_LINUX_REDHAT_FALSE@HTML_DIR = $(DOC_DIR)/html
+-@OS_IS_LINUX_REDHAT_TRUE@HTML_DIR = $(DOC_DIR)/html
+-@OS_IS_FINK_FALSE@@OS_IS_FREEBSD_FALSE@@OS_IS_LINUX_DEBIAN_FALSE@@OS_IS_LINUX_REDHAT_FALSE@EXAMPLES_DIR = $(DOC_DIR)/examples
+-@OS_IS_FINK_FALSE@@OS_IS_FREEBSD_TRUE@@OS_IS_LINUX_DEBIAN_FALSE@@OS_IS_LINUX_REDHAT_FALSE@EXAMPLES_DIR = $(DESTDIR)$(prefix)/share/examples/gri
+-@OS_IS_FINK_TRUE@@OS_IS_LINUX_DEBIAN_FALSE@@OS_IS_LINUX_REDHAT_FALSE@EXAMPLES_DIR = $(DOC_DIR)/examples
+-@OS_IS_LINUX_DEBIAN_TRUE@@OS_IS_LINUX_REDHAT_FALSE@EXAMPLES_DIR = $(DOC_DIR)/examples
+-@OS_IS_LINUX_REDHAT_TRUE@EXAMPLES_DIR = $(DOC_DIR)/examples
++
++MAN_DIR=$(DESTDIR)$(prefix)/${PKGMANDIR}/man1
++INFO_DIR=$(DESTDIR)$(prefix)/${PKGINFODIR}
++DOC_DIR=$(DESTDIR)$(prefix)/share/doc/gri
++HTML_DIR=$(DESTDIR)$(prefix)/share/doc/html/gri
++EXAMPLES_DIR=$(DESTDIR)$(prefix)/share/examples/gri
++
+ RM = rm -f
+ #           REFCARD = refcard
+ #       CMD_REFCARD = cmdrefcard
+@@ -822,7 +804,7 @@ html-install:
+ 	$(INSTALL_DATA) $(srcdir)/examples/*.gri      $(EXAMPLES_DIR)
+ 	$(INSTALL_DATA) $(srcdir)/examples/e*.ps      $(EXAMPLES_DIR)
+ 	$(INSTALL_SCRIPT) $(srcdir)/examples/FEM.pl  $(EXAMPLES_DIR)
 -	(cd $(HTML_DIR); rm -rf examples ; ln -sf ../examples)
-+	$(BSD_INSTALL_DATA_DIR) $(EXAMPLES_DIR)
-+	$(BSD_INSTALL_DATA) examples/model* $(EXAMPLES_DIR)
-+	$(BSD_INSTALL_DATA) examples/*.dat      $(EXAMPLES_DIR)
-+	$(BSD_INSTALL_DATA) examples/*.gri      $(EXAMPLES_DIR)
-+	$(BSD_INSTALL_DATA) examples/*.ps       $(EXAMPLES_DIR)
-+	$(BSD_INSTALL_DATA) examples/FEM.pl     $(EXAMPLES_DIR)
-+	(cd $(HTML_DIR); ln -sf ../../examples/gri examples)
++	(cd $(HTML_DIR); rm -rf examples ; ln -sf ../../../examples/gri examples)
  
- card-clean:
- 	-rm -f refcard.dvi refcard.log refcard.ps
-@@ -125,10 +110,7 @@
- 	makeinfo gri.texi
- 
- info-install:
--	$(INSTALL) -d $(INFO_DIR)
--	cp gri.info* $(INFO_DIR)
--	(cd $(INFO_DIR) ; gzip -f --best gri.info gri.info-[0-9] gri.info-[0-9][0-9])
--	chmod 644 $(INFO_DIR)/gri.info*
-+	$(BSD_INSTALL_DATA) gri.info* $(INFO_DIR)
- 
- info-install-solaris:
- 	$(INSTALL) -d $(INFO_DIR_SOLARIS)
-@@ -161,10 +143,10 @@
- 		gri.vr gri.vrs 		\
- 		FAQ cmdrefcard.ps refcard.ps
- 	$(RM) gri.texi
--	(cd examples    ; make clean)
--	(cd screenshots ; make clean)
--#	(cd resources   ; make clean)
--	(cd tst_suite   ; make clean)
-+	(cd examples    ; $(MAKE) clean)
-+	(cd screenshots ; $(MAKE) clean)
-+#	(cd resources   ; $(MAKE) clean)
-+	(cd tst_suite   ; $(MAKE) clean)
- 	-rm -rf gridoc
- 	-rm -f gridoc.tar.gz
- 
-@@ -173,15 +155,15 @@
- 	@grep '^[^ ]*:' Makefile | sed -e "s/^/  make /" -e "s/:.*//"
- 
- linux_redhat:
--	make info
--	make html
--	make refcard.ps
--	make cmdrefcard.ps
-+	$(MAKE) info
-+	$(MAKE) html
-+	$(MAKE) refcard.ps
-+	$(MAKE) cmdrefcard.ps
- 
- gri.ps: gri.texi
--	cd examples    ; make eps
--	cd screenshots ; make eps
--	cd tst_suite   ; make texi
-+	cd examples    ; $(MAKE) eps
-+	cd screenshots ; $(MAKE) eps
-+	cd tst_suite   ; $(MAKE) texi
- 	tex gri.texi
- 	texindex gri.cp
- 	texindex gri.fn
-@@ -193,9 +175,9 @@
- 	dvips -o gri.ps -t letter gri.dvi
- 
- gri.pdf: gri.texi
--	cd examples    ; make pdf
--	cd screenshots ; make pdf
--	cd tst_suite   ; make texi
-+	cd examples    ; $(MAKE) pdf
-+	cd screenshots ; $(MAKE) pdf
-+	cd tst_suite   ; $(MAKE) texi
- 	pdftex gri.texi
- 	texindex gri.cp
- 	texindex gri.fn
-@@ -213,7 +195,7 @@
- # make debian-html DOC_DIR=../debian/gri-html-doc/usr/share/doc/gri
- # builds and installs under $(DOC_DIR)
- debian-html:
--	make html-install
-+	$(MAKE) html-install
- 
- # make debian-ps DOC_DIR=../debian/gri-ps-doc/usr/share/doc/gri
- # builds and installs under $(DOC_DIR)
+ # Sun Jun  8 11:40:52 UTC 2003  [Dan Kelley]
+ # This is commented-out because it's not used.  Later it will be deleted.
+@@ -898,7 +880,7 @@ install-data-local:
+ #       This is handled by gri.spec [2003-may-31 Dan Kelley]
+ @OS_IS_LINUX_REDHAT_FALSE@	$(INSTALL_DATA) refcard.ps                       $(DOC_DIR)
+ @OS_IS_LINUX_REDHAT_FALSE@	$(INSTALL_DATA) cmdrefcard.ps                    $(DOC_DIR)
+-	mkdir -m 755 -p                                    $(MAN_DIR)
++	$(MKDIR_P)                                       $(MAN_DIR)
+ 	cat $(srcdir)/../doc/$(gri_manpage_name) | sed -e s,VERSION,${PACKAGE_VERSION}, > tmp
+ 	$(INSTALL_DATA)    tmp                             $(MAN_DIR)/gri.1
+ 	$(RM) tmp
+@@ -906,7 +888,7 @@ install-data-local:
+ #	they are supposed to go, at least on linux/redhat systems [2003-jun-8 Dan Kelley]
+ 	$(INSTALL_DATA) $(srcdir)/../doc/gri_merge.1-skel  $(MAN_DIR)/gri_merge.1
+ 	$(INSTALL_DATA) $(srcdir)/../doc/gri_unpage.1-skel $(MAN_DIR)/gri_unpage.1
+-	mkdir -m 755 -p                                    $(INFO_DIR)
++	$(MKDIR_P)                                         $(INFO_DIR)
+ 	echo "INSTALLING INTO INFO_DIR WHICH IS [$(INFO_DIR)]"
+ @OS_IS_FINK_FALSE@	$(INSTALL_DATA)    $(srcdir)/../doc/gri.info*      $(INFO_DIR)
+ @OS_IS_FINK_TRUE@	@echo "DEBUG: The OS is fink"

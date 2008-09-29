@@ -1,103 +1,28 @@
-$NetBSD: patch-ab,v 1.2 2003/07/10 08:27:39 jtb Exp $
+$NetBSD: patch-ab,v 1.2.40.1 2008/09/29 13:47:18 tron Exp $
 
---- Makefile.in.orig
-+++ Makefile.in
-@@ -6,6 +6,7 @@
- INSTALL = @INSTALL@
- INSTALL_PROGRAM = @INSTALL_PROGRAM@
- INSTALL_DATA = @INSTALL_DATA@
-+INSTALL_SCRIPT = @INSTALL_SCRIPT@
- LIBS = @LIBS@
- EXTRA_OBJS = @EXTRA_OBJS@
- EXTRA_LIBS = @EXTRA_LIBS@
-@@ -19,12 +20,15 @@
- DEFS = -DVERSION=\"$(VERSION)\" -DDEFAULT_GRI_DIR=\"$(libdir)\" $(HAVE_LINUX) @DEFS@
- CFLAGS = @CFLAGS@
- CPPFLAGS = @CPPFLAGS@
--CXXFLAGS = -g @CXXFLAGS@
-+CXXFLAGS = @CXXFLAGS@
- EXTRA_CFLAGS = @EXTRA_CFLAGS@ $(LINUX_EXTRA_CFLAGS)
- EXTRA_CFLAGS_TEMPLATE = @EXTRA_CFLAGS_TEMPLATE@ $(LINUX_EXTRA_CFLAGS)
-+LDFLAGS = @LDFLAGS@
-+
- prefix = @prefix@
- bindir = $(prefix)/bin
- libdir = $(prefix)/share/gri/$(VERSION)
-+elispdir = $(prefix)/share/emacs/site-lisp
- #### End of system configuration section. ####
+--- src/Makefile.in~	2008-05-29 07:56:19.000000000 -0400
++++ src/Makefile.in	2008-09-04 01:39:29.000000000 -0400
+@@ -785,18 +785,18 @@ startup.msg-tmp: $(the_startup_file)
+ all-local: gri.cmd startup.msg-tmp
  
- OBJS = G_string.o GriColor.o GriPath.o GriState.o assert.o chopword.o \
-@@ -39,7 +43,7 @@
- while.o write.o
+ install-exec-local:
+-	mkdir -m 755 -p                                 $(DESTDIR)$(prefix)/bin
++	$(BSD_INSTALL_PROGRAM_DIR)                      $(DESTDIR)$(prefix)/bin
+ 	$(INSTALL_SCRIPT) $(srcdir)/gri_unpage          $(DESTDIR)$(prefix)/bin/gri_unpage
+ 	$(INSTALL_SCRIPT) $(srcdir)/gri_merge           $(DESTDIR)$(prefix)/bin/gri_merge
  
- gri: $(OBJS) $(EXTRA_OBJS)
--	$(CXX) -o gri $(OBJS) $(EXTRA_OBJS) $(LIBS) $(EXTRA_LIBS)
-+	$(CXX) -o gri $(OBJS) $(EXTRA_OBJS) $(LDFLAGS) $(LIBS) $(EXTRA_LIBS)
- 
- # Next is a kludge.  Trying to get a local popt working, 
- # e.g. for solaris.  Based on popt-1.2
-@@ -118,17 +122,18 @@
- 
- install-bin:
- 	cat startup.msg | sed -e s,VSN,${VERSION}, -e s,PREFIX,$(prefix), > tmp
--	$(INSTALL_PROGRAM) -d $(libdir)
--	$(INSTALL_DATA) tmp $(libdir)/startup.msg
-+	$(BSD_INSTALL_DATA_DIR) $(libdir)
-+	$(BSD_INSTALL_DATA) tmp $(libdir)/startup.msg
- 	rm -f tmp
--	$(INSTALL_DATA)         gri.cmd         $(libdir)/gri.cmd
--	$(INSTALL_DATA)         logo.dat        $(libdir)/logo.dat
--	$(INSTALL_DATA)         license.txt     $(libdir)/license.txt
--	$(INSTALL_PROGRAM) -d                   $(prefix)/bin
--	$(INSTALL_PROGRAM)      gri             $(prefix)/bin/gri-$(VERSION)
-+	$(BSD_INSTALL_DATA)         gri.cmd         $(libdir)/gri.cmd
-+	$(BSD_INSTALL_DATA)         logo.dat        $(libdir)/logo.dat
-+	$(BSD_INSTALL_DATA)         license.txt     $(libdir)/license.txt
-+	$(BSD_INSTALL_PROGRAM)      gri             $(prefix)/bin/gri-$(VERSION)
- 	(cd $(prefix)/bin/ ; rm -f gri ; ln -sf gri-$(VERSION) gri)
--	$(INSTALL_PROGRAM)      gri_merge       $(prefix)/bin/gri_merge
--	$(INSTALL_PROGRAM)      gri_unpage      $(prefix)/bin/gri_unpage
-+	$(BSD_INSTALL_SCRIPT)      gri_merge       $(prefix)/bin/gri_merge
-+	$(BSD_INSTALL_SCRIPT)      gri_unpage      $(prefix)/bin/gri_unpage
-+	$(BSD_INSTALL_DATA_DIR) $(elispdir)
-+	$(BSD_INSTALL_DATA) gri-mode.el $(elispdir)
- 
- debian-lib = $(debian)/usr/share/gri/$(VERSION)
- install_linux_debian: gri
-@@ -188,13 +193,13 @@
- 
- 
- all: force
--	make gri
--	make doc
-+	$(MAKE) gri
-+	$(MAKE) doc
- 
- force:
- 
- doc: force
--	cd doc; make info html
-+	cd doc; $(MAKE) info html
- 
- TAGS:
- 	etags *.cc *.hh
-@@ -212,8 +217,8 @@
- 
- 
- distclean:
--	make clean
--	cd doc ; make clean
-+	$(MAKE) clean
-+	cd doc ; $(MAKE) clean
- 	rm -f Makefile
- 
- # Source distribution
-@@ -295,7 +300,7 @@
- 	chmod a+r $(DEST_DIR)/$(SOURCE_NAME).tgz
- 
- source-arch-indep: source-copy
--	cd $(SOURCE_NAME)/doc; make refcard.ps cmdrefcard.ps info html
-+	cd $(SOURCE_NAME)/doc; $(MAKE) refcard.ps cmdrefcard.ps info html
- 	tar -c -f $(SOURCE_NAME)-arch-indep.tar $(SOURCE_NAME)
- 	rm -rf $(SOURCE_NAME)
- 	gzip -f --best $(SOURCE_NAME)-arch-indep.tar
+ install-data-local:
+-@OS_IS_FINK_TRUE@	mkdir -m 755 -p                                  $(DESTDIR)$(prefix)/share/emacs/site-lisp
++@OS_IS_FINK_TRUE@	$(BSD_INSTALL_DATA_DIR)                          $(DESTDIR)$(prefix)/share/emacs/site-lisp
+ @OS_IS_FINK_TRUE@	$(INSTALL_DATA)    $(srcdir)/gri-mode.el         $(DESTDIR)$(prefix)/share/emacs/site-lisp/gri-mode.el
+-@OS_IS_FINK_FALSE@@OS_IS_LINUX_DEBIAN_TRUE@	mkdir -m 755 -p                                  $(DESTDIR)$(prefix)/share/emacs/site-lisp/gri
++@OS_IS_FINK_FALSE@@OS_IS_LINUX_DEBIAN_TRUE@	$(BSD_INSTALL_DATA_DIR)                          $(DESTDIR)$(prefix)/share/emacs/site-lisp/gri
+ @OS_IS_FINK_FALSE@@OS_IS_LINUX_DEBIAN_TRUE@	$(INSTALL_DATA)    $(srcdir)/gri-mode.el         $(DESTDIR)$(prefix)/share/emacs/site-lisp/gri/gri-mode.el
+-@OS_IS_FINK_FALSE@@OS_IS_LINUX_DEBIAN_FALSE@	mkdir -m 755 -p                                  $(DESTDIR)$(prefix)/share/emacs/site-lisp
++@OS_IS_FINK_FALSE@@OS_IS_LINUX_DEBIAN_FALSE@	$(BSD_INSTALL_DATA_DIR)                          $(DESTDIR)$(prefix)/share/emacs/site-lisp
+ @OS_IS_FINK_FALSE@@OS_IS_LINUX_DEBIAN_FALSE@	$(INSTALL_DATA)    $(srcdir)/gri-mode.el         $(DESTDIR)$(prefix)/share/emacs/site-lisp/gri-mode.el
+-	mkdir -m 755 -p                                  $(DESTDIR)$(prefix)/share/gri
++	$(BSD_INSTALL_DATA_DIR)                          $(DESTDIR)$(prefix)/share/gri
+ 	$(INSTALL_DATA)    startup.msg-tmp               $(DESTDIR)$(prefix)/share/gri/startup.msg
+ 	$(INSTALL_DATA)    gri.cmd                       $(DESTDIR)$(prefix)/share/gri/gri.cmd
+ 	$(INSTALL_DATA)    logo.dat                      $(DESTDIR)$(prefix)/share/gri/logo.dat
