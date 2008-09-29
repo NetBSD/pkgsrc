@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2356 2008/09/28 22:16:00 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.2357 2008/09/29 12:40:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4031,3 +4031,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/squirrelmail to 1.4.16 [martti 2008-09-28]
 	Updated www/firefox3 to 3.0.3 [tnn 2008-09-28]
 	Updated security/courier-authlib to 0.61.0 [tonnerre 2008-09-28]
+	Updated mail/netbiff to 0.9.18nb1 [obache 2008-09-29]
