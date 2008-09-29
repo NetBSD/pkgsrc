@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2358 2008/09/29 14:30:33 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2359 2008/09/29 15:33:34 stacktic Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4033,3 +4033,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/courier-authlib to 0.61.0 [tonnerre 2008-09-28]
 	Updated mail/netbiff to 0.9.18nb1 [obache 2008-09-29]
 	Updated graphics/ruby-RMagick to 2.7.0 [taca 2008-09-29]
+	Added filesystems/fs-utils version 20080925 [stacktic 2008-09-29]
