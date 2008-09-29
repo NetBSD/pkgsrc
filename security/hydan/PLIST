@@ -1,7 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2004/08/13 10:26:03 agc Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/09/29 11:55:55 obache Exp $
 bin/hydan
 bin/hydan-decode
 bin/hydan-stats
-share/hydan/README.details
 share/hydan/README
+share/hydan/README.details
 @dirrm share/hydan
