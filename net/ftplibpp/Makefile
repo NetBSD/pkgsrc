@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/12/20 15:11:06 obache Exp $
+# $NetBSD: Makefile,v 1.9 2008/09/29 11:41:39 obache Exp $
 #
 
 DISTNAME=		ftplibpp-1.0.1
@@ -19,4 +19,5 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/ftplibpp.html ${DESTDIR}${PREFIX}/share/doc/ftplibpp
 
+.include "../../security/openssl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
