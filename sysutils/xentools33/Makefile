@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.8 2008/08/22 17:04:11 cegger Exp $
+# $NetBSD: Makefile,v 1.9 2008/09/30 15:08:34 joerg Exp $
 #
 
 VERSION=		3.3.0
 DISTNAME=		xen-${VERSION}
 PKGNAME=		xentools33-${VERSION}
+PKGREVISION=		1
 CATEGORIES=		sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
 EXTRACT_SUFX=		.tar.gz
@@ -134,7 +135,9 @@ BLKTAP_FILES=		blk_netbsd.c blktapctrl_netbsd.c
 
 XEND_SCRIPTS=		block vif-bridge vif-ip qemu-ifup
 
-CONF_FILES=		${EGDIR}/xend-config.sxp \
+CONF_FILES=		${EGDIR}/formats ${PKG_SYSCONFDIR}/formats
+
+CONF_FILES+=		${EGDIR}/xend-config.sxp \
 			${PKG_SYSCONFDIR}/xend-config.sxp
 .for s in ${XEND_SCRIPTS}
 CONF_FILES_PERMS+=	${EGDIR}/${s} ${PKG_SYSCONFDIR}/scripts/${s}	\
