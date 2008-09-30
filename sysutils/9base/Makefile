@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2007/03/25 07:37:54 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/09/30 14:41:03 joerg Exp $
 #
 
 DISTNAME=	9base-20051114
@@ -8,6 +8,8 @@ MASTER_SITES=	http://www.suckless.org/download/
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.suckless.org/wiki/wmii/download
 COMMENT=	Port of various original plan9 tools
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS=		rc-[0-9]*
 
@@ -26,5 +28,8 @@ CONFLICTS+=		coreutils-[0-9]*
 CONFLICTS+=		grep-[0-9]*
 CONFLICTS+=		gsed-[0-9]*
 .endif
+
+post-extract:
+	${LN} -s getcallerpc-x86_64.c ${WRKSRC}/lib9/getcallerpc-amd64.c
 
 .include "../../mk/bsd.pkg.mk"
