@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2008/09/08 06:01:57 dholland Exp $
+# $NetBSD: Makefile,v 1.15 2008/09/30 15:50:24 joerg Exp $
 #
 
 DISTNAME=	cdplayer-0.4.2
-PKGREVISION=	6
+PKGREVISION=	7
 CATEGORIES=	audio gnustep
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gsburn/}
 
@@ -15,6 +15,7 @@ USE_LANGUAGES=	objc
 USE_TOOLS+=	gmake
 MAKE_FILE=	GNUmakefile
 MAKE_ENV+=	ADDITIONAL_CPPFLAGS="-Wno-import"
+MAKE_ENV+=	GNUSTEP_INSTALLATION_DIR=${PREFIX}/share/GNUstep/Local/
 
 do-configure:
 	${LN} -s ${BUILDLINK_DIR}/${GNUSTEP_SUBDIR}/Local/Library/Frameworks/PrefsModule.framework/Versions/0/Headers ${WRKSRC}/AudioCD/AudioCDPrefs/PrefsModule
