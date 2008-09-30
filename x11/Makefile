@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.565 2008/09/22 20:39:24 joerg Exp $
+# $NetBSD: Makefile,v 1.566 2008/09/30 13:07:35 joerg Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -384,7 +384,6 @@ SUBDIR+=	xf86-video-cyrix
 SUBDIR+=	xf86-video-glint
 SUBDIR+=	xf86-video-i128
 SUBDIR+=	xf86-video-i740
-SUBDIR+=	xf86-video-i810
 SUBDIR+=	xf86-video-imstt
 SUBDIR+=	xf86-video-intel
 SUBDIR+=	xf86-video-mach64
