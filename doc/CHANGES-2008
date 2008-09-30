@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2360 2008/09/29 16:45:59 stacktic Exp $
+$NetBSD: CHANGES-2008,v 1.2361 2008/09/30 13:07:35 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4035,3 +4035,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/ruby-RMagick to 2.7.0 [taca 2008-09-29]
 	Added filesystems/fs-utils version 20080925 [stacktic 2008-09-29]
 	Updated filesystems/fs-utils to 20080929 [stacktic 2008-09-29]
+	Removed x11/xf86-video-i810 [joerg 2008-09-30]
