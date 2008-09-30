@@ -109,6 +109,7 @@ ffmpeg			Enable ffmpeg support.
 fftw			Use the fftw library for Discrete Fourier Transforms.
 finger			Enable finger support.
 firefox			Use firefox as gecko rendering engine.
+firefox3		Use firefox3 as gecko rendering engine.
 flac			Enable FLAC support.
 freeradius-simul-use	Enable Simultaneous-Use.
 freetype		Enable freetype support.
