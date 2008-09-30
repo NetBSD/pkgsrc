@@ -1,7 +1,7 @@
-$NetBSD: patch-ba,v 1.12 2008/04/09 09:03:59 hira Exp $
+$NetBSD: patch-ba,v 1.13 2008/09/30 23:14:18 hira Exp $
 
---- config_office/configure.orig	2008-01-31 20:47:17.000000000 +0900
-+++ config_office/configure	2008-04-09 17:33:05.000000000 +0900
+--- config_office/configure.orig	2008-05-21 01:28:55.000000000 +0900
++++ config_office/configure	2008-09-30 22:33:09.000000000 +0900
 @@ -3176,11 +3176,11 @@
  		test_cups=no
  		_os=OSF1
@@ -103,7 +103,16 @@ $NetBSD: patch-ba,v 1.12 2008/04/09 09:03:59 hira Exp $
  
  else
    { { echo "$as_me:$LINENO: error: db not installed or functional" >&5
-@@ -19781,7 +19782,7 @@
+@@ -15695,6 +15696,8 @@
+       MOZ_FLAVOUR=seamonkey
+     elif test -n "$with_system_mozilla" && test "$with_system_mozilla" = "firefox"; then
+       MOZ_FLAVOUR=firefox
++    elif test -n "$with_system_mozilla" && test "$with_system_mozilla" = "firefox3"; then
++      MOZ_FLAVOUR=firefox3
+     elif test -n "$with_system_mozilla" && test "$with_system_mozilla" = "mozilla"; then
+       MOZ_FLAVOUR=mozilla
+     else
+@@ -19718,7 +19721,7 @@
  echo "$as_me:$LINENO: result: $ac_cv_header_audio_audiolib_h" >&5
  echo "${ECHO_T}$ac_cv_header_audio_audiolib_h" >&6
  if test $ac_cv_header_audio_audiolib_h = yes; then
@@ -112,7 +121,7 @@ $NetBSD: patch-ba,v 1.12 2008/04/09 09:03:59 hira Exp $
  else
  
               CFLAGS=-I/usr/X11R6/include
-@@ -24012,7 +24013,7 @@
+@@ -23949,7 +23952,7 @@
    ENABLE_REPORTDESIGN=YES
    echo "$as_me:$LINENO: checking which jfreereport libs to use" >&5
  echo $ECHO_N "checking which jfreereport libs to use... $ECHO_C" >&6
@@ -121,7 +130,7 @@ $NetBSD: patch-ba,v 1.12 2008/04/09 09:03:59 hira Exp $
     	SYSTEM_JFREEREPORT=YES
    	echo "$as_me:$LINENO: result: external" >&5
  echo "${ECHO_T}external" >&6
-@@ -24529,7 +24530,7 @@
+@@ -24466,7 +24469,7 @@
      fi
  
          KDE_CFLAGS="-I$qt_incdir -I$kde_incdir -DQT_CLEAN_NAMESPACE -DQT_THREAD_SUPPORT"
@@ -130,7 +139,7 @@ $NetBSD: patch-ba,v 1.12 2008/04/09 09:03:59 hira Exp $
  fi
  
  
-@@ -25082,7 +25083,7 @@
+@@ -25019,7 +25022,7 @@
     XINERAMA_LINK=dynamic
     echo "$as_me:$LINENO: result: yes" >&5
  echo "${ECHO_T}yes" >&6
