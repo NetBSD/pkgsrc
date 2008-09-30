@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.3 2008/09/30 14:01:37 joerg Exp $
+
+--- modules/menu/desktop-menuspec.h.orig	2007-11-17 19:31:43.000000000 +0000
++++ modules/menu/desktop-menuspec.h
+@@ -82,6 +82,6 @@ G_CONST_RETURN gchar *desktop_menuspec_d
+  * @param paths A GPtrArray obtained from either menuspec_get_path_simple() or
+  *              menuspec_get_path_multilevel().
+  */
+-G_INLINE_FUNC void desktop_menuspec_path_free(GPtrArray *paths);
++void desktop_menuspec_path_free(GPtrArray *paths);
+ 
+ #endif /* ifdef __MENUSPEC_H__ */
