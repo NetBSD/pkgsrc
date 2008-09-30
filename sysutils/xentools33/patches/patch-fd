@@ -1,6 +1,6 @@
-$NetBSD: patch-fd,v 1.1.1.1 2008/08/07 20:26:59 cegger Exp $
+$NetBSD: patch-fd,v 1.2 2008/09/30 15:08:34 joerg Exp $
 
---- ioemu/Makefile.orig	2008-08-01 14:38:07.000000000 +0000
+--- ioemu/Makefile.orig	2008-08-22 11:49:08.000000000 +0200
 +++ ioemu/Makefile
 @@ -44,10 +44,11 @@ subdir-%:
  
@@ -24,13 +24,13 @@ $NetBSD: patch-fd,v 1.1.1.1 2008/08/07 20:26:59 cegger Exp $
  install-doc: $(DOCS)
 -	mkdir -p "$(DESTDIR)$(docdir)"
 -	$(INSTALL_DATA) -m 644 qemu-doc.html  qemu-tech.html "$(DESTDIR)$(docdir)"
-+	$(BSD_INSTALL_DATA_DIR) "$(DESTDIR)$(docdir)"
-+	$(BSD_INSTALL_DATA) -m 644 qemu-doc.html  qemu-tech.html "$(DESTDIR)$(docdir)"
++	#$(BSD_INSTALL_DATA_DIR) "$(DESTDIR)$(docdir)"
++	#$(BSD_INSTALL_DATA) -m 644 qemu-doc.html  qemu-tech.html "$(DESTDIR)$(docdir)"
  ifndef CONFIG_WIN32
 -	mkdir -p "$(DESTDIR)$(mandir)/man1"
 -	$(INSTALL_DATA) qemu.1 qemu-img.1 "$(DESTDIR)$(mandir)/man1"
-+	$(BSD_INSTALL_DATA_DIR) "$(DESTDIR)$(mandir)/man1"
-+	$(BSD_INSTALL_DATA) qemu.1 qemu-img.1 "$(DESTDIR)$(mandir)/man1"
++	#$(BSD_INSTALL_DATA_DIR) "$(DESTDIR)$(mandir)/man1"
++	#$(BSD_INSTALL_DATA) qemu.1 qemu-img.1 "$(DESTDIR)$(mandir)/man1"
  endif
  
  install: all $(if $(BUILD_DOCS),install-doc)
