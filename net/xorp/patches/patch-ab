@@ -1,0 +1,18 @@
+$NetBSD: patch-ab,v 1.5 2008/09/30 15:03:11 joerg Exp $
+
+--- fea/data_plane/control_socket/click_socket.cc.orig	2008-09-30 15:43:19.000000000 +0200
++++ fea/data_plane/control_socket/click_socket.cc
+@@ -732,8 +732,13 @@ ClickSocket::mount_click_file_system(str
+     ret_value = mount("none", _kernel_click_mount_directory.c_str(),
+ 		      CLICK_FILE_SYSTEM_TYPE.c_str(), 0, 0);
+ #else // ! HOST_OS_LINUX
++#  if defined(__NetBSD__) && defined(__NetBSD_Prereq__) && __NetBSD_Prereq__(4,99,24)
++    ret_value = mount(CLICK_FILE_SYSTEM_TYPE.c_str(),
++		      _kernel_click_mount_directory.c_str(), 0, 0, 0);
++#  else
+     ret_value = mount(CLICK_FILE_SYSTEM_TYPE.c_str(),
+ 		      _kernel_click_mount_directory.c_str(), 0, 0);
++#  endif
+ #endif // ! HOST_OS_LINUX
+ 
+     if (ret_value != 0) {
