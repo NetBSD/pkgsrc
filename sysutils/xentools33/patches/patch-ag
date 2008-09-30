@@ -1,4 +1,4 @@
-$NetBSD: patch-ag,v 1.3 2008/09/03 09:38:07 cegger Exp $
+$NetBSD: patch-ag,v 1.4 2008/09/30 15:08:34 joerg Exp $
 
 --- xentrace/Makefile.orig	2008-08-22 09:49:09.000000000 +0000
 +++ xentrace/Makefile
@@ -31,7 +31,7 @@ $NetBSD: patch-ag,v 1.3 2008/09/03 09:38:07 cegger Exp $
 +	$(BSD_INSTALL_PROGRAM) $(LIBBIN) $(DESTDIR)$(PRIVATE_BINDIR)
 +	$(BSD_INSTALL_DATA) $(MAN1) $(DESTDIR)$(MAN1DIR)
 +	$(BSD_INSTALL_DATA) $(MAN8) $(DESTDIR)$(MAN8DIR)
-+	$(BSD_INSTALL_DATA) formats $(DESTDIR)$(CONFIGDIR)
++	$(BSD_INSTALL_DATA) formats $(DESTDIR)$(PREFIX)/share/examples/xen
  
  .PHONY: clean
  clean:
