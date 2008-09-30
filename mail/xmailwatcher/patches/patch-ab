@@ -1,0 +1,36 @@
+$NetBSD: patch-ab,v 1.1 2008/09/30 14:13:11 joerg Exp $
+
+--- xmailwatcher.c.orig	2008-09-30 16:09:35.000000000 +0200
++++ xmailwatcher.c
+@@ -47,6 +47,7 @@ purpose.  It is provided "as is" without
+ #define BUFFER_DEFAULT 32000
+ 
+ #include <stdio.h>
++#include <stdlib.h>
+ 
+ typedef struct _Resources {
+ 	int	pollInterval;
+@@ -149,7 +150,7 @@ static XtConvertArgRec screenConvertArg[
+ void timedRescan();
+ void listEvent();
+ void iconEvent();
+-void iconCallback();
++static void iconCallback();
+ 
+ static int mapped;
+ 
+@@ -361,12 +362,11 @@ XtPointer client_data, call_data;
+ 	}
+ }
+ 
+-static void setTitle(time, have)
+-long time, have;
++static void setTitle(time_t time, long have)
+ {	char titleBuffer[80];
+ 	Arg args[4];
+ 	int n;
+-	static int lastTime;
++	static time_t lastTime;
+ 
+ 	if (time == lastTime) return;
+ 
