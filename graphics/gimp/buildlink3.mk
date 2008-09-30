@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.25 2008/05/06 13:25:14 dsainty Exp $
+# $NetBSD: buildlink3.mk,v 1.26 2008/09/30 19:55:03 adam Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GIMP_BUILDLINK3_MK:=	${GIMP_BUILDLINK3_MK}+
@@ -24,16 +24,25 @@ pkgbase := gimp
 .include "../../graphics/aalib/buildlink3.mk"
 .endif
 
+.if !empty(PKG_BUILD_OPTIONS.gimp:Mgnome)
+.include "../../www/libgtkhtml/buildlink3.mk"
+.endif
+
+.if !empty(PKG_BUILD_OPTIONS.gimp:Mmng)
+.include "../../graphics/mng/buildlink3.mk"
+.endif
+
+.if !empty(PKG_BUILD_OPTIONS.gimp:Msvg)
+.include "../../graphics/librsvg/buildlink3.mk"
+.endif
+
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/lcms/buildlink3.mk"
 .include "../../graphics/libart/buildlink3.mk"
 .include "../../graphics/libexif/buildlink3.mk"
-.include "../../graphics/librsvg/buildlink3.mk"
-.include "../../graphics/mng/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/libwmf/buildlink3.mk"
-.include "../../www/libgtkhtml/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH:S/+$//}
