@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/09/03 09:36:16 cegger Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/09/30 15:08:34 joerg Exp $
 bin/lsevtchn
 bin/pygrub
 bin/readnotes
@@ -21,7 +21,6 @@ bin/xenstore-write
 bin/xentrace
 bin/xentrace_format
 bin/xentrace_setsize
-etc/xen/formats
 include/blktaplib.h
 include/flask.h
 include/fsimage.h
@@ -502,12 +501,13 @@ sbin/xentop
 sbin/xentrace_setmask
 sbin/xm
 sbin/xsview
-share/doc/xen/README.xenmon
 share/doc/xen/README.blktap
+share/doc/xen/README.xenmon
 share/examples/rc.d/xenbackendd
 share/examples/rc.d/xend
 share/examples/rc.d/xendomains
 share/examples/xen/block
+share/examples/xen/formats
 share/examples/xen/hvm
 share/examples/xen/${LOWER_OPSYS}1
 share/examples/xen/qemu-ifup
@@ -596,4 +596,3 @@ share/xen/qemu/keymaps/tr
 @dirrm include/xen/arch-ia64/hvm
 @dirrm include/xen/arch-ia64
 @dirrm include/xen
-@dirrm etc/xen
