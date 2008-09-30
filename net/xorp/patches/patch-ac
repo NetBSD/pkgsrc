@@ -1,0 +1,39 @@
+$NetBSD: patch-ac,v 1.3 2008/09/30 15:03:11 joerg Exp $
+
+--- fea/data_plane/ifconfig/ifconfig_get_ioctl.cc.orig	2008-09-30 15:53:56.000000000 +0200
++++ fea/data_plane/ifconfig/ifconfig_get_ioctl.cc
+@@ -154,7 +154,7 @@ IfConfigGetIoctl::read_config(IfTree& if
+ 	    return (XORP_ERROR);
+ 	vector<uint8_t> buffer(ifconf.ifc_len);
+ 	memcpy(&buffer[0], ifconf.ifc_buf, ifconf.ifc_len);
+-	delete[] ifconf.ifc_buf;
++	free(ifconf.ifc_buf);
+ 
+ 	parse_buffer_ioctl(ifconfig(), iftree, AF_INET, buffer);
+     }
+@@ -168,7 +168,7 @@ IfConfigGetIoctl::read_config(IfTree& if
+ 	    return (XORP_ERROR);
+ 	vector<uint8_t> buffer(ifconf.ifc_len);
+ 	memcpy(&buffer[0], ifconf.ifc_buf, ifconf.ifc_len);
+-	delete[] ifconf.ifc_buf;
++	free(ifconf.ifc_buf);
+ 
+ 	parse_buffer_ioctl(ifconfig(), iftree, AF_INET6, buffer);
+     }
+@@ -204,13 +204,13 @@ ioctl_read_ifconf(int family, ifconf *if
+     for ( ; ; ) {
+ 	ifconf->ifc_len = ifnum * sizeof(struct ifreq);
+ 	if (ifconf->ifc_buf != NULL)
+-	    delete[] ifconf->ifc_buf;
+-	ifconf->ifc_buf = new char[ifconf->ifc_len];
++	    free(ifconf->ifc_buf);
++	ifconf->ifc_buf = malloc(ifconf->ifc_len);
+ 	if (ioctl(s, SIOCGIFCONF, ifconf) < 0) {
+ 	    // Check UNPv1, 2e, pp 435 for an explanation why we need this
+ 	    if ((errno != EINVAL) || (lastlen != 0)) {
+ 		XLOG_ERROR("ioctl(SIOCGIFCONF) failed: %s", strerror(errno));
+-		delete[] ifconf->ifc_buf;
++		free(ifconf->ifc_buf);
+ 		comm_close(s);
+ 		return false;
+ 	    }
