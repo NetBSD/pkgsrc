@@ -1,0 +1,21 @@
+$NetBSD: patch-aa,v 1.8 2008/09/30 08:04:30 hubertf Exp $
+
+--- plugins/taglist/Makefile.in.orig	2008-09-19 04:57:38.000000000 +0200
++++ plugins/taglist/Makefile.in
+@@ -138,6 +138,7 @@ GMSGFMT = @GMSGFMT@
+ GREP = @GREP@
+ GTKDOC_CHECK = @GTKDOC_CHECK@
+ GZIP = @GZIP@
++GZIP_ENV = --best
+ HELP_DIR = @HELP_DIR@
+ HTML_DIR = @HTML_DIR@
+ INSTALL = @INSTALL@
+@@ -650,7 +651,7 @@ uninstall-am: uninstall-pluginDATA unins
+ 
+ %.tags.gz: %.tags.xml.in $(INTLTOOL_MERGE) $(wildcard $(top_srcdir)/po/*.po)
+ 	LC_ALL=C $(INTLTOOL_MERGE) $(top_srcdir)/po $< $(@:.gz=) -x -u -c $(top_builddir)/po/.intltool-merge-cache
+-	$(GZIP) --best -f $(@:.gz=)
++	env GZIP=$(GZIP_ENV) $(GZIP) -f $(@:.gz=)
+ # Tell versions [3.59,3.63) of GNU make to not export all variables.
+ # Otherwise a system limit (for SysV at least) may be exceeded.
+ .NOEXPORT:
