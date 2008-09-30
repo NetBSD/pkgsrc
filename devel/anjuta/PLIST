@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.15 2008/08/05 18:54:29 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2008/09/30 15:49:03 joerg Exp $
 bin/anjuta
 bin/anjuta_import.sh
 bin/anjuta_launcher
@@ -109,6 +109,7 @@ lib/anjuta/anjuta-project-wizard.plugin
 lib/anjuta/anjuta-sample.plugin
 lib/anjuta/anjuta-search.plugin
 lib/anjuta/anjuta-symbol-browser.plugin
+lib/anjuta/anjuta-tags
 lib/anjuta/anjuta-terminal.plugin
 lib/anjuta/anjuta-tools.plugin
 lib/anjuta/file-manager.plugin
