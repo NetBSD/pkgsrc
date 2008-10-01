@@ -1,0 +1,12 @@
+$NetBSD: patch-ah,v 1.1 2008/10/01 12:16:45 joerg Exp $
+
+--- bootpd.h.orig	2008-10-01 12:24:45.000000000 +0200
++++ bootpd.h
+@@ -27,6 +27,7 @@ SOFTWARE.
+ 
+ #ifndef BOOTPD_H_
+ #define BOOTPD_H_
++#include "getif.h"
+ #include "hash.h"
+ #include "hashf.h"
+ #include "hwaddr.h"
