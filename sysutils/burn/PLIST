@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2006/06/21 17:03:24 joerg Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/10/01 21:46:09 joerg Exp $
 share/GNUstep/Local/Applications/Burn.app/Burn
 share/GNUstep/Local/Applications/Burn.app/Resources/Burn.desktop
 share/GNUstep/Local/Applications/Burn.app/Resources/Burn.help/Logo.tiff
@@ -117,7 +117,6 @@ share/GNUstep/Local/Applications/Burn.app/Resources/iconDrivers.tiff
 share/GNUstep/Local/Applications/Burn.app/Resources/iconGSburn.tiff
 share/GNUstep/Local/Applications/Burn.app/Resources/iconGeneral.tiff
 share/GNUstep/Local/Applications/Burn.app/Resources/iconMultiSelection.tiff
-share/GNUstep/Local/Applications/Burn.app/library_paths.openapp
 share/GNUstep/Local/Applications/Burn.app/stamp.make
 share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/CDparanoia
 share/GNUstep/Local/Library/Bundles/CDparanoia.bundle/Resources/English.lproj/Localizable.strings
@@ -189,6 +188,7 @@ share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/German.lproj/Settin
 share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/Info-gnustep.plist
 share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/iconMkIsoFs.tiff
 share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/stamp.make
+share/GNUstep/Local/Tools/Burn
 @dirrm share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/German.lproj/Settings.gorm
 @dirrm share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/German.lproj/Parameters.gorm
 @dirrm share/GNUstep/Local/Library/Bundles/MkIsoFs.bundle/Resources/German.lproj
