@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.29 2007/01/17 02:25:45 rillig Exp $
+# $NetBSD: Makefile,v 1.30 2008/10/01 22:12:01 joerg Exp $
 #
 
 DISTNAME=		cqcam-0.91
+PKGREVISION=		1
 CATEGORIES=		graphics x11
 MASTER_SITES=		http://www.cs.duke.edu/~reynolds/cqcam/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.cs.duke.edu/~reynolds/cqcam/
 COMMENT=		Free Color QuickCam control program
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "../../mk/bsd.prefs.mk"
 
@@ -18,13 +21,23 @@ COMMENT=		Free Color QuickCam control program
 NOT_FOR_UNPRIVILEGED=	yes
 .endif
 
+.if ${MACHINE_ARCH} != "i386"
+CONFIGURE_ARGS+=	--disable-asm
+.endif
+
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-xview
 USE_LANGUAGES=		c c++
 
 CONFIGURE_ENV+=		TCLCONFIG_SH=${TCLCONFIG_SH:Q}
+CONFIGURE_ARGS+=	--x-includes=${X11BASE:Q}/include
+
+BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../graphics/jpeg/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
