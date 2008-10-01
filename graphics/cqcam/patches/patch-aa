@@ -1,0 +1,16 @@
+$NetBSD: patch-aa,v 1.10 2008/10/01 22:12:40 joerg Exp $
+
+--- cli/Makefile.in.orig	2008-10-01 23:37:58.000000000 +0200
++++ cli/Makefile.in
+@@ -16,8 +16,9 @@ clean:
+ 	rm -f *.o core $(PROGRAMS)
+ 
+ bininstall:
+-	mkdir -p $(bindir)
+-	$(INSTALL) -o root -g @bingroup@ -m 4711 $(PROGRAMS) movify $(bindir)
++	${BSD_INSTALL_PROGRAM_DIR} ${DESTDIR}$(bindir)
++	${BSD_INSTALL_PROGRAM} $(PROGRAMS) ${DESTDIR}$(bindir)
++	${BSD_INSTALL_SCRIPT} movify ${DESTDIR}$(bindir) 
+ 
+ cqcam: cqcam.o $(LIBCQCAM)
+ 	$(CXX) -o $@ cqcam.o $(LDFLAGS) $(LIBS)
