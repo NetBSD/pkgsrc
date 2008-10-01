@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.11 2008/07/27 00:03:42 bjs Exp $
+@comment $NetBSD: PLIST,v 1.12 2008/10/01 22:25:53 bjs Exp $
 share/examples/${PKGNAME}/beos/GLInfo.cpp
 share/examples/${PKGNAME}/beos/demo.cpp
 share/examples/${PKGNAME}/beos/sample.cpp
@@ -166,6 +166,7 @@ share/examples/${PKGNAME}/osdemos/osdemo.c
 share/examples/${PKGNAME}/osdemos/osdemo16.c
 share/examples/${PKGNAME}/osdemos/osdemo32.c
 share/examples/${PKGNAME}/osdemos/ostest1.c
+share/examples/${PKGNAME}/osdemos/readtex.c
 share/examples/${PKGNAME}/redbook/README
 share/examples/${PKGNAME}/redbook/aaindex
 share/examples/${PKGNAME}/redbook/aaindex.c
