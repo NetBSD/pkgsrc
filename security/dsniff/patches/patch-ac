@@ -1,6 +1,6 @@
-$NetBSD: patch-ac,v 1.1 2006/05/11 15:39:20 joerg Exp $
+$NetBSD: patch-ac,v 1.2 2008/10/01 08:43:09 apb Exp $
 
---- arp.c.orig	2000-11-14 15:51:03.000000000 +0000
+--- arp.c.orig	2000-11-14 17:51:03.000000000 +0200
 +++ arp.c
 @@ -17,7 +17,7 @@
  #include <sys/sysctl.h>
@@ -11,3 +11,11 @@ $NetBSD: patch-ac,v 1.1 2006/05/11 15:39:20 joerg Exp $
  #define ether_addr_octet octet
  #endif
  #else /* !BSD */
+@@ -32,6 +32,7 @@
+ #include <netinet/if_ether.h>
+ #include <stdio.h>
+ #include <stdlib.h>
++#include <string.h>
+ #include <unistd.h>
+ 
+ #ifdef BSD

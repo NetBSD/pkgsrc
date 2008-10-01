@@ -1,0 +1,12 @@
+$NetBSD: patch-ae,v 1.1 2008/10/01 08:43:09 apb Exp $
+
+--- buf.c.orig	2000-11-28 09:45:07.000000000 +0200
++++ buf.c
+@@ -13,6 +13,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <stdarg.h>
++#include <string.h>
+ #include <unistd.h>
+ #include <ctype.h>
+ #include <err.h>
