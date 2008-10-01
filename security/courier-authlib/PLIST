@@ -1,21 +1,16 @@
-@comment $NetBSD: PLIST,v 1.7 2008/09/28 22:15:30 tonnerre Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/10/01 11:43:41 obache Exp $
 bin/courierauthconfig
 include/courier_auth_config.h
 include/courierauth.h
 include/courierauthdebug.h
 include/courierauthsasl.h
 include/courierauthsaslclient.h
-lib/courier-authlib/libauthpam.la
-lib/courier-authlib/libauthpipe.la
-lib/courier-authlib/libauthpwd.la
-lib/courier-authlib/libauthuserdb.la
 lib/courier-authlib/libcourierauth.la
 lib/courier-authlib/libcourierauthcommon.la
 lib/courier-authlib/libcourierauthsasl.la
 lib/courier-authlib/libcourierauthsaslclient.la
 libexec/courier-authlib/authdaemond
 libexec/courier-authlib/authsystem.passwd
-libexec/courier-authlib/makedatprog
 man/man1/authpasswd.1
 man/man1/authtest.1
 man/man1/courierlogger.1
@@ -35,20 +30,9 @@ sbin/authenumerate
 sbin/authpasswd
 sbin/authtest
 sbin/courierlogger
-sbin/makeuserdb
-sbin/pw2userdb
 sbin/sysconftool
-sbin/userdb
-sbin/userdb-test-cram-md5
-sbin/userdbpw
 share/doc/courier-authlib/INSTALL.html
 share/doc/courier-authlib/README.authdebug.html
 share/doc/courier-authlib/README.html
 share/doc/courier-authlib/README_authlib.html
-share/examples/courier-authlib/authdaemonrc.dist
-share/examples/courier-authlib/samplepipe.pl
 share/examples/rc.d/authdaemond
-@dirrm share/examples/courier-authlib
-@dirrm share/doc/courier-authlib
-@dirrm libexec/courier-authlib
-@dirrm lib/courier-authlib
