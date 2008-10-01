@@ -1,16 +1,31 @@
-$NetBSD: patch-ai,v 1.1 2007/01/08 04:51:44 rillig Exp $
+$NetBSD: patch-ai,v 1.2 2008/10/01 22:12:01 joerg Exp $
 
 --- configure.in.orig	2000-08-17 12:31:03.000000000 +0200
 +++ configure.in	2007-01-08 05:17:49.000000000 +0100
-@@ -145,6 +145,11 @@ case "$host_os" in
+@@ -145,6 +145,18 @@ case "$host_os" in
      OS_LDFLAGS='-L/usr/local/lib'
      OS_LIBCQCAM_OBJS=''
    ;;
 +  netbsd*)
 +    OS_CFLAGS="-DNETBSD"
-+    OS_LDFLAGS="-li386"
 +    OS_LIBCQCAM_OBJS=""
++    case "$host_cpu" in
++    i386)
++	OS_LDFLAGS="-li386"
++	;;
++    x86_64)
++	OS_LDFLAGS="-lx86_64"
++	;;
++    esac
 +  ;;
    openbsd*)
      OS_CFLAGS='-O2 -DOPENBSD'
      OS_LDFLAGS='-L/usr/local/lib'
+@@ -175,6 +187,7 @@ esac
+ if test "$no_asm" = "yes"; then
+   OS_CFLAGS=$OS_CFLAGS' -DNO_ASM'
+ fi
++OS_LDFLAGS="$OS_LDFLAGS $LDFLAGS"
+ 
+ AC_SUBST(JPEG_LIBS)
+ AC_SUBST(JPEG_CFLAGS)
