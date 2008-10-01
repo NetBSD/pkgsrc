@@ -1,5 +1,8 @@
-# $NetBSD: xorg.pixman,v 1.1.2.2 2008/09/23 21:13:17 cube Exp $
+# $NetBSD: xorg.pixman,v 1.1.2.3 2008/10/01 18:00:45 cube Exp $
 #
+# NB:  The .la file is not listed here because it is bogus in some
+#      versions of MacOS X, so we don't want it buildlinked.  Everything
+#      is happy with just the pkgconfig file.
 include/pixman-1/pixman.h
 include/pixman-1/pixman-version.h
 lib/libpixman-1.a
