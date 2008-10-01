@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.5 2007/01/08 04:51:44 rillig Exp $
+$NetBSD: patch-ab,v 1.6 2008/10/01 22:12:01 joerg Exp $
 
 --- libcqcam/port.C.orig	2000-08-23 20:03:19.000000000 +0200
-+++ libcqcam/port.C	2007-01-08 05:25:04.000000000 +0100
++++ libcqcam/port.C
 @@ -30,6 +30,7 @@
  #include "config.h"
  
@@ -21,7 +21,7 @@ $NetBSD: patch-ab,v 1.5 2007/01/08 04:51:44 rillig Exp $
  #elif defined(BSDI)
  #include <machine/inline.h>
  #elif defined(OPENBSD)
-@@ -90,6 +95,23 @@ port_t::port_t(int iport) {
+@@ -90,6 +95,28 @@ port_t::port_t(int iport) {
      perror("fopen /dev/io");
      return;
    }
@@ -36,6 +36,11 @@ $NetBSD: patch-ab,v 1.5 2007/01/08 04:51:44 rillig Exp $
 +    perror("i386_iopl");
 +    return;
 +  }
++# elif defined(__x86_64__)
++  if (x86_64_iopl(3) != 0) {
++    perror("x86_64_iopl");
++    return;
++  }
 +# else
 +#  error Not supported on this CPU.
 +# endif
@@ -45,3 +50,23 @@ $NetBSD: patch-ab,v 1.5 2007/01/08 04:51:44 rillig Exp $
  #elif defined(OPENBSD)
    if (i386_iopl(1) == -1) {
      perror("i386_iopl");
+@@ -196,3 +223,19 @@ void port_t::unlock(int portnum) {
+ #endif /* DEBUG */
+ }
+ #endif /* LOCKING */
++
++#if defined(NETBSD)
++void
++outb(unsigned port, uint8_t data)
++{
++	__asm volatile("outb %0,%w1" : : "a" (data), "d" (port));
++}
++
++uint8_t
++inb(unsigned port)
++{
++	uint8_t data;
++	__asm volatile("inb %w1,%0" : "=a" (data) : "d" (port));
++	return data;
++}
++#endif

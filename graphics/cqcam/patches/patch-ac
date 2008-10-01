@@ -1,14 +1,17 @@
-$NetBSD: patch-ac,v 1.4 2007/01/08 04:51:44 rillig Exp $
+$NetBSD: patch-ac,v 1.5 2008/10/01 22:12:01 joerg Exp $
 
 --- libcqcam/port.h.orig	2000-08-23 20:03:19.000000000 +0200
 +++ libcqcam/port.h	2007-01-08 05:25:39.000000000 +0100
-@@ -43,6 +43,9 @@
+@@ -43,6 +43,12 @@
  #elif defined(FREEBSD)
  #include <machine/cpufunc.h>
  #include <stdio.h>
 +#elif defined(NETBSD)
 +#include <sys/types.h>
-+#include <machine/pio.h>
++
++void outb(unsigned port, uint8_t data);
++uint8_t inb(unsigned port);
++
  #elif defined(BSDI)
  #include <machine/inline.h>
  #elif defined(OPENBSD)
