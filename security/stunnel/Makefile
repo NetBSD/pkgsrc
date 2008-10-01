@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.63 2008/05/29 00:44:30 schmonz Exp $
+# $NetBSD: Makefile,v 1.64 2008/10/01 14:34:32 obache Exp $
 
 DISTNAME=		stunnel-4.24
 PKGREVISION=		1
@@ -18,11 +18,8 @@ GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--with-ssl=${SSLBASE:Q} \
 			--with-cert-dir=${SSLCERTS:Q} \
 			--with-pem-dir=${SSLCERTS:Q} \
-			--with-tcp-wrappers \
 			--sysconfdir=${PKG_SYSCONFDIR:Q} \
 			--localstatedir=${VARBASE:Q}
-
-PTHREAD_OPTS?=		optional
 
 PKG_SYSCONFSUBDIR=	stunnel
 
@@ -30,10 +27,7 @@ RCD_SCRIPTS=		stunnel
 REPLACE_PERL+=		src/stunnel3.in
 USE_TOOLS+=		perl:run
 
-.include "../../mk/pthread.buildlink3.mk"
-
 .include "options.mk"
 
 .include "../../security/openssl/buildlink3.mk"
-.include "../../security/tcp_wrappers/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
