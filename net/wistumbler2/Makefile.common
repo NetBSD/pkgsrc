@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.7 2006/04/22 09:22:13 rillig Exp $
+# $NetBSD: Makefile.common,v 1.8 2008/10/02 13:35:02 joerg Exp $
 #
 
 DISTNAME=	wistumbler2-2.0pre10
@@ -19,7 +19,8 @@ CONFLICTS+=		wistumbler-[0-9]*
 
 HAS_CONFIGURE=		YES
 
-CONFIGURE_ENV+=		PREFIX=${PREFIX:Q}
+CONFIGURE_ENV+=		PREFIX=${PREFIX} PKGMANDIR=${PKGMANDIR}
+MAKE_FLAGS=		PREFIX=${DESTDIR}${PREFIX} 
 
 CONF_FILES=		${PREFIX}/share/examples/wistumbler2/wistumbler2.conf \
 			${PKG_SYSCONFDIR}/wistumbler2.conf
