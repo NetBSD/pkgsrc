@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/08/08 03:07:45 wulf Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/10/02 19:08:32 joerg Exp $
 share/doc/gnuradio-${PKGVERSION}/core/README
 share/doc/gnuradio-${PKGVERSION}/core/README.hacking
 share/doc/gnuradio-${PKGVERSION}/core/html/ad9862_8h-source.html
@@ -2157,9 +2157,6 @@ share/doc/gnuradio-${PKGVERSION}/core/html/classgr__simple__squelch__cc__inherit
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__simple__squelch__cc__inherit__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__avg-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__avg.html
-share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__avg__coll__graph.map
-share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__avg__coll__graph.md5
-share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__avg__coll__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__avg__filter__ff-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__avg__filter__ff.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__avg__filter__ff__coll__graph.map
@@ -2172,9 +2169,6 @@ share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__iir-members.ht
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__iir.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__iir_3_01gr__complex_00_01i__type_00_01double_01_4-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__iir_3_01gr__complex_00_01i__type_00_01double_01_4.html
-share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__iir__coll__graph.map
-share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__iir__coll__graph.md5
-share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__iir__coll__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__iir__filter__cc-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__iir__filter__cc.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__iir__filter__cc__coll__graph.map
@@ -2193,9 +2187,6 @@ share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__iir__filter__f
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__iir__filter__ff__inherit__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__rec-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__rec.html
-share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__rec__coll__graph.map
-share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__rec__coll__graph.md5
-share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__rec__coll__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__rec__filter__ff-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__rec__filter__ff.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__pole__rec__filter__ff__coll__graph.map
@@ -2208,9 +2199,6 @@ share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__threaded__scheduler-
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__threaded__scheduler.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__avg-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__avg.html
-share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__avg__coll__graph.map
-share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__avg__coll__graph.md5
-share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__avg__coll__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__avg__filter__ff-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__avg__filter__ff.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__avg__filter__ff__coll__graph.map
@@ -2221,9 +2209,6 @@ share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__avg__filter__f
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__avg__filter__ff__inherit__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__rec-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__rec.html
-share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__rec__coll__graph.map
-share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__rec__coll__graph.md5
-share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__rec__coll__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__rec__filter__ff-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__rec__filter__ff.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__single__zero__rec__filter__ff__coll__graph.map
@@ -2325,9 +2310,6 @@ share/doc/gnuradio-${PKGVERSION}/core/html/classgr__sync__block.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__sync__block__coll__graph.map
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__sync__block__coll__graph.md5
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__sync__block__coll__graph.png
-share/doc/gnuradio-${PKGVERSION}/core/html/classgr__sync__block__inherit__graph.map
-share/doc/gnuradio-${PKGVERSION}/core/html/classgr__sync__block__inherit__graph.md5
-share/doc/gnuradio-${PKGVERSION}/core/html/classgr__sync__block__inherit__graph.png
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__sync__decimator-members.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__sync__decimator.html
 share/doc/gnuradio-${PKGVERSION}/core/html/classgr__sync__decimator__coll__graph.map
@@ -5147,9 +5129,6 @@ share/doc/gnuradio-${PKGVERSION}/core/html/gr__io__signature_8cc__incl.md5
 share/doc/gnuradio-${PKGVERSION}/core/html/gr__io__signature_8cc__incl.png
 share/doc/gnuradio-${PKGVERSION}/core/html/gr__io__signature_8h-source.html
 share/doc/gnuradio-${PKGVERSION}/core/html/gr__io__signature_8h.html
-share/doc/gnuradio-${PKGVERSION}/core/html/gr__io__signature_8h__dep__incl.map
-share/doc/gnuradio-${PKGVERSION}/core/html/gr__io__signature_8h__dep__incl.md5
-share/doc/gnuradio-${PKGVERSION}/core/html/gr__io__signature_8h__dep__incl.png
 share/doc/gnuradio-${PKGVERSION}/core/html/gr__io__signature_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/core/html/gr__io__signature_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/core/html/gr__io__signature_8h__incl.png
@@ -6475,9 +6454,6 @@ share/doc/gnuradio-${PKGVERSION}/core/html/gr__sync__block_8cc__incl.md5
 share/doc/gnuradio-${PKGVERSION}/core/html/gr__sync__block_8cc__incl.png
 share/doc/gnuradio-${PKGVERSION}/core/html/gr__sync__block_8h-source.html
 share/doc/gnuradio-${PKGVERSION}/core/html/gr__sync__block_8h.html
-share/doc/gnuradio-${PKGVERSION}/core/html/gr__sync__block_8h__dep__incl.map
-share/doc/gnuradio-${PKGVERSION}/core/html/gr__sync__block_8h__dep__incl.md5
-share/doc/gnuradio-${PKGVERSION}/core/html/gr__sync__block_8h__dep__incl.png
 share/doc/gnuradio-${PKGVERSION}/core/html/gr__sync__block_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/core/html/gr__sync__block_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/core/html/gr__sync__block_8h__incl.png
@@ -7725,7 +7701,6 @@ share/doc/gnuradio-${PKGVERSION}/core/html/microtune__xxxx__eval__board_8h__incl
 share/doc/gnuradio-${PKGVERSION}/core/html/microtune__xxxx__eval__board_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/core/html/microtune__xxxx__eval__board_8h__incl.png
 share/doc/gnuradio-${PKGVERSION}/core/html/modules.html
-share/doc/gnuradio-${PKGVERSION}/core/html/namespacead9862.html
 share/doc/gnuradio-${PKGVERSION}/core/html/namespaceboost.html
 share/doc/gnuradio-${PKGVERSION}/core/html/namespaces.html
 share/doc/gnuradio-${PKGVERSION}/core/html/namespacestd.html
