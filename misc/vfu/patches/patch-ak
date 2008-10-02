@@ -1,0 +1,13 @@
+$NetBSD: patch-ak,v 1.1 2008/10/02 14:33:58 joerg Exp $
+
+--- vslib/conmenu.cpp.orig	2008-10-02 15:59:42.000000000 +0200
++++ vslib/conmenu.cpp
+@@ -172,7 +172,7 @@ int con_menu_box( int x, int y, const ch
+     {
+     for(z = 0; z < va->count(); z++)
+       if (strncmp("--", va->get(z), 2))
+-        str_add_ch( hots,int((const char*)(va->get(z))[hotkeys]) );
++        str_add_ch( hots,int((size_t)(const char*)(va->get(z))[hotkeys]) );
+       else
+         str_add_ch( hots,' ' );
+     str_up(hots);
