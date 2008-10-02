@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/05/26 02:13:26 joerg Exp $
+# $NetBSD: Makefile,v 1.28 2008/10/02 18:48:31 joerg Exp $
 #
 
 DISTNAME=	eGTK_0.3.4
@@ -29,7 +29,7 @@ post-extract:
 	cd ${WRKSRC}/C/se && ${MAKE_PROGRAM} ${MAKE_FLAGS} -f Makefile.se clean
 	${MV} ${WRKSRC}/bin/egtkbuild ${WRKSRC}/bin/egtkbuild.in
 	${MV} ${WRKSRC}/man/egtkbuild.1 ${WRKSRC}/man/egtkbuild.1.in
-	chmod -R go-w . ${WRKSRC}
+	chmod -R go-w ${WRKSRC}
 
 do-configure:
 	${SED} -e "s,@PREFIX@,${PREFIX},g" \
