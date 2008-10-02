@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.3 2008/09/30 15:03:11 joerg Exp $
+$NetBSD: patch-ac,v 1.4 2008/10/02 13:13:05 joerg Exp $
 
 --- fea/data_plane/ifconfig/ifconfig_get_ioctl.cc.orig	2008-09-30 15:53:56.000000000 +0200
 +++ fea/data_plane/ifconfig/ifconfig_get_ioctl.cc
@@ -27,7 +27,7 @@ $NetBSD: patch-ac,v 1.3 2008/09/30 15:03:11 joerg Exp $
 -	    delete[] ifconf->ifc_buf;
 -	ifconf->ifc_buf = new char[ifconf->ifc_len];
 +	    free(ifconf->ifc_buf);
-+	ifconf->ifc_buf = malloc(ifconf->ifc_len);
++	ifconf->ifc_buf = (char *)malloc(ifconf->ifc_len);
  	if (ioctl(s, SIOCGIFCONF, ifconf) < 0) {
  	    // Check UNPv1, 2e, pp 435 for an explanation why we need this
  	    if ((errno != EINVAL) || (lastlen != 0)) {
