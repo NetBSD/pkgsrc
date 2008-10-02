@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2363 2008/10/02 12:41:52 tron Exp $
+$NetBSD: CHANGES-2008,v 1.2364 2008/10/02 15:47:51 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4041,3 +4041,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/gmplayer to 1.0rc10nb6 [tron 2008-10-02]
 	Updated multimedia/mencoder to 1.0rc10nb3 [tron 2008-10-02]
 	Updated multimedia/mplayer to 1.0rc10nb8 [tron 2008-10-02]
+	Updated mail/roundcube to 0.2beta [schmonz 2008-10-02]
