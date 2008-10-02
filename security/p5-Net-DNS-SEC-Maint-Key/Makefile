@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/20 09:55:38 he Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/02 18:06:36 joerg Exp $
 #
 
 DISTNAME=		Net-DNS-SEC-Maint-Key-0.013
@@ -24,6 +24,8 @@ PERL5_PACKLIST=		auto/Net/DNS/SEC/Maint/Key/.packlist
 REPLACE_PERL=		apps/dnssecmaint-config
 REPLACE_PERL+=		apps/dnssecmaint-copyprivate
 REPLACE_PERL+=		apps/maintkeydb
+
+INSTALLATION_DIRS=	bin
 
 post-install:
 	for s in dnssecmaint-config dnssecmaint-copyprivate maintkeydb; do \
