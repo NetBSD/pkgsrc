@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.50 2008/09/20 14:14:47 hira Exp $
+# $NetBSD: Makefile,v 1.51 2008/10/02 17:57:45 joerg Exp $
 #
 
 OO_VER=			2.4.1
@@ -114,7 +114,7 @@ OO_RELEASE=		OpenOffice.org${OO_VER}
 PLIST_SRC=		${PKGDIR}/PLIST
 PLIST_SRC+=		${WRKDIR}/PLIST
 MESSAGE_SUBST+=		OO_RELEASE=${OO_RELEASE}
-INSTALLATION_DIRS=	bin ${OO_RELEASE}
+INSTALLATION_DIRS=	bin ${OO_RELEASE} share/applications
 
 OO_UNXNAME=	openoffice.org2.4
 OO_PKGPATH=	${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install
