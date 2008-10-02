@@ -1,0 +1,40 @@
+$NetBSD: patch-aa,v 1.1 2008/10/02 18:03:36 joerg Exp $
+
+--- crypto.c.orig	2008-10-02 19:59:19.000000000 +0200
++++ crypto.c
+@@ -60,7 +60,7 @@
+  * bits.
+  */
+ 
+-void md4lite(char *message, unsigned int len)
++void md4lite(char *message, size_t len)
+ {
+ 
+ #ifndef HAVE_MD4
+@@ -92,7 +92,7 @@ void md4lite(char *message, unsigned int
+  * bits.
+  */
+ 
+-void md5lite(char *message, unsigned int len)
++void md5lite(char *message, size_t len)
+ {
+ 
+ #ifndef HAVE_MD5
+@@ -124,7 +124,7 @@ void md5lite(char *message, unsigned int
+  * into 64 bits.
+  */
+ 
+-void rmd160lite(char *message, unsigned int len)
++void rmd160lite(char *message, size_t len)
+ {
+ 
+ #ifndef HAVE_RMD160
+@@ -175,7 +175,7 @@ void rmd160lite(char *message, unsigned 
+  * into 64 bits.
+  */
+ 
+-void sha1lite(char *message, unsigned int len)
++void sha1lite(char *message, size_t len)
+ {
+ 
+ #ifndef HAVE_SHA1
