@@ -1,0 +1,13 @@
+$NetBSD: patch-at,v 1.1 2008/10/02 17:40:44 joerg Exp $
+
+--- cmu-snmp/snmpapps/configure.orig	2008-10-02 19:33:22.000000000 +0200
++++ cmu-snmp/snmpapps/configure
+@@ -1937,7 +1937,7 @@ LIBS="${LIBS} -L$SNMP_DIR/lib${ABILIBDIR
+ INCS="${INCS} -I$SNMP_DIR/include"
+ 
+ # Use libtool
+-RUNPATH="-rpath $SNMP_DIR/lib${ABILIBDIR}"
++RUNPATH="-rpath $PREFIX/lib"
+ echo "$ac_t""found in $SNMP_DIR" 1>&6
+ 
+ 
