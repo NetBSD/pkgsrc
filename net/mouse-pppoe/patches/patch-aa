@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.3 2006/01/25 17:45:32 joerg Exp $
+$NetBSD: patch-aa,v 1.4 2008/10/02 17:01:16 joerg Exp $
 
---- pppoe.c.orig	2000-04-21 03:58:32.000000000 +0000
+--- pppoe.c.orig	2000-04-21 05:58:32.000000000 +0200
 +++ pppoe.c
 @@ -5,6 +5,7 @@
  #include <stdarg.h>
@@ -32,3 +32,32 @@ $NetBSD: patch-aa,v 1.3 2006/01/25 17:45:32 joerg Exp $
      *ap++ = "nopcomp";
      *ap++ = "nopersist";
      *ap++ = "nopredictor1";
+@@ -701,17 +706,17 @@ static void send_frame_to_pppd(const voi
+  const unsigned char *dp;
+  unsigned short int fcs;
+ 
+- static void addchar(unsigned char ch)
+-  { switch (ch)
+-     { case PPP_FLAG: case PPP_ESC: case 0x00 ... 0x1f: case 0x7f ... 0x9f:
+-	  *sp++ = PPP_ESC;
+-	  *sp++ = ch ^ PPP_MOD;
+-	  break;
+-       default:
+-	  *sp++ = ch;
+-	  break;
+-     }
+-    fcs = PPP_FCSCHAR(fcs,ch);
++#define addchar(ch) \
++  { switch (ch) \
++     { case PPP_FLAG: case PPP_ESC: case 0x00 ... 0x1f: case 0x7f ... 0x9f: \
++	  *sp++ = PPP_ESC; \
++	  *sp++ = ch ^ PPP_MOD; \
++	  break; \
++       default: \
++	  *sp++ = ch; \
++	  break; \
++     } \
++    fcs = PPP_FCSCHAR(fcs,ch); \
+   }
+ 
+  sp = &stuffup[0];
