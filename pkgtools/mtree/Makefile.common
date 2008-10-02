@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.4 2008/01/28 00:35:59 rillig Exp $
+# $NetBSD: Makefile.common,v 1.5 2008/10/02 17:15:22 joerg Exp $
 #
 # This Makefile fragment is included by:
 #
@@ -16,8 +16,7 @@ COMMENT=		Utility for mapping and checking directory hierarchies
 
 GNU_CONFIGURE=		yes
 
-NO_CHECKSUM=		yes
-NO_MTREE=		yes
+USE_FEATURES=	nbcompat
 
 FILESDIR=		${.CURDIR}/../../pkgtools/mtree/files
 PKGDIR=			${.CURDIR}/../../pkgtools/mtree
