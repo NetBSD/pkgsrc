@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2007/08/08 03:26:10 wulf Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/10/02 13:58:52 joerg Exp $
 share/doc/gnuradio-${PKGVERSION}/usrp/ChangeLog
 share/doc/gnuradio-${PKGVERSION}/usrp/README
 share/doc/gnuradio-${PKGVERSION}/usrp/html/ad9862_8h-source.html
@@ -456,8 +456,6 @@ share/doc/gnuradio-${PKGVERSION}/usrp/html/mld__threads_8h__dep__incl.png
 share/doc/gnuradio-${PKGVERSION}/usrp/html/mld__threads_8h__incl.map
 share/doc/gnuradio-${PKGVERSION}/usrp/html/mld__threads_8h__incl.md5
 share/doc/gnuradio-${PKGVERSION}/usrp/html/mld__threads_8h__incl.png
-share/doc/gnuradio-${PKGVERSION}/usrp/html/namespacead9862.html
-share/doc/gnuradio-${PKGVERSION}/usrp/html/namespaces.html
 share/doc/gnuradio-${PKGVERSION}/usrp/html/rate__to__regval_8h-source.html
 share/doc/gnuradio-${PKGVERSION}/usrp/html/rate__to__regval_8h.html
 share/doc/gnuradio-${PKGVERSION}/usrp/html/std__paths_8h-source.html
