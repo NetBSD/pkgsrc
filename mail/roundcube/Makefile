@@ -1,21 +1,19 @@
-# $NetBSD: Makefile,v 1.11 2008/07/30 21:29:57 schmonz Exp $
+# $NetBSD: Makefile,v 1.12 2008/10/02 15:47:15 schmonz Exp $
 #
 
-DISTNAME=	roundcubemail-${RCVERSION}-dep.1
-PKGNAME=	${DISTNAME:S/mail-${RCVERSION}-dep.1/-${VERSION}/}
+DISTNAME=	roundcubemail-${RCVERSION}-dep
+PKGNAME=	${DISTNAME:S/mail-${RCVERSION}-dep/-${VERSION}/}
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=roundcubemail/}
 
-MAINTAINER=	adrianp@NetBSD.org
+MAINTAINER=	schmonz@NetBSD.org
 HOMEPAGE=	http://roundcube.net/
 COMMENT=	Browser-based multilingual IMAP client
-
-WRKSRC=		${WRKDIR}/${DISTNAME:S/-dep.1/-dependent/}
 
 USE_TOOLS+=	pax
 USE_LANGUAGES=	# none
 NO_BUILD=	yes
-RCVERSION=	0.2-alpha
+RCVERSION=	0.2-beta
 VERSION=	${RCVERSION:S/-//}
 
 .include "../../mk/bsd.prefs.mk"
@@ -38,12 +36,13 @@ BUILD_DEFS+=		VARBASE WWW_USER WWW_GROUP APACHE_USER APACHE_GROUP
 RCDIR=			${PREFIX}/share/roundcube
 EGDIR=			${PREFIX}/share/examples/roundcube
 DOCDIR=			${PREFIX}/share/doc/roundcube
-PAX_DIRS=		program skins installer
+PAX_DIRS=		program skins installer bin
 
 MESSAGE_SUBST+=		DOCDIR=${DOCDIR:Q} PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 MESSAGE_SUBST+=		VARBASE=${VARBASE:Q} RCDIR=${RCDIR:Q}
 FILES_SUBST+=		RCDIR=${RCDIR:Q}
 
+OWN_DIRS+=		${PKG_SYSCONFDIR}
 OWN_DIRS_PERMS+=	${VARBASE}/log/roundcube \
 			${WWW_USER} ${WWW_GROUP} 0755
 OWN_DIRS_PERMS+=	${VARBASE}/tmp/roundcube \
@@ -51,22 +50,31 @@ OWN_DIRS_PERMS+=	${VARBASE}/tmp/roundcube \
 
 CONF_FILES=		${EGDIR}/roundcube.conf \
 			${PKG_SYSCONFDIR}/roundcube.conf
-CONF_FILES+=		${EGDIR}/db.inc.php.dist \
-			${PKG_SYSCONFDIR}/db.inc.php
-CONF_FILES+=		${EGDIR}/main.inc.php.dist \
-			${PKG_SYSCONFDIR}/main.inc.php
+CONF_FILES_PERMS+=	${EGDIR}/db.inc.php.dist \
+			${PKG_SYSCONFDIR}/db.inc.php \
+			${WWW_USER} ${WWW_GROUP} 0640
+CONF_FILES_PERMS+=	${EGDIR}/main.inc.php.dist \
+			${PKG_SYSCONFDIR}/main.inc.php \
+			${WWW_USER} ${WWW_GROUP} 0640
 
 SUBST_CLASSES+=		files
 SUBST_STAGE.files=	do-configure
 SUBST_FILES.files=	roundcube.conf
 SUBST_FILES.files+=	config/main.inc.php.dist
+SUBST_FILES.files+=	installer/index.php
 SUBST_FILES.files+=	program/include/iniset.php
 SUBST_SED.files=	-e "s|@RCDIR@|${RCDIR}|g"
 SUBST_SED.files+=	-e "s|@VARBASE@|${VARBASE}|g"
 SUBST_SED.files+=	-e "s|@PKG_SYSCONFDIR@|${PKG_SYSCONFDIR}|g"
 SUBST_MESSAGE.files=	Fixing configuration files.
 
+REPLACE_INTERPRETER+=	php
+REPLACE.php.old=	.*/bin/php
+REPLACE.php.new=	${PREFIX}/bin/php
+REPLACE_FILES.php=	bin/*.sh
+
 INSTALLATION_DIRS=	${RCDIR}/program ${RCDIR}/skins ${EGDIR}/SQL ${DOCDIR}
+INSTALLATION_DIRS+=	${RCDIR}/bin
 
 .include "../../mk/apache.mk"
 .include "options.mk"
@@ -76,9 +84,11 @@ post-extract:
 
 pre-install:
 	${FIND} ${WRKSRC} -name "*.orig" -print | ${XARGS} ${RM} -f
+.	for i in 1 2 3
+	${FIND} ${WRKSRC}/program/js/tiny_mce -type d -empty | ${XARGS} ${RMDIR}
+.	endfor
 
 do-install:
-	${INSTALL_DATA_DIR} ${RCDIR}/config
 	${INSTALL_DATA} ${WRKSRC}/roundcube.conf ${EGDIR}/roundcube.conf
 	${INSTALL_DATA} ${WRKSRC}/INSTALL ${DOCDIR}
 	${INSTALL_DATA} ${WRKSRC}/LICENSE ${DOCDIR}
@@ -95,14 +105,6 @@ do-install:
 		${EGDIR}/db.inc.php.dist
 	${INSTALL_DATA} ${WRKSRC}/config/main.inc.php.dist \
 		${EGDIR}/main.inc.php.dist
-	${INSTALL_DATA} ${WRKSRC}/config/db.inc.php.dist \
-		${RCDIR}/config/db.inc.php.dist
-	${INSTALL_DATA} ${WRKSRC}/config/main.inc.php.dist \
-		${RCDIR}/config/main.inc.php.dist
-
-	${CHMOD} ${PKGDIRMODE} ${RCDIR}/config
-	${CHOWN} ${WWW_USER}:${WWW_GROUP} ${RCDIR}/config
-	${CHOWN} ${WWW_USER}:${WWW_GROUP} ${RCDIR}/config/*.dist
 
 .	for i in ${PAX_DIRS}
 		cd ${WRKSRC}/${i} && pax -rw . ${RCDIR}/${i}
