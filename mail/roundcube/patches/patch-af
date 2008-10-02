@@ -1,14 +1,13 @@
-$NetBSD: patch-af,v 1.1 2008/07/30 21:29:57 schmonz Exp $
+$NetBSD: patch-af,v 1.2 2008/10/02 15:47:15 schmonz Exp $
 
---- program/include/iniset.php.orig	2008-06-09 16:57:53.000000000 -0400
+--- program/include/iniset.php.orig	2008-09-21 08:04:43.000000000 -0400
 +++ program/include/iniset.php
-@@ -30,6 +30,9 @@ if (!defined('INSTALL_PATH')) {
+@@ -30,7 +30,7 @@ if (!defined('INSTALL_PATH')) {
    define('INSTALL_PATH', dirname($_SERVER['SCRIPT_FILENAME']).'/');
  }
  
-+// define('RCMAIL_CONFIG_DIR', INSTALL_PATH . 'config');
+-define('RCMAIL_CONFIG_DIR', INSTALL_PATH . 'config');
 +define('RCMAIL_CONFIG_DIR', '@PKG_SYSCONFDIR@');
-+
+ 
  // make sure path_separator is defined
  if (!defined('PATH_SEPARATOR')) {
-   define('PATH_SEPARATOR', (eregi('win', PHP_OS) ? ';' : ':'));
