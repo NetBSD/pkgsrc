@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.30 2008/09/18 04:48:12 minskim Exp $
+# $NetBSD: Makefile,v 1.31 2008/10/02 18:08:19 joerg Exp $
 
 DISTNAME=	ns-2.33
 CATEGORIES=	net
@@ -9,6 +9,7 @@ HOMEPAGE=	http://nsnam.isi.edu/nsnam/
 COMMENT=	The UCB/LBNL Network Simulator Version 2
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 BUILDLINK_API_DEPENDS.tcl+=	tcl>=8.4.12nb1
 BUILDLINK_API_DEPENDS.tk+=	tk>=8.4.12nb2
@@ -33,7 +34,18 @@ CONFIGURE_ENV+=		X11INCDIR=${X11PREFIX}/include
 
 MESSAGE_SUBST+=		HOMEPAGE=${HOMEPAGE}
 
-INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1 share/doc/ns
+
+post-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/indep-utils/cmu-scen-gen/setdest/calcdest ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/indep-utils/webtrace-conv/dec/dec-tr-stat ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/indep-utils/webtrace-conv/epa/epa-tr-stat ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/indep-utils/webtrace-conv/nlanr/nlanr-tr-stat ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/indep-utils/cmu-scen-gen/setdest/setdest ${DESTDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${WRKSRC}/indep-utils/webtrace-conv/ucb/ucb-tr-stat ${DESTDIR}${PREFIX}/bin
+	${INSTALL_DATA} ${WRKSRC}/CHANGES.html ${DESTDIR}${PREFIX}/share/doc/ns
+
+BUILDLINK_DEPMETHOD.libXt?=	build
 
 .include "../../devel/tcl-tclcl/buildlink3.mk"
 .include "../../lang/tcl/buildlink3.mk"
@@ -41,17 +53,8 @@ INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 .include "../../net/libpcap/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/tk/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
-
-post-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/indep-utils/cmu-scen-gen/setdest/calcdest ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/indep-utils/webtrace-conv/dec/dec-tr-stat ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/indep-utils/webtrace-conv/epa/epa-tr-stat ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/indep-utils/webtrace-conv/nlanr/nlanr-tr-stat ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/indep-utils/cmu-scen-gen/setdest/setdest ${PREFIX}/bin
-	${INSTALL_PROGRAM} ${WRKSRC}/indep-utils/webtrace-conv/ucb/ucb-tr-stat ${PREFIX}/bin
-	${INSTALL_DATA_DIR} ${PREFIX}/share/doc/ns
-	${INSTALL_DATA} ${WRKSRC}/CHANGES.html ${PREFIX}/share/doc/ns
 
 .include "../../mk/bsd.pkg.mk"
