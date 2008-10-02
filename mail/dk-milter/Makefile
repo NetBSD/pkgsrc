@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/08/30 05:42:40 erh Exp $
+# $NetBSD: Makefile,v 1.17 2008/10/02 19:03:11 joerg Exp $
 
 DISTNAME=	dk-milter-0.3.0
 PKGREVISION=	3
@@ -30,6 +30,12 @@ SUBST_SED.libs=		-e 's|@SSLBASE@|${BUILDLINK_PREFIX.openssl}|g' \
 SUBST_MESSAGE.libs=	Fixing makefile references.
 
 INSTALLATION_DIRS=	${PKGMANDIR}/man8 sbin share/doc/dk-milter
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+CPPFLAGS+=	-DSM_CONF_STDBOOL_H=1
+.endif
 
 post-extract:
 	${LN} -s FreeBSD ${WRKSRC}/devtools/OS/DragonFly
