@@ -1,14 +1,16 @@
-# $NetBSD: Makefile,v 1.33 2007/08/12 14:06:55 joerg Exp $
+# $NetBSD: Makefile,v 1.34 2008/10/02 17:40:43 joerg Exp $
 #
 
 DISTNAME=		nocol-4.3.1
-PKGREVISION=		4
+PKGREVISION=		5
 CATEGORIES=		net
 MASTER_SITES=	http://www.netplex-tech.com/software/nocol/downloads/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.netplex-tech.com/software/nocol/
 COMMENT=		Extensible network and system monitoring utility
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 HAS_CONFIGURE=		yes
 CONFIGURE_SCRIPT=	./Configure
@@ -28,6 +30,13 @@ DEPENDS+=		tk-Tix-[0-9]*:../../x11/tk-Tix
 
 REPLACE_PERL=		perlnocol/hostmon-osclients/hostmon-client*
 REPLACE_TK_TIX=		tknocol/tkNocol.tix
+
+INSTALLATION_DIRS=	share/nocol/gifs
+INSTALL_MAKE_FLAGS+=	ROOTDIR=${DESTDIR}${PREFIX} \
+			MANDIR=${DESTDIR}${PREFIX}/${PKGMANDIR}/mann \
+			PIDDIR=${DESTDIR}/var/run \
+			DATADIR=${DESTDIR}/var/run/data \
+			MSGSDIR=${DESTDIR}/var/run/msgs
 
 post-patch:
 	@(hostname=`/bin/hostname`;					\
@@ -52,21 +61,16 @@ pre-configure:
 	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/cmu-snmp/snmp
 	@${CP} ${PKGSRCDIR}/mk/gnu-config/config.sub ${WRKSRC}/cmu-snmp/snmpapps
 
-
 post-install:
-	# Ensure webnocol audio and images files are available if needed
-	#
-	${INSTALL_DATA_DIR} ${PREFIX}/share/nocol/gifs
-
 	for f in critical.wav error.wav warning.wav ; do		\
-	    ${INSTALL_DATA} ${WRKSRC}/webnocol/$$f ${PREFIX}/share/nocol; \
+	    ${INSTALL_DATA} ${WRKSRC}/webnocol/$$f ${DESTDIR}${PREFIX}/share/nocol; \
 	done
 
 	for f in bluesq.gif critical.jpg empty.gif error.jpg		\
 		greensq.gif help.jpg info.jpg redsq.gif warning.jpg	\
 		yellowsq.gif ; do					\
 	    ${INSTALL_DATA} ${WRKSRC}/webnocol/gifs/$$f			\
-			    ${PREFIX}/share/nocol/gifs;			\
+			    ${DESTDIR}${PREFIX}/share/nocol/gifs;	\
 	done
 
 .include "../../mk/resolv.buildlink3.mk"
