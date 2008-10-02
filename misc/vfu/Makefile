@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2008/03/04 19:21:12 jlam Exp $
+# $NetBSD: Makefile,v 1.47 2008/10/02 14:33:58 joerg Exp $
 #
 
 DISTNAME=	vfu-3.04
@@ -28,11 +28,13 @@ CONF_FILES=	${EGDIR}/vfu.conf ${PKG_SYSCONFDIR}/vfu.conf
 
 MAKE_ENV+=	PKG_SYSCONFDIR=${PKG_SYSCONFDIR:Q}
 
+INSTALLATION_DIRS=	bin man/man1
+
 do-build:
 	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SH} build.netbsd
 
 do-install:
-	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${SH} install
+	cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} PREFIX=${DESTDIR}${PREFIX} ${SH} install
 
 post-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR} ${DESTDIR}${EGDIR}

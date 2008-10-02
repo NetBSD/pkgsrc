@@ -1,0 +1,20 @@
+$NetBSD: patch-al,v 1.1 2008/10/02 14:33:58 joerg Exp $
+
+--- vslib/getopt2.h.orig	2008-10-02 16:00:52.000000000 +0200
++++ vslib/getopt2.h
+@@ -15,7 +15,7 @@
+ /* next line added by <cade@biscom.net> see getopt2.cpp for changes */
+ #define GETOPT(opts) while((optc = getopt2(argc, argv, opts)) != -1)
+ 
+-
++extern "C" {
+ extern char *optarg;
+ extern int optind;
+ extern int opterr;
+@@ -32,4 +32,6 @@ extern int opterr_report;
+ 
+ int getopt2(int argc, char *argv[], char *optstring);
+ 
++}
++
+ #endif
