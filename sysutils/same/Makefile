@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/06/20 01:09:36 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2008/10/02 08:34:26 rillig Exp $
 
 DISTNAME=	same-1.8
 CATEGORIES=	sysutils
@@ -17,4 +17,5 @@ USE_BSD_MAKEFILE=	yes
 post-extract:
 	cd ${FILESDIR} && cp -f Makefile same.1 same.cat1 ${WRKSRC}
 
+.include "../../devel/zlib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
