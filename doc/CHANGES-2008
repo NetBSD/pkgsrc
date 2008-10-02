@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2362 2008/10/01 10:04:25 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2363 2008/10/02 12:41:52 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4038,3 +4038,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Removed x11/xf86-video-i810 [joerg 2008-09-30]
 	Updated www/ap-fastcgi to 2.4.6 [taca 2008-10-01]
 	Updated www/ap2-fastcgi to 2.4.6 [taca 2008-10-01]
+	Updated multimedia/gmplayer to 1.0rc10nb6 [tron 2008-10-02]
+	Updated multimedia/mencoder to 1.0rc10nb3 [tron 2008-10-02]
+	Updated multimedia/mplayer to 1.0rc10nb8 [tron 2008-10-02]
