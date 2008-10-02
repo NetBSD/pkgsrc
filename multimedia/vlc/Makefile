@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.60 2008/09/27 22:33:20 ahoka Exp $
+# $NetBSD: Makefile,v 1.61 2008/10/02 17:49:00 ahoka Exp $
 #
 
 DISTNAME=		vlc-0.9.2
+PKGREVISION=		1
 CATEGORIES=		multimedia
 MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/0.9.2/
 EXTRACT_SUFX=		.tar.bz2
@@ -19,13 +20,17 @@ GNU_CONFIGURE=		yes
 PTHREAD_OPTS+=		require
 USE_LANGUAGES=		c99 c++
 USE_DIRS+=		xdg-1.4
-PLIST_VARS+=		x86simd altivec v4l2
+PLIST_VARS+=		x86simd altivec v4l2 vcd cdda
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
 
 .if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--disable-vcd
+.else
+PLIST.vcd=		yes
+# This may need a closer look.
+PLIST.cdda=		yes
 .endif
 
 BUILDLINK_API_DEPENDS.zlib+=		zlib>=1.2.0
