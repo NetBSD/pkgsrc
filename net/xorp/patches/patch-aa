@@ -1,4 +1,4 @@
-$NetBSD: patch-aa,v 1.5 2008/09/30 15:03:11 joerg Exp $
+$NetBSD: patch-aa,v 1.6 2008/10/02 13:13:05 joerg Exp $
 
 --- libxipc/sockutil.cc.orig	2008-09-30 15:19:41.000000000 +0200
 +++ libxipc/sockutil.cc
@@ -9,7 +9,7 @@ $NetBSD: patch-aa,v 1.5 2008/09/30 15:03:11 joerg Exp $
 -	    delete[] ifconf.ifc_buf;
 -	ifconf.ifc_buf = new char[ifconf.ifc_len];
 +	    free(ifconf.ifc_buf);
-+	ifconf.ifc_buf = malloc(ifconf.ifc_len);
++	ifconf.ifc_buf = (char *)malloc(ifconf.ifc_len);
  	if (ioctl(s, SIOCGIFCONF, &ifconf) < 0) {
  	    // Check UNPv1, 2e, pp 435 for an explanation why we need this
  	    if ((errno != EINVAL) || (lastlen != 0)) {
