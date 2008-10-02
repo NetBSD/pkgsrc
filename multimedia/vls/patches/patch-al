@@ -1,0 +1,13 @@
+$NetBSD: patch-al,v 1.1 2008/10/02 13:52:02 joerg Exp $
+
+--- src/core/hashtable.cpp.orig	2008-10-02 15:45:19.000000000 +0200
++++ src/core/hashtable.cpp
+@@ -97,7 +97,7 @@ u32 C_HashMethod<u16>::Hash(u16 iKey) co
+ 
+ u32 C_HashMethod<handle>::Hash(handle hKey) const
+ {
+-  return (u32)hKey % m_uiMaxHash;
++  return (u32)(size_t)hKey % m_uiMaxHash;
+ }
+ 
+ 

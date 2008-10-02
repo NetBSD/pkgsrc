@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2006/08/06 05:16:51 kristerw Exp $
+# $NetBSD: Makefile,v 1.13 2008/10/02 13:52:02 joerg Exp $
 #
 
 DISTNAME=		vls-0.5.6
@@ -9,6 +9,8 @@ MASTER_SITES=		http://download.videolan.org/pub/videolan/vls/0.5.6/
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.videolan.org/
 COMMENT=		VideoLAN Server
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 USE_LANGUAGES=		c c++
 USE_TOOLS+=		gmake
