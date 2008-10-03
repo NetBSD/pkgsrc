@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.36 2008/09/08 10:07:19 tron Exp $
+# $NetBSD: Makefile,v 1.37 2008/10/03 23:22:50 gdt Exp $
 
 DISTNAME=	milter-greylist-4.0.1
 CATEGORIES=	mail
@@ -9,6 +9,8 @@ OWNER=		tron@NetBSD.org
 HOMEPAGE=	http://hcpnet.free.fr/milter-greylist/
 COMMENT=	Easy-to-use greylist milter for sendmail
 
+# yacc rule moving to y.tab.c and renaming
+MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--with-user=smmsp
