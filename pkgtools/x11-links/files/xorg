@@ -1,4 +1,4 @@
-# $NetBSD: xorg,v 1.7.2.4 2008/09/23 21:12:28 cube Exp $
+# $NetBSD: xorg,v 1.7.2.5 2008/10/03 02:06:01 cube Exp $
 #
 # The files listed below are the union of the sets of files installed by
 # the supported Xorg (and some XFree) distributions, minus the set of files
@@ -248,7 +248,6 @@ include/X11/extensions/XKBrules.h
 include/X11/extensions/XKBui.h
 include/X11/extensions/XKM.h
 include/X11/extensions/XKMformat.h
-include/X11/extensions/XRes.h
 include/X11/extensions/XResproto.h
 include/X11/extensions/Xevie.h
 include/X11/extensions/Xeviestr.h
@@ -333,13 +332,6 @@ lib/libXIE.dylib
 lib/libXIE.so
 lib/libXIE.so.6
 lib/libXIE.so.6.0
-lib/libXRes.1.0.0.dylib
-lib/libXRes.1.dylib
-lib/libXRes.dylib
-lib/libXRes.a
-lib/libXRes.so
-lib/libXRes.so.1
-lib/libXRes.so.1.0
 lib/libXTrap.6.4.0.dylib
 lib/libXTrap.6.4.dylib
 lib/libXTrap.6.dylib
