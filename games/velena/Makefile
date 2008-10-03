@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/03/04 11:02:24 rillig Exp $
+# $NetBSD: Makefile,v 1.10 2008/10/03 19:15:52 rillig Exp $
 #
 
 DISTNAME=	veleng10
@@ -33,6 +33,22 @@ SUBST_CLASSES+=		ansi-c
 SUBST_STAGE.ansi-c=	pre-configure
 SUBST_FILES.ansi-c=	*.c *.h
 SUBST_SED.ansi-c=	-e 's,<malloc\.h>,<stdlib.h>,'
+
+SUBST_CLASSES+=		cflags
+SUBST_STAGE.cflags=	pre-configure
+SUBST_FILES.cflags=	makefile
+SUBST_SED.cflags=	-e s,^CFLAGS.*,,
+
+# Velena isn't 64bit-safe, which results in a "fatal error" for some
+# board positions.
+.include "../../mk/bsd.prefs.mk"
+.if ${MACHINE_ARCH:M*64} != ""
+.  if ${PKGSRC_COMPILER:Mgcc} != ""
+CFLAGS+=	-m32
+.  else
+PKG_FAIL_REASON+=	"Velena doesn't work on 64-bit platforms."
+.  endif
+.endif
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/veleng ${DESTDIR}${PREFIX}/bin/velena
