@@ -1,13 +1,16 @@
-# $NetBSD: Makefile,v 1.21 2008/09/19 09:39:23 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2008/10/03 16:43:27 joerg Exp $
 
 DISTNAME=	unixODBC-2.2.12
 PKGNAME=	${DISTNAME:S/ODBC/odbc/}
+PKGREVISION=	1
 CATEGORIES=	databases
 MASTER_SITES=	http://www.unixodbc.org/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.unixodbc.org/
 COMMENT=	ODBC 2.x/3.x driver manager
+
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 CONFLICTS+=		iodbc-[0-9]*
 
@@ -72,14 +75,15 @@ SUBST_SED.paths+=	-e 's,@PREFIX@,${PREFIX},g'
 SUBST_SED.paths+=	-e 's,@UNIXODBC_DRIVERS_DIR@,${UNIXODBC_DRIVERS_DIR},g'
 SUBST_STAGE.paths=	post-patch
 
+INSTALLATION_DIRS=	${EGDIR}
+
 post-patch: fix-driver-installation
 
 post-extract:
 	${CP} ${FILESDIR}/odbcinst.ini.in ${WRKDIR}/odbc.ini
 
 post-install:
-	${INSTALL_DATA_DIR} ${EGDIR}
-	${INSTALL_DATA} ${WRKDIR}/odbc.ini ${EGDIR}/odbc.ini
+	${INSTALL_DATA} ${WRKDIR}/odbc.ini ${DESTDIR}${EGDIR}/odbc.ini
 
 .include "../../devel/libltdl/buildlink3.mk"
 .include "../../devel/readline/buildlink3.mk"

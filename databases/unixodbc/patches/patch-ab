@@ -1,0 +1,12 @@
+$NetBSD: patch-ab,v 1.1 2008/10/03 16:43:27 joerg Exp $
+
+--- Drivers/Makefile.in.orig	2008-10-03 18:00:19.000000000 +0200
++++ Drivers/Makefile.in
+@@ -205,7 +205,6 @@ subdirs = @subdirs@
+ sysconfdir = @sysconfdir@
+ target_alias = @target_alias@
+ @DRIVERS_TRUE@SUBDIRS = \
+-@DRIVERS_TRUE@    PostgreSQL \
+ @DRIVERS_TRUE@    Postgre7.1 \
+ @DRIVERS_TRUE@    txt \
+ @DRIVERS_TRUE@    odbc \
