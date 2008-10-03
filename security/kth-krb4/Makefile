@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.49 2008/07/15 16:39:55 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2008/10/03 19:01:14 gdt Exp $
 #
 
 DISTNAME=		krb4-1.2.2
 PKGNAME=		kth-krb4-1.2.2
-#PKGREVISION=		1
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		security net
 MASTER_SITES=		ftp://ftp.pdc.kth.se/pub/krb/src/
 
@@ -47,8 +46,15 @@ SUBST_FILES.paths=	${WRKSRC}/lib/kafs/kafs.h
 SUBST_SED.paths+=	-e 's|/usr/arla/etc/|${PKG_SYSCONFDIR}|g'
 SUBST_STAGE.paths=	post-patch
 
-.if ${OPSYS} == "NetBSD"
+# On some systems, kth-krb4's libroken installs a glob.h to compensate
+# for the system not having one.  Please turn PLIST support for this
+# on narrowly.
+INSTALLS_GLOB=	no
+.if ${INSTALLS_GLOB} == yes
 PLIST.glob=			yes
+.endif
+
+.if ${OPSYS} == "NetBSD"
 CONFIGURE_ARGS+=	--with-readline=yes \
 	--with-readline-lib=${BUILDLINK_PREFIX.readline}/lib \
 	--with-readline-include=${BUILDLINK_PREFIX.readline}/include/readline \
