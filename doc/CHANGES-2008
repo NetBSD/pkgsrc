@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2365 2008/10/03 01:09:37 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2366 2008/10/03 01:32:17 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4043,3 +4043,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/mplayer to 1.0rc10nb8 [tron 2008-10-02]
 	Updated mail/roundcube to 0.2beta [schmonz 2008-10-02]
 	Updated www/lighttpd to 1.4.20 [taca 2008-10-03]
+	Updated textproc/ruby-redcloth to 4.0.4 [taca 2008-10-03]
