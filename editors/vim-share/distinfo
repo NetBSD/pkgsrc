@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.102 2008/09/14 20:30:17 martti Exp $
+$NetBSD: distinfo,v 1.103 2008/10/03 05:05:57 martti Exp $
 
 SHA1 (vim/7.2.001) = d6a1424554bfe1200ec0a948c1d243862dea636b
 RMD160 (vim/7.2.001) = 96cc134b0b1f2ef2c256d30ffe98a69495767e89
@@ -54,6 +54,27 @@ Size (vim/7.2.017) = 5319 bytes
 SHA1 (vim/7.2.018) = 9f1c6f6edf8215b801402d14186a958d02687c66
 RMD160 (vim/7.2.018) = c22209098b73cd63dce374c035b17ea92470eaa9
 Size (vim/7.2.018) = 1390 bytes
+SHA1 (vim/7.2.019) = 779b88f4984f553167587f555a3937edf6bfd20f
+RMD160 (vim/7.2.019) = 91ccb6399942cfd467853a4fc3b04baee804b132
+Size (vim/7.2.019) = 2269 bytes
+SHA1 (vim/7.2.020) = 704e9af7e492a37dc14245400020a25e7fff4365
+RMD160 (vim/7.2.020) = f09c5973b482e0c9bf495c7208c792a36e075642
+Size (vim/7.2.020) = 1521 bytes
+SHA1 (vim/7.2.021) = 563e54214f2383413362c31540c7d98cc8f720c3
+RMD160 (vim/7.2.021) = fe1606a9810d93c0d044af23a6b4d1eeed00ca71
+Size (vim/7.2.021) = 4806 bytes
+SHA1 (vim/7.2.022) = 4140d1292c8177852fa498fe51ff72a4a46437bf
+RMD160 (vim/7.2.022) = f1c034bfc34b763f5fd3f5605298d27858c645c8
+Size (vim/7.2.022) = 3823 bytes
+SHA1 (vim/7.2.023) = fbf15a8ba78e57df588d547672fefa6bbf42675f
+RMD160 (vim/7.2.023) = 32b5b663ed1e9682132b3a74f4d8d022e5fd5f0a
+Size (vim/7.2.023) = 2062 bytes
+SHA1 (vim/7.2.024) = 8f085d4ef9c7258a41f8e8adcc2ac0d15fddbce6
+RMD160 (vim/7.2.024) = 90ad0882a2f9e23a5bb0bb90aa509f847ba39d07
+Size (vim/7.2.024) = 1452 bytes
+SHA1 (vim/7.2.025) = ac8e373b73b690825fa940365c727b2d919746a4
+RMD160 (vim/7.2.025) = f4ce54c4469b948ccc0a8147ada9c07dd8621887
+Size (vim/7.2.025) = 1470 bytes
 SHA1 (vim/vim-7.2-extra.tar.gz) = 6a17629093e59958bff336b6c122dea1b8b1b649
 RMD160 (vim/vim-7.2-extra.tar.gz) = 05976466c8a6c1bd2fb2b1d58eb4613947de07df
 Size (vim/vim-7.2-extra.tar.gz) = 720290 bytes
