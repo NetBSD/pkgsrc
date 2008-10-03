@@ -1,19 +1,30 @@
-$NetBSD: patch-ab,v 1.4 2003/05/01 21:47:43 jmmv Exp $
+$NetBSD: patch-ab,v 1.5 2008/10/03 17:42:29 joerg Exp $
 
 NetBSD and Solaris specific paths for tripwire.
 
 --- include/config.h	1994/07/15 11:02:52	1.5
 +++ include/config.h	1998/11/17 14:40:02
-@@ -17,7 +17,7 @@
+@@ -17,15 +17,11 @@
   ***	file that corresponds with your operating system.
   ***/
  
 -#include "../configs/conf-svr4.h"
 +#include "../configs/conf-@LOWER_OPSYS@.h"
  
- #ifdef TW_TYPE32
- typedef TW_TYPE32 int32;
-@@ -102,9 +102,8 @@
+-#ifdef TW_TYPE32
+-typedef TW_TYPE32 int32;
+-typedef unsigned TW_TYPE32 uint32;
+-#else
+-typedef long int32;
+-typedef unsigned long uint32;
+-#endif
++#include <inttypes.h>
++typedef int32_t int32;
++typedef uint32_t uint32;
+ 
+ /***
+  *** SYSTEM SPECIFIC Tripwire Configuration
+@@ -102,9 +98,8 @@ typedef unsigned long uint32;
  # define DATABASE_PATH   "/usr/local/adm/tcheck/databases"
  #endif
  */
@@ -25,7 +36,7 @@ NetBSD and Solaris specific paths for tripwire.
  
  /******* name of Tripwire files **************************************
   *
-@@ -121,7 +120,7 @@
+@@ -121,7 +116,7 @@ typedef unsigned long uint32;
   *
   *********************************************************************/
  

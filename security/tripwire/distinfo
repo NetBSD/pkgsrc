@@ -1,10 +1,10 @@
-$NetBSD: distinfo,v 1.11 2005/12/05 20:50:58 rillig Exp $
+$NetBSD: distinfo,v 1.12 2008/10/03 17:42:29 joerg Exp $
 
 SHA1 (tripwire-1.2.tar.gz) = 6fc91e25b3e1af3881fd5b6acf240ab6c1133e38
 RMD160 (tripwire-1.2.tar.gz) = f745db5973f14b1abbc0c2e7030f90e6fdac3257
 Size (tripwire-1.2.tar.gz) = 299831 bytes
-SHA1 (patch-aa) = 2a03c5970becef18d0b655cc5e91a1db070111f8
-SHA1 (patch-ab) = 186edaa504e6e1a7edadb2168982b9b8a2482bac
+SHA1 (patch-aa) = 718860c41de3ad86161f3c87176ace43121b271a
+SHA1 (patch-ab) = 78a8e7050b51c05f94273581ffed8f56c89387ad
 SHA1 (patch-ac) = 35b3fe52f497e6cbbf7edfeaee398f0d24aff219
 SHA1 (patch-ad) = 4b8ad8d0cd7c17a8f3a655c5a574856670533ea5
 SHA1 (patch-ae) = 6eb1767af3d881ed4181ab83bd02c960edd0a84e
