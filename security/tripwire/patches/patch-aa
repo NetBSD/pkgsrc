@@ -1,20 +1,7 @@
-$NetBSD: patch-aa,v 1.4 2004/02/08 13:36:20 grant Exp $
+$NetBSD: patch-aa,v 1.5 2008/10/03 17:42:29 joerg Exp $
 
---- Makefile.orig	1994-07-26 01:59:41.000000000 +1000
+--- Makefile.orig	1994-07-25 17:59:41.000000000 +0200
 +++ Makefile
-@@ -12,10 +12,10 @@
- ###
- 
- # destination directory for final executables
--DESTDIR = /secureplace/bin
-+DESTDIR = ${PREFIX}/sbin
- 
- # destination for man pages
--MANDIR  = /usr/man
-+MANDIR  = ${PREFIX}/man
- 
- # system utilities
- LEX	= lex
 @@ -32,11 +32,11 @@ SHELL	= /bin/sh
  #SHELL	= /bin/bash		# For the GNU fanatics
  
@@ -56,3 +43,14 @@ $NetBSD: patch-aa,v 1.4 2004/02/08 13:36:20 grant Exp $
  #INSTALL= /usr/ucb/install	# Pyramid DC/OSx (SVR4)
  #INSTALL= /etc/install		# Pyramid OSx
  #INSTALL= /bin/cp		# no install
+@@ -103,8 +103,8 @@ all:
+ 		YACC="$(YACC)" LEX="$(LEX)" all)
+ 
+ install: all
+-	(cd src; make INSTALL=$(INSTALL) DESTDIR=$(DESTDIR) install)
+-	(cd man; make INSTALL=$(INSTALL) MANDIR=$(MANDIR) install)
++	(cd src; make INSTALL=$(INSTALL) DESTDIR=$(DESTDIR)${PREFIX}/sbin install)
++	(cd man; make INSTALL=$(INSTALL) MANDIR=$(DESTDIR)$(PREFIX)/${PKGMANDIR} install)
+ 
+ test:	all
+ 	(cd tests; make HOSTNAME=$(HOSTNAME) DIST=$(DIST) SHELL=$(SHELL) \
