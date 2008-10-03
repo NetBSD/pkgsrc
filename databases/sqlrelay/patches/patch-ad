@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2008/10/03 18:14:46 joerg Exp $
+
+--- Makefile.orig	2008-10-03 18:08:41.000000000 +0000
++++ Makefile
+@@ -25,7 +25,6 @@ install:
+ 	$(MAKE) -C src install
+ 	$(MAKE) -C bin install
+ 	$(MAKE) -C etc install
+-	$(MAKE) -C init install
+ 	$(MAKE) -C man install
+ 	$(MAKE) -C doc install
+ 	$(MKINSTALLDIRS) $(libdir)/pkgconfig
