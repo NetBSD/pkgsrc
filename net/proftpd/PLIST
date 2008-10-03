@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.13 2007/07/06 11:04:40 martti Exp $
+@comment $NetBSD: PLIST,v 1.14 2008/10/03 06:52:03 martti Exp $
 bin/ftpcount
 bin/ftpdctl
 bin/ftptop
 bin/ftpwho
+bin/prxs
 include/proftpd/auth.h
 include/proftpd/bindings.h
 include/proftpd/buildstamp.h
@@ -16,14 +17,15 @@ include/proftpd/data.h
 include/proftpd/default_paths.h
 include/proftpd/dirtree.h
 include/proftpd/display.h
+include/proftpd/encode.h
 include/proftpd/env.h
 include/proftpd/event.h
+include/proftpd/expr.h
 include/proftpd/feat.h
 include/proftpd/fsio.h
 include/proftpd/ftp.h
 include/proftpd/glibc-glob.h
 include/proftpd/help.h
-include/proftpd/ident.h
 include/proftpd/inet.h
 include/proftpd/libsupp.h
 include/proftpd/log.h
@@ -45,14 +47,16 @@ include/proftpd/regexp.h
 include/proftpd/response.h
 include/proftpd/scoreboard.h
 include/proftpd/sets.h
+include/proftpd/str.h
 include/proftpd/support.h
 include/proftpd/table.h
+include/proftpd/throttle.h
 include/proftpd/timers.h
 include/proftpd/trace.h
-include/proftpd/utf8.h
 include/proftpd/var.h
 include/proftpd/version.h
 include/proftpd/xferlog.h
+lib/pkgconfig/proftpd.pc
 man/man1/ftpcount.1
 man/man1/ftptop.1
 man/man1/ftpwho.1
@@ -82,6 +86,10 @@ share/examples/proftpd/complex-virtual.conf
 share/examples/proftpd/mod_sql.conf
 share/examples/proftpd/virtual.conf
 share/examples/rc.d/proftpd
-@dirrm share/doc/proftpd
+share/locale/en_US/LC_MESSAGES/proftpd.mo
+share/locale/it_IT/LC_MESSAGES/proftpd.mo
+share/locale/zh_CN/LC_MESSAGES/proftpd.mo
 @dirrm share/examples/proftpd
+@dirrm share/doc/proftpd
+@dirrm lib/proftpd
 @dirrm include/proftpd

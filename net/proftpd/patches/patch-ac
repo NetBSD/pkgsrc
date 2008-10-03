@@ -1,11 +1,13 @@
-$NetBSD: patch-ac,v 1.9 2007/07/06 11:04:40 martti Exp $
+$NetBSD: patch-ac,v 1.10 2008/10/03 06:52:03 martti Exp $
 
---- configure.in.orig	2007-05-22 23:54:09.000000000 +0300
-+++ configure.in	2007-07-06 13:53:22.000000000 +0300
-@@ -2019,9 +2019,9 @@
- AC_DEFINE_UNQUOTED(PR_CONFIG_DIR, "`eval echo "${sysconfdir}"`")
- AC_DEFINE_UNQUOTED(PR_LIBEXEC_DIR, "`eval echo "${libexecdir}"`")
- AC_DEFINE_UNQUOTED(PR_LOCALE_DIR, "`eval echo "${datadir}/locale"`")
+Make this pkgsrc friendly.
+
+--- configure.in.orig	2008-09-02 18:54:49.000000000 +0300
++++ configure.in	2008-10-03 09:36:41.000000000 +0300
+@@ -2067,9 +2067,9 @@
+ locale_dir="`eval echo ${locale_dir}`"
+ AC_DEFINE_UNQUOTED(PR_LOCALE_DIR, "`eval echo "${locale_dir}/locale"`")
+ 
 -AC_DEFINE_UNQUOTED(PR_RUN_DIR, "`eval echo "${localstatedir}/proftpd"`")
 +AC_DEFINE_UNQUOTED(PR_RUN_DIR, "`eval echo "${localstatedir}/run"`")
  AC_DEFINE_UNQUOTED(PR_CONFIG_FILE_PATH, "`eval echo "${sysconfdir}/proftpd.conf"`")

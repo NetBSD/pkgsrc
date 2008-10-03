@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.47 2008/06/12 02:14:41 joerg Exp $
+# $NetBSD: Makefile,v 1.48 2008/10/03 06:52:03 martti Exp $
 
-DISTNAME=		proftpd-1.3.1
+DISTNAME=		proftpd-1.3.2rc2
 #PKGREVISION=		1
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.proftpd.org/distrib/source/ \
@@ -20,8 +20,8 @@ WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake intltool
 
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--disable-sendfile
 CONFIGURE_ARGS+=	--enable-ctrls
 CONFIGURE_ARGS+=	--enable-nls
@@ -32,14 +32,14 @@ BUILD_DEFS+=		VARBASE
 
 RCD_SCRIPTS=		proftpd
 
-CONF_FILES=		${PREFIX:Q}/share/examples/proftpd/basic.conf \
-			${PKG_SYSCONFDIR:Q}/proftpd.conf
+CONF_FILES=		${PREFIX}/share/examples/proftpd/basic.conf \
+			${PKG_SYSCONFDIR}/proftpd.conf
 
 SUBST_CLASSES+=		man
 SUBST_MESSAGE.man=	Fixing paths in manual pages.
 SUBST_STAGE.man=	pre-configure
 SUBST_FILES.man=	utils/ftpcount.1.in utils/ftptop.1.in utils/ftpwho.1.in
-SUBST_SED.man=		-e s,@LOCALSTATEDIR@/run/proftpd,${VARBASE:Q}/run,
+SUBST_SED.man=		-e s,@LOCALSTATEDIR@/run/proftpd,${VARBASE}/run,
 
 INSTALLATION_DIRS+=	share/doc/proftpd
 INSTALLATION_DIRS+=	share/examples/proftpd
