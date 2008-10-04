@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2008/10/03 06:52:03 martti Exp $
+# $NetBSD: Makefile,v 1.49 2008/10/04 02:25:59 obache Exp $
 
 DISTNAME=		proftpd-1.3.2rc2
 #PKGREVISION=		1
@@ -18,7 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 
 GNU_CONFIGURE=		yes
-USE_TOOLS+=		gmake intltool
+USE_TOOLS+=		gmake intltool msgfmt
 
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR}
 CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
