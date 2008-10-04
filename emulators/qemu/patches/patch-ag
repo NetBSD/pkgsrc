@@ -1,16 +1,5 @@
-$NetBSD: patch-ag,v 1.10 2008/01/04 21:37:07 sborrill Exp $
-
---- configure.orig	2007-02-05 23:01:54 +0000
-+++ configure
-@@ -29,7 +29,7 @@ ar="ar"
- make="make"
- install="install"
- strip="strip"
--cpu=`uname -m`
-+cpu=`uname -p`
- target_list=""
- case "$cpu" in
-   i386|i486|i586|i686|i86pc|BePC)
+--- configure.orig	2007-02-05 15:01:54 -0800
++++ configure	2008-10-04 07:21:23 -0700
 @@ -44,7 +44,7 @@ case "$cpu" in
    alpha)
      cpu="alpha"
