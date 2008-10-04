@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/10/04 12:23:57 gdt Exp $
+# $NetBSD: Makefile,v 1.6 2008/10/04 12:33:41 sborrill Exp $
 
 DISTNAME=	dansguardian-2.8.0.6.source
 PKGNAME=	dansguardian-2.8.0.6
@@ -48,8 +48,6 @@ CONFIGURE_ARGS=		--prefix=${PREFIX:Q} \
 OWN_DIRS+=		${VARBASE}/log/dansguardian
 OWN_DIRS_PERMS+=	${VARBASE}/log/dansguardian \
 			${DANSGUARDIAN_USER} ${DANSGUARDIAN_GROUP} 0755
-
-DEPENDS+=	squid>=2.5:../../www/squid26
 
 .for f in logrotation pics transparent1x1.gif \
 	dansguardian.conf	\
