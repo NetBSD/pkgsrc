@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2007/12/17 15:02:26 tron Exp $
+# $NetBSD: builtin.mk,v 1.2 2008/10/05 21:36:33 cube Exp $
 
 BUILTIN_PKG:=	libXt
 
@@ -47,3 +47,5 @@ USE_BUILTIN.libXt!=							\
 .  endif  # PREFER.libXt
 .endif
 MAKEVARS+=	USE_BUILTIN.libXt
+
+.include "../../mk/x11.builtin.mk"

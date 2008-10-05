@@ -1,0 +1,3 @@
+# $NetBSD: xorg.fontcacheproto,v 1.2 2008/10/05 21:36:35 cube Exp $
+include/X11/extensions/fontcachstr.h
+lib/pkgconfig/fontcacheproto.pc
