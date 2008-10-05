@@ -1,5 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/02/06 09:26:36 bjs Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/10/05 22:47:23 schmonz Exp $
 include/libmp3splt/mp3splt.h
-include/libmp3splt/mp3splt_types.h
 lib/libmp3splt.la
+lib/libmp3splt/libsplt_mp3.la
+lib/libmp3splt/libsplt_ogg.la
+@dirrm lib/libmp3splt
 @dirrm include/libmp3splt
