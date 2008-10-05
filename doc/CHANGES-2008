@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2369 2008/10/05 21:41:53 cube Exp $
+$NetBSD: CHANGES-2008,v 1.2370 2008/10/05 21:50:13 agc Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4046,4 +4046,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/ruby-redcloth to 4.0.4 [taca 2008-10-03]
 	Updated editors/vim-share to 7.2.25 [martti 2008-10-03]
 	Updated net/proftpd to 1.3.2rc2 [martti 2008-10-03]
+	mk/bsd.pkg.mk: freeze ended for pkgsrc-2008Q3 branch [agc 2008-10-05]
 	Updated pkgtools/x11-links to 0.39 [cube 2008-10-05]
