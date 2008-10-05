@@ -1,4 +1,4 @@
-# $NetBSD: bsd.prefs.mk,v 1.287 2008/09/16 11:40:10 tron Exp $
+# $NetBSD: bsd.prefs.mk,v 1.288 2008/10/05 21:36:34 cube Exp $
 #
 # This file includes the mk.conf file, which contains the user settings.
 #
@@ -493,6 +493,8 @@ X11BASE?=	/usr/openwin
 X11BASE?=	/usr
 .  elif !empty(MACHINE_PLATFORM:MDarwin-9.*-*)
 X11BASE?=	/usr/X11
+.  elif exists(/usr/X11R7/lib/libX11.so)
+X11BASE?=	/usr/X11R7
 .  else
 X11BASE?=	/usr/X11R6
 .  endif

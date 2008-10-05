@@ -1,9 +1,9 @@
-# $NetBSD: builtin.mk,v 1.1 2007/12/16 23:38:12 tron Exp $
+# $NetBSD: builtin.mk,v 1.2 2008/10/05 21:36:33 cube Exp $
 
 BUILTIN_PKG:=	libXext
 
 BUILTIN_FIND_FILES_VAR:=	LIB_XEXT
-BUILTIN_FIND_FILES.LIB_XEXT=	${X11BASE}/lib/libXext.la
+BUILTIN_FIND_FILES.LIB_XEXT=	${X11BASE}/lib/pkgconfig/xext.pc
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -47,3 +47,5 @@ USE_BUILTIN.libXext!=							\
 .  endif  # PREFER.libXext
 .endif
 MAKEVARS+=	USE_BUILTIN.libXext
+
+.include "../../mk/x11.builtin.mk"
