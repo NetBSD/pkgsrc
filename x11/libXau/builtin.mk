@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.1 2007/12/15 15:41:36 tron Exp $
+# $NetBSD: builtin.mk,v 1.2 2008/10/05 21:36:33 cube Exp $
 
 BUILTIN_PKG:=	libXau
 
@@ -47,3 +47,5 @@ USE_BUILTIN.libXau!=							\
 .  endif  # PREFER.libXau
 .endif
 MAKEVARS+=	USE_BUILTIN.libXau
+
+.include "../../mk/x11.builtin.mk"

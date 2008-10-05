@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.2 2008/01/05 16:00:08 tron Exp $
+# $NetBSD: builtin.mk,v 1.3 2008/10/05 21:36:33 cube Exp $
 
 BUILTIN_PKG:=	inputproto
 
@@ -59,3 +59,5 @@ USE_BUILTIN.inputproto!=							\
 .  endif  # PREFER.inputproto
 .endif
 MAKEVARS+=	USE_BUILTIN.inputproto
+
+.include "../../mk/x11.builtin.mk"

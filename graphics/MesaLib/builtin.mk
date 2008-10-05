@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.14 2006/04/06 06:22:00 reed Exp $
+# $NetBSD: builtin.mk,v 1.15 2008/10/05 21:36:35 cube Exp $
 
 BUILTIN_PKG:=	MesaLib
 
@@ -74,12 +74,8 @@ BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
 .  endif
 
-.  if !empty(USE_BUILTIN.MesaLib:M[yY][eE][sS])
-BUILDLINK_PREFIX.MesaLib=	${X11BASE}
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
-.    include "../../mk/x11.buildlink3.mk"
-.    include "../../mk/x11.builtin.mk"
+.  include "../../mk/x11.builtin.mk"
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
-.  endif
 
 .endif	# CHECK_BUILTIN.MesaLib

@@ -1,4 +1,4 @@
-# $NetBSD: builtin.mk,v 1.12 2006/04/06 06:23:04 reed Exp $
+# $NetBSD: builtin.mk,v 1.13 2008/10/05 21:36:34 cube Exp $
 
 BUILTIN_PKG:=	xcursor
 
@@ -76,6 +76,9 @@ MAKEVARS+=	USE_BUILTIN.xcursor
 ### The section below only applies if we are not including this file
 ### solely to determine whether a built-in implementation exists.
 ###
+
+.include "../../mk/x11.builtin.mk"
+
 CHECK_BUILTIN.xcursor?=	no
 .if !empty(CHECK_BUILTIN.xcursor:M[nN][oO])
 
