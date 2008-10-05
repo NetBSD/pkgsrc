@@ -1,0 +1,6 @@
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.1 2008/10/05 21:48:00 agc Exp $
+
+Changes to the packages collection and infrastructure on the
+pkgsrc-2008Q3 branch:
+
+Created pkgsrc-2008Q3 branch [agc 2008-10-05 20:14 UTC]
