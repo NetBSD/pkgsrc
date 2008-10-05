@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7565 2008/10/05 10:55:34 wiz Exp $
+$NetBSD: TODO,v 1.7566 2008/10/05 23:00:06 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -903,7 +903,6 @@ Suggested package updates
 	o libltdl-2.2.6a
 	o liblzo-2.02
 	o libmatheval-1.1.6
-	o libmp3splt-0.5.1 [schmonz]
 	o libmusicbrainz-3.0.1
 	o libnasl-2.3.1
 	o libnids-1.21
@@ -975,7 +974,6 @@ Suggested package updates
 	o moon-buggy-1.0.51
 	o mowgli-0.7.0
 	o mp3blaster-3.2.3
-	o mp3splt-2.2.1 [schmonz]
 	o mp3splt-gtk-0.5.1 [schmonz]
 	o mpeg4ip-1.6.1
 	o mpg123-1.5.1
