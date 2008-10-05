@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1.1.1 2008/02/06 09:26:36 bjs Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/10/05 22:47:23 schmonz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBMP3SPLT_BUILDLINK3_MK:=	${LIBMP3SPLT_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	libmp3splt
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libmp3splt
 
 .if ${LIBMP3SPLT_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.libmp3splt+=	libmp3splt>=0.4rc1
+BUILDLINK_API_DEPENDS.libmp3splt+=	libmp3splt>=0.5.1
 BUILDLINK_PKGSRCDIR.libmp3splt?=	../../audio/libmp3splt
 .endif	# LIBMP3SPLT_BUILDLINK3_MK
 ###
