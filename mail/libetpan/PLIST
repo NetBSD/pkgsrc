@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/10/27 13:55:26 wiz Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/10/05 22:42:36 smb Exp $
 bin/libetpan-config
 include/libetpan/acl.h
 include/libetpan/acl_types.h
@@ -7,7 +7,6 @@ include/libetpan/annotatemore_types.h
 include/libetpan/carray.h
 include/libetpan/charconv.h
 include/libetpan/chash.h
-include/libetpan/cinthash.h
 include/libetpan/clist.h
 include/libetpan/data_message_driver.h
 include/libetpan/dbdriver.h
