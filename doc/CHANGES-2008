@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2371 2008/10/05 22:43:30 smb Exp $
+$NetBSD: CHANGES-2008,v 1.2372 2008/10/05 23:00:06 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4049,3 +4049,6 @@ Changes to the packages collection and infrastructure in 2008:
 	mk/bsd.pkg.mk: freeze ended for pkgsrc-2008Q3 branch [agc 2008-10-05]
 	Updated pkgtools/x11-links to 0.39 [cube 2008-10-05]
 	Updated mail/libetpan to 0.56 [smb 2008-10-05]
+	Updated audio/libmp3splt to 0.5.1 [schmonz 2008-10-05]
+	Updated audio/mp3splt to 2.2.1 [schmonz 2008-10-05]
+	Removed audio/mp3splt-devel [schmonz 2008-10-05]
