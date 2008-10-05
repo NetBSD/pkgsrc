@@ -1,7 +1,7 @@
 Colortail works like the standard tail but it can optionally read
-a color config file where its specified expressions that results in colors.
-It can be used to quickly get an overview of interesting activity by
-ie. colorize those brightred or some other color of your choose.
+a color config file, where expressions are specified for coloring
+the results.
 
-Examples of the color configuration files are
-in @PREFIX@/share/examples/colortail.
+Thus it can be used to quickly get an overview of interesting
+activity by colorizing relevant lines brightred or some other color
+of your choice.
