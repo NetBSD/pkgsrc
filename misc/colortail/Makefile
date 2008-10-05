@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/02/22 19:01:22 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/10/05 10:59:40 wiz Exp $
 
 DISTNAME=	colortail-0.3.0
 CATEGORIES=	misc
@@ -12,7 +12,6 @@ USE_LANGUAGES=	c c++
 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=--datadir=${PREFIX}/share/examples/colortail
-DESCR_SRC=	${WRKDIR}/.DESCR_SRC
 
 post-install:
 	${INSTALL_MAN} ${WRKSRC}/colortail.1 ${PREFIX}/${PKGMANDIR}/man1
@@ -20,7 +19,6 @@ post-install:
 	cd ${WRKSRC}/example-conf/ && \
 	${INSTALL_DATA} conf.kernel conf.messages conf.secure \
 		conf.xferlog conf.daemon ${PREFIX}/share/examples/colortail
-	${SED} 's,@PREFIX@,${PREFIX},' ${PKGDIR}/DESCR > ${DESCR_SRC}
 
 .include "../../devel/libgetopt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
