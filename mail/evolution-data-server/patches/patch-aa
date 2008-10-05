@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.9 2008/10/05 17:49:05 schwarz Exp $
+
+--- camel/camel-block-file.h.orig	2008-09-30 17:15:40.000000000 +0200
++++ camel/camel-block-file.h	2008-10-05 14:35:47.000000000 +0200
+@@ -25,6 +25,7 @@
+ #include <glib.h>
+ #include <libedataserver/e-msgport.h>
+ #include <stdio.h>
++#include <sys/types.h> /* for off_t */
+ 
+ G_BEGIN_DECLS
+ 
