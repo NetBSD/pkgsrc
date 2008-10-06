@@ -1,0 +1,6 @@
+Mod_Mono is an Apache 1.3/2.0/2.2 module that provides ASP.NET support for the
+web's favorite server, Apache.
+The module passes off requests for ASP.NET pages to an external program,
+mod-mono-server, which actually handles the requests. The communication between
+the Apache module and mod-mono-server is established using a Unix socket or a
+TCP socket.
