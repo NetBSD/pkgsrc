@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7566 2008/10/05 23:00:06 schmonz Exp $
+$NetBSD: TODO,v 1.7567 2008/10/06 01:06:24 minskim Exp $
 
 Suggested new packages
 ======================
@@ -524,8 +524,6 @@ Suggested package updates
 	o cint-5.16
 	o cjk-lyx-1.4.4
 	o classpath-0.97.2
-	o clearsilver-0.10.5
-	o clearsilver-base-0.10.5
 	o climm-0.6.3
 	o cocoon-2.1.10
 	o colorize-0.3.4
@@ -1175,7 +1173,6 @@ Suggested package updates
 	o py-boto-1.4c
 	o py-cairo-1.6.4
 	o py-checker-0.8.17
-	o py-clearsilver-0.10.5
 	o py-curl-7.16.4
 	o py-dbus-0.83.0
 	o py-dns-2.3.3
@@ -1256,7 +1253,6 @@ Suggested package updates
 	o rtcw-1.41.3
 	o rtty-4.0 [at ftp://ftp.isc.org/isc/rtty/]
 	o ruby-SDL-2.0.1b
-	o ruby-clearsilver-0.10.5
 	o ruby-gnome-0.18.0
 	o ruby-haml-2.0.2
 	o ruby-itex2MML-1.3.5
