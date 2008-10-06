@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.8 2008/06/02 16:57:37 drochner Exp $
-#
+# $NetBSD: Makefile,v 1.9 2008/10/06 15:49:34 adam Exp $
 
-DISTNAME=	wormux-0.8
+DISTNAME=	wormux-0.8.1
 CATEGORIES=	games
 MASTER_SITES=	http://download.gna.org/wormux/
 EXTRACT_SUFX=	.tar.bz2
@@ -12,11 +11,11 @@ COMMENT=	Battle game
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-GNU_CONFIGURE=	yes
-USE_LANGUAGES=	c c++
-USE_PKGLOCALEDIR= yes
-USE_TOOLS+=	pkg-config msgfmt
-USE_DIRS+=	xdg-1.1
+USE_DIRS+=		xdg-1.1
+USE_LANGUAGES=		c c++
+USE_PKGLOCALEDIR=	yes
+USE_TOOLS+=		pkg-config msgfmt
+GNU_CONFIGURE=		yes
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
