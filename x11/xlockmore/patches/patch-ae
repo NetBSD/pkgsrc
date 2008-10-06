@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2007/10/28 16:15:22 joerg Exp $
+$NetBSD: patch-ae,v 1.6 2008/10/06 22:40:12 hubertf Exp $
 
---- modes/Makefile.in.orig	2007-09-16 20:43:06.000000000 +0200
+--- modes/Makefile.in.orig	2008-10-05 02:50:23.000000000 +0200
 +++ modes/Makefile.in
-@@ -579,19 +579,19 @@ install : install-program install-man in
+@@ -588,19 +588,19 @@ install : install-program install-man in
  	@ $(ECHO) ""
  
  install-program : xlock
