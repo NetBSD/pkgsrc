@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2388 2008/10/06 20:59:50 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2389 2008/10/06 22:01:17 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4099,3 +4099,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/youtube-dl to 20080920 [tnn 2008-10-06]
 	Updated devel/p5-Class-MOP to 0.66 [seb 2008-10-06]
 	Updated devel/p5-Moose to 0.58 [seb 2008-10-06]
+	Added devel/p5-Lexical-Persistence version 0.97 [seb 2008-10-06]
