@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.c,v 1.12 2008/04/26 22:42:49 tnn Exp $	*/
+/*	$NetBSD: fetch.c,v 1.13 2008/10/06 12:58:29 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -29,6 +29,13 @@
  *
  * $FreeBSD: fetch.c,v 1.41 2007/12/19 00:26:36 des Exp $
  */
+
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#ifndef NETBSD
+#include <nbcompat.h>
+#endif
 
 #include <ctype.h>
 #include <errno.h>
