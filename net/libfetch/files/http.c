@@ -1,4 +1,4 @@
-/*	$NetBSD: http.c,v 1.19 2008/05/06 17:37:30 joerg Exp $	*/
+/*	$NetBSD: http.c,v 1.20 2008/10/06 12:58:29 joerg Exp $	*/
 /*-
  * Copyright (c) 2000-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2003 Thomas Klausner <wiz@NetBSD.org>
@@ -71,7 +71,9 @@
 #if HAVE_CONFIG_H
 #include "config.h"
 #endif
+#ifndef NETBSD
 #include <nbcompat.h>
+#endif
 
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -79,17 +81,20 @@
 #include <ctype.h>
 #include <errno.h>
 #include <locale.h>
-#include <netdb.h>
 #include <stdarg.h>
 #ifndef NETBSD
+#include <nbcompat/netdb.h>
 #include <nbcompat/stdio.h>
 #else
+#include <netdb.h>
 #include <stdio.h>
 #endif
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include <unistd.h>
+
+#include <arpa/inet.h>
 
 #include <netinet/in.h>
 #include <netinet/tcp.h>
@@ -232,9 +237,12 @@ http_fillbuf(struct httpio *io, size_t len)
 
 	if (io->chunksize == 0) {
 		char endl[2];
+		ssize_t len2;
 
-		if (fetch_read(io->conn, endl, 2) != 2 ||
-		    endl[0] != '\r' || endl[1] != '\n')
+		len2 = fetch_read(io->conn, endl, 2);
+		if (len2 == 1 && fetch_read(io->conn, endl + 1, 1) != 1)
+			return (-1);
+		if (len2 == -1 || endl[0] != '\r' || endl[1] != '\n')
 			return (-1);
 	}
 
