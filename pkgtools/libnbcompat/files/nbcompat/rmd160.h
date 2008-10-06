@@ -1,4 +1,4 @@
-/*	$NetBSD: rmd160.h,v 1.4 2008/02/12 13:43:24 joerg Exp $	*/
+/*	$NetBSD: rmd160.h,v 1.5 2008/10/06 12:36:20 joerg Exp $	*/
 
 /********************************************************************\
  *
@@ -28,16 +28,16 @@
 #define RMD160_DIGEST_STRING_LENGTH	41
 
 typedef struct {
-	u_int32_t	state[5];	/* state (ABCDE) */
-	u_int32_t	length[2];	/* number of bits */
+	uint32_t	state[5];	/* state (ABCDE) */
+	uint32_t	length[2];	/* number of bits */
 	unsigned char	bbuffer[64];    /* overflow buffer */
-	u_int32_t	buflen;		/* number of chars in bbuffer */
+	uint32_t	buflen;		/* number of chars in bbuffer */
 } RMD160_CTX;
 
 __BEGIN_DECLS
 void	RMD160Init(RMD160_CTX *);
-void	RMD160Transform(u_int32_t[5], const u_int32_t[16]);
-void	RMD160Update(RMD160_CTX *, const unsigned char *, u_int32_t);
+void	RMD160Transform(uint32_t[5], const uint32_t[16]);
+void	RMD160Update(RMD160_CTX *, const unsigned char *, uint32_t);
 void	RMD160Final(unsigned char[20], RMD160_CTX *);
 char	*RMD160End(RMD160_CTX *, char *);
 char	*RMD160File(char *, char *);

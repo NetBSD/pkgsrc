@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.33 2007/05/07 16:38:47 joerg Exp $
+# $NetBSD: Makefile.in,v 1.34 2008/10/06 12:36:19 joerg Exp $
 #
 
 srcdir=		@srcdir@
@@ -12,7 +12,7 @@ CFLAGS=		-I$(srcdir) -I. @INCLUDES@ @CFLAGS@
 CPPFLAGS=	@CPPFLAGS@
 DEFS=		@DEFS@
 INSTALL=	@INSTALL@
-BINMODE?=	555
+LIBMODE?=	644
 LDFLAGS=	@LDFLAGS@
 
 AWK=		@AWK@
@@ -36,7 +36,7 @@ INCS=		nbcompat.h \
 		nbcompat/limits.h \
 		nbcompat/md5.h \
 		nbcompat/nbconfig.h \
-		nbcompat/nbtypes.h \
+		nbcompat/netdb.h \
 		nbcompat/param.h \
 		nbcompat/paths.h \
 		nbcompat/poll.h \
@@ -64,9 +64,9 @@ OBJS=		@LIBOBJS@
 LINK=		$(CCLD) $(CFLAGS) $(LDFLAGS) -o $@
 COMPILE=	$(CC) $(CPPFLAGS) $(CFLAGS)
 
-all: nbcompat/nbtypes.h nbcompat/nbconfig.h $(LIB)
+all: nbcompat/nbconfig.h $(LIB)
 
-.c.o: nbcompat/nbtypes.h
+.c.o:
 	$(COMPILE) $(DEFS) -c $<
 
 $(LIB): $(OBJS)
@@ -76,26 +76,19 @@ $(LIB): $(OBJS)
 nbcompat/nbconfig.h: nbcompat/config.h nbcompat.awk
 	$(AWK) -f nbcompat.awk nbcompat/config.h > $@
 
-nbcompat/nbtypes.h: bits
-	./bits $@
-
-bits: bits.c
-	$(COMPILE) $(DEFS) -c bits.c
-	$(LINK) bits.o
-
 install:
-	$(INSTALL) -m 755 -d $(prefix)/lib
-	$(INSTALL) -m $(BINMODE) ${LIB} $(prefix)/lib
-	$(RANLIB) $(prefix)/lib/$(LIB)
-	$(INSTALL) -m 755 -d $(prefix)/include
-	$(INSTALL) -m 755 -d $(prefix)/include/nbcompat
+	$(INSTALL) -m 755 -d ${DESTDIR}$(prefix)/lib
+	$(INSTALL) -m $(LIBMODE) ${LIB} ${DESTDIR}$(prefix)/lib
+	$(RANLIB) ${DESTDIR}$(prefix)/lib/$(LIB)
+	$(INSTALL) -m 755 -d ${DESTDIR}$(prefix)/include
+	$(INSTALL) -m 755 -d ${DESTDIR}$(prefix)/include/nbcompat
 	@for file in $(INCS); do \
-		echo "$(INSTALL) -m 444 $$file $(prefix)/include/$$file"; \
-		$(INSTALL) -m 444 $$file $(prefix)/include/$$file; \
+		echo "$(INSTALL) -m 444 $$file ${DESTDIR}$(prefix)/include/$$file"; \
+		$(INSTALL) -m 444 $$file ${DESTDIR}$(prefix)/include/$$file; \
 	done
 
 clean:
-	rm -f *.a *.o bits nbcompat/nbtypes.h nbcompat/nbcompat.h
+	rm -f *.a *.o bits nbcompat/nbcompat.h
 
 distclean: clean
 	rm -f Makefile config.log config.status configure.lineno
