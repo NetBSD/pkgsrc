@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2373 2008/10/06 01:06:24 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.2374 2008/10/06 07:08:50 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4056,3 +4056,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/ruby-clearsilver to 0.10.5 [minskim 2008-10-06]
 	Updated www/py-clearsilver to 0.10.5 [minskim 2008-10-06]
 	Updated www/clearsilver to 0.10.5 [minskim 2008-10-06]
+	Updated mail/dovecot to 1.1.4 [ghen 2008-10-06]
