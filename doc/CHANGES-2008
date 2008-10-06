@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2377 2008/10/06 09:51:12 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2378 2008/10/06 09:53:27 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -3362,6 +3362,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/p5-Nmap-Parser to 1.16 [he 2008-08-24]
 	Updated net/p5-POE-Component-Client-DNS to 1.00 [he 2008-08-24]
 	Updated print/teTeX3-bin to 3.0nb18 [tonnerre 2008-08-24]
+	Updated www/opera to 9.52 [ahoka 2008-08-24]
 	Added devel/p5-Term-Cap version 1.12 [he 2008-08-25]
 	Updated devel/p5-POE to 1.003 [he 2008-08-25]
 	Updated devel/cmake to 2.6.1 [bjs 2008-08-25]
