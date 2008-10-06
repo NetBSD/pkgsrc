@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.13 2007/10/29 04:38:47 uebayasi Exp $
+# $NetBSD: Makefile,v 1.14 2008/10/06 07:12:26 uebayasi Exp $
 #
 
-DISTNAME=	riece-4.0.0
+DISTNAME=	riece-5.0.0
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
 CATEGORIES=	chat japanese
 MASTER_SITES=	http://savannah.nongnu.org/download/riece/
@@ -27,6 +27,6 @@ CONFIGURE_ARGS+=	${CONFIGURE_ARGS.${EMACS_FLAVOR}}
 CONFIGURE_ARGS.emacs=	--with-lispdir=${EMACS_LISPPREFIX:Q}
 CONFIGURE_ARGS.xemacs=	--with-packagedir=${EMACS_LISPPREFIX:C|/lisp\$||}
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 
 .include "../../mk/bsd.pkg.mk"
