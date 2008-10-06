@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2374 2008/10/06 07:08:50 ghen Exp $
+$NetBSD: CHANGES-2008,v 1.2375 2008/10/06 07:13:57 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4057,3 +4057,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/py-clearsilver to 0.10.5 [minskim 2008-10-06]
 	Updated www/clearsilver to 0.10.5 [minskim 2008-10-06]
 	Updated mail/dovecot to 1.1.4 [ghen 2008-10-06]
+	Updated chat/riece to 5.0.0 [uebayasi 2008-10-06]
