@@ -1,4 +1,4 @@
-# $NetBSD: pkgconfig-builtin.mk,v 1.2 2008/10/05 21:36:35 cube Exp $
+# $NetBSD: pkgconfig-builtin.mk,v 1.3 2008/10/06 13:08:16 cube Exp $
 
 # This file is used to factor out a common pattern in builtin.mk files backed
 # up by the existence of a pkgconfig file.
@@ -8,6 +8,10 @@
 # Optionally, caller may define PKGCONFIG_BASE.<BUILTIN_PKG> as the base
 # location for a native implementation of the package.  It conveniently
 # defaults to X11BASE.
+#
+# The caller may also override the default, pkgconfig-specific, version
+# script.  That means this file can be called by a lot more generic
+# builtin.mk files.
 
 BUILTIN_FIND_FILES_VAR:=			FIND_FILES_${BUILTIN_PKG}
 BUILTIN_FIND_FILES.FIND_FILES_${BUILTIN_PKG}=	${PKGCONFIG_FILE.${BUILTIN_PKG}}
@@ -27,8 +31,11 @@ MAKEVARS:=	${MAKEVARS} IS_BUILTIN.${BUILTIN_PKG}
 .if !defined(BUILTIN_PKG.${BUILTIN_PKG}) && \
     !empty(IS_BUILTIN.${BUILTIN_PKG}:M[yY][eE][sS]) && \
     !empty(FIND_FILES_${BUILTIN_PKG}:M*.pc)
-BUILTIN_VERSION.${BUILTIN_PKG}!= \
-	${SED} -n -e 's/Version: //p' ${FIND_FILES_${BUILTIN_PKG}}
+. if !defined(BUILTIN_VERSION_SCRIPT.${BUILTIN_PKG})
+BUILTIN_VERSION_SCRIPT.${BUILTIN_PKG}=	${SED} -n -e 's/Version: //p'
+. endif
+BUILTIN_VERSION.${BUILTIN_PKG}!= ${BUILTIN_VERSION_SCRIPT.${BUILTIN_PKG}} \
+					${FIND_FILES_${BUILTIN_PKG}}
 BUILTIN_PKG.${BUILTIN_PKG}:= ${BUILTIN_PKG}-${BUILTIN_VERSION.${BUILTIN_PKG}}
 .endif
 MAKEVARS:=      ${MAKEVARS} BUILTIN_PKG.${BUILTIN_PKG}
