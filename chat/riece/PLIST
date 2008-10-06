@@ -1,7 +1,9 @@
-@comment $NetBSD: PLIST,v 1.7 2007/05/30 13:46:13 uebayasi Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/10/06 07:12:26 uebayasi Exp $
 ${EMACS_INFOPREFIX}/riece-en.info
 ${EMACS_INFOPREFIX}/riece-ja.info
 ${EMACS_LISPPREFIX}/riece/aproxy.rb
+${EMACS_LISPPREFIX}/riece/riece-${EMACS_FLAVOR}.el
+${EMACS_LISPPREFIX}/riece/riece-${EMACS_FLAVOR}.elc
 ${EMACS_LISPPREFIX}/riece/riece-000.el
 ${EMACS_LISPPREFIX}/riece/riece-000.elc
 ${EMACS_LISPPREFIX}/riece/riece-200.el
@@ -30,7 +32,11 @@ ${EMACS_LISPPREFIX}/riece/riece-channel.el
 ${EMACS_LISPPREFIX}/riece/riece-channel.elc
 ${EMACS_LISPPREFIX}/riece/riece-coding.el
 ${EMACS_LISPPREFIX}/riece/riece-coding.elc
+${EMACS_LISPPREFIX}/riece/riece-command-configure-windows.xpm
+${EMACS_LISPPREFIX}/riece/riece-command-join.xpm
+${EMACS_LISPPREFIX}/riece/riece-command-list-addons.xpm
 ${EMACS_LISPPREFIX}/riece/riece-command-next-channel.xpm
+${EMACS_LISPPREFIX}/riece/riece-command-part.xpm
 ${EMACS_LISPPREFIX}/riece/riece-command-previous-channel.xpm
 ${EMACS_LISPPREFIX}/riece/riece-commands.el
 ${EMACS_LISPPREFIX}/riece/riece-commands.elc
@@ -48,8 +54,6 @@ ${EMACS_LISPPREFIX}/riece/riece-display.el
 ${EMACS_LISPPREFIX}/riece/riece-display.elc
 ${EMACS_LISPPREFIX}/riece/riece-doctor.el
 ${EMACS_LISPPREFIX}/riece/riece-doctor.elc
-${EMACS_LISPPREFIX}/riece/riece-${EMACS_FLAVOR}.el
-${EMACS_LISPPREFIX}/riece/riece-${EMACS_FLAVOR}.elc
 ${EMACS_LISPPREFIX}/riece/riece-epg.el
 ${EMACS_LISPPREFIX}/riece/riece-epg.elc
 ${EMACS_LISPPREFIX}/riece/riece-eval-ruby.el
@@ -94,10 +98,10 @@ ${EMACS_LISPPREFIX}/riece/riece-log.el
 ${EMACS_LISPPREFIX}/riece/riece-log.elc
 ${EMACS_LISPPREFIX}/riece/riece-lsdb.el
 ${EMACS_LISPPREFIX}/riece/riece-lsdb.elc
-${EMACS_LISPPREFIX}/riece/riece-mcat.el
-${EMACS_LISPPREFIX}/riece/riece-mcat.elc
 ${EMACS_LISPPREFIX}/riece/riece-mcat-japanese.el
 ${EMACS_LISPPREFIX}/riece/riece-mcat-japanese.elc
+${EMACS_LISPPREFIX}/riece/riece-mcat.el
+${EMACS_LISPPREFIX}/riece/riece-mcat.elc
 ${EMACS_LISPPREFIX}/riece/riece-menu.el
 ${EMACS_LISPPREFIX}/riece/riece-menu.elc
 ${EMACS_LISPPREFIX}/riece/riece-message.el
@@ -126,7 +130,6 @@ ${EMACS_LISPPREFIX}/riece/riece-signal.el
 ${EMACS_LISPPREFIX}/riece/riece-signal.elc
 ${EMACS_LISPPREFIX}/riece/riece-skk-kakutei.el
 ${EMACS_LISPPREFIX}/riece/riece-skk-kakutei.elc
-${EMACS_LISPPREFIX}/riece/riece-submit-bug-report.xpm
 ${EMACS_LISPPREFIX}/riece/riece-toolbar.el
 ${EMACS_LISPPREFIX}/riece/riece-toolbar.elc
 ${EMACS_LISPPREFIX}/riece/riece-twitter.el
