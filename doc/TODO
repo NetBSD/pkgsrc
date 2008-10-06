@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7570 2008/10/06 15:34:57 schmonz Exp $
+$NetBSD: TODO,v 1.7571 2008/10/06 19:46:27 tnn Exp $
 
 Suggested new packages
 ======================
@@ -456,7 +456,6 @@ Suggested package updates
 	o astyle-1.15.3
 	o at-spi-1.24.0
 	o aterm-1.0.1
-	o atk-1.24.0
 	o auctex-11.85
 	o autoconf-2.63
 	o autoconvert-0.3.16
@@ -696,7 +695,6 @@ Suggested package updates
 	o gkrellm-xmms-2.1.22
 	o glabels-2.2.3
 	o glchess-1.0.5
-	o glib2-2.18.1
 	o glibmm-2.18.0
 	o global-5.6
 	o glpk-4.32
@@ -761,8 +759,6 @@ Suggested package updates
 	o gtick-0.4.2
 	o gtk-sharp-2.12.4
 	o gtk-systrace-20030623
-	o gtk2-2.14.3
-	o gtk2-2.14.1
 	o gtk2-engines-2.16.0
 	o gtkglarea-2.0.0
 	o gtkhtml314-3.24.0
@@ -1509,7 +1505,6 @@ Suggested package updates
 	o yaz-3.0.36
 	o yelp-2.24.0
 	o yodl-2.01.02
-	o youtube-dl-20080920
 	o ysm-2.9.9.1
 	o yudit-2.9.0
 	o yorick-2.1.05
