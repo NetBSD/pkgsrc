@@ -1,4 +1,4 @@
-/*	$NetBSD: file.c,v 1.11 2008/04/25 16:25:25 joerg Exp $	*/
+/*	$NetBSD: file.c,v 1.12 2008/10/06 12:58:29 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -29,6 +29,13 @@
  *
  * $FreeBSD: file.c,v 1.18 2007/12/14 10:26:58 des Exp $
  */
+
+#if HAVE_CONFIG_H
+#include "config.h"
+#endif
+#ifndef NETBSD
+#include <nbcompat.h>
+#endif
 
 #include <sys/stat.h>
 
