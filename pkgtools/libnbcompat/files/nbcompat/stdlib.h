@@ -1,4 +1,4 @@
-/*	$NetBSD: stdlib.h,v 1.3 2008/04/29 05:46:08 martin Exp $	*/
+/*	$NetBSD: stdlib.h,v 1.4 2008/10/06 12:36:20 joerg Exp $	*/
 
 /*-
  * Copyright (c) 2004 The NetBSD Foundation, Inc.
@@ -64,5 +64,9 @@ long long strtoll(const char *, char **, int);
 #else
 # define NO_LONG_LONG	1
 #endif  /* ! HAVE_WORKING_LONG_LONG */
+
+#if !HAVE_SHQUOTE
+size_t	shquote(const char *, char *, size_t);
+#endif
 
 #endif	/* !_NBCOMPAT_STDLIB_H_ */
