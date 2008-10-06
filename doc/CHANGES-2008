@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2383 2008/10/06 14:12:24 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2384 2008/10/06 15:34:57 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4089,3 +4089,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/typolight to 2.6.1 [taca 2008-10-06]
 	Updated www/typolight-translations to 20081006 [taca 2008-10-06]
 	Updated www/drupal6-translations to 20081006 [taca 2008-10-06]
+	Updated www/ikiwiki to 2.66 [schmonz 2008-10-06]
