@@ -1,8 +1,8 @@
-$NetBSD: distinfo,v 1.6 2008/09/28 04:20:02 taca Exp $
+$NetBSD: distinfo,v 1.7 2008/10/06 15:53:02 taca Exp $
 
-SHA1 (drupal6-20080816/cs-6.x-1.8.tar.gz) = 9c91966431b805e6f8e934ff3a6622b85954d941
-RMD160 (drupal6-20080816/cs-6.x-1.8.tar.gz) = cb954a82bd65fa3e794a559d9def62bc2f32b2d3
-Size (drupal6-20080816/cs-6.x-1.8.tar.gz) = 212965 bytes
+SHA1 (drupal6-20080816/cs-6.x-1.9.tar.gz) = 1e200bacc0463366e39e9df736c15a7255671cce
+RMD160 (drupal6-20080816/cs-6.x-1.9.tar.gz) = de2453f564262cab830dc291fc91ccfa62c9de35
+Size (drupal6-20080816/cs-6.x-1.9.tar.gz) = 214748 bytes
 SHA1 (drupal6-20080816/da-6.x-1.0.tar.gz) = 8f03ff7e71199eb516a3f83eab14113c649f35b8
 RMD160 (drupal6-20080816/da-6.x-1.0.tar.gz) = 56cfd5a9619fe5969c4e819ba689d2c13639bac7
 Size (drupal6-20080816/da-6.x-1.0.tar.gz) = 202568 bytes
@@ -45,15 +45,15 @@ Size (drupal6-20080816/pt-br-6.x-1.0-rc5.tar.gz) = 199484 bytes
 SHA1 (drupal6-20080816/ro-6.x-1.1.tar.gz) = 42c2a605bdd414a8ea7e11654cc2b2b77c1d2fb7
 RMD160 (drupal6-20080816/ro-6.x-1.1.tar.gz) = 0391bcd1e0e74e642200ca0256cf41f3b4b5e0cd
 Size (drupal6-20080816/ro-6.x-1.1.tar.gz) = 134248 bytes
-SHA1 (drupal6-20080816/sk-6.x-1.0-beta5.tar.gz) = b6936e3232b90944dd60d7fa59eb7d99afa94b31
-RMD160 (drupal6-20080816/sk-6.x-1.0-beta5.tar.gz) = 0339f705f0f5a37e8ea33386ad702ab957483bde
-Size (drupal6-20080816/sk-6.x-1.0-beta5.tar.gz) = 217583 bytes
+SHA1 (drupal6-20080816/sk-6.x-1.0.tar.gz) = c6a334376cdf22a56f295d5736b520ac094fa140
+RMD160 (drupal6-20080816/sk-6.x-1.0.tar.gz) = c38ee4e788e111d62798b90e3626643550b3bf84
+Size (drupal6-20080816/sk-6.x-1.0.tar.gz) = 219147 bytes
 SHA1 (drupal6-20080816/sv-6.x-1.1.tar.gz) = abb90031787e793399702c67255ed22bc143b28c
 RMD160 (drupal6-20080816/sv-6.x-1.1.tar.gz) = b1c1239dce67653585498f4e6bf7d45ed49eeae2
 Size (drupal6-20080816/sv-6.x-1.1.tar.gz) = 208615 bytes
-SHA1 (drupal6-20080816/uk-ua-6.x-1.2-beta2.tar.gz) = 9be47ec1b1163971e44c4a05fd7b76a42d21660a
-RMD160 (drupal6-20080816/uk-ua-6.x-1.2-beta2.tar.gz) = fd5a86ac4e3f88a147c798229bb5a41a58755691
-Size (drupal6-20080816/uk-ua-6.x-1.2-beta2.tar.gz) = 176240 bytes
+SHA1 (drupal6-20080816/uk-ua-6.x-1.2-beta3.tar.gz) = 894ba4043fe8dcf4b827b83be4b8dee54b54d057
+RMD160 (drupal6-20080816/uk-ua-6.x-1.2-beta3.tar.gz) = f30af5cf6233e694b1b80cd3b09a6abd24ad3063
+Size (drupal6-20080816/uk-ua-6.x-1.2-beta3.tar.gz) = 177524 bytes
 SHA1 (drupal6-20080816/zh-hans-6.x-1.0.tar.gz) = 49de1b91b538e4ccbfccbeb3750812e60ef89431
 RMD160 (drupal6-20080816/zh-hans-6.x-1.0.tar.gz) = 0ca22235af7c8a6de3bda28556f0f2fe6984f34e
 Size (drupal6-20080816/zh-hans-6.x-1.0.tar.gz) = 213991 bytes
