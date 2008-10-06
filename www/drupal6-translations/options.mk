@@ -1,13 +1,16 @@
-# $NetBSD: options.mk,v 1.3 2008/09/28 04:20:02 taca Exp $
+# $NetBSD: options.mk,v 1.4 2008/10/06 14:08:48 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.drupal-translations
 
+# Select official release or beta versions which contains correct
+# directory structure.
+#
 # Broken directory structure: eo vi
 # development version only: ar fr nb nn pt th tr
 DL_SUPPORTED_LANGUAGES=	cs da de el es fi gu he hu ja lt nl pl pt-br ro \
 			sk sv uk-ua zh-cn zh-tw
 
-DL_TRANSLATIONS.cs=	cs-6.x-1.8.tar.gz
+DL_TRANSLATIONS.cs=	cs-6.x-1.9.tar.gz
 DL_TRANSLATIONS.da=	da-6.x-1.0.tar.gz
 DL_TRANSLATIONS.de=	de-6.x-1.0-rc1.tar.gz
 DL_TRANSLATIONS.el=	el-6.x-1.0-beta1.tar.gz
@@ -22,9 +25,9 @@ DL_TRANSLATIONS.nl=	nl-6.x-1.1.tar.gz
 DL_TRANSLATIONS.pl=	pl-6.x-0.3.tar.gz
 DL_TRANSLATIONS.pt-br=	pt-br-6.x-1.0-rc5.tar.gz
 DL_TRANSLATIONS.ro=	ro-6.x-1.1.tar.gz
-DL_TRANSLATIONS.sk=	sk-6.x-1.0-beta5.tar.gz
+DL_TRANSLATIONS.sk=	sk-6.x-1.0.tar.gz
 DL_TRANSLATIONS.sv=	sv-6.x-1.1.tar.gz
-DL_TRANSLATIONS.uk-ua=	uk-ua-6.x-1.2-beta2.tar.gz
+DL_TRANSLATIONS.uk-ua=	uk-ua-6.x-1.2-beta3.tar.gz
 DL_TRANSLATIONS.zh-cn=	zh-hans-6.x-1.0.tar.gz
 DL_TRANSLATIONS.zh-tw=	zh-hant-6.x-1.1.tar.gz
 
