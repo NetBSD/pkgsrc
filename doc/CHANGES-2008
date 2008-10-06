@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2386 2008/10/06 19:22:26 kleink Exp $
+$NetBSD: CHANGES-2008,v 1.2387 2008/10/06 19:46:27 tnn Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4092,3 +4092,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/ikiwiki to 2.66 [schmonz 2008-10-06]
 	Updated games/wormux to 0.8.1 [adam 2008-10-06]
 	Updated www/drraw to 2.2b1 [kleink 2008-10-06]
+	Updated devel/glib2 to 2.18.1 [tnn 2008-10-06]
+	Updated devel/atk to 1.24.0 [tnn 2008-10-06]
+	Updated net/Transmission to 1.34 [tnn 2008-10-06]
+	Updated x11/gtk2 to 2.12.12 [tnn 2008-10-06]
+	Updated net/youtube-dl to 20080920 [tnn 2008-10-06]
