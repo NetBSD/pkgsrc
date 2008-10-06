@@ -1,4 +1,4 @@
-/*	$NetBSD: mdXhl.c,v 1.1 2004/08/23 03:32:12 jlam Exp $	*/
+/*	$NetBSD: mdXhl.c,v 1.2 2008/10/06 12:36:20 joerg Exp $	*/
 
 /*
  * ----------------------------------------------------------------------------
@@ -51,7 +51,7 @@ MDNAME(End)(ctx, buf)
 	MDNAME(Final)(digest, ctx);
 
 	for (i = 0; i < 16; i++) {
-		buf[i+i] = hex[(u_int32_t)digest[i] >> 4];
+		buf[i+i] = hex[(uint32_t)digest[i] >> 4];
 		buf[i+i+1] = hex[digest[i] & 0x0f];
 	}
 

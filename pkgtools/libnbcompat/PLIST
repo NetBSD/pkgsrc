@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2007/05/07 16:38:47 joerg Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/10/06 12:36:19 joerg Exp $
 include/nbcompat.h
 include/nbcompat/assert.h
 include/nbcompat/cdefs.h
@@ -14,7 +14,7 @@ include/nbcompat/grp.h
 include/nbcompat/limits.h
 include/nbcompat/md5.h
 include/nbcompat/nbconfig.h
-include/nbcompat/nbtypes.h
+include/nbcompat/netdb.h
 include/nbcompat/param.h
 include/nbcompat/paths.h
 include/nbcompat/poll.h

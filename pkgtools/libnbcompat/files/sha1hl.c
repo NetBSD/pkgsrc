@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1hl.c,v 1.7 2007/07/31 13:17:33 joerg Exp $	*/
+/*	$NetBSD: sha1hl.c,v 1.8 2008/10/06 12:36:20 joerg Exp $	*/
 
 /* sha1hl.c
  * ----------------------------------------------------------------------------
@@ -42,7 +42,7 @@
 #if !HAVE_SHA1_H
 
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: sha1hl.c,v 1.7 2007/07/31 13:17:33 joerg Exp $");
+__RCSID("$NetBSD: sha1hl.c,v 1.8 2008/10/06 12:36:20 joerg Exp $");
 #endif /* LIBC_SCCS and not lint */
 
 #if 0
@@ -72,7 +72,7 @@ SHA1End(ctx, buf)
 
     SHA1Final(digest,ctx);
     for (i = 0; i < 20; i++) {
-	p[i + i] = hex[((u_int32_t)digest[i]) >> 4];
+	p[i + i] = hex[((uint32_t)digest[i]) >> 4];
 	p[i + i + 1] = hex[digest[i] & 0x0f];
     }
     p[i + i] = '\0';

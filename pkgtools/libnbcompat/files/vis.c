@@ -1,4 +1,4 @@
-/*	$NetBSD: vis.c,v 1.10 2007/07/31 13:17:34 joerg Exp $	*/
+/*	$NetBSD: vis.c,v 1.11 2008/10/06 12:36:20 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1989, 1993
@@ -68,7 +68,7 @@
 #include <nbcompat.h>
 #include <nbcompat/cdefs.h>
 #if defined(LIBC_SCCS) && !defined(lint)
-__RCSID("$NetBSD: vis.c,v 1.10 2007/07/31 13:17:34 joerg Exp $");
+__RCSID("$NetBSD: vis.c,v 1.11 2008/10/06 12:36:20 joerg Exp $");
 #endif /* LIBC_SCCS and not lint */
 
 #if 0
@@ -200,8 +200,8 @@ do {									      \
 	}								      \
 	if (isextra || ((c & 0177) == ' ') || (flag & VIS_OCTAL)) {	      \
 		*dst++ = '\\';						      \
-		*dst++ = (unsigned char)(((u_int32_t)(unsigned char)c >> 6) & 03) + '0';    \
-		*dst++ = (unsigned char)(((u_int32_t)(unsigned char)c >> 3) & 07) + '0';    \
+		*dst++ = (unsigned char)(((uint32_t)(unsigned char)c >> 6) & 03) + '0';    \
+		*dst++ = (unsigned char)(((uint32_t)(unsigned char)c >> 3) & 07) + '0';    \
 		*dst++ =			     (c	      & 07) + '0';    \
 	} else {							      \
 		if ((flag & VIS_NOSLASH) == 0) *dst++ = '\\';		      \
