@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/10/06 10:52:29 kefren Exp $
+--- Makefile.in.orig	2008-10-06 13:26:48.000000000 +0300
++++ Makefile.in	2008-01-30 00:55:03.000000000 +0200
+@@ -200,7 +200,7 @@
+ # Current spec file is obsolete
+ #	     packaging/redhat/mod_mono.spec \
+ #	     packaging/redhat/mono.conf
+-modmonoconfdir = $(APXS_SYSCONFDIR)
++modmonoconfdir = @prefix@/share/examples/httpd
+ modmonoconf_DATA = mod_mono.conf
+ all: all-recursive
+ 
