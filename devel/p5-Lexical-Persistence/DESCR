@@ -1,0 +1,2 @@
+The Perl 5 module Lexical::Persistence provides access to persistent
+data through lexical variables.
