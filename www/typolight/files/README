@@ -1,0 +1,41 @@
+$NetBSD: README,v 1.1 2008/10/06 14:02:05 taca Exp $
+
+Note: currently, PostgreSQL isn't tested well.
+
+1. First, create a database for TYPOlight CMS.
+
+   * MySQL
+
+	# mysqladmin -p -u <administrator> create <dbname>.
+
+   * PostgreSQL
+
+	# su pgsql
+	% createdb -E utf-8 <dbname>
+
+2. Next, create a user for accessing that database.
+
+   * MySQL
+
+	# mysql -p -u <administrator> <dbname>
+	mysql> grant select, insert, update, delete, create, drop,
+	       index, alter, create temporary tables, lock tables on
+	       <dbname>.* to '<dbuser>'@'localhost'
+	       identified by '<dbpass>' ;
+
+   * PostgreSQL
+
+	% createuser -D -A -R -P -E <dbuser>
+	Enter password for new role: <dbpass>
+	Enter it again: <dbpass>
+
+3. Edit ${PKG_SYSCONFDIR}/typolight.conf and include from httpd.conf.
+
+	Include ${PKG_SYSCONFDIR}/typolight.conf
+
+   Then reload or restart apache.
+
+4. Start setup from TYPOlight installer.  If your setup TYPOlight's
+   URL as http://www.example.org/, the installer's URL will be
+   http://www.example.org/typolight/install.php.
+

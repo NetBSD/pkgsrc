@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/15 09:57:48 taca Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/06 14:02:05 taca Exp $
 #
 
 DISTNAME=	typolight-${TL_VERSION}
@@ -9,9 +9,10 @@ MAINTAINER=	taca@NetBSD.org
 HOMEPAGE=	http://www.typolight.org/
 COMMENT=	Powerful web content management system (CMS)
 
-DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.1.0:../../converters/php-iconv
-DEPENDS+=	${PHP_PKG_PREFIX}-iconv>=5.1.0:../../graphics/php-gd
+DEPENDS+=	${PHP_PKG_PREFIX}-gd>=5.1.0:../../graphics/gd
+DEPENDS+=	${PHP_PKG_PREFIX}-mbstring>=5.1.0:../../misc/php-mbstring
 DEPENDS+=	${PHP_PKG_PREFIX}-mcrypt>=5.1.0:../../security/php-mcrypt
+DEPENDS+=	${PHP_PKG_PREFIX}-{mysql,pgsql}>=5.1.0:../../databases/php-mysql
 
 PHP_VERSIONS_ACCEPTED=	5
 
@@ -35,6 +36,9 @@ CONF_FILES_PERMS+=	${TL_EGDIR}/system/config/localconfig.php \
 			${TL_WEBDIR}/system/config/localconfig.php \
 			${APACHE_USER} ${APACHE_GROUP} 0600
 
+CONF_FILES+=		${TL_EGDIR}/typolight.conf \
+			${PKG_SYSCONFDIR}/typolight.conf
+
 .for f in ${EG_FILES}
 CONF_FILES+=		${TL_EGDIR}/${f} ${TL_WEBDIR}/${f}
 .endfor
@@ -47,6 +51,12 @@ REQD_FILES+=		${TL_EGDIR}/${f} ${TL_WEBDIR}/${f}
 CONF_FILES_PERMS+=	${TL_EGDIR}/${f} ${TL_WEBDIR}/${f} www www 0644
 .endfor
 
+SUBST_CLASSES+=		conf
+SUBST_FILES.conf+=	${WRKDIR}/typolight.conf
+SUBST_SED.conf+=        -e 's|@PREFIX@|${PREFIX:Q}|g'
+SUBST_SED.conf+=        -e 's|@TL_WEBDIR@|${TL_WEBDIR:Q}|g'
+SUBST_STAGE.conf=	post-configure
+
 WWW_FILES=	._htaccess CHANGELOG.txt INSTALL.txt LICENSE.txt \
 		cron.php flash.php index.php \
 		plugins robots.txt templates typolight
@@ -55,7 +65,7 @@ WWW_SYSFILES=	config/.htaccess constants.php drivers functions.php \
 		logs/.htaccess mbstring.php modules themes tmp/.htaccess \
 		typolight.css
 
-INSTALLATION_DIRS+=	${TL_EGDIR} ${TL_WEBDIR}/system/config
+INSTALLATION_DIRS+=	${TL_DOCDIR} ${TL_EGDIR} ${TL_WEBDIR}/system/config
 OWN_DIRS_PERMS+= \
 		${TL_WEBDIR} root ${APACHE_GROUP} 0775 \
 		${TL_WEBDIR}/system/html ${BINOWN} ${APACHE_GROUP} 0770 \
@@ -71,6 +81,7 @@ PKG_GROUPS_VARS+=	APACHE_GROUP
 PKG_USERS_VARS+=	APACHE_USER
 
 pre-configure:
+	${CP} ${FILESDIR}/typolight.conf ${WRKDIR}
 	cd ${WRKSRC}; ${RM} -rf music_academy.css \
 		templates/example_website.sql tl_files/music_academy; \
 		${CP} /dev/null news.xml
@@ -84,6 +95,9 @@ do-install:
 			${DESTDIR}${PREFIX}/${TL_WEBDIR}/system/config
 	cd ${WRKSRC}; pax -rw -pm ${EG_DATA} ${DESTDIR}${PREFIX}/${TL_EGDIR}
 	rm -f ${DESTDIR}${PREFIX}/${TL_EGDIR}/system/config/.htaccess
+	${INSTALL_DATA} ${WRKDIR}/typolight.conf ${DESTDIR}${PREFIX}/${TL_EGDIR}
+	${INSTALL_DATA} ${FILESDIR}/README \
+		${DESTDIR}${PREFIX}/${TL_DOCDIR}
 
 .include "Makefile.common"
 .include "../../lang/php/phpversion.mk"
