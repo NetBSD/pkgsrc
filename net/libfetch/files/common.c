@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.14 2008/10/06 12:58:29 joerg Exp $	*/
+/*	$NetBSD: common.c,v 1.15 2008/10/06 23:37:56 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -234,6 +234,8 @@ fetch_reopen(int sd)
 	/* allocate and fill connection structure */
 	if ((conn = calloc(1, sizeof(*conn))) == NULL)
 		return (NULL);
+	conn->next_buf = NULL;
+	conn->next_len = 0;
 	conn->sd = sd;
 	++conn->ref;
 	return (conn);
@@ -405,6 +407,15 @@ fetch_read(conn_t *conn, char *buf, size_t len)
 	if (len == 0)
 		return 0;
 
+	if (conn->next_len != 0) {
+		if (conn->next_len < len)
+			len = conn->next_len;
+		memmove(buf, conn->next_buf, len);
+		conn->next_len -= len;
+		conn->next_buf += len;
+		return len;
+	}
+
 	if (fetchTimeout) {
 		FD_ZERO(&readfds);
 		gettimeofday(&timeout, NULL);
@@ -459,13 +470,12 @@ fetch_read(conn_t *conn, char *buf, size_t len)
 int
 fetch_getln(conn_t *conn)
 {
-	char *tmp;
+	char *tmp, *next;
 	size_t tmpsize;
 	ssize_t len;
-	int done;
 
 	if (conn->buf == NULL) {
-		if ((conn->buf = malloc(MIN_BUF_SIZE)) == NULL) {
+		if ((conn->buf = malloc(MIN_BUF_SIZE + 1)) == NULL) {
 			errno = ENOMEM;
 			return (-1);
 		}
@@ -482,9 +492,10 @@ fetch_getln(conn_t *conn)
 			return (-1);
 		if (len == 0)
 			break;
-		done = memchr(conn->buf + conn->buflen, '\n', len) != NULL;
+		next = memchr(conn->buf + conn->buflen, '\n', len);
 		conn->buflen += len;
-		if (conn->buflen == conn->bufsize) {
+		if (conn->buflen == conn->bufsize &&
+		    (next == NULL || next[1] == '\0')) {
 			tmp = conn->buf;
 			tmpsize = conn->bufsize * 2 + 1;
 			if ((tmp = realloc(tmp, tmpsize)) == NULL) {
@@ -494,8 +505,13 @@ fetch_getln(conn_t *conn)
 			conn->buf = tmp;
 			conn->bufsize = tmpsize;
 		}
-	} while (!done);
+	} while (next == NULL);
 
+	if (next != NULL) {
+		conn->next_buf = next + 1;
+		conn->next_len = conn->buflen - (conn->next_buf - conn->buf);
+		conn->buflen = next - conn->buf;
+	}
 	conn->buf[conn->buflen] = '\0';
 	return (0);
 }
