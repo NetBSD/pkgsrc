@@ -1,51 +1,7 @@
-# $NetBSD: builtin.mk,v 1.2 2008/10/05 21:36:33 cube Exp $
+# $NetBSD: builtin.mk,v 1.3 2008/10/06 18:20:41 tron Exp $
 
-BUILTIN_PKG:=	libXext
+BUILTIN_PKG:=	xext
+PKGCONFIG_FILE.pixman=	${X11BASE}/lib/pkgconfig/xext.pc
 
-BUILTIN_FIND_FILES_VAR:=	LIB_XEXT
-BUILTIN_FIND_FILES.LIB_XEXT=	${X11BASE}/lib/pkgconfig/xext.pc
-
-.include "../../mk/buildlink3/bsd.builtin.mk"
-
-###
-### Determine if there is a built-in implementation of the package and
-### set IS_BUILTIN.<pkg> appropriately ("yes" or "no").
-###
-.if ${X11BASE} == ${LOCALBASE}
-IS_BUILTIN.libXext=	no
-.elif !defined(IS_BUILTIN.libXext)
-IS_BUILTIN.libXext=	no
-.  if empty(LIB_XEXT:M__nonexistent__)
-IS_BUILTIN.libXext=	yes
-.  endif
-.endif
-MAKEVARS+=	IS_BUILTIN.libXext
-
-###
-### Determine whether we should use the built-in implementation if it
-### exists, and set USE_BUILTIN.<pkg> appropriate ("yes" or "no").
-###
-.if !defined(USE_BUILTIN.libXext)
-.  if ${PREFER.libXext} == "pkgsrc"
-USE_BUILTIN.libXext=	no
-.  else
-USE_BUILTIN.libXext=	${IS_BUILTIN.libXext}
-.    if defined(BUILTIN_PKG.libXext) && \
-        !empty(IS_BUILTIN.libXext:M[yY][eE][sS])
-USE_BUILTIN.libXext=	yes
-.      for _dep_ in ${BUILDLINK_API_DEPENDS.libXext}
-.        if !empty(USE_BUILTIN.libXext:M[yY][eE][sS])
-USE_BUILTIN.libXext!=							\
-	if ${PKG_ADMIN} pmatch ${_dep_:Q} ${BUILTIN_PKG.libXext:Q}; then \
-		${ECHO} yes;						\
-	else								\
-		${ECHO} no;						\
-	fi
-.        endif
-.      endfor
-.    endif
-.  endif  # PREFER.libXext
-.endif
-MAKEVARS+=	USE_BUILTIN.libXext
-
+.include "../../mk/buildlink3/pkgconfig-builtin.mk"
 .include "../../mk/x11.builtin.mk"
