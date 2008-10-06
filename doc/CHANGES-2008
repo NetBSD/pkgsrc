@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2375 2008/10/06 07:13:57 uebayasi Exp $
+$NetBSD: CHANGES-2008,v 1.2376 2008/10/06 08:04:02 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4058,3 +4058,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/clearsilver to 0.10.5 [minskim 2008-10-06]
 	Updated mail/dovecot to 1.1.4 [ghen 2008-10-06]
 	Updated chat/riece to 5.0.0 [uebayasi 2008-10-06]
+	Updated databases/sqlite3 to 3.6.3 [adam 2008-10-06]
