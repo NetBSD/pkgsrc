@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2380 2008/10/06 10:41:42 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2381 2008/10/06 10:43:11 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4084,3 +4084,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/postgresql83-server to 8.3.4 [adam 2008-10-06]
 	Updated databases/slony1 to 1.2.15 [adam 2008-10-06]
 	Updated databases/tokyocabinet to 1.3.11 [obache 2008-10-06]
+	Updated textproc/tokyodystopia to 0.9.7 [obache 2008-10-06]
