@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.28 2008/10/06 16:18:53 tnn Exp $
+# $NetBSD: buildlink3.mk,v 1.29 2008/10/06 16:23:09 tnn Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 CAIRO_BUILDLINK3_MK:=	${CAIRO_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}cairo
 
 .if ${CAIRO_BUILDLINK3_MK} == "+"
 BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.0.0nb2
-BUILDLINK_ABI_DEPENDS.cairo?=	cairo>=1.6.4
+BUILDLINK_ABI_DEPENDS.cairo+=	cairo>=1.6.4
 BUILDLINK_PKGSRCDIR.cairo?=	../../graphics/cairo
 
 BUILDLINK_API_DEPENDS.Xrender+=	Xrender>=0.8
