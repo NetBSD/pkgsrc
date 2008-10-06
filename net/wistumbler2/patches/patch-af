@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1 2008/10/06 15:12:08 joerg Exp $
+
+--- Makefile.acr.orig	2008-10-02 15:24:31.000000000 +0200
++++ Makefile.acr
+@@ -18,7 +18,7 @@ install:
+ 	${INSTALL_PROGRAM} src/${BIN} ${PREFIX}/bin/${BIN}
+ 	mkdir -p ${PREFIX}/share/${BIN}
+ 	${INSTALL_DATA} img/wist2.png ${PREFIX}/share/${BIN}/
+-	mkdir -p ${PREFIX}/man/man1
++	mkdir -p ${PREFIX}/${PKGMANDIR}/man1
+ 	${INSTALL_MAN} doc/${BIN}.1 ${PREFIX}/man/man1
+ 	mkdir -p ${PREFIX}/share/examples/${BIN}
+ 	${INSTALL_DATA} doc/${BIN}.conf ${PREFIX}/share/examples/${BIN}/
