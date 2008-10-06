@@ -1,4 +1,4 @@
-/*	$NetBSD: regex2.h,v 1.1 2004/08/23 03:32:13 jlam Exp $	*/
+/*	$NetBSD: regex2.h,v 1.2 2008/10/06 12:36:20 joerg Exp $	*/
 
 /*-
  * Copyright (c) 1992, 1993, 1994
@@ -109,16 +109,16 @@
  * In state representations, an operator's bit is on to signify a state
  * immediately *preceding* "execution" of that operator.
  */
-typedef u_int32_t sop;	/* strip operator */
+typedef uint32_t sop;	/* strip operator */
 typedef int sopno;
-#define	OPRMASK	((u_int32_t)0xf8000000UL)
-#define	OPDMASK	((u_int32_t)0x07ffffffUL)
-#define	OPSHIFT	((unsigned)27)
+#define	OPRMASK	((uint32_t)0xf8000000UL)
+#define	OPDMASK	((uint32_t)0x07ffffffUL)
+#define	OPSHIFT	((unsigned int)27)
 #define	OP(n)	((n)&OPRMASK)
 #define	OPND(n)	((int)((n)&OPDMASK))
 #define	SOP(op, opnd)	((op)|(opnd))
 
-#define OPC(n)	(((u_int32_t)(n))<<OPSHIFT)
+#define OPC(n)	(((uint32_t)(n))<<OPSHIFT)
 /* operators		   meaning	operand			*/
 /*					(back, fwd are offsets)	*/
 #define	OEND	OPC(1)	/* endmarker	-			*/
