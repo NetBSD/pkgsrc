@@ -97,11 +97,20 @@
 /* Define to 1 if you have the <fts.h> header file. */
 #undef HAVE_FTS_H
 
+/* Define to 1 if you have the `gai_strerror' function. */
+#undef HAVE_GAI_STRERROR
+
+/* Define to 1 if you have the `getaddrinfo' function. */
+#undef HAVE_GETADDRINFO
+
 /* Define to 1 if you have the `getenv' function. */
 #undef HAVE_GETENV
 
 /* Define to 1 if you have the `getmode' function. */
 #undef HAVE_GETMODE
+
+/* Define to 1 if you have the `getnameinfo' function. */
+#undef HAVE_GETNAMEINFO
 
 /* Define to 1 if you have the <getopt.h> header file. */
 #undef HAVE_GETOPT_H
@@ -123,18 +132,6 @@
 
 /* Define to 1 if you have the <grp.h> header file. */
 #undef HAVE_GRP_H
-
-/* Define to 1 if the system has the type `int16_t'. */
-#undef HAVE_INT16_T
-
-/* Define to 1 if the system has the type `int32_t'. */
-#undef HAVE_INT32_T
-
-/* Define to 1 if the system has the type `int64_t'. */
-#undef HAVE_INT64_T
-
-/* Define to 1 if the system has the type `int8_t'. */
-#undef HAVE_INT8_T
 
 /* Define to 1 if you have the <inttypes.h> header file. */
 #undef HAVE_INTTYPES_H
@@ -236,6 +233,9 @@
 /* Define to 1 if you have the <ndir.h> header file. */
 #undef HAVE_NDIR_H
 
+/* Define to 1 if you have the <netdb.h> header file. */
+#undef HAVE_NETDB_H
+
 /* Define to 1 if you have the <netinet/in6_machtypes.h> header file. */
 #undef HAVE_NETINET_IN6_MACHTYPES_H
 
@@ -291,11 +291,17 @@
 /* Define to 1 if you have the <sha2.h> header file. */
 #undef HAVE_SHA2_H
 
+/* Define to 1 if you have the `shquote' function. */
+#undef HAVE_SHQUOTE
+
 /* Define to 1 if you have the <signal.h> header file. */
 #undef HAVE_SIGNAL_H
 
 /* Define to 1 if you have the `snprintf' function. */
 #undef HAVE_SNPRINTF
+
+/* Define to 1 if the system has the type `socklen_t'. */
+#undef HAVE_SOCKLEN_T
 
 /* Define to 1 if you have the `statvfs' function. */
 #undef HAVE_STATVFS
@@ -348,8 +354,20 @@
 /* Define to 1 if you have the `strtoll' function. */
 #undef HAVE_STRTOLL
 
+/* Define to 1 if the system has the type `struct addrinfo'. */
+#undef HAVE_STRUCT_ADDRINFO
+
 /* Define to 1 if `d_namlen' is member of `struct dirent'. */
 #undef HAVE_STRUCT_DIRENT_D_NAMLEN
+
+/* Define to 1 if the system has the type `struct in6_addr'. */
+#undef HAVE_STRUCT_IN6_ADDR
+
+/* Define to 1 if the system has the type `struct sockaddr_in6'. */
+#undef HAVE_STRUCT_SOCKADDR_IN6
+
+/* Define to 1 if the system has the type `struct sockaddr_storage'. */
+#undef HAVE_STRUCT_SOCKADDR_STORAGE
 
 /* Define to 1 if `f_flags' is member of `struct statfs'. */
 #undef HAVE_STRUCT_STATFS_F_FLAGS
@@ -405,6 +423,9 @@
 /* Define to 1 if you have the <sys/queue.h> header file. */
 #undef HAVE_SYS_QUEUE_H
 
+/* Define to 1 if you have the <sys/socket.h> header file. */
+#undef HAVE_SYS_SOCKET_H
+
 /* Define to 1 if you have the <sys/statfs.h> header file. */
 #undef HAVE_SYS_STATFS_H
 
@@ -441,18 +462,6 @@
 /* Define to 1 if you have the `uid_from_user' function. */
 #undef HAVE_UID_FROM_USER
 
-/* Define to 1 if the system has the type `uint16_t'. */
-#undef HAVE_UINT16_T
-
-/* Define to 1 if the system has the type `uint32_t'. */
-#undef HAVE_UINT32_T
-
-/* Define to 1 if the system has the type `uint64_t'. */
-#undef HAVE_UINT64_T
-
-/* Define to 1 if the system has the type `uint8_t'. */
-#undef HAVE_UINT8_T
-
 /* Define to 1 if the system has the type `uintptr_t'. */
 #undef HAVE_UINTPTR_T
 
@@ -479,18 +488,6 @@
 
 /* Define to 1 if you have the <utime.h> header file. */
 #undef HAVE_UTIME_H
-
-/* Define to 1 if the system has the type `u_int16_t'. */
-#undef HAVE_U_INT16_T
-
-/* Define to 1 if the system has the type `u_int32_t'. */
-#undef HAVE_U_INT32_T
-
-/* Define to 1 if the system has the type `u_int64_t'. */
-#undef HAVE_U_INT64_T
-
-/* Define to 1 if the system has the type `u_int8_t'. */
-#undef HAVE_U_INT8_T
 
 /* Define to 1 if you have the `vfork' function. */
 #undef HAVE_VFORK
@@ -557,6 +554,37 @@
 # undef WORDS_BIGENDIAN
 #endif
 
+/* Define for Solaris 2.5.1 so the uint32_t typedef from <sys/synch.h>,
+   <pthread.h>, or <semaphore.h> is not used. If the typedef were allowed, the
+   #define below would cause a syntax error. */
+#undef _UINT32_T
+
+/* Define for Solaris 2.5.1 so the uint64_t typedef from <sys/synch.h>,
+   <pthread.h>, or <semaphore.h> is not used. If the typedef were allowed, the
+   #define below would cause a syntax error. */
+#undef _UINT64_T
+
+/* Define for Solaris 2.5.1 so the uint8_t typedef from <sys/synch.h>,
+   <pthread.h>, or <semaphore.h> is not used. If the typedef were allowed, the
+   #define below would cause a syntax error. */
+#undef _UINT8_T
+
+/* Define to the type of a signed integer type of width exactly 16 bits if
+   such a type exists and the standard includes do not define it. */
+#undef int16_t
+
+/* Define to the type of a signed integer type of width exactly 32 bits if
+   such a type exists and the standard includes do not define it. */
+#undef int32_t
+
+/* Define to the type of a signed integer type of width exactly 64 bits if
+   such a type exists and the standard includes do not define it. */
+#undef int64_t
+
+/* Define to the type of a signed integer type of width exactly 8 bits if such
+   a type exists and the standard includes do not define it. */
+#undef int8_t
+
 /* Define to rpl_malloc if the replacement function should be used. */
 #undef malloc
 
@@ -565,6 +593,22 @@
 
 /* Define to `unsigned int' if <sys/types.h> does not define. */
 #undef size_t
+
+/* Define to the type of an unsigned integer type of width exactly 16 bits if
+   such a type exists and the standard includes do not define it. */
+#undef uint16_t
+
+/* Define to the type of an unsigned integer type of width exactly 32 bits if
+   such a type exists and the standard includes do not define it. */
+#undef uint32_t
+
+/* Define to the type of an unsigned integer type of width exactly 64 bits if
+   such a type exists and the standard includes do not define it. */
+#undef uint64_t
+
+/* Define to the type of an unsigned integer type of width exactly 8 bits if
+   such a type exists and the standard includes do not define it. */
+#undef uint8_t
 
 /* Define to the type of an unsigned integer type wide enough to hold a
    pointer, if such a type exists, and if the system does not define it. */
