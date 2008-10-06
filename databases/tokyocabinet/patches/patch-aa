@@ -1,21 +1,30 @@
-$NetBSD: patch-aa,v 1.1.1.1 2008/09/04 12:10:28 obache Exp $
+$NetBSD: patch-aa,v 1.2 2008/10/06 10:41:25 obache Exp $
 
---- configure.orig	2008-08-25 01:32:42.000000000 +0000
+--- configure.orig	2008-09-29 02:53:37.000000000 +0000
 +++ configure
-@@ -1737,9 +1737,9 @@ MYDOCUMENTFILES="COPYING ChangeLog THANK
+@@ -1738,18 +1738,15 @@ MYDOCUMENTFILES="COPYING ChangeLog THANK
  MYPCFILES="tokyocabinet.pc"
  
  # Building flags
 -MYCFLAGS="-std=c99 -Wall -fPIC -fsigned-char -O2"
--MYCPPFLAGS="-I. -I\$(INCLUDEDIR) -L$HOME/include -L/usr/local/include -DNDEBUG -D_GNU_SOURCE=1"
+-MYCPPFLAGS="-I. -I\$(INCLUDEDIR) -I$HOME/include -I/usr/local/include -DNDEBUG -D_GNU_SOURCE=1"
 -MYLDFLAGS="-L. -L\$(LIBDIR) -L$HOME/lib -L/usr/local/lib"
 +MYCFLAGS="-std=c99 -Wall -fPIC -fsigned-char"
 +MYCPPFLAGS="-I. -I\$(INCLUDEDIR) -DNDEBUG -D_GNU_SOURCE=1"
 +MYLDFLAGS="-L. -L\$(LIBDIR)"
+ MYCMDLDFLAGS=""
  MYRUNPATH="\$(LIBDIR)"
  MYLDLIBPATHENV="LD_LIBRARY_PATH"
  MYPOSTCMD="true"
-@@ -4074,7 +4074,7 @@ _ACEOF
+ 
+ # Building paths
+-pathtmp="$PATH"
+-PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+-PATH="$PATH:/usr/ccs/bin:/usr/ucb:/usr/xpg4/bin:/usr/xpg6/bin:$pathtmp"
+ LIBRARY_PATH="$HOME/lib:/usr/local/lib:$LIBRARY_PATH"
+ LD_LIBRARY_PATH="$HOME/lib:/usr/local/lib:$LD_LIBRARY_PATH"
+ CPATH="$HOME/include:/usr/local/include:$CPATH"
+@@ -4076,7 +4073,7 @@ _ACEOF
  fi
  
  fi
@@ -24,7 +33,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/09/04 12:10:28 obache Exp $
  then
  
  { echo "$as_me:$LINENO: checking for main in -llzma" >&5
-@@ -4142,7 +4142,7 @@ _ACEOF
+@@ -4144,7 +4141,7 @@ _ACEOF
  fi
  
  fi
@@ -33,7 +42,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/09/04 12:10:28 obache Exp $
  then
  
  { echo "$as_me:$LINENO: checking for main in -llzo2" >&5
-@@ -5427,7 +5427,7 @@ fi
+@@ -5429,7 +5426,7 @@ fi
  
  
  fi
@@ -42,7 +51,7 @@ $NetBSD: patch-aa,v 1.1.1.1 2008/09/04 12:10:28 obache Exp $
  then
    if test "${ac_cv_header_lzmalib_h+set}" = set; then
    { echo "$as_me:$LINENO: checking for lzmalib.h" >&5
-@@ -5564,7 +5564,7 @@ fi
+@@ -5566,7 +5563,7 @@ fi
  
  
  fi
