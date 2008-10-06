@@ -1,0 +1,9 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1.1.1 2008/10/06 10:52:29 kefren Exp $
+
+In order to use this module in your Apache installation, you need to
+add the following to your httpd.conf file:
+
+  Include etc/httpd/mod_mono.conf
+
+===========================================================================
