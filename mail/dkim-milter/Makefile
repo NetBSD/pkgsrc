@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/04/20 17:20:20 adrianp Exp $
+# $NetBSD: Makefile,v 1.16 2008/10/06 14:56:52 joerg Exp $
 
 DISTNAME=	dkim-milter-2.5.4
 CATEGORIES=	mail
@@ -52,6 +52,12 @@ CONF_FILES=		${EGDIR}/dkim-filter.conf.sample \
 
 INSTALLATION_DIRS=	share/doc/dkim-milter ${EGDIR} \
 			share/doc/dkim-milter/libdkim
+
+.include "../../mk/bsd.prefs.mk"
+
+.if ${OPSYS} == "NetBSD"
+CPPFLAGS+=	-DSM_CONF_STDBOOL_H=1
+.endif
 
 post-extract:
 	${CP} ${WRKSRC}/site.config.m4.dist \
