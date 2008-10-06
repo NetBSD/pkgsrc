@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7567 2008/10/06 01:06:24 minskim Exp $
+$NetBSD: TODO,v 1.7568 2008/10/06 01:43:40 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -809,7 +809,7 @@ Suggested package updates
 	o ifile-1.3.8
 	o ifp-line-0.3 [pkg/38038]
 	o ike-2.0.1 [pkg/37032]
-	o ikiwiki-2.65 [schmonz]
+	o ikiwiki-2.66 [schmonz]
 	o imap-uw-2007b
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imlib2-1.4.1
