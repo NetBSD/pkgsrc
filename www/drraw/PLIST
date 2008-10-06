@@ -1,7 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2008/09/17 15:48:16 kleink Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/10/06 19:21:03 kleink Exp $
 libexec/cgi-bin/drraw.cgi
 share/doc/drraw/CHANGES
 share/doc/drraw/INSTALL
+share/doc/drraw/LICENSE
 share/doc/drraw/README.EVENTS
 share/examples/drraw/drraw.conf
 share/examples/drraw/icons/bomb.gif
