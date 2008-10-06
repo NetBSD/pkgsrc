@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/09/15 09:57:48 taca Exp $
+$NetBSD: distinfo,v 1.2 2008/10/06 14:02:05 taca Exp $
 
-SHA1 (typolight-2.6.0.tar.gz) = 74750399cfbc38d952d1ae34fd537b570cd5ae76
-RMD160 (typolight-2.6.0.tar.gz) = 88cfef656590cfdc46043f32060e60db430cd2b0
-Size (typolight-2.6.0.tar.gz) = 2806082 bytes
-SHA1 (patch-aa) = b0cf9ac0ce9fa5e7089e31ee9ca9daf438178ba9
+SHA1 (typolight-2.6.1.tar.gz) = d50a07351754e9d3401a7eaabcd25333dc52e784
+RMD160 (typolight-2.6.1.tar.gz) = bae4486e13098698532f36d55ab1057dd27c0133
+Size (typolight-2.6.1.tar.gz) = 2812585 bytes

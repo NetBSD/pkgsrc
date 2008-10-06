@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/09/15 09:57:48 taca Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/10/06 14:02:05 taca Exp $
+${TL_DOCDIR}/README
 ${TL_EGDIR}/basic.css
 ${TL_EGDIR}/news.xml
 ${TL_EGDIR}/print.css
@@ -17,6 +18,7 @@ ${TL_EGDIR}/tl_files/xBrowser_style_sheets/xBasic.css
 ${TL_EGDIR}/tl_files/xBrowser_style_sheets/xElements.css
 ${TL_EGDIR}/tl_files/xBrowser_style_sheets/xForm.css
 ${TL_EGDIR}/tl_files/xBrowser_style_sheets/xNavigation.css
+${TL_EGDIR}/typolight.conf
 ${TL_WEBDIR}/._htaccess
 ${TL_WEBDIR}/CHANGELOG.txt
 ${TL_WEBDIR}/INSTALL.txt
@@ -553,6 +555,12 @@ ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/de.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/de_dlg.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/en.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/en_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/fr.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/fr_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/it.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/it_dlg.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/pl.js
+${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/langs/pl_dlg.js
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/readme.txt
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/typoimages.php
 ${TL_WEBDIR}/plugins/tinyMCE/plugins/typolinks/typolib.php
@@ -1071,6 +1079,7 @@ ${TL_WEBDIR}/system/modules/faq/templates/mod_faqlist.tpl
 ${TL_WEBDIR}/system/modules/faq/templates/mod_faqreader.tpl
 ${TL_WEBDIR}/system/modules/frontend/ContentAccordion.php
 ${TL_WEBDIR}/system/modules/frontend/ContentAlias.php
+${TL_WEBDIR}/system/modules/frontend/ContentArticle.php
 ${TL_WEBDIR}/system/modules/frontend/ContentCode.php
 ${TL_WEBDIR}/system/modules/frontend/ContentDownload.php
 ${TL_WEBDIR}/system/modules/frontend/ContentDownloads.php
@@ -1180,6 +1189,7 @@ ${TL_WEBDIR}/system/modules/frontend/templates/member_default.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/member_grouped.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/mod_article.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/mod_article_list.tpl
+${TL_WEBDIR}/system/modules/frontend/templates/mod_article_plain.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/mod_article_teaser.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/mod_breadcrumb.tpl
 ${TL_WEBDIR}/system/modules/frontend/templates/mod_flash.tpl
@@ -1666,7 +1676,7 @@ ${TL_WEBDIR}/typolight/typolight_src.js
 @dirrm ${TL_WEBDIR}/system/modules/backend/dca
 @dirrm ${TL_WEBDIR}/system/modules/backend/config
 @dirrm ${TL_WEBDIR}/system/modules/backend
-@dirrm ${TL_WEBDIR}/system/modules
+@unexec ${RMDIR} %D/${TL_WEBDIR}/system/modules 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/${TL_WEBDIR}/system/logs 2>/dev/null || ${TRUE}
 @dirrm ${TL_WEBDIR}/system/libraries
 @unexec ${RM} -fr %D/${TL_WEBDIR}/system/html
@@ -1779,3 +1789,4 @@ ${TL_WEBDIR}/typolight/typolight_src.js
 @dirrm ${TL_EGDIR}/system/config
 @dirrm ${TL_EGDIR}/system
 @dirrm ${TL_EGDIR}
+@dirrm ${TL_DOCDIR}

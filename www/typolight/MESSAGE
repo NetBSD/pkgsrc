@@ -1,0 +1,11 @@
+===========================================================================
+$NetBSD: MESSAGE,v 1.1 2008/10/06 14:02:05 taca Exp $
+
+To complete the setup, please read:
+
+	${PREFIX}/share/doc/typolight/README
+
+
+Note: currently, PostgreSQL isn't tested well.
+
+===========================================================================
