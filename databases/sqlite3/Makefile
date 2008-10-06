@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.12 2008/10/02 11:15:17 obache Exp $
+# $NetBSD: Makefile,v 1.13 2008/10/06 08:00:49 adam Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include "Makefile.common"
-
-PKGREVISION=		1
 
 INSTALLATION_DIRS+=	${PKGMANDIR}/man1
 CONFIGURE_ARGS+=	--disable-tcl
