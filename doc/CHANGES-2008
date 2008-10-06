@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2372 2008/10/05 23:00:06 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.2373 2008/10/06 01:06:24 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4052,3 +4052,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated audio/libmp3splt to 0.5.1 [schmonz 2008-10-05]
 	Updated audio/mp3splt to 2.2.1 [schmonz 2008-10-05]
 	Removed audio/mp3splt-devel [schmonz 2008-10-05]
+	Updated www/clearsilver-base to 0.10.5 [minskim 2008-10-06]
+	Updated www/ruby-clearsilver to 0.10.5 [minskim 2008-10-06]
+	Updated www/py-clearsilver to 0.10.5 [minskim 2008-10-06]
+	Updated www/clearsilver to 0.10.5 [minskim 2008-10-06]
