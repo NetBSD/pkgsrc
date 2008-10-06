@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/06 10:52:29 kefren Exp $
+lib/httpd/mod_mono.so
+lib/httpd/mod_mono.so.0.0
+man/man8/mod_mono.8
