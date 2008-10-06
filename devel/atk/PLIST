@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2007/09/18 21:16:34 wiz Exp $
+@comment $NetBSD: PLIST,v 1.28 2008/10/06 16:54:10 tnn Exp $
 include/atk-1.0/atk/atk-enum-types.h
 include/atk-1.0/atk/atk.h
 include/atk-1.0/atk/atkaction.h
@@ -128,6 +128,7 @@ share/locale/oc/LC_MESSAGES/atk10.mo
 share/locale/or/LC_MESSAGES/atk10.mo
 share/locale/pa/LC_MESSAGES/atk10.mo
 share/locale/pl/LC_MESSAGES/atk10.mo
+share/locale/ps/LC_MESSAGES/atk10.mo
 share/locale/pt/LC_MESSAGES/atk10.mo
 share/locale/pt_BR/LC_MESSAGES/atk10.mo
 share/locale/ro/LC_MESSAGES/atk10.mo
@@ -138,8 +139,8 @@ share/locale/sk/LC_MESSAGES/atk10.mo
 share/locale/sl/LC_MESSAGES/atk10.mo
 share/locale/sq/LC_MESSAGES/atk10.mo
 share/locale/sr/LC_MESSAGES/atk10.mo
-share/locale/sr@Latn/LC_MESSAGES/atk10.mo
 share/locale/sr@ije/LC_MESSAGES/atk10.mo
+share/locale/sr@latin/LC_MESSAGES/atk10.mo
 share/locale/sv/LC_MESSAGES/atk10.mo
 share/locale/ta/LC_MESSAGES/atk10.mo
 share/locale/te/LC_MESSAGES/atk10.mo
