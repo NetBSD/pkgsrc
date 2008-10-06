@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.19 2005/09/18 19:16:49 minskim Exp $
+$NetBSD: patch-ab,v 1.20 2008/10/06 22:40:12 hubertf Exp $
 
---- configure.orig	2005-07-24 08:22:34.000000000 -0700
+--- configure.orig	2008-08-29 01:55:43.000000000 +0200
 +++ configure
-@@ -6299,7 +6299,7 @@ else
+@@ -6754,7 +6754,7 @@ else
      # Make sure to not put "make" in the Imakefile rules, since we grep it out.
      cat > Imakefile <<'EOF'
  acfindx:
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.19 2005/09/18 19:16:49 minskim Exp $
  EOF
      if (xmkmf) >/dev/null 2>/dev/null && test -f Makefile; then
        # GNU make sometimes prints "make[1]: Entering...", which'd confuse us.
-@@ -6308,138 +6308,6 @@ EOF
+@@ -6763,139 +6763,6 @@ EOF
      cd ..
      rm -fr conftestdir
    fi
@@ -116,6 +116,7 @@ $NetBSD: patch-ab,v 1.19 2005/09/18 19:16:49 minskim Exp $
 -    /usr/X386/lib/X11/app-defaults    \
 -    /usr/x386/lib/X11/app-defaults    \
 -    /usr/XFree86/lib/X11/app-defaults   \
+-    /usr/pkg/lib/app-defaults          \
 -            \
 -    /usr/lib/X11/app-defaults     \
 -    /usr/unsupported/lib/X11/app-defaults \
@@ -150,7 +151,7 @@ $NetBSD: patch-ab,v 1.19 2005/09/18 19:16:49 minskim Exp $
  
        if test x"$ac_x_app_defaults" = x; then
          ac_cv_x_app_defaults="/usr/lib/X11/app-defaults"
-@@ -8364,7 +8232,7 @@ else
+@@ -8838,7 +8705,7 @@ else
  #define USE_GL 1
  _ACEOF
  
