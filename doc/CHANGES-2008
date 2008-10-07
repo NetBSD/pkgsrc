@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2393 2008/10/07 06:11:42 martti Exp $
+$NetBSD: CHANGES-2008,v 1.2394 2008/10/07 07:24:06 martti Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4104,3 +4104,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/libetpan to 0.56nb1 [minskim 2008-10-07]
 	Updated www/mongrel to 1.1.5 [minskim 2008-10-07]
 	Added www/p5-URI-Escape-XS version 0.02 [martti 2008-10-07]
+	Updated databases/rrdtool to 1.3.4 [martti 2008-10-07]
