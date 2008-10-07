@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2390 2008/10/06 22:42:11 hubertf Exp $
+$NetBSD: CHANGES-2008,v 1.2391 2008/10/07 01:42:59 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4101,3 +4101,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-Moose to 0.58 [seb 2008-10-06]
 	Added devel/p5-Lexical-Persistence version 0.97 [seb 2008-10-06]
 	Updated x11/xlockmore to 5.27 [hubertf 2008-10-06]
+	Updated mail/libetpan to 0.56nb1 [minskim 2008-10-07]
