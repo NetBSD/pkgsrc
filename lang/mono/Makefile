@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.71 2008/09/01 09:28:54 kefren Exp $
+# $NetBSD: Makefile,v 1.72 2008/10/07 13:22:32 kefren Exp $
 
 DISTNAME=	mono-${MONO_VERSION}
-PKGREVISION=	4
 CATEGORIES=	lang
-MASTER_SITES=	http://go-mono.com/sources/mono/
+MASTER_SITES=	http://ftp.novell.com/pub/mono/sources/mono/
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	kefren@NetBSD.org
@@ -16,7 +15,7 @@ BUILD_DEPENDS+=	p5-XML-Parser-[0-9]*:../../textproc/p5-XML-Parser
 
 CONFLICTS=	pnet-[0-9]*
 
-MONO_VERSION=		1.9.1
+MONO_VERSION=		2.0
 ALL_ENV+=		MONO_SHARED_DIR=${WRKDIR:Q}
 
 USE_TOOLS+=		bison gmake gtar perl:run pkg-config bash:run
@@ -42,9 +41,11 @@ UNLIMIT_RESOURCES+=	memorysize
 PKGCONFIG_OVERRIDE+=	mono-uninstalled.pc.in
 PKGCONFIG_OVERRIDE+=	data/cecil.pc.in
 PKGCONFIG_OVERRIDE+=	data/dotnet.pc.in
+PKGCONFIG_OVERRIDE+=	data/dotnet35.pc.in
 PKGCONFIG_OVERRIDE+=	data/mint.pc.in
 PKGCONFIG_OVERRIDE+=	data/mono-cairo.pc.in
 PKGCONFIG_OVERRIDE+=	data/mono.pc.in
+PKGCONFIG_OVERRIDE+=	data/smcs.pc.in
 PKGCONFIG_OVERRIDE+=	scripts/mono-nunit.pc.in
 
 REPLACE_PERL+=	mcs/errors/do-tests.pl
@@ -59,11 +60,12 @@ REPLACE_PERL+=	mono/tests/stress-runner.pl
 REPLACE_BASH+=	mono/arch/arm/dpiops.sh
 REPLACE_BASH+=	mono/arch/arm/fpaops.sh
 REPLACE_BASH+=	mono/arch/arm/vfpops.sh
+REPLACE_BASH+=	mono/tests/make_imt_test.sh
 REPLACE_BASH+=	scripts/mono-find-provides.in
 REPLACE_BASH+=	scripts/mono-find-requires.in
 REPLACE_BASH+=	scripts/mono-test-install
 REPLACE_BASH+=	web/mono-build-w32.sh
-REPLACE_BASH+=	mcs/class/Mono.Mozilla/build-csproj2k5
+REPLACE_BASH+=	mcs/class/Mono.WebBrowser/build-csproj2k5
 REPLACE_BASH+=	mcs/class/Managed.Windows.Forms/build-csproj
 REPLACE_BASH+=	mcs/class/Managed.Windows.Forms/build-csproj2k5
 REPLACE_BASH+=	mcs/class/Mono.Cairo/Samples/gtk/compile.sh
