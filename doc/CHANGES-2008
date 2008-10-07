@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2392 2008/10/07 05:29:15 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.2393 2008/10/07 06:11:42 martti Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4103,3 +4103,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xlockmore to 5.27 [hubertf 2008-10-06]
 	Updated mail/libetpan to 0.56nb1 [minskim 2008-10-07]
 	Updated www/mongrel to 1.1.5 [minskim 2008-10-07]
+	Added www/p5-URI-Escape-XS version 0.02 [martti 2008-10-07]
