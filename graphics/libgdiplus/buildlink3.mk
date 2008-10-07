@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.23 2008/02/13 14:26:23 kefren Exp $
+# $NetBSD: buildlink3.mk,v 1.24 2008/10/07 13:23:25 kefren Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGDIPLUS_BUILDLINK3_MK:=	${LIBGDIPLUS_BUILDLINK3_MK}+
@@ -12,8 +12,8 @@ BUILDLINK_PACKAGES+=	libgdiplus
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}libgdiplus
 
 .if ${LIBGDIPLUS_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.libgdiplus+=	libgdiplus>=1.2.6
-BUILDLINK_ABI_DEPENDS.libgdiplus?=	libgdiplus>=1.2.6
+BUILDLINK_API_DEPENDS.libgdiplus+=	libgdiplus>=2.0
+BUILDLINK_ABI_DEPENDS.libgdiplus?=	libgdiplus>=2.0
 BUILDLINK_PKGSRCDIR.libgdiplus?=	../../graphics/libgdiplus
 .endif	# LIBGDIPLUS_BUILDLINK3_MK
 
