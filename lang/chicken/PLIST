@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2008/08/02 10:06:46 tnn Exp $
+@comment $NetBSD: PLIST,v 1.21 2008/10/07 15:28:44 ahoka Exp $
 bin/chicken
 bin/chicken-bug
 bin/chicken-profile
@@ -24,6 +24,7 @@ share/chicken/chicken-sys-macros.scm
 share/chicken/data-structures.exports
 share/chicken/eval.exports
 share/chicken/extras.exports
+share/chicken/files.exports
 share/chicken/library.exports
 share/chicken/lolevel.exports
 share/chicken/ports.exports
@@ -69,6 +70,7 @@ share/doc/${PKGNAME}/html/supported-language.html
 share/doc/${PKGNAME}/html/unit-data-structures.html
 share/doc/${PKGNAME}/html/unit-eval.html
 share/doc/${PKGNAME}/html/unit-extras.html
+share/doc/${PKGNAME}/html/unit-files.html
 share/doc/${PKGNAME}/html/unit-library.html
 share/doc/${PKGNAME}/html/unit-lolevel.html
 share/doc/${PKGNAME}/html/unit-match.html
