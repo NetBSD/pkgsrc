@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2395 2008/10/07 13:29:12 kefren Exp $
+$NetBSD: CHANGES-2008,v 1.2396 2008/10/07 13:42:54 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4111,3 +4111,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/mono-xsp to 2.0 [kefren 2008-10-07]
 	Updated www/ap-mono to 2.0 [kefren 2008-10-07]
 	Updated devel/mono-tools to 2.0 [kefren 2008-10-07]
+	Added devel/p5-Devel-REPL version 1.002001 [seb 2008-10-07]
