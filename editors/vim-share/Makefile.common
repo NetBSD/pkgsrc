@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.115 2008/10/03 05:05:57 martti Exp $
+# $NetBSD: Makefile.common,v 1.115.2.1 2008/10/07 14:09:29 tron Exp $
 
 # used by editors/vim/Makefile
 # used by editors/vim-gtk/Makefile
@@ -16,7 +16,7 @@ DISTFILES+=		vim-${VIM_VERSION}-lang.tar.gz
 CATEGORIES=		editors
 MASTER_SITES=		ftp://ftp.vim.org/pub/editors/vim/unix/
 MASTER_SITES+=		ftp://ftp.fu-berlin.de/misc/editors/vim/unix/
-DIST_SUBDIR=		vim
+DIST_SUBDIR=		vim${VIM_VERSION}
 EXTRACT_SUFX=		.tar.bz2
 
 SITES.vim-${VIM_VERSION}-extra.tar.gz=	ftp://ftp.vim.org/pub/editors/vim/extra/
