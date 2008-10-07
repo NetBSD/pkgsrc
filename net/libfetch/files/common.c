@@ -1,4 +1,4 @@
-/*	$NetBSD: common.c,v 1.15 2008/10/06 23:37:56 joerg Exp $	*/
+/*	$NetBSD: common.c,v 1.16 2008/10/07 15:50:00 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -484,6 +484,7 @@ fetch_getln(conn_t *conn)
 
 	conn->buf[0] = '\0';
 	conn->buflen = 0;
+	next = NULL;
 
 	do {
 		len = fetch_read(conn, conn->buf + conn->buflen,
