@@ -3993,6 +3993,7 @@ done
 
 
 
+
 for ac_header in alloca.h assert.h ctype.h dirent.h err.h errno.h fcntl.h \
 	fnmatch.h fts.h grp.h inttypes.h libutil.h limits.h \
 	machine/endian.h ndir.h netdb.h paths.h pwd.h signal.h \
@@ -4000,7 +4001,7 @@ for ac_header in alloca.h assert.h ctype.h dirent.h err.h errno.h fcntl.h \
 	stdlib.h string.h sys/byteorder.h sys/cdefs.h sys/dir.h sys/endian.h \
 	sys/file.h sys/mkdev.h sys/ndir.h sys/param.h sys/socket.h sys/stat.h \
 	sys/statfs.h sys/statvfs.h sys/time.h sys/ttycom.h sys/types.h \
-	sys/uio.h sys/vfs.h termcap.h time.h tzfile.h unistd.h \
+	sys/uio.h sys/vfs.h sysexits.h termcap.h time.h tzfile.h unistd.h \
 	util.h utime.h
 
 do

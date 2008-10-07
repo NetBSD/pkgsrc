@@ -15,9 +15,6 @@
 /* Define to 1 if you have the `bcopy' function. */
 #undef HAVE_BCOPY
 
-/* Define to 1 if you have the <bind/bitypes.h> header file. */
-#undef HAVE_BIND_BITYPES_H
-
 /* Define to 1 if you have the `bzero' function. */
 #undef HAVE_BZERO
 
@@ -236,9 +233,6 @@
 /* Define to 1 if you have the <netdb.h> header file. */
 #undef HAVE_NETDB_H
 
-/* Define to 1 if you have the <netinet/in6_machtypes.h> header file. */
-#undef HAVE_NETINET_IN6_MACHTYPES_H
-
 /* Define to 1 if you have the <paths.h> header file. */
 #undef HAVE_PATHS_H
 
@@ -387,8 +381,8 @@
 /* Define to 1 if you have the `svis' function. */
 #undef HAVE_SVIS
 
-/* Define to 1 if you have the <sys/bitypes.h> header file. */
-#undef HAVE_SYS_BITYPES_H
+/* Define to 1 if you have the <sysexits.h> header file. */
+#undef HAVE_SYSEXITS_H
 
 /* Define to 1 if you have the <sys/byteorder.h> header file. */
 #undef HAVE_SYS_BYTEORDER_H
