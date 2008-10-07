@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2008/10/06 16:10:48 kefren Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/10/07 13:25:12 kefren Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 MONO_XSP_BUILDLINK3_MK:=	${MONO_XSP_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	mono-xsp
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}mono-xsp
 
 .if ${MONO_XSP_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.mono-xsp+=	mono-xsp>=1.9.1
+BUILDLINK_API_DEPENDS.mono-xsp+=	mono-xsp>=2.0
 BUILDLINK_PKGSRCDIR.mono-xsp?=	../../www/mono-xsp
 .endif	# MONO_XSP_BUILDLINK3_MK
 
