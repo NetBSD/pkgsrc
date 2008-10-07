@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7571 2008/10/06 19:46:27 tnn Exp $
+$NetBSD: TODO,v 1.7572 2008/10/07 05:29:15 minskim Exp $
 
 Suggested new packages
 ======================
@@ -962,7 +962,6 @@ Suggested package updates
 	o mlview-0.9.0
 	o mmg-2.0.2
 	o modular-xorg-server-1.5.1
-	o mongrel-1.1.5
 	o monodevelop-1.9
 	o moon-buggy-1.0.51
 	o mowgli-0.7.0
