@@ -1,10 +1,10 @@
-$NetBSD: patch-ar,v 1.3 2008/04/19 18:42:10 kefren Exp $
---- data/net_2_0/Makefile.in.orig	2008-03-11 01:37:54.000000000 +0200
-+++ data/net_2_0/Makefile.in	2008-03-18 15:38:00.000000000 +0200
-@@ -217,7 +217,7 @@
- target_vendor = @target_vendor@
+$NetBSD: patch-ar,v 1.4 2008/10/07 13:22:33 kefren Exp $
+--- data/net_2_0/Makefile.in.orig	2008-10-02 00:07:20.000000000 +0300
++++ data/net_2_0/Makefile.in	2008-10-06 16:55:41.000000000 +0300
+@@ -238,7 +238,7 @@
  top_builddir = @top_builddir@
  top_srcdir = @top_srcdir@
+ SUBDIRS = Browsers
 -monodir = $(sysconfdir)/mono/2.0
 +monodir = $(datadir)/examples/mono/2.0
  EXTRA_DIST = machine.config \
