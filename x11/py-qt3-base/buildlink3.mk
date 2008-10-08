@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2006/07/26 17:56:25 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2008/10/08 14:23:24 wiz Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 PYQT3_BASE_BUILDLINK3_MK:=	${PYQT3_BASE_BUILDLINK3_MK}+
@@ -21,7 +21,7 @@ BUILDLINK_PKGSRCDIR.pyqt3-base?=	../../x11/py-qt3-base
 BUILDLINK_LIBDIRS.pyqt3-base+=	${PYSITELIB}
 .endif	# PYQT3_BASE_BUILDLINK3_MK
 
-.include "../../x11/py-qt3-sip/buildlink3.mk"
+.include "../../x11/py-sip/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
 
