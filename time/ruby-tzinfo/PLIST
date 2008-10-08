@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/09/18 12:42:47 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/10/08 13:24:02 taca Exp $
 ${GEM_HOME}/cache/tzinfo-${PKGVERSION}.gem
 ${GEM_LIBDIR}/CHANGES
 ${GEM_LIBDIR}/LICENSE
@@ -580,6 +580,7 @@ ${GEM_LIBDIR}/lib/tzinfo/info_timezone.rb
 ${GEM_LIBDIR}/lib/tzinfo/linked_timezone.rb
 ${GEM_LIBDIR}/lib/tzinfo/linked_timezone_info.rb
 ${GEM_LIBDIR}/lib/tzinfo/offset_rationals.rb
+${GEM_LIBDIR}/lib/tzinfo/ruby_core_support.rb
 ${GEM_LIBDIR}/lib/tzinfo/time_or_datetime.rb
 ${GEM_LIBDIR}/lib/tzinfo/timezone.rb
 ${GEM_LIBDIR}/lib/tzinfo/timezone_definition.rb
@@ -600,6 +601,7 @@ ${GEM_LIBDIR}/test/tc_info_timezone.rb
 ${GEM_LIBDIR}/test/tc_linked_timezone.rb
 ${GEM_LIBDIR}/test/tc_linked_timezone_info.rb
 ${GEM_LIBDIR}/test/tc_offset_rationals.rb
+${GEM_LIBDIR}/test/tc_ruby_core_support.rb
 ${GEM_LIBDIR}/test/tc_time_or_datetime.rb
 ${GEM_LIBDIR}/test/tc_timezone.rb
 ${GEM_LIBDIR}/test/tc_timezone_definition.rb
