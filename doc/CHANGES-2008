@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2397 2008/10/07 15:28:44 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.2398 2008/10/08 05:04:42 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4113,3 +4113,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/mono-tools to 2.0 [kefren 2008-10-07]
 	Added devel/p5-Devel-REPL version 1.002001 [seb 2008-10-07]
 	Updated lang/chicken to 3.4.0 [ahoka 2008-10-07]
+	Added devel/p5-MooseX-ClassAttribute version 0.06 [seb 2008-10-08]
