@@ -1,4 +1,4 @@
-# $NetBSD: replace.mk,v 1.213 2008/05/25 16:55:32 joerg Exp $
+# $NetBSD: replace.mk,v 1.214 2008/10/08 15:38:46 joerg Exp $
 #
 # Copyright (c) 2005 The NetBSD Foundation, Inc.
 # All rights reserved.
@@ -326,6 +326,16 @@ TOOLS_DEPENDS.csh?=		tcsh-[0-9]*:../../shells/tcsh
 TOOLS_CREATE+=			csh
 TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.csh=tcsh
 TOOLS_PATH.csh=			${TOOLS_PREFIX.csh}/bin/tcsh
+.  endif
+.endif
+
+.if !defined(TOOLS_IGNORE.fetch) && !empty(_USE_TOOLS:Mfetch)
+.  if !empty(PKGPATH:Mnet/fetch)
+MAKEFLAGS+=			TOOLS_IGNORE.fetch=
+.  elif !empty(_TOOLS_USE_PKGSRC.fetch:M[yY][eE][sS])
+TOOLS_DEPENDS.fetch?=		fetch-[0-9]*:../../net/fetch
+TOOLS_FIND_PREFIX+=		TOOLS_PREFIX.fetch=fetch
+TOOLS_PATH.fetch=		${TOOLS_PREFIX.fetch}/bin/fetch
 .  endif
 .endif
 
