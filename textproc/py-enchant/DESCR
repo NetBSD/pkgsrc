@@ -1,0 +1,14 @@
+PyEnchant is a set of language bindings and some wrapper classes
+to make the excellent Enchant spellchecker available as a Python
+module. The bindings are generated using SWIG. It includes all the
+functionality of Enchant with the flexibility of Python and a nice
+'Pythonic' object-oriented interface. It also aims to provide some
+higher-level functionality than is available in the C API.
+
+Enchant is the spellchecking package behind the AbiWord word
+processor, is being considered for inclusion in the KDE office
+suite, and has been proposed as a FreeDesktop.org standard. It aims
+to provide a single API to access spellchecking services on any
+platform, by wrapping the natively available spellchecking facilities.
+For example, it can access aspell when running under Linux and
+AppleSpell on Mac OSX.
