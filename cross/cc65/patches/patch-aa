@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/10/08 19:53:47 wiz Exp $
+
+--- make/gcc.mak.orig	2007-06-21 15:40:27.000000000 -0500
++++ make/gcc.mak
+@@ -14,7 +14,7 @@
+ MAKEOVERRIDES=
+ 
+ # The install prefix and directories
+-prefix		= /usr/local
++prefix		= ${PREFIX}
+ exec_prefix	= $(prefix)
+ 
+ bindir		= $(exec_prefix)/bin
