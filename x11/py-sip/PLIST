@@ -1,0 +1,7 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/08 14:10:45 wiz Exp $
+bin/sip${PYVERSSUFFIX}
+${PYINC}/sip.h
+${PYSITELIB}/sip.so
+${PYSITELIB}/sipconfig.py
+${PYSITELIB}/sipconfig.pyc
+${PYSITELIB}/sipdistutils.py

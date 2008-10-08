@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/10/08 14:10:45 wiz Exp $
+
+SHA1 (sip-4.7.7.tar.gz) = e9842ddcd7e4f973ddd3c5337d5540d664463152
+RMD160 (sip-4.7.7.tar.gz) = 117cf22b71e6b88c8181a1b0f40f1735d0c52f45
+Size (sip-4.7.7.tar.gz) = 464994 bytes
+SHA1 (patch-aa) = 97bf03e1bfd687773d137a88f6eb527e481c400d
+SHA1 (patch-ab) = f5ba9704fc3867a1273dca534b145cdb14b070e7
