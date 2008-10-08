@@ -1,5 +1,5 @@
 #!@SH@
-# $NetBSD: bulkbuild-restart,v 1.2 2008/09/16 18:21:30 joerg Exp $
+# $NetBSD: bulkbuild-restart,v 1.3 2008/10/08 16:43:34 joerg Exp $
 
 . @PBULK_CONFIG@
 
@@ -12,11 +12,15 @@ if [ "${config_version}" != "@PBULK_CONFIG_VERSION@" ]; then
 fi
 
 check_list() {
-	while read pkg
-	do
-		grep -q "^PKGNAME=${pkg}$" ${loc}/presolve && continue
-		return 1
-	done < "$1"
+	@AWK@ -v presolve=${loc}/presolve 'BEGIN { 
+		while (getline < presolve) {
+			if ($0 ~ "^PKGNAME=") {
+				cur = substr($0, 9)
+				pkg[cur] = 1
+			}
+		}
+	}
+	{ if (!pkg[$0]) exit(1) }' "$1" || return 1
 	return 0
 }
 
