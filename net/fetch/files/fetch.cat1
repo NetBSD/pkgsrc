@@ -1,0 +1,153 @@
+FETCH(1)                NetBSD General Commands Manual                FETCH(1)
+
+NNAAMMEE
+     ffeettcchh -- retrieve a file by Uniform Resource Locator
+
+SSYYNNOOPPSSIISS
+     ffeettcchh [--114466AAFFMMRRUUaaddllmmnnqqrrssvv] [--BB _b_y_t_e_s] [--SS _b_y_t_e_s] [--TT _s_e_c_o_n_d_s] [--NN _f_i_l_e]
+           [--oo _f_i_l_e] [--ww _s_e_c_o_n_d_s] [--hh _h_o_s_t] [--cc _d_i_r] [--ff _f_i_l_e] [_U_R_L _._._.]
+
+DDEESSCCRRIIPPTTIIOONN
+     The ffeettcchh utility provides a command-line interface to the fetch(3)
+     library.  Its purpose is to retrieve the file(s) pointed to by the URL(s)
+     on the command line.
+
+     The following options are available:
+
+     --11          Stop and return exit code 0 at the first successfully
+                 retrieved file.
+
+     --44          Forces ffeettcchh to use IPv4 addresses only.
+
+     --66          Forces ffeettcchh to use IPv6 addresses only.
+
+     --AA          Do not automatically follow ``temporary'' (302) redirects.
+                 Some broken Web sites will return a redirect instead of a
+                 not-found error when the requested object does not exist.
+
+     --aa          Automatically retry the transfer upon soft failures.
+
+     --BB _b_y_t_e_s    Specify the read buffer size in bytes.  The default is 4096
+                 bytes.  Attempts to set a buffer size lower than this will be
+                 silently ignored.  The number of reads actually performed is
+                 reported at verbosity level two or higher (see the --vv flag).
+
+     --cc _d_i_r      The file to retrieve is in directory _d_i_r on the remote host.
+                 This option is deprecated and is provided for backward com-
+                 patibility only.
+
+     --dd          Use a direct connection even if a proxy is configured.
+
+     --FF          In combination with the --rr flag, forces a restart even if the
+                 local and remote files have different modification times.
+                 Implies --RR.
+
+     --ff _f_i_l_e     The file to retrieve is named _f_i_l_e on the remote host.  This
+                 option is deprecated and is provided for backward compatibil-
+                 ity only.
+
+     --hh _h_o_s_t     The file to retrieve is located on the host _h_o_s_t.  This
+                 option is deprecated and is provided for backward compatibil-
+                 ity only.
+
+     --ll          If the target is a file-scheme URL, make a symbolic link to
+                 the target rather than trying to copy it.
+
+     --MM
+
+     --mm          Mirror mode: if the file already exists locally and has the
+                 same size and modification time as the remote file, it will
+                 not be fetched.  Note that the --mm and --rr flags are mutually
+                 exclusive.
+
+     --NN _f_i_l_e     Use _f_i_l_e instead of _~_/_._n_e_t_r_c to look up login names and pass-
+                 words for FTP sites.  See ftp(1) for a description of the
+                 file format.  This feature is experimental.
+
+     --nn          Do not preserve the modification time of the transferred
+                 file.
+
+     --oo _f_i_l_e     Set the output file name to _f_i_l_e.  By default, a ``pathname''
+                 is extracted from the specified URI, and its basename is used
+                 as the name of the output file.  A _f_i_l_e argument of `-' indi-
+                 cates that results are to be directed to the standard output.
+                 If the _f_i_l_e argument is a directory, fetched file(s) will be
+                 placed within the directory, with name(s) selected as in the
+                 default behaviour.
+
+     --qq          Quiet mode.
+
+     --RR          The output files are precious, and should not be deleted
+                 under any circumstances, even if the transfer failed or was
+                 incomplete.
+
+     --rr          Restart a previously interrupted transfer.  Note that the --mm
+                 and --rr flags are mutually exclusive.
+
+     --SS _b_y_t_e_s    Require the file size reported by the server to match the
+                 specified value.  If it does not, a message is printed and
+                 the file is not fetched.  If the server does not support
+                 reporting file sizes, this option is ignored and the file is
+                 fetched unconditionally.
+
+     --ss          Print the size in bytes of each requested file, without
+                 fetching it.
+
+     --TT _s_e_c_o_n_d_s  Set timeout value to _s_e_c_o_n_d_s.  Overrides the environment
+                 variables FTP_TIMEOUT for FTP transfers or HTTP_TIMEOUT for
+                 HTTP transfers if set.
+
+     --UU          When using passive FTP, allocate the port for the data con-
+                 nection from the low (default) port range.  See ip(4) for
+                 details on how to specify which port range this corresponds
+                 to.
+
+     --vv          Increase verbosity level.
+
+     --ww _s_e_c_o_n_d_s  When the --aa flag is specified, wait this many seconds between
+                 successive retries.
+
+     If ffeettcchh receives a SIGINFO signal (see the ssttaattuuss argument for stty(1)),
+     the current transfer rate statistics will be written to the standard
+     error output, in the same format as the standard completion message.
+
+EENNVVIIRROONNMMEENNTT
+     FTP_TIMEOUT   Maximum time, in seconds, to wait before aborting an FTP
+                   connection.
+
+     HTTP_TIMEOUT  Maximum time, in seconds, to wait before aborting an HTTP
+                   connection.
+
+     See fetch(3) for a description of additional environment variables,
+     including FETCH_BIND_ADDRESS, FTP_LOGIN, FTP_PASSIVE_MODE, FTP_PASSWORD,
+     FTP_PROXY, ftp_proxy, HTTP_AUTH, HTTP_PROXY, http_proxy, HTTP_PROXY_AUTH,
+     HTTP_REFERER, HTTP_USER_AGENT, NETRC, NO_PROXY and no_proxy.
+
+EEXXIITT SSTTAATTUUSS
+     The ffeettcchh command returns zero on success, or one on failure.  If multi-
+     ple URLs are listed on the command line, ffeettcchh will attempt to retrieve
+     each one of them in turn, and will return zero only if they were all suc-
+     cessfully retrieved.
+
+SSEEEE AALLSSOO
+     fetch(3)
+
+HHIISSTTOORRYY
+     The ffeettcchh command appeared in FreeBSD 2.1.5.  This implementation first
+     appeared in FreeBSD 4.1.
+
+AAUUTTHHOORRSS
+     The original implementation of ffeettcchh was done by Jean-Marc Zucconi
+     <jmz@FreeBSD.org>.  It was extensively re-worked for FreeBSD 2.2 by
+     Garrett Wollman <wollman@FreeBSD.org>, and later completely rewritten to
+     use the fetch(3) library by Dag-Erling Sm/orgrav <des@FreeBSD.org>.
+
+NNOOTTEESS
+     The --bb and --tt options are no longer supported and will generate warnings.
+     They were workarounds for bugs in other OSes which this implementation
+     does not trigger.
+
+     One cannot both use the --hh, --cc and --ff options and specify URLs on the
+     command line.
+
+NetBSD 4.0                      March 11, 2003                      NetBSD 4.0
