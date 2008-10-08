@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/07/14 12:56:08 joerg Exp $
+# $NetBSD: Makefile,v 1.9 2008/10/08 14:26:25 wiz Exp $
 
 DISTNAME=	kodos-2.4.2
 PKGREVISION=	2
@@ -11,9 +11,6 @@ COMMENT=	GUI for creating, testing and debugging Python REs
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	${PYPKGPREFIX}-qt3-modules>=3.11:../../x11/py-qt3-modules
-DEPENDS+=	${PYPKGPREFIX}-qt3-sip>=4.0rc3:../../x11/py-qt3-sip
-
 PYDISTUTILSPKG=	yes
 USE_LANGUAGES=
 
@@ -23,4 +20,5 @@ SUBST_FILES.libpath=	setup.py
 SUBST_SED.libpath=	-e "s|@LIBPATH@|${PREFIX}/share/kodos|g"
 
 .include "../../lang/python/extension.mk"
+.include "../../x11/py-qt3-modules/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
