@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.566 2008/09/30 13:07:35 joerg Exp $
+# $NetBSD: Makefile,v 1.567 2008/10/08 14:11:24 wiz Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -258,6 +258,7 @@ SUBDIR+=	py-gnome2
 SUBDIR+=	py-gnome2-desktop
 SUBDIR+=	py-gnome2-extras
 SUBDIR+=	py-gtk2
+SUBDIR+=	py-sip
 SUBDIR+=	py-qt3-base
 SUBDIR+=	py-qt3-modules
 SUBDIR+=	py-qt3-qscintilla
