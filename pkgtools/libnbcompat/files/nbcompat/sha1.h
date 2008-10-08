@@ -1,4 +1,4 @@
-/*	$NetBSD: sha1.h,v 1.5 2008/10/06 12:36:20 joerg Exp $	*/
+/*	$NetBSD: sha1.h,v 1.6 2008/10/08 14:28:14 joerg Exp $	*/
 
 /*
  * SHA-1 in C
@@ -8,6 +8,8 @@
 
 #ifndef _NBCOMPAT_SYS_SHA1_H_
 #define	_NBCOMPAT_SYS_SHA1_H_
+
+#include <nbcompat/types.h>
 
 #define SHA1_DIGEST_LENGTH		20
 #define SHA1_DIGEST_STRING_LENGTH	41
