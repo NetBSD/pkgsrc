@@ -1,0 +1,3 @@
+The Perl 5 module MooseX::ClassAttribute is a Moose extension
+allowing you to declare class attributes in exactly the same way
+as object attributes, using class_has() instead of has().
