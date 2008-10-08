@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2413 2008/10/08 15:30:47 joerg Exp $
+$NetBSD: CHANGES-2008,v 1.2414 2008/10/08 18:10:00 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4129,3 +4129,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/py-qt3-qscintilla to 3.17.4 [wiz 2008-10-08]
 	Removed x11/py-qt3-sip successor x11/py-sip [wiz 2008-09-06]
 	Added net/fetch version 1.0 [joerg 2008-10-08]
+	Added archivers/lzma-utils version 4.32.7 [wiz 2008-10-08]
