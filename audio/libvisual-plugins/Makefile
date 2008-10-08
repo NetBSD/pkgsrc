@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2008/07/14 12:55:57 joerg Exp $
+# $NetBSD: Makefile,v 1.20 2008/10/08 09:14:48 wiz Exp $
 #
 
 DISTNAME=		libvisual-plugins-0.4.0
-PKGREVISION=		1
+PKGREVISION=		2
 CATEGORIES=		audio graphics
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=libvisual/}
 
@@ -20,7 +20,6 @@ USE_LIBTOOL=		yes
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		pkg-config mkdirhier yacc
 
-.include "../../audio/goom/buildlink3.mk"
 .include "../../audio/libvisual/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/MesaLib/buildlink3.mk"
