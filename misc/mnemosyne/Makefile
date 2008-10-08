@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/06 12:51:39 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/08 14:27:35 wiz Exp $
 #
 
 DISTNAME=	mnemosyne-1.1.1
@@ -12,8 +12,6 @@ COMMENT=	Sophisticated flash-card tool which optimizes your learning process
 
 USE_DIRS+=	xdg-1.4
 USE_LANGUAGES=	# none
-# XXX: no py-qt package for python-2.5 available
-PYTHON_VERSIONS_INCOMPATIBLE=	25
 
 EGG_NAME=	${DISTNAME:S/^m/M/}
 
