@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2410 2008/10/08 14:24:52 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2411 2008/10/08 14:25:12 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4126,3 +4126,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated time/ruby-tzinfo to 0.3.11 [taca 2008-10-08]
 	Updated x11/py-qt3-base to 3.17.4 [wiz 2008-10-08]
 	Updated x11/py-qt3-modules to 3.17.4 [wiz 2008-10-08]
+	Updated x11/py-qt3-qscintilla to 3.17.4 [wiz 2008-10-08]
