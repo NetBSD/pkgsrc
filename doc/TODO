@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7575 2008/10/08 18:25:20 wiz Exp $
+$NetBSD: TODO,v 1.7576 2008/10/08 23:53:17 taca Exp $
 
 Suggested new packages
 ======================
@@ -579,7 +579,8 @@ Suggested package updates
 	o dnstracer-1.9
 	o doxygen-1.5.7.1
 	o drscheme-4.0.2
-	o drupal-6.4
+	o drupal-5.11
+	o drupal-6.5
 	o duplicity-0.5.02
 	o dvdrip-0.98.9
 	o dvdstyler-1.7.0
