@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7574 2008/10/08 14:24:54 taca Exp $
+$NetBSD: TODO,v 1.7575 2008/10/08 18:25:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -536,6 +536,7 @@ Suggested package updates
 	o courier-0.60.0
 	o courier-authlib-0.61.0
 	o courier-imap-4.4.0
+	o covered-20081007
 	o cpio-2.9
 	o cpmtools-2.6
 	o cppunit-1.12.0
@@ -816,7 +817,7 @@ Suggested package updates
 	o ingo-1.2.1
 	o instiki-0.13
 	o intercal-0.24
-	o intltool-0.40.4
+	o intltool-0.40.5
 	o ion3-20081002
 	o ircII-20080314
 	o ircservices-5.1.12
@@ -1202,11 +1203,6 @@ Suggested package updates
 	o py-mutagen-1.11
 	o py-psycopg-2.0.8
 	o py-pyrex-0.9.8.5
-	o py-qt3-3.17.3
-	o py-qt3-base-3.17.3
-	o py-qt3-modules-3.17
-	o py-qt3-qscintilla-3.17
-	o py-qt3-sip-4.7.7
 	o py-reportlab-2.2
 	o py-soappy-0.11.6
 	o py-sqlite2-2.5.0a
@@ -1400,6 +1396,7 @@ Suggested package updates
 	o udunits-1.12.9
 	o uim-1.5.3
 	o unicap-0.9.3
+	o unrar-3.8.3
 	o ups-nut-2.2.1 [pkgsrc-wip]
 	o upx-2.90
 	o userppp-030706
