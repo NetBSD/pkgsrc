@@ -1,0 +1,4 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/08 15:28:30 joerg Exp $
+bin/fetch
+man/cat1/fetch.0
+man/man1/fetch.1
