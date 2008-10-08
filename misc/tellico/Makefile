@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2008/07/18 08:31:22 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/10/08 09:34:30 wiz Exp $
 #
 
-DISTNAME=	tellico-1.3.3
+DISTNAME=	tellico-1.3.4
 CATEGORIES=	misc
 MASTER_SITES=	http://www.periapsis.org/tellico/download/
 
