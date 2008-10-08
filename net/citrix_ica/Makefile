@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.37 2008/02/29 16:41:44 sborrill Exp $
+# $NetBSD: Makefile,v 1.37.10.1 2008/10/08 12:02:39 tron Exp $
 
 DISTNAME=	citrix_ica-10.6.115659
 PKGREVISION=	1
@@ -18,6 +18,7 @@ NO_BIN_ON_CDROM=	${RESTRICTED}
 
 EMUL_PLATFORMS=		linux-i386
 EMUL_PLATFORMS+=	solaris-sparc
+EMUL_PLATFORMS+=	solaris-i386
 EMUL_MODULES.linux=	locale motif x11
 
 .include "../../mk/bsd.prefs.mk"
@@ -25,10 +26,15 @@ EMUL_MODULES.linux=	locale motif x11
 .if ${EMUL_PLATFORM} == "linux-i386"
 DISTNAME=	en.linuxx86
 PKGNAME=	citrix_ica-10.6.115659
-MASTER_SITES=	http://download2.citrix.com/FILES/en/products/Linux10/
+MASTER_SITES=	ftp://download2.citrix.com/FILES/en/products/Linux10/
 .elif ${EMUL_PLATFORM} == "solaris-sparc"
 DISTNAME=	en.solaris
 PKGNAME=	citrix_ica-8.46.110465
+MASTER_SITES=	http://www.citrix.com/site/resources/dynamic/software/
+EXTRACT_SUFX=	.tar.Z
+.elif ${EMUL_PLATFORM} == "solaris-i386"
+DISTNAME=	en.solx86
+PKGNAME=	citrix_ica-8.50.117422
 MASTER_SITES=	http://www.citrix.com/site/resources/dynamic/software/
 EXTRACT_SUFX=	.tar.Z
 .endif
