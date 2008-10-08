@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/06/12 02:14:57 joerg Exp $
+# $NetBSD: Makefile,v 1.26 2008/10/08 14:23:24 wiz Exp $
 #
 
 PKG_DESTDIR_SUPPORT=	user-destdir
@@ -6,7 +6,6 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 .include "../../x11/py-qt3-base/Makefile.common"
 
 PKGNAME=		${PYPKGPREFIX}-qt3-base-${PYQT_VERSION}
-PKGREVISION=		3
 
 COMMENT=		Python binding for Qt3
 
@@ -25,7 +24,7 @@ SUBST_STAGE.pyversfx=	pre-configure
 SUBST_FILES.pyversfx=	pyuic3/pyuic.sbf pylupdate3/pylupdate.sbf
 SUBST_SED.pyversfx=	-e "s|@PYVERSSUFFIX@|${PYVERSSUFFIX}|g"
 
-.include "../../x11/py-qt3-sip/buildlink3.mk"
+.include "../../x11/py-sip/buildlink3.mk"
 .include "../../x11/qt3-libs/buildlink3.mk"
 .include "../../x11/qt3-tools/buildlink3.mk"
 # ${PYSITELIB}/qt.so depends on libqassistantclient.so

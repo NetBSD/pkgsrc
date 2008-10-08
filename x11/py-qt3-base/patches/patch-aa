@@ -1,8 +1,82 @@
-$NetBSD: patch-aa,v 1.5 2005/11/22 18:52:45 drochner Exp $
+$NetBSD: patch-aa,v 1.6 2008/10/08 14:23:24 wiz Exp $
 
---- configure.py.orig	2005-11-14 18:31:26.000000000 +0100
+--- configure.py.orig	2007-12-06 15:28:06.000000000 +0100
 +++ configure.py
-@@ -736,7 +736,7 @@ def check_license():
+@@ -197,23 +197,23 @@ class ConfigurePyQt3(ConfigureBase):
+     def check_modules(self):
+         pyqt_modules.append("qt")
+ 
+-        check_module("qtcanvas", "qcanvas.h", "QCanvas()")
+-        check_module("qtnetwork", "qsocket.h", "QSocket()")
+-        check_module("qttable", "qtable.h", "QTable()")
+-        check_module("qtxml", "qdom.h", "QDomImplementation()")
+-        check_module("qtgl", "qgl.h", "QGLWidget()", opengl=1)
++        #check_module("qtcanvas", "qcanvas.h", "QCanvas()")
++        #check_module("qtnetwork", "qsocket.h", "QSocket()")
++        #check_module("qttable", "qtable.h", "QTable()")
++        #check_module("qtxml", "qdom.h", "QDomImplementation()")
++        #check_module("qtgl", "qgl.h", "QGLWidget()", opengl=1)
++
++        #if qt_version >= 0x030000:
++        #    check_module("qtui", "qwidgetfactory.h", "QWidgetFactory()", lib="qui")
+ 
+-        if qt_version >= 0x030000:
+-            check_module("qtui", "qwidgetfactory.h", "QWidgetFactory()", lib="qui")
+-
+-            if qt_edition in ("enterprise", "free"):
+-                check_module("qtsql", "qsql.h", "QSql()")
++        #    if qt_edition in ("enterprise", "free"):
++        #        check_module("qtsql", "qsql.h", "QSql()")
+ 
+-                if sys.platform == "win32" and sipcfg.sip_version >= 0x040200:
+-                    check_module("qtaxcontainer", "qaxobject.h", "QAxObject()", lib="qaxcontainer")
++        #        if sys.platform == "win32" and sipcfg.sip_version >= 0x040200:
++        #            check_module("qtaxcontainer", "qaxobject.h", "QAxObject()", lib="qaxcontainer")
+ 
+-        if qsci_version:
+-            check_module("qtext", "qextscintillabase.h", "QextScintillaBase()", define=qsci_define, include_dir=opt_qsciincdir, lib_dir=opt_qscilibdir, lib="qscintilla")
++        #if qsci_version:
++        #    check_module("qtext", "qextscintillabase.h", "QextScintillaBase()", define=qsci_define, include_dir=opt_qsciincdir, lib_dir=opt_qscilibdir, lib="qscintilla")
+ 
+         if opt_qtpetag:
+             pyqt_modules.append("qtpe")
+@@ -289,7 +289,7 @@ class ConfigurePyQt3(ConfigureBase):
+ 
+             sipconfig.inform("Creating pyuic Makefile...")
+ 
+-            if prof or "qtxml" not in pyqt_modules:
++            if prof: # or "qtxml" not in pyqt_modules:
+                 buildfile= "pyuic-prof.sbf"
+ 
+                 for xml in ("qdom.cpp", "qxml.cpp"):
+@@ -310,7 +310,7 @@ class ConfigurePyQt3(ConfigureBase):
+             makefile.extra_defines.append("UIC")
+             makefile.extra_defines.append("QT_INTERNAL_XML")
+ 
+-            if prof or "qtxml" not in pyqt_modules:
++            if prof: # or "qtxml" not in pyqt_modules:
+                 makefile.extra_defines.append("QT_MODULE_XML")
+ 
+             if qt_version < 0x030100:
+@@ -321,7 +321,7 @@ class ConfigurePyQt3(ConfigureBase):
+ 
+             sipconfig.inform("Creating pylupdate Makefile...")
+ 
+-            if prof or "qtxml" not in pyqt_modules:
++            if prof: # or "qtxml" not in pyqt_modules:
+                 buildfile= "pylupdate-prof.sbf"
+ 
+                 shutil.copyfile(qt_dir + "/src/xml/qxml.cpp", "pylupdate3/qxml.cpp")
+@@ -340,7 +340,7 @@ class ConfigurePyQt3(ConfigureBase):
+ 
+             makefile.extra_defines.append("QT_INTERNAL_XML")
+ 
+-            if prof or "qtxml" not in pyqt_modules:
++            if prof: # or "qtxml" not in pyqt_modules:
+                 makefile.extra_defines.append("QT_MODULE_XML")
+ 
+             makefile.generate()
+@@ -1002,7 +1002,7 @@ def check_license():
      print "Type 'no' to decline the terms of the license."
      print
  
@@ -11,81 +85,12 @@ $NetBSD: patch-aa,v 1.5 2005/11/22 18:52:45 drochner Exp $
          try:
              resp = raw_input("Do you accept the terms of the license? ")
          except:
-@@ -772,7 +772,7 @@ def create_makefiles():
- 
-         sipconfig.inform("Creating pyuic Makefile...")
- 
--        if prof or "qtxml" not in pyqt_modules:
-+        if prof: #or "qtxml" not in pyqt_modules:
-             buildfile= "pyuic-prof.sbf"
- 
-             for xml in ("qdom.cpp", "qxml.cpp"):
-@@ -793,7 +793,7 @@ def create_makefiles():
-         makefile.extra_defines.append("UIC")
-         makefile.extra_defines.append("QT_INTERNAL_XML")
- 
--        if prof or "qtxml" not in pyqt_modules:
-+        if prof: #or "qtxml" not in pyqt_modules:
-             makefile.extra_defines.append("QT_MODULE_XML")
- 
-         if sipcfg.qt_version < 0x030100:
-@@ -804,7 +804,7 @@ def create_makefiles():
- 
-         sipconfig.inform("Creating pylupdate Makefile...")
- 
--        if prof or "qtxml" not in pyqt_modules:
-+        if prof: #or "qtxml" not in pyqt_modules:
-             buildfile= "pylupdate-prof.sbf"
- 
-             shutil.copyfile(sipcfg.qt_dir + "/src/xml/qxml.cpp", "pylupdate3/qxml.cpp")
-@@ -823,7 +823,7 @@ def create_makefiles():
- 
-         makefile.extra_defines.append("QT_INTERNAL_XML")
- 
--        if prof or "qtxml" not in pyqt_modules:
-+        if prof: #or "qtxml" not in pyqt_modules:
-             makefile.extra_defines.append("QT_MODULE_XML")
- 
-         makefile.generate()
-@@ -942,26 +942,26 @@ def main(argv):
-             sipconfig.error("This version of PyQt requires SIP v%s or later" % sipconfig.version_to_string(minv))
+@@ -1380,7 +1380,7 @@ def main(argv):
+     check_license()
  
      # Check for QScintilla.
 -    check_qscintilla()
-+#    check_qscintilla()
++    #check_qscintilla()
  
      # Check which modules to build.
--    check_module("qtcanvas", "qcanvas.h", "QCanvas()")
--    check_module("qtnetwork", "qsocket.h", "QSocket()")
--    check_module("qttable", "qtable.h", "QTable()")
--    check_module("qtxml", "qdom.h", "QDomImplementation()")
--    check_module("qtgl", "qgl.h", "QGLWidget()", opengl=1)
-+#    check_module("qtcanvas", "qcanvas.h", "QCanvas()")
-+#    check_module("qtnetwork", "qsocket.h", "QSocket()")
-+#    check_module("qttable", "qtable.h", "QTable()")
-+#    check_module("qtxml", "qdom.h", "QDomImplementation()")
-+#    check_module("qtgl", "qgl.h", "QGLWidget()", opengl=1)
-+
-+#    if sipcfg.qt_version >= 0x030000:
-+#        check_module("qtui", "qwidgetfactory.h", "QWidgetFactory()", lib="qui")
- 
--    if sipcfg.qt_version >= 0x030000:
--        check_module("qtui", "qwidgetfactory.h", "QWidgetFactory()", lib="qui")
--
--        if sipcfg.qt_edition in ("enterprise", "free"):
--            check_module("qtsql", "qsql.h", "QSql()")
-+#        if sipcfg.qt_edition in ("enterprise", "free"):
-+#            check_module("qtsql", "qsql.h", "QSql()")
- 
--            if sys.platform == "win32" and sipcfg.sip_version >= 0x040200:
--                check_module("qtaxcontainer", "qaxobject.h", "QAxObject()", lib="qaxcontainer")
-+#            if sys.platform == "win32" and sipcfg.sip_version >= 0x040200:
-+#                check_module("qtaxcontainer", "qaxobject.h", "QAxObject()", lib="qaxcontainer")
- 
--    if qsci_version:
--        check_module("qtext", "qextscintillabase.h", "QextScintillaBase()", define=qsci_define, include_dir=opt_qsciincdir, lib_dir=opt_qscilibdir, lib="qscintilla")
-+#    if qsci_version:
-+#        check_module("qtext", "qextscintillabase.h", "QextScintillaBase()", define=qsci_define, include_dir=opt_qsciincdir, lib_dir=opt_qscilibdir, lib="qscintilla")
- 
-     if opt_qtpetag:
-         pyqt_modules.append("qtpe")
+     qtmod_lib = pyqt.check_modules()

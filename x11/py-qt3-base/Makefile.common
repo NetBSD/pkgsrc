@@ -1,18 +1,21 @@
-# $NetBSD: Makefile.common,v 1.9 2008/07/14 16:30:26 joerg Exp $
+# $NetBSD: Makefile.common,v 1.10 2008/10/08 14:23:24 wiz Exp $
 #
-
+# used by x11/py-qt3-base/Makefile
+# used by x11/py-qt3-modules/Makefile
+# used by x11/py-qt3-qscintilla/Makefile
+#
 # XXX: when updating version, be sure to update distinfo for both
 # XXX: PyQt-mac-gpl and PyQt-x11-gpl in py-qt3-qscintilla,
 # XXX: py-qt3-base, and py-qt3-modules.
 
-PYQT_VERSION=		3.15.1
+PYQT_VERSION=		3.17.4
 CATEGORIES=		x11 python
-MASTER_SITES=		http://www.riverbankcomputing.com/Downloads/PyQt3/GPL/
+MASTER_SITES=		http://www.riverbankcomputing.com/static/Downloads/PyQt3/
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
-HOMEPAGE=		http://www.riverbankcomputing.co.uk/pyqt/
+HOMEPAGE=		http://www.riverbankcomputing.com/software/pyqt/intro
 
-PYTHON_VERSIONS_ACCEPTED=	24
+PYTHON_VERSIONS_ACCEPTED=	25 24 23
 
 .include "../../mk/bsd.prefs.mk"
 
