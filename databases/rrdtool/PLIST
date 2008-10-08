@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/06/23 16:24:30 he Exp $
+@comment $NetBSD: PLIST,v 1.10.8.1 2008/10/08 10:44:04 tron Exp $
 bin/rrdcgi
 bin/rrdtool
 bin/rrdupdate
@@ -6,6 +6,7 @@ include/rrd.h
 include/rrd_format.h
 lib/librrd.la
 lib/librrd_th.la
+lib/pkgconfig/librrd.pc
 man/man1/bin_dec_hex.1
 man/man1/cdeftutorial.1
 man/man1/rpntutorial.1
