@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.56 2008/05/26 02:13:26 joerg Exp $
+# $NetBSD: Makefile,v 1.57 2008/10/08 09:35:27 wiz Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -11,7 +11,7 @@ GCC_REQD+=		3.4
 .include "../../x11/qt3-libs/Makefile.common"
 
 PKGNAME=	qt3-tools-${QTVERSION}
-PKGREVISION=	2
+PKGREVISION=	3
 COMMENT=	QT GUI (WYSIWYG) builder and other tools
 
 DEPENDS+=	libtool-base-[0-9]*:../../devel/libtool-base
