@@ -1,7 +1,7 @@
 /*
  * $OpenBSD: common.h,v 1.26 2006/03/11 19:41:30 otto Exp $
  * $DragonFly: src/usr.bin/patch/common.h,v 1.5 2008/08/10 23:50:12 joerg Exp $
- * $NetBSD: common.h,v 1.1.1.1 2008/09/10 11:03:21 joerg Exp $
+ * $NetBSD: common.h,v 1.2 2008/10/08 21:35:56 joerg Exp $
  */
 
 /*
@@ -35,6 +35,10 @@
 #include <stdbool.h>
 #if HAVE_STDINT_H
 #include <stdint.h>
+#endif
+
+#ifndef SIZE_MAX
+#define	SIZE_MAX	((size_t)-1)
 #endif
 
 #define DEBUGGING
