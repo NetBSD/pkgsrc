@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.41 2007/08/13 08:12:44 rillig Exp $
+# $NetBSD: Makefile,v 1.42 2008/10/08 19:54:24 wiz Exp $
 #
 
 COMMENT=	Cross-platform development utilities
@@ -13,6 +13,7 @@ SUBDIR+=	avrdude
 SUBDIR+=	bfd-crunchide
 SUBDIR+=	bfd-mdsetimage
 SUBDIR+=	binutils
+SUBDIR+=	cc65
 SUBDIR+=	dasm
 SUBDIR+=	h8300-hms-binutils
 SUBDIR+=	h8300-hms-gcc
