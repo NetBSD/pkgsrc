@@ -36,6 +36,8 @@
 #ifndef __SHA2_H__
 #define __SHA2_H__
 
+#include <nbcompat/types.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
