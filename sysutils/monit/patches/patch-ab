@@ -1,0 +1,32 @@
+$NetBSD: patch-ab,v 1.3 2008/10/08 15:53:42 joerg Exp $
+
+--- process/sysdep_NETBSD.c.orig	2007-07-29 20:23:26.000000000 +0000
++++ process/sysdep_NETBSD.c
+@@ -55,6 +55,8 @@
+ #include <sys/dkstat.h>
+ #endif
+ 
++#include <sys/param.h>
++
+ #include "monitor.h"
+ #include "process.h"
+ #include "process_sysdep.h"
+@@ -171,9 +173,18 @@ int initprocesstree_sysdep(ProcessTree_T
+   {
+     pt[i].pid       = pinfo[i].kp_proc.p_pid;
+     pt[i].ppid      = pinfo[i].kp_eproc.e_ppid;
++#ifndef __NetBSD_Prereq__
++#define __NetBSD_Prereq__(a,b,c) 0
++#endif
++#if __NetBSD_Prereq__(4,99,44)
++    pt[i].cputime   = (long)((pinfo[i].kp_proc.p_rtime.sec << 4) +
++                             (pinfo[i].kp_proc.p_rtime.frac >> 60)
++                            );
++#else
+     pt[i].cputime   = (long)((pinfo[i].kp_proc.p_rtime.tv_sec * 10) +
+                              (pinfo[i].kp_proc.p_rtime.tv_usec / 100000)
+                             );
++#endif
+     pt[i].mem_kbyte = (unsigned long)(pinfo[i].kp_eproc.e_vm.vm_rssize * pagesize_kbyte);
+     if(pinfo[i].kp_proc.p_stat == SZOMB)
+     {
