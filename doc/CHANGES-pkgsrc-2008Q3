@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.2 2008/10/07 14:10:16 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.3 2008/10/08 12:23:13 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -13,3 +13,11 @@ vim-lang: use updated distribution archive
 vim-motif: use updated distribution archive
 vim-share: use updated distribution archive
 vim-xaw: use updated distribution archive
+Pullup ticket #2545 - requested by martti
+rrdtool: fix crashes
+Pullup ticket #2546 - requested by sborrill
+citrix_ica: fix distribution archive download
+Pullup ticket #2542 - requested by joerg
+wistumbler2: fix packaging issue
+Pullup ticket #2547 - requested by ghen
+dovecot: security update
