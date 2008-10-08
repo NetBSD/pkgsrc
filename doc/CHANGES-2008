@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2405 2008/10/08 09:43:57 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2406 2008/10/08 09:46:02 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4121,3 +4121,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/qt4-tools to 4.4.0nb1 [wiz 2008-10-08]
 	Added converters/py-chardet version 1.0.1 [wiz 2008-10-08]
 	Added textproc/py-enchant version 1.4.2 [wiz 2008-10-08]
+	Added misc/gaupol version 0.13.1 [wiz 2008-10-08]
