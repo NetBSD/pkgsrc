@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2422 2008/10/09 10:47:35 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2423 2008/10/09 10:56:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4138,3 +4138,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/surfraw to 2.2.3 [wiz 2008-10-09]
 	Updated print/scribus to 1.3.3.12 [adam 2008-10-09]
 	Updated finance/gnucash to 2.2.7 [wiz 2008-10-09]
+	Updated devel/gmp to 4.2.4 [wiz 2008-10-09]
