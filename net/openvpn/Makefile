@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.25 2008/02/20 04:24:17 jlam Exp $
+# $NetBSD: Makefile,v 1.26 2008/10/09 10:57:23 sborrill Exp $
 #
 
-DISTNAME=	openvpn-2.1_rc7
-PKGNAME=	openvpn-2.1rc7
-PKGREVISION=	1
+DISTNAME=	openvpn-2.1_rc13
+PKGNAME=	openvpn-2.1rc13
 CATEGORIES=	net
 MASTER_SITES=	http://openvpn.net/release/ \
 		http://openvpn.net/release/old/
@@ -74,8 +73,6 @@ post-install:
 		*)	${INSTALL_SCRIPT} $$file ${DESTDIR}${EASYRSADIR:Q} ;;	\
 		esac;							\
 	done
-	${INSTALL_DATA} ${WRKSRC:Q}/management/management-notes.txt	\
-		${DESTDIR}${DOCDIR:Q}
 	cd ${WRKSRC:Q}/sample-config-files; for file in *; do		\
 		${INSTALL_DATA} $$file ${DESTDIR}${EGDIR:Q}/config;	\
 	done
