@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2440 2008/10/09 20:54:07 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2441 2008/10/09 20:54:26 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4158,3 +4158,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated comms/jpilot to 1.6.0 [bad 2008-10-09]
 	Updated net/ORBit2 to 2.14.16 [wiz 2008-10-09]
 	Updated devel/GConf to 2.24.0 [wiz 2008-10-09]
+	Updated devel/GConf-ui to 2.24.0 [wiz 2008-10-09]
