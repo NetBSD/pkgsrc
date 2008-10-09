@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2007/10/31 19:46:18 drochner Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/09 20:53:48 wiz Exp $
 #
 
 .include "../../devel/GConf/Makefile.common"
@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.GConf+=	GConf>=${GCONF_VERSION}
 
 CONFIGURE_ARGS+=	--enable-gtk
 
-BUILD_DIRS=	${WRKSRC}/gconf
+BUILD_DIRS=	gconf
 BUILD_TARGET=	gconfmarshal.h gconfmarshal.c GConfX.h gconf-sanity-check-2
 
 INSTALLATION_DIRS=	libexec
