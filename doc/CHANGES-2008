@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2420 2008/10/09 09:46:09 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2421 2008/10/09 10:35:13 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4136,3 +4136,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/tnftpd to 20081009 [lukem 2008-10-09]
 	Updated textproc/intltool to 0.40.5 [wiz 2008-10-09]
 	Updated www/surfraw to 2.2.3 [wiz 2008-10-09]
+	Updated print/scribus to 1.3.3.12 [adam 2008-10-09]
