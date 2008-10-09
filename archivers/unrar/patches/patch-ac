@@ -1,8 +1,8 @@
-$NetBSD: patch-ac,v 1.1 2005/09/17 20:37:29 wiz Exp $
+$NetBSD: patch-ac,v 1.2 2008/10/09 13:27:35 wiz Exp $
 
---- os.hpp.orig	2005-08-03 18:34:30.000000000 +0200
+--- os.hpp.orig	2008-09-16 14:24:56.000000000 +0000
 +++ os.hpp
-@@ -133,7 +133,8 @@
+@@ -135,7 +135,8 @@
  
  #endif
  
@@ -12,7 +12,7 @@ $NetBSD: patch-ac,v 1.1 2005/09/17 20:37:29 wiz Exp $
  
  #define  NM  1024
  
-@@ -208,6 +209,12 @@
+@@ -212,6 +213,12 @@
    #endif
  #endif
  
@@ -24,4 +24,4 @@ $NetBSD: patch-ac,v 1.1 2005/09/17 20:37:29 wiz Exp $
 +
  #endif
  
- typedef const char* MSGID;
+   typedef const char* MSGID;
