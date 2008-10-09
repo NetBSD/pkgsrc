@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.3 2008/10/08 12:23:13 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.4 2008/10/09 11:53:48 tron Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -21,3 +21,5 @@ Pullup ticket #2542 - requested by joerg
 wistumbler2: fix packaging issue
 Pullup ticket #2547 - requested by ghen
 dovecot: security update
+Pullup ticket #2549 - requested by lukem
+tnftpd: security update
