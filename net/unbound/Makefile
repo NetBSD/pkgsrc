@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/05/26 22:36:56 joerg Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/09 01:31:35 joerg Exp $
 
-DISTNAME=	unbound-1.0.0
+DISTNAME=	unbound-1.0.2
 CATEGORIES=	net
 MASTER_SITES=	http://www.unbound.net/downloads/
 
@@ -9,6 +9,10 @@ HOMEPAGE=	http://www.unbound.net/
 COMMENT=	DNS resolver and recursive server
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+# Strictly speaking this is tar in gzip in gzip, but using bsdtar is
+# the easiest workaround.
+EXTRACT_USING=	bsdtar
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
