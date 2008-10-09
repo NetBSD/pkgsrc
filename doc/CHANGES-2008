@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2419 2008/10/09 08:23:41 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2420 2008/10/09 09:46:09 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4135,3 +4135,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/unbound to 1.0.2 [joerg 2008-10-09]
 	Updated net/tnftpd to 20081009 [lukem 2008-10-09]
 	Updated textproc/intltool to 0.40.5 [wiz 2008-10-09]
+	Updated www/surfraw to 2.2.3 [wiz 2008-10-09]
