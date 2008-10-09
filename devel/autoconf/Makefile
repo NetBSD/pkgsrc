@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2008/04/13 22:50:08 wiz Exp $
+# $NetBSD: Makefile,v 1.67 2008/10/09 18:21:39 wiz Exp $
 
-DISTNAME=		autoconf-2.62
+DISTNAME=		autoconf-2.63
 CATEGORIES=		devel
 MASTER_SITES=		${MASTER_SITE_GNU:=autoconf/}
 EXTRACT_SUFX=		.tar.bz2
