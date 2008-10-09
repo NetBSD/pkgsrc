@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2436 2008/10/09 18:21:54 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2437 2008/10/09 19:47:17 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4154,3 +4154,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/png to 1.2.32 [wiz 2008-10-09]
 	Updated games/gbrainy to 1.00 [wiz 2008-10-09]
 	Updated devel/autoconf to 2.63 [wiz 2008-10-09]
+	Updated multimedia/libtheora to 1.0rc1 [wiz 2008-10-09]
