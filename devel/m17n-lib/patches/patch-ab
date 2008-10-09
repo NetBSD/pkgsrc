@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/02/27 13:48:28 obache Exp $
+$NetBSD: patch-ab,v 1.2 2008/10/09 12:41:17 obache Exp $
 
---- configure.orig	2008-01-15 06:45:39.000000000 +0000
+--- configure.orig	2008-06-23 05:59:46.000000000 +0000
 +++ configure
-@@ -33628,7 +33628,7 @@ echo "${ECHO_T}yes" >&6; }
+@@ -34018,7 +34018,7 @@ echo "${ECHO_T}yes" >&6; }
  	HAVE_WORDCUT=yes
  fi
  
