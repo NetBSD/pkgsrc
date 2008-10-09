@@ -1,8 +1,8 @@
-@comment $NetBSD: PLIST,v 1.2 2003/12/18 01:14:59 lukem Exp $
+@comment $NetBSD: PLIST,v 1.2.42.1 2008/10/09 11:50:35 tron Exp $
 libexec/tnftpd
 man/man5/ftpd.conf.5
 man/man5/ftpusers.5
-man/man8/ftpd.8
+man/man8/tnftpd.8
 share/examples/tnftpd/ftpd.conf
 share/examples/tnftpd/ftpusers
 @dirrm share/examples/tnftpd

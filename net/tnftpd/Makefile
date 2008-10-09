@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.17 2007/03/01 14:01:21 salo Exp $
+# $NetBSD: Makefile,v 1.17.18.1 2008/10/09 11:50:35 tron Exp $
 #
 
-DISTNAME=		tnftpd-20061217
+DISTNAME=		tnftpd-20081009
 CATEGORIES=		net
 MASTER_SITES=		ftp://ftp.NetBSD.org/pub/NetBSD/misc/tnftp/
 
@@ -31,9 +31,9 @@ INSTALLATION_DIRS=	libexec ${PKGMANDIR}/man5 ${PKGMANDIR}/man8
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/src/tnftpd ${PREFIX}/libexec
-	${INSTALL_MAN} ${WRKSRC}/src/ftpd.conf.5 ${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_MAN} ${WRKSRC}/src/ftpusers.5 ${PREFIX}/${PKGMANDIR}/man5
-	${INSTALL_MAN} ${WRKSRC}/src/ftpd.8 ${PREFIX}/${PKGMANDIR}/man8
+	${INSTALL_MAN} ${WRKSRC}/src/ftpd.conf.man ${PREFIX}/${PKGMANDIR}/man5/ftpd.conf.5
+	${INSTALL_MAN} ${WRKSRC}/src/ftpusers.man ${PREFIX}/${PKGMANDIR}/man5/ftpusers.5
+	${INSTALL_MAN} ${WRKSRC}/src/tnftpd.man ${PREFIX}/${PKGMANDIR}/man8/tnftpd.8
 	${INSTALL_DATA_DIR} ${EXAMPLEDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/ftpd.conf ${EXAMPLEDIR}
 	${INSTALL_DATA} ${WRKSRC}/examples/ftpusers ${EXAMPLEDIR}
