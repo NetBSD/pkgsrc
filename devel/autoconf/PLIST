@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2006/07/03 21:23:29 wiz Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/10/09 18:21:39 wiz Exp $
 bin/autoconf
 bin/autoheader
 bin/autom4te
@@ -51,6 +51,7 @@ share/autoconf/autoscan/autoscan.list
 share/autoconf/autotest/autotest.m4
 share/autoconf/autotest/autotest.m4f
 share/autoconf/autotest/general.m4
+share/autoconf/m4sugar/foreach.m4
 share/autoconf/m4sugar/m4sh.m4
 share/autoconf/m4sugar/m4sh.m4f
 share/autoconf/m4sugar/m4sugar.m4
