@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.94 2008/09/06 14:58:34 wiz Exp $
+# $NetBSD: Makefile,v 1.95 2008/10/09 15:01:27 tron Exp $
 
 DISTNAME=	libxml2-2.7.1
+PKGREVISION=	1
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://xmlsoft.org/libxml2/ \
 		http://xmlsoft.org/sources/
