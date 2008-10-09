@@ -1,11 +1,11 @@
-$NetBSD: patch-ab,v 1.8 2006/10/23 01:30:34 ben Exp $
+$NetBSD: patch-ab,v 1.9 2008/10/09 14:45:33 wiz Exp $
 
---- doc/html/Makefile.in.orig	2006-09-24 13:53:31.000000000 +0000
+--- doc/html/Makefile.in.orig	2008-06-28 22:36:22.000000000 +0000
 +++ doc/html/Makefile.in
-@@ -189,7 +189,7 @@ AUTOMAKE_OPTIONS = foreign ansi2knr
- docdir = $(datadir)/doc
+@@ -190,7 +190,7 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ AUTOMAKE_OPTIONS = foreign ansi2knr
  pkgdocdir = $(docdir)/$(PACKAGE)
- htmldir = $(docdir)/html
 -pkghtmldir = $(pkgdocdir)/html
 +pkghtmldir = $(pkgdocdir)
  pkghtml_DATA = \

@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.59 2007/07/02 15:03:58 tnn Exp $
+# $NetBSD: Makefile,v 1.60 2008/10/09 14:45:32 wiz Exp $
 #
 
-DISTNAME=	lame-${VERS}
+DISTNAME=	lame-398-2
+PKGNAME=	lame-3.98.2
 CATEGORIES=	audio
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=lame/} \
 		http://hive.me.gu.edu.au/not_lame/
@@ -10,22 +11,15 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://lame.sourceforge.net/
 COMMENT=	Fast, high quality MP3 encoder
 
-VERS=		3.97
-
 LICENSE=	lame-license
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
+GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake
 USE_LIBTOOL=		yes
 USE_LANGUAGES=		c c++
-
-GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--without-vorbis
-
-# Avoid an ICE in gcc2 on sparc64
-CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 LDFLAGS.SunOS+=		-lm
 
