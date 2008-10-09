@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2416 2008/10/09 00:25:51 joerg Exp $
+$NetBSD: CHANGES-2008,v 1.2417 2008/10/09 01:55:07 joerg Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4132,3 +4132,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added archivers/lzma-utils version 4.32.7 [wiz 2008-10-08]
 	Added cross/cc65 version 2.12.0 [wiz 2008-10-08]
 	Added net/parpd version 1.0 [joerg 2008-10-09]
+	Updated net/unbound to 1.0.2 [joerg 2008-10-09]
