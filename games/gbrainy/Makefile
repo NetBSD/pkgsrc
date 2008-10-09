@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.8 2008/09/06 20:54:32 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/10/09 15:22:25 wiz Exp $
 #
 
-DISTNAME=	gbrainy-0.70
-PKGREVISION=	1
+DISTNAME=	gbrainy-1.00
 CATEGORIES=	games
 MASTER_SITES=	http://www.softcatala.org/~jmas/gbrainy/
 
@@ -23,6 +22,7 @@ BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.0
 REPLACE_BASH=	src/gbrainy.in
 
 .include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/librsvg/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
 .include "../../devel/libgnome/buildlink3.mk"
