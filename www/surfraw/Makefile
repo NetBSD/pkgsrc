@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.38 2008/08/22 13:50:50 is Exp $
+# $NetBSD: Makefile,v 1.39 2008/10/09 09:45:43 wiz Exp $
 #
 
-DISTNAME=	surfraw-2.2.2
-PKGREVISION=	1
+DISTNAME=	surfraw-2.2.3
 CATEGORIES=	www
 MASTER_SITES=	http://surfraw.alioth.debian.org/dist/
 
@@ -14,6 +13,7 @@ CONFLICTS+=	surfaw-[0-9]*
 
 GNU_CONFIGURE=		YES
 CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFDIR:Q}
+CONFIGURE_ARGS+=	--disable-sr
 USE_TOOLS+=		gmake perl sed
 REPLACE_PERL+=		surfraw-update-path.IN opensearch-discover \
 			opensearch-genquery
