@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2429 2008/10/09 13:14:29 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2430 2008/10/09 13:18:03 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4147,3 +4147,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/wesnoth to 1.4.5 [wiz 2008-10-09]
 	Updated graphics/libotf to 0.9.8 [obache 2008-10-09]
 	Updated sysutils/cdrtools to 2.01.01.50 [wiz 2008-10-09]
+	Updated security/p5-IO-Socket-SSL to 1.16 [wiz 2008-10-09]
