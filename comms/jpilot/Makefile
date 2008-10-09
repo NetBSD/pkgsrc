@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.62 2008/01/18 05:06:26 tnn Exp $
+# $NetBSD: Makefile,v 1.63 2008/10/09 19:01:57 bad Exp $
 #
 
-DISTNAME=		jpilot-0.99.9
-PKGREVISION=		2
+DISTNAME=		jpilot-1.6.0
 CATEGORIES=		comms
 MASTER_SITES=		http://www.jpilot.org/
 
@@ -16,7 +15,7 @@ USE_LIBTOOL=		YES
 USE_PKGLOCALEDIR=	YES
 USE_OLD_DES_API=	YES
 USE_DIRS+=		xdg-1.4
-USE_TOOLS+=		intltool msgfmt pkg-config
+USE_TOOLS+=		gmake intltool msgfmt pkg-config
 USE_LANGUAGES+=		c
 
 GNU_CONFIGURE=		YES
@@ -36,13 +35,6 @@ PLUGINSDIR=		${PREFIX}/lib/jpilot/plugins
 
 post-extract:
 	${RM} -f ${WRKSRC}/po/Makefile.in
-
-pre-configure:
-	for file in ${WRKSRC}/docs/jpilot.1; do				\
-		${SED}	-e "s|@PREFIX@|${PREFIX}|g"			\
-			$${file} > $${file}.fixed;			\
-		${MV} -f $${file}.fixed $${file};			\
-	done
 
 post-install:
 	${INSTALL_DATA_DIR} ${DOCDIR}
