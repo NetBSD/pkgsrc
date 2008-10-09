@@ -1,8 +1,7 @@
-$NetBSD: patch-ac,v 1.6 2008/02/13 12:07:24 martti Exp $
-
---- tun.c.orig	2008-01-26 06:39:13.000000000 +0200
-+++ tun.c	2008-02-13 13:32:50.000000000 +0200
-@@ -68,6 +68,7 @@
+$NetBSD: patch-ac,v 1.7 2008/10/09 10:57:23 sborrill Exp $
+--- tun.c.orig	2008-10-06 08:22:21.000000000 +0100
++++ tun.c	2008-10-09 10:06:50.000000000 +0100
+@@ -63,6 +63,7 @@
  
  #ifdef TARGET_SOLARIS
  static void solaris_error_close (struct tuntap *tt, const struct env_set *es, const char *actual);
@@ -10,7 +9,7 @@ $NetBSD: patch-ac,v 1.6 2008/02/13 12:07:24 martti Exp $
  #endif
  
  bool
-@@ -662,7 +663,12 @@
+@@ -720,7 +721,12 @@
  			    );
  	}
        else
@@ -22,9 +21,9 @@ $NetBSD: patch-ac,v 1.6 2008/02/13 12:07:24 martti Exp $
 +			  ifconfig_remote_netmask
 +			  );
  
-       msg (M_INFO, "%s", command_line);
-       if (!system_check (command_line, es, 0, "Solaris ifconfig phase-2 failed"))
-@@ -948,7 +954,37 @@
+       argv_msg (M_INFO, &argv);
+       if (!openvpn_execve_check (&argv, es, 0, "Solaris ifconfig phase-2 failed"))
+@@ -1020,7 +1026,37 @@
  	  if (dynamic && !has_digit((unsigned char *)dev))
  	    {
  	      int i;
@@ -63,7 +62,7 @@ $NetBSD: patch-ac,v 1.6 2008/02/13 12:07:24 martti Exp $
  		{
  		  openvpn_snprintf (tunname, sizeof (tunname),
  				    "/dev/%s%d", dev, i);
-@@ -1310,13 +1346,16 @@
+@@ -1403,13 +1439,16 @@
  void
  open_tun (const char *dev, const char *dev_type, const char *dev_node, bool ipv6, struct tuntap *tt)
  {
@@ -83,7 +82,7 @@ $NetBSD: patch-ac,v 1.6 2008/02/13 12:07:24 martti Exp $
  
    ipv6_support (ipv6, false, tt);
  
-@@ -1337,9 +1376,10 @@
+@@ -1430,9 +1469,10 @@
      }
    else if (tt->type == DEV_TYPE_TAP)
      {
@@ -95,7 +94,7 @@ $NetBSD: patch-ac,v 1.6 2008/02/13 12:07:24 martti Exp $
        dev_tuntap_type = "tap";
        link_type = I_PLINK; /* was: I_LINK */
        is_tun = false;
-@@ -1366,7 +1406,11 @@
+@@ -1459,7 +1499,11 @@
      msg (M_ERR, "Can't open %s", dev_node);
  
    /* Assign a new PPA and get its unit number. */
@@ -108,7 +107,7 @@ $NetBSD: patch-ac,v 1.6 2008/02/13 12:07:24 martti Exp $
      msg (M_ERR, "Can't assign new interface");
  
    if ((if_fd = open (dev_node, O_RDWR, 0)) < 0)
-@@ -1375,27 +1419,81 @@
+@@ -1468,27 +1512,81 @@
    if (ioctl (if_fd, I_PUSH, "ip") < 0)
      msg (M_ERR, "Can't push IP module");
  
@@ -203,7 +202,7 @@ $NetBSD: patch-ac,v 1.6 2008/02/13 12:07:24 martti Exp $
        msg (M_ERR, "Can't set multiplexor id");
      }
  
-@@ -1413,18 +1511,24 @@
+@@ -1506,18 +1604,24 @@
      {
        if (tt->ip_fd >= 0)
  	{
