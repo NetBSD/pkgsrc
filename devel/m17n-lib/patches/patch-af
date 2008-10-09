@@ -1,8 +1,8 @@
-$NetBSD: patch-af,v 1.1.1.1 2008/02/27 13:48:28 obache Exp $
+$NetBSD: patch-af,v 1.2 2008/10/09 12:41:17 obache Exp $
 
---- example/Makefile.in.orig	2008-01-15 06:45:37.000000000 +0000
+--- example/Makefile.in.orig	2008-06-23 05:59:44.000000000 +0000
 +++ example/Makefile.in
-@@ -338,7 +338,7 @@ m17n_conv_SOURCES = mconv.c
+@@ -341,7 +341,7 @@ m17n_conv_SOURCES = mconv.c
  m17n_conv_LDADD = ${common_ldflags}
  X_LD_FLAGS = ${X_PRE_LIBS} ${X_LIBS} @XAW_LD_FLAGS@ @X11_LD_FLAGS@ ${X_EXTRA_LIBS}
  m17n_edit_SOURCES = medit.c
