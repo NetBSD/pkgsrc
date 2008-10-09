@@ -1,9 +1,9 @@
-$NetBSD: patch-ac,v 1.10 2008/04/10 16:27:47 drochner Exp $
+$NetBSD: patch-ac,v 1.11 2008/10/09 20:53:48 wiz Exp $
 
---- gconf/Makefile.in.orig	2008-03-10 15:54:18.000000000 +0100
+--- gconf/Makefile.in.orig	2008-09-22 18:03:55.000000000 +0000
 +++ gconf/Makefile.in
-@@ -795,12 +795,8 @@ default.path: $(srcdir)/default.path.in
- 		<$(srcdir)/default.path.in >default.path
+@@ -829,12 +829,8 @@ org.gnome.GConf.service:  $(srcdir)/org.
+ 		<$(srcdir)/org.gnome.GConf.service.in >org.gnome.GConf.service
  
  install-data-local: default.path
 -	$(mkinstalldirs) $(DESTDIR)$(sysgconfdir)/$(MAJOR_VERSION)
