@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.1.1.1 2008/05/26 22:36:56 joerg Exp $
+$NetBSD: distinfo,v 1.2 2008/10/09 01:31:35 joerg Exp $
 
-SHA1 (unbound-1.0.0.tar.gz) = a837407d866f0918547c6122f8f654c219b4b51f
-RMD160 (unbound-1.0.0.tar.gz) = a08aff793c115f2fe285c6d1557bcca98e0c4dba
-Size (unbound-1.0.0.tar.gz) = 3554571 bytes
-SHA1 (patch-aa) = eb2e923f1970a0fafad44885619a0ea28a0aa155
-SHA1 (patch-ab) = baa658962ffa72efd11507f391f5ee4543266bc4
-SHA1 (patch-ac) = 11664d40b93f8cfb15f96e010b243f9909e5de5a
+SHA1 (unbound-1.0.2.tar.gz) = 93faa7b76cf7681b8c7b0c5187aaf84c36b6670b
+RMD160 (unbound-1.0.2.tar.gz) = 1e942505468f6ae4061b208914e9b7feed6ecff1
+Size (unbound-1.0.2.tar.gz) = 3597275 bytes
+SHA1 (patch-ac) = 05e1b84d9093ea6b2a5648117522fc288c611ba9
