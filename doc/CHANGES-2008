@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2424 2008/10/09 10:58:17 sborrill Exp $
+$NetBSD: CHANGES-2008,v 1.2425 2008/10/09 12:01:48 sketch Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4140,3 +4140,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated finance/gnucash to 2.2.7 [wiz 2008-10-09]
 	Updated devel/gmp to 4.2.4 [wiz 2008-10-09]
 	Updated net/openvpn to 2.1rc13 [sborrill 2008-10-09]
+	Updated sysutils/mktemp to 1.6 [sketch 2008-10-09]
