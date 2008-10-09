@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.773 2008/09/16 14:24:25 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.774 2008/10/09 16:19:24 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -1855,6 +1855,7 @@ my $mkctx_varuse;		# { varname => line } for all variables
 my $mkctx_build_defs;		# Set of variables that are registered in
 				# BUILD_DEFS, to assure that all user-defined
 				# variables are added to it.
+my $mkctx_plist_vars;		# The same for PLIST_VARS.
 my $mkctx_tools;		# Set of tools that are declared to be used.
 
 my @todo_items;			# The list of directory entries that still need
@@ -3228,6 +3229,7 @@ sub get_variable_type($$) {
 		: ($varname =~ qr"_ARGS$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", allow_runtime, GUESSED)
 		: ($varname =~ qr"_(?:C|CPP|CXX|LD|)FLAGS$") ? PkgLint::Type->new(LK_EXTERNAL, "ShellWord", allow_runtime, GUESSED)
 		: ($varname =~ qr"_MK$") ? PkgLint::Type->new(LK_NONE, "Unchecked", allow_all, GUESSED)
+		: ($varname =~ qr"^PLIST.") ? PkgLint::Type->new(LK_NONE, "Yes", allow_all, GUESSED)
 		: undef;
 
 	if (defined($type)) {
@@ -4065,6 +4067,9 @@ sub checkline_mk_varuse($$$$) {
 
 	} elsif (defined($mkctx_for_variables) && exists($mkctx_for_variables->{$varname})) {
 		# Variables defined in .for loops are also ok.
+
+	} elsif (defined($mkctx_plist_vars) && exists($mkctx_plist_vars->{$varname})) {
+		# PLIST variables are also ok.
 
 	} else {
 		$opt_warn_extra and $line->log_warning("${varname} is used but not defined. Spelling mistake?");
@@ -6220,6 +6225,7 @@ sub checklines_mk($) {
 	$mkctx_for_variables = {};
 	$mkctx_vardef = {};
 	$mkctx_build_defs = {};
+	$mkctx_plist_vars = {};
 	$mkctx_tools = {%{get_predefined_tool_names()}};
 	$mkctx_varuse = {};
 
@@ -6244,6 +6250,12 @@ sub checklines_mk($) {
 			foreach my $varname (split(qr"\s+", $line->get("value"))) {
 				$mkctx_build_defs->{$varname} = true;
 				$opt_debug_misc and $line->log_debug("${varname} is added to BUILD_DEFS.");
+			}
+
+		} elsif ($varcanon eq "PLIST_VARS") {
+			foreach my $id (split(qr"\s+", $line->get("value"))) {
+				$mkctx_plist_vars->{"PLIST.$id"} = true;
+				$opt_debug_misc and $line->log_debug("PLIST.${id} is added to PLIST_VARS.");
 			}
 
 		} elsif ($varcanon eq "USE_TOOLS") {
@@ -6510,6 +6522,7 @@ sub checklines_mk($) {
 	$mkctx_target = undef;
 	$mkctx_vardef = undef;
 	$mkctx_build_defs = undef;
+	$mkctx_plist_vars = undef;
 	$mkctx_tools = undef;
 	$mkctx_varuse = undef;
 }
