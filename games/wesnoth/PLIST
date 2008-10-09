@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2008/05/20 11:43:59 wiz Exp $
+@comment $NetBSD: PLIST,v 1.24 2008/10/09 12:55:23 wiz Exp $
 bin/wesnoth
 man/ca_ES@valencia/man6/wesnoth.6
 man/cs/man6/wesnoth.6
@@ -6,7 +6,7 @@ man/da/man6/wesnoth.6
 man/de/man6/wesnoth.6
 man/es/man6/wesnoth.6
 man/fr/man6/wesnoth.6
-man/gl_ES/man6/wesnoth.6
+man/gl/man6/wesnoth.6
 man/hu/man6/wesnoth.6
 man/it/man6/wesnoth.6
 man/ja/man6/wesnoth.6
@@ -20,8 +20,27 @@ man/sr@latin/man6/wesnoth.6
 man/sv/man6/wesnoth.6
 man/tr/man6/wesnoth.6
 man/zh_CN/man6/wesnoth.6
+man/zh_TW/man6/wesnoth.6
 share/applications/wesnoth.desktop
+share/doc/wesnoth/manual/images/de/game-screen.jpg
+share/doc/wesnoth/manual/images/de/main-menu.jpg
+share/doc/wesnoth/manual/images/de/multiplayer.jpg
+share/doc/wesnoth/manual/images/de/recruit.jpg
+share/doc/wesnoth/manual/images/de/right_pane.jpg
+share/doc/wesnoth/manual/images/de/top_pane.jpg
+share/doc/wesnoth/manual/images/fr/game-screen.jpg
+share/doc/wesnoth/manual/images/fr/main-menu.jpg
+share/doc/wesnoth/manual/images/fr/multiplayer.jpg
+share/doc/wesnoth/manual/images/fr/recruit.jpg
+share/doc/wesnoth/manual/images/fr/right_pane.jpg
+share/doc/wesnoth/manual/images/fr/top_pane.jpg
 share/doc/wesnoth/manual/images/game-screen.jpg
+share/doc/wesnoth/manual/images/hu/game-screen.jpg
+share/doc/wesnoth/manual/images/hu/main-menu.jpg
+share/doc/wesnoth/manual/images/hu/multiplayer.jpg
+share/doc/wesnoth/manual/images/hu/recruit.jpg
+share/doc/wesnoth/manual/images/hu/right_pane.jpg
+share/doc/wesnoth/manual/images/hu/top_pane.jpg
 share/doc/wesnoth/manual/images/main-menu.jpg
 share/doc/wesnoth/manual/images/multiplayer.jpg
 share/doc/wesnoth/manual/images/orb-blue.jpg
@@ -39,12 +58,20 @@ share/doc/wesnoth/manual/images/schedule-morning.jpg
 share/doc/wesnoth/manual/images/schedule-secondwatch.jpg
 share/doc/wesnoth/manual/images/schedule-underground.jpg
 share/doc/wesnoth/manual/images/top_pane.jpg
+share/doc/wesnoth/manual/images/tr/game-screen.jpg
+share/doc/wesnoth/manual/images/tr/main-menu.jpg
+share/doc/wesnoth/manual/images/tr/multiplayer.jpg
+share/doc/wesnoth/manual/images/tr/recruit.jpg
+share/doc/wesnoth/manual/images/tr/right_pane.jpg
+share/doc/wesnoth/manual/images/tr/top_pane.jpg
 share/doc/wesnoth/manual/manual.cs.html
 share/doc/wesnoth/manual/manual.da.html
 share/doc/wesnoth/manual/manual.de.html
 share/doc/wesnoth/manual/manual.en.html
+share/doc/wesnoth/manual/manual.es.html
+share/doc/wesnoth/manual/manual.et.html
 share/doc/wesnoth/manual/manual.fr.html
-share/doc/wesnoth/manual/manual.gl_ES.html
+share/doc/wesnoth/manual/manual.gl.html
 share/doc/wesnoth/manual/manual.hu.html
 share/doc/wesnoth/manual/manual.it.html
 share/doc/wesnoth/manual/manual.pl.html
@@ -53,6 +80,7 @@ share/doc/wesnoth/manual/manual.sv.html
 share/doc/wesnoth/manual/manual.tr.html
 share/doc/wesnoth/manual/manual.txt
 share/doc/wesnoth/manual/manual.zh_CN.html
+share/doc/wesnoth/manual/manual.zh_TW.html
 share/doc/wesnoth/manual/styles/manual.css
 share/icons/wesnoth-icon.png
 share/wesnoth/data/COPYING.txt
@@ -1979,6 +2007,20 @@ share/wesnoth/data/core/images/halo/mage-preparation-halo4.png
 share/wesnoth/data/core/images/halo/mage-preparation-halo5.png
 share/wesnoth/data/core/images/halo/mage-preparation-halo6.png
 share/wesnoth/data/core/images/halo/mage-preparation-halo7.png
+share/wesnoth/data/core/images/halo/merfolk/staff-flare-1.png
+share/wesnoth/data/core/images/halo/merfolk/staff-flare-2.png
+share/wesnoth/data/core/images/halo/merfolk/staff-flare-3.png
+share/wesnoth/data/core/images/halo/merfolk/staff-flare-4.png
+share/wesnoth/data/core/images/halo/merfolk/staff-flare-5.png
+share/wesnoth/data/core/images/halo/merfolk/staff-flare-6.png
+share/wesnoth/data/core/images/halo/merfolk/staff-flare-7.png
+share/wesnoth/data/core/images/halo/merfolk/water-halo-1.png
+share/wesnoth/data/core/images/halo/merfolk/water-halo-2.png
+share/wesnoth/data/core/images/halo/merfolk/water-halo-3.png
+share/wesnoth/data/core/images/halo/merfolk/water-halo-4.png
+share/wesnoth/data/core/images/halo/merfolk/water-halo-5.png
+share/wesnoth/data/core/images/halo/merfolk/water-halo-6.png
+share/wesnoth/data/core/images/halo/merfolk/water-halo-7.png
 share/wesnoth/data/core/images/halo/saurian-magic-halo-1.png
 share/wesnoth/data/core/images/halo/saurian-magic-halo-2.png
 share/wesnoth/data/core/images/halo/saurian-magic-halo-3.png
@@ -2161,6 +2203,21 @@ share/wesnoth/data/core/images/portraits/Kitty/elvish-scout.png
 share/wesnoth/data/core/images/portraits/Kitty/elvish-shaman.png
 share/wesnoth/data/core/images/portraits/Kitty/elvish-shyde.png
 share/wesnoth/data/core/images/portraits/Kitty/elvish-sorceress.png
+share/wesnoth/data/core/images/portraits/Kitty/human-dark-adept+female.png
+share/wesnoth/data/core/images/portraits/Kitty/human-dark-adept.png
+share/wesnoth/data/core/images/portraits/Kitty/human-mage+female.png
+share/wesnoth/data/core/images/portraits/Kitty/human-mage-arch+female.png
+share/wesnoth/data/core/images/portraits/Kitty/human-mage-arch.png
+share/wesnoth/data/core/images/portraits/Kitty/human-mage-light+female.png
+share/wesnoth/data/core/images/portraits/Kitty/human-mage-red+female.png
+share/wesnoth/data/core/images/portraits/Kitty/human-mage-red.png
+share/wesnoth/data/core/images/portraits/Kitty/human-mage-silver+female.png
+share/wesnoth/data/core/images/portraits/Kitty/human-mage-silver.png
+share/wesnoth/data/core/images/portraits/Kitty/human-mage-white+female.png
+share/wesnoth/data/core/images/portraits/Kitty/human-mage-white.png
+share/wesnoth/data/core/images/portraits/Kitty/human-mage.png
+share/wesnoth/data/core/images/portraits/Kitty/human-necromancer+female.png
+share/wesnoth/data/core/images/portraits/Kitty/undead-lich.png
 share/wesnoth/data/core/images/portraits/Neoriceisgood/dwarvish_berzerker.png
 share/wesnoth/data/core/images/portraits/Neoriceisgood/orcish_grunt.png
 share/wesnoth/data/core/images/portraits/Neoriceisgood/orcish_leader.png
@@ -2260,11 +2317,38 @@ share/wesnoth/data/core/images/projectiles/ink.png
 share/wesnoth/data/core/images/projectiles/lightning-bolt.png
 share/wesnoth/data/core/images/projectiles/lightning-n.png
 share/wesnoth/data/core/images/projectiles/lightning-ne.png
+share/wesnoth/data/core/images/projectiles/misfire-spark-1.png
+share/wesnoth/data/core/images/projectiles/misfire-spark-2.png
+share/wesnoth/data/core/images/projectiles/misfire-spark-3.png
+share/wesnoth/data/core/images/projectiles/misfire-spark-4.png
 share/wesnoth/data/core/images/projectiles/missile-fire-n.png
 share/wesnoth/data/core/images/projectiles/missile-fire-ne.png
 share/wesnoth/data/core/images/projectiles/missile-n.png
 share/wesnoth/data/core/images/projectiles/missile-ne.png
 share/wesnoth/data/core/images/projectiles/mud-glob.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-10.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-11.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-12.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-13.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-14.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-4.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-5.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-6.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-7.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-8.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-9.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-n-1.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-n-2.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-n-3.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-ne-1.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-ne-2.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-ne-3.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-s-1.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-s-2.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-s-3.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-se-1.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-se-2.png
+share/wesnoth/data/core/images/projectiles/muzzle-flash-se-3.png
 share/wesnoth/data/core/images/projectiles/pitchfork-n.png
 share/wesnoth/data/core/images/projectiles/pitchfork-ne.png
 share/wesnoth/data/core/images/projectiles/spear-n.png
@@ -3659,6 +3743,9 @@ share/wesnoth/data/core/images/terrain/village/desert2.png
 share/wesnoth/data/core/images/terrain/village/desert3.png
 share/wesnoth/data/core/images/terrain/village/dwarven-tile.png
 share/wesnoth/data/core/images/terrain/village/dwarven.png
+share/wesnoth/data/core/images/terrain/village/dwarven2.png
+share/wesnoth/data/core/images/terrain/village/dwarven3.png
+share/wesnoth/data/core/images/terrain/village/dwarven4.png
 share/wesnoth/data/core/images/terrain/village/elven-snow-tile.png
 share/wesnoth/data/core/images/terrain/village/elven-snow.png
 share/wesnoth/data/core/images/terrain/village/elven-snow2.png
@@ -4052,6 +4139,12 @@ share/wesnoth/data/core/images/units/dwarves/fighter-axe-2.png
 share/wesnoth/data/core/images/units/dwarves/fighter-axe-3.png
 share/wesnoth/data/core/images/units/dwarves/fighter-axe-4.png
 share/wesnoth/data/core/images/units/dwarves/fighter-axe-5.png
+share/wesnoth/data/core/images/units/dwarves/fighter-axe-6.png
+share/wesnoth/data/core/images/units/dwarves/fighter-axe-7.png
+share/wesnoth/data/core/images/units/dwarves/fighter-axe-8.png
+share/wesnoth/data/core/images/units/dwarves/fighter-axe-9.png
+share/wesnoth/data/core/images/units/dwarves/fighter-defend-1.png
+share/wesnoth/data/core/images/units/dwarves/fighter-defend-2.png
 share/wesnoth/data/core/images/units/dwarves/fighter-defend.png
 share/wesnoth/data/core/images/units/dwarves/fighter-hammer-1.png
 share/wesnoth/data/core/images/units/dwarves/fighter-hammer-2.png
@@ -4095,6 +4188,8 @@ share/wesnoth/data/core/images/units/dwarves/guard-idle-6.png
 share/wesnoth/data/core/images/units/dwarves/guard.png
 share/wesnoth/data/core/images/units/dwarves/lord-attack-mace.png
 share/wesnoth/data/core/images/units/dwarves/lord-attack.png
+share/wesnoth/data/core/images/units/dwarves/lord-defend-1.png
+share/wesnoth/data/core/images/units/dwarves/lord-defend-2.png
 share/wesnoth/data/core/images/units/dwarves/lord-defend.png
 share/wesnoth/data/core/images/units/dwarves/lord-ranged.png
 share/wesnoth/data/core/images/units/dwarves/lord.png
@@ -4111,13 +4206,19 @@ share/wesnoth/data/core/images/units/dwarves/runemaster-idle-6.png
 share/wesnoth/data/core/images/units/dwarves/runemaster-idle-7.png
 share/wesnoth/data/core/images/units/dwarves/runemaster.png
 share/wesnoth/data/core/images/units/dwarves/sentinel-attack.png
+share/wesnoth/data/core/images/units/dwarves/sentinel-defend-1.png
+share/wesnoth/data/core/images/units/dwarves/sentinel-defend-2.png
 share/wesnoth/data/core/images/units/dwarves/sentinel-defend.png
 share/wesnoth/data/core/images/units/dwarves/sentinel.png
 share/wesnoth/data/core/images/units/dwarves/stalwart-attack.png
+share/wesnoth/data/core/images/units/dwarves/stalwart-defend-1.png
+share/wesnoth/data/core/images/units/dwarves/stalwart-defend-2.png
 share/wesnoth/data/core/images/units/dwarves/stalwart-defend.png
 share/wesnoth/data/core/images/units/dwarves/stalwart.png
 share/wesnoth/data/core/images/units/dwarves/steelclad-attack-mace.png
 share/wesnoth/data/core/images/units/dwarves/steelclad-attack.png
+share/wesnoth/data/core/images/units/dwarves/steelclad-defend-1.png
+share/wesnoth/data/core/images/units/dwarves/steelclad-defend-2.png
 share/wesnoth/data/core/images/units/dwarves/steelclad-defend.png
 share/wesnoth/data/core/images/units/dwarves/steelclad-idle-1.png
 share/wesnoth/data/core/images/units/dwarves/steelclad-idle-10.png
@@ -4596,6 +4697,18 @@ share/wesnoth/data/core/images/units/goblins/wolf-rider-idle-5.png
 share/wesnoth/data/core/images/units/goblins/wolf-rider-moving.png
 share/wesnoth/data/core/images/units/goblins/wolf-rider-water.png
 share/wesnoth/data/core/images/units/goblins/wolf-rider.png
+share/wesnoth/data/core/images/units/human-loyalists/bowman-bow-attack-1.png
+share/wesnoth/data/core/images/units/human-loyalists/bowman-bow-attack-2.png
+share/wesnoth/data/core/images/units/human-loyalists/bowman-bow-attack-3.png
+share/wesnoth/data/core/images/units/human-loyalists/bowman-bow-attack-4.png
+share/wesnoth/data/core/images/units/human-loyalists/bowman-bow-defend.png
+share/wesnoth/data/core/images/units/human-loyalists/bowman-bow.png
+share/wesnoth/data/core/images/units/human-loyalists/bowman-melee-attack-1.png
+share/wesnoth/data/core/images/units/human-loyalists/bowman-melee-attack-2.png
+share/wesnoth/data/core/images/units/human-loyalists/bowman-melee-attack-3.png
+share/wesnoth/data/core/images/units/human-loyalists/bowman-melee-attack-4.png
+share/wesnoth/data/core/images/units/human-loyalists/bowman-melee-defend-1.png
+share/wesnoth/data/core/images/units/human-loyalists/bowman-melee-defend-2.png
 share/wesnoth/data/core/images/units/human-loyalists/bowman-ranged-1.png
 share/wesnoth/data/core/images/units/human-loyalists/bowman-ranged-2.png
 share/wesnoth/data/core/images/units/human-loyalists/bowman-ranged-3.png
@@ -4778,6 +4891,10 @@ share/wesnoth/data/core/images/units/human-loyalists/lieutenant-idle-8.png
 share/wesnoth/data/core/images/units/human-loyalists/lieutenant-idle-9.png
 share/wesnoth/data/core/images/units/human-loyalists/lieutenant-leading.png
 share/wesnoth/data/core/images/units/human-loyalists/lieutenant.png
+share/wesnoth/data/core/images/units/human-loyalists/longbowman-bow-attack-1.png
+share/wesnoth/data/core/images/units/human-loyalists/longbowman-bow-attack-2.png
+share/wesnoth/data/core/images/units/human-loyalists/longbowman-bow-attack-3.png
+share/wesnoth/data/core/images/units/human-loyalists/longbowman-bow-attack-4.png
 share/wesnoth/data/core/images/units/human-loyalists/longbowman-bow-attack1.png
 share/wesnoth/data/core/images/units/human-loyalists/longbowman-bow-attack2.png
 share/wesnoth/data/core/images/units/human-loyalists/longbowman-bow-attack3.png
@@ -4788,6 +4905,12 @@ share/wesnoth/data/core/images/units/human-loyalists/longbowman-idle-1.png
 share/wesnoth/data/core/images/units/human-loyalists/longbowman-idle-2.png
 share/wesnoth/data/core/images/units/human-loyalists/longbowman-idle-3.png
 share/wesnoth/data/core/images/units/human-loyalists/longbowman-idle-4.png
+share/wesnoth/data/core/images/units/human-loyalists/longbowman-melee-attack-1.png
+share/wesnoth/data/core/images/units/human-loyalists/longbowman-melee-attack-2.png
+share/wesnoth/data/core/images/units/human-loyalists/longbowman-melee-attack-3.png
+share/wesnoth/data/core/images/units/human-loyalists/longbowman-melee-attack-4.png
+share/wesnoth/data/core/images/units/human-loyalists/longbowman-melee-defend-1.png
+share/wesnoth/data/core/images/units/human-loyalists/longbowman-melee-defend-2.png
 share/wesnoth/data/core/images/units/human-loyalists/longbowman-sword-1.png
 share/wesnoth/data/core/images/units/human-loyalists/longbowman-sword-defend.png
 share/wesnoth/data/core/images/units/human-loyalists/longbowman-sword.png
@@ -4833,12 +4956,26 @@ share/wesnoth/data/core/images/units/human-loyalists/master-at-arms-melee-3-3.pn
 share/wesnoth/data/core/images/units/human-loyalists/master-at-arms-recover-1.png
 share/wesnoth/data/core/images/units/human-loyalists/master-at-arms-recover-2.png
 share/wesnoth/data/core/images/units/human-loyalists/master-at-arms.png
+share/wesnoth/data/core/images/units/human-loyalists/masterbowman-bow-attack-1.png
+share/wesnoth/data/core/images/units/human-loyalists/masterbowman-bow-attack-2.png
+share/wesnoth/data/core/images/units/human-loyalists/masterbowman-bow-attack-3.png
+share/wesnoth/data/core/images/units/human-loyalists/masterbowman-bow-attack-4.png
 share/wesnoth/data/core/images/units/human-loyalists/masterbowman-bow-attack1.png
 share/wesnoth/data/core/images/units/human-loyalists/masterbowman-bow-attack2.png
 share/wesnoth/data/core/images/units/human-loyalists/masterbowman-bow-attack3.png
 share/wesnoth/data/core/images/units/human-loyalists/masterbowman-bow-attack4.png
 share/wesnoth/data/core/images/units/human-loyalists/masterbowman-bow-defend.png
 share/wesnoth/data/core/images/units/human-loyalists/masterbowman-bow.png
+share/wesnoth/data/core/images/units/human-loyalists/masterbowman-idle-1.png
+share/wesnoth/data/core/images/units/human-loyalists/masterbowman-idle-2.png
+share/wesnoth/data/core/images/units/human-loyalists/masterbowman-idle-3.png
+share/wesnoth/data/core/images/units/human-loyalists/masterbowman-idle-4.png
+share/wesnoth/data/core/images/units/human-loyalists/masterbowman-melee-attack-1.png
+share/wesnoth/data/core/images/units/human-loyalists/masterbowman-melee-attack-2.png
+share/wesnoth/data/core/images/units/human-loyalists/masterbowman-melee-attack-3.png
+share/wesnoth/data/core/images/units/human-loyalists/masterbowman-melee-attack-4.png
+share/wesnoth/data/core/images/units/human-loyalists/masterbowman-melee-defend-1.png
+share/wesnoth/data/core/images/units/human-loyalists/masterbowman-melee-defend-2.png
 share/wesnoth/data/core/images/units/human-loyalists/masterbowman-sword-1.png
 share/wesnoth/data/core/images/units/human-loyalists/masterbowman-sword-defend.png
 share/wesnoth/data/core/images/units/human-loyalists/masterbowman-sword.png
@@ -5335,7 +5472,13 @@ share/wesnoth/data/core/images/units/merfolk/hunter-attack-s.png
 share/wesnoth/data/core/images/units/merfolk/hunter-attack-se.png
 share/wesnoth/data/core/images/units/merfolk/hunter-defend.png
 share/wesnoth/data/core/images/units/merfolk/hunter.png
+share/wesnoth/data/core/images/units/merfolk/initiate-defend-1.png
+share/wesnoth/data/core/images/units/merfolk/initiate-defend-2.png
 share/wesnoth/data/core/images/units/merfolk/initiate-defend.png
+share/wesnoth/data/core/images/units/merfolk/initiate-magic-1.png
+share/wesnoth/data/core/images/units/merfolk/initiate-magic-2.png
+share/wesnoth/data/core/images/units/merfolk/initiate-staff-attack-1.png
+share/wesnoth/data/core/images/units/merfolk/initiate-staff-attack-2.png
 share/wesnoth/data/core/images/units/merfolk/initiate-staff-attack.png
 share/wesnoth/data/core/images/units/merfolk/initiate-water-attack1.png
 share/wesnoth/data/core/images/units/merfolk/initiate-water-attack2.png
@@ -5573,8 +5716,16 @@ share/wesnoth/data/core/images/units/orcs/archer-ranged-4.png
 share/wesnoth/data/core/images/units/orcs/archer-ranged-5.png
 share/wesnoth/data/core/images/units/orcs/archer-ranged-6.png
 share/wesnoth/data/core/images/units/orcs/archer.png
+share/wesnoth/data/core/images/units/orcs/assassin-attack-1.png
+share/wesnoth/data/core/images/units/orcs/assassin-attack-2.png
+share/wesnoth/data/core/images/units/orcs/assassin-attack-3.png
+share/wesnoth/data/core/images/units/orcs/assassin-attack-4.png
+share/wesnoth/data/core/images/units/orcs/assassin-attack-5.png
+share/wesnoth/data/core/images/units/orcs/assassin-attack-6.png
 share/wesnoth/data/core/images/units/orcs/assassin-attack1.png
 share/wesnoth/data/core/images/units/orcs/assassin-attack2.png
+share/wesnoth/data/core/images/units/orcs/assassin-defend-1.png
+share/wesnoth/data/core/images/units/orcs/assassin-defend-2.png
 share/wesnoth/data/core/images/units/orcs/assassin-defend.png
 share/wesnoth/data/core/images/units/orcs/assassin-die-1.png
 share/wesnoth/data/core/images/units/orcs/assassin-die-10.png
@@ -5681,8 +5832,17 @@ share/wesnoth/data/core/images/units/saurians/ambusher-ranged-1.png
 share/wesnoth/data/core/images/units/saurians/ambusher-ranged-2.png
 share/wesnoth/data/core/images/units/saurians/ambusher-ranged-3.png
 share/wesnoth/data/core/images/units/saurians/ambusher.png
+share/wesnoth/data/core/images/units/saurians/augur-defend-1.png
+share/wesnoth/data/core/images/units/saurians/augur-defend-2.png
 share/wesnoth/data/core/images/units/saurians/augur-defend.png
+share/wesnoth/data/core/images/units/saurians/augur-magic-1.png
+share/wesnoth/data/core/images/units/saurians/augur-magic-2.png
 share/wesnoth/data/core/images/units/saurians/augur-magic.png
+share/wesnoth/data/core/images/units/saurians/augur-melee-1.png
+share/wesnoth/data/core/images/units/saurians/augur-melee-2.png
+share/wesnoth/data/core/images/units/saurians/augur-melee-3.png
+share/wesnoth/data/core/images/units/saurians/augur-melee-4.png
+share/wesnoth/data/core/images/units/saurians/augur-melee-5.png
 share/wesnoth/data/core/images/units/saurians/augur-melee.png
 share/wesnoth/data/core/images/units/saurians/augur.png
 share/wesnoth/data/core/images/units/saurians/flanker-attack-ranged-1.png
@@ -5693,8 +5853,17 @@ share/wesnoth/data/core/images/units/saurians/flanker-attack1.png
 share/wesnoth/data/core/images/units/saurians/flanker-attack2.png
 share/wesnoth/data/core/images/units/saurians/flanker-defend.png
 share/wesnoth/data/core/images/units/saurians/flanker.png
+share/wesnoth/data/core/images/units/saurians/oracle-defend-1.png
+share/wesnoth/data/core/images/units/saurians/oracle-defend-2.png
 share/wesnoth/data/core/images/units/saurians/oracle-defend.png
+share/wesnoth/data/core/images/units/saurians/oracle-magic-1.png
+share/wesnoth/data/core/images/units/saurians/oracle-magic-2.png
 share/wesnoth/data/core/images/units/saurians/oracle-magic.png
+share/wesnoth/data/core/images/units/saurians/oracle-melee-1.png
+share/wesnoth/data/core/images/units/saurians/oracle-melee-2.png
+share/wesnoth/data/core/images/units/saurians/oracle-melee-3.png
+share/wesnoth/data/core/images/units/saurians/oracle-melee-4.png
+share/wesnoth/data/core/images/units/saurians/oracle-melee-5.png
 share/wesnoth/data/core/images/units/saurians/oracle-melee.png
 share/wesnoth/data/core/images/units/saurians/oracle.png
 share/wesnoth/data/core/images/units/saurians/skirmisher-attack-n1.png
@@ -5718,8 +5887,17 @@ share/wesnoth/data/core/images/units/saurians/skirmisher-idle-7.png
 share/wesnoth/data/core/images/units/saurians/skirmisher-idle-8.png
 share/wesnoth/data/core/images/units/saurians/skirmisher-idle-9.png
 share/wesnoth/data/core/images/units/saurians/skirmisher.png
+share/wesnoth/data/core/images/units/saurians/soothsayer-defend-1.png
+share/wesnoth/data/core/images/units/saurians/soothsayer-defend-2.png
 share/wesnoth/data/core/images/units/saurians/soothsayer-defend.png
+share/wesnoth/data/core/images/units/saurians/soothsayer-magic-1.png
+share/wesnoth/data/core/images/units/saurians/soothsayer-magic-2.png
 share/wesnoth/data/core/images/units/saurians/soothsayer-magic.png
+share/wesnoth/data/core/images/units/saurians/soothsayer-melee-1.png
+share/wesnoth/data/core/images/units/saurians/soothsayer-melee-2.png
+share/wesnoth/data/core/images/units/saurians/soothsayer-melee-3.png
+share/wesnoth/data/core/images/units/saurians/soothsayer-melee-4.png
+share/wesnoth/data/core/images/units/saurians/soothsayer-melee-5.png
 share/wesnoth/data/core/images/units/saurians/soothsayer-melee.png
 share/wesnoth/data/core/images/units/saurians/soothsayer.png
 share/wesnoth/data/core/images/units/transport/boat.png
@@ -5918,6 +6096,12 @@ share/wesnoth/data/core/images/units/undead-skeletal/deathknight-crossbow-defend
 share/wesnoth/data/core/images/units/undead-skeletal/deathknight-crossbow.png
 share/wesnoth/data/core/images/units/undead-skeletal/deathknight-defend-1.png
 share/wesnoth/data/core/images/units/undead-skeletal/deathknight-defend-2.png
+share/wesnoth/data/core/images/units/undead-skeletal/deathknight-melee-attack-1.png
+share/wesnoth/data/core/images/units/undead-skeletal/deathknight-melee-attack-2.png
+share/wesnoth/data/core/images/units/undead-skeletal/deathknight-melee-attack-3.png
+share/wesnoth/data/core/images/units/undead-skeletal/deathknight-melee-attack-4.png
+share/wesnoth/data/core/images/units/undead-skeletal/deathknight-melee-attack-5.png
+share/wesnoth/data/core/images/units/undead-skeletal/deathknight-melee-attack-6.png
 share/wesnoth/data/core/images/units/undead-skeletal/deathknight.png
 share/wesnoth/data/core/images/units/undead-skeletal/draug-attack1.png
 share/wesnoth/data/core/images/units/undead-skeletal/draug-attack2.png
@@ -6742,6 +6926,7 @@ share/wesnoth/data/hardwired/language.cfg
 share/wesnoth/data/hardwired/tips.cfg
 share/wesnoth/data/languages/C.cfg
 share/wesnoth/data/languages/af_ZA.cfg
+share/wesnoth/data/languages/ar_AR.cfg
 share/wesnoth/data/languages/bg_BG.cfg
 share/wesnoth/data/languages/ca_ES.cfg
 share/wesnoth/data/languages/ca_ES@valencia.cfg
@@ -6756,6 +6941,7 @@ share/wesnoth/data/languages/et_EE.cfg
 share/wesnoth/data/languages/eu_ES.cfg
 share/wesnoth/data/languages/fi_FI.cfg
 share/wesnoth/data/languages/fr_FR.cfg
+share/wesnoth/data/languages/fur_IT.cfg
 share/wesnoth/data/languages/gl_ES.cfg
 share/wesnoth/data/languages/he_IL.cfg
 share/wesnoth/data/languages/hr_HR.cfg
@@ -6766,6 +6952,8 @@ share/wesnoth/data/languages/ja_JP.cfg
 share/wesnoth/data/languages/ko_KR.cfg
 share/wesnoth/data/languages/la_IT.cfg
 share/wesnoth/data/languages/lt_LT.cfg
+share/wesnoth/data/languages/lv_LV.cfg
+share/wesnoth/data/languages/mk_MK.cfg
 share/wesnoth/data/languages/nb_NO.cfg
 share/wesnoth/data/languages/nl_NL.cfg
 share/wesnoth/data/languages/pl_PL.cfg
@@ -7375,6 +7563,25 @@ share/wesnoth/translations/af/LC_MESSAGES/wesnoth-tutorial.mo
 share/wesnoth/translations/af/LC_MESSAGES/wesnoth-units.mo
 share/wesnoth/translations/af/LC_MESSAGES/wesnoth-utbs.mo
 share/wesnoth/translations/af/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/ar/LC_MESSAGES/wesnoth-aoi.mo
+share/wesnoth/translations/ar/LC_MESSAGES/wesnoth-did.mo
+share/wesnoth/translations/ar/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/ar/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/ar/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/ar/LC_MESSAGES/wesnoth-l.mo
+share/wesnoth/translations/ar/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/ar/LC_MESSAGES/wesnoth-multiplayer.mo
+share/wesnoth/translations/ar/LC_MESSAGES/wesnoth-nr.mo
+share/wesnoth/translations/ar/LC_MESSAGES/wesnoth-sof.mo
+share/wesnoth/translations/ar/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/ar/LC_MESSAGES/wesnoth-tb.mo
+share/wesnoth/translations/ar/LC_MESSAGES/wesnoth-thot.mo
+share/wesnoth/translations/ar/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/ar/LC_MESSAGES/wesnoth-tsg.mo
+share/wesnoth/translations/ar/LC_MESSAGES/wesnoth-tutorial.mo
+share/wesnoth/translations/ar/LC_MESSAGES/wesnoth-units.mo
+share/wesnoth/translations/ar/LC_MESSAGES/wesnoth-utbs.mo
+share/wesnoth/translations/ar/LC_MESSAGES/wesnoth.mo
 share/wesnoth/translations/bg/LC_MESSAGES/wesnoth-aoi.mo
 share/wesnoth/translations/bg/LC_MESSAGES/wesnoth-did.mo
 share/wesnoth/translations/bg/LC_MESSAGES/wesnoth-editor.mo
@@ -7641,25 +7848,44 @@ share/wesnoth/translations/fr/LC_MESSAGES/wesnoth-tutorial.mo
 share/wesnoth/translations/fr/LC_MESSAGES/wesnoth-units.mo
 share/wesnoth/translations/fr/LC_MESSAGES/wesnoth-utbs.mo
 share/wesnoth/translations/fr/LC_MESSAGES/wesnoth.mo
-share/wesnoth/translations/gl_ES/LC_MESSAGES/wesnoth-aoi.mo
-share/wesnoth/translations/gl_ES/LC_MESSAGES/wesnoth-did.mo
-share/wesnoth/translations/gl_ES/LC_MESSAGES/wesnoth-editor.mo
-share/wesnoth/translations/gl_ES/LC_MESSAGES/wesnoth-ei.mo
-share/wesnoth/translations/gl_ES/LC_MESSAGES/wesnoth-httt.mo
-share/wesnoth/translations/gl_ES/LC_MESSAGES/wesnoth-l.mo
-share/wesnoth/translations/gl_ES/LC_MESSAGES/wesnoth-lib.mo
-share/wesnoth/translations/gl_ES/LC_MESSAGES/wesnoth-multiplayer.mo
-share/wesnoth/translations/gl_ES/LC_MESSAGES/wesnoth-nr.mo
-share/wesnoth/translations/gl_ES/LC_MESSAGES/wesnoth-sof.mo
-share/wesnoth/translations/gl_ES/LC_MESSAGES/wesnoth-sotbe.mo
-share/wesnoth/translations/gl_ES/LC_MESSAGES/wesnoth-tb.mo
-share/wesnoth/translations/gl_ES/LC_MESSAGES/wesnoth-thot.mo
-share/wesnoth/translations/gl_ES/LC_MESSAGES/wesnoth-trow.mo
-share/wesnoth/translations/gl_ES/LC_MESSAGES/wesnoth-tsg.mo
-share/wesnoth/translations/gl_ES/LC_MESSAGES/wesnoth-tutorial.mo
-share/wesnoth/translations/gl_ES/LC_MESSAGES/wesnoth-units.mo
-share/wesnoth/translations/gl_ES/LC_MESSAGES/wesnoth-utbs.mo
-share/wesnoth/translations/gl_ES/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/fur_IT/LC_MESSAGES/wesnoth-aoi.mo
+share/wesnoth/translations/fur_IT/LC_MESSAGES/wesnoth-did.mo
+share/wesnoth/translations/fur_IT/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/fur_IT/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/fur_IT/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/fur_IT/LC_MESSAGES/wesnoth-l.mo
+share/wesnoth/translations/fur_IT/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/fur_IT/LC_MESSAGES/wesnoth-multiplayer.mo
+share/wesnoth/translations/fur_IT/LC_MESSAGES/wesnoth-nr.mo
+share/wesnoth/translations/fur_IT/LC_MESSAGES/wesnoth-sof.mo
+share/wesnoth/translations/fur_IT/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/fur_IT/LC_MESSAGES/wesnoth-tb.mo
+share/wesnoth/translations/fur_IT/LC_MESSAGES/wesnoth-thot.mo
+share/wesnoth/translations/fur_IT/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/fur_IT/LC_MESSAGES/wesnoth-tsg.mo
+share/wesnoth/translations/fur_IT/LC_MESSAGES/wesnoth-tutorial.mo
+share/wesnoth/translations/fur_IT/LC_MESSAGES/wesnoth-units.mo
+share/wesnoth/translations/fur_IT/LC_MESSAGES/wesnoth-utbs.mo
+share/wesnoth/translations/fur_IT/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/gl/LC_MESSAGES/wesnoth-aoi.mo
+share/wesnoth/translations/gl/LC_MESSAGES/wesnoth-did.mo
+share/wesnoth/translations/gl/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/gl/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/gl/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/gl/LC_MESSAGES/wesnoth-l.mo
+share/wesnoth/translations/gl/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/gl/LC_MESSAGES/wesnoth-multiplayer.mo
+share/wesnoth/translations/gl/LC_MESSAGES/wesnoth-nr.mo
+share/wesnoth/translations/gl/LC_MESSAGES/wesnoth-sof.mo
+share/wesnoth/translations/gl/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/gl/LC_MESSAGES/wesnoth-tb.mo
+share/wesnoth/translations/gl/LC_MESSAGES/wesnoth-thot.mo
+share/wesnoth/translations/gl/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/gl/LC_MESSAGES/wesnoth-tsg.mo
+share/wesnoth/translations/gl/LC_MESSAGES/wesnoth-tutorial.mo
+share/wesnoth/translations/gl/LC_MESSAGES/wesnoth-units.mo
+share/wesnoth/translations/gl/LC_MESSAGES/wesnoth-utbs.mo
+share/wesnoth/translations/gl/LC_MESSAGES/wesnoth.mo
 share/wesnoth/translations/he/LC_MESSAGES/wesnoth-aoi.mo
 share/wesnoth/translations/he/LC_MESSAGES/wesnoth-did.mo
 share/wesnoth/translations/he/LC_MESSAGES/wesnoth-editor.mo
@@ -7831,6 +8057,44 @@ share/wesnoth/translations/lt/LC_MESSAGES/wesnoth-tutorial.mo
 share/wesnoth/translations/lt/LC_MESSAGES/wesnoth-units.mo
 share/wesnoth/translations/lt/LC_MESSAGES/wesnoth-utbs.mo
 share/wesnoth/translations/lt/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/lv/LC_MESSAGES/wesnoth-aoi.mo
+share/wesnoth/translations/lv/LC_MESSAGES/wesnoth-did.mo
+share/wesnoth/translations/lv/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/lv/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/lv/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/lv/LC_MESSAGES/wesnoth-l.mo
+share/wesnoth/translations/lv/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/lv/LC_MESSAGES/wesnoth-multiplayer.mo
+share/wesnoth/translations/lv/LC_MESSAGES/wesnoth-nr.mo
+share/wesnoth/translations/lv/LC_MESSAGES/wesnoth-sof.mo
+share/wesnoth/translations/lv/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/lv/LC_MESSAGES/wesnoth-tb.mo
+share/wesnoth/translations/lv/LC_MESSAGES/wesnoth-thot.mo
+share/wesnoth/translations/lv/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/lv/LC_MESSAGES/wesnoth-tsg.mo
+share/wesnoth/translations/lv/LC_MESSAGES/wesnoth-tutorial.mo
+share/wesnoth/translations/lv/LC_MESSAGES/wesnoth-units.mo
+share/wesnoth/translations/lv/LC_MESSAGES/wesnoth-utbs.mo
+share/wesnoth/translations/lv/LC_MESSAGES/wesnoth.mo
+share/wesnoth/translations/mk/LC_MESSAGES/wesnoth-aoi.mo
+share/wesnoth/translations/mk/LC_MESSAGES/wesnoth-did.mo
+share/wesnoth/translations/mk/LC_MESSAGES/wesnoth-editor.mo
+share/wesnoth/translations/mk/LC_MESSAGES/wesnoth-ei.mo
+share/wesnoth/translations/mk/LC_MESSAGES/wesnoth-httt.mo
+share/wesnoth/translations/mk/LC_MESSAGES/wesnoth-l.mo
+share/wesnoth/translations/mk/LC_MESSAGES/wesnoth-lib.mo
+share/wesnoth/translations/mk/LC_MESSAGES/wesnoth-multiplayer.mo
+share/wesnoth/translations/mk/LC_MESSAGES/wesnoth-nr.mo
+share/wesnoth/translations/mk/LC_MESSAGES/wesnoth-sof.mo
+share/wesnoth/translations/mk/LC_MESSAGES/wesnoth-sotbe.mo
+share/wesnoth/translations/mk/LC_MESSAGES/wesnoth-tb.mo
+share/wesnoth/translations/mk/LC_MESSAGES/wesnoth-thot.mo
+share/wesnoth/translations/mk/LC_MESSAGES/wesnoth-trow.mo
+share/wesnoth/translations/mk/LC_MESSAGES/wesnoth-tsg.mo
+share/wesnoth/translations/mk/LC_MESSAGES/wesnoth-tutorial.mo
+share/wesnoth/translations/mk/LC_MESSAGES/wesnoth-units.mo
+share/wesnoth/translations/mk/LC_MESSAGES/wesnoth-utbs.mo
+share/wesnoth/translations/mk/LC_MESSAGES/wesnoth.mo
 share/wesnoth/translations/nb_NO/LC_MESSAGES/wesnoth-aoi.mo
 share/wesnoth/translations/nb_NO/LC_MESSAGES/wesnoth-did.mo
 share/wesnoth/translations/nb_NO/LC_MESSAGES/wesnoth-editor.mo
@@ -8167,6 +8431,10 @@ share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth.mo
 @dirrm share/wesnoth/translations/nl
 @dirrm share/wesnoth/translations/nb_NO/LC_MESSAGES
 @dirrm share/wesnoth/translations/nb_NO
+@dirrm share/wesnoth/translations/mk/LC_MESSAGES
+@dirrm share/wesnoth/translations/mk
+@dirrm share/wesnoth/translations/lv/LC_MESSAGES
+@dirrm share/wesnoth/translations/lv
 @dirrm share/wesnoth/translations/lt/LC_MESSAGES
 @dirrm share/wesnoth/translations/lt
 @dirrm share/wesnoth/translations/la/LC_MESSAGES
@@ -8185,8 +8453,10 @@ share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth.mo
 @dirrm share/wesnoth/translations/hr
 @dirrm share/wesnoth/translations/he/LC_MESSAGES
 @dirrm share/wesnoth/translations/he
-@dirrm share/wesnoth/translations/gl_ES/LC_MESSAGES
-@dirrm share/wesnoth/translations/gl_ES
+@dirrm share/wesnoth/translations/gl/LC_MESSAGES
+@dirrm share/wesnoth/translations/gl
+@dirrm share/wesnoth/translations/fur_IT/LC_MESSAGES
+@dirrm share/wesnoth/translations/fur_IT
 @dirrm share/wesnoth/translations/fr/LC_MESSAGES
 @dirrm share/wesnoth/translations/fr
 @dirrm share/wesnoth/translations/fi/LC_MESSAGES
@@ -8215,6 +8485,8 @@ share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth.mo
 @dirrm share/wesnoth/translations/ca
 @dirrm share/wesnoth/translations/bg/LC_MESSAGES
 @dirrm share/wesnoth/translations/bg
+@dirrm share/wesnoth/translations/ar/LC_MESSAGES
+@dirrm share/wesnoth/translations/ar
 @dirrm share/wesnoth/translations/af/LC_MESSAGES
 @dirrm share/wesnoth/translations/af
 @dirrm share/wesnoth/translations
@@ -8321,6 +8593,7 @@ share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth.mo
 @dirrm share/wesnoth/data/core/images/items
 @dirrm share/wesnoth/data/core/images/help
 @dirrm share/wesnoth/data/core/images/halo/undead
+@dirrm share/wesnoth/data/core/images/halo/merfolk
 @dirrm share/wesnoth/data/core/images/halo/holy
 @dirrm share/wesnoth/data/core/images/halo/elven
 @dirrm share/wesnoth/data/core/images/halo
@@ -8467,10 +8740,16 @@ share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth.mo
 @dirrm share/wesnoth
 @comment in xdg-dirs: @dirrm share/icons
 @dirrm share/doc/wesnoth/manual/styles
+@dirrm share/doc/wesnoth/manual/images/tr
+@dirrm share/doc/wesnoth/manual/images/hu
+@dirrm share/doc/wesnoth/manual/images/fr
+@dirrm share/doc/wesnoth/manual/images/de
 @dirrm share/doc/wesnoth/manual/images
 @dirrm share/doc/wesnoth/manual
 @dirrm share/doc/wesnoth
 @comment in xdg-dirs: @dirrm share/applications
+@unexec ${RMDIR} %D/man/zh_TW/man6 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/zh_TW 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/zh_CN/man6 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/zh_CN 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/tr/man6 2>/dev/null || ${TRUE}
@@ -8493,8 +8772,8 @@ share/wesnoth/translations/zh_TW/LC_MESSAGES/wesnoth.mo
 @unexec ${RMDIR} %D/man/it 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/hu/man6 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/hu 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/gl_ES/man6 2>/dev/null || ${TRUE}
-@unexec ${RMDIR} %D/man/gl_ES 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/gl/man6 2>/dev/null || ${TRUE}
+@unexec ${RMDIR} %D/man/gl 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/da/man6 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/da 2>/dev/null || ${TRUE}
 @unexec ${RMDIR} %D/man/ca_ES@valencia/man6 2>/dev/null || ${TRUE}
