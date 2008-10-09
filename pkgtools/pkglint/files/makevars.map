@@ -1,4 +1,4 @@
-# $NetBSD: makevars.map,v 1.184 2008/08/31 21:03:16 rillig Exp $
+# $NetBSD: makevars.map,v 1.185 2008/10/09 16:19:24 rillig Exp $
 #
 
 # This file contains the guessed type of some variables, according to
@@ -593,6 +593,8 @@ PKG_UID			Integer [m:s]
 PKG_USERS		List of ShellWord [m:as]
 PKG_USERS_VARS		List of Varname [$package]
 PKG_USE_KERBEROS	Yes [m:s,c:s]
+#PLIST.*		# has special handling code
+PLIST_VARS		List of Identifier [$package_list]
 PLIST_SRC		List of RelativePkgPath [$package_list]
 PLIST_SUBST		List of ShellWord [$package_list]
 PLIST_TYPE		{ dynamic static }
