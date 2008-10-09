@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.46 2008/06/20 01:09:20 joerg Exp $
+# $NetBSD: Makefile,v 1.47 2008/10/09 12:55:23 wiz Exp $
 
-DISTNAME=	wesnoth-1.4.2
+DISTNAME=	wesnoth-1.4.5
 CATEGORIES=	games
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=wesnoth/}
 EXTRACT_SUFX=	.tar.bz2
@@ -8,6 +8,8 @@ EXTRACT_SUFX=	.tar.bz2
 MAINTAINER=	wiz@NetBSD.org
 HOMEPAGE=	http://www.wesnoth.org/
 COMMENT=	Fantasy turn-based strategy game
+
+#LICENSE=	gnu-gpl-v2
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -23,16 +25,19 @@ MAKE_JOBS_SAFE=		no
 
 UNLIMIT_RESOURCES+=	datasize
 
+# This is not needed for the average player, so do not require bash.
+#REPLACE_BASH+=		data/tools/castle-cutter/mk-castle.sh
+#USE_TOOLS+=		bash:run
+
 REPLACE_PERL+=		utils/wmlxgettext
 REPLACE_PERL+=		data/tools/unit_tree/units.pl
 REPLACE_PERL+=		data/tools/unit_tree/TeamColorizer.pl
 REPLACE_PERL+=		data/tools/TeamColorizer.pl
 USE_TOOLS+=		perl:run msgfmt
 
-REPLACE_PYTHON=		data/ais/documentation.py
 SUBST_CLASSES+=		python
 SUBST_STAGE.python=	post-build
-SUBST_FILES.python=	data/ais/bruteforce.py
+SUBST_FILES.python+=	data/ais/bruteforce.py
 SUBST_FILES.python+=	data/ais/documentation.py
 SUBST_FILES.python+=	data/ais/sample.py
 SUBST_FILES.python+=	data/campaigns/Descent_Into_Darkness/ais/kamikaze.py
@@ -41,6 +46,7 @@ SUBST_MESSAGE.python=	Fixing path to python.
 # Best we can do without pulling in a python dependency.
 SUBST_SED.python+=	-e 's,WPY,${PREFIX}/bin/python2.5,'
 SUBST_SED.python+=	-e 's,/bin/env.*python,${PREFIX}/bin/python2.5,'
+SUBST_SED.python+=	-e 's,/usr/bin/python,${PREFIX}/bin/python2.5,'
 
 REPLACE_RUBY=		data/tools/terrain2wiki.rb
 .include "../../lang/ruby/replace.mk"
