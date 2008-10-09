@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2438 2008/10/09 19:50:52 bad Exp $
+$NetBSD: CHANGES-2008,v 1.2439 2008/10/09 20:22:37 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4156,3 +4156,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/autoconf to 2.63 [wiz 2008-10-09]
 	Updated multimedia/libtheora to 1.0rc1 [wiz 2008-10-09]
 	Updated comms/jpilot to 1.6.0 [bad 2008-10-09]
+	Updated net/ORBit2 to 2.14.16 [wiz 2008-10-09]
