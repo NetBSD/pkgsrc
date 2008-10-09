@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2432 2008/10/09 14:24:16 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.2433 2008/10/09 14:45:46 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4150,3 +4150,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/p5-IO-Socket-SSL to 1.16 [wiz 2008-10-09]
 	Updated archivers/unrar to 3.8.3 [wiz 2008-10-09]
 	Updated math/fftw to 3.1.3 [ahoka 2008-10-09]
+	Updated audio/lame to 3.98.2 [wiz 2008-10-09]
