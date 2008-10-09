@@ -1,7 +1,7 @@
-# $NetBSD: options.mk,v 1.3 2008/10/09 14:45:33 wiz Exp $
+# $NetBSD: options.mk,v 1.4 2008/10/09 14:47:56 wiz Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.lame
-PKG_SUPPORTED_OPTIONS=	gtk libsndfile
+PKG_SUPPORTED_OPTIONS=	gtk sndfile
 
 .include "../../mk/bsd.options.mk"
 
@@ -14,7 +14,7 @@ PLIST.gtk=		yes
 .  include "../../x11/gtk/buildlink3.mk"
 .endif
 
-.if !empty(PKG_OPTIONS:Mlibsndfile)
+.if !empty(PKG_OPTIONS:Msndfile)
 CONFIGURE_ARGS+=	--with-fileio=sndfile
 CONFIGURE_ARGS+=	--with-sndfile-prefix=${BUILDLINK_PREFIX.libsndfile}
 USE_TOOLS+=		pkg-config
