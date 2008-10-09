@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.14 2007/09/21 12:58:13 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.15 2008/10/09 20:53:48 wiz Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 GCONF_BUILDLINK3_MK:=	${GCONF_BUILDLINK3_MK}+
@@ -20,6 +20,8 @@ BUILDLINK_PKGSRCDIR.GConf?=	../../devel/GConf
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
+.include "../../sysutils/dbus/buildlink3.mk"
+.include "../../sysutils/dbus-glib/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/xmlcatmgr/buildlink3.mk"
 

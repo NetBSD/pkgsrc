@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2008/04/10 16:27:47 drochner Exp $
+@comment $NetBSD: PLIST,v 1.25 2008/10/09 20:53:48 wiz Exp $
 bin/gconf-merge-tree
 bin/gconftool-2
 include/gconf/2/gconf/gconf-changeset.h
@@ -17,6 +17,7 @@ lib/pkgconfig/gconf-2.0.pc
 libexec/gconfd-2
 man/man1/gconftool-2.1
 share/aclocal/gconf-2.m4
+share/dbus-1/services/org.gnome.GConf.service
 share/examples/GConf/path
 share/gtk-doc/html/gconf/ch01.html
 share/gtk-doc/html/gconf/gconf-GConfClient.html
@@ -76,10 +77,12 @@ share/locale/is/LC_MESSAGES/GConf2.mo
 share/locale/it/LC_MESSAGES/GConf2.mo
 share/locale/ja/LC_MESSAGES/GConf2.mo
 share/locale/ka/LC_MESSAGES/GConf2.mo
+share/locale/kn/LC_MESSAGES/GConf2.mo
 share/locale/ko/LC_MESSAGES/GConf2.mo
 share/locale/ku/LC_MESSAGES/GConf2.mo
 share/locale/lt/LC_MESSAGES/GConf2.mo
 share/locale/lv/LC_MESSAGES/GConf2.mo
+share/locale/mai/LC_MESSAGES/GConf2.mo
 share/locale/mg/LC_MESSAGES/GConf2.mo
 share/locale/mk/LC_MESSAGES/GConf2.mo
 share/locale/ml/LC_MESSAGES/GConf2.mo
@@ -104,7 +107,7 @@ share/locale/sk/LC_MESSAGES/GConf2.mo
 share/locale/sl/LC_MESSAGES/GConf2.mo
 share/locale/sq/LC_MESSAGES/GConf2.mo
 share/locale/sr/LC_MESSAGES/GConf2.mo
-share/locale/sr@Latn/LC_MESSAGES/GConf2.mo
+share/locale/sr@latin/LC_MESSAGES/GConf2.mo
 share/locale/sv/LC_MESSAGES/GConf2.mo
 share/locale/ta/LC_MESSAGES/GConf2.mo
 share/locale/te/LC_MESSAGES/GConf2.mo
