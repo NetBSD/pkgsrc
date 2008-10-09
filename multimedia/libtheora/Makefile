@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2008/04/23 12:26:47 tron Exp $
+# $NetBSD: Makefile,v 1.18 2008/10/09 19:46:55 wiz Exp $
 #
 
-DISTNAME=	libtheora-1.0beta3
+DISTNAME=	libtheora-1.0RC1
+PKGNAME=	libtheora-1.0rc1
 CATEGORIES=	multimedia
 MASTER_SITES=	http://downloads.xiph.org/releases/theora/
 EXTRACT_SUFX=	.tar.bz2
@@ -23,6 +24,11 @@ CONFIGURE_ARGS+=	HAVE_DOXYGEN=false
 CONFIGURE_ENV+=		ac_cv_path_SDL_CONFIG=no
 CONFIGURE_ENV+=		ac_cv_prog_HAVE_DOXYGEN=no
 CONFIGURE_ENV+=		ac_cv_prog_HAVE_PDFLATEX=no
+
+PLIST_SUBST+=		SUBDIR=${DISTNAME}
+
+post-extract:
+	${CP} ${FILESDIR}/dct_decode_mmx.c ${WRKSRC}/lib/enc/x86_64
 
 .include "../../mk/bsd.prefs.mk"
 
