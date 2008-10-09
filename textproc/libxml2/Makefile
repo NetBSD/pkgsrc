@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.95 2008/10/09 15:01:27 tron Exp $
+# $NetBSD: Makefile,v 1.96 2008/10/09 19:20:36 wiz Exp $
 
 DISTNAME=	libxml2-2.7.1
 PKGREVISION=	1
@@ -24,22 +24,11 @@ CONFIGURE_ARGS+=	--with-iconv=${BUILDLINK_PREFIX.iconv}
 CONFIGURE_ARGS+=	--with-html-subdir=libxml2
 CONFIGURE_ARGS+=	--without-python
 
-PKG_OPTIONS_VAR=	PKG_OPTIONS.libxml2
-PKG_SUPPORTED_OPTIONS+=	inet6
-.include "../../mk/bsd.options.mk"
-.if !empty(PKG_OPTIONS:Minet6)
-CONFIGURE_ARGS+=	--enable-ipv6
-.else
-CONFIGURE_ARGS+=	--disable-ipv6
-.endif
+.include "options.mk"
 
 # Don't use threads - it's not apparent whether it's necessary or not,
 # and this library needs to be usable by non-threaded applications too
 CONFIGURE_ARGS+=	--without-threads
-
-# NetBSD-sparc64-1.6*'s f77 makes configure failing and as f77 is not
-# needed for this package the following does no harm on other platforms.
-CONFIGURE_ENV+=		F77=${FALSE:Q}
 
 MAKE_ENV+=	PAX=${PAX:Q}
 
