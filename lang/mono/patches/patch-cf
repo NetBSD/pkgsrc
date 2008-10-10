@@ -1,0 +1,15 @@
+$NetBSD: patch-cf,v 1.3 2008/10/10 22:02:43 kefren Exp $
+--- mono/metadata/class.c.orig	2008-10-10 23:57:39.000000000 +0300
++++ mono/metadata/class.c	2008-10-10 23:58:35.000000000 +0300
+@@ -7445,7 +7445,10 @@
+ gboolean
+ mono_class_generic_sharing_enabled (MonoClass *class)
+ {
+-#if defined(__i386__) || defined(__x86_64__)
++#if defined(__NetBSD__) && defined(__x86_64__)
++/* https://bugzilla.novell.com/show_bug.cgi?id=434457 */
++	static gboolean supported = FALSE;
++#elif defined(__i386__) || defined(__x86_64__)
+ 	static gboolean supported = TRUE;
+ #else
+ 	/* Not supported by the JIT backends */
