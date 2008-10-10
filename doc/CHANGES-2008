@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2443 2008/10/10 02:00:30 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2444 2008/10/10 10:03:42 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4160,3 +4160,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/GConf to 2.24.0 [wiz 2008-10-09]
 	Updated devel/GConf-ui to 2.24.0 [wiz 2008-10-09]
 	Updated net/aria2 to 0.16.0 [bjs 2008-10-10]
+	Updated www/p5-HTML-Mason to 1.40nb1 [he 2008-10-10]
