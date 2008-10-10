@@ -77,7 +77,7 @@ OOPPTTIIOONNSS
      --nn      Don't actually install a package, just report the steps that
              would be taken if it was.
 
-     --pp _d_e_s_t_d_i_r
+     --PP _d_e_s_t_d_i_r
              Prefix all file and directory names with _d_e_s_t_d_i_r.  For packages
              without install scripts this has the same behavior as using
              chroot.
@@ -316,4 +316,4 @@ BBUUGGSS
 
      Sure to be others.
 
-NetBSD 4.0                       July 30, 2008                      NetBSD 4.0
+NetBSD 4.0                     October 10, 2008                     NetBSD 4.0
