@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.137 2008/06/01 22:04:07 he Exp $
+# $NetBSD: Makefile,v 1.138 2008/10/10 21:58:43 he Exp $
 
-DISTNAME=	perl-5.8.8
-PKGREVISION=	8
+DISTNAME=	perl-5.10.0
 CATEGORIES=	lang devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:S,/modules/by-module/$,/src/,}
-EXTRACT_SUFX=	.tar.bz2
 DISTFILES+=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	jlam@pkgsrc.org
@@ -260,6 +258,25 @@ CONFIGURE_ARGS+=	-Dlibswanted=${LIBSWANTED:Q}
 CONFIGURE_ARGS+=	-Duse64bitint
 .  endif
 .endif
+
+# Remove a spurious workdir reference
+SUBST_CLASSES+=		rm
+SUBST_STAGE.rm=		pre-install
+SUBST_FILES.rm=		lib/Config_heavy.pl
+SUBST_SED.rm=	-e "s!^rm_try=\'/.*work/.tools/bin/rm -f!rm_try=\'/bin/rm -f!"
+
+# Replace our perl as the interpreter
+REPLACE_PERL+=		lib/Class/ISA.pm
+REPLACE_PERL+=		lib/File/DosGlob.pm
+REPLACE_PERL+=		lib/version.pm
+
+# And replace a perl interpreter during the pre-install stage
+# I think this may be a bootstrap script, so can't use REPLACE_PERL
+# because that is acted upon already in the pre-configure stage
+SUBST_CLASSES+=		miniperl
+SUBST_STAGE.miniperl=	pre-install
+SUBST_FILES.miniperl=	lib/ExtUtils/xsubpp
+SUBST_SED.miniperl=	-e "1s:\#!./miniperl:\#!${PERL5}:"
 
 # Some platforms may want the directory mode not to be 0755.  This
 # is, unfortunately, hardcoded in quite a few places in Perl, so
