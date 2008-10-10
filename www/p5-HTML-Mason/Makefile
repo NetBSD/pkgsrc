@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.30 2008/09/07 09:17:49 rhaen Exp $
+# $NetBSD: Makefile,v 1.31 2008/10/10 10:03:07 he Exp $
 
 DISTNAME=		HTML-Mason-1.40
 PKGNAME=		p5-${DISTNAME}
-SVR4_PKGNAME=	p5hma
+PKGREVISION=		1
+SVR4_PKGNAME=		p5hma
 CATEGORIES=		www perl5
-MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=HTML/}
+MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=HTML/}
 
 MAINTAINER=		rhaen@NetBSD.org
 HOMEPAGE=		http://www.masonhq.com/
@@ -15,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=		p5-Class-Container>=0.07:../../devel/p5-Class-Container
 DEPENDS+=		p5-Exception-Class>=1.15:../../devel/p5-Exception-Class
 DEPENDS+=		p5-Params-Validate>=0.70:../../devel/p5-Params-Validate
+DEPENDS+=		p5-Cache-Cache>=1:../../devel/p5-Cache-Cache
 
 PERL5_MODULE_TYPE=	Module::Build
 PERL5_PACKLIST=		auto/HTML/Mason/.packlist
