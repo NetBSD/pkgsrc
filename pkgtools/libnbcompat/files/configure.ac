@@ -1,4 +1,4 @@
-dnl $NetBSD: configure.ac,v 1.67 2008/10/07 16:03:10 joerg Exp $
+dnl $NetBSD: configure.ac,v 1.68 2008/10/10 00:21:43 joerg Exp $
 
 dnl Process this file with autoconf to produce a configure script.
 AC_PREREQ(2.52)
@@ -131,6 +131,10 @@ AC_CHECK_FUNC(SHA512_File, [:], [
 	AC_LIBOBJ(sha2)
 	AC_LIBOBJ(sha2hl)
 ])
+
+AC_ARG_ENABLE([db],
+	[AS_HELP_STRING([--enable-db], [include DB implementation])])
+AC_SUBST(WITH_DB, $enable_db)
 
 AC_ARG_ENABLE([bsd-getopt],
 	[AS_HELP_STRING([--enable-bsd-getopt],

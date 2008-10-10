@@ -704,10 +704,12 @@ CPP
 GREP
 EGREP
 LIBOBJS
+WITH_DB
 LTLIBOBJS'
 ac_subst_files=''
 ac_user_opts='
 enable_option_checking
+enable_db
 enable_bsd_getopt
 '
       ac_precious_vars='build_alias
@@ -1349,6 +1351,7 @@ Optional Features:
   --disable-option-checking  ignore unrecognized --enable/--with options
   --disable-FEATURE       do not include FEATURE (same as --enable-FEATURE=no)
   --enable-FEATURE[=ARG]  include FEATURE [ARG=yes]
+  --enable-db             include DB implementation
   --enable-bsd-getopt     force use of BSDish getopt implementation
 
 Some influential environment variables:
@@ -5632,6 +5635,14 @@ esac
 
 
 fi
+
+
+# Check whether --enable-db was given.
+if test "${enable_db+set}" = set; then
+  enableval=$enable_db;
+fi
+
+WITH_DB=$enable_db
 
 
 # Check whether --enable-bsd-getopt was given.

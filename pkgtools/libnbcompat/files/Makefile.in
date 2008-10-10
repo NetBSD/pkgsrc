@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.in,v 1.34 2008/10/06 12:36:19 joerg Exp $
+# $NetBSD: Makefile.in,v 1.35 2008/10/10 00:21:43 joerg Exp $
 #
 
 srcdir=		@srcdir@
@@ -60,6 +60,12 @@ INCS=		nbcompat.h \
 		nbcompat/vis.h
 
 OBJS=		@LIBOBJS@
+
+WITH_DB=	@WITH_DB@
+
+.if ${WITH_DB} == "yes"
+.  include "${.CURDIR}/db/Makefile.inc"
+.endif
 
 LINK=		$(CCLD) $(CFLAGS) $(LDFLAGS) -o $@
 COMPILE=	$(CC) $(CPPFLAGS) $(CFLAGS)
