@@ -1,8 +1,8 @@
-$NetBSD: patch-cn,v 1.1 2007/04/21 15:32:15 tnn Exp $
+$NetBSD: patch-cn,v 1.2 2008/10/10 21:58:43 he Exp $
 
---- hints/hpux.sh.orig	2007-04-21 17:17:01.000000000 +0200
+--- hints/hpux.sh.orig	2007-12-18 11:47:07.000000000 +0100
 +++ hints/hpux.sh
-@@ -371,7 +371,7 @@ case "$ccisgcc" in
+@@ -376,7 +376,7 @@ case "$ccisgcc" in
  	    *O[3456789]*) optimize=`echo "$optimize" | sed -e 's/O[3-9]/O2/'` ;;
  	    esac
  	#ld="$cc"
@@ -11,7 +11,7 @@ $NetBSD: patch-cn,v 1.1 2007/04/21 15:32:15 tnn Exp $
  	cccdlflags='-fPIC'
  	#lddlflags='-shared'
  	lddlflags='-b'
-@@ -428,7 +428,7 @@ case "$ccisgcc" in
+@@ -434,7 +434,7 @@ case "$ccisgcc" in
  	    toke_cflags="$toke_cflags;optimize=\"$opt\""
  	    regexec_cflags="optimize=\"$opt\""
  	    fi
