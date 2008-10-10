@@ -1,23 +1,25 @@
-$NetBSD: patch-ca,v 1.5 2006/04/09 06:34:33 jlam Exp $
+$NetBSD: patch-ca,v 1.6 2008/10/10 21:58:43 he Exp $
 
---- Configure.orig	2006-01-08 09:51:03.000000000 -0500
+--- Configure.orig	2007-12-18 11:47:07.000000000 +0100
 +++ Configure
-@@ -3130,11 +3130,13 @@ EOM
- 		dgux)	osname=dgux 
+@@ -3206,13 +3206,14 @@ EOM
  			osvers="$3"
  			;;
-+		dragonfly) osname=dragonfly
-+			osvers=`$uname -r | UU/tr '[A-Z]' '[a-z]'` ;;
+ 		dragonfly) osname=dragonfly
+-			osvers="$3"
++			osvers=`$uname -r | UU/tr '[A-Z]' '[a-z]'`
+ 			;;
  		dynixptx*) osname=dynixptx
  			osvers=`echo "$4"|sed 's/^v//'`
  			;;
- 		freebsd) osname=freebsd 
+ 		freebsd) osname=freebsd
 -			osvers="$3" ;;
-+			osvers=`$uname -r | UU/tr '[A-Z]' '[a-z]'` ;;
++			osvers=`$uname -r | UU/tr '[A-Z]' '[a-z]'`
++			;;
  		genix)	osname=genix ;;
  		gnu)	osname=gnu
  			osvers="$3" ;;
-@@ -3156,7 +3158,7 @@ EOM
+@@ -3234,7 +3235,7 @@ EOM
  		MiNT)	osname=mint
  			;;
  		netbsd*) osname=netbsd
@@ -26,7 +28,7 @@ $NetBSD: patch-ca,v 1.5 2006/04/09 06:34:33 jlam Exp $
  			;;
  		news-os) osvers="$3"
  			case "$3" in
-@@ -3167,8 +3169,8 @@ EOM
+@@ -3245,8 +3246,8 @@ EOM
  		next*) osname=next ;;
  		nonstop-ux) osname=nonstopux ;;
  		openbsd) osname=openbsd
@@ -37,7 +39,7 @@ $NetBSD: patch-ca,v 1.5 2006/04/09 06:34:33 jlam Exp $
  		os2)	osname=os2
  			osvers="$4"
  			;;
-@@ -4445,7 +4447,7 @@ case "$plibpth" in
+@@ -4739,7 +4740,7 @@ case "$plibpth" in
  esac
  case "$libpth" in
  ' ') dlist='';;
@@ -46,18 +48,18 @@ $NetBSD: patch-ca,v 1.5 2006/04/09 06:34:33 jlam Exp $
  *) dlist="$libpth";;
  esac
  
-@@ -6485,7 +6487,9 @@ rp='Pathname for the site-specific libra
+@@ -6425,7 +6426,9 @@ rp='Pathname for the site-specific libra
  . ./getfile
- sitelib="$ans"
- sitelibexp="$ansexp"
+ prefixvar=sitelib
+ . ./setprefixvar
 -sitelib_stem=`echo "$sitelibexp" | sed "s,/$version$,,"`
 +if $test -z "$sitelib_stem"; then
 +	sitelib_stem=`echo "$sitelibexp" | sed "s,/$version$,,"`
 +fi
- : Change installation prefix, if necessary.
- if $test X"$prefix" != X"$installprefix"; then
- 	installsitelib=`echo $sitelibexp | $sed "s#^$prefix#$installprefix#"`
-@@ -6606,7 +6610,9 @@ case "$vendorprefix" in
+ 
+ : Determine list of previous versions to include in @INC
+ $cat > getverlist <<EOPL
+@@ -6925,7 +6928,9 @@ case "$vendorprefix" in
  	vendorlibexp="$ansexp"
  	;;
  esac
@@ -65,19 +67,10 @@ $NetBSD: patch-ca,v 1.5 2006/04/09 06:34:33 jlam Exp $
 +if $test -z "$vendorlib_stem"; then
 +	vendorlib_stem=`echo "$vendorlibexp" | sed "s,/$version$,,"`
 +fi
- : Change installation prefix, if necessary.
- if $test X"$prefix" != X"$installprefix"; then
- 	installvendorlib=`echo $vendorlibexp | $sed "s#^$prefix#$installprefix#"`
-@@ -7889,7 +7895,7 @@ if "$useshrplib"; then
- 	solaris)
- 		xxx="-R $shrpdir"
- 		;;
--	freebsd|netbsd|openbsd|interix)
-+	freebsd|netbsd|openbsd|dragonfly|interix)
- 		xxx="-Wl,-R$shrpdir"
- 		;;
- 	bsdos|linux|irix*|dec_osf|gnu*)
-@@ -9010,6 +9016,13 @@ EOCP
+ prefixvar=vendorlib
+ . ./installprefix
+ 
+@@ -9170,6 +9175,13 @@ EOCP
  	;;
  esac
  
@@ -91,7 +84,7 @@ $NetBSD: patch-ca,v 1.5 2006/04/09 06:34:33 jlam Exp $
  case "$vendorprefix" in
  '')	d_vendorbin="$undef"
  	vendorbin=''
-@@ -17776,7 +17789,15 @@ RCAT(Rei,ser)
+@@ -18347,7 +18359,15 @@ RCAT(Rei,ser)
  ACAT(Cir,cus)
  EOCP
  $cppstdin $cppflags $cppminus <cpp_stuff.c >cpp_stuff.out 2>&1
