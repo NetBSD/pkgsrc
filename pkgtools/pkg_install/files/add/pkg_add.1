@@ -1,4 +1,4 @@
-.\" $NetBSD: pkg_add.1,v 1.28.6.8 2008/07/30 15:38:37 joerg Exp $
+.\" $NetBSD: pkg_add.1,v 1.28.6.9 2008/10/10 15:26:37 joerg Exp $
 .\"
 .\" FreeBSD install - a package for the installation and maintenance
 .\" of non-core utilities.
@@ -17,7 +17,7 @@
 .\"
 .\"     @(#)pkg_add.1
 .\"
-.Dd July 30, 2008
+.Dd October 10, 2008
 .Dt PKG_ADD 1
 .Os
 .Sh NAME
@@ -142,7 +142,7 @@ Override the machine architecture returned by uname with
 .It Fl n
 Don't actually install a package, just report the steps that
 would be taken if it was.
-.It Fl p Ar destdir
+.It Fl P Ar destdir
 Prefix all file and directory names with
 .Ar destdir .
 For packages without install scripts this has the same behavior as
