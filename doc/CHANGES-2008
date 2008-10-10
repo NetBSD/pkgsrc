@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2444 2008/10/10 10:03:42 he Exp $
+$NetBSD: CHANGES-2008,v 1.2445 2008/10/10 11:36:59 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4161,3 +4161,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/GConf-ui to 2.24.0 [wiz 2008-10-09]
 	Updated net/aria2 to 0.16.0 [bjs 2008-10-10]
 	Updated www/p5-HTML-Mason to 1.40nb1 [he 2008-10-10]
+	Updated security/libnasl to 2.2.11 [adam 2008-10-10]
+	Updated security/nessus-libraries to 2.2.11 [adam 2008-10-10]
+	Updated security/nessus-core to 2.2.11 [adam 2008-10-10]
+	Updated security/nessus-plugins to 2.2.11 [adam 2008-10-10]
