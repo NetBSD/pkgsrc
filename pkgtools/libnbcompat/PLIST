@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.15 2008/10/06 12:36:19 joerg Exp $
+@comment $NetBSD: PLIST,v 1.16 2008/10/10 00:21:43 joerg Exp $
 include/nbcompat.h
 include/nbcompat/assert.h
 include/nbcompat/cdefs.h
 include/nbcompat/ctype.h
+include/nbcompat/db.h
 include/nbcompat/dirent.h
 include/nbcompat/endian.h
 include/nbcompat/err.h

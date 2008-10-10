@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.64 2008/10/06 12:36:19 joerg Exp $
+# $NetBSD: Makefile,v 1.65 2008/10/10 00:21:43 joerg Exp $
 #
 # NOTE: If you update this package, it is *mandatory* that you update
 # 	pkgsrc/pkgtools/libnbcompat/files/README to reflect the actual
 #	list of tested and supported platforms.
 #
 
-DISTNAME=		libnbcompat-20080922
+DISTNAME=		libnbcompat-20081010
 CATEGORIES=		pkgtools devel
 MASTER_SITES=		# empty
 DISTFILES=		# empty
@@ -18,6 +18,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=		yes
 MAKE_ENV+=		LIBMODE=${LIBMODE}
+
+# Enable by default for standalone builds
+CONFIGURE_ARGS+=	--enable-db
 
 do-extract:
 	@${CP} -R ${FILESDIR} ${WRKSRC}
