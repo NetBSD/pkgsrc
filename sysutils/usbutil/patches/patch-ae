@@ -1,12 +1,14 @@
-$NetBSD: patch-ae,v 1.1 2007/09/14 13:31:04 gson Exp $
+$NetBSD: patch-ae,v 1.2 2008/10/10 23:30:59 joerg Exp $
 
---- Makefile.orig	1999-05-20 00:05:31.000000000 +0300
+--- Makefile.orig	1999-05-19 23:05:31.000000000 +0200
 +++ Makefile
-@@ -19,6 +19,7 @@ usbgen:		usbgen.c
+@@ -19,7 +19,8 @@ usbgen:		usbgen.c
  	cc $(CFLAGS) usbgen.c -o usbgen
  
  install: $(PROGS)
-+	install -d $(PREFIX)/sbin
- 	install usbctl usbdebug usbstats usbgen $(PREFIX)/sbin
+-	install usbctl usbdebug usbstats usbgen $(PREFIX)/sbin
++	install -d ${DESTDIR}$(PREFIX)/sbin
++	install usbctl usbdebug usbstats usbgen ${DESTDIR}$(PREFIX)/sbin
  
  clean:
+ 	rm -f $(PROGS)
