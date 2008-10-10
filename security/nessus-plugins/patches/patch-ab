@@ -1,0 +1,13 @@
+$NetBSD: patch-ab,v 1.1 2008/10/10 11:35:39 adam Exp $
+
+--- Makefile.orig	2008-10-06 16:00:43.000000000 +0200
++++ Makefile
+@@ -23,7 +23,7 @@ install-dirs:
+ 		$(DESTDIR)${libdir}/nessus/plugins
+ 	
+ install-nasl:	install-dirs
+-	for scripts in scripts/*.nasl scripts/*.nbin; do \
++	for scripts in scripts/*.nasl; do \
+ 	$(INSTALL) -o $(installuser) -m 444 $$scripts \
+ 		$(DESTDIR)${libdir}/nessus/plugins; \
+ 	done
