@@ -1,4 +1,4 @@
-/*	$NetBSD: fetch.c,v 1.13 2008/10/06 12:58:29 joerg Exp $	*/
+/*	$NetBSD: fetch.c,v 1.14 2008/10/10 22:51:41 joerg Exp $	*/
 /*-
  * Copyright (c) 1998-2004 Dag-Erling Coïdan Smørgrav
  * Copyright (c) 2008 Joerg Sonnenberger <joerg@NetBSD.org>
@@ -510,7 +510,7 @@ quote_doc:
 				u->doc[i++] = '0' + ((unsigned char)*p) / 16;
 			else
 				u->doc[i++] = 'a' - 10 + ((unsigned char)*p) / 16;
-			if ((unsigned char)*p % 16 < 16)
+			if ((unsigned char)*p % 16 < 10)
 				u->doc[i++] = '0' + ((unsigned char)*p) % 16;
 			else
 				u->doc[i++] = 'a' - 10 + ((unsigned char)*p) % 16;
