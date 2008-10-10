@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2442 2008/10/10 01:59:30 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2443 2008/10/10 02:00:30 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4159,5 +4159,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/ORBit2 to 2.14.16 [wiz 2008-10-09]
 	Updated devel/GConf to 2.24.0 [wiz 2008-10-09]
 	Updated devel/GConf-ui to 2.24.0 [wiz 2008-10-09]
-	Updated net/aria2 to 0.16.0 [bjs 2008-10-10]
 	Updated net/aria2 to 0.16.0 [bjs 2008-10-10]
