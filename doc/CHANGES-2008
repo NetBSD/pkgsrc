@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2446 2008/10/10 15:57:16 sborrill Exp $
+$NetBSD: CHANGES-2008,v 1.2447 2008/10/10 21:59:38 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4166,3 +4166,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/nessus-core to 2.2.11 [adam 2008-10-10]
 	Updated security/nessus-plugins to 2.2.11 [adam 2008-10-10]
 	Updated pkgtools/pkg_comp to 1.31 [sborrill 2008-10-10]
+	Updated lang/perl5 to 5.10.0 [he 2008-10-10]
