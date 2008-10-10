@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.31 2008/08/23 07:47:00 obache Exp $
+# $NetBSD: Makefile.common,v 1.32 2008/10/10 11:34:50 adam Exp $
 #
 # Common Makefile for:
 #  * nessus-core
@@ -6,15 +6,15 @@
 #  * nessus-plugins
 #  * libnasl
 
-VERS=		2.2.9
+VERS=		2.2.11
 
 CATEGORIES=	security x11 net
-MASTER_SITES?=	ftp://ftp.gwdg.de/pub/linux/misc/nessus/nessus-${VERS}/src/ \
-		http://ftp.gwdg.de/pub/linux/misc/nessus/nessus-${VERS}/src/ \
-		ftp://sunsite.cnlab-switch.ch/mirror/nessus/nessus-${VERS}/src/ \
-		ftp://ftp.chg.ru/pub/security/nessus/nessus-${VERS}/src/ \
-		ftp://ftp.wiretapped.net/pub/security/vulnerability-assessment/nessus/nessus-${VERS}/src/ \
-		ftp://ftp.linux.org.tr/pub/mirrors/nessus/nessus-${VERS}/src/
+MASTER_SITES=	http://www.nessus.org/download/
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.nessus.org/
+
+FETCH_MESSAGE+=	"Please download ${DISTFILES:Q}"
+FETCH_MESSAGE+=	"manually from ${MASTER_SITES:Q}"
+
+MAKE_JOBS_SAFE=	no
