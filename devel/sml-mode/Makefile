@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/03/03 17:45:37 jlam Exp $
+# $NetBSD: Makefile,v 1.16 2008/10/11 09:31:55 uebayasi Exp $
 
 DISTNAME=	sml-mode-3.9.5
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -22,5 +22,5 @@ do-install:
 		ChangeLog ${DESTDIR}${EMACS_LISPPREFIX}/sml-mode
 	${INSTALL_DATA} ${WRKSRC}/sml-mode.info ${DESTDIR}${EMACS_INFOPREFIX}
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

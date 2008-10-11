@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/05/26 02:13:21 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2008/10/11 09:31:57 uebayasi Exp $
 #
 
 DISTNAME=	twelf-1-4
@@ -76,5 +76,5 @@ do-install:
 	cd ${WRKSRC}/examples && pax -rw -pam * ${TWELF_EXAMPLEDIR}
 	${LN} -sf ${TWELF_EXAMPLEDIR} ${TWELF_LIBDIR}/examples
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

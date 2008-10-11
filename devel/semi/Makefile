@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.26 2007/11/12 05:34:10 uebayasi Exp $
+# $NetBSD: Makefile,v 1.27 2008/10/11 09:31:55 uebayasi Exp $
 #
 
 DISTNAME=	semi-1.14.6
@@ -17,6 +17,10 @@ HOMEPAGE=	http://www.m17n.org/SEMI/
 COMMENT=	Emacs lisp library to provide MIME feature
 
 BUILD_DEPENDS+=	qkc-[0-9]*:../../converters/qkc
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS+=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/semi \
+			${EMACS_INFOPREFIX:C|^${PREFIX}/||}
 
 BUILD_TARGET=	${BUILD_TARGET.${EMACS_FLAVOR}}
 INSTALL_TARGET=	${INSTALL_TARGET.${EMACS_FLAVOR}}
@@ -43,15 +47,24 @@ post-build:
 		makeinfo --force --no-validate $${i}.texi;		\
 	done
 
+do-install: plist
+	cd ${WRKSRC};							\
+	grep -v '^@' ${PLIST} | grep '/site-lisp/semi/' |		\
+	while read file; do						\
+		file=$$( basename $$file );				\
+		${INSTALL_DATA} $$file					\
+		    ${DESTDIR}${EMACS_LISPPREFIX}/semi/$$file;		\
+	done
+
 post-install:
 	cd ${WRKSRC}; for f in mime-ui-*.info mime-*.info-[0-9]*; do	\
 		${TEST} ! -f "$$f" ||					\
-		${INSTALL_DATA} "$$f" ${EMACS_INFOPREFIX};		\
+		${INSTALL_DATA} "$$f" ${DESTDIR}${EMACS_INFOPREFIX};	\
 	done
 
 .include "options.mk"
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 
 .include "../../devel/apel/buildlink3.mk"
 .include "../../devel/flim/buildlink3.mk"

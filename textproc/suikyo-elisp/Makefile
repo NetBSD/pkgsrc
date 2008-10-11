@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/02 02:41:26 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/11 09:31:58 uebayasi Exp $
 #
 
 .include "../../textproc/suikyo/Makefile.common"
@@ -18,5 +18,5 @@ BUILD_DIRS+=	elisp
 
 CONFIGURE_ARGS+=	--with-emacs-sitelispdir=${EMACS_LISPPREFIX}
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

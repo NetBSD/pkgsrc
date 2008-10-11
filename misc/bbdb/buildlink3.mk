@@ -1,10 +1,10 @@
-# $NetBSD: buildlink3.mk,v 1.1 2007/10/29 12:41:18 uebayasi Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/10/11 09:31:57 uebayasi Exp $
 #
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 BBDB_BUILDLINK3_MK:=	${BBDB_BUILDLINK3_MK}+
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .if ${EMACS_FLAVOR} == "emacs"
 
 .if ${BUILDLINK_DEPTH} == "+"

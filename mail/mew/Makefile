@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.74 2007/12/30 16:24:54 cjep Exp $
+# $NetBSD: Makefile,v 1.75 2008/10/11 09:31:57 uebayasi Exp $
 
 DISTNAME=	mew-5.2
 PKGREVISION=	1
@@ -9,6 +9,9 @@ MASTER_SITES=	http://www.mew.org/Release/
 MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://www.mew.org/
 COMMENT=	Messaging in the Emacs World
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS=	${MEW_CONTRIB_DIR:C|^${PREFIX}/||}
 
 CONFLICTS+=	mew-xemacs-[0-9]* incm-[0-9]*
 
@@ -21,11 +24,13 @@ EMACS_MODULES+=			base
 
 MEW_CONTRIB_DIR=${EMACS_LISPPREFIX}/mew/contrib
 
+MAKE_FLAGS+=	DESTDIR=${DESTDIR:Q}
 MAKE_FLAGS+=	prefix=${PREFIX:Q}
+MAKE_FLAGS+=	exec_prefix=${PREFIX:Q}
 MAKE_FLAGS+=	EMACS=${EMACS_BIN:Q}
-MAKE_FLAGS+=	elispdir=${EMACS_LISPPREFIX}/mew
-MAKE_FLAGS+=	etcdir=${EMACS_ETCPREFIX}/mew
-MAKE_FLAGS+=	infodir=${EMACS_INFOPREFIX}
+MAKE_FLAGS+=	elispdir=${EMACS_LISPPREFIX:Q}/mew
+MAKE_FLAGS+=	etcdir=${EMACS_ETCPREFIX:Q}/mew
+MAKE_FLAGS+=	infodir=${EMACS_INFOPREFIX:Q}
 MAKE_FLAGS+=	mandir=${PREFIX:Q}/${PKGMANDIR:Q}/man1
 CONFIGURE_ARGS+=	--with-etcdir=${EMACS_ETCPREFIX}/mew
 
@@ -40,9 +45,8 @@ post-configure:
 		${WRKSRC}/mew-key.el.1 > ${WRKSRC}/mew-key.el
 
 post-install:
-	${INSTALL_DATA_DIR} ${MEW_CONTRIB_DIR}
-	${INSTALL_DATA} ${WRKSRC}/contrib/* ${MEW_CONTRIB_DIR}
+	${INSTALL_DATA} ${WRKSRC}/contrib/* ${DESTDIR}${MEW_CONTRIB_DIR}
 
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

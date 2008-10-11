@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.12 2008/09/21 02:00:37 minskim Exp $
+# $NetBSD: Makefile,v 1.13 2008/10/11 09:31:55 uebayasi Exp $
 #
 
 .include "../../devel/scmgit/Makefile.common"
@@ -80,7 +80,7 @@ SUBST_MESSAGE.fix-paths=Fixing hard-coded pathnames
 SUBST_STAGE.fix-paths=	pre-build
 SUBST_VARS.fix-paths=	PREFIX
 
-#.include "../../mk/emacs.mk" # XXX TODO (see patch-ad)
+#.include "../../editors/emacs/modules.mk" # XXX TODO (see patch-ad)
 
 .include "options.mk"
 .include "../../lang/perl5/module.mk"

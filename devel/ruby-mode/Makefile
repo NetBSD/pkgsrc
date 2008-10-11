@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.19 2008/06/20 15:50:25 taca Exp $
+# $NetBSD: Makefile,v 1.20 2008/10/11 09:31:55 uebayasi Exp $
 #
 
 DISTNAME=	${RUBY_DISTNAME}
@@ -38,5 +38,5 @@ do-install:
 
 .include "../../lang/ruby/rubyversion.mk"
 .include "../../lang/ruby/Makefile.common"
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.5 2008/03/03 17:45:36 jlam Exp $
+# $NetBSD: Makefile,v 1.6 2008/10/11 09:31:55 uebayasi Exp $
 #
 
 DISTNAME=	psvn.el
@@ -18,7 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 VER=		25241
 WRKSRC=		${WRKDIR}
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 
 INSTALLATION_DIRS=	${EMACS_LISPPREFIX:S/^${PREFIX}\///}
 

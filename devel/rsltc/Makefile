@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/03/03 17:45:37 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2008/10/11 09:31:55 uebayasi Exp $
 #
 
 DISTNAME=		rsltcsrc
@@ -31,5 +31,5 @@ do-install:
 		${INSTALL_DATA} $${i}c ${DESTDIR}${PREFIX}/share/emacs/site-lisp/rsl ;\
 	done)
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

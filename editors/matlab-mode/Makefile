@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/03/03 18:25:52 jlam Exp $
+# $NetBSD: Makefile,v 1.11 2008/10/11 09:31:56 uebayasi Exp $
 #
 
 DISTNAME=		matlab.el
@@ -20,7 +20,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 WRKSRC=			${WRKDIR}
 DIST_SUBDIR=		${BASEPKGNAME}
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 
 .if ${EMACS_FLAVOR} == "emacs"
 EMACS=	emacs

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/04/12 13:57:19 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/11 09:31:55 uebayasi Exp $
 #
 
 DISTNAME=	js2-20080406
@@ -27,5 +27,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.el ${DESTDIR}${EMACS_LISPPREFIX}/js2.el
 	${INSTALL_DATA} ${WRKSRC}/${DISTNAME}.elc ${DESTDIR}${EMACS_LISPPREFIX}/js2.elc
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2007/10/29 13:41:29 uebayasi Exp $
+# $NetBSD: Makefile,v 1.7 2008/10/11 09:31:56 uebayasi Exp $
 
 DISTNAME=	leim-${VERSION}
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -36,5 +36,5 @@ post-extract:
 post-install:
 	@${CHOWN} -R ${ROOT_USER} ${PREFIX}/share/emacs/${VERSION}/leim
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

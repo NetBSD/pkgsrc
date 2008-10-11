@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/03/04 18:12:59 jlam Exp $
+# $NetBSD: Makefile,v 1.18 2008/10/11 09:31:57 uebayasi Exp $
 
 DISTNAME=	ess-5.3.4
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -45,5 +45,5 @@ do-install:
 	cd ${WRKSRC}/etc && ${INSTALL_SCRIPT} ess-sas-sh-command	\
 		${DESTDIR}${EMACS_ETCPREFIX}/ess
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

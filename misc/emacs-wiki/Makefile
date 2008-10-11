@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/04 19:21:11 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/11 09:31:57 uebayasi Exp $
 #
 
 DISTNAME=	${EMACSWIKI}-${EMACSWIKIVERSION}
@@ -19,7 +19,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 #WRKSRC=		${WRKDIR}/${EMACSWIKI}
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 
 LISPDIR=	${EMACS_LISPPREFIX}/emacs-wiki
 
