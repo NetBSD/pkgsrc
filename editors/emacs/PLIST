@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2008/05/09 17:01:58 jwise Exp $
+@comment $NetBSD: PLIST,v 1.20 2008/10/11 09:56:38 uebayasi Exp $
 bin/emacs-b2m
 bin/emacs-ctags
 bin/emacs-ebrowse
@@ -281,6 +281,7 @@ share/emacs/${PKGVERSION}/etc/images/gnus/kill-group.pbm
 share/emacs/${PKGVERSION}/etc/images/gnus/kill-group.xpm
 share/emacs/${PKGVERSION}/etc/images/gnus/mail-reply.pbm
 share/emacs/${PKGVERSION}/etc/images/gnus/mail-reply.xpm
+share/emacs/${PKGVERSION}/etc/images/gnus/mail-send.xpm
 share/emacs/${PKGVERSION}/etc/images/gnus/next-ur.pbm
 share/emacs/${PKGVERSION}/etc/images/gnus/next-ur.xpm
 share/emacs/${PKGVERSION}/etc/images/gnus/post.pbm
@@ -983,6 +984,7 @@ share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-extra.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-extra.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-indent.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-indent.elc
+share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-loaddefs.el
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-macs.el.gz
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-macs.elc
 share/emacs/${PKGVERSION}/lisp/emacs-lisp/cl-seq.el.gz
@@ -1178,8 +1180,6 @@ share/emacs/${PKGVERSION}/lisp/erc/erc-netsplit.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-netsplit.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-networks.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-networks.elc
-share/emacs/${PKGVERSION}/lisp/erc/erc-nicklist.el.gz
-share/emacs/${PKGVERSION}/lisp/erc/erc-nicklist.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-notify.el.gz
 share/emacs/${PKGVERSION}/lisp/erc/erc-notify.elc
 share/emacs/${PKGVERSION}/lisp/erc/erc-page.el.gz
@@ -1987,6 +1987,8 @@ share/emacs/${PKGVERSION}/lisp/net/rlogin.el.gz
 share/emacs/${PKGVERSION}/lisp/net/rlogin.elc
 share/emacs/${PKGVERSION}/lisp/net/snmp-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/net/snmp-mode.elc
+share/emacs/${PKGVERSION}/lisp/net/socks.el.gz
+share/emacs/${PKGVERSION}/lisp/net/socks.elc
 share/emacs/${PKGVERSION}/lisp/net/telnet.el.gz
 share/emacs/${PKGVERSION}/lisp/net/telnet.elc
 share/emacs/${PKGVERSION}/lisp/net/tls.el.gz
@@ -2313,6 +2315,10 @@ share/emacs/${PKGVERSION}/lisp/progmodes/sql.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/sql.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/tcl.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/tcl.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/vera-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/vera-mode.elc
+share/emacs/${PKGVERSION}/lisp/progmodes/verilog-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/progmodes/verilog-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/vhdl-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/progmodes/vhdl-mode.elc
 share/emacs/${PKGVERSION}/lisp/progmodes/which-func.el.gz
@@ -2454,10 +2460,14 @@ share/emacs/${PKGVERSION}/lisp/textmodes/artist.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/artist.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/bib-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/bib-mode.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/bibtex-style.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/bibtex-style.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/bibtex.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/bibtex.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/conf-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/conf-mode.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/css-mode.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/css-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/dns-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/dns-mode.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/enriched.el.gz
@@ -2472,6 +2482,16 @@ share/emacs/${PKGVERSION}/lisp/textmodes/makeinfo.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/makeinfo.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/nroff-mode.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/nroff-mode.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/org-export-latex.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/org-export-latex.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/org-irc.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/org-irc.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/org-mac-message.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/org-mac-message.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/org-mouse.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/org-mouse.elc
+share/emacs/${PKGVERSION}/lisp/textmodes/org-publish.el.gz
+share/emacs/${PKGVERSION}/lisp/textmodes/org-publish.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/org.el.gz
 share/emacs/${PKGVERSION}/lisp/textmodes/org.elc
 share/emacs/${PKGVERSION}/lisp/textmodes/page-ext.el.gz
@@ -2622,12 +2642,20 @@ share/emacs/${PKGVERSION}/lisp/userlock.el.gz
 share/emacs/${PKGVERSION}/lisp/userlock.elc
 share/emacs/${PKGVERSION}/lisp/vc-arch.el.gz
 share/emacs/${PKGVERSION}/lisp/vc-arch.elc
+share/emacs/${PKGVERSION}/lisp/vc-bzr.el.gz
+share/emacs/${PKGVERSION}/lisp/vc-bzr.elc
 share/emacs/${PKGVERSION}/lisp/vc-cvs.el.gz
 share/emacs/${PKGVERSION}/lisp/vc-cvs.elc
+share/emacs/${PKGVERSION}/lisp/vc-git.el.gz
+share/emacs/${PKGVERSION}/lisp/vc-git.elc
+share/emacs/${PKGVERSION}/lisp/vc-hg.el.gz
+share/emacs/${PKGVERSION}/lisp/vc-hg.elc
 share/emacs/${PKGVERSION}/lisp/vc-hooks.el.gz
 share/emacs/${PKGVERSION}/lisp/vc-hooks.elc
 share/emacs/${PKGVERSION}/lisp/vc-mcvs.el.gz
 share/emacs/${PKGVERSION}/lisp/vc-mcvs.elc
+share/emacs/${PKGVERSION}/lisp/vc-mtn.el.gz
+share/emacs/${PKGVERSION}/lisp/vc-mtn.elc
 share/emacs/${PKGVERSION}/lisp/vc-rcs.el.gz
 share/emacs/${PKGVERSION}/lisp/vc-rcs.elc
 share/emacs/${PKGVERSION}/lisp/vc-sccs.el.gz

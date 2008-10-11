@@ -1,8 +1,8 @@
-$NetBSD: patch-am,v 1.6 2007/06/11 13:57:20 markd Exp $
+$NetBSD: patch-am,v 1.7 2008/10/11 09:56:38 uebayasi Exp $
 
---- src/xterm.c.orig	2007-05-26 00:43:35.000000000 +1200
+--- src/xterm.c.orig	2008-10-10 10:35:49.000000000 +0900
 +++ src/xterm.c
-@@ -307,8 +307,6 @@ extern Lisp_Object Vx_no_window_manager;
+@@ -309,8 +309,6 @@ extern Lisp_Object Vx_no_window_manager;
  
  extern Lisp_Object Qeql;
  
