@@ -1,23 +1,23 @@
-# $NetBSD: Makefile,v 1.7 2008/04/03 09:34:40 joerg Exp $
+# $NetBSD: Makefile,v 1.8 2008/10/11 22:33:56 dholland Exp $
+#
 
-DISTNAME=	gcc-3.3.5
-PKGNAME=	libffi-2.0beta
-PKGREVISION=	2
+DISTNAME=	libffi-3.0.6
 CATEGORIES=	devel
-MASTER_SITES=	${MASTER_SITE_GNU:=gcc/gcc-3.3.5/}
-EXTRACT_SUFX=	.tar.bz2
+MASTER_SITES=	ftp://sourceware.org/pub/libffi/
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	asau@inbox.ru
 HOMEPAGE=	http://sources.redhat.com/libffi/
 COMMENT=	Foreign function interface
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 GNU_CONFIGURE=	yes
-CONFIGURE_ENV+=	with_target_subdir=.
-CONFIG_GUESS_OVERRIDE=	../config.guess
-CONFIG_SUB_OVERRIDE=	../config.sub
+CONFIGURE_ARGS=	--includedir=${PREFIX}/include
+USE_LIBTOOL=	yes
+USE_TOOLS+=	pkg-config
+USE_LANGUAGES=	c c++
+INFO_FILES=	# PLIST
 
-WRKSRC=		${WRKDIR}/${DISTNAME}/libffi
+PKGCONFIG_OVERRIDE+=	libffi.pc.in
 
 .include "../../mk/bsd.pkg.mk"
