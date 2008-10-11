@@ -1,0 +1,33 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/11 12:26:24 obache Exp $
+bin/tcrmgr
+bin/tcrmttest
+bin/tcrtest
+bin/ttserver
+bin/ttulmgr
+bin/ttultest
+include/tcrdb.h
+include/tculog.h
+include/ttutil.h
+lib/libtokyotyrant.1.22.0.so
+lib/libtokyotyrant.1.so
+lib/libtokyotyrant.a
+lib/libtokyotyrant.so
+lib/pkgconfig/tokyotyrant.pc
+man/man1/tcrmgr.1
+man/man1/tcrmttest.1
+man/man1/tcrtest.1
+man/man1/ttserver.1
+man/man1/ttulmgr.1
+man/man1/ttultest.1
+man/man3/tcrdb.3
+man/man3/tculog.3
+man/man3/ttutil.3
+man/man8/ttservctl.8
+sbin/ttservctl
+share/tokyotyrant/COPYING
+share/tokyotyrant/ChangeLog
+share/tokyotyrant/THANKS
+share/tokyotyrant/doc/index.html
+share/tokyotyrant/senatus.lua
+@dirrm share/tokyotyrant/doc
+@dirrm share/tokyotyrant
