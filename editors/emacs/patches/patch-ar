@@ -1,8 +1,8 @@
-$NetBSD: patch-ar,v 1.3 2005/12/29 13:56:51 joerg Exp $
+$NetBSD: patch-ar,v 1.4 2008/10/11 09:56:38 uebayasi Exp $
 
---- src/floatfns.c.orig	2005-12-29 13:31:17.000000000 +0000
+--- src/floatfns.c.orig	2008-10-10 10:35:49.000000000 +0900
 +++ src/floatfns.c
-@@ -107,9 +107,6 @@ extern double logb ();
+@@ -108,9 +108,6 @@ extern double logb ();
  #ifdef FLOAT_CHECK_ERRNO
  # include <errno.h>
  
