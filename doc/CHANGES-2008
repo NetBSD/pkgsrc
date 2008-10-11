@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2449 2008/10/11 10:01:04 uebayasi Exp $
+$NetBSD: CHANGES-2008,v 1.2450 2008/10/11 12:26:49 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4170,3 +4170,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/p5-version to 0.7600 [he 2008-10-10]
 	Updated editors/emacs to 22.3 [uebayasi 2008-10-11]
 	Updated editors/emacs-nox11 to 22.3 [uebayasi 2008-10-11]
+	Added databases/tokyotyrant version 1.1.4 [obache 2008-10-11]
