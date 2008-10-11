@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/03/03 17:45:34 jlam Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/11 09:31:55 uebayasi Exp $
 #
 
 DISTNAME=	cmake-mode
@@ -25,5 +25,5 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}
 	${INSTALL_DATA} ${WRKSRC}/cmake-mode.* ${DESTDIR}${EMACS_LISPPREFIX}
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

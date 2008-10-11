@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2007/10/29 04:57:17 uebayasi Exp $
+# $NetBSD: Makefile,v 1.25 2008/10/11 09:31:58 uebayasi Exp $
 
 DISTNAME=	w3-4.0pre.47
 PKGNAME=	${EMACS_PKGNAME_PREFIX}w3-4.0b47
@@ -28,6 +28,6 @@ ETCDIR=		${ETCDIR.${EMACS_FLAVOR}}
 ETCDIR.emacs=	${PREFIX}/share/w3
 ETCDIR.xemacs=	${EMACS_LISPPREFIX:H}/etc/w3
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 
 .include "../../mk/bsd.pkg.mk"

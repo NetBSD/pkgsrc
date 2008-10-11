@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/03/04 19:21:11 jlam Exp $
+# $NetBSD: Makefile,v 1.19 2008/10/11 09:31:57 uebayasi Exp $
 #
 
 DISTNAME=		bbdb-2.34
@@ -25,7 +25,7 @@ INFO_FILES=		# PLIST
 LISPDIR=		${EMACS_LISPPREFIX}/bbdb
 INSTALLATION_DIRS=	${EMACS_INFOPREFIX}
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 
 .if ${EMACS_FLAVOR} == "xemacs"
 CONFIGURE_ARGS+=	--with-emacs=xemacs

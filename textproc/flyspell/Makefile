@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2007/01/15 23:49:46 wiz Exp $
+# $NetBSD: Makefile,v 1.18 2008/10/11 09:31:58 uebayasi Exp $
 #
 
 DISTNAME=	flyspell-1.7m.el
@@ -10,6 +10,9 @@ EXTRACT_SUFX=	# empty
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www-sop.inria.fr/mimosa/personnel/Manuel.Serrano/flyspell/flyspell.html
 COMMENT=	Emacs/Xemacs on-the-fly spell checker
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}/flyspell
 
 DEPENDS+=	${EMACS_PKGNAME_PREFIX}ispell-emacs-[0-9]*:../../textproc/ispell-emacs
 
@@ -24,8 +27,7 @@ do-extract:
 	@${CP} ${DISTDIR}/${DIST_SUBDIR}/${DISTFILES} ${WRKSRC}
 
 do-install:
-	${INSTALL_DATA_DIR} ${EMACS_LISPPREFIX}/flyspell
-	${INSTALL_DATA} ${WRKSRC}/${DISTNAME} ${EMACS_LISPPREFIX}/flyspell/flyspell.el
+	${INSTALL_DATA} ${WRKSRC}/${DISTNAME} ${DESTDIR}${EMACS_LISPPREFIX}/flyspell/flyspell.el
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

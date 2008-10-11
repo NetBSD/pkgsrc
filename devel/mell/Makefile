@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/02 12:26:08 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/11 09:31:55 uebayasi Exp $
 #
 
 DISTNAME=	mell-1.0.0
@@ -17,5 +17,5 @@ USE_LANGUAGES=	# none
 
 CONFIGURE_ARGS+=	--with-emacs-sitelispdir=${EMACS_LISPPREFIX}
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"
