@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2007/01/18 19:13:10 rillig Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/10/11 22:01:13 schwarz Exp $
 bin/annotate
 bin/combineMUMs
 bin/delta-filter
@@ -16,6 +16,7 @@ bin/show-snps
 bin/show-tiling
 share/doc/mummer/README
 share/doc/mummer/differences.README
+share/doc/mummer/dnadiff.README
 share/doc/mummer/mapview.README
 share/doc/mummer/maxmat3man.tex
 share/doc/mummer/maxmat3src.pdf
@@ -91,6 +92,7 @@ share/doc/mummer/web/manual/osi.gif
 share/doc/mummer/web/manual/pro_proex.gif
 share/doc/mummer/web/mummer-help.gif
 share/doc/mummer/web/mummer-users.gif
+share/mummer/dnadiff
 share/mummer/exact-tandems
 share/mummer/mapview
 share/mummer/mummerplot
