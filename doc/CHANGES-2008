@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2454 2008/10/11 22:06:22 schwarz Exp $
+$NetBSD: CHANGES-2008,v 1.2455 2008/10/11 22:34:48 dholland Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4176,3 +4176,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/emacs-ilisp to 20021222nb4 [uwe 2008-10-11]
 	Updated devel/libosip to 3.1.0 [schwarz 2008-10-11]
 	Updated biology/mummer to 3.20 [schwarz 2008-10-11]
+	Updated devel/libffi to 3.0.6 [dholland 2008-10-11]
