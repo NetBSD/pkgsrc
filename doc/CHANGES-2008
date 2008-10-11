@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2453 2008/10/11 19:33:50 uwe Exp $
+$NetBSD: CHANGES-2008,v 1.2454 2008/10/11 22:06:22 schwarz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4174,3 +4174,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/autoswc to 1.6 [jmmv 2008-10-11]
 	Updated mail/libetpan to 0.57 [smb 2008-10-11]
 	Updated devel/emacs-ilisp to 20021222nb4 [uwe 2008-10-11]
+	Updated devel/libosip to 3.1.0 [schwarz 2008-10-11]
+	Updated biology/mummer to 3.20 [schwarz 2008-10-11]
