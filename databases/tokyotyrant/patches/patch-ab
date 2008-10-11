@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/10/11 12:26:24 obache Exp $
+
+--- configure.orig	2008-09-29 02:49:28.000000000 +0000
++++ configure
+@@ -4303,7 +4303,7 @@ _ACEOF
+ 
+ fi
+ 
+-if test "$enable_lua" == "yes"
++if test "$enable_lua" = "yes"
+ then
+ 
+ { echo "$as_me:$LINENO: checking for main in -llua" >&5
+@@ -5110,7 +5110,7 @@ echo "$as_me: error: tcutil.h is require
+ fi
+ 
+ 
+-if test "$enable_lua" == "yes"
++if test "$enable_lua" = "yes"
+ then
+   if test "${ac_cv_header_lua_h+set}" = set; then
+   { echo "$as_me:$LINENO: checking for lua.h" >&5
