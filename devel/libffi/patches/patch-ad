@@ -1,0 +1,15 @@
+$NetBSD: patch-ad,v 1.1 2008/10/11 22:33:56 dholland Exp $
+
+Install header files in backwards compatible way.
+
+--- libffi.pc.in.orig	2008-10-09 12:38:02.000000000 +0400
++++ libffi.pc.in	2008-10-09 12:41:54.000000000 +0400
+@@ -1,7 +1,7 @@
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+-includedir=${libdir}/@PACKAGE_NAME@-@PACKAGE_VERSION@/include
++includedir=@includedir@
+ 
+ Name: @PACKAGE_NAME@
+ Description: Library supporting Foreign Function Interfaces
