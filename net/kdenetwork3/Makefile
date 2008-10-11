@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.67 2008/02/20 10:00:24 markd Exp $
+# $NetBSD: Makefile,v 1.68 2008/10/11 19:12:30 markd Exp $
 
 DISTNAME=	kdenetwork-${_KDE_VERSION}
+PKGREVISION=	1
 CATEGORIES=	net
 COMMENT=	Network modules for the KDE integrated X11 desktop
 
@@ -62,6 +63,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
+.include "../../x11/libXxf86vm/buildlink3.mk"
 .include "../../x11/xextproto/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
