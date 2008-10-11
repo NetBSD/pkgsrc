@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/06/12 02:14:52 joerg Exp $
+# $NetBSD: Makefile,v 1.19 2008/10/11 09:31:58 uebayasi Exp $
 
 DISTNAME=		psgml-1.3.2
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME:S/-/-mode-/}
@@ -14,7 +14,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 EMACS_MODULES+=		base
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 
 .if ${EMACS_FLAVOR} != "emacs"
 BUILD_TARGET=	xemacs

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/02/22 19:01:21 wiz Exp $
+# $NetBSD: Makefile,v 1.16 2008/10/11 09:31:57 uebayasi Exp $
 
 DISTNAME=	gnus-5.10.8
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -25,5 +25,5 @@ GNU_CONFIGURE_INFODIR=	${PREFIX}/share/doc/gnus/info
 USE_TOOLS+=		makeinfo
 INFO_FILES=		# PLIST
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

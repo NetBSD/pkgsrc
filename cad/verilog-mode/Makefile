@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/03 01:50:27 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2008/10/11 09:31:54 uebayasi Exp $
 #
 
 DISTNAME=		verilog-mode-3.60
@@ -17,7 +17,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=			${WRKDIR}
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 
 .if ${EMACS_FLAVOR} == "emacs"
 EMACS=	emacs

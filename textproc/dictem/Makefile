@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/04/05 04:45:22 obache Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/11 09:31:58 uebayasi Exp $
 
 DISTNAME=		dictem-0.82
 PKGNAME=		${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -34,5 +34,5 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS}				\
 			${DESTDIR}${PREFIX}/share/doc/${PKGBASE}
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

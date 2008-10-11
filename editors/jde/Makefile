@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.24 2008/05/26 02:13:18 joerg Exp $
+# $NetBSD: Makefile,v 1.25 2008/10/11 09:31:56 uebayasi Exp $
 #
 
 DISTNAME=	jde-2.3.2
@@ -24,7 +24,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${DISTNAME}/lisp
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 
 # XEmacs has its own JDE package
 EMACS_VERSIONS_ACCEPTED=emacs21		# XXX Won't compile with emacs20...

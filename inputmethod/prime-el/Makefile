@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/03/02 02:51:51 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/11 09:31:57 uebayasi Exp $
 #
 
 DISTNAME=	prime-el-1.5.1.3
@@ -28,5 +28,5 @@ CONF_FILES+=	${PREFIX}/share/doc/prime/examples/Custom_prime-el.el \
 .include "../../devel/apel/buildlink3.mk"
 .include "../../devel/mell/buildlink3.mk"
 .include "../../inputmethod/prime/buildlink3.mk"
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

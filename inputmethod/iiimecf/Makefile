@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/03/04 15:55:13 jlam Exp $
+# $NetBSD: Makefile,v 1.10 2008/10/11 09:31:57 uebayasi Exp $
 #
 
 DISTNAME=	IIIMECF-0.6
@@ -23,7 +23,7 @@ do-install:
 		${INSTALL_DATA} $$f ${DESTDIR}${EMACS_LISPPREFIX}/iiimecf; \
 	done
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 
 .include "../../editors/mule-ucs/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

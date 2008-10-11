@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/07/14 12:56:09 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2008/10/11 09:31:57 uebayasi Exp $
 #
 
 DISTNAME=	lookup-1.4.1
@@ -22,7 +22,7 @@ INFO_FILES=	# PLIST
 
 CONFIGURE_ARGS+=${EMACS_FLAVOR}
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 
 .include "../../devel/apel/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
