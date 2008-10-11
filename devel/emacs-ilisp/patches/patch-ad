@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2008/10/11 19:25:53 uwe Exp $
+
+--- cl-chs-init.lisp.orig	2002-03-26 12:41:04.000000000 +0300
++++ cl-chs-init.lisp
+@@ -65,7 +65,7 @@
+ 
+   (when (boundp 'system::*source-file-types*)
+     (pushnew (pathname ".lisp") system::*source-file-types* :test #'equalp))
+-  (sys::debug-unwind))
++  (sys::debug-unwind nil))
+ 
+ 
+ ;;; end of file -- cl-chs-init.lsp --
