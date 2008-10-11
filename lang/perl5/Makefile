@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.138 2008/10/10 21:58:43 he Exp $
+# $NetBSD: Makefile,v 1.139 2008/10/11 08:59:48 seb Exp $
 
 DISTNAME=	perl-5.10.0
 CATEGORIES=	lang devel perl5
@@ -263,7 +263,7 @@ CONFIGURE_ARGS+=	-Duse64bitint
 SUBST_CLASSES+=		rm
 SUBST_STAGE.rm=		pre-install
 SUBST_FILES.rm=		lib/Config_heavy.pl
-SUBST_SED.rm=	-e "s!^rm_try=\'/.*work/.tools/bin/rm -f!rm_try=\'/bin/rm -f!"
+SUBST_SED.rm=	-e "s!^rm_try=\'/.*/\.tools/bin/rm -f!rm_try=\'/bin/rm -f!"
 
 # Replace our perl as the interpreter
 REPLACE_PERL+=		lib/Class/ISA.pm
