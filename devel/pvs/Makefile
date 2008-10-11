@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.34 2008/05/26 02:13:18 joerg Exp $
+# $NetBSD: Makefile,v 1.35 2008/10/11 09:31:55 uebayasi Exp $
 #
 
 DISTNAME=		pvs-${VERSION}
@@ -56,5 +56,5 @@ do-install:
 	${CHMOD} 755 ${DESTDIR}${PREFIX}/pvs/pvs
 
 .include "../../mk/tex.buildlink3.mk"
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

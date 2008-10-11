@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.22 2008/04/12 22:43:13 jlam Exp $
+# $NetBSD: Makefile,v 1.23 2008/10/11 09:31:58 uebayasi Exp $
 
 DISTNAME=	emacs-w3m-1.4.4
 PKGREVISION=	1
@@ -9,6 +9,9 @@ MAINTAINER=	uebayasi@NetBSD.org
 HOMEPAGE=	http://emacs-w3m.namazu.org/
 COMMENT=	Simple w3m interface for Emacs
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS=	${ETCDIR}
+
 USE_TOOLS+=	makeinfo
 INFO_FILES=	YES
 
@@ -16,9 +19,10 @@ DEPENDS+=	w3m>=0.5.1nb2:../../www/w3m
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS+=--with-emacs=${EMACS_BIN:Q}
-CONFIGURE_ARGS+=--with-icondir=${PREFIX}/${ETCDIR}
+CONFIGURE_ARGS+=--with-icondir=${ICONDIR}
 BUILD_TARGET=	default
 INSTALL_TARGET=	${INSTALL_TARGET.${EMACS_FLAVOR}}
+MAKE_FLAGS=	prefix=${DESTDIR}${PREFIX} ICONDIR=${DESTDIR}${ICONDIR}
 PLIST_SUBST+=	ETCDIR=${ETCDIR:Q}
 
 SUBST_CLASSES+=	fix-icondir
@@ -27,7 +31,7 @@ SUBST_FILES.fix-icondir=	Makefile.in w3m.el w3mhack.el
 SUBST_SED.fix-icondir=		-e 's|etc/images/w3m|etc/w3m|g' \
 				-e 's|images/w3m|w3m|g'
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 
 # GNU Emacs 21 or later and XEmacs have GUI support
 PLIST_VARS+=	gui
@@ -38,6 +42,7 @@ PLIST.gui=	yes
 
 DOCUMENTS=	COPYING ChangeLog ChangeLog.1 README README.ja
 ETCDIR=		${ETCDIR.${EMACS_FLAVOR}}
+ICONDIR=	${PREFIX}/${ETCDIR}
 
 INSTALL_TARGET.emacs=	install install-icons
 INSTALL_TARGET.xemacs=	install-package
@@ -45,8 +50,7 @@ ETCDIR.emacs=		share/emacs/${_EMACS_VERSION_NOREV}/etc/w3m
 ETCDIR.xemacs=		lib/xemacs/site-packages/etc/w3m
 
 post-install:
-	@${INSTALL_DATA_DIR} ${PREFIX}/${ETCDIR}
-	for f in ${DOCUMENTS}; do ${INSTALL_DATA} ${WRKSRC}/$$f ${PREFIX}/${ETCDIR}; done
+	for f in ${DOCUMENTS}; do ${INSTALL_DATA} ${WRKSRC}/$$f ${DESTDIR}${PREFIX}/${ETCDIR}; done
 
 .include "options.mk"
 

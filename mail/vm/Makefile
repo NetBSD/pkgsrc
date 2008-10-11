@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.33 2008/03/04 17:57:20 jlam Exp $
+# $NetBSD: Makefile,v 1.34 2008/10/11 09:31:57 uebayasi Exp $
 
 DISTNAME=	vm-7.19
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -48,6 +48,6 @@ do-install:
 	cd ${WRKSRC} && ${INSTALL_PROGRAM} qp-decode qp-encode		\
 		base64-decode base64-encode ${DESTDIR}${PREFIX}/bin
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 
 .include "../../mk/bsd.pkg.mk"
