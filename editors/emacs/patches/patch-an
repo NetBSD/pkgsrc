@@ -1,8 +1,8 @@
-$NetBSD: patch-an,v 1.3 2005/12/29 13:56:51 joerg Exp $
+$NetBSD: patch-an,v 1.4 2008/10/11 09:56:38 uebayasi Exp $
 
---- src/emacs.c.orig	2005-12-29 13:27:49.000000000 +0000
+--- src/emacs.c.orig	2008-10-10 10:35:49.000000000 +0900
 +++ src/emacs.c
-@@ -712,9 +712,6 @@ main (argc, argv, envp)
+@@ -809,9 +809,6 @@ main (argc, argv
    char stack_bottom_variable;
    int do_initial_setlocale;
    int skip_args = 0;
