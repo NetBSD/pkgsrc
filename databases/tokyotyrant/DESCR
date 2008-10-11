@@ -1,0 +1,16 @@
+Tokyo Tyrant is a package of network interface to the DBM called Tokyo Cabinet.
+Though the DBM has high performance, you might bother in case that multiple
+processes share the same database, or remote processes access the database.
+Thus, Tokyo Tyrant is provided for concurrent and remote connections to Tokyo
+Cabinet. It is composed of the server process managing a database and its
+access library for client applications.
+
+The server features high concurrency due to thread-pool modeled implementation
+and the epoll/kqueue mechanism of the modern Linux/*BSD kernel. The server and
+its clients communicate with each other by simple binary protocol on TCP/IP.
+Protocols compatible with memcached and HTTP/1.1 are also supported so that
+almost all principal platforms and programming languages can use Tokyo Tyrant.
+High availability and high integrity are also featured due to hot such
+mechanisms as hot backup, update logging, and replication.
+
+As for now, the server works on Linux, FreeBSD, Mac OS X only.
