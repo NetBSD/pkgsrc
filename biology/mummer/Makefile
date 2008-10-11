@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2008/05/25 21:42:20 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2008/10/11 22:01:13 schwarz Exp $
 #
 
-DISTNAME=		MUMmer3.19
-PKGNAME=		mummer-3.19
+DISTNAME=		MUMmer3.20
+PKGNAME=		mummer-3.20
 CATEGORIES=		biology
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=mummer/}
 
@@ -30,7 +30,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/aux_bin/${p} ${DESTDIR}${PREFIX}/bin
 .endfor
 .for f in run-mummer1 run-mummer3 nucmer promer exact-tandems 	  \
-	mapview mummerplot nucmer2xfig
+	mapview mummerplot nucmer2xfig dnadiff
 	${INSTALL_SCRIPT} ${WRKSRC}/${f} ${DESTDIR}${PREFIX}/share/mummer
 .endfor
 	cd ${WRKSRC}/docs && pax -wr -s ',^Makefile$$,,' * \
