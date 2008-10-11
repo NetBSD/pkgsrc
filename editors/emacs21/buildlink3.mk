@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2007/10/29 12:40:03 uebayasi Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/10/11 09:31:56 uebayasi Exp $
 #
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
@@ -13,9 +13,9 @@ BUILDLINK_PACKAGES+=	emacs
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}emacs
 
 .if ${EMACS_BUILDLINK3_MK} == "+"
-.include "../../mk/emacs.mk"
-BUILDLINK_API_DEPENDS.emacs+=	${_EMACS_REQD.emacs21}
-BUILDLINK_PKGSRCDIR.emacs?=	${_EMACS_DEP.emacs21}
+.include "../../editors/emacs/modules.mk"
+BUILDLINK_API_DEPENDS.emacs+=	${_EMACS_REQD}
+BUILDLINK_PKGSRCDIR.emacs?=	${_EMACS_PKGDIR}
 .endif	# EMACS_BUILDLINK3_MK
 
 BUILDLINK_CONTENTS_FILTER.emacs=	${EGREP} '.*\.el$$|.*\.elc$$'

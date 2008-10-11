@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/04 15:55:13 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2008/10/11 09:31:57 uebayasi Exp $
 
 .include	"../../inputmethod/anthy/Makefile.common"
 PKGNAME=	${EMACS_PKGNAME_PREFIX}anthy-elisp-${ANTHY_VERSION}
@@ -16,7 +16,7 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ENV+=	EMACS=${EMACS_BIN:Q}
 EMACS_MODULES+=	base leim
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 
 do-build:
 	cd ${WRKSRC}/src-util && ${MAKE} elc-stamp

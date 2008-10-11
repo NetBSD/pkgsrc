@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/12 10:12:36 dsainty Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/11 09:31:55 uebayasi Exp $
 #
 
 DISTNAME=	php-mode-1.4.0
@@ -22,5 +22,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/php-mode.e* \
 		${DESTDIR}${EMACS_LISPPREFIX}/php-mode
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"

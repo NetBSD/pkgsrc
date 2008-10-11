@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2006/03/04 21:29:46 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2008/10/11 09:31:56 uebayasi Exp $
 
 DISTNAME=	artist-1.2.6
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -10,20 +10,21 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.lysator.liu.se/~tab/artist/
 COMMENT=	Elisp drawing package with mouse and keyboard support
 
+PKG_DESTDIR_SUPPORT=	user-destdir
+INSTALLATION_DIRS+=	${DOCDIR} \
+			${EMACS_LISPPREFIX:C|^${PREFIX}/||}/artist
+
 GNU_CONFIGURE=		yes
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 
-.if ${EMACS_FLAVOR} == "xemacs"
-MAKE_FLAGS+=	EMACS=xemacs
-MAKE_FLAGS+=	lispdir=${EMACS_LISPPREFIX}/artist
-.endif
+MAKE_FLAGS+=	EMACS=${EMACS_FLAVOR} \
+		lispdir=${DESTDIR}${EMACS_LISPPREFIX}/artist
 
 DOCS=		BUGS COPYING ChangeLog INSTALL README TODO
-DOCDIR=		${PREFIX}/share/doc/artist
+DOCDIR=		share/doc/artist
 
 post-install:
-	${INSTALL_DATA_DIR} ${DOCDIR}
-	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DOCDIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${DOCS} ${DESTDIR}${PREFIX}/${DOCDIR}
 
 .include "../../mk/bsd.pkg.mk"
