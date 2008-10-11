@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: dbus.sh,v 1.8 2008/09/24 11:37:31 taca Exp $
+# $NetBSD: dbus.sh,v 1.9 2008/10/11 19:58:24 markd Exp $
 #
 # PROVIDE: dbus
 # REQUIRE: DAEMON
@@ -22,7 +22,6 @@ dbus_prestart() {
 		@CHMOD@ 0755 $dir
 		@CHOWN@ @DBUS_USER@:@DBUS_GROUP@ $dir
 	fi
-	done
 	@PREFIX@/bin/dbus-uuidgen --ensure
 }
 
