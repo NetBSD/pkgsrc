@@ -1,6 +1,6 @@
 #!@SH@
 #
-# $NetBSD: autoswc.sh,v 1.2 2004/10/15 20:00:57 tv Exp $
+# $NetBSD: autoswc.sh,v 1.3 2008/10/11 18:03:58 jmmv Exp $
 #
 # autoswc - Generates system wide cache files for GNU autoconf
 # Copyright (c) 2004 Julio M. Merino Vidal <jmmv@NetBSD.org>
@@ -119,7 +119,7 @@ cd ${wrkdir}
 # - NEWS README AUTHORS ChangeLog - empty, just need to be present.
 echo "# empty" >Makefile.am
 
-echo "AC_INIT(configure.ac)" >configure.ac
+echo "AC_INIT(configure.ac, 1)" >configure.ac
 echo "AM_INIT_AUTOMAKE" >>configure.ac
 cat ${confsrc} >>configure.ac
 echo "AC_CACHE_SAVE" >>configure.ac
