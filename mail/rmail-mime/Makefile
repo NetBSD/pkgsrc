@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/03/04 17:57:19 jlam Exp $
+# $NetBSD: Makefile,v 1.9 2008/10/11 09:31:57 uebayasi Exp $
 #
 
 DISTNAME=	rmail-mime-1.13.0
@@ -14,7 +14,7 @@ DEPENDS+=	${EMACS_PKGNAME_PREFIX}semi>=1.14.4:../../devel/semi
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 
 SITE_LISP=	${EMACS_LISPPREFIX:C|^${PREFIX}/||}
 PLIST_SUBST+=	SITE_LISP=${SITE_LISP:Q}

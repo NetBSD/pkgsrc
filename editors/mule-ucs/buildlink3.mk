@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.1 2007/10/29 12:41:17 uebayasi Exp $
+# $NetBSD: buildlink3.mk,v 1.2 2008/10/11 09:31:56 uebayasi Exp $
 #
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
@@ -9,7 +9,7 @@ MULE_UCS_BUILDLINK3_MK:=	${MULE_UCS_BUILDLINK3_MK}+
 # incorporated Unicode support.
 #
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .if ${EMACS_FLAVOR} == "emacs" && ${EMACS_VERSION_MAJOR} < 22
 
 .if ${BUILDLINK_DEPTH} == "+"

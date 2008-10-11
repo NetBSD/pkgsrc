@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/09/16 10:30:25 wiz Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/11 09:31:58 uebayasi Exp $
 #
 
 DISTNAME=	muse-3.11
@@ -33,5 +33,5 @@ post-install:
 	${INSTALL_DATA} ${WRKSRC}/examples/*.png \
 		${PREFIX}/share/examples/emacs-muse
 
-.include "../../mk/emacs.mk"
+.include "../../editors/emacs/modules.mk"
 .include "../../mk/bsd.pkg.mk"
