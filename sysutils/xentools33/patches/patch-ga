@@ -1,0 +1,111 @@
+$NetBSD: patch-ga,v 1.1.2.2 2008/10/11 18:27:49 tron Exp $
+
+--- python/xen/xend/XendDomainInfo.py.orig	2008-08-22 09:49:08.000000000 +0000
++++ python/xen/xend/XendDomainInfo.py
+@@ -455,8 +455,8 @@ class XendDomainInfo:
+             try:
+                 self._constructDomain()
+                 self._storeVmDetails()
+-                self._createDevices()
+                 self._createChannels()
++                self._createDevices()
+                 self._storeDomDetails()
+                 self._endRestore()
+             except:
+@@ -1232,31 +1232,6 @@ class XendDomainInfo:
+     def permissionsVm(self, *args):
+         return xstransact.SetPermissions(self.vmpath, *args)
+ 
+-
+-    def _readVmTxn(self, transaction,  *args):
+-        paths = map(lambda x: self.vmpath + "/" + x, args)
+-        return transaction.read(*paths)
+-
+-    def _writeVmTxn(self, transaction,  *args):
+-        paths = map(lambda x: self.vmpath + "/" + x, args)
+-        return transaction.write(*paths)
+-
+-    def _removeVmTxn(self, transaction,  *args):
+-        paths = map(lambda x: self.vmpath + "/" + x, args)
+-        return transaction.remove(*paths)
+-
+-    def _gatherVmTxn(self, transaction,  *args):
+-        paths = map(lambda x: self.vmpath + "/" + x, args)
+-        return transaction.gather(paths)
+-
+-    def storeVmTxn(self, transaction,  *args):
+-        paths = map(lambda x: self.vmpath + "/" + x, args)
+-        return transaction.store(*paths)
+-
+-    def permissionsVmTxn(self, transaction,  *args):
+-        paths = map(lambda x: self.vmpath + "/" + x, args)
+-        return transaction.set_permissions(*paths)
+-
+     #
+     # Function to update xenstore /dom/*
+     #
+@@ -1304,8 +1279,11 @@ class XendDomainInfo:
+     def _recreateDomFunc(self, t):
+         t.remove()
+         t.mkdir()
+-        t.set_permissions({'dom' : self.domid})
++        t.set_permissions({'dom' : self.domid, 'read' : True})
+         t.write('vm', self.vmpath)
++        for i in [ 'device', 'control', 'error' ]:
++            t.mkdir(i)
++            t.set_permissions(i, {'dom' : self.domid})
+ 
+     def _storeDomDetails(self):
+         to_store = {
+@@ -2390,11 +2368,11 @@ class XendDomainInfo:
+ 
+         paths = self._prepare_phantom_paths()
+ 
+-        self._cleanupVm()
+         if self.dompath is not None:
+             self.destroyDomain()
+ 
+         self._cleanup_phantom_devs(paths)
++        self._cleanupVm()
+ 
+         if "transient" in self.info["other_config"] \
+            and bool(self.info["other_config"]["transient"]):
+@@ -2731,7 +2709,6 @@ class XendDomainInfo:
+         self._writeVm(to_store)
+         self._setVmPermissions()
+ 
+-
+     def _setVmPermissions(self):
+         """Allow the guest domain to read its UUID.  We don't allow it to
+         access any other entry, for security."""
+@@ -2750,7 +2727,7 @@ class XendDomainInfo:
+              log.warn("".join(traceback.format_stack()))
+              return self._stateGet()
+          else:
+-             raise AttributeError()
++             raise AttributeError(name)
+ 
+     def __setattr__(self, name, value):
+         if name == "state":
+@@ -2864,12 +2841,6 @@ class XendDomainInfo:
+                                   ignore_devices = ignore_store,
+                                   legacy_only = legacy_only)
+ 
+-        #if not ignore_store and self.dompath:
+-        #    vnc_port = self.readDom('console/vnc-port')
+-        #    if vnc_port is not None:
+-        #        result.append(['device',
+-        #                       ['console', ['vnc-port', str(vnc_port)]]])
+-
+         return result
+ 
+     # Xen API
+@@ -3135,7 +3106,7 @@ class XendDomainInfo:
+             if not config.has_key('device'):
+                 devid = config.get('id')
+                 if devid != None:
+-                    config['device'] = 'eth%d' % devid
++                    config['device'] = 'eth%s' % devid
+                 else:
+                     config['device'] = ''
+ 
