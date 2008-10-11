@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2448 2008/10/10 22:09:28 he Exp $
+$NetBSD: CHANGES-2008,v 1.2449 2008/10/11 10:01:04 uebayasi Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4168,3 +4168,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/pkg_comp to 1.31 [sborrill 2008-10-10]
 	Updated lang/perl5 to 5.10.0 [he 2008-10-10]
 	Updated devel/p5-version to 0.7600 [he 2008-10-10]
+	Updated editors/emacs to 22.3 [uebayasi 2008-10-11]
+	Updated editors/emacs-nox11 to 22.3 [uebayasi 2008-10-11]
