@@ -1,10 +1,10 @@
-$NetBSD: patch-xx,v 1.7 2007/06/11 13:57:21 markd Exp $
+$NetBSD: patch-xx,v 1.8 2008/10/11 09:56:38 uebayasi Exp $
 
 Following breaks gtk option as prefers /usr/X11R6 libs to those in /usr/pkg,
 and is not needed as these get set in enough other places - at least for
 pkgsrc.
 
---- src/s/netbsd.h.orig	2007-06-11 08:57:06.000000000 +1200
+--- src/s/netbsd.h.orig	2008-10-10 10:35:49.000000000 +0900
 +++ src/s/netbsd.h
 @@ -102,12 +102,6 @@ Boston, MA 02110-1301, USA.  */
  #define AMPERSAND_FULL_NAME

@@ -1,6 +1,6 @@
-$NetBSD: patch-av,v 1.4 2007/06/11 13:57:20 markd Exp $
+$NetBSD: patch-av,v 1.5 2008/10/11 09:56:38 uebayasi Exp $
 
---- src/dispnew.c.orig	2007-04-17 04:21:18.000000000 +1200
+--- src/dispnew.c.orig	2008-10-10 10:35:49.000000000 +0900
 +++ src/dispnew.c
 @@ -6167,9 +6167,6 @@ window_change_signal (signalnum) /* If w
       int signalnum;		/* some compilers complain in signal calls.  */

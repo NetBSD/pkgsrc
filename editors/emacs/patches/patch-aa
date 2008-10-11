@@ -1,6 +1,6 @@
-$NetBSD: patch-aa,v 1.13 2007/06/11 13:57:17 markd Exp $
+$NetBSD: patch-aa,v 1.14 2008/10/11 09:56:38 uebayasi Exp $
 
---- man/Makefile.in.orig	2007-06-09 15:11:07.000000000 +1200
+--- man/Makefile.in.orig	2008-10-10 10:35:49.000000000 +0900
 +++ man/Makefile.in
 @@ -36,7 +36,7 @@ MAKEINFO = makeinfo --force
  INFO_TARGETS = ../info/emacs ../info/ccmode ../info/cl \
@@ -11,7 +11,7 @@ $NetBSD: patch-aa,v 1.13 2007/06/11 13:57:17 markd Exp $
  		../info/sc ../info/vip ../info/viper ../info/widget \
  		../info/efaq ../info/ada-mode ../info/autotype ../info/calc \
  		../info/idlwave ../info/eudc ../info/ebrowse ../info/pcl-cvs \
-@@ -119,6 +119,7 @@ EMACSSOURCES= \
+@@ -120,6 +120,7 @@ EMACSSOURCES= \
  	${srcdir}/kmacro.texi \
  	$(EMACS_XTRA)
  
@@ -19,7 +19,7 @@ $NetBSD: patch-aa,v 1.13 2007/06/11 13:57:17 markd Exp $
  info: $(top_srcdir)/info $(INFO_TARGETS)
  
  $(top_srcdir)/info:
-@@ -135,12 +136,6 @@ dvi: $(DVI_TARGETS)
+@@ -136,12 +137,6 @@ dvi: $(DVI_TARGETS)
  # the @setfilename directive in info.texi, which is required for
  # the Texinfo distribution.
  
