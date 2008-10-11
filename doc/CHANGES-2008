@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2452 2008/10/11 19:30:26 smb Exp $
+$NetBSD: CHANGES-2008,v 1.2453 2008/10/11 19:33:50 uwe Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4173,3 +4173,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added databases/tokyotyrant version 1.1.4 [obache 2008-10-11]
 	Updated pkgtools/autoswc to 1.6 [jmmv 2008-10-11]
 	Updated mail/libetpan to 0.57 [smb 2008-10-11]
+	Updated devel/emacs-ilisp to 20021222nb4 [uwe 2008-10-11]
