@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/10/12 22:59:39 he Exp $
+
+SHA1 (CatalystX-CRUD-ModelAdapter-DBIC-0.07.tar.gz) = d719a4afee93d3843d31e338da29c735e8d65d47
+RMD160 (CatalystX-CRUD-ModelAdapter-DBIC-0.07.tar.gz) = 6d9aaed762680bb1e4825f5841842e01761dc784
+Size (CatalystX-CRUD-ModelAdapter-DBIC-0.07.tar.gz) = 53402 bytes
