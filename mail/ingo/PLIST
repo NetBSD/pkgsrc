@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/05/26 12:56:16 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/10/12 12:04:50 adrianp Exp $
 share/doc/ingo/INSTALL
 share/doc/ingo/README
 share/doc/ingo/RELEASE_NOTES
@@ -56,6 +56,8 @@ share/horde/ingo/locale/el_GR/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/en_US/help.xml
 share/horde/ingo/locale/es_ES/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/es_ES/help.xml
+share/horde/ingo/locale/eu_ES/LC_MESSAGES/ingo.mo
+share/horde/ingo/locale/eu_ES/help.xml
 share/horde/ingo/locale/et_EE/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/fi_FI/LC_MESSAGES/ingo.mo
 share/horde/ingo/locale/fi_FI/help.xml
@@ -90,6 +92,7 @@ share/horde/ingo/po/de_DE.po
 share/horde/ingo/po/el_GR.po
 share/horde/ingo/po/es_ES.po
 share/horde/ingo/po/et_EE.po
+share/horde/ingo/po/eu_ES.po
 share/horde/ingo/po/fi_FI.po
 share/horde/ingo/po/fr_FR.po
 share/horde/ingo/po/hu_HU.po
@@ -118,6 +121,8 @@ share/horde/ingo/script.php
 share/horde/ingo/scripts/ingo-postfix-policyd
 share/horde/ingo/scripts/sql/ingo.oci8.sql
 share/horde/ingo/scripts/sql/ingo.sql
+share/horde/ingo/scripts/sql/ingo.xml
+share/horde/ingo/scripts/upgrades/1.2_to_1.2.1.sql
 share/horde/ingo/scripts/upgrades/convert_datatree_shares_to_sql.php
 share/horde/ingo/scripts/upgrades/convert_imp_filters.php
 share/horde/ingo/scripts/upgrades/convert_prefs_to_sql.php
@@ -239,6 +244,8 @@ share/horde/ingo/whitelist.php
 @dirrm share/horde/ingo/locale/fr_FR
 @dirrm share/horde/ingo/locale/fi_FI/LC_MESSAGES
 @dirrm share/horde/ingo/locale/fi_FI
+@dirrm share/horde/ingo/locale/eu_ES/LC_MESSAGES
+@dirrm share/horde/ingo/locale/eu_ES
 @dirrm share/horde/ingo/locale/et_EE/LC_MESSAGES
 @dirrm share/horde/ingo/locale/et_EE
 @dirrm share/horde/ingo/locale/es_ES/LC_MESSAGES
