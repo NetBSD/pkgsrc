@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.4 2008/10/06 14:08:48 taca Exp $
+# $NetBSD: options.mk,v 1.5 2008/10/12 13:05:01 taca Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.drupal-translations
 
@@ -6,8 +6,9 @@ PKG_OPTIONS_VAR=	PKG_OPTIONS.drupal-translations
 # directory structure.
 #
 # Broken directory structure: eo vi
-# development version only: ar fr nb nn pt th tr
-DL_SUPPORTED_LANGUAGES=	cs da de el es fi gu he hu ja lt nl pl pt-br ro \
+# Development version only: ar fr nn pt th tr
+# Empty, LICENSE.it.txt only: it
+DL_SUPPORTED_LANGUAGES=	cs da de el es fi gu he hu ja lt nb nl pl pt-br ro \
 			sk sv uk-ua zh-cn zh-tw
 
 DL_TRANSLATIONS.cs=	cs-6.x-1.9.tar.gz
@@ -21,6 +22,7 @@ DL_TRANSLATIONS.he=	he-6.x-1.0.tar.gz
 DL_TRANSLATIONS.hu=	hu-6.x-1.0.tar.gz
 DL_TRANSLATIONS.ja=	ja-6.x-1.2.tar.gz
 DL_TRANSLATIONS.lt=	lt-6.x-1.2.tar.gz
+DL_TRANSLATIONS.nb=	nb-6.x-1.0.tar.gz
 DL_TRANSLATIONS.nl=	nl-6.x-1.1.tar.gz
 DL_TRANSLATIONS.pl=	pl-6.x-0.3.tar.gz
 DL_TRANSLATIONS.pt-br=	pt-br-6.x-1.0-rc5.tar.gz
