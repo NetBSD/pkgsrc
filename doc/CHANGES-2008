@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2457 2008/10/12 00:34:57 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.2458 2008/10/12 04:15:17 tonnerre Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4179,3 +4179,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libffi to 3.0.6 [dholland 2008-10-11]
 	Updated www/drupal to 5.11 [adrianp 2008-10-12]
 	Updated www/drupal6 to 6.5 [adrianp 2008-10-12]
+	Updated chat/konversation to 1.1 [tonnerre 2008-10-12]
