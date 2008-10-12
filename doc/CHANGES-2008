@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2472 2008/10/12 13:06:42 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2473 2008/10/12 13:14:54 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4193,3 +4193,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/apache22 to 2.2.9nb5 [tron 2008-10-12]
 	Updated security/ap-modsecurity2 to 2.5.7 [adrianp 2008-10-12]
 	Updated www/drupal6-translations to 20081012 [taca 2008-10-12]
+	Updated graphics/graphviz to 2.16.1nb3 [tron 2008-10-12]
