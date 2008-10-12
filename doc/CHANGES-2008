@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2455 2008/10/11 22:34:48 dholland Exp $
+$NetBSD: CHANGES-2008,v 1.2456 2008/10/12 00:33:05 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4177,3 +4177,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libosip to 3.1.0 [schwarz 2008-10-11]
 	Updated biology/mummer to 3.20 [schwarz 2008-10-11]
 	Updated devel/libffi to 3.0.6 [dholland 2008-10-11]
+	Updated www/drupal to 5.11 [adrianp 2008-10-12]
