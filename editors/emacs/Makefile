@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.115 2008/10/11 09:56:38 uebayasi Exp $
+# $NetBSD: Makefile,v 1.116 2008/10/12 09:45:21 markd Exp $
 
 PKGNAME?=	${DISTNAME}
 COMMENT?=	GNU editing macros (editor)
@@ -58,13 +58,6 @@ CPPFLAGS+=		-DDFLY_PRE_17_CRT
 post-extract:
 	cp ${FILESDIR}/site-init.el ${WRKSRC}/lisp
 	cp ${FILESDIR}/dragonfly.h ${WRKSRC}/src/s
-
-# for patch-ac
-post-build:
-	(cd ${WRKSRC}/lisp; ${MAKE_PROGRAM} files.elc)
-	(cd ${WRKSRC}/lisp; ${MAKE_PROGRAM} obsolete/fast-lock.elc)
-	touch ${WRKSRC}/etc/DOC
-	touch ${WRKSRC}/src/emacs
 
 .include "../../mk/oss.buildlink3.mk"
 .include "../../mk/termcap.buildlink3.mk"
