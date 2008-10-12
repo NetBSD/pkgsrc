@@ -1,8 +1,8 @@
-$NetBSD: patch-al,v 1.1.1.1 2008/05/15 19:43:47 adrianp Exp $
+$NetBSD: patch-al,v 1.2 2008/10/12 13:57:27 adrianp Exp $
 
---- src/modules/rlm_preprocess/rlm_preprocess.c.orig	2008-03-05 11:13:21.000000000 +0100
-+++ src/modules/rlm_preprocess/rlm_preprocess.c	2008-05-14 22:59:18.000000000 +0200
-@@ -130,7 +130,7 @@
+--- src/modules/rlm_preprocess/rlm_preprocess.c.orig	2008-09-25 10:41:26.000000000 +0200
++++ src/modules/rlm_preprocess/rlm_preprocess.c
+@@ -130,7 +130,7 @@ static void cisco_vsa_hack(VALUE_PAIR *v
  		/*
  		 *  No weird packing.  Ignore it.
  		 */
@@ -11,7 +11,7 @@ $NetBSD: patch-al,v 1.1.1.1 2008/05/15 19:43:47 adrianp Exp $
  		if (!ptr) continue;
  
  		/*
-@@ -148,7 +148,7 @@
+@@ -148,7 +148,7 @@ static void cisco_vsa_hack(VALUE_PAIR *v
  			const char *p;
  			DICT_ATTR	*dattr;
  
@@ -20,7 +20,7 @@ $NetBSD: patch-al,v 1.1.1.1 2008/05/15 19:43:47 adrianp Exp $
  			gettoken(&p, newattr, sizeof(newattr));
  
  			if (((dattr = dict_attrbyname(newattr)) != NULL) &&
-@@ -233,10 +233,10 @@
+@@ -233,10 +233,10 @@ static void rad_mangle(rlm_preprocess_t 
  		 *
  		 *	FIXME: should we handle this as a REALM ?
  		 */
@@ -33,7 +33,7 @@ $NetBSD: patch-al,v 1.1.1.1 2008/05/15 19:43:47 adrianp Exp $
  			namepair->length = strlen(newname);
  		}
  	}
-@@ -404,9 +404,9 @@
+@@ -404,9 +404,9 @@ static int huntgroup_access(REQUEST *req
  						       &request->packet->vps,
  						       PW_HUNTGROUP_NAME,
  						       PW_TYPE_STRING);
@@ -45,19 +45,19 @@ $NetBSD: patch-al,v 1.1.1.1 2008/05/15 19:43:47 adrianp Exp $
  			}
  			r = RLM_MODULE_OK;
  		}
-@@ -581,7 +581,7 @@
+@@ -581,7 +581,7 @@ static int preprocess_authorize(void *in
  				  data->huntgroups)) != RLM_MODULE_OK) {
  		char buf[1024];
- 		radlog(L_AUTH, "No huntgroup access: [%s] (%s)",
+ 		radlog_request(L_AUTH, 0, request, "No huntgroup access: [%s] (%s)",
 -		       request->username ? request->username->vp_strvalue : "<NO User-Name>",
 +		       request->username ? (char *)request->username->vp_strvalue : "<NO User-Name>",
  		       auth_name(buf, sizeof(buf), request, 1));
  		return r;
  	}
-@@ -632,7 +632,7 @@
+@@ -632,7 +632,7 @@ static int preprocess_preaccounting(void
  				  data->huntgroups)) != RLM_MODULE_OK) {
  		char buf[1024];
- 		radlog(L_INFO, "No huntgroup access: [%s] (%s)",
+ 		radlog_request(L_INFO, 0, request, "No huntgroup access: [%s] (%s)",
 -		       request->username ? request->username->vp_strvalue : "<NO User-Name>",
 +		       request->username ? (char *)request->username->vp_strvalue : "<NO User-Name>",
  		       auth_name(buf, sizeof(buf), request, 1));

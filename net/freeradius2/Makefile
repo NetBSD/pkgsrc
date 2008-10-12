@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/06/20 20:57:39 adrianp Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/12 13:57:27 adrianp Exp $
 
 DISTNAME=	freeradius-server-${RADVER}
 PKGNAME=	${DISTNAME:S/-server//}
@@ -22,13 +22,13 @@ USE_OLD_DES_API=	YES
 
 BUILD_DEFS=		VARBASE
 PLIST_SRC=		${WRKDIR}/.PLIST_SRC
-FILES_SUBST+=		RADIUS_USER=${RADIUS_USER:Q}
-FILES_SUBST+=		RADIUS_GROUP=${RADIUS_GROUP:Q}
+FILES_SUBST+=		RADIUS_USER=${RADIUS_USER}
+FILES_SUBST+=		RADIUS_GROUP=${RADIUS_GROUP}
 PLIST_SUBST+=		RADVER=${RADVER}
 MESSAGE_SRC+=		${WRKDIR}/.MESSAGE_SRC
 MESSAGE_SUBST+=		CHOWN=${CHOWN:Q} CHMOD=${CHMOD:Q} VARBASE=${VARBASE}
-MESSAGE_SUBST+=		RADIUS_USER=${RADIUS_USER:Q} XARGS=${XARGS:Q}
-MESSAGE_SUBST+=		RADIUS_GROUP=${RADIUS_GROUP:Q} FIND=${FIND:Q}
+MESSAGE_SUBST+=		RADIUS_USER=${RADIUS_USER} XARGS=${XARGS:Q}
+MESSAGE_SUBST+=		RADIUS_GROUP=${RADIUS_GROUP} FIND=${FIND:Q}
 
 PKG_SYSCONFSUBDIR=	raddb
 RCD_SCRIPTS=		radiusd
@@ -45,14 +45,14 @@ OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd \
 OWN_DIRS_PERMS+=	${VARBASE}/log/radiusd/radacct \
 			${RADIUS_USER} ${RADIUS_GROUP} 0750
 
-RADVER=			2.0.5
+RADVER=			2.1.1
 EGDIR=			${PREFIX}/share/examples/freeradius
 
 BUILDLINK_API_DEPENDS.openssl+=	openssl>=0.9.7
 
 CONFIGURE_ARGS+=	--with-logdir=${VARBASE}/log/radiusd
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
-CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
+CONFIGURE_ARGS+=	--sysconfdir=${PKG_SYSCONFBASEDIR}
 CONFIGURE_ARGS+=	--disable-ltdl-install
 CONFIGURE_ARGS+=	--with-ltdl-lib=${PREFIX}/lib
 CONFIGURE_ARGS+=	--with-ltdl-include=${PREFIX}/include
@@ -102,7 +102,7 @@ EGFILES=	certs/demoCA/cacert.pem certs/bootstrap certs/xpextensions \
 		sql/postgresql/counter.conf sql/postgresql/admin.sql \
 		sql/postgresql/update_radacct_group_trigger.sql policy.txt \
 		experimental.conf radiusd.conf otp.conf policy.conf \
-		preproxy_users users vmpsd.conf.in acct_users snmp.conf \
+		preproxy_users users vmpsd.conf.in acct_users \
 		ldap.attrmap clients.conf huntgroups sql.conf sqlippool.conf \
 		sites-available/inner-tunnel sites-available/example \
 		sites-available/buffered-sql sites-available/default \
@@ -150,7 +150,7 @@ post-build:
 	${CP} ${PKGDIR:Q}/MESSAGE ${WRKDIR:Q}/.MESSAGE_SRC
 
 .	if !empty(PKG_OPTIONS:Mpam)
-		${CP} ${PKGDIR:Q}/MESSAGE.pam ${WRKDIR:Q}/.MESSAGE_SRC.pam
+		${CP} ${PKGDIR}/MESSAGE.pam ${WRKDIR}/.MESSAGE_SRC.pam
 .	endif
 
 post-install:
