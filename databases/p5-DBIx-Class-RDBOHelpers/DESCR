@@ -1,0 +1,6 @@
+DBIx::Class::RDBOHelpers implements several methods with the same
+names as those in Rose::DBx::Object::MoreHelpers. This class helps
+ease compatability issues when using packages that expect these
+methods to exist, like Rose::HTMLx::Form::Related and CatalystX::CRUD::YUI.
+Most of these are convenience wrappers rather than implementing
+any new features.
