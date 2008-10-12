@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7580 2008/10/12 09:55:35 taca Exp $
+$NetBSD: TODO,v 1.7581 2008/10/12 11:26:49 markd Exp $
 
 Suggested new packages
 ======================
@@ -604,7 +604,6 @@ Suggested package updates
 	o elinks-0.12
 	o elm-me-2.4pl124b
 	o elscreen-1.4.6
-	o emacs-22.3
 	o emacs-wiki-2.72
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.12
@@ -848,7 +847,6 @@ Suggested package updates
 	o k3b-1.0.4
 	o kapooka-0.3
 	o kbarcode-2.0.7
-	o kbiff-3.9
 	o kdbg-2.1.0
 	o kdrill-6.5
 	o kinput2-3.1
