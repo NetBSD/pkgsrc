@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST.uk-ua,v 1.1 2008/09/22 15:31:10 taca Exp $
+@comment $NetBSD: PLIST.uk-ua,v 1.2 2008/10/12 13:05:01 taca Exp $
 ${DRUPAL_BASE}/LICENSE.uk-ua.txt
 ${DRUPAL_BASE}/STATUS.uk-ua.txt
 ${DRUPAL_BASE}/modules/aggregator/translations/modules-aggregator.uk-ua.po
@@ -38,6 +38,7 @@ ${DRUPAL_BASE}/modules/update/translations/modules-update.uk-ua.po
 ${DRUPAL_BASE}/modules/upload/translations/modules-upload.uk-ua.po
 ${DRUPAL_BASE}/modules/user/translations/modules-user.uk-ua.po
 ${DRUPAL_BASE}/profiles/default/translations/uk-ua.po
+${DRUPAL_BASE}/readme.uk-ua.txt
 ${DRUPAL_BASE}/themes/chameleon/translations/themes-chameleon.uk-ua.po
 ${DRUPAL_BASE}/themes/garland/translations/themes-garland.uk-ua.po
 ${DRUPAL_BASE}/themes/pushbutton/translations/themes-pushbutton.uk-ua.po
