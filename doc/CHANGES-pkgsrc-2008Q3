@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.5 2008/10/11 19:19:35 tron Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.6 2008/10/12 11:47:37 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -31,3 +31,5 @@ Pullup ticket ticket #2551 - requested by joerg
 samba: build fix for destdir mode
 Pullup ticket ticket #2552 - requested by joerg
 openldap-server: build fix for user destdir mode
+pullup ticket #2554 - requested by tron
+dbus: update package for security fix
