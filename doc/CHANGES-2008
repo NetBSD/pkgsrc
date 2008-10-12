@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2478 2008/10/12 20:56:17 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2479 2008/10/12 23:26:15 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4204,3 +4204,14 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/p5-INET6 to 2.56 [seb 2008-10-12]
 	Added devel/p5-Gtk2-GladeXML version 1.007 [kefren 2008-10-12]
 	Updated databases/p5-perl-ldap to 0.38 [seb 2008-10-12]
+	Updated comms/p5-Device-Gsm to 1.50 [he 2008-10-12]
+	Updated comms/p5-Device-Modem to 1.50 [he 2008-10-12]
+	Updated converters/p5-JSON-XS to 2.23 [he 2008-10-12]
+	Updated databases/p5-BerkeleyDB to 0.36 [he 2008-10-12]
+	Added databases/p5-Search-QueryParser version 0.93 [he 2008-10-12]
+	Added databases/p5-Search-QueryParser-SQL version 0.005 [he 2008-10-12]
+	Updated databases/p5-CatalystX-CRUD to 0.31 [he 2008-10-12]
+	Updated databases/p5-CatalystX-CRUD-Model-RDBO to 0.14 [he 2008-10-12]
+	Added www/p5-Rose-HTMLx-Form-Field-Serial version 0.002 [he 2008-10-12]
+	Updated databases/p5-Rose-DBx-Garden to 0.15 [he 2008-10-12]
+	Added databases/p5-CatalystX-CRUD-ModelAdapter-DBIC version 0.07 [he 2008-10-13]
