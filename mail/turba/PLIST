@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/07/31 19:54:04 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/10/12 12:06:52 adrianp Exp $
 share/doc/turba/INSTALL
 share/doc/turba/LDAP
 share/doc/turba/README
@@ -79,7 +79,9 @@ share/horde/turba/lib/tests/ListTest.php
 share/horde/turba/lib/tests/ListViewTest.php
 share/horde/turba/lib/tests/TestBase.php
 share/horde/turba/lib/tests/ViewBrowseTest.php
+share/horde/turba/lib/tests/az.png
 share/horde/turba/lib/tests/bug_6518.phpt
+share/horde/turba/lib/tests/bug5476.phpt
 share/horde/turba/lib/tests/import.ldif
 share/horde/turba/lib/tests/importCRLF.ldif
 share/horde/turba/lib/tests/ldif_exportFile.phpt
@@ -101,6 +103,8 @@ share/horde/turba/locale/en_US/help.xml
 share/horde/turba/locale/es_ES/LC_MESSAGES/turba.mo
 share/horde/turba/locale/es_ES/help.xml
 share/horde/turba/locale/et_EE/LC_MESSAGES/turba.mo
+share/horde/turba/locale/eu_ES/LC_MESSAGES/turba.mo
+share/horde/turba/locale/eu_ES/help.xml
 share/horde/turba/locale/fa_IR/LC_MESSAGES/turba.mo
 share/horde/turba/locale/fa_IR/help.xml
 share/horde/turba/locale/fi_FI/LC_MESSAGES/turba.mo
@@ -146,6 +150,7 @@ share/horde/turba/po/de_DE.po
 share/horde/turba/po/el_GR.po
 share/horde/turba/po/es_ES.po
 share/horde/turba/po/et_EE.po
+share/horde/turba/po/eu_ES.po
 share/horde/turba/po/fa_IR.po
 share/horde/turba/po/fi_FI.po
 share/horde/turba/po/fr_FR.po
@@ -195,7 +200,9 @@ share/horde/turba/scripts/upgrades/2.1_to_2.2_add_sql_share_tables.oci8.sql
 share/horde/turba/scripts/upgrades/2.1_to_2.2_add_sql_share_tables.pgsql.sql
 share/horde/turba/scripts/upgrades/2.1_to_2.2_add_sql_share_tables.sql
 share/horde/turba/scripts/upgrades/2.1_to_2.2_sql_schema.php
+share/horde/turba/scripts/upgrades/2.2.1_to_2.3.sql
 share/horde/turba/scripts/upgrades/2007-06-17_flatten_shares.php
+share/horde/turba/scripts/upgrades/2008-09-23_fix_group_uid.sql
 share/horde/turba/scripts/upgrades/convert_datatree_shares_to_sql.php
 share/horde/turba/scripts/upgrades/create_default_histories.php
 share/horde/turba/scripts/upgrades/public_to_horde_share.php
@@ -341,6 +348,8 @@ share/horde/turba/view.php
 @dirrm share/horde/turba/locale/fi_FI
 @dirrm share/horde/turba/locale/fa_IR/LC_MESSAGES
 @dirrm share/horde/turba/locale/fa_IR
+@dirrm share/horde/turba/locale/eu_ES/LC_MESSAGES
+@dirrm share/horde/turba/locale/eu_ES
 @dirrm share/horde/turba/locale/et_EE/LC_MESSAGES
 @dirrm share/horde/turba/locale/et_EE
 @dirrm share/horde/turba/locale/es_ES/LC_MESSAGES
