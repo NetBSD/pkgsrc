@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2466 2008/10/12 12:05:22 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.2467 2008/10/12 12:07:08 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4188,3 +4188,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/horde to 3.3 [adrianp 2008-10-12]
 	Updated mail/imp to 4.3 [adrianp 2008-10-12]
 	Updated mail/ingo to 1.2.1 [adrianp 2008-10-12]
+	Updated mail/turba to 2.3 [adrianp 2008-10-12]
