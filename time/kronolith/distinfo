@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.8 2008/05/26 12:58:49 adrianp Exp $
+$NetBSD: distinfo,v 1.9 2008/10/12 12:08:07 adrianp Exp $
 
-SHA1 (kronolith-h3-2.2.tar.gz) = 7b349cff099df2c8eacd29c40c0d06d0c24d9d78
-RMD160 (kronolith-h3-2.2.tar.gz) = af946383ec1eafe4e35323e3e47e6421e53d0eaa
-Size (kronolith-h3-2.2.tar.gz) = 2354137 bytes
+SHA1 (kronolith-h3-2.3.tar.gz) = c343b0712730d5a3ca888598515ef453437c247f
+RMD160 (kronolith-h3-2.3.tar.gz) = a6ce6629c79587f0dd3c473c97bf1667e9a0f370
+Size (kronolith-h3-2.3.tar.gz) = 2550567 bytes
