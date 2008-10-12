@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.587 2008/10/07 06:10:01 martti Exp $
+# $NetBSD: Makefile,v 1.588 2008/10/12 17:29:39 abs Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -251,11 +251,13 @@ SUBDIR+=	p5-Catalyst-Controller-BindLex
 SUBDIR+=	p5-Catalyst-Controller-FormBuilder
 SUBDIR+=	p5-Catalyst-Devel
 SUBDIR+=	p5-Catalyst-Manual
+SUBDIR+=	p5-Catalyst-Model-Adaptor
 SUBDIR+=	p5-Catalyst-Plugin-Authentication
 SUBDIR+=	p5-Catalyst-Plugin-Authentication-Store-DBIC
 SUBDIR+=	p5-Catalyst-Plugin-Authentication-Store-RDBO
 SUBDIR+=	p5-Catalyst-Plugin-Authorization-Roles
 SUBDIR+=	p5-Catalyst-Plugin-ConfigLoader
+SUBDIR+=	p5-Catalyst-Plugin-I18N
 SUBDIR+=	p5-Catalyst-Plugin-Session
 SUBDIR+=	p5-Catalyst-Plugin-Session-State-Cookie
 SUBDIR+=	p5-Catalyst-Plugin-Session-Store-DBIC
