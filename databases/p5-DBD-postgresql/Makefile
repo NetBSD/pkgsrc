@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.45 2008/06/20 01:09:11 joerg Exp $
+# $NetBSD: Makefile,v 1.46 2008/10/12 21:21:19 dsainty Exp $
 #
 
 VER=		2.2.2
@@ -15,7 +15,7 @@ COMMENT=	Perl DBI/DBD driver for PostgreSQL databases
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	p5-version-[0-9]*:../../devel/p5-version
+DEPENDS+=	{p5-version-[0-9]*,perl>=5.10.0}:../../devel/p5-version
 
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 
