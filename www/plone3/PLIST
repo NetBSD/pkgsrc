@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/08/27 15:39:58 taca Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/10/12 07:07:40 taca Exp $
 ${PLONE_BASE}/ATContentTypes/AUTHORS.txt
 ${PLONE_BASE}/ATContentTypes/CHANGELOG.txt
 ${PLONE_BASE}/ATContentTypes/HISTORY.txt
@@ -2703,6 +2703,7 @@ ${PLONE_BASE}/CMFPlone/migrations/v3_0/profiles/rc2_final/actions.xml
 ${PLONE_BASE}/CMFPlone/migrations/v3_0/profiles/rc2_final/cssregistry.xml
 ${PLONE_BASE}/CMFPlone/migrations/v3_0/profiles/rc2_final/jsregistry.xml
 ${PLONE_BASE}/CMFPlone/migrations/v3_0/profiles/rc2_final/rolemap.xml
+${PLONE_BASE}/CMFPlone/migrations/v3_0/profiles/three01_three02/actionicons.xml
 ${PLONE_BASE}/CMFPlone/migrations/v3_0/profiles/three01_three02/controlpanel.xml
 ${PLONE_BASE}/CMFPlone/migrations/v3_0/profiles/three01_three02/cssregistry.xml
 ${PLONE_BASE}/CMFPlone/migrations/v3_0/profiles/three01_three02/jsregistry.xml
@@ -3706,6 +3707,7 @@ ${PLONE_BASE}/CMFPlone/tests/images/test.jpg
 ${PLONE_BASE}/CMFPlone/tests/images/test.png
 ${PLONE_BASE}/CMFPlone/tests/mails.txt
 ${PLONE_BASE}/CMFPlone/tests/messages.txt
+${PLONE_BASE}/CMFPlone/tests/redirection.txt
 ${PLONE_BASE}/CMFPlone/tests/scripts.txt
 ${PLONE_BASE}/CMFPlone/tests/testActionIconsTool.py
 ${PLONE_BASE}/CMFPlone/tests/testActionIconsTool.pyc
@@ -6767,6 +6769,7 @@ ${PLONE_BASE}/kupu/form/head.kupu
 ${PLONE_BASE}/kupu/form/include.kupu
 ${PLONE_BASE}/kupu/form/save.kupu
 ${PLONE_BASE}/kupu/i18n/README.txt
+${PLONE_BASE}/kupu/i18n/kupu-bg.po
 ${PLONE_BASE}/kupu/i18n/kupu-ca.po
 ${PLONE_BASE}/kupu/i18n/kupu-cs.po
 ${PLONE_BASE}/kupu/i18n/kupu-da.po
@@ -6799,6 +6802,7 @@ ${PLONE_BASE}/kupu/i18n/kupu-zh-cn.po
 ${PLONE_BASE}/kupu/i18n/kupu-zh-tw.po
 ${PLONE_BASE}/kupu/i18n/kupu-zh.po
 ${PLONE_BASE}/kupu/i18n/kupu.pot
+${PLONE_BASE}/kupu/i18n/kupuconfig-de.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-ca.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-cs.po
 ${PLONE_BASE}/kupu/i18n/kupuconfig-da.po
@@ -6868,10 +6872,12 @@ ${PLONE_BASE}/kupu/mmbase/body.kupu
 ${PLONE_BASE}/kupu/mmbase/contextmenu.kupu
 ${PLONE_BASE}/kupu/mmbase/cross-browser.js
 ${PLONE_BASE}/kupu/mmbase/dist-mmbase.kupu
+${PLONE_BASE}/kupu/mmbase/divstool.js
 ${PLONE_BASE}/kupu/mmbase/drawers/attachments.items.jspx
 ${PLONE_BASE}/kupu/mmbase/drawers/collection.jspx
 ${PLONE_BASE}/kupu/mmbase/drawers/drawer.jspx
 ${PLONE_BASE}/kupu/mmbase/drawers/drawer.xsl.jspx
+${PLONE_BASE}/kupu/mmbase/drawers/flashobjects.items.jspx
 ${PLONE_BASE}/kupu/mmbase/drawers/images.items.jspx
 ${PLONE_BASE}/kupu/mmbase/drawers/kupudrawerstyles.css
 ${PLONE_BASE}/kupu/mmbase/drawers/kupuimages/kupublank.html
@@ -6884,8 +6890,11 @@ ${PLONE_BASE}/kupu/mmbase/drawers/segments.items.jspx
 ${PLONE_BASE}/kupu/mmbase/drawers/test.post.jspx
 ${PLONE_BASE}/kupu/mmbase/drawers/texts.items.jspx
 ${PLONE_BASE}/kupu/mmbase/drawers/upload.jspx
+${PLONE_BASE}/kupu/mmbase/drawers/uploadfields.jspx
 ${PLONE_BASE}/kupu/mmbase/drawers/urls.items.jspx
 ${PLONE_BASE}/kupu/mmbase/drawers.kupu
+${PLONE_BASE}/kupu/mmbase/flash.jspx
+${PLONE_BASE}/kupu/mmbase/flashtool.js
 ${PLONE_BASE}/kupu/mmbase/error.jspx
 ${PLONE_BASE}/kupu/mmbase/head-mmbase.kupu
 ${PLONE_BASE}/kupu/mmbase/head.kupu
@@ -6896,6 +6905,7 @@ ${PLONE_BASE}/kupu/mmbase/i18n/eo.po
 ${PLONE_BASE}/kupu/mmbase/i18n/fr.po
 ${PLONE_BASE}/kupu/mmbase/i18n/it.po
 ${PLONE_BASE}/kupu/mmbase/i18n/nl.po
+${PLONE_BASE}/kupu/mmbase/icons/flash.png
 ${PLONE_BASE}/kupu/mmbase/icons/map-open.gif
 ${PLONE_BASE}/kupu/mmbase/icons/map.gif
 ${PLONE_BASE}/kupu/mmbase/include.kupu
