@@ -1,6 +1,5 @@
-@comment $NetBSD: PLIST,v 1.6 2007/01/26 03:49:32 markd Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/10/12 04:14:58 tonnerre Exp $
 bin/konversation
-bin/konversationircprotocolhandler
 share/applications/kde/konversation.desktop
 share/doc/kde/HTML/da/konversation/common
 share/doc/kde/HTML/da/konversation/index.cache.bz2
@@ -130,34 +129,6 @@ share/doc/kde/HTML/it/konversation/osd_screen_co.png
 share/doc/kde/HTML/it/konversation/quickbuttons_screen.png
 share/doc/kde/HTML/it/konversation/quickconnect_screen.png
 share/doc/kde/HTML/it/konversation/serverlist_co.png
-share/doc/kde/HTML/nl/konversation/addchannel.png
-share/doc/kde/HTML/nl/konversation/addnetwork_co.png
-share/doc/kde/HTML/nl/konversation/addserver_co.png
-share/doc/kde/HTML/nl/konversation/channel_screen_tour_co.png
-share/doc/kde/HTML/nl/konversation/channellist_screen_co.png
-share/doc/kde/HTML/nl/konversation/checkidentities.png
-share/doc/kde/HTML/nl/konversation/colorchooser_screen.png
-share/doc/kde/HTML/nl/konversation/common
-share/doc/kde/HTML/nl/konversation/dccstatus_screen_co.png
-share/doc/kde/HTML/nl/konversation/first_channel_co.png
-share/doc/kde/HTML/nl/konversation/first_serverlist_co.png
-share/doc/kde/HTML/nl/konversation/identities_adv_co.png
-share/doc/kde/HTML/nl/konversation/identities_away_co.png
-share/doc/kde/HTML/nl/konversation/identities_gen_co.png
-share/doc/kde/HTML/nl/konversation/index.cache.bz2
-share/doc/kde/HTML/nl/konversation/index.docbook
-share/doc/kde/HTML/nl/konversation/kimproxy_create_screen2.png
-share/doc/kde/HTML/nl/konversation/kimproxy_create_screen_co.png
-share/doc/kde/HTML/nl/konversation/logviewer_co.png
-share/doc/kde/HTML/nl/konversation/nicksonline_co.png
-share/doc/kde/HTML/nl/konversation/notification_screen_co.png
-share/doc/kde/HTML/nl/konversation/notifylist_screen_co.png
-share/doc/kde/HTML/nl/konversation/osd_screen_co.png
-share/doc/kde/HTML/nl/konversation/quickbuttons_screen.png
-share/doc/kde/HTML/nl/konversation/quickconnect_screen.png
-share/doc/kde/HTML/nl/konversation/serverlist_co.png
-share/doc/kde/HTML/nl/konversation/urlcatcher_screen_co.png
-share/doc/kde/HTML/nl/konversation/webbrowser_screen_co.png
 share/doc/kde/HTML/pt/konversation/common
 share/doc/kde/HTML/pt/konversation/index.cache.bz2
 share/doc/kde/HTML/pt/konversation/index.docbook
@@ -234,13 +205,12 @@ share/kde/apps/konversation/scripts/cmd
 share/kde/apps/konversation/scripts/fortune
 share/kde/apps/konversation/scripts/fortunes.dat
 share/kde/apps/konversation/scripts/gauge
-share/kde/apps/konversation/scripts/google
 share/kde/apps/konversation/scripts/kdeversion
 share/kde/apps/konversation/scripts/mail
 share/kde/apps/konversation/scripts/media
-share/kde/apps/konversation/scripts/qurl
 share/kde/apps/konversation/scripts/sayclip
 share/kde/apps/konversation/scripts/sysinfo
+share/kde/apps/konversation/scripts/tinyurl
 share/kde/apps/konversation/scripts/uptime
 share/kde/apps/konversation/scripts/weather
 share/kde/apps/konversation/themes/alternative/index.desktop
@@ -275,6 +245,14 @@ share/kde/apps/konversation/themes/default/irc_normal.png
 share/kde/apps/konversation/themes/default/irc_op.png
 share/kde/apps/konversation/themes/default/irc_owner.png
 share/kde/apps/konversation/themes/default/irc_voice.png
+share/kde/apps/konversation/themes/oxygen/index.desktop
+share/kde/apps/konversation/themes/oxygen/irc_admin.png
+share/kde/apps/konversation/themes/oxygen/irc_away.png
+share/kde/apps/konversation/themes/oxygen/irc_halfop.png
+share/kde/apps/konversation/themes/oxygen/irc_normal.png
+share/kde/apps/konversation/themes/oxygen/irc_op.png
+share/kde/apps/konversation/themes/oxygen/irc_owner.png
+share/kde/apps/konversation/themes/oxygen/irc_voice.png
 share/kde/apps/konversation/themes/smiling/index.desktop
 share/kde/apps/konversation/themes/smiling/irc_admin.png
 share/kde/apps/konversation/themes/smiling/irc_away.png
@@ -297,7 +275,6 @@ share/kde/services/konvirc6.protocol
 share/locale/ar/LC_MESSAGES/konversation.mo
 share/locale/bg/LC_MESSAGES/konversation.mo
 share/locale/ca/LC_MESSAGES/konversation.mo
-share/locale/cs/LC_MESSAGES/konversation.mo
 share/locale/da/LC_MESSAGES/konversation.mo
 share/locale/de/LC_MESSAGES/konversation.mo
 share/locale/el/LC_MESSAGES/konversation.mo
@@ -313,22 +290,20 @@ share/locale/it/LC_MESSAGES/konversation.mo
 share/locale/ja/LC_MESSAGES/konversation.mo
 share/locale/ka/LC_MESSAGES/konversation.mo
 share/locale/ko/LC_MESSAGES/konversation.mo
-share/locale/lt/LC_MESSAGES/konversation.mo
-share/locale/nl/LC_MESSAGES/konversation.mo
 share/locale/pa/LC_MESSAGES/konversation.mo
 share/locale/pt/LC_MESSAGES/konversation.mo
-share/locale/pt_BR/LC_MESSAGES/konversation.mo
 share/locale/ru/LC_MESSAGES/konversation.mo
 share/locale/sr/LC_MESSAGES/konversation.mo
 share/locale/sr@Latn/LC_MESSAGES/konversation.mo
 share/locale/sv/LC_MESSAGES/konversation.mo
-share/locale/ta/LC_MESSAGES/konversation.mo
 share/locale/tr/LC_MESSAGES/konversation.mo
+share/locale/zh_CN/LC_MESSAGES/konversation.mo
 share/locale/zh_TW/LC_MESSAGES/konversation.mo
 @comment in kde: @dirrm share/kde/services
 @comment in kde: @dirrm share/kde/config.kcfg
 @dirrm share/kde/apps/konversation/themes/square
 @dirrm share/kde/apps/konversation/themes/smiling
+@dirrm share/kde/apps/konversation/themes/oxygen
 @dirrm share/kde/apps/konversation/themes/default
 @dirrm share/kde/apps/konversation/themes/classic
 @dirrm share/kde/apps/konversation/themes/christmas
@@ -354,8 +329,6 @@ share/locale/zh_TW/LC_MESSAGES/konversation.mo
 @dirrm share/doc/kde/HTML/ru/konversation
 @dirrm share/doc/kde/HTML/pt/konversation
 @comment in kde: @dirrm share/doc/kde/HTML/pt
-@dirrm share/doc/kde/HTML/nl/konversation
-@comment in kde: @dirrm share/doc/kde/HTML/nl
 @dirrm share/doc/kde/HTML/it/konversation
 @comment in kde: @dirrm share/doc/kde/HTML/it
 @dirrm share/doc/kde/HTML/et/konversation
