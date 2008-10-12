@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2475 2008/10/12 17:34:53 abs Exp $
+$NetBSD: CHANGES-2008,v 1.2476 2008/10/12 18:47:25 seb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4201,3 +4201,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added misc/p5-File-MMagic-XS version 0.09003 [abs 2008-10-12]
 	Added www/p5-Catalyst-Model-Adaptor version 0.03 [abs 2008-10-12]
 	Added www/p5-Catalyst-Plugin-I18N version 0.08 [abs 2008-10-12]
+	Updated net/p5-INET6 to 2.56 [seb 2008-10-12]
