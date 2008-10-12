@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.58 2008/09/10 18:47:29 adrianp Exp $
+# $NetBSD: Makefile,v 1.59 2008/10/12 12:00:52 adrianp Exp $
 
-DISTNAME=	horde-3.2.2
+DISTNAME=	horde-3.3
 CATEGORIES=	www
 MASTER_SITES=	http://ftp.horde.org/pub/horde/ \
 		ftp://ftp.horde.org/pub/horde/
@@ -37,7 +37,8 @@ USE_TOOLS+=	pax
 DOCDIR=		${PREFIX}/share/doc/horde
 EGDIR=		${PREFIX}/share/examples/horde
 HORDEDIR=	${PREFIX}/share/horde
-PAXDIRS=	js lib locale po scripts services templates themes util admin
+PAXDIRS=	js lib locale po scripts services templates themes util admin \
+		rpc
 SENDMAIL?=	/usr/sbin/sendmail
 PKG_USERS_VARS+=APACHE_USER
 
