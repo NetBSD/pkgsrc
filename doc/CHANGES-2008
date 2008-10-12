@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2458 2008/10/12 04:15:17 tonnerre Exp $
+$NetBSD: CHANGES-2008,v 1.2459 2008/10/12 06:42:39 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4180,3 +4180,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/drupal to 5.11 [adrianp 2008-10-12]
 	Updated www/drupal6 to 6.5 [adrianp 2008-10-12]
 	Updated chat/konversation to 1.1 [tonnerre 2008-10-12]
+	Updated www/typo3 to 4.2.2 [taca 2008-10-12]
