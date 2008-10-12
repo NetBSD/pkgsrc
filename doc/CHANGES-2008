@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2461 2008/10/12 10:43:26 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2462 2008/10/12 11:15:45 tron Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4183,3 +4183,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/typo3 to 4.2.2 [taca 2008-10-12]
 	Updated www/plone3 to 3.1.6 [taca 2008-10-12]
 	Added devel/p5-Devel-Gladiator version 0.01 [seb 2008-10-12]
+	Updated sysutils/dbus to 1.2.4 [tron 2008-10-12]
