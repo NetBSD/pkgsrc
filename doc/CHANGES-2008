@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2459 2008/10/12 06:42:39 taca Exp $
+$NetBSD: CHANGES-2008,v 1.2460 2008/10/12 07:10:13 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4181,3 +4181,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/drupal6 to 6.5 [adrianp 2008-10-12]
 	Updated chat/konversation to 1.1 [tonnerre 2008-10-12]
 	Updated www/typo3 to 4.2.2 [taca 2008-10-12]
+	Updated www/plone3 to 3.1.6 [taca 2008-10-12]
