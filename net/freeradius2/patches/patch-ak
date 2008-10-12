@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.2 2008/06/20 20:57:39 adrianp Exp $
+$NetBSD: patch-ak,v 1.3 2008/10/12 13:57:27 adrianp Exp $
 
---- raddb/radiusd.conf.in.orig	2008-05-30 10:18:43.000000000 +0100
+--- raddb/radiusd.conf.in.orig	2008-09-25 10:41:26.000000000 +0200
 +++ raddb/radiusd.conf.in
-@@ -160,8 +160,8 @@ pidfile = ${run_dir}/radiusd.pid
+@@ -164,8 +164,8 @@ pidfile = ${run_dir}/${name}.pid
  #  It will join all groups where "user" is a member.  This can allow
  #  for some finer-grained access controls.
  #
