@@ -1,0 +1,2 @@
+CatalystX::CRUD::ModelAdapter::DBIC implements the
+CatalystX::CRUD::ModelAdapter API for DBIx::Class.
