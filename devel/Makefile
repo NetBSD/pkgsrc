@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1039 2008/10/12 17:25:30 abs Exp $
+# $NetBSD: Makefile,v 1.1040 2008/10/12 17:31:10 abs Exp $
 #
 
 COMMENT=	Development utilities
@@ -497,6 +497,7 @@ SUBDIR+=	p5-Declare-Constraints-Simple
 SUBDIR+=	p5-Devel-Caller
 SUBDIR+=	p5-Devel-Cover
 SUBDIR+=	p5-Devel-Cycle
+SUBDIR+=	p5-Devel-Declare
 SUBDIR+=	p5-Devel-EvalContext
 SUBDIR+=	p5-Devel-Events
 SUBDIR+=	p5-Devel-Events-Objects
@@ -624,6 +625,7 @@ SUBDIR+=	p5-MooseX-AttributeHelpers
 SUBDIR+=	p5-MooseX-ClassAttribute
 SUBDIR+=	p5-MooseX-Getopt
 SUBDIR+=	p5-MooseX-Object-Pluggable
+SUBDIR+=	p5-MooseX-Types
 SUBDIR+=	p5-Mouse
 SUBDIR+=	p5-NEXT
 SUBDIR+=	p5-Net-CIDR
