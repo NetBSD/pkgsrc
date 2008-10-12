@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.8 2008/05/26 12:58:49 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/10/12 12:08:07 adrianp Exp $
 share/doc/kronolith/INSTALL
 share/doc/kronolith/README
 share/doc/kronolith/RELEASE_NOTES
@@ -26,6 +26,7 @@ share/horde/kronolith/js/builder.js
 share/horde/kronolith/js/calendar-panel.js
 share/horde/kronolith/js/controls.js
 share/horde/kronolith/js/effects.js
+share/horde/kronolith/js/embed.js
 share/horde/kronolith/js/prototype.js
 share/horde/kronolith/js/redbox.js
 share/horde/kronolith/js/scriptaculous.js
@@ -34,6 +35,7 @@ share/horde/kronolith/js/src/builder.js
 share/horde/kronolith/js/src/calendar-panel.js
 share/horde/kronolith/js/src/controls.js
 share/horde/kronolith/js/src/effects.js
+share/horde/kronolith/js/src/embed.js
 share/horde/kronolith/js/src/prototype.js
 share/horde/kronolith/js/src/redbox.js
 share/horde/kronolith/js/src/scriptaculous.js
@@ -69,8 +71,11 @@ share/horde/kronolith/lib/Forms/UnsubscribeRemoteCalendar.php
 share/horde/kronolith/lib/FreeBusy.php
 share/horde/kronolith/lib/Imple.php
 share/horde/kronolith/lib/Imple/ContactAutoCompleter.php
+share/horde/kronolith/lib/Imple/Embed.php
 share/horde/kronolith/lib/JSON.php
 share/horde/kronolith/lib/Kronolith.php
+share/horde/kronolith/lib/Maintenance/Task/purge_events.php
+share/horde/kronolith/lib/Maintenance/kronolith.php
 share/horde/kronolith/lib/Recurrence.php
 share/horde/kronolith/lib/Scheduler/kronolith.php
 share/horde/kronolith/lib/Storage.php
@@ -92,6 +97,9 @@ share/horde/kronolith/lib/tests/allday.ics
 share/horde/kronolith/lib/tests/allday.phpt
 share/horde/kronolith/lib/tests/bug2813.ics
 share/horde/kronolith/lib/tests/bug2813.phpt
+share/horde/kronolith/lib/tests/bug6031.phpt
+share/horde/kronolith/lib/tests/bug7068.ics
+share/horde/kronolith/lib/tests/bug7068.phpt
 share/horde/kronolith/lib/tests/recurrence.phpt
 share/horde/kronolith/lib/tests/toicalendar.phpt
 share/horde/kronolith/lib/version.php
@@ -107,6 +115,9 @@ share/horde/kronolith/locale/el_GR/LC_MESSAGES/kronolith.mo
 share/horde/kronolith/locale/en_US/help.xml
 share/horde/kronolith/locale/es_ES/LC_MESSAGES/kronolith.mo
 share/horde/kronolith/locale/es_ES/help.xml
+share/horde/kronolith/locale/et_EE/LC_MESSAGES/kronolith.mo
+share/horde/kronolith/locale/eu_ES/LC_MESSAGES/kronolith.mo
+share/horde/kronolith/locale/eu_ES/help.xml
 share/horde/kronolith/locale/fi_FI/LC_MESSAGES/kronolith.mo
 share/horde/kronolith/locale/fi_FI/help.xml
 share/horde/kronolith/locale/fr_FR/LC_MESSAGES/kronolith.mo
@@ -147,6 +158,8 @@ share/horde/kronolith/po/da_DK.po
 share/horde/kronolith/po/de_DE.po
 share/horde/kronolith/po/el_GR.po
 share/horde/kronolith/po/es_ES.po
+share/horde/kronolith/po/et_EE.po
+share/horde/kronolith/po/eu_ES.po
 share/horde/kronolith/po/fi_FI.po
 share/horde/kronolith/po/fr_FR.po
 share/horde/kronolith/po/hu_HU.po
@@ -184,9 +197,12 @@ share/horde/kronolith/scripts/sql/kronolith.xml
 share/horde/kronolith/scripts/upgrades/1.1_to_2.0.mysql.sql
 share/horde/kronolith/scripts/upgrades/1.1_to_2.0.oci8.sql
 share/horde/kronolith/scripts/upgrades/1.1_to_2.0.pgsql.sql
-share/horde/kronolith/scripts/upgrades/2.1_to_${PKGVERSION}.pgsql.sql
-share/horde/kronolith/scripts/upgrades/2.1_to_${PKGVERSION}.sql
+share/horde/kronolith/scripts/upgrades/2.1_to_2.2.pgsql.sql
+share/horde/kronolith/scripts/upgrades/2.1_to_2.2.sql
+share/horde/kronolith/scripts/upgrades/2.2_to_2.3.oci8.sql
+share/horde/kronolith/scripts/upgrades/2.2_to_2.3.sql
 share/horde/kronolith/scripts/upgrades/2006-08-20_fix_recur_int_fields.mysql.sql
+share/horde/kronolith/scripts/upgrades/2008-09-23_fix_group_uid.sql
 share/horde/kronolith/scripts/upgrades/convert_datatree_shares_to_sql.php
 share/horde/kronolith/search.php
 share/horde/kronolith/templates/attendees/attendees.inc
@@ -215,6 +231,7 @@ share/horde/kronolith/templates/fbview/meetingblock.html
 share/horde/kronolith/templates/fbview/row.html
 share/horde/kronolith/templates/fbview/section.html
 share/horde/kronolith/templates/fbview/unknownblock.html
+share/horde/kronolith/templates/feeds/atom.xml
 share/horde/kronolith/templates/javascript/goto.js
 share/horde/kronolith/templates/javascript_defs.php
 share/horde/kronolith/templates/menu.inc
@@ -241,8 +258,10 @@ share/horde/kronolith/test.php
 share/horde/kronolith/themes/bluewhite/screen.css
 share/horde/kronolith/themes/burntorange/screen.css
 share/horde/kronolith/themes/categoryCSS.php
+share/horde/kronolith/themes/embed.css
 share/horde/kronolith/themes/fadetogreen/graphics/headerbox.png
 share/horde/kronolith/themes/fadetogreen/screen.css
+share/horde/kronolith/themes/feed-rss.xsl
 share/horde/kronolith/themes/graphics/addressbook_browse.png
 share/horde/kronolith/themes/graphics/alarm-000.png
 share/horde/kronolith/themes/graphics/alarm-fff.png
@@ -265,6 +284,8 @@ share/horde/kronolith/themes/graphics/new.png
 share/horde/kronolith/themes/graphics/new_big.png
 share/horde/kronolith/themes/graphics/new_small.png
 share/horde/kronolith/themes/graphics/plus.png
+share/horde/kronolith/themes/graphics/private-000.png
+share/horde/kronolith/themes/graphics/private-fff.png
 share/horde/kronolith/themes/graphics/recur-000.png
 share/horde/kronolith/themes/graphics/recur-fff.png
 share/horde/kronolith/themes/graphics/redbox_spinner.gif
@@ -368,6 +389,7 @@ share/horde/kronolith/year.php
 @dirrm share/horde/kronolith/templates/perms
 @dirrm share/horde/kronolith/templates/month
 @dirrm share/horde/kronolith/templates/javascript
+@dirrm share/horde/kronolith/templates/feeds
 @dirrm share/horde/kronolith/templates/fbview
 @dirrm share/horde/kronolith/templates/edit
 @dirrm share/horde/kronolith/templates/delete
@@ -426,6 +448,10 @@ share/horde/kronolith/year.php
 @dirrm share/horde/kronolith/locale/fr_FR
 @dirrm share/horde/kronolith/locale/fi_FI/LC_MESSAGES
 @dirrm share/horde/kronolith/locale/fi_FI
+@dirrm share/horde/kronolith/locale/eu_ES/LC_MESSAGES
+@dirrm share/horde/kronolith/locale/eu_ES
+@dirrm share/horde/kronolith/locale/et_EE/LC_MESSAGES
+@dirrm share/horde/kronolith/locale/et_EE
 @dirrm share/horde/kronolith/locale/es_ES/LC_MESSAGES
 @dirrm share/horde/kronolith/locale/es_ES
 @dirrm share/horde/kronolith/locale/en_US
@@ -448,6 +474,8 @@ share/horde/kronolith/year.php
 @dirrm share/horde/kronolith/lib/Views
 @dirrm share/horde/kronolith/lib/Storage
 @dirrm share/horde/kronolith/lib/Scheduler
+@dirrm share/horde/kronolith/lib/Maintenance/Task
+@dirrm share/horde/kronolith/lib/Maintenance
 @dirrm share/horde/kronolith/lib/Imple
 @dirrm share/horde/kronolith/lib/Forms
 @dirrm share/horde/kronolith/lib/FBView
