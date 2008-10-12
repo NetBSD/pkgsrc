@@ -1,7 +1,7 @@
-$NetBSD: patch-ab,v 1.13 2008/08/15 12:15:17 wiz Exp $
+$NetBSD: patch-ab,v 1.13.4.1 2008/10/12 11:46:30 rtr Exp $
 
---- dbus/dbus-sysdeps-unix.c.orig	2008-08-06 17:00:29.000000000 +0000
-+++ dbus/dbus-sysdeps-unix.c
+--- dbus/dbus-sysdeps-unix.c.orig	2008-10-06 22:14:50.000000000 +0100
++++ dbus/dbus-sysdeps-unix.c	2008-10-12 12:01:54.000000000 +0100
 @@ -35,6 +35,9 @@
  #include "dbus-list.h"
  #include "dbus-credentials.h"
@@ -12,18 +12,7 @@ $NetBSD: patch-ab,v 1.13 2008/08/15 12:15:17 wiz Exp $
  #include <sys/types.h>
  #include <stdlib.h>
  #include <string.h>
-@@ -79,8 +82,8 @@
- #define O_BINARY 0
- #endif
- 
--#ifndef _AI_ADDRCONFIG
--#define _AI_ADDRCONFIG 0
-+#ifndef AI_ADDRCONFIG
-+#define AI_ADDRCONFIG 0
- #endif
- 
- #ifndef HAVE_SOCKLEN_T
-@@ -1822,7 +1825,26 @@ _dbus_parse_uid (const DBusString      *
+@@ -1826,7 +1829,26 @@
    return TRUE;
  }
  
@@ -50,7 +39,7 @@ $NetBSD: patch-ab,v 1.13 2008/08/15 12:15:17 wiz Exp $
  _DBUS_DEFINE_GLOBAL_LOCK (atomic);
  
  #if DBUS_USE_ATOMIC_INT_486_COND
-@@ -1887,6 +1909,7 @@ _dbus_atomic_dec (DBusAtomic *atomic)
+@@ -1891,6 +1913,7 @@
    return res;
  #endif
  }
@@ -58,7 +47,7 @@ $NetBSD: patch-ab,v 1.13 2008/08/15 12:15:17 wiz Exp $
  
  #ifdef DBUS_BUILD_TESTS
  /** Gets our GID
-@@ -2780,8 +2803,18 @@ int
+@@ -2793,8 +2816,18 @@
  _dbus_printf_string_upper_bound (const char *format,
                                   va_list     args)
  {
