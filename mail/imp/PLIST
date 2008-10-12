@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.12 2008/07/31 19:48:20 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.13 2008/10/12 12:03:12 adrianp Exp $
 share/doc/imp/CHANGES
 share/doc/imp/COPYING
 share/doc/imp/CREDITS
@@ -33,7 +33,7 @@ share/horde/imp/index.php
 share/horde/imp/js/KeyNavList.js
 share/horde/imp/js/SpellChecker.js
 share/horde/imp/js/acl.js
-share/horde/imp/js/addressesBlocks.js
+share/horde/imp/js/autocomplete.js
 share/horde/imp/js/builder.js
 share/horde/imp/js/compose.js
 share/horde/imp/js/contacts.js
@@ -55,7 +55,7 @@ share/horde/imp/js/slider.js
 share/horde/imp/js/src/KeyNavList.js
 share/horde/imp/js/src/SpellChecker.js
 share/horde/imp/js/src/acl.js
-share/horde/imp/js/src/addressesBlocks.js
+share/horde/imp/js/src/autocomplete.js
 share/horde/imp/js/src/builder.js
 share/horde/imp/js/src/compose.js
 share/horde/imp/js/src/contacts.js
@@ -118,6 +118,7 @@ share/horde/imp/lib/MIME/Viewer/itip.php
 share/horde/imp/lib/MIME/Viewer/multipart.php
 share/horde/imp/lib/MIME/Viewer/notification.php
 share/horde/imp/lib/MIME/Viewer/partial.php
+share/horde/imp/lib/MIME/Viewer/pdf.php
 share/horde/imp/lib/MIME/Viewer/pgp.php
 share/horde/imp/lib/MIME/Viewer/pkcs7.php
 share/horde/imp/lib/MIME/Viewer/plain.php
@@ -164,6 +165,8 @@ share/horde/imp/lib/api.php
 share/horde/imp/lib/base.php
 share/horde/imp/lib/prefs.php
 share/horde/imp/lib/tests/mime_viewer_html.phpt
+share/horde/imp/lib/tests/fixtures/maildirsize
+share/horde/imp/lib/tests/quota_maildir.phpt
 share/horde/imp/lib/version.php
 share/horde/imp/locale/ar_OM/LC_MESSAGES/imp.mo
 share/horde/imp/locale/ar_SY/LC_MESSAGES/imp.mo
@@ -184,6 +187,8 @@ share/horde/imp/locale/es_ES/LC_MESSAGES/imp.mo
 share/horde/imp/locale/es_ES/help.xml
 share/horde/imp/locale/et_EE/LC_MESSAGES/imp.mo
 share/horde/imp/locale/et_EE/help.xml
+share/horde/imp/locale/eu_ES/LC_MESSAGES/imp.mo
+share/horde/imp/locale/eu_ES/help.xml
 share/horde/imp/locale/fa_IR/LC_MESSAGES/imp.mo
 share/horde/imp/locale/fa_IR/help.xml
 share/horde/imp/locale/fi_FI/LC_MESSAGES/imp.mo
@@ -249,6 +254,7 @@ share/horde/imp/po/de_DE.po
 share/horde/imp/po/el_GR.po
 share/horde/imp/po/es_ES.po
 share/horde/imp/po/et_EE.po
+share/horde/imp/po/eu_ES.po
 share/horde/imp/po/fa_IR.po
 share/horde/imp/po/fi_FI.po
 share/horde/imp/po/fr_FR.po
@@ -407,6 +413,7 @@ share/horde/imp/themes/graphics/mime/encryption.png
 share/horde/imp/themes/graphics/mime/html.png
 share/horde/imp/themes/graphics/mime/image.png
 share/horde/imp/themes/graphics/mime/itip.png
+share/horde/imp/themes/graphics/mime/pdf.png
 share/horde/imp/themes/graphics/mime/mail.png
 share/horde/imp/themes/graphics/mime/text.png
 share/horde/imp/themes/graphics/mini-error.png
@@ -477,6 +484,7 @@ share/horde/imp/themes/silver/graphics/mime/html.png
 share/horde/imp/themes/silver/graphics/mime/image.png
 share/horde/imp/themes/silver/graphics/mime/itip.png
 share/horde/imp/themes/silver/graphics/mime/mail.png
+share/horde/imp/themes/silver/graphics/mime/pdf.png
 share/horde/imp/themes/silver/graphics/mime/text.png
 share/horde/imp/themes/silver/graphics/mini-error.png
 share/horde/imp/themes/silver/graphics/newmail.png
@@ -537,6 +545,7 @@ share/horde/imp/themes/tango-blue/graphics/mime/encryption.png
 share/horde/imp/themes/tango-blue/graphics/mime/html.png
 share/horde/imp/themes/tango-blue/graphics/mime/image.png
 share/horde/imp/themes/tango-blue/graphics/mime/itip.png
+share/horde/imp/themes/tango-blue/graphics/mime/pdf.png
 share/horde/imp/themes/tango-blue/graphics/mime/mail.png
 share/horde/imp/themes/tango-blue/graphics/mime/text.png
 share/horde/imp/themes/tango-blue/graphics/mini-error.png
@@ -672,6 +681,8 @@ share/horde/imp/view.php
 @dirrm share/horde/imp/locale/fi_FI
 @dirrm share/horde/imp/locale/fa_IR/LC_MESSAGES
 @dirrm share/horde/imp/locale/fa_IR
+@dirrm share/horde/imp/locale/eu_ES/LC_MESSAGES
+@dirrm share/horde/imp/locale/eu_ES
 @dirrm share/horde/imp/locale/et_EE/LC_MESSAGES
 @dirrm share/horde/imp/locale/et_EE
 @dirrm share/horde/imp/locale/es_ES/LC_MESSAGES
@@ -696,6 +707,7 @@ share/horde/imp/view.php
 @dirrm share/horde/imp/locale/ar_OM/LC_MESSAGES
 @dirrm share/horde/imp/locale/ar_OM
 @dirrm share/horde/imp/locale
+@dirrm share/horde/imp/lib/tests/fixtures
 @dirrm share/horde/imp/lib/tests
 @dirrm share/horde/imp/lib/UI
 @dirrm share/horde/imp/lib/SpellChecker
