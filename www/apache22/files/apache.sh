@@ -1,6 +1,6 @@
 #!@RCD_SCRIPTS_SHELL@
 #
-# $NetBSD: apache.sh,v 1.1.1.1 2006/12/08 23:31:52 xtraeme Exp $
+# $NetBSD: apache.sh,v 1.2 2008/10/12 12:22:25 tron Exp $
 #
 # PROVIDE: apache
 # REQUIRE: DAEMON
@@ -20,6 +20,7 @@ fi
 name="apache"
 rcvar=$name
 command="@PREFIX@/sbin/httpd"
+pidfile="/var/run/httpd.pid"
 ctl_command="@PREFIX@/sbin/apachectl"
 required_files="@PKG_SYSCONFDIR@/httpd.conf"
 extra_commands="reload"
