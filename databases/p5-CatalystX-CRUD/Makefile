@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.3 2008/09/11 12:13:22 he Exp $
+# $NetBSD: Makefile,v 1.4 2008/10/12 22:04:21 he Exp $
 
-DISTNAME=	CatalystX-CRUD-0.29
+DISTNAME=	CatalystX-CRUD-0.31
 PKGNAME=	p5-${DISTNAME}
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=CatalystX/}
@@ -15,6 +15,7 @@ DEPENDS+=	p5-Catalyst-Component-ACCEPT_CONTEXT>=0:../../www/p5-Catalyst-Componen
 DEPENDS+=	p5-Catalyst-Runtime>=5.00:../../www/p5-Catalyst-Runtime
 DEPENDS+=	p5-Class-C3>=0:../../devel/p5-Class-C3
 DEPENDS+=	p5-Rose-DB-Object>=0:../../databases/p5-Rose-DB-Object
+DEPENDS+=	p5-Search-QueryParser-SQL>=0.005:../../databases/p5-Search-QueryParser-SQL
 DEPENDS+=	p5-Sort-SQL>=0.03:../../databases/p5-Sort-SQL
 
 USE_LANGUAGES=	# empty
