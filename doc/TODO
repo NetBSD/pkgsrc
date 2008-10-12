@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7579 2008/10/10 02:01:01 bjs Exp $
+$NetBSD: TODO,v 1.7580 2008/10/12 09:55:35 taca Exp $
 
 Suggested new packages
 ======================
@@ -1332,6 +1332,7 @@ Suggested package updates
 	o streamripper-1.63.0
 	o stunnel-4.26
 	o subtitleeditor-0.24.1
+	o subversion-1.5.3
 	o sunbird-0.5 [ghen]
 	o surfraw-2.2.3
 	o suse_base-11.0
