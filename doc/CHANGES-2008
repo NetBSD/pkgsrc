@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2463 2008/10/12 11:26:49 markd Exp $
+$NetBSD: CHANGES-2008,v 1.2464 2008/10/12 12:01:11 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4185,3 +4185,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/p5-Devel-Gladiator version 0.01 [seb 2008-10-12]
 	Updated sysutils/dbus to 1.2.4 [tron 2008-10-12]
 	Updated mail/kbiff to 3.9 [markd 2008-10-12]
+	Updated www/horde to 3.3 [adrianp 2008-10-12]
