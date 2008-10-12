@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.18 2008/06/17 21:25:38 adrianp Exp $
+@comment $NetBSD: PLIST,v 1.19 2008/10/12 12:00:52 adrianp Exp $
 share/doc/horde/CHANGES
 share/doc/horde/CODING_STANDARDS
 share/doc/horde/CONTRIBUTING
@@ -20,6 +20,7 @@ share/horde/admin/datatree.php
 share/horde/admin/groups.php
 share/horde/admin/index.php
 share/horde/admin/locale/en_US/help.xml
+share/horde/admin/locale/eu_ES/help.xml
 share/horde/admin/locale/fi_FI/help.xml
 share/horde/admin/locale/hu_HU/help.xml
 share/horde/admin/perms/addchild.php
@@ -55,6 +56,7 @@ share/horde/js/form_assign.js
 share/horde/js/form_helpers.js
 share/horde/js/form_sections.js
 share/horde/js/hideable.js
+share/horde/js/horde-embed.js
 share/horde/js/horde-prototype.js
 share/horde/js/horde.ie.js
 share/horde/js/horde.js
@@ -81,6 +83,7 @@ share/horde/js/src/form_assign.js
 share/horde/js/src/form_helpers.js
 share/horde/js/src/form_sections.js
 share/horde/js/src/hideable.js
+share/horde/js/src/horde-embed.js
 share/horde/js/src/horde-prototype.js
 share/horde/js/src/horde.ie.js
 share/horde/js/src/horde.js
@@ -152,6 +155,8 @@ share/horde/lib/Horde/Argv/Values.php
 share/horde/lib/Horde/Array.php
 share/horde/lib/Horde/Auth.php
 share/horde/lib/Horde/Auth/Signup.php
+share/horde/lib/Horde/Auth/Signup/datatree.php
+share/horde/lib/Horde/Auth/Signup/sql.php
 share/horde/lib/Horde/Auth/application.php
 share/horde/lib/Horde/Auth/auto.php
 share/horde/lib/Horde/Auth/composite.php
@@ -238,8 +243,10 @@ share/horde/lib/Horde/Exception.php
 share/horde/lib/Horde/Feed.php
 share/horde/lib/Horde/Feed/Atom.php
 share/horde/lib/Horde/Feed/Base.php
+share/horde/lib/Horde/Feed/Blogroll.php
 share/horde/lib/Horde/Feed/Entry/Atom.php
 share/horde/lib/Horde/Feed/Entry/Base.php
+share/horde/lib/Horde/Feed/Entry/Blogroll.php
 share/horde/lib/Horde/Feed/Entry/Rss.php
 share/horde/lib/Horde/Feed/Exception.php
 share/horde/lib/Horde/Feed/Rss.php
@@ -299,20 +306,40 @@ share/horde/lib/Horde/Image/rgb.php
 share/horde/lib/Horde/Image/svg.php
 share/horde/lib/Horde/Image/swf.php
 share/horde/lib/Horde/Kolab.php
-share/horde/lib/Horde/Kolab/Date.php
-share/horde/lib/Horde/Kolab/Freebusy.php
-share/horde/lib/Horde/Kolab/IMAP.php
-share/horde/lib/Horde/Kolab/IMAP/cclient.php
-share/horde/lib/Horde/Kolab/IMAP/pear.php
-share/horde/lib/Horde/Kolab/IMAP/test.php
-share/horde/lib/Horde/Kolab/LDAP.php
-share/horde/lib/Horde/Kolab/XML.php
-share/horde/lib/Horde/Kolab/XML/contact.php
-share/horde/lib/Horde/Kolab/XML/distributionlist.php
-share/horde/lib/Horde/Kolab/XML/event.php
-share/horde/lib/Horde/Kolab/XML/hprefs.php
-share/horde/lib/Horde/Kolab/XML/note.php
-share/horde/lib/Horde/Kolab/XML/task.php
+share/horde/lib/Horde/Kolab/Deprecated.php
+share/horde/lib/Horde/Kolab/Format.php
+share/horde/lib/Horde/Kolab/Format/Date.php
+share/horde/lib/Horde/Kolab/Format/XML.php
+share/horde/lib/Horde/Kolab/Format/XML/annotation.php
+share/horde/lib/Horde/Kolab/Format/XML/contact.php
+share/horde/lib/Horde/Kolab/Format/XML/distributionlist.php
+share/horde/lib/Horde/Kolab/Format/XML/event.php
+share/horde/lib/Horde/Kolab/Format/XML/hprefs.php
+share/horde/lib/Horde/Kolab/Format/XML/note.php
+share/horde/lib/Horde/Kolab/Format/XML/task.php
+share/horde/lib/Horde/Kolab/Server.php
+share/horde/lib/Horde/Kolab/Server/Object.php
+share/horde/lib/Horde/Kolab/Server/Object/address.php
+share/horde/lib/Horde/Kolab/Server/Object/administrator.php
+share/horde/lib/Horde/Kolab/Server/Object/domainmaintainer.php
+share/horde/lib/Horde/Kolab/Server/Object/group.php
+share/horde/lib/Horde/Kolab/Server/Object/maintainer.php
+share/horde/lib/Horde/Kolab/Server/Object/server.php
+share/horde/lib/Horde/Kolab/Server/Object/sharedfolder.php
+share/horde/lib/Horde/Kolab/Server/Object/user.php
+share/horde/lib/Horde/Kolab/Server/ldap.php
+share/horde/lib/Horde/Kolab/Server/test.php
+share/horde/lib/Horde/Kolab/Storage.php
+share/horde/lib/Horde/Kolab/Storage/Cache.php
+share/horde/lib/Horde/Kolab/Storage/Data.php
+share/horde/lib/Horde/Kolab/Storage/Folder.php
+share/horde/lib/Horde/Kolab/Storage/IMAP.php
+share/horde/lib/Horde/Kolab/Storage/IMAP/cclient.php
+share/horde/lib/Horde/Kolab/Storage/IMAP/pear.php
+share/horde/lib/Horde/Kolab/Storage/IMAP/test.php
+share/horde/lib/Horde/Kolab/Storage/List.php
+share/horde/lib/Horde/Kolab/Storage/Perms.php
+share/horde/lib/Horde/Kolab/Storage/Session.php
 share/horde/lib/Horde/LDAP.php
 share/horde/lib/Horde/Lens.php
 share/horde/lib/Horde/Lens/Interface.php
@@ -468,6 +495,7 @@ share/horde/lib/Horde/Routes/Route.php
 share/horde/lib/Horde/Routes/Utils.php
 share/horde/lib/Horde/SQL.php
 share/horde/lib/Horde/SQL/Keywords.php
+share/horde/lib/Horde/SQL/Manager.php
 share/horde/lib/Horde/Scheduler.php
 share/horde/lib/Horde/Scheduler/cron.php
 share/horde/lib/Horde/Secret.php
@@ -665,6 +693,8 @@ share/horde/locale/es_ES/LC_MESSAGES/horde.mo
 share/horde/locale/es_ES/help.xml
 share/horde/locale/et_EE/LC_MESSAGES/horde.mo
 share/horde/locale/et_EE/help.xml
+share/horde/locale/eu_ES/LC_MESSAGES/horde.mo
+share/horde/locale/eu_ES/help.xml
 share/horde/locale/fa_IR/LC_MESSAGES/horde.mo
 share/horde/locale/fa_IR/help.xml
 share/horde/locale/fi_FI/LC_MESSAGES/horde.mo
@@ -729,6 +759,7 @@ share/horde/po/de_DE.po
 share/horde/po/el_GR.po
 share/horde/po/es_ES.po
 share/horde/po/et_EE.po
+share/horde/po/eu_ES.po
 share/horde/po/fa_IR.po
 share/horde/po/fi_FI.po
 share/horde/po/fr_FR.po
@@ -762,6 +793,7 @@ share/horde/po/uk_UA.po
 share/horde/po/zh_CN.po
 share/horde/po/zh_TW.po
 share/horde/rpc.php
+share/horde/rpc/index.php
 share/horde/scripts/SCRIPTS
 share/horde/scripts/alarms.php
 share/horde/scripts/cookie_login.php
@@ -814,6 +846,8 @@ share/horde/scripts/sql/horde_sessionhandler.oci8.sql
 share/horde/scripts/sql/horde_sessionhandler.pgsql.sql
 share/horde/scripts/sql/horde_sessionhandler.sapdb.sql
 share/horde/scripts/sql/horde_sessionhandler.sql
+share/horde/scripts/sql/horde_signups.mysql.sql
+share/horde/scripts/sql/horde_signups.sql
 share/horde/scripts/sql/horde_syncml.sql
 share/horde/scripts/sql/horde_tokens.sql
 share/horde/scripts/sql/horde_users.sql
@@ -828,6 +862,7 @@ share/horde/scripts/upgrades/2.2_to_3.0.oci8.sql
 share/horde/scripts/upgrades/2.2_to_3.0.pgsql.sql
 share/horde/scripts/upgrades/2005-09-22_horde_prefs_varchar2.oci8.sql
 share/horde/scripts/upgrades/2006-06-29_horde_prefs_indexes.sql
+share/horde/scripts/upgrades/2008-08-29_fix_mdb2_sequences.php
 share/horde/scripts/upgrades/3.0_to_3.1.mysql.sql
 share/horde/scripts/upgrades/3.0_to_3.1.oci8.sql
 share/horde/scripts/upgrades/3.0_to_3.1.sql
@@ -879,6 +914,7 @@ share/horde/services/editor/fckeditor/editor/dialog/fck_anchor.html
 share/horde/services/editor/fckeditor/editor/dialog/fck_button.html
 share/horde/services/editor/fckeditor/editor/dialog/fck_checkbox.html
 share/horde/services/editor/fckeditor/editor/dialog/fck_colorselector.html
+share/horde/services/editor/fckeditor/editor/dialog/fck_div.html
 share/horde/services/editor/fckeditor/editor/dialog/fck_docprops.html
 share/horde/services/editor/fckeditor/editor/dialog/fck_docprops/fck_document_preview.html
 share/horde/services/editor/fckeditor/editor/dialog/fck_flash.html
@@ -971,6 +1007,7 @@ share/horde/services/editor/fckeditor/editor/lang/fo.js
 share/horde/services/editor/fckeditor/editor/lang/fr-ca.js
 share/horde/services/editor/fckeditor/editor/lang/fr.js
 share/horde/services/editor/fckeditor/editor/lang/gl.js
+share/horde/services/editor/fckeditor/editor/lang/gu.js
 share/horde/services/editor/fckeditor/editor/lang/he.js
 share/horde/services/editor/fckeditor/editor/lang/hi.js
 share/horde/services/editor/fckeditor/editor/lang/hr.js
@@ -1019,6 +1056,7 @@ share/horde/services/editor/fckeditor/editor/lang/src/fo.js
 share/horde/services/editor/fckeditor/editor/lang/src/fr-ca.js
 share/horde/services/editor/fckeditor/editor/lang/src/fr.js
 share/horde/services/editor/fckeditor/editor/lang/src/gl.js
+share/horde/services/editor/fckeditor/editor/lang/src/gu.js
 share/horde/services/editor/fckeditor/editor/lang/src/he.js
 share/horde/services/editor/fckeditor/editor/lang/src/hi.js
 share/horde/services/editor/fckeditor/editor/lang/src/hr.js
@@ -1548,7 +1586,6 @@ share/horde/templates/index/frames_index.inc
 share/horde/templates/javascript/open_calendar.js
 share/horde/templates/javascript/open_html_helper.js
 share/horde/templates/javascript/print.js
-share/horde/templates/javascript/quoteBlocks.js
 share/horde/templates/javascript/tree.js
 share/horde/templates/login/login.inc
 share/horde/templates/login/mobile.inc
@@ -1613,6 +1650,7 @@ share/horde/themes/cornflower/graphics/tab_left.gif
 share/horde/themes/cornflower/graphics/tab_right.gif
 share/horde/themes/cornflower/info.php
 share/horde/themes/cornflower/screen.css
+share/horde/themes/embed.css
 share/horde/themes/fadetogreen/graphics/control.png
 share/horde/themes/fadetogreen/graphics/header.png
 share/horde/themes/fadetogreen/graphics/headerbox.png
@@ -3978,6 +4016,8 @@ share/horde/util/icon_browser.php
 @dirrm share/horde/locale/fi_FI
 @dirrm share/horde/locale/fa_IR/LC_MESSAGES
 @dirrm share/horde/locale/fa_IR
+@dirrm share/horde/locale/eu_ES/LC_MESSAGES
+@dirrm share/horde/locale/eu_ES
 @dirrm share/horde/locale/et_EE/LC_MESSAGES
 @dirrm share/horde/locale/et_EE
 @dirrm share/horde/locale/es_ES/LC_MESSAGES
@@ -4084,8 +4124,12 @@ share/horde/util/icon_browser.php
 @dirrm share/horde/lib/Horde/Log
 @dirrm share/horde/lib/Horde/Lock
 @dirrm share/horde/lib/Horde/Lens
-@dirrm share/horde/lib/Horde/Kolab/XML
-@dirrm share/horde/lib/Horde/Kolab/IMAP
+@dirrm share/horde/lib/Horde/Kolab/Storage/IMAP
+@dirrm share/horde/lib/Horde/Kolab/Storage
+@dirrm share/horde/lib/Horde/Kolab/Server/Object
+@dirrm share/horde/lib/Horde/Kolab/Server
+@dirrm share/horde/lib/Horde/Kolab/Format/XML
+@dirrm share/horde/lib/Horde/Kolab/Format
 @dirrm share/horde/lib/Horde/Kolab
 @dirrm share/horde/lib/Horde/Image/Effect/im
 @dirrm share/horde/lib/Horde/Image/Effect/gd
@@ -4113,6 +4157,7 @@ share/horde/util/icon_browser.php
 @dirrm share/horde/lib/Horde/Browser
 @dirrm share/horde/lib/Horde/Block/Layout
 @dirrm share/horde/lib/Horde/Block
+@dirrm share/horde/lib/Horde/Auth/Signup
 @dirrm share/horde/lib/Horde/Auth
 @dirrm share/horde/lib/Horde/Argv
 @dirrm share/horde/lib/Horde/Alarm
@@ -4132,9 +4177,11 @@ share/horde/util/icon_browser.php
 @dirrm share/horde/admin/perms
 @dirrm share/horde/admin/locale/hu_HU
 @dirrm share/horde/admin/locale/fi_FI
+@dirrm share/horde/admin/locale/eu_ES
 @dirrm share/horde/admin/locale/en_US
 @dirrm share/horde/admin/locale
 @dirrm share/horde/admin
+@dirrm share/horde/rpc
 @unexec ${RMDIR} %D/share/horde 2>/dev/null || ${TRUE}
 @dirrm share/examples/horde
 @dirrm share/doc/horde
