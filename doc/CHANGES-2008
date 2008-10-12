@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2470 2008/10/12 12:40:25 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2471 2008/10/12 12:50:34 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4191,3 +4191,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/turba to 2.3 [adrianp 2008-10-12]
 	Updated time/kronolith to 2.3 [adrianp 2008-10-12]
 	Updated www/apache22 to 2.2.9nb5 [tron 2008-10-12]
+	Updated security/ap-modsecurity2 to 2.5.7 [adrianp 2008-10-12]
