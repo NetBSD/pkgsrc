@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2476 2008/10/12 18:47:25 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2477 2008/10/12 18:59:42 kefren Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4202,3 +4202,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/p5-Catalyst-Model-Adaptor version 0.03 [abs 2008-10-12]
 	Added www/p5-Catalyst-Plugin-I18N version 0.08 [abs 2008-10-12]
 	Updated net/p5-INET6 to 2.56 [seb 2008-10-12]
+	Added devel/p5-Gtk2-GladeXML version 1.007 [kefren 2008-10-12]
