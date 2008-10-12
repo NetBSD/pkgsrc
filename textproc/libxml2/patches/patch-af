@@ -1,0 +1,21 @@
+$NetBSD: patch-af,v 1.1.2.2 2008/10/12 12:09:10 rtr Exp $
+
+Patch for CVE-2008-4409 taken from here:
+
+http://bugzilla.gnome.org/show_bug.cgi?id=554660
+http://bugzilla.gnome.org/attachment.cgi?id=119824
+
+--- parser.c.orig	2008-09-01 07:22:40.000000000 +0100
++++ parser.c	2008-10-09 15:22:55.000000000 +0100
+@@ -7225,8 +7225,10 @@
+      * Predefined entites override any extra definition
+      */
+     ent = xmlGetPredefinedEntity(name);
+-    if (ent != NULL)
++    if (ent != NULL) {
++        *str = ptr;
+         return(ent);
++    }
+ 
+     /*
+      * Increate the number of entity references parsed
