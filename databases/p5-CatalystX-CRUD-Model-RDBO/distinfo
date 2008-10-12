@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2008/09/11 12:19:05 he Exp $
+$NetBSD: distinfo,v 1.3 2008/10/12 22:07:25 he Exp $
 
-SHA1 (CatalystX-CRUD-Model-RDBO-0.13.tar.gz) = 24b4c3114da25c9f68d5914cfc563ead9e05408b
-RMD160 (CatalystX-CRUD-Model-RDBO-0.13.tar.gz) = 48f93c6133ba65eec8601c79877ad9eeac89d73a
-Size (CatalystX-CRUD-Model-RDBO-0.13.tar.gz) = 9207 bytes
+SHA1 (CatalystX-CRUD-Model-RDBO-0.14.tar.gz) = ce4e824363c7f3732a40afb62570f15d6612870d
+RMD160 (CatalystX-CRUD-Model-RDBO-0.14.tar.gz) = fbc8a1f0cc01c90d5be7cc1f9b40d8000aa03c03
+Size (CatalystX-CRUD-Model-RDBO-0.14.tar.gz) = 9992 bytes
