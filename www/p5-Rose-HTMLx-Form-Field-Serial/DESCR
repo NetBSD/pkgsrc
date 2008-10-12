@@ -1,0 +1,7 @@
+Rose::HTMLx::Form::Field::Serial is a subclass of
+Rose::HTML::Form::Field::Hidden. It exists simply to isolate a
+particular kind of form field that should not be updated via form
+but may need to be passed as a param or viewed in a (x)html serialized
+format. The namespace is reserved in the event that future
+functionality may be added, but mostly to uniquely identify this
+field type for use with Rose::DBx::Garden.
