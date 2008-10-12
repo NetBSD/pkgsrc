@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2474 2008/10/12 13:57:45 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.2475 2008/10/12 17:34:53 abs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4195,3 +4195,9 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/drupal6-translations to 20081012 [taca 2008-10-12]
 	Updated graphics/graphviz to 2.16.1nb3 [tron 2008-10-12]
 	Updated net/freeradius2 to 2.1.1 [adrianp 2008-10-12]
+	Added devel/p5-Devel-Declare version 0.001011 [abs 2008-10-12]
+	Added devel/p5-MooseX-Types version 0.04 [abs 2008-10-12]
+	Added devel/p5-Test-Class version 0.31nb1 [abs 2008-10-12]
+	Added misc/p5-File-MMagic-XS version 0.09003 [abs 2008-10-12]
+	Added www/p5-Catalyst-Model-Adaptor version 0.03 [abs 2008-10-12]
+	Added www/p5-Catalyst-Plugin-I18N version 0.08 [abs 2008-10-12]
