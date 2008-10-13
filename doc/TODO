@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7581 2008/10/12 11:26:49 markd Exp $
+$NetBSD: TODO,v 1.7582 2008/10/13 09:05:14 adam Exp $
 
 Suggested new packages
 ======================
@@ -458,7 +458,6 @@ Suggested package updates
 	o at-spi-1.24.0
 	o aterm-1.0.1
 	o auctex-11.85
-	o autoconf-2.63
 	o autoconvert-0.3.16
 	o avcheck-0.91
 	o avidemux-2.4.2
@@ -690,7 +689,7 @@ Suggested package updates
 	o ggiterm-0.7.1
 	o ghostscript-esp-8.15.3
 	o gifsicle-1.48
-	o gimp-2.6.0
+	o gimp-2.6.1
 	o gimp-docs-2.4.2
 	o gindent-2.2.9
 	o gkrellm-2.3.1
@@ -699,11 +698,8 @@ Suggested package updates
 	o gkrellm-xmms-2.1.22
 	o glabels-2.2.3
 	o glchess-1.0.5
-	o glibmm-2.18.0
 	o global-5.6
-	o glpk-4.32
 	o gmime-2.4.2
-	o gmp-4.2.4
 	o gmpc-0.16.0
 	o gnet1-1.1.9
 	o gnetman-20050429
@@ -812,11 +808,9 @@ Suggested package updates
 	o imap-uw-2007b
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imlib2-1.4.1
-	o imp-4.3
 	o ingo-1.2.1
 	o instiki-0.13
 	o intercal-0.24
-	o intltool-0.40.5
 	o ion3-20081002
 	o ircII-20080314
 	o ircservices-5.1.12
@@ -860,7 +854,6 @@ Suggested package updates
 	o kronolith-2.3
 	o krusader-1.90.0
 	o ksi-3.4.2
-	o lame-3.98.2
 	o lapack-20070226
 	o latd-1.21
 	o latex2rtf-1.9.19
@@ -1103,7 +1096,6 @@ Suggested package updates
 	o pear-Numbers_Words-0.15.0
 	o pear-SOAP-0.10.1
 	o pen-0.17.3
-	o perl5-5.10.0
 	o pfqueue-0.5.6
 	o pgadmin3-1.6.0
 	o pgpool-3.1.1
@@ -1131,7 +1123,6 @@ Suggested package updates
 	o plptools-0.13 [pkg/30244]
 	o plptools-1.0.3
 	o pmccabe-2.3.1
-	o png-1.2.32
 	o pngcheck-2.3.0
 	o pngcrush-1.6.10
 	o po4a-0.29
@@ -1316,8 +1307,6 @@ Suggested package updates
 	o sox-14.1.0
 	o spcaview-20060501
 	o spim-7.3
-	o squid-2.7.4 (2.7.STABLE4)
-	o squid-3.0.8 (3.0.STABLE8) [taca, also pkg/39188]
 	o srp_client-1.7.5 [jlam]
 	o ssh-askpass-1.2.4.1
 	o star-1.5
@@ -1392,7 +1381,6 @@ Suggested package updates
 	o udunits-1.12.9
 	o uim-1.5.3
 	o unicap-0.9.3
-	o unrar-3.8.3
 	o ups-nut-2.2.1 [pkgsrc-wip]
 	o upx-2.90
 	o userppp-030706
@@ -1423,7 +1411,6 @@ Suggested package updates
 	o webby-0.8.4
 	o websvn-2.0
 	o weewm-0.01
-	o wesnoth-1.4.5
 	o windowlab-1.34
 	o wine-1.1.5 [pkg/39626]
 	o wireshark-1.1.0
