@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2494 2008/10/13 17:15:44 reinoud Exp $
+$NetBSD: CHANGES-2008,v 1.2495 2008/10/13 18:43:39 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4241,3 +4241,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/ocamlduce to 3.10.2 [obache 2008-10-13]
 	Updated mail/spamdyke to 4.0.5 [schmonz 2008-10-13]
 	Updated devel/SDL to SDL-1.2.13nb2 [reinoud 2008-10-13]
+	Updated multimedia/vlc to 0.9.4 [ahoka 2008-10-13]
