@@ -1,0 +1,3 @@
+Menhir is a LR(1) parser generator for the Objective Caml programming
+language. That is, Menhir compiles LR(1) grammar specifications down
+to Objective Caml code. It is mostly compatible with ocamlyacc(1).
