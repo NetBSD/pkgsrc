@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2484 2008/10/13 05:58:46 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2485 2008/10/13 09:05:14 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4220,3 +4220,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/p5-tokyocabinet to 1.17 [obache 2008-10-13]
 	Updated databases/ruby-tokyocabinet to 1.15 [obache 2008-10-13]
 	Updated databases/tokyotyrant to 1.1.5 [obache 2008-10-13]
+	Updated math/glpk to 4.32 [adam 2008-10-13]
+	Updated devel/glibmm to 2.18.0 [adam 2008-10-13]
