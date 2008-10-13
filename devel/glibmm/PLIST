@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/06/23 16:44:47 drochner Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/10/13 09:01:16 adam Exp $
 include/giomm-2.4/giomm.h
 include/giomm-2.4/giomm/appinfo.h
 include/giomm-2.4/giomm/asyncresult.h
@@ -101,6 +101,7 @@ include/glibmm-2.4/glibmm/main.h
 include/glibmm-2.4/glibmm/markup.h
 include/glibmm-2.4/glibmm/miscutils.h
 include/glibmm-2.4/glibmm/module.h
+include/glibmm-2.4/glibmm/nodetree.h
 include/glibmm-2.4/glibmm/object.h
 include/glibmm-2.4/glibmm/objectbase.h
 include/glibmm-2.4/glibmm/optioncontext.h
@@ -117,6 +118,7 @@ include/glibmm-2.4/glibmm/private/iochannel_p.h
 include/glibmm-2.4/glibmm/private/keyfile_p.h
 include/glibmm-2.4/glibmm/private/markup_p.h
 include/glibmm-2.4/glibmm/private/module_p.h
+include/glibmm-2.4/glibmm/private/nodetree_p.h
 include/glibmm-2.4/glibmm/private/object_p.h
 include/glibmm-2.4/glibmm/private/optioncontext_p.h
 include/glibmm-2.4/glibmm/private/optionentry_p.h
@@ -406,6 +408,8 @@ share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Mutex-members.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Mutex.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Mutex_1_1Lock-members.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Mutex_1_1Lock.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1NodeTree-members.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1NodeTree.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Object-members.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Object.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1ObjectBase-members.html
@@ -539,6 +543,8 @@ share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1TimeoutSource.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1TimeoutSource__inherit__graph.png
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Timer-members.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Timer.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Tree-members.html
+share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Tree.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Value-members.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1Value.html
 share/doc/glibmm-2.4/docs/reference/html/classGlib_1_1ValueBase-members.html
@@ -1464,6 +1470,8 @@ share/doc/glibmm-2.4/docs/reference/html/inherit__graph__734.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__735.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__736.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__737.png
+share/doc/glibmm-2.4/docs/reference/html/inherit__graph__738.png
+share/doc/glibmm-2.4/docs/reference/html/inherit__graph__739.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__74.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__75.png
 share/doc/glibmm-2.4/docs/reference/html/inherit__graph__76.png
@@ -1541,6 +1549,7 @@ share/doc/glibmm-2.4/docs/reference/html/namespacemembers_eval_0x64.html
 share/doc/glibmm-2.4/docs/reference/html/namespacemembers_eval_0x66.html
 share/doc/glibmm-2.4/docs/reference/html/namespacemembers_eval_0x69.html
 share/doc/glibmm-2.4/docs/reference/html/namespacemembers_eval_0x6b.html
+share/doc/glibmm-2.4/docs/reference/html/namespacemembers_eval_0x6c.html
 share/doc/glibmm-2.4/docs/reference/html/namespacemembers_eval_0x6d.html
 share/doc/glibmm-2.4/docs/reference/html/namespacemembers_eval_0x6e.html
 share/doc/glibmm-2.4/docs/reference/html/namespacemembers_eval_0x6f.html
@@ -1573,7 +1582,9 @@ share/doc/glibmm-2.4/docs/reference/html/namespaces.html
 share/doc/glibmm-2.4/docs/reference/html/newin2p12s.html
 share/doc/glibmm-2.4/docs/reference/html/newin2p14s.html
 share/doc/glibmm-2.4/docs/reference/html/newin2p16s.html
+share/doc/glibmm-2.4/docs/reference/html/newin2p18s.html
 share/doc/glibmm-2.4/docs/reference/html/newin2p6s.html
+share/doc/glibmm-2.4/docs/reference/html/nodetree_8h.html
 share/doc/glibmm-2.4/docs/reference/html/object_8h.html
 share/doc/glibmm-2.4/docs/reference/html/objectbase_8h.html
 share/doc/glibmm-2.4/docs/reference/html/optioncontext_8h.html
@@ -1623,6 +1634,7 @@ share/doc/glibmm-2.4/docs/reference/html/thread_8h.html
 share/doc/glibmm-2.4/docs/reference/html/threadpool_8h.html
 share/doc/glibmm-2.4/docs/reference/html/timer_8h.html
 share/doc/glibmm-2.4/docs/reference/html/timeval_8h.html
+share/doc/glibmm-2.4/docs/reference/html/tree_8h.html
 share/doc/glibmm-2.4/docs/reference/html/unicode_8h.html
 share/doc/glibmm-2.4/docs/reference/html/unixinputstream_8h.html
 share/doc/glibmm-2.4/docs/reference/html/unixoutputstream_8h.html
@@ -1640,6 +1652,7 @@ share/doc/glibmm-2.4/examples/compose/main.cc
 share/doc/glibmm-2.4/examples/iochannel_stream/fdstream.cc
 share/doc/glibmm-2.4/examples/iochannel_stream/fdstream.h
 share/doc/glibmm-2.4/examples/iochannel_stream/main.cc
+share/doc/glibmm-2.4/examples/keyfile/main.cc
 share/doc/glibmm-2.4/examples/markup/parser.cc
 share/doc/glibmm-2.4/examples/options/main.cc
 share/doc/glibmm-2.4/examples/regex/main.cc
@@ -1651,6 +1664,7 @@ share/doc/glibmm-2.4/examples/thread/threadpool.cc
 @dirrm share/doc/glibmm-2.4/examples/regex
 @dirrm share/doc/glibmm-2.4/examples/options
 @dirrm share/doc/glibmm-2.4/examples/markup
+@dirrm share/doc/glibmm-2.4/examples/keyfile
 @dirrm share/doc/glibmm-2.4/examples/iochannel_stream
 @dirrm share/doc/glibmm-2.4/examples/compose
 @dirrm share/doc/glibmm-2.4/examples/child_watch
