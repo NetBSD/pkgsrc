@@ -1,4 +1,4 @@
-/*	$NetBSD: str.c,v 1.24 2008/04/26 17:40:01 joerg Exp $	*/
+/*	$NetBSD: str.c,v 1.25 2008/10/13 15:54:24 erh Exp $	*/
 
 #if HAVE_CONFIG_H
 #include "config.h"
@@ -11,7 +11,7 @@
 #if 0
 static const char *rcsid = "Id: str.c,v 1.5 1997/10/08 07:48:21 charnier Exp";
 #else
-__RCSID("$NetBSD: str.c,v 1.24 2008/04/26 17:40:01 joerg Exp $");
+__RCSID("$NetBSD: str.c,v 1.25 2008/10/13 15:54:24 erh Exp $");
 #endif
 #endif
 
@@ -140,8 +140,8 @@ strip_txz(char *buf, char *sfx, const char *fname)
 			if (suffixlen >= PKG_SUFFIX_MAX)
 				errx(EXIT_FAILURE, "too long suffix '%s'", fname);
 			memcpy(sfx, *suffixp, suffixlen+1);
-			return;
 		}
+		return;
 	}
 
 	/* not found */
