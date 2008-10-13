@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.35 2008/10/11 09:31:55 uebayasi Exp $
+# $NetBSD: Makefile,v 1.36 2008/10/13 08:07:02 uebayasi Exp $
 #
 
 DISTNAME=		pvs-${VERSION}
@@ -42,6 +42,8 @@ MESSAGE_SRC=		${PKGDIR}/MESSAGE.${EMUL_PLATFORM}
 MAINFILEEXT=		${EMUL_OPSYS}
 
 INSTALLATION_DIRS=	bin
+
+EMACS_BUILDLINK=	# defined
 
 do-build:
 	${SED} -e "s|@PREFIX@|${PREFIX}|" ${WRKSRC}/pvs > ${WRKSRC}/pvs.tmp

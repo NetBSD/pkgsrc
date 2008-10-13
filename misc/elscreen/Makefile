@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2008/10/11 09:31:57 uebayasi Exp $
+# $NetBSD: Makefile,v 1.16 2008/10/13 08:07:02 uebayasi Exp $
 #
 
 DISTNAME=	elscreen-1.4.5
@@ -23,6 +23,8 @@ COMMENT=	Window manager within Emacs
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	yes
+
+EMACS_BUILDLINK=# defined
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/elscreen

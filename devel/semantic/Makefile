@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.25 2008/10/11 09:31:55 uebayasi Exp $
+# $NetBSD: Makefile,v 1.26 2008/10/13 08:07:02 uebayasi Exp $
 #
 
 DISTNAME=	semantic-1.4.4
@@ -38,6 +38,8 @@ AUXFILES=	semantic-load.el
 AUXFILES+=	c.bnf make.bnf java.bnf scheme.bnf
 
 INSTALLATION_DIRS=	${EMACS_INFOPREFIX}
+
+EMACS_BUILDLINK=# defined
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${EMACS_LISPPREFIX}/semantic
