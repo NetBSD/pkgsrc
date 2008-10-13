@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2490 2008/10/13 12:40:33 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2491 2008/10/13 12:42:51 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4237,3 +4237,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Renamed mail/lua-OSBF to mail/OSBF-lua [shannonjr 2008-10-13]
 	Updated devel/p5-IO-Compress-Base to 2.015 [obache 2008-10-13]
 	Updated devel/p5-IO-Compress-Zlib to 2.015 [obache 2008-10-13]
+	Updated devel/p5-Compress-Zlib to 2.015 [obache 2008-10-13]
