@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/08/06 22:41:06 xtraeme Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/10/13 03:14:40 dsainty Exp $
 bin/bzadmin
 bin/bzflag
 bin/bzfs
@@ -24,6 +24,7 @@ share/bzflag/burrow.wav
 share/bzflag/bzflag-256x256.png
 share/bzflag/bzflag-32x32.xpm
 share/bzflag/bzflag-48x48.png
+share/bzflag/bzflag.desktop
 share/bzflag/caution.png
 share/bzflag/clouds.png
 share/bzflag/dusty_flare.png
