@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.28 2008/10/11 09:31:55 uebayasi Exp $
+# $NetBSD: Makefile,v 1.29 2008/10/13 08:07:02 uebayasi Exp $
 
 DISTNAME=	flim-1.14.7
 PKGNAME=	${EMACS_PKGNAME_PREFIX}${DISTNAME}
@@ -33,6 +33,7 @@ MAKEFLAGS.emacs+=
 MAKEFLAGS.xemacs+=	PACKAGEDIR=${EMACS_LISPPREFIX:C|/lisp$||}
 
 EMACS_MODULES=	base
+EMACS_BUILDLINK=# defined
 
 post-build:
 	@cd ${WRKSRC}; for i in mime-en mime-ja; do			\

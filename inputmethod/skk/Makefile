@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.18 2008/10/11 09:31:57 uebayasi Exp $
+# $NetBSD: Makefile,v 1.19 2008/10/13 08:07:02 uebayasi Exp $
 #
 
 DISTNAME=	ddskk-20080309
@@ -16,6 +16,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 CONFLICTS=	ddskk-[0-9]*
 
 EMACS_MODULES+=	base leim
+EMACS_BUILDLINK=# defined
 
 MAKEFLAGS+=	EMACS=${EMACS_BIN:Q}
 MAKE_ENV=	prefix=${DESTDIR:Q}${PREFIX:Q} \

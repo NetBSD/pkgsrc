@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/10/11 09:31:58 uebayasi Exp $
+# $NetBSD: Makefile,v 1.24 2008/10/13 08:07:02 uebayasi Exp $
 
 DISTNAME=	emacs-w3m-1.4.4
 PKGREVISION=	1
@@ -30,6 +30,8 @@ SUBST_STAGE.fix-icondir=	pre-configure
 SUBST_FILES.fix-icondir=	Makefile.in w3m.el w3mhack.el
 SUBST_SED.fix-icondir=		-e 's|etc/images/w3m|etc/w3m|g' \
 				-e 's|images/w3m|w3m|g'
+
+EMACS_BUILDLINK=# defined
 
 .include "../../editors/emacs/modules.mk"
 

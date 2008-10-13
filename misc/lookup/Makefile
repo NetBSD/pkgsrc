@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.17 2008/10/11 09:31:57 uebayasi Exp $
+# $NetBSD: Makefile,v 1.18 2008/10/13 08:07:02 uebayasi Exp $
 #
 
 DISTNAME=	lookup-1.4.1
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	eblook>=1.4:../../textproc/eblook
 
 EMACS_VERSIONS_ACCEPTED=	emacs22 emacs22nox emacs21 emacs21nox emacs20 xemacs214 xemacs215
+EMACS_BUILDLINK=# defined
 
 GNU_CONFIGURE=	YES
 MAKEFLAGS+=	lispdir=${EMACS_LISPPREFIX}/lookup
