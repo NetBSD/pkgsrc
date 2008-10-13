@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.extension,v 1.11 2007/03/14 11:50:33 markd Exp $
+# $NetBSD: Makefile.extension,v 1.12 2008/10/13 11:08:31 markd Exp $
 #
 # This Makefile fragment is included by packages for R library packages.
 #
@@ -14,29 +14,33 @@ MASTER_SITES?=		${MASTER_SITE_R_CRAN:=contrib/}
 DIST_SUBDIR?=		R
 CATEGORIES+=		math
 
-R_HOMEPAGE_BASE=	http://cran.r-project.org/src/contrib/Descriptions
+PKG_INSTALLATION_TYPES=	overwrite pkgviews
+PKG_DESTDIR_SUPPORT=	user-destdir
 
 WRKSRC=		${WRKDIR}/${R_PKGNAME}
+
+INSTALLATION_DIRS=	${R_LIB}
 
 do-build:
 
 do-install:
 	R_LIBS= ${LOCALBASE}/bin/R CMD INSTALL ${R_PKG_INSTALL_ARGS} ${WRKDIR}/${R_PKGNAME}
 
-# automatically generate the PLIST
 R_LIB=			lib/R/library
 R_INST_DIRS?=		${R_PKGNAME}
+R_HOMEPAGE_BASE=	http://cran.r-project.org/web/packages
+R_PKG_INSTALL_ARGS=	-l ${DESTDIR}${PREFIX}/${R_LIB}
 
-R_PACKLIST_FILES_CMD=	( cd ${PREFIX}; for dir in ${R_INST_DIRS}; do \
+R_PACKLIST_FILES_CMD=	( cd ${DESTDIR}${PREFIX}; for dir in ${R_INST_DIRS}; do \
 	${FIND} ${R_LIB}/$${dir} \( -type f -o -type l \) -print; done ) | ${SORT} -u
-R_PACKLIST_DIRS_CMD=	( cd ${PREFIX}; for dir in ${R_INST_DIRS}; do \
+R_PACKLIST_DIRS_CMD=	( cd ${DESTDIR}${PREFIX}; for dir in ${R_INST_DIRS}; do \
 	${FIND} ${R_LIB}/$${dir} -type d -print; done ) | ${SORT} -ur | ${SED} -e "s|^|@dirrm |"
-
 R_GENERATE_PLIST=	${R_PACKLIST_FILES_CMD}; \
 			${R_PACKLIST_DIRS_CMD};
 GENERATE_PLIST+=	${R_GENERATE_PLIST}
 
 INSTALL_TEMPLATES+=	../../math/R/files/pkg-index.tmpl
 DEINSTALL_TEMPLATES+=	../../math/R/files/pkg-index.tmpl
+CHECK_FILES_SKIP+=	${PREFIX}/${R_LIB}/R.css
 
 .include "../../math/R/buildlink3.mk"
