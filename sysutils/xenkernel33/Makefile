@@ -1,9 +1,10 @@
-# $NetBSD: Makefile,v 1.6 2008/10/08 18:32:06 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2008/10/13 21:41:26 joerg Exp $
 #
 
 VERSION=	3.3.0
 DISTNAME=	xen-${VERSION}
 PKGNAME=	xenkernel33-${VERSION}
+PKGREVISION=	1
 CATEGORIES=	sysutils
 MASTER_SITES=	http://bits.xensource.com/oss-xen/release/${VERSION}/
 EXTRACT_SUFX=	.tar.gz
@@ -27,6 +28,7 @@ WRKSRC=		${WRKDIR}/xen-${VERSION}
 NO_CONFIGURE=	yes
 USE_TOOLS+=	gmake
 
+PYTHON_FOR_BUILD_ONLY=	# empty
 PY_PATCHPLIST=		NO
 
 SUBST_CLASSES+=		py
