@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.28 2008/03/14 01:16:36 joerg Exp $
+$NetBSD: distinfo,v 1.28.10.1 2008/10/13 07:04:20 rtr Exp $
 
 SHA1 (graphviz-2.16.1.tar.gz) = 46b704bd9b81922bcd17167c88f3278a9645e894
 RMD160 (graphviz-2.16.1.tar.gz) = 6d0f23fa176a1bef7ee0ca48cf1b700fe6cbfb42
@@ -23,3 +23,4 @@ SHA1 (patch-aq) = 7a14a748784d8e887a8449b649dab96b1bf7462c
 SHA1 (patch-ar) = 44e5fdf98c8a86e2c17faca7d88df11c801a68fc
 SHA1 (patch-as) = cf7408ba799ba70f7404205d99be950eb1d67d79
 SHA1 (patch-at) = 2d9880b76536596dfadaf98cc1aa00aed1abd70c
+SHA1 (patch-au) = 896ee85993c69f83a6808b026fa873a82a4cfa3e
