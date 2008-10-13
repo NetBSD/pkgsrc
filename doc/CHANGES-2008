@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2482 2008/10/13 05:55:24 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2483 2008/10/13 05:56:25 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4218,3 +4218,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated games/bzflag to 2.0.12 [dsainty 2008-10-13]
 	Updated databases/tokyocabinet to 1.3.12 [obache 2008-10-13]
 	Updated databases/p5-tokyocabinet to 1.17 [obache 2008-10-13]
+	Updated databases/ruby-tokyocabinet to 1.15 [obache 2008-10-13]
