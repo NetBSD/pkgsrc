@@ -1,10 +1,11 @@
-# $NetBSD: Makefile,v 1.22 2008/10/10 11:34:50 adam Exp $
+# $NetBSD: Makefile,v 1.23 2008/10/13 22:32:54 bad Exp $
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 .include	"../../security/nessus/Makefile.common"
 
 DISTNAME=	libnasl-${VERS}
+PKGREVISION=	1
 
 COMMENT=	Nessus Attack Scripting Language library
 
