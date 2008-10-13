@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2497 2008/10/13 22:45:47 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2498 2008/10/13 22:46:35 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4245,4 +4245,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated math/R-sgeostat to 1.0.21 [markd 2008-10-13]
 	Updated math/R-shapefiles to 0.6 [markd 2008-10-13]
 	Updated math/R-statmod to 1.3.6 [markd 2008-10-13]
-	Updated devel/menhir to 20080912 [bjs 2008-10-13]
+	Added devel/menhir version 20080912 [bjs 2008-10-13]
