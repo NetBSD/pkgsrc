@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.3 2007/02/22 19:26:46 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/10/13 11:30:50 markd Exp $
 #
 
 PKGREVISION=             1
@@ -6,7 +6,7 @@ CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		${R_HOMEPAGE_BASE}/abind.html
+HOMEPAGE=		${R_HOMEPAGE_BASE}/abind/
 COMMENT=		Combine multi-dimensional arrays
 
 R_PKGNAME=		abind
