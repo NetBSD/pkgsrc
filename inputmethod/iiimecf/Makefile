@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/10/11 09:31:57 uebayasi Exp $
+# $NetBSD: Makefile,v 1.11 2008/10/13 08:07:02 uebayasi Exp $
 #
 
 DISTNAME=	IIIMECF-0.6
@@ -12,6 +12,8 @@ MAINTAINER=	uebayasi@NetBSD.org
 COMMENT=	Emacs Lisp library for IIIM Protocol
 
 PKG_DESTDIR_SUPPORT=	user-destdir
+
+EMACS_BUILDLINK=# defined
 
 do-build:
 	@cd ${WRKSRC} && \
