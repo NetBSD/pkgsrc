@@ -1,7 +1,5 @@
-$NetBSD: distinfo,v 1.12 2008/08/17 14:14:11 wiz Exp $
+$NetBSD: distinfo,v 1.13 2008/10/13 09:35:55 adam Exp $
 
-SHA1 (loudmouth-1.4.1.tar.bz2) = ac7b409ab90163a3eb98e65b1afa5c037e560fca
-RMD160 (loudmouth-1.4.1.tar.bz2) = 6424c89f07ca3104d8676b88ad5b42c3293e91ef
-Size (loudmouth-1.4.1.tar.bz2) = 379833 bytes
-SHA1 (patch-aa) = 261c7b2260830e13ac539413f0632923078009f1
-SHA1 (patch-ab) = eb11b1720bee01076f23626ddde0e79346de9940
+SHA1 (loudmouth-1.4.2.tar.bz2) = f2cbcd000127c6cb97f37e31eef3d9536cf2d8df
+RMD160 (loudmouth-1.4.2.tar.bz2) = 6c94abe777e44331a1133d300cb351307e4bb48a
+Size (loudmouth-1.4.2.tar.bz2) = 380128 bytes
