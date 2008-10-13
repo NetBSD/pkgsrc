@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2486 2008/10/13 09:36:41 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2487 2008/10/13 11:46:58 markd Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4224,3 +4224,13 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/glibmm to 2.18.0 [adam 2008-10-13]
 	Updated security/libtasn1 to 1.15 [adam 2008-10-13]
 	Updated chat/loudmouth to 1.4.2 [adam 2008-10-13]
+	Updated math/R-CGIwithR to 0.72 [markd 2008-10-13]
+	Updated math/R-DAAG to 0.97 [markd 2008-10-13]
+	Updated math/R-GRASS to 0.3.7 [markd 2008-10-13]
+	Updated math/R-ISwR to 2.0.2 [markd 2008-10-13]
+	Updated math/R-Matrix to 0.999375.15 [markd 2008-10-13]
+	Updated math/R-PHYLOGR to 1.0.6 [markd 2008-10-13]
+	Updated math/R-R2HTML to 1.59 [markd 2008-10-13]
+	Updated math/R-RArcInfo to 0.4.7 [markd 2008-10-13]
+	Updated math/R-chron to 2.3.24 [markd 2008-10-13]
+	Updated math/R-date to 1.2.26 [markd 2008-10-13]
