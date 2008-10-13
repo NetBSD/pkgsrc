@@ -1,8 +1,8 @@
-$NetBSD: patch-ab,v 1.1.1.1 2008/10/11 12:26:24 obache Exp $
+$NetBSD: patch-ab,v 1.2 2008/10/13 05:58:31 obache Exp $
 
---- configure.orig	2008-09-29 02:49:28.000000000 +0000
+--- configure.orig	2008-10-09 09:24:27.000000000 +0000
 +++ configure
-@@ -4303,7 +4303,7 @@ _ACEOF
+@@ -4368,7 +4368,7 @@ _ACEOF
  
  fi
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2008/10/11 12:26:24 obache Exp $
  then
  
  { echo "$as_me:$LINENO: checking for main in -llua" >&5
-@@ -5110,7 +5110,7 @@ echo "$as_me: error: tcutil.h is require
+@@ -5235,7 +5235,7 @@ echo "$as_me: error: tcutil.h is require
  fi
  
  
