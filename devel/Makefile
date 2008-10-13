@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1040 2008/10/12 17:31:10 abs Exp $
+# $NetBSD: Makefile,v 1.1041 2008/10/13 04:31:46 kefren Exp $
 #
 
 COMMENT=	Development utilities
@@ -559,6 +559,7 @@ SUBDIR+=	p5-Getopt-Long-Descriptive
 SUBDIR+=	p5-Getopt-Mixed
 SUBDIR+=	p5-Getopt-Simple
 SUBDIR+=	p5-Graph
+SUBDIR+=	p5-Gtk2-GladeXML
 SUBDIR+=	p5-Hash-Case
 SUBDIR+=	p5-Hash-Merge
 SUBDIR+=	p5-Heap
