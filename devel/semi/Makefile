@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.27 2008/10/11 09:31:55 uebayasi Exp $
+# $NetBSD: Makefile,v 1.28 2008/10/13 08:07:02 uebayasi Exp $
 #
 
 DISTNAME=	semi-1.14.6
@@ -31,6 +31,7 @@ USE_TOOLS+=	makeinfo
 INFO_FILES=	# PLIST
 
 EMACS_MODULES=	base
+EMACS_BUILDLINK=# defined
 
 BUILD_TARGET.emacs=	elc
 BUILD_TARGET.xemacs=	package
