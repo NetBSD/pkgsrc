@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.2 2007/06/30 15:55:23 joerg Exp $
+$NetBSD: distinfo,v 1.3 2008/10/13 11:19:45 markd Exp $
 
-SHA1 (R/ISwR_1.0-6.tar.gz) = cdc8207f0e75dd0fe48b585d0517cc4beb1544e7
-RMD160 (R/ISwR_1.0-6.tar.gz) = f668f948f26135e68e640be056eeb6b7b16885e0
-Size (R/ISwR_1.0-6.tar.gz) = 46744 bytes
+SHA1 (R/ISwR_2.0-2.tar.gz) = 63e1029cd61e57fb0e1169178265f2dff4bf67ff
+RMD160 (R/ISwR_2.0-2.tar.gz) = a1336fc6abe8676536e2331ab5dbd30ac6db0b31
+Size (R/ISwR_2.0-2.tar.gz) = 158483 bytes
