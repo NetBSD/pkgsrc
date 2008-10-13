@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.7 2008/10/12 12:09:47 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.8 2008/10/13 07:04:47 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -35,3 +35,5 @@ pullup ticket #2554 - requested by tron
 dbus: update package for security fix
 pullup ticket #2553 - requested by tron
 libxml2: security fix
+pullup ticket #2555 - requested by tron
+graphviz: add a patch for security vulnerability
