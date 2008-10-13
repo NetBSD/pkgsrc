@@ -1,0 +1,13 @@
+$NetBSD: patch-ag,v 1.3 2008/10/13 10:31:24 sketch Exp $
+
+--- dict.c.orig	2008-10-13 11:19:44.000000000 +0100
++++ dict.c	2008-10-13 11:20:27.000000000 +0100
+@@ -22,6 +22,8 @@
+ #include <string.h>
+ #ifdef HAVE_STDINT_H
+ #include <stdint.h>
++#elif HAVE_INTTYPES_H
++#include <inttypes.h>
+ #elif defined(WIN32)
+ typedef unsigned __int32 uint32_t;
+ #endif
