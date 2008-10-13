@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/11 12:26:24 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/13 05:58:31 obache Exp $
 #
 
-DISTNAME=	tokyotyrant-1.1.4
+DISTNAME=	tokyotyrant-1.1.5
 CATEGORIES=	databases net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=tokyocabinet/}
 
@@ -18,7 +18,16 @@ PKGCONFIG_OVERRIDE+=	tokyotyrant.pc.in
 
 TEST_TARGET=	check
 
+.include "options.mk"
+
 .include "../../databases/tokyocabinet/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
+PTHREAD_AUTO_VARS=	yes
 .include "../../mk/pthread.buildlink3.mk"
+.if defined(PTHREAD_TYPE) && ${PTHREAD_TYPE} != "none"
+SUBST_CLASSES+=		pthread
+SUBST_STAGE.pthread=	pre-configure
+SUBST_FILES.pthread=	configure
+SUBST_SED.pthread=	-e 's|-lpthread|${PTHREAD_LIBS}|'
+.endif
 .include "../../mk/bsd.pkg.mk"
