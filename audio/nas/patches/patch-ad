@@ -1,8 +1,8 @@
-$NetBSD: patch-ad,v 1.12 2007/12/25 19:48:43 markd Exp $
+$NetBSD: patch-ad,v 1.13 2008/10/14 12:47:11 markd Exp $
 
---- server/dda/voxware/auvoxware.c.orig	2007-03-18 17:05:55.000000000 +1200
+--- server/dda/voxware/auvoxware.c.orig	2007-11-11 12:40:47.000000000 +1300
 +++ server/dda/voxware/auvoxware.c
-@@ -249,8 +249,13 @@ SndStat sndStatIn = {
+@@ -245,8 +245,13 @@ SndStat sndStatIn = {
      256,                        /* fragSize */
      3,                          /* minFrags */
      32,                         /* maxFrags */
@@ -16,7 +16,7 @@ $NetBSD: patch-ad,v 1.12 2007/12/25 19:48:43 markd Exp $
      O_RDONLY,                   /* howToOpen */
      1,                          /* autoOpen */
      0,                          /* forceRate */
-@@ -270,7 +275,11 @@ SndStat sndStatOut = {
+@@ -266,7 +271,11 @@ SndStat sndStatOut = {
      256,                        /* fragSize */
      3,                          /* minFrags */
      32,                         /* maxFrags */
@@ -28,7 +28,19 @@ $NetBSD: patch-ad,v 1.12 2007/12/25 19:48:43 markd Exp $
      "/dev/mixer",               /* mixer */
      O_WRONLY,                   /* howToOpen */
      1,                          /* autoOpen */
-@@ -1335,7 +1344,7 @@ disableProcessFlow(void)
+@@ -875,7 +884,11 @@ openDevice(AuBool wait)
+         if (sndStatOut.fd == -1) {
+             while ((sndStatOut.fd = open(sndStatOut.device,
+                                          sndStatOut.
++#if defined(__FreeBSD__) || defined(__NetBSD__)
++                                         howToOpen | extramode,
++#else
+                                          howToOpen | O_SYNC | extramode,
++#endif
+                                          0666)) == -1 && wait) {
+                 osLogMsg("openDevice: waiting on output device\n");
+                 sleep(1);
+@@ -1372,7 +1385,7 @@ disableProcessFlow(void)
  }
  
  
@@ -37,7 +49,7 @@ $NetBSD: patch-ad,v 1.12 2007/12/25 19:48:43 markd Exp $
  inline
  #endif
          static void
-@@ -1350,7 +1359,7 @@ monoToStereoLinearSigned16LSB(AuUint32 n
+@@ -1387,7 +1400,7 @@ monoToStereoLinearSigned16LSB(AuUint32 n
      }
  }
  
@@ -46,7 +58,7 @@ $NetBSD: patch-ad,v 1.12 2007/12/25 19:48:43 markd Exp $
  inline
  #endif
          static void
-@@ -1413,7 +1422,7 @@ writePhysicalOutputsMono(void)
+@@ -1450,7 +1463,7 @@ writePhysicalOutputsMono(void)
      AuUnBlockAudio(l);
  }
  
@@ -55,7 +67,7 @@ $NetBSD: patch-ad,v 1.12 2007/12/25 19:48:43 markd Exp $
  inline
  #endif
          static void
-@@ -1428,7 +1437,7 @@ stereoToMonoLinearSigned16LSB(AuUint32 n
+@@ -1465,7 +1478,7 @@ stereoToMonoLinearSigned16LSB(AuUint32 n
      }
  }
  
@@ -64,3 +76,15 @@ $NetBSD: patch-ad,v 1.12 2007/12/25 19:48:43 markd Exp $
  inline
  #endif
          static void
+@@ -1880,7 +1893,11 @@ AuInitPhysicalDevices(void)
+                              sndStatOut.device, sndStatOut.howToOpen);
+ 
+                 if ((fd = open(sndStatOut.device,
++#if defined(__FreeBSD__) || defined(__NetBSD__)
++                               sndStatOut.howToOpen | extramode,
++#else
+                                sndStatOut.howToOpen | O_SYNC | extramode,
++#endif
+                                0)) == -1) {
+                     UNIDENTMSG;
+                     osLogMsg("Init: Output open(%s) failed: %s\n",

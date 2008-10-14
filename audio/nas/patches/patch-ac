@@ -1,4 +1,4 @@
-$NetBSD: patch-ac,v 1.6 2002/11/28 11:40:46 markd Exp $
+$NetBSD: patch-ac,v 1.7 2008/10/14 12:47:11 markd Exp $
 
 --- server/nasd.conf.eg.orig	Tue Oct  8 16:08:02 2002
 +++ server/nasd.conf.eg
@@ -8,8 +8,8 @@ $NetBSD: patch-ac,v 1.6 2002/11/28 11:40:46 markd Exp $
  
 -	device		"/dev/dsp1"		# The input device, usually
 -	mixer		"/dev/mixer1"		# mixer device
-+	device		"@DEVOSSAUDIO@"		# The input device, usually
-+	mixer		"/dev/mixer"		# mixer device
++	device		"@DEVOSSAUDIO@1"		# The input device, usually
++	mixer		"/dev/mixer1"		# mixer device
          gain            50                      # default input gain (0-100)
  	maxrate		44100
  	minrate		4000			# Kind of redundant
