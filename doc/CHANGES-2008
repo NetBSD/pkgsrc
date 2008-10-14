@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2501 2008/10/14 08:42:08 markd Exp $
+$NetBSD: CHANGES-2008,v 1.2502 2008/10/14 11:06:18 hira Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4265,3 +4265,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added math/R-sp version 0.9.26 [markd 2008-10-14]
 	Updated math/R-geoR to 0.9.26 [markd 2008-10-14]
 	Updated math/R-gstat to 0.9.51 [markd 2008-10-14]
+	Added misc/openoffice3 version 3.0.0 [hira 2008-10-14]
