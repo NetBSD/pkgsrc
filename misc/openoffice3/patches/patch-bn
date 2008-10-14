@@ -1,0 +1,16 @@
+$NetBSD: patch-bn,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+
+--- crashrep/source/unx/makefile.mk.orig	2008-08-07 00:24:20.000000000 +0900
++++ crashrep/source/unx/makefile.mk	2008-08-17 19:13:25.000000000 +0900
+@@ -61,9 +61,9 @@
+ APP1RPATH=BRAND
+ 
+ .IF "$(OS)" != "MACOSX"
+-APP1STDLIBS=$(DYNAMIC) -lXext -lX11
++APP1STDLIBS=$(DYNAMIC) $(X11_LDFLAGS) -lXext -lX11
+ .ENDIF
+-.IF "$(OS)" != "FREEBSD" && "$(OS)" != "MACOSX"
++.IF "$(OS)" != "FREEBSD" && "$(OS)" != "MACOSX" && "$(OS)" != "NETBSD"
+ APP1STDLIBS+=-ldl -lnsl
+ .ENDIF
+ .IF "$(OS)" == "SOLARIS"

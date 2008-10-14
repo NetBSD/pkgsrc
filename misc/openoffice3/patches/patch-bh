@@ -1,0 +1,12 @@
+$NetBSD: patch-bh,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+
+--- psprint/util/makefile.mk.orig	2008-04-11 19:25:44.000000000 +0900
++++ psprint/util/makefile.mk	2008-05-17 18:46:26.000000000 +0900
+@@ -71,6 +71,7 @@
+             $(COMPHELPERLIB)    \
+             $(CPPULIB)          \
+ 			$(SALLIB)			\
++			$(X11_LDFLAGS)			\
+ 			-lX11
+ 
+ .IF "$(LIBPAPER_LINK)" == "YES"
