@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/04 08:14:44 rillig Exp $
+$NetBSD: distinfo,v 1.2 2008/10/14 06:44:25 markd Exp $
 
-SHA1 (R/httpRequest_0.0.5.tar.gz) = 7354bd02d03665543e2c424d9576d033595afc4d
-RMD160 (R/httpRequest_0.0.5.tar.gz) = 20a99dddfe85710576556003a9f31a0b9b1a8d72
-Size (R/httpRequest_0.0.5.tar.gz) = 3183 bytes
+SHA1 (R/httpRequest_0.0.6.tar.gz) = f2ff6f0936329408ec44d316313452c45576847a
+RMD160 (R/httpRequest_0.0.6.tar.gz) = 88e68efc3cc1339e32a0bf65db5636f981472b8d
+Size (R/httpRequest_0.0.6.tar.gz) = 3673 bytes
