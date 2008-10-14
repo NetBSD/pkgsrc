@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.1.1.1 2005/11/04 08:10:09 rillig Exp $
+$NetBSD: distinfo,v 1.2 2008/10/14 07:25:31 markd Exp $
 
-SHA1 (R/Rcmdr_0.9-11.tar.gz) = 8fb0322791de13a94b816b676694bf3cfd46f0a9
-RMD160 (R/Rcmdr_0.9-11.tar.gz) = d1351e08dfe46e7965f00d5b33cea76044c2c15b
-Size (R/Rcmdr_0.9-11.tar.gz) = 425864 bytes
+SHA1 (R/Rcmdr_1.4-2.tar.gz) = 9d3f56e3f8687937ae0221f78ddd299802cb6a79
+RMD160 (R/Rcmdr_1.4-2.tar.gz) = efc4fc4f7c84e9cdc37f325a754c320b032f8e32
+Size (R/Rcmdr_1.4-2.tar.gz) = 2395515 bytes
