@@ -1,0 +1,22 @@
+$NetBSD: patch-do,v 1.1.1.1 2008/10/14 11:02:25 hira Exp $
+
+--- sal/osl/unx/process.c.orig	2008-06-27 22:16:35.000000000 +0900
++++ sal/osl/unx/process.c	2008-06-27 22:17:20.000000000 +0900
+@@ -44,7 +44,7 @@
+ #endif
+ 
+ 
+-#ifdef FREEBSD
++#if defined(FREEBSD) || defined(NETBSD)
+ #include <machine/param.h>
+ #endif
+ 
+@@ -474,7 +474,7 @@
+ 
+ 			if (! INIT_GROUPS(data.m_name, data.m_gid) || (setuid(data.m_uid) != 0))
+ 				OSL_TRACE("Failed to change uid and guid, errno=%d (%s)\n", errno, strerror(errno));
+-#if defined(LINUX) || defined (FREEBSD)
++#if defined(LINUX) || defined (FREEBSD) || defined(NETBSD)
+ 			unsetenv("HOME");
+ #else
+ 			putenv("HOME=");

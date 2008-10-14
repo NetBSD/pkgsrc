@@ -1,0 +1,17 @@
+$NetBSD: patch-bd,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+
+--- sal/rtl/source/makefile.mk.orig	2008-09-03 22:08:34.000000000 +0900
++++ sal/rtl/source/makefile.mk	2008-10-14 16:15:57.000000000 +0900
+@@ -156,7 +156,11 @@
+ SYSALLOC_SLOFILES=	$(SLO)$/alloc_global.obj
+ SYSALLOCCDEFS+=-DFORCE_SYSALLOC
+ 
+-.ENDIF # .IF "$(OS)"=="LINUX"
++.ENDIF # .IF "$(OS)"=="LINUX" || "$(OS)"=="OS2"
++
++.IF "$(OS)"=="NETBSD"
++CDEFS+=-DFORCE_SYSALLOC
++.ENDIF
+ 
+ #.ENDIF
+ 
