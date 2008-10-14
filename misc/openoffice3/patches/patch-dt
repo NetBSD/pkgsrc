@@ -1,0 +1,13 @@
+$NetBSD: patch-dt,v 1.1.1.1 2008/10/14 11:02:25 hira Exp $
+
+--- solenv/inc/settings.mk.orig	2008-07-30 22:35:02.000000000 +0900
++++ solenv/inc/settings.mk	2008-08-28 13:01:00.000000000 +0900
+@@ -1006,6 +1006,8 @@
+ .INCLUDE : os2.mk
+ .ENDIF
+ 
++.INCLUDE : pkgsrc.mk
++
+ # remove if .Net 2003 support has expired 
+ .IF "$(debug)"!=""
+ .IF "$(OS)$(COM)$(CPU)" == "WNTMSCI"

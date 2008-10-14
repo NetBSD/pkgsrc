@@ -1,0 +1,15 @@
+$NetBSD: patch-dh,v 1.1.1.1 2008/10/14 11:02:25 hira Exp $
+
+--- desktop/util/makefile.mk.orig	2008-05-18 01:02:36.000000000 +0000
++++ desktop/util/makefile.mk	2008-05-18 01:03:30.000000000 +0000
+@@ -85,8 +85,8 @@
+ APP1OBJS=$(OBJ)$/copyright_ascii_sun.obj $(OBJ)$/main.obj
+ APP1STDLIBS = $(SALLIB) $(SOFFICELIB)
+ .IF "$(GUI)" == "UNX"
+-.IF "$(OS)" == "LINUX" || "$(OS)" == "FREEBSD"
+-APP1STDLIBS+= -lXext -lSM -lICE
++.IF "$(OS)" == "LINUX" || "$(OS)" == "FREEBSD" || "$(OS)" == "NETBSD"
++APP1STDLIBS+= $(X11_LDFLAGS) -lXext -lSM -lICE
+ .ENDIF
+ .ENDIF
+ 

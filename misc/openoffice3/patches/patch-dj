@@ -1,0 +1,13 @@
+$NetBSD: patch-dj,v 1.1.1.1 2008/10/14 11:02:25 hira Exp $
+
+--- canvas/source/cairo/prex.h.orig	2008-06-03 04:22:47.000000000 +0900
++++ canvas/source/cairo/prex.h	2008-06-03 04:22:59.000000000 +0900
+@@ -51,7 +51,7 @@
+ extern "C" {
+ #endif
+ 
+-#if defined(LINUX) || defined(FREEBSD) || defined(MACOSX) // should really check for xfree86 or for X11R6.1 and higher
++#if defined(LINUX) || defined(FREEBSD) || defined(MACOSX) || defined(NETBSD) // should really check for xfree86 or for X11R6.1 and higher
+ #define __XKeyboardExtension__ 1
+ #else
+ #define __XKeyboardExtension__ 0

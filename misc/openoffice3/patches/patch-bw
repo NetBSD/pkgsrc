@@ -1,0 +1,13 @@
+$NetBSD: patch-bw,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+
+--- canvas/source/cairo/makefile.mk.orig	2008-06-24 19:29:01.000000000 +0900
++++ canvas/source/cairo/makefile.mk	2008-07-13 11:05:23.000000000 +0900
+@@ -103,7 +103,7 @@
+ .ELSE
+ # Xlib
+ SLOFILES+= $(SLO)$/cairo_xlib_cairo.obj
+-SHL1STDLIBS+= -lfontconfig $(FREETYPELIB) -lX11 -lXrender
++SHL1STDLIBS+= -lfontconfig $(FREETYPELIB) $(X11_LDFLAGS) -lX11 -lXrender
+ .ENDIF
+ 
+ .ELSE    # "$(GUI)"=="UNX" 

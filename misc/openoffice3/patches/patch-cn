@@ -1,0 +1,32 @@
+$NetBSD: patch-cn,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+
+--- desktop/scripts/soffice.sh.orig	2008-08-07 02:44:36.000000000 +0900
++++ desktop/scripts/soffice.sh	2008-08-27 21:51:39.000000000 +0900
+@@ -49,6 +49,12 @@
+     export JITC_PROCESSOR_TYPE
+ fi
+ 
++# XXX: Ignore "unlocking unlocked mutex" error.
++if [ "`uname -s`" = "NetBSD" ]; then
++    PTHREAD_DIAGASSERT=AEL
++    export PTHREAD_DIAGASSERT
++fi
++
+ # resolve installation directory
+ sd_cwd="`pwd`"
+ if [ -h "$0" ] ; then
+@@ -64,6 +70,14 @@
+ 
+ sd_binary=`basename "$0"`.bin
+ 
++LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${sd_prog}/../basis-link/program:${sd_prog}/../basis-link/ure-link/lib:@JAVA_XAWT_DIR@
++export LD_LIBRARY_PATH
++
++if [ -z ${JAVA_HOME} ]; then
++	JAVA_HOME=@JAVA_HOME@
++	export JAVA_HOME
++fi
++
+ #collect all bootstrap variables specified on the command line
+ #so that they can be passed as arguments to javaldx later on
+ for arg in $@

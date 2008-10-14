@@ -1,0 +1,20 @@
+# $NetBSD: Makefile.FreeBSD,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+#
+
+# This package needs native Java.
+PKG_JVMS_ACCEPTED=      jdk14 jdk15
+
+BUILD_DEPENDS+=		coreutils>=*:../../sysutils/coreutils
+BUILD_DEPENDS+=		patch>=*:../../devel/patch
+CONFIGURE_ARGS+=	--with-gnu-cp=${PREFIX}/bin/gcp
+CONFIGURE_ARGS+=	--with-gnu-patch=${PREFIX}/bin/gpatch
+
+.if ${MACHINE_ARCH} == "i386"
+#OPENOFFICE_DLLSUFFIX=	fi
+OPENOFFICE_OUTPATH=	unxfbsdi
+OPENOFFICE_SETFILE=	FreeBSDX86
+.elif ${MACHINE_ARCH} == "x86_64"
+#OPENOFFICE_DLLSUFFIX=	fx
+OPENOFFICE_OUTPATH=	unxfbsdx
+OPENOFFICE_SETFILE=	FreeBSDAMD
+.endif
