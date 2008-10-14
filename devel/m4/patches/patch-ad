@@ -1,10 +1,10 @@
-$NetBSD: patch-ad,v 1.4 2008/04/29 13:54:55 wiz Exp $
+$NetBSD: patch-ad,v 1.5 2008/10/14 12:29:11 wiz Exp $
 
---- lib/fseeko.c.orig	2007-12-17 21:18:34 -0800
-+++ lib/fseeko.c	2008-04-14 20:27:44 -0700
-@@ -23,6 +23,18 @@
- /* Get off_t and lseek.  */
- #include <unistd.h>
+--- lib/fseeko.c.orig	2008-08-05 13:16:44.000000000 +0000
++++ lib/fseeko.c
+@@ -25,6 +25,18 @@
+ 
+ #include "stdio-impl.h"
  
 +#ifdef __DragonFly__
 +
@@ -21,7 +21,7 @@ $NetBSD: patch-ad,v 1.4 2008/04/29 13:54:55 wiz Exp $
  #undef fseeko
  #if !HAVE_FSEEKO
  # undef fseek
-@@ -121,3 +133,5 @@
+@@ -111,3 +123,5 @@ rpl_fseeko (FILE *fp, off_t offset, int 
    else
      return fseeko (fp, offset, whence);
  }
