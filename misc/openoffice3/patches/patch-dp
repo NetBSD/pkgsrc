@@ -1,0 +1,13 @@
+$NetBSD: patch-dp,v 1.1.1.1 2008/10/14 11:02:25 hira Exp $
+
+--- vcl/unx/gtk/app/gtkdata.cxx.orig	2008-06-27 22:26:13.000000000 +0900
++++ vcl/unx/gtk/app/gtkdata.cxx	2008-06-27 22:26:34.000000000 +0900
+@@ -44,7 +44,7 @@
+ #include <limits.h>
+ #include <errno.h>
+ #include <poll.h>
+-#ifdef FREEBSD
++#if defined(FREEBSD) || defined(NETBSD)
+ #include <sys/types.h>
+ #include <sys/time.h>
+ #include <unistd.h>

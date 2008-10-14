@@ -1,0 +1,23 @@
+$NetBSD: patch-du,v 1.1.1.1 2008/10/14 11:02:25 hira Exp $
+
+--- solenv/inc/pkgsrc.mk.orig	2008-08-28 19:43:59.000000000 +0900
++++ solenv/inc/pkgsrc.mk	2008-08-28 19:44:28.000000000 +0900
+@@ -0,0 +1,18 @@
++#
++# Override/modify variables for pkgsrc.
++#
++
++BERKELEYLIB="-L@BLNK_PREFIX_db4@/lib -Wl,-R@BLNK_PREFIX_db4@/lib -ldb4"
++BERKELEYCPPLIB="-L@BLNK_PREFIX_db4@/lib -Wl,-R@BLNK_PREFIX_db4@/lib -ldb4_cxx"
++
++EXPAT3RDLIB="-L@BLNK_PREFIX_expat@/lib -Wl,-R@BLNK_PREFIX_expat@/lib -lexpat"
++EXPATASCII3RDLIB="-L@BLNK_PREFIX_expat@/lib -Wl,-R@BLNK_PREFIX_expat@/lib -lexpat"
++
++JPEG3RDLIB="-L@BLNK_PREFIX_jpeg@/lib -Wl,-R@BLNK_PREFIX_jpeg@/lib -ljpeg"
++
++ZLIB3RDLIB="-L@BLNK_PREFIX_zlib@/lib -Wl,-R@BLNK_PREFIX_zlib@/lib -lz"
++
++AWTLIB="@RFLAG_AWTLIB@ -ljawt"
++
++STDLIBGUIMT+=${X11_LDFLAGS}
++STDSHLGUIMT+=${X11_LDFLAGS}

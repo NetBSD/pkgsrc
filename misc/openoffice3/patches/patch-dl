@@ -1,0 +1,16 @@
+$NetBSD: patch-dl,v 1.1.1.1 2008/10/14 11:02:25 hira Exp $
+
+--- hunspell/hunspell-1.1.12.patch.orig	2008-06-27 18:06:37.000000000 +0900
++++ hunspell/hunspell-1.1.12.patch	2008-06-27 18:07:11.000000000 +0900
+@@ -450,3 +450,11 @@
+  i68568utf.test \
+  1706659.test \
+  digits_in_words.test \
++--- misc/hunspell-1.1.12/tests/test.sh	2007-07-15 22:33:13.000000000 +0900
+++++ misc/build/hunspell-1.1.12/tests/test.sh	2008-06-27 18:05:30.000000000 +0900
++@@ -1,4 +1,4 @@
++-#!/bin/bash
+++#!@BASH@
++ export LC_ALL="C"
++ 
++ function check_valgrind_log () {
