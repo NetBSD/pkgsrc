@@ -1,16 +1,18 @@
-# $NetBSD: Makefile,v 1.4 2007/02/22 19:30:05 wiz Exp $
+# $NetBSD: Makefile,v 1.5 2008/10/14 07:16:50 markd Exp $
 #
 
 CATEGORIES=		math
 MASTER_SITES=		${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=		mchittur@cs.nmsu.edu
-HOMEPAGE=		${R_HOMEPAGE_BASE}/wle.html
+HOMEPAGE=		${R_HOMEPAGE_BASE}/wle/
 COMMENT=		Provides approach to robustness via Weighted Likelihood Estimation
 
 R_PKGNAME=		wle
-R_PKGVER=		0.9-2
-USE_LANGUAGES=		c fortran
+R_PKGVER=               0.9-3
+USE_LANGUAGES+=		c fortran
+
+DEPENDS+=		R-circular>=0.3.8:../../math/R-circular
 
 .include "../../math/R/Makefile.extension"
 .include "../../math/blas/buildlink3.mk"
