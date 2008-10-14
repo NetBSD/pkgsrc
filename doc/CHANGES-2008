@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2506 2008/10/14 14:48:34 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2507 2008/10/14 14:51:35 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4271,3 +4271,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/m4 to 1.4.12 [wiz 2008-10-14]
 	Updated audio/nas to 1.9.1 [markd 2008-10-14]
 	Updated sysutils/cdrtools to 2.01.01.51 [wiz 2008-10-14]
+	Updated www/p5-libwww to 5.817 [wiz 2008-10-14]
