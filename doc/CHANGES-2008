@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2504 2008/10/14 12:30:30 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2505 2008/10/14 12:48:56 markd Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4269,3 +4269,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated security/libgpg-error to 1.6 [adam 2008-10-14]
 	Updated security/libgcrypt to 1.4.3 [adam 2008-10-14]
 	Updated devel/m4 to 1.4.12 [wiz 2008-10-14]
+	Updated audio/nas to 1.9.1 [markd 2008-10-14]
