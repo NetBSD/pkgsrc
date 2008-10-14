@@ -1,0 +1,16 @@
+$NetBSD: patch-ab,v 1.1 2008/10/14 13:13:23 obache Exp $
+
+Keep PATH for tools framework (PR#36129)
+
+--- configure.orig	2007-07-20 12:41:49.000000000 +0000
++++ configure
+@@ -20351,9 +20351,6 @@ fi;
+     fi
+   fi
+ 
+-  if test "x$prefix" != xNONE; then
+-    PATH="$prefix/bin:$prefix/usr/bin:$PATH"
+-  fi
+   # Extract the first word of "sdl-config", so it can be a program name with args.
+ set dummy sdl-config; ac_word=$2
+ echo "$as_me:$LINENO: checking for $ac_word" >&5
