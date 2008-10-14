@@ -1,0 +1,79 @@
+$NetBSD: patch-ap,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+
+--- stlport/STLport-4.5.patch.orig	2008-07-23 01:55:11.000000000 +0900
++++ stlport/STLport-4.5.patch	2008-07-26 06:44:43.000000000 +0900
+@@ -1138,3 +1138,74 @@
+  # elif defined (__FreeBSD__)
+  
+  # define _Locale_CNTRL _CTYPE_C
++--- misc/STLport-4.5/src/gcc-3.0-netbsd.mak	2008-07-26 06:41:56.000000000 +0900
+++++ misc/build/STLport-4.5/src/gcc-3.0-netbsd.mak	2008-07-26 06:18:49.000000000 +0900
++@@ -1 +1,67 @@
++-dummy
+++#
+++# Note : this makefile is for gcc-3 !
+++#
+++
+++#
+++# compiler
+++#
+++CC+= -D_REENTRANT
+++CXX+= -D_REENTRANT
+++
+++#
+++# Basename for libraries
+++#
+++LIB_BASENAME = libstlport_gcc
+++
+++#
+++# guts for common stuff
+++#
+++#
+++LINK=ar cr
+++DYN_LINK=$(CXX) $(LDFLAGS) $(PTHREAD_LIBS) -fexceptions -shared -o
+++
+++OBJEXT=o
+++DYNEXT=so
+++STEXT=a
+++RM=rm -rf
+++PATH_SEP=/
+++MKDIR=mkdir -p
+++COMP=GCC$(ARCH)
+++INSTALL_STEP = install_unix
+++
+++all:  all_dynamic all_static symbolic_links
+++
+++include common_macros.mak
+++
+++WARNING_FLAGS= -Wall -W -Wno-sign-compare -Wno-unused -Wno-uninitialized -ftemplate-depth-32
+++
+++CXXFLAGS_COMMON =  -DGXX_INCLUDE_PATH=${GXX_INCLUDE_PATH} -fexceptions -I${STLPORT_DIR} ${WARNING_FLAGS} $(CXXFLAGS)
+++CFLAGS_COMMON =  -D_REENTRANT -DGXX_INCLUDE_PATH=${GXX_INCLUDE_PATH} -fexceptions -I${STLPORT_DIR} ${WARNING_FLAGS} ${ARCH_FLAGS}
+++
+++CXXFLAGS_RELEASE_static = $(CXXFLAGS_COMMON) -O2 -fPIC
+++CXXFLAGS_RELEASE_dynamic = $(CXXFLAGS_COMMON) -O2 -fPIC
+++
+++CXXFLAGS_DEBUG_static = $(CXXFLAGS_COMMON) -g -fPIC
+++CXXFLAGS_DEBUG_dynamic = $(CXXFLAGS_COMMON) -g -fPIC
+++
+++CXXFLAGS_STLDEBUG_static = $(CXXFLAGS_DEBUG_static) -D_STLP_DEBUG
+++CXXFLAGS_STLDEBUG_dynamic = $(CXXFLAGS_DEBUG_dynamic) -D_STLP_DEBUG
+++
+++CFLAGS_RELEASE_static = $(CFLAGS_COMMON) -O2 -fPIC
+++CFLAGS_RELEASE_dynamic = $(CFLAGS_COMMON) -O2 -fPIC
+++
+++CFLAGS_DEBUG_static = $(CFLAGS_COMMON) -g -fPIC
+++CFLAGS_DEBUG_dynamic = $(CFLAGS_COMMON) -g -fPIC
+++
+++CFLAGS_STLDEBUG_static = $(CFLAGS_DEBUG_static) -D_STLP_DEBUG
+++CFLAGS_STLDEBUG_dynamic = $(CFLAGS_DEBUG_dynamic) -D_STLP_DEBUG
+++
+++include common_percent_rules.mak
+++include common_rules.mak
+++
+++#install: all
+++#    cp -p $(LIB_TARGET) ${D_LIB_TARGET} ../lib
+++
+++#%.s: %.cpp
+++#    $(CXX) $(CXXFLAGS) -O4 -S -pto $<  -o $@
+++

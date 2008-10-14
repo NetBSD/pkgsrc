@@ -1,0 +1,21 @@
+$NetBSD: patch-ck,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+
+--- vcl/unx/gtk/app/gtkinst.cxx.orig	2008-04-11 18:24:19.000000000 +0900
++++ vcl/unx/gtk/app/gtkinst.cxx	2008-08-20 17:57:24.000000000 +0900
+@@ -230,7 +230,7 @@
+     vos::OThread::TThreadIdentifier aCurrentThread = vos::OThread::getCurrentIdentifier();
+     // protect member manipulation
+     OMutex::acquire();
+-    if( mnCount > 0 && mnThreadId == aCurrentThread )
++    if( mnThreadId == aCurrentThread )
+     {
+         mnCount++;
+         OMutex::release();
+@@ -331,7 +331,5 @@
+     // that locked the mutex with Grab()
+     OMutex::acquire();
+     mnCount = nGrabs;
+-    if( mnCount == 0 )
+-        mnThreadId = 0;
+     OMutex::release();
+ }
