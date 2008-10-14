@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.51 2008/10/02 17:57:45 joerg Exp $
+# $NetBSD: Makefile,v 1.52 2008/10/14 19:20:43 hira Exp $
 #
 
 OO_VER=			2.4.1
-PKGREVISION=		3
+PKGREVISION=		4
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice2-${OO_VER}
 CATEGORIES=		misc
@@ -44,6 +44,7 @@ PTHREAD_AUTO_VARS=	yes
 
 CONFLICTS+=		staroffice-[0-9]*
 CONFLICTS+=		openoffice-[0-9]*
+CONFLICTS+=		openoffice3-[0-9]*
 CONFLICTS+=		openoffice-bin-[0-9]*
 CONFLICTS+=		openoffice2-bin-[0-9]*
 CONFLICTS+=		openoffice-linux-[0-9]*
