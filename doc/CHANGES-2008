@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2503 2008/10/14 11:37:22 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2504 2008/10/14 12:30:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4268,3 +4268,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added misc/openoffice3 version 3.0.0 [hira 2008-10-14]
 	Updated security/libgpg-error to 1.6 [adam 2008-10-14]
 	Updated security/libgcrypt to 1.4.3 [adam 2008-10-14]
+	Updated devel/m4 to 1.4.12 [wiz 2008-10-14]
