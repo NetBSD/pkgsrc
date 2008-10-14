@@ -1,4 +1,4 @@
-#	$NetBSD: bsd.pkg.subdir.mk,v 1.69 2007/10/13 11:04:16 dsl Exp $
+#	$NetBSD: bsd.pkg.subdir.mk,v 1.70 2008/10/14 22:35:19 joerg Exp $
 #	Derived from: FreeBSD Id: bsd.port.subdir.mk,v 1.19 1997/03/09 23:10:56 wosch Exp
 #	from: @(#)bsd.subdir.mk	5.9 (Berkeley) 2/1/91
 #
@@ -64,14 +64,6 @@ _SUBDIRUSE: .USE
 			    ${.TARGET:realinstall=install} || true; \
 		fi; \
 	done
-
-${SUBDIR}::
-	@if [ -d ${.TARGET}.${MACHINE} ]; then \
-		cd ${.CURDIR}/${.TARGET}.${MACHINE}; \
-	else \
-		cd ${.CURDIR}/${.TARGET}; \
-	fi; \
-	${RECURSIVE_MAKE} ${MAKEFLAGS} all
 
 .for __target in all fetch package extract configure build clean \
 		cleandir distclean depend describe reinstall tags checksum \
