@@ -1,11 +1,11 @@
-# $NetBSD: Makefile,v 1.2 2006/07/23 17:04:12 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/14 05:42:14 markd Exp $
 #
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/ncdf.html
+HOMEPAGE=	${R_HOMEPAGE_BASE}/ncdf/
 COMMENT=	High-level R interface to Unidata's netCDF data files
 
 R_PKGNAME=	ncdf
