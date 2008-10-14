@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7587 2008/10/14 09:50:12 wiz Exp $
+$NetBSD: TODO,v 1.7588 2008/10/14 11:37:22 adam Exp $
 
 Suggested new packages
 ======================
@@ -845,7 +845,6 @@ Suggested package updates
 	o libevent-1.4.8
 	o libflash-0.4.13
 	o libgail-gnome-1.20.1
-	o libgcrypt-1.4.3
 	o libgda-3.1.5
 	o libgdiplus-2.0
 	o libggi-2.2.2
