@@ -1,6 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/05/25 23:37:45 minskim Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/10/14 08:35:18 minskim Exp $
 bin/ragel
 bin/rlgen-cd
+bin/rlgen-csharp
 bin/rlgen-dot
 bin/rlgen-java
 bin/rlgen-ruby
