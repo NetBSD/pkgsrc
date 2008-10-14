@@ -1,0 +1,222 @@
+# $NetBSD: Makefile,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+#
+
+OO_VER=			3.0.0
+OO_TAG=			OOO300_m9
+DISTNAME=		openoffice-${OO_VER}
+PKGNAME=		openoffice3-${OO_VER}
+CATEGORIES=		misc
+MASTER_SITES=		${MASTER_SITE_OPENOFFICE:=stable/${OO_VER}/}
+DIST_SUBDIR=		${DISTNAME}
+
+DISTFILES=		OOo_${OO_VER}_src_core.tar.bz2
+DISTFILES+=		OOo_${OO_VER}_src_binfilter.tar.bz2
+DISTFILES+=		OOo_${OO_VER}_src_l10n.tar.bz2
+DISTFILES+=		OOo_${OO_VER}_src_system.tar.bz2
+DISTFILES+=		OOo_${OO_VER}_src_extensions.tar.bz2
+
+MAINTAINER=		hira@NetBSD.org
+HOMEPAGE=		http://www.openoffice.org/
+COMMENT=		Integrated office productivity suite (version 3)
+
+PKG_DESTDIR_SUPPORT=	user-destdir
+
+BUILD_DEPENDS+=		bison-[0-9]*:../../devel/bison
+BUILD_DEPENDS+=		zip-[0-9]*:../../archivers/zip
+BUILD_DEPENDS+=		unzip-[0-9]*:../../archivers/unzip
+BUILD_DEPENDS+=		p5-Archive-Zip-[0-9]*:../../archivers/p5-Archive-Zip
+
+DEPENDS+=		libpaper-[0-9]*:../../print/libpaper
+
+.include "../../mk/bsd.prefs.mk"
+
+WRKSRC=			${WRKDIR}/${OO_TAG}
+CONFIGURE_DIRS=		config_office
+
+# Cannot compile with 3.3.x (GCC Bugzilla Bug 16879).
+GCC_REQD+=		3.4
+USE_LANGUAGES+=		c c++
+
+CONFLICTS+=		staroffice-[0-9]*
+CONFLICTS+=		openoffice-[0-9]*
+CONFLICTS+=		openoffice2-[0-9]*
+CONFLICTS+=		openoffice-bin-[0-9]*
+CONFLICTS+=		openoffice2-bin-[0-9]*
+CONFLICTS+=		openoffice-linux-[0-9]*
+
+USE_DIRS+=		xdg-1.1
+USE_TOOLS+=		bash gmake imake perl pkg-config tar
+PTHREAD_OPTS+=		require
+PTHREAD_AUTO_VARS=	yes
+
+ONLY_FOR_PLATFORM=	FreeBSD-*-i386 FreeBSD-*-x86_64
+ONLY_FOR_PLATFORM+=	NetBSD-1.6Z[G-Z]*-i386 NetBSD-[2-9]*-i386
+ONLY_FOR_PLATFORM+=	NetBSD-1.6Z[G-Z]*-x86_64 NetBSD-[2-9]*-x86_64
+
+GNU_CONFIGURE=		yes
+
+REPLACE_PERL+=		sd/res/webview/editpic.pl	\
+			sd/res/webview/poll.pl		\
+			sd/res/webview/savepic.pl	\
+			sd/res/webview/show.pl		\
+			sd/res/webview/webview.pl
+REPLACE_PYTHON+=	scripting/source/pyprov/mailmerge.py
+
+SUBST_CLASSES+=		bash
+SUBST_STAGE.bash=	post-patch
+SUBST_MESSAGE.bash=	Fix hard-coded path
+SUBST_FILES.bash=	hunspell/hunspell-1.1.12.patch
+SUBST_SED.bash+=	-e 's,@BASH@,${BASH},g'
+
+SUBST_CLASSES+=		lib
+SUBST_STAGE.lib=	post-patch
+SUBST_MESSAGE.lib=	Adding library paths
+SUBST_FILES.lib=	solenv/inc/pkgsrc.mk
+.for pkg in db4 expat jpeg zlib
+SUBST_SED.lib+=		-e 's,@BLNK_PREFIX_${pkg}@,${BUILDLINK_PREFIX.${pkg}},g'
+LIBS+=			-L${BUILDLINK_PREFIX.${pkg}}/lib
+LIBS+=			${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.${pkg}}/lib
+.endfor
+
+CONFIGURE_ENV+=		LIBS=${LIBS:O:u:Q}
+CONFIGURE_ENV+=		X_LIBS=${X11_LDFLAGS:M*:Q}
+CONFIGURE_ENV+=		BLNK_PREFIX_db4=${BUILDLINK_PREFIX.db4}
+
+CONFIGURE_ARGS+=	--with-use-shell=bash
+CONFIGURE_ARGS+=	--enable-binfilter
+CONFIGURE_ARGS+=	--enable-cairo
+CONFIGURE_ARGS+=	--disable-systray
+CONFIGURE_ARGS+=	--disable-ldap
+CONFIGURE_ARGS+=	--with-system-stdlibs
+CONFIGURE_ARGS+=	--with-system-cairo
+CONFIGURE_ARGS+=	--with-system-curl
+CONFIGURE_ARGS+=	--with-system-db
+CONFIGURE_ARGS+=	--with-system-expat
+CONFIGURE_ARGS+=	--with-system-freetype
+CONFIGURE_ARGS+=	--with-system-jpeg
+CONFIGURE_ARGS+=	--with-system-libxml2
+CONFIGURE_ARGS+=	--with-system-libxslt
+CONFIGURE_ARGS+=	--with-system-neon
+CONFIGURE_ARGS+=	--with-system-python
+CONFIGURE_ARGS+=	--with-system-zlib
+CONFIGURE_ARGS+=	--with-dynamic-xinerama
+
+# Enable extensions
+CONFIGURE_ARGS+=	--enable-minimizer
+CONFIGURE_ARGS+=	--enable-presenter-console
+CONFIGURE_ARGS+=	--enable-pdfimport
+CONFIGURE_ARGS+=	--enable-wiki-publisher
+CONFIGURE_ARGS+=	--enable-ogltrans
+CONFIGURE_ARGS+=	--enable-report-builder
+
+# `portable' supports all platforms.
+CONFIGURE_ARGS+=	--enable-epm --with-package-format=portable
+
+# Disable odk, gcjaot.
+CONFIGURE_ARGS+=	--disable-odk --disable-gcjaot
+
+# NOTE: In this version, this value should be separated by space (comma
+#       causes build error).
+CONFIGURE_ARGS+=	--with-lang=${OO_LANGS:Q}
+
+.include "options.mk"
+
+UNLIMIT_RESOURCES+=	datasize
+
+OO_RELEASE=		OpenOffice.org${OO_VER}
+PLIST_SRC+=		${PKGDIR}/PLIST
+PLIST_SRC+=		${WRKDIR}/PLIST
+MESSAGE_SUBST+=		OO_RELEASE=${OO_RELEASE}
+INSTALLATION_DIRS=	bin ${OO_RELEASE} share/applications
+
+OO_UNXNAME=	openoffice.org3
+OO_PKGPATH=	${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install
+OO_PROGRAMS=	scalc sdraw simpress soffice swriter unopkg
+OO_PREFIX=	${DESTDIR}${PREFIX}/${OO_RELEASE}
+
+post-extract:
+	cd ${WRKSRC}/bridges/source/cpp_uno &&			\
+	mv gcc3_netbsd_intel gcc3_netbsd_intel.orig &&		\
+	cp -Rp gcc3_freebsd_intel gcc3_netbsd_intel &&		\
+	cp -Rp gcc3_freebsd_x86-64 gcc3_netbsd_x86-64
+
+do-build:
+	${_ULIMIT_CMD} ${SETENV} ${MAKE_ENV} bash -c "cd ${WRKSRC} && ./bootstrap && source ${OPENOFFICE_SETFILE}Env.Set.sh && dmake build_all"
+
+post-build:
+	cd ${WRKDIR} &&						\
+	rm -fr opt &&						\
+	for l in ${OO_LANGS}; do				\
+		for f in ${OO_PKGPATH:Q}/$${l}/*/*.sw; do	\
+			tar xpfk $$f;				\
+		done;						\
+	done
+	cd ${WRKDIR} &&						\
+	rm -fr xdg &&						\
+	mv opt/${OO_UNXNAME}/share/xdg .
+	cd ${WRKDIR}/opt/openoffice.org &&			\
+	chmod ${SHAREMODE} basis3.0/program/hid.lst		\
+			   basis3.0/program/testtoolrc
+	${ECHO} "#!${SH}" > ${WRKDIR}/${OO_UNXNAME}
+	${ECHO} "exec ${OO_PREFIX}/${OO_UNXNAME}/program/soffice \"\$$@\"" \
+		>> ${WRKDIR}/${OO_UNXNAME}
+	${ECHO} "#!${SH}" > ${WRKDIR}/${OO_UNXNAME}-printeradmin
+	${ECHO} "exec ${OO_PREFIX}/${OO_UNXNAME}/program/spadmin"	\
+		>> ${WRKDIR}/${OO_UNXNAME}-printeradmin
+
+do-install:
+	cd ${WRKDIR}/opt &&						\
+	tar cf - openoffice.org ${OO_UNXNAME} | tar Cxpf ${OO_PREFIX} -
+	for f in ${OO_PROGRAMS}; do				\
+		ln -sf ${OO_PREFIX}/${OO_UNXNAME}/program/$$f	\
+			${DESTDIR}${PREFIX}/bin/$$f;		\
+	done
+	${INSTALL_DATA} ${WRKDIR}/xdg/* ${DESTDIR}${PREFIX}/share/applications
+	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME} ${DESTDIR}${PREFIX}/bin
+	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME}-printeradmin	\
+		${DESTDIR}${PREFIX}/bin
+
+post-install:
+	cd ${DESTDIR}${PREFIX} &&				\
+	find ${OO_RELEASE} \! -type d -print |			\
+	sort > ${WRKDIR}/PLIST &&					\
+	find ${OO_RELEASE} -type d -print | sort -r |		\
+	awk '{print("@dirrm "$$1)}' >> ${WRKDIR}/PLIST
+	${ECHO} bin/${OO_UNXNAME} >> ${WRKDIR}/PLIST
+	${ECHO} bin/${OO_UNXNAME}-printeradmin >> ${WRKDIR}/PLIST
+
+# OS specific Makefile
+.if exists(Makefile.${OPSYS})
+.  include "Makefile.${OPSYS}"
+.endif
+
+.include "../../mk/compiler.mk"
+
+.include "../../lang/python/application.mk"
+
+.include "../../databases/db4/buildlink3.mk"
+.include "../../devel/gperf/buildlink3.mk"
+.include "../../devel/zlib/buildlink3.mk"
+.include "../../fonts/fontconfig/buildlink3.mk"
+.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../graphics/cairo/buildlink3.mk"
+.include "../../graphics/freetype2/buildlink3.mk"
+.include "../../graphics/jpeg/buildlink3.mk"
+.include "../../textproc/expat/buildlink3.mk"
+.include "../../textproc/libxml2/buildlink3.mk"
+.include "../../textproc/libxslt/buildlink3.mk"
+.include "../../www/curl/buildlink3.mk"
+.include "../../www/neon/buildlink3.mk"
+.include "../../x11/libX11/buildlink3.mk"
+.include "../../x11/libXaw/buildlink3.mk"
+.include "../../x11/libXcursor/buildlink3.mk"
+.include "../../x11/libXext/buildlink3.mk"
+.include "../../x11/libXfixes/buildlink3.mk"
+.include "../../x11/libXi/buildlink3.mk"
+.include "../../x11/libXinerama/buildlink3.mk"
+.include "../../x11/libXrandr/buildlink3.mk"
+.include "../../x11/libXrender/buildlink3.mk"
+.include "../../x11/libXt/buildlink3.mk"
+.include "../../mk/dlopen.buildlink3.mk"
+.include "../../mk/pthread.buildlink3.mk"
+.include "../../mk/bsd.pkg.mk"
