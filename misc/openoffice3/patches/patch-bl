@@ -1,0 +1,12 @@
+$NetBSD: patch-bl,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+
+--- padmin/source/makefile.mk.orig	2008-04-11 19:03:05.000000000 +0900
++++ padmin/source/makefile.mk	2008-05-17 18:47:24.000000000 +0900
+@@ -108,6 +108,7 @@
+ 	$(CPPUHELPERLIB)	\
+ 	$(CPPULIB)			\
+ 	$(SALLIB)			\
++	$(X11_LDFLAGS)			\
+ 	-lXext -lX11
+ 
+ UNIXTEXT = $(MISC)$/spadmin.sh
