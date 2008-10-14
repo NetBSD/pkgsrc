@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2508 2008/10/14 18:24:11 heinz Exp $
+$NetBSD: CHANGES-2008,v 1.2509 2008/10/14 19:23:27 hira Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4275,3 +4275,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/cdrtools to 2.01.01.51 [wiz 2008-10-14]
 	Updated www/p5-libwww to 5.817 [wiz 2008-10-14]
 	Updated misc/esniper to 2.19.0 [heinz 2008-10-14]
+	Updated misc/openoffice2 to 2.4.1nb4 [hira 2008-10-14]
+	Updated misc/openoffice2-bin to 2.4.1nb1 [hira 2008-10-14]
