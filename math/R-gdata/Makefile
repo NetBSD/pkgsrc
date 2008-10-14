@@ -1,16 +1,15 @@
-# $NetBSD: Makefile,v 1.2 2006/07/23 16:59:22 rillig Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/14 07:31:26 markd Exp $
 #
 
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_R_CRAN:=contrib/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
-HOMEPAGE=	${R_HOMEPAGE_BASE}/gdata.html
+HOMEPAGE=	${R_HOMEPAGE_BASE}/gdata/
 COMMENT=	Various R programming tools for data manipulation
 
 R_PKGNAME=	gdata
-R_PKGVER=	2.1.2
-PKGREVISION=	1
+R_PKGVER=	2.4.2
 
 DEPENDS+=	R-gtools>=2.2.3:../../math/R-gtools
 
