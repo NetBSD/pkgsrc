@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2007/07/25 02:33:03 markd Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/10/15 07:44:57 markd Exp $
 bin/k3b
 bin/k3bsetup
 include/k3b_export.h
@@ -21,6 +21,8 @@ include/k3bblankingjob.h
 include/k3bbootitem.h
 include/k3bbusywidget.h
 include/k3bcdcopyjob.h
+include/k3bcddb.h
+include/k3bcddbresult.h
 include/k3bcdparanoialib.h
 include/k3bcdrdaowriter.h
 include/k3bcdrecordwriter.h
