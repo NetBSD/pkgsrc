@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/06/03 06:10:16 bjs Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/10/15 08:52:42 bjs Exp $
 share/X11/xkb/compat.dir
 share/X11/xkb/compat/README
 share/X11/xkb/compat/accessx
@@ -113,6 +113,9 @@ share/X11/xkb/rules/README
 share/X11/xkb/rules/base
 share/X11/xkb/rules/base.lst
 share/X11/xkb/rules/base.xml
+share/X11/xkb/rules/evdev
+share/X11/xkb/rules/evdev.lst
+share/X11/xkb/rules/evdev.xml
 share/X11/xkb/rules/xfree86
 share/X11/xkb/rules/xfree86.lst
 share/X11/xkb/rules/xfree86.xml
