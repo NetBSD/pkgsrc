@@ -8,6 +8,11 @@
 # 	autoconf (optional - used by munin-config)
 #
 # $Log: open_files.in,v $
+# Revision 1.2  2008/10/15 13:13:09  he
+# Convert from using an input-less awk job (how did that ever work?)
+# to using shell arithmetic, which should be more light-weight and should
+# not pose a danger of hanging.
+#
 # Revision 1.1.1.1  2006/06/04 20:53:57  he
 # Import the client version of the Munin system monitoring/graphing
 # tool -- project homepage is at http://munin.sourceforge.net/
@@ -67,10 +72,8 @@ if [ "$1" = "config" ]; then
 	echo 'max.label max open files'
 	echo 'max.info The maximum supported number of open files.'
 
-	awk -v filemax=$filemax '{
-    printf "used.warning %d\n", $filemax * 0.92;
-    printf "used.critical %d\n", $filemax * 0.98;
-}'
+	echo "used.warning $(($filemax * 92/100))"
+	echo "used.critical $(($filemax * 98/100))"
 	exit 0
 fi
 
