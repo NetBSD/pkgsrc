@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2513 2008/10/15 07:46:46 markd Exp $
+$NetBSD: CHANGES-2008,v 1.2514 2008/10/15 08:22:59 markd Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4281,3 +4281,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/pixman to 0.12.0 [bjs 2008-10-15]
 	Updated audio/libmpg123 to 0.7.0 [bjs 2008-10-15]
 	Updated sysutils/k3b to 1.0.5 [markd 2008-10-15]
+	Updated sysutils/krusader to 1.90.0 [markd 2008-10-15]
