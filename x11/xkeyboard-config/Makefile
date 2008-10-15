@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2008/06/03 06:10:16 bjs Exp $
+# $NetBSD: Makefile,v 1.9 2008/10/15 08:52:42 bjs Exp $
 #
 
-DISTNAME=	xkeyboard-config-1.3
+DISTNAME=	xkeyboard-config-1.4
 CATEGORIES=	x11
-MASTER_SITES=	http://xlibs.freedesktop.org/xkbdesc/
+MASTER_SITES=	${MASTER_SITE_XORG:=data/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	bjs@NetBSD.org
@@ -12,40 +12,40 @@ COMMENT=	X Keyboard Configuration Database
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+BUILD_DEPENDS+=		xkbcomp-[0-9]*:../../x11/xkbcomp
+
 CONFLICTS+=		xkbdata-[0-9]*
+
+MAKE_JOBS_SAFE=		no
 
 GNU_CONFIGURE=		yes
 USE_LIBTOOL=		yes
-USE_TOOLS+=		gmake intltool perl:build
-USE_TOOLS+=		msgfmt xgettext
+USE_TOOLS+=		gmake intltool msgfmt
+
+BUILD_DEFS+=		VARBASE
+BUILD_DEFS+=		XKBCOMPDIR
 
 CONFIGURE_ARGS+=	--with-xkb-rules-symlink=xfree86,xorg
 CONFIGURE_ARGS+=	--with-xkb-base=${XKBBASE:Q}
-
 ### In pkgsrc, we do this with INSTALL/DEINSTALL scripts.
 ###
 CONFIGURE_ARGS+=	--disable-xkbcomp-symlink
-
-BUILD_DEPENDS+=		xkbcomp-[0-9]*:../../x11/xkbcomp
-MAKE_JOBS_SAFE=		no
+###
 REPLACE_SH=		rules/merge.sh
-
+###
 ### Keymaps, rules, etc. are installed here.
 ###
 XKBBASE=		${PREFIX}/share/X11/xkb
-
+###
 ### The server puts compiled keymaps in the directory below.
 ###
 XKBCOMPDIR?=		${VARBASE}/db/xkb
-
+###
 ### The package must symlink ${XKBCOMPDIR} into ${XKBBASE}. ${XKBCOMP} is
 ### is the path to the xkbcomp binary we wish to use.
 ###
 XKBCOMPDIR_SYMLINK=	${XKBBASE}/compiled
 XKBCOMP=		${PREFIX}/bin/xkbcomp
-
-BUILD_DEFS+=		VARBASE
-BUILD_DEFS+=		XKBCOMPDIR
 
 FILES_SUBST+=		XKBBASE=${XKBBASE:Q}
 FILES_SUBST+=		XKBCOMP=${XKBCOMP:Q}
