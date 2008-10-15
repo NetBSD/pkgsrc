@@ -1,4 +1,7 @@
-@comment $NetBSD: PLIST,v 1.1 2007/08/03 02:34:59 smb Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/10/15 16:22:03 smb Exp $
 lib/claws-mail/plugins/smime.deps
 lib/claws-mail/plugins/smime.la
+include/claws-mail/plugins/smime/smime.h
+lib/claws-mail/plugins/smime.deps
 @dirrm lib/claws-mail/plugins
+@dirrm include/claws-mail/plugins/smime
