@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7589 2008/10/14 12:48:56 markd Exp $
+$NetBSD: TODO,v 1.7590 2008/10/15 00:57:49 bjs Exp $
 
 Suggested new packages
 ======================
@@ -1084,7 +1084,6 @@ Suggested package updates
 	o pinfo-0.6.9
 	o pioneers-0.12.2
 	o pircbot-1.4.4
-	o pixman-0.12.0
 	o pkg_select-20051209
 	o ploticus-2.40
 	o ploticus-examples-230
