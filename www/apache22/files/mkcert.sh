@@ -32,7 +32,8 @@ EOF
 fi
 
 set -- $parameters
-for param; do
+for param
+do
     case $param in
         -a) algo=$2 ;;
         -c) crt=$2 ;;
