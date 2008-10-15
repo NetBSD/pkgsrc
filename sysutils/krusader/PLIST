@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2007/08/15 03:20:59 markd Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/10/15 08:21:23 markd Exp $
 bin/krusader
 lib/kde3/kio_iso.la
 lib/kde3/kio_krarc.la
@@ -111,6 +111,9 @@ share/icons/locolor/16x16/apps/krusader.png
 share/icons/locolor/32x32/apps/krusader.png
 share/icons/locolor/32x32/apps/krusader2.png
 share/kde/apps/konqueror/servicemenus/isoservice.desktop
+share/kde/apps/krusader/alpa-yellow.color
+share/kde/apps/krusader/bash.color
+share/kde/apps/krusader/dos_navigator.color
 share/kde/apps/krusader/icons/crystalsvg/16x16/actions/kr_addbookmark.png
 share/kde/apps/krusader/icons/crystalsvg/16x16/actions/kr_arc_pack.png
 share/kde/apps/krusader/icons/crystalsvg/16x16/actions/kr_arc_test.png
@@ -205,9 +208,20 @@ share/kde/apps/krusader/icons/crystalsvg/32x32/actions/kr_unselectall.png
 share/kde/apps/krusader/icons/crystalsvg/32x32/actions/kr_useractions.png
 share/kde/apps/krusader/icons/crystalsvg/32x32/apps/krusader_root.xpm
 share/kde/apps/krusader/icons/crystalsvg/32x32/apps/krusader_user.xpm
+share/kde/apps/krusader/js/calc.js
+share/kde/apps/krusader/js/calc.ui
+share/kde/apps/krusader/js/mount.js
+share/kde/apps/krusader/js/mount.ui
+share/kde/apps/krusader/js/recode.js
+share/kde/apps/krusader/js/recode.ui
+share/kde/apps/krusader/js/select_from_file.js
 share/kde/apps/krusader/krusaderui.rc
+share/kde/apps/krusader/midnight_cmd_AHamann.color
 share/kde/apps/krusader/midnight_commander.color
+share/kde/apps/krusader/midnight_commander.keymap
+share/kde/apps/krusader/midnight_commander.keymap.info
 share/kde/apps/krusader/splash.png
+share/kde/apps/krusader/total_cmd_pleasent.color
 share/kde/apps/krusader/total_commander.color
 share/kde/apps/krusader/total_commander.keymap
 share/kde/apps/krusader/total_commander.keymap.info
