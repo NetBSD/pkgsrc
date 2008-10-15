@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.9 2008/09/26 17:51:17 smb Exp $
+@comment $NetBSD: PLIST,v 1.10 2008/10/15 16:22:02 smb Exp $
 bin/claws-mail
 bin/sylpheed-claws
 include/claws-mail/account.h
@@ -96,6 +96,9 @@ include/claws-mail/gtk/description_window.h
 include/claws-mail/gtk/filesel.h
 include/claws-mail/gtk/foldersort.h
 include/claws-mail/gtk/gtkaspell.h
+include/claws-mail/gtk/gtkcmclist.h
+include/claws-mail/gtk/gtkcmctree.h
+include/claws-mail/gtk/gtkcmoptionmenu.h
 include/claws-mail/gtk/gtksctree.h
 include/claws-mail/gtk/gtkshruler.h
 include/claws-mail/gtk/gtksourceprintjob.h
@@ -232,6 +235,7 @@ share/doc/claws-mail/manual/pl/claws-mail-manual.ps
 share/doc/claws-mail/manual/pl/claws-mail-manual.txt
 share/examples/claws-mail/mime.types
 share/icons/hicolor/48x48/apps/claws-mail.png
+share/locale/bg/LC_MESSAGES/claws-mail.mo
 share/locale/ca/LC_MESSAGES/claws-mail.mo
 share/locale/de/LC_MESSAGES/claws-mail.mo
 share/locale/en_GB/LC_MESSAGES/claws-mail.mo
@@ -240,10 +244,13 @@ share/locale/fi/LC_MESSAGES/claws-mail.mo
 share/locale/fr/LC_MESSAGES/claws-mail.mo
 share/locale/hu/LC_MESSAGES/claws-mail.mo
 share/locale/it/LC_MESSAGES/claws-mail.mo
+share/locale/nl/LC_MESSAGES/claws-mail.mo
 share/locale/pl/LC_MESSAGES/claws-mail.mo
 share/locale/pt_BR/LC_MESSAGES/claws-mail.mo
+share/locale/ru/LC_MESSAGES/claws-mail.mo
 share/locale/sk/LC_MESSAGES/claws-mail.mo
 share/locale/sr/LC_MESSAGES/claws-mail.mo
+share/locale/sv/LC_MESSAGES/claws-mail.mo
 share/locale/zh_CN/LC_MESSAGES/claws-mail.mo
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/48x48/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor

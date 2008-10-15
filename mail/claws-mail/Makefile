@@ -1,9 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2008/09/06 20:54:33 wiz Exp $
+# $NetBSD: Makefile,v 1.20 2008/10/15 16:22:02 smb Exp $
 
 .include "Makefile.common"
 
 PKGNAME=	claws-mail-${CLAWS_VERSION}
-PKGREVISION=	2
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	X based e-mail and netnews client
@@ -71,8 +70,6 @@ PLIST_SRC+=	PLIST.shred
 .include "../../databases/db4/buildlink3.mk"
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../textproc/aspell/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"

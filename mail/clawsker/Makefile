@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/09/18 09:13:39 joerg Exp $
+# $NetBSD: Makefile,v 1.7 2008/10/15 16:22:03 smb Exp $
 
 DISTNAME=	clawsker-0.5.0
 CATEGORIES=	mail
@@ -14,8 +14,8 @@ USE_TOOLS+=	gmake msgfmt perl
 REPLACE_PERL=	clawsker
 
 DEPENDS+=	p5-gtk2>=1.182:../../x11/p5-gtk2
-DEPENDS+=	p5-gettext>=1.05:../../devel/p5-gettext
-DEPENDS+=	claws-mail-3.5.0{,nb[0-9]*}:../../mail/claws-mail
+DEPENDS+=	p5-gettext>=1.05nb2:../../devel/p5-gettext
+DEPENDS+=	claws-mail-3.6.1{,nb[0-9]*}:../../mail/claws-mail
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

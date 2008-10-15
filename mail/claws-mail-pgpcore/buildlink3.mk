@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.2 2008/07/13 22:32:05 smb Exp $
+# $NetBSD: buildlink3.mk,v 1.3 2008/10/15 16:22:03 smb Exp $
 
 BUILDLINK_DEPTH:=			${BUILDLINK_DEPTH}+
 CLAWS_MAIL_PGPCORE_BUILDLINK3_MK:=	${CLAWS_MAIL_PGPCORE_BUILDLINK3_MK}+
@@ -12,7 +12,7 @@ BUILDLINK_PACKAGES+=	claws-mail-pgpcore
 BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}claws-mail-pgpcore
 
 .if ${CLAWS_MAIL_PGPCORE_BUILDLINK3_MK} == "+"
-BUILDLINK_API_DEPENDS.claws-mail-pgpcore+=	claws-mail-pgpcore>=3.5.0
+BUILDLINK_API_DEPENDS.claws-mail-pgpcore+=	claws-mail-pgpcore>=3.6.1
 BUILDLINK_PKGSRCDIR.claws-mail-pgpcore?=	../../mail/claws-mail-pgpcore
 .endif	# CLAWS_MAIL_PGPCORE_BUILDLINK3_MK
 

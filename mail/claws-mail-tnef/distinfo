@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.3 2008/07/13 22:34:20 smb Exp $
+$NetBSD: distinfo,v 1.4 2008/10/15 16:22:03 smb Exp $
 
-SHA1 (tnef_parse-0.3.tar.gz) = 722e89401407ba5d51baf8f2ae03e7ceafac7825
-RMD160 (tnef_parse-0.3.tar.gz) = d05c4ad4225ab46127ca0f73e7661e4e6ccc3dc9
-Size (tnef_parse-0.3.tar.gz) = 414863 bytes
+SHA1 (tnef_parse-0.3.2.tar.gz) = 3d065e9630135f651f915b6ba695986638fc5c6c
+RMD160 (tnef_parse-0.3.2.tar.gz) = 12118180730eada1788e9bce1d6006d12d523615
+Size (tnef_parse-0.3.2.tar.gz) = 418521 bytes

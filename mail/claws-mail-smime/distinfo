@@ -1,6 +1,5 @@
-$NetBSD: distinfo,v 1.6 2008/07/13 22:56:08 smb Exp $
+$NetBSD: distinfo,v 1.7 2008/10/15 16:22:03 smb Exp $
 
 SHA1 (smime-0.7.6.tar.gz) = c43760b3f97ca89f7b607537795d2cc2089c5226
 RMD160 (smime-0.7.6.tar.gz) = e86981be2d83166057dbb2994e49cec802bb6040
 Size (smime-0.7.6.tar.gz) = 337459 bytes
-SHA1 (patch-aa) = 8db7d35d818ceb1bb3d936e45600c7481914042b
