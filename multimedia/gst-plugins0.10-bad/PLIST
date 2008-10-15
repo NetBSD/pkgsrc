@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.6 2008/08/06 18:19:45 drochner Exp $
+@comment $NetBSD: PLIST,v 1.7 2008/10/15 12:18:38 obache Exp $
 include/gstreamer-0.10/gst/app/gstappbuffer.h
 include/gstreamer-0.10/gst/app/gstappsink.h
 include/gstreamer-0.10/gst/app/gstappsrc.h
@@ -23,7 +23,7 @@ lib/gstreamer-0.10/libgstnsf.la
 lib/gstreamer-0.10/libgstnuvdemux.la
 lib/gstreamer-0.10/libgstoss4audio.la
 lib/gstreamer-0.10/libgstrawparse.la
-lib/gstreamer-0.10/libgstreal.la
+${PLIST.x86}lib/gstreamer-0.10/libgstreal.la
 lib/gstreamer-0.10/libgstrfbsrc.la
 lib/gstreamer-0.10/libgstrtpmanager.la
 lib/gstreamer-0.10/libgstsdpelem.la
