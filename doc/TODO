@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7590 2008/10/15 00:57:49 bjs Exp $
+$NetBSD: TODO,v 1.7591 2008/10/15 07:46:46 markd Exp $
 
 Suggested new packages
 ======================
@@ -809,7 +809,6 @@ Suggested package updates
 	o jools-1.0
 	o jpilot-1.6.0
 	o jwhois-4.0 [pkg/38500]
-	o k3b-1.0.4
 	o kapooka-0.3
 	o kbarcode-2.0.7
 	o kdbg-2.1.0
