@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2008/05/12 02:25:39 smb Exp $
+$NetBSD: distinfo,v 1.5 2008/10/15 16:22:02 smb Exp $
 
-SHA1 (attachwarner-0.2.12.tar.gz) = 28006c6f913c3a27c9ab78280b046a77a7d00446
-RMD160 (attachwarner-0.2.12.tar.gz) = 651568f959a194c17c343ceab3df175a0032977b
-Size (attachwarner-0.2.12.tar.gz) = 395871 bytes
+SHA1 (attachwarner-0.2.14.tar.gz) = 863e6de20e11150d119aafe40f2e002ded1d9c6b
+RMD160 (attachwarner-0.2.14.tar.gz) = 8e3e5bf5e676f1ff02045e57bb8ab36e975fb5f5
+Size (attachwarner-0.2.14.tar.gz) = 404420 bytes
