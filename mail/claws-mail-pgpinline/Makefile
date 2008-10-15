@@ -1,10 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2008/09/26 17:51:17 smb Exp $
+# $NetBSD: Makefile,v 1.10 2008/10/15 16:22:03 smb Exp $
 #
 PKG_DESTDIR_SUPPORT=	user-destdir
 
 PLUGIN_NAME=	pgpinline
-PLUG_VER=	3.5.0
-PKGREVISION=	1
 .include "../../mail/claws-mail/plugins.mk"
 
 MAINTAINER=	smb@NetBSD.org
@@ -14,12 +12,12 @@ CONFIGURE_ARGS+=	--enable-gpgme
 CONFIGURE_ARGS+=	--enable-pgpcore-plugin
 CONFIGURE_ARGS+=	--enable-pgpinline-plugin
 
-DEPENDS+=	claws-mail-pgpcore-3.5.0{,nb[0-9]*}:../../mail/claws-mail-pgpcore
+DEPENDS+=	claws-mail-pgpcore-3.6.1{,nb[0-9]*}:../../mail/claws-mail-pgpcore
 
 PLIST_SRC+=	PLIST
 
 .include "../../security/gpgme/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
+.include "../../security/gnutls/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
 .include "../../mk/bsd.pkg.mk"

@@ -1,32 +1,26 @@
-# $NetBSD: Makefile,v 1.11 2008/09/26 17:51:17 smb Exp $
+# $NetBSD: Makefile,v 1.12 2008/10/15 16:22:03 smb Exp $
+#
+PKG_DESTDIR_SUPPORT=	user-destdir
 
-DISTNAME=	smime-0.7.6
-PKGNAME=	claws-mail-smime-0.7.6
-CATEGORIES=	mail
-MASTER_SITES=	http://claws-mail.org/downloads/plugins/
-PKGREVISION=2
+PLUGIN_NAME=	smime
+.include "../../mail/claws-mail/plugins.mk"
 
 MAINTAINER=	smb@NetBSD.org
 COMMENT=	This plugin handles S/MIME signed and/or encrypted mails
 
-PKG_DESTDIR_SUPPORT=	user-destdir
-
-DEPENDS+=	claws-mail-3.5.0{,nb[0-9]*}:../../mail/claws-mail
 PLIST_SRC+=	PLIST
 
-.include "../../mk/bsd.prefs.mk"
+CONFIGURE_ARGS+=	--enable-gpgme
+CONFIGURE_ARGS+=	--enable-smime-plugin
+CONFIGURE_ARGS+=	--enable-pgpcore-plugin
 
-GNU_CONFIGURE=	yes
-USE_TOOLS+=	pkg-config
-USE_LIBTOOL=	yes
-USE_LANGUAGES+=	c
+DEPENDS+=	claws-mail-${CLAWS_VERSION}{,nb[0-9]*}:../../mail/claws-mail
+#DEPENDS+=	gpgme>=1.1.4nb2:../../security/gpgme
+
 
 .include "../../mail/claws-mail/Makefile.vers"
-.include "../../mail/claws-mail/buildlink3.mk"
 .include "../../mail/claws-mail-pgpcore/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../security/gpgme/buildlink3.mk"
 .include "../../security/gnupg2/buildlink3.mk"
-.include "../../security/openssl/buildlink3.mk"
-.include "../../x11/gtk2/buildlink3.mk"
+
 .include "../../mk/bsd.pkg.mk"
