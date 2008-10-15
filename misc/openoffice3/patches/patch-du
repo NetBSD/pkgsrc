@@ -1,23 +1,23 @@
-$NetBSD: patch-du,v 1.1.1.1 2008/10/14 11:02:25 hira Exp $
+$NetBSD: patch-du,v 1.2 2008/10/15 23:17:29 hira Exp $
 
 --- solenv/inc/pkgsrc.mk.orig	2008-08-28 19:43:59.000000000 +0900
-+++ solenv/inc/pkgsrc.mk	2008-08-28 19:44:28.000000000 +0900
++++ solenv/inc/pkgsrc.mk	2008-10-16 02:44:28.000000000 +0900
 @@ -0,0 +1,18 @@
 +#
-+# Override/modify variables for pkgsrc.
++# Settings for pkgsrc.
 +#
 +
-+BERKELEYLIB="-L@BLNK_PREFIX_db4@/lib -Wl,-R@BLNK_PREFIX_db4@/lib -ldb4"
-+BERKELEYCPPLIB="-L@BLNK_PREFIX_db4@/lib -Wl,-R@BLNK_PREFIX_db4@/lib -ldb4_cxx"
++BERKELEYLIB="@LIB_db4@ -ldb4"
++BERKELEYCPPLIB="@LIB_db4@ -ldb4_cxx"
 +
-+EXPAT3RDLIB="-L@BLNK_PREFIX_expat@/lib -Wl,-R@BLNK_PREFIX_expat@/lib -lexpat"
-+EXPATASCII3RDLIB="-L@BLNK_PREFIX_expat@/lib -Wl,-R@BLNK_PREFIX_expat@/lib -lexpat"
++EXPAT3RDLIB="@LIB_expat@ -lexpat"
++EXPATASCII3RDLIB="@LIB_expat@ -lexpat"
 +
-+JPEG3RDLIB="-L@BLNK_PREFIX_jpeg@/lib -Wl,-R@BLNK_PREFIX_jpeg@/lib -ljpeg"
++JPEG3RDLIB="@LIB_jpeg@ -ljpeg"
 +
-+ZLIB3RDLIB="-L@BLNK_PREFIX_zlib@/lib -Wl,-R@BLNK_PREFIX_zlib@/lib -lz"
++ZLIB3RDLIB="@LIB_zlib@ -lz"
 +
-+AWTLIB="@RFLAG_AWTLIB@ -ljawt"
++AWTLIB="@LIB_awtlib@ -ljawt"
 +
 +STDLIBGUIMT+=${X11_LDFLAGS}
 +STDSHLGUIMT+=${X11_LDFLAGS}
