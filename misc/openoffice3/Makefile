@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/10/15 09:10:04 hira Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/15 23:17:29 hira Exp $
 #
 
 OO_VER=			3.0.0
@@ -62,6 +62,8 @@ REPLACE_PERL+=		sd/res/webview/editpic.pl	\
 			sd/res/webview/webview.pl
 REPLACE_PYTHON+=	scripting/source/pyprov/mailmerge.py
 
+# Hard-coded path exists in a tarball.  Cannot use REPLACE_BASH.
+# patch-dl replaces the path to @BASH@.
 SUBST_CLASSES+=		bash
 SUBST_STAGE.bash=	post-patch
 SUBST_MESSAGE.bash=	Fix hard-coded path
@@ -73,9 +75,10 @@ SUBST_STAGE.lib=	post-patch
 SUBST_MESSAGE.lib=	Adding library paths
 SUBST_FILES.lib=	solenv/inc/pkgsrc.mk
 .for pkg in db4 expat jpeg zlib
-SUBST_SED.lib+=		-e 's,@BLNK_PREFIX_${pkg}@,${BUILDLINK_PREFIX.${pkg}},g'
-LIBS+=			-L${BUILDLINK_PREFIX.${pkg}}/lib
-LIBS+=			${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.${pkg}}/lib
+LIB.${pkg}=		-L${BUILDLINK_PREFIX.${pkg}}/lib
+LIB.${pkg}+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.${pkg}}/lib
+SUBST_SED.lib+=		-e 's|@LIB_${pkg}@|${LIB.${pkg}}|g'
+LIBS+=			${LIB.${pkg}}
 .endfor
 
 CONFIGURE_ENV+=		LIBS=${LIBS:O:u:Q}
@@ -94,7 +97,7 @@ CONFIGURE_ARGS+=	--with-system-db
 CONFIGURE_ARGS+=	--with-system-expat
 CONFIGURE_ARGS+=	--with-system-freetype
 CONFIGURE_ARGS+=	--with-system-jpeg
-CONFIGURE_ARGS+=	--with-system-libxml2
+CONFIGURE_ARGS+=	--with-system-libxml
 CONFIGURE_ARGS+=	--with-system-libxslt
 CONFIGURE_ARGS+=	--with-system-neon
 CONFIGURE_ARGS+=	--with-system-python
