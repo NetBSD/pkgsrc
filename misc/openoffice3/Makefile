@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/15 09:10:04 hira Exp $
 #
 
 OO_VER=			3.0.0
@@ -13,7 +13,7 @@ DISTFILES=		OOo_${OO_VER}_src_core.tar.bz2
 DISTFILES+=		OOo_${OO_VER}_src_binfilter.tar.bz2
 DISTFILES+=		OOo_${OO_VER}_src_l10n.tar.bz2
 DISTFILES+=		OOo_${OO_VER}_src_system.tar.bz2
-DISTFILES+=		OOo_${OO_VER}_src_extensions.tar.bz2
+#DISTFILES+=		OOo_${OO_VER}_src_extensions.tar.bz2
 
 MAINTAINER=		hira@NetBSD.org
 HOMEPAGE=		http://www.openoffice.org/
@@ -101,13 +101,13 @@ CONFIGURE_ARGS+=	--with-system-python
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-dynamic-xinerama
 
-# Enable extensions
-CONFIGURE_ARGS+=	--enable-minimizer
-CONFIGURE_ARGS+=	--enable-presenter-console
-CONFIGURE_ARGS+=	--enable-pdfimport
-CONFIGURE_ARGS+=	--enable-wiki-publisher
-CONFIGURE_ARGS+=	--enable-ogltrans
-CONFIGURE_ARGS+=	--enable-report-builder
+# Extensions
+#CONFIGURE_ARGS+=	--enable-minimizer
+#CONFIGURE_ARGS+=	--enable-presenter-console
+#CONFIGURE_ARGS+=	--enable-pdfimport
+#CONFIGURE_ARGS+=	--enable-wiki-publisher
+#CONFIGURE_ARGS+=	--enable-ogltrans
+#CONFIGURE_ARGS+=	--enable-report-builder
 
 # `portable' supports all platforms.
 CONFIGURE_ARGS+=	--enable-epm --with-package-format=portable
