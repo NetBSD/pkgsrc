@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7591 2008/10/15 07:46:46 markd Exp $
+$NetBSD: TODO,v 1.7592 2008/10/15 08:22:59 markd Exp $
 
 Suggested new packages
 ======================
@@ -822,7 +822,6 @@ Suggested package updates
 	o konversation-1.1
 	o kphotobook-0.0.7
 	o kronolith-2.3
-	o krusader-1.90.0
 	o ksi-3.4.2
 	o lapack-20070226
 	o latd-1.21
