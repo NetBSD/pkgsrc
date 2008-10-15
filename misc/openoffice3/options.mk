@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+# $NetBSD: options.mk,v 1.2 2008/10/15 23:17:29 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice3
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 java kde ooo-external-libwpd
@@ -90,7 +90,8 @@ CONFIGURE_ENV+=		JAVACMD="${PKG_JAVA_HOME}/bin/java"
 MAKE_ENV+=		JAVACMD="${PKG_JAVA_HOME}/bin/java"
 
 # XXX
-RFLAG_AWTLIB=		-L${PKG_JAVA_HOME}/jre/lib/${MACHINE_ARCH} -Wl,-R${PKG_JAVA_HOME}/jre/lib/${MACHINE_ARCH}
+LIB.awtlib=	-L${PKG_JAVA_HOME}/jre/lib/${MACHINE_ARCH}
+LIB.awtlib+=	${COMPILER_RPATH_FLAG}${PKG_JAVA_HOME}/jre/lib/${MACHINE_ARCH}
 
 .include "../../mk/java-env.mk"
 .include "../../mk/java-vm.mk"
@@ -98,7 +99,7 @@ RFLAG_AWTLIB=		-L${PKG_JAVA_HOME}/jre/lib/${MACHINE_ARCH} -Wl,-R${PKG_JAVA_HOME}
 CONFIGURE_ARGS+=	--without-java
 PKG_JAVA_HOME=
 JAVA_XAWT_DIR=
-RFLAG_AWTLIB=
+LIB.awtlib=
 .endif
 
 SUBST_CLASSES+=		java
@@ -109,7 +110,7 @@ SUBST_FILES.java+=	desktop/scripts/unopkg.sh
 SUBST_FILES.java+=	padmin/source/spadmin.sh
 SUBST_SED.java+=	-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'
 SUBST_SED.java+=	-e 's,@JAVA_XAWT_DIR@,${JAVA_XAWT_DIR},g'
-SUBST_SED.lib+=		-e 's|@RFLAG_AWTLIB@|${RFLAG_AWTLIB}|g'
+SUBST_SED.lib+=		-e 's|@LIB_awtlib@|${LIB.awtlib}|g'
 
 .if !empty(PKG_OPTIONS:Mkde)
 CONFIGURE_ENV+=		KDEDIR=${BUILDLINK_PREFIX.kdelibs:Q}
