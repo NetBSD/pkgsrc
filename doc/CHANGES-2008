@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2517 2008/10/15 12:16:10 martti Exp $
+$NetBSD: CHANGES-2008,v 1.2518 2008/10/15 16:35:06 smb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4285,3 +4285,28 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xkeyboard-config to 1.4 [bjs 2008-10-15]
 	Updated graphics/kbarcode to 2.0.7 [markd 2008-10-15]
 	Updated mail/bogofilter to 1.1.7 [martti 2008-10-15]
+	Updated mail/claws-mail to 3.6.1 [smb 2008-10-15]
+	Updated mail/claws-mail-archive to 0.6.2 [smb 2008-10-15]
+	Updated mail/claws-mail-attachwarner to 0.2.14 [smb 2008-10-15]
+	Updated mail/claws-mail-att_remover to 1.0.9 [smb 2008-10-15]
+	Updated mail/claws-mail-bogofilter to 3.6.1 [smb 2008-10-15]
+	Updated mail/claws-mail-cachesaver to 0.10.8 [smb 2008-10-15]
+	Updated mail/claws-mail-dillo-viewer to 3.6.1 [smb 2008-10-15]
+	Updated mail/claws-mail-fetchinfo-plugin to 0.4.23 [smb 2008-10-15]
+	Updated mail/claws-mail-gtkhtml2_viewer to 0.21 [smb 2008-10-15]
+	Updated mail/claws-mail-mailmbox to 1.14.2 [smb 2008-10-15]
+	Updated mail/claws-mail-newmail to 0.0.14 [smb 2008-10-15]
+	Updated mail/claws-mail-notification to 0.19 [smb 2008-10-15]
+	Updated mail/claws-mail-pgp to 3.6.1 [smb 2008-10-15]
+	Updated mail/claws-mail-pgpcore to 3.6.1 [smb 2008-10-15]
+	Updated mail/claws-mail-pgpinline to 3.6.1 [smb 2008-10-15]
+	Updated mail/claws-mail-pgpmime to 3.6.1 [smb 2008-10-15]
+	Updated mail/claws-mail-rssyl to 0.22 [smb 2008-10-15]
+	Updated mail/claws-mail-smime to 3.6.1 [smb 2008-10-15]
+	Updated mail/claws-mail-spamassassin to 3.6.1 [smb 2008-10-15]
+	Updated mail/claws-mail-spam_report to 0.3.6 [smb 2008-10-15]
+	Updated mail/claws-mail-synce_plugin to 0.7.4 [smb 2008-10-15]
+	Updated mail/claws-mail-tnef to 0.3.2 [smb 2008-10-15]
+	Updated mail/claws-mail-trayicon to 3.6.1 [smb 2008-10-15]
+	Updated mail/claws-mail-vcalendar to 2.0.2 [smb 2008-10-15]
+	Updated mail/clawsker to 0.5.0 [smb 2008-10-15]
