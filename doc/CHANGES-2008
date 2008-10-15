@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2511 2008/10/15 00:57:19 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2512 2008/10/15 01:59:32 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4279,3 +4279,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/openoffice2-bin to 2.4.1nb1 [hira 2008-10-14]
 	Updated devel/scmgit-base to 1.6.0.2nb2 [minskim 2008-10-14]
 	Updated x11/pixman to 0.12.0 [bjs 2008-10-15]
+	Updated audio/libmpg123 to 0.7.0 [bjs 2008-10-15]
