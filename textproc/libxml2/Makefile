@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.96 2008/10/09 19:20:36 wiz Exp $
+# $NetBSD: Makefile,v 1.97 2008/10/16 13:31:57 drochner Exp $
 
-DISTNAME=	libxml2-2.7.1
-PKGREVISION=	1
+DISTNAME=	libxml2-2.7.2
 CATEGORIES=	textproc
 MASTER_SITES=	ftp://xmlsoft.org/libxml2/ \
 		http://xmlsoft.org/sources/
@@ -28,7 +27,7 @@ CONFIGURE_ARGS+=	--without-python
 
 # Don't use threads - it's not apparent whether it's necessary or not,
 # and this library needs to be usable by non-threaded applications too
-CONFIGURE_ARGS+=	--without-threads
+#CONFIGURE_ARGS+=	--without-threads
 
 MAKE_ENV+=	PAX=${PAX:Q}
 
