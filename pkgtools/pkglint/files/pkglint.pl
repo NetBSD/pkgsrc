@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.774 2008/10/09 16:19:24 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.775 2008/10/16 09:08:21 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2752,9 +2752,11 @@ sub is_emptydir($) {
 	if (!opendir(DIR, $dir)) {
 		return true;
 	}
+	my @subdirs = readdir(DIR);
+	closedir(DIR) or die;
 
 	$rv = true;
-	foreach my $subdir (readdir(DIR)) {
+	foreach my $subdir (@subdirs) {
 		next if $subdir eq "." || $subdir eq ".." || $subdir eq "CVS";
 		next if -d "${dir}/${subdir}" && is_emptydir("${dir}/${subdir}");
 
@@ -2762,7 +2764,6 @@ sub is_emptydir($) {
 		last;
 	}
 
-	closedir(DIR);
 	return $rv;
 }
 
@@ -6256,6 +6257,7 @@ sub checklines_mk($) {
 			foreach my $id (split(qr"\s+", $line->get("value"))) {
 				$mkctx_plist_vars->{"PLIST.$id"} = true;
 				$opt_debug_misc and $line->log_debug("PLIST.${id} is added to PLIST_VARS.");
+				use_var($line, "PLIST.$id");
 			}
 
 		} elsif ($varcanon eq "USE_TOOLS") {
