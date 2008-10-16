@@ -1,6 +1,6 @@
-$NetBSD: distinfo,v 1.2 2007/12/01 14:48:28 tonio Exp $
+$NetBSD: distinfo,v 1.3 2008/10/16 12:55:51 taca Exp $
 
-SHA1 (ocamlduce-3.10.0.tar.gz) = 37d8991b70d5623bbf0c6d3ca038ac723dd3b2c1
-RMD160 (ocamlduce-3.10.0.tar.gz) = ffa81116e499218aef7e2bb672953939b0746c9b
-Size (ocamlduce-3.10.0.tar.gz) = 968584 bytes
+SHA1 (ocamlduce-3.10.2.tar.gz) = f79e2caa298413dd9513591adcc1e99e6ca6d4ec
+RMD160 (ocamlduce-3.10.2.tar.gz) = 1b95f8e849c36a2fdcf91183c249982fce36c589
+Size (ocamlduce-3.10.2.tar.gz) = 976957 bytes
 SHA1 (patch-aa) = 72aa5005a31eac46c1f6cdd08b8bf9a163d46351
