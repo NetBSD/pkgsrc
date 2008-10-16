@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2520 2008/10/16 09:45:43 martti Exp $
+$NetBSD: CHANGES-2008,v 1.2521 2008/10/16 12:25:18 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4312,3 +4312,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/clawsker to 0.5.0 [smb 2008-10-15]
 	Updated databases/sqlite3 to 3.6.4 [martti 2008-10-15]
 	Updated mail/postfix-current to 2.6.20081012 [martti 2008-10-16]
+	Updated net/ntop to 3.3.8 [adam 2008-10-16]
