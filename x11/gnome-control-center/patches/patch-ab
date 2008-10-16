@@ -1,16 +1,17 @@
-$NetBSD: patch-ab,v 1.1.1.1 2007/11/05 19:17:29 drochner Exp $
+$NetBSD: patch-ab,v 1.2 2008/10/16 15:24:01 drochner Exp $
 
---- capplets/about-me/gnome-about-me.c.orig	2006-09-24 20:42:14.000000000 +0000
+--- capplets/about-me/gnome-about-me.c.orig	2008-09-24 18:36:23.000000000 +0200
 +++ capplets/about-me/gnome-about-me.c
-@@ -267,16 +267,12 @@ static char *
+@@ -329,17 +329,12 @@ about_me_focus_out (GtkWidget *widget, G
+ static char *
  get_user_login (void)
  {
- 	char buf[LINE_MAX * 4];
+-	char buf[LINE_MAX * 4];
 -	struct passwd pwd, *err;
 +	struct passwd *pwd;
  
 -	int i;
--#if __sun
+-#if defined(__sun) && !defined(_POSIX_PTHREAD_SEMANTICS)
 -	i = getpwuid_r (getuid (), &pwd, buf, sizeof (buf));
 -	return (i != 0) ? g_strdup (pwd.pw_name) : NULL;
 -#else
