@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/10/16 21:53:57 adam Exp $
+
+--- configure.orig	2008-10-05 09:52:36.000000000 +0200
++++ configure
+@@ -21300,7 +21300,7 @@ fi
+ 
+ 
+ 
+-if test "x$enable_docs" == "xyes"; then
++if test "x$enable_docs" = "xyes"; then
+   ENABLE_DOCS_TRUE=
+   ENABLE_DOCS_FALSE='#'
+ else
+@@ -24801,7 +24801,7 @@ fi
+ 
+ 
+ 
+-if test "x$enable_workshop" == "xyes"; then
++if test "x$enable_workshop" = "xyes"; then
+   ENABLE_WORKSHOP_TRUE=
+   ENABLE_WORKSHOP_FALSE='#'
+ else
