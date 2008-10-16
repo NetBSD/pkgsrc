@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.48 2008/01/18 05:08:46 tnn Exp $
+# $NetBSD: Makefile,v 1.49 2008/10/16 12:24:09 adam Exp $
 
-DISTNAME=	ntop-3.3
-PKGREVISION=	2
+DISTNAME=	ntop-3.3.8
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=ntop/}
 
@@ -15,7 +14,7 @@ USE_LIBTOOL=		yes
 USE_PKGLOCALEDIR=	yes
 USE_TOOLS+=		aclocal autoconf autoheader automake gawk gmake
 GNU_CONFIGURE=		yes
-CONFIGURE_ARGS+=	--localstatedir=${VARBASE:Q}
+CONFIGURE_ARGS+=	--localstatedir=${VARBASE}
 CONFIGURE_ARGS+=	--sysconfdir=${PREFIX}/share/ntop
 CONFIGURE_ARGS+=	--with-gd-root=${BUILDLINK_PREFIX.gd}
 CONFIGURE_ARGS+=	--with-gdbm-root=${BUILDLINK_PREFIX.gdbm}
@@ -36,8 +35,10 @@ BUILDLINK_API_DEPENDS.libpcap+=	libpcap>=0.8.3
 CONFIGURE_ARGS+=	--disable-mt
 .endif
 
+
 pre-configure:
 	set -e; cd ${WRKSRC}; \
+	cp ${PREFIX}/share/libtool/ltmain.sh .; \
 	aclocal; autoheader; automake -a --foreign -i; autoconf
 
 .include "../../databases/gdbm/buildlink3.mk"
