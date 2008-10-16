@@ -1,12 +1,12 @@
-# $NetBSD: Makefile.common,v 1.11 2008/08/15 01:41:42 dsainty Exp $
+# $NetBSD: Makefile.common,v 1.12 2008/10/16 12:30:16 drochner Exp $
 #
 
-GNOME_VFS_VERSION=	2.22.0
+GNOME_VFS_VERSION=	2.24.0
 
 DISTNAME=		gnome-vfs-${GNOME_VFS_VERSION}
 CATEGORIES?=		sysutils
 CATEGORIES+=		gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/2.22/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-vfs/2.24/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
