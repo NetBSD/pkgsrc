@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.20 2008/04/10 16:44:19 drochner Exp $
+# $NetBSD: buildlink3.mk,v 1.21 2008/10/16 14:02:29 drochner Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 LIBGTKHTML_BUILDLINK3_MK:=	${LIBGTKHTML_BUILDLINK3_MK}+
@@ -17,7 +17,6 @@ BUILDLINK_ABI_DEPENDS.libgtkhtml+=	libgtkhtml>=2.6.3nb10
 BUILDLINK_PKGSRCDIR.libgtkhtml?=	../../www/libgtkhtml
 .endif	# LIBGTKHTML_BUILDLINK3_MK
 
-.include "../../devel/gail/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 
