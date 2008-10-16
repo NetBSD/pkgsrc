@@ -1,7 +1,6 @@
-# $NetBSD: Makefile,v 1.66 2008/08/25 15:36:18 joerg Exp $
+# $NetBSD: Makefile,v 1.67 2008/10/16 10:55:08 drochner Exp $
 
-DISTNAME=	cairo-1.6.4
-PKGREVISION=	3
+DISTNAME=	cairo-1.8.0
 CATEGORIES=	graphics
 MASTER_SITES=	http://cairographics.org/releases/
 
@@ -35,7 +34,7 @@ PLIST.carbon=		yes
 .include "options.mk"
 
 BUILDLINK_API_DEPENDS.glitz+=	glitz>=0.5.1
-BUILDLINK_API_DEPENDS.pixman+=	pixman>=0.10.0
+BUILDLINK_API_DEPENDS.pixman+=	pixman>=0.12.0
 
 # For snprintf() and ctime_r()
 CPPFLAGS.SunOS+=		-D__EXTENSIONS__ -D_POSIX_PTHREAD_SEMANTICS
