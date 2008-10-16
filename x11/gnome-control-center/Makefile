@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.13 2008/09/06 20:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.14 2008/10/16 15:24:01 drochner Exp $
 #
 
-DISTNAME=	gnome-control-center-2.22.2.1
-PKGREVISION=	1
+DISTNAME=	gnome-control-center-2.24.0.1
 CATEGORIES=	x11 gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-control-center/2.22/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-control-center/2.24/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -36,14 +35,8 @@ INSTALL_MAKE_FLAGS+=	autostartdir=${PREFIX}/share/applications
 INSTALLATION_DIRS=	${EGDIR}
 
 GCONF_SCHEMAS+=	control-center.schemas
-GCONF_SCHEMAS+=	themus.schemas
-GCONF_SCHEMAS+=	fontilus.schemas
 
 EGDIR=			${PREFIX}/share/examples/gnome-control-center
-CONF_FILES=		${EGDIR}/theme-method.conf \
-			${PKG_SYSCONFDIR}/gnome-vfs-2.0/modules/theme-method.conf
-CONF_FILES+=		${EGDIR}/font-method.conf \
-			${PKG_SYSCONFDIR}/gnome-vfs-2.0/modules/font-method.conf
 CONF_FILES+=		${EGDIR}/gnomecc.menu \
 			${PKG_SYSCONFDIR}/xdg/menus/gnomecc.menu
 
@@ -63,7 +56,10 @@ CONFIGURE_ARGS+=	--enable-aboutme
 PLIST.evolution=	yes
 .endif
 
+_TOOLS_USE_MSGFMT_SH=	yes
+
 .include "../../audio/esound/buildlink3.mk"
+.include "../../audio/libcanberra/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/glib2/buildlink3.mk"
@@ -101,11 +97,5 @@ PLIST.evolution=	yes
 .include "../../x11/libgnomekbd/buildlink3.mk"
 .include "../../databases/shared-mime-info/mimedb.mk"
 .include "../../sysutils/gnome-settings-daemon/buildlink3.mk"
-
-post-install:
-	${INSTALL_DATA} ${WRKSRC}/vfs-methods/themus/theme-method.conf \
-	    ${DESTDIR}${EGDIR}
-	${INSTALL_DATA} ${WRKSRC}/vfs-methods/fontilus/font-method.conf \
-	    ${DESTDIR}${EGDIR}
 
 .include "../../mk/bsd.pkg.mk"
