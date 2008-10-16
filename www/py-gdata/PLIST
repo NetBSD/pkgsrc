@@ -1,0 +1,137 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/16 20:06:11 drochner Exp $
+${PYSITELIB}/atom/__init__.py
+${PYSITELIB}/atom/__init__.pyc
+${PYSITELIB}/atom/__init__.pyo
+${PYSITELIB}/atom/http.py
+${PYSITELIB}/atom/http.pyc
+${PYSITELIB}/atom/http.pyo
+${PYSITELIB}/atom/http_interface.py
+${PYSITELIB}/atom/http_interface.pyc
+${PYSITELIB}/atom/http_interface.pyo
+${PYSITELIB}/atom/mock_http.py
+${PYSITELIB}/atom/mock_http.pyc
+${PYSITELIB}/atom/mock_http.pyo
+${PYSITELIB}/atom/mock_service.py
+${PYSITELIB}/atom/mock_service.pyc
+${PYSITELIB}/atom/mock_service.pyo
+${PYSITELIB}/atom/service.py
+${PYSITELIB}/atom/service.pyc
+${PYSITELIB}/atom/service.pyo
+${PYSITELIB}/atom/token_store.py
+${PYSITELIB}/atom/token_store.pyc
+${PYSITELIB}/atom/token_store.pyo
+${PYSITELIB}/atom/url.py
+${PYSITELIB}/atom/url.pyc
+${PYSITELIB}/atom/url.pyo
+${PYSITELIB}/gdata/__init__.py
+${PYSITELIB}/gdata/__init__.pyc
+${PYSITELIB}/gdata/__init__.pyo
+${PYSITELIB}/gdata/alt/__init__.py
+${PYSITELIB}/gdata/alt/__init__.pyc
+${PYSITELIB}/gdata/alt/__init__.pyo
+${PYSITELIB}/gdata/alt/appengine.py
+${PYSITELIB}/gdata/alt/appengine.pyc
+${PYSITELIB}/gdata/alt/appengine.pyo
+${PYSITELIB}/gdata/apps/__init__.py
+${PYSITELIB}/gdata/apps/__init__.pyc
+${PYSITELIB}/gdata/apps/__init__.pyo
+${PYSITELIB}/gdata/apps/service.py
+${PYSITELIB}/gdata/apps/service.pyc
+${PYSITELIB}/gdata/apps/service.pyo
+${PYSITELIB}/gdata/auth.py
+${PYSITELIB}/gdata/auth.pyc
+${PYSITELIB}/gdata/auth.pyo
+${PYSITELIB}/gdata/base/__init__.py
+${PYSITELIB}/gdata/base/__init__.pyc
+${PYSITELIB}/gdata/base/__init__.pyo
+${PYSITELIB}/gdata/base/service.py
+${PYSITELIB}/gdata/base/service.pyc
+${PYSITELIB}/gdata/base/service.pyo
+${PYSITELIB}/gdata/blogger/__init__.py
+${PYSITELIB}/gdata/blogger/__init__.pyc
+${PYSITELIB}/gdata/blogger/__init__.pyo
+${PYSITELIB}/gdata/blogger/service.py
+${PYSITELIB}/gdata/blogger/service.pyc
+${PYSITELIB}/gdata/blogger/service.pyo
+${PYSITELIB}/gdata/calendar/__init__.py
+${PYSITELIB}/gdata/calendar/__init__.pyc
+${PYSITELIB}/gdata/calendar/__init__.pyo
+${PYSITELIB}/gdata/calendar/service.py
+${PYSITELIB}/gdata/calendar/service.pyc
+${PYSITELIB}/gdata/calendar/service.pyo
+${PYSITELIB}/gdata/client.py
+${PYSITELIB}/gdata/client.pyc
+${PYSITELIB}/gdata/client.pyo
+${PYSITELIB}/gdata/codesearch/__init__.py
+${PYSITELIB}/gdata/codesearch/__init__.pyc
+${PYSITELIB}/gdata/codesearch/__init__.pyo
+${PYSITELIB}/gdata/codesearch/service.py
+${PYSITELIB}/gdata/codesearch/service.pyc
+${PYSITELIB}/gdata/codesearch/service.pyo
+${PYSITELIB}/gdata/contacts/__init__.py
+${PYSITELIB}/gdata/contacts/__init__.pyc
+${PYSITELIB}/gdata/contacts/__init__.pyo
+${PYSITELIB}/gdata/contacts/service.py
+${PYSITELIB}/gdata/contacts/service.pyc
+${PYSITELIB}/gdata/contacts/service.pyo
+${PYSITELIB}/gdata/docs/__init__.py
+${PYSITELIB}/gdata/docs/__init__.pyc
+${PYSITELIB}/gdata/docs/__init__.pyo
+${PYSITELIB}/gdata/docs/service.py
+${PYSITELIB}/gdata/docs/service.pyc
+${PYSITELIB}/gdata/docs/service.pyo
+${PYSITELIB}/gdata/exif/__init__.py
+${PYSITELIB}/gdata/exif/__init__.pyc
+${PYSITELIB}/gdata/exif/__init__.pyo
+${PYSITELIB}/gdata/geo/__init__.py
+${PYSITELIB}/gdata/geo/__init__.pyc
+${PYSITELIB}/gdata/geo/__init__.pyo
+${PYSITELIB}/gdata/media/__init__.py
+${PYSITELIB}/gdata/media/__init__.pyc
+${PYSITELIB}/gdata/media/__init__.pyo
+${PYSITELIB}/gdata/photos/__init__.py
+${PYSITELIB}/gdata/photos/__init__.pyc
+${PYSITELIB}/gdata/photos/__init__.pyo
+${PYSITELIB}/gdata/photos/service.py
+${PYSITELIB}/gdata/photos/service.pyc
+${PYSITELIB}/gdata/photos/service.pyo
+${PYSITELIB}/gdata/service.py
+${PYSITELIB}/gdata/service.pyc
+${PYSITELIB}/gdata/service.pyo
+${PYSITELIB}/gdata/spreadsheet/__init__.py
+${PYSITELIB}/gdata/spreadsheet/__init__.pyc
+${PYSITELIB}/gdata/spreadsheet/__init__.pyo
+${PYSITELIB}/gdata/spreadsheet/service.py
+${PYSITELIB}/gdata/spreadsheet/service.pyc
+${PYSITELIB}/gdata/spreadsheet/service.pyo
+${PYSITELIB}/gdata/spreadsheet/text_db.py
+${PYSITELIB}/gdata/spreadsheet/text_db.pyc
+${PYSITELIB}/gdata/spreadsheet/text_db.pyo
+${PYSITELIB}/gdata/test_data.py
+${PYSITELIB}/gdata/test_data.pyc
+${PYSITELIB}/gdata/test_data.pyo
+${PYSITELIB}/gdata/urlfetch.py
+${PYSITELIB}/gdata/urlfetch.pyc
+${PYSITELIB}/gdata/urlfetch.pyo
+${PYSITELIB}/gdata/youtube/__init__.py
+${PYSITELIB}/gdata/youtube/__init__.pyc
+${PYSITELIB}/gdata/youtube/__init__.pyo
+${PYSITELIB}/gdata/youtube/service.py
+${PYSITELIB}/gdata/youtube/service.pyc
+${PYSITELIB}/gdata/youtube/service.pyo
+@dirrm ${PYSITELIB}/gdata/youtube
+@dirrm ${PYSITELIB}/gdata/spreadsheet
+@dirrm ${PYSITELIB}/gdata/photos
+@dirrm ${PYSITELIB}/gdata/media
+@dirrm ${PYSITELIB}/gdata/geo
+@dirrm ${PYSITELIB}/gdata/exif
+@dirrm ${PYSITELIB}/gdata/docs
+@dirrm ${PYSITELIB}/gdata/contacts
+@dirrm ${PYSITELIB}/gdata/codesearch
+@dirrm ${PYSITELIB}/gdata/calendar
+@dirrm ${PYSITELIB}/gdata/blogger
+@dirrm ${PYSITELIB}/gdata/base
+@dirrm ${PYSITELIB}/gdata/apps
+@dirrm ${PYSITELIB}/gdata/alt
+@dirrm ${PYSITELIB}/gdata
+@dirrm ${PYSITELIB}/atom
