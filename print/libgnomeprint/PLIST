@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.24 2008/04/12 22:43:09 jlam Exp $
+@comment $NetBSD: PLIST,v 1.25 2008/10/16 13:40:04 drochner Exp $
 include/libgnomeprint-2.2/libgnomeprint/gnome-font-face.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-font.h
 include/libgnomeprint-2.2/libgnomeprint/gnome-glyphlist.h
@@ -147,7 +147,7 @@ share/locale/sk/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/sl/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/sq/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/sr/LC_MESSAGES/libgnomeprint-2.2.mo
-share/locale/sr@Latn/LC_MESSAGES/libgnomeprint-2.2.mo
+share/locale/sr@latin/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/sv/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/ta/LC_MESSAGES/libgnomeprint-2.2.mo
 share/locale/te/LC_MESSAGES/libgnomeprint-2.2.mo
