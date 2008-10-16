@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/10/16 15:17:47 drochner Exp $
+
+SHA1 (libcanberra-0.10.tar.gz) = dfe1ae404b9494d8b4b163658adb688ba0008bec
+RMD160 (libcanberra-0.10.tar.gz) = 9bc56b05dadb6a2fe184cca69396c693b9a44cee
+Size (libcanberra-0.10.tar.gz) = 826222 bytes
