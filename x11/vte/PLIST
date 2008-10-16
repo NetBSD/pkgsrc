@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.16 2007/12/17 17:52:11 drochner Exp $
+@comment $NetBSD: PLIST,v 1.17 2008/10/16 13:35:12 drochner Exp $
 bin/vte
 include/vte/pty.h
 include/vte/reaper.h
 include/vte/vte.h
 include/vte/vteaccess.h
+include/vte/vtetypebuiltins.h
+include/vte/vteversion.h
 lib/libvte.la
 lib/pkgconfig/vte.pc
 lib/vte/decset
@@ -98,7 +100,7 @@ share/locale/sk/LC_MESSAGES/vte.mo
 share/locale/sl/LC_MESSAGES/vte.mo
 share/locale/sq/LC_MESSAGES/vte.mo
 share/locale/sr/LC_MESSAGES/vte.mo
-share/locale/sr@Latn/LC_MESSAGES/vte.mo
+share/locale/sr@latin/LC_MESSAGES/vte.mo
 share/locale/sv/LC_MESSAGES/vte.mo
 share/locale/ta/LC_MESSAGES/vte.mo
 share/locale/te/LC_MESSAGES/vte.mo
