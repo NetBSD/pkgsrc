@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7596 2008/10/16 19:51:46 wiz Exp $
+$NetBSD: TODO,v 1.7597 2008/10/16 19:52:32 wiz Exp $
 
 Suggested new packages
 ======================
@@ -427,7 +427,6 @@ Suggested package updates
 	o ast-ksh-20080624 [pkg/37854]
 	o asterisk-1.6.0.1
 	o astyle-1.15.3
-	o at-spi-1.24.0
 	o aterm-1.0.1
 	o auctex-11.85
 	o autoconvert-0.3.16
@@ -473,7 +472,6 @@ Suggested package updates
 	o bzr-1.7
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
-	o cairo-1.8.0
 	o cal3d-0.11.0
 	o calamaris-2.59
 	o capistrano-2.4.3
@@ -535,7 +533,6 @@ Suggested package updates
 	o ddclient-3.7.3
 	o defendguin-0.0.11
 	o delegate-9.7.5
-	o deskbar-applet-2.24.0
 	o devIL-1.7.1
 	o devhelp-0.21
 	o dhid-5.3
@@ -565,7 +562,6 @@ Suggested package updates
 	o ed-1.1
 	o ede-1.2
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
-	o eel-2.24.0
 	o eggdrop-1.6.19
 	o egtk-0.3.6.2
 	o ekiga-3.00
@@ -581,7 +577,6 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.12
 	o enscript-1.6.4
-	o eog-2.24.0
 	o epic4-2.6
 	o epiphany-2.24.0.1
 	o epsg-6.14
@@ -594,7 +589,6 @@ Suggested package updates
 	o et-2.60
 	o etach-1.4.1
 	o evolution-2.24.0
-	o evolution-data-server-2.24.0
 	o evolution-exchange-2.24.0
 	o evolution-webcal-2.24.0
 	o ex-20050325
@@ -612,7 +606,6 @@ Suggested package updates
 	o festival-1.96
 	o fetchyahoo-2.11.2
 	o file-4.26 [pkg/39596]
-	o file-roller-2.24.0
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.0
@@ -678,19 +671,13 @@ Suggested package updates
 	o gnash-0.8.4
 	o gnet1-1.1.9
 	o gnetman-20050429
-	o gnome-2.22.3
-	o gnome-applets-2.24.0
-	o gnome-backgrounds-2.24.0
+	o gnome-2.24.0
 	o gnome-build-2.24.0
-	o gnome-control-center-2.24.0
 	o gnome-desktop-sharp-2.24.0
 	o gnome-games-2.24.0
 	o gnome-icon-theme-2.24.0
-	o gnome-keyring-2.24.0
 	o gnome-mag-0.15.4
-	o gnome-media-2.24.0.1
 	o gnome-pilot-2.0.16
-	o gnome-settings-daemon-2.24.0
 	o gnome-sharp-2.24.0
 	o gnome-speech-0.4.21
 	o gnome-system-monitor-2.24.0
@@ -724,10 +711,8 @@ Suggested package updates
 	o gsharutils-4.7
 	o gsm-1.0.12
 	o gss-0.0.22
-	o gst-plugins0.10-base-0.10.21
 	o gst-plugins0.10-good-0.10.10
 	o gst-plugins0.10-ugly-0.10.9
-	o gstreamer0.10-0.10.21
 	o gtexinfo-4.13
 	o gthumb-2.10.10
 	o gtick-0.4.2
@@ -739,7 +724,6 @@ Suggested package updates
 	o gtklife-5.1
 	o gtkmm-2.14.1
 	o gtksee-0.6.0b
-	o gtksourceview-2.4.0
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
 	o gtodo-applet-0.16.2
@@ -837,7 +821,6 @@ Suggested package updates
 	o lftp-3.7.3
 	o libFoundation-1.1.3
 	o libast-0.7
-	o libbonobo-2.24.0
 	o libcares-1.5.2
 	o libchewing-0.3.0
 	o libdiscid-0.2.1
@@ -856,9 +839,6 @@ Suggested package updates
 	o libgiigic-1.1.2
 	o libgnomecups-0.2.3
 	o libgnomedb-3.1.2
-	o libgnomekbd-2.24.0
-	o libgnomeprint-2.18.5
-	o libgnomeprintui-2.18.3
 	o libgtop-2.24.0
 	o libhangul-0.0.8
 	o libhydrogen-0.9.2
@@ -882,7 +862,6 @@ Suggested package updates
 	o libtool-base-2.2.6a
 	o libv4l-0.5.0
 	o libxklavier-3.7
-	o libxml2-2.7.2
 	o licq-1.3.6
 	o lincvs-2.1.1 [now called CrossVC]
 	o linuxsms-0.77
@@ -895,7 +874,6 @@ Suggested package updates
 	o ltris-1.0.12
 	o lucy-1.19p
 	o lzma-4.57
-	o m4-1.4.12
 	o maelstrom-sdl-3.0.6
 	o maelstrom-x11-2.0.7
 	o mail-notification-5.3
@@ -915,7 +893,6 @@ Suggested package updates
 	o mercury-0.13.1
 	o mergeant-0.67
 	o mesure-0.7.2
-	o metacity-2.24.0
 	o metakit-lib-2.4.9.6
 	o mew-6.1 [as mew6?]
 	o mftrace-1.2.15
@@ -1014,16 +991,12 @@ Suggested package updates
 	o p5-Archive-Zip-1.25
 	o p5-Authen-PAM-0.17
 	o p5-Authen-SASL-Cyrus-0.13
-	o p5-Compress-Zlib-2.015
 	o p5-DBD-Oracle-1.21
 	o p5-DBD-Sybase-1.07
 	o p5-DBD-mysql-4.008
 	o p5-DateTime-Locale-0.4200
 	o p5-DateTime-TimeZone-0.80
 	o p5-HTTPD-User-Manage-1.62
-	o p5-IO-Compress-Base-2.015
-	o p5-IO-Compress-Zlib-2.015
-	o p5-IO-Socket-SSL-1.16
 	o p5-Locale-Maketext-Lexicon-0.68
 	o p5-MARC-1.38
 	o p5-Mail-IMAPClient-3.10
@@ -1042,7 +1015,6 @@ Suggested package updates
 	o p5-Text-Tabs+Wrap-2006.1117
 	o p5-XML-RSS-1.36
 	o p5-ispman-1.2
-	o p5-libwww-5.817
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.51
 	o pam-smbpass-3.0.13
@@ -1143,8 +1115,6 @@ Suggested package updates
 	o py-docutils-0.5
 	o py-fpconst-0.7.3
 	o py-game-1.8.1
-	o py-gnome2-2.22.3
-	o py-gnome2-desktop-2.24.0
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
@@ -1152,7 +1122,6 @@ Suggested package updates
 	o py-imagingtk-1.1.6
 	o py-kenosis-0.96
 	o py-ldap-2.3.4
-	o py-libxml2-2.7.2
 	o py-logging-0.4.9.6
 	o py-m2crypto-0.19.1
 	o py-mad-0.6
@@ -1240,7 +1209,6 @@ Suggested package updates
 	o sendfile-20010424
 	o ser-0.9.6
 	o sessreg-1.0.4
-	o shared-mime-info-0.51
 	o sharity-3.6
 	o sharity-light-1.3
 	o shc-3.8
@@ -1331,8 +1299,6 @@ Suggested package updates
 	o tn5250-0.17.3 [at http://tn5250.sourceforge.net/]
 	o tob-0.26
 	o top-3.8beta1
-	o totem-2.24.2
-	o totem-pl-parser-2.24.1
 	o tpasm-1.2
 	o tpb-0.6.4
 	o trio-1.12
@@ -1371,7 +1337,6 @@ Suggested package updates
 	o vnc-4.0 [http://www.realvnc.com/download.html|pkgsrc-wip]
 	o vobcopy-1.1.2
 	o vp-1.6
-	o vte-0.16.14
 	o vttest-20071216
 	o vym-1.12.0 [pkg/39455]
 	o wMosaic-3.8.22
@@ -1477,7 +1442,6 @@ Suggested package updates
 	o yorick-2.1.05
 	o zebra-0.95a
 	o zenicb-1.31 (needs merge with lots of local changes)
-	o zenity-2.24.0
 	o zile-2.2.61
 	o zircon-1.18.256
 	o zoom-1.0.5
