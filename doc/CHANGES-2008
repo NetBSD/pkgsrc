@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2530 2008/10/16 21:52:04 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2531 2008/10/16 22:01:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4373,3 +4373,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated net/clive to 1.0.2 [wiz 2008-10-16]
 	Updated devel/libsigc++ to 2.2.3 [wiz 2008-10-16]
 	Updated devel/libevent to 1.4.8 [wiz 2008-10-16]
+	Updated graphics/gnome-icon-theme to 2.24.0 [wiz 2008-10-16]
