@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.11 2008/10/16 12:24:09 adam Exp $
+
+--- Makefile.am.orig	2008-10-16 08:40:25.000000000 +0200
++++ Makefile.am
+@@ -160,8 +160,6 @@ man_MANS = ntop.8
+ .PHONY: snapshot
+ 
+ 
+-acinclude.m4: acinclude.m4.ntop libtool.m4.in
+-	@cat acinclude.m4.ntop libtool.m4.in >acinclude.m4
+ 
+ CLEANLIST = `ls -l $(DESTDIR)$(libdir)/*ntop*.so $(DESTDIR)$(libdir)/*Plugin*.so | \
+           grep -v $(VERSION) | \
