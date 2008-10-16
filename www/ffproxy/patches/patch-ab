@@ -1,0 +1,20 @@
+--- request.c.orig	2008-10-16 22:22:52.000000000 +0200
++++ request.c	2008-10-16 22:23:27.000000000 +0200
+@@ -288,7 +288,7 @@
+ 	extern struct cfg config;
+ 	unsigned long   ip;
+ 	int             s;
+-	void           *foo;
++	int		val = 1;
+ 	size_t          len, i;
+ 	char            buf[4096];
+ 
+@@ -371,7 +371,7 @@
+ 		if ((s = socket(AF_INET, SOCK_STREAM, 0)) == -1) {
+ 			DEBUG(("do_request() => socket() failed for %s port %d", r->host, r->port));
+ 			return E_CON;
+-		} else if (setsockopt(s, SOL_SOCKET, SO_REUSEADDR, &foo, sizeof(foo)) != 0) {
++		} else if (setsockopt(s, SOL_SOCKET, SO_REUSEADDR, &val, sizeof(val)) != 0) {
+ 			DEBUG(("do_request() => setsockopt() failed for %s port %d", r->host, r->port));
+ 			return E_CON;
+ 		} else if (connect(s, (struct sockaddr *) & addr, sizeof(addr)) == -1) {
