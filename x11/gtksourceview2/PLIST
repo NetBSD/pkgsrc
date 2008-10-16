@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/04/15 17:49:48 drochner Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/10/16 14:03:27 drochner Exp $
 include/gtksourceview-2.0/gtksourceview/gtksourcebuffer.h
 include/gtksourceview-2.0/gtksourceview/gtksourceiter.h
 include/gtksourceview-2.0/gtksourceview/gtksourcelanguage.h
@@ -102,6 +102,7 @@ share/gtksourceview-2.0/language-specs/vbnet.lang
 share/gtksourceview-2.0/language-specs/verilog.lang
 share/gtksourceview-2.0/language-specs/vhdl.lang
 share/gtksourceview-2.0/language-specs/xml.lang
+share/gtksourceview-2.0/language-specs/xslt.lang
 share/gtksourceview-2.0/language-specs/yacc.lang
 share/gtksourceview-2.0/styles/classic.xml
 share/gtksourceview-2.0/styles/kate.xml
@@ -167,9 +168,10 @@ share/locale/sk/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/sl/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/sq/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/sr/LC_MESSAGES/gtksourceview-2.0.mo
-share/locale/sr@Latn/LC_MESSAGES/gtksourceview-2.0.mo
+share/locale/sr@latin/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/sv/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/ta/LC_MESSAGES/gtksourceview-2.0.mo
+share/locale/te/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/th/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/tr/LC_MESSAGES/gtksourceview-2.0.mo
 share/locale/uk/LC_MESSAGES/gtksourceview-2.0.mo
