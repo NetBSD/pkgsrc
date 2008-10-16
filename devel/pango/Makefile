@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.117 2008/10/16 11:11:22 drochner Exp $
+# $NetBSD: Makefile,v 1.118 2008/10/16 14:11:56 drochner Exp $
 
 DISTNAME=		pango-1.22.0
 CATEGORIES=		devel fonts
@@ -43,7 +43,7 @@ PLIST_VARS+=		carbon
 .include "options.mk"
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.14.0
-BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.2.2
+BUILDLINK_API_DEPENDS.cairo+=	cairo>=1.8.0
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.7nb3
 
 .include "../../devel/glib2/buildlink3.mk"
