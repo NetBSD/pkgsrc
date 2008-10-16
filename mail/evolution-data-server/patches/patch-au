@@ -1,11 +1,11 @@
-$NetBSD: patch-au,v 1.1 2008/01/14 12:50:17 drochner Exp $
+$NetBSD: patch-au,v 1.2 2008/10/16 13:57:31 drochner Exp $
 
---- ./docs/reference/camel/Makefile.in.orig	2008-01-14 12:37:01.000000000 +0100
+--- ./docs/reference/camel/Makefile.in.orig	2008-09-22 04:26:11.000000000 +0200
 +++ ./docs/reference/camel/Makefile.in
-@@ -684,8 +684,9 @@ install-data-local:
+@@ -706,8 +706,9 @@ install-data-local:
+ 	    echo '-- Installing '$$i ; \
+ 	    $(INSTALL_DATA) $$i $(DESTDIR)$(TARGET_DIR); \
  	  done; \
- 	  echo '-- Installing $(srcdir)/html/index.sgml' ; \
- 	  $(INSTALL_DATA) $(srcdir)/html/index.sgml $(DESTDIR)$(TARGET_DIR) || :; \
 -	  which gtkdoc-rebase >/dev/null && \
 +	  if test `which gtkdoc-rebase` != ""; then \
  	    gtkdoc-rebase --relative --dest-dir=$(DESTDIR) --html-dir=$(DESTDIR)$(TARGET_DIR) ; \

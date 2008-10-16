@@ -1,15 +1,14 @@
-$NetBSD: patch-ab,v 1.4 2008/04/15 17:45:38 drochner Exp $
+$NetBSD: patch-ab,v 1.5 2008/10/16 13:57:31 drochner Exp $
 
---- calendar/libedata-cal/Makefile.in.orig	2008-03-09 18:55:15.000000000 +0100
+--- calendar/libedata-cal/Makefile.in.orig	2008-09-22 04:26:02.000000000 +0200
 +++ calendar/libedata-cal/Makefile.in
-@@ -60,9 +60,7 @@ libedata_cal_1_2_la_DEPENDENCIES =  \
- 	$(top_builddir)/calendar/libecal/libecal-1.2.la \
+@@ -61,9 +61,6 @@ libedata_cal_1_2_la_DEPENDENCIES =  \
  	$(top_builddir)/libedataserver/libedataserver-1.2.la \
+ 	$(top_builddir)/libebackend/libebackend-1.2.la \
  	$(am__DEPENDENCIES_1)
 -am__objects_1 = Evolution-DataServer-Calendar-common.lo \
 -	Evolution-DataServer-Calendar-skels.lo \
 -	Evolution-DataServer-Calendar-stubs.lo
-+am__objects_1 =
  am_libedata_cal_1_2_la_OBJECTS = $(am__objects_1) e-cal-backend.lo \
  	e-cal-backend-cache.lo e-cal-backend-factory.lo \
- 	e-cal-backend-sexp.lo e-cal-backend-sync.lo \
+ 	e-cal-backend-loader-factory.lo e-cal-backend-sexp.lo \
