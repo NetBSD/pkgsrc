@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2008/04/10 16:09:44 drochner Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/10/16 13:38:10 drochner Exp $
 include/libsoup-2.4/libsoup/soup-address.h
 include/libsoup-2.4/libsoup/soup-auth-domain-basic.h
 include/libsoup-2.4/libsoup/soup-auth-domain-digest.h
 include/libsoup-2.4/libsoup/soup-auth-domain.h
 include/libsoup-2.4/libsoup/soup-auth.h
+include/libsoup-2.4/libsoup/soup-cookie-jar.h
+include/libsoup-2.4/libsoup/soup-cookie.h
 include/libsoup-2.4/libsoup/soup-date.h
 include/libsoup-2.4/libsoup/soup-enum-types.h
 include/libsoup-2.4/libsoup/soup-form.h
@@ -17,6 +19,7 @@ include/libsoup-2.4/libsoup/soup-misc.h
 include/libsoup-2.4/libsoup/soup-portability.h
 include/libsoup-2.4/libsoup/soup-server.h
 include/libsoup-2.4/libsoup/soup-session-async.h
+include/libsoup-2.4/libsoup/soup-session-feature.h
 include/libsoup-2.4/libsoup/soup-session-sync.h
 include/libsoup-2.4/libsoup/soup-session.h
 include/libsoup-2.4/libsoup/soup-socket.h
