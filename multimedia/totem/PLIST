@@ -1,8 +1,9 @@
-@comment $NetBSD: PLIST,v 1.15 2008/04/15 18:23:54 drochner Exp $
+@comment $NetBSD: PLIST,v 1.16 2008/10/16 17:26:07 drochner Exp $
 bin/totem
 bin/totem-audio-preview
 bin/totem-video-indexer
 bin/totem-video-thumbnailer
+lib/libbaconvideowidget.la
 lib/totem/plugins/gromit/gromit.totem-plugin
 lib/totem/plugins/gromit/libgromit.la
 lib/totem/plugins/media-player-keys/libmedia_player_keys.la
@@ -11,6 +12,13 @@ lib/totem/plugins/ontop/libontop.la
 lib/totem/plugins/ontop/ontop.totem-plugin
 lib/totem/plugins/properties/libmovie-properties.la
 lib/totem/plugins/properties/movie-properties.totem-plugin
+lib/totem/plugins/pythonconsole/console.py
+lib/totem/plugins/pythonconsole/console.pyc
+lib/totem/plugins/pythonconsole/console.pyo
+lib/totem/plugins/pythonconsole/pythonconsole.py
+lib/totem/plugins/pythonconsole/pythonconsole.pyc
+lib/totem/plugins/pythonconsole/pythonconsole.pyo
+lib/totem/plugins/pythonconsole/pythonconsole.totem-plugin
 lib/totem/plugins/screensaver/libscreensaver.la
 lib/totem/plugins/screensaver/screensaver.totem-plugin
 lib/totem/plugins/skipto/libskipto.la
@@ -18,6 +26,9 @@ lib/totem/plugins/skipto/skipto.totem-plugin
 lib/totem/plugins/skipto/skipto.ui
 lib/totem/plugins/thumbnail/libthumbnail.la
 lib/totem/plugins/thumbnail/thumbnail.totem-plugin
+lib/totem/plugins/totem/__init__.py
+lib/totem/plugins/totem/__init__.pyc
+lib/totem/plugins/totem/__init__.pyo
 lib/totem/plugins/youtube/youtube.py
 lib/totem/plugins/youtube/youtube.pyc
 lib/totem/plugins/youtube/youtube.pyo
@@ -123,6 +134,15 @@ share/gnome/help/totem/pa/figures/totem_start_window.png
 share/gnome/help/totem/pa/figures/totem_volume_maximum_button.png
 share/gnome/help/totem/pa/figures/totem_volume_mute_button.png
 share/gnome/help/totem/pa/totem.xml
+share/gnome/help/totem/pl/figures/totem_next_button.png
+share/gnome/help/totem/pl/figures/totem_pause_button.png
+share/gnome/help/totem/pl/figures/totem_play_button.png
+share/gnome/help/totem/pl/figures/totem_previous_button.png
+share/gnome/help/totem/pl/figures/totem_show_playlist_button.png
+share/gnome/help/totem/pl/figures/totem_start_window.png
+share/gnome/help/totem/pl/figures/totem_volume_maximum_button.png
+share/gnome/help/totem/pl/figures/totem_volume_mute_button.png
+share/gnome/help/totem/pl/totem.xml
 share/gnome/help/totem/pt_BR/figures/totem_next_button.png
 share/gnome/help/totem/pt_BR/figures/totem_pause_button.png
 share/gnome/help/totem/pt_BR/figures/totem_play_button.png
@@ -248,7 +268,7 @@ share/locale/sk/LC_MESSAGES/totem.mo
 share/locale/sl/LC_MESSAGES/totem.mo
 share/locale/sq/LC_MESSAGES/totem.mo
 share/locale/sr/LC_MESSAGES/totem.mo
-share/locale/sr@Latn/LC_MESSAGES/totem.mo
+share/locale/sr@latin/LC_MESSAGES/totem.mo
 share/locale/sv/LC_MESSAGES/totem.mo
 share/locale/ta/LC_MESSAGES/totem.mo
 share/locale/te/LC_MESSAGES/totem.mo
@@ -273,6 +293,7 @@ share/omf/totem/totem-fr.omf
 share/omf/totem/totem-it.omf
 share/omf/totem/totem-oc.omf
 share/omf/totem/totem-pa.omf
+share/omf/totem/totem-pl.omf
 share/omf/totem/totem-pt_BR.omf
 share/omf/totem/totem-ru.omf
 share/omf/totem/totem-sv.omf
@@ -313,6 +334,8 @@ share/totem/video-list.ui
 @dirrm share/gnome/help/totem/ru
 @dirrm share/gnome/help/totem/pt_BR/figures
 @dirrm share/gnome/help/totem/pt_BR
+@dirrm share/gnome/help/totem/pl/figures
+@dirrm share/gnome/help/totem/pl
 @dirrm share/gnome/help/totem/pa/figures
 @dirrm share/gnome/help/totem/pa
 @dirrm share/gnome/help/totem/oc/figures
@@ -340,9 +363,11 @@ share/totem/video-list.ui
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/totem/plugins/youtube
+@dirrm lib/totem/plugins/totem
 @dirrm lib/totem/plugins/thumbnail
 @dirrm lib/totem/plugins/skipto
 @dirrm lib/totem/plugins/screensaver
+@dirrm lib/totem/plugins/pythonconsole
 @dirrm lib/totem/plugins/properties
 @dirrm lib/totem/plugins/ontop
 @dirrm lib/totem/plugins/media-player-keys
