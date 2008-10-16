@@ -1,7 +1,6 @@
-@comment $NetBSD: PLIST,v 1.8 2008/04/15 17:34:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/10/16 13:46:59 drochner Exp $
 include/eel-2/eel/eel-accessibility.h
 include/eel-2/eel/eel-alert-dialog.h
-include/eel-2/eel/eel-app-launch-context.h
 include/eel-2/eel/eel-art-extensions.h
 include/eel-2/eel/eel-art-gtk-extensions.h
 include/eel-2/eel/eel-background-box.h
@@ -100,6 +99,7 @@ share/locale/oc/LC_MESSAGES/eel-2.0.mo
 share/locale/or/LC_MESSAGES/eel-2.0.mo
 share/locale/pa/LC_MESSAGES/eel-2.0.mo
 share/locale/pl/LC_MESSAGES/eel-2.0.mo
+share/locale/ps/LC_MESSAGES/eel-2.0.mo
 share/locale/pt/LC_MESSAGES/eel-2.0.mo
 share/locale/pt_BR/LC_MESSAGES/eel-2.0.mo
 share/locale/ro/LC_MESSAGES/eel-2.0.mo
@@ -110,7 +110,7 @@ share/locale/sk/LC_MESSAGES/eel-2.0.mo
 share/locale/sl/LC_MESSAGES/eel-2.0.mo
 share/locale/sq/LC_MESSAGES/eel-2.0.mo
 share/locale/sr/LC_MESSAGES/eel-2.0.mo
-share/locale/sr@Latn/LC_MESSAGES/eel-2.0.mo
+share/locale/sr@latin/LC_MESSAGES/eel-2.0.mo
 share/locale/sv/LC_MESSAGES/eel-2.0.mo
 share/locale/ta/LC_MESSAGES/eel-2.0.mo
 share/locale/th/LC_MESSAGES/eel-2.0.mo
