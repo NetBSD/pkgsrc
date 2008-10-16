@@ -1,7 +1,7 @@
-$NetBSD: patch-cs,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
+$NetBSD: patch-cs,v 1.2 2008/10/16 23:16:46 hira Exp $
 
 --- solenv/inc/unxbsdx3.mk.orig	2007-10-13 00:24:19.000000000 +0900
-+++ solenv/inc/unxbsdx3.mk	2007-10-13 00:28:56.000000000 +0900
++++ solenv/inc/unxbsdx3.mk	2008-10-16 19:28:56.000000000 +0900
 @@ -0,0 +1,178 @@
 +#
 +# mk file for NetBSD/amd64 with gcc 3.4.x and higher.
@@ -91,7 +91,7 @@ $NetBSD: patch-cs,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
 +# reduce to -O1 to avoid optimization problems
 +CFLAGSOPT=-O1
 +# Compiler flags for disabling optimizations
-+CFLAGSNOOPT=-O
++CFLAGSNOOPT=-O0
 +# Compiler flags for describing the output path
 +CFLAGSOUTOBJ=-o
 +
@@ -111,9 +111,9 @@ $NetBSD: patch-cs,v 1.1.1.1 2008/10/14 11:02:24 hira Exp $
 +LINKC*=$(CC)
 +
 +# default linker flags
-+LINKFLAGSDEFS*=-z defs
++LINKFLAGSDEFS*=-Wl,-z,defs
 +LINKFLAGSRUNPATH*=-Wl,-rpath,\''$$ORIGIN'\'
-+LINKFLAGS=-z combreloc $(LINKFLAGSDEFS) $(LINKFLAGSRUNPATH)
++LINKFLAGS=-Wl,-z,combreloc $(LINKFLAGSDEFS) $(LINKFLAGSRUNPATH)
 +
 +# linker flags for linking applications
 +LINKFLAGSAPPGUI= -Wl,-export-dynamic 
