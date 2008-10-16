@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2524 2008/10/16 18:43:21 drochner Exp $
+$NetBSD: CHANGES-2008,v 1.2525 2008/10/16 20:29:23 bouyer Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4367,3 +4367,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/pango to 1.22.0 [drochner 2008-10-16]
 	Updated x11/gtk2 to 2.14.3 [drochner 2008-10-16]
 	Updated graphics/cairo to 1.8.0 [drochner 2008-10-16]
+	Updated www/ffproxy to 1.6nb1 [bouyer 2008-10-16]
