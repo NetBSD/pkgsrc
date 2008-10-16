@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7595 2008/10/16 18:05:02 adam Exp $
+$NetBSD: TODO,v 1.7596 2008/10/16 19:51:46 wiz Exp $
 
 Suggested new packages
 ======================
@@ -369,7 +369,7 @@ Suggested package updates
 	o RTx-Shredder-0.05
 	o RealPlayer-11
 	o SmartEiffel-2.3
-	o TeXmacs-1.0.6.15
+	o TeXmacs-1.0.7
 	o TiffIO-130e
 	o YoSucker-81
 	o ZIPIdent-2.9
@@ -414,12 +414,13 @@ Suggested package updates
 	o apsfilter-7.2.8
 	o aqsis-1.4.1
 	o argtable-2.9
+	o aria2-0.16.1
 	o arla-0.90
 	o arnold-20040104
 	o arping-2.08
 	o asapm-3.1
 	o asc-2.1.0
-	o aspell-danish-1.6.17
+	o aspell-danish-1.6.18
 	o aspell-faroese-0.2.34
 	o aspell-norwegian-2.0.10
 	o aspell-ukrainian-1.3.3
@@ -456,7 +457,7 @@ Suggested package updates
 	o bioperl-1.5.0
 	o bitlbee-1.2.3
 	o bittorrent-5.0.5
-	o blender-2.46
+	o blender-2.48
 	o blur6ex-0.3.462
 	o bmon-2.1.0
 	o bochs-2.3.7
@@ -496,6 +497,7 @@ Suggested package updates
 	o classpath-0.97.2
 	o claws-mail-3.6.1
 	o climm-0.6.3
+	o clive-1.0.2
 	o cocoon-2.1.10
 	o colorize-0.3.4
 	o compiz-0.7.8
@@ -539,6 +541,7 @@ Suggested package updates
 	o dhid-5.3
 	o dictem-1.0.0
 	o diffstat-1.46
+	o dillo-2.0
 	o dinotrace-9.3e
 	o dinotrace-mode-9.3e
 	o dirac-1.0
@@ -559,7 +562,7 @@ Suggested package updates
 	o easymenu-0.7.2p1
 	o ec-fonts-mftraced-1.0.12
 	o eclipse-3.2.0
-	o ed-1.0
+	o ed-1.1
 	o ede-1.2
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o eel-2.24.0
@@ -672,6 +675,7 @@ Suggested package updates
 	o global-5.6
 	o gmime-2.4.2
 	o gmpc-0.16.0
+	o gnash-0.8.4
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-2.22.3
@@ -750,6 +754,7 @@ Suggested package updates
 	o haskell-mode-1.45
 	o hdf-4.2r2
 	o hercules-3.04.1
+	o herrie-2.2
 	o hesiod-3.1.0
 	o hexedit-1.2.12
 	o heyu-2.3.0
@@ -868,6 +873,7 @@ Suggested package updates
 	o libopensync-0.35
 	o libprelude-0.9.21
 	o libshout-2.2.2
+	o libsigc++-2.2.3
 	o libssh-0.2
 	o libstatgrab-0.16
 	o libstree-0.4.2
@@ -878,7 +884,7 @@ Suggested package updates
 	o libxklavier-3.7
 	o libxml2-2.7.2
 	o licq-1.3.6
-	o lincvs-2.1.0 [now called CrossVC]
+	o lincvs-2.1.1 [now called CrossVC]
 	o linuxsms-0.77
 	o lmms-0.2.1
 	o lout-3.31
@@ -899,7 +905,7 @@ Suggested package updates
 	o mailx-12.3 [pkg/38262, replace mail/nail]
 	o maketool-0.8.4
 	o makeztxt-1.60
-	o manedit-1.1.1
+	o manedit-1.2.1
 	o mapserver-5.0.0
 	o maradns-1.2.12.09
 	o matchbox-panel-0.9.3
@@ -944,6 +950,7 @@ Suggested package updates
 	o mysql-5.1.23
 	o mysql-5.2.3
 	o mysqlcc-0.9.8
+	o nagios-3.0.4
 	o nano-2.0.8
 	o nap-1.5.3
 	o nasm-2.04
@@ -966,12 +973,14 @@ Suggested package updates
 	o ng-1.4.4
 	o nikto-2.0.1
 	o nmap-4.68
+	o ns-flash-10
 	o ns-plugger-common-5.1.3
 	o ns-plugger-communicator-5.1.3
 	o ns-plugger-navigator-5.1.3
 	o nsca-1.2.0
 	o nslint-2.1a6 [pkg/33142]
 	o nslint-2.1a7
+	o nspluginwrapper-1.1.2
 	o nspr-4.7.1
 	o nss-3.11.7
 	o ntp-4.2.4p5
@@ -991,12 +1000,13 @@ Suggested package updates
 	o openafs-1.4.7
 	o opencobol-1.0
 	o openh323-1.19.1
+	o openldap-2.4.12
 	o openmortal-0.7.1
 	o openssl-0.9.8i
 	o openttd-0.6.1
 	o opera-9.51 [pkg/39269]
 	o opera-9.60
-	o orca-2.24.0
+	o orca-2.24.1
 	o oregano-0.60.0
 	o oroborus-2.0.18
 	o oto-0.5
@@ -1084,7 +1094,7 @@ Suggested package updates
 	o plotutils-2.5
 	o plptools-0.13 [pkg/30244]
 	o plptools-1.0.3
-	o pmccabe-2.3.1
+	o pmccabe-2.5 [pkg/39749]
 	o pngcheck-2.3.0
 	o pngcrush-1.6.10
 	o po4a-0.29
@@ -1144,7 +1154,7 @@ Suggested package updates
 	o py-ldap-2.3.4
 	o py-libxml2-2.7.2
 	o py-logging-0.4.9.6
-	o py-m2crypto-0.19
+	o py-m2crypto-0.19.1
 	o py-mad-0.6
 	o py-metakit-2.4.9.6
 	o py-moin-1.7.2
@@ -1256,11 +1266,11 @@ Suggested package updates
 	o smlnj-110.59 [pkgsrc-wip]
 	o smlnj-110.67
 	o smtpfeed-1.20
-	o snd-10.0
+	o snd-10.1
 	o snes9x-1.51
 	o snort-2.8.3.1
 	o snownews-1.5.10
-	o socat-1.6.0.1
+	o socat-1.7.0.0
 	o solfege-3.10.4 [schmonz]
 	o sope-4.5.9
 	o sound-juicer-2.16.4 [needs nautilus-cd-burner>=2.15.3]
@@ -1280,7 +1290,7 @@ Suggested package updates
 	o stratagus-2.2.2
 	o streamripper-1.63.0
 	o stunnel-4.26
-	o subtitleeditor-0.24.1
+	o subtitleeditor-0.25.0
 	o sunbird-0.5 [ghen]
 	o suse_base-11.0
 	o swfdec-0.8.0
@@ -1406,6 +1416,7 @@ Suggested package updates
 	o xf86-video-amd-2.10.1 [now xf86-video-geode]
 	o xf86-video-i128-1.3.1
 	o xf86-video-nsc-2.8.3
+	o xf86-video-radeonhd-1.2.3
 	o xf86-video-tdfx-1.4.0
 	o xf86-video-tga-1.2.0
 	o xf86-video-vmware-10.16.5
