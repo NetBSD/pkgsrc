@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.41 2007/11/21 22:49:45 minskim Exp $
+# $NetBSD: buildlink3.mk,v 1.42 2008/10/16 18:27:13 he Exp $
 
 BUILDLINK_DEPTH:=	${BUILDLINK_DEPTH}+
 PERL5_BUILDLINK3_MK:=	${PERL5_BUILDLINK3_MK}+
@@ -13,7 +13,7 @@ BUILDLINK_ORDER:=	${BUILDLINK_ORDER} ${BUILDLINK_DEPTH}perl
 
 .if !empty(PERL5_BUILDLINK3_MK:M+)
 .include "../../mk/bsd.fast.prefs.mk"
-PERL5_REQD+=			5.8.7
+PERL5_REQD+=			5.10.0
 .for _perl5_ver_ in ${PERL5_REQD}
 BUILDLINK_API_DEPENDS.perl+=	perl>=${_perl5_ver_}
 .endfor
