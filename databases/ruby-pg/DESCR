@@ -1,0 +1,2 @@
+This is the extension library to access a PostgreSQL database from Ruby.
+This is the new module to replace the old ruby-postgres one.
