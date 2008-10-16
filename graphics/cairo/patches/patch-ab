@@ -1,13 +1,13 @@
-$NetBSD: patch-ab,v 1.9 2008/04/21 11:29:33 tnn Exp $
+$NetBSD: patch-ab,v 1.10 2008/10/16 10:55:09 drochner Exp $
 
---- test/Makefile.in.orig	2008-04-11 23:33:42.000000000 +0200
+--- test/Makefile.in.orig	2008-09-26 00:57:34.000000000 +0200
 +++ test/Makefile.in
-@@ -59,7 +59,7 @@ host_triplet = @host@
- @CAIRO_HAS_PDF_SURFACE_TRUE@@CAIRO_HAS_PS_SURFACE_TRUE@@CAIRO_HAS_SVG_SURFACE_TRUE@am__append_10 = fallback-resolution$(EXEEXT)
- check_PROGRAMS = imagediff$(EXEEXT) png-flatten$(EXEEXT) \
- 	$(am__EXEEXT_1) $(am__EXEEXT_2)
--@HAVE_PTHREAD_TRUE@am__append_11 = -lpthread
-+@HAVE_PTHREAD_TRUE@am__append_11 = ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+@@ -62,7 +62,7 @@ check_PROGRAMS = imagediff$(EXEEXT) png-
+ @CAIRO_HAS_XLIB_SURFACE_TRUE@	xlib-surface-source$(EXEEXT)
+ @CAIRO_HAS_XLIB_XRENDER_SURFACE_TRUE@am__append_8 = get-xrender-format$(EXEEXT)
+ @CAIRO_HAS_MULTI_PAGE_SURFACES_TRUE@am__append_9 = multi-page$(EXEEXT)
+-@HAVE_PTHREAD_TRUE@am__append_10 = -lpthread
++@HAVE_PTHREAD_TRUE@am__append_10 = ${PTHREAD_LDFLAGS} ${PTHREAD_LIBS}
+ @BUILD_ANY2PPM_TRUE@am__append_11 = any2ppm
  @CAIRO_CAN_TEST_PDF_SURFACE_TRUE@am__append_12 = pdf2png
  @CAIRO_CAN_TEST_SVG_SURFACE_TRUE@am__append_13 = svg2png
- subdir = test
