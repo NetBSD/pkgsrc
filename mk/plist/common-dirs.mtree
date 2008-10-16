@@ -1,5 +1,5 @@
 #     Id: BSD.local.dist,v 1.30 1997/08/01 13:16:39 phk Exp
-#	$NetBSD: common-dirs.mtree,v 1.5 2008/10/09 10:46:34 wiz Exp $
+#	$NetBSD: common-dirs.mtree,v 1.6 2008/10/16 21:57:00 wiz Exp $
 #
 
 /set type=dir uname=root gname=wheel mode=0755
@@ -1114,7 +1114,7 @@
                 LC_MESSAGES
                 ..
             ..
-            sr@Latn
+            sr@latin
                 LC_MESSAGES
                 ..
             ..
