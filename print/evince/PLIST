@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2008/04/15 21:18:17 hira Exp $
+@comment $NetBSD: PLIST,v 1.21 2008/10/16 16:19:00 drochner Exp $
 bin/evince
 bin/evince-thumbnailer
 include/evince-2.20/evince/ev-async-renderer.h
@@ -21,6 +21,7 @@ include/evince-2.20/evince/ev-image.h
 include/evince-2.20/evince/ev-link-action.h
 include/evince-2.20/evince/ev-link-dest.h
 include/evince-2.20/evince/ev-link.h
+include/evince-2.20/evince/ev-page.h
 include/evince-2.20/evince/ev-render-context.h
 include/evince-2.20/evince/ev-selection.h
 include/evince-2.20/evince/ev-transition-effect.h
@@ -76,6 +77,8 @@ share/gnome/help/evince/bg/evince.xml
 share/gnome/help/evince/bg/figures/evince_start_window.png
 share/gnome/help/evince/ca/evince.xml
 share/gnome/help/evince/ca/figures/evince_start_window.png
+share/gnome/help/evince/de/evince.xml
+share/gnome/help/evince/de/figures/evince_start_window.png
 share/gnome/help/evince/el/evince.xml
 share/gnome/help/evince/el/figures/evince_start_window.png
 share/gnome/help/evince/en_GB/evince.xml
@@ -107,7 +110,6 @@ share/gnome/help/evince/uk/figures/evince_start_window.png
 share/gnome/help/evince/zh_CN/evince.xml
 share/gnome/help/evince/zh_CN/figures/evince_start_window.png
 share/gtk-doc/html/evince/EvAttachment.html
-share/gtk-doc/html/evince/EvJobPrint.html
 share/gtk-doc/html/evince/EvNavigationAction.html
 share/gtk-doc/html/evince/EvNavigationActionWidget.html
 share/gtk-doc/html/evince/EvPageAction.html
@@ -115,6 +117,7 @@ share/gtk-doc/html/evince/EvPageActionWidget.html
 share/gtk-doc/html/evince/EvWindow.html
 share/gtk-doc/html/evince/evince-EvHistory.html
 share/gtk-doc/html/evince/evince-EvImage.html
+share/gtk-doc/html/evince/evince-EvJobFind.html
 share/gtk-doc/html/evince/evince-EvPasswordDialog.html
 share/gtk-doc/html/evince/evince-EvPasswordView.html
 share/gtk-doc/html/evince/evince-EvRenderContext.html
@@ -137,7 +140,6 @@ share/gtk-doc/html/evince/evince-ev-document-transition.html
 share/gtk-doc/html/evince/evince-ev-document.html
 share/gtk-doc/html/evince/evince-ev-file-exporter.html
 share/gtk-doc/html/evince/evince-ev-file-helpers.html
-share/gtk-doc/html/evince/evince-ev-job-queue.html
 share/gtk-doc/html/evince/evince-ev-link-action.html
 share/gtk-doc/html/evince/evince-ev-link-dest.html
 share/gtk-doc/html/evince/evince-ev-link.html
@@ -232,7 +234,6 @@ share/locale/sk/LC_MESSAGES/evince.mo
 share/locale/sl/LC_MESSAGES/evince.mo
 share/locale/sq/LC_MESSAGES/evince.mo
 share/locale/sr/LC_MESSAGES/evince.mo
-share/locale/sr@Latn/LC_MESSAGES/evince.mo
 share/locale/sv/LC_MESSAGES/evince.mo
 share/locale/ta/LC_MESSAGES/evince.mo
 share/locale/te/LC_MESSAGES/evince.mo
@@ -247,6 +248,7 @@ share/locale/zh_TW/LC_MESSAGES/evince.mo
 share/omf/evince/evince-C.omf
 share/omf/evince/evince-bg.omf
 share/omf/evince/evince-ca.omf
+share/omf/evince/evince-de.omf
 share/omf/evince/evince-el.omf
 share/omf/evince/evince-en_GB.omf
 share/omf/evince/evince-es.omf
@@ -301,6 +303,8 @@ share/omf/evince/evince-zh_CN.omf
 @dirrm share/gnome/help/evince/en_GB
 @dirrm share/gnome/help/evince/el/figures
 @dirrm share/gnome/help/evince/el
+@dirrm share/gnome/help/evince/de/figures
+@dirrm share/gnome/help/evince/de
 @dirrm share/gnome/help/evince/ca/figures
 @dirrm share/gnome/help/evince/ca
 @dirrm share/gnome/help/evince/bg/figures
