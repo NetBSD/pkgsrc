@@ -1,0 +1,35 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/16 15:17:47 drochner Exp $
+bin/canberra-gtk-play
+include/canberra-gtk.h
+include/canberra.h
+lib/gtk-2.0/modules/libcanberra-gtk-module.la
+lib/libcanberra-gtk.la
+lib/libcanberra.la
+lib/libcanberra/libcanberra-gstreamer.la
+lib/libcanberra/libcanberra-multi.la
+lib/libcanberra/libcanberra-null.la
+lib/libcanberra/libcanberra-oss.la
+lib/pkgconfig/libcanberra-gtk.pc
+lib/pkgconfig/libcanberra.pc
+share/doc/libcanberra/README
+share/gconf/schemas/libcanberra.schemas
+share/gnome/autostart/libcanberra-login-sound.desktop
+share/gnome/shutdown/libcanberra-logout-sound.sh
+share/gtk-doc/html/libcanberra/ch01.html
+share/gtk-doc/html/libcanberra/home.png
+share/gtk-doc/html/libcanberra/index.html
+share/gtk-doc/html/libcanberra/index.sgml
+share/gtk-doc/html/libcanberra/left.png
+share/gtk-doc/html/libcanberra/libcanberra-canberra-gtk.html
+share/gtk-doc/html/libcanberra/libcanberra-canberra.html
+share/gtk-doc/html/libcanberra/libcanberra.devhelp
+share/gtk-doc/html/libcanberra/libcanberra.devhelp2
+share/gtk-doc/html/libcanberra/right.png
+share/gtk-doc/html/libcanberra/style.css
+share/gtk-doc/html/libcanberra/up.png
+@dirrm share/gtk-doc/html/libcanberra
+@comment in gnome2-dirs: @dirrm share/gnome
+@comment in GConf: @dirrm share/gconf/schemas
+@dirrm share/doc/libcanberra
+@dirrm lib/libcanberra
+@comment in gtk2: @dirrm lib/gtk-2.0/modules
