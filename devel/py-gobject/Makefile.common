@@ -1,9 +1,9 @@
-# $NetBSD: Makefile.common,v 1.9 2008/05/29 16:30:09 drochner Exp $
+# $NetBSD: Makefile.common,v 1.10 2008/10/16 13:52:05 drochner Exp $
 #
 
-DISTNAME=		pygobject-2.14.2
+DISTNAME=		pygobject-2.15.4
 CATEGORIES=		devel
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pygobject/2.14/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/pygobject/2.15/}
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		http://www.pygtk.org/
