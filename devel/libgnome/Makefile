@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.71 2008/04/30 13:38:14 jmmv Exp $
+# $NetBSD: Makefile,v 1.72 2008/10/16 13:24:07 drochner Exp $
 #
 
-DISTNAME=	libgnome-2.22.0
+DISTNAME=	libgnome-2.24.1
 CATEGORIES=	devel gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.22/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/libgnome/2.24/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -47,6 +47,7 @@ GCONF_SCHEMAS+=	desktop_gnome_lockdown.schemas
 GCONF_SCHEMAS+=	desktop_gnome_peripherals_keyboard.schemas
 GCONF_SCHEMAS+=	desktop_gnome_peripherals_mouse.schemas
 GCONF_SCHEMAS+=	desktop_gnome_sound.schemas
+GCONF_SCHEMAS+=	desktop_gnome_thumbnail_cache.schemas
 GCONF_SCHEMAS+=	desktop_gnome_thumbnailers.schemas
 GCONF_SCHEMAS+=	desktop_gnome_typing_break.schemas
 GCONF_SCHEMAS+=	desktop_gnome_applications_at_mobility.schemas
