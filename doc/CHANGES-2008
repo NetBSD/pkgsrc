@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2521 2008/10/16 12:25:18 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2522 2008/10/16 12:47:36 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4288,12 +4288,12 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/claws-mail to 3.6.1 [smb 2008-10-15]
 	Updated mail/claws-mail-archive to 0.6.2 [smb 2008-10-15]
 	Updated mail/claws-mail-attachwarner to 0.2.14 [smb 2008-10-15]
-	Updated mail/claws-mail-att_remover to 1.0.9 [smb 2008-10-15]
+	Updated mail/claws-mail-attremover to 1.0.9 [smb 2008-10-15]
 	Updated mail/claws-mail-bogofilter to 3.6.1 [smb 2008-10-15]
 	Updated mail/claws-mail-cachesaver to 0.10.8 [smb 2008-10-15]
 	Updated mail/claws-mail-dillo-viewer to 3.6.1 [smb 2008-10-15]
-	Updated mail/claws-mail-fetchinfo-plugin to 0.4.23 [smb 2008-10-15]
-	Updated mail/claws-mail-gtkhtml2_viewer to 0.21 [smb 2008-10-15]
+	Updated mail/claws-mail-fetchinfo to 0.4.23 [smb 2008-10-15]
+	Updated mail/claws-mail-gtkhtml to 0.21 [smb 2008-10-15]
 	Updated mail/claws-mail-mailmbox to 1.14.2 [smb 2008-10-15]
 	Updated mail/claws-mail-newmail to 0.0.14 [smb 2008-10-15]
 	Updated mail/claws-mail-notification to 0.19 [smb 2008-10-15]
@@ -4304,8 +4304,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/claws-mail-rssyl to 0.22 [smb 2008-10-15]
 	Updated mail/claws-mail-smime to 3.6.1 [smb 2008-10-15]
 	Updated mail/claws-mail-spamassassin to 3.6.1 [smb 2008-10-15]
-	Updated mail/claws-mail-spam_report to 0.3.6 [smb 2008-10-15]
-	Updated mail/claws-mail-synce_plugin to 0.7.4 [smb 2008-10-15]
+	Updated mail/claws-mail-spamreport to 0.3.6 [smb 2008-10-15]
+	Updated mail/claws-mail-synce to 0.7.4 [smb 2008-10-15]
 	Updated mail/claws-mail-tnef to 0.3.2 [smb 2008-10-15]
 	Updated mail/claws-mail-trayicon to 3.6.1 [smb 2008-10-15]
 	Updated mail/claws-mail-vcalendar to 2.0.2 [smb 2008-10-15]
