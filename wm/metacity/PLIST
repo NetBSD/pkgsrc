@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.27 2008/04/15 17:53:51 drochner Exp $
+@comment $NetBSD: PLIST,v 1.28 2008/10/16 15:37:51 drochner Exp $
 bin/metacity
 bin/metacity-message
 bin/metacity-theme-viewer
@@ -16,10 +16,11 @@ libexec/metacity-dialog
 man/man1/metacity-theme-viewer.1
 man/man1/metacity-window-demo.1
 man/man1/metacity.1
+share/applications/metacity.desktop
 share/gconf/schemas/metacity.schemas
 share/gnome-control-center/keybindings/50-metacity-desktop-key.xml
 share/gnome-control-center/keybindings/50-metacity-key.xml
-share/gnome/wm-properties/metacity.desktop
+share/gnome/wm-properties/metacity-wm.desktop
 share/locale/am/LC_MESSAGES/metacity.mo
 share/locale/ar/LC_MESSAGES/metacity.mo
 share/locale/as/LC_MESSAGES/metacity.mo
@@ -58,6 +59,7 @@ share/locale/is/LC_MESSAGES/metacity.mo
 share/locale/it/LC_MESSAGES/metacity.mo
 share/locale/ja/LC_MESSAGES/metacity.mo
 share/locale/ka/LC_MESSAGES/metacity.mo
+share/locale/kn/LC_MESSAGES/metacity.mo
 share/locale/ko/LC_MESSAGES/metacity.mo
 share/locale/ku/LC_MESSAGES/metacity.mo
 share/locale/lt/LC_MESSAGES/metacity.mo
@@ -86,7 +88,7 @@ share/locale/sk/LC_MESSAGES/metacity.mo
 share/locale/sl/LC_MESSAGES/metacity.mo
 share/locale/sq/LC_MESSAGES/metacity.mo
 share/locale/sr/LC_MESSAGES/metacity.mo
-share/locale/sr@Latn/LC_MESSAGES/metacity.mo
+share/locale/sr@latin/LC_MESSAGES/metacity.mo
 share/locale/sv/LC_MESSAGES/metacity.mo
 share/locale/ta/LC_MESSAGES/metacity.mo
 share/locale/th/LC_MESSAGES/metacity.mo
@@ -219,6 +221,8 @@ share/themes/Simple/metacity-1/minimize.png
 @dirrm share/metacity/icons
 @dirrm share/metacity
 @comment in gnome2-dirs: @dirrm share/gnome/wm-properties
+@dirrm share/gnome-control-center/keybindings
 @comment in GConf: @dirrm share/gconf/schemas
+@comment in xdg-dirs: @dirrm share/applications
 @dirrm include/metacity-1/metacity-private
 @dirrm include/metacity-1
