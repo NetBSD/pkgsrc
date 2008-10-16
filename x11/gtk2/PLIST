@@ -1,10 +1,14 @@
-@comment $NetBSD: PLIST,v 1.58 2008/06/13 10:36:09 drochner Exp $
+@comment $NetBSD: PLIST,v 1.59 2008/10/16 11:10:06 drochner Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-builder-convert
 bin/gtk-demo
 bin/gtk-query-immodules-2.0
 bin/gtk-update-icon-cache
+include/gail-1.0/gail/gailwidget.h
+include/gail-1.0/libgail-util/gail-util.h
+include/gail-1.0/libgail-util/gailmisc.h
+include/gail-1.0/libgail-util/gailtextutil.h
 ${PLIST.x11}include/gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlib.h
 ${PLIST.x11}include/gtk-2.0/gdk-pixbuf-xlib/gdk-pixbuf-xlibrgb.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-animation.h
@@ -19,7 +23,7 @@ include/gtk-2.0/gdk-pixbuf/gdk-pixbuf-transform.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixbuf.h
 include/gtk-2.0/gdk-pixbuf/gdk-pixdata.h
 include/gtk-2.0/gdk/gdk.h
-include/gtk-2.0/gdk/gdkalias.h
+include/gtk-2.0/gdk/gdkapplaunchcontext.h
 include/gtk-2.0/gdk/gdkcairo.h
 include/gtk-2.0/gdk/gdkcolor.h
 include/gtk-2.0/gdk/gdkcursor.h
@@ -46,6 +50,7 @@ include/gtk-2.0/gdk/gdkrgb.h
 include/gtk-2.0/gdk/gdkscreen.h
 include/gtk-2.0/gdk/gdkselection.h
 include/gtk-2.0/gdk/gdkspawn.h
+include/gtk-2.0/gdk/gdktestutils.h
 include/gtk-2.0/gdk/gdktypes.h
 include/gtk-2.0/gdk/gdkvisual.h
 include/gtk-2.0/gdk/gdkwindow.h
@@ -111,7 +116,6 @@ include/gtk-2.0/gtk/gtkfilechooserdialog.h
 include/gtk-2.0/gtk/gtkfilechooserwidget.h
 include/gtk-2.0/gtk/gtkfilefilter.h
 include/gtk-2.0/gtk/gtkfilesel.h
-include/gtk-2.0/gtk/gtkfilesystem.h
 include/gtk-2.0/gtk/gtkfixed.h
 include/gtk-2.0/gtk/gtkfontbutton.h
 include/gtk-2.0/gtk/gtkfontsel.h
@@ -126,6 +130,7 @@ include/gtk-2.0/gtk/gtkhruler.h
 include/gtk-2.0/gtk/gtkhscale.h
 include/gtk-2.0/gtk/gtkhscrollbar.h
 include/gtk-2.0/gtk/gtkhseparator.h
+include/gtk-2.0/gtk/gtkhsv.h
 include/gtk-2.0/gtk/gtkiconfactory.h
 include/gtk-2.0/gtk/gtkicontheme.h
 include/gtk-2.0/gtk/gtkiconview.h
@@ -155,6 +160,7 @@ include/gtk-2.0/gtk/gtkmenutoolbutton.h
 include/gtk-2.0/gtk/gtkmessagedialog.h
 include/gtk-2.0/gtk/gtkmisc.h
 include/gtk-2.0/gtk/gtkmodules.h
+include/gtk-2.0/gtk/gtkmountoperation.h
 include/gtk-2.0/gtk/gtknotebook.h
 include/gtk-2.0/gtk/gtkobject.h
 include/gtk-2.0/gtk/gtkoldeditable.h
@@ -195,6 +201,7 @@ include/gtk-2.0/gtk/gtkseparator.h
 include/gtk-2.0/gtk/gtkseparatormenuitem.h
 include/gtk-2.0/gtk/gtkseparatortoolitem.h
 include/gtk-2.0/gtk/gtksettings.h
+include/gtk-2.0/gtk/gtkshow.h
 include/gtk-2.0/gtk/gtksignal.h
 include/gtk-2.0/gtk/gtksizegroup.h
 include/gtk-2.0/gtk/gtksocket.h
@@ -205,6 +212,7 @@ include/gtk-2.0/gtk/gtkstock.h
 include/gtk-2.0/gtk/gtkstyle.h
 include/gtk-2.0/gtk/gtktable.h
 include/gtk-2.0/gtk/gtktearoffmenuitem.h
+include/gtk-2.0/gtk/gtktestutils.h
 include/gtk-2.0/gtk/gtktext.h
 include/gtk-2.0/gtk/gtktextbuffer.h
 include/gtk-2.0/gtk/gtktextbufferrichtext.h
@@ -223,6 +231,7 @@ include/gtk-2.0/gtk/gtktoggletoolbutton.h
 include/gtk-2.0/gtk/gtktoolbar.h
 include/gtk-2.0/gtk/gtktoolbutton.h
 include/gtk-2.0/gtk/gtktoolitem.h
+include/gtk-2.0/gtk/gtktoolshell.h
 include/gtk-2.0/gtk/gtktooltip.h
 include/gtk-2.0/gtk/gtktooltips.h
 include/gtk-2.0/gtk/gtktree.h
@@ -255,6 +264,7 @@ include/gtk-unix-print-2.0/gtk/gtkpagesetupunixdialog.h
 include/gtk-unix-print-2.0/gtk/gtkprinter.h
 include/gtk-unix-print-2.0/gtk/gtkprintjob.h
 include/gtk-unix-print-2.0/gtk/gtkprintunixdialog.h
+include/gtk-unix-print-2.0/gtk/gtkunixprint.h
 lib/gtk-2.0/2.10.0/engines/libpixmap.la
 lib/gtk-2.0/2.10.0/immodules/im-am-et.la
 lib/gtk-2.0/2.10.0/immodules/im-cedilla.la
@@ -270,6 +280,7 @@ ${PLIST.x11}lib/gtk-2.0/2.10.0/immodules/im-xim.la
 lib/gtk-2.0/2.10.0/loaders/libpixbufloader-ani.la
 lib/gtk-2.0/2.10.0/loaders/libpixbufloader-bmp.la
 lib/gtk-2.0/2.10.0/loaders/libpixbufloader-gif.la
+lib/gtk-2.0/2.10.0/loaders/libpixbufloader-icns.la
 lib/gtk-2.0/2.10.0/loaders/libpixbufloader-ico.la
 lib/gtk-2.0/2.10.0/loaders/libpixbufloader-jpeg.la
 lib/gtk-2.0/2.10.0/loaders/libpixbufloader-pcx.la
@@ -285,20 +296,23 @@ ${PLIST.cups}lib/gtk-2.0/2.10.0/printbackends/libprintbackend-cups.la
 lib/gtk-2.0/2.10.0/printbackends/libprintbackend-file.la
 lib/gtk-2.0/2.10.0/printbackends/libprintbackend-lpr.la
 lib/gtk-2.0/include/gdkconfig.h
+lib/gtk-2.0/modules/libferret.la
+lib/gtk-2.0/modules/libgail.la
+lib/libgailutil.la
 ${PLIST.quartz}lib/libgdk-quartz-2.0.la
 ${PLIST.x11}lib/libgdk-x11-2.0.la
 lib/libgdk_pixbuf-2.0.la
 ${PLIST.x11}lib/libgdk_pixbuf_xlib-2.0.la
 ${PLIST.quartz}lib/libgtk-quartz-2.0.la
 ${PLIST.x11}lib/libgtk-x11-2.0.la
+lib/pkgconfig/gail.pc
 lib/pkgconfig/gdk-2.0.pc
 lib/pkgconfig/gdk-pixbuf-2.0.pc
+lib/pkgconfig/gtk+-2.0.pc
+lib/pkgconfig/gtk+-unix-print-2.0.pc
 ${PLIST.x11}lib/pkgconfig/gdk-pixbuf-xlib-2.0.pc
 ${PLIST.quartz}lib/pkgconfig/gdk-quartz-2.0.pc
 ${PLIST.x11}lib/pkgconfig/gdk-x11-2.0.pc
-lib/pkgconfig/gtk+-2.0.pc
-${PLIST.quartz}lib/pkgconfig/gtk+-quartz-2.0.pc
-lib/pkgconfig/gtk+-unix-print-2.0.pc
 ${PLIST.x11}lib/pkgconfig/gtk+-x11-2.0.pc
 libdata/gtk-2.0/im-multipress.conf
 man/man1/gdk-pixbuf-csource.1
@@ -352,10 +366,31 @@ share/gtk-2.0/demo/textscroll.c
 share/gtk-2.0/demo/textview.c
 share/gtk-2.0/demo/tree_store.c
 share/gtk-2.0/demo/ui_manager.c
+share/gtk-doc/html/gail-libgail-util/gail-libgail-util-GailMisc.html
+share/gtk-doc/html/gail-libgail-util/gail-libgail-util-GailTextUtil.html
+share/gtk-doc/html/gail-libgail-util/gail-libgail-util.devhelp
+share/gtk-doc/html/gail-libgail-util/gail-libgail-util.devhelp2
+share/gtk-doc/html/gail-libgail-util/home.png
+share/gtk-doc/html/gail-libgail-util/index.html
+share/gtk-doc/html/gail-libgail-util/index.sgml
+share/gtk-doc/html/gail-libgail-util/left.png
+share/gtk-doc/html/gail-libgail-util/libgail-util-main.html
+share/gtk-doc/html/gail-libgail-util/right.png
+share/gtk-doc/html/gail-libgail-util/style.css
+share/gtk-doc/html/gail-libgail-util/up.png
 share/gtk-doc/html/gdk-pixbuf/GdkPixbufLoader.html
 share/gtk-doc/html/gdk-pixbuf/apa.html
 share/gtk-doc/html/gdk-pixbuf/apas02.html
 share/gtk-doc/html/gdk-pixbuf/apas03.html
+share/gtk-doc/html/gdk-pixbuf/api-index-2-10.html
+share/gtk-doc/html/gdk-pixbuf/api-index-2-12.html
+share/gtk-doc/html/gdk-pixbuf/api-index-2-14.html
+share/gtk-doc/html/gdk-pixbuf/api-index-2-2.html
+share/gtk-doc/html/gdk-pixbuf/api-index-2-4.html
+share/gtk-doc/html/gdk-pixbuf/api-index-2-6.html
+share/gtk-doc/html/gdk-pixbuf/api-index-2-8.html
+share/gtk-doc/html/gdk-pixbuf/api-index-deprecated.html
+share/gtk-doc/html/gdk-pixbuf/api-index-full.html
 share/gtk-doc/html/gdk-pixbuf/composite.png
 share/gtk-doc/html/gdk-pixbuf/gdk-pixbuf-Module-Interface.html
 share/gtk-doc/html/gdk-pixbuf/gdk-pixbuf-Versioning.html
@@ -381,12 +416,6 @@ share/gtk-doc/html/gdk-pixbuf/gdk-pixbuf.devhelp2
 share/gtk-doc/html/gdk-pixbuf/home.png
 share/gtk-doc/html/gdk-pixbuf/index.html
 share/gtk-doc/html/gdk-pixbuf/index.sgml
-share/gtk-doc/html/gdk-pixbuf/ix01.html
-share/gtk-doc/html/gdk-pixbuf/ix02.html
-share/gtk-doc/html/gdk-pixbuf/ix03.html
-share/gtk-doc/html/gdk-pixbuf/ix04.html
-share/gtk-doc/html/gdk-pixbuf/ix05.html
-share/gtk-doc/html/gdk-pixbuf/ix06.html
 share/gtk-doc/html/gdk-pixbuf/left.png
 share/gtk-doc/html/gdk-pixbuf/license.html
 share/gtk-doc/html/gdk-pixbuf/right.png
@@ -398,6 +427,15 @@ share/gtk-doc/html/gdk/GdkDisplay.html
 share/gtk-doc/html/gdk/GdkDisplayManager.html
 share/gtk-doc/html/gdk/GdkScreen.html
 share/gtk-doc/html/gdk/X_cursor.png
+share/gtk-doc/html/gdk/api-index-2-10.html
+share/gtk-doc/html/gdk/api-index-2-12.html
+share/gtk-doc/html/gdk/api-index-2-14.html
+share/gtk-doc/html/gdk/api-index-2-2.html
+share/gtk-doc/html/gdk/api-index-2-4.html
+share/gtk-doc/html/gdk/api-index-2-6.html
+share/gtk-doc/html/gdk/api-index-2-8.html
+share/gtk-doc/html/gdk/api-index-deprecated.html
+share/gtk-doc/html/gdk/api-index-full.html
 share/gtk-doc/html/gdk/arrow.png
 share/gtk-doc/html/gdk/based_arrow_down.png
 share/gtk-doc/html/gdk/based_arrow_up.png
@@ -424,6 +462,7 @@ share/gtk-doc/html/gdk/draft_small.png
 share/gtk-doc/html/gdk/draped_box.png
 share/gtk-doc/html/gdk/exchange.png
 share/gtk-doc/html/gdk/fleur.png
+share/gtk-doc/html/gdk/gdk-Application-launching.html
 share/gtk-doc/html/gdk/gdk-Bitmaps-and-Pixmaps.html
 share/gtk-doc/html/gdk/gdk-Cairo-Interaction.html
 share/gtk-doc/html/gdk/gdk-Colormaps-and-Colors.html
@@ -445,6 +484,7 @@ share/gtk-doc/html/gdk/gdk-Pixbufs.html
 share/gtk-doc/html/gdk/gdk-Points-Rectangles-and-Regions.html
 share/gtk-doc/html/gdk/gdk-Properties-and-Atoms.html
 share/gtk-doc/html/gdk/gdk-Selections.html
+share/gtk-doc/html/gdk/gdk-Testing.html
 share/gtk-doc/html/gdk/gdk-Threads.html
 share/gtk-doc/html/gdk/gdk-Visuals.html
 share/gtk-doc/html/gdk/gdk-Windows.html
@@ -461,14 +501,6 @@ share/gtk-doc/html/gdk/icon.png
 share/gtk-doc/html/gdk/index.html
 share/gtk-doc/html/gdk/index.sgml
 share/gtk-doc/html/gdk/iron_cross.png
-share/gtk-doc/html/gdk/ix01.html
-share/gtk-doc/html/gdk/ix02.html
-share/gtk-doc/html/gdk/ix03.html
-share/gtk-doc/html/gdk/ix04.html
-share/gtk-doc/html/gdk/ix05.html
-share/gtk-doc/html/gdk/ix06.html
-share/gtk-doc/html/gdk/ix07.html
-share/gtk-doc/html/gdk/ix08.html
 share/gtk-doc/html/gdk/left.png
 share/gtk-doc/html/gdk/left_ptr.png
 share/gtk-doc/html/gdk/left_side.png
@@ -672,6 +704,7 @@ share/gtk-doc/html/gtk/GtkToggleButton.html
 share/gtk-doc/html/gtk/GtkToggleToolButton.html
 share/gtk-doc/html/gtk/GtkToolButton.html
 share/gtk-doc/html/gtk/GtkToolItem.html
+share/gtk-doc/html/gtk/GtkToolShell.html
 share/gtk-doc/html/gtk/GtkToolbar.html
 share/gtk-doc/html/gtk/GtkTooltip.html
 share/gtk-doc/html/gtk/GtkTooltips.html
@@ -715,6 +748,15 @@ share/gtk-doc/html/gtk/TreeWidget.html
 share/gtk-doc/html/gtk/TreeWidgetObjects.html
 share/gtk-doc/html/gtk/WindowWidgets.html
 share/gtk-doc/html/gtk/accel-label.png
+share/gtk-doc/html/gtk/api-index-2-10.html
+share/gtk-doc/html/gtk/api-index-2-12.html
+share/gtk-doc/html/gtk/api-index-2-14.html
+share/gtk-doc/html/gtk/api-index-2-2.html
+share/gtk-doc/html/gtk/api-index-2-4.html
+share/gtk-doc/html/gtk/api-index-2-6.html
+share/gtk-doc/html/gtk/api-index-2-8.html
+share/gtk-doc/html/gtk/api-index-deprecated.html
+share/gtk-doc/html/gtk/api-index-full.html
 share/gtk-doc/html/gtk/assistant.png
 share/gtk-doc/html/gtk/button.png
 share/gtk-doc/html/gtk/ch01.html
@@ -740,6 +782,7 @@ share/gtk-doc/html/gtk/gtk-Bindings.html
 share/gtk-doc/html/gtk/gtk-Clipboards.html
 share/gtk-doc/html/gtk/gtk-Drag-and-Drop.html
 share/gtk-doc/html/gtk/gtk-Feature-Test-Macros.html
+share/gtk-doc/html/gtk/gtk-Filesystem-utilities.html
 share/gtk-doc/html/gtk/gtk-General.html
 share/gtk-doc/html/gtk/gtk-Graphics-Contexts.html
 share/gtk-doc/html/gtk/gtk-GtkPaperSize.html
@@ -752,6 +795,7 @@ share/gtk-doc/html/gtk/gtk-Selections.html
 share/gtk-doc/html/gtk/gtk-Signals.html
 share/gtk-doc/html/gtk/gtk-Standard-Enumerations.html
 share/gtk-doc/html/gtk/gtk-Stock-Items.html
+share/gtk-doc/html/gtk/gtk-Testing.html
 share/gtk-doc/html/gtk/gtk-Themeable-Stock-Images.html
 share/gtk-doc/html/gtk/gtk-Types.html
 share/gtk-doc/html/gtk/gtk-about.png
@@ -858,7 +902,11 @@ share/gtk-doc/html/gtk/gtk-orientation-reverse-portrait.png
 share/gtk-doc/html/gtk/gtk-osx.html
 share/gtk-doc/html/gtk/gtk-paste.png
 share/gtk-doc/html/gtk/gtk-preferences.png
+share/gtk-doc/html/gtk/gtk-print-error.png
+share/gtk-doc/html/gtk/gtk-print-paused.png
 share/gtk-doc/html/gtk/gtk-print-preview.png
+share/gtk-doc/html/gtk/gtk-print-report.png
+share/gtk-doc/html/gtk/gtk-print-warning.png
 share/gtk-doc/html/gtk/gtk-print.png
 share/gtk-doc/html/gtk/gtk-properties.png
 share/gtk-doc/html/gtk/gtk-query-immodules-2.0.html
@@ -912,14 +960,6 @@ share/gtk-doc/html/gtk/icon-view.png
 share/gtk-doc/html/gtk/image.png
 share/gtk-doc/html/gtk/index.html
 share/gtk-doc/html/gtk/index.sgml
-share/gtk-doc/html/gtk/ix01.html
-share/gtk-doc/html/gtk/ix02.html
-share/gtk-doc/html/gtk/ix03.html
-share/gtk-doc/html/gtk/ix04.html
-share/gtk-doc/html/gtk/ix05.html
-share/gtk-doc/html/gtk/ix06.html
-share/gtk-doc/html/gtk/ix07.html
-share/gtk-doc/html/gtk/ix08.html
 share/gtk-doc/html/gtk/label.png
 share/gtk-doc/html/gtk/left.png
 share/gtk-doc/html/gtk/link-button.png
@@ -1058,6 +1098,8 @@ share/locale/lt/LC_MESSAGES/gtk20-properties.mo
 share/locale/lt/LC_MESSAGES/gtk20.mo
 share/locale/lv/LC_MESSAGES/gtk20-properties.mo
 share/locale/lv/LC_MESSAGES/gtk20.mo
+share/locale/mai/LC_MESSAGES/gtk20-properties.mo
+share/locale/mai/LC_MESSAGES/gtk20.mo
 share/locale/mi/LC_MESSAGES/gtk20-properties.mo
 share/locale/mi/LC_MESSAGES/gtk20.mo
 share/locale/mk/LC_MESSAGES/gtk20-properties.mo
@@ -1088,6 +1130,8 @@ share/locale/pa/LC_MESSAGES/gtk20-properties.mo
 share/locale/pa/LC_MESSAGES/gtk20.mo
 share/locale/pl/LC_MESSAGES/gtk20-properties.mo
 share/locale/pl/LC_MESSAGES/gtk20.mo
+share/locale/ps/LC_MESSAGES/gtk20-properties.mo
+share/locale/ps/LC_MESSAGES/gtk20.mo
 share/locale/pt/LC_MESSAGES/gtk20-properties.mo
 share/locale/pt/LC_MESSAGES/gtk20.mo
 share/locale/pt_BR/LC_MESSAGES/gtk20-properties.mo
@@ -1108,10 +1152,10 @@ share/locale/sq/LC_MESSAGES/gtk20-properties.mo
 share/locale/sq/LC_MESSAGES/gtk20.mo
 share/locale/sr/LC_MESSAGES/gtk20-properties.mo
 share/locale/sr/LC_MESSAGES/gtk20.mo
-share/locale/sr@Latn/LC_MESSAGES/gtk20-properties.mo
-share/locale/sr@Latn/LC_MESSAGES/gtk20.mo
 share/locale/sr@ije/LC_MESSAGES/gtk20-properties.mo
 share/locale/sr@ije/LC_MESSAGES/gtk20.mo
+share/locale/sr@latin/LC_MESSAGES/gtk20-properties.mo
+share/locale/sr@latin/LC_MESSAGES/gtk20.mo
 share/locale/sv/LC_MESSAGES/gtk20-properties.mo
 share/locale/sv/LC_MESSAGES/gtk20.mo
 share/locale/ta/LC_MESSAGES/gtk20-properties.mo
@@ -1161,13 +1205,14 @@ share/themes/Raleigh/gtk-2.0/gtkrc
 @dirrm share/gtk-doc/html/gtk
 @dirrm share/gtk-doc/html/gdk-pixbuf
 @dirrm share/gtk-doc/html/gdk
+@dirrm share/gtk-doc/html/gail-libgail-util
 @dirrm share/gtk-2.0/demo
 @dirrm share/gtk-2.0
 @exec ${MKDIR} %D/lib/gtk-2.0/modules
 @dirrm lib/gtk-2.0/modules
+@dirrm lib/gtk-2.0/include
 @exec ${MKDIR} %D/lib/gtk-2.0/immodules
 @dirrm lib/gtk-2.0/immodules
-@dirrm lib/gtk-2.0/include
 @dirrm lib/gtk-2.0/2.10.0/printbackends
 @dirrm lib/gtk-2.0/2.10.0/loaders
 @dirrm lib/gtk-2.0/2.10.0/immodules
@@ -1183,3 +1228,6 @@ ${PLIST.x11}@dirrm include/gtk-2.0/gdk-pixbuf-xlib
 @dirrm include/gtk-2.0/gdk-pixbuf
 @dirrm include/gtk-2.0/gdk
 @dirrm include/gtk-2.0
+@dirrm include/gail-1.0/libgail-util
+@dirrm include/gail-1.0/gail
+@dirrm include/gail-1.0
