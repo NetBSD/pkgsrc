@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.61 2008/09/06 20:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.62 2008/10/16 15:28:13 drochner Exp $
 #
 
-DISTNAME=		gnome-applets-2.22.3
-PKGREVISION=		1
+DISTNAME=		gnome-applets-2.24.0.1
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.22/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-applets/2.24/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -87,7 +86,6 @@ PY_PATCHPLIST=	yes
 PYTHON_PATCH_SCRIPTS+=	invest-applet/invest/invest-applet.py
 PYTHON_PATCH_SCRIPTS+=	invest-applet/invest/invest-chart
 
-.include "../../devel/gail/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
