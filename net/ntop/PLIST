@@ -1,5 +1,6 @@
-@comment $NetBSD: PLIST,v 1.4 2007/09/15 07:35:38 adam Exp $
+@comment $NetBSD: PLIST,v 1.5 2008/10/16 12:24:09 adam Exp $
 bin/ntop
+lib/libcpacketPlugin-${PKGVERSION}.so
 lib/libicmpPlugin-${PKGVERSION}.so
 lib/libicmpPlugin.a
 lib/libicmpPlugin.so
@@ -14,7 +15,7 @@ lib/libntopreport.la
 lib/libpdaPlugin-${PKGVERSION}.so
 lib/libpdaPlugin.a
 lib/libpdaPlugin.so
-lib/libremotePlugin-3.3.so
+lib/libremotePlugin-${PKGVERSION}.so
 lib/libremotePlugin.a
 lib/libremotePlugin.so
 lib/librrdPlugin-${PKGVERSION}.so
@@ -23,6 +24,7 @@ lib/librrdPlugin.so
 lib/libsflowPlugin-${PKGVERSION}.so
 lib/libsflowPlugin.a
 lib/libsflowPlugin.so
+lib/ntop/plugins/cpacketPlugin.so
 lib/ntop/plugins/icmpPlugin.so
 lib/ntop/plugins/lastSeenPlugin.so
 lib/ntop/plugins/netflowPlugin.so
@@ -128,6 +130,7 @@ share/ntop/html/jscalendar/calendar-load.js
 share/ntop/html/jscalendar/calendar-setup.js
 share/ntop/html/jscalendar/calendar.js
 share/ntop/html/jscalendar/lang/calendar-en.js
+share/ntop/html/line-bottom.png
 share/ntop/html/lock.png
 share/ntop/html/mail.gif
 share/ntop/html/major.gif
@@ -140,7 +143,7 @@ share/ntop/html/multivlaned.gif
 share/ntop/html/nboxLogo.gif
 share/ntop/html/ntop.gif
 share/ntop/html/ntop.html
-share/ntop/html/ntop_logo.gif
+share/ntop/html/ntop_logo.png
 share/ntop/html/ntopdump.dtd
 share/ntop/html/ntophelp.html
 share/ntop/html/p2p.gif
@@ -408,6 +411,11 @@ share/ntop/ntop/ntop-cert.pem
 share/ntop/ntop/oui.txt.gz
 share/ntop/ntop/p2c.opt.table.gz
 share/ntop/ntop/specialMAC.txt.gz
+share/ntop/perl/report.pl
+share/ntop/perl/report/basic.xml
+share/ntop/perl/test.pl
+@dirrm share/ntop/perl/report
+@dirrm share/ntop/perl
 @dirrm share/ntop/ntop
 @dirrm share/ntop/html/statsicons/os
 @dirrm share/ntop/html/statsicons/flags
