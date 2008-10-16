@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7593 2008/10/15 09:02:16 markd Exp $
+$NetBSD: TODO,v 1.7594 2008/10/16 12:25:18 adam Exp $
 
 Suggested new packages
 ======================
@@ -482,7 +482,6 @@ Suggested package updates
 	o cdlabelgen-4.0.0
 	o cdparanoia-3.0.10.2
 	o cdrkit-1.1.7.1
-	o cdrtools-2.01.01.51
 	o cfitsio-3.030
 	o cflow-1.2
 	o cgdb-0.6.4
@@ -975,7 +974,6 @@ Suggested package updates
 	o nslint-2.1a7
 	o nspr-4.7.1
 	o nss-3.11.7
-	o ntop-3.3.8
 	o ntp-4.2.4p5
 	o nulib2-220
 	o nullmailer-1.04
