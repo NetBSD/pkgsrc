@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2519 2008/10/15 18:22:33 martti Exp $
+$NetBSD: CHANGES-2008,v 1.2520 2008/10/16 09:45:43 martti Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4311,3 +4311,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/claws-mail-vcalendar to 2.0.2 [smb 2008-10-15]
 	Updated mail/clawsker to 0.5.0 [smb 2008-10-15]
 	Updated databases/sqlite3 to 3.6.4 [martti 2008-10-15]
+	Updated mail/postfix-current to 2.6.20081012 [martti 2008-10-16]
