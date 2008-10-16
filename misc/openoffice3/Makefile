@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.3 2008/10/15 23:17:29 hira Exp $
+# $NetBSD: Makefile,v 1.4 2008/10/16 23:16:46 hira Exp $
 #
 
 OO_VER=			3.0.0
+PKG_REVISION=		1
 OO_TAG=			OOO300_m9
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice3-${OO_VER}
@@ -62,19 +63,11 @@ REPLACE_PERL+=		sd/res/webview/editpic.pl	\
 			sd/res/webview/webview.pl
 REPLACE_PYTHON+=	scripting/source/pyprov/mailmerge.py
 
-# Hard-coded path exists in a tarball.  Cannot use REPLACE_BASH.
-# patch-dl replaces the path to @BASH@.
-SUBST_CLASSES+=		bash
-SUBST_STAGE.bash=	post-patch
-SUBST_MESSAGE.bash=	Fix hard-coded path
-SUBST_FILES.bash=	hunspell/hunspell-1.1.12.patch
-SUBST_SED.bash+=	-e 's,@BASH@,${BASH},g'
-
 SUBST_CLASSES+=		lib
 SUBST_STAGE.lib=	post-patch
 SUBST_MESSAGE.lib=	Adding library paths
 SUBST_FILES.lib=	solenv/inc/pkgsrc.mk
-.for pkg in db4 expat jpeg zlib
+.for pkg in db4 expat icu jpeg zlib
 LIB.${pkg}=		-L${BUILDLINK_PREFIX.${pkg}}/lib
 LIB.${pkg}+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.${pkg}}/lib
 SUBST_SED.lib+=		-e 's|@LIB_${pkg}@|${LIB.${pkg}}|g'
@@ -96,10 +89,13 @@ CONFIGURE_ARGS+=	--with-system-curl
 CONFIGURE_ARGS+=	--with-system-db
 CONFIGURE_ARGS+=	--with-system-expat
 CONFIGURE_ARGS+=	--with-system-freetype
+CONFIGURE_ARGS+=	--with-system-hunspell
+CONFIGURE_ARGS+=	--with-system-icu
 CONFIGURE_ARGS+=	--with-system-jpeg
 CONFIGURE_ARGS+=	--with-system-libxml
 CONFIGURE_ARGS+=	--with-system-libxslt
 CONFIGURE_ARGS+=	--with-system-neon
+CONFIGURE_ARGS+=	--with-system-openssl
 CONFIGURE_ARGS+=	--with-system-python
 CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-dynamic-xinerama
@@ -205,7 +201,10 @@ post-install:
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/jpeg/buildlink3.mk"
+.include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
+.include "../../textproc/hunspell/buildlink3.mk"
+.include "../../textproc/icu/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../textproc/libxslt/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
