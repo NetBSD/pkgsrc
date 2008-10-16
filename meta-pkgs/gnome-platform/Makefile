@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.7 2008/07/14 17:22:48 drochner Exp $
+# $NetBSD: Makefile,v 1.8 2008/10/16 13:44:09 drochner Exp $
 
-DISTNAME=	gnome-platform-2.22.3
+DISTNAME=	gnome-platform-2.24.0
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 
@@ -10,32 +10,31 @@ COMMENT=	Meta-package for core platform libraries of the GNOME desktop
 
 META_PACKAGE=	yes
 
-DEPENDS+=	GConf>=2.22.0:../../devel/GConf
-DEPENDS+=	ORBit2>=2.14.13:../../net/ORBit2
-DEPENDS+=	at-spi>=1.22.1:../../devel/at-spi
-DEPENDS+=	atk>=1.22.0:../../devel/atk
+DEPENDS+=	GConf>=2.24.0:../../devel/GConf
+DEPENDS+=	ORBit2>=2.14.16:../../net/ORBit2
+DEPENDS+=	at-spi>=1.24.0:../../devel/at-spi
+DEPENDS+=	atk>=1.24.0:../../devel/atk
 DEPENDS+=	libaudiofile>=0.2.6:../../audio/libaudiofile
-DEPENDS+=	esound>=0.2.38:../../audio/esound
-DEPENDS+=	gail>=1.22.3:../../devel/gail
-DEPENDS+=	glib2>=2.16.4:../../devel/glib2
+DEPENDS+=	esound>=0.2.40:../../audio/esound
+DEPENDS+=	glib2>=2.18.1:../../devel/glib2
 DEPENDS+=	gnome-mime-data>=2.18.0:../../databases/gnome-mime-data
-DEPENDS+=	gnome-vfs>=2.22.0:../../sysutils/gnome-vfs
+DEPENDS+=	gnome-vfs>=2.24.0:../../sysutils/gnome-vfs
 DEPENDS+=	gnome-vfs-monikers>=2.15.3:../../sysutils/gnome-vfs-monikers
-DEPENDS+=	gtk2+>=2.12.11:../../x11/gtk2
-DEPENDS+=	gtk-doc>=1.9:../../textproc/gtk-doc
-DEPENDS+=	intltool>=0.37.1:../../textproc/intltool
-DEPENDS+=	libIDL>=0.8.10:../../net/libIDL
+DEPENDS+=	gtk2+>=2.14.3:../../x11/gtk2
+DEPENDS+=	gtk-doc>=1.10:../../textproc/gtk-doc
+DEPENDS+=	intltool>=0.40.4:../../textproc/intltool
+DEPENDS+=	libIDL>=0.8.11:../../net/libIDL
 DEPENDS+=	libart>=2.3.20:../../graphics/libart
-DEPENDS+=	libbonobo>=2.22.0:../../devel/libbonobo
-DEPENDS+=	libbonoboui>=2.22.0:../../devel/libbonoboui
-DEPENDS+=	libglade>=2.6.2:../../devel/libglade
-DEPENDS+=	libgnome>=2.22.0:../../devel/libgnome
+DEPENDS+=	libbonobo>=2.24.0:../../devel/libbonobo
+DEPENDS+=	libbonoboui>=2.24.0:../../devel/libbonoboui
+DEPENDS+=	libglade>=2.6.3:../../devel/libglade
+DEPENDS+=	libgnome>=2.24.1:../../devel/libgnome
 DEPENDS+=	libgnomecanvas>=2.20.1.1:../../graphics/libgnomecanvas
-DEPENDS+=	libgnomeui>=2.22.1:../../devel/libgnomeui
-DEPENDS+=	pango>=1.20.5:../../devel/pango
+DEPENDS+=	libgnomeui>=2.24.0:../../devel/libgnomeui
+DEPENDS+=	pango>=1.22.0:../../devel/pango
 
 # XXX gnome-keyring is distributed with the "desktop" set, but is required
 # by libgnomeui. List it here to avoid circular dependency.
-DEPENDS+=	gnome-keyring>=2.22.3:../../security/gnome-keyring
+DEPENDS+=	gnome-keyring>=2.24.0:../../security/gnome-keyring
 
 .include "../../mk/bsd.pkg.mk"
