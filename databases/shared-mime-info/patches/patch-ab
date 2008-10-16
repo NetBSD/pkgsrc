@@ -1,12 +1,10 @@
-$NetBSD: patch-ab,v 1.7 2008/06/23 15:58:05 drochner Exp $
+$NetBSD: patch-ab,v 1.8 2008/10/16 13:50:44 drochner Exp $
 
-Don't force a build of the PO files, they need newer gettext versions.
-
---- Makefile.am.orig	2008-05-12 16:36:23.000000000 +0200
+--- Makefile.am.orig	2008-07-22 16:49:20.000000000 +0200
 +++ Makefile.am
-@@ -56,8 +56,6 @@ uninstall-hook:
- 	rm -f "$(DESTDIR)$(datadir)/mime/mime-cache"
- 	rm -f "$(DESTDIR)$(datadir)/mime/XMLnamespaces"
+@@ -67,8 +67,6 @@ uninstall-hook:
+ 	rm -f "$(DESTDIR)$(datadir)/mime/treemagic"
+ 	rm -f "$(DESTDIR)$(datadir)/mime/types"
  
 -all: check
 -
