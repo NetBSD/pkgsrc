@@ -1,8 +1,7 @@
-@comment $NetBSD: PLIST,v 1.13 2007/11/03 16:36:34 drochner Exp $
-share/gnome-background-properties/gnome-branded.xml
+@comment $NetBSD: PLIST,v 1.14 2008/10/16 17:46:24 drochner Exp $
+share/gnome-background-properties/gnome-abstract.xml
 share/gnome-background-properties/gnome-nature.xml
-share/gnome-background-properties/gnome-tiles.xml
-share/gnome-background-properties/gnome-translucent.xml
+share/locale/af/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/ar/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/as/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/be/LC_MESSAGES/gnome-backgrounds.mo
@@ -25,6 +24,8 @@ share/locale/eu/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/fa/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/fi/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/fr/LC_MESSAGES/gnome-backgrounds.mo
+share/locale/fur/LC_MESSAGES/gnome-backgrounds.mo
+share/locale/ga/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/gl/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/gu/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/he/LC_MESSAGES/gnome-backgrounds.mo
@@ -35,6 +36,7 @@ share/locale/id/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/it/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/ja/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/ka/LC_MESSAGES/gnome-backgrounds.mo
+share/locale/kn/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/ko/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/ku/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/ky/LC_MESSAGES/gnome-backgrounds.mo
@@ -54,6 +56,7 @@ share/locale/oc/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/or/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/pa/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/pl/LC_MESSAGES/gnome-backgrounds.mo
+share/locale/ps/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/pt/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/pt_BR/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/ro/LC_MESSAGES/gnome-backgrounds.mo
@@ -64,28 +67,35 @@ share/locale/sk/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/sl/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/sq/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/sr/LC_MESSAGES/gnome-backgrounds.mo
-share/locale/sr@Latn/LC_MESSAGES/gnome-backgrounds.mo
+share/locale/sr@latin/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/sv/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/ta/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/te/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/th/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/tr/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/uk/LC_MESSAGES/gnome-backgrounds.mo
+share/locale/uz/LC_MESSAGES/gnome-backgrounds.mo
+share/locale/uz@cyrillic/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/vi/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/zh_CN/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/zh_HK/LC_MESSAGES/gnome-backgrounds.mo
 share/locale/zh_TW/LC_MESSAGES/gnome-backgrounds.mo
-share/pixmaps/backgrounds/gnome/branded/GNOME-Curves.png
+share/pixmaps/backgrounds/gnome/abstract/Flow.png
+share/pixmaps/backgrounds/gnome/abstract/Gulp.png
+share/pixmaps/backgrounds/gnome/abstract/Silk.png
+share/pixmaps/backgrounds/gnome/abstract/Spring.png
+share/pixmaps/backgrounds/gnome/abstract/Waves.png
+share/pixmaps/backgrounds/gnome/nature/Aqua.jpg
+share/pixmaps/backgrounds/gnome/nature/Blinds.jpg
+share/pixmaps/backgrounds/gnome/nature/Dune.jpg
 share/pixmaps/backgrounds/gnome/nature/FreshFlower.jpg
+share/pixmaps/backgrounds/gnome/nature/Garden.jpg
 share/pixmaps/backgrounds/gnome/nature/GreenMeadow.jpg
-share/pixmaps/backgrounds/gnome/nature/OpenFlower.jpg
-share/pixmaps/backgrounds/gnome/tiles/pattern-boats.svg
-share/pixmaps/backgrounds/gnome/tiles/pattern-clouds.svg
-share/pixmaps/backgrounds/gnome/tiles/pattern-stars.svg
-share/pixmaps/backgrounds/gnome/translucent/ellipsis.svg
-share/pixmaps/backgrounds/gnome/translucent/tentacles.svg
-@dirrm share/pixmaps/backgrounds/gnome/translucent
-@dirrm share/pixmaps/backgrounds/gnome/tiles
+share/pixmaps/backgrounds/gnome/nature/LadyBird.jpg
+share/pixmaps/backgrounds/gnome/nature/RainDrops.jpg
+share/pixmaps/backgrounds/gnome/nature/Storm.jpg
+share/pixmaps/backgrounds/gnome/nature/TwoWings.jpg
+share/pixmaps/backgrounds/gnome/nature/Wood.jpg
+share/pixmaps/backgrounds/gnome/nature/YellowFlower.jpg
 @dirrm share/pixmaps/backgrounds/gnome/nature
-@dirrm share/pixmaps/backgrounds/gnome/branded
-@comment in xdg-dirs: @dirrm share/pixmaps/backgrounds
+@dirrm share/pixmaps/backgrounds/gnome/abstract
