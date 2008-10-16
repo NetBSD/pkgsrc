@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7597 2008/10/16 19:52:32 wiz Exp $
+$NetBSD: TODO,v 1.7598 2008/10/16 21:36:07 adam Exp $
 
 Suggested new packages
 ======================
@@ -722,7 +722,6 @@ Suggested package updates
 	o gtkglarea-2.0.0
 	o gtkhtml314-3.24.0
 	o gtklife-5.1
-	o gtkmm-2.14.1
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
 	o gtodo-0.16.0rc2
