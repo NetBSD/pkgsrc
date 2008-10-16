@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.7 2008/04/15 18:34:32 drochner Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/10/16 18:14:13 drochner Exp $
 bin/eog
 include/eog-2.20/eog/eog-application.h
 include/eog-2.20/eog/eog-debug.h
@@ -21,6 +21,12 @@ include/eog-2.20/eog/eog-thumb-view.h
 include/eog-2.20/eog/eog-thumbnail.h
 include/eog-2.20/eog/eog-transform.h
 include/eog-2.20/eog/eog-window.h
+lib/eog/plugins/fullscreen.eog-plugin
+lib/eog/plugins/libfullscreen.la
+lib/eog/plugins/libreload.la
+lib/eog/plugins/libstatusbar-date.la
+lib/eog/plugins/reload.eog-plugin
+lib/eog/plugins/statusbar-date.eog-plugin
 lib/pkgconfig/eog.pc
 share/applications/eog.desktop
 share/eog/eog-image-properties-dialog.glade
@@ -31,13 +37,19 @@ share/eog/eog-ui.xml
 share/eog/gtkrc
 share/eog/icons/hicolor/16x16/actions/eog-image-collection.png
 share/eog/icons/hicolor/16x16/actions/eog-plugin.png
+share/eog/icons/hicolor/16x16/actions/slideshow-play.png
 share/eog/icons/hicolor/22x22/actions/eog-image-collection.png
 share/eog/icons/hicolor/22x22/actions/eog-plugin.png
+share/eog/icons/hicolor/22x22/actions/slideshow-play.png
 share/eog/icons/hicolor/24x24/actions/eog-image-collection.png
+share/eog/icons/hicolor/24x24/actions/slideshow-play.png
 share/eog/icons/hicolor/32x32/actions/eog-image-collection.png
 share/eog/icons/hicolor/32x32/actions/eog-plugin.png
+share/eog/icons/hicolor/32x32/actions/slideshow-play.png
+share/eog/icons/hicolor/48x48/actions/slideshow-play.png
 share/eog/icons/hicolor/scalable/actions/eog-image-collection.svg
 share/eog/icons/hicolor/scalable/actions/eog-plugin.svg
+share/eog/icons/hicolor/scalable/actions/slideshow-play.svg
 share/eog/pixmaps/thumbnail-frame.png
 share/gconf/schemas/eog.schemas
 share/gnome/help/eog/C/eog.xml
@@ -45,6 +57,10 @@ share/gnome/help/eog/C/figures/eog_save_as_window.png
 share/gnome/help/eog/C/figures/eog_start_window.png
 share/gnome/help/eog/C/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/C/legal.xml
+share/gnome/help/eog/ca/eog.xml
+share/gnome/help/eog/ca/figures/eog_save_as_window.png
+share/gnome/help/eog/ca/figures/eog_start_window.png
+share/gnome/help/eog/ca/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/da/eog.xml
 share/gnome/help/eog/da/figures/eog_save_as_window.png
 share/gnome/help/eog/da/figures/eog_start_window.png
@@ -113,6 +129,63 @@ share/gnome/help/eog/zh_TW/eog.xml
 share/gnome/help/eog/zh_TW/figures/eog_save_as_window.png
 share/gnome/help/eog/zh_TW/figures/eog_start_window.png
 share/gnome/help/eog/zh_TW/figures/eog_toolbar_editor_window.png
+share/gtk-doc/html/eog/EogApplication.html
+share/gtk-doc/html/eog/EogDialog.html
+share/gtk-doc/html/eog/EogExifDetails.html
+share/gtk-doc/html/eog/EogFileChooser.html
+share/gtk-doc/html/eog/EogImage.html
+share/gtk-doc/html/eog/EogImageSaveInfo.html
+share/gtk-doc/html/eog/EogJobSaveAs.html
+share/gtk-doc/html/eog/EogListStore.html
+share/gtk-doc/html/eog/EogMessageArea.html
+share/gtk-doc/html/eog/EogMetadataReaderJpg.html
+share/gtk-doc/html/eog/EogMetadataReaderPng.html
+share/gtk-doc/html/eog/EogPixbufCellRenderer.html
+share/gtk-doc/html/eog/EogPlugin.html
+share/gtk-doc/html/eog/EogPluginManager.html
+share/gtk-doc/html/eog/EogPreferencesDialog.html
+share/gtk-doc/html/eog/EogPrintImageSetup.html
+share/gtk-doc/html/eog/EogPrintPreview.html
+share/gtk-doc/html/eog/EogPropertiesDialog.html
+share/gtk-doc/html/eog/EogScrollView.html
+share/gtk-doc/html/eog/EogSidebar.html
+share/gtk-doc/html/eog/EogStatusbar.html
+share/gtk-doc/html/eog/EogThumbNav.html
+share/gtk-doc/html/eog/EogThumbView.html
+share/gtk-doc/html/eog/EogTransform.html
+share/gtk-doc/html/eog/EogURIConverter.html
+share/gtk-doc/html/eog/EogWindow.html
+share/gtk-doc/html/eog/ch01.html
+share/gtk-doc/html/eog/ch02.html
+share/gtk-doc/html/eog/ch03.html
+share/gtk-doc/html/eog/ch04.html
+share/gtk-doc/html/eog/ch05.html
+share/gtk-doc/html/eog/ch06.html
+share/gtk-doc/html/eog/ch07.html
+share/gtk-doc/html/eog/eog-eog-config-keys.html
+share/gtk-doc/html/eog/eog-eog-debug.html
+share/gtk-doc/html/eog/eog-eog-error-message-area.html
+share/gtk-doc/html/eog/eog-eog-exif-util.html
+share/gtk-doc/html/eog/eog-eog-job-queue.html
+share/gtk-doc/html/eog/eog-eog-metadata-reader.html
+share/gtk-doc/html/eog/eog-eog-pixbuf-util.html
+share/gtk-doc/html/eog/eog-eog-plugin-engine.html
+share/gtk-doc/html/eog/eog-eog-print.html
+share/gtk-doc/html/eog/eog-eog-save-as-dialog-helper.html
+share/gtk-doc/html/eog/eog-eog-session.html
+share/gtk-doc/html/eog/eog-eog-thumbnail.html
+share/gtk-doc/html/eog/eog-eog-util.html
+share/gtk-doc/html/eog/eog-uta.html
+share/gtk-doc/html/eog/eog-zoom.html
+share/gtk-doc/html/eog/eog.devhelp
+share/gtk-doc/html/eog/eog.devhelp2
+share/gtk-doc/html/eog/home.png
+share/gtk-doc/html/eog/index.html
+share/gtk-doc/html/eog/index.sgml
+share/gtk-doc/html/eog/left.png
+share/gtk-doc/html/eog/right.png
+share/gtk-doc/html/eog/style.css
+share/gtk-doc/html/eog/up.png
 share/icons/hicolor/16x16/apps/eog.png
 share/icons/hicolor/22x22/apps/eog.png
 share/icons/hicolor/24x24/apps/eog.png
@@ -144,6 +217,7 @@ share/locale/eu/LC_MESSAGES/eog.mo
 share/locale/fa/LC_MESSAGES/eog.mo
 share/locale/fi/LC_MESSAGES/eog.mo
 share/locale/fr/LC_MESSAGES/eog.mo
+share/locale/fur/LC_MESSAGES/eog.mo
 share/locale/ga/LC_MESSAGES/eog.mo
 share/locale/gl/LC_MESSAGES/eog.mo
 share/locale/gu/LC_MESSAGES/eog.mo
@@ -158,6 +232,7 @@ share/locale/ja/LC_MESSAGES/eog.mo
 share/locale/ka/LC_MESSAGES/eog.mo
 share/locale/kn/LC_MESSAGES/eog.mo
 share/locale/ko/LC_MESSAGES/eog.mo
+share/locale/ks/LC_MESSAGES/eog.mo
 share/locale/ku/LC_MESSAGES/eog.mo
 share/locale/lt/LC_MESSAGES/eog.mo
 share/locale/lv/LC_MESSAGES/eog.mo
@@ -176,6 +251,7 @@ share/locale/oc/LC_MESSAGES/eog.mo
 share/locale/or/LC_MESSAGES/eog.mo
 share/locale/pa/LC_MESSAGES/eog.mo
 share/locale/pl/LC_MESSAGES/eog.mo
+share/locale/ps/LC_MESSAGES/eog.mo
 share/locale/pt/LC_MESSAGES/eog.mo
 share/locale/pt_BR/LC_MESSAGES/eog.mo
 share/locale/ro/LC_MESSAGES/eog.mo
@@ -186,7 +262,7 @@ share/locale/sk/LC_MESSAGES/eog.mo
 share/locale/sl/LC_MESSAGES/eog.mo
 share/locale/sq/LC_MESSAGES/eog.mo
 share/locale/sr/LC_MESSAGES/eog.mo
-share/locale/sr@Latn/LC_MESSAGES/eog.mo
+share/locale/sr@latin/LC_MESSAGES/eog.mo
 share/locale/sv/LC_MESSAGES/eog.mo
 share/locale/ta/LC_MESSAGES/eog.mo
 share/locale/te/LC_MESSAGES/eog.mo
@@ -203,6 +279,7 @@ share/locale/zh_HK/LC_MESSAGES/eog.mo
 share/locale/zh_TW/LC_MESSAGES/eog.mo
 share/locale/zu/LC_MESSAGES/eog.mo
 share/omf/eog/eog-C.omf
+share/omf/eog/eog-ca.omf
 share/omf/eog/eog-da.omf
 share/omf/eog/eog-de.omf
 share/omf/eog/eog-en_GB.omf
@@ -221,13 +298,13 @@ share/omf/eog/eog-uk.omf
 share/omf/eog/eog-zh_CN.omf
 share/omf/eog/eog-zh_TW.omf
 @dirrm share/omf/eog
-@comment in rarian: @dirrm share/omf
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/scalable/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/32x32/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/24x24/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
+@dirrm share/gtk-doc/html/eog
 @dirrm share/gnome/help/eog/zh_TW/figures
 @dirrm share/gnome/help/eog/zh_TW
 @dirrm share/gnome/help/eog/zh_CN/figures
@@ -262,14 +339,17 @@ share/omf/eog/eog-zh_TW.omf
 @dirrm share/gnome/help/eog/de
 @dirrm share/gnome/help/eog/da/figures
 @dirrm share/gnome/help/eog/da
+@dirrm share/gnome/help/eog/ca/figures
+@dirrm share/gnome/help/eog/ca
 @dirrm share/gnome/help/eog/C/figures
 @dirrm share/gnome/help/eog/C
 @dirrm share/gnome/help/eog
-@comment in gnome2-dirs: @dirrm share/gnome/help
 @comment in GConf: @dirrm share/gconf/schemas
 @dirrm share/eog/pixmaps
 @dirrm share/eog/icons/hicolor/scalable/actions
 @dirrm share/eog/icons/hicolor/scalable
+@dirrm share/eog/icons/hicolor/48x48/actions
+@dirrm share/eog/icons/hicolor/48x48
 @dirrm share/eog/icons/hicolor/32x32/actions
 @dirrm share/eog/icons/hicolor/32x32
 @dirrm share/eog/icons/hicolor/24x24/actions
@@ -282,5 +362,6 @@ share/omf/eog/eog-zh_TW.omf
 @dirrm share/eog/icons
 @dirrm share/eog
 @comment in xdg-dirs: @dirrm share/applications
+@dirrm lib/eog/plugins
 @dirrm include/eog-2.20/eog
 @dirrm include/eog-2.20

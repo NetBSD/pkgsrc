@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.21 2008/04/25 04:02:23 bjs Exp $
+@comment $NetBSD: PLIST,v 1.22 2008/10/16 18:17:30 drochner Exp $
 bin/gnome-session
 bin/gnome-session-properties
-bin/gnome-session-remove
 bin/gnome-session-save
 bin/gnome-wm
+lib/gnome-session/helpers/at-spi-registryd-wrapper
+lib/gnome-session/helpers/gnome-keyring-daemon-wrapper
+lib/gnome-session/helpers/gnome-session-splash
+lib/gnome-session/helpers/gnome-settings-daemon-helper
 man/man1/gnome-session-save.1
 man/man1/gnome-session.1
 man/man1/gnome-wm.1
@@ -11,7 +14,12 @@ man/man1/session-properties.1
 man/man5/default.session.5
 share/applications/session-properties.desktop
 share/gconf/schemas/gnome-session.schemas
-share/gnome/default.session
+share/gnome-session/gsm-inhibit-dialog.glade
+share/gnome-session/session-properties.glade
+share/gnome/autostart/at-spi-registryd-wrapper.desktop
+share/gnome/autostart/gnome-keyring-daemon-wrapper.desktop
+share/gnome/autostart/gnome-session-splash.desktop
+share/gnome/autostart/gnome-settings-daemon-helper.desktop
 share/icons/hicolor/16x16/apps/session-properties.png
 share/icons/hicolor/22x22/apps/session-properties.png
 share/icons/hicolor/24x24/apps/session-properties.png
@@ -88,7 +96,7 @@ share/locale/sk/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/sl/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/sq/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/sr/LC_MESSAGES/gnome-session-2.0.mo
-share/locale/sr@Latn/LC_MESSAGES/gnome-session-2.0.mo
+share/locale/sr@latin/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/sv/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/ta/LC_MESSAGES/gnome-session-2.0.mo
 share/locale/te/LC_MESSAGES/gnome-session-2.0.mo
@@ -113,6 +121,9 @@ share/pixmaps/splash/gnome-splash.png
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@comment in gnome2-dirs: @dirrm share/gnome
+@dirrm share/gnome/autostart
+@dirrm share/gnome-session
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
+@dirrm lib/gnome-session/helpers
+@dirrm lib/gnome-session

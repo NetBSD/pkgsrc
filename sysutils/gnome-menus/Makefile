@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.40 2008/06/20 01:09:35 joerg Exp $
+# $NetBSD: Makefile,v 1.41 2008/10/16 18:19:10 drochner Exp $
 #
 
-DISTNAME=	gnome-menus-2.22.2
+DISTNAME=	gnome-menus-2.24.0
 CATEGORIES=	sysutils gnome
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-menus/2.22/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-menus/2.24/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -28,8 +28,6 @@ EXAMPLEDIR=		${PREFIX}/share/examples/gnome-menus/xdg/menus
 OWN_DIRS=		${PKG_SYSCONFDIR}/xdg/menus
 CONF_FILES=		${EXAMPLEDIR}/applications.menu \
 			${PKG_SYSCONFDIR}/xdg/menus/applications.menu
-CONF_FILES+=		${EXAMPLEDIR}/preferences.menu \
-			${PKG_SYSCONFDIR}/xdg/menus/preferences.menu
 CONF_FILES+=		${EXAMPLEDIR}/settings.menu \
 			${PKG_SYSCONFDIR}/xdg/menus/settings.menu
 
