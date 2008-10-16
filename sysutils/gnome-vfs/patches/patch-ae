@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.5 2008/04/10 16:25:29 drochner Exp $
+$NetBSD: patch-ae,v 1.6 2008/10/16 12:30:16 drochner Exp $
 
---- configure.orig	2008-03-10 20:22:50.000000000 +0100
+--- configure.orig	2008-09-22 11:35:38.000000000 +0200
 +++ configure
-@@ -24851,7 +24851,7 @@ fi
+@@ -25103,7 +25103,7 @@ fi
  
  
  
@@ -11,7 +11,7 @@ $NetBSD: patch-ae,v 1.5 2008/04/10 16:25:29 drochner Exp $
  do
  as_ac_var=`echo "ac_cv_func_$ac_func" | $as_tr_sh`
  { echo "$as_me:$LINENO: checking for $ac_func" >&5
-@@ -26056,9 +26056,11 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -26306,9 +26306,11 @@ cat >>conftest.$ac_ext <<_ACEOF
  int
  main ()
  {
@@ -23,7 +23,7 @@ $NetBSD: patch-ae,v 1.5 2008/04/10 16:25:29 drochner Exp $
    return 0;
  }
  _ACEOF
-@@ -33422,7 +33424,7 @@ _ACEOF
+@@ -33660,7 +33662,7 @@ _ACEOF
  
  		msg_samba="yes"
                  if test x$with_samba_libs != x/usr/lib; then
@@ -32,10 +32,10 @@ $NetBSD: patch-ae,v 1.5 2008/04/10 16:25:29 drochner Exp $
                  else
                  	SAMBA_LIBS="-lsmbclient"
                  fi
-@@ -36425,12 +36427,12 @@ if test -n "$PKG_CONFIG"; then
-         pkg_cv_LIBGNOMEVFS_CFLAGS="$LIBGNOMEVFS_CFLAGS"
-     else
-         if test -n "$PKG_CONFIG" && \
+@@ -36624,12 +36626,12 @@ if test -n "$LIBGNOMEVFS_CFLAGS"; then
+     pkg_cv_LIBGNOMEVFS_CFLAGS="$LIBGNOMEVFS_CFLAGS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
 -    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"glib-2.0 >= \$GLIB_REQUIRED gmodule-no-export-2.0 >= \$GLIB_REQUIRED gthread-2.0 >= \$GLIB_REQUIRED gobject-2.0 >= \$GLIB_REQUIRED gconf-2.0 >= \$GCONF_REQUIRED libxml-2.0 >= \$XML_REQUIRED gnome-mime-data-2.0 \$dbus_requirement\"") >&5
 -  ($PKG_CONFIG --exists --print-errors "glib-2.0 >= $GLIB_REQUIRED gmodule-no-export-2.0 >= $GLIB_REQUIRED gthread-2.0 >= $GLIB_REQUIRED gobject-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libxml-2.0 >= $XML_REQUIRED gnome-mime-data-2.0 $dbus_requirement") 2>&5
 +    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"glib-2.0 >= \$GLIB_REQUIRED gmodule-no-export-2.0 >= \$GLIB_REQUIRED gthread-2.0 >= \$GLIB_REQUIRED gobject-2.0 >= \$GLIB_REQUIRED gconf-2.0 >= \$GCONF_REQUIRED libxml-2.0 >= \$XML_REQUIRED \$dbus_requirement\"") >&5
@@ -48,10 +48,10 @@ $NetBSD: patch-ae,v 1.5 2008/04/10 16:25:29 drochner Exp $
  else
    pkg_failed=yes
  fi
-@@ -36443,12 +36445,12 @@ if test -n "$PKG_CONFIG"; then
-         pkg_cv_LIBGNOMEVFS_LIBS="$LIBGNOMEVFS_LIBS"
-     else
-         if test -n "$PKG_CONFIG" && \
+@@ -36640,12 +36642,12 @@ if test -n "$LIBGNOMEVFS_LIBS"; then
+     pkg_cv_LIBGNOMEVFS_LIBS="$LIBGNOMEVFS_LIBS"
+  elif test -n "$PKG_CONFIG"; then
+     if test -n "$PKG_CONFIG" && \
 -    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"glib-2.0 >= \$GLIB_REQUIRED gmodule-no-export-2.0 >= \$GLIB_REQUIRED gthread-2.0 >= \$GLIB_REQUIRED gobject-2.0 >= \$GLIB_REQUIRED gconf-2.0 >= \$GCONF_REQUIRED libxml-2.0 >= \$XML_REQUIRED gnome-mime-data-2.0 \$dbus_requirement\"") >&5
 -  ($PKG_CONFIG --exists --print-errors "glib-2.0 >= $GLIB_REQUIRED gmodule-no-export-2.0 >= $GLIB_REQUIRED gthread-2.0 >= $GLIB_REQUIRED gobject-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libxml-2.0 >= $XML_REQUIRED gnome-mime-data-2.0 $dbus_requirement") 2>&5
 +    { (echo "$as_me:$LINENO: \$PKG_CONFIG --exists --print-errors \"glib-2.0 >= \$GLIB_REQUIRED gmodule-no-export-2.0 >= \$GLIB_REQUIRED gthread-2.0 >= \$GLIB_REQUIRED gobject-2.0 >= \$GLIB_REQUIRED gconf-2.0 >= \$GCONF_REQUIRED libxml-2.0 >= \$XML_REQUIRED \$dbus_requirement\"") >&5
@@ -64,15 +64,15 @@ $NetBSD: patch-ae,v 1.5 2008/04/10 16:25:29 drochner Exp $
  else
    pkg_failed=yes
  fi
-@@ -36467,14 +36469,14 @@ else
+@@ -36663,14 +36665,14 @@ else
          _pkg_short_errors_supported=no
  fi
          if test $_pkg_short_errors_supported = yes; then
--	        LIBGNOMEVFS_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "glib-2.0 >= $GLIB_REQUIRED gmodule-no-export-2.0 >= $GLIB_REQUIRED gthread-2.0 >= $GLIB_REQUIRED gobject-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libxml-2.0 >= $XML_REQUIRED gnome-mime-data-2.0 $dbus_requirement"`
-+	        LIBGNOMEVFS_PKG_ERRORS=`$PKG_CONFIG --short-errors --errors-to-stdout --print-errors "glib-2.0 >= $GLIB_REQUIRED gmodule-no-export-2.0 >= $GLIB_REQUIRED gthread-2.0 >= $GLIB_REQUIRED gobject-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libxml-2.0 >= $XML_REQUIRED $dbus_requirement"`
+-	        LIBGNOMEVFS_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "glib-2.0 >= $GLIB_REQUIRED gmodule-no-export-2.0 >= $GLIB_REQUIRED gthread-2.0 >= $GLIB_REQUIRED gobject-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libxml-2.0 >= $XML_REQUIRED gnome-mime-data-2.0 $dbus_requirement" 2>&1`
++	        LIBGNOMEVFS_PKG_ERRORS=`$PKG_CONFIG --short-errors --print-errors "glib-2.0 >= $GLIB_REQUIRED gmodule-no-export-2.0 >= $GLIB_REQUIRED gthread-2.0 >= $GLIB_REQUIRED gobject-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libxml-2.0 >= $XML_REQUIRED $dbus_requirement" 2>&1`
          else
--	        LIBGNOMEVFS_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "glib-2.0 >= $GLIB_REQUIRED gmodule-no-export-2.0 >= $GLIB_REQUIRED gthread-2.0 >= $GLIB_REQUIRED gobject-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libxml-2.0 >= $XML_REQUIRED gnome-mime-data-2.0 $dbus_requirement"`
-+	        LIBGNOMEVFS_PKG_ERRORS=`$PKG_CONFIG --errors-to-stdout --print-errors "glib-2.0 >= $GLIB_REQUIRED gmodule-no-export-2.0 >= $GLIB_REQUIRED gthread-2.0 >= $GLIB_REQUIRED gobject-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libxml-2.0 >= $XML_REQUIRED $dbus_requirement"`
+-	        LIBGNOMEVFS_PKG_ERRORS=`$PKG_CONFIG --print-errors "glib-2.0 >= $GLIB_REQUIRED gmodule-no-export-2.0 >= $GLIB_REQUIRED gthread-2.0 >= $GLIB_REQUIRED gobject-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libxml-2.0 >= $XML_REQUIRED gnome-mime-data-2.0 $dbus_requirement" 2>&1`
++	        LIBGNOMEVFS_PKG_ERRORS=`$PKG_CONFIG --print-errors "glib-2.0 >= $GLIB_REQUIRED gmodule-no-export-2.0 >= $GLIB_REQUIRED gthread-2.0 >= $GLIB_REQUIRED gobject-2.0 >= $GLIB_REQUIRED gconf-2.0 >= $GCONF_REQUIRED libxml-2.0 >= $XML_REQUIRED $dbus_requirement" 2>&1`
          fi
  	# Put the nasty error message in config.log where it belongs
  	echo "$LIBGNOMEVFS_PKG_ERRORS" >&5
@@ -82,7 +82,7 @@ $NetBSD: patch-ae,v 1.5 2008/04/10 16:25:29 drochner Exp $
  
  $LIBGNOMEVFS_PKG_ERRORS
  
-@@ -36485,7 +36487,7 @@ Alternatively, you may set the environme
+@@ -36681,7 +36683,7 @@ Alternatively, you may set the environme
  and LIBGNOMEVFS_LIBS to avoid the need to call pkg-config.
  See the pkg-config man page for more details.
  " >&5
