@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2008/06/20 01:09:35 joerg Exp $
+# $NetBSD: Makefile,v 1.6 2008/10/16 14:40:35 drochner Exp $
 #
 
-DISTNAME=	gnome-settings-daemon-2.22.2.1
+DISTNAME=	gnome-settings-daemon-2.24.0
 CATEGORIES=	sysutils
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-settings-daemon/2.22/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-settings-daemon/2.24/}
 EXTRACT_SUFX=	.tar.bz2
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
@@ -22,6 +22,7 @@ GCONF_SCHEMAS+=	gnome-settings-daemon.schemas
 GCONF_SCHEMAS+=	desktop_gnome_font_rendering.schemas
 GCONF_SCHEMAS+=	apps_gnome_settings_daemon_keybindings.schemas
 GCONF_SCHEMAS+=	apps_gnome_settings_daemon_screensaver.schemas
+GCONF_SCHEMAS+=	apps_gnome_settings_daemon_xrandr.schemas
 PKGCONFIG_OVERRIDE+=	data/gnome-settings-daemon.pc.in
 
 BUILDLINK_API_DEPENDS.libxklavier+=	libxklavier>=3.3
@@ -36,4 +37,5 @@ BUILDLINK_API_DEPENDS.libxklavier+=	libxklavier>=3.3
 .include "../../x11/libxklavier/buildlink3.mk"
 .include "../../multimedia/gstreamer0.10/buildlink3.mk"
 .include "../../multimedia/gst-plugins0.10-base/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
