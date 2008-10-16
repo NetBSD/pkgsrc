@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2531 2008/10/16 22:01:49 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2532 2008/10/16 22:03:23 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4374,3 +4374,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libsigc++ to 2.2.3 [wiz 2008-10-16]
 	Updated devel/libevent to 1.4.8 [wiz 2008-10-16]
 	Updated graphics/gnome-icon-theme to 2.24.0 [wiz 2008-10-16]
+	Added graphics/gegl version 0.0.20 [adam 2008-10-16]
