@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.17 2008/02/03 12:20:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.18 2008/10/16 13:41:21 drochner Exp $
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-font-dialog.h
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-config-dialog.h
 include/libgnomeprintui-2.2/libgnomeprintui/gnome-print-content-selector.h
@@ -54,6 +54,7 @@ share/locale/eu/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/fa/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/fi/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/fr/LC_MESSAGES/libgnomeprintui-2.2.mo
+share/locale/fur/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/ga/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/gl/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/gu/LC_MESSAGES/libgnomeprintui-2.2.mo
@@ -84,6 +85,7 @@ share/locale/oc/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/or/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/pa/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/pl/LC_MESSAGES/libgnomeprintui-2.2.mo
+share/locale/ps/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/pt/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/pt_BR/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/ro/LC_MESSAGES/libgnomeprintui-2.2.mo
@@ -94,7 +96,7 @@ share/locale/sk/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/sl/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/sq/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/sr/LC_MESSAGES/libgnomeprintui-2.2.mo
-share/locale/sr@Latn/LC_MESSAGES/libgnomeprintui-2.2.mo
+share/locale/sr@latin/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/sv/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/ta/LC_MESSAGES/libgnomeprintui-2.2.mo
 share/locale/te/LC_MESSAGES/libgnomeprintui-2.2.mo
