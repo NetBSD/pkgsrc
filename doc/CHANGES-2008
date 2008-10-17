@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2534 2008/10/16 23:18:13 hira Exp $
+$NetBSD: CHANGES-2008,v 1.2535 2008/10/17 07:22:57 gson Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4377,3 +4377,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added graphics/gegl version 0.0.20 [adam 2008-10-16]
 	Updated x11/gtk-sharp to 2.12.4 [wiz 2008-10-16]
 	Updated misc/openoffice3 to 3.0.0nb1 [hira 2008-10-16]
+	Updated devel/sdcc to 2.8.0 [gson 2008-10-17]
