@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2537 2008/10/17 12:47:46 bjs Exp $
+$NetBSD: CHANGES-2008,v 1.2538 2008/10/17 19:27:53 sborrill Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4380,3 +4380,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/sdcc to 2.8.0 [gson 2008-10-17]
 	Updated security/stunnel to 4.26 [adam 2008-10-17]
 	Updated lang/py-pyrex to 0.9.8.5 [bjs 2008-10-17]
+	Added www/ap-auth-ntlm version 0.5 [sborrill 2008-10-17]
+	Added www/ap2-auth-ntlm version 0.2 [sborrill 2008-10-17]
