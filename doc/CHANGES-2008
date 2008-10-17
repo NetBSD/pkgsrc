@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2536 2008/10/17 07:33:43 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2537 2008/10/17 12:47:46 bjs Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4379,3 +4379,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/openoffice3 to 3.0.0nb1 [hira 2008-10-16]
 	Updated devel/sdcc to 2.8.0 [gson 2008-10-17]
 	Updated security/stunnel to 4.26 [adam 2008-10-17]
+	Updated lang/py-pyrex to 0.9.8.5 [bjs 2008-10-17]
