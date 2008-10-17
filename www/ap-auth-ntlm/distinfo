@@ -1,0 +1,8 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/10/17 19:23:25 sborrill Exp $
+
+SHA1 (ntlm1.tar.gz) = f1fb13c664125c8d543069d3357a740cbb76a154
+RMD160 (ntlm1.tar.gz) = 768ff7e0fb381c1b6642d6d1a739c209f17f26fd
+Size (ntlm1.tar.gz) = 79318 bytes
+SHA1 (patch-ntlmssp.inc.c) = 9a92d9a86996933269998b48e52a0c66489f2d65
+SHA1 (patch-smbencrypt.inc.c) = 55c74559a05f9d7dfab6df006dea74fdcb1fe49a
+SHA1 (patch-smblib.inc.c) = 90c4c795a7d4619650e565d3055cf2a0447b7d70
