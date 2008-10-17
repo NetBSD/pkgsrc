@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7598 2008/10/16 21:36:07 adam Exp $
+$NetBSD: TODO,v 1.7599 2008/10/17 07:33:43 adam Exp $
 
 Suggested new packages
 ======================
@@ -1256,7 +1256,6 @@ Suggested package updates
 	o strace-4.5.16
 	o stratagus-2.2.2
 	o streamripper-1.63.0
-	o stunnel-4.26
 	o subtitleeditor-0.25.0
 	o sunbird-0.5 [ghen]
 	o suse_base-11.0
@@ -1356,7 +1355,6 @@ Suggested package updates
 	o wpa_gui-0.5.7
 	o wpi-firmware-1.14.2
 	o wwwoffle-2.9d
-	o wxGTK-2.8.8
 	o wxRemind-86
 	o wyrd-1.4.4
 	o x11perf-1.5
