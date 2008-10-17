@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7599 2008/10/17 07:33:43 adam Exp $
+$NetBSD: TODO,v 1.7600 2008/10/17 12:15:56 wiz Exp $
 
 Suggested new packages
 ======================
@@ -495,7 +495,6 @@ Suggested package updates
 	o classpath-0.97.2
 	o claws-mail-3.6.1
 	o climm-0.6.3
-	o clive-1.0.2
 	o cocoon-2.1.10
 	o colorize-0.3.4
 	o compiz-0.7.8
@@ -675,7 +674,6 @@ Suggested package updates
 	o gnome-build-2.24.0
 	o gnome-desktop-sharp-2.24.0
 	o gnome-games-2.24.0
-	o gnome-icon-theme-2.24.0
 	o gnome-mag-0.15.4
 	o gnome-pilot-2.0.16
 	o gnome-sharp-2.24.0
@@ -716,7 +714,6 @@ Suggested package updates
 	o gtexinfo-4.13
 	o gthumb-2.10.10
 	o gtick-0.4.2
-	o gtk-sharp-2.12.4
 	o gtk-systrace-20030623
 	o gtk2-engines-2.16.0
 	o gtkglarea-2.0.0
@@ -825,7 +822,6 @@ Suggested package updates
 	o libdiscid-0.2.1
 	o libdockapp-0.6.1
 	o libdvbpsi-0.1.6
-	o libevent-1.4.8
 	o libflash-0.4.13
 	o libgail-gnome-1.20.1
 	o libgda-3.1.5
@@ -852,7 +848,6 @@ Suggested package updates
 	o libopensync-0.35
 	o libprelude-0.9.21
 	o libshout-2.2.2
-	o libsigc++-2.2.3
 	o libssh-0.2
 	o libstatgrab-0.16
 	o libstree-0.4.2
@@ -1052,7 +1047,6 @@ Suggested package updates
 	o phpmyadmin-3.0.0
 	o phppgadmin-4.2
 	o phylip-3.65
-	o physfs-1.1.1
 	o picp-0.6.8
 	o pim6dd-20040819a
 	o pim6sd-20040824a
@@ -1431,7 +1425,6 @@ Suggested package updates
 	o yacas-1.2.0
 	o yafc-1.1
 	o yasm-0.7.2
-	o yaz-3.0.36
 	o yelp-2.24.0
 	o yodl-2.01.02
 	o ysm-2.9.9.1
