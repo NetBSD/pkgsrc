@@ -1,7 +1,7 @@
 #!@PERL@ -w
 # -*- perl -*-
 #
-# $NetBSD: blbump,v 1.4 2006/04/06 06:25:46 reed Exp $
+# $NetBSD: blbump,v 1.5 2008/10/17 14:23:58 he Exp $
 #
 # Copyright (c) 2003, 2004 The NetBSD Foundation, Inc.
 #
@@ -142,7 +142,6 @@ foreach $pkg (@PACKAGES) {
         print "$pkg\n";
     } else {
         print "$pkg\n" if blbump("$pkg") == 0;
-        $pkg =~ /\/(.*)$/;
     }
 }
 
