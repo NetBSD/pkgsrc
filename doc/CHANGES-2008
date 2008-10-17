@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2538 2008/10/17 19:27:53 sborrill Exp $
+$NetBSD: CHANGES-2008,v 1.2539 2008/10/17 23:42:35 gdt Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4382,3 +4382,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated lang/py-pyrex to 0.9.8.5 [bjs 2008-10-17]
 	Added www/ap-auth-ntlm version 0.5 [sborrill 2008-10-17]
 	Added www/ap2-auth-ntlm version 0.2 [sborrill 2008-10-17]
+	Updated geography/geos to 3.0.2 [gdt 2008-10-17]
