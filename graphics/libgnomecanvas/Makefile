@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2008/10/16 17:49:18 drochner Exp $
+# $NetBSD: Makefile,v 1.49 2008/10/17 11:26:19 drochner Exp $
 #
 
 DISTNAME=		libgnomecanvas-2.20.1.1
@@ -19,6 +19,8 @@ USE_TOOLS+=		gmake msgfmt pkg-config intltool
 USE_LIBTOOL=		yes
 
 PKGCONFIG_OVERRIDE=	libgnomecanvas/libgnomecanvas-2.0.pc.in
+
+BUILDLINK_API_DEPENDS.gtk2=	gtk2+>=2.14.0
 
 .include "../../devel/gettext-lib/buildlink3.mk"
 .include "../../devel/libglade/buildlink3.mk"
