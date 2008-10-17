@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.590 2008/10/16 20:07:33 drochner Exp $
+# $NetBSD: Makefile,v 1.591 2008/10/17 19:26:26 sborrill Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -16,6 +16,7 @@ SUBDIR+=	ap-auth-external
 SUBDIR+=	ap-auth-kerb
 SUBDIR+=	ap-auth-ldap
 SUBDIR+=	ap-auth-mysql
+SUBDIR+=	ap-auth-ntlm
 SUBDIR+=	ap-auth-pam
 SUBDIR+=	ap-auth-pgsql
 SUBDIR+=	ap-auth-postgresql
@@ -42,6 +43,7 @@ SUBDIR+=	ap-xslt
 SUBDIR+=	ap2-auth-external
 SUBDIR+=	ap2-auth-ldap
 SUBDIR+=	ap2-auth-mysql
+SUBDIR+=	ap2-auth-ntlm
 SUBDIR+=	ap2-auth-pgsql
 SUBDIR+=	ap2-auth-radius
 SUBDIR+=	ap2-auth-xradius
