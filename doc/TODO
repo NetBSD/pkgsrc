@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7601 2008/10/17 13:00:06 bjs Exp $
+$NetBSD: TODO,v 1.7602 2008/10/17 17:35:51 epg Exp $
 
 Suggested new packages
 ======================
@@ -443,6 +443,7 @@ Suggested package updates
 	o bacula-doc-2.0.3
 	o balance-3.42
 	o balsa-2.4.16
+	o bazaar-1.8 [breaks bzr-svn, waiting for update]
 	o bbdb-2.35
 	o bbkeys-0.9.0
 	o bbsload-0.2.8
