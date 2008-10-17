@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2008/10/01 14:34:32 obache Exp $
+# $NetBSD: options.mk,v 1.6 2008/10/17 07:31:58 adam Exp $
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.stunnel
 PKG_SUPPORTED_OPTIONS=	inet6 pthread libwrap
@@ -8,7 +8,7 @@ CHECK_BUILTIN.pthread:=		yes
 CHECK_BUILTIN.pthread:=		no
 
 .if !empty(BUILTIN_LIB_FOUND.pthread:M[yY][eE][sS])
-PKG_SUGGESTED_OPTIONS+=	pthread 
+PKG_SUGGESTED_OPTIONS+=	pthread
 .endif
 
 .include "../../mk/bsd.options.mk"
