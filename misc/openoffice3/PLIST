@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.2 2008/10/18 01:05:08 hira Exp $
+@comment $NetBSD: PLIST,v 1.3 2008/10/18 01:35:25 hira Exp $
 bin/scalc
 bin/sdraw
 bin/simpress
@@ -11,5 +11,5 @@ share/applications/draw.desktop
 share/applications/impress.desktop
 share/applications/math.desktop
 share/applications/printeradmin.desktop
-${PLIST.x11}share/applications/qstart.desktop
+${PLIST.gtk2}share/applications/qstart.desktop
 share/applications/writer.desktop
