@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.10 2008/08/26 22:21:55 shannonjr Exp $
+@comment $NetBSD: PLIST,v 1.11 2008/10/18 13:28:28 shannonjr Exp $
 bin/libprelude-config
 bin/prelude-adduser
 bin/prelude-admin
@@ -47,7 +47,6 @@ include/libprelude/prelude-string.h
 include/libprelude/prelude-thread.h
 include/libprelude/prelude-timer.h
 include/libprelude/prelude.h
-include/libprelude/variable.h
 lib/libprelude.la
 share/aclocal/libprelude.m4
 share/doc/libprelude/ch01.html
