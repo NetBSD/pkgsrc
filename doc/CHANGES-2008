@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2541 2008/10/18 01:29:19 hira Exp $
+$NetBSD: CHANGES-2008,v 1.2542 2008/10/18 04:51:14 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4386,3 +4386,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated geography/postgresql81-postgis to 1.3.3 [gdt 2008-10-17]
 	Updated misc/openoffice3 to 3.0.0nb2 [hira 2008-10-18]
 	Updated misc/openoffice2 to 2.4.1nb5 [hira 2008-10-18]
+	Updated mail/spamdyke to 4.0.7 [schmonz 2008-10-18]
