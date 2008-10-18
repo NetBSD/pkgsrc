@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2540 2008/10/17 23:42:47 gdt Exp $
+$NetBSD: CHANGES-2008,v 1.2541 2008/10/18 01:29:19 hira Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4384,3 +4384,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/ap2-auth-ntlm version 0.2 [sborrill 2008-10-17]
 	Updated geography/geos to 3.0.2 [gdt 2008-10-17]
 	Updated geography/postgresql81-postgis to 1.3.3 [gdt 2008-10-17]
+	Updated misc/openoffice3 to 3.0.0nb2 [hira 2008-10-18]
+	Updated misc/openoffice2 to 2.4.1nb5 [hira 2008-10-18]
