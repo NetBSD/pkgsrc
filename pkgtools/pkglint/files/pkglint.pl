@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.775 2008/10/16 09:08:21 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.776 2008/10/18 16:35:59 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -2822,12 +2822,13 @@ sub get_subdirs($) {
 	my (@result) = ();
 
 	if (opendir(DIR, $dir)) {
-		foreach my $subdir (readdir(DIR)) {
+		my @subdirs = readdir(DIR);
+		closedir(DIR) or die;
+		foreach my $subdir (@subdirs) {
 			if ($subdir ne "." && $subdir ne ".." && $subdir ne "CVS" && -d "${dir}/${subdir}" && !is_emptydir("${dir}/${subdir}")) {
 				push(@result, $subdir);
 			}
 		}
-		closedir(DIR);
 	}
 	return @result;
 }
@@ -4059,18 +4060,11 @@ sub checkline_mk_varuse($$$$) {
 	if (defined($type) && !($type->is_guessed)) {
 		# Great.
 
-	} elsif (defined($pkgctx_vardef) && exists($pkgctx_vardef->{$varname})) {
-		# A variable that is defined somewhere may also be used.
-
-	} elsif (exists($mkctx_vardef->{$varname})) {
-		# A variable that has been defined in the current file
-		# may also be used.
+	} elsif (var_is_used($varname)) {
+		# Fine.
 
 	} elsif (defined($mkctx_for_variables) && exists($mkctx_for_variables->{$varname})) {
 		# Variables defined in .for loops are also ok.
-
-	} elsif (defined($mkctx_plist_vars) && exists($mkctx_plist_vars->{$varname})) {
-		# PLIST variables are also ok.
 
 	} else {
 		$opt_warn_extra and $line->log_warning("${varname} is used but not defined. Spelling mistake?");
