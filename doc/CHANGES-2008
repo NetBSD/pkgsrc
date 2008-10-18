@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2544 2008/10/18 11:57:20 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2545 2008/10/18 13:33:29 shannonjr Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4390,3 +4390,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated fonts/fontforge to 20080927 [adam 2008-10-18]
 	Updated security/gnutls to 2.6.0 [adam 2008-10-18]
 	Updated emulators/wine to 1.0.1 [adam 2008-10-18]
+	Updated security/libprelude to 0.9.21.1 [shannonjr 2008-10-18]
+	Updated security/prelude-lml to 0.9.14 [shannonjr 2008-10-18]
