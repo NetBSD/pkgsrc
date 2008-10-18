@@ -1,0 +1,12 @@
+$NetBSD: patch-ac,v 1.1 2008/10/18 18:32:18 tnn Exp $
+
+--- src/addr_compl.c.orig	2008-03-13 08:15:07.000000000 +0100
++++ src/addr_compl.c
+@@ -30,6 +30,7 @@
+ #include <gtk/gtkwindow.h>
+ #include <gtk/gtkentry.h>
+ #include <gtk/gtkeditable.h>
++#include <gtk/gtkctree.h>
+ #include <gtk/gtkclist.h>
+ #include <gtk/gtkscrolledwindow.h>
+ 
