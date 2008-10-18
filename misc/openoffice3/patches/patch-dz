@@ -1,0 +1,21 @@
+$NetBSD: patch-dz,v 1.1 2008/10/18 11:09:11 hira Exp $
+
+XXX: lang/gcc34 allows implicit function declaration.
+
+--- redland/raptor-1.4.17.patch.orig	2008-10-18 10:43:14.000000000 +0000
++++ redland/raptor-1.4.17.patch	2008-10-18 10:44:08.000000000 +0000
+@@ -271,3 +271,14 @@
+  	  ;;
+  
+  	irix | nonstopux)
++--- misc/raptor-1.4.17/configure	2008-10-18 10:41:27.000000000 +0000
+++++ misc/build/raptor-1.4.17/configure	2008-10-18 10:42:41.000000000 +0000
++@@ -22667,7 +22667,7 @@
++   *) ac_try_echo=$ac_try;;
++ esac
++ eval "echo \"\$as_me:$LINENO: $ac_try_echo\"") >&5
++-  (eval "$ac_link") 2>conftest.er1
+++  (eval "$ac_link -Werror-implicit-function-declaration") 2>conftest.er1
++   ac_status=$?
++   grep -v '^ *+' conftest.er1 >conftest.err
++   rm -f conftest.er1
