@@ -1,0 +1,12 @@
+$NetBSD: patch-ag,v 1.1 2008/10/18 18:32:18 tnn Exp $
+
+--- src/select-keys.c.orig	2008-05-16 11:19:55.000000000 +0200
++++ src/select-keys.c
+@@ -33,6 +33,7 @@
+ #include <gtk/gtkscrolledwindow.h>
+ #include <gtk/gtkvbox.h>
+ #include <gtk/gtkhbox.h>
++#include <gtk/gtkctree.h>
+ #include <gtk/gtkclist.h>
+ #include <gtk/gtklabel.h>
+ #include <gtk/gtkentry.h>

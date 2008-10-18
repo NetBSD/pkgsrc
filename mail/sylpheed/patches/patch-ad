@@ -1,0 +1,12 @@
+$NetBSD: patch-ad,v 1.1 2008/10/18 18:32:18 tnn Exp $
+
+--- src/editgroup.c.orig	2007-03-28 03:30:15.000000000 +0200
++++ src/editgroup.c
+@@ -27,6 +27,7 @@
+ #include <glib/gi18n.h>
+ #include <gdk/gdkkeysyms.h>
+ #include <gtk/gtkwindow.h>
++#include <gtk/gtkctree.h>
+ #include <gtk/gtkclist.h>
+ #include <gtk/gtkvbox.h>
+ #include <gtk/gtkstatusbar.h>
