@@ -1,10 +1,10 @@
 #!/bin/sh
 #
-# $NetBSD: preludemanager.sh,v 1.2 2006/01/31 17:54:10 shannonjr Exp $
+# $NetBSD: preludemanager.sh,v 1.3 2008/10/18 13:31:12 shannonjr Exp $
 #
 
 # PROVIDE: preludemanager
-# REQUIRE: mysqld LOGIN
+# REQUIRE: mysqld mail LOGIN
 
 $_rc_subr_loaded . /etc/rc.subr
 
