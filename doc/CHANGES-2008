@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2543 2008/10/18 11:48:50 adam Exp $
+$NetBSD: CHANGES-2008,v 1.2544 2008/10/18 11:57:20 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4388,3 +4388,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated misc/openoffice2 to 2.4.1nb5 [hira 2008-10-18]
 	Updated mail/spamdyke to 4.0.7 [schmonz 2008-10-18]
 	Updated fonts/fontforge to 20080927 [adam 2008-10-18]
+	Updated security/gnutls to 2.6.0 [adam 2008-10-18]
+	Updated emulators/wine to 1.0.1 [adam 2008-10-18]
