@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.20 2008/07/29 05:17:01 adam Exp $
+@comment $NetBSD: PLIST,v 1.21 2008/10/18 11:43:45 adam Exp $
 bin/fontforge
 bin/fontimage
 bin/fontlint
@@ -70,6 +70,7 @@ man/man1/fontforge.1
 man/man1/fontimage.1
 man/man1/fontlint.1
 man/man1/sfddiff.1
+share/fontforge/pixmaps/colorwheel.png
 share/fontforge/pixmaps/editclear.png
 share/fontforge/pixmaps/editclearback.png
 share/fontforge/pixmaps/editcopy.png
@@ -102,6 +103,7 @@ share/fontforge/pixmaps/elementautotrace.png
 share/fontforge/pixmaps/elementbdfinfo.png
 share/fontforge/pixmaps/elementbitmapsavail.png
 share/fontforge/pixmaps/elementbuildaccent.png
+share/fontforge/pixmaps/elementbuildcomposit.png
 share/fontforge/pixmaps/elementclockwise.png
 share/fontforge/pixmaps/elementcomparefonts.png
 share/fontforge/pixmaps/elementcomparelayers.png
