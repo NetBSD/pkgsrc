@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.51 2008/09/17 16:34:40 rillig Exp $
+# $NetBSD: Makefile,v 1.52 2008/10/18 11:43:45 adam Exp $
 
 DISTNAME=	fontforge_full-${VERSION}
 PKGNAME=	fontforge-${VERSION}
@@ -10,7 +10,7 @@ MAINTAINER=	adam@NetBSD.org
 HOMEPAGE=	http://fontforge.sourceforge.net/
 COMMENT=	Postscript font editor
 
-VERSION=	20080720
+VERSION=	20080927
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -23,7 +23,6 @@ USE_TOOLS+=		gmake msgfmt
 GNU_CONFIGURE=		yes
 CONFIGURE_ARGS+=	--without-freetype-src
 CONFIGURE_ARGS+=	--without-python
-CONFIGURE_ENV+=		LOCALBASE=${LOCALBASE}
 WRKSRC=			${WRKDIR}/${PKGNAME_NOREV}
 BROKEN_GETTEXT_DETECTION=	yes
 
