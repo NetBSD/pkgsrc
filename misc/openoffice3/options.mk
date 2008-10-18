@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.2 2008/10/15 23:17:29 hira Exp $
+# $NetBSD: options.mk,v 1.3 2008/10/18 01:05:08 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice3
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 java kde ooo-external-libwpd
@@ -68,10 +68,13 @@ CONFIGURE_ARGS+=	--enable-gnome-vfs --enable-evolution2
 CONFIGURE_ARGS+=	--disable-gnome-vfs --disable-evolution2
 .endif
 
+PLIST_VARS+=		gtk2
 .if !empty(PKG_OPTIONS:Mgtk2)
+PLIST.gtk2=		yes
 CONFIGURE_ARGS+=	--enable-gtk
 .include "../../x11/gtk2/buildlink3.mk"
 .else
+PLIST.gtk2=		no
 CONFIGURE_ARGS+=	--disable-gtk
 .endif
 

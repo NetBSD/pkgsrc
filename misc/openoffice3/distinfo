@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.3 2008/10/16 23:16:46 hira Exp $
+$NetBSD: distinfo,v 1.4 2008/10/18 01:05:08 hira Exp $
 
 SHA1 (openoffice-3.0.0/OOo_3.0.0_src_binfilter.tar.bz2) = 09ff91fd871f00c696befa8064fe04d7a88a3c8a
 RMD160 (openoffice-3.0.0/OOo_3.0.0_src_binfilter.tar.bz2) = edc71b8b0596d63e60431c7266140bf5188abc6d
@@ -54,7 +54,7 @@ SHA1 (patch-cn) = 12e09dde1e8fd8afaf2f48fd6455625790b9ecc4
 SHA1 (patch-cp) = 35151ba658859c9d116ccdf44ec372c9e66435b1
 SHA1 (patch-cq) = 6691fd7fa330db000ec5a9319bf9030b83aa593d
 SHA1 (patch-cr) = aa797461919635c3e6aaa30678a7585d5640dedd
-SHA1 (patch-cs) = dc9afc7cd55cad8f801cb163d25fe2e1803f889a
+SHA1 (patch-cs) = 3f4f360870ad22b1fb88a2ca9f7907e03010ac79
 SHA1 (patch-ct) = a06c5cbc543acecb4f18e858cd844302bbdb50b4
 SHA1 (patch-cu) = b930fd94413c2bdf23ea94b074e3bb5e93784009
 SHA1 (patch-cv) = 2e14a54d369a255ee39fcec7d4f1d2b11a8f4d2e
