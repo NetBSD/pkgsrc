@@ -199,6 +199,7 @@ lang-it			Add Italian language support.
 lang-ja			Add Japanese language support.
 lang-lt			Add Lithuanian language support.
 lang-lv			Add Latvian language support.
+lang-nb			Add Norwegian Bokmal (book language) language support.
 lang-nl			Add Dutch language support.
 lang-no			Add Norwegian language support.
 lang-pl			Add Polish language support.
