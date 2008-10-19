@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.25 2008/10/15 18:22:04 martti Exp $
+# $NetBSD: Makefile.common,v 1.26 2008/10/19 00:11:49 gdt Exp $
 
 # used by databases/sqlite3-tcl/Makefile
 
@@ -12,7 +12,7 @@ MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.sqlite.org/
 COMMENT=	SQL Database Engine in a C Library
 
-LICENSE=	public-domain
+#LICENSE=	public-domain
 
 DISTINFO_FILE=	${.CURDIR}/../../databases/sqlite3/distinfo
 PATCHDIR=	${.CURDIR}/../../databases/sqlite3/patches
