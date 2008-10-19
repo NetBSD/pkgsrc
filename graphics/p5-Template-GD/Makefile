@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:32 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/19 19:18:11 he Exp $
 #
 
 DISTNAME=	Template-GD-2.66
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	graphics
 MASTER_SITES=	http://search.cpan.org/CPAN/authors/id/A/AB/ABW/
 

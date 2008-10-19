@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.11 2008/07/18 12:11:11 rhaen Exp $
+# $NetBSD: Makefile,v 1.12 2008/10/19 19:18:47 he Exp $
 
 DISTNAME=	Data-FormValidator-4.61
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	perl5 textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Data/}
 

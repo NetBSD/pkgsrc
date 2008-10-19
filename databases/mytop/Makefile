@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2008/07/14 12:56:01 joerg Exp $
+# $NetBSD: Makefile,v 1.15 2008/10/19 19:17:43 he Exp $
 #
 
 DISTNAME=	mytop-0.8
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	databases
 MASTER_SITES=	http://public.yahoo.com/~jzawodn/mytop/
 
