@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.14 2008/02/08 12:45:46 rhaen Exp $
+# $NetBSD: Makefile,v 1.15 2008/10/19 19:18:09 he Exp $
 
 DISTNAME=	Want-0.18
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Algorithm/ROBIN/} # this is a hack
 

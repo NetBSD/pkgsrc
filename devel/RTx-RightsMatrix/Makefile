@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/04/30 10:20:20 cube Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/19 19:18:09 he Exp $
 #
 
 DISTNAME=	RTx-RightsMatrix-0.03.00
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=RTx/}
 EXTRACT_SUFX=	.tgz

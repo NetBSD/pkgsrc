@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.4 2007/04/22 09:25:24 heinz Exp $
+# $NetBSD: Makefile,v 1.5 2008/10/19 19:18:30 he Exp $
 
 P5_LIBINTL_VER=	1.16
 DISTNAME=	libintl-perl-${P5_LIBINTL_VER}
 PKGNAME=	p5-Locale-libintl-${P5_LIBINTL_VER}
+PKGREVISION=	1
 CATEGORIES=	misc perl5
 
 CATEGORIES=	devel perl5

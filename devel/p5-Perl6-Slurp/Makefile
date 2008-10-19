@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2008/06/12 02:14:25 joerg Exp $
+# $NetBSD: Makefile,v 1.4 2008/10/19 19:17:58 he Exp $
 #
 
 DISTNAME=	Perl6-Slurp-0.03
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DC/DCONWAY/}
 

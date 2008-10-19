@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/25 21:37:07 seb Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/19 19:17:45 he Exp $
 
 DISTNAME=	Jifty-DBI-0.49
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	databases perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Jifty/}
 

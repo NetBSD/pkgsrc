@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.27 2007/02/15 14:30:50 rillig Exp $
+# $NetBSD: Makefile,v 1.28 2008/10/19 19:18:10 he Exp $
 #
 
 DISTNAME=	frozen-bubble-1.0.0
-PKGREVISION=	11
+PKGREVISION=	12
 CATEGORIES=	games
 MASTER_SITES=	http://zarb.org/~gc/fb/
 EXTRACT_SUFX=	.tar.bz2

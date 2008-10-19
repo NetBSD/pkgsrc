@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2008/07/26 06:52:00 seb Exp $
+# $NetBSD: Makefile,v 1.4 2008/10/19 19:17:59 he Exp $
 #
 
 DISTNAME=	Smart-Comments-v1.0.3
 PKGNAME=	p5-Smart-Comments-1.0.3
+PKGREVISION=	1
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/D/DC/DCONWAY/}
 

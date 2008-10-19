@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.23 2008/10/16 18:12:06 drochner Exp $
+# $NetBSD: Makefile,v 1.24 2008/10/19 19:18:31 he Exp $
 #
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -6,6 +6,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 PKGNAME=	${DISTNAME:S/-/-xine-/}
 
+PKGREVISION=	1
 COMMENT+=	(using Xine)
 
 CONFLICTS+=	totem-[0-9]*

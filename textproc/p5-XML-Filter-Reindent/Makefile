@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:50 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/10/19 19:18:59 he Exp $
 
 DISTNAME=	XML-Filter-Reindent-0.03
 PKGNAME=	p5-${DISTNAME}
 #SVR4_PKGNAME=
-PKGREVISION=	2
+PKGREVISION=	3
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../../authors/id/T/TJ/TJMATHER/}
 
