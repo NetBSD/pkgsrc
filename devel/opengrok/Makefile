@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.5 2008/04/20 16:08:20 adrianp Exp $
+# $NetBSD: Makefile,v 1.6 2008/10/19 19:36:13 adrianp Exp $
 #
 
-DISTNAME=	opengrok-0.6.1
+DISTNAME=	opengrok-0.7
 CATEGORIES=	devel
 MASTER_SITES=	http://www.opensolaris.org/os/project/opengrok/files/
 
@@ -10,7 +10,6 @@ HOMEPAGE=	http://www.opensolaris.org/os/project/opengrok/files/
 COMMENT=	Fast and usable source code search and cross reference engine
 
 DEPENDS+=	exctags-[0-9]*:../../devel/exctags
-DEPENDS+=	apache-tomcat>=5.5:../../www/apache-tomcat55
 DEPENDS+=	jflex-[0-9]*:../../devel/jflex
 DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 DEPENDS+=	zip-[0-9]*:../../archivers/zip
@@ -19,7 +18,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 NO_BUILD=	YES
 USE_JAVA=	run
-USE_JAVA2=	1.5
+USE_JAVA2=	1.5 6
 
 CONF_FILES=	${PREFIX}/share/examples/opengrok/paths.tsv \
 		${PREFIX}/share/opengrok/paths.tsv
@@ -54,5 +53,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/run-quiet.sh \
 		${DESTDIR}${PREFIX}/share/opengrok
 
-.include "../../mk/java-vm.mk"
+#.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
