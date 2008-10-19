@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.17 2008/06/20 01:09:08 joerg Exp $
+# $NetBSD: Makefile,v 1.18 2008/10/19 19:17:41 he Exp $
 #
 
 DISTNAME=		bioperl-0.7.0
-PKGREVISION=		2
+PKGREVISION=		3
 CATEGORIES=		biology
 MASTER_SITES=		http://bioperl.org/Core/Latest/
 

@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.7 2008/08/24 20:30:41 he Exp $
+# $NetBSD: Makefile,v 1.8 2008/10/19 19:18:33 he Exp $
 #
 
 DISTNAME=	Nmap-Parser-1.16
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Nmap/}
 

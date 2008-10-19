@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2008/06/12 02:14:23 joerg Exp $
+# $NetBSD: Makefile,v 1.14 2008/10/19 19:17:56 he Exp $
 
 DISTNAME=	Log-Agent-0.307
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 SVR4_PKGNAME=	p5lag
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Log/}

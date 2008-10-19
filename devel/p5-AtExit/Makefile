@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.16 2008/06/20 01:09:13 joerg Exp $
+# $NetBSD: Makefile,v 1.17 2008/10/19 19:17:47 he Exp $
 #
 
 DISTNAME=	AtExit-2.01
 PKGNAME=	p5-AtExit-2.01
+PKGREVISION=	3
 SVR4_PKGNAME=	p5ate
-PKGREVISION=	2
 CATEGORIES=	devel perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=AtExit/}
 

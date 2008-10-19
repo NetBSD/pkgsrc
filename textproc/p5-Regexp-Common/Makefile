@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2008/09/15 13:53:12 he Exp $
+# $NetBSD: Makefile,v 1.11 2008/10/19 19:18:55 he Exp $
 #
 
 DISTNAME=		Regexp-Common-2.122
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		textproc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Regexp/}
 

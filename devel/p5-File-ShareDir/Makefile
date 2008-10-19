@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/08/20 22:16:34 tonnerre Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/19 19:17:54 he Exp $
 #
 
 DISTNAME=		File-ShareDir-1.00
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		devel perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=File/}
 

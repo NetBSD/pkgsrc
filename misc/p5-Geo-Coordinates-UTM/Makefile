@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2008/07/14 16:34:43 he Exp $
+# $NetBSD: Makefile,v 1.4 2008/10/19 19:18:22 he Exp $
 #
 
 DISTNAME=		Geo-Coordinates-UTM-0.08
 PKGNAME=		p5-${DISTNAME}
+PKGREVISION=		1
 CATEGORIES=		misc perl5
 MASTER_SITES=		${MASTER_SITE_PERL_CPAN:=Geo/}
 

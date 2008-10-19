@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.13 2008/08/05 22:13:05 he Exp $
+# $NetBSD: Makefile,v 1.14 2008/10/19 19:18:47 he Exp $
 
 DISTNAME=	File-Remove-1.42
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	perl5 sysutils
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=File/}
 

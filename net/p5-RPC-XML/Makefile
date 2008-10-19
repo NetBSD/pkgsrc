@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/07/23 22:30:50 rhaen Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/19 19:18:43 he Exp $
 
 DISTNAME=	RPC-XML-0.60
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	net www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=RPC/}
 

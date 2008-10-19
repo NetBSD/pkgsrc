@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.14 2008/07/24 10:02:44 rhaen Exp $
+# $NetBSD: Makefile,v 1.15 2008/10/19 19:18:10 he Exp $
 #
 
 DISTNAME=	Font-TTF-0.45
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Font/}
 

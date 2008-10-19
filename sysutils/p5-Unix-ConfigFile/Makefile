@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/06/12 02:14:46 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/19 19:18:47 he Exp $
 
 DISTNAME=	Unix-ConfigFile-0.06
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	perl5 sysutils
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Unix/}
 
