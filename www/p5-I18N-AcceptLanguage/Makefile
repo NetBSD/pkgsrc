@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/02/16 05:02:36 obache Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/19 19:19:16 he Exp $
 
 DISTNAME=	I18N-AcceptLanguage-1.04
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 SVR4_PKGNAME=	p5ial
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=I18N/}

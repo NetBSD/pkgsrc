@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/05/30 11:54:14 abs Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/19 19:19:00 he Exp $
 
 DISTNAME=	YAML-Tiny-1.32
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 CATEGORIES=	perl5 textproc
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=../by-authors/id/A/AD/ADAMK/}
 
