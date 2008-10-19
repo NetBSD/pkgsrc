@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.5 2008/03/06 21:21:10 adrianp Exp $
+# $NetBSD: Makefile,v 1.6 2008/10/19 18:02:19 adrianp Exp $
 #
 
-DISTNAME=	viewvc-1.0.5
+DISTNAME=	viewvc-1.0.7
 CATEGORIES=	devel www
-MASTER_SITES=	http://viewvc.tigris.org/files/documents/3330/41694/
+MASTER_SITES=	http://viewvc.tigris.org/files/documents/3330/44050/
 
 MAINTAINER=	adrianp@NetBSD.org
 HOMEPAGE=	http://www.viewvc.org/
