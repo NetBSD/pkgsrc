@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.21 2008/10/16 16:19:00 drochner Exp $
+@comment $NetBSD: PLIST,v 1.22 2008/10/19 17:42:29 wiz Exp $
 bin/evince
 bin/evince-thumbnailer
 include/evince-2.20/evince/ev-async-renderer.h
@@ -209,6 +209,7 @@ share/locale/ja/LC_MESSAGES/evince.mo
 share/locale/ka/LC_MESSAGES/evince.mo
 share/locale/kn/LC_MESSAGES/evince.mo
 share/locale/ko/LC_MESSAGES/evince.mo
+share/locale/ks/LC_MESSAGES/evince.mo
 share/locale/ku/LC_MESSAGES/evince.mo
 share/locale/lt/LC_MESSAGES/evince.mo
 share/locale/lv/LC_MESSAGES/evince.mo
@@ -224,6 +225,7 @@ share/locale/oc/LC_MESSAGES/evince.mo
 share/locale/or/LC_MESSAGES/evince.mo
 share/locale/pa/LC_MESSAGES/evince.mo
 share/locale/pl/LC_MESSAGES/evince.mo
+share/locale/ps/LC_MESSAGES/evince.mo
 share/locale/pt/LC_MESSAGES/evince.mo
 share/locale/pt_BR/LC_MESSAGES/evince.mo
 share/locale/ro/LC_MESSAGES/evince.mo
@@ -234,6 +236,7 @@ share/locale/sk/LC_MESSAGES/evince.mo
 share/locale/sl/LC_MESSAGES/evince.mo
 share/locale/sq/LC_MESSAGES/evince.mo
 share/locale/sr/LC_MESSAGES/evince.mo
+share/locale/sr@latin/LC_MESSAGES/evince.mo
 share/locale/sv/LC_MESSAGES/evince.mo
 share/locale/ta/LC_MESSAGES/evince.mo
 share/locale/te/LC_MESSAGES/evince.mo
