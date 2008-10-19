@@ -1,6 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2007/11/13 16:43:04 ghen Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/19 19:18:20 he Exp $
 
 DISTNAME=		sqlgrey-1.6.8
+PKGREVISION=		1
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=sqlgrey/}
 EXTRACT_SUFX=		.tar.bz2

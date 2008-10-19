@@ -1,10 +1,10 @@
-# $NetBSD: Makefile,v 1.15 2008/06/12 02:14:17 joerg Exp $
+# $NetBSD: Makefile,v 1.16 2008/10/19 19:17:42 he Exp $
 #
 
 DISTNAME=	nkf205
 PKGNAME=	p5-nkf-2.05
+PKGREVISION=	2
 SVR4_PKGNAME=	p5nkf
-PKGREVISION=	1
 CATEGORIES=	japanese converters perl5
 MASTER_SITES=	http://www01.tcp-ip.or.jp/~furukawa/nkf_utf8/
 
