@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7607 2008/10/19 18:35:30 wiz Exp $
+$NetBSD: TODO,v 1.7608 2008/10/19 18:41:06 schmonz Exp $
 
 Suggested new packages
 ======================
@@ -1108,7 +1108,6 @@ Suggested package updates
 	o py-gnosis-1.2.2
 	o py-gnosis-utils-1.2.1
 	o py-gnutls-0.2.1
-	o py-html2text-2.34
 	o py-imagingtk-1.1.6
 	o py-kenosis-0.96
 	o py-ldap-2.3.4
