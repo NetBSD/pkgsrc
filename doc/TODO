@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7606 2008/10/19 18:07:31 wiz Exp $
+$NetBSD: TODO,v 1.7607 2008/10/19 18:35:30 wiz Exp $
 
 Suggested new packages
 ======================
@@ -468,7 +468,6 @@ Suggested package updates
 	o btpd-0.13 [pkg/38144]
 	o bug-buddy-2.24.1
 	o byacc-20080824
-	o bzflag-2.0.10
 	o bzr-1.8 [breaks bzr-svn, waiting for update]
 	o c4-1.10 [schmonz]
 	o cadaver-0.23.0
@@ -493,7 +492,6 @@ Suggested package updates
 	o cint-5.16
 	o cjk-lyx-1.4.4
 	o classpath-0.97.2
-	o claws-mail-3.6.1
 	o climm-0.6.3
 	o cocoon-2.1.10
 	o colorize-0.3.4
@@ -502,7 +500,6 @@ Suggested package updates
 	o connect-1.96
 	o cook-2.31
 	o courier-0.60.0
-	o courier-authlib-0.61.0
 	o courier-imap-4.4.0
 	o covered-20081007
 	o cpio-2.9
@@ -563,7 +560,6 @@ Suggested package updates
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
 	o eggdrop-1.6.19
 	o egtk-0.3.6.2
-	o ekiga-3.00
 	o electric-8.07
 	o electricfence-2.4.16
 	o elf-0.5.4p1
@@ -743,7 +739,6 @@ Suggested package updates
 	o highlight-2.6.13
 	o hobbitmon-4.0.4 [pkg/30484]
 	o honeyd-1.5c
-	o horde-3.3
 	o host-20070128
 	o hpijs-2.1.7 - note: hplip-0.9.7.tar.gz includes hpijs-2.1.7 in prnt
 	o html2ps-1.0b5
@@ -766,7 +761,6 @@ Suggested package updates
 	o imap-uw-2007b
 	o imapproxy-1.2.5 [see http://horde.org/imapproxy/ -> www.imapproxy.org]
 	o imlib2-1.4.1
-	o ingo-1.2.1
 	o instiki-0.13
 	o intercal-0.24
 	o ion3-20081002
@@ -794,7 +788,6 @@ Suggested package updates
 	o jhead-2.84
 	o john-1.7.3.1
 	o jools-1.0
-	o jpilot-1.6.0
 	o jwhois-4.0 [pkg/38500]
 	o kapooka-0.3
 	o kdbg-2.1.0
@@ -805,9 +798,7 @@ Suggested package updates
 	o kmp-0.5
 	o kmymoney2-0.9
 	o kodos-2.4.5
-	o konversation-1.1
 	o kphotobook-0.0.7
-	o kronolith-2.3
 	o ksi-3.4.2
 	o lapack-20070226
 	o latd-1.21
@@ -829,7 +820,6 @@ Suggested package updates
 	o libflash-0.4.13
 	o libgail-gnome-1.20.1
 	o libgda-3.1.5
-	o libgdiplus-2.0
 	o libggi-2.2.2
 	o libggigcp-1.0.2
 	o libggimisc-2.2.2
@@ -851,7 +841,6 @@ Suggested package updates
 	o libntlm-1.0
 	o libole2-2.2.8
 	o libopensync-0.35
-	o libprelude-0.9.21
 	o libshout-2.2.2
 	o libssh-0.2
 	o libstatgrab-0.16
@@ -907,7 +896,6 @@ Suggested package updates
 	o mlview-0.9.0
 	o mmg-2.0.2
 	o modular-xorg-server-1.5.2
-	o mongrel-1.1.5
 	o monodevelop-1.9
 	o moon-buggy-1.0.51
 	o mowgli-0.7.0
@@ -981,7 +969,6 @@ Suggested package updates
 	o openmortal-0.7.1
 	o openssl-0.9.8i
 	o openttd-0.6.1
-	o opera-9.51 [pkg/39269]
 	o opera-9.60
 	o orca-2.24.1
 	o oregano-0.60.0
@@ -1082,7 +1069,6 @@ Suggested package updates
 	o poptop-1.3.0
 	o posh-0.5.5
 	o postal-0.70
-	o postgresql81-postgis-1.3.3
 	o powermanga-0.90
 	o pptp-1.7.1 [pkg/38038]
 	o prboom-2.4.8.5
@@ -1175,7 +1161,6 @@ Suggested package updates
 	o root-5.14.0
 	o root-tail-1.2
 	o rosegarden4-1.7.0 [replacing audio/rosegarden|pkgsrc-wip]
-	o roundup-1.3.3
 	o rox-2.8
 	o rox-session-0.29
 	o roxirc-2.0
@@ -1193,7 +1178,6 @@ Suggested package updates
 	o ruby-mechanize-0.7.7
 	o ruby-ming-0.2.0
 	o ruby-net-ssh-1.1.4
-	o ruby-rcairo-1.8.0
 	o ruby-rspec-1.1.8
 	o rubygems-1.3.0
 	o rudiments-0.30
@@ -1250,7 +1234,6 @@ Suggested package updates
 	o sound-juicer-2.24.0
 	o source-highlight-2.10
 	o sox-14.1.0
-	o spamdyke-4.0.6
 	o spcaview-20060501
 	o spim-7.3
 	o srp_client-1.7.5 [jlam]
@@ -1310,7 +1293,6 @@ Suggested package updates
 	o tripwire-2.3.1 [see also pkg/22362]
 	o tsclient-0.140
 	o ttf2pk-1.5.20050518
-	o turba-2.3
 	o tuxpaint-0.9.20
 	o twelf-1.5r1
 	o twolame-0.3.12
