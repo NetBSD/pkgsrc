@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.20 2008/06/20 01:09:38 joerg Exp $
+# $NetBSD: Makefile,v 1.21 2008/10/19 19:18:47 he Exp $
 #
 
 DISTNAME=	Convert-BER-1.3101
 PKGNAME=	p5-${DISTNAME}
+PKGREVISION=	1
 SVR4_PKGNAME=	p5ber
 CATEGORIES=	textproc perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Convert/}
