@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2550 2008/10/19 18:02:35 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.2551 2008/10/19 18:41:06 schmonz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4398,3 +4398,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated databases/tokyotyrant to 1.1.6 [obache 2008-10-19]
 	Updated graphics/ruby-rcairo to 1.8.0 [obache 2008-10-19]
 	Updated www/viewvc to 1.0.7 [adrianp 2008-10-19]
+	Updated textproc/py-html2text to 2.34 [schmonz 2008-10-19]
