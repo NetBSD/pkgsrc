@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2545 2008/10/18 13:33:29 shannonjr Exp $
+$NetBSD: CHANGES-2008,v 1.2546 2008/10/19 09:50:27 apb Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4392,3 +4392,5 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated emulators/wine to 1.0.1 [adam 2008-10-18]
 	Updated security/libprelude to 0.9.21.1 [shannonjr 2008-10-18]
 	Updated security/prelude-lml to 0.9.14 [shannonjr 2008-10-18]
+	Added devel/p5-Internals version 1.1 [apb 2008-10-19]
+	Updated devel/p5-PerlIO-via-dynamic to 0.13nb1 [apb 2008-10-19]
