@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2551 2008/10/19 18:41:06 schmonz Exp $
+$NetBSD: CHANGES-2008,v 1.2552 2008/10/19 19:36:30 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4399,3 +4399,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/ruby-rcairo to 1.8.0 [obache 2008-10-19]
 	Updated www/viewvc to 1.0.7 [adrianp 2008-10-19]
 	Updated textproc/py-html2text to 2.34 [schmonz 2008-10-19]
+	Updated devel/opengrok to 0.7 [adrianp 2008-10-19]
