@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.21 2008/10/06 15:34:00 schmonz Exp $
+# $NetBSD: Makefile,v 1.22 2008/10/19 19:19:01 he Exp $
 #
 
 DISTNAME=	ikiwiki_2.66
 PKGNAME=	${DISTNAME:S/_/-/}
+PKGREVISION=	1
 CATEGORIES=	www textproc
 MASTER_SITES=	${MASTER_SITE_DEBIAN:=pool/main/i/ikiwiki/}
 

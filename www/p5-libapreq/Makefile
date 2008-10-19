@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.19 2008/04/06 15:51:00 heinz Exp $
+# $NetBSD: Makefile,v 1.20 2008/10/19 19:19:17 he Exp $
 
 DISTNAME=	libapreq-1.33
 PKGNAME=	p5-${DISTNAME}
-PKGREVISION=	4
+PKGREVISION=	5
 SVR4_PKGNAME=	p5lap
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=Apache/}
