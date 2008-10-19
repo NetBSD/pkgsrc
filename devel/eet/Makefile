@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.9 2008/06/22 01:21:31 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/10/19 23:52:20 minskim Exp $
 #
 
 DISTNAME=	eet-1.0.1
@@ -6,7 +6,7 @@ CATEGORIES=	devel archivers
 MASTER_SITES=	http://download.enlightenment.org/snapshots/2008-05-19/
 EXTRACT_SUFX=	.tar.bz2
 
-MAINTAINER=	pkgsrc-users@NetBSD.org
+MAINTAINER=	yazzy@yazzy.org
 HOMEPAGE=	http://www.enlightenment.org/
 COMMENT=	Library for speedy storage, retrieval, and compression
 
