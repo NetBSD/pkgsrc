@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2565 2008/10/20 19:43:15 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.2566 2008/10/20 20:34:12 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4414,3 +4414,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated pkgtools/pkglint to 4.89 [rillig 2008-10-20]
 	Updated databases/guile-pg to 0.37 [gdt 2008-10-20]
 	Updated inputmethod/libhangul to 0.0.8 [msk 2008-10-20]
+	Added fonts/lohit-fonts version 2.3.1 [ghen 2008-10-20]
