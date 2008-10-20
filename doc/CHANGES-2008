@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2558 2008/10/20 07:46:13 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2559 2008/10/20 07:48:31 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4407,3 +4407,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/squid30 to 3.0.10 [taca 2008-10-20]
 	Updated multimedia/mplayer to 1.0rc10nb9 [wiz 2008-10-20]
 	Updated multimedia/mplayer-plugin-firefox to 3.55 [wiz 2008-10-20]
+	Updated chat/bsflite to 0.84 [wiz 2008-10-20]
