@@ -1,4 +1,4 @@
-$NetBSD: patch-du,v 1.4 2008/10/20 12:30:16 hira Exp $
+$NetBSD: patch-du,v 1.5 2008/10/20 14:26:23 hira Exp $
 
 --- solenv/inc/pkgsrc.mk.orig	2008-10-16 18:30:22.000000000 +0900
 +++ solenv/inc/pkgsrc.mk	2008-10-17 16:32:40.000000000 +0900
@@ -33,8 +33,8 @@ $NetBSD: patch-du,v 1.4 2008/10/20 12:30:16 hira Exp $
 +AWTLIB=${LIB_jawt} ${LIB_mawt} -ljawt
 +
 +# Add runtime search path ($ORIGIN cannot be used in pkgsrc).
-+LINKFLAGS+= ${LIB_base} ${LIB_ure} ${LIB_jawt} ${LIB_mawt}
-+EXTRA_LINKFLAGS+= ${LIB_base} ${LIB_ure} ${LIB_jawt} ${LIB_mawt}
++LINKFLAGS+= ${LIB_base} ${LIB_ure}
++EXTRA_LINKFLAGS+= ${LIB_base} ${LIB_ure}
 +
 +# XXX: unoxml/source/rdf and libxmlsec don't use LINKFLAGS.
 +REDLANDLIB+= ${LIB_base} ${LIB_ure}
