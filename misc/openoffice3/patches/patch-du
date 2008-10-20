@@ -1,8 +1,8 @@
-$NetBSD: patch-du,v 1.5 2008/10/20 14:26:23 hira Exp $
+$NetBSD: patch-du,v 1.6 2008/10/20 16:14:54 hira Exp $
 
 --- solenv/inc/pkgsrc.mk.orig	2008-10-16 18:30:22.000000000 +0900
-+++ solenv/inc/pkgsrc.mk	2008-10-17 16:32:40.000000000 +0900
-@@ -0,0 +1,36 @@
++++ solenv/inc/pkgsrc.mk	2008-10-21 00:03:23.000000000 +0900
+@@ -0,0 +1,35 @@
 +#
 +# Settings for pkgsrc.
 +#
@@ -28,9 +28,8 @@ $NetBSD: patch-du,v 1.5 2008/10/20 14:26:23 hira Exp $
 +LIB_base=@COMPILER_RPATH_FLAG@@OO_LIBDIR@
 +LIB_ure=@COMPILER_RPATH_FLAG@@OO_LIBDIR@/../ure-link/lib
 +LIB_jawt=@LIB_jawt@
-+LIB_mawt=@LIB_mawt@
 +
-+AWTLIB=${LIB_jawt} ${LIB_mawt} -ljawt
++AWTLIB=${LIB_jawt} -ljawt
 +
 +# Add runtime search path ($ORIGIN cannot be used in pkgsrc).
 +LINKFLAGS+= ${LIB_base} ${LIB_ure}
