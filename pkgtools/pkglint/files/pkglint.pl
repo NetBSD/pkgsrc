@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.777 2008/10/20 10:10:28 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.778 2008/10/20 10:56:18 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -168,7 +168,6 @@ BEGIN {
 		print_summary_and_exit
 		set_explain set_gcc_output_format
 		get_show_source_flag set_show_source_flag
-		get_klickibunti_flag set_klickibunti_flag
 	);
 	import PkgLint::Util qw(
 		false true
@@ -188,7 +187,6 @@ use constant gcc_type		=> ["fatal", "error", "warning", "note", "debug"];
 my $errors		= 0;
 my $warnings		= 0;
 my $gcc_output_format	= false;
-my $klickibunti_flag	= false;
 my $explain_flag	= false;
 my $show_source_flag	= false;
 
@@ -270,8 +268,6 @@ sub print_summary_and_exit($) {
 
 sub set_explain()		{ $explain_flag = true; }
 sub set_gcc_output_format()	{ $gcc_output_format = true; }
-sub get_klickibunti_flag()	{ return $klickibunti_flag; }
-sub set_klickibunti_flag()	{ $klickibunti_flag = true; }
 sub get_show_source_flag()	{ return $show_source_flag; }
 sub set_show_source_flag()	{ $show_source_flag = true; }
 
@@ -370,43 +366,6 @@ sub range($$) {
 	my ($self, $n) = @_;
 
 	return ($self->[STARTS]->[$n], $self->[ENDS]->[$n]);
-}
-
-#==========================================================================
-# A StringMatch is the result of applying a regular expression to a String.
-# It can return the range and the text of the captured groups.
-#==========================================================================
-package PkgLint::StringMatch;
-
-use enum qw(STRING STARTS ENDS);
-
-sub new($$) {
-	my ($class, $string, $starts, $ends) = @_;
-	my ($self) = ([$string, [@{$starts}], [@{$ends}]]);
-	bless($self, $class);
-	return $self;
-}
-
-sub string($)		{ return shift(@_)->[STRING]; }
-
-sub text($$) {
-	my ($self, $n) = @_;
-
-	my $start = $self->[STARTS]->[$n];
-	my $end = $self->[ENDS]->[$n];
-	return $self->string->substring($start, $end - $start)->text;
-}
-
-sub range($$) {
-	my ($self, $n) = @_;
-
-	return ($self->[STARTS]->[$n], $self->[ENDS]->[$n]);
-}
-
-sub highlight($$) {
-	my ($self, $n) = @_;
-
-	$self->string->highlight(0, $self->[STARTS]->[$n], $self->[ENDS]->[$n]);
 }
 
 #==========================================================================
@@ -623,233 +582,6 @@ sub set_text($$) {
 
 #== End of PkgLint::Line ==================================================
 
-package PkgLint::String;
-#==========================================================================
-# In pkglint, a String is a part of a Line that contains exact references
-# to the locations of its substrings in the physical lines of the file from
-# which it has been read. This makes it possible for diagnostics to be
-# marked at character level instead of logical line level.
-#
-# Implementation notes:
-#
-# A String consists of three components:
-# * a reference to a logical line,
-# * a list of Parts, which, when concatenated, form the text of the String.
-#   A Part is either a literal string or an array of the form [$lineno,
-#   $startcol, $endcol], which is used as a reference into the physical
-#   lines array (without and local additions) of the logical line.
-# * a list of highlighting intervals, which are used in the
-#   show_highlighted() method to mark up certain parts of the string.
-#==========================================================================
-
-BEGIN {
-	import PkgLint::Util qw(
-		false true
-		min max
-	);
-}
-
-use enum qw(LINE PARTS MARKUPS);
-
-# The structure fields of a Part of a String
-use enum qw(:P_ LINENO STARTCOL ENDCOL);
-
-# The structure fields of a MarkupPoint of a String
-use enum qw(:MP_ LINENO COLNO TEXT);
-
-sub new($$@) {
-	my ($class, $line, @parts) = @_;
-	my ($self) = ([$line, \@parts]);
-	bless($self, $class);
-	$self->compress();
-	return $self;
-}
-
-sub line($)		{ return shift(@_)->[LINE]; }
-sub parts($)		{ return shift(@_)->[PARTS]; }
-
-sub text($) {
-	my ($self) = @_;
-	my ($text);
-
-	$text = "";
-	foreach my $part (@{$self->[PARTS]}) {
-		if (ref($part) eq "") {
-			$text .= $part;
-		} else {
-			$text .= $self->line->substring($part->[P_LINENO], $part->[P_STARTCOL], $part->[P_ENDCOL] - $part->[P_STARTCOL]);
-		}
-	}
-	return $text;
-}
-
-sub substring($$$) {
-	my ($self, $from, $len) = @_;
-	my (@nparts, $skip, $take, $physlines);
-
-	# XXX: This code is slow, but simple.
-
-	$physlines = $self->[LINE]->[PkgLint::Line::PHYSLINES];
-
-	$skip = $from;
-	$take = defined($len) ? $len : 0x7fff_ffff;
-	foreach my $part (@{$self->[PARTS]}) {
-		if (ref($part) eq "") {
-			my $p = "";
-
-			my $nskipped = min($skip, strlen($part));
-			$skip -= $nskipped;
-			$part = substr($part, $nskipped);
-
-			my $ntaken = min($take, strlen($part));
-			$take -= $ntaken;
-			$p .= substr($part, 0, $ntaken);
-			$part = substr($part, $ntaken);
-
-			push(@nparts, $p);
-		} else {
-			my $line = $part->[P_LINENO];
-			my $col = $part->[P_STARTCOL];
-			my $tocol = $part->[P_ENDCOL];
-			my $linelen = length($physlines->[$line]->[1]);
-
-			my $nskipped = max(0, min($skip, min($tocol - $col, $linelen - $col)));
-			$skip -= $nskipped;
-			$col += $nskipped;
-
-			my $start = $col;
-
-			my $ntaken = max(0, min($take, min($tocol - $col, $linelen - $col)));
-			$take -= $ntaken;
-			$col += $ntaken;
-
-			my $end = $col;
-			push(@nparts, [$line, $start, $end]);
-		}
-	}
-	return PkgLint::String->new($self->[LINE], @nparts);
-}
-
-sub match($$) {
-	my ($self, $re) = @_;
-	my ($m);
-
-	if ($self->text !~ $re) {
-		return false;
-	}
-
-	# @- and @+ are very special arrays, so we better copy them
-	# before doing anything with them.
-	my @starts = @-;
-	my @ends = @+;
-	return PkgLint::StringMatch->new($self, \@starts, \@ends);
-}
-
-sub match_all($$) {
-	my ($self, $re) = @_;
-	my ($mm, $rest, $lastpos);
-
-	$mm = [];
-	$rest = $self->text;
-	$lastpos = 0;
-	pos(undef);
-	while ($rest =~ m/$re/gc) {
-		my @starts = @-;
-		my @ends = @+;
-
-		$lastpos = $ends[0];
-
-		push(@{$mm}, PkgLint::StringMatch->new($self, \@starts, \@ends));
-	}
-	return ($mm, substr($rest, $lastpos));
-}
-
-sub compress($) {
-	my ($self) = @_;
-	my ($parts, @nparts);
-
-	$parts = $self->[PARTS];
-
-	# Copy all but empty parts into nparts.
-	foreach my $part (@{$parts}) {
-		if (ref($part) eq "") {
-			if ($part ne "") {
-				push(@nparts, $part);
-			}
-		} else {
-			if ($part->[P_STARTCOL] != $part->[P_ENDCOL]) {
-				push(@nparts, $part);
-			}
-		}
-	}
-	$self->[PARTS] = \@nparts;
-
-	# TODO: Merge adjacent parts
-}
-
-# FIXME: lineno should not be needed here.
-sub highlight($$$$) {
-	my ($self, $lineno, $startcol, $endcol) = @_;
-
-	push(@{$self->[MARKUPS]}, [$lineno, $startcol, $endcol]);
-}
-
-sub show_highlighted($$) {
-	my ($self) = @_;
-	my ($physlines, @points, $curpoint, $maxpoint, $text, $physline, $col);
-
-	return unless (PkgLint::Logging::get_show_source_flag() && PkgLint::Logging::get_klickibunti_flag());
-
-	foreach my $m (@{$self->[MARKUPS]}) {
-		push(@points, [$m->[P_LINENO], $m->[P_STARTCOL], "\x1B[33m\x1B[1m"]);
-		push(@points, [$m->[P_LINENO], $m->[P_ENDCOL], "\x1B[0m"]);
-	}
-
-	@points = sort {
-		$a->[MP_LINENO] <=> $b->[MP_LINENO]
-		|| $a->[MP_COLNO] <=> $b->[MP_COLNO];
-	} (@points);
-
-	$physlines = $self->line->[PkgLint::Line::PHYSLINES];
-	$curpoint = 0;
-	$maxpoint = $#points + 1;
-	foreach my $lineno (0..$#{$physlines}) {
-		while ($curpoint < $maxpoint && $points[$curpoint]->[MP_LINENO] < $lineno) {
-			$curpoint++;
-		}
-
-		$text = "";
-		$col = 0;
-		$physline = $physlines->[$lineno];
-		while ($curpoint < $maxpoint && $points[$curpoint]->[MP_LINENO] == $lineno) {
-			$text .= substr($physline->[1], $col, $points[$curpoint]->[MP_COLNO] - $col);
-			$text .= $points[$curpoint]->[MP_TEXT];
-			$col = $points[$curpoint]->[MP_COLNO];
-			$curpoint++;
-		}
-		$text .= substr($physline->[1], $col);
-		print("> $text");
-	}
-}
-
-# TODO: Rewrite the code of log_warning to be shorter. After that is
-# done, add the other log_* methods.
-
-sub log_warning($$) {
-	my ($self, $msg) = @_;
-
-	if (PkgLint::Logging::get_show_source_flag()) {
-		if (PkgLint::Logging::get_klickibunti_flag()) {
-			$self->show_highlighted();
-		} else {
-			$self->line->show_source(*STDOUT);
-		}
-	}
-	PkgLint::Logging::log_warning($self->line->fname, $self->line->lines, $msg);
-}
-
-#== End of PkgLint::String ================================================
-
 package PkgLint::FileUtil;
 #==========================================================================
 # This package provides subroutines for loading and saving line-oriented
@@ -977,94 +709,6 @@ sub load_file($) {
 	my ($fname) = @_;
 
 	return load_lines($fname, false);
-}
-
-sub get_folded_string($$$) {
-	my ($fname, $lines, $ref_lineno) = @_;
-	my ($value, $lineno, $first, $firstlineno, $lastlineno, $physline, $physlines, @parts);
-
-	$value = "";
-	$first = true;
-	$lineno = ${$ref_lineno};
-	$firstlineno = $lines->[$lineno]->[0];
-	$physlines = [];
-	$physline = 0;
-
-	for (; $lineno <= $#{$lines}; $lineno++) {
-		if ($lines->[$lineno]->[1] =~ m"^([ \t]*)(.*?)([ \t]*)(\\?)\n?$") {
-			my ($indent, $text, $outdent, $cont) = ($1, $2, $3, $4);
-			my (@start) = (@-);
-			my (@end) = (@+);
-
-			if ($first) {
-				$value .= $indent;
-				push(@parts, [$physline, $start[1], $end[1]]);
-				$first = false;
-			}
-
-			$value .= $text;
-			push(@parts, [$physline, $start[2], $end[2]]);
-
-			push(@{$physlines}, $lines->[$lineno]);
-			$physline++;
-
-			if ($cont eq "\\") {
-				$value .= " ";
-				push(@parts, " ");
-			} else {
-				$value .= $outdent;
-				push(@parts, [$physline, $start[3], $end[3]]);
-				last;
-			}
-		}
-	}
-
-	if ($lineno > $#{$lines}) {
-		# The last line in the file is a continuation line
-		$lineno--;
-	}
-	$lastlineno = $lines->[$lineno]->[0];
-	${$ref_lineno} = $lineno + 1;
-
-	my $line = PkgLint::Line->new($fname,
-	    $firstlineno == $lastlineno
-		? $firstlineno
-		: "$firstlineno--$lastlineno",
-	    $value,
-	    $physlines);
-	return PkgLint::String->new($line, @parts);
-}
-
-sub load_strings($$) {
-	my ($fname, $fold_backslash_lines) = @_;
-	my ($physlines, $seen_newline, $strings);
-
-	$physlines = load_physical_lines($fname);
-	if (!$physlines) {
-		return false;
-	}
-
-	$seen_newline = true;
-	$strings = [];
-	if ($fold_backslash_lines) {
-		for (my $lineno = 0; $lineno <= $#{$physlines}; ) {
-			push(@{$strings}, get_folded_string($fname, $physlines, \$lineno));
-		}
-	} else {
-		foreach my $physline (@{$physlines}) {
-			my ($text, $line);
-
-			($text = $physline->[1]) =~ s/\n$//;
-			$line = PkgLint::Line->new($fname, $physline->[0], $text, [$physline]);
-			push(@{$strings}, PkgLint::String->new($line, [0, 0, length($text)]));
-		}
-	}
-
-	if (0 <= $#{$physlines} && $physlines->[-1]->[1] !~ m"\n$") {
-		log_error($fname, $physlines->[-1]->[0], "File must end with a newline.");
-	}
-
-	return $strings;
 }
 
 sub save_autofix_changes($) {
@@ -1673,7 +1317,6 @@ my (%warnings) = (
 my $opt_autofix		= false;
 my $opt_dumpmakefile	= false;
 my $opt_import		= false;
-my $opt_klickibunti	= false;	# experimental
 my $opt_quiet		= false;
 my $opt_recursive	= false;
 my $opt_rcsidstring	= "NetBSD";
@@ -1736,11 +1379,6 @@ my (@options) = (
 	  "source|s",
 	  sub {
 		PkgLint::Logging::set_show_source_flag();
-	  } ],
-	[ "--klickibunti", "Enable colored and precise diagnostics",
-	  "klickibunti",
-	  sub {
-		PkgLint::Logging::set_klickibunti_flag();
 	  } ],
 );
 
@@ -2939,18 +2577,6 @@ sub remove_variables($) {
 	while ($text =~ s/\$\{([^{}]*)\}//g) {
 	}
 	return $text;
-}
-
-# Converts an array of PkgLint::String to an array of PkgLint::Line.
-sub strings_to_lines($) {
-	my ($strings) = @_;
-	my ($retval);
-
-	$retval = [];
-	foreach my $s (@{$strings}) {
-		push(@{$retval}, $s->line);
-	}
-	return $retval;
 }
 
 sub backtrace($) {
@@ -7200,7 +6826,7 @@ sub checkfile_package_Makefile($$$) {
 
 sub checkfile_patch($) {
 	my ($fname) = @_;
-	my ($strings);
+	my ($lines);
 	my ($state, $redostate, $nextstate, $dellines, $addlines, $hunks);
 	my ($seen_comment, $current_fname, $current_ftype, $patched_files);
 	my ($leading_context_lines, $trailing_context_lines, $context_scanning_leading);
@@ -7235,7 +6861,7 @@ sub checkfile_patch($) {
 		UFA UH UL
 	);
 
-	my ($s, $line, $m);
+	my ($line, $m);
 
 	my $check_text = sub($) {
 		my ($text) = @_;
@@ -7493,11 +7119,11 @@ sub checkfile_patch($) {
 	$opt_debug_trace and log_debug($fname, NO_LINES, "checkfile_patch()");
 
 	checkperms($fname);
-	if (!($strings = PkgLint::FileUtil::load_strings($fname, false))) {
+	if (!($lines = load_lines($fname, false))) {
 		log_error($fname, NO_LINE_NUMBER, "Could not be read.");
 		return;
 	}
-	if (@{$strings} == 0) {
+	if (@{$lines} == 0) {
 		log_error($fname, NO_LINE_NUMBER, "Must not be empty.");
 		return;
 	}
@@ -7511,9 +7137,8 @@ sub checkfile_patch($) {
 	$current_ftype = undef;
 	$hunks = undef;
 
-	for (my $lineno = 0; $lineno <= $#{$strings}; ) {
-		$s = $strings->[$lineno];
-		$line = $s->line;
+	for (my $lineno = 0; $lineno <= $#{$lines}; ) {
+		$line = $lines->[$lineno];
 		my $text = $line->text;
 
 		$opt_debug_patches and $line->log_debug("[${state} ${patched_files}/".($hunks||0)."/-".($dellines||0)."+".($addlines||0)."] $text");
@@ -7587,7 +7212,7 @@ sub checkfile_patch($) {
 		log_error($fname, NO_LINE_NUMBER, "Contains no patch.");
 	}
 
-	checklines_trailing_empty_lines(strings_to_lines($strings));
+	checklines_trailing_empty_lines($lines);
 }
 
 sub checkfile_PLIST($) {
