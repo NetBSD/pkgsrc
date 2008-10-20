@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2553 2008/10/20 00:49:07 ahoka Exp $
+$NetBSD: CHANGES-2008,v 1.2554 2008/10/20 01:11:59 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4401,3 +4401,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated textproc/py-html2text to 2.34 [schmonz 2008-10-19]
 	Updated devel/opengrok to 0.7 [adrianp 2008-10-19]
 	Added lang/see version 3.0.1376 [ahoka 2008-10-20]
+	Updated textproc/libyaml to 0.1.1 [ahoka 2008-10-20]

@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.433 2008/10/08 09:43:18 wiz Exp $
+# $NetBSD: Makefile,v 1.434 2008/10/20 01:11:31 ahoka Exp $
 #
 
 COMMENT=	Text processing utilities (does not include desktop publishing)
@@ -157,6 +157,7 @@ SUBDIR+=	libxml++
 SUBDIR+=	libxml++1
 SUBDIR+=	libxml2
 SUBDIR+=	libxslt
+SUBDIR+=	libyaml
 SUBDIR+=	link-grammar
 SUBDIR+=	lout
 SUBDIR+=	lq-sp
