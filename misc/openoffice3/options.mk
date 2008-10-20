@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.7 2008/10/20 16:14:54 hira Exp $
+# $NetBSD: options.mk,v 1.8 2008/10/20 23:03:25 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice3
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 java kde ooo-external-libwpd
@@ -28,12 +28,15 @@ OO_LANGS+=	${l:S/^lang-//1}
 OO_LANGS?=	en-US
 
 .if !empty(PKG_OPTIONS:Mfirefox)
+MOZ_FLAVOUR=		firefox
 CONFIGURE_ARGS+=	--with-system-mozilla=firefox
 .include "../../www/firefox/buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Mfirefox3)
+MOZ_FLAVOUR=		firefox3
 CONFIGURE_ARGS+=	--with-system-mozilla=firefox3
 .include "../../www/firefox3/buildlink3.mk"
 .elif !empty(PKG_OPTIONS:Mseamonkey)
+MOZ_FLAVOUR=		seamonkey
 CONFIGURE_ARGS+=	--with-system-mozilla=seamonkey
 .include "../../www/seamonkey/buildlink3.mk"
 # The following browsers do not install *.pc files.
@@ -44,8 +47,15 @@ CONFIGURE_ARGS+=	--with-system-mozilla=seamonkey
 #CONFIGURE_ARGS+=	--with-system-mozilla=seamonkey
 #.include "../../www/seamonkey-gtk1/buildlink3.mk"
 .else
+MOZ_FLAVOUR=
 CONFIGURE_ARGS+=	--disable-mozilla
 .endif
+
+SUBST_CLASSES+=		browser
+SUBST_STAGE.browser=	post-patch
+SUBST_MESSAGE.browser=	Adding MOZ_FLAVOUR
+SUBST_FILES.browser=	shell/source/unix/misc/open-url.sh
+SUBST_SED.browser+=	-e 's,@MOZ_FLAVOUR@,${MOZ_FLAVOUR},g'
 
 .if !empty(PKG_OPTIONS:Mooo-external-libwpd)
 CONFIGURE_ARGS+=	--with-system-libwpd
