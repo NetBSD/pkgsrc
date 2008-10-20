@@ -1,0 +1,13 @@
+$NetBSD: patch-ac,v 1.1 2008/10/20 20:41:47 adrianp Exp $
+
+--- src/speedy_backend_main.h.orig	2003-10-07 05:03:48.000000000 +0100
++++ src/speedy_backend_main.h
+@@ -38,7 +38,7 @@ void * efence_realloc (void *ptr, size_t
+ 
+ #else
+ 
+-#define speedy_new(s,n,t)	New(123,s,n,t)
++#define speedy_new(s,n,t)	Newx(s,n,t)
+ #define speedy_renew		Renew
+ #define speedy_free		Safefree
+ 
