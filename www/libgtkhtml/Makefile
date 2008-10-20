@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.48 2008/10/16 14:02:29 drochner Exp $
+# $NetBSD: Makefile,v 1.49 2008/10/20 07:21:32 wiz Exp $
 #
 
 DISTNAME=	libgtkhtml-2.6.3
@@ -20,6 +20,7 @@ USE_LIBTOOL=		yes
 PKGCONFIG_OVERRIDE=	libgtkhtml-2.0.pc.in
 
 .include "../../textproc/libxml2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.14.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
