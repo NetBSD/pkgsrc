@@ -1,0 +1,6 @@
+YAML is a data serialization language which is designed to be both
+human readable and computationally powerful.
+
+This C language implementation is developed by Kirill Simonov for Python
+Software Foundation as a part of Google Summer of Code under the mentorship
+of Clark Evans and released under the MIT license.
