@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/10/20 01:10:16 ahoka Exp $
+
+SHA1 (yaml-0.1.1.tar.gz) = 9215223c6c947182725882e6b7509e9f61e4313b
+RMD160 (yaml-0.1.1.tar.gz) = cd6d6a96b0564dcc5a643bc5bf120f2f0a4cd9f7
+Size (yaml-0.1.1.tar.gz) = 466770 bytes
