@@ -1,5 +1,5 @@
 #! @PERL@
-# $NetBSD: pkglint.pl,v 1.778 2008/10/20 10:56:18 rillig Exp $
+# $NetBSD: pkglint.pl,v 1.779 2008/10/20 11:09:07 rillig Exp $
 #
 
 # pkglint - static analyzer and checker for pkgsrc packages
@@ -3385,15 +3385,15 @@ sub checkword_absolute_pathname($$) {
 	} else {
 		$line->log_warning("Found absolute pathname: ${word}");
 		$line->explain_warning(
-			"Absolute pathnames are often an indicator for unportable code. As",
-			"pkgsrc aims to be a portable system, absolute pathnames should be",
-			"avoided whenever possible.",
-			"",
-			"A special variable in this context is \${DESTDIR}, which is used in GNU",
-			"projects to specify a different directory for installation than what",
-			"the programs see later when they are executed. Usually it is empty, so",
-			"if anything after that variable starts with a slash, it is considered",
-			"an absolute pathname.");
+"Absolute pathnames are often an indicator for unportable code. As",
+"pkgsrc aims to be a portable system, absolute pathnames should be",
+"avoided whenever possible.",
+"",
+"A special variable in this context is \${DESTDIR}, which is used in GNU",
+"projects to specify a different directory for installation than what",
+"the programs see later when they are executed. Usually it is empty, so",
+"if anything after that variable starts with a slash, it is considered",
+"an absolute pathname.");
 	}
 }
 
@@ -3407,9 +3407,9 @@ sub checkline_length($$) {
 	if (length($line->text) > $maxlength) {
 		$line->log_warning("Line too long (should be no more than $maxlength characters).");
 		$line->explain_warning(
-			"Back in the old time, terminals with 80x25 characters were common.",
-			"And this is still the default size of many terminal emulators.",
-			"Moderately short lines also make reading easier.");
+"Back in the old time, terminals with 80x25 characters were common.",
+"And this is still the default size of many terminal emulators.",
+"Moderately short lines also make reading easier.");
 	}
 }
 
@@ -3599,9 +3599,9 @@ sub checkline_relative_pkgdir($$) {
 	if ($path !~ m"^(?:\./)?\.\./\.\./[^/]+/[^/]+$") {
 		$line->log_warning("\"${path}\" is not a valid relative package directory.");
 		$line->explain_warning(
-			"A relative pathname always starts with \"../../\", followed",
-			"by a category, a slash and a the directory name of the package.",
-			"For example, \"../../misc/screen\" is a valid relative pathname.");
+"A relative pathname always starts with \"../../\", followed",
+"by a category, a slash and a the directory name of the package.",
+"For example, \"../../misc/screen\" is a valid relative pathname.");
 	}
 }
 
@@ -3723,23 +3723,23 @@ sub checkline_mk_varuse($$$$) {
 		if ($is_load_time && !$is_indirect) {
 			$line->log_warning("${varname} should not be evaluated at load time.");
 			$line->explain_warning(
-				"Many variables, especially lists of something, get their values",
-				"incrementally. Therefore it is generally unsafe to rely on their value",
-				"until it is clear that it will never change again. This point is",
-				"reached when the whole package Makefile is loaded and execution of the",
-				"shell commands starts, in some cases earlier.",
-				"",
-				"Additionally, when using the \":=\" operator, each \$\$ is replaced",
-				"with a single \$, so variables that have references to shell variables",
-				"or regular expressions are modified in a subtle way.");
+"Many variables, especially lists of something, get their values",
+"incrementally. Therefore it is generally unsafe to rely on their value",
+"until it is clear that it will never change again. This point is",
+"reached when the whole package Makefile is loaded and execution of the",
+"shell commands starts, in some cases earlier.",
+"",
+"Additionally, when using the \":=\" operator, each \$\$ is replaced",
+"with a single \$, so variables that have references to shell variables",
+"or regular expressions are modified in a subtle way.");
 		}
 		if ($is_load_time && $is_indirect) {
 			$line->log_warning("${varname} should not be evaluated indirectly at load time.");
 			$line->explain_warning(
-				"The variable on the left-hand side may be evaluated at load time, but",
-				"the variable on the right-hand side may not. Due to this assignment, it",
-				"might be used indirectly at load-time, when it is not guaranteed to be",
-				"properly defined.");
+"The variable on the left-hand side may be evaluated at load time, but",
+"the variable on the right-hand side may not. Due to this assignment, it",
+"might be used indirectly at load-time, when it is not guaranteed to be",
+"properly defined.");
 		}
 
 		if ($perms !~ m"p" && $perms !~ m"u") {
@@ -3794,10 +3794,10 @@ sub checkline_mk_varuse($$$$) {
 		} else {
 			$line->log_warning("The variable ${varname} should not be used in .for loops.");
 			$line->explain_warning(
-				"The .for loop splits its argument at sequences of white-space, as",
-				"opposed to all other places in make(1), which act like the shell.",
-				"Therefore only variables that are specifically designed to match this",
-				"requirement should be used here.");
+"The .for loop splits its argument at sequences of white-space, as",
+"opposed to all other places in make(1), which act like the shell.",
+"Therefore only variables that are specifically designed to match this",
+"requirement should be used here.");
 		}
 	}
 
@@ -3873,8 +3873,8 @@ sub checkline_mk_text($$) {
 	if ($text =~ m"\$\{WRKSRC\}/\.\./") {
 		$line->log_warning("Using \"\${WRKSRC}/..\" is conceptually wrong. Please use a combination of WRKSRC, CONFIGURE_DIRS and BUILD_DIRS instead.");
 		$line->explain_warning(
-			"You should define WRKSRC such that all of CONFIGURE_DIRS, BUILD_DIRS",
-			"and INSTALL_DIRS are subdirectories of it.");
+"You should define WRKSRC such that all of CONFIGURE_DIRS, BUILD_DIRS",
+"and INSTALL_DIRS are subdirectories of it.");
 	}
 
 	if ($text =~ m"\b(-Wl,--rpath,|-Wl,-rpath-link,|-Wl,-rpath,|-Wl,-R)\b") {
@@ -4004,8 +4004,8 @@ sub checkline_mk_shellword($$$) {
 			if ($varname eq "\@") {
 				$line->log_warning("Please use \"\${.TARGET}\" instead of \"\$\@\".");
 				$line->explain_warning(
-					"The variable \$\@ can easily be confused with the shell variable of the",
-					"same name, which has a completely different meaning.");
+"The variable \$\@ can easily be confused with the shell variable of the",
+"same name, which has a completely different meaning.");
 				$varname = ".TARGET";
 			}
 
@@ -4023,8 +4023,8 @@ sub checkline_mk_shellword($$$) {
 			} elsif ($state == SWST_DQUOT && defined($mod) && $mod =~ m":Q$") {
 				$line->log_warning("Please don't use the :Q operator in double quotes.");
 				$line->explain_warning(
-					"Either remove the :Q or the double quotes. In most cases, it is more",
-					"appropriate to remove the double quotes.");
+"Either remove the :Q or the double quotes. In most cases, it is more",
+"appropriate to remove the double quotes.");
 
 			}
 
@@ -4100,8 +4100,8 @@ sub checkline_mk_shellword($$$) {
 			} elsif ($rest =~ s/^\$\@//) {
 				$line->log_warning("Please use \"\${.TARGET}\" instead of \"\$@\".");
 				$line->explain_warning(
-					"It is more readable and prevents confusion with the shell variable of",
-					"the same name.");
+"It is more readable and prevents confusion with the shell variable of",
+"the same name.");
 
 			} elsif ($rest =~ s/^\$\$\@//) {
 				$line->log_warning("The \$@ shell variable should only be used in double quotes.");
@@ -4112,8 +4112,8 @@ sub checkline_mk_shellword($$$) {
 			} elsif ($rest =~ s/^\$\$\(/(/) {
 				$line->log_warning("Invoking subshells via \$(...) is not portable enough.");
 				$line->explain_warning(
-					"The Solaris /bin/sh does not know this way to execute a command in a",
-					"subshell. Please use backticks (\`...\`) as a replacement.");
+"The Solaris /bin/sh does not know this way to execute a command in a",
+"subshell. Please use backticks (\`...\`) as a replacement.");
 
 			} else {
 				last;
@@ -4145,10 +4145,10 @@ sub checkline_mk_shellword($$$) {
 				my ($char) = ($1);
 				$line->log_warning("Please use \"\\\\${char}\" instead of \"\\${char}\".");
 				$line->explain_warning(
-					"Although the current code may work, it is not good style to rely on",
-					"the shell passing \"\\${char}\" exactly as is, and not discarding the",
-					"backslash. Alternatively you can use single quotes instead of double",
-					"quotes.");
+"Although the current code may work, it is not good style to rely on",
+"the shell passing \"\\${char}\" exactly as is, and not discarding the",
+"backslash. Alternatively you can use single quotes instead of double",
+"quotes.");
 			} else {
 				last;
 			}
@@ -4191,20 +4191,20 @@ sub checkline_mk_shellcmd_use($$) {
 		} elsif (exists(discouraged_install_commands->{$shellcmd})) {
 			$line->log_warning("The shell command \"${shellcmd}\" should not be used in the install phase.");
 			$line->explain_warning(
-				"In the install phase, the only thing that should be done is to install",
-				"the prepared files to their final location. The file's contents should",
-				"not be changed anymore.");
+"In the install phase, the only thing that should be done is to install",
+"the prepared files to their final location. The file's contents should",
+"not be changed anymore.");
 
 		} elsif ($shellcmd eq "\${CP}") {
 			$line->log_warning("\${CP} should not be used to install files.");
 			$line->explain_warning(
-				"The \${CP} command is highly platform dependent and cannot overwrite",
-				"files that don't have write permission. Please use \${PAX} instead.",
-				"",
-				"For example, instead of",
-				"\t\${CP} -R \${WRKSRC}/* \${PREFIX}/foodir",
-				"you should use",
-				"\tcd \${WRKSRC} && \${PAX} -wr * \${PREFIX}/foodir");
+"The \${CP} command is highly platform dependent and cannot overwrite",
+"files that don't have write permission. Please use \${PAX} instead.",
+"",
+"For example, instead of",
+"\t\${CP} -R \${WRKSRC}/* \${PREFIX}/foodir",
+"you should use",
+"\tcd \${WRKSRC} && \${PAX} -wr * \${PREFIX}/foodir");
 
 		} else {
 			$opt_debug_misc and $line->log_debug("May \"${shellcmd}\" be used in the install phase?");
@@ -4245,15 +4245,15 @@ sub checkline_mk_shelltext($$) {
 	if ($text =~ m"\$\{SED\}" && $text =~ m"\$\{MV\}") {
 		$line->log_note("Please use the SUBST framework instead of \${SED} and \${MV}.");
 		$line->explain_note(
-			"When converting things, pay attention to \"#\" characters. In shell",
-			"commands make(1) does not interpret them as comment character, but",
-			"in other lines it does. Therefore, instead of the shell command",
-			"",
-			"\tsed -e 's,#define foo,,'",
-			"",
-			"you need to write",
-			"",
-			"\tSUBST_SED.foo+=\t's,\\#define foo,,'");
+"When converting things, pay attention to \"#\" characters. In shell",
+"commands make(1) does not interpret them as comment character, but",
+"in other lines it does. Therefore, instead of the shell command",
+"",
+"\tsed -e 's,#define foo,,'",
+"",
+"you need to write",
+"",
+"\tSUBST_SED.foo+=\t's,\\#define foo,,'");
 	}
 
 	if ($text =~ m"^\@*-(.*(MKDIR|INSTALL.*-d|INSTALL_.*_DIR).*)") {
@@ -4292,18 +4292,18 @@ sub checkline_mk_shelltext($$) {
 			if (!exists(hidden_shell_commands->{$cmd})) {
 				$line->log_warning("The shell command \"${cmd}\" should not be hidden.");
 				$line->explain_warning(
-					"Hidden shell commands do not appear on the terminal or in the log file",
-					"when they are executed. When they fail, the error message cannot be",
-					"assigned to the command, which is very difficult to debug.");
+"Hidden shell commands do not appear on the terminal or in the log file",
+"when they are executed. When they fail, the error message cannot be",
+"assigned to the command, which is very difficult to debug.");
 			}
 		}
 
 		if ($hidden =~ m"-") {
 			$line->log_warning("The use of a leading \"-\" to suppress errors is deprecated.");
 			$line->explain_warning(
-				"If you really want to ignore any errors from this command (including",
-				"all errors you never thought of), append \"|| \${TRUE}\" to the",
-				"command.");
+"If you really want to ignore any errors from this command (including",
+"all errors you never thought of), append \"|| \${TRUE}\" to the",
+"command.");
 		}
 
 		if ($macro eq "\${RUN}") {
@@ -4402,22 +4402,22 @@ sub checkline_mk_shelltext($$) {
 
 				if ($semicolon || $multiline) {
 					$line->explain_warning(
-						"When you split a shell command into multiple lines that are continued",
-						"with a backslash, they will nevertheless be converted to a single line",
-						"before the shell sees them. That means that even if it _looks_ like that",
-						"the comment only spans one line in the Makefile, in fact it spans until",
-						"the end of the whole shell command. To insert a comment into shell code,",
-						"you can pass it as an argument to the \${SHCOMMENT} macro, which expands",
-						"to a command doing nothing. Note that any special characters are",
-						"nevertheless interpreted by the shell.");
+"When you split a shell command into multiple lines that are continued",
+"with a backslash, they will nevertheless be converted to a single line",
+"before the shell sees them. That means that even if it _looks_ like that",
+"the comment only spans one line in the Makefile, in fact it spans until",
+"the end of the whole shell command. To insert a comment into shell code,",
+"you can pass it as an argument to the \${SHCOMMENT} macro, which expands",
+"to a command doing nothing. Note that any special characters are",
+"nevertheless interpreted by the shell.");
 				}
 
 			} else {
 				$opt_warn_extra and $line->log_warning("Unknown shell command \"${shellword}\".");
 				$opt_warn_extra and $line->explain_warning(
-					"If you want your package to be portable to all platforms that pkgsrc",
-					"supports, you should only use shell commands that are covered by the",
-					"tools framework.");
+"If you want your package to be portable to all platforms that pkgsrc",
+"supports, you should only use shell commands that are covered by the",
+"tools framework.");
 
 			}
 		}
@@ -4425,9 +4425,9 @@ sub checkline_mk_shelltext($$) {
 		if ($state == SCST_COND && $shellword eq "cd") {
 			$line->log_error("The Solaris /bin/sh cannot handle \"cd\" inside conditionals.");
 			$line->explain_error(
-				"When the Solaris shell is in \"set -e\" mode and \"cd\" fails, the",
-				"shell will exit, no matter if it is protected by an \"if\" or the",
-				"\"||\" operator.");
+"When the Solaris shell is in \"set -e\" mode and \"cd\" fails, the",
+"shell will exit, no matter if it is protected by an \"if\" or the",
+"\"||\" operator.");
 		}
 
 		if (($state != SCST_PAX_S && $state != SCST_SED_E && $state != SCST_CASE_LABEL)) {
@@ -4439,8 +4439,8 @@ sub checkline_mk_shelltext($$) {
 				. (($state == SCST_MKDIR) ? "\${MKDIR}" : "\${INSTALL} -d")
 				. ".");
 			$line->explain_warning(
-				"Choose one of INSTALL_PROGRAM_DIR, INSTALL_SCRIPT_DIR, INSTALL_LIB_DIR,",
-				"INSTALL_MAN_DIR, INSTALL_DATA_DIR.");
+"Choose one of INSTALL_PROGRAM_DIR, INSTALL_SCRIPT_DIR, INSTALL_LIB_DIR,",
+"INSTALL_MAN_DIR, INSTALL_DATA_DIR.");
 		}
 
 		if (($state == SCST_INSTALL_DIR || $state == SCST_INSTALL_DIR2) && $shellword !~ regex_mk_shellvaruse && $shellword =~ m"^\$\{PREFIX(?:|:Q)\}/(.*)") {
@@ -4448,36 +4448,36 @@ sub checkline_mk_shelltext($$) {
 
 			$opt_warn_extra and $line->log_note("You can use INSTALLATION_DIRS+= ${dirname} instead of this command.");
 			$opt_warn_extra and $line->explain_note(
-				"This saves you some typing. You also don't have to think about which of",
-				"the many INSTALL_*_DIR macros is appropriate, since INSTALLATION_DIRS",
-				"takes care of that.",
-				"",
-				"Note that you should only do this if the package creates _all_",
-				"directories it needs before trying to install files into them.");
+"This saves you some typing. You also don't have to think about which of",
+"the many INSTALL_*_DIR macros is appropriate, since INSTALLATION_DIRS",
+"takes care of that.",
+"",
+"Note that you should only do this if the package creates _all_",
+"directories it needs before trying to install files into them.");
 		}
 
 		if ($state == SCST_INSTALL_DIR2 && $shellword =~ m"^\$") {
 			$line->log_warning("The INSTALL_*_DIR commands can only handle one directory at a time.");
 			$line->explain_warning(
-				"Many implementations of install(1) can handle more, but pkgsrc aims at",
-				"maximum portability.");
+"Many implementations of install(1) can handle more, but pkgsrc aims at",
+"maximum portability.");
 		}
 
 		if ($state == SCST_PAX && $shellword eq "-pe") {
 			$line->log_warning("Please use the -pp option to pax(1) instead of -pe.");
 			$line->explain_warning(
-				"The -pe option tells pax to preserve the ownership of the files, which",
-				"means that the installed files will belong to the user that has built",
-				"the package. That's a Bad Thing.");
+"The -pe option tells pax to preserve the ownership of the files, which",
+"means that the installed files will belong to the user that has built",
+"the package. That's a Bad Thing.");
 		}
 
 		if ($state == SCST_PAX_S || $state == SCST_SED_E) {
 			if (false && $shellword !~ m"^[\"\'].*[\"\']$") {
 				$line->log_warning("Substitution commands like \"${shellword}\" should always be quoted.");
 				$line->explain_warning(
-					"Usually these substitution commands contain characters like '*' or",
-					"other shell metacharacters that might lead to lookup of matching",
-					"filenames and then expand to more than one word.");
+"Usually these substitution commands contain characters like '*' or",
+"other shell metacharacters that might lead to lookup of matching",
+"filenames and then expand to more than one word.");
 			}
 		}
 
@@ -4488,22 +4488,22 @@ sub checkline_mk_shelltext($$) {
 		if ($opt_warn_extra && $state != SCST_CASE_LABEL_CONT && $shellword eq "|") {
 			$line->log_warning("The exitcode of the left-hand-side command of the pipe operator is ignored.");
 			$line->explain_warning(
-				"If you need to detect the failure of the left-hand-side command, use",
-				"temporary files to save the output of the command.");
+"If you need to detect the failure of the left-hand-side command, use",
+"temporary files to save the output of the command.");
 		}
 
 		if ($opt_warn_extra && $shellword eq ";" && $state != SCST_COND_CONT && $state != SCST_FOR_CONT && !$set_e_mode) {
 			$line->log_warning("Please switch to \"set -e\" mode before using a semicolon to separate commands.");
 			$line->explain_warning(
-				"Older versions of the NetBSD make(1) had run the shell commands using",
-				"the \"-e\" option of /bin/sh. In 2004, this behavior has been changed to",
-				"follow the POSIX conventions, which is to not use the \"-e\" option.",
-				"The consequence of this change is that shell programs don't terminate",
-				"as soon as an error occurs, but try to continue with the next command.",
-				"Imagine what would happen for these commands:",
-				"    cd \"\$HOME\"; cd /nonexistent; rm -rf *",
-				"To fix this warning, either insert \"set -e\" at the beginning of this",
-				"line or use the \"&&\" operator instead of the semicolon.");
+"Older versions of the NetBSD make(1) had run the shell commands using",
+"the \"-e\" option of /bin/sh. In 2004, this behavior has been changed to",
+"follow the POSIX conventions, which is to not use the \"-e\" option.",
+"The consequence of this change is that shell programs don't terminate",
+"as soon as an error occurs, but try to continue with the next command.",
+"Imagine what would happen for these commands:",
+"    cd \"\$HOME\"; cd /nonexistent; rm -rf *",
+"To fix this warning, either insert \"set -e\" at the beginning of this",
+"line or use the \"&&\" operator instead of the semicolon.");
 		}
 
 		#
@@ -4614,15 +4614,15 @@ sub checkline_mk_vardef($$$) {
 	if (index($perms, $needed) == -1) {
 		$line->log_warning("Permission [${needed}] requested for ${varname}, but only [${perms}] is allowed.");
 		$line->explain_warning(
-			"The available permissions are:",
-			"\ta\tappend something using +=",
-			"\td\tset a default value using ?=",
-			"\ts\tset a variable using :=, =, !=",
-			"\tp\tuse a variable during preprocessing",
-			"\tu\tuse a variable at runtime",
-			"",
-			"A \"?\" means that it is not yet clear which permissions are allowed",
-			"and which aren't.");
+"The available permissions are:",
+"\ta\tappend something using +=",
+"\td\tset a default value using ?=",
+"\ts\tset a variable using :=, =, !=",
+"\tp\tuse a variable during preprocessing",
+"\tu\tuse a variable at runtime",
+"",
+"A \"?\" means that it is not yet clear which permissions are allowed",
+"and which aren't.");
 	}
 }
 
@@ -4807,9 +4807,9 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 			} elsif ($other eq "*") {
 				$line->log_warning("Please use ${depbase}-[0-9]* instead of ${depbase}-*.");
 				$line->explain_warning(
-					"If you use a * alone, the package specification may match other",
-					"packages that have the same prefix, but a longer name. For example,",
-					"foo-* matches foo-1.2, but also foo-client-1.2 and foo-server-1.2.");
+"If you use a * alone, the package specification may match other",
+"packages that have the same prefix, but a longer name. For example,",
+"foo-* matches foo-1.2, but also foo-client-1.2 and foo-server-1.2.");
 
 			} else {
 				$line->log_warning("Unknown dependency pattern \"${value}\".");
@@ -4826,8 +4826,8 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		} else {
 			$line->log_warning("Unknown dependency format: ${value}");
 			$line->explain_warning(
-				"Typical dependencies have the form \"package>=2.5\", \"package-[0-9]*\"",
-				"or \"package-3.141\".");
+"Typical dependencies have the form \"package>=2.5\", \"package-[0-9]*\"",
+"or \"package-3.141\".");
 		}
 
 	} elsif ($type eq "DependencyWithPath") {
@@ -4860,10 +4860,10 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		} else {
 			$line->log_warning("Unknown dependency format.");
 			$line->explain_warning(
-				"Examples for valid dependencies are:",
-				"  package-[0-9]*:../../category/package",
-				"  package>=3.41:../../category/package",
-				"  package-2.718:../../category/package");
+"Examples for valid dependencies are:",
+"  package-[0-9]*:../../category/package",
+"  package>=3.41:../../category/package",
+"  package-2.718:../../category/package");
 		}
 
 	} elsif ($type eq "DistSuffix") {
@@ -4997,10 +4997,10 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 			if (!exists(get_pkg_options()->{$optname})) {
 				$line->log_warning("Unknown option \"${value}\".");
 				$line->explain_warning(
-					"This option is not documented in the mk/defaults/options.description",
-					"file. If this is not a typo, please think of a brief but precise",
-					"description and ask on the tech-pkg\@NetBSD.org for inclusion in the",
-					"database.");
+"This option is not documented in the mk/defaults/options.description",
+"file. If this is not a typo, please think of a brief but precise",
+"description and ask on the tech-pkg\@NetBSD.org for inclusion in the",
+"database.");
 			}
 
 		} elsif ($value_novar =~ m"^-?([a-z][-0-9a-z_]*)$") {
@@ -5061,9 +5061,9 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		if ($value =~ m"\$\{PKGBASE[:\}]") {
 			$line->log_error("PKGBASE must not be used in PKG_OPTIONS_VAR.");
 			$line->explain_error(
-				"PKGBASE is defined in bsd.pkg.mk, which is included as the",
-				"very last file, but PKG_OPTIONS_VAR is evaluated earlier.",
-				"Use \${PKGNAME:C/-[0-9].*//} instead.");
+"PKGBASE is defined in bsd.pkg.mk, which is included as the",
+"very last file, but PKG_OPTIONS_VAR is evaluated earlier.",
+"Use \${PKGNAME:C/-[0-9].*//} instead.");
 		}
 
 	} elsif ($type eq "PkgRevision") {
@@ -5096,9 +5096,9 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		} else {
 			$line->log_warning("\"${value}\" is not a valid platform triple.");
 			$line->explain_warning(
-				"A platform triple has the form <OPSYS>-<OS_VERSION>-<MACHINE_ARCH>.",
-				"Each of these components may be a shell globbing expression.",
-				"Examples: NetBSD-*-i386, *-*-*, Linux-*-*.");
+"A platform triple has the form <OPSYS>-<OS_VERSION>-<MACHINE_ARCH>.",
+"Each of these components may be a shell globbing expression.",
+"Examples: NetBSD-*-i386, *-*-*, Linux-*-*.");
 		}
 
 	} elsif ($type eq "PrefixPathname") {
@@ -5118,7 +5118,6 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		if ($value ne "\${RESTRICTED}") {
 			$line->log_warning("The only valid value for ${varname} is \${RESTRICTED}.");
 			$line->explain_warning(
-
 "These variables are used to control which files may be mirrored on FTP",
 "servers or CD-ROM collections. They are not intended to mark packages",
 "whose only MASTER_SITES are on ftp.NetBSD.org.");
@@ -5139,10 +5138,10 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		if (!$words) {
 			$line->log_error("Invalid shell words in sed commands.");
 			$line->explain_error(
-				"If your sed commands have embedded \"#\" characters, you need to escape",
-				"them with a backslash, otherwise make(1) will interpret them as a",
-				"comment, no matter if they occur in single or double quotes or",
-				"whatever.");
+"If your sed commands have embedded \"#\" characters, you need to escape",
+"them with a backslash, otherwise make(1) will interpret them as a",
+"comment, no matter if they occur in single or double quotes or",
+"whatever.");
 
 		} else {
 			my $nwords = scalar(@{$words});
@@ -5160,13 +5159,13 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 						if ($ncommands > 1) {
 							$line->log_warning("Each sed command should appear in an assignment of its own.");
 							$line->explain_warning(
-								"For example, instead of",
-								"    SUBST_SED.foo+=        -e s,command1,, -e s,command2,,",
-								"use",
-								"    SUBST_SED.foo+=        -e s,command1,,",
-								"    SUBST_SED.foo+=        -e s,command2,,",
-								"",
-								"This way, short sed commands cannot be hidden at the end of a line.");
+"For example, instead of",
+"    SUBST_SED.foo+=        -e s,command1,, -e s,command2,,",
+"use",
+"    SUBST_SED.foo+=        -e s,command1,,",
+"    SUBST_SED.foo+=        -e s,command2,,",
+"",
+"This way, short sed commands cannot be hidden at the end of a line.");
 						}
 						checkline_mk_shellword($line, $words->[$i - 1], true);
 						checkline_mk_shellword($line, $words->[$i], true);
@@ -5343,10 +5342,10 @@ sub checkline_mk_vartype_basic($$$$$$$$) {
 		if ($value !~ m"^(?:YES|yes)(?:\s+#.*)?$") {
 			$line->log_warning("${varname} should be set to YES or yes.");
 			$line->explain_warning(
-				"This variable means \"yes\" if it is defined, and \"no\" if it is",
-				"undefined. Even when it has the value \"no\", this means \"yes\".",
-				"Therefore when it is defined, its value should correspond to its",
-				"meaning.");
+"This variable means \"yes\" if it is defined, and \"no\" if it is",
+"undefined. Even when it has the value \"no\", this means \"yes\".",
+"Therefore when it is defined, its value should correspond to its",
+"meaning.");
 		}
 
 	} elsif ($type eq "YesNo") {
@@ -5391,8 +5390,8 @@ sub checkline_decreasing_order($$$) {
 		if ($nextver >= $ver) {
 			$line->log_warning("The values for ${varname} should be in decreasing order.");
 			$line->explain_warning(
-				"If they aren't, it may be possible that needless versions of packages",
-				"are installed.");
+"If they aren't, it may be possible that needless versions of packages",
+"are installed.");
 		}
 		$ver = $nextver;
 	}
@@ -5518,9 +5517,9 @@ sub checkline_mk_varassign($$$$$) {
 	if ($varname eq "CONFIGURE_ARGS" && $value =~ m"=\$\{PREFIX\}/share/kde") {
 		$line->log_note("Please .include \"../../meta-pkgs/kde3/kde3.mk\" instead of this line.");
 		$line->explain_note(
-			"That file probably does many things automatically and consistently that",
-			"this package also does. When using kde3.mk, you can probably also leave",
-			"out some explicit dependencies.");
+"That file probably does many things automatically and consistently that",
+"this package also does. When using kde3.mk, you can probably also leave",
+"out some explicit dependencies.");
 	}
 
 	if ($varname eq "EVAL_PREFIX" && $value =~ m"^([\w_]+)=") {
@@ -5539,11 +5538,11 @@ sub checkline_mk_varassign($$$$$) {
 	if (defined($comment) && $comment eq "# defined" && $varname !~ m".*(?:_MK|_COMMON)$") {
 		$line->log_note("Please use \"# empty\", \"# none\" or \"yes\" instead of \"# defined\".");
 		$line->explain_note(
-			"The value #defined says something about the state of the variable, but",
-			"not what that _means_. In some cases a variable that is defined means",
-			"\"yes\", in other cases it is an empty list (which is also only the",
-			"state of the variable), whose meaning could be described with \"none\".",
-			"It is this meaning that should be described.");
+"The value #defined says something about the state of the variable, but",
+"not what that _means_. In some cases a variable that is defined means",
+"\"yes\", in other cases it is an empty list (which is also only the",
+"state of the variable), whose meaning could be described with \"none\".",
+"It is this meaning that should be described.");
 	}
 
 	if ($value =~ m"\$\{(PKGNAME|PKGVERSION)[:\}]") {
@@ -5570,16 +5569,16 @@ sub checkline_mk_varassign($$$$$) {
 	if ($value =~ m"^[^=]\@comment") {
 		$line->log_warning("Please don't use \@comment in ${varname}.");
 		$line->explain_warning(
-			"Here you are defining a variable containing \@comment. As this value",
-			"typically includes a space as the last character you probably also used",
-			"quotes around the variable. This can lead to confusion when adding this",
-			"variable to PLIST_SUBST, as all other variables are quoted using the :Q",
-			"operator when they are appended. As it is hard to check whether a",
-			"variable that is appended to PLIST_SUBST is already quoted or not, you",
-			"should not have pre-quoted variables at all. To solve this, you should",
-			"directly use PLIST_SUBST+= ${varname}=${value} or use any other",
-			"variable for collecting the list of PLIST substitutions and later",
-			"append that variable with PLIST_SUBST+= \${MY_PLIST_SUBST}.");
+"Here you are defining a variable containing \@comment. As this value",
+"typically includes a space as the last character you probably also used",
+"quotes around the variable. This can lead to confusion when adding this",
+"variable to PLIST_SUBST, as all other variables are quoted using the :Q",
+"operator when they are appended. As it is hard to check whether a",
+"variable that is appended to PLIST_SUBST is already quoted or not, you",
+"should not have pre-quoted variables at all. To solve this, you should",
+"directly use PLIST_SUBST+= ${varname}=${value} or use any other",
+"variable for collecting the list of PLIST substitutions and later",
+"append that variable with PLIST_SUBST+= \${MY_PLIST_SUBST}.");
 	}
 
 	# Mark the variable as PLIST condition. This is later used in
@@ -5945,10 +5944,10 @@ sub checklines_mk($) {
 			if ($includefile =~ m"../Makefile$") {
 				$line->log_error("Other Makefiles must not be included directly.");
 				$line->explain_warning(
-					"If you want to include portions of another Makefile, extract",
-					"the common parts and put them into a Makefile.common. After",
-					"that, both this one and the other package should include the",
-					"Makefile.common.");
+"If you want to include portions of another Makefile, extract",
+"the common parts and put them into a Makefile.common. After",
+"that, both this one and the other package should include the",
+"Makefile.common.");
 			}
 
 			if ($includefile eq "../../mk/bsd.prefs.mk") {
@@ -6106,9 +6105,9 @@ sub checklines_mk($) {
 				} elsif (!exists($allowed_targets->{$target})) {
 					$line->log_warning("Unusual target \"${target}\".");
 					$line->explain_warning(
-						"If you really want to define your own targets, you can \"declare\"",
-						"them by inserting a \".PHONY: my-target\" line before this line. This",
-						"will tell make(1) to not interpret this target's name as a filename.");
+"If you really want to define your own targets, you can \"declare\"",
+"them by inserting a \".PHONY: my-target\" line before this line. This",
+"will tell make(1) to not interpret this target's name as a filename.");
 				}
 			}
 
@@ -6120,9 +6119,9 @@ sub checklines_mk($) {
 		} elsif ($text =~ m"^ ") {
 			$line->log_warning("Makefile lines should not start with space characters.");
 			$line->explain_warning(
-				"If you want this line to contain a shell program, use a tab",
-				"character for indentation. Otherwise please remove the leading",
-				"white-space.");
+"If you want this line to contain a shell program, use a tab",
+"character for indentation. Otherwise please remove the leading",
+"white-space.");
 
 		} else {
 			$line->log_error("[Internal] Unknown line format: $text");
@@ -6465,9 +6464,9 @@ sub checkfile_DESCR($) {
 
 		$line->log_warning("File too long (should be no more than $maxlines lines).");
 		$line->explain_warning(
-			"A common terminal size is 80x25 characters. The DESCR file should",
-			"fit on one screen. It is also intended to give a _brief_ summary",
-			"about the package's contents.");
+"A common terminal size is 80x25 characters. The DESCR file should",
+"fit on one screen. It is also intended to give a _brief_ summary",
+"about the package's contents.");
 	}
 	autofix($lines);
 }
@@ -6541,7 +6540,7 @@ sub checkfile_distinfo($) {
 		if ($alg eq "MD5") {
 			$line->log_error("MD5 checksums are obsolete.");
 			$line->explain_error(
-				"Run \"".conf_make." makedistinfo\" to regenerate the distinfo file.");
+"Run \"".conf_make." makedistinfo\" to regenerate the distinfo file.");
 			next;
 		}
 
@@ -6604,8 +6603,8 @@ sub checkfile_distinfo($) {
 			} elsif (true) {
 				$line->log_warning("${chksum_fname} does not exist.");
 				$line->explain_warning(
-					"All patches that are mentioned in a distinfo file should actually exist.",
-					"What's the use of a checksum if there is no file to check?");
+"All patches that are mentioned in a distinfo file should actually exist.",
+"What's the use of a checksum if there is no file to check?");
 			}
 		}
 		$in_distinfo{$chksum_fname} = true;
@@ -7091,7 +7090,7 @@ sub checkfile_patch($) {
 			if ($line->text =~ m"\r$") {
 				$line->log_error("The hunk header must not end with a CR character.");
 				$line->explain_error(
-					"The MacOS X patch utility cannot handle these.");
+"The MacOS X patch utility cannot handle these.");
 			}
 			$hunks++;
 			$context_scanning_leading = (($m->has(1) && $m->text(1) ne "1") ? true : undef);
@@ -7443,10 +7442,10 @@ sub checkfile_PLIST($) {
 				if (defined($gz)) {
 					$line->log_note("The .gz extension is unnecessary for manual pages.");
 					$line->explain_note(
-						"Whether the manual pages are installed in compressed form or not is",
-						"configured by the pkgsrc user. Compression and decompression takes place",
-						"automatically, no matter if the .gz extension is mentioned in the PLIST",
-						"or not.");
+"Whether the manual pages are installed in compressed form or not is",
+"configured by the pkgsrc user. Compression and decompression takes place",
+"automatically, no matter if the .gz extension is mentioned in the PLIST",
+"or not.");
 				}
 
 			} elsif ($text =~ m"^man/cat") {
@@ -7505,8 +7504,8 @@ sub checkfile_PLIST($) {
 			if ($text =~ m"/perllocal\.pod$") {
 				$line->log_warning("perllocal.pod files should not be in the PLIST.");
 				$line->explain_warning(
-					"This file is handled automatically by the INSTALL/DEINSTALL scripts,",
-					"since its contents changes frequently.");
+"This file is handled automatically by the INSTALL/DEINSTALL scripts,",
+"since its contents changes frequently.");
 			}
 
 			if ($text =~ m"^(.*)(\.a|\.so[0-9.]*)$") {
