@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/10/20 07:52:26 wiz Exp $
+
+--- preproc.C.orig	2008-10-11 11:18:56.000000000 -0400
++++ preproc.C
+@@ -35,7 +35,7 @@ static bool isobj (char *f)
+ static char *objfile (char *f)
+ {
+ 	char *r = strdup (f);
+-	char *p = rindex (r, '.');
++	char *p = strrchr (r, '.');
+ 	if (p) strcpy (p, ".o");
+ 	return r;
+ }

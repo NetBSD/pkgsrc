@@ -1,0 +1,9 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/10/20 07:52:26 wiz Exp $
+
+SHA1 (ncc-2.8.tar.gz) = 96f6d8d76dc0e67a436b7f1acf67503998ad5771
+RMD160 (ncc-2.8.tar.gz) = dcd8998ff31d1291208bf9ea4ff5a08b2525745d
+Size (ncc-2.8.tar.gz) = 104536 bytes
+SHA1 (patch-aa) = 65ff800adf6dacab59553d13fa9f31d8b101103f
+SHA1 (patch-ab) = 92ada3f6f824d18a05a6e38d2f1086ebaa87e98e
+SHA1 (patch-ac) = 437150dbe18e5d2c8c175667f3fa6b1d419f452a
+SHA1 (patch-ad) = 0bc35544a5fe07112ee53ff5864d3a0d0f011e6e

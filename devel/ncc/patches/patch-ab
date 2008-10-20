@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/10/20 07:52:26 wiz Exp $
+
+--- Makefile.orig	2006-09-26 16:23:53.000000000 +0000
++++ Makefile
+@@ -1,8 +1,8 @@
+ 
+ # these are set by config
+-CC = g++
++CC = $(CXX)
+ DESTDIR ?= /usr
+-LCFLAGS = -g -O2
++LCFLAGS = -g
+ BINDIR = ${DESTDIR}/bin
+ MANDIR = ${DESTDIR}/share/man
+ INCLUDEDIR = ${DESTDIR}/include
