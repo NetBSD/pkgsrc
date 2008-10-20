@@ -1,0 +1,22 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/10/20 07:52:26 wiz Exp $
+
+--- config.h.orig	2007-08-28 21:51:44.000000000 +0000
++++ config.h
+@@ -3,7 +3,7 @@
+ #define alloca __builtin_alloca
+ #endif
+ #else
+-#ifdef __FreeBSD__
++#if defined(__FreeBSD__) || defined(__NetBSD__)
+ #include <stdlib.h>
+ #else
+ #include <alloca.h>
+@@ -14,7 +14,7 @@
+ #define GNU_VIOLATIONS
+ #define LABEL_VALUES
+ #define OUTPUT_EXT ".nccout"
+-#define NOGNU "/usr/include/nognu"
++#define NOGNU "@PREFIX@/share/ncc/nognu"
+ #define NCC_INFILE_KEY "ncc-key"
+ #define FAKE_VARIABLE_ARRAYS
+ #define NCC_ISOC99

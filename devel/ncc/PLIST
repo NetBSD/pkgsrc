@@ -1,0 +1,20 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/20 07:52:26 wiz Exp $
+bin/ncc
+bin/nccar
+bin/nccc++
+bin/nccld
+bin/nccnav
+bin/nccnavi
+man/man1/ncc.1
+share/doc/ncc/KEYS.txt
+share/doc/ncc/README
+share/doc/ncc/TROUBLES
+share/doc/ncc/hacking.BIND
+share/doc/ncc/hacking.GCC
+share/doc/ncc/hacking.GLIBC
+share/doc/ncc/hacking.LINUX-KERNEL
+share/doc/ncc/hacking.QEMU
+share/doc/ncc/hacking.README
+share/ncc/nognu
+@dirrm share/ncc
+@dirrm share/doc/ncc
