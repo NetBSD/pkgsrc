@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.5 2008/10/20 12:30:16 hira Exp $
+# $NetBSD: options.mk,v 1.6 2008/10/20 14:26:22 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice3
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 java kde ooo-external-libwpd
@@ -83,10 +83,11 @@ DEPENDS+=		apache-ant>=1.7.0:../../devel/apache-ant
 CONFIGURE_ARGS+=	--with-java --disable-mediawiki
 
 # -rpath are missing from wip/jdk15.
-JAVA_LIB_ROOT=		${PKG_JAVA_HOME}/jre/lib/${MACHINE_ARCH}
-LIB.jawt=		${COMPILER_RPATH_FLAG}${JAVA_LIB_ROOT}
-LIB.mawt=		${COMPILER_RPATH_FLAG}${JAVA_LIB_ROOT}/xawt
-CONFIGURE_ENV+=		LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${JAVA_LIB_ROOT}:${JAVA_LIB_ROOT}/xawt"
+JAVA_LIB_ROOT=	${PKG_JAVA_HOME}/jre/lib/${MACHINE_ARCH}
+LIB.jawt=	-L${JAVA_LIB_ROOT} ${COMPILER_RPATH_FLAG}${JAVA_LIB_ROOT}
+LIB.mawt=	${COMPILER_RPATH_FLAG}${JAVA_LIB_ROOT}/xawt
+
+CONFIGURE_ENV+=	LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${JAVA_LIB_ROOT}:${JAVA_LIB_ROOT}/xawt"
 
 # XXX: devel/apache-ant doesn't setup ${PREFIX}/bin/java.
 CONFIGURE_ENV+=		JAVACMD="${PKG_JAVA_HOME}/bin/java"
