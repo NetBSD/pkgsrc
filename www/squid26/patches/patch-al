@@ -1,6 +1,6 @@
-$NetBSD: patch-al,v 1.1.1.1 2008/09/12 15:09:19 taca Exp $
+$NetBSD: patch-al,v 1.2 2008/10/20 03:11:04 taca Exp $
 
---- src/client_side.c.orig	2008-06-28 06:06:39.000000000 +0900
+--- src/client_side.c.orig	2008-07-22 05:48:45.000000000 +0900
 +++ src/client_side.c
 @@ -88,8 +88,12 @@
  #include <sys/fcntl.h>
@@ -14,4 +14,4 @@ $NetBSD: patch-al,v 1.1.1.1 2008/09/12 15:09:19 taca Exp $
 +#endif
  
  #if LINUX_NETFILTER
- #include <linux/netfilter_ipv4.h>
+ #include <linux/types.h>
