@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2562 2008/10/20 09:33:36 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2563 2008/10/20 10:14:24 rillig Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4411,3 +4411,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added devel/ncc version 2.8 [wiz 2008-10-20]
 	Added audio/audacious version 1.5.0 [wiz 2008-10-20]
 	Added audio/audacious-plugins version 1.5.0 [wiz 2008-10-20]
+	Updated pkgtools/pkglint to 4.89 [rillig 2008-10-20]
