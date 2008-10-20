@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.6 2008/10/20 14:26:22 hira Exp $
+# $NetBSD: options.mk,v 1.7 2008/10/20 16:14:54 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice3
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 java kde ooo-external-libwpd
@@ -82,19 +82,16 @@ USE_JAVA2=		yes
 DEPENDS+=		apache-ant>=1.7.0:../../devel/apache-ant
 CONFIGURE_ARGS+=	--with-java --disable-mediawiki
 
-# -rpath are missing from wip/jdk15.
 JAVA_LIB_ROOT=	${PKG_JAVA_HOME}/jre/lib/${MACHINE_ARCH}
 LIB.jawt=	-L${JAVA_LIB_ROOT} ${COMPILER_RPATH_FLAG}${JAVA_LIB_ROOT}
-LIB.mawt=	${COMPILER_RPATH_FLAG}${JAVA_LIB_ROOT}/xawt
+LIB.awtlib=	-L${JAVA_LIB_ROOT} ${COMPILER_RPATH_FLAG}${JAVA_LIB_ROOT}
 
+# -rpath is missing from wip/jdk15.
 CONFIGURE_ENV+=	LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${JAVA_LIB_ROOT}:${JAVA_LIB_ROOT}/xawt"
 
 # XXX: devel/apache-ant doesn't setup ${PREFIX}/bin/java.
 CONFIGURE_ENV+=		JAVACMD="${PKG_JAVA_HOME}/bin/java"
 MAKE_ENV+=		JAVACMD="${PKG_JAVA_HOME}/bin/java"
-
-# XXX
-LIB.awtlib=	-L${JAVA_LIB_ROOT} ${COMPILER_RPATH_FLAG}${JAVA_LIB_ROOT}
 
 .include "../../mk/java-env.mk"
 .include "../../mk/java-vm.mk"
@@ -102,7 +99,6 @@ LIB.awtlib=	-L${JAVA_LIB_ROOT} ${COMPILER_RPATH_FLAG}${JAVA_LIB_ROOT}
 CONFIGURE_ARGS+=	--without-java
 PKG_JAVA_HOME=
 LIB.jawt=
-LIB.mawt=
 LIB.awtlib=
 .endif
 
@@ -110,9 +106,11 @@ SUBST_CLASSES+=		java
 SUBST_STAGE.java=	post-patch
 SUBST_MESSAGE.java=	Adding JAVA_HOME
 SUBST_FILES.java=	desktop/scripts/soffice.sh
+SUBST_FILES.java+=	desktop/scripts/unopkg.sh
+SUBST_FILES.java+=	padmin/source/spadmin.sh
 SUBST_SED.java+=	-e 's,@JAVA_HOME@,${PKG_JAVA_HOME},g'
+SUBST_SED.java+=	-e 's,@JAVA_MAWT_DIR@,${JAVA_LIB_ROOT}/xawt,g'
 SUBST_SED.lib+=		-e 's|@LIB_jawt@|${LIB.jawt}|g'
-SUBST_SED.lib+=		-e 's|@LIB_mawt@|${LIB.mawt}|g'
 SUBST_SED.lib+=		-e 's|@LIB_awtlib@|${LIB.awtlib}|g'
 
 .if !empty(PKG_OPTIONS:Mkde)
