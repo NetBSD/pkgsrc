@@ -1,7 +1,7 @@
-$NetBSD: distinfo,v 1.8 2008/01/20 08:12:37 obache Exp $
+$NetBSD: distinfo,v 1.9 2008/10/20 07:48:18 wiz Exp $
 
-SHA1 (bsflite-0.83.tar.gz) = 88df536b1001761b02f43497c8f7f6c577001ec6
-RMD160 (bsflite-0.83.tar.gz) = 6822821206149a038294fb65d9ca41ba53e3559e
-Size (bsflite-0.83.tar.gz) = 66197 bytes
+SHA1 (bsflite-0.84.tar.gz) = 2d2f97f17725f8a2dd55fbfc8bcbe6379205bddd
+RMD160 (bsflite-0.84.tar.gz) = ad33b826dcc5b7ea44673305bd5271648e0bd119
+Size (bsflite-0.84.tar.gz) = 65666 bytes
 SHA1 (patch-aa) = d3e9c4953ae1634ba423aded3b7874a0f1f1cbd6
 SHA1 (patch-ab) = 2123d33f3110f1849537d828356e717f55d4c36d
