@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.593 2008/10/20 23:21:49 he Exp $
+# $NetBSD: Makefile,v 1.594 2008/10/20 23:41:33 he Exp $
 #
 
 COMMENT=	Packages related to the World Wide Web
@@ -358,6 +358,7 @@ SUBDIR+=	p5-Pod-POM-Web
 SUBDIR+=	p5-Rose-HTML-Objects
 SUBDIR+=	p5-Rose-HTMLx-Form-Field-Autocomplete
 SUBDIR+=	p5-Rose-HTMLx-Form-Field-Boolean
+SUBDIR+=	p5-Rose-HTMLx-Form-Related
 SUBDIR+=	p5-Rose-HTMLx-Form-Field-Serial
 SUBDIR+=	p5-Rose-URI
 SUBDIR+=	p5-SVN-Web
