@@ -1,0 +1,29 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/20 00:45:35 ahoka Exp $
+bin/libsee-config
+bin/see-shell
+include/see/cfunction.h
+include/see/context.h
+include/see/debug.h
+include/see/error.h
+include/see/eval.h
+include/see/input.h
+include/see/intern.h
+include/see/interpreter.h
+include/see/mem.h
+include/see/module.h
+include/see/native.h
+include/see/no.h
+include/see/object.h
+include/see/see.h
+include/see/string.h
+include/see/system.h
+include/see/try.h
+include/see/type.h
+include/see/value.h
+include/see/version.h
+lib/libsee.la
+lib/pkgconfig/see.pc
+lib/see/libFile.la
+share/doc/see/USAGE.html
+@dirrm lib/see
+@dirrm include/see
