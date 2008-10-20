@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.6 2008/10/18 01:08:44 hira Exp $
+# $NetBSD: Makefile,v 1.7 2008/10/20 12:30:16 hira Exp $
 #
 
 OO_VER=			3.0.0
@@ -67,6 +67,8 @@ SUBST_CLASSES+=		lib
 SUBST_STAGE.lib=	post-patch
 SUBST_MESSAGE.lib=	Adding library paths
 SUBST_FILES.lib=	solenv/inc/pkgsrc.mk
+SUBST_SED.lib+=		-e 's|@COMPILER_RPATH_FLAG@|${COMPILER_RPATH_FLAG}|g'
+SUBST_SED.lib+=		-e 's|@OO_LIBDIR@|${OO_PREFIX}/${OO_UNXNAME}/basis-link/program|g'
 .for pkg in db4 expat icu jpeg zlib
 LIB.${pkg}=		-L${BUILDLINK_PREFIX.${pkg}}/lib
 LIB.${pkg}+=		${COMPILER_RPATH_FLAG}${BUILDLINK_PREFIX.${pkg}}/lib
@@ -125,13 +127,14 @@ UNLIMIT_RESOURCES+=	datasize
 OO_RELEASE=		OpenOffice.org${OO_VER}
 PLIST_SRC+=		${PKGDIR}/PLIST
 PLIST_SRC+=		${WRKDIR}/PLIST
-MESSAGE_SUBST+=		OO_RELEASE=${OO_RELEASE}
-INSTALLATION_DIRS=	bin ${OO_RELEASE} share/applications
+MESSAGE_SUBST+=		DESTDIR=${DESTDIR}
+MESSAGE_SUBST+=		OO_PREFIX=${OO_PREFIX}
+INSTALLATION_DIRS=	bin lib/${OO_RELEASE} share/applications
 
 OO_UNXNAME=	openoffice.org3
 OO_PKGPATH=	${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install
 OO_PROGRAMS=	scalc sdraw simpress soffice swriter unopkg
-OO_PREFIX=	${DESTDIR}${PREFIX}/${OO_RELEASE}
+OO_PREFIX=	${DESTDIR}${PREFIX}/lib/${OO_RELEASE}
 
 post-extract:
 	cd ${WRKSRC}/bridges/source/cpp_uno &&			\
@@ -177,9 +180,9 @@ do-install:
 
 post-install:
 	cd ${DESTDIR}${PREFIX} &&				\
-	find ${OO_RELEASE} \! -type d -print |			\
-	sort > ${WRKDIR}/PLIST &&					\
-	find ${OO_RELEASE} -type d -print | sort -r |		\
+	find lib/${OO_RELEASE} \! -type d -print |		\
+	sort > ${WRKDIR}/PLIST &&				\
+	find lib/${OO_RELEASE} -type d -print | sort -r |	\
 	awk '{print("@dirrm "$$1)}' >> ${WRKDIR}/PLIST
 	${ECHO} bin/${OO_UNXNAME} >> ${WRKDIR}/PLIST
 	${ECHO} bin/${OO_UNXNAME}-printeradmin >> ${WRKDIR}/PLIST

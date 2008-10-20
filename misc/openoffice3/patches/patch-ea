@@ -1,0 +1,46 @@
+$NetBSD: patch-ea,v 1.1 2008/10/20 12:30:16 hira Exp $
+
+--- redland/rasqal-0.9.15.patch.orig	2008-10-20 03:08:13.000000000 +0900
++++ redland/rasqal-0.9.15.patch	2008-10-20 03:08:52.000000000 +0900
+@@ -225,3 +225,41 @@
+  	  ;;
+  
+  	irix | nonstopux)
++--- misc/rasqal-0.9.15/configure	2008-10-20 03:06:36.000000000 +0900
+++++ misc/build/rasqal-0.9.15/configure	2008-10-20 03:07:46.000000000 +0900
++@@ -8399,7 +8399,7 @@
++   ;;
++ 
++ netbsd*)
++-  version_type=sunos
+++  version_type=freebsd-elf
++   need_lib_prefix=no
++   need_version=no
++   if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
++@@ -12380,7 +12380,7 @@
++   ;;
++ 
++ netbsd*)
++-  version_type=sunos
+++  version_type=freebsd-elf
++   need_lib_prefix=no
++   need_version=no
++   if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
++@@ -14994,7 +14994,7 @@
++   ;;
++ 
++ netbsd*)
++-  version_type=sunos
+++  version_type=freebsd-elf
++   need_lib_prefix=no
++   need_version=no
++   if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
++@@ -17608,7 +17608,7 @@
++   ;;
++ 
++ netbsd*)
++-  version_type=sunos
+++  version_type=freebsd-elf
++   need_lib_prefix=no
++   need_version=no
++   if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
