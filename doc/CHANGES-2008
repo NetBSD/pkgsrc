@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2560 2008/10/20 07:53:16 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2561 2008/10/20 09:33:04 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4409,3 +4409,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated multimedia/mplayer-plugin-firefox to 3.55 [wiz 2008-10-20]
 	Updated chat/bsflite to 0.84 [wiz 2008-10-20]
 	Added devel/ncc version 2.8 [wiz 2008-10-20]
+	Added audio/audacious version 1.5.0 [wiz 2008-10-20]
