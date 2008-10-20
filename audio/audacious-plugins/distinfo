@@ -1,0 +1,6 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/10/20 09:32:19 wiz Exp $
+
+SHA1 (audacious-plugins-1.5.0.tgz) = 7cd157b0663674e6c271cb0353fb91e068f91f7e
+RMD160 (audacious-plugins-1.5.0.tgz) = 0a44cdd99819b9769b5b260dc41d546278a64039
+Size (audacious-plugins-1.5.0.tgz) = 2961507 bytes
+SHA1 (patch-aa) = 40620dde9c06925bf5cb9a0370eeaa55ec3b1f4f
