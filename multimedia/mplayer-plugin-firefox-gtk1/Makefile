@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.4 2007/05/12 16:04:12 ghen Exp $
+# $NetBSD: Makefile,v 1.5 2008/10/20 07:46:52 wiz Exp $
 #
 
 BROWSER=	firefox-gtk1
-PKGREVISION=	3
 
 CONFIGURE_ARGS+=	--disable-gtk2
 CONFIGURE_ARGS+=	--enable-gtk1
