@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.113 2008/08/14 01:48:20 bjs Exp $
+# $NetBSD: Makefile,v 1.114 2008/10/20 20:32:58 ghen Exp $
 #
 
 COMMENT=	Fonts
@@ -109,6 +109,7 @@ SUBDIR+=	kochi-ttf
 SUBDIR+=	liberation-ttf
 SUBDIR+=	libfontenc
 SUBDIR+=	linux-libertine-ttf
+SUBDIR+=	lohit-fonts
 SUBDIR+=	mftrace
 SUBDIR+=	mglfonts
 SUBDIR+=	mkfontalias
