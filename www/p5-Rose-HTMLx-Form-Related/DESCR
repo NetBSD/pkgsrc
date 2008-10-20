@@ -1,0 +1,4 @@
+Rose::HTMLx::Form::Related is a subclass of Rose::HTML::Form.
+Rose::HTMLx::Form::Related can interrogate the relationships between
+ORM classes and the Forms that represent them, and use that data
+to tie multiple Rose::HTMLx::Form::Related classes together.
