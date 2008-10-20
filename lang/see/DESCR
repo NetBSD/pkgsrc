@@ -1,0 +1,5 @@
+ECMAScript is a standardized language also known variously as JavaScript,
+JScript, and LiveScript. SEE is a library that provides a parser and runtime
+environment for this language. It conforms to ECMAScript Edition 3, and to
+JavaScript 1.5, with some compatibility switches for earlier versions of
+JavaScript and Microsoft's JScript.
