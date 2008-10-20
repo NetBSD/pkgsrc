@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2564 2008/10/20 13:53:34 gdt Exp $
+$NetBSD: CHANGES-2008,v 1.2565 2008/10/20 19:43:15 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4413,3 +4413,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added audio/audacious-plugins version 1.5.0 [wiz 2008-10-20]
 	Updated pkgtools/pkglint to 4.89 [rillig 2008-10-20]
 	Updated databases/guile-pg to 0.37 [gdt 2008-10-20]
+	Updated inputmethod/libhangul to 0.0.8 [msk 2008-10-20]
