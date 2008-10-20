@@ -1,0 +1,3 @@
+This module is an extension of the Excel::Template module, which
+allows the user to use various "engines" from which you can create
+Excel files through Excel::Template.
