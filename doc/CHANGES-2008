@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2552 2008/10/19 19:36:30 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.2553 2008/10/20 00:49:07 ahoka Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4400,3 +4400,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/viewvc to 1.0.7 [adrianp 2008-10-19]
 	Updated textproc/py-html2text to 2.34 [schmonz 2008-10-19]
 	Updated devel/opengrok to 0.7 [adrianp 2008-10-19]
+	Added lang/see version 3.0.1376 [ahoka 2008-10-20]
