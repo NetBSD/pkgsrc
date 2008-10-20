@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2008/07/14 12:56:07 joerg Exp $
+# $NetBSD: Makefile,v 1.27 2008/10/20 20:48:22 minskim Exp $
 #
 
-DISTNAME=		nabi-0.15
-PKGREVISION=		3
+DISTNAME=		nabi-0.99.2
 CATEGORIES=		korean inputmethod
-MASTER_SITES=		http://kldp.net/frs/download.php/1651/
+MASTER_SITES=		http://kldp.net/frs/download.php/4619/
 
 MAINTAINER=		minskim@NetBSD.org
 HOMEPAGE=		http://nabi.kldp.net/
@@ -18,5 +17,6 @@ USE_PKGLOCALEDIR=	YES
 
 .include "../../converters/libiconv/buildlink3.mk"
 .include "../../devel/gettext-lib/buildlink3.mk"
+.include "../../inputmethod/libhangul/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
