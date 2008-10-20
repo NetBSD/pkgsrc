@@ -1,4 +1,4 @@
-$NetBSD: distinfo,v 1.5 2008/10/18 11:09:11 hira Exp $
+$NetBSD: distinfo,v 1.6 2008/10/20 12:30:16 hira Exp $
 
 SHA1 (openoffice-3.0.0/OOo_3.0.0_src_binfilter.tar.bz2) = 09ff91fd871f00c696befa8064fe04d7a88a3c8a
 RMD160 (openoffice-3.0.0/OOo_3.0.0_src_binfilter.tar.bz2) = edc71b8b0596d63e60431c7266140bf5188abc6d
@@ -40,7 +40,6 @@ SHA1 (patch-bm) = 0f7367782155c1d0f0459912aac69a1c759ad7fa
 SHA1 (patch-bn) = 6f21ecf499135b5b47ed191eca79848b4c404447
 SHA1 (patch-bo) = 3e4bcccd0a7cea535e443d750039fa844380f8bc
 SHA1 (patch-bq) = 5a78794aac28cefb9386034e6937c8f63b2ebc65
-SHA1 (patch-br) = 2af5c86f4cf04b29cb3bab76e23b5d9b46445978
 SHA1 (patch-bs) = ede4ffcb762e89efbf95b6e4b644eb268534f1ca
 SHA1 (patch-bv) = bc035bdbc8420666a52417f2226e3e687d199e33
 SHA1 (patch-bw) = 223963fe59b71468420a697d8ea27c153b9f37ce
@@ -50,7 +49,7 @@ SHA1 (patch-ch) = caa598140bcb78ec61bc33d44c5873da84e1628a
 SHA1 (patch-ci) = 4743cee1c391e04a53bd83f6ae7e58e737d08d1e
 SHA1 (patch-cj) = 45ff359ec795e5ef5c692e954d88912c74017162
 SHA1 (patch-ck) = 01925efa75759b3b8efda3ab109b0f6481f45a7f
-SHA1 (patch-cn) = 12e09dde1e8fd8afaf2f48fd6455625790b9ecc4
+SHA1 (patch-cn) = 358fd67f20f3ffdb993fb3f4cb38d5733274fd6b
 SHA1 (patch-cp) = 35151ba658859c9d116ccdf44ec372c9e66435b1
 SHA1 (patch-cq) = 6691fd7fa330db000ec5a9319bf9030b83aa593d
 SHA1 (patch-cr) = aa797461919635c3e6aaa30678a7585d5640dedd
@@ -71,8 +70,8 @@ SHA1 (patch-dk) = 1f022fe11b4b1c6cb960f416724054954442ee74
 SHA1 (patch-do) = c505e2e03912a068aa4666c8460b129447ec5a4e
 SHA1 (patch-dp) = ce90ba6c2cce3af1ade0257fd42106ea8345661b
 SHA1 (patch-dt) = 59964a31a8abbb324029653609b0decadbe03a75
-SHA1 (patch-du) = 85a7ccaffc5165617b031359873727f7a29d1938
-SHA1 (patch-dw) = de171dec68a1a55a47f2652ecdad429020d773ef
-SHA1 (patch-dx) = 7579b1f7326951c57bd2ff597209c17d5d54f28d
-SHA1 (patch-dy) = 1feec77ce8c87fc1afb797401047669b3da41c54
-SHA1 (patch-dz) = c3d345ad74dcaa45667ce4de97d8b4686edb773a
+SHA1 (patch-du) = 57434c4c30bf1335aef089a9c267328a2ba6959a
+SHA1 (patch-dy) = 4af56ef04180ab3dec7d0051e4075e84b62c8405
+SHA1 (patch-dz) = 3932f59e8f78c8a641e52d5284ccc0395c7ee172
+SHA1 (patch-ea) = 8c54345a53bd49d9c4c3b206d43778a56df0b292
+SHA1 (patch-eb) = 34562ae59bc67ab6ced1d63b39594a1b44ca3834

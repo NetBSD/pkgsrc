@@ -1,0 +1,46 @@
+$NetBSD: patch-eb,v 1.1 2008/10/20 12:30:16 hira Exp $
+
+--- redland/redland-1.0.7.patch.orig	2008-10-20 03:13:47.000000000 +0900
++++ redland/redland-1.0.7.patch	2008-10-20 03:14:30.000000000 +0900
+@@ -710,3 +710,41 @@
+  	  ;;
+  
+  	irix | nonstopux)
++--- misc/redland-1.0.7/configure	2008-10-20 03:12:31.000000000 +0900
+++++ misc/build/redland-1.0.7/configure	2008-10-20 03:13:23.000000000 +0900
++@@ -8687,7 +8687,7 @@
++   ;;
++ 
++ netbsd*)
++-  version_type=sunos
+++  version_type=freebsd-elf
++   need_lib_prefix=no
++   need_version=no
++   if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
++@@ -12668,7 +12668,7 @@
++   ;;
++ 
++ netbsd*)
++-  version_type=sunos
+++  version_type=freebsd-elf
++   need_lib_prefix=no
++   need_version=no
++   if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
++@@ -15282,7 +15282,7 @@
++   ;;
++ 
++ netbsd*)
++-  version_type=sunos
+++  version_type=freebsd-elf
++   need_lib_prefix=no
++   need_version=no
++   if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
++@@ -17896,7 +17896,7 @@
++   ;;
++ 
++ netbsd*)
++-  version_type=sunos
+++  version_type=freebsd-elf
++   need_lib_prefix=no
++   need_version=no
++   if echo __ELF__ | $CC -E - | grep __ELF__ >/dev/null; then
