@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2567 2008/10/20 20:42:05 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.2568 2008/10/20 20:50:17 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4413,6 +4413,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Added audio/audacious-plugins version 1.5.0 [wiz 2008-10-20]
 	Updated pkgtools/pkglint to 4.89 [rillig 2008-10-20]
 	Updated databases/guile-pg to 0.37 [gdt 2008-10-20]
-	Updated inputmethod/libhangul to 0.0.8 [msk 2008-10-20]
+	Updated inputmethod/libhangul to 0.0.8 [minskim 2008-10-20]
 	Added fonts/lohit-fonts version 2.3.1 [ghen 2008-10-20]
 	Updated www/SpeedyCGI to 2.22nb4 [adrianp 2008-10-20]
+	Updated inputmethod/nabi to 0.99.2 [minskim 2008-10-20]
