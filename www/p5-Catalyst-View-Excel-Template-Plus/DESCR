@@ -1,0 +1,2 @@
+This is a Catalyst View subclass which can handle rendering excel
+content through Excel::Template::Plus.
