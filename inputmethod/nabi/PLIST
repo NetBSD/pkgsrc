@@ -1,31 +1,27 @@
-@comment $NetBSD: PLIST,v 1.5 2006/04/17 07:07:22 jlam Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/10/20 20:48:22 minskim Exp $
 bin/nabi
+share/locale/de/LC_MESSAGES/nabi.mo
 share/locale/ko/LC_MESSAGES/nabi.mo
-share/nabi/candidate/nabi.txt
-share/nabi/compose/default
-share/nabi/compose/full
-share/nabi/keyboard/2qwerty
-share/nabi/keyboard/32qwerty
-share/nabi/keyboard/39qwerty
-share/nabi/keyboard/3fqwerty
-share/nabi/keyboard/3sqwerty
+share/nabi/keyboard_layouts
 share/nabi/nabi-about.png
 share/nabi/nabi.png
 share/nabi/nabi.svg
+share/nabi/symbol.txt
+share/nabi/themes/Jini/README
+share/nabi/themes/Jini/english.png
+share/nabi/themes/Jini/english.svg
+share/nabi/themes/Jini/hangul.png
+share/nabi/themes/Jini/hangul.svg
+share/nabi/themes/Jini/none.png
+share/nabi/themes/Jini/none.svg
 share/nabi/themes/KingSejong/README
 share/nabi/themes/KingSejong/english.png
 share/nabi/themes/KingSejong/hangul.png
 share/nabi/themes/KingSejong/none.png
-share/nabi/themes/MSWindows/english.png
-share/nabi/themes/MSWindows/hangul.png
-share/nabi/themes/MSWindows/none.png
-share/nabi/themes/MSWindowsXP/english.png
-share/nabi/themes/MSWindowsXP/hangul.png
-share/nabi/themes/MSWindowsXP/none.png
-share/nabi/themes/Mac/README
-share/nabi/themes/Mac/english.png
-share/nabi/themes/Mac/hangul.png
-share/nabi/themes/Mac/none.png
+share/nabi/themes/KingSejong2/README
+share/nabi/themes/KingSejong2/english.png
+share/nabi/themes/KingSejong2/hangul.png
+share/nabi/themes/KingSejong2/none.png
 share/nabi/themes/Onion/README
 share/nabi/themes/Onion/english.png
 share/nabi/themes/Onion/hangul.png
@@ -33,6 +29,7 @@ share/nabi/themes/Onion/none.png
 share/nabi/themes/SimplyRed/english.png
 share/nabi/themes/SimplyRed/hangul.png
 share/nabi/themes/SimplyRed/none.png
+share/nabi/themes/Tux/README
 share/nabi/themes/Tux/english.png
 share/nabi/themes/Tux/hangul.png
 share/nabi/themes/Tux/none.png
@@ -44,12 +41,8 @@ share/nabi/themes/keyboard/none.png
 @dirrm share/nabi/themes/Tux
 @dirrm share/nabi/themes/SimplyRed
 @dirrm share/nabi/themes/Onion
-@dirrm share/nabi/themes/Mac
-@dirrm share/nabi/themes/MSWindowsXP
-@dirrm share/nabi/themes/MSWindows
+@dirrm share/nabi/themes/KingSejong2
 @dirrm share/nabi/themes/KingSejong
+@dirrm share/nabi/themes/Jini
 @dirrm share/nabi/themes
-@dirrm share/nabi/keyboard
-@dirrm share/nabi/compose
-@dirrm share/nabi/candidate
 @dirrm share/nabi
