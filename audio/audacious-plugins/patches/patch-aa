@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/10/20 09:32:19 wiz Exp $
+
+--- src/mtp_up/mtp.c.orig	2008-03-13 22:22:36.000000000 +0000
++++ src/mtp_up/mtp.c
+@@ -199,7 +199,7 @@ gint upload_file(Tuple *from_tuple)
+ #if DEBUG
+     g_print("Uploading track '%s'\n",filename);
+ #endif
+-    ret = LIBMTP_Send_Track_From_File(mtp_device, filename , gentrack, NULL , NULL, parent_id);
++    ret = LIBMTP_Send_Track_From_File(mtp_device, filename , gentrack, NULL , NULL);
+     LIBMTP_destroy_track_t(gentrack);
+     if (ret == 0) 
+         g_print("Track upload finished!\n");
