@@ -1,0 +1,16 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/20 20:32:11 ghen Exp $
+lib/X11/fonts/TTF/lohit_bn.ttf
+lib/X11/fonts/TTF/lohit_gu.ttf
+lib/X11/fonts/TTF/lohit_hi.ttf
+lib/X11/fonts/TTF/lohit_kn.ttf
+lib/X11/fonts/TTF/lohit_kok.ttf
+lib/X11/fonts/TTF/lohit_ks.ttf
+lib/X11/fonts/TTF/lohit_mai.ttf
+lib/X11/fonts/TTF/lohit_ml.ttf
+lib/X11/fonts/TTF/lohit_mr.ttf
+lib/X11/fonts/TTF/lohit_ne.ttf
+lib/X11/fonts/TTF/lohit_or.ttf
+lib/X11/fonts/TTF/lohit_pa.ttf
+lib/X11/fonts/TTF/lohit_sd.ttf
+lib/X11/fonts/TTF/lohit_ta.ttf
+lib/X11/fonts/TTF/lohit_te.ttf
