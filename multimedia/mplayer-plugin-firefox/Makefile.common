@@ -1,4 +1,4 @@
-# $NetBSD: Makefile.common,v 1.19 2008/03/04 19:32:30 jlam Exp $
+# $NetBSD: Makefile.common,v 1.20 2008/10/20 07:45:57 wiz Exp $
 #
 
 DISTNAME=		mplayerplug-in-${DIST_VER}
@@ -14,12 +14,11 @@ DEPENDS+=		mplayer>=0.92:../../multimedia/mplayer
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-WRKSRC=			${WRKDIR}/mplayerplug-in
 GNU_CONFIGURE=		yes
 USE_TOOLS+=		gmake pkg-config msgfmt
 USE_LANGUAGES=		c c++
 
-DIST_VER=		3.50
+DIST_VER=		3.55
 CONFIGURE_ARGS+=	--enable-wmp
 CONFIGURE_ARGS+=	--enable-qt
 CONFIGURE_ARGS+=	--enable-rm
