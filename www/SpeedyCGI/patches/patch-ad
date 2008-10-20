@@ -1,0 +1,13 @@
+$NetBSD: patch-ad,v 1.1 2008/10/20 20:41:47 adrianp Exp $
+
+--- src/optdefs.orig	2003-10-07 05:03:48.000000000 +0100
++++ src/optdefs
+@@ -63,7 +63,7 @@ option	BackendProg
+ type	str
+ letter	p
+ context	frontend
+-defval	$INSTALLBIN/speedy_backend
++defval	@@PREFIX@@/bin/speedy_backend
+ desc	Path to the speedy backend program.
+ 
+ option	TmpBase
