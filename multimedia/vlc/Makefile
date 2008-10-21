@@ -1,11 +1,12 @@
-# $NetBSD: Makefile,v 1.61 2008/10/02 17:49:00 ahoka Exp $
+# $NetBSD: Makefile,v 1.61.2.1 2008/10/21 21:51:03 tron Exp $
 #
 
-DISTNAME=		vlc-0.9.2
-PKGREVISION=		1
+DISTNAME=		vlc-${VLC_VERSION}
 CATEGORIES=		multimedia
-MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/0.9.2/
+MASTER_SITES=		http://download.videolan.org/pub/videolan/vlc/${VLC_VERSION}/
 EXTRACT_SUFX=		.tar.bz2
+
+VLC_VERSION=		0.9.4
 
 MAINTAINER=		ahoka@NetBSD.org
 HOMEPAGE=		http://videolan.org/
@@ -37,7 +38,6 @@ BUILDLINK_API_DEPENDS.zlib+=		zlib>=1.2.0
 BUILDLINK_API_DEPENDS.vcdimager+=	vcdimager>=0.7.20nb1
 
 CONFIGURE_ARGS+=	--disable-speex # needs unstable 1.1.x branch
-CONFIGURE_ARGS+=	--disable-gnomevfs
 CONFIGURE_ARGS+=	--disable-smb
 
 CONFIGURE_ARGS+=	--enable-cddax \
