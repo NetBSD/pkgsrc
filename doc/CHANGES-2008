@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2568 2008/10/20 20:50:17 minskim Exp $
+$NetBSD: CHANGES-2008,v 1.2569 2008/10/21 00:23:36 he Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4417,3 +4417,11 @@ Changes to the packages collection and infrastructure in 2008:
 	Added fonts/lohit-fonts version 2.3.1 [ghen 2008-10-20]
 	Updated www/SpeedyCGI to 2.22nb4 [adrianp 2008-10-20]
 	Updated inputmethod/nabi to 0.99.2 [minskim 2008-10-20]
+	Updated archivers/p5-Archive-Zip to 1.26 [he 2008-10-20]
+	Updated converters/p5-Convert-UUlib to 1.12 [he 2008-10-20]
+	Added math/p5-Excel-Template version 0.31 [he 2008-10-20]
+	Added math/p5-Excel-Template-Plus version 0.04 [he 2008-10-20]
+	Added www/p5-Catalyst-View-Excel-Template-Plus version 0.01 [he 2008-10-21]
+	Added www/p5-CatalystX-CRUD-View-Excel version 0.06 [he 2008-10-21]
+	Added www/p5-Rose-HTMLx-Form-Related version 0.09 [he 2008-10-21]
+	Updated www/p5-CatalystX-CRUD-Controller-RHTMLO to 0.18 [he 2008-10-21]
