@@ -1,0 +1,22 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/10/21 06:29:51 bjs Exp $
+
+--- driconf_commonui.py.orig	2008-10-19 02:04:41.000000000 -0400
++++ driconf_commonui.py
+@@ -38,7 +38,7 @@ except IOError:
+     try:
+         _ = gettext.translation ("driconf").ugettext
+     except IOError:
+-        _ = gettext.translation ("driconf", "/usr/local/share/locale",
++        _ = gettext.translation ("driconf", "@PREFIX@/@PKGLOCALEDIR@/locale",
+                                  fallback=True).ugettext
+ 
+ # global variable: lang
+@@ -69,7 +69,7 @@ def findInShared (name):
+     # try all <prefix>/share/driconf/name for all prefixes of __file__
+     head,tail = os.path.split (__file__)
+     while head and tail:
+-        f = os.path.join (head, "share/driconf", name)
++        f = os.path.join (head, "share/pixmaps/@PKGBASE@", name)
+         if os.path.isfile (f):
+             return f
+         head,tail = os.path.split (head)

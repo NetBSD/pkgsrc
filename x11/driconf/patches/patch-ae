@@ -1,0 +1,13 @@
+$NetBSD: patch-ae,v 1.1.1.1 2008/10/21 06:29:51 bjs Exp $
+
+--- driconf.orig	2008-10-19 02:04:41.000000000 -0400
++++ driconf
+@@ -21,7 +21,7 @@
+ # Contact: http://fxk.de.vu/
+ 
+ import sys
+-sys.path.append("/usr/local/lib/driconf")
++sys.path.append("@PREFIX@/@PYSITELIB@/@PKGBASE@")
+ 
+ import driconf
+ 
