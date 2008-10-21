@@ -1,0 +1,13 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/10/21 06:29:51 bjs Exp $
+
+--- driconf.desktop.orig	2008-10-19 02:04:41.000000000 -0400
++++ driconf.desktop
+@@ -3,7 +3,7 @@ Encoding=UTF-8
+ Name=3D Acceleration
+ Comment=Change 3D Acceleration options
+ Exec=driconf
+-Icon=/usr/local/share/driconf/driconf-icon.png
++Icon=@PREFIX@/share/pixmaps/@PKGBASE@/driconf-icon.png
+ Type=Application
+ Categories=GNOME;Application;Settings;AdvancedSettings;
+ StartupNotify=true

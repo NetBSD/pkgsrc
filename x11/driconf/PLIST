@@ -1,0 +1,32 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/21 06:29:51 bjs Exp $
+bin/driconf
+${PYSITELIB}/driconf/dri.py
+${PYSITELIB}/driconf/dri.pyc
+${PYSITELIB}/driconf/dri.pyo
+${PYSITELIB}/driconf/driconf.py
+${PYSITELIB}/driconf/driconf.pyc
+${PYSITELIB}/driconf/driconf.pyo
+${PYSITELIB}/driconf/driconf_commonui.py
+${PYSITELIB}/driconf/driconf_commonui.pyc
+${PYSITELIB}/driconf/driconf_commonui.pyo
+${PYSITELIB}/driconf/driconf_complexui.py
+${PYSITELIB}/driconf/driconf_complexui.pyc
+${PYSITELIB}/driconf/driconf_complexui.pyo
+${PYSITELIB}/driconf/driconf_simpleui.py
+${PYSITELIB}/driconf/driconf_simpleui.pyc
+${PYSITELIB}/driconf/driconf_simpleui.pyo
+share/applications/driconf.desktop
+share/locale/de/LC_MESSAGES/driconf.mo
+share/locale/es/LC_MESSAGES/driconf.mo
+share/locale/it/LC_MESSAGES/driconf.mo
+share/locale/nl/LC_MESSAGES/driconf.mo
+share/locale/ru/LC_MESSAGES/driconf.mo
+share/pixmaps/driconf/card.png
+share/pixmaps/driconf/driconf-icon.png
+share/pixmaps/driconf/drilogo.jpg
+share/pixmaps/driconf/screen.png
+share/pixmaps/driconf/screencard.png
+@dirrm share/pixmaps/driconf
+@comment in xdg-dirs: @dirrm share/pixmaps
+@comment in xdg-dirs: @dirrm share/applications
+@dirrm ${PYSITELIB}/driconf
