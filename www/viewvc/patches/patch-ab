@@ -1,8 +1,26 @@
-$NetBSD: patch-ab,v 1.1.1.1 2006/10/21 09:05:44 adrianp Exp $
+$NetBSD: patch-ab,v 1.2 2008/10/21 20:46:28 adrianp Exp $
 
---- viewvc.conf.dist.orig	2006-09-28 02:13:36.000000000 +0100
+--- viewvc.conf.dist.orig	2008-02-25 20:47:24.000000000 +0000
 +++ viewvc.conf.dist
-@@ -135,7 +135,7 @@ use_rcsparse = 0
+@@ -105,6 +105,7 @@ cvs_roots = cvs: /home/cvsroot
+ default_root = cvs
+ 
+ # uncomment if the RCS binaries are not on the standard path
++rcs_path = @RCS_PREFIX@/bin/
+ #rcs_path = /usr/bin/
+ 
+ # ViewVC can use CVSNT (www.cvsnt.org) instead of the RCS 
+@@ -125,7 +126,8 @@ default_root = cvs
+ use_rcsparse = 0
+ 
+ # uncomment if the svn command-line utilities are not on the standard path
+-#svn_path = /usr/bin/
++#svn_path = @PREFIX@/bin/
++svn_path = @PREFIX@/bin/
+ 
+ #
+ # This is a pathname to a MIME types file to help viewvc to guess the
+@@ -135,7 +137,7 @@ use_rcsparse = 0
  # uncomment this option and point it at a MIME type file.
  #
  # For example, you can use the mime.types from apache here:
@@ -11,7 +29,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/10/21 09:05:44 adrianp Exp $
  
  # This address is shown in the footer of the generated pages. 
  # It must be replaced with the address of the local repository maintainer.
-@@ -456,14 +456,14 @@ highlight_line_numbers = 1
+@@ -495,14 +497,14 @@ highlight_line_numbers = 1
  highlight_convert_tabs = 2
  
  # use php to colorize .php and .inc files?
@@ -28,7 +46,7 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/10/21 09:05:44 adrianp Exp $
  # php_exe_path = /usr/local/bin/php
  # php_exe_path = C:\Program Files\php\cli\php.exe
  
-@@ -477,20 +477,20 @@ allow_tar = 0
+@@ -510,20 +512,20 @@ php_exe_path = php
  # Use CvsGraph. See http://www.akhphd.au.dk/~bertho/cvsgraph/ for
  # documentation and download. 
  #
@@ -39,8 +57,9 @@ $NetBSD: patch-ab,v 1.1.1.1 2006/10/21 09:05:44 adrianp Exp $
  #
  # if the cvsgraph program is not on the path, set this value
  #
- cvsgraph_path =
+-cvsgraph_path =
 -# cvsgraph_path = /usr/local/bin/
++cvsgraph_path = @PREFIX@/bin/
 +# cvsgraph_path = @PREFIX@/bin/
  
  #
