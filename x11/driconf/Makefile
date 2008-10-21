@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/10/21 06:34:56 bjs Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/21 06:40:59 bjs Exp $
 #
 
 DISTNAME=	driconf-0.9.1
@@ -11,6 +11,7 @@ COMMENT=	Configuration applet for DRI drivers
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+DEPENDS+= 	${PYPKGPREFIX}-expat-[0-9]*:../../textproc/py-expat
 DEPENDS+= 	xdriinfo>=1.0.2:../../x11/xdriinfo
 
 USE_DIRS+=		xdg-1.4
@@ -29,19 +30,20 @@ SUBST_FILES.fix-paths+=	setup.cfg setup.py
 SUBST_MESSAGE.fix-paths=Fixing hard-coded pathnames.
 SUBST_STAGE.fix-paths=	pre-configure
 SUBST_VARS.fix-paths=	PKGBASE PKGLOCALEDIR PKG_SYSCONFDIR PREFIX PYSITELIB
-
+###
+###	NOTE: this is only to build the .mo files.
+###
 pre-build:
 	${RUN} cd ${WRKSRC} && \
 	${BUILD_MAKE_CMD} all
 
-#post-install:
+post-install:
 	${RUN} cd ${WRKSRC} && \
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/applications && \
 	${INSTALL_DATA} ${WRKSRC}/driconf.desktop \
 		${DESTDIR}${PREFIX}/share/applications/
 
 .include "../../lang/python/extension.mk"
-#.include "../../textproc/py-xml/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .include "../../x11/py-gtk2/buildlink3.mk"
 
