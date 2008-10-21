@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2571 2008/10/21 13:12:44 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2572 2008/10/21 19:30:16 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4429,3 +4429,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added x11/driconf version 0.9.1 [bjs 2008-10-21]
 	Added x11/xdriinfo version 1.0.2 [bjs 2008-10-21]
 	Updated www/p5-libwww to 5.819 [obache 2008-10-21]
+	Updated devel/opengrok to 0.7nb1 [adrianp 2008-10-21]
