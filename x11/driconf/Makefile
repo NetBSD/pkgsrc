@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/10/21 06:29:51 bjs Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/21 06:34:56 bjs Exp $
 #
 
 DISTNAME=	driconf-0.9.1
@@ -13,8 +13,9 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 
 DEPENDS+= 	xdriinfo>=1.0.2:../../x11/xdriinfo
 
-USE_DIRS+=	xdg-1.4
-USE_TOOLS+=	msgfmt msgmerge xgettext
+USE_DIRS+=		xdg-1.4
+USE_PKGLOCALEDIR= 	yes
+USE_TOOLS+=		msgfmt msgmerge xgettext
 
 CONFIGURE_ARGS+=	--prefix=${PREFIX:Q}
 PYDISTUTILSPKG= 	yes
