@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.19 2008/10/02 17:49:00 ahoka Exp $
+@comment $NetBSD: PLIST,v 1.19.2.1 2008/10/21 21:51:03 tron Exp $
 ${PLIST.faad}lib/vlc/codec/libfaad_plugin.la
 ${PLIST.dbus}lib/vlc/control/libdbus_plugin.la
 ${PLIST.dbus}lib/vlc/misc/libinhibit_plugin.la
@@ -6,7 +6,6 @@ ${PLIST.dbus}lib/vlc/misc/libtelepathy_plugin.la
 ${PLIST.x11}bin/qvlc
 ${PLIST.x11}lib/vlc/gui/libqt4_plugin.la
 ${PLIST.x11}lib/vlc/codec/libpng_plugin.la
-${PLIST.x11}lib/vlc/gui/libqt4_plugin.la
 ${PLIST.x11}lib/vlc/misc/libfreetype_plugin.la
 ${PLIST.x11}lib/vlc/misc/libosd_parser_plugin.la
 ${PLIST.x11}lib/vlc/video_filter/libosdmenu_plugin.la
@@ -33,6 +32,14 @@ ${PLIST.gnome}lib/vlc/access/libaccess_gnomevfs_plugin.la
 ${PLIST.v4l2}lib/vlc/access/libaccess_v4l2_plugin.la
 ${PLIST.cdda}lib/vlc/access/libcdda_plugin.la
 ${PLIST.vcd}lib/vlc/access/libvcd_plugin.la
+${PLIST.skins}bin/svlc
+${PLIST.skins}lib/vlc/gui/libskins2_plugin.la
+${PLIST.skins}share/vlc/skins2/default.vlt
+${PLIST.skins}share/vlc/skins2/fonts/FreeSans.ttf
+${PLIST.skins}share/vlc/skins2/fonts/FreeSansBold.ttf
+${PLIST.skins}share/vlc/skins2/skin.catalog
+${PLIST.skins}share/vlc/skins2/skin.dtd
+${PLIST.skins}share/vlc/skins2/winamp2.xml
 bin/cvlc
 bin/rvlc
 bin/vlc
@@ -138,9 +145,7 @@ lib/vlc/audio_filter/libspatializer_plugin.la
 lib/vlc/audio_filter/libtrivial_channel_mixer_plugin.la
 lib/vlc/audio_filter/libtrivial_resampler_plugin.la
 lib/vlc/audio_filter/libugly_resampler_plugin.la
-lib/vlc/audio_filter/libdtstofloat32_plugin.a
 lib/vlc/audio_filter/libdtstofloat32_plugin.la
-lib/vlc/audio_filter/libdtstofloat32_plugin.so
 lib/vlc/audio_mixer/libfloat32_mixer_plugin.la
 lib/vlc/audio_mixer/libspdif_mixer_plugin.la
 lib/vlc/audio_mixer/libtrivial_mixer_plugin.la
@@ -197,6 +202,7 @@ lib/vlc/demux/libm4v_plugin.la
 lib/vlc/demux/libmjpeg_plugin.la
 lib/vlc/demux/libmkv_plugin.la
 lib/vlc/demux/libmp4_plugin.la
+lib/vlc/demux/libmpc_plugin.la
 lib/vlc/demux/libmpga_plugin.la
 lib/vlc/demux/libmpgv_plugin.la
 lib/vlc/demux/libnsc_plugin.la
@@ -226,7 +232,7 @@ lib/vlc/meta_engine/libtaglib_plugin.la
 lib/vlc/misc/libaudioscrobbler_plugin.la
 lib/vlc/misc/libdummy_plugin.la
 lib/vlc/misc/libexport_plugin.la
-lib/vlc/misc/libfreetype_plugin.la
+lib/vlc/misc/libgnutls_plugin.la
 lib/vlc/misc/liblogger_plugin.la
 lib/vlc/misc/libmemcpy_plugin.la
 lib/vlc/misc/libosd_parser_plugin.la
@@ -318,13 +324,13 @@ lib/vlc/video_filter/libwave_plugin.la
 lib/vlc/video_output/libglx_plugin.la
 lib/vlc/video_output/libimage_plugin.la
 lib/vlc/video_output/libopengl_plugin.la
+lib/vlc/video_output/libsnapshot_plugin.la
 lib/vlc/video_output/libvmem_plugin.la
 lib/vlc/video_output/libx11_plugin.la
 lib/vlc/video_output/libxvideo_plugin.la
 lib/vlc/visualization/libvisual_plugin.la
 lib/vlc/demux/libmpc_plugin.la
 lib/vlc/misc/libgnutls_plugin.la
-lib/vlc/video_output/libsnapshot_plugin.la
 man/man1/vlc-config.1
 man/man1/vlc.1
 share/applications/vlc.desktop
@@ -334,6 +340,7 @@ share/doc/vlc/intf-cdda.txt
 share/doc/vlc/intf-vcd.txt
 share/locale/af/LC_MESSAGES/vlc.mo
 share/locale/ar/LC_MESSAGES/vlc.mo
+share/locale/bg/LC_MESSAGES/vlc.mo
 share/locale/bn/LC_MESSAGES/vlc.mo
 share/locale/ca/LC_MESSAGES/vlc.mo
 share/locale/co/LC_MESSAGES/vlc.mo
