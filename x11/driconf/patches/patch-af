@@ -1,0 +1,13 @@
+$NetBSD: patch-af,v 1.1.1.1 2008/10/21 06:29:51 bjs Exp $
+
+--- driconf.py.orig	2008-10-19 02:04:41.000000000 -0400
++++ driconf.py
+@@ -79,7 +79,7 @@ def main():
+         expert = True
+ 
+     # read or create configuration files
+-    fileNameList = ["/etc/drirc", os.path.join (os.environ["HOME"], ".drirc")]
++    fileNameList = ["@PKG_SYSCONFDIR@/dri.conf", os.path.join (os.environ["HOME"], ".drirc")]
+     configList = []
+     newFiles = []
+     for fileName in fileNameList:
