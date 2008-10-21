@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.61 2008/10/19 19:19:17 he Exp $
+# $NetBSD: Makefile,v 1.62 2008/10/21 13:12:27 obache Exp $
 
-DISTNAME=	libwww-perl-5.817
+DISTNAME=	libwww-perl-5.819
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
-PKGREVISION=	1
 SVR4_PKGNAME=	p5lww
 CATEGORIES=	www perl5
 MASTER_SITES=	${MASTER_SITE_PERL_CPAN:=WWW/}
@@ -14,7 +13,7 @@ COMMENT=	Perl5 library for WWW access
 PKG_INSTALLATION_TYPES=	overwrite pkgviews
 PKG_DESTDIR_SUPPORT=	user-destdir
 
-DEPENDS+=	p5-Compress-Zlib-[0-9]*:../../devel/p5-Compress-Zlib
+DEPENDS+=	p5-Compress-Zlib>=1.10:../../devel/p5-Compress-Zlib
 DEPENDS+=	p5-Crypt-SSLeay>=0:../../security/p5-Crypt-SSLeay
 DEPENDS+=	p5-HTML-Parser>=3.33:../../www/p5-HTML-Parser
 DEPENDS+=	p5-IO-Socket-SSL-[0-9]*:../../security/p5-IO-Socket-SSL
@@ -30,11 +29,6 @@ MAKE_ENV+=		INSTALL_ALIASES=${ALIASES} PERL_MM_USE_DEFAULT=1
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
-
-.if ${ALIASES} == "no"
-post-install:
-	${RM} -f ${PREFIX}/bin/HEAD
-.endif
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
