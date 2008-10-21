@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7611 2008/10/21 01:24:34 taca Exp $
+$NetBSD: TODO,v 1.7612 2008/10/21 06:31:52 bjs Exp $
 
 Suggested new packages
 ======================
@@ -316,10 +316,6 @@ Suggested new packages
 	tDOM [pkg/38028]
 	http://www.tdom.org/
 	C based XML extension for Tcl
-
-	xdriinfo [pkg/38157]
-	http://xorg.freedesktop.org/
-	Query configuration information of DRI drivers
 
 	xine-plugin [pkg/38159]
 	http://xinehq.de/
