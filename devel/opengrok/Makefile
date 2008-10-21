@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/10/19 19:36:13 adrianp Exp $
+# $NetBSD: Makefile,v 1.7 2008/10/21 19:29:57 adrianp Exp $
 #
 
 DISTNAME=	opengrok-0.7
+PKGREVISION=	1
 CATEGORIES=	devel
 MASTER_SITES=	http://www.opensolaris.org/os/project/opengrok/files/
 
@@ -10,7 +11,6 @@ HOMEPAGE=	http://www.opensolaris.org/os/project/opengrok/files/
 COMMENT=	Fast and usable source code search and cross reference engine
 
 DEPENDS+=	exctags-[0-9]*:../../devel/exctags
-DEPENDS+=	jflex-[0-9]*:../../devel/jflex
 DEPENDS+=	unzip-[0-9]*:../../archivers/unzip
 DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
