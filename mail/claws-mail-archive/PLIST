@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.1 2008/07/13 22:34:20 smb Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/10/21 12:10:08 tonnerre Exp $
 include/claws-mail/plugins/archive/archiver.h
 include/claws-mail/plugins/archive/archiver_prefs.h
 lib/claws-mail/plugins/archive.la
+share/locale/ca/LC_MESSAGES/archive.mo
 share/locale/es/LC_MESSAGES/archive.mo
 share/locale/fr/LC_MESSAGES/archive.mo
+share/locale/hu/LC_MESSAGES/archive.mo
 share/locale/pt_BR/LC_MESSAGES/archive.mo
 @dirrm lib/claws-mail/plugins
 @dirrm include/claws-mail/plugins/archive
