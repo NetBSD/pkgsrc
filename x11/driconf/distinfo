@@ -1,0 +1,12 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/10/21 06:29:51 bjs Exp $
+
+SHA1 (driconf-0.9.1.tar.gz) = 504fbe38643fc91ade9c87c502c7c18e4fdc7ac5
+RMD160 (driconf-0.9.1.tar.gz) = f32e83a283756dd911356dae220b54ba351df984
+Size (driconf-0.9.1.tar.gz) = 102531 bytes
+SHA1 (patch-aa) = db3fd8fb5e2d8438c2dea3025e3c9eda2019cc22
+SHA1 (patch-ab) = 2f3221759c30d1010a01598c4134218127e5e605
+SHA1 (patch-ac) = 46cdd74cc05e42276e4c565c275d706fa5083c58
+SHA1 (patch-ad) = 51a8f495904117028fdfe794190f2194757879ef
+SHA1 (patch-ae) = b9dd855cb800c0040df98177d74791c5e2ca6163
+SHA1 (patch-af) = c76889cb4e56e9d0f8cdca1d9989653c93c034c6
+SHA1 (patch-ag) = df575f741ca6c656a77fde0defa99236daf02898
