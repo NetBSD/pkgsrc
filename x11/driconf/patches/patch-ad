@@ -1,0 +1,31 @@
+$NetBSD: patch-ad,v 1.1.1.1 2008/10/21 06:29:51 bjs Exp $
+
+--- setup.py.orig	2008-10-19 02:04:41.000000000 -0400
++++ setup.py
+@@ -3,7 +3,7 @@ from distutils.core import setup
+ langs = ["de", "es", "it", "ru", "nl"]
+ translations = []
+ for lang in langs:
+-    translations.append (("share/locale/%s/LC_MESSAGES" % lang,
++    translations.append (("@PKGLOCALEDIR@/locale/%s/LC_MESSAGES" % lang,
+                           ["%s/LC_MESSAGES/driconf.mo" % lang]))
+ 
+ setup(name="driconf",
+@@ -15,7 +15,7 @@ setup(name="driconf",
+       py_modules=["dri", "driconf", "driconf_commonui", "driconf_complexui",
+                   "driconf_simpleui"],
+       scripts=["driconf"],
+-      data_files=[("share/driconf", ["card.png", "screen.png", "screencard.png",
++      data_files=[("share/pixmaps/@PKGBASE@", ["card.png", "screen.png", "screencard.png",
+                                      "drilogo.jpg", "driconf-icon.png"])
+                   ] + translations)
+ 
+@@ -28,7 +28,7 @@ setup(name="driconf",
+ from os.path import isfile, isdir, join
+ from distutils.sysconfig import get_python_lib
+ obsoleteFiles = []
+-for prefix in [None, "/usr/local"]:
++for prefix in ["@PREFIX@"]:
+     if not prefix:
+         pyLibPath = get_python_lib()
+     else:
