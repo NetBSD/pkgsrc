@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7610 2008/10/20 19:43:15 minskim Exp $
+$NetBSD: TODO,v 1.7611 2008/10/21 01:24:34 taca Exp $
 
 Suggested new packages
 ======================
@@ -408,7 +408,7 @@ Suggested package updates
 	o ap2-auth-ldap-3.11
 	o ap2-chroot-0.5
 	o ap2-transform-0.6.0
-	o apache-2.2.10 [CVE-2008-2939]
+	o apache-2.2.10
 	o apache-ant-1.7.1
 	o apache-ant15-1.7.0
 	o apache-tomcat55-6.0.14
