@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.6 2008/10/19 18:02:19 adrianp Exp $
+# $NetBSD: Makefile,v 1.7 2008/10/21 20:46:28 adrianp Exp $
 #
 
 DISTNAME=	viewvc-1.0.7
+PKGREVISION=	1
 CATEGORIES=	devel www
 MASTER_SITES=	http://viewvc.tigris.org/files/documents/3330/44050/
 
@@ -13,6 +14,9 @@ PYTHON_PATCH_SCRIPTS=	viewvc-install bin/* bin/cgi/*.cgi lib/*.py
 
 .if !exists(/usr/bin/rlog)
 DEPENDS+=	rcs-[0-9]*:../../devel/rcs
+RCS_PKG=	YES
+.else
+RCS_PKG=	NO
 .endif
 
 NO_BUILD=	YES
@@ -34,6 +38,12 @@ SUBST_SED.conf=		-e "s|@VIEWVCDIR@|${VIEWVCDIR}|g"
 SUBST_SED.conf+=	-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_SED.conf+=	-e "s|@PHP_OPT@|${PHP_OPT}|g"
 SUBST_SED.conf+=	-e "s|@CVSGRAPH_OPT@|${CVSGRAPH_OPT}|g"
+
+.if defined(RCS_PKG) && ${RCS_PKG} == "YES"
+SUBST_SED.conf+=	-e "s|@RCS_PREFIX@|${PREFIX}|g"
+.else
+SUBST_SED.conf+=	-e "s|@RCS_PREFIX@|/usr|g"
+.endif
 
 CHECK_PORTABILITY_SKIP=	tools/make-release
 
