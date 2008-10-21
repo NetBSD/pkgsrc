@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.62 2008/10/21 13:12:27 obache Exp $
+# $NetBSD: Makefile,v 1.63 2008/10/21 22:07:36 heinz Exp $
 
 DISTNAME=	libwww-perl-5.819
 PKGNAME=	p5-${DISTNAME:S/-perl-/-/}
@@ -25,7 +25,7 @@ DEPENDS+=	p5-Digest-MD5-[0-9]*:../../security/p5-Digest-MD5
 USE_LANGUAGES=		# empty
 
 PERL5_PACKLIST=		auto/LWP/.packlist
-MAKE_ENV+=		INSTALL_ALIASES=${ALIASES} PERL_MM_USE_DEFAULT=1
+MAKE_ENV+=		PERL_MM_USE_DEFAULT=1
 
 .include "../../mk/bsd.prefs.mk"
 .include "options.mk"
