@@ -1,0 +1,4 @@
+DRI is the direct rendering infrastructure in XFree86 and X.org, which
+provides 3D hardware acceleration. Most 3D drivers have a number of
+options for tuning the performance and visual quality. DRIconf is a
+configuration applet that allows you to change these parameters.
