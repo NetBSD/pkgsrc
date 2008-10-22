@@ -1,8 +1,8 @@
-$NetBSD: patch-ae,v 1.1 2005/01/04 14:13:59 taca Exp $
+$NetBSD: patch-ae,v 1.2 2008/10/22 03:28:22 taca Exp $
 
---- scripts/Makefile.orig	2002-12-22 02:32:59.000000000 +0900
+--- scripts/Makefile.orig	2006-08-22 13:15:58.000000000 +0900
 +++ scripts/Makefile
-@@ -29,7 +29,7 @@
+@@ -30,7 +30,7 @@
  #
  SCRIPTS=	battery.shutdown line.lost line.recover line.shutdown
  FILESDIR?=	${PREFIX}/libexec/bkpupsd
@@ -11,3 +11,27 @@ $NetBSD: patch-ae,v 1.1 2005/01/04 14:13:59 taca Exp $
  DOCDIR?=	${PREFIX}/share/doc/bkpupsd
  CLEANFILES+=	${RCFILE} ${RCDFILE}
  OPSYS!=uname -s
+@@ -69,16 +69,16 @@ rc.conf.add: rc.conf.add.in
+ scriptsinstall:
+ 
+ install:
+-	@test -d ${FILESDIR} || mkdir -p ${FILESDIR}
+-	@test -d ${RCDIR} || mkdir -p ${RCDIR}
++	@test -d ${DESTDIR}${FILESDIR} || mkdir -p ${DESTDIR}${FILESDIR}
++	@test -d ${DESTDIR}${RCDIR} || mkdir -p ${DESTDIR}${RCDIR}
+ 	${INSTALL} -c -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} \
+-		${SCRIPTS} ${FILESDIR}
++		${SCRIPTS} ${DESTDIR}${FILESDIR}
+ 	${INSTALL} -c -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} \
+-		${RCFILE} ${RCDIR}/${RCTARGET}
++		${RCFILE} ${DESTDIR}${RCDIR}/${RCTARGET}
+ .if !empty(RCDFILE)
+-	@test -d ${DOCDIR} || mkdir -p ${DOCDIR}
+-	${INSTALL} -c -o ${BINOWN} -g ${BINGRP} -m ${BINMODE} \
+-		${RCDFILE} ${DOCDIR}/${RCDTARGET}
++	@test -d ${DESTDIR}${DOCDIR} || mkdir -p ${DESTDIR}${DOCDIR}
++	${INSTALL} -c -o ${BINOWN} -g ${BINGRP} -m ${NONBINMODE} \
++		${RCDFILE} ${DESTDIR}${DOCDIR}/${RCDTARGET}
+ .endif
+ 
+ .include <bsd.prog.mk>
