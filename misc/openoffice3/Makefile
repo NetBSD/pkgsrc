@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/10/20 12:30:16 hira Exp $
+# $NetBSD: Makefile,v 1.8 2008/10/22 16:35:47 tnn Exp $
 #
 
 OO_VER=			3.0.0
@@ -79,6 +79,9 @@ LIBS+=			${LIB.${pkg}}
 CONFIGURE_ENV+=		LIBS=${LIBS:O:u:Q}
 CONFIGURE_ENV+=		X_LIBS=${X11_LDFLAGS:M*:Q}
 CONFIGURE_ENV+=		BLNK_PREFIX_db4=${BUILDLINK_PREFIX.db4}
+CONFIGURE_ENV+=		ac_cv_path_SYSTEM_GENBRK=${PREFIX}/bin/genbrk
+CONFIGURE_ENV+=		ac_cv_path_SYSTEM_GENCCODE=${PREFIX}/sbin/genccode
+CONFIGURE_ENV+=		ac_cv_path_SYSTEM_GENCMN=${PREFIX}/sbin/gencmn
 
 CONFIGURE_ARGS+=	--with-use-shell=bash
 CONFIGURE_ARGS+=	--enable-binfilter
