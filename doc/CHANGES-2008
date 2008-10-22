@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2579 2008/10/22 10:50:33 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2580 2008/10/22 10:54:24 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4436,7 +4436,7 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/bkpupsd to 2.2.1nb1 [taca 2008-10-22]
 	Updated net/wireshark to 1.0.4 [tron 2008-10-22]
 	Added graphics/goocanvas version 0.12 [obache 2008-10-22]
-	Added x11/p5-Tk version 804.028 [markd 2008-10-22]
+	Updated x11/p5-Tk to 804.028 [markd 2008-10-22]
 	Updated meta-pkgs/ruby-gnome2 to 0.18.0 [obache 2008-10-22]
 	Updated devel/ruby-gnome2-atk to 0.18.0 [obache 2008-10-22]
 	Updated devel/ruby-gnome2-bonobo to 0.18.0 [obache 2008-10-22]
