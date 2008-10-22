@@ -1,6 +1,6 @@
-$NetBSD: patch-ao,v 1.1 2008/09/17 00:21:48 obache Exp $
+$NetBSD: patch-ao,v 1.2 2008/10/22 10:42:02 obache Exp $
 
---- gtk/src/lib/gtk2/base.rb.orig	2008-04-10 14:18:40.000000000 +0000
+--- gtk/src/lib/gtk2/base.rb.orig	2008-04-10 14:01:35.000000000 +0000
 +++ gtk/src/lib/gtk2/base.rb
 @@ -13,7 +13,12 @@ require 'glib2'
  require 'atk'

@@ -1,14 +1,17 @@
-$NetBSD: patch-ab,v 1.2 2008/09/17 00:21:48 obache Exp $
+$NetBSD: patch-ab,v 1.3 2008/10/22 10:42:02 obache Exp $
 
---- glib/src/depend.orig	2008-01-03 03:01:59.000000000 +0000
+--- glib/src/depend.orig	2008-09-30 14:41:50.000000000 +0000
 +++ glib/src/depend
-@@ -1,5 +1,5 @@
- install:
+@@ -1,6 +1,6 @@
+-install:
 -	@$(RUBY) -run -e install -- -m 0644 -v $(srcdir)/rbglib.h $(sitearchdir)$(target_prefix)
 -	@$(RUBY) -run -e install -- -m 0644 -v $(srcdir)/rbgutil.h $(sitearchdir)$(target_prefix)
 -	@$(RUBY) -run -e install -- -m 0644 -v $(srcdir)/rbgobject.h $(sitearchdir)$(target_prefix)
 -	@$(RUBY) -run -e install -- -m 0644 -v $(srcdir)/rbgcompat.h $(sitearchdir)$(target_prefix)
+-	@$(RUBY) -run -e install -- -m 0644 -v $(srcdir)/glib-enum-types.h $(sitearchdir)$(target_prefix)
++install-so:
 +	$(INSTALL_DATA) $(srcdir)/rbglib.h $(RUBYARCHDIR)
 +	$(INSTALL_DATA) $(srcdir)/rbgutil.h $(RUBYARCHDIR)
 +	$(INSTALL_DATA) $(srcdir)/rbgobject.h $(RUBYARCHDIR)
 +	$(INSTALL_DATA) $(srcdir)/rbgcompat.h $(RUBYARCHDIR)
++	$(INSTALL_DATA) $(srcdir)/glib-enum-types.h $(RUBYARCHDIR)

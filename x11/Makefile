@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.569 2008/10/21 06:31:19 bjs Exp $
+# $NetBSD: Makefile,v 1.570 2008/10/22 10:42:02 obache Exp $
 #
 
 COMMENT=	Packages to support the X window system
@@ -293,6 +293,7 @@ SUBDIR+=	rox-wallpaper
 SUBDIR+=	ruby-gnome2-gnome
 SUBDIR+=	ruby-gnome2-gtk
 SUBDIR+=	ruby-gnome2-gtksourceview
+SUBDIR+=	ruby-gnome2-gtksourceview2
 SUBDIR+=	ruby-gnome2-panelapplet
 SUBDIR+=	ruby-gnome2-vte
 SUBDIR+=	ruby-gtk

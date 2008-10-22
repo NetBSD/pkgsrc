@@ -1,6 +1,6 @@
-$NetBSD: patch-ap,v 1.1 2008/09/17 00:21:48 obache Exp $
+$NetBSD: patch-ap,v 1.2 2008/10/22 10:42:03 obache Exp $
 
---- pango/src/lib/pango.rb.orig	2007-12-28 09:04:22.000000000 +0000
+--- pango/src/lib/pango.rb.orig	2007-12-28 09:01:22.000000000 +0000
 +++ pango/src/lib/pango.rb
 @@ -8,7 +8,12 @@
  
