@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.15 2008/10/16 13:52:05 drochner Exp $
+# $NetBSD: Makefile,v 1.16 2008/10/22 19:55:23 apb Exp $
 #
 
 PKGNAME=		${PYPKGPREFIX}-gobject-2.15.4
+PKGRECISION=		1
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
@@ -11,6 +12,8 @@ post-patch:
 	${SED} "s|@PYGTKCODEGEN@|${PREFIX}/share/pygtk/2.0|" \
 	<${WRKSRC}/dsextras.py >${WRKSRC}/dsextras.py.tmp \
 	&& ${MV} ${WRKSRC}/dsextras.py.tmp ${WRKSRC}/dsextras.py
+
+BUILDLINK_API_DEPENDS.py-gobject-shared+= py-gobject-shared>=${PKGVERSION}
 
 .include "../../lang/python/extension.mk"
 .include "../../devel/py-gobject-shared/buildlink3.mk"
