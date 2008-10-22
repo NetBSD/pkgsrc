@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2577 2008/10/22 10:27:49 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2578 2008/10/22 10:37:43 markd Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4436,3 +4436,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated sysutils/bkpupsd to 2.2.1nb1 [taca 2008-10-22]
 	Updated net/wireshark to 1.0.4 [tron 2008-10-22]
 	Added graphics/goocanvas version 0.12 [obache 2008-10-22]
+	Added x11/p5-Tk version 804.028 [markd 2008-10-22]
