@@ -1,0 +1,12 @@
+$NetBSD: patch-aa,v 1.1.1.1 2008/10/22 11:40:55 obache Exp $
+
+--- ../net-irc-0.0.5.gemspec.orig	2008-10-22 11:25:48.000000000 +0000
++++ ../net-irc-0.0.5.gemspec
+@@ -42,7 +42,6 @@ files: 
+ - lib/net/irc/message.rb
+ - lib/net/irc/message
+ - lib/net/irc/message/serverconfig.rb
+-- lib/net/irc/message/modeparser
+ - lib/net/irc/message/modeparser.rb
+ - examples/hatena-star-stream.rb
+ - examples/sig.rb
