@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2582 2008/10/22 11:41:20 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2583 2008/10/22 14:02:43 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4466,3 +4466,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/ruby-gnome2-vte to 0.18.0 [obache 2008-10-22]
 	Updated textproc/docbook-xsl to 1.74.0nb1 [minskim 2008-10-22]
 	Added chat/ruby-net-irc version 0.0.5 [obache 2008-10-22]
+	Updated x11/ruby-gnome2-gtk to 0.18.0nb1 [obache 2008-10-22]
