@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.2 2008/06/20 01:09:10 joerg Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/22 02:35:45 obache Exp $
 #
 
 DISTNAME=	qrencode-3.0.3
@@ -15,6 +15,8 @@ GNU_CONFIGURE=	yes
 USE_TOOLS+=	pkg-config
 USE_LANGUAGES+= c c++
 USE_LIBTOOL=	yes
+
+MAKE_JOBS_SAFE=		no
 
 # The tests are not actually installed anyway, and at least
 # one of these tests requires SDL.
