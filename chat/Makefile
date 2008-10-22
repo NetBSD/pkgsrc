@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.140 2008/06/24 13:36:30 smb Exp $
+# $NetBSD: Makefile,v 1.141 2008/10/22 11:42:44 obache Exp $
 #
 
 COMMENT=	Communication programs
@@ -87,6 +87,7 @@ SUBDIR+=	psi
 SUBDIR+=	quirc
 SUBDIR+=	riece
 SUBDIR+=	roxirc
+SUBDIR+=	ruby-net-irc
 SUBDIR+=	scrollz
 SUBDIR+=	silc-client
 SUBDIR+=	silc-client-icb
