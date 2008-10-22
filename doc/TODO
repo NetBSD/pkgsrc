@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7612 2008/10/21 06:31:52 bjs Exp $
+$NetBSD: TODO,v 1.7613 2008/10/22 10:51:20 wiz Exp $
 
 Suggested new packages
 ======================
@@ -411,7 +411,7 @@ Suggested package updates
 	o apsfilter-7.2.8
 	o aqsis-1.4.1
 	o argtable-2.9
-	o aria2-0.16.1
+	o aria2-0.16.2
 	o arla-0.90
 	o arnold-20040104
 	o arping-2.08
@@ -426,6 +426,8 @@ Suggested package updates
 	o astyle-1.15.3
 	o aterm-1.0.1
 	o auctex-11.85
+	o audacious-1.5.1
+	o audacious-plugins-1.5.1
 	o autoconvert-0.3.16
 	o avcheck-0.91
 	o avidemux-2.4.2
@@ -481,7 +483,7 @@ Suggested package updates
 	o cflow-1.2
 	o cgdb-0.6.4
 	o cgicc-3.2.7
-	o cheese-2.24.0
+	o cheese-2.24.1
 	o chemtool-1.6.11
 	o cherokee-0.9.3
 	o chrony-1.23
@@ -526,6 +528,7 @@ Suggested package updates
 	o ddclient-3.7.3
 	o defendguin-0.0.11
 	o delegate-9.7.5
+	o deskbar-applet-2.24.1
 	o devIL-1.7.1
 	o devhelp-0.21
 	o dhid-5.3
@@ -555,8 +558,10 @@ Suggested package updates
 	o ed-1.1
 	o ede-1.2
 	o edonkeyclc-1.0.2 [replaces net/edonkey2k]
+	o eel-2.24.1
 	o eggdrop-1.6.19
 	o egtk-0.3.6.2
+	o ekiga-3.0.1
 	o electric-8.07
 	o electricfence-2.4.16
 	o elf-0.5.4p1
@@ -569,8 +574,10 @@ Suggested package updates
 	o emech-2.8.5.1
 	o enlightenment-0.16.8.12
 	o enscript-1.6.4
+	o eog-2.24.1
 	o epic4-2.6
-	o epiphany-2.24.0.1
+	o epiphany-2.24.1
+	o epiphany-extensions-2.24.1
 	o epsg-6.14
 	o epstool-3.08
 	o eric3-4.2.2a [now called eric4]
@@ -580,8 +587,10 @@ Suggested package updates
 	o esmtp-1.0
 	o et-2.60
 	o etach-1.4.1
-	o evolution-2.24.0
-	o evolution-exchange-2.24.0
+	o evince-2.24.1
+	o evolution-2.24.1
+	o evolution-data-server-2.24.1
+	o evolution-exchange-2.24.1
 	o evolution-webcal-2.24.0
 	o ex-20050325
 	o exempi-2.0.2 [broken on NetBSD]
@@ -598,6 +607,7 @@ Suggested package updates
 	o festival-1.96
 	o fetchyahoo-2.11.2
 	o file-4.26 [pkg/39596]
+	o file-roller-2.24.1
 	o fillets-ng-0.7.4
 	o fillets-ng-data-0.7.4
 	o findutils-4.4.0
@@ -626,12 +636,12 @@ Suggested package updates
 	o gap-4r4p9
 	o gated-3.6
 	o gauche-0.8.14
-	o gcalctool-5.24.0
+	o gcalctool-5.24.1
 	o gcc-4.3.2
 	o gcc-ssp-3.4.4
 	o gcin-1.4.1
 	o gcombust-0.1.55
-	o gconf-editor-2.24.0
+	o gconf-editor-2.24.1
 	o gcpio-2.7
 	o gdal-lib-1.4.4
 	o gdb-6.7.1
@@ -639,7 +649,7 @@ Suggested package updates
 	o gdl-2.24.0
 	o gdm-2.24.0
 	o gdsreader-0.3.2
-	o geany-0.14
+	o geany-0.15
 	o geda-1.4.1.20080929
 	o geeklog-1.5.0
 	o gentoo-0.11.57
@@ -658,6 +668,7 @@ Suggested package updates
 	o glabels-2.2.3
 	o glchess-1.0.5
 	o glib2-2.18.2
+	o glibmm-2.18.1
 	o global-5.7.2 [pkg/39760]
 	o gmime-2.4.2
 	o gmpc-0.16.0
@@ -665,18 +676,19 @@ Suggested package updates
 	o gnet1-1.1.9
 	o gnetman-20050429
 	o gnome-2.24.0
+	o gnome-applets-2.24.1
 	o gnome-build-2.24.1
 	o gnome-desktop-sharp-2.24.0
-	o gnome-games-2.24.0
+	o gnome-games-2.24.1
 	o gnome-keyring-2.24.1
 	o gnome-mag-0.15.4
 	o gnome-pilot-2.0.16
 	o gnome-sharp-2.24.0
 	o gnome-speech-0.4.21
-	o gnome-system-monitor-2.24.0
-	o gnome-themes-2.24.0
+	o gnome-system-monitor-2.24.1
+	o gnome-themes-2.24.1
 	o gnome-user-docs-2.24.0
-	o gnome-utils-2.24.0
+	o gnome-utils-2.24.1
 	o gnomeicu-0.99.14
 	o gnopernicus-1.1.2
 	o gnu-crypto-2.1.0
@@ -700,6 +712,7 @@ Suggested package updates
 	o gramofile-1.6P
 	o granulate-0.2
 	o graphviz-2.20.3
+	o gsasl-0.2.29
 	o gsharutils-4.7
 	o gsm-1.0.12
 	o gss-0.0.22
@@ -708,11 +721,12 @@ Suggested package updates
 	o gtexinfo-4.13
 	o gthumb-2.10.10
 	o gtick-0.4.2
+	o gtk-engines-2.16.1
 	o gtk-systrace-20030623
 	o gtk2-2.14.4
 	o gtk2-engines-2.16.0
 	o gtkglarea-2.0.0
-	o gtkhtml314-3.24.0
+	o gtkhtml314-3.24.1
 	o gtklife-5.1
 	o gtksee-0.6.0b
 	o gtkyahoo-0.18.3
@@ -723,6 +737,7 @@ Suggested package updates
 	o guile-gnome-2.16.1
 	o guile-gtk-2.0
 	o gv-3.6.6
+	o gvfs-1.0.2
 	o gworkspace-0.8.6
 	o hackbot-2.21
 	o hanzim-1.8
@@ -838,6 +853,7 @@ Suggested package updates
 	o libole2-2.2.8
 	o libopensync-0.35
 	o libshout-2.2.2
+	o libsoup-2.24.1
 	o libssh-0.2
 	o libstatgrab-0.16
 	o libstree-0.4.2
@@ -914,6 +930,7 @@ Suggested package updates
 	o nano-2.0.8
 	o nap-1.5.3
 	o nasm-2.04
+	o nautilus-2.24.1
 	o nautilus-cd-burner-2.18.2 [needs hal]
 	o nautilus-cd-burner-2.22.1
 	o ncftp3-3.2.1 [pkg/37859]
@@ -1001,11 +1018,14 @@ Suggested package updates
 	o p5-Text-Tabs+Wrap-2006.1117
 	o p5-XML-Feed-0.21
 	o p5-XML-RSS-1.36
+	o p5-glib2-1.200
+	o p5-gtk2-1.201
 	o p5-ispman-1.2
 	o p5-libwww-5.818
 	o p5-sybperl-2.18
 	o p5-xmltv-0.5.51
 	o pam-smbpass-3.0.13
+	o pango-1.22.1
 	o pari-2.3.3 [pkg/38116]
 	o pari-galdata-2.2 [pkg/38117]
 	o parrot-0.7.1
@@ -1074,6 +1094,7 @@ Suggested package updates
 	o psmisc-21.9
 	o pspp-0.6.1
 	o pstoedit-3.45
+	o ptlib-2.4.2
 	o puf-0.93.3
 	o puppet-0.24.5
 	o puzzle-5.2
@@ -1143,7 +1164,7 @@ Suggested package updates
 	o rat-4.2.25
 	o rayshade-4.0.6
 	o rc-1.7.1 [at ftp://quenix2.dyndns.org/FreeBSD/ports/distfiles/]
-	o rdiff-backup-1.2.1
+	o rdiff-backup-1.2.2
 	o rdp-1.6
 	o regionset-0.2
 	o remind-3.1.5
@@ -1310,7 +1331,7 @@ Suggested package updates
 	o vicq-0.4.2
 	o vifm-0.4
 	o vim-7.2
-	o vino-2.24.0
+	o vino-2.24.1
 	o visual-regexp-3.1
 	o vm-8.0.7.522 [pkg/37707]
 	o vmips-1.3.2
