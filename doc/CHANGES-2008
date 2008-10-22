@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2574 2008/10/22 01:00:58 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2575 2008/10/22 03:29:23 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4433,3 +4433,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/viewvc to 1.0.7nb1 [adrianp 2008-10-21]
 	Updated devel/p5-Class-MOP to 0.67 [seb 2008-10-22]
 	Updated devel/p5-Moose to 0.59 [seb 2008-10-22]
+	Updated sysutils/bkpupsd to 2.2.1nb1 [taca 2008-10-22]
