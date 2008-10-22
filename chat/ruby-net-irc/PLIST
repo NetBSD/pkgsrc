@@ -1,0 +1,36 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/22 11:40:55 obache Exp $
+${GEM_HOME}/cache/net-irc-${PKGVERSION}.gem
+${GEM_LIBDIR}/ChangeLog
+${GEM_LIBDIR}/README
+${GEM_LIBDIR}/Rakefile
+${GEM_LIBDIR}/examples/client.rb
+${GEM_LIBDIR}/examples/hatena-star-stream.rb
+${GEM_LIBDIR}/examples/lig.rb
+${GEM_LIBDIR}/examples/lingr.rb
+${GEM_LIBDIR}/examples/mixi.rb
+${GEM_LIBDIR}/examples/nig.rb
+${GEM_LIBDIR}/examples/sig.rb
+${GEM_LIBDIR}/examples/tig.rb
+${GEM_LIBDIR}/examples/wig.rb
+${GEM_LIBDIR}/lib/net/irc.rb
+${GEM_LIBDIR}/lib/net/irc/client.rb
+${GEM_LIBDIR}/lib/net/irc/client/channel_manager.rb
+${GEM_LIBDIR}/lib/net/irc/constants.rb
+${GEM_LIBDIR}/lib/net/irc/message.rb
+${GEM_LIBDIR}/lib/net/irc/message/modeparser.rb
+${GEM_LIBDIR}/lib/net/irc/message/serverconfig.rb
+${GEM_LIBDIR}/lib/net/irc/pattern.rb
+${GEM_LIBDIR}/lib/net/irc/server.rb
+${GEM_LIBDIR}/spec/channel_manager_spec.rb
+${GEM_LIBDIR}/spec/modeparser_spec.rb
+${GEM_LIBDIR}/spec/net-irc_spec.rb
+${GEM_LIBDIR}/spec/spec.opts
+${GEM_HOME}/specifications/net-irc-${PKGVERSION}.gemspec
+@dirrm ${GEM_LIBDIR}/spec
+@dirrm ${GEM_LIBDIR}/lib/net/irc/message
+@dirrm ${GEM_LIBDIR}/lib/net/irc/client
+@dirrm ${GEM_LIBDIR}/lib/net/irc
+@dirrm ${GEM_LIBDIR}/lib/net
+@dirrm ${GEM_LIBDIR}/lib
+@dirrm ${GEM_LIBDIR}/examples
+@dirrm ${GEM_LIBDIR}
