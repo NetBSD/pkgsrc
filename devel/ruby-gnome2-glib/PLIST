@@ -1,7 +1,11 @@
-@comment $NetBSD: PLIST,v 1.5 2008/09/17 00:21:49 obache Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/10/22 10:42:03 obache Exp $
 ${RUBY_VENDORLIB}/glib-mkenums.rb
 ${RUBY_VENDORLIB}/glib2.rb
 ${RUBY_VENDORARCHLIB}/glib2.${RUBY_DLEXT}
 ${RUBY_VENDORARCHLIB}/glib-enum-types.h
+${RUBY_VENDORARCHLIB}/rbgcompat.h
+${RUBY_VENDORARCHLIB}/rbglib.h
+${RUBY_VENDORARCHLIB}/rbgobject.h
+${RUBY_VENDORARCHLIB}/rbgutil.h
 ${RUBY_VENDORLIB}/mkmf-gnome2.rb
 ${RUBY_VENDORLIB}/pkg-config.rb

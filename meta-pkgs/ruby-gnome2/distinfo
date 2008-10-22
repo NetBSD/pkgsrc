@@ -1,21 +1,14 @@
-$NetBSD: distinfo,v 1.5 2008/09/17 00:21:48 obache Exp $
+$NetBSD: distinfo,v 1.6 2008/10/22 10:42:02 obache Exp $
 
-SHA1 (ruby-gnome2-all-0.17.0.tar.gz) = 8afcaedaa3fc5c4b2e86152a4122c28ad4693c07
-RMD160 (ruby-gnome2-all-0.17.0.tar.gz) = 11bd9fa5b54a822c58851b9e69b3837a0e0a5926
-Size (ruby-gnome2-all-0.17.0.tar.gz) = 1483244 bytes
-SHA1 (patch-aa) = e3a71325c58d780ed8f8f0d9f9c11b870a832353
-SHA1 (patch-ab) = ec484594620e8d9528417a24c7fca030708d6d36
-SHA1 (patch-ac) = 924a34bdc09a42bd79e3a3cd859c3421f7e9e711
-SHA1 (patch-ad) = c522d34c269778c328def9494dfe4c4ce9f41161
-SHA1 (patch-ae) = fa5bb916ec56cc4ba96a52bdca82f6995b829843
-SHA1 (patch-af) = bcf18b0e95af531fa17cbea64ae5d5e518538901
-SHA1 (patch-ag) = 167120424cc2a8ed2b8c5ae6ba913e0cb3332e99
-SHA1 (patch-ah) = 0f79c15df24226737efee47959ec7f9a33220912
-SHA1 (patch-ai) = 064fd9cb49440e34f52653df4aeea49cdea0dff6
-SHA1 (patch-aj) = 14359983b816ab91dbd9bc02edccdac5a187c7f5
-SHA1 (patch-ak) = da565ace6ac102dd52c738ecc04a25045136d923
-SHA1 (patch-al) = 0b9ba29ba9ed7fd01d957eea38ee7b8ff7bdf0f8
-SHA1 (patch-am) = 6c6b5a7535a0a08526f264cc32bd8d832271025f
-SHA1 (patch-an) = 7b09fe1f6fd8586bc092857f383a29e63861117c
-SHA1 (patch-ao) = 7563b329b86e96e24c05d6570ab6ef7962b031e6
-SHA1 (patch-ap) = d533557159cc0559b1f057099d123db55c744600
+SHA1 (ruby-gnome2-all-0.18.0.tar.gz) = 2e0e72cae4f84e1f22e2ad01c16ff63f620ce2f2
+RMD160 (ruby-gnome2-all-0.18.0.tar.gz) = 8b708ec1ac36042f0f6ebc09d1cfe3fc559b66e5
+Size (ruby-gnome2-all-0.18.0.tar.gz) = 2231735 bytes
+SHA1 (patch-aa) = 1e3330a13df0786a1e3559a57578c99c6d3fce85
+SHA1 (patch-ab) = 3056c970276c2b6442fb7792a457b356cd1a0cb6
+SHA1 (patch-ac) = 0713a9c0255d7e08769645451ca33282c93e280f
+SHA1 (patch-ad) = c50e2ba5299d48eecfc6d68940efc2562cefa0d0
+SHA1 (patch-af) = b45bd1593f9ca2b577ccfa5693507aae6aad3440
+SHA1 (patch-ag) = e46ee6839e9df605b6cdb04c5c2a2a4970563747
+SHA1 (patch-an) = fe2160188643513011c9a2db8d7a21437c1c3516
+SHA1 (patch-ao) = ec787fd91c52f8ecbf4aa6166bb4b288f35b97b5
+SHA1 (patch-ap) = d14bd0b87149d6cf68a22e5b2ad16e86d50b107c
