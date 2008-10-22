@@ -1,0 +1,4 @@
+GooCanvas is similar in many ways to GnomeCanvas and FooCanvas.
+But it uses cairo for rendering, has an optional model/view split,
+and uses interfaces for items & models (so you can easily turn any
+application object into a canvas item or model).
