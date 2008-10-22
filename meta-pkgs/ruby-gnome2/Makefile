@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.11 2008/09/17 00:21:48 obache Exp $
+# $NetBSD: Makefile,v 1.12 2008/10/22 10:42:02 obache Exp $
 #
 
 PKGNAME=	${RUBY_PKGPREFIX}-gnome2-${VERSION}
@@ -14,6 +14,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-libglade>=${VERSION}:../../devel/ruby-gnome2-
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-pango>=${VERSION}:../../devel/ruby-gnome2-pango
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gdkpixbuf>=${VERSION}:../../graphics/ruby-gnome2-gdkpixbuf
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gnomecanvas>=${VERSION}:../../graphics/ruby-gnome2-gnomecanvas
+DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-goocanvas>=${VERSION}:../../graphics/ruby-gnome2-goocanvas
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtkglext>=${VERSION}:../../graphics/ruby-gnome2-gtkglext
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-libart>=${VERSION}:../../graphics/ruby-gnome2-libart
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-rsvg>=${VERSION}:../../graphics/ruby-gnome2-rsvg
@@ -27,6 +28,7 @@ DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtkmozembed>=${VERSION}:../../www/ruby-gnome2
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gnome>=${VERSION}:../../x11/ruby-gnome2-gnome
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=${VERSION}:../../x11/ruby-gnome2-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtksourceview>=${VERSION}:../../x11/ruby-gnome2-gtksourceview
+DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtksourceview2>=${VERSION}:../../x11/ruby-gnome2-gtksourceview2
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-panelapplet>=${VERSION}:../../x11/ruby-gnome2-panelapplet
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-vte>=${VERSION}:../../x11/ruby-gnome2-vte
 
