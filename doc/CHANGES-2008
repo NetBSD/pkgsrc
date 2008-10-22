@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2585 2008/10/22 18:43:53 seb Exp $
+$NetBSD: CHANGES-2008,v 1.2586 2008/10/22 21:16:58 ghen Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4469,3 +4469,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/ruby-gnome2-gtk to 0.18.0nb1 [obache 2008-10-22]
 	Added security/py-asn1 version 0.0.8a [tonnerre 2008-10-22]
 	Added devel/p5-ShipIt version 0.52 [seb 2008-10-22]
+	Updated mail/dovecot to 1.1.5 [ghen 2008-10-22]
