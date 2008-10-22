@@ -1,0 +1,21 @@
+ASN.1 tools for Python
+
+Whenever data structures are described in some machine and programming
+language independent and unambiguous way, such specification is called
+abstract syntax, by contrast with machine/language specific methods,
+which are called 'concrete' or 'transfer' syntaxes.
+
+Abstract syntaxes appear useful in networking as a tool for engineering
+protocols in a clear and portable way. Moreover, once a protocol is
+described in some abstract language, protocol parsers and builders
+could be automatically generated for various computing
+architectures/programming languages, thus saving engineers from
+implementing low-level transport details by hand.
+
+Abstract Syntax Notation One (ASN.1) is a set of ITU standards
+defining particular implementation of abstract data description
+language accompanied by a collection of transfer encoding methods.
+Perhaps the most widely used among these data serialization methods
+is Basic Encoding Rules (BER) together with its derivatives (DER and
+CER), while Packed Encoding Rules (PER) aims at most compact data
+representation whilst in the wire.

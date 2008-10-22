@@ -1,0 +1,61 @@
+@comment $NetBSD: PLIST,v 1.1.1.1 2008/10/22 16:33:55 tonnerre Exp $
+${PYSITELIB}/${EGG_INFODIR}/PKG-INFO
+${PYSITELIB}/${EGG_INFODIR}/SOURCES.txt
+${PYSITELIB}/${EGG_INFODIR}/dependency_links.txt
+${PYSITELIB}/${EGG_INFODIR}/top_level.txt
+${PYSITELIB}/pyasn1/__init__.pyc
+${PYSITELIB}/pyasn1/__init__.pyo
+${PYSITELIB}/pyasn1/v1/__init__.pyc
+${PYSITELIB}/pyasn1/v1/__init__.pyo
+${PYSITELIB}/pyasn1/v1/codec/__init__.pyc
+${PYSITELIB}/pyasn1/v1/codec/__init__.pyo
+${PYSITELIB}/pyasn1/v1/codec/ber/__init__.pyc
+${PYSITELIB}/pyasn1/v1/codec/ber/__init__.pyo
+${PYSITELIB}/pyasn1/v1/codec/ber/decoder.pyc
+${PYSITELIB}/pyasn1/v1/codec/ber/decoder.pyo
+${PYSITELIB}/pyasn1/v1/codec/ber/encoder.pyc
+${PYSITELIB}/pyasn1/v1/codec/ber/encoder.pyo
+${PYSITELIB}/pyasn1/v1/codec/ber/eoo.pyc
+${PYSITELIB}/pyasn1/v1/codec/ber/eoo.pyo
+${PYSITELIB}/pyasn1/v1/codec/cer/__init__.pyc
+${PYSITELIB}/pyasn1/v1/codec/cer/__init__.pyo
+${PYSITELIB}/pyasn1/v1/codec/cer/decoder.pyc
+${PYSITELIB}/pyasn1/v1/codec/cer/decoder.pyo
+${PYSITELIB}/pyasn1/v1/codec/cer/encoder.pyc
+${PYSITELIB}/pyasn1/v1/codec/cer/encoder.pyo
+${PYSITELIB}/pyasn1/v1/codec/der/__init__.pyc
+${PYSITELIB}/pyasn1/v1/codec/der/__init__.pyo
+${PYSITELIB}/pyasn1/v1/codec/der/decoder.pyc
+${PYSITELIB}/pyasn1/v1/codec/der/decoder.pyo
+${PYSITELIB}/pyasn1/v1/codec/der/encoder.pyc
+${PYSITELIB}/pyasn1/v1/codec/der/encoder.pyo
+${PYSITELIB}/pyasn1/v1/error.pyc
+${PYSITELIB}/pyasn1/v1/error.pyo
+${PYSITELIB}/pyasn1/v1/type/__init__.pyc
+${PYSITELIB}/pyasn1/v1/type/__init__.pyo
+${PYSITELIB}/pyasn1/v1/type/base.pyc
+${PYSITELIB}/pyasn1/v1/type/base.pyo
+${PYSITELIB}/pyasn1/v1/type/char.pyc
+${PYSITELIB}/pyasn1/v1/type/char.pyo
+${PYSITELIB}/pyasn1/v1/type/constraint.pyc
+${PYSITELIB}/pyasn1/v1/type/constraint.pyo
+${PYSITELIB}/pyasn1/v1/type/error.pyc
+${PYSITELIB}/pyasn1/v1/type/error.pyo
+${PYSITELIB}/pyasn1/v1/type/namedtype.pyc
+${PYSITELIB}/pyasn1/v1/type/namedtype.pyo
+${PYSITELIB}/pyasn1/v1/type/namedval.pyc
+${PYSITELIB}/pyasn1/v1/type/namedval.pyo
+${PYSITELIB}/pyasn1/v1/type/tag.pyc
+${PYSITELIB}/pyasn1/v1/type/tag.pyo
+${PYSITELIB}/pyasn1/v1/type/univ.pyc
+${PYSITELIB}/pyasn1/v1/type/univ.pyo
+${PYSITELIB}/pyasn1/v1/type/useful.pyc
+${PYSITELIB}/pyasn1/v1/type/useful.pyo
+@dirrm ${PYSITELIB}/pyasn1/v1/type
+@dirrm ${PYSITELIB}/pyasn1/v1/codec/der
+@dirrm ${PYSITELIB}/pyasn1/v1/codec/cer
+@dirrm ${PYSITELIB}/pyasn1/v1/codec/ber
+@dirrm ${PYSITELIB}/pyasn1/v1/codec
+@dirrm ${PYSITELIB}/pyasn1/v1
+@dirrm ${PYSITELIB}/${EGG_INFODIR}
+@dirrm ${PYSITELIB}/pyasn1
