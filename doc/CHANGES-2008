@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2580 2008/10/22 10:54:24 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2581 2008/10/22 11:03:08 minskim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4464,3 +4464,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added x11/ruby-gnome2-gtksourceview2 version 0.18.0 [obache 2008-10-22]
 	Updated x11/ruby-gnome2-panelapplet to 0.18.0 [obache 2008-10-22]
 	Updated x11/ruby-gnome2-vte to 0.18.0 [obache 2008-10-22]
+	Updated textproc/docbook-xsl to 1.74.0nb1 [minskim 2008-10-22]
