@@ -1,0 +1,13 @@
+A digital radio modem program with support for the following modes:
+
+    * CW
+    * DominoEX
+    * Feld-Hell
+    * MFSK-4, MFSK-8, MFSK-16, MFSK-22, MFSK-31, MFSK-32, MFSK-64
+    * PSK-31, QPSK-31, PSK-63, QPSK-63, PSK-125, QPSK-125, PSK-250, QPSK-250
+    * Olivia various tones and bandwidths
+    * RTTY various baudrates, shifts and bandwidths
+    * Thor-4, Thor-5, Thor-8, Thor-11, Thor-16, Thor-22
+    * Throb-1, Throb-2, Throb-4, ThrobX-1, ThrobX-2, ThrobX-4
+    * WWV, receive only
+    * Freq. Analysis, receive only
