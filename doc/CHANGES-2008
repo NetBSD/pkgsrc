@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2598 2008/10/23 21:33:37 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.2599 2008/10/23 21:37:39 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4482,3 +4482,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated graphics/rabbit to 0.5.8 [obache 2008-10-23]
 	Updated games/wormux to 0.8.2 [adam 2008-10-23]
 	Updated www/drupal to 5.12 [adrianp 2008-10-23]
+	Updated www/drupal6 to 6.6 [adrianp 2008-10-23]
