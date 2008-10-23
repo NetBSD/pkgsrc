@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.59 2008/10/16 11:10:06 drochner Exp $
+@comment $NetBSD: PLIST,v 1.60 2008/10/23 13:58:00 obache Exp $
 bin/gdk-pixbuf-csource
 bin/gdk-pixbuf-query-loaders
 bin/gtk-builder-convert
@@ -45,6 +45,7 @@ include/gtk-2.0/gdk/gdkpixbuf.h
 include/gtk-2.0/gdk/gdkpixmap.h
 include/gtk-2.0/gdk/gdkprivate.h
 include/gtk-2.0/gdk/gdkproperty.h
+${PLIST.quartz}include/gtk-2.0/gdk/gdkquartz.h
 include/gtk-2.0/gdk/gdkregion.h
 include/gtk-2.0/gdk/gdkrgb.h
 include/gtk-2.0/gdk/gdkscreen.h
@@ -312,6 +313,7 @@ lib/pkgconfig/gtk+-2.0.pc
 lib/pkgconfig/gtk+-unix-print-2.0.pc
 ${PLIST.x11}lib/pkgconfig/gdk-pixbuf-xlib-2.0.pc
 ${PLIST.quartz}lib/pkgconfig/gdk-quartz-2.0.pc
+${PLIST.quartz}lib/pkgconfig/gtk+-quartz-2.0.pc
 ${PLIST.x11}lib/pkgconfig/gdk-x11-2.0.pc
 ${PLIST.x11}lib/pkgconfig/gtk+-x11-2.0.pc
 libdata/gtk-2.0/im-multipress.conf
