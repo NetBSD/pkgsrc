@@ -1,0 +1,7 @@
+$NetBSD: distinfo,v 1.1.1.1 2008/10/23 08:07:09 wulf Exp $
+
+SHA1 (fldigi-3.03.tar.gz) = fcdc0f34fe62b6857c5e02bb8e7a8ecbe6e7050c
+RMD160 (fldigi-3.03.tar.gz) = 30fa50eee0b00c2a332f8c48999e0183df88f60a
+Size (fldigi-3.03.tar.gz) = 711226 bytes
+SHA1 (patch-aa) = 122d936e7f8bda5466dc252ffe17f501c0f341e8
+SHA1 (patch-ab) = cfca39f1e32e8cd4e15d994a2af4dd5a72e87ab9

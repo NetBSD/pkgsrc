@@ -1,0 +1,15 @@
+$NetBSD: patch-ab,v 1.1.1.1 2008/10/23 08:07:09 wulf Exp $
+
+--- src/widgets/picture.cxx.orig	2008-10-23 15:59:18.000000000 +1030
++++ src/widgets/picture.cxx	2008-10-23 15:54:17.000000000 +1030
+@@ -31,8 +31,10 @@
+ #include <FL/fl_ask.H>
+ 
+ #if USE_LIBJPEG
++extern "C" {
+ #  include <cstdio>
+ #  include <jpeglib.h>
++}
+ #endif
+ #if USE_LIBPNG
+ #  include <png.h>
