@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.10 2008/10/22 11:31:54 rtr Exp $
+$NetBSD: CHANGES-pkgsrc-2008Q3,v 1.1.2.11 2008/10/23 06:54:08 rtr Exp $
 
 Changes to the packages collection and infrastructure on the
 pkgsrc-2008Q3 branch:
@@ -41,3 +41,5 @@ Pullup ticket #2556- requested by ahoka
 vlc: security update
 pullup ticket #2557 - requested by tron 
 wireshark: update package for security fixes
+pullup ticket #2558 - requested by tonnerre
+jhead: update package for security fixes
