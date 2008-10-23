@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2595 2008/10/23 09:19:27 hira Exp $
+$NetBSD: CHANGES-2008,v 1.2596 2008/10/23 12:23:52 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4479,3 +4479,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/py-babel to 0.9.4 [obache 2008-10-23]
 	Added ham/fldigi version 3.03 [wulf 2008-10-23]
 	Updated misc/openoffice3 to 3.0.0nb3 [hira 2008-10-23]
+	Updated graphics/rabbit to 0.5.8 [obache 2008-10-23]
