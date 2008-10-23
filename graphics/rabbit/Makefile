@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.10 2008/09/16 16:16:40 obache Exp $
+# $NetBSD: Makefile,v 1.11 2008/10/23 12:23:34 obache Exp $
 #
 
-DISTNAME=	rabbit-0.5.7
+DISTNAME=	rabbit-0.5.8
 PKGNAME=	${RUBY_PKGPREFIX}-${DISTNAME}
 CATEGORIES=	graphics ruby
 MASTER_SITES=	http://www.cozmixng.org/~kou/download/
@@ -15,6 +15,7 @@ PKG_DESTDIR_SUPPORT=	user-destdir
 DEPENDS+=	${RUBY_PKGPREFIX}-gnome2-gtk>=0.16.0:../../x11/ruby-gnome2-gtk
 DEPENDS+=	${RUBY_PKGPREFIX}-rdtool>=0.6.20:../../textproc/ruby-rdtool
 DEPENDS+=	${RUBY_PKGPREFIX}-rttool>=1.0.2:../../textproc/ruby-rttool
+DEPENDS+=	${RUBY_PKGPREFIX}-net-irc>=0.0.5:../../chat/ruby-net-irc
 
 USE_RUBY_SETUP=	yes
 REPLACE_RUBY=	bin/rabbit bin/rabbit-theme-manager bin/rabrick
