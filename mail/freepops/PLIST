@@ -1,17 +1,18 @@
-@comment $NetBSD: PLIST,v 1.1.1.1 2007/06/05 05:56:01 schmonz Exp $
+@comment $NetBSD: PLIST,v 1.2 2008/10/23 04:40:55 schmonz Exp $
 bin/freepopsd
 man/man1/freepopsd.1
 share/doc/freepops/MANUAL.txt
 share/examples/freepops/config.lua
 share/examples/rc.d/freepopsd
+share/freepops/lua/abv.lua
 share/freepops/lua/aggregator.lua
 share/freepops/lua/aol.lua
 share/freepops/lua/browser/browser.lua
 share/freepops/lua/browser/cookie.lua
 share/freepops/lua/common.lua
 share/freepops/lua/config.lua
-share/freepops/lua/criticalpath.lua
 share/freepops/lua/davmail.lua
+share/freepops/lua/excite.lua
 share/freepops/lua/fastmail.lua
 share/freepops/lua/flatnuke.lua
 share/freepops/lua/foo.lua
@@ -27,13 +28,18 @@ share/freepops/lua/lycos.lua
 share/freepops/lua/mail2world.lua
 share/freepops/lua/mailcom.lua
 share/freepops/lua/mimer.lua
+share/freepops/lua/monitor.lua
 share/freepops/lua/netscape.lua
+share/freepops/lua/orange.lua
 share/freepops/lua/plugins2xml.lua
 share/freepops/lua/popforward.lua
+share/freepops/lua/psock.lua
 share/freepops/lua/serial.lua
 share/freepops/lua/skeleton.lua
 share/freepops/lua/soap/http.lua
 share/freepops/lua/soap/soap.lua
+share/freepops/lua/socket.lua
+share/freepops/lua/softhome.lua
 share/freepops/lua/squirrelmail.lua
 share/freepops/lua/supereva.lua
 share/freepops/lua/support.lua
