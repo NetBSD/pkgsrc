@@ -1,4 +1,5 @@
-@comment $NetBSD: PLIST,v 1.7 2008/09/16 16:16:40 obache Exp $
+@comment $NetBSD: PLIST,v 1.8 2008/10/23 12:23:34 obache Exp $
+bin/rabbirc
 bin/rabbit
 bin/rabbit-theme-manager
 bin/rabrick
@@ -115,6 +116,7 @@ ${RUBY_VENDORLIB}/rabbit/renderer/color.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/base.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/button-handler.rb
+${RUBY_VENDORLIB}/rabbit/renderer/display/clutter-embed.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/comment-drawing-area.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/comment.rb
 ${RUBY_VENDORLIB}/rabbit/renderer/display/cursor.rb
@@ -277,6 +279,8 @@ ${RUBY_VENDORLIB}/rabbit/theme/lightning-talk/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/manager.rb
 ${RUBY_VENDORLIB}/rabbit/theme/mirror-effect/mirror-effect.rb
 ${RUBY_VENDORLIB}/rabbit/theme/mirror-effect/property.rb
+${RUBY_VENDORLIB}/rabbit/theme/newline-in-slides/newline-in-slides.rb
+${RUBY_VENDORLIB}/rabbit/theme/newline-in-slides/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/newline-in-title/newline-in-title.rb
 ${RUBY_VENDORLIB}/rabbit/theme/newline-in-title/property.rb
 ${RUBY_VENDORLIB}/rabbit/theme/night-black/night-black.rb
@@ -463,6 +467,7 @@ share/rabbit/image/ruby-images/ruby-pink-polygon.png
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/pdf
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/night-black
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/newline-in-title
+@dirrm ${RUBY_VENDORLIB}/rabbit/theme/newline-in-slides
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/mirror-effect
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/lightning-talk-toolkit
 @dirrm ${RUBY_VENDORLIB}/rabbit/theme/lightning-talk
@@ -542,6 +547,3 @@ share/rabbit/image/ruby-images/ruby-pink-polygon.png
 @dirrm ${RUBY_VENDORLIB}/rabbit/comment
 @dirrm ${RUBY_VENDORLIB}/rabbit/action
 @dirrm ${RUBY_VENDORLIB}/rabbit
-@dirrm ${RUBY_VENDORLIB}
-@dirrm ${RUBY_VENDORLIB_BASE}
-@dirrm lib/ruby
