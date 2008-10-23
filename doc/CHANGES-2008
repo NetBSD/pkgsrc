@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2591 2008/10/23 05:12:09 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2592 2008/10/23 05:16:08 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4475,3 +4475,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated ham/hamlib to 1.2.7.1 [wulf 2008-10-23]
 	Updated mail/freepops to 0.2.7 [schmonz 2008-10-23]
 	Updated databases/tokyocabinet to 1.3.14 [obache 2008-10-23]
+	Updated textproc/tokyodystopia to 0.9.8 [obache 2008-10-23]
