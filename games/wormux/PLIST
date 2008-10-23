@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.3 2008/10/06 15:49:34 adam Exp $
+@comment $NetBSD: PLIST,v 1.4 2008/10/23 15:24:42 adam Exp $
 bin/wormux
 man/man6/wormux.6
 share/applications/wormux.desktop
@@ -9,6 +9,7 @@ share/locale/cpf/LC_MESSAGES/wormux.mo
 share/locale/cs/LC_MESSAGES/wormux.mo
 share/locale/da/LC_MESSAGES/wormux.mo
 share/locale/de/LC_MESSAGES/wormux.mo
+share/locale/el/LC_MESSAGES/wormux.mo
 share/locale/eo/LC_MESSAGES/wormux.mo
 share/locale/es/LC_MESSAGES/wormux.mo
 share/locale/fa/LC_MESSAGES/wormux.mo
@@ -829,9 +830,6 @@ share/wormux/gfx/water/water_bottom.png
 share/wormux/gfx/water/water_drop.png
 share/wormux/graphism.dtd
 share/wormux/graphism.xml
-share/wormux/help/ca/shortkeys.png
-share/wormux/help/en/shortkeys.png
-share/wormux/help/es/shortkeys.png
 share/wormux/interface/background_interface.png
 share/wormux/interface/clock.png
 share/wormux/interface/clock_background.png
@@ -1498,10 +1496,6 @@ share/wormux/wormux_default_config.xml
 @dirrm share/wormux/map
 @dirrm share/wormux/interface/cursors
 @dirrm share/wormux/interface
-@dirrm share/wormux/help/es
-@dirrm share/wormux/help/en
-@dirrm share/wormux/help/ca
-@dirrm share/wormux/help
 @dirrm share/wormux/gfx/water
 @dirrm share/wormux/gfx
 @dirrm share/wormux/game_mode
