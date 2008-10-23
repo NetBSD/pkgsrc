@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2596 2008/10/23 12:23:52 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2597 2008/10/23 15:26:01 adam Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4480,3 +4480,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added ham/fldigi version 3.03 [wulf 2008-10-23]
 	Updated misc/openoffice3 to 3.0.0nb3 [hira 2008-10-23]
 	Updated graphics/rabbit to 0.5.8 [obache 2008-10-23]
+	Updated games/wormux to 0.8.2 [adam 2008-10-23]
