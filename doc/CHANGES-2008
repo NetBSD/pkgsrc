@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2592 2008/10/23 05:16:08 obache Exp $
+$NetBSD: CHANGES-2008,v 1.2593 2008/10/23 06:10:45 obache Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4476,3 +4476,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated mail/freepops to 0.2.7 [schmonz 2008-10-23]
 	Updated databases/tokyocabinet to 1.3.14 [obache 2008-10-23]
 	Updated textproc/tokyodystopia to 0.9.8 [obache 2008-10-23]
+	Updated devel/py-babel to 0.9.4 [obache 2008-10-23]
