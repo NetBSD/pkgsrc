@@ -1,8 +1,7 @@
-# $NetBSD: Makefile,v 1.9 2008/06/12 02:14:34 joerg Exp $
+# $NetBSD: Makefile,v 1.10 2008/10/23 04:40:55 schmonz Exp $
 #
 
-DISTNAME=		freepops-0.2.5
-PKGREVISION=		2
+DISTNAME=		freepops-0.2.7
 CATEGORIES=		mail
 MASTER_SITES=		${MASTER_SITE_SOURCEFORGE:=freepops/}
 
@@ -52,9 +51,6 @@ FILES_SUBST+=			FREEPOPSD_USER=${FREEPOPSD_USER:Q}
 FILES_SUBST+=			FREEPOPSD_GROUP=${FREEPOPSD_GROUP:Q}
 PKG_GROUPS_VARS+=		FREEPOPSD_GROUP
 PKG_USERS_VARS+=		FREEPOPSD_USER
-
-post-extract:
-	cp ${FILESDIR}/hotmail.lua ${WRKSRC}/src/lua/hotmail.lua
 
 .include "../../security/openssl/buildlink3.mk"
 .include "../../textproc/expat/buildlink3.mk"
