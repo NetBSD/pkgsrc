@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7614 2008/10/23 02:07:40 obache Exp $
+$NetBSD: TODO,v 1.7615 2008/10/23 02:09:02 obache Exp $
 
 Suggested new packages
 ======================
@@ -1028,6 +1028,7 @@ Suggested package updates
 	o pango-1.22.1
 	o pari-2.3.3 [pkg/38116]
 	o pari-galdata-2.2 [pkg/38117]
+	o parpd-1.1 [pkg/39789]
 	o parrot-0.7.1
 	o patchutils-0.3.0
 	o pcal-4.8
