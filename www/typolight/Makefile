@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.2 2008/10/06 14:02:05 taca Exp $
+# $NetBSD: Makefile,v 1.3 2008/10/24 16:10:17 taca Exp $
 #
 
 DISTNAME=	typolight-${TL_VERSION}
+PKGREVISION=	1
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=typolight/}
 
@@ -71,6 +72,7 @@ OWN_DIRS_PERMS+= \
 		${TL_WEBDIR}/system/html ${BINOWN} ${APACHE_GROUP} 0770 \
 		${TL_WEBDIR}/system/logs ${BINOWN} ${APACHE_GROUP} 0770 \
 		${TL_WEBDIR}/system/tmp ${BINOWN} ${APACHE_GROUP} 0770 \
+		${TL_WEBDIR}/templates ${BINOWN} ${APACHE_GROUP} 0770 \
 		${TL_WEBDIR}/tl_files ${BINOWN} ${APACHE_GROUP} 0770 \
 		${TL_WEBDIR}/tl_files/tiny_templates \
 		${BINOWN} ${APACHE_GROUP} 0770 \
