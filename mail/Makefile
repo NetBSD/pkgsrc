@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.362 2008/10/13 11:30:54 shannonjr Exp $
+# $NetBSD: Makefile,v 1.363 2008/10/24 16:38:48 wiz Exp $
 #
 
 COMMENT=	Electronic mail utilities
@@ -92,6 +92,7 @@ SUBDIR+=	fromto
 SUBDIR+=	getmail
 SUBDIR+=	gld
 SUBDIR+=	gmime
+SUBDIR+=	gmime24
 SUBDIR+=	gnus
 SUBDIR+=	greetdelay
 SUBDIR+=	grepmail
