@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.21 2008/10/20 14:28:26 wiz Exp $
+# $NetBSD: Makefile,v 1.22 2008/10/24 01:06:22 obache Exp $
 #
 
 DISTNAME=	SOAP-Lite-0.710.08
@@ -24,7 +24,7 @@ REPLACE_PERL+=	bin/SOAPsh.pl bin/XMLRPCsh.pl bin/stubmaker.pl
 
 PERL5_PACKLIST=	auto/SOAP/Lite/.packlist
 
-MAKE_PARAMS+=	</dev/null
+MAKE_PARAMS+=	--noprompt
 
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
