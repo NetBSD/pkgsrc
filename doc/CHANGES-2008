@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2602 2008/10/24 11:36:30 hira Exp $
+$NetBSD: CHANGES-2008,v 1.2603 2008/10/24 14:17:16 taca Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4486,3 +4486,6 @@ Changes to the packages collection and infrastructure in 2008:
 	Added www/gtkhtml324 version 3.24.1 [jnemeth 2008-10-23]
 	Added textproc/p5-Text-DoubleMetaphone version 0.07 [dsainty 2008-10-24]
 	Updated misc/openoffice3 to 3.0.0nb4 [hira 2008-10-24]
+	Updated www/squid26 to 2.6.22nb1 [taca 2008-10-24]
+	Updated www/squid27 to 2.7.5nb1 [taca 2008-10-24]
+	Updated www/squid30 to 3.0.10nb1 [taca 2008-10-24]
