@@ -1,4 +1,7 @@
-# $NetBSD: Makefile,v 1.16 2008/10/24 19:27:18 wiz Exp $
+# $NetBSD: Makefile,v 1.17 2008/10/24 22:51:05 wiz Exp $
+#
+# PKGNAME derives from the supported API (still from
+# release 3.14). See also PLIST.
 #
 
 DISTNAME=	gtkhtml-3.24.1
