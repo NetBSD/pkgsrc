@@ -1,6 +1,6 @@
-# $NetBSD: Makefile,v 1.49 2008/06/15 09:51:59 joerg Exp $
+# $NetBSD: Makefile,v 1.50 2008/10/24 11:48:26 gdt Exp $
 
-DISTNAME=	gnome-base-2.18.1
+DISTNAME=	gnome-base-2.24.0
 CATEGORIES=	meta-pkgs x11 gnome
 MASTER_SITES=	# empty
 DISTFILES=	# empty
@@ -27,7 +27,7 @@ DEPENDS+=	startup-notification>=0.9:../../x11/startup-notification
 DEPENDS+=	glib2>=2.12.3:../../devel/glib2
 DEPENDS+=	atk>=1.18.0:../../devel/atk
 DEPENDS+=	pango>=1.16.0:../../devel/pango
-DEPENDS+=	gtk2+>=2.10.3:../../x11/gtk2
+DEPENDS+=	gtk2+>=2.14.0:../../x11/gtk2
 DEPENDS+=	libIDL>=0.8.8:../../net/libIDL
 DEPENDS+=	ORBit2>=2.14.3:../../net/ORBit2
 DEPENDS+=	libxml2>=2.6.26:../../textproc/libxml2
@@ -55,7 +55,7 @@ DEPENDS+=	librsvg>=2.16.0:../../graphics/librsvg
 DEPENDS+=	libxklavier>=3.0:../../x11/libxklavier
 DEPENDS+=	libsoup-devel>=2.2.96:../../net/libsoup-devel
 DEPENDS+=	libwnck>=2.18.0:../../devel/libwnck
-DEPENDS+=	gail>=1.18.0:../../devel/gail
+# XXX Should be 324.
 DEPENDS+=	gtkhtml314>=3.14.1:../../www/gtkhtml314
 DEPENDS+=	gtk2-engines>=2.10.1:../../x11/gtk2-engines
 DEPENDS+=	gnome-desktop>=2.18.1:../../x11/gnome-desktop
