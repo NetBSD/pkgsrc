@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2604 2008/10/24 16:00:06 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2605 2008/10/24 16:03:30 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4490,3 +4490,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/squid27 to 2.7.5nb1 [taca 2008-10-24]
 	Updated www/squid30 to 3.0.10nb1 [taca 2008-10-24]
 	Updated devel/glib2 to 2.18.2 [wiz 2008-10-24]
+	Updated devel/yasm to 0.7.2 [wiz 2008-10-24]
