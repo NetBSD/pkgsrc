@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2608 2008/10/24 16:13:52 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2609 2008/10/24 16:22:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4494,3 +4494,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/xtrans to 1.2.2 [wiz 2008-10-24]
 	Updated www/typolight to 2.6.1nb1 [taca 2008-10-24]
 	Updated x11/xproto to 7.0.14 [wiz 2008-10-24]
+	Updated devel/pango to 1.22.1 [wiz 2008-10-24]
