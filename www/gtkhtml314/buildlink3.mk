@@ -1,4 +1,4 @@
-# $NetBSD: buildlink3.mk,v 1.9 2008/10/24 20:31:54 wiz Exp $
+# $NetBSD: buildlink3.mk,v 1.10 2008/10/24 20:35:37 wiz Exp $
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH}+
 GTKHTML314_BUILDLINK3_MK:=	${GTKHTML314_BUILDLINK3_MK}+
@@ -19,5 +19,6 @@ BUILDLINK_PKGSRCDIR.gtkhtml314?=	../../www/gtkhtml314
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../textproc/enchant/buildlink3.mk"
+.include "../../textproc/iso-codes/buildlink3.mk"
 
 BUILDLINK_DEPTH:=		${BUILDLINK_DEPTH:S/+$//}
