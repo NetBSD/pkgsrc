@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2615 2008/10/24 19:27:37 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2616 2008/10/24 19:28:49 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4501,3 +4501,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/devhelp to 0.21 [wiz 2008-10-24]
 	Updated www/drupal6 to 6.6nb1 [adrianp 2008-10-24]
 	Updated www/gtkhtml314 to 3.24.1 [wiz 2008-10-24]
+	Removed www/gtkhtml324 successor www/gtkhtml314 [wiz 2008-10-24]
