@@ -1,7 +1,8 @@
-# $NetBSD: Makefile,v 1.58 2008/10/16 13:35:12 drochner Exp $
+# $NetBSD: Makefile,v 1.59 2008/10/24 20:23:50 wiz Exp $
 #
 
 DISTNAME=	vte-0.17.4
+PKGREVISION=	1
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_GNOME:=sources/vte/0.17/}
 EXTRACT_SUFX=	.tar.bz2
@@ -37,5 +38,4 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../x11/libzvt/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
