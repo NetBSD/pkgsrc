@@ -1,8 +1,8 @@
-# $NetBSD: Makefile,v 1.9 2008/10/23 09:18:12 hira Exp $
+# $NetBSD: Makefile,v 1.10 2008/10/24 11:35:28 hira Exp $
 #
 
 OO_VER=			3.0.0
-PKGREVISION=		3
+PKGREVISION=		4
 OO_TAG=			OOO300_m9
 DISTNAME=		openoffice-${OO_VER}
 PKGNAME=		openoffice3-${OO_VER}
@@ -14,7 +14,7 @@ DISTFILES=		OOo_${OO_VER}_src_core.tar.bz2
 DISTFILES+=		OOo_${OO_VER}_src_binfilter.tar.bz2
 DISTFILES+=		OOo_${OO_VER}_src_l10n.tar.bz2
 DISTFILES+=		OOo_${OO_VER}_src_system.tar.bz2
-#DISTFILES+=		OOo_${OO_VER}_src_extensions.tar.bz2
+DISTFILES+=		OOo_${OO_VER}_src_extensions.tar.bz2
 
 MAINTAINER=		hira@NetBSD.org
 HOMEPAGE=		http://www.openoffice.org/
@@ -106,12 +106,12 @@ CONFIGURE_ARGS+=	--with-system-zlib
 CONFIGURE_ARGS+=	--with-dynamic-xinerama
 
 # Extensions
-#CONFIGURE_ARGS+=	--enable-minimizer
-#CONFIGURE_ARGS+=	--enable-presenter-console
-#CONFIGURE_ARGS+=	--enable-pdfimport
-#CONFIGURE_ARGS+=	--enable-wiki-publisher
-#CONFIGURE_ARGS+=	--enable-ogltrans
-#CONFIGURE_ARGS+=	--enable-report-builder
+CONFIGURE_ARGS+=	--enable-minimizer
+CONFIGURE_ARGS+=	--enable-presenter-console
+CONFIGURE_ARGS+=	--enable-pdfimport
+OO_EXTENSIONS+=		minimizer/sun-presentation-minimizer.oxt
+OO_EXTENSIONS+=		pdfimport/pdfimport.oxt
+OO_EXTENSIONS+=		presenter/presenter-screen.oxt
 
 # `portable' supports all platforms.
 CONFIGURE_ARGS+=	--enable-epm --with-package-format=portable
@@ -132,7 +132,8 @@ PLIST_SRC+=		${PKGDIR}/PLIST
 PLIST_SRC+=		${WRKDIR}/PLIST
 MESSAGE_SUBST+=		DESTDIR=${DESTDIR}
 MESSAGE_SUBST+=		OO_PREFIX=${OO_PREFIX}
-INSTALLATION_DIRS=	bin lib/${OO_RELEASE} share/applications
+INSTALLATION_DIRS=	bin lib/${OO_RELEASE} share/applications	\
+			lib/${OO_RELEASE}/extensions
 
 OO_UNXNAME=	openoffice.org3
 OO_PKGPATH=	${WRKSRC}/instsetoo_native/${OPENOFFICE_OUTPATH}.pro/OpenOffice/portable/install
@@ -176,6 +177,8 @@ do-install:
 		ln -sf ${OO_PREFIX}/${OO_UNXNAME}/program/$$f	\
 			${DESTDIR}${PREFIX}/bin/$$f;		\
 	done
+	cd ${WRKDIR}/${OO_TAG}/solver/300/${OPENOFFICE_OUTPATH}.pro/bin &&  \
+	${INSTALL_DATA}	${OO_EXTENSIONS} ${OO_PREFIX}/extensions
 	${INSTALL_DATA} ${WRKDIR}/xdg/* ${DESTDIR}${PREFIX}/share/applications
 	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME} ${DESTDIR}${PREFIX}/bin
 	${INSTALL_SCRIPT} ${WRKDIR}/${OO_UNXNAME}-printeradmin	\
