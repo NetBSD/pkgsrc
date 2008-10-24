@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.10 2008/10/24 11:35:28 hira Exp $
+# $NetBSD: Makefile,v 1.11 2008/10/24 19:41:28 hira Exp $
 #
 
 OO_VER=			3.0.0
@@ -147,7 +147,7 @@ post-extract:
 	cp -Rp gcc3_freebsd_x86-64 gcc3_netbsd_x86-64
 
 do-build:
-	${_ULIMIT_CMD} ${SETENV} ${MAKE_ENV} bash -c "cd ${WRKSRC} && ./bootstrap && source ${OPENOFFICE_SETFILE}Env.Set.sh && dmake build_all"
+	${_ULIMIT_CMD} ${SETENV} ${MAKE_ENV} bash -c "cd ${WRKSRC} && ./bootstrap && source ${OPENOFFICE_SETFILE}Env.Set.sh && cd instsetoo_native && build.pl --checkmodules; build.pl -P${MAKE_JOBS:U1} --all product=full"
 
 post-build:
 	cd ${WRKDIR} &&						\
