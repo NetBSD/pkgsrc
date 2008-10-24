@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.21 2008/07/14 12:56:19 joerg Exp $
+# $NetBSD: Makefile,v 1.22 2008/10/24 23:21:20 jnemeth Exp $
 #
 
-DISTNAME=	libxklavier-3.5
+DISTNAME=	libxklavier-3.7
 CATEGORIES=	x11
 MASTER_SITES=	${MASTER_SITE_SOURCEFORGE:=gswitchit/}
 
@@ -19,13 +19,11 @@ USE_LIBTOOL=		YES
 PKGCONFIG_OVERRIDE=	libxklavier.pc.in
 
 CONFIGURE_ARGS+=	--enable-xkb-support
-CONFIGURE_ARGS+=	--enable-xmm-support
-
-BUILDLINK_TRANSFORM+=	rm:-Werror
 
 BUILDLINK_API_DEPENDS.glib2+=	glib2>=2.6.0
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../textproc/iso-codes/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../x11/libxkbfile/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
