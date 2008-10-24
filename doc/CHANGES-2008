@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2601 2008/10/24 00:45:32 dsainty Exp $
+$NetBSD: CHANGES-2008,v 1.2602 2008/10/24 11:36:30 hira Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4485,3 +4485,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/drupal6 to 6.6 [adrianp 2008-10-23]
 	Added www/gtkhtml324 version 3.24.1 [jnemeth 2008-10-23]
 	Added textproc/p5-Text-DoubleMetaphone version 0.07 [dsainty 2008-10-24]
+	Updated misc/openoffice3 to 3.0.0nb4 [hira 2008-10-24]
