@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2611 2008/10/24 16:46:53 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2612 2008/10/24 16:50:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4497,3 +4497,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/pango to 1.22.1 [wiz 2008-10-24]
 	Added mail/gmime24 version 2.4.3 [wiz 2008-10-24]
 	Updated devel/libgsf to 1.14.10 [wiz 2008-10-24]
+	Updated devel/libwnck to 2.24.1 [wiz 2008-10-24]
