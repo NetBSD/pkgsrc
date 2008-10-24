@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2613 2008/10/24 16:57:08 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2614 2008/10/24 18:52:48 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4499,3 +4499,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libgsf to 1.14.10 [wiz 2008-10-24]
 	Updated devel/libwnck to 2.24.1 [wiz 2008-10-24]
 	Updated devel/devhelp to 0.21 [wiz 2008-10-24]
+	Updated www/drupal6 to 6.6nb1 [adrianp 2008-10-24]
