@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.46 2008/10/16 12:26:36 drochner Exp $
+# $NetBSD: Makefile,v 1.47 2008/10/24 19:30:32 wiz Exp $
 #
 
 DISTNAME=		at-spi-1.24.0
@@ -32,6 +32,7 @@ BUILDLINK_API_DEPENDS.atk+=	atk>=1.18.0
 .include "../../devel/libbonobo/buildlink3.mk"
 .include "../../devel/popt/buildlink3.mk"
 .include "../../net/ORBit2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.14.0
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libXtst/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
