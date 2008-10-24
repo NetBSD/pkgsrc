@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.39 2008/10/16 15:25:58 drochner Exp $
+@comment $NetBSD: PLIST,v 1.40 2008/10/24 22:49:53 wiz Exp $
 bin/gnome-desktop-item-edit
 bin/gnome-panel
 bin/panel-test-applets
@@ -188,6 +188,7 @@ share/gnome/help/fish/uk/figures/fish_applet.png
 share/gnome/help/fish/uk/fish.xml
 share/gnome/help/fish/uk/legal.xml
 share/gnome/help/window-list/C/window-list.xml
+share/gnome/help/window-list/ar/window-list.xml
 share/gnome/help/window-list/ca/window-list.xml
 share/gnome/help/window-list/da/window-list.xml
 share/gnome/help/window-list/de/figures/window_list_applet.png
@@ -217,6 +218,7 @@ share/gnome/help/window-list/zh_TW/figures/window_list_group_applet.png
 share/gnome/help/window-list/zh_TW/legal.xml
 share/gnome/help/window-list/zh_TW/window-list.xml
 share/gnome/help/workspace-switcher/C/workspace-switcher.xml
+share/gnome/help/workspace-switcher/ar/workspace-switcher.xml
 share/gnome/help/workspace-switcher/ca/workspace-switcher.xml
 share/gnome/help/workspace-switcher/da/workspace-switcher.xml
 share/gnome/help/workspace-switcher/de/figures/workspace_switcher_applet.png
@@ -337,6 +339,7 @@ share/locale/bn_IN/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/br/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/bs/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/ca/LC_MESSAGES/gnome-panel-2.0.mo
+share/locale/ca@valencia/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/cs/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/cy/LC_MESSAGES/gnome-panel-2.0.mo
 share/locale/da/LC_MESSAGES/gnome-panel-2.0.mo
@@ -467,6 +470,7 @@ share/omf/gnome-panel/workspace-switcher-ja.omf
 share/omf/gnome-panel/workspace-switcher-zh_CN.omf
 share/omf/gnome-panel/workspace-switcher-zh_TW.omf
 share/omf/window-list/window-list-C.omf
+share/omf/window-list/window-list-ar.omf
 share/omf/window-list/window-list-ca.omf
 share/omf/window-list/window-list-da.omf
 share/omf/window-list/window-list-de.omf
@@ -483,6 +487,7 @@ share/omf/window-list/window-list-sv.omf
 share/omf/window-list/window-list-uk.omf
 share/omf/window-list/window-list-zh_CN.omf
 share/omf/workspace-switcher/workspace-switcher-C.omf
+share/omf/workspace-switcher/workspace-switcher-ar.omf
 share/omf/workspace-switcher/workspace-switcher-ca.omf
 share/omf/workspace-switcher/workspace-switcher-da.omf
 share/omf/workspace-switcher/workspace-switcher-de.omf
@@ -540,6 +545,7 @@ share/omf/workspace-switcher/workspace-switcher-vi.omf
 @dirrm share/gnome/help/workspace-switcher/de
 @dirrm share/gnome/help/workspace-switcher/da
 @dirrm share/gnome/help/workspace-switcher/ca
+@dirrm share/gnome/help/workspace-switcher/ar
 @dirrm share/gnome/help/workspace-switcher/C
 @dirrm share/gnome/help/workspace-switcher
 @dirrm share/gnome/help/window-list/zh_TW/figures
@@ -562,6 +568,7 @@ share/omf/workspace-switcher/workspace-switcher-vi.omf
 @dirrm share/gnome/help/window-list/de
 @dirrm share/gnome/help/window-list/da
 @dirrm share/gnome/help/window-list/ca
+@dirrm share/gnome/help/window-list/ar
 @dirrm share/gnome/help/window-list/C
 @dirrm share/gnome/help/window-list
 @dirrm share/gnome/help/fish/uk/figures
