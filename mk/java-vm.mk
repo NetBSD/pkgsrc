@@ -1,4 +1,4 @@
-# $NetBSD: java-vm.mk,v 1.64 2008/10/24 21:01:57 adrianp Exp $
+# $NetBSD: java-vm.mk,v 1.65 2008/10/24 23:17:30 adrianp Exp $
 #
 # This Makefile fragment handles Java dependencies and make variables,
 # and is meant to be included by packages that require Java either at
@@ -95,6 +95,8 @@ _PKG_JVM_DEFAULT=	${PKG_JVM_DEFAULT}
 _PKG_JVM_DEFAULT?=	sun-jdk
 .  elif !empty(MACHINE_PLATFORM:MDarwin-*-*)
 _PKG_JVM_DEFAULT?=	sun-jdk
+.  elif !empty(MACHINE_PLATFORM:MSunOS-5.11-i386)
+_PKG_JVM_DEFAULT?=	sun-jdk
 .  else
 _PKG_JVM_DEFAULT?=	kaffe
 .  endif
@@ -118,19 +120,22 @@ _ONLY_FOR_PLATFORMS.sun-jdk14= \
 	DragonFly-*-i386 \
 	FreeBSD-6.*-i386 \
 	Linux-*-i[3-6]86 \
-	NetBSD-*-i386
+	NetBSD-*-i386 \
+	SunOS-5.11-i386
 _ONLY_FOR_PLATFORMS.sun-jdk15= \
 	Darwin-[8-9].*-* \
 	DragonFly-*-i386 \
 	FreeBSD-6.*-i386 \
 	Linux-*-i[3-6]86 \
-	NetBSD-*-i386 NetBSD-*-x86_64
+	NetBSD-*-i386 NetBSD-*-x86_64 \
+	SunOS-5.11-i386
 _ONLY_FOR_PLATFORMS.sun-jdk6= \
 	Darwin-9.*-* \
 	DragonFly-*-i386 \
 	FreeBSD-6.*-i386 \
 	Linux-*-i[3-6]86 \
-	NetBSD-*-i386
+	NetBSD-*-i386 \
+	SunOS-5.11-i386
 
 # Set the accepted JVMs for this platform.
 .for _jvm_ in ${_PKG_JVMS}
@@ -176,7 +181,8 @@ _PKG_JVM_INSTALLED.${_jvm_}!= \
 .  if !empty(MACHINE_PLATFORM:MNetBSD-1.6[M-Z]*-i386) || \
       !empty(MACHINE_PLATFORM:MNetBSD-[2-9].*-i386) || \
       !empty(MACHINE_PLATFORM:MLinux-*-i[3456]86) || \
-      !empty(MACHINE_PLATFORM:MDarwin-[8-9].*-*)
+      !empty(MACHINE_PLATFORM:MDarwin-[8-9].*-*) || \
+      !empty(MACHINE_PLATFORM:MSunOS-5.11-i386)
 .    if defined(_PKG_JVM_INSTALLED.sun-jdk6) && \
 	(${_PKG_JVM_INSTALLED.sun-jdk6} == "yes")
 _PKG_JVM_DEFAULT=	sun-jdk6
