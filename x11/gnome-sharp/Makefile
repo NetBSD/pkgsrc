@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.8 2008/09/06 20:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.9 2008/10/24 20:51:11 wiz Exp $
 #
 
-DISTNAME=	gnome-sharp-2.20.1
-PKGREVISION=	1
+DISTNAME=	gnome-sharp-2.24.0
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-sharp/2.20/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-sharp/2.24/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/GtkSharp
@@ -29,13 +28,17 @@ SUBST_FILES.pc=		${PKGCONFIG_OVERRIDE}
 SUBST_SED.pc=		-e "s|\$${pcfiledir}/../..|@prefix@|g"
 SUBST_MESSAGE.pc=	Fixing hardcoded paths.
 
+BUILDLINK_API_DEPENDS.libgnomeui+=	libgnomeui>=2.23.0
 .include "../../devel/libgnomeui/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libart+=		libart>=2.3.20
 .include "../../graphics/libart/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgnomecanvas+=	libgnomecanvas>=2.20.0
+.include "../../graphics/libgnomecanvas/buildlink3.mk"
 .include "../../lang/mono/buildlink3.mk"
-.include "../../lang/monodoc/buildlink3.mk"
-.include "../../print/libgnomeprintui/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gnome-vfs+=	gnome-vfs>=2.22.0
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
-.include "../../x11/gnome-panel/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk2+=		gtk2+>=2.13.0
 .include "../../x11/gtk2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk-sharp+=	gtk-sharp>=2.12.2
 .include "../../x11/gtk-sharp/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
