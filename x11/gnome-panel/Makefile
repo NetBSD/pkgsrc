@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.101 2008/10/16 15:25:58 drochner Exp $
+# $NetBSD: Makefile,v 1.102 2008/10/24 22:49:53 wiz Exp $
 #
 
-DISTNAME=		gnome-panel-2.24.0
+DISTNAME=		gnome-panel-2.24.1
 CATEGORIES=		x11 gnome
 MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-panel/2.24/}
 EXTRACT_SUFX=		.tar.bz2
@@ -51,6 +51,7 @@ BUILDLINK_DEPMETHOD.libXt?=	build
 .include "../../devel/libgnome/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/libwnck/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgweather+=	libgweather>=2.24.1
 .include "../../devel/libgweather/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
