@@ -1,10 +1,11 @@
-# $NetBSD: builtin.mk,v 1.1 2008/10/24 21:35:14 adrianp Exp $
+# $NetBSD: builtin.mk,v 1.2 2008/10/24 23:19:04 adrianp Exp $
 
 BUILTIN_PKG:=	sun-jre6
 
-BUILTIN_FIND_FILES_VAR:=		JAVAVM6
+BUILTIN_FIND_FILES_VAR:=	JAVAVM6
 BUILTIN_FIND_FILES.JAVAVM6=	\
-	/System/Library/Frameworks/JavaVM.framework/Versions/1.6
+	/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home \
+	/usr/jdk/instances/jdk1.6.0
 
 .include "../../mk/buildlink3/bsd.builtin.mk"
 
@@ -28,8 +29,10 @@ MAKEVARS+=	IS_BUILTIN.sun-jre6
 .if !defined(BUILTIN_PKG.sun-jre6) && \
     !empty(IS_BUILTIN.sun-jre6:M[yY][eE][sS]) && \
     empty(JAVAVM6:M__nonexistent__)
-BUILTIN_VERSION.sun-jre6!=						\
-	${BASENAME} /System/Library/Frameworks/JavaVM.framework/Versions/1.6.*
+
+BUILTIN_VERSION.sun-jre6!= ${JAVAVM6}/bin/java -version 2>&1 | ${HEAD} -1 | \
+	${AWK} -F \" '{print $$2}' | ${AWK} -F _ '{print $$1}'
+
 BUILTIN_PKG.sun-jre6=	sun-jre6-${BUILTIN_VERSION.sun-jre6}
 .endif
 MAKEVARS+=	BUILTIN_PKG.sun-jre6
@@ -68,7 +71,6 @@ MAKEVARS+=	USE_BUILTIN.sun-jre6
 CHECK_BUILTIN.sun-jre6?=	no
 .if !empty(CHECK_BUILTIN.sun-jre6:M[nN][oO])
 .  if !empty(USE_BUILTIN.sun-jre6:M[yY][eE][sS])
-PKG_JAVA_HOME= \
-	/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home
+PKG_JAVA_HOME=	${JAVAVM6}
 .  endif
 .endif
