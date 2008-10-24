@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2633 2008/10/24 23:29:59 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2634 2008/10/24 23:35:36 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4523,3 +4523,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated print/poppler-qt4 to 0.10.0 [wiz 2008-10-24]
 	Updated print/poppler-utils to 0.10.0 [wiz 2008-10-24]
 	Updated print/poppler to 0.10.0 [wiz 2008-10-24]
+	Updated mail/libspf2 to 1.2.8 [adrianp 2008-10-24]
