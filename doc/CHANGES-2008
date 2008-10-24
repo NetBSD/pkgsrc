@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2623 2008/10/24 21:30:56 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2624 2008/10/24 21:38:58 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4509,3 +4509,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated x11/gnome-desktop-sharp to 2.24.0 [wiz 2008-10-24]
 	Updated mail/gmime to 2.2.23 [wiz 2008-10-24]
 	Updated x11/gtk2 to 2.14.4 [wiz 2008-10-24]
+	Updated x11/gtk-sharp to 2.12.5 [wiz 2008-10-24]
