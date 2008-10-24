@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2621 2008/10/24 21:00:24 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2622 2008/10/24 21:08:14 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4507,3 +4507,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Added net/p5-Net-MAC version 1.4 [seb 2008-10-24]
 	Updated zzz/gnome-sharp to 2.24.0 [wiz 2008-10-24]
 	Updated x11/gnome-desktop-sharp to 2.24.0 [wiz 2008-10-24]
+	Updated mail/gmime to 2.2.23 [wiz 2008-10-24]
