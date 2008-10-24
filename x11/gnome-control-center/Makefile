@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.14 2008/10/16 15:24:01 drochner Exp $
+# $NetBSD: Makefile,v 1.15 2008/10/24 23:25:56 jnemeth Exp $
 #
 
 DISTNAME=	gnome-control-center-2.24.0.1
@@ -44,6 +44,7 @@ BUILDLINK_API_DEPENDS.glib2=	glib2>=2.8.0
 BUILDLINK_API_DEPENDS.gstreamer0.10=		gstreamer0.10>=0.10.1.2
 BUILDLINK_API_DEPENDS.gst-plugins0.10-base=	gst-plugins0.10-base>=0.10.1.2
 BUILDLINK_API_DEPENDS.gtk2+=	gtk2+>=2.8.12
+BUILDLINK_API_DEPENDS.libxklavier=	libxklavier>=3.6
 BUILDLINK_API_DEPENDS.Xft2+=	Xft2>=2.1.2
 
 PKG_OPTIONS_VAR=	PKG_OPTIONS.gnome-control-center
