@@ -1,8 +1,8 @@
-$NetBSD: patch-aa,v 1.7 2008/04/16 16:41:38 drochner Exp $
+$NetBSD: patch-aa,v 1.8 2008/10/24 23:22:06 jnemeth Exp $
 
---- configure.orig	2007-09-04 22:21:30.000000000 +0200
+--- configure.orig	2008-09-05 12:50:11.000000000 -0700
 +++ configure
-@@ -22403,9 +22403,9 @@ fi
+@@ -14110,9 +14110,9 @@ fi
  
  { echo "$as_me:$LINENO: checking whether at least one libxklavier backend is enabled" >&5
  echo $ECHO_N "checking whether at least one libxklavier backend is enabled... $ECHO_C" >&6; }
@@ -15,7 +15,7 @@ $NetBSD: patch-aa,v 1.7 2008/04/16 16:41:38 drochner Exp $
    { echo "$as_me:$LINENO: result: yes" >&5
  echo "${ECHO_T}yes" >&6; }
  else
-@@ -24256,8 +24258,8 @@ fi
+@@ -16745,8 +16745,8 @@ fi
  
  echo '**********************************************************'
  echo '  Libxklavier is configured with the following backends:'
@@ -26,7 +26,7 @@ $NetBSD: patch-aa,v 1.7 2008/04/16 16:41:38 drochner Exp $
      echo "    XKB, libxkbfile is present"
      echo "         default ruleset: $xkb_default_ruleset"
      echo "         base: $xkb_base"
-@@ -24266,12 +24268,12 @@ if test "$enable_xkb_support" == "yes" ;
+@@ -16755,12 +16755,12 @@ if test "$enable_xkb_support" == "yes" ;
      echo "    XKB, libxkbfile is NOT present"
    fi
  fi
