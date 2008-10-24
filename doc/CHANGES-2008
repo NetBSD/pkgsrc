@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2629 2008/10/24 22:11:49 wiz Exp $
+$NetBSD: CHANGES-2008,v 1.2630 2008/10/24 22:27:29 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4515,3 +4515,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/eel to 2.24.1 [wiz 2008-10-24]
 	Updated sysutils/gnome-menus to 2.24.1 [wiz 2008-10-24]
 	Updated x11/gnome-desktop to 2.24.1 [wiz 2008-10-24]
+	Updated devel/libgweather to 2.24.1 [wiz 2008-10-24]
