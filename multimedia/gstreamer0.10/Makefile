@@ -1,8 +1,9 @@
-# $NetBSD: Makefile,v 1.26 2008/10/16 16:20:38 drochner Exp $
+# $NetBSD: Makefile,v 1.27 2008/10/24 07:17:46 jnemeth Exp $
 #
 
 DISTNAME=		gstreamer-0.10.21
 PKGNAME=		${DISTNAME:S/gstreamer/gstreamer0.10/}
+PKGREVISION=		1
 CATEGORIES=		multimedia gnome
 MASTER_SITES=		http://gstreamer.freedesktop.org/src/gstreamer/
 EXTRACT_SUFX=		.tar.bz2
@@ -60,5 +61,6 @@ TEST_TARGET=	check-torture
 .endif
 
 .include "../../devel/glib2/buildlink3.mk"
+.include "../../textproc/gtk-doc/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
