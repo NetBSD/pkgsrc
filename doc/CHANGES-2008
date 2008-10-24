@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2632 2008/10/24 23:24:30 jnemeth Exp $
+$NetBSD: CHANGES-2008,v 1.2633 2008/10/24 23:29:59 wiz Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4518,3 +4518,8 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/libgweather to 2.24.1 [wiz 2008-10-24]
 	Updated x11/gnome-panel to 2.24.1 [wiz 2008-10-24]
 	Updated x11/libxklavier to 3.7 [jnemeth 2008-10-24]
+	Updated print/poppler-glib to 0.10.0 [wiz 2008-10-24]
+	Updated print/poppler-qt to 0.10.0 [wiz 2008-10-24]
+	Updated print/poppler-qt4 to 0.10.0 [wiz 2008-10-24]
+	Updated print/poppler-utils to 0.10.0 [wiz 2008-10-24]
+	Updated print/poppler to 0.10.0 [wiz 2008-10-24]
