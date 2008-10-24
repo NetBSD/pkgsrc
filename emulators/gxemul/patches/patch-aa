@@ -1,6 +1,8 @@
---- src/promemul/arcbios.c.orig	2007-08-30 05:36:35.000000000 +0900
-+++ src/promemul/arcbios.c	2008-02-02 12:13:18.000000000 +0900
-@@ -2211,7 +2211,10 @@
+$NetBSD: patch-aa,v 1.6 2008/10/24 19:31:01 minskim Exp $
+
+--- src/promemul/arcbios.c.orig	2008-01-18 11:12:33.000000000 -0800
++++ src/promemul/arcbios.c
+@@ -2211,7 +2211,10 @@ static void arc_environment_setup(struct
  	}
  
  	if (machine->machine_type == MACHINE_ARC)
@@ -12,7 +14,7 @@
  
  	CHECK_ALLOCATION(machine->bootstr = malloc(ARC_BOOTSTR_BUFLEN));
  
-@@ -2362,20 +2365,17 @@
+@@ -2362,20 +2365,17 @@ static void arc_environment_setup(struct
  		add_environment_string(cpu, "kernname=unix", &addr);
  	} else {
  		char *tmp;
@@ -39,4 +41,3 @@
  	}
  
  	/*  End the environment strings with an empty zero-terminated
-
