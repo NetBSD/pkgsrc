@@ -1,4 +1,4 @@
-# $NetBSD: options.mk,v 1.8 2008/10/20 23:03:25 hira Exp $
+# $NetBSD: options.mk,v 1.9 2008/10/24 11:35:28 hira Exp $
 
 PKG_OPTIONS_VAR=		PKG_OPTIONS.openoffice3
 PKG_SUPPORTED_OPTIONS=		cups gnome gtk2 java kde ooo-external-libwpd
@@ -90,7 +90,10 @@ CONFIGURE_ARGS+=	--disable-gtk
 .if !empty(PKG_OPTIONS:Mjava)
 USE_JAVA2=		yes
 DEPENDS+=		apache-ant>=1.7.0:../../devel/apache-ant
-CONFIGURE_ARGS+=	--with-java --disable-mediawiki
+CONFIGURE_ARGS+=	--with-java
+# Extensions (MI)
+#CONFIGURE_ARGS+=	--enable-report-builder
+#CONFIGURE_ARGS+=	--enable-wiki-publisher
 
 JAVA_LIB_ROOT=	${PKG_JAVA_HOME}/jre/lib/${MACHINE_ARCH}
 LIB.jawt=	-L${JAVA_LIB_ROOT} ${COMPILER_RPATH_FLAG}${JAVA_LIB_ROOT}
