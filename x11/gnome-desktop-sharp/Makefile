@@ -1,10 +1,9 @@
-# $NetBSD: Makefile,v 1.3 2008/09/06 20:54:34 wiz Exp $
+# $NetBSD: Makefile,v 1.4 2008/10/24 20:59:54 wiz Exp $
 #
 
-DISTNAME=	gnome-desktop-sharp-2.20.1
-PKGREVISION=	1
+DISTNAME=	gnome-desktop-sharp-2.24.0
 CATEGORIES=	x11
-MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-desktop-sharp/2.20/}
+MASTER_SITES=	${MASTER_SITE_GNOME:=sources/gnome-desktop-sharp/2.24/}
 
 MAINTAINER=	pkgsrc-users@NetBSD.org
 HOMEPAGE=	http://www.mono-project.com/GtkSharp
@@ -18,6 +17,8 @@ USE_LIBTOOL=		yes
 USE_TOOLS+=		gmake pkg-config
 
 PKGCONFIG_OVERRIDE+=	gnomedesktop/gnome-desktop-sharp-2.0.pc.in
+PKGCONFIG_OVERRIDE+=	gnomepanel/gnome-panel-sharp-2.24.pc.in
+PKGCONFIG_OVERRIDE+=	gnomeprint/gnome-print-sharp-2.18.pc.in
 PKGCONFIG_OVERRIDE+=	gtkhtml/gtkhtml-sharp-3.14.pc.in
 PKGCONFIG_OVERRIDE+=	gtksourceview/gtksourceview2-sharp.pc.in
 PKGCONFIG_OVERRIDE+=	nautilusburn/nautilusburn-sharp.pc.in
@@ -31,21 +32,26 @@ SUBST_FILES.pc=		${PKGCONFIG_OVERRIDE}
 SUBST_SED.pc=		-e "s|\$${pcfiledir}/../..|@prefix@|g"
 SUBST_MESSAGE.pc=	Fixing hardcoded paths.
 
-.include "../../lang/mono/buildlink3.mk"
-.include "../../lang/monodoc/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libwnck+=		libwnck>=2.23.0
 .include "../../devel/libwnck/buildlink3.mk"
-BUILDLINK_API_DEPENDS.librsvg+=		librsvg>=2.18.2
+BUILDLINK_API_DEPENDS.librsvg+=		librsvg>=2.22.2
 .include "../../graphics/librsvg/buildlink3.mk"
-# XXX: needs >=2.20.0, not yet in pkgsrc
-#BUILDLINK_API_DEPENDS.nautilus-cd-burner+=	nautilus-cd-burner>=2.20.0
+BUILDLINK_API_DEPENDS.libgnomeprint+=	libgnomeprint>=2.18.0
+.include "../../print/libgnomeprint/buildlink3.mk"
+BUILDLINK_API_DEPENDS.libgnomeprintui+=	libgnomeprintui>=2.18.0
+.include "../../print/libgnomeprintui/buildlink3.mk"
+# XXX: needs 2.22.1 of libnautilus-burn, not yet in pkgsrc
+#BUILDLINK_API_DEPENDS.nautilus-cd-burner+=	nautilus-cd-burner>=2.22.1
 #.include "../../sysutils/nautilus-cd-burner/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gtkhtml314+=	gtkhtml314>=3.16.0
+BUILDLINK_API_DEPENDS.gtkhtml314+=	gtkhtml314>=3.23.5
 .include "../../www/gtkhtml314/buildlink3.mk"
-BUILDLINK_API_DEPENDS.vte+=	vte>=0.16.9
-.include "../../x11/vte/buildlink3.mk"
-.include "../../x11/gnome-desktop/buildlink3.mk"
-BUILDLINK_API_DEPENDS.gnome-sharp+=	gnome-sharp>=2.20.0
+BUILDLINK_API_DEPENDS.gnome-panel+=	gnome-panel>=2.23.0
+.include "../../x11/gnome-panel/buildlink3.mk"
 .include "../../x11/gnome-sharp/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtk-sharp+=	gtk-sharp>=2.12.2
 .include "../../x11/gtk-sharp/buildlink3.mk"
+BUILDLINK_API_DEPENDS.gtksourceview2+=	gtksourceview2>=2.2.2
 .include "../../x11/gtksourceview2/buildlink3.mk"
+BUILDLINK_API_DEPENDS.vte+=		vte>=0.16.14
+.include "../../x11/vte/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
