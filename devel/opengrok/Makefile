@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.7 2008/10/21 19:29:57 adrianp Exp $
+# $NetBSD: Makefile,v 1.8 2008/10/24 21:26:37 adrianp Exp $
 #
 
 DISTNAME=	opengrok-0.7
@@ -53,5 +53,5 @@ do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/run-quiet.sh \
 		${DESTDIR}${PREFIX}/share/opengrok
 
-#.include "../../mk/java-vm.mk"
+.include "../../mk/java-vm.mk"
 .include "../../mk/bsd.pkg.mk"
