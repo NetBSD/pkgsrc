@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.15 2007/11/28 20:51:33 drochner Exp $
+# $NetBSD: Makefile,v 1.16 2008/10/24 23:28:53 wiz Exp $
 #
 
 .include "../../print/poppler/Makefile.common"
@@ -24,9 +24,8 @@ CONFIGURE_ARGS+=	--disable-poppler-qt
 CONFIGURE_ARGS+=	--disable-gtk-test
 CONFIGURE_ARGS+=	--disable-utils
 
-BUILD_DIRS=		${WRKSRC}/goo ${WRKSRC}/fofi ${WRKSRC}/poppler \
-			${WRKSRC}/glib
-INSTALL_DIRS=		${WRKSRC}/glib
+BUILD_DIRS=		goo fofi poppler glib
+INSTALL_DIRS=		glib
 
 INSTALLATION_DIRS+=	lib/pkgconfig
 
