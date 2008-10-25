@@ -1,7 +1,7 @@
-$NetBSD: patch-ah,v 1.1.1.1 2008/09/12 13:18:26 jmcneill Exp $
+$NetBSD: patch-ah,v 1.2 2008/10/25 18:12:34 jmcneill Exp $
 
---- src/ptlib/unix/socket.cxx.orig	2008-09-12 08:46:26.000000000 -0400
-+++ src/ptlib/unix/socket.cxx	2008-09-12 08:57:49.000000000 -0400
+--- src/ptlib/unix/socket.cxx.orig	2008-10-01 03:03:56.000000000 -0400
++++ src/ptlib/unix/socket.cxx	2008-10-25 13:26:34.000000000 -0400
 @@ -67,6 +67,10 @@
  #include <netinet/if_ether.h>
  #endif
@@ -13,7 +13,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2008/09/12 13:18:26 jmcneill Exp $
  #define ROUNDUP(a) \
          ((a) > 0 ? (1 + (((a) - 1) | (sizeof(long) - 1))) : sizeof(long))
  
-@@ -462,6 +466,12 @@
+@@ -471,6 +475,12 @@
    PBYTEArray buffer;
    struct ifconf ifConf;
  
@@ -26,7 +26,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2008/09/12 13:18:26 jmcneill Exp $
  #ifdef SIOCGIFNUM
    int ifNum;
    PAssert(::ioctl(sock.GetHandle(), SIOCGIFNUM, &ifNum) >= 0, "could not do ioctl for ifNum");
-@@ -477,8 +487,14 @@
+@@ -486,8 +496,14 @@
      ifreq * ifName = ifConf.ifc_req;
  
      while (ifName < ifEndList) {
@@ -41,7 +41,7 @@ $NetBSD: patch-ah,v 1.1.1.1 2008/09/12 13:18:26 jmcneill Exp $
        
        if (ioctl(sock.GetHandle(), SIOCGIFFLAGS, &ifReq) >= 0) {
          int flags = ifReq.ifr_flags;
-@@ -490,14 +506,16 @@
+@@ -499,14 +515,16 @@
          }
        }
        
@@ -60,21 +60,21 @@ $NetBSD: patch-ah,v 1.1.1.1 2008/09/12 13:18:26 jmcneill Exp $
    
    return PFalse;
  }
-@@ -1554,7 +1572,13 @@
+@@ -1559,7 +1577,13 @@
    PBYTEArray buffer;
    struct ifconf ifConf;
    
 +#if defined(P_NETBSD)
 +  struct ifaddrs *ifap, *ifa;
-+
-+  PAssert(getifaddrs(&ifap) == 0, "getifaddrs failed");
  
++  PAssert(getifaddrs(&ifap) == 0, "getifaddrs failed");
++
 +  for (ifa = ifap; ifa; ifa = ifa->ifa_next) {
 +#else
    // HERE
  #if defined(SIOCGIFNUM)
    int ifNum;
-@@ -1570,9 +1594,14 @@
+@@ -1575,9 +1599,14 @@
      void * ifEndList = (char *)ifConf.ifc_req + ifConf.ifc_len;
      ifreq * ifName = ifConf.ifc_req;
      while (ifName < ifEndList) {
@@ -90,31 +90,33 @@ $NetBSD: patch-ah,v 1.1.1.1 2008/09/12 13:18:26 jmcneill Exp $
  
        if (ioctl(sock.GetHandle(), SIOCGIFFLAGS, &ifReq) >= 0) {
          int flags = ifReq.ifr_flags;
-@@ -1588,13 +1617,23 @@
+@@ -1593,13 +1622,25 @@
            }
  #endif
  
-+#if defined(P_NETBSD)
++#if !defined(P_NETBSD)
+           memcpy(&ifReq, ifName, sizeof(ifreq));
++#else
 +          memset(&ifReq, 0, sizeof(ifReq));
 +          strncpy(ifReq.ifr_name, ifa->ifa_name, sizeof(ifReq.ifr_name) - 1);
-+#else
-           memcpy(&ifReq, ifName, sizeof(ifreq));
 +#endif
++
            if (ioctl(sock.GetHandle(), SIOCGIFADDR, &ifReq) >= 0) {
  
              sockaddr_in * sin = (sockaddr_in *)&ifReq.ifr_addr;
              PIPSocket::Address addr = sin->sin_addr;
  
-+#if defined(P_NETBSD)
++#if !defined(P_NETBSD)
+             memcpy(&ifReq, ifName, sizeof(ifreq));
++#else
 +            memset(&ifReq, 0, sizeof(ifReq));
 +            strncpy(ifReq.ifr_name, ifa->ifa_name, sizeof(ifReq.ifr_name) - 1);
-+#else
-             memcpy(&ifReq, ifName, sizeof(ifreq));
 +#endif
++
              if (ioctl(sock.GetHandle(), SIOCGIFNETMASK, &ifReq) >= 0) {
                PIPSocket::Address mask = 
- #ifndef __BEOS__
-@@ -1632,15 +1671,17 @@
+ #ifndef P_BEOS
+@@ -1637,15 +1678,17 @@
          }
        }
  
