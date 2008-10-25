@@ -1,7 +1,7 @@
-# $NetBSD: Makefile,v 1.1.1.1 2008/09/22 23:50:55 jmcneill Exp $
+# $NetBSD: Makefile,v 1.2 2008/10/25 18:15:46 jmcneill Exp $
 #
 
-DISTNAME=		ekiga-3.0.0
+DISTNAME=		ekiga-3.0.1
 COMMENT=		VoIP and video conferencing application for GNOME
 CATEGORIES=		net comms
 MAINTAINER=		pkgsrc-users@NetBSD.org
