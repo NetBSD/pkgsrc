@@ -1,4 +1,4 @@
-$NetBSD: TODO,v 1.7619 2008/10/24 23:24:30 jnemeth Exp $
+$NetBSD: TODO,v 1.7620 2008/10/25 02:24:29 taca Exp $
 
 Suggested new packages
 ======================
@@ -1272,6 +1272,7 @@ Suggested package updates
 	o stratagus-2.2.2
 	o streamripper-1.63.0
 	o subtitleeditor-0.25.0
+	o subversion-1.5.4
 	o sunbird-0.5 [ghen]
 	o suse_base-11.0
 	o swfdec-0.8.2
@@ -1392,6 +1393,7 @@ Suggested package updates
 	o xf86-input-vmmouse-12.6.1
 	o xf86-video-amd-2.10.1 [now xf86-video-geode]
 	o xf86-video-i128-1.3.1
+	o xf86-video-intel-2.5.0
 	o xf86-video-nsc-2.8.3
 	o xf86-video-radeonhd-1.2.3
 	o xf86-video-tdfx-1.4.0
