@@ -1,9 +1,11 @@
-@comment $NetBSD: PLIST,v 1.8 2008/10/16 18:14:13 drochner Exp $
+@comment $NetBSD: PLIST,v 1.9 2008/10/25 00:23:03 wiz Exp $
 bin/eog
 include/eog-2.20/eog/eog-application.h
 include/eog-2.20/eog/eog-debug.h
 include/eog-2.20/eog/eog-dialog.h
 include/eog-2.20/eog/eog-error-message-area.h
+include/eog-2.20/eog/eog-exif-details.h
+include/eog-2.20/eog/eog-exif-util.h
 include/eog-2.20/eog/eog-file-chooser.h
 include/eog-2.20/eog/eog-image-save-info.h
 include/eog-2.20/eog/eog-image.h
@@ -57,6 +59,10 @@ share/gnome/help/eog/C/figures/eog_save_as_window.png
 share/gnome/help/eog/C/figures/eog_start_window.png
 share/gnome/help/eog/C/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/C/legal.xml
+share/gnome/help/eog/ar/eog.xml
+share/gnome/help/eog/ar/figures/eog_save_as_window.png
+share/gnome/help/eog/ar/figures/eog_start_window.png
+share/gnome/help/eog/ar/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/ca/eog.xml
 share/gnome/help/eog/ca/figures/eog_save_as_window.png
 share/gnome/help/eog/ca/figures/eog_start_window.png
@@ -117,6 +123,10 @@ share/gnome/help/eog/sv/eog.xml
 share/gnome/help/eog/sv/figures/eog_save_as_window.png
 share/gnome/help/eog/sv/figures/eog_start_window.png
 share/gnome/help/eog/sv/figures/eog_toolbar_editor_window.png
+share/gnome/help/eog/th/eog.xml
+share/gnome/help/eog/th/figures/eog_save_as_window.png
+share/gnome/help/eog/th/figures/eog_start_window.png
+share/gnome/help/eog/th/figures/eog_toolbar_editor_window.png
 share/gnome/help/eog/uk/eog.xml
 share/gnome/help/eog/uk/figures/eog_save_as_window.png
 share/gnome/help/eog/uk/figures/eog_start_window.png
@@ -279,6 +289,7 @@ share/locale/zh_HK/LC_MESSAGES/eog.mo
 share/locale/zh_TW/LC_MESSAGES/eog.mo
 share/locale/zu/LC_MESSAGES/eog.mo
 share/omf/eog/eog-C.omf
+share/omf/eog/eog-ar.omf
 share/omf/eog/eog-ca.omf
 share/omf/eog/eog-da.omf
 share/omf/eog/eog-de.omf
@@ -294,6 +305,7 @@ share/omf/eog/eog-pa.omf
 share/omf/eog/eog-pt_BR.omf
 share/omf/eog/eog-ru.omf
 share/omf/eog/eog-sv.omf
+share/omf/eog/eog-th.omf
 share/omf/eog/eog-uk.omf
 share/omf/eog/eog-zh_CN.omf
 share/omf/eog/eog-zh_TW.omf
@@ -311,6 +323,8 @@ share/omf/eog/eog-zh_TW.omf
 @dirrm share/gnome/help/eog/zh_CN
 @dirrm share/gnome/help/eog/uk/figures
 @dirrm share/gnome/help/eog/uk
+@dirrm share/gnome/help/eog/th/figures
+@dirrm share/gnome/help/eog/th
 @dirrm share/gnome/help/eog/sv/figures
 @dirrm share/gnome/help/eog/sv
 @dirrm share/gnome/help/eog/ru/figures
@@ -341,6 +355,8 @@ share/omf/eog/eog-zh_TW.omf
 @dirrm share/gnome/help/eog/da
 @dirrm share/gnome/help/eog/ca/figures
 @dirrm share/gnome/help/eog/ca
+@dirrm share/gnome/help/eog/ar/figures
+@dirrm share/gnome/help/eog/ar
 @dirrm share/gnome/help/eog/C/figures
 @dirrm share/gnome/help/eog/C
 @dirrm share/gnome/help/eog
@@ -363,5 +379,6 @@ share/omf/eog/eog-zh_TW.omf
 @dirrm share/eog
 @comment in xdg-dirs: @dirrm share/applications
 @dirrm lib/eog/plugins
+@dirrm lib/eog
 @dirrm include/eog-2.20/eog
 @dirrm include/eog-2.20
