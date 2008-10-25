@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2667 2008/10/25 18:21:35 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.2668 2008/10/25 18:35:37 adrianp Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4561,3 +4561,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated devel/opal to 3.4.2 [jmcneill 2008-10-25]
 	Updated net/ekiga to 3.0.1 [jmcneill 2008-10-25]
 	Updated net/socat to 1.7.0.0 [adrianp 2008-10-25]
+	Updated net/snort to 2.8.3.1 [adrianp 2008-10-25]
