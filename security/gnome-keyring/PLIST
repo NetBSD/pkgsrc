@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.14 2008/10/16 13:45:38 drochner Exp $
+@comment $NetBSD: PLIST,v 1.15 2008/10/25 00:49:32 wiz Exp $
 bin/gnome-keyring
 bin/gnome-keyring-daemon
 include/gnome-keyring-1/gnome-keyring-memory.h
@@ -89,6 +89,7 @@ share/locale/is/LC_MESSAGES/gnome-keyring.mo
 share/locale/it/LC_MESSAGES/gnome-keyring.mo
 share/locale/ja/LC_MESSAGES/gnome-keyring.mo
 share/locale/ka/LC_MESSAGES/gnome-keyring.mo
+share/locale/kn/LC_MESSAGES/gnome-keyring.mo
 share/locale/ko/LC_MESSAGES/gnome-keyring.mo
 share/locale/lt/LC_MESSAGES/gnome-keyring.mo
 share/locale/lv/LC_MESSAGES/gnome-keyring.mo
@@ -132,6 +133,7 @@ share/locale/zh_TW/LC_MESSAGES/gnome-keyring.mo
 @dirrm share/gtk-doc/html/gnome-keyring
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in dbus: @dirrm share/dbus-1/services
+@dirrm lib/security
 @dirrm lib/gnome-keyring
 @dirrm include/gp11
 @dirrm include/gnome-keyring-1
