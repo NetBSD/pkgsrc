@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.4 2006/06/06 18:58:30 kim Exp $
+$NetBSD: distinfo,v 1.5 2008/10/25 15:23:38 kim Exp $
 
-SHA1 (mstream-1.1.tar.gz) = bd5aef21a9addf7db7495f6ec9c83e8b5d180202
-RMD160 (mstream-1.1.tar.gz) = 75fa2ab0c43b999c1d62a6d60602a00dfd7d7ddd
-Size (mstream-1.1.tar.gz) = 4030 bytes
+SHA1 (mstream-1.2.tar.gz) = d4e3ce7fed7ca7a478c06c1451e25f9411bc1902
+RMD160 (mstream-1.2.tar.gz) = f464fdb4be0daa40a6472b0752b965fbdca8933f
+Size (mstream-1.2.tar.gz) = 4212 bytes
