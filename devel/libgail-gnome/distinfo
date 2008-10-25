@@ -1,5 +1,5 @@
-$NetBSD: distinfo,v 1.9 2007/11/05 19:33:58 drochner Exp $
+$NetBSD: distinfo,v 1.10 2008/10/25 02:15:50 wiz Exp $
 
-SHA1 (libgail-gnome-1.20.0.tar.bz2) = 47237d9c50dcefed7580b000522856ecd135dd9f
-RMD160 (libgail-gnome-1.20.0.tar.bz2) = 5038ce207409108d2312828375f012336202b367
-Size (libgail-gnome-1.20.0.tar.bz2) = 237027 bytes
+SHA1 (libgail-gnome-1.20.1.tar.bz2) = 97bc7dca6130f6dfa76070669b0c46b56d374d24
+RMD160 (libgail-gnome-1.20.1.tar.bz2) = b4ea4008186c5ca9f4090d1b4b4b6c85a27f1dd0
+Size (libgail-gnome-1.20.1.tar.bz2) = 242952 bytes
