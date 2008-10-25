@@ -1,9 +1,9 @@
-# $NetBSD: Makefile,v 1.10 2008/09/05 21:08:32 bjs Exp $
+# $NetBSD: Makefile,v 1.11 2008/10/25 01:16:52 wiz Exp $
 #
 
-DISTNAME=		gnome-terminal-2.22.3
+DISTNAME=		gnome-terminal-2.24.1.1
 CATEGORIES=		x11 gnome
-MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-terminal/2.22/}
+MASTER_SITES=		${MASTER_SITE_GNOME:=sources/gnome-terminal/2.24/}
 EXTRACT_SUFX=		.tar.bz2
 
 MAINTAINER=		pkgsrc-users@NetBSD.org
@@ -20,22 +20,26 @@ USE_PKGLOCALEDIR=	YES
 USE_TOOLS+=		gmake intltool msgfmt perl pkg-config
 USE_LIBTOOL=		YES
 
+CONFIGURE_ENV+=		ac_cv_path_GTK_BUILDER_CONVERT="${PYTHONBIN} ${BUILDLINK_PREFIX.gtk2}/bin/gtk-builder-convert"
+
 GCONF_SCHEMAS=	gnome-terminal.schemas
 
 BUILDLINK_API_DEPENDS.gtk2+=			gtk2+>=2.10.0
 BUILDLINK_API_DEPENDS.startup-notification+=	startup-notification>=0.8
 
+PYTHON_FOR_BUILD_ONLY=	YES
+
 .include "../../devel/GConf/schemas.mk"
 .include "../../devel/libglade/buildlink3.mk"
 .include "../../devel/libgnomeui/buildlink3.mk"
 .include "../../devel/pango/buildlink3.mk"
+.include "../../lang/python/application.mk"
 .include "../../sysutils/gnome-vfs/buildlink3.mk"
 .include "../../textproc/gnome-doc-utils/buildlink3.mk"
 .include "../../mk/omf-scrollkeeper.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXft/buildlink3.mk"
-.include "../../x11/libzvt/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../x11/vte/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"
