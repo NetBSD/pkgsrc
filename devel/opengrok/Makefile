@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.8 2008/10/24 21:26:37 adrianp Exp $
+# $NetBSD: Makefile,v 1.9 2008/10/25 18:11:16 adrianp Exp $
 #
 
 DISTNAME=	opengrok-0.7
@@ -16,9 +16,14 @@ DEPENDS+=	zip-[0-9]*:../../archivers/zip
 
 PKG_DESTDIR_SUPPORT=	user-destdir
 
+.include "options.mk"
+
+.if empty(PKG_OPTIONS:Mopengrok-build)
 NO_BUILD=	YES
+.endif
+
 USE_JAVA=	run
-USE_JAVA2=	1.5 6
+USE_JAVA2=	yes
 
 CONF_FILES=	${PREFIX}/share/examples/opengrok/paths.tsv \
 		${PREFIX}/share/opengrok/paths.tsv
@@ -31,7 +36,17 @@ SUBST_SED.run+=		-e "s|java|${PKG_JAVA_HOME}/bin/java|g"
 SUBST_SED.run+=		-e "s|@PREFIX@|${PREFIX}|g"
 SUBST_MESSAGE.run=	Fixing hardcoded paths.
 
-.include "options.mk"
+pre-build:
+	${CP} ${PREFIX}/lib/java/JFlex.jar ${WRKSRC}/lib
+
+do-build:
+	cd ${WRKSRC} && ${PREFIX}/bin/ant 
+
+post-build:
+	${RM} -f ${WRKSRC}/lib/*.jar
+	${CP} ${WRKSRC}/dist/lib/*.jar ${WRKSRC}/lib
+	${CP} ${WRKSRC}/dist/opengrok.jar ${WRKSRC}
+	${CP} ${WRKSRC}/dist/source.war ${WRKSRC}
 
 do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/opengrok
