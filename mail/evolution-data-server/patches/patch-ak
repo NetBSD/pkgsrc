@@ -1,8 +1,8 @@
-$NetBSD: patch-ak,v 1.6 2007/04/10 20:24:22 drochner Exp $
+$NetBSD: patch-ak,v 1.7 2008/10/25 16:38:09 wiz Exp $
 
---- configure.orig	2007-04-09 14:48:16.000000000 +0200
+--- configure.orig	2008-10-20 03:32:45.000000000 +0000
 +++ configure
-@@ -28749,6 +28749,7 @@ cat >>conftest.$ac_ext <<_ACEOF
+@@ -28706,6 +28706,7 @@ cat >>conftest.$ac_ext <<_ACEOF
  		#include <sys/socket.h>
  		#include <netinet/in.h>
  		#include <netdb.h>
@@ -10,16 +10,16 @@ $NetBSD: patch-ak,v 1.6 2007/04/10 20:24:22 drochner Exp $
  
  
  int
-@@ -31775,13 +31776,13 @@ EVO_MARSHAL_RULE=$srcdir/marshal.mk
+@@ -31566,13 +31567,13 @@ EVO_MARSHAL_RULE=$srcdir/marshal.mk
  
  
  	PTHREAD_LIB=""
--	{ echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
--echo $ECHO_N "checking for pthread_create in -lpthread... $ECHO_C" >&6; }
-+	{ echo "$as_me:$LINENO: checking for pthread_create in ${PTHREAD_LIB}" >&5
-+echo $ECHO_N "checking for pthread_create in ${PTHREAD_LIB}... $ECHO_C" >&6; }
+-	{ $as_echo "$as_me:$LINENO: checking for pthread_create in -lpthread" >&5
+-$as_echo_n "checking for pthread_create in -lpthread... " >&6; }
++	{ $as_echo "$as_me:$LINENO: checking for pthread_create in ${PTHREAD_LIB}" >&5
++$as_echo_n "checking for pthread_create in ${PTHREAD_LIB}... " >&6; }
  if test "${ac_cv_lib_pthread_pthread_create+set}" = set; then
-   echo $ECHO_N "(cached) $ECHO_C" >&6
+   $as_echo_n "(cached) " >&6
  else
    ac_check_lib_save_LIBS=$LIBS
 -LIBS="-lpthread  $LIBS"
@@ -27,12 +27,12 @@ $NetBSD: patch-ak,v 1.6 2007/04/10 20:24:22 drochner Exp $
  cat >conftest.$ac_ext <<_ACEOF
  /* confdefs.h.  */
  _ACEOF
-@@ -31853,7 +31854,7 @@ fi
- { echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_create" >&5
- echo "${ECHO_T}$ac_cv_lib_pthread_pthread_create" >&6; }
+@@ -31632,7 +31633,7 @@ fi
+ { $as_echo "$as_me:$LINENO: result: $ac_cv_lib_pthread_pthread_create" >&5
+ $as_echo "$ac_cv_lib_pthread_pthread_create" >&6; }
  if test $ac_cv_lib_pthread_pthread_create = yes; then
 -  PTHREAD_LIB="-lpthread"
 +  PTHREAD_LIB="${PTHREAD_LIB}"
  else
-   { echo "$as_me:$LINENO: checking for pthread_create in -lpthreads" >&5
- echo $ECHO_N "checking for pthread_create in -lpthreads... $ECHO_C" >&6; }
+   { $as_echo "$as_me:$LINENO: checking for pthread_create in -lpthreads" >&5
+ $as_echo_n "checking for pthread_create in -lpthreads... " >&6; }
