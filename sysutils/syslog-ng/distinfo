@@ -1,8 +1,6 @@
-$NetBSD: distinfo,v 1.2 2006/10/14 02:03:50 rillig Exp $
+$NetBSD: distinfo,v 1.3 2008/10/25 10:26:43 adrianp Exp $
 
-SHA1 (syslog-ng-1.6.11.tar.gz) = acbee602fd4cb6a1ca40238742642413cd6f1787
-RMD160 (syslog-ng-1.6.11.tar.gz) = 2ddd5eaae12dbcef4b4e67f83d01a3bab8b2cce0
-Size (syslog-ng-1.6.11.tar.gz) = 712166 bytes
+SHA1 (syslog-ng-1.6.12.tar.gz) = 02bf683cd96f0ec213992a41835af04afb1a4ab7
+RMD160 (syslog-ng-1.6.12.tar.gz) = b7a091bd2e6cfa1fd6eea50aee2ef016e8df6c40
+Size (syslog-ng-1.6.12.tar.gz) = 717903 bytes
 SHA1 (patch-ac) = 73b60fa4cf2cce6821873c51dba6b5327ee08f07
-SHA1 (patch-ad) = 958baef5cc2bb14be777d9a33dd06fa6212decfc
-SHA1 (patch-ae) = d6ffff377bf2ff3c618b4c43a189a6c152c2fb7e
