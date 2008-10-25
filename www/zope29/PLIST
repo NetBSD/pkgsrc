@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.5 2008/01/06 15:57:45 taca Exp $
+@comment $NetBSD: PLIST,v 1.6 2008/10/25 16:18:17 taca Exp $
 ${ZOPE_DOC_BASE}/zeo/README.txt
 ${ZOPE_DOC_BASE}/zeo/ZopeREADME.txt
 ${ZOPE_DOC_BASE}/zeo/cache.txt
@@ -1648,6 +1648,8 @@ ${ZOPE_BASE}/lib/python/Products/PythonScripts/help/standard.py
 ${ZOPE_BASE}/lib/python/Products/PythonScripts/help/standard.pyc
 ${ZOPE_BASE}/lib/python/Products/PythonScripts/module_access_examples.py
 ${ZOPE_BASE}/lib/python/Products/PythonScripts/module_access_examples.pyc
+${ZOPE_BASE}/lib/python/Products/PythonScripts/patches.py
+${ZOPE_BASE}/lib/python/Products/PythonScripts/patches.pyc
 ${ZOPE_BASE}/lib/python/Products/PythonScripts/standard.py
 ${ZOPE_BASE}/lib/python/Products/PythonScripts/standard.pyc
 ${ZOPE_BASE}/lib/python/Products/PythonScripts/tests/__init__.py
