@@ -1,4 +1,4 @@
-# $NetBSD: Makefile,v 1.16 2008/09/02 21:09:11 adrianp Exp $
+# $NetBSD: Makefile,v 1.17 2008/10/25 16:12:36 adrianp Exp $
 #
 
 DISTNAME=	InspIRCd-1.1.21
@@ -69,6 +69,12 @@ SUBST_STAGE.conf=	pre-configure
 SUBST_FILES.conf=	docs/inspircd.conf.example
 SUBST_SED.conf+=	-e "s|/path/to/inspircd.pid|${VARBASE}/run/inspircd/inspircd.pid|g"
 SUBST_MESSAGE.conf=	Fixing configuration files.
+
+SUBST_CLASSES+=		make
+SUBST_STAGE.make=	pre-configure
+SUBST_FILES.make=	configure make/utilities.pm
+SUBST_SED.make+=	-e "s|-Wl,--rpath|${COMPILER_RPATH_FLAG}|g"
+SUBST_MESSAGE.make=	Fixing Makefiles.
 
 BUILD_DEFS+=		INSP_NICLEN INSP_CHANLEN INSPIRCD_USER INSPIRCD_GROUP
 BUILD_DEFS+=		INSP_MAXCLI INSP_MAXIDENT INSP_MAXQUIT INSP_MAXTOPIC
