@@ -1,4 +1,4 @@
-$NetBSD: CHANGES-2008,v 1.2659 2008/10/25 12:03:53 adrianp Exp $
+$NetBSD: CHANGES-2008,v 1.2660 2008/10/25 15:27:40 kim Exp $
 
 Changes to the packages collection and infrastructure in 2008:
 
@@ -4549,3 +4549,4 @@ Changes to the packages collection and infrastructure in 2008:
 	Updated www/epiphany to 2.24.1 [wiz 2008-10-25]
 	Updated www/epiphany-extensions to 2.24.1 [wiz 2008-10-25]
 	Updated security/openssl to 0.9.8hnb2 [adrianp 2008-10-25]
+	Updated audio/mstream to 1.2 [kim 2008-10-25]
