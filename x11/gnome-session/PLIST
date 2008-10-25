@@ -1,4 +1,4 @@
-@comment $NetBSD: PLIST,v 1.23 2008/10/22 00:03:13 gdt Exp $
+@comment $NetBSD: PLIST,v 1.24 2008/10/25 03:12:23 wiz Exp $
 bin/gnome-session
 bin/gnome-session-properties
 bin/gnome-session-save
@@ -13,7 +13,6 @@ man/man1/gnome-wm.1
 man/man1/session-properties.1
 man/man5/default.session.5
 share/applications/session-properties.desktop
-share/doc/gnome-session/dbus/gnome-session.html
 share/gconf/schemas/gnome-session.schemas
 share/gnome-session/gsm-inhibit-dialog.glade
 share/gnome-session/session-properties.glade
@@ -122,7 +121,7 @@ share/pixmaps/splash/gnome-splash.png
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/22x22/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor/16x16/apps
 @comment in hicolor-icon-theme: @dirrm share/icons/hicolor
-@dirrm share/gnome/autostart
+@comment in libcanberra: @dirrm share/gnome/autostart
 @dirrm share/gnome-session
 @comment in GConf: @dirrm share/gconf/schemas
 @comment in xdg-dirs: @dirrm share/applications
